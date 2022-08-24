@@ -2,13 +2,13 @@
 keywords: E-Mail; E-Mail; E-Mail; E-Mail-Ziele; Salesforce; api Salesforce Marketing Cloud-Ziel
 title: (API) Salesforce-Marketing Cloud-Verbindung
 description: Mit dem Salesforce-Marketing Cloud (ehemals ExactTarget)-Ziel können Sie Ihre Kontodaten exportieren und im Salesforce-Marketing Cloud für Ihre Geschäftsanforderungen aktivieren.
-source-git-commit: ce7b28ce31c652965a6eaad81348e330bd38e9ac
+exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
+source-git-commit: 2dda77c3d9a02b53a02128e835abf77ab97ad033
 workflow-type: tm+mt
-source-wordcount: '1869'
+source-wordcount: '1906'
 ht-degree: 6%
 
 ---
-
 
 # [!DNL (API) Salesforce Marketing Cloud]-Verbindung
 
@@ -24,7 +24,7 @@ Diese [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt 
 
 Salesforce Marketing Cloud verwendet OAuth 2 mit Client-Anmeldeinformationen als Authentifizierungsmechanismus für die Kommunikation mit der Salesforce REST API. Anweisungen zur Authentifizierung für Ihre Salesforce-Instanz finden Sie weiter unten im Abschnitt [An Ziel authentifizieren](#authenticate) Abschnitt.
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsbeispiele {#use-cases}
 
 Damit Sie besser verstehen können, wie und wann Sie das Salesforce-Marketing Cloud-Ziel verwenden sollten, finden Sie hier ein Beispielanwendungsbeispiel, das Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
 
@@ -48,7 +48,7 @@ Gehe zu Salesforce [Testversion](https://www.salesforce.com/in/form/signup/freet
 
 #### Benutzerdefiniertes Feld in Salesforce erstellen {#prerequisites-custom-field}
 
-Benutzerdefiniertes Attribut des Typs erstellen `Text Area Long` welche Experience Platform verwendet, um den Segmentstatus im Salesforce-Marketing Cloud zu aktualisieren.
+Sie müssen ein benutzerdefiniertes Attribut des Typs `Text Area Long`, die Experience Platform verwendet, um den Segmentstatus im Salesforce-Marketing Cloud zu aktualisieren. Aktivieren Sie im Workflow zum Aktivieren von Segmenten für das Ziel im **[Segmentplan](#schedule-segment-export-example)** Schritt, verwenden Sie das benutzerdefinierte Attribut als Zuordnungs-ID für jedes Segment, das Sie aktivieren.
 
 Weitere Informationen finden Sie in der Salesforce-Marketing Cloud-Dokumentation unter [Benutzerdefinierte Felder erstellen](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) wenn Sie zusätzliche Anleitungen benötigen.
 
@@ -72,6 +72,8 @@ Beachten Sie die folgenden Elemente, bevor Sie sich beim Salesforce-Marketing Cl
 | --- | --- | --- |
 | <ul><li>Salesforce-Marketing Cloud-Präfix</li></ul> | Siehe [Salesforce-Marketing Cloud-Domänenpräfix](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&amp;type=5) für zusätzliche Leitlinien. | <ul><li>Wenn Ihre Domäne wie folgt lautet, benötigen Sie den hervorgehobenen Wert.<br> <i>`mcq4jrssqdlyc4lph19nnqgzzs84`.login.executeTarget.com</i></li></ul> |
 | <ul><li>Client-ID</li><li>Client-Geheimnis</li></ul> | Siehe Abschnitt [Salesforce-Dokumentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) wenn Sie zusätzliche Anleitungen benötigen. | <ul><li>r23kxxxxxxxx0z05xxxxxx</li><li>ipxxxxxxxxxxT4xxxxxxxxxxxx</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -140,7 +142,7 @@ Lesen [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](
 
 ### Zuordnungsüberlegungen und Beispiel {#mapping-considerations-example}
 
-Um Ihre Zielgruppendaten korrekt von Adobe Experience Platform an das Salesforce Marketing Cloud-Ziel zu senden, müssen Sie den Feldzuordnungsschritt durchlaufen. Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres Experience-Datenmodell (XDM) in Ihrem Platform-Konto und den entsprechenden Entsprechungen vom Ziel zu erstellen. Gehen Sie wie folgt vor, um Ihre XDM-Felder korrekt den Salesforce-Marketing Cloud-Zielfeldern zuzuordnen:
+Um Ihre Zielgruppendaten korrekt von Adobe Experience Platform an das Salesforce Marketing Cloud-Ziel zu senden, müssen Sie den Feldzuordnungsschritt durchlaufen. Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres Experience-Datenmodell (XDM) in Ihrem Platform-Konto und den entsprechenden Entsprechungen vom Ziel zu erstellen. Gehen Sie wie folgt vor, um Ihre XDM-Felder korrekt den Salesforce-Marketing Cloud-Zielfeldern zuzuordnen.
 
 Die Liste der Attribut-Mappings, die für die [Salesforce REST API](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts) ist unten angegeben. Das Ziel verwendet die [Salesforce Search Attribute-Set Definitions REST API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) um Attribute abzurufen, die in Salesforce für Ihre Kontakte definiert sind und speziell für Ihr Konto gelten.
 
@@ -148,10 +150,10 @@ Die Liste der Attribut-Mappings, die für die [Salesforce REST API](https://deve
 > 
 > Obwohl Ihre Attributnamen gemäß Ihrem Salesforce-Konto übereinstimmen, werden die Zuordnungen für `contactKey` und `personalEmail.address` sind zwingend erforderlich.
 
-1. Klicken Sie im Schritt &quot;Zuordnung&quot;auf **[!UICONTROL Neues Mapping hinzufügen]**, wird eine neue Zuordnungszeile auf dem Bildschirm angezeigt.
+1. Klicken Sie im Schritt &quot;Zuordnung&quot;auf **[!UICONTROL Neues Mapping hinzufügen]**. Auf dem Bildschirm wird jetzt eine neue Zuordnungszeile angezeigt.
    ![Neue Zuordnung hinzufügen](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 
-1. Wählen Sie im Fenster Quellfeld auswählen die Option **[!UICONTROL Attribute auswählen]** und fügen Sie die gewünschten Zuordnungen hinzu.
+1. Wählen Sie im Fenster Quellfeld auswählen bei der Auswahl des Quellfelds die **[!UICONTROL Attribute auswählen]** und fügen Sie die gewünschten Zuordnungen hinzu.
    ![Quellzuordnung](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/source-mapping.png)
 
 1. Wählen Sie im Fenster Zielfeld auswählen das Zielfeld aus und wählen Sie die **[!UICONTROL Identitäts-Namespace auswählen]** und fügen Sie die gewünschten Zuordnungen hinzu.
@@ -172,7 +174,7 @@ Die Liste der Attribut-Mappings, die für die [Salesforce REST API](https://deve
 
 ### Segmentexport planen, Beispiel {#schedule-segment-export-example}
 
-Bei der Durchführung der [Segmentexport planen](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) Schritt müssen Sie Platform-Segmente manuell dem benutzerdefinierten Attribut in Salesforce zuordnen.
+Bei der Durchführung der [Segmentexport planen](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) Schritt, müssen Sie Platform-Segmente manuell dem benutzerdefinierten Attribut in Salesforce zuordnen.
 
 Wählen Sie dazu jedes Segment aus und geben Sie dann das entsprechende benutzerdefinierte Attribut aus Salesforce in das **[!UICONTROL Zuordnungs-ID]** -Feld.
 
@@ -233,4 +235,3 @@ Wenn Sie die Ausführung eines Datenflusses überprüfen, überprüfen Sie, ob d
 * Siehe Abschnitt [Salesforce Marketing Cloud Interaktionspreise](https://www.salesforce.com/editions-pricing/marketing-cloud/email/) Seite zu *Vollständige Vergleichstabelle herunterladen* als pdf , in dem die durch Ihren Plan festgelegten Grenzen beschrieben werden.
 * Die [API-Übersicht](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html) Seite enthält zusätzliche Einschränkungen.
 * Ein KB-Element, das diese Details sortiert, ist verfügbar [here](https://salesforce.stackexchange.com/questions/205898/marketing-cloud-api-limits#:~:text=Day%2FHour%2FMinute%20Limit&amp;text=We%20recommend%20a%20limit%20of,per%20minute%20for%20SOAP%20calls.&amp;text=As%20has%20been%20added%20in,interagieren%20with%20the%20REST%2DAPI).
-
