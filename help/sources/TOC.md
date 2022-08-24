@@ -4,10 +4,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 feature: Sources
-source-git-commit: 9d615d70ce37c6dad683e9082db02697b9882ab3
+source-git-commit: ed6a5ba39de2aecaef6f44604ff605721bfcb924
 workflow-type: tm+mt
-source-wordcount: '804'
-ht-degree: 91%
+source-wordcount: '820'
+ht-degree: 88%
 
 ---
 
@@ -292,23 +292,26 @@ ht-degree: 91%
    - [Löschen von Konten](tutorials/ui/delete-accounts.md)
    - [Löschen von Datenflüssen](tutorials/ui/delete.md)
    - [Abonnieren von Warnmeldungen für Quellen](tutorials/ui/alerts.md)
-- Quellen-SDK {#sdk}
+- Self-Serve-Quellen (Batch-SDK) {#sdk}
    - [Übersicht](sources-sdk/overview.md)
-   - [Konfigurationsoptionen](sources-sdk/config/config.md)
-   - [Konfigurieren der Authentifizierungsspezifikation](sources-sdk/config/authspec.md)
-   - [Konfigurieren der Quellspezifikation](sources-sdk/config/sourcespec.md)
-   - [Konfigurieren der Analysespezifikation](sources-sdk/config/explorespec.md)
-   - [Quellen-SDK-API – Übersicht](sources-sdk/api/api-overview.md)
-   - [Erste Schritte](sources-sdk/api/getting-started.md)
-   - [Erstellen einer Verbindungsspezifikation](sources-sdk/api/create.md)
-   - [Aktualisieren einer Verbindungsspezifikation](sources-sdk/api/update-connection-specs.md)
-   - [Aktualisieren einer Flussspezifikation](sources-sdk/api/update-flow-specs.md)
-   - [Übermitteln Ihrer Quelle](sources-sdk/api/submit.md)
-   - [Dokumentieren Ihrer Quelle in Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
-   - [Verwenden der GitHub-Web-Oberfläche, um eine Seite mit der Quellendokumentation zu erstellen](sources-sdk/documentation/github.md)
-   - [Verwenden eines Texteditors in Ihrer lokalen Umgebung, um die Seite mit der Quellendokumentation zu erstellen.](sources-sdk/documentation/text-editor.md)
-   - [Dokumentation-Self-Service-API-Vorlage](sources-sdk/documentation/template.md)
-   - [Vorlage für die Dokumentation-Self-Service-Benutzeroberfläche](sources-sdk/documentation/ui-template.md)
+   - Verbindungsspezifikation konfigurieren {#config}
+      - [Konfigurationsoptionen](sources-sdk/config/config.md)
+      - [Konfigurieren der Authentifizierungsspezifikation](sources-sdk/config/authspec.md)
+      - [Konfigurieren der Quellspezifikation](sources-sdk/config/sourcespec.md)
+      - [Konfigurieren der Analysespezifikation](sources-sdk/config/explorespec.md)
+   - Handbuch zur API für Self-Serve-Quellen (Batch SDK) {#self-serve-api}
+      - [Übersicht über die Self-Serve-Quellen-API (Batch SDK)](sources-sdk/api/api-overview.md)
+      - [Erste Schritte](sources-sdk/api/getting-started.md)
+      - [Erstellen einer Verbindungsspezifikation](sources-sdk/api/create.md)
+      - [Aktualisieren einer Verbindungsspezifikation](sources-sdk/api/update-connection-specs.md)
+      - [Aktualisieren einer Flussspezifikation](sources-sdk/api/update-flow-specs.md)
+      - [Übermitteln Ihrer Quelle](sources-sdk/api/submit.md)
+   - Dokumentationshandbuch {#documentation}
+      - [Dokumentieren Ihrer Quelle in Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
+      - [Verwenden der GitHub-Web-Oberfläche, um eine Seite mit der Quellendokumentation zu erstellen](sources-sdk/documentation/github.md)
+      - [Verwenden eines Texteditors in Ihrer lokalen Umgebung, um die Seite mit der Quellendokumentation zu erstellen.](sources-sdk/documentation/text-editor.md)
+      - [Dokumentation-Self-Service-API-Vorlage](sources-sdk/documentation/template.md)
+      - [Vorlage für die Dokumentation-Self-Service-Benutzeroberfläche](sources-sdk/documentation/ui-template.md)
 - [Flusslaufbenachrichtigungen](notifications.md)
 - [IP-Adressen-Zulassungsliste](ip-address-allow-list.md)
 - [Häufig gestellte Fragen](./troubleshooting.md)
