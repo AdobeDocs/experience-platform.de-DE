@@ -4,14 +4,20 @@ description: Die neuesten Versionshinweise für Adobe Experience Platform Debugg
 keywords: Debugger;Experience Platform Debugger-Erweiterung;Chrome;Erweiterung;Versionshinweise
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: b4e3b40942390ef183ccb01f65702ae400a5e22f
+source-git-commit: f2733cca00f98e85cd1b3944c5127f5c1c89594e
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '392'
 ht-degree: 2%
 
 ---
 
 # Versionshinweise zu Adobe Experience Platform Debugger
+
+## Version 1.4.0 - 24. August 2022
+
+* Unterstützung für die Hybrid-Implementierung des Web SDK hinzugefügt.
+* Es wurde eine Fehlermeldung hinzugefügt, wenn die Aktivierung von Target Trace fehlschlägt.
+* Aktualisierte Abhängigkeiten.
 
 ## Version 1.3.3 - 20. Juni 2022
 
