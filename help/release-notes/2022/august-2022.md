@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform - Versionshinweise, August 2022
 description: Die Versionshinweise für Adobe Experience Platform vom August 2022.
-source-git-commit: c3452dda554b3c7750ad1166cef598d51d739e02
+source-git-commit: 208dbba4c2ed4abb51b90073eeee0663e2b2f35f
 workflow-type: tm+mt
-source-wordcount: '1348'
-ht-degree: 41%
+source-wordcount: '1861'
+ht-degree: 36%
 
 ---
 
@@ -14,12 +14,50 @@ ht-degree: 41%
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
+
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [[!DNL Dashboards]](#dashboards)
 - [Datenvorbereitung](#data-prep)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Echtzeit-Kundenprofil](#profile)
 - [Segmentierungs-Service](#segmentation)
 - [Quellen](#sources)
+
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
+
+KI/ML-Services ermöglichen es Marketing-Analysten und -Praktikern, die Leistungsfähigkeit von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen zu nutzen. So können Marketing-Analysten mithilfe von Konfigurationen auf Unternehmensebene spezifische Modelle für die Anforderungen eines Unternehmens einrichten, ohne dass datenwissenschaftliche Kenntnisse erforderlich sind.
+
+### Attributions-KI
+
+Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
+
+**Aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Unterstützung für Datenschutz | <li> Attribution AI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien für die Verwaltung von [Berechtigungen](../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte in einer Produktanwendung. </li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li> <li> bis [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md), können Administratoren den Zugriff auf bestimmte Objekte und/oder Funktionen anhand bestimmter Attribute steuern. Dabei kann es sich um einem Objekt hinzugefügte Metadaten handeln, z. B. Beschriftungen. Administratoren können außerdem Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li> <li>[Datenhygiene](../../help/hygiene/home.md) -Funktionen innerhalb von Attribution AI ermöglichen es Ihnen, aktualisierte Daten nur für Weiterbildung und Scoring zu verwenden. Wenn Sie Daten löschen möchten, verwendet Attribution AI auch nicht die gelöschten Daten.</li><li>Attribution AI nutzt Platform-Datensätze. Um die Einhaltung der DSGVO zu erleichtern, können Sie mit Adobe Experience Platform Privacy Service Protokolle einrichten, um Kundenanfragen beim Zugriff auf und Löschen ihrer Daten im Data Lake, Identity Service und Echtzeit-Kundenprofil zu berücksichtigen. Alle Daten werden im Transit und im Ruhezustand verschlüsselt.</li> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Hinweis**: Attribution AI wird erst Ende 4. Quartal 2022 für Kunden des Gesundheitsschilds verfügbar sein.
+
+Weitere Informationen zu Attribution AIS finden Sie im [Attribution AI](../../intelligent-services/attribution-ai/overview.md) Übersicht.
+
+### Kunden-KI
+
+Kunden-KI in Real-time Customer Data Platform dient dazu, für einzelne Profile in gewünschten Umfang benutzerdefinierte Neigungswerte wie Abwanderung und Konversion zu generieren.
+
+**Aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Unterstützung für Datenschutz | <li> Customer AI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien zur Verwaltung [Berechtigungen](../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte in einer Produktanwendung. </li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li> <li> bis [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md), können Administratoren den Zugriff auf bestimmte Objekte und/oder Funktionen anhand bestimmter Attribute steuern. Diese Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. Beschriftungen. Administratoren können auch Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li> <li>[Datenhygiene](../../help/hygiene/home.md) Funktionen innerhalb von Customer AI ermöglichen Ihnen, aktualisierte Daten nur für Weiterbildung und Scoring zu verwenden. Auf ähnliche Weise verzichtet Customer AI bei der Anforderung, Daten zu löschen, auf die Verwendung der gelöschten Daten.</li><li>Customer AI nutzt Platform-Datensätze. Um die Einhaltung der DSGVO zu erleichtern, können Sie mit Adobe Experience Platform Privacy Service Protokolle einrichten, um Kundenanfragen beim Zugriff auf und Löschen ihrer Daten im Data Lake, Identity Service und Echtzeit-Kundenprofil zu berücksichtigen. Alle Daten werden im Transit und im Ruhezustand verschlüsselt.</li> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Hinweis**: Kunden-KI wird erst Ende 4. Quartal 2022 für Kunden von Health Care Shield verfügbar sein.
+
+Weitere Informationen zu Customer AI finden Sie im [Customer AI](../../intelligent-services/customer-ai/overview.md) Übersicht.
 
 ## [!DNL Dashboards] {#dashboards}
 
