@@ -5,10 +5,10 @@ title: Benutzerhandbuch zu Attribution AI
 topic-legacy: User guide
 description: Dieses Dokument dient als Leitfaden für die Interaktion mit Attribution AI in der Benutzeroberfläche von Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: ac21668955305c135d78c1e6afbee8f6499f6885
+source-git-commit: 67b4c49de6ebb9986f735390a0657d908b07e039
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2705'
+ht-degree: 6%
 
 ---
 
@@ -262,7 +262,7 @@ Nachdem Sie Ihr Schulungsfenster ausgewählt haben, wählen Sie **[!UICONTROL Be
 
 ![Setup abgeschlossen](./images/user-guide/instance_setup_complete.png)
 
-### Attributbasierte Zugriffssteuerung
+## Attributbasierte Zugriffssteuerung
 
 >[!IMPORTANT]
 >
@@ -278,15 +278,15 @@ Aufgrund der attributbasierten Zugriffskontrolle sind einige Felder und Funktion
 
 Oben im Arbeitsbereich &quot;Attribution AI&quot; **Insight-Seite**, haben die Details, die in der Seitenleiste angezeigt werden, eingeschränkten Zugriff.
 
-![Der Attribution AI-Arbeitsbereich mit hervorgehobenen eingeschränkten Schemafeldern.](./images/user-guide/access-restricted.png)
+![Der Arbeitsbereich Attribution AI mit hervorgehobenen eingeschränkten Schemafeldern.](./images/user-guide/access-restricted.png)
 
 Wenn Sie Datensätze mit eingeschränkten Schemas im **[!UICONTROL Workflow &quot;Instanz erstellen&quot;]** -Seite wird neben dem Datensatznamen ein Warnzeichen mit der Meldung angezeigt: [!UICONTROL Eingeschränkte Informationen sind ausgeschlossen].
 
-![Der Arbeitsbereich Attribution AI mit den eingeschränkten Feldern der ausgewählten Datensätze mit eingeschränkten Schemata wird hervorgehoben.](./images/user-guide/restricted-info-excluded.png)
+![Der Arbeitsbereich Attribution AI mit hervorgehobenen eingeschränkten Datensatzfeldern.](./images/user-guide/restricted-info-excluded.png)
 
 Bei der Vorschau von Datensätzen mit eingeschränktem Schema auf der **[!UICONTROL Workflow &quot;Instanz erstellen&quot;]** angezeigt wird, erscheint ein Warnhinweis, der Ihnen mitteilt, dass [!UICONTROL Aufgrund von Zugriffsbeschränkungen werden bestimmte Informationen nicht in der Datensatzvorschau angezeigt.]
 
-![Der Arbeitsbereich Attribution AI mit den eingeschränkten Feldern der in der Vorschau angezeigten Schemaergebnisse wurde hervorgehoben.](./images/user-guide/restricted-dataset-preview.png)
+![Der Arbeitsbereich Attribution AI mit den eingeschränkten Feldern für die Vorschau des Schemas zeigt die Ergebnisse an.](./images/user-guide/restricted-dataset-preview.png)
 
 Nachdem Sie eine Instanz mit eingeschränkten Informationen erstellt haben, fahren Sie mit dem **[!UICONTROL Ziel definieren]** Schritt, wird oben eine Warnung angezeigt: [!UICONTROL Aufgrund von Zugriffsbeschränkungen werden bestimmte Informationen nicht in der Konfiguration angezeigt.]
 

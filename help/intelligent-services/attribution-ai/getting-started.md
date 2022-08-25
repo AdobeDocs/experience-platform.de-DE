@@ -5,10 +5,10 @@ title: Erste Schritte mit Attribution AI
 topic-legacy: Getting started
 description: Folgende Handbücher setzen ein Verständnis der verschiedenen Adobe Experience Platform-Dienste voraus, die mit der Verwendung von Attribution AI verbunden sind. Bevor Sie mit den Tutorials beginnen, lesen Sie folgende Dokumente.
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
-source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
+source-git-commit: 9ce5a383bed24c4bfe9245521149443a57764da5
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '620'
+ht-degree: 62%
 
 ---
 
@@ -52,7 +52,7 @@ Alle Ressourcen in Experience Platform sind auf bestimmte virtuelle Sandboxes be
 
 In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md) im Handbuch zur Fehlerbehebung für Experience Platform.
 
-## Berechtigungen {#permissions}
+## ## DSGVO und Verschlüsselung {#gdpr-and-encryption}
 
 Bei der Verwendung rollenbasierter Zugriffssteuerung muss die **Attribution AI anzeigen** und **Attribution AI verwalten** -Berechtigungen gewähren Zugriff auf verschiedene Funktionen von Attribution AI. Die **Attribution AI verwalten** ermöglicht **erstellen**, **clone**, **edit**, **delete**, **enable** oder **disable** eine Instanz während **Attribution AI anzeigen** ermöglicht **lesen** oder **Ansicht** es. Die **erstellen**, **edit** und **delete** -Aktionen werden in Auditprotokollen aufgezeichnet.
 
