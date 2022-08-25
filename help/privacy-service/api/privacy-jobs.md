@@ -5,10 +5,10 @@ title: Privacy Jobs API Endpoint
 topic-legacy: developer guide
 description: Erfahren Sie, wie Sie mit der Privacy Service-API Datenschutzaufträge für Experience Cloud-Apps verwalten.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b126726aa7f7fe6070693fdecfdac1ec66050aa9
 workflow-type: tm+mt
-source-wordcount: '1362'
-ht-degree: 68%
+source-wordcount: '1429'
+ht-degree: 65%
 
 ---
 
@@ -143,10 +143,11 @@ curl -X POST \
         ]
       }
     ],
-    "include": ["Analytics", "AudienceManager"],
+    "include": ["Analytics", "AudienceManager","profileService"],
     "expandIds": false,
     "priority": "normal",
     "analyticsDeleteMethod": "anonymize",
+    "mergePolicyId": 124,
     "regulation": "ccpa"
 }'
 ```
@@ -159,6 +160,7 @@ curl -X POST \
 | `expandIDs` | Eine optionale Eigenschaft, die bei Festlegung auf `true`stellt eine Optimierung für die Verarbeitung der IDs in den Anwendungen dar (derzeit nur unterstützt von [!DNL Analytics]). Wenn dieses Wert weggelassen wird, wird standardmäßig `false` verwendet. |
 | `priority` | Eine optionale Eigenschaft, die von Adobe Analytics verwendet wird und die Priorität für die Verarbeitung von Anfragen festlegt. Die zulässigen Werte sind `normal` und `low`. Wenn keine `priority` angegeben wird, lautet das Standardverhalten `normal`. |
 | `analyticsDeleteMethod` | Eine optionale Eigenschaft, die angibt, wie Adobe Analytics mit den personenbezogenen Daten umgehen soll. Für dieses Attribut werden zwei mögliche Werte akzeptiert: <ul><li>`anonymize`: Alle Daten, auf die bei der angegebenen Sammlung von Benutzer-IDs verwiesen wird, werden anonym gemacht. Wenn `analyticsDeleteMethod` ausgelassen wird, ist dies das Standardverhalten.</li><li>`purge`: Alle Daten werden vollständig entfernt.</li></ul> |
+| `mergePolicyId` | Bei Datenschutzanfragen für Echtzeit-Kundenprofil (`profileService`), können Sie optional die ID der spezifischen [Zusammenführungsrichtlinie](../../profile/merge-policies/overview.md) die Sie für die ID-Zuordnung verwenden möchten. Durch Angabe einer Zusammenführungsrichtlinie können Datenschutzanfragen bei der Rückgabe von Daten an einen Kunden Segmentinformationen enthalten. Pro Anfrage kann nur eine Zusammenführungsrichtlinie angegeben werden. Wenn keine Zusammenführungsrichtlinie angegeben wird, werden Segmentierungsinformationen nicht in die Antwort aufgenommen. |
 | `regulation` **(Erforderlich)** | Die Verordnung für den Datenschutzauftrag. Folgende Werte werden akzeptiert: <ul><li>`gdpr` (Europäische Union)</li><li>`ccpa` (Kalifornien)</li><li>`lgpd_bra` (Brasilien)</li><li>`nzpa_nzl` (Neuseeland)</li><li>`pdpa_tha` (Thailand)</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
