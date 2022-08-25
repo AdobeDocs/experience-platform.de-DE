@@ -5,7 +5,7 @@ exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
 workflow-type: tm+mt
 source-wordcount: '481'
-ht-degree: 56%
+ht-degree: 68%
 
 ---
 
@@ -41,8 +41,8 @@ Wählen Sie das Trichtersymbol (![Bild des Trichtersymbols](../images/ui/browse/
 
 | Filter | Beschreibung |
 | --- | --- |
-| [!UICONTROL Status] | Filtern Sie nach dem aktuellen Status des Arbeitsauftrags:<ul><li>**[!UICONTROL Abgeschlossen]**: Die Arbeit ist abgeschlossen.</li><li>**[!UICONTROL Ausstehend]**: Der Auftrag wurde erstellt, aber noch nicht ausgeführt. A [Datensatzablaufanfrage](./dataset-expiration.md) nimmt diesen Status vor dem geplanten Löschdatum an. Sobald das Löschdatum eintrifft, wird der Status in [!UICONTROL Wird ausgeführt] , es sei denn, der Auftrag wurde im Voraus storniert.</li><li>**[!UICONTROL Wird ausgeführt]**: Die Anfrage zum Ablauf des Datensatzes wurde gestartet und wird derzeit verarbeitet.</li><li>**[!UICONTROL Abgebrochen]**: Der Auftrag wurde im Rahmen einer manuellen Benutzeranfrage abgebrochen.</li></ul> |
-| [!UICONTROL Erstellt am] | Filtern Sie nach dem Zeitpunkt, zu dem der Arbeitsauftrag ausgeführt wurde. |
+| [!UICONTROL Status] | Filtern Sie nach dem aktuellen Status des Arbeitsauftrags:<ul><li>**[!UICONTROL Abgeschlossen]**: Der Vorgang ist abgeschlossen.</li><li>**[!UICONTROL Ausstehend]**: Der Vorgang wurde erstellt, aber noch nicht ausgeführt. A [Datensatzablaufanfrage](./dataset-expiration.md) nimmt diesen Status vor dem geplanten Löschdatum an. Zum Löschdatum ändert sich der Status auf [!UICONTROL Wird ausgeführt], sofern der Vorgang nicht zuvor bereits abgebrochen wurde.</li><li>**[!UICONTROL Wird ausgeführt]**: Die Anfrage zum Ablauf des Datensatzes wurde gestartet und wird derzeit verarbeitet.</li><li>**[!UICONTROL Abgebrochen]**: Der Vorgang wurde im Rahmen einer manuellen Benutzeranfrage abgebrochen.</li></ul> |
+| [!UICONTROL Erstellt am] | Filtern Sie nach dem Zeitpunkt, zu dem der Arbeitsauftrag erstellt wurde. |
 | [!UICONTROL Ablaufdatum] | Filtern Sie die Anforderungen zum Ablauf von Datensätzen basierend auf dem geplanten Löschdatum für den betreffenden Datensatz. |
 | [!UICONTROL Aktualisierungsdatum] | Filtern Sie die Anforderungen zum Ablauf von Datensätzen basierend auf dem Zeitpunkt, zu dem die Arbeitsreihenfolge zuletzt aktualisiert wurde. Kreationen und Abläufe werden als Updates gezählt. |
 
