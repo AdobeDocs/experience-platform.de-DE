@@ -2,10 +2,10 @@
 description: Das Adobe Experience Platform Destination SDK umfasst eine Reihe von Konfigurations-APIs, mit denen Sie Zielintegrationsmuster für Experience Platform konfigurieren können, um Zielgruppen- und Profildaten basierend auf den von Ihnen ausgewählten Daten- und Authentifizierungsformaten an Ihren Endpunkt zu senden. Die Konfigurationen werden in Experience Platform gespeichert und können über eine API für zusätzliche Aktualisierungen abgerufen werden.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: c207b6700a31c59b00af6d55264c7a345219d999
+source-git-commit: 2e2ed880650ad6823b60819e36081540a35ab727
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '717'
+ht-degree: 83%
 
 ---
 
@@ -62,8 +62,7 @@ Der Zugriff auf die Destination SDK variiert je nach Ihrem Status als Partner od
 ---------|----------|
 | Unabhängiger Software-Anbieter (ISV) | Werden Sie Mitglied im [Adobe Exchange-Programm](https://partners.adobe.com/exchangeprogram/experiencecloud.html) und beantragen Sie die Bereitstellung einer Experience Platform-Sandbox für den Zugriff auf das Destination SDK. |
 | Systemintegrator (SI) | Sie müssen entweder den Gold- oder Platin-Status im [Adobe-Lösungspartner-Programm](https://solutionpartners.adobe.com/home.html) erreicht haben, um eine Experience Platform-Sandbox und Zugriff auf das Destination SDK zu erhalten. |
-| Experience Platform-Kunde mit dem [Aktivierungspaket](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform0.html) | Sie erhalten standardmäßig Zugriff auf Experience Platform-Sandboxes und das Destination SDK. <br> Sie erhalten außerdem Zugriff auf alle erstellten Ziele, die von anderen Unternehmen mithilfe von Destination SDK konfiguriert und in Experience Platform-Unternehmen veröffentlicht wurden. |
-| Experience Platform-Kunde auf der [Real-Time CDP Ultimate-Package](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) | Sie erhalten standardmäßig Zugriff auf Experience Platform-Sandboxes und das Destination SDK. <br> Sie erhalten außerdem Zugriff auf alle erstellten Ziele, die von anderen Unternehmen mithilfe von Destination SDK konfiguriert und in Experience Platform-Unternehmen veröffentlicht wurden. |
+| Experience Platform-Kunde mit dem [Aktivierungspaket](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform0.html) oder [Real-Time CDP Ultimate-Package](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) | Standardmäßig erhalten Sie Zugriff auf Experience Platform-Sandboxes und Destination SDK, sodass Sie private Ziele für Ihr Unternehmen erstellen können. |
 
 {style=&quot;table-layout:auto&quot;}
 
