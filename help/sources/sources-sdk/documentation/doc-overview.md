@@ -5,7 +5,7 @@ title: Quelle dokumentieren
 topic-legacy: overview
 description: Der letzte Schritt, bevor Ihre neue Quelle in Adobe Experience Platform live geschaltet werden kann, besteht darin, Ihre neue Quelle zu dokumentieren.
 exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 3%
@@ -41,7 +41,7 @@ Sie können eine [Dokumentationsvorlage](./template.md) , um die Erstellung der 
 
 Sie können auch die folgenden Dokumentationsvorlagen herunterladen:
 
-* [API-Dokumentationsvorlage](../assets/template.zip)
+* [API-Dokumentationsvorlage](../assets/api-template.zip)
 * [Benutzeroberflächendokumentationsvorlage](../assets/ui-template.zip)
 
 ## Neue Quellseite erstellen

@@ -5,10 +5,10 @@ title: Verwenden Sie einen Texteditor in Ihrer lokalen Umgebung, um eine Seite m
 topic-legacy: tutorial
 description: In diesem Dokument erfahren Sie, wie Sie mit Ihrer lokalen Umgebung die Dokumentation für Ihre Quelle erstellen und eine Pull-Anforderung (PA) senden können.
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '650'
+ht-degree: 8%
 
 ---
 
@@ -70,7 +70,7 @@ Geben Sie als Nächstes ein `Adobe Markdown Authoring` in die Suchleiste ein und
 
 ![install](../assets/install.png)
 
-Laden Sie die [Quelldokumentationsvorlage](../assets/template.zip) und extrahieren Sie die Datei in `experience-platform.en/help/sources/tutorials/api/create/...` mit [`...`] die Kategorie Ihrer Wahl. Wenn Sie beispielsweise eine Datenbankquelle erstellen, wählen Sie den Datenbankordner aus.
+Laden Sie die [Quelldokumentationsvorlage](../assets/api-template.zip) und extrahieren Sie die Datei in `experience-platform.en/help/sources/tutorials/api/create/...` mit [`...`] die Kategorie Ihrer Wahl. Wenn Sie beispielsweise eine Datenbankquelle erstellen, wählen Sie den Datenbankordner aus.
 
 Befolgen Sie abschließend die in der Vorlage beschriebenen Anweisungen und bearbeiten Sie die Vorlage mit den entsprechenden Informationen zu Ihrer Quelle.
 

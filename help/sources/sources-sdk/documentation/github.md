@@ -5,7 +5,7 @@ title: Verwenden Sie die GitHub-Webschnittstelle, um eine Quelldokumentationssei
 topic-legacy: tutorial
 description: In diesem Dokument erfahren Sie, wie Sie mit der GitHub-Web-Oberfläche die Dokumentation erstellen und eine Pull-Anforderung (PA) senden können.
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 4%
@@ -52,7 +52,7 @@ Benennen Sie die Quelldatei. `YOURSOURCE.md` wobei YOURSOURCE der Name Ihrer Que
 
 ## Erstellen Sie die Dokumentationsseite für Ihre Quelle.
 
-Fügen Sie den Inhalt der [Quelldokumentationsvorlage](./template.md) in den GitHub-Web-Editor. Sie können auch die Vorlage herunterladen [here](../assets/template.zip).
+Fügen Sie den Inhalt der [Quelldokumentationsvorlage](./template.md) in den GitHub-Web-Editor. Sie können auch die Vorlage herunterladen [here](../assets/api-template.zip).
 
 Nachdem die Vorlage in die GitHub-Web-Editor-Oberfläche kopiert wurde, befolgen Sie die in der Vorlage beschriebenen Anweisungen und bearbeiten Sie die Werte, die relevante Informationen für Ihre Quelle enthalten.
 

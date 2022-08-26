@@ -1,18 +1,16 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
-solution: Experience Platform
 title: Dokumentationsvorlage für Self-Service
-topic-legacy: tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit YOURSOURCE verbinden.
 exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 74e9774009d086a04351c8ff04cde29348c90c09
 workflow-type: tm+mt
-source-wordcount: '2296'
-ht-degree: 75%
+source-wordcount: '2134'
+ht-degree: 56%
 
 ---
 
-# Erstellen Sie eine *YOURSOURCE* Verbindung mithilfe der Flow Service-API
+# Erstellen Sie eine *YOURSOURCE* Verbindung mithilfe der [!DNL Flow Service] API
 
 *Wenn Sie diese Vorlage durchlaufen, ersetzen oder löschen Sie alle kursiv gedruckten Absätze (beginnend mit dieser).*
 
@@ -20,7 +18,7 @@ ht-degree: 75%
 
 ## Übersicht
 
-*Geben Sie einen kurzen Überblick über Ihr Unternehmen, einschließlich des Nutzens, den es für Kunden bietet. Fügen Sie einen Link zu Ihrer Homepage für die Produktdokumentation hinzu, um ihn weiter zu lesen.*
+*Geben Sie einen kurzen Überblick über Ihr Unternehmen, einschließlich des Nutzens, den es für Kunden bietet. Fügen Sie einen Link zur Homepage Ihrer Produktdokumentation hinzu, um ihn weiter zu lesen.*
 
 >[!IMPORTANT]
 >
@@ -34,6 +32,18 @@ ht-degree: 75%
 * *Anforderungen für das E-Mail-Hashing*
 * *alle Kontospezifikationen auf Ihrer Seite*
 * *Abrufen eines API-Schlüssels für die Verbindung mit Ihrer Plattform*
+
+### Sammeln erforderlicher Anmeldeinformationen
+
+Um eine Verbindung herzustellen *YOURSOURCE* zur Experience Platform hinzufügen, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+
+| Anmeldedaten | Beschreibung | Beispiel |
+| --- | --- | --- |
+| *Berechtigung eins* | *Fügen Sie hier eine kurze Beschreibung zu den Authentifizierungsberechtigungen Ihrer Quelle hinzu.* | *Fügen Sie hier ein Beispiel für die Authentifizierungsberechtigung Ihrer Quelle hinzu.* |
+| *Berechtigung zwei* | *Fügen Sie hier eine kurze Beschreibung zu den Authentifizierungsberechtigungen Ihrer Quelle hinzu.* | *Fügen Sie hier ein Beispiel für die Authentifizierungsberechtigung Ihrer Quelle hinzu.* |
+| *Berechtigung drei* | *Fügen Sie hier eine kurze Beschreibung zu den Authentifizierungsberechtigungen Ihrer Quelle hinzu.* | *Fügen Sie hier ein Beispiel für die Authentifizierungsberechtigung Ihrer Quelle hinzu.* |
+
+Weitere Informationen zu diesen Anmeldedaten finden Sie im Abschnitt *YOURSOURCE* Authentifizierungsdokumentation. *Fügen Sie hier einen Link zur Authentifizierungsdokumentation Ihrer Plattform hinzu.*.
 
 ## Verbinden *YOURSOURCE* zur Plattform mithilfe der [!DNL Flow Service] API
 
@@ -518,392 +528,26 @@ Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenfluss
 }
 ```
 
+## Anhang
+
+Im folgenden Abschnitt finden Sie Informationen zu den Schritten, mit denen Sie Ihren Datenfluss überwachen, aktualisieren und löschen können.
+
 ### Überwachen Ihres Datenflusses
 
-Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen, um Informationen über die Datenflussausführungen, den Abschlussstatus und Fehler anzuzeigen.
-
-**API-Format**
-
-```http
-GET /runs?property=flowId=={FLOW_ID}
-```
-
-**Anfrage**
-
-Mit der folgenden Anfrage werden die Spezifikationen für einen vorhandenen Datenfluss abgerufen.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==993f908f-3342-4d9c-9f3c-5aa9a189ca1a' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Antwort**
-
-Bei einer erfolgreichen Antwort werden Details zu Ihrem Flussvorgang angegeben, einschließlich Informationen zum Erstellungsdatum, zu den Quell- und Zielverbindungen sowie zur eindeutigen Kennung des Flussvorgangs (`id`).
-
-```json
-{
-    "items": [
-        {
-            "createdAt": 1596656079576,
-            "updatedAt": 1596656113526,
-            "createdBy": "{CREATED_BY}",
-            "updatedBy": "{UPDATED_BY}",
-            "createdClient": "{CREATED_CLIENT}",
-            "updatedClient": "{UPDATED_CLIENT}",
-            "sandboxId": "1bd86660-c5da-11e9-93d4-6d5fc3a66a8e",
-            "sandboxName": "prod",
-            "id": "9830305a-985f-47d0-b030-5a985fd7d004",
-            "flowId": "993f908f-3342-4d9c-9f3c-5aa9a189ca1a",
-            "etag": "\"510bb1d4-8453-4034-b991-ab942e11dd8a\"",
-            "metrics": {
-                "durationSummary": {
-                    "startedAtUTC": 1596656058198,
-                    "completedAtUTC": 1596656113306
-                },
-                "sizeSummary": {
-                    "inputBytes": 24012,
-                    "outputBytes": 17128
-                },
-                "recordSummary": {
-                    "inputRecordCount": 100,
-                    "outputRecordCount": 99,
-                    "failedRecordCount": 1
-                },
-                "fileSummary": {
-                    "inputFileCount": 1,
-                    "outputFileCount": 1,
-                    "activityRefs": [
-                        "promotionActivity"
-                    ]
-                },
-                "statusSummary": {
-                    "status": "success",
-                    "errors": [
-                        {
-                            "code": "CONNECTOR-2001-500",
-                            "message": "Error occurred at promotion activity."
-                        }
-                    ],
-                    "activityRefs": [
-                        "promotionActivity"
-                    ]
-                }
-            },
-            "activities": [
-                {
-                    "id": "copyActivity",
-                    "updatedAtUTC": 1596656095088,
-                    "durationSummary": {
-                        "startedAtUTC": 1596656058198,
-                        "completedAtUTC": 1596656089650,
-                        "extensions": {
-                            "windowStart": 1596653708000,
-                            "windowEnd": 1596655508000
-                        }
-                    },
-                    "sizeSummary": {
-                        "inputBytes": 24012,
-                        "outputBytes": 24012
-                    },
-                    "recordSummary": {},
-                    "fileSummary": {
-                        "inputFileCount": 1,
-                        "outputFileCount": 1
-                    },
-                    "statusSummary": {
-                        "status": "success",
-                        "extensions": {
-                            "type": "one-time"
-                        }
-                    },
-                    "sourceInfo": [
-                        {
-                            "id": "c0e18602-f9ea-44f9-a186-02f9ea64f9ac",
-                            "type": "SourceConnection",
-                            "reference": {
-                                "type": "AdfRunId",
-                                "ids": [
-                                    "8a8eb0cc-e283-4605-ac70-65a5adb1baef"
-                                ]
-                            }
-                        }
-                    ]
-                },
-                {
-                    "id": "promotionActivity",
-                    "updatedAtUTC": 1596656113485,
-                    "durationSummary": {
-                        "startedAtUTC": 1596656095333,
-                        "completedAtUTC": 1596656113306
-                    },
-                    "sizeSummary": {
-                        "inputBytes": 24012,
-                        "outputBytes": 17128
-                    },
-                    "recordSummary": {
-                        "inputRecordCount": 100,
-                        "outputRecordCount": 99,
-                        "failedRecordCount": 1
-                    },
-                    "fileSummary": {
-                        "inputFileCount": 2,
-                        "outputFileCount": 1,
-                        "extensions": {
-                            "manifest": {
-                                "fileInfo": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=input_files"
-                            }
-                        }
-                    },
-                    "statusSummary": {
-                        "status": "success",
-                        "errors": [
-                            {
-                                "code": "CONNECTOR-2001-500",
-                                "message": "Error occurred at promotion activity."
-                            }
-                        ],
-                        "extensions": {
-                            "manifest": {
-                                "failedRecords": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=row_errors",
-                                "sampleErrors": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=row_error_samples.json"
-                            },
-                            "errors": [
-                                {
-                                    "code": "INGEST-1212-400",
-                                    "message": "Encountered 1 errors in the data. Successfully ingested 99 rows. Review the associated diagnostic files for additional details."
-                                },
-                                {
-                                    "code": "MAPPER-3700-400",
-                                    "recordCount": 1,
-                                    "message": "Mapper Transform Error"
-                                }
-                            ]
-                        }
-                    },
-                    "targetInfo": [
-                        {
-                            "id": "47166b83-01c7-4b65-966b-8301c70b6562",
-                            "type": "TargetConnection",
-                            "reference": {
-                                "type": "Batch",
-                                "ids": [
-                                    "01EF01X41KJD82Y9ZX6ET54PCZ"
-                                ]
-                            }
-                        }
-                    ]
-                }
-            ]
-        }
-    ],
-    "_links": {}
-}
-```
-
-| Eigenschaft | Beschreibung |
-| -------- | ----------- |
-| `items` | Enthält eine einzige Payload von Metadaten, die mit Ihrer spezifischen Datenflussausführung verknüpft sind. |
-| `metrics` | Definiert die Eigenschaften der Daten in der Flussausführung. |
-| `activities` | Definiert, wie die Daten transformiert werden. |
-| `durationSummary` | Definiert die Start- und Endzeit des Durchlaufs. |
-| `sizeSummary` | Definiert das Volumen der Daten in Byte. |
-| `recordSummary` | Definiert die Anzahl der Datensätze. |
-| `fileSummary` | Definiert die Dateianzahl der Daten. |
-| `statusSummary` | Definiert, ob die Flussausführung erfolgreich oder fehlgeschlagen ist. |
+Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen, um Informationen über die Datenflussausführungen, den Abschlussstatus und Fehler anzuzeigen. Die vollständigen API-Beispiele finden Sie im Handbuch unter [Überwachen der Datenflüsse Ihrer Quellen mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
 
 ### Aktualisieren des Datenflusses
 
-Um den Ausführungsplan, Namen und die Beschreibung Ihres Datenflusses zu aktualisieren, führen Sie eine PATCH-Anfrage an die [!DNL Flow Service]-API aus und geben Sie dabei Ihre Fluss-ID, Version und den neuen Zeitplan an, den Sie verwenden möchten.
+Aktualisieren Sie die Details Ihres Datenflusses, z. B. seinen Namen und seine Beschreibung, sowie den Ausführungszeitplan und die zugehörigen Zuordnungssätze, indem Sie eine PATCH-Anfrage an die `/flows` Endpunkt von [!DNL Flow Service] API verwenden, während Sie die Kennung Ihres Datenflusses angeben. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` im `If-Match` -Kopfzeile. Die vollständigen API-Beispiele finden Sie im Handbuch unter [Aktualisieren von Datenflüssen für Quellen mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
 
->[!IMPORTANT]
->
->Die Kopfzeile `If-Match` ist bei einer PATCH-Anfrage erforderlich. Der Wert für diese Kopfzeile ist das eindeutige Tag des Datenflusses, den Sie aktualisieren möchten.
+### Konto aktualisieren
 
-**API-Format**
-
-```http
-PATCH /flows/{FLOW_ID}
-```
-
-**Anfrage**
-
-Mit der folgenden Anfrage werden Ihr Ablaufplan für den Fluss sowie der Name und die Beschreibung Ihres Datenflusses aktualisiert.
-
-```shell
-curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/993f908f-3342-4d9c-9f3c-5aa9a189ca1a' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
-    -d '[
-            {
-                "op": "replace",
-                "path": "/scheduleParams/frequency",
-                "value": "day"
-            },
-            {
-                "op": "replace",
-                "path": "/name",
-                "value": "New dataflow name"
-            },
-            {
-                "op": "replace",
-                "path": "/description",
-                "value": "Updated dataflow description"
-            }
-        ]'
-```
-
-| Parameter | Beschreibung |
-| --------- | ----------- |
-| `op` | Der Operationsaufruf, der verwendet wird, um die Aktion zu definieren, die zur Aktualisierung des Datenflusses erforderlich ist. Die Operationen umfassen `add`, `replace` und `remove`. |
-| `path` | Der Pfad des zu aktualisierenden Parameters. |
-| `value` | Der neue Wert, mit dem Sie Ihren Parameter aktualisieren möchten. |
-
-**Antwort**
-
-Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und ein aktualisiertes eTag zurückgegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service]-API stellen und dabei Ihre Fluss-ID angeben.
-
-```json
-{
-    "id": "993f908f-3342-4d9c-9f3c-5aa9a189ca1a",
-    "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
-}
-```
+Aktualisieren Sie den Namen, die Beschreibung und die Anmeldeinformationen Ihres Quellkontos, indem Sie eine PATCH-Anfrage an die [!DNL Flow Service] API bei der Bereitstellung Ihrer Basis-Verbindungs-ID als Abfrageparameter. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` im `If-Match` -Kopfzeile. Die vollständigen API-Beispiele finden Sie im Handbuch unter [Quellkonto mithilfe der API aktualisieren](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
 
 ### Löschen des Datenflusses
 
-Mit einer vorhandenen Fluss-ID können Sie einen Datenfluss löschen, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service]-API stellen.
+Löschen Sie Ihren Datenfluss, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service] API bei Angabe der Kennung des Datenflusses, den Sie als Teil des Abfrageparameters löschen möchten. Die vollständigen API-Beispiele finden Sie im Handbuch unter [Löschen Ihrer Datenflüsse mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
 
-**API-Format**
+### Konto löschen
 
-```http
-DELETE /flows/{FLOW_ID}
-```
-
-| Parameter | Beschreibung |
-| --------- | ----------- |
-| `{FLOW_ID}` | Der eindeutige `id`-Wert für den Datenfluss, den Sie löschen möchten. |
-
-**Anfrage**
-
-```shell
-curl -X DELETE \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/993f908f-3342-4d9c-9f3c-5aa9a189ca1a' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Antwort**
-
-Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück. Sie können den Löschvorgang bestätigen, indem Sie eine Suchanfrage (GET) an den Datenfluss stellen. Die API gibt den HTTP-Fehler 404 (Nicht gefunden) zurück, der angibt, dass der Datenfluss gelöscht wurde.
-
-### Aktualisieren der Verbindung
-
-Um den Namen, die Beschreibung und die Anmeldeinformationen Ihrer Verbindung zu aktualisieren, führen Sie eine PATCH-Anfrage an die [!DNL Flow Service]-API aus und geben Sie dabei Ihre Basisverbindungs-ID, -Version und die neuen Informationen an, die Sie verwenden möchten.
-
->[!IMPORTANT]
->
->Die Kopfzeile `If-Match` ist bei einer PATCH-Anfrage erforderlich. Der Wert für diese Kopfzeile ist die eindeutige Version der Verbindung, die Sie aktualisieren möchten.
-
-**API-Format**
-
-```http
-PATCH /connections/{BASE_CONNECTION_ID}
-```
-
-| Parameter | Beschreibung |
-| --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | Der eindeutige `id`-Wert für die Verbindung, die Sie aktualisieren möchten. |
-
-**Anfrage**
-
-Die folgende Anfrage enthält einen neuen Namen und eine neue Beschreibung sowie einen neuen Satz von Anmeldeinformationen, mit denen Sie Ihre Verbindung aktualisieren können.
-
-```shell
-curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/connections/139f6a5f-a78b-4744-9f6a-5fa78bd74431' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: 1400dd53-0000-0200-0000-5f3f23450000' \
-    -d '[
-        {
-            "op": "replace",
-            "path": "/auth/params",
-            "value": {
-                "username": "salesforce-connector-username",
-                "password": "{NEW_PASSWORD}",
-                "securityToken": "{NEW_SECURITY_TOKEN}"
-            }
-        },
-        {
-            "op": "replace",
-            "path": "/name",
-            "value": "Test salesforce connection"
-        },
-        {
-            "op": "add",
-            "path": "/description",
-            "value": "A test salesforce connection"
-        }
-    ]'
-```
-
-| Parameter | Beschreibung |
-| --------- | ----------- |
-| `op` | Der Operationsaufruf, der für die Definition der zum Aktualisieren der Verbindung erforderlichen Aktion verwendet wird. Die Operationen umfassen `add`, `replace` und `remove`. |
-| `path` | Der Pfad des zu aktualisierenden Parameters. |
-| `value` | Der neue Wert, mit dem Sie Ihren Parameter aktualisieren möchten. |
-
-**Antwort**
-
-Bei einer erfolgreichen Antwort werden Ihre Basisverbindungs-ID und ein aktualisiertes E-Tag angegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service]-API stellen und dabei Ihre Verbindungs-ID angeben.
-
-```json
-{
-    "id": "139f6a5f-a78b-4744-9f6a-5fa78bd74431",
-    "etag": "\"3600e378-0000-0200-0000-5f40212f0000\""
-}
-```
-
-### Löschen Ihrer Verbindung
-
-Nachdem Sie über eine bestehende Basisverbindungs-ID verfügen, führen Sie eine DELETE-Anfrage an die [!DNL Flow Service]-API durch.
-
-**API-Format**
-
-```http
-DELETE /connections/{CONNECTION_ID}
-```
-
-| Parameter | Beschreibung |
-| --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | Der eindeutige `id`-Wert für die Basisverbindung, die Sie löschen möchten. |
-
-**Anfrage**
-
-```shell
-curl -X DELETE \
-    'https://platform.adobe.io/data/foundation/flowservice/connections/dd3631cd-d0ea-4fea-b631-cdd0ea6fea21' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Antwort**
-
-Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück.
-
-Sie können den Löschvorgang bestätigen, indem Sie eine Suchanfrage (GET) an die Verbindung stellen.
+Löschen Sie Ihr Konto, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service] API bei Angabe der grundlegenden Verbindungs-ID des Kontos, das Sie löschen möchten. Die vollständigen API-Beispiele finden Sie im Handbuch unter [Löschen Ihres Quellkontos mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).
