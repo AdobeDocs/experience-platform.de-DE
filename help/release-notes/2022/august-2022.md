@@ -2,10 +2,10 @@
 title: Adobe Experience Platform - Versionshinweise, August 2022
 description: Die Versionshinweise für Adobe Experience Platform vom August 2022.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: 3e3389c3e77597ace4177e683aaf7494364a5be7
+source-git-commit: f2d2499147b40a15a413773068b65139278bd4ff
 workflow-type: tm+mt
-source-wordcount: '1901'
-ht-degree: 37%
+source-wordcount: '2095'
+ht-degree: 34%
 
 ---
 
@@ -90,17 +90,13 @@ Weitere Informationen über [!DNL Data Prep] finden Sie in der [[!DNL Data Prep]
 
 [!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 
-<!--
+**Neue oder aktualisierte Funktionen**
 
-**New or updated features**
-
-| Feature | Description |
+| Funktion | Beschreibung |
 | ----------- | ----------- |
-|  ||
+| (Beta) Attributbasierte Personalisierungsunterstützung für Personalisierungsziele | Mit der Beta-Version der attributbasierten Personalisierung werden im [Zielkatalog](../../destinations/catalog/overview.md): <ul><li>**[!UICONTROL Adobe Target V2]**: Dieser Connector befindet sich derzeit in der Beta-Phase und steht nur einer bestimmten Anzahl von Kunden zur Verfügung. Zusätzlich zu den von der Adobe Target V1-Karte bereitgestellten Funktionen fügt der Target V2-Connector einen [Zuordnungsschritt](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) zum Aktivierungs-Workflow hinzu, mit dem Sie Profilattribute Adobe Target zuordnen können, wodurch eine attributbasierte Personalisierung der gleichen Seite und der nächsten Seite ermöglicht wird.</li><li>**[!UICONTROL Benutzerdefinierte Personalisierung mit Attributen]**: Dieser Connector befindet sich derzeit in der Beta-Phase und steht nur einer bestimmten Anzahl von Kunden zur Verfügung. Zusätzlich zu den Funktionen, die von der **[!UICONTROL Benutzerdefinierte Personalisierung]**, die **[!UICONTROL Benutzerdefinierte Personalisierung mit Attributen]** Connector fügt optional hinzu [Zuordnungsschritt](../../destinations/ui/activate-profile-request-destinations.md#map-attributes) zum Aktivierungs-Workflow hinzu, mit dem Sie Profilattribute Ihrem benutzerdefinierten Personalisierungsziel zuordnen können, wodurch eine attributbasierte Personalisierung der gleichen Seite und der nächsten Seite ermöglicht wird.</li></ul> <br> Profilattribute können vertrauliche Daten enthalten. Um diese Daten zu schützen, muss die Variable **[!UICONTROL Benutzerdefinierte Personalisierung mit Attributen]** Für das Ziel müssen Sie die [Edge Network Server-API](../../server-api/overview.md) für die Datenerfassung. Außerdem müssen alle Server-API-Aufrufe in einer [authentifizierter Kontext](../../server-api/authentication.md). |
 
-{style="table-layout:auto"}
-
--->
+{style=&quot;table-layout:auto&quot;}
 
 **Neue Ziele**
 
