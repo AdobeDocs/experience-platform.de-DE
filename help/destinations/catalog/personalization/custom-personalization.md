@@ -3,14 +3,33 @@ keywords: benutzerdefinierte Personalisierung; Ziel; benutzerdefiniertes Ziel vo
 title: Benutzerdefinierte Personalisierungsverbindung
 description: Dieses Ziel bietet externen Personalisierungs-, Content-Management-Systemen, Anzeigen-Servern und anderen Programmen, die auf Ihrer Site ausgeführt werden, die Möglichkeit, Segmentinformationen von Adobe Experience Platform abzurufen. Dieses Ziel bietet Echtzeit-Personalisierung auf der Grundlage auf der Zugehörigkeit zu einem Benutzerprofilsegment.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 09e81093c2ed2703468693160939b3b6f62bc5b6
 workflow-type: tm+mt
-source-wordcount: '1036'
-ht-degree: 55%
+source-wordcount: '1305'
+ht-degree: 44%
 
 ---
 
 # Benutzerdefinierte Personalisierungsverbindung {#custom-personalization-connection}
+
+## Ziel-Änderungsprotokoll {#changelog}
+
+Mit der Beta-Version der erweiterten **[!UICONTROL Benutzerdefinierte Personalisierung]** Ziel-Connector angezeigt werden, werden möglicherweise zwei **[!UICONTROL Benutzerdefinierte Personalisierung]** Karten im Zielkatalog.
+
+Die **[!UICONTROL Benutzerdefinierte Personalisierung mit Attributen]** -Connector befindet sich derzeit in der Beta-Phase und steht nur einer bestimmten Anzahl von Kunden zur Verfügung. Zusätzlich zu den Funktionen, die von der **[!UICONTROL Benutzerdefinierte Personalisierung]**, die **[!UICONTROL Benutzerdefinierte Personalisierung mit Attributen]** Connector fügt optional hinzu [Zuordnungsschritt](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) zum Aktivierungs-Workflow hinzu, mit dem Sie Profilattribute Ihrem benutzerdefinierten Personalisierungsziel zuordnen können, wodurch eine attributbasierte Personalisierung der gleichen Seite und der nächsten Seite ermöglicht wird.
+
+>[!IMPORTANT]
+>
+>Profilattribute können vertrauliche Daten enthalten. Um diese Daten zu schützen, muss die Variable **[!UICONTROL Benutzerdefinierte Personalisierung mit Attributen]** Für das Ziel müssen Sie die [Edge Network Server-API](/help/server-api/overview.md) für die Datenerfassung. Außerdem müssen alle Server-API-Aufrufe in einer [authentifizierter Kontext](../../../server-api/authentication.md).
+>
+>Wenn Sie bereits Web SDK oder Mobile SDK für Ihre Integration verwenden, können Sie Attribute über die Server-API auf zwei Arten abrufen:
+>
+> * Fügen Sie eine serverseitige Integration hinzu, die Attribute über die Server-API abruft.
+> * Aktualisieren Sie Ihre Client-seitige Konfiguration mit einem benutzerdefinierten JavaScript-Code, um Attribute über die Server-API abzurufen.
+>
+> Wenn Sie die obigen Anforderungen nicht erfüllen, basiert die Personalisierung nur auf der Segmentzugehörigkeit, die mit dem Erlebnis der **[!UICONTROL Benutzerdefinierte Personalisierung]** Connector.
+
+![Bild der beiden Zielkarten für die benutzerdefinierte Personalisierung in einer Seitenansicht.](../../assets/catalog/personalization/custom-personalization/custom-personalization-side-by-side-view.png)
 
 ## Übersicht {#overview}
 
@@ -30,7 +49,7 @@ Diese Integration basiert auf dem [Adobe Experience Platform Web SDK](../../../e
 
 ## Anwendungsfälle {#use-cases}
 
-Die [!DNL Custom personalization connection] ermöglicht Ihnen die Verwendung eigener Plattformen für Personalisierungspartner (z. B. [!DNL Optimizely], [!DNL Pega]), wobei auch die Datenerfassungs- und Segmentierungsfunktionen des Edge-Netzwerks genutzt werden, um eine tiefere Kundenpersonalisierung zu ermöglichen.
+Die [!DNL Custom Personalization Connection] ermöglicht Ihnen die Verwendung eigener Plattformen für Personalisierungspartner (z. B. [!DNL Optimizely], [!DNL Pega]) sowie proprietären Systemen (z. B. internem CMS) zur Verfügung, während gleichzeitig die Datenerfassungs- und Segmentierungsfunktionen des Edge-Netzwerks der Experience Platform genutzt werden, um ein tieferes Kundenpersonalisierungs-Erlebnis zu erzielen.
 
 Die unten beschriebenen Anwendungsfälle umfassen sowohl die Personalisierung der Site als auch zielgruppengerechte On-site-Werbung.
 
@@ -134,11 +153,11 @@ alloy("sendEvent", {
     if(result.destinations) { // Looking to see if the destination results are there
  
         // Get the destination with a particular alias
-        var personalizationDestinations = result.destinations.filter(x => x.alias == “personalizationAlias”)
+        var personalizationDestinations = result.destinations.filter(x => x.alias == "personalizationAlias")
         if(personalizationDestinations.length > 0) {
              // Code to pass the segment IDs into the system that corresponds to personalizationAlias
         }
-        var adServerDestinations = result.destinations.filter(x => x.alias == “adServerAlias”)
+        var adServerDestinations = result.destinations.filter(x => x.alias == "adServerAlias")
         if(adServerDestinations.length > 0) {
             // Code to pass the segment ids into the system that corresponds to adServerAlias
         }
@@ -149,6 +168,37 @@ alloy("sendEvent", {
   });
 ```
 
+### Beispielantwort für [!UICONTROL Benutzerdefinierte Personalisierung mit Attributen]
+
+Bei Verwendung von **[!UICONTROL Benutzerdefinierte Personalisierung mit Attributen]**, sieht die API-Antwort ähnlich wie im folgenden Beispiel aus.
+
+Der Unterschied zwischen **[!UICONTROL Benutzerdefinierte Personalisierung mit Attributen]** und **[!UICONTROL Benutzerdefinierte Personalisierung]** ist die Aufnahme der `attributes` in der API-Antwort.
+
+```json
+[
+    {
+        "type": "profileLookup",
+        "destinationId": "7bb4cb8d-8c2e-4450-871d-b7824f547130",
+        "alias": "personalizationAlias",
+        "attributes": {
+             "countryCode": {
+                   "value" : "DE"
+              },
+             "membershipStatus": {
+                   "value" : "PREMIUM"
+              }
+         },         
+        "segments": [
+            {
+                "id": "399eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
+            },
+            {
+                "id": "499eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
+            }
+        ]
+    }
+]
+```
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
