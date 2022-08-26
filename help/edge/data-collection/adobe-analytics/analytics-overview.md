@@ -3,10 +3,10 @@ title: Verwenden von Adobe Analytics mit dem Platform Web SDK
 description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Web SDK Daten an Adobe Analytics senden.
 keywords: Adobe Analytics;Analytics;zugeordnete Daten;zugeordnete Vars;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: f627c1f6c917e74e0a366ce0611a1fa6bd0e3c3d
+source-git-commit: 836fa7814a6966903639e871bfaea0563847f363
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '306'
+ht-degree: 34%
 
 ---
 
@@ -28,7 +28,7 @@ Die Adobe Experience Platform [!DNL Edge Network] ordnet viele XDM-Variablen aut
 
 ## Manuell zugeordnete Daten
 
-Auf nicht automatisch vom Edge Network zugeordnete Daten kann über Verarbeitungsregeln zugegriffen werden. Die Daten werden mithilfe der Punktnotation reduziert und stehen als Kontextdaten zur Verfügung.
+Alle Daten, die nicht automatisch von der [!DNL Edge Network] kann über Verarbeitungsregeln aufgerufen werden. Die Daten werden mithilfe der Punktnotation reduziert und stehen als Kontextdaten zur Verfügung.
 
 Angenommen, Sie haben ein Schema, das so aussieht:
 
@@ -71,3 +71,7 @@ a.x.arrayofobjects.1.obj2key //objval1
 Hier ein Beispiel für eine Verarbeitungsregel, die diese Daten verwenden würde.
 
 ![Benutzeroberfläche für Verarbeitungsregeln](./assets/edge_analytics_processing_rules.png)
+
+>[!NOTE]
+>
+>Mit der Experience Edge-Sammlung werden alle Ereignisse an Analytics sowie an alle anderen Dienste gesendet, die Sie für Ihren Datastream konfiguriert haben. Wenn Sie beispielsweise sowohl Analytics als auch Target als Dienste konfiguriert haben und separate Aufrufe für die Personalisierung und für Analytics tätigen, werden beide Ereignisse an Analytics und Target gesendet. Diese Ereignisse werden in Analytics-Berichten aufgezeichnet und können sich auf Metriken wie die Absprungrate auswirken.
