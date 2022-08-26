@@ -5,9 +5,9 @@ title: Marketo Engage-Connector
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den Marketo Engage-Quell-Connector, einschließlich Informationen zur Authentifizierung, Zuordnung und Datenlatenz.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 8b8e08adb5ff3498169c1702680ea44f3bebf5c5
+source-git-commit: efa6891024cacd383f4cd958162a7a4f8ead0624
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '630'
 ht-degree: 13%
 
 ---
@@ -22,7 +22,7 @@ Mit dem [!DNL Marketo] Quell-Connector: Sie können B2B-Daten von [!DNL Marketo]
 
 >[!IMPORTANT]
 >
->Sie müssen Zugriff auf [Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) für die Teilnahme von Marketo Engage an [Echtzeit-Kundenprofil](../../../../profile/home.md).
+>Sie müssen Zugriff auf [Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) , um alle Marketo-Datensätze für die Segmentierung mit der [Echtzeit-Kundenprofil](../../../../profile/home.md). Ohne Echtzeit-Kundendatenplattform B2B Edition können Sie die Marketo-Quelle weiterhin verwenden, um Daten aus den Personen- und Aktivitätsdatensätzen zur Segmentierung an das Echtzeit-Kundenprofil zu übertragen.
 
 Dieses Dokument bietet einen Überblick über die [!DNL Marketo] Quell-Connector, einschließlich Informationen zur Authentifizierung des Connectors, zur Zuordnung [!DNL Marketo] -Felder auf das Experience-Datenmodell (XDM) und die Datenlatenz des Connectors hinzu.
 
