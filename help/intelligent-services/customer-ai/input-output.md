@@ -6,9 +6,9 @@ title: Eingabe und Ausgabe in Customer AI
 topic-legacy: Getting started
 description: Erfahren Sie mehr über die erforderlichen Ereignisse, Eingaben und Ausgaben, die von Customer AI verwendet werden.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 9ce5a383bed24c4bfe9245521149443a57764da5
+source-git-commit: e0e96a52e30f5c34e0695c3e291bed9b6c085e00
 workflow-type: tm+mt
-source-wordcount: '3154'
+source-wordcount: '3195'
 ht-degree: 15%
 
 ---
@@ -286,10 +286,15 @@ Die folgende Tabelle beschreibt die verschiedenen Attribute, die in der Ausgabe 
 
 >[!NOTE]
 >
-> - Um die Einhaltung der DSGVO in Customer AI zu erleichtern, können Sie mit Adobe Experience Platform Privacy Service Protokolle einrichten, um Kundenanfragen beim Zugriff auf und Löschen ihrer Daten im Data Lake, Identity Service und Echtzeit-Kundenprofil zu berücksichtigen.
-> - Alle Daten werden im Transit und im Ruhezustand verschlüsselt. Weitere Informationen finden Sie in der Dokumentation . [Datenverschlüsselung](../../../help/landing/governance-privacy-security/encryption.md)
+> - Customer AI verwendet nur aktualisierte Daten für weitere Schulungen und Auswertungen. Ebenso verzichtet Customer AI bei der Anforderung, Daten zu löschen, auf die Verwendung der gelöschten Daten.
+> - Customer AI nutzt Platform-Datensätze. Um Anfragen zu Verbraucherrechten zu unterstützen, die eine Marke möglicherweise erhält, sollten Marken Platform Privacy Service verwenden, um Verbraucheranfragen auf Zugriff und Löschung zu übermitteln und um ihre Daten im Data Lake, Identity Service und Echtzeit-Kundenprofil zu entfernen.
+> - Alle Datensätze, die wir für die Eingabe/Ausgabe von Modellen verwenden, folgen den Platform-Richtlinien. Die Platform-Datenverschlüsselung gilt für Daten während der Ruhezeit und während der Übertragung. Weitere Informationen finden Sie in der Dokumentation . [Datenverschlüsselung](../../../help/landing/governance-privacy-security/encryption.md)
 
 
 ## Nächste Schritte {#next-steps}
 
 Nachdem Sie Ihre Daten vorbereitet und alle Ihre Anmeldedaten und Schemata eingerichtet haben, folgen Sie der Anleitung [Konfigurieren einer Customer AI-Instanz. ](./user-guide/configure.md) Dieses Handbuch führt Sie durch die Erstellung einer Instanz für Customer AI.
+
+
+
+

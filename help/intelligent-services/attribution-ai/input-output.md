@@ -5,9 +5,9 @@ title: Eingabe und Ausgabe in Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: Im folgenden Dokument werden die verschiedenen Ein- und Ausgabedaten beschrieben, die in Attribution AI verwendet werden.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 9ce5a383bed24c4bfe9245521149443a57764da5
+source-git-commit: e0e96a52e30f5c34e0695c3e291bed9b6c085e00
 workflow-type: tm+mt
-source-wordcount: '2450'
+source-wordcount: '2491'
 ht-degree: 3%
 
 ---
@@ -237,8 +237,9 @@ Die nachstehende Tabelle ordnet die aggregierten Werte den Rohbewertungen zu. We
 
 >[!IMPORTANT]
 >
-> - Um die Einhaltung der DSGVO in Attribution AI zu erleichtern, können Sie mit Adobe Experience Platform Privacy Service Protokolle einrichten, um Kundenanfragen beim Zugriff auf und Löschen ihrer Daten im Data Lake, Identity Service und Echtzeit-Kundenprofil zu berücksichtigen.
-> - Alle Daten werden im Transit und im Ruhezustand verschlüsselt. Weitere Informationen finden Sie in der Dokumentation . [Datenverschlüsselung](../../../help/landing/governance-privacy-security/encryption.md)
+> - Attribution AI verwendet nur aktualisierte Daten für Weiterbildung und Scoring. Ebenso verzichtet Customer AI bei der Anforderung, Daten zu löschen, auf die Verwendung der gelöschten Daten.
+> - Attribution AI nutzt Platform-Datensätze. Um Anfragen zu Verbraucherrechten zu unterstützen, die eine Marke möglicherweise erhält, sollten Marken Platform Privacy Service verwenden, um Verbraucheranfragen auf Zugriff und Löschung zu übermitteln und um ihre Daten im Data Lake, Identity Service und Echtzeit-Kundenprofil zu entfernen.
+> - Alle Datensätze, die wir für die Eingabe/Ausgabe von Modellen verwenden, folgen den Platform-Richtlinien. Die Platform-Datenverschlüsselung gilt für Daten während der Ruhezeit und während der Übertragung. Weitere Informationen finden Sie in der Dokumentation . [Datenverschlüsselung](../../../help/landing/governance-privacy-security/encryption.md)
 
 
 ## Nächste Schritte {#next-steps}
