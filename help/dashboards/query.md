@@ -4,10 +4,10 @@ title: Dashboard-Datensätze mithilfe von Query Service durchsuchen, überprüfe
 type: Documentation
 description: Erfahren Sie, wie Sie mit Query Service Rohdatensätze untersuchen und verarbeiten können, die Profil-, Segment- und Ziel-Dashboards in Experience Platform unterstützen.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: fe2d9e60dd641e1f03f7dde72e64e2892ae7c1a2
+source-git-commit: 62e282138de8cf2d74b4a62f4ced39e3fb78001a
 workflow-type: tm+mt
-source-wordcount: '848'
-ht-degree: 56%
+source-wordcount: '951'
+ht-degree: 50%
 
 ---
 
@@ -83,6 +83,16 @@ Die Namenskonvention dieses Datensatzes lautet **DIM_Destination**.
 Um das vollständige Schema des DIM-Zieldatensatzes zu verstehen, können Sie eine Vorschau anzeigen und den Datensatz [unter Verwendung des Datensatz-Viewers](../catalog/datasets/user-guide.md) in der Experience Platform-Benutzeroberfläche erkunden.
 
 ![](images/query/destinations-metadata.png)
+
+## (Beta) Insight-Berichte für die Kundendatenplattform (CDP)
+
+>[!IMPORTANT]
+>
+>Die Funktion &quot;CDP Insights Data Models&quot;befindet sich in der Beta-Phase. Die Funktionen und Dokumentation können sich ändern.
+
+Die Funktion CDP Insights Data Models legt die SQL offen, die die Einblicke für verschiedene Profil-, Ziel- und Segmentierungs-Widgets ermöglicht. Sie können diese SQl-Abfragevorlagen anpassen, um CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle zu erstellen.
+
+Die CDP-Berichterstellung bietet Einblicke in Ihre Profildaten und deren Beziehung zu Segmenten und Zielen. Detaillierte Informationen dazu finden Sie in der Dokumentation zum CDP Insights-Datenmodell . [die CDP Insights-Datenmodelle auf Ihre jeweiligen KPI-Anwendungsfälle anwenden](./cdp-insights-data-model.md).
 
 ## Beispielabfragen
 

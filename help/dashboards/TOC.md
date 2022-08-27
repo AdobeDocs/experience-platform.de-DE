@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Dashboards-Hilfe
 breadcrumb-title: Dashboards-Handbuch
 user-guide-description: Visualisieren Sie Experience Platform-Daten auf anpassbaren Dashboards.
 feature: Dashboards
-source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
+source-git-commit: 62e282138de8cf2d74b4a62f4ced39e3fb78001a
 workflow-type: tm+mt
-source-wordcount: '69'
-ht-degree: 95%
+source-wordcount: '76'
+ht-degree: 86%
 
 ---
 
@@ -35,4 +35,5 @@ ht-degree: 95%
 * Anwendungsintegrationen {#integrations}
    * [Power BI](integrations/power-bi.md)
 * [Abfrage-Dashboard-Datensätze](query.md)
+* [Customer Data Platform (CDP) Insights-Datenmodell](cdp-insights-data-model.md)
 * [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
