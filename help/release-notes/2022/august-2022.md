@@ -2,10 +2,10 @@
 title: Adobe Experience Platform - Versionshinweise, August 2022
 description: Die Versionshinweise für Adobe Experience Platform vom August 2022.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: f2d2499147b40a15a413773068b65139278bd4ff
+source-git-commit: fb9fdc70aabb62cdc39888b1ff90557d8420c31b
 workflow-type: tm+mt
-source-wordcount: '2095'
-ht-degree: 34%
+source-wordcount: '2137'
+ht-degree: 33%
 
 ---
 
@@ -36,7 +36,7 @@ Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Ko
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung für Datenschutz | <ul><li> Attribution AI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien für die Verwaltung von [Berechtigungen](../../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte in einer Produktanwendung. </li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li><li> bis [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md), können Administratoren den Zugriff auf bestimmte Objekte und/oder Funktionen anhand bestimmter Attribute steuern. Dabei kann es sich um einem Objekt hinzugefügte Metadaten handeln, z. B. Beschriftungen. Administratoren können außerdem Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li><li>Attribution AI nutzt Platform-Datensätze. Um die Einhaltung der DSGVO zu erleichtern, können Sie mit Adobe Experience Platform Privacy Service Protokolle einrichten, um Kundenanfragen beim Zugriff auf und Löschen ihrer Daten im Data Lake, Identity Service und Echtzeit-Kundenprofil zu berücksichtigen. Alle Daten werden im Transit und im Ruhezustand verschlüsselt.</li></ul> |
+| Unterstützung für Datenschutz | <ul><li> Attribution AI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien für die Verwaltung von [Berechtigungen](../../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte in einer Produktanwendung. </li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li><li> bis [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md), können Administratoren den Zugriff auf bestimmte Objekte und/oder Funktionen anhand bestimmter Attribute steuern. Dabei kann es sich um einem Objekt hinzugefügte Metadaten handeln, z. B. Beschriftungen. Administratoren können außerdem Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li><li>Attribution AI nutzt Platform-Datensätze. Um Anfragen zu Verbraucherrechten zu unterstützen, die eine Marke möglicherweise erhält, sollten Marken Platform Privacy Service verwenden, um Verbraucheranfragen auf Zugriff und Löschung zu übermitteln und um ihre Daten im Data Lake, Identity Service und Echtzeit-Kundenprofil zu entfernen.  </li><li>Alle Datensätze, die für die Eingabe/Ausgabe von Modellen verwendet werden, folgen den Platform-Richtlinien. Die Platform-Datenverschlüsselung gilt für Daten während der Ruhezeit und während der Übertragung. Weitere Informationen finden Sie in der Dokumentation . [Datenverschlüsselung](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -52,7 +52,7 @@ Kunden-KI in Real-time Customer Data Platform dient dazu, für einzelne Profile 
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung für Datenschutz | <ul><li> Customer AI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien zur Verwaltung [Berechtigungen](../../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte in einer Produktanwendung. </li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li><li> bis [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md), können Administratoren den Zugriff auf bestimmte Objekte und/oder Funktionen anhand bestimmter Attribute steuern. Diese Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. Beschriftungen. Administratoren können auch Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li><li>Customer AI nutzt Platform-Datensätze. Um die Einhaltung der DSGVO zu erleichtern, können Sie mit Adobe Experience Platform Privacy Service Protokolle einrichten, um Kundenanfragen beim Zugriff auf und Löschen ihrer Daten im Data Lake, Identity Service und Echtzeit-Kundenprofil zu berücksichtigen. Alle Daten werden im Transit und im Ruhezustand verschlüsselt.</li></ul> |
+| Unterstützung für Datenschutz | <ul><li> Customer AI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien zur Verwaltung [Berechtigungen](../../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte in einer Produktanwendung. </li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li><li> bis [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md), können Administratoren den Zugriff auf bestimmte Objekte und/oder Funktionen anhand bestimmter Attribute steuern. Diese Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. Beschriftungen. Administratoren können auch Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li><li>Customer AI nutzt Platform-Datensätze. Um Anfragen zu Verbraucherrechten zu unterstützen, die eine Marke möglicherweise erhält, sollten Marken Platform Privacy Service verwenden, um Verbraucheranfragen auf Zugriff und Löschung zu übermitteln und um ihre Daten im Data Lake, Identity Service und Echtzeit-Kundenprofil zu entfernen. </li><li>Alle Datensätze, die für die Eingabe/Ausgabe von Modellen verwendet werden, folgen den Platform-Richtlinien. Die Platform-Datenverschlüsselung gilt für Daten während der Ruhezeit und während der Übertragung. Weitere Informationen finden Sie in der Dokumentation . [Datenverschlüsselung](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
