@@ -2,7 +2,7 @@
 title: Durchsuchen von Datenhygiene-Arbeitsaufträgen
 description: Erfahren Sie, wie Sie bestehende Datenhygiene-Arbeitsaufträge in der Benutzeroberfläche von Adobe Experience Platform anzeigen und verwalten können.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 0b7196b195fc5ee8abb45ccb93f1fcc9a000a603
+source-git-commit: 80f9f0c64f2af2c7ceea59bddab9a5d6b57bc882
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 64%
@@ -48,7 +48,7 @@ Wählen Sie das Trichtersymbol (![Bild des Trichtersymbols](../images/ui/browse/
 
 {style=&quot;table-layout:auto&quot;}
 
-## Anzeigen der Details eines Arbeitsauftrags
+## Anzeigen der Details eines Arbeitsauftrags {#view-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"
