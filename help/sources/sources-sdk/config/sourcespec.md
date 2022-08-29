@@ -4,7 +4,7 @@ title: Quellspezifikationen für Self-Serve-Quellen konfigurieren (Batch-SDK)
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung von Self-Serve-Quellen (Batch SDK) vorbereiten müssen.
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adaa0e1a63536bc1fdf751eec477e5cda9fd20ae
 workflow-type: tm+mt
 source-wordcount: '1690'
 ht-degree: 50%
@@ -48,7 +48,8 @@ Ein Beispiel für eine vollständig angegebene Quellspezifikation finden Sie im 
           "properties": {
             "host": {
               "type": "string",
-              "description": "Enter resource url host path."
+              "description": "Enter resource url host path.",
+              "example": "https://{domain}.api.mailchimp.com"
             },
             "path": {
               "type": "string",
@@ -69,6 +70,7 @@ Ein Beispiel für eine vollständig angegebene Quellspezifikation finden Sie im 
             }
           },
           "required": [
+            "host",
             "path",
             "method"
           ]
@@ -336,6 +338,7 @@ Im Folgenden finden Sie eine abgeschlossene Quellspezifikation mit [!DNL MailChi
         }
       },
       "urlParams": {
+        "host": "https://{domain}.api.mailchimp.com",
         "path": "/3.0/lists/${listId}/members",
         "method": "GET"
       },

@@ -4,9 +4,9 @@ title: Authentifizierungsspezifikationen für Self-Serve-Quellen konfigurieren (
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung von Self-Serve-Quellen (Batch SDK) vorbereiten müssen.
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 25e0061cc47ec4179f3f02958eb8bda1714ea139
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '525'
 ht-degree: 5%
 
 ---
@@ -105,7 +105,6 @@ Ein OAuth 2-Aktualisierungscode ermöglicht einen sicheren Zugriff auf eine Anwe
       }
     },
     "required": [
-      "host",
       "accessToken"
     ]
   }
@@ -137,7 +136,7 @@ Ein OAuth 2-Aktualisierungscode ermöglicht einen sicheren Zugriff auf eine Anwe
 
 ### Einfache Authentifizierung
 
-Die Standardauthentifizierung ist ein Authentifizierungstyp, mit dem Sie mithilfe einer Kombination aus Host-URL, Benutzername und Passwort Ihrer Anwendung auf Ihre Anwendung zugreifen können.
+Die Standardauthentifizierung ist ein Authentifizierungstyp, mit dem Sie mithilfe einer Kombination aus Benutzername und Passwort Ihres Kontos auf Ihre Anwendung zugreifen können.
 
 ```json
 {
@@ -148,10 +147,6 @@ Die Standardauthentifizierung ist ein Authentifizierungstyp, mit dem Sie mithilf
     "type": "object",
     "description": "defines auth params required for connecting to rest service.",
     "properties": {
-      "host": {
-        "type": "string",
-        "description": "Enter resource url host path"
-      },
       "username": {
         "description": "Username to connect rest endpoint.",
         "type": "string"
@@ -163,7 +158,6 @@ Die Standardauthentifizierung ist ein Authentifizierungstyp, mit dem Sie mithilf
       }
     },
     "required": [
-      "host",
       "username",
       "password"
     ]
@@ -180,10 +174,9 @@ Die Standardauthentifizierung ist ein Authentifizierungstyp, mit dem Sie mithilf
 | `authSpec.spec.type` | Definiert den Datentyp des Schemas. | `object` |
 | `authSpec.spec.description` | Zeigt weitere Informationen zu Ihrem Authentifizierungstyp an. |
 | `authSpec.spec.properties` | Enthält Informationen zu den Anmeldeinformationen, die für die Authentifizierung verwendet werden. |
-| `authSpec.spec.properties.host` | Die Host-URL Ihrer Anwendung. |
 | `authSpec.spec.properties.username` | Der mit Ihrer Anwendung verknüpfte Konto-Benutzername. |
 | `authSpec.spec.properties.password` | Das mit Ihrer Anwendung verknüpfte Kontokennwort. |
-| `authSpec.spec.required` | Gibt die Felder an, die als Pflichtwerte für die Eingabe in Platform erforderlich sind. | `host` |
+| `authSpec.spec.required` | Gibt die Felder an, die als Pflichtwerte für die Eingabe in Platform erforderlich sind. | `username` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -201,10 +194,6 @@ Im Folgenden finden Sie ein Beispiel für eine abgeschlossene Authentifizierungs
         "type": "object",
         "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path"
-          },
           "authorizationTestUrl": {
             "description": "Authorization test url to validate accessToken.",
             "type": "string"
@@ -216,7 +205,6 @@ Im Folgenden finden Sie ein Beispiel für eine abgeschlossene Authentifizierungs
           }
         },
         "required": [
-          "host",
           "accessToken"
         ]
       }
@@ -229,10 +217,6 @@ Im Folgenden finden Sie ein Beispiel für eine abgeschlossene Authentifizierungs
         "type": "object",
         "description": "defines auth params required for connecting to rest service.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path."
-          },
           "username": {
             "description": "Username to connect mailChimp endpoint.",
             "type": "string"
@@ -244,7 +228,6 @@ Im Folgenden finden Sie ein Beispiel für eine abgeschlossene Authentifizierungs
           }
         },
         "required": [
-          "host",
           "username",
           "password"
         ]
