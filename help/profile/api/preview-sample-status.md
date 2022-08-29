@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; API; Vorschau; Beispiel
 title: API-Endpunkt "Vorschaustatus"(Profilvorschau)
-description: Mithilfe des Statusendpunkts für die Vorschau, der Teil der Echtzeit-Kundenprofil-API ist, können Sie eine Vorschau des neuesten erfolgreichen Beispiels Ihrer Profildaten anzeigen, die Profilverteilung nach Datensatz und Identität auflisten und Berichte mit Datensatzüberschneidungen, Identitätsüberschneidungen und unbekannten Profilen erstellen.
+description: Mit dem Beispielstatusendpunkt "Vorschau"der Echtzeit-Kundenprofil-API können Sie eine Vorschau des neuesten erfolgreichen Beispiels Ihrer Profildaten anzeigen, die Profilverteilung nach Datensatz und Identität auflisten und Berichte mit Datensatzüberschneidungen, Identitätsüberschneidungen und nicht zugewiesenen Profilen erstellen.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 8a17648757b342bd8026382918ca41c469210b51
 workflow-type: tm+mt
-source-wordcount: '2882'
+source-wordcount: '2875'
 ht-degree: 5%
 
 ---
@@ -465,25 +465,25 @@ Dieser Bericht enthält die folgenden Informationen:
 * Es gibt 24 Profile, die aus `AAID` und `ECID` Identitäts-Namespaces.
 * Es gibt 6.565 Profile, die nur eine `ECID` Identität.
 
-## Bericht zu unbekannten Profilen erstellen
+## Bericht zu nicht zugeordneten Profilen erstellen
 
-Über den Bericht zu unbekannten Profilen können Sie die Zusammensetzung des Profilspeichers Ihres Unternehmens besser einsehen. Ein &quot;unbekanntes Profil&quot;bezieht sich auf jedes Profil, das für einen bestimmten Zeitraum sowohl deaktiviert als auch inaktiv ist. Ein Profil &quot;nicht zugeordnet&quot; ist ein Profil, das nur ein Profilfragment enthält, während ein &quot;inaktives&quot;Profil jedes Profil ist, das für den angegebenen Zeitraum keine neuen Ereignisse hinzugefügt hat. Der Bericht zu unbekannten Profilen enthält eine Aufschlüsselung der Profile für einen Zeitraum von 7, 30, 60, 90 und 120 Tagen.
+Über den Bericht zu nicht zugewiesenen Profilen können Sie die Zusammensetzung des Profilspeichers Ihres Unternehmens besser einsehen. Ein Profil, das &quot;nicht zugeordnet&quot;ist, ist ein Profil, das nur ein Profilfragment enthält. Ein &quot;unbekanntes&quot;Profil ist ein Profil, das mit pseudonymen Identitäts-Namespaces wie `ECID` und `AAID`. Unbekannte Profile sind inaktiv, d. h. sie haben für den angegebenen Zeitraum keine neuen Ereignisse hinzugefügt. Der Bericht zu nicht zugeordneten Profilen bietet eine Aufschlüsselung der Profile für einen Zeitraum von 7, 30, 60, 90 und 120 Tagen.
 
-Sie können den Bericht &quot;Unbekannte Profile&quot;generieren, indem Sie eine GET-Anfrage an die `/previewsamplestatus/report/unknownProfiles` -Endpunkt.
+Sie können den Bericht zu nicht zugewiesenen Profilen generieren, indem Sie eine GET-Anfrage an die `/previewsamplestatus/report/unstitchedProfiles` -Endpunkt.
 
 **API-Format**
 
 ```http
-GET /previewsamplestatus/report/unknownProfiles
+GET /previewsamplestatus/report/unstitchedProfiles
 ```
 
 **Anfrage**
 
-Die folgende Anfrage gibt den Bericht zu unbekannten Profilen zurück.
+Die folgende Anfrage gibt den Bericht zu nicht zugeordneten Profilen zurück.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unknownProfiles \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unstitchedProfiles \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -491,18 +491,18 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Anfrage gibt den HTTP-Status 200 (OK) und den Bericht zu unbekannten Profilen zurück.
+Eine erfolgreiche Anfrage gibt den HTTP-Status 200 (OK) und den Bericht zu nicht zugeordneten Profilen zurück.
 
 >[!NOTE]
 >
->Für die Zwecke dieses Handbuchs wurde der Bericht abgeschnitten und enthält nur `"120days"` und &quot;`7days`&quot;Zeiträume. Der vollständige Bericht zu unbekannten Profilen enthält eine Aufschlüsselung der Profile für einen Zeitraum von 7, 30, 60, 90 und 120 Tagen.
+>Für die Zwecke dieses Handbuchs wurde der Bericht abgeschnitten und enthält nur `"120days"` und &quot;`7days`&quot;Zeiträume. Der vollständige Bericht zu nicht zugestellten Profilen bietet eine Aufschlüsselung der Profile für einen Zeitraum von 7, 30, 60, 90 und 120 Tagen.
 
 ```json
 {
   "data": {
       "totalNumberOfProfiles": 63606,
       "totalNumberOfEvents": 130977,
-      "unknownProfiles": {
+      "unstitchedProfiles": {
           "120days": {
               "countOfProfiles": 1644,
               "eventsAssociated": 26824,
@@ -547,16 +547,16 @@ Eine erfolgreiche Anfrage gibt den HTTP-Status 200 (OK) und den Bericht zu unbek
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| `data` | Die `data` -Objekt enthält die für den Bericht zu unbekannten Profilen zurückgegebenen Informationen. |
-| `totalNumberOfProfiles` | Die Gesamtzahl der eindeutigen Profile im Profilspeicher. Dies entspricht der Anzahl der adressierbaren Zielgruppen. Es enthält sowohl bekannte als auch unbekannte Profile. |
+| `data` | Die `data` -Objekt enthält die Informationen, die für den Bericht zu nicht zugeordneten Profilen zurückgegeben werden. |
+| `totalNumberOfProfiles` | Die Gesamtzahl der eindeutigen Profile im Profilspeicher. Dies entspricht der Anzahl der adressierbaren Zielgruppen. Es enthält sowohl bekannte als auch nicht zugewiesene Profile. |
 | `totalNumberOfEvents` | Die Gesamtzahl der ExperienceEvents im Profilspeicher. |
-| `unknownProfiles` | Ein Objekt, das eine Aufschlüsselung unbekannter Profile (nicht zugeordnet und inaktiv) nach Zeiträumen enthält. Der Bericht zu unbekannten Profilen enthält eine Aufschlüsselung der Profile für 7-, 30-, 60-, 90- und 120-tägige Zeiträume. |
-| `countOfProfiles` | Die Anzahl unbekannter Profile für den Zeitraum oder die Anzahl unbekannter Profile für den Namespace. |
+| `unstitchedProfiles` | Ein Objekt, das eine Aufschlüsselung der nicht zugeordneten Profile nach Zeiträumen enthält. Der Bericht zu nicht zugeordneten Profilen bietet eine Aufschlüsselung der Profile für Zeiträume von 7, 30, 60, 90 und 120 Tagen. |
+| `countOfProfiles` | Die Anzahl der nicht zugeordneten Profile für den Zeitraum oder die Anzahl der nicht zugeordneten Profile für den Namespace. |
 | `eventsAssociated` | Die Anzahl der ExperienceEvents für den Zeitraum oder die Anzahl der Ereignisse für den Namespace. |
-| `nsDistribution` | Ein Objekt, das individuelle Identitäts-Namespaces mit der Verteilung unbekannter Profile und Ereignisse für jeden Namespace enthält. Hinweis: Addieren der Gesamtsumme `countOfProfiles` für jeden Identitäts-Namespace im `nsDistribution` -Objekt entspricht dem `countOfProfiles` für den Zeitraum. Dasselbe gilt für `eventsAssociated` pro Namespace und der Gesamtwert `eventsAssociated` pro Zeitraum. |
+| `nsDistribution` | Ein Objekt, das einzelne Identitäts-Namespaces mit der Verteilung nicht zugewiesener Profile und Ereignisse für jeden Namespace enthält. Hinweis: Addieren der Gesamtsumme `countOfProfiles` für jeden Identitäts-Namespace im `nsDistribution` -Objekt entspricht dem `countOfProfiles` für den Zeitraum. Dasselbe gilt für `eventsAssociated` pro Namespace und der Gesamtwert `eventsAssociated` pro Zeitraum. |
 | `reportTimestamp` | Der Zeitstempel des Berichts. |
 
-### Interpretieren des Berichts &quot;Unbekannte Profile&quot;
+### Interpretieren des Berichts über nicht zuordenbare Profile
 
 Die Ergebnisse des Berichts können Aufschluss darüber geben, wie viele nicht zugewiesene und inaktive Profile Ihr Unternehmen im Profilspeicher hat.
 
@@ -586,9 +586,9 @@ Betrachten Sie den folgenden Auszug aus dem `data` -Objekt:
 Dieser Bericht enthält die folgenden Informationen:
 
 * Es gibt 1.782 Profile, die nur ein Profilfragment enthalten und in den letzten sieben Tagen keine neuen Ereignisse haben.
-* Den 1.782 unbekannten Profilen sind 29.151 ExperienceEvents zugeordnet.
-* Es gibt 1.734 unbekannte Profile, die ein einzelnes Profilfragment aus dem Identitäts-Namespace von ECID enthalten.
-* Den 1.734 unbekannten Profilen sind 28.591 Ereignisse zugeordnet, die ein einzelnes Profilfragment aus dem Identitäts-Namespace von ECID enthalten.
+* Den 1.782 aufgetrennten Profilen sind 29.151 ExperienceEvents zugeordnet.
+* Es gibt 1.734 nicht zugeordnete Profile, die ein einzelnes Profilfragment aus dem Identitäts-Namespace von ECID enthalten.
+* Den 1.734 aufgetrennten Profilen sind 28.591 Ereignisse zugeordnet, die ein einzelnes Profilfragment aus dem Identitäts-Namespace von ECID enthalten.
 
 ## Nächste Schritte
 
