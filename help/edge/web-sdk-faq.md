@@ -2,9 +2,9 @@
 title: Häufig gestellte Fragen zum Adobe Experience Platform Web SDK
 description: Erhalten Sie Antworten auf häufig gestellte Fragen zum Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 95305c0a5df71295e1321eb4c8c28baa66c5d94d
+source-git-commit: 720960b7d63c30707f823fdfafc2299289ea0a11
 workflow-type: tm+mt
-source-wordcount: '1955'
+source-wordcount: '1935'
 ht-degree: 2%
 
 ---
@@ -51,7 +51,7 @@ Das neue Web SDK sendet Daten für die folgenden Lösungen an ein einzelnes Ziel
 * Adobe Analytics
 * Adobe Audience Manager
 * Adobe Target
-* Visitor ID
+* Besucher-ID
 * Adobe Experience Platform
 
 Weitere Lösungen werden im Laufe dieses Jahres folgen.
@@ -82,9 +82,9 @@ Alloy ist der Codename für das Adobe Experience Platform Web SDK. Sie wird im Q
 
 ## Müssen Kunden Adobe Experience Platform kaufen, um die [!DNL Web SDK]?
 
-Nein. Jeder Adobe Digital Experience-Kunde kann das Adobe Experience Platform Web SDK kostenlos nutzen. Um das Web SDK verwenden zu können, muss Ihre Organisation für diese Funktion freigeschaltet sein. Wenn Sie Zugriff erhalten möchten, füllen Sie bitte Folgendes aus [Formular](https://adobe.ly/websdkaccess) und die Adobe Ihnen Zugriff auf [Benutzeroberfläche für Datenspeicher](datastreams/overview.md) und der Adobe Experience Platform-Benutzeroberfläche (falls erforderlich).
+Nein. Jeder Adobe Digital Experience-Kunde kann das Adobe Experience Platform Web SDK kostenlos nutzen. Kunden, die die [!DNL Web SDK] muss die richtigen Berechtigungen zum Erstellen von Schemas, Datensätzen, Identitäts-Namespaces und Datensätzen in der Benutzeroberfläche für die Datenerfassung von Adobe Experience Platform konfigurieren.
 
-Kunden, die die [!DNL Web SDK] erhält Zugriff auf das Erstellen von Schemas, Datensätzen und Identitäts-Namespaces in der Adobe Experience Platform-Benutzeroberfläche.
+Weitere Informationen zum Konfigurieren dieser Berechtigungen finden Sie in unserer Dokumentation unter [Verwaltung von Datenerfassungsberechtigungen](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en).
 
 ## Wer sollte das Web SDK verwenden?
 

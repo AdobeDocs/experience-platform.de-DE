@@ -3,9 +3,9 @@ title: Übersicht über Datenströme
 description: Verbinden Sie Ihre Client-seitige Experience Platform SDK-Integration mit Adobe-Produkten und Zielen von Drittanbietern.
 keywords: Konfiguration;Datenströme;datastreamId;edge;datastream id;Umgebungseinstellungen;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Ereignis-Datensatz;Target;Client-Code;Eigenschafts-Token;Target-Umgebungs-ID;Cookie-Ziele;URL-Ziele;Analytics Settings Blockreport suite id;Datenvorbereitung für Datenerfassung;Data Prep;Mapper;XDM Mapper;Mapper in Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 45f5d23a671c8e015ca26e0d5025685255c2fc35
 workflow-type: tm+mt
-source-wordcount: '1774'
+source-wordcount: '1728'
 ht-degree: 100%
 
 ---
@@ -15,10 +15,6 @@ ht-degree: 100%
 Ein Datenstrom stellt die Server-seitige Konfiguration bei der Implementierung der Adobe Experience Platform Web- und Mobile-SDKs dar. Während mit dem [configure-Befehl](../fundamentals/configuring-the-sdk.md) im SDK Elemente kontrolliert werden, die auf dem Client verarbeitet werden müssen (z. B. die `edgeDomain`), handhaben Datenströme alle anderen Konfigurationen für das SDK. Wenn eine Anfrage an das Adobe Experience Platform Edge Network gesendet wird, wird die `edgeConfigId` verwendet, um auf den Datenstrom zu verweisen. Auf diese Weise können Sie die Server-seitige Konfiguration aktualisieren, ohne Code-Änderungen auf Ihrer Website vornehmen zu müssen.
 
 In diesem Dokument werden die Schritte zur Konfiguration eines Datenstroms in der Datenerfassungs-Benutzeroberfläche beschrieben.
-
->[!NOTE]
->
->Ihre Organisation muss für diese Funktion freigeschaltet sein, damit der Zugriff über die Benutzeroberfläche möglich ist. Bitte füllen Sie das folgende [Formular](https://adobe.ly/websdkaccess) aus, um den entsprechenden Zugriff anzufordern. Um Datenströme verwalten zu können, muss Ihr Benutzerkonto in [!DNL Adobe Experience Platform] einem Produktprofil für Tags hinzugefügt werden.
 
 ## Zugriff auf den Arbeitsbereich [!UICONTROL Datenströme ]
 
