@@ -4,9 +4,9 @@ title: Dashboard-Anleitung für Segmente
 description: 'Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu Segmenten anzeigen können, die Ihr Unternehmen erstellt hat. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: e18d37ba02d6edee77c91b719a0a2336e1316b71
+source-git-commit: 70fb980b276d256e0f7170b6e49527bca59adfe9
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1681'
 ht-degree: 10%
 
 ---
@@ -48,6 +48,10 @@ Weitere Informationen finden Sie unter [Ändern von Dashboards](../customize/mod
 Das Dashboard wählt automatisch ein anzuzeigendes Segment aus. Sie können das Segment jedoch über das Dropdown-Menü oder die Segmentauswahl ändern.
 
 Um ein anderes Segment auszuwählen, wählen Sie das Dropdown-Menü neben dem Segmentnamen aus oder verwenden Sie die Segmentauswahl, um das Dialogfeld für die Segmentauswahl zu öffnen.
+
+>[!IMPORTANT]
+>
+>In der Liste der auswählbaren Segmente werden nur Segmente angezeigt, deren Profilanzahl über null liegt.
 
 ![](../images/segments/change-segment.png)
 
