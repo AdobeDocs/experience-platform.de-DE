@@ -5,10 +5,10 @@ title: Anleitung zur Benutzeroberfläche des Abfrage-Editors
 topic-legacy: query editor
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
+source-git-commit: b393311a4ddcfaab3f8ea2ccd517e0e3b32a268a
 workflow-type: tm+mt
-source-wordcount: '1625'
-ht-degree: 29%
+source-wordcount: '1882'
+ht-degree: 25%
 
 ---
 
@@ -62,7 +62,37 @@ Um Ihre Entwicklungszeit zu minimieren, sollten Sie Ihre Abfragen mit Begrenzung
 
 - **Tabelle und Felder automatisch vervollständigen:** Beginnen Sie mit der Eingabe des Tabellennamens für den `SELECT`-Vorgang, navigieren Sie mit den Pfeiltasten zur gewünschten Tabelle und drücken Sie die **Eingabetaste**. Sobald eine Tabelle ausgewählt ist, erkennt das automatische Vervollständigung die Felder in dieser Tabelle.
 
-![Bild](../images/ui/query-editor/tables-auto.png)
+![Die Befehlszeilenschnittstelle des Abfrage-Editors mit Dropdown-Vorschlägen.](../images/ui/query-editor/tables-auto.png)
+
+### (Beta) Konfigurations-Umschalter für die automatische Vervollständigung der Benutzeroberfläche {#auto-complete}
+
+>[!IMPORTANT]
+>
+>Der Konfigurationsumschalter für die automatische Vervollständigung der Benutzeroberfläche befindet sich in der Beta-Phase. Die Funktionen und Dokumentation können sich ändern.
+
+Die [!DNL Query Editor] schlägt automatisch potenzielle SQL-Schlüsselwörter zusammen mit Tabellen- oder Spaltendetails für die Abfrage vor, während Sie sie schreiben. Die Funktion zur automatischen Vervollständigung ist standardmäßig aktiviert und kann jederzeit deaktiviert oder aktiviert werden, indem Sie die Option [!UICONTROL Syntaxautomatisierung] wird oben rechts im Abfrage-Editor angezeigt.
+
+Die Konfigurationseinstellung für die automatische Vervollständigung erfolgt pro Benutzer und wird für die aufeinander folgenden Anmeldungen für diesen Benutzer gespeichert.
+
+![Abfrage-Editor mit hervorgehobenem Umschalter für die automatische Syntaxvervollständigung.](../images/ui/query-editor/auto-complete-toggle.png)
+
+Die Deaktivierung dieser Funktion verhindert, dass mehrere Metadatenbefehle verarbeitet werden, und bietet Empfehlungen, die in der Regel die Geschwindigkeit des Autors bei der Bearbeitung von Abfragen nutzen.
+
+Wenn Sie die Umschaltung verwenden, um die Funktion für die automatische Vervollständigung zu aktivieren, werden nach einer kurzen Pause empfohlene Vorschläge für Tabellen- und Spaltennamen sowie SQL-Schlüsselwörter verfügbar. Eine Erfolgsmeldung in der Konsole unter dem Abfrage-Editor zeigt an, dass die Funktion aktiv ist.
+
+Wenn Sie die Funktion zum automatischen Vervollständigen deaktivieren, ist eine Seitenaktualisierung erforderlich, damit die Funktion wirksam wird. Ein Bestätigungsdialogfeld mit drei Optionen wird angezeigt, wenn Sie die [!UICONTROL Syntaxautomatisierung] Umschalten :
+
+- [!UICONTROL Abbrechen]
+- [!UICONTROL Änderungen speichern und aktualisieren]
+- [!UICONTROL Aktualisieren ohne Speichern von Änderungen]
+
+>[!IMPORTANT]
+>
+>Wenn Sie eine Abfrage schreiben oder bearbeiten, während Sie diese Funktion deaktivieren, müssen Sie alle Änderungen an Ihrer Abfrage speichern, bevor Sie die Seite aktualisieren. Andernfalls geht der gesamte Fortschritt verloren.
+
+![Das Bestätigungsdialogfeld zum Deaktivieren der Funktion für die automatische Vervollständigung.](../images/ui/query-editor/confirmation-dialog.png)
+
+Wählen Sie die entsprechende Option aus, um die Funktion zur automatischen Vervollständigung zu deaktivieren.
 
 ### Fehlererkennung {#error-detection}
 
