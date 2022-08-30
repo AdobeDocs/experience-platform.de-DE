@@ -4,9 +4,9 @@ title: Dashboard-Anleitung für Ziele
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den aktiven Zielen Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
+source-git-commit: 7a67ac4e1e8730197221832090c1414073399a1b
 workflow-type: tm+mt
-source-wordcount: '2670'
+source-wordcount: '2716'
 ht-degree: 3%
 
 ---
@@ -215,6 +215,10 @@ Alle Zielgruppengrößen im System werden von hoher bis niedriger Zielgruppengr�
 Wenn die Anzahl Ihrer segmentzugeordneten Profile außerhalb einer Standardabweichung von der durchschnittlichen zugeordneten Profilgröße in den letzten 30 Tagen liegt, deutet dies auf eine Anomalie im System hin und sollte untersucht werden.
 
 Wenn ein Segment innerhalb der [!UICONTROL Zugewiesene Zielgruppen-Konsistenz] -Widget um einen breiten Rand abweicht, sollten Sie auf das Trend-Diagramm zur Zielgruppengröße verweisen und das anormale Segment lokalisieren. Der Trend kann weitere Einblicke in die Gesundheit Ihres Segments bieten.
+
+>[!NOTE]
+>
+>Die Standardgröße des Widgets Zugeordnete Zielgruppe kann die Tabelleninformationen behindern. Ändern Sie die Größe des Widgets, um die Lesbarkeit Ihrer zugeordneten Segmentnamen und Spaltentitel zu verbessern. Anleitungen dazu finden Sie in der Dokumentation zum Ändern von Dashboards . [Größe eines Widgets ändern](../customize/modify.md).
 
 ![Das Widget zur Zuordnungszielgruppe.](../images/destinations/mapped-audience-health.png)
 
