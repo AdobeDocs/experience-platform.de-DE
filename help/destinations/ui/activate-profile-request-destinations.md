@@ -4,10 +4,10 @@ title: Aktivieren von Zielgruppendaten für Profilanforderungsziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die Zielgruppendaten aktivieren, die Sie in Adobe Experience Platform haben, indem Sie Segmente Profilanfragezielen zuordnen.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 26e7a3e78a4513aa69cdfbed7902509609e114cc
+source-git-commit: cda4591021c5b0a0bd6f43765d72b5867ec59aea
 workflow-type: tm+mt
-source-wordcount: '678'
-ht-degree: 32%
+source-wordcount: '772'
+ht-degree: 28%
 
 ---
 
@@ -65,9 +65,23 @@ Das Hinzufügen von Attributen ist optional. Sie können weiterhin mit dem näch
 
 ![Bild, das den Zuordnungsschritt mit einem ausgewählten Attribut anzeigt](../assets/ui/activate-profile-request-destinations/mapping-step.png)
 
-Um Attribute hinzuzufügen, wählen Sie die **[!UICONTROL Neues Feld hinzufügen]** steuern und suchen oder navigieren Sie zum gewünschten XDM-Attributfeld, wie unten dargestellt.
+### Quellattribute auswählen {#select-source-attributes}
 
-![Bildschirmaufzeichnung, die zeigt, wie ein XDM-Attribut im Zuordnungsschritt ausgewählt wird](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
+Um Quellattribute hinzuzufügen, wählen Sie die **[!UICONTROL Neues Feld hinzufügen]** Kontrolle **[!UICONTROL Quellfeld]** und suchen oder navigieren Sie zum gewünschten XDM-Attributfeld, wie unten dargestellt.
+
+![Bildschirmaufzeichnung, die zeigt, wie ein Zielattribut im Zuordnungsschritt ausgewählt wird](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
+
+### Zielattribute auswählen {#select-target-attributes}
+
+>[!NOTE]
+>
+>Bei einigen Zielen müssen Sie nur Quellattribute auswählen, bei anderen werden sowohl Quell- als auch Zielattribute benötigt.
+>
+>Derzeit wird die [Adobe Target V2](../catalog/personalization/adobe-target-connection.md) Das Ziel erfordert nur Quellattribute, während [Benutzerdefinierte Personalisierung mit Attributen](../catalog/personalization/custom-personalization.md) erfordert sowohl Quell- als auch Zielattribute.
+
+Um Zielattribute hinzuzufügen, wählen Sie die **[!UICONTROL Neues Feld hinzufügen]** Kontrolle **[!UICONTROL Zielfeld]** und geben Sie den benutzerdefinierten Attributnamen ein, dem Sie das Quellattribut zuordnen möchten.
+
+![Bildschirmaufzeichnung, die zeigt, wie ein XDM-Attribut im Zuordnungsschritt ausgewählt wird](../assets/ui/activate-profile-request-destinations/mapping-step-select-target-attribute.gif)
 
 ## Planen des Segmentexports {#scheduling}
 
