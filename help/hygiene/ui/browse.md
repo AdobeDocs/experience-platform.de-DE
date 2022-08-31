@@ -2,10 +2,10 @@
 title: Durchsuchen von Datenhygiene-Arbeitsaufträgen
 description: Erfahren Sie, wie Sie bestehende Datenhygiene-Arbeitsaufträge in der Benutzeroberfläche von Adobe Experience Platform anzeigen und verwalten können.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 80f9f0c64f2af2c7ceea59bddab9a5d6b57bc882
+source-git-commit: f246a014de7869b627a677ac82e98d4556065010
 workflow-type: tm+mt
-source-wordcount: '517'
-ht-degree: 64%
+source-wordcount: '616'
+ht-degree: 55%
 
 ---
 
@@ -55,25 +55,29 @@ Wählen Sie das Trichtersymbol (![Bild des Trichtersymbols](../images/ui/browse/
 >title="Status nach Dienst"
 >abstract="Hygieneanforderungen werden unabhängig von mehreren Experience Platformen bearbeitet. In diesem Abschnitt wird der aktuelle Verarbeitungsstatus der Anfrage für jeden einzelnen Dienst beschrieben. Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche für Datenhygiene."
 
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_numberofidentities"
+>title="Anzahl der Identitäten"
+>abstract="Die Anzahl der Identitäten, die im Rahmen dieses Arbeitsauftrags gelöscht werden mussten. Die in der Zählung enthaltenen Identitäten müssen möglicherweise nicht unbedingt in den betroffenen Datensätzen vorhanden sein. Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche für Datenhygiene."
+
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_responsemessages"
+>title="Antwort auf Kundenlöschung"
+>abstract="Wenn ein Benutzer beim Löschen eine Antwort vom System erhält, werden diese Meldungen unter der **[!UICONTROL Ergebnis]** Abschnitt. Wenn ein Problem auftritt, während eine Arbeitsreihenfolge verarbeitet wird, werden alle relevanten Fehlermeldungen in diesem Abschnitt angezeigt, die Sie bei der Fehlerbehebung unterstützen. Weitere Informationen finden Sie im Handbuch zur Datenhygiene-Benutzeroberfläche."
+
 Wählen Sie die ID eines aufgelisteten Arbeitsauftrags aus, um dessen Details anzuzeigen.
 
 ![Bild, das die ausgewählte Arbeitsauftrags-ID anzeigt](../images/ui/browse/select-work-order.png)
 
 <!-- Depending on the type of work order selected, different information and controls are provided. These are covered in the sections below.
 
-### Consumer delete details
-
->[!CONTEXTUALHELP]
->id="platform_hygiene_responsemessages"
->title="Consumer delete response"
->abstract="When a consumer deletion process receives a response from the system, these messages are displayed under the **[!UICONTROL Result]** section. If a problem occurs while a work order is processing, any relevant error messages will appear in this section to help you troubleshoot the issue. To learn more, see the data hygiene UI guide."
-
+### Consumer delete details {#consumer-delete}
 
 The details of a consumer delete request are read-only, displaying its basic attributes such as its current status and the time elapsed since the request was made.
 
 ![Image showing the details page for a consumer delete work order](../images/ui/browse/consumer-delete-details.png)
 
-### Dataset expiration details -->
+### Dataset expiration details {#dataset-expiration} -->
 
 Die Detailseite für den Ablauf eines Datensatzes enthält Informationen zu seinen grundlegenden Attributen, einschließlich des geplanten Ablaufdatums für die Tage, die vor dem Löschvorgang verbleiben. In der rechten Leiste können Sie Steuerelemente verwenden, um den Ablauf zu bearbeiten oder abzubrechen.
 
