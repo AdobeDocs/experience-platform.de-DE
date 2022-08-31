@@ -2,10 +2,10 @@
 title: Verwalten von Datennutzungsbezeichnungen für ein Schema
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche Schemafeldern des Experience-Datenmodell (XDM) Datennutzungsbezeichnungen hinzufügen.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 6c72e9dd5961d4dc94d8264a7da795ebd96c40ec
+source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
 workflow-type: tm+mt
-source-wordcount: '711'
-ht-degree: 6%
+source-wordcount: '736'
+ht-degree: 8%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
->Die schemabasierte Beschriftung ist Teil von [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md), die derzeit in einer begrenzten Version für Kunden von Gesundheitsdienstleistungen in den USA verfügbar ist. Diese Funktion steht allen Real-time Customer Data Platform-Kunden nach der vollständigen Veröffentlichung zur Verfügung.
+>Die schemabasierte Beschriftung ist Teil von [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md), die derzeit in einer begrenzten Version für Kunden von Gesundheitsdienstleistungen in den USA verfügbar ist. Diese Funktion steht allen Kunden von Real-time Customer Data Platform nach der vollständigen Veröffentlichung zur Verfügung.
 
 Alle Daten, die in Adobe Experience Platform importiert werden, sind durch Experience-Datenmodell (XDM)-Schemas eingeschränkt. Diese Daten können Nutzungsbeschränkungen unterliegen, die von Ihrem Unternehmen oder durch gesetzliche Bestimmungen festgelegt werden. Um dies zu berücksichtigen, können Sie mit Platform die Verwendung bestimmter Datensätze und Felder durch die Verwendung von [Datennutzungsbezeichnungen](../../data-governance/labels/overview.md).
 
@@ -33,7 +33,12 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
    * [Schema Editor](../ui/overview.md): Erfahren Sie, wie Sie in der Platform-Benutzeroberfläche Schemas und andere Ressourcen erstellen und verwalten.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Bietet die Infrastruktur zum Durchsetzen von Datennutzungsbeschränkungen für Platform-Vorgänge mithilfe von Richtlinien, die definieren, welche Marketing-Aktionen für gekennzeichnete Daten ausgeführt werden können (oder nicht).
 
-## Schema oder Feld auswählen, dem Beschriftungen hinzugefügt werden sollen
+## Schema oder Feld auswählen, dem Beschriftungen hinzugefügt werden sollen {#select-schema-field}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_editgovernancelabels"
+>title="Bearbeiten von Governance-Titeln"
+>abstract="Wenden Sie eine Beschriftung auf ein Schemafeld an, um die Nutzungsrichtlinien anzugeben, die für die in diesem spezifischen Feld enthaltenen Daten gelten."
 
 Um Beschriftungen hinzuzufügen, müssen Sie zunächst [ein vorhandenes Schema zur Bearbeitung auswählen](../ui/resources/schemas.md#edit) oder [Erstellen eines neuen Schemas](../ui/resources/schemas.md#create) , um die Struktur im Schema-Editor anzuzeigen.
 
