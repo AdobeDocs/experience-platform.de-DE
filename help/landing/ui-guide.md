@@ -5,10 +5,10 @@ title: Übersicht über die Experience Platform-Benutzeroberfläche
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 5fb7284760489fc526b5891d258c51ed20a2b095
+source-git-commit: 769e8e6e5d159254d34ad1d3e5e468c3b0bca10b
 workflow-type: tm+mt
-source-wordcount: '1809'
-ht-degree: 3%
+source-wordcount: '1812'
+ht-degree: 4%
 
 ---
 
@@ -126,7 +126,7 @@ Die **[!UICONTROL Quellen]** -Abschnitt ermöglicht Ihnen das Erstellen, Aktuali
 
 Die **[!UICONTROL Ziele]** -Bereich können Sie Ziele erstellen, aktualisieren und löschen, sodass Sie Daten von Platform an viele externe Ziele exportieren können. Weitere Informationen zu Zielen finden Sie im [Ziele - Übersicht](../destinations/home.md).
 
-### [!UICONTROL Kunde]
+### [!UICONTROL Kundin bzw. Kunde]
 
 Die **[!UICONTROL Profile]** können Sie Kundenprofile durchsuchen, Profilmetriken anzeigen, Zusammenführungsrichtlinien erstellen und verwalten und Vereinigungsschemata anzeigen. Weitere Informationen zur Verwendung des [!UICONTROL Profile] lesen Sie bitte die [[!DNL Profile] Benutzerhandbuch](../profile/ui/user-guide.md). Weitere Informationen zum Echtzeit-Kundenprofil finden Sie im [Übersicht über das Echtzeit-Kundenprofil](../profile/home.md).
 
@@ -160,11 +160,11 @@ Die **[!UICONTROL Überwachung]** -Bereich können Sie die Batch- und Streaming-
 
 ### [!UICONTROL Entscheidungsfindung]
 
-Offer Decisioning ist ein in Adobe Experience Platform integrierter Anwendungsdienst. Dadurch können Sie Experience Platform verwenden, um Ihren Kunden zur richtigen Zeit über alle Touchpoints hinweg das beste Angebot und Erlebnis bereitzustellen. Weitere Informationen zum Offer decisioning, einschließlich der Arbeit mit [!UICONTROL Angebote] und [!UICONTROL Tätigkeiten] Besuchen Sie die [offer decisioning-Dokumentation](https://experienceleague.adobe.com/docs/offer-decisioning.html?lang=de).
+Adobe Journey Optimizer ist ein Anwendungsdienst, der auf Experience Platform aufbaut. Damit können Sie leistungsstarke Entscheidungstechnologien nutzen, um Ihren Kunden zur richtigen Zeit und an allen Berührungspunkten das beste Angebot und Erlebnis bereitzustellen. Weitere Informationen zu Journey Optimizer, einschließlich der Arbeit mit [!UICONTROL Angebote] und [!UICONTROL Tätigkeiten] Besuchen Sie die [Journey Optimizer-Dokumentation](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=de).
 
 ### [!UICONTROL Administration]
 
-Die Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenznutzung Ihres Unternehmens anzeigen können, wie sie in einer täglichen Momentaufnahme erfasst werden. Rufen Sie dieses Dashboard auf, indem Sie **[!UICONTROL Lizenzverwendung]** in der Navigation. Weitere Informationen zum Dashboard zur Lizenznutzung finden Sie unter [Dashboard-Handbuch zur Lizenznutzung](./license-usage-and-guardrails/license-usage-dashboard.md).
+Die Platform-Benutzeroberfläche verfügt über ein Dashboard, über das Sie wichtige Informationen zur Lizenznutzung Ihres Unternehmens aufrufen können. Diese Informationen werden in Form eines täglichen Snapshots erfasst. Rufen Sie dieses Dashboard auf, indem Sie **[!UICONTROL Lizenzverwendung]** in der Navigation. Weitere Informationen zum Dashboard zur Lizenznutzung finden Sie unter [Dashboard-Handbuch zur Lizenznutzung](./license-usage-and-guardrails/license-usage-dashboard.md).
 
 >[!IMPORTANT]
 >
