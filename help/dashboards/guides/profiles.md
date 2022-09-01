@@ -4,9 +4,9 @@ title: Handbuch zum Profil-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
+source-git-commit: 93bb816857545e2e5abca51e4046d225927daef4
 workflow-type: tm+mt
-source-wordcount: '3769'
+source-wordcount: '3788'
 ht-degree: 8%
 
 ---
@@ -171,9 +171,9 @@ Die **[!UICONTROL Trend zur Änderung der Anzahl der Profile]** -Widget zeigt ob
 
 ![Auf der Registerkarte Profilübersicht , auf der das Widget zur Anzahl der Profile angezeigt wird, ändert sich der Trend-Trend, wobei die Schaltfläche &quot;Beschriftungen&quot;hervorgehoben ist.](../images/profiles/profiles-count-change-trend-captions.png)
 
-Ein Modell für maschinelles Lernen generiert automatisch Untertitel zur Beschreibung der wichtigsten Trends und Ereignisse, indem es die Grafik und die Daten analysiert.
+Ein Modell für maschinelles Lernen generiert automatisch Untertitel zur Beschreibung der wichtigsten Trends und Ereignisse, indem es die Grafik und die Daten analysiert. Anmerkungen werden dem Diagramm basierend auf den Beschriftungen hinzugefügt. Wählen Sie eine Beschriftung aus, um sich auf die zugehörige Anmerkung zu konzentrieren.
 
-![Das Dialogfeld für automatische Beschriftungen für das Widget zur Anzahl der Profile ändert den Trend.](../images/profiles/profiles-added-trends-automatic-captions-dialog.png)
+![Das Dialogfeld für automatische Beschriftungen für das Widget zur Anzahl der Profile ändert den Trend.](../images/profiles/profiles-added-trends-automatic-captions-dialog-with-annotation.png)
 
 ### [!UICONTROL Änderung der Anzahl der Profile nach Identität] {#profiles-count-change-trend-by-identity}
 
