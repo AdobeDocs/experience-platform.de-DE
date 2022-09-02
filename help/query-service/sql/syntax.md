@@ -5,10 +5,10 @@ title: SQL-Syntax in Query Service
 topic-legacy: syntax
 description: Dieses Dokument zeigt die von Adobe Experience Platform Query Service unterstützte SQL-Syntax.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 17a90bb716bd64c9fb9b383a5ffa49598e978288
+source-git-commit: 33c45c53e2ff591e7b94be1b4b17c25d2fe9d497
 workflow-type: tm+mt
-source-wordcount: '3042'
-ht-degree: 11%
+source-wordcount: '3033'
+ht-degree: 10%
 
 ---
 
@@ -554,25 +554,23 @@ EXECUTE name [ ( parameter ) ]
 Die `EXPLAIN` zeigt den Ausführungsplan für die angegebene Anweisung an. Der Ausführungsplan zeigt, wie die in der Anweisung referenzierten Tabellen gescannt werden.  Wenn mehrere Tabellen referenziert werden, wird angezeigt, welche Join-Algorithmen verwendet werden, um die erforderlichen Zeilen aus jeder Eingabetabelle zusammenzuführen.
 
 ```sql
-EXPLAIN option statement
+EXPLAIN statement
 ```
 
-Wo `option` kann eine der folgenden sein:
+Verwenden Sie die `FORMAT` mit dem Keyword `EXPLAIN` -Befehl, um das Format der Antwort zu definieren.
 
 ```sql
-ANALYZE
-FORMAT { TEXT | JSON }
+EXPLAIN FORMAT { TEXT | JSON } statement
 ```
 
 | Parameter | Beschreibung |
 | ------ | ------ |
-| `ANALYZE` | Wenn die Variable `option` contains `ANALYZE`, werden die Laufzeiten und andere Statistiken angezeigt. |
-| `FORMAT` | Wenn die Variable `option` contains `FORMAT`, gibt es das Ausgabeformat an, das `TEXT` oder `JSON`. Die Ausgabe ohne Text enthält dieselben Informationen wie das Textausgabeformat, ist jedoch für Programme einfacher zu analysieren. Dieser Parameter ist standardmäßig auf `TEXT` voreingestellt. |
+| `FORMAT` | Verwenden Sie die `FORMAT` -Befehl, um das Ausgabeformat anzugeben. Die verfügbaren Optionen sind `TEXT` oder `JSON`. Die Ausgabe ohne Text enthält dieselben Informationen wie das Textausgabeformat, ist jedoch für Programme einfacher zu analysieren. Dieser Parameter ist standardmäßig auf `TEXT` voreingestellt. |
 | `statement` | Jede `SELECT`-, `INSERT`-, `UPDATE`-, `DELETE`-, `VALUES`-, `EXECUTE`-, `DECLARE`-, `CREATE TABLE AS`- oder `CREATE MATERIALIZED VIEW AS`-Anweisung, deren Ausführungsplan Sie sehen möchten. |
 
 >[!IMPORTANT]
 >
-> Denken Sie daran, dass die Anweisung genau genommen ausgeführt wird, wenn die `ANALYZE`-Option verwendet wird. Obwohl `EXPLAIN` alle Ausgaben verwirft, die `SELECT` zurückgibt, verworfen werden, treten andere Nebenwirkungen der Anweisung wie gewohnt auf.
+>Jede Ausgabe, die `SELECT` -Anweisung wird möglicherweise zurückgegeben, wenn sie mit der `EXPLAIN` Keyword. Andere Nebenwirkungen der Anweisung treten wie gewohnt auf.
 
 **Beispiel**
 
@@ -585,7 +583,7 @@ EXPLAIN SELECT * FROM foo;
 ```console
                        QUERY PLAN
 ---------------------------------------------------------
- Seq Scan on foo  (cost=0.00..155.00 rows=10000 width=4)
+ Seq Scan on foo (dataSetId = "6307eb92f90c501e072f8457", dataSetName = "foo") [0,1000000242,6973776840203d3d,6e616c58206c6153,6c6c6f430a3d4d20,74696d674c746365]
 (1 row)
 ```
 
