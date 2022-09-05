@@ -5,13 +5,13 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 5baf7457d02461c87d82d0ad877ee5192d48ea23
 workflow-type: tm+mt
 source-wordcount: '2136'
-ht-degree: 34%
+ht-degree: 85%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
 
-**Release-Datum: 24. August 2022**
+**Veröffentlichungsdatum: 24. August 2022**
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
@@ -26,7 +26,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
-KI/ML-Services ermöglichen es Marketing-Analysten und -Praktikern, die Leistungsfähigkeit von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen zu nutzen. So können Marketing-Analysten mithilfe von Konfigurationen auf Unternehmensebene spezifische Modelle für die Anforderungen eines Unternehmens einrichten, ohne dass datenwissenschaftliche Kenntnisse erforderlich sind.
+KI/ML-Services ermöglichen es Marketing-Leuten und Fachleuten, die Leistungsfähigkeit von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen zu nutzen. Auf diese Weise können Marketing-Leute mithilfe von Konfigurationen auf Unternehmensebene Modelle erstellen, die speziell auf die Anforderungen eines Unternehmens zugeschnitten sind, ohne dass dafür datenwissenschaftliches Fachwissen erforderlich ist.
 
 ### Attributions-KI
 
@@ -36,13 +36,13 @@ Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Ko
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung für Datenschutz | <ul><li> Attribution AI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien für die Verwaltung von [Berechtigungen](../../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte in einer Produktanwendung. </li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li><li> bis [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md), können Administratoren den Zugriff auf bestimmte Objekte und/oder Funktionen anhand bestimmter Attribute steuern. Dabei kann es sich um einem Objekt hinzugefügte Metadaten handeln, z. B. Beschriftungen. Administratoren können außerdem Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li><li>Attribution AI nutzt Platform-Datensätze. Um Anfragen zu Verbraucherrechten zu unterstützen, die eine Marke möglicherweise erhält, sollten Marken Platform Privacy Service verwenden, um Verbraucheranfragen auf Zugriff und Löschung zu übermitteln und um ihre Daten im Data Lake, Identity Service und Echtzeit-Kundenprofil zu entfernen.  </li><li>Alle Datensätze, die für die Eingabe/Ausgabe von Modellen verwendet werden, folgen den Platform-Richtlinien. Die Platform-Datenverschlüsselung gilt für Daten während der Ruhezeit und während der Übertragung. Weitere Informationen finden Sie in der Dokumentation . [Datenverschlüsselung](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
+| Unterstützung für den Datenschutz | <ul><li> Die Attributions-KI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien für die Verwaltung von [Berechtigungen](../../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte in einer Produktanwendung. </li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li><li> Durch [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md), können Admins den Zugriff auf bestimmte Objekte und/oder Funktionen anhand bestimmter Attribute steuern. Dabei kann es sich um einem Objekt hinzugefügte Metadaten handeln, z. B. Beschriftungen. Admins können außerdem Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li><li>Die Attributions-KI nutzt Platform-Datensätze. Um Anfragen zu Verbraucherrechten zu unterstützen, die eine Marke möglicherweise erhält, sollten Marken Platform Privacy Service verwenden, um Verbraucheranfragen auf Zugriff und Löschung zu übermitteln und um ihre Daten im Data Lake, Identity Service und Echtzeit-Kundenprofil zu entfernen.  </li><li>Alle Datensätze, die für die Eingabe/Ausgabe von Modellen verwendet werden, folgen den Platform-Richtlinien. Die Platform-Datenverschlüsselung gilt für Daten während der Ruhezeit und während der Übertragung. Weitere Informationen finden Sie in der Dokumentation . [Datenverschlüsselung](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
-**Hinweis**: Attribution AI wird bei bestehenden Kunden des Gesundheitsschilds oder des Datenschutzschilds erst nach einer weiteren Mitteilung verfügbar sein.
+**Hinweis**: Die Attributions-KI wird bis auf Weiteres nicht für bestehende Healthcare Shield- oder Privacy Shield-Kunden verfügbar sein.
 
-Weitere Informationen zu Attribution AIS finden Sie im [Attribution AI](../../intelligent-services/attribution-ai/overview.md) Übersicht.
+Weitere Informationen zu Attributions-KI finden Sie in der Übersicht [Attributions-KI](../../intelligent-services/attribution-ai/overview.md).
 
 ### Kunden-KI
 
@@ -52,23 +52,23 @@ Kunden-KI in Real-time Customer Data Platform dient dazu, für einzelne Profile 
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung für Datenschutz | <ul><li> Customer AI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien zur Verwaltung [Berechtigungen](../../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte in einer Produktanwendung. </li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li><li> bis [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md), können Administratoren den Zugriff auf bestimmte Objekte und/oder Funktionen anhand bestimmter Attribute steuern. Diese Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. Beschriftungen. Administratoren können auch Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li><li>Customer AI nutzt Platform-Datensätze. Um Anfragen zu Verbraucherrechten zu unterstützen, die eine Marke möglicherweise erhält, sollten Marken Platform Privacy Service verwenden, um Verbraucheranfragen auf Zugriff und Löschung zu übermitteln und um ihre Daten im Data Lake, Identity Service und Echtzeit-Kundenprofil zu entfernen. </li><li>Alle Datensätze, die für die Eingabe/Ausgabe von Modellen verwendet werden, folgen den Platform-Richtlinien. Die Platform-Datenverschlüsselung gilt für Daten während der Ruhezeit und während der Übertragung. Weitere Informationen finden Sie in der Dokumentation . [Datenverschlüsselung](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
+| Unterstützung für den Datenschutz | <ul><li> Kunden-KI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien, die der Verwaltung von [Berechtigungen](../../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte innerhalb einer Produktanwendung dienen. </li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li><li> Durch [attributbasierte Zugriffskontrolle](../../access-control/abac/overview.md) können Admins den Zugriff auf bestimmte Objekte und/oder Funktionen auf der Grundlage bestimmter Attribute steuern. Bei diesen Attributen kann es sich um Metadaten handeln, die einem Objekt hinzugefügt werden, wie z. B. Beschriftungen. Admins können auch Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li><li>Die Kunden-KI nutzt die Platform-Datensätze. Um Anfragen zu Verbraucherrechten zu unterstützen, die eine Marke möglicherweise erhält, sollten Marken Platform Privacy Service verwenden, um Verbraucheranfragen auf Zugriff und Löschung zu übermitteln und um ihre Daten im Data Lake, Identity Service und Echtzeit-Kundenprofil zu entfernen. </li><li>Alle Datensätze, die für die Eingabe/Ausgabe von Modellen verwendet werden, folgen den Platform-Richtlinien. Die Platform-Datenverschlüsselung gilt für Daten während der Ruhezeit und während der Übertragung. Weitere Informationen finden Sie in der Dokumentation . [Datenverschlüsselung](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
-**Hinweis**: Kunden-KI wird bei bestehenden Kunden des Gesundheitsschilds oder des Datenschutzschilds erst nach einer weiteren Mitteilung verfügbar sein.
+**Hinweis**: Die Kunden-KI wird bis auf Weiteres nicht für bestehende Healthcare Shield- oder Privacy Shield-Kunden verfügbar sein.
 
-Weitere Informationen zu Customer AI finden Sie im [Customer AI](../../intelligent-services/customer-ai/overview.md) Übersicht.
+Weitere Informationen zu Kunden-KI finden Sie in der Übersicht [Kunden-KI](../../intelligent-services/customer-ai/overview.md).
 
 ## [!DNL Dashboards] {#dashboards}
 
-Adobe Experience Platform bietet mehrere [!DNL dashboards] durch die Sie wichtige Einblicke in die Daten Ihres Unternehmens anzeigen können, wie sie bei täglichen Momentaufnahmen erfasst werden.
+Adobe Experience Platform bietet mehrere [!DNL dashboards], mit denen Sie wichtige Einblicke in die Daten Ihrer Organisation erhalten, die in täglichen Snapshots erfasst werden.
 
 **Aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Widget zur geplanten Aktivierung | Die [!UICONTROL Geplante Aktivierungen] -Widget bietet eine tabellarisierte Ansicht der zuletzt aktivierten Ziele. Sie enthält für jedes Segment den Namen, die Zielplattform sowie das Start- und Enddatum der Aktivierung. Mit diesem Widget können Sie auf einen Blick erkennen, wo und wann die Audience aktiviert wird, und doppelte oder unnötige Aktivierungen transparenter machen. Diese gesammelten Informationen zeigen auch, wo jegliche Aktivierungen ausgeschlossen wurden. |
+| Geplante Aktivierungen-Widget | Das [!UICONTROL Geplante Aktivierungen]-Widget bietet eine tabellarische Übersicht über die zuletzt aktivierten Ziele. Für jedes Segment werden der Name, die Zielplattform sowie das Start- und Enddatum der Aktivierung angegeben. Mit diesem Widget können Sie auf einen Blick erkennen, wo und wann die Zielgruppe aktiviert wird, und es macht doppelte oder unnötige Aktivierungen transparenter. Diese gesammelten Informationen zeigen auch, wo jegliche Aktivierungen ausgeschlossen wurden. |
 
 Weitere Informationen zu [!DNL Dashboards] finden Sie in der [[!DNL Dashboards] Übersicht](../../dashboards/home.md).
 
@@ -80,7 +80,7 @@ Weitere Informationen zu [!DNL Dashboards] finden Sie in der [[!DNL Dashboards] 
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Unterstützung für die Aufnahme von Datensätzen mit Warnungen | Die Datenvorbereitung lokalisiert nun Warnungen (nicht kritische Fehler) in die Felder und ermöglicht die Erfassung des restlichen Teils der Zeile. Alle Mapper-Transformationsfehler werden jetzt als Warnungen und teilweise aufgenommene Zeilen als erfolgreich gemeldet, mit einer Warnung.  Die Überwachung wird auch für Datensätze mit Warnungen und Diagnosedetails unterstützt. Die partielle Erfassung von Datensätzen mit Warnungen ist derzeit nur für Streaming-Daten verfügbar. Lesen Sie die Dokumentation unter [Erfassen von Datensätzen mit Warnungen](../../sources/tutorials/ui/monitor-streaming.md) für weitere Informationen. |
+| Unterstützung für das Aufnehmen von Datensätzen mit Warnungen | Bei der Datenvorbereitung werden nun Warnungen (unkritische Fehler) in den Feldern lokalisiert, und der Rest der Zeile kann aufgenommen werden. Alle Mapper-Transformationsfehler werden jetzt als Warnungen gemeldet, und Zeilen, die teilweise aufgenommen wurden, werden als erfolgreich betrachtet, jedoch mit einer Warnung.  Die Überwachung wird auch für Datensätze mit Warnungen und Diagnosedetails unterstützt. Die teilweise Aufnahme von Datensätzen mit Warnungen ist derzeit nur für Streaming-Daten verfügbar. Weitere Informationen finden Sie in der Dokumentation zum [Aufnehmen von Datensätzen mit Warnungen](../../sources/tutorials/ui/monitor-streaming.md). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -102,7 +102,7 @@ Weitere Informationen über [!DNL Data Prep] finden Sie in der [[!DNL Data Prep]
 
 | Ziel | Beschreibung |
 | ----------- | ----------- |
-| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) ist eine Sales Execution Platform mit den weltweit besten B2B-Käufer-Verkäuferinteraktionsdaten und umfangreichen Investitionen in proprietäre KI-Technologien, um Verkaufsdaten in intelligente Lösungen zu übersetzen. [!DNL Outreach] unterstützt Unternehmen bei der Automatisierung von Verkaufsaktivitäten und der Umsetzung von Umsatz-Intelligenz, um ihre Effizienz, Vorhersehbarkeit und ihr Wachstum zu verbessern. |
+| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) ist eine Sales Execution-Plattform mit den weltweit meisten Daten zu B2B-Käufer-Verkäufer-Interaktionen und erheblichen Investitionen in proprietäre KI-Technologien zur Umwandlung von Verkaufsdaten in Intelligenz. [!DNL Outreach] unterstützt Unternehmen bei der Automatisierung des Vertriebsengagements und der Nutzung von Umsatzdaten, um ihre Effizienz, Vorhersagbarkeit und ihr Wachstum zu verbessern. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -118,7 +118,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 | --- | --- | --- |
 | Globales Schema | [[!UICONTROL AJO-Entitätsschema]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | Beschreibt denormalisierte Entitäten für Adobe Journey Optimizer. |
 | Klasse | [[!UICONTROL AJO-Ausführungsentitäten]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-execution-entity.schema.json) | Beschreibt Ausführungsentitäten von Adobe Journey Optimizer zur Verwendung in der Segmentierung. |
-| Feldergruppe | [[!UICONTROL Workfront-Arbeitsobjekte]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Eine Wrapper-Feldergruppe, die auf alle objektspezifischen Feldergruppen der unteren Ebene für Adobe Workfront verweist. |
+| Feldergruppe | [[!UICONTROL Workfront-Arbeitsobjekte]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Eine Wrapper-Feldergruppe, die auf alle objektspezifischen Feldgruppen der unteren Ebene für Adobe Workfront verweist. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -126,15 +126,15 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
-| Feldergruppe | [[!UICONTROL Allgemeine Felder für Journey Orchestration Step-Ereignisse]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Zwei neue Eigenschaften wurden hinzugefügt: `origTimeStamp` und `experienceID`. |
-| Feldergruppe | [[!UICONTROL Details zur Segmentzugehörigkeit]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | Zusätzlich zu [!UICONTROL XDM Individual Profile]festgelegt ist, kann diese Feldergruppe jetzt auch in Schemas verwendet werden, die auf der XDM Business Account-Klasse basieren. |
-| Feldergruppe | (Mehrere) | Mehrere Feldergruppen im Zusammenhang mit Marketo B2B-Aktivitäten wurden auf den Status &quot;stabil&quot;aktualisiert. Siehe Folgendes [Pull-Anfrage](https://github.com/adobe/xdm/pull/1593/files) für Details. |
-| Feldergruppe | (Mehrere) | Mehrere wetterbezogene Feldergruppen wurden aktualisiert, um Fehler zu beheben, die bei `uvIndex` und `sunsetTime`. Siehe Folgendes [Pull-Anfrage](https://github.com/adobe/xdm/pull/1602/files) für Details. |
+| Feldergruppe | [[!UICONTROL Gemeinsame Felder für Journey Orchestration-Step-Ereignisse]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Es wurden zwei neue Eigenschaften hinzugefügt: `origTimeStamp` und `experienceID`. |
+| Feldergruppe | [[!UICONTROL Details zur Segmentzugehörigkeit]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | Zusätzlich zum [!UICONTROL XDM-Individualprofil] kann diese Feldergruppe nun auch in Schemata verwendet werden, die auf der Klasse XDM Business Account basieren. |
+| Feldergruppe | (Mehrfach) | Mehrere Feldergruppen, die sich auf Marketo B2B-Aktivitäten beziehen, wurden auf einen stabilen Status aktualisiert. Siehe die folgende [Pull-Anfrage](https://github.com/adobe/xdm/pull/1593/files) für weitere Details. |
+| Feldergruppe | (Mehrfach) | Mehrere wetterbezogene Feldergruppen wurden aktualisiert, um Fehler zu beheben, die bei `uvIndex` und `sunsetTime` auftraten. Siehe die folgende [Pull-Anfrage](https://github.com/adobe/xdm/pull/1602/files) für weitere Details. |
 | Datentyp | [[!UICONTROL Produktlistenelement]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Eine neue Eigenschaft `productImageUrl` wurde hinzugefügt. |
 | Datentyp | [[!UICONTROL Informationen zu QoE-Daten]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Eine neue Eigenschaft `framesPerSecond` wurde hinzugefügt. |
-| Datentyp | [[!UICONTROL Informationen zu Sitzungsdetails]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion` wurde in `appVersion` umbenannt. `meta:enum` und `description` -Felder wurden ebenfalls aktualisiert. |
-| Datentypen und Feldergruppen | (Mehrere) | Mehrere Mediendaten und Feldergruppen verfügen über neue Felder und aktualisierte Beschreibungen. Siehe Folgendes [Pull-Anfrage](https://github.com/adobe/xdm/pull/1582/files) für Details. |
-| (Alle) | (Mehrere) | Alle Schemaobjekte, die eine `enum` -Feld enthält jetzt auch die entsprechende `meta:enum` -Feld, um die Anzeigewerte für jede Begrenzung anzugeben. Siehe Folgendes [Pull-Anfrage](https://github.com/adobe/xdm/pull/1601/files) für Details. |
+| Datentyp | [[!UICONTROL Informationen zu Sitzungsdetails]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion` wurde in `appVersion` umbenannt. Die Felder `meta:enum` und `description` wurden ebenfalls aktualisiert. |
+| Datentypen und Feldergruppen | (Mehrfach) | Mehrere Mediendatentypen und Feldergruppen verfügen über neue Felder und aktualisierte Beschreibungen. Siehe die folgende [Pull-Anfrage](https://github.com/adobe/xdm/pull/1582/files) für weitere Details. |
+| (Alle) | (Mehrfach) | Alle Schemaobjekte, die ein `enum`-Feld enthalten, enthalten jetzt auch ein entsprechendes `meta:enum`-Feld, um die Anzeigewerte für jede Begrenzung anzugeben. Siehe die folgende [Pull-Anfrage](https://github.com/adobe/xdm/pull/1601/files) für weitere Details. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -146,8 +146,8 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Hard Limit für Zusammenführungsrichtlinien | Platform erzwingt jetzt eine feste Grenze von **fünf** Zusammenführungsrichtlinien pro Sandbox. Wenn Ihre Sandbox derzeit über mehr als fünf Zusammenführungsrichtlinien verfügt, werden Sie **not** können neue Zusammenführungsrichtlinien erstellen, bis die Sandbox über weniger als fünf Zusammenführungsrichtlinien verfügt. |
-| Bereinigung der verwaisten Profilattribute | Für alle Organisationen entfernt der Profildienst jetzt täglich die Attribute der Region der Benutzeraktivität, die übrig geblieben sind, um eine genauere Darstellung Ihrer Profile in Ihrem System zu erhalten. Diese Bereinigung erfolgt, nachdem alle Profilfragmente für ein bestimmtes Profil gelöscht wurden, und sollte sich auf die Zusammenführung von Profilen aus Datensätzen auswirken, in denen `com_adobe_aep_profile_region_dataset` als `true`. Dies kann einen Rückgang der Metrik &quot;Addressable audience&quot;im Dashboard zur Lizenznutzung anzeigen und einen Rückgang der Metrik &quot;Profilanzahl&quot;im Profil-Dashboard anzeigen, da diese Metriken vor dieser Version verbleibende Edge-Attributfragmente enthielten. |
+| Feste Grenze für Zusammenführungsrichtlinien | Platform erzwingt jetzt eine feste Grenze von **fünf** Zusammenführungsrichtlinien pro Sandbox. Wenn Ihre Sandbox derzeit mehr als fünf Zusammenführungsrichtlinien hat, können Sie **keine** neuen Zusammenführungsrichtlinien erstellen, bis die Sandbox weniger als fünf Zusammenführungsrichtlinien hat. |
+| Bereinigung verwaister Profilrandattribute | Für alle Organisationen entfernt der Profil-Service jetzt täglich übrig gebliebene Randattribute der Benutzeraktivitätsregion, um eine genauere Darstellung der Profile in Ihrem System zu erhalten. Diese Bereinigung erfolgt, nachdem alle Profilfragmente für ein bestimmtes Profil gelöscht wurden, und sollte sich auf Profile auswirken, die aus Datensätzen zusammengeführt werden, in denen `com_adobe_aep_profile_region_dataset` als `true` markiert ist. Dies kann zu einem Rückgang der Metrik „Adressierbare Zielgruppe“ im Lizenznutzungs-Dashboard und zu einem Rückgang der Metrik „Profilanzahl“ im Profil-Dashboard führen, da diese Metriken vor dieser Version übrig gebliebene Randattributfragmente einbezogen haben. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -161,7 +161,7 @@ Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und B
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung für 4000 Segmente | Alle Organisationen mit Platform können jetzt bis zu 4000 Segmentdefinitionen unterstützen. Weitere Informationen dazu, wie sich diese Änderung auf die APIs für Segmentaufträge auswirkt, finden Sie im Abschnitt [Handbuch zum Segmentauftragsendpunkt](../../segmentation/api/segment-jobs.md) |
+| Unterstützung für 4000 Segmente | Für alle Organisationen mit Platform können jetzt bis zu 4000 Segmentdefinitionen unterstützt werden. Weitere Informationen darüber, wie sich diese Änderung auf die Segmentauftrags-APIs auswirkt, finden Sie im [Leitfaden für Segmentauftragsendpunkte](../../segmentation/api/segment-jobs.md) |
 
 Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Übersicht zu Segmentierung](../../segmentation/home.md).
 
@@ -175,10 +175,10 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Allgemeine Verfügbarkeit von Self-Serve-Quellen (Batch-SDK) | Entwickeln, testen und integrieren Sie Ihre REST API-basierte Datenquelle, um Batch-Daten mithilfe einfacher Quellspezifikationen in Experience Platform zu erfassen. Mit dem Sources-SDK können Sie: <ul><li>Konfigurieren Sie eine neue Quelle für den Experience Platform-Katalog.</li><li>Definieren Sie Spezifikationen für Ihre Quelle, einschließlich Informationen zu unterstützten Authentifizierungstypen, Planung und Art und Weise, wie Ressourcendaten abgerufen werden.</li><li>Erstellen Sie eine benutzerfreundliche Dokumentation für Ihre neue Quelle.</li></ul> Weitere Informationen finden Sie in der Dokumentation unter [Self-Serve-Quellen (Batch-SDK)](../../sources/sources-sdk/overview.md). |
-| Allgemeine Verfügbarkeit der [!DNL Google BigQuery]-Quelle | Verwenden Sie die [!DNL Google BigQuery] -Quelle, um Daten aus Ihrem [!DNL Google BigQuery] Data Warehouse in Experience Platform. Weitere Informationen finden Sie in der Dokumentation unter [[!DNL Google BigQuery] source](../../sources/connectors/databases/bigquery.md). |
-| [!DNL Teradata Vantage] source (Beta) | Verwenden Sie die [!DNL Teradata Vantage] -Quelle, um Daten aus hybriden Multi-Cloud-Umgebungen in Experience Platform zu erfassen. Weitere Informationen finden Sie in der Dokumentation unter [[!DNL Teradata Vantage] source](../../sources/connectors/databases/teradata-vantage.md). |
-| Regionsübergreifende Unterstützung für Adobe Analytics-Quellen | Sie können jetzt Berichts-Suites aus jeder Region (Vereinigte Staaten, Vereinigtes Königreich oder Singapur) einlesen. Report Suites müssen derselben Organisation wie die Experience Platform-Sandbox-Instanz zugeordnet sein, in der die Quellverbindung erstellt wird. Weitere Informationen finden Sie im Handbuch unter [Erstellen einer Adobe Analytics-Quellverbindung in der Benutzeroberfläche](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
+| Allgemeine Verfügbarkeit von Selbstbedienungsquellen (Batch-SDK) | Entwickeln, testen und integrieren Sie Ihre REST-API-basierte Datenquelle, um Batch-Daten mithilfe einfacher Quellspezifikationen in Experience Platform aufzunehmen. Mit dem Quellen-SDK können Sie Folgendes tun: <ul><li>Konfigurieren Sie eine neue Quelle für den Experience Platform-Katalog.</li><li>Definieren Sie Spezifikationen für Ihre Quelle, einschließlich Informationen bezüglich der unterstützten Authentifizierungstypen, der Zeitplanung und der Art und Weise, wie Ressourcendaten abgerufen werden.</li><li>Erstellen Sie eine benutzerfreundliche Dokumentation für Ihre neue Quelle.</li></ul> Weitere Informationen finden Sie in der Dokumentation unter [Selbstbedienungsquellen (Batch-SDK)](../../sources/sources-sdk/overview.md). |
+| Allgemeine Verfügbarkeit der [!DNL Google BigQuery]-Quelle | Verwenden Sie die [!DNL Google BigQuery]-Quelle, um Daten aus Ihrem [!DNL Google BigQuery] Data Warehouse in Experience Platform aufzunehmen. Weitere Informationen finden Sie in der Dokumentation zur [[!DNL Google BigQuery]  Quelle](../../sources/connectors/databases/bigquery.md). |
+| [!DNL Teradata Vantage]-Quelle (Beta) | Verwenden Sie die [!DNL Teradata Vantage]-Quelle, um Daten aus hybriden Multi-Cloud-Umgebungen in Experience Platform aufzunehmen. Weitere Informationen finden Sie in der Dokumentation zur [[!DNL Teradata Vantage]  Quelle](../../sources/connectors/databases/teradata-vantage.md). |
+| Regionsübergreifende Unterstützung für die Adobe Analytics-Quelle | Sie können jetzt Report Suites aus jeder Region (Vereinigte Staaten, Vereinigtes Königreich oder Singapur) aufnehmen. Report Suites müssen derselben Organisation zugeordnet sein wie die Experience Platform Sandbox-Instanz, in der die Quellverbindung erstellt wird. Weitere Informationen finden Sie im Handbuch zum [Erstellen einer Adobe Analytics-Quellverbindung in der Benutzeroberfläche](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
 
 {style=&quot;table-layout:auto&quot;}
 

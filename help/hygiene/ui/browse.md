@@ -5,7 +5,7 @@ exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: f246a014de7869b627a677ac82e98d4556065010
 workflow-type: tm+mt
 source-wordcount: '616'
-ht-degree: 55%
+ht-degree: 79%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 55%
 >
 >Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die Healthcare Shield erworben haben.
 
-Wenn eine Datenhygiene-Anfrage an das System gesendet wird, wird ein Arbeitsauftrag erstellt, um die angeforderte Aufgabe auszuführen. Eine Arbeitsanweisung stellt einen bestimmten Datenhygieneprozess dar, z. B. einen geplanten Datensatzablauf, der den aktuellen Status und andere zugehörige Details enthält.
+Wenn eine Datenhygiene-Anfrage an das System gesendet wird, wird ein Arbeitsauftrag erstellt, um die angeforderte Aufgabe auszuführen. Ein Arbeitsauftrag stellt einen spezifischen Datenhygiene-Prozess dar, z. B. das geplante Ablaufen eines Datensatzes, wobei sein aktueller Status und andere zugehörige Details enthalten sind.
 
 In diesem Handbuch wird beschrieben, wie Sie bestehende Arbeitsaufträge in der Adobe Experience Platform-Benutzeroberfläche anzeigen und verwalten können.
 
@@ -41,10 +41,10 @@ Wählen Sie das Trichtersymbol (![Bild des Trichtersymbols](../images/ui/browse/
 
 | Filter | Beschreibung |
 | --- | --- |
-| [!UICONTROL Status] | Filtern Sie nach dem aktuellen Status des Arbeitsauftrags:<ul><li>**[!UICONTROL Abgeschlossen]**: Der Vorgang ist abgeschlossen.</li><li>**[!UICONTROL Ausstehend]**: Der Vorgang wurde erstellt, aber noch nicht ausgeführt. A [Datensatzablaufanfrage](./dataset-expiration.md) nimmt diesen Status vor dem geplanten Löschdatum an. Zum Löschdatum ändert sich der Status auf [!UICONTROL Wird ausgeführt], sofern der Vorgang nicht zuvor bereits abgebrochen wurde.</li><li>**[!UICONTROL Wird ausgeführt]**: Die Anfrage zum Ablauf des Datensatzes wurde gestartet und wird derzeit verarbeitet.</li><li>**[!UICONTROL Abgebrochen]**: Der Vorgang wurde im Rahmen einer manuellen Benutzeranfrage abgebrochen.</li></ul> |
+| [!UICONTROL Status] | Filtern Sie nach dem aktuellen Status des Arbeitsauftrags:<ul><li>**[!UICONTROL Abgeschlossen]**: Der Vorgang ist abgeschlossen.</li><li>**[!UICONTROL Ausstehend]**: Der Vorgang wurde erstellt, aber noch nicht ausgeführt. Eine [Datensatz-Gültigkeitsanfrage](./dataset-expiration.md) nimmt diesen Status vor dem geplanten Löschdatum an. Zum Löschdatum ändert sich der Status auf [!UICONTROL Wird ausgeführt], sofern der Vorgang nicht zuvor bereits abgebrochen wurde.</li><li>**[!UICONTROL Wird ausgeführt]**: Die Datensatz-Gültigkeitsanfrage wurde gestartet und wird derzeit verarbeitet.</li><li>**[!UICONTROL Abgebrochen]**: Der Vorgang wurde im Rahmen einer manuellen Benutzeranfrage abgebrochen.</li></ul> |
 | [!UICONTROL Erstellt am] | Filtern Sie nach dem Zeitpunkt, zu dem der Arbeitsauftrag erstellt wurde. |
-| [!UICONTROL Ablaufdatum] | Filtern Sie die Anforderungen zum Ablauf von Datensätzen basierend auf dem geplanten Löschdatum für den betreffenden Datensatz. |
-| [!UICONTROL Aktualisierungsdatum] | Filtern Sie die Anforderungen zum Ablauf von Datensätzen basierend auf dem Zeitpunkt, zu dem die Arbeitsreihenfolge zuletzt aktualisiert wurde. Kreationen und Abläufe werden als Updates gezählt. |
+| [!UICONTROL Ablaufdatum] | Filtern Sie Datensatz-Gültigkeitsanfragen nach dem geplanten Löschdatum für den jeweiligen Datensatz. |
+| [!UICONTROL Aktualisierungsdatum] | Filtern Sie Datensatz-Gültigkeitsanfragen nach dem Zeitpunkt, zu dem der Arbeitsauftrag zuletzt aktualisiert wurde. Erstellungen und Abläufe werden als Aktualisierungen gezählt. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -79,10 +79,10 @@ The details of a consumer delete request are read-only, displaying its basic att
 
 ### Dataset expiration details {#dataset-expiration} -->
 
-Die Detailseite für den Ablauf eines Datensatzes enthält Informationen zu seinen grundlegenden Attributen, einschließlich des geplanten Ablaufdatums für die Tage, die vor dem Löschvorgang verbleiben. In der rechten Leiste können Sie Steuerelemente verwenden, um den Ablauf zu bearbeiten oder abzubrechen.
+Die Detailseite für eine Datensatz-Gültigkeit enthält Informationen zu Standardattributen, einschließlich des geplanten Ablaufdatums und der vor der Löschung verbleibenden Tage. In der rechten Leiste können Sie Steuerelemente verwenden, um die Gültigkeit zu bearbeiten oder abzubrechen.
 
-![Bild mit der Detailseite für eine Arbeitsreihenfolge zum Ablauf eines Datensatzes](../images/ui/browse/ttl-details.png)
+![Das Bild zeigt die Detailseite für einen Arbeitsauftrag zur Gültigkeit eines Datensatzes](../images/ui/browse/ttl-details.png)
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie vorhandene Datenhygiene-Arbeitsaufträge in der Platform-Benutzeroberfläche anzeigen und verwalten können. Informationen zum Erstellen eigener Arbeitsaufträge finden Sie im Handbuch unter [Planen des Ablaufs eines Datensatzes](./dataset-expiration.md).
+In diesem Handbuch wurde beschrieben, wie Sie vorhandene Datenhygiene-Arbeitsaufträge in der Platform-Benutzeroberfläche anzeigen und verwalten können. Informationen zum Erstellen eigener Arbeitsaufträge finden Sie im Handbuch zum [Planen der Gültigkeit eines Datensatzes](./dataset-expiration.md).
