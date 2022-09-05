@@ -1,39 +1,39 @@
 ---
-title: API-Endpunkt für Datensatzablauf
-description: Mit dem Endpunkt /ttl in der Data Hygiene API können Sie die Ablaufzeit von Datensätzen in Adobe Experience Platform programmgesteuert planen.
+title: API-Endpunkt für Datensatzgültigkeiten
+description: Mit dem Endpunkt /ttl in der Datenhygiene-API können Sie programmgesteuert einen Zeitplan für Datensatzgültigkeiten in Adobe Experience Platform festlegen.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
 source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1375'
-ht-degree: 34%
+ht-degree: 100%
 
 ---
 
-# Endpunkt für Datensatzablauf
+# Endpunkt für Datensatzgültigkeiten
 
 >[!IMPORTANT]
 >
 >Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die Healthcare Shield erworben haben.
 
-Die `/ttl` -Endpunkt in der Data Hygiene API ermöglicht es Ihnen, Ablaufdaten für Datensätze in Adobe Experience Platform zu planen.
+Der `/ttl`-Endpunkt in der Datenhygiene-API ermöglicht Ihnen, in Adobe Experience Platform Ablaufdaten für Datensätze zu planen.
 
-Ein Datensatzablauf ist nur ein zeitverzögerter Löschvorgang. Der Datensatz ist in der Zwischenzeit nicht geschützt und kann daher auf andere Weise gelöscht werden, bevor sein Ablaufdatum erreicht wurde.
+Eine Datensatzgültigkeit ist nur ein zeitverzögerter Löschvorgang. Der Datensatz ist in der Zwischenzeit nicht geschützt und kann daher auf andere Weise gelöscht werden, bevor sein Ablaufdatum erreicht wurde.
 
 >[!NOTE]
 >
 >Obwohl die Löschung als spezifischer Zeitpunkt angegeben ist, kann es bis zu 24 Stunden nach Ablauf der Frist dauern, bevor die eigentliche Löschung eingeleitet wird. Nachdem der Löschvorgang gestartet wurde, kann es bis zu sieben Tage dauern, bis alle Spuren des Datensatzes aus Platform-Systemen entfernt wurden.
 
-Sie können jederzeit vor dem eigentlichen Start des Datensatzlöschens den Ablauf abbrechen oder die Trigger-Zeit ändern. Nachdem Sie den Ablauf eines Datensatzes abgebrochen haben, können Sie ihn erneut öffnen, indem Sie einen neuen Ablauf festlegen.
+Sie können die Gültigkeit jederzeit abbrechen oder den Löschzeitpunkt ändern, solange der Datensatz-Löschvorgang noch nicht gestartet wurde. Nachdem Sie eine Datensatzgültigkeit abgebrochen haben, können Sie sie erneut starten, indem Sie ein neues Ablaufdatum festlegen.
 
-Sobald das Löschen des Datensatzes eingeleitet wurde, wird sein Ablaufauftrag als `executing`und darf nicht weiter geändert werden. Der Datensatz selbst kann bis zu sieben Tage lang wiederhergestellt werden, jedoch nur durch einen manuellen Prozess über eine Adobe-Service-Anfrage. Während die Anfrage ausgeführt wird, beginnen der Data Lake, der Identity Service und das Echtzeit-Kundenprofil separate Prozesse, um den Inhalt des Datensatzes aus den entsprechenden Diensten zu entfernen. Sobald die Daten aus allen drei Diensten gelöscht wurden, wird der Ablauf als `executed`.
+Sobald das Löschen des Datensatzes gestartet wurde, wird seine Gültigkeit als `executing` gekennzeichnet und darf nicht weiter geändert werden. Der Datensatz selbst kann bis zu sieben Tage lang wiederhergestellt werden, jedoch nur durch einen manuellen Prozess über eine Adobe-Service-Anfrage. Während die Anfrage ausgeführt wird, beginnen der Data Lake, der Identity Service und das Echtzeit-Kundenprofil separate Prozesse, um den Inhalt des Datensatzes aus den entsprechenden Services zu entfernen. Sobald die Daten aus allen drei Services gelöscht wurden, wird der Ablauf als `executed` gekennzeichnet.
 
 ## Erste Schritte
 
 Der in diesem Handbuch verwendete Endpunkt ist Teil der Data Hygiene API. Bevor Sie fortfahren, lesen Sie die [Übersicht](./overview.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
 
-## Auflisten der Datensatzabläufe {#list}
+## Auflisten der Datensatzgültigkeiten {#list}
 
-Sie können alle Datensatzabläufe für Ihr Unternehmen auflisten, indem Sie eine GET-Anfrage stellen.
+Sie können alle Datensatzgültigkeiten für Ihre Organisation auflisten, indem Sie eine GET-Anfrage stellen.
 
 **API-Format**
 
@@ -60,7 +60,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort listet die resultierenden Datensatzabläufe auf. Das folgende Beispiel wurde aus Platzgründen gekürzt.
+Eine erfolgreiche Antwort listet die resultierenden Datensatzgültigkeiten auf. Das folgende Beispiel wurde aus Platzgründen gekürzt.
 
 ```json
 {
@@ -92,16 +92,16 @@ Eine erfolgreiche Antwort listet die resultierenden Datensatzabläufe auf. Das f
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `results` | Enthält die Details der zurückgegebenen Datensatzabläufe. Weitere Informationen zu den Eigenschaften eines Datensatzablaufs finden Sie im Abschnitt Antwort zum Erstellen einer [Suchaufruf](#lookup). |
+| `results` | Enthält die Details der zurückgegebenen Datensatzgültigkeiten. Weitere Informationen zu den Eigenschaften einer Datensatzgültigkeit finden Sie im Antwort-Abschnitt zum Erstellen eines [Suchaufrufs](#lookup). |
 | `current_page` | Die aktuelle Seite der aufgelisteten Ergebnisse. |
 | `total_pages` | Die Gesamtzahl der Seiten in der Antwort. |
-| `total_count` | Die Gesamtzahl der Datensatzabläufe in der Antwort. |
+| `total_count` | Die Gesamtzahl der Datensatzgültigkeiten in der Antwort. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Nachschlagen des Datensatzablaufs {#lookup}
+## Nachschlagen einer Datensatzgültigkeit {#lookup}
 
-Sie können über eine GET-Anfrage nach einem Datensatzablauf suchen.
+Sie können eine Datensatzgültigkeit über eine GET-Anfrage nachschlagen.
 
 **API-Format**
 
@@ -111,7 +111,7 @@ GET /ttl/{TTL_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{TTL_ID}` | Die ID des Datensatzablaufs, den Sie nachschlagen möchten. |
+| `{TTL_ID}` | Die ID der Datensatzgültigkeit, die Sie nachschlagen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -128,7 +128,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des Datensatzablaufs zurück.
+Eine erfolgreiche Antwort gibt die Details der Datensatzgültigkeit zurück.
 
 ```json
 {
@@ -144,17 +144,17 @@ Eine erfolgreiche Antwort gibt die Details des Datensatzablaufs zurück.
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `ttlId` | Die ID des Datensatzablaufs. |
-| `datasetId` | Die Kennung des Datensatzes, für den dieser Ablauf gilt. |
-| `imsOrg` | Die Kennung Ihres Unternehmens. |
-| `status` | Der aktuelle Status des Datensatzablaufs. |
+| `ttlId` | Die ID der Datensatzgültigkeit. |
+| `datasetId` | Die ID des Datensatzes, für den diese Gültigkeit zutrifft. |
+| `imsOrg` | Die Kennung Ihrer Organisation. |
+| `status` | Der aktuelle Status der Datensatzgültigkeit. |
 | `expiry` | Das geplante Datum und die Uhrzeit, zu der der Datensatz gelöscht wird. |
-| `updatedAt` | Ein Zeitstempel, der angibt, wann der Ablauf zuletzt aktualisiert wurde. |
-| `updatedBy` | Der Benutzer, der das Ablaufdatum zuletzt aktualisiert hat. |
+| `updatedAt` | Ein Zeitstempel, der angibt, wann die Gültigkeit zuletzt aktualisiert wurde. |
+| `updatedBy` | Die Person, der die Gültigkeit zuletzt aktualisiert hat. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Erstellen eines Datensatzablaufs {#create}
+## Erstellen einer Datensatzgültigkeit {#create}
 
 Sie können über eine POST-Anfrage ein Ablaufdatum für einen Datensatz erstellen.
 
@@ -191,7 +191,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des Datensatzablaufs mit dem HTTP-Status 200 (OK) zurück, wenn ein bereits vorhandener Ablauf aktualisiert wurde, oder 201 (Erstellt), wenn kein bereits vorhandener Ablauf vorhanden war.
+Eine erfolgreiche Antwort gibt die Details der Datensatzgültigkeit mit dem HTTP-Status 200 (OK) zurück, wenn eine bereits vorhandene Gültigkeit aktualisiert wurde, oder 201 (Erstellt), wenn keine Gültigkeit vorhanden war.
 
 ```json
 {
@@ -207,19 +207,19 @@ Eine erfolgreiche Antwort gibt die Details des Datensatzablaufs mit dem HTTP-Sta
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `ttlId` | Die ID des Datensatzablaufs. |
-| `datasetId` | Die Kennung des Datensatzes, für den dieser Ablauf gilt. |
-| `imsOrg` | Die Kennung Ihres Unternehmens. |
-| `status` | Der aktuelle Status des Datensatzablaufs. |
+| `ttlId` | Die ID der Datensatzgültigkeit. |
+| `datasetId` | Die ID des Datensatzes, für den diese Gültigkeit zutrifft. |
+| `imsOrg` | Die Kennung Ihrer Organisation. |
+| `status` | Der aktuelle Status der Datensatzgültigkeit. |
 | `expiry` | Das geplante Datum und die Uhrzeit, zu der der Datensatz gelöscht wird. |
-| `updatedAt` | Ein Zeitstempel, der angibt, wann der Ablauf zuletzt aktualisiert wurde. |
-| `updatedBy` | Der Benutzer, der das Ablaufdatum zuletzt aktualisiert hat. |
+| `updatedAt` | Ein Zeitstempel, der angibt, wann die Gültigkeit zuletzt aktualisiert wurde. |
+| `updatedBy` | Die Person, der die Gültigkeit zuletzt aktualisiert hat. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Aktualisieren des Datensatzablaufs {#update}
+## Aktualisieren der Datensatzgültigkeit {#update}
 
-Sie können den Ablauf eines Datensatzes über eine PUT-Anfrage aktualisieren.
+Sie können die Datensatzgültigkeit über eine PUT-Anfrage aktualisieren.
 
 **API-Format**
 
@@ -229,13 +229,13 @@ PUT /ttl/{TTL_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{TTL_ID}` | Die ID des Datensatzablaufs, den Sie ändern möchten. |
+| `{TTL_ID}` | Die ID der Datensatzgültigkeit, die Sie ändern möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert den Ablauf für den Datensatz `5b020a27e7040801dedbf46e` so läuft sie Ende 2023 aus (Greenwich Mean Time).
+Mit der folgenden Anfrage wird die Gültigkeit für den Datensatz `5b020a27e7040801dedbf46e` so aktualisiert, dass er Ende 2023 (Greenwich Mean Time) gelöscht wird.
 
 ```shell
 curl -X PUT \
@@ -258,7 +258,7 @@ curl -X PUT \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des aktualisierten Ablaufs zurück.
+Eine erfolgreiche Antwort gibt die Details der aktualisierten Gültigkeit zurück.
 
 ```json
 {
@@ -274,19 +274,19 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Ablaufs zurück.
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `ttlId` | Die ID des Datensatzablaufs. |
-| `datasetId` | Die Kennung des Datensatzes, für den dieser Ablauf gilt. |
-| `imsOrg` | Die Kennung Ihres Unternehmens. |
-| `status` | Der aktuelle Status des Datensatzablaufs. |
+| `ttlId` | Die ID der Datensatzgültigkeit. |
+| `datasetId` | Die ID des Datensatzes, für den diese Gültigkeit zutrifft. |
+| `imsOrg` | Die Kennung Ihrer Organisation. |
+| `status` | Der aktuelle Status der Datensatzgültigkeit. |
 | `expiry` | Das geplante Datum und die Uhrzeit, zu der der Datensatz gelöscht wird. |
-| `updatedAt` | Ein Zeitstempel, der angibt, wann der Ablauf zuletzt aktualisiert wurde. |
-| `updatedBy` | Der Benutzer, der das Ablaufdatum zuletzt aktualisiert hat. |
+| `updatedAt` | Ein Zeitstempel, der angibt, wann die Gültigkeit zuletzt aktualisiert wurde. |
+| `updatedBy` | Die Person, der die Gültigkeit zuletzt aktualisiert hat. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Abbrechen des Datensatzablaufs {#delete}
+## Abbrechen der Datensatzgültigkeit {#delete}
 
-Sie können den Ablauf eines Datensatzes abbrechen, indem Sie eine DELETE-Anfrage stellen.
+Sie können eine Datensatzgültigkeit abbrechen, indem Sie eine DELETE-Anfrage stellen.
 
 **API-Format**
 
@@ -296,13 +296,13 @@ DELETE /ttl/{TTL_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{TTL_ID}` | Die ID des Datensatzablaufs, den Sie abbrechen möchten. |
+| `{TTL_ID}` | Die ID der Datensatzgültigkeit, die Sie abbrechen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert den Ablauf für den Datensatz `5b020a27e7040801dedbf46e` so läuft sie Ende 2023 aus (Greenwich Mean Time).
+Mit der folgenden Anfrage wird die Gültigkeit für den Datensatz `5b020a27e7040801dedbf46e` so aktualisiert, dass er Ende 2023 (Greenwich Mean Time) gelöscht wird.
 
 ```shell
 curl -X DELETE \
@@ -315,7 +315,7 @@ curl -X DELETE \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des Datensatzablaufs mit `status` -Attribut jetzt auf `cancelled`.
+Eine erfolgreiche Antwort gibt die Details der Datensatzgültigkeit zurück, wobei das `status`-Attribut jetzt `cancelled` lautet.
 
 ```json
 {
@@ -331,19 +331,19 @@ Eine erfolgreiche Antwort gibt die Details des Datensatzablaufs mit `status` -At
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `ttlId` | Die ID des Datensatzablaufs. |
-| `datasetId` | Die Kennung des Datensatzes, für den dieser Ablauf gilt. |
-| `imsOrg` | Die Kennung Ihres Unternehmens. |
-| `status` | Der aktuelle Status des Datensatzablaufs. |
+| `ttlId` | Die ID der Datensatzgültigkeit. |
+| `datasetId` | Die ID des Datensatzes, für den diese Gültigkeit zutrifft. |
+| `imsOrg` | Die Kennung Ihrer Organisation. |
+| `status` | Der aktuelle Status der Datensatzgültigkeit. |
 | `expiry` | Das geplante Datum und die Uhrzeit, zu der der Datensatz gelöscht wird. |
-| `updatedAt` | Ein Zeitstempel, der angibt, wann der Ablauf zuletzt aktualisiert wurde. |
-| `updatedBy` | Der Benutzer, der das Ablaufdatum zuletzt aktualisiert hat. |
+| `updatedAt` | Ein Zeitstempel, der angibt, wann die Gültigkeit zuletzt aktualisiert wurde. |
+| `updatedBy` | Die Person, der die Gültigkeit zuletzt aktualisiert hat. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Abrufen des Verlaufs eines Datensatzablaufs
+## Abrufen des Protokolls einer Datensatzgültigkeit
 
-Sie können den Verlauf eines bestimmten Datensatzablaufs mithilfe des Abfrageparameters nachschlagen `include=history` in einer Suchanfrage. Das Ergebnis enthält Informationen über die Erstellung des Datensatzablaufs, alle angewendeten Aktualisierungen sowie über den Abbruch oder die Ausführung (falls zutreffend).
+Sie können das Protokoll einer Datensatzgültigkeit in einer Suchanfrage mithilfe des Abfrageparameters `include=history` aufrufen. Das Ergebnis enthält Informationen über die Erstellung der Datensatzgültigkeit, alle Aktualisierungen sowie über ihren Abbruch oder ihre Ausführung (falls zutreffend).
 
 **API-Format**
 
@@ -353,7 +353,7 @@ GET /ttl/{TTL_ID}?include=history
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{TTL_ID}` | Die ID des Datensatzablaufs, dessen Verlauf Sie nachschlagen möchten. |
+| `{TTL_ID}` | Die ID der Datensatzgültigkeit, deren Protokoll Sie aufrufen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -370,7 +370,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des Datensatzablaufs mit einer `history` Array, das die Details angibt `status`, `expiry`, `updatedAt`und `updatedBy` -Attribute für jede der aufgezeichneten Aktualisierungen.
+Eine erfolgreiche Antwort geben die Details der Datensatzgültigkeit mit einem `history`-Array zurück, das die Details der Attribute `status`, `expiry`, `updatedAt` und `updatedBy` für jede der aufgezeichneten Aktualisierungen angibt.
 
 ```json
 {
@@ -406,10 +406,10 @@ Eine erfolgreiche Antwort gibt die Details des Datensatzablaufs mit einer `histo
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `ttlId` | Die ID des Datensatzablaufs. |
-| `datasetId` | Die Kennung des Datensatzes, für den dieser Ablauf gilt. |
-| `imsOrg` | Die Kennung Ihres Unternehmens. |
-| `history` | Listet den Verlauf der Aktualisierungen für den Ablauf als ein Array von Objekten auf, wobei jedes Objekt die `status`, `expiry`, `updatedAt`und `updatedBy` -Attribute für den Ablauf zum Zeitpunkt der Aktualisierung. |
+| `ttlId` | Die ID der Datensatzgültigkeit. |
+| `datasetId` | Die ID des Datensatzes, für den diese Gültigkeit zutrifft. |
+| `imsOrg` | Die Kennung Ihrer Organisation. |
+| `history` | Listet das Protokoll der Aktualisierungen für die Gültigkeit als Array von Objekten auf, wobei jedes Objekt die Attribute `status`, `expiry`, `updatedAt` und `updatedBy` für die Gültigkeit zum Zeitpunkt der Aktualisierung enthält. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -417,20 +417,20 @@ Eine erfolgreiche Antwort gibt die Details des Datensatzablaufs mit einer `histo
 
 ### Akzeptierte Abfrageparameter {#query-params}
 
-In der folgenden Tabelle sind die verfügbaren Abfrageparameter aufgeführt, wenn [Auflisten der Datensatzabläufe](#list):
+In der folgenden Tabelle sind die verfügbaren Abfrageparameter beim [Auflisten von Datensatzgültigkeiten](#list) aufgeführt:
 
 | Parameter | Beschreibung | Beispiel |
 | --- | --- | --- |
-| `size` | Eine Ganzzahl zwischen 1 und 100, die die maximale Anzahl der auszugebenden Abläufe angibt. Die Standardeinstellung ist 25. | `size=50` |
-| `page` | Eine Ganzzahl, die angibt, welche Ablaufseite zurückgegeben werden soll. | `page=3` |
-| `status` | Eine durch Kommas getrennte Liste von Status. Wenn enthalten, stimmt die Antwort mit den Datensatzabläufen überein, deren aktueller Status zu den aufgelisteten gehört. | `status=pending,cancelled` |
-| `author` | Sucht nach Ablauf, dessen `created_by` entspricht der Suchzeichenfolge. Wenn die Suchzeichenfolge mit `LIKE` oder `NOT LIKE` beginnt, wird der Rest als SQL-Suchmuster behandelt. Andernfalls wird die gesamte Suchzeichenfolge als exakte Zeichenfolge gehandhabt, die genau mit dem gesamten Inhalt des `created_by`-Felds übereinstimmen muss. | `author=LIKE %john%` |
-| `createdDate` | Sucht nach Ablauffristen, die im 24-Stunden-Fenster erstellt wurden, beginnend mit dem angegebenen Zeitpunkt.<br><br>Beachten Sie, dass ein Datum ohne Uhrzeit (wie `2021-12-07`) den Datum/Uhrzeit-Wert am Anfang des Tages darstellt. Daher `createdDate=2021-12-07` bezieht sich auf alle am 7. Dezember 2021 erstellten Abläufe von `00:00:00` bis `23:59:59.999999999` (UTC). | `createdDate=2021-12-07` |
-| `createdFromDate` | Sucht nach Ablauffristen, die zum angegebenen Zeitpunkt oder danach erstellt wurden. | `createdFromDate=2021-12-07T00:00:00Z` |
-| `createdToDate` | Sucht nach Ablauffristen, die zum angegebenen Zeitpunkt oder zuvor erstellt wurden. | `createdToDate=2021-12-07T23:59:59.999999999Z` |
-| `updatedDate` / `updatedToDate` / `updatedFromDate` | liken `createdDate` / `createdFromDate` / `createdToDate`, stimmt jedoch mit der Aktualisierungszeit eines Datensatzes anstelle der Erstellungszeit überein.<br><br>Ein Ablauf gilt bei jeder Bearbeitung als aktualisiert, auch bei der Erstellung, dem Abbruch oder der Ausführung. | `updatedDate=2022-01-01` |
-| `cancelledDate` / `cancelledToDate` / `cancelledFromDate` | Sucht nach Ablauf, die zu einem beliebigen Zeitpunkt im angegebenen Intervall abgebrochen wurden. Dies gilt auch dann, wenn die Gültigkeit später erneut geöffnet wurde (durch Festlegen eines neuen Ablaufs für denselben Datensatz). | `updatedDate=2022-01-01` |
-| `completedDate` / `completedToDate` / `completedFromDate` | Sucht nach Ablauffristen, die im angegebenen Intervall abgeschlossen wurden. | `completedToDate=2021-11-11-06:00` |
-| `expiryDate` / `expiryToDate` / `expiryFromDate` | Sucht nach Ablauffristen, die im angegebenen Intervall ausgeführt werden sollen oder bereits ausgeführt wurden. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
+| `size` | Eine Ganzzahl zwischen 1 und 100, die die maximale Anzahl der zurückzugebenden Gültigkeiten angibt. Die Standardeinstellung ist 25. | `size=50` |
+| `page` | Eine Ganzzahl, die angibt, welche Seite der Gültigkeitenliste zurückgegeben werden soll. | `page=3` |
+| `status` | Eine durch Kommas getrennte Liste von Status. Wenn diese Liste enthalten ist, entspricht die Antwort den Datensatzgültigkeiten, deren aktueller Status in der Liste enthalten ist. | `status=pending,cancelled` |
+| `author` | Gibt die Gültigkeiten zurück, für die `created_by` der Suchzeichenfolge entspricht. Wenn die Suchzeichenfolge mit `LIKE` oder `NOT LIKE` beginnt, wird der Rest als SQL-Suchmuster behandelt. Andernfalls wird die gesamte Suchzeichenfolge als exakte Zeichenfolge gehandhabt, die genau mit dem gesamten Inhalt des `created_by`-Felds übereinstimmen muss. | `author=LIKE %john%` |
+| `createdDate` | Gibt die Gültigkeiten zurück, die im 24-Stunden-Fenster erstellt wurden, das mit dem angegebenen Zeitpunkt beginnt.<br><br>Beachten Sie, dass ein Datum ohne Uhrzeit (wie `2021-12-07`) den Datum/Uhrzeit-Wert am Anfang des Tages darstellt. Daher bezieht sich `createdDate=2021-12-07` auf alle am 7. Dezember 2021 erstellten Gültigkeiten, von `00:00:00` bis `23:59:59.999999999` (UTC). | `createdDate=2021-12-07` |
+| `createdFromDate` | Gibt die Gültigkeiten wieder, die zum angegebenen Zeitpunkt oder danach erstellt wurden. | `createdFromDate=2021-12-07T00:00:00Z` |
+| `createdToDate` | Gibt die Gültigkeiten wieder, die zum angegebenen Zeitpunkt oder davor erstellt wurden. | `createdToDate=2021-12-07T23:59:59.999999999Z` |
+| `updatedDate` / `updatedToDate` / `updatedFromDate` | Wie `createdDate` / `createdFromDate` / `createdToDate`, jedoch wird die Aktualisierungszeit einer Datensatzgültigkeit anstelle der Erstellungszeit herangezogen.<br><br>Eine Gültigkeit wird bei jeder Bearbeitung als aktualisiert erachtet, auch wenn sie erstellt, abgebrochen oder ausgeführt wird. | `updatedDate=2022-01-01` |
+| `cancelledDate` / `cancelledToDate` / `cancelledFromDate` | Gibt die Gültigkeiten wieder, die zu einem beliebigen Zeitpunkt im angegebenen Intervall abgebrochen wurden. Dies gilt auch dann, wenn die Gültigkeit später erneut erstellt wurde (durch Festlegen eines neuen Ablaufdatums für denselben Datensatz). | `updatedDate=2022-01-01` |
+| `completedDate` / `completedToDate` / `completedFromDate` | Gibt die Gültigkeiten wieder, die im angegebenen Intervall ausgeführt wurden. | `completedToDate=2021-11-11-06:00` |
+| `expiryDate` / `expiryToDate` / `expiryFromDate` | Gibt die Gültigkeiten wieder, die im angegebenen Intervall ausgeführt werden sollen oder bereits ausgeführt wurden. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
 
 {style=&quot;table-layout:auto&quot;}
