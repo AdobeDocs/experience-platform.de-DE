@@ -3,9 +3,9 @@ title: Data Hygiene API-Handbuch
 description: Erfahren Sie, wie Sie die gespeicherten personenbezogenen Daten Ihrer Kunden in Adobe Experience Platform programmatisch korrigieren oder löschen können.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
 source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '303'
-ht-degree: 75%
+ht-degree: 100%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 75%
 >
 >Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die Healthcare Shield erworben haben.
 
-Mit der Data Hygiene API können Sie die in Adobe Experience Platform gespeicherten personenbezogenen Daten Ihrer Kunden programmatisch korrigieren oder löschen sowie Ablaufdaten für Datensätze planen. In diesem Handbuch werden die erforderlichen Schritte zur Verwendung der API beschrieben und Links zu Endpunkt-Dokumentationen bereitgestellt.
+Mit der Datenhygiene-API können Sie die in Adobe Experience Platform gespeicherten personenbezogenen Daten Ihrer Kundinnen und Kunden programmgesteuert korrigieren oder löschen sowie Ablaufdaten für Datensätze planen. In diesem Handbuch werden die erforderlichen Schritte zur Verwendung der API beschrieben und Links zu Endpunkt-Dokumentationen bereitgestellt.
 
 ## Erste Schritte
 
@@ -43,9 +43,9 @@ In diesem Dokument wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API. -->
 
-## Datensatzabläufe
+## Datensatzgültigkeiten
 
-Bei einem Datensatzablauf handelt es sich um eine zeitverzögerte Aktion zum Löschen eines Datensatzes. Durch Erstellung eines Datensatzablaufs geben Sie einen zukünftigen Zeitpunkt an, zu dem dieser Datensatz gelöscht werden soll. Siehe [Endpunkt-Anleitung zum Ablauf von Datensätzen](./dataset-expiration.md) für Details zur Planung der Ablaufdaten von Datensätzen in der API.
+Eine Datensatzgültigkeit ist eine zeitverzögerte Aktion zum Löschen eines Datensatzes. Beim Erstellen einer Datensatzgültigkeit geben Sie einen zukünftigen Zeitpunkt an, zu dem dieser Datensatz gelöscht werden soll. Weitere Details zur Planung von Datensatzgültigkeiten in der API finden Sie im [Handbuch für Datensatzgültigkeits-Endpunkte](./dataset-expiration.md).
 
 ## Nächste Schritte
 
