@@ -1,10 +1,11 @@
 ---
 title: Geheime Daten in der Reactor-API
 description: Hier erfahren Sie mehr über die Grundlagen zum Konfigurieren von geheimen Daten in der Reactor-API für die Verwendung in der Ereignisweiterleitung.
-source-git-commit: 6822199c3ecf4414893a8b8dfc650e3da40a6470
-workflow-type: ht
-source-wordcount: '1115'
-ht-degree: 100%
+exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
+source-git-commit: 4f3c97e2cad6160481adb8b3dab3d0c8b23717cc
+workflow-type: tm+mt
+source-wordcount: '1241'
+ht-degree: 87%
 
 ---
 
@@ -18,7 +19,7 @@ Es gibt derzeit drei unterstützte Typen von geheimen Daten, die in dem Attribut
 | --- | --- |
 | `token` | Eine einzelne Zeichenfolge, die den Wert eines Authentifizierungs-Tokens darstellt, der von beiden Systemen verstanden wird. |
 | `simple-http` | Enthält zwei Zeichenfolgen-Attribute für einen Benutzernamen und ein Kennwort. |
-| `oauth2` | Enthält mehrere Attribute zur Unterstützung der [OAuth](https://datatracker.ietf.org/doc/html/rfc6749)-Authentifizierungsspezifikation. Die Ereignisweiterleitung fragt Sie nach den erforderlichen Informationen und behandelt dann die Verlängerung dieser Token für Sie in einem bestimmten Intervall. |
+| `oauth2-client_credentials` | Enthält mehrere Attribute zur Unterstützung der [OAuth](https://datatracker.ietf.org/doc/html/rfc6749)-Authentifizierungsspezifikation. Die Ereignisweiterleitung fragt Sie nach den erforderlichen Informationen und behandelt dann die Verlängerung dieser Token für Sie in einem bestimmten Intervall. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -26,9 +27,14 @@ Dieses Handbuch bietet einen allgemeinen Überblick darüber, wie geheime Daten 
 
 ## Anmeldeinformationen
 
-Geheime Daten enthalten ein Attribut `credentials`, das die entsprechenden Werte der Anmeldeinformationen enthält. Jeder Typ geheimer Daten verfügt über verschiedene erforderliche Attribute, wie in den folgenden Abschnitten dargestellt.
+Geheime Daten enthalten ein Attribut `credentials`, das die entsprechenden Werte der Anmeldeinformationen enthält. Wann [Erstellen eines Geheimnisses in der API](../endpoints/secrets.md#create), weist jeder geheime Typ verschiedene erforderliche Attribute auf, wie in den folgenden Abschnitten dargestellt:
 
-### `token`
+* [`token`](#token)
+* [`simple-http`](#simple-http)
+* [`oauth2-client_credentials`](#oauth2-client_credentials)
+* [`oauth2-google`](#oauth2-google)
+
+### `token` {#token}
 
 Geheime Daten mit einem `type_of`-Wert von `token` erfordern nur ein einziges Attribut unter `credentials`:
 
@@ -40,7 +46,7 @@ Geheime Daten mit einem `type_of`-Wert von `token` erfordern nur ein einziges At
 
 Das Token wird als statischer Wert gespeichert, weswegen die Eigenschaften `expires_at` und `refresh_at` auf `null` festgelegt werden, wenn die geheimen Daten erstellt werden.
 
-### `simple-http`
+### `simple-http` {#simple-http}
 
 Geheime Daten mit einem `type_of`-Wert von `simple-http` erfordern die folgenden Attribute unter `credentials`:
 
@@ -53,23 +59,19 @@ Geheime Daten mit einem `type_of`-Wert von `simple-http` erfordern die folgenden
 
 Wenn die geheimen Daten erstellt werden, werden die beiden Attribute mit einer BASE64-Codierung von `username:password` ausgetauscht. Nach dem Austausch sind die Eigenschaften `expires_at` und `refresh_at` auf `null` festgelegt.
 
-### `oauth2`
+### `oauth2-client_credentials` {#oauth2-client_credentials}
 
->[!NOTE]
->
->Derzeit wird nur der [Grant-Typ „Kunden-Anmeldeinformationen“](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) für geheime Daten vom Typ „OAuth“ unterstützt.
-
-Geheime Daten mit einem `type_of`-Wert von `oauth2` erfordern die folgenden Attribute unter `credentials`:
+Geheime Daten mit einem `type_of`-Wert von `oauth2-client_credentials` erfordern die folgenden Attribute unter `credentials`:
 
 | Anmeldeinformations-Attribut | Datentyp | Beschreibung |
 | --- | --- | --- |
 | `client_id` | Zeichenfolge | Die Kunden-ID für die OAuth-Integration. |
 | `client_secret` | Zeichenfolge | Die Kunden-seitigen geheimen Daten für die OAuth-Integration. Dieser Wert ist nicht in der API-Antwort enthalten. |
-| `authorization_url` | Zeichenfolge | Die Autorisierungs-URL für die OAuth-Integration. |
+| `token_url` | Zeichenfolge | Die Autorisierungs-URL für die OAuth-Integration. |
 | `refresh_offset` | Ganzzahl | *(Optional)* Der Wert in Sekunden, um den der Aktualisierungsvorgang versetzt wird. Wenn dieses Attribut beim Erstellen der geheimen Daten weggelassen wird, wird der Wert standardmäßig auf `14400` (4 Stunden) gesetzt. |
 | `options` | Objekt | *(Optional)* Gibt zusätzliche Optionen für die OAuth-Integration an:<ul><li>`scope`: Eine Zeichenfolge, die den [OAuth 2.0-Gültigkeitsbereich](https://oauth.net/2/scope/) für die Anmeldeinformationen darstellt.</li><li>`audience`: Eine Zeichenfolge, die ein [Auth0-Zugriffstoken](https://auth0.com/docs/protocols/protocol-oauth2) darstellt.</li></ul> |
 
-Wenn geheime Daten vom Typ `oauth2` erstellt oder aktualisiert werden, werden `client_id` und `client_secret` (und gegebenenfalls `options`) in einer POST-Anfrage an die `authorization_url` entsprechend dem Client-Anmeldedaten-Fluss des OAuth-Protokolls ausgetauscht.
+Wenn geheime Daten vom Typ `oauth2-client_credentials` erstellt oder aktualisiert werden, werden `client_id` und `client_secret` (und gegebenenfalls `options`) in einer POST-Anfrage an die `token_url` entsprechend dem Client-Anmeldedaten-Fluss des OAuth-Protokolls ausgetauscht.
 
 >[!NOTE]
 >
@@ -89,13 +91,29 @@ Wenn der Austausch erfolgreich ist, wird das Statusattribut der geheimen Daten a
 
 Wenn der Austausch aus irgendeinem Grund fehlschlägt, wird das Attribut `status_details` im Objekt `meta` mit relevanten Informationen aktualisiert.
 
-### Aktualisieren von geheimen Daten des Typs `oauth2`
+#### Aktualisieren von geheimen Daten des Typs `oauth2-client_credentials`
 
-Wenn geheime Daten des Typs `oauth2` einer Umgebung zugewiesen wurden und ihr Status `succeeded` (die Anmeldeinformationen wurden erfolgreich ausgetauscht) lautet, wird zum Zeitpunkt `refresh_at` automatisch ein neuer Austausch durchgeführt.
+Wenn geheime Daten des Typs `oauth2-client_credentials` einer Umgebung zugewiesen wurden und ihr Status `succeeded` (die Anmeldeinformationen wurden erfolgreich ausgetauscht) lautet, wird zum Zeitpunkt `refresh_at` automatisch ein neuer Austausch durchgeführt.
 
 Wenn der Austausch erfolgreich ist, wird das Attribut `refresh_status` im Objekt `meta` auf `succeeded` festgelegt und `expires_at`, `refresh_at` und `activated_at` werden entsprechend aktualisiert.
 
 Wenn der Austausch fehlschlägt, erfolgen drei weitere Versuche, den Vorgang auszuführen, wobei der letzte Versuch spätestens zwei Stunden vor Ablauf des Zugriffs-Tokens stattfindet. Wenn alle Versuche fehlschlagen, wird das Attribut `refresh_status_details` aus dem Objekt `meta` mit relevanten Details aktualisiert.
+
+### `oauth2-google` {#oauth2-google}
+
+Geheimnisse mit `type_of` Wert von `oauth2-google` erfordert das folgende Attribut unter `credentials`:
+
+| Anmeldeinformations-Attribut | Datentyp | Beschreibung |
+| --- | --- | --- |
+| `scopes` | Array | Listet die Google-Produktbereiche für die Authentifizierung auf. Die folgenden Bereiche werden unterstützt:<ul><li>[Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[Google-Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
+
+Nach der Erstellung `oauth2-google` geheim ist, enthält die Antwort eine `meta.token_url` -Eigenschaft. Sie müssen diese URL kopieren und in einen Browser einfügen, um den Google-Authentifizierungsfluss abzuschließen.
+
+#### Erneutes Autorisieren eines `oauth2-google` secret
+
+Die Autorisierungs-URL für eine `oauth2-google` geheim läuft eine Stunde nach der Erstellung des Geheimnisses ab (wie durch `meta.token_url_expires_at`). Danach muss das Geheimnis erneut autorisiert werden, um den Authentifizierungsprozess zu verlängern.
+
+Siehe Abschnitt [Endpunktleitfaden für Geheimnisse](../endpoints/secrets.md#reauthorize) für Details zur Neuautorisierung eines `oauth2-google` geheim durch eine PATCH-Anfrage an die Reactor-API.
 
 ## Umgebungsbeziehung
 
@@ -107,7 +125,7 @@ Geheime Daten können jeweils nur mit einer Umgebung verknüpft werden. Sobald d
 >
 >Es gibt nur eine Ausnahme von dieser Regel, und zwar wenn die betreffende Umgebung gelöscht wird. In diesem Fall wird die Beziehung gelöscht und die geheimen Daten können einer anderen Umgebung zugewiesen werden.
 
-Nachdem die Anmeldeinformationen von geheimen Daten erfolgreich ausgetauscht wurden, wird das Austausch-Artefakt (die Token-Zeichenfolge für `token`, der Base64-codierte String für `simple-http` oder das Zugriffs-Token für `oauth2`) sicher in der Umgebung gespeichert, um die geheimen Daten mit der Umgebung zu verknüpfen.
+Nachdem die Anmeldeinformationen von geheimen Daten erfolgreich ausgetauscht wurden, wird das Austausch-Artefakt (die Token-Zeichenfolge für `token`, der Base64-codierte String für `simple-http` oder das Zugriffs-Token für `oauth2-client_credentials`) sicher in der Umgebung gespeichert, um die geheimen Daten mit der Umgebung zu verknüpfen.
 
 Nachdem das Austausch-Artefakt erfolgreich in der Umgebung gespeichert wurde, wird das Attribut `activated_at` der geheimen Daten auf die aktuelle UTC-Zeit festgelegt, sodass jetzt mithilfe eines Datenelements darauf verwiesen werden kann. Siehe den [nächsten Abschnitt](#referencing-secrets) mit weiteren Informationen zum Verweisen auf geheime Daten.
 

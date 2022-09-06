@@ -2,10 +2,10 @@
 title: Konfigurieren von Geheimnissen bei der Ereignisweiterleitung
 description: Hier erfahren Sie, wie Sie Geheimnisse in der Datenerfassungs-Benutzeroberfläche konfigurieren können, um sich bei Endpunkten zu authentifizieren, die in den Properties der Ereignisweiterleitung verwendet werden.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 737354ca3b286f6c39cb71bc09aa4d6141c4d9a4
+source-git-commit: 4f3c97e2cad6160481adb8b3dab3d0c8b23717cc
 workflow-type: tm+mt
-source-wordcount: '1447'
-ht-degree: 98%
+source-wordcount: '1637'
+ht-degree: 84%
 
 ---
 
@@ -19,7 +19,8 @@ Derzeit werden drei Typen von geheimen Daten unterstützt:
 | --- | --- |
 | [!UICONTROL Token] | Eine einzelne Zeichenfolge, die den Wert eines Authentifizierungs-Tokens darstellt, der von beiden Systemen verstanden wird. |
 | [!UICONTROL HTTP] | Enthält zwei Zeichenfolgen-Attribute für einen Benutzernamen und ein Kennwort. |
-| [!UICONTROL OAuth2] | Enthält mehrere Attribute zur Unterstützung der [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749)-Authentifizierungsspezifikation. Das System fordert von Ihnen die erforderlichen Informationen an. Anschließend übernimmt es die Verlängerung dieser Token für Sie in einem bestimmten Intervall. Derzeit wird nur die OAuth2-Version mit [Client-Anmeldedaten](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) unterstützt. |
+| [!UICONTROL OAuth2] | Enthält mehrere Attribute zur Unterstützung der [Art des Zuschusses für Client-Anmeldeinformationen](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) für [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) Authentifizierungsspezifikation. Das System fordert von Ihnen die erforderlichen Informationen an. Anschließend übernimmt es die Verlängerung dieser Token für Sie in einem bestimmten Intervall. |
+| [!UICONTROL Google OAuth 2] | Enthält mehrere Attribute zur Unterstützung der [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) Authentifizierungsspezifikation für die Verwendung im [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) und [Pub/Sub-API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). Das System fordert von Ihnen die erforderlichen Informationen an. Anschließend übernimmt es die Verlängerung dieser Token für Sie in einem bestimmten Intervall. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -66,6 +67,7 @@ Von hier aus unterscheiden sich die Schritte zum Erstellen der geheimen Daten je
 * [[!UICONTROL Token]](#token)
 * [[!UICONTROL HTTP]](#http)
 * [[!UICONTROL OAuth2]](#oauth2)
+* [[!UICONTROL Google OAuth 2]](#google-oauth2)
 
 ### [!UICONTROL Token] {#token}
 
@@ -85,7 +87,7 @@ Um geheime Daten vom Typ „HTTP“ zu erstellen, wählen Sie in der Dropdown-Li
 
 ### [!UICONTROL OAuth2] {#oauth2}
 
-Um geheime Daten vom Typ „OAuth2“ zu erstellen, wählen Sie aus der Dropdown-Liste **[!UICONTROL Typ]** die Option **[!UICONTROL OAuth2]** aus. Geben Sie in den unten angezeigten Feldern Ihre [[!UICONTROL Client-ID] und [!UICONTROL Ihre geheimen Client-Daten]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/) sowie die [Autorisierungs-URL](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) für Ihre OAuth-Integration ein. Das Feld [!UICONTROL Autorisierungs-URL] in der Datenerfassungs-Benutzeroberfläche ist eine Verkettung zwischen dem Autorisierungs-Server-Host und dem Token-Pfad.
+Um geheime Daten vom Typ „OAuth2“ zu erstellen, wählen Sie aus der Dropdown-Liste **[!UICONTROL Typ]** die Option **[!UICONTROL OAuth2]** aus. Geben Sie in den unten angezeigten Feldern Ihre [[!UICONTROL Client-ID] und [!UICONTROL Client Secret]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)sowie [[!UICONTROL Token-URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) für Ihre OAuth-Integration. Die [!UICONTROL Token-URL] -Feld in der Datenerfassungs-Benutzeroberfläche ist eine Verkettung zwischen dem Autorisierungsserverhost und dem Tokenpfad.
 
 ![Geheime Daten vom Typ „OAuth2“](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
@@ -108,6 +110,23 @@ Wenn beispielsweise der Zeitversatz zur Aktualisierung auf den Standardwert von 
 Wenn Sie fertig sind, wählen Sie die Option **[!UICONTROL Geheime Daten erstellen]** aus, um die geheimen Daten zu speichern.
 
 ![OAuth2-Versatz speichern](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
+
+### [!UICONTROL Google OAuth 2] {#google-oauth2}
+
+Um ein Google OAuth 2-Geheimnis zu erstellen, wählen Sie **[!UICONTROL Google OAuth 2]** von **[!UICONTROL Typ]** Dropdown-Liste. under **[!UICONTROL Bereiche]** Wählen Sie die Google-APIs aus, für die Sie mithilfe dieses Geheimnisses Zugriff gewähren möchten. Die folgenden Produkte werden derzeit unterstützt:
+
+* [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview)
+* [Pub/Sub-API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview)
+
+Wenn Sie fertig sind, wählen Sie **[!UICONTROL Geheimnis erstellen]**.
+
+![Google OAuth 2 - Geheimnis](../../images/ui/event-forwarding/secrets/google-oauth.png)
+
+Ein Popup erscheint, das Sie darüber informiert, dass das Geheimnis manuell über Google autorisiert werden muss. Auswählen **[!UICONTROL Erstellen und Autorisieren]** , um fortzufahren.
+
+![Popup für Google-Autorisierung](../../images/ui/event-forwarding/secrets/google-authorization.png)
+
+Es wird ein Dialogfeld angezeigt, in dem Sie die Anmeldeinformationen für Ihr Google-Konto eingeben können. Befolgen Sie die Anweisungen, um der Ereignisweiterleitung unter dem ausgewählten Bereich Zugriff auf Ihre Daten zu gewähren. Sobald der Autorisierungsprozess abgeschlossen ist, wird der geheime Schlüssel erstellt.
 
 ## Geheime Daten bearbeiten
 
