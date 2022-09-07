@@ -4,9 +4,9 @@ title: Dashboard-Anleitung für Ziele
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den aktiven Zielen Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 7a67ac4e1e8730197221832090c1414073399a1b
+source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
 workflow-type: tm+mt
-source-wordcount: '2716'
+source-wordcount: '2829'
 ht-degree: 3%
 
 ---
@@ -25,7 +25,7 @@ Die [!UICONTROL Ziele] Dashboard zeigt eine Momentaufnahme der Ziele an, die Ihr
 >
 >Änderungen oder Aktualisierungen, die seit der Aufnahme des Schnappschusses an den Daten vorgenommen wurden, werden erst dann im Dashboard angezeigt, wenn der nächste Schnappschuss erstellt wurde.
 
-## Dashboard &quot;Ziele&quot;durchsuchen
+## Die [!UICONTROL Ziele] Dashboard {#explore}
 
 Um in der Platform-Benutzeroberfläche zum Ziel-Dashboard zu navigieren, wählen Sie **[!UICONTROL Ziele]** Wählen Sie in der linken Leiste die **[!UICONTROL Übersicht]** zum Anzeigen des Dashboards.
 
@@ -37,11 +37,19 @@ Datum und Uhrzeit der letzten Momentaufnahme werden oben im [!UICONTROL Übersic
 
 ![Die Übersicht über die Ziele der Platform-Benutzeroberfläche mit dem neuesten Schnappschuss wurde hervorgehoben.](../images/destinations/snapshot-timestamp.png)
 
-### Ändern des Ziel-Dashboards
+### Ändern Sie die [!UICONTROL Ziele] Dashboard {#modify}
 
-Sie können das Erscheinungsbild des Ziel-Dashboards durch Auswahl von **[!UICONTROL Dashboard ändern]**. Dadurch können Sie Widgets aus dem Dashboard verschieben, hinzufügen und entfernen sowie auf die **[!UICONTROL Widget-Bibliothek]** , um verfügbare Widgets zu erkunden und benutzerdefinierte Widgets für Ihre Organisation zu erstellen.
+Auswählen **[!UICONTROL Dashboard ändern]** , um das Erscheinungsbild des Ziel-Dashboards zu ändern. Dadurch können Sie Widgets aus dem Dashboard verschieben, hinzufügen und entfernen sowie auf die Widget-Bibliothek zugreifen. In der Widget-Bibliothek können Sie die verfügbaren Widgets durchsuchen und benutzerdefinierte Widgets für Ihre Organisation erstellen.
 
-Weitere Informationen finden Sie unter [Ändern von Dashboards](../customize/modify.md) und [Übersicht über die Widget-Bibliothek](../customize/widget-library.md) Dokumentation .
+Weitere Informationen finden Sie unter [Ändern von Dashboards](../customize/modify.md) und [Übersicht über Widget-Bibliotheken](../customize/widget-library.md) Dokumentation .
+
+### Widgets hinzufügen {#add-widget}
+
+Auswählen **[!UICONTROL Widget hinzufügen]** um zur Widget-Bibliothek zu navigieren und eine Liste der verfügbaren Widgets anzuzeigen, die Sie Ihrem Dashboard hinzufügen können.
+
+![Das Dashboard Ziele - Übersicht mit hervorgehobenem Widget Hinzufügen .](../images/destinations/destinations-overview-add-widget.png)
+
+In der Widget-Bibliothek können Sie die Auswahl von standardmäßigen und benutzerdefinierten Segment-Widgets durchsuchen. Informationen zum Hinzufügen von Widgets finden Sie in der Dokumentation zur Widget-Bibliothek . [Widget hinzufügen](../customize/widget-library.md#add-widgets).
 
 ## Standard-Widgets {#standard-widgets}
 
@@ -80,7 +88,7 @@ Die Anzahl der zugeordneten Segmente, die in der Spalte mit der Segmentanzahl an
 
 Wenn Sie den Namen eines Ziels aus der im Widget angezeigten Liste auswählen, gelangen Sie zu den Zieldetails, die über das **[!UICONTROL Durchsuchen]** Registerkarte. Sie können auch **[!UICONTROL Alle anzeigen]** , um zur **[!UICONTROL Durchsuchen]** und wählen Sie dann den Namen eines Ziels aus, um dessen Details anzuzeigen.
 
-![](../images/destinations/most-used-destinations.png)
+![Die Registerkarte Übersicht im Dashboard Ziele mit dem Widget Am häufigsten verwendete Ziele wird hervorgehoben.](../images/destinations/most-used-destinations.png)
 
 ### [!UICONTROL Kürzlich erstellte Ziele] {#recently-created-destinations}
 
@@ -97,7 +105,7 @@ Wenn Sie den Namen eines Ziels aus der im Widget angezeigten Liste auswählen, g
 
 Weitere Informationen zum Konfigurieren bestimmter Zieltypen finden Sie unter [Dokumentation zu Zielen](../../destinations/home.md).
 
-![](../images/destinations/recently-created-destinations.png)
+![Die Registerkarte Übersicht im Dashboard Ziele mit dem Widget Kürzlich erstellte Ziele wurde hervorgehoben.](../images/destinations/recently-created-destinations.png)
 
 ### [!UICONTROL Kürzlich aktivierte Segmente] {#recently-activated-segments}
 
@@ -114,7 +122,7 @@ Wenn Sie den Namen eines Segments aus der im Widget angezeigten Liste auswählen
 
 Weitere Informationen zum Arbeiten mit Segmenten in Experience Platform erhalten Sie im Abschnitt [Übersicht über den Segmentierungsdienst](../../segmentation/home.md).
 
-![](../images/destinations/recently-activated-segments.png)
+![Die Registerkarte Übersicht im Dashboard Ziele mit dem Widget Kürzlich aktivierte Segmente .](../images/destinations/recently-activated-segments.png)
 
 ### [!UICONTROL Kürzlich aktivierte Segmente nach Ziel] {#recently-activated-segments-by-destination}
 
@@ -129,7 +137,7 @@ Dieses Widget enthält zwei Metriken: den Segmentnamen und das Datum, an dem das
 
 Sie können die Details eines Segments anzeigen, indem Sie den Namen eines Segments aus der angezeigten Liste auswählen.
 
-![Kürzlich aktivierte Segmente nach Ziel-Widget.](../images/destinations/recently-activated-segments-by-destination.png)
+![Das Widget Kürzlich aktivierte Segmente nach Ziel .](../images/destinations/recently-activated-segments-by-destination.png)
 
 ### [!UICONTROL Trend der Zielgruppengröße] {#audience-size-trend}
 
@@ -144,7 +152,7 @@ Ein Zeitraum für den Zielgruppentrend in den letzten 30 Tagen, 90 Tagen oder 12
 
 Im zweiten Dropdown-Menü werden alle verfügbaren Segmente aufgelistet, die an das im oberen Bereich des Dashboards ausgewählte Zielkonto gesendet werden können.
 
-![Das Trend-Widget zur Zielgruppengröße.](../images/destinations/audience-size-trend.png)
+![Das Trend-Widget zur Zielgruppengröße .](../images/destinations/audience-size-trend.png)
 
 Die **[!UICONTROL Zielgruppengrößentrend]** Widget bietet eine [!UICONTROL Untertitel] -Schaltfläche oben rechts im Widget. Auswählen **[!UICONTROL Untertitel]** , um das Dialogfeld mit den automatischen Beschriftungen zu öffnen. Ein Modell für maschinelles Lernen generiert automatisch Beschriftungen zur Beschreibung der wichtigsten Trends und Ereignisse, indem es die Diagramm- und Segmentdaten analysiert.
 

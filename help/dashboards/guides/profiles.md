@@ -4,9 +4,9 @@ title: Handbuch zum Profil-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 93bb816857545e2e5abca51e4046d225927daef4
+source-git-commit: 9a4257ef6f9e32feeb2bb90bc7dd46b0d533cb35
 workflow-type: tm+mt
-source-wordcount: '3788'
+source-wordcount: '3859'
 ht-degree: 8%
 
 ---
@@ -43,6 +43,14 @@ Sie können das Erscheinungsbild der [!UICONTROL Profile] Dashboard durch Auswah
 
 Weitere Informationen finden Sie unter [Ändern von Dashboards](../customize/modify.md) und [Übersicht über die Widget-Bibliothek](../customize/widget-library.md) Dokumentation .
 
+### Widgets hinzufügen {#add-widget}
+
+Auswählen **[!UICONTROL Widget hinzufügen]** um zur Widget-Bibliothek zu navigieren und eine Liste der verfügbaren Widgets anzuzeigen, die Sie Ihrem Dashboard hinzufügen können.
+
+![Die Übersicht über das Profil-Dashboard mit dem hinzugefügten Widget wird hervorgehoben.](../images/profiles/profiles-overview-add-widget.png)
+
+In der Widget-Bibliothek können Sie die Auswahl von standardmäßigen und benutzerdefinierten Segment-Widgets durchsuchen. Informationen zum Hinzufügen von Widgets finden Sie in der Dokumentation zur Widget-Bibliothek zum [Widget hinzufügen](../customize/widget-library.md#add-widgets).
+
 ## (Beta) Einblicke in die Profilwirksamkeit {#profile-efficacy-insights}
 
 >[!IMPORTANT]
@@ -73,9 +81,9 @@ Im Dashboard wird automatisch eine zu verwendende Zusammenführungsrichtlinie au
 
 >[!NOTE]
 >
->Im Dropdown-Menü werden nur Zusammenführungsrichtlinien angezeigt, die sich auf die Klasse &quot;XDM Individual Profile&quot;beziehen. Wenn Ihr Unternehmen jedoch mehrere Zusammenführungsrichtlinien erstellt hat, müssen Sie möglicherweise einen Bildlauf durchführen, um die vollständige Liste der verfügbaren Zusammenführungsrichtlinien anzuzeigen.
+>Im Dropdown-Menü werden nur Zusammenführungsrichtlinien angezeigt, die `_xdm.context.profile` Schema. Wenn Ihr Unternehmen jedoch mehrere Zusammenführungsrichtlinien erstellt hat, müssen Sie möglicherweise einen Bildlauf durchführen, um die vollständige Liste der verfügbaren Zusammenführungsrichtlinien anzuzeigen.
 
-![](../images/profiles/select-merge-policy.png)
+![Die Registerkarte Übersicht über Profile mit der Dropdown-Liste Zusammenführungsrichtlinie wurde hervorgehoben.](../images/profiles/select-merge-policy.png)
 
 ## Vereinigungsschemas
 
