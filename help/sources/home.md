@@ -5,10 +5,10 @@ title: Übersicht über Quell-Connectoren
 topic-legacy: overview
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 6ae0560607c1e5f80ddfe752e59850f438794351
+source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
 workflow-type: tm+mt
-source-wordcount: '1022'
-ht-degree: 100%
+source-wordcount: '1024'
+ht-degree: 93%
 
 ---
 
@@ -43,7 +43,7 @@ Experience Platform ermöglicht die Aufnahme von Daten aus anderen Adobe-Program
 
 Experience Platform ermöglicht die Aufnahme von Daten aus Werbesystemen von Drittanbietern. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
-- [[!DNL Google AdWords]](connectors/advertising/ads.md)
+- [Google Ads](connectors/advertising/ads.md)
 
 ### Analysen {#analytics}
 
@@ -173,10 +173,10 @@ Weitere Informationen zu den über Admin Console erteilten Berechtigungen einsch
 
 ## Allgemeine Geschäftsbedingungen {#terms-and-conditions}
 
-Durch Verwendung einer der als Beta („Beta“) gekennzeichneten Quellen erkennen Sie hiermit an, dass die Beta-Version ***ohne Mängelgewähr und ohne Gewährleistung jeglicher Art*** bereitgestellt wird.
+Durch Verwendung einer der als Beta (&quot;Beta&quot;) gekennzeichneten Quellen erkennen Sie hiermit an, dass die Beta-Version bereitgestellt wird. ***&quot;unverändert&quot;ohne Gewährleistung jeglicher Art***.
 
 Adobe ist nicht verpflichtet, die Beta-Version zu pflegen, zu korrigieren, zu aktualisieren, zu ändern oder anderweitig zu unterstützen. Es wird empfohlen, Vorsicht walten zu lassen und sich nicht auf die korrekte Funktionsweise oder Leistung solcher Beta-Versionen und/oder deren Begleitmaterialien zu verlassen. Die Beta-Version wird als vertrauliche Information von Adobe betrachtet.
 
-Jedes „Feedback“ (Informationen zur Beta-Version, insbesondere Probleme oder Mängel, auf die Sie bei der Verwendung der Beta-Version stoßen, Vorschläge, Verbesserungen und Empfehlungen), das sie Adobe geben, wird hiermit Adobe zugewiesen, einschließlich aller Rechte, Titel und Interessen an diesem Feedback.
+Jedes &quot;Feedback&quot;(Informationen zur Beta, einschließlich, aber nicht beschränkt auf Probleme oder Mängel, auf die Sie bei der Verwendung der Beta, Vorschläge, Verbesserungen und Empfehlungen stoßen), das von Ihnen an Adobe bereitgestellt wird, wird hiermit der Adobe zugewiesen, einschließlich aller Rechte, Titel und Interessen an und an diesem Feedback.
 
 Senden Sie offenes Feedback oder erstellen Sie ein Support-Ticket, um Ihre Vorschläge mitzuteilen oder einen Fehler zu melden oder nach einer Funktionsverbesserung zu suchen.

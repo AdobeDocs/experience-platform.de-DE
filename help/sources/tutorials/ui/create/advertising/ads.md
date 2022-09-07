@@ -1,77 +1,72 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Google AdWords; Google AdWords-Quell-Connector; Google AdWords-Connector
-solution: Experience Platform
-title: Erstellen einer Google AdWords-Quellverbindung in der Benutzeroberfläche
-topic-legacy: overview
-type: Tutorial
-description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Google AdWords-Quellverbindung erstellen.
+keywords: Experience Platform; Startseite; beliebte Themen; Google Ads; Google Ads-Quell-Connector; Google Ads-Connector
+title: Erstellen einer Google Ads-Quellverbindung in der Benutzeroberfläche
+description: Erfahren Sie, wie Sie eine Google Ads-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 56419f41188c9bfdbeda7dde680f269b980a37f0
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 11%
+source-wordcount: '661'
+ht-degree: 27%
 
 ---
 
-# Erstellen einer [!DNL Google AdWords]-Quellverbindung in der Benutzeroberfläche
+# Erstellen einer Google Ads-Quellverbindung in der Benutzeroberfläche
 
 >[!NOTE]
 >
->Der Connector [!DNL Google AdWords] befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren finden Sie unter [Quellen - Übersicht](../../../../home.md#terms-and-conditions) .
+>Die Google Ads-Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
 
-Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, extern bezogene Daten auf geplanter Basis zu erfassen. Dieses Tutorial enthält Schritte zum Erstellen eines Quell-Connectors [!DNL Google AdWords] mithilfe der [!DNL Platform]-Benutzeroberfläche.
+In diesem Tutorial werden die Schritte zum Erstellen eines Quell-Connectors für Google Ads mithilfe der Adobe Experience Platform-Benutzeroberfläche beschrieben.
 
 ## Erste Schritte
 
-Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
+Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experience Platform voraus:
 
-* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten  [!DNL Experience Platform] organisiert werden.
-   * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
-   * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md) zum Schema Editor: Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen.
+* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
+   * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemas vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
+   * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
-Wenn Sie bereits über eine gültige [!DNL Google AdWords]-Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum Konfigurieren eines Datenflusses [fortfahren.](../../dataflow/payments.md)
+Wenn Sie bereits über eine gültige Google Ads-Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zu [Datenfluss konfigurieren](../../dataflow/advertising.md)
 
-### Erforderliche Anmeldedaten sammeln
+### Sammeln erforderlicher Anmeldeinformationen
 
-Um auf Ihr [!DNL Google AdWords]-Konto [!DNL Platform] zugreifen zu können, müssen Sie die folgenden Werte angeben:
+Um auf Ihre Google Ads-Kontoplattform zugreifen zu können, müssen Sie die folgenden Werte angeben:
 
-| Berechtigung | Beschreibung |
+| Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `clientCustomerId` | Die Client-Kunden-ID des [!DNL AdWords]-Kontos. |
-| `developerToken` | Das mit dem Manager-Konto verknüpfte Entwicklungstoken. |
-| `refreshToken` | Das Aktualisierungstoken, das von [!DNL Google] für die Zugriffsberechtigung auf [!DNL AdWords] abgerufen wurde. |
-| `clientId` | Die Client-ID der [!DNL Google]-Anwendung, mit der das Aktualisierungstoken abgerufen wird. |
-| `clientSecret` | Das Client-Geheimnis der [!DNL Google]-Anwendung, mit der das Aktualisierungstoken abgerufen wird. |
+| Client-Kunden-ID | Die Client-Kunden-ID ist die Kontonummer, die dem Google Ads-Kundenkonto entspricht, das Sie mit der Google Ads-API verwalten möchten. Diese ID folgt der Vorlage von `123-456-7890`. |
+| Entwicklungstoken | Mit dem Entwicklungstoken können Sie auf die Google Ads-API zugreifen. Sie können dasselbe Entwickler-Token verwenden, um Anforderungen für alle Ihre Google Ads-Konten zu stellen. Abrufen Ihres Entwicklungstokens nach [Anmelden bei Ihrem Manager-Konto](https://ads.google.com/home/tools/manager-accounts/) und dann zur Seite &quot;API-Center&quot;navigieren. |
+| Aktualisierungstoken | Das Aktualisierungs-Token ist Teil von [!DNL OAuth2] Authentifizierung. Mit diesem Token können Sie Ihre Zugriffstoken nach ihrem Ablauf neu generieren. |
+| Client-ID | Die Client-ID wird zusammen mit dem Client-Geheimnis als Teil von [!DNL OAuth2] Authentifizierung. Gemeinsam ermöglicht die Client-ID und das Client-Geheimnis Ihrer Anwendung die Ausführung Ihrer Kontoverbindung, indem Sie Ihre Anwendung für Google identifizieren. |
+| Client-Geheimnis | Das Client-Geheimnis wird zusammen mit der Client-ID als Teil von [!DNL OAuth2] Authentifizierung. Gemeinsam ermöglicht die Client-ID und das Client-Geheimnis Ihrer Anwendung die Ausführung Ihrer Kontoverbindung, indem Sie Ihre Anwendung für Google identifizieren. |
 
-Weitere Informationen zu den ersten Schritten finden Sie in diesem [[!DNL Google AdWords] Dokument](https://developers.google.com/adwords/api/docs/guides/authentication).
+Lesen Sie das API-Übersichtsdokument für [Weitere Informationen zu den ersten Schritten mit Google Ads](https://developers.google.com/google-ads/api/docs/first-call/overview).
 
-## Ihr [!DNL Google AdWords]-Konto verbinden
+## Google Ads-Konto verbinden
 
-Nachdem Sie die erforderlichen Anmeldedaten gesammelt haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Google AdWords]-Konto mit [!DNL Platform] zu verknüpfen.
-
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an und wählen Sie dann **[!UICONTROL Quellen]** aus der linken Navigationsleiste aus, um auf den Arbeitsbereich **[!UICONTROL Quellen]** zuzugreifen. Der Bildschirm **[!UICONTROL Katalog]** enthält eine Vielzahl von Quellen, für die Sie ein Konto erstellen können.
+Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** in der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Wählen Sie unter der Kategorie **[!UICONTROL Advertising]** die Option **[!UICONTROL Google AdWords]** aus. Wenn Sie diesen Connector zum ersten Mal verwenden, wählen Sie **[!UICONTROL Konfigurieren]** aus. Klicken Sie andernfalls auf **[!UICONTROL Daten hinzufügen]** , um einen neuen [!DNL Google AdWords]-Connector zu erstellen.
+Unter dem **[!UICONTROL Werbung]** category, select **[!UICONTROL Google Ads]** und wählen Sie **[!UICONTROL Daten hinzufügen]**.
 
-![Katalog](../../../../images/tutorials/create/ads/catalog.png)
+![Ein Bild der Google Ads-Quelle im Quellenkatalog der Experience Platform-Benutzeroberfläche](../../../../images/tutorials/create/ads/catalog.png).
 
-Die Seite **[!UICONTROL Verbindung zu Google AdWords]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
-
-### Neues Konto
-
-Wenn Sie neue Anmeldedaten verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre [!DNL Google AdWords]-Anmeldedaten ein. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Verbinden]** und lassen Sie dann etwas Zeit, bis die neue Verbindung hergestellt ist.
-
-![connect](../../../../images/tutorials/create/ads/connect.png)
+Die **[!UICONTROL Verbindung zu Google Ads herstellen]** angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
 ### Vorhandenes Konto
 
-Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL Google AdWords]-Konto aus, mit dem Sie eine Verbindung herstellen möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**, um fortzufahren.
+Um ein vorhandenes Konto zu verbinden, wählen Sie das Google Ads-Konto aus, mit dem Sie eine Verbindung herstellen möchten, und klicken Sie dann auf **[!UICONTROL Nächste]** um fortzufahren.
 
-![vorhandene](../../../../images/tutorials/create/ads/existing.png)
+![Ein Bild einer Liste vorhandener Konten, mit denen Sie einen Google Ads-Datenfluss erstellen können.](../../../../images/tutorials/create/ads/existing.png).
+
+### Neues Konto
+
+Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]**. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre Google Ads-Anmeldedaten ein. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
+
+![Ein Bild des Bildschirms für die neue Kontoverbindung in der Experience Platform-Benutzeroberfläche](../../../../images/tutorials/create/ads/connect.png).
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine Verbindung zu Ihrem [!DNL Google AdWords]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Werbedaten in [!DNL Platform]](../../dataflow/advertising.md) zu übertragen.
+In diesem Tutorial haben Sie eine Verbindung zu Ihrem Google Ads-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Werbedaten in Platform zu importieren](../../dataflow/advertising.md).
