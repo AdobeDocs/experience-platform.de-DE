@@ -6,9 +6,9 @@ topic-legacy: queries
 type: Tutorial
 description: In diesem Dokument werden wichtige Informationen zum Schreiben von Abfragen in Adobe Experience Platform Query Service beschrieben.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 13e2248845734d985331653a17599f48aec0ebde
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1048'
 ht-degree: 3%
 
 ---
@@ -48,6 +48,10 @@ Standardmäßig werden die Ergebnisse interaktiver Abfragen an den Client zurüc
 ## Zugreifen auf ein bestimmtes Feld in einem Objekt
 
 Um auf ein Feld innerhalb eines Objekts in Ihrer Abfrage zuzugreifen, können Sie die Punktnotation (`.`) oder Klammer (`[]`). Die folgende SQL-Anweisung verwendet die Punktnotation, um die `endUserIds` Objekt bis zum `mcid` -Objekt.
+
+>[!NOTE]
+>
+>Die Experience Cloud-ID (ECID) wird auch als MCID bezeichnet und wird weiterhin in Namespaces verwendet.
 
 ```sql
 SELECT endUserIds._experience.mcid

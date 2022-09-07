@@ -5,9 +5,9 @@ title: Adobe-definierte SQL-Funktionen in Query Service
 topic-legacy: functions
 description: Dieses Dokument enthält Informationen zu den in Adobe Experience Platform Query Service verfügbaren Adobe-definierten Funktionen.
 exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
-source-git-commit: e0cdfc514a9e1277134d4c0d5396fc0bdf9d9958
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1486'
 ht-degree: 16%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 16%
 Adobe-definierte Funktionen, hier ADFs genannt, sind vordefinierte Funktionen in Adobe Experience Platform Query Service, mit denen gängige geschäftsbezogene Aufgaben für [!DNL Experience Event] Daten. Dazu gehören Funktionen für [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) und [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=de) wie in Adobe Analytics.
 
 Dieses Dokument enthält Informationen zu den in der Adobe definierten Funktionen. [!DNL Query Service].
+
+>[!NOTE]
+>
+>Die Experience Cloud-ID (ECID) wird auch als MCID bezeichnet und wird weiterhin in Namespaces verwendet.
 
 ## Window-Funktionen {#window-functions}
 

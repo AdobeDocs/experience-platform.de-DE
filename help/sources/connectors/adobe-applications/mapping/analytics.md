@@ -5,10 +5,10 @@ title: Zuordnen von Feldern für den Adobe Analytics Source Connector
 topic-legacy: overview
 description: Mit Adobe Experience Platform können Sie Adobe Analytics-Daten über die Analytics-Quelle erfassen. Manche der über ADC erfassten Daten können direkt aus Analytics-Feldern Experience-Datenmodell (XDM)-Feldern zugeordnet werden, während andere Daten Transformationen und spezifische Funktionen erfordern, um sich richtig zuordnen zu lassen.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: efe36904b0dce94a8b1f5e7a3d3f38da1038d49c
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '3401'
-ht-degree: 98%
+source-wordcount: '3431'
+ht-degree: 97%
 
 ---
 
@@ -186,9 +186,9 @@ Folgende Tabelle enthält Spalten, die den Namen des Analytics-Felds (*Analytics
 | ip | environment.ipV4 | Zeichenfolge | IP-Adresse basierend auf der HTTP-Kopfzeile der Bildanforderung. |
 | j_jscript | environment.browserDetails.javaScriptEnabled | Boolescher Wert | Die verwendete JavaScript-Version. |
 | mcvisid_high + mcvisid_low | identityMap | Objekt | Die Experience Cloud-Besucher-ID. |
-| mcvisid_high + mcvisid_low | endUserIDs._experience.mcid.id | Zeichenfolge | Die Experience Cloud-Besucher-ID. |
-| mcvisid_high | endUserIDs._experience.mcid.primary | Boolescher Wert | Die Experience Cloud-Besucher-ID. |
-| mcvisid_high | endUserIDs._experience.mcid.namespace.code | Zeichenfolge | Die Experience Cloud-Besucher-ID. |
+| mcvisid_high + mcvisid_low | endUserIDs._experience.mcid.id | Zeichenfolge | Die Experience Cloud-ID (ECID) wird auch als MCID bezeichnet und manchmal in Namespaces verwendet. |
+| mcvisid_high | endUserIDs._experience.mcid.primary | Boolescher Wert | Die Experience Cloud-ID (ECID) wird auch als MCID bezeichnet und manchmal in Namespaces verwendet. |
+| mcvisid_high | endUserIDs._experience.mcid.namespace.code | Zeichenfolge | Die Experience Cloud-ID (ECID) wird auch als MCID bezeichnet und manchmal in Namespaces verwendet. |
 | mcvisid_low | identityMap | Objekt | Die Experience Cloud-Besucher-ID. |
 | sdid_high + sdid_low | _experience.target.supplementalDataID | Zeichenfolge | Trefferzusammenfügungs-ID. Die Analytics-Felder sdid_high und sdid_low sind die ergänzenden Daten-IDs, mit denen zwei (oder mehr) eingehende Treffer zusammengefügt werden. |
 | mobilebeaconproximity | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximity | Zeichenfolge | Mobile Services – Beacon-Nähe. |

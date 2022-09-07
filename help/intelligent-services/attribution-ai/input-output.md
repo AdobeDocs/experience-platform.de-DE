@@ -5,9 +5,9 @@ title: Eingabe und Ausgabe in Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: Im folgenden Dokument werden die verschiedenen Ein- und Ausgabedaten beschrieben, die in Attribution AI verwendet werden.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: e0e96a52e30f5c34e0695c3e291bed9b6c085e00
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '2491'
+source-wordcount: '2504'
 ht-degree: 3%
 
 ---
@@ -138,7 +138,7 @@ In der folgenden Tabelle sind die Schemafelder in der Beispielausgabe für Rohbe
 | commerce_order_purchaseCity (String) | True | Zusätzliche Spalte für Datensatz mit Punktzahl . <br> **Beispiel:** city: San Jose |
 | customerProfile (Object) | False | Identitätsdetails des Benutzers, der zum Erstellen des Modells verwendet wird. |
 | identity (Object) | False | Enthält die Details des Benutzers, der zum Erstellen des Modells verwendet wird, z. B. `id` und `namespace`. |
-| id (String) | True | Identitäts-ID des Benutzers, z. B. Cookie-ID, AAID oder MCID usw. <br> **Beispiel:** 17348762725408656344688320891369597404 |
+| id (String) | True | Identitäts-ID des Benutzers, z. B. Cookie-ID, Adobe Analytics ID (AAID) oder Experience Cloud-ID (ECID, auch als MCID oder Besucher-ID bezeichnet) usw. <br> **Beispiel:** 17348762725408656344688320891369597404 |
 | namespace (String) | True | Identitäts-Namespace, der zum Erstellen der Pfade und damit des Modells verwendet wird. <br> **Beispiel:** aaid |
 | touchpointsDetail (Object Array) | True | Die Liste der Touchpoint-Details, die zur Konvertierung führen, die nach | Touchpoint-Vorkommen oder Zeitstempel. |
 | touchpointName (String) | True | Name des Touchpoints, der beim Einrichten konfiguriert wurde. <br> **Beispiel:** PAID_SEARCH_CLICK |
@@ -238,7 +238,7 @@ Die nachstehende Tabelle ordnet die aggregierten Werte den Rohbewertungen zu. We
 >[!IMPORTANT]
 >
 > - Attribution AI verwendet nur aktualisierte Daten für Weiterbildung und Scoring. Ebenso verzichtet Customer AI bei der Anforderung, Daten zu löschen, auf die Verwendung der gelöschten Daten.
-> - Attribution AI nutzt Platform-Datensätze. Um Anfragen zu Verbraucherrechten zu unterstützen, die eine Marke möglicherweise erhält, sollten Marken Platform Privacy Service verwenden, um Verbraucheranfragen auf Zugriff und Löschung zu übermitteln und um ihre Daten im Data Lake, Identity Service und Echtzeit-Kundenprofil zu entfernen.
+> - Die Attributions-KI nutzt Platform-Datensätze. Um Anfragen zu Verbraucherrechten zu unterstützen, die eine Marke möglicherweise erhält, sollten Marken Platform Privacy Service verwenden, um Verbraucheranfragen auf Zugriff und Löschung zu übermitteln und um ihre Daten im Data Lake, Identity Service und Echtzeit-Kundenprofil zu entfernen.
 > - Alle Datensätze, die wir für die Eingabe/Ausgabe von Modellen verwenden, folgen den Platform-Richtlinien. Die Platform-Datenverschlüsselung gilt für Daten während der Ruhezeit und während der Übertragung. Weitere Informationen finden Sie in der Dokumentation . [Datenverschlüsselung](../../../help/landing/governance-privacy-security/encryption.md)
 
 

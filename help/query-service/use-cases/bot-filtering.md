@@ -2,9 +2,9 @@
 title: Bot-Filterung in Query Service mit maschinellem Lernen
 description: Dieses Dokument bietet einen Überblick darüber, wie Sie Query Service und maschinelles Lernen verwenden können, um Bot-Aktivitäten zu bestimmen und ihre Aktionen nach dem echten Besucher-Traffic auf einer Online-Website zu filtern.
 exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
-source-git-commit: c5b91bd516e876e095a2a6b6e3ba962b29f55a7b
+source-git-commit: 8a7c04ebe8fe372dbf686fddc92867e938a93614
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '899'
 ht-degree: 6%
 
 ---
@@ -29,8 +29,12 @@ Dieses Beispiel verwendet [!DNL Jupyter Notebook] als Entwicklungsumgebung. Es s
 
 Die beiden Attribute, die zum Extrahieren von Daten für die Bot-Erkennung verwendet werden, sind:
 
-* Marketing Cloud-ID (MCID): Dies bietet eine universelle, beständige ID zum Identifizieren Ihrer Besucher über alle Adobe-Lösungen hinweg.
+* Experience Cloud Visitor ID (ECID, auch als MCID bezeichnet): Dies bietet eine universelle, beständige ID zum Identifizieren Ihrer Besucher über alle Adobe-Lösungen hinweg.
 * Zeitstempel: Dadurch werden Uhrzeit und Datum im UTC-Format bereitgestellt, zu dem eine Aktivität auf der Website erfolgte.
+
+>[!NOTE]
+>
+>Die Verwendung von `mcid` weiterhin in Namespace-Verweisen auf die Experience Cloud-Besucher-ID gefunden werden, wie im folgenden Beispiel gezeigt.
 
 Die folgende SQL-Anweisung bietet ein erstes Beispiel zur Identifizierung von Bot-Aktivitäten. In der Anweisung wird davon ausgegangen, dass der Benutzer ein Bot ist, wenn ein Besucher innerhalb einer Minute 50 Klicks durchführt.
 
@@ -45,7 +49,7 @@ WHERE  enduserids._experience.mcid NOT IN (SELECT enduserids._experi
                                            HAVING Count(*) > 50);  
 ```
 
-Der Ausdruck filtert die MCIDs aller Besucher, die den Schwellenwert erreichen, aber keine Traffic-Spitzen aus anderen Intervallen ansprechen.
+Der Ausdruck filtert die ECIDs (`mcid`) aller Besucher, die den Schwellenwert erreichen, jedoch keine Traffic-Spitzen aus anderen Intervallen ansprechen.
 
 ## Verbessern der Bot-Erkennung mit maschinellem Lernen
 
@@ -53,7 +57,7 @@ Die ursprüngliche SQL-Anweisung kann verfeinert werden, um zu einer Abfrage zur
 
 Die Beispielanweisung wird von einer Minute mit bis zu 60 Klicks erweitert und umfasst nun fünf- und 30-minütige Zeiträume mit Klickzahlen von 300 bzw. 1800.
 
-Die Beispielanweisung erfasst die maximale Anzahl von Klicks für jede MCID über die verschiedenen Zeiträume. Die erste Anweisung wurde um einen Zeitraum von einer Minute (60 Sekunden), 5 Minuten (300 Sekunden) und einer Stunde (d. h. 1800 Sekunden) erweitert.
+Die Beispielanweisung erfasst die maximale Anzahl von Klicks für jede ECID (`mcid`) über die verschiedenen Zeiträume. Die erste Anweisung wurde um einen Zeitraum von einer Minute (60 Sekunden), 5 Minuten (300 Sekunden) und einer Stunde (d. h. 1800 Sekunden) erweitert.
 
 ```sql
 SELECT table_count_1_min.mcid AS id, 
@@ -167,4 +171,4 @@ Das Beispielmodell, das mit einer hohen Genauigkeit bestimmt wird, dass alle Bes
 
 Durch Lesen dieses Dokuments können Sie besser verstehen, wie Sie [!DNL Query Service] und maschinelles Lernen zum Ermitteln und Filtern von Bot-Aktivitäten.
 
-Andere Dokumente, die die Vorteile von [!DNL Query Service] zu den strategischen Geschäftseinblicken Ihres Unternehmens zählen [Anwendungsfall für abgebrochenes Durchsuchen](./abandoned-browse.md) Beispiel.
+Andere Dokumente, die die Vorteile von [!DNL Query Service] zu den strategischen geschäftlichen Einblicken Ihres Unternehmens sind die [Anwendungsfall für abgebrochenes Durchsuchen](./abandoned-browse.md) Beispiel.

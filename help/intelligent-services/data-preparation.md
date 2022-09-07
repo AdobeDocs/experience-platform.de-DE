@@ -5,10 +5,10 @@ title: Vorbereiten von Daten für die Verwendung in Intelligent Services
 topic-legacy: Intelligent Services
 description: Damit Intelligent Services Einblicke aus Ihren Marketing-Ereignisdaten gewinnen kann, müssen die Daten semantisch angereichert und in einer Standardstruktur verwaltet werden. Intelligent Services verwenden dazu Experience-Datenmodell (XDM)-Schemas.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '2919'
-ht-degree: 1%
+source-wordcount: '2936'
+ht-degree: 2%
 
 ---
 
@@ -116,6 +116,10 @@ Es wird zwar dringend empfohlen, alle Schlüsselfelder zu verwenden, es gibt jed
 Eines der Felder in Ihrem Schema muss als primäres Identitätsfeld festgelegt werden, das Folgendes ermöglicht: [!DNL Intelligent Services] , um jede Instanz von Zeitreihendaten mit einer einzelnen Person zu verknüpfen.
 
 Sie müssen basierend auf der Quelle und der Art Ihrer Daten festlegen, welches Feld als primäre Identität verwendet werden soll. Ein Identitätsfeld muss eine **Identitäts-Namespace** , der den Typ der Identitätsdaten angibt, die das Feld als Wert erwartet. Zu den gültigen Namespace-Werten gehören:
+
+>[!NOTE]
+>
+>Die Experience Cloud-ID (ECID) wird auch als MCID bezeichnet und wird weiterhin in Namespaces verwendet.
 
 * &quot;email&quot;
 * &quot;phone&quot;

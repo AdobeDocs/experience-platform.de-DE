@@ -1,9 +1,10 @@
 ---
 title: Attributionsanalyse
 description: In diesem Dokument wird erläutert, wie Sie mithilfe von Query Service eine Marketing-Wirksamkeitsmessmethode erstellen können, die auf dem Marketing-Attributionsmodell des Erstkontakts und Letztkontakts basiert.
-source-git-commit: 870626f25b1aabdcb5739bbb1ab85bdad44df195
+exl-id: d62cd349-06fc-4ce6-a5e8-978f11186927
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1419'
 ht-degree: 11%
 
 ---
@@ -68,6 +69,10 @@ Die Ergebnisse für die Attributionsabfragen werden in der `first_touch` oder `l
 Die Erstkontakt-Attribution akkreditiert 100 % der Verantwortung für ein erfolgreiches Ergebnis des ersten Kanals, auf den der Verbraucher gestoßen ist. Dieses SQL-Beispiel wird verwendet, um die Interaktion hervorzuheben, die zu einer nachfolgenden Reihe von Kundenaktionen führte.
 
 Die nachstehende Abfrage gibt den Attributionswert des Erstkontakts sowie Details zum Kanal in der Zielgruppe zurück [!DNL Experience Event] Datensatz. Es wird auch eine `struct` -Objekt für den ausgewählten Kanal mit dem Erstkontaktwert, dem Zeitstempel und der Attribution für jede Zeile.
+
+>[!NOTE]
+>
+>Die Experience Cloud-ID (ECID) wird auch als MCID bezeichnet und wird weiterhin in Namespaces verwendet.
 
 **Abfragesyntax**
 
