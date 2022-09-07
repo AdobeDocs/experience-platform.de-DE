@@ -5,9 +5,9 @@ title: Anleitung zur Fehlerbehebung bei Query Service
 topic-legacy: troubleshooting
 description: Dieses Dokument enthält häufig gestellte Fragen und Antworten zu Query Service. Zu den Themen gehören der Datenexport, Tools von Drittanbietern und PSQL-Fehler.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+source-git-commit: 722d7144639d7280ef85c9bfc285e616e7d7fcce
 workflow-type: tm+mt
-source-wordcount: '3522'
+source-wordcount: '3755'
 ht-degree: 4%
 
 ---
@@ -40,7 +40,7 @@ Dieser Abschnitt enthält Informationen zu Leistung, Beschränkungen und Prozess
 
 ### Kann ich Postman für die Query Service-API verwenden?
 
-++ + Antwort Ja, Sie können alle Adobe-API-Dienste mit Postman visualisieren und mit diesen interagieren (eine kostenlose Drittanbieteranwendung). Beobachten Sie die [Postman-Setup-Handbuch](https://video.tv.adobe.com/v/28832) für schrittweise Anweisungen zum Einrichten eines Projekts in der Adobe Developer Console und zum Abrufen aller erforderlichen Anmeldeinformationen für die Verwendung mit Postman. Die offizielle Dokumentation finden Sie unter [Anleitung zum Starten, Ausführen und Freigeben von Postman-Sammlungen](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+++ + Antwort Ja: Sie können alle Adobe API-Dienste mithilfe von Postman (einer kostenlosen Drittanbieteranwendung) visualisieren und damit interagieren. Beobachten Sie die [Postman-Setup-Handbuch](https://video.tv.adobe.com/v/28832) für schrittweise Anweisungen zum Einrichten eines Projekts in der Adobe Developer Console und zum Abrufen aller erforderlichen Anmeldeinformationen für die Verwendung mit Postman. Die offizielle Dokumentation finden Sie unter [Anleitung zum Starten, Ausführen und Freigeben von Postman-Sammlungen](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Gibt es eine Begrenzung für die maximale Anzahl von Zeilen, die von einer Abfrage über die Benutzeroberfläche zurückgegeben werden?
@@ -252,6 +252,16 @@ SELECT count(1) FROM myTableName
 +++ Query Service bietet mehrere integrierte SQL-Hilfsfunktionen zur Erweiterung der SQL-Funktionalität. Eine vollständige Liste der [Von Query Service unterstützte SQL-Funktionen](./sql/spark-sql-functions.md).
 +++
 
+### sind alle nativen [!DNL Spark SQL] Unterstützte Funktionen oder Benutzer, die nur auf den Wrapper beschränkt sind [!DNL Spark SQL] Funktionen der Adobe?
+
++++Antwort Noch nicht alle Open-Source-Formulare [!DNL Spark SQL] -Funktionen wurden anhand von Daten aus Seeseiden getestet. Nach dem Test und der Bestätigung werden sie der unterstützten Liste hinzugefügt. Lesen Sie hierzu den Abschnitt [Liste der unterstützten [!DNL Spark SQL] Funktionen](./sql/spark-sql-functions.md) , um nach einer bestimmten Funktion zu suchen.
++++
+
+### Können Benutzer ihre eigenen benutzerdefinierten Funktionen (UDF) definieren, die über andere Abfragen hinweg verwendet werden können?
+
+++ + Antwort Aufgrund von Sicherheitsüberlegungen bei der Datensicherheit ist die benutzerdefinierte Definition von UDFs nicht zulässig.
++++
+
 ### Was sollte ich tun, wenn meine geplante Abfrage fehlschlägt?
 
 +++Antwort Zunächst überprüfen Sie die Protokolle, um die Details des Fehlers zu ermitteln. Der Abschnitt &quot;FAQ&quot;zu [Fehler in Protokollen suchen](#error-logs) enthält weitere Informationen dazu.
@@ -263,7 +273,7 @@ Im Folgenden finden Sie eine Liste von Überlegungen zu geplanten Abfragen bei V
 
 ### Was bedeutet der Fehler &quot;Sitzungsbegrenzung erreicht&quot;?
 
-+++Antwort &quot;Sitzungsbegrenzung erreicht&quot;bedeutet, dass die für Ihr Unternehmen maximal zulässige Anzahl von Query Service-Sitzungen erreicht wurde. Wenden Sie sich an den Adobe Experience Platform-Administrator Ihres Unternehmens.
++++Antwort &quot;Sitzungsbegrenzung erreicht&quot;bedeutet, dass die für Ihr Unternehmen maximal zulässige Anzahl von Query Service-Sitzungen erreicht wurde. Wenden Sie sich an den Adobe Experience Platform-Administrator Ihrer Organisation.
 +++
 
 ### Wie behandelt das Abfrageprotokoll Abfragen, die sich auf einen gelöschten Datensatz beziehen?
@@ -438,6 +448,11 @@ WHERE T2.ID IS NULL
 
 +++
 
+### Kann ich einen Datensatz mit einer CTAS-Abfrage mit einem doppelten Unterstrich erstellen, wie er in der Benutzeroberfläche angezeigt wird? Beispiel: `test_table_001`.
+
+++ + Antwort Nein, dies ist eine absichtliche Einschränkung in der gesamten Experience Platform, die für alle Adobe-Dienste gilt, einschließlich Query Service. Ein Name mit zwei Unterstrichen ist als Schema- und Datensatzname zulässig, der Tabellenname für den Datensatz darf jedoch nur einen Unterstrich enthalten.
++++
+
 ## Exportieren von Daten {#exporting-data}
 
 Dieser Abschnitt enthält Informationen zum Exportieren von Daten und Einschränkungen.
@@ -462,6 +477,25 @@ FROM <table_name>
 +++Antwort Nr. Es gibt derzeit keine Funktion für die Extraktion erfasster Daten.
 +++
 
+### Warum gibt der Analytics-Data Connector keine Daten zurück?
+
++++Antwort Eine häufige Ursache für dieses Problem ist die Abfrage von Zeitreihendaten ohne Zeitfilter. Beispiel:
+
+```sql
+SELECT * FROM prod_table LIMIT 1;
+```
+
+Sollte wie folgt geschrieben werden:
+
+```sql
+SELECT * FROM prod_table
+WHERE
+timestamp >= to_timestamp('2022-07-22')
+and timestamp < to_timestamp('2022-07-23');
+```
+
++++
+
 ## Drittanbieter-Tools {#third-party-tools}
 
 Dieser Abschnitt enthält Informationen zur Verwendung von Drittanbieter-Tools wie PSQL und Power BI.
@@ -473,7 +507,13 @@ Dieser Abschnitt enthält Informationen zur Verwendung von Drittanbieter-Tools w
 
 ### Gibt es eine Möglichkeit, Query Service einmal für die kontinuierliche Verwendung mit einem Tool eines Drittanbieters zu verbinden?
 
-++ + Antwort Ja, Desktop-Clients von Drittanbietern können über eine einmalige Einrichtung ohne ablaufende Anmeldeinformationen mit Query Service verbunden werden. Nicht ablaufende Anmeldeinformationen können von einem autorisierten Benutzer generiert werden und werden in einer JSON-Datei empfangen, die auf den lokalen Computer heruntergeladen wurde. Voll [Anleitung zum Erstellen und Herunterladen nicht ablaufender Anmeldedaten](./ui/credentials.md#non-expiring-credentials) finden Sie in der Dokumentation.
+++ + Antwort Ja, Desktop-Clients von Drittanbietern können über eine einmalige Einrichtung ohne ablaufende Anmeldeinformationen mit Query Service verbunden werden. Nicht ablaufende Anmeldeinformationen können von einem autorisierten Benutzer generiert und in einer JSON-Datei empfangen werden, die automatisch auf den lokalen Computer heruntergeladen wird. Voll [Anleitung zum Erstellen und Herunterladen nicht ablaufender Anmeldedaten](./ui/credentials.md#non-expiring-credentials) finden Sie in der Dokumentation.
++++
+
+### Warum funktionieren meine nicht ablaufenden Anmeldeinformationen nicht?
+
++++Antwort Der Wert für nicht ablaufende Anmeldeinformationen sind die verketteten Argumente aus dem `technicalAccountID` und `credential` aus der JSON-Konfigurationsdatei übernommen. Der Kennwortwert hat folgende Form: `{{technicalAccountId}:{credential}}`.
+Weitere Informationen zum [Verbindung zu externen Clients mit Anmeldeinformationen herstellen](./ui/credentials.md#using-credentials-to-connect-to-external-clients).
 +++
 
 ### Welche Art von SQL-Editoren von Drittanbietern kann ich mit dem Query Service Editor verbinden?
