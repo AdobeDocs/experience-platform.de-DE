@@ -5,16 +5,16 @@ title: PQL-Zeichenfolgen-Funktionen
 topic-legacy: developer guide
 description: Profile Query Language (PQL) bietet Funktionen, die die Interaktion mit Zeichenfolgen vereinfachen.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1c9ed96cdbd9e670bd1f05467e33e8dab5bc2121
 workflow-type: tm+mt
-source-wordcount: '784'
-ht-degree: 69%
+source-wordcount: '840'
+ht-degree: 64%
 
 ---
 
 # Zeichenfolgen-Funktionen
 
-[!DNL Profile Query Language] (PQL) bietet Funktionen, die die Interaktion mit Zeichenfolgen vereinfachen. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md).
+[!DNL Profile Query Language] (PQL) bietet Funktionen, die die Interaktion mit Zeichenfolgen vereinfachen. Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] Übersicht](./overview.md).
 
 ## Ist wie
 
@@ -247,6 +247,10 @@ Die folgende PQL-Abfrage bestimmt, ohne die Groß-/Kleinschreibung zu beachten, 
 person.name.matches("(?i)^John")
 ```
 
+>[!NOTE]
+>
+>Wenn Sie reguläre Ausdrucksfunktionen wie `\w`, **must** Escapezeichen für den umgekehrten Schrägstrich. Anstatt nur zu schreiben `\w`, müssen Sie einen zusätzlichen umgekehrten Schrägstrich einfügen und schreiben `\\w`.
+
 ## Gruppe regelmäßiger Ausdrücke
 
 Die Funktion `regexGroup` wird verwendet, um spezifische Informationen basierend auf dem bereitgestellten regulären Ausdruck zu extrahieren.
@@ -262,8 +266,12 @@ Die Funktion `regexGroup` wird verwendet, um spezifische Informationen basierend
 Die folgende PQL-Abfrage wird verwendet, um den Domänennamen aus einer E-Mail-Adresse zu extrahieren.
 
 ```sql
-emailAddress.regexGroup("@(\w+)", 1)
+emailAddress.regexGroup("@(\\w+)", 1)
 ```
+
+>[!NOTE]
+>
+>Wenn Sie reguläre Ausdrucksfunktionen wie `\w`, **must** Escapezeichen für den umgekehrten Schrägstrich. Anstatt nur zu schreiben `\w`, müssen Sie einen zusätzlichen umgekehrten Schrägstrich einfügen und schreiben `\\w`.
 
 ## Nächste Schritte
 
