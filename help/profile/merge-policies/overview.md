@@ -4,10 +4,10 @@ title: Zusammenführungsrichtlinien – Übersicht
 type: Documentation
 description: Mit Adobe Experience Platform können Sie Datenfragmente aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich eine vollständige Ansicht über Ihre einzelnen Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine einheitliche Ansicht zu schaffen.
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 965993bece32eeb0db6e7a9eab3131816a9de5cd
 workflow-type: tm+mt
-source-wordcount: '1252'
-ht-degree: 100%
+source-wordcount: '1265'
+ht-degree: 97%
 
 ---
 
@@ -33,7 +33,7 @@ Wenn ein Kunde beispielsweise über mehrere Kanäle mit Ihrer Marke interagiert,
 
 Wenn die Daten aus mehreren Quellen in Konflikt stehen (z. B. listet ein Fragment den Kunden als „ledig“ auf, während ein anderes den Kunden als „verheiratet“ auflistet), bestimmt die Zusammenführungsrichtlinie, welche Informationen priorisiert und in das Profil für die Einzelperson aufgenommen werden sollen.
 
-Zusammenführungsrichtlinien gelten jeweils als privat für Ihre IMS-Organisation, sodass Sie verschiedene Richtlinien erstellen können, um Schemas auf die gewünschte Weise zusammenzuführen. Sie können auch eine standardmäßige Zusammenführungsrichtlinie angeben, die verwendet wird, wenn keine explizite Angabe erfolgt. Weitere Informationen finden Sie im Abschnitt [Standardmäßige Zusammenführungsrichtlinien](#default-merge-policy) weiter unten in diesem Dokument.
+Zusammenführungsrichtlinien sind für Ihre Organisation privat, sodass Sie verschiedene Richtlinien erstellen können, um Schemas auf die gewünschte Weise zusammenzuführen. Sie können auch eine standardmäßige Zusammenführungsrichtlinie angeben, die verwendet wird, wenn keine explizite Angabe erfolgt. Weitere Informationen finden Sie im Abschnitt [Standardmäßige Zusammenführungsrichtlinien](#default-merge-policy) weiter unten in diesem Dokument. Bitte beachten Sie, dass pro Organisation maximal fünf Zusammenführungsrichtlinien zulässig sind.
 
 ## Zusammenführungsmethoden {#merge-methods}
 

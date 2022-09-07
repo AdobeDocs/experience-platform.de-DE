@@ -4,11 +4,11 @@ title: Standardmäßige Limits für Echtzeit-Kundenprofildaten
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: 'Adobe Experience Platform verwendet ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet. Dieses Dokument liefert standardmäßige Verwendungs- und Quotenbegrenzungen zur Hilfe bei der Modellierung Ihrer Profildaten, sodass Sie eine optimale Systemleistung gewährleisten können. '
+description: Adobe Experience Platform verwendet ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet. Dieses Dokument liefert standardmäßige Verwendungs- und Quotenbegrenzungen zur Hilfe bei der Modellierung Ihrer Profildaten, sodass Sie eine optimale Systemleistung gewährleisten können.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: e3813691af6477a0afbb47ed0fd53d5bb3834fd0
+source-git-commit: 1b98a04f92833f5c906ec0081b35144cd47d77bc
 workflow-type: tm+mt
-source-wordcount: '1941'
+source-wordcount: '1950'
 ht-degree: 48%
 
 ---
@@ -139,7 +139,7 @@ In diesem Dokument gibt es mehrere Limits, die auf &quot;Profilfragmente&quot;ve
 
 ### Zusammenführungsrichtlinien {#merge-policies}
 
-Beim Zusammenführen von Daten aus mehreren Quellen dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden, um eine einheitliche Ansicht zu schaffen. Wenn ein Kunde beispielsweise über mehrere Kanäle mit Ihrer Marke interagiert, verfügt Ihr Unternehmen über mehrere Profilfragmente, die sich auf diesen einzelnen Kunden beziehen und in mehreren Datensätzen enthalten sind. Wenn diese Fragmente in Platform aufgenommen werden, werden sie zusammengeführt, sodass ein zentrales Profil für diesen Kunden entsteht. Wenn die Daten aus mehreren Quellen in Konflikt stehen, bestimmt die Zusammenführungsrichtlinie, welche Informationen in das Profil für die Person aufgenommen werden sollen. Um mehr über Zusammenführungsrichtlinien zu erfahren, lesen Sie zunächst das [Übersicht über Zusammenführungsrichtlinien](merge-policies/overview.md).
+Beim Zusammenführen von Daten aus mehreren Quellen dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden, um eine einheitliche Ansicht zu schaffen. Wenn ein Kunde beispielsweise über mehrere Kanäle mit Ihrer Marke interagiert, verfügt Ihr Unternehmen über mehrere Profilfragmente, die sich auf diesen einzelnen Kunden beziehen und in mehreren Datensätzen enthalten sind. Wenn diese Fragmente in Platform aufgenommen werden, werden sie zusammengeführt, sodass ein zentrales Profil für diesen Kunden entsteht. Wenn die Daten aus mehreren Quellen in Konflikt stehen, bestimmt die Zusammenführungsrichtlinie, welche Informationen in das Profil für die Person aufgenommen werden sollen. Pro Organisation sind maximal fünf (5) Zusammenführungsrichtlinien zulässig. Weitere Informationen zu Zusammenführungsrichtlinien finden Sie im Abschnitt [Übersicht über Zusammenführungsrichtlinien](merge-policies/overview.md).
 
 ### Adobe Analytics Report Suite-Datensätze in Platform {#aa-datasets}
 
