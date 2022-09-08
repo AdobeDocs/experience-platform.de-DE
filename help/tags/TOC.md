@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Tags
 solution: Data Collection
-source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
+source-git-commit: d9787b6d093037a2d346ac3bd2f37220ace43ad2
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '402'
 ht-degree: 96%
 
 ---
@@ -199,6 +199,7 @@ ht-degree: 96%
 * [Veraltete Unterstützung für Internet Explorer 10 und 11](./ie-deprecation.md)
 * Versionshinweise {#release-notes}
    * [Neueste Version](./release-notes/current.md)
+   * [Versionshinweise für 2021](./release-notes/2021.md)
    * [Versionshinweise für 2020](./release-notes/2020.md)
    * [Versionshinweise für 2019](./release-notes/2019.md)
    * [Versionshinweise für 2018](./release-notes/2018.md)
