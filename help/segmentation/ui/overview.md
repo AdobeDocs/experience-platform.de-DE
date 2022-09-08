@@ -5,9 +5,9 @@ title: Handbuch zur Benutzeroberfläche des Segmentierungsdienstes
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche zum Erstellen und Verwalten von Segmentdefinitionen.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
+source-git-commit: 356d76d61293b9ff0887afbf30852159af8d72ad
 workflow-type: tm+mt
-source-wordcount: '1746'
+source-wordcount: '1775'
 ht-degree: 19%
 
 ---
@@ -56,6 +56,11 @@ Weitere Informationen finden Sie unter [Segment-Dashboard-Handbuch](../../dashbo
 >id="platform_segments_browse_evaluationmethodcolumnname"
 >title="Auswertungsmethode"
 >abstract="Zu den Auswertungsmethoden für Segmente gehören Batch, Streaming und Edge."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_addallsegmentstoschedule"
+>title="Alle Segmente zur Planung hinzufügen"
+>abstract="Aktivieren Sie diese Option, um alle Batch-Auswertungssegmente in das tägliche geplante Update um 15:30 Uhr UTC einzuschließen. Deaktivieren Sie alle Segmente aus der geplanten Aktualisierung."
 
 Wählen Sie die **[!UICONTROL Durchsuchen]** um eine Liste aller Segmentdefinitionen für Ihre IMS-Organisation anzuzeigen.
 

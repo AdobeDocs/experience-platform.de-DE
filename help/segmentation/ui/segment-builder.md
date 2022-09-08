@@ -5,10 +5,10 @@ title: Benutzerhandbuch für Segment Builder
 topic-legacy: ui guide
 description: Der Segmentaufbau in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: dd87f9e5787961442ca7d7b4c761d2e7ca724994
+source-git-commit: 1d70aee1bd225268b8f2a2d1dc24d446bb4ce633
 workflow-type: tm+mt
-source-wordcount: '3081'
-ht-degree: 29%
+source-wordcount: '3082'
+ht-degree: 28%
 
 ---
 
@@ -43,7 +43,7 @@ Die **[!UICONTROL Veranstaltungen]** -Tab können Sie eine Zielgruppe basierend 
 
 Neben der Möglichkeit, nach [!DNL ExperienceEvent] -Elemente können Sie auch nach Ereignistypen suchen. Ereignistypen verwenden dieselbe Kodierungslogik wie [!DNL ExperienceEvents], ohne dass Sie die [!DNL XDM ExperienceEvent] -Klasse, die nach dem richtigen Ereignis sucht. Wenn Sie beispielsweise die Suchleiste verwenden, um nach &quot;Warenkorb&quot;zu suchen, werden die Ereignistypen zurückgegeben:[!UICONTROL AddCart]&quot; und &quot;[!UICONTROL RemoveCart]&quot;, bei dem es sich um zwei sehr häufig verwendete Warenkorbaktionen beim Erstellen von Segmentdefinitionen handelt.
 
-Sie können nach beliebigen Komponenten suchen, indem Sie ihren Namen in die Suchleiste eingeben; diese verwendet die [Suchsyntax von Lucene](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax). Die Suchergebnisse beginnen sich mit der Eingabe ganzer Wörter zu füllen. Wenn Sie beispielsweise eine Regel auf Grundlage des XDM-Felds `ExperienceEvent.commerce.productViews` erstellen möchten, beginnen Sie im Suchfeld mit der Eingabe von „product views“. Sobald Sie das Wort „product“ eingegeben haben, werden Suchergebnisse angezeigt. Jedes Ergebnis enthält die Objekthierarchie, zu der es gehört.
+Sie können nach beliebigen Komponenten suchen, indem Sie ihren Namen in die Suchleiste eingeben; diese verwendet die [Suchsyntax von Lucene](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax). Die Suchergebnisse beginnen sich mit der Eingabe ganzer Wörter zu füllen. So erstellen Sie beispielsweise eine Regel basierend auf dem XDM-Feld `ExperienceEvent.commerce.productViews`, beginnen Sie mit der Eingabe von &quot;Produktansichten&quot;in das Suchfeld. Sobald Sie das Wort „product“ eingegeben haben, werden Suchergebnisse angezeigt. Jedes Ergebnis enthält die Objekthierarchie, zu der es gehört.
 
 >[!NOTE]
 >
@@ -226,7 +226,7 @@ Um eine Zusammenführungsrichtlinie für Ihre Segmentdefinition auszuwählen, w�
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Schätzungen aktualisieren"
 >abstract="Sie können die Schätzungen Ihres Segments aktualisieren, um sofort eine Vorschau der Anzahl der Profile anzuzeigen, die für das vorgeschlagene Segment qualifiziert sind.  Audience-Schätzungen werden anhand einer Stichprobengröße der Beispieldaten dieses Tages erstellt."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="Weitere Informationen finden Sie in der Dokumentation ."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="Schätzen und Anzeigen einer Vorschau einer Zielgruppe"
 
 Beim Erstellen einer Segmentdefinition zeigt der Abschnitt **[!UICONTROL Segmenteigenschaften]** auf der rechten Seite des Arbeitsbereichs eine geschätzte Größe des resultierenden Segments an, sodass Sie die Segmentdefinition nach Bedarf anpassen können, bevor Sie die eigentliche Zielgruppe erstellen.
 
