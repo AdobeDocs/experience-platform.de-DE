@@ -2,7 +2,7 @@
 title: Geheime Daten in der Reactor-API
 description: Hier erfahren Sie mehr über die Grundlagen zum Konfigurieren von geheimen Daten in der Reactor-API für die Verwendung in der Ereignisweiterleitung.
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
-source-git-commit: 4f3c97e2cad6160481adb8b3dab3d0c8b23717cc
+source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
 workflow-type: tm+mt
 source-wordcount: '1241'
 ht-degree: 87%
@@ -107,11 +107,11 @@ Geheimnisse mit `type_of` Wert von `oauth2-google` erfordert das folgende Attrib
 | --- | --- | --- |
 | `scopes` | Array | Listet die Google-Produktbereiche für die Authentifizierung auf. Die folgenden Bereiche werden unterstützt:<ul><li>[Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[Google-Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
 
-Nach der Erstellung `oauth2-google` geheim ist, enthält die Antwort eine `meta.token_url` -Eigenschaft. Sie müssen diese URL kopieren und in einen Browser einfügen, um den Google-Authentifizierungsfluss abzuschließen.
+Nach der Erstellung `oauth2-google` geheim ist, enthält die Antwort eine `meta.authorization_url` -Eigenschaft. Sie müssen diese URL kopieren und in einen Browser einfügen, um den Google-Authentifizierungsfluss abzuschließen.
 
 #### Erneutes Autorisieren eines `oauth2-google` secret
 
-Die Autorisierungs-URL für eine `oauth2-google` geheim läuft eine Stunde nach der Erstellung des Geheimnisses ab (wie durch `meta.token_url_expires_at`). Danach muss das Geheimnis erneut autorisiert werden, um den Authentifizierungsprozess zu verlängern.
+Die Autorisierungs-URL für eine `oauth2-google` geheim läuft eine Stunde nach der Erstellung des Geheimnisses ab (wie durch `meta.authorization_url_expires_at`). Danach muss das Geheimnis erneut autorisiert werden, um den Authentifizierungsprozess zu verlängern.
 
 Siehe Abschnitt [Endpunktleitfaden für Geheimnisse](../endpoints/secrets.md#reauthorize) für Details zur Neuautorisierung eines `oauth2-google` geheim durch eine PATCH-Anfrage an die Reactor-API.
 
