@@ -5,7 +5,7 @@ title: RStudio mit Query Service verbinden
 topic-legacy: connect
 description: In diesem Dokument werden die Schritte zum Verbinden von R Studio mit Adobe Experience Platform Query Service beschrieben.
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
+source-git-commit: 9ab3d69553dee9fdb97472edfa3f812133ee1bb1
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 11%
@@ -20,7 +20,7 @@ In diesem Dokument werden die Schritte zum Verbinden von [!DNL RStudio] mit Adob
 >
 > In diesem Handbuch wird davon ausgegangen, dass Sie bereits Zugriff auf [!DNL RStudio] und sind mit der Verwendung vertraut. Weitere Informationen [!DNL RStudio] finden Sie im Abschnitt [offiziell [!DNL RStudio] Dokumentation](https://rstudio.com/products/rstudio/).
 > 
-> Um RStudio mit Query Service zu verwenden, müssen Sie außerdem den PostgreSQL JDBC 4.2-Treiber installieren. Sie können den JDBC-Treiber von der [Offizielle PostgreSQL-Site](https://jdbc.postgresql.org/download.html).
+> Um RStudio mit Query Service zu verwenden, müssen Sie außerdem den PostgreSQL JDBC 4.2-Treiber installieren. Sie können den JDBC-Treiber von der [Offizielle PostgreSQL-Site](https://jdbc.postgresql.org/download/).
 
 ## Erstellen Sie eine [!DNL Query Service] Verbindung in [!DNL RStudio] Benutzeroberfläche
 
