@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Quellverbindung für Adobe Analytics über die Benutzeroberfläche erstellen, um Kundendaten in Adobe Experience Platform zu importieren.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: ae30ac2fe1c6366c987748e198b9dc3530bc512a
+source-git-commit: 7ad0015dbea0b74673ed0ed2c8c2159065f47ba7
 workflow-type: tm+mt
-source-wordcount: '2211'
-ht-degree: 66%
+source-wordcount: '2243'
+ht-degree: 65%
 
 ---
 
@@ -165,6 +165,10 @@ Die folgende Dokumentation enthält weitere Ressourcen zum Verständnis von Date
 Nachdem Sie die Zuordnungen für Ihre [!DNL Analytics] Report Suite-Daten verwenden, können Sie Filterregeln und -bedingungen anwenden, um Daten selektiv in die [!DNL Profile Service]. Filterunterstützung ist nur verfügbar für [!DNL Analytics] Daten und Daten werden nur vor der Eingabe gefiltert [!DNL Profile.] Alle Daten werden in den Daten-Pool aufgenommen.
 
 #### Filterung auf Zeilenebene
+
+>[!IMPORTANT]
+>
+>Verwenden Sie die Filterung auf Zeilenebene, um Bedingungen anzuwenden und anzugeben, welche Daten verwendet werden sollen **Einschließen in die Profilaufnahme**. Verwenden Sie die Filterung auf Spaltenebene, um die Datenspalten auszuwählen, die Sie verwenden möchten **zur Profilaufnahme ausschließen**.
 
 Sie können Daten nach [!DNL Profile] Aufnahme auf Zeilen- und Spaltenebene. Mit der Filterung auf Zeilenebene können Sie Kriterien definieren, z. B. Zeichenfolge enthält, gleich, beginnt oder endet mit. Sie können auch die Filterung auf Zeilenebene verwenden, um Join-Bedingungen mithilfe von `AND` sowie `OR`und die Bedingungen mithilfe von `NOT`.
 
