@@ -2,9 +2,9 @@
 title: Vorlage für Dokumentations-Self-Service // Ersetzen Sie durch den Namen Ihres Ziels.
 description: Verwenden Sie diese Vorlage, um eine öffentliche Dokumentation für Ihr Ziel im Adobe Experience Platform-Katalog zu erstellen. // Ersetzen Sie durch den Absatz im Abschnitt "Übersicht".
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: 788c02622b5176b41eb6da70bed0994d4824c984
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1452'
 ht-degree: 7%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 7%
 >
 >Diese Dokumentationsseite wurde von der *YourDestination* Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an *Fügen Sie einen Link oder eine E-Mail-Adresse ein, an die Sie zur Aktualisierung gelangen können, z. B. `support@YourDestination.com`.*
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsbeispiele {#use-cases}
 
 Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie die *YourDestination* Ziel, hier finden Sie Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
 
@@ -131,6 +131,13 @@ Wenn Sie alle Details für Ihre Zielverbindung angegeben haben, wählen Sie **[!
 >Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle - Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Lesen [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) für Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel.
+
+### Zuordnen von Attributen und Identitäten {#map}
+
+*Fügen Sie im Schritt Zuordnung des Aktivierungs-Workflows Informationen zu unterstützten Zuordnungen zwischen Quell- und Zielfeldern hinzu. Ihr Ziel unterstützt möglicherweise das Exportieren von Profilattributen, Identitäts-Namespaces oder beidem. Einige Felder sind möglicherweise Pflichtfelder. Zielattribute können vordefiniert oder benutzerdefiniert sein. Machen Sie sich mit den wichtigen Einschränkungen vertraut und verwenden Sie Beispiele, vorzugsweise mit Screenshots. Zwei Beispiele für Zielseiten, die Sie als Referenz verwenden können:*
+
+* *[Pega](/help/destinations/catalog/personalization/pega.md#mapping-example)*
+* *[Medallia](/help/destinations/catalog/voice/medallia-connector.md#map)*
 
 ## Export von Daten/Export validieren {#exported-data}
 
