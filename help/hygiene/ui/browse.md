@@ -5,7 +5,7 @@ exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: f246a014de7869b627a677ac82e98d4556065010
 workflow-type: tm+mt
 source-wordcount: '616'
-ht-degree: 79%
+ht-degree: 100%
 
 ---
 
@@ -52,18 +52,18 @@ Wählen Sie das Trichtersymbol (![Bild des Trichtersymbols](../images/ui/browse/
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"
->title="Status nach Dienst"
->abstract="Hygieneanforderungen werden unabhängig von mehreren Experience Platformen bearbeitet. In diesem Abschnitt wird der aktuelle Verarbeitungsstatus der Anfrage für jeden einzelnen Dienst beschrieben. Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche für Datenhygiene."
+>title="Status nach Service"
+>abstract="Anfragen zur Datenhygiene werden von mehreren Services von Experience Platform unabhängig voneinander bearbeitet. In diesem Abschnitt wird der aktuelle Verarbeitungsstatus der Anfrage für jeden einzelnen Service beschrieben. Weitere Informationen finden Sie im Handbuch zur Datenhygiene-Benutzeroberfläche."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Anzahl der Identitäten"
->abstract="Die Anzahl der Identitäten, die im Rahmen dieses Arbeitsauftrags gelöscht werden mussten. Die in der Zählung enthaltenen Identitäten müssen möglicherweise nicht unbedingt in den betroffenen Datensätzen vorhanden sein. Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche für Datenhygiene."
+>abstract="Die Anzahl der Identitäten, die im Rahmen dieses Arbeitsauftrags gelöscht werden sollen. Die in der Zählung enthaltenen Identitäten müssen nicht unbedingt in den betroffenen Datensätzen vorhanden sein. Weitere Informationen finden Sie im Handbuch zur Datenhygiene-Benutzeroberfläche."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
->title="Antwort auf Kundenlöschung"
->abstract="Wenn ein Benutzer beim Löschen eine Antwort vom System erhält, werden diese Meldungen unter der **[!UICONTROL Ergebnis]** Abschnitt. Wenn ein Problem auftritt, während eine Arbeitsreihenfolge verarbeitet wird, werden alle relevanten Fehlermeldungen in diesem Abschnitt angezeigt, die Sie bei der Fehlerbehebung unterstützen. Weitere Informationen finden Sie im Handbuch zur Datenhygiene-Benutzeroberfläche."
+>title="Antwort auf die Löschung von Privatkunden"
+>abstract="Wenn ein Privatkunden-Löschvorgang eine Antwort vom System erhält, werden diese Meldungen unter dem Abschnitt **[!UICONTROL Ergebnis]** angezeigt. Wenn während der Bearbeitung eines Arbeitsauftrags ein Problem auftritt, werden alle relevanten Fehlermeldungen in diesem Abschnitt angezeigt, um Ihnen bei der Fehlersuche zu helfen. Weitere Informationen finden Sie im Handbuch zur Datenhygiene-Benutzeroberfläche."
 
 Wählen Sie die ID eines aufgelisteten Arbeitsauftrags aus, um dessen Details anzuzeigen.
 
