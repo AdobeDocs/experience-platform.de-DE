@@ -5,10 +5,10 @@ title: Erstellen einer Quellverbindung für MailChimp-Mitglieder über die Platf
 topic-legacy: tutorial
 description: Erfahren Sie, wie Sie über die Platform-Benutzeroberfläche eine Verbindung zwischen Adobe Experience Platform und MailChimp-Mitgliedern herstellen.
 exl-id: dc620ef9-624d-4fc9-8475-bb475ea86eb7
-source-git-commit: ed185d0957c3cd84c33a6ff60c5ded2b17fbfe74
+source-git-commit: 430b544835956ec0b212fb44d48beaae46afdd2e
 workflow-type: tm+mt
 source-wordcount: '682'
-ht-degree: 100%
+ht-degree: 93%
 
 ---
 
@@ -33,7 +33,7 @@ Die [!DNL Mailchimp Members]-Quelle unterstützt sowohl OAuth 2-Aktualisierungs-
 
 | Anmeldeinformationen | Beschreibung |
 | --- | --- |
-| Host | Die Stamm-URL, die für die Verbindung mit der MailChimp-API verwendet wird. Das Format für die Stamm-URL lautet `https://{DC}.api.mailchimp.com`, wobei `{DC}` das Rechenzentrum darstellt, das Ihrem Konto entspricht. |
+| Domain | Die Stamm-URL, die für die Verbindung mit der MailChimp-API verwendet wird. Das Format für die Stamm-URL lautet `https://{DC}.api.mailchimp.com`, wobei `{DC}` das Rechenzentrum darstellt, das Ihrem Konto entspricht. |
 | URL für den Autorisierungstest | Die URL für den Autorisierungstest wird verwendet, um Anmeldeinformationen beim Herstellen einer Verbindung von [!DNL Mailchimp] mit Platform zu überprüfen. Wenn dies nicht angegeben wird, werden die Anmeldeinformationen stattdessen während des Erstellungsschritts der Quellverbindung automatisch überprüft. |
 | Zugriffs-Token | Das entsprechende Zugriffs-Token, das zum Authentifizieren Ihrer Quelle verwendet wird. Dies ist für die OAuth-basierte Authentifizierung erforderlich. |
 
@@ -43,7 +43,7 @@ Weitere Informationen zur Verwendung von OAuth 2 zum Authentifizieren Ihres [!DN
 
 | Anmeldeinformationen | Beschreibung |
 | --- | --- |
-| Host | Die Stamm-URL, die für die Verbindung mit der MailChimp-API verwendet wird. Das Format für die Stamm-URL lautet `https://{DC}.api.mailchimp.com`, wobei `{DC}` das Rechenzentrum darstellt, das Ihrem Konto entspricht. |
+| Domäne | Die Stamm-URL, die für die Verbindung mit der MailChimp-API verwendet wird. Das Format für die Stamm-URL lautet `https://{DC}.api.mailchimp.com`, wobei `{DC}` das Rechenzentrum darstellt, das Ihrem Konto entspricht. |
 | Benutzername | Der Benutzername, der Ihrem MailChimp-Konto entspricht. Dies ist für die einfache Authentifizierung erforderlich. |
 | Passwort | Das Passwort, das Ihrem MailChimp-Konto entspricht. Dies ist für die einfache Authentifizierung erforderlich. |
 
@@ -74,13 +74,13 @@ Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und
 
 #### Authentifizieren mit OAuth 2
 
-Um OAuth 2 zu verwenden, wählen Sie [!UICONTROL OAuth 2-Aktualisierungs-Code] aus, geben Sie Werte für Ihren Host, die URL für den Autorisierungstest und Zugriffs-Token an und klicken Sie auf **[!UICONTROL Verbindung mit Quelle herstellen]**. Warten Sie einige Augenblicke, bis Ihre Anmeldeinformationen validiert wurden, und wählen Sie dann **[!UICONTROL Weiter]** aus, um fortzufahren.
+Um OAuth 2 zu verwenden, wählen Sie [!UICONTROL OAuth 2-Aktualisierungscode], geben Sie Werte für Ihre Domäne, die URL für den Autorisierungstest und das Zugriffstoken an und wählen Sie dann **[!UICONTROL Verbindung mit Quelle herstellen]**. Warten Sie einige Augenblicke, bis Ihre Anmeldeinformationen validiert wurden, und wählen Sie dann **[!UICONTROL Weiter]** aus, um fortzufahren.
 
 ![oauth](../../../../images/tutorials/create/mailchimp-members/oauth.png)
 
 #### Authentifizieren mit Standardauthentifizierung
 
-Um die Standardauthentifizierung zu verwenden, wählen Sie [!UICONTROL Standardauthentifizierung] aus, geben Sie Werte für Ihren Host, Ihren Benutzernamen und Ihr Kennwort ein und wählen Sie **[!UICONTROL Verbindung mit Quelle herstellen]** aus. Warten Sie einige Augenblicke, bis Ihre Anmeldeinformationen validiert wurden, und wählen Sie dann **[!UICONTROL Weiter]** aus, um fortzufahren.
+Um die einfache Authentifizierung zu verwenden, wählen Sie [!UICONTROL Grundlegende Authentifizierung], geben Sie Werte für Ihre Domäne, Ihren Benutzernamen und Ihr Kennwort ein und wählen Sie **[!UICONTROL Verbindung mit Quelle herstellen]**. Warten Sie einige Augenblicke, bis Ihre Anmeldeinformationen validiert wurden, und wählen Sie dann **[!UICONTROL Weiter]** aus, um fortzufahren.
 
 ![De base](../../../../images/tutorials/create/mailchimp-members/basic.png)
 

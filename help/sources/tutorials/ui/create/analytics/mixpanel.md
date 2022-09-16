@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Que
 title: (Beta) Erstellen einer Mixpanel-Quellverbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie eine Quellverbindung für Mixpanel mithilfe der Adobe Experience Platform-Benutzeroberfläche erstellen.
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
-source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
+source-git-commit: bee13becb59e3277921549e6db027ce864bba28b
 workflow-type: tm+mt
-source-wordcount: '897'
-ht-degree: 33%
+source-wordcount: '874'
+ht-degree: 34%
 
 ---
 
@@ -33,7 +33,6 @@ Um eine Verbindung zwischen [!DNL Mixpanel] und Platform herzustellen, müssen S
 
 | Anmeldedaten | Beschreibung | Beispiel |
 | --- | --- | --- |
-| Host | Die [!DNL Mixpanel] API-Endpunkt für den Rohdatenexport. Siehe [!DNL Raw Data Export API] im Abschnitt [Referenzdokumentation zur Mixpanel-API](https://developer.mixpanel.com/reference/overview) für weitere Informationen. | `https://data.mixpanel.com` |
 | Benutzername | Der Benutzername des Dienstkontos, der Ihrer [!DNL Mixpanel] -Konto. Siehe [[!DNL Mixpanel] Dokumentation zu Dienstkonten](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) für weitere Informationen. | `Test8.6d4ee7.mp-service-account` |
 | Passwort | Das Dienstkontokennwort, das Ihrer [!DNL Mixpanel] -Konto. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
 | Projekt-ID | Ihre [!DNL Mixpanel] Projekt-ID. Diese ID ist erforderlich, um eine Quellverbindung zu erstellen. Siehe [[!DNL Mixpanel] Dokumentation zu den Projekteinstellungen](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) und [[!DNL Mixpanel] Handbuch zum Erstellen und Verwalten von Projekten](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) für weitere Informationen. | `2384945` |

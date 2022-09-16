@@ -3,7 +3,7 @@ keywords: Experience Platform;Zendesk;Quellen;Connectoren;Quell-Connectoren;Sour
 title: Erstellen einer Zendesk-Quellverbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Zendesk-Quellverbindung erstellen.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: f0348abd41e7d594109a04fd11ed06857cedfa53
+source-git-commit: e92c2386d9f4a4709f0a749d3ed97e033f066610
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 32%
@@ -33,7 +33,7 @@ Um auf Ihre [!DNL Zendesk] -Konto in Platform angeben, müssen Sie Werte für di
 
 | Anmeldedaten | Beschreibung | Beispiel |
 | --- | --- | --- |
-| Host | Die eindeutige Domäne, die für Ihr Konto spezifisch ist, das während des Registrierungsprozesses erstellt wurde. | `https://yoursubdomain.zendesk.com` |
+| Subdomain | Die eindeutige Domäne, die für Ihr Konto spezifisch ist, das während des Registrierungsprozesses erstellt wurde. | `https://yoursubdomain.zendesk.com` |
 | Zugriffstoken | Zendesk-API-Token. | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
 Weitere Informationen zum Authentifizieren Ihrer [!DNL Zendesk] -Quelle, siehe [[!DNL Zendesk] Quellübersicht](../../../../connectors/customer-success/zendesk.md).

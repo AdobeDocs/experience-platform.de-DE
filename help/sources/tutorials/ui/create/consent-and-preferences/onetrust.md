@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine OneTrust-Quellverbindung erstellen.
 exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
-source-git-commit: 6768b772a983588b36659f42bff5c143a6f625f7
+source-git-commit: cfc6e7cb3877f3b5f716b7f82e7c2d308ef5ed10
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 37%
+source-wordcount: '527'
+ht-degree: 36%
 
 ---
 
@@ -37,7 +37,7 @@ Um eine Verbindung herzustellen [!DNL OneTrust Integration] in Platform angeben,
 
 | Anmeldedaten | Beschreibung | Beispiel |
 | --- | --- | --- |
-| Host | Die Umgebung, aus der die [!DNL OneTrust Integration] -Daten abgerufen werden. | `https://uat.onetrust.com/` |
+| Hostname | Die Umgebung, aus der die [!DNL OneTrust Integration] -Daten abgerufen werden. | `https://uat.onetrust.com/` |
 | Autorisierungstest-URL | (Optional) Die URL für den Autorisierungstest wird verwendet, um Anmeldeinformationen beim Erstellen einer Basisverbindung zu überprüfen. Wenn die Anmeldeinformationen nicht angegeben sind, werden sie stattdessen während des Erstellungsschritts der Quellverbindung automatisch überprüft. |  |
 | Zugriffs-Token | Das Zugriffstoken, das dem [!DNL OneTrust Integration] -Konto. | `ZGFkZDMyMjFhMmEyNDQ2ZGFhNTdkZjNkZjFmM2IyOWE6QjlUSERVUTNjOFVsRmpEZTJ6Vk9oRnF3Sk8xNlNtcm4=` |
 

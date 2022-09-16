@@ -5,10 +5,10 @@ title: Erstellen eines Datenflusses für Zendesk mithilfe der Flow Service-API
 topic-legacy: tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Zendesk verbinden.
 exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
-source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
+source-git-commit: e92c2386d9f4a4709f0a749d3ed97e033f066610
 workflow-type: tm+mt
-source-wordcount: '1977'
-ht-degree: 65%
+source-wordcount: '1996'
+ht-degree: 64%
 
 ---
 
@@ -35,6 +35,7 @@ Um auf Ihre [!DNL Zendesk] -Konto in Platform angeben, müssen Sie Werte für di
 
 | Anmeldedaten | Beschreibung | Beispiel |
 | --- | --- | --- |
+| `subdomain` | Die eindeutige Domäne, die Ihrem Konto zugeordnet ist. | `https://yoursubdomain.zendesk.com` |
 | `accessToken` | Zendesk-API-Token. | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
 Weitere Informationen zum Authentifizieren Ihrer [!DNL Zendesk] -Quelle, siehe [[!DNL Zendesk] Quellübersicht](../../../../connectors/customer-success/zendesk.md).
@@ -77,6 +78,7 @@ curl -X POST \
         "auth": {
             "specName": "OAuth2 Refresh Code",
             "params": {
+                "subdomain": "{SUBDOMAIN}",
                 "accessToken": "{ACCESS_TOKEN}"
             }
         }
@@ -90,6 +92,7 @@ curl -X POST \
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID Ihrer Quelle. Diese ID kann abgerufen werden, nachdem Ihre Quelle registriert und über die [!DNL Flow Service]-API genehmigt wurde. |
 | `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für Platform authentifizieren. |
 | `auth.params.` | Enthält die Anmeldeinformationen, die zum Authentifizieren Ihrer Quelle erforderlich sind. |
+| `auth.params.subdomain` | Die eindeutige Domäne, die Ihrem Konto zugeordnet ist. Das Format der Subdomain lautet `https://yoursubdomain.zendesk.com`. |
 | `auth.params.accessToken` | Das entsprechende Zugriffs-Token, das zum Authentifizieren Ihrer Quelle verwendet wird. Dies ist für die OAuth-basierte Authentifizierung erforderlich. |
 
 **Antwort**
