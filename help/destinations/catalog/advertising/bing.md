@@ -1,5 +1,5 @@
 ---
-keywords: 'Werbung; Schläuche; '
+keywords: Werbung; Schläuche;
 title: Microsoft Bing-Verbindung
 description: Mit dem Microsoft Bing-Verbindungsziel können Sie digitale Kampagnen für Retargeting und Zielgruppen-Targeting in Microsoft Display Advertising durchführen.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
@@ -18,7 +18,7 @@ Die [!DNL Microsoft Bing] Das Ziel hilft beim Senden von Profildaten an [!DNL Mi
 
 So senden Sie Profildaten an [!DNL Microsoft Bing], müssen Sie zunächst eine Verbindung zum Ziel herstellen.
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsbeispiele {#use-cases}
 
 Als Marketer möchte ich Segmente verwenden können, die aus [!DNL Microsoft Advertising IDs] , um Benutzer über Display-Werbung anzusprechen. [!DNL Microsoft Advertising] Kanäle.
 

@@ -2,7 +2,8 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Query Service; Query Service; Verbindung; Verbindung mit Query Service; SSL; ssl; sslmode
 title: SSL-Optionen für Query Service
 description: Erfahren Sie mehr über die SSL-Unterstützung für Verbindungen von Drittanbietern mit Adobe Experience Platform Query Service und über die Verbindung mit dem verifizierbaren SSL-Modus.
-source-git-commit: 92dac8e75e1ddda860d255ce1b7d278041c89325
+exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
+source-git-commit: be877502f63fe08f17abe7cb0cf9f247394bf1ac
 workflow-type: tm+mt
 source-wordcount: '905'
 ht-degree: 1%

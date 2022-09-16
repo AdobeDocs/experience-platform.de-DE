@@ -4,13 +4,13 @@ solution: Experience Platform
 title: Erstellen einer Oracle Eloqua-Quellverbindung über die Platform-Benutzeroberfläche
 topic-legacy: tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform über die Platform-Benutzeroberfläche mit Oracle Eloqua verbinden.
-source-git-commit: a40a1b8fae41c495afd9cdfc3c8d68148e90f2cd
+exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
+source-git-commit: 4c3988ea839c1d1843529eabcb0725f5b12feccc
 workflow-type: tm+mt
 source-wordcount: '466'
-ht-degree: 4%
+ht-degree: 40%
 
 ---
-
 
 # Erstellen Sie eine [!DNL Oracle Eloqua] Quellverbindung über die Platform-Benutzeroberfläche
 
@@ -21,15 +21,15 @@ In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Oracle Eloqua] Quel
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Platform voraus:
 
 * [Quellen](../../../../home.md): Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Platform-Diensten zu strukturieren, zu beschriften und zu erweitern.
-* [Sandboxes](../../../../../sandboxes/home.md): Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen aufteilen, um die Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse zu erleichtern.
+* [Sandboxes](../../../../../sandboxes/home.md): Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 Wenn Sie bereits über eine authentifizierte [!DNL Oracle Eloqua] -Konto in Platform verwenden, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zu [Erstellen eines Datenflusses, um Daten zur Marketing-Automatisierung an Platform zu bringen](../../dataflow/marketing-automation.md).
 
-### Erforderliche Anmeldedaten sammeln
+### Sammeln erforderlicher Anmeldeinformationen
 
 Um eine Verbindung herzustellen [!DNL Oracle Eloqua] in Platform angeben, müssen Sie Werte für die folgenden Authentifizierungseigenschaften angeben:
 
-| Berechtigung | Beschreibung |
+| Anmeldedaten | Beschreibung |
 | --- | --- |
 | Endpunkt | Der Endpunkt Ihrer [!DNL Oracle Eloqua]. |
 | Benutzername | Der Benutzername Ihres [!DNL Oracle Eloqua] -Konto. Der Benutzername muss als `siteName + \\ + username`, wobei `siteName` ist der Unternehmensname, mit dem Sie sich bei [!DNL Oracle Eloqua] und `username` ist Ihr Benutzername. Der Benutzername für die Anmeldung kann beispielsweise wie folgt lauten: `adobe\\emily`. |
@@ -37,11 +37,11 @@ Um eine Verbindung herzustellen [!DNL Oracle Eloqua] in Platform angeben, müsse
 
 Weitere Informationen zu Authentifizierungsberechtigungen für [!DNL Oracle Eloqua], siehe [[!DNL Oracle Eloqua] Authentifizierungshandbuch](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).
 
-Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihre [!DNL Oracle Eloqua] -Konto auf Platform.
+Nachdem Sie die erforderlichen Anmeldeinformationen zusammen haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Oracle Eloqua]-Konto mit Platform zu verknüpfen.
 
-## Verbinden Sie Ihre [!DNL Oracle Eloqua] account
+## Verbinden Sie Ihr [!DNL Oracle Eloqua]-Konto
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** über die linke Navigationsleiste auf [!UICONTROL Quellen] Arbeitsbereich. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
@@ -53,17 +53,16 @@ Die **[!UICONTROL Oracle Eloqua-Konto verbinden]** angezeigt. Auf dieser Seite k
 
 ### Vorhandenes Konto
 
-Um ein vorhandenes Konto zu verwenden, wählen Sie die [!DNL Oracle Eloqua] Konto, mit dem Sie einen neuen Datenfluss erstellen möchten, wählen Sie **[!UICONTROL Nächste]** um fortzufahren.
+Um ein vorhandenes Konto zu verwenden, wählen Sie das [!DNL Oracle Eloqua]-Konto, mit dem Sie einen neuen Datenfluss erstellen möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**, um fortzufahren.
 
-![vorhandene](../../../../images/tutorials/create/oracle-eloqua/existing.png)
+![vorhanden](../../../../images/tutorials/create/oracle-eloqua/existing.png)
 
 ### Neues Konto
 
-Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen, eine optionale Beschreibung und die entsprechenden Werte für Ihre [!DNL Oracle Eloqua] Anmeldedaten. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Verbindung mit Quelle herstellen]** und dann etwas Zeit für die Einrichtung der neuen Verbindung.
+Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen, eine optionale Beschreibung und die entsprechenden Werte für Ihre [!DNL Oracle Eloqua] Anmeldedaten. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
 
-![new](../../../../images/tutorials/create/oracle-eloqua/new.png)
+![neu](../../../../images/tutorials/create/oracle-eloqua/new.png)
 
 ## Nächste Schritte
 
 In diesem Tutorial haben Sie sich authentifiziert und eine Quellverbindung zwischen Ihrer [!DNL Oracle Eloqua] -Konto und -Plattform. Sie können jetzt mit dem nächsten Tutorial fortfahren und [Erstellen eines Datenflusses, um Daten zur Marketing-Automatisierung an Platform zu bringen](../../dataflow/marketing-automation.md).
-

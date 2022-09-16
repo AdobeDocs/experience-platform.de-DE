@@ -7,13 +7,13 @@ exl-id: 41e079f3-75b2-4033-8138-73162c31461a
 source-git-commit: 1127e85852b56cc9db3d1d0d483c1780c961b0bc
 workflow-type: tm+mt
 source-wordcount: '165'
-ht-degree: 11%
+ht-degree: 27%
 
 ---
 
-# [!DNL HTTP API] Connector
+# [!DNL HTTP API]-Connector
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten zu strukturieren, zu beschriften und zu erweitern mithilfe von [!DNL Platform] Dienste. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
 Sie können die [!DNL HTTP API] Quell-Connector zum Streamen Ihrer Daten an Platform. Die [!DNL HTTP API] -Quelle unterstützt von [!DNL Data Prep] Funktionen, mit denen Sie alle nicht XDM-konformen Daten einem XDM-konformen Datensatz zuordnen können.
 

@@ -1,7 +1,8 @@
 ---
 title: Schemafeldergruppe "Balancetransfers"
 description: Dieses Dokument bietet einen Überblick über die Schemafeldergruppe Balance-Übertragungen .
-source-git-commit: 32d8798d426696d8fd4ace4c53a8bf9b4db26b61
+exl-id: be0d2ed6-6547-432a-af2f-409c33e268d4
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 6%

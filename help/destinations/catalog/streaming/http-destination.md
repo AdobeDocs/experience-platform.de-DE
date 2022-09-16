@@ -22,7 +22,7 @@ Das HTTP-API-Ziel ist ein [!DNL Adobe Experience Platform] Streaming-Ziel, mit d
 
 Um Profildaten an HTTP-Endpunkte zu senden, müssen Sie zunächst [Verbindung zum Ziel herstellen](#connect-destination) in [!DNL Adobe Experience Platform].
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsbeispiele {#use-cases}
 
 Mit dem HTTP-API-Ziel können Sie XDM-Profildaten und Zielgruppensegmente in allgemeine HTTP-Endpunkte exportieren. Dort können Sie Ihre eigenen Analysen durchführen oder beliebige andere Vorgänge ausführen, die Sie für aus der Experience Platform exportierte Profildaten benötigen.
 

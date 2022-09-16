@@ -5,7 +5,7 @@ topic-legacy: guide
 description: Das Echtzeit-Kundenprofil führt Daten aus verschiedenen Quellen zusammen und bietet Zugriff auf diese Daten in Form von individuellen Kundenprofilen und zugehörigen Zeitreihenereignissen. die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 source-git-commit: d2182b48e21de059f12ad8923bb3b420ed87bcfc
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2046'
 ht-degree: 100%
 

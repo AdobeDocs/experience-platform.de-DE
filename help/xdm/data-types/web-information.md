@@ -8,20 +8,20 @@ exl-id: bfb00835-5908-4baf-af2a-6d845710e340
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '190'
-ht-degree: 5%
+ht-degree: 15%
 
 ---
 
-# [!UICONTROL Datentyp ] &quot;Web information&quot;
+# [!UICONTROL Webinformationen] Datentyp
 
-[!UICONTROL Web-] Informationen sind ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der Informationen beschreibt, die über ein Erlebnisereignis aufgezeichnet wurden, das für den World Wide Web-Kanal spezifisch ist, einschließlich der Web-Seite, des Referrers und/oder des Links im Zusammenhang mit der On-Page-Interaktion.
+[!UICONTROL Webinformationen] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Informationen beschreibt, die über ein Erlebnisereignis aufgezeichnet wurden, das für den World Wide Web-Kanal spezifisch ist, einschließlich der Webseite, des Referrers und/oder des Links im Zusammenhang mit der On-Page-Interaktion.
 
 ![](../images/data-types/web-information.png)
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `webInteraction` | [[!UICONTROL Webinteraktion]](./web-interaction.md) | Beschreibt die Details des Weblinks oder der URL, die der Interaktion entspricht. |
-| `webPageDetails` | [[!UICONTROL Webseitendetails]](./webpage-details.md) | Beschreibt die Details der Webseite, auf der die Web-Interaktion stattgefunden hat. |
+| `webInteraction` | [[!UICONTROL Web-Interaktion]](./web-interaction.md) | Beschreibt die Details des Weblinks oder der URL, die der Interaktion entspricht. |
+| `webPageDetails` | [[!UICONTROL Web-Seitendetails]](./webpage-details.md) | Beschreibt die Details der Webseite, auf der die Web-Interaktion stattgefunden hat. |
 | `webReferrer` | [!UICONTROL Objekt] | Beschreibt den Referrer einer Web-Interaktion, d. h. die URL, von der ein Besucher unmittelbar vor der Aufzeichnung der aktuellen Web-Interaktion kam. Enthält die folgenden Untereigenschaften: <ul><li>`URL`: Die Referrer-URL.</li><li>`type`: Der Typ der verweisenden Stelle.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}

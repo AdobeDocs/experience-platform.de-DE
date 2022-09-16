@@ -1,12 +1,12 @@
 ---
 keywords: Cloud-Speicher-Ziel; Cloud-Speicher
-title: Übersicht über Cloud-Speicher-Ziele
+title: Cloud-Speicher-Ziele – Übersicht
 description: Adobe Experience Platform kann Ihre Segmente als Datendateien an Ihre Amazon S3-, AWS Kinesis-, Azure Event Hubs- oder SFTP-Cloud-Speicherorte senden.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
 source-git-commit: 818c9a6f5cd39db1405827b657872b99254ad1e5
 workflow-type: tm+mt
 source-wordcount: '295'
-ht-degree: 2%
+ht-degree: 11%
 
 ---
 

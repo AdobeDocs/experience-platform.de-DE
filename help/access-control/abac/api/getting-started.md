@@ -6,7 +6,7 @@ exl-id: d1a66afa-dff4-49d7-b57c-527f05977155
 source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
 workflow-type: tm+mt
 source-wordcount: '356'
-ht-degree: 64%
+ht-degree: 73%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 64%
 
 >[!IMPORTANT]
 >
->Die attribut-basierte Zugriffskontrolle ist derzeit in einer eingeschränkten Version für US-Kunden im Gesundheitswesen verfügbar. Diese Funktion steht allen Real-time Customer Data Platform-Kunden nach der vollständigen Veröffentlichung zur Verfügung.
+>Die attributbasierte Zugriffssteuerung ist derzeit nur in einer eingeschränkten Version für US-Kunden im Gesundheitswesen verfügbar. Diese Funktion steht allen Kunden von Real-time Customer Data Platform nach der vollständigen Veröffentlichung zur Verfügung.
 
 Dieses Entwicklerhandbuch enthält Schritte, die Sie bei der Verwendung der attributbasierten Zugriffssteuerung unterstützen, um Rollen, Produkte, Berechtigungskategorien und Berechtigungssätze in Adobe Experience Platform zu verwalten. Außerdem enthält es Beispiel-API-Aufrufe für die Durchführung verschiedener Vorgänge.
 

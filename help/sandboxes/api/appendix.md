@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # Anhang zum Sandbox-API-Handbuch
 
-Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mit der [!DNL Sandbox]-API.
+Dieses Dokument enthält zusätzliche Informationen zur Arbeit mit dem [!DNL Sandbox] API.
 
 ## Verwenden von Abfrageparametern {#query}
 
@@ -22,7 +22,7 @@ Die [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/reference
 
 >[!NOTE]
 >
->Die Abfrageparameter `limit` und `offset` müssen zusammen angegeben werden. Wenn Sie nur eine angeben, gibt die API einen Fehler zurück. Wenn Sie &quot;Keine&quot;angeben, ist die Standardbegrenzung 50 und der Versatz 0.
+>Die `limit` und `offset` -Abfrageparameter müssen zusammen angegeben werden. Wenn Sie nur eine angeben, gibt die API einen Fehler zurück. Wenn Sie &quot;Keine&quot;angeben, ist die Standardbegrenzung 50 und der Versatz 0.
 
 | Parameter | Beschreibung |
 | --- | --- |

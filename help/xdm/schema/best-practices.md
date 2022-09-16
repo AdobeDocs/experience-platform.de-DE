@@ -46,7 +46,7 @@ Das folgende Beispiel stellt eine vereinfachte ERD für ein Unternehmen dar, das
 
 ## Sortieren von Entitäten in Profil-, Nachschlageungs- und Ereigniskategorien
 
-Nachdem Sie eine ERD erstellt haben, um die wesentlichen Entitäten zu identifizieren, die Sie einbringen möchten [!DNL Platform]müssen diese Entitäten nach Profil-, Lookup- und Ereigniskategorien sortiert werden:
+Nachdem Sie eine ERD erstellt haben, um die wesentlichen Entitäten zu identifizieren, die Sie einführen möchten [!DNL Platform]müssen diese Entitäten nach Profil-, Lookup- und Ereigniskategorien sortiert werden:
 
 | Kategorie | Beschreibung |
 | --- | --- |
@@ -138,7 +138,7 @@ In der folgenden Tabelle sind einige allgemeine Entitätsbeziehungen und die dar
 
 Im vorherigen Abschnitt wurden zwar einige allgemeine Richtlinien für die Entscheidung, wie Sie Ihre Entitäten kategorisieren, festgelegt, es ist jedoch wichtig zu verstehen, dass es häufig Vor- und Nachteile bei der Auswahl einer Entitätskategorie gegenüber einer anderen geben kann. Die folgende Fallstudie soll veranschaulichen, wie Sie in diesen Situationen Ihre Optionen in Betracht ziehen können.
 
-Ein Unternehmen verfolgt aktive Abonnements für seine Kunden, bei denen ein Kunde über viele Abonnements verfügen kann. Das Unternehmen möchte auch Abonnements für Anwendungsfälle der Segmentierung einbeziehen, z. B. das Auffinden aller Benutzer mit aktiven Abonnements.
+Ein Unternehmen verfolgt aktive Abonnements für seine Kunden nach, bei denen ein Kunde über viele Abonnements verfügen kann. Das Unternehmen möchte auch Abonnements für Anwendungsfälle der Segmentierung einbeziehen, z. B. das Auffinden aller Benutzer mit aktiven Abonnements.
 
 In diesem Szenario hat das Unternehmen zwei Möglichkeiten, die Abonnements eines Kunden in seinem Datenmodell zu repräsentieren:
 

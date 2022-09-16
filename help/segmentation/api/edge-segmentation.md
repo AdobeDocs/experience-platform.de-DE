@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform; Startseite; beliebte Themen; Segmentierung; Segmentierung; Segmentierungsdienst; Kantensegmentierung; Edge-Segmentierung; Streaming-Edge
 solution: Experience Platform
-title: 'Edge-Segmentierung mithilfe der API '
+title: Edge-Segmentierung mithilfe der API
 topic-legacy: developer guide
 description: Dieses Dokument enthält Beispiele für die Verwendung der Kantensegmentierung mit der Adobe Experience Platform Segmentation Service-API.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f

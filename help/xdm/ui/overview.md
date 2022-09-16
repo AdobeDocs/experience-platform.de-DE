@@ -12,33 +12,33 @@ ht-degree: 9%
 
 ---
 
-#  Übersicht über SchemasUI
+# [!UICONTROL Schemas] Übersicht über die Benutzeroberfläche
 
-Der Arbeitsbereich [!UICONTROL Schemas] in der Adobe Experience Platform-Benutzeroberfläche ermöglicht Ihnen die Verwaltung von XDM-Ressourcen (Experience-Datenmodell), einschließlich Schemas, Klassen, Schemafeldern und Datentypen. Sie können die von Adobe bereitgestellten Kernressourcen anzeigen und untersuchen sowie benutzerdefinierte Ressourcen und Schemas für Ihr Unternehmen erstellen.
+Die [!UICONTROL Schemas] Mit Workspace in der Adobe Experience Platform-Benutzeroberfläche können Sie Experience-Datenmodell (XDM)-Ressourcen verwalten, einschließlich Schemas, Klassen, Schemafeldgruppen und Datentypen. Sie können die von Adobe bereitgestellten Kernressourcen anzeigen und untersuchen sowie benutzerdefinierte Ressourcen und Schemas für Ihr Unternehmen erstellen.
 
-Um in der Platform-Benutzeroberfläche auf den Arbeitsbereich zuzugreifen, wählen Sie in der linken Leiste **[!UICONTROL Schemas]** aus.
+Um auf den Arbeitsbereich in der Platform-Benutzeroberfläche zuzugreifen, wählen Sie **[!UICONTROL Schemas]** in der linken Leiste.
 
 ![](../images/ui/overview/schemas-tab.png)
 
 ## Erste Schritte
 
-Wenn Sie den Arbeitsbereich zum ersten Mal verwenden, beginnen Sie mit dem Leitfaden zu [Vorhandene Ressourcen in der Benutzeroberfläche](./explore.md) zu erkunden, um sich mit den verschiedenen Registerkarten und der Schema-Arbeitsfläche vertraut zu machen.
+Wenn Sie den Arbeitsbereich zum ersten Mal verwenden, beginnen Sie mit dem Handbuch zu [Erkunden vorhandener Ressourcen in der Benutzeroberfläche](./explore.md) um sich mit den verschiedenen Registerkarten und der Schema-Arbeitsfläche vertraut zu machen.
 
-Es wird außerdem empfohlen, das [Tutorial zur Schemaerstellung](../tutorials/create-schema-ui.md) zu befolgen, um ein Beispielschema zu erstellen und eine vollständige Übersicht über die Funktionen von [!DNL Schema Editor] im Prozess zu erhalten.
+Es wird außerdem empfohlen, die [Tutorial zur Schemaerstellung](../tutorials/create-schema-ui.md) , um ein Beispielschema zu erstellen und eine vollständige Übersicht über die [!DNL Schema Editor]-Funktionen im Prozess.
 
 ## Erstellen und Verwalten von XDM-Ressourcen
 
-Der Arbeitsbereich [!UICONTROL Schemas] bietet leistungsstarke Tools zum Erstellen und Anpassen der XDM-Ressourcen Ihres Unternehmens. In der folgenden Dokumentation erfahren Sie, wie Sie die einzelnen Ressourcentypen in der Benutzeroberfläche erstellen und bearbeiten:
+Die [!UICONTROL Schemas] Workspace bietet leistungsstarke Tools zum Erstellen und Anpassen der XDM-Ressourcen Ihres Unternehmens. In der folgenden Dokumentation erfahren Sie, wie Sie die einzelnen Ressourcentypen in der Benutzeroberfläche erstellen und bearbeiten:
 
-* [Schemas](./resources/schemas.md)
+* [Schemata](./resources/schemas.md)
 * [Klassen](./resources/classes.md)
 * [Feldergruppen](./resources/field-groups.md)
 * [Datentypen](./resources/data-types.md)
 
 ## Definieren von XDM-Feldern
 
-Klassen, Feldergruppen und Datentypen tragen alle Felder zu einem Schema bei. Beim Hinzufügen von Feldern zu diesen Ressourcen können Sie aus einer Liste von Standardfeldtypen wählen und für bestimmte Anwendungsfälle auch spezielle Felder definieren. Weitere Informationen finden Sie im Handbuch [Definieren von XDM-Feldern in der Benutzeroberfläche](./fields/overview.md) .
+Klassen, Feldergruppen und Datentypen tragen alle Felder zu einem Schema bei. Beim Hinzufügen von Feldern zu diesen Ressourcen können Sie aus einer Liste von Standardfeldtypen wählen und für bestimmte Anwendungsfälle auch spezielle Felder definieren. Weitere Informationen finden Sie im Handbuch unter [Definieren von XDM-Feldern in der Benutzeroberfläche](./fields/overview.md) für weitere Informationen.
 
 ## Nächste Schritte
 
-Dieses Dokument bietet eine Einführung in den Arbeitsbereich [!UICONTROL Schemas] in der Platform-Benutzeroberfläche. Weitere Informationen zum Verwalten von Schemas und anderen XDM-Ressourcen finden Sie in der Dokumentation, die in dieser Übersicht verlinkt ist.
+In diesem Dokument erhalten Sie eine Einführung in die [!UICONTROL Schemas] Arbeitsbereich in der Platform-Benutzeroberfläche. Weitere Informationen zum Verwalten von Schemas und anderen XDM-Ressourcen finden Sie in der Dokumentation, die in dieser Übersicht verlinkt ist.

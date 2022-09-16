@@ -8,13 +8,13 @@ exl-id: c9cc569b-1a91-4a6e-8bfd-7f8ec07d01d4
 source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
 source-wordcount: '341'
-ht-degree: 5%
+ht-degree: 17%
 
 ---
 
-#  CommerceData-Typ
+# [!UICONTROL Handel] Datentyp
 
- Ruft einen standardmäßigen Experience-Datenmodell (XDM)-Datentyp ab, der die Datensätze im Zusammenhang mit Kauf- und Verkaufsaktivitäten beschreibt.
+[!UICONTROL Handel] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der die Datensätze im Zusammenhang mit Kauf- und Verkaufsaktivitäten beschreibt.
 
 <img src="../images/data-types/commerce.PNG" width="400" /><br />
 
@@ -27,7 +27,7 @@ ht-degree: 5%
 | `productListAdds` | [[!UICONTROL Maßnahme]](./measure.md) | Das Hinzufügen eines Produkts zur Produktliste, z. B. ein Produkt, das einem Warenkorb hinzugefügt wird. |
 | `productListOpens` | [[!UICONTROL Maßnahme]](./measure.md) | Die Initialisierungen einer neuen Produktliste, z. B. eines gerade erstellten Warenkorbs. |
 | `productListRemovals` | [[!UICONTROL Maßnahme]](./measure.md) | Entfernung oder Entfernung eines Produkteintrags aus einer Produktliste, z. B. Entfernung eines Produkts aus einem Warenkorb. |
-| `productListReopens` | [[!UICONTROL Maßnahme]](./measure.md) | Eine Produktliste, die zuvor verlassen wurde und vom Benutzer erneut aktiviert wurde. |
+| `productListReopens` | [[!UICONTROL Maßnahme]](./measure.md) | Eine Produktliste, die zuvor abgebrochen wurde und vom Benutzer erneut aktiviert wurde. |
 | `productListViews` | [[!UICONTROL Maßnahme]](./measure.md) | Beschreibt, wann eine Ansicht oder Ansichten einer Produktliste aufgetreten sind. |
 | `productViews` | [[!UICONTROL Maßnahme]](./measure.md) | Beschreibt, wann eine Ansicht oder Ansichten eines einzelnen Produkts aufgetreten sind. |
 | `purchases` | [[!UICONTROL Maßnahme]](./measure.md) | Wird verwendet, um zu verfolgen, wann eine Bestellung akzeptiert wurde. Das Kaufereignis ist die einzige erforderliche Aktion bei einer Commerce-Konversion. Auf das Kaufereignis muss eine Produktliste verwiesen werden. |

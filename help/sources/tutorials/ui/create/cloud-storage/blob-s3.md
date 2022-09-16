@@ -9,16 +9,16 @@ exl-id: de2db0cb-3ce4-46d1-96c4-00f779f81670
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '144'
-ht-degree: 0%
+ht-degree: 27%
 
 ---
 
-# Erstellen einer Quellverbindung [!DNL Azure Blob] oder [!DNL Amazon] S3 in der Benutzeroberfläche
+# Erstellen Sie eine [!DNL Azure Blob] oder [!DNL Amazon] S3-Quellverbindung in der Benutzeroberfläche
 
 Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, extern bezogene Daten auf geplanter Basis zu erfassen.
 
-Cloud-Speicher-Quellen können Ihre eigenen Daten in [!DNL Platform] übertragen, ohne herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON-, XDM Parquet- oder als Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird in den Sources-Workflow integriert. [!DNL Platform] ermöglicht Ihnen das Einbringen von Daten aus  [!DNL Azure Blob] und  [!DNL Amazon S3] durch Batches.
+Mit Cloud-Speicherquellen können Sie Ihre eigenen Daten in [!DNL Platform] übertragen, ohne sie herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON, XDM Parquet oder mit Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird in den Quell-Workflow integriert. [!DNL Platform] ermöglicht Ihnen das Einbringen von Daten aus [!DNL Azure Blob] und [!DNL Amazon S3] durch Batches.
 
-Ausführliche Anweisungen zur Verwendung des Quell-Connectors [!DNL Azure Blob] finden Sie im [[!DNL Azure Blob] Quell-Connector-Handbuch](./blob.md).
+Detaillierte Anweisungen zur Verwendung des [!DNL Azure Blob] Quell-Connector lesen Sie bitte den Abschnitt [[!DNL Azure Blob] Quell-Connector-Handbuch](./blob.md).
 
-Ausführliche Anweisungen zur Verwendung des Quell-Connectors [!DNL Amazon S3] finden Sie im [[!DNL Amazon S3] Quell-Connector-Handbuch](./blob.md).
+Detaillierte Anweisungen zur Verwendung des [!DNL Amazon S3] Quell-Connector lesen Sie bitte den Abschnitt [[!DNL Amazon S3] Quell-Connector-Handbuch](./blob.md).

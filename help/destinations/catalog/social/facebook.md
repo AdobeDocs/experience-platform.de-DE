@@ -20,7 +20,7 @@ Sie können dieses Ziel für Zielgruppen-Targeting über [!DNL Facebook’s] -Fa
 
 ![Facebook-Ziel in der Adobe Experience Platform-Benutzeroberfläche](../../assets/catalog/social/facebook/catalog.png)
 
-## Anwendungsfälle
+## Anwendungsbeispiele
 
 So können Sie besser verstehen, wie und wann die Variable [!DNL Facebook] Ziel: Hier finden Sie zwei Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit dieser Funktion lösen können.
 

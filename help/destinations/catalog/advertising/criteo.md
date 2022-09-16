@@ -6,7 +6,7 @@ exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
 source-git-commit: 8211ca28462548e1c17675e504e6de6f5cc55e73
 workflow-type: tm+mt
 source-wordcount: '1007'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -51,7 +51,7 @@ Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten steh
 | Exporttyp | Segmentexport | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer oder andere), die im [!DNL Criteo] Ziel. |
 | Exporthäufigkeit | Streaming | Streaming-Ziele sind &quot;immer auf&quot;-API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Mehr dazu [Streaming-Ziele](../../destination-types.md#streaming-destinations). |
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsbeispiele {#use-cases}
 
 Damit Sie besser verstehen können, wie Sie die [!DNL Criteo] Ziel finden Sie hier einige Ziele, die Adobe Experience Platform-Kunden mit erreichen können. [!DNL Criteo]:
 
@@ -177,7 +177,7 @@ Der Anfragetext zum Entfernen des Benutzerprofils, das beim [!DNL Criteo] -Verbi
 
 ## Datennutzung und -Governance {#data-usage}
 
-Alle Adobe Experience Platform-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Detaillierte Informationen dazu, wie Adobe Experience Platform Data Governance durchsetzt, finden Sie im Abschnitt [Data Governance - Übersicht](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=en).
+Alle Adobe Experience Platform-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Detaillierte Informationen dazu, wie Adobe Experience Platform Data Governance durchsetzt, finden Sie im Abschnitt [Data Governance - Übersicht](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=de).
 
 ## Weitere Ressourcen
 

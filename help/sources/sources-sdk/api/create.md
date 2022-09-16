@@ -7,8 +7,8 @@ description: Im folgenden Dokument erfahren Sie, wie Sie eine Verbindungsspezifi
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
 source-git-commit: ae5bb475bca90b31d8eb7cf6b66d4d191d36ac5c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '800'
+ht-degree: 48%
 
 ---
 

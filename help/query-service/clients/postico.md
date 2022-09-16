@@ -12,25 +12,25 @@ ht-degree: 7%
 
 ---
 
-# Verbinden von [!DNL Postico] mit Query Service (Mac)
+# Verbinden [!DNL Postico] zu Query Service (Mac)
 
-In diesem Dokument werden die Schritte zum Verbinden von [!DNL Postico] mit Adobe Experience Platform [!DNL Query Service] beschrieben.
+In diesem Dokument werden die Schritte zum Verbinden von [!DNL Postico] mit Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
-> In diesem Handbuch wird davon ausgegangen, dass Sie bereits Zugriff auf [!DNL Postico] haben und mit der Navigation in der Benutzeroberfläche vertraut sind. Weitere Informationen zu [!DNL Postico] finden Sie in der [offiziellen [!DNL Postico] Dokumentation](https://eggerapps.at/postico/docs).
+> In diesem Handbuch wird davon ausgegangen, dass Sie bereits Zugriff auf [!DNL Postico] und sind mit dem Navigieren in der Benutzeroberfläche vertraut. Weitere Informationen [!DNL Postico] finden Sie im Abschnitt [offiziell [!DNL Postico] Dokumentation](https://eggerapps.at/postico/docs).
 > 
-> Außerdem ist [!DNL Postico] **nur** auf macOS-Geräten verfügbar.
+> Zusätzlich [!DNL Postico] is **only** auf macOS-Geräten verfügbar.
 
-Um [!DNL Postico] mit Query Service zu verbinden, öffnen Sie [!DNL Postico] und wählen Sie **[!DNL New Favorite]** aus.
+Verbindung herstellen [!DNL Postico] zu Query Service, öffnen Sie [!DNL Postico] und wählen Sie **[!DNL New Favorite]**.
 
 ![](../images/clients/postico/open-postico.png)
 
 Sie können jetzt Werte eingeben, um eine Verbindung mit Adobe Experience Platform herzustellen.
 
-Weitere Informationen zum Auffinden Ihrer Datenbanknamen, Host-, Port- und Anmeldedaten finden Sie im Handbuch [Anmeldeinformationen](../ui/credentials.md). Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei [!DNL Platform] an, wählen Sie **[!UICONTROL Abfragen]**, gefolgt von **[!UICONTROL Anmeldeinformationen]**.
+Weitere Informationen zum Auffinden Ihres Datenbanknamens, Hosts, Ports und Ihrer Anmeldedaten finden Sie in der [Handbuch zu Anmeldeinformationen](../ui/credentials.md). Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei [!DNL Platform], wählen Sie **[!UICONTROL Abfragen]**, gefolgt von **[!UICONTROL Anmeldeinformationen]**.
 
-Nachdem Sie Ihre Anmeldedaten eingefügt haben, wählen Sie **[!DNL Connect]** aus, um eine Verbindung mit Query Service herzustellen.
+Nachdem Sie Ihre Anmeldedaten eingefügt haben, wählen Sie **[!DNL Connect]** , um eine Verbindung mit Query Service herzustellen.
 
 ![](../images/clients/postico/authentication-details.png)
 
@@ -44,7 +44,7 @@ Um eine neue SQL-Abfrage zu erstellen, wählen Sie &quot;SQL-Abfrage&quot;aus un
 
 ![](../images/clients/postico/create-query.png)
 
-Es wird ein Feld angezeigt, in das Sie die auszuführende Abfrage eingeben können. Wenn Sie fertig sind, wählen Sie **[!DNL Execute Statement]** aus, um die Abfrage auszuführen.
+Es wird ein Feld angezeigt, in das Sie die auszuführende Abfrage eingeben können. Wenn Sie fertig sind, wählen Sie **[!DNL Execute Statement]** , um die Abfrage auszuführen.
 
 ![](../images/clients/postico/run-statement.png)
 
@@ -54,4 +54,4 @@ Es wird eine Tabelle mit den Ergebnissen Ihrer abgeschlossenen Abfrage-Ausführu
 
 ## Nächste Schritte
 
-Nachdem Sie sich mit [!DNL Query Service] angemeldet haben, können Sie [!DNL Postico] verwenden, um Abfragen zu schreiben. Weitere Informationen dazu, wie Sie Abfragen formulieren und ausführen, finden Sie im Handbuch zum Thema [Ausführen von Abfragen](../best-practices/writing-queries.md).
+Jetzt, da Sie mit [!DNL Query Service]können Sie [!DNL Postico] , um Abfragen zu schreiben. Weitere Informationen dazu, wie Sie Abfragen formulieren und ausführen, finden Sie im Handbuch zum Thema [Ausführen von Abfragen](../best-practices/writing-queries.md).

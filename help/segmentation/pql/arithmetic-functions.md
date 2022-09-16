@@ -12,9 +12,9 @@ ht-degree: 87%
 
 ---
 
-# Arithmetische Funktionen 
+# Arithmetische Funktionen
 
-Mit arithmetischen Funktionen lassen sich einfache Berechnungen für Werte in [!DNL Profile Query Language] (PQL) durchführen. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md).
+Mit arithmetischen Funktionen lassen sich einfache Berechnungen für Werte in [!DNL Profile Query Language] (PQL) durchführen. Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] Übersicht](./overview.md).
 
 ## Addieren
 

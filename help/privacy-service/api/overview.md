@@ -1,7 +1,8 @@
 ---
-title: Privacy Service-API-Handbuch
-description: Erfahren Sie, wie Sie mit der Privacy Service-API Datenschutzaufträge für unterstützte Adobe Experience Cloud-Anwendungen programmgesteuert verwalten.
-source-git-commit: 196147e7691010707953561c110a3934fec8ba1b
+title: Handbuch zur Privacy Service-API
+description: Erfahren Sie, wie Sie mit der Privacy Service-API Datenschutzaufträge für unterstützte Adobe Experience Cloud-Anwendungen programmgesteuert verwalten können.
+exl-id: 665466ac-2447-4a9d-a8cf-62092c09e431
+source-git-commit: bda8d0ee1db4b58b4b856a23a8790cd7f76c0656
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 21%
@@ -14,20 +15,20 @@ Die Privacy Service-API bietet mehrere Endpunkte, mit denen Sie Datenschutzauftr
 
 >[!NOTE]
 >
->Dieses Handbuch behandelt die Verwendung der [!DNL Privacy Service] API. Weitere Informationen zur Verwendung der Benutzeroberfläche finden Sie in der [Übersicht über die Privacy Service-Benutzeroberfläche](../ui/overview.md).
+>In diesem Handbuch wird die Verwendung der [!DNL Privacy Service] API. Weitere Informationen zur Verwendung der Benutzeroberfläche finden Sie in der [Übersicht über die Privacy Service-Benutzeroberfläche](../ui/overview.md).
 
-Um alle verfügbaren Endpunkte und CRUD-Vorgänge Ansicht, besuchen Sie die [Privacy Service-API-Verweis](https://www.adobe.io/experience-platform-apis/references/privacy-service/).
+Um alle verfügbaren Endpunkte und CRUD-Vorgänge anzuzeigen, besuchen Sie die [Privacy Service-API-Referenz](https://www.adobe.io/experience-platform-apis/references/privacy-service/).
 
 ## Datenschutzaufträge
 
-Wenn der Privacy Service eine Anfrage auf den Zugriff auf die personenbezogenen Daten eines Betreffenden oder deren Löschung erhält, erstellt das System Datenschutzaufträge, um diese Anforderung zu erfüllen. Jeder Auftrag zum Schutz der Privatsphäre enthält Identitätsdaten zur betroffenen Person, Metadaten zum Adobe Experience Cloud-Produkt, für das der Auftrag gilt, und den Verarbeitungsstatus des Auftrags.
+Wenn Privacy Service eine Anfrage zum Zugriff auf oder Löschen der personenbezogenen Daten eines Betreffs erhalten, erstellt das System Datenschutzaufträge, um diese Anfrage zu erfüllen. Jeder Datenschutzauftrag enthält Identitätsdaten zum Datensubjekt, Metadaten zum Adobe Experience Cloud-Produkt, für das der Auftrag gilt, und den Verarbeitungsstatus des Auftrags.
 
-Die `/jobs` endpoint ermöglicht das Erstellen und Abrufen von Datenschutzaufträgen für Ihr Unternehmen. Weitere Informationen zur Verwendung dieses Endpunkts finden Sie unter [Endpunkt für Datenschutzaufträge](./privacy-jobs.md).
+Die `/jobs` Mit dem -Endpunkt können Sie Datenschutzaufträge für Ihre Organisation erstellen und abrufen. Informationen zur Verwendung dieses Endpunkts finden Sie unter [Endleitfaden für Datenschutzaufträge](./privacy-jobs.md).
 
 ## Einverständnis
 
-Bestimmte Bestimmungen bedürfen der ausdrücklichen Zustimmung des Kunden, bevor seine persönlichen Daten erhoben werden können. Die `/consent` endpoint ermöglicht es Ihnen, Anfragen zur Kundengenehmigung zu verarbeiten und in Ihren Datenschutz-Workflow zu integrieren. Siehe [Endpunkt-Handbuch für Zustimmung](./consent.md) um mehr zu erfahren.
+Bestimmte Vorschriften erfordern eine ausdrückliche Zustimmung des Kunden, bevor seine personenbezogenen Daten erfasst werden können. Die `/consent` Mit dem Endpunkt können Sie Anfragen zur Kundenzustimmung verarbeiten und in Ihren Datenschutz-Workflow integrieren. Siehe [Einverständnisendpunkt-Handbuch](./consent.md) , um mehr zu erfahren.
 
 ## Nächste Schritte
 
-Lesen Sie die folgenden Informationen, um mit dem Aufrufen der Privacy Service-API zu beginnen: [Erste Schritte](./getting-started.md) wählen Sie dann eine der Endpunkt-Hilfslinien aus, um zu erfahren, wie bestimmte Endpunkte verwendet werden.
+Um mit der Privacy Service-API Aufrufe zu tätigen, lesen Sie den Abschnitt [Erste Schritte](./getting-started.md) Wählen Sie dann eine der Endpunktleitfäden aus, um zu erfahren, wie Sie bestimmte Endpunkte verwenden.

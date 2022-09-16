@@ -5,7 +5,7 @@ exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
 source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
 workflow-type: tm+mt
 source-wordcount: '238'
-ht-degree: 7%
+ht-degree: 12%
 
 ---
 
@@ -25,4 +25,4 @@ Die folgenden Dokumente enthalten weitere Informationen zur Verwendung des Marke
 
 - Informationen zu den für Real-time Customer Data Platform B2B Edition verfügbaren Zielen finden Sie im [Zielkatalog](../../destinations/catalog/overview.md).
 - Informationen zu den Identitäten, die in Marketo Engage exportiert werden können, finden Sie in der [Dokumentation zum Marketo Engage-Ziel](../../destinations/catalog/adobe/marketo-engage.md).
-- Informationen zum Herstellen einer Verbindung zum Marketo Engage-Ziel in der Experience Platform-Benutzeroberfläche und zum Exportieren von Daten finden Sie unter [&quot;Push an Adobe Experience Platform Segment to a Marketo Static List&quot;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en).
+- Informationen zum Herstellen einer Verbindung zum Marketo Engage-Ziel in der Experience Platform-Benutzeroberfläche und zum Exportieren von Daten finden Sie unter [&quot;Push an Adobe Experience Platform Segment to a Marketo Static List&quot;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=de).

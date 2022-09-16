@@ -17,7 +17,7 @@ Um Daten in Adobe Experience Platform zu erfassen, müssen Format und Datenstruk
 
 Für jedes Schema, das Sie in der Experience Platform-Benutzeroberfläche definieren, können Sie ein JSON-Beispielobjekt generieren, das der Schemastruktur entspricht. Dieses Objekt kann als Vorlage für alle Daten dienen, die in Datensätze aufgenommen werden, die das betreffende Schema verwenden.
 
-Wählen Sie in der Platform-Benutzeroberfläche im linken Navigationsbereich **[!UICONTROL Schemas]** aus. Suchen Sie auf der Registerkarte **[!UICONTROL Durchsuchen]** das Schema, für das Sie Beispieldaten generieren möchten. Wählen Sie es aus der Liste aus und die rechte Leiste wird aktualisiert, um Details zum Schema anzuzeigen. Wählen Sie hier **[!UICONTROL Beispieldatei herunterladen]** aus.
+Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Schemas]** in der linken Navigation. Unter dem **[!UICONTROL Durchsuchen]** Suchen Sie nach dem Schema, für das Sie Beispieldaten generieren möchten. Wählen Sie es aus der Liste aus und die rechte Leiste wird aktualisiert, um Details zum Schema anzuzeigen. Wählen Sie von hier aus **[!UICONTROL Beispieldatei herunterladen]**.
 
 ![](../images/ui/sample/sample-data.png)
 
@@ -25,8 +25,8 @@ Eine JSON-Beispieldatei wird vom Browser heruntergeladen. Sie können diese Date
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie eine JSON-Beispieldatei aus einem XDM-Schema in der Platform-Benutzeroberfläche generieren. Informationen zum Generieren von Beispieldaten mithilfe der Schema Registry-API finden Sie im [Beispiel-Daten-Endpunkthandbuch](../api/sample-data.md).
+In diesem Handbuch wurde beschrieben, wie Sie eine JSON-Beispieldatei aus einem XDM-Schema in der Platform-Benutzeroberfläche generieren. Informationen zum Generieren von Beispieldaten mithilfe der Schema Registry-API finden Sie in der [Beispiel-Daten-Endpunkthandbuch](../api/sample-data.md).
 
-Sobald Sie bereit sind, Daten zu erfassen, finden Sie im Tutorial zum [Zuordnen einer CSV-Datei zu XDM](../../ingestion/tutorials/map-a-csv-file.md) Informationen dazu, wie Sie eine flache Datendatei (z. B. eine CSV-Datei) einem XDM-Schema zuordnen und sie in Platform erfassen. Alternativ können Sie eine [Quellverbindung](../../sources/home.md) einrichten, um Ihre Daten aus einer externen Quelle einzubringen und sie XDM zuzuordnen.
+Sobald Sie bereit sind, Daten zu erfassen, finden Sie im Tutorial zu [Zuordnen einer CSV-Datei zu XDM](../../ingestion/tutorials/map-a-csv-file.md) , um zu erfahren, wie Sie eine flache Datendatei (z. B. ein CSV) einem XDM-Schema zuordnen und in Platform erfassen. Alternativ können Sie eine [Quellverbindung](../../sources/home.md) , um Ihre Daten aus einer externen Quelle einzubringen und sie XDM zuzuordnen.
 
-Weitere Informationen zu den Funktionen des Arbeitsbereichs [!UICONTROL Schemas] in der Benutzeroberfläche finden Sie in der [[!UICONTROL Übersicht über Schemas] Workspace](./overview.md).
+Weitere Informationen zu den Funktionen der [!UICONTROL Schemas] Arbeitsbereich der Benutzeroberfläche, siehe [[!UICONTROL Schemas] Arbeitsbereich - Übersicht](./overview.md).

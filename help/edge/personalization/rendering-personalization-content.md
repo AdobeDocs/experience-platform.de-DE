@@ -6,7 +6,7 @@ exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
 source-git-commit: 0d8e19d8428191cc0c6c56e629e8c5528a96115c
 workflow-type: tm+mt
 source-wordcount: '924'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -297,9 +297,9 @@ alloy("sendEvent", {
 
 Das SDK bietet Funktionen für [Flackern verwalten](../personalization/manage-flicker.md) während des Personalisierungsprozesses.
 
-## Vorschläge in Einzelseitenanwendungen rendern, ohne Metriken zu erhöhen {#applypropositions}
+## Vorschläge rendern in Single-Page Applications ohne Inkrementierung von Metriken {#applypropositions}
 
-Die `applyPropositions` -Befehl ermöglicht es Ihnen, ein Array von Vorschlägen aus [!DNL Target] in Einzelseitenanwendungen, ohne die [!DNL Analytics] und [!DNL Target] Metriken. Dies erhöht die Genauigkeit der Berichterstellung.
+Die `applyPropositions` -Befehl ermöglicht es Ihnen, ein Array von Vorschlägen aus [!DNL Target] in Einzelseitenanwendungen, ohne die [!DNL Analytics] und [!DNL Target] Metriken. Dies erhöht die Genauigkeit des Reportings.
 
 >[!IMPORTANT]
 >

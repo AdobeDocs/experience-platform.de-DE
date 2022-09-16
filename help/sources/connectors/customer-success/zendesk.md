@@ -7,7 +7,7 @@ exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
 source-git-commit: 61b694ca5fbd3548243663b3f1bff06aaca72434
 workflow-type: tm+mt
 source-wordcount: '391'
-ht-degree: 35%
+ht-degree: 37%
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quelle
 
 Experience Platform ermöglicht die Aufnahme von Daten aus Drittanbieter-Anwendungen für das Customer Success Management. Zu den Support-Anbietern für den Kundenerfolg zählen: [!DNL Zendesk].
 
-Diese Adobe Experience Platform [sources](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=en) nutzt die [Zendesk Search API > Suchergebnisse exportieren](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) , der Benutzerinformationen zur weiteren Verarbeitung in Experience Platform von Zendesk zurückgibt.
+Diese Adobe Experience Platform [sources](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=de) nutzt die [Zendesk Search API > Suchergebnisse exportieren](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) , der Benutzerinformationen zur weiteren Verarbeitung in Experience Platform von Zendesk zurückgibt.
 
 ## IP-Adressen-Zulassungsliste
 

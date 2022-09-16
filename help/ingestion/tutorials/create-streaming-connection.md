@@ -19,4 +19,4 @@ Um mit dem Streamen von Daten an die Adobe Experience Platform zu beginnen, ist 
 
 Nach der Registrierung einer Streaming-Verbindung haben Sie als Datenproduzent eine eindeutige URL, die zum Streamen von Daten an Platform verwendet werden kann.
 
-Informationen zum Erstellen einer authentifizierten Streaming-Verbindung finden Sie im [Handbuch zur HTTP-API-Quell-API](../../sources/tutorials/api/create/streaming/http.md).
+Informationen zum Erstellen einer authentifizierten Streaming-Verbindung finden Sie in der [Handbuch zur API für HTTP-Quellen](../../sources/tutorials/api/create/streaming/http.md).

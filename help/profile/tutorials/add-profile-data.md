@@ -8,7 +8,7 @@ exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
 source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
 workflow-type: tm+mt
 source-wordcount: '452'
-ht-degree: 54%
+ht-degree: 58%
 
 ---
 
@@ -43,4 +43,4 @@ Detaillierte Anweisungen zum Zugriff auf Entitäten mithilfe des [!DNL Real-time
 
 ## Aktualisieren von Profilspeicherdaten
 
-Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihrer Organisation zu aktualisieren. Vielleicht müssen Sie zum Beispiel Datensätze korrigieren oder einen Attributwert ändern. Dies kann durch Batch-Erfassung erfolgen und erfordert einen Profil-aktivierten Datensatz, der mit einem aktualisierten Tag konfiguriert wurde. Weitere Informationen zur Konfiguration eines Datensatzes für Attributaktualisierungen finden Sie im Tutorial zur [Aktivierung eines Datensatzes für Profil und Upsert](../../catalog/datasets/enable-upsert.md).
+Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihrer Organisation zu aktualisieren. Vielleicht müssen Sie zum Beispiel Datensätze korrigieren oder einen Attributwert ändern. Dies kann durch Batch-Aufnahme erfolgen und erfordert einen profilaktivierten Datensatz, der mit einem Upsert-Tag konfiguriert ist. Weitere Informationen zur Konfiguration eines Datensatzes für Attributaktualisierungen finden Sie im Tutorial zur [Aktivierung eines Datensatzes für Profil und Upsert](../../catalog/datasets/enable-upsert.md).

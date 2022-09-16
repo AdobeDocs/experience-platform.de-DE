@@ -19,7 +19,7 @@ Mit dem Ziel Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) können S
 >
 >Diese Seite wurde vom DSP-Team erstellt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich direkt an den Advertising Cloud-Support unter `adcloud_support@adobe.com`.
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsbeispiele {#use-cases}
 
 Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie das Advertising Cloud DSP-Ziel verwenden sollten, finden Sie hier Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
 

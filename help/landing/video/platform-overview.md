@@ -18,6 +18,6 @@ ht-degree: 7%
 
 Dieses Video bietet eine kurze Einführung in die Experience Platform und beschreibt einige der damit gelösten geschäftlichen Herausforderungen.
 
-Um mehr zu erfahren, lesen Sie zunächst den [Überblick über die Experience Platform](../home.md).
+Um mehr zu erfahren, lesen Sie zunächst die [Übersicht über die Experience Platform](../home.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)

@@ -17,4 +17,4 @@ ht-degree: 0%
 
 Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, extern bezogene Daten auf geplanter Basis zu erfassen.
 
-Weitere Informationen zur Überwachung von Datenflüssen für Quell-Connectoren finden Sie im Tutorial [Überwachung von Datenflüssen in Quellen](../../../dataflows/ui/monitor-sources.md) .
+Weitere Informationen zum Überwachen von Datenflüssen für Quell-Connectoren finden Sie im Abschnitt [Überwachung von Datenflüssen in Quellen](../../../dataflows/ui/monitor-sources.md) Tutorial.

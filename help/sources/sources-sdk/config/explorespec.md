@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über die Konfigurationen, 
 exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
 source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '258'
+ht-degree: 7%
 
 ---
 

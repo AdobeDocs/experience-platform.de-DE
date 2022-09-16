@@ -4,13 +4,13 @@ description: Mit dem Echtzeit-Kundenprofil können Sie eine ganzheitliche Sicht 
 title: Überwachen von Datenflüssen für Profile in der Benutzeroberfläche
 topic-legacy: overview
 type: Tutorial
-source-git-commit: 3018ee005c96e3905ae8dab24cca901cf48847ea
+exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
+source-git-commit: cfbc977efd09bba0927bf8b03147e40671eb362e
 workflow-type: tm+mt
 source-wordcount: '1074'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
-
 
 # Überwachen von Datenflüssen auf Profile in der Benutzeroberfläche
 
@@ -105,7 +105,7 @@ Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
 | **[!UICONTROL Profilfragmente aktualisiert]** | Die Anzahl der vorhandenen [!DNL Profile] Fragmente aktualisiert. |
 | **[!UICONTROL Status]** | Definiert den Gesamtstatus eines Datenflusses. Mögliche Statuswerte sind: <ul><li>`Success`: Gibt an, dass ein Datenfluss aktiv ist und Daten gemäß dem festgelegten Zeitplan erfasst.</li><li>`Failed`: Gibt an, dass der Aktivierungsprozess eines Datenflusses aufgrund von Fehlern unterbrochen wurde. </li><li>`Processing`: Gibt an, dass der Datenfluss noch nicht aktiv ist. Dieser Status tritt oft unmittelbar nach der Erstellung eines neuen Datenflusses auf.</li></ul> |
 | **[!UICONTROL Start des Datenflusses]** | Datum und Uhrzeit der Ausführung des Datenflusses. |
-| **[!UICONTROL Letzte Aktualisierung]** | Datum und Uhrzeit der letzten Aktualisierung des Datenflusses. |
+| **[!UICONTROL Zuletzt aktualisiert]** | Datum und Uhrzeit der letzten Aktualisierung des Datenflusses. |
 | **[!UICONTROL Fehlerzusammenfassung]** | Wenn die Ausführung des Datenflusses fehlgeschlagen ist, werden ein Fehlercode und eine Zusammenfassung des Fehlers beim Ausführen des Datenflusses angezeigt. |
 | **[!UICONTROL Dataflow-run-ID]** | Die Kennung des Datenflusses. |
 | **[!UICONTROL Kennung der IMS-Organisation]** | Die Organisations-ID, zu der der Datenfluss gehört. |

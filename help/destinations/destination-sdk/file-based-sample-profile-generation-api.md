@@ -1,13 +1,13 @@
 ---
 description: Auf dieser Seite wird erläutert, wie Sie mit dem API-Endpunkt /sample-profiles von Destination SDK Beispielprofile generieren können, die auf einem Quellschema basieren. Sie können diese Beispielprofile verwenden, um Ihre dateibasierte Zielkonfiguration zu testen.
 title: Erstellen von Beispielprofilen basierend auf einem Quellschema
-source-git-commit: ee2bf346a4857a70a7f9aec02bab574f8a257ace
+exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
+source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 13%
 
 ---
-
 
 # Erstellen von Beispielprofilen basierend auf einem Quellschema
 

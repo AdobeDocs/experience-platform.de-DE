@@ -1,13 +1,13 @@
 ---
 description: Die dateibasierte Ziel-Test-API ist eine Sammlung von Endpunkten, mit denen Sie die Konfiguration Ihrer dateibasierten Ziele überprüfen können, die über die Destination SDK erstellt wurden.
 title: Dateibasierte Ziel-Test-API
-source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
+exl-id: 2733fd00-af08-4763-a30e-a53ee56c0a19
+source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 0%
 
 ---
-
 
 # Dateibasierte Ziel-Test-API
 

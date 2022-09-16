@@ -26,7 +26,7 @@ Folgende Aktionen werden in den im [ETL-Integrationsleitfaden](home.md) aufgefü
 
 ![](images/image2.png)
 
-### Abbildung 2 - [!DNL Experience Platform] Connector aktiviert:
+### Abbildung 2: [!DNL Experience Platform] Connector aktiviert:
 
 ![](images/image3.png)
 
@@ -34,11 +34,11 @@ Folgende Aktionen werden in den im [ETL-Integrationsleitfaden](home.md) aufgefü
 
 ![](images/image4.png)
 
-### Abbildung 4: Neue Benutzeroberfläche für Umwandlungen mit [!DNL Experience Platform] Verbindung:
+### Abbildung 4: Benutzeroberfläche für neue Transformationen, auswählen [!DNL Experience Platform] Verbindung:
 
 ![](images/image5.png)
 
-### Abbildung 5 - Suchen nach Quell-Datensätzen [!DNL Experience Platform]:
+### Abbildung 5: Nach Quelle suchen [!DNL Experience Platform] Datensätze:
 
 ![](images/image6.png)
 
@@ -58,7 +58,7 @@ Folgende Aktionen werden in den im [ETL-Integrationsleitfaden](home.md) aufgefü
 
 ![](images/image10.png)
 
-### Abbildung 10 - Definieren des Zieldatensatzes [!DNL Experience Data Model] (XDM):
+### Abbildung 10 - Definieren der [!DNL Experience Data Model] (XDM)-Zieldatensatz:
 
 ![](images/image11.png)
 

@@ -32,7 +32,7 @@ Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einze
 
 ## Erstellen einer Postman-Umgebung (optional)
 
-Nachdem Sie Ihr Projekt und Ihre API in der Adobe Developer Console eingerichtet haben, können Sie eine Umgebungsdatei für Postman herunterladen. under **[!UICONTROL APIs]** Wählen Sie in der linken Leiste Ihres Projekts die Option **[!UICONTROL Inhalts- und Commerce-KI]**. Eine neue Registerkarte wird geöffnet, die eine Karte mit der Bezeichnung &quot;[!DNL Try it out]&quot;. Auswählen **Download für Postman** um eine JSON-Datei herunterzuladen, die zur Konfiguration Ihrer Postman-Umgebung verwendet wird.
+Nachdem Sie Ihr Projekt und Ihre API in der Adobe Developer Console eingerichtet haben, können Sie eine Umgebungsdatei für Postman herunterladen. under **[!UICONTROL APIs]** Wählen Sie in der linken Leiste Ihres Projekts die Option **[!UICONTROL Inhalts- und Commerce-KI]**. Eine neue Registerkarte wird geöffnet, die eine Karte mit der Bezeichnung &quot;[!DNL Try it out]&quot;. Auswählen **Herunterladen für Postman** um eine JSON-Datei herunterzuladen, die zur Konfiguration Ihrer Postman-Umgebung verwendet wird.
 
 ![Download für Postman](./images/add-to-postman.png)
 

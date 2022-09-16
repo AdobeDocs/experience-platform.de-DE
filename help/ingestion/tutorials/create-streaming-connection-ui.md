@@ -15,8 +15,8 @@ ht-degree: 42%
 
 # Aufbauen einer Streaming-Verbindung über die Benutzeroberfläche
 
-Um mit dem Streaming von Daten an [!DNL Experience Platform] zu beginnen, müssen Sie zunächst eine Streaming-HTTP-Verbindung erstellen. Beim Erstellen einer Streaming-Verbindung müssen Sie wichtige Details wie die Quelle der Streaming-Daten angeben und festlegen, ob Daten von einer vertrauenswürdigen (authentifizierten) oder einer nicht vertrauenswürdigen (nicht authentifizierten) Quelle gesendet werden sollen.
+Um mit dem Streaming von Daten an zu beginnen [!DNL Experience Platform]müssen Sie zunächst eine Streaming-HTTP-Verbindung erstellen. Beim Erstellen einer Streaming-Verbindung müssen Sie wichtige Details wie die Quelle der Streaming-Daten angeben und festlegen, ob Daten von einer vertrauenswürdigen (authentifizierten) oder einer nicht vertrauenswürdigen (nicht authentifizierten) Quelle gesendet werden sollen.
 
-Nach der Registrierung einer Streaming-Verbindung haben Sie eine eindeutige URL, die zum Streamen von Daten an [!DNL Platform] verwendet werden kann.
+Nach der Registrierung einer Streaming-Verbindung verfügen Sie über eine eindeutige URL, mit der Daten an gestreamt werden können [!DNL Platform].
 
-Informationen zum Erstellen einer Streaming-Verbindung finden Sie im [Handbuch zur HTTP-API-Quell-Benutzeroberfläche](../../sources/tutorials/ui/create/streaming/http.md).
+Informationen zum Erstellen einer Streaming-Verbindung finden Sie in der [UI-Handbuch für HTTP-API-Quelle](../../sources/tutorials/ui/create/streaming/http.md).

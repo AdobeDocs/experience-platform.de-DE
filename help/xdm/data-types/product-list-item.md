@@ -8,13 +8,13 @@ exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '289'
-ht-degree: 14%
+ht-degree: 17%
 
 ---
 
-# [!UICONTROL Produktlisten-] Datentyp
+# [!UICONTROL Produktlistenelement] Datentyp
 
-[!UICONTROL Produktlistenelemente ] sind ein standardmäßiger XDM-Datentyp, der ein von einem Kunden ausgewähltes Produkt mit bestimmten Optionen, Preisen und Nutzungskontext für einen bestimmten Zeitpunkt beschreibt.
+[!UICONTROL Produktlistenelement] ist ein standardmäßiger XDM-Datentyp, der ein von einem Kunden ausgewähltes Produkt mit bestimmten Optionen, Preisen und Nutzungskontext für einen bestimmten Zeitpunkt beschreibt.
 
 Die in diesem Datentyp erfassten Werte können vom Produktdatensatz abweichen. Beispielsweise enthält der Produktdatensatz Details aus dem Produktinformationssystem, die für alle Kunden einheitlich sind, wobei der Produktlistenartikel den tatsächlichen Preis aufweist, der dem Kunden zum Zeitpunkt des Kaufs angeboten wird, was aufgrund von Verkaufskampagnen oder saisonalen Preisen variieren kann.
 
@@ -23,11 +23,11 @@ Die in diesem Datentyp erfassten Werte können vom Produktdatensatz abweichen. B
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
 | `SKU` | [!UICONTROL Zeichenfolge] | Bestandseinheit (Stock Keeping Unit, SKU), die eindeutige Kennung für ein vom Anbieter definiertes Produkt. |
-| `_id` | [!UICONTROL Zeichenfolge] | Die Zeileneintrag-ID für diesen Produkteintrag. Das Produkt selbst wird durch `product` identifiziert. |
-| `currencyCode` | [!UICONTROL Zeichenfolge] | Der alphabetische [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html)-Währungscode, der für die Preisbildung des Produkts verwendet wird. |
+| `_id` | [!UICONTROL Zeichenfolge] | Die Zeileneintrag-ID für diesen Produkteintrag. Das Produkt selbst wird durch `product`. |
+| `currencyCode` | [!UICONTROL Zeichenfolge] | Die [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) alphabetischer Währungscode, der für die Preisgestaltung des Produkts verwendet wird. |
 | `name` | [!UICONTROL Zeichenfolge] | Der Anzeigename für das Produkt, wie er dem Benutzer für diese Produktansicht angezeigt wird. |
 | `priceTotal` | [!UICONTROL Double] | Der Gesamtpreis für den Produktzeileneintrag. |
-| `product` | [!UICONTROL Zeichenfolge]  (URI) | Der URI `$id` des XDM-Schemas, das das Produkt selbst erfasst. |
+| `product` | [!UICONTROL Zeichenfolge] (URI) | Der URI `$id` des XDM-Schemas, das das Produkt selbst erfasst. |
 | `productAddMethod` | [!UICONTROL Zeichenfolge] | Die Methode, mit der der Besucher der Liste ein Produktelement hinzufügen konnte. |
 | `quantity` | [!UICONTROL Ganzzahl] | Die Anzahl der Einheiten, die der Kunde vom Produkt benötigt. |
 

@@ -18,15 +18,15 @@ Im folgenden Dokument werden die Berechtigungen von Data Science Workspace und d
 
 ![DSW-Registerkarten](./images/access/platform-tabs.png)
 
-- **Notebooks:** Bietet eine interaktive Entwicklungsumgebung ([JupyterLab](./jupyterlab/overview.md)) zur Erforschung, Analyse und Modellierung Ihrer Daten in Experience Platform.
-- **Modelle:** Bietet Tools zum Erstellen, Veröffentlichen und Speichern erweiterter Rezepte und Modelle für maschinelles Lernen. Weitere Informationen finden Sie im Tutorial [Erstellen und Veröffentlichen eines Modells für maschinelles Lernen](./models-recipes/create-publish-model.md) .
-- **Dienste:** Enthält sowohl von Adoben bereitgestellte Dienste wie  [KI-/ML-](../intelligent-services/home.md) Dienste als auch alle benutzerdefinierten Dienste, die Sie mit Data Science Workspace erstellt haben.
+- **Notebooks:** Bietet eine interaktive Entwicklungsumgebung ([JupyterLab](./jupyterlab/overview.md)), um Ihre Daten in Experience Platform zu untersuchen, zu analysieren und zu modellieren.
+- **Modelle:** Bietet Tools zum Erstellen, Veröffentlichen und Speichern erweiterter Rezepte und Modelle für maschinelles Lernen. Weitere Informationen finden Sie unter [Erstellen und Veröffentlichen eines Modells für maschinelles Lernen](./models-recipes/create-publish-model.md) Tutorial.
+- **Dienste:** Enthält beide von Adobe bereitgestellten Dienste, z. B. [KI-/ML-Dienste](../intelligent-services/home.md) und alle benutzerdefinierten Dienste, die Sie mit Data Science Workspace erstellt haben.
 
 Warum wird mir nur die Registerkarte &quot;Dienste&quot;angezeigt?
 
 - Ihr Unternehmen hat möglicherweise nur Berechtigung für Real-time Customer Data Platform (RTCDP), das den Customer AI AI/ML-Dienst umfasst.
 
-Wenn Sie die Registerkarten **Data Science** nicht sehen können und Data Science Workspace-Funktionen verwenden möchten, wenden Sie sich an Ihren Unternehmensadministrator, um zu überprüfen, ob Sie über eine Adobe Experience Platform Intelligence-Lizenz verfügen.
+Wenn Sie keinen der **Datenwissenschaften** Registerkarten ein und möchten die Funktionen von Data Science Workspace nutzen, wenden Sie sich an Ihren Unternehmensadministrator, um zu überprüfen, ob Sie über eine Adobe Experience Platform Intelligence-Lizenz verfügen.
 
 ## Data Science Workspace-Verpackung
 
@@ -59,7 +59,7 @@ Um Data Science Workspace verwenden zu können, muss die Berechtigung &quot;Data
 
 | Berechtigung | Aktiviert | Deaktiviert |
 |---|---|---|
-| Verwalten des Data Science Workspace | Bietet Zugriff auf alle Dienste in Data Science Workspace. | Der API- und UI-Zugriff auf alle Dienste in Data Science Workspace ist deaktiviert. Bei Deaktivierung wird die Auswahl der Seiten **Notebooks**, **Modelle** und **Dienste** verhindert. <li>Der Zugriff auf **Dienste** ist möglicherweise weiterhin über Real-time Customer Data Platform (RTCDP) verfügbar.</li> |
+| Verwalten des Data Science Workspace | Bietet Zugriff auf alle Dienste in Data Science Workspace. | Der API- und UI-Zugriff auf alle Dienste in Data Science Workspace ist deaktiviert. Während deaktiviert, wählen Sie die **Notebooks**, **Modelle** und **Dienste** -Seiten verhindert werden. <li>Zugriff auf **Dienste** kann weiterhin über Real-time Customer Data Platform (RTCDP) verfügbar sein.</li> |
 
 ## Sandbox-Unterstützung
 
@@ -73,4 +73,4 @@ Derzeit gilt für Data Science Workspace die folgende Sandbox-Beschränkung:
 
 In diesem Dokument wurden die verschiedenen Arten von Zugriff und Funktionen beschrieben, die in Data Science Workspace verfügbar sind.
 
-Um mehr über Data Science Workspace zu erfahren, z. B. einen kompletten täglichen Arbeitsablauf, lesen Sie zunächst die [Data Science Workspace-exemplarische Vorgehensweise](./walkthrough.md). Weitere allgemeine Informationen finden Sie unter [Übersicht über Data Science Workspace](./home.md).
+Um mehr über Data Science Workspace zu erfahren, z. B. einen vollständigen täglichen Workflow, lesen Sie zunächst den Abschnitt [Anleitung zu Data Science Workspace](./walkthrough.md) Dokumentation. Weitere allgemeine Informationen finden Sie unter [Data Science Workspace - Übersicht](./home.md).

@@ -8,13 +8,13 @@ exl-id: 209654f7-0bde-439a-989c-ce2e41599105
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '271'
-ht-degree: 19%
+ht-degree: 24%
 
 ---
 
-# [!UICONTROL Experience ] Channeldata-Typ
+# [!UICONTROL Experience-Kanal] Datentyp
 
-[!UICONTROL Experience ] Channel ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der einen Erlebniskanal beschreibt. Ein Erlebniskanal stellt eine Methode oder einen Pfad für die Nutzung digitaler Erlebnisse dar.
+[!UICONTROL Experience-Kanal] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der einen Erlebniskanal beschreibt. Ein Erlebniskanal stellt eine Methode oder einen Pfad für die Nutzung digitaler Erlebnisse dar.
 
 Es gibt mehrere Erlebniskanäle mit jeweils unterschiedlichen Einschränkungen hinsichtlich der Bereitstellung von Inhalten, der Art und Weise, wie Kundeninteraktionen beobachtet werden können und wie Daten erfasst werden. Innerhalb eines Kanals können Erlebnisse an bestimmte Orte bereitgestellt werden. Die Standorte und Standorte in einem Kanal unterscheiden sich von Kanal zu Kanal.
 

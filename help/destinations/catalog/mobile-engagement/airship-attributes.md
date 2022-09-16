@@ -62,7 +62,7 @@ Geben Sie einen benutzerfreundlichen Namen für Ihr Token ein, z. B. &quot;Adobe
 
 Klicken **[!UICONTROL Token erstellen]** und speichern Sie die Angaben als vertraulich.
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsbeispiele {#use-cases}
 
 Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie die [!DNL Airship Attributes] Ziel, hier finden Sie Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
 

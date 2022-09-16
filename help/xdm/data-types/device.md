@@ -12,9 +12,9 @@ ht-degree: 18%
 
 ---
 
-#  Gerätetyp
+# [!UICONTROL Gerät] Datentyp
 
- DeviceEnthält einen Standard-XDM-Datentyp, der ein identifiziertes Gerät beschreibt. Ein Gerät ist eine Anwendung oder Browser-Instanz, die sitzungsübergreifend verfolgt werden kann, normalerweise durch Cookies.
+[!UICONTROL Gerät] ist ein standardmäßiger XDM-Datentyp, der ein identifiziertes Gerät beschreibt. Ein Gerät ist eine Anwendung oder Browser-Instanz, die sitzungsübergreifend verfolgt werden kann, normalerweise durch Cookies.
 
 <img src="../images/data-types/device.png" width="450" /><br />
 
@@ -29,7 +29,7 @@ ht-degree: 18%
 | `screenWidth` | Zeichenfolge | Die Anzahl der horizontalen Pixel der aktiven Anzeige des Geräts in der Standardausrichtung. |
 | `type` | Zeichenfolge | Der Typ des zu verfolgenden Geräts. Zu den zulässigen Werten gehören: <ul><li>`mobile`</li><li>`tablet`</li><li>`desktop`</li><li>`ereader`</li><li>`gaming`</li><li>`television`</li><li>`settop`</li><li>`mediaplayer`</li><li>`computers`</li><li>`tv screens`</li></ul> |
 | `typeID` | Zeichenfolge | Eine Kennung für das Gerät. Dies kann eine Kennung von DeviceAtlas oder einem anderen Dienst sein, der die verwendete Hardware identifiziert. |
-| `typeIDService` | Zeichenfolge | Der Namespace des Diensts, mit dem der Gerätetyp identifiziert wird. Weitere Informationen zu akzeptierten Werten finden Sie im [Anhang](#typeIDService) . |
+| `typeIDService` | Zeichenfolge | Der Namespace des Diensts, mit dem der Gerätetyp identifiziert wird. Siehe [Anhang](#typeIDService) für Details zu akzeptierten Werten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -40,11 +40,11 @@ Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repositor
 
 ## Anhang
 
-Der folgende Abschnitt enthält zusätzliche Informationen zum Datentyp [!UICONTROL Device] .
+Im folgenden Abschnitt finden Sie weitere Informationen zum [!UICONTROL Gerät] Datentyp.
 
 ## Akzeptierte Werte für typeIDService {#typeIDService}
 
-In der folgenden Tabelle sind die zulässigen Werte für `typeIDService` und die zugehörige Bedeutung aufgeführt:
+In der folgenden Tabelle sind die für `typeIDService` und ihre zugehörige Bedeutung:
 
 | Wert | Beschreibung |
 | --- | --- |

@@ -14,11 +14,11 @@ ht-degree: 10%
 
 # Logikquantifizierer-Funktionen
 
-Logische Quantifizierer können verwendet werden, um Bedingungen mit Arrays in [!DNL Profile Query Language] (PQL) zu assERtieren. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md).
+Logische Quantifizierer können verwendet werden, um Bedingungen mit Arrays in [!DNL Profile Query Language] (PQL). Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] Übersicht](./overview.md).
 
 ## Exists
 
-Die `exists`-Funktion bestimmt, ob ein Element in einem Array vorhanden ist, sofern es die bereitgestellte Bedingung erfüllt.
+Die `exists` bestimmt, ob ein Element in einem Array vorhanden ist, vorausgesetzt, es erfüllt die bereitgestellte Bedingung.
 
 **Format**
 
@@ -43,7 +43,7 @@ exists E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## Für alle
 
-Die Funktion `forall` bestimmt alle Elemente in einem Array, die alle angegebenen Bedingungen erfüllen.
+Die `forall` bestimmt alle Elemente in einem Array, die alle angegebenen Bedingungen erfüllen.
 
 **Format**
 

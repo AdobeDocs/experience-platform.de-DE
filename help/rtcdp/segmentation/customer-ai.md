@@ -23,14 +23,14 @@ Mithilfe von Einflussfaktoren kann Customer AI vorhersagen, was ein Kunde wahrsc
 * Verbesserung von Kundenprofilen mit Einflussfaktoren für Tendenzwerte.
 * Erstellen von Kundensegmenten basierend auf Einflussfaktoren und Tendenzwerten.
 
-Customer AI befindet sich auf der Registerkarte **[!UICONTROL Dienste]** unter **[!UICONTROL Adobe-Dienste]**.
+Customer AI befindet sich im **[!UICONTROL Dienste]** Registerkarte unter **[!UICONTROL Adobe-Dienste]**.
 
 ![Customer AI-Position](../assets/overview/rtcdp-customer-ai.png)
 
 ## Erste Schritte in Kunden-KI
 
-Um mit Customer AI zu beginnen, müssen Sie dem [Tutorial zur Datenvorbereitung](../../intelligent-services/data-preparation.md) folgen und das Eingabeschema basierend auf Ihrem Anwendungsfall konfigurieren. Als Nächstes müssen Sie [eine Customer AI-Instanz](../../intelligent-services/customer-ai/user-guide/configure.md) konfigurieren. Nach dem Konfigurieren einer Instanz wird ein Modell generiert, in dem Sie [Ihre Einblicke und Bewertungen anzeigen können](../../intelligent-services/customer-ai/user-guide/discover-insights.md). Mithilfe der von Ihrem Modell generierten Daten können Sie Segmente für datengesteuerte Aktivierung erstellen.
+Um mit Customer AI zu beginnen, müssen Sie folgende Schritte ausführen: [Tutorial zur Datenvorbereitung](../../intelligent-services/data-preparation.md) und konfigurieren Sie das Eingabeschema entsprechend Ihrem Anwendungsfall. Als Nächstes müssen Sie [Konfigurieren einer Customer AI-Instanz](../../intelligent-services/customer-ai/user-guide/configure.md). Nach dem Konfigurieren einer Instanz wird ein Modell generiert, in dem Sie [Anzeigen Ihrer Einblicke und Bewertungen](../../intelligent-services/customer-ai/user-guide/discover-insights.md). Mithilfe der von Ihrem Modell generierten Daten können Sie Segmente für datengesteuerte Aktivierung erstellen.
 
-Um mehr über Customer AI zu erfahren, besuchen Sie zunächst die [Customer AI - Übersicht](../../intelligent-services/customer-ai/overview.md). Darüber hinaus wird im folgenden Video gezeigt, wie Customer AI Kundenprofile mit KI-basierten Eigenschaften anreichert und die Kundensegmentierung und Zielgruppenbestimmung stärkt.
+Um mehr über Customer AI zu erfahren, besuchen Sie zunächst das [Customer AI - Übersicht](../../intelligent-services/customer-ai/overview.md). Darüber hinaus wird im folgenden Video gezeigt, wie Customer AI Kundenprofile mit KI-basierten Eigenschaften anreichert und die Kundensegmentierung und Zielgruppenbestimmung stärkt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/40374/?quality=12&learn=on)

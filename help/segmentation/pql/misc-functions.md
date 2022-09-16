@@ -14,7 +14,7 @@ ht-degree: 68%
 
 # Sonstige Funktionen
 
-Die folgende Funktion ist eine sonstige Funktion für [!DNL Profile Query Language] (PQL). Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md).
+Die folgende Funktion ist eine sonstige Funktion für [!DNL Profile Query Language] (PQL). Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] Übersicht](./overview.md).
 
 ## Zulassen
 

@@ -15,4 +15,4 @@ ht-degree: 0%
 
 Das Tutorial zum Aktivieren eines Datensatzes zur Verwendung im Echtzeit-Kundenprofil und im Adobe Experience Platform Identity Service umfasst Schritte zum Erstellen eines neuen Datensatzes und zum Konfigurieren eines vorhandenen Datensatzes. In diesem Tutorial werden auch Schritte zum Erfassen von Daten in den Datensatz und zum Bestätigen der erfolgreichen Aufnahme von Daten in Profil und Identity Service beschrieben.
 
-Um auf dieses Tutorial zuzugreifen, besuchen Sie das [Tutorial zum Aktivieren eines Datensatzes für Profil und Identität mithilfe von APIs](../../catalog/datasets/enable-for-profile.md), Teil der Datensatzdokumentation.
+Um auf dieses Tutorial zuzugreifen, besuchen Sie die [Aktivieren eines Datensatzes für Profil und Identität mithilfe des APIs-Tutorials](../../catalog/datasets/enable-for-profile.md), Teil der Datensatzdokumentation.

@@ -1,6 +1,6 @@
 ---
 title: Wesentliche Anwendungsfälle der Experience Platform
-description: In diesem Video erhalten Sie einen Überblick über die vier wichtigsten Anwendungsfälle von Adobe Experience Platform&amp, mdash, Echtzeit-Kundendatenplattform, Customer Journey Intelligence, Bereitstellung und kanalübergreifendes Erlebnis sowie die Entwicklung von Kundenerlebnissen.
+description: In diesem Video erhalten Sie einen Überblick über die vier wichtigsten Anwendungsfälle von Adobe Experience Platform&mdash, die Echtzeit-Kundendatenplattform, die Journey-Intelligenz von Kunden, die Bereitstellung und das kanalübergreifende Erlebnis sowie die Anwendungsentwicklung für Kundenerlebnisse.
 kt: 4337
 audience: all
 doc-type: video

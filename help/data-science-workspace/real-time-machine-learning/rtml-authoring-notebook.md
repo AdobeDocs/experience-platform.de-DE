@@ -409,7 +409,7 @@ Sie erhalten die aktualisierte DSL zurückgegeben.
 
 ## Scoring {#scoring}
 
-Nach der Veröffentlichung in [!DNL Edge], erfolgt die Auswertung durch eine POST-Anfrage eines Clients. Normalerweise kann dies über eine Client-Anwendung erfolgen, die ML-Bewertungen benötigt. Sie können es auch von Postman aus machen. Die **[!UICONTROL Echtzeit-ML]** -Vorlage verwendet EdgeUtils, um diesen Prozess zu demonstrieren.
+Nach der Veröffentlichung in [!DNL Edge], erfolgt die Auswertung durch eine POST-Anfrage eines Clients. Normalerweise kann dies über eine Client-Anwendung erfolgen, die ML-Bewertungen benötigt. Sie können dies auch über Postman tun. Die **[!UICONTROL Echtzeit-ML]** -Vorlage verwendet EdgeUtils, um diesen Prozess zu demonstrieren.
 
 >[!NOTE]
 >

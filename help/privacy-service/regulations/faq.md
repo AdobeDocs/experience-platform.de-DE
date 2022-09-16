@@ -18,7 +18,7 @@ Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu unterstützte
 
 >[!NOTE]
 >
->Definitionen zu den verschiedenen in diesem Dokument verwendeten Begriffen finden Sie im Handbuch [Terminologie der Datenschutzbestimmungen](terminology.md).
+>Definitionen zu den verschiedenen in diesem Dokument verwendeten Begriffen finden Sie im Abschnitt [Terminologie zur Datenschutzbestimmung](terminology.md) Handbuch.
 
 ## Allgemeine Fragen
 
@@ -26,7 +26,7 @@ Die folgenden Fragen beziehen sich auf alle von Experience Cloud unterstützten 
 
 ### Auf wen wirken sich die unterstützten Datenschutzbestimmungen aus?
 
-Die [Datenschutzbestimmungen, die von Experience Cloud](./overview.md) unterstützt werden, gelten für alle Organisationen, die die personenbezogenen Daten von Bürgerinnen und Bürgern in den jeweiligen Hoheitsgebieten der jeweiligen Organisation speichern und verarbeiten, unabhängig vom geografischen Standort der Organisation.
+Die [Datenschutzbestimmungen, die von Experience Cloud unterstützt werden](./overview.md) gelten für alle Organisationen, die personenbezogene Daten von Bürgern innerhalb der jeweiligen Rechtsordnungen der jeweiligen Rechtsordnung speichern und verarbeiten, unabhängig vom geografischen Standort der Organisation.
 
 ### Was sind personenbezogene Daten?
 
@@ -54,13 +54,13 @@ Obwohl die Datenschutzbestimmungen eine breite Palette personenbezogener Daten a
 
 Ein **Datenverantwortlicher** ist die Stelle, die die Ziele, Bedingungen und Wege der Verarbeitung personenbezogener Daten bestimmt, während der **Datenverarbeiter** eine Stelle ist, die personenbezogene Daten im Auftrag des Datenverantwortlichen verarbeitet.
 
-Ein **Datenverantwortlicher** ist die Person oder Organisation, die befugt und dafür verantwortlich ist, Entscheidungen über die Erhebung, Verwendung oder Weitergabe personenbezogener Daten zu treffen. Ein **Datenverarbeiter** ist die Person oder Organisation, die im Zusammenhang mit der Erhebung, Verwendung oder Offenlegung der personenbezogenen Daten und der Leitung des Datenverantwortlichen tätig ist.
+A **Datenverantwortlicher** ist die Person oder Organisation, die befugt und dafür verantwortlich ist, Entscheidungen über die Erhebung, Verwendung oder Weitergabe personenbezogener Daten zu treffen. A **Datenprozessor** ist die Person oder Organisation, die im Zusammenhang mit der Erhebung, Verwendung oder Weitergabe der personenbezogenen Daten und der Leitung des Datenverantwortlichen tätig ist.
 
 ### Was ist der Unterschied zwischen der ausdrücklichen und eindeutigen Zustimmung der betroffenen Person?
 
-**Die ausdrückliche** Einwilligung bezieht sich auf einen Standard der Einwilligung, der eine spezifische, informierte und eindeutige Angabe der Wünsche der betroffenen Person in mündlicher oder schriftlicher Form beinhaltet. Einfach ausgedrückt muss die betroffene Person buchstäblich und explizit &quot;Ich stimme zu&quot;oder &quot;Ich stimme zu&quot;, damit die Einwilligung als explizit betrachtet wird. Darüber hinaus muss es so einfach sein, die Zustimmung zurückzuziehen, wie sie sein muss.
+**Explizite Zustimmung** bezieht sich auf einen Einverständnisstandard, der eine spezifische, informierte und eindeutige Angabe der Wünsche der betroffenen Person in mündlicher oder schriftlicher Form umfasst. Einfach ausgedrückt muss die betroffene Person buchstäblich und explizit &quot;Ich stimme zu&quot;oder &quot;Ich stimme zu&quot;, damit die Einwilligung als explizit betrachtet wird. Darüber hinaus muss es so einfach sein, die Zustimmung zurückzuziehen, wie sie sein muss.
 
-**Eindeutige (implizite)** Zustimmung bezieht sich auf die Einwilligung, die nicht explizit vom Datensubjekt erteilt wurde, aber dennoch eindeutig ist. Während des Anmeldeprozesses für eine Unternehmens-Website wird beispielsweise darauf hingewiesen, dass das Datensubjekt durch Angabe einer E-Mail-Adresse dem Empfang von E-Mails zu Sonderangeboten zustimmt. Wenn das Datensubjekt den Hinweis liest, reicht die positive Aktion der Eingabe seiner E-Mail aus, um als eindeutige Einwilligung betrachtet zu werden.
+**Eindeutige (implizite) Zustimmung** bezieht sich auf die Einwilligung, die nicht explizit vom Datensubjekt erteilt wurde, jedoch eindeutig ist. Während des Anmeldeprozesses für eine Unternehmens-Website wird beispielsweise darauf hingewiesen, dass das Datensubjekt durch Angabe einer E-Mail-Adresse dem Empfang von E-Mails zu Sonderangeboten zustimmt. Wenn das Datensubjekt den Hinweis liest, reicht die positive Aktion der Eingabe seiner E-Mail aus, um als eindeutige Einwilligung betrachtet zu werden.
 
 Bei vielen Vorschriften wie der DSGVO ist eine ausdrückliche Zustimmung für die Verarbeitung sensibler personenbezogener Daten erforderlich, wobei nur eine &quot;Opt-in&quot;-Klausel ausreicht. Für nicht vertrauliche Daten ist jedoch eine eindeutige (implizite) Zustimmung zulässig.
 
@@ -104,7 +104,7 @@ Wenn die Datenoperationen Ihres Unternehmens unter die gesetzlichen Bestimmungen
 
 ### Wie kann ich Datenschutzanfragen von Verbrauchern unterstützen, wenn ich Daten unterhalte, die unter Datenschutzbestimmungen fallen?
 
-Nachdem Sie die erforderlichen Schritte zur Authentifizierung von Verbrauchern unternommen haben, die in die entsprechenden Rechtsordnungen fallen, können Sie mit Adobe Experience Platform Privacy Service Datenschutzanfragen von Verbrauchern an kompatible Experience Cloud-Apps senden. Weitere Informationen finden Sie in der [[!DNL Privacy Service] Übersicht über. ](../home.md) Informationen dazu, wie Ihre jeweiligen Experience Cloud-Anwendungen Datenschutzanfragen gerecht werden können, finden Sie im Handbuch zu [Privacy Service- und Experience Cloud-Anwendungen](../experience-cloud-apps.md).
+Nachdem Sie die erforderlichen Schritte zur Authentifizierung von Verbrauchern unternommen haben, die in die entsprechenden Rechtsordnungen fallen, können Sie mit Adobe Experience Platform Privacy Service Datenschutzanfragen von Verbrauchern an kompatible Experience Cloud-Apps senden. Weitere Informationen finden Sie in der [[!DNL Privacy Service] Übersicht. ](../home.md) Informationen dazu, wie Ihre jeweiligen Experience Cloud-Anwendungen Datenschutzanfragen gerecht werden können, finden Sie im Handbuch zu [Privacy Service- und Experience Cloud-Anwendungen](../experience-cloud-apps.md).
 
 >[!NOTE]
 >

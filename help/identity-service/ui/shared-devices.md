@@ -8,7 +8,7 @@ exl-id: 36318163-ba07-4209-b1be-dc193ab7ba41
 source-git-commit: 8df601af88295eba10c23f455807c7d5faf644f3
 workflow-type: tm+mt
 source-wordcount: '1363'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -36,7 +36,7 @@ Mit [!DNL Shared Device Detection] Sie können:
 
 Arbeiten mit [!DNL Shared Device Detection] erfordert ein Verständnis der verschiedenen beteiligten Platform-Dienste. Vorbereitung [!DNL Shared Device Detection]lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
-* [[!DNL Identity Service]](../home.md): Sorgt für eine bessere Darstellung einzelner Kunden und deren Verhalten, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
+* [[!DNL Identity Service]](../home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
    * [Identitätsdiagramm-Viewer](./identity-graph-viewer.md): Visualisieren Sie den Identitätsdiagramm-Viewer und interagieren Sie mit ihm, um besser zu verstehen, wie Kundenidentitäten zusammengeführt werden und auf welche Weise.
    * [Identitäts-Namespaces](../namespaces.md): Sehen Sie sich die Komponenten einer vollständig qualifizierten Identität an und erfahren Sie, wie Sie mithilfe von Identitäts-Namespaces den Kontext und den Typ einer Identität unterscheiden können.
 
@@ -92,7 +92,7 @@ Wann [!DNL Shared Device Detection] aktiviert ist, [!DNL Profile] definiert die 
 
 Ein **authentifiziertes Erlebnisereignis** ist eine Aktion, die von einem Benutzer bei der Anmeldung auf einem Gerät abgeschlossen wird. Bei authentifizierten Erlebnisereignissen ist die primäre Identität die **Benutzeridentitäts-Namespace** (Anmelde-ID). Ein **nicht authentifiziertes Erlebnisereignis** ist eine Aktion, die von einem Benutzer abgeschlossen wird, der nicht bei einem Gerät angemeldet ist. Bei nicht authentifizierten Erlebnisereignissen ist die primäre Identität die **Freigegebener Identitäts-Namespace** (ECID).
 
-Weitere Informationen finden Sie unter  [[!DNL Real-time Customer Profile] Übersicht](../../profile/home.md).
+Weiterführende Informationen finden Sie in der [[!DNL Real-time Customer Profile] Übersicht](../../profile/home.md).
 
 ## Benutzeroberfläche für freigegebene Geräte
 

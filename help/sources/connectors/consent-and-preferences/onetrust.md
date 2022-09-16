@@ -4,10 +4,11 @@ solution: Experience Platform
 title: (Beta) OneTrust Integration Source Connector - Überblick
 topic-legacy: overview
 description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche eine OneTrust-Integration mit Adobe Experience Platform verbinden.
-source-git-commit: e566f4e2a4a337abe6f09d7d2e66530a5b9baa0c
+exl-id: f2229d4d-8aa6-483a-9156-403309f80007
+source-git-commit: 6768b772a983588b36659f42bff5c143a6f625f7
 workflow-type: tm+mt
 source-wordcount: '186'
-ht-degree: 37%
+ht-degree: 45%
 
 ---
 
@@ -19,7 +20,7 @@ ht-degree: 37%
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-Experience Platform unterstützt die Aufnahme von Daten aus einer Genehmigungs- und Präferenzverwaltungsplattform von Drittanbietern. Die Unterstützung von Einverständnisanbietern und Präferenzanbietern umfasst [!DNL OneTrust Integration].
+Experience Platform unterstützt die Aufnahme von Daten aus einer Einverständnis- und Voreinstellungs-Verwaltungsplattform von Dritten. Die Unterstützung von Einverständnisanbietern und Präferenzanbietern umfasst [!DNL OneTrust Integration].
 
 Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL OneTrust Integration] mit Platform mithilfe von APIs oder der Benutzeroberfläche:
 

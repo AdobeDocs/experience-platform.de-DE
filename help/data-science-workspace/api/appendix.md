@@ -14,26 +14,26 @@ ht-degree: 7%
 
 # [!DNL Sensei Machine Learning] Anhang zum API-Handbuch
 
-Die folgenden Abschnitte enthalten Referenzinformationen zu verschiedenen Funktionen der [!DNL Sensei Machine Learning]-API.
+Die folgenden Abschnitte enthalten Referenzinformationen zu verschiedenen Funktionen der [!DNL Sensei Machine Learning] API.
 
 ## Abfrageparameter für den Asset-Abruf {#query}
 
-Die API [!DNL Sensei Machine Learning] unterstützt Abfrageparameter beim Abrufen von Assets. Die verfügbaren Abfrageparameter und ihre Verwendung werden in der folgenden Tabelle beschrieben:
+Die [!DNL Sensei Machine Learning] API unterstützt Abfrageparameter beim Abrufen von Assets. Die verfügbaren Abfrageparameter und ihre Verwendung werden in der folgenden Tabelle beschrieben:
 
 | Abfrageparameter | Beschreibung | Standardwert |
 | --------------- | ----------- | ------- |
 | `start` | Gibt den Startindex für die Paginierung an. | `start=0` |
 | `limit` | Gibt die maximale Anzahl der zurückzugebenden Ergebnisse an. | `limit=25` |
-| `orderby` | Gibt die Eigenschaften an, die für die Sortierung in Prioritätsreihenfolge verwendet werden sollen. Fügen Sie vor dem Eigenschaftsnamen einen Bindestrich (**-**) ein, der in absteigender Reihenfolge sortiert werden soll. Andernfalls werden die Ergebnisse in aufsteigender Reihenfolge sortiert. | `orderby=created` |
+| `orderby` | Gibt die Eigenschaften an, die für die Sortierung in Prioritätsreihenfolge verwendet werden sollen. Einen Bindestrich (**-**) vor einem Eigenschaftsnamen, der in absteigender Reihenfolge sortiert werden soll, andernfalls werden die Ergebnisse in aufsteigender Reihenfolge sortiert. | `orderby=created` |
 | `property` | Gibt den Vergleichsausdruck an, den ein Objekt erfüllen muss, damit es zurückgegeben werden kann. | `property=deleted==false` |
 
 >[!NOTE]
 >
->Beim Kombinieren mehrerer Abfrageparameter müssen diese durch kaufmännische Und-Zeichen (**&amp;**) getrennt werden.
+>Bei Kombination mehrerer Abfrageparameter müssen diese durch kaufmännische Und-Zeichen (**&amp;**).
 
 ## Python-CPU- und GPU-Konfigurationen {#cpu-gpu-config}
 
-Python Engines haben die Möglichkeit, für Trainings- oder Scoring-Zwecke entweder eine CPU oder eine GPU auszuwählen. Sie wird für eine [MLInstance](./mlinstances.md) als Aufgabenspezifikation (`tasks.specification`) definiert.
+Python Engines haben die Möglichkeit, für Trainings- oder Scoring-Zwecke zwischen einer CPU oder einer GPU zu wählen und wird in einer [MLInstance](./mlinstances.md) als Aufgabenspezifikation (`tasks.specification`).
 
 Im Folgenden finden Sie eine Beispielkonfiguration, die angibt, wie eine CPU für Schulungen und eine GPU für Scoring verwendet wird:
 
@@ -70,7 +70,7 @@ Im Folgenden finden Sie eine Beispielkonfiguration, die angibt, wie eine CPU fü
 
 >[!NOTE]
 >
->Die Werte von `cpus` und `gpus` geben nicht die Anzahl der CPUs oder GPUs an, sondern die Anzahl der physischen Computer. Diese Werte sind möglicherweise `"1"` und geben andernfalls eine Ausnahme aus.
+>Die Werte von `cpus` und `gpus` gibt nicht die Anzahl der CPUs oder GPUs an, sondern die Anzahl der physischen Computer. Diese Werte sind zumutbar `"1"` und löst andernfalls eine Ausnahme aus.
 
 ## PySpark- und Spark-Ressourcenkonfigurationen {#resource-config}
 
@@ -84,7 +84,7 @@ Spark Engines haben die Möglichkeit, Rechenressourcen für Trainings- und Scori
 | executorCores | Anzahl der vom Executor verwendeten Kerne | int |
 | numExecutors | Anzahl der Executor | int |
 
-Ressourcen können in einer [MLInstance](./mlinstances.md) entweder als (A) individuelle Trainings- oder Scoring-Parameter oder (B) als zusätzliches Spezifikations-Objekt (`specification`) angegeben werden. Beispielsweise sind die folgenden Ressourcenkonfigurationen für Training und Scoring identisch:
+Ressourcen können auf einer [MLInstance](./mlinstances.md) als (A) individuelle Trainings- oder Scoring-Parameter oder (B) innerhalb eines zusätzlichen Spezifikations-Objekts (`specification`). Beispielsweise sind die folgenden Ressourcenkonfigurationen für Training und Scoring identisch:
 
 ```json
 [

@@ -214,7 +214,7 @@ Ausführliche Beispiele für ordnungsgemäße Datenstrukturen für XDM-Ressource
 }
 ```
 
-GET-Anforderungen in [!DNL Schema Registry] API erfordert `Accept` -Kopfzeile, damit das System bestimmen kann, wie die Antwort formatiert wird. Dieser Fehler tritt auf, wenn erforderlich `Accept` -Kopfzeile ist ungültig oder fehlt.
+GET-Anforderungen in [!DNL Schema Registry] API erfordert `Accept` -Kopfzeile, damit das System bestimmen kann, wie die Antwort formatiert werden soll. Dieser Fehler tritt auf, wenn erforderlich `Accept` -Kopfzeile ist ungültig oder fehlt.
 
 Je nach verwendetem Endpunkt wird die `detailed-message` -Eigenschaft gibt an, was gültig ist `Accept` -Kopfzeile sollte wie für eine erfolgreiche Antwort aussehen. Vergewissern Sie sich, dass Sie die `Accept` -Kopfzeile, die mit der API-Anfrage kompatibel ist, die Sie erstellen möchten, bevor Sie es erneut versuchen.
 

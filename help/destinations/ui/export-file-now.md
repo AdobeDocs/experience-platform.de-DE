@@ -6,7 +6,7 @@ exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 source-git-commit: 874c590e83712a45e75308239fb71db04614bd1e
 workflow-type: tm+mt
 source-wordcount: '745'
-ht-degree: 6%
+ht-degree: 14%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 6%
 >[!IMPORTANT]
 >
 >Die **[!UICONTROL Datei jetzt exportieren]** -Option in Adobe Experience Platform Destination SDK ist derzeit als Betaversion verfügbar. Dokumentation und Funktionalität können sich ändern.
->Wenden Sie sich an Ihren Kundenbetreuer, um Zugriff auf diese Funktion zu erhalten.
+>Wenden Sie sich an Ihre Adobe-Support-Mitarbeitenden, um Zugriff auf diese Funktion zu erhalten.
 
 >[!IMPORTANT]
 > 
@@ -26,11 +26,11 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_activatenow"
 >title="Datei jetzt exportieren"
->abstract="Wählen Sie dieses Steuerelement aus, um zusätzlich zu allen zuvor geplanten Exporten einen vollständigen Dateiexport bereitzustellen. Der Dateiexport wird sofort ausgelöst und es werden die neuesten Ergebnisse aus der Experience Platform-Segmentierung abgerufen."
+>abstract="Wählen Sie dieses Steuerelement aus, um zusätzlich zu allen zuvor geplanten Exporten einen vollständigen Dateiexport bereitzustellen. Der Dateiexport wird sofort ausgelöst, und es werden die neuesten Ergebnisse der Segmentierungsläufe von Experience Platform abgerufen."
 
 In diesem Artikel wird erläutert, wie Sie die Experience Platform-Benutzeroberfläche verwenden können, um Dateien bei Bedarf an Batch-Zielen wie [Cloud-Speicher](/help/destinations/catalog/cloud-storage/overview.md) und [E-Mail-Marketing](/help/destinations/catalog/email-marketing/overview.md) Ziele.
 
-Die **[!UICONTROL Datei jetzt exportieren]** Mit dieser Kontrolle können Sie eine vollständige Datei exportieren, ohne die aktuelle Exportplanung eines zuvor geplanten Segments zu unterbrechen. Dieser Export erfolgt zusätzlich zu den zuvor geplanten Exporten und ändert nicht die Exportfrequenz des Segments. Der Dateiexport wird sofort ausgelöst und es werden die neuesten Ergebnisse aus der Experience Platform-Segmentierung abgerufen.
+Die **[!UICONTROL Datei jetzt exportieren]** Mit dieser Kontrolle können Sie eine vollständige Datei exportieren, ohne die aktuelle Exportplanung eines zuvor geplanten Segments zu unterbrechen. Dieser Export erfolgt zusätzlich zu den zuvor geplanten Exporten und ändert nichts an der Exportfrequenz des Segments. Der Dateiexport wird sofort ausgelöst, und es werden die neuesten Ergebnisse der Segmentierungsläufe von Experience Platform abgerufen.
 
 Zu diesem Zweck können Sie auch die Experience Platform-APIs verwenden. Lesen der Anleitung [Aktivieren von Zielgruppensegmenten bei Bedarf für Batch-Ziele über die Ad-hoc-Aktivierungs-API](/help/destinations/api/ad-hoc-activation-api.md).
 

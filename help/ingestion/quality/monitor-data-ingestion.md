@@ -14,15 +14,15 @@ ht-degree: 36%
 
 # Überwachen der Datenaufnahme
 
-Mit der Datenaufnahme können Sie Ihre Daten in Adobe Experience Platform aufnehmen. Sie können entweder die Batch-Erfassung verwenden, um Ihre Daten mit verschiedenen Dateitypen (z. B. CSV-Dateien) einzufügen, oder die Streaming-Erfassung, mit der Sie Ihre Daten mithilfe von Streaming-Endpunkten in Echtzeit in [!DNL Platform] erfassen können.
+Mit der Datenaufnahme können Sie Ihre Daten in Adobe Experience Platform aufnehmen. Sie können entweder die Batch-Erfassung verwenden, mit der Sie Ihre Daten mithilfe verschiedener Dateitypen (z. B. CSV-Dateien) einfügen können, oder die Streaming-Erfassung, mit der Sie Ihre Daten erfassen können, um [!DNL Platform] Verwendung von Streaming-Endpunkten in Echtzeit.
 
 Dieses Benutzerhandbuch enthält Schritte zum Überwachen Ihrer Daten in der Benutzeroberfläche von Adobe Experience Platform. Für dieses Handbuch benötigen Sie eine Adobe ID und Zugriff auf Adobe Experience Platform.
 
 ## Überwachen der Datenaufnahme bei End-to-End-Streaming
 
-Wählen Sie in der [Experience Platform-Benutzeroberfläche](https://platform.adobe.com) im linken Navigationsmenü **[!UICONTROL Überwachung]** und dann **[!UICONTROL Streaming End-to-End]**.
+Im [Experience Platform-Benutzeroberfläche](https://platform.adobe.com)auswählen **[!UICONTROL Überwachung]** im linken Navigationsmenü, gefolgt von **[!UICONTROL End-to-End-Streaming]**.
 
-Die Überwachungsseite **[!UICONTROL End-to-End-Streaming]** wird angezeigt. Dieser Arbeitsbereich bietet ein Diagramm, das die Rate der gestreamten Ereignisse anzeigt, die von [!DNL Platform] empfangen werden. Dieses Diagramm zeigt die Rate der gestreamten Ereignisse, die erfolgreich von [[!DNL Real-time Customer Profile]](../../profile/home.md) verarbeitet wurden, sowie eine detaillierte Liste der eingehenden Daten.
+Die Überwachungsseite **[!UICONTROL End-to-End-Streaming]** wird angezeigt. Dieser Arbeitsbereich bietet ein Diagramm, das die Rate der gestreamten Ereignisse anzeigt, die von [!DNL Platform], ein Diagramm, das die Rate der gestreamten Ereignisse anzeigt, die erfolgreich von [[!DNL Real-time Customer Profile]](../../profile/home.md)sowie eine detaillierte Liste der eingehenden Daten.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -30,11 +30,11 @@ Standardmäßig zeigt das obere Diagramm die Aufnahmerate der letzten sieben Tag
 
 ![](../images/quality/monitor-data-flows/events-received.png)
 
-Das untere Diagramm zeigt die Rate der erfolgreich verarbeiteten Streaming-Ereignisse von [!DNL Profile] in den letzten sieben Tagen. Dieser Datumsbereich kann angepasst werden, um verschiedene Zeiträume anzuzeigen, indem Sie die hervorgehobene Schaltfläche auswählen.
+Das untere Diagramm zeigt die Rate der erfolgreich verarbeiteten Streaming-Ereignisse nach [!DNL Profile] über die letzten sieben Tage. Dieser Datumsbereich kann angepasst werden, um verschiedene Zeiträume anzuzeigen, indem Sie die hervorgehobene Schaltfläche auswählen.
 
 >[!NOTE]
 >
->Damit Daten in diesem Diagramm angezeigt werden können, müssen die Daten **explizit** für [!DNL Profile] aktiviert sein. Informationen zum Aktivieren von Streaming-Daten für [!DNL Profile] finden Sie im [Benutzerhandbuch zu Datensätzen](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
+>Damit Daten in diesem Diagramm angezeigt werden, müssen die Daten **explizit** aktiviert für [!DNL Profile]. Erfahren Sie, wie Sie Streaming-Daten für [!DNL Profile], lesen Sie die [Benutzerhandbuch zu Datensätzen](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
 
 ![](../images/quality/monitor-data-flows/ingested-by-profile.png)
 
@@ -56,13 +56,13 @@ Darüber hinaus enthalten fehlerhafte Datensätze Details zu den Fehlern, die be
 
 >[!NOTE]
 >
->Wenn Fehler in aufgenommenen Zeilen auftreten, werden diese Zeilen **nicht** abgelegt, es sei denn, die resultierende Meldung führt zu einem ungültigen XDM.
+>Wenn Fehler in aufgenommenen Zeilen auftreten, werden diese Zeilen **not** werden abgelegt, es sei denn, die resultierende Nachricht führt zu einem ungültigen XDM.
 
 ![](../images/quality/monitor-data-flows/failed-batch-error.png)
 
 ## Überwachen der Batch-End-to-End-Datenaufnahme
 
-Wählen Sie im linken Navigationsmenü unter [[!DNL Experience Platform UI]](https://platform.adobe.com) **[!UICONTROL Monitoring]** aus.
+Im [[!DNL Experience Platform UI]](https://platform.adobe.com)auswählen **[!UICONTROL Überwachung]** im linken Navigationsmenü.
 
 Die Überwachungsseite **[!UICONTROL Batch End-to-End]** wird angezeigt und listet die zuvor aufgenommenen Batches auf. Sie können einen der Batches auswählen, um detaillierte Informationen zu diesem Datensatz zu erhalten.
 
@@ -82,6 +82,6 @@ Darüber hinaus enthalten fehlgeschlagene Batches Details zu den Fehlern, die be
 
 >[!NOTE]
 >
->Wenn Fehler in aufgenommenen Zeilen auftreten, werden diese Zeilen **nicht** abgelegt, es sei denn, die resultierende Meldung führt zu einem ungültigen XDM.
+>Wenn Fehler in aufgenommenen Zeilen auftreten, werden diese Zeilen **not** werden abgelegt, es sei denn, die resultierende Nachricht führt zu einem ungültigen XDM.
 
 ![](../images/quality/monitor-data-flows/failed-streaming-error.png)

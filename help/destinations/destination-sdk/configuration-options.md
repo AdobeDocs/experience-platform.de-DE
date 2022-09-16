@@ -5,7 +5,7 @@ exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
 source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
 source-wordcount: '345'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -24,7 +24,7 @@ Der Zieldienst in Adobe Experience Platform verwendet Konfigurationsvorlagen fü
 
 ![Destination SDK-Vorlagen und -Konfigurationen](./assets/self-service-configuration.png)
 
-## Verwandte Links {#related-links}
+## Siehe auch: {#related-links}
 
 Auf den folgenden Seiten finden Sie weitere Details zu den in Destination SDK verfügbaren Funktionen und Konfigurationsoptionen sowie zu den entsprechenden API-Vorgängen, die Sie ausführen können.
 

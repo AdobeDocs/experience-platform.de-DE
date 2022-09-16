@@ -1,7 +1,8 @@
 ---
 title: Best Practices für die Organisation von Daten-Assets in Query Service
 description: In diesem Dokument wird eine logische Methode zur Organisation von Daten beschrieben, um die Verwendung von Query Service zu erleichtern.
-source-git-commit: ed9fa7b83f9e1c974bc74e9dde018a87823954ee
+exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
+source-git-commit: 36fc6f996b4ffd33f542eb9be4fbc50f3fcdd1cb
 workflow-type: tm+mt
 source-wordcount: '788'
 ht-degree: 0%

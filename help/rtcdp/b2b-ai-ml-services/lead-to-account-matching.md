@@ -2,13 +2,13 @@
 title: Lead zur Kontoübereinstimmung in der Echtzeit-Kundendatenplattform B2B
 type: Documentation
 description: Eine Übersicht und weitere Informationen zum Interessenten für die Kontoabgleichfunktion in der Experience Platform CDP B2B.
-source-git-commit: 827bd1b930478c3c0b553a9485f98545771a9062
+exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
+source-git-commit: 0b140e767dec0e703b3ab9c75b7a23c797804c66
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '616'
+ht-degree: 6%
 
 ---
-
 
 # Lead zur Kontoübereinstimmung in der Echtzeit-Kundendatenplattform B2B
 
@@ -32,7 +32,7 @@ Kontobasiertes Marketing bietet die Möglichkeit, bekannte Personen und anonyme 
 - Auftragstitel
 - Standort
 
-Mithilfe der Kontozuordnung können Sie Profile bekannter Personen zuordnen. Anschließend können Sie Daten in einem B2B-Kontext segmentieren und ansprechen, z. B. in Konten, Opportunities usw. Die Personenprofile können in die folgenden drei Kategorien eingeteilt werden:
+Mithilfe der Lead-Konto-Zuordnung können Sie bekannte Personenprofile mit Kontoprofilen verbinden. Anschließend können Sie Daten in einem B2B-Kontext segmentieren und ansprechen, z. B. in Konten, Opportunities usw. Die Personenprofile können in die folgenden drei Kategorien eingeteilt werden:
 
 - **Kundenprofil:** Das Personenprofil ist durch die Beziehung aus einer Datenquelle bereits mit mindestens einem Kontoprofil verknüpft. Dies bedeutet, dass es mindestens ein Kontaktfragment gibt.
 

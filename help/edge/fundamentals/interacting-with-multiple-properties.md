@@ -32,7 +32,7 @@ Mit dem SDK können Sie für jede Eigenschaft eine separate Instanz erstellen, i
 
 Daher erstellt das Skript zwei Instanzen des SDK. Die globale Funktion für die Interaktion mit der ersten Instanz heißt `mycustomname1` und die globale Funktion für die Interaktion mit der zweiten Instanz heißt `mycustomname2`.
 
-Durch Erstellen von zwei separaten Instanzen kann jede für eine andere Eigenschaft konfiguriert werden. Jede Kommunikations- oder Datenpersistenz, die durch die Interaktion mit `mycustomname1` auftritt, wird von `mycustomname2` isoliert gehalten.
+Durch Erstellen von zwei separaten Instanzen kann jede für eine andere Eigenschaft konfiguriert werden. Jede Kommunikations- oder Datenpersistenz, die durch die Interaktion mit `mycustomname1` wird isoliert von `mycustomname2`.
 
 Im obigen Beispiel können Sie Befehle wie folgt mit jeder der Instanzen ausführen:
 
@@ -64,4 +64,4 @@ Achten Sie darauf, den `configure`-Befehl für jede Instanz auszuführen, bevor 
 
 ## Einschränkungen
 
-Um Konflikte mit Cookies zu vermeiden, kann nur eine Instanz von Adobe Experience Platform [!DNL Web SDK] auf einer Seite ein bestimmtes `edgeConfigId`-Element enthalten. Ebenso kann nur eine Instanz von Adobe Experience Platform [!DNL Web SDK] eine bestimmte `orgId`-Instanz haben.
+Um Konflikte mit Cookies zu vermeiden, benötigen Sie nur eine Instanz von Adobe Experience Platform [!DNL Web SDK] innerhalb einer Seite kann eine bestimmte `edgeConfigId`. Ebenso nur eine Instanz von Adobe Experience Platform [!DNL Web SDK] kann eine bestimmte `orgId`.

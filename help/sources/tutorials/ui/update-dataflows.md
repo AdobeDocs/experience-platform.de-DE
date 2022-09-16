@@ -9,7 +9,7 @@ exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 source-git-commit: 6a9ad0ce5d664e3b32cab4183b54fabd5d9d19e3
 workflow-type: tm+mt
 source-wordcount: '724'
-ht-degree: 11%
+ht-degree: 14%
 
 ---
 
@@ -22,11 +22,11 @@ In diesem Tutorial erfahren Sie, wie Sie einen vorhandenen Datenfluss mithilfe d
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Anwendungen für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-## Datenflüsse aktualisieren
+## Aktualisieren von Datenflüssen
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** über die linke Navigationsleiste auf [!UICONTROL Quellen] Arbeitsbereich. Auswählen **[!UICONTROL Datenflüsse]** aus der oberen Kopfzeile, um eine Liste der vorhandenen Datenflüsse anzuzeigen.
+Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Auswählen **[!UICONTROL Datenflüsse]** aus der oberen Kopfzeile, um eine Liste der vorhandenen Datenflüsse anzuzeigen.
 
 ![Katalog](../../images/tutorials/update-dataflows/catalog.png)
 
@@ -74,7 +74,7 @@ In der Zuordnungsschnittstelle wird der vorhandene Zuordnungssatz Ihres Datenflu
 
 Von hier aus können Sie die Zuordnungsschnittstelle verwenden, um die auf Ihren Datenfluss angewendeten Zuordnungssätze zu ändern. Umfassende Schritte zur Verwendung der Zuordnungsschnittstelle finden Sie in der [Benutzerhandbuch zur Datenvorbereitung](../../../data-prep/ui/mapping.md) für weitere Informationen.
 
-![Mapping](../../images/tutorials/update-dataflows/mapping.png)
+![Zuordnung](../../images/tutorials/update-dataflows/mapping.png)
 
 ### Zeitplan
 
@@ -102,7 +102,7 @@ Die **[!UICONTROL Überprüfen]** angezeigt, sodass Sie Ihren Datenfluss überpr
 
 Nachdem Sie Ihren Datenfluss überprüft haben, wählen Sie **[!UICONTROL Beenden]** und lassen Sie etwas Zeit für den Datenfluss zu, wobei die neuen Zuordnungssätze erstellt werden.
 
-![Überprüfung](../../images/tutorials/update-dataflows/review.png)
+![überprüfen](../../images/tutorials/update-dataflows/review.png)
 
 ## Nächste Schritte
 

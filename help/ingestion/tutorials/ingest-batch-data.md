@@ -9,7 +9,7 @@ exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
 source-git-commit: e7fc8a168a48cc6fadda62efda9ee9eb3025ab51
 workflow-type: tm+mt
 source-wordcount: '1322'
-ht-degree: 50%
+ht-degree: 51%
 
 ---
 
@@ -151,6 +151,6 @@ Weitere Informationen zur Batch-Erfassung finden Sie in der [Batch-Erfassung - �
 
 >[!WARNING]
 >
->Die im folgenden Video angezeigte [!DNL Platform]-Benutzeroberfläche ist veraltet. In der obigen Dokumentation finden Sie die neuesten Screenshots und Funktionen der Benutzeroberfläche.
+>Die im folgenden Video angezeigte [!DNL Platform]-Benutzeroberfläche ist veraltet. Die neuesten Screenshots und Funktionen der Benutzeroberfläche finden Sie in der obigen Dokumentation.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)

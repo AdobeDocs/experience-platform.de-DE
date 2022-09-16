@@ -1,16 +1,17 @@
 ---
 keywords: Löschen von Zielkonten, Zielkonten, Löschen von Konten
-title: Zielkonten löschen
+title: Löschen von Zielkonten
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Löschen von Zielkonten in der Adobe Experience Platform-Benutzeroberfläche aufgeführt
-source-git-commit: f31b54622c63f96fb8fa727f80dda295a926e2c7
+exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
+source-git-commit: 2ea56957e122140fbc68c727e36666f8f9a71dd8
 workflow-type: tm+mt
 source-wordcount: '306'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
-# Zielkonten löschen
+# Löschen von Zielkonten
 
 ## Übersicht {#overview}
 
@@ -20,7 +21,7 @@ In diesem Tutorial werden die Schritte zum Löschen von Zielkonten beschrieben, 
 
 ![Registerkarte „Konten“](../assets/ui/update-accounts/destination-accounts.png)
 
-## Konten löschen {#delete}
+## Löschen von Konten {#delete}
 
 >[!TIP]
 >

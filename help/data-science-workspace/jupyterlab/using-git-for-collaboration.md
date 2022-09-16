@@ -13,9 +13,9 @@ ht-degree: 1%
 
 ---
 
-# Zusammenarbeit in [!DNL JupyterLab] mithilfe von [!DNL Git]
+# Zusammenarbeit in [!DNL JupyterLab] using [!DNL Git]
 
-[!DNL Git] ist ein verteiltes Versionskontrollsystem zur Verfolgung von Änderungen im Quellcode während der Softwareentwicklung. Git wird in der Umgebung [!DNL Data Science Workspace JupyterLab] vorinstalliert.
+[!DNL Git] ist ein verteiltes Versionskontrollsystem zur Verfolgung von Änderungen im Quellcode während der Softwareentwicklung. Git wird im [!DNL Data Science Workspace JupyterLab] Umgebung.
 
 ## Voraussetzungen
 
@@ -23,17 +23,17 @@ ht-degree: 1%
 >
 > Der Git-Server, den Sie verwenden möchten, muss über das Internet zugänglich sein.
 
-Die [!DNL Data Science Workspace JupyterLab]-Umgebung ist eine gehostete Umgebung, die nicht in Ihrer Unternehmens-Firewall bereitgestellt wird. Daher muss der Git-Server, zu dem Sie eine Verbindung herstellen, über das öffentliche Internet zugänglich sein. Dies kann ein öffentliches oder privates Repository auf [GitHub](https://github.com/) oder eine andere Instanz eines [!DNL Git]-Servers sein, die Sie selbst hosten möchten.
+Die [!DNL Data Science Workspace JupyterLab] -Umgebung ist eine gehostete Umgebung und nicht in Ihrer Unternehmens-Firewall bereitgestellt. Daher muss der Git-Server, zu dem Sie eine Verbindung herstellen, über das öffentliche Internet zugänglich sein. Dies kann ein öffentliches oder privates Repository in [GitHub](https://github.com/) oder einer anderen Instanz eines [!DNL Git] -Server, den Sie selbst hosten möchten.
 
-## Verbinden Sie [!DNL Git] mit der [!DNL Data Science Workspace JupyterLab Notebooks]-Umgebung
+## Verbinden [!DNL Git] der [!DNL Data Science Workspace JupyterLab Notebooks] Umgebung
 
-Starten Sie [!DNL Adobe Experience Platform] und navigieren Sie zur Umgebung [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab) .
+Starten durch Starten [!DNL Adobe Experience Platform] und zur [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab) Umgebung.
 
-Wählen Sie in [!DNL JupyterLab] **[!UICONTROL Datei]** und bewegen Sie dann den Mauszeiger über **[!UICONTROL Neu]**. Wählen Sie im angezeigten Dropdown-Menü **[!UICONTROL Terminal]** aus.
+Within [!DNL JupyterLab]auswählen **[!UICONTROL Datei]** dann den Mauszeiger darüber bewegen **[!UICONTROL Neu]**. Wählen Sie aus dem angezeigten Dropdown-Menü **[!UICONTROL Terminal]**.
 
 ![JupyterLab Nav](../images/jupyterlab/tutorials/open-terminal.png)
 
-Navigieren Sie anschließend in *Terminal* mithilfe des folgenden Befehls zu Ihrem Arbeitsbereich: `cd my-workspace`.
+Weiter, innerhalb *Terminal* Navigieren Sie mit dem folgenden Befehl zu Ihrem Arbeitsbereich: `cd my-workspace`.
 
 ![cd workspace](../images/jupyterlab/tutorials/find-workspace.png)
 
@@ -41,7 +41,7 @@ Navigieren Sie anschließend in *Terminal* mithilfe des folgenden Befehls zu Ihr
 >
 > Um eine Liste der verfügbaren Git-Befehle anzuzeigen, geben Sie den Befehl aus: `git -help` in Ihrem Terminal.
 
-Klonen Sie anschließend das Repository, das Sie mit dem Befehl `git clone` verwenden möchten. Klonen Sie Ihr Projekt mit einer `https://`-URL anstelle von `ssh://`.
+Klonen Sie anschließend das Repository, das Sie mit dem `git clone` Befehl. Projekt mithilfe eines `https://` URL anstelle von `ssh://`.
 
 **Beispiel**:
 
@@ -51,7 +51,7 @@ Klonen Sie anschließend das Repository, das Sie mit dem Befehl `git clone` verw
 
 >[!NOTE]
 >
-> Um beispielsweise Schreibvorgänge (`git push`) durchzuführen, müssen die folgenden Konfigurationsbefehle für jede neue Sitzung ausgeführt werden. Beachten Sie außerdem, dass bei jedem Push-Befehl ein Benutzername und ein Kennwort angezeigt werden.
+> Um alle Schreibvorgänge durchzuführen (`git push` Beispielsweise müssen die folgenden Konfigurationsbefehle für jede neue Sitzung ausgeführt werden. Beachten Sie außerdem, dass bei jedem Push-Befehl ein Benutzername und ein Kennwort angezeigt werden.
 >
 >`git config --global user.email "you@example.com"`
 >
@@ -59,4 +59,4 @@ Klonen Sie anschließend das Repository, das Sie mit dem Befehl `git clone` verw
 
 ## Nächste Schritte
 
-Nachdem Sie das Klonen Ihres Repositorys abgeschlossen haben, können Sie Git wie gewohnt auf Ihrem lokalen Computer verwenden, um mit anderen an Notebooks zusammenzuarbeiten. Weitere Informationen dazu, was Sie in [!DNL JupyterLab] tun können, finden Sie unter [[!DNL JupyterLab user guide]](./overview.md).
+Nachdem Sie das Klonen Ihres Repositorys abgeschlossen haben, können Sie Git wie gewohnt auf Ihrem lokalen Computer verwenden, um mit anderen an Notebooks zusammenzuarbeiten. Weitere Informationen dazu, was Sie in [!DNL JupyterLab], siehe [[!DNL JupyterLab user guide]](./overview.md).

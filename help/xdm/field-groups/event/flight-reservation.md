@@ -10,23 +10,23 @@ ht-degree: 5%
 
 ---
 
-# [!UICONTROL Feldergruppe ] &quot;Flugreservierung&quot;
+# [!UICONTROL Flugreservierung] Schemafeldgruppe
 
-[!UICONTROL Die ] Flugreservierung ist eine Standardschemafeldgruppe für die  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) Klasse, die zum Erfassen von Informationen über eine Flugreservierung verwendet wird.
+[!UICONTROL Flugreservierung] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) zur Erfassung von Informationen zu einer Flugreservierung verwendet werden.
 
-Die Feldergruppe ist eine Erweiterung der Feldergruppe [!UICONTROL Reservierungsdetails] und enthält alle gleichen Felder unter einem einzigen Feld vom Typ Objekt `reservations`. Zusätzlich zu diesen generischen Feldern enthält [!UICONTROL Flugreservierung] auch `flightReservations` -Array. Dieses Objekt dient zur Beschreibung einer oder mehrerer Reservierungen mit Eigenschaften, die für Flugreisen eindeutig sind.
+Die Feldergruppe ist eine Erweiterung der [!UICONTROL Buchungsdetails] Feldergruppe und enthält alle gleichen Felder unter einem Feld vom Typ &quot;Objekt&quot;, `reservations`. Zusätzlich zu diesen allgemeinen Feldern [!UICONTROL Flugreservierung] auch `flightReservations` Array. Dieses Objekt dient zur Beschreibung einer oder mehrerer Reservierungen mit Eigenschaften, die für Flugreisen eindeutig sind.
 
 >[!NOTE]
 >
->Dieses Dokument behandelt die Details des `flightReservations`-Arrays. Informationen zu den anderen Feldern, die unter dem `reservations`-Objekt bereitgestellt werden, finden Sie in der [[!UICONTROL Reservierungsdetails] Feldgruppenreferenz](./reservation-details.md).
+>In diesem Dokument werden die Details der `flightReservations` Array. Für Informationen über die anderen Felder, die im `reservations` -Objekt, siehe [[!UICONTROL Buchungsdetails] Feldergruppenreferenz](./reservation-details.md).
 
 ![Struktur der Flugreservierung](../../images/field-groups/flight-reservation/structure.png)
 
 ## `flightReservations`
 
-`flightReservations` ist ein Array von Objekten, das eine Liste von Flugreservierungen darstellt. Wenn ein Reservierungsereignis beispielsweise Reservierungen für mehrere Anschlussflüge auf einer Reise beinhaltet, können diese Reservierungen für eine einzelne Veranstaltung als einzelne Objekte unter `flightReservations` aufgeführt werden.
+`flightReservations` ist ein Array von Objekten, das eine Liste von Flugreservierungen darstellt. Wenn ein Reservierungsereignis Reservierungen für mehrere Anschlussflüge auf einer Reise beinhaltet, können diese Reservierungen beispielsweise als einzelne Objekte unter `flightReservations` für ein einzelnes Ereignis.
 
-Die Struktur der einzelnen Objekte, die unter `flightReservations` bereitgestellt werden, finden Sie unten.
+Die Struktur der einzelnen Objekte, die unter `flightReservations` ist unten angegeben.
 
 ![Struktur der Flugreservierungen](../../images/field-groups/flight-reservation/flightReservations.png)
 

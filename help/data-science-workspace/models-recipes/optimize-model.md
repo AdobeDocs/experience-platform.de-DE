@@ -15,7 +15,7 @@ ht-degree: 88%
 
 # Modell mithilfe des Model Insights-Frameworks optimieren
 
-Das Model Insights Framework bietet Datenwissenschaftlern Werkzeuge in [!DNL Data Science Workspace], um anhand von Experimenten schnelle und fundierte Entscheidungen für optimale Modelle für maschinelles Lernen zu treffen. Das Framework verbessert die Geschwindigkeit und Effektivität des Workflows für maschinelles Lernen und erhöht die Anwenderfreundlichkeit für Data Scientists. Dies geschieht durch Bereitstellung einer Standardvorlage für jeden maschinellen Lernalgorithmustyp, sodass sich Modelle verfeinern lassen. Das Endergebnis ermöglicht es Data Scientists und Citizen Data Scientists, bessere Entscheidungen zur Optimierung von Modellen ihrer Endkunden zu treffen.
+Das Model Insights Framework stellt den Datenwissenschaftlern Tools in [!DNL Data Science Workspace] um schnelle und fundierte Entscheidungen für optimale Modelle des maschinellen Lernens auf der Grundlage von Experimenten zu treffen. Das Framework verbessert die Geschwindigkeit und Effektivität des Workflows für maschinelles Lernen und erhöht die Anwenderfreundlichkeit für Data Scientists. Dies geschieht durch Bereitstellung einer Standardvorlage für jeden maschinellen Lernalgorithmustyp, sodass sich Modelle verfeinern lassen. Das Endergebnis ermöglicht es Data Scientists und Citizen Data Scientists, bessere Entscheidungen zur Optimierung von Modellen ihrer Endkunden zu treffen.
 
 ## Was sind Metriken?
 
@@ -78,7 +78,7 @@ In der folgenden Tabelle sind die Standardmetriken für jede Klasse aufgeführt.
 | `evaluator.class` | Standardmetriken | `evaluation.metric` |
 | --- | --- | --- |
 | `DefaultBinaryClassificationEvaluator` | -Precision <br>-Recall <br>-Confusion Matrix <br>-F-Score <br>-Accuracy <br>-Receiver Operating Characteristics <br>-Area Under the Receiver Operating Characteristics | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
-| `DefaultMultiClassificationEvaluator` | -Precision <br>-Recall <br>-Confusion Matrix <br>-F-Score <br>-Accuracy <br>-Receiver-Betriebseigenschaften <br>-Bereich unter den Betriebseigenschaften des Receivers | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
+| `DefaultMultiClassificationEvaluator` | -Precision <br>-Recall <br>-Verwirrungsmatrix <br>-F-Score <br>-Genauigkeit <br>-Bedienungsmerkmale des Receivers <br>-Bereich unter den Betriebseigenschaften des Receivers | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
 | `RecommendationsEvaluator` | -Mean Average Precision (MAP) <br>-Normalized Discounted Cumulative Gain <br>-Mean Reciprocal Rank <br>-Metric K | -`MEAN_AVERAGE_PRECISION` <br>-`NDCG` <br>-`MRR` <br>-`METRIC_K` |
 
 
@@ -100,19 +100,19 @@ Nach der Definition im Rezept besteht der nächste Schritt darin, sie in den Rez
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
-Im [!DNL Data Science Workspace] könnte der Benutzer die Einblicke auf der Registerkarte &quot;Auswertungsmetriken&quot;auf der Experimentseite sehen.
+Im [!DNL Data Science Workspace]festgelegt ist, kann der Benutzer die Einblicke auf der Registerkarte &quot;Auswertungsmetriken&quot;auf der Experimentseite sehen.
 
 ### [!DNL Python/Tensorflow] {#pythontensorflow}
 
-Derzeit gibt es keine standardmäßigen Auswertungsmetriken für [!DNL Python] oder [!DNL Tensorflow]. Um die Auswertungsmetriken für [!DNL Python] oder [!DNL Tensorflow] zu erhalten, müssen Sie daher eine benutzerdefinierte Auswertungsmetrik erstellen. Dies kann durch Implementierung der `Evaluator`-Klasse erfolgen.
+Derzeit gibt es keine standardmäßigen Auswertungsmetriken für [!DNL Python] oder [!DNL Tensorflow]. So erhalten Sie die Auswertungsmetriken für [!DNL Python] oder [!DNL Tensorflow]müssen Sie eine benutzerdefinierte Auswertungsmetrik erstellen. Dies kann durch Implementierung der `Evaluator`-Klasse erfolgen.
 
 #### Benutzerdefinierte Auswertungsmetriken für [!DNL Python]
 
 Für benutzerdefinierte Auswertungsmetriken müssen für den Auswerter zwei Hauptmethoden implementiert werden: `split()` und `evaluate()`.
 
-Für [!DNL Python] würden diese Methoden in [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) für die Klasse `Evaluator` definiert. Folgen Sie dem Link [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py), um ein Beispiel für `Evaluator` zu sehen.
+Für [!DNL Python]festlegen, würden diese Methoden in [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) für `Evaluator` -Klasse. Folgen Sie dem Link [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py), um ein Beispiel für `Evaluator` zu sehen.
 
-Zum Erstellen von Auswertungsmetriken in [!DNL Python] muss der Benutzer die Methoden `evaluate()` und `split()` implementieren.
+Erstellen von Auswertungsmetriken in [!DNL Python] erfordert, dass der Benutzer die `evaluate()` und `split()` -Methoden.
 
 Die `evaluate()`-Methode gibt das metrische Objekt zurück, das eine Gruppe von Metrikobjekten mit den Eigenschaften `name`, `value` und `valueType` enthält.
 
@@ -122,7 +122,7 @@ Die `split()`-Methode sollte einen Trainings- und Prüf-Dataframe zurückgeben, 
 
 #### Benutzerdefinierte Auswertungsmetriken für TensorFlow
 
-Für [!DNL Tensorflow], ähnlich wie [!DNL Python], müssen die Methoden `evaluate()` und `split()` in der Klasse `Evaluator` implementiert werden. Für `evaluate()` sollten die Metriken zurückgegeben werden, während `split()` die Trainings- und Testdatensätze zurückgibt.
+Für [!DNL Tensorflow], ähnlich wie [!DNL Python], die Methoden `evaluate()` und `split()` im `Evaluator` -Klasse implementiert werden. Für `evaluate()` sollten die Metriken zurückgegeben werden, während `split()` die Trainings- und Testdatensätze zurückgibt.
 
 ```PYTHON
 from ml.runtime.python.Interfaces.AbstractEvaluator import AbstractEvaluator
@@ -157,7 +157,7 @@ Daten werden zunächst aus einer in [retail.config.json](https://github.com/adob
 
 ## Verwenden von vordefinierten Metriken und Visualisierungsdiagrammen
 
-[!DNL Sensei Model Insights Framework] unterstützt für jeden Typ von maschinellem Lernalgorithmus eine Standardvorlage. Die folgende Tabelle beinhaltet allgemeine übergeordnete Klassen für maschinelle Lernalgorithmen und zugehörige Auswertungsmetriken und Visualisierungen.
+Die [!DNL Sensei Model Insights Framework] unterstützt eine Standardvorlage für jeden Typ von maschinellem Lernalgorithmus. Die folgende Tabelle beinhaltet allgemeine übergeordnete Klassen für maschinelle Lernalgorithmen und zugehörige Auswertungsmetriken und Visualisierungen.
 
 | ML-Algorithmustyp | Auswertungsmetriken | Visualisierungen |
 | --- | --- | --- |

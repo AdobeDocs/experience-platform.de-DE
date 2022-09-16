@@ -8,13 +8,13 @@ exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
 source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
 source-wordcount: '190'
-ht-degree: 5%
+ht-degree: 12%
 
 ---
 
-# [!UICONTROL Web ] InteractionData type
+# [!UICONTROL Webinteraktion] Datentyp
 
-[!UICONTROL Web-] Interaktion ist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der Informationen über Interaktionen beschreibt, die auf einer Webseite nach dem ersten Laden der Seite aufgetreten sind. Sie ist zur Aufzeichnung von Interaktionen in Rich-Web-Anwendungen gedacht, die keinen neuen Seitenladevorgang wie Single-Page-Webanwendungen (SPA) Trigger haben.
+[!UICONTROL Webinteraktion] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Informationen zu Interaktionen beschreibt, die auf einer Webseite nach dem ersten Laden der Seite aufgetreten sind. Sie ist zur Aufzeichnung von Interaktionen in Rich-Web-Anwendungen gedacht, die keinen neuen Seitenladevorgang wie Single-Page-Webanwendungen (SPA) Trigger haben.
 
 <img src="../images/data-types/web-interaction.PNG" width="500" /><br />
 

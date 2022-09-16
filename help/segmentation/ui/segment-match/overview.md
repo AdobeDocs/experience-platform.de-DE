@@ -184,7 +184,7 @@ Um Segmente hinzuzufügen oder zu entfernen, wählen Sie **[!UICONTROL Feed erst
 
 Die Liste der Segmente wird angezeigt. Von hier aus können Sie neue Segmente zu Ihrem Feed hinzufügen und über die rechte Leiste alle Segmente entfernen, die Sie nicht mehr benötigen. Nachdem Sie die Segmente in Ihrem Feed verwaltet haben, wählen Sie **[!UICONTROL Nächste]** und dann die oben beschriebenen Schritte ausführen, um den aktualisierten Feed abzuschließen.
 
-![update](./images/update.png)
+![Aktualisieren](./images/update.png)
 
 >[!NOTE]
 >

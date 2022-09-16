@@ -18,7 +18,7 @@ Die Benutzeroberfläche von Adobe Experience Platform unterstützt mehrere Brows
 
 ## Browser-Unterstützung
 
-Die Platform-Benutzeroberfläche wurde für die optimale Verwendung in den **neuesten Versionen** von Google Chrome, Safari, Firefox und Microsoft Edge entwickelt. Möglicherweise haben Sie bei der Verwendung bestimmter Funktionen in älteren Versionen von Browsern Probleme.
+Die Platform-Benutzeroberfläche wurde für eine optimale Funktionsweise in der **aktuelle Versionen** von Google Chrome, Safari, Firefox und Microsoft Edge. Möglicherweise haben Sie bei der Verwendung bestimmter Funktionen in älteren Versionen von Browsern Probleme.
 
 | Betriebssystem | Unterstützte Browser |
 |---|---|
@@ -47,8 +47,8 @@ Die Standardsprache der Benutzeroberfläche wird durch die in Ihrem Benutzerprof
 
 Gehen Sie wie folgt vor, um Ihre Sprache zu ändern:
 
-1. Wählen Sie die aktuelle Sprache in der Fußzeile der [!DNL Experience Platform]-Benutzeroberfläche aus.
-2. Wählen Sie in den Profileinstellungen **[!UICONTROL Region ändern]** aus.
+1. Wählen Sie in der Fußzeile der [!DNL Experience Platform] -Benutzeroberfläche.
+2. Wählen Sie in den Profileinstellungen die Option **[!UICONTROL Region ändern]**.
 3. Wählen Sie Ihre Region aus.
 
 >[!NOTE]

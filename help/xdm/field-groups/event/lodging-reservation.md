@@ -6,27 +6,27 @@ exl-id: f0eafc83-21f1-483d-9397-1133e3777699
 source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
 source-wordcount: '682'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
-# [!UICONTROL Feldergruppe ] Reservationschema abrufen
+# [!UICONTROL Unterkunftsreservierung] Schemafeldgruppe
 
-[!UICONTROL Die Unterkunft ] Reservierung ist eine Standardschemafeldergruppe für die  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) Klasse, die zur Erfassung von Informationen über eine Reservierung verwendet wird.
+[!UICONTROL Unterkunftsreservierung] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) verwendet, um Informationen über eine Reservierung zu erfassen.
 
-Die Feldergruppe ist eine Erweiterung der Feldergruppe [!UICONTROL Reservierungsdetails] und enthält alle gleichen Felder unter einem einzigen Feld vom Typ Objekt `reservations`. Zusätzlich zu diesen generischen Feldern enthält [!UICONTROL Reservierungsreservierung] auch `lodgingReservations` -Array. Dieses Objekt dient zur Beschreibung einer oder mehrerer Reservierungen mit Eigenschaften, die für die Unterkunft eindeutig sind.
+Die Feldergruppe ist eine Erweiterung der [!UICONTROL Buchungsdetails] Feldergruppe und enthält alle gleichen Felder unter einem Feld vom Typ &quot;Objekt&quot;, `reservations`. Zusätzlich zu diesen allgemeinen Feldern [!UICONTROL Unterkunftsreservierung] auch `lodgingReservations` Array. Dieses Objekt dient zur Beschreibung einer oder mehrerer Reservierungen mit Eigenschaften, die für die Unterkunft eindeutig sind.
 
 >[!NOTE]
 >
->Dieses Dokument behandelt die Details des `lodgingReservations`-Arrays. Informationen zu den anderen Feldern, die unter dem `reservations`-Objekt bereitgestellt werden, finden Sie in der [[!UICONTROL Reservierungsdetails] Feldgruppenreferenz](./reservation-details.md).
+>In diesem Dokument werden die Details der `lodgingReservations` Array. Für Informationen über die anderen Felder, die im `reservations` -Objekt, siehe [[!UICONTROL Buchungsdetails] Feldergruppenreferenz](./reservation-details.md).
 
 ![Buchungsstruktur](../../images/field-groups/lodging-reservation/structure.png)
 
 ## `lodgingReservations`
 
-`lodgingReservations` ist eine Gruppe von Objekten, die eine Liste von Reservierungen für Unterkünfte darstellen. Wenn ein Reservierungsereignis beispielsweise Reservierungen in mehreren verschiedenen Hotels entlang der Route einer Reise beinhaltet, können diese Reservierungen als einzelne Objekte unter `lodgingReservations` für eine einzelne Veranstaltung aufgeführt werden.
+`lodgingReservations` ist eine Gruppe von Objekten, die eine Liste von Reservierungen für Unterkünfte darstellen. Wenn ein Reservierungsereignis Reservierungen in mehreren Hotels entlang der Route einer Reise beinhaltet, können diese Reservierungen beispielsweise als einzelne Objekte unter `lodgingReservations` für ein einzelnes Ereignis.
 
-Die Struktur der einzelnen Objekte, die unter `lodgingReservations` bereitgestellt werden, finden Sie unten.
+Die Struktur der einzelnen Objekte, die unter `lodgingReservations` ist unten angegeben.
 
 ![lodgingReservations structure](../../images/field-groups/lodging-reservation/lodgingReservations.png)
 

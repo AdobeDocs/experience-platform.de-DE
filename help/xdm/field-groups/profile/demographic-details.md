@@ -8,18 +8,18 @@ exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
 source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '282'
-ht-degree: 22%
+ht-degree: 26%
 
 ---
 
 
-# [!UICONTROL Feldgruppe &quot;Demografisches ] Detailschema&quot;
+# [!UICONTROL Demografische Details] Schemafeldgruppe
 
 >[!NOTE]
 >
->Die Namen verschiedener Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu [Feldgruppennamenupdates](../name-updates.md) .
+>Die Namen verschiedener Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
 
-[!UICONTROL Demografische ] Details sind eine Standardschemafeldgruppe für die  [[!DNL XDM Individual Profile] Klasse](../../classes/individual-profile.md). Die Feldergruppe stellt ein `person`-Objekt auf der Stammebene bereit, dessen Unterfelder Informationen über eine Person beschreiben.
+[!UICONTROL Demografische Details] ist eine Standardschemafeldgruppe für die [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). Die Feldergruppe stellt eine Stammebene bereit `person` -Objekt, dessen Unterfelder Informationen über eine Person beschreiben.
 
 ![](../../images/field-groups/demographic-details.png)
 

@@ -18,7 +18,7 @@ ht-degree: 59%
 
 Dieses Dokument bietet einen Überblick über [!DNL JupyterLab] und deren Funktionen sowie Anweisungen zum Ausführen allgemeiner Aktionen.
 
-## [!DNL JupyterLab] on [!DNL Experience Platform]
+## [!DNL JupyterLab] auf [!DNL Experience Platform]
 
 Die JupyterLab-Integration mit Experience Platform wird von Architekturänderungen, Designüberlegungen, benutzerdefinierten Notebook-Erweiterungen, vorinstallierten Bibliotheken und einer Oberfläche im Stil von Adobe begleitet.
 

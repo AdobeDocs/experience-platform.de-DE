@@ -8,7 +8,7 @@ exl-id: 2c775b86-7262-4f05-b421-c626867de0a4
 source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
 source-wordcount: '287'
-ht-degree: 2%
+ht-degree: 12%
 
 ---
 
@@ -24,9 +24,9 @@ In der folgenden Tabelle werden die vorhandenen Feldergruppen, die aktualisiert 
 | [!UICONTROL Datenschutz-Mixin für Erlebnisereignisse] | [!UICONTROL Datenschutzdetails] |
 | [!UICONTROL ExperienceEvent-Anwendungsdetails] | [!UICONTROL Anwendungsdetails] |
 | [!UICONTROL ExperienceEvent-Kanaldetails] | [!UICONTROL Kanaldetails] |
-| [!UICONTROL ExperienceEvent-Commerce-Details] | [!UICONTROL Commerce-Details] |
+| [!UICONTROL ExperienceEvent-Commerce-Details] | [!UICONTROL Handelsdetails] |
 | [!UICONTROL ExperienceEvent-Details für Werbung] | [!UICONTROL Werbedetails] |
-| [!UICONTROL ExperienceEvent-Details für das Marketing] | [!UICONTROL Kampagnen-Marketingdetails] |
+| [!UICONTROL ExperienceEvent-Details für das Marketing] | [!UICONTROL Kampagnen-Marketing-Details] |
 | [!UICONTROL ExperienceEvent-Details für Medien] | [!UICONTROL Medieninteraktionsdetails] |
 | [!UICONTROL ExperienceEvent-Details für die Suche] | [!UICONTROL Suchdetails] |
 | [!UICONTROL Direkte Marketing-Details zu ExperienceEvent] | [!UICONTROL Direkt-Marketing-Details] |
@@ -36,16 +36,16 @@ In der folgenden Tabelle werden die vorhandenen Feldergruppen, die aktualisiert 
 | [!UICONTROL Details zur ExperienceEvent-Profilzuordnung] | [!UICONTROL Profilzuordnung] |
 | [!UICONTROL Details zur Segmentmitgliedschaft in ExperienceEvent] | [!UICONTROL Details zur Segmentzugehörigkeit] |
 | [!UICONTROL Technische Details zu ExperienceEvent] | [!UICONTROL Technische Details] |
-| [!UICONTROL ExperienceEvent-Webdetails] | [!UICONTROL Webdetails] |
+| [!UICONTROL ExperienceEvent-Webdetails] | [!UICONTROL Web-Details] |
 | [!UICONTROL Profil-Direktmarketing] | [!UICONTROL Kontaktdetails für Direktmarketing] |
 | [!UICONTROL Persönliche Daten des Profils] | [!UICONTROL Demografische Details] |
-| [!UICONTROL Persönliche Daten des Profils] | [!UICONTROL Persönliche Kontaktangaben] |
+| [!UICONTROL Persönliche Daten des Profils] | [!UICONTROL Persönliche Kontaktdaten] |
 | [!UICONTROL Profilphones] | [!UICONTROL Telefonnummerndetails] |
 | [!UICONTROL Details zu Profilvoreinstellungen] | [!UICONTROL Präferenzdetails] |
 | [!UICONTROL Profildatenschutz] | [!UICONTROL Datenschutzdetails] |
 | [!UICONTROL Profil-Push-Details] | [!UICONTROL Details zum Push-Benachrichtigungs-Token] |
 | [!UICONTROL Profilsegmentierung] | [!UICONTROL Details zur Segmentzugehörigkeit] |
 | [!UICONTROL Profilanmeldungen] | [!UICONTROL Abonnementdetails] |
-| [!UICONTROL Profil-Arbeitsdetails] | [!UICONTROL Kontaktangaben für Arbeitskontakte] |
+| [!UICONTROL Profil-Arbeitsdetails] | [!UICONTROL Details zu Arbeitskontakten] |
 | [!UICONTROL Details zu Push-Benachrichtigungen] | [!UICONTROL Details zu Push-Benachrichtigungen] |
 | [!UICONTROL Segmentausdruck] | [!UICONTROL Details zu Segmentausdrücken] |

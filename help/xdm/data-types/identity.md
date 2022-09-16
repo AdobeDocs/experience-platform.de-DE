@@ -8,20 +8,20 @@ exl-id: fb02b6b4-255b-442f-895c-600022231a1c
 source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
 source-wordcount: '287'
-ht-degree: 11%
+ht-degree: 16%
 
 ---
 
-#  IdentityDataType
+# [!UICONTROL Identität] Datentyp
 
- Identity ist ein standardmäßiger XDM-Datentyp, mit dem Personen, die mit digitalen Erlebnissen interagieren, klar unterschieden werden. Die Identität wird von einem Identitäts-Provider festgelegt, der selbst in einem `namespace` -Attribut referenziert wird. Innerhalb jedes `namespace` ist die Identität eindeutig.
+[!UICONTROL Identität] ist ein standardmäßiger XDM-Datentyp, mit dem Personen, die mit digitalen Erlebnissen interagieren, klar unterschieden werden. Die Identität wird von einem Identitäts-Provider festgelegt, der selbst in einem `namespace` -Attribut. Innerhalb von `namespace`, ist die Identität eindeutig.
 
 <img src="../images/data-types/identity.png" width="550" /><br />
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `namespace` | Objekt | Ein Objekt, das ein einzelnes Zeichenfolgenfeld (`code`) enthält, das den Namespace angibt, der mit dem bereitgestellten `id`-Attribut verknüpft ist. |
-| `authenticatedState` | Zeichenfolge | Der authentifizierte Status für diese Identität zum Zeitpunkt des beobachteten Erlebnisereignisses. Akzeptierte Werte und Definitionen finden Sie im [Anhang](#authenticatedState) . |
+| `namespace` | Objekt | Ein Objekt, das ein einzelnes Zeichenfolgenfeld enthält (`code`), der den Namespace angibt, der mit der angegebenen verknüpft ist `id` -Attribut. |
+| `authenticatedState` | Zeichenfolge | Der authentifizierte Status für diese Identität zum Zeitpunkt des beobachteten Erlebnisereignisses. Siehe [Anhang](#authenticatedState) für akzeptierte Werte und Definitionen. |
 | `id` | Zeichenfolge | Die Identität des Verbrauchers im zugehörigen Namespace. |
 | `primary` | Boolesch | Gibt an, ob dies die primäre Identität der Person ist. Jede Person kann nur eine primäre Identität haben. |
 | `xid` | Zeichenfolge | Falls vorhanden, stellt dieser Wert eine Namespace-übergreifenden Kennung dar, die über alle Kennungen in allen Namespaces eindeutig ist. |
@@ -35,11 +35,11 @@ Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 
 ## Anhang
 
-Der folgende Abschnitt enthält zusätzliche Informationen zum Datentyp [!UICONTROL Identität].
+Im folgenden Abschnitt finden Sie weitere Informationen zum [!UICONTROL Identität] Datentyp.
 
 ## Akzeptierte Werte für authenticatedState {#authenticatedState}
 
-In der folgenden Tabelle sind die zulässigen Werte für `authenticatedState` und die zugehörige Bedeutung aufgeführt:
+In der folgenden Tabelle sind die für `authenticatedState` und ihre zugehörige Bedeutung:
 
 | Wert | Beschreibung |
 | --- | --- |

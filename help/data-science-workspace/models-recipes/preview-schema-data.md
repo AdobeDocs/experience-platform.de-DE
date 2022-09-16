@@ -15,26 +15,26 @@ ht-degree: 22%
 
 # Vorschau des Einzelhandelsschemas und -datensatzes
 
-Nach erfolgreichem Abschluss des Bootstrap-Skripts aus dem Tutorial [Einzelhandelsschema und -datensatz](./create-retails-sales-dataset.md). Ausgabeschemas und -datensätze können auf [!DNL Experience Platform] angezeigt werden. Gehen Sie zur Anzeige der Schemas und Datensätze wie folgt vor:
+Nach erfolgreichem Abschluss des Bootstrap-Skripts aus dem [Einzelhandelsschema und -datensatz](./create-retails-sales-dataset.md) Tutorial. Ausgabeschemas und -datensätze können angezeigt werden unter [!DNL Experience Platform]. Gehen Sie zur Anzeige der Schemas und Datensätze wie folgt vor:
 
-Wählen Sie im linken Navigationsbereich die Registerkarte **[!UICONTROL Schemas]** aus und suchen Sie nach dem vom Bootstrap-Skript erstellten Eingabeschema. Der Name des Schemas entspricht dem, der im vorherigen Schritt unter `config.yaml` definiert wurde. Zeigen Sie die Schemadetails und deren Komposition an, indem Sie darauf klicken.
+Wählen Sie die **[!UICONTROL Schemas]** im linken Navigationsbereich und suchen Sie das vom Bootstrap-Skript erstellte Eingabeschema. Der Name des Schemas entspricht dem, der im vorherigen Schritt unter `config.yaml` definiert wurde. Zeigen Sie die Schemadetails und deren Komposition an, indem Sie darauf klicken.
 
 ![](../images/models-recipes/access-data/schema.PNG)
 
-Wählen Sie im linken Navigationsbereich die Registerkarte **[!UICONTROL Datensätze]** aus und öffnen Sie den Eingabedatensatz, der durch Auswahl des Datensatznamens erstellt wurde. Der Name des Datensatzes entspricht dem, der im vorherigen Schritt unter `config.yaml` definiert wurde.
+Wählen Sie die **[!UICONTROL Datensätze]** in der linken Navigation und öffnen Sie den Eingabedatensatz, der durch Auswahl des Datensatznamens erstellt wurde. Der Name des Datensatzes entspricht dem, der in `config.yaml` aus dem vorherigen Schritt.
 
 ![](../images/models-recipes/access-data/dataset.PNG)
 
-Wählen Sie **[!UICONTROL Datensatz-Vorschau]** oben rechts aus, um eine Teilmenge des Datensatzes in der Vorschau anzuzeigen.
+Auswählen **[!UICONTROL Vorschau eines Datensatzes anzeigen]** oben rechts, um eine Teilmenge des Datensatzes in der Vorschau anzuzeigen.
 
 ![](../images/models-recipes/access-data/preview.PNG)
 
 ## Nächste Schritte
 
-Sie haben jetzt mit dem bereitgestellten Bootstrap-Skript erfolgreich Beispieldaten für Einzelhandelsumsätze in [!DNL Experience Platform] erfasst.
+Sie haben jetzt erfolgreich Beispieldaten für Einzelhandelsumsätze in [!DNL Experience Platform] mithilfe des bereitgestellten Bootstrap-Skripts.
 
 So arbeiten Sie weiter mit den aufgenommenen Daten:
 - [Daten mit Jupyter Notebooks analysieren](../jupyterlab/analyze-your-data.md)
-   - Verwenden Sie Jupyter Notebooks in [!DNL Data Science Workspace], um auf Ihre Daten zuzugreifen, sie zu untersuchen, zu visualisieren und zu verstehen.
+   - Verwenden von Jupyter-Notebooks in [!DNL Data Science Workspace] , um auf Ihre Daten zuzugreifen, sie zu untersuchen, zu visualisieren und zu verstehen.
 - [Quelldateien in einem Rezept verpacken](./package-source-files-recipe.md)
-   - In diesem Tutorial erfahren Sie, wie Sie Ihr eigenes Modell in [!DNL Data Science Workspace] bringen, indem Sie Quelldateien in einer wichtigen Rezeptdatei verpacken.
+   - In diesem Tutorial erfahren Sie, wie Sie Ihr eigenes Modell in [!DNL Data Science Workspace] durch Verpacken von Quelldateien in einer wichtigen Rezeptdatei.

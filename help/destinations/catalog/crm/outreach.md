@@ -2,19 +2,19 @@
 keywords: crm;CRM;CRM-Ziele;Outreach;CRM-Ziel erreichen
 title: Außenverbindung
 description: Mit dem Ziel Outreach können Sie Ihre Kontodaten exportieren und für Ihre geschäftlichen Anforderungen in Outreach aktivieren.
-source-git-commit: 27da0f8d7896fd32e8a1b828630db7e5e08185c2
+exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
+source-git-commit: 4ef83c152c4649721c6a424f3ba47b7c6bbfef3f
 workflow-type: tm+mt
 source-wordcount: '1714'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
-
 
 # [!DNL Outreach]-Verbindung
 
 ## Übersicht {#overview}
 
-[[!DNL Outreach]](https://www.outreach.io/) ist eine Sales Execution Platform mit den weltweit besten B2B-Käufer-Verkäuferinteraktionsdaten und umfangreichen Investitionen in proprietäre KI-Technologien, um Verkaufsdaten in intelligente Lösungen zu übersetzen. [!DNL Outreach] unterstützt Unternehmen bei der Automatisierung von Verkaufsaktivitäten und der Umsetzung von Umsatz-Intelligenz, um ihre Effizienz, Vorhersehbarkeit und ihr Wachstum zu verbessern.
+[[!DNL Outreach]](https://www.outreach.io/) ist eine Sales Execution-Plattform mit den weltweit meisten Daten zu B2B-Käufer-Verkäufer-Interaktionen und erheblichen Investitionen in proprietäre KI-Technologien zur Umwandlung von Verkaufsdaten in Intelligenz. [!DNL Outreach] unterstützt Unternehmen bei der Automatisierung des Vertriebsengagements und der Nutzung von Umsatzdaten, um ihre Effizienz, Vorhersagbarkeit und ihr Wachstum zu verbessern.
 
 Diese [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt die [Outreach Update Resource API](https://api.outreach.io/api/v2/docs#update-an-existing-resource), mit dem Sie Identitäten innerhalb eines Segments aktualisieren können, die potenziellen Kunden in [!DNL Outreach].
 

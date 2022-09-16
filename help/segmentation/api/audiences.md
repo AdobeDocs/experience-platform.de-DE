@@ -3,13 +3,13 @@ keywords: Experience Platform; Startseite; beliebte Themen; Segmentierung; Segme
 title: Zielgruppen-API-Endpunkt
 topic-legacy: developer guide
 description: Mit dem Zielgruppen-Endpunkt in der Adobe Experience Platform Segmentation Service-API können Sie Zielgruppen für Ihr Unternehmen programmgesteuert verwalten.
-source-git-commit: 2a0c1f55115c541962f7bd3b7b11d367da50ff3b
+exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
+source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
 workflow-type: tm+mt
 source-wordcount: '1492'
 ht-degree: 8%
 
 ---
-
 
 # Zielgruppen-Endpunkt
 

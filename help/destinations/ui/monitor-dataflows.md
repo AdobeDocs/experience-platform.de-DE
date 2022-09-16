@@ -15,8 +15,8 @@ ht-degree: 34%
 
 # Überwachen von Datenflüssen
 
- Mit Zielen können Sie Ihre Daten von Adobe Experience Platform für unzählige externe Partner aktivieren.
+[!UICONTROL Ziele] ermöglichen es Ihnen, Ihre Daten von Adobe Experience Platform für unzählige externe Partner zu aktivieren.
 
-Datenflüsse sind eine Darstellung von Datenaufträgen, die Daten über [!DNL Platform] verschieben. Diese Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen dabei, Daten aus Quell-Connectoren in Zieldatensätze zu verschieben, wo sie dann von [!DNL Identity Service] und[!DNL Real-time Customer Profile] verwendet werden, bevor sie schließlich für Ziele aktiviert werden.
+Datenflüsse sind eine Darstellung von Datenaufträgen, die Daten über [!DNL Platform]. Diese Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen dabei, Daten aus Quell-Connectoren in Zieldatensätze zu verschieben, wo sie dann von [!DNL Identity Service] und[!DNL Real-time Customer Profile] bevor sie schließlich für Ziele aktiviert werden.
 
-Weitere Informationen zur Überwachung von Datenflüssen für Ziele finden Sie im Tutorial [Überwachen von Datenflüssen für Ziele in der Benutzeroberfläche](../../dataflows/ui/monitor-destinations.md).
+Weitere Informationen zum Überwachen von Datenflüssen für Ziele finden Sie in der [Überwachen von Datenflüssen auf Ziele in der Benutzeroberfläche](../../dataflows/ui/monitor-destinations.md) Tutorial.

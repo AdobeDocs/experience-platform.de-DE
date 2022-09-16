@@ -5,7 +5,7 @@ title: Erste Schritte mit Real-time Customer Data Platform B2B Edition
 description: Verwenden Sie dieses Szenario als Beispiel, wenn Sie Ihre Implementierung von Real-Time Customer Data Platform einrichten.
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
 source-git-commit: eb71896ec049253266685fdc831f941e14f3268a
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1205'
 ht-degree: 100%
 

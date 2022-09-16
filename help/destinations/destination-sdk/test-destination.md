@@ -5,7 +5,7 @@ exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '526'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -41,7 +41,7 @@ Mit diesem Tool haben Sie nach der Konfiguration Ihres Ziels folgende Möglichke
 
 Sie können den Ziel-Test-API-Endpunkt mit oder ohne Hinzufügen von Profilen zur Anfrage aufrufen.
 
-Wenn Sie der Anforderung keine Profile hinzufügen, generiert Adobe diese intern und fügt sie der Anforderung hinzu. Informationen zum Generieren von Profilen für die Verwendung in dieser Anfrage finden Sie im Abschnitt [API-Referenz zur Profilgenerierung](./sample-profile-generation-api.md). Sie müssen Profile basierend auf dem Quell-XDM-Schema generieren, wie in der [API-Referenz](./sample-profile-generation-api.md#generate-sample-profiles-source-schema). Beachten Sie, dass das Quellschema die [Vereinigungsschema](https://experienceleague.adobe.com/docs/experience-platform/profile/union-schemas/union-schema.html?lang=en) der von Ihnen verwendeten Sandbox.
+Wenn Sie der Anforderung keine Profile hinzufügen, generiert Adobe diese intern und fügt sie der Anforderung hinzu. Informationen zum Generieren von Profilen für die Verwendung in dieser Anfrage finden Sie im Abschnitt [API-Referenz zur Profilgenerierung](./sample-profile-generation-api.md). Sie müssen Profile basierend auf dem Quell-XDM-Schema generieren, wie in der [API-Referenz](./sample-profile-generation-api.md#generate-sample-profiles-source-schema). Beachten Sie, dass das Quellschema die [Vereinigungsschema](https://experienceleague.adobe.com/docs/experience-platform/profile/union-schemas/union-schema.html?lang=de) der von Ihnen verwendeten Sandbox.
 
 Die Antwort enthält das Ergebnis der Verarbeitung der Zielanfrage. Die Anfrage umfasst drei Hauptabschnitte:
 * Die von Adobe für das Ziel generierte Anfrage.

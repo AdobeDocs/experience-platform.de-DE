@@ -1,7 +1,8 @@
 ---
 description: Die Destination SDK der Experience Platform verwendet Blasen-Vorlagen, mit denen Sie die aus der Experience Platform exportierten Daten in das für Ihr Ziel erforderliche Format umwandeln können.
 title: Unterstützte Umwandlungsfunktionen in Destination SDK
-source-git-commit: 840404741da06ba1593b227c7d6ba459b5f43110
+exl-id: 79bed9e4-5897-4c69-a4e9-a325a408302d
+source-git-commit: d18b662ba8a8415dd71ed89a806e770f3cfbe72a
 workflow-type: tm+mt
 source-wordcount: '550'
 ht-degree: 6%

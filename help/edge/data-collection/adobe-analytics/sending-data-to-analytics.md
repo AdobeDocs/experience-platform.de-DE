@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # Senden von Daten an Adobe Analytics
 
-Während es in der Vergangenheit verschiedene Funktionen gab, um zwischen einer Seitenansicht und einem Link zu unterscheiden (z. B. `s.t(), s.tl()`), gibt es im Web SDK nur den Befehl `sendEvent`. Die Daten, die Sie mit einem Ereignis senden, bestimmen, ob es sich um eine Seitenansicht oder einen Link handeln soll. [Erfahren Sie mehr über Tracking-Links](../track-links.md).
+Während es in der Vergangenheit verschiedene Funktionen gab, um zwischen einer Seitenansicht und einer Verknüpfung zu unterscheiden (z. B. `s.t(), s.tl()`), gibt es im Web SDK nur die `sendEvent` Befehl. Die Daten, die Sie mit einem Ereignis senden, bestimmen, ob es sich um eine Seitenansicht oder einen Link handeln soll. [Weitere Informationen zu Tracking-Links](../track-links.md).
 
 ## Senden einer Seitenansicht
 
-Sie können eine Seitenansicht angeben, indem Sie die Variable `web.webPageDetails.pageViews.value=1` festlegen.
+Sie können eine Seitenansicht angeben, indem Sie die Variable `web.webPageDetails.pageViews.value=1` -Variable.
 
 ```javascript
 alloy("sendEvent", {

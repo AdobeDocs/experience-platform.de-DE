@@ -1,7 +1,7 @@
 ---
 keywords: rtcdp Administration - Übersicht; Administration - Übersicht
 title: Übersicht über die Real-time Customer Data Platform-Administration
-description: 'Das vorliegende Dokument bietet Ihnen einen Überblick über die Verwaltungsfunktionen der Echtzeit-Kundendatenplattform, die auf Adobe Experience Platform basiert. '
+description: Das vorliegende Dokument bietet Ihnen einen Überblick über die Verwaltungsfunktionen der Echtzeit-Kundendatenplattform, die auf Adobe Experience Platform basiert.
 exl-id: c5bdeac6-345a-4ef1-bc5a-a993f565b9d6
 source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt

@@ -6,7 +6,7 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 source-git-commit: 09e81093c2ed2703468693160939b3b6f62bc5b6
 workflow-type: tm+mt
 source-wordcount: '1305'
-ht-degree: 44%
+ht-degree: 50%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 44%
 
 Mit der Beta-Version der erweiterten **[!UICONTROL Benutzerdefinierte Personalisierung]** Ziel-Connector angezeigt werden, werden möglicherweise zwei **[!UICONTROL Benutzerdefinierte Personalisierung]** Karten im Zielkatalog.
 
-Die **[!UICONTROL Benutzerdefinierte Personalisierung mit Attributen]** -Connector befindet sich derzeit in der Beta-Phase und steht nur einer bestimmten Anzahl von Kunden zur Verfügung. Zusätzlich zu den Funktionen, die von der **[!UICONTROL Benutzerdefinierte Personalisierung]**, die **[!UICONTROL Benutzerdefinierte Personalisierung mit Attributen]** Connector fügt optional hinzu [Zuordnungsschritt](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) zum Aktivierungs-Workflow hinzu, mit dem Sie Profilattribute Ihrem benutzerdefinierten Personalisierungsziel zuordnen können, wodurch eine attributbasierte Personalisierung der gleichen Seite und der nächsten Seite ermöglicht wird.
+Die **[!UICONTROL Benutzerdefinierte Personalisierung mit Attributen]** -Connector befindet sich derzeit in der Beta-Phase und steht nur einer bestimmten Anzahl von Kunden zur Verfügung. Zusätzlich zu den Funktionen der **[!UICONTROL benutzerdefinierten Personalisierung]** fügt der Connector **[!UICONTROL Benutzerdefinierte Personalisierung mit Attributen]** dem Aktivierungs-Workflow einen optionalen [Zuordnungsschritt](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) hinzu, mit dem Sie Profilattribute Ihrem benutzerdefinierten Personalisierungsziel zuordnen können, was eine Attribut-basierte Personalisierung auf derselben Seite und auf der nächsten Seite ermöglicht.
 
 >[!IMPORTANT]
 >
->Profilattribute können vertrauliche Daten enthalten. Um diese Daten zu schützen, muss die Variable **[!UICONTROL Benutzerdefinierte Personalisierung mit Attributen]** Für das Ziel müssen Sie die [Edge Network Server-API](/help/server-api/overview.md) für die Datenerfassung. Außerdem müssen alle Server-API-Aufrufe in einer [authentifizierter Kontext](../../../server-api/authentication.md).
+>Profilattribute können vertrauliche Daten enthalten. Um diese Daten zu schützen, erfordert das Ziel **[!UICONTROL Benutzerdefinierte Personalisierung mit Attributen]**, dass für die Datenerfassung die [Edge Network Server-API](/help/server-api/overview.md) verwendet wird. Außerdem müssen alle Aufrufe der Server-API in einem [authentifizierten Kontext](../../../server-api/authentication.md) erfolgen.
 >
 >Wenn Sie bereits Web SDK oder Mobile SDK für Ihre Integration verwenden, können Sie Attribute über die Server-API auf zwei Arten abrufen:
 >

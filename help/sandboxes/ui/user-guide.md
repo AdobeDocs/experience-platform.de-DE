@@ -94,7 +94,7 @@ Durch das Löschen einer Produktions- oder Entwicklungs-Sandbox werden alle mit 
 
 Wählen Sie die Sandbox aus, die Sie aus der Sandbox-Liste löschen möchten. Wählen Sie im sich öffnenden Navigationsfenster die Option **[!UICONTROL Löschen]**.
 
-![delete](../images/ui/delete.png)
+![löschen](../images/ui/delete.png)
 
 Es wird ein Dialogfeld angezeigt, in dem Sie aufgefordert werden, Ihre Auswahl zu bestätigen. Auswählen **[!UICONTROL Weiter]** um fortzufahren.
 

@@ -8,7 +8,7 @@ exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
 source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
 source-wordcount: '2184'
-ht-degree: 26%
+ht-degree: 27%
 
 ---
 
@@ -94,7 +94,7 @@ Weitere Informationen finden Sie unter [[!DNL Data Prep] Übersicht](../../data-
 
 ## Data Science Workspace {#dsw}
 
-Data Science Workspace nutzt maschinelles Lernen und künstliche Intelligenz, um Erkenntnisse aus Ihren Daten zu gewinnen. Data Science Workspace ist in Adobe Experience Platform integriert und hilft Ihnen bei der Erstellung von Prognosen auf der Basis Ihrer Inhalts- und Datenelemente in allen Adobe-Lösungen. Eine der Möglichkeiten, dies mit Data Science Workspace zu erreichen, ist die Verwendung von [!DNL JupyterLab]. [!DNL JupyterLab] ist eine Web-basierte Benutzeroberfläche für [[!DNL Project Jupyter]](https://jupyter.org/) und ist eng in Adobe Experience Platform integriert. Es bietet eine interaktive Entwicklungsumgebung für Datenwissenschaftler, die mit [!DNL Jupyter] Notebooks, Code und Daten.
+Data Science Workspace nutzt maschinelles Lernen und künstliche Intelligenz, um Erkenntnisse aus Ihren Daten zu gewinnen. Der Data Science Workspace ist in Adobe Experience Platform integriert und hilft Ihnen bei der Erstellung von Prognosen auf der Basis Ihrer Inhalts- und Datenelemente in allen Adobe-Lösungen. Eine der Möglichkeiten, dies mit dem Data Science Workspace zu erreichen, ist die Verwendung von [!DNL JupyterLab]. [!DNL JupyterLab] ist eine Web-basierte Benutzeroberfläche für [[!DNL Project Jupyter]](https://jupyter.org/) und ist eng in Adobe Experience Platform integriert. Es bietet eine interaktive Entwicklungsumgebung für Datenwissenschaftler, die mit [!DNL Jupyter] Notebooks, Code und Daten.
 
 **Wichtigste Funktionen**
 

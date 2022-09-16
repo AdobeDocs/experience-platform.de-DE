@@ -7,7 +7,7 @@ type: Tutorial
 description: Erfahren Sie, wie Sie einen Google PubSub-Quell-Connector in der Platform-Benutzeroberfläche erstellen.
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
 source-git-commit: da7b6fe8f9d274b8e5f27138a1baf8caf63a0c01
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 100%
 

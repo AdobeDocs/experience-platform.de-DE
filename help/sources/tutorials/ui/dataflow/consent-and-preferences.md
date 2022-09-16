@@ -5,7 +5,8 @@ title: Erstellen eines Datenflusses mithilfe einer Einverständnis- und Voreinst
 topic-legacy: overview
 type: Tutorial
 description: Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen Platform-Datensatz aufnimmt. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Platform-Benutzeroberfläche einen Datenfluss für eine Zustimmungs- und Voreinstellungsquelle erstellen.
-source-git-commit: 66dafe4bca6e1eb0fc67a745ac20a6e0b119aa39
+exl-id: 340b5945-baa1-4f79-88fa-2572606f6083
+source-git-commit: 6768b772a983588b36659f42bff5c143a6f625f7
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 44%

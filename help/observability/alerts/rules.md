@@ -82,7 +82,7 @@ Die folgenden Warnhinweisregeln sind spezifisch für [Ziele](../../destinations/
 | Informationen zur Ausführung des Zielflusses | Erfolgreiche Ausführung des Zielflusses | Dieser Warnhinweis wird ausgelöst, wenn ein Segment erfolgreich für ein Ziel aktiviert wurde. |
 | Verzögerungen, Ausfälle und Fehler bei der Ausführung des Zielflusses | Verzögerung bei der Ausführung des Zielflusses | Dieser Warnhinweis wird ausgelöst, wenn die Aktivierung eines Segments durch einen Zielfluss länger als 150 Minuten in Anspruch nimmt. |
 | Verzögerungen, Ausfälle und Fehler bei der Ausführung des Zielflusses | Fehler beim Ausführen des Zielflusses | Dieser Warnhinweis wird ausgelöst, wenn beim Aktivieren eines Segments für ein Ziel ein Fehler auftritt. |
-| Verzögerungen, Ausfälle und Fehler bei der Ausführung des Zielflusses | Übersprungrate überschreitet Schwellenwert | Dieser Warnhinweis wird Trigger, wenn das Verhältnis zwischen übersprungenen IDs und Gesamt-IDs einen Schwellenwert überschreitet. |
+| Verzögerungen, Ausfälle und Fehler bei der Ausführung des Zielflusses | Überspringrate überschreitet Schwellenwert | Dieser Warnhinweis wird Trigger, wenn das Verhältnis zwischen übersprungenen IDs und Gesamt-IDs einen Schwellenwert überschreitet. |
 
 {style=&quot;table-layout:auto&quot;}
 

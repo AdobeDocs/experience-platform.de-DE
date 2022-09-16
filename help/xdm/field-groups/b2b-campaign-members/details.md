@@ -1,7 +1,8 @@
 ---
 title: XDM Business Campaign-Schema-Feldergruppe "Mitgliederdetails"
 description: Dieses Dokument bietet einen Überblick über die Schemakonzerne XDM Business Campaign Member Details .
-source-git-commit: 0084492ed467c5996a94c5c55a79c9faf8f5046e
+exl-id: 597629c8-7f41-4c1c-95b6-aed5e16cee72
+source-git-commit: 7805e4c45a48070adefbaba25a57140efc3e86b1
 workflow-type: tm+mt
 source-wordcount: '360'
 ht-degree: 6%

@@ -11,11 +11,11 @@ ht-degree: 7%
 
 # Sortieren und Filtern von Antworten in der Flow Service-API
 
-Bei der Ausführung von Auflistungsanforderungen (GET) in der [Flow Service-API](https://www.adobe.io/experience-platform-apis/references/flow-service/) können Sie Abfrageparameter verwenden, um Antworten zu sortieren und zu filtern. Dieses Handbuch enthält eine Referenz zur Verwendung dieser Parameter für verschiedene Anwendungsfälle.
+Beim Ausführen von Auflistungsanforderungen (GET) im [Flussdienst-API](https://www.adobe.io/experience-platform-apis/references/flow-service/)können Sie Abfrageparameter verwenden, um Antworten zu sortieren und zu filtern. Dieses Handbuch enthält eine Referenz zur Verwendung dieser Parameter für verschiedene Anwendungsfälle.
 
 ## Sortieren
 
-Sie können Antworten mithilfe eines `orderby`-Abfrageparameters sortieren. Die folgenden Ressourcen können in der API sortiert werden:
+Sie können Antworten mithilfe einer `orderby` Abfrageparameter. Die folgenden Ressourcen können in der API sortiert werden:
 
 * [Verbindungen](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Connections)
 * [Quellverbindungen](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Source-connections)
@@ -23,14 +23,14 @@ Sie können Antworten mithilfe eines `orderby`-Abfrageparameters sortieren. Die 
 * [Flüsse](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Flows)
 * [Ausführungen](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Runs)
 
-Um den Parameter zu verwenden, müssen Sie seinen Wert auf die spezifische Eigenschaft festlegen, nach der Sie sortieren möchten (z. B. `?orderby=name`). Sie können dem Wert ein Pluszeichen (`+`) für aufsteigende Reihenfolge oder ein Minuszeichen (`-`) für absteigende Reihenfolge voranstellen. Wenn kein Bestellpräfix angegeben wird, wird die Liste standardmäßig in aufsteigender Reihenfolge sortiert.
+Um den Parameter zu verwenden, müssen Sie seinen Wert auf die spezifische Eigenschaft festlegen, nach der Sie sortieren möchten (z. B. `?orderby=name`). Sie können dem Wert ein Pluszeichen (`+`) für aufsteigende Reihenfolge oder Minuszeichen (`-`) in absteigender Reihenfolge. Wenn kein Bestellpräfix angegeben wird, wird die Liste standardmäßig in aufsteigender Reihenfolge sortiert.
 
 ```http
 GET /flows?orderby=name
 GET /flows?orderby=-name
 ```
 
-Sie können einen Sortierparameter auch mit einem Filterparameter kombinieren, indem Sie ein &quot;Und&quot;-Symbol (`&`) verwenden.
+Sie können einen Sortierparameter auch mit einem Filterparameter kombinieren, indem Sie ein &quot;Und&quot;-Symbol (`&`).
 
 ```http
 GET /flows?property=state==enabled&orderby=createdAt
@@ -38,15 +38,15 @@ GET /flows?property=state==enabled&orderby=createdAt
 
 ## Filtern
 
-Sie können Antworten filtern, indem Sie einen `property`-Parameter mit einem Schlüssel-Wert-Ausdruck verwenden. Beispielsweise gibt `?property=id==12345` nur Ressourcen zurück, deren `id`-Eigenschaft genau `12345` entspricht.
+Sie können Antworten mithilfe eines `property` -Parameter mit einem Schlüssel-Wert-Ausdruck. Beispiel: `?property=id==12345` gibt nur Ressourcen zurück, die `id` Eigenschaft genau gleich `12345`.
 
 Die Filterung kann im Allgemeinen auf jede Eigenschaft in einer Entität angewendet werden, solange der gültige Pfad zu dieser Eigenschaft bekannt ist.
 
 >[!NOTE]
 >
->Wenn eine Eigenschaft in einem Array-Element verschachtelt ist, müssen Sie eckige Klammern (`[]`) an das Array im Pfad anhängen. Beispiele finden Sie im Abschnitt [Filtern nach Array-Eigenschaften](#arrays) .
+>Wenn eine Eigenschaft in einem Array-Element verschachtelt ist, müssen Sie eckige Klammern (`[]`) zum Array im Pfad hinzu. Siehe Abschnitt zu [Filtern nach Array-Eigenschaften](#arrays) für Beispiele.
 
-**Gibt alle Quellverbindungen zurück, bei denen der Name der Quelltabelle  `lead`lautet:**
+**Gibt alle Quellverbindungen zurück, bei denen der Name der Quelltabelle lautet `lead`:**
 
 ```http
 GET /sourceConnections?property=params.tableName==lead
@@ -60,7 +60,7 @@ GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.
 
 ### Filter kombinieren
 
-Mehrere `property`-Filter können in eine Abfrage einbezogen werden, vorausgesetzt sie werden durch die Zeichen &quot;und&quot;(`&`) getrennt. Beim Kombinieren von Filtern wird von einer UND-Beziehung ausgegangen. Das bedeutet, dass eine Entität alle Filter erfüllen muss, damit sie in die Antwort aufgenommen wird.
+Mehrere `property` Filter können in eine Abfrage einbezogen werden, sofern sie durch &quot;und&quot;-Zeichen (`&`). Beim Kombinieren von Filtern wird von einer UND-Beziehung ausgegangen. Das bedeutet, dass eine Entität alle Filter erfüllen muss, damit sie in die Antwort aufgenommen wird.
 
 **Gibt alle aktivierten Flüsse für eine Segment-ID zurück:**
 
@@ -70,7 +70,7 @@ GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.
 
 ### Filtern nach Array-Eigenschaften {#arrays}
 
-Sie können nach den Eigenschaften von Elementen in Arrays filtern, indem Sie `[]` an den Namen der Array-Eigenschaft anhängen.
+Sie können nach den Eigenschaften von Elementen in Arrays filtern, indem Sie `[]` zum Namen der Array-Eigenschaft.
 
 **Rückkehrflüsse, die bestimmten Quellverbindungen zugeordnet sind:**
 
@@ -84,7 +84,7 @@ GET /flows?property=sourceConnectionIds[]==9874984,6980696
 GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.id==5722a16f-5e1f-4732-91b6-3b03943f759a
 ```
 
-**Gibt Quellverbindungen zurück, die eine Spalte mit einem bestimmten  `name` Wert aufweisen:**
+**Quellverbindungen mit einer Spalte mit einer bestimmten `name` Wert:**
 
 ```http
 GET /sourceConnections?property=params.columns[].name==firstName
@@ -98,7 +98,7 @@ GET /runs?property=metrics.recordSummary.targetSummaries[].entitySummaries[].id=
 
 ### `count`
 
-Jede Filterabfrage kann mit dem Abfrageparameter `count` mit dem Wert `true` angehängt werden, um die Anzahl der Ergebnisse zurückzugeben. Die API-Antwort enthält eine `count` -Eigenschaft, deren Wert die Anzahl der insgesamt gefilterten Elemente darstellt. Die tatsächlichen gefilterten Elemente werden in diesem Aufruf nicht zurückgegeben.
+Jede Filterabfrage kann mit `count` Abfrageparameter mit dem Wert `true` , um die Anzahl der Ergebnisse zurückzugeben. Die API-Antwort enthält eine `count` -Eigenschaft, deren Wert die Anzahl der insgesamt gefilterten Elemente darstellt. Die tatsächlichen gefilterten Elemente werden in diesem Aufruf nicht zurückgegeben.
 
 **Gibt die Anzahl der aktivierten Flüsse im System zurück:**
 
@@ -197,4 +197,4 @@ Je nachdem, welche Flow Service-Entität Sie abrufen, können für die Filterung
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde die Verwendung der Abfrageparameter `orderby` und `property` zum Sortieren und Filtern von Antworten in der Flow Service-API beschrieben. Eine schrittweise Anleitung zur Verwendung der API für allgemeine Workflows in Platform finden Sie in den API-Tutorials in der Dokumentation [sources](../../sources/home.md) und [destinations](../../destinations/home.md) .
+In diesem Handbuch wurde die Verwendung der `orderby` und `property` Abfrageparameter zum Sortieren und Filtern von Antworten in der Flow Service-API. Eine schrittweise Anleitung zur Verwendung der API für allgemeine Workflows in Platform finden Sie in den API-Tutorials im Abschnitt [sources](../../sources/home.md) und [Ziele](../../destinations/home.md) Dokumentation.

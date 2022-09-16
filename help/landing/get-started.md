@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen
+keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Erste Schritte mit Adobe Experience Platform
 topic-legacy: getting started
@@ -14,6 +14,6 @@ ht-degree: 55%
 
 # Erste Schritte mit Adobe Experience Platform
 
-In diesem Video erhalten Sie eine kurze Einführung in [!DNL Experience Platform] und einige der damit gelösten geschäftlichen Herausforderungen.
+In diesem Video erhalten Sie eine kurze Einführung in [!DNL Experience Platform] und beschreibt einige der damit gelösten geschäftlichen Herausforderungen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)

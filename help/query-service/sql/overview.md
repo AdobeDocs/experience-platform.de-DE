@@ -14,4 +14,4 @@ ht-degree: 32%
 
 # SQL-Referenz für Query Service
 
-[!DNL Query Service]Mit können Sie Standard-ANSI-SQL für `SELECT`-Anweisungen und andere begrenzte Befehle verwenden. [!DNL Query Service] enthält keine Funktionen aus der Datendefinitionssprache oder Datenbearbeitungssprache. Die über den Dienst abgefragten Daten stammen von [!DNL Experience Data Lake], das größtenteils unveränderliche Datensätze enthält.
+[!DNL Query Service]Mit können Sie Standard-ANSI-SQL für `SELECT`-Anweisungen und andere begrenzte Befehle verwenden. [!DNL Query Service] enthält keine Funktionen aus der Datendefinitionssprache oder Datenbearbeitungssprache. Die über den Dienst abgefragten Daten stammen von [!DNL Experience Data Lake], der größtenteils unveränderliche Datensätze enthält.

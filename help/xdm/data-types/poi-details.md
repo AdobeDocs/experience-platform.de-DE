@@ -8,13 +8,13 @@ exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
 source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
 source-wordcount: '204'
-ht-degree: 15%
+ht-degree: 23%
 
 ---
 
-# [!UICONTROL Point-] Interest-Datentyp
+# [!UICONTROL Details zum POI] Datentyp
 
-[!UICONTROL Zielpunkt-] Details sind ein standardmäßiger XDM-Datentyp, der die geografischen Daten beschreibt, in denen ein Ereignis beobachtet wurde.
+[!UICONTROL Details zum POI] ist ein standardmäßiger XDM-Datentyp, der die geografischen Daten beschreibt, in denen ein Ereignis beobachtet wurde.
 
 <img src="../images/data-types/poi-details.png" width="550" /><br />
 

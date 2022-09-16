@@ -6,15 +6,15 @@ exl-id: 06f9ee37-9879-4db2-af68-9336366f7521
 source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
 source-wordcount: '337'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
-# [!UICONTROL Feldergruppe ] &quot;Reservierungsdetails&quot;
+# [!UICONTROL Buchungsdetails] Schemafeldgruppe
 
-[!UICONTROL Reservierungsdetails ] sind eine Standardschemafeldgruppe für die  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) Klasse, die verwendet wird, um Informationen zu einer Reservierung zu erfassen, einschließlich der Länge, Änderung, erstattbarem Status und der Anzahl der Zimmer.
+[!UICONTROL Buchungsdetails] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) dient zur Erfassung von Informationen über eine Reservierung, einschließlich der Länge, Änderung, erstattungsfähigen Status und der Anzahl der Zimmer.
 
-Die Feldergruppe stellt ein einzelnes Objekt-Feld bereit, `reservations`. Die in diesem Objekt enthaltenen Eigenschaften werden nachfolgend erläutert.
+Die Feldergruppe stellt ein einzelnes Feld vom Typ Objekt bereit, `reservations`. Die in diesem Objekt enthaltenen Eigenschaften werden nachfolgend erläutert.
 
 ![Struktur der Buchungsdetails](../../images/field-groups/reservation-details.png)
 
@@ -46,8 +46,8 @@ Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repositor
 
 ## Branchenspezifische Reservierungsfeldgruppen
 
-Es gibt mehrere weitere Standardfeldgruppen, die das Schema [!UICONTROL Reservierungsdetails] für branchenspezifische Anwendungsfälle erweitern. Weitere Informationen finden Sie in der folgenden Dokumentation:
+Es gibt mehrere weitere Standardfeldgruppen, die die [!UICONTROL Buchungsdetails] Schema für branchenspezifische Anwendungsfälle. Weitere Informationen finden Sie in der folgenden Dokumentation:
 
-* [[!UICONTROL Speisereservierung]](./dining-reservation.md)
+* [[!UICONTROL Restaurantreservierung]](./dining-reservation.md)
 * [[!UICONTROL Flugreservierung]](./flight-reservation.md)
 * [[!UICONTROL Unterkunftsreservierung]](./lodging-reservation.md)

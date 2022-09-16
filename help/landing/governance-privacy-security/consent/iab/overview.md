@@ -8,7 +8,7 @@ exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
 source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '2563'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -117,7 +117,7 @@ Nachdem Sie Ihre CMP zur Generierung von Zustimmungszeichenfolgen konfiguriert h
 
 **Das SDK verfügt nicht standardmäßig über eine Schnittstelle mit CMPs**. Sie müssen bestimmen, wie das SDK in Ihre Website integriert werden kann, auf Zustimmungsänderungen in der CMP warten und den entsprechenden Befehl aufrufen.
 
-### Neuen Datastream erstellen
+### Erstellen eines neuen Datenstroms
 
 Damit das SDK Daten an Experience Platform senden kann, müssen Sie zunächst einen neuen Datastream für Platform in der Datenerfassungs-Benutzeroberfläche erstellen. Spezifische Schritte zum Erstellen eines neuen Datastreams finden Sie im Abschnitt [SDK-Dokumentation](../../../../edge/datastreams/overview.md).
 

@@ -20,7 +20,7 @@ Anmerkungen sind Kommentare in Textform, die Sie bestimmten Tag-Ressourcen in Ad
 * Erweiterungen
 * Datenelemente
 * Regeln
-* Regel  Komponenten
+* Regel Komponenten
 * Bibliotheken
 * Eigenschaften
 

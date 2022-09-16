@@ -1,17 +1,17 @@
 ---
-description: Um das Ziel-SDK zu verwenden, muss ein Partnerunternehmen die in diesem Dokument aufgeführten Voraussetzungen erfüllen.
-title: Integrationsvoraussetzungen
+description: Um Destination SDK verwenden zu können, muss ein Partnerunternehmen die in diesem Dokument aufgeführten Voraussetzungen erfüllen.
+title: Voraussetzungen für die Integration
 exl-id: 031af9f1-ce18-4056-bd53-199ce8b56be5
 source-git-commit: 6ff5fd0e80f7ca1015969e91cc23c88251509b61
 workflow-type: tm+mt
 source-wordcount: '133'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
-# Integrationsvoraussetzungen
+# Voraussetzungen für die Integration
 
-Um das Ziel-SDK zu verwenden, stellen Sie sicher, dass Sie die in den folgenden Abschnitten aufgelisteten technischen und partnerschaftlichen Voraussetzungen erfüllen.
+Um Destination SDK zu verwenden, stellen Sie sicher, dass Sie die in den folgenden Abschnitten aufgelisteten technischen und partnerschaftlichen Voraussetzungen erfüllen.
 
 ## Technische/API-Voraussetzungen
 
@@ -24,4 +24,4 @@ Um das Ziel-SDK zu verwenden, stellen Sie sicher, dass Sie die in den folgenden 
 
 ## Voraussetzungen für die Partnerschaft
 
-Wenn Sie ein unabhängiger Software-Anbieter (ISV) oder Systemintegrator (SI) sind und das Ziel-SDK verwenden möchten, lesen Sie die Partnerschaftserfordernisse für ISVs und SIs im Abschnitt [Zugriff erhalten](./overview.md#get-access).
+Wenn Sie ein unabhängiger Software-Anbieter (ISV) oder Systemintegrator (SI) sind und Destination SDK verwenden möchten, lesen Sie die Partnerschaftserfordernisse für ISVs und SIs im Abschnitt [Zugriffsabschnitt abrufen](./overview.md#get-access).

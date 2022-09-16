@@ -13,12 +13,12 @@ ht-degree: 0%
 
 # Identitäten zwischen Audience Manager und Experience Platform synchronisieren
 
-Das Adobe Experience Platform Web SDK unterstützt die Möglichkeit, Kunden-IDs und deren Authentifizierungsstatus über den Befehl [sendEvent](./overview.md#syncing-identities) zu deklarieren.
+Das Adobe Experience Platform Web SDK unterstützt die Möglichkeit, Kunden-IDs und ihre Authentifizierungsstatus über die [sendEvent](./overview.md#syncing-identities) Befehl.
 
-Wählen Sie Ihre Namespaces aus den [Identity Service Namespaces](../../identity/../identity-service/namespaces.md) aus, um mithilfe der Werte in der Spalte Identitätssymbol den Kontext anzugeben, auf den sich eine Identität bezieht:
+Wählen Sie Ihre Namespaces aus dem [Identity Service-Namespaces](../../identity/../identity-service/namespaces.md) um den Kontext anzugeben, auf den sich eine Identität bezieht, indem Sie die Werte in der Spalte Identitätssymbol verwenden:
 
 ![Ansicht der Benutzeroberfläche von Namespaces](../images/identity/edge_namespaceUI_identity-symbol.png)
 
 Als Audience Manager-Kunde alle Ihre vorhandenen Data Sources, die den ID-Typ verwenden: Geräteübergreifender Namespace verfügt automatisch über einen entsprechenden Identitäts-Namespace. Um den entsprechenden Identitäts-Namespace für Ihre Audience Manager-Datenquelle zu finden, melden Sie sich bei Adobe Experience Platform an und navigieren Sie zum Abschnitt Identitäten .
 
-Jede neue [!DNL Audience Manager] Datenquelle, die den ID-Typ verwendet: Geräteübergreifend wird ein entsprechender Identitäts-Namespace generiert. Datenquellen-ID-Typen Cookie und Geräte-Advertising-ID werden derzeit nicht unterstützt. Darüber hinaus generiert jeder in Adobe Experience Platform erstellte Identitäts-Namespace eine entsprechende [!DNL Audience Manager] Datenquelle. Beachten Sie jedoch, dass die Methode syncIdentity nur Namespace-Identitätssymbole unterstützt.
+Alle neuen [!DNL Audience Manager] Datenquelle, die den ID-Typ verwendet: Geräteübergreifend wird ein entsprechender Identitäts-Namespace generiert. Datenquellen-ID-Typen Cookie und Geräte-Advertising-ID werden derzeit nicht unterstützt. Darüber hinaus generiert jeder in Adobe Experience Platform erstellte Identitäts-Namespace einen entsprechenden [!DNL Audience Manager] Datenquelle, beachten Sie jedoch, dass die Methode syncIdentity nur Namespace-Identitätssymbole unterstützt.

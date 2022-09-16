@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über den Prozess der Erste
 exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
 source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '488'
+ht-degree: 11%
 
 ---
 

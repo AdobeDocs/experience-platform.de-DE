@@ -10,7 +10,7 @@ exl-id: 514b73cd-d1f1-472d-8021-ecfb2abeb411
 source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
 source-wordcount: '118'
-ht-degree: 0%
+ht-degree: 15%
 
 ---
 
@@ -20,7 +20,7 @@ In diesem Video erhalten Sie einen schnellen Überblick über die Benutzeroberfl
 
 >[!NOTE]
 >
->Die Benutzeroberfläche der Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im [Adobe Experience Platform UI Guide](../ui-guide.md).
+>Die Benutzeroberfläche von Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Aktuelle Informationen finden Sie unter [Handbuch zur Benutzeroberfläche von Adobe Experience Platform](../ui-guide.md).
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)

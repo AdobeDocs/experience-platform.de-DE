@@ -8,26 +8,26 @@ exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
 source-git-commit: 2a403be9a90d919aba2114f14c3cf64707b814b9
 workflow-type: tm+mt
 source-wordcount: '817'
-ht-degree: 2%
+ht-degree: 22%
 
 ---
 
 # [!DNL Data Landing Zone]
 
-[!DNL Data Landing Zone] ist [!DNL Azure Blob] von Adobe Experience Platform bereitgestellte Speicherschnittstelle, über die Sie auf eine sichere, Cloud-basierte Dateispeichereinrichtung zugreifen können, um Dateien in Platform zu laden. Sie haben Zugriff auf eine [!DNL Data Landing Zone] Behälter pro Sandbox und das gesamte Datenvolumen über alle Container hinweg ist auf die Gesamtdaten beschränkt, die mit Ihrer Platform-Produkte- und -Services-Lizenz bereitgestellt werden. Alle Kunden von Platform und die zugehörigen Anwendungsdienste wie [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services]und [!DNL Real-time Customer Data Platform] mit einem [!DNL Data Landing Zone] Container pro Sandbox. Sie können Dateien in Ihren Container lesen und schreiben, indem Sie [!DNL Azure Storage Explorer] oder der Befehlszeilenschnittstelle.
+[!DNL Data Landing Zone] ist eine von Adobe Experience Platform bereitgestellte [!DNL Azure Blob]-Speicherschnittstelle, die Ihnen Zugriff auf eine sichere, Cloud-basierte Dateispeichereinrichtung gewährt, um Dateien in Platform zu laden. Sie haben Zugriff auf eine [!DNL Data Landing Zone] Behälter pro Sandbox und das gesamte Datenvolumen über alle Container hinweg ist auf die Gesamtdaten beschränkt, die mit Ihrer Platform-Produkte- und -Services-Lizenz bereitgestellt werden. Alle Kunden von Platform und die zugehörigen Anwendungsdienste wie [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services]und [!DNL Real-time Customer Data Platform] mit einem [!DNL Data Landing Zone] Container pro Sandbox. Sie können Dateien in Ihren Container lesen und schreiben, indem Sie [!DNL Azure Storage Explorer] oder der Befehlszeilenschnittstelle.
 
 [!DNL Data Landing Zone] unterstützt die SAS-basierte Authentifizierung und die Daten sind durch Standard geschützt [!DNL Azure Blob] Sicherheitsmechanismen für die Lagerung im Ruhezustand und im Transit. Mit der SAS-basierten Authentifizierung können Sie sicher auf Ihre [!DNL Data Landing Zone] Container über eine öffentliche Internetverbindung. Es sind keine Netzwerkänderungen erforderlich, damit Sie auf Ihre [!DNL Data Landing Zone] -Container verwenden, müssen Sie also keine Zulassungslisten oder regionenübergreifenden Setups für Ihr Netzwerk konfigurieren. Platform erzwingt für alle Dateien, die in eine [!DNL Data Landing Zone] Container. Alle Dateien werden nach sieben Tagen gelöscht.
 
-## Namensbeschränkungen für Dateien und Ordner
+## Namensbeschränkungen für Dateien und Verzeichnisse
 
 Im Folgenden finden Sie eine Liste von Einschränkungen, die Sie bei der Benennung Ihrer Cloud-Speicherdateien oder -Verzeichnisse berücksichtigen müssen.
 
-- Die Namen von Verzeichnis- und Dateikomponenten dürfen 255 Zeichen nicht überschreiten.
-- Verzeichnis- und Dateinamen können nicht mit einem Schrägstrich (`/`). Wenn angegeben, wird sie automatisch entfernt.
+- Die Namen von Verzeichnis- und Dateikomponenten dürfen nicht länger als 255 Zeichen sein.
+- Verzeichnis- und Dateinamen dürfen nicht mit einem Schrägstrich (`/`) enden. Wenn angegeben, wird er automatisch entfernt.
 - Die folgenden Zeichen der reservierten URL müssen ordnungsgemäß maskiert sein: `! ' ( ) ; @ & = + $ , % # [ ]`
-- Folgende Zeichen sind nicht zulässig: `" \ / : | < > * ?`.
-- Unzulässige URL-Pfadzeichen sind nicht zulässig. Codepunkte wie `\uE000`, obwohl in NTFS-Dateinamen gültig, sind keine gültigen Unicode-Zeichen. Darüber hinaus werden einige ASCII- oder Unicode-Zeichen, wie Steuerzeichen (wie `0x00` nach `0x1F`, `\u0081`usw.), sind ebenfalls nicht zulässig. Regeln für Unicode-Zeichenfolgen in HTTP/1.1 finden Sie unter [RFC 2616, Abschnitt 2.2: Grundlegende Regeln](https://www.ietf.org/rfc/rfc2616.txt) und [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
-- Die folgenden Dateinamen sind nicht zulässig: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, PRN, AUX, NUL, CON, CLOCK$, Punkt (..) und zwei Zeichen (..).
+- Die folgenden Zeichen sind nicht zulässig: `" \ / : | < > * ?`.
+- Unzulässige URL-Pfadzeichen sind nicht zulässig. Code-Punkte wie `\uE000` sind zwar in NTFS-Dateinamen gültig, aber keine gültigen Unicode-Zeichen. Darüber hinaus werden einige ASCII- oder Unicode-Zeichen, wie Steuerzeichen (wie `0x00` nach `0x1F`, `\u0081`usw.), sind ebenfalls nicht zulässig. Regeln für Unicode-Zeichenfolgen in HTTP/1.1 finden Sie unter [RFC 2616, Abschnitt 2.2: Grundregeln](https://www.ietf.org/rfc/rfc2616.txt) und [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- Die folgenden Dateinamen sind nicht zulässig: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, Punktzeichen (.) und zwei Punktzeichen (..).
 
 ## Verwalten des Inhalts Ihrer [!DNL Data Landing Zone]
 

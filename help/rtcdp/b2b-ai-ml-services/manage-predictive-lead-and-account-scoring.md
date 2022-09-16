@@ -2,7 +2,8 @@
 title: Verwalten der prädiktiven Lead- und Kontobewertung in der Echtzeit-Kundendatenplattform B2B
 type: Documentation
 description: Dieses Dokument enthält Informationen zur Verwaltung der prädiktiven Lead- und Kontoauswertungsfunktion in der Experience Platform CDP B2B.
-source-git-commit: 5ac8e099a6de563371f9a53a8b4816e6cf4d1953
+exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
+source-git-commit: 99b3b2d73b87a64fcaa9ba51563c0942fc21a0dc
 workflow-type: tm+mt
 source-wordcount: '1017'
 ht-degree: 3%

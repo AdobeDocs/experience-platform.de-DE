@@ -30,7 +30,7 @@ Beachten Sie die folgenden Details, die spezifisch für die [!DNL Braze] Ziel:
 >
 >Beachten Sie beim Senden zusätzlicher benutzerdefinierter Attribute an [!DNL Braze] kann zu einem Anstieg Ihrer [!DNL Braze] Datenpunktverbrauch. Wenden Sie sich an Ihre [!DNL Braze] Kundenbetreuer vor dem Senden zusätzlicher benutzerdefinierter Attribute.
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsbeispiele {#use-cases}
 
 Als Marketing-Experte möchte ich Benutzer in einem Ziel für mobile Interaktionen ansprechen, wobei Segmente in [!DNL Adobe Experience Platform]. Darüber hinaus möchte ich ihnen personalisierte Erlebnisse basierend auf Attributen aus ihren [!DNL Adobe Experience Platform] Profile, sobald Segmente und Profile in [!DNL Adobe Experience Platform].
 

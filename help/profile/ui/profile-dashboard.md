@@ -11,12 +11,12 @@ ht-degree: 0%
 
 ---
 
-#  Profilesdashboard {#profile-dashboard}
+# [!UICONTROL Profile] Dashboard {#profile-dashboard}
 
-Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zu Ihren [!DNL Real-time Customer Profile]-Daten anzeigen können, die in einem täglichen Schnappschuss erfasst werden.
+Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zu Ihrer [!DNL Real-time Customer Profile] Daten, wie sie in einer täglichen Momentaufnahme erfasst werden.
 
-Ausführliche Anweisungen zum Zugriff auf das Dashboard [!UICONTROL Profile] in der Benutzeroberfläche und zur Interaktion mit diesem Dashboard sowie weitere Informationen zu den verfügbaren Metriken, die im Dashboard angezeigt werden, finden Sie im Dashboard-Handbuch [[!UICONTROL Profile]](../../dashboards/guides/profiles.md).
+Detaillierte Anweisungen zum Zugriff auf und zur Interaktion mit dem [!UICONTROL Profile] Dashboard in der Benutzeroberfläche sowie weitere Informationen zu den verfügbaren Metriken, die im Dashboard angezeigt werden, erhalten Sie im [[!UICONTROL Profile] Dashboard-Handbuch](../../dashboards/guides/profiles.md).
 
-Um einen Überblick über alle Dashboard-Funktionen in der Experience Platform-Benutzeroberfläche zu erhalten, lesen Sie zunächst die [Übersicht über Dashboards](../../dashboards/home.md).
+Einen Überblick über alle Dashboard-Funktionen in der Benutzeroberfläche der Experience Platform erhalten Sie im Abschnitt [Übersicht über Dashboards](../../dashboards/home.md).
 
 ![](../images/profile-dashboard/dashboard-overview.png)

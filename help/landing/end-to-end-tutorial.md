@@ -3,10 +3,11 @@ keywords: Experience Platform;Startseite;beliebte Themen;CJA;Journey Analytics;C
 title: Adobe Experience Platform End-to-End-Beispiel-Workflow
 topic-legacy: getting started
 description: Erfahren Sie auf hoher Ebene mehr über den grundlegenden End-to-End-Workflow für Adobe Experience Platform.
-source-git-commit: 9ed521c4e2ebcd20da662e93b9591ef690f51c5e
+exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
+source-git-commit: c9ebccb6584c687a9cc3fe693b9303c9392a1114
 workflow-type: tm+mt
 source-wordcount: '1836'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
@@ -22,9 +23,9 @@ Basierend auf RESTful-APIs stellt Platform Entwicklern die vollständige Funktio
 
 Dieser durchgängige Workflow verwendet mehrere Adobe Experience Platform-Dienste. Im Folgenden finden Sie eine Liste der in diesem Workflow verwendeten Dienste mit Links zu ihren Übersichten:
 
-- [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert. Um die Segmentierung optimal zu nutzen, stellen Sie bitte sicher, dass Ihre Daten als Profile und Ereignisse gemäß dem [Best Practices für die Datenmodellierung](../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Platform] organisiert werden. Um die Segmentierung optimal zu nutzen, stellen Sie bitte sicher, dass Ihre Daten als Profile und Ereignisse gemäß dem [Best Practices für die Datenmodellierung](../xdm/schema/best-practices.md).
 - [[!DNL Identity Service]](../identity-service/home.md): Bietet Ihnen einen umfassenden Überblick über Ihre Kunden und ihr Verhalten durch die Überbrückung von Identitäten zwischen Geräten und Systemen.
-- [Quellen](../sources/home.md): [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten zu strukturieren, zu beschriften und zu erweitern, indem Sie [!DNL Platform] Dienste.
+- [Quellen](../sources/home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 - [[!DNL Segmentation Service]](../segmentation/home.md): [!DNL Segmentation Service] ermöglicht die Aufteilung der in [!DNL Experience Platform] die sich auf Einzelanwender (wie Kunden, Interessenten, Benutzer oder Organisationen) in kleinere Gruppen bezieht.
 - [[!DNL Real-time Customer Profile]](../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 - [Datensätze](../catalog/datasets/overview.md): Das Speicher- und Verwaltungskonstrukt für Datenpersistenz in [!DNL Experience Platform].

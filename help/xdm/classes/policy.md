@@ -1,7 +1,8 @@
 ---
 title: Richtlinienklasse
 description: Dieses Dokument bietet einen Überblick über die Policy-Klasse im Experience-Datenmodell (XDM).
-source-git-commit: c0437b8f9d93c46dbec991a33a893a5b9e0cdf2c
+exl-id: 56cc8c69-84a0-493e-85c5-e0cd994e4bee
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 11%

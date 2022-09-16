@@ -1,17 +1,17 @@
 ---
 keywords: Zielkonto, Zielkonten aktualisieren, Konten aktualisieren, Ziel aktualisieren
-title: Zielkonten aktualisieren
+title: Aktualisieren von Zielkonten
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Aktualisieren von Zielkonten in der Adobe Experience Platform-Benutzeroberfläche aufgeführt
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
 source-git-commit: f31b54622c63f96fb8fa727f80dda295a926e2c7
 workflow-type: tm+mt
 source-wordcount: '505'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
-# Zielkonten aktualisieren
+# Aktualisieren von Zielkonten
 
 ## Übersicht {#overview}
 
@@ -25,7 +25,7 @@ Bei Batch-Zielen können Sie den Zugriff- oder geheimen Schlüssel aktualisieren
 
 ![Registerkarte „Konten“](../assets/ui/update-accounts/destination-accounts.png)
 
-## Konten aktualisieren {#update}
+## Aktualisieren von Konten {#update}
 
 Gehen Sie wie folgt vor, um Verbindungsdetails zu vorhandenen Zielen zu aktualisieren.
 

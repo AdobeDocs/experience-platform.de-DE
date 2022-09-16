@@ -9,13 +9,13 @@ exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
 source-git-commit: e08deb8bea7f02639b680c4988522627de82bdee
 workflow-type: tm+mt
 source-wordcount: '983'
-ht-degree: 69%
+ht-degree: 72%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
 
-**Veröffentlichungsdatum: 8. April 2020**
+**Versionsdatum: 8. April 2020**
 
 Neue Funktionen in Adobe Experience Platform:
 * [[!DNL Intelligent Services]](#intelligent)
@@ -68,7 +68,7 @@ XDM ist eine öffentlich dokumentierte Spezifikation, die die Leistungsfähigkei
 
 ## Data Governance {#governance}
 
-Adobe Experience Platform Data Governance besteht aus einer Reihe von Strategien und Technologien zur Verwaltung von Kundendaten sowie zur Gewährleistung der Einhaltung von Vorschriften, Beschränkungen und Datennutzungsrichtlinien. Sie spielt eine Schlüsselrolle in [!DNL Experience Platform] auf verschiedenen Ebenen, einschließlich Katalogisierung, Datenherkunft, Datennutzungsbezeichnung, Datenzugriffsrichtlinien und Zugriffskontrolle auf Daten für Marketing-Aktionen.
+Adobe Experience Platform Data Governance besteht aus einer Reihe von Strategien und Technologien zur Verwaltung von Kundendaten sowie zur Gewährleistung der Einhaltung von Vorschriften, Beschränkungen und Datennutzungsrichtlinien. Die Funktion spielt in [!DNL Experience Platform] auf verschiedenen Ebenen eine wichtige Rolle, wie z. B. bei Katalogisierung, Bestimmung der Datenherkunft, Datennutzungsbezeichnung, Datenzugriffsrichtlinien und Zugriffssteuerung für Daten bei Marketing-Aktionen.
 
 Das Thema Data Governance erfordert ein tiefgehendes Verständnis aller für Ihre Kundendaten geltenden gesetzlichen Bestimmungen, vertraglichen Pflichten und Unternehmensrichtlinien. Anschließend lassen sich Daten mithilfe der entsprechenden Datennutzungsbezeichnungen klassifizieren und ihre Verwendung durch Definition von Datennutzungsrichtlinien steuern.
 

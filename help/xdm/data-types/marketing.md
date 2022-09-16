@@ -12,15 +12,15 @@ ht-degree: 7%
 
 ---
 
-#  Marketing-Datentyp
+# [!UICONTROL Marketing] Datentyp
 
- Marketing ist ein Standard-XDM-Datentyp, der Marketing-Aktivitäten beschreibt, die mit einem bestimmten Touchpoint aktiv sind.
+[!UICONTROL Marketing] ist ein standardmäßiger XDM-Datentyp, der Marketing-Aktivitäten beschreibt, die mit einem bestimmten Touchpoint aktiv sind.
 
 ![](../images/data-types/marketing.png)
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `campaignGroup` | Zeichenfolge | Der Name der Kampagnengruppe (in Fällen, in denen mehrere Kampagnen gruppiert sind, z. B. `50%_DISCOUNT`). |
+| `campaignGroup` | Zeichenfolge | Der Name der Kampagnengruppe (in Fällen, in denen mehrere Kampagnen gruppiert sind wie `50%_DISCOUNT`). |
 | `campaignName` | Zeichenfolge | Der Name der Marketing-Kampagne, z. B. `50%_DISCOUNT_USA` oder `50%_DISCOUNT_ASIA`. |
 | `trackingCode` | Zeichenfolge | Der Trackingcode, mit dem die Marketing-Kampagne identifiziert werden kann, mit der das Ereignis verknüpft ist. |
 

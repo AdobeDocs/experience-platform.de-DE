@@ -82,7 +82,7 @@ Informationen zum SDK, das zum Erfassen des Ereignisses verwendet wird.
 | ----------------------------------------- | --------------------------------------- |
 | `events[].xdm.implementationDetails.name` | `https://ns.adobe.com/experience/alloy` |
 
-Die Kennung des Software Development Kits (SDK).  Dieses Feld verwendet einen URI, um die Eindeutigkeit der Kennungen zu verbessern, die von verschiedenen Software-Bibliotheken bereitgestellt werden. Wenn die eigenständige Bibliothek verwendet wird, ist der Wert `https://ns.adobe.com/experience/alloy`. Wenn die Bibliothek als Teil der Tag-Erweiterung verwendet wird, ist der Wert `https://ns.adobe.com/experience/alloy+reactor`.
+Die Kennung des Software Development Kits (SDK).  Dieses Feld verwendet einen URI, um die Eindeutigkeit der Kennungen zu verbessern, die von verschiedenen Software-Bibliotheken bereitgestellt werden. Wenn die eigenständige Bibliothek verwendet wird, lautet der Wert `https://ns.adobe.com/experience/alloy`. Wenn die Bibliothek als Teil der Tag-Erweiterung verwendet wird, lautet der Wert `https://ns.adobe.com/experience/alloy+reactor`.
 
 ### Version
 
@@ -98,7 +98,7 @@ Wenn die eigenständige Bibliothek verwendet wird, ist der Wert einfach die Bibl
 | ------------------------------------------------ | ------------ |
 | `events[].xdm.implementationDetails.environment` | `browser` |
 
-Die Umgebung, in der die Daten erfasst wurden. Dies ist immer auf `browser` eingestellt.
+Die Umgebung, in der die Daten erfasst wurden. Dies ist immer auf `browser`.
 
 ## Ortskontext (`placeContext`)
 

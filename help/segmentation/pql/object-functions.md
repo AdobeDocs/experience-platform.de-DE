@@ -14,7 +14,7 @@ ht-degree: 70%
 
 # Objektfunktionen
 
-[!DNL Profile Query Language] (PQL) bietet Funktionen, die die Interaktion mit Objekten vereinfachen. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md).
+[!DNL Profile Query Language] (PQL) bietet Funktionen, die die Interaktion mit Objekten vereinfachen. Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] Übersicht](./overview.md).
 
 ## Ist null
 

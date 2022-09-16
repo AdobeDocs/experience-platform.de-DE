@@ -6,7 +6,7 @@ exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
 source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
 workflow-type: tm+mt
 source-wordcount: '961'
-ht-degree: 27%
+ht-degree: 29%
 
 ---
 
@@ -60,7 +60,7 @@ Profilaktivierte Daten, die in [!DNL Platform] wird im [!DNL Data Lake] sowie [!
 
 ## Profilattribute aktualisieren {#update-profile}
 
-Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihrer Organisation zu aktualisieren. Vielleicht müssen Sie zum Beispiel Datensätze korrigieren oder einen Attributwert ändern. Dies kann durch Batch-Erfassung erfolgen und erfordert einen Profil-aktivierten Datensatz, der mit einem aktualisierten Tag konfiguriert wurde. Weitere Informationen zur Konfiguration eines Datensatzes für Attributaktualisierungen finden Sie im Tutorial zur [Aktivierung eines Datensatzes für Profil und Upsert](../../catalog/datasets/enable-upsert.md).
+Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihrer Organisation zu aktualisieren. Vielleicht müssen Sie zum Beispiel Datensätze korrigieren oder einen Attributwert ändern. Dies kann durch Batch-Aufnahme erfolgen und erfordert einen profilaktivierten Datensatz, der mit einem Upsert-Tag konfiguriert ist. Weitere Informationen zur Konfiguration eines Datensatzes für Attributaktualisierungen finden Sie im Tutorial zur [Aktivierung eines Datensatzes für Profil und Upsert](../../catalog/datasets/enable-upsert.md).
 
 ## Nächste Schritte {#next-steps}
 

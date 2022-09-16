@@ -1,10 +1,11 @@
 ---
 title: Google-Datenschichterweiterung
 description: Erfahren Sie mehr über die Google Client-Datenschicht-Tag-Erweiterung in Adobe Experience Platform.
-source-git-commit: 638b4fea8a80763a2b46863ecb0e3969a6fc127a
+exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
+source-git-commit: 51a263dc2f42fe3538f15f32c7573c69a2e2adc4
 workflow-type: tm+mt
 source-wordcount: '819'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 6%
 >
 >Diese Erweiterung befindet sich derzeit in der Beta-Phase und wurde noch nicht vollständig in der Produktion getestet.
 
-Mit der Google-Datenschicht-Erweiterung können Sie eine Google-Datenschicht in Ihrer Tag-Implementierung verwenden. Die Erweiterung kann unabhängig oder gleichzeitig mit Google-Lösungen und der Open Source von Google verwendet werden [Data Layer Helper Library](https://github.com/google/data-layer-helper).
+Mit der Google Data Layer-Erweiterung können Sie eine Google-Datenschicht in Ihrer Tag-Implementierung verwenden. Die Erweiterung kann unabhängig oder gleichzeitig mit Google-Lösungen und der Open Source von Google verwendet werden [Data Layer Helper Library](https://github.com/google/data-layer-helper).
 
 Die Hilfsbibliothek bietet ähnliche ereignisgesteuerte Funktionen wie der Adobe Client Data Dayer (ACDL). Die Datenelemente, Regeln und Aktionen der Google-Datenschicht-Erweiterung bieten ähnliche Funktionen wie die im [ACDL-Erweiterung](../client-data-layer/overview.md).
 

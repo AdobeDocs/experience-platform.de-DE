@@ -1,13 +1,13 @@
 ---
 description: Auf dieser Seite wird erläutert, wie Sie mit dem API-Endpunkt /testing/destinationInstance testen können, ob Ihr dateibasiertes Ziel richtig konfiguriert ist, und die Integrität der Datenflüsse zu Ihrem konfigurierten Ziel überprüfen.
 title: Testen Ihres dateibasierten Ziels mit Beispielprofilen
-source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
+exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
+source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 10%
 
 ---
-
 
 # Testen Ihres dateibasierten Ziels mit Beispielprofilen
 

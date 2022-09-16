@@ -8,13 +8,13 @@ exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
 source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
 source-wordcount: '184'
-ht-degree: 17%
+ht-degree: 25%
 
 ---
 
-#  SearchData-Typ
+# [!UICONTROL Suche] Datentyp
 
- Search ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Informationen zur Web-Suchaktivität enthält.
+[!UICONTROL Suche] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Informationen zur Web-Suchaktivität enthält.
 
 <img src="../images/data-types/search.PNG" width="500" /><br />
 
@@ -26,7 +26,7 @@ ht-degree: 17%
 | `position` | Ganzzahl | Die Position oder der Rang der Auflistung auf der Suchergebnisseite. |
 | `searchEngine` | Zeichenfolge | Die von der Suche verwendete Suchmaschine. |
 | `searchEngineID` | Zeichenfolge | Die anwendungsspezifische Kennung, die zur Identifizierung der Suchmaschine verwendet wird. |
-| `slot` | Zeichenfolge | Der benannte Abschnitt der Seite, auf der das Suchergebnis angezeigt wurde. Der Wert dieser Eigenschaft muss mit einem der bekannten Enum-Werte übereinstimmen, die Sie definieren, z. B. `top`, `side` oder `bottom`. |
+| `slot` | Zeichenfolge | Der benannte Abschnitt der Seite, auf der das Suchergebnis angezeigt wurde. Der Wert dieser Eigenschaft muss mit einem der bekannten Enum-Werte übereinstimmen, die Sie definieren, z. B. `top`, `side`oder `bottom`. |
 
 {style=&quot;table-layout:auto&quot;}
 

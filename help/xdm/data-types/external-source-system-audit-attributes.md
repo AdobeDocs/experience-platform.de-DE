@@ -5,17 +5,17 @@ exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
 source-git-commit: 7e07ba8b5d7bc7df809a9a122d2a58837c933674
 workflow-type: tm+mt
 source-wordcount: '216'
-ht-degree: 6%
+ht-degree: 14%
 
 ---
 
-# [!UICONTROL Datentyp &quot;External Source System Audit ] Attributes&quot;
+# [!UICONTROL Audit-Attribute des externen Quellsystems] Datentyp
 
 >[!NOTE]
 >
 >Dieser Datentyp ist nur für Unternehmen verfügbar, die Zugriff auf die B2B-Edition von Real-time Customer Data Platform haben.
 
-[!UICONTROL Die ] Audit-Eigenschaft des externen Quellsystems ist ein standardmäßiger XDM-Datentyp (Experience Data Model), der Prüfdetails zu einem externen Quellsystem erfasst.
+[!UICONTROL Audit-Attribute des externen Quellsystems] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Prüfdetails zu einem externen Quellsystem erfasst.
 
 ![](../images/data-types/external-source-system-audit-attributes.png)
 

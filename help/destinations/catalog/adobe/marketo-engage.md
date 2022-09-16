@@ -5,7 +5,7 @@ exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
 source-git-commit: 6dc4a93b46d6111637e0024da574d605e0d2b986
 workflow-type: tm+mt
 source-wordcount: '740'
-ht-degree: 11%
+ht-degree: 21%
 
 ---
 
@@ -24,8 +24,8 @@ ht-degree: 11%
 
 Zu den Verbesserungen am Marketo V2-Ziel gehören:
 
-* Im **[!UICONTROL Segment planen]** Schritt des Aktivierungs-Workflows: In Marketo V1 müssen Sie manuell einen **Zuordnungs-ID** , um Daten erfolgreich nach Marketo zu exportieren. Dieser manuelle Schritt ist in Marketo V2 nicht mehr erforderlich.
-* Im **[!UICONTROL Zuordnung]** -Schritt des Aktivierungs-Workflows in Marketo V1 konnten Sie XDM-Felder nur drei Zielfeldern in Marketo zuordnen: `firstName`, `lastName`und `companyName`. Mit der Marketo V2-Version können Sie jetzt XDM-Felder vielen weiteren Feldern in Marketo zuordnen. Weitere Informationen finden Sie im Abschnitt [unterstützte Attribute](#supported-attributes) weiter unten.
+* In Marketo V1 mussten Sie im Schritt **[!UICONTROL Segment planen]** des Aktivierungs-Workflows manuell eine **Zuordnungs-ID** hinzufügen, um Daten erfolgreich in Marketo zu exportieren. Dieser manuelle Schritt ist in Marketo V2 nicht mehr erforderlich.
+* Im Schritt **[!UICONTROL Zuordnung]** des Aktivierungs-Workflows konnten Sie XDM-Felder in Marketo V1 nur drei Zielfeldern in Marketo zuordnen: `firstName`, `lastName` und `companyName`. Mit der Version Marketo V2 können Sie jetzt XDM-Felder vielen weiteren Feldern in Marketo zuordnen. Weitere Informationen finden Sie im Abschnitt [unterstützte Attribute](#supported-attributes) weiter unten.
 
 ## Übersicht {#overview}
 

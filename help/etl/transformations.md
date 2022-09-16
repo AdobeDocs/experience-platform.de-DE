@@ -20,7 +20,7 @@ Dieser Artikel zeigt die folgenden Beispiel-Transformationen, auf die ein Extrak
 
 ### Beispieldateien
 
-Beispiele für CSV- und JSON-Dateien sind über die öffentliche ETL-Referenz [!DNL GitHub] verfügbar, die von Adobe verwaltet wird:
+Beispiele für CSV- und JSON-Dateien sind in der öffentlichen ETL-Referenz verfügbar. [!DNL GitHub] Repo gepflegt von der Adobe:
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
@@ -177,7 +177,7 @@ Die Hierarchie eines Dataframes (z. B. einer Parquet-Datei) muss mit der des XDM
 
 ### Beispiel-Dataframe
 
-Die Struktur des folgenden Beispiel-Dataframes wurde einem Schema zugeordnet, das die [!DNL XDM Individual Profile] -Klasse implementiert und die häufigsten Felder enthält, die mit Schemas dieses Typs verknüpft sind.
+Die Struktur des folgenden Beispiel-Dataframes wurde einem Schema zugeordnet, das die [!DNL XDM Individual Profile] -Klasse und enthält die häufigsten Felder, die mit Schemas dieses Typs verknüpft sind.
 
 ```python
 [

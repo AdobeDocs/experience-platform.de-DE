@@ -22,9 +22,9 @@ Zuvor konnten an ein einzelnes Ereignis mehrere Zeitbegrenzungsregeln angehängt
 
 ![](../images/ui/segment-refactoring/former-time-constraint.png)
 
-Wie Sie sehen können, weist dieses Segment auf der Regelebene zwei Begrenzungen auf: Eine für &quot;[!UICONTROL Today]&quot;und die andere für &quot;[!UICONTROL Gestern]&quot;.
+Wie Sie sehen können, weist dieses Segment auf der Regelebene zwei Begrenzungen auf: Eins für &quot;[!UICONTROL Heute]&quot; und der andere für &quot;[!UICONTROL Gestern]&quot;.
 
-Das vorherige Segment entspricht dem folgenden Segment - beide Zeitbeschränkungen auf Ereignisebene wurden mithilfe eines AND-Operators verbunden. Die erste Zeitbeschränkung auf Ereignisebene verweist auf ein Klickereignis, dessen Name &quot;Training&quot;entspricht und heute stattfindet, während die zweite Zeitbegrenzung auf Ereignisebene auf ein Klickereignis verweist, dessen Name &quot;Haustiere&quot;entspricht und gestern stattgefunden hat.
+Das vorherige Segment entspricht dem folgenden Segment - beide Zeitbeschränkungen auf Ereignisebene wurden über einen UND -Operator verbunden. Die erste Zeitbeschränkung auf Ereignisebene verweist auf ein Klickereignis, dessen Name &quot;Training&quot;entspricht und heute stattfindet, während die zweite Zeitbegrenzung auf Ereignisebene auf ein Klickereignis verweist, dessen Name &quot;Haustiere&quot;entspricht und gestern stattgefunden hat.
 
 ![](../images/ui/segment-refactoring/time-constraint-1.png) ![](../images/ui/segment-refactoring/time-constraint-2.png)
 

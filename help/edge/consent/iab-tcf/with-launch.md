@@ -13,23 +13,23 @@ ht-degree: 0%
 
 Adobe Experience Platform Web SDK unterstützt das Interactive Advertising Bureau Transparency &amp; Consent Framework, Version 2.0 (IAB TCF 2.0). In diesem Handbuch erfahren Sie, wie Sie eine Tag-Eigenschaft zum Senden von IAB TCF 2.0-Zustimmungsinformationen an Adobe mithilfe der Adobe Experience Platform Web SDK-Tag-Erweiterung einrichten.
 
-Wenn Sie keine Tags verwenden möchten, lesen Sie bitte das Handbuch zu [Verwendung von IAB TCF 2.0 ohne Tags](./without-launch.md).
+Wenn Sie keine Tags verwenden möchten, lesen Sie bitte das Handbuch unter [Verwendung von IAB TCF 2.0 ohne Tags](./without-launch.md).
 
 ## Erste Schritte
 
 Um das IAB TCF 2.0 mit Tags und der Platform Web SDK-Erweiterung verwenden zu können, müssen Sie über ein XDM-Schema und einen Datensatz verfügen.
 
-Darüber hinaus setzt dieses Handbuch ein Verständnis des Adobe Experience Platform Web SDK voraus. Einen schnellen Auffrischungskurs finden Sie in der [Adobe Experience Platform Web SDK - Übersicht](../../home.md) und der [Dokumentation zu häufig gestellten Fragen](../../web-sdk-faq.md) .
+Darüber hinaus setzt dieses Handbuch ein Verständnis des Adobe Experience Platform Web SDK voraus. Für einen schnellen Auffrischungskurs lesen Sie bitte die [Übersicht über das Adobe Experience Platform Web SDK](../../home.md) und [Häufig gestellte Fragen](../../web-sdk-faq.md) Dokumentation.
 
 ## Festlegen der Standardzustimmung
 
 In der Erweiterungskonfiguration gibt es eine Einstellung für die Standardzustimmung. Dadurch wird das Verhalten von Kunden gesteuert, die kein Zustimmungs-Cookie haben. Wenn Sie Erlebnisereignisse für Kunden in die Warteschlange stellen möchten, die kein Zustimmungscookie haben, setzen Sie dies auf `pending`. Wenn Sie Erlebnisereignisse für Kunden verwerfen möchten, die kein Zustimmungs-Cookie haben, setzen Sie dies auf `out`. Sie können auch ein Datenelement verwenden, um den standardmäßigen Zustimmungswert dynamisch festzulegen.
 
-Weitere Informationen zum Konfigurieren der Standardzustimmung finden Sie im Abschnitt [Standardzustimmung](../../fundamentals/configuring-the-sdk.md#default-consent) im SDK-Konfigurationshandbuch.
+Weitere Informationen zum Konfigurieren der Standardzustimmung finden Sie im Abschnitt [Standardzustimmungsabschnitt](../../fundamentals/configuring-the-sdk.md#default-consent) im SDK-Konfigurationshandbuch.
 
 ## Profil mit Zustimmungsinformationen aktualisieren {#consent-code-1}
 
-Um die Aktion `setConsent` aufzurufen, wenn sich die Zustimmungsvoreinstellungen Ihrer Kunden geändert haben, müssen Sie eine neue Tag-Regel erstellen. Fügen Sie zunächst ein neues Ereignis hinzu und wählen Sie den Ereignistyp &quot;Benutzerspezifischer Code&quot;der Haupterweiterung aus.
+So rufen Sie die `setConsent` Wenn sich die Zustimmungsvoreinstellungen Ihrer Kunden geändert haben, müssen Sie eine neue Tag-Regel erstellen. Fügen Sie zunächst ein neues Ereignis hinzu und wählen Sie den Ereignistyp &quot;Benutzerspezifischer Code&quot;der Haupterweiterung aus.
 
 Verwenden Sie das folgende Code-Beispiel für Ihr neues Ereignis:
 
@@ -55,7 +55,7 @@ addEventListener();
 
 Dieser benutzerspezifische Code umfasst zwei Dinge:
 
-* Legt zwei Datenelemente fest, eines mit der Zustimmungszeichenfolge und eines mit der `gdprApplies`-Markierung. Dies ist später beim Ausfüllen der Aktion &quot;Einverständnis festlegen&quot;nützlich.
+* Legt zwei Datenelemente fest, eines mit der Zustimmungszeichenfolge und eines mit der `gdprApplies` Markierung. Dies ist später beim Ausfüllen der Aktion &quot;Einverständnis festlegen&quot;nützlich.
 
 * Trigger der Regel, wenn sich die Zustimmungseinstellungen geändert haben. Die Aktion &quot;Einverständnis festlegen&quot;sollte immer verwendet werden, wenn sich die Zustimmungseinstellungen geändert haben. Fügen Sie die Aktion &quot;Einverständnis festlegen&quot;in die Erweiterung ein und füllen Sie das Formular wie folgt aus:
 
@@ -72,13 +72,13 @@ Dieser benutzerspezifische Code umfasst zwei Dinge:
 
 ## Erstellen eines XDM-Datenelements für Erlebnisereignisse
 
-Die Zustimmungszeichenfolge sollte im XDM-Erlebnisereignis enthalten sein. Verwenden Sie dazu das Datenelement &quot;XDM-Objekt&quot;. Erstellen Sie zunächst ein neues XDM-Objekt-Datenelement oder verwenden Sie alternativ eines, das Sie bereits zum Senden von Ereignissen erstellt haben. Wenn Sie die Feldergruppe Erlebnisereignis-Datenschutzschema zu Ihrem Schema hinzugefügt haben, sollten Sie einen `consentStrings`-Schlüssel im XDM-Objekt haben.
+Die Zustimmungszeichenfolge sollte im XDM-Erlebnisereignis enthalten sein. Verwenden Sie dazu das Datenelement &quot;XDM-Objekt&quot;. Erstellen Sie zunächst ein neues XDM-Objekt-Datenelement oder verwenden Sie alternativ eines, das Sie bereits zum Senden von Ereignissen erstellt haben. Wenn Sie Ihrem Schema die Feldergruppe &quot;Erlebnisereignis-Datenschutz&quot;hinzugefügt haben, sollte Ihnen eine `consentStrings` -Schlüssel im XDM-Objekt.
 
-1. Wählen Sie **[!UICONTROL consentStrings]** aus.
+1. Auswählen **[!UICONTROL consentStrings]**.
 
-1. Wählen Sie **[!UICONTROL Geben Sie einzelne Elemente]** an und wählen Sie **[!UICONTROL Element hinzufügen]** aus.
+1. Auswählen **[!UICONTROL Bereitstellen einzelner Elemente]** und wählen Sie **[!UICONTROL Element hinzufügen]**.
 
-1. Erweitern Sie die Überschrift **[!UICONTROL consentString]**, erweitern Sie das erste Element und geben Sie dann die folgenden Werte ein:
+1. Erweitern Sie die **[!UICONTROL consentString]** -Überschrift, erweitern Sie das erste Element und geben Sie dann die folgenden Werte ein:
 
 * `consentStandard`: IAB TCF
 * `consentStandardVersion`: 2,0
@@ -113,7 +113,7 @@ function addEventListener() {
 addEventListener();
 ```
 
-Dieser Code ist mit dem vorherigen benutzerspezifischen Code identisch, mit dem Unterschied, dass sowohl `useractioncomplete`- als auch `tcloaded`-Ereignisse verarbeitet werden. Der [vorherige benutzerdefinierte Code](#consent-code-1) nur Trigger, wenn der Kunde seine Voreinstellungen zum ersten Mal auswählt. Dieser Code Trigger auch dann, wenn der Kunde seine Voreinstellungen bereits ausgewählt hat. Beispielsweise beim zweiten Laden der Seite.
+Dieser Code ist mit dem vorherigen benutzerspezifischen Code identisch, mit dem Unterschied, dass beide `useractioncomplete` und `tcloaded` -Ereignisse verarbeitet werden. Die [vorheriger benutzerspezifischer Code](#consent-code-1) nur Trigger, in denen der Kunde seine Voreinstellungen zum ersten Mal auswählt. Dieser Code Trigger auch dann, wenn der Kunde seine Voreinstellungen bereits ausgewählt hat. Beispielsweise beim zweiten Laden der Seite.
 
 Fügen Sie die Aktion &quot;Ereignis senden&quot;aus der Platform Web SDK-Erweiterung hinzu. Wählen Sie im XDM-Feld das XDM-Datenelement aus, das Sie im vorherigen Abschnitt erstellt haben.
 
@@ -123,4 +123,4 @@ Wenn Ereignisse nach dem ersten Erlebnisereignis ausgelöst werden, sind die bei
 
 ## Nächste Schritte
 
-Nachdem Sie nun gelernt haben, wie Sie IAB TCF 2.0 mit der Platform Web SDK-Erweiterung verwenden, können Sie auch mit anderen Adobe-Lösungen wie Adobe Analytics oder Echtzeit-Kundendatenplattform integrieren. Weitere Informationen finden Sie unter [Übersicht über das IAB Transparency &amp; Consent Framework 2.0](./overview.md) .
+Nachdem Sie nun gelernt haben, wie Sie IAB TCF 2.0 mit der Platform Web SDK-Erweiterung verwenden, können Sie auch mit anderen Adobe-Lösungen wie Adobe Analytics oder Echtzeit-Kundendatenplattform integrieren. Siehe [Übersicht über das IAB Transparency &amp; Consent Framework 2.0](./overview.md) für weitere Informationen.

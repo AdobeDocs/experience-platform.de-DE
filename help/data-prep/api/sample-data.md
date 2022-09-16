@@ -3,7 +3,7 @@ keywords: Experience Platform;Startseite; beliebte Themen;Datenvorbereitung;API-
 solution: Experience Platform
 title: API-Endpunkt für Beispieldaten
 topic-legacy: sample data
-description: 'Sie können den Endpunkt „/samples“ in der Adobe Experience Platform-API verwenden, um Beispieldaten von Zuordnungen programmgesteuert abzurufen, zu erstellen, zu aktualisieren und zu validieren. '
+description: Sie können den Endpunkt „/samples“ in der Adobe Experience Platform-API verwenden, um Beispieldaten von Zuordnungen programmgesteuert abzurufen, zu erstellen, zu aktualisieren und zu validieren.
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '401'

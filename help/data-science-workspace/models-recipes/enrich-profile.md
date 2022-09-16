@@ -9,44 +9,44 @@ exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '640'
-ht-degree: 24%
+ht-degree: 26%
 
 ---
 
-# Anreicherung von [!DNL Real-time Customer Profile] mit Einblicken aus maschinellem Lernen
+# Anreichern [!DNL Real-time Customer Profile] mit Einblicken aus maschinellem Lernen
 
-Adobe Experience Platform [!DNL Data Science Workspace] bietet die Tools und Ressourcen zum Erstellen, Auswerten und Verwenden maschineller Lernmodelle, um Datenprognosen und Einblicke zu generieren. Wenn Einblicke aus maschinellem Lernen in einen [!DNL Profile]-aktivierten Datensatz aufgenommen werden, werden dieselben Daten auch als [!DNL Profile] Datensätze erfasst, die dann mit [!DNL Adobe Experience Platform Segmentation Service] segmentiert werden können. Bevor aufgenommene Profil- und Zeitreihendaten mit bestehenden Daten zusammengeführt werden und die Vereinigungsansicht aktualisiert wird, bestimmt das Echtzeit-Kundenprofil anhand der sogenannten Streaming-Segmentierung durchgehend automatisch, ob die neuen Daten in den Segmenten eingeschlossen oder von ihnen ausgeschlossen werden. Das Ergebnis: Berechnungen und Entscheidungen dazu, wie Sie Ihren Kunden herausragende, individuell auf sie abgestimmte Erlebnisse liefern, lassen sich direkt während ihrer Interaktion mit Ihrer Marke anstellen bzw. treffen.
+Adobe Experience Platform [!DNL Data Science Workspace] bietet die Tools und Ressourcen zum Erstellen, Auswerten und Verwenden maschineller Lernmodelle, um Datenprognosen und -einblicke zu generieren. Wenn Einblicke aus maschinellem Lernen in eine [!DNL Profile]-aktivierter Datensatz, der dieselben Daten auch als [!DNL Profile] Datensätze, die dann mithilfe von [!DNL Adobe Experience Platform Segmentation Service]. Bevor aufgenommene Profil- und Zeitreihendaten mit bestehenden Daten zusammengeführt werden und die Vereinigungsansicht aktualisiert wird, bestimmt das Echtzeit-Kundenprofil anhand der sogenannten Streaming-Segmentierung durchgehend automatisch, ob die neuen Daten in den Segmenten eingeschlossen oder von ihnen ausgeschlossen werden. Das Ergebnis: Berechnungen und Entscheidungen dazu, wie Sie Ihren Kunden herausragende, individuell auf sie abgestimmte Erlebnisse liefern, lassen sich direkt während ihrer Interaktion mit Ihrer Marke anstellen bzw. treffen.
 
-Dieses Dokument enthält Links zu Tutorials, mit denen Sie [!DNL Real-time Customer Profile] mit Ihren Einblicken aus maschinellem Lernen anreichern können.
+Dieses Dokument enthält Links zu Tutorials, die Ihnen die Anreicherung ermöglichen [!DNL Real-time Customer Profile] mit Ihren Einblicken aus maschinellem Lernen.
 
 ## Erste Schritte
 
-Um die unten stehenden Tutorials abzuschließen, benötigen Sie ein Verständnis für die Aufnahme von [!DNL Profile]-Daten und die Erstellung von Segmenten. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
+Um die unten stehenden Tutorials abschließen zu können, benötigen Sie ein grundlegendes Verständnis der Erfassung [!DNL Profile] Daten und der Erstellung von Segmenten. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet eine vollständige, einheitliche Darstellung der einzelnen Kunden auf der Grundlage aggregierter Daten aus verschiedenen Quellen.
-- [[!DNL Identity Service]](../../identity-service/home.md): Ermöglicht  [!DNL Real-time Customer Profile] die Überbrückung von Identitäten aus unterschiedlichen Datenquellen, die in Platform erfasst werden.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert.
+- [[!DNL Identity Service]](../../identity-service/home.md): Aktiviert [!DNL Real-time Customer Profile] durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, die in Platform erfasst werden.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten ordnet.
 
 Neben den oben genannten Dokumenten sollten Sie auch folgende Leitfäden zu Schemas und dem Schema-Editor lesen:
 
-- [Grundlagen der Schemakomposition](../../xdm/schema/composition.md): Beschreibt XDM-Schemas, Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in verwendet werden  [!DNL Experience Platform]sollen.
+- [Grundlagen der Schemakomposition](../../xdm/schema/composition.md): Beschreibt XDM-Schemas, Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in verwendet werden sollen [!DNL Experience Platform].
 - [Anleitung für den Schema-Editor](../../xdm/tutorials/create-schema-ui.md): Enthält ausführliche Anweisungen zum Erstellen von Schemas mit dem Schema-Editor in [!DNL Experience Platform].
 
 ## Ausgabeschema und -datensatz erstellen und konfigurieren {#create-an-output-schema-and-dataset}
 
-Der erste Schritt zur Anreicherung von [!DNL Real-time Customer Profile] mit Scoring-Einblicken besteht darin zu wissen, welches reale Objekt (z. B. eine Person) Ihre Daten definieren. Wenn Sie Ihre Daten verstehen, können Sie eine Struktur beschreiben und entwerfen, um Bedeutung hinzuzufügen, ähnlich wie beim Entwerfen einer relationalen Datenbank.
+Der erste Schritt zur Anreicherung [!DNL Real-time Customer Profile] mit Scoring-Einblicken weiß, welches reale Objekt (wie eine Person) Ihre Daten definieren. Wenn Sie Ihre Daten verstehen, können Sie eine Struktur beschreiben und entwerfen, um Bedeutung hinzuzufügen, ähnlich wie beim Entwerfen einer relationalen Datenbank.
 
-Das Erstellen eines Schemas beginnt mit dem Zuweisen einer Klasse. Klassen definieren die Verhaltensaspekte der Daten, die das Schema enthalten soll (Datensatz oder Zeitreihen). Um Ihre eigenen Schemas zu erstellen, führen Sie die Schritte im Tutorial zum Erstellen eines Schemas mit dem Schema-Editor](../../xdm/tutorials/create-schema-ui.md) aus. [ Beachten Sie, dass Sie, bevor Sie einen Datensatz für [!DNL Profile] aktivieren können, das Schema des Datensatzes so konfigurieren müssen, dass es ein primäres Identitätsfeld enthält, und das Schema für [!DNL Profile] aktivieren müssen. Wenn Daten in einen [!DNL Profile]-aktivierten Datensatz aufgenommen werden, werden dieselben Daten auch als [!DNL Profile]-Datensätze erfasst.
+Das Erstellen eines Schemas beginnt mit dem Zuweisen einer Klasse. Klassen definieren die Verhaltensaspekte der Daten, die das Schema enthalten soll (Datensatz oder Zeitreihen). Um eigene Schemata zu erstellen, führen Sie die Schritte im Tutorial zu [Erstellen eines Schemas mit dem Schema Editor](../../xdm/tutorials/create-schema-ui.md). Beachten Sie, dass Sie, bevor Sie einen Datensatz für [!DNL Profile], müssen Sie das Schema des Datensatzes so konfigurieren, dass es ein primäres Identitätsfeld enthält, und dann das Schema für [!DNL Profile]. Wenn Daten in eine [!DNL Profile]-aktivierter Datensatz, der dieselben Daten auch als [!DNL Profile] Datensätze.
 
-Wenn Sie stattdessen ein Schema mit der [!DNL Schema Registry]-API erstellen möchten, lesen Sie zunächst das [[!DNL Schema Registry] Entwicklerhandbuch](../../xdm/api/getting-started.md) , bevor Sie das Tutorial zum Erstellen eines Schemas mit der API](../../xdm/tutorials/create-schema-api.md) durchführen.[
+Wenn Sie lieber ein Schema mit der [!DNL Schema Registry] API stattdessen verwenden, indem Sie die [[!DNL Schema Registry] Entwicklerhandbuch](../../xdm/api/getting-started.md) vor dem Versuch des Tutorials auf [Erstellen eines Schemas mithilfe der API](../../xdm/tutorials/create-schema-api.md).
 
 Sobald Ihr Schema und Ihr Datensatz vorbereitet sind, können Sie Scoring-Daten generieren und in den Datensatz aufnehmen, indem Sie Scoring-Läufe mit einem geeigneten Modell durchführen.
 
-## Erstellen von Segmenten mit [!DNL Segment Builder] {#create-segments-using-the-segment-builder}
+## Erstellen Sie Segmente mithilfe der [!DNL Segment Builder] {#create-segments-using-the-segment-builder}
 
-Nachdem Sie Ihre Auswertungsdateneinblicke generiert und in Ihren [!DNL Profile]-aktivierten Datensatz aufgenommen haben, können Sie mit [!DNL Segment Builder] dynamische Segmente erstellen.
+Nachdem Sie Ihre Scoring-Dateneinblicke generiert und in Ihre [!DNL Profile]-aktivierter Datensatz, können Sie dynamische Segmente mithilfe der [!DNL Segment Builder].
 
-Der [!DNL Segment Builder] bietet einen Rich-Workspace, mit dem Sie mit [!DNL Profile] Datenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen. Folgen Sie dem [[!DNL Segment Builder] Benutzerhandbuch](../../segmentation/ui/segment-builder.md), um mehr über Folgendes zu erfahren:
+Die [!DNL Segment Builder] bietet einen umfassenden Arbeitsbereich, in dem Sie mit [!DNL Profile] Datenelemente. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen. Befolgen Sie die [[!DNL Segment Builder] Benutzerhandbuch](../../segmentation/ui/segment-builder.md) Weitere Informationen:
 
 - Erstellen von Segmentdefinitionen mithilfe einer Kombination aus Attributen, Ereignissen und vorhandenen Zielgruppen als Bausteinen.
 - Verwenden der Arbeitsfläche und Container des Regel-Builders, um die Reihenfolge zu steuern, in der Segmentregeln ausgeführt werden.
@@ -56,6 +56,6 @@ Der [!DNL Segment Builder] bietet einen Rich-Workspace, mit dem Sie mit [!DNL Pr
 
 ## Nächste Schritte {#next-steps}
 
-Weitere Informationen zu Segmenten und dem [!DNL Segment Builder] finden Sie unter [Übersicht über den Segmentation Service](../../segmentation/home.md).
+Weitere Informationen zu Segmenten und dem [!DNL Segment Builder], lesen Sie die [Übersicht über den Segmentierungsdienst](../../segmentation/home.md).
 
-Weitere Informationen zu [!DNL Real-time Customer Profile] finden Sie unter [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md) .
+Weitere Informationen finden Sie unter [!DNL Real-time Customer Profile], lesen Sie die [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md)

@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Erfahren Sie mehr über den Segmentierungs-Service von Adobe Experience Platform und die Rolle, die dieser im Platform-Ökosystem spielt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 52197a6c009fb5b0b6037a4fef3c98ad7c327e2e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1632'
 ht-degree: 100%
 

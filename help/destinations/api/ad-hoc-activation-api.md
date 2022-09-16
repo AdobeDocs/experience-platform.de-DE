@@ -33,7 +33,7 @@ Das folgende Diagramm zeigt den End-to-End-Workflow zum Aktivieren von Segmenten
 >
 >Die Ad-hoc-Zielgruppenaktivierung wird nur von [Batch-dateibasierte Ziele](../destination-types.md#file-based).
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsbeispiele {#use-cases}
 
 ### Flash-Verkäufe oder -Promotions
 

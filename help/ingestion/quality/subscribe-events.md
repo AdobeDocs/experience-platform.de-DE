@@ -22,7 +22,7 @@ Unterstützung bei der Überwachung des Aufnahmevorgangs, [!DNL Experience Platf
 
 ## Webhook für Benachrichtigungen zur Datenerfassung registrieren
 
-Um Benachrichtigungen zur Datenerfassung zu erhalten, müssen Sie [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) , um einen Webhook für Ihre Experience Platform-Integration zu registrieren.
+Um Benachrichtigungen zur Datenerfassung zu erhalten, müssen Sie [Adobe Developer-Konsole](https://www.adobe.com/go/devs_console_ui) , um einen Webhook für Ihre Experience Platform-Integration zu registrieren.
 
 Folgen Sie dem Tutorial zu [abonnieren von [!DNL Adobe I/O Event] Benachrichtigungen](../../observability/alerts/subscribe.md) für detaillierte Schritte, wie Sie dies erreichen können.
 

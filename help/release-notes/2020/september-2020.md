@@ -8,7 +8,7 @@ exl-id: bf401f3a-b088-4cbd-9a64-224294b797b9
 source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
 source-wordcount: '863'
-ht-degree: 37%
+ht-degree: 41%
 
 ---
 
@@ -28,7 +28,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 ## Data Governance {#governance}
 
-Adobe Experience Platform Data Governance besteht aus einer Reihe von Strategien und Technologien zur Verwaltung von Kundendaten sowie zur Gewährleistung der Einhaltung von Vorschriften, Beschränkungen und Datennutzungsrichtlinien. Sie spielt eine Schlüsselrolle in [!DNL Experience Platform] auf verschiedenen Ebenen, einschließlich Katalogisierung, Datenherkunft, Datennutzungsbezeichnung, Datenzugriffsrichtlinien und Zugriffskontrolle auf Daten für Marketing-Aktionen.
+Adobe Experience Platform Data Governance besteht aus einer Reihe von Strategien und Technologien zur Verwaltung von Kundendaten sowie zur Gewährleistung der Einhaltung von Vorschriften, Beschränkungen und Datennutzungsrichtlinien. Die Funktion spielt in [!DNL Experience Platform] auf verschiedenen Ebenen eine wichtige Rolle, wie z. B. bei Katalogisierung, Bestimmung der Datenherkunft, Datennutzungsbezeichnung, Datenzugriffsrichtlinien und Zugriffssteuerung für Daten bei Marketing-Aktionen.
 
 **Neue Funktionen**
 
@@ -36,7 +36,7 @@ Adobe Experience Platform Data Governance besteht aus einer Reihe von Strategien
 | ------- | ----------- |
 | Verbesserungen der Benutzeroberfläche für die Kennzeichnung von Datensätzen | Zur Benutzeroberfläche für die Kennzeichnung von Datensätzen wurden mehrere neue Sortier- und Filtersteuerelemente hinzugefügt, um die Arbeit mit großen Schemas zu vereinfachen: <ul><li>Sortieren Sie die Felder nach alphabetischer Reihenfolge basierend auf dem vollständigen Schemapfad.</li><li>Teilsuche nach Feldpfadnamen durchführen.</li><li>Filtern Sie Felder ohne Beschriftungen, mit einer ausgewählten Beschriftung oder mit einer Beschriftungskategorie.</li></ul> |
 
-Siehe [Data Governance - Übersicht](../../data-governance/home.md) für weitere Informationen zum Dienst.
+Weitere Informationen zu dem Service finden Sie in der [Übersicht zu Data Governance](../../data-governance/home.md).
 
 ## Ziele {#destinations}
 

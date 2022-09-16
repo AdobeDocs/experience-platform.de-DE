@@ -4,13 +4,13 @@ title: Erstellen einer Managed Services-Quellverbindung mit Adobe Campaign über
 description: Erfahren Sie, wie Sie über die Platform-Benutzeroberfläche eine Verbindung zwischen Adobe Experience Platform und Managed Services in Adobe Campaign herstellen.
 hide: true
 hidefromtoc: true
-source-git-commit: 57a34b10e40dee80638392477d49c21e107c491f
-workflow-type: ht
+exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+workflow-type: tm+mt
 source-wordcount: '300'
 ht-degree: 100%
 
 ---
-
 
 # Erstellen einer Managed Services-Quellverbindung mit Adobe Campaign über die Platform-Benutzeroberfläche
 

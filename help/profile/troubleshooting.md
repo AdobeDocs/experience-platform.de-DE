@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # Handbuch zur Fehlerbehebung bei Echtzeit-Kundenprofilen
 
-Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Echtzeit-Kundenprofil sowie eine Anleitung zur Fehlerbehebung bei häufigen Fehlern. Fragen und Informationen zur Fehlerbehebung bei anderen Diensten in Adobe Experience Platform finden Sie im [Handbuch zur Fehlerbehebung bei Experience Platformen](../landing/troubleshooting.md).
+Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Echtzeit-Kundenprofil sowie eine Anleitung zur Fehlerbehebung bei häufigen Fehlern. Fragen und Antworten zur Fehlerbehebung bei anderen Diensten in Adobe Experience Platform finden Sie im Abschnitt [Handbuch zur Fehlerbehebung bei Experience Platformen](../landing/troubleshooting.md).
 
 Das [!DNL Real-time Customer Profile] ermöglicht Ihnen eine ganzheitliche Sicht auf jeden einzelnen Kunden, indem es Daten aus Online- und Offline-Kanälen ebenso wie aus CRMs und Drittanbieter-Datenquellen sowie anderen Kanälen miteinander kombiniert. Dadurch können Marketing-Experten koordinierte, konsistente und relevante Erlebnisse für Kunden über mehrere Kanäle hinweg bereitstellen.
 
@@ -24,11 +24,11 @@ Im Folgenden finden Sie eine Liste von Antworten auf häufig gestellte Fragen zu
 
 ### Welche Daten werden für das Echtzeit-Kundenprofil akzeptiert?
 
-Das Profil akzeptiert sowohl **record**- als auch **Zeitreihen**-Daten, sofern die betreffenden Daten mindestens einen Identitätswert enthalten, der die Daten mit einer eindeutigen Person verknüpft.
+Das Profil akzeptiert beide **record** und **Zeitreihen** Daten, sofern die betreffenden Daten mindestens einen Identitätswert enthalten, der die Daten mit einer eindeutigen Person verknüpft.
 
-Wie alle Platform-Dienste erfordert Profil, dass seine Daten semantisch unter einem Experience-Datenmodell (XDM)-Schema strukturiert sind. Dieses Schema muss wiederum eine **primäre Identität** definieren und für die Verwendung in Profil aktiviert sein.
+Wie alle Platform-Dienste erfordert Profil, dass seine Daten semantisch unter einem Experience-Datenmodell (XDM)-Schema strukturiert sind. Dieses Schema muss wiederum eine **primäre Identität** definiert und für die Verwendung in Profil aktiviert sein.
 
-Wenn Sie XDM nicht kennen, beginnen Sie mit der [XDM-Übersicht](../xdm/home.md) , um mehr zu erfahren. Als Nächstes finden Sie im XDM-Benutzerhandbuch Anweisungen dazu, wie Sie [Identitätsfelder](../xdm/tutorials/create-schema-ui.md#identity-field) festlegen und [ein Schema für Profil](../xdm/tutorials/create-schema-ui.md#profile) aktivieren.
+Wenn Sie XDM nicht kennen, beginnen Sie mit dem [XDM-Übersicht](../xdm/home.md) , um mehr zu erfahren. Als Nächstes finden Sie im XDM-Benutzerhandbuch Anweisungen zum [Identitätsfelder festlegen](../xdm/tutorials/create-schema-ui.md#identity-field) und [Schema für Profil aktivieren](../xdm/tutorials/create-schema-ui.md#profile).
 
 ### Wo werden Profildaten gespeichert?
 
@@ -38,7 +38,7 @@ Das Echtzeit-Kundenprofil unterhält einen eigenen Datenspeicher (der als &quot;
 
 Wenn Daten in einen Nicht-Profil-Datensatz aufgenommen wurden, müssen Sie diese Daten erneut in einen Profil-aktivierten Datensatz erfassen, um ihn im Profilspeicher verfügbar zu machen. Es ist möglich, einen vorhandenen Datensatz für Profil zu aktivieren. Daten, die vor dieser Konfiguration erfasst wurden, werden jedoch weiterhin nicht im Profilspeicher angezeigt.
 
-Wenn Sie zuvor erfasste Daten zum Profilspeicher hinzufügen möchten, befolgen Sie das [Tutorial zur Datensatzkonfiguration](./tutorials/dataset-configuration.md) , um einen neuen Datensatz zu erstellen oder einen vorhandenen Datensatz zu konvertieren, der für Profil aktiviert werden soll, und dann die gewünschten Daten erneut in diesen Datensatz zu erfassen.
+Wenn Sie zuvor erfasste Daten zum Profilspeicher hinzufügen möchten, befolgen Sie die Anweisungen unter [Tutorial zur Datensatzkonfiguration](./tutorials/dataset-configuration.md) , um einen neuen Datensatz zu erstellen oder einen vorhandenen Datensatz zu konvertieren, damit er für Profil aktiviert werden kann, und dann die gewünschten Daten erneut in diesen Datensatz zu erfassen.
 
 ### Wie kann ich meine erfassten Profildaten anzeigen?
 
@@ -46,19 +46,19 @@ Je nachdem, ob Sie die API oder die Benutzeroberfläche verwenden, gibt es mehre
 
 #### Verwenden der API
 
-Wenn Sie die IDs der Profilentitäten kennen, auf die Sie zugreifen möchten, können Sie den Endpunkt `/entities` (Profilzugriff) in der Profil-API verwenden, um diese Entitäten zu suchen. Weitere Informationen finden Sie im Abschnitt zu [Entitäten](./api/entities.md) im Entwicklerhandbuch.
+Wenn Sie die IDs der Profilentitäten kennen, auf die Sie zugreifen möchten, können Sie die `/entities` (Profilzugriff) in der Profil-API zum Nachschlagen dieser Entitäten. Siehe Abschnitt zu [entity](./api/entities.md) im Entwicklerhandbuch für weitere Informationen.
 
-Sie können auch die Adobe Experience Platform Segmentation Service-API verwenden, um auf die individuellen Profile von Kunden zuzugreifen, die sich für eine Segmentzugehörigkeit qualifiziert haben. Weitere Informationen finden Sie unter [Segmentation Service - Übersicht](../segmentation/home.md) .
+Sie können auch die Adobe Experience Platform Segmentation Service-API verwenden, um auf die individuellen Profile von Kunden zuzugreifen, die sich für eine Segmentzugehörigkeit qualifiziert haben. Siehe [Übersicht über den Segmentierungsdienst](../segmentation/home.md) für weitere Informationen.
 
-#### Verwenden der UI
+#### Verwenden der Benutzeroberfläche
 
-Auf der Experience Platform-Benutzeroberfläche können Sie mit dem Tab **[!UICONTROL Durchsuchen]** im Arbeitsbereich **[!UICONTROL Profile]** die Gesamtanzahl der Profile anzeigen und nach einzelnen Profilen anhand ihres Identitätswerts suchen. Weitere Informationen finden Sie im [Profil-Benutzerhandbuch](./ui/user-guide.md).
+In der Experience Platform-Benutzeroberfläche wird die **[!UICONTROL Durchsuchen]** im **[!UICONTROL Profile]** In Workspace können Sie die Gesamtzahl der Profile anzeigen und nach einzelnen Profilen anhand ihres Identitätswerts suchen. Siehe [Profil-Benutzerhandbuch](./ui/user-guide.md) für weitere Informationen.
 
-Sie können auch eine Liste Ihrer Segmente auf der Registerkarte **[!UICONTROL Durchsuchen]** im Arbeitsbereich **[!UICONTROL Segmente]** anzeigen. Nach Auswahl eines Segments wird ein Beispiel mit Profilen angezeigt, die für dieses Segment qualifiziert sind. Sie können dann eines dieser aufgelisteten Profile auswählen, um dessen Details anzuzeigen. Weitere Informationen finden Sie unter [Übersicht über die Segmentierungs-Benutzeroberfläche](../segmentation/ui/overview.md) .
+Sie können auch eine Liste Ihrer Segmente unter dem **[!UICONTROL Durchsuchen]** im **[!UICONTROL Segmente]** Arbeitsbereich. Nach Auswahl eines Segments wird ein Beispiel mit Profilen angezeigt, die für dieses Segment qualifiziert sind. Sie können dann eines dieser aufgelisteten Profile auswählen, um dessen Details anzuzeigen. Siehe [Übersicht über die Segmentierungsbenutzeroberfläche](../segmentation/ui/overview.md) für weitere Informationen.
 
 ## Fehlercodes
 
-Im Folgenden finden Sie eine Liste von Fehlermeldungen, die bei der Arbeit mit der Echtzeit-Kundenprofil-API auftreten können. Wenn der aufgetretene Fehler hier nicht aufgeführt ist, finden Sie ihn stattdessen im allgemeinen [Handbuch zur Fehlerbehebung bei Platform](../landing/troubleshooting.md) .
+Im Folgenden finden Sie eine Liste von Fehlermeldungen, die bei der Arbeit mit der Echtzeit-Kundenprofil-API auftreten können. Wenn der aufgetretene Fehler hier nicht aufgeführt ist, finden Sie ihn möglicherweise im allgemeinen [Handbuch zur Fehlerbehebung bei Platform](../landing/troubleshooting.md) anstatt.
 
 ### Schema des berechneten Attributs für den angegebenen Pfad konnte nicht nachgeschlagen werden
 
@@ -69,9 +69,9 @@ Im Folgenden finden Sie eine Liste von Fehlermeldungen, die bei der Arbeit mit d
 }
 ```
 
-Beim Erstellen eines neuen berechneten Attributs tritt dieser Fehler auf, wenn das System das in der Anfrage-Payload bereitgestellte Schema nicht finden konnte. Stellen Sie sicher, dass Sie die richtige Mandanten-ID in der `path` -Eigenschaft der Payload angegeben haben und dass die Werte von `schema.name` ein gültiger Schemaname sind.
+Beim Erstellen eines neuen berechneten Attributs tritt dieser Fehler auf, wenn das System das in der Anfrage-Payload bereitgestellte Schema nicht finden konnte. Stellen Sie sicher, dass Sie die richtige Mandantenkennung in der Payload angegeben haben. `path` -Eigenschaft und dass die Werte von `schema.name` ist ein gültiger Schemaname.
 
-Wenn Sie Ihre Mandantenkennung nicht kennen, können Sie sie abrufen, indem Sie die Schritte im [Entwicklerhandbuch zur Schema Registry](../xdm/api/getting-started.md) ausführen.
+Wenn Sie Ihre Mandantenkennung nicht kennen, können Sie sie abrufen, indem Sie die Schritte im Abschnitt [Entwicklerhandbuch zur Schema Registry](../xdm/api/getting-started.md).
 
 ### Funktion mit demselben Namen ist bereits für das angegebene Schema oder definedOn vorhanden
 
@@ -82,7 +82,7 @@ Wenn Sie Ihre Mandantenkennung nicht kennen, können Sie sie abrufen, indem Sie 
 }
 ```
 
-Beim Erstellen eines neuen berechneten Attributs tritt dieser Fehler auf, wenn die bereitgestellte `name` -Eigenschaft bereits für das unter `schema.name` angegebene Schema verwendet wird. Ersetzen Sie den Wert durch einen eindeutigen Namen, bevor Sie es erneut versuchen.
+Beim Erstellen eines neuen berechneten Attributs tritt dieser Fehler auf, wenn die `name` -Eigenschaft bereits für das Schema verwendet wird, das unter `schema.name`. Ersetzen Sie den Wert durch einen eindeutigen Namen, bevor Sie es erneut versuchen.
 
 ### Das Rückgabeschema des Ausdrucks ist nicht dasselbe wie das Schema des berechneten Attributs im XDM-Schema
 
@@ -93,7 +93,7 @@ Beim Erstellen eines neuen berechneten Attributs tritt dieser Fehler auf, wenn d
 }
 ```
 
-Beim Erstellen eines neuen berechneten Attributs tritt dieser Fehler auf, wenn die bereitgestellte `name` -Eigenschaft bereits für das unter `schema.name` angegebene Schema verwendet wird. Ersetzen Sie den Wert durch einen eindeutigen Namen, bevor Sie es erneut versuchen.
+Beim Erstellen eines neuen berechneten Attributs tritt dieser Fehler auf, wenn die `name` -Eigenschaft bereits für das Schema verwendet wird, das unter `schema.name`. Ersetzen Sie den Wert durch einen eindeutigen Namen, bevor Sie es erneut versuchen.
 
 ### Ungültige Löschanfrage (Profilsystemauftrag)
 
@@ -104,7 +104,7 @@ Beim Erstellen eines neuen berechneten Attributs tritt dieser Fehler auf, wenn d
 }
 ```
 
-Dieser Fehler tritt auf, wenn eine ungültige Payload für einen Löschsystemauftrag bereitgestellt wird. Stellen Sie sicher, dass Sie unter der Eigenschaft `dataSetID` bzw. `batchID` der Payload eine gültige Datensatz- oder Batch-ID angeben. Weitere Informationen finden Sie im Abschnitt [Erstellen einer Löschanfrage](./api/profile-system-jobs.md#create-a-delete-request) im Entwicklerhandbuch für Profile.
+Dieser Fehler tritt auf, wenn eine ungültige Payload für einen Löschsystemauftrag bereitgestellt wird. Stellen Sie sicher, dass Sie eine gültige Datensatz- oder Batch-ID unter der Payload angeben. `dataSetID` oder `batchID` -Eigenschaft. Siehe Abschnitt zu [Löschanfrage erstellen](./api/profile-system-jobs.md#create-a-delete-request) Weitere Informationen finden Sie im Entwicklerhandbuch für Profile .
 
 ### Batch für Profildatensatz nicht gefunden
 
@@ -134,7 +134,7 @@ Dieser Fehler tritt auf, wenn beim Versuch, eine Löschanfrage für Profildaten 
 }
 ```
 
-Dieser Fehler tritt auf, wenn die in einer `POST /config/projections`-Anfrage angegebene `destinationId` ungültig ist. Vergewissern Sie sich, dass Sie eine gültige Ziel-ID angegeben haben, bevor Sie es erneut versuchen. Um ein neues Ziel zu erstellen, führen Sie die Schritte aus, die im [Profil-Entwicklerhandbuch](./api/edge-projections.md#create-a-destination) beschrieben sind.
+Dieser Fehler tritt auf, wenn die `destinationId` in `POST /config/projections` -Anfrage ist ungültig. Vergewissern Sie sich, dass Sie eine gültige Ziel-ID angegeben haben, bevor Sie es erneut versuchen. Um ein neues Ziel zu erstellen, führen Sie die Schritte aus, die im Abschnitt [Entwicklerhandbuch für Profile](./api/edge-projections.md#create-a-destination).
 
 ### Nicht unterstützter Medientyp
 

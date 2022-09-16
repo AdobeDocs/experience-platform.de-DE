@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;CSV zuordnen;CSV-Datei zuordnen;CSV-Datei xdm zuordnen;CSV xdm zuordnen;UI-Handbuch
+keywords: Experience Platform;Startseite;beliebte Themen;CSV zuordnen;CSV-Datei zuordnen;CSV-Datei xdm zuordnen;CSV xdm zuordnen;ui-Handbuch
 solution: Experience Platform
 title: Zuordnen einer CSV-Datei zu einem XDM-Schema
 topic-legacy: tutorial
@@ -9,68 +9,68 @@ exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
 source-git-commit: 0e79d339ddc0301486ea3e53a3fd52877ff6a2c8
 workflow-type: tm+mt
 source-wordcount: '882'
-ht-degree: 24%
+ht-degree: 32%
 
 ---
 
 # Zuordnen einer CSV-Datei zu einem XDM-Schema
 
-Um CSV-Daten in [!DNL Adobe Experience Platform] zu erfassen, müssen die Daten einem [!DNL Experience Data Model] (XDM)-Schema zugeordnet sein. In diesem Tutorial wird beschrieben, wie Sie eine CSV-Datei mithilfe der [!DNL Platform]-Benutzeroberfläche einem XDM-Schema zuordnen.
+So erfassen Sie CSV-Daten in [!DNL Adobe Experience Platform]müssen die Daten einer [!DNL Experience Data Model] (XDM)-Schema. In diesem Tutorial wird beschrieben, wie Sie eine CSV-Datei mithilfe der [!DNL Platform] -Benutzeroberfläche.
 
 Darüber hinaus enthält der Anhang zu diesem Tutorial weitere Informationen zur Verwendung von [Zuordnungsfunktionen](#mapping-functions).
 
 ## Erste Schritte
 
-Dieses Tutorial setzt ein Verständnis der folgenden Komponenten von [!DNL Platform] voraus:
+Dieses Tutorial setzt ein Verständnis der folgenden Komponenten von voraus [!DNL Platform]:
 
-- [[!DNL Experience Data Model (XDM System)]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
-- [[!DNL Batch ingestion]](../batch-ingestion/overview.md): Die Methode, mit der Daten aus vom Benutzer bereitgestellten Datendateien  [!DNL Platform] erfasst werden.
+- [[!DNL Experience Data Model (XDM System)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Platform] organisiert werden.
+- [[!DNL Batch ingestion]](../batch-ingestion/overview.md): Die Methode, mit der [!DNL Platform] erfasst Daten aus vom Benutzer bereitgestellten Datendateien.
 
-Für dieses Tutorial müssen Sie außerdem bereits einen Datensatz erstellt haben, in den Sie Ihre CSV-Daten aufnehmen können. Anweisungen zum Erstellen eines Datensatzes in der Benutzeroberfläche finden Sie im [Tutorial zur Datenerfassung](./ingest-batch-data.md).
+Für dieses Tutorial müssen Sie außerdem bereits einen Datensatz erstellt haben, in den Sie Ihre CSV-Daten aufnehmen können. Anweisungen zum Erstellen eines Datensatzes in der Benutzeroberfläche finden Sie in der [Tutorial zur Datenerfassung](./ingest-batch-data.md).
 
 ## Ziel auswählen
 
-Melden Sie sich bei [[!DNL Adobe Experience Platform]](https://platform.adobe.com) an und wählen Sie dann **[!UICONTROL Workflows]** aus der linken Navigationsleiste aus, um auf den Arbeitsbereich **[!UICONTROL Workflows]** zuzugreifen.
+Anmelden bei [[!DNL Adobe Experience Platform]](https://platform.adobe.com) und wählen Sie **[!UICONTROL Workflows]** über die linke Navigationsleiste, um auf die **[!UICONTROL Workflows]** Arbeitsbereich.
 
-Wählen Sie im Bildschirm **[!UICONTROL Workflows]** die Option **[!UICONTROL CSV dem XDM-Schema zuordnen]** unter dem Abschnitt **[!UICONTROL Datenerfassung]** aus und wählen Sie dann **[!UICONTROL Launch]**.
+Aus dem **[!UICONTROL Workflows]** Bildschirm, wählen Sie **[!UICONTROL Zuordnen von CSV zu XDM-Schema]** unter **[!UICONTROL Datenerfassung]** und wählen Sie **[!UICONTROL Launch]**.
 
 ![](../images/tutorials/map-a-csv-file/workflows.png)
 
-Der Workflow **[!UICONTROL CSV dem XDM-Schema zuordnen]** wird angezeigt, beginnend mit dem Schritt **[!UICONTROL Ziel]** . Wählen Sie einen Datensatz für eingehende Daten aus, die in aufgenommen werden sollen. Sie können entweder einen vorhandenen Datensatz verwenden oder einen neuen erstellen.
+Die **[!UICONTROL Zuordnen von CSV zu XDM-Schema]** wird der Workflow angezeigt, beginnend mit dem **[!UICONTROL Ziel]** Schritt. Wählen Sie einen Datensatz für eingehende Daten aus, die in aufgenommen werden sollen. Sie können entweder einen vorhandenen Datensatz verwenden oder einen neuen erstellen.
 
-**Vorhandenen Datensatz verwenden**
+**Verwenden eines vorhandenen Datensatzes**
 
-Um Ihre CSV-Daten in einen vorhandenen Datensatz zu erfassen, wählen Sie **[!UICONTROL Vorhandenen Datensatz verwenden]** aus. Sie können entweder einen vorhandenen Datensatz mit der Suchfunktion abrufen oder durch Scrollen durch die Liste der vorhandenen Datensätze im Bereich blättern.
+Um Ihre CSV-Daten in einen vorhandenen Datensatz zu erfassen, wählen Sie **[!UICONTROL Vorhandenen Datensatz verwenden]**. Sie können entweder einen vorhandenen Datensatz mit der Suchfunktion abrufen oder durch Scrollen durch die Liste der vorhandenen Datensätze im Bereich blättern.
 
 ![](../images/tutorials/map-a-csv-file/use-existing-dataset.png)
 
-Um Ihre CSV-Daten in einen neuen Datensatz zu erfassen, wählen Sie **[!UICONTROL Neuen Datensatz erstellen]** aus und geben Sie einen Namen und eine Beschreibung für den Datensatz in die bereitgestellten Felder ein. Wählen Sie ein Schema entweder mithilfe der Suchfunktion aus oder scrollen Sie durch die Liste der bereitgestellten Schemata. Wählen Sie **[!UICONTROL Weiter]** aus, um fortzufahren.
+Um Ihre CSV-Daten in einen neuen Datensatz zu erfassen, wählen Sie **[!UICONTROL Neuen Datensatz erstellen]** und geben Sie einen Namen und eine Beschreibung für den Datensatz in die entsprechenden Felder ein. Wählen Sie ein Schema entweder mithilfe der Suchfunktion aus oder scrollen Sie durch die Liste der bereitgestellten Schemata. Wählen Sie **[!UICONTROL Weiter]** aus, um fortzufahren.
 
 ![](../images/tutorials/map-a-csv-file/create-new-dataset.png)
 
-## Daten hinzufügen
+## Hinzufügen von Daten
 
-Der Schritt **[!UICONTROL Daten hinzufügen]** wird angezeigt. Ziehen Sie Ihre CSV-Datei in den dafür vorgesehenen Bereich oder wählen Sie **[!UICONTROL Dateien auswählen]** aus, um Ihre CSV-Datei manuell einzugeben.
+Der Schritt **[!UICONTROL Daten hinzufügen]** wird angezeigt. Ziehen Sie Ihre CSV-Datei per Drag-and-Drop in den vorgesehenen Bereich oder wählen Sie **[!UICONTROL Dateien auswählen]** , um Ihre CSV-Datei manuell einzugeben.
 
 ![](../images/tutorials/map-a-csv-file/add-data.png)
 
-Der Abschnitt **[!UICONTROL Beispieldaten]** wird nach dem Hochladen der Datei mit den ersten zehn Datenzeilen angezeigt. Nachdem Sie bestätigt haben, dass die Daten erwartungsgemäß hochgeladen wurden, wählen Sie **[!UICONTROL Weiter]** aus.
+Die **[!UICONTROL Beispieldaten]** wird nach dem Hochladen der Datei angezeigt, wobei die ersten zehn Datenzeilen angezeigt werden. Nachdem Sie bestätigt haben, dass die Daten erwartungsgemäß hochgeladen wurden, wählen Sie **[!UICONTROL Nächste]**.
 
 ![](../images/tutorials/map-a-csv-file/sample-data.png)
 
 ## Zuordnen von CSV-Feldern zu XDM-Schemafeldern
 
-Der Schritt **[!UICONTROL Mapping]** wird angezeigt. Die Spalten der CSV-Datei werden unter **[!UICONTROL Quellfeld]** aufgelistet, wobei die entsprechenden XDM-Schemafelder unter **[!UICONTROL Zielfeld]** aufgeführt sind.
+Die **[!UICONTROL Zuordnung]** angezeigt. Die Spalten der CSV-Datei sind unter **[!UICONTROL Quellfeld]** mit den entsprechenden XDM-Schemafeldern, die unter aufgeführt sind **[!UICONTROL Zielfeld]**.
 
-[!DNL Platform] stellt automatisch intelligente Empfehlungen für automatisch zugeordnete Felder basierend auf dem ausgewählten Zielschema oder Datensatz bereit. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen.
+[!DNL Platform] bietet automatisch intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen.
 
 ![](../images/tutorials/map-a-csv-file/mapping-with-suggestions.png)
 
-Um alle automatisch generierenden Zuordnungswerte zu akzeptieren, aktivieren Sie das Kontrollkästchen &quot;[!UICONTROL Alle Zielfelder akzeptieren]&quot;.
+Um alle automatisch generierenden Zuordnungswerte zu akzeptieren, aktivieren Sie das Kontrollkästchen mit der Bezeichnung[!UICONTROL Alle Zielfelder akzeptieren]&quot;.
 
 ![](../images/tutorials/map-a-csv-file/filled-mapping-with-suggestions.png)
 
-Manchmal ist mehr als eine Empfehlung für das Quellschema verfügbar. In diesem Fall zeigt die Zuordnungskarte die auffälligste Empfehlung an, gefolgt von einem blauen Kreis, der die Anzahl der verfügbaren zusätzlichen Empfehlungen enthält. Durch Auswahl des Glühbirnensymbols wird eine Liste der zusätzlichen Empfehlungen angezeigt. Sie können eine der alternativen Empfehlungen auswählen, indem Sie das Kontrollkästchen neben der Empfehlung aktivieren, der Sie die Empfehlung zuordnen möchten.
+Manchmal ist mehr als eine Empfehlung für das Quellschema verfügbar. In diesem Fall zeigt die Zuordnungskarte die auffälligste Empfehlung an, gefolgt von einem blauen Kreis, der die Anzahl der verfügbaren zusätzlichen Empfehlungen enthält. Durch Auswahl des Glühbirnensymbols wird eine Liste der zusätzlichen Empfehlungen angezeigt. Sie können eine der alternativen Empfehlungen auswählen, indem Sie das Kontrollkästchen neben der Empfehlung aktivieren, die Sie stattdessen zuordnen möchten.
 
 ![](../images/tutorials/map-a-csv-file/multiple-recommendations.png)
 
@@ -78,7 +78,7 @@ Alternativ können Sie Ihr Quellschema manuell Ihrem Zielschema zuordnen. Bewege
 
 ![](../images/tutorials/map-a-csv-file/mapping-with-suggestions-and-buttons.png)
 
-Das Popup **[!UICONTROL Quelle dem Zielfeld zuordnen]** wird angezeigt. Von hier aus können Sie auswählen, welches Feld Sie zuordnen möchten, gefolgt von **[!UICONTROL Speichern]**, um Ihre neue Zuordnung hinzuzufügen.
+Die **[!UICONTROL Quelle dem Zielfeld zuordnen]** Popup angezeigt. Hier können Sie auswählen, welches Feld Sie zuordnen möchten, gefolgt von **[!UICONTROL Speichern]** , um Ihre neue Zuordnung hinzuzufügen.
 
 ![](../images/tutorials/map-a-csv-file/manual-mapping.png)
 
@@ -88,7 +88,7 @@ Wenn Sie eine der Zuordnungen entfernen möchten, halten Sie den Mauszeiger übe
 
 Berechnete Felder ermöglichen die Erstellung von Werten anhand der Attribute im Eingabeschema. Diese Werte können dann Attributen im Zielschema zugewiesen und mit einem Namen und einer Beschreibung versehen werden, um eine einfachere Referenz zu ermöglichen.
 
-Wählen Sie die Schaltfläche **[!UICONTROL Berechnetes Feld hinzufügen]** aus, um fortzufahren.
+Wählen Sie die **[!UICONTROL Berechnetes Feld hinzufügen]** zum Fortfahren.
 
 ![](../images/tutorials/map-a-csv-file/add-calculated-field.png)
 
@@ -114,8 +114,8 @@ Der Zuordnungsbildschirm wird mit dem neu erstellten Quellfeld erneut angezeigt.
 
 ## Überwachen der Datenerfassung
 
-Nachdem Ihre CSV-Datei zugeordnet und erstellt wurde, können Sie die Daten überwachen, die über sie erfasst werden. Weitere Informationen zur Überwachung der Datenerfassung finden Sie im Tutorial zur [Überwachung der Datenerfassung](../../ingestion/quality/monitor-data-ingestion.md).
+Nachdem Ihre CSV-Datei zugeordnet und erstellt wurde, können Sie die Daten überwachen, die über sie erfasst werden. Weitere Informationen zur Überwachung der Datenerfassung finden Sie im Tutorial zu [Überwachen der Datenerfassung](../../ingestion/quality/monitor-data-ingestion.md).
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich eine flache CSV-Datei einem XDM-Schema zugeordnet und in [!DNL Platform] aufgenommen. Diese Daten können jetzt von nachgelagerten [!DNL Platform]-Diensten wie [!DNL Real-time Customer Profile] verwendet werden. Weitere Informationen finden Sie in der Übersicht zu [[!DNL Real-time Customer Profile]](../../profile/home.md) .
+In diesem Tutorial haben Sie erfolgreich eine flache CSV-Datei einem XDM-Schema zugeordnet und in [!DNL Platform]. Diese Daten können jetzt nachgelagert verwendet werden [!DNL Platform] Dienste wie [!DNL Real-time Customer Profile]. Siehe Übersicht für [[!DNL Real-time Customer Profile]](../../profile/home.md) für weitere Informationen.

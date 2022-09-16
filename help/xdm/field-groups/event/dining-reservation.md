@@ -10,23 +10,23 @@ ht-degree: 6%
 
 ---
 
-# [!UICONTROL Definieren ] der Feldergruppe &quot;Reservationschema&quot;
+# [!UICONTROL Speisereservierung] Schemafeldgruppe
 
-[!UICONTROL Die Essenreservierung ] ist eine Standardschemafeldergruppe für die  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) Klasse, die zur Erfassung von Informationen über eine Essensreservierung verwendet wird.
+[!UICONTROL Speisereservierung] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) dient zur Erfassung von Informationen zu einer Speisekarte.
 
-Die Feldergruppe ist eine Erweiterung der Feldergruppe [!UICONTROL Reservierungsdetails] und enthält alle gleichen Felder unter einem einzigen Feld vom Typ Objekt `reservations`. Zusätzlich zu diesen generischen Feldern enthält [!UICONTROL Definieren der Reservierung] auch `diningReservations` -Array. Dieses Objekt-Array wird verwendet, um eine oder mehrere Reservierungen mit Restaurant-spezifischen Eigenschaften zu beschreiben.
+Die Feldergruppe ist eine Erweiterung der [!UICONTROL Buchungsdetails] Feldergruppe und enthält alle gleichen Felder unter einem Feld vom Typ &quot;Objekt&quot;, `reservations`. Zusätzlich zu diesen allgemeinen Feldern [!UICONTROL Speisereservierung] auch `diningReservations` Array. Dieses Objekt-Array wird verwendet, um eine oder mehrere Reservierungen mit Restaurant-spezifischen Eigenschaften zu beschreiben.
 
 >[!NOTE]
 >
->Dieses Dokument behandelt die Details des `diningReservations`-Arrays. Informationen zu den anderen Feldern, die unter dem `reservations`-Objekt bereitgestellt werden, finden Sie in der [[!UICONTROL Reservierungsdetails] Feldgruppenreferenz](./reservation-details.md).
+>In diesem Dokument werden die Details der `diningReservations` Array. Für Informationen über die anderen Felder, die im `reservations` -Objekt, siehe [[!UICONTROL Buchungsdetails] Feldergruppenreferenz](./reservation-details.md).
 
 ![Präparationsstruktur](../../images/field-groups/dining-reservation/structure.png)
 
 ## `diningReservations`
 
-`diningReservations` ist eine Gruppe von Objekten, die eine Liste von Essensreservierungen darstellen. Wenn ein Reservierungsereignis Reservierungen in mehreren verschiedenen Restaurants zu unterschiedlichen Tageszeiten beinhaltet, können diese Reservierungen beispielsweise als einzelne Objekte unter `diningReservations` für eine einzelne Veranstaltung aufgeführt werden.
+`diningReservations` ist eine Gruppe von Objekten, die eine Liste von Essensreservierungen darstellen. Wenn ein Reservierungsereignis Reservierungen in verschiedenen Restaurants zu unterschiedlichen Tageszeiten beinhaltet, können diese Reservierungen beispielsweise als einzelne Objekte unter `diningReservations` für ein einzelnes Ereignis.
 
-Die Struktur der einzelnen Objekte, die unter `diningReservations` bereitgestellt werden, finden Sie unten.
+Die Struktur der einzelnen Objekte, die unter `diningReservations` ist unten angegeben.
 
 ![EssReservierungsstruktur](../../images/field-groups/dining-reservation/diningReservations.png)
 

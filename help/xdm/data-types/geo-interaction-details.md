@@ -8,13 +8,13 @@ exl-id: c05b098b-3f12-4283-a6d5-5ebf96b9828d
 source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
 source-wordcount: '159'
-ht-degree: 6%
+ht-degree: 15%
 
 ---
 
-# [!UICONTROL Geo-Interaktion - ] Datentyp
+# [!UICONTROL Details zur Geo-Interaktion] Datentyp
 
-[!UICONTROL Geo-Interaktionsdetails ] sind ein standardmäßiger XDM-Datentyp, der den aktuellen Aufnahmestatus in einem geografisch definierten Gebiet beschreibt.
+[!UICONTROL Details zur Geo-Interaktion] ist ein standardmäßiger XDM-Datentyp, der den aktuellen Aufnahmestatus in einem geografisch definierten Gebiet beschreibt.
 
 <img src="../images/data-types/geo-interaction-details.png" width="400" /><br />
 

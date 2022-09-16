@@ -2,7 +2,8 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Quellen; API; Erkunden; Flussdienst
 title: Eine Tabellenquelle mithilfe der Flow Service-API durchsuchen
 description: In diesem Tutorial wird die Flow Service-API verwendet, um den Inhalt und die Struktur einer tabellenbasierten Quelle zu untersuchen.
-source-git-commit: 1333eac5e022ef32f051120496154a88e2f9324e
+exl-id: 0c7a5b8a-2071-4ac2-b2d1-c5534e7c7d9c
+source-git-commit: 3bdeec8284873b8d9368f833b24e9922ed489019
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 23%

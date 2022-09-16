@@ -2,7 +2,8 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Quadrat; Quadrat
 title: Erstellen einer Quadratquellenverbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Verbindung mit einer Quadratquelle erstellen.
-source-git-commit: e905b11040c8de33aa757bd5743605bb36a8009b
+exl-id: 7cdfeb36-c989-4875-bb94-e6594ddf30da
+source-git-commit: c762e3925245f517cdcecb17a80378141f80fa86
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 51%

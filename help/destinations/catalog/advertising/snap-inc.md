@@ -1,13 +1,13 @@
 ---
 title: (Beta) Snap Inc-Verbindung
 description: Erfahren Sie, wie Sie eine Verbindung zur Snapchat Ads-Plattform herstellen und Ihre Zielgruppensegmente aus Experience Platform exportieren.
-source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
+exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
+source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
 source-wordcount: '1012'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
-
 
 # (Beta) Snap Inc
 
@@ -19,9 +19,9 @@ ht-degree: 6%
 >
 >Diese Dokumentationsseite wurde von der *Snap Inc* Team. Dies ist derzeit ein Beta-Produkt und die Funktionalität kann sich ändern. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an *dev-support@snap.com*
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsbeispiele {#use-cases}
 
-Mit diesem Ziel können Marketing-Experten in Experience Platform erstellte Benutzersegmente in Momentaufnahmen-Anzeigen importieren und für das Targeting ihrer Anzeigen verwenden.
+Mit diesem Ziel können Marketing-Fachleute in Experience Platform erstellte Benutzersegmente in Snapchat Ads importieren und für das Targeting ihrer Anzeigen verwenden.
 
 ## Voraussetzungen {#prerequisites}
 

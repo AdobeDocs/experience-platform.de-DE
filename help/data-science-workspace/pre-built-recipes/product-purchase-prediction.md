@@ -32,7 +32,7 @@ Das Rezept &quot;Vorhersage für Produktkäufe&quot;nutzt maschinelles Lernen, u
 
 ## Datenschema
 
-Dieses Rezept verwendet [XDM-Schemas](../../xdm/home.md) zum Modellieren der Daten. Das für dieses Rezept verwendete Schema ist unten dargestellt:
+Dieses Rezept verwendet [XDM-Schemata](../../xdm/home.md) , um die Daten zu modellieren. Das für dieses Rezept verwendete Schema ist unten dargestellt:
 
 | Feldname | Typ |
 | --- | --- |
@@ -57,6 +57,6 @@ Dieses Rezept verwendet [XDM-Schemas](../../xdm/home.md) zum Modellieren der Dat
 
 ## Algorithmus
 
-Zunächst wird der Trainings-Datensatz im Schema *ProductPredication* geladen. Von hier aus wird das Modell mit einem [Random Forest Classifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html) trainiert. Random forest classifier ist ein Typ von Ensembles Algorithmus, der auf einen Algorithmus verweist, der mehrere Algorithmen kombiniert, um eine verbesserte Vorhersageleistung zu erhalten. Die Idee hinter dem Algorithmus ist, dass der Random Forest Classifier mehrere Entscheidungsbäume baut und zusammenführt, um eine präzisere und stabilere Vorhersage zu erhalten.
+Zunächst der Trainings-Datensatz im *ProductPrediction* -Schema geladen wird. Von hier aus wird das Modell mit einem [Random Forest-Classification](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Random forest classifier ist ein Typ von Ensembles Algorithmus, der auf einen Algorithmus verweist, der mehrere Algorithmen kombiniert, um eine verbesserte Vorhersageleistung zu erhalten. Die Idee hinter dem Algorithmus ist, dass der Random Forest Classifier mehrere Entscheidungsbäume baut und zusammenführt, um eine präzisere und stabilere Vorhersage zu erhalten.
 
 Dieser Prozess beginnt mit der Erstellung einer Reihe von Entscheidungsbäumen, die nach dem Zufallsprinzip Untergruppen von Trainings-Daten auswählen. Danach werden die Ergebnisse jedes Entscheidungsbaums im Durchschnitt ermittelt.

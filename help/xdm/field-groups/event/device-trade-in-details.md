@@ -8,17 +8,17 @@ exl-id: 744557be-0297-453f-9134-9d0f4ef2df4d
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '178'
-ht-degree: 5%
+ht-degree: 11%
 
 ---
 
-# [!UICONTROL Feldgruppe &quot;Device Trade-In ] Detailsschema&quot;
+# [!UICONTROL Details zum Gerätehandel] Schemafeldgruppe
 
 >[!NOTE]
 >
->Die Namen verschiedener Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu [Feldgruppennamenupdates](../name-updates.md) .
+>Die Namen verschiedener Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
 
-[!UICONTROL Device Trade-In-] Details sind eine Standardschemafeldgruppe für die  [[!DNL XDM ExperienceEvent] Klasse](../../classes/experienceevent.md). Es wird ein einzelnes Feld (`deviceTradeInDetails`) bereitgestellt, in dem eine Transaktion zwischen Geräten beschrieben wird, einschließlich des Handelswerts, der ursprünglichen Geräte-ID und der neuen Geräte-ID.
+[!UICONTROL Details zum Gerätehandel] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). Es bietet ein einzelnes Feld (`deviceTradeInDetails`), die eine Transaktion mit Geräten beschreibt, einschließlich des Handelswerts, der ursprünglichen Geräte-ID und der neuen Geräte-ID.
 
 ![Struktur der Details zum Geräteaustausch](../../images/field-groups/device-trade-in-details.png)
 

@@ -7,7 +7,7 @@ exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
 source-git-commit: e44da39dcdd4af4ab883b3ff8f61ca2fd44adb0b
 workflow-type: tm+mt
 source-wordcount: '354'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -17,7 +17,7 @@ Mit dem Experience-Datenmodell (XDM) können Sie hochgradig anpassbare Schemas e
 
 >[!NOTE]
 >
->Neue Standard-XDM-Komponenten werden kontinuierlich veröffentlicht, um den Anforderungen der Verbraucher am besten gerecht zu werden. Eine Liste der aktuellsten Komponenten finden Sie unter [Vorhandene Ressourcen in der Benutzeroberfläche](../../ui/explore.md) oder im [offiziellen XDM-Repository](https://github.com/adobe/xdm/tree/master/components) auf GitHub.
+>Neue Standard-XDM-Komponenten werden kontinuierlich veröffentlicht, um den Anforderungen der Verbraucher am besten gerecht zu werden. Für eine Liste der aktuellsten Komponenten können Sie [Erkunden vorhandener Ressourcen in der Benutzeroberfläche](../../ui/explore.md) oder verweisen Sie auf [Offizielles XDM-Repository](https://github.com/adobe/xdm/tree/master/components) auf GitHub.
 
 Je nach Branche, in der Ihr Unternehmen tätig ist, sind einige XDM-Komponenten für Ihre Anforderungen relevanter als andere. Darüber hinaus variieren die Beziehungen, die Sie zwischen Ihren XDM-Schemas herstellen, je nach Branche.
 
@@ -30,16 +30,16 @@ Um die in diesem Handbuch referenzierten ERDs zu lesen, müssen Sie wissen, wie 
 * [XDM-System - Übersicht](../../home.md): Erfahren Sie, wie XDM im Platform-Ökosystem arbeitet.
 * [Grundlagen der Schemakomposition](../../schema/composition.md): Erfahren Sie, wie XDM-Komponenten (wie Schemafeldgruppen, Klassen und Datentypen) zur Struktur eines Schemas sowie zur Rolle von Identitätsfeldern beitragen.
 
-Es wird außerdem empfohlen, die [Best Practices für die Datenmodellierung](../../schema/best-practices.md) zu lesen, um allgemeine Richtlinien für die Zuordnung Ihrer Daten zu XDM zu erhalten.
+Es wird außerdem empfohlen, die [Best Practices für die Datenmodellierung - Handbuch](../../schema/best-practices.md) für allgemeine Richtlinien zur Zuordnung Ihrer Daten zu XDM.
 
 ## ERDs des Branchendatenmodells {#erds}
 
 ERDs werden für die folgenden vertikalen Industrien bereitgestellt:
 
 * [[!UICONTROL Einzelhandel]](./retail.md)
-* [[!UICONTROL Finanzdienstleistungen]](./financial.md)
+* [[!UICONTROL Finanz-Services]](./financial.md)
 * [[!UICONTROL Telekommunikation]](./telecom.md)
-* [[!UICONTROL Reise und Gastfreundschaft]](./travel-hospitality.md)
+* [[!UICONTROL Reisen und Touristik]](./travel-hospitality.md)
 
 ## Nächste Schritte
 

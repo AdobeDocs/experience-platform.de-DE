@@ -36,7 +36,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] nutzt maschinelles Lerne
 
 Mit in Adobe Experience Platform [!DNL Segmentation Service] können Benutzer ihre Kunden in kleinere Gruppen mit ähnlichen Eigenschaften unterteilen. Diese Segmente können anschließend ausgewertet werden, um eine bessere Analyse der Daten des [!DNL Real-time Customer Profile] zu erhalten. Mit [!DNL Query Service] können Sie diese Analyse bereitstellen, indem Sie Abfragen zu diesen Segmentdaten im [!DNL Data Lake] ausführen. Weitere Informationen zur Segmentierung finden Sie im Überblick über [!DNL Segmentation Service] und Informationen zur Analyse von Segmenten finden Sie im Handbuch zu [!DNL Profile Query Language] (PQL).
 
-## Anwendungsfälle
+## Anwendungsbeispiele
 
 [!DNL Query Service] bietet einen flexiblen Ansatz für Ihre Datenverarbeitung, der vielen Zwecken dient. So kann unter anderem die Segmentierung durch Marketing-Experten erleichtert und dazu beigetragen werden, umsetzbare Zielgruppen und aussagekräftige geschäftliche Einblicke zu generieren. Die folgenden Anwendungsbeispiele bieten detailliertere Beispiele für die Leistungsfähigkeit von [!DNL Query Service].
 

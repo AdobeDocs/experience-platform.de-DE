@@ -6,7 +6,7 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 source-git-commit: 769d3f14e858ed69c6bb50360da90e4e0816a377
 workflow-type: tm+mt
 source-wordcount: '1005'
-ht-degree: 35%
+ht-degree: 39%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 35%
 >[!IMPORTANT]
 >
 >Mit der Beta-Version des erweiterten Adobe Target V2-Ziel-Connectors werden möglicherweise zwei Adobe Target-Karten im Zielkatalog angezeigt.
->Der Ziel-Connector für Adobe Target V2 befindet sich derzeit in der Betaphase und steht nur einer bestimmten Anzahl von Kunden zur Verfügung. Zusätzlich zu den Funktionen, die von der Adobe V1 bereitgestellt werden, fügt der Target V2-Connector eine [Zuordnungsschritt](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) zum Aktivierungs-Workflow hinzu, mit dem Sie Profilattribute Adobe Target zuordnen können, wodurch eine attributbasierte Personalisierung der gleichen Seite und der nächsten Seite ermöglicht wird.
+>Der Ziel-Connector für Adobe Target V2 befindet sich derzeit in der Betaphase und steht nur einer bestimmten Anzahl von Kunden zur Verfügung. Zusätzlich zu den Funktionen der Adobe V1-Karte fügt der Target V2-Connector dem Aktivierungs-Workflow einen [Zuordnungsschritt](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) hinzu, mit dem Sie Adobe Target Profilattribute zuordnen können, um eine Attribut-basierte Personalisierung auf derselben Seite und auf der nächsten Seite zu ermöglichen.
 
 ![Bild der beiden Adobe Target-Zielkarten in einer Seitenansicht.](/help/destinations/assets/catalog/personalization/adobe-target-connection/adobe-target-side-by-side-view.png)
 

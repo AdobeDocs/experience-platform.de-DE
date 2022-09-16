@@ -14,7 +14,7 @@ ht-degree: 73%
 
 # Kennzeichnen eines Felds als Identität
 
-Felder, die persönliche identifizierbare Informationen (PII) enthalten, können als Identitätsfelder gekennzeichnet werden. Ein in einem Identitätsfeld bereitgestellter Wert wird von [!DNL Identity Service] als Identität interpretiert. Der Namensraum der Identität wird als Teil der Kennzeichnung des Felds angegeben.
+Felder, die persönliche identifizierbare Informationen (PII) enthalten, können als Identitätsfelder gekennzeichnet werden. Ein in einem Identitätsfeld bereitgestellter Wert wird als Identität interpretiert von [!DNL Identity Service]. Der Namensraum der Identität wird als Teil der Kennzeichnung des Felds angegeben.
 
 Die folgenden Kriterien müssen erfüllt sein, damit ein Feld als Identität gekennzeichnet wird:
 
@@ -22,7 +22,7 @@ Die folgenden Kriterien müssen erfüllt sein, damit ein Feld als Identität gek
 - Identitäten werden nur in Datensatz- und Zeitreihendaten erkannt
 - Nur PII-Felder sollten als Identität gekennzeichnet werden. Die Auswahl eines Felds, das generischere Daten darstellt, führt zu weniger präzisen Beziehungen und möglicherweise zu Fehlern beim Zugriff auf zugehörige Identitäten im Identitätsdiagramm
 
-Anweisungen zur Verwendung der Schema Registry-API zur Kennzeichnung eines Felds als Identität finden Sie im [Endpunkthandbuch für Deskriptoren](../../xdm/api/descriptors.md#create).
+Anweisungen zur Verwendung der Schema Registry-API zur Kennzeichnung eines Felds als Identität finden Sie unter [Endpunktleitfaden für Deskriptoren](../../xdm/api/descriptors.md#create).
 
 ## Nächste Schritte
 

@@ -13,7 +13,7 @@ exl-id: 4bb804f5-1ad7-47b0-bc38-ba22877490d4
 source-git-commit: 7283fcb2edde4598b1ef8e0ee1f1b002434ba492
 workflow-type: tm+mt
 source-wordcount: '111'
-ht-degree: 0%
+ht-degree: 16%
 
 ---
 
@@ -23,6 +23,6 @@ In diesem Video erhalten Sie ein grundlegendes Verständnis der Zusammenführung
 
 >[!NOTE]
 >
->Die Benutzeroberfläche der Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im [UI-Handbuch für Zusammenführungsrichtlinien](../merge-policies/ui-guide.md).
+>Die Benutzeroberfläche von Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Aktuelle Informationen finden Sie im Abschnitt [UI-Handbuch zu Zusammenführungsrichtlinien](../merge-policies/ui-guide.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/330433?quality=12&learn=on&captions=eng)

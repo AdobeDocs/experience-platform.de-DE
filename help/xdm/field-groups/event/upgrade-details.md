@@ -9,11 +9,11 @@ ht-degree: 5%
 
 ---
 
-# [!UICONTROL Aktualisieren Sie ] die Feldergruppe Detailschema .
+# [!UICONTROL Upgrade-Details] Schemafeldgruppe
 
-[!UICONTROL Upgrade-] Details sind eine Standardschemafeldgruppe für die  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) Klasse, mit der Informationen zu einem Upgrade-Marketing-Ereignis erfasst werden, einschließlich Details zur Transaktion und den verschiedenen Arten der Anzeige des Angebots für einen Kunden.
+[!UICONTROL Upgrade-Details] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) dient zur Erfassung von Informationen zu einem Upgrade-Marketing-Ereignis, einschließlich Details zur Transaktion und der verschiedenen Arten der Anzeige des Angebots für einen Kunden.
 
-Die Feldergruppe stellt ein einzelnes Objekt-Feld bereit, `upgrades`. Die in diesem Objekt enthaltenen Eigenschaften werden nachfolgend erläutert.
+Die Feldergruppe stellt ein einzelnes Feld vom Typ Objekt bereit, `upgrades`. Die in diesem Objekt enthaltenen Eigenschaften werden nachfolgend erläutert.
 
 ![Struktur der Upgrade-Details](../../images/field-groups/upgrade-details.png)
 

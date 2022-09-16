@@ -1,7 +1,8 @@
 ---
 description: Erfahren Sie, wie Experience Platform mit verschiedenen Fehlertypen umgeht, die von Streaming-Zielen zurückgegeben werden, und wie es erneut versucht, Daten an die Zielplattform zu senden.
 title: Ratenbegrenzungs- und Wiederholungsrichtlinie für Streaming-Ziele, die mit Destination SDK erstellt wurden
-source-git-commit: ec50608f6454dd619c30b6337f454561844183ba
+exl-id: 7a4edf8d-f905-4d55-a25d-4b9c6063ff88
+source-git-commit: 61b8d40d6ecade10b0793bf7ad7c3e83974a0f02
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 4%

@@ -29,7 +29,7 @@ Sie können Platform Debugger mit den anderen Adobe-Aktivierungslösungen verwen
 
 Sie können Platform Debugger auf jeder Webseite ausführen und die Erweiterung hat Zugriff auf öffentliche Daten. Um mit der -Erweiterung auf nicht öffentliche Daten zugreifen zu können, müssen Sie in einem geöffneten Browser-Tab bei Experience Cloud authentifiziert sein.
 
-## Anwendungsfälle {#section-9fcd0583ed184943a8f0c2d3c00658e0}
+## Anwendungsbeispiele {#section-9fcd0583ed184943a8f0c2d3c00658e0}
 
 Sie können die von Platform Debugger erfassten Informationen verwenden, um besser zu verstehen, wie Ihre Experience Cloud-Lösungen implementiert sind. Beispiel:
 

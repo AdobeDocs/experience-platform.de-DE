@@ -19,7 +19,7 @@ Aktivieren Sie Profile für gezielte Medallia-Umfragen und Feedback-Sammlungen, 
 >
 >Diese Dokumentationsseite wurde vom Medallia-Team erstellt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an adobe-integrations@medallia.com.
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsbeispiele {#use-cases}
 
 Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie das Medallia-Ziel verwenden sollten, finden Sie hier Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
 

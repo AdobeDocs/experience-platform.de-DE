@@ -64,7 +64,7 @@ Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten steh
 
 {style=&quot;table-layout:auto&quot;}
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsbeispiele {#use-cases}
 
 Hier finden Sie Beispielanwendungsfälle, die Ihnen helfen, besser zu verstehen, wie und wann Sie das SendGrid-Ziel verwenden sollten [!DNL Experience Platform] -Kunden können dies mithilfe dieses Ziels lösen.
 

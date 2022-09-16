@@ -24,7 +24,7 @@ Nachstehend finden Sie eine Zusammenfassung des Verhaltens basierend auf dem Dat
 | [!DNL Access Type] | edge.adobedc.net | server.adobedc.net |
 |-----------------|-------------------------------|-----------------------|
 | mix (Standard) | Authentifiziert keine Anforderung | Authentifizierungsanfrage |
-| authentifiziert | Authentifizierungsanfrage | Authentifizierungsanfrage |
+| Authentifiziert | Authentifizierungsanfrage | Authentifizierungsanfrage |
 
 API-Aufrufe von einem privaten Server auf `server.adobedc.net` sollte immer authentifiziert werden.
 

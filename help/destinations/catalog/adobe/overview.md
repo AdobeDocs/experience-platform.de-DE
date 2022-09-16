@@ -6,7 +6,7 @@ exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
 source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
 source-wordcount: '218'
-ht-degree: 27%
+ht-degree: 32%
 
 ---
 
@@ -36,12 +36,12 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 * [Adobe Target-Erweiterung](../personalization/adobe-target.md)
 * [Adobe Target v2-Erweiterung](../personalization/adobe-target-v2.md)
 * [Audience Manager DIL-Erweiterung](../data-management/aam-dil-extension.md)
-* [Experience Cloud ID-Diensterweiterung](../personalization/adobe-ecid.md)
+* [Experience Cloud-ID-Service-Erweiterung](../personalization/adobe-ecid.md)
 * [Marketo-Erweiterung](../email/marketo.md)
 * [Marketo Munchkin-Erweiterung](../email/marketo-munchkin.md)
-* [Marketo Web Personalization-Erweiterung](../personalization/marketo-web-personalization.md)
+* [Marketo Web-Personalisierungserweiterung](../personalization/marketo-web-personalization.md)
 
-## Segmentfreigabe in Experience Platformen
+## Segmentfreigabe in Experience Platform
 
 Verwenden Sie die Segmentfreigabe-Funktion der Experience Platform, um Ihre Experience Platform-Segmente für zusätzliche Adobe-Ziele freizugeben. Weitere Informationen finden Sie auf der folgenden Seite (wird im Audience Manager-Dokumentationsportal geöffnet):
 

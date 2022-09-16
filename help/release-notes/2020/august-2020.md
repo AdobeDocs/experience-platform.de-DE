@@ -14,7 +14,7 @@ ht-degree: 32%
 
 # Adobe Experience Platform – Versionshinweise
 
-**Release-Datum: 12. August 2020**
+**Veröffentlichungsdatum: 12. August 2020**
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 

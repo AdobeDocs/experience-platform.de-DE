@@ -7,7 +7,7 @@ type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Zoho CRM-Quellverbindung erstellen.
 exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
 source-git-commit: 46b2fd6bc715bf1d8ccfeed576a2a2d193f92edd
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 100%
 
@@ -47,7 +47,7 @@ Weitere Informationen zu diesen Anmeldedaten finden Sie in der Dokumentation unt
 
 Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Zoho CRM]-Konto mit [!DNL Platform] zu verknüpfen.
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** in der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** in der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
@@ -59,9 +59,9 @@ Die Seite **[!UICONTROL Verbinden eines Zoho CRM-Kontos]** wird angezeigt. Auf d
 
 ### Vorhandenes Konto
 
-Um ein vorhandenes Konto zu verwenden, wählen Sie das [!DNL Zoho CRM]-Konto, mit dem Sie einen neuen Datenfluss erstellen möchten, und wählen Sie dann **[!UICONTROL Weiter]**, um fortzufahren.
+Um ein vorhandenes Konto zu verwenden, wählen Sie das [!DNL Zoho CRM]-Konto, mit dem Sie einen neuen Datenfluss erstellen möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**, um fortzufahren.
 
-![vorhandene](../../../../images/tutorials/create/zoho/existing.png)
+![vorhanden](../../../../images/tutorials/create/zoho/existing.png)
 
 ### Neues Konto
 

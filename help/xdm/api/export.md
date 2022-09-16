@@ -1,7 +1,8 @@
 ---
 title: API-Endpunkt exportieren
 description: Mit dem Endpunkt /export in der Schema Registry-API können Sie XDM-Ressourcen zwischen Sandboxes freigeben.
-source-git-commit: 2a58236031834bbe298576e2fcab54b04ec16ac3
+exl-id: 1dcbfa59-af98-4db5-b6f4-f848e5bf5e81
+source-git-commit: 32d4a364ba740194d4fd7a0f4df7bd69f25f62b8
 workflow-type: tm+mt
 source-wordcount: '414'
 ht-degree: 14%

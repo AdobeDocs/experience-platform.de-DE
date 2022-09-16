@@ -12,23 +12,23 @@ ht-degree: 4%
 
 # Aktionstypen
 
-Nachdem Sie die Tag-Erweiterung [Adobe Experience Platform Web SDK](web-sdk-extension-configuration.md) konfiguriert haben, konfigurieren Sie Ihre Aktionstypen.
+Nachdem Sie die [Adobe Experience Platform Web SDK-Tag-Erweiterung](web-sdk-extension-configuration.md), konfigurieren Sie Ihre Aktionstypen.
 
 Auf dieser Seite werden die verfügbaren Aktionstypen beschrieben.
 
 
 ## Ereignis senden
 
-Sendet ein Ereignis an die Adobe [!DNL Experience Platform], damit Adobe Experience Platform die gesendeten Daten erfassen und darauf reagieren kann. Wählen Sie eine Instanz aus (wenn mehrere Instanzen vorhanden sind). Alle Daten, die Sie senden möchten, können im Feld **[!UICONTROL XDM Data]** gesendet werden. Verwenden Sie ein JSON-Objekt, das der Struktur Ihres XDM-Schemas entspricht. Dieses Objekt kann entweder auf Ihrer Seite oder über ein **[!UICONTROL benutzerdefinierter Code]** **[!UICONTROL Datenelement]** erstellt werden.
+Sendet ein Ereignis an Adobe [!DNL Experience Platform] damit Adobe Experience Platform die von Ihnen gesendeten Daten erfassen und entsprechend handeln kann. Wählen Sie eine Instanz aus (wenn mehrere Instanzen vorhanden sind). Alle Daten, die Sie senden möchten, können im **[!UICONTROL XDM-Daten]** -Feld. Verwenden Sie ein JSON-Objekt, das der Struktur Ihres XDM-Schemas entspricht. Dieses Objekt kann entweder auf Ihrer Seite oder über eine **[!UICONTROL Benutzerspezifischer Code]** **[!UICONTROL Datenelement]**.
 
 Es gibt einige weitere Felder im Aktionstyp Ereignis senden , die je nach Implementierung ebenfalls nützlich sein können. Bitte beachten Sie, dass alle diese Felder optional sind.
 
-- **Typ:** Mit diesem Feld können Sie einen Ereignistyp angeben, der in Ihrem XDM-Schema aufgezeichnet wird. Weitere Informationen zu den standardmäßigen Ereignistypen finden Sie in der [Dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) .
-- **Daten:** Daten, die nicht mit einem XDM-Schema übereinstimmen, können mit diesem Feld gesendet werden. Dieses Feld ist nützlich, wenn Sie versuchen, ein Adobe Target-Profil zu aktualisieren oder Target Recommendations-Attribute zu senden. Beispiele finden Sie in der [Dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en).
+- **Typ:** In diesem Feld können Sie einen Ereignistyp angeben, der in Ihrem XDM-Schema aufgezeichnet wird. Siehe [Dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) für weitere Informationen zu den standardmäßigen Ereignistypen.
+- **Daten:** Daten, die nicht mit einem XDM-Schema übereinstimmen, können mit diesem Feld gesendet werden. Dieses Feld ist nützlich, wenn Sie versuchen, ein Adobe Target-Profil zu aktualisieren oder Target Recommendations-Attribute zu senden. Beispiele: Sehen Sie sich unsere [Dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en).
 <!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
-- **Datensatz-ID:** Wenn Sie Daten an einen Datensatz senden müssen, der nicht von Ihnen im Datensatz angegeben wurde, können Sie diese Datensatz-ID hier angeben.
-- **Dokument wird entladen:** Wenn Sie sicherstellen möchten, dass die Ereignisse den Server erreichen, auch wenn der Benutzer von der Seite weg navigiert, aktivieren Sie das Kontrollkästchen  **[!UICONTROL Dokument wird]** entladen . Dadurch können Ereignisse den Server erreichen, Antworten werden jedoch ignoriert.
-- **Entscheidungen zur visuellen Personalisierung rendern:** Wenn Sie personalisierte Inhalte auf Ihrer Seite rendern möchten, aktivieren Sie das Kontrollkästchen  **[!UICONTROL visuelle Personalisierungsentscheidung]** rendern . Sie können bei Bedarf auch Entscheidungsbereiche festlegen. Weitere Informationen zum Rendern personalisierter Inhalte finden Sie in der [Personalisierungsdokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) .
+- **Datensatz-ID:** Wenn Sie Daten an einen Datensatz senden müssen, der nicht in Ihrem Datensatz angegeben wurde, können Sie diese Datensatz-ID hier angeben.
+- **Dokument wird entladen:** Wenn Sie sicherstellen möchten, dass die Ereignisse den Server erreichen, auch wenn der Benutzer von der Seite weg navigiert, überprüfen Sie die **[!UICONTROL Dokument wird entladen]** aktivieren. Dadurch können Ereignisse den Server erreichen, Antworten werden jedoch ignoriert.
+- **Entscheidungen zur visuellen Personalisierung rendern:** Wenn Sie personalisierte Inhalte auf Ihrer Seite rendern möchten, überprüfen Sie die **[!UICONTROL visuelle Personalisierungsentscheidungen rendern]** aktivieren. Sie können bei Bedarf auch Entscheidungsbereiche festlegen. Siehe [Personalisierungsdokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) für weitere Informationen zum Rendern personalisierter Inhalte.
 
 ## Festlegen des Einverständnisses
 
@@ -42,4 +42,4 @@ Wenn Sie Ihre Ereigniszusammenführungs-ID auf Ihrer Seite zurücksetzen möchte
 
 ## Wie geht es weiter
 
-Nachdem Sie Ihre Aktionen festgelegt haben, konfigurieren Sie [Ihre Datenelementtypen](data-element-types.md).
+Nachdem Sie die Aktionen festgelegt haben, [Datenelementtypen konfigurieren](data-element-types.md).

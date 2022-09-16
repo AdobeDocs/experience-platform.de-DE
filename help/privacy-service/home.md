@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Mit Privacy Service können Sie die automatische Einhaltung gesetzlicher Datenschutzbestimmungen bei der Handhabung von Daten in Experience Cloud erleichtern.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
 source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1389'
 ht-degree: 100%
 

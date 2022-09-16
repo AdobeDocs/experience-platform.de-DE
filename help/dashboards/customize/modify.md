@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;Benutzeroberfläche;UI;Dashboards;Dashboard;Profile;Segmente;Ziele;Lizenzverwendung
 title: Ändern von Platform-Dashboards in der Benutzeroberfläche
-description: 'Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Anpassen der Anzeige der Adobe Experience Platform-Daten Ihres Unternehmens in Dashboards. '
+description: Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Anpassen der Anzeige der Adobe Experience Platform-Daten Ihres Unternehmens in Dashboards.
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
 source-git-commit: be2c38f37dd288f5035f1688be9d56abc2cd31a7
 workflow-type: tm+mt

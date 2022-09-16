@@ -1,22 +1,22 @@
 ---
-title: Freigabe von Mobilgeräte für das Internet und domänenübergreifende IDs
+title: Mobile-zu-Web und Domain-übergreifender ID-Austausch
 description: Erfahren Sie, wie Sie Besucher-IDs von mobilen auf Web-Eigenschaften und domänenübergreifend beibehalten können.
 keywords: Identität; mobil; ID; Freigabe; Domäne; domänenübergreifend; SDK; Plattform;
 exl-id: b9bb236f-52cf-4615-96d8-1137d957de8c
 source-git-commit: 3b65143e33804b251f888dbe2a69d238b3f4cda3
 workflow-type: tm+mt
 source-wordcount: '901'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
-# Freigabe von Mobilgeräte für das Internet und domänenübergreifende IDs
+# Mobile-zu-Web und Domain-übergreifender ID-Austausch
 
 ## Übersicht
 
 Das Adobe Experience Platform Web SDK unterstützt Funktionen zur Freigabe von Besucher-IDs, mit denen Kunden personalisierte Erlebnisse präziser zwischen mobilen Apps und mobilen Webinhalten sowie domänenübergreifend bereitstellen können.
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsbeispiele {#use-cases}
 
 ### Einheitliche Personalisierung zwischen mobilen Apps und mobilen Websites
 

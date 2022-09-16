@@ -14,7 +14,7 @@ ht-degree: 81%
 
 # Filterfunktionen
 
-Filterfunktionen werden verwendet, um Daten innerhalb von Arrays in [!DNL Profile Query Language] (PQL) zu filtern. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md).
+Filterfunktionen werden verwendet, um Daten in Arrays in zu filtern. [!DNL Profile Query Language] (PQL). Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] Übersicht](./overview.md).
 
 ## Filter
 

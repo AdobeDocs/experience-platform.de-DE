@@ -8,22 +8,22 @@ exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
 source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
 source-wordcount: '411'
-ht-degree: 11%
+ht-degree: 14%
 
 ---
 
-# [!UICONTROL Datentyp ] der Web-Seite
+# [!UICONTROL Webseitendetails] Datentyp
 
-[!UICONTROL Auf einer Webseite ] wird ein standardmäßiger XDM-Datentyp (Experience-Datenmodell) beschrieben, der Details zu einer Web-Seite beschreibt, die gerade geladen und angezeigt wurde, wie von einem ExperienceEvent aufgezeichnet.
+[!UICONTROL Webseitendetails] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Details zu einer Web-Seite beschreibt, die gerade geladen und angezeigt wurde und von einem ExperienceEvent aufgezeichnet wurde.
 
-Der Datentyp ist für vollständige Seitendetails und das erstmalige Laden von Einzelseiten-Webanwendungen (SPA) vorgesehen. Informationen zu Interaktionen, die auf einer geladenen Seite stattfinden und bei denen kein neuer Seitenladevorgang Trigger wird, finden Sie im Datentyp [Web interaction](./web-interaction.md) .
+Der Datentyp ist für vollständige Seitendetails und das erstmalige Laden von Einzelseiten-Webanwendungen (SPA) vorgesehen. Informationen zu Interaktionen, die auf einer geladenen Seite stattfinden und bei denen kein neuer Seitenladevorgang Trigger wird, finden Sie im Abschnitt [Web-Interaktion](./web-interaction.md) Datentyp.
 
 <img src="../images/data-types/web-page-details.PNG" width="500" /><br />
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
 | `pageViews` | [[!UICONTROL Maßnahme]](./measure.md) | Die Anzahl der Ansichten auf einer Webseite. |
-| `URL` | Zeichenfolge | Die normative oder übliche URL der Webseite. Dies kann die tatsächliche URL sein, die zum Erreichen der Seite verwendet wird. Um die URL aufzuzeichnen, die zum Erreichen der Seite verwendet wird, verwenden Sie `webLink`. Das URI-Format sollte dem Standard [RFC 3986](https://tools.ietf.org/html/rfc3986) entsprechen. |
+| `URL` | Zeichenfolge | Die normative oder übliche URL der Webseite. Dies kann die tatsächliche URL sein, die zum Erreichen der Seite verwendet wird. Um die URL aufzuzeichnen, mit der die Seite erreicht wird, verwenden Sie `webLink`. Das URI-Format sollte dem [RFC 3986](https://tools.ietf.org/html/rfc3986) Standard. |
 | `isErrorPage` | Boolesch | Diese Eigenschaft verwendet eine Markierung, um anzugeben, ob es sich bei der Seite um eine Fehlerseite handelt oder nicht. Diese Markierung wird verwendet, um Webinteraktionen grob zu kategorisieren. Der Fehler wird von der Anwendung definiert und kann einer Seite entsprechen, die mit einem HTTP-Fehlercode versorgt wird. |
 | `isHomePage` | Boolesch | Diese Eigenschaft verwendet eine Markierung, um anzugeben, ob es sich bei der Seite um eine Homepage handelt oder nicht. Diese Markierung wird verwendet, um Webinteraktionen grob zu kategorisieren. Die Definition der Homepage wird von der Anwendung bestimmt. |
 | `name` | Zeichenfolge | Der normative Name der Webseite. Dieser Name ist nicht notwendigerweise der Seitentitel oder direkt mit dem Seiteninhalt verknüpft, sondern dient zum Organisieren der Seiten einer Site zu Klassifizierungszwecken. |

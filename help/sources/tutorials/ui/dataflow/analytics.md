@@ -3,7 +3,8 @@ keywords: Experience Platform; Startseite; beliebte Themen; Analytics; Mixpanel
 solution: Experience Platform
 title: Erstellen eines Datenflusses mit einer Analytics-Quelle in der Benutzeroberfläche
 description: In diesem Tutorial erfahren Sie, wie Sie einen Datenfluss für eine Analytics-Quelle mithilfe der Platform-Benutzeroberfläche erstellen.
-source-git-commit: d23f3791b040a856c0e3c048be31ac36a60e0cf1
+exl-id: 108a69e5-d7d9-4ca1-a364-38ea54aa74ff
+source-git-commit: a3343f170c9ab922964a3dbbd54cd722b44e1b1f
 workflow-type: tm+mt
 source-wordcount: '1277'
 ht-degree: 49%

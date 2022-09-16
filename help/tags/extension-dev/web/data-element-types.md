@@ -23,13 +23,13 @@ In diesem Dokument wird beschrieben, wie Sie Datenelementtypen für eine Web-Erw
 
 >[!IMPORTANT]
 >
->Wenn Sie eine Kantenerweiterung entwickeln, lesen Sie stattdessen das Handbuch zu [Datenelementtypen für Kantenerweiterungen](../edge/data-element-types.md) .
+>Wenn Sie eine Kantenerweiterung entwickeln, lesen Sie das Handbuch zu [Datenelementtypen für Kantenerweiterungen](../edge/data-element-types.md) anstatt.
 >
 >In diesem Dokument wird auch davon ausgegangen, dass Sie mit Bibliotheks-Modulen und deren Integration in Web-Erweiterungen vertraut sind. Wenn Sie eine Einführung benötigen, lesen Sie die Übersicht über die [Formatierung von Bibliotheksmodulen](./format.md), bevor Sie zu diesem Handbuch zurückkehren.
 
 Datenelementtypen bestehen in der Regel aus Folgendem:
 
-1. Eine [Ansicht](./views.md), die in der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Einstellungen für das Datenelement zu ändern.
+1. A [Ansicht](./views.md) wird in der Datenerfassungs-Benutzeroberfläche angezeigt, über die Benutzer Einstellungen für das Datenelement ändern können.
 2. Ein Bibliotheksmodul, das in der Tag-Laufzeitbibliothek ausgegeben wird, um die Einstellungen zu interpretieren und Datensegmente abzurufen.
 
 Stellen Sie sich eine Situation vor, in der Sie den Benutzern erlauben möchten, ein Datenelement aus einem lokalen Speicherelement namens `productName` abzurufen. Ihr Modul könnte wie folgt aussehen:

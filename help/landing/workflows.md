@@ -14,26 +14,26 @@ ht-degree: 2%
 
 # [!UICONTROL Handbuch zur Benutzeroberfläche von Workflows]
 
-Der Abschnitt **[!UICONTROL Workflows]** in der Adobe Experience Platform-Benutzeroberfläche enthält eine Liste mit mehrstufigen Workflows für die Ausführung von Vorgängen in Platform. Diese Workflows decken Bereiche ab, einschließlich Datenerfassung und Datenwissenschaft.
+Die **[!UICONTROL Workflows]** in der Adobe Experience Platform-Benutzeroberfläche eine Liste mit mehrstufigen Workflows zur Ausführung von Vorgängen in Platform anzeigen. Diese Workflows decken Bereiche ab, einschließlich Datenerfassung und Datenwissenschaft.
 
 ![Workflows](./images/workflows/workflows.png)
 
 ## [!UICONTROL Datenerfassung]
 
-Mit dem Workflow **[!UICONTROL CSV einem XDM-Schema zuordnen]** können Sie eine CSV-Datei hochladen und in ein XDM-Schema (Experience-Datenmodell) konvertieren. Weitere Informationen zu diesem Workflow finden Sie im Tutorial zum [Zuordnen einer CSV-Datei zu einem XDM-Schema](../ingestion/tutorials/map-a-csv-file.md).
+Die **[!UICONTROL Zuordnen von CSV zu XDM-Schema]** Workflow ermöglicht das Hochladen und Konvertieren einer CSV-Datei in ein Experience-Datenmodell (XDM)-Schema. Weitere Informationen zu diesem Workflow finden Sie im Tutorial zu [Zuordnen einer CSV-Datei zu einem XDM-Schema](../ingestion/tutorials/map-a-csv-file.md).
 
-Mit dem Workflow **[!UICONTROL Datensatz aus Schema]** erstellen können Sie einen neuen Datensatz aus einem vorhandenen XDM-Schema erstellen. Weitere Informationen zu diesem Workflow finden Sie im [Benutzerhandbuch zu Datensätzen](../catalog/datasets/user-guide.md#schema).
+Die **[!UICONTROL Datensatz aus Schema erstellen]** Workflow können Sie einen neuen Datensatz aus einem vorhandenen XDM-Schema erstellen. Weitere Informationen zu diesem Workflow finden Sie im Abschnitt [Benutzerhandbuch zu Datensätzen](../catalog/datasets/user-guide.md#schema).
 
-Mit dem Workflow **[!UICONTROL Datensatz aus CSV]** erstellen können Sie einen neuen Datensatz erstellen, indem Sie eine CSV-Datei hochladen. Weitere Informationen zu diesem Workflow finden Sie im [Benutzerhandbuch zu Datensätzen](../catalog/datasets/user-guide.md#csv).
+Die **[!UICONTROL Datensatz aus CSV erstellen]** Mit dem -Workflow können Sie einen neuen Datensatz erstellen, indem Sie eine CSV-Datei hochladen. Weitere Informationen zu diesem Workflow finden Sie im Abschnitt [Benutzerhandbuch zu Datensätzen](../catalog/datasets/user-guide.md#csv).
 
 ## [!UICONTROL Modelle]
 
-Der Workflow **[!UICONTROL Rezept importieren]** ermöglicht den Import und die Konfiguration von Rezepten. Weitere Informationen zu diesem Workflow finden Sie im Tutorial zum Importieren eines gepackten Rezepts](../data-science-workspace/models-recipes/import-packaged-recipe-ui.md).[
+Die **[!UICONTROL Rezept importieren]** -Arbeitsablauf ermöglicht den Import und die Konfiguration von Rezepten. Weitere Informationen zu diesem Workflow finden Sie im Tutorial zu [Importieren eines gepackten Rezepts](../data-science-workspace/models-recipes/import-packaged-recipe-ui.md).
 
-Mit dem Workflow **[!UICONTROL Modell erstellen]** können Sie ein Modell für maschinelles Lernen erstellen. Weitere Informationen zu diesem Workflow finden Sie im [Modell-Trainings- und Evaluierungs-Tutorial](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
+Die **[!UICONTROL Modell erstellen]** -Arbeitsablauf ermöglicht die Erstellung eines Modells für maschinelles Lernen. Weitere Informationen zu diesem Workflow finden Sie im Abschnitt [Modell-Training und Evaluierungs-Tutorial](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
 
-Mit dem Workflow **[!UICONTROL Modell als Dienst veröffentlichen]** können Sie ein erstelltes Modell als Dienst veröffentlichen, der bewertet werden kann. Weitere Informationen zu diesem Workflow finden Sie im Tutorial zum [Veröffentlichen eines Modells als Dienst](../data-science-workspace/models-recipes/publish-model-service-ui.md).
+Die **[!UICONTROL Modell als Dienst veröffentlichen]** -Arbeitsablauf ermöglicht die Veröffentlichung eines erstellten Modells als Dienst, der bewertet werden kann. Weitere Informationen zu diesem Workflow finden Sie im Tutorial zu [Veröffentlichen eines Modells als Dienst](../data-science-workspace/models-recipes/publish-model-service-ui.md).
 
 ## Nächste Schritte
 
-Durch Lesen dieses Handbuchs wurden Sie mit den [!UICONTROL Workflows] vertraut gemacht, die in der Experience Platform-Benutzeroberfläche verfügbar sind. Weitere Informationen zu den Funktionen und Funktionen der Platform-Benutzeroberfläche finden Sie im [Adobe Experience Platform UI-Handbuch](ui-guide.md).
+Durch Lesen dieses Handbuchs wurden Sie zum [!UICONTROL Workflows] in der Experience Platform-Benutzeroberfläche verfügbar. Weitere Informationen zu den Funktionen und Funktionen der Platform-Benutzeroberfläche finden Sie im Abschnitt [Handbuch zur Benutzeroberfläche von Adobe Experience Platform](ui-guide.md).

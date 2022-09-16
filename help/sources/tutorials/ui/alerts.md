@@ -6,7 +6,7 @@ exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 source-git-commit: 2acb58d21952699c60471cb4f4347af89621f045
 workflow-type: tm+mt
 source-wordcount: '832'
-ht-degree: 10%
+ht-degree: 14%
 
 ---
 
@@ -22,7 +22,7 @@ In diesem Dokument erfahren Sie, wie Sie Warnhinweise für Ihren Datenfluss zu Q
 
 Dieses Dokument setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../home.md): [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten zu strukturieren, zu beschriften und zu erweitern, indem Sie [!DNL Platform] Dienste.
+* [Quellen](../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Mit Observability können Sie Platform-Aktivitäten mithilfe von statistischen Metriken und Ereignisbenachrichtigungen überwachen.](../../../observability/home.md)[!DNL Observability Insights]
    * [Warnhinweise](../../../observability/alerts/overview.md): Wenn bestimmte Bedingungen in Ihren Platform-Vorgängen erreicht sind (z. B. ein potenzielles Problem, wenn das System einen Schwellenwert überschreitet), kann Platform allen Benutzern in Ihrer Organisation, die sich für diese Bedingungen angemeldet haben, Warnhinweise bereitstellen.
 
@@ -30,7 +30,7 @@ Dieses Dokument setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_alerts_subscribe"
->title="Warnhinweise für Quellen abonnieren"
+>title="Abonnieren von Warnmeldungen für Quellen"
 >abstract="Warnhinweise ermöglichen den Empfang von Benachrichtigungen basierend auf dem Status Ihrer Datenflüsse aus Quellen. Sie können Warnhinweise so einrichten, dass Aktualisierungen abgerufen werden, wenn Ihr Datenfluss gestartet wurde, erfolgreich war, fehlgeschlagen ist oder keine Daten erfasst hat."
 >text="Learn more in documentation"
 
@@ -57,8 +57,8 @@ Wählen Sie die Warnhinweise aus, die Sie abonnieren möchten, und wählen Sie d
 
 Detaillierte Schritte zum Erstellen eines Datenflusses für Quellen in der Benutzeroberfläche finden Sie in den folgenden Handbüchern:
 
-* [Adobe Advertising](./dataflow/advertising.md)
-* [Cloud-Speicher](./dataflow/batch/cloud-storage.md)
+* [Werbung](./dataflow/advertising.md)
+* [Cloud-Speicherplatz](./dataflow/batch/cloud-storage.md)
 * [CRM](./dataflow/crm.md)
 * [Datenbank](./dataflow/databases.md)
 * [E-Commerce](./dataflow/ecommerce.md)

@@ -18,7 +18,7 @@ Profile für Ihre [!DNL LinkedIn] Kampagnen für Zielgruppen-Targeting, Personal
 
 ![linkedIn-Ziel in der Adobe Experience Platform-Benutzeroberfläche](../../assets/catalog/social/linkedin/catalog.png)
 
-## Anwendungsfälle
+## Anwendungsbeispiele
 
 So können Sie besser verstehen, wie und wann die Variable [!DNL LinkedIn Matched Audiences] Ziel, hier ein Anwendungsfall, den Adobe Experience Platform-Kunden mit dieser Funktion lösen können.
 

@@ -9,7 +9,7 @@ exl-id: 7cb65d17-d99d-46ff-b28f-7469d0b57d07
 source-git-commit: 609f7a5de51840fe657ca72df99c90da56c8f466
 workflow-type: tm+mt
 source-wordcount: '487'
-ht-degree: 11%
+ht-degree: 19%
 
 ---
 
@@ -21,16 +21,16 @@ Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, extern b
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [[!DNL Experience Data Model (XDM)] System](../../../xdm/home.md): Der standardisierte Rahmen, durch den [!DNL Experience Platform] organisiert Kundenerlebnisdaten.
-   - [Grundlagen der Schemakomposition](../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
-   - [Tutorial zum Schema Editor](../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen.
+- [[!DNL Experience Data Model (XDM)] System](../../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
+   - [Grundlagen der Schemakomposition](../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemas vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
+   - [Tutorial zum Schema-Editor](../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 - [[!DNL Real-time Customer Profile]](../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
 ## Löschen von Konten über die Benutzeroberfläche
 
 >[!TIP]
 >
->Bevor Sie das Quellkonto löschen, müssen Sie zunächst alle vorhandenen Datenflüsse löschen, die mit dem Quellkonto verknüpft sind. Informationen zum Löschen vorhandener Datenflüsse finden Sie im Tutorial unter [Löschen von Datenflüssen für Quellen in der Benutzeroberfläche](./delete.md).
+>Bevor Sie das Quellkonto löschen, müssen Sie zunächst alle damit verbundenen Datenflüsse löschen. Informationen zum Löschen vorhandener Datenflüsse finden Sie im Tutorial unter [Löschen von Datenflüssen für Quellen in der Benutzeroberfläche](./delete.md).
 
 Anmelden bei [Adobe Experience Platform](https://platform.adobe.com) und wählen Sie **[!UICONTROL Quellen]** über die linke Navigationsleiste, um auf die **[!UICONTROL Quellen]** Arbeitsbereich. Die **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, für die Sie Konten und Datenflüsse erstellen können. Jede Quelle zeigt die Anzahl der vorhandenen Konten und Datenflüsse, die ihnen zugeordnet sind.
 
@@ -58,7 +58,7 @@ Wählen Sie die Auslassungszeichen (`...`) neben dem Namen des Kontos, das Sie l
 
 Ein letztes Bestätigungsdialogfeld wird angezeigt, wählen Sie **[!UICONTROL Löschen]** , um den Prozess abzuschließen.
 
-![delete](../../images/tutorials/delete-accounts/confirm.png)
+![löschen](../../images/tutorials/delete-accounts/confirm.png)
 
 ## Nächste Schritte
 

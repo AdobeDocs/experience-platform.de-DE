@@ -2,13 +2,13 @@
 keywords: crm;CRM;crm-Ziele;Salesforce crm;Salesforce crm-Ziel
 title: Salesforce CRM-Verbindung
 description: Mit dem Salesforce CRM-Ziel können Sie Ihre Kontodaten exportieren und im Salesforce CRM für Ihre geschäftlichen Anforderungen aktivieren.
-source-git-commit: 154cca31c5b434a2f036773ef9cda088f84eb1e5
+exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
+source-git-commit: 7d8b25b25b53edd7de836fc508de15cfa2a5a3a2
 workflow-type: tm+mt
 source-wordcount: '1730'
 ht-degree: 6%
 
 ---
-
 
 # [!DNL Salesforce CRM]-Verbindung
 
@@ -20,7 +20,7 @@ Diese [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt 
 
 Salesforce CRM verwendet OAuth 2 mit Password Grant als Authentifizierungsmechanismus für die Kommunikation mit der Salesforce REST API. Anweisungen zur Authentifizierung für Ihre Salesforce CRM-Instanz finden Sie weiter unten im Abschnitt [An Ziel authentifizieren](#authenticate) Abschnitt.
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsbeispiele {#use-cases}
 
 Als Marketer können Sie Ihren Benutzern personalisierte Erlebnisse auf der Basis von Attributen aus ihren Adobe Experience Platform-Profilen bereitstellen. Sie können Segmente aus Ihren Offline-Daten erstellen und an Salesforce CRM senden, um sie in den Feeds der Benutzer anzuzeigen, sobald Segmente und Profile in Adobe Experience Platform aktualisiert wurden.
 

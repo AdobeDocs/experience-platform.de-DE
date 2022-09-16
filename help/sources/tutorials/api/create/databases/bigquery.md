@@ -8,8 +8,8 @@ description: Erfahren Sie, wie Sie mit der Flow Service-API Adobe Experience Pla
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
 source-git-commit: 015a4fa06fc2157bb8374228380bb31826add37e
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '526'
+ht-degree: 53%
 
 ---
 

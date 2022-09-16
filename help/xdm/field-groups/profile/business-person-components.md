@@ -5,7 +5,7 @@ exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
 source-git-commit: 83329002a1fe51e49818a203191c7082f9589037
 workflow-type: tm+mt
 source-wordcount: '554'
-ht-degree: 3%
+ht-degree: 7%
 
 ---
 
@@ -19,7 +19,7 @@ Die Feldergruppe stellt eine Stammebene bereit `personComponents` -Feld, das ein
 
 >[!IMPORTANT]
 >
->Sie müssen die Aufnahmemuster befolgen, wie im Abschnitt [Quelldokumentation](../../../rtcdp/sources/b2b.md). Andere Feldzuordnungsmethoden funktionieren nicht mit Sicherheit.
+>Sie müssen die Aufnahmemuster befolgen, wie im Abschnitt [Quelldokumentation](../../../rtcdp/sources/b2b.md). Andere Feldzuordnungsmethoden funktionieren nicht immer.
 >
 >Beispielsweise jedes Objekt der `personComponents` -Array wird einzeln während standardmäßigen Erfassungsmustern gesendet und dann von Platform zum Array hinzugefügt. Wenn Sie der Business Person-Komponente manuell ein Array von Objekten hinzufügen, wird ein Fehler zurückgegeben.
 >Sie sollten beim Erstellen von Schemas für Ihre B2B-Daten das Dienstprogramm zur automatischen Generierung verwenden. Anweisungen zur Verwendung der [B2B-Namespace- und Schema-Dienstprogramm zur automatischen Generierung](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). Wenn Sie das Dienstprogramm zur automatischen Generierung nicht verwenden und Ihr Datenmodell manuell zuordnen möchten, lesen Sie die Dokumentation unter [die Real-time Customer Data Platform B2B Edition Experience-Datenmodell (XDM)-Klassen](../../../rtcdp/schemas/b2b.md) vor der Zuordnung Ihrer Daten.

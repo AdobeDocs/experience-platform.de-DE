@@ -18,7 +18,7 @@ ht-degree: 5%
 
 ![Google Customer Match-Ziel in der Benutzeroberfläche von Adobe Experience Platform](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
-## Anwendungsfälle {#use-cases}
+## Anwendungsbeispiele {#use-cases}
 
 So können Sie besser verstehen, wie und wann die Variable [!DNL Google Customer Match] Ziel, hier finden Sie Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit dieser Funktion lösen können.
 

@@ -1,7 +1,8 @@
 ---
 title: Schemafeldgruppe für Kartenaktionen
 description: Dieses Dokument bietet einen Überblick über die Feldgruppe Kartenaktionen .
-source-git-commit: eaea904ddda6b7ffee6f52cd4af897c2a8885714
+exl-id: 49851544-9118-4b73-b1d1-4cf49b3f1dee
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
 source-wordcount: '193'
 ht-degree: 9%

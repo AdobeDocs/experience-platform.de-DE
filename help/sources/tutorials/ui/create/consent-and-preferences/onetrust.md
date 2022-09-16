@@ -5,7 +5,8 @@ title: (Beta) Erstellen einer OneTrust Source-Verbindung in der Benutzeroberflä
 topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine OneTrust-Quellverbindung erstellen.
-source-git-commit: adefaeb895c91d45727f791b73b73a17a2b1ccf9
+exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
+source-git-commit: 6768b772a983588b36659f42bff5c143a6f625f7
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 37%

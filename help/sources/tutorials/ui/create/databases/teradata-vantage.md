@@ -2,7 +2,8 @@
 keywords: Experience Platform; Homepage; beliebte Themen; Teradata Vantage
 title: Erstellen einer Teradata Vantage Source-Verbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Teradata Vantage-Quellverbindung erstellen.
-source-git-commit: f140dac67ccd09ec1e6cab794f53e0090af55442
+exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
+source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 36%
