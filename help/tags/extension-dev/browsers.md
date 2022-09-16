@@ -2,9 +2,9 @@
 title: Unterstützte Browser
 description: Eine Liste mehrerer Browser, die mit der Tag-Laufzeit in Adobe Experience Platform kompatibel sind.
 exl-id: fc9ff6f5-7d54-4f13-8286-44791499d704
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 32aa453ca40c0500da0fec8957db978c319a3dbe
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '142'
 ht-degree: 100%
 
 ---
@@ -20,7 +20,6 @@ Die Tag-Laufzeit in Adobe Experience Platform (bereitgestellt auf den Websites v
 - Chrome (neueste Version)
 - Safari (neueste Version)
 - Firefox (neueste Version)
-- IE (10 und höher)
 - Edge (neueste Version)
 - iOS Safari (neueste Version)
 - Android Chrome (neueste Version)
