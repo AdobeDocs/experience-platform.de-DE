@@ -1,9 +1,9 @@
 ---
 title: Data Governance - End-to-End-Handbuch
 description: Befolgen Sie den vollständigen Prozess zum Erzwingen von Datennutzungsbeschränkungen für Felder und Datensätze in Adobe Experience Platform.
-source-git-commit: 415300f6338eb485b8dead307f3e6a5b2d5d8b22
+source-git-commit: c8b2dba9b1e305f826830b8341bf1a6dde4e2da2
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1447'
 ht-degree: 2%
 
 ---
@@ -111,7 +111,7 @@ Wählen Sie im nächsten Bildschirm die Marketing-Aktionen aus, für die diese R
 
 ![Bild, das die einer Richtlinie zugeordnete Marketing-Aktion in der Benutzeroberfläche anzeigt](./images/e2e/select-marketing-action.png)
 
-Der letzte Bildschirm zeigt eine Zusammenfassung der Details der Richtlinie und der Aktionen, die darauf beschränkt sind, für welche Beschriftungen sie gelten. Auswählen **[!UICONTROL Beenden]** , um die Richtlinie zu erstellen und zu aktivieren.
+Der letzte Bildschirm zeigt eine Zusammenfassung der Details der Richtlinie und der Aktionen, die darauf beschränkt sind, für welche Beschriftungen sie gelten. Auswählen **[!UICONTROL Beenden]** , um die Richtlinie zu erstellen.
 
 ![Bild, das die in der Benutzeroberfläche zu bestätigende Richtlinienkonfiguration anzeigt](./images/e2e/confirm-policy.png)
 
