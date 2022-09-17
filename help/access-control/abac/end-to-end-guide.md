@@ -4,10 +4,10 @@ title: Anleitung zur attributbasierten Zugriffssteuerung (End-to-End)
 description: Dieses Dokument bietet eine durchgängige Anleitung zur attributbasierten Zugriffskontrolle in Adobe Experience Platform
 hide: true
 hidefromtoc: true
-source-git-commit: 440176ea1f21db3c7c4b3572fb52771dc70c80a0
+source-git-commit: f7a8f9a5eb0ef3c961f9524057ff01564f88dec3
 workflow-type: tm+mt
-source-wordcount: '1612'
-ht-degree: 9%
+source-wordcount: '2218'
+ht-degree: 7%
 
 ---
 
@@ -58,6 +58,35 @@ Sobald Sie über Administratorberechtigungen verfügen, wechseln Sie zu [Adobe E
 Der Arbeitsbereich &quot;Berechtigungen&quot;für die Platform-Benutzeroberfläche wird angezeigt und öffnet sich im **[!UICONTROL Rollen]** Seite.
 
 ## Anwenden von Beschriftungen auf eine Rolle {#label-roles}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about"
+>title="Was sind Beschriftungen?"
+>abstract="Mit Beschriftungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Platform bietet verschiedene Adobe-definierte &quot;Core&quot;-Datennutzungsbezeichnungen, die eine Vielzahl gemeinsamer Einschränkungen für Data Governance abdecken. Mit vertraulichen S-Beschriftungen wie RHD (Regulated Health Data) können Sie beispielsweise Daten kategorisieren, die auf geschützte Gesundheitsinformationen (PHI) verweisen. Sie können auch eigene benutzerdefinierte Beschriftungen definieren, die den Anforderungen Ihres Unternehmens entsprechen."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#understanding-data-usage-labels" text="Datennutzungsbeschriftungen – Übersicht"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about_create"
+>title="Neue Bezeichnung erstellen"
+>abstract="Sie können eigene benutzerdefinierte Beschriftungen erstellen, die den Anforderungen Ihres Unternehmens entsprechen. Benutzerdefinierte Beschriftungen können verwendet werden, um sowohl Data Governance- als auch Zugriffssteuerungskonfigurationen auf Ihre Daten anzuwenden."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#manage-labels" text="Verwalten von benutzerdefinierten Kennzeichnungen"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about"
+>title="Welche Rollen gibt es?"
+>abstract="Rollen sind Möglichkeiten, die Typen von Benutzern zu kategorisieren, die mit Ihrer Platform-Instanz interagieren und Bausteine von Richtlinien zur Zugriffssteuerung sind. Eine Rolle verfügt über bestimmte Berechtigungen und Mitglieder Ihrer Organisation können je nach dem Umfang der Ansicht oder des Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en" text="Rollen verwalten"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about_create"
+>title="Neue Rolle erstellen"
+>abstract="Sie können eine neue Rolle erstellen, um Benutzer, die auf Ihre Platform-Instanz zugreifen, besser zu kategorisieren. Sie können beispielsweise eine Rolle für ein internes Marketing-Team erstellen und die RHD-Bezeichnung auf diese Rolle anwenden, wodurch Ihr internes Marketing-Team auf geschützte Gesundheitsinformationen (PHI) zugreifen kann. Alternativ können Sie auch eine Rolle für eine externe Agentur erstellen und diesen Rollenzugriff auf PHI-Daten verweigern, indem Sie die RHD-Beschriftung nicht auf diese Rolle anwenden."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en#create-a-new-role" text="Erstellen Sie eine neue Rolle"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_details"
+>title="Rollenübersicht"
+>abstract="Im Dialogfeld Rollenübersicht werden die Ressourcen und Sandboxes angezeigt, auf die eine bestimmte Rolle zugreifen darf."
 
 Rollen sind Möglichkeiten, die Typen von Benutzern zu kategorisieren, die mit Ihrer Platform-Instanz interagieren und Bausteine von Richtlinien zur Zugriffssteuerung sind. Eine Rolle verfügt über bestimmte Berechtigungen und Mitglieder Ihrer Organisation können je nach Umfang des benötigten Zugriffs einer oder mehreren Rollen zugewiesen werden.
 
@@ -117,6 +146,34 @@ Die **[!UICONTROL Bearbeiten von Bezeichnungen]** angezeigt, sodass Sie die Besc
 Wiederholen Sie die obigen Schritte mit **[!UICONTROL Insulin &lt;50]**.
 
 ## Zugriffskontrollrichtlinie erstellen {#policy}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about"
+>title="Was sind politische Maßnahmen?"
+>abstract="Richtlinien sind Aussagen, die Attribute zusammenbringen, um zulässige und unzulässige Handlungen festzustellen. Jede Organisation verfügt über eine Standardrichtlinie, die Sie aktivieren müssen, um Regeln für Ressourcen wie Segmente und Schemafelder zu definieren. Standardrichtlinien können weder bearbeitet noch gelöscht werden. Standardrichtlinien können jedoch aktiviert oder deaktiviert werden."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en" text="Richtlinien verwalten"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about_create"
+>title="Erstellen einer Richtlinie"
+>abstract="Erstellen Sie eine Richtlinie, um die Aktionen zu definieren, die Ihre Benutzer für Ihre Segmente und Schemafelder ausführen können und nicht."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#create-a-new-policy" text="Erstellen einer Richtlinie"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_permitdeny"
+>title="Zulässige und unzulässige Aktionen für eine Richtlinie konfigurieren"
+>abstract="Wählen Sie Zugriff zulassen aus, um die zulässigen Aktionen zu konfigurieren, die Ihre Benutzer gegenüber Ressourcen durchführen können. Wählen Sie Zugriff auf verweigern aus, um unzulässige Aktionen zu konfigurieren, die Ihre Benutzer nicht gegen Ressourcen durchführen können."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Richtlinie bearbeiten"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_resource"
+>title="Berechtigungen für Ressourcen konfigurieren"
+>abstract="Eine Ressource ist das Asset oder Objekt, auf das ein Benutzer zugreifen kann oder nicht. Ressourcen können Segmente oder Schemata sein. Sie können Berechtigungen zum Schreiben, Lesen oder Löschen für Segmente und Schemafelder konfigurieren."
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_condition"
+>title="Bedingungen bearbeiten"
+>abstract="Wenden Sie bedingte Anweisungen auf Ihre Richtlinie an, um den Benutzerzugriff auf bestimmte Ressourcen zu konfigurieren. Wählen Sie Alle abgleichen aus, damit Benutzer über Rollen mit exakt denselben Bezeichnungen wie eine Ressource verfügen, damit sie Zugriff erhalten. Wählen Sie &quot;Übereinstimmung mit einer Ressource&quot;aus, damit nur Benutzer eine Rolle mit nur einer Bezeichnung haben müssen, die einer Ressource entspricht. Beschriftungen können entweder als Kern- oder benutzerdefinierte Beschriftungen definiert werden. Kernbeschriftungen stellen von Adobe erstellte und bereitgestellte Beschriftungen dar und stellen benutzerdefinierte Beschriftungen dar, die von Ihnen für Ihr Unternehmen erstellte Beschriftungen darstellen."
 
 Zugriffssteuerungsrichtlinien nutzen Beschriftungen, um zu definieren, welche Benutzerrollen Zugriff auf bestimmte Platform-Ressourcen haben. Richtlinien können lokal oder global sein und andere Richtlinien überschreiben. In diesem Beispiel wird der Zugriff auf Schemafelder und Segmente in allen Sandboxes Benutzern verweigert, die nicht über die entsprechenden Beschriftungen im Schemafeld verfügen.
 
