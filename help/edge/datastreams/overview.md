@@ -6,7 +6,7 @@ exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 source-git-commit: 3690a32f32c6cfa25120e9af44fe559122e779a0
 workflow-type: tm+mt
 source-wordcount: '1729'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -122,7 +122,7 @@ Mit diesem Service wird festgelegt, ob und wie Daten an Adobe Experience Platfor
 | [!UICONTROL Profildatensatz] | Wählen Sie den Platform-Datensatz aus, an den Kundenattributdaten gesendet werden. Dieses Schema muss die [Klasse „XDM Individual Profile“](../../xdm/classes/individual-profile.md) verwenden. |
 | [!UICONTROL Offer Decisioning] | Aktivieren Sie dieses Kontrollkästchen, um Offer Decisioning für eine Platform Web SDK-Implementierung zu aktivieren. Weitere Informationen dazu finden Sie in der Anleitung zum [Verwenden von Offer Decisioning mit dem Platform Web SDK](../personalization/offer-decisioning/offer-decisioning-overview.md). Weitere Informationen zu Offer Decisioning-Funktionen finden Sie in der [Adobe Journey Optimizer-Dokumentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=de). |
 | [!UICONTROL Edge-Segmentierung] | Aktivieren Sie dieses Kontrollkästchen, um [Edge-Segmentierung](../../segmentation/ui/edge-segmentation.md) für diesen Datenstrom zu aktivieren. Wenn das SDK Daten über einen Datenstrom sendet, für den die Edge-Segmentierung aktiviert ist, werden alle aktualisierten Segmentzugehörigkeiten für das betreffende Profil in der Antwort zurückgesendet.<br><br>Diese Option kann in Kombination mit [!UICONTROL Personalisierungszielen] für [Anwendungsfälle für die Personalisierung der nächsten Seite](../../destinations/ui/configure-personalization-destinations.md) verwendet werden. |
-| [!UICONTROL Personalisierungsziele] | Wenn Sie dies aktivieren, nachdem Sie die [!UICONTROL Edge-Segmentierung] Kontrollkästchen aktivieren, ermöglicht es dieser Option dem Datastream, eine Verbindung zu Personalisierungszielen wie [Benutzerdefinierte Personalisierung](../../destinations/catalog/personalization/custom-personalization.md). Die genauen Schritte zum [Konfigurieren von Personalisierungszielen](../../destinations/ui/configure-personalization-destinations.md) finden Sie in der Dokumentation zu Zielen. |
+| [!UICONTROL Personalisierungsziele] | Wenn diese Option nach dem Aktivieren des Kontrollkästchens [!UICONTROL Edge-Segmentierung] aktiviert wird, kann der Datenstrom mit Personalisierungszielen, wie [benutzerdefinierte Personalisierung](../../destinations/catalog/personalization/custom-personalization.md), verbunden werden. Die genauen Schritte zum [Konfigurieren von Personalisierungszielen](../../destinations/ui/configure-personalization-destinations.md) finden Sie in der Dokumentation zu Zielen. |
 
 ### Adobe Target-Einstellungen {#target}
 
