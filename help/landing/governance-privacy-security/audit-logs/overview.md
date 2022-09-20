@@ -2,14 +2,24 @@
 title: Übersicht über Auditprotokolle
 description: Erfahren Sie, wie Sie mithilfe von Audit-Protokollen sehen können, wer welche Aktionen in Adobe Experience Platform durchgeführt hat.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: cd7ce8c107769a77373f328d9aa84c982be0d8ee
+source-git-commit: 90481d2cff0f133ee10310da02e4b9ace9d8309f
 workflow-type: tm+mt
-source-wordcount: '847'
-ht-degree: 16%
+source-wordcount: '920'
+ht-degree: 15%
 
 ---
 
-# Auditprotokolle
+# Auditprotokolle {#audit-logs}
+
+>[!CONTEXTUALHELP]
+>id="platform_audits_privacyconsole_actions"
+>title="Top-Aktionen"
+>abstract="Dieses Widget zeigt die wichtigsten Arten von Aktionen an, die innerhalb des ausgewählten Zeitraums in Experience Platform ausgeführt wurden. Um die vollständige Liste der aufgezeichneten Aktionen in Platform anzuzeigen, wählen Sie **Prüfungen** in der linken Navigation."
+
+>[!CONTEXTUALHELP]
+>id="platform_audits_privacyconsole_users"
+>title="Top-Benutzer"
+>abstract="Dieses Widget zeigt die Benutzer, die innerhalb des ausgewählten Zeitraums die meisten Aktionen in der Experience Platform ausgeführt haben. Um die vollständige Liste der aufgezeichneten Aktionen in Platform anzuzeigen, wählen Sie **Prüfungen** in der linken Navigation."
 
 Um die Transparenz und Sichtbarkeit der im System durchgeführten Aktivitäten zu erhöhen, ermöglicht es Ihnen Adobe Experience Platform, die Benutzeraktivität für verschiedene Dienste und Funktionen in Form von &quot;Auditprotokollen&quot;zu überprüfen. Diese Protokolle bilden ein Audit-Protokoll, das Ihnen bei der Fehlerbehebung in Platform helfen und Ihrem Unternehmen helfen kann, die Richtlinien der Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen.
 
