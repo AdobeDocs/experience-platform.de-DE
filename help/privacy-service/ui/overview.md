@@ -5,14 +5,19 @@ title: Übersicht über die Privacy Service-Benutzeroberfläche
 topic-legacy: UI guide
 description: Beginnen Sie mit der Verwendung der Privacy Service-Benutzeroberfläche, um Datenschutzanfragen über verschiedene Experience Cloud-Anwendungen hinweg zu koordinieren und zu überwachen.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 3a98275b4b2969e2c7d8c1ec6ada14d1dd52b9b8
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 5%
+source-wordcount: '212'
+ht-degree: 4%
 
 ---
 
-# [!DNL Privacy Service] Benutzeroberfläche – Übersicht
+# [!DNL Privacy Service] Benutzeroberfläche – Übersicht {#privacy-ui-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacy_privacyconsole_requests"
+>title="Datensubjektanforderungen"
+>abstract="Dieses Widget zeigt die Anzahl der gesendeten und abgeschlossenen Anfragen von Datensubjekten an, die von Privacy Services an einem bestimmten Tag verarbeitet werden. Weitere Informationen zu Ihren Privacy Service-Prozessen erhalten Sie unter **Anforderungen** in der linken Navigation."
 
 Adobe Experience Platform [!DNL Privacy Service] bietet eine RESTful-API und eine Benutzeroberfläche, mit der Sie Datenschutz- und Compliance-Anfragen lösungsübergreifend koordinieren können. In diesem Dokument wird die [!DNL Privacy Service] Benutzeroberfläche. Informationen zur Verwendung der API finden Sie im Abschnitt [Handbuch zur Privacy Service-API](../api/overview.md).
 
