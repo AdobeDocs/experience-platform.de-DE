@@ -2,9 +2,9 @@
 title: Benutzerdefinierte Dashboards
 description: Erfahren Sie, wie Sie benutzerdefinierte Dashboards erstellen und verwalten, in denen Sie maßgeschneiderte Widgets erstellen, hinzufügen und bearbeiten können, um wichtige Metriken zu visualisieren.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: bf2b35e3366c71c51c58b6257cc55f7c9b0cd9c7
+source-git-commit: bb94f7438efe1e24056d6689ffc10b928fc633c2
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '881'
 ht-degree: 1%
 
 ---
@@ -37,9 +37,18 @@ Die [!UICONTROL Dashboard erstellen] angezeigt. Geben Sie einen benutzerfreundli
 
 Das neu erstellte leere Dashboard wird mit Ihrem Namen in der oberen linken Ecke der Ansicht angezeigt.
 
-## Widget erstellen
+## Widget erstellen {#create-widget}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_udd_maxwidgets"
+>title="Maximale Anzahl von Widgets"
+>abstract="Benutzerdefinierte Dashboards unterstützen bis zu zehn Widgets. Nachdem Sie zehn Widgets zu Ihrem Dashboard hinzugefügt haben, wird die [!UICONTROL Neues Widget hinzufügen] deaktiviert ist und grau angezeigt wird."
 
 Wählen Sie in der neuen Dashboard-Ansicht **[!UICONTROL Neues Widget hinzufügen]** , um den Erstellungsprozess für Widgets zu starten.
+
+>[!IMPORTANT]
+>
+>Benutzerdefinierte Dashboards unterstützen bis zu zehn Widgets. Nachdem Sie zehn Widgets zu Ihrem Dashboard hinzugefügt haben, wird die [!UICONTROL Neues Widget hinzufügen] deaktiviert ist und grau angezeigt wird.
 
 ![Das neue leere Dashboard mit hervorgehobenem Add new widget .](./images/user-defined-dashboards/add-new-widget.png)
 
