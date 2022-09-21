@@ -2,10 +2,10 @@
 title: Datenelementtypen für Edge-Erweiterungen
 description: Lernen Sie, wie Sie ein Bibliotheksmodul vom Typ „data-element-type“ für eine Tag-Erweiterung in einer Edge-Eigenschaft definieren.
 exl-id: ddbc3912-1c25-4d21-bde8-e40e583b4278
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 100%
+source-wordcount: '439'
+ht-degree: 94%
 
 ---
 
@@ -29,7 +29,7 @@ In diesem Dokument wird beschrieben, wie Sie Datenelementtypen für eine Edge-Er
 
 Datenelementtypen bestehen in der Regel aus Folgendem:
 
-1. Eine Ansicht, die in der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Einstellungen für das Datenelement zu ändern.
+1. Eine Ansicht, die in der Experience Platform-Benutzeroberfläche und der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Einstellungen für das Datenelement zu ändern.
 2. Ein Bibliotheksmodul, das in der Tag-Laufzeitbibliothek ausgegeben wird, um die Einstellungen zu interpretieren und Datensegmente abzurufen.
 
 Wenn Sie Benutzern erlauben möchten, ein Datenelement aus der benutzerdefinierten Datenschicht abzurufen, könnte Ihr Modul wie im folgenden Beispiel aussehen.

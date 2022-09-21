@@ -2,10 +2,10 @@
 title: Rule components-Endpunkt
 description: Erfahren Sie, wie Sie den /rule_components-Endpunkt in der Reactor-API aufrufen.
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1207'
-ht-degree: 100%
+source-wordcount: '1205'
+ht-degree: 98%
 
 ---
 
@@ -15,7 +15,7 @@ In Datenerfassungs-Tags steuern [Regeln](./rules.md) das Verhalten der Ressource
 
 >[!NOTE]
 >
->In diesem Dokument wird beschrieben, wie Sie Regelkomponenten in der Reactor-API verwalten. Weitere Informationen zur Interaktion mit Regeln und Regelkomponenten in der Datenerfassungs-Benutzeroberfläche finden Sie im [Handbuch zur Benutzeroberfläche](../../ui/managing-resources/rules.md).
+>In diesem Dokument wird beschrieben, wie Sie Regelkomponenten in der Reactor-API verwalten. Weitere Informationen zur Interaktion mit Regeln und Regelkomponenten in der Benutzeroberfläche finden Sie im Abschnitt [UI-Handbuch](../../ui/managing-resources/rules.md).
 
 Regelkomponenten haben drei grundlegende Typen:
 

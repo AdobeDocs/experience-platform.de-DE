@@ -2,10 +2,10 @@
 title: Übersicht über von Adobe verwaltete Hosts
 description: Erfahren Sie mehr über die Standard-Hosting-Option für die Bereitstellung von Tag-Bibliotheks-Builds in Adobe Experience Platform.
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1175'
-ht-degree: 99%
+source-wordcount: '1173'
+ht-degree: 97%
 
 ---
 
@@ -88,9 +88,9 @@ Wie aus der obigen Tabelle hervorgeht, wird die Browser-Zwischenspeicherung in d
 
 Cache-Steuerungs-Header werden nur für den Hauptbibliotheks-Build angewendet. Alle Unterressourcen unterhalb der Hauptbibliothek werden immer als neu erachtet und müssen daher nicht im Browser zwischengespeichert werden.
 
-## Verwenden des von Adobe verwalteten Hostings in der Datenerfassungs-Benutzeroberfläche
+## Verwenden von Adobe-verwaltetem Hosting in der Benutzeroberfläche
 
-Wenn Sie zum ersten Mal eine Eigenschaft in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) erstellen, wird automatisch ein von Adobe verwalteter Host erstellt. Alle verfügbaren Umgebungen, die sofort nutzbare Eigenschaften haben, werden standardmäßig auch dem von Adobe verwalteten Host zugewiesen.
+Wenn Sie zum ersten Mal eine Eigenschaft in der Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche erstellen, wird automatisch ein von der Adobe verwalteter Host erstellt. Alle verfügbaren Umgebungen, die sofort nutzbare Eigenschaften haben, werden standardmäßig auch dem von Adobe verwalteten Host zugewiesen.
 
 >[!NOTE]
 >

@@ -2,10 +2,10 @@
 title: Kopieren von Ressourcen
 description: Erfahren Sie, wie Sie in Adobe Experience Platform eine neue Tag-Ressource mit den Einstellungen einer schon vorhandenen Tag-Ressource erstellen.
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 100%
+source-wordcount: '780'
+ht-degree: 96%
 
 ---
 
@@ -35,7 +35,7 @@ Wenn Sie eine Regel oder ein Datenelement kopieren, können Sie im Dialogfeld �
 
 >[!NOTE]
 >
->In der Datenerfassungs-Benutzeroberfläche ist es nicht möglich, Ressourcen in eine andere Eigenschaft zu kopieren, wenn eine Eigenschaft für die Erweiterungsentwicklung konfiguriert ist und die andere Eigenschaft nicht.
+>Es ist nicht möglich, Ressourcen in eine andere Eigenschaft zu kopieren, wenn eine Eigenschaft für die Erweiterungsentwicklung konfiguriert ist und die andere Eigenschaft nicht.
 
 Nachdem Sie das gewünschte Verhalten konfiguriert haben, klicken Sie auf **[!UICONTROL Kopieren]**.
 

@@ -2,9 +2,9 @@
 title: Google-Datenschichterweiterung
 description: Erfahren Sie mehr über die Google Client-Datenschicht-Tag-Erweiterung in Adobe Experience Platform.
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: 51a263dc2f42fe3538f15f32c7573c69a2e2adc4
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '823'
 ht-degree: 8%
 
 ---
@@ -25,7 +25,7 @@ Version 1.0.x der Erweiterung ist eine Beta-Version. Diese Erweiterung wurde in 
 
 ## Installation
 
-Um die Erweiterung zu installieren, navigieren Sie zum Erweiterungskatalog in der Datenerfassungs-Benutzeroberfläche und wählen Sie **Google-Datenschicht**.
+Um die Erweiterung zu installieren, navigieren Sie zum Erweiterungskatalog in der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche und wählen Sie **Google-Datenschicht**.
 
 Nach der Installation erstellt oder greift die Erweiterung jedes Mal, wenn die Tag-Bibliothek auf Ihre Website geladen wird, auf eine Datenschicht zu.
 

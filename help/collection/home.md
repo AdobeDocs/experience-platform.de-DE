@@ -5,10 +5,10 @@ title: Datenerfassung – Übersicht
 topic-legacy: overview
 description: Erfahren Sie mehr über die verschiedenen Technologien zur Erfassung von Daten zu Kundenerlebnissen in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 84%
+source-wordcount: '469'
+ht-degree: 80%
 
 ---
 
@@ -38,7 +38,7 @@ Dieses Handbuch bietet eine allgemeine Einführung in die Datenerfassung und die
 
 ## Tags, Web SDK und Mobile SDK
 
-Das Platform Web SDK und Platform Mobile SDK reduzieren und komprimieren alle Adobe-Produktbibliotheken in einem einzigen Entwicklungs-Kit für Web- bzw. Mobilplattformen. Diese können mit Rohcode oder mithilfe von [Tags](../tags/home.md) über die Datenerfassungsbenutzeroberfläche implementiert werden.
+Das Platform Web SDK und Platform Mobile SDK reduzieren und komprimieren alle Adobe-Produktbibliotheken in einem einzigen Entwicklungs-Kit für Web- bzw. Mobilplattformen. Diese können mit Rohcode oder mithilfe von [tags](../tags/home.md) über die Datenerfassungs-Benutzeroberfläche oder die Adobe Experience Platform-Benutzeroberfläche.
 
 Durch Komprimieren dieser Bibliotheken wird die Datenerfassung beschleunigt und Vorgänge werden von Client-seitigen Geräten bis Platform Edge Network zu einem einzigen Stream zusammengefasst.
 

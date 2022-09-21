@@ -2,10 +2,10 @@
 title: Datenelementtypen für Web-Erweiterungen
 description: Erfahren Sie, wie Sie ein Bibliotheksmodul vom Typ „data-element“ für eine Tag-Erweiterung in einer Web-Eigenschaft definieren.
 exl-id: 3aa79322-2237-492f-82ff-0ba4d4902f70
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '596'
-ht-degree: 81%
+source-wordcount: '600'
+ht-degree: 80%
 
 ---
 
@@ -29,7 +29,7 @@ In diesem Dokument wird beschrieben, wie Sie Datenelementtypen für eine Web-Erw
 
 Datenelementtypen bestehen in der Regel aus Folgendem:
 
-1. A [Ansicht](./views.md) wird in der Datenerfassungs-Benutzeroberfläche angezeigt, über die Benutzer Einstellungen für das Datenelement ändern können.
+1. A [Ansicht](./views.md) wird in der Experience Platform-Benutzeroberfläche und der Datenerfassungs-Benutzeroberfläche angezeigt, über die Benutzer Einstellungen für das Datenelement ändern können.
 2. Ein Bibliotheksmodul, das in der Tag-Laufzeitbibliothek ausgegeben wird, um die Einstellungen zu interpretieren und Datensegmente abzurufen.
 
 Stellen Sie sich eine Situation vor, in der Sie den Benutzern erlauben möchten, ein Datenelement aus einem lokalen Speicherelement namens `productName` abzurufen. Ihr Modul könnte wie folgt aussehen:

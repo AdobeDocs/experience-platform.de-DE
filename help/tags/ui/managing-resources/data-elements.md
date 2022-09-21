@@ -2,10 +2,10 @@
 title: Datenelemente
 description: Datenelemente sind Bausteine für Ihr Datenwörterbuch (oder Ihre Datenkarte). Verwenden Sie Datenelemente zum Sammeln, Organisieren und Bereitstellen von Daten in Marketing- und Werbetechnologie.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: af9a5118f3633c132dd88ab659f570c9136b12e1
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1631'
-ht-degree: 99%
+source-wordcount: '1622'
+ht-degree: 97%
 
 ---
 
@@ -161,7 +161,7 @@ Wert abrufen von:
 
 Verfügbare JavaScript-Objekte oder -Variablen können mit dem Pfadfeld referenziert werden.
 
-Wenn Sie JavaScript-Variablen oder Objekteigenschaften in Ihrem Markup erfassen und diese mit Ihren Erweiterungen oder Regeln verwenden möchten, können Datenelemente zum Erfassen dieser Werte verwendet werden. Auf diese Weise können Sie das Datenelement in allen Ihren Regeln referenzieren, und sollte sich die Quelle der Daten jemals ändern, müssen Sie nur den Verweis auf die Quelle (das Datenelement) an einer Stelle in der Datenerfassungs-Benutzeroberfläche ändern.
+Wenn Sie JavaScript-Variablen oder Objekteigenschaften in Ihrem Markup erfassen und diese mit Ihren Erweiterungen oder Regeln verwenden möchten, können Datenelemente zum Erfassen dieser Werte verwendet werden. Auf diese Weise können Sie das Datenelement allen Ihren Regeln referenzieren, und sollte sich die Quelle der Daten jemals ändern, müssen Sie nur den Verweis auf die Quelle (das Datenelement) an einer Stelle in  ändern.
 
 Nehmen wir beispielsweise an, das Markup enthält eine JavaScript-Variable namens `Page_Name` wie hier gezeigt:
 
@@ -213,7 +213,7 @@ Nur der Abschnitt „Name“ ist erforderlich und spezielle Bezeichner wie „?�
 
 ### Zufällige Nummer
 
-Verwenden Sie dieses Datenelement zum Generieren einer zufälligen Nummer. Diese wird oft für das Sampling von Daten oder zum Erstellen von IDs wie einer Treffer-ID verwendet. Die Zufallszahl kann auch verwendet werden, um sensible Daten zu verschleiern oder zu verbergen. Mögliche Beispiele sind:
+Verwenden Sie dieses Datenelement zum Generieren einer zufälligen Nummer. Sie wird häufig zum Sampling von Daten oder zum Erstellen von IDs wie einer Treffer-ID verwendet. Die Zufallszahl kann auch verwendet werden, um sensible Daten zu verschleiern oder zu verbergen. Mögliche Beispiele sind:
 
 * Generieren einer Treffer-ID
 * Verketten der Nummer für ein Benutzer-Token oder einen Zeitstempel zur Gewährleistung der Eindeutigkeit
@@ -257,7 +257,7 @@ Einige häufige Anwendungsfälle lauten wie folgt:
 
 ## Integrierte Datenelemente
 
-Sie müssen in der Datenerfassungs-Benutzeroberfläche ein benutzerdefiniertes Datenelement erstellen, wenn Sie zuvor eines der folgenden Datenelemente verwendet haben:
+Sie müssen zusätzliche benutzerdefinierte Datenelemente erstellen, wenn Sie zuvor eines der folgenden Datenelemente verwendet haben:
 
 * URI
 * Protokoll

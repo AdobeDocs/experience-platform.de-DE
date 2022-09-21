@@ -3,10 +3,10 @@ title: Übersicht über die Ereignisweiterleitung
 description: Hier erfahren Sie mehr über Adobe Experience Platform, mit dessen Hilfe Sie über das Platform Edge-Netzwerk Aufgaben ausführen können, ohne dabei Ihre Tag-Implementierung zu ändern.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '955'
-ht-degree: 100%
+source-wordcount: '959'
+ht-degree: 96%
 
 ---
 
@@ -49,7 +49,7 @@ Während Tags Ereignisdaten mithilfe der Platform Web- und Mobile-SDKs direkt au
 
 ### Properties {#properties}
 
-Die Ereignisweiterleitung verwaltet einen eigenen Speicher mit Properties, die von Tags getrennt sind. Diese können Sie in der Datenerfassungs-Benutzeroberfläche durch Auswählen von **[!UICONTROL Ereignisweiterleitung]** in der linken Navigation anzeigen.
+Die Ereignisweiterleitung verwaltet ihren eigenen Speicher mit Eigenschaften, die von Tags getrennt sind. Diese können Sie in der Benutzeroberfläche für die Experience Platform oder in der Benutzeroberfläche für die Datenerfassung anzeigen, indem Sie **[!UICONTROL Ereignisweiterleitung]** in der linken Navigation.
 
 ![Properties der Ereignisweiterleitung in der Datenerfassungs-Benutzeroberfläche](../../images/ui/event-forwarding/overview/properties.png)
 

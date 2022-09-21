@@ -2,9 +2,9 @@
 title: Premium CDN-Unterstützung für Tags
 description: Erfahren Sie mehr über die Premium-CDN-Funktion für Tags und wie Sie damit Ihre Inhalte in mehreren geografischen Regionen bereitstellen können.
 exl-id: 33e36d3b-9e21-44a8-8498-32a5fc20b46b
-source-git-commit: 3843b08a3a047200f02c1ceb17a64a196d4a0287
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ Wenn Sie eine [Von Adobe verwalteter Host](./hosts/managed-by-adobe-host.md) Um 
 
 Um dies zu berücksichtigen, bieten Tags in Experience Platform eine Premium-CDN-Funktion, mit der Sie Inhalte für diese Sonderregionen bereitstellen können.
 
-Die Premium-CDN-Unterstützung ist eine gebührenpflichtige Funktion und muss von Ihrer Organisation erworben werden, um sie zu aktivieren und zu verwenden. In diesem Handbuch wird beschrieben, wie Sie diese Funktion nach dem Kauf in der Datenerfassungs-Benutzeroberfläche konfigurieren und verwenden.
+Die Premium-CDN-Unterstützung ist eine gebührenpflichtige Funktion und muss von Ihrer Organisation erworben werden, um sie zu aktivieren und zu verwenden. In diesem Handbuch wird beschrieben, wie Sie diese Funktion nach dem Kauf in der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche konfigurieren und verwenden.
 
 ## Premium-CDN für Ihre Organisation aktivieren
 
-Premium CDN wird auf Unternehmensebene aktiviert. Sobald Ihr Unternehmen die Premium-CDN-Funktion erworben hat, aktiviert ein Adobe-Administrator für Ihr Unternehmen die Datenerfassungs-Benutzeroberfläche.
+Premium CDN wird auf Unternehmensebene aktiviert. Sobald Ihr Unternehmen die Premium-CDN-Funktion erworben hat, aktiviert ein Adobe-Administrator die Funktion in der Benutzeroberfläche für Ihr Unternehmen.
 
 ## Tag-Bibliotheken mit aktualisierten Einbettungscodes neu erstellen und installieren
 

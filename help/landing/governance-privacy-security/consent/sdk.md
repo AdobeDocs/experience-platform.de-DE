@@ -3,7 +3,7 @@ title: Verarbeiten von Kundeneinwilligungsdaten mit dem Adobe Experience Platfor
 topic-legacy: getting started
 description: Erfahren Sie, wie Sie das Adobe Experience Platform Web SDK integrieren, um Kundeneinwilligungsdaten in Adobe Experience Platform zu verarbeiten.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 79bc41c713425e14bb3c12646b9b71b2c630618b
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 2%
@@ -23,7 +23,7 @@ In diesem Tutorial wird davon ausgegangen, dass Sie bereits ermittelt haben, wie
 * [Datensatz mit dem Adobe-Standard erstellen](./adobe/dataset.md)
 * [Datensatz mit dem TCF 2.0-Standard erstellen](./iab/dataset.md)
 
-Dieses Handbuch folgt dem Workflow zum Einrichten des SDK mithilfe der Tag-Erweiterung in der Datenerfassungs-Benutzeroberfläche. Wenn Sie die -Erweiterung nicht verwenden möchten und die eigenständige Version des SDK lieber direkt auf Ihrer Site einbetten möchten, lesen Sie die folgenden Dokumente anstelle dieses Handbuchs:
+Dieses Handbuch folgt dem Workflow zum Einrichten des SDK mithilfe der Tag-Erweiterung in der Benutzeroberfläche. Wenn Sie die -Erweiterung nicht verwenden möchten und die eigenständige Version des SDK lieber direkt auf Ihrer Site einbetten möchten, lesen Sie die folgenden Dokumente anstelle dieses Handbuchs:
 
 * [Konfigurieren eines Datenspeichers](../../../edge/datastreams/overview.md)
 * [Installieren des SDK](../../../edge/fundamentals/installing-the-sdk.md)
@@ -37,7 +37,7 @@ Die Installationsschritte in diesem Handbuch erfordern ein Verständnis der Tag-
 
 ## Einrichten eines Datastreams
 
-Damit das SDK Daten an Experience Platform senden kann, müssen Sie zunächst einen Datenspeicher konfigurieren. Wählen Sie in der Datenerfassungs-Benutzeroberfläche die Option **[!UICONTROL Datenspeicher]** in der linken Navigation.
+Damit das SDK Daten an Experience Platform senden kann, müssen Sie zunächst einen Datenspeicher konfigurieren. Wählen Sie in der Datenerfassungs-Benutzeroberfläche oder der Benutzeroberfläche &quot;Experience Platform&quot;die Option **[!UICONTROL Datenspeicher]** in der linken Navigation.
 
 Nachdem Sie einen neuen Datensatz erstellt oder einen vorhandenen ausgewählt haben, den Sie bearbeiten möchten, wählen Sie die Umschalter-Schaltfläche neben **[!UICONTROL Adobe Experience Platform]**. Verwenden Sie anschließend die unten aufgeführten Werte, um das Formular auszufüllen.
 
@@ -80,7 +80,7 @@ Wenn die Region des Benutzers durch eine CMP bestimmt wird, können Sie stattdes
 1. Legen Sie im Ereignis-Handler eine `adobeDefaultConsent` auf Grundlage der Region des Benutzers und laden Sie dann das Tag-Bibliotheksskript mithilfe von JavaScript.
 1. Richten Sie ein Datenelement ein, das die `adobeDefaultConsent` JavaScript-Variable und verwenden Sie dieses Datenelement als standardmäßigen Zustimmungswert für den Benutzer.
 
-Um ein Datenelement in der Datenerfassungs-Benutzeroberfläche zu erstellen, wählen Sie **[!UICONTROL Datenelemente]** Wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Datenelement hinzufügen]** , um zum Dialogfeld zur Datenelementerstellung zu navigieren.
+Um ein Datenelement in der Benutzeroberfläche zu erstellen, wählen Sie **[!UICONTROL Datenelemente]** Wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Datenelement hinzufügen]** , um zum Dialogfeld zur Datenelementerstellung zu navigieren.
 
 Von hier aus müssen Sie eine [!UICONTROL JavaScript-Variable] Datenelement basierend auf `adobeDefaultConsent`. Wählen Sie **[!UICONTROL Speichern]**, wenn Sie fertig sind.
 

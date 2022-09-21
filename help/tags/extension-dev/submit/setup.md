@@ -2,10 +2,10 @@
 title: Einrichten der Experience Cloud-Organisation
 description: Hier erfahren Sie, wie Sie eine Adobe Experience Cloud-Organisation registrieren, um mit der Entwicklung von Erweiterungen für Adobe Experience Platform zu beginnen.
 exl-id: ee36319d-5de8-462e-879b-311445cf334c
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '608'
-ht-degree: 100%
+source-wordcount: '595'
+ht-degree: 95%
 
 ---
 
@@ -41,7 +41,9 @@ Dieses Programm richtet sich an Beratungsfirmen, die Adobe-Kunden dabei unterst�
 >
 >Derzeit kann Ihre geschäftliche E-Mail-Adresse jeweils nur in einem Partnerprogramm verwendet werden, so dass Sie für jedes der Programme eine andere geschäftliche E-Mail-Adresse als registrierten Kontakt verwenden müssen.
 
-Sobald sich Ihre Firma im Exchange Partner-Programm befindet, können Sie den Zugriff auf Adobe-Lösungen anfordern, indem Sie sich bei der [Exchange Partner-Website](https://partners.adobe.com/exchangeprogram/experiencecloud) anmelden und die folgenden Schritte ausführen. Wenn Sie bereits über ein Experience Cloud-Konto und Zugriff auf Lösungen verfügen, aber keinen Zugriff auf die Datenerfassungs-Benutzeroberfläche in Adobe Experience Platform haben, finden Sie weitere Informationen in den [Anweisungen zum Einrichten von Gruppen und Benutzern](../../ui/administration/user-permissions.md).
+Sobald sich Ihre Firma im Exchange Partner-Programm befindet, können Sie den Zugriff auf Adobe-Lösungen anfordern, indem Sie sich bei der [Exchange Partner-Website](https://partners.adobe.com/exchangeprogram/experiencecloud) anmelden und die folgenden Schritte ausführen.
+
+Wenn Sie über ein Experience Cloud-Konto verfügen, das Zugriff auf die Datenerfassungs-Benutzeroberfläche und die Benutzeroberfläche für Experience Platformen erfordert, lesen Sie die Informationen unter [Handbuch zu Datenerfassungsberechtigungen](../../../collection/permissions.md).
 
 ## Für unabhängige Entwickler
 

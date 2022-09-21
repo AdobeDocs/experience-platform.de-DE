@@ -1,11 +1,11 @@
 ---
 title: Konfigurieren von Geheimnissen bei der Ereignisweiterleitung
-description: Hier erfahren Sie, wie Sie Geheimnisse in der Datenerfassungs-Benutzeroberfläche konfigurieren können, um sich bei Endpunkten zu authentifizieren, die in den Properties der Ereignisweiterleitung verwendet werden.
+description: Erfahren Sie, wie Sie Geheimnisse in der Benutzeroberfläche konfigurieren, um sich bei Endpunkten zu authentifizieren, die in den Eigenschaften der Ereignisweiterleitung verwendet werden.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 4f3c97e2cad6160481adb8b3dab3d0c8b23717cc
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1637'
-ht-degree: 84%
+source-wordcount: '1633'
+ht-degree: 78%
 
 ---
 
@@ -24,7 +24,7 @@ Derzeit werden drei Typen von geheimen Daten unterstützt:
 
 {style=&quot;table-layout:auto&quot;}
 
-Dieses Handbuch bietet einen allgemeinen Überblick darüber, wie geheime Daten für eine [!UICONTROL Edge]-Eigenschaft zur Ereignisweiterleitung in der Datenerfassungs-Benutzeroberfläche konfiguriert werden.
+Dieses Handbuch bietet einen allgemeinen Überblick darüber, wie Geheimnisse für die Ereignisweiterleitung konfiguriert werden ([!UICONTROL Edge]) in der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche.
 
 >[!NOTE]
 >
@@ -32,13 +32,13 @@ Dieses Handbuch bietet einen allgemeinen Überblick darüber, wie geheime Daten 
 
 ## Voraussetzungen
 
-In diesem Handbuch wird davon ausgegangen, dass Sie bereits mit der Verwaltung von Ressourcen für Tags und mit der Ereignisweiterleitung in der Datenerfassungs-Benutzeroberfläche vertraut sind, einschließlich der Erstellung eines Datenelements und einer Ereignisweiterleitungsregel. Wenn Sie eine Einführung benötigen, finden Sie weitere Informationen im Handbuch unter [Verwalten von Ressourcen](../managing-resources/overview.md).
+In diesem Handbuch wird davon ausgegangen, dass Sie bereits mit der Verwaltung von Ressourcen für Tags und die Ereignisweiterleitung in der Benutzeroberfläche vertraut sind, einschließlich der Erstellung eines Datenelements und einer Ereignisweiterleitungsregel. Wenn Sie eine Einführung benötigen, finden Sie weitere Informationen im Handbuch unter [Verwalten von Ressourcen](../managing-resources/overview.md).
 
 Außerdem sollten Sie über ein grundlegendes Verständnis des Veröffentlichungsflusses im Hinblick auf Tags und Ereignisweiterleitung verfügen, einschließlich der Möglichkeit, Ressourcen zu einer Bibliothek hinzuzufügen und einen Build zum Testen auf Ihrer Website zu installieren. Weitere Informationen finden Sie in der [Publishing-Übersicht](../publishing/overview.md).
 
 ## Erstellen geheimer Daten {#create}
 
-Um geheime Daten zu erstellen, melden Sie sich bei der Datenerfassungs-Benutzeroberfläche an und öffnen Sie die Ereignisweiterleitungseigenschaft, unter der Sie die geheimen Daten hinzufügen möchten. Wählen Sie anschließend im linken Navigationsbereich zunächst **[!UICONTROL Geheime Daten]** und dann **[!UICONTROL Neue geheime Daten erstellen]** aus.
+Um einen geheimen Schlüssel zu erstellen, wählen Sie **[!UICONTROL Ereignisweiterleitung]** Öffnen Sie in der linken Navigation die Ereignisweiterleitungs-Eigenschaft, unter der Sie das Geheimnis hinzufügen möchten. Wählen Sie anschließend im linken Navigationsbereich zunächst **[!UICONTROL Geheime Daten]** und dann **[!UICONTROL Neue geheime Daten erstellen]** aus.
 
 ![Neue geheimen Daten erstellen](../../images/ui/event-forwarding/secrets/create-new-secret.png)
 
@@ -87,7 +87,7 @@ Um geheime Daten vom Typ „HTTP“ zu erstellen, wählen Sie in der Dropdown-Li
 
 ### [!UICONTROL OAuth2] {#oauth2}
 
-Um geheime Daten vom Typ „OAuth2“ zu erstellen, wählen Sie aus der Dropdown-Liste **[!UICONTROL Typ]** die Option **[!UICONTROL OAuth2]** aus. Geben Sie in den unten angezeigten Feldern Ihre [[!UICONTROL Client-ID] und [!UICONTROL Client Secret]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)sowie [[!UICONTROL Token-URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) für Ihre OAuth-Integration. Die [!UICONTROL Token-URL] -Feld in der Datenerfassungs-Benutzeroberfläche ist eine Verkettung zwischen dem Autorisierungsserverhost und dem Tokenpfad.
+Um geheime Daten vom Typ „OAuth2“ zu erstellen, wählen Sie aus der Dropdown-Liste **[!UICONTROL Typ]** die Option **[!UICONTROL OAuth2]** aus. Geben Sie in den unten angezeigten Feldern Ihre [[!UICONTROL Client-ID] und [!UICONTROL Client Secret]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)sowie [[!UICONTROL Token-URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) für Ihre OAuth-Integration. Die [!UICONTROL Token-URL] -Feld in der Benutzeroberfläche ist eine Verkettung zwischen dem Autorisierungsserverhost und dem Tokenpfad.
 
 ![Geheime Daten vom Typ „OAuth2“](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
@@ -180,4 +180,4 @@ Indem Sie einem einzelnen Datenelement mehrere geheime Daten zuweisen und es in 
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie geheime Daten in der Datenerfassungs-Benutzeroberfläche verwaltet werden. Informationen zur Interaktion mit geheimen Daten mithilfe der Reactor-API finden Sie im [Endpunktleitfaden für geheime Daten](../../api/endpoints/secrets.md).
+In diesem Handbuch wurde beschrieben, wie Geheimnisse in der Benutzeroberfläche verwaltet werden. Informationen zur Interaktion mit geheimen Daten mithilfe der Reactor-API finden Sie im [Endpunktleitfaden für geheime Daten](../../api/endpoints/secrets.md).

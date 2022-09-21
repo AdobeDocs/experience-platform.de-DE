@@ -3,10 +3,10 @@ title: Erste Schritte mit der Ereignisweiterleitung
 description: In diesem Schritt-für-Schritt-Tutorial erfahren Sie, wie Sie mit der Ereignisweiterleitung in Adobe Experience Platform beginnen.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '907'
-ht-degree: 100%
+source-wordcount: '872'
+ht-degree: 88%
 
 ---
 
@@ -42,7 +42,7 @@ Erstellen Sie in Adobe Experience Platform Ihr Schema.
 
 1. Versehen Sie das Schema mit einem Namen und einer Kurzbeschreibung.
 
-1. Sie können die Feldgruppe „ExperienceEvent-Web-Details“ hinzufügen, indem Sie **[!UICONTROL Hinzufügen]** neben **[!UICONTROL Feldgruppen]** auswählen. 
+1. Sie können die Feldergruppe &quot;ExperienceEvent web details&quot;hinzufügen, indem Sie **[!UICONTROL Hinzufügen]** neben **[!UICONTROL Feldergruppen]**.
 
    >[!NOTE]
    >
@@ -54,13 +54,13 @@ Weitere Informationen zu Schemata finden Sie unter [Experience-Datenmodell (XDM)
 
 ## Erstellen einer Ereignisweiterleitungseigenschaft
 
-Erstellen Sie in der Datenerfassungs-Benutzeroberfläche eine Eigenschaft vom Typ „Edge“.
+Im **[!UICONTROL Tags]** Workspace erstellen Sie eine Eigenschaft vom Typ **[!UICONTROL Edge]**.
 
 1. Wählen Sie **[!UICONTROL Neue Eigenschaft]** aus.
 
 1. Benennen Sie die Eigenschaft.
 
-1. Wählen Sie den Plattformtyp „Edge“ aus.
+1. Wählen Sie den Plattformtyp &quot;Edge&quot;aus.
 
 1. Wählen Sie **[!UICONTROL Speichern]** aus.
 
@@ -71,22 +71,18 @@ notieren Sie sich die Umgebungs-IDs. Wenn sich die im Daten-Stream verwendete Ad
 
 Verwenden Sie zum Erstellen Ihres Daten-Streams in Adobe Experience Platform die Umgebungs-ID, die beim Erstellen der Ereignisweiterleitungseigenschaft generiert wurde.
 
-1. Verwenden Sie den Link in der linken Leiste der Datenerfassungs-Benutzeroberfläche, um die Oberfläche für Daten-Streams zu öffnen.
-
-1. Wählen Sie **[!UICONTROL Daten-Streams]** aus.
+1. Auswählen **[!UICONTROL Datenspeicher]** in der linken Navigation.
 
 1. Benennen Sie die Konfiguration und geben Sie eine optionale Beschreibung ein.
 Die Beschreibung hilft, Konfigurationen in einer Liste mehrerer Konfigurationen zu identifizieren.
 
 1. Wählen Sie **[!UICONTROL Speichern]** aus.
 
-
-
 ## Aktivieren der Ereignisweiterleitung
 
 Konfigurieren Sie als Nächstes Edge Network, um Daten an die Ereignisweiterleitung und andere Adobe-Produkte zu senden.
 
-1. Wählen Sie in der Daten-Streams-Benutzeroberfläche die von Ihnen erstellte Eigenschaft aus.
+1. Im **[!UICONTROL Datenspeicher]** Arbeitsbereich die von Ihnen erstellte Eigenschaft aus.
 
 1. Wählen Sie die Entwicklungs-, Betreibungs- oder Staging-Umgebung.
 
@@ -102,23 +98,15 @@ Notieren Sie sich nach der Konfiguration die Umgebungs-IDs für die neue Eigensc
 
 ## Konfigurieren der Platform Web SDK-Erweiterung, um Daten an den zuvor erstellten Daten-Stream zu senden
 
-Erstellen Sie Ihre Eigenschaft in der Datenerfassungs-Benutzeroberfläche und konfigurieren Sie sie dann mit der Web SDK-Erweiterung von Adobe Experience Platform.
+Erstellen Sie Ihre Eigenschaft im **[!UICONTROL Tags]** Arbeitsbereich und navigieren Sie dann zu **[!UICONTROL Erweiterungen]** und wählen Sie die Experience Platform Web SDK-Erweiterung aus dem Katalog aus, um sie zu konfigurieren und zu installieren.
 
-1. Benennen Sie die Eigenschaft.
-
-   Sie können mehrere Alloy-Instanzen haben. Sie können beispielsweise verschiedene Tracking-Eigenschaften vor und hinter einer Paywall haben.
-
-1. Wählen Sie die Org-ID aus.
-
-1. Wählen Sie die Edge-Domain aus.
-
-Weitere Konfigurationsoptionen finden Sie in der [Dokumentation zur Web SDK-Erweiterung](../../extensions/web/sdk/overview.md).
+Siehe [Dokumentation zur Web SDK-Erweiterung](../../extensions/web/sdk/overview.md) für Details zu Konfigurationsoptionen.
 
 ## Erstellen einer Tag-Regel zum Senden von Daten an das Platform Web SDK
 
 Nachdem alle oben genannten Elemente eingerichtet sind, können Sie die erforderlichen Datendefinitionen, Regeln usw. erstellen, die sowohl Ereignisweiterleitung als auch Tags nutzen, für die jedoch nur eine einzige Anfrage von der Seite benötigt wird.
 
-Erstellen Sie eine Seitenladeregel mit der Platform Web SDK-Erweiterung und dem Aktionstyp „Ereignis senden“:
+Erstellen Sie eine Seitenladeregel mit der Platform Web SDK-Erweiterung und dem Aktionstyp &quot;Ereignis senden&quot;:
 
 1. Öffnen Sie die Registerkarte **[!UICONTROL Regeln]** und wählen Sie **[!UICONTROL Neue Regel erstellen]** aus.
 

@@ -2,10 +2,10 @@
 title: Bedingungstypen für Edge-Erweiterungen
 description: Erfahren Sie, wie Sie in Adobe Experience Platform ein Bibliotheksmodul des Typs „condition-type“ für eine Edge-Erweiterung definieren.
 exl-id: fe13420e-ffa7-49d6-92c4-965ebd9d7390
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 88%
+source-wordcount: '412'
+ht-degree: 83%
 
 ---
 
@@ -29,7 +29,7 @@ In diesem Dokument wird beschrieben, wie Sie Bedingungstypen für eine Kantenerw
 
 Bedingungstypen bestehen in der Regel aus Folgendem:
 
-1. Eine Ansicht, die in der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Einstellungen für die Bedingung zu ändern.
+1. Eine Ansicht, die in der Experience Platform-Benutzeroberfläche und der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Bedingungseinstellungen zu ändern.
 2. Ein Bibliotheksmodul, das in der Tag-Laufzeitbibliothek ausgegeben wird, um die Einstellungen zu interpretieren und eine Bedingung auszuwerten.
 
 Wenn Sie z. B. prüfen möchten, ob sich der Benutzer auf dem Host `example.com` befindet, könnte Ihr Modul wie folgt aussehen.

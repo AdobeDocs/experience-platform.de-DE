@@ -2,10 +2,10 @@
 title: Ereignistypen für Web-Erweiterungen
 description: Erfahren Sie, wie Sie ein Bibliotheksmodul vom Typ „event-type“ für eine Web-Erweiterung in Adobe Experience Platform definieren.
 exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1048'
-ht-degree: 100%
+source-wordcount: '1052'
+ht-degree: 98%
 
 ---
 
@@ -27,7 +27,7 @@ In diesem Dokument wird beschrieben, wie Sie Ereignistypen für eine Web-Erweite
 
 Ereignistypen werden durch Erweiterungen definiert und bestehen normalerweise aus folgenden Elementen:
 
-1. Eine [Ansicht](./views.md), die in der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Einstellungen für das Ereignis zu ändern.
+1. A [Ansicht](./views.md) wird in der Experience Platform-Benutzeroberfläche und der Datenerfassungs-Benutzeroberfläche angezeigt, über die Benutzer die Ereigniseinstellungen ändern können.
 2. Ein Bibliotheksmodul, das in der Tag-Laufzeitbibliothek ausgegeben wird, um die Einstellungen zu interpretieren und um zu überwachen, ob eine bestimmte Aktivität eintritt.
 
 `module.exports` akzeptieren die Parameter `settings` und `trigger`. Dies ermöglicht die Anpassung des Ereignistyps.

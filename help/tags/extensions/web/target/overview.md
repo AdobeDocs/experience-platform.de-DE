@@ -2,10 +2,10 @@
 title: Adobe Target-Erweiterung – Übersicht
 description: Erfahren Sie mehr über die Tag-Erweiterung „Adobe Target“ in Adobe Experience Platform.
 exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1194'
-ht-degree: 100%
+source-wordcount: '1192'
+ht-degree: 95%
 
 ---
 
@@ -31,13 +31,13 @@ Wenn die Adobe Target-Erweiterung noch nicht installiert ist, öffnen Sie die Ei
 
 ### at.js-Einstellungen
 
-All Ihre at.js-Einstellungen mit Ausnahme der Zeitüberschreitung werden automatisch aus Ihrer at.js-Konfiguration in der Target-Benutzeroberfläche abgerufen. Die Erweiterung ruft nur dann Einstellungen aus der Target-Benutzeroberfläche ab, wenn sie erstmalig hinzugefügt wird. Daher sollten alle Einstellungen in der Datenerfassungs-Benutzeroberfläche verwaltet werden, wenn zusätzliche Aktualisierungen erforderlich sind.
+All Ihre at.js-Einstellungen mit Ausnahme der Zeitüberschreitung werden automatisch aus Ihrer at.js-Konfiguration in der Target-Benutzeroberfläche abgerufen. Die Erweiterung ruft nur Einstellungen von der Target-Benutzeroberfläche ab, wenn sie zum ersten Mal hinzugefügt wird. Daher sollten alle Einstellungen in der Benutzeroberfläche verwaltet werden, wenn zusätzliche Aktualisierungen erforderlich sind.
 
 Die folgenden Konfigurationsoptionen sind verfügbar:
 
 #### Clientcode
 
-Der Client-Code ist die Kontokennung von Target. Der entsprechende Wert sollte nahezu immer als Standardwert beibehalten werden.
+Der Clientcode ist die Konto-ID von Target. Der entsprechende Wert sollte nahezu immer als Standardwert beibehalten werden.
 
 Kann mithilfe von Datenelementen geändert werden.
 
@@ -141,7 +141,7 @@ Nachfolgend werden einige Aspekte aufgeführt, die Sie bei Verwendung des vorab 
    * Wenn die globale Mbox-Antwort empfangen wurde
    * Wenn für die globale Mbox-Anfrage eine Zeitüberschreitung eintritt
    * Wenn für den Ausschnitt selbst eine Zeitüberschreitung eintritt
-* Die Aktion „Globale Mbox auslösen“ sollte auf allen Seiten verwendet werden, bei denen der vorab ausgeblendete Ausschnitt zum Einsatz kommt, um die Dauer der Vorab-Ausblendung zu minimieren.
+* Die Aktion &quot;Globale Mbox auslösen&quot;sollte auf allen Seiten verwendet werden, die den vorab ausgeblendeten Ausschnitt verwenden, um die Dauer der Vorab-Ausblendung zu minimieren.
 
 Der vorab ausgeblendete Codeausschnitt lautet wie folgt und kann minimiert werden. Die konfigurierbaren Optionen befinden sich am Ende:
 

@@ -2,10 +2,10 @@
 title: Aktionstypen für Web-Erweiterungen
 description: Erfahren Sie, wie Sie ein Bibliotheksmodul vom Typ „action-type“ für eine Tag-Erweiterung in einer Web-Eigenschaft definieren.
 exl-id: d4539132-a72c-40b0-84b6-50cbe3785d2d
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 100%
+source-wordcount: '412'
+ht-degree: 94%
 
 ---
 
@@ -29,7 +29,7 @@ In diesem Dokument wird beschrieben, wie Sie Aktionstypen für eine Web-Erweiter
 
 Aktionstypen bestehen in der Regel aus dem Folgenden:
 
-1. Eine [Ansicht](./views.md), die in der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Einstellungen für die Aktion zu ändern.
+1. A [Ansicht](./views.md) wird in der Experience Platform-Benutzeroberfläche und der Datenerfassungs-Benutzeroberfläche angezeigt, über die Benutzer die Aktionseinstellungen ändern können.
 2. Ein Bibliotheksmodul, das in der Tag-Laufzeitbibliothek ausgegeben wird, um die Einstellungen zu interpretieren und eine Aktion durchzuführen.
 
 ```js

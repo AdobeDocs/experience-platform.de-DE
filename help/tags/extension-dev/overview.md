@@ -2,10 +2,10 @@
 title: Überblick zum Entwickeln von Erweiterungen
 description: Lernen Sie die Hauptkomponenten verschiedener Tag-Erweiterungstypen und den Prozess der Erweiterungsentwicklung in Adobe Experience Platform kennen.
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '949'
-ht-degree: 100%
+source-wordcount: '950'
+ht-degree: 95%
 
 ---
 
@@ -37,11 +37,11 @@ Sie können Bibliotheksmoduldateien an einer beliebigen Stelle im Erweiterungsor
 
 ### Ansichten 
 
-Eine Ansicht ist eine HTML-Datei, die in ein [`iframe`-Element](https://developer.mozilla.org/de-DE/docs/Web/HTML/Element/iframe) innerhalb des Tags-Programms geladen werden kann, insbesondere über die Datenerfassungs-Benutzeroberfläche. Die Ansicht muss ein von der Erweiterung bereitgestelltes Skript enthalten und mit einer kleinen API konform sein, um mit dem Programm kommunizieren zu können.
+Eine Ansicht ist eine HTML-Datei, die in eine [`iframe` element](https://developer.mozilla.org/de-DE/docs/Web/HTML/Element/iframe) innerhalb der Tags-Anwendung, insbesondere über die Platform-Benutzeroberfläche und die Datenerfassungs-Benutzeroberfläche. Die Ansicht muss ein von der Erweiterung bereitgestelltes Skript enthalten und mit einer kleinen API konform sein, um mit dem Programm kommunizieren zu können.
 
 Die wichtigste Ansichtsdatei für eine Erweiterung ist ihre Konfiguration. Weitere Informationen finden Sie im Abschnitt [Erweiterungskonfigurationen](#configuration).
 
-Es gibt keine Einschränkungen hinsichtlich der Verwendung von Bibliotheken in Ihren Ansichten. Mit anderen Worten: Sie können jQuery, Underscore, React, Angular, Bootstrap oder andere verwenden. Es wird jedoch dennoch empfohlen, Ihre Erweiterung so zu gestalten, dass sie ein ähnliches Erscheinungsbild wie die Datenerfassungs-Benutzeroberfläche hat.
+Es gibt keine Einschränkungen hinsichtlich der Verwendung von Bibliotheken in Ihren Ansichten. Mit anderen Worten: Sie können jQuery, Underscore, React, Angular, Bootstrap oder andere verwenden. Es wird jedoch dennoch empfohlen, dafür zu sorgen, dass Ihre Erweiterung ein ähnliches Erscheinungsbild wie die Benutzeroberfläche hat.
 
 Es wird empfohlen, alle ansichtsbezogenen Dateien (HTML, CSS, JavaScript) in einem einzigen Unterverzeichnis abzulegen, das von den Bibliotheksmoduldateien getrennt ist. In `extension.json` können Sie beschreiben, wo sich dieser Unterordner für die Ansichten befindet. Platform bedient dann dieses Unterverzeichnis (und nur dieses Unterverzeichnis) von seinen Webservern aus.
 
