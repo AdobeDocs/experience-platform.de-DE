@@ -4,7 +4,7 @@ user-guide-title: Adobe Experience Platform Identity Service
 breadcrumb-title: Anleitung zum Platform Identity Service
 user-guide-description: Verknüpfen Sie Kundenidentitäten zwischen Geräten und Systemen, um personalisierte digitale Erlebnisse bereitzustellen.
 feature: Identities
-source-git-commit: ae51c9bd07944f26be2809a6d15f9d9e8c2fd5a1
+source-git-commit: 75362c67e1a8a31a449cb4c9dd618515325d36f0
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 90%
@@ -28,7 +28,7 @@ ht-degree: 90%
    - [Native Kennung für eine Identität auflisten](api/list-native-id.md)
 - Benutzeroberfläche von Identity Service {#ui}
    - [Identitätsdiagramm-Viewer](ui/identity-graph-viewer.md)
-   - [Erkennung von gemeinsamen Geräten](ui/shared-devices.md)
+   - [Erkennung von gemeinsamen Geräten](ui/shared-device-detection.md)
    - [Identitätsfelder in der Benutzeroberfläche definieren](ui/label-identities.md)
 - [ECID-Übersicht](ecid.md)
 - [Verarbeitung von Datenschutzanfragen](privacy.md)
