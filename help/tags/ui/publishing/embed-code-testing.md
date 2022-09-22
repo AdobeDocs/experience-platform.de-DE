@@ -2,10 +2,10 @@
 title: Testen von Einbettungs-Codes mit Adobe Experience Platform Debugger
 description: Hier erfahren Sie, wie Sie mit Platform Debugger verschiedene Einbettungs-Codes für Adobe Experience Platform lokal auf Ihrer Website testen können.
 exl-id: ae6183b9-0d25-49d0-b0e9-f8b5ba58ab33
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 96%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ Wenn Sie Änderungen an Ihren Tag-Bibliotheks-Builds in Adobe Experience Platfor
 
 ## Voraussetzungen
 
-Dieses Tutorial setzt ein grundlegendes Verständnis der Verwendung von Umgebungen und Einbettungscodes für Tags voraus. Weitere Informationen dazu finden Sie in der [Übersicht zu Umgebungen](./environments.md).
+Dieses Tutorial erfordert ein grundlegendes Verständnis der Verwendung von Umgebungen und Einbettungs-Codes in der Datenerfassungs-Benutzeroberfläche. Weitere Informationen dazu finden Sie in der [Übersicht zu Umgebungen](./environments.md).
 
 Für dieses Tutorial muss außerdem die Browser-Erweiterung „Platform Debugger“ installiert sein. Platform Debugger ist nur für Chrome- und Firefoxbrowser verfügbar. Verwenden Sie einen der folgenden Links, um die Erweiterung zu installieren, bevor Sie mit dem Tutorial beginnen:
 

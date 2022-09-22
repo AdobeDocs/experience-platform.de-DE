@@ -2,10 +2,10 @@
 title: Common Analytics-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Common Analytics“ in Adobe Experience Platform vertraut.
 exl-id: 9eeb4589-df90-4356-b927-b2c29c32370b
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 90%
+source-wordcount: '549'
+ht-degree: 100%
 
 ---
 
@@ -50,7 +50,7 @@ Die allgemeine Analytics-Plug-in-Erweiterung beinhaltet die folgenden Aktionen:
 >
 >Diese Aktion ist zwar einfacher zu implementieren, Adobe Consulting empfiehlt jedoch nicht, diese Aktion zu verwenden, da sie die Gewichtung des Plug-ins erhöht.
 
-Bei dieser Aktion können Sie jedes Plug-in auswählen, das Sie in Ihre Implementierung aufnehmen möchten, und die Änderungen speichern. Wählen Sie so viele oder so wenige aus, wie Sie während der Implementierung verwenden möchten.
+Bei dieser Aktion können Sie jedes Plug-in auswählen, das Sie in Ihre Implementierung aufnehmen möchten, und die Änderungen speichern. Wählen Sie so viele oder so wenige aus, wie Sie während der Implementierung verwenden möchten. Links zur Dokumentation über die Verwendung der einzelnen Plug-ins und eine kurze Beschreibung finden Sie in der [Übersicht über die Analytics-Plug-ins](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=de).
 
 ### Plug-in initialisieren
 
@@ -58,17 +58,36 @@ Mit diesen Aktionen initialisieren Sie einzeln jedes Plug-in, das Sie verwenden 
 
 ## Datenelemente der allgemeinen Analytics-Plug-in-Erweiterung
 
-Die folgenden Datenelemente sind in der allgemeinen Analytics-Plug-in-Erweiterung verfügbar, die Tag-Funktionen zum Einrichten und Konfigurieren der entsprechenden Plug-ins in Analytics nutzt:
+In diesem Abschnitt werden die in der allgemeinen Analytics-Plug-in-Erweiterung verfügbaren Datenelemente beschrieben.
 
-* `getGeoCoordinates`
-* `getNewRepeat`
-* `getPageName`
-* `getResponsiveLayout`
-* `getTimeParting`
-* `getTimeSinceLastVisit`
-* `getVisitDuration`
-* `getVisitNum`
+### getGeoCoordinates
 
->[!NOTE]
->
->Weitere Informationen zu den oben genannten Plug-ins finden Sie im [Analytics-Dokumentation](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=de).
+Ermöglicht Benutzern die Nutzung der nativen Datenerfassungs-Benutzeroberfläche in Adobe Experience Platform zum Einrichten und Konfigurieren des Plug-ins „getGeoCoordinates“.
+
+### getNewRepeat
+
+Ermöglicht es Benutzern, die native Datenerfassungs-Benutzeroberfläche zum Einrichten und Konfigurieren des Plug-ins „getNewRepeat“ zu nutzen.
+
+### getPageName
+
+Ermöglicht es Benutzern, die native Datenerfassungs-Benutzeroberfläche zum Einrichten und Konfigurieren des Plug-ins „getPageName“ zu nutzen.
+
+### getResponsiveLayout
+
+Ermöglicht es Benutzern, die native Datenerfassungs-Benutzeroberfläche zum Einrichten und Konfigurieren des Plug-ins „getResponsiveLayout“ zu nutzen.
+
+### getTimeParting
+
+Ermöglicht es Benutzern, die native Datenerfassungs-Benutzeroberfläche zum Einrichten und Konfigurieren des Plug-ins „getTimeParting“ zu nutzen.
+
+### getTimeSinceLastVisit
+
+Ermöglicht es Benutzern, die native Datenerfassungs-Benutzeroberfläche zum Einrichten und Konfigurieren des Plug-ins „getTimeSinceLastVisit“ zu nutzen.
+
+### getVisitDuration
+
+Ermöglicht es Benutzern, die native Datenerfassungs-Benutzeroberfläche zum Einrichten und Konfigurieren des Plug-ins „getVisitDuration“ zu nutzen.
+
+### getVisitNum
+
+Ermöglicht es Benutzern, die native Datenerfassungs-Benutzeroberfläche zum Einrichten und Konfigurieren des Plug-ins „getVisitNum“ zu nutzen.

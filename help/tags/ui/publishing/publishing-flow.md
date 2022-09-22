@@ -2,10 +2,10 @@
 title: Publishing-Ablauf
 description: Erfahren Sie mehr über den Prozess der Erstellung von Bibliotheken, das Testen von Builds und die Freigabe für die Produktion in Adobe Experience Platform.
 exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1490'
-ht-degree: 97%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -42,7 +42,7 @@ Was den Publishing-Ablauf betrifft, gibt es vier Grundzustände, in denen sich e
 * [[!UICONTROL Genehmigt]](#approved)
 * [[!UICONTROL Veröffentlicht]](#published)
 
-Diese vier Status werden als Spalten innerhalb der **[!UICONTROL Veröffentlichungsfluss]** Registerkarte.
+Diese vier Status werden auf der Registerkarte **[!UICONTROL Veröffentlichungsablauf]** der Datenerfassungs-Benutzeroberfläche als Spalten dargestellt.
 
 ![](./images/approval-workflow/flow-ui.png)
 
@@ -112,7 +112,7 @@ Was im Upstream enthalten ist, hängt vom aktuellen Stand der Bibliothek ab. Bei
 
 ![](./images/approval-workflow/upstream.png)
 
-Bei der Bearbeitung einer Bibliothek in der Benutzeroberfläche werden alle Ressourcen, die von den Upstream-Servern übernommen werden, im **[!UICONTROL Ressourcen-Upstream]** Abschnitt. Um diese Ressourcen anzuzeigen, wählen Sie den Tab „Erweitern“ unter der Abschnittsüberschrift aus.
+Wenn Sie eine Bibliothek in der Datenerfassungs-Benutzeroberfläche bearbeiten, werden alle Ressourcen, die von Upstream-Elementen übernommen werden, im Abschnitt **[!UICONTROL Upstream-Ressourcen]** angezeigt. Um diese Ressourcen anzuzeigen, wählen Sie den Tab „Erweitern“ unter der Abschnittsüberschrift aus.
 
 ![](./images/approval-workflow/upstream-collapse.png)
 

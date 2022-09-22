@@ -2,10 +2,10 @@
 title: Erweiterungsmanifest
 description: Erfahren Sie, wie Sie eine JSON-Manifestdatei konfigurieren, die Adobe Experience Platform Informationen zur korrekten Verwendung Ihrer Erweiterung bereitstellt.
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '2645'
-ht-degree: 99%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -120,7 +120,7 @@ Eine Typdefinition ist ein Objekt, mit dem ein Ereignis-, Bedingungs-, Aktions- 
     </tr>
     <tr>
       <td><code>categoryName</code> <em>(Optional)</em></td>
-      <td>Wenn angegeben, wird die <code>displayName</code> wird unter der <code>categoryName</code> in der Benutzeroberfläche. Alle Typen mit dem gleichen <code>categoryName</code>-Wert werden unter der gleichen Kategorie aufgeführt. Wenn Ihre Erweiterung beispielsweise den Ereignistyp <code>keyUp</code> und den Ereignistyp <code>keyDown</code> bereitstellt und beide Ereignistypen einen <code>categoryName</code>-Wert von <code>Keyboard</code> aufweisen, werden beide Ereignistypen unter der Kategorie „Keyboard“ aufgelistet, während der Benutzer beim Erstellen einer Regel einen Eintrag aus der Liste der verfügbaren Ereignistypen auswählt. Der Wert von <code>categoryName</code> sollte für Menschen lesbar sein.</td>
+      <td>Wenn zur Verfügung gestellt, wird der <code>displayName</code> in der Datenerfassungs-Benutzeroberfläche unter <code>categoryName</code> aufgeführt. Alle Typen mit dem gleichen <code>categoryName</code>-Wert werden unter der gleichen Kategorie aufgeführt. Wenn Ihre Erweiterung beispielsweise den Ereignistyp <code>keyUp</code> und den Ereignistyp <code>keyDown</code> bereitstellt und beide Ereignistypen einen <code>categoryName</code>-Wert von <code>Keyboard</code> aufweisen, werden beide Ereignistypen unter der Kategorie „Keyboard“ aufgelistet, während der Benutzer beim Erstellen einer Regel einen Eintrag aus der Liste der verfügbaren Ereignistypen auswählt. Der Wert von <code>categoryName</code> sollte für Menschen lesbar sein.</td>
     </tr>
     <tr>
       <td><code>libPath</code></td>

@@ -2,10 +2,10 @@
 title: Schnellstartanleitung
 description: Erfahren Sie, wie Sie mit Tags in Adobe Experience Platform schnell startklar werden.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1527'
-ht-degree: 92%
+source-wordcount: '1532'
+ht-degree: 100%
 
 ---
 
@@ -31,13 +31,13 @@ Der grundlegende Tag-Workflow:
 
 Tags sind vollständig mit Ihrer Adobe ID integriert. Benutzerberechtigungen werden über die Admin Console mit anderen Adobe-Produkten und -Lösungen aus [!DNL Creative Cloud], [!DNL Document Cloud] und Experience Cloud verwaltet.
 
-Tags verfügen über ein berechtigungsbasiertes Benutzerverwaltungssystem. Das bedeutet, dass individuelle Rechte explizit gewährt werden müssen. Diese Rechte werden Gruppen zugewiesen, dann werden Benutzer den entsprechenden Gruppen hinzugefügt, um Zugriff zu erhalten. Selbst wenn Ihr Unternehmen Zugriff auf die Datenerfassung hat, können einzelne Benutzer nichts tun, bis ihnen ein Administrator ausdrücklich einige Rechte gewährt.
+Tags verfügen über ein berechtigungsbasiertes Benutzerverwaltungssystem. Das bedeutet, dass individuelle Rechte explizit gewährt werden müssen. Diese Rechte werden Gruppen zugewiesen, dann werden Benutzer den entsprechenden Gruppen hinzugefügt, um Zugriff zu erhalten. Selbst wenn Ihr Unternehmen Zugriff auf die Datenerfassungs-Benutzeroberfläche hat, können einzelne Benutzer erst dann handeln, wenn ihnen ein Organisations-Administrator explizit einige Rechte gewährt.
 
-Detaillierte Anweisungen zum Erstellen von Gruppen und Hinzufügen von Benutzern für Tags finden Sie in der [Handbuch zu Datenerfassungsberechtigungen](../../collection/permissions.md).
+Detaillierte Anweisungen zum Erstellen von Gruppen und Hinzufügen von Benutzern für Tags finden Sie im Dokument [Benutzerberechtigungen](../ui/administration/user-permissions.md).
 
 ## 2. Anmelden
 
-Nachdem Sie Ihrer Adobe ID Tag-Rechte hinzugefügt haben, müssen Sie sich bei der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche anmelden. Sie können dies tun, indem Sie direkt zur [Anmeldebildschirm des Experience Cloud](https://experience.adobe.com/)und wählen Sie entweder **[!UICONTROL Datenerfassung]** oder **[!UICONTROL Experience Platform]**.
+Nachdem Sie Ihrer Adobe ID Tag-Rechte hinzugefügt haben, müssen Sie sich bei der Datenerfassungs-Benutzeroberfläche anmelden. Navigieren Sie dazu direkt zum [Experience Cloud-Anmeldebildschirm](https://experiencecloud.adobe.com) und wählen Sie auf der Registerkarte „Schnellzugriff“ die Datenerfassungs-Benutzeroberfläche.
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ Nachdem Sie Ihrer Adobe ID Tag-Rechte hinzugefügt haben, müssen Sie sich bei d
 
 ## 3. Erstellen einer Eigenschaft
 
-Nachdem Sie sich bei der Benutzeroberfläche angemeldet haben, erstellen Sie zunächst eine Eigenschaft. Eine Eigenschaft ist im Wesentlichen ein Container, den Sie bei der Bereitstellung von Tags auf Ihrer Site mit Erweiterungen, Regeln, Datenelementen und Bibliotheken füllen. Viele Personen erstellen für jede Website (oder Gruppe eng miteinander verbundener Sites) eine Eigenschaft, in der sie denselben Tag-Satz bereitstellen möchten.
+Nachdem Sie sich bei der Datenerfassungs-Benutzeroberfläche angemeldet haben, erstellen Sie zunächst eine Eigenschaft Eine Eigenschaft ist im Wesentlichen ein Container, den Sie bei der Bereitstellung von Tags auf Ihrer Site mit Erweiterungen, Regeln, Datenelementen und Bibliotheken füllen. Viele Personen erstellen für jede Website (oder Gruppe eng miteinander verbundener Sites) eine Eigenschaft, in der sie denselben Tag-Satz bereitstellen möchten.
 
 Weitere Informationen zum Erstellen von Eigenschaften finden Sie unter [Erstellen einer Eigenschaft](../ui/administration/companies-and-properties.md).
 
@@ -67,7 +67,7 @@ Was Tags in Platform wirklich einzigartig macht, ist, dass diese Erweiterungen v
 * Sitzung und lokaler Speicher
 * Alles andere
 
-Nachdem das Datenelement definiert wurde, können Sie das Element überall in der Benutzeroberfläche für jede beliebige Erweiterung verwenden. Weitere Informationen finden Sie in der Dokumentation zu [Datenelementen](../ui/managing-resources/data-elements.md).
+Sie können das von Ihnen definierte Datenelement für jede beliebige Erweiterung in der Datenerfassungs-Benutzeroberfläche verwenden. Weitere Informationen finden Sie in der Dokumentation zu [Datenelementen](../ui/managing-resources/data-elements.md).
 
 **Regeln** befinden sich im logischen Kern Ihrer Implementierung und legen das Was, Wann, Wo und Wie und wo für alle Tags auf Ihrer Site fest. Definieren Sie ein Ereignis, legen Sie Bedingungen und Ausnahmen fest und definieren Sie dann die Aktionen und die Reihenfolge. Schlussendlich veröffentlichen Sie Ihre Änderungen, um die Ergebnisse zu sehen. Weitere Informationen finden Sie unter [Regeln](../ui/managing-resources/rules.md).
 

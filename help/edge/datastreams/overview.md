@@ -3,10 +3,10 @@ title: Übersicht über Datenströme
 description: Verbinden Sie Ihre Client-seitige Experience Platform SDK-Integration mit Adobe-Produkten und Zielen von Drittanbietern.
 keywords: Konfiguration;Datenströme;datastreamId;edge;datastream id;Umgebungseinstellungen;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Ereignis-Datensatz;Target;Client-Code;Eigenschafts-Token;Target-Umgebungs-ID;Cookie-Ziele;URL-Ziele;Analytics Settings Blockreport suite id;Datenvorbereitung für Datenerfassung;Data Prep;Mapper;XDM Mapper;Mapper in Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1725'
-ht-degree: 95%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 95%
 
 Ein Datenstrom stellt die Server-seitige Konfiguration bei der Implementierung der Adobe Experience Platform Web- und Mobile-SDKs dar. Während mit dem [configure-Befehl](../fundamentals/configuring-the-sdk.md) im SDK Elemente kontrolliert werden, die auf dem Client verarbeitet werden müssen (z. B. die `edgeDomain`), handhaben Datenströme alle anderen Konfigurationen für das SDK. Wenn eine Anfrage an das Adobe Experience Platform Edge Network gesendet wird, wird die `edgeConfigId` verwendet, um auf den Datenstrom zu verweisen. Auf diese Weise können Sie die Server-seitige Konfiguration aktualisieren, ohne Code-Änderungen auf Ihrer Website vornehmen zu müssen.
 
-In diesem Dokument werden die Schritte zum Konfigurieren eines Datenspeichers in der Benutzeroberfläche beschrieben.
+In diesem Dokument werden die Schritte zur Konfiguration eines Datenstroms in der Datenerfassungs-Benutzeroberfläche beschrieben.
 
 ## Zugriff auf den Arbeitsbereich [!UICONTROL Datenströme ]
 
-Sie können Datenspeicher in der Datenerfassungs-Benutzeroberfläche oder in der Experience Platform-Benutzeroberfläche erstellen und verwalten, indem Sie **[!UICONTROL Datenspeicher]** in der linken Navigation.
+Sie können Datenströme in der Datenerfassungs-Benutzeroberfläche über die Option **[!UICONTROL Datenströme]** in der linken Navigation erstellen und verwalten.
 
-![Registerkarte &quot;Datenspeicher&quot;in der Benutzeroberfläche](../images/datastreams/overview/datastreams-tab.png)
+![Registerkarte „Datenströme“ in der Datenerfassungs-Benutzeroberfläche](../images/datastreams/overview/datastreams-tab.png)
 
 In der Registerkarte [!UICONTROL Datenströme] wird eine Liste mit vorhandenen Datenströmen angezeigt, darunter auch der Anzeigename, die Kennung und das Datum der letzten Änderung. Wählen Sie den Namen eines Datenstroms aus, um [seine Details anzuzeigen und Services zu konfigurieren](#view-details).
 
@@ -106,7 +106,7 @@ Mit diesem Service wird festgelegt, ob und wie Daten an Adobe Audience Manager g
 
 >[!IMPORTANT]
 >
->Beachten Sie beim Aktivieren eines Datastreams für Platform die aktuell verwendete Platform-Sandbox, wie im oberen Band der Benutzeroberfläche angezeigt.
+>Beachten Sie beim Aktivieren eines Datenstroms für Platform die aktuell verwendete Platform-Sandbox, die in der oberen Leiste der Datenerfassungs-Benutzeroberfläche angezeigt wird.
 >
 >![Ausgewählte Sandbox](../images/datastreams/overview/platform-sandbox.png)
 >
@@ -175,4 +175,4 @@ Die Hauptseite des Arbeitsbereichs [!UICONTROL Datenstrom] wird erneut angezeigt
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie Datenspeicher in der Benutzeroberfläche verwalten. Weitere Informationen zum Installieren und Konfigurieren des Web SDK nach dem Einrichten eines Datenstroms finden Sie im [Handbuch E2E zur Datenerfassung](../../collection/e2e.md#install).
+In diesem Handbuch wurde beschrieben, wie Datenströme in der Datenerfassungs-Benutzeroberfläche verwaltet werden. Weitere Informationen zum Installieren und Konfigurieren des Web SDK nach dem Einrichten eines Datenstroms finden Sie im [Handbuch E2E zur Datenerfassung](../../collection/e2e.md#install).

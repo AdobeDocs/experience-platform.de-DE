@@ -2,10 +2,10 @@
 title: Adobe Target v2-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Target v2“ in Adobe Experience Platform vertraut.
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1356'
-ht-degree: 93%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -31,13 +31,13 @@ Wenn die Adobe Target-Erweiterung noch nicht installiert ist, öffnen Sie die Ei
 
 ### at.js-Einstellungen
 
-All Ihre at.js-Einstellungen mit Ausnahme der Zeitüberschreitung werden automatisch aus Ihrer at.js-Konfiguration in der Target-Benutzeroberfläche abgerufen. Die Erweiterung ruft nur Einstellungen von der Target-Benutzeroberfläche ab, wenn sie zum ersten Mal hinzugefügt wird. Daher sollten alle Einstellungen in der Benutzeroberfläche verwaltet werden, wenn zusätzliche Aktualisierungen erforderlich sind.
+All Ihre at.js-Einstellungen mit Ausnahme der Zeitüberschreitung werden automatisch aus Ihrer at.js-Konfiguration in der Target-Benutzeroberfläche abgerufen. Die Erweiterung ruft nur Einstellungen von der Target-Benutzeroberfläche ab, wenn sie erstmalig hinzugefügt wird. Daher sollten alle Einstellungen in der Datenerfassungs-Benutzeroberfläche verwaltet werden, wenn zusätzliche Aktualisierungen erforderlich sind.
 
 Die folgenden Konfigurationsoptionen sind verfügbar:
 
 #### Clientcode
 
-Der Clientcode ist die Konto-ID von Target. Der entsprechende Wert sollte nahezu immer als Standardwert beibehalten werden. Er kann mithilfe von Datenelementen geändert werden.
+Der Client-Code ist die Kontokennung von Target. Der entsprechende Wert sollte nahezu immer als Standardwert beibehalten werden. Er kann mithilfe von Datenelementen geändert werden.
 
 #### Organisations-ID
 
@@ -133,8 +133,8 @@ Nachfolgend werden einige Aspekte aufgeführt, die Sie bei Verwendung des vorab 
    * Wenn die globale Seitenladeantwort empfangen wurde
    * Wenn für die Seitenladeanfrage eine Zeitüberschreitung eintritt
    * Wenn für den Ausschnitt selbst eine Zeitüberschreitung eintritt
-* Die Aktion &quot;Seitenladeanforderung auslösen&quot;sollte auf allen Seiten verwendet werden, die den vorab ausgeblendeten Ausschnitt verwenden, um die Dauer der Vorab-Ausblendung zu minimieren.
-* Die Ausblendung des Textkörpers muss auch in der Aktion &quot;Seitenladeanforderung&quot;in der Seitenladeregel aktiviert sein, die Sie für Target verwenden. Andernfalls bleiben alle Seitenladevorgänge für die Timeout-Zeit ausgeblendet.
+* Die Aktion „Seitenladeanfrage auslösen“ sollte auf allen Seiten verwendet werden, bei denen der vorab ausgeblendete Ausschnitt zum Einsatz kommt, um die Dauer der Vorab-Ausblendung zu minimieren.
+* Das Ausblenden des Textkörpers muss auch in der Seitenladeregel in der Aktion „Seitenladeanfrage“ aktiviert sein, die Sie für die Target-Komponente in der Datenerfassungs-Benutzeroberfläche verwenden. Andernfalls bleiben alle Seitenladevorgänge während der Zeitüberschreitung ausgeblendet.
 
 Der vorab ausgeblendete Codeausschnitt lautet wie folgt und kann minimiert werden. Die konfigurierbaren Optionen befinden sich am Ende:
 

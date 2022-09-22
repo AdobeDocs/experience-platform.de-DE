@@ -2,10 +2,10 @@
 title: SFTP-Hosts
 description: Erfahren Sie, wie Sie Tags in Adobe Experience Platform so konfigurieren, dass Bibliotheks-Builds auf einem gesicherten, selbstgehosteten SFTP-Server bereitgestellt werden.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 39%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 39%
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
-Mit Adobe Experience Platform können Sie Tag-Bibliotheks-Builds an einen gesicherten SFTP-Server übermitteln, den Sie hosten. So erhalten Sie mehr Kontrolle über die Speicherung und Verwaltung Ihrer Builds. In diesem Handbuch wird beschrieben, wie Sie einen SFTP-Host für eine Tag-Eigenschaft in der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche einrichten.
+Mit Adobe Experience Platform können Sie Tag-Bibliotheks-Builds an einen gesicherten SFTP-Server übermitteln, den Sie hosten. So erhalten Sie mehr Kontrolle über die Speicherung und Verwaltung Ihrer Builds. In diesem Handbuch wird beschrieben, wie Sie einen SFTP-Host für eine Tag-Eigenschaft in der Datenerfassungs-Benutzeroberfläche einrichten.
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ Detaillierte Informationen finden Sie im folgenden Artikel von Medium zum [Einri
 
 ## Erstellen eines SFTP-Hosts {#create}
 
-Auswählen **[!UICONTROL Hosts]** im linken Navigationsbereich, gefolgt von **[!UICONTROL Organisation hinzufügen]**.
+Wählen Sie in der Datenerfassungs-Benutzeroberfläche die Option **[!UICONTROL Hosts]** im linken Navigationsbereich, gefolgt von **[!UICONTROL Organisation hinzufügen]**.
 
 ![Bild, das die in der Benutzeroberfläche ausgewählte Schaltfläche &quot;Add Host&quot;anzeigt](../../../images/ui/publishing/sftp-hosts/add-host-button.png)
 

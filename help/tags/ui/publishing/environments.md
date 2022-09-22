@@ -2,10 +2,10 @@
 title: Umgebungen
 description: Hier erfahren Sie mehr über das Konzept von Tag-Umgebungen und wie sie in Adobe Experience Platform funktionieren.
 exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1464'
-ht-degree: 98%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -91,7 +91,7 @@ Klicken Sie auf **[!UICONTROL Host]**, um einen vorkonfigurierten Host für die 
 
 ![](./images/environments/select-host.png)
 
-Wenn ein Build erstellt wird, wird dieser Build an dem Speicherort bereitgestellt, den Sie für den zugewiesenen Host angegeben haben. Informationen zum Erstellen und Konfigurieren von Tag-Hosts finden Sie im Abschnitt [hosts overview](./hosts/hosts-overview.md).
+Wenn ein Build erstellt wird, wird dieser Build an dem Speicherort bereitgestellt, den Sie für den zugewiesenen Host angegeben haben. Informationen zum Erstellen und Konfigurieren von Hosts in der Datenerfassungs-Benutzeroberfläche finden Sie in der [Übersicht über Hosts](./hosts/hosts-overview.md).
 
 ### Archivierungseinstellungen {#archive}
 

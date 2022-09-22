@@ -2,10 +2,10 @@
 title: Bibliothek erneut veröffentlichen
 description: Erfahren Sie, wie Sie eine frühere Tag-Bibliothek in Adobe Experience Platform erneut veröffentlichen.
 exl-id: 026b01f2-a93d-4e8a-9ed2-47c4f011e70f
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 96%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -45,7 +45,7 @@ Beim erneuten Veröffentlichen einer älteren Bibliothek passiert Folgendes:
 
 * Die Art und Weise, wie in Entwicklungs- und Staging-Umgebungen vorgelagerte Vorgänge berechnet werden, ändert sich nicht.
 
-Wenn Sie einen Rollback durchführen, weil es ein Problem mit einer Regel gibt, achten Sie auf die jeweiligen Gegebenheiten. Die Regelrevision, die mittlerweile in der Produktionsumgebung vorhanden ist, könnte z. B. drei Revisionen alt sein. Wenn Sie diese Regel in der Benutzeroberfläche anzeigen, um sie zu beheben, spiegelt sie weiterhin die zuletzt gespeicherten Änderungen wider und nicht die derzeit in Produktion befindlichen Änderungen.
+Wenn Sie einen Rollback durchführen, weil es ein Problem mit einer Regel gibt, achten Sie auf die jeweiligen Gegebenheiten. Die Regelrevision, die mittlerweile in der Produktionsumgebung vorhanden ist, könnte z. B. drei Revisionen alt sein. Wenn Sie diese Regel in der Datenerfassungs-Benutzeroberfläche aufrufen, um das Problem zu beheben, wird weiterhin die Version mit den zuletzt gespeicherten Änderungen angezeigt statt der derzeit in Produktion befindlichen Version.
 
 Deshalb informiert Platform Sie darüber, dass eine Eigenschaft erneut veröffentlicht wurde, um Sie daran zu erinnern, dass das, was Sie in der Datenerfassungs-Benutzeroberfläche sehen, eine frühere Version ist. Diese Benachrichtigung kann geschlossen werden und wird einmal pro Browser-Sitzung angezeigt, wenn Sie die Eigenschaft zum ersten Mal anzeigen.
 

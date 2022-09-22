@@ -2,10 +2,10 @@
 title: Datenerfassung End-to-End – Übersicht
 description: Eine allgemeine Übersicht darüber, wie Sie Ereignisdaten mithilfe der Datenerfassungsfunktionen von Adobe Experience Platform an Adobe Experience Cloud-Lösungen senden.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: da17b273d5464ecd8b00aa37de51425ce3a9a576
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '2619'
-ht-degree: 95%
+source-wordcount: '2606'
+ht-degree: 97%
 
 ---
 
@@ -18,8 +18,6 @@ Dieses Handbuch enthält eine allgemeine Anleitung zum Senden eines Ereignisses 
 >[!NOTE]
 >
 >Sie können das SDK auch manuell installieren und konfigurieren, wenn Sie keine Tags verwenden möchten. Die folgenden Schritte müssen jedoch immer noch ausgeführt werden.
->
->Alle Schritte, die die Datenerfassungs-Benutzeroberfläche betreffen, können auch in der Experience Platform-Benutzeroberfläche ausgeführt werden.
 
 ## Voraussetzungen
 
@@ -60,7 +58,7 @@ Der erste Schritt bei der Einrichtung Ihrer Datenerfassungsvorgänge besteht dar
 >
 >XDM-Schemata sind sehr anpassbar. Die unten beschriebenen Schritte konzentrieren sich nicht auf übermäßige Vorgaben, sondern auf die Schemaanforderungen für das Web SDK. Außerhalb dieser Parameter können Sie die verbleibende Struktur Ihrer Daten beliebig definieren.
 
-Wählen Sie in der Benutzeroberfläche **[!UICONTROL Schemas]** in der linken Navigation. Von hier aus können Sie eine Liste der zuvor erstellten Schemas sehen, die zu Ihrer Organisation gehören. Um fortzufahren, wählen Sie **[!UICONTROL Schema erstellen]** und dann **[!UICONTROL XDM ExperienceEvent]** aus dem Dropdown-Menü.
+Wählen Sie in der Datenerfassungs-Benutzeroberfläche im linken Navigationsbereich **[!UICONTROL Schemas]** aus. Von hier aus können Sie eine Liste der zuvor erstellten Schemas sehen, die zu Ihrer Organisation gehören. Um fortzufahren, wählen Sie **[!UICONTROL Schema erstellen]** und dann **[!UICONTROL XDM ExperienceEvent]** aus dem Dropdown-Menü.
 
 ![Arbeitsbereich „Schemas“](./images/e2e/schemas.png)
 
@@ -100,7 +98,7 @@ Ein Datenstrom ist eine Konfiguration, die dem Edge Network mitteilt, wohin Ihre
 >
 >Wenn Sie die [Ereignisweiterleitung](../tags/ui/event-forwarding/overview.md) verwenden möchten (vorausgesetzt, Ihr Unternehmen ist für die Funktion lizenziert), müssen Sie sie für einen Datenstrom auf dieselbe Weise aktivieren wie Adobe-Produkte. Details zu diesem Prozess werden in einem [späteren Abschnitt](#event-forwarding) erläutert.
 
-Auswählen **[!UICONTROL Datenspeicher]** in der linken Navigation. Von hier aus können Sie einen vorhandenen Datenstrom aus der Liste auswählen, um ihn zu bearbeiten, oder Sie können eine neue Konfiguration erstellen, indem Sie **[!UICONTROL Neuer Datenstrom]** auswählen.
+Wählen Sie in der Datenerfassungs-Benutzeroberfläche **[!UICONTROL Datenströme]** aus. Von hier aus können Sie einen vorhandenen Datenstrom aus der Liste auswählen, um ihn zu bearbeiten, oder Sie können eine neue Konfiguration erstellen, indem Sie **[!UICONTROL Neuer Datenstrom]** auswählen.
 
 ![Datenströme](./images/e2e/datastreams.png)
 

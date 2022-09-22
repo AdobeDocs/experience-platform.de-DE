@@ -2,10 +2,10 @@
 title: Extension packages-Endpunkt
 description: Erfahren Sie, wie Sie den /extension_packages-Endpunkt in der Reactor-API aufrufen.
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '956'
-ht-degree: 97%
+source-wordcount: '951'
+ht-degree: 100%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 97%
 
 Ein Erweiterungspaket stellt eine [Erweiterung](./extensions.md) dar, die von einem Erweiterungsentwickler verfasst wurde. Ein Erweiterungspaket definiert zusätzliche Funktionen, die Tag-Benutzern zur Verfügung gestellt werden können. In den meisten Fällen sind diese Funktionen in Form von [Regelkomponenten](./rule-components.md) (Ereignisse, Bedingungen und Aktionen) und [Datenelementen](./data-elements.md) verfügbar, können aber auch Hauptmodule und freigegebene Module enthalten.
 
-Erweiterungspakete werden im Erweiterungskatalog in der Datenerfassungs-Benutzeroberfläche und der Adobe Experience Platform-Benutzeroberfläche angezeigt, damit Benutzer sie installieren können. Das Hinzufügen eines Erweiterungspakets zu einer Eigenschaft wird erreicht, indem eine Erweiterung mit einem Link zum Erweiterungspaket erstellt wird.
+Erweiterungspakete werden im Erweiterungskatalog in der Datenerfassungs-Benutzeroberfläche angezeigt, sodass Benutzer sie installieren können. Das Hinzufügen eines Erweiterungspakets zu einer Eigenschaft wird erreicht, indem eine Erweiterung mit einem Link zum Erweiterungspaket erstellt wird.
 
 Ein Erweiterungspaket gehört dem [Unternehmen](./companies.md) des Entwicklers, der es erstellt hat.
 

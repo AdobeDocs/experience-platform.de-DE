@@ -2,10 +2,10 @@
 title: BrightCove Video Tracking-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „BrightCove Video Tracking“ in Adobe Experience Platform vertraut.
 exl-id: d27eff21-2abf-4495-8382-08cab32742e0
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '908'
-ht-degree: 97%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -100,7 +100,7 @@ Die folgenden Video-Erweiterungsobjekte sind einzuschließen:
 
 >[!TIP]
 >
->Diejenigen, die nicht mehrere eVars oder props für jedes Videoelement bereitstellen möchten, werden Datenelementwerte als alternative Methode verkettet. Anschließend werden sie mithilfe des Classification Rule Builder Tools in Klassifizierungsberichte übermittelt. Weitere Informationen finden Sie in der Dokumentation zum [Classification Rule Builder Tool](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=de). Schließlich werden sie als Segment in Analysis Workspace angewendet.
+>Wenn Sie nicht mehrere eVars oder Props für jedes Videoelement bereitstellen möchten, gibt es eine alternative Methode. Datenelementwerte können über die Datenerfassungs-Benutzeroberfläche verkettet werden. Anschließend werden sie mithilfe des Classification Rule Builder Tools in Klassifizierungsberichte übermittelt. Weitere Informationen finden Sie in der Dokumentation zum [Classification Rule Builder Tool](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=de). Schließlich werden sie als Segment in Analysis Workspace angewendet.
 >
 >Erstellen Sie dazu ein neues Datenelement mit einem Namen wie „Videometadaten“ und programmieren Sie es so, dass alle oben aufgelisteten Videodatenelemente abgerufen und miteinander verkettet werden.
 

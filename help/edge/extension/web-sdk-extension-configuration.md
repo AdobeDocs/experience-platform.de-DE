@@ -1,11 +1,11 @@
 ---
 title: Konfigurieren der Adobe Experience Platform Web SDK-Erweiterung
-description: So konfigurieren Sie die Adobe Experience Platform Web SDK-Tag-Erweiterung in der Benutzeroberfläche.
+description: So konfigurieren Sie die Adobe Experience Platform Web SDK-Tag-Erweiterung in der Datenerfassungs-Benutzeroberfläche.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1041'
-ht-degree: 6%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 6%
 
 Die Adobe Experience Platform Web SDK-Tag-Erweiterung sendet Daten aus Webeigenschaften über das Adobe Experience Platform Edge Network an Adobe Experience Cloud. Mit der Erweiterung können Sie Daten in Platform streamen, Identitäten synchronisieren, Zustimmungssignale von Kunden verarbeiten und automatisch Kontextdaten erfassen.
 
-In diesem Dokument wird beschrieben, wie Sie die Erweiterung in der Benutzeroberfläche konfigurieren.
+In diesem Dokument wird beschrieben, wie Sie die Erweiterung in der Datenerfassungs-Benutzeroberfläche konfigurieren.
 
 ## Erste Schritte
 
-Wenn die Platform Web SDK-Erweiterung bereits für eine Eigenschaft installiert wurde, öffnen Sie die Eigenschaft in der Benutzeroberfläche und wählen Sie die **[!UICONTROL Erweiterungen]** Registerkarte. Wählen Sie unter dem Platform Web SDK die Option **[!UICONTROL Konfigurieren]**.
+Wenn die Platform Web SDK-Erweiterung bereits für eine Eigenschaft installiert wurde, öffnen Sie die Eigenschaft in der Datenerfassungs-Benutzeroberfläche und wählen Sie die **[!UICONTROL Erweiterungen]** Registerkarte. Wählen Sie unter dem Platform Web SDK die Option **[!UICONTROL Konfigurieren]**.
 
 ![](../images/extension/overview/configure.png)
 

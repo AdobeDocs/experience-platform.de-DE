@@ -2,10 +2,10 @@
 title: Löschen von Ressourcen
 description: Hier erfahren Sie, wie Sie Tag-Ressourcen in Adobe Experience Platform löschen können.
 exl-id: c8e26720-1976-48ec-8490-3d4ce587831e
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '558'
-ht-degree: 93%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 93%
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-Das Löschen einer Ressource entfernt diese Ressource dauerhaft aus Adobe Experience Platform. Wenn Sie eine Ressource aus einer bestimmten Tag-Bibliothek entfernen möchten, diese Ressource aber dennoch für andere Bibliotheken verfügbar sein soll, lesen Sie das Handbuch unter [Entfernen von Ressourcen aus einer Bibliothek](remove-resources-from-library.md).
+Das Löschen einer Ressource entfernt diese Ressource dauerhaft aus Adobe Experience Platform. Wenn Sie möchten, dass die Ressource weiterhin in der Datenerfassungs-Benutzeroberfläche angezeigt wird, sich jedoch nicht in Ihrer Tag-Bibliothek befindet, finden Sie weitere Informationen unter [Entfernen von Ressourcen aus einer Bibliotheky](remove-resources-from-library.md).
 
 Sie können Datenelemente, Regeln, Erweiterungen, Hosts, Umgebungen und Eigenschaften löschen. Nach der Löschung sind diese Ressourcen nicht wiederherstellbar.
 

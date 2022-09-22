@@ -2,10 +2,10 @@
 title: Core-Erweiterung – Übersicht
 description: Machen Sie sich mit der Haupt-Tag-Erweiterung in Adobe Experience Platform vertraut.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '5482'
-ht-degree: 96%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -88,7 +88,7 @@ Das Ereignis wird ausgelöst, wenn die Lautstärke erhöht oder verringert wird.
 
 #### Orientation Change
 
-Das Ereignis wird Trigger, wenn sich die Ausrichtung des Geräts ändert. Sie müssen die Dauer angeben, für die die Ausrichtung geändert werden muss, damit das Ereignis ausgelöst wird. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
+Das Ereignis wird ausgelöst, wenn sich die Ausrichtung des Geräts ändert. Sie müssen die Dauer angeben, für die die Ausrichtung geändert werden muss, damit das Ereignis ausgelöst wird. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
 
 #### Zoom Change
 
@@ -108,7 +108,7 @@ Wenn das Element ein Anker-Tag (`<a>`) zu verlinkten Inhalten ist, können Sie a
 
 Wenn Sie die Link-Verzögerung verwenden, verhindert Platform tatsächlich, dass der Browser von der Seite weg navigiert. Anschließend führt es nach der angegebenen Zeitüberschreitung eine JavaScript-Umleitung zum ursprünglichen Ziel durch. Dies ist besonders dann problematisch, wenn Ihr Seiten-Markup `<a>`-Tags enthält, bei denen die vorgesehene Funktion den Benutzer nicht tatsächlich weg von der Seite navigieren lässt. Wenn Sie Ihr Problem nicht anders lösen können, sollten Sie mit der Definition Ihrer Auswahl sehr genau umgehen, damit dieses Ereignis nur genau dort ausgelöst wird, wo Sie es brauchen, und sonst nirgends.
 
-Der Standardwert für die Link-Verzögerung ist 100 Millisekunden. Beachten Sie, dass Tags immer auf die angegebene Zeitdauer warten und in keiner Weise mit der Ausführung der Regelaktionen verbunden sind. Es ist möglich, dass die Verzögerung den Benutzer zwingt, länger zu warten, als nötig ist, und dass die Verzögerung auch nicht lang genug ist, damit alle Aktionen der Regel erfolgreich abgeschlossen werden können. Größere Verzögerungen bieten mehr Zeit für die Regelausführung, verschlechtern aber auch das Benutzererlebnis.
+Der Standardwert für die Link-Verzögerung ist 100 Millisekunden. Beachten Sie, dass Tags immer die angegebene Zeitdauer abwarten und in keiner Weise mit der Ausführung der Regelaktionen in Verbindung stehen. Es ist möglich, dass die Verzögerung den Benutzer zwingt, länger zu warten als nötig, und dass die Verzögerung möglicherweise trotz allem nicht lang genug ist, sodass alle Aktionen der Regel erfolgreich abgeschlossen werden. Größere Verzögerungen bieten mehr Zeit für die Regelausführung, verschlechtern aber auch das Benutzererlebnis.
 
 Um die Verzögerung zu implementieren, müssen sowohl das ausgewählte Element, das das Ereignis auslöst, als auch der spezifische Zeitraum angegeben werden, bevor das Ereignis ausgelöst wird.
 
@@ -246,7 +246,7 @@ Führen Sie die Regel in einem Browser aus und überprüfen Sie das aufgezeichne
 
 *Bedingungssequenzierung*
 
-Wenn die Option &quot;Run rule components in sequence&quot;in den Eigenschafteneinstellungen aktiviert ist, können Sie festlegen, dass nachfolgende Regelkomponenten warten, während Ihre Bedingung eine asynchrone Aufgabe ausführt.
+Wenn die Option „Run rule components in sequence“ in den Eigenschafteneinstellungen aktiviert ist, können Sie festlegen, dass die folgenden Regelkomponenten warten, während Ihre Bedingung eine asynchrone Aufgabe ausführt.
 
 Wenn die Bedingung einen [Promise](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/Promise) zurückgibt, wird die nächste Bedingung in der Regel erst ausgeführt, nachdem der zurückgegebene Promise eingelöst wurde. Wenn die Zusage abgelehnt wird, betrachtet Tags diese Bedingung als fehlgeschlagen und es werden keine weiteren Bedingungen oder Aktionen aus dieser Regel ausgeführt
 
@@ -351,23 +351,23 @@ Konfigurieren Sie die Anzahl Seitenansichten durch den Besucher, bevor die Aktio
 
 #### Sessions
 
-Lösen Sie die Aktion aus, wenn die Anzahl Sitzungen des Benutzers die angegebenen Kriterien erfüllt.
+Lösen Sie die Aktion aus, wenn die Anzahl der Sitzungen des Benutzers die angegebenen Kriterien erfüllt.
 
 1. Wählen Sie aus, ob die Anzahl Sitzungen größer, gleich oder kleiner als der angegebene Wert sein muss.
 1. Geben Sie die Anzahl Sitzungen an, mit deren Hilfe bestimmt wird, ob die Bedingung erfüllt ist.
 
 #### Time On Site
 
-Lösen Sie die Aktion aus, wenn die Anzahl Sitzungen des Benutzers die angegebenen Kriterien erfüllt.
+Lösen Sie die Aktion aus, wenn die Anzahl der Sitzungen des Benutzers die angegebenen Kriterien erfüllt.
 
 Konfigurieren Sie, wie lange der Besucher auf der Site bleiben muss, bevor die Aktion ausgelöst wird.
 
 1. Wählen Sie aus, ob die Anzahl Minuten, die sich der Besucher auf der Site befindet, größer, gleich oder kleiner als der angegebene Wert sein muss.
 1. Geben Sie die Anzahl Minuten an, mit deren Hilfe bestimmt wird, ob die Bedingung erfüllt ist.
 
-#### Traffic Source
+#### Traffic-Quelle
 
-Lösen Sie die Aktion aus, wenn die Anzahl Sitzungen des Benutzers die angegebenen Kriterien erfüllt.
+Lösen Sie die Aktion aus, wenn die Anzahl der Sitzungen des Benutzers die angegebenen Kriterien erfüllt.
 
 Geben Sie die Quelle des Besucher-Traffics an, die „true“ sein muss, damit die Aktion ausgelöst wird.
 
@@ -429,7 +429,7 @@ Wählen Sie eines oder mehrere der folgenden Betriebssysteme aus:
 Wählen Sie die Bildschirmauflösung aus, die Besucher auf ihren Geräten verwenden müssen, damit die Aktion ausgelöst wird.
 
 1. Wählen Sie aus, ob die Breite der Bildschirmauflösung des Besuchergeräts größer, gleich oder kleiner als der angegebene Wert sein muss.
-1. Geben Sie die Anzahl Pixel an, die für die Breite der Bildschirmauflösung erforderlich sind.
+1. Geben Sie die Anzahl der Pixel an, die für die Breite der Bildschirmauflösung erforderlich sind.
 1. Wählen Sie aus, ob die Höhe der Bildschirmauflösung des Besuchergeräts größer, gleich oder kleiner als der angegebene Wert sein muss.
 1. Geben Sie die Anzahl Pixel an, die für die Höhe der Bildschirmauflösung erforderlich sind.
 
@@ -588,7 +588,7 @@ Der im Tag-Editor von Launch verwendete Validator dient der Identifizierung von 
 
 #### Aktionssequenzierung
 
-Wenn die Option &quot;Run rule components in sequence&quot;in den Eigenschafteneinstellungen aktiviert ist, können Sie festlegen, dass nachfolgende Regelkomponenten warten, während Ihre Aktion eine asynchrone Aufgabe ausführt.  Dies funktioniert bei benutzerdefiniertem JavaScript- und HTML-Code anders.
+Wenn die Option „Run rule components in sequence“ in den Eigenschafteneinstellungen aktiviert ist, können Sie festlegen, dass die folgenden Regelkomponenten warten, während Ihre Aktion eine asynchrone Aufgabe ausführt.  Dies funktioniert bei benutzerdefiniertem JavaScript- und HTML-Code anders.
 
 *JavaScript*
 
@@ -690,7 +690,6 @@ return true;
 
 Führen Sie die Regel in einem Browser aus und überprüfen Sie das aufgezeichnete Ereignisobjekt in der Browser-Konsole. Sobald Sie die Informationen kennen, die bei den unterschiedlichen Regeln, die Ihr Datenelement verwenden können, verfügbar sind, können Sie sie zur programmatischen Entscheidungsfindung in Ihrem benutzerdefinierten Code verwenden oder einen Teil des `event`-Objekts als Wert des Datenelements zurückgeben.
 
-
 ### DOM-Attribut
 
 Es kann ein beliebiger Elementwert abgerufen werden, z. B. „div“ oder H1-Tag.
@@ -709,7 +708,7 @@ Wert abrufen von:
 
 Verfügbare JavaScript-Objekte oder -Variablen können mit dem Pfadfeld referenziert werden.
 
-Mit Tag-Datenelementen können Sie Ihre Markup-JavaScript-Variablen oder Objekteigenschaften erfassen. Diese Werte können dann in Ihren Erweiterungen oder benutzerdefinierten Regeln verwendet werden, indem auf die Tag-Datenelemente verwiesen wird. Wenn sich die Quelle der Daten ändert, ist es nur erforderlich, den Verweis auf die Quelle zu aktualisieren.
+Mit Tag-Datenelementen können Sie Ihre Markup-JavaScript-Variablen oder Objekteigenschaften erfassen. Diese Werte können dann in Ihren Erweiterungen oder benutzerdefinierten Regeln verwendet werden, indem auf die Tag-Datenelemente verwiesen wird. Wenn sich die Quelle der Daten ändert, ist es nur erforderlich, den Verweis auf die Quelle in der Datenerfassungs-Benutzeroberfläche zu aktualisieren.
 
 Im folgenden Beispiel enthält das Markup eine JavaScript-Variable namens `Page_Name`.
 
@@ -720,9 +719,9 @@ Im folgenden Beispiel enthält das Markup eine JavaScript-Variable namens `Page_
 </script>
 ```
 
-Wenn Sie das Datenelement  erstellen, geben Sie einfach den Pfad zu dieser Variablen an.
+Wenn Sie das Datenelement in der Datenerfassungs-Benutzeroberfläche erstellen, geben Sie einfach den Pfad zu dieser Variablen an.
 
-Wenn Sie ein Datenerfassungsobjekt als Teil Ihrer Datenschicht verwenden, verwenden Sie Punktnotation im Pfad, um auf das Objekt und die Eigenschaft zu verweisen, die Sie im Datenelement erfassen möchten, z. B. `_myData.pageName`oder `digitalData.pageName`usw.
+Wenn Sie ein Datenerfassungsobjekt als Teil Ihrer Datenschicht verwenden, verwenden Sie die Punktnotation im Pfad, um auf das Objekt und die Eigenschaft zu verweisen, die Sie im Datenelement erfassen möchten, z. B. `_myData.pageName` oder `digitalData.pageName` und so weiter.
 
 #### Beispiel:
 
@@ -816,7 +815,7 @@ Nur der Abschnitt „Name“ ist erforderlich und spezielle Bezeichner wie „?�
 
 ### Zufällige Nummer
 
-Verwenden Sie dieses Datenelement zum Generieren einer zufälligen Nummer. Sie wird häufig zum Sampling von Daten oder zum Erstellen von IDs wie einer Treffer-ID verwendet. Die zufällige Nummer kann auch zum Verschleiern oder für Salt-Vorgänge für vertrauliche Daten verwendet. Mögliche Beispiele sind:
+Verwenden Sie dieses Datenelement zum Generieren einer zufälligen Nummer. Diese wird oft für das Sampling von Daten oder zum Erstellen von IDs wie einer Treffer-ID verwendet. Die zufällige Nummer kann auch zum Verschleiern oder für Salt-Vorgänge für vertrauliche Daten verwendet. Mögliche Beispiele sind:
 
 * Generieren einer Treffer-ID
 * Verketten der Nummer für ein Benutzer-Token oder einen Zeitstempel zur Gewährleistung der Eindeutigkeit
