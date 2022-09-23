@@ -4,9 +4,9 @@ title: Anleitung zur attributbasierten Zugriffssteuerung (End-to-End)
 description: Dieses Dokument bietet eine durchgängige Anleitung zur attributbasierten Zugriffskontrolle in Adobe Experience Platform
 hide: true
 hidefromtoc: true
-source-git-commit: f7a8f9a5eb0ef3c961f9524057ff01564f88dec3
+source-git-commit: 230bcfdb92c3fbacf2e24e7210d61e2dbe0beb86
 workflow-type: tm+mt
-source-wordcount: '2218'
+source-wordcount: '2315'
 ht-degree: 7%
 
 ---
@@ -39,9 +39,9 @@ Dazu müssen Sie Rollen, Ressourcen und Richtlinien konfigurieren.
 
 Sie werden:
 
-* [Rollen für Ihre Benutzer beschriften]{#label-roles}: Verwenden Sie das Beispiel eines Gesundheitsdienstleisters (ACME Business Group), dessen Marketinggruppe mit externen Agenturen zusammenarbeitet.
-* [Ressourcen beschriften (Schemafelder und Segmente)]{#label-resources}: Zuweisen der **[!UICONTROL PHI/Reguläre Gesundheitsdaten]** -Beschriftung für Schemaressourcen und -segmente.
-* [Erstellen Sie die Richtlinie, die sie miteinander verknüpft]{#policy}: Erstellen Sie eine Richtlinie, um die Beschriftungen in Ihren Ressourcen mit den Beschriftungen in Ihrer Rolle zu verknüpfen, wodurch der Zugriff auf Schemafelder und Segmente verweigert wird. Dadurch wird Benutzern ohne übereinstimmende Beschriftungen der Zugriff auf das Schemafeld und das Segment in allen Sandboxes verweigert.
+* [Rollen für Ihre Benutzer beschriften](#label-roles): Verwenden Sie das Beispiel eines Gesundheitsdienstleisters (ACME Business Group), dessen Marketinggruppe mit externen Agenturen zusammenarbeitet.
+* [Ressourcen beschriften (Schemafelder und Segmente)](#label-resources): Zuweisen der **[!UICONTROL PHI/Reguläre Gesundheitsdaten]** -Beschriftung für Schemaressourcen und -segmente.
+* [Erstellen Sie die Richtlinie, die sie miteinander verknüpft](#policy): Erstellen Sie eine Richtlinie, um die Beschriftungen in Ihren Ressourcen mit den Beschriftungen in Ihrer Rolle zu verknüpfen, wodurch der Zugriff auf Schemafelder und Segmente verweigert wird. Dadurch wird Benutzern ohne übereinstimmende Beschriftungen der Zugriff auf das Schemafeld und das Segment in allen Sandboxes verweigert.
 
 ## Berechtigungen
 
@@ -162,7 +162,7 @@ Wiederholen Sie die obigen Schritte mit **[!UICONTROL Insulin &lt;50]**.
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Zulässige und unzulässige Aktionen für eine Richtlinie konfigurieren"
->abstract="Wählen Sie Zugriff zulassen aus, um die zulässigen Aktionen zu konfigurieren, die Ihre Benutzer gegenüber Ressourcen durchführen können. Wählen Sie Zugriff auf verweigern aus, um unzulässige Aktionen zu konfigurieren, die Ihre Benutzer nicht gegen Ressourcen durchführen können."
+>abstract="A <b>Zugriff auf verweigern</b> -Richtlinie verweigert Benutzern den Zugriff, wenn die Kriterien erfüllt sind. Bei Kombination mit <b>Folgendes ist falsch</b> - allen Benutzern wird der Zugriff verweigert, es sei denn, sie erfüllen die entsprechenden Kriterien. Mit dieser Art von Richtlinie können Sie eine sensible Ressource schützen und nur Benutzern Zugriff gewähren, die über entsprechende Beschriftungen verfügen. <br>A <b>den Zugriff auf</b> -Richtlinie ermöglicht Benutzern den Zugriff, wenn die Kriterien erfüllt sind. Bei Kombination mit <b>Folgendes ist wahr</b> - Benutzer erhalten Zugriff, wenn sie die entsprechenden Kriterien erfüllen. Dadurch wird Benutzern nicht explizit der Zugriff verweigert, sondern der Zugriff auf eine Genehmigung hinzugefügt. Mit dieser Art von Richtlinie können Sie zusätzlichen Zugriff auf Ressourcen und zusätzlich zu den Benutzern gewähren, die bereits über Rollenberechtigungen Zugriff haben.&quot;</br>
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Richtlinie bearbeiten"
 
 >[!CONTEXTUALHELP]
