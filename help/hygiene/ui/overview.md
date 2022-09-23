@@ -3,9 +3,9 @@ title: Handbuch zur Verwendung der Datenhygiene-Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche Datenhygiene-Aufgaben verwalten können.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
 source-git-commit: 3a98275b4b2969e2c7d8c1ec6ada14d1dd52b9b8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '228'
-ht-degree: 66%
+ht-degree: 100%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 66%
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
->title="Data Hygiene Wheel"
->abstract="Dieses Widget zeigt den Status von Löschaufträgen von Data Hygiene-Benutzern für den ausgewählten Zeitraum. Weitere Informationen zu Ihren Data Hygiene-Prozessen finden Sie unter **Datenhygiene** in der linken Navigation."
+>title="Datenhygiene-Rad"
+>abstract="Dieses Widget zeigt den Status der Datenhygiene-Löschaufträge von Verbrauchern für die ausgewählte Zeitspanne an. Weitere Informationen zu Ihren Datenhygieneprozessen finden Sie unter **Datenhygiene** in der linken Navigation."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
->title="Jüngste Arbeitshygiene-Aufträge"
->abstract="Dieses Widget zeigt die fünf zuletzt erstellten oder aktualisierten Arbeitserstellungen zur Data Hygiene, je nach der von Ihnen gewählten Option oben rechts. Weitere Informationen zu Ihren Data Hygiene-Prozessen finden Sie unter **Datenhygiene** in der linken Navigation."
+>title="Aktuelle Arbeitsaufträge zur Datenhygiene"
+>abstract="Dieses Widget zeigt die fünf zuletzt erstellten oder aktualisierten Arbeitsaufträge zur Datenhygiene, je nach der oben rechts gewählten Option. Weitere Informationen zu Ihren Datenhygieneprozessen finden Sie unter **Datenhygiene** in der linken Navigation."
 
 >[!IMPORTANT]
 >
