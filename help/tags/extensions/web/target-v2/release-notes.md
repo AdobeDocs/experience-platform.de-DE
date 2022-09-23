@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Target v2-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Target v2“ in Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: 3f6526ec87189d6e629d4dcb8eb626367543b9e5
+source-git-commit: ebaac56103207271be0c7466dda29bfb40c28218
 workflow-type: tm+mt
-source-wordcount: '603'
-ht-degree: 94%
+source-wordcount: '613'
+ht-degree: 93%
 
 ---
 
@@ -14,6 +14,11 @@ ht-degree: 94%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+
+## v0.19.0 (19. September 2022)
+
+- Es wurde eine Aktualisierung vorgenommen, sodass `at.js` v2.10.0 unterstützt wird
+- Unterstützung für domänenübergreifendes Tracking wurde hinzugefügt.
 
 ## v0.18.0 (1. Juni 2022)
 
