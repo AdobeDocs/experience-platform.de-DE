@@ -2,9 +2,9 @@
 title: Verbindung mit Verizon MediaYahoo DataX
 description: DataX ist eine aggregierte Infrastruktur von Verizon Media/Yahoo, die verschiedene Komponenten hostet, mit denen Verizon Media/Yahoo Daten mit externen Partnern auf sichere, automatisierte und skalierbare Weise austauschen kann.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: f61771ec11b8bd2d19e303b39e57e82da8f11ead
+source-git-commit: 0580816c471400ba17eddcb6b1a9dfbf01797938
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '787'
 ht-degree: 18%
 
 ---
@@ -54,7 +54,7 @@ Mehr dazu [Taxonomie-Metadaten](https://developer.verizonmedia.com/datax/guide/t
 
 >[!IMPORTANT]
 >
->Beim Aktivieren von mehr als 100 Segmenten für [!DNL Verizon Media/Yahoo DataX]können Sie Ratenbegrenzungsfehler vom Ziel erhalten. Beim Aktivieren von Segmenten für [!DNL Yahoo/DataX] Ziel festzulegen, wird empfohlen, weniger als 100 Segmente in einem Aktivierungsdatenfluss zu aktivieren. Wenn Sie weitere Segmente aktivieren müssen, erstellen Sie ein neues Ziel für dasselbe Konto.
+>Beim Aktivieren von mehr als 100 Segmenten für [!DNL Verizon Media/Yahoo DataX]können Sie Ratenbegrenzungsfehler vom Ziel erhalten. Versuchen Sie beim Aktivieren von Segmenten für dieses Ziel, weniger als 100 Segmente in einem Aktivierungsdatenfluss zu aktivieren. Wenn Sie weitere Segmente aktivieren müssen, erstellen Sie ein neues Ziel für dasselbe Konto.
 
 [!DNL DataX] ist durch die im Abschnitt [DataX-Dokumentation](https://developer.verizonmedia.com/datax/guide/rate-limits/).
 
