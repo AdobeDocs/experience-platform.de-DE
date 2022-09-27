@@ -2,24 +2,20 @@
 title: Verwalten von Datensatzgültigkeiten
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform die Gültigkeit eines Datensatzes planen.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 5a12c75a54f420b2ca831dbfe05105dfd856dc4d
+source-git-commit: 425298ec28517bba4eca1bf0966fd3b205fce764
 workflow-type: tm+mt
-source-wordcount: '438'
-ht-degree: 93%
+source-wordcount: '511'
+ht-degree: 79%
 
 ---
 
 # Verwalten von Datensatzgültigkeiten
 
->[!IMPORTANT]
->
->Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die Healthcare Shield erworben haben.
-
-Der [[!UICONTROL Datenhygiene]-Arbeitsbereich](./overview.md) in der Adobe Experience Platform-Benutzeroberfläche bietet Ihnen die Möglichkeit, die Gültigkeit eines Datensatzes zu planen. Wenn ein Datensatz sein Ablaufdatum erreicht, beginnen der Data Lake, der Identity Service und das Echtzeit-Kundenprofil separate Prozesse, um den Inhalt des Datensatzes aus den entsprechenden Services zu entfernen. Sobald die Daten aus allen drei Services gelöscht wurden, wird der Ablauf als abgeschlossen markiert.
+Die [[!UICONTROL Datenhygiene] Arbeitsbereich](./overview.md) In der Adobe Experience Platform-Benutzeroberfläche können Sie die Ablaufzeit für Datensätze planen. Wenn ein Datensatz sein Ablaufdatum erreicht, beginnen der Data Lake, der Identity Service und das Echtzeit-Kundenprofil separate Prozesse, um den Inhalt des Datensatzes aus den entsprechenden Services zu entfernen. Sobald die Daten aus allen drei Services gelöscht wurden, wird der Ablauf als abgeschlossen markiert.
 
 >[!WARNING]
 >
->Wenn ein Datensatz abläuft, müssen Sie jeden Datenfluss, der Daten in diesen Datensatz erfasst, manuell ändern, damit Ihre nachgelagerten Workflows nicht negativ beeinflusst werden.
+>Wenn ein Datensatz ausläuft, müssen alle Datenflüsse, die Daten in diesen Datensatz einspeisen, manuell geändert werden, damit Ihre nachgeschalteten Workflows nicht beeinträchtigt werden.
 
 In diesem Dokument wird beschrieben, wie Sie Datensatzgültigkeiten in der Platform-Benutzeroberfläche planen und verwalten.
 
@@ -29,11 +25,13 @@ Um eine neue Anfrage zu erstellen, wählen Sie auf der Hauptseite im Arbeitsbere
 
 ![Bild, das die ausgewählte Schaltfläche [!UICONTROL Anfrage erstellen] zeigt](../images/ui/ttl/create-request-button.png)
 
-<!-- The request creation dialog appears. Under the **[!UICONTROL Action]** section, select **[!UICONTROL Dataset]** to update the available controls for dataset expiration scheduling-->
+Daraufhin öffnet sich das Dialogfeld für die Anfrageerstellung. Unter dem **[!UICONTROL Angeforderte Aktion]** Bereich, wählen Sie **[!UICONTROL Datensatz löschen]** , um die verfügbaren Steuerelemente für die Ablaufplanung von Datensätzen zu aktualisieren.
+
+![Bild, das die ausgewählte Schaltfläche [!UICONTROL Anfrage erstellen] zeigt](../images/ui/ttl/dataset-selected.png)
 
 ### Auswählen von Datum und Datensatz
 
-Daraufhin öffnet sich das Dialogfeld für die Anfrageerstellung. Wählen Sie im Abschnitt **[!UICONTROL Aktion]** ein Datum aus, an dem der Datensatz gelöscht werden soll. Sie können das Datum manuell eingeben (im Format `mm/dd/yyyy`) oder das Kalendersymbol anklicken (![Bild des Kalendersymbols](../images/ui/ttl/calendar-icon.png)) und dann das Datum aus einem Dialogfeld auswählen.
+Daraufhin öffnet sich das Dialogfeld für die Anfrageerstellung. Unter dem **[!UICONTROL Angeforderte Aktion]** ein Datum auswählen, ab dem der Datensatz gelöscht werden soll. Sie können das Datum manuell eingeben (im Format `mm/dd/yyyy`) oder das Kalendersymbol anklicken (![Bild des Kalendersymbols](../images/ui/ttl/calendar-icon.png)) und dann das Datum aus einem Dialogfeld auswählen.
 
 ![Bild, das zeigt, wie ein Ablaufdatum für das Dataset festgelegt wird](../images/ui/ttl/select-date.png)
 
@@ -47,13 +45,17 @@ Wählen Sie danach unter **[!UICONTROL Datensatzdetails]** das Datenbanksymbol (
 
 ### Senden der Anfrage
 
-Nachdem Sie einen Datensatz und ein Ablaufdatum ausgewählt haben, wählen Sie **[!UICONTROL Senden]**.
+Die [!UICONTROL Datensatzdetails] -Abschnitt wird gefüllt, um die primäre Identität und das Schema für den ausgewählten Datensatz einzuschließen. under **[!UICONTROL Anforderungseinstellungen]**, geben Sie einen Namen und eine optionale Beschreibung für die Anforderung ein, gefolgt von **[!UICONTROL Einsenden]**.
 
 ![Bild, das die ausgewählte Schaltfläche [!UICONTROL Senden] zeigt](../images/ui/ttl/submit.png)
 
 Sie werden aufgefordert, das Datum zu bestätigen, an dem der Datensatz gelöscht werden soll. Wählen Sie **[!UICONTROL Senden]** aus, um fortzufahren.
 
 Nachdem die Anfrage übermittelt wurde, wird ein Arbeitsauftrag erstellt und auf der Hauptregisterkarte des Arbeitsbereichs [!UICONTROL Datenhygiene] angezeigt. Hier können Sie den Fortschritt des Arbeitsauftrags überwachen.
+
+>[!NOTE]
+>
+>Siehe Abschnitt Übersicht unter [Fristen und Transparenz](../home.md#dataset-expiration-transparency) für Details dazu, wie die Ablaufdaten von Datensätzen verarbeitet werden, sobald sie ausgeführt werden.
 
 ## Bearbeiten oder Abbrechen einer Datensatzgültigkeit
 
@@ -63,4 +65,6 @@ Auf der Detailseite der Datensatzgültigkeit zeigt die rechte Leiste Steuereleme
 
 ## Nächste Schritte
 
-In diesem Dokument wurde beschrieben, wie Sie in der Experience Platform-Benutzeroberfläche einen Zeitplan für Datensatzgültigkeiten erstellen können. Informationen zum Planen von Datensatzgültigkeiten mithilfe der Datenhygiene-API finden Sie im [Handbuch zum Datensatzgültigkeit-Endpunkt](../api/dataset-expiration.md).
+In diesem Dokument wurde beschrieben, wie Sie in der Experience Platform-Benutzeroberfläche einen Zeitplan für Datensatzgültigkeiten erstellen können. Weitere Informationen zur Durchführung anderer Datenhygiene-Aufgaben in der Benutzeroberfläche finden Sie im Abschnitt [Übersicht über die Datenhygiene-Benutzeroberfläche](./overview.md).
+
+Informationen zum Planen von Datensatzgültigkeiten mithilfe der Datenhygiene-API finden Sie im [Handbuch zum Datensatzgültigkeit-Endpunkt](../api/dataset-expiration.md).

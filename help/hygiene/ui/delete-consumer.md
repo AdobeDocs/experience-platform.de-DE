@@ -2,12 +2,10 @@
 title: Löschen von Verbraucherdatensätzen
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform Verbraucherdatensätze löschen können.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-hide: true
-hidefromtoc: true
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: 425298ec28517bba4eca1bf0966fd3b205fce764
 workflow-type: tm+mt
-source-wordcount: '1089'
-ht-degree: 100%
+source-wordcount: '1131'
+ht-degree: 93%
 
 ---
 
@@ -15,7 +13,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die Healthcare Shield erworben haben.
+>Löschanfragen von Verbrauchern stehen nur Organisationen zur Verfügung, die Adobe Healthcare Shield oder Privacy Shield erworben haben.
 
 Im [[!UICONTROL Datenhygiene]-Arbeitsbereich](./overview.md) in der Adobe Experience Platform-Benutzeroberfläche können Sie Verbraucherdatensätze löschen, die vom Identity Service und Echtzeit-Kundenprofil verwendet werden.
 
@@ -37,7 +35,7 @@ Wählen Sie zunächst auf der Hauptseite im Arbeitsbereich die Option **[!UICONT
 
 ![Bild, das die ausgewählte Schaltfläche [!UICONTROL Anfrage erstellen] zeigt](../images/ui/delete-consumer/create-request-button.png)
 
-Das Dialogfeld für die Anfrageerstellung öffnet sich. Standardmäßig ist die Option **[!UICONTROL Verbraucher]** im Abschnitt **[!UICONTROL Aktion]** ausgewählt. Lassen Sie diese Option aktiviert.
+Daraufhin öffnet sich das Dialogfeld für die Anfrageerstellung. Standardmäßig wird die **[!UICONTROL Verbraucher]** ist unter der Option **[!UICONTROL Angeforderte Aktion]** Abschnitt. Lassen Sie diese Option aktiviert.
 
 ![Bild mit der im Erstellungsdialogfeld ausgewählten Verbraucheroption](../images/ui/delete-consumer/consumer-action.png)
 
@@ -130,7 +128,7 @@ Um weitere Identitäten hinzuzufügen, wählen Sie das Pluszeichen (![Bild des P
 
 ## Senden der Anfrage (#submit)
 
-Nachdem Sie der Anfrage Identitäten hinzugefügt haben, wählen Sie **[!UICONTROL Senden]** aus.
+Nachdem Sie die Identitäten zur Anfrage hinzugefügt haben, finden Sie unter **[!UICONTROL Anforderungseinstellungen]**, geben Sie einen Namen und eine optionale Beschreibung für die Anforderung ein, bevor Sie **[!UICONTROL Einsenden]**.
 
 ![Bild, das die ausgewählte Schaltfläche [!UICONTROL Senden] zeigt](../images/ui/delete-consumer/submit.png)
 
@@ -138,16 +136,14 @@ Sie werden aufgefordert, die Liste der Identitäten zu bestätigen, deren Daten 
 
 ![Bild mit dem Bestätigungsdialogfeld](../images/ui/delete-consumer/confirm-request.png)
 
-Nachdem die Anfrage gesendet wurde, wird ein Arbeitsauftrag erstellt und auf der Registerkarte [!UICONTROL Verbraucher] des Arbeitsbereichs [!UICONTROL Datenhygiene] angezeigt. Hier können Sie den Fortschritt des Arbeitsauftrags überwachen. Die meisten Arbeitsaufträge zum Löschen von Verbraucherdaten dauern mehrere Tage.
+Nachdem die Anfrage gesendet wurde, wird ein Arbeitsauftrag erstellt, der auf der Registerkarte [!UICONTROL Verbraucher] des Arbeitsbereichs [!UICONTROL Datenhygiene] angezeigt wird. Hier können Sie den Fortschritt des Arbeitsauftrags überwachen.
+
+>[!NOTE]
+>
+>Siehe Abschnitt Übersicht unter [Fristen und Transparenz](../home.md#consumer-delete-transparency) für Details darüber, wie vom Verbraucher gelöschte Dateien verarbeitet werden, nachdem sie ausgeführt wurden.
 
 ## Nächste Schritte
 
 In diesem Dokument wurde beschrieben, wie Sie Verbraucherdaten über die Experience Platform-Benutzeroberfläche löschen können. Weitere Informationen zur Durchführung anderer Datenhygieneaufgaben in der Benutzeroberfläche finden Sie im Abschnitt [Übersicht über die Datenhygiene-Benutzeroberfläche](./overview.md).
 
-<!--
-
-Paragraph below should be commented out until workorder.md will be added to the TOC.
-
-To learn how to delete consumer records using the Data Hygiene API, refer to the [work order endpoint guide](../api/workorder.md).
-
--->
+Informationen zum Löschen von Verbraucherdatensätzen mithilfe der Data Hygiene API finden Sie im [Handbuch zum Arbeitsauftrags-Endpunkt](../api/workorder.md).

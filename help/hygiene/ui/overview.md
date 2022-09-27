@@ -2,10 +2,10 @@
 title: Handbuch zur Verwendung der Datenhygiene-Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche Datenhygiene-Aufgaben verwalten können.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: 3a98275b4b2969e2c7d8c1ec6ada14d1dd52b9b8
-workflow-type: ht
-source-wordcount: '228'
-ht-degree: 100%
+source-git-commit: 762cd5eb33706a942f5df91005e4ae9157bb6af8
+workflow-type: tm+mt
+source-wordcount: '217'
+ht-degree: 95%
 
 ---
 
@@ -21,10 +21,6 @@ ht-degree: 100%
 >title="Aktuelle Arbeitsaufträge zur Datenhygiene"
 >abstract="Dieses Widget zeigt die fünf zuletzt erstellten oder aktualisierten Arbeitsaufträge zur Datenhygiene, je nach der oben rechts gewählten Option. Weitere Informationen zu Ihren Datenhygieneprozessen finden Sie unter **Datenhygiene** in der linken Navigation."
 
->[!IMPORTANT]
->
->Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die Healthcare Shield erworben haben.
-
 Der Arbeitsbereich **[!UICONTROL Datenhygiene]** in der Adobe Experience Platform-Benutzeroberfläche ermöglicht Ihnen, verschiedene Aufgaben zur Datenhygiene zu erstellen und zu überwachen, darunter das Löschen von Verbraucheridentitäten und das Planen von Datensatzgültigkeiten.
 
 In diesem Handbuch wird beschrieben, wie Sie Datenhygiene-Aufgaben in der Platform-Benutzeroberfläche verwalten. Informationen zur Durchführung dieser Aufgaben mithilfe von API-Aufrufen finden Sie im [Data Hygiene API-Handbuch](../api/overview.md).
@@ -36,4 +32,5 @@ Um auf den Arbeitsbereich zuzugreifen, wählen Sie in der linken Navigationsleis
 Hier können Sie bestehende Arbeitsaufträge einsehen und neue Datenhygienevorgänge konfigurieren. Weitere Informationen finden Sie in den folgenden Abschnitten dieses Handbuchs:
 
 * [Durchsuchen vorhandener Arbeitsaufträge](./browse.md)
-* [Verwalten von Datensatzgültigkeiten](./dataset-expiration.md)
+* [Erstellen einer Datensatzablaufanfrage](./dataset-expiration.md)
+* [Benutzerdefinierte Löschanfrage erstellen](./delete-consumer.md)
