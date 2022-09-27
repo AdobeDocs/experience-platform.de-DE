@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform - Versionshinweise - September 2022
 description: Die Versionshinweise für Adobe Experience Platform vom September 2022.
-source-git-commit: 5335c77b4636d10064e8786525c9f8f893371b9b
+source-git-commit: a3f12b9524d393441923cd11e09ed3e406814691
 workflow-type: tm+mt
-source-wordcount: '927'
-ht-degree: 38%
+source-wordcount: '1377'
+ht-degree: 34%
 
 ---
 
@@ -16,6 +16,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Identity Service](#identity-service)
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [Quellen](#sources)
 
 ## Experience-Datenmodell (XDM) {#xdm}
@@ -76,6 +77,32 @@ Mit Adobe Experience Platform Identity Service erhalten Sie einen besseren Über
 | Unterstützung für das Löschen von Datensätzen | Identity Service unterstützt jetzt das Löschen von Datensätzen, wenn über die [Catalog Service-API](https://developer.adobe.com/experience-platform-apis/references/catalog/), Benutzeroberfläche oder Datenhygiene. Lesen Sie das Handbuch unter [Löschen von Datensätzen in der Benutzeroberfläche](../../catalog/datasets/user-guide.md#delete-a-dataset) für weitere Informationen. |
 
 Weitere Informationen zum Identity Service finden Sie im Abschnitt [Identity Service - Übersicht](../../identity-service/home.md).
+
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
+
+KI/ML-Services ermöglichen es Marketing-Leuten und Fachleuten, die Leistungsfähigkeit von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen zu nutzen. Auf diese Weise können Marketing-Leute mithilfe von Konfigurationen auf Unternehmensebene Modelle erstellen, die speziell auf die Anforderungen eines Unternehmens zugeschnitten sind, ohne dass dafür datenwissenschaftliches Fachwissen erforderlich ist.
+
+### Attributions-KI
+
+Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Entwurfsinstanz speichern | Diese neue Funktion ermöglicht es Marketing-Analysten, die Modellkonfiguration während der Konfigurationen als Entwurfsinstanz zu speichern und den Entwurf bis zum Abschluss des Trainings und der Auswertung weiter zu bearbeiten. Zu den Szenarien, in denen diese Funktion hilfreich ist, gehören u. a. Fälle, in denen Benutzer mehrere Felder definieren müssen, die im Konfigurations-Workflow definiert werden sollen, sodass sie nicht in einem Schritt abgeschlossen werden können, oder Fälle, in denen eine oder mehrere Datensatzstatistiken (z. B. die Spaltenvollständigkeit) erst verarbeitet werden müssen, bevor sie verfügbar werden. Lesen Sie die [Attribution AI-Benutzerhandbuch](../../intelligent-services/attribution-ai/user-guide.md) , um mehr zu erfahren. |
+| Governance-Strategien | Nachdem sich Benutzer zum Erstellen einer Instanz über den Konfigurations-Workflow übermittelt haben, prüft der neue Richtliniendurchsetzungsdienst, ob Richtlinienverletzungen bei der Datennutzung vorliegen, und zeigt die Details in einem Popup an. Dadurch wird sichergestellt, dass Datenvorgänge und Marketing-Aktionen mit den in Adobe Experience Platform konfigurierten Datennutzungsrichtlinien konform sind. |
+
+Weitere Informationen zu Attribution AI finden Sie unter [Attribution AI - Übersicht](../../intelligent-services/attribution-ai/overview.md). Informationen zu Data Governance-Richtlinien finden Sie im Abschnitt [Richtlinien - Übersicht](../../data-governance/policies/overview.md).
+
+### Kunden-KI
+
+Kunden-KI in Real-time Customer Data Platform dient dazu, für einzelne Profile in gewünschten Umfang benutzerdefinierte Neigungswerte wie Abwanderung und Konversion zu generieren.
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Entwurfsinstanz speichern | Diese neue Funktion ermöglicht es Marketing-Analysten, die Modellkonfiguration während der Konfigurationen als Entwurfsinstanz zu speichern und den Entwurf bis zum Abschluss des Trainings und der Auswertung weiter zu bearbeiten. Zu den Szenarien, in denen diese Funktion hilfreich ist, gehören u. a. Fälle, in denen Benutzer mehrere Felder definieren müssen, die im Konfigurations-Workflow definiert werden sollen, sodass sie nicht in einem Schritt abgeschlossen werden können, oder Fälle, in denen eine oder mehrere Datensatzstatistiken (z. B. die Spaltenvollständigkeit) erst verarbeitet werden müssen, bevor sie verfügbar werden. Lesen Sie die [Benutzerhandbuch für Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md) , um mehr zu erfahren. |
+| Governance-Strategien | Nachdem sich Benutzer zum Erstellen einer Instanz über den Konfigurations-Workflow übermittelt haben, prüft der neue Richtliniendurchsetzungsdienst, ob Richtlinienverletzungen bei der Datennutzung vorliegen, und zeigt die Details in einem Popup an. Dadurch wird sichergestellt, dass Datenvorgänge und Marketing-Aktionen mit den in Adobe Experience Platform konfigurierten Datennutzungsrichtlinien konform sind. |
+
+Weitere Informationen zu Customer AI finden Sie im [Customer AI - Übersicht](../../intelligent-services/customer-ai/overview.md). Informationen zu Data Governance-Richtlinien finden Sie im Abschnitt [Richtlinien - Übersicht](../../data-governance/policies/overview.md).
 
 ## Quellen {#sources}
 
