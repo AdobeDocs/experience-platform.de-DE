@@ -5,10 +5,10 @@ title: Benutzerhandbuch zu Attribution AI
 topic-legacy: User guide
 description: Dieses Dokument dient als Leitfaden für die Interaktion mit Attribution AI in der Benutzeroberfläche von Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: 8f41233df9691fd10361b58a472576dec36d11b4
+source-git-commit: cec2449525eb067fa7915073e929f9693a45575a
 workflow-type: tm+mt
-source-wordcount: '2873'
-ht-degree: 6%
+source-wordcount: '2960'
+ht-degree: 5%
 
 ---
 
@@ -70,6 +70,10 @@ Infosymbol auswählen ![Infosymbol](./images/user-guide/info-icon.png) neben ein
 
 Die Datensatzvorschau enthält Daten wie die letzte Aktualisierungszeit, das Quellschema und eine Vorschau der ersten zehn Spalten.
 
+Auswählen **[!UICONTROL Speichern]** , um Ihre Entwürfe zu speichern, während Sie den Workflow fortsetzen. Sie können auch Entwurfsmodellkonfigurationen speichern und mit dem nächsten Schritt im Workflow fortfahren. Verwendung **[!UICONTROL Speichern und fortfahren]** , um Entwürfe während der Modellkonfigurationen zu erstellen und zu speichern. Die Funktion ermöglicht die Erstellung und Speicherung von Entwürfen der Modellkonfiguration und ist insbesondere dann nützlich, wenn Sie im Konfigurations-Workflow viele Felder definieren müssen.
+
+![Der Workflow Erstellen auf der Registerkarte Data Science Services-Attribution AI mit Speichern und Speichern wurde hervorgehoben.](./images/user-guide/aai-save-save-&-exit.png)
+
 ### Datensatzvollständigkeit {#dataset-completeness}
 
 <!-- https://www.adobe.com/go/aai-dataset-completeness -->
@@ -92,7 +96,7 @@ Sie können jetzt mehrere Datensätze auf Grundlage der Identitätszuordnung (Fe
 
 Um eine Identität auszuwählen, wählen Sie den unterstrichenen Wert in der Identitätsspalte aus. Das Popover zur Identitätsauswahl wird angezeigt.
 
-![denselben Namespace auswählen](./images/user-guide/aai-identity-map.png)
+![denselben Namespace auswählen](./images/user-guide/aai-identity-map-save-and-exit.png)
 
 Wenn innerhalb eines Namespace mehr als eine Identität verfügbar ist, wählen Sie das richtige Identitätsfeld für Ihren Anwendungsfall aus. Beispielsweise sind im E-Mail-Namespace zwei E-Mail-Identitäten verfügbar: eine Arbeit und eine persönliche E-Mail. Je nach Anwendungsfall ist es wahrscheinlicher, dass eine persönliche E-Mail ausgefüllt wird, und nützlicher bei individuellen Prognosen. Sie können also `EMAIL (personalEmail.address)` als Ihre Identität.
 
@@ -108,7 +112,7 @@ Wenn innerhalb eines Namespace mehr als eine Identität verfügbar ist, wählen 
 
 Nachdem Sie die Auswahl und das Hinzufügen von Datensätzen abgeschlossen haben, wird die **Zuordnung** Konfigurationsschritt angezeigt. Attribution AI erfordert, dass Sie das Feld Medienkanal für jeden Datensatz zuordnen, den Sie im vorherigen Schritt ausgewählt haben. Dies liegt daran, dass ohne die Medienkanal-Zuordnung zwischen Datensätzen von aus Attribution AI abgeleiteten Einblicken möglicherweise nicht richtig angezeigt wird, was die Interpretationsseite der Einblicke erschwert. Obwohl nur der Medienkanal erforderlich ist, wird dringend empfohlen, einige der optionalen Felder wie Medienaktion, Kampagnenname, Kampagnengruppe und Kampagnen-Tag zuzuordnen. Dadurch kann Attribution AI bessere Einblicke und optimale Ergebnisse erzielen.
 
-![Zuordnung](./images/user-guide/mapping.png)
+![Zuordnung](./images/user-guide/mapping-save-&-exit.png)
 
 ## Ereignisse definieren {#define-events}
 
@@ -198,13 +202,13 @@ Sie können zusätzliche Touchpoints hinzufügen, indem Sie **Touchpoint hinzuf�
 
 Wenn Sie alle erforderlichen Touchpoints definiert haben, scrollen Sie nach oben und wählen Sie **Nächste** in der oberen rechten Ecke, um mit dem letzten Schritt fortzufahren.
 
-![finished](./images/user-guide/define_event_next.png)
+![finished](./images/user-guide/define_event_save_and_exit.png)
 
 ## Erweiterte Trainings- und Scoring-Einrichtung
 
 Die letzte Seite in Attribution AI ist die **[!UICONTROL Erweitert]** Seite, die zum Einrichten von Training und Scoring verwendet wird.
 
-![neue Seite erweitert](./images/user-guide/advanced_settings.png)
+![Optionen für neue Seitensätze](./images/user-guide/advanced_settings_set_options.png)
 
 ### Planen von Schulungen
 
@@ -266,7 +270,7 @@ Nachdem Sie Ihr Schulungsfenster ausgewählt haben, wählen Sie **[!UICONTROL Be
 
 Sobald Sie den Workflow durchlaufen haben, um eine Instanz zu erstellen und die Konfiguration des Modells zu übermitteln, wird die [Richtliniendurchsetzung](/help/data-governance/enforcement/auto-enforcement.md) überprüft, ob Verstöße vorliegen. Wenn ein Richtlinienverstoß auftritt, wird ein Popup angezeigt, das angibt, dass eine oder mehrere Richtlinien verletzt wurden. Dadurch soll sichergestellt werden, dass Ihre Datenvorgänge und Marketing-Aktionen in Platform mit Datennutzungsrichtlinien konform sind.
 
-![Popover mit Richtlinienverstoß](./images/user-guide/policy-violation-popover.png)
+![Popover mit Richtlinienverstoß](./images/user-guide/policy-violation-popover-aai.png)
 
 Das Popup-Fenster enthält spezifische Informationen zum Verstoß. Sie können diese Verstöße durch Richtlinieneinstellungen und andere Maßnahmen beheben, die nicht direkt mit dem Konfigurations-Workflow zusammenhängen. Sie können beispielsweise die Beschriftungen so ändern, dass bestimmte Felder für datenwissenschaftliche Zwecke verwendet werden dürfen. Alternativ können Sie auch die Modellkonfiguration selbst so ändern, dass sie nichts mit einer Bezeichnung verwendet. Weitere Informationen zum Einrichten finden Sie in der Dokumentation . [policies](/help/data-governance/policies/overview.md).
 
@@ -298,7 +302,7 @@ Bei der Vorschau von Datensätzen mit eingeschränktem Schema auf der **[!UICONT
 
 Nachdem Sie eine Instanz mit eingeschränkten Informationen erstellt haben, fahren Sie mit dem **[!UICONTROL Ziel definieren]** Schritt, wird oben eine Warnung angezeigt: [!UICONTROL Aufgrund von Zugriffsbeschränkungen werden bestimmte Informationen nicht in der Konfiguration angezeigt.]
 
-![Der Arbeitsbereich Attribution AI mit den eingeschränkten Feldern der Instanz wird hervorgehoben.](./images/user-guide/information-not-displayed.png)
+![Der Arbeitsbereich Attribution AI mit den eingeschränkten Feldern der Instanz wird hervorgehoben.](./images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## Nächste Schritte
 

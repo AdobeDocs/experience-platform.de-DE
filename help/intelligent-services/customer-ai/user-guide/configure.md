@@ -6,9 +6,9 @@ title: Konfigurieren einer Customer AI-Instanz
 topic-legacy: Instance creation
 description: AI-/ML-Dienste bieten Customer AI als einfach zu verwendenden Adobe Sensei-Dienst, der für verschiedene Anwendungsfälle konfiguriert werden kann. Die folgenden Abschnitte enthalten Schritte zum Konfigurieren einer Instanz von Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 8f41233df9691fd10361b58a472576dec36d11b4
+source-git-commit: cec2449525eb067fa7915073e929f9693a45575a
 workflow-type: tm+mt
-source-wordcount: '3256'
+source-wordcount: '3342'
 ht-degree: 10%
 
 ---
@@ -67,7 +67,7 @@ Geben Sie die erforderlichen Werte an und wählen Sie dann **[!UICONTROL Nächst
 
 Standardmäßig verwendet Customer AI Adobe Analytics-, Adobe Audience Manager-, Erlebnisereignisse im Allgemeinen und Erlebnisereignisdaten für Verbraucher, um Tendenzwerte zu berechnen. Bei der Auswahl eines Datensatzes werden nur Datensätze aufgelistet, die mit Customer AI kompatibel sind. Um einen Datensatz auszuwählen, wählen Sie die **+**) neben dem Datensatznamen oder aktivieren Sie das Kontrollkästchen, um mehrere Datensätze gleichzeitig hinzuzufügen. Verwenden Sie die Suchoption, um schnell die Datensätze zu finden, an denen Sie interessiert sind.
 
-![Datensatz auswählen und suchen](../images/user-guide/configure-dataset-page.png)
+![Datensatz auswählen und suchen](../images/user-guide/configure-dataset-page-save-and-exit-cai.png)
 
 Wählen Sie nach Auswahl der Datensätze, die Sie verwenden möchten, die **[!UICONTROL Hinzufügen]** -Schaltfläche, um die Datensätze zum Vorschaufenster für den Datensatz hinzuzufügen.
 
@@ -78,6 +78,10 @@ Infosymbol auswählen ![Infosymbol](../images/user-guide/info-icon.png) neben de
 ![Datensatz auswählen und suchen](../images/user-guide/dataset-info.png)
 
 Die Datensatzvorschau enthält Daten wie die letzte Aktualisierungszeit, das Quellschema und eine Vorschau der ersten zehn Spalten.
+
+Auswählen **[!UICONTROL Speichern]** , um Ihre Entwürfe zu speichern, während Sie den Workflow fortsetzen. Sie können auch Entwurfsmodellkonfigurationen speichern und mit dem nächsten Schritt im Workflow fortfahren. Verwendung **[!UICONTROL Speichern und fortfahren]** , um Entwürfe während der Modellkonfigurationen zu erstellen und zu speichern. Die Funktion ermöglicht die Erstellung und Speicherung von Entwürfen der Modellkonfiguration und ist insbesondere dann nützlich, wenn Sie im Konfigurations-Workflow viele Felder definieren müssen.
+
+![Der Workflow Erstellen auf der Registerkarte Customer AI von Data Science Services mit Speichern und Speichern wurde hervorgehoben.](../images/user-guide/cai-save-and-exit.png)
 
 ### Datensatzvollständigkeit {#dataset-completeness}
 
@@ -140,7 +144,7 @@ Wenn Sie beispielsweise vorhersagen möchten, welche Kunden weniger engagiert si
 
 ### Alle und beliebige von
 
-In einigen Fällen können Sie vorhersagen, ob eine Kombination von Ereignissen eintritt, in anderen Fällen können Sie das Auftreten eines Ereignisses aus einem vordefinierten Satz vorhersagen. Um vorherzusagen, ob ein Kunde eine Kombination von Ereignissen aufweist, wählen Sie die **[!UICONTROL Alle]** -Option aus der Dropdown-Liste der zweiten Ebene auf der **[!UICONTROL Ziel definieren]** Seite.
+In einigen Fällen können Sie vorhersagen, ob eine Kombination von Ereignissen eintritt, in anderen Fällen können Sie das Auftreten eines Ereignisses aus einem vordefinierten Satz vorhersagen. Um vorherzusagen, ob ein Kunde eine Kombination von Ereignissen aufweist, wählen Sie die **[!UICONTROL Alle]** -Option aus der Dropdown-Liste der zweiten Ebene auf **[!UICONTROL Ziel definieren]** Seite.
 
 Sie können beispielsweise vorhersagen, ob ein Kunde ein bestimmtes Produkt kauft. Dieses Prognoseziel wird durch zwei Bedingungen definiert: a `commerce.order.purchaseID` **exists** und `productListItems.SKU` **gleich** einen bestimmten Wert.
 
@@ -236,7 +240,7 @@ Mit dem Profil -Umschalter kann Customer AI die Scoring-Ergebnisse in das Echtze
 
 Wenn Sie Customer AI zum ersten Mal verwenden, können Sie diese Funktion deaktivieren, bis Sie mit den Modellausgabeergebnissen zufrieden sind. Dadurch wird verhindert, dass Sie mehrere Scoring-Datensätze in Ihre Kundenprofile hochladen und gleichzeitig Ihr Modell optimieren. Nachdem Sie die Kalibrierung Ihres Modells abgeschlossen haben, können Sie das Modell mit der [Klonoption](#set-up-your-instance) von **Dienstinstanzen** Seite. Auf diese Weise können Sie eine Kopie Ihres Modells erstellen und das Profil aktivieren.
 
-![Profil-Umschalter](../images/user-guide/advanced-workflow.png)
+![Profil-Umschalter](../images/user-guide/advanced-workflow-save.png)
 
 Sobald Sie Ihren Scoring-Zeitplan, die Prognoseausschlüsse und den Profil-Umschalter festgelegt haben, wo Sie ihn sein möchten, wählen Sie **[!UICONTROL Beenden]** oben rechts, um Ihre Customer AI-Instanz zu erstellen.
 
@@ -282,11 +286,11 @@ Am oberen Rand des Arbeitsbereichs &quot;Customer AI&quot; **Insight-Seite** Bea
 
 Bei der Vorschau von Datensätzen mit eingeschränktem Schema auf der **[!UICONTROL Workflow &quot;Instanz erstellen&quot;]** angezeigt wird, erscheint ein Warnhinweis, der Ihnen mitteilt, dass [!UICONTROL Aufgrund von Zugriffsbeschränkungen werden bestimmte Informationen nicht in der Datensatzvorschau angezeigt.]
 
-![Der Customer AI-Arbeitsbereich mit den eingeschränkten Feldern der Vorschau-Datensätze mit eingeschränkten Schemaergebnissen hervorgehoben.](../images/user-guide/restricted-dataset-preview.png)
+![Der Customer AI-Arbeitsbereich mit den eingeschränkten Feldern der Vorschau-Datensätze mit eingeschränkten Schemaergebnissen hervorgehoben.](../images/user-guide/restricted-dataset-preview-save-and-exit-cai.png)
 
 Nachdem Sie eine Instanz mit eingeschränkten Informationen erstellt haben, fahren Sie mit dem **[!UICONTROL Ziel definieren]** Schritt, wird oben eine Warnung angezeigt: [!UICONTROL Aufgrund von Zugriffsbeschränkungen werden bestimmte Informationen nicht in der Konfiguration angezeigt.]
 
-![Der Arbeitsbereich Customer AI mit den eingeschränkten Feldern der Dienstinstanz wird hervorgehoben.](../images/user-guide/information-not-displayed.png)
+![Der Arbeitsbereich Customer AI mit den eingeschränkten Feldern der Dienstinstanz wird hervorgehoben.](../images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## Nächste Schritte {#next-steps}
 
