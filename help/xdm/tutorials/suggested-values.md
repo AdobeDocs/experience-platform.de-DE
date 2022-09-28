@@ -1,19 +1,38 @@
 ---
-title: Hinzufügen von vorgeschlagenen Werten zu einem Feld
+title: Verwalten von vorgeschlagenen Werten in der API
 description: Erfahren Sie, wie Sie einem Zeichenfolgenfeld in der Schema Registry-API empfohlene Werte hinzufügen.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 19bd5d9c307ac6e1b852e25438ff42bf52a1231e
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 2%
+source-wordcount: '883'
+ht-degree: 6%
 
 ---
 
-# Hinzufügen empfohlener Werte zu einem Feld
+# Verwalten von vorgeschlagenen Werten in der API
 
-Im Experience-Datenmodell (XDM) stellt ein Enum-Feld ein Zeichenfolgenfeld dar, das auf eine vordefinierte Untergruppe von Werten beschränkt ist. Aufzählungsfelder können eine Validierung bereitstellen, um sicherzustellen, dass die aufgenommenen Daten einem Satz zulässiger Werte entsprechen. Sie können jedoch auch einen Satz empfohlener Werte für ein Zeichenfolgenfeld definieren, ohne sie als Begrenzungen zu erzwingen.
+Für jedes Zeichenfolgenfeld im Experience-Datenmodell (XDM) können Sie eine **enum** , wodurch die Werte, die das Feld erfassen kann, auf einen vordefinierten Satz beschränkt werden. Wenn Sie versuchen, Daten in ein Enum-Feld zu erfassen und der Wert mit keinem der in der Konfiguration definierten Werte übereinstimmt, wird die Aufnahme verweigert.
 
-Im [Schema Registry-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/), werden die eingeschränkten Werte für ein Aufzählungsfeld durch eine `enum` Array, während eine `meta:enum` -Objekt stellt Anzeigenamen für diese Werte bereit:
+Fügen Sie im Gegensatz zu Auflistungen **empfohlene Werte** in ein Zeichenfolgenfeld eintragen, werden die Werte, die aufgenommen werden können, nicht eingeschränkt. Stattdessen wirken sich die vorgeschlagenen Werte darauf aus, welche vordefinierten Werte im [Segmentierungsbenutzeroberfläche](../../segmentation/ui/overview.md) , wenn das Zeichenfolgenfeld als Attribut eingefügt wird.
+
+>[!NOTE]
+>
+>Es gibt eine ungefähre Verzögerung von fünf Minuten, bis die aktualisierten vorgeschlagenen Werte eines Felds in der Segmentierungsbenutzeroberfläche angezeigt werden.
+
+In diesem Handbuch wird beschrieben, wie Sie empfohlene Werte mit dem [Schema Registry-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Anweisungen dazu finden Sie in der Benutzeroberfläche von Adobe Experience Platform im Abschnitt [UI-Handbuch zu Auflistungen und empfohlenen Werten](../ui/fields/enum.md).
+
+## Voraussetzungen
+
+In diesem Handbuch wird davon ausgegangen, dass Sie mit den Elementen der Schemakomposition in XDM und der Verwendung der Schema Registry-API zum Erstellen und Bearbeiten von XDM-Ressourcen vertraut sind. Wenn Sie eine Einführung benötigen, lesen Sie die folgende Dokumentation:
+
+* [Grundlagen der Schema-Komposition](../schema/composition.md)
+* [Handbuch zur Schema Registry-API](../api/overview.md)
+
+Es wird außerdem dringend empfohlen, die [Evolutionsregeln für Auflistungen und empfohlene Werte](../ui/fields/enum.md#evolution) wenn Sie vorhandene Felder aktualisieren. Wenn Sie empfohlene Werte für Schemas verwalten, die an einer Vereinigung teilnehmen, lesen Sie den Abschnitt [Regeln zum Zusammenführen von Auflistungen und vorgeschlagenen Werten](../ui/fields/enum.md#merging).
+
+## Komposition
+
+In der API werden die eingeschränkten Werte für eine **enum** -Feld durch eine `enum` Array, während eine `meta:enum` -Objekt stellt Anzeigenamen für diese Werte bereit:
 
 ```json
 "exampleStringField": {
@@ -34,7 +53,7 @@ Im [Schema Registry-API](https://developer.adobe.com/experience-platform-apis/re
 
 Bei Enum-Feldern erlaubt die Schema Registry nicht `meta:enum` über die in `enum`, da der Versuch, Zeichenfolgenwerte außerhalb dieser Begrenzungen zu erfassen, die Validierung nicht bestanden hat.
 
-Alternativ können Sie ein Zeichenfolgenfeld definieren, das keine `enum` -Array und verwendet nur die `meta:enum` -Objekt, um empfohlene Werte zu kennzeichnen:
+Alternativ können Sie ein Zeichenfolgenfeld definieren, das keine `enum` -Array und verwendet nur die `meta:enum` Objekt zum Markieren **empfohlene Werte**:
 
 ```json
 "exampleStringField": {
@@ -48,16 +67,13 @@ Alternativ können Sie ein Zeichenfolgenfeld definieren, das keine `enum` -Array
 }
 ```
 
-Da die Zeichenfolge keine `enum` Array zum Definieren von Begrenzungen, sein `meta:enum` -Eigenschaft kann erweitert werden, um neue Werte einzuschließen. In diesem Tutorial wird beschrieben, wie Sie empfohlene Werte zu standardmäßigen und benutzerdefinierten Zeichenfolgenfeldern in der Schema Registry-API hinzufügen.
+Da die Zeichenfolge keine `enum` Array zum Definieren von Begrenzungen, sein `meta:enum` -Eigenschaft kann erweitert werden, um neue Werte einzuschließen.
 
-## Voraussetzungen
+## Verwalten von vorgeschlagenen Werten für Standardfelder
 
-In diesem Handbuch wird davon ausgegangen, dass Sie mit den Elementen der Schemakomposition in XDM und der Verwendung der Schema Registry-API zum Erstellen und Bearbeiten von XDM-Ressourcen vertraut sind. Wenn Sie eine Einführung benötigen, lesen Sie die folgende Dokumentation:
+Für vorhandene Standardfelder können Sie [empfohlene Werte hinzufügen](#add-suggested-standard) oder [empfohlene Werte entfernen](#remove-suggested-standard).
 
-* [Grundlagen der Schema-Komposition](../schema/composition.md)
-* [Handbuch zur Schema Registry-API](../api/overview.md)
-
-## Hinzufügen empfohlener Werte zu einem Standardfeld
+### Hinzufügen empfohlener Werte {#add-suggested-standard}
 
 So erweitern Sie die `meta:enum` In einem Standard-Zeichenfolgenfeld können Sie eine [Anzeigenamendeskriptor](../api/descriptors.md#friendly-name) für das betreffende Feld in einem bestimmten Schema.
 
@@ -135,9 +151,71 @@ Nach Anwendung des Deskriptors antwortet die Schema Registry beim Abrufen des Sc
 >}
 >```
 
-## Hinzufügen von vorgeschlagenen Werten zu einem benutzerdefinierten Feld
+### Empfohlene Werte entfernen {#remove-suggested-standard}
 
-So erweitern Sie die `meta:enum` eines benutzerdefinierten Felds können Sie die übergeordnete Klasse, Feldergruppe oder den Datentyp des Felds über eine PATCH-Anfrage aktualisieren.
+Wenn ein Standardzeichenfolgenfeld vordefinierte empfohlene Werte enthält, können Sie alle Werte entfernen, die nicht in der Segmentierung angezeigt werden sollen. Dies geschieht durch Erstellen einer [Anzeigenamendeskriptor](../api/descriptors.md#friendly-name) für das Schema, das eine `xdm:excludeMetaEnum` -Eigenschaft.
+
+**API-Format**
+
+```http
+POST /tenant/descriptors
+```
+
+**Anfrage**
+
+Die folgende Anfrage entfernt die vorgeschlagenen Werte &quot;[!DNL Web Form Filled Out]&quot; und &quot;[!DNL Media ping]&quot; `eventType` in einem Schema, das auf der [XDM ExperienceEvent-Klasse](../classes/experienceevent.md).
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "@type": "xdm:alternateDisplayInfo",
+        "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
+        "xdm:sourceVersion": 1,
+        "xdm:sourceProperty": "/xdm:eventType",
+        "xdm:excludeMetaEnum": {
+          "web.formFilledOut": "Web Form Filled Out",
+          "media.ping": "Media ping"
+        }
+      }'
+```
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `@type` | Der Typ des zu definierenden Deskriptors. Bei einem Anzeigenamendeskriptor muss dieser Wert auf `xdm:alternateDisplayInfo`. |
+| `xdm:sourceSchema` | Der `$id`-URI des Schemas, wo der Deskriptor definiert wird. |
+| `xdm:sourceVersion` | Die Hauptversion des Quellschemas. |
+| `xdm:sourceProperty` | Der Pfad zur spezifischen Eigenschaft, deren empfohlene Werte Sie verwalten möchten. Der Pfad sollte mit einem Schrägstrich (`/`) und nicht mit einer enden. Nicht einschließen `properties` im Pfad (verwenden Sie beispielsweise `/personalEmail/address` anstelle von `/properties/personalEmail/properties/address`). |
+| `meta:excludeMetaEnum` | Ein Objekt, das die vorgeschlagenen Werte beschreibt, die für das Feld in der Segmentierung ausgeschlossen werden sollen. Schlüssel und Wert für jeden Eintrag müssen mit denen im Original übereinstimmen `meta:enum` des Felds, damit der Eintrag ausgeschlossen wird. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) sowie die Details des neu erstellten Deskriptors zurück. Die unter `xdm:excludeMetaEnum` wird nun in der Segmentierungsbenutzeroberfläche ausgeblendet.
+
+```json
+{
+  "@type": "xdm:alternateDisplayInfo",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/xdm:eventType",
+  "xdm:excludeMetaEnum": {
+    "web.formFilledOut": "Web Form Filled Out"
+  },
+  "meta:containerId": "tenant",
+  "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
+}
+```
+
+## Verwalten von vorgeschlagenen Werten für ein benutzerdefiniertes Feld {#suggested-custom}
+
+So verwalten Sie die `meta:enum` eines benutzerdefinierten Felds können Sie die übergeordnete Klasse, Feldergruppe oder den Datentyp des Felds über eine PATCH-Anfrage aktualisieren.
 
 >[!WARNING]
 >
@@ -198,4 +276,4 @@ Nach der Anwendung der Änderung antwortet die Schema Registry beim Abrufen des 
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie in der Schema Registry-API empfohlene Werte zu Zeichenfolgenfeldern hinzufügen. Siehe Handbuch unter [Definieren benutzerdefinierter Felder in der API](./custom-fields-api.md) für weitere Informationen zum Erstellen verschiedener Feldtypen.
+In diesem Handbuch wurde beschrieben, wie Sie empfohlene Werte für Zeichenfolgenfelder in der Schema Registry-API verwalten. Siehe Handbuch unter [Definieren benutzerdefinierter Felder in der API](./custom-fields-api.md) für weitere Informationen zum Erstellen verschiedener Feldtypen.
