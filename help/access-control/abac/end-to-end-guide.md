@@ -2,20 +2,19 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Zugriffskontrolle; attributbasierte Zugriffskontrolle;
 title: Anleitung zur attributbasierten Zugriffssteuerung (End-to-End)
 description: Dieses Dokument bietet eine durchgängige Anleitung zur attributbasierten Zugriffskontrolle in Adobe Experience Platform
-hide: true
-hidefromtoc: true
-source-git-commit: 230bcfdb92c3fbacf2e24e7210d61e2dbe0beb86
+source-git-commit: 0035f4611f2c269bb36f045c3c57e6e7bad7c013
 workflow-type: tm+mt
-source-wordcount: '2315'
-ht-degree: 7%
+source-wordcount: '2382'
+ht-degree: 5%
 
 ---
 
 # Handbuch zur attributbasierten Zugriffskontrolle von Ende zu Ende
 
-Die attributbasierte Zugriffskontrolle ist eine Adobe Experience Platform-Funktion, die datenschutzbewussten Marken mehr Flexibilität bei der Verwaltung des Benutzerzugriffs gibt. Einzelne Objekte wie Schemafelder und Segmente können Benutzerrollen zugewiesen werden. Mit dieser Funktion können Sie bestimmten Platform-Benutzern in Ihrer Organisation Zugriff auf einzelne Objekte gewähren oder sperren.
+Die attributbasierte Zugriffskontrolle ist eine Funktion von Adobe Experience Platform, die es Kunden mit mehreren Marken und datenschutzbewussten Kunden ermöglicht, den Benutzerzugriff flexibler zu verwalten. Der Zugriff auf einzelne Objekte wie Schemafelder und Segmente kann mit Richtlinien gewährt/verweigert werden, die auf den Attributen und der Rolle des Objekts basieren. Mit dieser Funktion können Sie bestimmten Platform-Benutzern in Ihrer Organisation Zugriff auf einzelne Objekte gewähren oder sperren.
 
-Mit dieser Funktion können Sie Schemafelder, Segmente usw. mit Bezeichnungen kategorisieren, die Organisations- oder Datennutzungsbereiche definieren. In Adobe Journey Optimizer können Sie dieselben Bezeichnungen auf Journey und Angebote anwenden. Parallel dazu können Administratoren Zugriffsrichtlinien für XDM-Schemafelder definieren und besser verwalten, welche Benutzer oder Gruppen (interne, externe oder Drittanbieter-Benutzer) auf diese Felder zugreifen können.
+Mit dieser Funktion können Sie Schemafelder, Segmente usw. mit Bezeichnungen kategorisieren, die Organisations- oder Datennutzungsbereiche definieren. Sie können diese Beschriftungen auf Journey, Angebote und andere Objekte in Adobe Journey Optimizer anwenden. Parallel dazu können Administratoren Zugriffsrichtlinien für XDM-Schemafelder definieren und besser verwalten, welche Benutzer oder Gruppen (interne, externe oder Drittanbieter-Benutzer) auf diese Felder zugreifen können.
+
 
 ## Erste Schritte
 
@@ -28,7 +27,7 @@ Für dieses Tutorial werden Kenntnisse der folgenden Platform-Komponenten benöt
 
 ### Anwendungsfallübersicht
 
-In diesem Handbuch wird ein Beispielanwendungsfall verwendet, bei dem der Zugriff auf vertrauliche Daten eingeschränkt wird, um den Workflow zu demonstrieren. Im Folgenden wird ein Beispiel für einen attribut-basierten Zugriffssteuerungs-Workflow beschrieben, in dem Sie Rollen, Titel und Richtlinien erstellen und zuweisen, um zu konfigurieren, ob Ihre Benutzer auf bestimmte Ressourcen in Ihrer Organisation zugreifen können oder nicht. Dieser Anwendungsfall wird nachfolgend beschrieben:
+Im Folgenden wird ein Beispiel für einen attribut-basierten Zugriffssteuerungs-Workflow beschrieben, in dem Sie Rollen, Titel und Richtlinien erstellen und zuweisen, um zu konfigurieren, ob Ihre Benutzer auf bestimmte Ressourcen in Ihrer Organisation zugreifen können oder nicht. In diesem Handbuch wird ein Beispiel für die Beschränkung des Zugriffs auf vertrauliche Daten zur Veranschaulichung des Workflows verwendet. Dieser Anwendungsfall wird nachfolgend beschrieben:
 
 Sie sind Gesundheitsdienstleister und möchten den Zugriff auf Ressourcen in Ihrem Unternehmen konfigurieren.
 
@@ -41,17 +40,17 @@ Sie werden:
 
 * [Rollen für Ihre Benutzer beschriften](#label-roles): Verwenden Sie das Beispiel eines Gesundheitsdienstleisters (ACME Business Group), dessen Marketinggruppe mit externen Agenturen zusammenarbeitet.
 * [Ressourcen beschriften (Schemafelder und Segmente)](#label-resources): Zuweisen der **[!UICONTROL PHI/Reguläre Gesundheitsdaten]** -Beschriftung für Schemaressourcen und -segmente.
-* [Erstellen Sie die Richtlinie, die sie miteinander verknüpft](#policy): Erstellen Sie eine Richtlinie, um die Beschriftungen in Ihren Ressourcen mit den Beschriftungen in Ihrer Rolle zu verknüpfen, wodurch der Zugriff auf Schemafelder und Segmente verweigert wird. Dadurch wird Benutzern ohne übereinstimmende Beschriftungen der Zugriff auf das Schemafeld und das Segment in allen Sandboxes verweigert.
+* [Erstellen Sie die Richtlinie, die sie miteinander verknüpft](#policy): Erstellen Sie eine Richtlinie, um die Beschriftungen in Ihren Ressourcen mit den Beschriftungen in Ihrer Rolle zu verknüpfen und den Zugriff auf Schemafelder und Segmente zu verweigern. Dadurch wird Benutzern ohne übereinstimmende Beschriftungen der Zugriff auf das Schemafeld und das Segment in allen Sandboxes verweigert.
 
 ## Berechtigungen
 
-[!UICONTROL Berechtigungen sind der Bereich von Experience Cloud, in dem Administrierende Benutzerrollen und Zugriffsrichtlinien definieren können, um Zugriffsberechtigungen für Funktionen und Objekte in einem Produktprogramm zu verwalten.]
+[!UICONTROL Berechtigungen] ist der Bereich des Experience Cloud, in dem Administratoren Benutzerrollen und Richtlinien definieren können, um Berechtigungen für Funktionen und Objekte in einer Produktanwendung zu verwalten.
 
-bis [!UICONTROL Berechtigungen]können Sie Rollen erstellen und verwalten sowie die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen. [!UICONTROL Mit Berechtigungen können Sie auch die Bezeichnungen, Sandboxes und Benutzer*innen verwalten, die einer bestimmten Rolle zugeordnet sind.]
+bis [!UICONTROL Berechtigungen]können Sie Rollen erstellen und verwalten und die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen. [!UICONTROL Mit Berechtigungen können Sie auch die Bezeichnungen, Sandboxes und Benutzer*innen verwalten, die einer bestimmten Rolle zugeordnet sind.]
 
-Wenn Sie keine Administratorrechte haben, wenden Sie sich an Ihren Systemadministrator, um Zugriff zu erhalten.
+Wenden Sie sich an Ihren Systemadministrator, um Zugriff zu erhalten, wenn Sie nicht über Administratorberechtigungen verfügen.
 
-Sobald Sie über Administratorberechtigungen verfügen, wechseln Sie zu [Adobe Experience Cloud](https://experience.adobe.com/) und melden Sie sich mit Ihren Adobe-Anmeldedaten an. Nach der Anmeldung muss die **[!UICONTROL Übersicht]** für Ihre Organisation angezeigt, für die Sie Administratorrechte haben. Auf dieser Seite werden die Produkte angezeigt, die Ihr Unternehmen abonniert hat, sowie weitere Steuerelemente zum Hinzufügen von Benutzern und Administratoren zur Organisation als Ganzes. Auswählen **[!UICONTROL Berechtigungen]** , um den Arbeitsbereich für Ihre Platform-Integration zu öffnen.
+Sobald Sie über Administratorberechtigungen verfügen, wechseln Sie zu [Adobe Experience Cloud](https://experience.adobe.com/) und melden Sie sich mit Ihren Adobe-Anmeldedaten an. Nach der Anmeldung muss die **[!UICONTROL Übersicht]** für Ihre Organisation angezeigt, für die Sie Administratorrechte haben. Auf dieser Seite werden die Produkte angezeigt, für die sich Ihr Unternehmen angemeldet hat, sowie weitere Steuerelemente zum Hinzufügen von Benutzern und Administratoren zur Organisation. Auswählen **[!UICONTROL Berechtigungen]** , um den Arbeitsbereich für Ihre Platform-Integration zu öffnen.
 
 ![Bild mit dem ausgewählten Berechtigungsprodukt in Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
@@ -80,7 +79,7 @@ Der Arbeitsbereich &quot;Berechtigungen&quot;für die Platform-Benutzeroberfläc
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="Neue Rolle erstellen"
->abstract="Sie können eine neue Rolle erstellen, um Benutzer, die auf Ihre Platform-Instanz zugreifen, besser zu kategorisieren. Sie können beispielsweise eine Rolle für ein internes Marketing-Team erstellen und die RHD-Bezeichnung auf diese Rolle anwenden, wodurch Ihr internes Marketing-Team auf geschützte Gesundheitsinformationen (PHI) zugreifen kann. Alternativ können Sie auch eine Rolle für eine externe Agentur erstellen und diesen Rollenzugriff auf PHI-Daten verweigern, indem Sie die RHD-Beschriftung nicht auf diese Rolle anwenden."
+>abstract="Sie können eine neue Rolle erstellen, um Benutzer, die auf Ihre Platform-Instanz zugreifen, besser zu kategorisieren. Sie können beispielsweise eine Rolle für ein internes Marketing-Team erstellen und die RHD-Bezeichnung auf diese Rolle anwenden, sodass Ihr internes Marketing-Team auf geschützte Gesundheitsinformationen (PHI) zugreifen kann. Alternativ können Sie auch eine Rolle für eine externe Agentur erstellen und diesen Rollenzugriff auf PHI-Daten verweigern, indem Sie die RHD-Beschriftung nicht auf diese Rolle anwenden."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en#create-a-new-role" text="Erstellen Sie eine neue Rolle"
 
 >[!CONTEXTUALHELP]
@@ -88,7 +87,7 @@ Der Arbeitsbereich &quot;Berechtigungen&quot;für die Platform-Benutzeroberfläc
 >title="Rollenübersicht"
 >abstract="Im Dialogfeld Rollenübersicht werden die Ressourcen und Sandboxes angezeigt, auf die eine bestimmte Rolle zugreifen darf."
 
-Rollen sind Möglichkeiten, die Typen von Benutzern zu kategorisieren, die mit Ihrer Platform-Instanz interagieren und Bausteine von Richtlinien zur Zugriffssteuerung sind. Eine Rolle verfügt über bestimmte Berechtigungen und Mitglieder Ihrer Organisation können je nach Umfang des benötigten Zugriffs einer oder mehreren Rollen zugewiesen werden.
+Rollen dienen der Kategorisierung der Arten von Benutzern, die mit Ihrer Platform-Instanz interagieren, und bilden Bausteine von Richtlinien zur Zugriffssteuerung. Eine Rolle verfügt über bestimmte Berechtigungen und Mitglieder Ihrer Organisation können je nach Umfang des benötigten Zugriffs einer oder mehreren Rollen zugewiesen werden.
 
 Wählen Sie zunächst **[!UICONTROL ACME Business Group]** aus dem **[!UICONTROL Rollen]** Seite.
 
@@ -102,6 +101,10 @@ Eine Liste aller Beschriftungen in Ihrer Organisation wird angezeigt. Auswählen
 
 ![Bild mit der ausgewählten und gespeicherten RHD-Beschriftung](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
 
+>[!NOTE]
+>
+>Beim Hinzufügen einer Organisationsgruppe zu einer Rolle werden alle Benutzer dieser Gruppe zur Rolle hinzugefügt. Änderungen an der Organisationsgruppe (Benutzer werden entfernt oder hinzugefügt) werden automatisch in der Rolle aktualisiert.
+
 ## Anwenden von Bezeichnungen auf Schemafelder {#label-resources}
 
 Sie haben jetzt eine Benutzerrolle mit der [!UICONTROL RHD] -Beschriftung verwenden, besteht der nächste Schritt darin, denselben Titel zu den Ressourcen hinzuzufügen, die Sie für diese Rolle steuern möchten.
@@ -110,9 +113,9 @@ Auswählen **[!UICONTROL Schemas]** aus der linken Navigation und wählen Sie da
 
 ![Bild, das das im Tab Schemas ausgewählte ACME-Schema für die Gesundheitsfürsorge anzeigt](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
-Wählen Sie als Nächstes **[!UICONTROL Bezeichnungen]** um eine Liste anzuzeigen, die die mit Ihrem Schema verknüpften Felder anzeigt. Von hier aus können Sie einem oder mehreren Feldern gleichzeitig Beschriftungen zuweisen. Wählen Sie die **[!UICONTROL BloodGlucose]** und **[!UICONTROL InsulinLevel]** und wählen Sie **[!UICONTROL Bearbeiten von Governance-Titeln]**.
+Wählen Sie als Nächstes **[!UICONTROL Bezeichnungen]** um eine Liste anzuzeigen, die die mit Ihrem Schema verknüpften Felder anzeigt. Von hier aus können Sie einem oder mehreren Feldern gleichzeitig Beschriftungen zuweisen. Wählen Sie die **[!UICONTROL BloodGlucose]** und **[!UICONTROL InsulinLevel]** und wählen Sie **[!UICONTROL Anwenden von Zugriffs- und Data Governance-Beschriftungen]**.
 
-![Bild, das die Auswahl von Blutzucker und InsulinLevel anzeigt und die ausgewählten Governance-Beschriftungen bearbeitet](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
+![Bild, das die ausgewählten Blutzuckerbezeichnungen und InsulinLevel anzeigt und die ausgewählten Zugriffs- und Data Governance-Bezeichnungen anwendet](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
 
 Die **[!UICONTROL Bearbeiten von Bezeichnungen]** angezeigt, in dem Sie die Titel auswählen können, die Sie auf die Schemafelder anwenden möchten. Wählen Sie für diesen Anwendungsfall die **[!UICONTROL PHI/Reguläre Gesundheitsdaten]** Beschriftung und wählen Sie **[!UICONTROL Speichern]**.
 
@@ -162,20 +165,24 @@ Wiederholen Sie die obigen Schritte mit **[!UICONTROL Insulin &lt;50]**.
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Zulässige und unzulässige Aktionen für eine Richtlinie konfigurieren"
->abstract="A <b>Zugriff auf verweigern</b> -Richtlinie verweigert Benutzern den Zugriff, wenn die Kriterien erfüllt sind. Bei Kombination mit <b>Folgendes ist falsch</b> - allen Benutzern wird der Zugriff verweigert, es sei denn, sie erfüllen die entsprechenden Kriterien. Mit dieser Art von Richtlinie können Sie eine sensible Ressource schützen und nur Benutzern Zugriff gewähren, die über entsprechende Beschriftungen verfügen. <br>A <b>den Zugriff auf</b> -Richtlinie ermöglicht Benutzern den Zugriff, wenn die Kriterien erfüllt sind. Bei Kombination mit <b>Folgendes ist wahr</b> - Benutzer erhalten Zugriff, wenn sie die entsprechenden Kriterien erfüllen. Dadurch wird Benutzern nicht explizit der Zugriff verweigert, sondern der Zugriff auf eine Genehmigung hinzugefügt. Mit dieser Art von Richtlinie können Sie zusätzlichen Zugriff auf Ressourcen und zusätzlich zu den Benutzern gewähren, die bereits über Rollenberechtigungen Zugriff haben.&quot;</br>
+>abstract="A <b>Zugriff auf verweigern</b> -Richtlinie verweigert Benutzern den Zugriff, wenn die Kriterien erfüllt sind. Kombiniert mit <b>Folgendes ist falsch</b> - allen Benutzern wird der Zugriff verweigert, es sei denn, sie erfüllen die entsprechenden Kriterien. Mit dieser Art von Richtlinie können Sie eine sensible Ressource schützen und nur den Zugriff auf Benutzer mit entsprechenden Beschriftungen zulassen. <br>A <b>den Zugriff auf</b> -Richtlinie ermöglicht Benutzern den Zugriff, wenn die Kriterien erfüllt sind. Bei Kombination mit <b>Folgendes ist wahr</b> - Benutzer erhalten Zugriff, wenn sie die entsprechenden Kriterien erfüllen. Dadurch wird Benutzern nicht explizit der Zugriff verweigert, sondern der Zugriff auf eine Genehmigung hinzugefügt. Mit dieser Art von Richtlinie können Sie zusätzlichen Zugriff auf Ressourcen und zusätzlich zu den Benutzern gewähren, die bereits über Rollenberechtigungen Zugriff haben.&quot;</br>
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Richtlinie bearbeiten"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_resource"
 >title="Berechtigungen für Ressourcen konfigurieren"
->abstract="Eine Ressource ist das Asset oder Objekt, auf das ein Benutzer zugreifen kann oder nicht. Ressourcen können Segmente oder Schemata sein. Sie können Berechtigungen zum Schreiben, Lesen oder Löschen für Segmente und Schemafelder konfigurieren."
+>abstract="Eine Ressource ist das Asset oder Objekt, auf das ein Benutzer zugreifen kann oder nicht. Ressourcen können Segmente oder Schemafelder sein. Sie können Berechtigungen zum Schreiben, Lesen oder Löschen für Segmente und Schemafelder konfigurieren."
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_condition"
 >title="Bedingungen bearbeiten"
->abstract="Wenden Sie bedingte Anweisungen auf Ihre Richtlinie an, um den Benutzerzugriff auf bestimmte Ressourcen zu konfigurieren. Wählen Sie Alle abgleichen aus, damit Benutzer über Rollen mit exakt denselben Bezeichnungen wie eine Ressource verfügen, damit sie Zugriff erhalten. Wählen Sie &quot;Übereinstimmung mit einer Ressource&quot;aus, damit nur Benutzer eine Rolle mit nur einer Bezeichnung haben müssen, die einer Ressource entspricht. Beschriftungen können entweder als Kern- oder benutzerdefinierte Beschriftungen definiert werden. Kernbeschriftungen stellen von Adobe erstellte und bereitgestellte Beschriftungen dar und stellen benutzerdefinierte Beschriftungen dar, die von Ihnen für Ihr Unternehmen erstellte Beschriftungen darstellen."
+>abstract="Wenden Sie bedingte Anweisungen auf Ihre Richtlinie an, um den Benutzerzugriff auf bestimmte Ressourcen zu konfigurieren. Wählen Sie &quot;Übereinstimmung mit allen&quot;aus, damit Benutzer Rollen mit denselben Bezeichnungen wie eine Ressource erhalten, für die der Zugriff gestattet werden soll. Wählen Sie Entsprechung für alle aus, damit Benutzer nur eine Rolle mit einer Bezeichnung haben müssen, die einer Ressource entspricht. Beschriftungen können entweder als Kern- oder benutzerdefinierte Beschriftungen definiert werden. Kernbeschriftungen stellen von Adobe erstellte und bereitgestellte Beschriftungen dar und stellen benutzerdefinierte Beschriftungen dar, die von Ihnen für Ihr Unternehmen erstellte Beschriftungen darstellen."
 
 Zugriffssteuerungsrichtlinien nutzen Beschriftungen, um zu definieren, welche Benutzerrollen Zugriff auf bestimmte Platform-Ressourcen haben. Richtlinien können lokal oder global sein und andere Richtlinien überschreiben. In diesem Beispiel wird der Zugriff auf Schemafelder und Segmente in allen Sandboxes Benutzern verweigert, die nicht über die entsprechenden Beschriftungen im Schemafeld verfügen.
+
+>[!NOTE]
+>
+>Es wird eine &quot;Richtlinie zum Verweigern&quot;erstellt, um Zugriff auf sensible Ressourcen zu gewähren, da die Rolle den Personen Berechtigungen erteilt. Die geschriebene Richtlinie in diesem Beispiel **Leugnungen** Sie greifen auf zu, wenn Sie die erforderlichen Beschriftungen fehlen.
 
 Um eine Zugriffskontrollrichtlinie zu erstellen, wählen Sie **[!UICONTROL Berechtigungen]** aus der linken Navigation und wählen Sie dann **[!UICONTROL Richtlinien]**. Wählen Sie als Nächstes **[!UICONTROL Richtlinie erstellen]**.
 
@@ -194,7 +201,7 @@ Die folgende Tabelle zeigt die Bedingungen, die beim Erstellen einer Richtlinie 
 | Bedingungen | Beschreibung |
 | --- | --- |
 | Folgendes ist falsch | Wenn &quot;Zugriff auf verweigern&quot;festgelegt ist, wird der Zugriff eingeschränkt, wenn der Benutzer die ausgewählten Kriterien nicht erfüllt. |
-| Folgendes ist wahr | Wenn die Option &quot;Zugriff auf gewähren&quot;festgelegt ist, wird der Zugriff eingeschränkt, wenn der Benutzer die ausgewählten Kriterien erfüllt. |
+| Folgendes ist wahr | Wenn die Option &quot;Zugriff auf gewähren&quot;festgelegt ist, ist der Zugriff zulässig, wenn der Benutzer die ausgewählten Kriterien erfüllt. |
 | Entspricht allen | Der Benutzer verfügt über eine Beschriftung, die allen auf eine Ressource angewendeten Bezeichnungen entspricht. |
 | Entspricht allen | Der Benutzer verfügt über alle Bezeichnungen, die mit allen Bezeichnungen übereinstimmen, die auf eine Ressource angewendet werden. |
 | Core-Bezeichnung | Eine Kernbeschriftung ist eine von der Adobe definierte Bezeichnung, die in allen Platform-Instanzen verfügbar ist. |
