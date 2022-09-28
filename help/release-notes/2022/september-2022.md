@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform - Versionshinweise - September 2022
 description: Die Versionshinweise für Adobe Experience Platform vom September 2022.
-source-git-commit: 5f79b10306f74db75b25654ca51969ea69e38299
+source-git-commit: 65743c1741210a87b1cc64406412dd7e58218321
 workflow-type: tm+mt
-source-wordcount: '2539'
-ht-degree: 33%
+source-wordcount: '2979'
+ht-degree: 30%
 
 ---
 
@@ -24,6 +24,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [Auditprotokolle](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [Datenerfassung](#data-collection)
+- [Ziele](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Identity Service](#identity-service)
 - [Query Service](#query-service)
@@ -52,9 +53,9 @@ Adobe Experience Platform bietet leistungsstarke Tools zur Verwaltung großer, k
 
 Mit den Datenhygienemöglichkeiten von Adobe Experience Platform können Sie Ihre Daten bereinigen, indem Sie automatisierte Datensatzabläufe planen und Kundendaten programmgesteuert nach Identität löschen.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Die Möglichkeiten zum Löschen von Verbrauchern stehen nur Organisationen zur Verfügung, die Adobe Healthcare Shield oder Privacy Shield erworben haben.
+>Die Möglichkeiten der Datenhygiene stehen nur Organisationen zur Verfügung, die Adobe Healthcare Shield oder Privacy Shield erworben haben.
 
 Erste Schritte mit Datenhygiene finden Sie in der folgenden Dokumentation:
 
@@ -64,7 +65,7 @@ Erste Schritte mit Datenhygiene finden Sie in der folgenden Dokumentation:
 
 ## [!UICONTROL Datenschutzkonsole] {#privacy-console}
 
-Die [!UICONTROL Datenschutzkonsole] -Registerkarte in der Experience Platform-Benutzeroberfläche bietet eine Dashboard-Ansicht mit wichtigen Einblicken aus datenschutzbezogenen Funktionen wie [Anfragen von Datensubjekten nach Privacy Service], [Datenhygiene]und [Auditprotokolle]. Die Konsole enthält außerdem mehrere produktinterne Benutzerhandbücher, die Sie durch gängige Datenschutz-Workflows führen.
+Die [!UICONTROL Datenschutzkonsole] -Registerkarte in der Experience Platform-Benutzeroberfläche bietet eine Dashboard-Ansicht mit wichtigen Einblicken aus datenschutzbezogenen Funktionen wie [Anfragen von Datensubjekten nach Privacy Service](../../privacy-service/home.md), [Datenhygiene](../../hygiene/home.md)und [Auditprotokolle](../../landing/governance-privacy-security/audit-logs/overview.md). Die Konsole enthält außerdem mehrere produktinterne Benutzerhandbücher, die Sie durch gängige Datenschutz-Workflows führen.
 
 Siehe [Übersicht über die Datenschutzkonsole](../../landing/governance-privacy-security/privacy-console.md) für weitere Informationen zur Funktion.
 
@@ -115,6 +116,9 @@ Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Einb
 | Funktion | Beschreibung |
 | --- | --- |
 | Beschriftung in Gebrauch | Bei der Anzeige in der Widget-Bibliothek erkennt die verwendete Bezeichnung einfach, ob in Ihrem Dashboard vorhandene Widgets vorhanden sind. Dadurch lässt sich die Duplizierung einfach vermeiden, obwohl Sie immer noch dasselbe Widget mehr als einmal hinzufügen können. |
+| Benutzerdefinierte Dashboards | Benutzerdefinierte Dashboards helfen Ihnen, Einblicke zu beschleunigen und Visualisierungen anzupassen, indem Sie benutzerdefinierte Dashboards erstellen und verwalten können. Mit benutzerdefinierten Dashboards können Sie maßgeschneiderte Widgets erstellen, hinzufügen und bearbeiten, um für Ihr Unternehmen relevante Schlüsselmetriken zu visualisieren. Lesen Sie die [Funktionshandbuch](../../dashboards/user-defined-dashboards.md) , um mehr zu erfahren. |
+| Datenmodell der Customer Data Platform Insights | Die Funktion &quot;Customer Data Platform (CDP) Insights Data Model&quot;stellt die Datenmodelle und SQL bereit, die die Einblicke für verschiedene Profil-, Ziel- und Segmentierungs-Widgets ermöglichen. Sie können diese SQL-Abfragevorlagen anpassen, um CDP-Berichte für Ihre Marketing- und Key Performance Indicators zu erstellen. Diese Einblicke können dann als benutzerdefinierte Widgets für Ihre benutzerdefinierten Dashboards verwendet werden. Lesen Sie die [Handbuch zur Funktion &quot;CDP Insights Data Model&quot;](../../dashboards/cdp-insights-data-model.md) , um mehr zu erfahren. |
+| Bericht-Widget &quot;Zielgruppenüberschneidung&quot; | Dieses Widget ist für beide verfügbar [!UICONTROL Profile] und [!UICONTROL Segmente] Dashboards. Der Bericht bietet eine geordnete Liste von Zielgruppen, die nach den höchsten oder niedrigsten Überschneidungsprozentsätzen für Ihr ausgewähltes Segment sortiert sind. Aus dem [!UICONTROL Profile] Dashboard können Sie Ihre Zielgruppenüberschneidung nach Zusammenführungsrichtlinien aus allen verfügbaren Segmenten filtern und anzeigen. Die [!UICONTROL Segmente] Mit Dashboards können Sie die Zielgruppenüberschneidung nach einem bestimmten Segment filtern.<br>Verwenden Sie diese Analyse, um neue Hochleistungssegmente zu erstellen und zu vermeiden, dass dieselbe Zielgruppe an verschiedene Ziele gesendet wird. Der Bericht hilft auch, versteckte Einblicke zu identifizieren, um die Segmentierung zu verbessern oder eindeutige Profile zu finden, die verfolgt werden sollen. |
 
 Weitere Informationen zu [!DNL Dashboards] finden Sie in der [[!DNL Dashboards] Übersicht](../../dashboards/home.md).
 
@@ -127,10 +131,39 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | Funktion | Beschreibung |
 | --- | --- |
 | Integration der linken Navigation in der Platform-Benutzeroberfläche | Alle Funktionen, die zuvor ausschließlich für die Datenerfassungs-Benutzeroberfläche galten (einschließlich Tags, Ereignisweiterleitung und Datastreams), sind jetzt auch über die linke Navigation in Experience Platform unter der Kategorie verfügbar. **[!UICONTROL Datenerfassung]**. Dadurch entfällt die Notwendigkeit, beim Arbeiten mit Datenerfassungsfunktionen in Platform zwischen Benutzeroberflächen zu wechseln. |
+| Benutzerzuordnung in Tags und Ereignisweiterleitung | Wenn eine Liste verfügbar ist [!UICONTROL Eigenschaften] in Tags und Ereignisweiterleitung zeigt jede aufgelistete Eigenschaft jetzt an, wann sie zuletzt aktualisiert wurde und welcher Benutzer die Aktualisierung vorgenommen hat. |
 
 {style=&quot;table-layout:auto&quot;}
 
 Weitere Informationen zur Datenerfassung in Platform finden Sie in der [Übersicht zur Datenerfassung](../../collection/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| ----------- | ----------- |
+| Destination SDK | Destination SDK bietet jetzt vollständige Unterstützung für Partner und Kunden, die Batch- (oder dateibasierte) produktive oder private Ziele erstellen. Weitere Informationen finden Sie auf den folgenden Dokumentationsseiten: <ul><li>[Übersicht über Destinationen SDK](/help/destinations/destination-sdk/overview.md)</li><li>[Dateibasiertes Ziel konfigurieren](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Testen Ihrer dateibasierten Ziele](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Neue oder aktualisierte Ziele**
+
+| Ziel | Beschreibung |
+| ----------- | ----------- |
+| [[!DNL Salesforce CRM]](../..//destinations/catalog/crm/salesforce.md) | Die [!DNL Salesforce CRM] Das Ziel wurde aktualisiert, um sowohl Kontakt- als auch Lead-Aktualisierungen sowie Leistungsverbesserungen für schnellere Aktualisierungen zu unterstützen. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Neue oder aktualisierte Dokumentation**
+
+| Dokumentation | Beschreibung |
+| ----------- | ----------- |
+| Dokumentation zur API für Zielflussdienst-API | Die [Referenzdokumentation zur Ziel-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) wurde aktualisiert und enthält Anleitungen zum Ausführen von Vorgängen für dateibasierte Ziele. Vorgänge für Streaming-Ziele werden zu einem späteren Zeitpunkt hinzugefügt. |
+
+Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
 ## Experience-Datenmodell (XDM) {#xdm}
 
@@ -218,6 +251,6 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 | Unterstützung für Adobe Campaign Managed Cloud Service | Verwenden Sie die Adobe Campaign Managed Cloud Service-Quelle, um Ihre Adobe Campaign v8.4-Versand- und Trackinglog-Daten in die Experience Platform zu übertragen. Lesen Sie das Handbuch unter [Erstellen einer Adobe Campaign Managed Cloud Service-Quellverbindung in der Benutzeroberfläche](../../sources/tutorials/ui/create/adobe-applications/campaign.md) für weitere Informationen. |
 | API-Unterstützung für On-Demand-Erfassung für Batch-Quellen | Verwenden Sie die On-Demand-Erfassung, um Ad-hoc-Fluss-Läufe für einen bestimmten Datenfluss mit dem [!DNL Flow Service] API. Die erstellten Flussläufe müssen auf eine einmalige Erfassung festgelegt werden. Weitere Informationen finden Sie im Handbuch unter [Erstellen eines Flusslaufs für die On-Demand-Erfassung mithilfe der API](../../sources/tutorials/api/on-demand-ingestion.md) für weitere Informationen. |
 | API-Unterstützung für Wiederholung fehlgeschlagener Datenflüsse für Batch-Quellen | Verwenden Sie die `re-trigger` -Vorgang verwenden, um Ihren fehlgeschlagenen Datenfluss über die API erneut auszuführen. Lesen Sie das Handbuch unter [Wiederholen fehlgeschlagener Datenfluss-Ausführungen mit der API](../../sources/tutorials/api/retry-flows.md) für weitere Informationen. |
-| API-Unterstützung zum Filtern von Daten auf Zeilenebene für die [!DNL Google BigQuery] und [!DNL Snowflake] sources | Verwenden Sie logische und Vergleichsoperatoren, um Daten auf Zeilenebene für die [!DNL Google BigQuery] und [!DNL Snowflake] Quellen. Weitere Informationen finden Sie im Handbuch zum Filtern von Daten für eine Quelle mithilfe der API . |
+| API-Unterstützung zum Filtern von Daten auf Zeilenebene für die [!DNL Google BigQuery] und [!DNL Snowflake] sources | Verwenden Sie logische und Vergleichsoperatoren, um Daten auf Zeilenebene für die [!DNL Google BigQuery] und [!DNL Snowflake] Quellen. Lesen Sie das Handbuch unter [Filtern von Daten für eine Quelle mithilfe der API](../../sources/tutorials/api/filter.md) für weitere Informationen. |
 
 Weitere Informationen zu Quellen finden Sie im Abschnitt [Quellen - Übersicht](../../sources/home.md).

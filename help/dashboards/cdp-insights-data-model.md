@@ -2,20 +2,16 @@
 title: Customer Data Platform (CDP) Insights-Datenmodell
 description: Erfahren Sie, wie Sie mit SQL-Abfragen aus CDP Insights Data Models Ihre eigenen CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle anpassen können.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 5009dd0b48090530736c711a34e3bcb8b6cde2b6
+source-git-commit: 2c96bfd2c1b541d30a72fcf2bac414ee06607456
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1066'
 ht-degree: 0%
 
 ---
 
-# (Beta) Customer Data Platform (CDP) Insights-Datenmodell
+# Customer Data Platform (CDP) Insights-Datenmodell
 
->[!IMPORTANT]
->
->Die Funktion &quot;CDP Insights Data Models&quot;befindet sich in der Beta-Phase. Die Funktionen und Dokumentation können sich ändern.
-
-Die Funktion &quot;Customer Data Platform (CDP) Insights Data Model&quot;stellt die Datenmodelle und SQL bereit, die die Einblicke für verschiedene Profil-, Ziel- und Segmentierungs-Widgets ermöglichen. Sie können diese SQL-Abfragevorlagen anpassen, um CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle (Key Performance Indicators) zu erstellen. Diese Einblicke können dann als benutzerdefinierte Widgets für Ihre verwendeten Dashboards verwendet werden.
+Die Funktion &quot;Customer Data Platform (CDP) Insights Data Model&quot;stellt die Datenmodelle und SQL bereit, die die Einblicke für verschiedene Profil-, Ziel- und Segmentierungs-Widgets ermöglichen. Sie können diese SQL-Abfragevorlagen anpassen, um CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle (Key Performance Indicators) zu erstellen. Diese Einblicke können dann als benutzerdefinierte Widgets für Ihre benutzerdefinierten Dashboards verwendet werden.
 
 ## Voraussetzungen
 

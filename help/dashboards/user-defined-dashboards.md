@@ -2,18 +2,14 @@
 title: Benutzerdefinierte Dashboards
 description: Erfahren Sie, wie Sie benutzerdefinierte Dashboards erstellen und verwalten, in denen Sie maßgeschneiderte Widgets erstellen, hinzufügen und bearbeiten können, um wichtige Metriken zu visualisieren.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: bb94f7438efe1e24056d6689ffc10b928fc633c2
+source-git-commit: 2c96bfd2c1b541d30a72fcf2bac414ee06607456
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '865'
 ht-degree: 1%
 
 ---
 
-# Benutzerdefinierte Dashboards (Beta)
-
->[!IMPORTANT]
->
->Die benutzerdefinierte Dashboards-Funktion befindet sich in der Beta-Phase. Die Funktionen und Dokumentation können sich ändern.
+# Benutzerdefinierte Dashboards
 
 Adobe Experience Platform-Dashboards helfen Ihnen, Einblicke zu beschleunigen und die Visualisierung über die benutzerdefinierte Dashboards-Funktion anzupassen. Mit dieser Funktion können Sie benutzerdefinierte Dashboards erstellen und verwalten, in denen Sie benutzerspezifische Widgets erstellen, hinzufügen und bearbeiten können, um für Ihr Unternehmen relevante Schlüsselmetriken zu visualisieren.
 
