@@ -2,10 +2,10 @@
 title: Adobe Client-Datenschicht-Erweiterung
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Client Data Layer“ in Adobe Experience Platform vertraut.
 exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '647'
+ht-degree: 95%
 
 ---
 
@@ -18,7 +18,7 @@ If you would like to have more details on development consideration, [please rea
 
 ## Installation
 
-Um die Erweiterung zu installieren, navigieren Sie in der Benutzeroberfläche „Datenerfassung“ zum Erweiterungskatalog und wählen Sie „Adobe Client-Datenschicht“ aus.
+Um die Erweiterung zu installieren, navigieren Sie zum Erweiterungskatalog in der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche und wählen Sie Adobe Client Data Layer aus.
 
 ![ACDL-Erweiterungsansicht im Katalog](./images/catalog.png)
 

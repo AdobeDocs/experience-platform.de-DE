@@ -2,10 +2,10 @@
 title: Benutzerberechtigungen für Tags
 description: Hier erfahren Sie mehr über die verschiedenen Arten von Berechtigungen, die für Tags verfügbar sind, und über einige grundlegende Implementierungsstrategien für verschiedene geschäftliche Anwendungsfälle.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1311'
-ht-degree: 96%
+source-wordcount: '1308'
+ht-degree: 93%
 
 ---
 
@@ -42,7 +42,7 @@ Standardmäßig gewähren Produktprofile Zugriff auf alle Eigenschaften, die in 
 
 ### Eigenschaftsrechte {#property-rights}
 
-Jede Eigenschaft, die Sie in der Datenerfassungs-Benutzeroberfläche erstellen, steht in Admin Console zur Verfügung, sodass Sie die Eigenschaft mit bestimmten Eigenschaftsrechten im selben Produktprofil gruppieren können.
+Jede Tag-Eigenschaft, die Sie in der Benutzeroberfläche erstellen, steht in Admin Console zur Verfügung, sodass Sie die Eigenschaft mit bestimmten Eigenschaftsrechten im selben Produktprofil gruppieren können.
 
 Wenn ein Produktprofil nicht auf Eigenschaft A1 zugreifen kann, können Benutzer, die zu diesem Profil gehören, keine Einstellungen innerhalb der Eigenschaft A1 anzeigen oder ändern.
 
@@ -52,7 +52,7 @@ In der folgenden Tabelle sind die verfügbaren Eigenschaftsrechte und die Funkti
 
 | Eigenschaftsrecht | Beschreibung |
 | --- | --- |
-| **Entwickeln** | Hiermit können Sie die folgenden Aktionen durchführen:<ul><li>Erstellen von Regeln und Datenelementen</li><li>Erstellen von Bibliotheken und Einbauen von Bibliotheken in bestehende Entwicklungsumgebungen </li><li>Eine Bibliothek zur Genehmigung einreichen</li></ul>Die meisten alltäglichen Aufgaben in der Datenerfassungs-Benutzeroberfläche erfordern diese Berechtigung. |
+| **Entwickeln** | Hiermit können Sie die folgenden Aktionen durchführen:<ul><li>Erstellen von Regeln und Datenelementen</li><li>Erstellen von Bibliotheken und Einbauen von Bibliotheken in bestehende Entwicklungsumgebungen </li><li>Eine Bibliothek zur Genehmigung einreichen</li></ul>Die meisten täglichen Aufgaben in der Benutzeroberfläche erfordern dieses Recht. |
 | **Genehmigen** | Dies ermöglicht es Ihnen, eingereichte Bibliotheken in die Staging-Umgebung einzubauen. Sie können eine Bibliothek auch für die Veröffentlichung genehmigen, nachdem die nötigen Tests abgeschlossen wurden. |
 | **Veröffentlichen** | Dies ermöglicht Ihnen die Veröffentlichung genehmigter Bibliotheken in der Produktionsumgebung. |
 | **Erweiterungen verwalten** | Hiermit können Sie die folgenden Aktionen durchführen: <ul><li>Installieren neuer Erweiterungen für eine Eigenschaft</li><li>Ändern der Konfiguration für eine bereits installierte Erweiterung</li><li>Löschen einer Erweiterung</li></ul>In der Übersichtsdokumentation zu Erweiterungen finden Sie [weitere Informationen zu Erweiterungen](../managing-resources/extensions/overview.md). Diese Rolle gehört normalerweise zu IT oder Marketing, je nach Aufbau Ihrer Organisation. |

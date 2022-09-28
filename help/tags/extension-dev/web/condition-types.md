@@ -2,10 +2,10 @@
 title: Bedingungstypen für Web-Erweiterungen
 description: Erfahren Sie, wie Sie ein Bibliotheksmodul vom Typ „condition-type“ für eine Tag-Erweiterung in einer Web-Eigenschaft definieren.
 exl-id: db504455-858b-4ac8-aa42-de516b0f1d5a
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '502'
+ht-degree: 95%
 
 ---
 
@@ -29,7 +29,7 @@ In diesem Dokument wird beschrieben, wie Sie Bedingungstypen für eine Web-Erwei
 
 Bedingungstypen bestehen in der Regel aus Folgendem:
 
-1. Eine [Ansicht](./views.md), die in der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Einstellungen für die Bedingung zu ändern.
+1. A [Ansicht](./views.md) wird in der Benutzeroberfläche für Experience Platform und Datenerfassung angezeigt, über die Benutzer die Bedingungseinstellungen ändern können.
 2. Ein Bibliotheksmodul, das in der Tag-Laufzeitbibliothek ausgegeben wird, um die Einstellungen zu interpretieren und eine Bedingung auszuwerten.
 
 Ein Bibliotheksmodul vom Bedingungstyp dient einem einzigen Ziel: auswerten, ob etwas wahr oder falsch ist. Was es auswertet, legen Sie fest.

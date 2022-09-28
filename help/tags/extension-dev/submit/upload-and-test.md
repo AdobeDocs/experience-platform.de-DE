@@ -2,10 +2,10 @@
 title: Hochladen und Implementieren von End-to-End-Tests für eine Erweiterung
 description: Erfahren Sie, wie Sie Ihre Erweiterung in Adobe Experience Platform validieren, hochladen und testen können.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2394'
+ht-degree: 95%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-Verwenden Sie zum Testen von Tag-Erweiterungen in Adobe Experience Platform die Tags-API und/oder die Befehlszeilen-Tools, um Ihre Erweiterungspakete hochzuladen. Verwenden Sie anschließend die Datenerfassungs-Benutzeroberfläche, um Ihr Erweiterungspaket in einer Eigenschaft zu installieren und seine Funktionen in einer Tag-Bibliothek und einem Build zu nutzen.
+Verwenden Sie zum Testen von Tag-Erweiterungen in Adobe Experience Platform die Tags-API und/oder die Befehlszeilen-Tools, um Ihre Erweiterungspakete hochzuladen. Verwenden Sie anschließend die Platform-Benutzeroberfläche oder die Datenerfassungs-Benutzeroberfläche, um Ihr Erweiterungspaket in einer Eigenschaft zu installieren und seine Funktionen in einer Tag-Bibliothek und einem Build zu nutzen.
 
 In diesem Dokument wird beschrieben, wie Sie End-to-End-Tests für Ihre Erweiterung implementieren.
 
@@ -74,7 +74,7 @@ Das Erweiterungspaket wird dann hochgeladen und Uploader gibt die ID des extensi
 
 >[!NOTE]
 >
->Beim Hochladen oder Patchen werden Erweiterungspakete in einen ausstehenden Status versetzt, während das System das Paket asynchron extrahiert und bereitstellt. Während dieses Vorgangs können Sie in der Datenerfassungs-Benutzeroberfläche mithilfe der API die `extension_package`-ID nach dem Stand abfragen. Im Katalog wird eine Erweiterungskarte angezeigt, die als „Ausstehend“ markiert ist.
+>Beim Hochladen oder Patchen werden Erweiterungspakete in einen ausstehenden Status versetzt, während das System das Paket asynchron extrahiert und bereitstellt. Während dieses Vorgangs können Sie die `extension_package` Kennung für den Status mithilfe der API und innerhalb der Benutzeroberfläche. Im Katalog wird eine Erweiterungskarte angezeigt, die als „Ausstehend“ markiert ist.
 
 >[!NOTE]
 >
@@ -82,7 +82,7 @@ Das Erweiterungspaket wird dann hochgeladen und Uploader gibt die ID des extensi
 
 ## Erstellen einer Entwicklungseigenschaft {#property}
 
-Nachdem Sie sich bei der Datenerfassungs-Benutzeroberfläche angemeldet haben, wird der Bildschirm „Eigenschaften“ angezeigt. Eine Eigenschaft ist ein Container für die Tags, die Sie bereitstellen möchten, und kann auf einer oder mehreren Sites verwendet werden.
+Nachdem Sie sich bei der Benutzeroberfläche angemeldet haben, wählen Sie **[!UICONTROL Tags]** im linken Navigationsbereich die [!UICONTROL Eigenschaften] angezeigt. Eine Eigenschaft ist ein Container für die Tags, die Sie bereitstellen möchten, und kann auf einer oder mehreren Sites verwendet werden.
 
 ![](../images/getting-started/properties-screen.png)
 
@@ -142,7 +142,7 @@ Erweiterungen können Datenelementtypen definieren, wenn dies für die Funktion 
 
 Sobald ein Benutzer Ihre Erweiterung im Dropdown-Menü **Erweiterung** auswählt, wird die Dropdown-Liste **Datenelementtyp** mit allen Datenelementtypen gefüllt, die von Ihrer Erweiterung bereitgestellt werden. Der Benutzer kann dann jedes Datenelement seinem Quellwert zuordnen. Datenelemente können beim Erstellen von Regeln im Ereignis zur Änderung von Datenelementen (Data Element Change Event) oder im Ereignis für benutzerspezifischen Code (Custom Code Event) verwendet werden, um die Ausführung einer Regel auszulösen. Ein Datenelement kann auch in der Datenelementbedingung oder weiteren Bedingungen, Ausnahmen oder Aktionen in einer Regel verwendet werden.
 
-Nachdem das Datenelement erstellt worden ist (die Zuordnung eingerichtet wurde), können Benutzer einfach über einen Verweis auf das Datenelement auf die Quelldaten verweisen. Wenn sich die Quelle des Werts ändert (Site-Umgestaltungen usw.), Benutzer müssen die Zuordnung nur einmal in der Datenerfassungs-Benutzeroberfläche aktualisieren. Alle Datenelemente erhalten dann automatisch den neuen Quellwert.
+Nachdem das Datenelement erstellt worden ist (die Zuordnung eingerichtet wurde), können Benutzer einfach über einen Verweis auf das Datenelement auf die Quelldaten verweisen. Wenn sich die Quelle des Werts ändert (Site-Umgestaltungen usw.), -Benutzer müssen die Zuordnung nur einmal in der Benutzeroberfläche aktualisieren. Alle Datenelemente erhalten automatisch den neuen Quellwert.
 
 ### Regeln
 
@@ -226,6 +226,6 @@ Wenn Sie feststellen, dass Sie Änderungen an Ihrem Erweiterungspaket vornehmen 
    >
    >Um Zeit zu sparen, können Argumente an die Befehlszeile übergeben werden. So wird die wiederholte Eingabe von Anmeldeinformationen vermieden. Weitere Informationen hierzu finden Sie in der [Dokumentation zu Reactor Uploader](https://www.npmjs.com/package/@adobe/reactor-uploader).
 1. Der Installationsschritt kann beim Aktualisieren eines vorhandenen Pakets übersprungen werden.
-1. Ändern von Ressourcen: Wenn die Konfiguration für eine der Erweiterungskomponenten geändert wurde, müssen Sie diese Ressourcen in der Datenerfassungs-Benutzeroberfläche aktualisieren.
+1. Ändern von Ressourcen: Wenn die Konfiguration für eine Ihrer Erweiterungskomponenten geändert wurde, müssen Sie diese Ressourcen in der Benutzeroberfläche aktualisieren.
 1. Hinzufügen der neuesten Änderungen zur Bibliothek und erneutes Erstellen.
 1. Schließen Sie eine weitere Reihe von Tests ab.

@@ -3,9 +3,9 @@ keywords: Experience Platform; Startseite; beliebte Themen; Quellen; Quelle; Dat
 title: Adobe Data Collection
 description: Dieses Dokument bietet einen Überblick über die Datenquelle der Adobe-Datenerfassung.
 exl-id: 3cb582a9-b852-4ede-8047-af1a47aa3647
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '298'
 ht-degree: 52%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 52%
 
 Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Kundenerlebnisdaten aus Client-seitigen Quellen erfassen und an das Adobe Experience Platform Edge Network senden können, wo sie in Sekundenschnelle an Adobe oder andere Ziele weitergegeben, transformiert und verteilt werden können.
 
-Durch die Quellenintegration der Datenerfassung von Adobe können Sie über den Quellkatalog auf Ihre Datenerfassungs-Edge-Daten, einschließlich der Datenvorbereitung für die Datenerfassung, sowie auf eine verbesserte Unterstützung für Warnhinweise zugreifen.
+Die Quellenintegration der Adobe Experience Platform-Datenerfassung ermöglicht Ihnen den Zugriff auf Ihre Daten im Edge-Netzwerk, einschließlich der Datenvorbereitung für die Datenerfassung, sowie eine verbesserte Unterstützung für Warnungen über den Quellkatalog.
 
-## Verwenden des Arbeitsbereichs &quot;Quellen&quot;für den Zugriff auf die Datenerfassung in Adobe
+## Verwenden des Arbeitsbereichs &quot;Quellen&quot;für den Zugriff auf die Datenerfassung
 
 Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** in der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
@@ -32,7 +32,7 @@ Ein Datenstrom ist eine Konfiguration, die dem Edge Network mitteilt, wohin Ihre
 
 ![datastreams](./images/data-collection/datastreams.png)
 
-Umfassende Schritte zur Verwendung der Datenerfassungs-Benutzeroberfläche finden Sie in der [Übersicht über Ende-zu-Ende-Datenerfassung](../../../collection/e2e.md).
+Umfassende Schritte zum Konfigurieren der Datenerfassung in der Benutzeroberfläche finden Sie im Abschnitt [Übersicht über Ende-zu-Ende-Datenerfassung](../../../collection/e2e.md).
 
 ## Nächste Schritte
 

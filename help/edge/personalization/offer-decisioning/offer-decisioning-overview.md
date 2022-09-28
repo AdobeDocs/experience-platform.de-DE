@@ -3,9 +3,9 @@ title: Verwenden von Offer decisioning mit dem Platform Web SDK
 description: Das Adobe Experience Platform Web SDK kann personalisierte Angebote bereitstellen und rendern, die unter Offer decisioning verwaltet werden. Sie können Ihre Angebote und andere verwandte Objekte mithilfe der Offer decisioning-Benutzeroberfläche oder -API erstellen.
 keywords: offer decisioning; Entscheidungsfindung; Web SDK; Platform Web SDK; personalisierte Angebote; Angebote bereitstellen; Bereitstellung von Angeboten; Personalisierung von Angeboten;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '865'
 ht-degree: 20%
 
 ---
@@ -65,7 +65,7 @@ Führen Sie die folgenden Schritte aus, um Offer decisioning zu aktivieren:
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. Befolgen Sie die Anweisungen unter [SDK installieren](../../fundamentals/installing-the-sdk.md) (Das SDK kann eigenständig oder über die [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/). Siehe [Schnellstartanleitung für Tags](../../../tags/quick-start/quick-start.md)) für weitere Informationen.
+1. Befolgen Sie die Anweisungen unter [SDK installieren](../../fundamentals/installing-the-sdk.md) (Das SDK kann eigenständig oder über die Benutzeroberfläche installiert werden. Siehe [Schnellstartanleitung für Tags](../../../tags/quick-start/quick-start.md)) für weitere Informationen.
 1. [SDK konfigurieren](../../fundamentals/configuring-the-sdk.md) für Offer decisioning. Weitere Offer decisioning-spezifische Schritte finden Sie unten.
 
    * Installieren des eigenständigen SDK
@@ -85,7 +85,7 @@ Führen Sie die folgenden Schritte aus, um Offer decisioning zu aktivieren:
 
       1. [Erstellen Sie eine Tag-Eigenschaft](../../../tags/ui/administration/companies-and-properties.md)
       1. [Fügen Sie den Einbettungs-Code hinzu](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. Installieren und konfigurieren Sie die Platform Web SDK-Erweiterung mit dem von Ihnen erstellten Datastream, indem Sie die Konfiguration aus der Dropdown-Liste &quot;Datastream&quot;auswählen. Weitere Informationen finden Sie in der Dokumentation zu [Erweiterungen](../../../tags/ui/managing-resources/extensions/overview.md).
+      1. Installieren und konfigurieren Sie die Platform Web SDK-Erweiterung mit dem von Ihnen erstellten Datastream, indem Sie die Konfiguration aus der Dropdown-Liste &quot;Datastream&quot;auswählen. Weitere Informationen zu Datensätzen finden Sie in der Dokumentation zu [Erweiterungen](../../../tags/ui/managing-resources/extensions/overview.md).
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 

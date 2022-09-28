@@ -2,10 +2,10 @@
 title: Satellitenobjektreferenz
 description: Hier erfahren Sie mehr über das Client-seitige _satellite-Objekt und die verschiedenen Funktionen, die Sie damit in Tags ausführen können.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1290'
+ht-degree: 95%
 
 ---
 
@@ -51,7 +51,7 @@ Wenn ein Datenelement mit dem entsprechenden Namen vorhanden ist, wird der Wert 
 
 >[!NOTE]
 >
->Sie können Prozentwerte (`%`) Syntax, um Variablen für viele Formularfelder in der Datenerfassungs-Benutzeroberfläche zu referenzieren, wodurch der Aufruf von `_satellite.getVar()`. Verwenden Sie beispielsweise `%product%` greift auf den Wert des Produktdatenelements oder der benutzerdefinierten Variablen zu.
+>Sie können Prozentwerte (`%`) Syntax, um Variablen für viele Formularfelder in Ihrer Tag-Implementierung zu referenzieren, wodurch der Aufruf von `_satellite.getVar()`. Verwenden Sie beispielsweise `%product%` greift auf den Wert des Produktdatenelements oder der benutzerdefinierten Variablen zu.
 
 Wenn ein Ereignis eine Regel Trigger, können Sie die entsprechende Regel übergeben `event` Objekt in `_satellite.getVar()` wie folgt:
 

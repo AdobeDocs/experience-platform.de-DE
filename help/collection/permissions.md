@@ -2,9 +2,9 @@
 title: Berechtigungsverwaltung für die Datenerfassung in Experience Platform
 description: Eine allgemeine Übersicht darüber, wie Sie Berechtigungen verwalten und den Zugriff auf Datenerfassungsfunktionen in Adobe Experience Platform steuern können.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1309'
 ht-degree: 9%
 
 ---
@@ -17,7 +17,7 @@ In diesem Handbuch erfahren Sie, wie Sie Berechtigungen für Datenerfassungsfunk
 
 ## Erste Schritte
 
-Um die Zugriffskontrolle für die Datenerfassung zu konfigurieren, müssen Sie über Administratorrechte für ein Unternehmen verfügen, das über eine Produktintegration mit der Datenerfassung von Adobe Experience Platform verfügt. Die Mindestrolle, die Berechtigungen erteilen oder entziehen kann, ist ein Produktprofiladministrator. Andere Administratorrollen, die Berechtigungen verwalten können, sind Produktadministratoren (kann alle Profile innerhalb eines Produkts verwalten) und Systemadministratoren (keine Einschränkungen). Weitere Informationen finden Sie im Artikel unter [Administratorrollen](https://helpx.adobe.com/de/enterprise/using/admin-roles.html) Weitere Informationen finden Sie im Adobe Enterprise-Verwaltungshandbuch .
+Um die Zugriffskontrolle für die Datenerfassung zu konfigurieren, müssen Sie über Administratorrechte für ein Unternehmen verfügen, das über eine Produktintegration mit der Datenerfassung von Adobe Experience Platform verfügt. Die Mindestrolle, die Berechtigungen erteilen oder entziehen kann, ist eine **Produktprofil-Administrator**. Andere Administratorrollen, die Berechtigungen verwalten können, sind **Produktadministratoren** (kann alle Profile innerhalb eines Produkts verwalten) und **Systemadministratoren** (keine Einschränkungen). Weitere Informationen finden Sie im Artikel unter [Administratorrollen](https://helpx.adobe.com/de/enterprise/using/admin-roles.html) Weitere Informationen finden Sie im Adobe Enterprise-Verwaltungshandbuch .
 
 In diesem Handbuch wird davon ausgegangen, dass Sie mit grundlegenden Konzepten der Admin Console wie Produktprofilen und der Art und Weise, wie diese Produktberechtigungen einzelnen Benutzern und Gruppen gewähren, vertraut sind. Weitere Informationen finden Sie unter [Benutzerhandbuch zu Admin Consolen](https://helpx.adobe.com/de/enterprise/using/admin-console.html).
 
@@ -137,4 +137,4 @@ Weitere Informationen zum Verwalten von Benutzern für ein Produktprofil finden 
 
 ## Nächste Schritte
 
-In diesem Handbuch wurden die verfügbaren Berechtigungen für die Datenerfassungs-Benutzeroberfläche und deren Verwaltung über die Admin Console behandelt. Weitere Informationen zum Verwalten von Berechtigungen für andere Adobe Experience Platform-Funktionen finden Sie im Abschnitt [Zugriffssteuerungsdokumentation](../access-control/home.md).
+In diesem Handbuch wurden die verfügbaren Berechtigungen für die Datenerfassung und deren Verwaltung über die Admin Console behandelt. Weitere Informationen zum Verwalten von Berechtigungen für andere Adobe Experience Platform-Funktionen finden Sie im Abschnitt [Zugriffssteuerungsdokumentation](../access-control/home.md).

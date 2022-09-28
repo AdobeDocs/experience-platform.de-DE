@@ -2,10 +2,10 @@
 title: Datenvorbereitung für die Datenerfassung
 description: Erfahren Sie, wie Sie beim Konfigurieren eines Datenstroms für die Adobe Experience Platform Web- und Mobile-SDKs Ihre Daten einem XDM-Ereignisschema (Experience-Datenmodell) zuordnen können.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '918'
-ht-degree: 100%
+source-wordcount: '914'
+ht-degree: 96%
 
 ---
 
@@ -22,7 +22,7 @@ Datenvorbereitung ist ein Adobe Experience Platform-Service, mit dem Sie Daten z
 >* [Verarbeiten von Datenformaten mit der Datenvorbereitung](../../data-prep/data-handling.md)
 
 
-In diesem Handbuch wird beschrieben, wie Sie Ihre Daten mithilfe der Datenerfassungs-Benutzeroberfläche zuordnen. Führen Sie zunächst den Prozess zur Erstellung eines Datenstroms bis (einschließlich) der [allgemeinen Konfiguration](./overview.md#create) aus.
+In diesem Handbuch wird beschrieben, wie Sie Ihre Daten in der Benutzeroberfläche zuordnen. Führen Sie zunächst den Prozess zur Erstellung eines Datenstroms bis (einschließlich) der [allgemeinen Konfiguration](./overview.md#create) aus.
 
 Eine kurze Erklärung des Prozesses „Datenvorbereitung für die Datenerfassung“ finden Sie im folgenden Video:
 
@@ -203,4 +203,4 @@ Nachdem der Zähler der erforderlichen Felder null erreicht hat und Sie Ihre Zuo
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie Ihre Daten XDM zuordnen, wenn Sie einen Datenstrom in der Datenerfassungs-Benutzeroberfläche einrichten. Wenn Sie dem Tutorial zu allgemeinen Datenströmen gefolgt sind, können Sie jetzt zur Anleitung zum [Anzeigen von Datenspeicherdetails](./overview.md) zurückkehren.
+In diesem Handbuch wurde beschrieben, wie Sie Ihre Daten XDM zuordnen, wenn Sie einen Datenspeicher in der Benutzeroberfläche einrichten. Wenn Sie dem Tutorial zu allgemeinen Datenströmen gefolgt sind, können Sie jetzt zur Anleitung zum [Anzeigen von Datenspeicherdetails](./overview.md) zurückkehren.

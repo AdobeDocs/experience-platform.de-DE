@@ -2,10 +2,10 @@
 title: Häufig gestellte Fragen zum Adobe Experience Platform Web SDK
 description: Erhalten Sie Antworten auf häufig gestellte Fragen zum Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1934'
+ht-degree: 2%
 
 ---
 
@@ -82,7 +82,7 @@ Alloy ist der Codename für das Adobe Experience Platform Web SDK. Sie wird im Q
 
 ## Müssen Kunden Adobe Experience Platform kaufen, um die [!DNL Web SDK]?
 
-Nein. Jeder Adobe Digital Experience-Kunde kann das Adobe Experience Platform Web SDK kostenlos nutzen. Kunden, die die [!DNL Web SDK] muss die richtigen Berechtigungen zum Erstellen von Schemas, Datensätzen, Identitäts-Namespaces und Datensätzen in der Benutzeroberfläche für die Datenerfassung von Adobe Experience Platform konfigurieren.
+Nein. Jeder Adobe Digital Experience-Kunde kann das Adobe Experience Platform Web SDK kostenlos nutzen. Kunden, die die [!DNL Web SDK] müssen die richtigen Berechtigungen zum Erstellen von Schemas, Datensätzen, Identitäts-Namespaces und Datensätzen in der Datenerfassungs-Benutzeroberfläche oder der Benutzeroberfläche von Experience Platform konfigurieren.
 
 Weitere Informationen zum Konfigurieren dieser Berechtigungen finden Sie in unserer Dokumentation unter [Verwaltung von Datenerfassungsberechtigungen](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en).
 
@@ -135,7 +135,7 @@ Nein. Sie können die `alloy.js` Datei selbst.
 
 Beachten Sie jedoch Folgendes:
 
-* Das Adobe Experience Platform Web SDK erfordert eine so genannte Datastream-ID, damit das Edge-Netzwerk den Stream identifizieren und bestimmen kann, was mit den Daten zu tun ist. Diese ID wird innerhalb von Experience Platform erstellt. Dies bedeutet nicht, dass Sie die Datenerfassungs-Benutzeroberfläche verwenden müssen, um Eigenschaften zu erstellen oder den JavaScript-Code bereitzustellen. Sie müssen jedoch Tags verwenden, um eine Konfigurations-ID zu erstellen.
+* Das Adobe Experience Platform Web SDK erfordert eine so genannte Datastream-ID, damit das Edge-Netzwerk den Stream identifizieren und bestimmen kann, was mit den Daten zu tun ist. Diese ID wird innerhalb von Experience Platform erstellt. Dies bedeutet nicht, dass Sie die Benutzeroberfläche verwenden müssen, um Eigenschaften zu erstellen oder den JavaScript-Code bereitzustellen. Sie müssen jedoch Tags verwenden, um eine Konfigurations-ID zu erstellen.
 
 * Tags sind nicht nur der beste verfügbare Tag- und SDK-Manager, sondern machen es auch sehr einfach, `alloy.js` und ordnen Daten XDM-Schemas zu. Wenn Sie sich gegen die Verwendung von Tags entscheiden, müssen Sie die Bereitstellung von `alloy.js`, Ereignissen und Zuordnen Ihrer Daten zu XDM vor dem Senden. Dies ist ein _viel_ ist schwieriger als die Verwendung von Tags.
 
