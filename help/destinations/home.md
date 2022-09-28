@@ -3,10 +3,10 @@ keywords: Ziele; Adobe Experience Platform; Plattform; Ziele - Übersicht; aktiv
 title: Ziele – Übersicht
 description: Ziele sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Ziele in der Adobe Experience Platform verwenden, um Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 842aaa7104b277cf415d1ed9ee2744a200c07ce8
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 44%
+source-wordcount: '633'
+ht-degree: 35%
 
 ---
 
@@ -44,7 +44,24 @@ Detaillierte Informationen finden Sie im Abschnitt [Zieltypen und Kategorien - �
 
 Die Zielfunktion in Platform funktioniert mit Zugriffssteuerungsberechtigungen von Adobe Experience Platform. Je nach Berechtigungsstufe Ihres Anwenders können Sie Ziele anzeigen, verwalten und aktivieren. Informationen zu den individuellen Berechtigungen finden Sie unter [Zugangssteuerung in Adobe Experience Platform](../access-control/home.md); scrollen Sie nach unten bis zum Ende der Seite.
 
+In der folgenden Tabelle sind die Berechtigungen und Berechtigungskombinationen aufgeführt, die zum Ausführen bestimmter Aktionen für Ziele erforderlich sind:
+
+| Berechtigungsebene | Beschreibung |
+| ---- | ----|
+| **[!UICONTROL Verwalten von Zielen]** | Um eine Verbindung zu Zielen herzustellen, benötigen Sie die **[!UICONTROL Ziele verwalten]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** | Um Segmente für Ziele zu aktivieren, benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). |
+
+{style=&quot;table-layout:auto&quot;}
+
 Weiterführende Informationen zu Zugangssteuerungen finden Sie im [Benutzerhandbuch zur Zugangssteuerung](../access-control/ui/overview.md).
+
+### Attributbasierte Zugriffskontrolle für Ziele {#attribute-based-access}
+
+Die attributbasierte Zugriffskontrolle in Adobe Experience Platform ermöglicht es Administratoren, den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen zu steuern.
+
+Mit der attributbasierten Zugriffskontrolle können Sie Zuordnungskonfigurationen auf Felder anwenden, für die Sie über Berechtigungen verfügen. Außerdem können Sie keine Daten an ein Ziel exportieren, wenn Sie nicht Zugriff auf alle Felder im Datensatz haben.
+
+Weitere Informationen dazu, wie Ziele mit attributbasierten Zugriffssteuerelementen funktionieren, finden Sie in der [Attributbasierte Zugriffskontrolle - Übersicht](../access-control/abac/overview.md#destinations).
 
 ## Einschränkungen von Data Governance beim Aktivieren von Daten für Ziele {#data-governance}
 
@@ -64,7 +81,7 @@ Weitere Informationen zur Auswahl von Marketing-Aktionen im Workflow &quot;Ziel 
 * [E-Mail-Marketing-Ziele ](./catalog/email-marketing/overview.md)
 * [Social-Media-Ziele ](./catalog/social/overview.md)
 
-Weitere Informationen zu Verstößen gegen Datenrichtlinien im Workflow für die Segmentaktivierung finden Sie im Schritt Überprüfen in den folgenden Handbüchern:
+Weitere Informationen zu Verstößen gegen Datenrichtlinien im Workflow für die Segmentaktivierung finden Sie unter **[!UICONTROL Überprüfen]** in die folgenden Handbücher zu übernehmen:
 
 * [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](./ui/activate-segment-streaming-destinations.md#review)
 * [Aktivieren von Zielgruppendaten für Exportziele von Streaming-Profilen](./ui/activate-streaming-profile-destinations.md#review)

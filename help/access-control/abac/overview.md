@@ -3,10 +3,10 @@ keywords: Experience Platform; Startseite; beliebte Themen; Zugriffskontrolle; a
 title: Attributbasierte Zugriffssteuerung - Übersicht
 description: Dieses Dokument enthält Informationen zur attributbasierten Zugriffskontrolle in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 981d604770fbc2e979346146845ad7bc80805356
+source-git-commit: b095461b0c2510e84ca9a3a368f4907f8b3d5370
 workflow-type: tm+mt
-source-wordcount: '1583'
-ht-degree: 36%
+source-wordcount: '1684'
+ht-degree: 34%
 
 ---
 
@@ -62,7 +62,7 @@ Die folgenden Abschnitte enthalten Informationen dazu, wie die attributbasierte 
 
 Weitere Informationen zur Zugriffskontrolle finden Sie unter [Zugriffskontrolle - Übersicht](../home.md).
 
-### Ziele
+### Ziele {#destinations}
 
 [!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 
@@ -72,6 +72,15 @@ Als Administrator können Sie attributbasierte Zugriffssteuerungsfunktionen verw
    * Während des Aktivierungsprozesses müssen Benutzer möglicherweise Segmente auswählen, die sie für ein Ziel aktivieren möchten. Als Administrator können Sie Benutzern in Ihrer Organisation ermöglichen, nur Segmente anzuzeigen, die mit Bezeichnungen beschriftet sind, auf die Benutzer Zugriff haben, und Segmente, die keine Bezeichnungen enthalten.
 * Konfigurieren Sie den Benutzerzugriff, um bestimmte Felder im Aktivierungsprozess basierend auf Rollen, Berechtigungen und Beschriftungen anzuzeigen.
    * Während des Aktivierungsprozesses müssen Benutzer möglicherweise Felder auswählen, die sie für ein Ziel aktivieren möchten. Als Administrator können Sie Benutzern in Ihrer Organisation ermöglichen, nur Felder anzuzeigen, die mit Beschriftungen versehen sind, auf die Benutzer Zugriff haben, und Felder, die keine Beschriftungen enthalten.
+
+>[!IMPORTANT]
+>
+>Beachten Sie daher bei der Arbeit mit Zielen und attributbasierter Zugriffskontrolle die folgenden Auswirkungen:
+>
+>* Sie können nur Segmente aktivieren, für die Sie Zugriff und Zugriff auf die Seite im [Ansicht zum Durchsuchen von Segmenten](/help/segmentation/ui/overview.md#browse) und [Segmentschritt auswählen](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) des Aktivierungs-Workflows.
+>* Im [Zuordnungsschritt des Aktivierungs-Workflows](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)können Sie nur die Felder anzeigen und zur Aktivierung auswählen, auf die Sie Zugriff haben.
+>* Wenn Sie zusätzliche Segmente für ein vorhandenes Ziel aktivieren möchten, für das Sie keinen Zugriff auf alle Felder haben, die für den Export zugeordnet sind, wird der Aktivierungs-Workflow für Sie blockiert.
+
 
 Weitere Informationen finden Sie unter [!DNL Destinations], siehe [[!DNL Destinations] Übersicht](../../destinations/home.md).
 
