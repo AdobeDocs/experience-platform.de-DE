@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform - Versionshinweise - September 2022
 description: Die Versionshinweise für Adobe Experience Platform vom September 2022.
-source-git-commit: a3f12b9524d393441923cd11e09ed3e406814691
+source-git-commit: 3d7a04c0ec6cf6a9bed90c9c22db2e8b56bfa01f
 workflow-type: tm+mt
-source-wordcount: '1377'
-ht-degree: 34%
+source-wordcount: '1827'
+ht-degree: 36%
 
 ---
 
@@ -12,12 +12,95 @@ ht-degree: 34%
 
 **Release-Datum: 28. September 2022**
 
+Neue Funktionen in Adobe Experience Platform:
+
+- [Datenhygiene](#data-hygiene)
+- [[!UICONTROL Datenschutzkonsole]](#privacy-console)
+
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
+- [Auditprotokolle](#audit-logs)
+- [Datenerfassung](#data-collection)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Identity Service](#identity-service)
-- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [Quellen](#sources)
+
+## Datenhygiene {#data-hygiene}
+
+Adobe Experience Platform bietet leistungsstarke Tools zur Verwaltung großer, komplizierter Datenvorgänge, was die Orchestrierung von Customer Experiences ermöglicht. Da im Laufe der Zeit Daten in das System aufgenommen werden, ist es wichtig, Ihre Datenspeicher so zu verwalten, dass Daten wie vorgesehen verwendet werden. So müssen Daten aktualisiert werden, um falsche Einträge zu korrigieren, und Daten gelöscht werden, wenn dies aufgrund von Unternehmensrichtlinien erforderlich ist.
+
+Mit den Datenhygienemöglichkeiten von Adobe Experience Platform können Sie Ihre Daten bereinigen, indem Sie automatisierte Datensatzabläufe planen und Kundendaten programmgesteuert nach Identität löschen.
+
+>[!NOTE]
+>
+>Die Möglichkeiten zum Löschen von Verbrauchern stehen nur Organisationen zur Verfügung, die Adobe Healthcare Shield oder Privacy Shield erworben haben.
+
+Erste Schritte mit Datenhygiene finden Sie in der folgenden Dokumentation:
+
+- [Übersicht über die Datenhygiene](../../hygiene/home.md): Erfahren Sie mehr über die Grundlagen der Datenhygiene-Funktionen von Platform.
+- [[!UICONTROL Datenhygiene] UI-Handbuch](../../hygiene/ui/overview.md): Erfahren Sie, wie Sie in der Benutzeroberfläche von Platform den Ablauf von Datensätzen und Löschanfragen von Verbrauchern planen.
+- [Data Hygiene API-Handbuch](../../hygiene/api/overview.md): Sämtliche in der Benutzeroberfläche verfügbaren Datenhygiene-Aktivitäten können ebenfalls programmgesteuert durchgeführt werden
+
+## [!UICONTROL Datenschutzkonsole] {#privacy-console}
+
+Die [!UICONTROL Datenschutzkonsole] -Registerkarte in der Experience Platform-Benutzeroberfläche bietet eine Dashboard-Ansicht mit wichtigen Einblicken aus datenschutzbezogenen Funktionen wie [Anfragen von Datensubjekten nach Privacy Service], [Datenhygiene]und [Auditprotokolle]. Die Konsole enthält außerdem mehrere produktinterne Benutzerhandbücher, die Sie durch gängige Datenschutz-Workflows führen.
+
+Siehe [Übersicht über die Datenschutzkonsole](../../landing/governance-privacy-security/privacy-console.md) für weitere Informationen zur Funktion.
+
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
+
+KI/ML-Services ermöglichen es Marketing-Leuten und Fachleuten, die Leistungsfähigkeit von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen zu nutzen. Auf diese Weise können Marketing-Leute mithilfe von Konfigurationen auf Unternehmensebene Modelle erstellen, die speziell auf die Anforderungen eines Unternehmens zugeschnitten sind, ohne dass dafür datenwissenschaftliches Fachwissen erforderlich ist.
+
+### Attributions-KI
+
+Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Entwurfsinstanz speichern | Diese neue Funktion ermöglicht es Marketing-Analysten, die Modellkonfiguration während der Konfigurationen als Entwurfsinstanz zu speichern und den Entwurf bis zum Abschluss des Trainings und der Auswertung weiter zu bearbeiten. Zu den Szenarien, in denen diese Funktion hilfreich ist, gehören u. a. Fälle, in denen Benutzer mehrere Felder definieren müssen, die im Konfigurations-Workflow definiert werden sollen, sodass sie nicht in einem Schritt abgeschlossen werden können, oder Fälle, in denen eine oder mehrere Datensatzstatistiken (z. B. die Spaltenvollständigkeit) erst verarbeitet werden müssen, bevor sie verfügbar werden. Lesen Sie die [Attribution AI-Benutzerhandbuch](../../intelligent-services/attribution-ai/user-guide.md) , um mehr zu erfahren. |
+| Governance-Strategien | Nachdem sich Benutzer zum Erstellen einer Instanz über den Konfigurations-Workflow übermittelt haben, prüft der neue Richtliniendurchsetzungsdienst, ob Richtlinienverletzungen bei der Datennutzung vorliegen, und zeigt die Details in einem Popup an. Dadurch wird sichergestellt, dass Datenvorgänge und Marketing-Aktionen mit den in Adobe Experience Platform konfigurierten Datennutzungsrichtlinien konform sind. |
+
+Weitere Informationen zu Attribution AI finden Sie unter [Attribution AI - Übersicht](../../intelligent-services/attribution-ai/overview.md). Informationen zu Data Governance-Richtlinien finden Sie im Abschnitt [Richtlinien - Übersicht](../../data-governance/policies/overview.md).
+
+### Kunden-KI
+
+Kunden-KI in Real-time Customer Data Platform dient dazu, für einzelne Profile in gewünschten Umfang benutzerdefinierte Neigungswerte wie Abwanderung und Konversion zu generieren.
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Entwurfsinstanz speichern | Diese neue Funktion ermöglicht es Marketing-Analysten, die Modellkonfiguration während der Konfigurationen als Entwurfsinstanz zu speichern und den Entwurf bis zum Abschluss des Trainings und der Auswertung weiter zu bearbeiten. Zu den Szenarien, in denen diese Funktion hilfreich ist, gehören u. a. Fälle, in denen Benutzer mehrere Felder definieren müssen, die im Konfigurations-Workflow definiert werden sollen, sodass sie nicht in einem Schritt abgeschlossen werden können, oder Fälle, in denen eine oder mehrere Datensatzstatistiken (z. B. die Spaltenvollständigkeit) erst verarbeitet werden müssen, bevor sie verfügbar werden. Lesen Sie die [Benutzerhandbuch für Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md) , um mehr zu erfahren. |
+| Governance-Strategien | Nachdem sich Benutzer zum Erstellen einer Instanz über den Konfigurations-Workflow übermittelt haben, prüft der neue Richtliniendurchsetzungsdienst, ob Richtlinienverletzungen bei der Datennutzung vorliegen, und zeigt die Details in einem Popup an. Dadurch wird sichergestellt, dass Datenvorgänge und Marketing-Aktionen mit den in Adobe Experience Platform konfigurierten Datennutzungsrichtlinien konform sind. |
+
+Weitere Informationen zu Customer AI finden Sie im [Customer AI - Übersicht](../../intelligent-services/customer-ai/overview.md). Informationen zu Data Governance-Richtlinien finden Sie im Abschnitt [Richtlinien - Übersicht](../../data-governance/policies/overview.md).
+
+## Auditprotokolle {#audit-logs}
+
+Mit Experience Platform können Sie die Benutzeraktivität in Verbindung mit verschiedenen Services und Funktionen überprüfen. Die Auditprotokolle enthalten Informationen darüber, wer wann was getan hat.
+
+**Aktualisierte Funktionen**
+
+| Funktion | Name | Beschreibung |
+| --- | --- | --- |
+| Ressourcen hinzugefügt | <ul><li>Attribution AI-Instanz</li><li>Customer AI-Instanz</li><li>Datastream</li></ul> | Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet. Wenn die Funktion aktiviert ist, müssen Sie die Protokollerfassung nicht manuell aktivieren. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Weiterführende Informationen zu den verschiedenen ressourcenspezifischen Ereignistypen, die von Auditprotokollen in Platform verfolgt werden, finden Sie im Abschnitt [Übersicht über Auditprotokolle](../../landing/governance-privacy-security/audit-logs/overview.md).
+
+## Datenerfassung
+
+Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kundenerlebnisdaten erfassen und an das Adobe Experience Platform Edge Network senden können, wo sie angereichert und transformiert und an Adobe- oder Drittanbieter-Ziele weitergegeben werden können.
+
+**Aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Integration der linken Navigation in der Platform-Benutzeroberfläche | Alle Funktionen, die zuvor ausschließlich für die Datenerfassungs-Benutzeroberfläche galten (einschließlich Tags, Ereignisweiterleitung und Datastreams), sind jetzt auch über die linke Navigation in Experience Platform unter der Kategorie verfügbar. **[!UICONTROL Datenerfassung]**. Dadurch entfällt die Notwendigkeit, beim Arbeiten mit Datenerfassungsfunktionen in Platform zwischen Benutzeroberflächen zu wechseln. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Weitere Informationen zur Datenerfassung in Platform finden Sie in der [Übersicht zur Datenerfassung](../../collection/home.md).
 
 ## Experience-Datenmodell (XDM) {#xdm}
 
@@ -77,32 +160,6 @@ Mit Adobe Experience Platform Identity Service erhalten Sie einen besseren Über
 | Unterstützung für das Löschen von Datensätzen | Identity Service unterstützt jetzt das Löschen von Datensätzen, wenn über die [Catalog Service-API](https://developer.adobe.com/experience-platform-apis/references/catalog/), Benutzeroberfläche oder Datenhygiene. Lesen Sie das Handbuch unter [Löschen von Datensätzen in der Benutzeroberfläche](../../catalog/datasets/user-guide.md#delete-a-dataset) für weitere Informationen. |
 
 Weitere Informationen zum Identity Service finden Sie im Abschnitt [Identity Service - Übersicht](../../identity-service/home.md).
-
-## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
-
-KI/ML-Services ermöglichen es Marketing-Leuten und Fachleuten, die Leistungsfähigkeit von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen zu nutzen. Auf diese Weise können Marketing-Leute mithilfe von Konfigurationen auf Unternehmensebene Modelle erstellen, die speziell auf die Anforderungen eines Unternehmens zugeschnitten sind, ohne dass dafür datenwissenschaftliches Fachwissen erforderlich ist.
-
-### Attributions-KI
-
-Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
-
-| Funktion | Beschreibung |
-| --- | --- |
-| Entwurfsinstanz speichern | Diese neue Funktion ermöglicht es Marketing-Analysten, die Modellkonfiguration während der Konfigurationen als Entwurfsinstanz zu speichern und den Entwurf bis zum Abschluss des Trainings und der Auswertung weiter zu bearbeiten. Zu den Szenarien, in denen diese Funktion hilfreich ist, gehören u. a. Fälle, in denen Benutzer mehrere Felder definieren müssen, die im Konfigurations-Workflow definiert werden sollen, sodass sie nicht in einem Schritt abgeschlossen werden können, oder Fälle, in denen eine oder mehrere Datensatzstatistiken (z. B. die Spaltenvollständigkeit) erst verarbeitet werden müssen, bevor sie verfügbar werden. Lesen Sie die [Attribution AI-Benutzerhandbuch](../../intelligent-services/attribution-ai/user-guide.md) , um mehr zu erfahren. |
-| Governance-Strategien | Nachdem sich Benutzer zum Erstellen einer Instanz über den Konfigurations-Workflow übermittelt haben, prüft der neue Richtliniendurchsetzungsdienst, ob Richtlinienverletzungen bei der Datennutzung vorliegen, und zeigt die Details in einem Popup an. Dadurch wird sichergestellt, dass Datenvorgänge und Marketing-Aktionen mit den in Adobe Experience Platform konfigurierten Datennutzungsrichtlinien konform sind. |
-
-Weitere Informationen zu Attribution AI finden Sie unter [Attribution AI - Übersicht](../../intelligent-services/attribution-ai/overview.md). Informationen zu Data Governance-Richtlinien finden Sie im Abschnitt [Richtlinien - Übersicht](../../data-governance/policies/overview.md).
-
-### Kunden-KI
-
-Kunden-KI in Real-time Customer Data Platform dient dazu, für einzelne Profile in gewünschten Umfang benutzerdefinierte Neigungswerte wie Abwanderung und Konversion zu generieren.
-
-| Funktion | Beschreibung |
-| --- | --- |
-| Entwurfsinstanz speichern | Diese neue Funktion ermöglicht es Marketing-Analysten, die Modellkonfiguration während der Konfigurationen als Entwurfsinstanz zu speichern und den Entwurf bis zum Abschluss des Trainings und der Auswertung weiter zu bearbeiten. Zu den Szenarien, in denen diese Funktion hilfreich ist, gehören u. a. Fälle, in denen Benutzer mehrere Felder definieren müssen, die im Konfigurations-Workflow definiert werden sollen, sodass sie nicht in einem Schritt abgeschlossen werden können, oder Fälle, in denen eine oder mehrere Datensatzstatistiken (z. B. die Spaltenvollständigkeit) erst verarbeitet werden müssen, bevor sie verfügbar werden. Lesen Sie die [Benutzerhandbuch für Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md) , um mehr zu erfahren. |
-| Governance-Strategien | Nachdem sich Benutzer zum Erstellen einer Instanz über den Konfigurations-Workflow übermittelt haben, prüft der neue Richtliniendurchsetzungsdienst, ob Richtlinienverletzungen bei der Datennutzung vorliegen, und zeigt die Details in einem Popup an. Dadurch wird sichergestellt, dass Datenvorgänge und Marketing-Aktionen mit den in Adobe Experience Platform konfigurierten Datennutzungsrichtlinien konform sind. |
-
-Weitere Informationen zu Customer AI finden Sie im [Customer AI - Übersicht](../../intelligent-services/customer-ai/overview.md). Informationen zu Data Governance-Richtlinien finden Sie im Abschnitt [Richtlinien - Übersicht](../../data-governance/policies/overview.md).
 
 ## Quellen {#sources}
 
