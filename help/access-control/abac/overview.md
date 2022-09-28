@@ -3,10 +3,10 @@ keywords: Experience Platform; Startseite; beliebte Themen; Zugriffskontrolle; a
 title: Attributbasierte Zugriffssteuerung - Übersicht
 description: Dieses Dokument enthält Informationen zur attributbasierten Zugriffskontrolle in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 6156d84cfdd33f8fe491e9a80e3711cf304733e9
+source-git-commit: 981d604770fbc2e979346146845ad7bc80805356
 workflow-type: tm+mt
-source-wordcount: '1576'
-ht-degree: 38%
+source-wordcount: '1583'
+ht-degree: 36%
 
 ---
 
@@ -20,7 +20,7 @@ Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Pl
 
 Mit dieser Funktion können Sie Experience-Datenmodell (XDM)-Schemafelder mit Bezeichnungen beschriften, die Organisations- oder Datennutzungsbereiche definieren. Parallel dazu können Administratoren die Benutzeroberfläche zur Verwaltung von Benutzern und Rollen verwenden, um Zugriffsrichtlinien für XDM-Schemafelder zu definieren und den Zugriff, der Benutzern oder Benutzergruppen (internen, externen oder Drittanbieterbenutzern) gewährt wird, besser zu verwalten. Darüber hinaus ermöglicht die attributbasierte Zugriffskontrolle Administrierenden die Verwaltung des Zugriffs auf bestimmte Segmente.
 
-Mithilfe der attributbasierten Zugriffssteuerung können Administrierende Ihres Unternehmens den Zugriff der Benutzer*innen auf sowohl sensible persönliche Daten als auch personenbezogene Daten (PII) für alle Platform-Workflows und -Ressourcen steuern. Administrierende können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
+Mithilfe der attributbasierten Zugriffskontrolle können Administratoren Ihres Unternehmens den Zugriff der Benutzer auf sensible personenbezogene Daten (EPPD), personenbezogene Daten (PII) und benutzerdefinierte Datentypen für alle Platform-Workflows und -Ressourcen steuern. Administrierende können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
 
 ## Terminologie der attributbasierten Zugriffskontrolle
 
@@ -33,8 +33,8 @@ Die attributbasierte Zugriffskontrolle umfasst die folgenden Komponenten:
 | Berechtigungen | Zu den Berechtigungen gehört die Möglichkeit, Platform-Funktionen anzuzeigen und/oder zu verwenden, z. B. das Erstellen von Sandboxes, das Definieren von Schemas und das Verwalten von Datensätzen. |
 | Berechtigungssätze | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Administrator auf eine Rolle anwenden kann. Ein Administrator kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
 | Richtlinien | Richtlinien sind Aussagen, die Attribute zusammenbringen, um zulässige und unzulässige Handlungen festzustellen. Richtlinien können lokal oder global sein und andere Richtlinien überschreiben. |
-| Ressource | Eine Ressource ist das Asset oder Objekt, auf das ein Betreff zugreifen kann oder nicht. Ressourcen können Dateien, Anwendungen, Server oder sogar APIs sein. |
-| Rollen | Rollen definieren den Zugriff, den ein Administrator, ein Spezialist oder ein Endbenutzer auf Ressourcen in Ihrem Unternehmen hat. In einer rollenbasierten Zugriffskontrollumgebung erfolgt die Bereitstellung des Benutzerzugriffs über gemeinsame Zuständigkeiten und Anforderungen. Eine Rolle verfügt über bestimmte Berechtigungen und Mitglieder Ihrer Organisation können je nach dem Umfang der Ansicht oder des Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden. |
+| Ressource | Eine Ressource ist das Asset oder Objekt, auf das ein Betreff zugreifen kann oder nicht. Ressourcen können Segmente oder Schemafelder sein. |
+| Rollen | Rollen sind Möglichkeiten, die Typen von Benutzern zu kategorisieren, die mit Ihrer Platform-Instanz interagieren und Bausteine von Richtlinien zur Zugriffssteuerung sind. In einer rollenbasierten Zugriffskontrollumgebung erfolgt die Bereitstellung des Benutzerzugriffs über gemeinsame Zuständigkeiten und Anforderungen. Eine Rolle verfügt über bestimmte Berechtigungen und Mitglieder Ihrer Organisation können je nach dem Umfang der Ansicht oder des Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden. |
 | Betreff | Ein Betreff ist der Benutzer, der Zugriff auf eine Ressource anfordert, um eine Aktion durchzuführen. |
 | Benutzergruppen | Benutzergruppen sind mehrere Benutzer, die gruppiert wurden und Zugriff haben, um dieselben Funktionen auszuführen. |
 

@@ -5,10 +5,10 @@ title: Übersicht über Quell-Connectoren
 topic-legacy: overview
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
+source-git-commit: 552d8412067503847a6c9e4ffcf1aa18710dfbdd
 workflow-type: tm+mt
-source-wordcount: '1024'
-ht-degree: 100%
+source-wordcount: '1094'
+ht-degree: 91%
 
 ---
 
@@ -169,7 +169,15 @@ Die folgende Tabelle zeigt, wie sich die Benutzeroberfläche bei verschiedenen K
 | **[!UICONTROL Quellen verwalten]** aktiviert | Gewährt zusätzlich zu in den **[!UICONTROL Quellen verwalten]** enthaltenen Berechtigungen Zugriff auf die Option **[!UICONTROL Quelle verbinden]** unter **[!UICONTROL Katalog]** sowie auf die Option **[!UICONTROL Daten auswählen]** unter **[!UICONTROL Durchsuchen]**. **[!UICONTROL Quellen verwalten]** beinhaltet außerdem die Berechtigung zum Aktivieren und Deaktivieren von **[!UICONTROL DataFlows]** sowie zur Bearbeitung der zugehörigen Zeitpläne. |
 | **[!UICONTROL Quellen anzeigen]** deaktiviert und **[!UICONTROL Quellen verwalten]** deaktiviert | Sperrt den Zugriff auf alle Quellen. |
 
-Weitere Informationen zu den über Admin Console erteilten Berechtigungen einschließlich der vier hier erläuterten Quellen finden Sie unter [Zugriffskontrolle – Übersicht](../access-control/home.md).
+Weitere Informationen zu den verfügbaren Berechtigungen, die über Adobe-Berechtigungen gewährt werden, finden Sie im [Zugriffskontrolle - Übersicht](../access-control/home.md).
+
+### Attributbasierte Zugriffskontrolle für Quellen
+
+Die attributbasierte Zugriffskontrolle in Adobe Experience Platform ermöglicht es Administratoren, den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen zu steuern.
+
+Mit der attributbasierten Zugriffskontrolle können Sie Zuordnungskonfigurationen auf Felder anwenden, für die Sie über Berechtigungen verfügen. Außerdem können Sie keine Daten in einen Datensatz erfassen, wenn Sie nicht Zugriff auf alle Felder im Datensatz haben.
+
+Weitere Informationen zur attributbasierten Zugriffskontrolle finden Sie in der [Attributbasierte Zugriffskontrolle - Übersicht](../access-control/abac/overview.md).
 
 ## Allgemeine Geschäftsbedingungen {#terms-and-conditions}
 
