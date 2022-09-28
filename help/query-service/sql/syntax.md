@@ -5,10 +5,10 @@ title: SQL-Syntax in Query Service
 topic-legacy: syntax
 description: Dieses Dokument zeigt die von Adobe Experience Platform Query Service unterstützte SQL-Syntax.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 33c45c53e2ff591e7b94be1b4b17c25d2fe9d497
+source-git-commit: 5ec37ee797ec297b2e5c275dc0e6091e4ee8ecae
 workflow-type: tm+mt
-source-wordcount: '3033'
-ht-degree: 10%
+source-wordcount: '3160'
+ht-degree: 9%
 
 ---
 
@@ -488,6 +488,30 @@ Um den Wert für eine Einstellung zurückzugeben, verwenden Sie `SET [property k
 ## PostgreSQL-Befehle
 
 Die folgenden Unterabschnitte decken die von Query Service unterstützten PostgreSQL-Befehle ab.
+
+### ANALYSETABELLE
+
+Die `ANALYZE TABLE` berechnet Statistiken für eine Tabelle im beschleunigten Speicher. Die Statistiken werden anhand der ausgeführten CTAS- oder ITAS-Abfragen für eine bestimmte Tabelle im beschleunigten Speicher berechnet.
+
+**Beispiel**
+
+```sql
+ANALYZE TABLE <original_table_name>
+```
+
+Im Folgenden finden Sie eine Liste statistischer Berechnungen, die nach Verwendung der Variablen `ANALYZE TABLE` command:-
+
+| Berechnete Werte | Beschreibung |
+|---|---|
+| `field` | Der Name der Spalte in einer Tabelle. |
+| `data-type` | Der zulässige Datentyp für jede Spalte. |
+| `count` | Die Anzahl der Zeilen, die einen Wert ungleich null für dieses Feld enthalten. |
+| `distinct-count` | Die Anzahl der eindeutigen oder eindeutigen Werte für dieses Feld. |
+| `missing` | Die Anzahl der Zeilen, die einen Nullwert für dieses Feld haben. |
+| `max` | Der Maximalwert aus der analysierten Tabelle. |
+| `min` | Der Mindestwert aus der analysierten Tabelle. |
+| `mean` | Der Durchschnittswert der analysierten Tabelle. |
+| `stdev` | Die Standardabweichung der analysierten Tabelle. |
 
 ### BEGIN
 
