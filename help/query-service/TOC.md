@@ -4,9 +4,9 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
 breadcrumb-title: Anleitung zum Abfragedienst
 user-guide-description: Verwenden Sie SQL-Standarddaten zur Abfrage in Platform Data Lake.
 feature: Queries
-source-git-commit: 490a24df5ef127ba4ff6727d0d1cd5e0b381f447
+source-git-commit: f1f7bef6bcac5abfaa01f10849f41a55fef797e5
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '208'
 ht-degree: 70%
 
 ---
@@ -58,6 +58,7 @@ ht-degree: 70%
    - [Spark SQL-Funktionen](sql/spark-sql-functions.md)
    - [Metadatenbefehle](sql/metadata.md)
    - [Vorbereitete Anweisungen](sql/prepared-statements.md)
+   - [Datensatzbeispiele](sql/dataset-samples.md)
 - Clients mit Query Service verbinden {#clients}
    - [Kundenverbindungen – Überblick](clients/overview.md)
    - [SSL-Modi](./clients/ssl-modes.md)
