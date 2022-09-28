@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK-Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 4e80588777e1c5f334e15533c7c44623a0cd2b64
+source-git-commit: bfdb25e853c16ca38c69d777362681a4b3b06a2f
 workflow-type: tm+mt
-source-wordcount: '1426'
-ht-degree: 43%
+source-wordcount: '1466'
+ht-degree: 42%
 
 ---
 
@@ -13,6 +13,14 @@ ht-degree: 43%
 # Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zum SDK finden Sie in der [Versionshinweise zum Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Version 2.14.0 - 28. September 2022
+
+* Neu hinzugefügt `targetMigrationEnabled` Konfiguration, die die vollständige Migration von Seiten nach Seite ermöglicht.
+* Es wurde eine Antwort-Aktion zum Anwenden hinzugefügt, um hybride Server-Client-Implementierungen zu ermöglichen.
+* Die Kontextoption Benutzeragent-Client-Hinweise für hohe Entropie wurde hinzugefügt.
+
+Enthält Version 2.13.0 der Adobe Experience Platform Web SDK Library.
 
 ## Version 2.13.0 - 29. Juni 2022
 
