@@ -7,17 +7,17 @@ topic-legacy: Customer AI Overview
 description: Customer AI wird verwendet, um für einzelne Profile skaliert benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion zu berechnen. Dies wird erreicht, ohne dass die Geschäftsanforderungen in ein Problem des maschinellen Lernens umgewandelt, ein Algorithmus ausgewählt, trainiert oder bereitgestellt werden muss.
 landing-page-description: Customer AI wird verwendet, um für einzelne Profile skaliert benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion zu berechnen.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-source-git-commit: 62188f56861dd021db7b13325f622323644af8e0
+source-git-commit: 6c0e001419dc78d4ff87bebd0604c7add07b635f
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 89%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
 # Customer AI – Übersicht
 
-Customer AI bietet Marketing-Experten als Teil von Intelligent Services die Möglichkeit, Kundenvorhersagen auf individueller Ebene mit Erklärungen zu erstellen.
+Customer AI als Teil von Intelligent Services bietet Marketing-Experten die Möglichkeit, Kundenprognosen auf individueller Ebene mit Erklärungen zu generieren.
 
 Mithilfe von Einflussfaktoren kann Customer AI vorhersagen, was ein Kunde wahrscheinlich tun wird und warum. Darüber hinaus können Marketing-Experten von Prognosen und Einblicken durch Customer AI profitieren, um Kundenerlebnisse durch Bereitstellung der am besten geeigneten Angebote und Botschaften zu personalisieren.
 
@@ -29,7 +29,7 @@ Customer AI erlaubt Folgendes:
 
 - Bereitstellung hochgenauer Kundentendenzmodelle für eine bessere Segmentierung und Targeting.
 - Hilfe beim Verständnis der Einflussfaktoren und Wahrscheinlichkeiten hinter bestimmten Kundenverhaltensweisen.
-- Bereitstellung anpassbarer Optionen für die einzigartigen Anwendungsfälle und Daten Ihres Unternehmens.
+- Stellen Sie anpassbare Optionen für die einzigartigen Anwendungsfälle und Daten Ihres Unternehmens bereit.
 - Verbessern von Echtzeit-Kundenprofilen mit kundenspezifischen Tendenzwerten wie Abwanderung und Konversion.
 - Optimierung von Kundenprofilen mit Einflussfaktoren für Tendenzwerte.
 - Erstellung von Kundensegmenten basierend auf Einflussfaktoren und Tendenzwerten.
@@ -37,10 +37,10 @@ Customer AI erlaubt Folgendes:
 Customer AI erlaubt Folgendes nicht:
 
 - Customer AI sollte nicht verwendet werden, um die dynamische Preisgestaltung oder den Preis vorherzusagen, zu dem der Kunde einen Kauf tätigen wird.
-- Customer AI kann nicht bestimmen, ob die Abgabe eines Angebots die Wahrscheinlichkeit erhöht, dass der Kunde einen Artikel kaufen wird. Auch wenn Sie sich entscheiden könnten, Rabattangebote auf der Grundlage von Tendenzwerten zu versenden, ist dies nicht unbedingt der beste Weg, diese Kunden zu konvertieren.
+- Customer AI kann nicht bestimmen, ob die Abgabe eines Angebots die Wahrscheinlichkeit erhöht, dass der Kunde einen Artikel kaufen wird. Auch wenn Sie sich entscheiden können, Rabattangebote basierend auf Tendenzwerten zu versenden, ist dies nicht unbedingt die beste Möglichkeit, diese Kunden zu konvertieren.
 - Customer AI ist kein Tool für Produktempfehlungen. Wenn Sie Tausende von SKUs haben, verwenden Sie Customer AI nicht anstelle einer echten Produktempfehlungslösung wie [!DNL Adobe Target].
-- Customer AI kann nicht vorhersagen, in welcher Phase der Kaufs-Journey sich der Kunde befindet, z. B. ob er sich in der Phase „Aufmerksamkeit“, „Prüfung“, „Kauf“ oder „Bindung“ befindet.
-- Verwenden Sie Customer AI nicht, um Kunden zu ermitteln, die wahrscheinlich ein Produkt kaufen werden, das in der Zukunft auf den Markt kommt. Dies erfordert, dass bestimmte Erfolgsereignisse in der Vergangenheit vorhanden sind, damit Customer AI den Algorithmus für maschinelles Lernen erfolgreich auf Ihre Daten trainieren kann.
+- Customer AI kann nicht vorhersagen, in welcher Phase der Kauf-Journey der sich der Kunde befindet, z. B. wenn er sich in einer &quot;Bewusstseinsbildung&quot;-, &quot;Erwägung&quot;-, &quot;Kauf&quot;- oder &quot;Bindung&quot;-Phase befindet.
+- Verwenden Sie Customer AI nicht, um Kunden zu ermitteln, die wahrscheinlich ein Produkt kaufen, das in der Zukunft auf den Markt kommt. Dies erfordert, dass bestimmte Erfolgsereignisse in der Vergangenheit vorhanden sind, damit Customer AI den Algorithmus für maschinelles Lernen erfolgreich auf Ihre Daten trainieren kann.
 
 Das folgende Video soll Ihr Verständnis von Customer AI unterstützen.
 
