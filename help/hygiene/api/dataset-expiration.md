@@ -1,15 +1,15 @@
 ---
-title: API-Endpunkt für Datensatzgültigkeiten
+title: Datensatz-Ablauf-API-Endpunkt
 description: Mit dem Endpunkt /ttl in der Datenhygiene-API können Sie programmgesteuert einen Zeitplan für Datensatzgültigkeiten in Adobe Experience Platform festlegen.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 5a12c75a54f420b2ca831dbfe05105dfd856dc4d
+source-git-commit: c2ff0d5806e57f230b937e8754d40031fb4b2305
 workflow-type: tm+mt
-source-wordcount: '1405'
-ht-degree: 100%
+source-wordcount: '1450'
+ht-degree: 72%
 
 ---
 
-# Endpunkt für Datensatzgültigkeiten
+# Endpunkt für den Datensatzablauf
 
 >[!IMPORTANT]
 >
@@ -55,7 +55,7 @@ GET /ttl?{QUERY_PARAMETERS}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl?page=1&size=50 \
+  https://platform.adobe.io/data/core/hygiene/ttl?updatedToDate=2021-08-01&author=LIKE%Jane Doe%25 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -68,38 +68,43 @@ Eine erfolgreiche Antwort listet die resultierenden Datensatzgültigkeiten auf. 
 
 ```json
 {
-  "results": [
+  "totalRecords": 3,
+  "ttlDetails": [
     {
-      "ttlId": "SDfba908e9fb2e427ab4275d20465631d7",
-      "datasetId": "62799c3e1151781b63ccaa28",
-      "imsOrg": "{ORG_ID}",
-      "status": "cancelled",
-      "expiry": "2022-05-09T22:57:05.531024Z",
-      "updatedAt": "2022-05-09T22:57:05.531025Z",
-      "updatedBy": "{USER_ID}"
+      "status": "completed",
+      "workorderId": "SDc17a9501345c4997878c1383c475a77b",
+      "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
+      "datasetId": "f440ac301c414bf1b6ba419162866346",
+      "expiry": "2021-07-07T13:14:15Z",
+      "updatedAt": "2021-07-07T13:14:15Z",
+      "updatedBy": "Jane Doe <jane.doe@example.com> d741b5b877bf47cf@AdobeId"
     },
     {
-      "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
-      "datasetId": "62759f2ede9e601b63a2ee14",
-      "imsOrg": "{ORG_ID}",
       "status": "pending",
-      "expiry": "2032-12-31T23:59:59Z",
-      "updatedAt": "2022-05-09T22:41:46.731002Z",
-      "updatedBy": "{USER_ID}"
+      "workorderId": "SD8ef60b33dbed444fb81861cced5da10b",
+      "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
+      "datasetId": "80f0d38820a74879a2c5be82e38b1a94",
+      "expiry": "2099-02-02T00:00:00Z",
+      "updatedAt": "2021-02-02T13:00:00Z",
+      "updatedBy": "John Q. Public <jqp@example.com> 93220281bad34ed0@AdobeId"
+    },
+    {
+      "status": "pending",
+      "workorderId": "SD2140ad4eaf1f47a1b24c05cce53e303e",
+      "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
+      "datasetId": "9e63f9b25896416ba811657678b4fcb7",
+      "expiry": "2099-01-01T00:00:00Z",
+      "updatedAt": "2021-01-01T13:00:00Z",
+      "updatedBy": "Jane Doe <jane.doe@example.com> d741b5b877bf47cf@AdobeId"
     }
-  ],
-  "current_page": 1,
-  "total_pages": 36,
-  "total_count": 886
+  ]
 }
 ```
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `results` | Enthält die Details der zurückgegebenen Datensatzgültigkeiten. Weitere Informationen zu den Eigenschaften einer Datensatzgültigkeit finden Sie im Antwort-Abschnitt zum Erstellen eines [Suchaufrufs](#lookup). |
-| `current_page` | Die aktuelle Seite der aufgelisteten Ergebnisse. |
-| `total_pages` | Die Gesamtzahl der Seiten in der Antwort. |
-| `total_count` | Die Gesamtzahl der Datensatzgültigkeiten in der Antwort. |
+| `totalRecords` | Die Anzahl der Datensatzabläufe, die mit den Parametern des Auflistungsaufrufs übereinstimmen. |
+| `ttlDetails` | Enthält die Details der zurückgegebenen Datensatzgültigkeiten. Weitere Informationen zu den Eigenschaften einer Datensatzgültigkeit finden Sie im Antwort-Abschnitt zum Erstellen eines [Suchaufrufs](#lookup). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -110,20 +115,22 @@ Sie können eine Datensatzgültigkeit über eine GET-Anfrage nachschlagen.
 **API-Format**
 
 ```http
-GET /ttl/{TTL_ID}
+GET /ttl/{DATASET_ID}
 ```
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{TTL_ID}` | Die ID der Datensatzgültigkeit, die Sie nachschlagen möchten. |
+| `{DATASET_ID}` | Die ID des Datensatzes, dessen Ablauf Sie nachschlagen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
+Die folgende Anfrage sucht nach den Ablaufdetails für den Datensatz `62759f2ede9e601b63a2ee14`:
+
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e \
+  https://platform.adobe.io/data/core/hygiene/ttl/62759f2ede9e601b63a2ee14 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -136,110 +143,71 @@ Eine erfolgreiche Antwort gibt die Details der Datensatzgültigkeit zurück.
 
 ```json
 {
-    "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+    "workorderId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
     "datasetId": "62759f2ede9e601b63a2ee14",
     "imsOrg": "{ORG_ID}",
     "status": "pending",
     "expiry": "2023-12-31T23:59:59Z",
     "updatedAt": "2022-05-11T15:12:40.393115Z",
-    "updatedBy": "{USER_ID}"
+    "updatedBy": "{USER_ID}",
+    "displayName": "Example Dataset Expiration Request",
+    "description": "A dataset expiration request that will execute at the end of 2023"
 }
 ```
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `ttlId` | Die ID der Datensatzgültigkeit. |
+| `workorderId` | Die ID der Datensatzgültigkeit. |
 | `datasetId` | Die ID des Datensatzes, für den diese Gültigkeit zutrifft. |
 | `imsOrg` | Die Kennung Ihrer Organisation. |
 | `status` | Der aktuelle Status der Datensatzgültigkeit. |
 | `expiry` | Das geplante Datum und die Uhrzeit, zu der der Datensatz gelöscht wird. |
 | `updatedAt` | Ein Zeitstempel, der angibt, wann die Gültigkeit zuletzt aktualisiert wurde. |
 | `updatedBy` | Die Person, der die Gültigkeit zuletzt aktualisiert hat. |
+| `displayName` | Der Anzeigename für die Ablaufanfrage. |
+| `description` | Eine Beschreibung für die Ablaufanfrage. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Erstellen einer Datensatzgültigkeit {#create}
+### Catalog-Ablauftags
 
-Sie können über eine POST-Anfrage ein Ablaufdatum für einen Datensatz erstellen.
+Bei Verwendung von [Catalog-API](../../catalog/api/getting-started.md) zum Nachschlagen von Datensatzdetails, wenn der Datensatz eine aktive Gültigkeit hat, wird er unter `tags.adobe/hygiene/ttl`.
 
-**API-Format**
-
-```http
-POST /ttl
-```
-
-**Anfrage**
-
-Mit der folgenden Anfrage wird als Zeitpunkt für die Löschung des Datensatzes `5b020a27e7040801dedbf46e` Ende 2022 festgelegt (Greenwich Mean Time).
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/hygiene/ttl \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "datasetId": "5b020a27e7040801dedbf46e",
-        "expiry": "2022-12-31T23:59:59Z"
-      }'
-```
-
-| Eigenschaft | Beschreibung |
-| --- | --- |
-| `datasetId` | Die ID des Datensatzes, für den Sie ein Ablaufdatum planen möchten. |
-| `expiry` | Ein ISO 8601-Zeitstempel für den Zeitpunkt, zu dem der Datensatz gelöscht wird. |
-
-{style=&quot;table-layout:auto&quot;}
-
-**Antwort**
-
-Eine erfolgreiche Antwort gibt die Details der Datensatzgültigkeit mit dem HTTP-Status 200 (OK) zurück, wenn eine bereits vorhandene Gültigkeit aktualisiert wurde, oder 201 (Erstellt), wenn keine Gültigkeit vorhanden war.
+Die folgende JSON-Datei stellt eine abgeschnittene Antwort für die Details eines Datensatzes aus dem Katalog dar, die den Ablaufwert von `32503680000000`. Der Wert des Tags kodiert den Ablauf als ganzzahlige Anzahl von Millisekunden seit Beginn der Unix-Epoche.
 
 ```json
 {
-    "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
-    "datasetId": "5b020a27e7040801dedbf46e",
-    "imsOrg": "{ORG_ID}",
-    "status": "pending",
-    "expiry": "2032-12-31T23:59:59Z",
-    "updatedAt": "2022-05-09T22:38:40.393115Z",
-    "updatedBy": "{USER_ID}"
+  "63212313c308d51b997858ba": {
+    "name": "TTL Test Dataset",
+    "description": "A piecrust promise, made to be broken",
+    "imsOrg": "0FCC747E56F59C747F000101@AdobeOrg",
+    "sandboxId": "8dc51b90-d0f9-11e9-b164-ed6a398c8b35",
+    "tags": {
+      "adobe/hygiene/ttl": [ "32503680000000" ],
+      ...
+    },
+    ...
+  }
 }
 ```
 
-| Eigenschaft | Beschreibung |
-| --- | --- |
-| `ttlId` | Die ID der Datensatzgültigkeit. |
-| `datasetId` | Die ID des Datensatzes, für den diese Gültigkeit zutrifft. |
-| `imsOrg` | Die Kennung Ihrer Organisation. |
-| `status` | Der aktuelle Status der Datensatzgültigkeit. |
-| `expiry` | Das geplante Datum und die Uhrzeit, zu der der Datensatz gelöscht wird. |
-| `updatedAt` | Ein Zeitstempel, der angibt, wann die Gültigkeit zuletzt aktualisiert wurde. |
-| `updatedBy` | Die Person, der die Gültigkeit zuletzt aktualisiert hat. |
+## Erstellen oder Aktualisieren des Datensatzablaufs {#create-or-update}
 
-{style=&quot;table-layout:auto&quot;}
-
-## Aktualisieren der Datensatzgültigkeit {#update}
-
-Sie können die Datensatzgültigkeit über eine PUT-Anfrage aktualisieren.
+Sie können über eine PUT-Anfrage ein Ablaufdatum für einen Datensatz erstellen oder aktualisieren.
 
 **API-Format**
 
 ```http
-PUT /ttl/{TTL_ID}
+PUT /ttl/{DATASET_ID}
 ```
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{TTL_ID}` | Die ID der Datensatzgültigkeit, die Sie ändern möchten. |
-
-{style=&quot;table-layout:auto&quot;}
+| `{DATASET_ID}` | Die ID des Datensatzes, für den Sie einen Ablauf planen möchten. |
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird die Gültigkeit für den Datensatz `5b020a27e7040801dedbf46e` so aktualisiert, dass er Ende 2023 (Greenwich Mean Time) gelöscht wird.
+Mit der folgenden Anfrage wird als Zeitpunkt für die Löschung des Datensatzes `5b020a27e7040801dedbf46e` Ende 2022 festgelegt (Greenwich Mean Time). Wenn für den Datensatz keine vorhandene Gültigkeit gefunden wird, wird eine neue Gültigkeit erstellt. Wenn der Datensatz bereits einen ausstehenden Ablauf aufweist, wird dieser Ablauf mit dem neuen `expiry` -Wert.
 
 ```shell
 curl -X PUT \
@@ -250,35 +218,41 @@ curl -X PUT \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-        "expiry": "2023-12-31T23:59:59Z"
+        "expiry": "2022-12-31T23:59:59Z",
+        "displayName": "Example Expiration Request",
+        "description": "Cleanup identities required by JIRA request 12345 across all datasets in the prod sandbox."
       }'
 ```
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `expiry` | Ein ISO 8601-Zeitstempel für den Zeitpunkt, zu dem der Datensatz gelöscht wird. |
+| `displayName` | Ein Anzeigename für die Ablaufanfrage. |
+| `description` | Eine optionale Beschreibung für die Ablaufanfrage. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der aktualisierten Gültigkeit zurück.
+Eine erfolgreiche Antwort gibt die Details der Datensatzgültigkeit mit dem HTTP-Status 200 (OK) zurück, wenn eine bereits vorhandene Gültigkeit aktualisiert wurde, oder 201 (Erstellt), wenn keine Gültigkeit vorhanden war.
 
 ```json
 {
-    "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
-    "datasetId": "62759f2ede9e601b63a2ee14",
+    "workorderId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+    "datasetId": "5b020a27e7040801dedbf46e",
     "imsOrg": "{ORG_ID}",
     "status": "pending",
-    "expiry": "2023-12-31T23:59:59Z",
-    "updatedAt": "2022-05-11T15:12:40.393115Z",
-    "updatedBy": "{USER_ID}"
+    "expiry": "2032-12-31T23:59:59Z",
+    "updatedAt": "2022-05-09T22:38:40.393115Z",
+    "updatedBy": "{USER_ID}",
+    "displayName": "Example Expiration Request",
+    "description": "Cleanup identities required by JIRA request 12345 across all datasets in the prod sandbox."
 }
 ```
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `ttlId` | Die ID der Datensatzgültigkeit. |
+| `workorderId` | Die ID der Datensatzgültigkeit. |
 | `datasetId` | Die ID des Datensatzes, für den diese Gültigkeit zutrifft. |
 | `imsOrg` | Die Kennung Ihrer Organisation. |
 | `status` | Der aktuelle Status der Datensatzgültigkeit. |
@@ -292,25 +266,29 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Gültigkeit zurüc
 
 Sie können eine Datensatzgültigkeit abbrechen, indem Sie eine DELETE-Anfrage stellen.
 
+>[!NOTE]
+>
+>Nur Datensatzabläufe mit dem Status `pending` kann abgebrochen werden. Beim Versuch, einen Ablauf abzubrechen, der ausgeführt wurde oder bereits abgebrochen wurde, wird ein HTTP 404-Fehler zurückgegeben.
+
 **API-Format**
 
 ```http
-DELETE /ttl/{TTL_ID}
+DELETE /ttl/{EXPIRATION_ID}
 ```
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{TTL_ID}` | Die ID der Datensatzgültigkeit, die Sie abbrechen möchten. |
+| `{EXPIRATION_ID}` | Die `workorderId` des Datensatzablaufs, den Sie abbrechen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird die Gültigkeit für den Datensatz `5b020a27e7040801dedbf46e` so aktualisiert, dass er Ende 2023 (Greenwich Mean Time) gelöscht wird.
+Mit der folgenden Anfrage wird die Gültigkeit eines Datensatzes mit ID abgebrochen `SD5cfd7a11b25543a9bcd9ef647db3d8df`:
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD5cfd7a11b25543a9bcd9ef647db3d8df \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -319,45 +297,21 @@ curl -X DELETE \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der Datensatzgültigkeit zurück, wobei das `status`-Attribut jetzt `cancelled` lautet.
+Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und den Ablaufwert `status` -Attribut auf `cancelled`.
 
-```json
-{
-    "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
-    "datasetId": "62759f2ede9e601b63a2ee14",
-    "imsOrg": "{ORG_ID}",
-    "status": "cancelled",
-    "expiry": "2023-12-31T23:59:59Z",
-    "updatedAt": "2022-05-09T23:47:30.071186Z",
-    "updatedBy": "{USER_ID}"
-}
-```
+## Abrufen des Ablaufstatusverlaufs eines Datensatzes
 
-| Eigenschaft | Beschreibung |
-| --- | --- |
-| `ttlId` | Die ID der Datensatzgültigkeit. |
-| `datasetId` | Die ID des Datensatzes, für den diese Gültigkeit zutrifft. |
-| `imsOrg` | Die Kennung Ihrer Organisation. |
-| `status` | Der aktuelle Status der Datensatzgültigkeit. |
-| `expiry` | Das geplante Datum und die Uhrzeit, zu der der Datensatz gelöscht wird. |
-| `updatedAt` | Ein Zeitstempel, der angibt, wann die Gültigkeit zuletzt aktualisiert wurde. |
-| `updatedBy` | Die Person, der die Gültigkeit zuletzt aktualisiert hat. |
-
-{style=&quot;table-layout:auto&quot;}
-
-## Abrufen des Protokolls einer Datensatzgültigkeit
-
-Sie können das Protokoll einer Datensatzgültigkeit in einer Suchanfrage mithilfe des Abfrageparameters `include=history` aufrufen. Das Ergebnis enthält Informationen über die Erstellung der Datensatzgültigkeit, alle Aktualisierungen sowie über ihren Abbruch oder ihre Ausführung (falls zutreffend).
+Sie können den Ablaufstatusverlauf eines bestimmten Datensatzes mithilfe des Abfrageparameters nachschlagen `include=history` in einer Suchanfrage. Das Ergebnis enthält Informationen über die Erstellung der Datensatzgültigkeit, alle Aktualisierungen sowie über ihren Abbruch oder ihre Ausführung (falls zutreffend).
 
 **API-Format**
 
 ```http
-GET /ttl/{TTL_ID}?include=history
+GET /ttl/{DATASET_ID}?include=history
 ```
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{TTL_ID}` | Die ID der Datensatzgültigkeit, deren Protokoll Sie aufrufen möchten. |
+| `{DATASET_ID}` | Die ID des Datensatzes, dessen Ablaufverlauf Sie nachschlagen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -365,7 +319,7 @@ GET /ttl/{TTL_ID}?include=history
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e?include=history \
+  https://platform.adobe.io/data/core/hygiene/ttl/62759f2ede9e601b63a2ee14?include=history \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -378,8 +332,12 @@ Eine erfolgreiche Antwort geben die Details der Datensatzgültigkeit mit einem `
 
 ```json
 {
-  "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+  "workorderId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
   "datasetId": "62759f2ede9e601b63a2ee14",
+  "datasetName": "Example Dataset",
+  "sandboxName": "prod",
+  "displayName": "Expiration Request 123",
+  "description": "Expiration Request 123 Description",
   "imsOrg": "{ORG_ID}",
   "status": "cancelled",
   "expiry": "2022-05-09T23:47:30.071186Z",
@@ -410,8 +368,12 @@ Eine erfolgreiche Antwort geben die Details der Datensatzgültigkeit mit einem `
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `ttlId` | Die ID der Datensatzgültigkeit. |
+| `workorderId` | Die ID der Datensatzgültigkeit. |
 | `datasetId` | Die ID des Datensatzes, für den diese Gültigkeit zutrifft. |
+| `datasetName` | Der Anzeigename für den Datensatz, für den dieser Ablauf gilt. |
+| `sandboxName` | Der Name der Sandbox, unter der sich der Zieldatensatz befindet. |
+| `displayName` | Der Anzeigename für die Ablaufanfrage. |
+| `description` | Eine Beschreibung für die Ablaufanfrage. |
 | `imsOrg` | Die Kennung Ihrer Organisation. |
 | `history` | Listet das Protokoll der Aktualisierungen für die Gültigkeit als Array von Objekten auf, wobei jedes Objekt die Attribute `status`, `expiry`, `updatedAt` und `updatedBy` für die Gültigkeit zum Zeitpunkt der Aktualisierung enthält. |
 
@@ -427,8 +389,11 @@ In der folgenden Tabelle sind die verfügbaren Abfrageparameter beim [Auflisten 
 | --- | --- | --- |
 | `size` | Eine Ganzzahl zwischen 1 und 100, die die maximale Anzahl der zurückzugebenden Gültigkeiten angibt. Die Standardeinstellung ist 25. | `size=50` |
 | `page` | Eine Ganzzahl, die angibt, welche Seite der Gültigkeitenliste zurückgegeben werden soll. | `page=3` |
+| `orgId` | Sucht nach Datensätzen, deren Organisations-ID mit der des Parameters übereinstimmt. Dieser Wert wird standardmäßig auf den Wert der Variablen `x-gw-ims-org-id` -Kopfzeilen und werden ignoriert, es sei denn, die Anfrage stellt ein Service-Token bereit. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
 | `status` | Eine durch Kommas getrennte Liste von Status. Wenn diese Liste enthalten ist, entspricht die Antwort den Datensatzgültigkeiten, deren aktueller Status in der Liste enthalten ist. | `status=pending,cancelled` |
 | `author` | Gibt die Gültigkeiten zurück, für die `created_by` der Suchzeichenfolge entspricht. Wenn die Suchzeichenfolge mit `LIKE` oder `NOT LIKE` beginnt, wird der Rest als SQL-Suchmuster behandelt. Andernfalls wird die gesamte Suchzeichenfolge als exakte Zeichenfolge gehandhabt, die genau mit dem gesamten Inhalt des `created_by`-Felds übereinstimmen muss. | `author=LIKE %john%` |
+| `sandboxName` | Sucht nach Datensatzabläufen, deren Sandbox-Name genau mit dem -Argument übereinstimmt. Die Standardeinstellung ist der Sandbox-Name in der Anfrage `x-sandbox-name` -Kopfzeile. Verwendung `sandboxName=*` , um Datensatzabläufe aus allen Sandboxes einzuschließen. | `sandboxName=dev1` |
+| `datasetId` | Sucht nach Ablauffristen, die für einen bestimmten Datensatz gelten. | `datasetId=62b3925ff20f8e1b990a7434` |
 | `createdDate` | Gibt die Gültigkeiten zurück, die im 24-Stunden-Fenster erstellt wurden, das mit dem angegebenen Zeitpunkt beginnt.<br><br>Beachten Sie, dass ein Datum ohne Uhrzeit (wie `2021-12-07`) den Datum/Uhrzeit-Wert am Anfang des Tages darstellt. Daher bezieht sich `createdDate=2021-12-07` auf alle am 7. Dezember 2021 erstellten Gültigkeiten, von `00:00:00` bis `23:59:59.999999999` (UTC). | `createdDate=2021-12-07` |
 | `createdFromDate` | Gibt die Gültigkeiten wieder, die zum angegebenen Zeitpunkt oder danach erstellt wurden. | `createdFromDate=2021-12-07T00:00:00Z` |
 | `createdToDate` | Gibt die Gültigkeiten wieder, die zum angegebenen Zeitpunkt oder davor erstellt wurden. | `createdToDate=2021-12-07T23:59:59.999999999Z` |

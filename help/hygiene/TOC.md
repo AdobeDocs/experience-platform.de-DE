@@ -4,10 +4,10 @@ user-guide-title: Datenhygiene-Hilfe
 breadcrumb-title: Datenhygiene-Handbuch
 user-guide-description: Verwalten Sie Kundendatenanfragen, um die gesetzlichen Datenschutzbestimmungen wie die DSGVO und den CCPA einzuhalten.
 feature: Data Hygiene
-source-git-commit: c5a09a01ed9cc180ea5623af6f2c9f176a8334dc
+source-git-commit: 16eecb22a1bec89c7dbac2fcee566a2226cf897f
 workflow-type: tm+mt
-source-wordcount: '49'
-ht-degree: 97%
+source-wordcount: '48'
+ht-degree: 93%
 
 ---
 
@@ -23,5 +23,5 @@ ht-degree: 97%
 * Data Hygiene API {#api}
    * [Übersicht](./api/overview.md)
    * [Datensatzgültigkeiten](./api/dataset-expiration.md)
-   * [Löschvorgänge für Privatkunden und -kundinnen](./api/workorder.md)
+   * [Löschen durch Verbraucher](./api/workorder.md)
    * [Kontingent](./api/quota.md)

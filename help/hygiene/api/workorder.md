@@ -2,12 +2,10 @@
 title: API-Endpunkt für Arbeitsaufträge
 description: Mit dem Endpunkt /workorder in der Data Hygiene API können Sie Löschaufgaben für Verbraucheridentitäten programmgesteuert verwalten.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-hide: true
-hidefromtoc: true
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: fb9d226a4ea2d23ccbf61416e275a0de5025554f
 workflow-type: tm+mt
-source-wordcount: '998'
-ht-degree: 100%
+source-wordcount: '985'
+ht-degree: 49%
 
 ---
 
@@ -15,15 +13,15 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die Healthcare Shield erworben haben.
+>Löschanfragen von Verbrauchern sind derzeit nur für Organisationen verfügbar, die Adobe Healthcare Shield oder Privacy Shield erworben haben.
 
-Mit dem Endpunkt `/workorder` in der Data Hygiene API können Sie in Adobe Experience Platform Löschaufgaben für Verbraucheridentitäten programmgesteuert verwalten.
+Die `/workorder` -Endpunkt in der Data Hygiene-API ermöglicht es Ihnen, Löschanfragen von Verbrauchern in Adobe Experience Platform programmgesteuert zu verwalten.
 
 ## Erste Schritte
 
 Der in diesem Handbuch verwendete Endpunkt ist Teil der Data Hygiene API. Bevor Sie fortfahren, lesen Sie die [Übersicht](./overview.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
 
-## Löschen von Identitäten {#delete-identities}
+## Benutzerdefinierte Löschanfrage erstellen {#delete-consumers}
 
 Sie können eine oder mehrere Verbraucheridentitäten aus einem einzelnen Datensatz oder allen Datensätzen löschen, indem Sie eine POST-Anfrage an den `/workorder`-Endpunkt stellen.
 
@@ -48,6 +46,8 @@ curl -X POST \
   -d '{
         "action": "delete_identity",
         "datasetId": "c48b51623ec641a2949d339bad69cb15",
+        "displayName": "Example Consumer Delete Request",
+        "description": "Cleanup identities required by Jira request 12345.",
         "identities": [
           {
             "namespace": {
@@ -73,132 +73,51 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `action` | Die auszuführende Aktion. Zum Löschen von Identitäten muss für den Wert `delete_identity` ausgewählt werden. |
+| `action` | Die auszuführende Aktion. Der Wert muss auf `delete_identity` für das Löschen durch den Verbraucher. |
 | `datasetId` | Wenn Sie Identitäten aus einem einzelnen Datensatz löschen, muss dieser Wert die Kennung des betreffenden Datensatzes sein. Wenn Sie Identitäten aus allen Datensätzen löschen, setzen Sie den Wert auf `ALL`.<br><br>Wenn Sie einen einzelnen Datensatz angeben, muss für das zugeordnete Experience-Datenmodell-Schema (XDM) des Datensatzes eine primäre Identität definiert sein. |
+| `displayName` | Der Anzeigename für die Löschanfrage des Verbrauchers. |
+| `description` | Eine Beschreibung für die Löschanfrage des Verbrauchers. |
 | `identities` | Ein Array mit den Identitäten von mindestens einem Benutzer, dessen Informationen Sie löschen möchten. Jede Identität besteht aus einem [Identity-Namespace](../../identity-service/namespaces.md) und einem Wert:<ul><li>`namespace`: enthält die einzige Zeichenfolgen-Eigenschaft `code`, die den Identity-Namespace darstellt. </li><li>`id`: der Identitätswert.</ul>Wenn `datasetId` einen einzelnen Datensatz spezifiziert, muss jede Entität unter `identities` denselben Identity-Namespace wie die primäre Identität des Schemas verwenden.<br><br>Wenn `datasetId` auf `ALL` festgelegt ist, ist das `identities`-Array nicht auf einen einzigen Namespace beschränkt, da jeder Datensatz anders sein kann. Ihre Anfragen sind aber auf die Namespaces beschränkt, die Ihrer Organisation zur Verfügung stehen, wie von [Identity Service](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces) spezifiziert. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der Identitätslöschung zurück.
+Eine erfolgreiche Antwort gibt die Details des vom Verbraucher gelöschten Assets zurück.
 
 ```json
 {
   "workorderId": "a15345b8-a2d6-4d6f-b33c-5b593e86439a",
   "orgId": "{ORG_ID}",
-  "batchId": "fc0cf8af-a176-4107-a31a-381d6af38cbe",
-  "bundleOrdinal": 1,
-  "payloadByteSize": 362,
-  "operationCount": 3,
-  "createdAt": 1652122493242,
-  "responseMessage": "received",
+  "bundleId": "BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd",
+  "action": "identity-delete",
+  "createdAt": "2022-07-21T18:05:28.316029Z",
+  "updatedAt": "2022-07-21T17:59:43.217801Z",
   "status": "received",
-  "createdBy": "{USER_ID}"
+  "createdBy": "{USER_ID}",
+  "datasetId": "c48b51623ec641a2949d339bad69cb15",
+  "displayName": "Example Consumer Delete Request",
+  "description": "Cleanup identities required by Jira request 12345."
 }
 ```
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `workorderId` | Die ID des Löschauftrags. Diese kann verwendet werden, um den Status des Löschvorgangs später anzuzeigen. |
-| `orgId` | Die Kennung Ihres Unternehmens. |
-| `batchId` | Die Kennung des Batches, mit dem dieser Löschauftrag verknüpft ist. Sie wird zur Fehlerbehebung verwendet. Mehrere Löschaufträge werden zu einem Batch zusammengefasst, der von nachgelagerten Services verarbeitet wird. |
-| `bundleOrdinal` | Die Reihenfolge, in der dieser Löschauftrag empfangen wurde, als er in einem Batch zur nachgelagerten Verarbeitung zusammengefasst wurde. Dient zur Fehlerbehebung. |
-| `payloadByteSize` | Die Größe (gemessen in Bytes) der Liste mit Identitäten, die in der Anfrage-Payload bereitgestellt wurden, durch die dieser Löschauftrag erstellt wurde. |
-| `operationCount` | Die Anzahl der Identitäten, für die dieser Löschauftrag gilt. |
+| `orgId` | Ihre Organisations-ID. |
+| `bundleId` | Die Kennung des Bundles, mit dem diese Löschreihenfolge verknüpft ist und das zum Debugging verwendet wird. Mehrere Löschaufträge werden gebündelt, um von nachgelagerten Diensten verarbeitet zu werden. |
+| `action` | Die Aktion, die von der Arbeitsreihenfolge ausgeführt wird. Für &quot;consumer delete&quot;lautet der Wert `identity-delete`. |
 | `createdAt` | Ein Zeitstempel, der angibt, wann der Löschauftrag erstellt wurde. |
-| `responseMessage` | Die jüngste vom System zurückgegebene Antwort. Tritt bei der Verarbeitung ein Fehler auf, ist dieser Wert eine JSON-Zeichenfolge mit detaillierten Fehlerinformationen, die Ihnen dabei helfen, mögliche Fehler zu verstehen. |
+| `updatedAt` | Ein Zeitstempel, der angibt, wann die Löschreihenfolge zuletzt aktualisiert wurde. |
 | `status` | Der aktuelle Status des Löschauftrags. |
 | `createdBy` | Der Benutzer, der den Löschauftrag erstellt hat. |
+| `datasetId` | Die ID des Datensatzes, der der Anfrage unterliegt. Wenn die Anforderung für alle Datensätze gilt, wird der Wert auf `ALL`. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Auflistung der Status aller Identitätslöschungen {#list}
+## Abrufen des Status eines Benutzerlöschens (#lookup)
 
-Sie können die Status aller Identitätslöschungen auflisten, indem Sie eine GET-Anfrage stellen.
-
-**API-Format**
-
-```http
-GET /workorder?{QUERY_PARAMS}
-```
-
-| Parameter | Beschreibung |
-| --- | --- |
-| `{QUERY_PARAMS}` | Eine Liste optionaler Abfrageparameter für den Auflistungsaufruf mit mehreren Parametern, die durch `&`-Zeichen getrennt sind. Folgende Abfrageparameter werden akzeptiert:<ul><li>`data`: ein boolescher Wert, der bei Festlegung auf `true` alle zusätzlichen Anfrage- und Antwortdaten enthält, die für den Löschauftrag empfangen wurden. Die Standardeinstellung ist `false`.</li><li>`start`: ein Zeitstempel für den Beginn des Zeitrahmens für die Suche nach Löschaufträgen.</li><li>`end`: ein Zeitstempel für das Ende des Zeitrahmens für die Suche nach Löschaufträgen.</li><li>`page`: die spezifische Antwortseite, die zurückgegeben werden soll.</li><li>`limit`: die Anzahl der pro Seite anzuzeigenden Datensätze.</li></ul> |
-
-{style=&quot;table-layout:auto&quot;}
-
-**Anfrage**
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/workorder \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Antwort**
-
-Eine erfolgreiche Antwort gibt die Details aller Löschvorgänge zurück, einschließlich ihres aktuellen Status. Die folgende Beispielantwort wurde aus Platzgründen gekürzt.
-
-```json
-{
-  "results": [
-    {
-      "workorderId": "4fe4be4f-47f3-477a-927e-f908452513f6",
-      "orgId": "{ORG_ID}",
-      "batchId": "e62cd6b6-ce3e-49e0-9221-ba1f286a851c",
-      "bundleOrdinal": 1,
-      "payloadByteSize": 164,
-      "operationCount": 1,
-      "createdAt": 1650929265295,
-      "responseMessage": "received",
-      "status": "received",
-      "createdBy": "{USER_ID}"
-    },
-    {
-      "workorderId": "e4a662e8-a5f3-497d-8d6a-d26970d8732b",
-      "orgId": "{ORG_ID}",
-      "batchId": "74fe4e38-ed42-4ca5-8bee-88bdc03ae786",
-      "bundleOrdinal": 1,
-      "payloadByteSize": 164,
-      "operationCount": 1,
-      "createdAt": 1650931057899,
-      "responseMessage": "received",
-      "status": "received",
-      "createdBy": "{USER_ID}"
-    }
-  ],
-  "total": 200,
-  "count": 50,
-  "_links": {
-    "next": {
-      "href": "https://platform.adobe.io/workorder?page=1&limit=50",
-      "templated": false
-    },
-    "page": {
-      "href": "https://platform.adobe.io/workorder?limit={limit}&page={page}",
-      "templated": true
-    }
-  }
-}
-```
-
-| Eigenschaft | Beschreibung |
-| --- | --- |
-| `results` | Enthält die Liste der Löschaufträge und deren Details. Weitere Informationen zu den Eigenschaften eines Löschauftrags finden Sie in der Beispielantwort im Abschnitt zur [Suche eines Löschauftrags](#lookup). |
-| `total` | Die Gesamtzahl der gefundenen Löschaufträge basierend auf den aktuellen Filtern. |
-| `count` | Die Gesamtzahl der Löschaufträge, die auf jeder Seite der Antwort gefunden wurden. |
-| `_links` | Enthält Paginierungsinformationen, mit denen Sie die restliche Antwort untersuchen können:<ul><li>`next`: enthält eine URL für die nächste Seite in der Antwort.</li><li>`page`: enthält eine URL-Vorlage für den Zugriff auf eine weitere Seite in der Antwort oder zur Anpassung der Anzahl der auf jeder Seite zurückgegebenen Elemente.</li></ul> |
-
-{style=&quot;table-layout:auto&quot;}
-
-## Abrufen des Status einer Identitätslöschung (#lookup)
-
-Nach dem Senden einer Anfrage zum [Löschen einer Identität](#delete-identities) können Sie den Status mit einer GET-Anfrage überprüfen.
+Nachher [Erstellen einer Benutzerlöschanfrage](#delete-consumers)können Sie den Status mit einer GET-Anfrage überprüfen.
 
 **API-Format**
 
@@ -208,7 +127,7 @@ GET /workorder/{WORK_ORDER_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{WORK_ORDER_ID}` | Die `workorderId` der Identitätslöschung, nach der Sie suchen. |
+| `{WORK_ORDER_ID}` | Die `workorderId` des Verbrauchers löschen, den Sie nachschlagen. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -216,7 +135,7 @@ GET /workorder/{WORK_ORDER_ID}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/workorder/ID6c28e2d2d2b54079aadf7be94568f6d3 \
+  https://platform.adobe.io/data/core/hygiene/workorder/BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -229,28 +148,136 @@ Eine erfolgreiche Antwort gibt die Details des Löschvorgangs zurück, einschlie
 
 ```json
 {
-  "workorderId": "4fe4be4f-47f3-477a-927e-f908452513f6",
+  "workorderId": "a15345b8-a2d6-4d6f-b33c-5b593e86439a",
   "orgId": "{ORG_ID}",
-  "batchId": "e62cd6b6-ce3e-49e0-9221-ba1f286a851c",
-  "bundleOrdinal": 1,
-  "payloadByteSize": 164,
-  "operationCount": 1,
-  "createdAt": 1650929265295,
-  "responseMessage": "received",
+  "bundleId": "BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd",
+  "action": "identity-delete",
+  "createdAt": "2022-07-21T18:05:28.316029Z",
+  "updatedAt": "2022-07-21T17:59:43.217801Z",
   "status": "received",
-  "createdBy": "{USER_ID}"
+  "createdBy": "{USER_ID}",
+  "datasetId": "c48b51623ec641a2949d339bad69cb15",
+  "displayName": "Example Consumer Delete Request",
+  "description": "Cleanup identities required by Jira request 12345.",
+  "productStatusDetails": [
+    {
+        "productName": "Data Management",
+        "productStatus": "success",
+        "createdAt": "2022-08-08T16:51:31.535872Z"
+    },
+    {
+        "productName": "Identity Service",
+        "productStatus": "success",
+        "createdAt": "2022-08-08T16:43:46.331150Z"
+    },
+    {
+        "productName": "Profile Service",
+        "productStatus": "waiting",
+        "createdAt": "2022-08-08T16:37:13.443481Z"
+    }
+  ]
 }
 ```
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `workorderId` | Die ID des Löschauftrags. Diese kann verwendet werden, um den Status des Löschvorgangs später anzuzeigen. |
-| `orgId` | Die Kennung Ihres Unternehmens. |
-| `batchId` | Die Kennung des Batches, mit dem dieser Löschauftrag verknüpft ist. Sie wird zur Fehlerbehebung verwendet. Mehrere Löschaufträge werden zu einem Batch zusammengefasst, der von nachgelagerten Services verarbeitet wird. |
-| `bundleOrdinal` | Die Reihenfolge, in der dieser Löschauftrag empfangen wurde, als er in einem Batch zur nachgelagerten Verarbeitung zusammengefasst wurde. Dient zur Fehlerbehebung. |
-| `payloadByteSize` | Die Größe (gemessen in Bytes) der Liste mit Identitäten, die in der Anfrage-Payload bereitgestellt wurden, durch die dieser Löschauftrag erstellt wurde. |
-| `operationCount` | Die Anzahl der Identitäten, für die dieser Löschauftrag gilt. |
+| `orgId` | Ihre Organisations-ID. |
+| `bundleId` | Die Kennung des Bundles, mit dem diese Löschreihenfolge verknüpft ist und das zum Debugging verwendet wird. Mehrere Löschaufträge werden gebündelt, um von nachgelagerten Diensten verarbeitet zu werden. |
+| `action` | Die Aktion, die von der Arbeitsreihenfolge ausgeführt wird. Für &quot;consumer delete&quot;lautet der Wert `identity-delete`. |
 | `createdAt` | Ein Zeitstempel, der angibt, wann der Löschauftrag erstellt wurde. |
-| `responseMessage` | Die jüngste vom System zurückgegebene Antwort. Tritt bei der Verarbeitung ein Fehler auf, ist dieser Wert eine JSON-Zeichenfolge mit detaillierten Fehlerinformationen, die Ihnen dabei helfen, mögliche Fehler zu verstehen. |
+| `updatedAt` | Ein Zeitstempel, der angibt, wann die Löschreihenfolge zuletzt aktualisiert wurde. |
 | `status` | Der aktuelle Status des Löschauftrags. |
 | `createdBy` | Der Benutzer, der den Löschauftrag erstellt hat. |
+| `datasetId` | Die ID des Datensatzes, der der Anfrage unterliegt. Wenn die Anforderung für alle Datensätze gilt, wird der Wert auf `ALL`. |
+| `productStatusDetails` | Ein Array, das den aktuellen Status der nachgelagerten Prozesse im Zusammenhang mit der Anfrage auflistet. Jedes Array-Objekt enthält die folgenden Eigenschaften:<ul><li>`productName`: Der Name des nachgelagerten Dienstes.</li><li>`productStatus`: Der aktuelle Verarbeitungsstatus der Anfrage vom nachgelagerten Dienst.</li><li>`createdAt`: Ein Zeitstempel, der angibt, wann der letzte Status vom Dienst veröffentlicht wurde.</li></ul> |
+
+## Aktualisieren von Verbraucher-Löschanfragen
+
+Sie können die `displayName` und `description` für einen Verbraucher löschen, indem er eine PUT-Anfrage stellt.
+
+**API-Format**
+
+```http
+PUT /workorder{WORK_ORDER_ID}
+```
+
+| Parameter | Beschreibung |
+| --- | --- |
+| `{WORK_ORDER_ID}` | Die `workorderId` des Verbrauchers löschen, den Sie nachschlagen. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Anfrage**
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/hygiene/workorder/BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "displayName" : "Update - displayName",
+        "description" : "Update - description"
+      }'
+```
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `displayName` | Ein aktualisierter Anzeigename für die Löschanfrage des Verbrauchers. |
+| `description` | Eine aktualisierte Beschreibung für die Löschanfrage des Verbrauchers. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt die Details des vom Verbraucher gelöschten Assets zurück.
+
+```json
+{
+  "workorderId": "a15345b8-a2d6-4d6f-b33c-5b593e86439a",
+  "orgId": "{ORG_ID}",
+  "bundleId": "BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd",
+  "action": "identity-delete",
+  "createdAt": "2022-07-21T18:05:28.316029Z",
+  "updatedAt": "2022-07-21T17:59:43.217801Z",
+  "status": "received",
+  "createdBy": "{USER_ID}",
+  "datasetId": "c48b51623ec641a2949d339bad69cb15",
+  "displayName" : "Update - displayName",
+  "description" : "Update - description",
+  "productStatusDetails": [
+    {
+        "productName": "Data Management",
+        "productStatus": "success",
+        "createdAt": "2022-08-08T16:51:31.535872Z"
+    },
+    {
+        "productName": "Identity Service",
+        "productStatus": "success",
+        "createdAt": "2022-08-08T16:43:46.331150Z"
+    },
+    {
+        "productName": "Profile Service",
+        "productStatus": "waiting",
+        "createdAt": "2022-08-08T16:37:13.443481Z"
+    }
+  ]
+}
+```
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `workorderId` | Die ID des Löschauftrags. Diese kann verwendet werden, um den Status des Löschvorgangs später anzuzeigen. |
+| `orgId` | Ihre Organisations-ID. |
+| `bundleId` | Die Kennung des Bundles, mit dem diese Löschreihenfolge verknüpft ist und das zum Debugging verwendet wird. Mehrere Löschaufträge werden gebündelt, um von nachgelagerten Diensten verarbeitet zu werden. |
+| `action` | Die Aktion, die von der Arbeitsreihenfolge ausgeführt wird. Für &quot;consumer delete&quot;lautet der Wert `identity-delete`. |
+| `createdAt` | Ein Zeitstempel, der angibt, wann der Löschauftrag erstellt wurde. |
+| `updatedAt` | Ein Zeitstempel, der angibt, wann die Löschreihenfolge zuletzt aktualisiert wurde. |
+| `status` | Der aktuelle Status des Löschauftrags. |
+| `createdBy` | Der Benutzer, der den Löschauftrag erstellt hat. |
+| `datasetId` | Die ID des Datensatzes, der der Anfrage unterliegt. Wenn die Anforderung für alle Datensätze gilt, wird der Wert auf `ALL`. |
+| `productStatusDetails` | Ein Array, das den aktuellen Status der nachgelagerten Prozesse im Zusammenhang mit der Anfrage auflistet. Jedes Array-Objekt enthält die folgenden Eigenschaften:<ul><li>`productName`: Der Name des nachgelagerten Dienstes.</li><li>`productStatus`: Der aktuelle Verarbeitungsstatus der Anfrage vom nachgelagerten Dienst.</li><li>`createdAt`: Ein Zeitstempel, der angibt, wann der letzte Status vom Dienst veröffentlicht wurde.</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
