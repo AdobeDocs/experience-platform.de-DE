@@ -4,10 +4,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 feature: Sources
-source-git-commit: 47a9ce5211d3dabe427ad1e545dc12181a84b644
+source-git-commit: ae6ec330ce62024a0eccec0dbc5c29e9a4645de2
 workflow-type: tm+mt
-source-wordcount: '831'
-ht-degree: 86%
+source-wordcount: '837'
+ht-degree: 85%
 
 ---
 
@@ -191,6 +191,7 @@ ht-degree: 86%
       - [Erfassen von Protokolldaten](tutorials/api/collect/protocols.md)
       - [Erfassen von Streaming-Daten](tutorials/api/collect/streaming.md)
    - [On-Demand-Erfassung](tutorials/api/on-demand-ingestion.md)
+   - [Daten auf Quellebene filtern](tutorials/api/filter.md)
    - [Überwachen von Datenflüssen](tutorials/api/monitor.md)
    - [Aktualisieren von Konten](tutorials/api/update.md)
    - [Aktualisieren von Datenflüssen](tutorials/api/update-dataflows.md)
