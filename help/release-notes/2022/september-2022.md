@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform - Versionshinweise - September 2022
 description: Die Versionshinweise für Adobe Experience Platform vom September 2022.
-source-git-commit: 3d7a04c0ec6cf6a9bed90c9c22db2e8b56bfa01f
+source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
 workflow-type: tm+mt
-source-wordcount: '1827'
-ht-degree: 36%
+source-wordcount: '2326'
+ht-degree: 33%
 
 ---
 
@@ -14,6 +14,7 @@ ht-degree: 36%
 
 Neue Funktionen in Adobe Experience Platform:
 
+- [Attributbasierte Zugriffssteuerung](#abac)
 - [Datenhygiene](#data-hygiene)
 - [[!UICONTROL Datenschutzkonsole]](#privacy-console)
 
@@ -25,6 +26,23 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Identity Service](#identity-service)
 - [Quellen](#sources)
+
+## Attributbasierte Zugriffssteuerung {#abac}
+
+>[!IMPORTANT]
+>
+>Die attributbasierte Zugriffskontrolle wird ab Oktober 2022 aktiviert. Wenn Sie ein früherer Anwender sein möchten, wenden Sie sich an Ihren Kundenbetreuer bei der Adobe.
+
+Die attributbasierte Zugriffskontrolle ist eine Funktion von Adobe Experience Platform, die datenschutzbewussten Marken größere Flexibilität bei der Verwaltung des Benutzerzugriffs gibt. Einzelne Objekte wie Schemafelder und Segmente können Benutzerrollen zugewiesen werden. Mit dieser Funktion können Sie bestimmten Platform-Benutzern in Ihrer Organisation Zugriff auf einzelne Objekte gewähren oder sperren.
+
+Mithilfe der attributbasierten Zugriffskontrolle können Administratoren Ihres Unternehmens den Zugriff der Benutzer auf personenbezogene Daten (EPPD), personenbezogene Daten (PII) und andere benutzerdefinierte Datentypen für alle Platform-Workflows und -Ressourcen steuern. Administrierende können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Attributbasierte Zugriffssteuerung | Mit der attributbasierten Zugriffskontrolle können Sie Experience-Datenmodell (XDM)-Schemafelder und -Segmente mit Bezeichnungen versehen, die Organisations- oder Datennutzungsbereiche definieren. Parallel dazu können Administratoren die Benutzeroberfläche zur Verwaltung von Benutzern und Rollen verwenden, um Zugriffsrichtlinien zu definieren, die XDM-Schemafelder und -Segmente abdecken, um den Zugriff, der Benutzern oder Benutzergruppen (interne, externe oder Drittanbieter-Benutzer) gewährt wird, besser zu verwalten. Weitere Informationen finden Sie in der [Übersicht über die attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md). |
+| Berechtigungen | Berechtigungen sind der Bereich von Experience Cloud, in dem Administrierende Benutzerrollen und Zugriffsrichtlinien definieren können, um Zugriffsberechtigungen für Funktionen und Objekte in einem Produktprogramm zu verwalten. Über Berechtigungen können Sie Rollen erstellen und verwalten, die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen und Richtlinien erstellen, um Beschriftungen zu nutzen und zu definieren, welche Benutzerrollen Zugriff auf bestimmte Platform-Ressourcen haben. Mit Berechtigungen können Sie auch die Bezeichnungen, Sandboxes und Benutzer*innen verwalten, die einer bestimmten Rolle zugeordnet sind. Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche für Berechtigungen](../../access-control/abac/ui/browse.md). |
+
+Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter [Attributbasierte Zugriffssteuerung – Übersicht](../../access-control/abac/overview.md). Eine umfassende Anleitung zum attributbasierten Zugriffssteuerungs-Workflow finden Sie im Abschnitt [Handbuch zur attributbasierten Zugriffskontrolle - End-to-End](../../access-control/abac/end-to-end-guide.md).
 
 ## Datenhygiene {#data-hygiene}
 
@@ -172,5 +190,9 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 | Funktion | Beschreibung |
 | --- | --- |
 | Auswirkungen der Population des Audience Manager-Segments auf das Echtzeit-Kundenprofil | Die Erfassung umfangreicher Audience Manager-Segmentpopulationen hat einen direkten Einfluss auf Ihre Gesamtprofilanzahl, wenn Sie zum ersten Mal ein Audience Manager-Segment mit der Audience Manager-Quelle an Platform senden. Das bedeutet, dass die Auswahl aller Segmente potenziell zu einer Profilanzahl führen kann, die über Ihrer Lizenznutzungsberechtigung liegt. Weitere Informationen finden Sie im Abschnitt [Übersicht über die Audience Manager-Quelle](../../sources/connectors/adobe-applications/audience-manager.md). Informationen zur Verwendung Ihrer Lizenz finden Sie in der Dokumentation unter [Verwenden des Dashboards zur Lizenznutzung](../../dashboards/guides/license-usage.md). |
+| Unterstützung für Adobe Campaign Managed Cloud Service | Verwenden Sie die Adobe Campaign Managed Cloud Service-Quelle, um Ihre Adobe Campaign v8.4-Versand- und Trackinglog-Daten in die Experience Platform zu übertragen. Lesen Sie das Handbuch unter [Erstellen einer Adobe Campaign Managed Cloud Service-Quellverbindung in der Benutzeroberfläche](../../sources/tutorials/ui/create/adobe-applications/campaign.md) für weitere Informationen. |
+| API-Unterstützung für On-Demand-Erfassung für Batch-Quellen | Verwenden Sie die On-Demand-Erfassung, um Ad-hoc-Fluss-Läufe für einen bestimmten Datenfluss mit dem [!DNL Flow Service] API. Die erstellten Flussläufe müssen auf eine einmalige Erfassung festgelegt werden. Weitere Informationen finden Sie im Handbuch unter [Erstellen eines Flusslaufs für die On-Demand-Erfassung mithilfe der API](../../sources/tutorials/api/on-demand-ingestion.md) für weitere Informationen. |
+| API-Unterstützung für Wiederholung fehlgeschlagener Datenflüsse für Batch-Quellen | Verwenden Sie die `re-trigger` -Vorgang verwenden, um Ihren fehlgeschlagenen Datenfluss über die API erneut auszuführen. Lesen Sie das Handbuch unter [Wiederholen fehlgeschlagener Datenfluss-Ausführungen mit der API](../../sources/tutorials/api/retry-flows.md) für weitere Informationen. |
+| API-Unterstützung zum Filtern von Daten auf Zeilenebene für die [!DNL Google BigQuery] und [!DNL Snowflake] sources | Verwenden Sie logische und Vergleichsoperatoren, um Daten auf Zeilenebene für die [!DNL Google BigQuery] und [!DNL Snowflake] Quellen. Weitere Informationen finden Sie im Handbuch zum Filtern von Daten für eine Quelle mithilfe der API . |
 
 Weitere Informationen zu Quellen finden Sie im Abschnitt [Quellen - Übersicht](../../sources/home.md).
