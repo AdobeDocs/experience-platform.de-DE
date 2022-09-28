@@ -5,10 +5,10 @@ title: Handbuch zur Benutzeroberfläche des Segmentierungsdienstes
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche zum Erstellen und Verwalten von Segmentdefinitionen.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 356d76d61293b9ff0887afbf30852159af8d72ad
+source-git-commit: f71d49b576059e687c337cbacd6dd3d525e97834
 workflow-type: tm+mt
-source-wordcount: '1775'
-ht-degree: 19%
+source-wordcount: '2375'
+ht-degree: 15%
 
 ---
 
@@ -27,7 +27,7 @@ Die Arbeit mit Segmentdefinitionen erfordert ein Verständnis der verschiedenen 
 
 Außerdem sollten Sie zwei Schlüsselbegriffe kennen, die in diesem Dokument verwendet werden, und den Unterschied zwischen ihnen verstehen:
 - **Segmentdefinition**: Der Regelsatz, der zur Beschreibung wichtiger Merkmale oder Verhaltensweisen einer Zielgruppe verwendet wird.
-- **Audience**: Der resultierende Satz von Profilen, die den Kriterien einer Segmentdefinition entsprechen.
+- **Zielgruppe**: Der resultierende Satz von Profilen, die den Kriterien einer Segmentdefinition entsprechen. Diese kann entweder über Adobe Experience Platform (Platform-generierte Zielgruppe) oder aus einer externen Quelle (extern generierte Zielgruppe) erstellt werden.
 
 ## Übersicht
 
@@ -62,7 +62,7 @@ Weitere Informationen finden Sie unter [Segment-Dashboard-Handbuch](../../dashbo
 >title="Alle Segmente zur Planung hinzufügen"
 >abstract="Aktivieren Sie diese Option, um alle Batch-Auswertungssegmente in das tägliche geplante Update um 15:30 Uhr UTC einzuschließen. Deaktivieren Sie alle Segmente aus der geplanten Aktualisierung."
 
-Wählen Sie die **[!UICONTROL Durchsuchen]** um eine Liste aller Segmentdefinitionen für Ihre IMS-Organisation anzuzeigen.
+Wählen Sie die **[!UICONTROL Durchsuchen]** um eine Liste aller Segmentdefinitionen für Ihre Organisation anzuzeigen.
 
 ![](../images/ui/overview/segment-browse-all.png)
 
@@ -92,7 +92,7 @@ Auswählen **[!UICONTROL Segment erstellen]** gelangen Sie zum Segment Builder. 
 
 ![](../images/ui/overview/segment-browse-top.png)
 
-Die rechte Seitenleiste enthält Informationen zu allen Segmenten innerhalb der IMS-Organisation, listet die Gesamtanzahl der Segmente, das letzte Auswertungsdatum, das nächste Auswertungsdatum sowie eine Aufschlüsselung der Segmente nach Bewertungsmethode auf.
+Die rechte Seitenleiste enthält Informationen zu allen Segmenten in der Organisation, listet die Gesamtzahl der Segmente, das letzte Auswertungsdatum, das nächste Auswertungsdatum sowie eine Aufschlüsselung der Segmente nach Bewertungsmethode auf.
 
 ![](../images/ui/overview/segment-browse-segment-info.png)
 
@@ -112,7 +112,7 @@ Die Seite mit den Segmentdetails wird angezeigt. Oben finden Sie eine Zusammenfa
 
 ![](../images/ui/overview/segment-details-summary.png)
 
-### Segmentzusammenfassung
+### Segmentzusammenfassung {#segment-summary}
 
 Die **[!UICONTROL Segmentzusammenfassung]** enthält Informationen wie die ID, den Namen, die Beschreibung und Details der Attribute.
 
@@ -191,6 +191,80 @@ Die Aktivierung Ihrer Segmentdefinitionen für eine geplante Auswertung kann üb
 Zeitpläne können derzeit nur mit der API erstellt werden. Ausführliche Anweisungen zum Erstellen, Bearbeiten und Verwenden von Zeitplänen mithilfe der API finden Sie im Tutorial zum Auswerten und Aufrufen von Segmentergebnissen, insbesondere im Abschnitt zur [geplanten Auswertung mithilfe der API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
 ![](../images/ui/overview/segment-browse-scheduled.png)
+
+## Audiences {#audiences}
+
+>[!IMPORTANT]
+>
+>Die Funktion für Zielgruppen befindet sich derzeit in einer eingeschränkten Beta-Phase und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
+
+Wählen Sie die **[!UICONTROL Zielgruppen]** um eine Liste aller Zielgruppen für Ihre Organisation anzuzeigen.
+
+![Eine Liste von Zielgruppen für Ihre Organisation.](../images/ui/overview/list-audiences.png)
+
+Standardmäßig enthält diese Ansicht Informationen zu den Zielgruppen, einschließlich Name, Profilanzahl, Ursprung, Erstellungsdatum und Datum der letzten Änderung.
+
+Sie können die ![Tabelle anpassen](../images/ui/overview/customize-table.png) , um zu ändern, welche Felder angezeigt werden.
+
+![Die Schaltfläche Tabelle anpassen ist hervorgehoben. Durch Auswahl dieser Schaltfläche können Sie die Felder anpassen, die auf der Seite zum Durchsuchen von Zielgruppen angezeigt werden.](../images/ui/overview/select-customize-table.png)
+
+Es wird ein Popover mit allen Feldern angezeigt, die in der Tabelle angezeigt werden können.
+
+![Die Attribute, die für den Bereich Zielgruppen durchsuchen angezeigt werden können.](../images/ui/overview/customize-table-attributes.png)
+
+| Feld | Beschreibung |
+| ----- | ----------- | 
+| [!UICONTROL Name] | Der Name der Zielgruppe. |
+| [!UICONTROL Anzahl der Profile] | Die Gesamtzahl der Profile, die für die Zielgruppe qualifiziert sind. |
+| [!UICONTROL Origin] | Der Ursprung der Zielgruppe. Wenn diese Zielgruppe Platform-generiert wurde, hat sie eine Quelle von Segmentation Service. |
+| [!UICONTROL Lebenszyklus-Status] | Der Status der Zielgruppe. Mögliche Werte für dieses Feld sind `Draft`, `Published`und `Archived`. |
+| [!UICONTROL Aktualisierungshäufigkeit] | Ein Wert, der angibt, wie oft die Daten der Zielgruppe aktualisiert werden. Mögliche Werte für dieses Feld sind `On Demand`, `Scheduled`und `Continuous`. |
+| [!UICONTROL Zuletzt aktualisiert von] | Der Name der Person, die die Zielgruppe zuletzt aktualisiert hat. |
+| [!UICONTROL Erstellt] | Datum und Uhrzeit der Erstellung der Audience. |
+| [!UICONTROL Zuletzt aktualisiert] | Datum und Uhrzeit der letzten Erstellung der Audience. |
+| [!UICONTROL Zugriffsbeschriftungen] | Die Zugriffsbeschriftungen für die Zielgruppe. Mit Zugriffsbeschriftungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Diese Beschriftungen können jederzeit angewendet werden, was Ihnen eine flexible Handhabung der Daten ermöglicht. Weitere Informationen zu Zugriffsbeschriftungen finden Sie in der Dokumentation unter [Verwalten von Bezeichnungen](../../access-control/abac/ui/labels.md). |
+
+Sie können **[!UICONTROL Zielgruppe erstellen]** , um eine Audience zu erstellen.
+
+![Die Schaltfläche Audience erstellen ist hervorgehoben und zeigt an, wo Sie eine Audience erstellen können.](../images/ui/overview/create-audience.png)
+
+Es wird ein Popup angezeigt, in dem Sie auswählen können, ob Sie eine Zielgruppe erstellen oder Regeln erstellen möchten.
+
+![Ein Popover, das die beiden Arten von Zielgruppen anzeigt, die Sie erstellen können.](../images/ui/overview/create-audience-type.png)
+
+Auswählen **[!UICONTROL Erstellen von Zielgruppen]** bringt Sie zum Audience Builder. Weitere Informationen zum Erstellen von Zielgruppen finden Sie in der [Audience Builder-Handbuch](./audience-builder.md).
+
+Auswählen **[!UICONTROL Build-Regel]** führt Sie zum Segment Builder. Weitere Informationen zum Erstellen von Segmenten finden Sie im Abschnitt [Segment Builder-Handbuch](./segment-builder.md)
+
+## Zielgruppendetails {#audience-details}
+
+Um weitere Details zu einer bestimmten Zielgruppe anzuzeigen, wählen Sie den Namen einer Zielgruppe im [!UICONTROL Zielgruppen] Registerkarte.
+
+Die Seite mit den Zielgruppendetails wird angezeigt. Diese Seite unterscheidet sich in den Details je nachdem, ob die Zielgruppe mit Adobe Experience Platform oder aus einer externen Quelle wie Audience Orchestration generiert wurde.
+
+### Plattformgenerierte Zielgruppe
+
+Weiterführende Informationen zu Platform-generierten Zielgruppen finden Sie im Abschnitt [Segmentzusammenfassungsabschnitt](#segment-summary).
+
+### Extern generierte Zielgruppe
+
+Oben auf der Seite mit den Zielgruppendetails finden Sie eine Zusammenfassung der Zielgruppe und Details zum Datensatz, in dem die Zielgruppe gespeichert ist.
+
+![Die bereitgestellten Details für eine extern generierte Zielgruppe.](../images/ui/overview/externally-generated-audience.png)
+
+Die **[!UICONTROL Zielgruppenzusammenfassung]** enthält Informationen wie die ID, den Namen, die Beschreibung und Details der Attribute.
+
+Die **[!UICONTROL Datensatzdetails]** enthält Informationen wie den Namen, die Beschreibung, den Tabellennamen, die Quelle und das Schema. Sie können **[!UICONTROL Datensatz anzeigen]** , um weitere Informationen zum Datensatz anzuzeigen.
+
+| Feld | Beschreibung |
+| ----- | ----------- |
+| [!UICONTROL Name] | Der Name des Datensatzes. |
+| [!UICONTROL Beschreibung] | Die Beschreibung des Datensatzes. |
+| [!UICONTROL Tabellenname] | Der Tabellenname des Datensatzes. |
+| [!UICONTROL Quelle] | Die Quelle des Datensatzes. Für extern generierte Zielgruppen wird dieser Wert **Schema**. |
+| [!UICONTROL Schema] | Der Typ des XDM-Schemas, dem der Datensatz entspricht. |
+
+Weitere Informationen zu Datensätzen finden Sie in der [Datensatz-Übersicht](../../catalog/datasets/overview.md).
 
 ## Streaming-Segmentierung  {#streaming-segmentation}
 
