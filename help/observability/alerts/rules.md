@@ -4,10 +4,10 @@ title: Standardmäßige Warnhinweisregeln
 description: In diesem Dokument werden die von Experience Platform bereitgestellten vordefinierten Warnhinweisregeln behandelt.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: c0559fc55531e2b0c2938294742397b43e9e0445
+source-git-commit: df79ecac33314cc73ba8ad2508516be706bac767
 workflow-type: tm+mt
-source-wordcount: '811'
-ht-degree: 92%
+source-wordcount: '843'
+ht-degree: 90%
 
 ---
 
@@ -27,8 +27,15 @@ Die folgenden Warnhinweisregeln sind spezifisch für [Datenerfassung](../../inge
 | Informationen zur Ausführung des Quellflusses | Erfolgreiche Ausführung des Quellflusses | Dieser Warnhinweis wird ausgelöst, wenn Daten erfolgreich aus einer Quellverbindung aufgenommen werden. |
 | Verzögerungen, Ausfälle und Fehler bei der Ausführung des Quellflusses | Fehler beim Ausführen des Quellflusses | Dieser Warnhinweis wird ausgelöst, wenn bei der Aufnahme von Daten aus einer Quellverbindung ein Fehler auftritt. |
 | Verzögerungen, Ausfälle und Fehler bei der Ausführung des Quellflusses | Aufnahmeverzögerung | Dieser Warnhinweis wird ausgelöst, wenn die Verarbeitung eines Batch-Erfassungsablaufs länger als 150 Minuten dauert. |
-| Verzögerungen, Ausfälle und Fehler bei der Ausführung des Quellflusses | Fehlende Aufnahme | Dieser Warnhinweis sendet Ihnen eine Nachricht, wenn die Aufnahme um mehr als sieben Stunden verzögert ist und keine Daten an Platform erfasst werden. |
 | Verzögerungen, Ausfälle und Fehler bei der Ausführung des Quellflusses | Aufnahmefehler | Dieser Warnhinweis wird Trigger, wenn das Verhältnis der fehlgeschlagenen Datensätze zu allen Datensätzen einen Schwellenwert von 0,5 % überschreitet. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Wenn Sie zuvor den folgenden Warnhinweistyp abonniert haben, erhalten Sie keine Warnhinweise mehr, da dieser Warnhinweis veraltet ist:
+
+| E/A-Ereignis-Abonnement | Warnhinweisregel | Beschreibung |
+| --- | --- | --- |
+| Verzögerungen, Ausfälle und Fehler bei der Ausführung des Quellflusses | Fehlende Aufnahme | Dieser Warnhinweis sendet Ihnen eine Nachricht, wenn die Aufnahme um mehr als sieben Stunden verzögert ist und keine Daten an Platform erfasst werden. |
 
 {style=&quot;table-layout:auto&quot;}
 

@@ -3,9 +3,9 @@ keywords: Experience Platform; Homepage; beliebte Themen Warnungen
 description: Sie können Warnhinweise abonnieren, wenn Sie einen Datenfluss erstellen, um Warnhinweise zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten.
 title: In-Context-Warnhinweise in der Benutzeroberfläche abonnieren
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: 2acb58d21952699c60471cb4f4347af89621f045
+source-git-commit: d450dc7b0dc0303c9d33c3e8e003659e3140cf5b
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '845'
 ht-degree: 14%
 
 ---
@@ -49,7 +49,7 @@ Die verfügbaren Warnhinweise für Datenflüsse zu Quellen sind:
 | Start des Datenflusses für Quellen | Dieser Warnhinweis sendet Ihnen eine Nachricht, wenn Ihr Quelldatensatz gestartet wurde. |
 | Quellen-Datenfluss erfolgreich ausgeführt | Dieser Warnhinweis sendet Ihnen eine Nachricht, wenn Daten aus Ihrer Quelle erfolgreich in Platform erfasst wurden. |
 | Fehler beim Ausführen des Datenflusses für Quellen | Dieser Warnhinweis sendet Ihnen eine Nachricht, wenn in Ihrem Datenfluss ein Fehler auftritt. |
-| Datenfluss-unzureichende Aufnahme von Quellen | Dieser Warnhinweis sendet Ihnen eine Nachricht, wenn die Aufnahme um mehr als sieben Stunden verzögert ist und keine Daten an Platform erfasst werden. |
+| ~~Datenfluss-unzureichende Aufnahme von Quellen~~ | ~~Dieser Warnhinweis sendet Ihnen eine Nachricht, wenn die Aufnahme um mehr als sieben Stunden verzögert ist und keine Daten an Platform erfasst werden.~~ <br>**Hinweis:** Sie erhalten keine Warnhinweise mehr, da dieser Warnhinweis nicht mehr unterstützt wird. |
 
 Wählen Sie die Warnhinweise aus, die Sie abonnieren möchten, und wählen Sie dann **[!UICONTROL Nächste]** , um Ihren Datenfluss zu überprüfen und abzuschließen.
 
