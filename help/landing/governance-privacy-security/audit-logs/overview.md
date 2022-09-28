@@ -2,10 +2,10 @@
 title: Übersicht über Auditprotokolle
 description: Erfahren Sie, wie Sie mithilfe von Audit-Protokollen sehen können, wer welche Aktionen in Adobe Experience Platform durchgeführt hat.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 6c0e001419dc78d4ff87bebd0604c7add07b635f
+source-git-commit: fdc61c920ee9ae2c66344e781334844d38b44806
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '944'
+ht-degree: 16%
 
 ---
 
@@ -41,6 +41,7 @@ In der folgenden Tabelle sind die Aktionen aufgeführt, für die Ressourcen in A
 | [Berechnetes Attribut](../../../profile/computed-attributes/overview.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
 | [Customer AI-Instanz](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li></ul> |
 | [Datensatz](../../../catalog/datasets/overview.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li><li>Aktivieren für [Echtzeit-Kundenprofil](../../../profile/home.md)</li><li>Profil deaktivieren</li><li>Hinzufügen von Daten</li><li>Batch löschen</li></ul> |
+| [Datastream](../../../edge/datastreams/overview.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>[Zuordnung bearbeiten](../../../edge/datastreams/data-prep.md)</li></ul> |
 | [Datentypen](../../../xdm/schema/composition.md#data-type) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
 | [Ziel](../../../destinations/home.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>Datensatz aktivieren</li><li>Datensatz entfernen</li><li>Profil aktivieren</li><li>Profil löschen</li></ul> |
 | [Feldergruppe](../../../xdm/schema/composition.md#field-group) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
