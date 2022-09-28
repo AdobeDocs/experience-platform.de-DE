@@ -4,9 +4,9 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: 9336545ce77406ca8b1a04d9b9c0ce7752aa9ce5
+source-git-commit: 3a46eee98797da7b113f45624682377cc7ad05a3
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '945'
 ht-degree: 73%
 
 ---
@@ -173,9 +173,9 @@ ht-degree: 73%
    * Funktionen des Destination SDK {#functionality}
       * [Konfigurationsoptionen](./destination-sdk/configuration-options.md)
       * [Konfiguration des Streaming-Ziels](./destination-sdk/destination-configuration.md)
-      * [(Beta) Konfiguration dateibasierter Ziele](./destination-sdk/file-based-destination-configuration.md)
+      * [Dateibasierte Zielkonfiguration](./destination-sdk/file-based-destination-configuration.md)
       * [Server- und Vorlagenspezifikationen für Streaming-Ziele](./destination-sdk/server-and-template-configuration.md)
-      * [(Beta) Dateibasierte Ziel-Server- und Dateispezifikationen](./destination-sdk/server-and-file-configuration.md)
+      * [Dateibasierte Ziel-Server- und Dateispezifikationen](./destination-sdk/server-and-file-configuration.md)
       * [Nachrichtenformat](./destination-sdk/message-format.md)
       * [Verwaltung von Zielgruppen-Metadaten](./destination-sdk/audience-metadata-management.md)
       * Authentifizierung {#authentication}
@@ -205,15 +205,16 @@ ht-degree: 73%
             * [Validieren von vorlagenbasierten Kundenfeldern](./destination-sdk/file-based-render-template-api.md)
    * Handbücher {#guides}
       * [Verwenden des Destination SDK zum Konfigurieren eines Streaming-Ziels](./destination-sdk/configure-destination-instructions.md)
-      * [(Beta) Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels](./destination-sdk/configure-file-based-destination-instructions.md)
+      * [Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Übermitteln eines im Destination SDK erstellten Ziels zur Überprüfung](./destination-sdk/submit-destination.md)
       * Dateibasierte Ziele konfigurieren {#configure-file-based-destinations}
-         * [(Beta) Konfigurieren eines Amazon S3-Ziels mit vordefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
-         * [(Beta) Konfigurieren eines Amazon S3-Ziels mit benutzerdefinierten Dateinamen- und Formatierungsoptionen](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
-         * [(Beta) Konfigurieren eines Azure Blob Storage-Ziels mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
-         * [(Beta) Konfigurieren eines Azure Data Lake Storage-Ziels mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
-         * [(Beta) Konfigurieren eines Data Landing Zone (DLZ)-Ziels mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
-         * [(Beta) Konfigurieren eines SFTP-Ziels mit vordefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
+         * [Dateiformatierungsoptionen konfigurieren](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
+         * [Amazon S3-Ziel mit vordefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration konfigurieren](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
+         * [Amazon S3-Ziel mit benutzerdefinierten Dateinamen- und Formatierungsoptionen konfigurieren](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
+         * [Konfigurieren eines Azure Blob Storage-Ziels mit benutzerdefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
+         * [Konfigurieren eines Azure Data Lake Storage-Ziels mit benutzerdefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
+         * [Ein Data Landing Zone (DLZ)-Ziel mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration konfigurieren](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
+         * [Konfigurieren eines SFTP-Ziels mit vordefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
    * Referenz {#reference}
       * [Ratenbegrenzungs- und Wiederholungsrichtlinie für Streaming-Ziele](./destination-sdk/rate-limiting-retry-policy.md)
       * [Unterstützte Umwandlungsfunktionen](./destination-sdk/supported-functions.md)

@@ -1,15 +1,15 @@
 ---
 description: Erfahren Sie, wie Sie mit Destination SDK ein Azure Blob Storage-Ziel mit benutzerdefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration konfigurieren.
-title: (Beta) Konfigurieren Sie ein Azure Blob Storage-Ziel mit benutzerdefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration.
+title: Konfigurieren Sie ein Azure Blob Storage-Ziel mit benutzerdefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration.
 exl-id: effbd218-3a7c-4986-9fba-f5727a21e480
-source-git-commit: 6a666c9850a4a55bfa93a54111a597f690eb8431
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '766'
 ht-degree: 10%
 
 ---
 
-# (Beta) Konfigurieren eines [!DNL Azure Blob Storage] Ziel mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration
+# Konfigurieren Sie eine [!DNL Azure Blob Storage] Ziel mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration
 
 ## Übersicht {#overview}
 

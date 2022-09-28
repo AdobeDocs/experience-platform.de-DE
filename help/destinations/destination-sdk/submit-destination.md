@@ -2,10 +2,10 @@
 description: Auf dieser Seite finden Sie alle Informationen, die Sie zum Überprüfen eines mit Destination SDK erstellten produktiven Ziels übermitteln müssen.
 title: Zur Überprüfung eines in der Destination SDK erstellten produktisierten Ziels übermitteln
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 50f205a5ddd9ec264d7390911fef45dc595ca6a1
+source-git-commit: e68ae7d1cb87d078d9fce5a5df501cc6ce944403
 workflow-type: tm+mt
 source-wordcount: '683'
-ht-degree: 75%
+ht-degree: 65%
 
 ---
 
@@ -43,7 +43,7 @@ Detaillierte Informationen zu den einzelnen Elementen finden Sie in den folgende
 Geben Sie eine Beschreibung der Anwendungsfälle an, die Ihr Ziel für Experience Platform-Kunden löst. Ihre Beschreibungen können Anwendungsfällen von vorhandenen Partnern ähneln:
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Erstellen Sie Zielgruppen aus Ihren Kundenlisten, Personen, die Ihre Site besucht haben, oder Personen, die bereits mit Ihren Inhalten in Pinterest interagiert haben.
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX-APIs sind für Werbetreibende verfügbar, die bestimmte Zielgruppen ansprechen möchten, die von E-Mail-Adressen in Verizon Media (VMG) abgeleitet wurden. Sie können schnell ein neues Segment erstellen und mithilfe der Fast-Echtzeit-API von VMG an die gewünschten Zielgruppen senden.
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX-APIs sind für Advertiser verfügbar, die eine bestimmte Zielgruppen-Gruppe ansprechen möchten, die von E-Mail-Adressen in Verizon Media (VMG) abgeleitet wurde. Diese können schnell ein neues Segment erstellen und die gewünschte Zielgruppe mithilfe der API von VMGs nahezu in Echtzeit übertragen.
 
 ## Testergebnisse nach Verwendung der Test-Ziel-API
 
@@ -225,7 +225,7 @@ Geben Sie die ID der Veröffentlichungsanfrage für Ihr Ziel an. Weitere Informa
 
 Wenn Sie als unabhängiger Software-Anbieter (ISV) oder Systemintegrator (SI) eine [produktbezogene Integration](./overview.md#productized-custom-integrations) erstellen, verwenden Sie den [Selbstbedienungs-Dokumentationsprozess](./docs-framework/documentation-instructions.md), um eine Produktdokumentationsseite für Ihr Ziel zu erstellen. Stellen Sie als Teil des Übermittlungsprozesses die Pull-Anfrage (PR) für Ihre Zieldokumentation bereit.
 
-## Logo für Ihr Ziel
+## Logo für Ihr Ziel {#logo}
 
 Der Zielkatalog enthält ein Logo für jede Zielkarte. Fügen Sie in Ihrer E-Mail zur Übermittlung ein Bild mit dem Logo für Ihr Ziel ein.
 

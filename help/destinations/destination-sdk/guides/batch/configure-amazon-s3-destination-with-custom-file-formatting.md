@@ -1,15 +1,15 @@
 ---
 description: Erfahren Sie, wie Sie mit Destination SDK ein Amazon S3-Ziel mit benutzerdefinierten Dateinamen- und Formatierungsoptionen konfigurieren.
-title: (Beta) Konfigurieren Sie ein Amazon S3-Ziel mit benutzerdefinierten Dateinamen- und Formatierungsoptionen.
+title: Konfigurieren Sie ein Amazon S3-Ziel mit benutzerdefinierten Dateinamen- und Formatierungsoptionen.
 exl-id: eed73572-5050-44fa-ba16-90729c65495e
-source-git-commit: 6a666c9850a4a55bfa93a54111a597f690eb8431
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '758'
 ht-degree: 11%
 
 ---
 
-# (Beta) Konfigurieren eines Amazon S3-Ziels mit benutzerdefinierten Dateinamen- und Formatierungsoptionen
+# Amazon S3-Ziel mit benutzerdefinierten Dateinamen- und Formatierungsoptionen konfigurieren
 
 ## Übersicht {#overview}
 

@@ -2,9 +2,9 @@
 description: Auf dieser Seite wird beschrieben, wie Sie sich authentifizieren und Adobe Experience Platform Destination SDK verwenden. Sie enthält Anweisungen zum Abrufen der Anmeldeinformationen für die Adobe I/O-Authentifizierung, eines Sandbox-Namens und der Zugriffskontrolle für die Zielerstellung.
 title: Erste Schritte mit dem Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '612'
 ht-degree: 100%
 
 ---
@@ -78,7 +78,7 @@ Wenn Sie die Schritte in diesem Artikel befolgt haben, haben Sie Authentifizieru
 * Lesen Sie je nach Zieltyp die folgenden Konfigurationshandbücher:
 
    * [Verwenden des Destination SDK zum Konfigurieren eines Streaming-Ziels](./configure-destination-instructions.md)
-   * [(Beta) Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels](./configure-file-based-destination-instructions.md)
+   * [Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels](./configure-file-based-destination-instructions.md)
 
 * Informationen zu allen Vorgängen finden Sie im Abschnitt [Dokumentation zur Zielerstellungs-API](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
 * Verwenden Sie die [Postman-Sammlung der Zielerstellungs-API](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json), um Ihr Ziel mithilfe der Destination SDK-API-Endpunkte zu konfigurieren. Informationen zu den ersten Schritten mit Postman finden Sie unter [Schritte zum Importieren von Umgebungen und Sammlungen](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) und im [Videoleitfaden zum Erstellen der Postman-Umgebung](https://video.tv.adobe.com/v/28832).

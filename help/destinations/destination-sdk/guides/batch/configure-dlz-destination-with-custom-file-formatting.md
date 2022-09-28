@@ -1,15 +1,15 @@
 ---
 description: Erfahren Sie, wie Sie mit Destination SDK ein Data Landing Zone (DLZ)-Ziel mit benutzerdefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration konfigurieren können.
-title: (Beta) Konfigurieren Sie ein Data Landing Zone (DLZ)-Ziel mit benutzerdefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration.
+title: Konfigurieren Sie ein Data Landing Zone (DLZ)-Ziel mit benutzerdefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration.
 exl-id: 3a5c1188-c2b5-4e81-ae41-9fff797f08a6
-source-git-commit: a9eae6b798be40bfdc51a8523a0818f364c7cb76
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 10%
+source-wordcount: '763'
+ht-degree: 11%
 
 ---
 
-# (Beta) Konfigurieren Sie eine [!DNL Data Landing Zone (DLZ)] Ziel mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration
+# Konfigurieren Sie eine [!DNL Data Landing Zone (DLZ)] Ziel mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration
 
 ## Übersicht {#overview}
 

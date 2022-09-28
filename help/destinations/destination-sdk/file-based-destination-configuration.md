@@ -1,29 +1,27 @@
 ---
-description: Mit dieser Konfiguration können Sie grundlegende Informationen wie Zielname, Kategorie, Beschreibung, Logo und mehr angeben. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
-title: (Beta) Konfigurationsoptionen für dateibasierte Ziele für das Destination SDK
+description: Mit dieser Konfiguration können Sie wichtige Informationen für Ihr dateibasiertes Ziel angeben, z. B. Ihren Zielnamen, die Kategorie, eine Beschreibung und mehr. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
+title: Konfigurationsoptionen für dateibasierte Ziele für das Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: fe61b2ebe1a06e8909ef675cae088cb4e7d2b325
+source-git-commit: 1d6318e33be639237c2c8e6f1bf67e1702949c20
 workflow-type: tm+mt
-source-wordcount: '2389'
-ht-degree: 79%
+source-wordcount: '2664'
+ht-degree: 67%
 
 ---
 
-# (Beta) Konfiguration dateibasierter Ziele {#destination-configuration}
+# Dateibasierte Zielkonfiguration {#destination-configuration}
 
 ## Übersicht {#overview}
 
->[!IMPORTANT]
->
->Die Unterstützung für dateibasierte Ziele im Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern.
+Mit dieser Konfiguration können Sie wichtige Informationen für Ihr dateibasiertes Ziel angeben, z. B. Ihren Zielnamen, die Kategorie, eine Beschreibung und mehr. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können. Sie können diese Konfiguration auch verwenden, um Optionen anzuzeigen, die sich auf den Dateityp, das Dateiformat oder die Komprimierungseinstellungen der exportierten Dateien beziehen.
 
-Mit dieser Konfiguration können Sie wichtige Informationen für Ihr dateibasiertes Ziel angeben, z. B. Ihren Zielnamen, die Kategorie, eine Beschreibung und mehr. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
-
-Diese Konfiguration verbindet auch die anderen Konfigurationen, die für das Funktionieren Ihres Ziels erforderlich sind (Ziel-Server und Zielgruppen-Metadaten), mit dieser Konfiguration. Wie Sie die beiden Konfigurationen referenzieren können, erfahren Sie in einem [Abschnitt weiter unten](./destination-configuration.md#connecting-all-configurations).
+Diese Konfiguration verbindet auch die anderen Konfigurationen, die für das Funktionieren Ihres Ziels erforderlich sind (Ziel-Server und Zielgruppen-Metadaten), mit dieser Konfiguration. Wie Sie die beiden Konfigurationen referenzieren können, erfahren Sie in einem [Abschnitt weiter unten](./file-based-destination-configuration.md#connecting-all-configurations).
 
 Sie können die in diesem Dokument beschriebenen Funktionen mithilfe des `/authoring/destinations`-API-Endpunkts konfigurieren. Eine vollständige Liste der Vorgänge, die Sie mit dem Endpunkt durchführen können, finden Sie unter [API-Endpunktvorgänge für Ziele](./destination-configuration-api.md).
 
 ## Beispiel für eine Amazon S3-Zielkonfiguration {#batch-example-configuration}
+
+Nachfolgend finden Sie ein Beispiel für ein privates benutzerdefiniertes Amazon S3-Ziel, das über die `/destinations` Konfigurationsendpunkt.
 
 ```json
 {
@@ -368,9 +366,9 @@ Wenn Sie den Authentifizierungstyp SFTP mit SSH-Schlüssel konfigurieren, müsse
 
 Verwenden Sie diesen Abschnitt, um Benutzer aufzufordern, benutzerdefinierte Felder für Ihr Ziel auszufüllen, wenn sie in der Experience Platform-Benutzeroberfläche eine Verbindung zum Ziel herstellen.
 
-Im folgenden Beispiel: `customerDataFields` erfordert, dass Benutzer einen Namen für ihr Ziel eingeben und eine [!DNL Amazon S3] Behältername und Ordnerpfad sowie Komprimierungstyp, Dateiformat und verschiedene andere Dateiexportoptionen.
+Im folgenden Beispiel: `customerDataFields` erfordert, dass Benutzer einen Namen für ihr Ziel eingeben und eine [!DNL Amazon S3] Behältername und Ordnerpfad sowie Komprimierungstyp, Dateiformat und verschiedene andere Dateiformatierungsoptionen.
 
-Sie können in der Vorlage auf die Kundeneingaben aus den Kundendatenfeldern zugreifen und diese verwenden. Makro verwenden `{{customerData.name}}`. Wenn Sie beispielsweise Benutzer auffordern, ein Amazon S3-Bucket-Feld mit dem Namen einzugeben `bucket`, können Sie in der Vorlage darauf zugreifen, indem Sie das -Makro verwenden `{{customerData.bucket}}`. Ein Beispiel für die Verwendung eines Kundendatenfelds im [Zielserverkonfiguration](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example).
+Sie können in der Vorlage auf die Kundeneingaben aus den Kundendatenfeldern zugreifen und diese verwenden. Makro verwenden `{{customerData.exampleName}}`. Wenn Sie beispielsweise Benutzer auffordern, ein Amazon S3-Bucket-Feld mit dem Namen einzugeben `bucket`, können Sie in der Vorlage darauf zugreifen, indem Sie das -Makro verwenden `{{customerData.bucket}}`. Ein Beispiel für die Verwendung eines Kundendatenfelds im [Zielserverkonfiguration](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example).
 
 ```json
  "customerDataFields":[
@@ -558,6 +556,10 @@ Sie können in der Vorlage auf die Kundeneingaben aus den Kundendatenfeldern zug
       }
 ```
 
+>[!TIP]
+>
+>Alle im obigen Beispiel aufgeführten Dateiformatierungskonfigurationen werden ausführlich im Abschnitt [Dateiformatierungskonfiguration](/help/destinations/destination-sdk/server-and-file-configuration.md#file-configuration) Abschnitt.
+
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
 | `name` | Zeichenfolge | Geben Sie einen Namen für das benutzerdefinierte Feld ein, das Sie einführen. |
@@ -578,7 +580,7 @@ Dieser Abschnitt bezieht sich auf die Benutzeroberflächenelemente in der obigen
 ```json
 "uiAttributes":{
       "documentationLink":"http://www.adobe.com/go/YOURDESTINATION-en",
-      "category":"S3",
+      "category":"cloudStorage",
       "iconUrl":"https://dc5tqsrhldvnl.cloudfront.net/2/90048/da276e30c730ce6cd666c8ca78360df21.png",
       "connectionType":"S3",
       "flowRunsSupported":true,
@@ -591,7 +593,7 @@ Dieser Abschnitt bezieht sich auf die Benutzeroberflächenelemente in der obigen
 |---------|----------|------|
 | `documentationLink` | Zeichenfolge | Weitere Informationen finden Sie auf der Dokumentationsseite im [Zielkatalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=de#catalog) für Ihr Ziel. Verwenden Sie `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, wobei `YOURDESTINATION` für den Namen Ihres Ziels steht. Für ein Ziel mit dem Namen „Moviestar“ würden Sie `http://www.adobe.com/go/destinations-moviestar-en` verwenden. Beachten Sie, dass dieser Link nur funktioniert, wenn Adobe Ihr Ziel live festlegt und die Dokumentation veröffentlicht wird. |
 | `category` | Zeichenfolge | Bezieht sich auf die Ihrem Ziel in Adobe Experience Platform zugewiesene Kategorie. Weitere Informationen finden Sie unter [Zielkategorien](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html?lang=de). Verwenden Sie einen der folgenden Werte: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
-| `iconUrl` | Zeichenfolge | Die URL, unter der das Symbol gehostet wird, das auf der Zielkatalogkarte angezeigt werden soll. |
+| `iconUrl` | Zeichenfolge | Die URL, unter der das Symbol gehostet wird, das auf der Zielkatalogkarte angezeigt werden soll. Für private benutzerdefinierte Integrationen ist dies nicht erforderlich. Für produktionierte Konfigurationen müssen Sie beim Teilen eines Symbols für das Adobe-Team ein [Ziel zur Überprüfung übermitteln](/help/destinations/destination-sdk/submit-destination.md#logo). |
 | `connectionType` | Zeichenfolge | Der Verbindungstyp, je nach Ziel. Unterstützte Werte: <ul><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li></ul> |
 | `flowRunsSupported` | Boolesch | Gibt an, ob die Zielverbindung in der [Flussausführungs-Benutzeroberfläche](../../dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) enthalten ist. Wenn Sie diese Einstellung auf `true` festlegen: <ul><li>Die Angaben zu **[!UICONTROL Letztes Ausführungsdatum für Datenfluss]** und **[!UICONTROL Letzter Ausführungsstatus für Datenfluss]** werden auf der Ziel-Browser-Seite angezeigt.</li><li>Die **[!UICONTROL Datenflussausführungen]** und **[!UICONTROL Aktivierungsdaten]** werden auf der Zielansichtsseite angezeigt.</li></ul> |
 | `monitoringSupported` | Boolesch | Gibt an, ob die Zielverbindung in der [Monitoring-Benutzeroberfläche](../ui/destinations-workspace.md#browse) enthalten ist. Wenn Sie dies auf `true` setzen, wird die Option **[!UICONTROL Im Monitoring anzeigen]** auf der Seite für die Zielsuche angezeigt. |
@@ -600,6 +602,10 @@ Dieser Abschnitt bezieht sich auf die Benutzeroberflächenelemente in der obigen
 {style=&quot;table-layout:auto&quot;}
 
 ## Zielbereitstellung {#destination-delivery}
+
+Im Abschnitt Zielbereitstellung wird angegeben, wohin genau die exportierten Daten gehen und welche Authentifizierungsregel an dem Ort verwendet wird, an dem die Daten landen. Sie müssen eine oder mehrere `destinationServerId`Gibt an, an welcher Stelle die Daten bereitgestellt werden, sowie die Authentifizierungsregel. In den meisten Fällen ist die Authentifizierungsregel, die Sie verwenden sollten, `CUSTOMER_AUTHENTICATION`.
+
+Die `deliveryMatchers` ist optional und kann verwendet werden, wenn Sie mehrere `destinationServerId`s. Wenn dies der Fall ist, wird die `deliveryMatchers` gibt an, wie die exportierten Daten auf die verschiedenen Zielserver aufgeteilt werden sollen.
 
 ```json
  "destinationDelivery":[
@@ -621,7 +627,7 @@ Dieser Abschnitt bezieht sich auf die Benutzeroberflächenelemente in der obigen
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
 | `authenticationRule` | Zeichenfolge | Gibt an, wie [!DNL Platform]-Kunden eine Verbindung zu Ihrem Ziel herstellen. Akzeptierte Werte sind `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Verwenden Sie `CUSTOMER_AUTHENTICATION`, wenn sich Platform-Kunden über eine der folgenden Methoden bei Ihrem System anmelden: <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Verwenden Sie `PLATFORM_AUTHENTICATION`, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel besteht und der [!DNL Platform]-Kunde keine Anmeldeinformationen zur Authentifizierung angeben muss, um eine Verbindung mit Ihrem Ziel herzustellen. In diesem Fall müssen Sie ein Objekt für die [Anmeldeinformationen](./credentials-configuration-api.md) mithilfe der Konfiguration erstellen. </li><li>Verwenden Sie `NONE`, wenn keine Authentifizierung erforderlich ist, um Daten an Ihre Zielplattform zu senden. </li></ul> |
-| `destinationServerId` | Zeichenfolge | Die `instanceId` der [Ziel-Server-Konfiguration](./destination-server-api.md), die für dieses Ziel verwendet wird. |
+| `destinationServerId` | Zeichenfolge | Die `instanceId` des [Zielserverkonfiguration](./server-and-file-configuration.md) dass Sie [created](/help/destinations/destination-sdk/destination-server-api.md#create-file-based) für dieses Ziel. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -649,7 +655,15 @@ Durch `audienceTemplateId` verbindet dieser Abschnitt diese Konfiguration auch m
 
 ## Schemakonfiguration im Zuordnungsschritt {#schema-configuration}
 
+Das Adobe Experience Platform Destination SDK unterstützt von Partnern definierte Schemata. Mit einem von Partnern definierten Schema können Benutzer Profilattribute und Identitäten benutzerdefinierten Schemata zuordnen, die von Zielpartnern definiert werden, ähnlich wie beim Workflow [Streaming-Ziele](destination-configuration.md#schema-configuration).
+
 Verwenden Sie die Parameter in `schemaConfig`, um den Zuordnungsschritt des Zielaktivierungs-Workflows zu aktivieren. Mithilfe der unten beschriebenen Parameter können Sie bestimmen, ob Experience Platform-Benutzer Profilattribute und/oder Identitäten Ihrem dateibasierten Ziel zuordnen können.
+
+Sie können statische, fest programmierte Schemafelder erstellen oder ein dynamisches Schema angeben, mit dem sich Experience Platform verbinden soll, um die Felder im Zielschema des Zuordnungs-Workflows dynamisch abzurufen und auszufüllen. Das Zielschema wird im folgenden Screenshot gezeigt.
+
+![Screenshot, in dem die Zielschemafelder im Zuordnungsschritt des Aktivierungs-Workflows hervorgehoben werden](/help/destinations/destination-sdk/assets/target-schema-fields.png)
+
+### Statische fest programmierte Schemafeldkonfiguration
 
 ```json
 "schemaConfig":{
@@ -681,16 +695,14 @@ Verwenden Sie die Parameter in `schemaConfig`, um den Zuordnungsschritt des Ziel
 
 ### Dynamische Schemakonfiguration im Zuordnungsschritt {#dynamic-schema-configuration}
 
-Das Adobe Experience Platform Destination SDK unterstützt von Partnern definierte Schemata. Mit einem von Partnern definierten Schema können Benutzer Profilattribute und Identitäten benutzerdefinierten Schemata zuordnen, die von Zielpartnern definiert werden, ähnlich wie beim Workflow [Streaming-Ziele](destination-configuration.md#schema-configuration).
-
-Verwenden Sie die Parameter in `dynamicSchemaConfig`, um Ihr eigenes Schema zu definieren, dem Platform-Profilattribute und/oder Identitäten zugeordnet werden können.
+Verwenden Sie die Parameter in  `dynamicSchemaConfig` , um Ihr eigenes Schema dynamisch abzurufen, dem Platform-Profilattribute und/oder Identitäten zugeordnet werden können.
 
 ```json
 "schemaConfig":{
    "dynamicSchemaConfig":{
       "dynamicEnum": {
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
-         "destinationServerId":"{{destinationServerId}}",
+         "destinationServerId":"2aa8a809-c4ae-4f66-bb02-12df2e0a2279",
          "value": "Schema Name",
          "responseFormat": "SCHEMA"
       }
@@ -706,7 +718,7 @@ Verwenden Sie die Parameter in `dynamicSchemaConfig`, um Ihr eigenes Schema zu d
 | `profileRequired` | Boolesch | Verwenden Sie `true`, wenn Benutzer die Zuordnung von Profilattributen aus Experience Platform zu benutzerdefinierten Attributen des Ziels vornehmen dürfen, wie in der obigen Beispielkonfiguration dargestellt. |
 | `segmentRequired` | Boolesch | Verwenden Sie immer `segmentRequired:true`. |
 | `identityRequired` | Boolesch | Verwenden Sie `true`, wenn Benutzer in der Lage sein sollen, Identitäts-Namespaces von Experience Platform Ihrem gewünschten Schema zuzuordnen. |
-| `destinationServerId` | Zeichenfolge | Die `instanceId` der [Ziel-Server-Konfiguration](./destination-server-api.md), die für dieses Ziel verwendet wird. |
+| `destinationServerId` | Zeichenfolge | Die `instanceId` des [Zielserverkonfiguration](./destination-server-api.md) die Sie für Ihr dynamisches Schema erstellt haben. Dieser Zielserver enthält den HTTP-Endpunkt, den die Experience Platform aufruft, um das dynamische Schema abzurufen, das zum Ausfüllen der Zielfelder verwendet wird. |
 | `authenticationRule` | Zeichenfolge | Gibt an, wie [!DNL Platform]-Kunden eine Verbindung zu Ihrem Ziel herstellen. Akzeptierte Werte sind `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Verwenden Sie `CUSTOMER_AUTHENTICATION`, wenn sich Platform-Kunden über eine der folgenden Methoden bei Ihrem System anmelden: <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Verwenden Sie `PLATFORM_AUTHENTICATION`, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel besteht und der [!DNL Platform]-Kunde keine Anmeldeinformationen zur Authentifizierung angeben muss, um eine Verbindung mit Ihrem Ziel herzustellen. In diesem Fall müssen Sie ein Objekt für die [Anmeldeinformationen](./credentials-configuration-api.md) mithilfe der Konfiguration erstellen. </li><li>Verwenden Sie `NONE`, wenn keine Authentifizierung erforderlich ist, um Daten an Ihre Zielplattform zu senden. </li></ul> |
 | `value` | Zeichenfolge | Der Name des Schemas, das in der Experience Platform-Benutzeroberfläche im Zuordnungsschritt angezeigt werden soll. |
 | `responseFormat` | Zeichenfolge | Die Einstellung ist immer `SCHEMA`, wenn ein benutzerdefiniertes Schema definiert wird. |
@@ -720,7 +732,7 @@ Die Parameter in diesem Abschnitt bestimmen, welche Identitäten Ihr Ziel akzept
 
 ```json
 "identityNamespaces": {
-        "adobe_id": {
+        "crm_id": {
             "acceptsAttributes": true,
             "acceptsCustomNamespaces": true
         },
@@ -736,9 +748,9 @@ Sie müssen angeben, welche [!DNL Platform]-Identitäten Kunden in Ihr Ziel expo
 Identitäts-Namespaces erfordern keine 1:1-Korrespondenz zwischen [!DNL Platform] und Ihrem Ziel.
 Kunden können beispielsweise einen [!DNL IDFA]-Namespace in [!DNL Platform] einem [!DNL IDFA]-Namespace Ihres Ziels zuordnen oder sie können denselben [!DNL IDFA]-Namespace in [!DNL Platform] einem [!DNL Customer ID]-Namespace in Ihrem Ziel zuordnen.
 
-## Batch-Konfiguration {#batch-configuration}
+## Batch-Konfiguration - Dateibenennung und Exportplanung {#batch-configuration}
 
-Dieser Abschnitt bezieht sich auf die Dateiexporteinstellungen in der obigen Konfiguration, die Adobe für Ihr Ziel in der Adobe Experience Platform-Benutzeroberfläche verwenden sollte.
+Dieser Abschnitt enthält die Einstellungen für die Dateibenennung und Exportplanung, die für Ihr Ziel in der Benutzeroberfläche von Adobe Experience Platform angezeigt werden. Die Werte, die Sie hier einrichten, werden im [Segmentexport planen](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) Schritt des dateibasierten Zielaktivierungs-Workflows.
 
 ```json
 "batchConfig":{
@@ -796,7 +808,10 @@ Dieser Abschnitt bezieht sich auf die Dateiexporteinstellungen in der obigen Kon
 
 Verwenden Sie Dateinamenkonfigurationsmakros, um zu definieren, welche Namen der exportierten Datei enthalten sollen. Die Makros in der folgenden Tabelle beschreiben Elemente in der Benutzeroberfläche in der [Dateinamenkonfiguration](../ui/activate-batch-profile-destinations.md#file-names) angezeigt.
 
-Als Best Practice sollten Sie immer die `SEGMENT_ID` Makro in den Namen der exportierten Dateien. Segment-IDs sind eindeutig. Daher lässt sich am besten sicherstellen, dass Dateinamen auch eindeutig sind, wenn Sie sie in den Dateinamen aufnehmen.
+
+>[!TIP]
+> 
+>Als Best Practice sollten Sie immer die `SEGMENT_ID` Makro in den Namen der exportierten Dateien. Segment-IDs sind eindeutig. Daher lässt sich am besten sicherstellen, dass Dateinamen auch eindeutig sind, wenn Sie sie in den Dateinamen aufnehmen.
 
 | Makro | UI-Bezeichnung | Beschreibung | Beispiel |
 |---|---|---|---|
@@ -849,7 +864,7 @@ Sie können den Parameter `backfillHistoricalProfileData` in der Zielkonfigurati
 
 ## Wie diese Konfiguration alle erforderlichen Informationen für Ihr Ziel verbindet  {#connecting-all-configurations}
 
-Einige Ihrer Zieleinstellungen müssen über den [Ziel-Server](./server-and-file-configuration.md) oder die [Zielgruppen-Metadatenkonfiguration](./audience-metadata-management.md) konfiguriert werden. Die hier beschriebene Zielkonfiguration verbindet alle diese Einstellungen, indem sie wie folgt auf die beiden anderen Konfigurationen verweist:
+Einige Ihrer Zieleinstellungen müssen über das [Zielserver](./server-and-file-configuration.md) oder [Konfiguration von Zielgruppen-Metadaten](./audience-metadata-management.md) -Endpunkte. Die hier beschriebene Zielkonfiguration verbindet alle diese Einstellungen, indem sie wie folgt auf die beiden anderen Konfigurationen verweist:
 
-* Verwenden Sie die `destinationServerId`, um auf den Ziel-Server und die Vorlagenkonfiguration zu verweisen, die für Ihr Ziel eingerichtet sind.
+* Verwenden Sie die `destinationServerId` , um auf den Zielserver und die Dateivorlagenkonfiguration zu verweisen, die für Ihr Ziel eingerichtet sind.
 * Verwenden Sie die `audienceMetadataId`, um auf die für Ihr Ziel eingerichtete Zielgruppen-Metadatenkonfiguration zu verweisen.

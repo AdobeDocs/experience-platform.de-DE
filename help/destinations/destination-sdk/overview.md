@@ -1,11 +1,11 @@
 ---
-description: Das Adobe Experience Platform Destination SDK umfasst eine Reihe von Konfigurations-APIs, mit denen Sie Zielintegrationsmuster für Experience Platform konfigurieren können, um Zielgruppen- und Profildaten basierend auf den von Ihnen ausgewählten Daten- und Authentifizierungsformaten an Ihren Endpunkt zu senden. Die Konfigurationen werden in Experience Platform gespeichert und können über eine API für zusätzliche Aktualisierungen abgerufen werden.
+description: Adobe Experience Platform Destination SDK ist ein Satz von Konfigurations-APIs, mit denen Sie Zielintegrationsmuster konfigurieren können, damit Experience Platform Zielgruppen- und Profildaten basierend auf den von Ihnen ausgewählten Daten- und Authentifizierungsformaten an Ihren Endpunkt oder Speicherort übermitteln kann. Die Konfigurationen werden in Experience Platform gespeichert und können über eine API für zusätzliche Aktualisierungen abgerufen werden.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: af8718f7d5351993c5e4aa00822ed7d2b290b9f0
+source-git-commit: 95a7029864de84819cacc57c02a3e6f30def0b25
 workflow-type: tm+mt
-source-wordcount: '708'
-ht-degree: 80%
+source-wordcount: '791'
+ht-degree: 60%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 80%
 
 ## Übersicht {#destinations-sdk}
 
-Das Adobe Experience Platform Destination SDK ist eine Suite von Konfigurations-APIs, mit denen Sie Zielintegrationsmuster für Experience Platform konfigurieren können, um Zielgruppen- und Profildaten basierend auf den von Ihnen ausgewählten Daten- und Authentifizierungsformaten an Ihren Endpunkt zu senden. Die Konfigurationen werden in Experience Platform gespeichert und können über eine API für zusätzliche Aktualisierungen abgerufen werden.
+Adobe Experience Platform Destination SDK ist eine Suite von Konfigurations-APIs, mit denen Sie Zielintegrationsmuster für die Experience Platform konfigurieren können, um Zielgruppen- und Profildaten basierend auf den von Ihnen ausgewählten Daten- und Authentifizierungsformaten an Ihren Endpunkt oder Speicherort bereitzustellen. Die Konfigurationen werden in Experience Platform gespeichert und können über eine API für zusätzliche Aktualisierungen abgerufen werden.
 
-Die Dokumentation zum Destination SDK enthält Anweisungen dazu, wie Sie mit dem Adobe Experience Platform Destination SDK eine produktive Zielintegration mit Adobe Experience Platform konfigurieren, testen und veröffentlichen und Ihr Ziel in den ständig wachsenden Zielkatalog integrieren können.
+Die Dokumentation zum Destination SDK enthält Anweisungen dazu, wie Sie mit dem Adobe Experience Platform Destination SDK eine produktive Zielintegration mit Adobe Experience Platform konfigurieren, testen und veröffentlichen und Ihr Ziel in den ständig wachsenden Zielkatalog integrieren können. Durch die Verwendung von Destination SDK können Sie auch Ihr eigenes benutzerdefiniertes privates Ziel erstellen, um Daten zu exportieren, die auf Ihre Anforderungen zugeschnitten sind.
 
 ![Zielkatalog – Übersicht](./assets/destinations-catalog-overview.png)
 
@@ -26,7 +26,7 @@ Als Destination SDK-Partner können Sie von der Hinzufügung Ihres produktspezif
 2. Stellen Sie im Zielkatalog von Experience Platform eine Zielkarte mit Branding vor, um die Einrichtung und den Bekanntheitsgrad für Kunden zu vereinfachen.
 3. Lassen Sie sich als produktbezogene Zielintegration mit Adobe Experience Platform und Real-time Customer Data Platform vorstellen.
 
-Als Experience Platform-Kunde können Sie ein eigenes benutzerdefiniertes Ziel erstellen, das Ihren Aktivierungsanforderungen am besten entspricht.
+Als Experience Platform-Kunde können Sie auch ein eigenes benutzerdefiniertes Ziel erstellen, das Ihren Aktivierungsanforderungen am besten entspricht.
 
 ![Visuelles Diagramm zum Destination SDK](./assets/destination-sdk-visual.png)
 
@@ -51,6 +51,10 @@ Durch das Destination SDK unterstützt Adobe Experience Platform Echtzeit-Integr
 * Konfigurierbare Authentifizierung
 * Eine Suite von Test- und Validierungs-APIs zum Testen und Iterieren Ihrer Zielkonfigurationen
 
+Über Destination SDK können Sie auch Integrationen einrichten, um Dateien regelmäßig an den Speicherort Ihrer Wahl zu exportieren. Die Echtzeit-Integration mit Experience Platform unterstützt Funktionen wie:
+* Dateiexport in verschiedenen unterstützten Formaten (CSV, Parquet, JSON)
+* Konfigurierbare Dateiformatierungsoptionen, mit denen Sie das Format der exportierten Dateien entsprechend Ihren nachgelagerten Anforderungen strukturieren können.
+
 Informationen zu den technischen Anforderungen auf der Zielseite finden Sie im Artikel [Integrationsvoraussetzungen](./integration-prerequisites.md).
 
 ## Zugriff auf das Destination SDK {#get-access}
@@ -72,8 +76,8 @@ Der Prozess zum Konfigurieren Ihres Ziels in Experience Platform ist unten besch
 
 1. Wenn Sie ein ISV oder SI sind, lesen Sie die Informationen zum Abrufen von Zugriffsinformationen im Abschnitt oben. [Adobe Experience Platform Activation](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform0.html)-Kunden können diesen Schritt überspringen.
 2. [Fordern Sie die Bereitstellung einer Experience Platform-Sandbox an](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) und aktivieren Sie die Authoring-Berechtigung für das Ziel.
-3. Erstellen Sie Ihre Integration. Befolgen Sie die Anweisungen in der Produktdokumentation, um [Streaming-Ziele](./configure-destination-instructions.md) oder [dateibasierte Ziele (Beta)](./configure-file-based-destination-instructions.md).
-4. Testen Sie Ihre Integration. Befolgen Sie zum Testen die Anweisungen in der Produktdokumentation [Streaming-Ziele](./test-destination.md) oder [dateibasierte Ziele (Beta)](./file-based-destination-testing-overview.md).
+3. Erstellen Sie Ihre Integration. Befolgen Sie die Anweisungen in der Produktdokumentation, um [Streaming-Ziele](./configure-destination-instructions.md) oder [dateibasierte Ziele](./configure-file-based-destination-instructions.md).
+4. Testen Sie Ihre Integration. Befolgen Sie zum Testen die Anweisungen in der Produktdokumentation [Streaming-Ziele](./test-destination.md) oder [dateibasierte Ziele](./file-based-destination-testing-overview.md).
 5. Wenn Sie eine ISV oder SI sind, erstellen Sie eine [produktive Integration](./overview.md#productized-custom-integrations), [Integration übermitteln](./submit-destination.md) für die Überprüfung durch die Adobe (die standardmäßige Antwortzeit beträgt fünf Werktage).
 6. Wenn Sie ein ISV oder SI sind und eine angepasste Integration erstellen, verwenden Sie den [Self-Service-Dokumentationsprozess](./docs-framework/documentation-instructions.md), um eine Produktdokumentationsseite auf Experience League für Ihr Ziel zu erstellen.
 7. Bei produktiven Integrationen wird Ihre Integration nach Genehmigung durch Adobe im [Experience Platform Katalog](/help/destinations/catalog/overview.md).
