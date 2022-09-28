@@ -4,10 +4,10 @@ title: Standardmäßige Warnhinweisregeln
 description: In diesem Dokument werden die von Experience Platform bereitgestellten vordefinierten Warnhinweisregeln behandelt.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: df79ecac33314cc73ba8ad2508516be706bac767
+source-git-commit: f707a6338ad72578328b363792010fa50ea9ce88
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 90%
+source-wordcount: '966'
+ht-degree: 79%
 
 ---
 
@@ -92,6 +92,18 @@ Die folgenden Warnhinweisregeln sind spezifisch für [Ziele](../../destinations/
 | Verzögerungen, Ausfälle und Fehler bei der Ausführung des Zielflusses | Überspringrate überschreitet Schwellenwert | Dieser Warnhinweis wird Trigger, wenn das Verhältnis zwischen übersprungenen IDs und Gesamt-IDs einen Schwellenwert überschreitet. |
 
 {style=&quot;table-layout:auto&quot;}
+
+## Query Service
+
+Die folgenden Warnhinweisregeln sind spezifisch für [Query Service](../../query-service/home.md):
+
+| E/A-Ereignis-Abonnement | Warnhinweisregel | Beschreibung |
+| --- | --- | --- |
+| Ad-hoc-Info zu Query Service | Ad-hoc-Erfolg von Query Service | Dieser Warnhinweis wird Trigger, wenn ein Ad-hoc-Schema-Auftrag erfolgreich abgeschlossen wurde. |
+| Ad-hoc-Verzögerungen, Fehler und Fehler in Query Service | Ad-hoc-Fehler für Query Service | Dieser Warnhinweis wird Trigger, wenn ein Ad-hoc-Schemaauftrag fehlschlägt. |
+| Geplante Abfrageinformationen für Query Service | Geplanter Abfragestart von Query Service | Dieser Warnhinweis wird beim Start einer geplanten Abfrage Trigger. |
+| Geplante Abfrageinformationen für Query Service | Geplanter Abfrageerfolg für Query Service | Dieser Warnhinweis wird Trigger, wenn ein geplanter Abfrageauftrag erfolgreich abgeschlossen wurde. |
+| Geplante Abfrageverzögerungen, Fehler und Fehler in Query Service | Geplanter Abfragefehler des Abfragedienstes | Dieser Warnhinweis wird Trigger, wenn ein geplanter Abfrageauftrag fehlschlägt. |
 
 <!-- (Definitions to be added once available)
 | Segment Job Delay | This alert triggers when a segment job takes longer than 150 minutes to complete. | N/A | 30 seconds | 3 hours |
