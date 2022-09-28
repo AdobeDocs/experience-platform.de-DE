@@ -3,9 +3,9 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK; Platform Web SDK; Web SDK; Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: b12f97a7c5e937a116d86495b3434dd9c0805b04
+source-git-commit: 777a1749670f36abc09e4bacd190b1be17a9a237
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1349'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,23 @@ ht-degree: 3%
 
 In diesem Dokument werden die Versionshinweise für das Adobe Experience Platform Web SDK behandelt.
 Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in der [Versionshinweise zur Web SDK-Tag-Erweiterung](extension/web-sdk-ext-release-notes.md).
+
+## Version 2.13.0 - 28. September 2022
+
+**Neue Funktionen**
+
+* Unterstützung für die Migration &quot;Seite nach Seite - Vollständige Migration&quot; hinzugefügt. Das Adobe Target-Profil wird jetzt beibehalten, wenn ein Besucher zwischen at.js- und Web SDK-Seiten wechselt.
+* Konfigurierbare Unterstützung für [High entropy User-Agent Client Hints](fundamentals/user-agent-client-hints.md#high-entropy).
+* Unterstützung für die neue `applyResponse` Befehl. Dies ermöglicht die hybride Personalisierung über die [Edge Network Server-API](../server-api/overview.md).
+* QA-Modus-Links funktionieren jetzt auf mehreren Seiten.
+
+**Fehlerbehebungen und Verbesserungen**
+
+* Es wurde ein Problem behoben, bei dem Personalisierungsklick-Tracking-Metriken nicht aktualisiert wurden, wenn das Linktracking deaktiviert war.
+* Die Befehle wurden aktualisiert, um einen Validierungsfehler auszulösen, wenn unbekannte Optionen angegeben sind.
+* Die `_experience.decisioning.propositionEventType` -Eigenschaft wird jetzt beim automatischen Senden von Anzeige- und Interaktions-Personalisierungsereignissen gefüllt.
+* Duplizierte Namespace-Validierung für die `getIdentity` Befehl.
+* Duplizierte Validierung des Entscheidungsbereichs für die `sendEvent` Befehl.
 
 ## Version 2.12.0 - 29. Juni 2022
 
