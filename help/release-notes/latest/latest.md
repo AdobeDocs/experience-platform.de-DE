@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform - Versionshinweise - September 2022
 description: Die Versionshinweise für Adobe Experience Platform vom September 2022.
-source-git-commit: 65743c1741210a87b1cc64406412dd7e58218321
+source-git-commit: 64c376b52aa7f7827c19194d677d8a1648c04195
 workflow-type: tm+mt
-source-wordcount: '2796'
+source-wordcount: '2776'
 ht-degree: 30%
 
 ---
@@ -78,7 +78,7 @@ Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Ko
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Entwurfsinstanz speichern | Diese neue Funktion ermöglicht es Marketing-Analysten, die Modellkonfiguration während der Konfigurationen als Entwurfsinstanz zu speichern und den Entwurf bis zum Abschluss des Trainings und der Auswertung weiter zu bearbeiten. Zu den Szenarien, in denen diese Funktion hilfreich ist, gehören u. a. Fälle, in denen Benutzer mehrere Felder definieren müssen, die im Konfigurations-Workflow definiert werden sollen, sodass sie nicht in einem Schritt abgeschlossen werden können, oder Fälle, in denen eine oder mehrere Datensatzstatistiken (z. B. die Spaltenvollständigkeit) erst verarbeitet werden müssen, bevor sie verfügbar werden. Lesen Sie die [Attribution AI-Benutzerhandbuch](../../intelligent-services/attribution-ai/user-guide.md) , um mehr zu erfahren. |
+| Entwurfsinstanz speichern | Diese neue Funktion ermöglicht es Marketing-Analysten, eine Modellkonfiguration als Entwurfsinstanz zu speichern und sie so lange zu bearbeiten, bis sie vor dem Training und Scoring abgeschlossen ist. Zu den Szenarien, in denen diese Funktion hilfreich ist, zählen Fälle, in denen ein Benutzer mehrere Felder definiert, die im Workflow definiert werden müssen, aber aufgrund von Zeitbeschränkungen nicht abgeschlossen werden können. Ein anderes Szenario ist, wenn eine oder mehrere Datensatzstatistiken verarbeitet werden und noch nicht verfügbar sind. Lesen Sie die [Attribution AI-Benutzerhandbuch](../../intelligent-services/attribution-ai/user-guide.md#governance-policies) , um mehr zu erfahren. |
 | Governance-Strategien | Nachdem sich Benutzer zum Erstellen einer Instanz über den Konfigurations-Workflow übermittelt haben, prüft der neue Richtliniendurchsetzungsdienst, ob Richtlinienverletzungen bei der Datennutzung vorliegen, und zeigt die Details in einem Popup an. Dadurch wird sichergestellt, dass Datenvorgänge und Marketing-Aktionen mit den in Adobe Experience Platform konfigurierten Datennutzungsrichtlinien konform sind. |
 
 Weitere Informationen zu Attribution AI finden Sie unter [Attribution AI - Übersicht](../../intelligent-services/attribution-ai/overview.md). Informationen zu Data Governance-Richtlinien finden Sie im Abschnitt [Richtlinien - Übersicht](../../data-governance/policies/overview.md).
@@ -89,7 +89,7 @@ Kunden-KI in Real-time Customer Data Platform dient dazu, für einzelne Profile 
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Entwurfsinstanz speichern | Diese neue Funktion ermöglicht es Marketing-Analysten, die Modellkonfiguration während der Konfigurationen als Entwurfsinstanz zu speichern und den Entwurf bis zum Abschluss des Trainings und der Auswertung weiter zu bearbeiten. Zu den Szenarien, in denen diese Funktion hilfreich ist, gehören u. a. Fälle, in denen Benutzer mehrere Felder definieren müssen, die im Konfigurations-Workflow definiert werden sollen, sodass sie nicht in einem Schritt abgeschlossen werden können, oder Fälle, in denen eine oder mehrere Datensatzstatistiken (z. B. die Spaltenvollständigkeit) erst verarbeitet werden müssen, bevor sie verfügbar werden. Lesen Sie die [Benutzerhandbuch für Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md) , um mehr zu erfahren. |
+| Entwurfsinstanz speichern | Diese neue Funktion ermöglicht es Marketing-Analysten, eine Modellkonfiguration als Entwurfsinstanz zu speichern und sie so lange zu bearbeiten, bis sie vor dem Training und Scoring abgeschlossen ist. Zu den Szenarien, in denen diese Funktion hilfreich ist, zählen Fälle, in denen ein Benutzer mehrere Felder definiert, die im Workflow definiert werden müssen, aber aufgrund von Zeitbeschränkungen nicht abgeschlossen werden können. Ein anderes Szenario ist, wenn eine oder mehrere Datensatzstatistiken verarbeitet werden und noch nicht verfügbar sind. Lesen Sie die [Benutzerhandbuch für Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md#governance-policies) , um mehr zu erfahren. |
 | Governance-Strategien | Nachdem sich Benutzer zum Erstellen einer Instanz über den Konfigurations-Workflow übermittelt haben, prüft der neue Richtliniendurchsetzungsdienst, ob Richtlinienverletzungen bei der Datennutzung vorliegen, und zeigt die Details in einem Popup an. Dadurch wird sichergestellt, dass Datenvorgänge und Marketing-Aktionen mit den in Adobe Experience Platform konfigurierten Datennutzungsrichtlinien konform sind. |
 
 Weitere Informationen zu Customer AI finden Sie im [Customer AI - Übersicht](../../intelligent-services/customer-ai/overview.md). Informationen zu Data Governance-Richtlinien finden Sie im Abschnitt [Richtlinien - Übersicht](../../data-governance/policies/overview.md).
