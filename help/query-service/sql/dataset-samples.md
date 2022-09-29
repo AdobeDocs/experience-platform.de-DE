@@ -1,14 +1,18 @@
 ---
 title: Datensatzbeispiele
 description: Mit Beispieldatensätzen für Query Service können Sie forschende Abfragen zu Big Data mit deutlich verkürzter Verarbeitungszeit auf Kosten der Genauigkeit von Abfragen durchführen. In diesem Handbuch erfahren Sie, wie Sie Ihre Beispiele für die ungefähre Abfrageverarbeitung verwalten
-source-git-commit: 81531f8c5a89fd21a34d4fc233c2c57f79335f76
+source-git-commit: 3d2802ff5cdb359b28da23a05d1d6831cc273a52
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '536'
 ht-degree: 0%
 
 ---
 
-# Datensatzbeispiele
+# (Beta) Datensatzbeispiele
+
+>[!IMPORTANT]
+>
+>Die Funktion für Datensatzbeispiele befindet sich in der Beta-Phase. Die Funktionen und Dokumentation können sich ändern.
 
 Adobe Experience Platform Query Service bietet Beispiel-Datensätze als Teil seiner Funktionen zur ungefähren Abfrageverarbeitung. Beispieldatensätze werden mit einheitlichen Zufallsproben aus vorhandenen [!DNL Azure Data Lake Storage] (ADLS)-Datensätze, die nur einen Prozentsatz der Datensätze aus dem Original verwenden. Dieser Prozentsatz wird als Sampling-Rate bezeichnet. Durch die Anpassung der Stichprobenrate zur Kontrolle der Genauigkeit und Verarbeitungszeit können Sie forschende Abfragen zu Big Data durchführen, wobei die Verarbeitungszeit auf Kosten der Genauigkeit der Abfrage erheblich verkürzt wird.
 

@@ -4,7 +4,7 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
 breadcrumb-title: Anleitung zum Abfragedienst
 user-guide-description: Verwenden Sie SQL-Standarddaten zur Abfrage in Platform Data Lake.
 feature: Queries
-source-git-commit: 9b0b0798f7e1d829e7d6434341c8c2d29efb2bad
+source-git-commit: 200314f83de909eb631e2eeea1140416a5f5a5ef
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 67%
@@ -15,9 +15,9 @@ ht-degree: 67%
 # Query Service von Adobe Experience Platform {#query}
 
 - [Query Service – Übersicht](home.md)
+- [Query Service-Verpackung](packages.md)
 - [Limits für Query Service](guardrails.md)
 - Data Distiller {#data-distiller}
-   - [Query Service-Verpackung](data-distiller/packages.md)
    - [Lizenzverwendung](data-distiller/licence-usage.md)
 - Erste Schritte {#get-started}
    - [Voraussetzungen](get-started/prerequisites.md)
