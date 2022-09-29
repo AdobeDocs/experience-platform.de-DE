@@ -2,10 +2,10 @@
 title: Datensatz-Ablauf-API-Endpunkt
 description: Mit dem Endpunkt /ttl in der Datenhygiene-API können Sie programmgesteuert einen Zeitplan für Datensatzgültigkeiten in Adobe Experience Platform festlegen.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: c2ff0d5806e57f230b937e8754d40031fb4b2305
+source-git-commit: e4cc78591d0d3b4abd660956b1263092697d63d5
 workflow-type: tm+mt
-source-wordcount: '1450'
-ht-degree: 72%
+source-wordcount: '1454'
+ht-degree: 71%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 72%
 
 >[!IMPORTANT]
 >
->Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die Healthcare Shield erworben haben.
+>Die Funktionen zur Datenhygiene in Adobe Experience Platform stehen derzeit nur Organisationen zur Verfügung, die Adobe Healthcare Shield oder Privacy Shield erworben haben.
 
 Der `/ttl`-Endpunkt in der Datenhygiene-API ermöglicht Ihnen, in Adobe Experience Platform Ablaufdaten für Datensätze zu planen.
 

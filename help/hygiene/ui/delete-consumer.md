@@ -2,9 +2,9 @@
 title: Löschen von Verbraucherdatensätzen
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform Verbraucherdatensätze löschen können.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 425298ec28517bba4eca1bf0966fd3b205fce764
+source-git-commit: e4cc78591d0d3b4abd660956b1263092697d63d5
 workflow-type: tm+mt
-source-wordcount: '1131'
+source-wordcount: '1136'
 ht-degree: 93%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 93%
 
 >[!IMPORTANT]
 >
->Löschanfragen von Verbrauchern stehen nur Organisationen zur Verfügung, die Adobe Healthcare Shield oder Privacy Shield erworben haben.
+>Die Funktionen zur Datenhygiene in Adobe Experience Platform stehen derzeit nur Organisationen zur Verfügung, die Adobe Healthcare Shield oder Privacy Shield erworben haben.
 
 Im [[!UICONTROL Datenhygiene]-Arbeitsbereich](./overview.md) in der Adobe Experience Platform-Benutzeroberfläche können Sie Verbraucherdatensätze löschen, die vom Identity Service und Echtzeit-Kundenprofil verwendet werden.
 

@@ -2,9 +2,9 @@
 title: Durchsuchen von Datenhygiene-Arbeitsaufträgen
 description: Erfahren Sie, wie Sie bestehende Datenhygiene-Arbeitsaufträge in der Benutzeroberfläche von Adobe Experience Platform anzeigen und verwalten können.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 425298ec28517bba4eca1bf0966fd3b205fce764
+source-git-commit: e4cc78591d0d3b4abd660956b1263092697d63d5
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '863'
 ht-degree: 75%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 75%
 >title="IDs für Arbeitsaufträge"
 >abstract="Wenn eine Datenhygiene-Anfrage an das System gesendet wird, wird ein Arbeitsauftrag erstellt, um die angeforderte Aufgabe auszuführen. Anders ausgedrückt, ist ein Arbeitsauftrag ein spezifischer Datenhygiene-Prozess, der seinen aktuellen Status und andere zugehörige Details enthält. Bei der Erstellung eines Arbeitsauftrags wird diesem automatisch eine eigene eindeutige ID zugewiesen."
 >text="See the data hygiene UI guide to learn more."
+
+>[!IMPORTANT]
+>
+>Die Funktionen zur Datenhygiene in Adobe Experience Platform stehen derzeit nur Organisationen zur Verfügung, die Adobe Healthcare Shield oder Privacy Shield erworben haben.
 
 Wenn eine Datenhygiene-Anfrage an das System gesendet wird, wird ein Arbeitsauftrag erstellt, um die angeforderte Aufgabe auszuführen. Ein Arbeitsauftrag stellt einen spezifischen Datenhygiene-Prozess dar, z. B. das geplante Ablaufen eines Datensatzes, wobei sein aktueller Status und andere zugehörige Details enthalten sind.
 
@@ -30,10 +34,6 @@ Wenn Sie zum ersten Mal auf den Arbeitsbereich **[!UICONTROL Datenhygiene]** in 
 In der Liste werden nur Arbeitsaufträge für jeweils eine Kategorie angezeigt. Auswählen **[!UICONTROL Verbraucher]** um eine Liste der Aufgaben zum Löschen für Verbraucher anzuzeigen, und **[!UICONTROL Datensatz]** , um eine Liste der geplanten Datensatzabläufe anzuzeigen.
 
 ![Bild, das die Registerkarte [!UICONTROL Datensatz] zeigt](../images/ui/browse/dataset-tab.png)
-
->[!IMPORTANT]
->
->Die Löschung durch den Verbraucher ist nur für Organisationen verfügbar, die die Adobe Health Protection oder den Datenschutzschild erworben haben.
 
 Wählen Sie das Trichtersymbol (![Bild des Trichtersymbols](../images/ui/browse/funnel-icon.png)) aus, um eine Liste von Filtern für die angezeigten Arbeitsaufträge aufzurufen.
 
