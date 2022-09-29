@@ -5,9 +5,9 @@ title: Definieren von Enum-Feldern und vorgeschlagenen Werten in der Benutzerobe
 description: Erfahren Sie, wie Sie in der Experience Platform-Benutzeroberfläche Auflistungen und empfohlene Werte für Zeichenfolgenfelder definieren.
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: e515e32588991e468429c9256533732d04a4339f
+source-git-commit: ea27486a198f5248eeb5348ce20865bc41c2339a
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1207'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Auswählen **[!UICONTROL Auflistungen und empfohlene Werte]**, wählen Sie **[!U
 
 ![Bild mit der in der Benutzeroberfläche ausgewählten Option &quot;Vorgeschlagene Werte&quot;](../../images/ui/fields/enum/suggested-add-row.png)
 
-Unter dem **[!UICONTROL Anzeigename]** geben Sie einen benutzerfreundlichen Namen für den Wert ein, wie er in der Segmentierungsbenutzeroberfläche angezeigt werden soll. Um weitere empfohlene Werte hinzuzufügen, wählen Sie **[!UICONTROL Zeile hinzufügen]** und wiederholen Sie den Vorgang nach Bedarf. Um eine zuvor hinzugefügte Zeile zu entfernen, wählen Sie das Löschsymbol (![Bild des Löschsymbols](../../images/ui/fields/enum/remove-icon.png)) neben der betreffenden Zeile.
+Unter dem **[!UICONTROL Anzeigename]** geben Sie einen benutzerfreundlichen Namen für den Wert ein, wie er in der Segmentierungsbenutzeroberfläche angezeigt werden soll. Um weitere empfohlene Werte hinzuzufügen, wählen Sie **[!UICONTROL Zeile hinzufügen]** und wiederholen Sie den Vorgang nach Bedarf. Um eine zuvor hinzugefügte Zeile zu entfernen, wählen Sie ![Löschsymbol](../../images/ui/fields/enum/remove-icon.png) neben der betreffenden Zeile.
 
 Wenn Sie fertig sind, wählen Sie **[!UICONTROL Anwenden]** , um die Änderungen auf das Schema anzuwenden.
 
@@ -61,25 +61,25 @@ Wenn Sie fertig sind, wählen Sie **[!UICONTROL Anwenden]** , um die Änderungen
 
 ### Verwalten von vorgeschlagenen Werten für Standardfelder
 
-Einige Felder aus Standard-XDM-Komponenten enthalten ihre eigenen empfohlenen Werte, z. B. `eventType` von [[!UICONTROL XDM ExperienceEvent] class](../../classes/experienceevent.md). Wenn Sie diese Felder in Ihren Schemas verwenden, können Sie mit den verfügbaren Umschaltern steuern, welche vorhandenen vorgeschlagenen Werte verwendet werden sollen.
+Einige Felder aus Standard-XDM-Komponenten enthalten ihre eigenen empfohlenen Werte, z. B. `eventType` von [[!UICONTROL XDM ExperienceEvent] class](../../classes/experienceevent.md). Sie können zwar zusätzliche empfohlene Werte für ein Standardfeld erstellen, jedoch keine von Ihrem Unternehmen nicht definierten vorgeschlagenen Werte ändern oder entfernen. Bei der Anzeige eines Standardfelds in der Benutzeroberfläche werden die vorgeschlagenen Werte angezeigt, sind jedoch schreibgeschützt.
 
 ![Bild mit den Aufzählungswerten und Anzeigenamen, die für das Zeichenfolgenfeld in der Benutzeroberfläche ausgefüllt wurden](../../images/ui/fields/enum/suggested-standard.png)
 
-Wählen Sie ähnlich wie benutzerdefinierte Felder die Option **[!UICONTROL Zeile hinzufügen]** , um Ihre eigenen vorgeschlagenen Werte für Standardfelder hinzuzufügen.
+Um neue empfohlene Werte für ein Standardfeld hinzuzufügen, wählen Sie **[!UICONTROL Zeile hinzufügen]**. Um einen vorgeschlagenen Wert zu entfernen, der zuvor von Ihrer Organisation hinzugefügt wurde, wählen Sie ![Löschsymbol](../../images/ui/fields/enum/remove-icon.png) neben der betreffenden Zeile.
 
-![Bild mit den Aufzählungswerten und Anzeigenamen, die für das Zeichenfolgenfeld in der Benutzeroberfläche ausgefüllt wurden](../../images/ui/fields/enum/suggested-standard.png)
+![Bild mit den Aufzählungswerten und Anzeigenamen, die für das Zeichenfolgenfeld in der Benutzeroberfläche ausgefüllt wurden](../../images/ui/fields/enum/suggested-standard-add.png)
 
-### Entfernen empfohlener Werte für Standardfelder
+<!-- ### Removing suggested values for standard fields
 
-Nur von Ihnen definierte empfohlene Werte können aus einem Standardfeld entfernt werden. Vorhandene empfohlene Werte können deaktiviert werden, sodass sie nicht mehr im Dropdown-Menü &quot;Segmentierung&quot;angezeigt werden, aber nicht vollständig entfernt werden können.
+Only suggested values that you define can be removed from a standard field. Existing suggested values can be disabled so that they no longer appear in the segmentation dropdown, but they cannot be removed outright.
 
-Betrachten Sie beispielsweise ein Profilschema, bei dem der vorgeschlagene Wert für den Standard `person.gender` -Feld deaktiviert ist:
+For example, consider a profile schema where the a suggested value for the standard `person.gender` field is disabled:
 
-![Bild mit den Aufzählungswerten und Anzeigenamen, die für das Zeichenfolgenfeld in der Benutzeroberfläche ausgefüllt wurden](../../images/ui/fields/enum/standard-enum-disabled.png)
+![Image showing the enum values and display names filled out for the string field in the UI](../../images/ui/fields/enum/standard-enum-disabled.png)
 
-In diesem Beispiel wurde der Anzeigename &quot;[!UICONTROL Nicht spezifisch]&quot; ist jetzt deaktiviert, sodass sie in der Dropdown-Liste &quot;Segmentierung&quot;angezeigt wird. Der Wert `non_specific` ist weiterhin Teil der Liste der aufgezählten Felder und ist daher weiterhin bei der Erfassung zulässig. Mit anderen Worten: Sie können den tatsächlichen Enum-Wert für das Standardfeld nicht deaktivieren, da dies dem Grundsatz zuwiderlaufen würde, nur Änderungen zuzulassen, die ein Feld weniger restriktiv machen.
+In this example, the display name "[!UICONTROL Non-specific]" is now disabled from being shown in the segmentation dropdown list. However, the value `non_specific` is still part of the list of enumerated fields and is therefore still allowed on ingestion. In other words, you cannot disable the actual enum value for the standard field as it would go against the principle of only allowing changes that make a field less restrictive.
 
-Siehe [Abschnitt unten](#evolution) für weitere Informationen zu den Regeln zum Aktualisieren von Auflistungen und vorgeschlagenen Werten für vorhandene Schemafelder.
+See the [section below](#evolution) for more information on the rules for updating enums and suggested values for existing schema fields. -->
 
 ## Evolutionsregeln für Auflistungen und empfohlene Werte {#evolution}
 
@@ -109,6 +109,13 @@ Wenn Sie in verschiedenen Feldgruppen auf denselben benutzerdefinierten Feldpfad
 
 * Alle weiteren empfohlenen Werte sind **ANGEHÄNGT** in der Union.
 * Wenn derselbe zusätzliche empfohlene Wert in mehr als einem Schema definiert ist, werden diese Werte **ZUSAMMENGED** in der Union. Mit anderen Worten, derselbe vorgeschlagene Wert wird nach dem Zusammenführen nicht zweimal angezeigt.
+
+## Validierungsbeschränkungen
+
+Aufgrund der aktuellen Systembeschränkungen gibt es zwei Fälle, in denen eine Enumeration vom System während der Erfassung nicht validiert wird:
+
+1. Die Enumeration wird auf einer [Array-Feld](./array.md).
+1. Der Enum ist in der Schemahierarchie auf mehr als einer Ebene definiert.
 
 ## Nächste Schritte
 
