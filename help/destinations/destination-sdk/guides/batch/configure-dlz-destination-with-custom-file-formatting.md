@@ -2,20 +2,16 @@
 description: Erfahren Sie, wie Sie mit Destination SDK ein Data Landing Zone (DLZ)-Ziel mit benutzerdefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration konfigurieren können.
 title: Konfigurieren Sie ein Data Landing Zone (DLZ)-Ziel mit benutzerdefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration.
 exl-id: 3a5c1188-c2b5-4e81-ae41-9fff797f08a6
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '763'
-ht-degree: 11%
+source-wordcount: '739'
+ht-degree: 10%
 
 ---
 
 # Konfigurieren Sie eine [!DNL Data Landing Zone (DLZ)] Ziel mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration
 
 ## Übersicht {#overview}
-
->[!IMPORTANT]
->
->Die Funktion zum Konfigurieren dateibasierter Ziele mithilfe von Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern.
 
 Auf dieser Seite wird beschrieben, wie Sie mit Destination SDK eine [!DNL Data Landing Zone] Ziel mit benutzerdefiniertem [Dateiformatierungsoptionen](../../server-and-file-configuration.md#file-configuration) und benutzerspezifische [Dateinamenkonfiguration](../../file-based-destination-configuration.md#file-name-configuration).
 

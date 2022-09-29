@@ -2,9 +2,9 @@
 description: Die Server- und Dateikonfigurationsspezifikationen für dateibasierte Ziele können im Adobe Experience Platform Destination SDK über den Endpunkt /destination-servers konfiguriert werden.
 title: Konfigurationsoptionen für dateibasierte Ziel-Server-Spezifikationen
 exl-id: 56434e36-0458-45d9-961d-f6505de998f7
-source-git-commit: 5506a938253083d3dfd657a787eae20a05b1c0a9
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1248'
 ht-degree: 57%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 57%
 # Server- und Dateikonfiguration für dateibasierte Ziel-Server-Spezifikationen
 
 ## Übersicht {#overview}
-
->[!IMPORTANT]
->
->Die Funktion zum Konfigurieren und Übermitteln dateibasierter Ziele mithilfe des Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern.
 
 Auf dieser Seite werden alle Serverkonfigurationsoptionen für Ihre dateibasierten Zielserver beschrieben und gezeigt, wie Sie verschiedene Dateikonfigurationsoptionen für Benutzer einrichten, die Dateien von Experience Platform an Ihr Ziel exportieren.
 

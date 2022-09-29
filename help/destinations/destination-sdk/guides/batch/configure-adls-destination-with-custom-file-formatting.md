@@ -2,9 +2,9 @@
 description: Erfahren Sie, wie Sie mit Destination SDK ein Azure Data Lake Storage-Ziel mit benutzerdefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration konfigurieren.
 title: Konfigurieren Sie ein Azure Data Lake Storage-Ziel mit benutzerdefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration.
 exl-id: cb67b126-cd30-4fb7-b67e-c15dc7daef73
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '767'
+source-wordcount: '743'
 ht-degree: 10%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 10%
 # Konfigurieren Sie eine [!DNL Azure Data Lake Storage] Ziel mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration
 
 ## Übersicht {#overview}
-
->[!IMPORTANT]
->
->Die Funktion zum Konfigurieren dateibasierter Ziele mithilfe von Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern.
 
 Auf dieser Seite wird beschrieben, wie Sie mit Destination SDK eine [!DNL Azure Data Lake Storage] Ziel mit benutzerdefiniertem [Dateiformatierungsoptionen](../../server-and-file-configuration.md#file-configuration) und benutzerspezifische [Dateinamenkonfiguration](../../file-based-destination-configuration.md#file-name-configuration).
 

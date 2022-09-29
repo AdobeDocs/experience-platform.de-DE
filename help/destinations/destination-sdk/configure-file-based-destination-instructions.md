@@ -2,20 +2,16 @@
 description: Auf dieser Seite werden die Schritte zum Konfigurieren eines dateibasierten Ziels mithilfe des Destination SDK aufgeführt und beschrieben.
 title: Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 87%
+source-wordcount: '516'
+ht-degree: 86%
 
 ---
 
 # Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels
 
 ## Übersicht {#overview}
-
->[!IMPORTANT]
->
->Die Funktion zum Konfigurieren und Übermitteln dateibasierter Ziele mithilfe des Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern.
 
 Auf dieser Seite wird beschrieben, wie Sie die Informationen in [Konfigurationsoptionen im Destination SDK](./configuration-options.md) und in anderen Destination SDK-Funktionen und API-Referenzdokumenten verwenden können, um ein [dateibasiertes Ziel](../../destinations/destination-types.md#file-based) zu konfigurieren. Die Schritte sind im Folgenden in der vorgegebenen Reihenfolge aufgeführt.
 

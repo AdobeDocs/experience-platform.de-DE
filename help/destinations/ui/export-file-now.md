@@ -3,9 +3,9 @@ title: (Beta) Exportieren Sie Dateien On-Demand mithilfe der Experience Platform
 type: Tutorial
 description: Erfahren Sie, wie Sie Dateien bei Bedarf mithilfe der Experience Platform-Benutzeroberfläche in Batch-Ziele exportieren.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 874c590e83712a45e75308239fb71db04614bd1e
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '743'
 ht-degree: 14%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 14%
 
 >[!IMPORTANT]
 >
->Die **[!UICONTROL Datei jetzt exportieren]** -Option in Adobe Experience Platform Destination SDK ist derzeit als Betaversion verfügbar. Dokumentation und Funktionalität können sich ändern.
+>Die **[!UICONTROL Datei jetzt exportieren]** -Option in Adobe Experience Platform ist derzeit als Betaversion verfügbar. Dokumentation und Funktionalität können sich ändern.
 >Wenden Sie sich an Ihre Adobe-Support-Mitarbeitenden, um Zugriff auf diese Funktion zu erhalten.
 
 >[!IMPORTANT]

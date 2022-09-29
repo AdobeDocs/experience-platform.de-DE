@@ -2,9 +2,9 @@
 description: Erfahren Sie, wie Sie mit Destination SDK ein SFTP-Ziel mit vordefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration konfigurieren.
 title: Konfigurieren Sie ein SFTP-Ziel mit vordefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration.
 exl-id: 6e0fe019-7fbb-48e4-9469-6cc7fc3cb6e4
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: bdeebca9608e7c1ff3ae0cb1aeb444dccb78028f
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '740'
 ht-degree: 10%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 10%
 # Konfigurieren eines SFTP-Ziels mit vordefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration
 
 ## Übersicht {#overview}
-
->[!IMPORTANT]
->
->Die Funktion zum Konfigurieren dateibasierter Ziele mithilfe von Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern.
 
 Auf dieser Seite wird beschrieben, wie Sie mit Destination SDK ein SFTP-Ziel mit vordefinierten, standardmäßigen [Dateiformatierungsoptionen](../../server-and-file-configuration.md#file-configuration) und benutzerspezifische [Dateinamenkonfiguration](../../file-based-destination-configuration.md#file-name-configuration).
 

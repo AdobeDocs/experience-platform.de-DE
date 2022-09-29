@@ -2,9 +2,9 @@
 description: Erfahren Sie, wie Sie mit Destination SDK ein Amazon S3-Ziel mit vordefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration konfigurieren.
 title: Konfigurieren Sie ein Amazon S3-Ziel mit vordefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration.
 exl-id: 0ecd3575-dcda-4e5c-af5c-247d4ea13fa1
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '746'
 ht-degree: 10%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 10%
 # Konfigurieren Sie eine [!DNL Amazon S3] Ziel mit vordefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration
 
 ## Übersicht {#overview}
-
->[!IMPORTANT]
->
->Die Funktion zum Konfigurieren dateibasierter Ziele mithilfe von Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern.
 
 Auf dieser Seite wird beschrieben, wie Sie mit Destination SDK ein Amazon S3-Ziel mit vordefinierten, standardmäßigen [Dateiformatierungsoptionen](../../server-and-file-configuration.md#file-configuration) und benutzerspezifische [Dateinamenkonfiguration](../../file-based-destination-configuration.md#file-name-configuration).
 
