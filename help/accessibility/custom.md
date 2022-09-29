@@ -5,10 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: Erfahren Sie mehr über die benutzerdefinierten Barrierefreiheitslösungen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: e30e04453bd814de103cceb14e3580992436923d
+source-git-commit: 7f4202c9c4a132ed9d74c495f6608357eac8003f
 workflow-type: tm+mt
-source-wordcount: '1568'
-ht-degree: 97%
+source-wordcount: '1615'
+ht-degree: 94%
 
 ---
 
@@ -132,6 +132,10 @@ Wenn Sie die Benutzeroberfläche von Segment Builder zum Erstellen und Bearbeite
 * Auf die Benutzeroberfläche von Segment Builder kann über die Tastaturnavigation zugegriffen werden.
 * Bildschirmlesehilfen sollten Markup-Tags für Überschriften erkennen und die Überschrift zusammen mit ihrer Ebene ankündigen.
 * Andere Hilfstechnologien können die visuelle Anzeige einer Seite ändern, indem sie ordnungsgemäß codierte Überschriften verwenden, um eine Konturschrift oder eine alternative Ansicht anzuzeigen.
+
+Sie können jetzt die linken und rechten Leisten der Arbeitsfläche des Segmentaufbaus reduzieren oder erweitern, um mehr Platz auf dem Bildschirm zu erhalten. Diese Funktion ist besonders hilfreich, da sie bei 200 % Zoom volle Funktionen bietet.
+
+![Die Arbeitsfläche des Segmentaufbaus mit den Veröffentlichungs-Widgets der linken und rechten Leiste wird hervorgehoben.](images/left-right-rail-expandables.png)
 
 ## Abfrage-Service-Editor
 
