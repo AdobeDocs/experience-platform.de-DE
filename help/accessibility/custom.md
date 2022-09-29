@@ -5,10 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: Erfahren Sie mehr über die benutzerdefinierten Barrierefreiheitslösungen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: e30e04453bd814de103cceb14e3580992436923d
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 100%
+source-wordcount: '1568'
+ht-degree: 97%
 
 ---
 
@@ -96,6 +96,9 @@ Auf alle Tabellen in der Experience Platform-Benutzeroberfläche kann über die 
 * Wenn eine Zeile ausgewählt oder im Fokus ist, können Sie über die **Eingabetaste** in der Zeile Details in der rechten Leiste aufrufen.
 * Wenn eine Zeile ausgewählt oder im Fokus ist, verwenden Sie die **Pfeiltasten**, um durch sämtliche Elemente in der Zeile zu navigieren.
 * Verwenden Sie die **Eingabetaste**, um ein Element in der Zeile auszuwählen. Benutzer mit Bildschirmlesehilfen werden benachrichtigt, wenn ein neues Fenster geöffnet werden muss.
+* Beim Zoomen auf 200 % oder mehr können Sie die **Schieneninspektor** -Symbol, da die rechte Leiste reduziert wird, um mehr Anzeigeraum für die Tabelle bereitzustellen.
+
+![Das Symbol für den Schieneninspektor im Fokus, wenn ein Benutzer auf 200 % zoomt.](images/rail-inspector.png)
 
 ### Barrierefreiheit beim Durchsuchen von Tabellen
 
