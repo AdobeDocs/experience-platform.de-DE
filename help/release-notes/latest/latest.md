@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform - Versionshinweise - September 2022
 description: Die Versionshinweise für Adobe Experience Platform vom September 2022.
-source-git-commit: 64c376b52aa7f7827c19194d677d8a1648c04195
+source-git-commit: c9abf2d0ef2b8a9a9727224fdbb4c784dd041158
 workflow-type: tm+mt
-source-wordcount: '2776'
-ht-degree: 30%
+source-wordcount: '2959'
+ht-degree: 31%
 
 ---
 
@@ -24,6 +24,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [Auditprotokolle](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [Datenerfassung](#data-collection)
+- [Ziele](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Identity Service](#identity-service)
 - [Query Service](#query-service)
@@ -135,6 +136,34 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 {style=&quot;table-layout:auto&quot;}
 
 Weitere Informationen zur Datenerfassung in Platform finden Sie in der [Übersicht zur Datenerfassung](../../collection/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| ----------- | ----------- |
+| Destination SDK | Destination SDK bietet jetzt vollständige Unterstützung für Partner und Kunden, die Batch- (oder dateibasierte) produktive oder private Ziele erstellen. Weitere Informationen finden Sie auf den folgenden Dokumentationsseiten: <ul><li>[Übersicht über Destinationen SDK](/help/destinations/destination-sdk/overview.md)</li><li>[Dateibasiertes Ziel konfigurieren](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Testen Ihrer dateibasierten Ziele](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Neue oder aktualisierte Ziele**
+
+| Ziel | Beschreibung |
+| ----------- | ----------- |
+| [[!DNL Salesforce CRM]](../..//destinations/catalog/crm/salesforce.md) | Die [!DNL Salesforce CRM] Das Ziel wurde aktualisiert, um sowohl Kontakt- als auch Lead-Aktualisierungen sowie Leistungsverbesserungen für schnellere Aktualisierungen zu unterstützen. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Neue oder aktualisierte Dokumentation**
+
+| Dokumentation | Beschreibung |
+| ----------- | ----------- |
+| Dokumentation zur API für Zielflussdienst-API | Die [Referenzdokumentation zur Ziel-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) wurde aktualisiert und enthält Anleitungen zum Ausführen von Vorgängen für dateibasierte Ziele. Vorgänge für Streaming-Ziele werden zu einem späteren Zeitpunkt hinzugefügt. |
+
+Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
 ## Experience-Datenmodell (XDM) {#xdm}
 
