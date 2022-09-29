@@ -2,7 +2,7 @@
 title: Konfigurieren der Adobe Experience Platform Web SDK-Erweiterung
 description: So konfigurieren Sie die Adobe Experience Platform Web SDK-Tag-Erweiterung in der Benutzeroberfläche.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 3ab02646968222c0ad09c1d8ce8fda04de7aaac6
 workflow-type: tm+mt
 source-wordcount: '1041'
 ht-degree: 6%
@@ -19,15 +19,15 @@ In diesem Dokument wird beschrieben, wie Sie die Erweiterung in der Benutzerober
 
 Wenn die Platform Web SDK-Erweiterung bereits für eine Eigenschaft installiert wurde, öffnen Sie die Eigenschaft in der Benutzeroberfläche und wählen Sie die **[!UICONTROL Erweiterungen]** Registerkarte. Wählen Sie unter dem Platform Web SDK die Option **[!UICONTROL Konfigurieren]**.
 
-![](../images/extension/overview/configure.png)
+![](../assets/extension/overview/configure.png)
 
 Wenn Sie die Erweiterung noch nicht installiert haben, wählen Sie die **[!UICONTROL Katalog]** Registerkarte. Suchen Sie in der Liste der verfügbaren Erweiterungen die Platform Web SDK-Erweiterung und wählen Sie **[!UICONTROL Installieren]**.
 
-![](../images/extension/overview/install.png)
+![](../assets/extension/overview/install.png)
 
 In beiden Fällen gelangen Sie zur Konfigurationsseite für das Platform Web SDK. In den folgenden Abschnitten werden die Konfigurationsoptionen der Erweiterung beschrieben.
 
-![](../images/extension/overview/config-screen.png)
+![](../assets/extension/overview/config-screen.png)
 
 ## Allgemeine Konfigurationsoptionen
 
@@ -56,7 +56,7 @@ Siehe Handbuch unter [datastreams](../datastreams/overview.md) für weitere Info
 
 ## [!UICONTROL Datenschutz]
 
-![](../images/extension/overview/privacy.png)
+![](../assets/extension/overview/privacy.png)
 
 Die [!UICONTROL Datenschutz] können Sie konfigurieren, wie das SDK mit Zustimmungssignalen von Benutzern von Ihrer Website umgeht. Insbesondere können Sie damit das standardmäßige Zustimmungsniveau auswählen, das von einem Benutzer angenommen wird, wenn keine andere explizite Zustimmungsvoreinstellung angegeben wurde. Die standardmäßige Zustimmungsstufe wird nicht im Profil des Benutzers gespeichert. In der folgenden Tabelle wird aufgeschlüsselt, was jede Option beinhaltet:
 
@@ -71,7 +71,7 @@ Verwenden Sie &quot;Out&quot;oder &quot;Ausstehend&quot;, wenn Sie eine ausdrüc
 
 ## [!UICONTROL Identität]
 
-![](../images/extension/overview/identity.png)
+![](../assets/extension/overview/identity.png)
 
 ### [!UICONTROL Migrieren der ECID aus der VisitorAPI]
 
@@ -83,13 +83,13 @@ Mit dieser Option kann das SDK versuchen, eine Benutzer-ID in einem Drittanbiete
 
 ## [!UICONTROL Personalisierung]
 
-![](../images/extension/overview/personalization.png)
+![](../assets/extension/overview/personalization.png)
 
 Wenn Sie bestimmte Teile ausblenden möchten, wenn Ihre Site beim Laden personalisierter Inhalte geladen wird, können Sie die Elemente angeben, die im Stil-Editor zum Vorab-Ausblenden ausgeblendet werden sollen. Sie können dann das Ihnen bereitgestellte standardmäßige Codefragment zur Vorab-Ausblendung kopieren und in das `<head>`-Element Ihrer HTML-Site.
 
 ## [!UICONTROL Datenerfassung]
 
-![](../images/extension/overview/data-collection.png)
+![](../assets/extension/overview/data-collection.png)
 
 ### [!UICONTROL Callback-Funktion]
 
@@ -105,7 +105,7 @@ Standardmäßig erfasst das SDK bestimmte Kontextdaten in Bezug auf Gerät, Web,
 
 ## [!UICONTROL Erweiterte Einstellungen]
 
-![](../images/extension/overview/advanced-settings.png)
+![](../assets/extension/overview/advanced-settings.png)
 
 ### [!UICONTROL Edge-Basispfad]
 

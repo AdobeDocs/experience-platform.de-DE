@@ -2,7 +2,7 @@
 title: Datenvorbereitung für die Datenerfassung
 description: Erfahren Sie, wie Sie beim Konfigurieren eines Datenstroms für die Adobe Experience Platform Web- und Mobile-SDKs Ihre Daten einem XDM-Ereignisschema (Experience-Datenmodell) zuordnen können.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 3ab02646968222c0ad09c1d8ce8fda04de7aaac6
 workflow-type: tm+mt
 source-wordcount: '914'
 ht-degree: 96%
@@ -132,7 +132,7 @@ Bei der Erfassung von Eigenschaften aus einem XDM-Objekt-Datenelement gelten die
 
 Sie können die Option zum Hochladen des Objekts als Datei auswählen oder stattdessen das Raw-Objekt in das bereitgestellte Textfeld einfügen. Wenn die JSON gültig ist, wird im rechten Bereich ein Vorschauschema angezeigt. Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
 
-![JSON-Beispiel für erwartete eingehende Daten](../images/datastreams/data-prep/select-data.png)
+![JSON-Beispiel für erwartete eingehende Daten](../assets/datastreams/data-prep/select-data.png)
 
 ## [!UICONTROL Zuordnung]
 
@@ -145,25 +145,25 @@ Der Schritt **[!UICONTROL Zuordnung]** wird angezeigt, sodass Sie die Felder in 
 
 Wählen Sie zunächst **[!UICONTROL Neue Zuordnung hinzufügen]** aus, um eine neue Zuordnungszeile zu erstellen.
 
-![Hinzufügen einer neuen Zuordnung](../images/datastreams/data-prep/add-new-mapping.png)
+![Hinzufügen einer neuen Zuordnung](../assets/datastreams/data-prep/add-new-mapping.png)
 
-Wählen Sie das Quellensymbol (![Quellensymbol](../images/datastreams/data-prep/source-icon.png)) und danach im sich öffnenden Dialogfeld das Quellfeld aus, das Sie auf der bereitgestellten Arbeitsfläche zuordnen möchten. Nachdem Sie ein Feld ausgewählt haben, verwenden Sie die Schaltfläche **[!UICONTROL Auswählen]**, um fortzufahren.
+Wählen Sie das Quellensymbol (![Quellensymbol](../assets/datastreams/data-prep/source-icon.png)) und danach im sich öffnenden Dialogfeld das Quellfeld aus, das Sie auf der bereitgestellten Arbeitsfläche zuordnen möchten. Nachdem Sie ein Feld ausgewählt haben, verwenden Sie die Schaltfläche **[!UICONTROL Auswählen]**, um fortzufahren.
 
-![Auswählen des zuzuordnenden Felds im Quellenschema](../images/datastreams/data-prep/source-mapping.png)
+![Auswählen des zuzuordnenden Felds im Quellenschema](../assets/datastreams/data-prep/source-mapping.png)
 
-Wählen Sie anschließend das Schemasymbol (![Schemasymbol](../images/datastreams/data-prep/schema-icon.png)) aus, um ein ähnliches Dialogfeld für das Zielereignisschema zu öffnen. Wählen Sie das Feld aus, dem Sie die Daten zuordnen möchten, und bestätigen Sie dann mit **[!UICONTROL Auswählen]**.
+Wählen Sie anschließend das Schemasymbol (![Schemasymbol](../assets/datastreams/data-prep/schema-icon.png)) aus, um ein ähnliches Dialogfeld für das Zielereignisschema zu öffnen. Wählen Sie das Feld aus, dem Sie die Daten zuordnen möchten, und bestätigen Sie dann mit **[!UICONTROL Auswählen]**.
 
-![Auswählen des Felds, das im Zielschema zugeordnet werden soll](../images/datastreams/data-prep/target-mapping.png)
+![Auswählen des Felds, das im Zielschema zugeordnet werden soll](../assets/datastreams/data-prep/target-mapping.png)
 
 Die Zuordnungsseite wird erneut mit der abgeschlossenen Feld-Zuordnung angezeigt. Der Abschnitt **[!UICONTROL Zuordnungsfortschritt]** wird aktualisiert und zeigt die Gesamtzahl der Felder an, die bereits erfolgreich zugeordnet wurden.
 
-![Feld, das erfolgreich zugeordnet wurde, mit der entsprechenden Fortschrittsanzeige](../images/datastreams/data-prep/field-mapped.png)
+![Feld, das erfolgreich zugeordnet wurde, mit der entsprechenden Fortschrittsanzeige](../assets/datastreams/data-prep/field-mapped.png)
 
 >[!TIP]
 >
 >Wenn Sie ein Array von Objekten (im Quellfeld) einem Array von anderen Objekten (im Zielfeld) zuordnen möchten, fügen Sie wie unten dargestellt in den Pfaden der Quell- und Zielfelder nach dem Array-Namen `[*]` ein.
 >
->![Array-Objektzuordnung](../images/datastreams/data-prep/array-object-mapping.png)
+>![Array-Objektzuordnung](../assets/datastreams/data-prep/array-object-mapping.png)
 
 ### Importieren vorhandener Zuordnungsregeln {#import-mapping}
 
@@ -175,11 +175,11 @@ Wenn Sie zuvor einen Datenstrom erstellt haben, können Sie seine konfigurierten
 
 Wählen Sie zunächst **[!UICONTROL Zuordnung importieren]** aus.
 
-![Bild, das die Auswahl der Schaltfläche [!UICONTROL Zuordnung importieren] zeigt](../images/datastreams/data-prep/import-mapping-button.png)
+![Bild, das die Auswahl der Schaltfläche [!UICONTROL Zuordnung importieren] zeigt](../assets/datastreams/data-prep/import-mapping-button.png)
 
 Wählen Sie im sich öffnenden Dialogfeld den Datenstrom aus, dessen Zuordnungsregeln Sie importieren möchten. Wählen Sie danach **[!UICONTROL Vorschau]** aus.
 
-![Bild mit einem ausgewählten vorhandenen Datenstrom](../images/datastreams/data-prep/select-mapping-rules.png)
+![Bild mit einem ausgewählten vorhandenen Datenstrom](../assets/datastreams/data-prep/select-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -187,7 +187,7 @@ Wählen Sie im sich öffnenden Dialogfeld den Datenstrom aus, dessen Zuordnungsr
 
 Im nächsten Bildschirm wird eine Vorschau der gespeicherten Zuordnungsregeln für den ausgewählten Datenstrom gezeigt. Prüfen Sie, ob die angezeigten Zuordnungen korrekt sind und wählen Sie dann **[!UICONTROL Importieren]** aus, um die Zuordnungen zu bestätigen und zum neuen Datenstrom hinzuzufügen.
 
-![Bild mit den zu importierenden Zuordnungsregeln](../images/datastreams/data-prep/import-mapping-rules.png)
+![Bild mit den zu importierenden Zuordnungsregeln](../assets/datastreams/data-prep/import-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -199,7 +199,7 @@ Führen Sie die oben genannten Schritte erneut aus, um den Rest der Felder dem Z
 
 Nachdem der Zähler der erforderlichen Felder null erreicht hat und Sie Ihre Zuordnung überprüft haben, wählen Sie **[!UICONTROL Speichern]** aus, um Ihre Änderungen abzuschließen.
 
-![Zuordnungen abgeschlossen](../images/datastreams/data-prep/mapping-complete.png)
+![Zuordnungen abgeschlossen](../assets/datastreams/data-prep/mapping-complete.png)
 
 ## Nächste Schritte
 

@@ -2,7 +2,7 @@
 title: Integrieren der IAB TCF 2.0-Unterstützung mithilfe von Tags und der Platform Web SDK-Erweiterung
 description: Erfahren Sie, wie Sie die IAB TCF 2.0-Zustimmung mit Tags und der Adobe Experience Platform Web SDK-Erweiterung einrichten.
 exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
 workflow-type: tm+mt
 source-wordcount: '838'
 ht-degree: 0%
@@ -64,7 +64,7 @@ Dieser benutzerspezifische Code umfasst zwei Dinge:
 * Wert: &quot;%IAB TCF Consent String%&quot;
 * Die DSGVO gilt: &quot;%IAB TCF Einverständniserklärung DSGVO%&quot;
 
-![IAB-Einverständnisaktion festlegen](../../images/consent/iab-tcf/with-launch/iab-action.png)
+![IAB-Einverständnisaktion festlegen](../../assets/consent/iab-tcf/with-launch/iab-action.png)
 
 >[!IMPORTANT]
 >

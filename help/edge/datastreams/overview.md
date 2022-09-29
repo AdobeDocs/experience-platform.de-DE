@@ -3,10 +3,10 @@ title: Übersicht über Datenströme
 description: Verbinden Sie Ihre Client-seitige Experience Platform SDK-Integration mit Adobe-Produkten und Zielen von Drittanbietern.
 keywords: Konfiguration;Datenströme;datastreamId;edge;datastream id;Umgebungseinstellungen;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Ereignis-Datensatz;Target;Client-Code;Eigenschafts-Token;Target-Umgebungs-ID;Cookie-Ziele;URL-Ziele;Analytics Settings Blockreport suite id;Datenvorbereitung für Datenerfassung;Data Prep;Mapper;XDM Mapper;Mapper in Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 81b20d40d3511592125cba123fa070fc27aace5a
 workflow-type: tm+mt
-source-wordcount: '1725'
-ht-degree: 95%
+source-wordcount: '1789'
+ht-degree: 92%
 
 ---
 
@@ -20,29 +20,29 @@ In diesem Dokument werden die Schritte zum Konfigurieren eines Datenspeichers in
 
 Sie können Datenspeicher in der Datenerfassungs-Benutzeroberfläche oder in der Experience Platform-Benutzeroberfläche erstellen und verwalten, indem Sie **[!UICONTROL Datenspeicher]** in der linken Navigation.
 
-![Registerkarte &quot;Datenspeicher&quot;in der Benutzeroberfläche](../images/datastreams/overview/datastreams-tab.png)
+![Registerkarte &quot;Datenspeicher&quot;in der Benutzeroberfläche](../assets/datastreams/overview/datastreams-tab.png)
 
 In der Registerkarte [!UICONTROL Datenströme] wird eine Liste mit vorhandenen Datenströmen angezeigt, darunter auch der Anzeigename, die Kennung und das Datum der letzten Änderung. Wählen Sie den Namen eines Datenstroms aus, um [seine Details anzuzeigen und Services zu konfigurieren](#view-details).
 
 Wählen Sie das Symbol „Mehr“ (**...**) aus, wenn Sie für einen bestimmten Datenstrom weitere Optionen anzeigen möchten. Auswählen Sie **[!UICONTROL Bearbeiten]** aus, um die [Basiskonfiguration](#configure) für den Datenstrom zu aktualisieren, oder wählen Sie **[!UICONTROL Löschen]** aus, um den Datenstrom zu entfernen.
 
-![Optionen zum Bearbeiten oder Löschen eines vorhandenen Datenstroms](../images/datastreams/overview/edit-datastream.png)
+![Optionen zum Bearbeiten oder Löschen eines vorhandenen Datenstroms](../assets/datastreams/overview/edit-datastream.png)
 
 ## Erstellen eines neuen Datenstroms {#create}
 
 Um einen Datenstrom zu erstellen, wählen Sie zunächst **[!UICONTROL Neuer Datenstrom]** aus.
 
-![Neuen Datenspeicher auswählen](../images/datastreams/overview/new-datastream-button.png)
+![Neuen Datenspeicher auswählen](../assets/datastreams/overview/new-datastream-button.png)
 
 Der Workflow zur Erstellung eines Datenstroms wird geöffnet, beginnend mit dem Konfigurationsschritt. Geben Sie hier einen Namen und eine optionale Beschreibung für den Datenstrom an.
 
 Wenn Sie diesen Datenstrom zur Verwendung in Experience Platform konfigurieren und das Platform Web SDK verwenden, müssen Sie auch ein [ereignisbasiertes Experience-Datenmodell-Schema (XDM)](../../xdm/classes/experienceevent.md) für die Daten auswählen, die aufgenommen werden sollen.
 
-![Basiskonfiguration für einen Datenstrom](../images/datastreams/overview/configure.png)
+![Basiskonfiguration für einen Datenstrom](../assets/datastreams/overview/configure.png)
 
 Wählen Sie **[!UICONTROL Erweiterte Optionen]** aus, um zusätzliche Steuerelemente zum Konfigurieren des Datenstroms anzuzeigen.
 
-![Erweiterte Konfigurationsoptionen](../images/datastreams/overview/advanced-options.png)
+![Erweiterte Konfigurationsoptionen](../assets/datastreams/overview/advanced-options.png)
 
 | Einstellung | Beschreibung |
 | --- | --- |
@@ -57,7 +57,7 @@ Wenn hier Ihren Datenstrom für Experience Platform konfigurieren, folgen Sie de
 
 Nachdem Sie einen neuen Datenstrom konfiguriert oder einen vorhandenen ausgewählt haben, um ihn anzuzeigen, wird die Detailseite für diesen Datenstrom angezeigt. Hier finden Sie weitere Informationen zum Datenstrom, einschließlich seiner Kennung.
 
-![Detailseite für einen erstellten Datenstrom](../images/datastreams/overview/view-details.png)
+![Detailseite für einen erstellten Datenstrom](../assets/datastreams/overview/view-details.png)
 
 Im Bildschirm mit den Datenspeicherdetails können Sie [Services hinzufügen](#add-services), um Funktionen der Adobe Experience Cloud-Produkte zu aktivieren, auf die Sie Zugriff haben. Sie können auch die [Basiskonfiguration](#create) des Datenstroms bearbeiten, seine [Zuordnungsregeln](./data-prep.md) aktualisieren, [den Datenstrom kopieren](#copy) oder vollständig löschen.
 
@@ -65,15 +65,15 @@ Im Bildschirm mit den Datenspeicherdetails können Sie [Services hinzufügen](#a
 
 Wählen Sie auf der Detailseite eines Datenstroms die Option **[!UICONTROL Service hinzufügen]** aus, um verfügbare Services für diesen Datenstrom hinzuzufügen.
 
-![„Service hinzufügen“ auswählen, um fortzufahren](../images/datastreams/overview/add-service.png)
+![„Service hinzufügen“ auswählen, um fortzufahren](../assets/datastreams/overview/add-service.png)
 
 Wählen Sie im nächsten Bildschirm im Dropdown-Menü einen Service aus, der für diesen Datenstrom konfiguriert werden soll. In dieser Liste werden nur die Services angezeigt, auf die Sie Zugriff haben.
 
-![Wählen Sie einen Service aus der Liste aus](../images/datastreams/overview/service-selection.png)
+![Wählen Sie einen Service aus der Liste aus](../assets/datastreams/overview/service-selection.png)
 
 Wählen Sie den gewünschten Service aus, geben Sie die angezeigten Konfigurationsoptionen ein und wählen Sie dann **[!UICONTROL Speichern]** aus, um den Service zum Datenstrom hinzuzufügen. Alle hinzugefügten Services werden in der Detailansicht für den Datenstrom angezeigt.
 
-![Zu einem Datenstrom hinzugefügte Services](../images/datastreams/overview/services-added.png)
+![Zu einem Datenstrom hinzugefügte Services](../assets/datastreams/overview/services-added.png)
 
 In den folgenden Unterabschnitten werden die Konfigurationsoptionen für die einzelnen Services beschrieben.
 
@@ -85,7 +85,7 @@ In den folgenden Unterabschnitten werden die Konfigurationsoptionen für die ein
 
 Mit diesem Service wird festgelegt, ob und wie Daten an Adobe Analytics gesendet werden. Weitere Informationen finden Sie in der Anleitung zum [Senden von Daten an Analytics](../data-collection/adobe-analytics/analytics-overview.md).
 
-![Adobe Analytics-Einstellungen](../images/datastreams/overview/analytics-config.png)
+![Adobe Analytics-Einstellungen](../assets/datastreams/overview/analytics-config.png)
 
 | Einstellung | Beschreibung |
 | --- | --- |
@@ -95,7 +95,7 @@ Mit diesem Service wird festgelegt, ob und wie Daten an Adobe Analytics gesendet
 
 Mit diesem Service wird festgelegt, ob und wie Daten an Adobe Audience Manager gesendet werden. Zum Senden von Daten an Audience Manager müssen Sie nur diesen Abschnitt aktivieren. Die anderen Einstellungen sind optional, werden jedoch empfohlen.
 
-![Adobe Audience Manager-Einstellungen](../images/datastreams/overview/audience-manager-config.png)
+![Adobe Audience Manager-Einstellungen](../assets/datastreams/overview/audience-manager-config.png)
 
 | Einstellung | Beschreibung |
 | --- | --- |
@@ -108,27 +108,28 @@ Mit diesem Service wird festgelegt, ob und wie Daten an Adobe Audience Manager g
 >
 >Beachten Sie beim Aktivieren eines Datastreams für Platform die aktuell verwendete Platform-Sandbox, wie im oberen Band der Benutzeroberfläche angezeigt.
 >
->![Ausgewählte Sandbox](../images/datastreams/overview/platform-sandbox.png)
+>![Ausgewählte Sandbox](../assets/datastreams/overview/platform-sandbox.png)
 >
 >Sandboxes sind virtuelle Partitionen in Adobe Experience Platform, mit denen Sie Ihre Daten und Implementierungen von anderen in Ihrem Unternehmen isolieren können. Nachdem ein Datenstrom erstellt wurde, kann seine Sandbox nicht mehr geändert werden. Weitere Informationen zur Rolle von Sandboxes in Experience Platform finden Sie i der [Sandbox-Dokumentation](../../sandboxes/home.md).
 
 Mit diesem Service wird festgelegt, ob und wie Daten an Adobe Experience Platform gesendet werden.
 
-![Adobe Experience Platform-Einstellungen](../images/datastreams/overview/platform-config.png)
+![Adobe Experience Platform-Einstellungen](../assets/datastreams/overview/platform-config.png)
 
 | Einstellung | Beschreibung |
 |---| --- |
 | [!UICONTROL Ereignis-Datensatz] | **(Erforderlich)** Wählen Sie den Platform-Datensatz aus, an den Kundenereignisdaten gestreamt werden. Dieses Schema muss die [XDM ExperienceEvent-Klasse](../../xdm/classes/experienceevent.md) verwenden. |
 | [!UICONTROL Profildatensatz] | Wählen Sie den Platform-Datensatz aus, an den Kundenattributdaten gesendet werden. Dieses Schema muss die [Klasse „XDM Individual Profile“](../../xdm/classes/individual-profile.md) verwenden. |
-| [!UICONTROL Offer Decisioning] | Aktivieren Sie dieses Kontrollkästchen, um Offer Decisioning für eine Platform Web SDK-Implementierung zu aktivieren. Weitere Informationen dazu finden Sie in der Anleitung zum [Verwenden von Offer Decisioning mit dem Platform Web SDK](../personalization/offer-decisioning/offer-decisioning-overview.md). Weitere Informationen zu Offer Decisioning-Funktionen finden Sie in der [Adobe Journey Optimizer-Dokumentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=de). |
-| [!UICONTROL Edge-Segmentierung] | Aktivieren Sie dieses Kontrollkästchen, um [Edge-Segmentierung](../../segmentation/ui/edge-segmentation.md) für diesen Datenstrom zu aktivieren. Wenn das SDK Daten über einen Datenstrom sendet, für den die Edge-Segmentierung aktiviert ist, werden alle aktualisierten Segmentzugehörigkeiten für das betreffende Profil in der Antwort zurückgesendet.<br><br>Diese Option kann in Kombination mit [!UICONTROL Personalisierungszielen] für [Anwendungsfälle für die Personalisierung der nächsten Seite](../../destinations/ui/configure-personalization-destinations.md) verwendet werden. |
-| [!UICONTROL Personalisierungsziele] | Wenn diese Option nach dem Aktivieren des Kontrollkästchens [!UICONTROL Edge-Segmentierung] aktiviert wird, kann der Datenstrom mit Personalisierungszielen, wie [benutzerdefinierte Personalisierung](../../destinations/catalog/personalization/custom-personalization.md), verbunden werden. Die genauen Schritte zum [Konfigurieren von Personalisierungszielen](../../destinations/ui/configure-personalization-destinations.md) finden Sie in der Dokumentation zu Zielen. |
+| [!UICONTROL Offer Decisioning] | Aktivieren Sie dieses Kontrollkästchen, um Offer Decisioning für eine Platform Web SDK-Implementierung zu aktivieren. Weitere Informationen dazu finden Sie in der Anleitung zum [Verwenden von Offer Decisioning mit dem Platform Web SDK](../personalization/offer-decisioning/offer-decisioning-overview.md). <br><br> Weitere Informationen zu Offer Decisioning-Funktionen finden Sie in der [Adobe Journey Optimizer-Dokumentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=de). |
+| [!UICONTROL Edge-Segmentierung] | Aktivieren Sie dieses Kontrollkästchen, um [Edge-Segmentierung](../../segmentation/ui/edge-segmentation.md) für diesen Datenstrom zu aktivieren. Wenn das SDK Daten über einen Datenstrom sendet, für den die Edge-Segmentierung aktiviert ist, werden alle aktualisierten Segmentzugehörigkeiten für das betreffende Profil in der Antwort zurückgesendet.<br><br>Diese Option kann in Kombination mit [!UICONTROL Personalisierungsziele] für [Anwendungsfälle für die Personalisierung der nächsten Seite](../../destinations/ui/configure-personalization-destinations.md)oder in Kombination mit [!UICONTROL Adobe Journey Optimizer]. |
+| [!UICONTROL Personalisierungsziele] | Wenn diese Option nach dem Aktivieren des Kontrollkästchens [!UICONTROL Edge-Segmentierung] aktiviert wird, kann der Datenstrom mit Personalisierungszielen, wie [benutzerdefinierte Personalisierung](../../destinations/catalog/personalization/custom-personalization.md), verbunden werden. <br><br>Die genauen Schritte zum [Konfigurieren von Personalisierungszielen](../../destinations/ui/configure-personalization-destinations.md) finden Sie in der Dokumentation zu Zielen. |
+| [!UICONTROL Adobe Journey Optimizer] | Aktivieren Sie dieses Kontrollkästchen, um [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=de) für diesen Datastream. <br><br> Durch Aktivierung dieser Option kann der Datastream personalisierte Inhalte aus Web- und App-basierten eingehenden Kampagnen in [!DNL Adobe Journey Optimizer]. Diese Option erfordert [!UICONTROL Edge-Segmentierung] aktiv sein. Wenn [!UICONTROL Edge-Segmentierung] deaktiviert ist, ist diese Option grau ausgeblendet. |
 
 ### Adobe Target-Einstellungen {#target}
 
 Mit diesem Service wird festgelegt, ob und wie Daten an Adobe Target gesendet werden.
 
-![Adobe Target-Einstellungen](../images/datastreams/overview/target-config.png)
+![Adobe Target-Einstellungen](../assets/datastreams/overview/target-config.png)
 
 | Einstellung | Beschreibung |
 | --- | --- |
@@ -140,7 +141,7 @@ Mit diesem Service wird festgelegt, ob und wie Daten an Adobe Target gesendet we
 
 Mit diesem Service wird festgelegt, ob und wie Daten an die [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) gesendet werden.
 
-![Abschnitt „Ereignisweiterleitung“ der Konfigurations-Benutzeroberfläche](../images/datastreams/overview/event-forwarding-config.png)
+![Abschnitt „Ereignisweiterleitung“ der Konfigurations-Benutzeroberfläche](../assets/datastreams/overview/event-forwarding-config.png)
 
 | Einstellung | Beschreibung |
 | --- | --- |
@@ -161,15 +162,15 @@ Sie können eine Kopie eines vorhandenen Datenstroms erstellen und seine Details
 
 Wählen Sie auf der Hauptseite im Arbeitsbereich [!UICONTROL Datenströme] die Auslassungszeichen für den entsprechenden Datenstrom aus (**...**) und danach **[!UICONTROL Kopieren]**.
 
-![Bild, das die Option [!UICONTROL Kopieren] zeigt, die in der Datenstrom-Listenansicht ausgewählt wird](../images/datastreams/overview/copy-datastream-list.png)
+![Bild, das die Option [!UICONTROL Kopieren] zeigt, die in der Datenstrom-Listenansicht ausgewählt wird](../assets/datastreams/overview/copy-datastream-list.png)
 
 Alternativ können Sie in der Detailansicht eines Datenstroms **[!UICONTROL Datenstrom kopieren]** auswählen.
 
-![Bild, das die Option [!UICONTROL Kopieren] zeigt, die in der Datenstrom-Detailansicht ausgewählt wird](../images/datastreams/overview/copy-datastream-details.png)
+![Bild, das die Option [!UICONTROL Kopieren] zeigt, die in der Datenstrom-Detailansicht ausgewählt wird](../assets/datastreams/overview/copy-datastream-details.png)
 
 Ein Bestätigungsdialogfeld erscheint, in dem Sie aufgefordert werden, einen eindeutigen Namen für den neuen, zu erstellenden Datenstrom sowie Details zu den Konfigurationsoptionen, die kopiert werden, anzugeben. Wenn Sie bereit sind, wählen Sie **[!UICONTROL Kopieren]** aus.
 
-![Bild des Bestätigungsdialogfelds zum Kopieren eines Datenstroms](../images/datastreams/overview/copy-datastream-confirm.png)
+![Bild des Bestätigungsdialogfelds zum Kopieren eines Datenstroms](../assets/datastreams/overview/copy-datastream-confirm.png)
 
 Die Hauptseite des Arbeitsbereichs [!UICONTROL Datenstrom] wird erneut angezeigt, diesmal mit dem neuen Datenstrom.
 
