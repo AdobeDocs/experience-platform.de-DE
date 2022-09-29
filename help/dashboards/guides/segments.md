@@ -4,10 +4,10 @@ title: Dashboard-Anleitung für Segmente
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu Segmenten anzeigen können, die Ihr Unternehmen erstellt hat.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
+source-git-commit: 18288130b98e13d824273426a860d97722c434de
 workflow-type: tm+mt
-source-wordcount: '1791'
-ht-degree: 11%
+source-wordcount: '2094'
+ht-degree: 9%
 
 ---
 
@@ -85,6 +85,7 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 * [[!UICONTROL Trend bei der Änderung der Zielgruppengröße]](#audience-size-change-trend)
 * [[!UICONTROL Trend der Zielgruppengröße nach Identität]](#audience-size-trend-by-identity)
 * [[!UICONTROL Zielgruppenüberschneidung]](#audience-overlap)
+* [[!UICONTROL Bericht &quot;Zielgruppenüberschneidung&quot;]](#audience-overlap-report)
 * [[!UICONTROL Identitätsüberschneidung]](#identity-overlap)
 * [[!UICONTROL Profile nach Identität]](#profiles-by-identity)
 * [[!UICONTROL Geplante Aktivierungen]](#scheduled-activations)
@@ -147,14 +148,33 @@ Mit diesem Widget können Sie Ihre Segmentierungsstrategie optimieren, indem Sie
 
 ![Das Widget Zielgruppenüberschneidung .](../images/segments/audience-overlap.png)
 
-<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
-<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+### [!UICONTROL Bericht &quot;Zielgruppenüberschneidung&quot;] {#audience-overlap-report}
 
-<!-- View an ordered list of audiences by Highest or Lowest overlap percentages. -->
+Dieses Widget tabellarisiert die Daten zur Zielgruppenüberschneidung für ein bestimmtes Segment. Eine Liste mit fünf Zielgruppen, die von den Prozentsätzen der höchsten bis zur niedrigsten Überschneidung sortiert sind, wird für das Segment bereitgestellt, das oben im Bildschirm aus dem Dropdown-Menü ausgewählt wurde. Aus Gründen der Klarheit wird Ihr ausgewähltes Segment im [!UICONTROL SEGMENT A NAME] Spalte. Die Analyse der Zielgruppenüberschneidung wird für das zweite Segment bereitgestellt, das im [!UICONTROL SEGMENT B NAME] Spalte. Die prozentuale Überschneidung wird in der dritten Spalte genau auf zwölf Dezimalstellen angegeben.
 
-<!-- ![The Audience overlap report widget.]() -->
+Der Bericht zur Zielgruppenüberschneidung hilft Ihnen beim Erstellen neuer Hochleistungssegmente. Durch die Beobachtung hoher prozentualer Überschneidungen können Sie Zielgruppen unterdrücken und das Senden derselben Zielgruppe an verschiedene Ziele verhindern. Sie helfen Ihnen auch dabei, versteckte Einblicke zu identifizieren, die bei einer besseren Segmentierung hilfreich sein könnten. Eine geringe prozentuale Überschneidung hilft, eindeutige Profile zu finden, die verfolgt werden sollen.
 
-<!-- https://jira.corp.adobe.com/browse/PLAT-125511 -->
+Auswählen **[!UICONTROL Mehr anzeigen]** , um ein Vollbilddialogfeld zu öffnen, das mehr Segmentüberlagerungsdaten enthält.
+
+![Das Berichts-Widget &quot;Zielgruppenüberschneidung&quot;wurde hervorgehoben.](../images/segments/audience-overlap-report.png)
+
+Die [!UICONTROL Bericht &quot;Zielgruppenüberschneidung&quot;] angezeigt. Dieses Dialogfeld kann bis zu 50 Zeilen mit Analysen zur Zielgruppenüberschneidung enthalten, die in sechs Spalten unterteilt sind. Wählen Sie das Einstellungssymbol (![Das Einstellungssymbol.](../images/segments/settings-icon.png)), um Spalten aus der Tabelle zu entfernen oder hinzuzufügen.
+
+![Das Berichtdialogfeld &quot;Zielgruppenüberschneidung&quot;.](../images/segments/audience-overlap-report-dialog.png)
+
+>[!NOTE]
+>
+>Wählen Sie die **[!UICONTROL Überlappung]** Spaltenüberschrift verwenden, um die Rangfolge der Ergebnisse zwischen der höchsten und der niedrigsten bzw. der niedrigsten der höchsten zu ändern.
+
+Um den gesamten Bericht im PDF-Format herunterzuladen, wählen Sie das Optionsmenü (**`...`**) gefolgt von **[!UICONTROL Download]**.
+
+![Das Berichtdialogfeld Zielgruppenüberschneidung wurde mit den Auslassungszeichen und der Download-Option hervorgehoben.](../images/segments/segments-audience-overlap-report-dialog-download.png)
+
+Wählen Sie eine Zeile aus dem Bericht aus, um ein Venn-Diagramm der Überschneidungsanalyse zu öffnen. Bewegen Sie den Mauszeiger über einen Abschnitt des Venn-Diagramms, um die Profilanzahl in einem Dialogfeld anzuzeigen.
+
+![Das Berichtdialogfeld Zielgruppenüberschneidung wird mit einem Venn-Diagramm und einer hervorgehobenen Zeile angezeigt.](../images/segments/audience-overlap-report-dialog-venn.png)
+
+Auswählen **[!UICONTROL Schließen]** , um zur [!UICONTROL Segmente] Dashboard.
 
 ### [!UICONTROL Identitätsüberschneidung] {#identity-overlap}
 
