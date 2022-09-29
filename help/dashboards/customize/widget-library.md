@@ -3,10 +3,10 @@ keywords: Experience Platform;Benutzeroberfläche;UI;Dashboards;Dashboard;Profil
 title: Übersicht über die Dashboard-Widget-Bibliothek
 description: Dieses Handbuch enthält schrittweise Anweisungen für den Zugriff auf die Widget-Bibliothek in Adobe Experience Platform.
 exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
+source-git-commit: 09f212741321f17372d52fee507a96d2d2834e85
 workflow-type: tm+mt
-source-wordcount: '458'
-ht-degree: 63%
+source-wordcount: '516'
+ht-degree: 56%
 
 ---
 
@@ -41,6 +41,12 @@ Wählen Sie **[!UICONTROL Widget-Bibliothek]** aus, um die Widget-Bibliothek zu 
 Aus dem [!UICONTROL Widget-Bibliothek]wählen Sie ein beliebiges Widget aus der Liste der verfügbaren Standard- oder benutzerdefinierten Widgets aus. Ein Häkchen in der Ecke des Widgets zeigt Ihre Auswahl an.
 
 ![Die Widget-Bibliothek mit einem ausgewählten Widget und hervorgehobenem Häkchen.](../images/customization/confirm-selected-widget-to-add.png)
+
+### Beschriftung in Gebrauch {#in-use-label}
+
+Widgets, die bereits zu einem Dashboard hinzugefügt wurden, haben eine [!UICONTROL In Verwendung] -Beschriftung angehängt, wenn sie in der Widget-Bibliothek angezeigt wird. In dieser Bezeichnung werden Widgets hervorgehoben, die bereits zu Ihrem Dashboard hinzugefügt wurden, um Dopplungen zu vermeiden. Sie können jedoch immer noch dasselbe Widget mehrmals hinzufügen, falls Sie es wünschen.
+
+![Die Widget-Bibliothek mit hervorgehobener Beschriftung.](../images/customization/in-use-label.png)
 
 Nachdem Sie alle erforderlichen Widgets ausgewählt haben, wählen Sie **[!UICONTROL Widgets hinzufügen]** um Ihre Auswahl zu bestätigen und die Widgets zu Ihrem Dashboard hinzuzufügen.
 
