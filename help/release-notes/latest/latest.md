@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
-source-git-commit: bbc9df59f91b6de12e902a71f7b9d054735cad7b
+source-git-commit: ac60e664d7708d9ac6772c61d13b7c1c44e92321
 workflow-type: tm+mt
-source-wordcount: '3079'
+source-wordcount: '3106'
 ht-degree: 30%
 
 ---
@@ -118,7 +118,7 @@ Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Einb
 | Beschriftung in Gebrauch | Bei der Anzeige in der Widget-Bibliothek erkennt die verwendete Bezeichnung einfach, ob in Ihrem Dashboard vorhandene Widgets vorhanden sind. Dadurch lässt sich die Duplizierung einfach vermeiden, obwohl Sie immer noch dasselbe Widget mehr als einmal hinzufügen können. |
 | Benutzerdefinierte Dashboards | Benutzerdefinierte Dashboards helfen Ihnen, Einblicke zu beschleunigen und Visualisierungen anzupassen, indem Sie benutzerdefinierte Dashboards erstellen und verwalten können. Mit benutzerdefinierten Dashboards können Sie maßgeschneiderte Widgets erstellen, hinzufügen und bearbeiten, um für Ihr Unternehmen relevante Schlüsselmetriken zu visualisieren. Lesen Sie die [Funktionshandbuch](../../dashboards/user-defined-dashboards.md) , um mehr zu erfahren. |
 | Datenmodell der Customer Data Platform Insights | Die Funktion &quot;Customer Data Platform (CDP) Insights Data Model&quot;stellt die Datenmodelle und SQL bereit, die die Einblicke für verschiedene Profil-, Ziel- und Segmentierungs-Widgets ermöglichen. Sie können diese SQL-Abfragevorlagen anpassen, um CDP-Berichte für Ihre Marketing- und Key Performance Indicators zu erstellen. Diese Einblicke können dann als benutzerdefinierte Widgets für Ihre benutzerdefinierten Dashboards verwendet werden. Lesen Sie die [Handbuch zur Funktion &quot;CDP Insights Data Model&quot;](../../dashboards/cdp-insights-data-model.md) , um mehr zu erfahren. |
-| Bericht-Widget &quot;Zielgruppenüberschneidung&quot; | Dieses Widget ist für beide verfügbar [!UICONTROL Profile] und [!UICONTROL Segmente] Dashboards. Der Bericht bietet eine geordnete Liste von Zielgruppen, die nach den höchsten oder niedrigsten Überschneidungsprozentsätzen für Ihr ausgewähltes Segment sortiert sind. Aus dem [!UICONTROL Profile] Dashboard können Sie Ihre Zielgruppenüberschneidung nach Zusammenführungsrichtlinien aus allen verfügbaren Segmenten filtern und anzeigen. Die [!UICONTROL Segmente] Mit Dashboards können Sie die Zielgruppenüberschneidung nach einem bestimmten Segment filtern.<br>Verwenden Sie diese Analyse, um neue Hochleistungssegmente zu erstellen und zu vermeiden, dass dieselbe Zielgruppe an verschiedene Ziele gesendet wird. Der Bericht hilft auch, versteckte Einblicke zu identifizieren, um die Segmentierung zu verbessern oder eindeutige Profile zu finden, die verfolgt werden sollen. |
+| Bericht-Widget &quot;Zielgruppenüberschneidung&quot; | Dieses Widget ist für beide verfügbar [!UICONTROL Profile] und [!UICONTROL Segmente] Dashboards. Der Bericht bietet eine geordnete Liste von Zielgruppen, die nach den höchsten oder niedrigsten Überschneidungsprozentsätzen für Ihr ausgewähltes Segment sortiert sind. Aus dem [!UICONTROL Profile] Dashboard können Sie Ihre Zielgruppenüberschneidung nach Zusammenführungsrichtlinien aus allen verfügbaren Segmenten filtern und anzeigen. Die [!UICONTROL Segmente] Mit Dashboards können Sie die Zielgruppenüberschneidung nach einem bestimmten Segment filtern.<br>Verwenden Sie diese Analyse, um neue Hochleistungssegmente zu erstellen und zu vermeiden, dass dieselbe Zielgruppe an verschiedene Ziele gesendet wird. Der Bericht hilft auch, versteckte Einblicke zu identifizieren, um die Segmentierung zu verbessern oder eindeutige Profile zu finden, die verfolgt werden sollen. Lesen Sie die entsprechenden [profiles](../../dashboards/guides/profiles.md#audience-overlap-report) und [Segmente](../../dashboards/guides/segments.md#audience-overlap-report) Widget-Handbücher , um mehr zu erfahren. |
 
 Weitere Informationen zu [!DNL Dashboards] finden Sie in der [[!DNL Dashboards] Übersicht](../../dashboards/home.md).
 
@@ -238,8 +238,8 @@ Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von 
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Warnhinweis-API | Mit Adobe Experience Platform Query Service können Sie Warnhinweise für Ad-hoc-Abfragen und geplante Abfragen abonnieren. Warnhinweise können per E-Mail, über die Platform-Benutzeroberfläche oder beides empfangen werden. Zurzeit können Abfragewarnungen nur mit dem [Query Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
-| Datensatzbeispiele | Mit den Beispielen von Query Service-Datensätzen können Sie forschende Abfragen zu Big Data durchführen, wobei die Verarbeitungszeit auf Kosten der Genauigkeit der Abfrage erheblich verkürzt wird. |
+| Warnhinweis-API | Mit Adobe Experience Platform Query Service können Sie Warnhinweise für Ad-hoc-Abfragen und geplante Abfragen abonnieren. Warnhinweise können per E-Mail, über die Platform-Benutzeroberfläche oder beides empfangen werden. Zurzeit können Abfragewarnungen nur mit dem [Query Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/). Siehe [Dokumentation zu Abfragewarnungen](../../query-service/api/alert-subscriptions.md) , um mehr zu erfahren. |
+| Datensatzbeispiele | Mit den Beispielen von Query Service-Datensätzen können Sie forschende Abfragen zu Big Data durchführen, wobei die Verarbeitungszeit auf Kosten der Genauigkeit der Abfrage erheblich verkürzt wird. Siehe [Beispiel-Handbuch für Datensätze](../../query-service/sql/dataset-samples.md) , um mehr zu erfahren. |
 
 Weitere Informationen zu [!DNL Query Service] finden Sie in der [[!DNL Query Service] Übersicht](../../query-service/home.md).
 
