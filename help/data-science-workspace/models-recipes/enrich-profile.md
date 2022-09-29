@@ -6,16 +6,16 @@ topic-legacy: tutorial
 type: Tutorial
 description: Dieses Dokument bietet eine Anleitung zur Anreicherung von Echtzeit-Kundenprofil mit Einblicken aus maschinellem Lernen.
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 89a9b64f2fb238c08a281f29a035ce0b24b34804
 workflow-type: tm+mt
-source-wordcount: '640'
-ht-degree: 26%
+source-wordcount: '577'
+ht-degree: 18%
 
 ---
 
 # Anreichern [!DNL Real-time Customer Profile] mit Einblicken aus maschinellem Lernen
 
-Adobe Experience Platform [!DNL Data Science Workspace] bietet die Tools und Ressourcen zum Erstellen, Auswerten und Verwenden maschineller Lernmodelle, um Datenprognosen und -einblicke zu generieren. Wenn Einblicke aus maschinellem Lernen in eine [!DNL Profile]-aktivierter Datensatz, der dieselben Daten auch als [!DNL Profile] Datensätze, die dann mithilfe von [!DNL Adobe Experience Platform Segmentation Service]. Bevor aufgenommene Profil- und Zeitreihendaten mit bestehenden Daten zusammengeführt werden und die Vereinigungsansicht aktualisiert wird, bestimmt das Echtzeit-Kundenprofil anhand der sogenannten Streaming-Segmentierung durchgehend automatisch, ob die neuen Daten in den Segmenten eingeschlossen oder von ihnen ausgeschlossen werden. Das Ergebnis: Berechnungen und Entscheidungen dazu, wie Sie Ihren Kunden herausragende, individuell auf sie abgestimmte Erlebnisse liefern, lassen sich direkt während ihrer Interaktion mit Ihrer Marke anstellen bzw. treffen.
+Adobe Experience Platform [!DNL Data Science Workspace] bietet die Tools und Ressourcen zum Erstellen, Auswerten und Verwenden maschineller Lernmodelle, um Datenprognosen und -einblicke zu generieren. Wenn Einblicke aus maschinellem Lernen in eine [!DNL Profile]-aktivierter Datensatz, der dieselben Daten auch als [!DNL Profile] Datensätze, die dann mithilfe von [!DNL Adobe Experience Platform Segmentation Service].
 
 Dieses Dokument enthält Links zu Tutorials, die Ihnen die Anreicherung ermöglichen [!DNL Real-time Customer Profile] mit Ihren Einblicken aus maschinellem Lernen.
 
