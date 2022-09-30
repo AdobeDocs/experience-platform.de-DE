@@ -3,18 +3,14 @@ keywords: Experience Platform; Startseite; beliebte Themen; Zugriffskontrolle; a
 title: Attributbasierte Zugriffskontrolle - Durchsuchen
 description: Dieses Dokument enthält Informationen zur Verwendung der Benutzeroberfläche für Berechtigungen in Adobe Experience Cloud
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 28%
+source-wordcount: '346'
+ht-degree: 21%
 
 ---
 
 # Berechtigungshandbuch
-
->[!IMPORTANT]
->
->Die attributbasierte Zugriffssteuerung ist derzeit nur in einer eingeschränkten Version für US-Kunden im Gesundheitswesen verfügbar. Diese Funktion steht allen Kunden von Real-time Customer Data Platform nach der vollständigen Veröffentlichung zur Verfügung.
 
 Berechtigungen ist der Bereich von Adobe Experience Cloud, in dem Administratoren Benutzerrollen und Zugriffsrichtlinien definieren können, um Zugriffsberechtigungen für Funktionen und Objekte in einer Produktanwendung zu verwalten.
 

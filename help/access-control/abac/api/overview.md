@@ -4,18 +4,14 @@ solution: Experience Platform
 title: API-Anleitung zur Attributbasierten Zugriffssteuerung
 description: Mit der Attributbasierten Zugriffssteuerungs-API können Sie Rollen und Richtlinien in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
-source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '424'
-ht-degree: 32%
+source-wordcount: '393'
+ht-degree: 27%
 
 ---
 
 # API-Handbuch zur Attributbasierten Zugriffskontrolle
-
->[!IMPORTANT]
->
->Die attributbasierte Zugriffssteuerung ist derzeit nur in einer eingeschränkten Version für US-Kunden im Gesundheitswesen verfügbar. Diese Funktion steht allen Kunden von Real-time Customer Data Platform nach der vollständigen Veröffentlichung zur Verfügung.
 
 Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Platform, mit der Administrierende den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen steuern können. Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. eine Bezeichnung, die einem Schemafeld oder Segment hinzugefügt wird. Administrierende definieren Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten.
 

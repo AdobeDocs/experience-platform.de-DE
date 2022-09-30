@@ -4,18 +4,14 @@ solution: Experience Platform
 title: Produkt-API-Endpunkt
 description: Mit dem Endpunkt /products in der API für die attributbasierte Zugriffssteuerung können Sie Produkte in Adobe Experience Platform programmgesteuert verwalten.
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
-source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '523'
-ht-degree: 18%
+source-wordcount: '492'
+ht-degree: 13%
 
 ---
 
 # Endpunkt &quot;Produkte&quot;
-
->[!IMPORTANT]
->
->Die attributbasierte Zugriffssteuerung ist derzeit nur in einer eingeschränkten Version für US-Kunden im Gesundheitswesen verfügbar. Diese Funktion steht allen Kunden von Real-time Customer Data Platform nach der vollständigen Veröffentlichung zur Verfügung.
 
 Die `/products` -Endpunkt in der attributbasierten Zugriffssteuerungs-API können Sie Produkte sowie Berechtigungskategorien und Berechtigungssätze, die mit Produkten in Ihrer Organisation verknüpft sind, programmgesteuert verwalten.
 

@@ -4,18 +4,14 @@ solution: Experience Platform
 title: Rollen-API-Endpunkt
 description: Mit dem Endpunkt /roles in der API für die attributbasierte Zugriffssteuerung können Sie Rollen in Adobe Experience Platform programmgesteuert verwalten.
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '1614'
-ht-degree: 11%
+source-wordcount: '1583'
+ht-degree: 10%
 
 ---
 
 # Benutzerendpunkt
-
->[!IMPORTANT]
->
->Die attributbasierte Zugriffssteuerung ist derzeit nur in einer eingeschränkten Version für US-Kunden im Gesundheitswesen verfügbar. Diese Funktion steht allen Kunden von Real-time Customer Data Platform nach der vollständigen Veröffentlichung zur Verfügung.
 
 Rollen definieren den Zugriff, den ein Administrator, ein Spezialist oder ein Endbenutzer auf Ressourcen in Ihrem Unternehmen hat. In einer rollenbasierten Zugriffskontrollumgebung erfolgt die Bereitstellung des Benutzerzugriffs über gemeinsame Zuständigkeiten und Anforderungen. Eine Rolle verfügt über bestimmte Berechtigungen und Mitglieder Ihrer Organisation können je nach dem Umfang der Ansicht oder des Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden.
 

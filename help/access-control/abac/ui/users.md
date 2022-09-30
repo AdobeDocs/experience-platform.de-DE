@@ -3,18 +3,14 @@ keywords: Experience Platform; Startseite; beliebte Themen; Zugriffskontrolle; a
 title: Attributbasierte Zugriffssteuerung - Benutzer verwalten
 description: Dieses Dokument enthält Informationen zum Verwalten von Benutzern und Benutzergruppen über die Benutzeroberfläche "Berechtigungen"in Adobe Experience Cloud
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 18%
+source-wordcount: '160'
+ht-degree: 2%
 
 ---
 
 # Benutzer verwalten
-
->[!IMPORTANT]
->
->Die attributbasierte Zugriffssteuerung ist derzeit nur in einer eingeschränkten Version für US-Kunden im Gesundheitswesen verfügbar. Diese Funktion steht allen Kunden von Real-time Customer Data Platform nach der vollständigen Veröffentlichung zur Verfügung.
 
 Wenn Sie Benutzerdetails und Rollen anzeigen möchten, denen sie zugewiesen sind, wählen Sie die **[!UICONTROL Benutzer]** Registerkarte.
 

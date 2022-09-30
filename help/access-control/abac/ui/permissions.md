@@ -3,18 +3,14 @@ keywords: Experience Platform; Startseite; beliebte Themen; Zugriffskontrolle; a
 title: Attributbasierte Zugriffssteuerung Rollenberechtigungen verwalten
 description: Dieses Dokument enthält Informationen zum Konfigurieren von Berechtigungen für eine Rolle über die Benutzeroberfläche "Berechtigungen"in Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 79ffdf35e27d74a64ea8e25544fdeeb293b58306
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '930'
-ht-degree: 10%
+source-wordcount: '899'
+ht-degree: 7%
 
 ---
 
 # Berechtigungen für eine Rolle verwalten
-
->[!IMPORTANT]
->
->Die attributbasierte Zugriffssteuerung ist derzeit nur in einer eingeschränkten Version für US-Kunden im Gesundheitswesen verfügbar. Diese Funktion steht allen Kunden von Real-time Customer Data Platform nach der vollständigen Veröffentlichung zur Verfügung.
 
 >[!IMPORTANT]
 >
