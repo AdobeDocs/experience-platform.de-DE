@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
-source-git-commit: 20902b6a0dce4c189f43343d9fd0a87913a0fdbf
+source-git-commit: d93036c26e9f1b86a82f4da4cce6f9e8152e3542
 workflow-type: tm+mt
-source-wordcount: '3059'
-ht-degree: 30%
+source-wordcount: '2894'
+ht-degree: 29%
 
 ---
 
@@ -22,7 +22,6 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [Auditprotokolle](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [Datenerfassung](#data-collection)
-- [Datenhygiene](#data-hygiene)
 - [Ziele](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Identity Service](#identity-service)
@@ -118,27 +117,6 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 -->
 
 Weitere Informationen zur Datenerfassung in Platform finden Sie in der [Übersicht zur Datenerfassung](../../collection/home.md).
-
-## Datenhygiene {#data-hygiene}
-
-Adobe Experience Platform bietet leistungsstarke Tools zur Verwaltung großer, komplizierter Datenvorgänge, was die Orchestrierung von Customer Experiences ermöglicht. Da im Laufe der Zeit Daten in das System aufgenommen werden, ist es wichtig, Ihre Datenspeicher so zu verwalten, dass Daten wie vorgesehen verwendet werden. So müssen Daten aktualisiert werden, um falsche Einträge zu korrigieren, und Daten gelöscht werden, wenn dies aufgrund von Unternehmensrichtlinien erforderlich ist.
-
-Mit den Datenhygienemöglichkeiten von Adobe Experience Platform können Sie Ihre Daten bereinigen, indem Sie automatisierte Datensatzabläufe planen und Kundendaten programmgesteuert nach Identität löschen.
-
->[!IMPORTANT]
->
->Die Funktionen zur Datenhygiene stehen nur Organisationen zur Verfügung, die Adobe Healthcare Shield erworben haben.
-
-**Neue oder aktualisierte Funktionen**
-
-| Funktion | Beschreibung |
-| --- | --- |
-| Aktualisierte UI-Workflows | Die Workflows für [Planen der Ablaufdaten von Datensätzen](../../hygiene/ui/dataset-expiration.md) und [Löschen von Verbraucherdaten](../../hygiene/ui/delete-consumer.md) wurden in der Benutzeroberfläche optimiert. |
-| Quota-API-Endpunkt | Sie können jetzt Quoteninformationen für die Datenhygiene-Prozesse Ihres Unternehmens abrufen, indem Sie die [`/quota` Endpunkt](../../hygiene/api/quota.md). |
-
-{style=&quot;table-layout:auto&quot;}
-
-Weitere Informationen zu den Funktionen von Platform zur Datenhygiene finden Sie im Abschnitt [Übersicht über die Datenhygiene](../../hygiene/home.md).
 
 ## [!DNL Destinations] {#destinations}
 

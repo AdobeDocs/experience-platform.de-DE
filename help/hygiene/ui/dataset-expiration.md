@@ -2,14 +2,18 @@
 title: Verwalten von Datensatzgültigkeiten
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform die Gültigkeit eines Datensatzes planen.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 425298ec28517bba4eca1bf0966fd3b205fce764
+source-git-commit: d93036c26e9f1b86a82f4da4cce6f9e8152e3542
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 79%
+source-wordcount: '530'
+ht-degree: 76%
 
 ---
 
 # Verwalten von Datensatzgültigkeiten
+
+>[!IMPORTANT]
+>
+>Die Funktionen zur Datenhygiene in Adobe Experience Platform sind derzeit nur für Unternehmen verfügbar, die Adobe Healthcare Shield erworben haben.
 
 Die [[!UICONTROL Datenhygiene] Arbeitsbereich](./overview.md) In der Adobe Experience Platform-Benutzeroberfläche können Sie die Ablaufzeit für Datensätze planen. Wenn ein Datensatz sein Ablaufdatum erreicht, beginnen der Data Lake, der Identity Service und das Echtzeit-Kundenprofil separate Prozesse, um den Inhalt des Datensatzes aus den entsprechenden Services zu entfernen. Sobald die Daten aus allen drei Services gelöscht wurden, wird der Ablauf als abgeschlossen markiert.
 
