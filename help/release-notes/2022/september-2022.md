@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform - Versionshinweise - September 2022
 description: Die Versionshinweise für Adobe Experience Platform vom September 2022.
-source-git-commit: 81c17a6ea07efbbea91e0d918d52ec96e0335152
+source-git-commit: 45281721c6fb26c303bb820fa39f5c6ed71b55f9
 workflow-type: tm+mt
-source-wordcount: '3128'
-ht-degree: 29%
+source-wordcount: '3059'
+ht-degree: 30%
 
 ---
 
@@ -16,7 +16,6 @@ Neue Funktionen in Adobe Experience Platform:
 
 - [Attributbasierte Zugriffssteuerung](#abac)
 - [Datenhygiene](#data-hygiene)
-- [[!UICONTROL Datenschutzkonsole]](#privacy-console)
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
@@ -55,19 +54,13 @@ Mit den Datenhygienemöglichkeiten von Adobe Experience Platform können Sie Ihr
 
 >[!IMPORTANT]
 >
->Die Möglichkeiten der Datenhygiene stehen nur Organisationen zur Verfügung, die Adobe Healthcare Shield oder Privacy Shield erworben haben.
+>Die Funktionen zur Datenhygiene stehen nur Organisationen zur Verfügung, die Adobe Healthcare Shield erworben haben.
 
 Erste Schritte mit Datenhygiene finden Sie in der folgenden Dokumentation:
 
 - [Übersicht über die Datenhygiene](../../hygiene/home.md): Erfahren Sie mehr über die Grundlagen der Datenhygiene-Funktionen von Platform.
 - [[!UICONTROL Datenhygiene] UI-Handbuch](../../hygiene/ui/overview.md): Erfahren Sie, wie Sie in der Benutzeroberfläche von Platform den Ablauf von Datensätzen und Löschanfragen von Verbrauchern planen.
 - [Data Hygiene API-Handbuch](../../hygiene/api/overview.md): Sämtliche in der Benutzeroberfläche verfügbaren Datenhygiene-Aktivitäten können ebenfalls programmgesteuert durchgeführt werden
-
-## [!UICONTROL Datenschutzkonsole] {#privacy-console}
-
-Die [!UICONTROL Datenschutzkonsole] -Registerkarte in der Experience Platform-Benutzeroberfläche bietet eine Dashboard-Ansicht mit wichtigen Einblicken aus datenschutzbezogenen Funktionen wie [Anfragen von Datensubjekten nach Privacy Service](../../privacy-service/home.md), [Datenhygiene](../../hygiene/home.md)und [Auditprotokolle](../../landing/governance-privacy-security/audit-logs/overview.md). Die Konsole enthält außerdem mehrere produktinterne Benutzerhandbücher, die Sie durch gängige Datenschutz-Workflows führen.
-
-Siehe [Übersicht über die Datenschutzkonsole](../../landing/governance-privacy-security/privacy-console.md) für weitere Informationen zur Funktion.
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 

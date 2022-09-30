@@ -2,10 +2,10 @@
 title: Adobe Experience Platform - Versionshinweise, August 2022
 description: Die Versionshinweise für Adobe Experience Platform vom August 2022.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: fb9fdc70aabb62cdc39888b1ff90557d8420c31b
+source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
 workflow-type: tm+mt
-source-wordcount: '2137'
-ht-degree: 99%
+source-wordcount: '2131'
+ht-degree: 97%
 
 ---
 
@@ -40,7 +40,7 @@ Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Ko
 
 {style=&quot;table-layout:auto&quot;}
 
-**Hinweis**: Die Attributions-KI wird bis auf Weiteres nicht für bestehende Healthcare Shield- oder Privacy Shield-Kunden verfügbar sein.
+**Hinweis**: Attribution AI wird bei bestehenden Kunden des Gesundheitsschilds erst nach einer weiteren Mitteilung verfügbar sein.
 
 Weitere Informationen zu Attributions-KI finden Sie in der Übersicht [Attributions-KI](../../intelligent-services/attribution-ai/overview.md).
 
@@ -56,7 +56,7 @@ Kunden-KI in Real-time Customer Data Platform dient dazu, für einzelne Profile 
 
 {style=&quot;table-layout:auto&quot;}
 
-**Hinweis**: Die Kunden-KI wird bis auf Weiteres nicht für bestehende Healthcare Shield- oder Privacy Shield-Kunden verfügbar sein.
+**Hinweis**: Kunden-KI wird bei bestehenden Kunden des Gesundheitsschilds erst nach einer weiteren Mitteilung verfügbar sein.
 
 Weitere Informationen zu Kunden-KI finden Sie in der Übersicht [Kunden-KI](../../intelligent-services/customer-ai/overview.md).
 
