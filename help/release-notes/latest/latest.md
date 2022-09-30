@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
-source-git-commit: 45281721c6fb26c303bb820fa39f5c6ed71b55f9
+source-git-commit: 20902b6a0dce4c189f43343d9fd0a87913a0fdbf
 workflow-type: tm+mt
-source-wordcount: '3064'
+source-wordcount: '3059'
 ht-degree: 30%
 
 ---
@@ -15,7 +15,6 @@ ht-degree: 30%
 Neue Funktionen in Adobe Experience Platform:
 
 - [Attributbasierte Zugriffssteuerung](#abac)
-- [Datenhygiene](#data-hygiene)
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
@@ -23,6 +22,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [Auditprotokolle](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [Datenerfassung](#data-collection)
+- [Datenhygiene](#data-hygiene)
 - [Ziele](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Identity Service](#identity-service)
@@ -45,22 +45,6 @@ Mithilfe der attributbasierten Zugriffskontrolle können Administratoren Ihres U
 | Berechtigungen | Berechtigungen sind der Bereich von Experience Cloud, in dem Administrierende Benutzerrollen und Zugriffsrichtlinien definieren können, um Zugriffsberechtigungen für Funktionen und Objekte in einem Produktprogramm zu verwalten. Über Berechtigungen können Sie Rollen erstellen und verwalten, die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen und Richtlinien erstellen, um Beschriftungen zu nutzen und zu definieren, welche Benutzerrollen Zugriff auf bestimmte Platform-Ressourcen haben. Mit Berechtigungen können Sie auch die Bezeichnungen, Sandboxes und Benutzer*innen verwalten, die einer bestimmten Rolle zugeordnet sind. Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche für Berechtigungen](../../access-control/abac/ui/browse.md). |
 
 Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter [Attributbasierte Zugriffssteuerung – Übersicht](../../access-control/abac/overview.md). Eine umfassende Anleitung zum attributbasierten Zugriffssteuerungs-Workflow finden Sie im Abschnitt [Handbuch zur attributbasierten Zugriffskontrolle - End-to-End](../../access-control/abac/end-to-end-guide.md).
-
-## Datenhygiene {#data-hygiene}
-
-Adobe Experience Platform bietet leistungsstarke Tools zur Verwaltung großer, komplizierter Datenvorgänge, was die Orchestrierung von Customer Experiences ermöglicht. Da im Laufe der Zeit Daten in das System aufgenommen werden, ist es wichtig, Ihre Datenspeicher so zu verwalten, dass Daten wie vorgesehen verwendet werden. So müssen Daten aktualisiert werden, um falsche Einträge zu korrigieren, und Daten gelöscht werden, wenn dies aufgrund von Unternehmensrichtlinien erforderlich ist.
-
-Mit den Datenhygienemöglichkeiten von Adobe Experience Platform können Sie Ihre Daten bereinigen, indem Sie automatisierte Datensatzabläufe planen und Kundendaten programmgesteuert nach Identität löschen.
-
->[!IMPORTANT]
->
->Die Funktionen zur Datenhygiene stehen nur Organisationen zur Verfügung, die Adobe Healthcare Shield erworben haben.
-
-Erste Schritte mit Datenhygiene finden Sie in der folgenden Dokumentation:
-
-- [Übersicht über die Datenhygiene](../../hygiene/home.md): Erfahren Sie mehr über die Grundlagen der Datenhygiene-Funktionen von Platform.
-- [[!UICONTROL Datenhygiene] UI-Handbuch](../../hygiene/ui/overview.md): Erfahren Sie, wie Sie in der Benutzeroberfläche von Platform den Ablauf von Datensätzen und Löschanfragen von Verbrauchern planen.
-- [Data Hygiene API-Handbuch](../../hygiene/api/overview.md): Sämtliche in der Benutzeroberfläche verfügbaren Datenhygiene-Aktivitäten können ebenfalls programmgesteuert durchgeführt werden
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
@@ -135,6 +119,27 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 Weitere Informationen zur Datenerfassung in Platform finden Sie in der [Übersicht zur Datenerfassung](../../collection/home.md).
 
+## Datenhygiene {#data-hygiene}
+
+Adobe Experience Platform bietet leistungsstarke Tools zur Verwaltung großer, komplizierter Datenvorgänge, was die Orchestrierung von Customer Experiences ermöglicht. Da im Laufe der Zeit Daten in das System aufgenommen werden, ist es wichtig, Ihre Datenspeicher so zu verwalten, dass Daten wie vorgesehen verwendet werden. So müssen Daten aktualisiert werden, um falsche Einträge zu korrigieren, und Daten gelöscht werden, wenn dies aufgrund von Unternehmensrichtlinien erforderlich ist.
+
+Mit den Datenhygienemöglichkeiten von Adobe Experience Platform können Sie Ihre Daten bereinigen, indem Sie automatisierte Datensatzabläufe planen und Kundendaten programmgesteuert nach Identität löschen.
+
+>[!IMPORTANT]
+>
+>Die Funktionen zur Datenhygiene stehen nur Organisationen zur Verfügung, die Adobe Healthcare Shield erworben haben.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Aktualisierte UI-Workflows | Die Workflows für [Planen der Ablaufdaten von Datensätzen](../../hygiene/ui/dataset-expiration.md) und [Löschen von Verbraucherdaten](../../hygiene/ui/delete-consumer.md) wurden in der Benutzeroberfläche optimiert. |
+| Quota-API-Endpunkt | Sie können jetzt Quoteninformationen für die Datenhygiene-Prozesse Ihres Unternehmens abrufen, indem Sie die [`/quota` Endpunkt](../../hygiene/api/quota.md). |
+
+{style=&quot;table-layout:auto&quot;}
+
+Weitere Informationen zu den Funktionen von Platform zur Datenhygiene finden Sie im Abschnitt [Übersicht über die Datenhygiene](../../hygiene/home.md).
+
 ## [!DNL Destinations] {#destinations}
 
 [!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
@@ -151,7 +156,7 @@ Weitere Informationen zur Datenerfassung in Platform finden Sie in der [Übersic
 
 | Ziel | Beschreibung |
 | ----------- | ----------- |
-| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services bietet eine Plattform für die Konzeption kanalübergreifender Kundenerlebnisse und eine Umgebung für die visuelle Kampagnenorchestrierung, Interaktionsverwaltung in Echtzeit und die kanalübergreifende Ausführung. [Erste Schritte mit Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). Beachten Sie, dass diese Integration mit Beachten funktioniert, dass diese Integration mit [Adobe Campaign-Version 8.4 oder höher](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=en#release-8-4-1). |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services bietet eine Plattform für die Konzeption kanalübergreifender Kundenerlebnisse und eine Umgebung für die visuelle Kampagnenorchestrierung, Interaktionsverwaltung in Echtzeit und die kanalübergreifende Ausführung. [Erste Schritte mit Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). Beachten Sie, dass diese Integration mit [Adobe Campaign-Version 8.4 oder höher](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=en#release-8-4-1). |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | Die [!DNL Salesforce CRM] Das Ziel wurde aktualisiert, um sowohl Kontakt- als auch Lead-Aktualisierungen sowie Leistungsverbesserungen für schnellere Aktualisierungen zu unterstützen. |
 
 {style=&quot;table-layout:auto&quot;}
