@@ -2,10 +2,10 @@
 description: Mit dieser Konfiguration können Sie wichtige Informationen für Ihr dateibasiertes Ziel angeben, z. B. Ihren Zielnamen, die Kategorie, eine Beschreibung und mehr. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
 title: Konfigurationsoptionen für dateibasierte Ziele für das Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 1d6318e33be639237c2c8e6f1bf67e1702949c20
+source-git-commit: b32450311469ecf2af2ca45b3fa1feaf25147ea2
 workflow-type: tm+mt
-source-wordcount: '2664'
-ht-degree: 67%
+source-wordcount: '3021'
+ht-degree: 59%
 
 ---
 
@@ -722,6 +722,54 @@ Verwenden Sie die Parameter in  `dynamicSchemaConfig` , um Ihr eigenes Schema dy
 | `authenticationRule` | Zeichenfolge | Gibt an, wie [!DNL Platform]-Kunden eine Verbindung zu Ihrem Ziel herstellen. Akzeptierte Werte sind `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Verwenden Sie `CUSTOMER_AUTHENTICATION`, wenn sich Platform-Kunden über eine der folgenden Methoden bei Ihrem System anmelden: <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Verwenden Sie `PLATFORM_AUTHENTICATION`, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel besteht und der [!DNL Platform]-Kunde keine Anmeldeinformationen zur Authentifizierung angeben muss, um eine Verbindung mit Ihrem Ziel herzustellen. In diesem Fall müssen Sie ein Objekt für die [Anmeldeinformationen](./credentials-configuration-api.md) mithilfe der Konfiguration erstellen. </li><li>Verwenden Sie `NONE`, wenn keine Authentifizierung erforderlich ist, um Daten an Ihre Zielplattform zu senden. </li></ul> |
 | `value` | Zeichenfolge | Der Name des Schemas, das in der Experience Platform-Benutzeroberfläche im Zuordnungsschritt angezeigt werden soll. |
 | `responseFormat` | Zeichenfolge | Die Einstellung ist immer `SCHEMA`, wenn ein benutzerdefiniertes Schema definiert wird. |
+
+{style=&quot;table-layout:auto&quot;}
+
+### Erforderliche Zuordnungen {#required-mappings}
+
+Innerhalb der Schemakonfiguration haben Sie die Möglichkeit, erforderliche (oder vordefinierte) Zuordnungen hinzuzufügen. Hierbei handelt es sich um Zuordnungen, die Benutzer anzeigen, aber nicht ändern können, wenn sie eine Verbindung zu Ihrem Ziel einrichten. Beispielsweise können Sie erzwingen, dass das Feld für die E-Mail-Adresse in den exportierten Dateien immer an das Ziel gesendet wird. Unten finden Sie ein Beispiel für eine Schemakonfiguration mit erforderlichen Zuordnungen und wie sie im Zuordnungsschritt des [Workflow &quot;Daten für Batch-Ziele aktivieren&quot;](/help/destinations/ui/activate-batch-profile-destinations.md).
+
+```json
+    "requiredMappingsOnly": true, // this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
+    "requiredMappings": [
+      {
+        "destination": "identityMap.ExamplePartner_ID", //if only the destination field is specified, then the user is able to select a source field to map to the destination.
+        "mandatoryRequired": true,
+        "primaryKeyRequired": true
+      },
+      {
+        "sourceType": "text/x.schema-path",
+        "source": "personalEmail.address",
+        "destination": "personalEmail.address" //when both source and destination fields are specified as required mappings, then the user can not select or edit any of the two fields and can only view the selection.
+      },
+      {
+        "sourceType": "text/x.aep-xl",
+        "source": "iif(${segmentMembership.ups.seg_id.status}==\"exited\", \"1\",\"0\")",
+        "destination": "delete"
+      }
+    ] 
+```
+
+![Bild der erforderlichen Zuordnungen im UI-Aktivierungsfluss.](/help/destinations/destination-sdk/assets/required-mappings.png)
+
+>[!NOTE]
+>
+>Derzeit werden folgende Kombinationen erforderlicher Zuordnungen unterstützt:
+>* Sie können ein erforderliches Quellfeld und ein erforderliches Zielfeld konfigurieren. In diesem Fall können Benutzer keine der beiden Felder bearbeiten oder auswählen und nur die Auswahl anzeigen.
+>* Sie können nur ein erforderliches Zielfeld konfigurieren. In diesem Fall können Benutzer ein Quellfeld auswählen, das dem Ziel zugeordnet werden soll.
+>
+> Die Konfiguration eines nur erforderlichen Quellfelds ist derzeit *not* unterstützt.
+
+Verwenden Sie die in der folgenden Tabelle beschriebenen Parameter, wenn Sie im Aktivierungs-Workflow für Ihr Ziel die erforderlichen Zuordnungen hinzufügen möchten.
+
+| Parameter | Typ | Beschreibung |
+|---------|----------|------|
+| `requiredMappingsOnly` | Boolesch | Gibt an, ob Benutzer in der Lage sind, andere Attribute und Identitäten im Aktivierungsfluss zuzuordnen; *, außer* die erforderlichen Zuordnungen, die Sie definieren. |
+| `requiredMappings.mandatoryRequired` | Boolesch | Auf true setzen, wenn dieses Feld ein obligatorisches Attribut sein muss, das immer in Dateiexporten an Ihr Ziel vorhanden sein sollte. Mehr dazu [obligatorische Attribute](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes). |
+| `requiredMappings.primaryKeyRequired` | Boolesch | Auf true setzen, wenn dieses Feld als Deduplizierungsschlüssel bei Dateiexporten an Ihr Ziel verwendet werden muss. Mehr dazu [Deduplizierungsschlüssel](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys). |
+| `requiredMappings.sourceType` | Zeichenfolge | Wird verwendet, wenn Sie ein Quellfeld nach Bedarf konfigurieren. Gibt an, welcher Feldtyp das Quellfeld ist. Verfügbare Optionen sind: <ul><li>`"text/x.schema-path"` wenn das Quellfeld ein vordefiniertes XDM-Attribut ist</li><li>`"text/x.aep-xl"` wenn das Quellfeld eine Funktion ist, z. B. wenn Sie eine Bedingung auf der Seite des Quellfelds erfüllen müssen. Weitere Informationen zu unterstützten Funktionen finden Sie im Abschnitt [Datenvorbereitung](/help/data-prep/api/functions.md) Dokumentation.</li></ul> |
+| `requiredMappings.source` | Zeichenfolge | Gibt an, was das erforderliche Quellfeld sein soll. |
+| `requiredMappings.destination` | Zeichenfolge | Gibt an, was das erforderliche Zielfeld sein soll. |
 
 {style=&quot;table-layout:auto&quot;}
 
