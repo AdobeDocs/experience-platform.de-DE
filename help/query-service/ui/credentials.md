@@ -5,9 +5,9 @@ title: Anleitung zu Query Service-Anmeldedaten
 topic-legacy: guide
 description: Adobe Experience Platform Query Service bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzern in Ihrer IMS-Organisation gespeichert wurden.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: f3052745105df603e547535a12285b6c1d771fa6
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1186'
 ht-degree: 2%
 
 ---
@@ -109,6 +109,7 @@ In der folgenden Tabelle sind die Parameter aufgeführt, die normalerweise für 
 >[!NOTE]
 >
 >Bei der Verbindung zu einem Host mit nicht ablaufenden Anmeldeinformationen müssen weiterhin alle in der [!UICONTROL LAUFENDE ANMELDEDATEN] mit Ausnahme des Passworts und des Benutzernamens.
+>Das Format für die Eingabe Ihres Benutzernamen und Kennworts verwendet durch Doppelpunkte getrennte Werte, wie in diesem Beispiel gezeigt `username:{your_username}` und `password:{password_string}`.
 
 | Parameter | Beschreibung |
 |---|---|

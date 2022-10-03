@@ -2,7 +2,7 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Abfragedienst; Query Service; Warnhinweis;
 title: API-Endpunkt für Warnhinweis-Abonnements
 description: Dieses Handbuch enthält Beispiel-HTTP-Anfragen und -Antworten für die verschiedenen API-Aufrufe, die Sie mit der Query Service-API an den Endpunkt für Warnhinweise-Abonnements senden können.
-source-git-commit: bd841244fcb7d63af9c3383335307647b93499ce
+source-git-commit: cab7fcfda1bd8f6462af6e631f1fcee1f354d26b
 workflow-type: tm+mt
 source-wordcount: '2289'
 ht-degree: 4%
@@ -301,7 +301,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTML-Status 200 und alle Warnhinweise zurück, die abonniert wurden. Dazu gehören die Warnhinweis-ID, der Typ des Warnhinweises, die für die Adobe registrierten E-Mail-IDs des Abonnenten und der bevorzugte Benachrichtigungskanal.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 und alle Warnhinweise zurück, die abonniert wurden. Dazu gehören die Warnhinweis-ID, der Typ des Warnhinweises, die für die Adobe registrierten E-Mail-IDs des Abonnenten und der bevorzugte Benachrichtigungskanal.
 
 ```json
 {
