@@ -4,20 +4,23 @@ description: Die neuesten Versionshinweise für Adobe Experience Platform Debugg
 keywords: Debugger;Experience Platform Debugger-Erweiterung;Chrome;Erweiterung;Versionshinweise
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 28e54656fcd85fc56e72d4fdd3d079cf8590302f
+source-git-commit: 96a092efe5ceefeb7b6c3ddd9845d78b8862ac68
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '430'
 ht-degree: 2%
 
 ---
 
 # Versionshinweise zu Adobe Experience Platform Debugger
 
-<!-- ## Version 1.4.0 - August 24, 2022
+## Version 1.4.0 - 3. Oktober 2022
 
-* Added support for Web SDK hybrid implementation.
-* Added error message when enabling Target Trace fails.
-* Updated dependencies. -->
+* Unterstützung für das Debugging von AEP Assurance für Web SDK-Hybrid-Implementierungen hinzugefügt.
+* Es wurden mehrere Registerkarten innerhalb derselben AEP Assurance-Sitzung unterstützt.
+* Es wurde ein Problem behoben, bei dem Benutzer nach der Anmeldung keine Profile/Organisationen wechseln konnten.
+   * Bei einigen Konten ist eine Abmeldung und eine erneute Anmeldung erforderlich, um zwischen Unternehmen zu wechseln.
+* Es wurde eine Fehlermeldung hinzugefügt, wenn die Aktivierung von Target Trace fehlschlägt.
+* Aktualisierte Abhängigkeiten.
 
 ## Version 1.3.3 - 20. Juni 2022
 
