@@ -3,10 +3,10 @@ keywords: Experience Platform; Abfrage; Query Service; Fehlerbehebung; Limits; R
 title: Limits für Query Service
 description: Dieses Dokument enthält Informationen zu Nutzungsbeschränkungen für Query Service-Daten, die Ihnen bei der Optimierung Ihrer Abfrageverwendung helfen.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: 78cbf9aea4be044b73ae32ea5920c821dacafaa2
+source-git-commit: d874fed681449c6f5114196cface157c8c406d69
 workflow-type: tm+mt
-source-wordcount: '692'
-ht-degree: 13%
+source-wordcount: '765'
+ht-degree: 11%
 
 ---
 
@@ -23,6 +23,10 @@ Bevor Sie mit diesem Dokument fortfahren, sollten Sie über die beiden unten bes
 * **Ad-hoc-Abfragen**: Für die Ausführung `SELECT` Abfragen zum Erkunden, Experimentieren und Validieren von Daten, in denen die Ergebnisse der Abfragen vorliegen **nicht gespeichert werden** auf dem See.
 
 * **Batch-Abfragen**: Für die Ausführung `INSERT TABLE AS SELECT` und `CREATE TABLE AS SELECT` Abfragen zum Bereinigen, Gestalten, Bearbeiten und Anreichern von Daten. Die Ergebnisse dieser Abfragen **gespeichert werden** auf dem See. Die Metrik zur Messung des Verbrauchs dieser Funktion ist die Berechnung der Stunden.
+
+>[!IMPORTANT]
+>
+>Um sicherzustellen, dass jede Abfrage für ein Real-time Customer Data Platform Insights-Dashboard über genügend Ressourcen verfügt, um effizient auszuführen, verfolgt die API die Ressourcennutzung, indem sie jeder Abfrage Gleichzeitigkeitsfenster zuweist. Das System kann bis zu vier gleichzeitige Abfragen verarbeiten. Daher stehen vier gleichzeitige Abfrageplätze jederzeit zur Verfügung. Abfragen werden basierend auf gleichzeitigen Slots in eine Warteschlange gestellt und dann in der Warteschlange gewartet, bis genügend gleichzeitige Slots verfügbar sind.
 
 Die folgende Abbildung fasst zusammen, wie Query Service-Funktionen derzeit zusammengefasst und lizenziert sind:
 
