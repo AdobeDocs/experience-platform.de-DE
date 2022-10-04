@@ -5,7 +5,7 @@ exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
 source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
 workflow-type: tm+mt
 source-wordcount: '400'
-ht-degree: 71%
+ht-degree: 81%
 
 ---
 
@@ -49,7 +49,7 @@ Mit der Data Hygiene API können Sie alle Datensätze löschen, die mit einer Ve
 
 ## Kontingent
 
-Ihre Organisation ist auf ein vorab festgelegtes monatliches Jobkontingent für jede Art von Datenhygiene-Vorgang beschränkt, das je nach Lizenzierung variieren kann. Siehe [Quotenendpunkt-Handbuch](./quota.md) für Details zur Anzeige des aktuellen Quotenstatus Ihrer Datenhygiene-Prozesse.
+Ihre Organisation ist auf ein vorab festgelegtes monatliches Vorgangskontingent für jede Art von Datenhygieneoperation beschränkt, das je nach Lizenzierung variieren kann. Details zur Anzeige des aktuellen Kontingent-Status Ihrer Datenhygieneprozesse finden Sie im [Handbuch für Kontingentendpunkte](./quota.md).
 
 ## Nächste Schritte
 
