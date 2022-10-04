@@ -5,9 +5,9 @@ title: Übersicht über Segmentübereinstimmungen
 topic-legacy: overview
 description: Segmentabgleich ist ein Dienst zur Segmentfreigabe in Adobe Experience Platform, mit dem zwei oder mehr Platform-Benutzer Segmentdaten auf sichere, gesteuerte und datenschutzfreundliche Weise austauschen können.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 1c2b9862facfe9fbce59246c882e6373f3e2c3ef
+source-git-commit: 2329065b938d97f48a23be5250fec535355db770
 workflow-type: tm+mt
-source-wordcount: '1994'
+source-wordcount: '1998'
 ht-degree: 6%
 
 ---
@@ -45,7 +45,7 @@ Folgende Namespaces werden unterstützt:
 
 | Namespace | Beschreibung |
 | --------- | ----------- |
-| E-Mails (SHA256, in Kleinbuchstaben) | Ein Namespace für die E-Mail-Adresse mit vorab gehashten Nachrichten. Die in diesem Namespace bereitgestellten Werte werden vor dem Hashing mit SHA256 in Kleinbuchstaben umgewandelt. Vor der Bereinigung einer E-Mail-Adresse müssen die Leerstellen am Anfang und am Ende abgeschnitten werden. Diese Einstellung kann nicht rückwirkend geändert werden. Siehe folgendes Dokument unter [SHA-256-Hashing-Unterstützung](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) für weitere Informationen. |
+| E-Mails (SHA256, in Kleinbuchstaben) | Ein Namespace für die E-Mail-Adresse mit vorab gehashten Nachrichten. Die in diesem Namespace bereitgestellten Werte werden vor dem Hashing mit SHA256 in Kleinbuchstaben umgewandelt. Vor der Bereinigung einer E-Mail-Adresse müssen die Leerstellen am Anfang und am Ende abgeschnitten werden. Diese Einstellung kann nicht rückwirkend geändert werden. Platform bietet zwei Methoden zur Unterstützung von Hashing bei der Datenerfassung durch [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) und [data prep](../../../data-prep/functions.md#hashing). |
 | Telefon (SHA256_E.164) | Ein Namespace, der rohe Telefonnummern darstellt, die im SHA256- und E.164-Format gehasht werden müssen. |
 | ECID | Ein Namespace, der einen Experience Cloud-ID-Wert (ECID) darstellt. Dieser Namespace kann auch durch die folgenden Alias referenziert werden: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Weiterführende Informationen dazu finden Sie in der [ECID-Übersicht](../../../identity-service/ecid.md). |
 | Apple IDFA (ID für Advertiser) | Ein Namespace, der die Apple ID für Advertiser darstellt. Siehe folgendes Dokument unter [Interessensbasierte Anzeigen](https://support.apple.com/de-de/HT202074) für weitere Informationen. |
