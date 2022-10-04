@@ -3,9 +3,9 @@ keywords: Amazon S3; S3-Ziel; s3; amazon s3
 title: Amazon S3-Verbindung
 description: Erstellen Sie eine aktive ausgehende Verbindung zu Ihrem Amazon Web Services (AWS) S3-Speicher, um regelmäßig CSV-Datendateien aus Adobe Experience Platform in Ihre eigenen S3-Behälter zu exportieren.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: 1dd87ce19c3d9f4eb07c49968754ab979b4dee5c
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '771'
 ht-degree: 7%
 
 ---
@@ -47,10 +47,9 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tut
 Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]**.
 
 * **[!DNL Amazon S3]Zugriffsschlüssel** und **[!DNL Amazon S3]geheimer Schlüssel**: In [!DNL Amazon S3], generieren Sie eine `access key - secret access key` , um Platform Zugriff auf Ihre [!DNL Amazon S3] -Konto. Weitere Informationen finden Sie unter [Amazon Web Services-Dokumentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien Verschlüsselung hinzuzufügen. Ihr öffentlicher Schlüssel muss als [!DNL Base64-encoded] Zeichenfolge.
-   * Beispiel: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. Unten finden Sie ein Beispiel für einen korrekt formatierten PGP-Schlüssel, bei dem der mittlere Teil gekürzt ist.
+* **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien Verschlüsselung hinzuzufügen. Ihr öffentlicher Schlüssel muss als [!DNL Base64-encoded] Zeichenfolge. Ein Beispiel für einen korrekt formatierten base64-kodierten Schlüssel finden Sie im folgenden Dokumentationslink. Der mittlere Teil ist aus Gründen der Kürze gekürzt.
 
-      ![PGP-Schlüssel](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+![Bild, das ein Beispiel eines korrekt formatierten und base64-verschlüsselten PGP-Schlüssels in der Benutzeroberfläche zeigt](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Zieldetails ausfüllen {#destination-details}
 

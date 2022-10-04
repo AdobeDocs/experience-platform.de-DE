@@ -3,9 +3,9 @@ keywords: Azure Blob; Blob-Ziel; s3; Azure Blob-Ziel
 title: Azure Blob-Verbindung
 description: Erstellen Sie eine ausgehende Live-Verbindung zu Ihrem Azure Blob-Speicher, um regelmäßig CSV-Datendateien aus Adobe Experience Platform zu exportieren.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 1dd87ce19c3d9f4eb07c49968754ab979b4dee5c
 workflow-type: tm+mt
-source-wordcount: '721'
+source-wordcount: '739'
 ht-degree: 17%
 
 ---
@@ -63,10 +63,9 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus
 
 * **[!UICONTROL Verbindungszeichenfolge]**: Die Verbindungszeichenfolge ist erforderlich, um auf Daten in Ihrem Blob-Speicher zuzugreifen. Die [!DNL Blob] Verbindungszeichenfolgenmuster beginnt mit: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
    * Weitere Informationen zur Konfiguration der [!DNL Blob] Verbindungszeichenfolge, siehe [Verbindungszeichenfolge für ein Azure-Speicherkonto konfigurieren](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) in der Microsoft-Dokumentation.
-* **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien Verschlüsselung hinzuzufügen. Ihr öffentlicher Schlüssel muss als [!DNL Base64-encoded] Zeichenfolge.
-   * Beispiel: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. Unten finden Sie ein Beispiel für einen korrekt formatierten PGP-Schlüssel, bei dem der mittlere Teil gekürzt ist.
+* **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien Verschlüsselung hinzuzufügen. Ihr öffentlicher Schlüssel muss als [!DNL Base64-encoded] Zeichenfolge. Ein Beispiel für einen korrekt formatierten base64-kodierten Schlüssel finden Sie im folgenden Dokumentationslink. Der mittlere Teil ist aus Gründen der Kürze gekürzt.
 
-      ![PGP-Schlüssel](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+![Bild, das ein Beispiel eines korrekt formatierten und base64-verschlüsselten PGP-Schlüssels in der Benutzeroberfläche zeigt](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Zieldetails ausfüllen {#destination-details}
 

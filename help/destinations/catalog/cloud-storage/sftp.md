@@ -3,9 +3,9 @@ keywords: SFTP; SFTP
 title: SFTP-Verbindung
 description: Erstellen Sie eine ausgehende Live-Verbindung zu Ihrem SFTP-Server, um durch Trennzeichen getrennte Datendateien regelmäßig aus Adobe Experience Platform zu exportieren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: 1dd87ce19c3d9f4eb07c49968754ab979b4dee5c
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '690'
 ht-degree: 6%
 
 ---
@@ -60,10 +60,9 @@ Wenn Sie die **[!UICONTROL Grundlegende Authentifizierung]** Typ, um eine Verbin
 * **[!UICONTROL Host]**: Die Adresse Ihres SFTP-Speicherorts;
 * **[!UICONTROL Benutzername]**: Der Benutzername für die Anmeldung bei Ihrem SFTP-Speicherort.
 * **[!UICONTROL Passwort]**: Das Kennwort für die Anmeldung bei Ihrem SFTP-Speicherort.
-* **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien Verschlüsselung hinzuzufügen. Ihr öffentlicher Schlüssel muss als [!DNL Base64] kodierter String.
-   * Beispiel: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. Unten finden Sie ein Beispiel für einen korrekt formatierten PGP-Schlüssel, bei dem der mittlere Teil gekürzt ist.
+* **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien Verschlüsselung hinzuzufügen. Ihr öffentlicher Schlüssel muss als [!DNL Base64-encoded] Zeichenfolge. Ein Beispiel für einen korrekt formatierten base64-kodierten Schlüssel finden Sie im folgenden Dokumentationslink. Der mittlere Teil ist aus Gründen der Kürze gekürzt.
 
-      ![PGP-Schlüssel](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
+![Bild, das ein Beispiel eines korrekt formatierten und base64-verschlüsselten PGP-Schlüssels in der Benutzeroberfläche zeigt](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
 Wenn Sie die **[!UICONTROL SFTP mit SSH-Schlüssel]** Authentifizierungstyp für die Verbindung mit Ihrem SFTP-Speicherort:
