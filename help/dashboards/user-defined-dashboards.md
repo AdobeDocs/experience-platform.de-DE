@@ -2,7 +2,7 @@
 title: Benutzerdefinierte Dashboards
 description: Erfahren Sie, wie Sie benutzerdefinierte Dashboards erstellen und verwalten, in denen Sie maßgeschneiderte Widgets erstellen, hinzufügen und bearbeiten können, um wichtige Metriken zu visualisieren.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: d874fed681449c6f5114196cface157c8c406d69
+source-git-commit: 8e5df8b3e38197520c6e15f7c6639c62527c086e
 workflow-type: tm+mt
 source-wordcount: '938'
 ht-degree: 1%
@@ -12,11 +12,6 @@ ht-degree: 1%
 # Benutzerdefinierte Dashboards
 
 Adobe Experience Platform-Dashboards helfen Ihnen, Einblicke zu beschleunigen und die Visualisierung über die benutzerdefinierte Dashboards-Funktion anzupassen. Mit dieser Funktion können Sie benutzerdefinierte Dashboards erstellen und verwalten, in denen Sie benutzerspezifische Widgets erstellen, hinzufügen und bearbeiten können, um für Ihr Unternehmen relevante Schlüsselmetriken zu visualisieren.
-
->[!IMPORTANT]
->
->Um sicherzustellen, dass jede Abfrage für ein Real-time Customer Data Platform Insights-Dashboard über genügend Ressourcen verfügt, um effizient auszuführen, verfolgt die API die Ressourcennutzung, indem sie jeder Abfrage Gleichzeitigkeitsfenster zuweist. Das System kann bis zu vier gleichzeitige Abfragen verarbeiten. Daher stehen vier gleichzeitige Abfrageplätze jederzeit zur Verfügung. Abfragen werden basierend auf gleichzeitigen Slots in eine Warteschlange gestellt und dann in der Warteschlange gewartet, bis genügend gleichzeitige Slots verfügbar sind.
-
 
 <!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
@@ -120,6 +115,8 @@ Auswählen **[!UICONTROL Abbrechen]** , um zu Ihrem benutzerdefinierten Dashboar
 Widgets können in diesem Arbeitsbereich neu angeordnet und in der Größe angepasst werden. Auswählen **[!UICONTROL Speichern]** um Ihren Dashboard-Namen und Ihr konfiguriertes Layout beizubehalten.
 
 ![Das benutzerdefinierte Dashboard mit einem benutzerdefinierten Widget und die Schaltfläche zum Speichern hervorgehoben.](./images/user-defined-dashboards/user-defined-dashboard.png)
+
+Um sicherzustellen, dass jede Abfrage für ein Real-time Customer Data Platform Insights-Dashboard über genügend Ressourcen verfügt, um effizient auszuführen, verfolgt die API die Ressourcennutzung, indem sie jeder Abfrage Gleichzeitigkeitsfenster zuweist. Das System kann bis zu vier gleichzeitige Abfragen verarbeiten. Daher stehen vier gleichzeitige Abfrageplätze jederzeit zur Verfügung. Abfragen werden basierend auf gleichzeitigen Slots in eine Warteschlange gestellt und dann in der Warteschlange gewartet, bis genügend gleichzeitige Slots verfügbar sind.
 
 ## Nächste Schritte
 
