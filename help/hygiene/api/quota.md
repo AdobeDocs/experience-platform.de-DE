@@ -1,37 +1,37 @@
 ---
-title: Quota-API-Endpunkt
-description: Mit dem /quota -Endpunkt in der Data Hygiene API können Sie die Nutzung Ihrer Daten in Bezug auf die hygienischen Bedingungen in Ihrem Unternehmen anhand der monatlichen Quotenbegrenzungen für jeden Auftragstyp überwachen.
+title: Quoten-API-Endpunkt
+description: Mit dem /quota-Endpunkt in der Data Hygiene API können Sie die Datenhygiene in Bezug auf die in Ihrem Unternehmen gültigen monatlichen Quotenbegrenzungen für jeden Vorgangstyp überwachen.
 source-git-commit: 364ada0c354ddba8a855945f4f806f5600f21416
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '346'
-ht-degree: 13%
+ht-degree: 100%
 
 ---
 
-# Endpunkt &quot;Kontingent&quot;
+# Quoten-Endpunkt
 
 >[!IMPORTANT]
 >
 >Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die Healthcare Shield erworben haben.
 
-Die `/quota` -Endpunkt in der Data Hygiene API ermöglicht es Ihnen, die Nutzung Ihrer Daten in Bezug auf die Hygiene-Nutzung anhand der Quotenbegrenzungen Ihres Unternehmens für jeden Auftragstyp zu überwachen.
+Der `/quota`-Endpunkt in der Data Hygiene API ermöglicht es Ihnen, die Nutzung Ihrer Datenhygiene-Nutzung in Bezug auf die Quotenbegrenzungen Ihres Unternehmens für jeden Vorgangstyp zu überwachen.
 
-Die Quotenerzwingung erfolgt für jeden Auftragstyp im Bereich Datenhygiene wie folgt:
+Die Kontingente werden für jeden Datenhygiene-Vorgangstyp wie folgt umgesetzt:
 
-* Benutzerdefinierte Löschvorgänge und Feldaktualisierungen sind auf eine bestimmte Anzahl von Anforderungen pro Monat beschränkt.
-* Die Datensatzabläufe haben eine feste Begrenzung für die Anzahl der gleichzeitig aktiven Aufträge, unabhängig davon, wann die Abläufe ausgeführt werden.
+* Benutzerdefinierte Löschvorgänge und Feldaktualisierungen sind auf eine bestimmte Anzahl von Anfragen pro Monat beschränkt.
+* Datensatzabläufe haben ein pauschales Limit für die Anzahl der gleichzeitig aktiven Vorgänge, und zwar unabhängig davon, wann die Abläufe ausgeführt werden.
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der Data Hygiene API. Bevor Sie fortfahren, lesen Sie bitte die [Übersicht](./overview.md) für die folgenden Informationen:
+Der in diesem Handbuch verwendete Endpunkt ist Teil der Data Hygiene API. Bevor Sie fortfahren, lesen Sie eine [Übersicht](./overview.md) zu folgenden Themen:
 
-* Links zur zugehörigen Dokumentation
+* Links zur entsprechenden Dokumentation
 * Eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument
 * Wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden
 
-## Kontingente auflisten {#list}
+## Aufrufen von Kontingenten {#list}
 
-Sie können die Quoteninformationen Ihres Unternehmens anzeigen, indem Sie eine GET-Anfrage an die `/quota` -Endpunkt.
+Sie können die Kontingentinformationen Ihres Unternehmens anzeigen, indem Sie eine GET-Anfrage an den `/quota`-Endpunkt senden.
 
 **API-Format**
 
@@ -42,7 +42,7 @@ GET /quota?quotaType={QUOTA_TYPE}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{QUOTA_TYPE}` | Ein optionaler Abfrageparameter, der den Typ des abzurufenden Kontingents angibt. Wenn nicht `quotaType` angegeben ist, werden alle Quotenwerte in der API-Antwort zurückgegeben. Zu den akzeptierten Typwerten gehören:<ul><li>`expirationDatasetQuota`: Datensatzgültigkeiten</li><li>`deleteIdentityWorkOrderDatasetQuota`: Löschen von Verbrauchern</li><li>`fieldUpdateWorkOrderDatasetQuota`: Feldaktualisierungen</li></ul> |
+| `{QUOTA_TYPE}` | Ein optionaler Abfrageparameter, der den Typ des abzurufenden Kontingents angibt. Wenn kein `quotaType`-Parameter angegeben ist, werden alle Kontingentwerte in der API-Antwort zurückgegeben. Zu den akzeptierten Typwerten gehören:<ul><li>`expirationDatasetQuota`: Datensatzgültigkeiten</li><li>`deleteIdentityWorkOrderDatasetQuota`: Löschungen durch Kunden</li><li>`fieldUpdateWorkOrderDatasetQuota`: Feldaktualisierungen</li></ul> |
 
 **Anfrage**
 
@@ -57,7 +57,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die Details Ihrer Datenhygienekosten zurückgegeben.
+Bei einer erfolgreichen Antwort werden die Details Ihrer Datenhygiene-Kontingente zurückgegeben.
 
 ```json
 {
@@ -80,6 +80,6 @@ Bei einer erfolgreichen Antwort werden die Details Ihrer Datenhygienekosten zur�
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `quotas` | Listet die Quoteninformationen für jeden Datentyp im Hygienebereich auf. Jedes Quotenobjekt enthält die folgenden Eigenschaften:<ul><li>`name`: Arbeitstyp für den Datenhygiene:<ul><li>`expirationDatasetQuota`: Datensatzgültigkeiten</li><li>`deleteIdentityWorkOrderDatasetQuota`: Löschen von Verbrauchern</li></ul></li><li>`description`: Eine Beschreibung des Auftragstyps für die Datenhygiene.</li><li>`consumed`: Die Anzahl der Aufträge dieses Typs wird im aktuellen Monatszeitraum ausgeführt.</li><li>`quota`: Die Quotenbegrenzung für diesen Auftragstyp. Bei Benutzerlöschungen und Feldaktualisierungen stellt dies die Anzahl der Aufträge dar, die für jeden monatlichen Zeitraum ausgeführt werden können. Bei Datensatzabläufen stellt dies die Anzahl der Aufträge dar, die gleichzeitig aktiv sein können.</li></ul> |
+| `quotas` | Listet die Kontingentinformationen für jeden Datenhygiene-Vorgangstyp auf. Jedes Kontingentobjekt enthält die folgenden Eigenschaften:<ul><li>`name`: Datenhygiene-Vorgangstyp:<ul><li>`expirationDatasetQuota`: Datensatzgültigkeiten</li><li>`deleteIdentityWorkOrderDatasetQuota`: Löschvorgänge durch Kunden</li></ul></li><li>`description`: Eine Beschreibung des Datenhygiene-Vorgangstyps.</li><li>`consumed`: Die Anzahl der Vorgänge dieses Typs, die im aktuellen Monatszeitraum ausgeführt wird.</li><li>`quota`: Die Kontingentbegrenzung für diesen Vorgangstyp. Bei Löschvorgängen und Feldaktualisierungen durch Kunden stellt dies die Anzahl der Vorgänge dar, die in jedem monatlichen Zeitraum ausgeführt werden können. Bei Datensatzabläufen stellt dies die Anzahl der Vorgänge dar, die gleichzeitig aktiv sein können.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
