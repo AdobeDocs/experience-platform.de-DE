@@ -2,10 +2,10 @@
 title: Versionshinweise für Tags und Ereignisweiterleitung
 description: Die neuesten Versionshinweise für Tags und Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 2a5c31f8991c1c6aff294eabf4cc0e35c96ecaf7
+source-git-commit: 319c30facb7e8093318a01a3155bdb2fee0f548b
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 13%
+source-wordcount: '263'
+ht-degree: 11%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 13%
 
 * **Adobe Experience Platform - linke Navigationsintegration**: Alle Funktionen, die zuvor ausschließlich für die Datenerfassungs-Benutzeroberfläche galten (einschließlich Tags und Ereignisweiterleitung), sind jetzt auch über die linke Navigation in der Experience Platform-Benutzeroberfläche unter der Kategorie verfügbar. **[!UICONTROL Datenerfassung]**. Dadurch entfällt die Notwendigkeit, beim Arbeiten mit Datenerfassungsfunktionen in Platform zwischen Benutzeroberflächen zu wechseln.
 * **Benutzerzuordnung in Tags und Ereignisweiterleitung**: Bei der Auflistung der verfügbaren Eigenschaften in Tags und der Ereignisweiterleitung zeigt jede aufgelistete Eigenschaft jetzt an, wann sie zuletzt aktualisiert wurde und von wem.
+* **[[!DNL Snap Conversions API] Erweiterung](https://exchange.adobe.com/apps/ec/108550) für die Ereignisweiterleitung**: Sie können jetzt Daten an die [!DNL Snapchat Conversions API] mit [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) -Erweiterung. Weiterführende Informationen zur Authentifizierung und Verwendung der API finden Sie im Abschnitt [[!DNL Snapchat Marketing API] Dokumentation](https://marketingapi.snapchat.com/docs/conversion.html).
 
 ## 27. Juli 2022
 
