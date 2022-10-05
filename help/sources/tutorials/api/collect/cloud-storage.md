@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Cloud-Speicher eines Drittanbieters und zum Importieren dieser Daten in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 2d3fbbb5c743b8e172e3e64bda31ebf3278b4f5b
+source-git-commit: 1f492fd48de304c70fdd8beb477b8a22369b853a
 workflow-type: tm+mt
-source-wordcount: '1631'
-ht-degree: 78%
+source-wordcount: '1692'
+ht-degree: 75%
 
 ---
 
@@ -62,33 +62,33 @@ POST /sourceConnections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Cloud Storage source connection",
-        "description: "Source connection for a cloud storage source",
-        "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
-        "data": {
-            "format": "delimited",
-            "properties": {
-                "columnDelimiter": "{COLUMN_DELIMITER}",
-                "encoding": "{ENCODING}"
-                "compressionType": "{COMPRESSION_TYPE}"
-            }
-        },
-        "params": {
-            "path": "/acme/summerCampaign/account.csv",
-            "type": "file"
-        },
-        "connectionSpec": {
-            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Cloud Storage source connection",
+      "description: "Source connection for a cloud storage source",
+      "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
+      "data": {
+          "format": "delimited",
+          "properties": {
+              "columnDelimiter": "{COLUMN_DELIMITER}",
+              "encoding": "{ENCODING}",
+              "compressionType": "{COMPRESSION_TYPE}"
+          }
+      },
+      "params": {
+          "path": "/acme/summerCampaign/account.csv",
+          "type": "file"
+      },
+      "connectionSpec": {
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Eigenschaft | Beschreibung |
@@ -112,6 +112,46 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
     "id": "26b53912-1005-49f0-b539-12100559f0e2",
     "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
 }
+```
+
+### Verwenden Sie reguläre Ausdrücke, um einen bestimmten Dateisatz für die Aufnahme auszuwählen. {#regex}
+
+Sie können beim Erstellen einer Quellverbindung reguläre Ausdrücke verwenden, um einen bestimmten Dateisatz von Ihrer Quelle an Platform zu erfassen.
+
+**API-Format**
+
+```http
+POST /sourceConnections
+```
+
+**Anfrage**
+
+Im folgenden Beispiel wird der reguläre Ausdruck im Dateipfad verwendet, um die Aufnahme aller CSV-Dateien anzugeben, die `premium` in ihren Namen ein.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Cloud Storage source connection",
+      "description: "Source connection for a cloud storage source",
+      "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
+      "data": {
+          "format": "delimited"
+      },
+      "params": {
+          "path": "/acme/summerCampaign/*premium*.csv",
+          "type": "folder"
+      },
+      "connectionSpec": {
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+          "version": "1.0"
+      }
+  }'
 ```
 
 ## Erstellen eines XDM-Zielschemas {#target-schema}
