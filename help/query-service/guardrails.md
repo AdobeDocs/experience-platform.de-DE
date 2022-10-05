@@ -3,9 +3,9 @@ keywords: Experience Platform; Abfrage; Query Service; Fehlerbehebung; Limits; R
 title: Limits für Query Service
 description: Dieses Dokument enthält Informationen zu Nutzungsbeschränkungen für Query Service-Daten, die Ihnen bei der Optimierung Ihrer Abfrageverwendung helfen.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: 8e5df8b3e38197520c6e15f7c6639c62527c086e
+source-git-commit: f8913fd8f5d6f4acf70a43c0a047bcd034dfd402
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '769'
 ht-degree: 11%
 
 ---
@@ -67,6 +67,8 @@ Die folgenden Tabellen enthalten die empfohlenen Limits und Beschreibungen für 
 | Über zurückgegebene Ergebnisse | Datensatz | K. A. | Dadurch wird definiert, wie die Ergebnisse den Benutzern zur Verfügung gestellt werden. |
 
 {style=&quot;table-layout:auto&quot;}
+
+## Mit Abfragen generierte Dashboards-Einblicke {#dashboard-insights}
 
 Um sicherzustellen, dass jede Abfrage für ein Real-time Customer Data Platform Insights-Dashboard über genügend Ressourcen verfügt, um effizient auszuführen, verfolgt die API die Ressourcennutzung, indem sie jeder Abfrage Gleichzeitigkeitsfenster zuweist. Das System kann bis zu vier gleichzeitige Abfragen verarbeiten. Daher stehen vier gleichzeitige Abfrageplätze jederzeit zur Verfügung. Abfragen werden basierend auf gleichzeitigen Slots in eine Warteschlange gestellt und dann in der Warteschlange gewartet, bis genügend gleichzeitige Slots verfügbar sind.
 
