@@ -2,10 +2,10 @@
 title: Marketo Engage-Ziel
 description: Marketo Engage ist die einzige End-to-End-Lösung für Customer Experience Management (CXM) für Marketing, Werbung, Analyse und Handel. Damit können Sie Aktivitäten von der CRM-Lead-Verwaltung über die Kundeninteraktion bis hin zur kontobasierten Marketing- und Umsatzzuordnung automatisieren und verwalten.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 6dc4a93b46d6111637e0024da574d605e0d2b986
+source-git-commit: 9f305ee7824bd8790dec57ccbd2d9462ccfa8b49
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 21%
+source-wordcount: '870'
+ht-degree: 20%
 
 ---
 
@@ -75,9 +75,15 @@ Detaillierte Anweisungen zum Einrichten des Ziels und Aktivieren von Segmenten f
 
 Das folgende Video zeigt auch die Schritte zum Konfigurieren eines Marketo-Ziels und zum Aktivieren von Segmenten.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Die Benutzeroberfläche von Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im oben stehenden Handbuch.
+>Das Video spiegelt die aktuelle Funktion nicht vollständig wider. Die aktuellsten Informationen finden Sie im oben stehenden Handbuch. Die folgenden Teile des Videos sind veraltet:
+> 
+>* Die Zielkarte, die Sie in der Experience Platform-Benutzeroberfläche verwenden sollten, lautet **[!UICONTROL Marketo V2]**.
+>* Das Video zeigt das neue **[!UICONTROL Personenerstellung]** Selektorfeld im Workflow Verbindung mit Ziel herstellen.
+>* Die beiden im Video genannten Einschränkungen gelten nicht mehr. Sie können jetzt neben den Segmentzugehörigkeitsinformationen, die zum Zeitpunkt der Videoverfolgung unterstützt wurden, viele weitere Profilattributfelder zuordnen. Sie können auch Segmentmitglieder nach Marketo exportieren, die noch nicht in Ihren statischen Marketo-Listen vorhanden sind. Diese werden dann zu den Listen hinzugefügt.
+>* In Marketo V1 mussten Sie im Schritt **** Segment planen des Aktivierungs-Workflows manuell eine **[!UICONTROL Zuordnungs-ID]** hinzufügen, um Daten erfolgreich in Marketo zu exportieren. Dieser manuelle Schritt ist in Marketo V2 nicht mehr erforderlich.
+
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
