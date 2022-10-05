@@ -4,10 +4,10 @@ title: Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die Zielgruppendaten aktivieren, die Sie in Adobe Experience Platform haben, indem Sie Segmente an Ziele senden, die auf Batch-Profilen basieren.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
+source-git-commit: 48e87f6089f6fe0be6cb49f5138422c631a485c3
 workflow-type: tm+mt
-source-wordcount: '2520'
-ht-degree: 81%
+source-wordcount: '2577'
+ht-degree: 79%
 
 ---
 
@@ -122,6 +122,11 @@ Verwenden Sie die **[!UICONTROL Geplant]** -Option, damit der Aktivierungsauftra
 1. Klicken Sie auf **[!UICONTROL Erstellen]**, um den Zeitplan zu speichern.
 
 ### Exportieren von inkrementellen Dateien {#export-incremental-files}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_datasets_exportoptions"
+>title="Dateiexportoptionen für Datensätze"
+>abstract="Auswählen **Inkrementelle Dateien exportieren** um nur die Daten zu exportieren, die dem Datensatz seit dem letzten Export hinzugefügt wurden. <br> Der erste inkrementelle Dateiexport umfasst alle Daten im Datensatz, die als Aufstockung dienen. Zukünftige inkrementelle Dateien enthalten nur die Daten, die dem Datensatz seit dem ersten Export hinzugefügt wurden."
 
 Wählen Sie **[!UICONTROL Inkrementelle Dateien exportieren]**, um einen Export auszulösen, bei dem die erste Datei eine vollständige Momentaufnahme aller Profilqualifikationen für das ausgewählte Segment ist und die nachfolgenden Dateien aus den inkrementellen Profilqualifikationen seit dem letzten Export bestehen.
 
