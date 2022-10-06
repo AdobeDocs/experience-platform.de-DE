@@ -5,7 +5,7 @@ title: Definieren von Enum-Feldern und vorgeschlagenen Werten in der Benutzerobe
 description: Erfahren Sie, wie Sie in der Experience Platform-Benutzeroberfläche Auflistungen und empfohlene Werte für Zeichenfolgenfelder definieren.
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: ea27486a198f5248eeb5348ce20865bc41c2339a
+source-git-commit: 3b71f6b07345d7b1e08fa5a8b93abc3519606015
 workflow-type: tm+mt
 source-wordcount: '1207'
 ht-degree: 0%
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_enum_suggestedvalue"
->title="Aufzählungen und empfohlene Werte"
->abstract="Ein **Enum** beschränkt ein Zeichenfolgenfeld so, dass nur Daten erfasst werden können, die mit einem vordefinierten Satz von Werten übereinstimmen. Jeder Einschränkung kann eine **Anzeigename** die Dropdown-Listen mit Attributen in der Segmentierungsbenutzeroberfläche füllt. **Vorgeschlagene Werte** für ein Feld die Erfassung nicht einschränken und nur die in der Segmentierung angezeigten Anzeigenamen bestimmen. Wenn Sie mehrere Schemas haben, die ein Feld teilen, das zu einer gemeinsamen Klasse oder Feldergruppe gehört, und Sie verschiedene Auflistungen oder vorgeschlagene Werte für dieses Feld zwischen den einzelnen Schemas definieren, werden diese Werte zusammengeführt und im Vereinigungsschema angehängt."
+>title="Auflistungen und empfohlene Werte"
+>abstract="Ein **Enum** beschränkt ein Zeichenfolgenfeld so, dass nur Daten erfasst werden können, die mit einem vordefinierten Satz von Werten übereinstimmen. Jeder Enum-Einschränkung kann ein **Anzeigename** die Dropdown-Listen mit Attributen in der Segmentierungsbenutzeroberfläche füllt. **Vorgeschlagene Werte** für ein Feld die Erfassung nicht einschränken und nur die in der Segmentierung angezeigten Anzeigenamen bestimmen. Wenn Sie mehrere Schemas haben, die ein Feld teilen, das zu einer gemeinsamen Klasse oder Feldergruppe gehört, und Sie verschiedene Auflistungen oder vorgeschlagene Werte für dieses Feld zwischen den einzelnen Schemas definieren, werden diese Werte zusammengeführt und im Vereinigungsschema angehängt."
 
 Im Experience-Datenmodell (XDM) kann einem Zeichenfolgenfeld ein vordefinierter Satz von akzeptierten oder vorgeschlagenen Werten zugewiesen werden, um besser steuern zu können, welche Werte in dieses Feld aufgenommen werden oder wie es sich bei der Segmentierung verhalten wird.
 
