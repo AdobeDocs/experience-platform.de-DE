@@ -2,9 +2,9 @@
 keywords: Mobile; Ziele für mobile Interaktion; LINE; LINE für mobile Interaktionen
 title: LINE-Verbindung
 description: Mit dem LINE-Ziel können Sie Ihrem Platform-Segment Profile hinzufügen und verbundene Benutzer personalisierte Erlebnisse bereitstellen.
-source-git-commit: 10c04bdee8536194baea00d3466c758f848c46c5
+source-git-commit: b15ad6339cb342d754e3a78e0d68b232a94a835e
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1183'
 ht-degree: 6%
 
 ---
@@ -32,7 +32,10 @@ Beachten Sie die folgenden Voraussetzungen in [!DNL LINE], um Daten von Platform
 
 #### Sie benötigen eine [!DNL LINE] account {#prerequisites-account}
 
-Navigieren Sie zu [!DNL LINE] [anmelden](https://account.line.biz/signup) -Seite, um sich zu registrieren und ein Konto zu erstellen, falls Sie noch kein Konto haben.
+Sie müssen sich registrieren und eine [!DNL LINE] , wenn Sie noch keinen haben. So erstellen Sie ein Konto:
+
+1. Navigieren Sie zum [!DNL LINE] [Kontoanmeldung](https://account.line.biz/login?redirectUri=https%3A%2F%2Fmanager.line.biz%2F) page
+2. Auswählen **[!UICONTROL Konto erstellen]**.
 
 #### Sammeln Sie die [!DNL LINE channel access token (long-lived)] von [!DNL LINE] Entwicklerkonsole {#gather-credentials}
 
