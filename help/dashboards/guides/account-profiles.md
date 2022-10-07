@@ -2,10 +2,10 @@
 title: Dashboard-Anleitung für Kontoprofile
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den B2B-Kontoprofilen Ihres Unternehmens anzeigen können.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 19d6d3c03e6b3b0f9f82ceeee30816fa054261a3
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 9%
+source-wordcount: '1050'
+ht-degree: 7%
 
 ---
 
@@ -63,6 +63,8 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 
 * [ für die Gesamtanzahl der Konten nach Branchen](#total-accounts-by-industry)
 * [Kontoprofile hinzugefügt](#account-profiles-added)
+* [Prädiktive Scoring-Verteilung](#predictive-scoring-distribution)
+* [Einflussfaktoren für prädiktive Scoring](#predictive-scoring-top-influential-factors)
 
 ###  für die Gesamtanzahl der Konten nach Branchen {#total-accounts-by-industry}
 
@@ -82,6 +84,28 @@ Dieses Widget verwendet ein farbkodiertes Balkendiagramm, um die Anzahl der Prof
 
 ![Das Widget Kontoprofile hinzugefügt.](../images/account-profiles/accounts-profiles-added-widget.png)
 
+### Prädiktive Scoring-Verteilung {#predictive-scoring-distribution}
+
+Die [!UICONTROL Prädiktive Scoring-Verteilung] -Widget zeigt die Verteilung der Bewertungen aller Kontoprofile an, damit Sie den Zustand Ihrer Verkaufspipelines auf einen Blick verstehen können. Die Scoring-Daten werden über ein Ringdiagramm und ein Spaltendiagramm übermittelt.
+
+Die Ringdiagramm veranschaulicht den Anteil Ihrer gesamten Kontoprofile an den einzelnen Bereichen mit der hohen, mittleren und niedrigen Kaufneigung. Der Schlüssel enthält weitere Details zu den farbcodierten Abschnitten, einschließlich der Scoring-Bucket-Bereiche und der Anzahl der Kontoprofile in diesem Bereich.
+
+Das Spaltendiagramm bietet eine detailliertere Scoring-Aufschlüsselung. Jede Spalte zeigt die Anzahl der Kontoprofile in jedem der 20 in 5-Punkt-Schritten zusammengefassten Behälter an.
+
+Über das Dropdown-Menü im Widget können Sie das Konto-Scoring-Modell auswählen.
+
+![Das Widget zur prädiktiven Scoring-Verteilung .](../images/account-profiles/predictive-scoring-distribution.png)
+
+### Einflussfaktoren für prädiktive Scoring {#predictive-scoring-top-influential-factors}
+
+Die [!UICONTROL Einflussfaktoren für prädiktive Scoring] -Widget hilft Ihnen, die wichtigsten Faktoren zu verstehen, die die Ergebnisse für jeden Tendenzbehälter steuern.
+
+Dieses Widget zeigt die wichtigsten Einflussfaktoren für die einzelnen Bereiche mit hoher, mittlerer und niedriger Tendenz. Ein Balken für jeden Einflussfaktor gibt den Prozentsatz der Kontoprofile in diesem Tendenzbehälter an, der den spezifischen Einflussfaktor enthält.
+
+Über das Dropdown-Menü im Widget können Sie das Konto-Scoring-Modell auswählen.
+
+![Das Widget mit den wichtigsten Einflussfaktoren für die prädiktive Bewertung.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+
 ## Nächste Schritte
 
-Durch Befolgen dieses Dokuments sollten Sie jetzt in der Lage sein, die [!UICONTROL Kontoprofile] Dashboard. Sie sollten auch die Metriken verstehen, die in den verfügbaren Widgets angezeigt werden. Weiterführende Informationen zum Arbeiten mit Kontoprofilen als Teil Ihrer B2B-Daten in der Experience Platform-Benutzeroberfläche finden Sie im Abschnitt [Übersicht über Kontoprofile](../../rtcdp/accounts/account-profile-overview.md) für Adobe Real-Time CDP, B2B Edition.
+In diesem Dokument sollten Sie jetzt wissen, wie Sie die [!UICONTROL Kontoprofile] Dashboard. Sie sollten auch die Metriken verstehen, die in den verfügbaren Widgets angezeigt werden. Weiterführende Informationen zum Arbeiten mit Kontoprofilen als Teil Ihrer B2B-Daten in der Experience Platform-Benutzeroberfläche finden Sie im Abschnitt [Übersicht über Kontoprofile](../../rtcdp/accounts/account-profile-overview.md) für Adobe Real-Time CDP, B2B Edition.
