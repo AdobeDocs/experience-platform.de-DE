@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
-source-git-commit: 319c30facb7e8093318a01a3155bdb2fee0f548b
+source-git-commit: 87789668da0cfdf86d3c47be6e4dc49282932180
 workflow-type: tm+mt
-source-wordcount: '2933'
+source-wordcount: '2925'
 ht-degree: 29%
 
 ---
@@ -215,10 +215,12 @@ Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von 
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Warnhinweis-API | Mit Adobe Experience Platform Query Service können Sie Warnhinweise für Ad-hoc-Abfragen und geplante Abfragen abonnieren. Warnhinweise können per E-Mail, über die Platform-Benutzeroberfläche oder beides empfangen werden. Zurzeit können Abfragewarnungen nur mit dem [Query Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/). Siehe [Dokumentation zu Abfragewarnungen](../../query-service/api/alert-subscriptions.md) , um mehr zu erfahren. |
+| Warnhinweis-API | Mit Adobe Experience Platform Query Service können Sie Warnhinweise für Ad-hoc-Abfragen und geplante Abfragen abonnieren. Warnhinweise können per E-Mail, über die Platform-Benutzeroberfläche oder beides empfangen werden. Zurzeit können Abfragewarnungen nur mit dem [Query Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
 | Datensatzbeispiele | Mit den Beispielen von Query Service-Datensätzen können Sie forschende Abfragen zu Big Data durchführen, wobei die Verarbeitungszeit auf Kosten der Genauigkeit der Abfrage erheblich verkürzt wird. Siehe [Beispiel-Handbuch für Datensätze](../../query-service/sql/dataset-samples.md) , um mehr zu erfahren. |
 
 Weitere Informationen zu [!DNL Query Service] finden Sie in der [[!DNL Query Service] Übersicht](../../query-service/home.md).
+
+<!-- See the [query alerts documentation](../../query-service/api/alert-subscriptions.md) to learn more. -->
 
 ## Quellen {#sources}
 

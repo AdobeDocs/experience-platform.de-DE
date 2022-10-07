@@ -2,7 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Abfragedienst; Query Service; Warnhinweis;
 title: API-Endpunkt für Warnhinweis-Abonnements
 description: Dieses Handbuch enthält Beispiel-HTTP-Anfragen und -Antworten für die verschiedenen API-Aufrufe, die Sie mit der Query Service-API an den Endpunkt für Warnhinweise-Abonnements senden können.
-source-git-commit: cab7fcfda1bd8f6462af6e631f1fcee1f354d26b
+hide: true
+hidefromtoc: true
+source-git-commit: df894d8b52aff3708aa06e73d4c5ba3e1e501f10
 workflow-type: tm+mt
 source-wordcount: '2289'
 ht-degree: 4%
