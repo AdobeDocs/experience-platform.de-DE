@@ -3,10 +3,10 @@ keywords: Experience Platform; Startseite; beliebte Themen; Flussdienst;
 title: (Beta) Erstellen eines Flusslaufs für die On-Demand-Aufnahme mithilfe der Flow Service-API
 description: In diesem Tutorial werden die Schritte zum Erstellen eines Flusslaufs für die On-Demand-Erfassung mithilfe der Flow Service-API beschrieben.
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
+source-git-commit: 795b1af6421c713f580829588f954856e0a88277
 workflow-type: tm+mt
-source-wordcount: '1157'
-ht-degree: 10%
+source-wordcount: '856'
+ht-degree: 13%
 
 ---
 
@@ -70,6 +70,7 @@ curl -X POST \
   -d '{
       "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
       "params": {
+          "startTime": "1663735590",
           "windowStartTime": "1651584991",
           "windowEndTime": "16515859567",
           "deltaColumn": {
@@ -82,9 +83,10 @@ curl -X POST \
 | Parameter | Beschreibung |
 | --- | --- |
 | `flowId` | Die ID des Flusses, mit dem der Fluss erstellt wird. |
+| `params.startTime` | Eine Ganzzahl, die die Startzeit der Ausführung definiert. Der Wert wird in Unix Epochenzeit dargestellt. |
 | `params.windowStartTime` | Eine Ganzzahl, die die Startzeit des Fensters definiert, während dem Daten abgerufen werden sollen. Der Wert wird in Unix-Zeit dargestellt. |
 | `params.windowEndTime` | Eine Ganzzahl, die die Endzeit des Fensters definiert, während dem Daten abgerufen werden sollen. Der Wert wird in Unix-Zeit dargestellt. |
-| `params.deltaColumn` | Die Delta-Spalte ist erforderlich, um die Daten zu partitionieren und neu aufgenommene Daten von historischen Daten zu trennen. |
+| `params.deltaColumn` | Die Delta-Spalte ist erforderlich, um die Daten zu partitionieren und neu aufgenommene Daten von historischen Daten zu trennen. **Hinweis**: Die `deltaColumn` wird nur bei der Erstellung des ersten Durchlaufs benötigt. |
 | `params.deltaColumn.name` | Der Name der Delta-Spalte. |
 
 **Antwort**
@@ -93,53 +95,36 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Flusslaufs zurück
 
 ```json
 {
-    "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
-    "createdAt": 1651587212543,
-    "updatedAt": 1651587223839,
-    "createdBy": "{CREATED_BY}",
-    "updatedBy": "{UPDATED_BY}",
-    "createdClient": "{CREATED_CLIENT}",
-    "updatedClient": "{UPDATED_CLIENT}",
-    "sandboxId": "{SANDBOX_ID}",
-    "sandboxName": "prod",
-    "imsOrgId": "{ORGANIZATION_ID}",
-    "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
-    "params": {
-        "windowStartTime": "1651584991",
-        "windowEndTime": "16515859567",
-        "deltaColumn": {
-            "name": "DOB"
+    "items": [
+        {
+            "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
+            "etag": "\"1100c53e-0000-0200-0000-627138980000\""
         }
-    },
-    "etag": "\"1100c53e-0000-0200-0000-627138980000\"",
-    "metrics": {
-        "statusSummary": {
-            "status": "scheduled"
-        }
-    },
-    "activities": []
+    ]
 }
 ```
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `id` | Die ID des neu erstellten Flusslaufs. Siehe Handbuch unter [Abruf-Flussspezifikationen](../api/collect/database-nosql.md#specs) für weitere Informationen zu tabellenbasierten Ausführungsspezifikationen. |
-| `createdAt` | Der Unix-Zeitstempel, der angibt, wann der Fluss erstellt wurde. |
-| `updatedAt` | Der Unix-Zeitstempel, der angibt, wann der Fluss zuletzt aktualisiert wurde. |
-| `createdBy` | Die Organisations-ID des Benutzers, der den Flusslauf erstellt hat. |
-| `updatedBy` | Die Organisations-ID des Benutzers, der die Flussausführung zuletzt aktualisiert hat. |
-| `createdClient` | Der Anwendungs-Client, der die Flussausführung erstellt hat. |
-| `updatedClient` | Der Anwendungs-Client, der die Flussausführung zuletzt aktualisiert hat. |
-| `sandboxId` | Die ID der Sandbox, die den Fluss-Lauf enthält. |
-| `sandboxName` | Der Name der Sandbox, die den Fluss-Lauf enthält. |
-| `imsOrgId` | Die Organisations-ID. |
-| `flowId` | Die ID des Flusses, für den der Fluss ausgeführt wird. |
-| `params.windowStartTime` | Eine Ganzzahl, die die Startzeit des Fensters definiert, während dem Daten abgerufen werden sollen. Der Wert wird in Unix-Zeit dargestellt. |
-| `params.windowEndTime` | Eine Ganzzahl, die die Endzeit des Fensters definiert, während dem Daten abgerufen werden sollen. Der Wert wird in Unix-Zeit dargestellt. |
-| `params.deltaColumn` | Die Delta-Spalte ist erforderlich, um die Daten zu partitionieren und neu aufgenommene Daten von historischen Daten zu trennen. **Hinweis**: Die `deltaColumn` wird nur bei der Erstellung des ersten Durchlaufs benötigt. |
-| `params.deltaColumn.name` | Der Name der Delta-Spalte. |
 | `etag` | Die Ressourcenversion des Flusslaufs. |
-| `metrics` | Diese Eigenschaft zeigt eine Statuszusammenfassung für die Flussausführung an. |
+<!-- 
+| `createdAt` | The unix timestamp that designates when the flow run was created. |
+| `updatedAt` | The unix timestamp that designates when the flow run was last updated. |
+| `createdBy` | The organization ID of the user who created the flow run. |
+| `updatedBy` | The organization ID of the user who last updated the flow run. |
+| `createdClient` | The application client that created the flow run. |
+| `updatedClient` | The application client that last updated the flow run. |
+| `sandboxId` | The ID of the sandbox that contains the flow run. |
+| `sandboxName` | The name of the sandbox that contains the flow run. |
+| `imsOrgId` | The organization ID. |
+| `flowId` | The ID of the flow in which the flow run is created against. |
+| `params.windowStartTime` | An integer that defines the start time of the window during which data is to be pulled. The value is represented in unix time. |
+| `params.windowEndTime` | An integer that defines the end time of the window during which data is to be pulled. The value is represented in unix time. |
+| `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. **Note**: The `deltaColumn` is only needed when creating your firs flow run. |
+| `params.deltaColumn.name` | The name of the delta column. |
+| `etag` | The resource version of the flow run. |
+| `metrics` | This property displays a status summary for the flow run. | -->
 
 ## Erstellen eines Flusslaufs für eine dateibasierte Quelle
 
@@ -170,6 +155,7 @@ curl -X POST \
   -d '{
       "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
       "params": {
+          "startTime": "1663735590",
           "windowStartTime": "1651584991",
           "windowEndTime": "16515859567"
       }
@@ -179,6 +165,7 @@ curl -X POST \
 | Parameter | Beschreibung |
 | --- | --- |
 | `flowId` | Die ID des Flusses, mit dem der Fluss erstellt wird. |
+| `params.startTime` | Eine Ganzzahl, die die Startzeit der Ausführung definiert. Der Wert wird in Unix Epochenzeit dargestellt. |
 | `params.windowStartTime` | Eine Ganzzahl, die die Startzeit des Fensters definiert, während dem Daten abgerufen werden sollen. Der Wert wird in Unix-Zeit dargestellt. |
 | `params.windowEndTime` | Eine Ganzzahl, die die Endzeit des Fensters definiert, während dem Daten abgerufen werden sollen. Der Wert wird in Unix-Zeit dargestellt. |
 
@@ -189,49 +176,19 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Flusslaufs zurück
 
 ```json
 {
-    "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
-    "createdAt": 1651587212543,
-    "updatedAt": 1651587223839,
-    "createdBy": "{CREATED_BY}",
-    "updatedBy": "{UPDATED_BY}",
-    "createdClient": "{CREATED_CLIENT}",
-    "updatedClient": "{UPDATED_CLIENT}",
-    "sandboxId": "{SANDBOX_ID}",
-    "sandboxName": "prod",
-    "imsOrgId": "{ORGANIZATION_ID}",
-    "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
-    "params": {
-        "windowStartTime": "1651584991",
-        "windowEndTime": "16515859567"
-    },
-    "etag": "\"1100c53e-0000-0200-0000-627138980000\"",
-    "metrics": {
-        "statusSummary": {
-            "status": "scheduled"
+    "items": [
+        {
+            "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
+            "etag": "\"1100c53e-0000-0200-0000-627138980000\""
         }
-    },
-    "activities": []
+    ]
 }
 ```
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Die ID des neu erstellten Flusslaufs. Siehe Handbuch unter [Abruf-Flussspezifikationen](../api/collect/cloud-storage.md#specs) für weitere Informationen zu dateibasierten Ausführungsspezifikationen. |
-| `createdAt` | Der Unix-Zeitstempel, der angibt, wann der Fluss erstellt wurde. |
-| `updatedAt` | Der Unix-Zeitstempel, der angibt, wann der Fluss zuletzt aktualisiert wurde. |
-| `createdBy` | Die Organisations-ID des Benutzers, der den Flusslauf erstellt hat. |
-| `updatedBy` | Die Organisations-ID des Benutzers, der die Flussausführung zuletzt aktualisiert hat. |
-| `createdClient` | Der Anwendungs-Client, der die Flussausführung erstellt hat. |
-| `updatedClient` | Der Anwendungs-Client, der die Flussausführung zuletzt aktualisiert hat. |
-| `sandboxId` | Die ID der Sandbox, die den Fluss-Lauf enthält. |
-| `sandboxName` | Der Name der Sandbox, die den Fluss-Lauf enthält. |
-| `imsOrgId` | Die Organisations-ID. |
-| `flowId` | Die ID des Flusses, für den der Fluss ausgeführt wird. |
-| `params.windowStartTime` | Eine Ganzzahl, die die Startzeit des Fensters definiert, während dem Daten abgerufen werden sollen. Der Wert wird in Unix-Zeit dargestellt. |
-| `params.windowEndTime` | Eine Ganzzahl, die die Endzeit des Fensters definiert, während dem Daten abgerufen werden sollen. Der Wert wird in Unix-Zeit dargestellt. |
+| `id` | Die ID des neu erstellten Flusslaufs. Siehe Handbuch unter [Abruf-Flussspezifikationen](../api/collect/database-nosql.md#specs) für weitere Informationen zu tabellenbasierten Ausführungsspezifikationen. |
 | `etag` | Die Ressourcenversion des Flusslaufs. |
-| `metrics` | Diese Eigenschaft zeigt eine Statuszusammenfassung für die Flussausführung an. |
-
 
 ## Überwachen der Durchsatzabläufe
 
