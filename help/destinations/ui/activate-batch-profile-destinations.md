@@ -4,10 +4,10 @@ title: Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die Zielgruppendaten aktivieren, die Sie in Adobe Experience Platform haben, indem Sie Segmente an Ziele senden, die auf Batch-Profilen basieren.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 48e87f6089f6fe0be6cb49f5138422c631a485c3
+source-git-commit: c096720d9b7a645475d3a3f63f900e81c212d121
 workflow-type: tm+mt
-source-wordcount: '2577'
-ht-degree: 79%
+source-wordcount: '2626'
+ht-degree: 78%
 
 ---
 
@@ -212,6 +212,12 @@ Bei profilbasierten Zielen müssen Sie die Profilattribute auswählen, die Sie a
 >[!NOTE]
 >
 > Adobe Experience Platform füllt Ihre Auswahl vorab mit vier empfohlenen, häufig verwendeten Attributen aus Ihrem Schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+
+>[!IMPORTANT]
+>
+>Aufgrund einer bekannten Einschränkung können Sie die **[!UICONTROL Feld auswählen]** Fenster zum Hinzufügen `segmentMembership.status` in Ihre Dateiexporte. Stattdessen müssen Sie den Wert manuell einfügen `xdm: segmentMembership.status` in das Schemafeld ein, wie unten dargestellt.
+>
+>![Bildschirmaufzeichnung, die die Problemumgehung für die Segmentmitgliedschaft im Zuordnungsschritt des Aktivierungs-Workflows anzeigt.](/help/destinations/assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 Dateiexporte variieren auf folgende Weise, je nachdem, ob `segmentMembership.status` ausgewählt ist:
 * Wenn das Feld `segmentMembership.status` ausgewählt ist, enthalten exportierte Dateien in der ersten vollständigen Momentaufnahme die **[!UICONTROL aktiven]** Mitglieder und in nachfolgenden inkrementellen Exporten die **[!UICONTROL aktiven]** und die **[!UICONTROL abgelaufenen]** Mitglieder.
