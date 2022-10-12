@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform verwendet ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet. Dieses Dokument liefert standardmäßige Verwendungs- und Quotenbegrenzungen zur Hilfe bei der Modellierung Ihrer Profildaten, sodass Sie eine optimale Systemleistung gewährleisten können.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1b98a04f92833f5c906ec0081b35144cd47d77bc
+source-git-commit: b834e278f085adc5a4a90876727b6a0787b181e1
 workflow-type: tm+mt
-source-wordcount: '1950'
-ht-degree: 48%
+source-wordcount: '1989'
+ht-degree: 47%
 
 ---
 
@@ -110,6 +110,7 @@ Die in diesem Abschnitt beschriebenen Leitlinien beziehen sich auf die Anzahl un
 | Beschränkung | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
 | Segmente pro Sandbox | 4000 | Soft | Eine Organisation kann insgesamt über mehr als 4000 Segmente verfügen, sofern in jeder einzelnen Sandbox weniger als 4000 Segmente vorhanden sind. Der Versuch, zusätzliche Segmente zu erstellen, kann sich auf die Systemleistung auswirken. |
+| Edge-Segmente pro Sandbox | 150 | Soft | Eine Organisation kann insgesamt über mehr als 150 Edge-Segmente verfügen, sofern in jeder einzelnen Sandbox weniger als 150 Edge-Segmente vorhanden sind. Der Versuch, zusätzliche Edge-Segmente zu erstellen, kann die Systemleistung beeinträchtigen. |
 | Streaming-Segmente pro Sandbox | 500 | Soft | Eine Organisation kann über mehr als 500 Streaming-Segmente verfügen, sofern in jeder einzelnen Sandbox weniger als 500 Streaming-Segmente vorhanden sind. Der Versuch, zusätzliche Streaming-Segmente zu erstellen, kann die Systemleistung beeinträchtigen. |
 | Batch-Segmente pro Sandbox | 4000 | Soft | Eine Organisation kann insgesamt über mehr als 4.000 Batch-Segmente verfügen, sofern in jeder einzelnen Sandbox weniger als 4.000 Batch-Segmente vorhanden sind. Der Versuch, zusätzliche Batch-Segmente zu erstellen, kann die Systemleistung beeinträchtigen. |
 
