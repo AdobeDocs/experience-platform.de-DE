@@ -146,7 +146,7 @@ Lesen [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](
 
 ### Zuordnungsüberlegungen und Beispiel {#mapping-considerations-example}
 
-So senden Sie Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an [!DNL Salesforce Marketing Cloud] Ziel, müssen Sie den Schritt zur Feldzuordnung durchlaufen. Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres Experience-Datenmodell (XDM) in Ihrem Platform-Konto und den entsprechenden Entsprechungen vom Ziel zu erstellen. So ordnen Sie Ihre XDM-Felder korrekt der [!DNL Salesforce Marketing Cloud] Gehen Sie wie folgt vor:
+So senden Sie Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an die [!DNL Salesforce Marketing Cloud] Ziel, müssen Sie den Schritt zur Feldzuordnung durchlaufen. Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres Experience-Datenmodell (XDM) in Ihrem Platform-Konto und den entsprechenden Entsprechungen vom Ziel zu erstellen. So ordnen Sie Ihre XDM-Felder korrekt der [!DNL Salesforce Marketing Cloud] Gehen Sie wie folgt vor:
 
 >[!IMPORTANT]
 >
