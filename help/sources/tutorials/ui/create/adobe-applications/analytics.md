@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Quellverbindung für Adobe Analytics über die Benutzeroberfläche erstellen, um Kundendaten in Adobe Experience Platform zu importieren.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 7ad0015dbea0b74673ed0ed2c8c2159065f47ba7
+source-git-commit: 04a8ca33e712c00d687432ddf9ad82f5d1644db2
 workflow-type: tm+mt
-source-wordcount: '2243'
-ht-degree: 65%
+source-wordcount: '2302'
+ht-degree: 63%
 
 ---
 
@@ -156,7 +156,12 @@ Die folgende Dokumentation enthält weitere Ressourcen zum Verständnis von Date
 * [Funktionen zur Datenvorbereitung](../../../../../data-prep/functions.md)
 * [Hinzufügen von berechneten Feldern](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
-### Filtern nach [!DNL Profile Service] (Beta)
+### Filtern nach [!DNL Profile Service] (Beta) {#filtering-for-profile}
+
+>[!CONTEXTUALHELP]
+>id="platform_data_prep_analytics_filtering"
+>title="Filterregeln erstellen"
+>abstract="Definieren Sie beim Senden von Daten an das Echtzeit-Kundenprofil Filterregeln auf Zeilen- und Spaltenebene. Verwenden Sie die Filterung auf Zeilenebene, um Bedingungen anzuwenden und anzugeben, welche Daten verwendet werden sollen **Einschließen in die Profilaufnahme**. Verwenden Sie die Filterung auf Spaltenebene, um die Datenspalten auszuwählen, die Sie verwenden möchten **zur Profilaufnahme ausschließen**. Filterregeln gelten nicht für Daten, die an den Data Lake gesendet werden."
 
 >[!IMPORTANT]
 >

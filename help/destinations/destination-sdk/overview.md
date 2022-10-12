@@ -2,10 +2,10 @@
 description: Adobe Experience Platform Destination SDK ist ein Satz von Konfigurations-APIs, mit denen Sie Zielintegrationsmuster konfigurieren können, damit Experience Platform Zielgruppen- und Profildaten basierend auf den von Ihnen ausgewählten Daten- und Authentifizierungsformaten an Ihren Endpunkt oder Speicherort übermitteln kann. Die Konfigurationen werden in Experience Platform gespeichert und können über eine API für zusätzliche Aktualisierungen abgerufen werden.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 95a7029864de84819cacc57c02a3e6f30def0b25
+source-git-commit: 94d46ceeef6eef507115c60aaa6820d4560e4d44
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 60%
+source-wordcount: '838'
+ht-degree: 57%
 
 ---
 
@@ -17,9 +17,13 @@ Adobe Experience Platform Destination SDK ist eine Suite von Konfigurations-APIs
 
 Die Dokumentation zum Destination SDK enthält Anweisungen dazu, wie Sie mit dem Adobe Experience Platform Destination SDK eine produktive Zielintegration mit Adobe Experience Platform konfigurieren, testen und veröffentlichen und Ihr Ziel in den ständig wachsenden Zielkatalog integrieren können. Durch die Verwendung von Destination SDK können Sie auch Ihr eigenes benutzerdefiniertes privates Ziel erstellen, um Daten zu exportieren, die auf Ihre Anforderungen zugeschnitten sind.
 
-![Zielkatalog – Übersicht](./assets/destinations-catalog-overview.png)
+![Screenshot der Experience Platform-Benutzeroberfläche mit dem Zielkatalog](./assets/destinations-catalog-overview.png)
 
 ## Produktdefinierte und benutzerdefinierte Integrationen {#productized-custom-integrations}
+
+>[!IMPORTANT]
+>
+> Diese Funktion zum Erstellen privater benutzerdefinierter Ziele ist nur für verfügbar. [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) -Kunden.
 
 Als Destination SDK-Partner können Sie von der Hinzufügung Ihres produktspezifischen Ziels zum [Experience Platform-Katalog](/help/destinations/catalog/overview.md) profitieren:
 1. Standardisieren Sie die Integrationskonfigurationen für alle Kunden mit vorkonfigurierten Parametern und vereinfachen Sie die Einrichtung für Kunden.
@@ -28,19 +32,7 @@ Als Destination SDK-Partner können Sie von der Hinzufügung Ihres produktspezif
 
 Als Experience Platform-Kunde können Sie auch ein eigenes benutzerdefiniertes Ziel erstellen, das Ihren Aktivierungsanforderungen am besten entspricht.
 
-![Visuelles Diagramm zum Destination SDK](./assets/destination-sdk-visual.png)
-
-<!--
-
-## Types of destinations in Adobe Experience Platform {#types-of-destinations}
-
-In Adobe Experience Platform, we distinguish between two destination types - *connections* and *extensions*. In the user interface, customers can choose between two types of connection destinations, Profile Export destinations and Segment Export destinations. For more details around the difference between the different destination types, read [Destination Types and Categories](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html?lang=en).
-
-![Destination types](./assets/types-of-destinations.png)
-
-This documentation set provides you with all the necessary information to add your destination to Adobe Experience Platform, as a *connection*, either Profile Export or Segment Export. To set up an extension, visit the [Experience Platform Launch developer portal](https://developer.adobelaunch.com/extensions/).
-
--->
+![Ein Übersichtsdiagramm, das zeigt, wie Zielentwickler mit Destination SDK interagieren und wie Kunden in der Echtzeit-Kundendatenplattform von produktiven und privaten Zielen profitieren.](./assets/destination-sdk-visual.png)
 
 ## Unterstützte Integrationstypen {#supported-integration-types}
 
@@ -66,7 +58,7 @@ Der Zugriff auf die Destination SDK variiert je nach Ihrem Status als Partner od
 ---------|----------|
 | Unabhängiger Software-Anbieter (ISV) | Werden Sie Mitglied im [Adobe Exchange-Programm](https://partners.adobe.com/exchangeprogram/experiencecloud.html) und beantragen Sie die Bereitstellung einer Experience Platform-Sandbox für den Zugriff auf das Destination SDK. |
 | Systemintegrator (SI) | Sie müssen entweder den Gold- oder Platin-Status im [Adobe-Lösungspartner-Programm](https://solutionpartners.adobe.com/home.html) erreicht haben, um eine Experience Platform-Sandbox und Zugriff auf das Destination SDK zu erhalten. |
-| Experience Platform-Kunde auf der [Real-Time CDP Ultimate-Package](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) | Standardmäßig erhalten Sie Zugriff auf Experience Platform-Sandboxes und Destination SDK, sodass Sie private Ziele für Ihr Unternehmen erstellen können. |
+| Experience Platform-Kunde auf der [Real-Time CDP Ultimate-Package](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | Standardmäßig erhalten Sie Zugriff auf Experience Platform-Sandboxes und Destination SDK, sodass Sie private Ziele für Ihr Unternehmen erstellen können. |
 
 {style=&quot;table-layout:auto&quot;}
 
