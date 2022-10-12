@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: Observability Insights-Anleitung
-user-guide-description: Überwachung von Platform-aktivitäten durch Verwendung statistischer Metriken und Ereignisbenachrichtigungen.
+user-guide-description: Verwenden Sie statistische Metriken und Ereignisbenachrichtigungen zur Überwachung von Experience Platform-Aktivitäten.
 feature: Observability
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: 5aa2be236d35f761a1e4d34fbe0bb28fd9087935
 workflow-type: tm+mt
-source-wordcount: '54'
-ht-degree: 100%
+source-wordcount: '53'
+ht-degree: 79%
 
 ---
 

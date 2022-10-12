@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
-user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
+user-guide-description: Daten aus verschiedenen Quellen erfassen. Erfahren Sie, wie Sie bereits erfasste Daten strukturieren, beschriften und erweitern können.
 feature: Sources
-source-git-commit: eb78984d233c5d0dea04f235ee9e75eefff71752
+source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
-source-wordcount: '830'
-ht-degree: 85%
+source-wordcount: '832'
+ht-degree: 83%
 
 ---
 
