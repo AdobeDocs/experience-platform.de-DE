@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform; Startseite; beliebte Themen; Daten-Management; Lizenzberechtigungen; Lizenzierung; Best Practices
 title: Best Practices für die Verwaltung von Daten im Rahmen von Lizenzberechtigungen
-description: In diesem Dokument werden Best Practices und Tools beschrieben, mit denen Sie Ihre Lizenzberechtigungen mit Adobe Experience Platform besser verwalten können.
+description: Erfahren Sie mehr über Best Practices und Tools, mit denen Sie Ihre Lizenzberechtigungen mit Adobe Experience Platform besser verwalten können.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 02882957fc38058ff092938d631e290725d4bdc2
+source-git-commit: 5da2a6cfc9e9da6bbe6c6560577d22eed32c858c
 workflow-type: tm+mt
-source-wordcount: '2531'
-ht-degree: 100%
+source-wordcount: '2528'
+ht-degree: 98%
 
 ---
 
@@ -54,7 +54,7 @@ Die Verfügbarkeit und spezifische Definition dieser Metriken hängen von der vo
 
 ## Lizenznutzungs-Dashboard
 
-Die Adobe Experience Platform-Benutzeroberfläche verfügt über ein Dashboard, über das Sie einen Snapshot der lizenzbezogenen Daten Ihres Unternehmens für Platform aufrufen können. Die Daten im Dashboard werden genau so angezeigt, wie sie zu dem Zeitpunkt erscheinen, an dem der Snapshot erstellt wurde. Der Snapshot ist weder ein Näherungswert noch eine Stichprobe von Daten, und das Dashboard wird nicht in Echtzeit aktualisiert.
+Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie eine Momentaufnahme der lizenzbezogenen Daten Ihres Unternehmens für Platform anzeigen können. Die Daten im Dashboard werden genau so angezeigt, wie sie zu dem Zeitpunkt erscheinen, an dem der Snapshot erstellt wurde. Der Snapshot ist weder ein Näherungswert noch eine Stichprobe von Daten, und das Dashboard wird nicht in Echtzeit aktualisiert.
 
 Weitere Informationen finden Sie in der Anleitung zum [Verwenden des Lizenznutzungs-Dashboards in der Platform-Benutzeroberfläche](../../dashboards/guides/license-usage.md#license-usage-dashboard-data).
 
