@@ -2,10 +2,10 @@
 title: Häufig gestellte Fragen zum Adobe Experience Platform Web SDK
 description: Erhalten Sie Antworten auf häufig gestellte Fragen zum Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 5586c788f4ae5c61b3b94f93b4180fc293d7e179
 workflow-type: tm+mt
-source-wordcount: '1934'
-ht-degree: 2%
+source-wordcount: '2101'
+ht-degree: 3%
 
 ---
 
@@ -151,13 +151,17 @@ Weitere Informationen zu einem CNAME finden Sie im [Dokumentation zur Adobe](htt
 
 ## Verwendet das Adobe Experience Platform Web SDK Cookies? Wenn ja, welche Cookies werden verwendet?
 
-Ja, das Web SDK verwendet derzeit je nach Implementierung zwischen 1 und 4 Cookies. Nachstehend finden Sie eine Liste der vier Cookies, die Sie möglicherweise mit dem Web SDK und der Art ihrer Verwendung sehen:
+Ja, das Web SDK verwendet derzeit je nach Implementierung zwischen einem und sieben Cookies. Im Folgenden finden Sie eine Liste der Cookies, die mit dem Web SDK angezeigt werden, sowie ihre Verwendung:
 
-**kndct_orgid_identity:** Das Identitäts-Cookie wird zum Speichern der ECID sowie einiger anderer Informationen im Zusammenhang mit der ECID verwendet.
-
-**kndctr_orgid_consent:** Dieses Cookie speichert die Zustimmungsvoreinstellung des Benutzers für die Website.
-
-**kndctr_orgid_cluster:** Dieses Cookie speichert den Experience Edge-Bereich, der die Anforderungen des aktuellen Benutzers erfüllt. Der Bereich wird im URL-Pfad verwendet, damit Experience Edge die Anforderung an den richtigen Bereich weiterleiten kann. Dieses Cookie hat eine Lebensdauer von 30 Minuten. Wenn ein Benutzer eine Verbindung mit einer anderen IP-Adresse herstellt, kann die Anforderung an den nächsten Bereich weitergeleitet werden.
+| **Name** | **maxAge** | **Freundliches Alter** | **Beschreibung** |
+|---|---|---|---|
+| **kndct_orgid_identity** | 34128000 | 395 Tage | Das Identitäts-Cookie speichert die ECID sowie andere Informationen zur ECID. |
+| **kndctr_orgid_consent_check** | 7200 | 2 Stunden | Dieses Cookie speichert die Zustimmungsvoreinstellung des Benutzers für die Website. |
+| **kndctr_orgid_consent** | 15552000 | 180 Tage | Dieses sitzungsbasierte Cookie signalisiert dem Server, die Zustimmungsvoreinstellungen serverseitig zu suchen. |
+| **kndctr_orgid_cluster** | 1800 | 30 Minuten | Dieses Cookie speichert den Experience Edge-Bereich, der die Anforderungen des aktuellen Benutzers erfüllt. Der Bereich wird im URL-Pfad verwendet, damit Experience Edge die Anforderung an den richtigen Bereich weiterleiten kann. Dieses Cookie hat eine Lebensdauer von 30 Minuten. Wenn ein Benutzer eine Verbindung mit einer anderen IP-Adresse herstellt, kann die Anforderung an den nächsten Bereich weitergeleitet werden. |
+| **mbox** | 63072000 | 2 Jahre | Dieses Cookie wird angezeigt, wenn die Target-Migrationseinstellung auf &quot;true&quot;gesetzt ist. Dadurch kann Target [Mbox-Cookie](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) vom Web SDK festgelegt werden. |
+| **mboxEdgeCluster** | 1800 | 30 Minuten | Dieses Cookie wird angezeigt, wenn die Target-Migrationseinstellung auf &quot;true&quot;gesetzt ist. Mit diesem Cookie kann das Web SDK den richtigen Edge-Cluster mit at.js kommunizieren, damit Target-Profile synchronisiert bleiben können, wenn Benutzer auf einer Site navigieren. |
+| **AMCV_###@AdobeOrg** | 34128000 | 395 Tage | Dieses Cookie wird nur angezeigt, wenn die ID-Migration im Adobe Experience Platform Web SDK aktiviert ist. Dieses Cookie hilft beim Übergang zum Web SDK, während einige Teile der Site weiterhin visitor.js verwenden. Siehe [idMigrationEnabled-Dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#identity-options) um mehr über diese Einstellung zu erfahren. |
 
 Bei Verwendung des Web SDK setzt das Edge Network mindestens eines der oben genannten Cookies. Das Edge-Netzwerk setzt alle Cookies mit dem `secure` und `sameSite="none"` -Attribute.
 
