@@ -4,10 +4,10 @@ title: Handbuch zum Profil-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 18288130b98e13d824273426a860d97722c434de
+source-git-commit: 1755f5030f5730ca06ea718635ede9deb1188d21
 workflow-type: tm+mt
-source-wordcount: '4154'
-ht-degree: 7%
+source-wordcount: '3387'
+ht-degree: 8%
 
 ---
 
@@ -51,19 +51,19 @@ Auswählen **[!UICONTROL Widget hinzufügen]** um zur Widget-Bibliothek zu navig
 
 In der Widget-Bibliothek können Sie die Auswahl von standardmäßigen und benutzerdefinierten Segment-Widgets durchsuchen. Informationen zum Hinzufügen von Widgets finden Sie in der Dokumentation zur Widget-Bibliothek zum [Widget hinzufügen](../customize/widget-library.md#add-widgets).
 
-## (Beta) Einblicke in die Profilwirksamkeit {#profile-efficacy-insights}
+<!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
 >[!IMPORTANT]
 >
->Die Funktion zur Einsicht der Wirksamkeit des Profils befindet sich derzeit in der Betaphase und steht nicht allen Anwendern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
+>The profile efficacy insight functionality is currently in beta and are not available to all users. The documentation and the functionality are subject to change.
 
-Die [!UICONTROL Wirksamkeit] -Tab liefert Metriken zur Qualität und Vollständigkeit Ihrer Profildaten mithilfe von Widgets zur Profilwirksamkeit. Diese Widgets veranschaulichen auf einen Blick die Zusammensetzung Ihrer Profile, Trends in der Vollständigkeit im Zeitverlauf und Bewertungen der Qualität Ihrer Profildaten.
+The [!UICONTROL Efficacy] tab provides metrics on the quality and completeness of your profile data through the use of profile efficacy widgets. These widgets illustrate at a glance the composition of your profiles, trends in completeness over time, and assessments on the quality of your profile data.
 
-![Das Dashboard zur Profilwirksamkeit.](../images/profiles/attributes-quality-assessment.png)
+![The profile efficacy dashboard.](../images/profiles/attributes-quality-assessment.png)
 
-Siehe [Abschnitt mit Widgets zur Profilwirksamkeit](#profile-efficacy-widgets) für weitere Informationen zu den momentan verfügbaren Widgets.
+See the [profile efficacy widgets section](#profile-efficacy-widgets) for more information on the widgets currently available.
 
-Das Layout dieses Dashboards kann auch durch Auswahl von [**[!UICONTROL Dashboard ändern]**](../customize/modify.md) von [!UICONTROL Übersicht] Registerkarte.
+The layout of this dashboard is also customizable by selecting [**[!UICONTROL Modify dashboard]**](../customize/modify.md) from the [!UICONTROL Overview] tab. -->
 
 ## Profile durchsuchen {#browse-profiles}
 
@@ -360,73 +360,73 @@ Da das Widget den visuellen Crossover von Segmentdefinitionen anzeigt, können S
 ![Das Dashboard Platform UI Profile mit der Dropdown-Liste Zusammenführungsrichtlinie und den Dropdown-Listen Widget-Segmente werden hervorgehoben.](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
-## (Beta) Widgets zur Profilwirksamkeit {#profile-efficacy-widgets}
+<!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
 
 >[!IMPORTANT]
 >
->Die Widgets zur Profilwirksamkeit befinden sich derzeit in der Betaversion und stehen nicht allen Anwendern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
+>The profile efficacy widgets are currently in Beta and are not available to all users. The documentation and the functionality are subject to change.
 
-Adobe bietet mehrere Widgets, um die Vollständigkeit der erfassten Profile zu bewerten, die für Ihre Datenanalyse verfügbar sind. Jedes der Profilwirksamkeits-Widgets kann nach der Zusammenführungsrichtlinie gefiltert werden. Um den Filter für Zusammenführungsrichtlinien zu ändern, wählen Sie die[!UICONTROL Profile mithilfe von Zusammenführungsrichtlinien] und wählen Sie die entsprechende Richtlinie aus der verfügbaren Liste aus.
+Adobe provides multiple widgets to assess the completeness of the ingested profiles available for your data analysis. Each of the profile efficacy widgets can be filtered by the merge policy. To change the merge policy filter, select the[!UICONTROL Profiles using merge policy] dropdown and choose the appropriate policy from the available list.
 
-Um mehr über die einzelnen Wirksamkeits-Widgets des Profils zu erfahren, wählen Sie den Namen eines Widgets aus der folgenden Liste aus:
+To learn more about each of the profile efficacy widgets, select the name of a widget from the following list:
 
-* [[!UICONTROL Beurteilung der Attributqualität]](#attributes-quality-assessment)
-* [[!UICONTROL Profile nach Vollständigkeit]](#profiles-by-completeness)
-* [[!UICONTROL Profilvollständigkeitstrend]](#profiles-completeness-trend)
+* [[!UICONTROL Attribute quality assessment]](#attributes-quality-assessment)
+* [[!UICONTROL Profiles by completeness]](#profiles-by-completeness)
+* [[!UICONTROL Profiles completeness trend]](#profiles-completeness-trend)
 
-### (Beta) [!UICONTROL Attributqualitätsbeurteilung] {#attributes-quality-assessment}
+### (Beta) [!UICONTROL Attributes quality assessment] {#attributes-quality-assessment}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_attributesqualityassessment"
->title="Attributqualitätsbeurteilung"
->abstract="Dieses Widget zeigt die Vollständigkeit und Kardinalität aller Profile entsprechend ihren Attributen. Jede Zeile beschreibt ein Attribut. Die **Profile** gibt die Anzahl der Profile an, die dieses Attribut aufweisen und mit Werten gefüllt sind, die nicht null sind. Die **Vollständigkeit** Prozentwert wird durch die Gesamtanzahl der Profile bestimmt, die dieses Attribut aufweisen und mit Werten ungleich null gefüllt sind, dividiert durch die Gesamtanzahl der nicht leeren Werte in den Profilen für dieses Attribut. **Kardinalität** stellt die Gesamtzahl der eindeutigen Werte ungleich null dieses Attributs für alle Attribute bereit."
+>title="Attributes quality assessment"
+>abstract="This widget shows the completeness and cardinality of all profiles according to their attributes. Each row describes one attribute. The **Profiles** column provides the number of profiles that have this attribute and are filled with non-null values. The **Completeness** percentage is determined by the total number of profiles that have this attribute and are filled with non-null values divided by the total number of non-empty values in the profiles for that attribute. **Cardinality** provides the total number of unique non-null values of this attribute across all attributes."
 
-Die [!UICONTROL Beurteilung der Attributqualität] -Widget zeigt die Vollständigkeit und Kardinalität aller Profile entsprechend ihren Attributen an. Die Daten sind bis zum letzten Verarbeitungsdatum korrekt. Diese Informationen werden als Tabelle mit vier Spalten dargestellt, wobei jede Zeile in der Tabelle ein einzelnes Attribut darstellt.
+The [!UICONTROL Attribute quality assessment] widget shows the completeness and cardinality of all profiles according to their attributes. The data is accurate to the last processing date. This information is presented as a table with four columns where each row in the table represents a single attribute.
 
-| Spalte | Beschreibung |
+| Column  | Description  |
 |---|---|
-| Attribut | Der Name des Attributs. |
-| Profile | Die Anzahl der Profile, die dieses Attribut aufweisen und mit Werten gefüllt sind, die nicht null sind. |
-| Vollständigkeit | Dieser Prozentsatz wird durch die Gesamtanzahl der Profile bestimmt, die dieses Attribut aufweisen und mit Werten ungleich null gefüllt sind. Die Zahl wird berechnet, indem die Gesamtzahl der Profile durch die Gesamtzahl der nicht leeren Werte in den Profilen für dieses Attribut dividiert wird. |
-| Kardinalität | Die Gesamtzahl der **eindeutig** Werte ungleich null dieses Attributs. Er wird über alle Profile hinweg gemessen. |
+| Attribute  | The name of the attribute.  |
+| Profiles  | The number of profiles that have this attribute and are filled with non-null values.  |
+| Completeness  | This percentage is determined by the total number of profiles that have this attribute and are filled with non-null values. The number is calculated by dividing the total number of profiles by the total number of non-empty values in the profiles for that attribute.  |
+| Cardinality  | The total number of **unique** non-null values of this attribute. It is measured across all profiles. |
 
-![Das Widget zur Qualitätsbewertung der Attribute](../images/profiles/attributes-quality-assessment.png)
+![The attributes quality assessment widget](../images/profiles/attributes-quality-assessment.png)
 
-### (Beta) [!UICONTROL Profile nach Vollständigkeit] {#profiles-by-completeness}
+### (Beta) [!UICONTROL Profiles by completeness] {#profiles-by-completeness}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesbycompleteness"
->title="Profile nach Vollständigkeit"
->abstract="Das Ringdiagramm zeigt den Prozentsatz der Profilattribute an, die unter allen beobachteten Attributen mit Werten gefüllt sind, die nicht null sind. Es zeigt den Anteil der Profile mit hoher, mittlerer oder geringer Vollständigkeit. Bei hochwertigen Vollständigkeitsprofilen werden mehr als 70 % ihrer Attribute ausgefüllt. Mittlere Vollständigkeitsprofile enthalten zwischen 30 % und 70 % ihrer Attribute. Profile mit geringer Vollständigkeit haben weniger als 30 % ihrer Attribute ausgefüllt."
+>title="Profiles by completeness"
+>abstract="The donut chart displays the percentage of profile attributes that are filled with non-null values among all observed attributes. It illustrates the proportion of profiles that are of high, medium, or low completeness. High completeness profiles have more than 70% of their attributes filled. Medium completeness profiles have between 30% and 70% of their attributes filled. Low completeness profiles have less than 30% of their attributes filled."
 
-Die [!UICONTROL Profile nach Vollständigkeit] -Widget erstellt ein Ringdiagramm zur Profilvollständigkeit seit dem letzten Verarbeitungsdatum. Die Vollständigkeit eines Profils wird anhand des Prozentsatzes der Attribute gemessen, die unter allen beobachteten Attributen mit Werten ungleich null gefüllt sind.
+The [!UICONTROL Profiles by completeness] widget creates a donut chart of profile completeness since the last processing date. The completeness of a profile is measured by the percentage of attributes that are filled with non-null values among all observed attributes.
 
-Dieses Widget zeigt den Anteil der Profile mit hoher, mittlerer oder geringer Vollständigkeit. Standardmäßig sind drei Stufen der Vollständigkeit konfiguriert:
+This widget shows the proportion of profiles that are of high, medium, or low completeness. By default, there are three levels of completeness configured: 
 
-* Hohe Vollständigkeit: Profile haben mehr als 70 % ihrer Attribute ausgefüllt.
-* Mittlere Vollständigkeit: Profile haben zwischen 30 % und 70 % ihrer Attribute ausgefüllt.
-* Geringe Vollständigkeit: Profile haben weniger als 30 % ihrer Attribute ausgefüllt.
+* High completeness: Profiles have more than 70% of their attributes filled. 
+* Medium completeness: Profiles have between 30% and 70% of their attributes filled. 
+* Low completeness: Profiles have less than 30% of their attributes filled. 
 
-![Profile nach Vollständigkeits-Widget](../images/profiles/profiles-by-completeness.png)
+![The profiles by completeness widget](../images/profiles/profiles-by-completeness.png)
 
-### (Beta) [!UICONTROL Profilvollständigkeitstrend] {#profiles-completeness-trend}
+### (Beta) [!UICONTROL Profiles completeness trend] {#profiles-completeness-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilescompletenesstrend"
->title="Profilvollständigkeitstrend"
->abstract="Dieses Widget erstellt ein gestapeltes Flächendiagramm zur Darstellung des Trends der Profilvollständigkeit im Zeitverlauf. Die Vollständigkeit wird anhand des Prozentsatzes der Attribute gemessen, die unter allen beobachteten Attributen mit Werten gefüllt sind, die nicht null sind."
+>title="Profiles completeness trend"
+>abstract="This widget creates a stacked area chart to depict the trend of profile completeness over time. Completeness is measured by the percentage of attributes that are filled with non-null values among all observed attributes."
 
-Dieses Widget erstellt ein gestapeltes Flächendiagramm zur Darstellung des Trends der Profilvollständigkeit im Zeitverlauf. Die Vollständigkeit wird anhand des Prozentsatzes der Attribute gemessen, die unter allen beobachteten Attributen mit Werten ungleich null gefüllt sind. Die Profilvollständigkeit wird seit dem letzten Verarbeitungsdatum als hoch, mittel oder gering kategorisiert.
+This widget creates a stacked area chart to depict the trend of profile completeness over time. Completeness is measured by the percentage of attributes filled with non-null values among all observed attributes. It categorizes the profile completeness as high, medium, or low completeness since the last processing date.
 
-Die X-Achse stellt die Zeit dar, die Y-Achse die Anzahl der Profile und die Farben stellen die drei Stufen der Profilvollständigkeit dar.
+The x-axis represents time, the y-axis represents the number of profiles, and the colors represent the three levels of profile completeness. 
 
-Die drei Stufen der Vollständigkeit sind:
+The three levels of completeness are:
 
-* Hohe Vollständigkeit: Profile haben mehr als 70 % der Attribute ausgefüllt.
-* Mittlere Vollständigkeit: Profile haben weniger als 70 % und mehr als 30 % der ausgefüllten Attribute.
-* Geringe Vollständigkeit: Profile haben weniger als 30 % der Attribute ausgefüllt.
+* High completeness: Profiles have more than 70% of attributes filled. 
+* Medium completeness: Profiles have less than 70% and more than 30% of attributes filled. 
+* Low completeness: Profiles have less than 30% of attributes filled.
 
-![Das Trend-Widget zur Profilvollständigkeit](../images/profiles/profiles-completeness-trend.png)
+![The profiles completeness trend widget](../images/profiles/profiles-completeness-trend.png) -->
 
 ## Nächste Schritte
 
