@@ -3,9 +3,9 @@ title: Durchsuchen von Datenhygiene-Arbeitsaufträgen
 description: Erfahren Sie, wie Sie bestehende Datenhygiene-Arbeitsaufträge in der Benutzeroberfläche von Adobe Experience Platform anzeigen und verwalten können.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '860'
-ht-degree: 75%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 75%
 
 >[!IMPORTANT]
 >
->Die Funktionen zur Datenhygiene in Adobe Experience Platform sind derzeit nur für Unternehmen verfügbar, die Adobe Healthcare Shield erworben haben.
+>Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die Adobe Healthcare Shield erworben haben.
 
 Wenn eine Datenhygiene-Anfrage an das System gesendet wird, wird ein Arbeitsauftrag erstellt, um die angeforderte Aufgabe auszuführen. Ein Arbeitsauftrag stellt einen spezifischen Datenhygiene-Prozess dar, z. B. das geplante Ablaufen eines Datensatzes, wobei sein aktueller Status und andere zugehörige Details enthalten sind.
 
@@ -31,7 +31,7 @@ Wenn Sie zum ersten Mal auf den Arbeitsbereich **[!UICONTROL Datenhygiene]** in 
 
 ![Bild, das den Arbeitsbereich [!UICONTROL Datenhygiene] in der Platform-Benutzeroberfläche zeigt](../images/ui/browse/work-order-list.png)
 
-In der Liste werden nur Arbeitsaufträge für jeweils eine Kategorie angezeigt. Auswählen **[!UICONTROL Verbraucher]** um eine Liste der Aufgaben zum Löschen für Verbraucher anzuzeigen, und **[!UICONTROL Datensatz]** , um eine Liste der geplanten Datensatzabläufe anzuzeigen.
+In der Liste werden nur Arbeitsaufträge für jeweils eine Kategorie angezeigt. Wählen Sie **[!UICONTROL Privatkunde]** aus, um eine Liste der Löschaufgaben des Privatkunden anzuzeigen, und **[!UICONTROL Datensatz]**, um eine Liste der Datensätze mit geplanter Löschung anzuzeigen.
 
 ![Bild, das die Registerkarte [!UICONTROL Datensatz] zeigt](../images/ui/browse/dataset-tab.png)
 
@@ -39,28 +39,28 @@ Wählen Sie das Trichtersymbol (![Bild des Trichtersymbols](../images/ui/browse/
 
 ![Bild der angezeigten Arbeitsauftragsfilter](../images/ui/browse/filters.png)
 
-Je nach angezeigtem Arbeitstyp sind unterschiedliche Filteroptionen verfügbar.
+Je nach angezeigtem Arbeitsauftrag sind unterschiedliche Filteroptionen verfügbar.
 
-### Filter für Löschen durch Verbraucher
+### Filter für Löschvorgänge durch Privatkunden
 
-Die folgenden Filter gelten für Löschanfragen von Verbrauchern:
+Die folgenden Filter gelten für Löschanfragen von Privatkunden:
 
 | Filter | Beschreibung |
 | --- | --- |
-| [!UICONTROL Status] | Filtern Sie nach dem aktuellen Status des Arbeitsauftrags:<ul><li>**[!UICONTROL Abgeschlossen]**: Der Vorgang ist abgeschlossen.</li><li>**[!UICONTROL Fehlgeschlagen]**: Beim Auftrag ist ein Fehler aufgetreten und konnte nicht abgeschlossen werden.</li><li>**[!UICONTROL Verarbeitung]**: Die Anfrage wurde gestartet und wird derzeit verarbeitet.</li></ul> |
+| [!UICONTROL Status] | Filtern Sie nach dem aktuellen Status des Arbeitsauftrags:<ul><li>**[!UICONTROL Abgeschlossen]**: Der Vorgang ist abgeschlossen.</li><li>**[!UICONTROL Fehlgeschlagen]**: Beim Vorgang ist ein Fehler aufgetreten und er konnte nicht abgeschlossen werden.</li><li>**[!UICONTROL Wird ausgeführt]**: Die Anfrage wurde gestartet und wird derzeit verarbeitet.</li></ul> |
 | [!UICONTROL Erstellt am] | Filtern Sie nach dem Zeitpunkt, zu dem der Arbeitsauftrag erstellt wurde. |
-| [!UICONTROL Aktualisierungsdatum] | Filtern Sie nach dem Zeitpunkt, zu dem die Arbeitsreihenfolge zuletzt aktualisiert wurde. Kreationen werden als Aktualisierungen gezählt. |
+| [!UICONTROL Aktualisierungsdatum] | Filtern Sie nach dem Zeitpunkt, zu dem der Arbeitsauftrag zuletzt aktualisiert wurde. Erstellungen werden als Aktualisierungen gezählt. |
 
-### Filter für den Ablauf von Datensätzen
+### Filter für die Gültigkeit von Datensätzen
 
-Die folgenden Filter gelten für Ablaufanfragen von Datensätzen:
+Die folgenden Filter gelten für Anfragen zur Gültigkeit von Datensätzen:
 
 | Filter | Beschreibung |
 | --- | --- |
 | [!UICONTROL Status] | Filtern Sie nach dem aktuellen Status des Arbeitsauftrags:<ul><li>**[!UICONTROL Abgeschlossen]**: Der Vorgang ist abgeschlossen.</li><li>**[!UICONTROL Ausstehend]**: Der Vorgang wurde erstellt, aber noch nicht ausgeführt. Eine [Datensatz-Gültigkeitsanfrage](./dataset-expiration.md) nimmt diesen Status vor dem geplanten Löschdatum an. Zum Löschdatum ändert sich der Status auf [!UICONTROL Wird ausgeführt], sofern der Vorgang nicht zuvor bereits abgebrochen wurde.</li><li>**[!UICONTROL Wird ausgeführt]**: Die Datensatz-Gültigkeitsanfrage wurde gestartet und wird derzeit verarbeitet.</li><li>**[!UICONTROL Abgebrochen]**: Der Vorgang wurde im Rahmen einer manuellen Benutzeranfrage abgebrochen.</li></ul> |
 | [!UICONTROL Erstellt am] | Filtern Sie nach dem Zeitpunkt, zu dem der Arbeitsauftrag erstellt wurde. |
 | [!UICONTROL Ablaufdatum] | Filtern Sie Datensatz-Gültigkeitsanfragen nach dem geplanten Löschdatum für den jeweiligen Datensatz. |
-| [!UICONTROL Aktualisierungsdatum] | Filtern Sie nach dem Zeitpunkt, zu dem die Arbeitsreihenfolge zuletzt aktualisiert wurde. Erstellungen und Abläufe werden als Aktualisierungen gezählt. |
+| [!UICONTROL Aktualisierungsdatum] | Filtern Sie nach dem Zeitpunkt, zu dem der Arbeitsauftrag zuletzt aktualisiert wurde. Erstellungen und Abläufe werden als Aktualisierungen gezählt. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -79,7 +79,7 @@ Die folgenden Filter gelten für Ablaufanfragen von Datensätzen:
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="Antwort auf die Löschung von Privatkunden"
->abstract="Wenn ein Benutzer beim Löschen eine Antwort vom System erhält, werden diese Meldungen unter der **[!UICONTROL Ergebnis]** Abschnitt. Wenn während der Bearbeitung eines Arbeitsauftrags ein Problem auftritt, werden alle relevanten Fehlermeldungen in diesem Abschnitt angezeigt, um Ihnen bei der Fehlersuche zu helfen. Weitere Informationen finden Sie im Handbuch zur Datenhygiene-Benutzeroberfläche."
+>abstract="Wenn der Löschvorgang eines Privatkunden eine Antwort vom System erhält, werden diese Meldungen unter dem Abschnitt **[!UICONTROL Ergebnis]** angezeigt. Wenn während der Bearbeitung eines Arbeitsauftrags ein Problem auftritt, werden alle relevanten Fehlermeldungen in diesem Abschnitt angezeigt, um Ihnen bei der Fehlersuche zu helfen. Weitere Informationen finden Sie im Handbuch zur Datenhygiene-Benutzeroberfläche."
 
 Wählen Sie die ID eines aufgelisteten Arbeitsauftrags aus, um dessen Details anzuzeigen.
 
@@ -89,11 +89,11 @@ Je nach ausgewähltem Typ des Arbeitsauftrags sind unterschiedliche Informatione
 
 ### Details zum Löschen von Verbrauchern {#consumer-delete}
 
-Zu den Details einer Löschanfrage eines Verbrauchers gehören der aktuelle Status und die seit der Antragstellung verstrichene Zeit. Jede Anforderung enthält auch **[!UICONTROL Status nach Dienst]** -Abschnitt, der individuelle Statusdetails zu jedem am Löschen beteiligten nachgelagerten Dienst bereitstellt. In der rechten Leiste können Sie mithilfe von Steuerelementen den Namen und die Beschreibung der Arbeitsreihenfolge aktualisieren.
+Zu den Details der Löschanfrage eines Privatkunden gehören der aktuelle Status und die seit der Antragstellung verstrichene Zeit. Jede Anfrage enthält auch den Abschnitt **[!UICONTROL Status nach Service]**, der individuelle Statusdetails zu jedem nachgelagerten Service bereitstellt, der an der Löschung beteiligt ist. In der rechten Leiste können Sie mithilfe von Steuerelementen den Namen und die Beschreibung der Arbeitsaufträge aktualisieren.
 
-![Bild mit der Detailseite für einen Verbraucher-Löscharbeitsauftrag](../images/ui/browse/consumer-delete-details.png)
+![Bild der Detailseite für einen Verbraucher-Löscharbeitsauftrag](../images/ui/browse/consumer-delete-details.png)
 
-### Details zum Datensatzablauf {#dataset-expiration}
+### Details zur Datensatzgültigkeit {#dataset-expiration}
 
 Die Detailseite für eine Datensatz-Gültigkeit enthält Informationen zu Standardattributen, einschließlich des geplanten Ablaufdatums und der vor der Löschung verbleibenden Tage. In der rechten Leiste können Sie Steuerelemente verwenden, um die Gültigkeit zu bearbeiten oder abzubrechen.
 
@@ -104,4 +104,4 @@ Die Detailseite für eine Datensatz-Gültigkeit enthält Informationen zu Standa
 In diesem Handbuch wurde beschrieben, wie Sie vorhandene Datenhygiene-Arbeitsaufträge in der Platform-Benutzeroberfläche anzeigen und verwalten können. Informationen zum Erstellen eigener Arbeitsaufträge finden Sie in der folgenden Dokumentation:
 
 * [Verwalten von Datensatzgültigkeiten](./dataset-expiration.md)
-* [Löschen von Benutzern verwalten](./delete-consumer.md)
+* [Verwalten von Löschvorgängen durch Privatkunden](./delete-consumer.md)
