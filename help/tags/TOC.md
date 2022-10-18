@@ -5,10 +5,10 @@ breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Tags
 solution: Data Collection
-source-git-commit: 48151842ffcba4082988d008f9370714da51ee05
+source-git-commit: d5e8e49e50d0c5792828140626b933a4f232dd00
 workflow-type: tm+mt
-source-wordcount: '409'
-ht-degree: 95%
+source-wordcount: '413'
+ht-degree: 94%
 
 ---
 
@@ -132,6 +132,8 @@ ht-degree: 95%
       * [!DNL YouTube] Video-Tracking-Erweiterung {#youtube}
          * [Übersicht](./extensions/web/youtube/overview.md)
          * [Versionshinweise](./extensions/web/youtube/release-notes.md)
+      * [!DNL Zendesk] API-Erweiterung für Ereignisse {#zendesk}
+         * [Übersicht](./extensions/web/zendesk/overview.md)
    * [Drittanbietererweiterungen](./extensions/3rd-party-extensions.md)
 * Entwickeln von Erweiterungen {#extension-dev}
    * [Übersicht](./extension-dev/overview.md)
