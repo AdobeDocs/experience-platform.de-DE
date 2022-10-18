@@ -1,19 +1,19 @@
 ---
-title: Datensatz-Ablauf-API-Endpunkt
+title: API-Endpunkt für Datensatzgültigkeiten
 description: Mit dem Endpunkt /ttl in der Datenhygiene-API können Sie programmgesteuert einen Zeitplan für Datensatzgültigkeiten in Adobe Experience Platform festlegen.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
 source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1451'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
-# Endpunkt für den Datensatzablauf
+# Endpunkt der Datensatzgültigkeit
 
 >[!IMPORTANT]
 >
->Die Funktionen zur Datenhygiene in Adobe Experience Platform sind derzeit nur für Unternehmen verfügbar, die Adobe Healthcare Shield erworben haben.
+>Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die Adobe Healthcare Shield erworben haben.
 
 Der `/ttl`-Endpunkt in der Datenhygiene-API ermöglicht Ihnen, in Adobe Experience Platform Ablaufdaten für Datensätze zu planen.
 
@@ -103,7 +103,7 @@ Eine erfolgreiche Antwort listet die resultierenden Datensatzgültigkeiten auf. 
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `totalRecords` | Die Anzahl der Datensatzabläufe, die mit den Parametern des Auflistungsaufrufs übereinstimmen. |
+| `totalRecords` | Anzahl der Datensatzgültigkeiten, die den Parametern des Auflistungsaufrufs entsprechen. |
 | `ttlDetails` | Enthält die Details der zurückgegebenen Datensatzgültigkeiten. Weitere Informationen zu den Eigenschaften einer Datensatzgültigkeit finden Sie im Antwort-Abschnitt zum Erstellen eines [Suchaufrufs](#lookup). |
 
 {style=&quot;table-layout:auto&quot;}
@@ -120,13 +120,13 @@ GET /ttl/{DATASET_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{DATASET_ID}` | Die ID des Datensatzes, dessen Ablauf Sie nachschlagen möchten. |
+| `{DATASET_ID}` | ID des Datensatzes, dessen Gültigkeit Sie nachschlagen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Die folgende Anfrage sucht nach den Ablaufdetails für den Datensatz `62759f2ede9e601b63a2ee14`:
+Die folgende Anfrage sucht für den Datensatz `62759f2ede9e601b63a2ee14` nach den Details der Gültigkeit:
 
 ```shell
 curl -X GET \
@@ -164,16 +164,16 @@ Eine erfolgreiche Antwort gibt die Details der Datensatzgültigkeit zurück.
 | `expiry` | Das geplante Datum und die Uhrzeit, zu der der Datensatz gelöscht wird. |
 | `updatedAt` | Ein Zeitstempel, der angibt, wann die Gültigkeit zuletzt aktualisiert wurde. |
 | `updatedBy` | Die Person, der die Gültigkeit zuletzt aktualisiert hat. |
-| `displayName` | Der Anzeigename für die Ablaufanfrage. |
-| `description` | Eine Beschreibung für die Ablaufanfrage. |
+| `displayName` | Der Anzeigename für die Anfrage zur Gültigkeit. |
+| `description` | Eine Beschreibung für die Anfrage zur Gültigkeit. |
 
 {style=&quot;table-layout:auto&quot;}
 
-### Catalog-Ablauftags
+### Gültigkeits-Tags des Katalogs
 
-Bei Verwendung von [Catalog-API](../../catalog/api/getting-started.md) zum Nachschlagen von Datensatzdetails, wenn der Datensatz eine aktive Gültigkeit hat, wird er unter `tags.adobe/hygiene/ttl`.
+Wenn Sie die [Katalog-API](../../catalog/api/getting-started.md) verwenden, um Details zu einem Datensatz nachzuschlagen, wird dieser unter `tags.adobe/hygiene/ttl` aufgeführt, wenn er ein aktives Gültigkeitsdatum hat.
 
-Die folgende JSON-Datei stellt eine abgeschnittene Antwort für die Details eines Datensatzes aus dem Katalog dar, die den Ablaufwert von `32503680000000`. Der Wert des Tags kodiert den Ablauf als ganzzahlige Anzahl von Millisekunden seit Beginn der Unix-Epoche.
+Die folgende JSON-Datei enthält die gekürzte Antwort für die Details eines Datensatzes aus dem Katalog mit einem Gültigkeitswert von `32503680000000`. Der Wert des Tags kodiert die Gültigkeit als ganzzahlige Anzahl von Millisekunden seit Beginn der Unix-Epoche.
 
 ```json
 {
@@ -191,7 +191,7 @@ Die folgende JSON-Datei stellt eine abgeschnittene Antwort für die Details eine
 }
 ```
 
-## Erstellen oder Aktualisieren des Datensatzablaufs {#create-or-update}
+## Datensatzgültigkeit erstellen bzw. aktualisieren {#create-or-update}
 
 Sie können über eine PUT-Anfrage ein Ablaufdatum für einen Datensatz erstellen oder aktualisieren.
 
@@ -203,11 +203,11 @@ PUT /ttl/{DATASET_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{DATASET_ID}` | Die ID des Datensatzes, für den Sie einen Ablauf planen möchten. |
+| `{DATASET_ID}` | Die ID des Datensatzes, für den Sie die Gültigkeit planen möchten. |
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird als Zeitpunkt für die Löschung des Datensatzes `5b020a27e7040801dedbf46e` Ende 2022 festgelegt (Greenwich Mean Time). Wenn für den Datensatz keine vorhandene Gültigkeit gefunden wird, wird eine neue Gültigkeit erstellt. Wenn der Datensatz bereits einen ausstehenden Ablauf aufweist, wird dieser Ablauf mit dem neuen `expiry` -Wert.
+Mit der folgenden Anfrage wird als Zeitpunkt für die Löschung des Datensatzes `5b020a27e7040801dedbf46e` Ende 2022 festgelegt (Greenwich Mean Time). Wenn für den Datensatz keine vorhandene Gültigkeit gefunden wird, wird eine neue erstellt. Wenn der Datensatz bereits eine ausstehende Gültigkeit aufweist, wird diese mit dem neuen `expiry`-Wert aktualisiert.
 
 ```shell
 curl -X PUT \
@@ -227,8 +227,8 @@ curl -X PUT \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `expiry` | Ein ISO 8601-Zeitstempel für den Zeitpunkt, zu dem der Datensatz gelöscht wird. |
-| `displayName` | Ein Anzeigename für die Ablaufanfrage. |
-| `description` | Eine optionale Beschreibung für die Ablaufanfrage. |
+| `displayName` | Ein Anzeigename für die Anfrage zur Gültigkeit. |
+| `description` | Eine optionale Beschreibung für die Anfrage zur Gültigkeit. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -268,7 +268,7 @@ Sie können eine Datensatzgültigkeit abbrechen, indem Sie eine DELETE-Anfrage s
 
 >[!NOTE]
 >
->Nur Datensatzabläufe mit dem Status `pending` kann abgebrochen werden. Beim Versuch, einen Ablauf abzubrechen, der ausgeführt wurde oder bereits abgebrochen wurde, wird ein HTTP 404-Fehler zurückgegeben.
+>Nur Datensatzgültigkeiten mit dem Status `pending` können abgebrochen werden. Beim Versuch, eine Gültigkeit abzubrechen, die ausgeführt oder bereits abgebrochen wurde, wird ein HTTP 404-Fehler zurückgegeben.
 
 **API-Format**
 
@@ -278,13 +278,13 @@ DELETE /ttl/{EXPIRATION_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{EXPIRATION_ID}` | Die `workorderId` des Datensatzablaufs, den Sie abbrechen möchten. |
+| `{EXPIRATION_ID}` | Die `workorderId` der Datensatzgültigkeit, die Sie abbrechen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird die Gültigkeit eines Datensatzes mit ID abgebrochen `SD5cfd7a11b25543a9bcd9ef647db3d8df`:
+Mit der folgenden Anfrage wird die Gültigkeit eines Datensatzes mit der ID `SD5cfd7a11b25543a9bcd9ef647db3d8df` abgebrochen:
 
 ```shell
 curl -X DELETE \
@@ -297,11 +297,11 @@ curl -X DELETE \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und den Ablaufwert `status` -Attribut auf `cancelled`.
+Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) zurück und das Attribut `status` der Gültigkeit wird auf `cancelled` gesetzt.
 
-## Abrufen des Ablaufstatusverlaufs eines Datensatzes
+## Gültigkeitsstatus-Verlauf eines Datensatzes abrufen
 
-Sie können den Ablaufstatusverlauf eines bestimmten Datensatzes mithilfe des Abfrageparameters nachschlagen `include=history` in einer Suchanfrage. Das Ergebnis enthält Informationen über die Erstellung der Datensatzgültigkeit, alle Aktualisierungen sowie über ihren Abbruch oder ihre Ausführung (falls zutreffend).
+Sie können das Gültigkeitsstatus-Protokoll eines spezifischen Datensatzes mithilfe des Abfrageparameters `include=history` in einer Suchanfrage aufrufen. Das Ergebnis enthält Informationen über die Erstellung der Datensatzgültigkeit, alle Aktualisierungen sowie über ihren Abbruch oder ihre Ausführung (falls zutreffend).
 
 **API-Format**
 
@@ -311,7 +311,7 @@ GET /ttl/{DATASET_ID}?include=history
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{DATASET_ID}` | Die ID des Datensatzes, dessen Ablaufverlauf Sie nachschlagen möchten. |
+| `{DATASET_ID}` | ID des Datensatzes, dessen Gültigkeitsprotokoll Sie aufrufen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -370,10 +370,10 @@ Eine erfolgreiche Antwort geben die Details der Datensatzgültigkeit mit einem `
 | --- | --- |
 | `workorderId` | Die ID der Datensatzgültigkeit. |
 | `datasetId` | Die ID des Datensatzes, für den diese Gültigkeit zutrifft. |
-| `datasetName` | Der Anzeigename für den Datensatz, für den dieser Ablauf gilt. |
-| `sandboxName` | Der Name der Sandbox, unter der sich der Zieldatensatz befindet. |
-| `displayName` | Der Anzeigename für die Ablaufanfrage. |
-| `description` | Eine Beschreibung für die Ablaufanfrage. |
+| `datasetName` | Anzeigename für den Datensatz, für den diese Gültigkeit zutrifft. |
+| `sandboxName` | Name der Sandbox, unter dem der Zieldatensatz zu finden ist. |
+| `displayName` | Der Anzeigename für die Anfrage zur Gültigkeit. |
+| `description` | Eine Beschreibung für die Anfrage zur Gültigkeit. |
 | `imsOrg` | Die Kennung Ihrer Organisation. |
 | `history` | Listet das Protokoll der Aktualisierungen für die Gültigkeit als Array von Objekten auf, wobei jedes Objekt die Attribute `status`, `expiry`, `updatedAt` und `updatedBy` für die Gültigkeit zum Zeitpunkt der Aktualisierung enthält. |
 
@@ -389,11 +389,11 @@ In der folgenden Tabelle sind die verfügbaren Abfrageparameter beim [Auflisten 
 | --- | --- | --- |
 | `size` | Eine Ganzzahl zwischen 1 und 100, die die maximale Anzahl der zurückzugebenden Gültigkeiten angibt. Die Standardeinstellung ist 25. | `size=50` |
 | `page` | Eine Ganzzahl, die angibt, welche Seite der Gültigkeitenliste zurückgegeben werden soll. | `page=3` |
-| `orgId` | Sucht nach Datensätzen, deren Organisations-ID mit der des Parameters übereinstimmt. Dieser Wert wird standardmäßig auf den Wert der Variablen `x-gw-ims-org-id` -Kopfzeilen und werden ignoriert, es sei denn, die Anfrage stellt ein Service-Token bereit. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
+| `orgId` | Gibt die Gültigkeiten von Datensätzen zurück, deren Organisations-ID mit der des Parameters übereinstimmt. Dieser Wert ist standardmäßig auf den Wert der `x-gw-ims-org-id`-Kopfzeilen festgelegt und wird ignoriert, es sei denn, die Anfrage liefert ein Service-Token. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
 | `status` | Eine durch Kommas getrennte Liste von Status. Wenn diese Liste enthalten ist, entspricht die Antwort den Datensatzgültigkeiten, deren aktueller Status in der Liste enthalten ist. | `status=pending,cancelled` |
 | `author` | Gibt die Gültigkeiten zurück, für die `created_by` der Suchzeichenfolge entspricht. Wenn die Suchzeichenfolge mit `LIKE` oder `NOT LIKE` beginnt, wird der Rest als SQL-Suchmuster behandelt. Andernfalls wird die gesamte Suchzeichenfolge als exakte Zeichenfolge gehandhabt, die genau mit dem gesamten Inhalt des `created_by`-Felds übereinstimmen muss. | `author=LIKE %john%` |
-| `sandboxName` | Sucht nach Datensatzabläufen, deren Sandbox-Name genau mit dem -Argument übereinstimmt. Die Standardeinstellung ist der Sandbox-Name in der Anfrage `x-sandbox-name` -Kopfzeile. Verwendung `sandboxName=*` , um Datensatzabläufe aus allen Sandboxes einzuschließen. | `sandboxName=dev1` |
-| `datasetId` | Sucht nach Ablauffristen, die für einen bestimmten Datensatz gelten. | `datasetId=62b3925ff20f8e1b990a7434` |
+| `sandboxName` | Gibt die Datensatzgültigkeiten wieder, deren Sandbox-Name genau mit dem Argument übereinstimmt. Die Standardeinstellung ist der Sandbox-Name in der `x-sandbox-name`-Kopfzeile der Anfrage. Verwenden Sie `sandboxName=*`, um Datensatzgültigkeiten aus allen Sandboxes einzuschließen. | `sandboxName=dev1` |
+| `datasetId` | Gibt die Gültigkeiten wieder, die für einen bestimmten Datensatz gelten. | `datasetId=62b3925ff20f8e1b990a7434` |
 | `createdDate` | Gibt die Gültigkeiten zurück, die im 24-Stunden-Fenster erstellt wurden, das mit dem angegebenen Zeitpunkt beginnt.<br><br>Beachten Sie, dass ein Datum ohne Uhrzeit (wie `2021-12-07`) den Datum/Uhrzeit-Wert am Anfang des Tages darstellt. Daher bezieht sich `createdDate=2021-12-07` auf alle am 7. Dezember 2021 erstellten Gültigkeiten, von `00:00:00` bis `23:59:59.999999999` (UTC). | `createdDate=2021-12-07` |
 | `createdFromDate` | Gibt die Gültigkeiten wieder, die zum angegebenen Zeitpunkt oder danach erstellt wurden. | `createdFromDate=2021-12-07T00:00:00Z` |
 | `createdToDate` | Gibt die Gültigkeiten wieder, die zum angegebenen Zeitpunkt oder davor erstellt wurden. | `createdToDate=2021-12-07T23:59:59.999999999Z` |
