@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 source-git-commit: 9eb7cdd08069a74a8f0680a8a2af7e7e950e83b7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1111'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -29,13 +29,13 @@ Die für die Aufnahme in Experience Platform verwendeten Datenquellen sind in fo
 Experience Platform ermöglicht die Aufnahme von Daten aus anderen Adobe-Programmen wie Adobe Analytics und Adobe Audience Manager. Näheres hierzu finden Sie in den folgenden Dokumenten:
 
 - [Übersicht über Adobe Audience Manager-Quellen](connectors/adobe-applications/audience-manager.md)
-- [Erstellen einer Adobe Audience Manager-Quellverbindung über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Adobe Analytics Classifications Übersicht über die Datenquelle](connectors/adobe-applications/classifications.md)
-- [Erstellen einer Adobe Analytics Classifications-Datenquellenverbindung über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/classifications.md)
-- [Adobe Analytics Report Suite-Datenquelle - Übersicht](connectors/adobe-applications/analytics.md)
-- [Erstellen einer Adobe Analytics-Quellverbindung über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/analytics.md)
-- [Adobe Campaign Managed Cloud Services-Quellübersicht](connectors/adobe-applications/campaign.md)
-- [Erstellen einer Adobe Campaign Managed Cloud Services-Quellverbindung in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/campaign.md)
+- [Adobe Audience Manager-Quellverbindung über die Benutzeroberfläche erstellen](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [Übersicht über Adobe Analytics Classifications-Datenquellen](connectors/adobe-applications/classifications.md)
+- [Erstellen einer Adobe Analytics Classifications-Datenquellverbindung über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/classifications.md)
+- [Übersicht über Adobe Analytics-Report Suite-Datenquellen](connectors/adobe-applications/analytics.md)
+- [Adobe Analytics-Quellverbindung über die Benutzeroberfläche erstellen](./tutorials/ui/create/adobe-applications/analytics.md)
+- [Übersicht über Adobe Campaign Managed Cloud Services-Quellen](connectors/adobe-applications/campaign.md)
+- [Managed Cloud Services-Quellverbindung mit Adobe Campaign in der UI erstellen](./tutorials/ui/create/adobe-applications/campaign.md)
 - [Übersicht über die Quellen der Adobe-Datenerfassung](connectors/adobe-applications/data-collection.md)
 - [Erstellen einer Quellverbindung für Kundenattribute in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [Übersicht über [!DNL Marketo Engage]-Quellen](connectors/adobe-applications/marketo/marketo.md)
@@ -171,15 +171,15 @@ Die folgende Tabelle zeigt, wie sich die Benutzeroberfläche bei verschiedenen K
 | **[!UICONTROL Quellen verwalten]** aktiviert | Gewährt zusätzlich zu in den **[!UICONTROL Quellen verwalten]** enthaltenen Berechtigungen Zugriff auf die Option **[!UICONTROL Quelle verbinden]** unter **[!UICONTROL Katalog]** sowie auf die Option **[!UICONTROL Daten auswählen]** unter **[!UICONTROL Durchsuchen]**. **[!UICONTROL Quellen verwalten]** beinhaltet außerdem die Berechtigung zum Aktivieren und Deaktivieren von **[!UICONTROL DataFlows]** sowie zur Bearbeitung der zugehörigen Zeitpläne. |
 | **[!UICONTROL Quellen anzeigen]** deaktiviert und **[!UICONTROL Quellen verwalten]** deaktiviert | Sperrt den Zugriff auf alle Quellen. |
 
-Weitere Informationen zu den verfügbaren Berechtigungen, die über Adobe-Berechtigungen gewährt werden, finden Sie im [Zugriffskontrolle - Übersicht](../access-control/home.md).
+Weitere Informationen zu den verfügbaren Berechtigungen, die über Adobe-Berechtigungen gewährt werden, finden Sie unter [Zugriffssteuerung - Übersicht](../access-control/home.md).
 
-### Attributbasierte Zugriffskontrolle für Quellen
+### Attributbasierte Zugriffssteuerung für Quellen
 
-Die attributbasierte Zugriffskontrolle in Adobe Experience Platform ermöglicht es Administratoren, den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen zu steuern.
+Die attributbasierte Zugriffssteuerung in Adobe Experience Platform ermöglicht Admins, den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen zu steuern.
 
-Mit der attributbasierten Zugriffskontrolle können Sie Zuordnungskonfigurationen auf Felder anwenden, für die Sie über Berechtigungen verfügen. Außerdem können Sie keine Daten in einen Datensatz erfassen, wenn Sie nicht Zugriff auf alle Felder im Datensatz haben.
+Mit der attributbasierten Zugriffssteuerung können Sie Zuordnungskonfigurationen auf Felder anwenden, für die Sie über Berechtigungen verfügen. Im Übrigen können Sie keine Daten in einen Datensatz aufnehmen, wenn Sie nicht auf alle Felder im Datensatz Zugriff haben.
 
-Weitere Informationen zur attributbasierten Zugriffskontrolle finden Sie in der [Attributbasierte Zugriffskontrolle - Übersicht](../access-control/abac/overview.md).
+Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter [Attributbasierte Zugriffssteuerung – Übersicht](../access-control/abac/overview.md).
 
 ## Allgemeine Geschäftsbedingungen {#terms-and-conditions}
 
