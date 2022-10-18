@@ -4,9 +4,9 @@ description: Verbinden Sie Ihre Client-seitige Experience Platform SDK-Integrati
 keywords: Konfiguration;Datenströme;datastreamId;edge;datastream id;Umgebungseinstellungen;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Ereignis-Datensatz;Target;Client-Code;Eigenschafts-Token;Target-Umgebungs-ID;Cookie-Ziele;URL-Ziele;Analytics Settings Blockreport suite id;Datenvorbereitung für Datenerfassung;Data Prep;Mapper;XDM Mapper;Mapper in Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 source-git-commit: 81b20d40d3511592125cba123fa070fc27aace5a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1789'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 92%
 
 Ein Datenstrom stellt die Server-seitige Konfiguration bei der Implementierung der Adobe Experience Platform Web- und Mobile-SDKs dar. Während mit dem [configure-Befehl](../fundamentals/configuring-the-sdk.md) im SDK Elemente kontrolliert werden, die auf dem Client verarbeitet werden müssen (z. B. die `edgeDomain`), handhaben Datenströme alle anderen Konfigurationen für das SDK. Wenn eine Anfrage an das Adobe Experience Platform Edge Network gesendet wird, wird die `edgeConfigId` verwendet, um auf den Datenstrom zu verweisen. Auf diese Weise können Sie die Server-seitige Konfiguration aktualisieren, ohne Code-Änderungen auf Ihrer Website vornehmen zu müssen.
 
-In diesem Dokument werden die Schritte zum Konfigurieren eines Datenspeichers in der Benutzeroberfläche beschrieben.
+In diesem Dokument werden die Schritte zur Konfiguration eines Datenstroms in der Benutzeroberfläche beschrieben.
 
-## Zugriff auf den Arbeitsbereich [!UICONTROL Datenströme ]
+## Zugriff auf den Arbeitsbereich [!UICONTROL Datenströme]
 
-Sie können Datenspeicher in der Datenerfassungs-Benutzeroberfläche oder in der Experience Platform-Benutzeroberfläche erstellen und verwalten, indem Sie **[!UICONTROL Datenspeicher]** in der linken Navigation.
+Sie können Datenströme in der Datenerfassungs-Benutzeroberfläche oder der Experience Platform-Benutzeroberfläche durch Auswählen von **[!UICONTROL Datenströme]** in der linken Navigationsleiste erstellen und verwalten.
 
-![Registerkarte &quot;Datenspeicher&quot;in der Benutzeroberfläche](../assets/datastreams/overview/datastreams-tab.png)
+![Registerkarte „Datenströme“ in der Benutzeroberfläche](../assets/datastreams/overview/datastreams-tab.png)
 
 In der Registerkarte [!UICONTROL Datenströme] wird eine Liste mit vorhandenen Datenströmen angezeigt, darunter auch der Anzeigename, die Kennung und das Datum der letzten Änderung. Wählen Sie den Namen eines Datenstroms aus, um [seine Details anzuzeigen und Services zu konfigurieren](#view-details).
 
@@ -106,7 +106,7 @@ Mit diesem Service wird festgelegt, ob und wie Daten an Adobe Audience Manager g
 
 >[!IMPORTANT]
 >
->Beachten Sie beim Aktivieren eines Datastreams für Platform die aktuell verwendete Platform-Sandbox, wie im oberen Band der Benutzeroberfläche angezeigt.
+>Beachten Sie beim Aktivieren eines Datenstroms für Platform die aktuell verwendete Platform-Sandbox, die in der oberen Leiste der Benutzeroberfläche angezeigt wird.
 >
 >![Ausgewählte Sandbox](../assets/datastreams/overview/platform-sandbox.png)
 >
@@ -120,10 +120,10 @@ Mit diesem Service wird festgelegt, ob und wie Daten an Adobe Experience Platfor
 |---| --- |
 | [!UICONTROL Ereignis-Datensatz] | **(Erforderlich)** Wählen Sie den Platform-Datensatz aus, an den Kundenereignisdaten gestreamt werden. Dieses Schema muss die [XDM ExperienceEvent-Klasse](../../xdm/classes/experienceevent.md) verwenden. |
 | [!UICONTROL Profildatensatz] | Wählen Sie den Platform-Datensatz aus, an den Kundenattributdaten gesendet werden. Dieses Schema muss die [Klasse „XDM Individual Profile“](../../xdm/classes/individual-profile.md) verwenden. |
-| [!UICONTROL Offer Decisioning] | Aktivieren Sie dieses Kontrollkästchen, um Offer Decisioning für eine Platform Web SDK-Implementierung zu aktivieren. Weitere Informationen dazu finden Sie in der Anleitung zum [Verwenden von Offer Decisioning mit dem Platform Web SDK](../personalization/offer-decisioning/offer-decisioning-overview.md). <br><br> Weitere Informationen zu Offer Decisioning-Funktionen finden Sie in der [Adobe Journey Optimizer-Dokumentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=de). |
-| [!UICONTROL Edge-Segmentierung] | Aktivieren Sie dieses Kontrollkästchen, um [Edge-Segmentierung](../../segmentation/ui/edge-segmentation.md) für diesen Datenstrom zu aktivieren. Wenn das SDK Daten über einen Datenstrom sendet, für den die Edge-Segmentierung aktiviert ist, werden alle aktualisierten Segmentzugehörigkeiten für das betreffende Profil in der Antwort zurückgesendet.<br><br>Diese Option kann in Kombination mit [!UICONTROL Personalisierungsziele] für [Anwendungsfälle für die Personalisierung der nächsten Seite](../../destinations/ui/configure-personalization-destinations.md)oder in Kombination mit [!UICONTROL Adobe Journey Optimizer]. |
+| [!UICONTROL Offer Decisioning] | Aktivieren Sie dieses Kontrollkästchen, um Offer Decisioning für eine Platform Web SDK-Implementierung zu aktivieren. Weitere Informationen dazu finden Sie in der Anleitung zum [Verwenden von Offer Decisioning mit dem Platform Web SDK](../personalization/offer-decisioning/offer-decisioning-overview.md). <br><br> Weitere Informationen zu Offer Decisioning-Funktionen finden Sie in der [Adobe Journey Optimizer-Dokumentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=de) |
+| [!UICONTROL Edge-Segmentierung] | Aktivieren Sie dieses Kontrollkästchen, um [Edge-Segmentierung](../../segmentation/ui/edge-segmentation.md) für diesen Datenstrom zu aktivieren. Wenn das SDK Daten über einen Datenstrom sendet, für den die Edge-Segmentierung aktiviert ist, werden alle aktualisierten Segmentzugehörigkeiten für das betreffende Profil in der Antwort zurückgesendet.<br><br>Diese Option kann in Kombination mit [!UICONTROL Personalisierungszielen] für [Anwendungsfälle für die Personalisierung der nächsten Seite](../../destinations/ui/configure-personalization-destinations.md) oder in Kombination mit [!UICONTROL Adobe Journey Optimizer] verwendet werden. |
 | [!UICONTROL Personalisierungsziele] | Wenn diese Option nach dem Aktivieren des Kontrollkästchens [!UICONTROL Edge-Segmentierung] aktiviert wird, kann der Datenstrom mit Personalisierungszielen, wie [benutzerdefinierte Personalisierung](../../destinations/catalog/personalization/custom-personalization.md), verbunden werden. <br><br>Die genauen Schritte zum [Konfigurieren von Personalisierungszielen](../../destinations/ui/configure-personalization-destinations.md) finden Sie in der Dokumentation zu Zielen. |
-| [!UICONTROL Adobe Journey Optimizer] | Aktivieren Sie dieses Kontrollkästchen, um [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=de) für diesen Datastream. <br><br> Durch Aktivierung dieser Option kann der Datastream personalisierte Inhalte aus Web- und App-basierten eingehenden Kampagnen in [!DNL Adobe Journey Optimizer]. Diese Option erfordert [!UICONTROL Edge-Segmentierung] aktiv sein. Wenn [!UICONTROL Edge-Segmentierung] deaktiviert ist, ist diese Option grau ausgeblendet. |
+| [!UICONTROL Adobe Journey Optimizer] | Aktivieren Sie dieses Kontrollkästchen, um [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=de) für diesen Datenstrom zu aktivieren. <br><br> Wenn diese Option aktiviert ist, kann der Datenstrom personalisierte Inhalte aus Web- und App-basierten Inbound-Kampagnen in [!DNL Adobe Journey Optimizer] zurückgeben [!UICONTROL Edge-Segmentierung] muss aktiv sein. Wenn [!UICONTROL Edge-Segmentierung] nicht aktiviert ist, ist diese Option ausgegraut. |
 
 ### Adobe Target-Einstellungen {#target}
 
@@ -176,4 +176,4 @@ Die Hauptseite des Arbeitsbereichs [!UICONTROL Datenstrom] wird erneut angezeigt
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie Datenspeicher in der Benutzeroberfläche verwalten. Weitere Informationen zum Installieren und Konfigurieren des Web SDK nach dem Einrichten eines Datenstroms finden Sie im [Handbuch E2E zur Datenerfassung](../../collection/e2e.md#install).
+In diesem Handbuch ist beschrieben, wie Datenströme in der Benutzeroberfläche verwaltet werden. Weitere Informationen zum Installieren und Konfigurieren des Web SDK nach dem Einrichten eines Datenstroms finden Sie im [Datenerfassungs-E2E-Handbuch](../../collection/e2e.md#install)
