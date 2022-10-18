@@ -3,10 +3,10 @@ keywords: RTCDP-Profil;Profile RTCDP;RTCDP-Identitäten;RTCDP-Zusammenführungsr
 title: Handbuch zur Benutzeroberfläche von Account-Profilen
 description: Durch die Verwendung von Account-Profilen ermöglicht Ihnen Real-time Customer Data Platform B2B Edition die Vereinheitlichung von Account-Informationen aus verschiedenen Quellen. Dieses Handbuch enthält Details zur Interaktion mit Account-Profilen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 9119e6376228c3cec214977265abf0ce55093b64
+source-git-commit: 85d3e5f265fdbfd51f184d36205127f005e2b9df
 workflow-type: tm+mt
-source-wordcount: '1629'
-ht-degree: 73%
+source-wordcount: '1624'
+ht-degree: 74%
 
 ---
 
@@ -52,8 +52,6 @@ Weitere Informationen zum Interessenten-Kontoabgleich finden Sie im Abschnitt [L
 
 Um Account-Profile zu durchsuchen, wählen Sie zunächst **[!UICONTROL Profile]** unter [!UICONTROL Accounts] im linken Navigationsbereich aus.
 
-![Profile in der linken Navigation auswählen](images/b2b-account-browse.png)
-
 Auf der Registerkarte **[!UICONTROL Durchsuchen]** können Sie Account-Profile mithilfe einer Account-ID aus einer verbundenen Unternehmensquelle analysieren oder Quelldetails direkt eingeben.
 
 ![Verwenden der Konto-ID zur Profilanalyse](images/b2b-account-browse-by.png)
@@ -72,9 +70,9 @@ Dadurch wird der Dialog **[!UICONTROL Quelle auswählen]** geöffnet, in dem Sie
 
 Weiterführende Informationen zum Verbinden von Unternehmensquellen finden Sie in der [Quellenübersicht](../sources/sources-overview.md).
 
-![Quell-Workflow auswählen](images/b2b-account-select-source.png)
-
 Sie können eine Quelle auswählen, indem Sie die Optionsschaltfläche neben dem Verbindungsnamen auswählen und dann **[!UICONTROL Auswählen]** verwenden, um zur Registerkarte [!UICONTROL Durchsuchen] zurückzukehren.
+
+![Quell-Workflow auswählen](images/b2b-account-select-source.png)
 
 Bei ausgewählter Quelle müssen Sie jetzt eine **[!UICONTROL Account-ID]** eingeben, die mit der Quelle verknüpft ist. Wenn Sie beispielsweise eine Salesforce-Quelle auswählen, müssen Sie eine Account-ID aus der Salesforce-Instanz eingeben, um das mit dieser ID verknüpfte Account-Profil anzuzeigen.
 
