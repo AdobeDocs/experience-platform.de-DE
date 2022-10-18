@@ -3,9 +3,9 @@ title: Löschen von Verbraucherdatensätzen
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform Verbraucherdatensätze löschen können.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1133'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 93%
 
 >[!IMPORTANT]
 >
->Die Funktionen zur Datenhygiene in Adobe Experience Platform sind derzeit nur für Unternehmen verfügbar, die Adobe Healthcare Shield erworben haben.
+>Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die Adobe Healthcare Shield erworben haben.
 
 Im [[!UICONTROL Datenhygiene]-Arbeitsbereich](./overview.md) in der Adobe Experience Platform-Benutzeroberfläche können Sie Verbraucherdatensätze löschen, die vom Identity Service und Echtzeit-Kundenprofil verwendet werden.
 
@@ -35,7 +35,7 @@ Wählen Sie zunächst auf der Hauptseite im Arbeitsbereich die Option **[!UICONT
 
 ![Bild, das die ausgewählte Schaltfläche [!UICONTROL Anfrage erstellen] zeigt](../images/ui/delete-consumer/create-request-button.png)
 
-Daraufhin öffnet sich das Dialogfeld für die Anfrageerstellung. Standardmäßig wird die **[!UICONTROL Verbraucher]** ist unter der Option **[!UICONTROL Angeforderte Aktion]** Abschnitt. Lassen Sie diese Option aktiviert.
+Daraufhin öffnet sich das Dialogfeld für die Anfrageerstellung. Standardmäßig ist im Abschnitt **[!UICONTROL Angeforderte Aktion]** die Option **[!UICONTROL Privatkunden]** ausgewählt. Lassen Sie diese Option aktiviert.
 
 ![Bild mit der im Erstellungsdialogfeld ausgewählten Verbraucheroption](../images/ui/delete-consumer/consumer-action.png)
 
@@ -128,7 +128,7 @@ Um weitere Identitäten hinzuzufügen, wählen Sie das Pluszeichen (![Bild des P
 
 ## Senden der Anfrage (#submit)
 
-Nachdem Sie die Identitäten zur Anfrage hinzugefügt haben, finden Sie unter **[!UICONTROL Anforderungseinstellungen]**, geben Sie einen Namen und eine optionale Beschreibung für die Anforderung ein, bevor Sie **[!UICONTROL Einsenden]**.
+Nachdem Sie unter **[!UICONTROL Anfrageeinstellungen]** die Identitäten zur Anfrage hinzugefügt haben, geben Sie einen Namen und eine optionale Beschreibung für die Anfrage ein, bevor Sie **[!UICONTROL Senden]** auswählen.
 
 ![Bild, das die ausgewählte Schaltfläche [!UICONTROL Senden] zeigt](../images/ui/delete-consumer/submit.png)
 
@@ -140,7 +140,7 @@ Nachdem die Anfrage gesendet wurde, wird ein Arbeitsauftrag erstellt, der auf de
 
 >[!NOTE]
 >
->Siehe Abschnitt Übersicht unter [Fristen und Transparenz](../home.md#consumer-delete-transparency) für Details darüber, wie vom Verbraucher gelöschte Dateien verarbeitet werden, nachdem sie ausgeführt wurden.
+>Im Abschnitt „Übersicht“ unter [Tmelines und Transparenz](../home.md#consumer-delete-transparency) sind Details dazu ausgeführt, wie Privatkunden-Löschvorgänge verarbeitet werden, sobald sie ausgeführt werden.
 
 ## Nächste Schritte
 
