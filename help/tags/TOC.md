@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Tags
 solution: Data Collection
-source-git-commit: f6c22d260e1583dc035d1508ca3bce0d7f9de8bd
+source-git-commit: 48151842ffcba4082988d008f9370714da51ee05
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '409'
 ht-degree: 95%
 
 ---
@@ -127,6 +127,8 @@ ht-degree: 95%
       * Google-Datenschicht {#google-data-layer}
          * [Übersicht](./extensions/web/google-data-layer/overview.md)
          * [Versionshinweise](./extensions/web/google-data-layer/release-notes.md)
+      * [!DNL Splunk] {#splunk}
+         * [Übersicht](./extensions/web/splunk/overview.md)
       * [!DNL YouTube] Video-Tracking-Erweiterung {#youtube}
          * [Übersicht](./extensions/web/youtube/overview.md)
          * [Versionshinweise](./extensions/web/youtube/release-notes.md)
