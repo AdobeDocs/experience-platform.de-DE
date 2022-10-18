@@ -7,7 +7,7 @@ feature: Data Hygiene
 source-git-commit: 16eecb22a1bec89c7dbac2fcee566a2226cf897f
 workflow-type: tm+mt
 source-wordcount: '48'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -23,5 +23,5 @@ ht-degree: 95%
 * Data Hygiene API {#api}
    * [Übersicht](./api/overview.md)
    * [Datensatzgültigkeiten](./api/dataset-expiration.md)
-   * [Löschen durch Verbraucher](./api/workorder.md)
+   * [Privatkunden-Löschvorgänge](./api/workorder.md)
    * [Kontingent](./api/quota.md)
