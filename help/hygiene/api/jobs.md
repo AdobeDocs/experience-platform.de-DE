@@ -1,13 +1,13 @@
 ---
 title: Löschen von Verbraucherdatensätzen mithilfe der Datenhygiene-API
-description: Erfahren Sie, wie Sie die gespeicherten personenbezogenen Daten Ihrer Kund*innen in Adobe Experience Platform programmatisch korrigieren oder löschen können.
+description: Erfahren Sie, wie Sie die gespeicherten personenbezogenen Daten Ihrer Kunden in Adobe Experience Platform programmatisch korrigieren oder löschen können.
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
 source-git-commit: c2ff0d5806e57f230b937e8754d40031fb4b2305
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '504'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 96%
 
 >[!IMPORTANT]
 >
->Dieser Endpunkt stellt die Betafunktion für das Löschen durch Verbraucher dar. Die neuesten Funktionen finden Sie in der [`/workorder` Endpunkt](./workorder.md) anstatt.
+>Dieser Endpunkt stellt die Betafunktionalität bei Privatkunden-Löschvorgängen dar. Die neuesten Funktionen finden Sie unter [`/workorder`Endpunkt](./workorder.md)
 
 Mit der Datenhygiene-API können Sie die in Adobe Experience Platform gespeicherten personenbezogenen Daten Ihrer Kundinnen und Kunden programmatisch korrigieren oder löschen.
 
