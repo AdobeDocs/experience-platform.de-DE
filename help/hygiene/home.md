@@ -1,11 +1,11 @@
 ---
-title: Data Hygiene - Übersicht
+title: Übersicht über die Datenhygiene
 description: Mit der Datenhygiene von Adobe Experience Platform können Sie den Lebenszyklus Ihrer Daten verwalten, indem Sie veraltete oder falsche Datensätze aktualisieren oder bereinigen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
 source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '753'
-ht-degree: 26%
+ht-degree: 100%
 
 ---
 
@@ -13,16 +13,16 @@ ht-degree: 26%
 
 >[!IMPORTANT]
 >
->Datenhygiene ist derzeit nur für Organisationen verfügbar, die Adobe Healthcare Shield erworben haben.
+>Datenhygiene ist derzeit nur für Unternehmen verfügbar, die Adobe Healthcare Shield erworben haben.
 
 Adobe Experience Platform bietet leistungsstarke Tools zur Verwaltung großer, komplizierter Datenvorgänge, was die Orchestrierung von Customer Experiences ermöglicht. Da im Laufe der Zeit Daten in das System aufgenommen werden, ist es wichtig, Ihre Datenspeicher so zu verwalten, dass Daten wie vorgesehen verwendet werden. So müssen Daten aktualisiert werden, um falsche Einträge zu korrigieren, und Daten gelöscht werden, wenn dies aufgrund von Unternehmensrichtlinien erforderlich ist.
 
-Mit den Datenhygiene-Funktionen von Platform können Sie Ihre gespeicherten Verbraucherdaten wie folgt verwalten:
+Mit den Datenhygiene-Funktionen von Platform können Sie Ihre gespeicherten Daten von Privatkunden wie folgt verwalten:
 
-* Planen automatisierter Datensatzabläufe
-* Löschen von Verbraucherdaten basierend auf aufgenommenen Identitäten
+* Planen automatisierter Datensatzgültigkeiten
+* Löschen von Privatkundendaten basierend auf aufgenommenen Identitäten
 
-Diese Aktivitäten können mithilfe der Variablen [[!UICONTROL Datenhygiene] UI-Arbeitsbereich](#ui) oder [Data Hygiene API](#api). Wenn ein Datenhygienefunktion ausgeführt wird, stellt das System bei jedem Prozessschritt Aktualisierungen der Transparenz bereit. Siehe Abschnitt zu [Fristen und Transparenz](#timelines-and-transparency) für weitere Informationen darüber, wie die einzelnen Auftragstypen im System dargestellt werden.
+Diese Aktivitäten können mithilfe des Arbeitsbereichs [[!UICONTROL Datenhygiene] in der Benutzeroberfläche](#ui) oder der [Datenhygiene-API](#api) durchgeführt werden Wenn ein Datenhygienevorgang ausgeführt wird, stellt das System bei jedem Prozessschritt Aktualisierungen der Transparenz bereit. Weitere Informationen darüber, wie die einzelnen Vorgangstypen im System dargestellt werden, finden Sie im Abschnitt zu [Timelines und Transparenz](#timelines-and-transparency).
 
 ## Arbeitsbereich [!UICONTROL Datenhygiene] in der Benutzeroberfläche {#ui}
 
@@ -34,40 +34,40 @@ Ausführliche Anleitungen zum Verwalten von Datenhygiene-Aufgaben in der Benutze
 
 Die [!UICONTROL Datenhygiene]-Benutzeroberfläche basiert auf der Data Hygiene API, deren Endpunkte Sie direkt zur Automatisierung Ihrer Datenhygiene-Aktivitäten verwenden können. Weitere Informationen dazu finden Sie im [Handbuch zur Data Hygiene API](./api/overview.md).
 
-## Fristen und Transparenz
+## Timelines und Transparenz
 
-Löschanfragen für Verbraucher und Ablaufanfragen für Datensätze verfügen jeweils über eigene Verarbeitungszeitpläne und stellen Transparenzaktualisierungen an zentralen Punkten in ihren jeweiligen Workflows bereit. Weitere Informationen zu den einzelnen Auftragstypen finden Sie in den folgenden Abschnitten.
+Privatkunden-Löschvorgänge und Datensatz-Gültigkeitsanfragen weisen jeweils eigene Timelines für die Verarbeitung auf und stellen an wichtigen Punkten in ihren jeweiligen Workflows Transparenzaktualisierungen bereit. Details der einzelnen Auftragstypen finden Sie in den folgenden Abschnitten.
 
 ### Datensatzgültigkeiten {#dataset-expiration-transparency}
 
-Folgendes geschieht, wenn ein [Datensatzablaufanfrage](./ui/dataset-expiration.md) wird erstellt:
+[Datensatzgültigkeitsanfrage](./ui/dataset-expiration.md) wird erstellt:
 
-| Staging | Zeit nach geplantem Ablauf | Beschreibung |
+| Staging | Zeit nach planmäßiger Gültigkeit | Beschreibung |
 | --- | --- | --- |
-| Anfrage wird gesendet | 0 Stunden | Ein Data Steward oder Datenschutzanalyst sendet eine Anfrage, wonach ein Datensatz zu einem bestimmten Zeitpunkt ablaufen soll. Die Anforderung wird im [!UICONTROL Data Hygiene UI] nachdem sie gesendet wurde und sich bis zur geplanten Ablaufzeit im Status &quot;Ausstehend&quot;befindet, nach der die Anfrage ausgeführt wird. |
-| Datensatz wird entfernt | 1 Stunde | Der Datensatz wird aus dem [Datensatzinventarseite](../catalog/datasets/user-guide.md) in der Benutzeroberfläche. Die Daten im Data Lake werden nur weich gelöscht und bleiben so bis zum Ende des Prozesses erhalten, nach dem sie schwer gelöscht werden. |
-| Profilanzahl aktualisiert | 30 Stunden | Die durch den Ablauf des Datensatzes verursachte Änderung der Profilzahlen wird in [Dashboard-Widgets](../dashboards/guides/profiles.md#profile-count-trend) und anderen Berichten. |
-| Segmente aktualisiert | 48 Stunden | Nachdem Profile entfernt wurden, werden alle zugehörigen [Segmente](../segmentation/home.md) aktualisiert werden, um ihre neue Größe widerzuspiegeln. |
-| Journey und Ziele aktualisiert | 50 Stunden | [Journey](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [Kampagnen](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html)und [Ziele](../destinations/home.md) werden entsprechend den Änderungen in verwandten Segmenten aktualisiert. |
-| Abschließen der Hard-Löschung | 14 Tage | Alle Daten, die sich auf den Datensatz beziehen, werden aus dem Data Lake schwer gelöscht. Die [Status des Hygieneauftrags](./ui/browse.md#view-details) , wodurch der Datensatz gelöscht wurde, aktualisiert wird, um dies widerzuspiegeln. |
+| Anfrage wird übermittelt | 0 Stunden | Ein Data Steward oder Datenschutzanalyst übermittelt eine Anfrage, dass ein Datensatz zu einem bestimmten Zeitpunkt ungültig werden soll. Nachdem sie übermittelt wurde, ist die Anfrage in der [!UICONTROL Datenhygiene-Benutzeroberfläche] sichtbar und verbleibt bis zum Ablauf der planmäßigen Gültigkeitsdauer im Status „Ausstehend“, wonach die Anfrage ausgeführt wird. |
+| Datensatz wird gelöscht | 1 Stunde | Der Datensatz wird aus der [Datensatzinventarseite](../catalog/datasets/user-guide.md) in der Benutzeroberfläche gelöscht. Die Daten im Data Lake werden nur vorläufig gelöscht und bleiben so bis zum Ende des Prozesses erhalten, wonach sie dauerhaft gelöscht werden. |
+| Anzahl der Profile wird aktualisiert | 30 Stunden | Die durch die Datensatzgültigkeit verursachte Änderung der Anzahl der Profile spiegelt sich in [Dashboard-Widgets](../dashboards/guides/profiles.md#profile-count-trend) und anderen Berichten wider. |
+| Segmente werden aktualisiert | 48 Stunden | Sobald Profile entfernt worden sind, werden alle zugehörigen [Segmente](../segmentation/home.md) aktualisiert, damit ihre neue Größe widergespiegelt wird. |
+| Journeys und Ziele werden aktualisiert | 50 Stunden | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=de), [Kampagnen](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=de) und [Ziele](../destinations/home.md) werden entsprechend den Änderungen in den zugehörigen Segmenten aktualisiert. |
+| Dauerhafte Löschung wird abgeschlossen | 14 Tage | Alle Daten, die mit dem Datensatz in Zusammenhang stehen, werden dauerhaft aus dem Data Lake gelöscht. Der [Status des Hygienevorgangs](./ui/browse.md#view-details), durch den der Datensatz gelöscht wurde, wird aktualisiert, damit dies widergespiegelt wird. |
 
 {style=&quot;table-layout:auto&quot;}
 
-### Löschen durch Verbraucher {#consumer-delete-transparency}
+### Privatkunden-Löschvorgänge {#consumer-delete-transparency}
 
-Folgendes geschieht, wenn ein [Löschanfrage für Verbraucher](./ui/delete-consumer.md) wird erstellt:
+[Privatkunden betreffende Löschanfrage](./ui/delete-consumer.md) wird erstellt:
 
-| Staging | Zeit nach der Anforderungsübermittlung | Beschreibung |
+| Staging | Zeit nach der Anfrageübermittlung | Beschreibung |
 | --- | --- | --- |
-| Anfrage wird gesendet | 0 Stunden | Ein Data Steward oder Datenschutzanalyst sendet eine Löschanfrage an Verbraucher. Die Anforderung wird im [!UICONTROL Data Hygiene UI] nach der Übermittlung. |
-| Profilsuche aktualisiert | 3 Stunden | Die durch die gelöschte Identität verursachte Änderung der Profilanzahl wird in [Dashboard-Widgets](../dashboards/guides/profiles.md#profile-count-trend) und anderen Berichten. |
-| Segmente aktualisiert | 24 Stunden | Nachdem Profile entfernt wurden, werden alle zugehörigen [Segmente](../segmentation/home.md) aktualisiert werden, um ihre neue Größe widerzuspiegeln. |
-| Journey und Ziele aktualisiert | 26 Stunden | [Journey](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [Kampagnen](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html)und [Ziele](../destinations/home.md) werden entsprechend den Änderungen in verwandten Segmenten aktualisiert. |
-| Leere Datensätze gelöscht im Data Lake | 7 Tage | Die Daten werden weich aus dem Data Lake gelöscht. |
-| Datenaktualisierung abgeschlossen | 14 Tage | Die [Status des Hygieneauftrags](./ui/browse.md#view-details) Aktualisierungen, die anzeigen, dass der Auftrag abgeschlossen wurde, d. h., dass die Datenlöschung am Data Lake abgeschlossen und die relevanten Datensätze schwer gelöscht wurden. |
+| Anfrage wird übermittelt | 0 Stunden | Ein Data Steward oder Datenschutzanalyst übermittelt eine Privatkunden betreffende Löschanfrage. Die Anfrage ist in der [!UICONTROL Datenhygiene-Benutzeroberfläche] sichtbar |
+| Profil-Lookups werden aktualisiert | 3 Stunden | Die durch die gelöschte Identität verursachte Änderung der Anzahl der Profile spiegelt sich in [Dashboard-Widgets](../dashboards/guides/profiles.md#profile-count-trend) und anderen Berichten wider. |
+| Segmente werden aktualisiert | 24 Stunden | Wenn Profile entfernt worden sind, werden alle zugehörigen [Segmente](../segmentation/home.md) aktualisiert, damit ihre neue Größe widergespiegelt wird. |
+| Journeys und Ziele werden aktualisiert | 26 Stunden | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=de), [Kampagnen](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=de) und [Ziele](../destinations/home.md) werden entsprechend den Änderungen in verwandten Segmenten aktualisiert. |
+| Datensätze im Data Lake vorläufig gelöscht | 7 Tage | Die Daten werden vorläufig aus dem Data Lake gelöscht. |
+| Datenbereinigung abgeschlossen | 14 Tage | Der [Status des Hygienevorgangs](./ui/browse.md#view-details) wird aktualisiert, damit angezeigt wird, dass der Vorgang abgeschlossen ist. Das bedeutet, dass die Datenbereinigung im Data Lake abgeschlossen ist und die entsprechenden Datensätze endgültig gelöscht wurden. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Nächste Schritte
 
-In diesem Dokument erhalten Sie einen Überblick über die Datenhygiene-Funktionen von Platform. Informationen zu den ersten Schritten bei Datenhygiene-Anfragen in der Benutzeroberfläche finden Sie im Abschnitt [UI-Handbuch](./ui/overview.md). Informationen zum programmgesteuerten Erstellen von Datenhygiene-Aufträgen finden Sie im Abschnitt [Data Hygiene API-Handbuch](./api/overview.md)
+In diesem Dokument erhalten Sie einen Überblick über die Datenhygiene-Funktionen von Platform. Informationen zu den ersten Schritten bei Datenhygiene-Anfragen in der Benutzeroberfläche finden Sie im [Handbuch zur Benutzeroberfläche](./ui/overview.md) Informationen zum programmgesteuerten Erstellen von Datenhygiene-Aufträgen finden Sie im [API-Handbuch zur Datenhygiene](./api/overview.md)
