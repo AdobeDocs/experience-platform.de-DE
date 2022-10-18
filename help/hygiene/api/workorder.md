@@ -3,9 +3,9 @@ title: API-Endpunkt für Arbeitsaufträge
 description: Mit dem Endpunkt /workorder in der Data Hygiene API können Sie Löschaufgaben für Verbraucheridentitäten programmgesteuert verwalten.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '986'
-ht-degree: 49%
+ht-degree: 100%
 
 ---
 
@@ -13,15 +13,15 @@ ht-degree: 49%
 
 >[!IMPORTANT]
 >
->Die Funktionen zur Datenhygiene in Adobe Experience Platform sind derzeit nur für Unternehmen verfügbar, die Adobe Healthcare Shield erworben haben.
+>Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die Adobe Healthcare Shield erworben haben.
 
-Die `/workorder` -Endpunkt in der Data Hygiene-API ermöglicht es Ihnen, Löschanfragen von Verbrauchern in Adobe Experience Platform programmgesteuert zu verwalten.
+Mit dem Endpunkt `/workorder` in der Datenhygiene-API können Sie in Adobe Experience Platform Privatkunden betreffende Löschanfragen programmgesteuert verwalten.
 
 ## Erste Schritte
 
 Der in diesem Handbuch verwendete Endpunkt ist Teil der Data Hygiene API. Bevor Sie fortfahren, lesen Sie die [Übersicht](./overview.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
 
-## Benutzerdefinierte Löschanfrage erstellen {#delete-consumers}
+## Erstellen einer Privatkunden-Löschanfrage {#delete-consumers}
 
 Sie können eine oder mehrere Verbraucheridentitäten aus einem einzelnen Datensatz oder allen Datensätzen löschen, indem Sie eine POST-Anfrage an den `/workorder`-Endpunkt stellen.
 
@@ -73,17 +73,17 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `action` | Die auszuführende Aktion. Der Wert muss auf `delete_identity` für das Löschen durch den Verbraucher. |
+| `action` | Die auszuführende Aktion. Für Privatkunden-Löschvorgänge muss der Wert auf `delete_identity` festgelegt werden. |
 | `datasetId` | Wenn Sie Identitäten aus einem einzelnen Datensatz löschen, muss dieser Wert die Kennung des betreffenden Datensatzes sein. Wenn Sie Identitäten aus allen Datensätzen löschen, setzen Sie den Wert auf `ALL`.<br><br>Wenn Sie einen einzelnen Datensatz angeben, muss für das zugeordnete Experience-Datenmodell-Schema (XDM) des Datensatzes eine primäre Identität definiert sein. |
-| `displayName` | Der Anzeigename für die Löschanfrage des Verbrauchers. |
-| `description` | Eine Beschreibung für die Löschanfrage des Verbrauchers. |
+| `displayName` | Anzeigename für die Privatkunden betreffende Löschanfrage |
+| `description` | Beschreibung der Privatkunden betreffenden Löschanfrage. |
 | `identities` | Ein Array mit den Identitäten von mindestens einem Benutzer, dessen Informationen Sie löschen möchten. Jede Identität besteht aus einem [Identity-Namespace](../../identity-service/namespaces.md) und einem Wert:<ul><li>`namespace`: enthält die einzige Zeichenfolgen-Eigenschaft `code`, die den Identity-Namespace darstellt. </li><li>`id`: der Identitätswert.</ul>Wenn `datasetId` einen einzelnen Datensatz spezifiziert, muss jede Entität unter `identities` denselben Identity-Namespace wie die primäre Identität des Schemas verwenden.<br><br>Wenn `datasetId` auf `ALL` festgelegt ist, ist das `identities`-Array nicht auf einen einzigen Namespace beschränkt, da jeder Datensatz anders sein kann. Ihre Anfragen sind aber auf die Namespaces beschränkt, die Ihrer Organisation zur Verfügung stehen, wie von [Identity Service](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces) spezifiziert. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des vom Verbraucher gelöschten Assets zurück.
+Eine erfolgreiche Antwort gibt die Details des Privatkunden-Löschvorgangs zurück.
 
 ```json
 {
@@ -105,19 +105,19 @@ Eine erfolgreiche Antwort gibt die Details des vom Verbraucher gelöschten Asset
 | --- | --- |
 | `workorderId` | Die ID des Löschauftrags. Diese kann verwendet werden, um den Status des Löschvorgangs später anzuzeigen. |
 | `orgId` | Ihre Organisations-ID. |
-| `bundleId` | Die Kennung des Bundles, mit dem diese Löschreihenfolge verknüpft ist und das zum Debugging verwendet wird. Mehrere Löschaufträge werden gebündelt, um von nachgelagerten Diensten verarbeitet zu werden. |
-| `action` | Die Aktion, die von der Arbeitsreihenfolge ausgeführt wird. Für &quot;consumer delete&quot;lautet der Wert `identity-delete`. |
-| `createdAt` | Ein Zeitstempel, der angibt, wann der Löschauftrag erstellt wurde. |
-| `updatedAt` | Ein Zeitstempel, der angibt, wann die Löschreihenfolge zuletzt aktualisiert wurde. |
+| `bundleId` | ID des Pakets, dem dieser Löschauftrag zugeordnet ist. Sie wird zur Fehlerbehebung verwendet. Mehrere Löschaufträge werden zu einem Paket zusammengefasst, das von nachgelagerten Services verarbeitet wird. |
+| `action` | Aktion, die bei dem Arbeitsauftrag ausgeführt wird. Für Privatkunden-Löschvorgänge gilt der Wert `identity-delete`. |
+| `createdAt` | Zeitstempel, der angibt, wann der Löschauftrag erstellt wurde. |
+| `updatedAt` | Zeitstempel, der angibt, wann der Löschauftrag zuletzt aktualisiert wurde. |
 | `status` | Der aktuelle Status des Löschauftrags. |
 | `createdBy` | Der Benutzer, der den Löschauftrag erstellt hat. |
-| `datasetId` | Die ID des Datensatzes, der der Anfrage unterliegt. Wenn die Anforderung für alle Datensätze gilt, wird der Wert auf `ALL`. |
+| `datasetId` | ID des Datensatzes, der Gegenstand der Anfrage ist. Wenn die Anfrage alle Datensätze betrifft, wird der Wert auf `ALL` gesetzt |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Abrufen des Status eines Benutzerlöschens (#lookup)
+## Abrufen des Status eines Privatkunden-Löschvorgangs (#lookup)
 
-Nachher [Erstellen einer Benutzerlöschanfrage](#delete-consumers)können Sie den Status mit einer GET-Anfrage überprüfen.
+Nach dem [Erstellen einer Privatkunden betreffenden Löschanfrage](#delete-consumers) können Sie den Status mithilfe einer GET-Anfrage überprüfen.
 
 **API-Format**
 
@@ -127,7 +127,7 @@ GET /workorder/{WORK_ORDER_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{WORK_ORDER_ID}` | Die `workorderId` des Verbrauchers löschen, den Sie nachschlagen. |
+| `{WORK_ORDER_ID}` | `workorderId` des Privatkunden-Löschvorgangs, nach dem Sie suchen. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -183,18 +183,18 @@ Eine erfolgreiche Antwort gibt die Details des Löschvorgangs zurück, einschlie
 | --- | --- |
 | `workorderId` | Die ID des Löschauftrags. Diese kann verwendet werden, um den Status des Löschvorgangs später anzuzeigen. |
 | `orgId` | Ihre Organisations-ID. |
-| `bundleId` | Die Kennung des Bundles, mit dem diese Löschreihenfolge verknüpft ist und das zum Debugging verwendet wird. Mehrere Löschaufträge werden gebündelt, um von nachgelagerten Diensten verarbeitet zu werden. |
-| `action` | Die Aktion, die von der Arbeitsreihenfolge ausgeführt wird. Für &quot;consumer delete&quot;lautet der Wert `identity-delete`. |
-| `createdAt` | Ein Zeitstempel, der angibt, wann der Löschauftrag erstellt wurde. |
-| `updatedAt` | Ein Zeitstempel, der angibt, wann die Löschreihenfolge zuletzt aktualisiert wurde. |
+| `bundleId` | ID des Pakets, dem dieser Löschauftrag zugeordnet ist. Sie wird zur Fehlerbehebung verwendet. Mehrere Löschaufträge werden zu einem Paket zusammengefasst, das von nachgelagerten Services verarbeitet wird. |
+| `action` | Aktion, die bei dem Arbeitsauftrag ausgeführt wird. Für Privatkunden-Löschvorgänge gilt der Wert `identity-delete` |
+| `createdAt` | Zeitstempel, der angibt, wann der Löschauftrag erstellt wurde. |
+| `updatedAt` | Zeitstempel, der angibt, wann der Löschauftrag zuletzt aktualisiert wurde. |
 | `status` | Der aktuelle Status des Löschauftrags. |
 | `createdBy` | Der Benutzer, der den Löschauftrag erstellt hat. |
-| `datasetId` | Die ID des Datensatzes, der der Anfrage unterliegt. Wenn die Anforderung für alle Datensätze gilt, wird der Wert auf `ALL`. |
-| `productStatusDetails` | Ein Array, das den aktuellen Status der nachgelagerten Prozesse im Zusammenhang mit der Anfrage auflistet. Jedes Array-Objekt enthält die folgenden Eigenschaften:<ul><li>`productName`: Der Name des nachgelagerten Dienstes.</li><li>`productStatus`: Der aktuelle Verarbeitungsstatus der Anfrage vom nachgelagerten Dienst.</li><li>`createdAt`: Ein Zeitstempel, der angibt, wann der letzte Status vom Dienst veröffentlicht wurde.</li></ul> |
+| `datasetId` | ID des Datensatzes, der Gegenstand der Anfrage ist. Wenn die Anfrage alle Datensätze betrifft, wird der Wert auf `ALL` gesetzt |
+| `productStatusDetails` | Array, das den aktuellen Status der nachgelagerten Prozesse im Zusammenhang mit der Anfrage auflistet. Jedes Array-Objekt enthält die folgenden Eigenschaften:<ul><li>`productName`: Name des nachgelagerten Services.</li><li>`productStatus`: Aktueller Verarbeitungsstatus der Anfrage von dem nachgelagerten Service.</li><li>`createdAt`: Zeitstempel, der angibt, wann der letzte Status von dem Service veröffentlicht wurde.</li></ul> |
 
-## Aktualisieren von Verbraucher-Löschanfragen
+## Privatkunden betreffende Löschanfrage aktualisieren
 
-Sie können die `displayName` und `description` für einen Verbraucher löschen, indem er eine PUT-Anfrage stellt.
+Sie können `displayName` und `description` für einen Privatkunden-Löschvorgang aktualisieren, indem Sie eine PUT-Anfrage stellen.
 
 **API-Format**
 
@@ -204,7 +204,7 @@ PUT /workorder{WORK_ORDER_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{WORK_ORDER_ID}` | Die `workorderId` des Verbrauchers löschen, den Sie nachschlagen. |
+| `{WORK_ORDER_ID}` |  `workorderId` des Privatkunden-Löschvorgangs, nach dem Sie suchen. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -225,14 +225,14 @@ curl -X GET \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `displayName` | Ein aktualisierter Anzeigename für die Löschanfrage des Verbrauchers. |
-| `description` | Eine aktualisierte Beschreibung für die Löschanfrage des Verbrauchers. |
+| `displayName` | Aktualisierter Anzeigename für die Privatkunden betreffende Löschanfrage |
+| `description` | Aktualisierte Beschreibung der Privatkunden betreffenden Löschanfrage. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des vom Verbraucher gelöschten Assets zurück.
+Eine erfolgreiche Antwort gibt die Details des Privatkunden-Löschvorgangs zurück.
 
 ```json
 {
@@ -271,13 +271,13 @@ Eine erfolgreiche Antwort gibt die Details des vom Verbraucher gelöschten Asset
 | --- | --- |
 | `workorderId` | Die ID des Löschauftrags. Diese kann verwendet werden, um den Status des Löschvorgangs später anzuzeigen. |
 | `orgId` | Ihre Organisations-ID. |
-| `bundleId` | Die Kennung des Bundles, mit dem diese Löschreihenfolge verknüpft ist und das zum Debugging verwendet wird. Mehrere Löschaufträge werden gebündelt, um von nachgelagerten Diensten verarbeitet zu werden. |
-| `action` | Die Aktion, die von der Arbeitsreihenfolge ausgeführt wird. Für &quot;consumer delete&quot;lautet der Wert `identity-delete`. |
-| `createdAt` | Ein Zeitstempel, der angibt, wann der Löschauftrag erstellt wurde. |
-| `updatedAt` | Ein Zeitstempel, der angibt, wann die Löschreihenfolge zuletzt aktualisiert wurde. |
+| `bundleId` | ID des Pakets, dem dieser Löschauftrag zugeordnet ist. Sie wird zur Fehlerbehebung verwendet. Mehrere Löschaufträge werden zu einem Paket zusammengefasst, das von nachgelagerten Services verarbeitet wird. |
+| `action` | Aktion, die bei dem Arbeitsauftrag ausgeführt wird. Für Privatkunden-Löschvorgänge ist der Wert `identity-delete` |
+| `createdAt` | Zeitstempel, der angibt, wann der Löschauftrag erstellt wurde. |
+| `updatedAt` | Zeitstempel, der angibt, wann der Löschauftrag zuletzt aktualisiert wurde. |
 | `status` | Der aktuelle Status des Löschauftrags. |
 | `createdBy` | Der Benutzer, der den Löschauftrag erstellt hat. |
-| `datasetId` | Die ID des Datensatzes, der der Anfrage unterliegt. Wenn die Anforderung für alle Datensätze gilt, wird der Wert auf `ALL`. |
-| `productStatusDetails` | Ein Array, das den aktuellen Status der nachgelagerten Prozesse im Zusammenhang mit der Anfrage auflistet. Jedes Array-Objekt enthält die folgenden Eigenschaften:<ul><li>`productName`: Der Name des nachgelagerten Dienstes.</li><li>`productStatus`: Der aktuelle Verarbeitungsstatus der Anfrage vom nachgelagerten Dienst.</li><li>`createdAt`: Ein Zeitstempel, der angibt, wann der letzte Status vom Dienst veröffentlicht wurde.</li></ul> |
+| `datasetId` | ID des Datensatzes, der Gegenstand der Anfrage ist. Wenn die Anfrage für alle Datensätze gilt, wird der Wert auf `ALL` gesetzt |
+| `productStatusDetails` | Array, das den aktuellen Status der nachgelagerten Prozesse im Zusammenhang mit der Anfrage auflistet. Jedes Array-Objekt enthält die folgenden Eigenschaften:<ul><li>`productName`: Name des nachgelagerten Services.</li><li>`productStatus`: Aktueller Verarbeitungsstatus der Anfrage von dem nachgelagerten Service.</li><li>`createdAt`: Zeitstempel, der angibt, wann der letzte Status von dem Service veröffentlicht wurde.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
