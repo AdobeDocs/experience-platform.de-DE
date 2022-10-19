@@ -6,9 +6,9 @@ description: Dieser Artikel veranschaulicht den End-to-End-Workflow zum Aktivier
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 9e191d52d8385d716ed312725f72bd85c1e4b72d
+source-git-commit: 8d67d89db6a8c179935b4fe709f91279860d464e
 workflow-type: tm+mt
-source-wordcount: '1488'
+source-wordcount: '1531'
 ht-degree: 14%
 
 ---
@@ -124,6 +124,10 @@ Die Segmentexportauftrag-ID befindet sich im `id` -Eigenschaft, wie unten darges
 ## Schritt 5: Ausführen des Ad-hoc-Aktivierungsauftrags {#activation-job}
 
 Adobe Experience Platform führt geplante Segmentierungsaufträge einmal alle 24 Stunden aus. Die Ad-hoc-Aktivierungs-API wird basierend auf den neuesten Segmentierungsergebnissen ausgeführt.
+
+>[!IMPORTANT]
+>
+>Beachten Sie die folgende einmalige Einschränkung: Bevor Sie einen Ad-hoc-Aktivierungsauftrag ausführen, stellen Sie sicher, dass mindestens 20 Minuten nach dem Zeitpunkt vergangen sind, zu dem das Segment erstmals gemäß dem in [Schritt 3: Erstellen eines Aktivierungsflusses in der Platform-Benutzeroberfläche](#activation-flow).
 
 Bevor Sie einen Ad-hoc-Aktivierungsauftrag ausführen, stellen Sie sicher, dass der geplante Segmentexportauftrag für Ihre Segmente abgeschlossen ist. Siehe [Ziel-Datenfluss-Überwachung](../../dataflows/ui/monitor-destinations.md) Informationen zur Überwachung des Status der Aktivierungsflüsse. Wenn Ihr Aktivierungsdataflow beispielsweise eine **[!UICONTROL Verarbeitung]** -Status, warten Sie, bis sie abgeschlossen ist, bevor Sie den Ad-hoc-Aktivierungsauftrag ausführen.
 
