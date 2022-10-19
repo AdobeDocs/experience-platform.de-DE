@@ -5,10 +5,10 @@ title: Datenerfassung – Übersicht
 topic-legacy: overview
 description: Erfahren Sie mehr über die verschiedenen Technologien zur Erfassung von Daten zu Kundenerlebnissen in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 96ee731ce8de708b1671c40f1bbef9902495f3b4
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 80%
+source-wordcount: '513'
+ht-degree: 73%
 
 ---
 
@@ -47,6 +47,8 @@ Durch Komprimieren dieser Bibliotheken wird die Datenerfassung beschleunigt und 
 ## Platform Edge Network und Datenströme {#edge}
 
 Platform Edge Network ist ein global verteiltes, schnelles und zuverlässiges Netzwerk von Servern, die Daten in einem enormen Umfang empfangen und verarbeiten können. Mit Tags können Sie [Datenströme](../edge/datastreams/overview.md) für Produkte wie Adobe Target, Adobe Audience Manager und Adobe Analytics einrichten. Dadurch können Sie diese Produkte Server-seitig aktivieren, ohne den Client-seitigen Code zu ändern.
+
+Darüber hinaus sind Datenspeicher in verschiedene Platform-Funktionen integriert, mit denen sichergestellt wird, dass vertrauliche Daten, die Sie senden, im Hinblick auf organisatorische Richtlinien und rechtliche Vorschriften angemessen verarbeitet werden. Siehe Abschnitt zu [Umgang mit sensiblen Daten](../edge/datastreams/overview.md#sensitive) in der Dokumentation zu Datastreams für weitere Informationen.
 
 ![Datenströme und Adobe-Lösungen](./images/home/adobe-solutions.png)
 
