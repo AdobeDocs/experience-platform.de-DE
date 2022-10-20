@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform verwendet ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet. Dieses Dokument liefert standardmäßige Verwendungs- und Quotenbegrenzungen zur Hilfe bei der Modellierung Ihrer Profildaten, sodass Sie eine optimale Systemleistung gewährleisten können.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: b834e278f085adc5a4a90876727b6a0787b181e1
+source-git-commit: d6100f58b8ffd6251c3a58576a41dbfb75c3bb0c
 workflow-type: tm+mt
-source-wordcount: '1989'
-ht-degree: 47%
+source-wordcount: '1902'
+ht-degree: 49%
 
 ---
 
@@ -144,6 +144,4 @@ Beim Zusammenführen von Daten aus mehreren Quellen dienen Zusammenführungsrich
 
 ### Adobe Analytics Report Suite-Datensätze in Platform {#aa-datasets}
 
-Es sollte maximal ein (1) Adobe Analytics Report Suite-Datensatz für das Profil aktiviert werden. Dies ist eine weiche Begrenzung, d. h. Sie können mehr als einen Analytics-Datensatz für das Profil aktivieren. Es wird jedoch nicht empfohlen, da dies unbeabsichtigte Auswirkungen auf Ihre Daten haben kann. Dies liegt an den Unterschieden zwischen Experience-Datenmodell (XDM)-Schemas, die die semantische Datenstruktur in der Experience Platform bereitstellen und eine konsistente Datenauswertung ermöglichen, und der anpassbaren Natur von eVars und Konversionsvariablen in Adobe Analytics.
-
-So kann beispielsweise eine Organisation in Adobe Analytics über mehrere Report Suites verfügen. Wenn Report Suite A eVar 4 als &quot;internen Suchbegriff&quot;bezeichnet und Report Suite B eVar 4 als &quot;Referrer-Domäne&quot;bezeichnet, werden beide Werte in dasselbe Feld im Profil aufgenommen, was zu Verwirrung und Verschlechterung der Datenqualität führt.
+Für Profile können mehrere Report Suites aktiviert werden, solange alle Datenkonflikte gelöst sind. Mit der Datenvorbereitung können Sie Datenkonflikte zwischen eVars, Listen und Props beheben. Weitere Informationen zur Verwendung der Funktion &quot;Datenvorbereitung&quot;finden Sie in der [Handbuch zur Benutzeroberfläche von Adobe Analytics Connector](../sources/tutorials/ui/create/adobe-applications/analytics.md).
