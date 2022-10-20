@@ -1,7 +1,7 @@
 ---
 title: Übersicht über Splunk-Erweiterung
 description: Erfahren Sie mehr über die Splunk-Erweiterung für die Ereignisweiterleitung in Adobe Experience Platform.
-source-git-commit: e6f0bdcdb11630730834e353064abb960d3d0ea1
+source-git-commit: cad6d78868ac89be325faa58f567b89869bfff02
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 2%
@@ -79,7 +79,7 @@ Der nächste Schritt besteht darin, die Eigenschaften des Splunk-Ereignisses Dat
 | [!UICONTROL Quelle] | Der Quellwert, der den Ereignisdaten zugewiesen werden soll. Wenn Sie beispielsweise Daten von einer App senden, die Sie entwickeln, setzen Sie diesen Schlüssel auf den Namen der App. |
 | [!UICONTROL Index] | Der Name des Index der Ereignisdaten. Der hier angegebene Index muss sich in der Liste der zulässigen Indizes befinden, wenn der Indexparameter des Tokens festgelegt ist. |
 | [!UICONTROL Zeit] | Die Ereigniszeit. Das Standardzeitformat ist UNIX-Zeit (im Format `<sec>.<ms>`) und hängt von Ihrer lokalen Zeitzone ab. Beispiel: `1433188255.500` gibt 1433188255 Sekunden und 500 Millisekunden nach Epoche oder Montag, den 1. Juni 2015 bei 7 an:50:17.00 Uhr GMT. |
-| [!UICONTROL Felder] | Geben Sie ein unformatiertes JSON-Objekt oder einen Satz von Schlüssel-Wert-Paaren an, die explizite benutzerdefinierte Felder enthalten, die zur Indexzeit definiert werden sollen.  Die `fields` -Schlüssel gilt nicht für Rohdaten.<br><br>Anforderungen, die die `fields` -Eigenschaft muss an die `/collector/event` -Endpunkt oder andernfalls werden sie nicht indiziert. Weitere Informationen finden Sie in der Splunk-Dokumentation unter [Indexierte Feldextraktionen](http://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
+| [!UICONTROL Felder] | Geben Sie ein unformatiertes JSON-Objekt oder einen Satz von Schlüssel-Wert-Paaren an, die explizite benutzerdefinierte Felder enthalten, die zur Indexzeit definiert werden sollen.  Die `fields` -Schlüssel gilt nicht für Rohdaten.<br><br>Anforderungen, die die `fields` -Eigenschaft muss an die `/collector/event` -Endpunkt oder andernfalls werden sie nicht indiziert. Weitere Informationen finden Sie in der Splunk-Dokumentation unter [Indexierte Feldextraktionen](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
 
 ### Daten in Splunk überprüfen {#validate}
 

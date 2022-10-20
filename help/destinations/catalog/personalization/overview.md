@@ -3,10 +3,10 @@ keywords: Personalisierung;Personalisierung
 title: Personalisierungsziele – Übersicht
 description: Personalisierungsplattformen erfassen Daten und Insights aus individuellen Verhaltensweisen. Diese Plattformen können Marketern dabei helfen, anonyme Daten richtig zu nutzen und Angebote oder Anzeigen für potenzielle Neukunden bereitzustellen, die auf vorherigen Aktivitäten oder auf Zielgruppensegmenten mit ähnlichen Gewohnheiten basieren.
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-source-git-commit: 26fb80a2a09b8374ddec8e164817855169fa0a81
+source-git-commit: f3c58dd95730393f899378ffedec4a49363df204
 workflow-type: tm+mt
-source-wordcount: '148'
-ht-degree: 96%
+source-wordcount: '151'
+ht-degree: 94%
 
 ---
 
@@ -23,6 +23,7 @@ Derzeit unterstützt Platform die unten aufgeführten Personalisierungsziele. In
 **Verbindungen**
 
 * [Adobe Target](adobe-target-connection.md)
+* [(Beta) Adobe Commerce](adobe-commerce.md)
 * [Benutzerdefinierte Personalisierungsverbindung](custom-personalization.md)
 * [Pega Customer Decision Hub-Verbindung](pega.md)
 
