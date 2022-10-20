@@ -1,11 +1,11 @@
 ---
 audience: user
 user-guide-title: Barrierefreiheit von Adobe Experience Platform
-user-guide-description: Erfahren Sie mehr über die Verpflichtung der Experience Platform, allen Einzelpersonen barrierefreie und inklusive Funktionen bereitzustellen.
+user-guide-description: Erfahren Sie mehr über die Bemühungen von Experience Platform, allen Personen barrierefreie und inklusive Funktionen bereitzustellen.
 source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
 workflow-type: tm+mt
 source-wordcount: '50'
-ht-degree: 70%
+ht-degree: 100%
 
 ---
 

@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: Handbuch zu Datenflüssen
-user-guide-description: Erfahren Sie mehr über Datenflüsse und wie Sie sie über verschiedene Dienste hinweg konfigurieren.
+user-guide-description: Erfahren Sie mehr über Datenflüsse und wie Sie sie in verschiedenen Services konfigurieren.
 feature: Dataflows
 source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
 source-wordcount: '62'
-ht-degree: 51%
+ht-degree: 69%
 
 ---
 

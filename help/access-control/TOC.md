@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: Hilfe zur Zugangssteuerung in Adobe Experience Platform
-breadcrumb-title: Anleitung für die Zugriffssteuerung
-user-guide-description: Verwenden Sie Produktprofile in Adobe Admin Console, um Benutzerberechtigungen zu verwalten. Erfahren Sie, wie Sie Benutzer Produkten und Sandboxes zuweisen.
+breadcrumb-title: Anleitung zur Zugriffssteuerung
+user-guide-description: Verwenden Sie Produktprofile in Adobe Admin Console, um Benutzerberechtigungen zu verwalten. Erfahren Sie, wie Sie Benutzende zu Produkten und Sandboxes zuweisen.
 feature: Access Control
 source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
 workflow-type: tm+mt
 source-wordcount: '124'
-ht-degree: 79%
+ht-degree: 95%
 
 ---
 

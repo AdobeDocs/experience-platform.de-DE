@@ -9,8 +9,8 @@ landing-page-description: Customer AI wird verwendet, um für einzelne Profile s
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
 source-git-commit: 6c0e001419dc78d4ff87bebd0604c7add07b635f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '553'
+ht-degree: 71%
 
 ---
 

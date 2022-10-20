@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: Adobe Experience Platform Data Access
-breadcrumb-title: Datenzugriffsanleitung
-user-guide-description: Suchen und greifen Sie in Experience Platform auf erfasste Datensätze zu.
+breadcrumb-title: Anleitung zum Datenzugriff
+user-guide-description: Suchen Sie in Experience Platform nach aufgenommenen Datensätzen und greifen Sie darauf zu.
 feature: Data Access
 source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
 workflow-type: tm+mt
 source-wordcount: '38'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
