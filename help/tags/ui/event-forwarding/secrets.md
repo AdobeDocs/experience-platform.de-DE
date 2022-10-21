@@ -2,10 +2,10 @@
 title: Konfigurieren von Geheimnissen bei der Ereignisweiterleitung
 description: Erfahren Sie, wie Sie Geheimnisse in der Benutzeroberfläche konfigurieren, um sich bei Endpunkten zu authentifizieren, die in den Eigenschaften der Ereignisweiterleitung verwendet werden.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 9f38925645ec4311f4a809a913fe51792e889105
 workflow-type: tm+mt
-source-wordcount: '1633'
-ht-degree: 78%
+source-wordcount: '1715'
+ht-degree: 74%
 
 ---
 
@@ -127,6 +127,12 @@ Ein Popup erscheint, das Sie darüber informiert, dass das Geheimnis manuell üb
 ![Popup für Google-Autorisierung](../../images/ui/event-forwarding/secrets/google-authorization.png)
 
 Es wird ein Dialogfeld angezeigt, in dem Sie die Anmeldeinformationen für Ihr Google-Konto eingeben können. Befolgen Sie die Anweisungen, um der Ereignisweiterleitung unter dem ausgewählten Bereich Zugriff auf Ihre Daten zu gewähren. Sobald der Autorisierungsprozess abgeschlossen ist, wird der geheime Schlüssel erstellt.
+
+>[!IMPORTANT]
+>
+>Wenn für Ihr Unternehmen eine Richtlinie zur erneuten Authentifizierung für Google Cloud-Anwendungen festgelegt ist, werden die erstellten Geheimnisse nach Ablauf der Authentifizierung nicht erfolgreich aktualisiert (zwischen 1 und 24 Stunden, je nach Richtlinienkonfiguration).
+>
+>Um dieses Problem zu beheben, melden Sie sich bei der Google Admin Console an und navigieren Sie zur **[!DNL App access control]** -Seite, damit Sie die Ereignisweiterleitungs-App (Adobe Real-Time CDP Event Forwarding) als [!DNL Trusted]. Weitere Informationen finden Sie in der Google-Dokumentation unter [Festlegen von Sitzungslängen für Google Cloud-Services](https://support.google.com/a/answer/9368756) für weitere Informationen.
 
 ## Geheime Daten bearbeiten
 
