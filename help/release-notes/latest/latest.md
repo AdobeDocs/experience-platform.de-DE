@@ -4,7 +4,7 @@ description: Die neuesten Versionshinweise für Adobe Experience Platform.
 source-git-commit: 87789668da0cfdf86d3c47be6e4dc49282932180
 workflow-type: tm+mt
 source-wordcount: '2925'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -108,7 +108,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | --- | --- |
 | Integration der linken Navigation in der Platform-Benutzeroberfläche | Alle Funktionen, die bisher ausschließlich in der Benutzeroberfläche für die Datenerfassung enthalten waren (einschließlich Tags, Ereignisweiterleitung und Datenströme), sind jetzt auch über die linke Navigationsleiste von Experience Platform unter der Kategorie **[!UICONTROL Datenerfassung]** verfügbar Dadurch entfällt die Notwendigkeit, beim Arbeiten mit Datenerfassungsfunktionen in Platform zwischen Benutzeroberflächen zu wechseln. |
 | Benutzerattribution in Tags und Ereignisweiterleitung | Bei der Auflistung verfügbarer [!UICONTROL Eigenschaften] in Tags und bei der Ereignisweiterleitung wird jetzt für jede aufgelistete Eigenschaft angezeigt, wann sie zuletzt aktualisiert wurde und von welchem Benutzer die Aktualisierung vorgenommen wurde. |
-| [[!DNL Snap Conversions API] Erweiterung](https://exchange.adobe.com/apps/ec/108550) für die Ereignisweiterleitung | Sie können jetzt Daten an die [!DNL Snapchat Conversions API] mit [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) -Erweiterung. Weiterführende Informationen zur Authentifizierung und Verwendung der API finden Sie im Abschnitt [[!DNL Snapchat Marketing API] Dokumentation](https://marketingapi.snapchat.com/docs/conversion.html). |
+| [[!DNL Snap Conversions API] Erweiterung](https://exchange.adobe.com/apps/ec/108550) für die Ereignisweiterleitung | Sie können jetzt Daten mithilfe einer Erweiterung zur [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) an die [!DNL Snapchat Conversions API] senden. Weitere Informationen zur Authentifizierung und Verwendung der API finden Sie in der [[!DNL Snapchat Marketing API] Dokumentation](https://marketingapi.snapchat.com/docs/conversion.html). |
 | [[!DNL User-Agent Client Hints] im Web SDK](../../edge/fundamentals/user-agent-client-hints.md) | Web-SDK unterstützt jetzt [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Mit Client-Hinweisen können Website-Besitzer auf viele der Informationen zugreifen, die auch in der [!DNL User-Agent]-Zeichenfolge enthalten sind, allerdings auf eine Weise, die die Privatsphäre besser schützt. |
 | [Seitenweise Migration zu Web SDK](../../edge/home.md#migrating-to-web-sdk) | Sie können jetzt Ihre vorhandenen Web-Eigenschaften aus anderen Bibliotheken von Experience Cloud, wie etwa [!DNL at.js], Seite für Seite ins Web-SDK migrieren. Dies ermöglicht einen stufenweisen Ansatz für die Web-SDK-Migration, sodass nicht alle Seiten gleichzeitig migriert werden müssen. |
 
