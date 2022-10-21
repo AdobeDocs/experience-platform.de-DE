@@ -1,9 +1,9 @@
 ---
 title: Abfrage Accelerated Store Reporting Insights
 description: Erfahren Sie, wie Sie über Query Service ein Berichtseinblicke-Datenmodell für die Verwendung mit beschleunigten Store-Daten und benutzerdefinierten Dashboards erstellen.
-source-git-commit: 9c18432bbd9322aee1924c34cb10aadac440e726
+source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1031'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,9 @@ ht-degree: 0%
 
 Der Abfrage-beschleunigte Speicher ermöglicht Ihnen, die Zeit und Verarbeitungsleistung zu reduzieren, die erforderlich ist, um kritische Einblicke aus Ihren Daten zu gewinnen. In der Regel werden Daten in regelmäßigen Abständen verarbeitet (z. B. stündlich oder täglich), wobei aggregierte Ansichten erstellt und in Berichten verwendet werden. Die Analyse dieser Berichte, die aus aggregierten Daten generiert werden, liefert Einblicke, die die Geschäftsleistung verbessern sollen. Der Abfrage-beschleunigte Speicher bietet einen Cache-Dienst, eine gleichzeitige Nutzung, ein interaktives Erlebnis und eine zustandlose API. Es wird jedoch davon ausgegangen, dass die Daten vorverarbeitet und für aggregierte Abfragen optimiert sind und nicht für die Rohdatenabfrage.
 
-Mit dem Abfrage-beschleunigten Speicher können Sie ein benutzerdefiniertes Datenmodell erstellen und/oder vorhandene Real-time Customer Data Platform-Datenmodelle erweitern. Anschließend können Sie mit Ihren Berichterstellungseinblicken interagieren oder sie in ein Berichts-/Visualisierungsframework Ihrer Wahl einbetten. Das Datenmodell der Echtzeit-Kundendatenplattform von Adobe Experience Platform bietet Einblicke in Profile, Segmente und Ziele und ermöglicht die Insight-Dashboards der Echtzeit-Kundendatenplattform. Dieses Dokument führt Sie durch den Prozess der Erstellung Ihres Berichtseinblicke-Datenmodells sowie die Erweiterung der Echtzeit-CDP-Datenmodelle nach Bedarf.
+Mit dem Abfrage-beschleunigten Speicher können Sie ein benutzerdefiniertes Datenmodell erstellen und/oder vorhandene Real-time Customer Data Platform-Datenmodelle erweitern. Anschließend können Sie mit Ihren Berichterstellungseinblicken interagieren oder sie in ein Berichts-/Visualisierungsframework Ihrer Wahl einbetten. Weitere Informationen finden Sie in der Dokumentation zum Real-time Customer Data Platform Insights-Datenmodell . [Passen Sie Ihre SQL-Abfragevorlagen an, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle (Key Performance Indicators) zu erstellen.](../../dashboards/cdp-insights-data-model.md).
+
+Das Real-Time CDP-Datenmodell von Adobe Experience Platform bietet Einblicke in Profile, Segmente und Ziele und ermöglicht die Real-Time CDP-Insight-Dashboards. Dieses Dokument führt Sie durch den Prozess der Erstellung Ihres Berichtseinblicke-Datenmodells und darüber, wie Sie Real-Time CDP-Datenmodelle nach Bedarf erweitern.
 
 ## Voraussetzungen
 
@@ -20,7 +22,7 @@ In diesem Tutorial werden benutzerdefinierte Dashboards verwendet, um Daten aus 
 
 ## Erste Schritte
 
-Die Data Distiller-SKU ist erforderlich, um ein benutzerdefiniertes Datenmodell für Ihre Berichtseinblicke zu erstellen und die Echtzeit-CDP-Datenmodelle zu erweitern, die angereicherte Platform-Daten enthalten. Siehe [Verpackung](../packages.md), [Limits](../guardrails.md#query-accelerated-store)und [Lizenz](../data-distiller/licence-usage.md) Dokumentation, die sich auf die Data Distiller SKU bezieht. Wenn Sie nicht über die Data Distiller-SKU verfügen, wenden Sie sich für weitere Informationen an Ihren Adobe-Kundenbetreuer.
+Die Data Distiller-SKU ist erforderlich, um ein benutzerdefiniertes Datenmodell für Ihre Berichtseinblicke zu erstellen und die Real-Time CDP-Datenmodelle zu erweitern, die angereicherte Platform-Daten enthalten. Siehe [Verpackung](../packages.md), [Limits](../guardrails.md#query-accelerated-store)und [Lizenz](../data-distiller/licence-usage.md) Dokumentation, die sich auf die Data Distiller SKU bezieht. Wenn Sie nicht über die Data Distiller-SKU verfügen, wenden Sie sich für weitere Informationen an Ihren Adobe-Kundenbetreuer.
 
 ## Erstellen eines Berichtseinblicke-Datenmodells
 
@@ -124,15 +126,15 @@ ext_custom_audience_id | approximate_count_upper_bound
 (10 rows)
 ```
 
-## Erweitern Sie Ihr Datenmodell mit dem Einblicke-Datenmodell der Echtzeit-Kundendatenplattform
+## Erweitern Ihres Datenmodells mit dem Real-Time CDP Insight-Datenmodell
 
 Sie können Ihr Zielgruppenmodell um zusätzliche Details erweitern, um eine reichere Dimensionstabelle zu erstellen. Sie können beispielsweise den Segmentnamen und den Zielnamen der externen Zielgruppenkennung zuordnen. Verwenden Sie dazu Query Service , um einen neuen Datensatz zu erstellen oder zu aktualisieren und ihn zum Zielgruppenmodell hinzuzufügen, das Segmente und Ziele mit einer externen Identität kombiniert. Das folgende Diagramm zeigt das Konzept dieser Datenmodellerweiterung.
 
-![Ein ERD-Diagramm, das das Insight-Datenmodell der Echtzeit-Kundendatenplattform mit dem Query Accelerated Store-Modell verknüpft.](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
+![Ein ERD-Diagramm, das das Real-Time CDP Insight-Datenmodell mit dem Query Accelerated Store-Modell verknüpft.](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
 
 ## Erstellen von Dimensionstabellen zur Erweiterung Ihres Berichtseinblicke-Modells
 
-Verwenden Sie Query Service, um wichtige beschreibende Attribute aus den angereicherten Echtzeit-CDP-Dimensionsdatensätzen zum `audienceinsight` Datenmodell erstellen und eine Beziehung zwischen Ihrer Faktentabelle und der neuen Dimensionstabelle herstellen. Die folgende SQL zeigt, wie Sie vorhandene Dimensionstabellen in Ihr Berichtseinblicke-Datenmodell integrieren.
+Verwenden Sie Query Service, um wichtige beschreibende Attribute aus den angereicherten Real-Time CDP-Dimensionsdatensätzen zum `audienceinsight` Datenmodell erstellen und eine Beziehung zwischen Ihrer Faktentabelle und der neuen Dimensionstabelle herstellen. Die folgende SQL zeigt, wie Sie vorhandene Dimensionstabellen in Ihr Berichtseinblicke-Datenmodell integrieren.
 
 ```sql
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS

@@ -1,29 +1,29 @@
 ---
-title: Customer Data Platform (CDP) Insights-Datenmodell
-description: Erfahren Sie, wie Sie mit SQL-Abfragen aus CDP Insights Data Models Ihre eigenen CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle anpassen können.
+title: Real-time Customer Data Platform Insights-Datenmodell
+description: Erfahren Sie, wie Sie SQL-Abfragen mit den Real-time Customer Data Platform Insights-Datenmodellen verwenden können, um Ihre eigenen Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle anzupassen.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 2c96bfd2c1b541d30a72fcf2bac414ee06607456
+source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
 workflow-type: tm+mt
-source-wordcount: '1066'
-ht-degree: 0%
+source-wordcount: '1105'
+ht-degree: 1%
 
 ---
 
-# Customer Data Platform (CDP) Insights-Datenmodell
+# Real-time Customer Data Platform Insights-Datenmodell
 
-Die Funktion &quot;Customer Data Platform (CDP) Insights Data Model&quot;stellt die Datenmodelle und SQL bereit, die die Einblicke für verschiedene Profil-, Ziel- und Segmentierungs-Widgets ermöglichen. Sie können diese SQL-Abfragevorlagen anpassen, um CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle (Key Performance Indicators) zu erstellen. Diese Einblicke können dann als benutzerdefinierte Widgets für Ihre benutzerdefinierten Dashboards verwendet werden.
+Die Real-time Customer Data Platform Insights-Datenmodell-Funktion stellt die Datenmodelle und SQL bereit, die die Einblicke für verschiedene Profil-, Ziel- und Segmentierungs-Widgets optimieren. Sie können diese SQL-Abfragevorlagen anpassen, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle (Key Performance Indicators) zu erstellen. Diese Insights können dann als benutzerdefinierte Widgets für benutzerdefinierte Dashboards verwendet werden. Weitere Informationen finden Sie in der Dokumentation zu den abfragebeschleunigten Store-Berichtseinblicken . [Erstellen eines Berichtseinblicke-Datenmodells über Query Service zur Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards](../query-service/query-accelerated-store/reporting-insights-data-model.md).
 
 ## Voraussetzungen
 
 Dieses Handbuch setzt ein Verständnis der [Benutzerdefinierte Dashboards-Funktion](./user-defined-dashboards.md). Lesen Sie die Dokumentation , bevor Sie mit diesem Handbuch fortfahren.
 
-## CDP-Insight-Berichte und Anwendungsfälle
+## Real-Time CDP Insight-Berichte und Anwendungsfälle
 
-Die CDP-Berichterstellung bietet Einblicke in Ihre Profildaten und deren Beziehung zu Segmenten und Zielen. Verschiedene Sternschema-Modelle wurden entwickelt, um eine Vielzahl gängiger Marketing-Anwendungsfälle zu beantworten. Jedes Datenmodell kann mehrere Anwendungsfälle unterstützen.
+Real-Time CDP Reporting bietet Einblicke in Ihre Profildaten und ihre Beziehung zu Segmenten und Zielen. Verschiedene Sternschema-Modelle wurden entwickelt, um eine Vielzahl gängiger Marketing-Anwendungsfälle zu beantworten. Jedes Datenmodell kann mehrere Anwendungsfälle unterstützen.
 
 >[!IMPORTANT]
 >
->Die für die CDP-Berichterstellung verwendeten Daten sind für eine bestimmte Zusammenführungsrichtlinie und aus der letzten täglichen Momentaufnahme korrekt.
+>Die für die Real-Time CDP-Berichterstellung verwendeten Daten sind für eine bestimmte Zusammenführungsrichtlinie und aus der letzten täglichen Momentaufnahme korrekt.
 
 ### Profilmodell {#profile-model}
 
