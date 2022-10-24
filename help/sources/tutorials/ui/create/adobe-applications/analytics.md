@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Quellverbindung für Adobe Analytics über die Benutzeroberfläche erstellen, um Kundendaten in Adobe Experience Platform zu importieren.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: 28e7f10529daa8df56534e6ada129a52d3f7604d
 workflow-type: tm+mt
-source-wordcount: '2301'
-ht-degree: 63%
+source-wordcount: '2345'
+ht-degree: 62%
 
 ---
 
@@ -45,6 +45,10 @@ Wählen Sie unter der Kategorie **[!UICONTROL Adobe-Programme]** das Programm **
 ![Katalog](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### Auswählen von Daten
+
+>[!IMPORTANT]
+>
+>Die auf dem Bildschirm aufgelisteten Report Suites können aus verschiedenen Regionen stammen. Sie sind dafür verantwortlich, die Einschränkungen und Pflichten Ihrer Daten zu verstehen und zu verstehen, wie Sie diese Daten in Adobe Experience Platform regionsübergreifend verwenden. Bitte stellen Sie sicher, dass dies von Ihrer Firma erlaubt ist.
 
 Die **[!UICONTROL Analytics-Quelle - Daten hinzufügen]** -Schritt bietet Ihnen eine Liste von [!DNL Analytics] Report Suite-Daten, mit denen eine Quellverbindung hergestellt werden soll.
 
