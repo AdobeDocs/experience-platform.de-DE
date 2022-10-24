@@ -1,10 +1,10 @@
 ---
 title: Definieren einer Beziehung zwischen zwei Schemas in Real-time Customer Data Platform B2B Edition
-description: Erfahren Sie, wie Sie in Real-time Customer Data Platform B2B Edition eine n:1-Beziehung zwischen zwei Schemas definieren.
+description: Erfahren Sie, wie Sie in Adobe Real-time Customer Data Platform B2B Edition eine n:1-Beziehung zwischen zwei Schemas definieren.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 86a230d746d6642437c4e37958c07a1186ebadc3
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1401'
+source-wordcount: '1403'
 ht-degree: 5%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 5%
 >title="Referenzschema"
 >abstract="Wählen Sie das Schema aus, mit dem Sie eine Beziehung herstellen möchten. Abhängig von der Klasse des Schemas kann es auch vorhandene Beziehungen zu anderen Entitäten im B2B-Kontext haben. In der Dokumentation erfahren Sie, wie sich B2B-Schemaklasse zueinander verhalten."
 
-Real-time Customer Data Platform B2B Edition bietet mehrere Experience-Datenmodell (XDM)-Klassen, die grundlegende B2B-Datenentitäten erfassen, darunter auch [Konten](../classes/b2b/business-account.md), [Gelegenheiten](../classes/b2b/business-opportunity.md), [Kampagnen](../classes/b2b/business-campaign.md)und mehr. Indem Sie Schemas erstellen, die auf diesen Klassen basieren, und sie zur Verwendung in [Echtzeit-Kundenprofil](../../profile/home.md)können Sie Daten aus unterschiedlichen Quellen in einer einheitlichen Darstellung zusammenführen, die als Vereinigungsschema bezeichnet wird.
+Adobe Real-time Customer Data Platform B2B Edition bietet mehrere Experience-Datenmodell (XDM)-Klassen, die grundlegende B2B-Datenentitäten erfassen, darunter auch [Konten](../classes/b2b/business-account.md), [Gelegenheiten](../classes/b2b/business-opportunity.md), [Kampagnen](../classes/b2b/business-campaign.md)und mehr. Indem Sie Schemas erstellen, die auf diesen Klassen basieren, und sie zur Verwendung in [Echtzeit-Kundenprofil](../../profile/home.md)können Sie Daten aus unterschiedlichen Quellen in einer einheitlichen Darstellung zusammenführen, die als Vereinigungsschema bezeichnet wird.
 
 Vereinigungsschemata dürfen jedoch nur Felder enthalten, die von Schemas erfasst werden, die dieselbe Klasse verwenden. Hier kommen die Schemabeziehungen an. Durch die Implementierung von Beziehungen in Ihre B2B-Schemas können Sie beschreiben, wie sich diese Geschäftsentitäten gegenseitig beeinflussen, und Attribute aus mehreren Klassen in Anwendungsfällen für nachgelagerte Segmentierung einbeziehen.
 
@@ -24,7 +24,7 @@ Das folgende Diagramm zeigt ein Beispiel dafür, wie die verschiedenen B2B-Klass
 
 ![B2B-Klassenbeziehungen](../images/tutorials/relationship-b2b/classes.png)
 
-In diesem Tutorial werden die Schritte zum Definieren einer 1:1-Beziehung zwischen zwei Schemas in der Echtzeit-CDP B2B Edition beschrieben.
+In diesem Tutorial werden die Schritte zum Definieren einer 1:1-Beziehung zwischen zwei Schemas in Real-Time CDP B2B Edition beschrieben.
 
 >[!NOTE]
 >
@@ -123,4 +123,4 @@ Wenn Sie die Struktur des Zielschemas anzeigen, wird die Beziehungsmarke neben d
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie mithilfe der Funktion [!DNL Schema Editor]. Sobald Daten mit Datensätzen erfasst wurden, die auf diesen Schemas basieren, und diese Daten im Profildatenspeicher aktiviert wurden, können Sie Attribute aus beiden Schemas für Anwendungsfälle der Segmentierung mehrerer Klassen verwenden. Weitere Informationen finden Sie in der Dokumentation zur Echtzeit-Kundendatenplattform B2B Edition .
+In diesem Tutorial haben Sie mithilfe der Funktion [!DNL Schema Editor]. Sobald Daten mit Datensätzen erfasst wurden, die auf diesen Schemas basieren, und diese Daten im Profildatenspeicher aktiviert wurden, können Sie Attribute aus beiden Schemas für Anwendungsfälle der Segmentierung mehrerer Klassen verwenden. Weitere Informationen finden Sie in der Dokumentation zu Real-Time CDP B2B Edition .

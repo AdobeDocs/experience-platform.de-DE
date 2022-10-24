@@ -5,9 +5,9 @@ title: Zustimmungsverarbeitung in Adobe Experience Platform
 topic-legacy: getting started
 description: Erfahren Sie, wie Sie in Adobe Experience Platform mithilfe des Adobe 2.0-Standards Zustimmungssignale von Kunden verarbeiten.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: f9ccce8943e2aaf65cd3e0ffe2b974a668bba9b7
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1566'
+source-wordcount: '1567'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Dieses Dokument bietet einen Überblick darüber, wie Sie Ihre Datenvorgänge in
 
 >[!NOTE]
 >
->Dieses Dokument konzentriert sich auf die Verarbeitung von Einwilligungsdaten unter Verwendung des Adobe-Standards. Wenn Sie Einwilligungsdaten gemäß dem IAB Transparency and Consent Framework (TCF) 2.0 verarbeiten, lesen Sie das Handbuch zu [TCF 2.0-Unterstützung in Real-time Customer Data Platform](../iab/overview.md).
+>Dieses Dokument konzentriert sich auf die Verarbeitung von Einwilligungsdaten unter Verwendung des Adobe-Standards. Wenn Sie Einwilligungsdaten gemäß dem IAB Transparency and Consent Framework (TCF) 2.0 verarbeiten, lesen Sie das Handbuch zu [TCF 2.0-Unterstützung in Adobe Real-time Customer Data Platform](../iab/overview.md).
 
 ## Voraussetzungen
 

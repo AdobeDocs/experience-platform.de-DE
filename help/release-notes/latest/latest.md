@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
-source-git-commit: 87789668da0cfdf86d3c47be6e4dc49282932180
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '2925'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -62,7 +62,7 @@ Weitere Informationen zur Attributions-KI finden Sie in der [Übersicht zur Attr
 
 ### Kunden-KI
 
-Kunden-KI in Real-time Customer Data Platform dient dazu, für einzelne Profile in gewünschten Umfang benutzerdefinierte Neigungswerte wie Abwanderung und Konversion zu generieren.
+In Real-time Customer Data Platform verfügbare Customer AI wird verwendet, um benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion für einzelne Profile in großem Maßstab zu generieren.
 
 | Funktion | Beschreibung |
 | --- | --- |

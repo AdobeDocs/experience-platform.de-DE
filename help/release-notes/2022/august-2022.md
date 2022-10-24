@@ -2,10 +2,10 @@
 title: Adobe Experience Platform - Versionshinweise, August 2022
 description: Die Versionshinweise für Adobe Experience Platform vom August 2022.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '2131'
-ht-degree: 97%
+ht-degree: 96%
 
 ---
 
@@ -46,7 +46,7 @@ Weitere Informationen zu Attributions-KI finden Sie in der Übersicht [Attributi
 
 ### Kunden-KI
 
-Kunden-KI in Real-time Customer Data Platform dient dazu, für einzelne Profile in gewünschten Umfang benutzerdefinierte Neigungswerte wie Abwanderung und Konversion zu generieren.
+In Real-time Customer Data Platform verfügbare Customer AI wird verwendet, um benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion für einzelne Profile in großem Maßstab zu generieren.
 
 **Aktualisierte Funktionen**
 

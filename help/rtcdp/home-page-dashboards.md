@@ -1,24 +1,24 @@
 ---
 keywords: Metriken - Übersicht; Übersicht über rtcdp-Metriken
-title: Startseite und Dashboards der Echtzeit-Kundendatenplattform
+title: Real-time Customer Data Platform-Homepage und Dashboards
 description: Dashboards, Startseite und erstmalige Nutzung von Adobe Experience Platform
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 78%
+source-wordcount: '620'
+ht-degree: 63%
 
 ---
 
-# [!DNL Real-time Customer Data Platform] Homepage und Dashboards
+# [!DNL Real-Time Customer Data Platform] Homepage und Dashboards
 
-Die Startseite der Echtzeit-Kundendatenplattform von , die ein Metriken-Dashboard enthält, wird angezeigt, sobald Sie sich bei der Echtzeit-Kundendatenplattform anmelden.
+Die Startseite von Adobe Real-time Customer Data Platform (Real-Time CDP) mit einem Metriken-Dashboard wird angezeigt, wenn Sie sich bei Real-Time CDP anmelden.
 
-Die Startseite ist nur einer der Orte, an denen Metrikkarten angezeigt werden. Die Echtzeit-Kundendatenplattform stellt Metrikkarten während des gesamten Erlebnisses bereit. Diese Metriken informieren Sie über die Daten-, Profil- und Segmentzielgruppen im System.
+Die Startseite ist nur einer der Orte, an denen Metrikkarten angezeigt werden. Real-Time CDP bietet Metrikkarten für das gesamte Erlebnis. Diese Metriken informieren Sie über die Daten-, Profil- und Segmentzielgruppen im System.
 
 ![Bild](assets/home.png)
 
-Wenn zum Zeitpunkt der Anmeldung bei der Echtzeit-Kundendatenplattform keine Daten im System vorhanden sind, wird das Dashboard auf der Startseite nicht angezeigt. In dem Fall enthält die Startseite Lernmaterial für die erstmalige Nutzung. Im Zuge der Sammlung von Daten, d. h. wenn <!--sources-->Datensätze, Profile, Segmente und Ziele erstellt werden und Daten in das System fließen, wird das Dashboard automatisch aktualisiert, um Informationen zu diesen Daten anzuzeigen<!-- in metric cards-->.
+Wenn bei der Anmeldung bei Real-Time CDP keine Daten im System vorhanden sind, wird das Dashboard auf der Startseite nicht angezeigt. In dem Fall enthält die Startseite Lernmaterial für die erstmalige Nutzung. Im Zuge der Sammlung von Daten, d. h. wenn <!--sources-->Datensätze, Profile, Segmente und Ziele erstellt werden und Daten in das System fließen, wird das Dashboard automatisch aktualisiert, um Informationen zu diesen Daten anzuzeigen<!-- in metric cards-->.
 
 ## Dashboard-Ansicht auf der Startseite
 
@@ -37,7 +37,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
    ![Bild](assets/recent.png)
 
-Zusätzliche Metriken (z. B. für Profile und Segmente) stehen in anderen Teilen der Echtzeit-Kundendatenplattform zur Verfügung.
+Zusätzliche Metriken - beispielsweise für Profile und Segmente - sind in anderen Teilen von Real-time Customer Data Platform verfügbar.
 
 ### Datensätze
 
@@ -53,7 +53,7 @@ Der Zähler nutzt die standardmäßige [Zusammenführungsrichtlinie](profile/mer
 
 Die Zahl der Profile wird alle 24 Stunden aktualisiert.
 
-Weiterführende Informationen zu Profilen finden Sie unter [Einheitliche Sicht auf Kunden in der Echtzeit-Kundendatenplattform](profile/profile-overview.md).
+Weitere Informationen zu Profilen finden Sie unter [Einheitliche Sicht auf Ihren Kunden in Real-Time CDP](profile/profile-overview.md).
 
 ### Segmente
 
@@ -77,7 +77,7 @@ There is also a metric card that shows the percentage of successful records. Sel
 
 The number of successful profile records is updated hourly. 
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
+For more information about profiles, see [A unified view of your customer in Real-Time CDP](profile/profile-overview.md).
 
 ### Total profile records
 
@@ -89,7 +89,7 @@ The **[!UICONTROL Total profile records]** metric card shows the total number of
 
 Select **[!UICONTROL View profiles]** to see more details about the profile records.
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
+For more information about profiles, see [A unified view of your customer in Real-Time CDP](profile/profile-overview.md).
 
 For more information about viewing a specific profile, see [Profile viewer](profile/profile-viewer.md).
 

@@ -5,9 +5,9 @@ title: Adobe Experience Platform-Glossar
 topic-legacy: getting started
 description: Ein Glossar wichtiger Experience Platform-Terminologie.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: c0f01efa224bffb5b435e2f247e793edfbc576b9
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '7428'
+source-wordcount: '7436'
 ht-degree: 4%
 
 ---
@@ -298,7 +298,7 @@ ht-degree: 4%
 
 **Eingabefunktion**: Eine Eingabefunktion ist in der Funktionszuordnung angegeben und wird von einem Modell für maschinelles Lernen verwendet, um Prognosen zu erstellen.
 
-**[!DNL Intelligent Services]**: [!DNL Intelligent Services] wie [!DNL Attribution AI] und [!DNL Customer AI] sind auf maschinellem Lernen basierende, auf künstlicher Intelligenz basierende Modelle, die Experience Platform (oder auf Platform aufbauende Anwendungen wie Real-time Customer Data Platform) erfordern, um ausgeführt und betrieben zu werden.
+**[!DNL Intelligent Services]**: [!DNL Intelligent Services] wie [!DNL Attribution AI] und [!DNL Customer AI] sind auf maschinellem Lernen basierende, auf künstlicher Intelligenz basierende Modelle, die Experience Platform (oder auf Platform aufbauende Anwendungen wie Adobe Real-time Customer Data Platform) erfordern, um ausgeführt und betrieben zu werden.
 
 **Interessensbasiertes Targeting oder Personalisierung**: Eine interessensbasierte Zielgruppenbestimmung, auch Personalisierung genannt, tritt auf, wenn die folgenden drei Bedingungen erfüllt sind:
 
@@ -414,7 +414,7 @@ ht-degree: 4%
 
 ## R
 
-**Real-time Customer Data Platform**: [!DNL Real-time Customer Data Platform] führt bekannte und unbekannte Kundendaten zusammen, um vertrauenswürdige Kundenprofile mit vereinfachter Integration, intelligenter Segmentierung und Echtzeit-Aktivierung über die digitale Journey zu erstellen.
+**Real-time Customer Data Platform**: Adobe Real-time Customer Data Platform (Real-Time CDP) führt bekannte und unbekannte Kundendaten zusammen, um vertrauenswürdige Kundenprofile mit vereinfachter Integration, intelligenter Segmentierung und Echtzeit-Aktivierung über die digitale Journey zu erstellen.
 
 **Echtzeit-Kundenprofil**: Das Echtzeit-Kundenprofil (auch als Profil bezeichnet) bietet eine ganzheitliche Sicht auf jeden einzelnen Kunden, indem es Daten aus mehreren Kanälen kombiniert, einschließlich Online-, Offline-, CRM- und Drittanbieter-Kanälen. Mit Profil können Sie Ihre Kundendaten in einzelne Profile konsolidieren, die umsetzbare, mit Zeitstempel versehene Konten für jede Kundeninteraktion bieten.
 

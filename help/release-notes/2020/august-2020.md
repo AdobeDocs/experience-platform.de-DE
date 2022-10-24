@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 exl-id: 9347147f-e830-4487-aa12-f56723abb3c8
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '572'
-ht-degree: 32%
+ht-degree: 29%
 
 ---
 
@@ -20,7 +20,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
-- [[!DNL Real-time Customer Data Platform]](#rtcdp)
+- [[!DNL Real-Time Customer Data Platform]](#rtcdp)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -37,7 +37,7 @@ Weitere Informationen finden Sie unter [!DNL JupyterLab], siehe [[!DNL JupyterLa
 
 ## Ziele {#destinations}
 
-In der [ Echtzeit-Kundendatenplattform](../../rtcdp/overview.md) sind Ziele vordefinierte Integrationen mit Zielplattformen, die Daten für diese Partner auf nahtlose Weise aktivieren.
+In [Real-time Customer Data Platform](../../rtcdp/overview.md), sind Ziele vordefinierte Integrationen mit Zielplattformen, die Daten für diese Partner nahtlos aktivieren.
 
 **Neue Ziele**
 
@@ -45,7 +45,7 @@ Es stehen neue Ziele zur Verfügung, für die Sie Ihre Adobe Experience Platform
 
 | Ziel | Beschreibung |
 |--- | ---|
-| [!DNL Google Customer Match] | Mit Google Customer Match können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften von Google zu erreichen und erneut mit ihnen zu interagieren, z. B.: [!DNL Search], [!DNL Shopping], Gmail und YouTube. <br><br> Besuchen Sie die [!DNL Google Customer Match] [page](../../destinations/catalog/advertising/google-customer-match.md) im Zielkatalog finden Sie weitere Informationen zum Ziel und dessen Einrichtung in der Echtzeit-Kundendatenplattform. |
+| [!DNL Google Customer Match] | Mit Google Customer Match können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften von Google zu erreichen und erneut mit ihnen zu interagieren, z. B.: [!DNL Search], [!DNL Shopping], Gmail und YouTube. <br><br> Besuchen Sie die [!DNL Google Customer Match] [page](../../destinations/catalog/advertising/google-customer-match.md) im Zielkatalog weitere Informationen zum Ziel und dessen Einrichtung in Real-Time CDP. |
 
 **Neue Funktionen**
 
@@ -54,17 +54,17 @@ Es stehen neue Ziele zur Verfügung, für die Sie Ihre Adobe Experience Platform
 | Benutzerdefinierter Dateinameneditor | Aktualisierung des Workflows zur Datenaktivierung für E-Mail-Marketing-Ziele und Cloud-Speicher-Ziele, mit dem Sie den Namen der exportierten Dateien bearbeiten können. Weitere Informationen finden Sie im Abschnitt [ Schritt konfigurieren](../../destinations/ui/activate-batch-profile-destinations.md) im Aktivierungs-Workflow. |
 | Empfohlene Attribute | Aktualisierung des Datenaktivierungs-Workflows für E-Mail-Marketing-Ziele und Cloud-Speicher-Ziele, der die empfohlenen Attribute anzeigt, die Sie zu den exportierten Dateien hinzufügen können. Weitere Informationen finden Sie im Abschnitt [Schritt &quot;Attribute auswählen&quot;](../../destinations/ui/activate-batch-profile-destinations.md) im Aktivierungs-Workflow. |
 
-## [!DNL Real-time Customer Data Platform] {#rtcdp}
+## [!DNL Real-Time Customer Data Platform] {#rtcdp}
 
-Basierend auf Experience Platform, Real-time Customer Data Platform ([!DNL Real-time CDP]) hilft Unternehmen, bekannte und unbekannte Daten zusammenzuführen, um Kundenprofile durch intelligente Entscheidungen auf der gesamten Journey zu aktivieren. [!DNL Real-time CDP] kombiniert mehrere Unternehmensdatenquellen, um Kundenprofile in Echtzeit zu erstellen. Segmente, die aus diesen Profilen erstellt wurden, können dann an nachgelagerte Ziele gesendet werden, um eine Eins-zu-Eins-Kundenerfahrung über alle Kanäle und Geräte hinweg bereitzustellen.
+Basierend auf Experience Platform, Real-time Customer Data Platform ([!DNL Real-Time CDP]) hilft Unternehmen, bekannte und unbekannte Daten zusammenzuführen, um Kundenprofile durch intelligente Entscheidungen auf der gesamten Journey zu aktivieren. [!DNL Real-Time CDP] kombiniert mehrere Unternehmensdatenquellen, um Kundenprofile in Echtzeit zu erstellen. Segmente, die aus diesen Profilen erstellt wurden, können dann an nachgelagerte Ziele gesendet werden, um eine Eins-zu-Eins-Kundenerfahrung über alle Kanäle und Geräte hinweg bereitzustellen.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| IAB TCF 2.0-Unterstützung | [!DNL Real-time CDP] ist jetzt ein registrierter Anbieter für die Version 2.0 der [!DNL Transparency & Consent Framework] (TCF), wie in der [!DNL Interactive Advertising Bureau] (IAB). Sie können Ihre Datenvorgänge und Profilschemata so konfigurieren, dass von einer CMP generierte Kundenzustimmungsdaten akzeptiert und die Zustimmungseinstellungen Ihrer Kunden bei der Aktivierung von Segmenten für nachgelagerte Ziele durchgesetzt werden. |
+| IAB TCF 2.0-Unterstützung | [!DNL Real-Time CDP] ist jetzt ein registrierter Anbieter für die Version 2.0 der [!DNL Transparency & Consent Framework] (TCF), wie in der [!DNL Interactive Advertising Bureau] (IAB). Sie können Ihre Datenvorgänge und Profilschemata so konfigurieren, dass von einer CMP generierte Kundenzustimmungsdaten akzeptiert und die Zustimmungseinstellungen Ihrer Kunden bei der Aktivierung von Segmenten für nachgelagerte Ziele durchgesetzt werden. |
 
-Weitere Informationen finden Sie unter [!DNL Real-time CDP], siehe [[!DNL Real-time CDP] Übersicht](../../rtcdp/overview.md).
+Weitere Informationen finden Sie unter [!DNL Real-Time CDP], siehe [[!DNL Real-Time CDP] Übersicht](../../rtcdp/overview.md).
 
 ## Quellen {#sources}
 

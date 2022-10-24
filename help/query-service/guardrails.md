@@ -3,7 +3,7 @@ keywords: Experience Platform; Abfrage; Query Service; Fehlerbehebung; Limits; R
 title: Limits für Query Service
 description: Dieses Dokument enthält Informationen zu Nutzungsbeschränkungen für Query Service-Daten, die Ihnen bei der Optimierung Ihrer Abfrageverwendung helfen.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: e40a9fb0149e194de693a98e5d185860a255b5c4
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1029'
 ht-degree: 7%
@@ -84,7 +84,7 @@ Die folgende Tabelle enthält die empfohlenen Limits und eine Beschreibung für 
 
 | Beschränkung | Limit | Begrenzungstyp | Beschreibung |
 |---|---|---|---|
-| Abfragegleichzeitigkeit | 4 | Hard | Um sicherzustellen, dass Abfragen über aggregierte Daten über die Berichterstellungs-API (einschließlich Abfragen, die Datenmodelle wie die Echtzeit-Kundendatenmodelle verbessern) über die Ressourcen verfügen, die für eine effiziente Ausführung benötigt werden, verfolgt die Berichterstellungs-API die Ressourcenauslastung, indem sie jeder Abfrage Gleichzeitigkeitsfenster zuweist. Das System stellt Abfragen in eine Warteschlange und wartet, bis Zeitnischen für gleichzeitige Verwendung verfügbar sind oder sie aus dem Cache bereitgestellt werden können. Es stehen maximal vier gleichzeitige Abfragefenster zur Verfügung.<br>Wenn Sie über ein BI-Tool auf die Reporting-API zugreifen und mehr Parallelität benötigen, ist ein BI-Server erforderlich. |
+| Abfragegleichzeitigkeit | 4 | Hard | Um sicherzustellen, dass Abfragen über aggregierte Daten über die Berichterstellungs-API (einschließlich Abfragen, die Datenmodelle wie die Real-Time CDP-Datenmodelle verbessern) über die Ressourcen verfügen, die für eine effiziente Ausführung benötigt werden, verfolgt die Berichterstellungs-API die Ressourcenauslastung durch Zuweisung von Zeitnischen für gleichzeitige Abfragen. Das System stellt Abfragen in eine Warteschlange und wartet, bis Zeitnischen für gleichzeitige Verwendung verfügbar sind oder sie aus dem Cache bereitgestellt werden können. Es stehen maximal vier gleichzeitige Abfragefenster zur Verfügung.<br>Wenn Sie über ein BI-Tool auf die Reporting-API zugreifen und mehr Parallelität benötigen, ist ein BI-Server erforderlich. |
 
 {style=&quot;table-layout:auto&quot;}
 

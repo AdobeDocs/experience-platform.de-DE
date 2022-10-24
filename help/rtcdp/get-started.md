@@ -1,20 +1,20 @@
 ---
-keywords: RTCDP;CDP;Real-time Customer Data Platform;Real time Customer Data Platform;Echtzeit-Kundendatenplattform;Real-time CDP;cdp;rtcdp
+keywords: RTCDP; CDP; Real-time Customer Data Platform; Echtzeit-Kundendatenplattform; Echtzeit-CDP; cdp; rtcdp
 title: Erste Schritte mit Real-time Customer Data Platform
-description: Verwenden Sie dieses Szenario als Beispiel, wenn Sie Ihre Implementierungvon Real-Time Customer Data Platform einrichten.
+description: Verwenden Sie dieses Beispielszenario beim Einrichten Ihrer Adobe Real-time Customer Data Platform-Implementierung als Beispiel.
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '2332'
-ht-degree: 84%
+source-wordcount: '2333'
+ht-degree: 76%
 
 ---
 
-# Erste Schritte mit der Echtzeit-Kundendatenplattform von 
+# Erste Schritte mit Real-time Customer Data Platform
 
-Die ersten Schritte führen Sie durch eine Beispielimplementierung der Echtzeit-Kundendatenplattform von Sie können sie bei der Einrichtung einer eigenen Implementierung als Muster verwenden. Zwar enthält das vorliegende Handbuch spezifische Beispiele, doch gibt es auch Links zu weiteren Informationen, die Sie bei der Einrichtung nutzen können.
+Diese ersten Schritte führen Sie durch eine Beispielimplementierung von Real-time Customer Data Platform (Real-Time CDP). Sie können sie bei der Einrichtung einer eigenen Implementierung als Muster verwenden. Zwar enthält das vorliegende Handbuch spezifische Beispiele, doch gibt es auch Links zu weiteren Informationen, die Sie bei der Einrichtung nutzen können.
 
-Dieses Beispiel macht deutlich, welche Funktionen die Echtzeit-Kundendatenplattform von bietet, die auf Adobe Experience Platform basiert:
+Dieses Beispiel zeigt die Leistungsfähigkeit von Real-time Customer Data Platform mit Adobe Experience Platform:
 
 * Daten aus verschiedenen Quellen erfassen
 * Zusammenführen in einer [!DNL real-time customer profile]
@@ -39,7 +39,7 @@ Daher verfolgt Luma folgende Geschäftsziele:
 
 Um diese Ziele erreichen zu können, muss das Marketing-Team dazu in der Lage sein, Kundendaten in großem Umfang zu verwalten.
 
-Mit der Echtzeit-Kundendatenplattform auf Basis von Adobe Experience Platform kann die Marketing-Abteilung von Luma folgende Ziele erreichen:
+Mit Real-Time CDP auf Basis von Adobe Experience Platform kann die Marketing-Organisation von Luma:
 
 1. Erfassen von Daten aus unterschiedlichen Plattformen und Sicherstellen, dass diese später für andere Marketing-Aktivitäten verfügbar sind.
 1. Einrichten einer zentralen Echtzeitansicht von Kunden, unabhängig davon, woher die Daten stammen.
@@ -118,7 +118,7 @@ Diese personalisierten Inhalte helfen Sarah dabei, rasch passende Artikel zu fin
 
 Sarah wird abgelenkt und verlässt die Site, wodurch ihre Sitzung beendet wird. Luma kann ihre Daten in Adobe Experience Platform verwenden, um sie zurück auf die Site zu holen.
 
-Die Echtzeit-Kundendatenplattform von , die auf Adobe Experience Platform basiert, wurde für das Customer Experience Management konzipiert. Mit ihrer Hilfe können Unternehmen folgende Aufgaben erledigen:
+Real-time Customer Data Platform wurde mit Adobe Experience Platform für das Customer Experience Management entwickelt. Mit ihrer Hilfe können Unternehmen folgende Aufgaben erledigen:
 
 * Datenintegration und -aktivierung vereinfachen
 * Nutzung bekannter und unbekannter Daten steuern
@@ -141,7 +141,7 @@ Alle diese Daten aus unterschiedlichen Quellen werden in einem einheitlichen Kun
 
 ## Konfigurieren einer Datenquelle
 
-Verwendung [!DNL Real-time Customer Data Platform] , um neue Datenquellen in Platform zu integrieren. Die Echtzeit-Kundendatenplattform enthält einen Katalog von Datenquellen, die schnell und einfach zum Profil hinzugefügt werden können.
+Verwendung [!DNL Real-Time Customer Data Platform] , um neue Datenquellen in Platform zu integrieren. Real-Time CDP enthält einen Datenquellenkatalog, der schnell und einfach zum Profil hinzugefügt werden kann.
 
 ![Bild](assets/luma-source-cat.png)
 
@@ -178,7 +178,7 @@ Luma hat viele interne Richtlinien, die die Nutzung bestimmter Arten von erfasst
 
 ![](assets/governance-labels.png)
 
-Sobald die Datennutzungsbezeichnungen angewendet wurden, kann Luma dann Data Governance verwenden, um Datennutzungsrichtlinien zu erstellen. Datennutzungsrichtlinien sind Regeln, die beschreiben, welche Arten von Aktionen Sie für Daten ausführen dürfen, die bestimmte Bezeichnungen enthalten. Bei dem Versuch, eine Aktion in der Echtzeit-CDP durchzuführen, die eine Richtlinienverletzung darstellt, wird die Aktion verhindert und eine Warnung angezeigt, die zeigt, welche Richtlinie verletzt wurde und warum.
+Sobald die Datennutzungsbezeichnungen angewendet wurden, kann Luma dann Data Governance verwenden, um Datennutzungsrichtlinien zu erstellen. Datennutzungsrichtlinien sind Regeln, die beschreiben, welche Arten von Aktionen Sie für Daten ausführen dürfen, die bestimmte Bezeichnungen enthalten. Beim Versuch, eine Aktion in Real-Time CDP durchzuführen, die eine Richtlinienverletzung darstellt, wird die Aktion verhindert und ein Warnhinweis angezeigt, der angibt, welche Richtlinie verletzt wurde und warum.
 
 ## Zusammenführen der Daten für einen bestimmten Kunden
 
@@ -193,7 +193,7 @@ Alle Profilinformationen, die Luma zu Sarah hat, werden angezeigt. Dazu gehören
 | Identitäten | Zeigt die Identitäten an, die in [!DNL Platform] von Sarahs Interaktionen mit Luma über Kanäle und Geräte hinweg. Ihre ECID von der Website wird angezeigt. Zu ihrer Identität gehören auch die ECID aus ihrer mobilen App, ihre E-Mail-ID und eine CRM-ID aus dem kürzlich hinzugefügten . [!DNL Microsoft Dynamics] Datensatz und eine Treueprogramm-ID, die vom Treuesystem von Luma an Adobe Experience Platform übergeben wird. |
 | Ereignisse | Zeigt alle Interaktionsdaten von Sarah mit der Marke Luma an. Dazu gehören der Artikel, den sie gerade angesehen hat, alles, was Sarah in der Vergangenheit angesehen hat, die E-Mails, die sie erhalten hat, ihre Interaktionen mit dem Callcenter sowie Daten darüber, auf welchem Kanal und welchem Gerät die einzelnen Interaktionen stattgefunden haben. |
 
-Das Profil in der Echtzeit-CDP reduziert den Arbeitsaufwand für das Luma-Marketing-Team von Wochen in Minuten und bietet auf Grundlage dieser 360-Grad-Kundenansicht umfassende Möglichkeiten zur Personalisierung. Das Profil fasst die Verhaltensdaten, die erfasst wurden, als sie die Site vor dem Anmelden durchsucht hat, mit ihrem bestehenden Kundenprofil zusammen und erlaubt so einen genauen Überblick über Sarah.
+Das Real-Time CDP-Profil reduziert den Arbeitsablauf des Luma-Marketingteams von Wochen auf Minuten und bietet auf Grundlage dieser 360-Grad-Kundenansicht Möglichkeiten zur Personalisierung. Das Profil fasst die Verhaltensdaten, die erfasst wurden, als sie die Site vor dem Anmelden durchsucht hat, mit ihrem bestehenden Kundenprofil zusammen und erlaubt so einen genauen Überblick über Sarah.
 
 Das Marketing-Team kann diese Erweiterung verwenden. [!DNL Real-time Customer Profile] , um Sarahs Erlebnis besser zu personalisieren und die Markentreue zu Luma zu steigern.
 
@@ -234,7 +234,7 @@ Wenn Sie das Segment „Warenkorb-Abbrecher, die ein Geschenk kaufen“ hinzugef
 
 Auswählen **[!UICONTROL An Ziele senden]**.
 
-In der Echtzeit-Kundendatenplattform von kann Luma zur Personalisierung nahtlos auf Zielgruppensegmente reagieren.\
+In Real-Time CDP kann Luma zur Personalisierung nahtlos auf ihre Zielgruppensegmente reagieren.\
 Hier sehen Sie alle Ziele, an die Luma dieses Ziel senden kann, sowohl Adobe- als auch Nicht-Adobe-Lösungen:
 
 ![Bild](assets/luma-dest.png)
@@ -297,7 +297,7 @@ Dank der Funktionen für Zielgruppenunterdrückung wird Sarah nicht mehr in die 
 
 ## Analysieren des Profils
 
-Marketer von Luma verwenden Adobe Experience Platform, um sich im Dashboard der Echtzeit-Kundendatenplattform das Segment „Schenkende“ anzusehen. Sie sehen die Ergebnisse dieser Initiative im Laufe der Zeit und erkennen, dass sie erfolgreich ist. Kunden reagieren auf Angebote und geben mehr Geld aus.
+Luma-Marketer verwenden Adobe Experience Platform, um sich das Segment Geschenkartikel im Real-Time CDP Dashboard anzusehen. Sie sehen die Ergebnisse dieser Initiative im Laufe der Zeit und erkennen, dass sie erfolgreich ist. Kunden reagieren auf Angebote und geben mehr Geld aus.
 
 Das bedeutet, dass Marketer auf das Signal reagieren können, das auf der Verfügbarkeit dieser Daten in der Kundendatenplattform und der Verknüpfung von Kunden (wie z. B. Sarah) mit dem Segment beruht.
 

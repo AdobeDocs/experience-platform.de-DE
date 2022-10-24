@@ -1,18 +1,18 @@
 ---
 keywords: rtcdp Administration - Übersicht; Administration - Übersicht
 title: Übersicht über die Real-time Customer Data Platform-Administration
-description: Das vorliegende Dokument bietet Ihnen einen Überblick über die Verwaltungsfunktionen der Echtzeit-Kundendatenplattform, die auf Adobe Experience Platform basiert.
+description: Dieses Dokument bietet einen Überblick über die Verwaltungsfunktionen von Adobe Real-time Customer Data Platform mit Adobe Experience Platform.
 exl-id: c5bdeac6-345a-4ef1-bc5a-a993f565b9d6
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 54%
+source-wordcount: '283'
+ht-degree: 33%
 
 ---
 
 # Übersicht über die Real-time Customer Data Platform-Administration
 
-Dieses Dokument bietet einen Überblick über die Verwaltungsfunktionen von [!DNL Real-time Customer Data Platform], powered by Adobe Experience Platform.
+Dieses Dokument bietet einen Überblick über die Verwaltungsfunktionen von [!DNL Adobe Real-Time Customer Data Platform], powered by Adobe Experience Platform.
 
 [!DNL Experience Platform]Mit können Administratoren die rollenbasierte Zugriffskontrolle für Anwender sowie virtuelle Sandboxes für die Anwendungsentwicklung verwalten.
 
@@ -26,7 +26,7 @@ Weitere Informationen zur Zugriffskontrolle finden Sie unter [Zugriffskontrolle 
 
 >[!IMPORTANT]
 >
->Befolgen Sie die im [Benutzerhandbuch für die Zugriffskontrolle](../../access-control/ui/overview.md) angegebenen Schritte, um eine ausführliche Anleitung zur Gewährung des Zugriffs auf Funktionen der Echtzeit-Kundendatenplattform zu erhalten. Achten Sie dabei insbesondere auf die Anleitungen zum Verwalten von Details und zusätzlichen Diensten für ein Produktprofil.
+>Eine ausführliche Anleitung zur Gewährung des Zugriffs auf Real-Time CDP-Funktionen, einschließlich der Aktivierung der Sichtbarkeit in der Benutzeroberfläche, finden Sie in den Schritten unter [Benutzerhandbuch zur Zugriffskontrolle](../../access-control/ui/overview.md), insbesondere für die Verwaltung von Details und zusätzlichen Diensten für ein Produktprofil.
 
 ## Sandboxes
 

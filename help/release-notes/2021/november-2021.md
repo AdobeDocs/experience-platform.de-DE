@@ -2,10 +2,10 @@
 title: Adobe Experience Platform - Versionshinweise, November 2021
 description: Versionshinweise von November 2021 für Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '799'
-ht-degree: 99%
+ht-degree: 79%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 99%
 
 Neue Funktionen in Adobe Experience Platform:
 
-- [Real-time Customer Data Platform B2B Edition](#B2B)
+- [Real-Time Customer Data Platform B2B Edition](#B2B)
 - [(Beta) Aktivieren von Zielgruppensegmenten für Batch-Ziele über die Ad-hoc-Aktivierungs-API](#ad-hoc-activation)
 
 ## Aktualisierungen vorhandener Funktionen
@@ -31,9 +31,9 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 **Veröffentlichungsdatum: 12. November 2021**
 
-Real-time Customer Data Platform B2B Edition basiert auf Real-time Customer Data Platform (Real-time CDP) und wurde speziell für Marketing-Experten entwickelt, die in einem Business-to-Business-Service-Modell arbeiten. Es führt Daten aus verschiedenen Quellen zusammen und kombiniert sie zu einer einzigen Ansicht von Personen und Account-Profilen. Diese vereinheitlichten Daten ermöglichen es Marketing-Experten, bestimmte Zielgruppen präzise anzusprechen und über alle verfügbaren Kanäle anzusprechen.
+Die auf Real-time Customer Data Platform (Real-Time CDP) aufbauende Real-Time CDP B2B Edition wurde speziell für Marketing-Experten entwickelt, die in einem Business-to-Business-Dienstleistungsmodell arbeiten. Es führt Daten aus verschiedenen Quellen zusammen und kombiniert sie zu einer einzigen Ansicht von Personen und Account-Profilen. Diese vereinheitlichten Daten ermöglichen es Marketing-Experten, bestimmte Zielgruppen präzise anzusprechen und über alle verfügbaren Kanäle anzusprechen.
 
-Es gibt Verbesserungen bei einer Reihe von Funktionen von Adobe Experience Platform, die Real-time Customer Data Platform B2B Edition von ihrem B2C-Pendant unterscheiden. Dazu gehören Verbesserungen am Experience-Datenmodell (XDM) für B2B-Anwendungsfälle, Upgrades für die Identitätsauflösung und die Profilsegmentierung sowie ein maßgeschneiderter Connector und ein Ziel für Marketo Engage. Mit dem Marketo-Connector können B2B-Marken ihre branchenführenden B2B-Interaktionsdaten mit Verhaltensinformationen verknüpfen, um Leads zu pflegen und Maßnahmen für Account-basiertes Marketing zu verbessern.
+Es gibt Verbesserungen an einer Vielzahl von Adobe Experience Platform-Funktionen, die Real-Time CDP B2B Edition von seinem B2C-Gegenstück unterscheiden. Dazu gehören Verbesserungen am Experience-Datenmodell (XDM) für B2B-Anwendungsfälle, Upgrades für die Identitätsauflösung und die Profilsegmentierung sowie ein maßgeschneiderter Connector und ein Ziel für Marketo Engage. Mit dem Marketo-Connector können B2B-Marken ihre branchenführenden B2B-Interaktionsdaten mit Verhaltensinformationen verknüpfen, um Leads zu pflegen und Maßnahmen für Account-basiertes Marketing zu verbessern.
 
 -[Neue B2B- und B2P-Editionen](#editions)
 -[Neue Marketo-Connectoren für Datenquelle und Ziel](#marketo)
@@ -41,9 +41,9 @@ Es gibt Verbesserungen bei einer Reihe von Funktionen von Adobe Experience Platf
 
 ### Neue B2B- und B2P-Editionen {#editions}
 
-Neue B2B- und B2P-Editionen, die B2B-Daten und -Funktionen sowohl in Real-time CDP als auch in Platform Activation ermöglichen, sind zum Kauf verfügbar.
+Es stehen neue B2B- und B2P-Editionen zur Verfügung, die B2B-Daten und -Funktionen sowohl für Real-Time CDP- als auch für Platform Activation-Produkte bereitstellen.
 
-Weitere Informationen zu Real-time Customer Data Platform B2B Edition finden Sie in der [Übersicht](../../rtcdp/overview.md).
+Weitere Informationen zu Real-Time CDP B2B Edition finden Sie unter [Übersicht](../../rtcdp/overview.md).
 
 ### Neue Marketo-Connectoren für Datenquelle und Ziel {#marketo}
 
@@ -60,9 +60,9 @@ Standard-B2B-XDM-Klassen, -Feldergruppen und -Datentypen sind für alle Platform
 
 | Funktion | Beschreibung |
 |-----------|--------------|
-| Standard-B2B-XDM-Klassen | Real-time Customer Data Platform B2B Edition bietet mehrere Standard-XDM, die Details zu wichtigen B2B-Datenentitäten wie Konten, Chancen und Kampagnen erfassen.. |
+| Standard-B2B-XDM-Klassen | Real-time Customer Data Platform B2B Edition bietet verschiedene Standard-XDM, die Details zu wesentlichen B2B-Datenentitäten wie Konten, Chancen, Kampagnen und mehr erfassen. |
 
-Weitere Informationen zur Erfassung von B2B-Datenentitäten finden Sie unter [Schemas in Real-time Customer Data Platform B2B Edition](../../rtcdp/schemas/b2b.md).
+Siehe [Schemata in Real-time Customer Data Platform B2B Edition](../../rtcdp/schemas/b2b.md) Dokumentation , um mehr über die Erfassung von B2B-Datenentitäten zu erfahren.
 
 ### (Beta) Aktivieren von Zielgruppensegmenten für Batch-Ziele über die Ad-hoc-Aktivierungs-API {#ad-hoc-activation}
 
@@ -81,7 +81,7 @@ Weitere Informationen zu Attributions-KI finden Sie in der [Dokumentation zu Att
 
 ### Kunden-KI {#customer-ai}
 
-Kunden-KI in Real-time Customer Data Platform dient dazu, für einzelne Profile in gewünschten Umfang benutzerdefinierte Neigungswerte wie Abwanderung und Konversion zu generieren. Dies wird erreicht, ohne dass die Geschäftsanforderungen in ein Problem des maschinellen Lernens umgewandelt werden müssen bzw. ein Algorithmus ausgewählt, trainiert oder bereitgestellt werden muss.
+In Real-time Customer Data Platform verfügbare Customer AI wird verwendet, um benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion für einzelne Profile in großem Maßstab zu generieren. Dies wird erreicht, ohne dass die Geschäftsanforderungen in ein Problem des maschinellen Lernens umgewandelt werden müssen bzw. ein Algorithmus ausgewählt, trainiert oder bereitgestellt werden muss.
 
 **Aktualisierte Funktionen**
 

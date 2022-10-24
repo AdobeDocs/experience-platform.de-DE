@@ -2,9 +2,9 @@
 title: Datentyp der externen Quell-System-Prüfattribute
 description: Dieses Dokument bietet einen Überblick über den Datentyp "External Source System Audit Attributes Experience Data Model (XDM)".
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
-source-git-commit: 7e07ba8b5d7bc7df809a9a122d2a58837c933674
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '217'
 ht-degree: 14%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 14%
 
 >[!NOTE]
 >
->Dieser Datentyp ist nur für Unternehmen verfügbar, die Zugriff auf die B2B-Edition von Real-time Customer Data Platform haben.
+>Dieser Datentyp ist nur für Unternehmen verfügbar, die Zugriff auf die B2B-Edition von Adobe Real-time Customer Data Platform haben.
 
 [!UICONTROL Audit-Attribute des externen Quellsystems] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Prüfdetails zu einem externen Quellsystem erfasst.
 

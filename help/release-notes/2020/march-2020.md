@@ -6,10 +6,10 @@ last-update: March 10, 2020
 author: ens71067
 keywords: Versionshinweise;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '855'
-ht-degree: 76%
+ht-degree: 68%
 
 ---
 
@@ -39,8 +39,8 @@ Adobe Experience Platform Data Governance besteht aus einer Reihe von Strategien
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Automatisierte Durchsetzung von Datennutzungsrichtlinien für [!DNL Real-time Customer Data Platform] | Datennutzungsrichtlinien werden jetzt im Workflow zum Aktivieren von Daten für Ziele durchgesetzt. Data Governance wird auch eingebettet und durchgesetzt, wenn Änderungen vorgenommen werden, die sich auf bestehende Aktivierungen auswirken (z. B. Änderungen an den Datenbezeichnungen, Zusammenführungsrichtlinien, Segmentdefinitionen usw.). |
-| Datenherkunft zur Durchsetzung | Wenn eine Datennutzungsrichtlinie in der Echtzeit-Kundendatenplattform verletzt wird, zeigt die Benutzeroberfläche eine Benachrichtigung an, die Informationen zur Datenherkunft enthält, damit der Benutzer besser versteht, warum gegen die Richtlinien verstoßen wurde und wie er den Verstoß beheben kann. |
+| Automatisierte Durchsetzung von Datennutzungsrichtlinien für [!DNL Real-Time Customer Data Platform] | Datennutzungsrichtlinien werden jetzt im Workflow zum Aktivieren von Daten für Ziele durchgesetzt. Data Governance wird auch eingebettet und durchgesetzt, wenn Änderungen vorgenommen werden, die sich auf bestehende Aktivierungen auswirken (z. B. Änderungen an den Datenbezeichnungen, Zusammenführungsrichtlinien, Segmentdefinitionen usw.). |
+| Datenherkunft zur Durchsetzung | Wenn eine Datennutzungsrichtlinie in Real-Time CDP verletzt wird, zeigt die Benutzeroberfläche eine Benachrichtigung mit Informationen zur Datenherkunft an, damit der Benutzer besser verstehen kann, warum gegen die Richtlinien verstoßen wurde und was er tun kann, um den Verstoß zu beheben. |
 
 
 **Bekannte Probleme**
@@ -68,7 +68,7 @@ Weitere Informationen zur Erfassung von Daten in Platform finden Sie in der [Dat
 
 ## Ziele {#destinations}
 
-In der [ Echtzeit-Kundendatenplattform](../../rtcdp/overview.md) sind Ziele vordefinierte Integrationen mit Zielplattformen, die Daten für diese Partner auf nahtlose Weise aktivieren.
+In [Real-time Customer Data Platform](../../rtcdp/overview.md), sind Ziele vordefinierte Integrationen mit Zielplattformen, die Daten für diese Partner nahtlos aktivieren.
 
 **Neue Ziele**
 
@@ -76,8 +76,8 @@ Es stehen neue Ziele zur Verfügung, für die Sie Ihre Adobe Experience Platform
 
 | Ziel | Beschreibung |
 |--- | ---|
-| Cloud-Speicher-Ziele | Die Echtzeit-Kundendatenplattform kann Ihre Segmente jetzt als Datendateien an Ihre [!DNL Amazon S3] oder SFTP-Cloud-Speicher. Auf diese Weise können Sie Zielgruppen und deren Profilattribute über CSV- oder tabulatorgetrennte Dateien an Ihre internen Systeme senden. |
-| Werbeziele | Die [!DNL Google] Die Zielkarte ist jetzt in drei Zielkarten für die drei verschiedenen [!DNL Google] Plattformen, die derzeit in der Echtzeit-Kundendatenplattform unterstützt werden: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display &amp; Video 360. |
+| Cloud-Speicher-Ziele | Real-Time CDP kann Ihre Segmente nun als Datendateien an Ihre [!DNL Amazon S3] oder SFTP-Cloud-Speicher. Auf diese Weise können Sie Zielgruppen und deren Profilattribute über CSV- oder tabulatorgetrennte Dateien an Ihre internen Systeme senden. |
+| Werbeziele | Die [!DNL Google] Die Zielkarte ist jetzt in drei Zielkarten für die drei verschiedenen [!DNL Google] Plattformen, die derzeit in Real-Time CDP unterstützt werden: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display &amp; Video 360. |
 
 Weitere Informationen finden Sie in [Ziele – Übersicht](../../destinations/home.md)
 

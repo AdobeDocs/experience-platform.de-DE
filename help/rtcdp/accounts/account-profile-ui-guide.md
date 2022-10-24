@@ -1,12 +1,12 @@
 ---
 keywords: RTCDP-Profil;Profile RTCDP;RTCDP-Identitäten;RTCDP-Zusammenführungsrichtlinie;Echtzeit-Kundenprofil
 title: Handbuch zur Benutzeroberfläche von Account-Profilen
-description: Durch die Verwendung von Account-Profilen ermöglicht Ihnen Real-time Customer Data Platform B2B Edition die Vereinheitlichung von Account-Informationen aus verschiedenen Quellen. Dieses Handbuch enthält Details zur Interaktion mit Account-Profilen in der Benutzeroberfläche von Adobe Experience Platform.
+description: Durch die Verwendung von Kontoprofilen ermöglicht Ihnen Adobe Real-time Customer Data Platform B2B Edition die Vereinheitlichung von Kontoinformationen aus verschiedenen Quellen. Dieses Handbuch enthält Details zur Interaktion mit Account-Profilen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 85d3e5f265fdbfd51f184d36205127f005e2b9df
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1624'
-ht-degree: 74%
+source-wordcount: '1625'
+ht-degree: 60%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Account-Profile sind nur für Kunden von Real-time Customer Data Platform B2B Edition verfügbar. Um mehr über Real-Time Customer Data Platform zu erfahren, auch zu den für jeden Lizenztyp verfügbaren Funktionen, lesen Sie bitte zunächst den [Überblick über Real-Time Customer Data Platform](../overview.md).
+>Kontoprofile sind nur für Kunden von Real-time Customer Data Platform B2B Edition verfügbar. Um mehr über Real-Time CDP zu erfahren, einschließlich der für jeden Lizenztyp verfügbaren Funktionen, lesen Sie zunächst das [Übersicht über Real-Time CDP](../overview.md).
 
-Mit Account-Profilen können Sie Account-Informationen aus mehreren Quellen vereinheitlichen. Diese einheitliche Ansicht eines Accounts führt Daten aus all Ihren Marketing-Kanälen und den diversen Systemen zusammen, die Ihr Unternehmen derzeit zum Speichern von Kunden-Account-Informationen verwendet. Dieses Dokument enthält ein Handbuch zur Interaktion mit Account-Profilen unter Verwendung der in der Benutzeroberfläche von Adobe Experience Platform verfügbaren Funktionen von Real-Time Customer Data Platform (B2B Edition).
+Mit Account-Profilen können Sie Account-Informationen aus mehreren Quellen vereinheitlichen. Diese einheitliche Ansicht eines Accounts führt Daten aus all Ihren Marketing-Kanälen und den diversen Systemen zusammen, die Ihr Unternehmen derzeit zum Speichern von Kunden-Account-Informationen verwendet. Dieses Dokument enthält eine Anleitung zur Interaktion mit Kontoprofilen mithilfe der in der Benutzeroberfläche von Adobe Experience Platform verfügbaren Real-Time CDP-Funktionen, B2B Edition.
 
 Weitere Informationen zur Erstellung von Account-Profilen im Rahmen des B2B-Workflows finden Sie im Abschnitt [End-to-End-Tutorial](../b2b-tutorial.md).
 
@@ -46,7 +46,7 @@ Die **[!UICONTROL Kontoeinstellungen]** wird geöffnet. Wählen Sie hier die **[
 
 ![Kontoeinstellungen konfigurieren](images/b2b-configuring-account-settings.png)
 
-Weitere Informationen zum Interessenten-Kontoabgleich finden Sie im Abschnitt [Lead zur Kontoübereinstimmung in der Echtzeit-Kundendatenplattform - B2B-Übersicht](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
+Weitere Informationen zum Interessenten-Kontoabgleich finden Sie im Abschnitt [Lead zur Kontoübereinstimmung in Real-Time CDP B2B - Übersicht](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
 ## Durchsuchen von Account-Profilen {#browse-account-profiles}
 
@@ -86,7 +86,7 @@ Bei ausgewählter Quelle müssen Sie jetzt eine **[!UICONTROL Account-ID]** eing
 
 ### Durchsuchen nach [!UICONTROL Sonstige] {#browse-by-others}
 
-Real-Time Customer Data Platform B2B Edition unterstützt die Möglichkeit, eine direkte Suche durchzuführen, indem Sie **[!UICONTROL Quellnamen]**, **[!UICONTROL Quellinstanz]** und **[!UICONTROL Account-ID]** für den Account eingeben, den Sie anzeigen möchten. Indem Sie den Quellnamen und die Instanz direkt eingeben, geben Sie den Kontext an, den Experience Platform benötigt, um nach den richtigen Account-Profildaten zu suchen und diese anzuzeigen.
+Real-Time CDP, B2B Edition unterstützt die Möglichkeit, eine direkte Suche durchzuführen, indem Sie eine **[!UICONTROL Quellname]**, **[!UICONTROL Quellinstanz]** und **[!UICONTROL Konto-ID]** für ein Konto, das Sie anzeigen möchten. Indem Sie den Quellnamen und die Instanz direkt eingeben, geben Sie den Kontext an, den Experience Platform benötigt, um nach den richtigen Account-Profildaten zu suchen und diese anzuzeigen.
 
 Die Möglichkeit, eine direkte Suche durchzuführen, ist unter Umständen nützlich, wenn eine direkte Quellverbindung zu den Daten nicht möglich ist. Wenn Ihr Unternehmen beispielsweise über Data Governance-Richtlinien verfügt, die eine direkte Verbindung zu einem CRM verhindern, können Sie diese Daten in ein Cloud-Speichersystem exportieren und dann in Experience Platform aufnehmen.
 
@@ -120,19 +120,19 @@ Sie können die Daten nicht nur in einer Liste anzeigen, sondern auch in der Suc
 
 ## Registerkarte „Personen“ {#people-tab}
 
-Die Registerkarte **[!UICONTROL Personen]** enthält eine Liste der einzelnen Personen, die mit dem Account in Verbindung stehen. Diese Personen können Kontakte und Leads aus verschiedenen Unternehmenssystemen sein, die von verschiedenen Teams in Ihrem Unternehmen verwaltet werden. In Real-Time Customer Data Platform B2B Edition werden sie jedoch in einer Liste zusammengefasst, sodass Sie eine ganzheitlichere Ansicht Ihrer Account-Kontakte erhalten.
+Die Registerkarte **[!UICONTROL Personen]** enthält eine Liste der einzelnen Personen, die mit dem Account in Verbindung stehen. Diese Personen können Kontakte und Leads aus verschiedenen Unternehmenssystemen sein, die von verschiedenen Teams in Ihrem Unternehmen verwaltet werden. In Real-Time CDP, B2B Edition werden sie jedoch in einer einzigen Liste vorgestellt, in der Sie eine ganzheitlichere Übersicht über Ihre Kontokontakte erhalten.
 
 >[!NOTE]
 >
 >Auf der Registerkarte [!UICONTROL Personen] wird eine Liste mit bis zu 25 Personen angezeigt, die mit dem Account in Verbindung stehen. Bei Accounts mit mehr als 25 Personen zeigt das System eine Stichprobe von 25 Datensätzen an.
 
-Neben der Anzeige einer Momentaufnahme der Informationen für den Kontakt enthält jede aufgeführte Person auch eine **[!UICONTROL Profilkennung]**, bei der es sich um einen anklickbaren Link handelt, über den Sie das Echtzeit-Kundenprofil für diese Person ermitteln können. Weitere Informationen zum Anzeigen einzelner Account-Profile in Bezug auf Ihre Accounts finden Sie im Handbuch zum [Durchsuchen von Profilen in Real-Time Customer Data Platform B2B Edition](../profile/profile-browse.md).
+Neben der Anzeige einer Momentaufnahme der Informationen für den Kontakt enthält jede aufgeführte Person auch eine **[!UICONTROL Profilkennung]**, bei der es sich um einen anklickbaren Link handelt, über den Sie das Echtzeit-Kundenprofil für diese Person ermitteln können. Weitere Informationen zum Anzeigen einzelner Kundenprofile in Bezug auf Ihre Konten finden Sie im Handbuch für [Durchsuchen von Profilen in Real-Time CDP, B2B Edition](../profile/profile-browse.md).
 
 ![Registerkarte „Personen“](images/b2b-account-people.png)
 
 ## Registerkarte „Opportunitys“ {#opportunities-tab}
 
-Die Registerkarte **[!UICONTROL Opportunitys]** enthält Informationen zu offenen und geschlossenen Opportunitys im Zusammenhang mit dem Account. Diese Opportunitys können aus verschiedenen Quellen in Experience Platform aufgenommen werden. Real-Time Customer Data Platform B2B Edition erleichtert es Marketing-Experten jedoch, all diese Opportunitys an einem Ort zu sehen.
+Die Registerkarte **[!UICONTROL Opportunitys]** enthält Informationen zu offenen und geschlossenen Opportunitys im Zusammenhang mit dem Account. Diese Möglichkeiten können aus verschiedenen Quellen in die Experience Platform integriert werden. Real-Time CDP, B2B Edition, erleichtert es Marketing-Experten jedoch, all diese Möglichkeiten an einem Ort zu sehen.
 
 >[!NOTE]
 >

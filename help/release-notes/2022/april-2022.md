@@ -2,10 +2,10 @@
 title: Adobe Experience Platform - Versionshinweise, April 2022
 description: Die Versionshinweise für Adobe Experience Platform vom April 2022.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '2916'
-ht-degree: 98%
+ht-degree: 96%
 
 ---
 
@@ -21,7 +21,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [[!DNL Data Prep]](#data-prep)
 - [Ziele](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
-- [Real-time Customer Data Platform B2B Edition](#B2B)
+- [Real-Time Customer Data Platform B2B Edition](#B2B)
 - [Quellen](#sources)
 
 ## [!DNL Dashboards] {#dashboards}
@@ -189,7 +189,7 @@ Weitere Informationen zu [!DNL Intelligent Services] finden Sie in der [[!DNL In
 
 ### Kunden-KI
 
-Kunden-KI in Real-time Customer Data Platform dient dazu, für einzelne Profile in gewünschten Umfang benutzerdefinierte Neigungswerte wie Abwanderung und Konversion zu generieren. Dies wird erreicht, ohne dass die Geschäftsanforderungen in ein Problem des maschinellen Lernens umgewandelt werden müssen bzw. ein Algorithmus ausgewählt, trainiert oder bereitgestellt werden muss.
+In Real-time Customer Data Platform verfügbare Customer AI wird verwendet, um benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion für einzelne Profile in großem Maßstab zu generieren. Dies wird erreicht, ohne dass die Geschäftsanforderungen in ein Problem des maschinellen Lernens umgewandelt werden müssen bzw. ein Algorithmus ausgewählt, trainiert oder bereitgestellt werden muss.
 
 **Aktualisierte Funktionen**
 
@@ -202,7 +202,7 @@ Weitere Informationen zu [!DNL Intelligent Services] finden Sie in der [[!DNL In
 
 ## Real-time Customer Data Platform B2B Edition {#B2B}
 
-Real-time Customer Data Platform B2B Edition basiert auf Real-time Customer Data Platform (Real-time CDP) und wurde speziell für Marketing-Experten entwickelt, die in einem Business-to-Business-Service-Modell arbeiten. Es führt Daten aus verschiedenen Quellen zusammen und kombiniert sie zu einer einzigen Ansicht von Personen und Account-Profilen. Diese vereinheitlichten Daten ermöglichen es Marketing-Experten, bestimmte Zielgruppen präzise anzusprechen und über alle verfügbaren Kanäle anzusprechen.
+Die auf Real-time Customer Data Platform (Real-Time CDP) aufbauende Real-Time CDP B2B Edition wurde speziell für Marketing-Experten entwickelt, die in einem Business-to-Business-Dienstleistungsmodell arbeiten. Es führt Daten aus verschiedenen Quellen zusammen und kombiniert sie zu einer einzigen Ansicht von Personen und Account-Profilen. Diese vereinheitlichten Daten ermöglichen es Marketing-Experten, bestimmte Zielgruppen präzise anzusprechen und über alle verfügbaren Kanäle anzusprechen.
 
 **Aktualisierte Funktionen**
 

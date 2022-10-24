@@ -1,10 +1,10 @@
 ---
 title: Adobe Advertising Cloud DSP-Verbindung
-description: Adobe Advertising Cloud DSP ist ein integriertes Ziel für die [!DNL Adobe Real-time Customer Data Profile], sodass Sie authentifizierte Erstanbietersegmente für zugelassene Advertiser und Benutzer freigeben können, um Kampagnen zu aktivieren.
+description: Adobe Advertising Cloud DSP ist ein integriertes Ziel für Adobe Real-time Customer Data Platform, mit dem Sie authentifizierte Erstanbietersegmente für zugelassene Advertiser und Benutzer freigeben können, um Kampagnen zu aktivieren.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: 27869b91deeb4a5cca580970507845d992d21aaf
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1055'
 ht-degree: 8%
 
 ---
@@ -25,7 +25,7 @@ Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie das Advertising Cloud 
 
 ### Anwendungsfall für Markenwerbung
 
-Ein Online-Einzelhändler möchte seine Kunden mit hohem Wert über eine Display-Kampagne erneut ansprechen, ohne Cookies für das Targeting zu verwenden. Der Einzelhändler gibt ein Segment frei, das aus den Hash-E-Mail-IDs seiner hochwertigen Kunden aus seiner [!DNL Real-Time CDP] auf sein DSP Konto. DSP konvertiert dann die Hash-E-Mail-IDs in authentifizierte [!DNL RampIDs] durch eine Partnerschaft zwischen DSP und LiveRamp. Das Ergebnis [!DNL RampIDs] kann in einer Display-Kampagne zur Zielgruppenbestimmung verwendet werden.
+Ein Online-Einzelhändler möchte seine Kunden mit hohem Wert über eine Display-Kampagne erneut ansprechen, ohne Cookies für das Targeting zu verwenden. Der Einzelhändler teilt ein Segment, das aus den Hash-E-Mail-IDs seiner hochwertigen Kunden aus seinem Adobe Real-time Customer Data Platform (Real-Time CDP)-Konto besteht, mit seinem DSP. DSP konvertiert dann die Hash-E-Mail-IDs in authentifizierte [!DNL RampIDs] durch eine Partnerschaft zwischen DSP und LiveRamp. Das Ergebnis [!DNL RampIDs] kann in einer Display-Kampagne zur Zielgruppenbestimmung verwendet werden.
 
 ### Anwendungsfall der Agentur
 

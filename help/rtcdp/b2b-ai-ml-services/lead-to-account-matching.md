@@ -1,16 +1,16 @@
 ---
-title: Lead zur Kontoübereinstimmung in der Echtzeit-Kundendatenplattform B2B
+title: Lead zur Kontoübereinstimmung in Real-Time CDP B2B
 type: Documentation
 description: Eine Übersicht und weitere Informationen zum Interessenten für die Kontoabgleichfunktion in der Experience Platform CDP B2B.
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
-source-git-commit: 0b140e767dec0e703b3ab9c75b7a23c797804c66
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '616'
 ht-degree: 6%
 
 ---
 
-# Lead zur Kontoübereinstimmung in der Echtzeit-Kundendatenplattform B2B
+# Lead zur Kontoübereinstimmung in Real-Time CDP B2B
 
 ## Übersicht {#overview}
 

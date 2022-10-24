@@ -1,23 +1,23 @@
 ---
-keywords: Profile;Echtzeit-Kundenprofil;Fehlerbehebung;Leitlinien;Richtlinien;Limit;Entität;primäre Entität;Dimensionentität;RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;Echtzeit-Kundendatenplattform;Real-time CDP;B2B;CDP;
-title: Standardmäßige Leitlinien für Real-time Customer Data Platform B2B Edition
+keywords: profile; Echtzeit-Kundenprofil; Fehlerbehebung; Limits; Richtlinien; Grenze; Entität; primäre Entität; Dimensionentität; RTCDP; CDP; B2B Edition; Real-time Customer Data Platform; Echtzeit-Kundendatenplattform; Echtzeit-Kundendatenplattform; b2b; cdp;
+title: Standardmäßige Limits für Real-time Customer Data Platform B2B Edition
 type: Documentation
-description: Adobe Experience Platform verwendet ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet. Dieses Dokument enthält standardmäßige Verwendungs- und Ratenbeschränkungen, mit denen Sie Ihre Daten für eine optimale Systemleistung mit Real-time Customer Data Platform B2B Edition modellieren können.
+description: Adobe Experience Platform verwendet ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet. Dieses Dokument enthält standardmäßige Verwendungs- und Ratenbeschränkungen, mit denen Sie Ihre Daten für eine optimale Systemleistung mit Adobe Real-time Customer Data Platform B2B Edition modellieren können.
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1601'
-ht-degree: 100%
+source-wordcount: '1602'
+ht-degree: 66%
 
 ---
 
-# Standardmäßige Leitlinien für Real-time Customer Data Platform B2B Edition
+# Standardmäßige Limits für Real-time Customer Data Platform B2B Edition
 
 >[!NOTE]
 >
->Die in diesem Dokument beschriebenen Einschränkungen stellen die Änderungen dar, die durch Real-time Customer Data Platform B2B Edition möglich werden. Um eine vollständige Liste der standardmäßigen Beschränkungen für Real-time Customer Data Platform B2B Edition zu erhalten, kombinieren Sie diese Beschränkungen mit den allgemeinen Beschränkungen von Adobe Experience Platform, die in den [Leitlinien zur Dokumentation von Echtzeit-Kundenprofildaten](../profile/guardrails.md) dargelegt werden.
+>Die in diesem Dokument beschriebenen Einschränkungen stellen die von Real-time Customer Data Platform B2B Edition aktivierten Änderungen dar. Für eine vollständige Liste der Standardbeschränkungen für Real-Time CDP B2B Edition kombinieren Sie diese Beschränkungen mit den allgemeinen Adobe Experience Platform-Beschränkungen, die im Abschnitt [Limits für die Dokumentation zu Echtzeit-Kundenprofil-Daten](../profile/guardrails.md).
 
-Mit Real-time Customer Data Platform B2B Edition können Sie personalisierte kanalübergreifende Erlebnisse bereitstellen, die auf verhaltensbezogenen Insights und Kundenattributen in Form von Echtzeit-Kundenprofilen und Account-Profilen basieren. Um diesen neuen Ansatz bei Profilen zu unterstützen, verwendet Experience Platform ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet.
+Mit der Real-time Customer Data Platform B2B Edition können Sie personalisierte kanalübergreifende Erlebnisse bereitstellen, die auf verhaltensbezogenen Einblicken und Kundenattributen in Form von Echtzeit-Kundenprofilen und Kontoprofilen basieren. Um diesen neuen Ansatz bei Profilen zu unterstützen, verwendet Experience Platform ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet.
 
 Dieses Dokument enthält standardmäßige Verwendungs- und Ratenbeschränkungen, die Ihnen helfen, Ihre Daten für eine optimale Systemleistung zu modellieren. Bei der Überprüfung der folgenden Leitlinien wird davon ausgegangen, dass Sie die Daten korrekt modelliert haben. Wenden Sie sich bei Fragen zum Modellieren Ihrer Daten an Ihren Kundenbetreuer.
 
@@ -45,11 +45,11 @@ Die folgenden Leitlinien bieten empfohlene Beschränkungen bei der Modellierung 
 
 >[!NOTE]
 >
->Die in diesem Abschnitt beschriebenen Datenmodellbeschränkungen stellen die Änderungen dar, die durch Real-time Customer Data Platform B2B Edition möglich sind. Um eine vollständige Liste der standardmäßigen Beschränkungen für Real-time Customer Data Platform B2B Edition zu erhalten, kombinieren Sie diese Beschränkungen mit den allgemeinen Beschränkungen von Adobe Experience Platform, die in den [Leitlinien zur Dokumentation von Echtzeit-Kundenprofildaten](../profile/guardrails.md) dargelegt werden.
+>Die in diesem Abschnitt beschriebenen Datenmodellbeschränkungen stellen die von Real-time Customer Data Platform B2B Edition aktivierten Änderungen dar. Für eine vollständige Liste der Standardbeschränkungen für Real-Time CDP B2B Edition kombinieren Sie diese Beschränkungen mit den allgemeinen Adobe Experience Platform-Beschränkungen, die im Abschnitt [Limits für die Dokumentation zu Echtzeit-Kundenprofil-Daten](../profile/guardrails.md).
 
 | Beschränkung | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
-| Datensätze der Standard-XDM-Klassen in Real-time Customer Data Platform B2B Edition | 60 | Weich | Es werden maximal 60 Datensätze empfohlen, die die standardmäßigen von Real-time Customer Data Platform B2B Edition bereitgestellten Experience-Datenmodell (XDM)-Klassen nutzen. Eine vollständige Liste der Standard-XDM-Klassen für B2B-Anwendungsfälle finden Sie im Abschnitt zu [Schemas in der Dokumentation zu Real-time Customer Data Platform B2B Edition](schemas/b2b.md). <br/><br/>*Hinweis: Aufgrund der Beschaffenheit des denormalisierten Hybrid-Datenmodells von Experience Platform überschreiten die meisten Kunden diese Grenze nicht. Wenden Sie sich an Ihren Kundenbetreuer, wenn Sie Fragen zur Datenmodellierung haben oder mehr über benutzerdefinierte Limits erfahren möchten.* |
+| Real-Time CDP B2B Edition Standard-XDM-Klassendatensätze | 60 | Weich | Es wird empfohlen, maximal 60 Datensätze zu verwenden, die die standardmäßigen Experience-Datenmodell (XDM)-Klassen von Real-Time CDP B2B Edition nutzen. Eine vollständige Liste der Standard-XDM-Klassen für B2B-Anwendungsfälle finden Sie im Abschnitt [Schemata in der Dokumentation zu Real-Time CDP B2B Edition](schemas/b2b.md). <br/><br/>*Hinweis: Aufgrund der Beschaffenheit des denormalisierten Hybrid-Datenmodells von Experience Platform überschreiten die meisten Kunden diese Grenze nicht. Wenden Sie sich an Ihren Kundenbetreuer, wenn Sie Fragen zur Datenmodellierung haben oder mehr über benutzerdefinierte Limits erfahren möchten.* |
 | Alte Beziehungen mit mehreren Entitäten | 20 | Weich | Es werden maximal 20 Beziehungen mit mehreren Entitäten empfohlen, die in primären Entitäten oder Dimensionsentitäten definiert sind. Zusätzliche Beziehungszuordnungen sollten erst vorgenommen werden, wenn eine vorhandene Beziehung entfernt oder deaktiviert wurde. |
 | Viele-zu-eins-Beziehungen pro XDM-Klasse | 2 | Weich | Es wird empfohlen, pro XDM-Klasse maximal zwei Viele-zu-eins-Beziehungen zu definieren. Zusätzliche Beziehungen sollten erst dann hergestellt werden, wenn eine vorhandene Beziehung entfernt oder deaktiviert wurde. Anweisungen zum Erstellen einer Beziehung zwischen zwei Schemas finden Sie im Tutorial zum [Erstellen von B2B-Schemabeziehungen](../xdm/tutorials/relationship-b2b.md). |
 
@@ -57,7 +57,7 @@ Die folgenden Leitlinien bieten empfohlene Beschränkungen bei der Modellierung 
 
 >[!NOTE]
 >
->Die in diesem Abschnitt beschriebenen Datenmodellbeschränkungen stellen die Änderungen dar, die durch Real-time Customer Data Platform B2B Edition möglich sind. Um eine vollständige Liste der standardmäßigen Beschränkungen für Real-time Customer Data Platform B2B Edition zu erhalten, kombinieren Sie diese Beschränkungen mit den allgemeinen Beschränkungen von Adobe Experience Platform, die in den [Leitlinien zur Dokumentation von Echtzeit-Kundenprofildaten](../profile/guardrails.md) dargelegt werden.
+>Die in diesem Abschnitt beschriebenen Datenmodellbeschränkungen stellen die von Real-time Customer Data Platform B2B Edition aktivierten Änderungen dar. Für eine vollständige Liste der Standardbeschränkungen für Real-Time CDP B2B Edition kombinieren Sie diese Beschränkungen mit den allgemeinen Adobe Experience Platform-Beschränkungen, die im Abschnitt [Limits für die Dokumentation zu Echtzeit-Kundenprofil-Daten](../profile/guardrails.md).
 
 | Beschränkung | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
@@ -77,7 +77,7 @@ In den folgenden Leitlinien erhalten Sie Informationen zur Datengröße und zu e
 
 >[!NOTE]
 >
->Die in diesem Abschnitt beschriebenen Datengrößenbeschränkungen stellen die Änderungen dar, die von Real-time Customer Data Platform B2B Edition ermöglicht werden. Um eine vollständige Liste der standardmäßigen Beschränkungen für Real-time Customer Data Platform B2B Edition zu erhalten, kombinieren Sie diese Beschränkungen mit den allgemeinen Beschränkungen von Adobe Experience Platform, die in den [Leitlinien zur Dokumentation von Echtzeit-Kundenprofildaten](../profile/guardrails.md) dargelegt werden.
+>Die in diesem Abschnitt beschriebenen Datengrößenbeschränkungen stellen die von Real-time Customer Data Platform B2B Edition aktivierten Änderungen dar. Für eine vollständige Liste der Standardbeschränkungen für Real-Time CDP B2B Edition kombinieren Sie diese Beschränkungen mit den allgemeinen Adobe Experience Platform-Beschränkungen, die im Abschnitt [Limits für die Dokumentation zu Echtzeit-Kundenprofil-Daten](../profile/guardrails.md).
 
 | Beschränkung | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
@@ -87,7 +87,7 @@ In den folgenden Leitlinien erhalten Sie Informationen zur Datengröße und zu e
 
 >[!NOTE]
 >
->Die in diesem Abschnitt beschriebenen Datengrößenbeschränkungen stellen die Änderungen dar, die von Real-time Customer Data Platform B2B Edition ermöglicht werden. Um eine vollständige Liste der standardmäßigen Beschränkungen für Real-time Customer Data Platform B2B Edition zu erhalten, kombinieren Sie diese Beschränkungen mit den allgemeinen Beschränkungen von Adobe Experience Platform, die in den [Leitlinien zur Dokumentation von Echtzeit-Kundenprofildaten](../profile/guardrails.md) dargelegt werden.
+>Die in diesem Abschnitt beschriebenen Datengrößenbeschränkungen stellen die von Real-time Customer Data Platform B2B Edition aktivierten Änderungen dar. Für eine vollständige Liste der Standardbeschränkungen für Real-Time CDP B2B Edition kombinieren Sie diese Beschränkungen mit den allgemeinen Adobe Experience Platform-Beschränkungen, die im Abschnitt [Limits für die Dokumentation zu Echtzeit-Kundenprofil-Daten](../profile/guardrails.md).
 
 | Beschränkung | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
@@ -101,7 +101,7 @@ Die in diesem Abschnitt beschriebenen Leitlinien beziehen sich auf die Anzahl un
 
 >[!NOTE]
 >
->Die in diesem Abschnitt beschriebenen Segmentierungsbeschränkungen stellen die Änderungen dar, die durch Real-time Customer Data Platform B2B Edition ermöglicht werden. Um eine vollständige Liste der standardmäßigen Beschränkungen für Real-time Customer Data Platform B2B Edition zu erhalten, kombinieren Sie diese Beschränkungen mit den allgemeinen Beschränkungen von Adobe Experience Platform, die in den [Leitlinien zur Dokumentation von Echtzeit-Kundenprofildaten](../profile/guardrails.md) dargelegt werden..
+>Die in diesem Abschnitt beschriebenen Segmentierungsbeschränkungen stellen die von Real-time Customer Data Platform B2B Edition aktivierten Änderungen dar. Für eine vollständige Liste der Standardbeschränkungen für Real-Time CDP B2B Edition kombinieren Sie diese Beschränkungen mit den allgemeinen Adobe Experience Platform-Beschränkungen, die im Abschnitt [Limits für die Dokumentation zu Echtzeit-Kundenprofil-Daten](../profile/guardrails.md).
 
 | Beschränkung | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
@@ -109,7 +109,7 @@ Die in diesem Abschnitt beschriebenen Leitlinien beziehen sich auf die Anzahl un
 
 ## Nächste Schritte
 
-Die in diesem Dokument beschriebenen Einschränkungen stellen die Änderungen dar, die durch Real-time Customer Data Platform B2B Edition möglich werden. Um eine vollständige Liste der standardmäßigen Beschränkungen für Real-time Customer Data Platform B2B Edition zu erhalten, kombinieren Sie diese Beschränkungen mit den allgemeinen Beschränkungen von Adobe Experience Platform, die in den [Leitlinien zur Dokumentation von Echtzeit-Kundenprofildaten](../profile/guardrails.md) dargelegt werden.
+Die in diesem Dokument beschriebenen Einschränkungen stellen die von Real-time Customer Data Platform B2B Edition aktivierten Änderungen dar. Für eine vollständige Liste der Standardbeschränkungen für Real-Time CDP B2B Edition kombinieren Sie diese Beschränkungen mit den allgemeinen Adobe Experience Platform-Beschränkungen, die im Abschnitt [Limits für die Dokumentation zu Echtzeit-Kundenprofil-Daten](../profile/guardrails.md).
 
 ## Anhang
 

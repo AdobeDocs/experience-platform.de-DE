@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Überblick über Adobe Experience Platform
 breadcrumb-title: Übersicht zu Experience Platform
 user-guide-description: Erfahren Sie, wie Sie Ihren Kunden mithilfe von Experience Platform in Echtzeit personalisierte Erlebnisse liefern können.
-source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '245'
-ht-degree: 96%
+source-wordcount: '246'
+ht-degree: 93%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 96%
    * [Sprachunterstützung](documentation/language-support.md)
 * Auf Platform aufbauende Anwendungs-Services {#ecosystem}
    * [Übersicht](application-services.md)
-   * [Real-time Customer Data Platform (alle Editionen)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=de)
+   * [Adobe Real-time Customer Data Platform (alle Editionen)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=de)
    * [Programme und Intelligent Services (Video)](video/application-intelligent-services.md)
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=de)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=de)

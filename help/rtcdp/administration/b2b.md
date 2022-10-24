@@ -1,16 +1,16 @@
 ---
 title: Zugriffskontrolle in Real-time Customer Data Platform B2B Edition
-description: Ein Überblick über die Rolle der Zugriffskontrolle in Real-time Customer Data Platform B2B Edition.
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+description: Ein Überblick über die Rolle der Zugriffskontrolle in Adobe Real-time Customer Data Platform B2B Edition.
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '153'
 ht-degree: 2%
 
 ---
 
-# Zugriffskontrolle in Real-time Customer Data Platform B2B Edition
+# Zugriffskontrolle in Adobe Real-time Customer Data Platform B2B Edition
 
-Die Zugriffskontrolle für die Echtzeit-CDP B2B Edition wird über die [Adobe Admin Console](https://adminconsole.adobe.com). Diese Funktion nutzt Produktprofile in [!DNL Admin Console], sodass Sie Benutzer mit Berechtigungen und Sandboxes verknüpfen können. Mithilfe dieser Funktion können Administratoren bestimmten Benutzergruppen Zugriff auf bestimmte Funktionen der Echtzeit-Kundendatenplattform (z. B. die B2B-Benutzeroberfläche) gewähren oder vorenthalten.
+Die Zugriffskontrolle für Real-Time CDP B2B Edition wird über die [Adobe Admin Console](https://adminconsole.adobe.com). Diese Funktion nutzt Produktprofile in [!DNL Admin Console], sodass Sie Benutzer mit Berechtigungen und Sandboxes verknüpfen können. Mithilfe dieser Funktion können Administratoren bestimmten Benutzergruppen Zugriff auf bestimmte Real-Time CDP-Funktionen (z. B. die B2B-Benutzeroberfläche) gewähren oder vorenthalten.
 
 Weitere Informationen zur Zugriffskontrolle finden Sie unter [Zugriffskontrolle - Übersicht](../../access-control/home.md) im [!DNL Experience Platform] Dokumentation.
 

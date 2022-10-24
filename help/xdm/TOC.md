@@ -4,10 +4,10 @@ user-guide-title: Hilfe zum Experience-Datenmodell-System (XDM)
 breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Verwenden Sie Klassen und Schemafeldgruppen im Experience-Datenmodell (XDM), um Erlebnisdaten zu standardisieren.
 feature: Schemas
-source-git-commit: e476574e35ea18a50749009ffd1b4182941cc496
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '503'
-ht-degree: 85%
+ht-degree: 83%
 
 ---
 
@@ -195,7 +195,7 @@ ht-degree: 85%
    * [Veraltetes XDM-Feld](tutorials/field-deprecation.md)
    * [Definieren einer Schemabeziehung in der Benutzeroberfläche](tutorials/relationship-ui.md)
    * [Definieren einer Schemabeziehung in der API](tutorials/relationship-api.md)
-   * [Definieren einer Schemabeziehung in der Real-time CDP B2B Edition](tutorials/relationship-b2b.md)
+   * [Definieren einer Schemabeziehung in Real-Time CDP B2B Edition](tutorials/relationship-b2b.md)
    * [Verwalten von Datennutzungsbezeichnungen für ein Schema](tutorials/labels.md)
    * [Erstellen eines Ad-hoc-Schemas](tutorials/ad-hoc.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)

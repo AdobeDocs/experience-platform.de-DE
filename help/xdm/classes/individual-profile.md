@@ -5,9 +5,9 @@ title: XDM Individual Profile Class
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Klasse "XDM Individual Profile".
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: 319d508925d22e76a3d75ae473f6ea000b5c655b
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '598'
 ht-degree: 32%
 
 ---
@@ -53,6 +53,6 @@ Adobe bietet mehrere Standardfeldgruppen zur Verwendung mit der [!DNL XDM Indivi
 * [[!UICONTROL XDM-Geschäftspersonenkomponenten]](../field-groups/profile/business-person-components.md)\*
 * [[!UICONTROL XDM-Geschäftspersonendetails]](../field-groups/profile/business-person-details.md)\*
 
-*\*Diese Feldergruppe steht nur Organisationen zur Verfügung, die Zugriff auf die B2B-Edition von Real-time Customer Data Platform haben.*
+*\*Diese Feldergruppe steht nur Organisationen zur Verfügung, die Zugriff auf die B2B-Edition von Adobe Real-time Customer Data Platform haben.*
 
 Eine vollständige Liste aller kompatiblen Feldergruppen für [!DNL XDM Individual Profile], siehe [XDM GitHub-Repository](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile).

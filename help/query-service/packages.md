@@ -1,9 +1,9 @@
 ---
 title: Query Service Packages
 description: Im folgenden Dokument werden die für Query Service verfügbaren Funktionspakete und Produkte beschrieben und die Unterschiede zwischen Ad-hoc- und Batch-Abfragen hervorgehoben.
-source-git-commit: 3d2802ff5cdb359b28da23a05d1d6831cc273a52
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '720'
 ht-degree: 8%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform Query Service kann in zwei Funktionen unterteilt werde
 
 Query Service-Funktionen werden mit den folgenden Produkten und Add-ons gepackt:
 
-- **Plattformbasierte Anwendungen** (Real-time Customer Data Platform, Customer Journey Analytics und Adobe Journey Optimizer): Der Zugriff auf Query Service zum Ausführen von Ad-hoc-Abfragen wird von Anfang an für jede Variante und Ebene von Platform-basierten Anwendungen bereitgestellt.
+- **Plattformbasierte Anwendungen** (Adobe Real-time Customer Data Platform, Adobe Customer Journey Analytics und Adobe Journey Optimizer): Der Zugriff auf Query Service zum Ausführen von Ad-hoc-Abfragen wird von Anfang an für jede Variante und Ebene von Platform-basierten Anwendungen bereitgestellt.
 - **[!DNL Data Distiller]** (Zusatzmodulpaket, das mit Adobe Real-Time CDP, Customer Journey Analytics und Adobe Journey Optimizer erworben werden kann): Zugriff auf Query Service zum Ausführen von Batch-Abfragen wird mit [!DNL Data Distiller].
 
 In der folgenden Tabelle werden die wichtigsten Query Service-Berechtigungen basierend auf ihrer Verpackung aufgeführt:
@@ -30,7 +30,7 @@ In der folgenden Tabelle werden die wichtigsten Query Service-Berechtigungen bas
 | Anwendungsfall unterstützt | <ul><li>&#x200B;</li><li>&#x200B;</li><li>Datenvalidierung</li><li>Experimentieren</li></ul> | <ul><li>Reinigung</li><li>Formatierung</li><li>Bearbeiten</li><li>Anreicherung</li></ul> |
 | Unterstützte Semantik | <ul><li>Abfragen auswählen</li></ul> | <ul><li>CTAS- und ITAS-Abfragen</li></ul> |
 | Maximale Ausführungszeit | 10 Minuten | 24 Stunden |
-| Lizenzmetrik | **Query User Concurrency**: <ul><li>1 gleichzeitiger Benutzer (Echtzeit-Kundendatenplattform, Adobe Journey Optimizer) &#x200B;</li><li>5 gleichzeitige Benutzer (Customer Journey Analytics) &#x200B;</li></ul> **Abfragekonsistenz**: <ul><li>1 Abfrage mit gleichzeitiger Ausführung (alle Anwendungen) &#x200B;</li></ul> **Add-On für zusätzliche Ad-hoc-Abfragen für Benutzer des Packs** kann erworben werden, um die autorisierten Ad-hoc-Abfrageberechtigungen von Kunden zu erhöhen. <ul><li>+5 weitere gleichzeitige Benutzer pro Paket</li><li>+1 zusätzliche gleichzeitige Abfrage pro Paket</li></ul> | **Berechnungsstunden**: <ul><li>Variable (basierend auf den Anwendungsberechtigungen des Kunden)</li></ul> **Berechnungsstunden** ist ein Maß für die Zeit, die die Query Service-Engine benötigt, um Daten zu lesen, zu verarbeiten und in den Data Lake zurückzuschreiben, wenn eine Batch-Abfrage ausgeführt wird. |
+| Lizenzmetrik | **Query User Concurrency**: <ul><li>1 gleichzeitiger Benutzer (Real-Time CDP, Adobe Journey Optimizer) &#x200B;</li><li>5 gleichzeitige Benutzer (Customer Journey Analytics) &#x200B;</li></ul> **Abfragekonsistenz**: <ul><li>1 Abfrage mit gleichzeitiger Ausführung (alle Anwendungen) &#x200B;</li></ul> **Add-On für zusätzliche Ad-hoc-Abfragen für Benutzer des Packs** kann erworben werden, um die autorisierten Ad-hoc-Abfrageberechtigungen von Kunden zu erhöhen. <ul><li>+5 weitere gleichzeitige Benutzer pro Paket</li><li>+1 zusätzliche gleichzeitige Abfrage pro Paket</li></ul> | **Berechnungsstunden**: <ul><li>Variable (basierend auf den Anwendungsberechtigungen des Kunden)</li></ul> **Berechnungsstunden** ist ein Maß für die Zeit, die die Query Service-Engine benötigt, um Daten zu lesen, zu verarbeiten und in den Data Lake zurückzuschreiben, wenn eine Batch-Abfrage ausgeführt wird. |
 | Oberfläche zur Ausführung von Abfragen | <ul><li>Benutzeroberfläche von Query Service</li><li>Client-Benutzeroberfläche von Drittanbietern</li><li>[!DNL PostgresSQL] Client-Benutzeroberfläche</li></ul> | <ul><li>Abfrage-Benutzeroberfläche </li><li>Client-Benutzeroberfläche von Drittanbietern</li><li>[!DNL PostgresSQL] Client-Benutzeroberfläche</li><li>REST-APIs</li></ul> |
 | Abfrageergebnisse zurückgegeben über | Client-Benutzeroberfläche | Abgeleiteter Datensatz, der im Data Lake gespeichert ist |
 | Ergebnisbegrenzung | <ul><li>Query UI - 100 Zeilen</li><li>Drittanbieter-Client - 50.000</li><li>[!DNL PostgresSQL] client - 50.000</li></ul> | <ul><li>Abfrage-Benutzeroberfläche (keine Obergrenze für Zeilen)</li><li>Drittanbieter-Clients (keine Obergrenze für Zeilen)</li><li>[!DNL PostgresSQL] client (keine Obergrenze für Zeilen)</li><li>REST-APIs (keine Obergrenze für Zeilen)</li></ul> |

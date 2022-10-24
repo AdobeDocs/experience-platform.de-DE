@@ -2,10 +2,10 @@
 title: Adobe Experience Platform - Versionshinweise, März 2022
 description: Die Versionshinweise für Adobe Experience Platform vom März 2022.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1194'
-ht-degree: 98%
+ht-degree: 97%
 
 ---
 
@@ -47,7 +47,7 @@ Weiterführende Informationen zu Auditprotokollen in Platform finden Sie im Absc
 >
 >Die Funktion „verwandte Konten“ ist nur für Kunden der Real-Time CDP B2B Edition verfügbar.
 
-B2B-Unternehmen haben häufig ihre Kundeninformationen in mehreren Systemen gespeichert, von denen jedes nur teilweise oder sogar widersprüchliche Daten für dieselbe reale Geschäftseinheit enthält. Dies stellt eine enorme Herausforderung dar, eine präzise Ansicht der Unternehmenskunden zu erhalten und mindert die Effizienz und Effektivität der B2B-Marketing- und Verkaufsaktivitäten. Mit der Einführung verwandter Konten zeigt [!DNL Real-time CDP B2B] jetzt eine Liste von Konten an, die dem Konto, das Sie durchsuchen, ähnlich sind. Sie können die verwandten Konten in Ihre Segmentdefinitionen einbeziehen, um Ihre Reichweite zu erweitern oder umfassendere Kriterien auf Ihre Segmente anzuwenden.
+B2B-Unternehmen haben häufig ihre Kundeninformationen in mehreren Systemen gespeichert, von denen jedes nur teilweise oder sogar widersprüchliche Daten für dieselbe reale Geschäftseinheit enthält. Dies stellt eine enorme Herausforderung dar, eine präzise Ansicht der Unternehmenskunden zu erhalten und mindert die Effizienz und Effektivität der B2B-Marketing- und Verkaufsaktivitäten. Mit der Einführung verwandter Konten zeigt [!DNL Real-Time CDP B2B] jetzt eine Liste von Konten an, die dem Konto, das Sie durchsuchen, ähnlich sind. Sie können die verwandten Konten in Ihre Segmentdefinitionen einbeziehen, um Ihre Reichweite zu erweitern oder umfassendere Kriterien auf Ihre Segmente anzuwenden.
 
 Weitere Informationen zur Funktion finden Sie auf den folgenden Dokumentationsseiten:
 
@@ -55,7 +55,7 @@ Weitere Informationen zur Funktion finden Sie auf den folgenden Dokumentationsse
 - [Registerkarte „Verwandte Konten“ im Handbuch zur Benutzeroberfläche für Kontoprofile](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
 - [Verwendung verwandter Konten in Segmentdefinitionen](../../rtcdp/segmentation/b2b.md#related-accounts)
 
-Weitere Informationen zu Real-time Customer Data Platform B2B Edition finden Sie in der [Übersicht](../../rtcdp/overview.md).
+Weitere Informationen zu Real-Time CDP B2B Edition finden Sie in der [Übersicht](../../rtcdp/overview.md).
 
 ## Warnhinweise {#alerts}
 

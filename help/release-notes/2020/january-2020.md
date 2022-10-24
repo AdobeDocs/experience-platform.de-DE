@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '888'
-ht-degree: 42%
+ht-degree: 41%
 
 ---
 
@@ -91,13 +91,13 @@ Weiterführende Informationen zu Quellen finden Sie in der [Quellenübersicht](.
 
 ## Ziele {#destinations}
 
-In [Echtzeit-Kundendatenplattform](../../rtcdp/overview.md), sind Ziele vordefinierte Integrationen mit Zielplattformen, die Daten für diese Partner nahtlos aktivieren.
+In [Real-Time CDP](../../rtcdp/overview.md), sind Ziele vordefinierte Integrationen mit Zielplattformen, die Daten für diese Partner nahtlos aktivieren.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 |--- | ---|
-| Unterstützung für Zugriffssteuerungsberechtigungen | Die Funktion Ziele in der Echtzeit-Kundendatenplattform funktioniert mit Zugangssteuerungsberechtigungen von Adobe Experience Platform. Je nach Berechtigungsstufe Ihres Anwenders können Sie Ziele anzeigen, verwalten und aktivieren. |
+| Unterstützung für Zugriffssteuerungsberechtigungen | Die Funktion Ziele in Real-Time CDP funktioniert mit Zugriffssteuerungsberechtigungen von Adobe Experience Platform. Je nach Berechtigungsstufe Ihres Anwenders können Sie Ziele anzeigen, verwalten und aktivieren. |
 
 **Zugriffssteuerungsberechtigungen**
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Überwachen von Profilanreicherungsaufträgen
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '768'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -93,7 +93,7 @@ Verwenden Sie die **[!UICONTROL Nur Fehler anzeigen]** umschalten, um nur die fe
 
 In diesem Tutorial können Sie jetzt Metriken für Profilanreicherungsaufträge erfolgreich überwachen und verstehen. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
-* [Verwandte Konten in der Echtzeit-Kundendatenplattform B2B](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
+* [Verwandte Konten in Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 * [Registerkarte „Verwandte Konten“ im Handbuch zur Benutzeroberfläche für Kontoprofile](/help/rtcdp/accounts/account-profile-ui-guide.md)
-* [Lead zur Kontoübereinstimmung in der Echtzeit-Kundendatenplattform B2B](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
-* [Prädiktive Lead- und Kontobewertung in der Echtzeit-Kundendatenplattform B2B](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
+* [Lead zur Kontoübereinstimmung in Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
+* [Prädiktive Lead- und Kontobewertung in Real-Time CDP B2B](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)

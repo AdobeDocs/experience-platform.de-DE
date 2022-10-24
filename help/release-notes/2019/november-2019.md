@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1887'
-ht-degree: 32%
+ht-degree: 28%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 32%
 **Versionsdatum: 18. November 2019**
 
 Neue Funktionen in Adobe Experience Platform:
-* [[!DNL Real-time Customer Data Platform]](#rtcdp)
+* [[!DNL Real-Time Customer Data Platform]](#rtcdp)
 * [[!DNL Destinations]](#destinations)
 * [[!DNL Sources]](#sources)
 
@@ -27,15 +27,15 @@ Aktualisierungen vorhandener Funktionen:
 * [[!DNL Real-time Customer Profile]](#profile)
 * [[!DNL Segmentation Service]](#segmentation)
 
-## [!DNL Real-time Customer Data Platform] {#rtcdp}
+## [!DNL Real-Time Customer Data Platform] {#rtcdp}
 
-Die auf Adobe Experience Platform aufbauende Real-time Customer Data Platform (Echtzeit-Kundendatenplattform) hilft Unternehmen dabei, bekannte und unbekannte Daten zusammenzuführen, um Kundenprofile durch intelligente Entscheidungen auf der gesamten Journey zu aktivieren. Die Echtzeit-Kundendatenplattform fasst unterschiedliche Unternehmensdatenquellen zusammen, um in Echtzeit einheitliche Profile zu erstellen, die über alle Kanäle und Geräte hinweg ein personalisiertes Kundenerlebnis möglich machen.
+Die auf Adobe Experience Platform aufbauende Real-time Customer Data Platform (Real-Time CDP) hilft Unternehmen dabei, bekannte und unbekannte Daten zusammenzuführen, um Kundenprofile durch intelligente Entscheidungen auf der gesamten Journey zu aktivieren. Real-Time CDP kombiniert mehrere Unternehmensdatenquellen, um in Echtzeit einheitliche Profile zu erstellen, die über alle Kanäle und Geräte hinweg personalisierte Kundenerlebnisse bieten.
 
-[!DNL Real-time Customer Data Platform] umfasst Tools für Data Governance, Identitätsverwaltung, erweiterte Segmentierung und Datenwissenschaft, damit Sie Profile erstellen und Zielgruppen definieren sowie umfassende Einblicke gewinnen und gleichzeitig strikte Data Governance-Richtlinien durchsetzen können.
+[!DNL Real-Time Customer Data Platform] umfasst Tools für Data Governance, Identitätsverwaltung, erweiterte Segmentierung und Datenwissenschaft, damit Sie Profile erstellen und Zielgruppen definieren sowie umfassende Einblicke gewinnen und gleichzeitig strikte Data Governance-Richtlinien durchsetzen können.
 
 Adobe bietet Verbindungen zu einem großen Partnernetzwerk sowie native Integrationen mit Adobe Experience Cloud, damit Sie Zielgruppen nahtlos aktivieren und über alle Kanäle hinweg für herausragende Kundenerlebnisse sorgen können – von der Personalisierung vor Ort oder in Apps über E-Mail bis hin zu Paid Media, Callcentern, vernetzten Geräten und mehr.
 
-Mit der Echtzeit-Kundendatenplattform profitieren Sie von folgenden Vorteilen:
+Mit Real-Time CDP können Sie:
 
 * Verschaffen Sie sich einen Überblick über Ihre Kunden mit einer Streaming-Sammlung von Kundendaten aus dem gesamten Unternehmen.
 * Sorgen Sie für eine angemessene Verwaltung von Profilen mit vertrauenswürdigen Governance- und Datenschutzkontrollen für bekannte und unbekannte Kennungen.
@@ -48,17 +48,17 @@ Weitere Informationen finden Sie unter [Real-time Customer Data Platform-Dokumen
 
 | Funktion | Beschreibung |
 |---|---|
-| Ziele | Vorgefertigte Integrationen mit Zielplattformen, die von der Adobe [!DNL Real-time Customer Data Platform] die Daten für diese Partner nahtlos aktivieren. Siehe [Ziele](#destinations) unten finden Sie weitere Informationen. |
-| Dashboard für Metriken auf der Startseite | Die Startseite von Real-time Customer Data Platform (Echtzeit-Kundendatenplattform) enthält ein Metriken-Dashboard, das Informationen zu Profilen und Segmenten anzeigt. Die Startseite enthält auch Links zu Lernmaterialien. Siehe Abschnitt zu [Real-time Customer Data Platform-Metriken](#real-time-customer-data-platform-metrics) unten. |
+| Ziele | Vorgefertigte Integrationen mit Zielplattformen, die von der Adobe [!DNL Real-Time Customer Data Platform] die Daten für diese Partner nahtlos aktivieren. Siehe [Ziele](#destinations) unten finden Sie weitere Informationen. |
+| Dashboard für Metriken auf der Startseite | Die Startseite von Real-time Customer Data Platform (Real-Time CDP) enthält ein Metrik-Dashboard, das Informationen zu Profilen und Segmenten anzeigt. Die Startseite enthält auch Links zu Lernmaterialien. Siehe Abschnitt zu [Real-time Customer Data Platform-Metriken](#real-time-customer-data-platform-metrics) unten. |
 | Quellen | Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Lösungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System. Siehe [Quellen](#sources) weiter unten, um mehr zu erfahren. |
 
-**[!DNL Real-time Customer Data Platform]Metriken**
+**[!DNL Real-Time Customer Data Platform]Metriken**
 
-Die Startseite der Echtzeit-Kundendatenplattform von , die ein Metriken-Dashboard enthält, wird angezeigt, sobald Sie sich bei der Echtzeit-Kundendatenplattform anmelden.
+Die Startseite von Real-time Customer Data Platform (Real-Time CDP) mit einem Metriken-Dashboard wird angezeigt, wenn Sie sich bei Real-Time CDP anmelden.
 
-Die Startseite ist nur einer der Orte, an denen Metrikkarten angezeigt werden. Die Echtzeit-Kundendatenplattform stellt Metrikkarten während des gesamten Erlebnisses bereit. Diese Metriken informieren Sie über die Daten-, Profil- und Segmentzielgruppen im System.
+Die Startseite ist nur einer der Orte, an denen Metrikkarten angezeigt werden. Real-Time CDP bietet Metrikkarten für das gesamte Erlebnis. Diese Metriken informieren Sie über die Daten-, Profil- und Segmentzielgruppen im System.
 
-Wenn zum Zeitpunkt der Anmeldung bei der Echtzeit-Kundendatenplattform keine Daten im System vorhanden sind, wird das Dashboard auf der Startseite nicht angezeigt. In dem Fall enthält die Startseite Lernmaterial für die erstmalige Nutzung. Bei der Datenerfassung wird das Dashboard automatisch aktualisiert, um Informationen zu diesen Daten anzuzeigen.
+Wenn bei der Anmeldung bei Real-Time CDP keine Daten im System vorhanden sind, wird das Dashboard auf der Startseite nicht angezeigt. In dem Fall enthält die Startseite Lernmaterial für die erstmalige Nutzung. Bei der Datenerfassung wird das Dashboard automatisch aktualisiert, um Informationen zu diesen Daten anzuzeigen.
 
 Weitere Informationen finden Sie unter [Übersicht über Real-time Customer Data Platform-Metriken](../../rtcdp/home-page-dashboards.md)
 

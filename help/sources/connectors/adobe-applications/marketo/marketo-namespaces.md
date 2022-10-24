@@ -5,9 +5,9 @@ title: B2B-Namespaces und -Schemata
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über benutzerdefinierte Namespaces, die beim Erstellen eines B2B-Quell-Connectors erforderlich sind.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: c6ba91f6aa64f02ac3571bb960d4005fdade3d57
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1706'
+source-wordcount: '1707'
 ht-degree: 14%
 
 ---
@@ -18,7 +18,7 @@ Dieses Dokument enthält Informationen über die zugrunde liegende Einrichtung f
 
 >[!IMPORTANT]
 >
->Sie müssen Zugriff auf [Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) , damit B2B-Schemata [Echtzeit-Kundenprofil](../../../../profile/home.md).
+>Sie müssen Zugriff auf [Adobe Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) , damit B2B-Schemata [Echtzeit-Kundenprofil](../../../../profile/home.md).
 
 ## Einrichten von B2B-Namespaces und des Dienstprogramm zur automatischen Schemaerstellung
 

@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '2184'
-ht-degree: 27%
+ht-degree: 26%
 
 ---
 
@@ -106,7 +106,7 @@ Weitere Informationen finden Sie im Dokument unter [Erstellen eines Rezepts mit 
 
 ## [!DNL Destinations] Diensleistung {#destinations}
 
-In der [ Echtzeit-Kundendatenplattform](../../rtcdp/overview.md) sind Ziele vordefinierte Integrationen mit Zielplattformen, die Daten für diese Partner auf nahtlose Weise aktivieren.
+In [Real-time Customer Data Platform](../../rtcdp/overview.md), sind Ziele vordefinierte Integrationen mit Zielplattformen, die Daten für diese Partner nahtlos aktivieren.
 
 **Neue Ziele**
 
@@ -120,7 +120,7 @@ In der [ Echtzeit-Kundendatenplattform](../../rtcdp/overview.md) sind Ziele vord
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| UX-Aktualisierungen für Zieldetails | Der Ziel-Workflow der Echtzeit-Kundendatenplattform umfasst jetzt die Inline-Überwachung, damit Sie sehen können, welche Batch-Aktivierungen erfolgreich waren. Mit dieser Funktion können Benutzer Probleme direkt im Workflow für Batch-Ziele über Warnhinweise und ein Monitoring-Dashboard beheben, um Fehler in der Verarbeitungs-Pipeline zu verfolgen. |
+| UX-Aktualisierungen für Zieldetails | Der Ziel-Workflow von Real-Time CDP umfasst jetzt die Inline-Überwachung, sodass Sie sehen können, welche Batch-Aktivierungen erfolgreich waren. Mit dieser Funktion können Benutzer Probleme direkt im Workflow für Batch-Ziele über Warnhinweise und ein Monitoring-Dashboard beheben, um Fehler in der Verarbeitungs-Pipeline zu verfolgen. |
 | Dateiverschlüsselung | Bei dateibasierten Zielen können Benutzer ihren exportierten Dateien jetzt Verschlüsselung hinzufügen. |
 | Dateiplanung | Sowohl für E-Mail-basierte als auch Cloud-Speicher-Ziele können Benutzer einen einmaligen Export erstellen oder tägliche Momentaufnahmen erstellen. |
 | Obligatorische Felder | Benutzer können Felder als Pflichtfelder markieren, um sicherzustellen, dass nur Felder exportiert werden, die das Pflichtfeld enthalten. |

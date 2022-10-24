@@ -2,10 +2,10 @@
 title: Verwalten von Datennutzungsbezeichnungen für ein Schema
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche Schemafeldern des Experience-Datenmodell (XDM) Datennutzungsbezeichnungen hinzufügen.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 8%
+source-wordcount: '737'
+ht-degree: 5%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
->Die schemabasierte Beschriftung ist Teil von [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md), die derzeit in einer begrenzten Version für Kunden von Gesundheitsdienstleistungen in den USA verfügbar ist. Diese Funktion steht allen Kunden von Real-time Customer Data Platform nach der vollständigen Veröffentlichung zur Verfügung.
+>Die schemabasierte Beschriftung ist Teil von [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md), die derzeit in einer begrenzten Version für Kunden von Gesundheitsdienstleistungen in den USA verfügbar ist. Diese Funktion steht allen Adobe Real-time Customer Data Platform-Kunden nach der vollständigen Veröffentlichung zur Verfügung.
 
 Alle Daten, die in Adobe Experience Platform importiert werden, sind durch Experience-Datenmodell (XDM)-Schemas eingeschränkt. Diese Daten können Nutzungsbeschränkungen unterliegen, die von Ihrem Unternehmen oder durch gesetzliche Bestimmungen festgelegt werden. Um dies zu berücksichtigen, können Sie mit Platform die Verwendung bestimmter Datensätze und Felder durch die Verwendung von [Datennutzungsbezeichnungen](../../data-governance/labels/overview.md).
 

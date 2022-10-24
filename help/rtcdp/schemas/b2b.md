@@ -1,23 +1,23 @@
 ---
-title: Schemas in Real-time Customer Data Platform B2B Edition
-description: Eine Übersicht über die Rolle von Experience-Datenmodell-Schemas (XDM) in Real-time Customer Data Platform B2B Edition.
+title: Schemata in Real-time Customer Data Platform B2B Edition
+description: Eine Übersicht über die Rolle von Experience-Datenmodell (XDM)-Schemas in Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
-source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 100%
+source-wordcount: '237'
+ht-degree: 45%
 
 ---
 
 # Schemata in Real-time Customer Data Platform B2B Edition
 
-Real-time Customer Data Platform B2B Edition bietet mehrere standardmäßige [Experience-Datenmodell-Klassen (XDM)](../../xdm/schema/composition.md#class), die Details zu wesentlichen B2B-Datenentitäten wie Konten, Chancen und Kampagnen erfassen. Darüber hinaus können Sie mit Real-time Customer Data Platform B2B Edition zwischen diesen Schemas Viele-zu-Eins-Beziehungen definieren, sodass diese für erweiterte Segmentierungs-Anwendungsfälle verwendet werden können.
+Adobe Real-time Customer Data Platform B2B Edition bietet mehrere Standardfunktionen [Experience-Datenmodell (XDM)-Klassen](../../xdm/schema/composition.md#class) , die Details zu wesentlichen B2B-Datenentitäten wie Konten, Chancen, Kampagnen und mehr erfassen. Darüber hinaus können Sie mit der Real-Time CDP B2B Edition eine n:n-Beziehung zwischen diesen Schemas definieren, damit sie an erweiterten Anwendungsfällen für die Segmentierung teilnehmen können.
 
 >[!IMPORTANT]
 >
->Sie müssen Zugriff auf Real-time Customer Data Platform B2B Edition haben, damit B2B-Schemas bei [Echtzeit-Kundenprofilen](../../profile/home.md) berücksichtigt werden können.
+>Sie müssen Zugriff auf Real-Time CDP B2B Edition haben, damit B2B-Schemata teilnehmen können [Echtzeit-Kundenprofil](../../profile/home.md).
 
-Die folgenden Standardklassen werden in Real-time Customer Data Platform B2B Edition bereitgestellt:
+Die folgenden Standardklassen werden in Real-Time CDP B2B Edition bereitgestellt:
 
 * [XDM Business Account](../../xdm/classes/b2b/business-account.md)
 * [XDM Business Account Person Relation](../../xdm/classes/b2b/business-account-person-relation.md)

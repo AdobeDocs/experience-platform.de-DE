@@ -5,16 +5,16 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 exl-id: bf401f3a-b088-4cbd-9a64-224294b797b9
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '863'
-ht-degree: 41%
+ht-degree: 38%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
 
-**Release-Datum: 9. September 2020**
+**Veröffentlichungsdatum: 9. September 2020**
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
@@ -40,7 +40,7 @@ Weitere Informationen zu dem Service finden Sie in der [Übersicht zu Data Gover
 
 ## Ziele {#destinations}
 
-In der [ Echtzeit-Kundendatenplattform](../../rtcdp/overview.md) sind Ziele vordefinierte Integrationen mit Zielplattformen, die Daten für diese Partner auf nahtlose Weise aktivieren.
+In [Real-time Customer Data Platform](../../rtcdp/overview.md), sind Ziele vordefinierte Integrationen mit Zielplattformen, die Daten für diese Partner nahtlos aktivieren.
 
 **Neue Funktionen**
 

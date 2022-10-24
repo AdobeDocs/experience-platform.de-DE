@@ -1,18 +1,18 @@
 ---
 title: IAB TCF 2.0-Unterstützung im Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie IAB TCF 2.0-Zustimmungsvoreinstellungen mithilfe des Adobe Experience Platform Web SDK unterstützen.
-keywords: Einverständnis; setConsent; Profildatenfeldgruppe; Erlebnisereignis-Datenschutzfeldgruppe; Datenschutzfeldgruppe; IAB TCF 2.0; Echtzeit-Kundendatenplattform; Echtzeit-Kundendatenprofil
+keywords: consent; setConsent; Profildatenschutzfeldgruppe; Experience Event Privacy Field-Gruppe; Datenschutzfeldgruppe; IAB TCF 2.0; Real-Time CDP;
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '861'
 ht-degree: 0%
 
 ---
 
 # IAB TCF 2.0-Unterstützung im Adobe Experience Platform Web SDK
 
-Das Adobe Experience Platform Web SDK unterstützt das Interactive Advertising Bureau Transparency &amp; Consent Framework, Version 2.0 (IAB TCF 2.0). In diesem Handbuch werden die Anforderungen für die Unterstützung von IAB TCF 2.0 über das Adobe Experience Platform Web SDK erläutert, das mit Real-time Customer Data Platform, Audience Manager, Experience Events, Adobe Analytics und Experience Edge integriert wird.
+Das Adobe Experience Platform Web SDK unterstützt das Interactive Advertising Bureau Transparency &amp; Consent Framework, Version 2.0 (IAB TCF 2.0). In diesem Handbuch werden die Anforderungen für die Unterstützung von IAB TCF 2.0 über das Adobe Experience Platform Web SDK erläutert, das mit Adobe Real-time Customer Data Platform, Audience Manager, Experience Events, Adobe Analytics und Experience Edge integriert wird.
 
 Darüber hinaus stehen die folgenden Handbücher zur Verfügung, mit denen Sie lernen können, wie IAB TCF 2.0 mit und ohne Tags integriert wird.
 
@@ -44,7 +44,7 @@ Adobe Audience Manager (AAM) unterstützt das IAB TCF 2.0, mit dem Sie Datenschu
 
 ## Integration von Experience Events und Adobe Analytics
 
-Während die Echtzeit-Kundendatenplattform und die Zielgruppen des Audience Managers die aktuellen Zustimmungseinstellungen eines Kunden verfolgen, können Erlebnisereignisse die Zustimmungseinstellungen eines Kunden speichern, die zum Zeitpunkt der Erfassung aktiv waren.
+Während die Zielgruppen von Real-Time CDP und Audience Manager die aktuellen Zustimmungsvoreinstellungen eines Kunden verfolgen, können Erlebnisereignisse die Zustimmungseinstellungen eines Kunden speichern, die zum Zeitpunkt der Erfassung des Ereignisses aktiv waren.
 
 Um Einwilligungsinformationen zu Ereignissen zu erfassen, ist Folgendes erforderlich:
 
@@ -59,7 +59,7 @@ In den folgenden Abschnitten werden die wichtigsten Integrationspunkte zwischen 
 
 >[!NOTE]
 >
->Selbst wenn die Echtzeit-Kundendatenplattform oder der Audience Manager nicht eingerichtet ist, können Sie IAB TCF 2.0 mit dem Web SDK integrieren. Die Zustimmungsvoreinstellungen können verwendet werden, um die Erfassung von Erlebnisereignissen zu steuern und ein Identitäts-Cookie zu setzen.
+>Selbst wenn Real-Time CDP oder Audience Manager nicht eingerichtet sind, können Sie IAB TCF 2.0 mit dem Web SDK integrieren. Die Zustimmungsvoreinstellungen können verwendet werden, um die Erfassung von Erlebnisereignissen zu steuern und ein Identitäts-Cookie zu setzen.
 
 ### Standardzustimmung
 
@@ -71,7 +71,7 @@ Weitere Informationen zur Standardzustimmung finden Sie im Abschnitt [Standardzu
 
 ### Festlegen der Zustimmung bei Änderungen
 
-Das Adobe Experience Platform Web SDK verfügt über eine `setConsent` -Befehl, der die Zustimmungsvoreinstellungen Ihres Kunden allen Adobe-Diensten mitteilt, die IAB TCF 2.0 verwenden. Wenn Sie mit der Echtzeit-Kundendatenplattform integriert sind, aktualisiert dies das Profil Ihres Kunden. Wenn Sie mit Audience Manager integrieren, werden dadurch die Kundeninformationen aktualisiert. Durch diesen Aufruf wird auch ein Cookie mit der Zustimmungsvoreinstellung &quot;alles oder nichts&quot;gesetzt, das steuert, ob zukünftige Erlebnisereignisse gesendet werden dürfen. Diese Aktion soll immer dann aufgerufen werden, wenn sich die Zustimmung ändert. Beim Laden künftiger Seiten wird das Experience Edge-Zustimmungscookie gelesen, um zu bestimmen, ob Erlebnisereignisse gesendet werden können und ob ein Identitäts-Cookie gesetzt werden kann.
+Das Adobe Experience Platform Web SDK verfügt über eine `setConsent` -Befehl, der die Zustimmungsvoreinstellungen Ihres Kunden an alle Adobe-Dienste übermittelt, die IAB TCF 2.0 verwenden. Wenn Sie mit Real-Time CDP integrieren, aktualisiert dies das Profil Ihres Kunden. Wenn Sie mit Audience Manager integrieren, werden dadurch die Kundeninformationen aktualisiert. Durch diesen Aufruf wird auch ein Cookie mit der Zustimmungsvoreinstellung &quot;alles oder nichts&quot;gesetzt, das steuert, ob zukünftige Erlebnisereignisse gesendet werden dürfen. Diese Aktion soll immer dann aufgerufen werden, wenn sich die Zustimmung ändert. Beim Laden künftiger Seiten wird das Experience Edge-Zustimmungscookie gelesen, um zu bestimmen, ob Erlebnisereignisse gesendet werden können und ob ein Identitäts-Cookie gesetzt werden kann.
 
 Ähnlich wie bei der IAB TCF 2.0-Integration von Audience Manager erteilt Experience Edge eine Zustimmung, wenn ein Kunde seine ausdrückliche Zustimmung zu folgenden Zwecken erteilt hat:
 

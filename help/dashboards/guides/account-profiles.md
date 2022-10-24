@@ -2,9 +2,9 @@
 title: Dashboard-Anleitung für Kontoprofile
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den B2B-Kontoprofilen Ihres Unternehmens anzeigen können.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 19d6d3c03e6b3b0f9f82ceeee30816fa054261a3
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1052'
 ht-degree: 7%
 
 ---
@@ -17,7 +17,7 @@ Einen Überblick über alle Funktionen in der Benutzeroberfläche des Kontoprofi
 
 ## Erste Schritte
 
-Sie müssen [Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) für den Zugang zum B2B [!UICONTROL Kontoprofile] Dashboard.
+Sie müssen [Adobe Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) für den Zugang zum B2B [!UICONTROL Kontoprofile] Dashboard.
 
 ## Kontoprofildaten
 
@@ -45,7 +45,7 @@ Wählen Sie die [!UICONTROL Profil-ID] aus den auf der [!UICONTROL Durchsuchen] 
 
 ![Auf der Registerkarte &quot;Kontoprofile&quot;werden die Ergebnisse angezeigt und die Profil-ID hervorgehoben.](../images/account-profiles/account-profiles-browse-tab.png)
 
-Die Kontoprofilinformationen werden auf der Seite [!UICONTROL Details] wurde aus mehreren Profilfragmenten zusammengeführt, um eine Ansicht des einzelnen Kontos zu bilden. Weitere Informationen finden Sie in der Dokumentation unter [Durchsuchen von Kontoprofilen in Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) , um mehr über die Anzeigefunktionen von Kontoprofilen in der Platform-Benutzeroberfläche zu erfahren.
+Die Kontoprofilinformationen werden auf der Seite [!UICONTROL Details] wurde aus mehreren Profilfragmenten zusammengeführt, um eine Ansicht des einzelnen Kontos zu bilden. Weitere Informationen finden Sie in der Dokumentation unter [Durchsuchen von Kontoprofilen in Adobe Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) , um mehr über die Anzeigefunktionen von Kontoprofilen in der Platform-Benutzeroberfläche zu erfahren.
 
 ## Die [!UICONTROL Kontoprofile] [!UICONTROL Übersicht] {#overview}
 

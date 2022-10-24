@@ -1,11 +1,11 @@
 ---
 title: Ziele in Real-time Customer Data Platform B2B Edition
-description: Ein Überblick über die Rolle von Zielen in Real-time Customer Data Platform B2B Edition.
+description: Ein Überblick über die Rolle von Zielen in Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
-source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '238'
-ht-degree: 12%
+source-wordcount: '241'
+ht-degree: 4%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 12%
 
 >[!NOTE]
 >
->Wenn Sie Real-time Customer Data Platform B2B Edition nicht verwenden, lesen Sie den Abschnitt [Übersicht über Ziele](../../destinations/home.md) anstatt.
+>Wenn Sie Adobe Real-time Customer Data Platform B2B Edition nicht verwenden, lesen Sie den Abschnitt [Übersicht über Ziele](../../destinations/home.md) anstatt.
 
-Zu den Experience Platform-Zielen, die vollständig von der Echtzeit-Kundendatenplattform B2B Edition unterstützt werden, gehören Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display &amp; Video 360, Google Ads und Google Ad Manager.
+Experience Platform-Ziele, die vollständig von Real-Time CDP B2B Edition unterstützt werden, sind Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display &amp; Video 360, Google Ads und Google Ad Manager.
 
 Informationen dazu, wie Ziele in Ihren B2B-Workflow integriert werden können, finden Sie im Abschnitt [End-to-End-Tutorial](../b2b-tutorial.md#activate-your-evaluated-data-to-a-destination).
 
-Mit Real-time Customer Data Platform B2B Edition können Sie Ihre B2B-Daten über den Marketo Engage-Ziel-Connector exportieren. Mithilfe des Marketo Engage-Ziels können Sie in Adobe Experience Platform erstellte  an Marketo senden, wo sie als statische Listen angezeigt werden.
+Mit Adobe Real-time Customer Data Platform B2B Edition können Sie Ihre B2B-Daten über den Marketo Engage-Ziel-Connector exportieren. Mithilfe des Marketo Engage-Ziels können Sie in Adobe Experience Platform erstellte  an Marketo senden, wo sie als statische Listen angezeigt werden.
 
 Die folgenden Dokumente enthalten weitere Informationen zur Verwendung des Marketo Engage-Ziels zum Exportieren von Daten:
 

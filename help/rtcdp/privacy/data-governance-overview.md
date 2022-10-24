@@ -3,20 +3,20 @@ keywords: Data Governance rtcdp;rtcdp Data Governance;Echtzeit-Data Profil Data 
 title: Data Governance – Übersicht
 description: Mit Data Governance können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen.
 exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '690'
-ht-degree: 51%
+ht-degree: 34%
 
 ---
 
-# Data Governance in der Echtzeit-Kundendatenplattform
+# Data Governance in Real-Time CDP
 
-[!DNL Real-time Customer Data Platform] (Echtzeit-Kundendatenplattform) führt Daten aus verschiedenen Unternehmenssystemen zusammen, sodass Marketing-Experten ihre Kunden besser identifizieren, verstehen und ansprechen können. Diese Daten können Nutzungsbeschränkungen unterliegen, die von Ihrem Unternehmen oder durch gesetzliche Bestimmungen festgelegt werden. Daher muss sichergestellt sein, dass die Echtzeit-Kundendatenplattform bei der Verarbeitung Ihrer Daten mit den Nutzungsrichtlinien konform ist.
+[!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP) führt Daten aus verschiedenen Unternehmenssystemen zusammen, sodass Marketing-Experten ihre Kunden besser identifizieren, verstehen und ansprechen können. Diese Daten können Nutzungsbeschränkungen unterliegen, die von Ihrem Unternehmen oder durch gesetzliche Bestimmungen festgelegt werden. Daher müssen Sie sicherstellen, dass Real-Time CDP bei der Verarbeitung Ihrer Daten mit Nutzungsrichtlinien konform ist.
 
-Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. Data Governance spielt in der Echtzeit-Kundendatenplattform eine zentrale Rolle und erlaubt es Ihnen, Nutzungsrichtlinien zu definieren, Daten anhand dieser Richtlinien zu kategorisieren und bei Ausführung bestimmter Marketing-Aktionen auf Richtlinienverletzungen zu prüfen.
+Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. Es spielt in Real-Time CDP eine wichtige Rolle, da Sie Nutzungsrichtlinien definieren, Ihre Daten basierend auf diesen Richtlinien kategorisieren und bei der Durchführung bestimmter Marketing-Aktionen auf Richtlinienverstöße überprüfen können.
 
-Die Echtzeit-Kundendatenplattform basiert auf Adobe Experience Platform. Daher werden die meisten Data Governance-Funktionen im Abschnitt [!DNL Experience Platform] Dokumentation. Dieses Dokument dient als Ergänzung zu [Data Governance – Übersicht](../../data-governance/home.md) für und bietet Informationen zu den Governance-Funktionen, die in der Echtzeit-Kundendatenplattform verfügbar sind.[!DNL Experience Platform] Folgende Themen werden behandelt:
+Real-Time CDP basiert auf Adobe Experience Platform, weshalb der Großteil der Data Governance-Funktionen in der [!DNL Experience Platform] Dokumentation. Dieses Dokument soll die [Data Governance - Übersicht](../../data-governance/home.md) für [!DNL Experience Platform]und beschreibt die Governance-Funktionen, die in Real-Time CDP verfügbar sind. Folgende Themen werden behandelt:
 
 * [Nutzungsbezeichnungen auf Daten anwenden ](#labels)
 * [Richtlinien zur Datennutzung verwalten](#policies)
@@ -42,20 +42,20 @@ Marketing-Aktionen können nur beim erstmaligen Einrichten eines Ziels ausgewäh
 
 ## Richtlinien zur Datennutzung verwalten {#policies}
 
-Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in der Echtzeit-Kundendatenplattform ausführen bzw. nicht ausführen dürfen. Weiterführende Informationen dazu finden Sie im Abschnitt „Datennutzungsrichtlinien“ unter [!DNL Experience Platform][Data Governance – Übersicht](../../data-governance/home.md) für 
+Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in Real-Time CDP ausführen bzw. nicht ausführen dürfen. Weiterführende Informationen dazu finden Sie im Abschnitt „Datennutzungsrichtlinien“ unter [!DNL Experience Platform][Data Governance – Übersicht](../../data-governance/home.md) für 
 
 Adobe Experience Platform bietet verschiedene zentrale Richtlinien für gängige Anwendungsfälle bei Kundenerlebnissen. Diese Richtlinien können in der Benutzeroberfläche angezeigt werden, indem Sie zur **[!UICONTROL Richtlinien]** Arbeitsbereich und wählen Sie die **[!UICONTROL Durchsuchen]** Registerkarte. Siehe [Richtlinien-Benutzerhandbuch](../../data-governance/policies/user-guide.md) im [!DNL Experience Platform] Dokumentation für detailliertere Schritte zum Arbeiten mit Richtlinien in der Benutzeroberfläche, einschließlich der Erstellung eigener benutzerdefinierter Richtlinien.
 
 ## Einhaltung von Datennutzungsrichtlinien durchsetzen {#enforce}
 
-Nachdem Sie Daten gekennzeichnet und Nutzungsrichtlinien definiert haben, können Sie die Einhaltung von Datennutzungsrichtlinien erzwingen. Beim Aktivieren von Zielgruppensegmenten in der Echtzeit-Kundendatenplattform erzwingt Data Governance automatisch Nutzungsrichtlinien, falls Verstöße auftreten sollten.
+Nachdem Sie Daten gekennzeichnet und Nutzungsrichtlinien definiert haben, können Sie die Einhaltung von Datennutzungsrichtlinien erzwingen. Beim Aktivieren von Zielgruppensegmenten für Ziele in Real-Time CDP erzwingt Data Governance automatisch Nutzungsrichtlinien, falls Verstöße auftreten.
 
 Siehe Dokument unter [automatische Richtliniendurchsetzung](../../data-governance/enforcement/auto-enforcement.md) für weitere Informationen.
 
 ## Nächste Schritte
 
-Jetzt wurden Sie mit den wichtigsten Data Governance-Funktionen in der Echtzeit-Kundendatenplattform und der [!DNL Experience Platform] ermöglicht ihnen, bitte mit der [Dokumentation für Data Governance in Adobe Experience Platform](../../data-governance/home.md). Die Dokumentation bietet einen Überblick über wesentliche Data Governance-Konzepte sowie schrittweise Workflows zum Verwalten von Datennutzungsbezeichnungen und -richtlinien.
+Nachdem Sie nun die wichtigsten Data Governance-Funktionen in Real-Time CDP eingeführt haben und wie [!DNL Experience Platform] ermöglicht ihnen, bitte mit der [Dokumentation für Data Governance in Adobe Experience Platform](../../data-governance/home.md). Die Dokumentation bietet einen Überblick über wesentliche Data Governance-Konzepte sowie schrittweise Workflows zum Verwalten von Datennutzungsbezeichnungen und -richtlinien.
 
-Das folgende Video bietet einen Überblick über Data Governance in der Echtzeit-Kundendatenplattform, einschließlich der Verwendung von Marketing-Anwendungsfällen für Ziele und Beispiel-Workflows für verschiedene Szenarien:
+Das folgende Video bietet einen Überblick über Data Governance in Real-Time CDP, einschließlich der Verwendung von Marketing-Anwendungsfällen für Ziele und Beispiel-Workflows für verschiedene Szenarien:
 
 >[!VIDEO](https://video.tv.adobe.com/v/33631?quality=12&learn=on)

@@ -2,10 +2,10 @@
 description: Adobe Experience Platform Destination SDK ist ein Satz von Konfigurations-APIs, mit denen Sie Zielintegrationsmuster konfigurieren können, damit Experience Platform Zielgruppen- und Profildaten basierend auf den von Ihnen ausgewählten Daten- und Authentifizierungsformaten an Ihren Endpunkt oder Speicherort übermitteln kann. Die Konfigurationen werden in Experience Platform gespeichert und können über eine API für zusätzliche Aktualisierungen abgerufen werden.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 94d46ceeef6eef507115c60aaa6820d4560e4d44
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '838'
-ht-degree: 57%
+source-wordcount: '840'
+ht-degree: 55%
 
 ---
 
@@ -23,16 +23,16 @@ Die Dokumentation zum Destination SDK enthält Anweisungen dazu, wie Sie mit dem
 
 >[!IMPORTANT]
 >
-> Diese Funktion zum Erstellen privater benutzerdefinierter Ziele ist nur für verfügbar. [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) -Kunden.
+> Diese Funktion zum Erstellen privater benutzerdefinierter Ziele ist nur für verfügbar. [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) -Kunden.
 
 Als Destination SDK-Partner können Sie von der Hinzufügung Ihres produktspezifischen Ziels zum [Experience Platform-Katalog](/help/destinations/catalog/overview.md) profitieren:
 1. Standardisieren Sie die Integrationskonfigurationen für alle Kunden mit vorkonfigurierten Parametern und vereinfachen Sie die Einrichtung für Kunden.
 2. Stellen Sie im Zielkatalog von Experience Platform eine Zielkarte mit Branding vor, um die Einrichtung und den Bekanntheitsgrad für Kunden zu vereinfachen.
-3. Lassen Sie sich als produktbezogene Zielintegration mit Adobe Experience Platform und Real-time Customer Data Platform vorstellen.
+3. Werden Sie als produktive Zielintegration mit Adobe Experience Platform und Adobe Real-time Customer Data Platform vorgestellt.
 
 Als Experience Platform-Kunde können Sie auch ein eigenes benutzerdefiniertes Ziel erstellen, das Ihren Aktivierungsanforderungen am besten entspricht.
 
-![Ein Übersichtsdiagramm, das zeigt, wie Zielentwickler mit Destination SDK interagieren und wie Kunden in der Echtzeit-Kundendatenplattform von produktiven und privaten Zielen profitieren.](./assets/destination-sdk-visual.png)
+![Ein Übersichtsdiagramm, das zeigt, wie Zielentwickler mit Destination SDK interagieren und wie Real-Time CDP-Kunden von produktiven und privaten Zielen profitieren.](./assets/destination-sdk-visual.png)
 
 ## Unterstützte Integrationstypen {#supported-integration-types}
 

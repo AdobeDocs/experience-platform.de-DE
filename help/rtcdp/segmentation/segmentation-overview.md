@@ -1,20 +1,20 @@
 ---
 keywords: Segmentierung; Segmentierungsrtcdp;Segmentierung der Echtzeit-Kundendatenplattform
 title: Segmentierungsdienst in Real-time Customer Data Platform
-description: Die Echtzeit-Kundendatenplattform basiert auf Adobe Experience Platform und nutzt viele Dienste und Funktionen von Experience Platform. Mit dem Segmentierungsdienst können Sie für ein maßgeschneidertes Marketing sorgen, indem Sie Ihre Kunden in kleinere Gruppen mit ähnlichen Eigenschaften aufteilen.
+description: Adobe Real-Time Customer Data Platform basiert auf Adobe Experience Platform und nutzt viele der Experience Platform Services und Funktionen. Mit dem Segmentierungsdienst können Sie für ein maßgeschneidertes Marketing sorgen, indem Sie Ihre Kunden in kleinere Gruppen mit ähnlichen Eigenschaften aufteilen.
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '537'
-ht-degree: 35%
+source-wordcount: '540'
+ht-degree: 31%
 
 ---
 
-# [!DNL Segmentation Service] in [!DNL Real-time Customer Data Platform]
+# [!DNL Segmentation Service] in [!DNL Real-Time Customer Data Platform]
 
-[!DNL Real-time Customer Data Platform] (Echtzeit-Kundendatenplattform) ermöglicht es Ihnen, Daten aus verschiedenen Quellen zusammenzuführen, um ein koordiniertes und konsistentes Kundenerlebnis zu fördern. Die Bereitstellung relevanter personalisierter Marketing-Kampagnen kann mithilfe des [!DNL Segmentation Service], Teil von Adobe Experience Platform.
+[!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP) ermöglicht es Ihnen, Daten aus verschiedenen Quellen zusammenzuführen, um für ein koordiniertes und konsistentes Kundenerlebnis zu sorgen. Die Bereitstellung relevanter personalisierter Marketing-Kampagnen kann mithilfe des [!DNL Segmentation Service], Teil von Adobe Experience Platform.
 
-Die Echtzeit-Kundendatenplattform basiert auf Adobe Experience Platform und nutzt viele der [!DNL Experience Platform] Dienste und Funktionen. Verwenden der [!DNL Segmentation Service]können Sie ein maßgeschneidertes Marketing bereitstellen, indem Sie Ihre Kunden in kleinere Gruppen mit ähnlichen Eigenschaften aufteilen.
+Real-Time CDP basiert auf Adobe Experience Platform und nutzt viele der [!DNL Experience Platform] Dienste und Funktionen. Verwenden der [!DNL Segmentation Service]können Sie ein maßgeschneidertes Marketing bereitstellen, indem Sie Ihre Kunden in kleinere Gruppen mit ähnlichen Eigenschaften aufteilen.
 
 ## Segmentierung
 
@@ -32,7 +32,7 @@ Mithilfe von Einflussfaktoren kann Customer AI vorhersagen, was ein Kunde wahrsc
 
 * Bereitstellung von hochpräzisen kundenspezifischen Tendenzmodellen für eine stärkere Segmentierung und Targeting.
 * Verstehen der Einflussfaktoren und Wahrscheinlichkeiten hinter bestimmten Kundenverhaltensweisen.
-* Bereitstellung anpassbarer Optionen für die einzigartigen Anwendungsfälle und Daten Ihres Unternehmens
+* Bereitstellung anpassbarer Optionen für die einzigartigen Anwendungsfälle und Daten Ihres Unternehmens.
 * Verbesserung des Echtzeit-Kundenprofils mit kundenspezifischen Tendenzwerten wie Abwanderung und Konversion.
 * Verbesserung von Kundenprofilen mit Einflussfaktoren für Tendenzwerte.
 * Erstellen von Kundensegmenten basierend auf Einflussfaktoren und Tendenzwerten.
@@ -52,4 +52,4 @@ Um mehr über Customer AI zu erfahren, besuchen Sie zunächst das [Customer AI -
 
 ## Nächste Schritte
 
-Nach Lesen dieser Übersicht sollten Sie jetzt verstehen, wie die Echtzeit-Kundendatenplattform die [!DNL Segmentation Service] zur Verbesserung der Anpassung und Personalisierung von Marketing-Kampagnen. Weitere Informationen zum [!DNL Segmentation Service], lesen Sie bitte die [Dokumentation zur Segmentierung](../../segmentation/home.md).
+Nach Lesen dieser Übersicht sollten Sie nun verstehen, wie Real-Time CDP [!DNL Segmentation Service] zur Verbesserung der Anpassung und Personalisierung von Marketing-Kampagnen. Weitere Informationen zum [!DNL Segmentation Service], lesen Sie bitte die [Dokumentation zur Segmentierung](../../segmentation/home.md).

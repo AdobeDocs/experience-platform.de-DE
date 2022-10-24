@@ -3,9 +3,9 @@ keywords: Ziele; Ziel; Zieltypen
 title: Zieltypen und Kategorien
 description: Erfahren Sie mehr über die verschiedenen Zieltypen und -kategorien in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '642'
 ht-degree: 11%
 
 ---
@@ -35,9 +35,9 @@ Profilexportziele erhalten Rohdaten, oft mit der E-Mail-Adresse als Primärschl�
 
 >[!IMPORTANT]
 >
->Enterprise-Ziele oder Streaming-Profil-Export-Ziele sind verfügbar für [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) -Kunden.
+>Enterprise-Ziele oder Streaming-Profil-Export-Ziele sind verfügbar für [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) -Kunden.
 
-Verwenden Sie Enterprise-Ziel-Data Connectors, um Real-time Customer Data Platform-Profile nahezu in Echtzeit an interne Systeme oder an andere Drittanbietersysteme zur Datensynchronisierung, Analyse und weiteren Profilanreicherung bereitzustellen.
+Verwenden Sie Enterprise-Ziel-Data Connectors, um Adobe Real-time Customer Data Platform-Profile nahezu in Echtzeit an interne Systeme oder an andere Drittanbietersysteme zur Datensynchronisierung, Analyse und weiteren Profilanreicherung bereitzustellen.
 
 Diese Ziele erhalten Segment- und Profildaten als Experience Platform-Datenströme.
 

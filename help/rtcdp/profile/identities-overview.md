@@ -3,7 +3,7 @@ keywords: identities rtcdp;rtcdp identities;Echtzeit-cdp identities
 title: Identitäten in Real-time Customer Data Platform
 description: Mit Adobe Experience Platform Identity Service können Sie sich einen genaueren Überblick über Kunden und ihr Verhalten verschaffen, indem Sie Identitäten über Geräte und Systeme hinweg zusammenführen.
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
-source-git-commit: 5611a5abc7d1ed7781108b6f263e7550092b715d
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 72%

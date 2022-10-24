@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 exl-id: cc78e48a-3578-4c55-ae86-1946d62bddb9
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '888'
-ht-degree: 99%
+ht-degree: 96%
 
 ---
 
@@ -51,7 +51,7 @@ Mit Intelligent Services können Marketing-Analysten und -Experten die Vorteile 
 
 ### Customer AI
 
-Kunden-KI, in der Echtzeit-Kundendatenplattform verfügbar, dient dazu, für einzelne Profile in großem Maßstab benutzerdefinierte Kaufneigungswerte wie Abwanderung und Konversion zu generieren. Dies wird erreicht, ohne dass die Geschäftsanforderungen in ein Problem des maschinellen Lernens umgewandelt werden müssen bzw. ein Algorithmus ausgewählt, trainiert oder bereitgestellt werden muss.
+In Real-time Customer Data Platform verfügbare Customer AI wird verwendet, um benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion für einzelne Profile skaliert zu generieren. Dies wird erreicht, ohne dass die Geschäftsanforderungen in ein Problem des maschinellen Lernens umgewandelt werden müssen bzw. ein Algorithmus ausgewählt, trainiert oder bereitgestellt werden muss.
 
 | Funktion | Beschreibung |
 | ------- | ----------- |

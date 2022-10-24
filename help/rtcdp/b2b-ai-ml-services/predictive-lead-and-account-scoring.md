@@ -1,16 +1,16 @@
 ---
-title: Prädiktive Lead- und Kontobewertung in der Echtzeit-Kundendatenplattform B2B
+title: Prädiktive Lead- und Kontobewertung in Real-Time CDP B2B
 type: Documentation
 description: Eine Übersicht und weitere Informationen zur prädiktiven Lead- und Kontoauswertungsfunktion in der Experience Platform CDP B2B.
 exl-id: d3afbabb-005d-4537-831a-857c88043759
-source-git-commit: 99b3b2d73b87a64fcaa9ba51563c0942fc21a0dc
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '858'
 ht-degree: 9%
 
 ---
 
-# Prädiktive Lead- und Kontobewertung in der Echtzeit-Kundendatenplattform B2B
+# Prädiktive Lead- und Kontobewertung in Real-Time CDP B2B
 
 B2B-Marketer stehen oben im Marketing-Trichter vor mehreren Herausforderungen. Um effektiv zu sein, benötigen B2B-Marketer eine automatisierte Möglichkeit, die große Anzahl von Personen zu qualifizieren, sodass sie sich auf die hochwertigen Ziele konzentrieren können. Die Qualifizierung sollte an dem endgültigen Verkaufsergebnis ausgerichtet werden, nicht nur an der Marketing-Konversion.
 

@@ -4,9 +4,9 @@ title: Handbuch zum Profil-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 1755f5030f5730ca06ea718635ede9deb1188d21
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '3387'
+source-wordcount: '3388'
 ht-degree: 8%
 
 ---
@@ -69,7 +69,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 Die [!UICONTROL Durchsuchen] -Tab können Sie die schreibgeschützten Profile Ihrer Organisation durchsuchen und anzeigen. Von hier aus können Sie wichtige Informationen aus dem Profil bezüglich Voreinstellungen, vergangener Ereignisse, Interaktionen und Segmenten sehen
 
-Weitere Informationen zu den in der Platform-Benutzeroberfläche bereitgestellten Funktionen zur Profilanzeige finden Sie in der Dokumentation unter [Durchsuchen von Profilen in Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
+Weitere Informationen zu den in der Platform-Benutzeroberfläche bereitgestellten Funktionen zur Profilanzeige finden Sie in der Dokumentation unter [Durchsuchen von Profilen in Adobe Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
 
 ## Zusammenführungsrichtlinien {#merge-policies}
 

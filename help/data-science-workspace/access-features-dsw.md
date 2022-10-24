@@ -5,9 +5,9 @@ title: Zugriff auf Data Science Workspace und Funktionen
 topic-legacy: Access and features for data science workspace
 description: Im folgenden Dokument werden die Berechtigungen von Data Science Workspace und der Zugriff auf Funktionen beschrieben.
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: 2ff2721f5420483ddc5caffd1eb0532df729e01b
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '688'
 ht-degree: 12%
 
 ---
@@ -24,7 +24,7 @@ Im folgenden Dokument werden die Berechtigungen von Data Science Workspace und d
 
 Warum wird mir nur die Registerkarte &quot;Dienste&quot;angezeigt?
 
-- Ihr Unternehmen hat möglicherweise nur Berechtigung für Real-time Customer Data Platform (RTCDP), das den Customer AI AI/ML-Dienst umfasst.
+- Ihr Unternehmen hat möglicherweise nur Berechtigung für Adobe Real-time Customer Data Platform (Real-Time CDP), das den Customer AI AI/ML-Dienst enthält.
 
 Wenn Sie keinen der **Datenwissenschaften** Registerkarten ein und möchten die Funktionen von Data Science Workspace nutzen, wenden Sie sich an Ihren Unternehmensadministrator, um zu überprüfen, ob Sie über eine Adobe Experience Platform Intelligence-Lizenz verfügen.
 
@@ -59,7 +59,7 @@ Um Data Science Workspace verwenden zu können, muss die Berechtigung &quot;Data
 
 | Berechtigung | Aktiviert | Deaktiviert |
 |---|---|---|
-| Verwalten des Data Science Workspace | Bietet Zugriff auf alle Dienste in Data Science Workspace. | Der API- und UI-Zugriff auf alle Dienste in Data Science Workspace ist deaktiviert. Während deaktiviert, wählen Sie die **Notebooks**, **Modelle** und **Dienste** -Seiten verhindert werden. <li>Zugriff auf **Dienste** kann weiterhin über Real-time Customer Data Platform (RTCDP) verfügbar sein.</li> |
+| Verwalten des Data Science Workspace | Bietet Zugriff auf alle Dienste in Data Science Workspace. | Der API- und UI-Zugriff auf alle Dienste in Data Science Workspace ist deaktiviert. Während deaktiviert, wählen Sie die **Notebooks**, **Modelle** und **Dienste** -Seiten verhindert werden. <li>Zugriff auf **Dienste** kann weiterhin über Adobe Real-time Customer Data Platform (Real-Time CDP) verfügbar sein.</li> |
 
 ## Sandbox-Unterstützung
 

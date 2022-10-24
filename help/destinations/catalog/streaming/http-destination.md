@@ -3,9 +3,9 @@ title: HTTP-API-Verbindung
 keywords: Streaming;
 description: Verwenden Sie das HTTP-API-Ziel in Adobe Experience Platform, um Profildaten an den Drittanbieter-HTTP-Endpunkt zu senden, um Ihre eigenen Analysen auszuführen oder andere Vorgänge durchzuführen, die Sie möglicherweise für aus Experience Platform exportierte Profildaten benötigen.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '2375'
+source-wordcount: '2376'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
-> Dieses Ziel ist nur für [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) -Kunden.
+> Dieses Ziel ist nur für [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) -Kunden.
 
 Das HTTP-API-Ziel ist ein [!DNL Adobe Experience Platform] Streaming-Ziel, mit dem Sie Profildaten an HTTP-Endpunkte von Drittanbietern senden können.
 

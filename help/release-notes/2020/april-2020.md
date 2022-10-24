@@ -6,10 +6,10 @@ last-update: April 13, 2020
 author: ens71067
 keywords: Versionshinweise;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: e08deb8bea7f02639b680c4988522627de82bdee
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '983'
-ht-degree: 72%
+ht-degree: 67%
 
 ---
 
@@ -89,16 +89,16 @@ Weiterführende Informationen finden Sie in der [Übersicht zu Data Governance](
 
 ## Ziele {#destinations}
 
-In der [ Echtzeit-Kundendatenplattform](../../rtcdp/overview.md) sind Ziele vordefinierte Integrationen mit Zielplattformen, die Daten für diese Partner auf nahtlose Weise aktivieren.
+In [Real-time Customer Data Platform](../../rtcdp/overview.md), sind Ziele vordefinierte Integrationen mit Zielplattformen, die Daten für diese Partner nahtlos aktivieren.
 
 **Neue Ziele**
 
-Die Echtzeit-Kundendatenplattform unterstützt jetzt die Aktivierung von Daten auf über 50 [!DNL Experience Cloud Launch] Erweiterungen, die Analyse, Personalisierung und andere Anwendungsfälle ermöglichen. Weitere Informationen finden Sie hier:
+Real-Time CDP unterstützt jetzt die Datenaktivierung auf über 50 [!DNL Experience Cloud Launch] Erweiterungen, die Analyse, Personalisierung und andere Anwendungsfälle ermöglichen. Weitere Informationen finden Sie hier:
 
 | Dokumentation | Beschreibung |
 |--- | ---|
-| [Zieltypen und Kategorien](../../destinations/destination-types.md) | In diesem Artikel wird der Unterschied zwischen Verbindungen und Erweiterungen in der Benutzeroberfläche der Echtzeit-Kundendatenplattform von erläutert und empfohlen, wann die Ziele verwendet werden sollten. |
-| [Experience Platform Launch-Erweiterungen](../../destinations/catalog/launch-extensions/overview.md) | Auf dieser Seite erfahren Sie, was [!DNL Launch] Erweiterungen sind, listet Anwendungsfälle für die Verwendung auf und verlinkt zu jedem [!DNL Launch] Erweiterung in der Echtzeit-Kundendatenplattform. |
+| [Zieltypen und Kategorien](../../destinations/destination-types.md) | In diesem Artikel wird der Unterschied zwischen Verbindungen und Erweiterungen in der Real-Time CDP-Benutzeroberfläche erläutert und empfohlen, wann diese Ziele verwendet werden. |
+| [Experience Platform Launch-Erweiterungen](../../destinations/catalog/launch-extensions/overview.md) | Auf dieser Seite erfahren Sie, was [!DNL Launch] Erweiterungen sind, listet Anwendungsfälle für die Verwendung auf und verlinkt zu jedem [!DNL Launch] -Erweiterung in Real-Time CDP. |
 
 Weiterführende Informationen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 

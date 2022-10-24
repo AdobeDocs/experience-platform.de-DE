@@ -1,9 +1,9 @@
 ---
 title: Abfrage Accelerated Store Reporting Insights
 description: Erfahren Sie, wie Sie über Query Service ein Berichtseinblicke-Datenmodell für die Verwendung mit beschleunigten Store-Daten und benutzerdefinierten Dashboards erstellen.
-source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
+source-git-commit: 085c9f4e76de1aa3ea969eb0511ee1da43be59f0
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1032'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 Der Abfrage-beschleunigte Speicher ermöglicht Ihnen, die Zeit und Verarbeitungsleistung zu reduzieren, die erforderlich ist, um kritische Einblicke aus Ihren Daten zu gewinnen. In der Regel werden Daten in regelmäßigen Abständen verarbeitet (z. B. stündlich oder täglich), wobei aggregierte Ansichten erstellt und in Berichten verwendet werden. Die Analyse dieser Berichte, die aus aggregierten Daten generiert werden, liefert Einblicke, die die Geschäftsleistung verbessern sollen. Der Abfrage-beschleunigte Speicher bietet einen Cache-Dienst, eine gleichzeitige Nutzung, ein interaktives Erlebnis und eine zustandlose API. Es wird jedoch davon ausgegangen, dass die Daten vorverarbeitet und für aggregierte Abfragen optimiert sind und nicht für die Rohdatenabfrage.
 
-Mit dem Abfrage-beschleunigten Speicher können Sie ein benutzerdefiniertes Datenmodell erstellen und/oder vorhandene Real-time Customer Data Platform-Datenmodelle erweitern. Anschließend können Sie mit Ihren Berichterstellungseinblicken interagieren oder sie in ein Berichts-/Visualisierungsframework Ihrer Wahl einbetten. Weitere Informationen finden Sie in der Dokumentation zum Real-time Customer Data Platform Insights-Datenmodell . [Passen Sie Ihre SQL-Abfragevorlagen an, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle (Key Performance Indicators) zu erstellen.](../../dashboards/cdp-insights-data-model.md).
+Mit dem Abfrage-beschleunigten Speicher können Sie ein benutzerdefiniertes Datenmodell erstellen und/oder vorhandene Adobe Real-time Customer Data Platform-Datenmodelle erweitern. Anschließend können Sie mit Ihren Berichterstellungseinblicken interagieren oder sie in ein Berichts-/Visualisierungsframework Ihrer Wahl einbetten. Weitere Informationen finden Sie in der Dokumentation zum Real-time Customer Data Platform Insights-Datenmodell . [Passen Sie Ihre SQL-Abfragevorlagen an, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle (Key Performance Indicators) zu erstellen.](../../dashboards/cdp-insights-data-model.md).
 
 Das Real-Time CDP-Datenmodell von Adobe Experience Platform bietet Einblicke in Profile, Segmente und Ziele und ermöglicht die Real-Time CDP-Insight-Dashboards. Dieses Dokument führt Sie durch den Prozess der Erstellung Ihres Berichtseinblicke-Datenmodells und darüber, wie Sie Real-Time CDP-Datenmodelle nach Bedarf erweitern.
 

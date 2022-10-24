@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform; Startseite; beliebte Themen; Daten-Management; Lizenzberechtigungen; Lizenzierung; Best Practices
 title: Best Practices für die Verwaltung von Daten im Rahmen von Lizenzberechtigungen
-description: Erfahren Sie mehr über Best Practices und Tools, mit denen Sie Ihre Lizenzberechtigungen mit Adobe Experience Platform besser verwalten können.
+description: Erfahren Sie mehr über Best Practices und Werkzeuge, die Sie zur besseren Verwaltung Ihrer Lizenzberechtigungen mit Adobe Experience Platform einsetzen können.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5da2a6cfc9e9da6bbe6c6560577d22eed32c858c
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '2528'
+source-wordcount: '2529'
 ht-degree: 98%
 
 ---
@@ -47,14 +47,14 @@ Wenn Sie eine Lizenz für Experience Platform erwerben, erhalten Sie Lizenznutzu
 
 Die [!DNL Profile Richness]-Metrik variiert je nach der von Ihnen erworbenen Lizenz. Die [!DNL Profile Richness] kann durch zwei Berechnungen festgestellt werden:
 
-* Die Summe aller in Real-time Customer Data Platform gespeicherten Produktionsdaten (d. h. Profil-Service und Identity Service) zu einem beliebigen Zeitpunkt dividiert durch die [!DNL Addressable Audience];
+* Die Summe aller in Adobe Real-time Customer Data Platform gespeicherten Produktionsdaten (d. h. Profildienst und Identitätsdienst) zu einem beliebigen Zeitpunkt dividiert durch die [!DNL Addressable Audience];
 * Die Summe aller in Platform gespeicherten Daten (einschließlich, aber nicht beschränkt auf den [!DNL Data Lake], Profil-Service und Identity Service) zu einem beliebigen Zeitpunkt sowie Daten, die Sie in den letzten 12 Monaten über Platform gestreamt haben (anstatt sie in Platform zu speichern), geteilt durch die [!DNL Addressable Audience].
 
 Die Verfügbarkeit und spezifische Definition dieser Metriken hängen von der von Ihrem Unternehmen erworbenen Lizenz ab.
 
 ## Lizenznutzungs-Dashboard
 
-Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie eine Momentaufnahme der lizenzbezogenen Daten Ihres Unternehmens für Platform anzeigen können. Die Daten im Dashboard werden genau so angezeigt, wie sie zu dem Zeitpunkt erscheinen, an dem der Snapshot erstellt wurde. Der Snapshot ist weder ein Näherungswert noch eine Stichprobe von Daten, und das Dashboard wird nicht in Echtzeit aktualisiert.
+Die Benutzeroberfläche von Adobe Experience Platform verfügt über ein Dashboard, in dem Sie eine Momentaufnahme der Lizenzdaten Ihres Unternehmens für Platform anzeigen können. Die Daten im Dashboard werden genau so angezeigt, wie sie zu dem Zeitpunkt erscheinen, an dem der Snapshot erstellt wurde. Der Snapshot ist weder ein Näherungswert noch eine Stichprobe von Daten, und das Dashboard wird nicht in Echtzeit aktualisiert.
 
 Weitere Informationen finden Sie in der Anleitung zum [Verwenden des Lizenznutzungs-Dashboards in der Platform-Benutzeroberfläche](../../dashboards/guides/license-usage.md#license-usage-dashboard-data).
 

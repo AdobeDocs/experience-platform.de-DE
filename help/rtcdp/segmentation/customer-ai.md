@@ -3,16 +3,16 @@ keywords: rtcdp-Segmente; Segment Builder rtcdp; rtcdp-Segment; Customer ai rtcd
 title: Customer AI in Real-time Customer Data Platform
 description: Eine Übersicht über Customer AI und wie diese bei der Generierung von Werten für bestimmte Ergebnisse wie Konversionen oder Abwanderungen helfen kann.
 exl-id: 40210196-3c02-4d82-8692-628f2a46b3b5
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '305'
 ht-degree: 8%
 
 ---
 
 # Customer AI in Real-time Customer Data Platform
 
-Customer AI, eine eingebettete KI-Funktion in Real-time Customer Data Platform, ermöglicht es Marketing-Experten, individuelle Bewertungen für ein bestimmtes Ergebnis wie Konversionen oder Abwanderung zu generieren.
+Customer AI, eine eingebettete KI-Funktion in Adobe Real-time Customer Data Platform, ermöglicht es Marketing-Experten, individuelle Bewertungen für ein bestimmtes Ergebnis wie Konversionen oder Abwanderung zu generieren.
 
 Mithilfe von Einflussfaktoren kann Customer AI vorhersagen, was ein Kunde wahrscheinlich tun wird und warum. Darüber hinaus können Sie von Prognosen und Einblicken von Customer AI profitieren, um Kundenerlebnisse zu personalisieren, indem Sie die am besten geeigneten Angebote und Botschaften bereitstellen. Customer AI kann bei Folgendem helfen:
 

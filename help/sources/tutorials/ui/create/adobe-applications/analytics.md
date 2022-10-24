@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Quellverbindung für Adobe Analytics über die Benutzeroberfläche erstellen, um Kundendaten in Adobe Experience Platform zu importieren.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 04a8ca33e712c00d687432ddf9ad82f5d1644db2
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '2302'
+source-wordcount: '2301'
 ht-degree: 63%
 
 ---
@@ -58,7 +58,7 @@ Es können mehrere eingehende Verbindungen hergestellt werden, um mehrere Report
 
 >[!NOTE]
 >
->Daten aus mehreren Report Suites können nur dann für das Echtzeit-Kundendatenprofil aktiviert werden, wenn keine Datenkonflikte bestehen, z. B. zwei benutzerdefinierte Eigenschaften (eVars, Listen und Props) mit unterschiedlicher Bedeutung.
+>Daten aus mehreren Report Suites können nur dann für das Echtzeit-Kundenprofil aktiviert werden, wenn keine Datenkonflikte bestehen, z. B. zwei benutzerdefinierte Eigenschaften (eVars, Listen und Props) mit unterschiedlicher Bedeutung.
 
 So erstellen Sie eine [!DNL Analytics] Quellverbindung, wählen Sie eine Report Suite und klicken Sie auf **[!UICONTROL Nächste]** um fortzufahren.
 

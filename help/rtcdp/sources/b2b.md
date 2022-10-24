@@ -1,11 +1,11 @@
 ---
 title: Quellen in Real-time Customer Data Platform B2B Edition
-description: Ein Überblick über die Rolle der Quellen in Real-time Customer Data Platform B2B Edition.
+description: Ein Überblick über die Rolle der Quellen in Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: 8b8e08adb5ff3498169c1702680ea44f3bebf5c5
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 7%
+source-wordcount: '250'
+ht-degree: 0%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->Wenn Sie Real-time Customer Data Platform B2B Edition nicht verwenden, lesen Sie den Abschnitt [Quellen - Übersicht](./sources-overview.md) anstatt.
+>Wenn Sie Adobe Real-time Customer Data Platform B2B Edition nicht verwenden, lesen Sie den Abschnitt [Quellen - Übersicht](./sources-overview.md) anstatt.
 
-Real-time Customer Data Platform B2B Edition ermöglicht Ihnen, Ihre B2B-Daten aus verschiedenen Quellen zu übertragen, einschließlich der [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) Quell-Connector, Salesforce, Amazon S3 und ADLS. Dieser Bereich von Quellen bietet Ihnen die Möglichkeit, eingehende Daten mithilfe von Diensten zu strukturieren, zu beschriften und zu erweitern.
+Adobe Real-time Customer Data Platform B2B Edition ermöglicht Ihnen, Ihre B2B-Daten aus verschiedenen Quellen zu übertragen, einschließlich der [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) Quell-Connector, Salesforce, Amazon S3 und ADLS. Dieser Bereich von Quellen bietet Ihnen die Möglichkeit, eingehende Daten mithilfe von Diensten zu strukturieren, zu beschriften und zu erweitern.
 
 Informationen zur Einbindung von Quellen in Ihren B2B-Workflow finden Sie im Abschnitt [End-to-End-Tutorial](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 

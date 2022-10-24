@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen Platform-Datensatz aufnimmt. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Platform-Benutzeroberfläche einen Datenfluss für eine CRM-Quelle erstellen.
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: a9a443eda060606be4394dfc2e2707fe18618160
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1424'
+source-wordcount: '1425'
 ht-degree: 44%
 
 ---
@@ -89,7 +89,7 @@ Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, d
 
 >[!NOTE]
 >
->Wenn Sie [!DNL Salesforce] als Teil von Real-time Customer Data Platform B2B Edition, siehe [[!DNL Salesforce] Feldzuordnungsdokument](../../../connectors/adobe-applications/mapping/salesforce.md) Anleitungen zur Kartierung [!DNL Salesforce] Quellfelder in die entsprechenden XDM-Zielfelder.
+>Wenn Sie [!DNL Salesforce] als Teil von Adobe Real-time Customer Data Platform B2B Edition, siehe [[!DNL Salesforce] Feldzuordnungsdokument](../../../connectors/adobe-applications/mapping/salesforce.md) Anleitungen zur Kartierung [!DNL Salesforce] Quellfelder in die entsprechenden XDM-Zielfelder.
 
 Nachdem die Quelldaten erfolgreich zugeordnet wurden, wählen Sie **[!UICONTROL Nächste]**.
 

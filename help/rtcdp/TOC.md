@@ -2,28 +2,28 @@
 product: adobe experience platform
 solution: Real-time Customer Data Platform
 audience: user
-user-guide-title: Handbuch zu Real-time Customer Data Platform
+user-guide-title: Real-time Customer Data Platform-Handbuch
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppen-Segmente aus diesen Profilen zu erstellen und diese Segmente für Drittanbieterziele bereitzustellen.
-source-git-commit: 03c2a8b427d2bd916c87000b63de16950a9e05bf
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
 source-wordcount: '205'
-ht-degree: 86%
+ht-degree: 60%
 
 ---
 
 
-# Hilfe zu Real-time Customer Data Platform {#rtcdp}
+# Hilfe zur Echtzeit-Kundendatenplattform {#rtcdp}
 
-* [Real-Time CDP – Übersicht](overview.md)
-* [Real-time Customer Data Platform B2B Edition – Übersicht](b2b-overview.md)
+* [Übersicht über Real-Time CDP](overview.md)
+* [Übersicht über Real-Time CDP B2B Edition](b2b-overview.md)
 * Erste Schritte {#intro}
-   * Real-time CDP {#rtcdp-intro}
-      * [Erste Schritte mit Real-time Customer Data Platform](get-started.md)
+   * Real-Time CDP {#rtcdp-intro}
+      * [Erste Schritte mit Real-Time CDP](get-started.md)
       * [Metriken – Übersicht](home-page-dashboards.md)
-   * Real-time Customer Data Platform B2B Edition {#rtcdpb2b-intro}
+   * Real-Time CDP B2B Edition {#rtcdpb2b-intro}
       * [Beispielanwendungsfall](./b2b-use-case.md)
       * [Tutorial mit der Beschreibung aller Schritte](./b2b-tutorial.md)
-      * [Leitlinien für Real-time Customer Data Platform B2B Edition](b2b-guardrails.md)
+      * [Limits für Real-Time CDP B2B Edition](b2b-guardrails.md)
 * Account-Profile {#account}
    * [Übersicht über Account-Profile](accounts/account-profile-overview.md)
    * [Handbuch zur Benutzeroberfläche von Account-Profilen](accounts/account-profile-ui-guide.md)
@@ -34,7 +34,7 @@ ht-degree: 86%
    * [Datenqualität in Platform](datasets/data-quality.md)
 * Ziele {#destinations}
    * [Ziele – Übersicht](destinations/overview.md)
-   * [Ziele in Real-time Customer Data Platform B2B Edition](destinations/b2b.md)
+   * [Ziele in Real-Time CDP B2B Edition](destinations/b2b.md)
 * Identitäten {#identity}
    * [Identitäten und Identity-Namespaces](profile/identities-overview.md)
 * Zusammenführungsrichtlinien {#merge-policies}
@@ -45,7 +45,7 @@ ht-degree: 86%
 * Profile {#profile}
    * [Profil – Übersicht](profile/profile-overview.md)
    * [Profil durchsuchen](profile/profile-browse.md)
-* Echtzeit-CDP B2B Edition AI/ML-Dienste {#b2b-cdp-ai-ml}
+* Real-Time CDP B2B Edition AI/ML-Dienste {#b2b-cdp-ai-ml}
    * [Verwandte Konten](b2b-ai-ml-services/related-accounts.md)
    * [Lead-Konto-Zuordnung](b2b-ai-ml-services/lead-to-account-matching.md)
    * Prädiktive Lead- und Kontobewertung {#predictive-lead-and-account-scoring-intro}
@@ -53,14 +53,14 @@ ht-degree: 86%
       * [Prädiktive Lead- und Kontobewertung verwalten](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
 * Schemas {#schemas}
    * [Übersicht über Schemas](schemas/overview.md)
-   * [Schemas in Real-time Customer Data Platform B2B Edition](schemas/b2b.md)
+   * [Schemata in Real-Time CDP B2B Edition](schemas/b2b.md)
 * Segmente {#segmentation}
    * [Segmentierung – Übersicht](segmentation/segmentation-overview.md)
    * [Segment Builder-Handbuch](segmentation/segment-builder-guide.md)
-   * [Segmentierung in Real-time Customer Data Platform B2B Edition](segmentation/b2b.md)
+   * [Segmentierung in Real-Time CDP B2B Edition](segmentation/b2b.md)
    * [Kunden-KI](segmentation/customer-ai.md)
 * Quellen {#sources}
    * [Quellen – Übersicht](sources/sources-overview.md)
-   * [Quellen in Real-time Customer Data Platform B2B Edition](sources/b2b.md)
+   * [Quellen in Real-Time CDP B2B Edition](sources/b2b.md)
 * [Experience Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
 * [Glossar zu Experience Platform](https://docs.adobe.com/content/help/de-DE/experience-platform/landing/glossary.html)

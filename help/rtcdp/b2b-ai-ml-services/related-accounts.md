@@ -1,9 +1,9 @@
 ---
 title: Verwandte Konten in Real-Time CDP B2B Edition
 type: Documentation
-description: Eine Übersicht und weitere Informationen über die zugehörige Kontofunktion in der Echtzeit-Kundendatenplattform von Experience Platform B2B.
+description: Eine Übersicht und weitere Informationen über die zugehörige Kontofunktion in Experience Platform Real-Time CDP B2B.
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 25%
@@ -26,7 +26,7 @@ B2B-Unternehmen haben häufig ihre Kundeninformationen in mehreren Systemen gesp
 
 {style=&quot;table-layout:auto&quot;}
 
-mit den entsprechenden Konten, [!DNL Real-time CDP B2B] zeigt Ihnen jetzt eine Liste von Konten an, die dem Konto, das Sie durchsuchen, ähnlich sind.
+mit den entsprechenden Konten, [!DNL Real-Time CDP B2B] zeigt Ihnen jetzt eine Liste von Konten an, die dem Konto, das Sie durchsuchen, ähnlich sind.
 
 ![Bildschirm mit verwandten Konten in der Experience Platform-Benutzeroberfläche.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 

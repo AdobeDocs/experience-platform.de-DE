@@ -1,17 +1,17 @@
 ---
-title: Anwendungsfälle für die Segmentierung der Echtzeit-Kundendatenplattform B2B Edition
-description: Ein Überblick über die verschiedenen Anwendungsfälle der Echtzeit-CDP B2B Edition.
+title: Anwendungsfälle für die Segmentierung für Real-time Customer Data Platform B2B Edition
+description: Ein Überblick über die verschiedenen Anwendungsfälle der Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1283'
 ht-degree: 0%
 
 ---
 
 # Anwendungsfälle für die Segmentierung für Real-time Customer Data Platform B2B Edition
 
-Dieses Dokument enthält Beispiele für Segmentdefinitionen in der Echtzeit-Kundendatenplattform B2B Edition und wie verschiedene Attributtypen für gängige B2B-Anwendungsfälle kombiniert werden können. Informationen dazu, wie Ziele in Ihren B2B-Workflow integriert werden können, finden Sie im Abschnitt [End-to-End-Tutorial](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
+Dieses Dokument enthält Beispiele für Segmentdefinitionen in Adobe Real-time Customer Data Platform B2B Edition und wie verschiedene Attributtypen für gängige B2B-Anwendungsfälle kombiniert werden können. Informationen dazu, wie Ziele in Ihren B2B-Workflow integriert werden können, finden Sie im Abschnitt [End-to-End-Tutorial](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ B2B-Klassen und ihre Attribute werden mit einem `B2B` im Arbeitsbereich &quot;Se
 
 Um Segmente für B2B-Anwendungsfälle effektiv erstellen zu können, ist es wichtig, über eine genaue Kenntnis des Schemas zu verfügen und zu verstehen, wie das Datenmodell aussieht. Beachten Sie auch den Pfad, den die Daten von einem Datenobjekt zum anderen führen.
 
-Die folgende Abbildung zeigt die Beziehungen zwischen den B2B-Klassen, die in der Echtzeit-Kundendatenplattform B2B Edition verfügbar sind.
+Die folgende Abbildung zeigt die Beziehungen zwischen den B2B-Klassen, die in Real-Time CDP B2B Edition verfügbar sind.
 
 ![B2B-Klasse ERD](../assets/segmentation/b2b-classes.png)
 
@@ -114,4 +114,4 @@ Finden Sie alle Profile mit einem Lead-Ergebnis über 80.
 
 ## Nächste Schritte {#next-steps}
 
-Nach dem Lesen dieser Übersicht haben Sie jetzt ein Verständnis der Segmentierungsmöglichkeiten, die mit der Echtzeit-Kundendatenplattform (B2B Edition) verfügbar sind. Weitere Informationen zum Segmentierungsdienst finden Sie in der [Dokumentation zur Segmentierung](../../segmentation/home.md).
+Nach der Lektüre dieser Übersicht haben Sie jetzt ein Verständnis der Segmentierungsmöglichkeiten, die mit Real-Time CDP, B2B Edition verfügbar sind. Weitere Informationen zum Segmentierungsdienst finden Sie in der [Dokumentation zur Segmentierung](../../segmentation/home.md).
