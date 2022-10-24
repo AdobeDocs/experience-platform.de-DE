@@ -2,9 +2,9 @@
 title: Personalisierung über Adobe Target
 description: Erfahren Sie, wie Sie mit der Server-API personalisierte Erlebnisse bereitstellen und rendern können, die in Adobe Target erstellt wurden.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: d6573f8f4d779fb7ed11b44561a0ad9667748b27
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '735'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ Die Edge Network Server-API kann mithilfe des [Form-Based Experience Composer](h
 
 >[!IMPORTANT]
 >
->Personalisierungserlebnisse, die durch das [Target Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) werden von der Server-API nicht unterstützt.
+>Personalisierungserlebnisse, die durch das [Target Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) von der Server-API nicht vollständig unterstützt. Die Server-API kann **abrufen** Aktivitäten, die von VEC erstellt wurden, die Server-API jedoch nicht **render** Aktivitäten, die von VEC erstellt wurden. Wenn Sie von VEC erstellte Aktivitäten rendern möchten, verwenden Sie bitte die [Web SDK](../edge/home.md).
 
 ## Konfigurieren Ihres Datenspeichers {#configure-your-datastream}
 
@@ -79,7 +79,7 @@ Die [!DNL Server API] ermöglicht Aktualisierungen am Target-Profil. Um ein Targ
 
 ## Abfrage zu Target-Aktivitäten {#querying-target-activities}
 
-### Schemas {#schemas}
+### Schemata {#schemas}
 
 Der Abfrageteil der Anfrage bestimmt, welcher Inhalt von Target zurückgegeben wird. Unter dem `personalization` -Objekt, `schemas` bestimmt den Inhaltstyp, der von Target zurückgegeben werden soll.
 
