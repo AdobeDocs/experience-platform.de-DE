@@ -5,9 +5,9 @@ title: Importieren und Verwenden externer Zielgruppen
 description: In diesem Tutorial erfahren Sie, wie Sie externe Zielgruppen mit Adobe Experience Platform verwenden.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 13fd1e372a63b55c41893f41d1590d9dab9f7903
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1445'
 ht-degree: 5%
 
 ---
@@ -45,10 +45,6 @@ Der erste Schritt zur Verwendung externer Zielgruppen besteht in der Erstellung 
 Um einen Identitäts-Namespace zu erstellen, befolgen Sie die Anweisungen im Abschnitt [Identitäts-Namespace-Handbuch](../../identity-service/namespaces.md#manage-namespaces). Fügen Sie beim Erstellen Ihres Identitäts-Namespace die Quelldetails zum Identitäts-Namespace hinzu und markieren Sie dessen [!UICONTROL Typ] as a **[!UICONTROL Personenidentifizierung]**.
 
 ![](../images/tutorials/external-audiences/identity-namespace-info.png)
-
->[!NOTE]
->
->Um benutzerdefinierte Namespaces für externe Zielgruppen verwenden zu können, müssen Sie ein Support-Ticket erstellen. Weitere Informationen erhalten Sie von Ihrem Adobe-Support-Mitarbeiter.
 
 ## Erstellen eines Schemas für die Segmentmetadaten
 
