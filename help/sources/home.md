@@ -5,7 +5,7 @@ title: Übersicht über Quell-Connectoren
 topic-legacy: overview
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7bcdfb2a49e0c0b65282d401114754a4cc114ad8
+source-git-commit: cf9390076e027ba746c3bc83df8a18e3751b84a8
 workflow-type: tm+mt
 source-wordcount: '1123'
 ht-degree: 98%
@@ -92,6 +92,7 @@ CRM-Systeme liefern Daten, mit deren Hilfe Kundenbeziehungen gepflegt werden kö
 
 Experience Platform ermöglicht die Aufnahme von Daten aus Drittanbieter-Anwendungen für das Customer Success Management. Näheres hierzu finden Sie in den folgenden Dokumenten:
 
+- [[!DNL Oracle Service Cloud]](connectors/customer-success/oracle-service-cloud.md)
 - [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md)
 - [[!DNL ServiceNow]](connectors/customer-success/servicenow.md)
 - [[!DNL Zendesk]](connectors/customer-success/zendesk.md)

@@ -4,10 +4,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
-source-git-commit: 3518131261f2a2a811284f77bbb8784666e8df96
+source-git-commit: cf9390076e027ba746c3bc83df8a18e3751b84a8
 workflow-type: tm+mt
-source-wordcount: '844'
-ht-degree: 84%
+source-wordcount: '853'
+ht-degree: 83%
 
 ---
 
@@ -62,6 +62,7 @@ ht-degree: 84%
       - [Veva CRM-Connector](connectors/crm/veeva.md)
       - [Zoho CRM-Connector](connectors/crm/zoho.md)
    - Customer Success {#customer-success}
+      - [Oracle Service Cloud](connectors/customer-success/oracle-service-cloud.md)
       - [Salesforce Service Cloud-Connector](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNow-Connector](connectors/customer-success/servicenow.md)
       - [Zendesk-Connector](connectors/customer-success/zendesk.md)
@@ -130,6 +131,7 @@ ht-degree: 84%
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
          - [Zoho CRM](tutorials/api/create/crm/zoho.md)
       - Customer Success {#customer-success}
+         - [Oracle Service Cloud](tutorials/api/create/customer-success/oracle-service-cloud.md)
          - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
@@ -236,6 +238,7 @@ ht-degree: 84%
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
          - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - Customer Success {#customer-success}
+         - [Oracle Service Cloud](tutorials/ui/create/customer-success/oracle-service-cloud.md)
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
