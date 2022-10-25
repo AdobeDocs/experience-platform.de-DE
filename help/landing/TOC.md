@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Überblick über Adobe Experience Platform
 breadcrumb-title: Übersicht zu Experience Platform
 user-guide-description: Erfahren Sie, wie Sie Ihren Kunden mithilfe von Experience Platform in Echtzeit personalisierte Erlebnisse liefern können.
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 24efebb89ba36f5047558acd368638f456356a9e
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 93%
+source-wordcount: '248'
+ht-degree: 92%
 
 ---
 
@@ -59,6 +59,7 @@ ht-degree: 93%
    * Auditprotokolle {#audit-logs}
       * [Übersicht](./governance-privacy-security/audit-logs/overview.md)
    * [Datenverschlüsselung](./governance-privacy-security/encryption.md)
+   * [Vom Kunden verwaltete Schlüssel](./governance-privacy-security/customer-managed-keys.md)
 * Lizenzverwendung und Limits {#license}
    * [Best Practices für die Verwaltung von Daten im Rahmen von Lizenzberechtigungen](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Dashboard zur Lizenzverwendung](./license-usage-and-guardrails/license-usage-dashboard.md)
