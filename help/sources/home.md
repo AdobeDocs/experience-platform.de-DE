@@ -5,10 +5,10 @@ title: Übersicht über Quell-Connectoren
 topic-legacy: overview
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 9eb7cdd08069a74a8f0680a8a2af7e7e950e83b7
-workflow-type: ht
-source-wordcount: '1111'
-ht-degree: 100%
+source-git-commit: 7bcdfb2a49e0c0b65282d401114754a4cc114ad8
+workflow-type: tm+mt
+source-wordcount: '1123'
+ht-degree: 98%
 
 ---
 
@@ -29,17 +29,19 @@ Die für die Aufnahme in Experience Platform verwendeten Datenquellen sind in fo
 Experience Platform ermöglicht die Aufnahme von Daten aus anderen Adobe-Programmen wie Adobe Analytics und Adobe Audience Manager. Näheres hierzu finden Sie in den folgenden Dokumenten:
 
 - [Übersicht über Adobe Audience Manager-Quellen](connectors/adobe-applications/audience-manager.md)
-- [Adobe Audience Manager-Quellverbindung über die Benutzeroberfläche erstellen](./tutorials/ui/create/adobe-applications/audience-manager.md)
+   - [Adobe Audience Manager-Quellverbindung über die Benutzeroberfläche erstellen](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Übersicht über Adobe Analytics Classifications-Datenquellen](connectors/adobe-applications/classifications.md)
-- [Erstellen einer Adobe Analytics Classifications-Datenquellverbindung über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/classifications.md)
+   - [Erstellen einer Adobe Analytics Classifications-Datenquellverbindung über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Übersicht über Adobe Analytics-Report Suite-Datenquellen](connectors/adobe-applications/analytics.md)
-- [Adobe Analytics-Quellverbindung über die Benutzeroberfläche erstellen](./tutorials/ui/create/adobe-applications/analytics.md)
+   - [Adobe Analytics-Quellverbindung über die Benutzeroberfläche erstellen](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Übersicht über Adobe Campaign Managed Cloud Services-Quellen](connectors/adobe-applications/campaign.md)
-- [Managed Cloud Services-Quellverbindung mit Adobe Campaign in der UI erstellen](./tutorials/ui/create/adobe-applications/campaign.md)
+   - [Managed Cloud Services-Quellverbindung mit Adobe Campaign in der UI erstellen](./tutorials/ui/create/adobe-applications/campaign.md)
 - [Übersicht über die Quellen der Adobe-Datenerfassung](connectors/adobe-applications/data-collection.md)
-- [Erstellen einer Quellverbindung für Kundenattribute in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/customer-attributes.md)
+   - [Erstellen einer Quellverbindung für Kundenattribute in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [Übersicht über [!DNL Marketo Engage]-Quellen](connectors/adobe-applications/marketo/marketo.md)
-- [Erstellen einer  [!DNL Marketo Engage] -Quellverbindung über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/marketo.md)
+   - [Erstellen einer  [!DNL Marketo Engage] -Quellverbindung über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/marketo.md)
+- [Adobe Workfront-Quellübersicht](connectors/adobe-applications/workfront.md)
+   - [Erstellen einer Workfront-Quellverbindung in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/workfront.md)
 
 ### Werbung {#advertising}
 
