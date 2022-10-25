@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform - Versionshinweise, Oktober 2022
 description: Die Versionshinweise für Adobe Experience Platform vom Oktober 2022.
-source-git-commit: 098b4b7a0dcd3ddfcd13f7dd473c4fa6832d23df
+source-git-commit: 0ea2718247792e997b7a90ab9027946e800c8157
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 54%
+source-wordcount: '764'
+ht-degree: 52%
 
 ---
 
@@ -12,14 +12,13 @@ ht-degree: 54%
 
 **Release-Datum: 26. Oktober 2022**
 
-Neue Funktionen in Adobe Experience Platform:
-
 - [Vom Kunden verwaltete Schlüssel](#cmk)
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [Datenerfassung](#data-collection)
 - [Experience-Datenmodell (XDM)](#xdm)
+- [Query Service](#query-service)
 - [Quellen](#sources)
 
 ## Vom Kunden verwaltete Schlüssel {#cmk}
@@ -57,6 +56,21 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 {style=&quot;table-layout:auto&quot;}
 
 Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md).
+
+## Query Service {#query-service}
+
+Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von Daten in Adobe Experience Platform [!DNL Data Lake]. Sie können beliebige Datensätze aus dem [!DNL Data Lake] verbinden und die Abfrageergebnisse als neuen Datensatz für die Verwendung in Berichten, im Data Science Workspace oder für die Aufnahme in das Echtzeit-Kundenprofil verwenden.
+
+**Aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Datenmodell für Query Accelerated Reporting Insights | Im Rahmen der Data Distiller-SKU können Sie mit dem Abfrage-beschleunigten Store die Zeit und Verarbeitungsleistung reduzieren, die erforderlich sind, um wichtige Einblicke aus Ihren Daten zu gewinnen. Mit dem Abfrage-beschleunigten Speicher können Sie ein benutzerdefiniertes Datenmodell erstellen und/oder vorhandene Adobe Real-time Customer Data Platform-Datenmodelle erweitern, um Ihre Berichterstellungseinblicke und deren Visualisierungen zu verbessern. Siehe [Dokument mit Einblicken aus beschleunigten Speicherberichten abfragen](https://experienceleague.adobe.com/docs/experience-platform/query/query-accelerated-store/reporting-insights-data-model.html) , um mehr über diese Funktion zu erfahren. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Weitere Informationen über Abfrage-Services finden Sie unter [Abfrage-Service – Übersicht](../../query-service/home.md).
+Neue Funktionen in Adobe Experience Platform:
 
 ## Quellen {#sources}
 
