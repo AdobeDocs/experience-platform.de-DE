@@ -1,15 +1,19 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;
-title: Erstellen einer Adobe Workfront-Quellverbindung in der Benutzeroberfläche
+title: (Beta) Erstellen einer Adobe Workfront-Quellverbindung in der Benutzeroberfläche
 description: In diesem Tutorial erfahren Sie, wie Sie eine Adobe Workfront-Quellverbindung erstellen, um Ihre Workfront-Daten mithilfe der Benutzeroberfläche an Adobe Experience Platform zu übertragen.
-source-git-commit: 99741a3be4d50d1a812e945483c9ed1577a0a999
+source-git-commit: 1af0863766e29c599e02f2a553d237bc62f455d2
 workflow-type: tm+mt
-source-wordcount: '751'
-ht-degree: 23%
+source-wordcount: '771'
+ht-degree: 22%
 
 ---
 
-# Erstellen einer Adobe Workfront-Quellverbindung in der Benutzeroberfläche
+# (Beta) Erstellen einer Adobe Workfront-Quellverbindung in der Benutzeroberfläche
+
+>[!NOTE]
+>
+>Die Adobe Workfront-Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
 
 In diesem Tutorial erfahren Sie, wie Sie eine Adobe Workfront-Quellverbindung erstellen, um Ihre Workfront-Daten mithilfe der Benutzeroberfläche an Adobe Experience Platform zu übertragen.
 
