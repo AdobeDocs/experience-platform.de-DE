@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
-source-git-commit: 0ea2718247792e997b7a90ab9027946e800c8157
+source-git-commit: 021a0833941f250475786bb8629542c50229b238
 workflow-type: tm+mt
-source-wordcount: '769'
-ht-degree: 54%
+source-wordcount: '921'
+ht-degree: 52%
 
 ---
 
@@ -19,6 +19,7 @@ Neue Funktionen in Adobe Experience Platform:
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [Datenerfassung](#data-collection)
+- [Ziele](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Query Service](#query-service)
 - [Quellen](#sources)
@@ -42,6 +43,27 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | [!DNL Zendesk] Erweiterung für die Ereignisweiterleitung | Sie können jetzt Daten an senden [!DNL Zendesk] mit [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) -Erweiterung. Siehe [[!DNL Zendesk] Erweiterungsübersicht](../../tags/extensions/web/zendesk/overview.md) für weitere Informationen. |
 
 {style=&quot;table-layout:auto&quot;}
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+
+**Neue oder aktualisierte Funktionen**
+
+| Ziel | Beschreibung |
+| ----------- | ----------- |
+| [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | Line ist eine beliebte Kommunikationsplattform, die Menschen, Dienstleistungen und Informationen verbindet und sich von einer Chat-App zu einem Zentrum für Unterhaltung, soziale Aktivitäten und tägliche Aktivitäten entwickelt hat. |
+| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365 ist eine Cloud-basierte Business-Anwendungsplattform, die Enterprise Resource Planning (ERP) und Customer Relationship Management (CRM) mit Produktivitätsanwendungen und AI-Tools kombiniert, um reibungslosere und besser kontrollierte Vorgänge, ein besseres Wachstumspotenzial und Kostensenkungen zu ermöglichen. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Neue oder aktualisierte Dokumentation**
+
+| Dokumentation | Beschreibung |
+| ----------- | ----------- |
+| [Limits für Ziele](../../destinations/guardrails.md) | Auf dieser Seite finden Sie standardmäßige Nutzungs- und Ratenbeschränkungen im Hinblick auf das Aktivierungsverhalten. |
+
+Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
 ## Experience-Datenmodell (XDM) {#xdm}
 
