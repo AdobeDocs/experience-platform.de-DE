@@ -3,14 +3,14 @@ keywords: Experience Platform; Startseite; beliebte Themen; Audience Manager-Que
 title: Erstellen einer Adobe Audience Manager-Quellverbindung in der Benutzeroberfläche
 description: Dieses Tutorial führt Sie durch die Schritte, die zum Erstellen einer Quellverbindung für Adobe Audience Manager erforderlich sind, um Verbrauchererlebnisereignisdaten über die Benutzeroberfläche in Platform einzubringen.
 exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
-source-git-commit: 90a917ea2b623079f26c67b776dd46b62531c7da
+source-git-commit: 9cdb8933d166445bf41ed314d7ffc7d5762e1adb
 workflow-type: tm+mt
-source-wordcount: '523'
-ht-degree: 18%
+source-wordcount: '583'
+ht-degree: 25%
 
 ---
 
-# Erstellen einer Adobe Audience Manager-Quellverbindung über die Benutzeroberfläche
+# Adobe Audience Manager-Quellverbindung über die Benutzeroberfläche erstellen
 
 In diesem Tutorial werden Sie durch die Schritte geführt, die zum Erstellen eines Quell-Connectors für Adobe Audience Manager erforderlich sind, um Verbrauchererlebnisereignisdaten über die Benutzeroberfläche in Platform einzubringen.
 
@@ -46,6 +46,10 @@ Nachdem Sie die gewünschten Segmente identifiziert und ausgewählt haben, wird 
 ![select-data](../../../../images/tutorials/create/aam/select-data.png)
 
 Alternativ können Sie die **[!UICONTROL Alle Segmente auswählen]** und **[!UICONTROL Alle Eigenschaften auswählen]** Boxen. Wenn Sie alle Audience Manager auswählen, gelangen die Segmentsegmente in Platform. Bei Auswahl aller Eigenschaften werden alle Erstanbietereigenschaften aus dem Audience Manager aktiviert.
+
+>[!WARNING]
+>
+>Die Aufnahme umfangreicher Audience Manager-Segmentpopulationen hat einen direkten Einfluss auf Ihre Gesamtprofilanzahl, wenn Sie zum ersten Mal ein Audience Manager-Segment mithilfe der Audience Manager-Quelle an Platform senden. Das bedeutet, dass die Auswahl aller Segmente eine Profilanzahl ergeben kann, die über Ihrer Lizenznutzungsberechtigung liegt. Bitte lesen Sie [Nutzungsbeschränkung](../../../../../dashboards/guides/license-usage.md) vor dem Fortfahren.
 
 Nachdem Sie fertig sind, wählen Sie **[!UICONTROL Nächste]**
 
