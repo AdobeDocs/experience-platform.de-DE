@@ -1,9 +1,9 @@
 ---
 title: Vom Kunden verwaltete Schlüssel in Adobe Experience Platform
 description: Erfahren Sie, wie Sie eigene Verschlüsselungsschlüssel für in Adobe Experience Platform gespeicherte Daten einrichten.
-source-git-commit: f06f00f7581ccd7fe64f5292a53ebb0303c65069
+source-git-commit: 6fe0d72bcb3dbf1e1167f80724577ba3e0f741f4
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1416'
 ht-degree: 2%
 
 ---
@@ -65,7 +65,7 @@ Sobald Sie bei der **[!DNL Review + create]** Schritt, können Sie die Details d
 
 ![Grundlegende Konfiguration für den Key Vault](../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
 
-## Microsoft eine Firewall-Ausnahme gewähren
+## Netzwerkoptionen konfigurieren
 
 Wenn Ihr Key Vault so konfiguriert ist, dass der öffentliche Zugriff auf bestimmte virtuelle Netzwerke eingeschränkt oder der öffentliche Zugriff vollständig deaktiviert wird, müssen Sie Microsoft eine Firewall-Ausnahme gewähren.
 
