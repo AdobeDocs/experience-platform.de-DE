@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;
-description: Adobe Experience Platform stellt vorkonfigurierte Vorlagen bereit, mit denen Sie den Datenerfassungsprozess beschleunigen können. Zu Vorlagen gehören automatisch generierte Assets wie Schemas, Datensätze, Zuordnungsregeln, Identitäts-Namespaces und Datenflüsse, die Sie beim Einbringen von Daten aus einer Quelle in eine Experience Platform verwenden können.
+description: Adobe Experience Platform stellt vorkonfigurierte Vorlagen bereit, mit denen Sie den Datenerfassungsprozess beschleunigen können. Zu Vorlagen gehören automatisch generierte Assets wie Schemas, Datensätze, Zuordnungsregeln, Identitäten, Identitäts-Namespaces und Datenflüsse, die Sie beim Einbringen von Daten aus einer Quelle in eine Experience Platform verwenden können.
 title: (Alpha) Erstellen Sie einen Datenfluss für Quellen mithilfe von Vorlagen in der Benutzeroberfläche
 hide: true
 hidefromtoc: true
-source-git-commit: a0ca9cff43b6f8276268467fecf944c664992950
+source-git-commit: d6d8281d1be1468b0c2b7474b80be96949dc7d4c
 workflow-type: tm+mt
-source-wordcount: '924'
-ht-degree: 14%
+source-wordcount: '1184'
+ht-degree: 11%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 14%
 >
 >Vorlagen befinden sich in Alpha und werden derzeit nur von der [[!DNL Marketo Engage] source](../../connectors/adobe-applications/marketo/marketo.md). Die Dokumentation und Funktionen können sich ändern.
 
-Adobe Experience Platform stellt vorkonfigurierte Vorlagen bereit, mit denen Sie den Datenerfassungsprozess beschleunigen können. Zu Vorlagen gehören automatisch generierte Assets wie Schemas, Datensätze, Zuordnungsregeln, Identitäts-Namespaces und Datenflüsse, die Sie beim Einbringen von Daten aus einer Quelle in eine Experience Platform verwenden können.
+Adobe Experience Platform stellt vorkonfigurierte Vorlagen bereit, mit denen Sie den Datenerfassungsprozess beschleunigen können. Zu Vorlagen gehören automatisch generierte Assets wie Schemas, Datensätze, Identitäten, Zuordnungsregeln, Identitäts-Namespaces und Datenflüsse, die Sie beim Einbringen von Daten aus einer Quelle in eine Experience Platform verwenden können.
 
 Mit Vorlagen können Sie:
 
-* Verringern Sie die Zeit bis zum Wert der Erfassung durch Beschleunigung der ML-basierten Asset-Erstellung.
+* Verringern Sie die Zeit bis zum Wert der Erfassung durch Beschleunigung der Asset-Erstellung in Vorlagen.
 * Minimieren Sie Fehler, die während der manuellen Datenerfassung auftreten können.
 * Aktualisieren Sie automatisch generierte Assets zu jedem Zeitpunkt entsprechend Ihren Anwendungsfällen.
 
@@ -51,7 +51,12 @@ Unter dem [!UICONTROL Adobe Apps] category, select **[!UICONTROL Marketo Engage]
 
 ![Ein Katalog des Quellarbeitsbereichs mit hervorgehobener Marketo Engage-Quelle.](../../images/tutorials/templates/catalog.png)
 
-Es wird ein Popup-Fenster angezeigt, in dem Sie die Möglichkeit haben, Vorlagen zu durchsuchen oder vorhandene Schemata und Datensätze zu verwenden. Um automatisch generierte Assets zu verwenden, wählen Sie **[!UICONTROL Vorlagen durchsuchen]** und wählen Sie **[!UICONTROL Auswählen]**.
+Es wird ein Popup-Fenster angezeigt, in dem Sie die Möglichkeit haben, Vorlagen zu durchsuchen oder vorhandene Schemata und Datensätze zu verwenden.
+
+* **Vorlagen durchsuchen**: Quellvorlagen erstellen automatisch Schemas, Identitäten, Datensätze und Datenflüsse mit Zuordnungsregeln für Sie. Sie können diese Assets nach Bedarf anpassen.
+* **Vorhandene Assets verwenden**: Erfassen Sie Ihre Daten mit vorhandenen Datensätzen und Schemas, die Sie erstellt haben. Sie können bei Bedarf auch neue Datensätze und Schemata erstellen.
+
+Um automatisch generierte Assets zu verwenden, wählen Sie **[!UICONTROL Vorlagen durchsuchen]** und wählen Sie **[!UICONTROL Auswählen]**.
 
 ![Ein Popup-Fenster mit Optionen zum Durchsuchen von Vorlagen oder Verwenden vorhandener Assets.](../../images/tutorials/templates/browse-templates.png)
 
@@ -83,6 +88,12 @@ Das Vorschaufenster wird angezeigt, in dem Sie Beispieldaten aus Ihrer Vorlage a
 
 Wählen Sie anschließend aus der Liste die Vorlage aus, die Sie verwenden möchten. Sie können mehrere Vorlagen auswählen und mehrere Datenflüsse gleichzeitig erstellen. Eine Vorlage kann jedoch nur einmal pro Konto verwendet werden. Nachdem Sie Ihre Vorlagen ausgewählt haben, wählen Sie **[!UICONTROL Beenden]** und lassen Sie einige Momente zu, in denen die Assets generiert werden.
 
+Wenn Sie ein oder mehrere Elemente aus der Liste der verfügbaren Vorlagen auswählen, werden weiterhin alle B2B-Schemas und Identitäts-Namespaces generiert, um sicherzustellen, dass B2B-Beziehungen zwischen Schemas korrekt konfiguriert sind.
+
+>[!NOTE]
+>
+>Bereits verwendete Vorlagen werden von der Auswahl ausgeschlossen.
+
 ![Die Liste der Vorlagen mit der ausgewählten Vorlage Kontaktrolle für Chancen .](../../images/tutorials/templates/select-template.png)
 
 ### Überprüfen von Assets {#review-assets}
@@ -92,7 +103,7 @@ Wählen Sie anschließend aus der Liste die Vorlage aus, die Sie verwenden möch
 >title="Überprüfen der automatisch generierten Assets"
 >abstract="Die Generierung aller Assets kann bis zu fünf Minuten dauern. Wenn Sie die Seite verlassen möchten, erhalten Sie eine Benachrichtigung, die zurückgegeben wird, sobald die Assets abgeschlossen sind. Sie können die Assets überprüfen, sobald sie generiert wurden, und jederzeit zusätzliche Konfigurationen an Ihrem Datenfluss vornehmen."
 
-Die [!UICONTROL Vorlagen-Assets überprüfen] -Seite zeigt die Assets an, die automatisch als Teil Ihrer Vorlage generiert wurden. Auf dieser Seite können Sie die automatisch generierten Schemas, Datensätze, Identitäts-Namespaces und Datenflüsse anzeigen, die mit Ihrer Quellverbindung verknüpft sind.
+Die [!UICONTROL Vorlagen-Assets überprüfen] -Seite zeigt die Assets an, die automatisch als Teil Ihrer Vorlage generiert wurden. Auf dieser Seite können Sie die automatisch generierten Schemas, Datensätze, Identitäts-Namespaces und Datenflüsse anzeigen, die mit Ihrer Quellverbindung verknüpft sind. Die Generierung aller Assets kann bis zu fünf Minuten dauern. Wenn Sie die Seite verlassen möchten, erhalten Sie eine Benachrichtigung, die zurückgegeben wird, sobald die Assets abgeschlossen sind. Sie können die Assets überprüfen, sobald sie generiert wurden, und jederzeit zusätzliche Konfigurationen an Ihrem Datenfluss vornehmen.
 
 Automatisch generierte Datenflüsse sind standardmäßig aktiviert. Wählen Sie die Auslassungszeichen (`...`) neben dem Namen des Datenflusses und wählen Sie dann **[!UICONTROL Zuordnungen in der Vorschau anzeigen]** um die für Ihren Datenfluss erstellten Zuordnungssätze anzuzeigen.
 
@@ -104,8 +115,22 @@ Eine Vorschauseite wird angezeigt, auf der Sie die Zuordnungsbeziehung zwischen 
 
 Sie können Ihre Datenflüsse jederzeit nach der Ausführung aktualisieren. Wählen Sie die Auslassungszeichen (`...`) neben dem Namen des Datenflusses und wählen Sie dann **[!UICONTROL Aktualisieren des Datenflusses]**. Sie gelangen auf die Seite mit dem Quellen-Workflow , auf der Sie Ihre Datenflussdetails aktualisieren können, einschließlich der Einstellungen für die partielle Erfassung, Fehlerdiagnose und Warnbenachrichtigungen sowie der Zuordnung Ihres Datenflusses.
 
+Sie können die Ansicht des Schema-Editors verwenden, um Aktualisierungen am automatisch erstellten Schema vorzunehmen. Besuchen Sie das Handbuch unter [mit dem Schema-Editor](../../../xdm/tutorials/create-schema-ui.md) für weitere Informationen.
+
 ![Ein Dropdown-Fenster mit aktivierter Option Datenfluss aktualisieren .](../../images/tutorials/templates/update.png)
 
 ## Nächste Schritte
 
 In diesem Tutorial haben Sie jetzt Datenflüsse sowie Assets wie Schemas, Datensätze und Identitäts-Namespaces mit Vorlagen erstellt. Allgemeine Informationen zu Quellen finden Sie unter [Quellen - Übersicht](../../home.md).
+
+## Anhang
+
+Im folgenden Abschnitt finden Sie weitere Informationen zu Vorlagen.
+
+### Verwenden Sie den Benachrichtigungsbereich, um zur Überprüfungsseite zurückzukehren.
+
+Vorlagen werden von Adobe Experience Platform-Warnhinweisen unterstützt. Sie können im Benachrichtigungsfenster Aktualisierungen zum Status Ihrer Assets erhalten und zur Überprüfungsseite zurückkehren.
+
+Wählen Sie das Benachrichtigungssymbol in der oberen Kopfzeile der Platform-Benutzeroberfläche aus und wählen Sie dann die Statuswarnung aus, um die Assets anzuzeigen, die Sie überprüfen möchten.
+
+![Der Benachrichtigungsbereich in der Platform-Benutzeroberfläche mit einer Benachrichtigung, die einen fehlgeschlagenen Datenfluss meldet, wurde hervorgehoben.](../../images/tutorials/templates/notifications.png)
