@@ -5,9 +5,9 @@ title: Definieren von Enum-Feldern und vorgeschlagenen Werten in der Benutzerobe
 description: Erfahren Sie, wie Sie in der Experience Platform-Benutzeroberfläche Auflistungen und empfohlene Werte für Zeichenfolgenfelder definieren.
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: 1c1797a01a0a4e2cd355399d3f913cb81adf9006
+source-git-commit: 89ada47cb6e0b204d8f2f19e7e9b6f31bf347964
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1257'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,10 @@ Im Gegensatz zu Auflistungen wird die **[!UICONTROL Vorgeschlagene Werte]** -Opt
 Wann [Definieren eines neuen Felds](./overview.md#define) in der Adobe Experience Platform-Benutzeroberfläche und legen Sie den Typ auf [!UICONTROL Zeichenfolge], erhalten Sie die Möglichkeit, eine [enum](#enum) oder [empfohlene Werte](#suggested-values) für dieses Feld.
 
 ![Bild mit aktivierter Option &quot;Enum und vorgeschlagene Werte&quot;für ein Zeichenfolgenfeld in der Benutzeroberfläche](../../images/ui/fields/enum/enum-options-selected.png)
+
+In diesem Dokument wird beschrieben, wie Sie Auflistungen und empfohlene Werte im [!UICONTROL Schemas] UI-Arbeitsbereich. Ein kurzer Überblick über Auflistungen und empfohlene Werte, einschließlich ihrer Konfiguration in der Benutzeroberfläche und deren nachgelagerten Effekten, erhalten Sie im folgenden Video:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3409501/?quality=12&learn=on)
 
 ## Definieren einer Enumeration {#enum}
 
