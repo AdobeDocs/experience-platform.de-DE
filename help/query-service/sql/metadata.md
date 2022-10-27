@@ -5,16 +5,16 @@ title: Metadaten-PostgreSQL-Befehle in Query Service
 topic-legacy: metadata
 description: Eine Liste der PostgreSQL-Befehle, die derzeit für die Abfrage von Metadaten in Adobe Experience Platform Query Service unterstützt werden.
 exl-id: bfcbad55-3086-44c9-9938-6ba0504e747b
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '335'
 ht-degree: 0%
 
 ---
 
-# Metadaten-PostgreSQL-Befehle in Query Service
+# Metadaten [!DNL PostgreSQL] Befehle in Query Service
 
-Für Metadaten in Ihrem Datensatz werden derzeit die folgenden PostgreSQL-Befehle für die Abfrage unterstützt:
+Für Metadaten in Ihrem Datensatz gilt Folgendes: [!DNL PostgreSQL] -Befehle werden derzeit für Abfragen unterstützt:
 
 >[!NOTE]
 >
@@ -43,4 +43,4 @@ Für Metadaten in Ihrem Datensatz werden derzeit die folgenden PostgreSQL-Befehl
 
 Alle Befehle, die mit `\d` kann kombiniert werden. Beispielsweise können Sie `\dtsn` , um eine Liste aller Tabellen, Sequenzen und Schemas anzuzeigen. `\d` zeigt selbst alle sichtbaren Tabellen, Ansichten, materialisierten Ansichten und Sequenzen an.
 
-Weitere Informationen zu den oben aufgeführten Befehlen finden Sie in der Dokumentation unter [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Beachten Sie jedoch, dass nicht alle in der PostgreSQL-Dokumentation angezeigten Optionen von [!DNL Experience Platform].
+Weitere Informationen zu den oben aufgeführten Befehlen finden Sie in der Dokumentation unter [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Beachten Sie jedoch, dass nicht alle Optionen in der [!DNL PostgreSQL] -Dokumentation unterstützt von [!DNL Experience Platform].

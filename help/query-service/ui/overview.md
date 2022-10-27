@@ -5,9 +5,9 @@ title: UI-Anleitung für Query Service
 topic-legacy: guide
 description: Adobe Experience Platform Query Service bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzern in Ihrer IMS-Organisation gespeichert wurden.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: a887c502213e96d6af90af0859da78c2984f89a7
+source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '716'
 ht-degree: 3%
 
 ---
@@ -26,15 +26,15 @@ Die [!DNL Query Editor] ermöglicht Ihnen das Schreiben und Ausführen von Abfra
 
 ![Zoomt mit Blick auf die [!DNL Query Editor].](../images/ui/overview/query-editor.png)
 
-## Durchsuchen {#browse}
+## Vorlagen {#browse}
 
-Die **[!UICONTROL Durchsuchen]** zeigt Abfragen an, die von Benutzern in Ihrer Organisation gespeichert wurden. Es ist nützlich, diese als Abfrageprojekte zu betrachten, da die hier gespeicherten Abfragen möglicherweise noch im Aufbau sind. Auf der Seite **[!UICONTROL Durchsuchen]** -Registerkarte auch als Ausführungsabfragen in **[!UICONTROL Protokoll]** , wenn sie zuvor von [!DNL Query Service].
+Die **[!UICONTROL Vorlagen]** zeigt Abfragen an, die von Benutzern in Ihrer Organisation gespeichert wurden. Es ist nützlich, diese als Abfrageprojekte zu betrachten, da die hier gespeicherten Abfragen möglicherweise noch im Aufbau sind. Auf der Seite **[!UICONTROL Vorlagen]** -Registerkarte auch als Ausführungsabfragen in **[!UICONTROL Protokoll]** , wenn sie zuvor von [!DNL Query Service].
 
-![Im Tab Durchsuchen des Abfrage-Dashboards werden mehrere gespeicherte Abfragen gezoomt.](../images/ui/overview/browse.png)
+![Zoomt im Tab Abfragen-Dashboard-Vorlagen , um mehrere gespeicherte Abfragen anzuzeigen.](../images/ui/overview/templates.png)
 
 | Spalte | Beschreibung |
 | --- | --- |
-| **[!UICONTROL Name]** | Der vom Benutzer erstellte Abfragename. Sie können auf dem Namen auswählen, um die Abfrage im [!DNL Query Editor]. Sie können auch die Suchleiste verwenden, um nach dem Namen einer Abfrage zu suchen. Bei Suchen wird zwischen Groß- und Kleinschreibung unterschieden. |
+| **[!UICONTROL Name]** | Das Feld name ist entweder der vom Benutzer erstellte Abfragename oder die ersten Zeichen Ihrer SQL-Abfrage. Jede Abfrage, die über die Benutzeroberfläche mit dem Abfrage-Editor erstellt wurde, wird zu Beginn benannt. Wenn die Abfrage über die API erstellt wurde, ist der Name der Abfrage ein Snippet der ursprünglichen SQL, die zur Erstellung der Abfrage verwendet wurde. Sie können den Namen der Abfrage auswählen, um die Abfrage im [!DNL Query Editor]. Sie können auch die Suchleiste verwenden, um nach der [!UICONTROL Name] einer Abfrage. Bei Suchen wird zwischen Groß- und Kleinschreibung unterschieden. |
 | **[!UICONTROL SQL]** | Die ersten Zeichen der SQL-Abfrage. Wenn Sie den Mauszeiger über den Code bewegen, wird die vollständige Abfrage angezeigt. |
 | **[!UICONTROL Modified by]** | Der letzte Benutzer, der die Abfrage geändert hat. Jeder Benutzer in Ihrer Organisation, der Zugriff auf [!DNL Query Service] kann Abfragen ändern. |
 | **[!UICONTROL Zuletzt geändert]** | Datum und Uhrzeit der letzten Änderung der Abfrage in der Zeitzone des Browsers. |

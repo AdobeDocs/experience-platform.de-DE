@@ -6,9 +6,9 @@ topic-legacy: queries
 type: Tutorial
 description: In diesem Dokument werden wichtige Informationen zum Schreiben von Abfragen in Adobe Experience Platform Query Service beschrieben.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1047'
 ht-degree: 3%
 
 ---
@@ -206,7 +206,7 @@ Nach der Verbindung mit Query Service können Sie alle verfügbaren Tabellen in 
 
 ### Standardtabellenansicht
 
-Die `\d` zeigt die standardmäßige PostgreSQL-Ansicht für die Auflistung von Tabellen an. Nachfolgend finden Sie ein Beispiel für die Ausgabe dieses Befehls:
+Die `\d` -Befehl zeigt den Standard [!DNL PostgreSQL] -Ansicht für die Auflistung von Tabellen. Nachfolgend finden Sie ein Beispiel für die Ausgabe dieses Befehls:
 
 ```sql
              List of relations

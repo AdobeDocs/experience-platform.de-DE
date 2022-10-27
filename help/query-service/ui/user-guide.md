@@ -5,10 +5,10 @@ title: Anleitung zur Benutzeroberfläche des Abfrage-Editors
 topic-legacy: query editor
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: b4f4549e49eb8b37bd4209c5bcf01c5622e8fbd1
+source-git-commit: 9c7068b4209a7c85c444b1cc83415747b93bacb2
 workflow-type: tm+mt
-source-wordcount: '1865'
-ht-degree: 25%
+source-wordcount: '1993'
+ht-degree: 22%
 
 ---
 
@@ -26,7 +26,7 @@ Weitere Informationen zu Konzepten und Funktionen von [!DNL Query Service], sieh
 
 [!DNL Query Editor] Initialisierung und Verbindung dauert einige Sekunden [!DNL Query Service] beim Öffnen. Die Konsole teilt Ihnen mit, wann eine Verbindung besteht, wie unten dargestellt. Wenn Sie versuchen, eine Abfrage auszuführen, bevor der Editor eine Verbindung hergestellt hat, wird die Ausführung verzögert, bis die Verbindung hergestellt ist.
 
-![Bild](../images/ui/query-editor/connect.png)
+![Die Konsolenausgabe des Abfrage-Editors bei der ersten Verbindung.](../images/ui/query-editor/connect.png)
 
 ### Ausführen von Abfragen [!DNL Query Editor] {#run-a-query}
 
@@ -40,13 +40,13 @@ Verwenden [!DNL Query Editor], können Sie Abfragen für Kundenerlebnisdaten sch
 
 Im [!DNL Experience Platform] Benutzeroberfläche, auswählen **[!UICONTROL Abfragen]** im linken Navigationsmenü, um die [!DNL Query Service] Arbeitsbereich. Wählen Sie als Nächstes **[!UICONTROL Abfrage erstellen]** oben rechts im Bildschirm, um mit dem Schreiben von Abfragen zu beginnen. Dieser Link ist auf jeder der Seiten im [!DNL Query Service] Arbeitsbereich.
 
-![Bild](../images/ui/query-editor/create-query.png)
+![Die Registerkarte Übersicht über den Abfragearbeitsbereich mit hervorgehobener Option Abfrage erstellen .](../images/ui/query-editor/create-query.png)
 
 ### Schreiben von Abfragen {#writing-queries}
 
-[!UICONTROL Der Abfrage-Editor ist so organisiert, dass das Schreiben von Abfragen so einfach wie möglich ist.] Der folgende Screenshot zeigt, wie der Editor in der Benutzeroberfläche angezeigt wird, wobei die Schaltfläche **Abspielen** und das SQL-Eingabefeld hervorgehoben sind.
+[!UICONTROL Der Abfrage-Editor ist so organisiert, dass das Schreiben von Abfragen so einfach wie möglich ist.] Der folgende Screenshot zeigt, wie der Editor in der Benutzeroberfläche mit dem SQL-Eingabefeld und **Play** hervorgehoben.
 
-![Bild](../images/ui/query-editor/editor.png)
+![Der Abfrage-Editor mit dem SQL-Eingabefeld und hervorgehobener Wiedergabe.](../images/ui/query-editor/editor.png)
 
 Um Ihre Entwicklungszeit zu minimieren, sollten Sie Ihre Abfragen mit Begrenzungen für die zurückgegebenen Zeilen entwickeln. Beispiel: `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. Nachdem Sie überprüft haben, ob Ihre Abfrage die erwartete Ausgabe erzeugt, entfernen Sie die Begrenzungen und führen Sie die Abfrage mit `CREATE TABLE tablename AS SELECT` aus, um einen Datensatz mit der Ausgabe zu generieren.
 
@@ -54,15 +54,15 @@ Um Ihre Entwicklungszeit zu minimieren, sollten Sie Ihre Abfragen mit Begrenzung
 
 - **Automatische Syntaxhervorhebung:** Erleichtert das Lesen und Organisieren von SQL.
 
-![Bild](../images/ui/query-editor/syntax-highlight.png)
+![Eine SQL-Anweisung im Abfrage-Editor, die die Syntaxfarbhervorhebung demonstriert.](../images/ui/query-editor/syntax-highlight.png)
 
 - **Automatische Vervollständigung von SQL-Suchbegriffen:** Geben Sie Ihre Abfrage ein und verwenden Sie dann die Pfeiltasten, um zum gewünschten Begriff zu navigieren, und drücken Sie die **Eingabe**.
 
-![Bild](../images/ui/query-editor/syntax-auto.png)
+![Einige SQL-Zeichen mit dem Dropdown-Menü &quot;Automatischer Abschluss&quot;mit Optionen aus dem Abfrage-Editor.](../images/ui/query-editor/syntax-auto.png)
 
 - **Tabelle und Felder automatisch vervollständigen:** Beginnen Sie mit der Eingabe des Tabellennamens für den `SELECT`-Vorgang, navigieren Sie mit den Pfeiltasten zur gewünschten Tabelle und drücken Sie die **Eingabetaste**. Sobald eine Tabelle ausgewählt ist, erkennt das automatische Vervollständigung die Felder in dieser Tabelle.
 
-![Die Befehlszeilenschnittstelle des Abfrage-Editors mit Dropdown-Vorschlägen.](../images/ui/query-editor/tables-auto.png)
+![Die Eingabe des Abfrage-Editors zeigt Dropdown-Tabellennamenvorschläge an.](../images/ui/query-editor/tables-auto.png)
 
 ### Konfigurations-Umschalter für die automatische Vervollständigung der Benutzeroberfläche {#auto-complete}
 
@@ -94,17 +94,17 @@ Wählen Sie die entsprechende Option aus, um die Funktion zur automatischen Verv
 
 [!DNL Query Editor] validiert eine Abfrage beim Schreiben automatisch, wobei eine allgemeine SQL-Validierung und eine spezifische Ausführungsvalidierung bereitgestellt werden. Wenn eine rote Unterstreichung unter der Abfrage angezeigt wird (wie in der Abbildung unten dargestellt), handelt es sich um einen Fehler in der Abfrage.
 
-![Bild](../images/ui/query-editor/syntax-error-highlight.png)
+![Die Eingabe des Abfrage-Editors, in der SQL rot unterstrichen wird, zeigt einen Fehler an.](../images/ui/query-editor/syntax-error-highlight.png)
 
 Wenn Fehler erkannt werden, können Sie die spezifischen Fehlermeldungen anzeigen, indem Sie den Mauszeiger über den SQL-Code bewegen.
 
-![Bild](../images/ui/query-editor/linting-error.png)
+![Ein Dialogfeld mit einer Fehlermeldung.](../images/ui/query-editor/linting-error.png)
 
 ### Details zur Abfrage {#query-details}
 
-Beim Anzeigen einer Abfrage in [!DNL Query Editor], die **[!UICONTROL Details zur Abfrage]** bietet Tools zum Verwalten der ausgewählten Abfrage.
+Wählen Sie eine gespeicherte Vorlage aus der [!UICONTROL Vorlagen] im Abfrage-Editor. Das Bedienfeld &quot;Abfragedetails&quot;enthält weitere Informationen und Tools zur Verwaltung der ausgewählten Abfrage.
 
-![Bild](../images/ui/query-editor/query-details.png)
+![Der Abfrage-Editor mit hervorgehobenem Bereich für Abfragedetails.](../images/ui/query-editor/query-details.png)
 
 In diesem Bedienfeld können Sie einen Ausgabedatensatz direkt über die Benutzeroberfläche generieren, die angezeigte Abfrage löschen oder benennen und der Abfrage einen Zeitplan hinzufügen.
 
@@ -118,11 +118,13 @@ In diesem Bedienfeld werden außerdem nützliche Metadaten angezeigt, z. B. das 
 
 Um einen Zeitplan zu einer Abfrage hinzuzufügen, wählen Sie **[!UICONTROL Zeitplan hinzufügen]**.
 
-![Bild](../images/ui/query-editor/add-schedule.png)
+<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
+
+![Der Abfrage-Editor mit Zeitplan hinzufügen wurde hervorgehoben.](../images/ui/query-editor/add-schedule.png)
 
 Die **[!UICONTROL Details planen]** angezeigt. Auf dieser Seite können Sie die Häufigkeit der geplanten Abfrage, das Datum der Ausführung der geplanten Abfrage sowie den Datensatz auswählen, in den die Abfrage exportiert werden soll.
 
-![Bild](../images/ui/query-editor/schedule-details.png)
+![Das Bedienfeld Zeitplandetails wurde hervorgehoben.](../images/ui/query-editor/schedule-details.png)
 
 Sie können die folgenden Optionen für **[!UICONTROL Häufigkeit]**:
 
@@ -152,7 +154,9 @@ Die Seite mit den Abfragedetails wird erneut angezeigt und zeigt nun die Details
 
 Sie können einen Zeitplan löschen, indem Sie **[!UICONTROL Zeitplan löschen]**.
 
-![Bild](../images/ui/query-editor/delete-schedule.png)
+<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
+
+![Der Abfrage-Editor mit Zeitplan deaktivieren und Zeitplan löschen wurde hervorgehoben.](../images/ui/query-editor/delete-schedule.png)
 
 >[!IMPORTANT]
 >
@@ -184,7 +188,7 @@ So führen Sie eine Abfrage in aus [!DNL Query Editor]können Sie SQL im Editor 
 
 Die Konsole bietet Informationen zum Status und zum Betrieb von [!DNL Query Service]. Die Konsole zeigt den Verbindungsstatus an [!DNL Query Service], und alle Fehlermeldungen, die aus diesen Abfragen resultieren.
 
-![Bild](../images/ui/query-editor/console.png)
+![Die Registerkarte &quot;Konsole&quot;der Konsole &quot;Abfrage-Editor&quot;.](../images/ui/query-editor/console.png)
 
 >[!NOTE]
 >
@@ -194,7 +198,7 @@ Die Konsole bietet Informationen zum Status und zum Betrieb von [!DNL Query Serv
 
 Nach Abschluss einer Abfrage werden die Ergebnisse im **[!UICONTROL Ergebnisse]** neben dem **[!UICONTROL Konsole]** Registerkarte. Diese Ansicht zeigt die tabellarische Ausgabe Ihrer Abfrage mit bis zu 100 Zeilen an. Mit dieser Ansicht können Sie überprüfen, ob Ihre Abfrage die erwartete Ausgabe erzeugt. Um einen Datensatz mit Ihrer Abfrage zu generieren, entfernen Sie Begrenzungen für zurückgegebene Zeilen und führen Sie die Abfrage mit `CREATE TABLE tablename AS SELECT` aus, um einen Datensatz mit der Ausgabe zu generieren. Siehe [Tutorial zum Generieren von Datensätzen](./create-datasets.md) Anweisungen zum Generieren eines Datensatzes aus Abfrageergebnissen finden Sie unter [!DNL Query Editor].
 
-![Bild](../images/ui/query-editor/query-results.png)
+![Auf der Registerkarte Ergebnisse der Abfrage-Editor-Konsole werden die Ergebnisse einer Abfrageausführung angezeigt.](../images/ui/query-editor/query-results.png)
 
 ## Ausführen von Abfragen mit [!DNL Query Service] Tutorial-Video {#query-tutorial-video}
 

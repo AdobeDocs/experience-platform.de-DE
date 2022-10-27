@@ -5,9 +5,9 @@ title: SQL-Syntax in Query Service
 topic-legacy: syntax
 description: Dieses Dokument zeigt die von Adobe Experience Platform Query Service unterstützte SQL-Syntax.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5ec37ee797ec297b2e5c275dc0e6091e4ee8ecae
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '3160'
+source-wordcount: '3156'
 ht-degree: 9%
 
 ---
@@ -449,7 +449,7 @@ Das Beispiel gibt Folgendes zurück:
 
 Dieses zweite Beispiel veranschaulicht außerdem das Konzept und die Anwendung des `inline` -Funktion. Das Datenmodell für das Beispiel ist in der Abbildung unten dargestellt.
 
-![Schemadiagramm für productListItems](../images/sql/productListItems.png)
+![Ein Schemadiagramm für productListItems.](../images/sql/productListItems.png)
 
 **Beispiel**
 
@@ -485,9 +485,9 @@ SET property_key = property_value
 
 Um den Wert für eine Einstellung zurückzugeben, verwenden Sie `SET [property key]` ohne `property_value`.
 
-## PostgreSQL-Befehle
+## [!DNL PostgreSQL] commands
 
-Die folgenden Unterabschnitte decken die von Query Service unterstützten PostgreSQL-Befehle ab.
+Die folgenden Unterabschnitte decken die [!DNL PostgreSQL] von Query Service unterstützte Befehle.
 
 ### ANALYSETABELLE
 
@@ -677,7 +677,7 @@ Weitere Informationen zu den standardmäßigen SELECT-Abfrageparametern finden S
 | Parameter | Beschreibung |
 | ------ | ------ |
 | `TEMPORARY` oder `TEMP` | Ein optionaler Parameter. Wenn angegeben, ist die zu erstellende Tabelle eine temporäre Tabelle. |
-| `UNLOGGED` | Ein optionaler Parameter. Wenn angegeben, ist die Tabelle, die wie erstellt wird, eine nicht protokollierte Tabelle. Weitere Informationen zu nicht protokollierten Tabellen finden Sie im [PostgreSQL-Dokumentation](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `UNLOGGED` | Ein optionaler Parameter. Wenn angegeben, ist die Tabelle, die wie erstellt wird, eine nicht protokollierte Tabelle. Weitere Informationen zu nicht protokollierten Tabellen finden Sie im [[!DNL PostgreSQL] Dokumentation](https://www.postgresql.org/docs/current/sql-createtable.html). |
 | `new_table` | Der Name der zu erstellenden Tabelle. |
 
 **Beispiel**

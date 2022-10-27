@@ -3,9 +3,9 @@ keywords: Experience Platform; Query Service; Query Service; verschachtelte Date
 title: Arbeiten mit verschachtelten Datenstrukturen in Query Service
 description: Dieses Dokument bietet ein Arbeitsbeispiel für die Verarbeitung und Transformation verschachtelter Datenfelder mithilfe von CTAS- und INSERT INTO-Anweisungen.
 exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
-source-git-commit: b2b292dba0cf9ab9adbdff26aa61ef5a2cd5fe86
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '795'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 Adobe Experience Platform Query Service unterstützt die Verwendung verschachtelter Datenfelder. Die Komplexität der Datenstrukturen eines Unternehmens kann die Umwandlung oder Verarbeitung dieser Daten erschweren. Dieses Dokument enthält Beispiele zum Erstellen, Verarbeiten oder Transformieren von Datensätzen mit komplexen Datentypen, einschließlich verschachtelter Datenstrukturen.
 
-Query Service bietet eine PostgreSQL-Schnittstelle zum Ausführen von SQL-Abfragen für alle Datensätze, die von Experience Platform verwaltet werden. Platform unterstützt die Verwendung von primitiven oder komplexen Datentypen in Tabellenspalten wie Struktur, Arrays, Karten und tief verschachtelten Strukturen, Arrays und Maps. Datensätze können auch verschachtelte Strukturen enthalten, bei denen der Spaltendatentyp so komplex sein kann wie ein Array verschachtelter Strukturen oder eine Zuordnung von Karten, wobei der Wert eines Schlüssel-Wert-Paares eine Struktur mit mehreren Verschachtelungsebenen sein kann.
+Query Service stellt eine [!DNL PostgreSQL] -Schnittstelle zum Ausführen von SQL-Abfragen für alle von Experience Platform verwalteten Datensätze. Platform unterstützt die Verwendung von primitiven oder komplexen Datentypen in Tabellenspalten wie Struktur, Arrays, Karten und tief verschachtelten Strukturen, Arrays und Maps. Datensätze können auch verschachtelte Strukturen enthalten, bei denen der Spaltendatentyp so komplex sein kann wie ein Array verschachtelter Strukturen oder eine Zuordnung von Karten, wobei der Wert eines Schlüssel-Wert-Paares eine Struktur mit mehreren Verschachtelungsebenen sein kann.
 
 ## Erste Schritte
 

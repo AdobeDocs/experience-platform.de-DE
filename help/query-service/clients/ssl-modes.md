@@ -3,9 +3,9 @@ keywords: Experience Platform; Startseite; beliebte Themen; Query Service; Query
 title: SSL-Optionen für Query Service
 description: Erfahren Sie mehr über die SSL-Unterstützung für Verbindungen von Drittanbietern mit Adobe Experience Platform Query Service und über die Verbindung mit dem verifizierbaren SSL-Modus.
 exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
-source-git-commit: be877502f63fe08f17abe7cb0cf9f247394bf1ac
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '903'
 ht-degree: 1%
 
 ---
@@ -33,8 +33,8 @@ Die verschiedenen `sslmode` Parameterwerte bieten unterschiedliche Schutzniveaus
 | `allow` | Teilweise | Nein | Sicherheit ist keine Priorität, Geschwindigkeit und ein geringer Verarbeitungsaufwand sind wichtiger. Dieser Modus entscheidet sich nur dann für die Verschlüsselung, wenn der Server darauf besteht. |
 | `prefer` | Teilweise | Nein | Verschlüsselung ist nicht erforderlich, die Kommunikation wird jedoch verschlüsselt, wenn der Server sie unterstützt. |
 | `require` | Ja | Nein | Verschlüsselung ist bei allen Kommunikationen erforderlich. Das Netzwerk ist vertrauenswürdig, um eine Verbindung zum richtigen Server herzustellen. Die Überprüfung des SSL-Zertifikats des Servers ist nicht erforderlich. |
-| `verify-ca` | Ja | Abhängig von CA-Richtlinien | Verschlüsselung ist bei allen Kommunikationen erforderlich. Vor der Datenfreigabe ist eine Servervalidierung erforderlich. Dazu müssen Sie ein Stammzertifikat in Ihrem PostgreSQL-Basisverzeichnis einrichten. [Details finden Sie unten](#instructions) |
-| `verify-full` | Ja | Ja | Verschlüsselung ist bei allen Kommunikationen erforderlich. Vor der Datenfreigabe ist eine Servervalidierung erforderlich. Dazu müssen Sie ein Stammzertifikat in Ihrem PostgreSQL-Basisverzeichnis einrichten. [Details finden Sie unten](#instructions). |
+| `verify-ca` | Ja | Abhängig von CA-Richtlinien | Verschlüsselung ist bei allen Kommunikationen erforderlich. Vor der Datenfreigabe ist eine Servervalidierung erforderlich. Dazu müssen Sie ein Stammzertifikat in Ihrem [!DNL PostgreSQL] Basisverzeichnis. [Details finden Sie unten](#instructions) |
+| `verify-full` | Ja | Ja | Verschlüsselung ist bei allen Kommunikationen erforderlich. Vor der Datenfreigabe ist eine Servervalidierung erforderlich. Dazu müssen Sie ein Stammzertifikat in Ihrem [!DNL PostgreSQL] Basisverzeichnis. [Details finden Sie unten](#instructions). |
 
 >[!NOTE]
 >

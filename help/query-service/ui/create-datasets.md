@@ -6,10 +6,10 @@ topic-legacy: queries
 type: Tutorial
 description: Adobe Experience Platform Query Service ermöglicht die Erstellung von Datensätzen über die Benutzeroberfläche. Nachdem ein Datensatz erstellt wurde, kann er wie jeder andere Datensatz im Data Lake aufgerufen und für eine Vielzahl von Anwendungsfällen verwendet werden.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 0c2cfe9b0bd839bdf662622283a7563c0417c9a9
+source-git-commit: 228ed51ea056d3593a59bc0eee8d9b767aa74489
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 12%
+source-wordcount: '493'
+ht-degree: 11%
 
 ---
 
@@ -19,6 +19,8 @@ ht-degree: 12%
 
 ## Generieren von Datensätzen über die Benutzeroberfläche von Adobe Experience Platform
 
+<!-- Screenshot for #3 will need to be updated if schedule queries is moved. -->
+
 Gehen Sie wie folgt vor, um Datensätze über die Adobe Experience Platform-Benutzeroberfläche zu erstellen:
 
 1. Erstellen Sie eine Abfrage mit einem verbundenen Client und validieren Sie die Ausgabe. So erfahren Sie, wie Sie Abfragen mit [!DNL Query Editor], lesen Sie die [!DNL Query Editor] UI-Handbuch [Erstellen von Abfragen](./user-guide.md#writing-queries).
@@ -27,13 +29,13 @@ Gehen Sie wie folgt vor, um Datensätze über die Adobe Experience Platform-Benu
 
 3. Wählen Sie im Bereich &quot;Query details&quot;die Option **[!UICONTROL Ausgabedatensatz]**.
 
-   ![Ausgabedatensatz auswählen](../images/ui/create-datasets/output-dataset.png)
+   ![Registerkarte &quot;Abfragearbeitsbereichsvorlage&quot;mit hervorgehobenem Symbol Ausgabedatensatz auswählen.](../images/ui/create-datasets/output-dataset.png)
 
 4. Geben Sie im angezeigten Dialogfeld einen Datensatznamen ein, dem Ihre LDAP-ID vorangestellt wird. Der Datensatzname muss nicht eindeutig oder SQL-sicher sein. Beachten Sie, dass der Tabellenname für Ihren Datensatz basierend auf dem hier erstellten Datensatznamen generiert wird.
 
 5. Geben Sie als Nächstes eine Beschreibung für Ihren Datensatz in die [!UICONTROL Beschreibung] Feld und wählen Sie **[!UICONTROL Abfrage ausführen]**.
 
-   ![Abfrage ausführen](../images/ui/create-datasets/run-query.png)
+   ![Das Dialogfeld Ausgabedatensatz mit den Datensatzdetails und hervorgehobenen Ausführungsabfragen](../images/ui/create-datasets/run-query.png)
 
 6. Nachdem die Abfrage ausgeführt wurde, navigieren Sie zu **[!UICONTROL Datensätze]** , um den von Ihnen erstellten Datensatz anzuzeigen. Weitere Informationen zum Ausführen allgemeiner Aktionen beim Arbeiten mit Datensätzen in der Platform-Benutzeroberfläche finden Sie in der [Handbuch zur Benutzeroberfläche von Datensätzen](../../catalog/datasets/user-guide.md).
 

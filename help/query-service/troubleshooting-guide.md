@@ -5,9 +5,9 @@ title: Anleitung zur Fehlerbehebung bei Query Service
 topic-legacy: troubleshooting
 description: Dieses Dokument enthält häufig gestellte Fragen und Antworten zu Query Service. Zu den Themen gehören der Datenexport, Tools von Drittanbietern und PSQL-Fehler.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 722d7144639d7280ef85c9bfc285e616e7d7fcce
+source-git-commit: 08272f72c71f775bcd0cd7fffcd2e4da90af9ccb
 workflow-type: tm+mt
-source-wordcount: '3755'
+source-wordcount: '3781'
 ht-degree: 4%
 
 ---
@@ -86,15 +86,15 @@ SELECT * FROM customers LIMIT 0;
 - Wählen Sie nach der Anmeldung bei Experience Platform die Option **[!UICONTROL Datensätze]** im linken Navigationsbereich der Benutzeroberfläche, um zu navigieren [!UICONTROL Datensätze] Dashboard.
 - Die Datensätze [!UICONTROL Durchsuchen] -Registerkarte geöffnet. Sie können die Suchleiste verwenden, um die verfügbaren Optionen zu verfeinern. Wählen Sie einen Datensatz aus der angezeigten Liste aus.
 
-![Ein in der Platform-Benutzeroberfläche hervorgehobener Datensatz.](./images/troubleshooting/dataset-selection.png)
+![Das Dashboard &quot;Datensätze&quot;in der Platform-Benutzeroberfläche mit hervorgehobener Suchleiste und Datensatz.](./images/troubleshooting/dataset-selection.png)
 
-- Die [!UICONTROL Datensatzaktivität] angezeigt. Auswählen [!UICONTROL Vorschau des Datensatzes anzeigen] , um ein Dialogfeld des XDM-Schemas und eine tabellarische Ansicht von reduzierten Daten aus dem ausgewählten Datensatz zu öffnen. Weitere Informationen finden Sie im [Vorschau einer Datensatzdokumentation anzeigen](../catalog/datasets/user-guide.md#preview-a-dataset)
+- Die [!UICONTROL Datensatzaktivität] angezeigt. Auswählen **[!UICONTROL Vorschau des Datensatzes anzeigen]** , um ein Dialogfeld des XDM-Schemas und eine tabellarische Ansicht von reduzierten Daten aus dem ausgewählten Datensatz zu öffnen. Weitere Informationen finden Sie im [Vorschau einer Datensatzdokumentation anzeigen](../catalog/datasets/user-guide.md#preview-a-dataset)
 
-![Das XDM-Schema und die Tabellenansicht der reduzierten Daten.](./images/troubleshooting/dataset-preview.png)
+![Die Registerkarte Datensatzaktivität im Dashboard &quot;Datensätze&quot;mit hervorgehobener Vorschau des Datensatzes.](./images/troubleshooting/dataset-preview.png)
 
 - Wählen Sie ein beliebiges Feld aus dem Schema aus, um seinen Inhalt in einer reduzierten Spalte anzuzeigen. Der Name der Spalte wird oberhalb ihres Inhalts auf der rechten Seite angezeigt. Sie sollten diesen Namen kopieren, um diesen Datensatz abzufragen.
 
-![Der Spaltenname eines verschachtelten Datensatzes, der in der Benutzeroberfläche hervorgehoben ist.](./images/troubleshooting/column-name.png)
+![Das XDM-Schema und die Tabellenansicht der reduzierten Daten. Der Spaltenname eines verschachtelten Datensatzes wird in der Benutzeroberfläche hervorgehoben.](./images/troubleshooting/column-name.png)
 
 Die vollständige Anleitung finden Sie in der Dokumentation zu [Arbeiten mit verschachtelten Datenstrukturen](./best-practices/nested-data-structures.md) mit dem Abfrage-Editor oder einem Client eines Drittanbieters.
 +++
@@ -119,12 +119,12 @@ Es kann verschiedene Gründe dafür geben, dass eine Abfrage bei der Verarbeitun
 - Navigieren Sie zu [https://www.adobe.com/](https://www.adobe.com/) in Ihrem Webbrowser.
 - Wählen Sie rechts in der oberen Navigationsleiste die Option **[!UICONTROL Anmelden]**.
 
-![Die Adobe-Website mit hervorgehobenem Anmeldezeichen.](./images/troubleshooting/adobe-sign-in.png)
+![Die Adobe-Website mit Anmeldung hervorgehoben.](./images/troubleshooting/adobe-sign-in.png)
 
 - Verwenden Sie Ihre Adobe ID und Ihr Kennwort, die mit Ihrer Adobe-Lizenz registriert sind.
 - Auswählen **[!UICONTROL Hilfe und Support]** über die Navigationsleiste am oberen Bildschirmrand.
 
-![Das Dropdown-Menü der oberen Navigationsleiste mit hervorgehobener Hilfe und Unterstützung.](./images/troubleshooting/help-and-support.png)
+![Das Dropdown-Menü der oberen Navigationsleiste mit Hilfe und Support, Enterprise-Support und Kontakt wurde hervorgehoben.](./images/troubleshooting/help-and-support.png)
 
 Es wird ein Dropdown-Banner mit einem [!UICONTROL Hilfe und Support] Abschnitt. Auswählen **[!UICONTROL Kontakt]** , um die Adobe Customer Care Virtual Assistant zu öffnen, oder wählen Sie **[!UICONTROL Enterprise-Support]** für spezielle Hilfe für große Organisationen.
 +++

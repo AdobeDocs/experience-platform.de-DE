@@ -5,9 +5,9 @@ title: Verbinden von DbVisualizer mit Query Service
 topic-legacy: connect
 description: In diesem Dokument werden die Schritte zum Verbinden von DbVisualizer mit Adobe Experience Platform Query Service beschrieben.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 760b04499edd0374f1aae71600bef074a6f17531
+source-git-commit: 910522cc981bddba86f0a47ded48125c28712032
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '754'
 ht-degree: 1%
 
 ---
@@ -38,7 +38,7 @@ Verwenden Sie die Suchleiste oder wählen Sie [!DNL PostgreSQL] aus der Dropdown
 
 Wählen Sie im Arbeitsbereich Datenbankverbindung die **[!DNL Properties]** , gefolgt von der **[!DNL Driver Properties]** über die Navigationsseitenleiste aus.
 
-![Der Arbeitsbereich Datenbankverbindung , in dem die Registerkarte Eigenschaften hervorgehoben ist.](../images/clients/dbvisualizer/driver-properties.png)
+![Der Arbeitsbereich Datenbankverbindung mit den Eigenschaften und Treibereigenschaften wurde hervorgehoben.](../images/clients/dbvisualizer/driver-properties.png)
 
 Die in der folgenden Tabelle aufgeführten Treibereigenschaften werden empfohlen, um die Verwendung von SSL mit DBVisualizer zu aktivieren.
 
@@ -57,7 +57,7 @@ Die in der folgenden Tabelle aufgeführten Treibereigenschaften werden empfohlen
 
 Die `PGHOST` und `user` -Werte aus Ihren Adobe Experience Platform-Anmeldedaten entnommen werden. Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei der Platform-Benutzeroberfläche an und wählen Sie **[!UICONTROL Abfragen]** aus der linken Navigation, gefolgt von **[!UICONTROL Anmeldeinformationen]**. Weitere Informationen zum Auffinden Ihres Datenbanknamens, Hosts, Ports und Ihrer Anmeldedaten finden Sie in der [Handbuch zu Anmeldeinformationen](../ui/credentials.md).
 
-![Experience Platform Query Credentials Dashboard mit hervorgehobenen Anmeldeinformationen.](../images/clients/dbvisualizer/query-service-credentials-page.png)
+![Auf der Seite &quot;Anmeldeinformationen&quot;im Arbeitsbereich &quot;Experience Platform-Abfragen&quot;werden Anmeldeinformationen und ablaufende Anmeldeinformationen hervorgehoben.](../images/clients/dbvisualizer/query-service-credentials-page.png)
 
 [!DNL Query Service] bietet auch nicht ablaufende Anmeldeinformationen, um eine einmalige Einrichtung mit Drittanbieterclients zu ermöglichen. Weitere Informationen finden Sie in der Dokumentation für [Vollständige Anweisungen zum Generieren und Verwenden von nicht ablaufenden Anmeldedaten](../ui/credentials.md#non-expiring-credentials).
 
@@ -75,7 +75,7 @@ Wenn bei jeder Verbindungsherstellung eine Benutzer-ID und eine kennwortbasierte
 
 Überprüfen Sie im Bereich &quot;Verbindungs-Authentifizierung&quot;beide **[!DNL Require Userid]** und **[!DNL Require Password]** Kontrollkästchen und wählen Sie **[!DNL Apply]**.
 
-![Das Bedienfeld Verbindungs-Authentifizierung mit den Kontrollkästchen &quot;Benutzername&quot;und &quot;Kennwort&quot;wurde hervorgehoben.](../images/clients/dbvisualizer/connection-authentication.png)
+![Das Authentifizierungsfenster für [!DNL PostgreSQL] Datenbankverbindung mit den hervorgehobenen Kontrollkästchen &quot;Require Userid&quot;und &quot;Password&quot;.](../images/clients/dbvisualizer/connection-authentication.png)
 
 ## Verbinden von  mit Platform
 
@@ -90,11 +90,11 @@ Um eine Verbindung herzustellen, wählen Sie die **[!DNL Connection]** im Arbeit
 
 Nachdem Sie alle relevanten Anmeldeinformationen eingegeben haben, wählen Sie **[!DNL Connect]**.
 
-![Der Arbeitsbereich Datenbankverbindung mit der Registerkarte Verbindung und der hervorgehobenen Schaltfläche Verbindung .](../images/clients/dbvisualizer/connect.png)
+![Die [!DNL PostgreSQL] Arbeitsbereich Datenbankverbindung , in dem die Registerkarte Verbindung und die Schaltfläche Verbindung hervorgehoben sind.](../images/clients/dbvisualizer/connect.png)
 
 Die [!DNL Connect] wird zum ersten Mal in der Sitzung angezeigt.
 
-![Das Dialogfeld Verbindung mit den Textfeldern Datenbankbenutzer und Datenbankkennwort wird hervorgehoben.](../images/clients/dbvisualizer/connect-dialog.png)
+![Die Verbindung: [!DNL PostgreSQL] mit den Textfeldern Datenbankbenutzer-ID und Datenbankkennwort markiert.](../images/clients/dbvisualizer/connect-dialog.png)
 
 Geben Sie Ihre Benutzername und Ihr Kennwort ein und wählen Sie **[!DNL Connect]**. Im Protokoll wird eine Meldung angezeigt, mit der eine erfolgreiche Verbindung bestätigt wird.
 

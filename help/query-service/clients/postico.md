@@ -5,10 +5,10 @@ title: Verbindung mit Query Service
 topic-legacy: connect
 description: Dieses Dokument enthält den Link zur Installation des Backup-Clients Postico für Adobe Experience Platform Query Service.
 exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
-source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 7%
+source-wordcount: '291'
+ht-degree: 6%
 
 ---
 
@@ -24,7 +24,7 @@ In diesem Dokument werden die Schritte zum Verbinden von [!DNL Postico] mit Adob
 
 Verbindung herstellen [!DNL Postico] zu Query Service, öffnen Sie [!DNL Postico] und wählen Sie **[!DNL New Favorite]**.
 
-![](../images/clients/postico/open-postico.png)
+![Die [!DNL Postico] Benutzeroberfläche mit hervorgehobenem neuen Favoriten.](../images/clients/postico/open-postico.png)
 
 Sie können jetzt Werte eingeben, um eine Verbindung mit Adobe Experience Platform herzustellen.
 
@@ -32,25 +32,25 @@ Weitere Informationen zum Auffinden Ihres Datenbanknamens, Hosts, Ports und Ihre
 
 Nachdem Sie Ihre Anmeldedaten eingefügt haben, wählen Sie **[!DNL Connect]** , um eine Verbindung mit Query Service herzustellen.
 
-![](../images/clients/postico/authentication-details.png)
+![Das Dialogfeld &quot;New Favorite&quot;mit hervorgehobener Verbindung.](../images/clients/postico/authentication-details.png)
 
 Nach der Verbindung mit Platform können Sie eine Liste aller zuvor mit Query Service vorgenommenen Relationen anzeigen.
 
-![](../images/clients/postico/show-queries.png)
+![Eine Liste der Verbindungen im [!DNL Postico] Benutzeroberfläche.](../images/clients/postico/show-queries.png)
 
 ## SQL-Anweisungen erstellen
 
 Um eine neue SQL-Abfrage zu erstellen, wählen Sie &quot;SQL-Abfrage&quot;aus und öffnen Sie sie.
 
-![](../images/clients/postico/create-query.png)
+![Die [!DNL Postico] Benutzeroberfläche mit hervorgehobenem SQL-Abfragebefehl.](../images/clients/postico/create-query.png)
 
 Es wird ein Feld angezeigt, in das Sie die auszuführende Abfrage eingeben können. Wenn Sie fertig sind, wählen Sie **[!DNL Execute Statement]** , um die Abfrage auszuführen.
 
-![](../images/clients/postico/run-statement.png)
+![Der SQL-Editor mit Execute Statement hervorgehoben.](../images/clients/postico/run-statement.png)
 
 Es wird eine Tabelle mit den Ergebnissen Ihrer abgeschlossenen Abfrage-Ausführung angezeigt.
 
-![](../images/clients/postico/query-results.png)
+![Eine Tabelle mit Ergebnissen aus der Beispielabfrage.](../images/clients/postico/query-results.png)
 
 ## Nächste Schritte
 

@@ -1,9 +1,9 @@
 ---
 title: Jupyter Notebook mit Query Service verbinden
 description: Erfahren Sie, wie Sie Jupyter Notebook mit Adobe Experience Platform Query Service verbinden.
-source-git-commit: f910deca43ac49d3a3452b8dbafda20ffdf3bf48
+source-git-commit: af37fe3be6b9645965b7477b9b85c5e11fe6fbae
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '615'
 ht-degree: 3%
 
 ---
@@ -30,7 +30,7 @@ So erwerben Sie die erforderlichen Anmeldeinformationen zum Herstellen einer Ver
 
 Nachdem Sie eine neue [!DNL Jupyter Notebook] Webanwendung, wählen Sie die **[!DNL New]** Dropdown-Liste, gefolgt von **[!DNL Python 3]** , um ein neues Notebook zu erstellen. Die [!DNL Notebook] Editor angezeigt.
 
-![Die [!DNL Jupiter Notebook] Registerkarte Datei mit der [!DNL New dropdown] und [!DNL Python] 3 hervorgehoben.](../images/clients/jupyter-notebook/new-notebook.png)
+![Die [!DNL Jupiter Notebook] Registerkarte Datei mit der [!DNL New] Dropdown und [!DNL Python] 3 hervorgehoben.](../images/clients/jupyter-notebook/new-notebook.png)
 
 In der ersten Zeile des [!DNL Notebook] den folgenden Wert eingeben: `pip install psycopg2-binary` und wählen Sie **[!DNL Run]** über die Befehlszeile. Eine Erfolgsmeldung wird unter der Eingabefelder angezeigt.
 

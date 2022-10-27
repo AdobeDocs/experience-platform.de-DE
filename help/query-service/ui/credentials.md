@@ -5,9 +5,9 @@ title: Anleitung zu Query Service-Anmeldedaten
 topic-legacy: guide
 description: Adobe Experience Platform Query Service bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzern in Ihrer IMS-Organisation gespeichert wurden.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: f3052745105df603e547535a12285b6c1d771fa6
+source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
 workflow-type: tm+mt
-source-wordcount: '1186'
+source-wordcount: '1204'
 ht-degree: 2%
 
 ---
@@ -82,9 +82,9 @@ Die JSON-Konfigurationsdatei enthält Informationen wie den Namen des technische
 
 Nachdem Sie die generierten Anmeldeinformationen gespeichert haben, wählen Sie **[!UICONTROL Schließen]**. Sie können jetzt eine Liste aller nicht ablaufenden Anmeldedaten anzeigen.
 
-![Die Registerkarte &quot;Fragen-Dashboard-Anmeldedaten&quot;mit dem Abschnitt Nicht ablaufende Anmeldedaten wurde erweitert.](../images/ui/credentials/list-credentials.png)
+![Die Registerkarte &quot;Fragen-Dashboard-Anmeldedaten&quot;mit dem Abschnitt Nicht ablaufende Anmeldedaten wurde hervorgehoben.](../images/ui/credentials/list-credentials.png)
 
-Sie können Ihre nicht ablaufenden Anmeldedaten entweder bearbeiten oder löschen. Um eine nicht ablaufende Berechtigung zu bearbeiten, wählen Sie das Stiftsymbol (![](../images/ui/credentials/edit-icon.png)). Um eine nicht ablaufende Berechtigung zu löschen, wählen Sie das Löschsymbol (![](../images/ui/credentials/delete-icon.png)).
+Sie können Ihre nicht ablaufenden Anmeldedaten entweder bearbeiten oder löschen. Um eine nicht ablaufende Berechtigung zu bearbeiten, wählen Sie das Stiftsymbol (![Ein Bleistiftsymbol.](../images/ui/credentials/edit-icon.png)). Um eine nicht ablaufende Berechtigung zu löschen, wählen Sie das Löschsymbol (![Ein Papierkorbsymbol.](../images/ui/credentials/delete-icon.png)).
 
 Beim Bearbeiten einer nicht ablaufenden Berechtigung wird ein Modal angezeigt. Sie können die folgenden Details zur Aktualisierung angeben:
 
@@ -102,7 +102,7 @@ Sie können die ablaufenden oder nicht ablaufenden Anmeldedaten verwenden, um ei
 
 Das Bild zeigt den Speicherort der einzelnen Parameter in der Benutzeroberfläche an, mit Ausnahme des Kennworts der nicht ablaufenden Anmeldeinformationen. Während nicht ablaufende Anmeldeinformationen von ihren JSON-Konfigurationsdateien bereitgestellt werden, können Sie Ihre ablaufenden Anmeldeinformationen unter der **Anmeldeinformationen** in der Benutzeroberfläche.
 
-![](../images/ui/credentials/expiring-credentials.png)
+![Die Registerkarte &quot;Query Workspace Credentials&quot;mit dem Abschnitt Expending credentials wurde hervorgehoben.](../images/ui/credentials/expiring-credentials.png)
 
 In der folgenden Tabelle sind die Parameter aufgeführt, die normalerweise für die Verbindung mit externen Clients erforderlich sind.
 

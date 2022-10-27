@@ -2,7 +2,7 @@
 title: Abfragevorlagen
 description: Abfragevorlagen sind wiederverwendbare gespeicherte SQL-Abfragen, die von anderen Benutzern wiederverwendet werden können, um Zeit und Mühe zu sparen. Sie können mit dem Abfrage-Editor oder der Query Service-API erstellt werden und sind für alle Experience Platform-Datensätze verfügbar.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: b6aaa3baaf8b3ff139ba6ebc7f14ac283ad52241
+source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 2%
@@ -27,9 +27,11 @@ Sie können Abfragevorlagen auf zwei Arten erstellen, indem Sie entweder eine PO
 
 In der Dokumentation finden Sie Anweisungen zur Verwendung des Abfrage-Editors für [schreiben](./user-guide.md#query-authoring) und [Abfragen speichern](./user-guide.md#saving-queries). Nachdem Sie Ihre Abfrage benannt und gespeichert haben, kann sie als Abfragevorlage aus dem [!UICONTROL Durchsuchen] Registerkarte.
 
-Wählen Sie im Arbeitsbereich Abfragen der Platform-Benutzeroberfläche die Option **[!UICONTROL Durchsuchen]** , um die Liste der verfügbaren gespeicherten Abfragen anzuzeigen.
+Wählen Sie im Arbeitsbereich Abfragen der Platform-Benutzeroberfläche die Option **[!UICONTROL Vorlagen]** , um die Liste der verfügbaren gespeicherten Abfragen anzuzeigen.
 
-![Der Arbeitsbereich &quot;Abfragen&quot;mit der Registerkarte &quot;Durchsuchen&quot;wurde hervorgehoben.](../images/ui/query-templates/query-templates.png)
+<!-- This may need updating idf the Schedule are added to a separate Tab -->
+
+![Der Arbeitsbereich &quot;Abfragen&quot;mit der Registerkarte &quot;Vorlagen&quot;wurde hervorgehoben.](../images/ui/query-templates/query-templates.png)
 
 Um relevante Vorlageninformationen zu finden, wählen Sie eine beliebige Abfragevorlage aus der verfügbaren Liste aus, um den Detailbereich zu öffnen.
 

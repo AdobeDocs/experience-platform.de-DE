@@ -5,9 +5,9 @@ title: Übersicht über die Experience Platform-Benutzeroberfläche
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 769e8e6e5d159254d34ad1d3e5e468c3b0bca10b
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '1812'
+source-wordcount: '1811'
 ht-degree: 4%
 
 ---
@@ -154,7 +154,7 @@ Die **[!UICONTROL Schemas]** können Sie Experience-Datenmodell (XDM)-Schemas er
 
 Die **[!UICONTROL Datensätze]** -Bereich können Sie Datensätze erstellen und verwalten. Weitere Informationen zu Datensätzen finden Sie im [Benutzerhandbuch zu Datensätzen](../catalog/datasets/user-guide.md).
 
-Die **[!UICONTROL Abfragen]** können Sie Abfragen erstellen und verwalten, SQL-Abfragen von Adobe Experience Platform Query Service protokollieren und Ihre PostgreSQL-Anmeldeinformationen anzeigen. Weitere Informationen zu Abfragen finden Sie im Abschnitt [Benutzerhandbuch zu Query Service](../query-service/ui/overview.md).
+Die **[!UICONTROL Abfragen]** -Abschnitt bietet Ihnen die Möglichkeit, Abfragen zu erstellen und zu verwalten, SQL-Abfragen von Adobe Experience Platform Query Service zu protokollieren und Ihre [!DNL PostgreSQL] Anmeldedaten. Weitere Informationen zu Abfragen finden Sie im Abschnitt [Benutzerhandbuch zu Query Service](../query-service/ui/overview.md).
 
 Die **[!UICONTROL Überwachung]** -Bereich können Sie die Batch- und Streaming-Erfassung überwachen. Weitere Informationen zur Überwachung finden Sie im [Benutzerhandbuch zur Überwachung der Datenerfassung](../ingestion/quality/monitor-data-ingestion.md).
 

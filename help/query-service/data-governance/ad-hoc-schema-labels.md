@@ -2,9 +2,9 @@
 title: Unterstützung der attributbasierten Zugriffssteuerung für Ad-hoc-Schemas
 description: Eine Anleitung zum Einschränken des Zugriffs auf Datenfelder in Ad-hoc-Schemata, die über Adobe Experience Platform Query Service generiert wurden.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: d955473fb9123a6fc2384cde4073c713b921f582
+source-git-commit: 91f318596bf268aa93e8b2df9c13774aab76d13a
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1040'
 ht-degree: 8%
 
 ---
@@ -56,13 +56,13 @@ Um Datenbezeichnungen für Ihr Ad-hoc-Schema zu bearbeiten, wählen Sie die [!UI
 
 ## Bezeichnungen für Schema oder Feld bearbeiten
 
-Um die Beschriftungen für das gesamte Schema zu bearbeiten, wählen Sie das Stiftsymbol (![](../images/data-governance/edit-icon.png)) neben dem Namen des Schemas unter dem [!UICONTROL Bezeichnungen] Registerkarte.
+Um die Beschriftungen für das gesamte Schema zu bearbeiten, wählen Sie das Stiftsymbol (![Ein Bleistiftsymbol.](../images/data-governance/edit-icon.png)) neben dem Namen des Schemas unter dem [!UICONTROL Bezeichnungen] Registerkarte.
 
 ![Die Beschriftungsansicht im Arbeitsbereich &quot;Schemas&quot;mit hervorgehobenem Stiftsymbol.](../images/data-governance/edit-entire-schema-labels.png)
 
 Um eine Beschriftung auf ein vorhandenes Feld anzuwenden, wählen Sie ein oder mehrere Felder aus der Liste aus, gefolgt von [!UICONTROL Bearbeiten von Governance-Titeln] in der rechten Seitenleiste.
 
-![Die Beschriftungsansicht im Arbeitsbereich &quot;Schemas&quot;mit der Option &quot;Governance-Beschriftungen bearbeiten&quot;wird in der Seitenleiste der Rechteleiste hervorgehoben.](../images/data-governance/edit-governance-labels.png)
+![Die Beschriftungsansicht im Arbeitsbereich &quot;Schemas&quot;mit der Option &quot;Governance-Beschriftungen bearbeiten&quot;wird in der rechten Seitenleiste hervorgehoben.](../images/data-governance/edit-governance-labels.png)
 
 ## Popover &quot;Bezeichnungen bearbeiten&quot;
 

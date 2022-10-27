@@ -5,9 +5,9 @@ title: Aqua Data Studio mit Query Service verbinden
 topic-legacy: connect
 description: In diesem Dokument werden die Schritte zum Verbinden von Aqua Data Studio mit Query Service von Adobe Experience Platform erläutert.
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '487'
 ht-degree: 10%
 
 ---
@@ -40,7 +40,7 @@ Die **[!DNL Register Server]** angezeigt. Unter dem **[!DNL General]** Registerk
 - **[!DNL Host and Port]**: Der Host-Endpunkt und sein Port für [!DNL Query Service]. Sie müssen Port 80 verwenden, um eine Verbindung mit [!DNL Query Service].
 - **[!DNL Database]:** Die zu verwendende Datenbank. Verwenden Sie den Wert für die Anmeldedaten der Platform-Benutzeroberfläche `dbname`: `prod:all`.
 
-![Registerkarte Aqua Data Studio General mit den erforderlichen Eingabefeldern hervorgehoben.](../images/clients/aqua-data-studio/register-server-general-tab.png)
+![Die [!DNL Aqua Data Studio] Registerkarte Allgemein mit den erforderlichen Eingabefeldern hervorgehoben.](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
 ### [!DNL Query Service] Anmeldeinformationen
 
@@ -56,7 +56,7 @@ Wählen Sie als Nächstes die **[!DNL Driver]** Registerkarte. under **[!DNL Par
 >
 >Siehe [[!DNL Query Service] SSL-Dokumentation](./ssl-modes.md) Erfahren Sie mehr über die SSL-Unterstützung für Drittanbieterverbindungen zu Adobe Experience Platform Query Service und über die Verbindung mit `verify-full` SSL-Modus.
 
-![Registerkarte Aqua Data Studio-Treiber mit hervorgehobenem Feld Parameter .](../images/clients/aqua-data-studio/register-server-driver-tab.png)
+![Die [!DNL Aqua Data Studio] Registerkarte Treiber mit dem Feld Parameter hervorgehoben.](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
 Nachdem Sie Ihre Verbindungsdetails eingegeben haben, wählen Sie **[!DNL Test Connection]** , um sicherzustellen, dass Ihre Anmeldeinformationen ordnungsgemäß funktionieren. Wenn Ihr Verbindungstest erfolgreich ist, wählen Sie **[!DNL Save]** um Ihren Server zu registrieren. Es wird ein Bestätigungsdialogfeld angezeigt, in dem die Verbindung bestätigt wird und die Verbindung im Dashboard angezeigt wird. Sie können jetzt eine Verbindung zum Server herstellen und seine Schemaobjekte anzeigen.
 
