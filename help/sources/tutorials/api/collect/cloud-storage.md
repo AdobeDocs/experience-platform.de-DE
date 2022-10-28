@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Cloud-Speicher eines Drittanbieters und zum Importieren dieser Daten in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 1f492fd48de304c70fdd8beb477b8a22369b853a
+source-git-commit: e4853c61848bec20eb8a6902365b97c3a9d0b3b3
 workflow-type: tm+mt
-source-wordcount: '1692'
-ht-degree: 75%
+source-wordcount: '1736'
+ht-degree: 74%
 
 ---
 
@@ -146,6 +146,47 @@ curl -X POST \
       "params": {
           "path": "/acme/summerCampaign/*premium*.csv",
           "type": "folder"
+      },
+      "connectionSpec": {
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+          "version": "1.0"
+      }
+  }'
+```
+
+### Quellverbindung zur rekursiven Erfassung von Daten konfigurieren
+
+Beim Erstellen einer Quellverbindung können Sie die `recursive` Parameter zum Erfassen von Daten aus tief verschachtelten Ordnern.
+
+**API-Format**
+
+```http
+POST /sourceConnections
+```
+
+**Anfrage**
+
+Im folgenden Beispiel wird die Variable `recursive: true` Parameterinformationen [!DNL Flow Service] , um während des Aufnahmevorgangs alle Unterordner rekursiv zu lesen.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Cloud Storage source connection",
+      "description: "Source connection for a cloud storage source with recursive ingestion",
+      "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
+      "data": {
+          "format": "delimited"
+      },
+      "params": {
+          "path": "/acme/summerCampaign/customers/premium/buyers/recursive",
+          "type": "folder",
+          "recursive": true
       },
       "connectionSpec": {
           "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
