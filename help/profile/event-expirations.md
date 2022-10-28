@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Ablauf von Erlebnisereignissen
 description: Dieses Dokument enthält allgemeine Anleitungen zum Konfigurieren der Ablaufzeiten für einzelne Erlebnisereignisse in einem Adobe Experience Platform-Datensatz.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: faf9e72f77f04b20d2399749eaacdb9ebdf412dc
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '466'
 ht-degree: 2%
 
 ---
 
 # Ablauf von Erlebnisereignissen
 
-In Adobe Experience Platform können Sie Ablaufzeiten für alle Erlebnisereignisse konfigurieren, die in einen Datensatz erfasst werden, der für [Echtzeit-Kundenprofil](./home.md). Auf diese Weise können Sie automatisch Daten aus dem Daten-Pool und Profilspeicher entfernen, die für Ihre Anwendungsfälle nicht mehr gültig oder nützlich sind.
+In Adobe Experience Platform können Sie Ablaufzeiten für alle Erlebnisereignisse konfigurieren, die in einen Datensatz erfasst werden, der für [Echtzeit-Kundenprofil](./home.md). Auf diese Weise können Sie automatisch Daten aus dem Profilspeicher entfernen, die für Ihre Anwendungsfälle nicht mehr gültig oder nützlich sind.
 
 Experience Event-Abläufe können nicht über die Platform-Benutzeroberfläche oder APIs konfiguriert werden. Stattdessen müssen Sie sich an den Support wenden, um Erlebnisereignisse für Ihre erforderlichen Datensätze zu aktivieren.
 
@@ -25,7 +25,7 @@ Experience Event-Abläufe können nicht über die Platform-Benutzeroberfläche o
 
 Nachdem der Ablauf von Erlebnisereignissen für einen Datensatz mit aktiviertem Profil aktiviert wurde, wendet Platform die Ablaufwerte automatisch für jedes erfasste Ereignis in einem zweistufigen Prozess an:
 
-1. Bei allen neuen Daten, die in den Datensatz aufgenommen werden, wird der Ablaufwert zur Erfassungszeit angewendet.
+1. Bei allen neuen Daten, die in den Datensatz aufgenommen werden, wird der Ablaufwert zur Erfassungszeit auf der Grundlage des Ereigniszeitstempels angewendet.
 1. Für alle vorhandenen Daten im Datensatz wird der Ablaufwert rückwirkend als einmaliger Aufstockungssystemauftrag angewendet. Sobald der Ablaufwert im Datensatz platziert wurde, werden Ereignisse, die älter als der Ablaufwert sind, sofort bei Ausführung des Systemauftrags gelöscht. Alle anderen Ereignisse werden entfernt, sobald sie ihre Ablaufwerte aus dem Ereigniszeitstempel erreichen.
 
 >[!WARNING]
