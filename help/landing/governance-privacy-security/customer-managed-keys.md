@@ -1,10 +1,10 @@
 ---
 title: Vom Kunden verwaltete Schlüssel in Adobe Experience Platform
 description: Erfahren Sie, wie Sie eigene Verschlüsselungsschlüssel für in Adobe Experience Platform gespeicherte Daten einrichten.
-source-git-commit: b778d5c81512e538f08989952f8727d1d694f66c
+source-git-commit: 02898f5143a7f4f48c64b22fb3c59a072f1e957d
 workflow-type: tm+mt
-source-wordcount: '1501'
-ht-degree: 2%
+source-wordcount: '1493'
+ht-degree: 1%
 
 ---
 
@@ -24,14 +24,14 @@ CMK ist Teil des Gesundheitsschilds und des Datenschutzschilds der Adobe. Nachde
 
 Der Prozess sieht folgendermaßen aus:
 
-1. [Erstellen Sie eine [!DNL Microsoft Azure] Key Vault](#create-key-vault), dann [einen Verschlüsselungsschlüssel generieren](#generate-a-key) (basierend auf den Richtlinien Ihres Unternehmens), die letztendlich für die Adobe freigegeben werden.
-1. Verwenden Sie API-Aufrufe für [die CMK-App registrieren](#register-app) mit [!DNL Azure] Mandanten.
-1. [Dienstprinzipal für die CMK-App zuweisen](#assign-to-role) auf eine geeignete Rolle für den Schlüsselgewölbe.
-1. Verwenden Sie API-Aufrufe für [Ihre Verschlüsselungsschlüssel-ID an Adobe senden](#send-to-adobe).
+1. [Konfigurieren Sie eine [!DNL Microsoft Azure] Key Vault](#create-key-vault) auf der Grundlage der Richtlinien Ihres Unternehmens und [einen Verschlüsselungsschlüssel generieren](#generate-a-key) das letztendlich mit der Adobe geteilt wird.
+1. Verwenden Sie API-Aufrufe für [Einrichten der CMK-App](#register-app) mit [!DNL Azure] Mandanten.
+1. Verwenden Sie API-Aufrufe für [Ihre Verschlüsselungsschlüssel-ID an Adobe senden](#send-to-adobe) und starten Sie den Aktivierungsprozess für die Funktion.
+1. [Prüfen des Status der Konfiguration](#check-status) , um zu überprüfen, ob CMK aktiviert wurde.
 
-Sobald der Einrichtungsprozess abgeschlossen ist, werden alle Daten, die über alle Sandboxes in Platform integriert werden, mit Ihrer [!DNL Azure] Schlüsseleinrichtung, die für Ihre [[!DNL Cosmos DB]](https://docs.microsoft.com/de-de/azure/cosmos-db/) und [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) Ressourcen. Zur Verwendung von CMK nutzen Sie [!DNL Microsoft Azure] Funktionen, die Teil der [öffentliches Vorschaufenster](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
+Sobald der Einrichtungsprozess abgeschlossen ist, werden alle Daten, die über alle Sandboxes in Platform integriert werden, mit Ihrer [!DNL Azure] Schlüsseleinrichtung. Zur Verwendung von CMK nutzen Sie [!DNL Microsoft Azure] Funktionen, die Teil der [öffentliches Vorschaufenster](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
-## Erstellen Sie eine [!DNL Azure] Key Vault {#create-key-vault}
+## Konfigurieren Sie eine [!DNL Azure] Key Vault {#create-key-vault}
 
 CMK unterstützt nur Schlüssel aus einem [!DNL Microsoft Azure] Key Vault. Zunächst müssen Sie mit [!DNL Azure] , um ein neues Unternehmenskonto zu erstellen oder ein vorhandenes Unternehmenskonto zu verwenden, und führen Sie die folgenden Schritte aus, um das Key Vault zu erstellen.
 
@@ -65,7 +65,7 @@ Sobald Sie bei der **[!DNL Review + create]** Schritt, können Sie die Details d
 
 ![Grundlegende Konfiguration für den Key Vault](../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
 
-## Netzwerkoptionen konfigurieren
+### Netzwerkoptionen konfigurieren
 
 Wenn Ihr Key Vault so konfiguriert ist, dass der öffentliche Zugriff auf bestimmte virtuelle Netzwerke eingeschränkt oder der öffentliche Zugriff vollständig deaktiviert wird, müssen Sie Microsoft eine Firewall-Ausnahme gewähren.
 
@@ -73,7 +73,7 @@ Auswählen **[!DNL Networking]** in der linken Navigation. under **[!DNL Firewal
 
 ![Grundlegende Konfiguration für den Key Vault](../images/governance-privacy-security/customer-managed-keys/networking.png)
 
-## Schlüssel generieren {#generate-a-key}
+### Schlüssel generieren {#generate-a-key}
 
 Nachdem Sie einen Schlüssel erstellt haben, können Sie einen neuen Schlüssel generieren. Navigieren Sie zum **[!DNL Keys]** Registerkarte und wählen Sie **[!DNL Generate/Import]**.
 
@@ -93,7 +93,7 @@ Der konfigurierte Schlüssel wird in der Liste der Schlüssel für den Vault ang
 
 ![Schlüssel hinzugefügt](../images/governance-privacy-security/customer-managed-keys/key-added.png)
 
-## Registrieren der CMK-App {#register-app}
+## Einrichten der CMK-App {#register-app}
 
 Nachdem Sie Ihren KeyVault konfiguriert haben, müssen Sie sich für die CMK-Anwendung registrieren, die mit Ihrer [!DNL Azure] Mandanten.
 
@@ -135,7 +135,7 @@ Kopieren und einfügen Sie die `applicationRedirectUrl` Adresse in einen Browser
 
 ![Genehmigungsanfrage](../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
-## Zuweisen der CMK-App zu einer Rolle {#assign-to-role}
+### Zuweisen der CMK-App zu einer Rolle {#assign-to-role}
 
 Navigieren Sie nach Abschluss des Authentifizierungsprozesses zu Ihrer [!DNL Azure] Key Vault und Auswahl **[!DNL Access control]** in der linken Navigation. Wählen Sie von hier aus **[!DNL Add]** gefolgt von **[!DNL Add role assignment]**.
 
@@ -151,7 +151,7 @@ Wählen Sie auf dem nächsten Bildschirm **[!DNL Select members]** , um ein Dial
 >
 >Wenn Sie Ihre Anwendung nicht in der Liste finden, wurde Ihr Dienstprinzipal nicht in Ihrem Mandanten akzeptiert. Arbeiten Sie bitte mit Ihrem [!DNL Azure] Administrator oder Support-Mitarbeiter, um sicherzustellen, dass Sie über die richtigen Berechtigungen verfügen.
 
-## Senden des Schlüssel-URI an Adobe {#send-to-adobe}
+## Verschlüsselungsschlüsselkonfiguration auf Experience Platform aktivieren {#send-to-adobe}
 
 Nach der Installation der CMK-App auf [!DNL Azure]können Sie Ihre Verschlüsselungsschlüsselkennung an Adobe senden. Auswählen **[!DNL Keys]** in der linken Navigation gefolgt vom Namen des Schlüssels, den Sie senden möchten.
 
@@ -221,7 +221,7 @@ Eine erfolgreiche Antwort gibt die Details des Konfigurationsauftrags zurück.
 
 Der Auftrag sollte die Verarbeitung innerhalb weniger Minuten abschließen.
 
-### Überprüfen des Konfigurationsstatus {#check-status}
+## Überprüfen des Konfigurationsstatus {#check-status}
 
 Um den Status der Konfigurationsanfrage zu überprüfen, können Sie eine GET-Anfrage stellen.
 
