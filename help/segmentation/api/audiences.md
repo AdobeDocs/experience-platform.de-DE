@@ -4,14 +4,20 @@ title: Zielgruppen-API-Endpunkt
 topic-legacy: developer guide
 description: Mit dem Zielgruppen-Endpunkt in der Adobe Experience Platform Segmentation Service-API können Sie Zielgruppen für Ihr Unternehmen programmgesteuert verwalten.
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
+hide: true
+hidefromtoc: true
+source-git-commit: f4ec5b82a14579de5bf228011d14a849898be9f5
 workflow-type: tm+mt
-source-wordcount: '1492'
-ht-degree: 8%
+source-wordcount: '1515'
+ht-degree: 9%
 
 ---
 
 # Zielgruppen-Endpunkt
+
+>[!IMPORTANT]
+>
+>Der Zielgruppen-Endpunkt befindet sich derzeit in der Beta-Phase und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
 
 Eine Zielgruppe ist eine Sammlung von Personen, die ähnliche Verhaltensweisen und/oder Merkmale aufweisen. Diese Personensammlungen können entweder mit Adobe Experience Platform oder aus externen Quellen erstellt werden. Sie können die `/audiences` -Endpunkt in der Segmentation-API, mit dem Sie Zielgruppen programmgesteuert abrufen, erstellen, aktualisieren und löschen können.
 

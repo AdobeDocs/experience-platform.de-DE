@@ -4,10 +4,10 @@ title: Handbuch zur Segmentierungsdienst-API
 topic-legacy: guide
 description: Mit der Segmentation Service-API können Entwickler Segmentierungsvorgänge in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: b48ead4255d50585cd315436ccb9727d86142d4c
+source-git-commit: 6133c3127aaf10243d5472540c29125155c99d7b
 workflow-type: tm+mt
-source-wordcount: '564'
-ht-degree: 8%
+source-wordcount: '497'
+ht-degree: 9%
 
 ---
 
@@ -19,11 +19,11 @@ Die [!DNL Segmentation Service] Die API bietet mehrere Endpunkte, mit denen Sie 
 
 Informationen zum Anzeigen aller verfügbaren Endpunkte und CRUD-Vorgänge finden Sie im Abschnitt [Referenz zur Segmentierungsdienst-API](https://www.adobe.io/experience-platform-apis/references/segmentation/).
 
-## Audiences
+<!-- ## Audiences
 
-Zielgruppen sind eine Sammlung von Personen, die ähnliche Verhaltensweisen und/oder Merkmale aufweisen. Diese können entweder mithilfe von Platform oder aus externen Quellen generiert werden. Sie können die `/audiences` Endpunkt zum Abrufen aller Zielgruppen, Erstellen einer neuen Zielgruppe, Abrufen von Details einer bestimmten Zielgruppe, Aktualisieren einer bestimmten Zielgruppe oder Löschen einer bestimmten Zielgruppe.
+Audiences are a collection of people who share similar behaviors and/or characteristics. These can be generated either by using Platform or from external sources. You can use the `/audiences` endpoint to retrieve all audiences, create a new audience, retrieve details of a specific audience, update a specific audience, or delete a specific audience.
 
-Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im Abschnitt [Handbuch zum Zielgruppen-Endpunkt](./audiences.md).
+For more information on using this endpoint, please read the [audiences endpoint guide](./audiences.md). -->
 
 ## Exportaufträge
 
