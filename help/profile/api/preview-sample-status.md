@@ -3,9 +3,9 @@ keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; AP
 title: API-Endpunkt "Vorschaustatus"(Profilvorschau)
 description: Mit dem Beispielstatusendpunkt "Vorschau"der Echtzeit-Kundenprofil-API können Sie eine Vorschau des neuesten erfolgreichen Beispiels Ihrer Profildaten anzeigen, die Profilverteilung nach Datensatz und Identität auflisten und Berichte mit Datensatzüberschneidungen, Identitätsüberschneidungen und nicht zugewiesenen Profilen erstellen.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 8a17648757b342bd8026382918ca41c469210b51
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '2875'
+source-wordcount: '2874'
 ht-degree: 5%
 
 ---
@@ -303,7 +303,7 @@ Die Antwort enthält eine `data` -Array mit einzelnen Objekten, die die Details 
 
 ## Erstellen eines Berichts zur Datensatzüberschneidung
 
-Der Bericht zur Datensatzüberschneidung bietet einen Einblick in die Zusammensetzung des Profilspeichers Ihres Unternehmens, indem er die Datensätze verfügbar macht, die am meisten zu Ihrer adressierbaren Zielgruppe (zusammengeführten Profilen) beitragen. Dieser Bericht bietet nicht nur Einblicke in Ihre Daten, sondern ermöglicht Ihnen auch Maßnahmen zur Optimierung der Lizenznutzung, z. B. die Festlegung einer TTL für bestimmte Datensätze.
+Der Bericht zur Datensatzüberschneidung bietet einen Einblick in die Zusammensetzung des Profilspeichers Ihres Unternehmens, indem er die Datensätze verfügbar macht, die am meisten zu Ihrer adressierbaren Zielgruppe (zusammengeführten Profilen) beitragen. Dieser Bericht bietet Ihnen nicht nur Einblicke in Ihre Daten, sondern ermöglicht Ihnen auch Maßnahmen zur Optimierung der Lizenznutzung, z. B. die Festlegung von Ablauffristen für bestimmte Datensätze.
 
 Sie können den Bericht zur Datensatzüberschneidung generieren, indem Sie eine GET-Anfrage an die `/previewsamplestatus/report/dataset/overlap` -Endpunkt.
 

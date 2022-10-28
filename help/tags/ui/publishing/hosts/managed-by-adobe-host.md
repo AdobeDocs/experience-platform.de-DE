@@ -2,10 +2,10 @@
 title: Übersicht über von Adobe verwaltete Hosts
 description: Erfahren Sie mehr über die Standard-Hosting-Option für die Bereitstellung von Tag-Bibliotheks-Builds in Adobe Experience Platform.
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
 source-wordcount: '1173'
-ht-degree: 97%
+ht-degree: 89%
 
 ---
 
@@ -54,7 +54,7 @@ Sobald Ihr Build auf dem von Adobe verwalteten Host bereitgestellt wurde, vertei
 >
 >Bei von Adobe verwalteten Hosts kann es bis zu fünf Minuten dauern, bis die allererste in einer neuen Umgebung veröffentlichte Bibliothek an das globale CDN übertragen wird.
 
-Wenn ein Edge-Knoten eine Anfrage für eine bestimmte Datei empfängt (z. B. Ihren Bibliotheks-Build), prüft der Knoten zunächst den TTL-Wert (Time-to-Live) in der Datei. Wenn die TTL noch nicht abgelaufen ist, wird die zwischengespeicherte Version von den Edge-Knoten bereitgestellt. Ist die TTL jedoch abgelaufen, fordert der Edge-Knoten eine neue Kopie von der nächsten Quelle an, stellt die aktualisierte Kopie bereit und cacht die aktualisierte Kopie mit einer neuen TTL.
+Wenn ein Edge-Knoten eine Anforderung für eine bestimmte Datei erhält (z. B. Ihren Bibliotheks-Build), prüft der Knoten zunächst die Ablaufzeit für die Datei. Wenn die Zeit nicht abgelaufen ist, stellt der Edge-Knoten die zwischengespeicherte Version bereit. Wenn die Zeit abgelaufen ist, fordert der Edge-Knoten eine neue Kopie von der nächsten Quelle an, stellt diese aktualisierte Kopie bereit und speichert dann die aktualisierte Kopie mit einer neuen Ablaufzeit zwischen.
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ Diese gestaffelten Cache-Invalidierungen geben den Quell-Server-Gruppen Zeit, di
 
 Bibliotheks-Builds werden auch über den `cache-control`-HTTP-Header im Browser zwischengespeichert. Bei der Verwendung von Hosts, die von Adobe verwaltet werden, haben Sie keine Kontrolle über die Header, die in API-Antworten zurückgegeben werden. Daher wird die Adobe-Standardeinstellung für die Zwischenspeicherung verwendet. Mit anderen Worten können Sie keine benutzerdefinierten Header für von Adobe verwaltete Hosts verwenden. Wenn Sie einen benutzerdefinierten `cache-control`-Header benötigen, sollten Sie das Hosting stattdessen [selbst übernehmen](self-hosting-libraries.md).
 
-Die „Time-to-Live“ (TTL) für Ihren im Browser zwischengespeicherten Bibliotheks-Build (der durch den `cache-control`-Header bestimmt wird) hängt von der verwendeten Tag-Umgebung ab:
+Die Ablaufzeit für Ihren im Browser zwischengespeicherten Bibliotheks-Build (bestimmt durch die Variable `cache-control` -Kopfzeile) hängt von der verwendeten Tag-Umgebung ab:
 
 | Umgebung | Wert `cache-control` |
 | --- | --- |

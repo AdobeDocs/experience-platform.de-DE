@@ -5,10 +5,10 @@ title: Segmentierungs-Service – Übersicht
 topic-legacy: overview
 description: Erfahren Sie mehr über den Segmentierungs-Service von Adobe Experience Platform und die Rolle, die dieser im Platform-Ökosystem spielt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 52197a6c009fb5b0b6037a4fef3c98ad7c327e2e
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '1632'
-ht-degree: 100%
+source-wordcount: '1635'
+ht-degree: 97%
 
 ---
 
@@ -44,7 +44,7 @@ Informationen zum Erstellen von Segmentdefinitionen mithilfe der API finden Sie 
 >
 >Bei einer Erweiterung eines Schemas müssen bei allen künftigen Uploads auch die neu hinzugefügten Felder entsprechend aktualisiert werden. Weitere Informationen zum Anpassen von [!DNL Experience Data Model] (XDM) finden Sie im [Tutorial zum Schema-Editor](../xdm/tutorials/create-schema-ui.md).
 >
->Wenn die Time-to-Live (TTL) für den Datensatz aktiviert ist, könnte sich dies auf die Zugehörigkeit des erstellten Segments auswirken. Weiterführende Informationen zur TTL und deren Auswirkungen auf die Segmentierung finden Sie im Handbuch [Profile Service TTL](../profile/apply-ttl.md).
+>Wenn außerdem ein Erlebnisereignis-Ablaufwert für den Datensatz aktiviert ist, kann sich dies auf die Mitgliedschaft des erstellten Segments auswirken. Lesen Sie das Handbuch unter [Ablauf von Erlebnisereignissen](../profile/event-expirations.md) Weitere Informationen dazu, wie sich diese Funktion auf die Segmentierung auswirken kann.
 
 ## Evaluieren von Segmenten {#evaluate-segments}
 

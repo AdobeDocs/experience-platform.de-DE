@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Flow Service-API Adobe Experience Platform mit Data Landing Zone verbinden.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: b98afad74ef45cf3fabb9fa1ced283b2c768cef8
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1224'
 ht-degree: 20%
 
 ---
@@ -72,7 +72,7 @@ Die folgende Antwort gibt Informationen zu einer Landingzone zurück, einschlie�
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `containerName` | Der Name der abgerufenen Landingzone. |
-| `containerTTL` | Die Time-to-Live-Einstellung, die auf Ihre Daten in der Landingzone angewendet wird. Jede Person innerhalb einer bestimmten Landingzone wird nach sieben Tagen gelöscht. |
+| `containerTTL` | Die Ablaufzeit (in Tagen), die auf Ihre Daten in der Landingzone angewendet wird. Jede Person innerhalb einer bestimmten Landingzone wird nach sieben Tagen gelöscht. |
 
 ## Abrufen [!DNL Data Landing Zone] Anmeldeinformationen
 

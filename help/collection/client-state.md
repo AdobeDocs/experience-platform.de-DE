@@ -4,10 +4,10 @@ description: Erfahren Sie, wie das Adobe Experience Platform Edge Network den Cl
 seo-description: Learn how the Adobe Experience Platform Edge Network  manages client state
 keywords: Client;Status;Management;Edge;Network;Gateway;API
 exl-id: 798ecc52-1af1-4480-a2a3-3198a83538f8
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '848'
-ht-degree: 100%
+source-wordcount: '850'
+ht-degree: 98%
 
 ---
 
@@ -70,7 +70,7 @@ Der Status, der von [!DNL Edge Network] im Antworttext zurückgegeben wird, ist 
 | --- | --- | --- |
 | `key` | Zeichenfolge | **Erforderlich**. Der Name des Eintrags. |
 | `value` | Zeichenfolge | *Optional*. Der Wert des Eintrags. |
-| `maxAge` | Ganzzahl | *Optional*: Die Lebensdauer („time-to-live“, TTL) des Eintrags in Sekunden. Wenn sie fehlt, sollten Einträge nur für die aktuelle Sitzung gespeichert werden. |
+| `maxAge` | Ganzzahl | *Optional* Die Zeit (in Sekunden) bis zum Ablauf des Eintrags. Wenn sie fehlt, sollten Einträge nur für die aktuelle Sitzung gespeichert werden. |
 | `attrs` | `Map<String, String>` | *Optional*. Eine optionale Liste der Eintragsattribute. Für alle sicheren Verbindungen mit einer sicheren Referrer-HTTP-Kopfzeile wird das Attribut `SameSite` auf `None` gesetzt. |
 
 

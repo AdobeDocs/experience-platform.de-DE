@@ -2,10 +2,10 @@
 title: Satellitenobjektreferenz
 description: Hier erfahren Sie mehr über das Client-seitige _satellite-Objekt und die verschiedenen Funktionen, die Sie damit in Tags ausführen können.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
 source-wordcount: '1290'
-ht-degree: 95%
+ht-degree: 91%
 
 ---
 
@@ -156,7 +156,7 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->Bei der alten Methode [`setCookie`](#setCookie) zum Setzen von Cookies war das dritte (optionale) Argument für diesen Funktionsaufruf eine Ganzzahl, die die Lebensdauer (Time-to-Live, TTL) des Cookies in Tagen angab. In dieser neuen Methode wird stattdessen ein Objekt „attributes“ als drittes Argument akzeptiert. Um eine TTL für ein Cookie mithilfe der neuen Methode festzulegen, müssen Sie im Attributobjekt die Eigenschaft `expires` angeben und sie auf den gewünschten Wert setzen. Dies wird im folgenden Beispiel demonstriert.
+>Im alten [`setCookie`](#setCookie) -Methode zum Festlegen von Cookies war das dritte (optionale) Argument für diesen Funktionsaufruf eine Ganzzahl, die die Ablaufzeit des Cookies in Tagen angibt. In dieser neuen Methode wird stattdessen ein Objekt „attributes“ als drittes Argument akzeptiert. Um mithilfe der neuen Methode einen Ablauf für ein Cookie festzulegen, müssen Sie eine `expires` -Eigenschaft im Attributobjekt und legen Sie es auf den gewünschten Wert fest. Dies wird im folgenden Beispiel demonstriert.
 
 **Beispiel**
 

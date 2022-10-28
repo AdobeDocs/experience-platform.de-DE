@@ -5,9 +5,9 @@ title: Best Practices für die Datenmodellierung
 topic-legacy: overview
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: c5ab8c12c4c5bd14d3504d60c654105ad36effe6
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '2698'
+source-wordcount: '2699'
 ht-degree: 3%
 
 ---
@@ -175,7 +175,7 @@ Der zweite Ansatz besteht darin, Ereignisschemata zur Darstellung von Abonnement
 **Nachteile**
 
 * Die Segmentierung wird für den ursprünglich geplanten Anwendungsfall komplexer (d. h. die Identifizierung des Status der neuesten Abonnements von Kunden). Das Segment benötigt jetzt zusätzliche Logik, um das letzte Abonnementereignis für einen Kunden zu kennzeichnen, um seinen Status zu überprüfen.
-* Ereignisse haben ein höheres Risiko, automatisch ablaufen und aus dem Profilspeicher gelöscht zu werden. Siehe Handbuch unter [Profil-TTL](../../profile/apply-ttl.md) für weitere Informationen.
+* Ereignisse haben ein höheres Risiko, automatisch ablaufen und aus dem Profilspeicher gelöscht zu werden. Siehe Handbuch unter [Ablauf von Erlebnisereignissen](../../profile/event-expirations.md) für weitere Informationen.
 
 ## Erstellen Sie Schemata basierend auf Ihren kategorisierten Entitäten.
 
