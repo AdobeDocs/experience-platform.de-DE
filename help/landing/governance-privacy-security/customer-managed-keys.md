@@ -1,26 +1,26 @@
 ---
 title: Vom Kunden verwaltete Schlüssel in Adobe Experience Platform
 description: Erfahren Sie, wie Sie eigene Verschlüsselungsschlüssel für in Adobe Experience Platform gespeicherte Daten einrichten.
-source-git-commit: 6fe0d72bcb3dbf1e1167f80724577ba3e0f741f4
+source-git-commit: b778d5c81512e538f08989952f8727d1d694f66c
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1501'
 ht-degree: 2%
 
 ---
 
 # Vom Kunden verwaltete Schlüssel in Adobe Experience Platform
 
-Alle in Adobe Experience Platform gespeicherten Daten werden im Ruhezustand mithilfe von Schlüsseln auf Systemebene verschlüsselt. Wenn Sie eine Anwendung verwenden, die auf Platform aufbaut, können Sie stattdessen eigene Verschlüsselungsschlüssel verwenden, um die Datensicherheit zu verbessern.
+In Adobe Experience Platform gespeicherte Daten werden im Ruhezustand mithilfe von Schlüsseln auf Systemebene verschlüsselt. Wenn Sie eine Anwendung verwenden, die auf Platform aufbaut, können Sie stattdessen eigene Verschlüsselungsschlüssel verwenden, um die Datensicherheit zu verbessern.
 
 In diesem Dokument wird der Prozess zum Aktivieren der Funktion für kundenverwaltete Schlüssel (CMK) in Platform beschrieben.
 
 ## Prozesszusammenfassung
 
-CMK ist Teil des Gesundheitsschilds und des Datenschutzschilds der Adobe. Nachdem Ihr Unternehmen eines dieser Angebote erworben hat, können Sie einen einmaligen Prozess zur Einrichtung der Funktion starten.
+CMK ist Teil des Gesundheitsschilds und des Datenschutzschilds der Adobe. Nachdem Ihr Unternehmen eine Lizenz für eines dieser Angebote erworben hat, können Sie einen einmaligen Prozess zur Einrichtung der Funktion starten.
 
 >[!WARNING]
 >
->Nach dem Einrichten von CMK können Sie nicht zu systemverwalteten Schlüsseln zurückkehren. Sie sind für die sichere Verwaltung Ihrer Schlüssel und Schlüsselwerte in [!DNL Azure] um zu verhindern, dass der Zugriff auf Ihre Daten verloren geht.
+>Nach dem Einrichten von CMK können Sie nicht zu systemverwalteten Schlüsseln zurückkehren. Sie sind dafür verantwortlich, Ihre Schlüssel sicher zu verwalten und Zugriff auf Ihre Key Vault-, Key- und CMK-App innerhalb von [!DNL Azure] um zu verhindern, dass der Zugriff auf Ihre Daten verloren geht.
 
 Der Prozess sieht folgendermaßen aus:
 
@@ -29,7 +29,7 @@ Der Prozess sieht folgendermaßen aus:
 1. [Dienstprinzipal für die CMK-App zuweisen](#assign-to-role) auf eine geeignete Rolle für den Schlüsselgewölbe.
 1. Verwenden Sie API-Aufrufe für [Ihre Verschlüsselungsschlüssel-ID an Adobe senden](#send-to-adobe).
 
-Sobald der Einrichtungsprozess abgeschlossen ist, werden alle Daten, die über alle Sandboxes in Platform integriert werden, mit Ihrer [!DNL Azure] Schlüsseleinrichtung, die für Ihre [[!DNL Cosmos DB]](https://docs.microsoft.com/de-de/azure/cosmos-db/) und [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) Ressourcen. CMK nutzt [!DNL Azure]s [öffentliches Vorschaufenster](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/) um dies zu ermöglichen.
+Sobald der Einrichtungsprozess abgeschlossen ist, werden alle Daten, die über alle Sandboxes in Platform integriert werden, mit Ihrer [!DNL Azure] Schlüsseleinrichtung, die für Ihre [[!DNL Cosmos DB]](https://docs.microsoft.com/de-de/azure/cosmos-db/) und [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) Ressourcen. Zur Verwendung von CMK nutzen Sie [!DNL Microsoft Azure] Funktionen, die Teil der [öffentliches Vorschaufenster](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
 ## Erstellen Sie eine [!DNL Azure] Key Vault {#create-key-vault}
 
@@ -165,6 +165,10 @@ Die **[!UICONTROL Schlüsselkennung]** zeigt die URI-Kennung für den Schlüssel
 
 Nachdem Sie den Schlüssel-Vault-URI erhalten haben, können Sie ihn mit einer POST-Anfrage an den CMK-Konfigurations-Endpunkt senden.
 
+>[!NOTE]
+>
+>Nur der Schlüssel und der Schlüsselname werden mit Adobe gespeichert, nicht die Schlüsselversion.
+
 **Anfrage**
 
 ```shell
@@ -265,6 +269,10 @@ Die `status` -Attribut kann einen von vier Werten mit der folgenden Bedeutung ha
 
 ## Nächste Schritte
 
-Durch Ausführung der oben genannten Schritte haben Sie CMK für Ihr Unternehmen erfolgreich aktiviert. Alle Daten, die in Platform erfasst werden, werden jetzt mit den Schlüsseln in Ihrer [!DNL Azure] Key Vault. Wenn Sie den Platform-Zugriff auf Ihre Daten sperren möchten, können Sie die mit der Anwendung verknüpfte Benutzerrolle aus dem Schlüsselwert in [!DNL Azure].
+Durch Ausführung der oben genannten Schritte haben Sie CMK für Ihr Unternehmen erfolgreich aktiviert. Daten, die in Platform erfasst werden, werden jetzt mit den Schlüsseln in Ihrer [!DNL Azure] Key Vault. Wenn Sie den Platform-Zugriff auf Ihre Daten sperren möchten, können Sie die mit der Anwendung verknüpfte Benutzerrolle aus dem Schlüsselwert in [!DNL Azure].
 
-Nach der Deaktivierung des Zugriffs auf die Anwendung dauert es zwischen zwei und 24 Stunden, bis Daten nicht mehr in Platform verfügbar sind. Der gleiche Zeitraum gilt für Daten, die erneut verfügbar werden, wenn der Zugriff auf die Anwendung erneut aktiviert wird.
+Nachdem Sie den Zugriff auf die Anwendung deaktiviert haben, kann es einige Minuten bis 24 Stunden dauern, bis Daten nicht mehr in Platform verfügbar sind. Die gleiche Zeitverzögerung gilt für Daten, die erneut verfügbar werden, wenn der Zugriff auf die Anwendung erneut aktiviert wird.
+
+>[!WARNING]
+>
+>Sobald die Key Vault-, Schlüssel- oder CMK-App deaktiviert ist und Daten in Platform nicht mehr verfügbar sind, sind alle nachgelagerten Vorgänge im Zusammenhang mit diesen Daten nicht mehr möglich. Stellen Sie sicher, dass Sie die nachgelagerten Auswirkungen der Sperrung des Platform-Zugriffs auf Ihre Daten verstehen, bevor Sie Änderungen an Ihrer Konfiguration vornehmen.
