@@ -4,10 +4,10 @@ title: Datensatz für Profil-Updates mithilfe von APIs aktivieren
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mit Adobe Experience Platform-APIs einen Datensatz mit "upsert"-Funktionen aktivieren können, um Aktualisierungen an Echtzeit-Kundenprofildaten vorzunehmen.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 5bd3e43e6b307cc1527e8734936c051fb4fc89c4
+source-git-commit: 1e83bc3eb2a2cc10ab945aebeef66d5108b568ea
 workflow-type: tm+mt
-source-wordcount: '1015'
-ht-degree: 21%
+source-wordcount: '1050'
+ht-degree: 20%
 
 ---
 
@@ -75,6 +75,8 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
+        "name": "Sample dataset",
+        "description: "A sample dataset with a sample description.",
         "fields": [],
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
@@ -249,6 +251,10 @@ Bei erfolgreicher PATCH-Anfrage werden der HTTP-Status-Code 200 (OK) und ein Arr
 ### Datensatz für Profil aktivieren und aktualisieren {#enable-the-dataset}
 
 Ein vorhandener Datensatz kann mit einer einzigen PATCH-Anfrage für Profil- und Attributaktualisierungen aktiviert werden.
+
+>[!IMPORTANT]
+>
+>Stellen Sie beim Aktivieren Ihres Datensatzes für Profil sicher, dass das Schema, mit dem der Datensatz verknüpft ist, **auch** Profil-fähig. Wenn das Schema nicht für Profil aktiviert ist, wird der Datensatz **not** werden in der Platform-Benutzeroberfläche als Profil-fähig angezeigt.
 
 **API-Format**
 
