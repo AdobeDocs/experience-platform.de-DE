@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform - Versionshinweise - September 2022
 description: Die Versionshinweise für Adobe Experience Platform vom September 2022.
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 4f85f38e4870f0c2429a3a2a50bd7f95075c6be4
 workflow-type: tm+mt
-source-wordcount: '2926'
+source-wordcount: '2934'
 ht-degree: 98%
 
 ---
@@ -220,7 +220,7 @@ Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von 
 
 Weitere Informationen zu [!DNL Query Service] finden Sie in der [[!DNL Query Service] Übersicht](../../query-service/home.md).
 
-<!-- See the [query alerts documentation](../../query-service/api/alert-subscriptions.md) to learn more. -->
+Weitere Informationen erhalten Sie in der [Dokumentation zu Abfrage-Warnhinweisen](../../query-service/api/alert-subscriptions.md).
 
 ## Quellen {#sources}
 
