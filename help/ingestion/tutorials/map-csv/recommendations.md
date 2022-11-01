@@ -1,9 +1,9 @@
 ---
 title: Zuordnen einer CSV-Datei zu einem XDM-Schema mithilfe der AI-generierten Recommendations (Beta)
 description: In diesem Tutorial wird beschrieben, wie Sie eine CSV-Datei mithilfe von AI-generierten Empfehlungen einem XDM-Schema zuordnen.
-source-git-commit: a8a7523c5b7f696ecc0ae89cb4e0474b44a222e7
+source-git-commit: d6f858af8bc44be74b1aaf12b973fb6818c1b2a5
 workflow-type: tm+mt
-source-wordcount: '1021'
+source-wordcount: '1043'
 ht-degree: 3%
 
 ---
@@ -35,13 +35,13 @@ Wählen Sie in der Benutzeroberfläche &quot;Experience Platform&quot;die Option
 
 Die **[!UICONTROL CSV-XDM-Schema zuordnen]** wird der Workflow angezeigt, beginnend mit dem **[!UICONTROL Datenflussdetails]** Schritt.
 
-Auswählen **[!UICONTROL Erstellen eines neuen Schemas mit ML-Empfehlungen]**, wodurch neue Steuerelemente angezeigt werden. Wählen Sie die entsprechende Klasse für CSV-Daten aus, die Sie zuordnen möchten ([!UICONTROL Profil] oder [!UICONTROL ExperienceEvent]) und wählen Sie im Dropdown-Menü die Branche aus, die für Ihr Unternehmen relevant ist. Wenn Ihr Unternehmen unter einer [B2B](../../../xdm/tutorials/relationship-b2b.md) -Modell, wählen Sie die **[!UICONTROL B2B-Daten]** aktivieren.
+Auswählen **[!UICONTROL Erstellen eines neuen Schemas mit ML-Empfehlungen]**, wodurch neue Steuerelemente angezeigt werden. Wählen Sie die entsprechende Klasse für die CSV-Daten aus, die Sie zuordnen möchten ([!UICONTROL Profil] oder [!UICONTROL ExperienceEvent]). Sie können optional das Dropdown-Menü verwenden, um die relevante Branche für Ihr Unternehmen auszuwählen, oder Sie lassen es leer, wenn die bereitgestellten Kategorien nicht für Sie zutreffen. Wenn Ihr Unternehmen unter einer [B2B](../../../xdm/tutorials/relationship-b2b.md) -Modell, wählen Sie die **[!UICONTROL B2B-Daten]** aktivieren.
 
 ![Die [!UICONTROL Datenflussdetails] Schritt mit der ausgewählten ML-Empfehlungsoption. [!UICONTROL Profil] für die Klasse ausgewählt ist und [!UICONTROL Telekommunikation] für die Industrie ausgewählt](../../images/tutorials/map-csv-recommendations/select-class-and-industry.png)
 
 Geben Sie von hier einen Namen für das Schema an, das aus den CSV-Daten erstellt wird, und einen Namen für den Ausgabedatensatz, der die unter diesem Schema erfassten Daten enthält.
 
-Sie können optional die folgenden zusätzlichen Funktionen für den Datenfluss konfigurieren:
+Sie können optional die folgenden zusätzlichen Funktionen für den Datenfluss konfigurieren, bevor Sie fortfahren:
 
 | Name der Eingabe | Beschreibung |
 | --- | --- |
@@ -50,6 +50,8 @@ Sie können optional die folgenden zusätzlichen Funktionen für den Datenfluss 
 | [!UICONTROL Partielle Erfassung] | Wenn diese Option aktiviert ist, werden gültige Datensätze für neue Batch-Daten innerhalb eines bestimmten Fehlerschwellenwerts erfasst. Mit diesem Schwellenwert können Sie den Prozentsatz der akzeptablen Fehler konfigurieren, bevor der gesamte Batch fehlschlägt. |
 | [!UICONTROL Datenflussdetails] | Geben Sie einen Namen und eine optionale Beschreibung für den Datenfluss ein, der die CSV-Daten in Platform bringt. Dem Datenfluss wird beim Starten dieses Workflows automatisch ein Standardname zugewiesen. Das Ändern des Namens ist optional. |
 | [!UICONTROL Warnhinweise] | Aus einer Liste von [Warnhinweise innerhalb des Produkts](../../../observability/alerts/overview.md) die Sie bezüglich des Status des Datenflusses erhalten möchten, nachdem er initiiert wurde. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Wenn Sie mit der Konfiguration des Datenflusses fertig sind, wählen Sie **[!UICONTROL Nächste]**.
 
@@ -81,7 +83,7 @@ Verwenden Sie die Vorschau für die Feldzuordnung, um vorhandene Zuordnungen zu 
 
 ### Bearbeiten von Feldergruppen {#edit-field-groups}
 
-Die CSV-Felder werden mithilfe von ML-Modellen automatisch vorhandenen Feldergruppen zugeordnet. Wenn Sie die Feldergruppe für ein bestimmtes CSV-Feld ändern möchten, wählen Sie **[!UICONTROL Bearbeiten]** neben der Schemastruktur.
+Die CSV-Felder werden mithilfe von ML-Modellen automatisch vorhandenen XDM-Feldergruppen zugeordnet. Wenn Sie die Feldergruppe für ein bestimmtes CSV-Feld ändern möchten, wählen Sie **[!UICONTROL Bearbeiten]** neben der Schemastruktur.
 
 ![Die [!UICONTROL Bearbeiten] neben der Schemastruktur ausgewählte Schaltfläche](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
