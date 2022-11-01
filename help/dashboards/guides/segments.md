@@ -4,9 +4,9 @@ title: Dashboard-Anleitung für Segmente
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu Segmenten anzeigen können, die Ihr Unternehmen erstellt hat.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 18288130b98e13d824273426a860d97722c434de
+source-git-commit: 23df35d7d90b6674b089a842818dba83283a1646
 workflow-type: tm+mt
-source-wordcount: '2094'
+source-wordcount: '2092'
 ht-degree: 9%
 
 ---
@@ -99,7 +99,7 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 
 Die **[!UICONTROL Zielgruppengröße]** Widget zeigt die Gesamtzahl der zusammengeführten Profile innerhalb des ausgewählten Segments zum Zeitpunkt der Momentaufnahme an. Diese Zahl ist das Ergebnis der Anwendung der Segmentzusammenführungsrichtlinie auf Ihre Profildaten, um Profilfragmente zu einem einzigen Profil für jede Person im Segment zusammenzuführen.
 
-Weitere Informationen zu Fragmenten und zusammengeführten Profilen erhalten Sie im Abschnitt [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
+Weitere Informationen zu Fragmenten und zusammengeführten Profilen finden Sie im Abschnitt [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
 
 ![Die Übersicht über das Dashboard Segmente mit dem Widget Zielgruppengröße wird hervorgehoben.](../images/segments/audience-size.png)
 

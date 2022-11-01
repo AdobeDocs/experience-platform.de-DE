@@ -4,10 +4,10 @@ title: Dashboard-Anleitung für Ziele
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den aktiven Zielen Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
+source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
 workflow-type: tm+mt
-source-wordcount: '2829'
-ht-degree: 3%
+source-wordcount: '2828'
+ht-degree: 4%
 
 ---
 
@@ -19,7 +19,7 @@ Eine Übersicht über Ziele sowie einen Katalog aller in der Experience Platform
 
 ## [!UICONTROL Ziele] Dashboard-Daten {#destinations-dashboard-data}
 
-Die [!UICONTROL Ziele] Dashboard zeigt eine Momentaufnahme der Ziele an, die Ihr Unternehmen in Experience Platform aktiviert hat. Der Schnappschuss zeigt die Daten exakt so an, wie sie zum Zeitpunkt der Schnappschussaufnahme aufgetreten sind. Mit anderen Worten, der Schnappschuss ist keine Annäherung oder Stichprobe der Daten und das Ziel-Dashboard wird nicht in Echtzeit aktualisiert.
+Im Dashboard „Ziele“ finden Sie eine Momentaufnahme der Ziele, die Ihr Unternehmen in Experience Platform aktiviert hat. Der Schnappschuss zeigt die Daten exakt so an, wie sie zum Zeitpunkt der Schnappschussaufnahme aufgetreten sind. Mit anderen Worten, der Schnappschuss ist keine Annäherung oder Stichprobe der Daten und das Ziel-Dashboard wird nicht in Echtzeit aktualisiert.
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ Datum und Uhrzeit der letzten Momentaufnahme werden oben im [!UICONTROL Übersic
 
 >[!NOTE]
 >
->Wenn Ihr Unternehmen neu bei Experience Platform ist und noch keine aktiven Ziele hat, wird die [!UICONTROL Ziele] Dashboard und [!UICONTROL Übersicht] nicht sichtbar sind. Wählen Sie stattdessen [!UICONTROL Ziele] über die linke Navigation zeigt die [!UICONTROL Katalog] Registerkarte. Weitere Informationen zum [!UICONTROL Katalog] Registerkarte, siehe [[!UICONTROL Ziele] Arbeitsbereichshandbuch](../../destinations/ui/destinations-workspace.md).
+>Wenn Ihr Unternehmen neu bei Experience Platform ist und noch keine aktiven Ziele hat, wird das Dashboard Ziele angezeigt und [!UICONTROL Übersicht] nicht sichtbar sind. Wählen Sie stattdessen [!UICONTROL Ziele] über die linke Navigation zeigt die [!UICONTROL Katalog] Registerkarte. Weitere Informationen zum [!UICONTROL Katalog] Registerkarte, siehe [[!UICONTROL Ziele] Arbeitsbereichshandbuch](../../destinations/ui/destinations-workspace.md).
 
 ![Die Übersicht über die Ziele der Platform-Benutzeroberfläche mit dem neuesten Schnappschuss wurde hervorgehoben.](../images/destinations/snapshot-timestamp.png)
 
@@ -120,7 +120,7 @@ Das angezeigte aktualisierte Datum zeigt an, wann das Segment zuletzt für das Z
 
 Wenn Sie den Namen eines Segments aus der im Widget angezeigten Liste auswählen, gelangen Sie zu den Segmentdetails. Sie können auch **[!UICONTROL Alle anzeigen]** , um zur Registerkarte &quot;Segmentsuche&quot;zu navigieren und dann den Namen eines Segments auszuwählen, um dessen Details anzuzeigen.
 
-Weitere Informationen zum Arbeiten mit Segmenten in Experience Platform erhalten Sie im Abschnitt [Übersicht über den Segmentierungsdienst](../../segmentation/home.md).
+Weitere Informationen zum Arbeiten mit Segmenten in Experience Platform finden Sie im Abschnitt [Übersicht über den Segmentierungsdienst](../../segmentation/home.md).
 
 ![Die Registerkarte Übersicht im Dashboard Ziele mit dem Widget Kürzlich aktivierte Segmente .](../images/destinations/recently-activated-segments.png)
 
