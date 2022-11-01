@@ -1,10 +1,10 @@
 ---
 title: (Beta) Adobe Commerce-Ziel-Connector
 description: Erfahren Sie, wie Händler mit Adobe Commerce und Real-Time CDP das Einkaufserlebnis personalisieren können, indem sie äußerst relevante Site-Inhalte und Sonderangebote bereitstellen, die auf die in Real-Time CDP erstellten und verwalteten Kundensegmente zugeschnitten sind.
-source-git-commit: 566f26ec0f13bfaceb0ee59f3e4c72e767bc8cc9
+source-git-commit: 0a6100f2aa98f5c40f2492dcfab79a991eded94b
 workflow-type: tm+mt
-source-wordcount: '689'
-ht-degree: 82%
+source-wordcount: '691'
+ht-degree: 81%
 
 ---
 
@@ -92,7 +92,7 @@ Weitere Informationen zur Aktivierung von Zielgruppensegmenten für das Ziel [!D
 
 Nachdem Sie die [!DNL Commerce] Ziel in Experience Platform konfigurieren, müssen Sie die [!DNL Commerce Admin] , um die von Ihnen erstellten Real-Time CDP-Segmente zu importieren. Weitere Informationen finden Sie in der [[!DNL Commerce] Dokumentation](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/customer-segment-rtcdp.html).
 
-## Überprüfen des Datenexports {#exported-data}
+## Validieren der Zielgruppenaktivierung in Commerce {#exported-data}
 
 Nachdem Sie Real-Time CDP-Segmente für Ihr [!DNL Adobe Commerce]-Konto aktiviert haben, sehen Sie diese Segmente i [!DNL Admin], wenn Sie eine Warenkorb-Preisregel erstellen:
 
