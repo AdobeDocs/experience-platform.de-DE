@@ -4,7 +4,7 @@ title: Generieren von Beispieldaten für ein XDM-Schema in der Benutzeroberfläc
 description: Erfahren Sie, wie Sie JSON-Beispieldaten basierend auf einem vorhandenen Schema in der Benutzeroberfläche von Adobe Experience Platform generieren.
 topic-legacy: user guide
 exl-id: e60eedb2-2245-42cd-b574-43caf9e3426c
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 0%
@@ -27,6 +27,6 @@ Eine JSON-Beispieldatei wird vom Browser heruntergeladen. Sie können diese Date
 
 In diesem Handbuch wurde beschrieben, wie Sie eine JSON-Beispieldatei aus einem XDM-Schema in der Platform-Benutzeroberfläche generieren. Informationen zum Generieren von Beispieldaten mithilfe der Schema Registry-API finden Sie in der [Beispiel-Daten-Endpunkthandbuch](../api/sample-data.md).
 
-Sobald Sie bereit sind, Daten zu erfassen, finden Sie im Tutorial zu [Zuordnen einer CSV-Datei zu XDM](../../ingestion/tutorials/map-a-csv-file.md) , um zu erfahren, wie Sie eine flache Datendatei (z. B. ein CSV) einem XDM-Schema zuordnen und in Platform erfassen. Alternativ können Sie eine [Quellverbindung](../../sources/home.md) , um Ihre Daten aus einer externen Quelle einzubringen und sie XDM zuzuordnen.
+Sobald Sie bereit sind, Daten zu erfassen, finden Sie im Tutorial zu [Zuordnen einer CSV-Datei zu XDM](../../ingestion/tutorials/map-csv/overview.md) , um zu erfahren, wie Sie eine flache Datendatei (z. B. ein CSV) einem XDM-Schema zuordnen und in Platform erfassen. Alternativ können Sie eine [Quellverbindung](../../sources/home.md) , um Ihre Daten aus einer externen Quelle einzubringen und sie XDM zuzuordnen.
 
 Weitere Informationen zu den Funktionen der [!UICONTROL Schemas] Arbeitsbereich der Benutzeroberfläche, siehe [[!UICONTROL Schemas] Arbeitsbereich - Übersicht](./overview.md).

@@ -5,7 +5,7 @@ title: Zustimmungsverarbeitung in Adobe Experience Platform
 topic-legacy: getting started
 description: Erfahren Sie, wie Sie in Adobe Experience Platform mithilfe des Adobe 2.0-Standards Zustimmungssignale von Kunden verarbeiten.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 1%
@@ -100,7 +100,7 @@ Siehe Mobile SDK-Dokumentation für [Konfigurieren der mobilen Erweiterung &quot
 
 Sie können XDM-konforme Einwilligungsdaten aus einer CSV-Datei erfassen, indem Sie die Batch-Erfassung verwenden. Dies kann nützlich sein, wenn Sie einen Rückstand aus zuvor erfassten Zustimmungsdaten haben, die noch nicht in Ihre Kundenprofile integriert wurden.
 
-Folgen Sie dem Tutorial zu [Zuordnen einer CSV-Datei zu XDM](../../../../ingestion/tutorials/map-a-csv-file.md) , um zu erfahren, wie Sie Ihre Datenfelder in XDM konvertieren und in Platform aufnehmen. Bei der Auswahl der [!UICONTROL Ziel] Stellen Sie für die Zuordnung sicher, dass Sie die **[!UICONTROL Vorhandenen Datensatz verwenden]** und wählen Sie die [!DNL Profile]-aktivierter Einwilligungsdatensatz, den Sie zuvor erstellt haben.
+Folgen Sie dem Tutorial zu [Zuordnen einer CSV-Datei zu XDM](../../../../ingestion/tutorials/map-csv/overview.md) , um zu erfahren, wie Sie Ihre Datenfelder in XDM konvertieren und in Platform aufnehmen. Bei der Auswahl der [!UICONTROL Ziel] Stellen Sie für die Zuordnung sicher, dass Sie die **[!UICONTROL Vorhandenen Datensatz verwenden]** und wählen Sie die [!DNL Profile]-aktivierter Einwilligungsdatensatz, den Sie zuvor erstellt haben.
 
 ## Implementierung testen {#test-implementation}
 

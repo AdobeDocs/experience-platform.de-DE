@@ -5,7 +5,7 @@ title: Handbuch zur Benutzeroberfläche von Workflows
 topic-legacy: ui guide
 description: Erfahren Sie, wie Sie mehrstufige Workflows für die Durchführung gemeinsamer Vorgänge in der Benutzeroberfläche von Adobe Experience Platform ausführen.
 exl-id: f1a3ea83-09c9-48df-9493-62f03b403a95
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 2%
@@ -20,7 +20,7 @@ Die **[!UICONTROL Workflows]** in der Adobe Experience Platform-Benutzeroberflä
 
 ## [!UICONTROL Datenerfassung]
 
-Die **[!UICONTROL Zuordnen von CSV zu XDM-Schema]** Workflow ermöglicht das Hochladen und Konvertieren einer CSV-Datei in ein Experience-Datenmodell (XDM)-Schema. Weitere Informationen zu diesem Workflow finden Sie im Tutorial zu [Zuordnen einer CSV-Datei zu einem XDM-Schema](../ingestion/tutorials/map-a-csv-file.md).
+Die **[!UICONTROL Zuordnen von CSV zu XDM-Schema]** Workflow ermöglicht das Hochladen und Konvertieren einer CSV-Datei in ein Experience-Datenmodell (XDM)-Schema. Weitere Informationen zu diesem Workflow finden Sie im Tutorial zu [Zuordnen einer CSV-Datei zu einem XDM-Schema](../ingestion/tutorials/map-csv/overview.md).
 
 Die **[!UICONTROL Datensatz aus Schema erstellen]** Workflow können Sie einen neuen Datensatz aus einem vorhandenen XDM-Schema erstellen. Weitere Informationen zu diesem Workflow finden Sie im Abschnitt [Benutzerhandbuch zu Datensätzen](../catalog/datasets/user-guide.md#schema).
 

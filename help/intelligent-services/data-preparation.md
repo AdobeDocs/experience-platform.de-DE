@@ -5,7 +5,7 @@ title: Vorbereiten von Daten für die Verwendung in Intelligent Services
 topic-legacy: Intelligent Services
 description: Damit Intelligent Services Einblicke aus Ihren Marketing-Ereignisdaten gewinnen kann, müssen die Daten semantisch angereichert und in einer Standardstruktur verwaltet werden. Intelligent Services verwenden dazu Experience-Datenmodell (XDM)-Schemas.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '2936'
 ht-degree: 2%
@@ -356,7 +356,7 @@ Wenn Sie Daten aus einer lokalen CSV-Datei erfassen, können Sie mit dem nächst
 
 #### Daten zuordnen und erfassen {#ingest}
 
-Nachdem Sie ein CEE-Schema und einen Datensatz erstellt haben, können Sie mit der Zuordnung Ihrer Datentabellen zum Schema beginnen und diese Daten in Platform erfassen. Siehe Tutorial zu [Zuordnen einer CSV-Datei zu einem XDM-Schema](../ingestion/tutorials/map-a-csv-file.md) für Schritte, wie Sie dies in der Benutzeroberfläche durchführen können. Sie können Folgendes verwenden: [JSON-Beispieldatei](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) , um den Aufnahmevorgang zu testen, bevor Sie Ihre eigenen Daten verwenden.
+Nachdem Sie ein CEE-Schema und einen Datensatz erstellt haben, können Sie mit der Zuordnung Ihrer Datentabellen zum Schema beginnen und diese Daten in Platform erfassen. Siehe Tutorial zu [Zuordnen einer CSV-Datei zu einem XDM-Schema](../ingestion/tutorials/map-csv/overview.md) für Schritte, wie Sie dies in der Benutzeroberfläche durchführen können. Sie können Folgendes verwenden: [JSON-Beispieldatei](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) , um den Aufnahmevorgang zu testen, bevor Sie Ihre eigenen Daten verwenden.
 
 Nachdem ein Datensatz gefüllt wurde, kann derselbe Datensatz zur Aufnahme zusätzlicher Datendateien verwendet werden.
 

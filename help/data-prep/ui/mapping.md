@@ -3,7 +3,7 @@ keywords: Experience Platform;Startseite;beliebte Themen;CSV zuordnen;CSV-Datei 
 title: Handbuch zur Datenvorbereitungs-Benutzeroberfläche
 description: In diesem Dokument erfahren Sie, wie Sie mithilfe von Datenvorbereitungsfunktionen in der Platform-Benutzeroberfläche CSV-Dateien einem XDM-Schema zuordnen können.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '1845'
 ht-degree: 90%
@@ -79,7 +79,7 @@ Die Schnittstelle **[!UICONTROL Zuordnung]** bietet Ihnen ein umfassendes Tool z
 
 ![map-csv-to-xdm](../images/ui/mapping/map-csv-to-xdm.png)
 
-### Grundlegendes zur Zuordnungsschnittstelle
+### Grundlegendes zur Zuordnungsschnittstelle {#mapping-interface}
 
 Die Zuordnungsschnittstelle enthält ein Dashboard, das Informationen zum Zustand Ihrer Zuordnungsfelder im Rahmen des Aufnahme-Workflows enthält. Im Dashboard werden die folgenden Details zu Ihren Zuordnungsfeldern angezeigt:
 

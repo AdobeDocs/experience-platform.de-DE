@@ -5,7 +5,7 @@ title: Partielle Batch-Erfassung - Übersicht
 topic-legacy: overview
 description: Dieses Dokument enthält eine Anleitung zum Verwalten der partiellen Batch-Erfassung.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 46%
@@ -110,7 +110,7 @@ Jetzt können Sie Daten mit dem **Daten hinzufügen** und wird mithilfe der part
 
 ### Verwenden Sie die[!UICONTROL Zuordnen von CSV zu XDM-Schema]&quot; Fluss {#map-flow}
 
-So verwenden Sie &quot;[!UICONTROL Zuordnen von CSV zu XDM-Schema]&quot;, folgen Sie den aufgelisteten Schritten im Abschnitt [Tutorial zur CSV-Datei zuordnen](../tutorials/map-a-csv-file.md). Sobald Sie die **[!UICONTROL Daten hinzufügen]** -Schritt, beachten Sie die **[!UICONTROL Partielle Erfassung]** und **[!UICONTROL Fehlerdiagnose]** -Felder.
+So verwenden Sie &quot;[!UICONTROL Zuordnen von CSV zu XDM-Schema]&quot;, folgen Sie den aufgelisteten Schritten im Abschnitt [Tutorial zur CSV-Datei zuordnen](../tutorials/map-csv/overview.md). Sobald Sie die **[!UICONTROL Daten hinzufügen]** -Schritt, beachten Sie die **[!UICONTROL Partielle Erfassung]** und **[!UICONTROL Fehlerdiagnose]** -Felder.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
