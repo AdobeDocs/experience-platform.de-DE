@@ -3,9 +3,9 @@ keywords: Cloud-Speicher-Ziel; Cloud-Speicher
 title: Cloud-Speicher-Ziele – Übersicht
 description: Adobe Experience Platform kann Ihre Segmente als Datendateien an Ihre Amazon S3-, AWS Kinesis-, Azure Event Hubs- oder SFTP-Cloud-Speicherorte senden.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 818c9a6f5cd39db1405827b657872b99254ad1e5
+source-git-commit: 4a4c82cc4528fe07bbdb75ae9f795bdbab48c089
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '309'
 ht-degree: 11%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 11%
 
 ## Übersicht {#overview}
 
-Adobe Experience Platform kann Ihre Segmente als Datendateien an Ihre Cloud-Speicherorte senden. Dadurch können Sie Zielgruppen und ihre Profilattribute über CSV-Dateien für [!DNL Amazon S3], [!DNL Azure Blob] und SFTP. Für [!DNL Amazon Kinesis] und [!DNL Azure Event Hubs] Ziele, werden Daten aus der Experience Platform in gestreamt [!DNL JSON] Format.
+Adobe Experience Platform kann Ihre Segmente als Datendateien an Ihre Cloud-Speicherorte senden. Dadurch können Sie Zielgruppen und ihre Profilattribute über CSV-Dateien für [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage]und SFTP. Für [!DNL Amazon Kinesis] und [!DNL Azure Event Hubs] Ziele, werden Daten aus der Experience Platform in gestreamt [!DNL JSON] Format.
 
 ![Adobe Cloud-Speicher-Ziele](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
@@ -25,7 +25,10 @@ Adobe Experience Platform unterstützt die folgenden Cloud-Speicher-Ziele:
 * [Amazon Kinesis-Verbindung](amazon-kinesis.md)
 * [Amazon S3-Verbindung](amazon-s3.md)
 * [Azure Blob-Verbindung](azure-blob.md)
+* [(Beta) Azure Data Lake Storage Gen2](adls-gen2.md)
 * [Azure Event Hubs-Verbindung](azure-event-hubs.md)
+* [(Beta) Data Landing Zone](data-landing-zone.md)
+* [(Beta) Google Cloud Storage](google-cloud-storage.md)
 * [SFTP-Verbindung](sftp.md)
 
 ## Verbindung zu einem neuen Cloud-Speicher-Ziel herstellen {#connect-destination}

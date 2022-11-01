@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
-source-git-commit: cf8f630360c2cdbba1082913b179e719156183f4
+source-git-commit: d046c17a7b376f5c2e2f25c38fac0916ed2dba73
 workflow-type: tm+mt
-source-wordcount: '1060'
-ht-degree: 47%
+source-wordcount: '1394'
+ht-degree: 36%
 
 ---
 
@@ -50,11 +50,26 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 **Neue oder aktualisierte Funktionen**
 
+| Funktion | Beschreibung |
+| --- | --- |
+| (Beta) Datensatzexporte | Die [Datensatzexporte Beta-Funktionalität](/help/destinations/ui/export-datasets.md) ermöglicht den Export von Daten der ersten Generation (wie in der Variablen [Real-time Customer Data Platform-Produktbeschreibung](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)) von Adobe Experience Platform zu Ihren eigenen externen Kundensystemen über die Benutzeroberfläche &quot;Ziele&quot;. So können Sie Daten aus der Experience Platform mit einem Nicht-Code-/Niedrigcode-Workflow an sechs Cloud-Speicher-Ziele (in der folgenden Tabelle aufgeführt) für analytische Anwendungsfälle und Compliance-Anwendungsfälle übertragen. |
+| (Beta) Verbesserte Dateiexport-Funktionen | Sie können jetzt von der erweiterten Anpassungsfunktion profitieren, wenn Sie Dateien aus Experience Platform exportieren: <br><ul><li>Zusätzliche [Dateibenennungsoptionen](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).</li><li>Möglichkeit, benutzerdefinierte Dateikopfzeilen in Ihren exportierten Dateien über die [Verbesserter Zuordnungsschritt](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[Möglichkeit, die Formatierung exportierter CSV-Datendateien anzupassen](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> <br> Diese Funktion wird von den sechs neuen Beta-Cloud-Speicherkarten unterstützt, die in der folgenden Tabelle aufgeführt sind. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Neue oder aktualisierte Funktionen**
+
 | Ziel | Beschreibung |
 | ----------- | ----------- |
 | [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | Line ist eine beliebte Kommunikationsplattform, die Menschen, Dienstleistungen und Informationen verbindet und sich von einer Chat-App zu einem Zentrum für Unterhaltung, soziale Aktivitäten und tägliche Aktivitäten entwickelt hat. |
 | [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365 ist eine Cloud-basierte Business-Anwendungsplattform, die Enterprise Resource Planning (ERP) und Customer Relationship Management (CRM) mit Produktivitätsanwendungen und AI-Tools kombiniert, um reibungslosere und besser kontrollierte Vorgänge, ein besseres Wachstumspotenzial und Kostensenkungen zu ermöglichen. |
 | [[!DNL (Beta) Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md) | Die [!DNL (Beta) Adobe Commerce] Mit dem Ziel-Connector können Sie ein oder mehrere Real-Time CDP-Segmente auswählen, die für Ihre [!DNL Adobe Commerce] -Konto ein dynamisches personalisiertes Erlebnis für Ihre Kunden bereitstellen. Within [!DNL Adobe Commerce]können Sie dann diese Real-Time CDP-Segmente auswählen, um individuelle Angebote im Warenkorb zu personalisieren, z. B. &quot;Kauf 2 erhält 1 kostenlos&quot;. Sie können Hero-Banner auch anzeigen und die Produktpreise über Werbeangebote ändern, die alle auf Adobe Real-Time CDP-Segmente zugeschnitten sind. |
+| [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md) | Erstellen Sie eine ausgehende Live-Verbindung zu [!DNL Azure Data Lake Storage Gen2] , um Datendateien aus Adobe Experience Platform regelmäßig in Ihren eigenen Speicherort zu exportieren. Dieses neue Beta-Ziel bietet eine verbesserte Dateiexportfunktion und unterstützt Datensatzexporte. |
+| [[!DNL (Beta) Azure Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | [!DNL Data Landing Zone] ist [!DNL Azure Blob] von Adobe Experience Platform bereitgestellte Speicherschnittstelle, über die Sie Zugriff auf eine sichere, Cloud-basierte Dateispeicheranlage erhalten, über die Dateien aus Platform exportiert werden können. Dieses neue Beta-Ziel bietet eine verbesserte Dateiexportfunktion und unterstützt Datensatzexporte. |
+| [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md) | Erstellen Sie eine ausgehende Live-Verbindung zu [!DNL Google Cloud Storage] , um Datendateien aus Adobe Experience Platform regelmäßig in Ihre eigenen Buckets zu exportieren. Dieses neue Beta-Ziel bietet eine verbesserte Dateiexportfunktion und unterstützt Datensatzexporte. |
+| [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog) | Beta-Teilnehmer sehen jetzt zwei [!DNL Amazon S3] Zielkarten im Zielkatalog nebeneinander angezeigt. Das neue Beta-Ziel bietet eine verbesserte Dateiexportfunktion und unterstützt Datensatzexporte. |
+| [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) | Beta-Teilnehmer sehen jetzt zwei [!DNL Azure Blob] Zielkarten im Zielkatalog nebeneinander angezeigt. Das neue Beta-Ziel bietet eine verbesserte Dateiexportfunktion und unterstützt Datensatzexporte. |
+| [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog) | Beta-Teilnehmer sehen jetzt zwei [!DNL SFTP] Zielkarten im Zielkatalog nebeneinander angezeigt. Das neue Beta-Ziel bietet eine verbesserte Dateiexportfunktion und unterstützt Datensatzexporte. |
 
 {style=&quot;table-layout:auto&quot;}
 
