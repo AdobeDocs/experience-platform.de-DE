@@ -1,10 +1,10 @@
 ---
 title: Quoten-API-Endpunkt
 description: Mit dem /quota-Endpunkt in der Data Hygiene API können Sie die Datenhygiene in Bezug auf die in Ihrem Unternehmen gültigen monatlichen Quotenbegrenzungen für jeden Vorgangstyp überwachen.
-source-git-commit: 364ada0c354ddba8a855945f4f806f5600f21416
-workflow-type: ht
-source-wordcount: '346'
-ht-degree: 100%
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+workflow-type: tm+mt
+source-wordcount: '352'
+ht-degree: 93%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die Healthcare Shield erworben haben.
+>Die Funktionen zur Datenhygiene in Adobe Experience Platform sind derzeit nur für Unternehmen verfügbar, die **Adobe Gesundheitsschild** oder **Adobe Privacy &amp; Security Shield**.
 
 Der `/quota`-Endpunkt in der Data Hygiene API ermöglicht es Ihnen, die Nutzung Ihrer Datenhygiene-Nutzung in Bezug auf die Quotenbegrenzungen Ihres Unternehmens für jeden Vorgangstyp zu überwachen.
 

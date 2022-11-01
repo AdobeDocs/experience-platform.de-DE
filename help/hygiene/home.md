@@ -2,10 +2,10 @@
 title: Übersicht über die Datenhygiene
 description: Mit der Datenhygiene von Adobe Experience Platform können Sie den Lebenszyklus Ihrer Daten verwalten, indem Sie veraltete oder falsche Datensätze aktualisieren oder bereinigen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
-workflow-type: ht
-source-wordcount: '753'
-ht-degree: 100%
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+workflow-type: tm+mt
+source-wordcount: '758'
+ht-degree: 97%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Datenhygiene ist derzeit nur für Unternehmen verfügbar, die Adobe Healthcare Shield erworben haben.
+>Datenhygiene ist derzeit nur für Organisationen verfügbar, die **Adobe Gesundheitsschild** oder **Adobe Privacy &amp; Security Shield**.
 
 Adobe Experience Platform bietet leistungsstarke Tools zur Verwaltung großer, komplizierter Datenvorgänge, was die Orchestrierung von Customer Experiences ermöglicht. Da im Laufe der Zeit Daten in das System aufgenommen werden, ist es wichtig, Ihre Datenspeicher so zu verwalten, dass Daten wie vorgesehen verwendet werden. So müssen Daten aktualisiert werden, um falsche Einträge zu korrigieren, und Daten gelöscht werden, wenn dies aufgrund von Unternehmensrichtlinien erforderlich ist.
 
@@ -62,7 +62,7 @@ Privatkunden-Löschvorgänge und Datensatz-Gültigkeitsanfragen weisen jeweils e
 | Anfrage wird übermittelt | 0 Stunden | Ein Data Steward oder Datenschutzanalyst übermittelt eine Privatkunden betreffende Löschanfrage. Die Anfrage ist in der [!UICONTROL Datenhygiene-Benutzeroberfläche] sichtbar |
 | Profil-Lookups werden aktualisiert | 3 Stunden | Die durch die gelöschte Identität verursachte Änderung der Anzahl der Profile spiegelt sich in [Dashboard-Widgets](../dashboards/guides/profiles.md#profile-count-trend) und anderen Berichten wider. |
 | Segmente werden aktualisiert | 24 Stunden | Wenn Profile entfernt worden sind, werden alle zugehörigen [Segmente](../segmentation/home.md) aktualisiert, damit ihre neue Größe widergespiegelt wird. |
-| Journeys und Ziele werden aktualisiert | 26 Stunden | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=de), [Kampagnen](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=de) und [Ziele](../destinations/home.md) werden entsprechend den Änderungen in verwandten Segmenten aktualisiert. |
+| Journeys und Ziele werden aktualisiert | 26 Stunden | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [Kampagnen](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html) und [Ziele](../destinations/home.md) werden entsprechend den Änderungen in verwandten Segmenten aktualisiert. |
 | Datensätze im Data Lake vorläufig gelöscht | 7 Tage | Die Daten werden vorläufig aus dem Data Lake gelöscht. |
 | Datenbereinigung abgeschlossen | 14 Tage | Der [Status des Hygienevorgangs](./ui/browse.md#view-details) wird aktualisiert, damit angezeigt wird, dass der Vorgang abgeschlossen ist. Das bedeutet, dass die Datenbereinigung im Data Lake abgeschlossen ist und die entsprechenden Datensätze endgültig gelöscht wurden. |
 

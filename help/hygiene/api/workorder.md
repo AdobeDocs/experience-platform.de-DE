@@ -2,10 +2,10 @@
 title: API-Endpunkt für Arbeitsaufträge
 description: Mit dem Endpunkt /workorder in der Data Hygiene API können Sie Löschaufgaben für Verbraucheridentitäten programmgesteuert verwalten.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
-workflow-type: ht
-source-wordcount: '986'
-ht-degree: 100%
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+workflow-type: tm+mt
+source-wordcount: '991'
+ht-degree: 97%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die Adobe Healthcare Shield erworben haben.
+>Die Funktionen zur Datenhygiene in Adobe Experience Platform sind derzeit nur für Unternehmen verfügbar, die **Adobe Gesundheitsschild** oder **Adobe Privacy &amp; Security Shield**.
 
 Mit dem Endpunkt `/workorder` in der Datenhygiene-API können Sie in Adobe Experience Platform Privatkunden betreffende Löschanfragen programmgesteuert verwalten.
 
@@ -184,7 +184,7 @@ Eine erfolgreiche Antwort gibt die Details des Löschvorgangs zurück, einschlie
 | `workorderId` | Die ID des Löschauftrags. Diese kann verwendet werden, um den Status des Löschvorgangs später anzuzeigen. |
 | `orgId` | Ihre Organisations-ID. |
 | `bundleId` | ID des Pakets, dem dieser Löschauftrag zugeordnet ist. Sie wird zur Fehlerbehebung verwendet. Mehrere Löschaufträge werden zu einem Paket zusammengefasst, das von nachgelagerten Services verarbeitet wird. |
-| `action` | Aktion, die bei dem Arbeitsauftrag ausgeführt wird. Für Privatkunden-Löschvorgänge gilt der Wert `identity-delete` |
+| `action` | Aktion, die bei dem Arbeitsauftrag ausgeführt wird. Für Privatkunden-Löschvorgänge gilt der Wert `identity-delete`. |
 | `createdAt` | Zeitstempel, der angibt, wann der Löschauftrag erstellt wurde. |
 | `updatedAt` | Zeitstempel, der angibt, wann der Löschauftrag zuletzt aktualisiert wurde. |
 | `status` | Der aktuelle Status des Löschauftrags. |
@@ -204,7 +204,7 @@ PUT /workorder{WORK_ORDER_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{WORK_ORDER_ID}` |  `workorderId` des Privatkunden-Löschvorgangs, nach dem Sie suchen. |
+| `{WORK_ORDER_ID}` | `workorderId` des Privatkunden-Löschvorgangs, nach dem Sie suchen. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -272,12 +272,12 @@ Eine erfolgreiche Antwort gibt die Details des Privatkunden-Löschvorgangs zurü
 | `workorderId` | Die ID des Löschauftrags. Diese kann verwendet werden, um den Status des Löschvorgangs später anzuzeigen. |
 | `orgId` | Ihre Organisations-ID. |
 | `bundleId` | ID des Pakets, dem dieser Löschauftrag zugeordnet ist. Sie wird zur Fehlerbehebung verwendet. Mehrere Löschaufträge werden zu einem Paket zusammengefasst, das von nachgelagerten Services verarbeitet wird. |
-| `action` | Aktion, die bei dem Arbeitsauftrag ausgeführt wird. Für Privatkunden-Löschvorgänge ist der Wert `identity-delete` |
+| `action` | Aktion, die bei dem Arbeitsauftrag ausgeführt wird. Für Privatkunden-Löschvorgänge gilt der Wert `identity-delete`. |
 | `createdAt` | Zeitstempel, der angibt, wann der Löschauftrag erstellt wurde. |
 | `updatedAt` | Zeitstempel, der angibt, wann der Löschauftrag zuletzt aktualisiert wurde. |
 | `status` | Der aktuelle Status des Löschauftrags. |
 | `createdBy` | Der Benutzer, der den Löschauftrag erstellt hat. |
-| `datasetId` | ID des Datensatzes, der Gegenstand der Anfrage ist. Wenn die Anfrage für alle Datensätze gilt, wird der Wert auf `ALL` gesetzt |
+| `datasetId` | ID des Datensatzes, der Gegenstand der Anfrage ist. Wenn die Anfrage alle Datensätze betrifft, wird der Wert auf `ALL` gesetzt |
 | `productStatusDetails` | Array, das den aktuellen Status der nachgelagerten Prozesse im Zusammenhang mit der Anfrage auflistet. Jedes Array-Objekt enthält die folgenden Eigenschaften:<ul><li>`productName`: Name des nachgelagerten Services.</li><li>`productStatus`: Aktueller Verarbeitungsstatus der Anfrage von dem nachgelagerten Service.</li><li>`createdAt`: Zeitstempel, der angibt, wann der letzte Status von dem Service veröffentlicht wurde.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
