@@ -5,7 +5,7 @@ title: UI-Anleitung für Query Service
 topic-legacy: guide
 description: Adobe Experience Platform Query Service bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzern in Ihrer IMS-Organisation gespeichert wurden.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
+source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
 workflow-type: tm+mt
 source-wordcount: '716'
 ht-degree: 3%
@@ -18,7 +18,7 @@ Die Adobe Experience Platform [!DNL Query Service] bietet eine Benutzeroberfläc
 
 ## [!DNL Query Editor]
 
-Die [!DNL Query Editor] ermöglicht Ihnen das Schreiben und Ausführen von Abfragen ohne Verwendung eines externen Clients. Auswählen **[!UICONTROL Abfrage erstellen]** , um [!DNL Query Editor] und erstellen Sie eine neue Abfrage. Sie können auch auf die [!DNL Query Editor] durch Auswahl einer Abfrage aus der **[!UICONTROL Protokoll]** oder **[!UICONTROL Durchsuchen]** Registerkarten. Wenn Sie eine zuvor ausgeführte oder gespeicherte Abfrage auswählen, wird die [!DNL Query Editor] und zeigen Sie die SQL für die ausgewählte Abfrage an.
+Die [!DNL Query Editor] ermöglicht Ihnen das Schreiben und Ausführen von Abfragen ohne Verwendung eines externen Clients. Auswählen **[!UICONTROL Abfrage erstellen]** , um [!DNL Query Editor] und erstellen Sie eine neue Abfrage. Sie können auch auf die [!DNL Query Editor] durch Auswahl einer Abfrage aus der **[!UICONTROL Protokoll]** oder **[!UICONTROL Vorlagen]** Registerkarten. Wenn Sie eine zuvor ausgeführte oder gespeicherte Abfrage auswählen, wird die [!DNL Query Editor] und zeigen Sie die SQL für die ausgewählte Abfrage an.
 
 ![Das Abfrage-Dashboard mit hervorgehobener Option Abfrage erstellen .](../images/ui/overview/overview.png)
 

@@ -2,7 +2,7 @@
 title: Abfragevorlagen
 description: Abfragevorlagen sind wiederverwendbare gespeicherte SQL-Abfragen, die von anderen Benutzern wiederverwendet werden können, um Zeit und Mühe zu sparen. Sie können mit dem Abfrage-Editor oder der Query Service-API erstellt werden und sind für alle Experience Platform-Datensätze verfügbar.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
+source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 2%
@@ -25,11 +25,9 @@ Sie können Abfragevorlagen auf zwei Arten erstellen, indem Sie entweder eine PO
 
 ### Verwenden Sie den Abfrage-Editor, um eine Abfrage zu erstellen und als Vorlage zu speichern.
 
-In der Dokumentation finden Sie Anweisungen zur Verwendung des Abfrage-Editors für [schreiben](./user-guide.md#query-authoring) und [Abfragen speichern](./user-guide.md#saving-queries). Nachdem Sie Ihre Abfrage benannt und gespeichert haben, kann sie als Abfragevorlage aus dem [!UICONTROL Durchsuchen] Registerkarte.
+In der Dokumentation finden Sie Anweisungen zur Verwendung des Abfrage-Editors für [schreiben](./user-guide.md#query-authoring) und [Abfragen speichern](./user-guide.md#saving-queries). Nachdem Sie Ihre Abfrage benannt und gespeichert haben, kann sie als Abfragevorlage aus dem [!UICONTROL Vorlagen] Registerkarte.
 
 Wählen Sie im Arbeitsbereich Abfragen der Platform-Benutzeroberfläche die Option **[!UICONTROL Vorlagen]** , um die Liste der verfügbaren gespeicherten Abfragen anzuzeigen.
-
-<!-- This may need updating idf the Schedule are added to a separate Tab -->
 
 ![Der Arbeitsbereich &quot;Abfragen&quot;mit der Registerkarte &quot;Vorlagen&quot;wurde hervorgehoben.](../images/ui/query-templates/query-templates.png)
 
@@ -43,7 +41,7 @@ Anweisungen finden Sie in der Dokumentation zu [Erstellung einer Abfragevorlage]
 
 >[!NOTE]
 >
->Vorlagen, die mit der API erstellt wurden, sind auch auf der Registerkarte &quot;Query Service&quot;der Platform-Benutzeroberfläche sichtbar.
+>Vorlagen, die mit der API erstellt wurden, sind auch auf der Registerkarte Query Service-Vorlagen der Platform-Benutzeroberfläche sichtbar.
 
 ## Nächste Schritte
 

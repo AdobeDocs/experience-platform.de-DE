@@ -5,10 +5,10 @@ title: Anleitung zur Benutzeroberfläche des Abfrage-Editors
 topic-legacy: query editor
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 9c7068b4209a7c85c444b1cc83415747b93bacb2
+source-git-commit: 6cb28f8afa528849662fb416d81d155384a3de6c
 workflow-type: tm+mt
-source-wordcount: '1993'
-ht-degree: 22%
+source-wordcount: '2062'
+ht-degree: 21%
 
 ---
 
@@ -104,7 +104,7 @@ Wenn Fehler erkannt werden, können Sie die spezifischen Fehlermeldungen anzeige
 
 Wählen Sie eine gespeicherte Vorlage aus der [!UICONTROL Vorlagen] im Abfrage-Editor. Das Bedienfeld &quot;Abfragedetails&quot;enthält weitere Informationen und Tools zur Verwaltung der ausgewählten Abfrage.
 
-![Der Abfrage-Editor mit hervorgehobenem Bereich für Abfragedetails.](../images/ui/query-editor/query-details.png)
+![Der Abfrage-Editor mit hervorgehobenem Bereich für die Abfragedetails.](../images/ui/query-editor/query-details.png)
 
 In diesem Bedienfeld können Sie einen Ausgabedatensatz direkt über die Benutzeroberfläche generieren, die angezeigte Abfrage löschen oder benennen und der Abfrage einen Zeitplan hinzufügen.
 
@@ -116,13 +116,19 @@ In diesem Bedienfeld werden außerdem nützliche Metadaten angezeigt, z. B. das 
 >
 >Im Folgenden finden Sie eine Liste der Einschränkungen für geplante Abfragen bei Verwendung des Abfrage-Editors. Sie gelten nicht für die [!DNL Query Service] API:<br/>Sie können einen Zeitplan nur zu einer Abfrage hinzufügen, die bereits erstellt, gespeichert und ausgeführt wurde.<br/>You **cannot** einen Zeitplan zu einer parametrisierten Abfrage hinzufügen.<br/>Geplante Abfragen **cannot** einen anonymen Block enthalten.
 
-Um einen Zeitplan zu einer Abfrage hinzuzufügen, wählen Sie **[!UICONTROL Zeitplan hinzufügen]**.
+Zeitpläne werden im Abfrage-Editor festgelegt. Es können jedoch nur Abfragen geplant werden, die bereits als Vorlage gespeichert wurden. Um einer Abfrage einen Zeitplan hinzuzufügen, wählen Sie eine Abfragevorlage aus der [!UICONTROL Vorlagen] oder [!UICONTROL Geplante Abfragen] , um zum Abfrage-Editor zu navigieren.
 
-<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
+Informationen zum Hinzufügen von Zeitplänen mithilfe der API finden Sie im Abschnitt [Endpunktleitfaden für geplante Abfragen](../api/scheduled-queries.md).
 
-![Der Abfrage-Editor mit Zeitplan hinzufügen wurde hervorgehoben.](../images/ui/query-editor/add-schedule.png)
+Wenn über den Abfrage-Editor auf eine gespeicherte Abfrage zugegriffen wird, wird die [!UICONTROL Zeitpläne] unterhalb des Abfragenamens angezeigt. Auswählen **[!UICONTROL Zeitpläne]**.
 
-Die **[!UICONTROL Details planen]** angezeigt. Auf dieser Seite können Sie die Häufigkeit der geplanten Abfrage, das Datum der Ausführung der geplanten Abfrage sowie den Datensatz auswählen, in den die Abfrage exportiert werden soll.
+![Der Abfrage-Editor mit der Registerkarte Zeitpläne wurde hervorgehoben.](../images/ui/query-editor/schedules-tab.png)
+
+Der Arbeitsbereich Zeitpläne wird angezeigt. Auswählen **[!UICONTROL Zeitplan hinzufügen]** um einen Zeitplan zu erstellen.
+
+![Der Arbeitsbereich Planung des Abfrage-Editors mit hervorgehobenem Zeitplan hinzufügen.](../images/ui/query-editor/add-schedule.png)
+
+Die Seite mit den Zeitplandetails wird angezeigt. Auf dieser Seite können Sie die Häufigkeit der geplanten Abfrage, das Start- und Enddatum, den Wochentag, an dem die geplante Abfrage ausgeführt wird, sowie den zu exportierenden Datensatz auswählen.
 
 ![Das Bedienfeld Zeitplandetails wurde hervorgehoben.](../images/ui/query-editor/schedule-details.png)
 
@@ -140,39 +146,35 @@ Für den Datensatz haben Sie die Möglichkeit, entweder einen vorhandenen Datens
 >
 > Da Sie entweder einen vorhandenen Datensatz verwenden oder einen neuen Datensatz erstellen, tun Sie Folgendes: **not** entweder `INSERT INTO` oder `CREATE TABLE AS SELECT` als Teil der Abfrage, da die Datensätze bereits festgelegt sind. Einschließen von `INSERT INTO` oder `CREATE TABLE AS SELECT` als Teil Ihrer geplanten Abfragen zu einem Fehler führen.
 
-Nachdem Sie alle diese Details bestätigt haben, wählen Sie **[!UICONTROL Speichern]** um einen Zeitplan zu erstellen.
+Nachdem Sie alle diese Details bestätigt haben, wählen Sie **[!UICONTROL Speichern]** um einen Zeitplan zu erstellen. Sie werden zum Arbeitsbereich Zeitpläne zurückgeleitet, der Details zum neu erstellten Zeitplan anzeigt, einschließlich der Zeitplan-ID, des Zeitplans selbst und des Ausgabedatensatzes des Zeitplans. Sie können die Zeitplan-ID verwenden, um weitere Informationen zu den Ausführungen der geplanten Abfrage selbst zu erhalten. Weitere Informationen finden Sie im [Handbuch zu geplanten Abfrage-Run-Endpunkten](../api/runs-scheduled-queries.md).
 
-Die Seite mit den Abfragedetails wird erneut angezeigt und zeigt nun die Details des neu erstellten Zeitplans, einschließlich der Zeitplan-ID, des Zeitplans selbst und des Ausgabedatensatzes des Zeitplans. Sie können die Zeitplan-ID verwenden, um weitere Informationen zu den Ausführungen der geplanten Abfrage selbst zu erhalten. Weitere Informationen finden Sie im [Handbuch zu geplanten Abfrage-Run-Endpunkten](../api/runs-scheduled-queries.md).
+![Der Arbeitsbereich &quot;Zeitpläne&quot;mit dem neu erstellten Zeitplan wird hervorgehoben.](../images/ui/query-editor/schedules-workspace.png)
 
->[!NOTE]
->
-> Sie können **one** Abfragevorlage, die die Benutzeroberfläche verwendet. Wenn Sie einer Abfragevorlage zusätzliche Zeitpläne hinzufügen möchten, müssen Sie die API verwenden. Wenn ein Zeitplan bereits mit der API hinzugefügt wurde, werden Sie **not** über die Benutzeroberfläche zusätzliche Zeitpläne hinzufügen können. Wenn bereits mehrere Zeitpläne an eine Abfragevorlage angehängt sind, wird nur der älteste Zeitplan angezeigt. Informationen zum Hinzufügen von Zeitplänen mithilfe der API finden Sie im Abschnitt [Endpunktleitfaden für geplante Abfragen](../api/scheduled-queries.md).
->
-> Darüber hinaus sollten Sie die Seite aktualisieren, wenn Sie sicherstellen möchten, dass Sie über den neuesten Status für den Zeitplan verfügen, den Sie anzeigen.
+#### Zeitplan löschen oder deaktivieren {#delete-schedule}
 
-#### Zeitplan löschen {#delete-schedule}
+Sie können einen Zeitplan im Arbeitsbereich &quot;Zeitpläne&quot;löschen oder deaktivieren. Sie müssen eine Abfragevorlage aus dem [!UICONTROL Vorlagen] oder [!UICONTROL Geplante Abfragen] Registerkarte , um zum Abfrage-Editor zu navigieren, und wählen Sie **[!UICONTROL Zeitplan]** , um auf den Arbeitsbereich Zeitpläne zuzugreifen.
 
-Sie können einen Zeitplan löschen, indem Sie **[!UICONTROL Zeitplan löschen]**.
-
-<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
-
-![Der Abfrage-Editor mit Zeitplan deaktivieren und Zeitplan löschen wurde hervorgehoben.](../images/ui/query-editor/delete-schedule.png)
+Wählen Sie einen Zeitplan aus den Zeilen der verfügbaren Zeitpläne aus. Sie können den Umschalter verwenden, um die geplante Abfrage zu deaktivieren oder zu aktivieren.
 
 >[!IMPORTANT]
 >
-> Wenn Sie einen Zeitplan für eine Abfrage löschen möchten, müssen Sie den Zeitplan zuerst deaktivieren.
+>Sie müssen den Zeitplan deaktivieren, bevor Sie einen Zeitplan für eine Abfrage löschen können.
+
+Auswählen **[!UICONTROL Zeitplan löschen]** , um den deaktivierten Zeitplan zu löschen.
+
+![Der Arbeitsbereich &quot;Zeitpläne&quot;mit der Option Zeitplan deaktivieren und Zeitplan löschen wurde hervorgehoben.](../images/ui/query-editor/delete-schedule.png)
 
 ### Speichern von Abfragen {#saving-queries}
 
-[!DNL Query Editor] bietet eine Speicherfunktion, mit der Sie eine Abfrage speichern und später daran arbeiten können. Um eine Abfrage zu speichern, wählen Sie **[!UICONTROL Speichern]** in der oberen rechten Ecke von [!DNL Query Editor]. Bevor eine Abfrage gespeichert werden kann, muss über das Bedienfeld **[!UICONTROL Details zur Abfrage]** ein Name für die Abfrage angegeben werden.
+Die [!DNL Query Editor] bietet eine Speicherfunktion, mit der Sie eine Abfrage speichern und später daran arbeiten können. Um eine Abfrage zu speichern, wählen Sie **[!UICONTROL Speichern]** in der oberen rechten Ecke von [!DNL Query Editor]. Bevor eine Abfrage gespeichert werden kann, muss über das Bedienfeld **[!UICONTROL Details zur Abfrage]** ein Name für die Abfrage angegeben werden.
 
 >[!NOTE]
 >
->Mit dem Abfrage-Editor in benannte und gespeicherte Abfragen sind als Vorlagen im Abfrage-Dashboard verfügbar. [!UICONTROL Durchsuchen] Registerkarte. Siehe [Vorlagendokumentation](./query-templates.md) für weitere Informationen.
+>Mit dem Abfrage-Editor in benannte und gespeicherte Abfragen sind als Vorlagen im Abfrage-Dashboard verfügbar. [!UICONTROL Vorlagen] Registerkarte. Siehe [Vorlagendokumentation](./query-templates.md) für weitere Informationen.
 
 ### Auffinden früherer Abfragen {#previous-queries}
 
-Alle Abfragen, die ausgeführt werden von [!DNL Query Editor] werden in der Log-Tabelle erfasst. Sie können die Suchfunktion auf der Registerkarte **[!UICONTROL Protokoll]** verwenden, um Abfrageausführungen zu finden. Gespeicherte Abfragen werden auf der Registerkarte **[!UICONTROL Durchsuchen]** angezeigt.
+Alle Abfragen, die ausgeführt werden von [!DNL Query Editor] werden in der Log-Tabelle erfasst. Sie können die Suchfunktion auf der Registerkarte **[!UICONTROL Protokoll]** verwenden, um Abfrageausführungen zu finden. Gespeicherte Abfragen werden im **[!UICONTROL Vorlagen]** Registerkarte.
 
 Weitere Informationen finden Sie in der [Übersicht über die Query Service-Benutzeroberfläche](./overview.md).
 
@@ -182,7 +184,7 @@ Weitere Informationen finden Sie in der [Übersicht über die Query Service-Benu
 
 ## Ausführen von Abfragen mit dem Abfrage-Editor {#executing-queries}
 
-So führen Sie eine Abfrage in aus [!DNL Query Editor]können Sie SQL im Editor eingeben oder eine frühere Abfrage aus dem **[!UICONTROL Protokoll]** oder **[!UICONTROL Durchsuchen]** und wählen Sie **Play**. Der Ausführungsstatus der Abfrage wird auf der Registerkarte **[!UICONTROL Konsole]** angezeigt und die Ausgabedaten werden auf der Registerkarte **[!UICONTROL Ergebnisse]** angezeigt.
+So führen Sie eine Abfrage in aus [!DNL Query Editor]können Sie SQL im Editor eingeben oder eine frühere Abfrage aus dem **[!UICONTROL Protokoll]** oder **[!UICONTROL Vorlagen]** und wählen Sie **Play**. Der Ausführungsstatus der Abfrage wird auf der Registerkarte **[!UICONTROL Konsole]** angezeigt und die Ausgabedaten werden auf der Registerkarte **[!UICONTROL Ergebnisse]** angezeigt.
 
 ### Konsole {#console}
 
