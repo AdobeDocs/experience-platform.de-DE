@@ -5,9 +5,9 @@ user-guide-title: Hilfe zu Adobe Experience Platform Web SDK
 breadcrumb-title: Web SDK-Handbuch
 user-guide-description: Interagieren Sie mit Experience Cloud-Services über das Edge-Netzwerk.
 feature: Web SDK
-source-git-commit: 2cec87d3f45b1b774925a9b669b53a958e65e57a
+source-git-commit: 15a1fd71bc5f00efdd475abd3385dc6bf4737a17
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '193'
 ht-degree: 81%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 81%
    * [Benutzeragenten-Client-Hinweise](fundamentals/user-agent-client-hints.md)
 * Datenströme {#datastreams}
    * [Übersicht](./datastreams/overview.md)
-   * [Konfigurieren eines Datenspeichers](./datastreams/configure.md)
+   * [Konfigurieren eines Datenstroms](./datastreams/configure.md)
    * [Datenvorbereitung für die Datenerfassung](./datastreams/data-prep.md)
 * Identität {#identity}
    * [Übersicht](identity/overview.md)
@@ -46,6 +46,7 @@ ht-degree: 81%
       * [Senden von Daten an Analytics](data-collection/adobe-analytics/sending-data-to-analytics.md)
 * Personalisierung {#personalization}
    * [Rendern von personalisierten Inhalten](personalization/rendering-personalization-content.md)
+   * [Personalisierung über Hybridimplementierung](personalization/hybrid-personalization.md)
    * [Verwalten von Flackern](personalization/manage-flicker.md)
    * Adobe Target {#adobe-target}
       * [Übersicht](personalization/adobe-target/target-overview.md)
