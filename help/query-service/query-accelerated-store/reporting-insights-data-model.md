@@ -1,46 +1,46 @@
 ---
-title: Abfrage Accelerated Store Reporting Insights
-description: Erfahren Sie, wie Sie über Query Service ein Berichtseinblicke-Datenmodell für die Verwendung mit beschleunigten Store-Daten und benutzerdefinierten Dashboards erstellen.
+title: Reporting-Insights des abfragebeschleunigten Speichers
+description: Erfahren Sie, wie Sie mit dem Abfrage-Service ein Reporting-Insights-Datenmodell zur Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards erstellen.
 source-git-commit: 085c9f4e76de1aa3ea969eb0511ee1da43be59f0
 workflow-type: tm+mt
 source-wordcount: '1032'
-ht-degree: 0%
+ht-degree: 81%
 
 ---
 
-# Einblicke in die Abfrage-Berichtserstellung
+# Reporting-Insights des abfragebeschleunigten Speichers
 
-Der Abfrage-beschleunigte Speicher ermöglicht Ihnen, die Zeit und Verarbeitungsleistung zu reduzieren, die erforderlich ist, um kritische Einblicke aus Ihren Daten zu gewinnen. In der Regel werden Daten in regelmäßigen Abständen verarbeitet (z. B. stündlich oder täglich), wobei aggregierte Ansichten erstellt und in Berichten verwendet werden. Die Analyse dieser Berichte, die aus aggregierten Daten generiert werden, liefert Einblicke, die die Geschäftsleistung verbessern sollen. Der Abfrage-beschleunigte Speicher bietet einen Cache-Dienst, eine gleichzeitige Nutzung, ein interaktives Erlebnis und eine zustandlose API. Es wird jedoch davon ausgegangen, dass die Daten vorverarbeitet und für aggregierte Abfragen optimiert sind und nicht für die Rohdatenabfrage.
+Mit dem abfragebeschleunigten Speicher können Sie die Zeit und die Verarbeitungsleistung reduzieren, die erforderlich sind, um entscheidende Erkenntnisse aus Ihren Daten zu gewinnen. Normalerweise werden die Daten in regelmäßigen Abständen (beipielsweise stündlich oder täglich) verarbeitet, wobei aggregierte Ansichten erstellt und in Berichten wiedergegeben werden. Die Analyse dieser aus den aggregierten Daten erstellten Berichte führt zu Insights, die zur Verbesserung der Unternehmensleistung beitragen sollen. Der abfragebeschleunigte Speicher bietet einen Cache-Service, Gleichzeitigkeit, Interaktivität und eine zustandslose API. Es wird jedoch davon ausgegangen, dass die Daten vorverarbeitet und für aggregierte Abfragen optimiert sind und nicht für die Abfrage von Rohdaten.
 
-Mit dem Abfrage-beschleunigten Speicher können Sie ein benutzerdefiniertes Datenmodell erstellen und/oder vorhandene Adobe Real-time Customer Data Platform-Datenmodelle erweitern. Anschließend können Sie mit Ihren Berichterstellungseinblicken interagieren oder sie in ein Berichts-/Visualisierungsframework Ihrer Wahl einbetten. Weitere Informationen finden Sie in der Dokumentation zum Real-time Customer Data Platform Insights-Datenmodell . [Passen Sie Ihre SQL-Abfragevorlagen an, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle (Key Performance Indicators) zu erstellen.](../../dashboards/cdp-insights-data-model.md).
+Mit dem Abfrage-beschleunigten Speicher können Sie ein benutzerdefiniertes Datenmodell erstellen und/oder vorhandene Adobe Real-time Customer Data Platform-Datenmodelle erweitern. Die gewonnenen Reporting-Insights können Sie dann in ein Reporting-/Visualisierungs-Framework Ihrer Wahl einbetten. Weitere Informationen finden Sie in der Dokumentation zum Real-time Customer Data Platform Insights-Datenmodell . [Passen Sie Ihre SQL-Abfragevorlagen an, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle (Key Performance Indicators) zu erstellen.](../../dashboards/cdp-insights-data-model.md).
 
 Das Real-Time CDP-Datenmodell von Adobe Experience Platform bietet Einblicke in Profile, Segmente und Ziele und ermöglicht die Real-Time CDP-Insight-Dashboards. Dieses Dokument führt Sie durch den Prozess der Erstellung Ihres Berichtseinblicke-Datenmodells und darüber, wie Sie Real-Time CDP-Datenmodelle nach Bedarf erweitern.
 
 ## Voraussetzungen
 
-In diesem Tutorial werden benutzerdefinierte Dashboards verwendet, um Daten aus Ihrem benutzerdefinierten Datenmodell in der Platform-Benutzeroberfläche zu visualisieren. Siehe [Dokumentation zu benutzerdefinierten Dashboards](../../dashboards/user-defined-dashboards.md) , um mehr über diese Funktion zu erfahren.
+In diesem Tutorial werden benutzerdefinierte Dashboards verwendet, um Daten aus Ihrem benutzerdefinierten Datenmodell innerhalb der Platform-Benutzeroberfläche zu visualisieren. Weitere Informationen zu dieser Funktion finden Sie in der [Dokumentation zu benutzerdefinierten Dashboards](../../dashboards/user-defined-dashboards.md).
 
 ## Erste Schritte
 
-Die Data Distiller-SKU ist erforderlich, um ein benutzerdefiniertes Datenmodell für Ihre Berichtseinblicke zu erstellen und die Real-Time CDP-Datenmodelle zu erweitern, die angereicherte Platform-Daten enthalten. Siehe [Verpackung](../packages.md), [Limits](../guardrails.md#query-accelerated-store)und [Lizenz](../data-distiller/licence-usage.md) Dokumentation, die sich auf die Data Distiller SKU bezieht. Wenn Sie nicht über die Data Distiller-SKU verfügen, wenden Sie sich für weitere Informationen an Ihren Adobe-Kundenbetreuer.
+Die Data Distiller-SKU ist erforderlich, um ein benutzerdefiniertes Datenmodell für Ihre Berichtseinblicke zu erstellen und die Real-Time CDP-Datenmodelle zu erweitern, die angereicherte Platform-Daten enthalten. Bitte beachten Sie die Dokumentation zu [Packaging](../packages.md), [Leitlinien](../guardrails.md#query-accelerated-store) und [Lizenzierung](../data-distiller/licence-usage.md), die sich auf die Data Distiller SKU bezieht. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich bitte an den Adobe-Support, um weitere Informationen zu erhalten.
 
-## Erstellen eines Berichtseinblicke-Datenmodells
+## Erstellen eines Reporting-Insights-Datenmodells
 
-In diesem Tutorial wird ein Beispiel für das Erstellen eines Audience Insight-Datenmodells verwendet. Wenn Sie eine oder mehrere Advertiser-Plattformen verwenden, um Ihre Zielgruppe zu erreichen, können Sie die API des Advertisers verwenden, um eine ungefähre Übereinstimmungsanzahl Ihrer Zielgruppe zu erhalten.
+In diesem Tutorial wird ein Beispiel für den Aufbau eines Audience-Insight-Datenmodells verwendet. Wenn Sie eine oder mehrere Advertiser-Plattformen verwenden, um Ihre Audience zu erreichen, können Sie die API des Advertisers verwenden, um eine ungefähre Anzahl von Übereinstimmungen mit Ihrer Audience zu erhalten.
 
-Zunächst verfügen Sie über ein anfängliches Datenmodell aus Ihren Quellen (möglicherweise aus Ihrer Advertiser-Plattform-API). Um eine aggregierte Ansicht Ihrer Rohdaten zu erhalten, erstellen Sie ein Berichtseinblicke-Modell, wie in der Abbildung unten beschrieben. Dadurch kann ein Datensatz die oberen und unteren Grenzen der Zielgruppenübereinstimmung abrufen.
+Zu Beginn verfügen Sie über ein erstes Datenmodell aus Ihren Quellen (möglicherweise aus Ihrer Advertiser-Plattform-API). Um eine aggregierte Ansicht Ihrer Rohdaten zu erhalten, erstellen Sie ein Reporting-Insights-Modell wie in der folgenden Abbildung beschrieben. So kann ein Datensatz die oberen und unteren Grenzen der Audience-Übereinstimmung ermitteln.
 
-![Ein Entitäts-relationales Diagramm (ERD) des Zielgruppen-Insight-Benutzermodells.](../images/query-accelerated-store/audience-insight-user-model.png)
+![Ein Entitäts-Relations-Diagramm (ERD) des Audience-Insight-Benutzermodells.](../images/query-accelerated-store/audience-insight-user-model.png)
 
-In diesem Beispiel wird die `externalaudiencereach` -Tabelle/Datensatz basiert auf einer ID und verfolgt die unteren und oberen Grenzen für die Anzahl der Treffer. Die `externalaudiencemapping` -Dimensionstabelle/-datensatz ordnet die externe ID einem Ziel und Segment in Platform zu.
+In diesem Beispiel basiert die Tabelle/der Datensatz `externalaudiencereach` auf einer ID und verfolgt die unteren und oberen Grenzen für die Anzahl der Treffer. Die Dimensionstabelle/der Datensatz `externalaudiencemapping` ordnet die externe ID einem Ziel und einem Segment auf Platform zu.
 
-## Erstellen eines Modells für die Berichterstellung von Einblicken mit Data Distiller
+## Erstellen eines Modells für Reporting-Insights mit Data Distiller
 
-Erstellen Sie anschließend ein Insight-Berichtsmodell (`audienceinsight` in diesem Beispiel) und verwenden Sie den SQL-Befehl `ACCOUNT=acp_query_batch and TYPE=QSACCEL` , um sicherzustellen, dass sie im beschleunigten Speicher erstellt wird. Erstellen Sie dann mit Query Service eine `audienceinsight.audiencemodel` -Schema für `audienceinsight` Datenbank.
+Als Nächstes erstellen Sie ein Reporting-Insights-Modell (in diesem Beispiel `audienceinsight`) und verwenden den SQL-Befehl `ACCOUNT=acp_query_batch and TYPE=QSACCEL`, um sicherzustellen, dass es in dem beschleunigten Speicher erstellt wird. Verwenden Sie dann den Abfrage-Service, um ein Schema `audienceinsight.audiencemodel` für die `audienceinsight`-Datenbank zu erstellen.
 
 >[!NOTE]
 >
->Die Data Distiller-SKU ist für die `ACCOUNT=acp_query_batch` Befehl. Andernfalls wird ein reguläres Datenmodell auf dem Data Lake erstellt.
+>Die Data Distiller SKU ist für den Befehl `ACCOUNT=acp_query_batch` erforderlich. Ohne sie wird ein reguläres Datenmodell auf dem Data Lake erstellt.
 
 ```sql
 CREATE database audienceinsight WITH (TYPE=QSACCEL, ACCOUNT=acp_query_batch);
@@ -48,9 +48,9 @@ CREATE database audienceinsight WITH (TYPE=QSACCEL, ACCOUNT=acp_query_batch);
 CREATE schema audienceinsight.audiencemodel;
 ```
 
-## Tabellen, Beziehungen und Daten erstellen
+## Erstellen von Tabellen und Beziehungen und Auffüllen von Daten
 
-Nachdem Sie Ihre `audienceinsight` Reporting-Insight-Modell, erstellen Sie die `externalaudiencereach` und `externalaudiencemapping` Tabellen erstellen und Beziehungen zwischen ihnen herstellen. Verwenden Sie als Nächstes das `ALTER TABLE` -Befehl, um eine Fremdschlüsseleinschränkung zwischen den Tabellen hinzuzufügen und eine Beziehung zu definieren. Das folgende SQL-Beispiel zeigt, wie dies funktioniert.
+Nachdem Sie nun Ihr Reporting-Insights-Modell `audienceinsight` erstellt haben, erstellen Sie die Tabellen `externalaudiencereach` und `externalaudiencemapping` und legen Beziehungen zwischen ihnen fest. Als Nächstes verwenden Sie den Befehl `ALTER TABLE`, um eine Fremdschlüssel-Begrenzung zwischen den Tabellen hinzuzufügen und eine Beziehung zu definieren. Das folgende SQL-Beispiel veranschaulicht, wie dies funktioniert.
 
 ```sql
 CREATE TABLE IF NOT exists audienceinsight.audiencemodel.externalaudiencereach
@@ -77,13 +77,13 @@ SELECT cast(null as int) segment_id,
 ALTER TABLE externalaudiencereach ADD  CONSTRAINT FOREIGN KEY (ext_custom_audience_id) REFERENCES externalaudiencemapping (ext_custom_audience_id) NOT enforced;
 ```
 
-Nach erfolgreicher Ausführung beider `ALTER TABLE` -Befehle, wird die Beziehung zwischen den Fakt- und den Dimensionstabellen gebildet.
+Nach erfolgreicher Ausführung der beiden `ALTER TABLE`-Befehle ist die Beziehung zwischen den Fakten- und Dimensionstabellen hergestellt.
 
-Sobald die Anweisungen ausgeführt wurden, verwenden Sie die `SHOW datagroups;` -Befehl, um eine Liste der verfügbaren Datensätze im beschleunigten Speicher aus dem `audienceinsight.audiencemodel`. Ihre tabellarischen Ergebnisse sollten dem unten angegebenen Beispiel ähneln.
+Sobald die Anweisungen ausgeführt wurden, verwenden Sie den Befehl `SHOW datagroups;`, um eine Liste der verfügbaren Datensätze im beschleunigten Speicher von `audienceinsight.audiencemodel` anzuzeigen. Ihre tabellarischen Ergebnisse sollten dem unten angegebenen Beispiel ähneln.
 
 >[!IMPORTANT]
 >
->Über den API-Endpunkt &quot;Zustandslos&quot;von Query Service können nur Daten im beschleunigten Speicher aufgerufen werden `POST /data/foundation/query/accelerated-queries`.
+>Über den zustandslosen API-Endpunkt `POST /data/foundation/query/accelerated-queries` des Abfrage-Services ist nur der Zugriff auf Daten im beschleunigten Speicher möglich.
 
 ```console
     Database     |    Schema     | GroupType |      ChildType       |        ChildName        | PhysicalParent |               ChildId               
@@ -92,9 +92,9 @@ Sobald die Anweisungen ausgeführt wurden, verwenden Sie die `SHOW datagroups;` 
  audienceinsight | audiencemodel | QSACCEL   | Data Warehouse Table | externalaudiencereach   | true           | 1b941a6d-6214-4810-815c-81c497a0b636
 ```
 
-## Abfragen des Reporting-Insight-Datenmodells
+## Abfrage des Reporting-Insights-Datenmodells
 
-Query Service zum Abfragen der `audiencemodel.externalaudiencereach` Dimensionstabelle. Nachfolgend finden Sie eine Beispielabfrage.
+Verwenden Sie den Abfrage-Service, um die Dimensionstabelle `audiencemodel.externalaudiencereach` abzufragen. Nachfolgend finden Sie eine Beispielabfrage.
 
 ```sql
 SELECT a.ext_custom_audience_id,
@@ -108,7 +108,7 @@ GROUP  BY a.ext_custom_audience_id,
 LIMIT  5000 ;
 ```
 
-Die tabellarischen Ergebnisse umfassen eine Zählung und eine ID.
+Die tabellarischen Ergebnisse enthalten eine Anzahl und eine ID.
 
 ```console
 ext_custom_audience_id | approximate_count_upper_bound
@@ -128,13 +128,13 @@ ext_custom_audience_id | approximate_count_upper_bound
 
 ## Erweitern Ihres Datenmodells mit dem Real-Time CDP Insight-Datenmodell
 
-Sie können Ihr Zielgruppenmodell um zusätzliche Details erweitern, um eine reichere Dimensionstabelle zu erstellen. Sie können beispielsweise den Segmentnamen und den Zielnamen der externen Zielgruppenkennung zuordnen. Verwenden Sie dazu Query Service , um einen neuen Datensatz zu erstellen oder zu aktualisieren und ihn zum Zielgruppenmodell hinzuzufügen, das Segmente und Ziele mit einer externen Identität kombiniert. Das folgende Diagramm zeigt das Konzept dieser Datenmodellerweiterung.
+Sie können Ihr Zielgruppenmodell mit zusätzlichen Details erweitern, um eine umfangreichere Dimensionstabelle zu erstellen. So können Sie beispielsweise den Segmentnamen und den Zielnamen dem externen Identifikator der Audience zuordnen. Verwenden Sie dazu den Abfrage-Service, um ein neuen Datensatz zu erstellen oder zu aktualisieren, und fügen Sie ihn dem Audience-Modell hinzu, das Segmente und Ziele mit einer externen Identität kombiniert. Das folgende Diagramm veranschaulicht das Konzept dieser Datenmodellerweiterung.
 
 ![Ein ERD-Diagramm, das das Real-Time CDP Insight-Datenmodell mit dem Query Accelerated Store-Modell verknüpft.](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
 
-## Erstellen von Dimensionstabellen zur Erweiterung Ihres Berichtseinblicke-Modells
+## Erstellen von Dimensionstabellen, um Ihr Reporting-Insights-Modell zu erweitern
 
-Verwenden Sie Query Service, um wichtige beschreibende Attribute aus den angereicherten Real-Time CDP-Dimensionsdatensätzen zum `audienceinsight` Datenmodell erstellen und eine Beziehung zwischen Ihrer Faktentabelle und der neuen Dimensionstabelle herstellen. Die folgende SQL zeigt, wie Sie vorhandene Dimensionstabellen in Ihr Berichtseinblicke-Datenmodell integrieren.
+Verwenden Sie Query Service, um wichtige beschreibende Attribute aus den angereicherten Real-Time CDP-Dimensionsdatensätzen zum `audienceinsight` Datenmodell erstellen und eine Beziehung zwischen Ihrer Faktentabelle und der neuen Dimensionstabelle herstellen. Die folgende SQL-Anweisung zeigt, wie Sie bestehende Dimensionstabellen in Ihr Reporting-Insights-Datenmodell integrieren können.
 
 ```sql
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS
@@ -153,7 +153,7 @@ CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS
 ALTER TABLE externalaudiencereach  ADD  CONSTRAINT FOREIGN KEY (ext_custom_audience_id) REFERENCES external_seg_dest_map (ext_custom_audience_id) NOT enforced;
 ```
 
-Verwenden Sie die `SHOW datagroups;` -Befehl, um die Erstellung des zusätzlichen `external_seg_dest_map` Dimensionstabelle.
+Verwenden Sie den Befehl `SHOW datagroups;`, um die Erstellung der zusätzlichen Dimensionstabelle `external_seg_dest_map` zu bestätigen.
 
 ```console
     Database     |     Schema     | GroupType |      ChildType       |                ChildName  | PhysicalParent |               ChildId               
@@ -163,9 +163,9 @@ Verwenden Sie die `SHOW datagroups;` -Befehl, um die Erstellung des zusätzliche
  audienceinsight | audiencemodel | QSACCEL   | Data Warehouse Table | externalaudiencereach      | true           | 4485c610-7424-4ed6-8317-eed0991b9727
 ```
 
-## Abfragen Ihres erweiterten Datenmodells für die schnelleren Speicherberichterstellung
+## Abfragen Ihres erweiterten Reporting-Insights-Datenmodells mit beschleunigtem Speicher
 
-Nun, dass `audienceinsight` Das Datenmodell wurde erweitert und kann abgefragt werden. Die folgende SQL-Tabelle zeigt die Liste der zugeordneten Ziele und Segmente.
+Nachdem das `audienceinsight`-Datenmodell erweitert wurde, kann es nun abgefragt werden. Die folgende SQL-Abfrage zeigt die Liste der zugeordneten Ziele und Segmente.
 
 ```sql
 SELECT a.ext_custom_audience_id,
@@ -181,7 +181,7 @@ FROM   audiencemodel.externalaudiencereach1 AS a
 LIMIT  25; 
 ```
 
-Die Abfrage gibt alle Datensätze im Abfrage-beschleunigten Speicher zurück:
+Die Abfrage gibt alle Datensätze des abfragebeschleunigten Speichers zurück:
 
 ```console
 ext_custom_audience_id | destination_name |       segment_name        | destination_status | destination_id | segment_id 
@@ -202,11 +202,11 @@ ext_custom_audience_id | destination_name |       segment_name        | destinat
  23850912218160554      | FCA_Test4        | Born in 1970s             | enabled            |     1549248886 |  1899603869
 ```
 
-## Daten mit benutzerdefinierten Dashboards visualisieren
+## Visualisieren Ihrer Daten mit benutzerdefinierten Dashboards
 
 Nachdem Sie Ihr benutzerdefiniertes Datenmodell erstellt haben, können Sie Ihre Daten mit benutzerdefinierten Abfragen und benutzerdefinierten Dashboards visualisieren.
 
-Die folgende SQL-Tabelle enthält eine Aufschlüsselung der Übereinstimmungsanzahl nach Zielgruppen in einem Ziel und eine Aufschlüsselung der einzelnen Zielgruppen nach Segment.
+Die folgende SQL-Abfrage liefert eine Aufschlüsselung der Anzahl der Übereinstimmungen nach Audiences in einem Ziel und eine Aufschlüsselung jedes Ziels von Audiences nach Segment.
 
 ```sql
 SELECT b.destination_name,
@@ -223,8 +223,8 @@ ORDER BY b.destination_name
 LIMIT  5000
 ```
 
-Das folgende Bild bietet ein Beispiel für mögliche benutzerdefinierte Visualisierungen mithilfe Ihres Berichtseinblicke-Datenmodells.
+Die folgende Abbildung zeigt ein Beispiel für die möglichen benutzerdefinierten Visualisierungen unter Verwendung Ihres Reporting-Insights-Datenmodells.
 
-![Eine Übereinstimmungszählung nach Ziel und Segment-Widget, das aus dem neuen Berichtseinblicke-Datenmodell erstellt wurde.](../images/query-accelerated-store/user-defined-dashboard-widget.png)
+![Ein Widget für die Anzahl der Übereinstimmungen nach Ziel und Segment, das aus dem neuen Reporting-Insights-Datenmodell erstellt wurde.](../images/query-accelerated-store/user-defined-dashboard-widget.png)
 
-Ihr benutzerdefiniertes Datenmodell finden Sie in der Liste der verfügbaren Datenmodelle im benutzerdefinierten Dashboard-Arbeitsbereich. Siehe [Benutzerhandbuch zu benutzerdefinierten Dashboards](../../dashboards/user-defined-dashboards.md) für Anleitungen zur Verwendung Ihres benutzerdefinierten Datenmodells.
+Ihr benutzerdefiniertes Datenmodell ist in der Liste der verfügbaren Datenmodelle im benutzerdefinierten Dashboard-Arbeitsbereich zu finden. Eine Anleitung zur Verwendung Ihres benutzerdefinierten Datenmodells finden Sie im [Handbuch zum benutzerdefinierten Dashboard](../../dashboards/user-defined-dashboards.md).
