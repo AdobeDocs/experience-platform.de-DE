@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform verwendet ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet. Dieses Dokument liefert standardmäßige Verwendungs- und Quotenbegrenzungen zur Hilfe bei der Modellierung Ihrer Profildaten, sodass Sie eine optimale Systemleistung gewährleisten können.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: d6100f58b8ffd6251c3a58576a41dbfb75c3bb0c
+source-git-commit: 67ed3e5a71231d9c243ca31693d2db70492bdb43
 workflow-type: tm+mt
-source-wordcount: '1902'
-ht-degree: 49%
+source-wordcount: '1905'
+ht-degree: 51%
 
 ---
 
@@ -55,7 +55,7 @@ Die folgenden Leitlinien bieten empfohlene Beschränkungen bei der Modellierung 
 | Klassendatensätze von XDM Individual Profile | 20 | Weich | Es werden maximal 20 Datensätze empfohlen, die die Klasse &quot;XDM Individual Profile&quot;nutzen. |
 | XDM ExperienceEvent-Klassendatensätze | 20 | Weich | Es werden maximal 20 Datensätze empfohlen, die die XDM ExperienceEvent-Klasse nutzen. |
 | Für Profil aktivierte Adobe Analytics Report Suite-Datensätze | 1 | Soft | Es sollte maximal ein (1) Analytics Report Suite-Datensatz für Profil aktiviert werden. Der Versuch, mehrere Analytics Report Suite-Datensätze für Profile zu aktivieren, kann unbeabsichtigte Auswirkungen auf die Datenqualität haben. Weitere Informationen finden Sie im Abschnitt zu [Adobe Analytics-Datensätze](#aa-datasets) in der Anlage. |
-| Beziehungen mit mehreren Entitäten | 5 | Weich | Es werden maximal 5 Beziehungen mit mehreren Entitäten empfohlen, die in primären Entitäten oder Dimensionsentitäten definiert sind. Zusätzliche Beziehungszuordnungen sollten erst vorgenommen werden, wenn eine vorhandene Beziehung entfernt oder deaktiviert wurde. |
+| Beziehungen mit mehreren Entitäten | 5 | Soft | Es werden maximal 5 Beziehungen mit mehreren Entitäten empfohlen, die in primären Entitäten oder Dimensionsentitäten definiert sind. Zusätzliche Beziehungszuordnungen sollten erst vorgenommen werden, wenn eine vorhandene Beziehung entfernt oder deaktiviert wurde. |
 | JSON-Tiefe für ID-Feld, das in der Beziehung mit mehreren Entitäten verwendet wird | 4 | Soft | Die empfohlene maximale JSON-Tiefe für ein ID-Feld, das in Beziehungen mit mehreren Entitäten verwendet wird, beträgt 4. Dies bedeutet, dass in einem hochverschachtelten Schema Felder, die mehr als vier Ebenen tief verschachtelt sind, nicht als ID-Feld in einer Beziehung verwendet werden sollten. |
 | Array-Kardinalität in einem Profilfragment | &lt;=500 | Soft | Die optimale Array-Kardinalität in einem Profilfragment (zeitunabhängige Daten) ist &lt;=500. |
 | Array-Kardinalität in ExperienceEvent | &lt;=10 | Soft | Die optimale Array-Kardinalität in einem ExperienceEvent (Zeitreihendaten) ist &lt;=10. |
@@ -89,7 +89,7 @@ In den folgenden Leitlinien erhalten Sie Informationen zur Datengröße und zu e
 | Maximale Profildatensatzgröße | 100 KB | Hard | **Die maximale Größe eines Profildatensatzes beträgt 100 KB.** Die Aufnahme wird fortgesetzt, Profildatensätze, die größer als 100 KB sind, werden jedoch gelöscht. |
 | Maximale Größe von Profilfragmenten | 50 MB | Hard | **Die maximale Größe eines einzelnen Profilfragments beträgt 50 MB.** Die Segmentierung, der Export und die Suche können bei allen [Profilfragment](#profile-fragments) größer als 50 MB ist. |
 | Maximale Profilspeichergröße | 50 MB | Soft | **Die maximale Größe eines gespeicherten Profils beträgt 50 MB.** Hinzufügen neuer [Profilfragmente](#profile-fragments) in ein Profil, das größer als 50 MB ist, wirkt sich auf die Systemleistung aus. Beispielsweise könnte ein Profil ein einzelnes Fragment mit 50 MB enthalten oder mehrere Fragmente aus mehreren Datensätzen mit einer kombinierten Gesamtgröße von 50 MB enthalten. Der Versuch, ein Profil mit einem einzelnen Fragment, das größer als 50 MB ist, oder mehreren Fragmenten mit einer Gesamtgröße von mehr als 50 MB zu speichern, wirkt sich auf die Systemleistung aus. |
-| Anzahl der täglich erfassten Profil- oder ExperienceEvent-Batches | 90 | Soft | **Die maximale Anzahl von Profil- oder ExperienceEvent-Batches, die pro Tag erfasst werden, beträgt 90.** Das bedeutet, dass die Gesamtanzahl der täglich erfassten Profil- und ExperienceEvent-Batches 90 nicht überschreiten darf. Die Erfassung zusätzlicher Batches wirkt sich auf die Systemleistung aus. |
+| Anzahl der täglich aufgenommenen Profil- oder ExperienceEvent-Batches | 90 | Soft | **Die maximale Anzahl von Profil- oder ExperienceEvent-Batches, die pro Tag aufgenommen werden, beträgt 90.** Das bedeutet, dass die Gesamtanzahl der pro Tag aufgenommenen Profil- und ExperienceEvent-Batches 90 nicht überschreiten darf. Das Aufnehmen zusätzlicher Batches beeinträchtigt die Systemleistung. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -136,7 +136,7 @@ Das [!DNL Profile]-Datenspeichermodell besteht aus zwei Kernentitätstypen:
 
 ### Profilfragmente
 
-In diesem Dokument gibt es mehrere Limits, die auf &quot;Profilfragmente&quot;verweisen. In Experience Platform werden mehrere Profilfragmente zusammengeführt, um das Echtzeit-Kundenprofil zu bilden. Jedes Fragment stellt eine eindeutige primäre Identität und die entsprechenden Datensatz- oder Ereignisdaten für diese ID in einem bestimmten Datensatz dar. Weiterführende Informationen zu Profilfragmenten finden Sie im Abschnitt [Profilübersicht](home.md#profile-fragments-vs-merged-profiles).
+In diesem Dokument gibt es mehrere Limits, die auf &quot;Profilfragmente&quot;verweisen. In Experience Platform werden mehrere Profilfragmente zusammengeführt, um das Echtzeit-Kundenprofil zu bilden. Jedes Fragment stellt eine eindeutige primäre Identität und den entsprechenden Datensatz oder vollständigen Satz von Ereignisdaten für diese ID in einem bestimmten Datensatz dar. Weiterführende Informationen zu Profilfragmenten finden Sie im Abschnitt [Profilübersicht](home.md#profile-fragments-vs-merged-profiles).
 
 ### Zusammenführungsrichtlinien {#merge-policies}
 
