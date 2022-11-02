@@ -5,10 +5,10 @@ title: Datensätze - Übersicht
 topic-legacy: datasets
 description: Dieses Dokument bietet einen umfassenden Überblick über Datensätze in Experience Platform.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 02002c9530074b8b05664ff9eab5bc2fe4b7d5d4
 workflow-type: tm+mt
-source-wordcount: '711'
-ht-degree: 17%
+source-wordcount: '736'
+ht-degree: 16%
 
 ---
 
@@ -61,6 +61,7 @@ Im Folgenden finden Sie eine Liste der nachgelagerten Dienste, die Datensätze f
 * [Adobe Experience Platform-Segmentierungsdienst](../../segmentation/home.md): Ermöglicht Ihnen das Erstellen von Segmenten und das Generieren von Zielgruppen aus Ihrer [!DNL Real-time Customer Profile] Daten. Diese Zielgruppen können dann in ihre eigenen Datensätze innerhalb der [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md): Verwendet maschinelles Lernen und künstliche Intelligenz, um Einblicke in große Datensätze zu erhalten.
 * [Adobe Experience Platform Query Service](../../query-service/home.md): Ermöglicht die Verwendung von SQL zur Abfrage von Daten in [!DNL Experience Platform], indem Sie beliebige Datensätze innerhalb der [!DNL Data Lake] und Erfassen von Abfrageergebnissen als neuen Datensatz zur Verwendung in Berichten, [!DNL Data Science Workspace]oder [!DNL Real-time Customer Profile].
+* [Adobe Experience Platform Destinations-Dienst](../../destinations/home.md): Ermöglicht Ihnen Folgendes: [Datensätze exportieren](/help/destinations/ui/export-datasets.md) für Ihre gewünschten Cloud-Speicher- oder E-Mail-Marketing-Ziele, für Reporting- oder Datenwissenschaftsaktivitäten.
 
 ## Nächste Schritte
 

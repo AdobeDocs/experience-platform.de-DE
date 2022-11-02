@@ -5,10 +5,10 @@ topic-legacy: overview
 title: Zugangssteuerung – Übersicht
 description: Die Zugangssteuerung für Adobe Experience Platform wird über Adobe Admin Console geboten. Diese Funktion nutzt Produktprofile in Admin Console, um Anwender mit Berechtigungen und Sandboxes zu verknüpfen.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: a3ee014656f135a0701b33f938384d3ab4316a99
+source-git-commit: e2d3267715f693a321b2f4ce1bae0650f38c21d7
 workflow-type: tm+mt
-source-wordcount: '1392'
-ht-degree: 99%
+source-wordcount: '1419'
+ht-degree: 96%
 
 ---
 
@@ -103,7 +103,8 @@ In der folgenden Tabelle sind die für [!DNL Experience Platform] in der [!DNL A
 | [!DNL Sandbox Administration] | [!UICONTROL Zurücksetzen einer Sandbox] | Fähigkeit, eine Sandbox zurückzusetzen. |
 | [!DNL Destinations] | [!UICONTROL Verwalten von Zielen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Deaktivieren von Zielen. |
 | [!DNL Destinations] | [!UICONTROL Anzeigen von Zielen] | Schreibgeschützter Zugriff auf verfügbare Ziele auf der Registerkarte **[!UICONTROL Katalog]** und authentifizierte Ziele auf der Registerkarte **[!UICONTROL Durchsuchen]**. |
-| [!DNL Destinations] | [!UICONTROL Aktivieren von Zielen] | Fähigkeit zur Aktivierung von Daten an aktiven Zielen, die erstellt wurden. Für diese Zugriffsberechtigung ist es erforderlich, dass dem Benutzer, der die Ziele aktiviert, entweder „Ziele anzeigen“ oder [!UICONTROL Ziele verwalten] gewährt wird. |
+| [!DNL Destinations] | [!UICONTROL Aktivieren von Zielen] | Fähigkeit zur Aktivierung von Daten an aktiven Zielen, die erstellt wurden. Diese Berechtigung erfordert entweder [!UICONTROL Ziele anzeigen] oder [!UICONTROL Ziele verwalten] wird dem Benutzer gewährt, der Ziele aktiviert. |
+| [!DNL Destinations] | [!UICONTROL Verwalten und Aktivieren von Datensatzzielen] | Möglichkeit zum Lesen, Erstellen, Bearbeiten und Deaktivieren von Datensatzexport-Flüssen. Möglichkeit, auch Daten für aktive Datensätze zu aktivieren, die erstellt wurden. |
 | [!DNL Destinations] | [!UICONTROL Ziel-Authoring] | Möglichkeit, Ziele mithilfe des [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md) zu erstellen. |
 | [!DNL Data Ingestion] | [!UICONTROL Verwalten von Quellen] | Zugriff zum Lesen, Erstellen, Bearbeiten und Deaktivieren von Quellen. |
 | [!DNL Data Ingestion] | [!UICONTROL Anzeigen von Quellen] | Schreibgeschützter Zugriff auf verfügbare Quellen auf der Registerkarte **[!UICONTROL Katalog]** und authentifizierte Quellen auf der Registerkarte **[!UICONTROL Durchsuchen]**. |

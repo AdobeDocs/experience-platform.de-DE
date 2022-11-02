@@ -3,10 +3,10 @@ keywords: Plattform; Ziele; Arbeitsbereich "Ziele"; Arbeitsbereich; UI; Ziele in
 title: Arbeitsbereich „Ziele“
 description: 'Der Arbeitsbereich Ziele besteht aus fünf Bereichen: Überblick, Katalog, Durchsuchen, Konten und Systemansicht. Sie werden in den folgenden Abschnitten beschrieben.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 802a15212f51db2c616860ed0fd2c3f1cf2d3777
+source-git-commit: 69e1f065cb3b302c4b144f39c84179075379f648
 workflow-type: tm+mt
-source-wordcount: '1162'
-ht-degree: 18%
+source-wordcount: '1223'
+ht-degree: 17%
 
 ---
 
@@ -16,7 +16,7 @@ Wählen Sie in Adobe Experience Platform **[!UICONTROL Ziele]** über die linke 
 
 Die [!UICONTROL Ziele] Arbeitsbereich besteht aus fünf Bereichen, [!UICONTROL Übersicht], [!UICONTROL Katalog], [!UICONTROL Durchsuchen], [!UICONTROL Konten]und [!UICONTROL Systemansicht], wie in den folgenden Abschnitten beschrieben.
 
-![Zielüberblick](../assets/ui/workspace/destinations-overview.png)
+![Dashboard der Zielübersicht mit drei Widgets.](../assets/ui/workspace/destinations-overview.png)
 
 ## [!UICONTROL Übersicht] {#overview}
 
@@ -37,16 +37,18 @@ Die [!DNL Platform] Die Benutzeroberfläche bietet mehrere Such- und Filteroptio
 * Verwenden Sie die Suchfunktion auf der Seite, um ein bestimmtes Ziel zu finden.
 * Filtern von Zielen mithilfe des [!UICONTROL Kategorien] Kontrolle.
 * Zwischen wechseln [!UICONTROL Alle Ziele] und [!UICONTROL Meine Ziele]. Wenn Sie **[!UICONTROL Alle Ziele]**, alle verfügbar [!DNL Platform] -Ziele angezeigt. Wenn Sie **[!UICONTROL Meine Ziele]**, können Sie nur die Ziele sehen, mit denen Sie eine Verbindung hergestellt haben.
-* Zum Anzeigen auswählen **[!UICONTROL Verbindungen]** und/oder **[!UICONTROL Erweiterungen]**. Informationen zum Unterschied zwischen den beiden Kategorien finden Sie unter [Zieltypen und -kategorien](../destination-types.md).
+* Wählen Sie aus, um die **[!UICONTROL Verbindungen]** und/oder **[!UICONTROL Erweiterungen]** Typen. Um den Unterschied zwischen den beiden Kategorien zu verstehen, lesen Sie [Zieltypen und -kategorien](../destination-types.md).
 
-![Katalog](../assets/ui/workspace/catalog.png)
+![Zielkatalog mit einigen Werbe- und Cloud-Speicher-Zielen.](../assets/ui/workspace/catalog.png)
 
-Die Zielkarten enthalten entweder eine **[!UICONTROL Einrichten]** oder **[!UICONTROL Segmente aktivieren]** und ein sekundäres Steuerelement, das mehr Optionen anzeigt. Diese Steuerelemente werden nachfolgend beschrieben:
+Die Zielkarten enthalten primäre und sekundäre Kontrolloptionen. Zu den primären Steuerelementen gehören [!UICONTROL Einrichten], [!UICONTROL Aktivieren], [!UICONTROL Segmente aktivieren]oder [!UICONTROL Exportieren von Datensätzen]. Die sekundären Steuerelemente ermöglichen die Anzeige von Optionen. Diese Steuerelemente werden nachfolgend beschrieben:
 
-| Kontrolle | Beschreibung |
+| Kontrollvariante | Beschreibung |
 |---------|----------|
-| [!UICONTROL Einrichten] | Ermöglicht die Erstellung einer Verbindung zum Ziel. |
-| [!UICONTROL Aktivieren von Segmenten] | Nachdem Sie eine Verbindung zum Ziel hergestellt haben, können Sie Segmente aktivieren. |
+| [!UICONTROL Setup] | Ermöglicht die Erstellung einer Verbindung zum Ziel. |
+| [!UICONTROL Aktivieren] | Nachdem Sie eine Verbindung zum Ziel hergestellt haben, können Sie Segmente aktivieren oder Datensätze zu diesem Ziel exportieren. |
+| [!UICONTROL Aktivieren von Segmenten] | Nachdem Sie eine Verbindung zum Ziel hergestellt haben, können Sie Segmente für dieses Ziel aktivieren. |
+| [!UICONTROL Exportieren von Datensätzen] | Nachdem Sie eine Verbindung zum Ziel hergestellt haben, können Sie Datensätze zu diesem Ziel exportieren. |
 | [!UICONTROL Konto anzeigen] | Zeigen Sie die Konten an, mit denen Sie eine Verbindung zu einem Ziel hergestellt haben. |
 | [!UICONTROL Datenflüsse anzeigen] | Zeigen Sie die Datenaktivierungsflüsse an, die für ein Ziel vorhanden sind. |
 | [!UICONTROL Dokumentation anzeigen] | Öffnet einen Link zur Dokumentationsseite für dieses spezifische Ziel, um weitere Informationen zu erhalten und Sie bei der Einrichtung zu unterstützen. |
@@ -67,9 +69,9 @@ Die **[!UICONTROL Konten]** zeigt Details zu den Verbindungen an, die Sie mit ve
 
 >[!TIP]
 >
-> * Wählen Sie die drei Punkte im [!UICONTROL Plattform] und verwenden Sie die ![Schaltfläche &quot;Segmente aktivieren&quot;](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Segmente aktivieren ]**-Schaltfläche, um Segmente an dieses Ziel zu senden.
-> * Wählen Sie die drei Punkte im [!UICONTROL Plattform] und verwenden Sie die ![Schaltfläche &quot;Details bearbeiten&quot;](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL Details bearbeiten ]**Schaltfläche zu [update](update-accounts.md) die Details eines vorhandenen Zielkontos.
-> * Wählen Sie die drei Punkte im [!UICONTROL Plattform] und verwenden Sie die ![Schaltfläche &quot;Löschen&quot;](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Löschen ]**Schaltfläche zu [delete](delete-destination-account.md) ein vorhandenes Zielkonto.
+> * Wählen Sie die Auslassungszeichen (`...`) im [!UICONTROL Plattform] und verwenden Sie die ![Kontrolle aktivieren](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Aktivieren ]**/**[!UICONTROL  Segmente aktivieren ]**/**[!UICONTROL  Exportieren von Datensätzen ]**-Steuerelement zum Exportieren von Segmenten oder Datensätzen in dieses Ziel.
+> * Wählen Sie die Auslassungszeichen (`...`) im [!UICONTROL Plattform] und verwenden Sie die ![Detailsteuerung bearbeiten](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL Details bearbeiten ]**Kontrolle an [update](update-accounts.md) die Details eines vorhandenen Zielkontos.
+> * Wählen Sie die Auslassungszeichen (`...`) im [!UICONTROL Plattform] und verwenden Sie die ![Steuerelement löschen](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Löschen ]**Kontrolle an [delete](delete-destination-account.md) ein vorhandenes Zielkonto.
 
 
 ![Registerkarte „Konten“](../assets/ui/workspace/destination-account-options.png)
@@ -90,10 +92,10 @@ Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, m
 
 >[!TIP]
 >
-> * Wählen Sie die drei Punkte im [!UICONTROL Name] und verwenden Sie die ![Schaltfläche &quot;Segmente aktivieren&quot;](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Segmente aktivieren ]**-Schaltfläche, um Segmente an dieses Ziel zu senden.
-> * Wählen Sie die drei Punkte im [!UICONTROL Name] und verwenden Sie die ![Schaltfläche &quot;Löschen&quot;](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Löschen ]**Schaltfläche zu [remove](delete-destinations.md) eine bestehende Verbindung zu einem Ziel.
-> * Wählen Sie die drei Punkte im [!UICONTROL Name] und verwenden Sie die ![Anzeigen in Überwachungsschaltfläche](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Anzeigen in der Überwachung ]**Schaltfläche zum Anzeigen der Aktivierungsinformationen für dieses Ziel im [Monitoring-Dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
-> * Wählen Sie die drei Punkte im [!UICONTROL Name] und verwenden Sie die ![Warnhinweise abonnieren ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL Warnhinweise abonnieren ]**Schaltfläche zum Abonnieren von Ziel-Datenfluss-Warnhinweisen. Sie können Warnhinweise abonnieren, um Nachrichten zum Status, Erfolg oder Misserfolg Ihrer Workflow-Ausführung zu erhalten. Siehe [In-Context-Zielwarnungen abonnieren](alerts.md) für detaillierte Informationen zu Ziel-Datenfluss-Warnhinweisen.
+> * Wählen Sie die Auslassungszeichen (`...`) im [!UICONTROL Name] und verwenden Sie die ![Kontrolle von Segmenten aktivieren](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Aktivieren ]**-Steuerelement zum Exportieren von Segmenten oder Datensätzen in dieses Ziel.
+> * Wählen Sie die Auslassungszeichen (`...`) im [!UICONTROL Name] und verwenden Sie die ![Steuerelement löschen](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Löschen ]**Kontrolle an [remove](delete-destinations.md) eine bestehende Verbindung zu einem Ziel.
+> * Wählen Sie die Auslassungszeichen (`...`) im [!UICONTROL Name] und verwenden Sie die ![Anzeigen im Überwachungssteuerelement](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Anzeigen in der Überwachung ]**Kontrolle zum Anzeigen von Aktivierungsinformationen für dieses Ziel im [Monitoring-Dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Wählen Sie die Auslassungszeichen (`...`) im [!UICONTROL Name] und verwenden Sie die ![Warnhinweise abonnieren ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL Warnhinweise abonnieren ]**Kontrolle zum Abonnieren von Ziel-Datenfluss-Warnhinweisen. Sie können Warnhinweise abonnieren, um Nachrichten zum Status, Erfolg oder Misserfolg Ihrer Workflow-Ausführung zu erhalten. Siehe [In-Context-Zielwarnungen abonnieren](alerts.md) für detaillierte Informationen zu Ziel-Datenfluss-Warnhinweisen.
 
 
 ![Registerkarte „Durchsuchen“](../assets/ui/workspace/browse-tab.png)
