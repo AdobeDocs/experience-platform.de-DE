@@ -2,9 +2,9 @@
 title: (Beta) Exportieren von Datensätzen in Cloud-Speicher-Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Datensätze aus Adobe Experience Platform in Ihren bevorzugten Cloud-Speicher exportieren.
-source-git-commit: 92e2d575d92b9d412f473610fc149663e815f5c3
+source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
 workflow-type: tm+mt
-source-wordcount: '1252'
+source-wordcount: '1309'
 ht-degree: 9%
 
 ---
@@ -68,6 +68,11 @@ Aktivieren Sie die Kontrollkästchen links neben den Datensatznamen, um die Date
 ![Workflow für den Datensatzexport , der den Schritt Datensatz auswählen zeigt, in dem Sie auswählen können, welche Datensätze exportiert werden sollen.](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
 ## Datensatz-Export planen {#scheduling}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_datasets_exportoptions"
+>title="Dateiexportoptionen für Datensätze"
+>abstract="Auswählen **Inkrementelle Dateien exportieren** um nur die Daten zu exportieren, die dem Datensatz seit dem letzten Export hinzugefügt wurden. <br> Der erste inkrementelle Dateiexport umfasst alle Daten im Datensatz, die als Aufstockung dienen. Zukünftige inkrementelle Dateien enthalten nur die Daten, die dem Datensatz seit dem ersten Export hinzugefügt wurden."
 
 Im **[!UICONTROL Planung]** Schritt, können Sie ein Startdatum sowie eine Exportkadenz für Ihre Datensatzexporte festlegen.
 

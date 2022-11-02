@@ -2,10 +2,10 @@
 title: (Beta) [!DNL Google Ad Manager 360] connection
 description: Google Ad Manager 360 ist eine Adserving-Plattform von Google, mit der Herausgeber die Anzeige von Werbung auf ihren Websites, über Videos und in Apps verwalten können.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: f163b1e3c60953192b2ddf543eb4f3e8df88799b
+source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
 workflow-type: tm+mt
 source-wordcount: '914'
-ht-degree: 13%
+ht-degree: 31%
 
 ---
 
@@ -33,15 +33,15 @@ Beachten Sie die folgenden Details, die spezifisch für [!DNL Google Ad Manager 
 
 [!DNL This integration] unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten.
 
-| Zielgruppenidentität | Beschreibung | Zu beachten |
+| Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
 | PPID | [!DNL Publisher provided ID] | Wählen Sie diese Zielidentität aus, an die Zielgruppen gesendet werden sollen [!DNL Google Ad Manager 360] |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Exportart und -frequenz {#export-type-frequency}
+## Exporttyp und -häufigkeit {#export-type-frequency}
 
-Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten stehenden Tabelle.
+Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
@@ -63,29 +63,29 @@ Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten steh
 >Google hat die Anbindung von externen Zielgruppen-Management-Plattformen an Google Ad Manager 360 vereinfacht. Sie können jetzt den Vorgang zum selbstständigen Verknüpfen mit Google Ad Manager 360 durchführen. Lesen [Segmente aus Datenverwaltungsplattformen](https://support.google.com/admanager/answer/3289669?hl=en) in der Google-Dokumentation. Sie sollten über die unten aufgeführten IDs verfügen.
 
 * **Konto-ID**: Kontokennung der Adobe mit Google. Konto-ID: 87933855.
-* **Kunden-ID**: Kundenkonto-ID von Adobe mit Google. Kunden-ID: 89690775.
+* **Kunden-ID**: Kundenkonto-ID der Adobe mit Google. Kunden-ID: 89690775.
 * **Netzwerkcode**: Dies ist Ihr [!DNL Google Ad Manager] Netzwerkkennung, gefunden unter **[!UICONTROL Admin > Globale Einstellungen]** in der Google-Benutzeroberfläche sowie in der URL.
 * **Zielgruppenverknüpfungskennung**: Dies ist eine spezifische Kennung, die mit Ihrem [!DNL Google Ad Manager] Netzwerk (nicht [!DNL Network code]), auch gefunden unter **[!UICONTROL Admin > Globale Einstellungen]** in der Google-Benutzeroberfläche.
 * Ihr Kontotyp. DFP von Google oder AdX Buyer.
 
-## Herstellen einer Verbindung mit der Datenbank {#connect}
+## Herstellen einer Verbindung mit dem Ziel {#connect}
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele verwalten]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle - Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die [Zugriffsberechtigung](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**. Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) beschrieben vor. Füllen Sie im Zielkonfigurations-Workflow die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
+Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) beschrieben vor. Füllen Sie im Zielkonfigurations-Workflow die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
-### An Ziel authentifizieren {#authenticate}
+### Beim Ziel authentifizieren {#authenticate}
 
 Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]**.
 
 * **[!UICONTROL Zugriffsschlüssel-ID]**: Eine 61-stellige alphanumerische Zeichenfolge, die zur Authentifizierung Ihrer [!DNL Google Cloud Storage] -Konto auf Platform.
-* **[!UICONTROL Geheimer Zugriffsschlüssel]**: Eine Base-64-kodierte Zeichenfolge mit 40 Zeichen, die zum Authentifizieren Ihrer [!DNL Google Cloud Storage] -Konto auf Platform.
+* **[!UICONTROL Geheimer Zugriffsschlüssel]**: Eine base64-kodierte Zeichenfolge mit 40 Zeichen, die zum Authentifizieren Ihrer [!DNL Google Cloud Storage] -Konto auf Platform.
 
 Weitere Informationen zu diesen Werten finden Sie unter [HMAC-Schlüssel für Google Cloud-Speicher](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) Handbuch. Anweisungen zum Generieren Ihrer eigenen Zugriffsschlüssel-ID und Ihres geheimen Zugriffsschlüssels finden Sie im Abschnitt [[!DNL Google Cloud Storage] Quellübersicht](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
 
-### Zieldetails ausfüllen {#destination-details}
+### Ausfüllen der Zieldetails {#destination-details}
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
@@ -100,15 +100,15 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
-Sie können Warnhinweise aktivieren, um Benachrichtigungen über den Status des Datenflusses an Ihr Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnungen finden Sie im Handbuch zu [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
+Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie alle Details für Ihre Zielverbindung angegeben haben, wählen Sie **[!UICONTROL Nächste]**.
+Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle - Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Siehe [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](../../ui/activate-batch-profile-destinations.md) für Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel.
 
