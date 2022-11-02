@@ -5,9 +5,9 @@ title: API-Anleitung für Query Service
 topic-legacy: query templates
 description: Mit der Query Service-API können Entwickler ihre Adobe Experience Platform-Daten mit Standard-SQL abfragen. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
-source-git-commit: 4f85f38e4870f0c2429a3a2a50bd7f95075c6be4
+source-git-commit: 9f458a327c0b72a5984161f13f02d09b7a2e610e
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '399'
 ht-degree: 45%
 
 ---
@@ -55,6 +55,7 @@ Nachdem Sie nun wissen, welche Header verwendet werden sollen, können Sie mit d
 - [Geplante Abfragen](scheduled-queries.md)
 - [Ausführungen für geplante Abfragen](runs-scheduled-queries.md)
 - [Abfragevorlagen](query-templates.md)
+- [Beschleunigte Abfragen](./accelerated-queries.md)
 - [Warnhinweis-Abonnements](./alert-subscriptions.md)
 
 ## Nächste Schritte
