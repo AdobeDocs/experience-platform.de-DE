@@ -5,10 +5,10 @@ title: Zuordnen von Feldern für die Marketo Engage-Quelle
 topic-legacy: overview
 description: Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den Marketo-Datensätzen und den zugehörigen XDM-Feldern.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: a0ca9cff43b6f8276268467fecf944c664992950
+source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 10%
+source-wordcount: '952'
+ht-degree: 8%
 
 ---
 
@@ -28,6 +28,8 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern der neun [
 ## Aktivitäten {#activities}
 
 Die [!DNL Marketo] -Quelle unterstützt jetzt zusätzliche Standardaktivitäten. Zur Verwendung von Standardaktivitäten müssen Sie Ihr Schema mit der Variablen [Dienstprogramm zur automatischen Schemaerstellung](../marketo/marketo-namespaces.md) weil, wenn Sie neue `activities` Datenfluss, ohne das Schema zu aktualisieren, schlagen die Zuordnungsvorlagen fehl, da die neuen Zielfelder in Ihrem Schema nicht vorhanden sind. Wenn Sie sich gegen eine Aktualisierung Ihres Schemas entscheiden, können Sie weiterhin einen neuen Datenfluss erstellen und Fehler verwerfen. Neue oder aktualisierte Felder werden jedoch nicht in Platform erfasst.
+
+Weitere Informationen finden Sie in der Dokumentation unter [XDM Experience Event-Klasse](../../../../xdm/classes/experienceevent.md) für weitere Informationen zu den XDM-Klassen und XDM-Feldergruppen.
 
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
@@ -136,6 +138,8 @@ Die [!DNL Marketo] -Quelle unterstützt jetzt zusätzliche Standardaktivitäten.
 
 ## Programme {#programs}
 
+Lesen Sie die [Übersicht über XDM Business Campaign](../../../../xdm/classes/b2b/business-campaign.md) für weitere Informationen zur XDM-Klasse. Weitere Informationen zu den XDM-Feldergruppen finden Sie im Abschnitt [Feldergruppe &quot;Business Campaign Details&quot;](../../../../xdm/field-groups/b2b-campaign/details.md) Handbuch.
+
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `campaignKey.sourceType` |
@@ -164,6 +168,8 @@ Die [!DNL Marketo] -Quelle unterstützt jetzt zusätzliche Standardaktivitäten.
 {style=&quot;table-layout:auto&quot;}
 
 ## Programmmitgliedschaften {#program-memberships}
+
+Lesen Sie die [Übersicht über XDM Business Campaign-Mitglieder](../../../../xdm/classes/b2b/business-campaign-members.md) für weitere Informationen zur XDM-Klasse. Weitere Informationen zu den XDM-Feldergruppen finden Sie im Abschnitt [Feldergruppe &quot;XDM Business Campaign Member Details&quot;](../../../../xdm/field-groups/b2b-campaign-members/details.md) Handbuch.
 
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
@@ -196,6 +202,8 @@ Die [!DNL Marketo] -Quelle unterstützt jetzt zusätzliche Standardaktivitäten.
 
 ## Firmen {#companies}
 
+Lesen Sie die [Übersicht über XDM-Geschäftskonten](../../../../xdm/classes/b2b/business-account.md) für weitere Informationen zur XDM-Klasse.
+
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |
@@ -226,6 +234,8 @@ Die [!DNL Marketo] -Quelle unterstützt jetzt zusätzliche Standardaktivitäten.
 
 ## Statische Listen {#static-lists}
 
+Lesen Sie die [XDM Business Marketing List - Übersicht](../../../../xdm/classes/b2b/business-marketing-list.md) für weitere Informationen zur XDM-Klasse.
+
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `marketingListKey.sourceType` |
@@ -241,6 +251,8 @@ Die [!DNL Marketo] -Quelle unterstützt jetzt zusätzliche Standardaktivitäten.
 {style=&quot;table-layout:auto&quot;}
 
 ## Mitgliedschaften in statischen Listen {#static-list-memberships}
+
+Lesen Sie die [Übersicht über XDM Business Marketing List-Mitglieder](../../../../xdm/classes/b2b/business-marketing-list-members.md) für weitere Informationen zur XDM-Klasse.
 
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
@@ -260,6 +272,8 @@ Die [!DNL Marketo] -Quelle unterstützt jetzt zusätzliche Standardaktivitäten.
 >[!IMPORTANT]
 >
 >Der Datensatz mit benannten Konten ist nur mit der ABM-Funktion (Account-based Marketing) von Marketo erforderlich. Wenn Sie ABM nicht verwenden, müssen Sie keine Zuordnungen für benannte Konten einrichten.
+
+Lesen Sie die [Übersicht über XDM-Geschäftskonten](../../../../xdm/classes/b2b/business-account.md) für weitere Informationen zur XDM-Klasse.
 
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
@@ -286,6 +300,8 @@ Die [!DNL Marketo] -Quelle unterstützt jetzt zusätzliche Standardaktivitäten.
 {style=&quot;table-layout:auto&quot;}
 
 ## Opportunities {#opportunities}
+
+Lesen Sie die [Übersicht über XDM-Geschäftschancen](../../../../xdm/classes/b2b/business-opportunity.md) für weitere Informationen zur XDM-Klasse.
 
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
@@ -322,6 +338,8 @@ Die [!DNL Marketo] -Quelle unterstützt jetzt zusätzliche Standardaktivitäten.
 
 ## Rollen von Kontakten bei Opportunities {#opportunity-contact-roles}
 
+Lesen Sie die [XDM Business Opportunity Personrelation - Übersicht](../../../../xdm/classes/b2b/business-account-person-relation.md) für weitere Informationen zur XDM-Klasse.
+
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `opportunityPersonKey.sourceType` |
@@ -340,6 +358,8 @@ Die [!DNL Marketo] -Quelle unterstützt jetzt zusätzliche Standardaktivitäten.
 {style=&quot;table-layout:auto&quot;}
 
 ## Personen {#persons}
+
+Lesen Sie die [Übersicht über individuelle XDM-Profile](../../../../xdm/classes/individual-profile.md) für weitere Informationen zur XDM-Klasse. Weitere Informationen zu den XDM-Feldergruppen finden Sie im Abschnitt [XDM Business Person Person Details Schema-Feldergruppe](../../../../xdm/field-groups/profile/business-person-details.md) und [Schemafeldgruppe &quot;XDM Business Person&quot;](../../../../xdm/field-groups/profile/business-person-components.md) Handbuch.
 
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |

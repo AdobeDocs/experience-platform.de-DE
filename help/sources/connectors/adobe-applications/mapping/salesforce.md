@@ -3,10 +3,10 @@ keywords: Experience Platform; Startseite; beliebte Themen; Salesforce; Salesfor
 title: Salesforce-Zuordnungsfelder
 description: Die folgenden Tabellen enthalten die Zuordnungen zwischen Salesforce-Quellfeldern und den entsprechenden XDM-Feldern.
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
-source-git-commit: 948247c1ffbe10fa07ba1d03f1715fd707c6d836
+source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 24%
+source-wordcount: '494'
+ht-degree: 14%
 
 ---
 
@@ -15,6 +15,8 @@ ht-degree: 24%
 Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Salesforce] Quellfelder und die zugehörigen Experience-Datenmodell (XDM)-Felder.
 
 ## Kontakt {#contact}
+
+Lesen Sie die [Übersicht über individuelle XDM-Profile](../../../../xdm/classes/individual-profile.md) für weitere Informationen zur XDM-Klasse. Weitere Informationen zu den XDM-Feldergruppen finden Sie im Abschnitt [XDM Business Person Person Details Schema-Feldergruppe](../../../../xdm/field-groups/profile/business-person-details.md) und [Schemafeldgruppe &quot;XDM Business Person&quot;](../../../../xdm/field-groups/profile/business-person-components.md) Handbuch.
 
 | Quellfeld | Target XDM-Feldpfad | Anmerkungen |
 | --- | --- | --- |
@@ -74,6 +76,8 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Salesforce] Quel
 
 ## Lead {#lead}
 
+Lesen Sie die [Übersicht über individuelle XDM-Profile](../../../../xdm/classes/individual-profile.md) für weitere Informationen zur XDM-Klasse. Weitere Informationen zu den XDM-Feldergruppen finden Sie im Abschnitt [XDM Business Person Person Details Schema-Feldergruppe](../../../../xdm/field-groups/profile/business-person-details.md) und [Schemafeldgruppe &quot;XDM Business Person&quot;](../../../../xdm/field-groups/profile/business-person-components.md) Handbuch.
+
 | Quellfeld | Target XDM-Feldpfad | Anmerkungen |
 | --- | --- | --- |
 | `City` | `workAddress.city` |
@@ -122,6 +126,8 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Salesforce] Quel
 {style=&quot;table-layout:auto&quot;}
 
 ## Konto {#account}
+
+Lesen Sie die [Übersicht über XDM-Geschäftskontodetails](../../../../xdm/classes/b2b/business-account.md) für weitere Informationen zur XDM-Klasse.
 
 | Quellfeld | Target XDM-Feldpfad | Anmerkungen |
 | --- | --- | --- |
@@ -177,6 +183,8 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Salesforce] Quel
 
 ## Chancen {#opportunity}
 
+Lesen Sie die [Übersicht über XDM-Geschäftschancen](../../../../xdm/classes/b2b/business-opportunity.md) für weitere Informationen zur XDM-Klasse.
+
 | Quellfeld | Target XDM-Feldpfad | Anmerkungen |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityKey.sourceType` |
@@ -216,6 +224,8 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Salesforce] Quel
 
 ## Kontaktrolle bei Chancen {#opportunity-contact-role}
 
+Lesen Sie die [Übersicht über die XDM Business Opportunity Person Relation class](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) für weitere Informationen zur XDM-Klasse.
+
 | Quellfeld | Target XDM-Feldpfad | Anmerkungen |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityPersonKey.sourceType` |
@@ -239,6 +249,8 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Salesforce] Quel
 {style=&quot;table-layout:auto&quot;}
 
 ## Campaign {#campaign}
+
+Lesen Sie die [Übersicht über die XDM Business Campaign-Klasse](../../../../xdm/classes/b2b/business-campaign.md) für weitere Informationen zur XDM-Klasse. Weitere Informationen zu den XDM-Feldergruppen finden Sie im Abschnitt [Feldergruppe &quot;XDM Business Campaign-Details&quot;](../../../../xdm/field-groups/b2b-campaign/details.md) Handbuch.
 
 | Quellfeld | Target XDM-Feldpfad | Anmerkungen |
 | --- | --- | --- |
@@ -269,6 +281,8 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Salesforce] Quel
 
 ## Campaign-Mitglied {#campaign-member}
 
+Lesen Sie die [Übersicht über XDM Business Campaign-Mitglieder](../../../../xdm/classes/b2b/business-campaign-members.md) für weitere Informationen zur XDM-Klasse. Weitere Informationen zu den XDM-Feldergruppen finden Sie im Abschnitt [XDM Business Campaign-Feldergruppe mit Details zum Schema](../../../../xdm/field-groups/b2b-campaign/details.md) Dokument.
+
 | Quellfeld | Target XDM-Feldpfad | Anmerkungen |
 | --- | --- | --- |
 | `"Salesforce"` | `campaignMemberKey.sourceType` |
@@ -292,6 +306,8 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Salesforce] Quel
 | `Type` | `b2b.personType` |
 
 ## Kundenkontakt-Beziehung {#account-contact-relation}
+
+Lesen Sie die [XDM Business Account Person Relation class](../../../../xdm/classes/b2b/business-account-person-relation.md) für weitere Informationen zur XDM-Klasse.
 
 | Quellfeld | Target XDM-Feldpfad | Anmerkungen |
 | --- | --- | --- |
