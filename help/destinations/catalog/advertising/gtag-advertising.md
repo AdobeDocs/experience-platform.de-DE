@@ -3,14 +3,18 @@ keywords: gtag;google gtag;google extension;google gtag extension;GTAG
 title: Google gtag-Erweiterung
 description: Die Google gtag-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 exl-id: 14a466f2-78a0-4493-93cd-3dcdae048042
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: c3f6650df5fabe9736e4b11a43c41ae39f014425
 workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 18%
+source-wordcount: '529'
+ht-degree: 19%
 
 ---
 
 # Google gtag-Erweiterung {#gtag-advertising-extension}
+
+>[!IMPORTANT]
+>
+>Die hier beschriebene Google gtag-Erweiterung wird nicht mehr unterstützt und durch die [[!DNL Google Global Site Tag (gtag)]](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) von [!DNL Acronym]. Sie finden die [!DNL Google Global Site Tag (gtag)] -Erweiterung innerhalb der [[!UICONTROL Tags]](../../../tags/home.md) Arbeitsbereich in der Datenerfassungs-Benutzeroberfläche oder der Benutzeroberfläche für Experience Platformen.
 
 ## Übersicht {#overview}
 
@@ -32,7 +36,7 @@ Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Ad
 
 So installieren Sie die Google gtag-Erweiterung:
 
-Im [Plattform-Benutzeroberfläche](https://platform.adobe.com/), gehen Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
+Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
 Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
 
