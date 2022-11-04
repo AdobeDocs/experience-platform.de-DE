@@ -5,9 +5,9 @@ title: Handbuch zur Streaming-Segmentierung der Benutzeroberfläche
 topic-legacy: ui guide
 description: Mit der Streaming-Segmentierung auf Adobe Experience Platform können Sie die Segmentierung nahezu in Echtzeit durchführen und sich dabei auf den Datenreichtum konzentrieren. Mit Streaming-Segmentierung erfolgt jetzt eine Segmentqualifizierung, wenn Daten in Platform landen. So wird die Notwendigkeit verringert, Segmentierungsaufträge zu planen und auszuführen. Mit dieser Funktion können die meisten Segmentregeln jetzt ausgewertet werden, wenn die Daten an Platform übergeben werden. Das bedeutet, dass die Segmentzugehörigkeit ohne Ausführung geplanter Segmentierungsaufträge auf dem neuesten Stand gehalten wird.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: e6b5ea1878631fa88f907fd4aec64cf040e76e95
+source-git-commit: 39e3b4df3e44200fd800b501ea7b7e06bf828054
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1338'
 ht-degree: 0%
 
 ---
@@ -116,3 +116,7 @@ Die Anzahl der insgesamt qualifizierten Segmente wird aus dem täglichen Segment
 Die Zahl unter &quot;Letzte X Tage&quot; **only** umfasst Zielgruppen, die für Streaming-Segmentierung qualifiziert sind, und **only** erhöht sich, wenn Sie Daten in das System gestreamt haben, und zählt für diese Streaming-Definition. Dieser Wert ist **only** wird für Streaming-Segmente angezeigt. Daher wird dieser Wert **kann** als 0 für Batch-Segmente anzeigen.
 
 Wenn Sie also feststellen, dass die Zahl unter &quot;Letzte X Tage&quot;null ist und das Liniendiagramm ebenfalls null meldet, haben Sie **not** alle Profile in das System gestreamt, die für dieses Segment qualifiziert wären.
+
+### Wie lange dauert es, bis ein Segment verfügbar ist?
+
+Es dauert bis zu eine Stunde, bis ein Segment verfügbar ist.

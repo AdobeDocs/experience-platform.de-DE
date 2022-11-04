@@ -5,9 +5,9 @@ title: UI-Anleitung zur Edge-Segmentierung
 topic-legacy: ui guide
 description: Bei der Edge-Segmentierung können Segmente in Platform sofort am Rand ausgewertet werden, was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 75583d9688f0c5ee0fe4627ce64b5436ca621aa1
+source-git-commit: d2196d4d9cae4bdec160ce0c028d354a0db21cb5
 workflow-type: tm+mt
-source-wordcount: '853'
+source-wordcount: '895'
 ht-degree: 1%
 
 ---
@@ -58,3 +58,11 @@ Eine Abfrage kann mit Kantensegmentierung ausgewertet werden, wenn sie eines der
 ## Nächste Schritte
 
 In diesem Handbuch wird erläutert, wie Segmente mit Kantensegmentierung in Adobe Experience Platform ausgewertet werden. Weitere Informationen zur Verwendung der Experience Platform-Benutzeroberfläche finden Sie in der [Benutzerhandbuch zur Segmentierung](./overview.md). Weitere Informationen zum Ausführen ähnlicher Aktionen und zum Arbeiten mit Segmenten mithilfe von Experience Platform-APIs finden Sie unter [Handbuch zur Edge-Segmentierungs-API](../api/edge-segmentation.md).
+
+## Anhang
+
+Im folgenden Abschnitt finden Sie häufig gestellte Fragen zur Kantensegmentierung:
+
+### Wie lange dauert es, bis ein Segment im Edge Network verfügbar ist?
+
+Es dauert bis zu eine Stunde, bis ein Segment im Edge Network verfügbar ist.

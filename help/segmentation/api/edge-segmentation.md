@@ -5,9 +5,9 @@ title: Edge-Segmentierung mithilfe der API
 topic-legacy: developer guide
 description: Dieses Dokument enthält Beispiele für die Verwendung der Kantensegmentierung mit der Adobe Experience Platform Segmentation Service-API.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: de63939c44b338bb9632a57c74c095135f023d50
+source-git-commit: d2196d4d9cae4bdec160ce0c028d354a0db21cb5
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1140'
 ht-degree: 5%
 
 ---
@@ -259,3 +259,11 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Segmentdefinition 
 Nachdem Sie nun wissen, wie Sie Segmente mit aktivierter Kantensegmentierung erstellen, können Sie sie verwenden, um Anwendungsfälle für die Personalisierung von derselben Seite und nächsten Seiten zu aktivieren.
 
 Weiterführende Informationen zum Durchführen ähnlicher Aktionen und zum Verwenden von Segmenten unter Einsatz der Benutzeroberfläche von Adobe Experience Platform finden Sie im [Segment Builder-Benutzerhandbuch](../ui/segment-builder.md).
+
+## Anhang
+
+Im folgenden Abschnitt finden Sie häufig gestellte Fragen zur Kantensegmentierung:
+
+### Wie lange dauert es, bis ein Segment im Edge Network verfügbar ist?
+
+Es dauert bis zu eine Stunde, bis ein Segment im Edge Network verfügbar ist.
