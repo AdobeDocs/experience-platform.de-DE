@@ -3,10 +3,10 @@ keywords: Experience Platform; Startseite; beliebte Themen; Zugriffskontrolle; a
 title: Attributbasierte Zugriffssteuerung - Übersicht
 description: Dieses Dokument enthält Informationen zur attributbasierten Zugriffskontrolle in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: a94cf02a57bd91d2342b53ced7da98836343aa2b
 workflow-type: tm+mt
-source-wordcount: '1653'
-ht-degree: 32%
+source-wordcount: '1777'
+ht-degree: 31%
 
 ---
 
@@ -25,7 +25,7 @@ Die attributbasierte Zugriffskontrolle umfasst die folgenden Komponenten:
 | Terminologie | Definition |
 | --- | --- |
 | Attribute | Attribute sind die Bezeichner, die die Korrelation zwischen einem Benutzer und den Platform-Ressourcen angeben, auf die er Zugriff hat. Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. eine Bezeichnung, die einem Schemafeld oder Segment hinzugefügt wird. Administrierende definieren Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten. |
-| Beschriftungen | Mit Beschriftungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practices legen nahe, Daten direkt bei ihrer Aufnahme in Platform oder ab dem Zeitpunkt ihrer Nutzbarkeit in Platform mit einer Beschriftung zu versehen. |
+| Beschriftungen | Mit Bezeichnungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practices legen nahe, Daten direkt bei ihrer Aufnahme in Platform oder ab dem Zeitpunkt ihrer Nutzbarkeit in Platform mit einer Beschriftung zu versehen. |
 | Berechtigungen | Zu den Berechtigungen gehört die Möglichkeit, Platform-Funktionen anzuzeigen und/oder zu verwenden, z. B. das Erstellen von Sandboxes, das Definieren von Schemas und das Verwalten von Datensätzen. |
 | Berechtigungssätze | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Administrator auf eine Rolle anwenden kann. Ein Administrator kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
 | Richtlinien | Richtlinien sind Aussagen, die Attribute zusammenbringen, um zulässige und unzulässige Handlungen festzustellen. Richtlinien können lokal oder global sein und andere Richtlinien überschreiben. |
@@ -55,6 +55,18 @@ Die folgenden Abschnitte enthalten Informationen dazu, wie die attributbasierte 
 ### Zugangssteuerung
 
  Platform nutzt [Adobe Admin Console](https://adminconsole.adobe.com)-Produktprofile, um Benutzer mit Berechtigungen und Sandboxes zu verknüpfen. Berechtigungen steuern den Zugriff auf verschiedene Platform-Funktionen, einschließlich Datenmodellierung, Profil-Management und Sandbox-Verwaltung. Sobald Ihre Organisation für eine attributbasierte Zugriffskontrolle aktiviert wurde, können Sie mit der Verwendung von Berechtigungen für Adobe Experience Cloud anstelle von Produktprofilen in der Adobe Admin Console beginnen, um Berechtigungen für Benutzer, Funktionen, Beschriftungen und andere Ressourcen in Ihrer Organisation zu verwalten.
+
+Es gibt nur begrenzte Verfügbarkeit für attributbasierte Zugriffskontrolle für Kunden, die Gesundheitsfürsorge- und/oder Datenschutzschilder erwerben. Zu den Funktionen dieser Funktion gehören:
+
+* Berechtigungsschnittstelle: Bietet eine Schnittstelle für Sie zum Definieren von Benutzerrollen, Berechtigungen und Richtlinien für die attributbasierte Zugriffskontrolle.
+
+* Beschriftung: Fügen Sie Benutzerrollen, Schemafeldern, Segmenten und anderen unterstützten Objekten Beschriftungen hinzu, bearbeiten und entfernen Sie diese, um Zugriffssteuerungsrichtlinien zu nutzen.
+
+Die Verwaltungs-Workflows für alle Experience Platform-gestützten Anwendungen von der Admin Console zur neuen Berechtigungs-Oberfläche werden derzeit umgestellt.
+
+>[!IMPORTANT]
+>
+>Ihre Produktprofile werden automatisch in die Benutzeroberfläche für Berechtigungen migriert, wenn Ihre Organisation aktiviert ist. Die Produktprofile in Admin Console bleiben bis jetzt unverändert. Bitte **nicht** Ihre Produktprofile ändern, nachdem Ihre Organisation aktiviert wurde.
 
 Weitere Informationen zur Zugriffskontrolle finden Sie unter [Zugriffskontrolle - Übersicht](../home.md).
 

@@ -3,9 +3,9 @@ keywords: Experience Platform; Startseite; beliebte Themen; Zugriffskontrolle; a
 title: Attributbasierte Zugriffssteuerung Rollenberechtigungen verwalten
 description: Dieses Dokument enthält Informationen zum Konfigurieren von Berechtigungen für eine Rolle über die Benutzeroberfläche "Berechtigungen"in Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: a94cf02a57bd91d2342b53ced7da98836343aa2b
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '966'
 ht-degree: 7%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 7%
 
 Berechtigungen sind der Bereich von Experience Cloud, in dem Administrierende Benutzerrollen und Zugriffsrichtlinien definieren können, um Zugriffsberechtigungen für Funktionen und Objekte in einem Produktprogramm zu verwalten.
 
-Über Berechtigungen können Sie Rollen erstellen und verwalten sowie die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen. Mit Berechtigungen können Sie auch die Bezeichnungen, Sandboxes und Benutzer*innen verwalten, die einer bestimmten Rolle zugeordnet sind.
+Über Berechtigungen können Sie Rollen erstellen und verwalten sowie die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen. Mit Berechtigungen können Sie auch die Bezeichnungen, Sandboxes und Benutzende verwalten, die einer bestimmten Rolle zugeordnet sind.
 
 Sofort nach [Erstellen einer neuen Rolle](#create-a-new-role), kehren Sie zum **[!UICONTROL Rollen]** Registerkarte. Wenn Sie Berechtigungen für eine vorhandene Rolle bearbeiten, wählen Sie die Rolle aus der **[!UICONTROL Rollen]** Registerkarte. Alternativ können Sie die Filteroption verwenden, um die Ergebnisse zu filtern und nach einer Rolle zu suchen.
 
@@ -147,9 +147,21 @@ Um eine Benutzergruppe aus einer Rolle zu entfernen, wählen Sie die **X** neben
 
 Die **[!UICONTROL Benutzergruppe löschen]** angezeigt, in dem Sie aufgefordert werden, den Löschvorgang zu bestätigen.
 
-![flac-confirm-user-groups -delete](../../images/flac-ui/flac-confirm-user-groups-delete.png)
+![flac-confirm-user-groups-delete](../../images/flac-ui/flac-confirm-user-groups-delete.png)
 
 Sie werden zum **[!UICONTROL Benutzergruppen]** Registerkarte.
+
+## Hinzufügen von Benutzern zur Experience Platform über ein Produktprofil
+
+Um einen Benutzer zu einem Produktprofil hinzuzufügen, melden Sie sich bei der Admin Console an und wählen Sie **[!UICONTROL Benutzer hinzufügen]**
+
+![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
+
+Die **[!UICONTROL Benutzer zu Ihrem Team hinzufügen]** angezeigt. Geben Sie die E-Mail-Adresse des Benutzers, den Vornamen (optional) und den Nachnamen (optional) ein.
+
+Wählen Sie das Stiftsymbol aus, um Produkte und Benutzergruppen auszuwählen. Wählen Sie **[!UICONTROL Adobe Experience Platform]**, wählen Sie **[!UICONTROL AEP-Default-All-Users]**, wählen Sie  **[!UICONTROL Speichern]**.
+
+![product-profile](../../images/flac-ui/product-profile.png)
 
 ## Nächste Schritte
 
