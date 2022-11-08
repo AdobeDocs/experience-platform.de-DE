@@ -1,18 +1,15 @@
 ---
 title: Abfragen überwachen
 description: Erfahren Sie, wie Sie Abfragen über die Query Service-Benutzeroberfläche überwachen.
-source-git-commit: 283c6ba323a327b0c525343a96a45a2412baa67b
+exl-id: 4640afdd-b012-4768-8586-32f1b8232879
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: '1033'
 ht-degree: 1%
 
 ---
 
-# Abfragen überwachen (begrenzte Version)
-
->[!IMPORTANT]
->
->Diese Funktion ist derzeit nur in begrenztem Umfang verfügbar und steht nur einer kleinen Anzahl von Kunden zur Verfügung.
+# Abfragen überwachen
 
 Adobe Experience Platform bietet über die Benutzeroberfläche eine verbesserte Sichtbarkeit für den Status aller Abfrageaufträge. Von [!UICONTROL Geplante Abfragen] -Registerkarte finden Sie jetzt wichtige Informationen zu Ihren Abfrageausführungen, die den Status, die Planungsdetails und Fehlermeldungen/Codes für den Fall eines Fehlschlagens enthalten. Sie können Warnhinweise für Abfragen auf Grundlage ihres Status auch über die Benutzeroberfläche für diese Abfragen abonnieren. [!UICONTROL Geplante Abfragen] Registerkarte.
 
@@ -126,4 +123,3 @@ Sie können die Abfrage-SQL aus dieser Ansicht in die Zwischenablage kopieren. W
 Auswählen **[!UICONTROL Abfrage]** , um zum Bildschirm mit den Zeitplandetails zurückzukehren, oder **[!UICONTROL Geplante Abfragen]** , um zur [!UICONTROL Geplante Abfragen] Registerkarte.
 
 ![Der Bildschirm mit den Ausführungsdetails mit hervorgehobener Abfrage.](./images/monitor-queries/return-navigation.png)
-

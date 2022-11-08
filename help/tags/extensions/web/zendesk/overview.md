@@ -1,10 +1,11 @@
 ---
 title: Erweiterung der Zendesk-Ereignisweiterleitung
 description: Erweiterung der Zendesk-Ereignisweiterleitung für Adobe Experience Platform.
-source-git-commit: ae585660bbf057f25e6f0dfc2520e6bb0af9d8d0
-workflow-type: ht
+exl-id: 22e94699-5b84-4a73-b007-557221d3e223
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+workflow-type: tm+mt
 source-wordcount: '1286'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -53,7 +54,7 @@ Geben Sie unter **[!UICONTROL Zendesk Domain]** den Wert für Ihre Zendesk-Subdo
 
 ## Konfigurieren einer Ereignisweiterleitungsregel
 
-Beginnen Sie mit der Erstellung einer neuen Ereignisweiterleitungsregel [Regel](../../../ui/managing-resources/rules.md) und konfigurieren Sie deren Bedingungen nach Wunsch. Bei der Auswahl der Aktionen für die Regel wählen Sie die Erweiterung [!UICONTROL Splunk] aus und dann den Aktionstyp [!UICONTROL Ereignis erstellen].
+Beginnen Sie mit der Erstellung einer neuen [Regel](../../../ui/managing-resources/rules.md) für die Ereignisweiterleitung und konfigurieren Sie die Bedingungen nach Bedarf. Wählen Sie bei der Auswahl der Aktionen für die Regel die [!UICONTROL Zendesk] Erweiterung und wählen Sie dann die [!UICONTROL Ereignis erstellen] Aktionstyp.
 
 ![Regel festlegen](../../../images/extensions/zendesk/rule.png)
 
