@@ -5,10 +5,10 @@ title: Glossar der Datennutzungskennzeichnungen
 topic-legacy: labels
 description: In diesem Dokument werden alle derzeit von Adobe Experience Platform unterstützten Datennutzungskennzeichnungen beschrieben.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 1ab97c63bc169965ca759f2dd8b411c175559fb8
+source-git-commit: c29b6c7dc061ea910ebedcae1fa4beaa6def10b1
 workflow-type: tm+mt
-source-wordcount: '2083'
-ht-degree: 70%
+source-wordcount: '2117'
+ht-degree: 67%
 
 ---
 
@@ -30,17 +30,18 @@ Vertragliche „C“-Bezeichnungen dienen zur Kategorisierung von Daten, die ver
 
 | Kennzeichnung | Definition |
 | --- | --- |
-| **C1** | Die Daten können nur in aggregierter Form aus Adobe Experience Cloud exportiert werden, ohne dass dabei Einzel- oder Gerätekennungen einbezogen werden. [Weitere Infos...](#c1) |
-| **C2** | Daten können nicht zu einem Drittanbieter exportiert werden. [Weitere Infos...](#c2) |
-| **C3** | Daten können nicht mit direkt identifizierbaren Informationen kombiniert oder anderweitig verwendet werden. [Weitere Infos...](#c3) |
-| **C4** | Daten können nicht für das Targeting von Anzeigen oder Inhalten verwendet werden, weder auf der Site noch Site-übergreifend. [Weitere Infos...](#c4) |
-| **C5** | Daten können nicht für interessenbasiertes, Site-übergreifendes Targeting von Inhalten oder Anzeigen verwendet werden. [Weitere Infos...](#c5) |
-| **C6** | Daten können nicht für das Targeting von Anzeigen auf der Site verwendet werden. [Weitere Infos...](#c6) |
-| **C7** | Daten können nicht für das Targeting von Inhalten auf der Site verwendet werden. [Weitere Infos...](#c7) |
-| **C8** | Daten können nicht zur Messung der Websites oder Apps Ihres Unternehmens verwendet werden. [Weitere Infos...](#c8) |
-| **C9** | Daten können nicht in Datenwissenschafts-Workflows verwendet werden. [Weitere Infos...](#c9) |
-| **C10** | Daten können nicht für die Aktivierung einer zusammengesetzten Identität verwendet werden. [Weitere Infos...](#c10) |
-| **C11** | Daten können nicht mit Segment Match-Partnern freigegeben werden. [Weitere Infos...](#c11) |
+| [C1](#c1) | Die Daten können nur in aggregierter Form aus Adobe Experience Cloud exportiert werden, ohne dass dabei Einzel- oder Gerätekennungen einbezogen werden. |
+| [C2](#c2) | Daten können nicht zu einem Drittanbieter exportiert werden. |
+| [C3](#c3) | Daten können nicht mit direkt identifizierbaren Informationen kombiniert oder anderweitig verwendet werden. |
+| [C4](#c4) | Daten können nicht für das Targeting von Anzeigen oder Inhalten verwendet werden, weder auf der Site noch Site-übergreifend. |
+| [C5](#c5) | Daten können nicht für interessenbasiertes, Site-übergreifendes Targeting von Inhalten oder Anzeigen verwendet werden. |
+| [C6](#c6) | Daten können nicht für das Targeting von Anzeigen auf der Site verwendet werden. |
+| [C7](#c7) | Daten können nicht für das Targeting von Inhalten auf der Site verwendet werden. |
+| [C8](#c8) | Daten können nicht zur Messung der Websites oder Apps Ihres Unternehmens verwendet werden. |
+| [C9](#c9) | Daten können nicht in Datenwissenschafts-Workflows verwendet werden. |
+| [C10](#c10) | Daten können nicht für die Aktivierung einer zusammengesetzten Identität verwendet werden. |
+| [C11](#c11) | Daten können nicht mit Segment Match-Partnern freigegeben werden. |
+| [C12](#c12) | Daten können in keiner Weise exportiert werden. |
 
 ## Identitätsbezeichnungen
 
@@ -78,7 +79,7 @@ Manche Daten können nur in aggregierter Form aus Adobe Experience Cloud exporti
 
 #### C2 {#c2}
 
-Einige Datenanbieter haben in ihren Verträgen Klauseln, die den Export von Daten von dort verbieten, wo sie ursprünglich erfasst wurden. So wird beispielsweise die Übertragung von Daten, die Sie von Social Media erhalten, oft durch deren Verträge eingeschränkt. Die Kennzeichnung C2 ist restriktiver als [C1](#c1), die nur Aggregation und anonyme Daten erfordert.
+Einige Datenanbieter haben in ihren Verträgen Klauseln, die den Export von Daten von dort verbieten, wo sie ursprünglich erfasst wurden. So wird beispielsweise die Übertragung von Daten, die Sie von Social Media erhalten, oft durch deren Verträge eingeschränkt. Das C2-Etikett ist restriktiver als [C1](#c1), die nur Aggregation und anonyme Daten erfordert, jedoch weniger restriktiv ist als [C12](#c12), wodurch Datenexporte unabhängig vom Ziel vollständig verhindert werden.
 
 #### C3 {#c3}
 
@@ -86,7 +87,7 @@ Einige Datenanbieter haben Vertragsklauseln, die die Kombination oder Verwendung
 
 #### C4 {#c4}
 
-C4 ist die restriktivste Kennzeichnung – sie umfasst die Kennzeichnungen [C5](#c5), [C6](#c6) und [C7](#c7).
+C4 umfasst Beschriftungen [C5](#c5), [C6](#c6)und [C7](#c7). Es handelt sich um eine der restriktivsten Bezeichnungen, die nur [C12](#c12).
 
 #### C5 {#c5}
 
@@ -139,3 +140,7 @@ Einige Datennutzungsrichtlinien beschränken die Verwendung von zusammengesetzte
 #### C11 {#c11}
 
 Adobe Experience Platform Segment Match ermöglicht es Ihnen, Erstanbietersegmente mit Datenschutz- und Zustimmungsvoreinstellungen abzugleichen und so eine erweiterte Profilerstellung und nachgelagerte Einblicke zu ermöglichen. Die Bezeichnung „C11“ bezeichnet Daten, die nicht in [!DNL Segment Match]-Prozessen verwendet werden sollten. Nachdem Sie ermittelt haben, welche Datensätze und/oder Felder Sie aus Segment Match ausschließen möchten, und die C11-Bezeichnung entsprechend hinzugefügt haben, wird die Bezeichnung automatisch vom Segment Match-Arbeitsablauf erzwungen.
+
+#### C12 {#c12}
+
+Daten mit dieser Beschriftung können in keiner Weise aus Platform exportiert werden. Felder mit C12-Beschriftung sind von CSV-Downloads, API-Nutzung und Aktivierungs-Workflows ausgeschlossen.
