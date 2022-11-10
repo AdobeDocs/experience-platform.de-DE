@@ -5,10 +5,10 @@ title: Verwalten von Datennutzungsrichtlinien in der Benutzeroberfläche
 topic-legacy: policies
 description: Adobe Experience Platform Data Governance bietet eine Benutzeroberfläche, über die Sie Datennutzungsrichtlinien erstellen und verwalten können. Dieses Dokument bietet einen Überblick über die Aktionen, die Sie im Arbeitsbereich "Richtlinien"der Benutzeroberfläche "Experience Platform"ausführen können.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1330'
-ht-degree: 51%
+source-wordcount: '1408'
+ht-degree: 48%
 
 ---
 
@@ -96,7 +96,12 @@ Einverständnisrichtlinien bestehen aus zwei logischen Komponenten:
 * **[!UICONTROL Wenn]**: Die Bedingung, die die Richtlinienüberprüfung Trigger. Dies kann auf einer bestimmten Marketing-Aktion, dem Vorhandensein bestimmter Datennutzungsbezeichnungen oder einer Kombination aus beiden basieren.
 * **[!UICONTROL Dann]**: Die Zustimmungsattribute, die vorhanden sein müssen, damit ein Profil in die Aktion aufgenommen wird, die die Richtlinie ausgelöst hat.
 
-#### Bedingungen konfigurieren
+#### Bedingungen konfigurieren {#consent-conditions}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_consentif"
+>title="If-Bedingung"
+>abstract="Definieren Sie zunächst die Bedingungen, unter denen die Richtlinienüberprüfung Trigger wird. Bedingungen können bestimmte Marketing-Aktionen umfassen, bestimmte Data Governance-Beschriftungen enthalten oder eine Kombination aus beiden."
 
 Unter dem **[!UICONTROL Wenn]** Wählen Sie die Marketing-Aktionen und/oder Datennutzungsbezeichnungen aus, die auf diese Richtlinie Trigger werden sollen. Auswählen **[!UICONTROL Alle anzeigen]** und **[!UICONTROL Titel auswählen]** , um die vollständigen Listen der verfügbaren Marketing-Aktionen bzw. -Beschriftungen anzuzeigen.
 
@@ -108,7 +113,12 @@ Wenn Sie mehr als eine Bedingung auswählen, können Sie das zwischen ihnen ange
 
 ![](../images/policies/and-or-selection.png)
 
-#### Zustimmungsattribute auswählen
+#### Zustimmungsattribute auswählen {#consent-attributes}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_consentthen"
+>title="Dann Bedingung"
+>abstract="Nachdem Sie Ihre &#39;If&#39;-Bedingung definiert haben, wählen Sie im Abschnitt &#39;Then&#39; mindestens ein Zustimmungsattribut aus dem Vereinigungsschema aus. Dies ist das Attribut, das vorhanden sein muss, damit Profile in die Aktion einbezogen werden, die von dieser Richtlinie geregelt wird."
 
 Unter dem **[!UICONTROL Dann]** Wählen Sie mindestens ein Zustimmungsattribut aus dem Vereinigungsschema aus. Dies ist das Attribut, das vorhanden sein muss, damit Profile in die Aktion einbezogen werden, die von dieser Richtlinie geregelt wird. Sie können eine der bereitgestellten Optionen aus der Liste auswählen oder **[!UICONTROL Alle anzeigen]** , um das Attribut direkt aus dem Vereinigungsschema auszuwählen.
 

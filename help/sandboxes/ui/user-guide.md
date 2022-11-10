@@ -5,10 +5,10 @@ title: Handbuch zur Sandbox-UI
 topic-legacy: user guide
 description: In diesem Dokument erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform verschiedene Vorgänge im Zusammenhang mit Sandboxes ausführen können.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 2fb972b0ec8d1f679c6ce104a439265b5cc4d535
+source-git-commit: df0f543b18f008b656c5e411305c5243efa744ad
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 16%
+source-wordcount: '816'
+ht-degree: 15%
 
 ---
 
@@ -36,7 +36,17 @@ Sobald eine Sandbox ausgewählt ist, wird der Bildschirm aktualisiert und auf di
 
 ![Sandbox-vermittelt](../images/ui/sandbox-switched.png)
 
-## Neue Sandbox erstellen
+## Neue Sandbox erstellen {#create}
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxname"
+>title="Sandbox-Name"
+>abstract="Der Sandbox-Name ist der Text, der im Backend zum Erstellen einer eindeutigen ID für diese Sandbox verwendet wird."
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxtitle"
+>title="Sandbox-Titel"
+>abstract="Der Sandbox-Titel ist der Anzeigename, der die Sandbox in Menüs und Dropdown-Menüs in der Experience Platform-Benutzeroberfläche darstellt."
 
 >[!NOTE]
 >

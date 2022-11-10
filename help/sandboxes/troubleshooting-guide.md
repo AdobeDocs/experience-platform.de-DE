@@ -5,10 +5,10 @@ title: Handbuch zur Fehlerbehebung bei Sandboxes
 topic-legacy: troubleshooting guide
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Sandboxes in Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: 2a7b2040c221ff039f17f78d9ca712032d9fc02c
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 44%
+source-wordcount: '857'
+ht-degree: 42%
 
 ---
 
@@ -22,7 +22,13 @@ Sandboxes unterteilen eine einzelne Platform-Instanz in separate virtuelle Umgeb
 
 Sandboxes sind virtuelle Partitionen innerhalb einer einzelnen Instanz von Experience Platform. Jede Sandbox unterhält eine eigene, unabhängige Bibliothek mit Platform-Ressourcen (einschließlich Schemas, Datensätzen, Profilen usw.). Alle Inhalte und Aktionen, die innerhalb einer Sandbox ausgeführt werden, sind auf diese Sandbox beschränkt und wirken sich nicht auf andere Sandboxes aus. Weiterführende Informationen dazu finden Sie unter [Sandbox-Übersicht](home.md).
 
-## Welche Arten von Sandboxes gibt es und wie unterscheiden sie sich?
+## Welche Arten von Sandboxes gibt es und wie unterscheiden sie sich? {#sandbox-types}
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxtypes"
+>title="Sandbox-Typ"
+>abstract="Der Sandbox-Typ gibt an, ob es sich um eine Produktions- oder Entwicklungs-Sandbox handelt. Produktions-Sandboxes umfassen Live-Daten und Entwicklungs-Sandboxes, die zum Testen und Entwickeln verwendet werden."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html#create" text="Sandbox in der Benutzeroberfläche erstellen"
 
 In Experience Platform gibt es zwei Arten von Sandboxes:
 

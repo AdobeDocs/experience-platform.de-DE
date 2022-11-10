@@ -5,14 +5,19 @@ title: Datennutzungsrichtlinien – Übersicht
 topic-legacy: policies
 description: Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in Experience Platform ausführen bzw. nicht ausführen dürfen.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1121'
-ht-degree: 92%
+source-wordcount: '1180'
+ht-degree: 87%
 
 ---
 
-# Datennutzungsrichtlinien – Übersicht
+# Datennutzungsrichtlinien – Übersicht {#policies-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_restrictusage"
+>title="Beschränken der Datennutzung"
+>abstract="Der Datennutzungsrichtlinientyp bewertet spezifische Marketing-Aktionen, die auf Data Governance-Beschriftungen angewendet werden, um die Datennutzung für Marketing-Aktivitäten zu beschränken."
 
 Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in [!DNL Experience Platform] ausführen bzw. nicht ausführen dürfen.
 
@@ -20,6 +25,10 @@ Es stehen zwei Arten von Richtlinien zur Verfügung:
 
 * **[!UICONTROL Data Governance-Politik]**: Schränken Sie die Datenaktivierung auf der Grundlage der Marketing-Aktion und der Datennutzungsbezeichnungen der betreffenden Daten ein.
 * **[!UICONTROL Einverständnisrichtlinie]**: Filtern der Profile, für die aktiviert werden können [Ziele](../../destinations/home.md) auf der Grundlage der Zustimmung oder Voreinstellungen Ihrer Kunden
+
+>[!NOTE]
+>
+>Datennutzungsrichtlinien dürfen nicht mit [Zugriffskontrollrichtlinien](../../access-control/abac/end-to-end-guide.md#policy), die bestimmen, ob bestimmte Platform-Benutzer in Ihrer Organisation auf bestimmte Datenfelder zugreifen können, und über die [!UICONTROL Berechtigungen] Registerkarte.
 
 Dieses Dokument bietet eine allgemeine Übersicht über die Richtlinien zur Datennutzung und enthält Links zu weiteren Dokumentationen zum Arbeiten mit Richtlinien in der Benutzeroberfläche oder API.
 

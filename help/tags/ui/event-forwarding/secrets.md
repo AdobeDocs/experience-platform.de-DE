@@ -2,9 +2,9 @@
 title: Konfigurieren von Geheimnissen bei der Ereignisweiterleitung
 description: Erfahren Sie, wie Sie Geheimnisse in der Benutzeroberfläche konfigurieren, um sich bei Endpunkten zu authentifizieren, die in den Eigenschaften der Ereignisweiterleitung verwendet werden.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 9f38925645ec4311f4a809a913fe51792e889105
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1766'
 ht-degree: 74%
 
 ---
@@ -37,6 +37,12 @@ In diesem Handbuch wird davon ausgegangen, dass Sie bereits mit der Verwaltung v
 Außerdem sollten Sie über ein grundlegendes Verständnis des Veröffentlichungsflusses im Hinblick auf Tags und Ereignisweiterleitung verfügen, einschließlich der Möglichkeit, Ressourcen zu einer Bibliothek hinzuzufügen und einen Build zum Testen auf Ihrer Website zu installieren. Weitere Informationen finden Sie in der [Publishing-Übersicht](../publishing/overview.md).
 
 ## Erstellen geheimer Daten {#create}
+
+>[!CONTEXTUALHELP]
+>id="platform_eventforwarding_secrets_environments"
+>title="Umgebungen für Geheimnisse"
+>abstract="Damit geheime Daten durch die Ereignisweiterleitung verwendet werden können, müssen sie einer vorhandenen Umgebung zugewiesen werden. Wenn Sie keine Umgebungen für Ihre Ereignisweiterleitungs-Eigenschaft erstellt haben, müssen Sie diese konfigurieren, bevor Sie den Vorgang fortsetzen."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=de" text="Umgebungen – Übersicht"
 
 Um einen geheimen Schlüssel zu erstellen, wählen Sie **[!UICONTROL Ereignisweiterleitung]** Öffnen Sie in der linken Navigation die Ereignisweiterleitungs-Eigenschaft, unter der Sie das Geheimnis hinzufügen möchten. Wählen Sie anschließend im linken Navigationsbereich zunächst **[!UICONTROL Geheime Daten]** und dann **[!UICONTROL Neue geheime Daten erstellen]** aus.
 

@@ -2,14 +2,19 @@
 title: Asynchrone Implementierung
 description: Erfahren Sie, wie Sie Tag-Bibliotheken von Adobe Experience Platform asynchron auf Ihrer Website bereitstellen.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1010'
-ht-degree: 100%
+source-wordcount: '1079'
+ht-degree: 94%
 
 ---
 
-# Asynchrone Implementierung
+# Asynchrone Implementierung {#asynchronous-deployment}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_asynchronous_deployment"
+>title="Asynchrone Implementierung"
+>abstract="Wenn diese Option aktiviert ist und dieses Skript-Tag analysiert wird, beginnt der Browser mit dem Laden der JavaScript-Datei. Anstatt jedoch darauf zu warten, dass die Bibliothek geladen und ausgeführt wird, wird der Rest des Dokuments analysiert und gerendert. Dies kann die Webseitenleistung verbessern, hat jedoch wichtige Auswirkungen auf die Ausführung bestimmter Regeln. Einzelheiten finden Sie in der Dokumentation."
 
 >[!NOTE]
 >
