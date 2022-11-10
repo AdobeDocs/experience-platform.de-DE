@@ -3,9 +3,9 @@ keywords: Experience Platform; Startseite; beliebte Themen; Zugriffskontrolle; a
 title: Attributbasierte Zugriffssteuerung Erstellen einer Richtlinie
 description: Dieses Dokument enthält Informationen zum Verwalten von Richtlinien über die Benutzeroberfläche "Berechtigungen"in Adobe Experience Cloud
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 1a755fa5480e036bde50617f01440cfabbaf64c2
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '678'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Wählen Sie anschließend mithilfe der Dropdown-Liste die **Stimmt überein mit*
 
 ![flac-policy-matches-dropdown](../../images/flac-ui/flac-policy-matches-dropdown.png)
 
-Wählen Sie anschließend mithilfe des Dropdown-Menüs die **Benutzer**.
+Wählen Sie anschließend mithilfe des Dropdown-Menüs den Titel (**[!UICONTROL Core-Bezeichnung]** oder **[!UICONTROL Eigene Bezeichnung]**), um die dem Benutzer in den Rollen zugewiesene Bezeichnung zu übernehmen.
 
 ![flac-policy-user-dropdown](../../images/flac-ui/flac-policy-user-dropdown.png)
 
