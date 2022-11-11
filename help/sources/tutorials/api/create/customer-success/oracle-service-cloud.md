@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Oracle Service Cloud; oracle-Service-Cloud
+keywords: Experience Platform;Startseite;Beliebte Themen;Oracle Service Cloud;oracle service cloud
 title: Erstellen einer Oracle Service Cloud-Quellverbindung mithilfe der Flow Service-API
-description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit der Oracle Service Cloud verbinden.
+description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Oracle Service Cloud verbinden.
 source-git-commit: 078a266967cd7b0818f958283a58a8af4c886a21
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '547'
-ht-degree: 33%
+ht-degree: 100%
 
 ---
 
-# (Beta) Erstellen Sie eine Oracle Service Cloud-Quellverbindung mit der [!DNL Flow Service] API
+# (Beta) Erstellen einer Oracle Service Cloud-Quellverbindung mit der [!DNL Flow Service]-API
 
 >[!NOTE]
 >
->Die Oracle Service Cloud-Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
+>Die Oracle Service Cloud-Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-gekennzeichneten Quellen.
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
-Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für Oracle Service Cloud mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für Oracle Service Cloud mithilfe der [[!DNL Flow Service] -API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
@@ -26,20 +26,20 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 * [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um sich mithilfe der [!DNL Flow Service]-API erfolgreich mit Oracle Service Cloud verbinden zu können.
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
-Zur [!DNL Flow Service] Um eine Verbindung mit Oracle Service Cloud herzustellen, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+Damit [!DNL Flow Service] eine Verbindung mit Oracle Service Cloud herstellen kann, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
 | `host` | Die Host-URL Ihrer Oracle Service Cloud-Instanz. |
 | `username` | Der Benutzername für Ihr Oracle Service Cloud-Benutzerkonto. |
 | `password` | Das Kennwort für Ihr Oracle Service Cloud-Konto. |
-| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für Oracle Service Cloud lautet: `ba5126ec-c9ac-11eb-b8bc-0242ac130003`. |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für Oracle Service Cloud lautet: `ba5126ec-c9ac-11eb-b8bc-0242ac130003`. |
 
-Weiterführende Informationen zur Authentifizierung Ihres Oracle Service Cloud-Kontos finden Sie im Abschnitt [[!DNL Oracle] Authentifizierungshandbuch](https://docs.oracle.com/en/cloud/saas/b2c-service/20c/cxska/OKCS_Authenticate_and_Authorize.html).
+Weiterführende Informationen zur Authentifizierung Ihres Oracle Service Cloud-Kontos finden Sie im [[!DNL Oracle] Authentifizierungshandbuch](https://docs.oracle.com/en/cloud/saas/b2c-service/20c/cxska/OKCS_Authenticate_and_Authorize.html).
 
 ### Verwenden von Platform-APIs
 
@@ -49,7 +49,7 @@ Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste
 
 Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an die `/connections` -Endpunkt bei der Bereitstellung Ihrer Oracle Service Cloud-Authentifizierungsberechtigungen als Teil der Anfrageparameter.
+Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie dabei Ihre Oracle Service Cloud-Authentifizierungsdaten als Teil der Anfrageparameter an.
 
 **API-Format**
 
@@ -96,7 +96,7 @@ curl -X POST \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort wird die neu erstellte Verbindung einschließlich der eindeutigen Kennung (`id`). Diese ID ist erforderlich, um Ihr CRM-System im nächsten Schritt zu untersuchen.
+Eine erfolgreiche Antwort gibt die neu erstellte Basisverbindung zurück, einschließlich ihrer eindeutigen Kennung (`id`). Diese ID ist erforderlich, um im nächsten Schritt Ihr CRM-System zu untersuchen.
 
 ```json
 {
@@ -107,7 +107,7 @@ Bei einer erfolgreichen Antwort wird die neu erstellte Verbindung einschließlic
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine Basisverbindung für Oracle Service Cloud mit dem [!DNL Flow Service] API. Sie können diese Basis-Verbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine Oracle Service Cloud-Quellverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
-* [Struktur und Inhalt Ihrer Datentabellen mithilfe des [!DNL Flow Service] API](../../explore/tabular.md)
-* [Erstellen Sie einen Datenfluss, um Kundenerfolgsdaten mithilfe der [!DNL Flow Service] API](../../collect/customer-success.md)
+* [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
+* [Erstellen eines Datenflusses, um Kundenerfolgsdaten mithilfe der  [!DNL Flow Service] -API zu Platform zu übertragen](../../collect/customer-success.md)
