@@ -1,10 +1,11 @@
 ---
 title: (Beta) Adobe Commerce-Ziel-Connector
 description: Erfahren Sie, wie Händler mit Adobe Commerce und Real-Time CDP das Einkaufserlebnis personalisieren können, indem sie äußerst relevante Site-Inhalte und Sonderangebote bereitstellen, die auf die in Real-Time CDP erstellten und verwalteten Kundensegmente zugeschnitten sind.
-source-git-commit: 0a6100f2aa98f5c40f2492dcfab79a991eded94b
+exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
 source-wordcount: '691'
-ht-degree: 81%
+ht-degree: 99%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 81%
 > 
 >Der **[!UICONTROL Adobe Commerce]**-Connector befindet sich in der Beta-Phase und steht nur einer ausgewählten Anzahl von Kunden zur Verfügung.
 
-Die [!DNL Adobe Commerce] Mit dem Ziel-Connector können Sie ein oder mehrere Real-Time CDP-Segmente auswählen, die für Ihre [!DNL Adobe Commerce] -Konto ein dynamisches personalisiertes Erlebnis für Ihre Kunden bereitstellen. Within [!DNL Adobe Commerce]können Sie dann diese Real-Time CDP-Segmente auswählen, um individuelle Angebote im Warenkorb zu personalisieren, z. B. &quot;Kauf 2 erhält 1 kostenlos&quot;. Sie können Hero-Banner auch anzeigen und die Produktpreise über Werbeangebote ändern, die alle auf Adobe Real-Time CDP-Segmente zugeschnitten sind.
+Mit dem Ziel-Connector von [!DNL Adobe Commerce] können Sie ein oder mehrere Real-Time CDP-Segmente auswählen, die Sie in Ihrem [!DNL Adobe Commerce]-Konto aktivieren, um Ihren Kundinnen und Kunden ein dynamisches, personalisiertes Erlebnis zu bieten. Innerhalb von [!DNL Adobe Commerce] können Sie dann diese Real-Time CDP-Segmente auswählen, um einzigartige Angebote im Warenkorb zu personalisieren, wie beispielsweise „Kaufen Sie zwei, erhalten Sie eins gratis“. Sie können auch Hero-Banner anzeigen und die Produktpreise durch Werbeangebote ändern, die alle auf Adobe Real-Time CDP-Segmente zugeschnitten sind.
 
 <!--## Use cases {#use-cases}
 
@@ -36,7 +37,7 @@ To help you better understand how and when you should use the *YourDestination* 
 
 ## Voraussetzungen {#prerequisites}
 
-Diese Erweiterung ist im Zielkatalog für ausgewählte Beta-Kunden verfügbar, die Real-Time CDP Prime oder Ultimate und Adobe Commerce erworben haben.
+Diese Erweiterung ist im Zielkatalog für ausgewählte Beta-Kunden verfügbar, die Real-time CDP Prime oder Ultimate und Adobe Commerce erworben haben.
 
 Beta-Kunden sollten Zugriff haben auf:
 
@@ -90,7 +91,7 @@ Weitere Informationen zur Aktivierung von Zielgruppensegmenten für das Ziel [!D
 
 ## Nächste Schritte in [!DNL Adobe Commerce]
 
-Nachdem Sie die [!DNL Commerce] Ziel in Experience Platform konfigurieren, müssen Sie die [!DNL Commerce Admin] , um die von Ihnen erstellten Real-Time CDP-Segmente zu importieren. Weitere Informationen finden Sie in der [[!DNL Commerce] Dokumentation](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/customer-segment-rtcdp.html).
+Nachdem Sie das [!DNL Commerce]-Ziel in Experience Platform konfiguriert haben, müssen Sie nun den [!DNL Commerce Admin] konfigurieren, um die von Ihnen erstellten Real-Time CDP-Segmente zu importieren. Weitere Informationen finden Sie in der [[!DNL Commerce] Dokumentation](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/customer-segment-rtcdp.html?lang=de).
 
 ## Validieren der Zielgruppenaktivierung in Commerce {#exported-data}
 

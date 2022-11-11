@@ -1,10 +1,11 @@
 ---
 title: Reporting-Insights des abfragebeschleunigten Speichers
 description: Erfahren Sie, wie Sie mit dem Abfrage-Service ein Reporting-Insights-Datenmodell zur Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards erstellen.
-source-git-commit: 085c9f4e76de1aa3ea969eb0511ee1da43be59f0
+exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
 source-wordcount: '1032'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -12,9 +13,9 @@ ht-degree: 81%
 
 Mit dem abfragebeschleunigten Speicher können Sie die Zeit und die Verarbeitungsleistung reduzieren, die erforderlich sind, um entscheidende Erkenntnisse aus Ihren Daten zu gewinnen. Normalerweise werden die Daten in regelmäßigen Abständen (beipielsweise stündlich oder täglich) verarbeitet, wobei aggregierte Ansichten erstellt und in Berichten wiedergegeben werden. Die Analyse dieser aus den aggregierten Daten erstellten Berichte führt zu Insights, die zur Verbesserung der Unternehmensleistung beitragen sollen. Der abfragebeschleunigte Speicher bietet einen Cache-Service, Gleichzeitigkeit, Interaktivität und eine zustandslose API. Es wird jedoch davon ausgegangen, dass die Daten vorverarbeitet und für aggregierte Abfragen optimiert sind und nicht für die Abfrage von Rohdaten.
 
-Mit dem Abfrage-beschleunigten Speicher können Sie ein benutzerdefiniertes Datenmodell erstellen und/oder vorhandene Adobe Real-time Customer Data Platform-Datenmodelle erweitern. Die gewonnenen Reporting-Insights können Sie dann in ein Reporting-/Visualisierungs-Framework Ihrer Wahl einbetten. Weitere Informationen finden Sie in der Dokumentation zum Real-time Customer Data Platform Insights-Datenmodell . [Passen Sie Ihre SQL-Abfragevorlagen an, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle (Key Performance Indicators) zu erstellen.](../../dashboards/cdp-insights-data-model.md).
+Mit dem abfragebeschleunigten Speicher können Sie ein benutzerdefiniertes Datenmodell erstellen und/oder bestehende Datenmodelle der Adobe Real-Time Customer Data Platform erweitern. Die gewonnenen Reporting-Insights können Sie dann in ein Reporting-/Visualisierungs-Framework Ihrer Wahl einbetten. Siehe die Dokumentation zum Real-time Customer Data Platform Insights-Datenmodell, um zu erfahren, wie Sie [Ihre SQL-Abfragevorlagen anpassen können, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle zu erstellen.](../../dashboards/cdp-insights-data-model.md).
 
-Das Real-Time CDP-Datenmodell von Adobe Experience Platform bietet Einblicke in Profile, Segmente und Ziele und ermöglicht die Real-Time CDP-Insight-Dashboards. Dieses Dokument führt Sie durch den Prozess der Erstellung Ihres Berichtseinblicke-Datenmodells und darüber, wie Sie Real-Time CDP-Datenmodelle nach Bedarf erweitern.
+Das Real-Time CDP-Datenmodell von Adobe Experience Platform bietet Einblicke in Profile, Segmente und Ziele und aktiviert die Real-Time CDP-Insight-Dashboards. Dieses Dokument führt Sie durch den Prozess der Erstellung Ihres Reporting-Insights-Datenmodells und zeigt Ihnen, wie Sie Real-Time CDP-Datenmodelle bei Bedarf erweitern können.
 
 ## Voraussetzungen
 
@@ -22,7 +23,7 @@ In diesem Tutorial werden benutzerdefinierte Dashboards verwendet, um Daten aus 
 
 ## Erste Schritte
 
-Die Data Distiller-SKU ist erforderlich, um ein benutzerdefiniertes Datenmodell für Ihre Berichtseinblicke zu erstellen und die Real-Time CDP-Datenmodelle zu erweitern, die angereicherte Platform-Daten enthalten. Bitte beachten Sie die Dokumentation zu [Packaging](../packages.md), [Leitlinien](../guardrails.md#query-accelerated-store) und [Lizenzierung](../data-distiller/licence-usage.md), die sich auf die Data Distiller SKU bezieht. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich bitte an den Adobe-Support, um weitere Informationen zu erhalten.
+Die Data Distiller SKU ist erforderlich, um ein benutzerdefiniertes Datenmodell für Ihre Reporting-Insights zu erstellen und um die Real-Time CDP-Datenmodelle zu erweitern, die angereicherte Platform-Daten enthalten. Bitte beachten Sie die Dokumentation zu [Packaging](../packages.md), [Leitlinien](../guardrails.md#query-accelerated-store) und [Lizenzierung](../data-distiller/licence-usage.md), die sich auf die Data Distiller SKU bezieht. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich bitte an den Adobe-Support, um weitere Informationen zu erhalten.
 
 ## Erstellen eines Reporting-Insights-Datenmodells
 
@@ -126,15 +127,15 @@ ext_custom_audience_id | approximate_count_upper_bound
 (10 rows)
 ```
 
-## Erweitern Ihres Datenmodells mit dem Real-Time CDP Insight-Datenmodell
+## Erweitern Ihres Datenmodells mit dem Real-Time CDP Insights-Datenmodell
 
 Sie können Ihr Zielgruppenmodell mit zusätzlichen Details erweitern, um eine umfangreichere Dimensionstabelle zu erstellen. So können Sie beispielsweise den Segmentnamen und den Zielnamen dem externen Identifikator der Audience zuordnen. Verwenden Sie dazu den Abfrage-Service, um ein neuen Datensatz zu erstellen oder zu aktualisieren, und fügen Sie ihn dem Audience-Modell hinzu, das Segmente und Ziele mit einer externen Identität kombiniert. Das folgende Diagramm veranschaulicht das Konzept dieser Datenmodellerweiterung.
 
-![Ein ERD-Diagramm, das das Real-Time CDP Insight-Datenmodell mit dem Query Accelerated Store-Modell verknüpft.](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
+![Ein ERD-Diagramm, das das Real-Time CDP-Insight-Datenmodell und das abfragebeschleunigte Speichermodell verbindet.](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
 
 ## Erstellen von Dimensionstabellen, um Ihr Reporting-Insights-Modell zu erweitern
 
-Verwenden Sie Query Service, um wichtige beschreibende Attribute aus den angereicherten Real-Time CDP-Dimensionsdatensätzen zum `audienceinsight` Datenmodell erstellen und eine Beziehung zwischen Ihrer Faktentabelle und der neuen Dimensionstabelle herstellen. Die folgende SQL-Anweisung zeigt, wie Sie bestehende Dimensionstabellen in Ihr Reporting-Insights-Datenmodell integrieren können.
+Verwenden Sie den Abfrage-Service, um wichtige beschreibende Attribute aus den angereicherten Real-Time CDP-Dimensions-Datensätzen zum `audienceinsight`-Datenmodell hinzuzufügen und eine Beziehung zwischen Ihrer Faktentabelle und der neuen Dimensionstabelle herzustellen. Die folgende SQL-Anweisung zeigt, wie Sie bestehende Dimensionstabellen in Ihr Reporting-Insights-Datenmodell integrieren können.
 
 ```sql
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS
