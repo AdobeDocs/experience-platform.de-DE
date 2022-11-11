@@ -1,24 +1,24 @@
 ---
-title: Serverseitige Personalisierung mithilfe der Edge Network Server-API
-description: Dieser Artikel zeigt, wie Sie die Edge Network Server-API verwenden können, um eine serverseitige Personalisierung für Ihre Webeigenschaften bereitzustellen.
-keywords: Personalisierung; Server-API; Edge-Netzwerk; Server-seitig;
+title: Server-seitige Personalisierung mithilfe der Edge Network Server-API
+description: Dieser Artikel zeigt, wie Sie die Edge Network Server-API verwenden können, um eine Server-seitige Personalisierung für Ihre Web-Eigenschaften bereitzustellen.
+keywords: Personalisierung;Server-API;Edge-Netzwerk;Server-seitig;
 source-git-commit: 3e7084953a5e158059074c857bfce4940a83661b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '574'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 
-# Serverseitige Personalisierung mithilfe der Edge Network Server-API
+# Server-seitige Personalisierung mithilfe der Edge Network Server-API
 
 ## Übersicht {#overview}
 
-Die serverseitige Personalisierung umfasst die Verwendung der [Edge Network Server-API](../../server-api/overview.md) , um das Kundenerlebnis in Ihren Web-Eigenschaften zu personalisieren.
+Die Server-seitige Personalisierung umfasst die Verwendung der [Edge Network Server-API](../../server-api/overview.md), um das Kundenerlebnis in Ihren Web-Eigenschaften zu personalisieren.
 
-In dem in diesem Artikel beschriebenen Beispiel wird der Personalisierungsinhalt mithilfe der Server-API serverseitig abgerufen. Anschließend wird die HTML Server-seitig gerendert, basierend auf dem abgerufenen Personalisierungsinhalt.
+In dem in diesem Artikel beschriebenen Beispiel werden Personalisierungsinhalte mithilfe der Server-API Server-seitig abgerufen. Anschließend wird die HTML basierend auf den abgerufenen Personalisierungsinhalten Server-seitig gerendert.
 
-Die nachstehende Tabelle zeigt ein Beispiel für personalisierten und nicht personalisierten Inhalt.
+Die nachstehende Tabelle zeigt ein Beispiel für personalisierte und nicht personalisierte Inhalte.
 
 | Beispielseite ohne Personalisierung | Beispielseite mit Personalisierung |
 |---|---|
@@ -28,47 +28,47 @@ Die nachstehende Tabelle zeigt ein Beispiel für personalisierten und nicht pers
 
 ### Cookies {#cookies}
 
-Cookies werden verwendet, um die Benutzeridentität und Cluster-Informationen beizubehalten.  Bei Verwendung einer serverseitigen Implementierung übernimmt der Anwendungsserver das Speichern und Senden dieser Cookies während des Lebenszyklus der Anfrage.
+Cookies werden verwendet, um die Benutzeridentität und Cluster-Informationen beizubehalten.  Bei Verwendung einer Server-seitigen Implementierung übernimmt der Anwendungs-Server das Speichern und Senden dieser Cookies während des Lebenszyklus der Anfrage.
 
 | Cookie | Zweck | Gespeichert von | Gesendet von |
 |---|---|---|---|
 | `kndctr_AdobeOrg_identity` | Enthält Details zur Benutzeridentität. | Anwendungs-Server | Anwendungs-Server |
 | `kndctr_AdobeOrg_cluster` | Gibt an, welcher Edge Network-Cluster zur Erfüllung der Anforderungen verwendet werden soll. | Anwendungs-Server | Anwendungs-Server |
 
-### Anfrageplatzierung {#request-placement}
+### Platzierung anfordern {#request-placement}
 
-Personalisierungsanfragen sind erforderlich, um Vorschläge abzurufen und eine Benachrichtigung zur Anzeige zu senden. Bei Verwendung einer serverseitigen Implementierung sendet der Anwendungsserver diese Anfragen an die Edge Network Server-API.
+Personalisierungsanfragen sind erforderlich, um Vorschläge zu erhalten und eine Anzeigebenachrichtigung zu senden. Bei Verwendung einer Server-seitigen Implementierung sendet der Anwendungs-Server diese Anfragen an die Edge Network Server-API.
 
-| Anfrage | Made by |
+| Anfrage | Gemacht von |
 |---|---|
-| Interact-Anfrage zum Abrufen von Vorschlägen | Anwendungsserver, der die Edge Network Server-API aufruft. |
-| Interact-Anfrage zum Senden von Anzeigebenachrichtigungen | Anwendungsserver, der die Edge Network Server-API aufruft. |
+| Interaktionsanfrage zum Abrufen von Vorschlägen | Anwendungs-Server, der die Edge Network Server-API aufruft. |
+| Interaktionsanfrage zum Senden von Anzeigebenachrichtigungen | Anwendungs-Server, der die Edge Network Server-API aufruft. |
 
 ## Beispielanwendung {#sample-app}
 
-Der unten beschriebene Prozess verwendet eine Beispielanwendung, die Sie als Ausgangspunkt zum Experimentieren und Erfahren Sie mehr über diese Art der Personalisierung.
+Der unten beschriebene Prozess verwendet eine Beispielanwendung, die Sie als Ausgangspunkt zum Experimentieren verwenden können und dazu, mehr über diese Art von Personalisierung zu erfahren.
 
-Sie können dieses Beispiel herunterladen und für Ihre eigenen Anforderungen anpassen. Sie können beispielsweise Umgebungsvariablen ändern, sodass die Beispielanwendung Angebote aus Ihrer eigenen Experience Platform abruft.
+Sie können dieses Beispiel herunterladen und für Ihre eigenen Anforderungen anpassen. Sie können beispielsweise Umgebungsvariablen ändern, sodass die Beispielanwendung Angebote aus Ihrer eigenen Experience Platform-Konfiguration abruft.
 
-Öffnen Sie dazu die `.env` -Datei im Stammverzeichnis des Repositorys und ändern Sie die Variablen entsprechend Ihrer Konfiguration. Starten Sie die Beispielanwendung neu und Sie können mit Ihrem eigenen Personalisierungsinhalt experimentieren.
+Öffnen Sie dazu die `.env`-Datei im Stammverzeichnis des Repositorys und ändern Sie die Variablen entsprechend Ihrer Konfiguration. Starten Sie die Beispielanwendung neu, und Sie können mit Ihrem eigenen Personalisierungsinhalt experimentieren.
 
-### Ausführen des Musters {#running-sample}
+### Ausführen des Beispiels {#running-sample}
 
 Führen Sie die folgenden Schritte aus, um die Beispielanwendung auszuführen.
 
-1. Klonen [dieses Repository](https://github.com/adobe/alloy-samples) auf Ihren lokalen Computer.
-2. Öffnen Sie ein Terminal und navigieren Sie zum `personalization-server-side` Ordner.
-3. Ausführen `npm install`.
-4. Ausführen `npm start`.
-5. Öffnen Sie den Webbrowser und navigieren Sie zu `http://localhost`.
+1. Klonen Sie [dieses Repository](https://github.com/adobe/alloy-samples) auf Ihrem lokalen Computer.
+2. Öffnen Sie ein Terminal und navigieren Sie zum Ordner `personalization-server-side`.
+3. Führen Sie `npm install` aus.
+4. Führen Sie `npm start` aus.
+5. Öffnen Sie Ihren Webbrowser und navigieren Sie zu `http://localhost`.
 
 ## Prozessübersicht {#process}
 
-In diesem Abschnitt werden die Schritte zum Abrufen des Personalisierungsinhalts beschrieben.
+In diesem Abschnitt werden die Schritte zum Abrufen der Personalisierungsinhalte beschrieben.
 
-1. [Express](https://expressjs.com/) wird für eine schlanke serverseitige Implementierung verwendet. Dies verarbeitet grundlegende Serveranforderungen und Routing.
-2. Der Browser fordert die Webseite an. Alle Cookies, die zuvor vom Browser gespeichert wurden, mit dem Präfix `kndctr_`, sind enthalten.
-3. Wenn die Seite vom Anwendungsserver angefordert wird, wird ein Ereignis an die [Endpunkt der interaktiven Datenerfassung](../../../server-api/interactive-data-collection.md) , um Personalisierungsinhalte abzurufen. Die Beispielanwendung verwendet Hilfsmethoden, um das Erstellen und Senden von Anfragen an die API zu vereinfachen (siehe [aepEdgeClient.js](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js)). Die `POST` -Anfrage enthält eine `event` und `query`. Die Cookies aus dem vorherigen Schritt sind, sofern verfügbar, im `meta>state>entries` Array.
+1. [Express](https://expressjs.com/de/) wird für eine schlanke Server-seitige Implementierung verwendet. Dies handhabt grundlegende Server-Anfragen und Routing.
+2. Der Browser fordert die Webseite an. Alle Cookies, die zuvor vom Browser gespeichert wurden, sind, mit dem Präfix `kndctr_` versehen, enthalten.
+3. Wenn die Seite vom Anwendungs-Server angefordert wird, wird ein Ereignis an den [Endpunkt der interaktiven Datenerfassung](../../../server-api/interactive-data-collection.md) gesendet, um Personalisierungsinhalte abzurufen. Die Beispielanwendung verwendet Hilfsmethoden, um das Erstellen und Senden von Anfragen an die API zu vereinfachen (siehe [aepEdgeClient.js](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js)). Die `POST`-Anfrage enthält ein `event` und eine `query`. Die Cookies aus dem vorherigen Schritt sind, sofern verfügbar, im Array `meta>state>entries` enthalten.
 
    ```js
    fetch(
@@ -148,8 +148,8 @@ In diesem Abschnitt werden die Schritte zum Abrufen des Personalisierungsinhalts
    ).then((res) => res.json());
    ```
 
-4. Das Target-Angebot aus der formularbasierten Aktivität wird aus der Antwort gelesen und bei der Erstellung der HTML-Antwort verwendet.
-5. Bei formularbasierten Aktivitäten müssen Anzeigeereignisse in der Implementierung manuell gesendet werden, um anzugeben, wann das Angebot angezeigt wurde. In diesem Beispiel wird die Benachrichtigung serverseitig während des Anfragelebenszyklus gesendet.
+4. Das Zielgruppenangebot aus der formularbasierten Aktivität wird aus der Antwort gelesen und bei der Erstellung der HTML-Antwort verwendet.
+5. Bei formularbasierten Aktivitäten müssen Anzeigeereignisse in der Implementierung manuell gesendet werden, um anzugeben, wann das Angebot angezeigt wurde. In diesem Beispiel wird die Benachrichtigung Server-seitig während des Lebenszyklus der Anfrage gesendet.
 
    ```js
    function sendDisplayEvent(aepEdgeClient, req, propositions, cookieEntries) {
@@ -196,5 +196,5 @@ In diesem Abschnitt werden die Schritte zum Abrufen des Personalisierungsinhalts
    }
    ```
 
-6. [!DNL Visual Experience Composer (VEC)] Angebote werden ignoriert, da sie nur über das Web SDK gerendert werden können.
-7. Wenn die HTML-Antwort zurückgegeben wird, werden die Identitäts- und Cluster-Cookies in der Antwort vom Anwendungsserver gesetzt.
+6. [!DNL Visual Experience Composer (VEC)]-Angebote werden ignoriert, da sie nur über das Web SDK gerendert werden können.
+7. Wenn die HTML-Antwort zurückgegeben wird, werden die Identitäts- und Cluster-Cookies in der Antwort vom Anwendungs-Server gesetzt.
