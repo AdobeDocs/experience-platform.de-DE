@@ -2,15 +2,15 @@
 title: Zuordnen einer CSV-Datei zu einem XDM-Schema
 description: In diesem Tutorial wird beschrieben, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine CSV-Datei einem XDM-Schema zuordnen.
 source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '92'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Zuordnen einer CSV-Datei zu einem XDM-Schema
 
-So erfassen Sie CSV-Daten in [!DNL Adobe Experience Platform]müssen die Daten einer [!DNL Experience Data Model] (XDM)-Schema. In den folgenden Tutorials wird beschrieben, wie Sie CSV-Dateien mithilfe der [!DNL Platform] Benutzeroberfläche:
+Um CSV-Daten in [!DNL Adobe Experience Platform] aufzunehmen, müssen die Daten einem [!DNL Experience Data Model] (XDM)-Schema zugeordnet werden. In den folgenden Tutorials wird beschrieben, wie Sie CSV-Dateien mithilfe der [!DNL Platform]-Benutzeroberfläche XDM-Schemata zuordnen:
 
 * [Zuordnen einer CSV-Datei zu einem vorhandenen XDM-Schema](./existing-schema.md)
-* [Weisen Sie mithilfe von AI-generierten Empfehlungen eine CSV-Datei einem neuen XDM-Schema zu.](./recommendations.md) (derzeit in der Beta-Phase)
+* [Zuweisen einer CSV-Datei zu einem neuen XDM-Schema mithilfe von KI-generierten Empfehlungen](./recommendations.md) (derzeit in der Beta-Phase)
