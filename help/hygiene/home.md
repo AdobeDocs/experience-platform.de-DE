@@ -2,10 +2,10 @@
 title: Übersicht über die Datenhygiene
 description: Mit der Datenhygiene von Adobe Experience Platform können Sie den Lebenszyklus Ihrer Daten verwalten, indem Sie veraltete oder falsche Datensätze aktualisieren oder bereinigen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 850ab3c98fb27d1dcf98b02dfbef0c8ae3b2ad62
+source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
 workflow-type: tm+mt
-source-wordcount: '821'
-ht-degree: 86%
+source-wordcount: '834'
+ht-degree: 84%
 
 ---
 
@@ -54,6 +54,10 @@ Privatkunden-Löschvorgänge und Datensatz-Gültigkeitsanfragen weisen jeweils e
 {style=&quot;table-layout:auto&quot;}
 
 ### Privatkunden-Löschvorgänge {#consumer-delete-transparency}
+
+>[!IMPORTANT]
+>
+>Kundenlöschungen sind nur für Unternehmen verfügbar, die Adobe Healthcare Shield erworben haben.
 
 [Privatkunden betreffende Löschanfrage](./ui/delete-consumer.md) wird erstellt:
 

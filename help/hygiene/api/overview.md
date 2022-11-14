@@ -2,10 +2,10 @@
 title: Data Hygiene API-Handbuch
 description: Erfahren Sie, wie Sie die gespeicherten personenbezogenen Daten Ihrer Kunden in Adobe Experience Platform programmatisch korrigieren oder löschen können.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 94%
+source-wordcount: '419'
+ht-degree: 90%
 
 ---
 
@@ -44,6 +44,10 @@ In diesem Dokument wird anhand von Beispielen für API-Aufrufe die korrekte Form
 Eine Datensatzgültigkeit ist eine zeitverzögerte Aktion zum Löschen eines Datensatzes. Beim Erstellen einer Datensatzgültigkeit geben Sie einen zukünftigen Zeitpunkt an, zu dem dieser Datensatz gelöscht werden soll. Weitere Details zur Planung von Datensatzgültigkeiten in der API finden Sie im [Handbuch für Datensatzgültigkeits-Endpunkte](./dataset-expiration.md).
 
 ## Privatkunden-Löschvorgänge
+
+>[!IMPORTANT]
+>
+>Löschanfragen von Verbrauchern stehen nur für Unternehmen zur Verfügung, die Adobe Healthcare Shield erworben haben.
 
 Mit der Datenhygiene-API können Sie alle Datensätze löschen, die mit einer Privatkunden-Identität in einem Datensatz oder in allen Datensätzen verknüpft sind. Sämtliche Datenhygiene-Aufgaben, die Privatkunden-Identitäten löschen, werden durch ein Konstrukt repräsentiert, das als Arbeitsauftrag bezeichnet wird. Weitere Details zur Verwendung von Arbeitsaufträgen in der API finden Sie im [Handbuch für Arbeitsauftrags-Endpunkte](./workorder.md).
 
