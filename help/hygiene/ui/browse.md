@@ -2,10 +2,10 @@
 title: Durchsuchen von Datenhygiene-Arbeitsaufträgen
 description: Erfahren Sie, wie Sie bestehende Datenhygiene-Arbeitsaufträge in der Benutzeroberfläche von Adobe Experience Platform anzeigen und verwalten können.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: 4a6532bbd7a378e44e7c6139330420c0363a54af
 workflow-type: tm+mt
-source-wordcount: '865'
-ht-degree: 97%
+source-wordcount: '868'
+ht-degree: 95%
 
 ---
 
@@ -74,7 +74,7 @@ Die folgenden Filter gelten für Anfragen zur Gültigkeit von Datensätzen:
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Anzahl der Identitäten"
->abstract="Die Anzahl der Identitäten, die im Rahmen dieses Arbeitsauftrags gelöscht werden sollen. Die in der Zählung enthaltenen Identitäten müssen nicht unbedingt in den betroffenen Datensätzen vorhanden sein. Weitere Informationen finden Sie im Handbuch zur Datenhygiene-Benutzeroberfläche."
+>abstract="Die Anzahl der Identitäten, deren Datensätze im Rahmen dieses Arbeitsauftrags aktualisiert oder gelöscht werden mussten. Die in der Zählung enthaltenen Identitäten müssen nicht unbedingt in den betroffenen Datensätzen vorhanden sein. Weitere Informationen finden Sie im Handbuch zur Datenhygiene-Benutzeroberfläche."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
