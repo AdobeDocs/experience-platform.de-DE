@@ -2,18 +2,29 @@
 title: Versionshinweise für die Adobe Analytics-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Analytics“ in Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 6bb452285ea98380617afd13462b4a2b9a8e8b68
+source-git-commit: cc04a40b2fb649511950ed80af7028a19154dcdd
 workflow-type: tm+mt
-source-wordcount: '1284'
-ht-degree: 99%
+source-wordcount: '1333'
+ht-degree: 92%
 
 ---
 
 # Adobe Analytics-Erweiterung – Versionshinweise
 
+Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics-Tag-Erweiterung.
+
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Die Analytics-Tag-Erweiterung , wenn sie häufig als Reaktion auf Aktualisierungen des [AppMeasurement-JavaScript-Bibliothek](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=de). Siehe Abschnitt [Versionshinweise zu AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de) für Details zu den unten genannten spezifischen Versionen.
+
+## 23. September 2022
+
+**Adobe Analytics-Erweiterung 1.9.1**
+
+**Funktionen**:
+
+* Auf AppMeasurement v2.23.0 aktualisiert.
+* Die Erweiterung kann jetzt hochentropy erfassen [Benutzeragenten-Clienthinweise](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) wie von der neuesten Version von AppMeasurement unterstützt.
 
 ## 28. Februar 2022
 
@@ -46,7 +57,7 @@ ht-degree: 99%
 
 **Fehlerkorrekturen**:
 
-* [AppMeasurement wurde auf Version 2.22.1 aktualisiert](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de).
+* [AppMeasurement wurde auf Version 2.22.1 aktualisiert](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
 * Der Fallback-linkName wurde aktualisiert und spiegelt nun die Activity Map-Logik statt der Verwendung von innerHTML wider.
 
 ## 6. August 2020
@@ -161,7 +172,7 @@ ht-degree: 99%
 * Aktualisierung der Adobe Analytics-Erweiterung für die Unterstützung von DIL 9.2 für Audience Manager
 
 * Aktualisierung der Erweiterung zur Unterstützung von [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.15.0)
-* Entfernung des folgenden Kontrollkästchens, da es nicht mehr unterstützt wird: „Do not attach the destination publishing IFRAME to the DOM or fire destinations“
+* Das folgende Kontrollkästchen wurde entfernt, da es nicht mehr unterstützt wird: &quot;Verbinden Sie den Ziel-Publishing-IFRAME nicht mit dem DOM oder den Löschzielen&quot;
 
 ## 4. Juni 2019
 
