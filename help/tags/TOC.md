@@ -5,10 +5,10 @@ breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Tags
 solution: Data Collection
-source-git-commit: 1879c8372e3ac1b813f53e445a139daa78ac8858
+source-git-commit: 67f3d27ebb17e1b1dc77dcd32246f407753c20df
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '416'
+ht-degree: 93%
 
 ---
 
@@ -124,6 +124,8 @@ ht-degree: 0%
       * [!DNL Marketo Munchkin] {#marketo}
          * [Übersicht](./extensions/web/marketo/overview.md)
          * [Versionshinweise](./extensions/web/marketo/release-notes.md)
+      * Erweiterte Konvertierungen von Google Ads {#google-ads-enhanced-conversions}
+         * [Übersicht](./extensions/web/google-ads-enhanced-conversions/overview.md)
       * Google-Datenschicht {#google-data-layer}
          * [Übersicht](./extensions/web/google-data-layer/overview.md)
          * [Versionshinweise](./extensions/web/google-data-layer/release-notes.md)
