@@ -2,10 +2,10 @@
 title: API-Endpunkt für Arbeitsaufträge
 description: Mit dem Endpunkt /workorder in der Data Hygiene API können Sie Löschaufgaben für Verbraucheridentitäten programmgesteuert verwalten.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
+source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
 workflow-type: tm+mt
-source-wordcount: '981'
-ht-degree: 98%
+source-wordcount: '1033'
+ht-degree: 93%
 
 ---
 
@@ -16,6 +16,9 @@ Mit dem Endpunkt `/workorder` in der Datenhygiene-API können Sie in Adobe Exper
 >[!IMPORTANT]
 >
 >Löschanfragen von Verbrauchern stehen nur Unternehmen zur Verfügung, die **Adobe Gesundheitsschild**.
+>
+>
+>Kundenlöschungen sind für die Datenbereinigung, das Entfernen anonymer Daten oder die Datenminimierung vorgesehen. Sie sind **not** für Anfragen von Datensubjekten nach Datenschutzbestimmungen wie der Datenschutz-Grundverordnung (DSGVO) verwendet werden. Verwenden Sie für alle Anwendungsfälle der Kompatibilität Folgendes: [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) anstatt.
 
 ## Erste Schritte
 

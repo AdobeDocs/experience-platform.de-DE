@@ -2,10 +2,10 @@
 title: Übersicht über die Datenhygiene
 description: Mit der Datenhygiene von Adobe Experience Platform können Sie den Lebenszyklus Ihrer Daten verwalten, indem Sie veraltete oder falsche Datensätze aktualisieren oder bereinigen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
+source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
 workflow-type: tm+mt
-source-wordcount: '834'
-ht-degree: 84%
+source-wordcount: '886'
+ht-degree: 79%
 
 ---
 
@@ -20,7 +20,11 @@ Adobe Experience Platform bietet leistungsstarke Tools zur Verwaltung großer, k
 Mit den Datenhygiene-Funktionen von Platform können Sie Ihre gespeicherten Daten von Privatkunden wie folgt verwalten:
 
 * Planen automatisierter Datensatzgültigkeiten
-* Löschen von Privatkundendaten basierend auf aufgenommenen Identitäten
+* Löschen einzelner Verbraucherdaten aus Ihren Datensätzen
+
+>[!IMPORTANT]
+>
+>Kundenlöschungen sind für die Datenbereinigung, das Entfernen anonymer Daten oder die Datenminimierung vorgesehen. Sie sind **not** für Anfragen von Datensubjekten nach Datenschutzbestimmungen wie der Datenschutz-Grundverordnung (DSGVO) verwendet werden. Verwenden Sie für alle Anwendungsfälle der Kompatibilität Folgendes: [Adobe Experience Platform Privacy Service](../privacy-service/home.md) anstatt.
 
 Diese Aktivitäten können mithilfe des Arbeitsbereichs [[!UICONTROL Datenhygiene] in der Benutzeroberfläche](#ui) oder der [Datenhygiene-API](#api) durchgeführt werden Wenn ein Datenhygienevorgang ausgeführt wird, stellt das System bei jedem Prozessschritt Aktualisierungen der Transparenz bereit. Weitere Informationen darüber, wie die einzelnen Vorgangstypen im System dargestellt werden, finden Sie im Abschnitt zu [Timelines und Transparenz](#timelines-and-transparency).
 
