@@ -5,10 +5,10 @@ title: Zuordnungsfunktionen für Datenvorbereitung
 topic-legacy: overview
 description: In diesem Dokument werden die mit der Datenvorbereitung verwendeten Zuordnungsfunktionen vorgestellt.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 66c3f4fc6da987f731f7b7e54f416c60fcc670d8
+source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
 workflow-type: tm+mt
-source-wordcount: '4286'
-ht-degree: 7%
+source-wordcount: '4337'
+ht-degree: 8%
 
 ---
 
@@ -234,6 +234,11 @@ Informationen zur Objektkopierfunktion finden Sie im Abschnitt . [below](#object
 {style=&quot;table-layout:auto&quot;}
 
 ### Benutzeragenten-Funktionen {#user-agent}
+
+Jede der in der folgenden Tabelle enthaltenen Benutzeragenten-Funktionen kann einen der folgenden Werte zurückgeben:
+
+* Telefon - Ein Mobilgerät mit kleinem Bildschirm (allgemein &lt; 7&quot;)
+* Mobile : Ein Mobilgerät, das noch nicht identifiziert wurde. Bei diesem Mobilgerät kann es sich um einen eReader, ein Tablet, ein Telefon, eine Uhr usw. handeln.
 
 >[!NOTE]
 >

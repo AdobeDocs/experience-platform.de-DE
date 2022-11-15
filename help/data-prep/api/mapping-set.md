@@ -5,10 +5,10 @@ title: API-Endpunkt für Zuordnungssätze
 topic-legacy: mapping sets
 description: Sie können den Endpunkt „/mappingSets“ in der Adobe Experience Platform-API nutzen, um Zuordnungssätze programmgesteuert abzurufen, zu erstellen, zu aktualisieren und zu validieren.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
 workflow-type: tm+mt
-source-wordcount: '807'
-ht-degree: 100%
+source-wordcount: '854'
+ht-degree: 94%
 
 ---
 
@@ -219,7 +219,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 | -------- | ----------- |
 | `outputSchema.schemaRef.id` | Die Kennung des XDM-Schemas, auf das Sie verweisen. |
 | `outputSchema.schemaRef.contentType` | Bestimmt über das Antwortformat des referenzierten Schemas. Weitere Informationen zu diesem Feld finden Sie im [Schema Registry-Entwicklerhandbuch](../../xdm/api/schemas.md#lookup). |
-| `mappings.sourceType` | Der Quelltyp beschreibt, wie der Wert aus der Quelle an das Ziel extrahiert wird. |
+| `mappings.sourceType` | Der Quelltyp beschreibt, wie der Wert aus der Quelle an das Ziel extrahiert wird. Der Quelltyp unterstützt zwei mögliche Werte: <ul><li>`ATTRIBUTE`: Der Quelltyp `ATTRIBUTE` wird verwendet, wenn das Eingabeattribut aus einem Quellschema stammt.</li><li>`EXPRESSION`: Der Quelltyp `EXPRESSION` wird verwendet, wenn die Zuordnung mithilfe eines berechneten Felds abgeschlossen wird.</li></ul> **WARNUNG**: Wenn Sie die Quelltypwerte falsch festlegen, können Ihre Zuordnungssätze nicht mehr bearbeitet werden können. |
 | `mappings.source` | Der Speicherort, von dem aus die Daten zugeordnet werden sollen. |
 | `mappings.destination` | Der Speicherort, an dem die Daten zugeordnet werden sollen. |
 
