@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Batch Ingestion-API
 description: Dieses Dokument enthält eine umfassende Anleitung für Entwickler, die mit Batch-Aufnahme-APIs für Adobe Experience Platform arbeiten.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 49281d6ef959c84c3da964f0a9e19859fd8901a5
 workflow-type: tm+mt
-source-wordcount: '2373'
-ht-degree: 78%
+source-wordcount: '2413'
+ht-degree: 77%
 
 ---
 
@@ -109,7 +109,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | Die Kennung des Batches, in den Sie hochladen möchten. |
 | `{DATASET_ID}` | Die Kennung des Referenzdatensatzes des Batches. |
-| `{FILE_NAME}` | Der Name der Datei, die Sie hochladen möchten. Dieser Dateipfad ist der Speicherort, an dem die Adobe gespeichert wird. |
+| `{FILE_NAME}` | Der Name der Datei, die Sie hochladen möchten. Stellen Sie sicher, dass Sie einen eindeutigen Dateinamen verwenden, damit er nicht mit einer anderen Datei für den Batch der gesendeten Dateien kollidiert. |
 
 **Anfrage**
 
@@ -129,7 +129,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Der vollständige Pfad und Name der Datei, die Sie hochladen möchten. Dieser Dateipfad ist der lokale Dateipfad, z. B. `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Der vollständige Pfad und Name der Datei, die Sie hochladen möchten. Dieser Dateipfad ist der lokale Dateipfad, z. B. `acme/customers/campaigns/summer.json`. |
 
 **Antwort**
 
@@ -244,7 +244,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | Die Kennung des Batches, in den Sie hochladen möchten. |
 | `{DATASET_ID}` | Die Kennung des Referenzdatensatzes des Batches. |
-| `{FILE_NAME}` | Der Name der Datei, die Sie hochladen möchten. Dieser Dateipfad ist der Speicherort, an dem die Adobe gespeichert wird. |
+| `{FILE_NAME}` | Der Name der Datei, die Sie hochladen möchten. Stellen Sie sicher, dass Sie einen eindeutigen Dateinamen verwenden, damit er nicht mit einer anderen Datei für den Batch der gesendeten Dateien kollidiert. |
 
 **Anfrage**
 
@@ -264,7 +264,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Der vollständige Pfad und Name der Datei, die Sie hochladen möchten. Dieser Dateipfad ist der lokale Dateipfad, z. B. `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Der vollständige Pfad und Name der Datei, die Sie hochladen möchten. Dieser Dateipfad ist der lokale Dateipfad, z. B. `acme/customers/campaigns/summer.parquet`. |
 
 **Antwort**
 
@@ -417,7 +417,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | Die Kennung des Batches, in den Sie hochladen möchten. |
 | `{DATASET_ID}` | Die Kennung des Referenzdatensatzes des Batches. |
-| `{FILE_NAME}` | Der Name der Datei, die Sie hochladen möchten. Dieser Dateipfad ist der Speicherort, an dem die Adobe gespeichert wird. |
+| `{FILE_NAME}` | Der Name der Datei, die Sie hochladen möchten. Stellen Sie sicher, dass Sie einen eindeutigen Dateinamen verwenden, damit er nicht mit einer anderen Datei für den Batch der gesendeten Dateien kollidiert. |
 
 **Anfrage**
 
@@ -439,7 +439,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | In Ganzzahlen: Anfang und Ende des angeforderten Bereichs. |
-| `{FILE_PATH_AND_NAME}` | Der vollständige Pfad und Name der Datei, die Sie hochladen möchten. Dieser Dateipfad ist der lokale Dateipfad, z. B. `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Der vollständige Pfad und Name der Datei, die Sie hochladen möchten. Dieser Dateipfad ist der lokale Dateipfad, z. B. `acme/customers/campaigns/summer.json`. |
 
 
 **Antwort**
@@ -633,7 +633,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | Die Kennung des Batches, in den Sie hochladen möchten. |
 | `{DATASET_ID}` | Die Kennung des Referenzdatensatzes des Batches. |
-| `{FILE_NAME}` | Der Name der Datei, die Sie hochladen möchten. Dieser Dateipfad ist der Speicherort, an dem die Adobe gespeichert wird. |
+| `{FILE_NAME}` | Der Name der Datei, die Sie hochladen möchten. Stellen Sie sicher, dass Sie einen eindeutigen Dateinamen verwenden, damit er nicht mit einer anderen Datei für den Batch der gesendeten Dateien kollidiert. |
 
 **Anfrage**
 
@@ -653,7 +653,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Der vollständige Pfad und Name der Datei, die Sie hochladen möchten. Dieser Dateipfad ist der lokale Dateipfad, z. B. `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Der vollständige Pfad und Name der Datei, die Sie hochladen möchten. Dieser Dateipfad ist der lokale Dateipfad, z. B. `acme/customers/campaigns/summer.csv`. |
 
 
 **Antwort**
@@ -855,7 +855,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | Die Kennung des Batches, in den Sie hochladen möchten. |
 | `{DATASET_ID}` | Die Kennung des Referenzdatensatzes des Batches. |
-| `{FILE_NAME}` | Der Name der Datei, die Sie hochladen möchten. Dieser Dateipfad ist der Speicherort, an dem die Adobe gespeichert wird. |
+| `{FILE_NAME}` | Der Name der Datei, die Sie hochladen möchten. Stellen Sie sicher, dass Sie einen eindeutigen Dateinamen verwenden, damit er nicht mit einer anderen Datei für den Batch der gesendeten Dateien kollidiert. |
 
 **Anfrage**
 
@@ -875,7 +875,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Der vollständige Pfad und Name der Datei, die Sie hochladen möchten. Dieser Dateipfad ist der lokale Dateipfad, z. B. `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Der vollständige Pfad und Name der Datei, die Sie hochladen möchten. Dieser Dateipfad ist der lokale Dateipfad, z. B. `acme/customers/campaigns/summer.json`. |
 
 **Antwort**
 
