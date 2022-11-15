@@ -1,9 +1,10 @@
 ---
 title: Google Ads Enhanced Conversions-Erweiterung
 description: Erfahren Sie mehr über die Google Ads Enhanced Conversions-Erweiterung für die Ereignisweiterleitung in Adobe Experience Platform.
-source-git-commit: a279c44ef9df3aa9bfc7763b153b87bde0015d57
+exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
+source-git-commit: 670e59a6111b7e4b7febca197d7e462ce5c14596
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1314'
 ht-degree: 1%
 
 ---
@@ -35,6 +36,10 @@ Erweiterte Konvertierungen nutzen die [!DNL Google Ads] API zum Hinzufügen von 
 >Um das clientseitige Konversionsereignis mit den Erstanbieterdaten zu verknüpfen, die von der Ereignisweiterleitung gesendet werden, muss die `transaction_ID` muss in beiden Aufrufen identisch sein. Weitere Informationen dazu, wo dieser Wert für jeden Dienst bereitgestellt werden muss, finden Sie in den Abschnitten zum Konfigurieren von Konversionsaktionen für [tags](#conversion-action-tags) und [Ereignisweiterleitung](#conversion-action-event-forwarding)zurück.
 
 Da das Senden von Konversionsereignissen sowohl eine Client- als auch eine Server-seitige Implementierung umfasst, werden in diesem Dokument die erforderlichen Schritte zum Einrichten der Client-seitigen [[!DNL Google Global Site Tag] (gtag)-Erweiterung](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) zusätzlich zu [!DNL Enhanced Conversions] Erweiterung für die Ereignisweiterleitung.
+
+Das folgende Video bietet eine Einführung in die [!DNL Enhanced Conversions] Erweiterung und führt die Implementierungsschritte auf hoher Ebene durch:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3411365?quality=12&learn=on)
 
 ## Konvertierung mithilfe von Tags senden
 
