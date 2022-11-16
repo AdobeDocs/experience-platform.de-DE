@@ -3,10 +3,10 @@ title: Datenverschlüsselung in Adobe Experience Platform
 topic-legacy: data protection
 description: Erfahren Sie, wie Daten im Transit und im Ruhezustand in Adobe Experience Platform verschlüsselt werden.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: d99a9081edc483831d56af3d838b67d9aba25bea
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 6%
+source-wordcount: '396'
+ht-degree: 5%
 
 ---
 
@@ -37,7 +37,7 @@ Nach dem Einbringen der Daten in das System und [im Ruhezustand verschlüsselt](
 
 Daten, die von Platform erfasst und verwendet werden, werden im Data Lake gespeichert, einem hochgradig granularen Datenspeicher, der alle vom System verwalteten Daten enthält, unabhängig von Herkunft oder Dateiformat. Alle im Data Lake gespeicherten Daten werden verschlüsselt, gespeichert und in einem isolierten [[!DNL Microsoft Azure Data Lake] Speicherung](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) -Instanz, die für Ihre Organisation eindeutig ist.
 
-Weitere Informationen dazu, wie ruhende Daten in Azure Data Lake Storage und Cosmos DB verschlüsselt werden, finden Sie im Abschnitt [offizielle Azure-Dokumentation](https://docs.microsoft.com/de-de/azure/data-lake-store/data-lake-store-encryption).
+Weitere Informationen dazu, wie ruhende Daten in Azure Data Lake Storage verschlüsselt werden, finden Sie in der [offizielle Azure-Dokumentation](https://learn.microsoft.com/en-us/azure/storage/common/storage-service-encryption).
 
 ## Nächste Schritte
 
