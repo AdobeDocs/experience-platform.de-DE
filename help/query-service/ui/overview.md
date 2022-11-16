@@ -5,9 +5,9 @@ title: UI-Anleitung für Query Service
 topic-legacy: guide
 description: Adobe Experience Platform Query Service bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzern in Ihrer IMS-Organisation gespeichert wurden.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
+source-git-commit: 3b6862dd3bb770df4a1549275f911dd81a178002
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '1095'
 ht-degree: 3%
 
 ---
@@ -25,6 +25,29 @@ Die [!DNL Query Editor] ermöglicht Ihnen das Schreiben und Ausführen von Abfra
 [!DNL Query Editor] bietet Bearbeitungsraum, in den Sie mit der Eingabe einer Abfrage beginnen können. Während der Eingabe vervollständigt der Editor automatisch SQL-reservierte Wörter, Tabellen und Feldnamen in Tabellen. Wenn Sie die Abfrage fertig geschrieben haben, wählen Sie die **Play** -Schaltfläche, um die Abfrage auszuführen. Die **[!UICONTROL Konsole]** wird auf der Registerkarte unter dem Editor angezeigt, was [!DNL Query Service] ist derzeit aktiv und gibt an, wann eine Abfrage zurückgegeben wurde. Die **[!UICONTROL Ergebnis]** neben der Konsole, zeigt die Abfrageergebnisse an. Siehe [Anleitung zum Abfrage-Editor](./user-guide.md) Weitere Informationen zur Verwendung der [!DNL Query Editor].
 
 ![Zoomt mit Blick auf die [!DNL Query Editor].](../images/ui/overview/query-editor.png)
+
+## Geplante Abfragen {#scheduled-queries}
+
+Abfragen, die bereits als Vorlage gespeichert wurden, können so geplant werden, dass sie regelmäßig ausgeführt werden. Bei der Planung einer Abfrage können Sie die Ausführungsfrequenz, das Start- und Enddatum, den Wochentag, an dem die geplante Abfrage ausgeführt wird, sowie den Datensatz auswählen, in den die Abfrage exportiert werden soll. Abfragezeitpläne werden mit dem Abfrage-Editor festgelegt.
+
+Informationen zum Planen einer Abfrage über die Benutzeroberfläche finden Sie unter [Handbuch zu geplanten Abfragen](./user-guide.md#scheduled-queries). Informationen zum Hinzufügen von Zeitplänen mithilfe der API finden Sie im Abschnitt [Endpunktleitfaden für geplante Abfragen](../api/scheduled-queries.md).
+
+Sobald eine Abfrage geplant wurde, wird sie in der Liste der geplanten Abfragen auf der [!UICONTROL Geplante Abfragen] Registerkarte. Umfassende Informationen zu Abfrage, Ausführungen, Ersteller und Timings finden Sie durch Auswahl einer geplanten Abfrage aus der Liste.
+
+![Der Arbeitsbereich Abfragen mit der Registerkarte Geplante Abfragen wurde hervorgehoben und zeigt Zeilen der Abfragezeitpläne an.](../images/ui/overview/scheduled-queries.png)
+
+| Spalte | Beschreibung |
+| --- | --- |
+| **[!UICONTROL Name]** | Das Namensfeld ist entweder der Vorlagenname oder die ersten Zeichen Ihrer SQL-Abfrage. Jede Abfrage, die über die Benutzeroberfläche mit dem Abfrage-Editor erstellt wurde, wird zu Beginn benannt. Wenn die Abfrage über die API erstellt wurde, ist der Name der Abfrage ein Snippet der ursprünglichen SQL, die zur Erstellung der Abfrage verwendet wurde. |
+| **[!UICONTROL Vorlage]** | Der Vorlagenname der Abfrage. Wählen Sie einen Vorlagennamen aus, um zum Abfrage-Editor zu navigieren. Die Abfragevorlage wird aus praktischen Gründen im Abfrage-Editor angezeigt. Wenn kein Vorlagenname vorhanden ist, wird die Zeile mit einem Bindestrich markiert und es ist nicht möglich, zum Abfrage-Editor umzuleiten, um die Abfrage anzuzeigen. |
+| **[!UICONTROL SQL]** | Ein Ausschnitt der SQL-Abfrage. |
+| **[!UICONTROL Ausführungsfrequenz]** | Dies ist die Kadenz, in der Ihre Abfrage ausgeführt werden soll. Die verfügbaren Werte sind `Run once` und `Scheduled`. Abfragen können entsprechend ihrer Ausführungsfrequenz gefiltert werden. |
+| **[!UICONTROL Erstellt von]** | Der Name des Benutzers, der die Abfrage erstellt hat. |
+| **[!UICONTROL Erstellt]** | Der Zeitstempel der Erstellung der Abfrage im UTC-Format. |
+| **[!UICONTROL Zeitstempel der letzten Ausführung]** | Der letzte Zeitstempel, mit dem die Abfrage ausgeführt wurde. Diese Spalte zeigt, ob eine Abfrage gemäß ihrem aktuellen Zeitplan ausgeführt wurde. |
+| **[!UICONTROL Letzter Ausführungsstatus]** | Der Status der letzten Abfrageausführung. Die drei Statuswerte sind: `successful` `failed` oder `in progress`. |
+
+Weitere Informationen zum [Abfragen über die Query Service-Benutzeroberfläche überwachen](../monitor-queries.md).
 
 ## Vorlagen {#browse}
 
