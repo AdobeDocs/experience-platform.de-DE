@@ -2,10 +2,10 @@
 description: Mit dieser Konfiguration können Sie wichtige Informationen für Ihr dateibasiertes Ziel angeben, z. B. Ihren Zielnamen, die Kategorie, eine Beschreibung und mehr. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
 title: Konfigurationsoptionen für dateibasierte Ziele für das Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 3f336f530873c863727bb50855baf6eb6a3549e0
+source-git-commit: 21278b39a2dc12771449b9a471ea4182c6b999a3
 workflow-type: tm+mt
-source-wordcount: '2989'
-ht-degree: 60%
+source-wordcount: '3012'
+ht-degree: 59%
 
 ---
 
@@ -794,10 +794,13 @@ Die Parameter in diesem Abschnitt bestimmen, welche Identitäten Ihr Ziel akzept
     },
 ```
 
-Sie müssen angeben, welche [!DNL Platform]-Identitäten Kunden in Ihr Ziel exportieren können. Einige Beispiele: [!DNL Experience Cloud ID], gehashte E-Mail, Geräte-ID ([!DNL IDFA], [!DNL GAID]). Diese Werte sind Identitäts-Namespaces von [!DNL Platform], die Kunden von Ihrem Ziel aus Identitäts-Namespaces zuordnen können. Sie können auch angeben, ob Kunden die Möglichkeit haben, Identitäten, die von Ihrem Ziel unterstützt werden, benutzerdefinierte Namespaces zuzuordnen.
+Sie müssen angeben, welche [!DNL Platform]-Identitäten Kunden in Ihr Ziel exportieren können. Einige Beispiele: [!DNL Experience Cloud ID], gehashte E-Mail, Geräte-ID ([!DNL IDFA], [!DNL GAID]). Diese Werte sind Identitäts-Namespaces von [!DNL Platform], die Kunden von Ihrem Ziel aus Identitäts-Namespaces zuordnen können. Sie können auch angeben, ob Kunden benutzerdefinierte Namespaces den von Ihrem Ziel unterstützten Identitäten zuordnen können (`acceptsCustomNamespaces: true`) und ob Kunden standardmäßige XDM-Attribute Identitäten zuordnen können, die von Ihrem Ziel unterstützt werden (`acceptsAttributes: true`).
 
 Identitäts-Namespaces erfordern keine 1:1-Korrespondenz zwischen [!DNL Platform] und Ihrem Ziel.
 Kunden können beispielsweise einen [!DNL IDFA]-Namespace in [!DNL Platform] einem [!DNL IDFA]-Namespace Ihres Ziels zuordnen oder sie können denselben [!DNL IDFA]-Namespace in [!DNL Platform] einem [!DNL Customer ID]-Namespace in Ihrem Ziel zuordnen.
+
+Weitere Informationen zu Identitäten finden Sie im Abschnitt [Übersicht über Identity Namespace](/help/identity-service/namespaces.md).
+
 
 ## Batch-Konfiguration - Dateibenennung und Exportplanung {#batch-configuration}
 

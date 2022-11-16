@@ -2,10 +2,10 @@
 description: Mit dieser Konfiguration können Sie grundlegende Informationen wie Zielname, Kategorie, Beschreibung, Logo und mehr angeben. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
 title: Konfigurationsoptionen für Streaming-Ziele für das Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
+source-git-commit: 21278b39a2dc12771449b9a471ea4182c6b999a3
 workflow-type: tm+mt
-source-wordcount: '1888'
-ht-degree: 93%
+source-wordcount: '1894'
+ht-degree: 89%
 
 ---
 
@@ -212,21 +212,21 @@ Verwenden Sie die Parameter in `schemaConfig`, um den Zuordnungsschritt des Ziel
 
 Die Parameter in diesem Abschnitt bestimmen, welche Identitäten Ihr Ziel akzeptiert. Durch diese Konfiguration werden auch die Zielidentitäten und -attribute im [Zuordnungsschritt](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) der Experience Platform-Benutzeroberfläche ausgefüllt, in dem Benutzer Identitäten und Attribute aus ihren XDM-Schemata dem Schema in Ihrem Ziel zuordnen.
 
-Sie müssen angeben, welche [!DNL Platform]-Identitäten Kunden in Ihr Ziel exportieren können. Einige Beispiele: [!DNL Experience Cloud ID], gehashte E-Mail, Geräte-ID ([!DNL IDFA], [!DNL GAID]). Diese Werte sind Identitäts-Namespaces von [!DNL Platform], die Kunden von Ihrem Ziel aus Identitäts-Namespaces zuordnen können. Sie können auch angeben, ob Kunden die Möglichkeit haben, Identitäten, die von Ihrem Ziel unterstützt werden, benutzerdefinierte Namespaces zuzuordnen.
+Sie müssen angeben, welche [!DNL Platform]-Identitäten Kunden in Ihr Ziel exportieren können. Einige Beispiele: [!DNL Experience Cloud ID], gehashte E-Mail, Geräte-ID ([!DNL IDFA], [!DNL GAID]). Diese Werte sind Identitäts-Namespaces von [!DNL Platform], die Kunden von Ihrem Ziel aus Identitäts-Namespaces zuordnen können. Sie können auch angeben, ob Kunden benutzerdefinierte Namespaces den von Ihrem Ziel unterstützten Identitäten zuordnen können (`acceptsCustomNamespaces: true`) und ob Kunden standardmäßige XDM-Attribute Identitäten zuordnen können, die von Ihrem Ziel unterstützt werden (`acceptsAttributes: true`).
 
 Identitäts-Namespaces erfordern keine 1:1-Korrespondenz zwischen [!DNL Platform] und Ihrem Ziel.
-Kunden können beispielsweise einen [!DNL Platform]-[!DNL IDFA]-Namespace einem [!DNL IDFA]-Namespace in Ihrem Ziel zuordnen oder sie können denselben [!DNL Platform]-[!DNL IDFA]-Namespace einem [!DNL Customer ID]-Namespace in Ihrem Ziel zuordnen.
+Kunden können beispielsweise einen [!DNL IDFA]-Namespace in [!DNL Platform] einem [!DNL IDFA]-Namespace Ihres Ziels zuordnen oder sie können denselben [!DNL IDFA]-Namespace in [!DNL Platform] einem [!DNL Customer ID]-Namespace in Ihrem Ziel zuordnen.
 
-Mehr dazu in der [Übersicht über Identitäts-Namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=de).
+Weitere Informationen zu Identitäten finden Sie im Abschnitt [Übersicht über Identity Namespace](/help/identity-service/namespaces.md).
 
 ![Rendern von Zielidentitäten in der Benutzeroberfläche](./assets/target-identities-ui.png)
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
-| `acceptsAttributes` | Boolesch | Gibt an, ob Ihr Ziel Standardprofilattribute akzeptiert. Normalerweise werden diese Attribute in der Dokumentation der Partner genannt. |
+| `acceptsAttributes` | Boolesch | Gibt an, ob Kunden der Identität, die Sie konfigurieren, standardmäßige Profilattribute zuordnen können. |
 | `acceptsCustomNamespaces` | Boolesch | Gibt an, ob Kunden benutzerdefinierte Namespaces in Ihrem Ziel einrichten können. |
 | `transformation` | Zeichenfolge | *Wird in der Beispielkonfiguration nicht angezeigt*. Wird beispielsweise verwendet, wenn der [!DNL Platform]-Kunde einfache E-Mail-Adressen als Attribut verwendet und Ihre Plattform nur gehashte E-Mails akzeptiert. In diesem Objekt können Sie die Transformation spezifizieren, die angewendet werden muss (z. B. E-Mail in Kleinbuchstaben umwandeln und dann hashen). Ein Beispiel finden Sie unter `requiredTransformation` in der [API-Referenz zur Zielkonfiguration](./destination-configuration-api.md#update). |
-| `acceptedGlobalNamespaces` | – | Wird für Fälle verwendet, in denen Ihre Plattform [Standard-Identitäts-Namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=de#standard-namespaces) (z. B. IDFA) akzeptiert, sodass Sie Platform-Benutzer darauf beschränken können, nur diese Identitäts-Namespaces auszuwählen. |
+| `acceptedGlobalNamespaces` | – | Gibt an, [Standard-Identitäts-Namespaces](/help/identity-service/namespaces.md#standard) (z. B. IDFA)-Kunden können der Identität zuordnen, die Sie konfigurieren. <br> Wenn Sie `acceptedGlobalNamespaces` verwenden, können Sie E-Mail-Adressen oder Telefonnummern mithilfe von `"requiredTransformation":"sha256(lower($))"` in Kleinbuchstaben umwandeln und hashen. |
 
 {style=&quot;table-layout:auto&quot;}
 
