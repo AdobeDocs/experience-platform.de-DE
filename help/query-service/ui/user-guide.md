@@ -5,10 +5,10 @@ title: Anleitung zur Benutzeroberfläche des Abfrage-Editors
 topic-legacy: query editor
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: d71bab9839289a8a1df849025b6db1b2b497087d
+source-git-commit: 9d543b5c7c7f39e809b6a13b8adc46b9a99f51c7
 workflow-type: tm+mt
-source-wordcount: '2106'
-ht-degree: 21%
+source-wordcount: '2100'
+ht-degree: 20%
 
 ---
 
@@ -64,11 +64,11 @@ Um Ihre Entwicklungszeit zu minimieren, sollten Sie Ihre Abfragen mit Begrenzung
 
 ![Die Eingabe des Abfrage-Editors zeigt Dropdown-Tabellennamenvorschläge an.](../images/ui/query-editor/tables-auto.png)
 
-### (Beta) Konfigurations-Umschalter für die automatische Vervollständigung der Benutzeroberfläche {#auto-complete}
+### (Eingeschränkte Version) Konfigurationsumschalter für die automatische Vervollständigung der Benutzeroberfläche {#auto-complete}
 
 >[!IMPORTANT]
 >
->Diese Feature befindet sich derzeit in der Beta-Phase, und Ihre Organisation hat möglicherweise noch keinen Zugriff darauf. Die Funktionalität und Dokumentation können sich ändern.
+>Der Konfigurationsumschalter für die automatische Vervollständigung der Benutzeroberfläche befindet sich derzeit in einer eingeschränkten Version und steht nicht allen Kunden zur Verfügung.
 
 Die [!DNL Query Editor] schlägt automatisch potenzielle SQL-Schlüsselwörter zusammen mit Tabellen- oder Spaltendetails für die Abfrage vor, während Sie sie schreiben. Die Funktion zur automatischen Vervollständigung ist standardmäßig aktiviert und kann jederzeit deaktiviert oder aktiviert werden, indem Sie die Option [!UICONTROL Syntaxautomatisierung] wird oben rechts im Abfrage-Editor angezeigt.
 

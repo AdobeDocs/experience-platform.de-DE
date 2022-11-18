@@ -1,14 +1,19 @@
 ---
 title: Überwachung der Nutzung der Batch Query-Lizenz
 description: Die Benutzeroberfläche von Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Verwendung der Data Distiller-Lizenz durch Ihr Unternehmen anzeigen können.
-source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
+exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
+source-git-commit: 9d543b5c7c7f39e809b6a13b8adc46b9a99f51c7
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 12%
+source-wordcount: '341'
+ht-degree: 11%
 
 ---
 
-# Überwachen der Nutzung von Batch-Abfragelizenzen {#monitor-license-usage}
+# (Beta) Überwachen der Nutzung von Batch-Abfragelizenzen {#monitor-license-usage}
+
+>[!IMPORTANT]
+>
+>Die Möglichkeit, die Nutzung der Batch-Abfragelizenz über die Benutzeroberfläche zu überwachen, befindet sich in der Beta-Phase. Die Funktionen und Dokumentation können sich ändern.
 
 Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zur Nutzung der Query Service-Lizenz in Ihrem Unternehmen anzeigen können.
 
