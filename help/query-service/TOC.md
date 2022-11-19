@@ -4,9 +4,9 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
 breadcrumb-title: Anleitung zum Query Service
 user-guide-description: Verwenden Sie Standard-SQL, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
-source-git-commit: 9f458a327c0b72a5984161f13f02d09b7a2e610e
+source-git-commit: 3764418c5c8a6159ec23f3cc7ba77792c9f15106
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '231'
 ht-degree: 65%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 65%
    - [Attributionsanalyse](use-cases/attribution-analysis.md)
    - [Bot-Filterung](use-cases/bot-filtering.md)
    - [Web- und mobile Analyseeinblicke](use-cases/analytics-insights.md)
+   - [Propensity Score](use-cases/propensity-score.md)
 - Query Service-API {#api}
    - [Erste Schritte](api/getting-started.md)
    - [Abfragen](api/queries.md)
