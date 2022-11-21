@@ -2,10 +2,13 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Quellen; Connectoren; oracle;
 title: (Beta) Erstellen einer Oracle Responsys-Quellverbindung über die Platform-Benutzeroberfläche
 description: Erfahren Sie, wie Sie Adobe Experience Platform über die Platform-Benutzeroberfläche mit Oracle Responsys verbinden.
-source-git-commit: ff3cac5f18ea49b93b3d76e4cd8fb0d597d02be4
+hide: true
+hidefromtoc: true
+exl-id: 9ec5e1c2-3d9e-4729-be81-89a85d5ea782
+source-git-commit: 784ec5f799c591185620e8376a6980b4930d914a
 workflow-type: tm+mt
 source-wordcount: '485'
-ht-degree: 38%
+ht-degree: 40%
 
 ---
 
@@ -13,7 +16,7 @@ ht-degree: 38%
 
 >[!NOTE]
 >
->Die [!DNL Oracle Responsys] -Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
+>Die [!DNL Oracle Responsys] -Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions), um weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren zu erhalten.
 
 In diesem Tutorial erfahren Sie, wie Sie eine [[!DNL Oracle Responsys]](../../../../connectors/marketing-automation/oracle-responsys.md) Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche.
 

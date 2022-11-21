@@ -5,10 +5,10 @@ title: Übersicht über Quell-Connectoren
 topic-legacy: overview
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 46c9ec0c561f7ed3e38f05ef7b1e3ffec0eaed57
+source-git-commit: 784ec5f799c591185620e8376a6980b4930d914a
 workflow-type: tm+mt
 source-wordcount: '1123'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -41,7 +41,7 @@ Experience Platform ermöglicht die Aufnahme von Daten aus anderen Adobe-Program
 - [Übersicht über [!DNL Marketo Engage]-Quellen](connectors/adobe-applications/marketo/marketo.md)
    - [Erstellen einer  [!DNL Marketo Engage] -Quellverbindung über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/marketo.md)
 - [Adobe Workfront-Quellübersicht](connectors/adobe-applications/workfront.md)
-   - [Erstellen einer Workfront-Quellverbindung in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/workfront.md)
+   - [Erstellen einer Workfront-Quellverbindung über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/workfront.md)
 
 ### Werbung {#advertising}
 
@@ -140,8 +140,8 @@ Experience Platform ermöglicht die Aufnahme von Daten aus Drittanbietersystemen
 - [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md)
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md)
 - [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md)
-- [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
+<!-- - [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md) -->
 
 ### Zahlungen {#payments}
 

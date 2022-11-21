@@ -2,10 +2,13 @@
 keywords: Experience Platform; Startseite; beliebte Themen; oracle;
 title: (Beta) Erstellen einer Oracle Responsys-Basisverbindung mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Oracle Responsys verbinden.
-source-git-commit: aa4573325f2859c258e66d4b6df411118a5d1942
+hide: true
+hidefromtoc: true
+exl-id: 76659f5a-c923-488c-88f6-1919bc6a7bb5
+source-git-commit: 784ec5f799c591185620e8376a6980b4930d914a
 workflow-type: tm+mt
 source-wordcount: '552'
-ht-degree: 55%
+ht-degree: 64%
 
 ---
 
@@ -13,7 +16,7 @@ ht-degree: 55%
 
 >[!NOTE]
 >
->Die [!DNL Oracle Responsys] -Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
+>Die [!DNL Oracle Responsys] -Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions), um weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren zu erhalten.
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -37,7 +40,7 @@ Damit [!DNL Flow Service] eine Verbindung mit [!DNL Oracle Responsys] herstellen
 | `endpoint` | Die REST-Authentifizierungsendpunkt-URL Ihrer [!DNL Oracle Responsys] -Instanz. |
 | `clientId` | Die Client-ID Ihrer [!DNL Oracle Responsys] -Instanz. |
 | `clientSecret` | Das Client-Geheimnis Ihres [!DNL Oracle Responsys] -Instanz. |
-| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Der Wert für die Verbindungsspezifikations-ID der [!DNL Oracle Responsys] -Quelle wie folgt fest: `ff4274f2-c9a9-11eb-b8bc-0242ac130003`. |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Der Wert für die Verbindungsspezifikations-ID der [!DNL Oracle Responsys] -Quelle wie folgt fest: `ff4274f2-c9a9-11eb-b8bc-0242ac130003`. |
 
 Weitere Informationen zu Authentifizierungsberechtigungen für [!DNL Oracle Responsys], siehe [[!DNL Oracle Responsys] Authentifizierungshandbuch](https://docs.oracle.com/en/cloud/saas/marketing/responsys-develop/API/GetStarted/authentication.htm).
 
@@ -110,7 +113,7 @@ Bei einer erfolgreichen Antwort werden Details zu der neu erstellten Basisverbin
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Oracle Responsys] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basis-Verbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL Oracle Responsys] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
-* [Struktur und Inhalt Ihrer Datentabellen mithilfe des [!DNL Flow Service] API](../../explore/tabular.md)
+* [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um Daten zur Marketing-Automatisierung mit der [!DNL Flow Service] API](../../collect/marketing-automation.md)
