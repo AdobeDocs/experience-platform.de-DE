@@ -1,20 +1,21 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
-source-git-commit: 38eadb3a03577fde9651842e3aecc0291b14f0a0
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+source-git-commit: 184ead059533d2706a5d3fca96dc082248955afe
 workflow-type: tm+mt
-source-wordcount: '1394'
-ht-degree: 36%
+source-wordcount: '1357'
+ht-degree: 70%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
 
-**Release-Datum: 26. Oktober 2022**
+**Veröffentlichungsdatum: 26. Oktober 2022**
 
 Neue Funktionen in Adobe Experience Platform:
 
-- [Vom Kunden verwaltete Schlüssel](#cmk)
+- [Kundenverwaltete Schlüssel](#cmk)
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
@@ -24,11 +25,11 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [Query Service](#query-service)
 - [Quellen](#sources)
 
-## Vom Kunden verwaltete Schlüssel {#cmk}
+## Kundenverwaltete Schlüssel {#cmk}
 
-Alle in Adobe Experience Platform gespeicherten Daten werden im Ruhezustand mithilfe von Schlüsseln auf Systemebene verschlüsselt. Wenn Sie eine Anwendung verwenden, die auf Platform aufbaut, können Sie jetzt stattdessen eigene Verschlüsselungsschlüssel verwenden, um die Datensicherheit zu verbessern.
+Alle in Adobe Experience Platform gespeicherten Daten werden im Ruhezustand mithilfe von Schlüsseln auf Systemebene verschlüsselt. Wenn Sie ein Programm verwenden, das auf Platform aufbaut, können Sie jetzt stattdessen eigene Verschlüsselungsschlüssel verwenden, was Ihnen mehr Kontrolle über Ihre Datensicherheit gibt.
 
-Siehe Übersicht unter [kundenverwaltete Schlüssel](../../landing/governance-privacy-security/customer-managed-keys.md) für Details zur Funktion.
+Details zur Funktion finden Sie in der Übersicht [Kundenverwaltete Schlüssel](../../landing/governance-privacy-security/customer-managed-keys.md).
 
 ## Datenerfassung {#data-collection}
 
@@ -38,9 +39,9 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Umgang mit sensiblen Daten für Datastreams | Datastreams nutzt jetzt verschiedene Platform-Technologien, um sensible Daten, wie sie durch Vorschriften wie den Health Insurance Portability and Accounability Act (HIPAA) durchgesetzt werden, angemessen zu handhaben. Siehe Abschnitt zu [Umgang mit sensiblen Daten in Datenströmen](../../edge/datastreams/overview.md#sensitive) für weitere Informationen. |
-| [!DNL Splunk] Erweiterung für die Ereignisweiterleitung | Sie können jetzt Daten an senden [!DNL Splunk] mit [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) -Erweiterung. Siehe [[!DNL Splunk] Erweiterungsübersicht](../../tags/extensions/web/splunk/overview.md) für weitere Informationen. |
-| [!DNL Zendesk] Erweiterung für die Ereignisweiterleitung | Sie können jetzt Daten an senden [!DNL Zendesk] mit [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) -Erweiterung. Siehe [[!DNL Zendesk] Erweiterungsübersicht](../../tags/extensions/web/zendesk/overview.md) für weitere Informationen. |
+| Umgang mit sensiblen Daten für Datenströme | Datenströme nutzen jetzt verschiedene Platform-Technologien, um sensible Daten angemessen zu handhaben, wie es durch Vorschriften wie den Health Insurance Portability and Accounability Act (HIPAA) erzwungen wird. Weitere Informationen finden Sie im Abschnitt [Umgang mit sensiblen Daten in Datenströmen](../../edge/datastreams/overview.md#sensitive). |
+| [!DNL Splunk]-Erweiterung für die Ereignisweiterleitung | Sie können jetzt Daten mithilfe einer Erweiterung zur [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) an [!DNL Splunk] senden. Weiterführende Informationen dazu finden Sie in der [[!DNL Splunk] Übersicht der Erweiterungen](../../tags/extensions/web/splunk/overview.md). |
+| [!DNL Zendesk]-Erweiterung für die Ereignisweiterleitung | Sie können jetzt Daten mithilfe einer Erweiterung zur [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) an [!DNL Zendesk] senden. Weiterführende Informationen dazu finden Sie in der [[!DNL Zendesk] Übersicht der Erweiterungen](../../tags/extensions/web/zendesk/overview.md). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -62,8 +63,8 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | Ziel | Beschreibung |
 | ----------- | ----------- |
 | [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | Line ist eine beliebte Kommunikationsplattform, die Menschen, Dienstleistungen und Informationen verbindet und sich von einer Chat-App zu einem Zentrum für Unterhaltung, soziale Aktivitäten und tägliche Aktivitäten entwickelt hat. |
-| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365 ist eine Cloud-basierte Business-Anwendungsplattform, die Enterprise Resource Planning (ERP) und Customer Relationship Management (CRM) mit Produktivitätsanwendungen und AI-Tools kombiniert, um reibungslosere und besser kontrollierte Vorgänge, ein besseres Wachstumspotenzial und Kostensenkungen zu ermöglichen. |
-| [[!DNL (Beta) Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md) | Die [!DNL (Beta) Adobe Commerce] Mit dem Ziel-Connector können Sie ein oder mehrere Real-Time CDP-Segmente auswählen, die für Ihre [!DNL Adobe Commerce] -Konto ein dynamisches personalisiertes Erlebnis für Ihre Kunden bereitstellen. Within [!DNL Adobe Commerce]können Sie dann diese Real-Time CDP-Segmente auswählen, um individuelle Angebote im Warenkorb zu personalisieren, z. B. &quot;Kauf 2 erhält 1 kostenlos&quot;. Sie können Hero-Banner auch anzeigen und die Produktpreise über Werbeangebote ändern, die alle auf Adobe Real-Time CDP-Segmente zugeschnitten sind. |
+| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365 ist eine Cloud-basierte Plattform für geschäftliche Anwendungen, die Enterprise Resource Planning (ERP) und Customer Relationship Management (CRM) mit Produktivitätsanwendungen und KI-Tools kombiniert, um einen rundum reibungsloseren und besser kontrollierten Betrieb, besseres Wachstumspotenzial und Kostenreduzierungen zu erzielen. |
+| [[!DNL (Beta) Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md) | Mit dem [!DNL (Beta) Adobe Commerce]-Ziel-Connector können Sie ein oder mehrere Real-Time CDP-Segmente auswählen, die Sie in Ihrem [!DNL Adobe Commerce]-Konto aktivieren, um Ihren Kunden ein dynamisches, personalisiertes Erlebnis zu bieten. Innerhalb von [!DNL Adobe Commerce] können Sie dann diese Real-Time CDP-Segmente auswählen, um einzigartige Angebote im Warenkorb zu personalisieren, wie beispielsweise „Kaufen Sie zwei, erhalten Sie eins gratis“. Sie können auch Hero-Banner anzeigen und die Produktpreise durch Werbeangebote ändern, die alle auf Adobe Real-Time CDP-Segmente zugeschnitten sind. |
 | [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md) | Erstellen Sie eine ausgehende Live-Verbindung zu [!DNL Azure Data Lake Storage Gen2] , um Datendateien aus Adobe Experience Platform regelmäßig in Ihren eigenen Speicherort zu exportieren. Dieses neue Beta-Ziel bietet eine verbesserte Dateiexportfunktion und unterstützt Datensatzexporte. |
 | [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | [!DNL Data Landing Zone] ist [!DNL Azure Blob] von Adobe Experience Platform bereitgestellte Speicherschnittstelle, über die Sie Zugriff auf eine sichere, Cloud-basierte Dateispeicheranlage erhalten, über die Dateien aus Platform exportiert werden können. Dieses neue Beta-Ziel bietet eine verbesserte Dateiexportfunktion und unterstützt Datensatzexporte. |
 | [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md) | Erstellen Sie eine ausgehende Live-Verbindung zu [!DNL Google Cloud Storage] , um Datendateien aus Adobe Experience Platform regelmäßig in Ihre eigenen Buckets zu exportieren. Dieses neue Beta-Ziel bietet eine verbesserte Dateiexportfunktion und unterstützt Datensatzexporte. |
@@ -77,7 +78,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 | Dokumentation | Beschreibung |
 | ----------- | ----------- |
-| [Limits für Ziele](../../destinations/guardrails.md) | Auf dieser Seite finden Sie standardmäßige Nutzungs- und Ratenbeschränkungen in Bezug auf das Aktivierungsverhalten. |
+| [Leitlinien für Ziele](../../destinations/guardrails.md) | Auf dieser Seite finden Sie standardmäßige Nutzungs- und Ratenbeschränkungen in Bezug auf das Aktivierungsverhalten. |
 
 Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
@@ -89,8 +90,8 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
-| Datentyp | [[!UICONTROL Informationen zu Sitzungsdetails]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | Die `authorized` von einem booleschen Typ in eine Zeichenfolge. `season` und `episode` wurden von Ganzzahlen in Zeichenfolgen geändert. |
-| Datentyp | [[!UICONTROL Informationen zu Werbedetails]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` wurde in `friendlyName`und `ID` wurde in `name`. |
+| Datentyp | [[!UICONTROL Informationen zu Sitzungsdetails]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | Das Feld `authorized` wurde von einem booleschen Typ in eine Zeichenfolge geändert. `season` und `episode` wurden von Ganzzahlen in Zeichenfolgen geändert. |
+| Datentyp | [[!UICONTROL Informationen zu Werbedetails]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` wurde in `friendlyName` und `ID` in `name` umbenannt. |
 | Datentyp | [[!UICONTROL Informationen zu Fehlerdetails]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` wurde in `name` umbenannt.  |
 
 {style=&quot;table-layout:auto&quot;}
@@ -106,7 +107,7 @@ Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von 
 | Funktion | Beschreibung |
 | --- | --- |
 | Überwachen von Abfragen über die Platform-Benutzeroberfläche | Query Service [!UICONTROL Geplante Abfragen] bietet über die Benutzeroberfläche eine verbesserte Sichtbarkeit für den Status aller Abfrageaufträge. Wichtige Informationen zum Status Ihrer Abfrageausführungen, einschließlich Fehlermeldungen und Codes bei Fehlern, finden Sie jetzt unter [!UICONTROL Geplante Abfragen] Registerkarte. Sie können Warnhinweise auch über die Benutzeroberfläche für jede dieser Abfragen auf Grundlage ihres Status abonnieren. Siehe [Dokument zur Überwachung von Abfragen](../../query-service/monitor-queries.md) , um mehr über diese Funktion zu erfahren. |
-| Datenmodell für Query Accelerated Reporting Insights | Im Rahmen der Data Distiller-SKU können Sie mit dem Abfrage-beschleunigten Store die Zeit und Verarbeitungsleistung reduzieren, die erforderlich sind, um wichtige Einblicke aus Ihren Daten zu gewinnen. Mit dem Abfrage-beschleunigten Speicher können Sie ein benutzerdefiniertes Datenmodell erstellen und/oder vorhandene Adobe Real-time Customer Data Platform-Datenmodelle erweitern, um Ihre Berichterstellungseinblicke und deren Visualisierungen zu verbessern. Siehe [Dokument mit Einblicken aus beschleunigten Speicherberichten abfragen](../../query-service/query-accelerated-store/reporting-insights-data-model.md) , um mehr über diese Funktion zu erfahren. |
+| Datenmodell für die Abfrage von beschleunigten Berichtseinblicken | Im Rahmen der Data Distiller SKU können Sie mit dem abfragebeschleunigten Speicher die Zeit und Verarbeitungsleistung reduzieren, die erforderlich sind, um wichtige Einblicke aus Ihren Daten zu gewinnen. Mit dem abfragebeschleunigten Speicher können Sie ein benutzerdefiniertes Datenmodell erstellen und/oder vorhandene Adobe Real-time Customer Data Platform-Datenmodelle erweitern, um Ihre Reporting-Insights und deren Visualisierungen zu verbessern. Siehe das Dokument [Reporting-Insights des abfragebeschleunigten Speichers](../../query-service/query-accelerated-store/reporting-insights-data-model.md), um mehr über diese Funktion zu erfahren. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -123,7 +124,6 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- | 
-| Beta-Verfügbarkeit der Adobe Workfront-Quelle | Verwenden Sie die [Adobe Workfront-Quelle](../../sources/connectors/adobe-applications/workfront.md) , um Ihre Workfront-Daten in die Experience Platform zu bringen und Anwendungsfälle auszuführen, z. B. die Kombination Ihrer Arbeitsdatensätze mit Drittanbieterdaten, die Anwendung von Verlaufs- und Zeitreihenanalysen auf Arbeitsdatensätze und die Abfrage von Arbeitsdaten mit SQL. Weitere Informationen finden Sie im Handbuch unter [Erstellen einer Workfront-Quellverbindung in der Benutzeroberfläche](../../sources/tutorials/ui/create/adobe-applications/workfront.md). |
-| Beta-Verfügbarkeit der Oracle Service Cloud-Quelle | Verwenden Sie die Oracle Service Cloud-Quelle, um Daten aus Ihrem Oracle Service Cloud-Konto in Experience Platform aufzunehmen. Weitere Informationen finden Sie in der Dokumentation unter [Oracle Service Cloud-Quelle](../../sources/connectors/customer-success/oracle-service-cloud.md). |
+| Beta-Verfügbarkeit der Adobe Workfront-Quelle | Verwenden Sie die [Adobe Workfront-Quelle](../../sources/connectors/adobe-applications/workfront.md), um Ihre Workfront-Daten in die Experience Platform zu bringen und bestimmte Anwendungsfälle auszuführen, z. B. die Kombination Ihrer Arbeitsdatensätze mit Drittanbieterdaten, die Anwendung von Verlaufs- und Zeitreihenanalysen auf Arbeitsdatensätze und das Abfragen von Arbeitsdaten mit standardmäßiger SQL. Weitere Informationen finden Sie im Handbuch zum [Erstellen einer Workfront-Quellverbindung in der Benutzeroberfläche](../../sources/tutorials/ui/create/adobe-applications/workfront.md). |
 
 Weiterführende Informationen zu Quellen finden Sie im Abschnitt [Quellen – Übersicht](../../sources/home.md).
