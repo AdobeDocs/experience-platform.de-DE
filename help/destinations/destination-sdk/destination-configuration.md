@@ -2,7 +2,7 @@
 description: Mit dieser Konfiguration können Sie grundlegende Informationen wie Zielname, Kategorie, Beschreibung, Logo und mehr angeben. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
 title: Konfigurationsoptionen für Streaming-Ziele für das Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 21278b39a2dc12771449b9a471ea4182c6b999a3
+source-git-commit: f0f2ed2059cbbb017dbbbdc0d1f215abee17f514
 workflow-type: tm+mt
 source-wordcount: '1894'
 ht-degree: 89%
@@ -104,7 +104,7 @@ Dies ist eine Beispielkonfiguration des fiktiven Streaming-Ziels Moviestar, das 
             "includeSegmentId":true,
             "includeSegmentStatus":true,
             "includeIdentity":true,
-            "oneIdentityPerGroup":false,
+            "oneIdentityPerGroup":true,
             "groups":[
                {
                   "namespaces":[
