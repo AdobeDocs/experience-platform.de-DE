@@ -5,9 +5,9 @@ title: Erstellen und Bearbeiten von Schemata in der Benutzeroberfläche
 description: Lernen Sie die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Benutzeroberfläche von Experience Platform kennen.
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
+source-git-commit: 3fc498de60256006d27ada72a7b5f4fff71c4472
 workflow-type: tm+mt
-source-wordcount: '2901'
+source-wordcount: '3156'
 ht-degree: 0%
 
 ---
@@ -138,7 +138,7 @@ Mit dem Schema Editor können Sie einzelne Felder direkt zu einem Schema hinzuf�
 
 >[!IMPORTANT]
 >
->Auch wenn Sie im Schema Editor mit Funktionen einzelne Felder direkt zu einem Schema hinzufügen können, ändert dies nichts daran, dass alle Felder in einem XDM-Schema von seiner Klasse oder einer Feldergruppe bereitgestellt werden müssen, die mit dieser Klasse kompatibel ist. Wie in den folgenden Abschnitten erläutert, sind alle einzelnen Felder weiterhin einer Feldergruppe als wichtiger Schritt zugeordnet, wenn sie einem Schema hinzugefügt werden.
+>Auch wenn Sie im Schema Editor mit Funktionen einzelne Felder direkt zu einem Schema hinzufügen können, ändert dies nichts daran, dass alle Felder in einem XDM-Schema von seiner Klasse oder einer Feldergruppe bereitgestellt werden müssen, die mit dieser Klasse kompatibel ist. Wie in den folgenden Abschnitten erläutert, sind alle einzelnen Felder weiterhin einer Klasse oder Feldergruppe als wichtigen Schritt zugeordnet, wenn sie einem Schema hinzugefügt werden.
 
 ### Standardfelder hinzufügen {#add-standard-fields}
 
@@ -172,7 +172,17 @@ Beginnen Sie mit der Eingabe des Namens des Felds, das Sie hinzufügen möchten,
 
 ![Neues Feld](../../images/ui/resources/schemas/custom-field-search.png)
 
-Geben Sie von hier aus einen Anzeigenamen und einen Datentyp für das Feld ein. under **[!UICONTROL Feldergruppe zuweisen]** müssen Sie eine Feldergruppe für das neue Feld auswählen, mit dem verknüpft werden soll. Beginnen Sie mit der Eingabe des Namens der Feldergruppe, und falls Sie zuvor [erstellte benutzerdefinierte Feldgruppen](./field-groups.md#create) werden sie in der Dropdown-Liste angezeigt. Alternativ können Sie einen eindeutigen Namen in das Feld eingeben, um stattdessen eine neue Feldergruppe zu erstellen.
+Nachdem Sie einen Anzeigenamen und einen Datentyp für das Feld bereitgestellt haben, besteht der nächste Schritt darin, das Feld einer übergeordneten XDM-Ressource zuzuweisen. Wenn Ihr Schema eine benutzerdefinierte Klasse verwendet, können Sie auswählen, [das Feld zur zugewiesenen Klasse hinzufügen](#add-to-class) oder [Feldergruppe](#add-to-field-group) anstatt. Wenn Ihr Schema jedoch eine Standardklasse verwendet, können Sie das benutzerdefinierte Feld nur einer Feldergruppe zuweisen.
+
+#### Weisen Sie das Feld einer benutzerdefinierten Feldergruppe zu {#add-to-field-group}
+
+>[!NOTE]
+>
+>In diesem Abschnitt wird nur beschrieben, wie Sie das Feld einer benutzerdefinierten Feldergruppe zuweisen. Wenn Sie stattdessen eine Standardfeldgruppe mit dem neuen benutzerdefinierten Feld erweitern möchten, lesen Sie den Abschnitt unter [Hinzufügen benutzerdefinierter Felder zu Standardfeldgruppen](#custom-fields-for-standard-groups).
+
+under **[!UICONTROL Zuweisen zu]** auswählen **[!UICONTROL Feldergruppe]**. Wenn Ihr Schema eine Standardklasse verwendet, ist dies die einzige verfügbare Option und standardmäßig ausgewählt.
+
+Als Nächstes müssen Sie eine Feldergruppe auswählen, mit der das neue Feld verknüpft werden soll. Beginnen Sie mit der Eingabe des Namens der Feldergruppe in der bereitgestellten Texteingabe. Wenn bereits benutzerdefinierte Feldergruppen vorhanden sind, die mit der Eingabe übereinstimmen, werden diese in der Dropdown-Liste angezeigt. Alternativ können Sie einen eindeutigen Namen eingeben, um stattdessen eine neue Feldergruppe zu erstellen.
 
 ![Feldgruppe auswählen](../../images/ui/resources/schemas/select-field-group.png)
 
@@ -180,7 +190,7 @@ Geben Sie von hier aus einen Anzeigenamen und einen Datentyp für das Feld ein. 
 >
 >Wenn Sie eine vorhandene benutzerdefinierte Feldergruppe auswählen, übernehmen alle anderen Schemas, die diese Feldergruppe verwenden, auch das neu hinzugefügte Feld, nachdem Sie Ihre Änderungen gespeichert haben. Wählen Sie daher nur dann eine existierende Feldergruppe aus, wenn Sie diese Art von Vermehrung wünschen. Andernfalls sollten Sie stattdessen eine neue benutzerdefinierte Feldergruppe erstellen.
 
-Wenn Sie fertig sind, wählen Sie **[!UICONTROL Anwenden]**.
+Nachdem Sie die Feldergruppe aus der Liste ausgewählt haben, wählen Sie **[!UICONTROL Anwenden]**.
 
 ![Feld anwenden](../../images/ui/resources/schemas/apply-field.png)
 
@@ -192,7 +202,21 @@ Das neue Feld wird der Arbeitsfläche hinzugefügt und unter Ihrem [Mandanten-ID
 >
 >Die übrigen von der ausgewählten benutzerdefinierten Feldergruppe bereitgestellten Felder werden standardmäßig aus dem Schema entfernt. Wenn Sie einige dieser Felder zum Schema hinzufügen möchten, wählen Sie ein Feld aus, das zur Gruppe gehört, und wählen Sie dann **[!UICONTROL Zugehörige Felder verwalten]** in der rechten Leiste.
 
-#### Fügen Sie benutzerdefinierte Felder zur Struktur von Standardfeldgruppen hinzu {#custom-fields-for-standard-groups}
+#### Weisen Sie das Feld einer benutzerdefinierten Klasse zu {#add-to-class}
+
+under **[!UICONTROL Zuweisen zu]** auswählen **[!UICONTROL Klasse]**. Das nachstehende Eingabefeld wird durch den Namen der benutzerdefinierten Klasse des aktuellen Schemas ersetzt und gibt an, dass das neue Feld dieser Klasse zugewiesen wird.
+
+![Die [!UICONTROL Klasse] für die neue Feldzuweisung ausgewählt wurde.](../../images/ui/resources/schemas/assign-field-to-class.png)
+
+Fahren Sie mit der Konfiguration des Felds fort und wählen Sie **[!UICONTROL Anwenden]** wenn fertig.
+
+![[!UICONTROL Anwenden] für das neue Feld ausgewählt werden.](../../images/ui/resources/schemas/assign-field-to-class-apply.png)
+
+Das neue Feld wird der Arbeitsfläche hinzugefügt und unter Ihrem [Mandanten-ID](../../api/getting-started.md#know-your-tenant_id) um Konflikte mit Standard-XDM-Feldern zu vermeiden. Wenn Sie den Klassennamen in der linken Leiste auswählen, wird das neue Feld als Teil der Klassenstruktur angezeigt.
+
+![Das neue Feld, das auf die Struktur der benutzerdefinierten Klasse angewendet wird und in der Arbeitsfläche dargestellt wird.](../../images/ui/resources/schemas/assign-field-to-class-applied.png)
+
+### Fügen Sie benutzerdefinierte Felder zur Struktur von Standardfeldgruppen hinzu {#custom-fields-for-standard-groups}
 
 Wenn das Schema, mit dem Sie arbeiten, ein Objekt enthält, das von einer Standardfeldgruppe bereitgestellt wird, können Sie diesem Standardobjekt eigene benutzerdefinierte Felder hinzufügen.
 
