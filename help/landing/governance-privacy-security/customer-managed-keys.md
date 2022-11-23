@@ -2,10 +2,10 @@
 title: Vom Kunden verwaltete Schlüssel in Adobe Experience Platform
 description: Erfahren Sie, wie Sie eigene Verschlüsselungsschlüssel für in Adobe Experience Platform gespeicherte Daten einrichten.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: 82a29cedfd12e0bc3edddeb26abaf36b0edea6df
+source-git-commit: 47b3de5035f93f8a4288a0fec0a9111a979d7442
 workflow-type: tm+mt
-source-wordcount: '1613'
-ht-degree: 92%
+source-wordcount: '1603'
+ht-degree: 93%
 
 ---
 
@@ -17,11 +17,11 @@ In diesem Dokument wird der Prozess zum Aktivieren der Funktion für kundenverwa
 
 ## Voraussetzungen
 
-Um CMK zu aktivieren, benötigen Sie Zugriff auf **all** der folgenden Funktionen in [!DNL Microsoft Azure]:
+Um CMK zu aktivieren, muss die [!DNL Azure] Key Vault muss mit den folgenden Einstellungen konfiguriert werden:
 
-* [Rollenbasierte Zugriffssteuerungsrichtlinien](https://learn.microsoft.com/en-us/azure/role-based-access-control/) (nicht zu verwechseln mit derselben Funktion in Experience Platform)
-* [Key Vault soft-delete](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
-* [Bereinigungsschutz](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
+* [Bereinigungsschutz aktivieren](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
+* [Soft-Löschen aktivieren](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
+* [Zugriff konfigurieren mit [!DNL Azure] rollenbasierte Zugriffssteuerung](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 
 ## Prozesszusammenfassung
 
