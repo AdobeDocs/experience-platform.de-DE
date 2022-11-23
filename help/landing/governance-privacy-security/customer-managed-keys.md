@@ -1,10 +1,11 @@
 ---
 title: Vom Kunden verwaltete Schlüssel in Adobe Experience Platform
 description: Erfahren Sie, wie Sie eigene Verschlüsselungsschlüssel für in Adobe Experience Platform gespeicherte Daten einrichten.
-source-git-commit: 02898f5143a7f4f48c64b22fb3c59a072f1e957d
-workflow-type: ht
-source-wordcount: '1493'
-ht-degree: 100%
+exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
+source-git-commit: 82a29cedfd12e0bc3edddeb26abaf36b0edea6df
+workflow-type: tm+mt
+source-wordcount: '1613'
+ht-degree: 92%
 
 ---
 
@@ -13,6 +14,14 @@ ht-degree: 100%
 In Adobe Experience Platform gespeicherte Daten werden im Ruhezustand mithilfe von Schlüsseln auf Systemebene verschlüsselt. Wenn Sie ein Programm verwenden, das auf Platform aufbaut, können Sie stattdessen eigene Verschlüsselungsschlüssel verwenden, um die Datensicherheit zu verbessern.
 
 In diesem Dokument wird der Prozess zum Aktivieren der Funktion für kundenverwaltete Schlüssel (CMK) in Platform beschrieben.
+
+## Voraussetzungen
+
+Um CMK zu aktivieren, benötigen Sie Zugriff auf **all** der folgenden Funktionen in [!DNL Microsoft Azure]:
+
+* [Rollenbasierte Zugriffssteuerungsrichtlinien](https://learn.microsoft.com/en-us/azure/role-based-access-control/) (nicht zu verwechseln mit derselben Funktion in Experience Platform)
+* [Key Vault soft-delete](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
+* [Bereinigungsschutz](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 
 ## Prozesszusammenfassung
 
@@ -24,7 +33,7 @@ CMK ist Teil des Healthcare Shield- und des Privacy and Security Shield-Angebots
 
 Der Prozess sieht folgendermaßen aus:
 
-1. [Konfigurieren Sie einen  [!DNL Microsoft Azure] Schlüsseltresor](#create-key-vault) auf der Grundlage der Richtlinien Ihrer Organisation und generieren Sie dann [einen Verschlüsselungsschlüssel](#generate-a-key), der letztendlich an Adobe weitergegeben wird.
+1. [Konfigurieren Sie einen  [!DNL Azure] Schlüsseltresor](#create-key-vault) auf der Grundlage der Richtlinien Ihrer Organisation und generieren Sie dann [einen Verschlüsselungsschlüssel](#generate-a-key), der letztendlich an Adobe weitergegeben wird.
 1. Verwenden Sie API-Aufrufe zum [Einrichten der CMK-App](#register-app) mit Ihrem [!DNL Azure]-Mandanten.
 1. Verwenden Sie API-Aufrufe, um [Ihre Verschlüsselungsschlüssel-ID an Adobe zu senden](#send-to-adobe), und starten Sie den Aktivierungsprozess für die Funktion.
 1. [Prüfen Sie den Status der Konfiguration](#check-status), um zu überprüfen, ob CMK aktiviert wurde.
@@ -97,11 +106,13 @@ Der konfigurierte Schlüssel wird in der Liste der Schlüssel für den Tresor an
 
 Nachdem Sie Ihren Schlüsseltresor konfiguriert haben, müssen Sie sich für das CMK-Programm registrieren, die sich mit Ihrem [!DNL Azure]-Mandanten verbindet.
 
->[!NOTE]
->
->Zum Registrieren des CMK-Programms müssen Sie Aufrufe an Platform-APIs durchführen. Weitere Informationen dazu, wie Sie die erforderlichen Authentifizierungskopfzeilen für diese Aufrufe erfassen, finden Sie im [Handbuch zur Platform-API-Authentifizierung](../../landing/api-authentication.md).
->
->Während das Authentifizierungshandbuch Anweisungen zum Generieren Ihres eigenen eindeutigen Werts für die erforderliche `x-api-key`-Anfragekopfzeile enthält, verwenden alle API-Vorgänge in diesem Handbuch stattdessen den statischen Wert `acp_provisioning`. Sie müssen allerdings weiterhin eigene Werte für `{ACCESS_TOKEN}` und `{ORG_ID}` angeben.
+### Erste Schritte
+
+Zum Registrieren des CMK-Programms müssen Sie Aufrufe an Platform-APIs durchführen. Weitere Informationen dazu, wie Sie die erforderlichen Authentifizierungskopfzeilen für diese Aufrufe erfassen, finden Sie im [Handbuch zur Platform-API-Authentifizierung](../../landing/api-authentication.md).
+
+Während das Authentifizierungshandbuch Anweisungen zum Generieren Ihres eigenen eindeutigen Werts für die erforderliche `x-api-key`-Anfragekopfzeile enthält, verwenden alle API-Vorgänge in diesem Handbuch stattdessen den statischen Wert `acp_provisioning`. Sie müssen allerdings weiterhin eigene Werte für `{ACCESS_TOKEN}` und `{ORG_ID}` angeben.
+
+In allen in diesem Handbuch angezeigten API-Aufrufen: `platform.adobe.io` wird als Stammpfad verwendet, der standardmäßig auf den VA7-Bereich verweist. Wenn Ihr Unternehmen eine andere Region verwendet, `platform` muss ein Bindestrich und der Ihrer Organisation zugewiesene Regions-Code folgen: `nld2` für NLD2 oder `aus5` für AUS5 (z. B.: `platform-aus5.adobe.io`). Wenn Sie die Region Ihres Unternehmens nicht kennen, wenden Sie sich an Ihren Systemadministrator.
 
 ### Abrufen einer Authentifizierungs-URL
 
@@ -183,7 +194,7 @@ curl -X POST \
         "imsOrgId": "{ORG_ID}",
         "configData": {
           "providerType": "AZURE_KEYVAULT",
-          "keyVaultIdentifier": "https://adobecmkexample.vault.azure.net/keys/adobeCMK-key/7c1d50lo28234cc895534c00d7eb4eb4"
+          "keyVaultKeyIdentifier": "https://adobecmkexample.vault.azure.net/keys/adobeCMK-key/7c1d50lo28234cc895534c00d7eb4eb4"
         }
       }'
 ```
@@ -193,7 +204,7 @@ curl -X POST \
 | `name` | Ein Name für die Konfiguration. Stellen Sie sicher, dass Sie sich diesen Wert merken, da er erforderlich ist, um den Konfigurationsstatus in einem [späteren Schritt](#check-status) zu überprüfen. Bei dem Wert ist die Groß-/Kleinschreibung zu beachten. |
 | `type` | Der Konfigurationstyp. Muss auf `BYOK_CONFIG` festgelegt werden. |
 | `imsOrgId` | Die Kennung Ihrer IMS-Organisation. Dieser Wert muss mit dem Wert übereinstimmen, der unter der `x-gw-ims-org-id`-Kopfzeile angegeben wird. |
-| `configData` | Enthält die folgenden Details zur Konfiguration:<ul><li>`providerType`: Muss auf `AZURE_KEYVAULT` festgelegt werden.</li><li>`keyVaultIdentifier`: Der URI für den Schlüsseltresor, den Sie [zuvor](#send-to-adobe) kopiert haben.</li></ul> |
+| `configData` | Enthält die folgenden Details zur Konfiguration:<ul><li>`providerType`: Muss auf `AZURE_KEYVAULT` festgelegt werden.</li><li>`keyVaultKeyIdentifier`: Der URI für den Schlüsseltresor, den Sie [zuvor](#send-to-adobe) kopiert haben.</li></ul> |
 
 **Antwort**
 
