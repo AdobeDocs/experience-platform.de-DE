@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Tags
 solution: Data Collection
-source-git-commit: a03ab5086f8f3935425da147f721dec42ced9d00
+source-git-commit: de09106f4446981176ca001f607d540b490de8d1
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '420'
 ht-degree: 93%
 
 ---
@@ -106,6 +106,8 @@ ht-degree: 93%
       * Adobe Target v2 {#target-v2}
          * [Übersicht](./extensions/web/target-v2/overview.md)
          * [Versionshinweise](./extensions/web/target-v2/release-notes.md)
+      * [!DNL AWS] {#aws}
+         * [Übersicht](./extensions/web/aws/overview.md)
       * [!DNL BrightCove]-Video-Tracking {#brightcove}
          * [Übersicht](./extensions/web/brightcove/overview.md)
          * [Versionshinweise](./extensions/web/brightcove/release-notes.md)
