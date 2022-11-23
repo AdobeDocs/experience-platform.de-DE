@@ -1,16 +1,19 @@
 ---
 title: Bestimmen einer Tendenzbewertung mithilfe eines vom maschinellen Lernen erzeugten Prognosemodells
 description: Erfahren Sie, wie Sie mit Query Service Ihr prädiktives Modell auf Platform-Daten anwenden können. In diesem Dokument wird gezeigt, wie Platform-Daten verwendet werden, um die Kaufneigung eines Kunden bei jedem Besuch vorherzusagen.
-source-git-commit: af1c8f94d1758b3a4e7ea00c46b0f9a71a01c6be
+exl-id: 29587541-50dd-405c-bc18-17947b8a5942
+source-git-commit: 40c27a52fdae2c7d38c5e244a6d1d6ae3f80f496
 workflow-type: tm+mt
-source-wordcount: '1294'
+source-wordcount: '1295'
 ht-degree: 0%
 
 ---
 
 # Bestimmen eines Tendenzwerts mithilfe eines vom maschinellen Lernen generierten Prognosemodells
 
-Mithilfe von Query Service können Sie Experience Platform-Daten in Ihren Plattformen für maschinelles Lernen nutzen, um Prognosemodelle wie Tendenzwerte zu generieren. In diesem Handbuch wird erläutert, wie Sie mithilfe von Query Service Daten an Ihre Plattform für maschinelles Lernen senden können, um ein Modell in ein rechnergestütztes Notebook zu trainieren. Das trainierte Modell kann mithilfe von SQL auf Daten angewendet werden, um die Kaufneigung eines Kunden bei jedem Besuch vorherzusagen.
+Mithilfe von Query Service können Sie prädiktive Modelle wie Tendenzwerte nutzen, die auf Ihrer maschinellen Lernplattform zur Analyse von Daten zur Experience Platform aufbauen.
+
+In diesem Handbuch wird erläutert, wie Sie mithilfe von Query Service Daten an Ihre Plattform für maschinelles Lernen senden können, um ein Modell in ein rechnergestütztes Notebook zu trainieren. Das trainierte Modell kann mithilfe von SQL auf Daten angewendet werden, um die Kaufneigung eines Kunden bei jedem Besuch vorherzusagen.
 
 ## Erste Schritte
 
@@ -322,5 +325,3 @@ Die Genauigkeit des Bootstrapping-Modells wird dann sortiert. Danach werden die 
 ![Der Druckbefehl zum Anzeigen des Konfidenzintervalls des Tendenzwerts.](../images/use-cases/confidence-interval.png)
 
 In der obigen Abbildung wird angegeben, dass Sie bei nur 1.000 Zeilen für das Trainieren Ihrer Modelle mit einer Genauigkeit zwischen etwa 84 % und 88 % rechnen können. Sie können die `LIMIT` -Klausel in Query Service-Abfragen auf Grundlage Ihrer Anforderungen verwenden, um die Leistung der Modelle sicherzustellen.
-
-
