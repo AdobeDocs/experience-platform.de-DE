@@ -2,7 +2,7 @@
 title: Schnellstartanleitung
 description: Erfahren Sie, wie Sie mit Tags in Adobe Experience Platform schnell startklar werden.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1527'
 ht-degree: 92%
@@ -53,7 +53,7 @@ Weitere Informationen zum Erstellen von Eigenschaften finden Sie unter [Erstelle
 
 Eine Erweiterung ist eine Integration, die von Adobe oder einem Adobe-Partner erstellt wurde und neue und endlose Optionen für die Tags hinzufügt, die Sie auf Ihren Sites bereitstellen können. Stellt man sich Tag als Betriebssystem vor, dann sind Erweiterungen die von Ihnen installierten Programme, die Sie zur Ausführung bestimmter zu erledigender Aufgaben installieren.
 
-Für alle neuen Eigenschaften ist die [Haupterweiterung](../extensions/web/core/overview.md) installiert. Mobile-Eigenschaften enthalten zusätzliche Erweiterungen. Die Haupterweiterung wird von Adobe erstellt, um einen robusten Standardsatz mit Datenelementtypen für Ihre Datenschicht und mit Ereignistypen für Ihre Regeln bereitzustellen. Die meisten Aktionen, die Sie durchführen (Abrufen einer ECID, Senden von [!DNL Adobe Analytics]-Signalen, Laden der globalen [!DNL Target] Mbox usw.), stammen aus Erweiterungen, die Sie über den Katalog installieren.
+Für alle neuen Eigenschaften ist die [Haupterweiterung](../extensions/client/core/overview.md) installiert. Mobile-Eigenschaften enthalten zusätzliche Erweiterungen. Die Haupterweiterung wird von Adobe erstellt, um einen robusten Standardsatz mit Datenelementtypen für Ihre Datenschicht und mit Ereignistypen für Ihre Regeln bereitzustellen. Die meisten Aktionen, die Sie durchführen (Abrufen einer ECID, Senden von [!DNL Adobe Analytics]-Signalen, Laden der globalen [!DNL Target] Mbox usw.), stammen aus Erweiterungen, die Sie über den Katalog installieren.
 
 Was Tags in Platform wirklich einzigartig macht, ist, dass diese Erweiterungen von jedem erstellt werden können. Sie müssen ein Facebook-Remarketing-Pixel auf Ihrer Site ablegen? Sehen Sie sich die von Facebook erstellte Erweiterung an. Hätten Sie gerne dasselbe für Twitter oder Linked In? Verwenden Sie diese Erweiterungen. Sie müssen eine Umfrage ausführen? Sehen Sie sich Question Pro oder Foresee an. Müssen Sie die Privatsphäre und die Zustimmung Ihrer Endbenutzer im Zusammenhang mit der [!DNL GDPR] verwalten? Sehen Sie sich Evidon und Trust Arc genau an. Möchten Sie granulare Einblicke in das Verhalten einzelner Benutzer auf Ihrer Site erhalten? Sehen Sie sich doch einmal Clicktale an. Weitere Informationen finden Sie im Abschnitt [Hinzufügen einer neuen Erweiterung](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 

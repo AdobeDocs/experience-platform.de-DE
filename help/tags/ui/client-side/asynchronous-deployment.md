@@ -2,7 +2,7 @@
 title: Asynchrone Implementierung
 description: Erfahren Sie, wie Sie Tag-Bibliotheken von Adobe Experience Platform asynchron auf Ihrer Website bereitstellen.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 94%
@@ -56,7 +56,7 @@ Da die Tag-Bibliothek vor oder nach Analyse des Seitenendes vollständig geladen
 
 Außerdem kann das Laden der Tag-Bibliothek abgeschlossen werden, bevor oder nachdem das Browser-Ereignis [`DOMContentLoaded`](https://developer.mozilla.org/de-DE/docs/Web/Events/DOMContentLoaded) (DOM bereit) eingetreten ist.
 
-Aufgrund dieser beiden Punkte ist es sinnvoll, zu veranschaulichen, wie die Ereignistypen [Bibliothek geladen](../../extensions/web/core/overview.md#library-loaded-page-top), [Seitenende](../../extensions/web/core/overview.md#page-bottom), [DOM bereit](../../extensions/web/core/overview.md#page-bottom) und [Fenster geladen](../../extensions/web/core/overview.md#window-loaded) aus der Haupterweiterung funktionieren, wenn eine Tag-Bibliothek asynchron geladen wird.
+Aufgrund dieser beiden Punkte ist es sinnvoll, zu veranschaulichen, wie die Ereignistypen [Bibliothek geladen](../../extensions/client/core/overview.md#library-loaded-page-top), [Seitenende](../../extensions/client/core/overview.md#page-bottom), [DOM bereit](../../extensions/client/core/overview.md#page-bottom) und [Fenster geladen](../../extensions/client/core/overview.md#window-loaded) aus der Haupterweiterung funktionieren, wenn eine Tag-Bibliothek asynchron geladen wird.
 
 Wenn Ihre Tag-Eigenschaft die folgenden vier Regeln enthält:
 

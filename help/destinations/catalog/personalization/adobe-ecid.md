@@ -3,10 +3,10 @@ Keywords: ECID;ecid
 title: Experience Cloud-ID-Service-Erweiterung
 description: Die Experience Cloud ID Service-Erweiterung ist ein Personalisierungsziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 exl-id: 4cc49c14-66ec-43e0-a106-70d9c3646d87
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '462'
-ht-degree: 16%
+ht-degree: 18%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 16%
 
 Diese Erweiterung implementiert die [!DNL Experience Cloud] ID-Dienst, der Besucher über alle [!DNL Experience Cloud] Lösungen.
 
-[!DNL Experience Cloud] Der ID-Dienst ist eine Personalisierungserweiterung in Adobe Experience Platform. Weitere Informationen zur Erweiterungsfunktion finden Sie unter [Experience Cloud ID-Diensterweiterungsseite](../../../tags/extensions/web/id-service/overview.md) in der Tag-Dokumentation.
+[!DNL Experience Cloud] Der ID-Dienst ist eine Personalisierungserweiterung in Adobe Experience Platform. Weitere Informationen zur Erweiterungsfunktion finden Sie unter [Experience Cloud ID-Diensterweiterungsseite](../../../tags/extensions/client/id-service/overview.md) in der Tag-Dokumentation.
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tags-Erweiterungen in Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 
@@ -32,7 +32,7 @@ Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Pl
 
 So installieren Sie die [!DNL Experience Cloud] ID-Diensterweiterung:
 
-Im [Plattform-Benutzeroberfläche](https://platform.adobe.com/), gehen Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
+Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
 Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
 
@@ -42,7 +42,7 @@ Wählen Sie die Tag-Eigenschaft aus, in der Sie die Erweiterung installieren mö
 
 Der Workflow leitet Sie zur Datenerfassungs-Benutzeroberfläche weiter, um die Installation abzuschließen.
 
-Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie in der [Experience Cloud ID-Diensterweiterungsseite](../../../tags/extensions/web/id-service/overview.md) in der Tag-Dokumentation.
+Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie in der [Experience Cloud ID-Diensterweiterungsseite](../../../tags/extensions/client/id-service/overview.md) in der Tag-Dokumentation.
 
 Sie können die Erweiterung auch direkt im [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/). Siehe Handbuch unter [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) für weitere Informationen.
 

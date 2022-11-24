@@ -3,7 +3,7 @@ title: Erste Schritte mit der Ereignisweiterleitung
 description: In diesem Schritt-für-Schritt-Tutorial erfahren Sie, wie Sie mit der Ereignisweiterleitung in Adobe Experience Platform beginnen.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '872'
 ht-degree: 88%
@@ -18,7 +18,7 @@ ht-degree: 88%
 
 Um die Ereignisweiterleitung in Adobe Experience Platform zu verwenden, müssen Daten mit einer oder mehreren der folgenden drei Optionen an das Adobe Experience Platform Edge Network gesendet werden:
 
-* [Adobe Experience Platform Web SDK](../../extensions/web/sdk/overview.md)
+* [Adobe Experience Platform Web SDK](../../extensions/client/sdk/overview.md)
 * [Adobe Experience Platform Mobile SDK](https://sdkdocs.com)
 * [Server-zu-Server-API](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=de)
 
@@ -100,7 +100,7 @@ Notieren Sie sich nach der Konfiguration die Umgebungs-IDs für die neue Eigensc
 
 Erstellen Sie Ihre Eigenschaft im **[!UICONTROL Tags]** Arbeitsbereich und navigieren Sie dann zu **[!UICONTROL Erweiterungen]** und wählen Sie die Experience Platform Web SDK-Erweiterung aus dem Katalog aus, um sie zu konfigurieren und zu installieren.
 
-Siehe [Dokumentation zur Web SDK-Erweiterung](../../extensions/web/sdk/overview.md) für Details zu Konfigurationsoptionen.
+Siehe [Dokumentation zur Web SDK-Erweiterung](../../extensions/client/sdk/overview.md) für Details zu Konfigurationsoptionen.
 
 ## Erstellen einer Tag-Regel zum Senden von Daten an das Platform Web SDK
 

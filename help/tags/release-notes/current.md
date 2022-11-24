@@ -2,20 +2,20 @@
 title: Versionshinweise für Tags und Ereignisweiterleitung
 description: Die neuesten Versionshinweise für Tags und Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 12648469a1e06e316597fa46fb877f947c8ddb92
+source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
 source-wordcount: '350'
-ht-degree: 20%
+ht-degree: 36%
 
 ---
 
 # Versionshinweise für Tags und Ereignisweiterleitung
 
-## 26. Oktober 2022
+## 26. Oktober 2022
 
-* **Umgang mit sensiblen Daten für Datastreams**: Datastreams nutzt jetzt verschiedene Platform-Technologien, um sensible Daten, wie sie durch Vorschriften wie den Health Insurance Portability and Accounability Act (HIPAA) durchgesetzt werden, angemessen zu handhaben. Siehe Abschnitt zu [Umgang mit sensiblen Daten in Datenströmen](../../edge/datastreams/overview.md#sensitive) für weitere Informationen.
-* **[!DNL Splunk]Erweiterung für die Ereignisweiterleitung**: Sie können jetzt Daten an senden [!DNL Splunk] mit [Ereignisweiterleitung](../ui/event-forwarding/overview.md) -Erweiterung. Siehe [[!DNL Splunk] Erweiterungsübersicht](../extensions/web/splunk/overview.md) für weitere Informationen.
-* **[!DNL Zendesk]Erweiterung für die Ereignisweiterleitung**: Sie können jetzt Daten an senden [!DNL Zendesk] mit [Ereignisweiterleitung](../ui/event-forwarding/overview.md) -Erweiterung. Siehe [[!DNL Zendesk] Erweiterungsübersicht](../extensions/web/zendesk/overview.md) für weitere Informationen.
+* **Umgang mit sensiblen Daten für Datastreams**: Datastreams nutzt jetzt verschiedene Platform-Technologien, um sensible Daten, wie sie durch Vorschriften wie den Health Insurance Portability and Accounability Act (HIPAA) durchgesetzt werden, angemessen zu handhaben. Weitere Informationen finden Sie im Abschnitt [Umgang mit sensiblen Daten in Datenströmen](../../edge/datastreams/overview.md#sensitive).
+* **[!DNL Splunk]-Erweiterung für die Ereignisweiterleitung**: Sie können jetzt Daten mithilfe einer Erweiterung zur [!DNL Splunk]Ereignisweiterleitung[ an ](../ui/event-forwarding/overview.md) senden. Weiterführende Informationen dazu finden Sie in der [[!DNL Splunk] Übersicht der Erweiterungen](../extensions/server/splunk/overview.md).
+* **[!DNL Zendesk]-Erweiterung für die Ereignisweiterleitung**: Sie können jetzt Daten mithilfe einer Erweiterung zur [!DNL Zendesk]Ereignisweiterleitung[ an ](../ui/event-forwarding/overview.md) senden. Weiterführende Informationen dazu finden Sie in der [[!DNL Zendesk] Übersicht der Erweiterungen](../extensions/server/zendesk/overview.md).
 
 ## 28. September 2022
 
@@ -32,6 +32,6 @@ ht-degree: 20%
 
 Es wurden neue Erweiterungen veröffentlicht:
 
-* [Google Data Layer Tag-Erweiterung](../extensions/web/google-data-layer/overview.md): Ermöglicht die Verwendung einer Google-Datenschicht in Ihrer Tags-Implementierung.
+* [Google Data Layer Tag-Erweiterung](../extensions/client/google-data-layer/overview.md): Ermöglicht die Verwendung einer Google-Datenschicht in Ihrer Tags-Implementierung.
 * [Google Ads Enhanced Conversions-Ereignisweiterleitungs-Erweiterung](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html): Ermöglicht Ihnen, Ihre Google Ads-Konversionen in Echtzeit zu verbessern.
-* [Mailchimp-Ereignisweiterleitungserweiterung](../extensions/web/mailchimp/overview.md): Sendet Ereignisse an die Mailchimp Marketing-API, die E-Mails für Mailchimp-Marketingkampagnen, Journey oder Transaktionen an Trigger weiterleiten kann.
+* [Mailchimp-Ereignisweiterleitungserweiterung](../extensions/server/mailchimp/overview.md): Sendet Ereignisse an die Mailchimp Marketing-API, die E-Mails für Mailchimp-Marketingkampagnen, Journey oder Transaktionen an Trigger weiterleiten kann.

@@ -3,10 +3,10 @@ keywords: Target-Erweiterung;Target;Target v2;Target v2-Erweiterung
 title: Adobe Target v2-Erweiterung
 description: Die Adobe Target v2-Erweiterung ist ein Personalisierungsziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 exl-id: d1d5ebbc-9093-42b0-8d88-58779df3ec89
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '492'
-ht-degree: 29%
+ht-degree: 30%
 
 ---
 
@@ -32,7 +32,7 @@ Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Ad
 
 Installieren der Adobe Target v2-Erweiterung:
 
-Im [Plattform-Benutzeroberfläche](https://platform.adobe.com/), gehen Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
+Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
 Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
 
@@ -42,7 +42,7 @@ Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchte
 
 Der Workflow führt Sie durch die Schritte zum Abschluss der Installation.
 
-Informationen zu den Konfigurationsoptionen für Erweiterungen finden Sie unter [Adobe Target v2-Erweiterungsseite](../../../tags/extensions/web/target-v2/overview.md) in der Tag-Dokumentation.
+Informationen zu den Konfigurationsoptionen für Erweiterungen finden Sie unter [Adobe Target v2-Erweiterungsseite](../../../tags/extensions/client/target-v2/overview.md) in der Tag-Dokumentation.
 
 Sie können die Erweiterung auch direkt im [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/). Siehe Handbuch unter [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) für weitere Informationen.
 

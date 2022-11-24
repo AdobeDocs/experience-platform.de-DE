@@ -2,7 +2,7 @@
 title: Regeln
 description: Machen Sie sich mit der Funktionsweise von Tag-Erweiterungen in Adobe Experience Platform vertraut.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: 85413e4a8b604dd9111ca4d47ad6a1ec49d8f547
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1973'
 ht-degree: 100%
@@ -41,7 +41,7 @@ Wenn ein bestimmtes Ereignis eintritt, werden die Bedingungen ausgewertet und gg
 
 * **Bedingungen**: Grenzen Sie das Ereignis ein, indem Sie alle Bedingungen konfigurieren, die für ein Ereignis erfüllt sein müssen, damit die Regel ausgelöst wird. Ausnahmen werden als NOT-Bedingung definiert. Mehrere Bedingungen werden durch ein AND verbunden.
 
-Die verfügbaren Ereignisse hängen davon ab, welche Erweiterungen installiert wurden. Informationen zu den Ereignissen in der Haupterweiterung finden Sie unter [Ereignistypen der Haupterweiterung](../../extensions/web/core/overview.md#core-extension-event-types).
+Die verfügbaren Ereignisse hängen davon ab, welche Erweiterungen installiert wurden. Informationen zu den Ereignissen in der Haupterweiterung finden Sie unter [Ereignistypen der Haupterweiterung](../../extensions/client/core/overview.md#core-extension-event-types).
 
 ### Aktionen (then)
 

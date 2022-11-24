@@ -5,7 +5,7 @@ title: Übersicht über die Adobe Privacy JavaScript Library
 topic-legacy: overview
 description: Mit der Adobe Privacy JavaScript Library können Sie Identitäten von Datensubjekten abrufen, die in Privacy Service verwendet werden können.
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 57%
@@ -48,7 +48,7 @@ So verwenden Sie die [!DNL Privacy JS Library]müssen Sie sie mit einer der folg
 * Installieren Sie die Software mithilfe von npm, indem Sie den folgenden Befehl ausführen: `npm install @adobe/adobe-privacy`
 * Download von der [Experience Cloud-GitHub-Repository](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
-Sie können die Bibliothek auch über eine Tag-Erweiterung installieren. Die Übersicht finden Sie auf der [Adobe-Datenschutz-Tag-Erweiterung](../tags/extensions/web/privacy/overview.md) für weitere Informationen.
+Sie können die Bibliothek auch über eine Tag-Erweiterung installieren. Die Übersicht finden Sie auf der [Adobe-Datenschutz-Tag-Erweiterung](../tags/extensions/client/privacy/overview.md) für weitere Informationen.
 
 ## Instanziieren Sie die [!DNL Privacy JS Library]
 

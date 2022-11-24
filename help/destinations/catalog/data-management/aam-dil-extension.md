@@ -3,10 +3,10 @@ keywords: Audience Manager DIL-Erweiterung;Ziel-Audience Manager;dil-Erweiterung
 title: Audience Manager DIL-Erweiterung
 description: Die Audience Manager DIL-Erweiterung ist ein DMP-Ziel (Data Management Platform) in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 exl-id: 7e1099de-0650-4ee2-b746-721afe194097
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '514'
-ht-degree: 22%
+ht-degree: 24%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 22%
 
 Dies ist die Adobe Audience Manager Data Integration Library-Erweiterung (Client-seitige Implementierung). Hinweis: Diese Erweiterung ist nicht für die Server-seitige Weiterleitung (Server-Side Forwarding, SSF) von Adobe Analytics-Daten vorgesehen. Nutzen Sie für SSF die Adobe Analytics-Erweiterung. Wichtig: Ab Version 8.0 weist DIL eine starke Abhängigkeit von der [!DNL Experience Cloud] ID-Dienst, Version 3.3 oder höher. Implementieren Sie beide [!DNL Experience Cloud] ID-Dienst und DIL [!DNL Audience Manager] Datenintegrationsfunktionen.
 
-[!DNL Audience Manager] DIL ist eine DMP-Erweiterung (Data Management Platform) in Adobe Experience Platform. Weitere Informationen zur Erweiterungsfunktion finden Sie unter [Audience Manager-Erweiterungsseite](../../../tags/extensions/web/audience-manager/overview.md) in der Tag-Dokumentation.
+[!DNL Audience Manager] DIL ist eine DMP-Erweiterung (Data Management Platform) in Adobe Experience Platform. Weitere Informationen zur Erweiterungsfunktion finden Sie unter [Audience Manager-Erweiterungsseite](../../../tags/extensions/client/audience-manager/overview.md) in der Tag-Dokumentation.
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Erweiterungen in Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 
@@ -32,7 +32,7 @@ Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Ad
 
 So installieren Sie die [!DNL Audience Manager] DIL-Erweiterung:
 
-Im [Plattform-Benutzeroberfläche](https://platform.adobe.com/), gehen Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
+Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
 Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
 
@@ -42,7 +42,7 @@ Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchte
 
 Der Workflow führt Sie durch die Schritte zum Abschluss der Installation.
 
-Informationen zu den Konfigurationsoptionen für Erweiterungen finden Sie unter [Audience Manager-Erweiterungsseite](../../../tags/extensions/web/audience-manager/overview.md) in der Tag-Dokumentation.
+Informationen zu den Konfigurationsoptionen für Erweiterungen finden Sie unter [Audience Manager-Erweiterungsseite](../../../tags/extensions/client/audience-manager/overview.md) in der Tag-Dokumentation.
 
 Sie können die Erweiterung auch direkt im [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/). Siehe Handbuch unter [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) für weitere Informationen.
 

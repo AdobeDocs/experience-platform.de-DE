@@ -2,7 +2,7 @@
 title: Geheime Daten in der Reactor-API
 description: Hier erfahren Sie mehr über die Grundlagen zum Konfigurieren von geheimen Daten in der Reactor-API für die Verwendung in der Ereignisweiterleitung.
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
-source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1241'
 ht-degree: 87%
@@ -131,7 +131,7 @@ Nachdem das Austausch-Artefakt erfolgreich in der Umgebung gespeichert wurde, wi
 
 ## Verweisen auf geheime Daten {#referencing-secrets}
 
-Um auf geheime Daten zu verweisen, müssen Sie ein Datenelement des Typs [!UICONTROL Geheime Daten] (bereitgestellt von der [[!UICONTROL Core]-Erweiterung](../../extensions/web/core/overview.md)) in einer Ereignisweiterleitungs-Eigenschaft erstellen. Beim Konfigurieren dieses Datenelements werden Sie aufgefordert, anzugeben, welche geheimen Daten für jede Umgebung verwendet werden sollen. Anschließend können Sie Regeln erstellen, die auf ein Geheime-Daten-Datenelement verweisen, z. B. im Header für einen HTTP-Aufruf.
+Um auf geheime Daten zu verweisen, müssen Sie ein Datenelement des Typs [!UICONTROL Geheime Daten] (bereitgestellt von der [[!UICONTROL Core]-Erweiterung](../../extensions/client/core/overview.md)) in einer Ereignisweiterleitungs-Eigenschaft erstellen. Beim Konfigurieren dieses Datenelements werden Sie aufgefordert, anzugeben, welche geheimen Daten für jede Umgebung verwendet werden sollen. Anschließend können Sie Regeln erstellen, die auf ein Geheime-Daten-Datenelement verweisen, z. B. im Header für einen HTTP-Aufruf.
 
 ![Geheime-Daten-Datenelement](../../images/api/guides/secrets/data-element.png)
 

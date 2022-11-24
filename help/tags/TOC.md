@@ -5,10 +5,10 @@ breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Tags
 solution: Data Collection
-source-git-commit: de09106f4446981176ca001f607d540b490de8d1
+source-git-commit: ccfc46714069e8c29f1777dea5ba73e318c0a4a6
 workflow-type: tm+mt
-source-wordcount: '420'
-ht-degree: 93%
+source-wordcount: '954'
+ht-degree: 74%
 
 ---
 
@@ -64,83 +64,164 @@ ht-degree: 93%
    * [Benutzerberechtigungen](./ui/administration/user-permissions.md)
 * Erweiterungen {#extensions}
    * [Übersicht](./extensions/overview.md)
-   * Adobe-Erweiterungen {#adobe}
-      * [Übersicht](./extensions/web/overview.md)
+   * Tag-Erweiterungen (clientseitig) {#client}
+      * [Übersicht](./extensions/client/overview.md)
+      * [Barrierefreie Metriken zur Site-Geschwindigkeit](https://exchange.adobe.com/apps/ec/103053)
+      * [Activity Map Customizer](https://exchange.adobe.com/apps/ec/101531)
+      * [Aktualisieren der Aktionsseite](https://exchange.adobe.com/apps/ec/102848)
+      * [Adform Website Tracking](https://exchange.adobe.com/apps/ec/103195)
+      * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)
       * Adobe Analytics {#analytics}
-         * [Übersicht](./extensions/web/analytics/overview.md)
-         * [Gemeinsame Module](./extensions/web/analytics/shared-modules.md)
-         * [Versionshinweise](./extensions/web/analytics/release-notes.md)
+         * [Übersicht](./extensions/client/analytics/overview.md)
+         * [Gemeinsame Module](./extensions/client/analytics/shared-modules.md)
+         * [Versionshinweise](./extensions/client/analytics/release-notes.md)
+      * [Adobe Analytics und Adobe Target](https://exchange.adobe.com/apps/ec/105363/6sense-for-analytics-and-target)
+      * [Adobe Analytics und Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)
+      * [Adobe Analytics und Salesforce](https://exchange.adobe.com/apps/ec/101530)
       * Adobe Analytics Product String {#product-string}
-         * [Übersicht](./extensions/web/product-string/overview.md)
-         * [Versionshinweise](./extensions/web/product-string/release-notes.md)
+         * [Übersicht](./extensions/client/product-string/overview.md)
+         * [Versionshinweise](./extensions/client/product-string/release-notes.md)
+      * [Adobe Analytics Product String Builder](https://exchange.adobe.com/apps/ec/101461)
       * Adobe Audience Manager {#audience-manager}
-         * [Übersicht](./extensions/web/audience-manager/overview.md)
+         * [Übersicht](./extensions/client/audience-manager/overview.md)
       * Adobe Client-Datenschicht {#client-data-layer}
-         * [Übersicht](./extensions/web/client-data-layer/overview.md)
-         * [Versionshinweise](./extensions/web/client-data-layer/release-notes.md)
+         * [Übersicht](./extensions/client/client-data-layer/overview.md)
+         * [Versionshinweise](./extensions/client/client-data-layer/release-notes.md)
       * Adobe ContextHub {#contexthub}
-         * [Übersicht](./extensions/web/contexthub/overview.md)
+         * [Übersicht](./extensions/client/contexthub/overview.md)
+      * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
       * Adobe Experience Cloud ID-Dienst {#id-service}
-         * [Übersicht](./extensions/web/id-service/overview.md)
-         * [Versionshinweise](./extensions/web/id-service/release-notes.md)
+         * [Übersicht](./extensions/client/id-service/overview.md)
+         * [Versionshinweise](./extensions/client/id-service/release-notes.md)
       * Adobe Experience Platform Demo {#platform-demo}
-         * [Übersicht](./extensions/web/platform-demo/overview.md)
+         * [Übersicht](./extensions/client/platform-demo/overview.md)
       * Adobe Experience Platform Web SDK {#sdk}
-         * [Übersicht](./extensions/web/sdk/overview.md)
-      * Adobe Experience Platform Cloud Connector {#cloud-connector}
-         * [Übersicht](./extensions/web/cloud-connector/overview.md)
+         * [Übersicht](./extensions/client/sdk/overview.md)
       * Adobe Experience Manager Asset Insights {#asset-insights}
-         * [Übersicht](./extensions/web/asset-insights/overview.md)
-         * [Versionshinweise](./extensions/web/asset-insights/release-notes.md)
+         * [Übersicht](./extensions/client/asset-insights/overview.md)
+         * [Versionshinweise](./extensions/client/asset-insights/release-notes.md)
+      * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)
       * Adobe Media Analytics for Audio and Video {#media-analytics}
-         * [Übersicht](./extensions/web/media-analytics/overview.md)
-         * [Versionshinweise](./extensions/web/media-analytics/release-notes.md)
+         * [Übersicht](./extensions/client/media-analytics/overview.md)
+         * [Versionshinweise](./extensions/client/media-analytics/release-notes.md)
       * Adobe Media Analytics (3.x SDK) {#media-analytics-3x}
-         * [Übersicht](./extensions/web/media-analytics-3x/overview.md)
-         * [Versionshinweise](./extensions/web/media-analytics-3x/release-notes.md)
+         * [Übersicht](./extensions/client/media-analytics-3x/overview.md)
+         * [Versionshinweise](./extensions/client/media-analytics-3x/release-notes.md)
       * Adobe Privacy {#privacy}
-         * [Übersicht](./extensions/web/privacy/overview.md)
+         * [Übersicht](./extensions/client/privacy/overview.md)
+      * [Adobe Report Suite-Auswahl](https://exchange.adobe.com/apps/ec/100640)
       * Adobe Target {#target}
-         * [Übersicht](./extensions/web/target/overview.md)
-         * [Versionshinweise](./extensions/web/target/release-notes.md)
+         * [Übersicht](./extensions/client/target/overview.md)
+         * [Versionshinweise](./extensions/client/target/release-notes.md)
       * Adobe Target v2 {#target-v2}
-         * [Übersicht](./extensions/web/target-v2/overview.md)
-         * [Versionshinweise](./extensions/web/target-v2/release-notes.md)
-      * [!DNL AWS] {#aws}
-         * [Übersicht](./extensions/web/aws/overview.md)
+         * [Übersicht](./extensions/client/target-v2/overview.md)
+         * [Versionshinweise](./extensions/client/target-v2/release-notes.md)
+      * [Adobe Target Toolkit](https://exchange.adobe.com/apps/ec/100640)
+      * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)
+      * [AEM Asset Insights](https://exchange.adobe.com/apps/ec/103406)
+      * [Airbremse JS-Notifizierer](https://exchange.adobe.com/apps/ec/103342)
+      * [Amplitude](https://exchange.adobe.com/apps/ec/108010)
+      * [Apollo QAX](https://exchange.adobe.com/apps/ec/105068)
+      * [Awin Advertiser MasterTag](https://exchange.adobe.com/apps/ec/103176)
+      * [Awin Conversion Tag](https://exchange.adobe.com/apps/ec/103240)
+      * [Beemray Human Context](https://exchange.adobe.com/apps/ec/101063)
+      * [Bing Ads Universal Event Tracking](https://exchange.adobe.com/apps/ec/100154)
+      * [Verzweigung](https://exchange.adobe.com/apps/ec/101382)
       * [!DNL BrightCove]-Video-Tracking {#brightcove}
-         * [Übersicht](./extensions/web/brightcove/overview.md)
-         * [Versionshinweise](./extensions/web/brightcove/release-notes.md)
+         * [Übersicht](./extensions/client/brightcove/overview.md)
+         * [Versionshinweise](./extensions/client/brightcove/release-notes.md)
+      * [CallTrackingMetrics](https://exchange.adobe.com/apps/ec/107695)
+      * [Kennung der Kanalquelle](https://exchange.adobe.com/apps/ec/101412)
+      * [Cheetah-Erlebnisse](https://exchange.adobe.com/apps/ec/102759)
+      * [Clicktale](https://exchange.adobe.com/apps/ec/100082)
       * Common Analytics Plugins {#plugins}
-         * [Übersicht](./extensions/web/plugins/overview.md)
-         * [Versionshinweise](./extensions/web/plugins/release-notes.md)
+         * [Übersicht](./extensions/client/plugins/overview.md)
+         * [Versionshinweise](./extensions/client/plugins/release-notes.md)
       * Allgemeine Web SDK-Plug-ins {#web-sdk-plugins}
-         * [Übersicht](./extensions/web/web-sdk-plugins/overview.md)
-         * [Versionshinweise](./extensions/web/web-sdk-plugins/release-notes.md)
+         * [Übersicht](./extensions/client/web-sdk-plugins/overview.md)
+         * [Versionshinweise](./extensions/client/web-sdk-plugins/release-notes.md)
+      * [Verknüpfen](https://exchange.adobe.com/apps/ec/104690)
+      * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
+      * [Cookie-Einverständnisverwaltung durch Benutzercentrics CMP v2](https://exchange.adobe.com/apps/ec/107037)
       * Core {#core}
-         * [Übersicht](./extensions/web/core/overview.md)
-         * [Ereignisweiterleitung](./extensions/web/core/event-forwarding.md)
-         * [Versionshinweise](./extensions/web/core/release-notes.md)
-      * Erweiterte Konvertierungen von Google Ads {#google-ads-enhanced-conversions}
-         * [Übersicht](./extensions/web/google-ads-enhanced-conversions/overview.md)
+         * [Übersicht](./extensions/client/core/overview.md)
+         * [Versionshinweise](./extensions/client/core/release-notes.md)
+      * [Benutzerdefinierter Debug-Logger](https://exchange.adobe.com/apps/ec/104698)
+      * [Kundenerkennung](https://exchange.adobe.com/apps/ec/100688)
+      * [Datenelement-Assistent (DEA)](https://exchange.adobe.com/apps/ec/101413)
+      * [Datenschicht-Manager](https://exchange.adobe.com/apps/ec/101462)
+      * [Decibel](https://exchange.adobe.com/apps/ec/100913)
+      * [Demandbase](https://exchange.adobe.com/apps/ec/101605)
+      * [Differenzdatenschutz](https://exchange.adobe.com/apps/ec/104535)
+      * [Dynamic Media-Viewer](https://exchange.adobe.com/apps/ec/103048)
+      * [EDDL Helper](https://exchange.adobe.com/apps/ec/107691)
+      * [Flashspeak OneTag](https://exchange.adobe.com/apps/ec/101392)
+      * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
+      * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
+      * [Prädiktive Interaktion in Genesys](https://exchange.adobe.com/apps/ec/106148)
       * Google-Datenschicht {#google-data-layer}
-         * [Übersicht](./extensions/web/google-data-layer/overview.md)
-         * [Versionshinweise](./extensions/web/google-data-layer/release-notes.md)
-      * [!DNL Mailchimp] Edge {#mailchimp-edge}
-         * [Übersicht](./extensions/web/mailchimp/overview.md)
+         * [Übersicht](./extensions/client/google-data-layer/overview.md)
+         * [Versionshinweise](./extensions/client/google-data-layer/release-notes.md)
+      * [Google Global Site Tag (gtag)](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag)
+      * [InMoment](https://exchange.adobe.com/apps/ec/100847)
+      * [JSON Helper](https://exchange.adobe.com/apps/ec/106449)
+      * [JW Player Analytics](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/sdi-toolkit)dobe.com/apps/ec/101523)
+      * [KickFire](https://exchange.adobe.com/apps/ec/101621)
+      * [Zuordnungstabelle](https://exchange.adobe.com/apps/ec/103136)
       * [!DNL Marketo Munchkin] {#marketo}
-         * [Übersicht](./extensions/web/marketo/overview.md)
-         * [Versionshinweise](./extensions/web/marketo/release-notes.md)
-      * [!UICONTROL Microsoft Azure] {#azure}
-         * [Übersicht](./extensions/web/azure/overview.md)
-      * [!DNL Splunk] {#splunk}
-         * [Übersicht](./extensions/web/splunk/overview.md)
+         * [Übersicht](./extensions/client/marketo/overview.md)
+         * [Versionshinweise](./extensions/client/marketo/release-notes.md)
+      * [Übergeordneter Eigenschaftenmanager](https://exchange.adobe.com/apps/ec/102992)
+      * [Bildschirm](https://exchange.adobe.com/apps/ec/106544)
+      * [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)
+      * [OneTrust-Einverständnisverwaltung für Cookies](https://exchange.adobe.com/apps/ec/100340)
+      * [Pepperjam](https://exchange.adobe.com/apps/ec/103587)
+      * [Persado Connect](https://exchange.adobe.com/apps/ec/103745)
+      * [Pinterest-Konversions-Tracking](https://exchange.adobe.com/apps/ec/100523)
+      * [Pixel Loader](https://exchange.adobe.com/apps/ec/100152)
+      * [Qualtrics Website Feedback](https://exchange.adobe.com/apps/ec/101569)
+      * [Quantenmetrik](https://exchange.adobe.com/apps/ec/101535)
+      * [Momentum auflösen](https://exchange.adobe.com/apps/ec/108352)
+      * [Rokt](https://exchange.adobe.com/apps/ec/107591)
+      * [SDI-Umfrage](https://exchange.adobe.com/apps/ec/102991)
+      * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)
+      * [SessionCam](https://exchange.adobe.com/apps/ec/100517)
+      * [SPA-Ansichtsereignis](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
+      * [Storage Spanner](https://exchange.adobe.com/apps/ec/102990)
+      * [TAGS nach Loop Horizon](https://exchange.adobe.com/apps/ec/106092)
+      * [Tealium Collect](https://exchange.adobe.com/apps/ec/104217)
+      * [Tealium-Datenanreicherung](https://exchange.adobe.com/apps/ec/104217)
+      * [TMMData Foundation Platform](https://exchange.adobe.com/apps/ec/100148)
+      * [TrustArc Cookie Consent Manager](https://exchange.adobe.com/apps/ec/107037)
+      * [Videowiedergabe](https://exchange.adobe.com/apps/ec/108937)
+      * [Web-Vitals](https://exchange.adobe.com/apps/ec/106769)
+      * [XDM Composer](https://exchange.adobe.com/apps/ec/106062)
+      * [Yahoo Dot](https://exchange.adobe.com/apps/ec/106062)
+      * [Yext Conversion Tracking](https://exchange.adobe.com/apps/ec/103174)
+      * [[!DNL Youtube] Wiedergabe](https://exchange.adobe.com/apps/ec/103174)
       * [!DNL YouTube]-Video-Tracking {#youtube}
-         * [Übersicht](./extensions/web/youtube/overview.md)
-         * [Versionshinweise](./extensions/web/youtube/release-notes.md)
+         * [Übersicht](./extensions/client/youtube/overview.md)
+         * [Versionshinweise](./extensions/client/youtube/release-notes.md)
+   * Erweiterungen für die Ereignisweiterleitung (serverseitig) {#server}
+      * [Übersicht](./extensions/server/overview.md)
+      * Adobe Experience Platform Cloud Connector {#cloud-connector}
+         * [Übersicht](./extensions/server/cloud-connector/overview.md)
+      * [!DNL AWS] {#aws}
+         * [Übersicht](./extensions/server/aws/overview.md)
+      * Core {#core}
+         * [Übersicht](./extensions/server/core/overview.md)
+      * Erweiterte Konvertierungen von Google Ads {#google-ads-enhanced-conversions}
+         * [Übersicht](./extensions/server/google-ads-enhanced-conversions/overview.md)
+      * [!DNL Mailchimp] Edge {#mailchimp}
+         * [Übersicht](./extensions/server/mailchimp/overview.md)
+      * [!UICONTROL Microsoft Azure] {#azure}
+         * [Übersicht](./extensions/server/azure/overview.md)
+      * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
+      * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)
+      * [!DNL Splunk] {#splunk}
+         * [Übersicht](./extensions/server/splunk/overview.md)
       * [!DNL Zendesk] Ereignis-API {#zendesk}
-         * [Übersicht](./extensions/web/zendesk/overview.md)
-   * [Drittanbietererweiterungen](./extensions/3rd-party-extensions.md)
+         * [Übersicht](./extensions/server/zendesk/overview.md)
 * Entwickeln von Erweiterungen {#extension-dev}
    * [Übersicht](./extension-dev/overview.md)
    * [Erste Schritte](./extension-dev/getting-started.md)

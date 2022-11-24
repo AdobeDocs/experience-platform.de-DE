@@ -2,7 +2,7 @@
 title: Erweiterungen
 description: Machen Sie sich mit der Funktionsweise von Tag-Erweiterungen in Adobe Experience Platform vertraut.
 exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
-source-git-commit: f7edfa05e25c17f9ace34287c8a2d8426d0f36d4
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 100%
@@ -53,7 +53,7 @@ Die Seite „Erweiterungen“ bietet drei Ansichten:
 
 Klicken Sie auf **[!UICONTROL Erweiterungen]**, um alle installierten Erweiterungen anzuzeigen. Sie können den Katalog auch verwenden, um eine Liste aller verfügbaren Erweiterungen anzuzeigen und zu ermitteln, welche Erweiterungen verfügbar sind.
 
-Ausführliche Informationen zu Adobe-eigenen Erweiterungen finden Sie in der [Erweiterungsreferenz](../../../extensions/web/overview.md).
+Ausführliche Informationen zu Adobe-eigenen Erweiterungen finden Sie in der [Erweiterungsreferenz](../../../extensions/client/overview.md).
 
 ## Hinzufügen neuer Erweiterungen {#add-a-new-extension}
 
@@ -86,4 +86,4 @@ Bewegen Sie den Mauszeiger über eine installierte Erweiterung und klicken Sie a
 >
 >Einige Erweiterungen erfordern keine Konfiguration und bieten keine Konfigurationsoptionen.
 
-Jede konfigurierbare Erweiterung verfügt über individuelle Optionen. Informationen zu den für die verschiedenen Adobe-Erweiterungen verfügbaren Optionen finden Sie in der [Erweiterungsreferenz](../../../extensions/web/overview.md).
+Jede konfigurierbare Erweiterung verfügt über individuelle Optionen. Informationen zu den für die verschiedenen Adobe-Erweiterungen verfügbaren Optionen finden Sie in der [Erweiterungsreferenz](../../../extensions/client/overview.md).

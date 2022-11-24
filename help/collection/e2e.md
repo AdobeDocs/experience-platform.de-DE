@@ -2,7 +2,7 @@
 title: Datenerfassung End-to-End – Übersicht
 description: Eine allgemeine Übersicht darüber, wie Sie Ereignisdaten mithilfe der Datenerfassungsfunktionen von Adobe Experience Platform an Adobe Experience Cloud-Lösungen senden.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '2619'
 ht-degree: 95%
@@ -213,7 +213,7 @@ Die Seite zur Ereigniskonfiguration wird angezeigt. Um ein Ereignis zu konfiguri
 
 >[!NOTE]
 >
->Weitere Informationen zu den verschiedenen Ereignistypen, die von Adobe-Web-Erweiterungen bereitgestellt werden, einschließlich ihrer Konfiguration, finden Sie unter [Adobe Erweiterungs-Referenz](../tags/extensions/web/overview.md) in der Tags-Dokumentation.
+>Weitere Informationen zu den verschiedenen Ereignistypen, die von Adobe-Web-Erweiterungen bereitgestellt werden, einschließlich ihrer Konfiguration, finden Sie unter [Adobe Erweiterungs-Referenz](../tags/extensions/client/overview.md) in der Tags-Dokumentation.
 
 Mit dem Formularübermittlungsereignis können Sie einen [CSS-Selektor](https://www.w3schools.com/css/css_selectors.asp) verwenden, um auf ein bestimmtes Element zu verweisen, in dem die Regel ausgelöst werden soll. Im folgenden Beispiel wird die ID `add-to-cart-form` verwendet, sodass diese Regel nur für das Formular „Zum Warenkorb hinzufügen“ ausgelöst wird. Wählen Sie **[!UICONTROL Änderungen beibehalten]** aus, um das Ereignis zur Regel hinzuzufügen.
 
