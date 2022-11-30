@@ -4,10 +4,10 @@ title: Benutzerhandbuch für Benutzeroberfläche zu Zusammenführungsrichtlinien
 type: Documentation
 description: Beim Zusammenführen von Daten aus mehreren Quellen in Experience Platform stellen Zusammenführungsrichtlinien die Regeln dar, die Platform verwendet, um festzulegen, wie Daten priorisiert werden und welche Daten bei der Erstellung einzelner Kundenprofile kombiniert werden. Dieses Handbuch enthält schrittweise Anleitungen zum Verwenden von Zusammenführungsrichtlinien mit der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: e94756254a24ecadd7359589cd14cfb0745c789c
 workflow-type: tm+mt
-source-wordcount: '2319'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -59,7 +59,7 @@ Im ersten Schritt des Workflows können Sie Ihre Zusammenführungsrichtlinie kon
    * **[!UICONTROL Privates Diagramm]**: Identitätszusammenfügung basierend auf Ihrem privaten Identitätsdiagramm durchführen.
 * **[!UICONTROL Standardmäßige Zusammenführungsrichtlinie]**: Eine Umschalter-Schaltfläche, mit der Sie festlegen können, ob diese Zusammenführungsrichtlinie der Standard für Ihre Organisation sein soll oder nicht. Wenn die Auswahl aktiviert ist, werden Sie in einer Warnung aufgefordert zu bestätigen, dass Sie die standardmäßige Zusammenführungsrichtlinie Ihrer Organisation ändern möchten. Weitere Informationen zu standardmäßigen Zusammenführungsrichtlinien finden Sie unter [Übersicht über Zusammenführungsrichtlinien](overview.md).
    ![](../images/merge-policies/create-make-default.png)
-* **[!UICONTROL Zusammenführungsrichtlinie „Active-On-Edge“]**: Ein Umschalt-Button, mit dem Sie festlegen können, ob diese Zusammenführungsrichtlinie in den Randbereichen aktiv sein soll oder nicht. Um sicherzustellen, dass alle Profilnutzer in den Randbereichen mit derselben Ansicht arbeiten, können Zusammenführungsrichtlinien als am Rand aktiv markiert werden. Damit ein Segment im Randbereich aktiviert (bzw. als Randsegment markiert) werden kann, muss es mit einer Zusammenführungsrichtlinie verknüpft sein, die als im Randbereich aktiv markiert ist. Wenn ein Segment **nicht** mit einer Zusammenführungsrichtlinie verknüpft ist, die als im Randbereich aktiv markiert ist, wird das Segment nicht als im Randbereich aktiv, sondern als Streaming-Segment markiert. Darüber hinaus kann jede IMS-Organisation nur über **eine** Zusammenführungsrichtlinie verfügen, die im Randbereich aktiv ist.
+* **[!UICONTROL Zusammenführungsrichtlinie „Active-On-Edge“]**: Ein Umschalt-Button, mit dem Sie festlegen können, ob diese Zusammenführungsrichtlinie in den Randbereichen aktiv sein soll oder nicht. Um sicherzustellen, dass alle Profilnutzer in den Randbereichen mit derselben Ansicht arbeiten, können Zusammenführungsrichtlinien als am Rand aktiv markiert werden. Damit ein Segment im Randbereich aktiviert (bzw. als Randsegment markiert) werden kann, muss es mit einer Zusammenführungsrichtlinie verknüpft sein, die als im Randbereich aktiv markiert ist. Wenn ein Segment **nicht** mit einer Zusammenführungsrichtlinie verknüpft ist, die als im Randbereich aktiv markiert ist, wird das Segment nicht als im Randbereich aktiv, sondern als Streaming-Segment markiert. Darüber hinaus kann jede Sandbox in einer Organisation nur über **one** Zusammenführungsrichtlinie, die an der Kante aktiv ist.
 
 Nachdem die erforderlichen Felder ausgefüllt wurden, können Sie **[!UICONTROL Weiter]** auswählen, um mit dem Workflow fortzufahren.
 
