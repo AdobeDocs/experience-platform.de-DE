@@ -5,9 +5,9 @@ title: Anleitung zu Query Service-Anmeldedaten
 topic-legacy: guide
 description: Adobe Experience Platform Query Service bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzern in Ihrer IMS-Organisation gespeichert wurden.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
+source-git-commit: 344602a0e828d140ea386daf30a25b8f595f8d04
 workflow-type: tm+mt
-source-wordcount: '1204'
+source-wordcount: '1225'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,12 @@ ht-degree: 2%
 
 Mit Adobe Experience Platform Query Service können Sie eine Verbindung mit externen Clients herstellen. Sie können eine Verbindung zu diesen externen Clients herstellen, indem Sie entweder ablaufende oder nicht ablaufende Anmeldeinformationen verwenden.
 
-## Ablaufberechtigungen
+## Ablaufberechtigungen {#expiring-credentials}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryservice_credentials_expiringcredentials"
+>title="SSL-Modus des Kunden"
+>abstract="SSL muss in Clients aktiviert sein, die mit Query Service verbunden sind. Stellen Sie sicher, dass der SSL-Modus auf &quot;erforderlich&quot;eingestellt ist."
 
 Sie können ablaufende Anmeldedaten verwenden, um schnell eine Verbindung zu einem externen Client herzustellen.
 
@@ -96,7 +101,7 @@ Beim Bearbeiten einer nicht ablaufenden Berechtigung wird ein Modal angezeigt. S
 
 Nachdem Sie alle erforderlichen Details angegeben haben, wählen Sie **[!UICONTROL Konto aktualisieren]** , um die Aktualisierung Ihrer Anmeldedaten abzuschließen.
 
-## Verwenden von Anmeldeinformationen zum Herstellen einer Verbindung zu externen Clients
+## Verwenden Sie Anmeldeinformationen, um eine Verbindung zu externen Clients herzustellen. {#use-credential-to-connect}
 
 Sie können die ablaufenden oder nicht ablaufenden Anmeldedaten verwenden, um eine Verbindung mit externen Clients wie Aqua Data Studio, Looker oder Power BI herzustellen. Die Eingabemethode für diese Anmeldeinformationen variiert je nach externem Client. Spezifische Anweisungen zur Verwendung dieser Anmeldeinformationen finden Sie in der Dokumentation des externen Kunden.
 
