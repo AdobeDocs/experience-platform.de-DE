@@ -1,10 +1,11 @@
 ---
 title: Quoten-API-Endpunkt
 description: Mit dem /quota-Endpunkt in der Data Hygiene API können Sie die Datenhygiene in Bezug auf die in Ihrem Unternehmen gültigen monatlichen Quotenbegrenzungen für jeden Vorgangstyp überwachen.
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
+source-git-commit: 1c6a5df6473e572cae88a5980fe0db9dfcf9944e
 workflow-type: tm+mt
-source-wordcount: '352'
-ht-degree: 93%
+source-wordcount: '350'
+ht-degree: 82%
 
 ---
 
@@ -18,7 +19,7 @@ Der `/quota`-Endpunkt in der Data Hygiene API ermöglicht es Ihnen, die Nutzung 
 
 Die Kontingente werden für jeden Datenhygiene-Vorgangstyp wie folgt umgesetzt:
 
-* Benutzerdefinierte Löschvorgänge und Feldaktualisierungen sind auf eine bestimmte Anzahl von Anfragen pro Monat beschränkt.
+* Löschungen und Aktualisierungen von Datensätzen sind auf eine bestimmte Anzahl von Anforderungen pro Monat beschränkt.
 * Datensatzabläufe haben ein pauschales Limit für die Anzahl der gleichzeitig aktiven Vorgänge, und zwar unabhängig davon, wann die Abläufe ausgeführt werden.
 
 ## Erste Schritte
@@ -42,7 +43,7 @@ GET /quota?quotaType={QUOTA_TYPE}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{QUOTA_TYPE}` | Ein optionaler Abfrageparameter, der den Typ des abzurufenden Kontingents angibt. Wenn kein `quotaType`-Parameter angegeben ist, werden alle Kontingentwerte in der API-Antwort zurückgegeben. Zu den akzeptierten Typwerten gehören:<ul><li>`expirationDatasetQuota`: Datensatzgültigkeiten</li><li>`deleteIdentityWorkOrderDatasetQuota`: Löschungen durch Kunden</li><li>`fieldUpdateWorkOrderDatasetQuota`: Feldaktualisierungen</li></ul> |
+| `{QUOTA_TYPE}` | Ein optionaler Abfrageparameter, der den Typ des abzurufenden Kontingents angibt. Wenn kein `quotaType`-Parameter angegeben ist, werden alle Kontingentwerte in der API-Antwort zurückgegeben. Zu den akzeptierten Typwerten gehören:<ul><li>`expirationDatasetQuota`: Datensatzgültigkeiten</li><li>`deleteIdentityWorkOrderDatasetQuota`: Löschen von Datensätzen</li><li>`fieldUpdateWorkOrderDatasetQuota`: Aktualisierungen der Datensätze</li></ul> |
 
 **Anfrage**
 
@@ -70,7 +71,7 @@ Bei einer erfolgreichen Antwort werden die Details Ihrer Datenhygiene-Kontingent
     },
     {
       "name": "deleteIdentityWorkOrderQuota",
-      "description": "The number of Consumer Delete Work Order requests for the organization for this month.",
+      "description": "The number of Record Delete Work Order requests for the organization for this month.",
       "consumed": 390,
       "quota": 10000
     }
@@ -80,6 +81,6 @@ Bei einer erfolgreichen Antwort werden die Details Ihrer Datenhygiene-Kontingent
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `quotas` | Listet die Kontingentinformationen für jeden Datenhygiene-Vorgangstyp auf. Jedes Kontingentobjekt enthält die folgenden Eigenschaften:<ul><li>`name`: Datenhygiene-Vorgangstyp:<ul><li>`expirationDatasetQuota`: Datensatzgültigkeiten</li><li>`deleteIdentityWorkOrderDatasetQuota`: Löschvorgänge durch Kunden</li></ul></li><li>`description`: Eine Beschreibung des Datenhygiene-Vorgangstyps.</li><li>`consumed`: Die Anzahl der Vorgänge dieses Typs, die im aktuellen Monatszeitraum ausgeführt wird.</li><li>`quota`: Die Kontingentbegrenzung für diesen Vorgangstyp. Bei Löschvorgängen und Feldaktualisierungen durch Kunden stellt dies die Anzahl der Vorgänge dar, die in jedem monatlichen Zeitraum ausgeführt werden können. Bei Datensatzabläufen stellt dies die Anzahl der Vorgänge dar, die gleichzeitig aktiv sein können.</li></ul> |
+| `quotas` | Listet die Kontingentinformationen für jeden Datenhygiene-Vorgangstyp auf. Jedes Kontingentobjekt enthält die folgenden Eigenschaften:<ul><li>`name`: Datenhygiene-Vorgangstyp:<ul><li>`expirationDatasetQuota`: Datensatzgültigkeiten</li><li>`deleteIdentityWorkOrderDatasetQuota`: Löschen von Datensätzen</li></ul></li><li>`description`: Eine Beschreibung des Datenhygiene-Vorgangstyps.</li><li>`consumed`: Die Anzahl der Vorgänge dieses Typs, die im aktuellen Monatszeitraum ausgeführt wird.</li><li>`quota`: Die Kontingentbegrenzung für diesen Vorgangstyp. Bei Datensatzlöschungen und -aktualisierungen stellt dies die Anzahl der Aufträge dar, die für jeden monatlichen Zeitraum ausgeführt werden können. Bei Datensatzabläufen stellt dies die Anzahl der Vorgänge dar, die gleichzeitig aktiv sein können.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}

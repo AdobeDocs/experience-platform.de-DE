@@ -2,10 +2,10 @@
 title: Data Hygiene API-Handbuch
 description: Erfahren Sie, wie Sie die gespeicherten personenbezogenen Daten Ihrer Kunden in Adobe Experience Platform programmatisch korrigieren oder löschen können.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
+source-git-commit: da8b5d9fffdf8a176a4d70be5df5b3021cf0df7b
 workflow-type: tm+mt
-source-wordcount: '471'
-ht-degree: 80%
+source-wordcount: '469'
+ht-degree: 69%
 
 ---
 
@@ -43,16 +43,16 @@ In diesem Dokument wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 Eine Datensatzgültigkeit ist eine zeitverzögerte Aktion zum Löschen eines Datensatzes. Beim Erstellen einer Datensatzgültigkeit geben Sie einen zukünftigen Zeitpunkt an, zu dem dieser Datensatz gelöscht werden soll. Weitere Details zur Planung von Datensatzgültigkeiten in der API finden Sie im [Handbuch für Datensatzgültigkeits-Endpunkte](./dataset-expiration.md).
 
-## Privatkunden-Löschvorgänge
+## Löschen von Datensätzen
 
 >[!IMPORTANT]
 >
->Löschanfragen von Verbrauchern stehen nur Unternehmen zur Verfügung, die **Adobe Gesundheitsschild**.
+>Löschanfragen von Datensätzen stehen nur für Unternehmen zur Verfügung, die **Adobe Gesundheitsschild**.
 >
 >
->Kundenlöschungen sind für die Datenbereinigung, das Entfernen anonymer Daten oder die Datenminimierung vorgesehen. Sie sind **not** für Anfragen von Datensubjekten nach Datenschutzbestimmungen wie der Datenschutz-Grundverordnung (DSGVO) verwendet werden. Verwenden Sie für alle Anwendungsfälle der Kompatibilität Folgendes: [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) anstatt.
+>Löschvorgänge von Datensätzen dienen zur Datenbereinigung, zum Entfernen anonymer Daten oder zur Datenminimierung. Sie sind **not** für Anfragen von Datensubjekten nach Datenschutzbestimmungen wie der Datenschutz-Grundverordnung (DSGVO) verwendet werden. Verwenden Sie für alle Anwendungsfälle der Kompatibilität Folgendes: [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) anstatt.
 
-Mit der Datenhygiene-API können Sie alle Datensätze löschen, die mit einer Privatkunden-Identität in einem Datensatz oder in allen Datensätzen verknüpft sind. Sämtliche Datenhygiene-Aufgaben, die Privatkunden-Identitäten löschen, werden durch ein Konstrukt repräsentiert, das als Arbeitsauftrag bezeichnet wird. Weitere Details zur Verwendung von Arbeitsaufträgen in der API finden Sie im [Handbuch für Arbeitsauftrags-Endpunkte](./workorder.md).
+Mit der Data Hygiene API können Sie alle mit einer Identität verknüpften Datensätze aus einem oder allen Datensätzen löschen. Sämtliche Datenhygiene-Aufgaben, die Identitäten löschen, werden durch ein so genanntes Konstrukt dargestellt. Siehe [Endpunktleitfaden für Arbeitsaufträge](./workorder.md) für Details zum Arbeiten mit Datensatzlöschungen in der API.
 
 ## Kontingent
 

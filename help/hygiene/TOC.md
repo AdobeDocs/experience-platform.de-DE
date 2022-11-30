@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Datenhygiene-Hilfe
 breadcrumb-title: Datenhygiene-Handbuch
-user-guide-description: Verwalten Sie Kundendatenanfragen, um die gesetzlichen Datenschutzbestimmungen wie die DSGVO und den CCPA einzuhalten.
+user-guide-description: Löschen Sie einzelne Datensätze und planen Sie die Ablauffristen von Datensätzen in Experience Platform für die Datenbereinigung, Entfernen anonymer Daten und Minimierung von Daten.
 feature: Data Hygiene
-source-git-commit: 16eecb22a1bec89c7dbac2fcee566a2226cf897f
+source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
-source-wordcount: '48'
-ht-degree: 100%
+source-wordcount: '52'
+ht-degree: 55%
 
 ---
 
@@ -19,9 +19,9 @@ ht-degree: 100%
    * [Übersicht](./ui/overview.md)
    * [Durchsuchen vorhandener Arbeitsaufträge](./ui/browse.md)
    * [Verwalten von Datensatzgültigkeiten](./ui/dataset-expiration.md)
-   * [Löschen von Verbraucherdatensätzen](./ui/delete-consumer.md)
+   * [Datensätze löschen](./ui/record-delete.md)
 * Data Hygiene API {#api}
    * [Übersicht](./api/overview.md)
    * [Datensatzgültigkeiten](./api/dataset-expiration.md)
-   * [Privatkunden-Löschvorgänge](./api/workorder.md)
+   * [Löschen von Datensätzen](./api/workorder.md)
    * [Kontingent](./api/quota.md)

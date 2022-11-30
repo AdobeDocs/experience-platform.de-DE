@@ -1,10 +1,10 @@
 ---
 title: Übersicht über die Datenschutzkonsole
 description: Erfahren Sie, wie Sie Ihre datenschutzbezogenen Workflows in der Benutzeroberfläche von Adobe Experience Platform überwachen.
-source-git-commit: 4fa1b826d033ace6536af920b070e8eebbbf401c
+source-git-commit: 1fac36a0fd767add92283cd256d8bcea783ecf3b
 workflow-type: tm+mt
 source-wordcount: '406'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -32,7 +32,7 @@ Die Funktion der einzelnen Widgets wird nachfolgend beschrieben:
 
 | Widget-Name | Beschreibung |
 | --- | --- |
-| Auftragsstatus der Datenhygiene | Zeigt den Status von Löschvorgängen für Verbraucher unter [Datenhygiene](../../hygiene/home.md) für den ausgewählten Zeitraum. Verwenden Sie das Dropdown-Menü, um den Zeitrahmen zwischen den letzten 7 Tagen, 14 Tagen und 30 Tagen zu ändern. |
+| Auftragsstatus der Datenhygiene | Zeigt den Status der Löschvorgänge von Datensätzen unter [Datenhygiene](../../hygiene/home.md) für den ausgewählten Zeitraum. Verwenden Sie das Dropdown-Menü, um den Zeitrahmen zwischen den letzten 7 Tagen, 14 Tagen und 30 Tagen zu ändern. |
 | Aktuelle Bestellungen zur Datenhygiene | Zeigt die neueste [Datenhygiene](../../hygiene/home.md) Arbeitsaufträge, die vom System verarbeitet werden. Verwenden Sie das Dropdown-Menü, um zwischen kürzlich erstellten Arbeitsaufträgen und kürzlich aktualisierten Arbeitsaufträgen zu wechseln. |
 | Die häufigsten Aktionen | Zeigt die häufigsten Aktionen auf Platform an, die von [Auditprotokolle](./audit-logs/overview.md) für den ausgewählten Zeitraum. Verwenden Sie das Dropdown-Menü, um den Zeitrahmen zwischen den letzten 7 Tagen, 14 Tagen und 30 Tagen zu ändern. |
 | Die aktivsten Benutzer | Zeigt die aktivsten Platform-Benutzer in Ihrer Organisation an, die von [Auditprotokolle](./audit-logs/overview.md) für den ausgewählten Zeitraum. Verwenden Sie das Dropdown-Menü, um den Zeitrahmen zwischen den letzten 7 Tagen, 14 Tagen und 30 Tagen zu ändern. |

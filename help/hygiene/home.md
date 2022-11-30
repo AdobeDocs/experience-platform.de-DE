@@ -2,10 +2,10 @@
 title: Übersicht über die Datenhygiene
 description: Mit der Datenhygiene von Adobe Experience Platform können Sie den Lebenszyklus Ihrer Daten verwalten, indem Sie veraltete oder falsche Datensätze aktualisieren oder bereinigen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
+source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
 source-wordcount: '886'
-ht-degree: 79%
+ht-degree: 72%
 
 ---
 
@@ -17,14 +17,14 @@ ht-degree: 79%
 
 Adobe Experience Platform bietet leistungsstarke Tools zur Verwaltung großer, komplizierter Datenvorgänge, was die Orchestrierung von Customer Experiences ermöglicht. Da im Laufe der Zeit Daten in das System aufgenommen werden, ist es wichtig, Ihre Datenspeicher so zu verwalten, dass Daten wie vorgesehen verwendet werden. So müssen Daten aktualisiert werden, um falsche Einträge zu korrigieren, und Daten gelöscht werden, wenn dies aufgrund von Unternehmensrichtlinien erforderlich ist.
 
-Mit den Datenhygiene-Funktionen von Platform können Sie Ihre gespeicherten Daten von Privatkunden wie folgt verwalten:
+Mit den Datenhygiene-Funktionen von Platform können Sie Ihre gespeicherten Daten wie folgt verwalten:
 
 * Planen automatisierter Datensatzgültigkeiten
-* Löschen einzelner Verbraucherdaten aus Ihren Datensätzen
+* Löschen einzelner Datensätze aus einem oder allen Datensätzen
 
 >[!IMPORTANT]
 >
->Kundenlöschungen sind für die Datenbereinigung, das Entfernen anonymer Daten oder die Datenminimierung vorgesehen. Sie sind **not** für Anfragen von Datensubjekten nach Datenschutzbestimmungen wie der Datenschutz-Grundverordnung (DSGVO) verwendet werden. Verwenden Sie für alle Anwendungsfälle der Kompatibilität Folgendes: [Adobe Experience Platform Privacy Service](../privacy-service/home.md) anstatt.
+>Löschvorgänge von Datensätzen dienen zur Datenbereinigung, zum Entfernen anonymer Daten oder zur Datenminimierung. Sie sind **not** für Anfragen von Datensubjekten nach Datenschutzbestimmungen wie der Datenschutz-Grundverordnung (DSGVO) verwendet werden. Verwenden Sie für alle Anwendungsfälle der Kompatibilität Folgendes: [Adobe Experience Platform Privacy Service](../privacy-service/home.md) anstatt.
 
 Diese Aktivitäten können mithilfe des Arbeitsbereichs [[!UICONTROL Datenhygiene] in der Benutzeroberfläche](#ui) oder der [Datenhygiene-API](#api) durchgeführt werden Wenn ein Datenhygienevorgang ausgeführt wird, stellt das System bei jedem Prozessschritt Aktualisierungen der Transparenz bereit. Weitere Informationen darüber, wie die einzelnen Vorgangstypen im System dargestellt werden, finden Sie im Abschnitt zu [Timelines und Transparenz](#timelines-and-transparency).
 
@@ -40,7 +40,7 @@ Die [!UICONTROL Datenhygiene]-Benutzeroberfläche basiert auf der Data Hygiene A
 
 ## Timelines und Transparenz
 
-Privatkunden-Löschvorgänge und Datensatz-Gültigkeitsanfragen weisen jeweils eigene Timelines für die Verarbeitung auf und stellen an wichtigen Punkten in ihren jeweiligen Workflows Transparenzaktualisierungen bereit. Details der einzelnen Auftragstypen finden Sie in den folgenden Abschnitten.
+Löschungs- und Datensatzablaufanfragen speichern jeweils ihre eigenen Verarbeitungszeitpläne und stellen Transparenzaktualisierungen an zentralen Punkten in ihren jeweiligen Workflows bereit. Details der einzelnen Auftragstypen finden Sie in den folgenden Abschnitten.
 
 ### Datensatzgültigkeiten {#dataset-expiration-transparency}
 
@@ -57,17 +57,17 @@ Privatkunden-Löschvorgänge und Datensatz-Gültigkeitsanfragen weisen jeweils e
 
 {style=&quot;table-layout:auto&quot;}
 
-### Privatkunden-Löschvorgänge {#consumer-delete-transparency}
+### Löschen von Datensätzen {#record-delete-transparency}
 
 >[!IMPORTANT]
 >
->Kundenlöschungen sind nur für Unternehmen verfügbar, die Adobe Healthcare Shield erworben haben.
+>Datenlöschungen sind nur für Unternehmen verfügbar, die Adobe Healthcare Shield erworben haben.
 
-[Privatkunden betreffende Löschanfrage](./ui/delete-consumer.md) wird erstellt:
+Folgendes geschieht, wenn ein [Löschanfrage aufzeichnen](./ui/record-delete.md) wird erstellt:
 
 | Staging | Zeit nach der Anfrageübermittlung | Beschreibung |
 | --- | --- | --- |
-| Anfrage wird übermittelt | 0 Stunden | Ein Data Steward oder Datenschutzanalyst übermittelt eine Privatkunden betreffende Löschanfrage. Die Anfrage ist in der [!UICONTROL Datenhygiene-Benutzeroberfläche] sichtbar |
+| Anfrage wird übermittelt | 0 Stunden | Ein Data Steward oder Datenschutzanalyst sendet eine Anfrage zum Löschen von Datensätzen. Die Anfrage ist in der [!UICONTROL Datenhygiene-Benutzeroberfläche] sichtbar |
 | Profil-Lookups werden aktualisiert | 3 Stunden | Die durch die gelöschte Identität verursachte Änderung der Anzahl der Profile spiegelt sich in [Dashboard-Widgets](../dashboards/guides/profiles.md#profile-count-trend) und anderen Berichten wider. |
 | Segmente werden aktualisiert | 24 Stunden | Wenn Profile entfernt worden sind, werden alle zugehörigen [Segmente](../segmentation/home.md) aktualisiert, damit ihre neue Größe widergespiegelt wird. |
 | Journeys und Ziele werden aktualisiert | 26 Stunden | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [Kampagnen](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html) und [Ziele](../destinations/home.md) werden entsprechend den Änderungen in verwandten Segmenten aktualisiert. |

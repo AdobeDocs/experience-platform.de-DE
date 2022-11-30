@@ -2,10 +2,10 @@
 title: Durchsuchen von Datenhygiene-Arbeitsaufträgen
 description: Erfahren Sie, wie Sie bestehende Datenhygiene-Arbeitsaufträge in der Benutzeroberfläche von Adobe Experience Platform anzeigen und verwalten können.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 4a6532bbd7a378e44e7c6139330420c0363a54af
+source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
 source-wordcount: '868'
-ht-degree: 95%
+ht-degree: 84%
 
 ---
 
@@ -31,7 +31,7 @@ Wenn Sie zum ersten Mal auf den Arbeitsbereich **[!UICONTROL Datenhygiene]** in 
 
 ![Bild, das den Arbeitsbereich [!UICONTROL Datenhygiene] in der Platform-Benutzeroberfläche zeigt](../images/ui/browse/work-order-list.png)
 
-In der Liste werden nur Arbeitsaufträge für jeweils eine Kategorie angezeigt. Wählen Sie **[!UICONTROL Privatkunde]** aus, um eine Liste der Löschaufgaben des Privatkunden anzuzeigen, und **[!UICONTROL Datensatz]**, um eine Liste der Datensätze mit geplanter Löschung anzuzeigen.
+In der Liste werden nur Arbeitsaufträge für jeweils eine Kategorie angezeigt. Auswählen **[!UICONTROL Verbraucher]** eine Liste mit Löschaufgaben für Datensätze anzuzeigen, und **[!UICONTROL Datensatz]** , um eine Liste der geplanten Datensatzabläufe anzuzeigen.
 
 ![Bild, das die Registerkarte [!UICONTROL Datensatz] zeigt](../images/ui/browse/dataset-tab.png)
 
@@ -41,9 +41,9 @@ Wählen Sie das Trichtersymbol (![Bild des Trichtersymbols](../images/ui/browse/
 
 Je nach angezeigtem Arbeitsauftrag sind unterschiedliche Filteroptionen verfügbar.
 
-### Filter für Löschvorgänge durch Privatkunden
+### Filter für Löschvorgänge von Datensätzen
 
-Die folgenden Filter gelten für Löschanfragen von Privatkunden:
+Die folgenden Filter gelten für Löschanfragen zum Aufzeichnen von Löschanfragen:
 
 | Filter | Beschreibung |
 | --- | --- |
@@ -78,8 +78,8 @@ Die folgenden Filter gelten für Anfragen zur Gültigkeit von Datensätzen:
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
->title="Antwort auf die Löschung von Privatkunden"
->abstract="Wenn der Löschvorgang eines Privatkunden eine Antwort vom System erhält, werden diese Meldungen unter dem Abschnitt **[!UICONTROL Ergebnis]** angezeigt. Wenn während der Bearbeitung eines Arbeitsauftrags ein Problem auftritt, werden alle relevanten Fehlermeldungen in diesem Abschnitt angezeigt, um Ihnen bei der Fehlersuche zu helfen. Weitere Informationen finden Sie im Handbuch zur Datenhygiene-Benutzeroberfläche."
+>title="Löschantwort aufzeichnen"
+>abstract="Wenn ein Prozess zum Löschen von Datensätzen eine Antwort vom System erhält, werden diese Meldungen unter der **[!UICONTROL Ergebnis]** Abschnitt. Wenn während der Bearbeitung eines Arbeitsauftrags ein Problem auftritt, werden alle relevanten Fehlermeldungen in diesem Abschnitt angezeigt, um Ihnen bei der Fehlersuche zu helfen. Weitere Informationen finden Sie im Handbuch zur Datenhygiene-Benutzeroberfläche."
 
 Wählen Sie die ID eines aufgelisteten Arbeitsauftrags aus, um dessen Details anzuzeigen.
 
@@ -87,11 +87,11 @@ Wählen Sie die ID eines aufgelisteten Arbeitsauftrags aus, um dessen Details an
 
 Je nach ausgewähltem Typ des Arbeitsauftrags sind unterschiedliche Informationen und Steuerelemente verfügbar. Diese werden in den folgenden Abschnitten erläutert.
 
-### Details zum Löschen von Verbrauchern {#consumer-delete}
+### Löschdetails aufzeichnen {#record-delete}
 
-Zu den Details der Löschanfrage eines Privatkunden gehören der aktuelle Status und die seit der Antragstellung verstrichene Zeit. Jede Anfrage enthält auch den Abschnitt **[!UICONTROL Status nach Service]**, der individuelle Statusdetails zu jedem nachgelagerten Service bereitstellt, der an der Löschung beteiligt ist. In der rechten Leiste können Sie mithilfe von Steuerelementen den Namen und die Beschreibung der Arbeitsaufträge aktualisieren.
+Die Details einer Anfrage zum Löschen von Datensätzen umfassen den aktuellen Status und die seit der Anforderung verstrichene Zeit. Jede Anfrage enthält auch den Abschnitt **[!UICONTROL Status nach Service]**, der individuelle Statusdetails zu jedem nachgelagerten Service bereitstellt, der an der Löschung beteiligt ist. In der rechten Leiste können Sie mithilfe von Steuerelementen den Namen und die Beschreibung der Arbeitsaufträge aktualisieren.
 
-![Bild der Detailseite für einen Verbraucher-Löscharbeitsauftrag](../images/ui/browse/consumer-delete-details.png)
+![Bild, das die Detailseite für eine Datensatzlöschreihenfolge anzeigt](../images/ui/browse/record-delete-details.png)
 
 ### Details zur Datensatzgültigkeit {#dataset-expiration}
 
@@ -104,4 +104,4 @@ Die Detailseite für eine Datensatz-Gültigkeit enthält Informationen zu Standa
 In diesem Handbuch wurde beschrieben, wie Sie vorhandene Datenhygiene-Arbeitsaufträge in der Platform-Benutzeroberfläche anzeigen und verwalten können. Informationen zum Erstellen eigener Arbeitsaufträge finden Sie in der folgenden Dokumentation:
 
 * [Verwalten von Datensatzgültigkeiten](./dataset-expiration.md)
-* [Verwalten von Löschvorgängen durch Privatkunden](./delete-consumer.md)
+* [Löschen von Datensätzen verwalten](./record-delete.md)
