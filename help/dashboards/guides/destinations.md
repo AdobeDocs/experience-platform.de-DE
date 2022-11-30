@@ -4,9 +4,9 @@ title: Dashboard-Anleitung für Ziele
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den aktiven Zielen Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
+source-git-commit: 66e8d3c594280d4b40cb2b6170544d4411220a6a
 workflow-type: tm+mt
-source-wordcount: '2828'
+source-wordcount: '3031'
 ht-degree: 4%
 
 ---
@@ -54,6 +54,16 @@ In der Widget-Bibliothek können Sie die Auswahl von standardmäßigen und benut
 ## Standard-Widgets {#standard-widgets}
 
 Adobe bietet mehrere Standard-Widgets, mit denen Sie verschiedene Metriken in Bezug auf Ihre Ziele visualisieren und die Vollständigkeit der für Ihre Datenanalyse verfügbaren Segmente bewerten können. Sie können auch benutzerdefinierte Widgets erstellen, die für Ihre Organisation freigegeben werden, indem Sie die [!UICONTROL Widget-Bibliothek]. Um mehr über das Erstellen benutzerdefinierter Widgets zu erfahren, lesen Sie zunächst den Abschnitt [Übersicht über die Widget-Bibliothek](../customize/widget-library.md).
+
+### Voraussetzungen {#prerequisites}
+
+Bevor Sie mit den Beschreibungen der Standard-Widgets fortfahren, sollten Sie mit den Definitionen der folgenden Schlüsselbegriffe vertraut sein, die in der Dokumentation verwendet werden:
+
+* **Segment:** Ein Segment ist **Regelsätze** , die Attribute und Ereignisdaten enthalten, die eine Reihe von Profilen als Zielgruppe qualifizieren.
+* **Zielgruppe**: Eine Zielgruppe ist **Profilgruppe** die die Kriterien einer Segmentdefinition erfüllen.
+* **Zugeordnet/Zuordnung**: Beim Daten-Mapping werden Quelldatenfelder den zugehörigen Zielfeldern in einem Ziel zugeordnet.
+* **Identität**: Eine Identität ist eine Kennung, die einen einzelnen Kunden eindeutig darstellt, z. B. eine Cookie-ID, Geräte-ID oder E-Mail-ID.
+* **Aktivieren**: Activate ist die Aktion, die ein Benutzer durchführt, um ein Segment oder Profile einem Ziel wie Oracle Eloqua, Google oder Salesforce-Marketing Cloud zuzuordnen.
 
 Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen Sie den Namen eines Widgets aus der folgenden Liste aus:
 
@@ -139,6 +149,8 @@ Sie können die Details eines Segments anzeigen, indem Sie den Namen eines Segme
 
 ![Das Widget Kürzlich aktivierte Segmente nach Ziel .](../images/destinations/recently-activated-segments-by-destination.png)
 
+Weitere Informationen finden Sie im Abschnitt Voraussetzungen für das [verwendete Begriffsdefinitionen](#prerequisites) in dieser Beschreibung.
+
 ### [!UICONTROL Trend der Zielgruppengröße] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
@@ -172,6 +184,8 @@ Das Dropdown-Menü Ziel-ID filtert Ihre verfügbaren Segmente. Die im Dropdown-M
 Die Spalte &quot;Identitäten&quot;zählt die Anzahl der Quell-IDs innerhalb des Segments, die der in der Dropdown-Liste &quot;Widget-ID&quot;ausgewählten ID zugeordnet werden können.
 
 ![Die nicht zugeordneten Segmente nach Identitäts-Widget.](../images/destinations/unmapped-segments-by-identity.png)
+
+Weitere Informationen finden Sie im Abschnitt Voraussetzungen für das [verwendete Begriffsdefinitionen](#prerequisites) in dieser Beschreibung.
 
 ### [!UICONTROL Zugeordnete Segmente nach Identität] {#mapped-segments-by-identity}
 
@@ -259,11 +273,13 @@ Das Widget bietet eine zweispaltige Tabelle, die eine Liste der aktiven Zielplat
 
 ### [!UICONTROL Aktivierte Zielgruppen für alle Ziele] {#activated-audiences-across-all-destinations}
 
-Die [!UICONTROL Aktivierte Zielgruppen für alle Ziele] -Widget stellt die Gesamtanzahl der Zielgruppen bereit, die für alle Ziele in einer einzelnen Metrik aktiviert sind. Diese Zahl entspricht der neuesten Momentaufnahme.
+Die [!UICONTROL Aktivierte Zielgruppen für alle Ziele] -Widget stellt die Gesamtanzahl der Zielgruppen bereit, die für alle Ziele in einer einzelnen Metrik aktiviert sind. Dieses Widget zeigt die Anzahl der Zielgruppen und nicht die Anzahl der Segmente an. Diese Zahl entspricht der neuesten Momentaufnahme.
 
 ![Das Widget Aktivierte Zielgruppen für alle Ziele .](../images/destinations/activated-audiences-across-all-destinations.png)
 
-Auswählen **[!UICONTROL Zielgruppen]** , um zu den Zielen zu navigieren [!UICONTROL Durchsuchen] Registerkarte. Diese Seite enthält eine Liste aller aktivierten Ziele und eine Vielzahl relevanter Metriken. Weitere Informationen finden Sie in der Dokumentation für [Weitere Informationen über [!UICONTROL Durchsuchen] tab](../../destinations/ui/destinations-workspace.md#browse).
+Auswählen **[!UICONTROL Zielgruppen]** , um zu den Zielen zu navigieren [!UICONTROL Durchsuchen] Registerkarte. Diese Seite enthält eine Liste aller aktivierten Ziele und eine Vielzahl relevanter Metriken. Weitere Informationen zu finden Sie in der Dokumentation . [[!UICONTROL Durchsuchen] tab](../../destinations/ui/destinations-workspace.md#browse).
+
+Weitere Informationen finden Sie im Abschnitt Voraussetzungen für das [verwendete Begriffsdefinitionen](#prerequisites) in dieser Beschreibung.
 
 ### [!UICONTROL Aktivierte Zielgruppen] {#activated-audiences}
 
@@ -276,6 +292,8 @@ Auswählen **[!UICONTROL Zielgruppen]** , um zur Detailseite des Ziel-Dashboards
 ![Die Detailseite des Ziel-Dashboards mit der Registerkarte Aktivierungsdaten wurde hervorgehoben.](../images/destinations/activation-data-tab.png)
 
 Dieses Widget hilft Ihnen, den Wert Ihrer Ziele anhand der Anzahl der auf einen Blick aktivierten Zielgruppen zu verstehen. Sie bietet auch einfachen Zugriff auf detailliertere Informationen für weitere Analysen.
+
+Weitere Informationen finden Sie im Abschnitt Voraussetzungen für das [verwendete Begriffsdefinitionen](#prerequisites) in dieser Beschreibung.
 
 ## Nächste Schritte
 
