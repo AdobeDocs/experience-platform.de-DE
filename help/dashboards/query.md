@@ -4,10 +4,10 @@ title: Dashboard-Datensätze mithilfe von Query Service durchsuchen, überprüfe
 type: Documentation
 description: Erfahren Sie, wie Sie mit Query Service Rohdatensätze untersuchen und verarbeiten können, die Profil-, Segment- und Ziel-Dashboards in Experience Platform unterstützen.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: 62e282138de8cf2d74b4a62f4ced39e3fb78001a
+source-git-commit: 4826731682bcaf5a43c7ce047220c1805d97243a
 workflow-type: tm+mt
-source-wordcount: '951'
-ht-degree: 50%
+source-wordcount: '970'
+ht-degree: 49%
 
 ---
 
@@ -49,7 +49,7 @@ Die Namenskonvention für diese Datensätze lautet **Profil-Schnappschuss-Export
 
 Um das vollständige Schema jedes Profilschnappschuss-Exportdatensatzes zu verstehen, können Sie eine Vorschau anzeigen und die Datensätze [unter Verwendung des Datensatz-Viewers](../catalog/datasets/user-guide.md) in der Experience Platform-Benutzeroberfläche erkunden.
 
-![](images/query/profile-attribute.png)
+![Eine Vorschau des Datensatzes Profil-Snapshot-Export .](images/query/profile-attribute.png)
 
 #### Zuordnen von Profilattribut-Datensätzen zu Zusammenführungsrichtlinien-IDs
 
@@ -72,7 +72,7 @@ Die Namenskonvention für diesen Datensatz lautet **Segmentdefinition-Schnappsch
 
 Um das vollständige Schema jedes Segmentdefinitions-Schnappschuss-Exportdatensatzes zu verstehen, können Sie eine Vorschau anzeigen und die Datensätze [unter Verwendung des Datensatz-Viewers](../catalog/datasets/user-guide.md) in der Experience Platform-Benutzeroberfläche erkunden.
 
-![](images/query/segment-metadata.png)
+![Eine Vorschau des Datensatzes &quot;Segmentdefinition-Snapshot-Export&quot;.](images/query/segment-metadata.png)
 
 ### Ziel-Metadaten-Datensatz
 
@@ -82,7 +82,7 @@ Die Namenskonvention dieses Datensatzes lautet **DIM_Destination**.
 
 Um das vollständige Schema des DIM-Zieldatensatzes zu verstehen, können Sie eine Vorschau anzeigen und den Datensatz [unter Verwendung des Datensatz-Viewers](../catalog/datasets/user-guide.md) in der Experience Platform-Benutzeroberfläche erkunden.
 
-![](images/query/destinations-metadata.png)
+![Eine Vorschau des DIM_Destination -Datensatzes.](images/query/destinations-metadata.png)
 
 ## (Beta) Insight-Berichte für die Kundendatenplattform (CDP)
 

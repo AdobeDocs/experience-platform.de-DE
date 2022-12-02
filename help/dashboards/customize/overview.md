@@ -3,10 +3,10 @@ keywords: Experience Platform;Benutzeroberfläche;UI;Dashboards;Dashboard;Profil
 title: Übersicht über die Dashboard-Anpassung
 description: Hier erfahren Sie mehr darüber, wie Sie anpassen können, welche Daten in Ihren Adobe Experience Platform-Dashboards angezeigt werden.
 exl-id: efabdb61-4148-4b0e-b7a1-6e788b5e43a8
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 27252d547afd30acc7b334d5054f1350dc0031b7
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 100%
+source-wordcount: '480'
+ht-degree: 95%
 
 ---
 
@@ -26,11 +26,11 @@ Durch die Auswahl von **[!UICONTROL Dashboard ändern]** im Profil-, Segment- od
 
 In der Widget-Bibliothek in Experience Platform können Sie alle [standardmäßigen](#standard-widgets) und [benutzerdefinierten](#custom-widgets) Widgets anzeigen, die für Ihr Unternehmen verfügbar sind. In Ihren Dashboards (z. B. im Profil-Dashboard) können Sie **[!UICONTROL Dashboard ändern]** auswählen, um die Schaltfläche **[!UICONTROL Widget-Bibliothek]** anzuzeigen.
 
-![](../images/customization/modify-dashboard.png)
+![Das Dashboard Profile mit Dashboard Ändern wurde hervorgehoben.](../images/customization/modify-dashboard.png)
 
 Wählen Sie **[!UICONTROL Widget-Bibliothek]** aus, um die Widget-Bibliothek zu öffnen und alle verfügbaren Standardmetriken anzuzeigen oder mit der Erstellung benutzerdefinierter Widgets zu beginnen.
 
-![](../images/customization/widget-library-button.png)
+![Das Profil-Dashboard mit hervorgehobener Widget-Bibliothek.](../images/customization/widget-library-button.png)
 
 ### Standard-Widgets {#standard-widgets}
 
@@ -44,7 +44,7 @@ Benutzerdefinierte Widgets beziehen sich auf Widgets, die von Mitgliedern Ihres 
 
 Die vollständigen Schritte zum Erstellen Ihrer eigenen Widgets finden Sie im [Handbuch zu benutzerdefinierten Widgets für Dashboards](custom-widgets.md).
 
-![](../images/customization/widget-library.png)
+![Der Arbeitsbereich der Widget-Bibliothek mit hervorgehobenen Standardeinstellungen und benutzerdefinierten Eigenschaften.](../images/customization/widget-library.png)
 
 #### Schema-Bearbeitung {#edit-schema}
 

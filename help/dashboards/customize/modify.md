@@ -3,10 +3,10 @@ keywords: Experience Platform;Benutzeroberfläche;UI;Dashboards;Dashboard;Profil
 title: Ändern von Platform-Dashboards in der Benutzeroberfläche
 description: Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Anpassen der Anzeige der Adobe Experience Platform-Daten Ihres Unternehmens in Dashboards.
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
-source-git-commit: d5acc317a48aef94dd4d6e3ccea89d0d674c8b34
+source-git-commit: 338aa6849f58b3c0fd6c871f1e199ebf6a73d115
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 89%
+source-wordcount: '510'
+ht-degree: 82%
 
 ---
 
@@ -24,13 +24,13 @@ Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Anpassen der Anzei
 
 In jedem Dashboard (z. B. im Dashboard für [!UICONTROL Profile]) können Sie **[!UICONTROL Dashboard ändern]** auswählen, um die Größe vorhandener Widgets zu ändern und neu anzuordnen.
 
-![](../images/customization/modify-dashboard.png)
+![Das Dashboard Profile mit Dashboard Ändern wurde hervorgehoben.](../images/customization/modify-dashboard.png)
 
 ## Widgets neu anordnen
 
 Nachdem Sie sich entschieden haben, das Dashboard zu ändern, können Sie die Widgets neu anordnen, indem Sie den Widget-Titel auswählen und die Widgets in die gewünschte Reihenfolge ziehen. In diesem Beispiel wird die **[!UICONTROL Trend der Profilanzahl]** Das Widget wird in die oberste Zeile verschoben und die **[!UICONTROL Profilanzahl]** Widget wird nun in der zweiten Zeile angezeigt.
 
-![](../images/customization/move-widget.png)
+![Das Dashboard Profile mit zwei neu sortierten Widgets wird hervorgehoben.](../images/customization/move-widget.png)
 
 ## Größe von Widgets anpassen
 
@@ -40,13 +40,13 @@ Sie können die Größe eines Widgets auch anpassen, indem Sie das Winkelsymbol 
 >
 >Wenn Widgets in der Größe angepasst werden, werden umliegende Widgets dynamisch neu positioniert. Dies kann dazu führen, dass einige Widgets in zusätzliche Zeilen verschoben werden, sodass Sie zum Anzeigen aller Widgets scrollen müssen.
 
-![](../images/customization/resize-widget.png)
+![Das Dashboard Profile mit einem Widget zur Größenanpassung wird hervorgehoben.](../images/customization/resize-widget.png)
 
 ## Dashboard-Aktualisierungen speichern
 
 Nachdem Sie die Verschieben- und Größenanpassung von Widgets abgeschlossen haben, wählen Sie **[!UICONTROL Speichern und beenden]** , um Ihre Änderungen zu speichern und zur Haupt-Dashboard-Ansicht zurückzukehren. Wenn Sie Ihre Änderungen nicht beibehalten möchten, wählen Sie **[!UICONTROL Abbrechen]** aus, um das Dashboard zurückzusetzen und zur Haupt-Dashboard-Ansicht zurückzukehren.
 
-![](../images/customization/save-changes.png)
+![Das Dashboard Profile , in dem sowohl Abbrechen als auch Speichern und Beenden hervorgehoben sind.](../images/customization/save-changes.png)
 
 ## Widget-Bibliothek
 
@@ -54,7 +54,7 @@ Zusätzlich zur Größenanpassung und Neuanordnung von Widgets können Sie durch
 
 Schritt-für-Schritt-Anweisungen für den Zugriff auf und zum Arbeiten mit der [!UICONTROL Widget-Bibliothek] finden Sie im [Handbuch zur Widget-Bibliothek](widget-library.md).
 
-![](../images/customization/widget-library.png)
+![Der Arbeitsbereich der Widget-Bibliothek mit hervorgehobenen Standardeinstellungen und benutzerdefinierten Eigenschaften.](../images/customization/widget-library.png)
 
 ## Nächste Schritte
 

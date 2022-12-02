@@ -3,10 +3,10 @@ keywords: Experience Platform;Benutzeroberfläche;UI;Dashboards;Dashboard;Profil
 title: Bearbeiten eines Schemas, um benutzerdefinierte Dashboard-Widgets zu erstellen
 description: Dieses Handbuch enthält schrittweise Anweisungen zum Auswählen von Attributen und Konfigurieren des Schemas Ihres Unternehmens, um benutzerdefinierte Widgets für Adobe Experience Platform-Dashboards zu erstellen.
 exl-id: a744eb24-5ba7-4971-9183-3f891e807863
-source-git-commit: 89a0e2544a17fe10e6dfd7611b5223ca4fc55501
+source-git-commit: 9b89effa6f90fb513fac9d0b826722ab05020036
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 100%
+source-wordcount: '498'
+ht-degree: 89%
 
 ---
 
@@ -36,11 +36,13 @@ Bevor Sie benutzerdefinierte Widgets erstellen können, müssen Echtzeit-Kundenp
 >
 >Ihr Unternehmen kann maximal 20 Attribute auswählen.
 
-Wenn Ihr Unternehmen keine Profilattribute ausgewählt hat, wählen Sie zunächst **[!UICONTROL Schema bearbeiten]** in der rechten oberen Ecke der Widget-Bibliothek.
+Wenn Ihr Unternehmen keine Profilattribute ausgewählt hat, wählen Sie zunächst **[!UICONTROL Konfigurieren]** in der Mitte des Bildschirms.
+
+![Die Registerkarte &quot;Benutzerdefiniert&quot;im Arbeitsbereich der Widget-Bibliothek mit hervorgehobener Option &quot;Konfigurieren&quot;.](../images/customization/configure-schema.png)
 
 Wenn mindestens ein benutzerdefiniertes Attribut erstellt wurde, wählen Sie **[!UICONTROL Schema bearbeiten]** aus, um die ausgewählten Attribute anzuzeigen und weitere hinzuzufügen.
 
-![](../images/customization/edit-schema.png)
+![Die Registerkarte &quot;Benutzerdefiniert&quot;im Arbeitsbereich der Widget-Bibliothek mit hervorgehobenem Bearbeitungsschema.](../images/customization/edit-schema.png)
 
 ## Auswählen eines Attributs
 
@@ -55,7 +57,7 @@ Nachdem Sie die Attribute ausgewählt haben, die Sie hinzufügen möchten, wähl
 >[!WARNING]
 >Neu ausgewählte Attribute werden nach dem nächsten täglichen Schnappschuss verfügbar, wenn die Daten aktualisiert werden.
 
-![](../images/customization/select-attribute.png)
+![Das Dialogfeld zum Auswählen von Schemaattributen mit Attributen und hervorgehobenem Speichern.](../images/customization/select-attribute.png)
 
 ## Nächste Schritte
 

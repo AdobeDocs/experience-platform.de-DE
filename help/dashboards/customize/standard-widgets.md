@@ -3,10 +3,10 @@ keywords: Experience Platform;Benutzeroberfläche;UI;Dashboards;Dashboard;Profil
 title: Standard-Dashboard-Widgets
 description: Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Hinzufügen von Standard-Widgets zu Ihren Adobe Experience Platform-Dashboards.
 exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
-source-git-commit: 89a0e2544a17fe10e6dfd7611b5223ca4fc55501
+source-git-commit: 0391c15e959ab25604a70c163fa7a5ed53e78993
 workflow-type: tm+mt
-source-wordcount: '403'
-ht-degree: 100%
+source-wordcount: '429'
+ht-degree: 93%
 
 ---
 
@@ -38,7 +38,7 @@ Die Standard-Widgets für die ausgewählte Kategorie werden angezeigt. Jedes Wid
 >
 >Widgets dürfen nur zu dem Dashboard hinzugefügt werden, das der ausgewählten Kategorie entspricht. Beispielsweise können nur Widgets aus der Kategorie [!UICONTROL Profile] zum Dashboard [!UICONTROL Profile] hinzugefügt werden.
 
-![](../images/customization/standard-widgets.png)
+![Der Arbeitsbereich der Widget-Bibliothek mit der Registerkarte Standard und den verfügbaren Kategorien, die hervorgehoben sind.](../images/customization/standard-widgets.png)
 
 ## Standard-Widget zum Dashboard hinzufügen
 
@@ -50,7 +50,7 @@ Um ein Standard-Widget zum Dashboard hinzuzufügen, markieren Sie das Widget und
 
 Wählen Sie **[!UICONTROL Widget hinzufügen]** aus, um die ausgewählten Widgets zu Ihrem Dashboard hinzuzufügen.
 
-![](../images/customization/add-widget.png)
+![Der Arbeitsbereich der Widget-Bibliothek mit einem ausgewählten Widget und hervorgehobenen Widget hinzufügen und Abbrechen .](../images/customization/add-widget.png)
 
 ## Nächste Schritte
 

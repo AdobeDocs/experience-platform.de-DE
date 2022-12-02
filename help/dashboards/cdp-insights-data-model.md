@@ -2,9 +2,9 @@
 title: Real-time Customer Data Platform Insights-Datenmodell
 description: Erfahren Sie, wie Sie SQL-Abfragen mit den Real-time Customer Data Platform Insights-Datenmodellen verwenden können, um Ihre eigenen Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle anzupassen.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
+source-git-commit: 9f33ad0146b72f820530233b651370c43fafe713
 workflow-type: tm+mt
-source-wordcount: '1105'
+source-wordcount: '1109'
 ht-degree: 1%
 
 ---
@@ -81,10 +81,10 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 
 Das Namespace-Modell besteht aus den folgenden Datensätzen:
 
-- `adwh_fact_profile_by_namespace`
 - `adwh_dim_date`
-- `adwh_dim_namespaces`
+- `adwh_fact_profile_by_namespace`
 - `adwh_dim_merge_policies`
+- `adwh_dim_namespaces`
 
 Die folgende Abbildung enthält die relevanten Datenfelder in jedem Datensatz.
 
@@ -149,9 +149,9 @@ GROUP BY
 Das Segmentmodell besteht aus den folgenden Datensätzen:
 
 - `adwh_dim_date`
+- `adwh_fact_profile_by_segment`
 - `adwh_dim_merge_policies`
 - `adwh_dim_segments`
-- `adwh_fact_profile_by_segment`
 - `adwh_dim_br_segment_destinations`
 - `adwh_dim_destination`
 - `adwh_dim_destination_platform`
@@ -260,9 +260,9 @@ ORDER BY create_time desc, segment LIMIT 5;
 Das Namespace-Segment-Modell besteht aus den folgenden Datensätzen:
 
 - `adwh_dim_date`
-- `adwh_dim_merge_policies`
 - `adwh_dim_namespaces`
 - `adwh_fact_profile_by_segment_and_namespace`
+- `adwh_dim_merge_policies`
 - `adwh_dim_segments`
 - `adwh_dim_br_segment_destinations`
 - `adwh_dim_destination`
@@ -270,7 +270,7 @@ Das Namespace-Segment-Modell besteht aus den folgenden Datensätzen:
 
 Die folgende Abbildung enthält die relevanten Datenfelder in jedem Datensatz.
 
-![Eine ERD des Segmentmodells.](./images/cdp-insights/namespace-segment-model.png)
+![Eine ERD des Namespace-Segment-Modells.](./images/cdp-insights/namespace-segment-model.png)
 
 #### Profile nach Identität für einen Segmentanwendungsfall
 
@@ -300,13 +300,13 @@ GROUP BY adwh_dim_namespaces.namespace_description;
 Das Überschneidungs-Namespace-Modell besteht aus den folgenden Datensätzen:
 
 - `adwh_dim_date`
-- `adwh_dim_namespaces`
+- `adwh_dim_overlap_namespaces`
 - `adwh_fact_profile_overlap_of_namespace`
 - `adwh_dim_merge_policies`
 
 Die folgende Abbildung enthält die relevanten Datenfelder in jedem Datensatz.
 
-![Eine ERD des Segmentmodells.](./images/cdp-insights/overlap-namespace-model.png)
+![Eine ERD des Namespace-Überlappungsmodells.](./images/cdp-insights/overlap-namespace-model.png)
 
 #### Anwendungsfall: Identitätsüberschneidung (Profile)
 
@@ -364,7 +364,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 Der Überschneidungs-Namespace nach Segmentmodell besteht aus den folgenden Datensätzen:
 
 - `adwh_dim_date`
-- `adwh_dim_namespaces`
+- `adwh_dim_overlap_namespaces`
 - `adwh_fact_profile_overlap_of_namespace_by_segment`
 - `adwh_dim_merge_policies`
 - `adwh_dim_segments`
@@ -374,7 +374,7 @@ Der Überschneidungs-Namespace nach Segmentmodell besteht aus den folgenden Date
 
 Die folgende Abbildung enthält die relevanten Datenfelder in jedem Datensatz.
 
-![Eine ERD des Segmentmodells.](./images/cdp-insights/overlap-namespace-by-segment-model.png)
+![Eine ERD des Überlappungs-Namespace nach Segmentmodell.](./images/cdp-insights/overlap-namespace-by-segment-model.png)
 
 #### Anwendungsfall: Identitätsüberschneidung (Segmente)
 

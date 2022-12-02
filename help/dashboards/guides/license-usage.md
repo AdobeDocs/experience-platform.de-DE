@@ -4,10 +4,10 @@ title: Lizenznutzungs-Dashboard Handbuch
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen anzeigen können.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: 255de9b9e83c11aeed747a3c0cdb7bd7a7949bd2
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 18%
+source-wordcount: '935'
+ht-degree: 16%
 
 ---
 
@@ -33,7 +33,7 @@ Um in der Platform-Benutzeroberfläche zum Dashboard zur Lizenzverwendung zu nav
 >
 >Das Dashboard zur Lizenznutzung ist standardmäßig nicht aktiviert. Benutzern muss die Berechtigung &quot;Dashboard zur Lizenznutzung anzeigen&quot;gewährt werden, damit sie das Dashboard anzeigen können. Anweisungen zum Gewähren von Zugriffsberechtigungen für die Anzeige des Dashboards zur Lizenznutzung finden Sie im Abschnitt [Dashboard-Berechtigungshandbuch](../permissions.md).
 
-![](../images/license-usage/dashboard-overview.png)
+![Die Registerkarte Übersicht über das Lizenznutzung-Dashboard .](../images/license-usage/dashboard-overview.png)
 
 ### Sandbox auswählen
 
@@ -41,7 +41,7 @@ Um eine Sandbox auszuwählen, die im Dashboard angezeigt werden soll, wählen Si
 
 Die Verbrauchsberichte für Sandboxes sind kumulativ für alle Sandboxes desselben Typs. Anders ausgedrückt: durch Auswahl von [!UICONTROL Produktion] oder [!UICONTROL Entwicklung] stellt Verbrauchsberichte für alle Produktions- bzw. Entwicklungs-Sandboxes bereit.
 
-![](../images/license-usage/select-sandbox.png)
+![Die Registerkarte Übersicht über die Lizenznutzung des Dashboards mit dem Sandbox-Selektor wurde hervorgehoben.](../images/license-usage/select-sandbox.png)
 
 >[!WARNING]
 >
@@ -56,11 +56,11 @@ Die Verbrauchsberichte für Sandboxes sind kumulativ für alle Sandboxes desselb
 
 Nachdem Sie eine Sandbox ausgewählt haben, können Sie über das Dropdown-Menü Datumsbereich den Zeitraum auswählen, der im Dashboard angezeigt werden soll. Es stehen mehrere Optionen zur Verfügung, darunter der Standardwert der letzten 30 Tage.
 
-![](../images/license-usage/select-date-range.png)
+![Die Registerkarte Übersicht über die Lizenznutzung des Dashboards mit dem Dropdown-Menü Datumsbereich wurde hervorgehoben.](../images/license-usage/select-date-range.png)
 
 Sie können auch **[!UICONTROL Benutzerdefiniertes Datum]** , um den angezeigten Zeitraum auszuwählen.
 
-![](../images/license-usage/select-custom-date.png)
+![Im Dashboard Übersicht zur Lizenznutzung werden die benutzerdefinierten Datumsbereichsoptionen hervorgehoben.](../images/license-usage/select-custom-date.png)
 
 ## Widgets
 
@@ -68,11 +68,11 @@ Das Dashboard zur Lizenznutzung besteht aus Widgets, die schreibgeschützte Metr
 
 Jedes Widget zeigt ein Liniendiagramm an, in dem die tatsächlichen Zahlen für Ihr Unternehmen mit den im Rahmen der Lizenzierung Ihres Unternehmens insgesamt verfügbaren Zahlen verglichen werden, und zeigt einen Prozentsatz der Gesamtnutzung an.
 
-![](../images/license-usage/widgets.png)
+![Die Registerkarte Übersicht des Dashboards zur Lizenznutzung mit dem Liniendiagramm des Widgets zur Metrik zur Beispiellizenzverwendung wurde hervorgehoben.](../images/license-usage/widgets.png)
 
 ## Verfügbare Metriken
 
-Das Dashboard zur Lizenznutzung enthält Berichte zu vier Schlüsselmetriken, wobei in nachfolgenden Versionen weitere Metriken hinzugefügt werden müssen. Die verfügbaren Metriken sind:
+Das Dashboard zur Lizenznutzung enthält Berichte zu vier Schlüsselmetriken, wobei weitere Metriken in nachfolgenden Versionen hinzugefügt werden müssen. Die verfügbaren Metriken sind:
 
 * [!UICONTROL Addressable Audience]
 * [!UICONTROL Durchschnittliche Profiltiefe]

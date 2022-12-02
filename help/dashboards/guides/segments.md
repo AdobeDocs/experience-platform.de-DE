@@ -4,9 +4,9 @@ title: Dashboard-Anleitung für Segmente
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu Segmenten anzeigen können, die Ihr Unternehmen erstellt hat.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 23df35d7d90b6674b089a842818dba83283a1646
+source-git-commit: e5a4fddbd7f5b14280e283871d8b66a2e2f2407d
 workflow-type: tm+mt
-source-wordcount: '2092'
+source-wordcount: '2105'
 ht-degree: 9%
 
 ---
@@ -35,7 +35,7 @@ So navigieren Sie zum [!UICONTROL Segmente] Dashboard in der Platform-Benutzerob
 >
 >Wenn Ihr Unternehmen neu bei Platform ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt wurden, wird die [!UICONTROL Segmente] Das Dashboard ist nicht sichtbar. Stattdessen wird die [!UICONTROL Übersicht] enthält Links und Dokumentation, die Ihnen bei den ersten Schritten mit der Segmentierung helfen.
 
-![Die Registerkarte Übersicht des Segmente-Dashboards .](../images/segments/dashboard-overview.png)
+![Im Tab Übersicht des Segments-Dashboards werden Segmente und Übersicht hervorgehoben.](../images/segments/dashboard-overview.png)
 
 ### Ändern Sie die [!UICONTROL Segmente] Dashboard {#modify}
 
@@ -204,7 +204,7 @@ Die **[!UICONTROL Profile nach Identität]** Widget zeigt die Aufschlüsselung d
 
 Auswählen **[!UICONTROL Untertitel]** , um das Dialogfeld mit den automatischen Beschriftungen zu öffnen.
 
-![Das Dialogfeld Profile nach Identitätsbeschriftungen .](../images/segments/profiles-by-identity.png)
+![Die Übersicht über das Dashboard &quot;Segmente&quot;mit der Option Profile nach Identitäts-Widget und Beschriftungen hervorgehoben.](../images/segments/profiles-by-identity.png)
 
 Ein maschinelles Lernmodell generiert automatisch Dateneinblicke, indem es die Gesamtverteilung und die Schlüsseldimensionen der Daten analysiert.
 
