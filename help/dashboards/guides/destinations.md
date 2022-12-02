@@ -4,7 +4,7 @@ title: Dashboard-Anleitung für Ziele
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den aktiven Zielen Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 66e8d3c594280d4b40cb2b6170544d4411220a6a
+source-git-commit: d9e10271db52f61cdc3e4adc546fe05adadb5a46
 workflow-type: tm+mt
 source-wordcount: '3031'
 ht-degree: 4%
@@ -273,7 +273,13 @@ Das Widget bietet eine zweispaltige Tabelle, die eine Liste der aktiven Zielplat
 
 ### [!UICONTROL Aktivierte Zielgruppen für alle Ziele] {#activated-audiences-across-all-destinations}
 
-Die [!UICONTROL Aktivierte Zielgruppen für alle Ziele] -Widget stellt die Gesamtanzahl der Zielgruppen bereit, die für alle Ziele in einer einzelnen Metrik aktiviert sind. Dieses Widget zeigt die Anzahl der Zielgruppen und nicht die Anzahl der Segmente an. Diese Zahl entspricht der neuesten Momentaufnahme.
+Die [!UICONTROL Aktivierte Zielgruppen für alle Ziele] -Widget stellt die Gesamtanzahl der Zielgruppen bereit, die für alle Ziele in einer einzelnen Metrik aktiviert sind.
+
+>[!NOTE]
+>
+>Dieses Widget zeigt die Anzahl der Zielgruppen und nicht die Anzahl der Segmente an.
+
+Diese Zahl entspricht der neuesten Momentaufnahme.
 
 ![Das Widget Aktivierte Zielgruppen für alle Ziele .](../images/destinations/activated-audiences-across-all-destinations.png)
 
