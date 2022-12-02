@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Tags
 solution: Data Collection
-source-git-commit: 05cc1388f4b32036e1c1ba76bfc584774acb014c
+source-git-commit: 1c92860695f74173cd57ec61f8ccc6e72808012a
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '971'
 ht-degree: 74%
 
 ---
@@ -155,7 +155,6 @@ ht-degree: 74%
       * [Differenzdatenschutz](https://exchange.adobe.com/apps/ec/104535)
       * [Dynamic Media-Viewer](https://exchange.adobe.com/apps/ec/103048)
       * [EDDL Helper](https://exchange.adobe.com/apps/ec/107691)
-      * [Facebook Pixel](https://exchange.adobe.com/apps/ec/102804)
       * [Flashspeak OneTag](https://exchange.adobe.com/apps/ec/101392)
       * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
       * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
@@ -173,6 +172,8 @@ ht-degree: 74%
          * [Übersicht](./extensions/client/marketo/overview.md)
          * [Versionshinweise](./extensions/client/marketo/release-notes.md)
       * [Übergeordneter Eigenschaftenmanager](https://exchange.adobe.com/apps/ec/102992)
+      * [!DNL Meta Pixel] {#meta}
+         * [Übersicht](./extensions/client/meta/overview.md)
       * [Bildschirm](https://exchange.adobe.com/apps/ec/106544)
       * [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)
       * [OneTrust-Einverständnisverwaltung für Cookies](https://exchange.adobe.com/apps/ec/100340)
