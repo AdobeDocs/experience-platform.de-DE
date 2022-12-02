@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Überblick über Adobe Experience Platform
 breadcrumb-title: Übersicht zu Experience Platform
 user-guide-description: Erfahren Sie, wie Sie Ihren Kunden mithilfe von Experience Platform in Echtzeit personalisierte Erlebnisse liefern können.
-source-git-commit: 24efebb89ba36f5047558acd368638f456356a9e
+source-git-commit: 695675aed5a1de4bb6869b733769f8e7e86a0d5b
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '256'
 ht-degree: 92%
 
 ---
@@ -58,8 +58,13 @@ ht-degree: 92%
       * [Integrieren des Platform Web SDK zur Verarbeitung von Einverständnis- und Voreinstellungsdaten](./governance-privacy-security/consent/sdk.md)
    * Auditprotokolle {#audit-logs}
       * [Übersicht](./governance-privacy-security/audit-logs/overview.md)
+      * Audit Query API {#audit-api}
+         * [Übersicht](./governance-privacy-security/audit-logs/api/overview.md)
+         * [Erste Schritte](./governance-privacy-security/audit-logs/api/getting-started.md)
+         * [Ereignisse](./governance-privacy-security/audit-logs/api/events.md)
+         * [Exportieren](./governance-privacy-security/audit-logs/api/export.md)
    * [Datenverschlüsselung](./governance-privacy-security/encryption.md)
-   * [Vom Kunden verwaltete Schlüssel](./governance-privacy-security/customer-managed-keys.md)
+   * [Kundenverwaltete Schlüssel](./governance-privacy-security/customer-managed-keys.md)
 * Lizenzverwendung und Limits {#license}
    * [Best Practices für die Verwaltung von Daten im Rahmen von Lizenzberechtigungen](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Dashboard zur Lizenzverwendung](./license-usage-and-guardrails/license-usage-dashboard.md)
