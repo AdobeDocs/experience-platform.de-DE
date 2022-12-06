@@ -4,9 +4,9 @@ title: Erstellen einer neuen Zielverbindung
 type: Tutorial
 description: Erfahren Sie, wie Sie in Adobe Experience Platform eine Verbindung zu einem Ziel herstellen, Warnhinweise aktivieren und Marketing-Aktionen für Ihr angeschlossenes Ziel einrichten.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 434b9ed4f64320b5fd73b752716cb34a8e48aec9
+source-git-commit: 606038116391e75ba4ffc36bab11757f963a8346
 workflow-type: tm+mt
-source-wordcount: '1106'
+source-wordcount: '1107'
 ht-degree: 4%
 
 ---
@@ -79,7 +79,7 @@ Je nach Ziel, mit dem Sie eine Verbindung herstellen, werden Sie möglicherweise
 
 ![Bild, das die erforderlichen und optionalen Eingabeparameter beim Herstellen einer Verbindung zu einem Trade Desk-Ziel anzeigt.](../assets/ui/connect-destinations/connect-destination-trade-desk-example.png)
 
-### Dateiformatierungsoptionen für exportierte Dateien einrichten {#file-formatting-and-compression-options}
+### (Beta) Einrichten von Dateiformatierungsoptionen für exportierte Dateien {#file-formatting-and-compression-options}
 
 Bei dateibasierten Zielen können Sie verschiedene Einstellungen für die Formatierung und Komprimierung der exportierten Dateien konfigurieren. Weitere Informationen zu allen verfügbaren Formatierungs- und Komprimierungsoptionen finden Sie im Abschnitt [Tutorial zum Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
