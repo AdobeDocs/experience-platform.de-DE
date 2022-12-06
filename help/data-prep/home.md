@@ -5,10 +5,10 @@ title: Datenvorbereitung – Übersicht
 topic-legacy: overview
 description: Dieses Dokument führt in die Datenvorbereitung in Adobe Experience Platform ein.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
+source-git-commit: 61603d7516dbd859b0cce6c167c75aab42ca7171
 workflow-type: tm+mt
 source-wordcount: '788'
-ht-degree: 70%
+ht-degree: 73%
 
 ---
 
@@ -41,7 +41,7 @@ Berechnete Felder ermöglichen die Erstellung von Werten anhand der Attribute im
 
 Weitere Informationen zu berechneten Feldern finden Sie im Abschnitt [Handbuch zu berechneten Feldern](./functions.md#calculated-fields).
 
-### Escape-Sonderzeichen
+### Escape-Sonderzeichen {#escape-special-characters}
 
 Sie können Sonderzeichen in einem Feld mit `${...}`. JSON-Dateien mit Feldern mit einem Punkt (`.`) werden von diesem Mechanismus nicht unterstützt. Wenn bei der Interaktion mit Hierarchien ein untergeordnetes Attribut einen Punkt (`.`), müssen Sie einen umgekehrten Schrägstrich (`\`), um Sonderzeichen zu maskieren. Beispiel: `address` ist ein Objekt, das das Attribut enthält `street.name`, kann dies dann als `address.street\.name` anstelle von `address.street.name`.
 
@@ -61,7 +61,7 @@ Streaming-Aktualisierungen in [!DNL Data Prep] ermöglicht es Ihnen, Teilzeilena
 
 ## Attributbasierte Zugriffssteuerung in [!DNL Data Prep]
 
-Die attributbasierte Zugriffskontrolle in Adobe Experience Platform ermöglicht es Administratoren, den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen zu steuern.
+Die attributbasierte Zugriffssteuerung in Adobe Experience Platform ermöglicht Admins, den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen zu steuern.
 
 Attributbasierte Zugriffskontrolle stellt sicher, dass Sie nur die Attribute zuordnen können, auf die Sie Zugriff haben. Attribute, auf die Sie keinen Zugriff haben, können nicht in Passthrough-Zuordnungen und berechneten Feldern verwendet werden. Wenn Sie also keinen Zugriff auf ein erforderliches Feld haben, können Sie eine Zuordnung nicht erfolgreich speichern. Außerdem können Sie keine Objekte oder Objekt-Arrays zuordnen, wenn Sie keinen Zugriff auf eines der untergeordneten Attribute haben. Sie können jedoch andere Elemente innerhalb des Objekt- oder Objekt-Arrays einzeln zuordnen.
 

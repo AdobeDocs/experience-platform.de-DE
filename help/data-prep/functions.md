@@ -5,9 +5,9 @@ title: Zuordnungsfunktionen für Datenvorbereitung
 topic-legacy: overview
 description: In diesem Dokument werden die mit der Datenvorbereitung verwendeten Zuordnungsfunktionen vorgestellt.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
+source-git-commit: 714ce6eb1a77559a7bd1691afeac4a96e0877717
 workflow-type: tm+mt
-source-wordcount: '4337'
+source-wordcount: '4367'
 ht-degree: 8%
 
 ---
@@ -20,7 +20,11 @@ Mit Datenvorbereitung-Funktionen können Werte basierend auf den in Quellfeldern
 
 Ein Feldname kann eine beliebige gültige Kennung sein - eine unbegrenzte Sequenz von Unicode-Buchstaben und -Ziffern, beginnend mit einem Buchstaben, dem Dollarzeichen (`$`) oder dem Unterstrich (`_`). Bei Variablennamen wird auch zwischen Groß- und Kleinschreibung unterschieden.
 
-Wenn ein Feldname dieser Konvention nicht entspricht, muss der Feldname mit `${}`. Wenn der Feldname beispielsweise &quot;Vorname&quot;oder &quot;Vorname&quot;lautet, muss der Name wie folgt umgebrochen werden: `${First Name}` oder `${First.Name}` bzw.
+Wenn ein Feldname dieser Konvention nicht entspricht, muss der Feldname mit `${}`. Wenn der Feldname beispielsweise &quot;Vorname&quot;oder &quot;Vorname&quot;lautet, muss der Name wie folgt umgebrochen werden: `${First Name}` oder `${First\.Name}` bzw.
+
+>[!TIP]
+>
+>Wenn bei der Interaktion mit Hierarchien ein untergeordnetes Attribut einen Punkt (`.`), müssen Sie einen umgekehrten Schrägstrich (`\`), um Sonderzeichen zu maskieren. Weitere Informationen finden Sie im Handbuch unter [Maskieren von Sonderzeichen](home.md#escape-special-characters).
 
 Wenn ein Feldname **any** der folgenden reservierten Schlüsselwörter, muss sie mit `${}`:
 
