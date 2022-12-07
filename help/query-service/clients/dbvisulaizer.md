@@ -5,9 +5,9 @@ title: Verbinden von DbVisualizer mit Query Service
 topic-legacy: connect
 description: In diesem Dokument werden die Schritte zum Verbinden von DbVisualizer mit Adobe Experience Platform Query Service beschrieben.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 640a89231abf96a966f55dce2e3a7242c739538f
+source-git-commit: 7d38488c204e28c9cfd8ea50c06f1ce781d76c59
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '950'
 ht-degree: 1%
 
 ---
@@ -36,38 +36,44 @@ Verwenden Sie die Suchleiste oder wählen Sie [!DNL PostgreSQL] aus der Dropdown
 
 ![Das Dropdown-Menü für den Treibernamen mit [!DNL PostgreSQL] hervorgehoben.](../images/clients/dbvisualizer/driver-name.png)
 
+### Festlegen von Eigenschaften für Ihre Verbindung {#properties}
+
 Wählen Sie im Arbeitsbereich Datenbankverbindung die **[!DNL Properties]** , gefolgt von der **[!DNL Driver Properties]** über die Navigationsseitenleiste aus.
 
 ![Der Arbeitsbereich Datenbankverbindung mit den Eigenschaften und Treibereigenschaften wurde hervorgehoben.](../images/clients/dbvisualizer/driver-properties.png)
 
-Die in der folgenden Tabelle aufgeführten Treibereigenschaften werden empfohlen, um die Verwendung von SSL mit DBVisualizer zu aktivieren.
-
-| Eigenschaft | Beschreibung |
-| ------ | ------ |
-| `PGHOST` | Der Hostname für die [!DNL PostgreSQL] Server. Dieser Wert ist Ihre Experience Platform [!UICONTROL Host] Berechtigung. |
-| `ssl` | SSL-Wert definieren `1` , um die Verwendung von SSL zu aktivieren. |
-| `sslmode` | Dies steuert den SSL-Schutz. Es wird empfohlen, die `require` SSL-Modus beim Verbinden von Clients von Drittanbietern mit Adobe Experience Platform. Die `require` -Modus stellt sicher, dass bei allen Kommunikationen eine Verschlüsselung erforderlich ist und dass das Netzwerk vertrauenswürdig ist, eine Verbindung zum richtigen Server herzustellen. Die Überprüfung des SSL-Zertifikats des Servers ist nicht erforderlich. Weitere Informationen finden Sie in der Dokumentation unter [SSL-Optionen zum Verbinden von Drittanbieter-Clients](./ssl-modes.md) nach [!DNL Query Service]. |
-| `user` | Der mit der Datenbank verbundene Benutzername ist Ihre Organisations-ID. Es handelt sich um eine alphanumerische Zeichenfolge, die auf `@adobe.org` |
+Geben Sie anschließend die in der folgenden Tabelle beschriebenen Treibereigenschaften ein.
 
 >[!IMPORTANT]
 >
->Siehe [[!DNL Query Service] SSL-Dokumentation](./ssl-modes.md) Erfahren Sie mehr über die SSL-Unterstützung für Drittanbieterverbindungen zu Adobe Experience Platform Query Service und über die Verbindung mit `verify-full` SSL-Modus.
+>Um DBVisualizer mit Adobe Experience Platform zu verbinden, müssen Sie die Verwendung von SSL aktivieren. Siehe [Dokumentation zu SSL-Modi](./ssl-modes.md) Erfahren Sie mehr über die SSL-Unterstützung für Drittanbieterverbindungen zu Adobe Experience Platform Query Service und über die Verbindung mit `verify-full` SSL-Modus.
 
-### [!DNL Query Service] Anmeldeinformationen
-
-Die `PGHOST` und `user` -Werte aus Ihren Adobe Experience Platform-Anmeldedaten entnommen werden. Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei der Platform-Benutzeroberfläche an und wählen Sie **[!UICONTROL Abfragen]** aus der linken Navigation, gefolgt von **[!UICONTROL Anmeldeinformationen]**. Weitere Informationen zum Auffinden Ihres Datenbanknamens, Hosts, Ports und Ihrer Anmeldedaten finden Sie in der [Handbuch zu Anmeldeinformationen](../ui/credentials.md).
-
-![Auf der Seite &quot;Anmeldeinformationen&quot;im Arbeitsbereich &quot;Experience Platform-Abfragen&quot;werden Anmeldeinformationen und ablaufende Anmeldeinformationen hervorgehoben.](../images/clients/dbvisualizer/query-service-credentials-page.png)
-
-[!DNL Query Service] bietet auch nicht ablaufende Anmeldeinformationen, um eine einmalige Einrichtung mit Drittanbieterclients zu ermöglichen. Weitere Informationen finden Sie in der Dokumentation für [Vollständige Anweisungen zum Generieren und Verwenden von nicht ablaufenden Anmeldedaten](../ui/credentials.md#non-expiring-credentials).
+| Eigenschaft | Beschreibung |
+| ------ | ------ |
+| `PGHOST` | Der Hostname für die [!DNL PostgreSQL] Server. Dieser Wert ist Ihre Experience Platform **[!UICONTROL Host] credential**. |
+| `ssl` | SSL-Wert definieren `1` , um die Verwendung von SSL zu aktivieren. |
+| `sslmode` | Dies steuert den SSL-Schutz. Es wird empfohlen, die `require` SSL-Modus beim Verbinden von Clients von Drittanbietern mit Adobe Experience Platform. Die `require` -Modus stellt sicher, dass bei allen Kommunikationen eine Verschlüsselung erforderlich ist und dass das Netzwerk vertrauenswürdig ist, eine Verbindung zum richtigen Server herzustellen. Die Überprüfung des SSL-Zertifikats des Servers ist nicht erforderlich. |
+| `user` | Der mit der Datenbank verbundene Benutzername ist Ihre Organisations-ID. Es handelt sich um eine alphanumerische Zeichenfolge, die auf `@Adobe.Org`. Dieser Wert ist Ihre Experience Platform **[!UICONTROL Benutzername] credential**. |
 
 Verwenden Sie die Suchleiste, um jede Eigenschaft zu suchen, und wählen Sie dann die entsprechende Zelle für den Parameterwert aus. Die Zelle wird blau hervorgehoben. Geben Sie Ihre Platform-Anmeldedaten in das Wertefeld ein und wählen Sie **[!DNL Apply]** , um die Treibereigenschaft hinzuzufügen.
+
+![Die Registerkarte Eigenschaften des DBVisulaizer-Treibers mit einem eingegebenen Wert und hervorgehobenem Anwenden.](../images/clients/dbvisualizer/apply-parameter-value.png)
 
 >[!NOTE]
 >
 >So fügen Sie eine Sekunde hinzu `user` Profil auswählen `user` Wählen Sie in der Parameterspalte das blaue Plussymbol (+) aus, um Anmeldeinformationen für jeden Benutzer hinzuzufügen. Auswählen **[!DNL Apply]** , um die Treibereigenschaft hinzuzufügen.
 
 Die [!DNL Edited] -Spalte zeigt ein Häkchen an, um anzugeben, dass der Parameterwert aktualisiert wurde.
+
+### Eingabe[!DNL Query Service] Anmeldeinformationen
+
+Um die Anmeldeinformationen zu finden, die zum Verbinden von BBVisualizer mit Query Service erforderlich sind, melden Sie sich bei der Platform-Benutzeroberfläche an und wählen Sie **[!UICONTROL Abfragen]** aus der linken Navigation, gefolgt von **[!UICONTROL Anmeldeinformationen]**. Weitere Informationen zum Auffinden Ihrer **Host**, **port**, **Datenbank**, **Benutzername** und **password** Anmeldeinformationen, lesen Sie bitte die [Handbuch zu Anmeldeinformationen](../ui/credentials.md).
+
+![Auf der Seite &quot;Anmeldeinformationen&quot;im Arbeitsbereich &quot;Experience Platform-Abfragen&quot;werden Anmeldeinformationen und ablaufende Anmeldeinformationen hervorgehoben.](../images/clients/dbvisualizer/query-service-credentials-page.png)
+
+>[!IMPORTANT]
+>
+>[!DNL Query Service] bietet auch nicht ablaufende Anmeldeinformationen, um eine einmalige Einrichtung mit Drittanbieterclients zu ermöglichen. Weitere Informationen finden Sie in der Dokumentation für [Vollständige Anweisungen zum Generieren und Verwenden von nicht ablaufenden Anmeldedaten](../ui/credentials.md#non-expiring-credentials). Dieser Prozess muss abgeschlossen werden, wenn Sie BDVisualizer als einmaliges Setup verbinden möchten. Die `credential` und `technicalAccountId` Die erworbenen Werte umfassen den Wert für den DBVisualizer `password` Parameter.
 
 ## Authentifizierung
 
@@ -79,14 +85,20 @@ Wenn bei jeder Verbindungsherstellung eine Benutzer-ID und eine kennwortbasierte
 
 ## Verbinden von  mit Platform
 
-Um eine Verbindung herzustellen, wählen Sie die **[!DNL Connection]** im Arbeitsbereich &quot;Datenbankverbindung&quot;und geben Sie Ihre Anmeldedaten für die Experience Platform für die folgenden Einstellungen ein.
+Sie können eine Verbindung mit ablaufenden oder nicht ablaufenden Anmeldeinformationen herstellen. Um eine Verbindung herzustellen, wählen Sie die **[!DNL Connection]** im Arbeitsbereich &quot;Datenbankverbindung&quot;und geben Sie Ihre Anmeldedaten für die Experience Platform für die folgenden Einstellungen ein.
 
-- **Name**: Es wird empfohlen, einen benutzerfreundlichen Namen anzugeben, um die Verbindung zu erkennen.
-- **Datenbankserver**: Das ist Ihre Experience Platform [!UICONTROL Host] Berechtigung.
-- **Datenbankanschluss**: Der Port für [!DNL Query Service]. Sie müssen Port 80 verwenden, um eine Verbindung mit [!DNL Query Service].
-- **Datenbank**: Berechtigung verwenden `dbname` value `prod:all`.
-- **Database Userid**: Dies ist Ihre Platform-Organisations-ID. Die Benutzer-ID hat das Format `ORG_ID@AdobeOrg`.
-- **Datenbankkennwort**: Dies ist eine alphanumerische Zeichenfolge, die auf der [!DNL Query Service] Anmeldedaten-Dashboard.
+>[!NOTE]
+>
+>Alle von BDVisualizer in der folgenden Tabelle erforderlichen Anmeldeinformationen sind für ablaufende und nicht ablaufende Anmeldeinformationen identisch, sofern sie nicht in der Parameterbeschreibung angegeben sind.
+
+| Verbindungsparameter | Beschreibung |
+|---|---|
+| **[!UICONTROL Name]** | Erstellen Sie einen Namen für Ihre Verbindung. Es wird empfohlen, einen benutzerfreundlichen Namen anzugeben, um die Verbindung zu erkennen. |
+| **[!UICONTROL Datenbankserver]** | Das ist Ihre Experience Platform **[!UICONTROL Host]** Berechtigung. |
+| **[!UICONTROL Datenbankanschluss]** | Der Port für [!DNL Query Service]. Sie müssen Port verwenden **80** zur Verbindung mit [!DNL Query Service]. |
+| **[!UICONTROL Datenbank]** | Verwenden Ihrer Experience Platform **[!UICONTROL Datenbank]** credential value: `prod:all`. |
+| **[!UICONTROL Database Userid]** | Dies ist Ihre Platform-Organisations-ID. Verwenden Ihrer Experience Platform **[!UICONTROL Benutzername]** Berechtigungswert. Die ID hat das Format `ORG_ID@AdobeOrg`. |
+| **[!UICONTROL Datenbankkennwort]** | Diese alphanumerische Zeichenfolge ist Ihre Experience Platform **[!UICONTROL Passwort]** credential.Wenn Sie nicht ablaufende Anmeldeinformationen verwenden möchten, ist dieser Wert die verketteten Argumente aus dem `technicalAccountID` und `credential` in die JSON-Konfigurationsdatei heruntergeladen wurde. Der Kennwortwert hat folgende Form: {technicalAccountId}:{credential}. Die JSON-Konfigurationsdatei für nicht ablaufende Anmeldeinformationen ist ein einmaliger Download während der Initialisierung, von dem die Adobe keine Kopie aufbewahrt. |
 
 Nachdem Sie alle relevanten Anmeldeinformationen eingegeben haben, wählen Sie **[!DNL Connect]**.
 
