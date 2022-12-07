@@ -6,13 +6,13 @@ topic-legacy: overview
 description: Catalog Service ist ein Aufzeichnungssystem für Speicherort und Herkunft von Daten in Adobe Experience Platform. Alle Daten, die in Experience Platform aufgenommen werden, werden als Dateien und Ordner im Data Lake gespeichert. Der Katalog wiederum speichert die Metadaten und Beschreibungen dieser Dateien und Ordner für Such- und Überwachungszwecke.
 exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '805'
 ht-degree: 100%
 
 ---
 
-# [!DNL Catalog Service]Übersicht
+# [!DNL Catalog Service] – Übersicht
 
 [!DNL Catalog Service] ist ein Aufzeichnungssystem für Speicherort und Herkunft von Daten in Adobe Experience Platform. Alle Daten, die in [!DNL Experience Platform] aufgenommen werden, werden als Dateien und Ordner im [!DNL Data Lake] gespeichert. [!DNL Catalog] wiederum speichert die Metadaten und Beschreibungen dieser Dateien und Ordner für Such- und Überwachungszwecke.
 
