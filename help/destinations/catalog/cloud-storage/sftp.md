@@ -3,10 +3,10 @@ keywords: SFTP; SFTP
 title: SFTP-Verbindung
 description: Erstellen Sie eine ausgehende Live-Verbindung zu Ihrem SFTP-Server, um durch Trennzeichen getrennte Datendateien regelmäßig aus Adobe Experience Platform zu exportieren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: cb0b80f79a849d81216c5500c54b62ac5d85e2f6
 workflow-type: tm+mt
-source-wordcount: '812'
-ht-degree: 17%
+source-wordcount: '873'
+ht-degree: 16%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 17%
 >* Wenn Sie noch keinen Datenfluss zum **[!UICONTROL SFTP]** Ziel, verwenden Sie bitte die neue **[!UICONTROL SFTP-Beta]** Karte zum Exportieren von Dateien in **[!UICONTROL SFTP]**.
 
 
-![Bild der beiden SFTP-Zielkarten in einer Seitenansicht.](/help/destinations/assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
+![Bild der beiden SFTP-Zielkarten in einer Seitenansicht.](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
 
 Verbesserungen bei den neuen [!DNL SFTP] Zielkarte enthält:
 
@@ -104,6 +104,8 @@ Geben Sie nach Herstellung der Authentifizierungsverbindung zum SFTP-Speicherort
 * **[!UICONTROL Name]**: Geben Sie einen Namen ein, der Ihnen bei der Identifizierung dieses Ziels in der Benutzeroberfläche von Experience Platform hilft;
 * **[!UICONTROL Beschreibung]**: eine Beschreibung für dieses Ziel eingeben;
 * **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad zum Ordner in Ihrem SFTP-Speicherort ein, in den die Dateien exportiert werden sollen.
+* **[!UICONTROL Dateityp]**: Wählen Sie die Format-Experience Platform aus, die für die exportierten Dateien verwendet werden soll. Diese Option steht nur für die **[!UICONTROL SFTP-Beta]** Ziel. Bei der Auswahl der [!UICONTROL CSV] können Sie auch [Dateiformatierungsoptionen konfigurieren](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Komprimierungsformat]**: Wählen Sie den Komprimierungstyp aus, den die Experience Platform für die exportierten Dateien verwenden soll. Diese Option steht nur für die **[!UICONTROL SFTP-Beta]** Ziel.
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
 

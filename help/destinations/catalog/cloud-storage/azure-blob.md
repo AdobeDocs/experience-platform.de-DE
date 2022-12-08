@@ -3,10 +3,10 @@ keywords: Azure Blob; Blob-Ziel; s3; Azure Blob-Ziel
 title: Azure Blob-Verbindung
 description: Erstellen Sie eine ausgehende Live-Verbindung zu Ihrem Azure Blob-Speicher, um regelmäßig CSV-Datendateien aus Adobe Experience Platform zu exportieren.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '860'
-ht-degree: 34%
+source-wordcount: '923'
+ht-degree: 32%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 34%
 >* Wenn Sie noch keinen Datenfluss zum **[!UICONTROL Azure Blob]** Ziel, verwenden Sie bitte die neue **[!UICONTROL Azure Blob beta]** Karte zum Exportieren von Dateien in **[!UICONTROL Azure Blob]**.
 
 
-![Bild der beiden Azure Blob-Zielkarten in einer Seitenansicht.](/help/destinations/assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
+![Bild der beiden Azure Blob-Zielkarten in einer Seitenansicht.](../../assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
 
 Verbesserungen bei den neuen [!DNL Azure Blob] Zielkarte enthält:
 
@@ -93,6 +93,8 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung dieses Ziels ein.
 * **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad zum Zielordner ein, der die exportierten Dateien hosten soll.
 * **[!UICONTROL Container]**: den Namen der [!DNL Azure Blob Storage] Container, der von diesem Ziel verwendet werden soll.
+* **[!UICONTROL Dateityp]**: Wählen Sie die Format-Experience Platform aus, die für die exportierten Dateien verwendet werden soll. Diese Option steht nur für die **[!UICONTROL Azure Blob beta]** Ziel. Bei der Auswahl der [!UICONTROL CSV] können Sie auch [Dateiformatierungsoptionen konfigurieren](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Komprimierungsformat]**: Wählen Sie den Komprimierungstyp aus, den die Experience Platform für die exportierten Dateien verwenden soll. Diese Option steht nur für die **[!UICONTROL Azure Blob beta]** Ziel.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 

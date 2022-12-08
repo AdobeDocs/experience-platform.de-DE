@@ -2,10 +2,10 @@
 title: Marketo Engage-Ziel
 description: Marketo Engage ist die einzige End-to-End-Lösung für Customer Experience Management (CXM) für Marketing, Werbung, Analyse und Handel. Damit können Sie Aktivitäten von der CRM-Lead-Verwaltung über die Kundeninteraktion bis hin zur kontobasierten Marketing- und Umsatzzuordnung automatisieren und verwalten.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 9f305ee7824bd8790dec57ccbd2d9462ccfa8b49
+source-git-commit: e68bbc07f7d2e4e05b725cbef37a1810a5825742
 workflow-type: tm+mt
 source-wordcount: '870'
-ht-degree: 20%
+ht-degree: 32%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 20%
 >* Wenn Sie noch keinen Datenfluss zum **[!UICONTROL Marketo V1]** Ziel, verwenden Sie bitte die neue **[!UICONTROL Marketo V2]** -Karte, um eine Verbindung mit Marketo herzustellen und Daten nach zu exportieren.
 
 
-![Bild der beiden Marketo-Zielkarten in einer Seitenansicht.](/help/destinations/assets/catalog/adobe/marketo-side-by-side-view.png)
+![Bild der beiden Marketo-Zielkarten in einer Seitenansicht.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
 Zu den Verbesserungen am Marketo V2-Ziel gehören:
 
@@ -41,7 +41,7 @@ Das Marketo-Ziel ermöglicht es Marketing-Experten, in Adobe Experience Platform
 
 ### Unterstützte Identitäten {#supported-identities}
 
-| Zielgruppenidentität | Beschreibung |
+| Ziel-Identität | Beschreibung |
 |---|---|
 | ECID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Alias referenziert werden: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Siehe folgendes Dokument unter [ECID](/help/identity-service/ecid.md) für weitere Informationen. |
 | E-Mail | Ein Namespace, der eine E-Mail-Adresse darstellt. Dieser Namespace ist häufig mit einer einzelnen Person verknüpft und kann daher zur kanalübergreifenden Identifizierung dieser Person verwendet werden. |
@@ -52,14 +52,14 @@ Das Marketo-Ziel ermöglicht es Marketing-Experten, in Adobe Experience Platform
 
 Sie können Attribute von Experience Platform zu allen Attributen zuordnen, auf die Ihr Unternehmen in Marketo Zugriff hat. In Marketo können Sie die [API-Anfrage beschreiben](https://developers.marketo.com/rest-api/lead-database/leads/#describe) , um die Attributfelder abzurufen, auf die Ihr Unternehmen Zugriff hat.
 
-## Exportart und -frequenz {#export-type-frequency}
+## Exporttyp und -häufigkeit {#export-type-frequency}
 
-Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten stehenden Tabelle.
+Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
 | Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den in der Variablen [!DNL Marketo Engage] Ziel. |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind &quot;immer auf&quot;-API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Mehr dazu [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -67,8 +67,8 @@ Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten steh
 
 >[!IMPORTANT]
 > 
->* Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele verwalten]** [Zugriffsberechtigung](/help/access-control/home.md#permissions).
->* Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle - Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>* Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Zugriffsberechtigung]** [Ziele verwalten](/help/access-control/home.md#permissions).
+>* Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 
 Detaillierte Anweisungen zum Einrichten des Ziels und Aktivieren von Segmenten finden Sie unter [Adobe Experience Platform-Segment in eine statische Marketo-Liste pushen](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) in der Marketo-Dokumentation.

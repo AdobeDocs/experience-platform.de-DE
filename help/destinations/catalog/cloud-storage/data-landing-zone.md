@@ -1,10 +1,11 @@
 ---
 title: Data Landing Zone Ziel
 description: Erfahren Sie, wie Sie eine Verbindung zur Data Landing Zone herstellen, um Segmente zu aktivieren und Datensätze zu exportieren.
-source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
+exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
+source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 26%
+source-wordcount: '987'
+ht-degree: 25%
 
 ---
 
@@ -87,6 +88,8 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 * **[!UICONTROL Name]**: Geben Sie einen bevorzugten Namen für das Ziel ein.
 * **[!UICONTROL Beschreibung]**: Optional. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden.
 * **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad zum Zielordner ein, der die exportierten Dateien hosten soll.
+* **[!UICONTROL Dateityp]**: Wählen Sie die Format-Experience Platform aus, die für die exportierten Dateien verwendet werden soll. Bei der Auswahl der [!UICONTROL CSV] können Sie auch [Dateiformatierungsoptionen konfigurieren](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Komprimierungsformat]**: Wählen Sie den Komprimierungstyp aus, den die Experience Platform für die exportierten Dateien verwenden soll.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 

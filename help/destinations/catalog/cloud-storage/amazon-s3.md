@@ -3,10 +3,10 @@ keywords: Amazon S3; S3-Ziel; s3; amazon s3
 title: Amazon S3-Verbindung
 description: Erstellen Sie eine aktive ausgehende Verbindung zu Ihrem Amazon Web Services (AWS) S3-Speicher, um regelmäßig CSV-Datendateien aus Adobe Experience Platform in Ihre eigenen S3-Behälter zu exportieren.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 24%
+source-wordcount: '953'
+ht-degree: 23%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 24%
 >[!IMPORTANT]
 >
 >Mit der Beta-Version der Exportdatensatzfunktionalität und der verbesserten Dateiexportfunktion werden Ihnen jetzt möglicherweise zwei [!DNL Amazon S3] Karten im Zielkatalog.
->* Wenn Sie bereits Dateien in die **[!UICONTROL Amazon S3]** Ziel: Erstellen Sie neue Datenflüsse für die neuen **[!UICONTROL Amazon S3 Beta]** Ziel.
+>* Wenn Sie bereits Dateien in die **[!UICONTROL Amazon S3]** Ziel, erstellen Sie bitte neue Datenflüsse zum neuen **[!UICONTROL Amazon S3 Beta]** Ziel.
 >* Wenn Sie noch keinen Datenfluss zum **[!UICONTROL Amazon S3]** Ziel, verwenden Sie bitte die neue **[!UICONTROL Amazon S3 Beta]** Karte zum Exportieren von Dateien in **[!UICONTROL Amazon S3]**.
 
 
-![Bild der beiden Amazon S3-Zielkarten in einer Seitenansicht.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
+![Bild der beiden Amazon S3-Zielkarten in einer Seitenansicht.](../../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
 Verbesserungen bei den neuen [!DNL Amazon S3] Zielkarte enthält:
 
@@ -88,6 +88,9 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung dieses Ziels ein.
 * **[!UICONTROL Bucket-Name]**: den Namen der [!DNL Amazon S3] -Bucket, der von diesem Ziel verwendet werden soll.
 * **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad zum Zielordner ein, der die exportierten Dateien hosten soll.
+* **[!UICONTROL Dateityp]**: Wählen Sie die Format-Experience Platform aus, die für die exportierten Dateien verwendet werden soll. Diese Option steht nur für die **[!UICONTROL Amazon S3 Beta]** Ziel. Bei der Auswahl der [!UICONTROL CSV] können Sie auch [Dateiformatierungsoptionen konfigurieren](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Komprimierungsformat]**: Wählen Sie den Komprimierungstyp aus, den die Experience Platform für die exportierten Dateien verwenden soll. Diese Option steht nur für die **[!UICONTROL Amazon S3 Beta]** Ziel.
+
 
 >[!TIP]
 >
