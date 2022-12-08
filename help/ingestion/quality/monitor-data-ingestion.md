@@ -5,10 +5,10 @@ title: Überwachen der Datenerfassung
 topic-legacy: overview
 description: Dieses Benutzerhandbuch enthält eine Anleitung zum Überwachen Ihrer Daten in der Benutzeroberfläche von Adobe Experience Platform. Für dieses Handbuch benötigen Sie eine Adobe ID und Zugriff auf Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: 3fadf7006c8ea058e469067b61950ed2d2d12e3f
+source-git-commit: dce7faa7fc680e37b537bf623c3a33e6c6e37169
 workflow-type: tm+mt
-source-wordcount: '618'
-ht-degree: 36%
+source-wordcount: '654'
+ht-degree: 34%
 
 ---
 
@@ -18,7 +18,18 @@ Mit der Datenaufnahme können Sie Ihre Daten in Adobe Experience Platform aufneh
 
 Dieses Benutzerhandbuch enthält Schritte zum Überwachen Ihrer Daten in der Benutzeroberfläche von Adobe Experience Platform. Für dieses Handbuch benötigen Sie eine Adobe ID und Zugriff auf Adobe Experience Platform.
 
-## Überwachen der Datenaufnahme bei End-to-End-Streaming
+## Überwachen der Datenaufnahme bei End-to-End-Streaming {#monitor-streaming-end-to-end-data-ingestion}
+
+>[!CONTEXTUALHELP]
+>id="platform_ingestion_streaming_ingestionrate"
+>title="Aufnahmerate"
+>abstract="Die Anzahl der erfolgreich verarbeiteten Ereignisse pro Sekunde."
+>text="Learn more in the documentation"
+>additional-url="http://www.adobe.com/go/monitor-dataflows-en" text="Überwachen von Datenflüssen auf Quellen in der Benutzeroberfläche"
+
+>[!TIP]
+>
+>Verwenden Sie zur Berechnung der Gesamtereignisse an einem bestimmten Datum den Ausdruck: `total events / day = ingestion rate * 60 * 60 * 24`.
 
 Im [Experience Platform-Benutzeroberfläche](https://platform.adobe.com)auswählen **[!UICONTROL Überwachung]** im linken Navigationsmenü, gefolgt von **[!UICONTROL End-to-End-Streaming]**.
 
