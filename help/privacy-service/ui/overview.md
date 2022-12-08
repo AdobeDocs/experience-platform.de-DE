@@ -5,10 +5,10 @@ title: Übersicht über die Privacy Service-Benutzeroberfläche
 topic-legacy: UI guide
 description: Beginnen Sie mit der Verwendung der Privacy Service-Benutzeroberfläche, um Datenschutzanfragen über verschiedene Experience Cloud-Anwendungen hinweg zu koordinieren und zu überwachen.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: 3a98275b4b2969e2c7d8c1ec6ada14d1dd52b9b8
+source-git-commit: 8814c8a7e8feac4901917663d5cbeb5dddb8c288
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 4%
+source-wordcount: '206'
+ht-degree: 5%
 
 ---
 
@@ -19,7 +19,11 @@ ht-degree: 4%
 >title="Datensubjektanforderungen"
 >abstract="Dieses Widget zeigt die Anzahl der gesendeten und abgeschlossenen Anfragen von Datensubjekten an, die von Privacy Services an einem bestimmten Tag verarbeitet werden. Weitere Informationen zu Ihren Privacy Service-Prozessen erhalten Sie unter **Anforderungen** in der linken Navigation."
 
-Adobe Experience Platform [!DNL Privacy Service] bietet eine RESTful-API und eine Benutzeroberfläche, mit der Sie Datenschutz- und Compliance-Anfragen lösungsübergreifend koordinieren können. In diesem Dokument wird die [!DNL Privacy Service] Benutzeroberfläche. Informationen zur Verwendung der API finden Sie im Abschnitt [Handbuch zur Privacy Service-API](../api/overview.md).
+Die Privacy Service-Benutzeroberfläche [!DNL Privacy Service] ermöglicht die Koordinierung von Datenschutz- und Compliance-Anfragen über verschiedene Adobe Experience Cloud-Anwendungen hinweg.
+
+>[!NOTE]
+>
+>Informationen zum programmgesteuerten Verwalten von Compliance-Anfragen mithilfe der Privacy Service-API finden Sie in der [Handbuch zur Privacy Service-API](../api/overview.md).
 
 ## Melden Sie sich bei der [!DNL Privacy Service] Benutzeroberfläche
 
@@ -27,7 +31,7 @@ Adobe Experience Platform [!DNL Privacy Service] bietet eine RESTful-API und ein
 >
 >Sie müssen über eine Adobe ID verfügen, um sich bei der [!DNL Privacy Service] Benutzeroberfläche. Darüber hinaus müssen Sie über Systemadministratorberechtigungen in Ihrer IMS-Organisation verfügen.
 
-Auswählen **[!UICONTROL Mit Adobe ID anmelden]** und geben Sie Ihre Adobe ID-Anmeldedaten ein, wenn Sie dazu aufgefordert werden.
+Um auf die Benutzeroberfläche zuzugreifen, melden Sie sich bei [Adobe Experience Cloud](https://experience.adobe.com/)
 
 Nachdem Sie sich angemeldet haben, wählen Sie **[!UICONTROL Datenschutz-Benutzeroberfläche]**.
 
