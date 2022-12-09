@@ -5,9 +5,9 @@ title: Anleitung zu Query Service-Anmeldedaten
 topic-legacy: guide
 description: Adobe Experience Platform Query Service bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzern in Ihrer IMS-Organisation gespeichert wurden.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 344602a0e828d140ea386daf30a25b8f595f8d04
+source-git-commit: f52e1d49fd090c398d34a3d9c2b5d1746c319eb4
 workflow-type: tm+mt
-source-wordcount: '1225'
+source-wordcount: '1317'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,15 @@ Die **[!UICONTROL Ablaufberechtigungen]** enthält die folgenden Informationen:
 - **[!UICONTROL Benutzername]**: Der Benutzername, mit dem Sie eine Verbindung zu Query Service herstellen.
 - **[!UICONTROL Passwort]**: Das Kennwort, mit dem Sie eine Verbindung zu Query Service herstellen.
 - **[!UICONTROL PSQL-Befehl]**: Ein Befehl, der automatisch alle relevanten Informationen eingefügt hat, damit Sie über PSQL über die Befehlszeile eine Verbindung zu Query Service herstellen können.
-- **[!UICONTROL Läuft ab]**: Das Ablaufdatum für die ablaufenden Anmeldeinformationen. Die Anmeldeinformationen laufen 24 Stunden nach ihrer Erstellung ab.
+- **[!UICONTROL Läuft ab]**: Das Ablaufdatum und die Ablaufzeit für die ablaufenden Anmeldeinformationen. Die standardmäßige Gültigkeitsdauer des Tokens beträgt 24 Stunden. Sie kann jedoch in den erweiterten Einstellungen der Admin Console geändert werden.
+
+>[!TIP]
+>
+>Um die Sitzungsdauer für die Verbindung mit Ihren ablaufenden Anmeldedaten zu Query Service zu ändern, navigieren Sie zu [Admin Console](https://adminconsole.adobe.com/) und wählen Sie die folgenden Optionen auf dem Bildschirm aus: **Einstellungen** > **Datenschutz und Sicherheit** > **Authentifizierungseinstellungen** > **Erweiterte Einstellungen** > **Max. Sitzungsdauer**.
+>
+>![Registerkarte &quot;Einstellungen für Admin Console&quot;mit den Einstellungen für Datenschutz und Sicherheit, Authentifizierungseinstellungen und Max. Sitzungsdauer hervorgehoben.](../images/ui/credentials/max-session-life.png)
+>
+>Weitere Informationen zum Thema Adobe finden Sie in der Dokumentation zur Hilfe . [Erweiterte Einstellungen](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) von Admin Console angeboten.
 
 ## Nicht ablaufende Anmeldeinformationen {#non-expiring-credentials}
 
