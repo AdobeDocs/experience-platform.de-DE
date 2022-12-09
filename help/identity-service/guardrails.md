@@ -3,14 +3,14 @@ keywords: Experience Platform; Identität; Identitätsdienst; Fehlerbehebung; Li
 title: Limits für Identity Service
 description: Dieses Dokument enthält Informationen zu Verwendung und Quotenbegrenzungen für Identity Service-Daten, die Sie bei der Optimierung Ihrer Verwendung des Identitätsdiagramms unterstützen.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: e6d0f0d0bc3de2f6da4e4269811d254db4fa3303
+source-git-commit: 672d98135492350ab6e12eec51649e6e5a7e4923
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '490'
 ht-degree: 11%
 
 ---
 
-# Limits [!DNL Identity Service] data
+# Leitlinien für [!DNL Identity Service]Daten
 
 Dieses Dokument enthält Informationen zu Verwendung und Quotenbegrenzungen für [!DNL Identity Service] Daten, die Ihnen bei der Optimierung Ihrer Verwendung des Identitätsdiagramms helfen. Bei der Überprüfung der folgenden Leitlinien wird davon ausgegangen, dass Sie die Daten korrekt modelliert haben. Wenden Sie sich bei Fragen zum Modellieren Ihrer Daten an Ihren Kundenbetreuer.
 
@@ -31,7 +31,7 @@ In der folgenden Tabelle sind statische Beschränkungen für Identitätsdaten au
 
 | Beschränkung | Limit | Anmerkungen |
 | --- | --- | --- |
-| Anzahl der Identitäten in einem Diagramm | 150 | Die Begrenzung wird auf Sandbox-Ebene angewendet. Das Identitätsdiagramm wird nach Erreichen des Grenzwerts nicht mehr aktualisiert. |
+| Anzahl der Identitäten in einem Diagramm | 150 | Die Begrenzung wird auf Sandbox-Ebene angewendet. Das Identitätsdiagramm wird nach Erreichen des Grenzwerts nicht mehr aktualisiert. **Hinweis**: Die maximale Anzahl von Identitäten in einem Identitätsdiagramm **für ein einzelnes zusammengeführtes Profil** as 50. Zusammengeführte Profile, die auf Identitätsdiagrammen mit mehr als 50 Identitäten basieren, werden aus dem Echtzeit-Kundenprofil ausgeschlossen. Weitere Informationen finden Sie im Handbuch unter [Limits für Profildaten](../profile/guardrails.md). |
 | Anzahl der Identitäten in einem XDM-Datensatz | 20 | Die erforderliche Mindestanzahl von XDM-Datensätzen beträgt zwei. |
 | Anzahl der benutzerdefinierten Namespaces | Keine | Die Anzahl der benutzerdefinierten Namespaces, die Sie erstellen können, ist unbegrenzt. |
 | Anzahl der Diagramme | Keine | Die Anzahl der Identitätsdiagramme, die Sie erstellen können, ist unbegrenzt. |
