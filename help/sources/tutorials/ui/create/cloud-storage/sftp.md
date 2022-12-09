@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine SFTP-Quellverbindung erstellen.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: ade0da445b18108a7f8720404cc7a65139ed42b1
+source-git-commit: bf665a0041db8a44c39c787bb1f0f1100f61e135
 workflow-type: tm+mt
-source-wordcount: '680'
-ht-degree: 24%
+source-wordcount: '785'
+ht-degree: 22%
 
 ---
 
@@ -44,6 +44,7 @@ Um eine Verbindung zu [!DNL SFTP]müssen Sie Werte für die folgenden Verbindung
 | `password` | Das Kennwort für Ihre [!DNL SFTP] Server. |
 | `privateKeyContent` | Der Base64-kodierte Inhalt mit privatem SSH-Schlüssel. Der Typ des OpenSSH-Schlüssels muss entweder als RSA oder als DSA klassifiziert werden. |
 | `passPhrase` | Der Ausdruck oder das Kennwort zum Entschlüsseln des privaten Schlüssels, wenn die Schlüsseldatei oder der Schlüsselinhalt durch einen Pass-Satz geschützt ist. Wenn PrivateKeyContent kennwortgeschützt ist, muss dieser Parameter mit der Passphrase von PrivateKeyContent als Wert verwendet werden. |
+| `maxConcurrentConnections` | Mit diesem Parameter können Sie eine maximale Anzahl gleichzeitiger Verbindungen festlegen, die Platform beim Herstellen einer Verbindung zu Ihrem SFTP-Server erstellt. Sie müssen festlegen, dass dieser Wert kleiner als der von SFTP festgelegte Grenzwert ist. **Hinweis**: Wenn diese Einstellung für ein vorhandenes SFTP-Konto aktiviert ist, betrifft sie nur zukünftige Datenflüsse und nicht vorhandene Datenflüsse. |
 
 Nachdem Sie die erforderlichen Anmeldedaten gesammelt haben, können Sie die folgenden Schritte ausführen, um eine neue [!DNL SFTP] -Konto, um eine Verbindung mit Platform herzustellen.
 
@@ -55,7 +56,7 @@ Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirms
 
 Unter dem [!UICONTROL Cloud-Speicher] category, select **[!UICONTROL SFTP]** und wählen Sie **[!UICONTROL Daten hinzufügen]**.
 
-![Katalog](../../../../images/tutorials/create/sftp/catalog.png)
+![Der Experience Platform Sources-Katalog mit der ausgewählten SFTP-Quelle.](../../../../images/tutorials/create/sftp/catalog.png)
 
 Die **[!UICONTROL Verbindung zu SFTP herstellen]** angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
@@ -63,17 +64,19 @@ Die **[!UICONTROL Verbindung zu SFTP herstellen]** angezeigt. Auf dieser Seite k
 
 Um ein vorhandenes Konto zu verbinden, wählen Sie das FTP- oder SFTP-Konto aus, mit dem Sie eine Verbindung herstellen möchten, und klicken Sie dann auf **[!UICONTROL Nächste]** um fortzufahren.
 
-![vorhanden](../../../../images/tutorials/create/sftp/existing.png)
+![Eine Liste der vorhandenen SFTP-Konten auf der Experience Platform-Benutzeroberfläche.](../../../../images/tutorials/create/sftp/existing.png)
 
 ### Neues Konto
 
 Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen und eine optionale Beschreibung für Ihre neue [!DNL SFTP] -Konto.
 
+![Der neue Kontobildschirm für SFTP](../../../../images/tutorials/create/sftp/new.png)
+
 #### Authentifizierung mit Kennwort
 
 [!DNL SFTP] unterstützt verschiedene Authentifizierungstypen für den Zugriff. under **[!UICONTROL Kontoauthentifizierung]** select **[!UICONTROL Passwort]** und geben Sie dann die Werte für Host und Anschluss an, mit denen eine Verbindung hergestellt werden soll, zusammen mit Ihrem Benutzernamen und Kennwort an.
 
-![connect-password](../../../../images/tutorials/create/sftp/password.png)
+![Der Bildschirm für das neue Konto für die SFTP-Quelle mit einfacher Authentifizierung](../../../../images/tutorials/create/sftp/password.png)
 
 #### Authentifizieren mit dem öffentlichen SSH-Schlüssel
 
@@ -83,7 +86,7 @@ Um die öffentlichen SSH-Schlüsselanmeldeinformationen zu verwenden, wählen Si
 >
 >SFTP unterstützt einen OpenSSH-Schlüssel vom Typ RSA oder DSA. Stellen Sie sicher, dass der Inhalt Ihrer Schlüsseldatei mit `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` und endet mit `"-----END [RSA/DSA] PRIVATE KEY-----"`. Wenn es sich bei der privaten Schlüsseldatei um eine PPK-Datei handelt, verwenden Sie das PuTTY-Tool, um von PPK in das OpenSSH-Format zu konvertieren.
 
-![connect-ssh](../../../../images/tutorials/create/sftp/ssh-public-key.png)
+![Der neue Kontobildschirm für die SFTP-Quelle mit dem öffentlichen SSH-Schlüssel.](../../../../images/tutorials/create/sftp/ssh.png)
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
