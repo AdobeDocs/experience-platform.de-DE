@@ -5,16 +5,20 @@ title: Verwalten von Datennutzungsrichtlinien in der Benutzeroberfläche
 topic-legacy: policies
 description: Adobe Experience Platform Data Governance bietet eine Benutzeroberfläche, über die Sie Datennutzungsrichtlinien erstellen und verwalten können. Dieses Dokument bietet einen Überblick über die Aktionen, die Sie im Arbeitsbereich "Richtlinien"der Benutzeroberfläche "Experience Platform"ausführen können.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 5776c691b7f3ec4cb544de59cf6beef162285399
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1407'
-ht-degree: 48%
+source-wordcount: '1411'
+ht-degree: 47%
 
 ---
 
 # Verwalten von Datennutzungsrichtlinien in der Benutzeroberfläche
 
-Adobe Experience Platform Data Governance bietet eine Benutzeroberfläche, über die Sie Datennutzungsrichtlinien erstellen und verwalten können. Dieses Dokument bietet einen Überblick über die Aktionen, die Sie im **Richtlinien** Arbeitsbereich im [!DNL Experience Platform] -Benutzeroberfläche.
+In diesem Dokument wird die Verwendung der **[!UICONTROL Richtlinien]** Arbeitsbereich in der Adobe Experience Platform-Benutzeroberfläche zum Erstellen und Verwalten von Datennutzungsrichtlinien.
+
+>[!NOTE]
+>
+>Informationen zum Verwalten von Zugriffskontrollrichtlinien in der Benutzeroberfläche finden Sie im Abschnitt [Benutzeroberflächen-Handbuch zur attributbasierten Zugriffskontrolle](../../access-control/abac/ui/policies.md) anstatt.
 
 >[!IMPORTANT]
 >

@@ -5,9 +5,9 @@ title: Adobe Experience Platform-Glossar
 topic-legacy: getting started
 description: Ein Glossar wichtiger Experience Platform-Terminologie.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: b9b33a6c1df0810db32f3253205221fed8957dd5
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '7435'
+source-wordcount: '7433'
 ht-degree: 4%
 
 ---
@@ -106,7 +106,7 @@ ht-degree: 4%
 
 **Konsole**: In [!DNL Query Service], stellt die Konsole Informationen zum Status und Vorgang einer Abfrage bereit. Die Konsole zeigt den Verbindungsstatus an [!DNL Query Service], und alle Fehlermeldungen, die aus diesen Abfragen resultieren.
 
-**Vertragsbezeichnungen (&quot;C&quot;)**: Datennutzungsbezeichnungen (&quot;Contract&quot;) werden verwendet, um Daten zu kategorisieren, die vertragliche Verpflichtungen haben oder mit den Data Governance-Richtlinien eines Kunden in Zusammenhang stehen.
+**Vertragsbezeichnungen (&quot;C&quot;)**: Datennutzungsbezeichnungen (&quot;C&quot;) werden verwendet, um Daten zu kategorisieren, die vertragliche Verpflichtungen haben oder mit den Data Governance-Richtlinien Ihres Unternehmens in Zusammenhang stehen.
 
 **C1-Vertragsbezeichnung**: A `C1` Beschriftung für die vertragliche Datennutzung gibt an, dass Daten nur in aggregierter Form aus Adobe Experience Cloud exportiert werden können, ohne dass eine Einzel- oder Gerätekennung enthalten ist. Zum Beispiel Daten, die aus Social Media stammen.
 
@@ -502,7 +502,7 @@ ht-degree: 4%
 
 **Quell-Connector**: Mithilfe von Quell-Connectoren (auch als Quellen bezeichnet) können Anwender Daten aus mehreren Quellen einfach erfassen und so Daten strukturieren, beschriften und erweitern, indem Experience Platform-Dienste eingesetzt werden. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Cloud-basiertem Speicher, Software von Drittanbietern und CRM-Systemen.
 
-**Streaming-Verbindung**: Eine Streaming-Verbindung ist ein eindeutiger Endpunkt, der von Adobe bereitgestellt und an die IMS-Organisation eines Kunden gebunden wird, um Daten in Experience Platform zu streamen.
+**Streaming-Verbindung**: Eine Streaming-Verbindung ist ein eindeutiger Endpunkt, der von Adobe bereitgestellt und an Ihr Unternehmen gebunden wird, um Daten in Experience Platform zu streamen.
 
 **Standard-Identitäts-Namespace**: Standard-Identitäts-Namespaces sind vordefinierte Identitäts-Namespaces, die von Adobe bereitgestellt werden und branchenübliche Lösungen darstellen, mit denen Kunden identifiziert werden können.
 

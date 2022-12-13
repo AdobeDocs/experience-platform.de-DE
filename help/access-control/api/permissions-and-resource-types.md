@@ -3,18 +3,18 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerungs-Bere
 solution: Experience Platform
 title: Referenz-API-Endpunkt
 topic-legacy: developer guide
-description: Mit der Zugriffssteuerung in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Funktionen der Plattform mithilfe von Adobe Admin Console verwalten. Sie können die Namen aller Berechtigungen und Ressourcentypen auflisten, indem Sie eine GET-Anfrage an den Endpunkt /acl/reference in der Zugriffssteuerungs-API stellen. Diese Namen können dann in API-Aufrufen verwendet werden, um effektive Richtlinien für den aktuellen Anwender anzuzeigen.
+description: Über den Referenz-Endpunkt in der Access Control-API können Sie die Namen der verfügbaren Berechtigungen und Ressourcentypen anzeigen, die dann verwendet werden können, um effektive Zugriffssteuerungsrichtlinien für den aktuellen Benutzer anzuzeigen.
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 100%
+source-wordcount: '165'
+ht-degree: 67%
 
 ---
 
 # Referenz-Endpunkt
 
-Sie können die Namen aller Berechtigungen und Ressourcentypen auflisten, indem Sie eine GET-Anfrage an den `/acl/reference`-Endpunkt stellen. Diese Namen können dann in API-Aufrufen verwendet werden, um [effektive Richtlinien](./effective-policies.md) für den aktuellen Anwender anzuzeigen.
+Sie können die Namen aller Berechtigungen und Ressourcentypen auflisten, indem Sie eine GET-Anfrage an den `/acl/reference`-Endpunkt stellen. Diese Namen können dann in API-Aufrufen verwendet werden, um [Anzeigen effektiver Zugriffskontrollrichtlinien](./effective-policies.md) für den aktuellen Benutzer.
 
 Eine Berechtigung ist eine Richtlinie, die über die Adobe Admin Console verwaltet wird und keiner bzw. mehr Richtlinien vom Typ Ressource zugeordnet ist. Ein Ressourcentyp ist eine Richtlinie, die Lese-, Schreib- und/oder Löschfunktionen für einen bestimmten Typ von [!DNL Platform]-Ressourcen (z. B. Datensätze oder Schemas) ermöglicht.
 

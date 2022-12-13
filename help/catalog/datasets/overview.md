@@ -5,10 +5,10 @@ title: Datensätze - Übersicht
 topic-legacy: datasets
 description: Dieses Dokument bietet einen umfassenden Überblick über Datensätze in Experience Platform.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 02002c9530074b8b05664ff9eab5bc2fe4b7d5d4
+source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 16%
+source-wordcount: '784'
+ht-degree: 15%
 
 ---
 
@@ -41,6 +41,10 @@ Siehe [Datenerfassung - Übersicht](../../ingestion/home.md) für weitere Inform
 ## Anwenden von Nutzungsbezeichnungen auf Datensätze
 
 Mit Adobe Experience Platform Data Governance können Sie Kundendaten verwalten, um die Einhaltung von Vorschriften, Einschränkungen und Richtlinien für die Datennutzung sicherzustellen. Mit dem Data Governance-Framework können Sie Nutzungsbezeichnungen anwenden, um Daten entsprechend den für diese Daten geltenden Nutzungsrichtlinien zu kategorisieren.
+
+>[!IMPORTANT]
+>
+>Das Anwenden von Bezeichnungen auf Datensatzebene wird nur für Data Governance-Anwendungsfälle unterstützt. Wenn Sie Zugriffsrichtlinien für die Daten erstellen möchten, müssen Sie [Anwenden von Bezeichnungen auf das Schema](../../xdm/tutorials/labels.md) , auf dem der Datensatz basiert. Siehe Übersicht unter [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md) für weitere Informationen.
 
 Datennutzungsbezeichnungen können auf komplette Datensätze oder einzelne Datensatzfelder angewendet werden. Auf Datensatzebene hinzugefügte Bezeichnungen werden von allen Feldern in diesem Datensatz übernommen.
 

@@ -3,10 +3,10 @@ keywords: Experience Platform; Startseite; beliebte Themen; Zugriffskontrolle; a
 title: Attributbasierte Zugriffssteuerung - Übersicht
 description: Dieses Dokument enthält Informationen zur attributbasierten Zugriffskontrolle in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: a94cf02a57bd91d2342b53ced7da98836343aa2b
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1777'
-ht-degree: 31%
+source-wordcount: '1826'
+ht-degree: 30%
 
 ---
 
@@ -15,6 +15,10 @@ ht-degree: 31%
 Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Platform, mit der Administrierende den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen steuern können. Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. eine Bezeichnung, die einem Schemafeld oder Segment hinzugefügt wird. Administrierende definieren Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten.
 
 Mit dieser Funktion können Sie Experience-Datenmodell (XDM)-Schemafelder mit Bezeichnungen beschriften, die Organisations- oder Datennutzungsbereiche definieren. Parallel dazu können Administratoren die Benutzeroberfläche zur Verwaltung von Benutzern und Rollen verwenden, um Zugriffsrichtlinien für XDM-Schemafelder zu definieren und den Zugriff, der Benutzern oder Benutzergruppen (internen, externen oder Drittanbieterbenutzern) gewährt wird, besser zu verwalten. Darüber hinaus ermöglicht die attributbasierte Zugriffskontrolle Administrierenden die Verwaltung des Zugriffs auf bestimmte Segmente.
+
+>[!IMPORTANT]
+>
+>Die attributbasierte Zugriffskontrolle sollte nicht mit den Data Governance-Funktionen von Experience Platform verwechselt werden, mit denen Sie mithilfe von Bezeichnungen und Richtlinien steuern können, wie Daten in Platform verwendet werden, anstatt welche Benutzer in Ihrem Unternehmen Zugriff darauf haben. Siehe [Data Governance - Übersicht](../../data-governance/home.md) für weitere Informationen.
 
 Mithilfe der attributbasierten Zugriffskontrolle können Administratoren Ihres Unternehmens den Zugriff der Benutzer auf sensible personenbezogene Daten (EPPD), personenbezogene Daten (PII) und benutzerdefinierte Datentypen für alle Platform-Workflows und -Ressourcen steuern. Administrierende können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
 

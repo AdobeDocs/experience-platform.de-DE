@@ -1,23 +1,27 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Daten-Governance;Datennutzungsrichtlinie
 solution: Experience Platform
-title: Eine Datennutzungsrichtlinie in der API erstellen
+title: Erstellen einer Data Governance-Richtlinie in der API
 topic-legacy: policies
 type: Tutorial
-description: Mit der Policy Service-API können Sie Datennutzungsrichtlinien erstellen und verwalten, die bestimmen, welche Marketing-Aktionen für Daten entsprechend deren Datennutzungskennzeichnungen durchgeführt werden können. Dieses Dokument enthält eine schrittweise Anleitung zum Erstellen einer Datennutzungsrichtlinie mithilfe der Policy Service-API.
+description: Erfahren Sie, wie Sie mithilfe der Policy Service-API eine Data Governance-Richtlinie erstellen.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 100%
+source-wordcount: '1200'
+ht-degree: 91%
 
 ---
 
-# Eine Datennutzungsrichtlinie in der API erstellen
+# Erstellen einer Data Governance-Richtlinie in der API
 
-Mit der [Policy Service-API](https://www.adobe.io/experience-platform-apis/references/policy-service/) können Sie Datennutzungsrichtlinien erstellen und verwalten, um festzulegen, welche Marketing-Aktionen für Daten mit bestimmten Datennutzungskennzeichnungen ausgeführt werden können.
+Die [Policy Service-API](https://www.adobe.io/experience-platform-apis/references/policy-service/) ermöglicht Ihnen das Erstellen und Verwalten von Data Governance-Richtlinien, um zu bestimmen, welche Marketing-Aktionen für Daten durchgeführt werden können, die bestimmte Datennutzungsbezeichnungen enthalten.
 
-Dieses Dokument enthält eine schrittweise Anleitung zum Erstellen einer Datennutzungsrichtlinie mithilfe der [!DNL Policy Service]-API. Eine genauere Anleitung zu den verschiedenen in der API verfügbaren Vorgängen finden Sie im [Entwicklerhandbuch für Policy Service](../api/getting-started.md).
+Dieses Dokument enthält eine schrittweise Anleitung zum Erstellen einer Governance-Richtlinie mithilfe der [!DNL Policy Service] API.
+
+>[!NOTE]
+>
+>Anweisungen zum Erstellen einer Zugriffskontrollrichtlinie finden Sie unter `/policies` Endpunkthandbuch für [Access Control-API](../../access-control/abac/api/policies.md). Informationen zum Erstellen einer Einwilligungsrichtlinie finden Sie unter [Richtlinien-UI-Handbuch](./user-guide.md#consent-policy).
 
 ## Erste Schritte
 

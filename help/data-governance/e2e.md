@@ -1,9 +1,10 @@
 ---
 title: Data Governance - End-to-End-Handbuch
 description: Befolgen Sie den vollständigen Prozess zum Erzwingen von Datennutzungsbeschränkungen für Felder und Datensätze in Adobe Experience Platform.
-source-git-commit: c8b2dba9b1e305f826830b8341bf1a6dde4e2da2
+exl-id: f18ae032-027a-4c97-868b-e04753237c81
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1447'
+source-wordcount: '1513'
 ht-degree: 2%
 
 ---
@@ -16,7 +17,7 @@ Um zu steuern, welche Marketing-Aktionen für bestimmte Datensätze und Felder i
 1. [Data Governance-Richtlinien konfigurieren und aktivieren](#policy) bestimmt, welche Arten von gekennzeichneten Daten für bestimmte Marketing-Aktionen verwendet werden können.
 1. [Anwenden von Marketing-Aktionen auf Ihre Ziele](#destinations) , um anzugeben, welche Richtlinien für an diese Ziele gesendete Daten gelten.
 
-Nachdem Sie die Konfiguration Ihrer Bezeichnungen, Richtlinien und Marketing-Aktionen abgeschlossen haben, können Sie [Testen der Richtliniendurchsetzung](#test) um sicherzustellen, dass sie erwartungsgemäß funktioniert.
+Nachdem Sie die Konfiguration Ihrer Bezeichnungen, Governance-Richtlinien und Marketing-Aktionen abgeschlossen haben, können Sie [Testen der Richtliniendurchsetzung](#test) um sicherzustellen, dass sie erwartungsgemäß funktioniert.
 
 Dieses Handbuch führt Sie durch den gesamten Prozess der Konfiguration und Durchsetzung einer Data Governance-Richtlinie in der Platform-Benutzeroberfläche. Weitere Informationen zu den in diesem Handbuch verwendeten Funktionen finden Sie in der Übersichtsdokumentation zu den folgenden Themen:
 
@@ -24,6 +25,10 @@ Dieses Handbuch führt Sie durch den gesamten Prozess der Konfiguration und Durc
 * [Datennutzungsbezeichnungen](./labels/overview.md)
 * [Datennutzungsrichtlinien](./policies/overview.md)
 * [Durchsetzung von Richtlinien](./enforcement/overview.md)
+
+>[!NOTE]
+>
+>In diesem Handbuch wird beschrieben, wie Sie Richtlinien für die Verwendung oder Aktivierung von Daten in Experience Platform einrichten und durchsetzen. Wenn Sie versuchen, **access** Informationen zu den Daten selbst für bestimmte Platform-Benutzer in Ihrer Organisation finden Sie im End-to-End-Handbuch unter [attributbasierte Zugriffssteuerung](../access-control/abac/end-to-end-guide.md) anstatt. Die attributbasierte Zugriffskontrolle verwendet auch Beschriftungen und Richtlinien, jedoch für einen anderen Anwendungsfall als Data Governance.
 
 ## Anwenden von Beschriftungen {#labels}
 

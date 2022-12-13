@@ -3,22 +3,22 @@ keywords: Experience Platform; Startseite; beliebte Themen; Zugriffskontrolle; a
 title: Attributbasierte Zugriffskontrolle - Durchsuchen
 description: Dieses Dokument enthält Informationen zur Verwendung der Benutzeroberfläche für Berechtigungen in Adobe Experience Cloud
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '347'
 ht-degree: 21%
 
 ---
 
 # Berechtigungshandbuch
 
-Berechtigungen ist der Bereich von Adobe Experience Cloud, in dem Administratoren Benutzerrollen und Zugriffsrichtlinien definieren können, um Zugriffsberechtigungen für Funktionen und Objekte in einer Produktanwendung zu verwalten.
+[!UICONTROL Berechtigungen] ist der Bereich von Adobe Experience Cloud, in dem Administratoren Benutzerrollen und Zugriffsrichtlinien definieren können, um Zugriffsberechtigungen für Funktionen und Objekte in einer Produktanwendung zu verwalten.
 
-Mit Berechtigungen können Sie Folgendes konfigurieren:
+Mit [!UICONTROL Berechtigungen]können Sie Folgendes konfigurieren:
 
+* [Zugriffsrichtlinien](./policies.md)
 * [Beschriftungen](./labels.md)
 * [Berechtigungen](./permissions.md)
-* [Richtlinien](./permissions.md)
 * [Rollen](./roles.md)
 * [Sandboxes](./sandboxes.md)
 * [Benutzer](./users.md)

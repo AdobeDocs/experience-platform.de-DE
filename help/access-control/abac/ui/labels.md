@@ -3,16 +3,16 @@ keywords: Experience Platform; Startseite; beliebte Themen; Zugriffskontrolle; a
 title: Attributbasierte Zugriffskontrolle - Bezeichnungen verwalten
 description: Dieses Dokument enthält Informationen zum Verwalten von Bezeichnungen über die Benutzeroberfläche "Berechtigungen"in Adobe Experience Cloud
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '173'
 ht-degree: 23%
 
 ---
 
 # Verwalten von Bezeichnungen
 
-Mit Beschriftungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practices legen nahe, Daten direkt bei ihrer Aufnahme in Platform oder ab dem Zeitpunkt ihrer Nutzbarkeit in Platform mit einer Beschriftung zu versehen.
+Mit Beschriftungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungs- und Zugriffsrichtlinien kategorisieren. Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practices legen nahe, Daten direkt bei ihrer Aufnahme in Platform oder ab dem Zeitpunkt ihrer Nutzbarkeit in Platform mit einer Beschriftung zu versehen.
 
 ## Neue Bezeichnung erstellen {#create-new-label}
 

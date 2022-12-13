@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Richtliniendurchsetzung;API-basierte Durchsetzung;Datenverwaltung
 solution: Experience Platform
-title: API-Endpunkt für Datennutzungsrichtlinien
+title: API-Endpunkt für Data Governance-Richtlinien
 topic-legacy: developer guide
-description: Datennutzungsrichtlinien sind von Ihrem Unternehmen angewandte Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in der Experience Platform ausführen bzw. nicht ausführen dürfen. Der Endpunkt „/policies“ wird für alle API-Aufrufe zum Anzeigen, Erstellen, Aktualisieren oder Löschen von Datennutzungsrichtlinien verwendet.
+description: Data Governance-Richtlinien sind Regeln, die Ihr Unternehmen anwendet und die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in Experience Platform ausführen bzw. nicht ausführen dürfen. Der Endpunkt /policies wird für alle API-Aufrufe zum Anzeigen, Erstellen, Aktualisieren oder Löschen von Data Governance-Richtlinien verwendet.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1840'
-ht-degree: 98%
+source-wordcount: '1865'
+ht-degree: 91%
 
 ---
 
-# Endpunkt für Datennutzungsrichtlinien
+# Endpunkt von Data Governance-Richtlinien
 
-Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in [!DNL Experience Platform] ausführen bzw. nicht ausführen dürfen. Mit dem `/policies`-Endpunkt in der [!DNL Policy Service API] können Sie Datennutzungsrichtlinien für Ihr Unternehmen programmgesteuert verwalten.
+Data Governance-Richtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in [!DNL Experience Platform]. Die `/policies` -Endpunkt im [!DNL Policy Service API] ermöglicht Ihnen die programmgesteuerte Verwaltung von Data Governance-Richtlinien für Ihr Unternehmen.
 
 >[!IMPORTANT]
 >
->Dieser Endpunkt darf nicht mit der `/policies` -Endpunkt im [Access Control-API](../../access-control/abac/api/policies.md), der zur Verwaltung von Zugriffssteuerungsrichtlinien verwendet wird.
+>Governance-Richtlinien dürfen nicht mit Zugriffssteuerungsrichtlinien verwechselt werden, die die spezifischen Datenattribute festlegen, auf die bestimmte Platform-Benutzer in Ihrer Organisation zugreifen können. Siehe Abschnitt `/policies` Endpunkthandbuch für [Access Control-API](../../access-control/abac/api/policies.md) für Details zur programmgesteuerten Verwaltung von Zugriffskontrollrichtlinien.
 
 ## Erste Schritte
 
@@ -611,7 +611,7 @@ Sie können den Löschvorgang überprüfen, indem Sie erneut versuchen, nach der
 
 ## Eine Liste von aktivierten Kernrichtlinien abrufen {#list-enabled-core}
 
-Standardmäßig werden nur aktivierte Datennutzungsrichtlinien in die Auswertung einbezogen. Sie können eine Liste der derzeit von Ihrem Unternehmen aktivierten Kernrichtlinien abrufen, indem Sie eine GET-Anfrage an den `/enabledCorePolicies`-Endpunkt stellen.
+Standardmäßig nehmen nur aktivierte Data Governance-Richtlinien an der Bewertung teil. Sie können eine Liste der derzeit von Ihrem Unternehmen aktivierten Kernrichtlinien abrufen, indem Sie eine GET-Anfrage an den `/enabledCorePolicies`-Endpunkt stellen.
 
 **API-Format**
 
@@ -663,7 +663,7 @@ Eine erfolgreiche Antwort gibt die Liste der aktivierten Kernrichtlinien unter e
 
 ## Aktualisieren der Liste der aktivierten Kernrichtlinien {#update-enabled-core}
 
-Standardmäßig werden nur aktivierte Datennutzungsrichtlinien in die Auswertung einbezogen. Wenn Sie eine PUT-Anfrage an den `/enabledCorePolicies`-Endpunkt stellen, können Sie die Liste der aktivierten Kernrichtlinien für Ihr Unternehmen mit einem einzigen Aufruf aktualisieren.
+Standardmäßig nehmen nur aktivierte Data Governance-Richtlinien an der Bewertung teil. Wenn Sie eine PUT-Anfrage an den `/enabledCorePolicies`-Endpunkt stellen, können Sie die Liste der aktivierten Kernrichtlinien für Ihr Unternehmen mit einem einzigen Aufruf aktualisieren.
 
 >[!NOTE]
 >

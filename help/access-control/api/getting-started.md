@@ -5,10 +5,10 @@ title: Handbuch der Zugangssteuerungs-APIs
 topic-legacy: developer guide
 description: Mit der Zugangssteuerung in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Funktionen der Plattform mithilfe von Adobe Admin Console verwalten. Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Schema Registry-API erfolgreich aufrufen zu können.
 exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '385'
-ht-degree: 100%
+source-wordcount: '386'
+ht-degree: 97%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 100%
 Dieses Entwicklerhandbuch enthält Informationen zum Formatieren Ihrer Anfragen an die [[!DNL Access Control API]](https://www.adobe.io/experience-platform-apis/references/access-control/) und behandelt die folgenden Vorgänge:
 
 - [Berechtigungsnamen und Ressourcentypen auflisten](./permissions-and-resource-types.md)
-- [Gültige Richtlinien für den aktuellen Anwender anzeigen](./effective-policies.md)
+- [Gültige Zugriffsrichtlinien für den aktuellen Benutzer anzeigen](./effective-policies.md)
 
 ## Erste Schritte
 

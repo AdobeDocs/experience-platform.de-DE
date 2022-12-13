@@ -5,18 +5,22 @@ title: Verwalten von Datennutzungsbeschriftungen in der Benutzeroberfläche
 topic-legacy: labels
 description: Dieses Handbuch beschreibt die Schritte zum Arbeiten mit Datennutzungsbeschriftungen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
+source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
 workflow-type: tm+mt
-source-wordcount: '1229'
-ht-degree: 92%
+source-wordcount: '1306'
+ht-degree: 86%
 
 ---
 
 # Verwalten von Datennutzungsbeschriftungen in der Benutzeroberfläche
 
-Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Datennutzungsbeschriftungen in der Benutzeroberfläche von [!DNL Experience Platform]. Bevor Sie dieses Handbuch lesen, konsultieren Sie die [Übersicht zu Data Governance](../home.md), wo Sie eine detailliertere Einführung in das Data Governance-Framework erhalten.
+Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Datennutzungsbeschriftungen in der Benutzeroberfläche von [!DNL Experience Platform]. 
 
 ## Verwalten von Beschriftungen auf der Datensatzebene
+
+>[!IMPORTANT]
+>
+>Das Anwenden von Bezeichnungen auf Datensatzebene wird nur für Data Governance-Anwendungsfälle unterstützt. Wenn Sie Zugriffsrichtlinien für die Daten erstellen möchten, müssen Sie [Anwenden von Bezeichnungen auf das Schema](../../xdm/tutorials/labels.md) , auf dem der Datensatz basiert. Siehe Übersicht unter [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md) für weitere Informationen.
 
 Zum Verwalten der Datennutzungsbeschriftungen auf Datensatzebene müssen Sie einen vorhandenen Datensatz auswählen oder einen neuen erstellen. Wählen Sie nach der Anmeldung bei Adobe Experience Platform den Punkt **[!UICONTROL Datensätze]** in der linken Navigation aus, um den Arbeitsbereich **[!UICONTROL Datensätze]** zu öffnen. Auf dieser Seite werden alle erstellten Datensätze, die zu Ihrem Unternehmen gehören, sowie nützliche Details zu jedem Datensatz angezeigt.
 
@@ -76,6 +80,10 @@ Der Umschalter **[!UICONTROL Übernommene Beschriftungen anzeigen]** ist standar
 
 ## Verwalten von Bezeichnungen auf Datensatzfeldebene
 
+>[!IMPORTANT]
+>
+>Das Anwenden von Bezeichnungen auf Datensatzfeldebene wird nur für Data Governance-Anwendungsfälle unterstützt. Wenn Sie Zugriffsrichtlinien für die Daten erstellen möchten, müssen Sie [Anwenden von Bezeichnungen auf das Schema](../../xdm/tutorials/labels.md) , auf dem der Datensatz basiert. Siehe Übersicht unter [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md) für weitere Informationen.
+
 Wenn Sie den Arbeitsablauf zum [Hinzufügen und Bearbeiten von Datennutzungskennzeichnungen auf Datensatzebene](#add-labels) fortsetzen, können Sie im Arbeitsbereich **[!UICONTROL Data Governance]** auch Kennzeichnungen auf Feldebene für diesen Datensatz verwalten.
 
 Um die Datennutzungskennzeichnungen auf ein einzelnes Feld anzuwenden, aktivieren Sie das Kontrollkästchen neben dem Feldnamen und wählen Sie **[!UICONTROL Governance-Kennzeichnungen bearbeiten]**.
@@ -111,7 +119,7 @@ Siehe Tutorial zu [Verwalten von Beschriftungen auf Schemaebene](../../xdm/tutor
 >[!CONTEXTUALHELP]
 >id="platform_governance_createlabels"
 >title="Erstellen von Bezeichnungen"
->abstract="Mit Beschriftungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Platform bietet einen Standardsatz von Bezeichnungen, die Sie verwenden können. Sie können aber auch benutzerdefinierte Bezeichnungen erstellen, die für Ihr Unternehmen spezifisch sind."
+>abstract="Mit Bezeichnungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Platform bietet einen Standardsatz von Bezeichnungen, die Sie verwenden können. Sie können aber auch benutzerdefinierte Bezeichnungen erstellen, die für Ihr Unternehmen spezifisch sind."
 
 Sie können Ihre eigenen benutzerspezifischen Nutzungskennzeichnungen im Arbeitsbereich **[!UICONTROL Richtlinien]** in der Benutzeroberfläche von [!DNL Experience Platform] erstellen. Wählen Sie **[!UICONTROL Richtlinien]** in der linken Navigation und anschließend **[!UICONTROL Kennzeichnungen]**, um eine Liste der vorhandenen Kennzeichnungen zu sehen. Wählen Sie dort **[!UICONTROL Kennzeichnung erstellen]**.
 

@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform; Startseite; beliebte Themen; Attributbasierte Zugriffssteuerung; attributbasierte Zugriffssteuerung
-title: Erste Schritte mit der attributbasierten Zugriffssteuerung
-description: Mit der attributbasierten Zugriffssteuerung können Sie Rollen und Richtlinien in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
+title: Erste Schritte mit der attributbasierten Access Control-API
+description: Mit der Attributbasierten Access Control-API können Sie Rollen und Zugriffsrichtlinien in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: d1a66afa-dff4-49d7-b57c-527f05977155
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 54e15234d1b1050ea2cdb8b7d37c79a133a339f1
 workflow-type: tm+mt
-source-wordcount: '325'
-ht-degree: 70%
+source-wordcount: '330'
+ht-degree: 69%
 
 ---
 
-# Erste Schritte mit der attributbasierten Zugriffskontrolle
+# Erste Schritte mit der attributbasierten Zugriffssteuerungs-API
 
-Dieses Entwicklerhandbuch enthält Schritte, die Sie bei der Verwendung der attributbasierten Zugriffssteuerung unterstützen, um Rollen, Produkte, Berechtigungskategorien und Berechtigungssätze in Adobe Experience Platform zu verwalten. Außerdem enthält es Beispiel-API-Aufrufe für die Durchführung verschiedener Vorgänge.
+Dieses Entwicklerhandbuch enthält Schritte, die Sie bei der Verwendung der attributbasierten Zugriffssteuerungs-API unterstützen, um Rollen, Produkte, Berechtigungskategorien und Berechtigungssätze in Adobe Experience Platform zu verwalten, sowie Beispiel-API-Aufrufe für die Durchführung verschiedener Vorgänge.
 
 ## Lesen von Beispiel-API-Aufrufen
 

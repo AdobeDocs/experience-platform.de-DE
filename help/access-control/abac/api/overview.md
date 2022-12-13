@@ -2,12 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; API; attributbasierte Zugriffssteuerung; attributbasierte Zugriffssteuerung
 solution: Experience Platform
 title: API-Anleitung zur Attributbasierten Zugriffssteuerung
-description: Mit der Attributbasierten Zugriffssteuerungs-API können Sie Rollen und Richtlinien in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
+description: Mit der Attributbasierten Zugriffssteuerungs-API können Sie Rollen und Zugriffsrichtlinien in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '393'
-ht-degree: 27%
+source-wordcount: '450'
+ht-degree: 23%
 
 ---
 
@@ -16,6 +16,10 @@ ht-degree: 27%
 Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Platform, mit der Administrierende den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen steuern können. Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. eine Bezeichnung, die einem Schemafeld oder Segment hinzugefügt wird. Administrierende definieren Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten.
 
 Die attributbasierte Zugriffssteuerungs-API wird verwendet, um auf Rollen, Produkte, Berechtigungskategorien und Berechtigungssätze in Adobe Experience Platform zuzugreifen und eine Benutzeroberfläche und RESTful-API bereitzustellen, über die alle verfügbaren Bibliotheksressourcen zugänglich sind.
+
+>[!IMPORTANT]
+>
+>Die attributbasierte Zugriffskontrolle sollte nicht mit den Data Governance-Funktionen von Experience Platform verwechselt werden, mit denen Sie mithilfe von Bezeichnungen und Richtlinien steuern können, wie Daten in Platform verwendet werden, anstatt welche Benutzer in Ihrem Unternehmen Zugriff darauf haben. Siehe [Handbuch zur Policy Service-API](../../../data-governance/api/overview.md) für Schritte zur programmgesteuerten Nutzung dieser Funktionen.
 
 Diese Endpunkte werden nachfolgend beschrieben. Weitere Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel-API-Aufrufen und mehr finden Sie in den einzelnen Endpunkthandbüchern sowie in den [Ersten Schritten](./getting-started.md).
 

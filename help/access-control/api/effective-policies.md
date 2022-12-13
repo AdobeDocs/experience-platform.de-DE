@@ -3,18 +3,18 @@ keywords: Experience Platform;Home;beliebte Themen;Effektive Richtlinien;Zugriff
 solution: Experience Platform
 title: API-Endpunkt für effektive Richtlinien
 topic-legacy: developer guide
-description: Mit der Zugriffssteuerung in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Funktionen der Plattform mithilfe von Adobe Admin Console verwalten. Dieses Dokument dient als Leitfaden für die Ansicht effektiver Richtlinien mithilfe der Zugriffssteuerungs-API für Adobe Experience Platform.
+description: Erfahren Sie, wie Sie effektive Zugriffsrichtlinien mithilfe der Access Control-API für Adobe Experience Platform anzeigen können.
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 100%
+source-wordcount: '295'
+ht-degree: 80%
 
 ---
 
 # Endpunkt für effektive Richtlinien
 
-Um effektive Richtlinien für den aktuellen Benutzer anzuzeigen, stellen Sie eine POST-Anfrage an den `/acl/effective-policies`-Endpunkt in der [!DNL Access Control]-API. Die Berechtigungen und Ressourcentypen, die Sie abrufen möchten, müssen in der Anfrage-Payload in Form eines Arrays angegeben werden. Dies wird im folgenden Beispiel-API-Aufruf demonstriert.
+Um effektive Zugriffssteuerungsrichtlinien für den aktuellen Benutzer anzuzeigen, stellen Sie eine POST-Anfrage an die `/acl/effective-policies` -Endpunkt im [!DNL Access Control] API. Die Berechtigungen und Ressourcentypen, die Sie abrufen möchten, müssen in der Anfrage-Payload in Form eines Arrays angegeben werden. Dies wird im folgenden Beispiel-API-Aufruf demonstriert.
 
 **API-Format**
 
@@ -65,7 +65,7 @@ Eine erfolgreiche Antwort gibt Informationen über die in der Anfrage angegebene
 
 ## Nächste Schritte
 
-In diesem Dokument wurde beschrieben, wie Sie die [!DNL Access Control]-API aufrufen, um Informationen über aktive Berechtigungen und die zugehörigen Richtlinien für Ressourcentypen zu erhalten. Weitere Informationen zur Zugriffssteuerung für [!DNL Experience Platform] finden Sie in [Zugriffssteuerung – Übersicht](../home.md).
+In diesem Dokument wurde beschrieben, wie Sie Aufrufe an die [!DNL Access Control] API zum Zurückgeben von Informationen zu aktiven Berechtigungen und zugehörigen Zugriffsrichtlinien für Ressourcentypen. Weitere Informationen zur Zugriffssteuerung für [!DNL Experience Platform] finden Sie in [Zugriffssteuerung – Übersicht](../home.md).
 
 ## Anhang
 

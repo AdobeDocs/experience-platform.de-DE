@@ -5,10 +5,10 @@ title: Glossar der Datennutzungskennzeichnungen
 topic-legacy: labels
 description: In diesem Dokument werden alle derzeit von Adobe Experience Platform unterstützten Datennutzungskennzeichnungen beschrieben.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: c29b6c7dc061ea910ebedcae1fa4beaa6def10b1
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '2117'
-ht-degree: 67%
+source-wordcount: '2108'
+ht-degree: 64%
 
 ---
 
@@ -20,9 +20,9 @@ ht-degree: 67%
 >abstract="Es gibt mehrere Kategorien von Datennutzungsbezeichnungen. Zu den von der Adobe definierten Bezeichnungen gehören Vertragsbezeichnungen, Identitätsbezeichnungen und vertrauliche Bezeichnungen. Von Ihrem Unternehmen definierte Beschriftungen werden als benutzerdefinierte Beschriftungen kategorisiert."
 >text="See the data usage labels glossary for more information on these label types."
 
-Mit Datennutzungsbeschriftungen können Sie Datensätze anhand der für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Adobe Experience Platform Data Governance bietet mehrere gebrauchsfertige, grundlegende Datennutzungskennzeichnungen, die Sie verwenden können, um Ihre Daten zu kategorisieren.
+Mit Datennutzungsbezeichnungen können Sie Datensätze und Felder anhand von [Governance-Strategien](../policies/overview.md) und [Zugriffskontrollrichtlinien](../../access-control/abac/overview.md) die für diese Daten gelten. Adobe Experience Platform bietet mehrere gebrauchsfertige, grundlegende Datennutzungskennzeichnungen, die Sie verwenden können, um Ihre Daten zu kategorisieren.
 
-In diesem Dokument werden die derzeit von [!DNL Experience Platform] bereitgestellten grundlegenden Datennutzungskennzeichnungen erläutert. Weitere Informationen zu Data Governance finden Sie im [Überblick zu Data Governance](../home.md).
+In diesem Dokument werden die derzeit von Experience Platform bereitgestellten grundlegenden Datennutzungsbezeichnungen beschrieben.
 
 ## Vertragsbezeichnungen
 
@@ -135,7 +135,7 @@ Einige Verträge beinhalten ein explizites Verbot der Datennutzung für datenwis
 
 #### C10 {#c10}
 
-Einige Datennutzungsrichtlinien beschränken die Verwendung von zusammengesetzten Identitätsdaten für die Personalisierung. Die Kennzeichnung C10 wird automatisch auf Segmente angewendet, wenn deren Zusammenführungsrichtlinien die Option „Privates Diagramm“ verwenden.
+Einige Data Governance-Richtlinien beschränken die Verwendung von zusammengeführten Identitätsdaten für die Personalisierung. Die Kennzeichnung C10 wird automatisch auf Segmente angewendet, wenn deren Zusammenführungsrichtlinien die Option „Privates Diagramm“ verwenden.
 
 #### C11 {#c11}
 

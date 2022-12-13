@@ -2,19 +2,23 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Zugriffskontrolle; attributbasierte Zugriffskontrolle;
 title: Anleitung zur attributbasierten Zugriffssteuerung (End-to-End)
 description: Dieses Dokument bietet eine durchgängige Anleitung zur attributbasierten Zugriffskontrolle in Adobe Experience Platform
-source-git-commit: 0035f4611f2c269bb36f045c3c57e6e7bad7c013
+exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '2382'
-ht-degree: 5%
+source-wordcount: '2427'
+ht-degree: 7%
 
 ---
 
 # Handbuch zur attributbasierten Zugriffskontrolle von Ende zu Ende
 
-Die attributbasierte Zugriffskontrolle ist eine Funktion von Adobe Experience Platform, die es Kunden mit mehreren Marken und datenschutzbewussten Kunden ermöglicht, den Benutzerzugriff flexibler zu verwalten. Der Zugriff auf einzelne Objekte wie Schemafelder und Segmente kann mit Richtlinien gewährt/verweigert werden, die auf den Attributen und der Rolle des Objekts basieren. Mit dieser Funktion können Sie bestimmten Platform-Benutzern in Ihrer Organisation Zugriff auf einzelne Objekte gewähren oder sperren.
+Die attributbasierte Zugriffskontrolle ist eine Funktion von Adobe Experience Platform, die es Kunden mit mehreren Marken und datenschutzbewussten Kunden ermöglicht, den Benutzerzugriff flexibler zu verwalten. Der Zugriff auf einzelne Objekte wie Schemafelder und Segmente kann mit Richtlinien gewährt/verweigert werden, die auf den Attributen und der Rolle des Objekts basieren. Mit dieser Funktion können Sie bestimmten Platform-Benutzenden in Ihrer Organisation den Zugriff auf einzelne Objekte gewähren oder sperren.
 
-Mit dieser Funktion können Sie Schemafelder, Segmente usw. mit Bezeichnungen kategorisieren, die Organisations- oder Datennutzungsbereiche definieren. Sie können diese Beschriftungen auf Journey, Angebote und andere Objekte in Adobe Journey Optimizer anwenden. Parallel dazu können Administratoren Zugriffsrichtlinien für XDM-Schemafelder definieren und besser verwalten, welche Benutzer oder Gruppen (interne, externe oder Drittanbieter-Benutzer) auf diese Felder zugreifen können.
+Mit dieser Funktion können Sie Schemafelder, Segmente usw. mit Bezeichnungen kategorisieren, die Organisations- oder Datennutzungsbereiche definieren. Sie können diese Beschriftungen auf Journey, Angebote und andere Objekte in Adobe Journey Optimizer anwenden. Parallel dazu können Administratoren Zugriffsrichtlinien für Experience-Datenmodell (XDM)-Schemafelder definieren und besser verwalten, welche Benutzer oder Gruppen (interne, externe oder Drittanbieter-Benutzer) auf diese Felder zugreifen können.
 
+>[!NOTE]
+>
+>Dieses Dokument konzentriert sich auf den Anwendungsfall von Zugriffskontrollrichtlinien. Wenn Sie versuchen, Richtlinien zur Steuerung der **use** Informationen zu Daten und nicht dazu, auf welche Platform-Benutzer Zugriff haben, finden Sie im End-to-End-Handbuch unter [Data Governance](../../data-governance/e2e.md) anstatt.
 
 ## Erste Schritte
 
@@ -61,7 +65,7 @@ Der Arbeitsbereich &quot;Berechtigungen&quot;für die Platform-Benutzeroberfläc
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="Was sind Beschriftungen?"
->abstract="Mit Beschriftungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Platform bietet verschiedene Adobe-definierte &quot;Core&quot;-Datennutzungsbezeichnungen, die eine Vielzahl gemeinsamer Einschränkungen für Data Governance abdecken. Mit vertraulichen S-Beschriftungen wie RHD (Regulated Health Data) können Sie beispielsweise Daten kategorisieren, die auf geschützte Gesundheitsinformationen (PHI) verweisen. Sie können auch eigene benutzerdefinierte Beschriftungen definieren, die den Anforderungen Ihres Unternehmens entsprechen."
+>abstract="Mit Bezeichnungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Platform bietet verschiedene Adobe-definierte &quot;Core&quot;-Datennutzungsbezeichnungen, die eine Vielzahl gemeinsamer Einschränkungen für Data Governance abdecken. Mit vertraulichen S-Beschriftungen wie RHD (Regulated Health Data) können Sie beispielsweise Daten kategorisieren, die auf geschützte Gesundheitsinformationen (PHI) verweisen. Sie können auch eigene benutzerdefinierte Beschriftungen definieren, die den Anforderungen Ihres Unternehmens entsprechen."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#understanding-data-usage-labels" text="Datennutzungsbeschriftungen – Übersicht"
 
 >[!CONTEXTUALHELP]

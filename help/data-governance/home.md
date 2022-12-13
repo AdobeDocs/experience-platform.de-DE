@@ -5,10 +5,10 @@ title: Data Governance – Übersicht
 topic-legacy: overview
 description: Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. Die Funktion spielt in Experience Platform auf verschiedenen Ebenen eine wichtige Rolle, wie z.B. bei Katalogisierung, Ermittlung der Datenherkunft, Datennutzungsbezeichnung, Datennutzungsrichtlinien und Steuerung der Nutzung von Daten für Marketing-Aktionen
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1431'
-ht-degree: 92%
+source-wordcount: '1479'
+ht-degree: 84%
 
 ---
 
@@ -17,6 +17,10 @@ ht-degree: 92%
 Eine der Kernfunktionen von Adobe Experience Platform ist es, Daten aus verschiedenen Unternehmenssystemen zusammenzuführen, damit Marketing-Experten Kunden besser identifizieren, verstehen und ansprechen können. Diese Daten können Nutzungsbeschränkungen unterliegen, die von Ihrem Unternehmen oder durch gesetzliche Bestimmungen festgelegt werden. Daher müssen Sie dafür sorgen, dass Ihre Datenoperationen in [!DNL Platform] mit den Datennutzungsrichtlinien konform sind.
 
 Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. Die Funktion spielt in [!DNL Experience Platform] auf verschiedenen Ebenen eine wichtige Rolle, beispielsweise bei der Katalogisierung, bei der Ermittlung der Datenherkunft, bei Datennutzungskennzeichnungen, bei Datennutzungsrichtlinien und bei der Steuerung der Nutzung von Daten für Marketing-Aktionen.
+
+>[!NOTE]
+>
+>In Experience Platform befasst sich Data Governance nur mit der Verwendung oder Aktivierung von Daten, unabhängig davon, welcher Benutzer die Aktion durchführt. Informationen dazu, wie Sie den Zugriff auf bestimmte Datenfelder für bestimmte Platform-Benutzer in Ihrer Organisation steuern, finden Sie in der Dokumentation unter [attributbasierte Zugriffssteuerung](../access-control/abac/overview.md) anstatt.
 
 ## Data Governance-Rollen
 
@@ -112,12 +116,12 @@ In der folgenden Tabelle sind Schlüsselbegriffe im Zusammenhang mit der Data Go
 | **Feldtitel** | Feldtitel sind Data Governance-Bezeichnungen, die entweder von einem Datensatz übernommen oder direkt auf ein Feld angewendet werden.  Auf ein Feld angewendete Data Governance-Beschriftungen werden nicht bis zu einem Datensatz vererbt. |
 | **Geofence** | Eine „Geofence“ ist eine virtuelle geografische Grenze, die durch GPS- oder RFID-Technologie definiert wird und Software in die Lage versetzt, eine Antwort auszulösen, wenn ein Mobilgerät ein bestimmtes Gebiet erreicht oder verlässt. |
 | **Identitätsbezeichnungen** | Identitätsbezogene „I“-Bezeichnungen dienen der Kategorisierung von Daten, mit denen sich eine bestimmte Person identifizieren oder kontaktieren lässt. |
-| **Interessenbasiertes Targeting** | Interessenbasiertes Targeting, auch Personalisierung genannt, findet statt, wenn die folgenden drei Bedingungen erfüllt sind: Daten, die vor Ort erfasst werden, dienen dazu, Rückschlüsse über das Interesse eines Benutzers zu ziehen, werden in einem anderen Kontext verwendet (z. B. in einer anderen Site oder App, also „offsite“) und dienen dazu festzulegen, welche Inhalte oder Anzeigen auf Grundlage der Rückschlüsse bereitgestellt werden. |
+| **Interessenbasiertes Targeting** | Eine interessensbasierte Zielgruppenbestimmung, auch Personalisierung genannt, tritt auf, wenn die folgenden drei Bedingungen erfüllt sind: Daten, die vor Ort erfasst werden, dienen dazu, Rückschlüsse auf das Interesse der Benutzer zu ziehen, werden in einem anderen Kontext verwendet, z. B. auf einer anderen Site oder App (außerhalb der Site) und werden verwendet, um anhand dieser Rückschlüsse festzulegen, welche Inhalte oder Anzeigen bereitgestellt werden. |
 | **Marketing-Aktion** | Eine Marketing-Aktion ist im Kontext von Data Governance eine Aktion, die ein Datennutzer von [!DNL Experience Platform] ergreift und bei der geprüft werden muss, ob gegen Datennutzungsrichtlinien verstoßen wurde. |
 | **Richtlinie** | Im Data Governance-Framework ist eine Richtlinie eine Regel, die beschreibt, welche Marketing-Aktionen für bestimmte Daten zulässig oder nicht. |
-| **Bezeichnungen für vertrauliche Daten** | Vertrauliche „S“-Bezeichnungen (sensitive) dienen dazu, Daten zu kategorisieren, die Sie und Ihre Organisation als vertraulich betrachten. |
+| **Bezeichnungen für vertrauliche Daten** | Vertrauliche &quot;S&quot;-Beschriftungen werden verwendet, um Daten zu kategorisieren, die Sie und Ihre Organisation für vertraulich halten. |
 
-## Zusätzliche Ressourcen
+## Weitere Ressourcen
 
 Im folgenden Video werden die Komponenten des Data Governance-Frameworks erklärt.
 

@@ -5,10 +5,10 @@ title: Automatische Richtliniendurchsetzung
 topic-legacy: guide
 description: In diesem Dokument wird erläutert, wie Datennutzungsrichtlinien automatisch erzwungen werden, wenn in Experience Platform Segmente für Ziele aktiviert werden.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 5776c691b7f3ec4cb544de59cf6beef162285399
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1700'
-ht-degree: 66%
+source-wordcount: '1727'
+ht-degree: 64%
 
 ---
 
@@ -16,9 +16,13 @@ ht-degree: 66%
 
 >[!IMPORTANT]
 >
->Die automatisierte Richtliniendurchsetzung ist nur für Unternehmen verfügbar, die **Adobe Gesundheitsschild** oder **Adobe Privacy &amp; Security Shield**.
+>Die automatische Richtliniendurchsetzung ist nur für Unternehmen verfügbar, die **Adobe Gesundheitsschild** oder **Adobe Privacy &amp; Security Shield**.
 
-Nachdem Sie Daten gekennzeichnet und Nutzungsrichtlinien definiert haben, können Sie die Einhaltung von Datennutzungsrichtlinien erzwingen. Beim Aktivieren von Zielgruppensegmenten in Zielen setzt Adobe Experience Platform automatisch Nutzungsrichtlinien durch, falls Verstöße auftreten sollten.
+Sobald Daten gekennzeichnet und Datennutzungsrichtlinien definiert sind, können Sie die Einhaltung von Datennutzungsrichtlinien durchsetzen. Beim Aktivieren von Zielgruppensegmenten in Zielen setzt Adobe Experience Platform automatisch Nutzungsrichtlinien durch, falls Verstöße auftreten sollten.
+
+>[!NOTE]
+>
+>Dieses Dokument konzentriert sich auf die Durchsetzung von Data Governance- und Zustimmungsrichtlinien. Informationen zu Zugriffssteuerungsrichtlinien finden Sie in der Dokumentation unter [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md).
 
 ## Voraussetzungen
 

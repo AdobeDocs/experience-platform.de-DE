@@ -1,18 +1,22 @@
 ---
 keywords: Experience Platform; Startseite; beliebte Themen; Zugriffskontrolle; attributbasierte Zugriffskontrolle; ABAC
-title: Attributbasierte Zugriffssteuerung Erstellen einer Richtlinie
-description: Dieses Dokument enthält Informationen zum Verwalten von Richtlinien über die Benutzeroberfläche "Berechtigungen"in Adobe Experience Cloud
+title: Richtlinien zur Zugriffssteuerung verwalten
+description: Dieses Dokument enthält Informationen zum Verwalten von Zugriffskontrollrichtlinien über die Benutzeroberfläche "Berechtigungen"in Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 1a755fa5480e036bde50617f01440cfabbaf64c2
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '726'
 ht-degree: 0%
 
 ---
 
-# Richtlinien verwalten
+# Richtlinien zur Zugriffskontrolle verwalten
 
-Richtlinien sind Aussagen, die Attribute zusammenbringen, um zulässige und unzulässige Handlungen festzustellen. Richtlinien können lokal oder global sein und andere Richtlinien überschreiben.
+Zugriffskontrollrichtlinien sind Anweisungen, die Attribute zusammenführen, um zulässige und unzulässige Maßnahmen festzulegen. Zugriffsrichtlinien können entweder lokal oder global sein und andere Richtlinien überschreiben.
+
+>[!IMPORTANT]
+>
+>Zugriffsrichtlinien dürfen nicht mit Datennutzungsrichtlinien verwechselt werden, die steuern, wie Daten in Adobe Experience Platform verwendet werden, anstatt welche Benutzer in Ihrem Unternehmen Zugriff darauf haben. Siehe Handbuch zum Erstellen [Datennutzungsrichtlinien](../../../data-governance/policies/create.md) für weitere Informationen.
 
 ## Neue Richtlinie erstellen
 

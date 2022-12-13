@@ -5,10 +5,10 @@ title: Handbuch zur Richtlinien-Service-API
 topic-legacy: developer guide
 description: Die Richtlinien-Service-API ermöglicht es Entwicklern, Datennutzungskennzeichnungen und -richtlinien in Experience Platform zu verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 100%
+source-wordcount: '545'
+ht-degree: 86%
 
 ---
 
@@ -30,7 +30,13 @@ Marketing-Aktionen (auch als Marketing-Anwendungsfälle bezeichnet) im Rahmen de
 
 ## Richtlinien
 
-Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in [!DNL Experience Platform] ausführen bzw. nicht ausführen dürfen. Eine Richtlinie wird wie folgt definiert:
+Data Governance-Richtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in [!DNL Experience Platform].
+
+>[!NOTE]
+>
+>Data Governance-Richtlinien dürfen nicht mit Zugriffssteuerungsrichtlinien verwechselt werden, die die spezifischen Datenattribute festlegen, auf die bestimmte Platform-Benutzer in Ihrer Organisation zugreifen können. Siehe Handbuch unter [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md) für weitere Informationen.
+
+Eine Data Governance-Richtlinie wird wie folgt definiert:
 
 1. Eine bestimmte Marketing-Aktion
 1. Die Datennutzungsbeschriftung(en), für die diese Aktion nicht ausgeführt werden darf

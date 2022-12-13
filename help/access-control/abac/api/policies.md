@@ -4,7 +4,7 @@ solution: Experience Platform
 title: API-Endpunkt "Access Control Policies"
 description: Mit dem Endpunkt /policies in der API für die attributbasierte Zugriffssteuerung können Sie Richtlinien in Adobe Experience Platform programmgesteuert verwalten.
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '1412'
 ht-degree: 10%
@@ -17,7 +17,7 @@ Zugriffskontrollrichtlinien sind Anweisungen, die Attribute zusammenführen, um 
 
 >[!IMPORTANT]
 >
->Dieser Endpunkt darf nicht mit der `/policies` -Endpunkt im [Data Governance-API](../../../data-governance/api/policies.md), der zur Verwaltung von Datennutzungsrichtlinien verwendet wird.
+>Dieser Endpunkt darf nicht mit der `/policies` -Endpunkt im [Policy Service-API](../../../data-governance/api/policies.md), der zur Verwaltung von Datennutzungsrichtlinien verwendet wird.
 
 ## Erste Schritte
 

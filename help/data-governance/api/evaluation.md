@@ -5,16 +5,16 @@ title: API-Endpunkte für die Richtlinienauswertung
 topic-legacy: developer guide
 description: Nachdem Marketing-Aktionen erstellt und Richtlinien definiert wurden, können Sie mit der Policy Service-API bewerten, ob Richtlinien durch bestimmte Aktionen verletzt werden. Die zurückgegebenen Beschränkungen bestehen aus einer Reihe von Richtlinien, gegen die verstoßen werden würde, wenn die Marketing-Aktion für die angegebenen Daten mit Datennutzungsbezeichnungen ausgeführt wird.
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1540'
-ht-degree: 100%
+source-wordcount: '1542'
+ht-degree: 98%
 
 ---
 
 # Endpunkte für die Richtlinienauswertung
 
-Nachdem Marketing-Aktionen erstellt und Richtlinien definiert wurden, können Sie mit der[!DNL Policy Service]-API auswerten, ob Richtlinien durch bestimmte Aktionen verletzt werden. Die zurückgegebenen Beschränkungen bestehen aus einer Reihe von Richtlinien, gegen die verstoßen werden würde, wenn die Marketing-Aktion für die angegebenen Daten mit Datennutzungsbezeichnungen ausgeführt wird.
+Nachdem Marketing-Aktionen erstellt und Datennutzungsrichtlinien definiert wurden, können Sie die [!DNL Policy Service] API zur Bewertung, ob Richtlinien durch bestimmte Aktionen verletzt werden. Die zurückgegebenen Beschränkungen bestehen aus einer Reihe von Richtlinien, gegen die verstoßen werden würde, wenn die Marketing-Aktion für die angegebenen Daten mit Datennutzungsbezeichnungen ausgeführt wird.
 
 Standardmäßig werden nur Richtlinien, deren Status auf `ENABLED` gesetzt ist, in die Bewertung einbezogen. Sie können jedoch den Abfrageparameter `?includeDraft=true` verwenden, um auch `DRAFT`-Richtlinien in die Auswertung einzubeziehen.
 

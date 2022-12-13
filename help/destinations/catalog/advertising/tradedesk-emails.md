@@ -2,10 +2,10 @@
 title: (Beta) Verbindung zwischen Trade Desk und CRM
 description: Aktivieren Sie Profile in Ihrem Trade Desk-Konto für Zielgruppen-Targeting und -Unterdrückung basierend auf CRM-Daten.
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: a761ab634dce31bd0a06297f703d9d815c2f0ea2
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '1041'
-ht-degree: 11%
+ht-degree: 17%
 
 ---
 
@@ -39,11 +39,11 @@ Je nach der Art der IDs, die Sie in Adobe Experience Platform erfassen, müssen 
 
 ## Unterstützte Identitäten {#supported-identities}
 
-[!DNL The Trade Desk] unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Weitere Informationen [identities](/help/identity-service/namespaces.md).
+[!DNL The Trade Desk] unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md).
 
 Sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen werden von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt Anforderungen für die ID-Zuordnung und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-E-Mail-Adressen.
 
-| Zielgruppenidentität | Beschreibung | Zu beachten |
+| Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
 | E-Mail | E-Mail-Adressen (Klartext) | Wählen Sie die `Email` Zielidentität, wenn Ihre Quellidentität ein E-Mail-Namespace oder -Attribut ist. |
 | Email_LC_SHA256 | E-Mail-Adressen müssen mit SHA256 gehasht und in Kleinbuchstaben geschrieben werden. Achten Sie darauf, [E-Mail-Normalisierung](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) Regeln erforderlich. Sie können diese Einstellung später nicht ändern. | Wählen Sie die `Email_LC_SHA256` Zielidentität, wenn Ihre Quellidentität ein Namespace oder ein Attribut vom Typ E-Mail_LC_SHA256 ist. |
@@ -64,9 +64,9 @@ Wenn Sie die E-Mail-Adressen selbst hash möchten, stellen Sie sicher, dass Sie 
    * Der Punkt (. (ASCII-Code 46). Beispiel: normalisieren `jane.doe@gmail.com` nach `janedoe@gmail.com`.
    * Das Pluszeichen (+ (ASCII-Code 43)) und alle nachfolgenden Zeichen. Beispiel: normalisieren `janedoe+home@gmail.com` nach `janedoe@gmail.com`.
 
-## Exportart und -frequenz {#export-type-frequency}
+## Exporttyp und -häufigkeit {#export-type-frequency}
 
-Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten stehenden Tabelle.
+Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
@@ -75,7 +75,7 @@ Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten steh
 
 {style=&quot;table-layout:auto&quot;}
 
-## Herstellen einer Verbindung mit der Datenbank {#connect}
+## Herstellen einer Verbindung mit dem Ziel {#connect}
 
 ### Auf Ziel authentifizieren {#authenticate}
 
@@ -86,8 +86,8 @@ Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten steh
 Bevor Sie Zielgruppendaten an ein Ziel senden oder aktivieren können, müssen Sie eine Verbindung zu Ihrer eigenen Zielplattform herstellen. Beim [Einrichten](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
 * **[!UICONTROL Kontotyp]**: Bitte wählen Sie die **[!UICONTROL Vorhandenes Konto]** -Option.
-* **[!UICONTROL Name]**: Ein Name, mit dem Sie dieses Ziel in der Zukunft erkennen werden.
-* **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen dabei hilft, dieses Ziel in der Zukunft zu identifizieren.
+* **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
+* **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
 * **[!UICONTROL Advertiser-ID]**: Ihre [!DNL Trade Desk Advertiser ID], die entweder von Ihrer [!DNL Trade Desk] Kundenbetreuer oder finden Sie unter [!DNL Advertiser Preferences] im [!DNL Trade Desk] Benutzeroberfläche.
 
 Beim Herstellen einer Verbindung zum Ziel ist das Festlegen einer Data Governance-Richtlinie vollständig optional. Lesen Sie die Experience Platform [Data Governance - Übersicht](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=en) für weitere Details.
@@ -131,4 +131,4 @@ Zielgruppenfelder auswählen:
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Detaillierte Informationen zur [!DNL Adobe Experience Platform] erzwingt Data Governance, siehe [Data Governance - Übersicht](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Ausführliche Informationen darüber, wie [!DNL Adobe Experience Platform] Data Governance erzwingt, finden Sie unter [Data Governance – Übersicht](/help/data-governance/home.md).
