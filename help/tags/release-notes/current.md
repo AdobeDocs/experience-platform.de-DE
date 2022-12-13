@@ -2,14 +2,20 @@
 title: Versionshinweise für Tags und Ereignisweiterleitung
 description: Die neuesten Versionshinweise für Tags und Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: 892d22a88546ff270af4f5b253a013015349898b
 workflow-type: tm+mt
-source-wordcount: '350'
-ht-degree: 36%
+source-wordcount: '418'
+ht-degree: 40%
 
 ---
 
 # Versionshinweise für Tags und Ereignisweiterleitung
+
+## 23. November 2022
+
+* **[!DNL AWS]Erweiterung für die Ereignisweiterleitung**: Sie können jetzt Daten an senden [!DNL Amazon Web Services] ([!DNL AWS]) mithilfe einer [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) -Erweiterung. Weiterführende Informationen dazu finden Sie in der [[!DNL AWS] Übersicht der Erweiterungen](../../tags/extensions/server/aws/overview.md).
+* **[!DNL Google Ads Enhanced Conversions]-Erweiterung für die Ereignisweiterleitung**: Sie können jetzt Konversionsdaten an senden [!DNL Google Ads] mit [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) -Erweiterung. Weiterführende Informationen dazu finden Sie in der [[!DNL Google Ads Enhanced Conversions] Übersicht der Erweiterungen](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md).
+* **[!DNL Microsoft Azure]-Erweiterung für die Ereignisweiterleitung**: Sie können jetzt Daten mithilfe einer Erweiterung zur [!DNL Microsoft Azure]Ereignisweiterleitung[ an ](../../tags/ui/event-forwarding/overview.md) senden. Weiterführende Informationen dazu finden Sie in der [[!DNL Microsoft Azure] Übersicht der Erweiterungen](../../tags/extensions/server/azure/overview.md).
 
 ## 26. Oktober 2022
 
