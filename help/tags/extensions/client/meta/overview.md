@@ -1,9 +1,9 @@
 ---
 title: Übersicht über Meta-Pixel-Erweiterung
 description: Erfahren Sie mehr über die Meta-Pixel-Tag-Erweiterung in Adobe Experience Platform.
-source-git-commit: 87376172f89858bfa883084461544a2c50ba5009
+source-git-commit: a47e35a1b8c7ce2b0fa4ffe30fcdc7d22fc0f4c5
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '760'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,9 @@ ht-degree: 2%
 
 Die [!DNL Meta Pixel] Tag-Erweiterung ermöglicht Ihnen die Nutzung von [!DNL Pixel] -Funktionen in Ihren clientseitigen Tag-Bibliotheken. In diesem Dokument wird beschrieben, wie Sie die Erweiterung installieren und ihre Funktionen in einer [Regel](../../../ui/managing-resources/rules.md).
 
-<!-- (To include when Conversions API extension doc is published)
 >[!NOTE]
 >
->If you are trying to send server-side events to [!DNL Meta] rather than from the client side, use the [[!DNL Meta Conversions API] extension](../../server/meta/overview.md) instead.
--->
+>Wenn Sie versuchen, serverseitige Ereignisse an zu senden [!DNL Meta] anstelle der Client-Seite verwenden Sie die [[!DNL Meta Conversions API] Erweiterung](../../server/meta/overview.md) anstatt.
 
 ## Voraussetzungen
 
