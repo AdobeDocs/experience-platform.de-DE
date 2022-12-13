@@ -5,7 +5,7 @@ title: Einschränkungen für XDM-Feldtypen
 topic-legacy: overview
 description: Eine Referenz für Feldtypbegrenzungen im Experience-Datenmodell (XDM), einschließlich der anderen Serialisierungsformate, denen sie zugeordnet werden können, und wie Sie Ihre eigenen Feldtypen in der API definieren können.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: a3b4dd65b22bb04bcba52c44a09030f51454a9c8
+source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 13%
@@ -130,7 +130,7 @@ In den folgenden Abschnitten wird beschrieben, wie die einzelnen XDM-Typen ander
 >
 >Unter den in den folgenden Tabellen aufgeführten Standard-XDM-Typen ist die [!UICONTROL Zuordnung] Typ ist ebenfalls enthalten. Maps werden in Standardschemata verwendet, wenn Daten als Schlüssel dargestellt werden, die bestimmten Werten zugeordnet sind, oder wenn Schlüssel vernünftigerweise nicht in ein statisches Schema aufgenommen werden können und als Datenwerte behandelt werden müssen.
 >
->Viele standardmäßige XDM-Komponenten verwenden Zuordnungstypen. Sie können auch [Definieren von benutzerdefinierten Zuordnungsfeldern](../tutorials/custom-fields-api.md#maps) falls gewünscht. Die Aufnahme des Zuordnungstyps in die folgenden Tabellen soll Ihnen dabei helfen festzustellen, wie Sie Ihre vorhandenen Daten XDM zuordnen können, wenn sie derzeit in einem der unten aufgeführten Formate gespeichert sind.
+>Viele standardmäßige XDM-Komponenten verwenden Zuordnungstypen. Sie können auch [Definieren von benutzerdefinierten Zuordnungsfeldern](../tutorials/custom-fields-api.md#custom-maps) falls gewünscht. Die Aufnahme des Zuordnungstyps in die folgenden Tabellen soll Ihnen dabei helfen festzustellen, wie Sie Ihre vorhandenen Daten XDM zuordnen können, wenn sie derzeit in einem der unten aufgeführten Formate gespeichert sind.
 
 ### Parquet, Spark SQL und Java {#parquet}
 

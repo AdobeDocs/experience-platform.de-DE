@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Datentypen-API-Endpunkt
 description: Mit dem Endpunkt /datatypes in der Schema Registry-API können Sie XDM-Datentypen in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 342da62b83d0d804b31744a580bcd3e38412ea51
 workflow-type: tm+mt
-source-wordcount: '1168'
-ht-degree: 18%
+source-wordcount: '1236'
+ht-degree: 15%
 
 ---
 
@@ -233,7 +233,11 @@ POST /tenant/datatypes
 
 **Anfrage**
 
-Für die Definition von Datentypen sind weder die Felder `meta:extends` und `meta:intendedToExtend` erforderlich, noch müssen Felder zur Vermeidung von Konflikten verschachtelt werden.
+Im Gegensatz zu Feldergruppen erfordert das Definieren eines Datentyps keine `meta:extends` oder `meta:intendedToExtend` -Felder und Felder müssen nicht verschachtelt sein, um Kollisionen zu vermeiden.
+
+Bei der Definition der Feldstruktur des Datentyps selbst können Sie Primitive-Typen verwenden (wie `string` oder `object`) oder Sie können andere vorhandene Datentypen über referenzieren. `$ref` -Attribute. Siehe Handbuch unter [Definieren benutzerdefinierter XDM-Felder in der API](../tutorials/custom-fields-api.md) für ausführliche Anleitungen zum erwarteten Format für verschiedene XDM-Feldtypen.
+
+Die folgende Anfrage erstellt einen Objektdatentyp &quot;Property Construction&quot;mit Untereigenschaften `yearBuilt`, `propertyType`und `location`:
 
 ```SHELL
 curl -X POST \
@@ -244,17 +248,17 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "title":"Property Construction",
-        "description":"Information related to the property construction",
-        "type":"object",
+        "title": "Property Construction",
+        "description": "Information related to the property construction",
+        "type": "object",
         "properties": {
           "yearBuilt": {
-            "type":"integer",
+            "type": "integer",
             "title": "Year Built",
             "description": "The year the property was constructed."
           },
           "propertyType": {
-            "type":"string",
+            "type": "string",
             "title": "Property Type",
             "description": "Type of building or structure in which the property exists.",
             "enum": [
@@ -267,8 +271,13 @@ curl -X POST \
               "mall": "Mall Space",
               "shoppingCenter": "Shopping Center"
             }
+          },
+          "location": {
+            "title": "Location",
+            "description": "The physical location of the property.",
+            "$ref": "https://ns.adobe.com/xdm/common/address"
           }
-        } 
+        }
       }'
 ```
 
@@ -278,8 +287,8 @@ Bei erfolgreicher Antwort wird der HTTP-Status-Code 201 (Erstellung bestätigt)
 
 ```JSON
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/datatypes/7602bc6e97e5786a31c95d9e6531a1596687433451d97bc1",
-  "meta:altId": "_{TENANT_ID}.datatypes.7602bc6e97e5786a31c95d9e6531a1596687433451d97bc1",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/datatypes/669ffcc61cf5e94e8640dbe6a15f0f24eb3cd1ddbbfb6b36",
+  "meta:altId": "_{TENANT_ID}.datatypes.669ffcc61cf5e94e8640dbe6a15f0f24eb3cd1ddbbfb6b36",
   "meta:resourceType": "datatypes",
   "version": "1.0",
   "title": "Property Construction",
@@ -307,25 +316,34 @@ Bei erfolgreicher Antwort wird der HTTP-Status-Code 201 (Erstellung bestätigt)
         "shoppingCenter": "Shopping Center"
       },
       "meta:xdmType": "string"
+    },
+    "location": {
+      "title": "Location",
+      "description": "The physical location of the property.",
+      "$ref": "https://ns.adobe.com/xdm/common/address",
+      "type": "object",
+      "meta:xdmType": "object"
     }
   },
-  "refs": [],
+  "refs": [
+    "https://ns.adobe.com/xdm/common/address"
+  ],
   "imsOrg": "{ORG_ID}",
   "meta:extensible": true,
   "meta:abstract": true,
   "meta:xdmType": "object",
   "meta:registryMetadata": {
-    "repo:createdDate": 1604524729435,
-    "repo:lastModifiedDate": 1604524729435,
+    "repo:createdDate": 1670885230789,
+    "repo:lastModifiedDate": 1670885230789,
     "xdm:createdClientId": "{CLIENT_ID}",
     "xdm:lastModifiedClientId": "{CLIENT_ID}",
     "xdm:createdUserId": "{USER_ID}",
     "xdm:lastModifiedUserId": "{USER_ID}",
-    "eTag": "1c838764342756868ca1297869f582a38d15f03ed0acfc97fda7532d22e942c7",
-    "meta:globalLibVersion": "1.15.4"
+    "eTag": "d3cc803a1f8daa06b7c150d882bd337d88f4d5d5f08d36cfc4c2849dc0255f7e",
+    "meta:globalLibVersion": "1.38.3.1"
   },
   "meta:containerId": "tenant",
-  "meta:sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+  "meta:sandboxId": "1bd86660-c5da-11e9-93d4-6d5fc3a66a8e",
   "meta:sandboxType": "production",
   "meta:tenantNamespace": "_{TENANT_ID}"
 }
@@ -371,12 +389,12 @@ curl -X PUT \
         "type": "object",
         "properties": {
           "yearBuilt": {
-            "type":"integer",
+            "type": "integer",
             "title": "Year Built",
             "description": "The year the property was constructed."
           },
           "propertyType": {
-            "type":"string",
+            "type": "string",
             "title": "Property Type",
             "description": "Type of building or structure in which the property exists.",
             "enum": [
@@ -533,7 +551,7 @@ Die Antwort zeigt, dass beide Vorgänge erfolgreich durchgeführt wurden. Die `d
     "property": {
       "properties": {
         "_{TENANT_ID}": {
-        "type":"object",
+        "type": "object",
         "properties": {
             "propertyName": {
               "type": "string",
