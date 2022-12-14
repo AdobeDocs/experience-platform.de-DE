@@ -5,9 +5,9 @@ title: Handbuch zur Streaming-Segmentierung der Benutzeroberfläche
 topic-legacy: ui guide
 description: Mit der Streaming-Segmentierung auf Adobe Experience Platform können Sie die Segmentierung nahezu in Echtzeit durchführen und sich dabei auf den Datenreichtum konzentrieren. Mit Streaming-Segmentierung erfolgt jetzt eine Segmentqualifizierung, wenn Daten in Platform landen. So wird die Notwendigkeit verringert, Segmentierungsaufträge zu planen und auszuführen. Mit dieser Funktion können die meisten Segmentregeln jetzt ausgewertet werden, wenn die Daten an Platform übergeben werden. Das bedeutet, dass die Segmentzugehörigkeit ohne Ausführung geplanter Segmentierungsaufträge auf dem neuesten Stand gehalten wird.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 39e3b4df3e44200fd800b501ea7b7e06bf828054
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1371'
 ht-degree: 0%
 
 ---
@@ -49,6 +49,8 @@ Eine Segmentdefinition **not** für Streaming-Segmentierung in den folgenden Sze
 
 - Die Segmentdefinition umfasst Adobe Audience Manager-Segmente oder -Eigenschaften (AAM).
 - Die Segmentdefinition umfasst mehrere Entitäten (Abfragen mit mehreren Entitäten).
+- Die Segmentdefinition umfasst eine Kombination aus einem einzelnen Ereignis und einer `inSegment` -Ereignis.
+   - Wenn das Segment jedoch im `inSegment` Ereignis nur Profil ist, wird die Segmentdefinition **will** für Streaming-Segmentierung aktiviert sein.
 
 Beachten Sie bei der Streaming-Segmentierung die folgenden Richtlinien:
 

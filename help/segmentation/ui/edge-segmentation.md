@@ -5,9 +5,9 @@ title: UI-Anleitung zur Edge-Segmentierung
 topic-legacy: ui guide
 description: Bei der Edge-Segmentierung können Segmente in Platform sofort am Rand ausgewertet werden, was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 95ffd09b81b49c8c7d65695a2fbc0fcd97b12c9e
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '939'
 ht-degree: 1%
 
 ---
@@ -26,11 +26,9 @@ Mit der Edge-Segmentierung können Segmente in Adobe Experience Platform sofort 
 >
 > Darüber hinaus berücksichtigt die Edge-Segmentierungsmodul nur Anforderungen an den Edge, an dem **one** mit Primärkennzeichnung versehene Identität, die mit nicht Edge-basierten primären Identitäten konsistent ist.
 
-## Kantensegmentierungs-Abfragetypen
+## Kantensegmentierungs-Abfragetypen {#query-types}
 
 Derzeit können nur ausgewählte Abfragetypen mit Kantensegmentierung ausgewertet werden. Die folgenden Abschnitte enthalten eine Liste von Abfragetypen, die mit der Kantensegmentierung ausgewertet werden können und die derzeit nicht unterstützt werden.
-
-### Unterstützte Abfragetypen {#query-types}
 
 Eine Abfrage kann mit Kantensegmentierung ausgewertet werden, wenn sie eines der in der folgenden Tabelle aufgeführten Kriterien erfüllt.
 
@@ -54,6 +52,11 @@ Eine Abfrage kann mit Kantensegmentierung ausgewertet werden, wenn sie eines der
 | Mehrere Ereignisse mit einem Profil innerhalb eines 24-Stunden-Zeitfensters | Jede Segmentdefinition, die auf ein oder mehrere Profilattribute und mehrere Ereignisse verweist, die innerhalb eines Zeitfensters von 24 Stunden auftreten. | Personen aus den USA, die die Homepage besucht haben **und** die Checkout-Seite innerhalb der letzten 24 Stunden besucht haben. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
 | Segment von Segmenten | Jede Segmentdefinition, die einen oder mehrere Batch- oder Streaming-Segmente enthält. | Personen, die in den USA leben und sich im Segment &quot;vorhandenes Segment&quot;befinden. | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
 | Abfrage, die auf eine Zuordnung verweist | Jede Segmentdefinition, die auf eine Zuordnung von Eigenschaften verweist. | Personen, die ihrem Warenkorb auf der Grundlage externer Segmentdaten hinzugefügt haben. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
+
+Eine Segmentdefinition **not** für die Kantensegmentierung in den folgenden Szenarien aktiviert sein:
+
+- Die Segmentdefinition umfasst eine Kombination aus einem einzelnen Ereignis und einer `inSegment` -Ereignis.
+   - Wenn das Segment jedoch im `inSegment` Ereignis nur Profil ist, wird die Segmentdefinition **will** für die Kantensegmentierung aktiviert sein.
 
 ## Nächste Schritte
 

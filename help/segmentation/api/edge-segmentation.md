@@ -5,9 +5,9 @@ title: Edge-Segmentierung mithilfe der API
 topic-legacy: developer guide
 description: Dieses Dokument enthält Beispiele für die Verwendung der Kantensegmentierung mit der Adobe Experience Platform Segmentation Service-API.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: d2196d4d9cae4bdec160ce0c028d354a0db21cb5
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1187'
 ht-degree: 5%
 
 ---
@@ -60,6 +60,11 @@ Damit ein Segment mithilfe der Kantensegmentierung bewertet werden kann, muss di
 | Abfrage, die auf eine Zuordnung verweist | Jede Segmentdefinition, die auf eine Zuordnung von Eigenschaften verweist. | Personen, die ihrem Warenkorb auf der Grundlage externer Segmentdaten hinzugefügt haben. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
 Zusätzlich wird das Segment **must** an eine Zusammenführungsrichtlinie gebunden sein, die an der Kante aktiv ist. Weitere Informationen zu Zusammenführungsrichtlinien finden Sie im Abschnitt [Leitfaden zu Zusammenführungsrichtlinien](../../profile/api/merge-policies.md).
+
+Eine Segmentdefinition **not** für die Kantensegmentierung in den folgenden Szenarien aktiviert sein:
+
+- Die Segmentdefinition umfasst eine Kombination aus einem einzelnen Ereignis und einer `inSegment` -Ereignis.
+   - Wenn das Segment jedoch im `inSegment` Ereignis nur Profil ist, wird die Segmentdefinition **will** für die Kantensegmentierung aktiviert sein.
 
 ## Alle für die Kantensegmentierung aktivierten Segmente abrufen
 
