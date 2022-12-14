@@ -2,9 +2,9 @@
 title: Definieren von XDM-Feldern in der Schema Registry-API
 description: Erfahren Sie, wie Sie beim Erstellen benutzerdefinierter Experience-Datenmodell (XDM)-Ressourcen in der Schema Registry-API verschiedene Felder definieren.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 0947eb38bdb18cb3783723cb11be79d3d32a3b76
+source-git-commit: 6277725cd69bc94325d3584177742df1a7fd4f95
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1199'
 ht-degree: 3%
 
 ---
@@ -79,7 +79,7 @@ Sie können optional mithilfe der folgenden zusätzlichen Eigenschaften einschr�
 }
 ```
 
-Sie können optionale kundenorientierte Beschriftungen für jeden Wert unter `meta:enum` -Eigenschaft, wobei jeder Titel einem entsprechenden `enum` -Wert.
+Sie können optional für jeden Wert unter einer `meta:enum` -Eigenschaft, wobei jede Bezeichnung einem entsprechenden Wert unter `enum`.
 
 ```json
 "sampleField": {
