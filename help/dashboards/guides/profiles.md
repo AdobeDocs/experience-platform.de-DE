@@ -4,10 +4,10 @@ title: Handbuch zum Profil-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c4457d82c66be382ebb8619ce248f282fb45ed3a
+source-git-commit: af01ac288a8afe59105be5859b2d40de5e346963
 workflow-type: tm+mt
-source-wordcount: '3416'
-ht-degree: 9%
+source-wordcount: '3381'
+ht-degree: 8%
 
 ---
 
@@ -275,14 +275,19 @@ Die [!UICONTROL Trend für nicht segmentierte Profile] -Widget bietet eine Linie
 
 ### [!UICONTROL Nicht segmentierte Profile nach Identität] {#unsegmented-profiles-by-identity}
 
+>!![NOTE]
+Das Widget Nicht segmentierte Profile nach Identität wird seit Oktober 2022 nicht mehr unterstützt und ist nicht mehr verfügbar.
+
+<!-- 
+
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilesbyidentity"
->title="Nicht segmentierte Profile nach Identität"
->abstract="Dieses Widget kategorisiert die Gesamtzahl der nicht segmentierten Profile anhand ihrer eindeutigen Kennung."
+>title="Unsegmented profiles by identity"
+>abstract="This widget categorizes the total number of unsegmented profiles by their unique identifier."
 
-Die [!UICONTROL Nicht segmentierte Profile nach Identität] Widget kategorisiert die Gesamtzahl der nicht segmentierten Profile anhand ihrer eindeutigen Kennung. Die Daten werden in einem Balkendiagramm visualisiert, um einen einfachen Vergleich zu ermöglichen.
+The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart for ease of comparison. 
 
-![Das Widget Nicht segmentierte Profile nach Identität .](../images/profiles/unsegmented-profiles-by-identity.png)
+![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png) -->
 
 ### [!UICONTROL Zielgruppen] {#audiences}
 
@@ -318,8 +323,7 @@ Die [!UICONTROL Bericht &quot;Zielgruppenüberschneidung&quot;] angezeigt. Diese
 ![Das Berichtdialogfeld &quot;Zielgruppenüberschneidung&quot;.](../images/profiles/profiles-audience-overlap-report-dialog.png)
 
 >[!NOTE]
->
->Wählen Sie die **[!UICONTROL Überlappung]** Spaltenüberschrift verwenden, um die Rangfolge der Ergebnisse zwischen der höchsten und der niedrigsten bzw. der niedrigsten der höchsten zu ändern.
+Wählen Sie die **[!UICONTROL Überlappung]** Spaltenüberschrift verwenden, um die Rangfolge der Ergebnisse zwischen der höchsten und der niedrigsten bzw. der niedrigsten der höchsten zu ändern.
 
 Um den gesamten Bericht im PDF-Format herunterzuladen, wählen Sie das Optionsmenü (**`...`**) gefolgt von **[!UICONTROL Download]**.
 
