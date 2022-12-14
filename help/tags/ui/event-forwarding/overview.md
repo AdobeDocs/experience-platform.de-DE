@@ -3,10 +3,10 @@ title: Übersicht über die Ereignisweiterleitung
 description: Hier erfahren Sie mehr über Adobe Experience Platform, mit dessen Hilfe Sie über das Platform Edge-Netzwerk Aufgaben ausführen können, ohne dabei Ihre Tag-Implementierung zu ändern.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: d48b746b477ffa6977ce04b72fe77e8ddb95d691
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 96%
+source-wordcount: '996'
+ht-degree: 91%
 
 ---
 
@@ -89,7 +89,7 @@ In Tag-Regeln werden Datenelemente am Anfang und am Ende des Datenelementnamens 
 
 #### Sequenz von Regelaktionen {#action-sequencing}
 
-Der Abschnitt [!UICONTROL Aktionen] einer Ereignisweiterleitungsregel wird immer sequentiell ausgeführt. Stellen Sie also beim Speichern einer Regel sicher, dass die Reihenfolge der Aktionen korrekt ist. Diese Ausführungsreihenfolge kann im Gegensatz zu Tags nicht asynchron ausgeführt werden.
+Der Abschnitt [!UICONTROL Aktionen] einer Ereignisweiterleitungsregel wird immer sequentiell ausgeführt. Wenn eine Regel beispielsweise zwei Aktionen hat, beginnt die zweite Aktion erst nach Abschluss der vorherigen Aktion. (Und in den Fällen, in denen eine Antwort von einem Endpunkt erwartet wird, hat dieser Endpunkt reagiert.) Stellen Sie also beim Speichern einer Regel sicher, dass die Reihenfolge der Aktionen korrekt ist. Diese Ausführungssequenz kann nicht asynchron mit Tag-Regeln ausgeführt werden.
 
 ## Geheimnisse {#secrets}
 
