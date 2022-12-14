@@ -5,10 +5,10 @@ title: Anleitung zur Fehlerbehebung bei Query Service
 topic-legacy: troubleshooting
 description: Dieses Dokument enthält häufig gestellte Fragen und Antworten zu Query Service. Zu den Themen gehören der Datenexport, Tools von Drittanbietern und PSQL-Fehler.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 08272f72c71f775bcd0cd7fffcd2e4da90af9ccb
+source-git-commit: deb9f314d5eaadebe2f3866340629bad5f39c60d
 workflow-type: tm+mt
-source-wordcount: '3781'
-ht-degree: 4%
+source-wordcount: '4362'
+ht-degree: 3%
 
 ---
 
@@ -38,14 +38,19 @@ Dieser Abschnitt enthält Informationen zu Leistung, Beschränkungen und Prozess
 +++Antwort Eine potenzielle Ursache ist die Funktion zur automatischen Vervollständigung. Die Funktion verarbeitet bestimmte Metadatenbefehle, die den Editor gelegentlich bei der Abfragebearbeitung verlangsamen können.
 +++
 
-### Kann ich Postman für die Query Service-API verwenden?
+### Kann ich [!DNL Postman] für die Query Service-API?
 
-++ + Antwort Ja: Sie können alle Adobe API-Dienste mithilfe von Postman (einer kostenlosen Drittanbieteranwendung) visualisieren und damit interagieren. Beobachten Sie die [Postman-Setup-Handbuch](https://video.tv.adobe.com/v/28832) für schrittweise Anweisungen zum Einrichten eines Projekts in der Adobe Developer Console und zum Abrufen aller erforderlichen Anmeldeinformationen für die Verwendung mit Postman. Die offizielle Dokumentation finden Sie unter [Anleitung zum Starten, Ausführen und Freigeben von Postman-Sammlungen](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+++ + Antwort Ja: Sie können alle Adobe-API-Dienste mithilfe von visualisieren und mit ihnen interagieren. [!DNL Postman] (kostenlose Drittanbieteranwendung). Beobachten Sie die [[!DNL Postman] Setup-Handbuch](https://video.tv.adobe.com/v/28832) Schrittweise Anleitungen zum Einrichten eines Projekts in der Adobe Developer Console und zum Abrufen aller erforderlichen Anmeldeinformationen für die Verwendung mit [!DNL Postman]. Die offizielle Dokumentation finden Sie unter [Anleitung zum Starten, Ausführen und Freigeben [!DNL Postman] Sammlungen](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Gibt es eine Begrenzung für die maximale Anzahl von Zeilen, die von einer Abfrage über die Benutzeroberfläche zurückgegeben werden?
 
 ++ + Antwort Ja, Query Service wendet intern eine Beschränkung von 50.000 Zeilen an, es sei denn, extern wird eine explizite Begrenzung angegeben. Siehe die Leitlinien zu [interaktive Abfrageausführung](./best-practices/writing-queries.md#interactive-query-execution) für weitere Details.
++++
+
+### Kann ich Abfragen verwenden, um Zeilen zu aktualisieren?
+
++++Antwort In Batch-Abfragen wird das Aktualisieren einer Zeile im Datensatz nicht unterstützt.
 +++
 
 ### Gibt es eine Größenbeschränkung für die resultierende Ausgabe aus einer Abfrage?
@@ -77,6 +82,11 @@ SELECT * FROM customers LIMIT 0;
 ### Gibt es Probleme oder Auswirkungen auf die Leistung von Query Service, wenn mehrere Abfragen gleichzeitig ausgeführt werden?
 
 +++Antwort Nr. Query Service verfügt über eine Funktion zur automatischen Skalierung, die sicherstellt, dass gleichzeitige Abfragen keine merklichen Auswirkungen auf die Leistung des Dienstes haben.
++++
+
+### Kann ich reservierte Schlüsselwörter als Spaltennamen verwenden?
+
++++Antwort Es gibt bestimmte reservierte Schlüsselwörter, die nicht als Spaltenname verwendet werden können, z. B.: `ORDER`, `GROUP BY`, `WHERE`, `DISTINCT`. Wenn Sie diese Suchbegriffe verwenden möchten, müssen Sie diese Spalten maskieren.
 +++
 
 ### Wie finde ich einen Spaltennamen aus einem hierarchischen Datensatz?
@@ -451,6 +461,76 @@ WHERE T2.ID IS NULL
 ### Kann ich einen Datensatz mit einer CTAS-Abfrage mit einem doppelten Unterstrich erstellen, wie er in der Benutzeroberfläche angezeigt wird? Beispiel: `test_table_001`.
 
 ++ + Antwort Nein, dies ist eine absichtliche Einschränkung in der gesamten Experience Platform, die für alle Adobe-Dienste gilt, einschließlich Query Service. Ein Name mit zwei Unterstrichen ist als Schema- und Datensatzname zulässig, der Tabellenname für den Datensatz darf jedoch nur einen Unterstrich enthalten.
++++
+
+### Wie viele gleichzeitige Abfragen können gleichzeitig ausgeführt werden?
+
++++Antwort Es gibt keine Zeitbeschränkung für Abfragen, da Batch-Abfragen als Back-End-Aufträge ausgeführt werden. Es gibt jedoch eine Zeitüberschreitungsbegrenzung für Abfragen, die auf 24 Stunden festgelegt ist.
++++
+
+### Gibt es ein Aktivitäts-Dashboard, in dem Sie Abfrageaktivitäten und -status sehen können?
+
++++Antwort Es gibt Überwachungs- und Warnfunktionen, mit denen Sie sich über Abfrageaktivitäten und -status informieren können. Siehe [Auditprotokollintegration für Query Service](./data-governance/audit-log-guide.md) und [Abfrageprotokolle](./ui/overview.md#log) Dokumente für weitere Informationen.
++++
+
+### Gibt es eine Möglichkeit, Aktualisierungen rückgängig zu machen? Wenn beispielsweise ein Fehler auftritt oder einige Berechnungen beim Zurückschreiben von Daten in Platform neu konfiguriert werden müssen, wie sollte dieses Szenario behandelt werden?
+
++++Antwort Derzeit unterstützen wir keine Rollbacks oder Aktualisierungen auf diese Weise.
++++
+
+### Wie können Abfragen in Adobe Experience Platform optimiert werden?
+
++++Antwort Das System hat keine Indizes, da es keine Datenbank ist, aber andere Optimierungen an Ort und Stelle an den Datenspeicher gebunden sind. Die folgenden Optionen stehen zur Abstimmung Ihrer Abfragen zur Verfügung:
+
+- Ein zeitbasierter Filter für Zeitreihendaten.
+- Optimierter Push-Down für den strukturierten Datentyp.
+- Optimiertes Kosten- und Arbeitsspeicher-Push-down für Arrays und Zuordnungs-Datentypen.
+- Inkrementelle Verarbeitung mit Momentaufnahmen.
+- Ein beibehaltenes Datenformat.
++++
+
+### Können Anmeldungen auf bestimmte Aspekte von Query Service beschränkt werden oder ist dies eine &quot;alles oder nichts&quot;-Lösung?
+
++++ Query Service ist eine &quot;alles oder nichts&quot;-Lösung. Teilzugriff kann nicht gewährt werden.
++++
+
+### Kann ich einschränken, welche Daten Query Service verwenden kann, oder greift er einfach auf den gesamten Adobe Experience Platform Data Lake zu?
+
++++Antwort Ja, Sie können die Abfrage auf Datensätze mit schreibgeschütztem Zugriff beschränken.
++++
+
+### Welche anderen Optionen gibt es zum Einschränken der Daten, auf die Query Service zugreifen kann?
+
++++Antwort Es gibt drei Möglichkeiten, den Zugriff zu beschränken. Sie lauten wie folgt:
+
+- Verwenden Sie ausschließlich SELECT-Anweisungen und gewähren Sie Datensätzen Lesezugriff. Weisen Sie außerdem die Berechtigung zum Verwalten von Abfragen zu.
+- Verwenden Sie SELECT/INSERT/CREATE -Anweisungen und geben Sie Datensätzen Schreibzugriff. Weisen Sie außerdem die Berechtigung zur Verwaltung von Abfragen zu.
+- Verwenden Sie ein Integrationskonto mit den oben genannten Vorschlägen und weisen Sie die Berechtigung für die Abfrageintegration zu.
+
++++
+
+### Gibt es nach Rückgabe der Daten durch Query Service irgendwelche Prüfungen, die von Platform ausgeführt werden können, um sicherzustellen, dass keine geschützten Daten zurückgegeben wurden?
+
+- Query Service unterstützt eine attributbasierte Zugriffskontrolle. Sie können den Zugriff auf Daten auf Spalten-/Blattebene und/oder Strukturebene einschränken. Weitere Informationen zur attributbasierten Zugriffskontrolle finden Sie in der Dokumentation .
+
+### Kann ich einen SSL-Modus für die Verbindung zu einem Drittanbieter-Client angeben? Kann ich beispielsweise &quot;verify-full&quot;mit Power BI verwenden?
+
+++ + Antwort Ja, SSL-Modi werden unterstützt. Siehe [Dokumentation zu SSL-Modi](./clients/ssl-modes.md) für eine Aufschlüsselung der verschiedenen verfügbaren SSL-Modi und des Schutzniveaus, das sie bieten.
++++
+
+### Verwenden wir TLS 1.2 für alle Verbindungen von Power BI-Clients zum Abfragedienst?
+
++++Antwort Ja. Daten-in-Transit sind immer HTTPS-konform. Die derzeit unterstützte Version ist TLS1.2.
++++
+
+### Verwendet eine Verbindung, die an Port 80 hergestellt wurde, weiterhin HTTPS?
+
++++Antwort Ja, eine Verbindung, die an Port 80 hergestellt wird, verwendet weiterhin SSL. Sie können auch Port 5432 verwenden.
++++
+
+### Kann ich den Zugriff auf bestimmte Datensätze und Spalten für eine bestimmte Verbindung steuern? Wie ist dies konfiguriert?
+
+++ + Antwort Ja, die attributbasierte Zugriffssteuerung wird erzwungen, wenn konfiguriert. Siehe [Attributbasierte Zugriffskontrolle - Übersicht](../access-control/abac/overview.md) für weitere Informationen.
 +++
 
 ## Exportieren von Daten {#exporting-data}
