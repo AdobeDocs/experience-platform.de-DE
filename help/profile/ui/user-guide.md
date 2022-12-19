@@ -4,7 +4,7 @@ title: Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils
 topic-legacy: guide
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Sicht Ihrer einzelnen Kunden und fasst Daten aus mehreren Kanälen (einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten) zusammen. Dieses Dokument dient als Leitfaden für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 5500ba7f303fe4ebb9811d249f334d12f9fd3d66
+source-git-commit: d2790ddab74f989ebb5ca522ce44323033c53911
 workflow-type: tm+mt
 source-wordcount: '1776'
 ht-degree: 10%
@@ -51,7 +51,7 @@ Auf der rechten Seite des **[!UICONTROL Durchsuchen]** Registerkarte ist [Profil
 
 Zusätzlich zu diesen Metriken bietet dieser Abschnitt ein Datum und eine Uhrzeit der letzten Aktualisierung, die zeigen, wann die Metriken zuletzt ausgewertet wurden.
 
-![](../images/user-guide/profiles-browse-metrics.png)
+![](../images/user-guide/browse-metrics.png)
 
 ### Anzahl der Profile {#profile-count}
 
@@ -75,7 +75,7 @@ Die **[!UICONTROL Profile nach Namespace]** zeigt die Gesamtanzahl und Aufschlü
 
 Im **[!UICONTROL Durchsuchen]** -Tab können Sie Beispielprofile mithilfe einer Zusammenführungsrichtlinie anzeigen oder mithilfe eines Identitäts-Namespace und -Werts nach bestimmten Profilen suchen.
 
-![](../images/user-guide/browse-by-none-selected.png)
+![](../images/user-guide/none-selected.png)
 
 ### Durchsuchen nach [!UICONTROL Zusammenführungsrichtlinie]
 
@@ -89,7 +89,7 @@ Die **[!UICONTROL Durchsuchen]** ist standardmäßig auf die standardmäßige Zu
 
 So wählen Sie eine Zusammenführungsrichtlinie aus der **[!UICONTROL Zusammenführungsrichtlinie auswählen]** wählen Sie das Optionsfeld neben dem Richtliniennamen aus und verwenden Sie dann **[!UICONTROL Auswählen]** , um zur [!UICONTROL Durchsuchen] Registerkarte. Sie können dann **[!UICONTROL Ansicht]** , um die Beispielprofile zu aktualisieren und eine Auswahl von Profilen mit der neuen Zusammenführungsrichtlinie anzuzeigen.
 
-![](../images/user-guide/select-merge-policy-dialog.png)
+![](../images/user-guide/select-merge-policy.png)
 
 Die angezeigten Profile stellen ein Beispiel von bis zu 20 Profilen aus dem Profilspeicher Ihres Unternehmens dar, nachdem die ausgewählte Zusammenführungsrichtlinie angewendet wurde. Die Beispielprofile für die ausgewählte Zusammenführungsrichtlinie werden aktualisiert, wenn dem Profilspeicher Ihres Unternehmens neue Daten hinzugefügt werden.
 
@@ -104,17 +104,17 @@ Weitere Informationen zu Zusammenführungsrichtlinien und ihrer Rolle in Platfor
 
 Im **[!UICONTROL Durchsuchen]** -Registerkarte verwenden, können Sie einen Identitäts-Namespace verwenden, um ein bestimmtes Profil nach einem Identitätswert zu suchen. Für das Durchsuchen nach einer Identität müssen Sie eine Zusammenführungsrichtlinie, einen Identitäts-Namespace und einen Identitätswert angeben.
 
-![](../images/user-guide/browse-by-identity.png)
+![](../images/user-guide/browse-by-merge-policy.png)
 
 Verwenden Sie bei Bedarf die **[!UICONTROL Zusammenführungsrichtlinie]** Auswahl zum Öffnen **[!UICONTROL Zusammenführungsrichtlinie auswählen]** und wählen Sie die Zusammenführungsrichtlinie aus, die Sie verwenden möchten.
 
-![](../images/user-guide/select-merge-policy-dialog.png)
+![](../images/user-guide/select-merge-policy.png)
 
 Verwenden Sie dann die **[!UICONTROL Identitäts-Namespace]** Auswahl zum Öffnen **[!UICONTROL Identitäts-Namespace auswählen]** und wählen Sie den Namespace aus, nach dem Sie suchen möchten. Wenn Ihr Unternehmen über viele Namespaces verfügt, können Sie über die Suchleiste im Dialogfeld mit der Eingabe des Namens eines Namespace beginnen.
 
 Sie können einen Namespace auswählen, um weitere Details anzuzeigen, oder das Optionsfeld auswählen, um einen Namespace auszuwählen. Sie können dann **[!UICONTROL Auswählen]** , um fortzufahren.
 
-![](../images/user-guide/profiles-select-identity-namespace.png)
+![](../images/user-guide/select-identity-namespace.png)
 
 Nach Auswahl einer [!UICONTROL Identitäts-Namespace] und zurück zum [!UICONTROL Durchsuchen] Registerkarte können Sie eine **[!UICONTROL Identitätswert]** sich auf den ausgewählten Namespace beziehen.
 
@@ -122,11 +122,11 @@ Nach Auswahl einer [!UICONTROL Identitäts-Namespace] und zurück zum [!UICONTRO
 >
 >Dieser Wert ist spezifisch für ein einzelnes Kundenprofil und muss ein gültiger Eintrag für den angegebenen Namespace sein. Beispielsweise würde die Auswahl des Identitäts-Namespace &quot;E-Mail&quot;einen Identitätswert in Form einer gültigen E-Mail-Adresse erfordern.
 
-![](../images/user-guide/browse-by-identity-values.png)
+![](../images/user-guide/filter-identity-value.png)
 
 Nachdem ein Wert eingegeben wurde, wählen Sie **[!UICONTROL Ansicht]** und ein einzelnes Profil, das dem Wert entspricht, zurückgegeben wird. Wählen Sie die **[!UICONTROL Profil-ID]** um die Profildetails anzuzeigen.
 
-![](../images/user-guide/browse-by-identity-profile.png)
+![](../images/user-guide/filtered-identity-value.png)
 
 ## Profildetails anzeigen {#profile-detail}
 
@@ -134,11 +134,9 @@ Nach Auswahl einer **[!UICONTROL Profil-ID]**, die **[!UICONTROL Detail]** -Regi
 
 Die angezeigten Standardfelder können auch auf Organisationsebene geändert werden, um die bevorzugten Profilattribute anzuzeigen. Weitere Informationen zum Anpassen dieser Felder, einschließlich einer schrittweisen Anleitung zum Hinzufügen und Entfernen von Attributen und zum Ändern der Größe von Dashboard-Bedienfeldern, finden Sie in der [Handbuch zur Profildetailanpassung](profile-customization.md).
 
-![](../images/user-guide/profiles-profile-detail.png)
+![](../images/user-guide/profile-detail.png)
 
 Sie können zusätzliche Informationen zum individuellen Kundenprofil anzeigen, indem Sie auf eine andere der verfügbaren Registerkarten klicken. Diese Registerkarten umfassen Attribute, Ereignisse und die Registerkarte Segmentmitgliedschaft , auf der die Segmente angezeigt werden, für die das Profil derzeit qualifiziert ist.
-
-![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ### Registerkarte „Attribute“
 
@@ -146,7 +144,7 @@ Die **[!UICONTROL Attribute]** bietet eine Listenansicht, die alle Attribute zus
 
 Diese Attribute können auch als JSON-Objekt angezeigt werden, indem Sie **[!UICONTROL JSON anzeigen]**. Dies ist hilfreich für alle Benutzer, die besser verstehen möchten, wie die Profilattribute in Platform erfasst werden.
 
-![](../images/user-guide/profiles-attributes.png)
+![](../images/user-guide/attributes.png)
 
 ### Registerkarte &quot;Ereignisse&quot;
 
@@ -154,7 +152,7 @@ Die **[!UICONTROL Veranstaltungen]** tab enthält Daten aus den 100 neuesten Exp
 
 Ereignisse können auch als JSON-Objekt angezeigt werden, indem Sie **[!UICONTROL JSON anzeigen]**. Dies ist hilfreich, um zu verstehen, wie Ereignisse in Platform erfasst werden.
 
-![](../images/user-guide/profiles-events.png)
+![](../images/user-guide/events.png)
 
 ### Registerkarte Segmentmitgliedschaft
 
@@ -162,7 +160,7 @@ Die **[!UICONTROL Segmentmitgliedschaft]** zeigt eine Liste mit dem Namen und de
 
 Weitere Informationen zur Segmentierung in Experience Platform finden Sie im Abschnitt [Dokumentation zu Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
 
-![](../images/user-guide/profiles-segment-membership.png)
+![](../images/user-guide/segment-membership.png)
 
 ## Zusammenführungsrichtlinien
 
@@ -170,7 +168,7 @@ Aus der Hauptrolle **[!UICONTROL Profile]** auswählen, wählen Sie die **[!UICO
 
 Weiterführende Informationen zu Zusammenführungsrichtlinien finden Sie unter [Zusammenführungsrichtlinien – Übersicht](../merge-policies/overview.md).
 
-![](../images/user-guide/profiles-merge-policies.png)
+![](../images/user-guide/merge-policies.png)
 
 ## Vereinigungsschema {#union-schema}
 
@@ -178,7 +176,7 @@ Aus der Hauptrolle **[!UICONTROL Profile]** auswählen, wählen Sie die **[!UICO
 
 Weitere Informationen zu Vereinigungsschemas finden Sie im [UI-Handbuch für Vereinigungsschema](union-schema.md).
 
-![](../images/user-guide/profiles-union-schema.png)
+![](../images/user-guide/union-schema.png)
 
 ## Nächste Schritte
 

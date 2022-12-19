@@ -5,9 +5,9 @@ title: Handbuch zur Benutzeroberfläche des Segmentierungsdienstes
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche zum Erstellen und Verwalten von Segmentdefinitionen.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: d2790ddab74f989ebb5ca522ce44323033c53911
 workflow-type: tm+mt
-source-wordcount: '2375'
+source-wordcount: '2397'
 ht-degree: 15%
 
 ---
@@ -66,11 +66,11 @@ Wählen Sie die **[!UICONTROL Durchsuchen]** um eine Liste aller Segmentdefiniti
 
 ![](../images/ui/overview/segment-browse-all.png)
 
-Diese Ansicht listet Informationen zur Segmentdefinition auf, einschließlich Aufschlüsselung, Abwanderung, Anzahl der Profile, Auswertungsmethode, Erstellungsdatum und Datum der letzten Änderung.
+Diese Ansicht listet Informationen zur Segmentdefinition auf, einschließlich der Anzahl der Profile, des Erstellungsdatums und des Datums der letzten Änderung.
 
-Die Aufschlüsselung zeigt ein Balkendiagramm, in dem der Prozentsatz der Profile, die zu den folgenden Status gehören, dargestellt wird: [!UICONTROL Realisiert], [!UICONTROL Bestehend]und [!UICONTROL Beenden]. Außerdem wird die Aufschlüsselung auf der Seite [!UICONTROL Durchsuchen] -Tab ist die genaueste Aufschlüsselung des Segmentstatus. Wenn sich diese Zahl von der auf der [!UICONTROL Übersicht] verwenden, sollten Sie die Zahlen im [!UICONTROL Durchsuchen] als richtige Informationsquelle angeben, da die Variable [!UICONTROL Übersicht] Die Tabulatornummern werden nur einmal pro Tag aktualisiert.
+Sie können dieser Anzeige zusätzliche Felder hinzufügen, indem Sie BILD auswählen. Zu diesen zusätzlichen Feldern gehören Aufschlüsselung, Abwanderung, Auswertungsmethode und Auftrags-ID.
 
-![](../images/ui/overview/segment-browse-breakdown.png)
+Wenn die Aufschlüsselung ausgewählt ist, zeigt die Anzeige ein Balkendiagramm an, in dem der Prozentsatz der Profile dargestellt wird, die zu jedem der folgenden Status gehören: [!UICONTROL Realisiert], [!UICONTROL Bestehend]und [!UICONTROL Beenden]. Außerdem wird die Aufschlüsselung auf der Seite [!UICONTROL Durchsuchen] -Tab ist die genaueste Aufschlüsselung des Segmentstatus. Wenn sich diese Zahl von der auf der [!UICONTROL Übersicht] verwenden, sollten Sie die Zahlen im [!UICONTROL Durchsuchen] als richtige Informationsquelle angeben, da die Variable [!UICONTROL Übersicht] Die Tabulatornummern werden nur einmal pro Tag aktualisiert.
 
 | Status | Beschreibung |
 | ------ | ----------- |
@@ -153,7 +153,7 @@ Die Stichprobengröße der Prüfung hängt von der Gesamtanzahl der Entitäten i
 | Entitäten im Profilspeicher | Stichprobengröße |
 | ------------------------- | ----------- |
 | Weniger als 1 Million | Vollständiger Datensatz |
-| 1 bis 20 Mio. | 1 Mio. |
+| 1 bis 20 Mio. | 1 Millionen |
 | Über 20 Millionen | 5 % des Gesamtbetrags |
 
 Detailliertere Informationen zu den einzelnen [!DNL Profile] angezeigt werden, indem Sie die [!DNL Profile] Kennung. Weitere Informationen zu Profildetails finden Sie im [[!DNL Real-time Customer Profile] Benutzerhandbuch](../../profile/ui/user-guide.md#profile-detail).
