@@ -3,9 +3,9 @@ title:  Zuordnen einer CSV-Datei zu einem XDM-Schema mithilfe der KI-generierte
 description: In diesem Tutorial wird beschrieben, wie Sie eine CSV-Datei mithilfe von KI-generierten Empfehlungen einem XDM-Schema zuordnen.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
 source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1043'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 93%
 
 >[!IMPORTANT]
 >
->Diese Feature befindet sich derzeit in der Beta-Phase, und Ihre Organisation hat möglicherweise noch keinen Zugriff darauf. Dokumentation und Funktionalität können sich ändern.
+>Diese Feature befindet sich derzeit in der Beta-Phase, und Ihre Organisation hat möglicherweise noch keinen Zugriff darauf. Dokumentation und Funktionalitäten können sich ändern.
 >
 >Informationen zu den allgemein verfügbaren CSV-Zuordnungsfunktionen in Platform finden Sie im Dokument [Zuordnen einer CSV-Datei zu einem vorhandenen Schema](./existing-schema.md).
 
@@ -36,13 +36,13 @@ Klicken Sie in der Benutzeroberfläche von Experience Platform im linken Navigat
 
 Der Workflow **[!UICONTROL CSV-XDM-Schema zuordnen]** wird angezeigt, beginnend mit dem Schritt **[!UICONTROL Datenflussdetails]**.
 
-Wählen Sie **[!UICONTROL Erstellen eines neuen Schemas mit ML-Empfehlungen]**, woraufhin neue Steuerelemente angezeigt werden. Wählen Sie die entsprechende Klasse für die CSV-Daten aus, die Sie zuordnen möchten ([!UICONTROL Profil] oder [!UICONTROL ExperienceEvent]). Sie können optional das Dropdown-Menü verwenden, um die relevante Branche für Ihr Unternehmen auszuwählen, oder Sie lassen es leer, wenn die bereitgestellten Kategorien nicht für Sie zutreffen. Wenn Ihr Unternehmen mit einem [B2B](../../../xdm/tutorials/relationship-b2b.md)-Modell (Business-to-Business) operiert, markieren Sie das Kontrollkästchen **[!UICONTROL B2B-Daten]**.
+Wählen Sie **[!UICONTROL Erstellen eines neuen Schemas mit ML-Empfehlungen]**, woraufhin neue Steuerelemente angezeigt werden. Wählen Sie die entsprechende Klasse für die CSV-Daten aus, die Sie zuordnen möchten ([!UICONTROL Profil] oder [!UICONTROL ExperienceEvent]). Sie können optional das Dropdown-Menü verwenden, um die relevante Branche für Ihr Unternehmen auszuwählen, oder Sie lassen es leer, wenn die vorhandenen Kategorien nicht auf Sie zutreffen. Wenn Ihr Unternehmen mit einem [B2B](../../../xdm/tutorials/relationship-b2b.md)-Modell (Business-to-Business) operiert, markieren Sie das Kontrollkästchen **[!UICONTROL B2B-Daten]**.
 
 ![Der Schritt [!UICONTROL Datenflussdetails], wobei die Option „ML-Empfehlung“ ausgewählt wurde. Als Klasse ist [!UICONTROL Profil] ausgewählt und als Branche [!UICONTROL Telekommunikation]](../../images/tutorials/map-csv-recommendations/select-class-and-industry.png)
 
 Geben Sie von hier aus einen Namen für das Schema an, das aus den CSV-Daten erstellt wird, sowie einen Namen für den Ausgabedatensatz, der die unter diesem Schema aufgenommenen Daten enthält.
 
-Sie können optional die folgenden zusätzlichen Funktionen für den Datenfluss konfigurieren, bevor Sie fortfahren:
+Bevor Sie fortfahren, können Sie optional die folgenden zusätzlichen Funktionen für den Datenfluss konfigurieren:
 
 | Name eingeben | Beschreibung |
 | --- | --- |
