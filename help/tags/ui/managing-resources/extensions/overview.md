@@ -3,7 +3,7 @@ title: Erweiterungen
 description: Machen Sie sich mit der Funktionsweise von Tag-Erweiterungen in Adobe Experience Platform vertraut.
 exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '497'
 ht-degree: 100%
 
