@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Schema;XDM;individuelles Profil;Felder;Schemas;Schemas;Identitätszuordnung;Identitätszuordnung;Schema-Design;Map;Map;Vereinigungsschema;Vereinigungsschema
-title: IdentityMap Schema Field Group
+keywords: Experience Platform;Startseite;beliebte Themen;Schema;Schema;XDM;individuelles Profil;Felder;Schemas;Schemata;identityMap;identität zuordnen;Identität zuordnen;Schema-Design;map;Map;Vereinigungsschema;Vereinigung
+title: Schemafeldgruppe für IdentityMap
 topic-legacy: overview
-description: Dieses Dokument bietet einen Überblick über die Klasse "XDM Individual Profile".
+description: Dieses Dokument bietet einen Überblick über die Klasse „XDM Individual Profile“.
 exl-id: c9928e85-ef1e-4739-ba1d-80505a9e60c3
 source-git-commit: c59b4bd7ccc61ef4f9dc8a963903e3ec495558ed
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '116'
-ht-degree: 9%
+ht-degree: 100%
 
 ---
 
-# [!UICONTROL IdentityMap] Schemafeldgruppe
+# Schemafeldgruppe für [!UICONTROL IdentityMap] 
 
 >[!NOTE]
 >
->Die Namen verschiedener Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
+>Die Namen mehrerer Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
 
-[!UICONTROL IdentityMap] ist eine Standardschemafeldgruppe für die [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). Die Feldergruppe stellt ein einzelnes Zuordnungsfeld bereit, das eine Reihe von Benutzeridentitäten enthält, die vom Namespace eingegeben wurden.
+[!UICONTROL IdentityMap] ist eine standardmäßige Schemafeldgruppe für die [[!DNL XDM Individual Profile] Klasse](../../classes/individual-profile.md). Die Feldergruppe stellt ein einzelnes Zuordnungsfeld bereit, das eine Reihe von Benutzeridentitäten enthält, die vom Namespace angegeben wurden.
 
 <img src="../../images/field-groups/identitymap.png" width="600" /><br />
 
-Siehe Abschnitt zu Identitätskarten im Abschnitt [Grundlagen der Schemakomposition](../../schema/composition.md#identityMap) für weitere Informationen über ihren Anwendungsfall, einschließlich ihrer Vor- und Nachteile.
+Siehe den Abschnitt zu Identitätszuordnungen in [Grundlagen der Schemakomposition](../../schema/composition.md#identityMap) für weitere Informationen zu ihrem Anwendungsfall, einschließlich der Vor- und Nachteile.
