@@ -5,9 +5,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 source-git-commit: d046c17a7b376f5c2e2f25c38fac0916ed2dba73
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '985'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 71%
 
 * [Ziele – Übersicht](./home.md)
 * [Zieltypen und Kategorien](./destination-types.md)
-* [Limits für Ziele (Aktivierung)](./guardrails.md)
+* [Leitlinien für Ziele (Aktivierung)](./guardrails.md)
 * API-Tutorials {#api}
    * [Verbinden Sie sich mit Streaming-Zielen und aktivieren Sie Daten über die Flow Service-API](./api/streaming-destinations.md)
    * [Verbinden Sie sich mit Batch-Cloud-Speicher und E-Mail-Marketing-Zielen und aktivieren Sie Daten mit der Flow Service-API](./api/connect-activate-batch-destinations.md)
@@ -34,16 +34,16 @@ ht-degree: 71%
       * [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](./ui/activate-batch-profile-destinations.md)
       * [Aktivieren von Zielgruppendaten für Profilanforderungsziele](./ui/activate-profile-request-destinations.md)
       * [Konfigurieren von Personalisierungszielen für die Personalisierung auf derselben Seite und auf der nächsten Seite](./ui/configure-personalization-destinations.md)
-      * [(Beta) Exportieren Sie Dateien On-Demand mithilfe der Experience Platform-Benutzeroberfläche in Batch-Ziele](./ui/export-file-now.md)
-      * [(Beta) Exportieren von Datensätzen über die Experience Platform-Benutzeroberfläche](./ui/export-datasets.md)
+      * [(Beta) Exportieren von Dateien nach Bedarf in Batch-Ziele mithilfe der Experience Platform-Benutzeroberfläche](./ui/export-file-now.md)
+      * [(Beta) Exportieren von Datensätzen mithilfe der Experience Platform-Benutzeroberfläche](./ui/export-datasets.md)
    * [Anzeigen von Zieldetails](./ui/destination-details-page.md)
    * [Aktualisieren von Zielkonten](./ui/update-accounts.md)
    * [Löschen von Zielkonten](./ui/delete-destination-account.md)
    * [Bearbeiten von Aktivierungsdatenflüssen](./ui/edit-activation.md)
    * [Löschen von Zielen](./ui/delete-destinations.md)
    * [Überwachen von Datenflüssen](./ui/monitor-dataflows.md)
-   * [(Beta) Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren](./ui/batch-destinations-file-formatting-options.md)
-   * [In-Context-Zielwarnungen abonnieren](ui/alerts.md)
+   * [(Beta) Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele](./ui/batch-destinations-file-formatting-options.md)
+   * [Abonnieren von kontextbezogenen Zielwarnhinweisen](ui/alerts.md)
 * Zielkatalog {#catalog}
    * [Zielkatalog – Übersicht](./catalog/overview.md)
    * Adobe-Ziele {#adobe}
@@ -52,7 +52,7 @@ ht-degree: 71%
       * [Segmentfreigabe in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de)
    * Werbeziele {#advertising}
       * [Werbeziele – Übersicht](./catalog/advertising/overview.md)
-      * [Adobe Advertising Cloud-Verbindung](./catalog/advertising/adobe-advertising-cloud-connection.md)
+      * [Adobe Advertising Cloud-Verbindung](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Adobe Advertising Cloud-Erweiterung](./catalog/advertising/adobe-advertising-cloud.md)
       * [Awin Advertising Conversion Tag-Erweiterung](./catalog/advertising/awin-conversiontag.md)
       * [Awin Advertiser Mastertag-Erweiterung](./catalog/advertising/awin-mastertag.md)
@@ -74,8 +74,8 @@ ht-degree: 71%
       * [Pinterest Conversion Tracking-Erweiterung](./catalog/advertising/pinterest-extension.md)
       * [Pinterest Customer List-Verbindung](./catalog/advertising/pinterest.md)
       * [(Beta) Snapchat Ads-Verbindung](./catalog/advertising/snap-inc.md)
-      * [The Trade Desk-Verbindung](./catalog/advertising/tradedesk.md)
-      * [(Beta) Die CRM-Verbindung des Trade Desk](./catalog/advertising/tradedesk-emails.md)
+      * [Verbindung mit The Trade Desk](./catalog/advertising/tradedesk.md)
+      * [(Beta) The Trade Desk CRM-Verbindung ](./catalog/advertising/tradedesk-emails.md)
       * [Twitter Universal Website Tag-Erweiterung](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX-Verbindung](./catalog/advertising/datax.md)
    * Analyseziele {#analytics}
@@ -100,20 +100,20 @@ ht-degree: 71%
       * [TMMData-Erweiterung](./catalog/analytics/tmmdata.md)
       * [Yext Conversion Tracking-Erweiterung](./catalog/analytics/yext.md)
    * Cloud-Speicher-Ziele {#cloud-storage}
-      * [Cloud-Speicher-Ziele – Übersicht](./catalog/cloud-storage/overview.md)
+      * [Übersicht über die Cloud-Speicher-Ziele](./catalog/cloud-storage/overview.md)
       * [Amazon Kinesis-Verbindung](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3-Verbindung](./catalog/cloud-storage/amazon-s3.md)
       * [Azure Blob-Verbindung](./catalog/cloud-storage/azure-blob.md)
       * [(Beta) Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
       * [Azure Event Hubs-Verbindung](./catalog/cloud-storage/azure-event-hubs.md)
       * [(Beta) Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
-      * [(Beta) Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
+      * [(Beta) Google Cloud-Speicher](./catalog/cloud-storage/google-cloud-storage.md)
       * [SFTP-Verbindung](./catalog/cloud-storage/sftp.md)
-      * [IP-Adresse - Zulassungsliste für Cloud-Speicher-Ziele](./catalog/cloud-storage/ip-address-allow-list.md)
+      * [Zulassungsliste von IP-Adressen für Cloud-Speicherziele](./catalog/cloud-storage/ip-address-allow-list.md)
    * CRM-Ziele (Customer Relationship Management) {#crm}
-      * [Salesforce CRM-Verbindung](./catalog/crm/salesforce.md)
+      * [Salesforce-CRM-Verbindung](./catalog/crm/salesforce.md)
       * [Verbindung mit Microsoft Dynamics 365](./catalog/crm/microsoft-dynamics-365.md)
-      * [Außenverbindung](catalog/crm/outreach.md)
+      * [Outreach-Verbindung](catalog/crm/outreach.md)
    * Data Management Platform-Ziele {#data-management}
       * [Data Management Platform (DMP)-Ziele – Übersicht](./catalog/data-management/overview.md)
       * [Audience Manager DIL-Erweiterung](./catalog/data-management/aam-dil-extension.md)
@@ -128,8 +128,8 @@ ht-degree: 71%
       * [Adobe Campaign Managed Cloud Services-Verbindung](./catalog/email-marketing/adobe-campaign-managed-services.md)
       * [Oracle Eloqua-Verbindung](./catalog/email-marketing/oracle-eloqua.md)
       * [Oracle Responsys-Verbindung](./catalog/email-marketing/oracle-responsys.md)
-      * [(API) Salesforce-Marketing Cloud-Verbindung](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
-      * [(Dateien) Salesforce-Marketing Cloud-Verbindung](./catalog/email-marketing/salesforce-marketing-cloud.md)
+      * [(API) Salesforce Marketing Cloud-Verbindung](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
+      * [(Dateien) Salesforce Marketing Cloud-Verbindung](./catalog/email-marketing/salesforce-marketing-cloud.md)
       * [SendGrid-Verbindung](./catalog/email-marketing/sendgrid.md)
    * Tag-Erweiterungen {#launch-extensions}
       * [Übersicht über Tag-Erweiterungen](./catalog/launch-extensions/overview.md)
@@ -138,7 +138,7 @@ ht-degree: 71%
       * [Airship Attributes-Verbindung](./catalog/mobile-engagement/airship-attributes.md)
       * [Airship Tags-Verbindung](./catalog/mobile-engagement/airship-tags.md)
       * [Braze-Verbindung](./catalog/mobile-engagement/braze.md)
-      * [Zeilenverbindung](./catalog/mobile-engagement/line.md)
+      * [Line-Verbindung](./catalog/mobile-engagement/line.md)
    * Personalisierungsziele {#personalization}
       * [Personalisierungsziele – Übersicht](./catalog/personalization/overview.md)
       * [(Beta) Adobe Commerce-Verbindung](./catalog/personalization/adobe-commerce.md)
@@ -182,7 +182,7 @@ ht-degree: 71%
    * Funktionen des Destination SDK {#functionality}
       * [Konfigurationsoptionen](./destination-sdk/configuration-options.md)
       * [Konfiguration des Streaming-Ziels](./destination-sdk/destination-configuration.md)
-      * [Dateibasierte Zielkonfiguration](./destination-sdk/file-based-destination-configuration.md)
+      * [Konfiguration dateibasierter Ziele](./destination-sdk/file-based-destination-configuration.md)
       * [Server- und Vorlagenspezifikationen für Streaming-Ziele](./destination-sdk/server-and-template-configuration.md)
       * [Dateibasierte Ziel-Server- und Dateispezifikationen](./destination-sdk/server-and-file-configuration.md)
       * [Nachrichtenformat](./destination-sdk/message-format.md)
@@ -201,32 +201,32 @@ ht-degree: 71%
       * [API-Vorgänge für Zugriffsdaten-Endpunkte](./destination-sdk/credentials-configuration-api.md)
       * [Veröffentlichen von Endpunkt-API-Vorgänge](./destination-sdk/destination-publish-api.md)
       * Referenz zu Entwickler-Tools {#developer-tools-reference}
-         * Streaming-Ziel-Test-API {#streaming-destination-testing-api}
+         * Streaming-Zieltest-API {#streaming-destination-testing-api}
             * [Abrufen von Beispielvorlagen-API-Vorgängen](./destination-sdk/sample-template-api.md)
             * [API-Vorgänge für Rendervorlagen](./destination-sdk/render-template-api.md)
             * [API-Vorgänge für Zieltests](./destination-sdk/destination-testing-api.md)
             * [Beispiele für API-Vorgänge zur Profilerstellung](./destination-sdk/sample-profile-generation-api.md)
-         * Dateibasierte Ziel-Test-API {#file-based-destination-testing-api}
-            * [Übersicht über die dateibasierte Ziel-Test-API](./destination-sdk/file-based-destination-testing-overview.md)
-            * [Erstellen von Beispielprofilen basierend auf einem Quellschema](./destination-sdk/file-based-sample-profile-generation-api.md)
+         * Dateibasierte Zieltest-API {#file-based-destination-testing-api}
+            * [Übersicht über die dateibasierte Zieltest-API](./destination-sdk/file-based-destination-testing-overview.md)
+            * [Generieren von Beispielprofilen basierend auf einem Quellschema](./destination-sdk/file-based-sample-profile-generation-api.md)
             * [Testen Ihres dateibasierten Ziels mit Beispielprofilen](./destination-sdk/file-based-destination-testing-api.md)
-            * [Detaillierte Aktivierungsergebnisse anzeigen](./destination-sdk/file-based-destination-results-api.md)
-            * [Validieren von vorlagenbasierten Kundenfeldern](./destination-sdk/file-based-render-template-api.md)
+            * [Anzeigen detaillierter Aktivierungsergebnisse](./destination-sdk/file-based-destination-results-api.md)
+            * [Überprüfen von vorlagenbasierten Kundenfeldern](./destination-sdk/file-based-render-template-api.md)
    * Handbücher {#guides}
       * [Verwenden des Destination SDK zum Konfigurieren eines Streaming-Ziels](./destination-sdk/configure-destination-instructions.md)
       * [Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Übermitteln eines im Destination SDK erstellten Ziels zur Überprüfung](./destination-sdk/submit-destination.md)
-      * Dateibasierte Ziele konfigurieren {#configure-file-based-destinations}
-         * [Dateiformatierungsoptionen konfigurieren](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
-         * [Amazon S3-Ziel mit vordefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration konfigurieren](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
-         * [Amazon S3-Ziel mit benutzerdefinierten Dateinamen- und Formatierungsoptionen konfigurieren](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
-         * [Konfigurieren eines Azure Blob Storage-Ziels mit benutzerdefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
-         * [Konfigurieren eines Azure Data Lake Storage-Ziels mit benutzerdefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
-         * [Ein Data Landing Zone (DLZ)-Ziel mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration konfigurieren](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
-         * [Konfigurieren eines SFTP-Ziels mit vordefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
+      * Konfigurieren von dateibasierten Zielen {#configure-file-based-destinations}
+         * [Konfigurieren von Dateiformatierungsoptionen](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
+         * [Konfigurieren eines Amazon S3-Ziels mit vordefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
+         * [Konfigurieren eines Amazon S3-Ziels mit benutzerdefinierten Dateinamen- und Formatierungsoptionen](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
+         * [Konfigurieren eines Azure Blob Storage-Ziels mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
+         * [Konfigurieren eines Azure Data Lake Storage-Ziels mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
+         * [Konfigurieren eines Data Landing Zone-Ziels (DLZ) mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
+         * [Konfigurieren eines SFTP-Ziels mit vordefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
    * Referenz {#reference}
       * [Ratenbegrenzungs- und Wiederholungsrichtlinie für Streaming-Ziele](./destination-sdk/rate-limiting-retry-policy.md)
-      * [Unterstützte Umwandlungsfunktionen](./destination-sdk/supported-functions.md)
+      * [Unterstützte Transformationsfunktionen](./destination-sdk/supported-functions.md)
    * Dokumentieren des Ziels {#document-destination}
       * [Dokumentieren des Ziels in Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
       * [Verwenden der GitHub-Web-Oberfläche, um eine Zieldokumentationsseite zu erstellen](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
