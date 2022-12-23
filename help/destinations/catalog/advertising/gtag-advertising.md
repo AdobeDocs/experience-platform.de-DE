@@ -1,12 +1,12 @@
 ---
-keywords: gtag;google gtag;google extension;google gtag extension;GTAG
+keywords: gtag;Google gtag;Google-Erweiterung;Google gtag-Erweiterung;GTAG
 title: Google gtag-Erweiterung
-description: Die Google gtag-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
+description: Die Google gtag-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 14a466f2-78a0-4493-93cd-3dcdae048042
 source-git-commit: c3f6650df5fabe9736e4b11a43c41ae39f014425
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '529'
-ht-degree: 19%
+ht-degree: 100%
 
 ---
 
@@ -14,23 +14,23 @@ ht-degree: 19%
 
 >[!IMPORTANT]
 >
->Die hier beschriebene Google gtag-Erweiterung wird nicht mehr unterstützt und durch die [[!DNL Google Global Site Tag (gtag)]](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) von [!DNL Acronym]. Sie finden die [!DNL Google Global Site Tag (gtag)] -Erweiterung innerhalb der [[!UICONTROL Tags]](../../../tags/home.md) Arbeitsbereich in der Datenerfassungs-Benutzeroberfläche oder der Benutzeroberfläche für Experience Platformen.
+>Die hier beschriebene Google gtag-Erweiterung wird nicht mehr unterstützt und durch die von [!DNL Acronym] entwickelte [[!DNL Google Global Site Tag (gtag)]](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag)-Erweiterung ersetzt. Sie finden die [!DNL Google Global Site Tag (gtag)]-Erweiterung im Arbeitsbereich [[!UICONTROL Tags]](../../../tags/home.md) in der Datenerfassungs-Benutzeroberfläche oder der Benutzeroberfläche von Experience Platform.
 
 ## Übersicht {#overview}
 
-Google laden `gtag.js` auf Ihrer Site, um Ereignisdaten an zu senden [!DNL Google Analytics], Google Ads und [!DNL Google Marketing Platform]. Diese Erweiterung fügt nur den gtag-Code zu Ihrer Site hinzu. Sie müssen andere Google-Erweiterungen verwenden, um Ereignisse und Aktionen hinzuzufügen, die gtag verwenden.
+Laden Sie `gtag.js` von Google in Ihre Site, um Ereignisdaten an [!DNL Google Analytics], Google Ads und [!DNL Google Marketing Platform] zu senden. Diese Erweiterung fügt nur den gtag-Code zu Ihrer Site hinzu. Zum Hinzufügen von Ereignissen und Aktionen, die gtag verwenden, müssen Sie andere Google-Erweiterungen verwenden.
 
-Google gtag ist eine Werbeerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102805.google-gtag.html).
+Google gtag ist eine Werbeerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102805.google-gtag.html).
 
-Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
+Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 
 ![Google gtag-Erweiterung](../../assets/catalog/advertising/gtag-advertising/catalog.png)
 
 ## Voraussetzungen {#prerequisites}
 
-Diese Erweiterung ist im Abschnitt [!DNL Destinations] Katalog für alle Kunden, die Platform erworben haben.
+Diese Erweiterung ist im [!DNL Destinations]-Katalog für alle Kunden verfügbar, die Platform erworben haben.
 
-Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Adobe Experience Platform. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an Ihren Organisationsadministrator, um Zugriff auf Tags zu erhalten, und bitten Sie ihn, Ihnen die **[!UICONTROL manage_properties]** -Berechtigung, damit Sie Erweiterungen installieren können.
+Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe Experience Platform haben. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an den Admin Ihrer Organisation, um Zugriff auf Tags zu erhalten, und bitten Sie darum, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
 
 ## Installieren einer Erweiterung {#install-extension}
 
@@ -40,21 +40,21 @@ Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICO
 
 Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
 
-Klicken Sie auf das Ziel, um es zu markieren, und wählen Sie dann **[!UICONTROL Konfigurieren]** in der rechten Leiste. Wenn die Variable **[!UICONTROL Konfigurieren]** Kontrolle ausgegraut ist, fehlt die **[!UICONTROL manage_properties]** Berechtigung. Siehe [Voraussetzungen](#prerequisites).
+Klicken Sie auf das Ziel, um es zu markieren, und wählen Sie dann in der rechten Leiste die Option **[!UICONTROL Konfigurieren]** aus. Wenn das Feld **[!UICONTROL Konfigurieren]** ausgegraut ist, verfügen Sie nicht über die Berechtigung **[!UICONTROL manage_properties]**. Siehe [Voraussetzungen](#prerequisites).
 
-Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchten. Sie können auch eine neue Eigenschaft erstellen. Eine Eigenschaft ist eine Sammlung von Regeln, Datenelementen, konfigurierten Erweiterungen, Umgebungen und Bibliotheken. Informationen zu den Eigenschaften in [Eigenschaftenseitenabschnitt](../../../tags/ui/administration/companies-and-properties.md#properties-page) in der Tag-Dokumentation.
+Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchten. Sie können auch eine neue Eigenschaft erstellen. Eine Eigenschaft ist eine Sammlung von Regeln, Datenelementen, konfigurierten Erweiterungen, Umgebungen und Bibliotheken. Informationen zu Eigenschaften finden Sie im [Eigenschaften-Seitenabschnitt](../../../tags/ui/administration/companies-and-properties.md#properties-page) der Tags-Dokumentation.
 
-Der Workflow führt Sie durch die Schritte zum Abschluss der Installation.
+Der Workflow führt Sie durch die Schritte zum Abschließen der Installation.
 
-Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie in der [Google-Tag-Seite in Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102805.google-gtag.html).
+Informationen zu den Konfigurationsoptionen und zur Installationsunterstützung für Erweiterungen finden Sie auf der [Google gtag-Seite in Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102805.google-gtag.html).
 
-Sie können die Erweiterung auch direkt im [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/). Weitere Informationen finden Sie im Abschnitt zu [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in der Tag-Dokumentation.
+Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Abschnitt zum Thema [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in der Tag-Dokumentation.
 
 ## Verwenden der Erweiterung {#how-to-use}
 
-Nachdem Sie die Erweiterung installiert haben, können Sie mit der Einrichtung von Regeln beginnen.
+Nachdem Sie die Erweiterung installiert haben, können Sie mit dem Einrichten von Regeln beginnen.
 
-Sie können Regeln für Ihre installierten Erweiterungen einrichten, damit nur in bestimmten Situationen Ereignisdaten an das Erweiterungsziel gesendet werden. Weitere Informationen zum Einrichten von Regeln für Ihre Erweiterungen finden Sie unter [Tag-Dokumentation](../../../tags/ui/managing-resources/rules.md).
+Sie können Regeln für Ihre installierten Erweiterungen einrichten, damit nur in bestimmten Situationen Ereignisdaten an das Erweiterungsziel gesendet werden. Weitere Informationen zum Einrichten von Regeln für Erweiterungen finden Sie in der [Tags-Dokumentation](../../../tags/ui/managing-resources/rules.md).
 
 ## Konfigurieren, Aktualisieren und Löschen von Erweiterungen {#configure-upgrade-delete}
 
@@ -62,6 +62,6 @@ Sie können Erweiterungen in der Datenerfassungs-Benutzeroberfläche konfigurier
 
 >[!TIP]
 >
->Wenn die Erweiterung bereits in einer Ihrer Eigenschaften installiert ist, wird die Platform-Benutzeroberfläche weiterhin angezeigt **[!UICONTROL Installieren]** für die Erweiterung. Starten Sie den Installations-Workflow wie unter [Installieren der Erweiterung](#install-extension) , um Ihre Erweiterung zu konfigurieren oder zu löschen.
+>Auch wenn die Erweiterung bereits in einer Ihrer Eigenschaften installiert ist, wird in der Platform-Benutzeroberfläche weiterhin **[!UICONTROL Installieren]** für die Erweiterung angezeigt. Starten Sie den Installations-Workflow, wie unter [Installieren einer Erweiterung](#install-extension) beschrieben, um Ihre Erweiterung zu konfigurieren oder zu löschen.
 
-Informationen zum Aktualisieren Ihrer Erweiterung finden Sie im Handbuch im [Erweiterungs-Upgrade-Prozess](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) in der Tag-Dokumentation.
+Informationen zum Aktualisieren Ihrer Erweiterung finden Sie in der Anleitung zum [Erweiterungs-Upgrade-Prozess](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) in der Tags-Dokumentation.
