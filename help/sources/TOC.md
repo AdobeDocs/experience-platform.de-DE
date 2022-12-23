@@ -5,9 +5,9 @@ breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
 source-git-commit: 46c9ec0c561f7ed3e38f05ef7b1e3ffec0eaed57
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '860'
-ht-degree: 83%
+ht-degree: 100%
 
 ---
 
@@ -17,12 +17,12 @@ ht-degree: 83%
 - [Quellen – Übersicht](home.md)
 - Verfügbare Quell-Connectoren {#connectors}
    - Adobe-Programme {#adobe-applications}
-      - [Analytics Classifications source](connectors/adobe-applications/classifications.md)
+      - [Analytics-Klassifizierungsquelle](connectors/adobe-applications/classifications.md)
       - [Analytics-Quelle](connectors/adobe-applications/analytics.md)
-      - [Audience Manager source](connectors/adobe-applications/audience-manager.md)
+      - [Audience Manager-Quelle](connectors/adobe-applications/audience-manager.md)
       - [Adobe Campaign Managed Cloud Services-Quelle](connectors/adobe-applications/campaign.md)
-      - [Quelle der Kundenattribute](connectors/adobe-applications/customer-attributes.md)
-      - [Datenquelle](connectors/adobe-applications/data-collection.md)
+      - [Quelle für Kundenattribute](connectors/adobe-applications/customer-attributes.md)
+      - [Datenerfassungsquelle](connectors/adobe-applications/data-collection.md)
       - [Workfront-Quelle](connectors/adobe-applications/workfront.md)
       - Feldzuordnungen {#mapping}
          - [Analytics-Feldzuordnungen](connectors/adobe-applications/mapping/analytics.md)
@@ -38,7 +38,7 @@ ht-degree: 83%
    - Adobe Advertising {#advertising}
       - [Google Ads-Connector](connectors/advertising/ads.md)
    - Analytics {#analytics}
-      - [Mixpanel-Anschluss](connectors/analytics/mixpanel.md)
+      - [Mixpanel-Connector](connectors/analytics/mixpanel.md)
    - Cloud-Speicherplatz {#cloud-storage}
       - [Amazon Kinesis-Connector](connectors/cloud-storage/kinesis.md)
       - [Amazon S3-Connector](connectors/cloud-storage/s3.md)
@@ -98,7 +98,7 @@ ht-degree: 83%
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Zahlungen {#payments}
       - [PayPal-Connector](connectors/payments/paypal.md)
-      - [Quadratischer Anschluss](connectors/payments/square.md)
+      - [Square-Connector](connectors/payments/square.md)
    - Protokolle {#protocols}
       - [Generic OData-Connector](connectors/protocols/odata.md)
       - [Generic REST-API-Connector](connectors/protocols/generic-rest.md)
@@ -106,7 +106,7 @@ ht-degree: 83%
       - [HTTP-API-Connector](connectors/streaming/http.md)
 - API-Tutorials {#api-tutorials}
    - Erstellen einer Basisverbindung {#create}
-      - Werbung {#advertising}
+      - Advertising {#advertising}
          - [Google Ads](tutorials/api/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
@@ -122,7 +122,7 @@ ht-degree: 83%
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Google Cloud Storage](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
-         - [Oracle-Objektspeicher](tutorials/api/create/cloud-storage/oracle-object-storage.md)
+         - [Oracle Object Storage](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - Einverständnis und Voreinstellungen {#consent}
          - [OneTrust-Integration](tutorials/api/create/consent-and-preferences/onetrust.md)
@@ -164,10 +164,10 @@ ht-degree: 83%
          - [MailChimp-Mitglieder](tutorials/api/create/marketing-automation/mailchimp-members.md)
          - [Oracle Eloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
          - [Oracle Responsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
-         - [Salesforce-Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
+         - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - Zahlungen {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
-         - [Quadrat](tutorials/api/create/payments/square.md)
+         - [Square](tutorials/api/create/payments/square.md)
       - Protokolle {#protocols}
          - [Generic OData](tutorials/api/create/protocols/odata.md)
          - [Generic REST-API](tutorials/api/create/protocols/generic-rest.md)
@@ -183,7 +183,7 @@ ht-degree: 83%
       - [Erkunden von Daten zur Marketing-Automatisierung](tutorials/api/explore/marketing-automation.md)
       - [Erkunden von Zahlungsdaten](tutorials/api/explore/payments.md)
       - [Erkunden von Protokolldaten](tutorials/api/explore/protocols.md)
-      - [Datentabellen durchsuchen](tutorials/api/explore/tabular.md)
+      - [Durchsuchen von Datentabellen](tutorials/api/explore/tabular.md)
    - Erfassen von Daten {#collect}
       - [Erfassen von Werbedaten](tutorials/api/collect/advertising.md)
       - [Erfassen von Cloud-Speicherdaten](tutorials/api/collect/cloud-storage.md)
@@ -195,8 +195,8 @@ ht-degree: 83%
       - [Erfassen von Zahlungsdaten](tutorials/api/collect/payments.md)
       - [Erfassen von Protokolldaten](tutorials/api/collect/protocols.md)
       - [Erfassen von Streaming-Daten](tutorials/api/collect/streaming.md)
-   - [On-Demand-Erfassung](tutorials/api/on-demand-ingestion.md)
-   - [Daten auf Quellebene filtern](tutorials/api/filter.md)
+   - [On-Demand-Aufnahme](tutorials/api/on-demand-ingestion.md)
+   - [Filtern von Daten auf Quellebene](tutorials/api/filter.md)
    - [Überwachen von Datenflüssen](tutorials/api/monitor.md)
    - [Aktualisieren von Konten](tutorials/api/update.md)
    - [Aktualisieren von Datenflüssen](tutorials/api/update-dataflows.md)
@@ -213,7 +213,7 @@ ht-degree: 83%
          - [Kundenattribute](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
-      - Adobe Advertising {#advertising}
+      - Advertising {#advertising}
          - [Google Ads](tutorials/ui/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
@@ -224,12 +224,12 @@ ht-degree: 83%
          - [Azure Data Lake Storage Gen2](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Azure Blob](tutorials/ui/create/cloud-storage/blob.md)
          - [Azure Event Hubs](tutorials/ui/create/cloud-storage/eventhub.md)
-         - [Azure-Dateispeicher](tutorials/ui/create/cloud-storage/azure-file-storage.md)
+         - [Azure File Storage](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [Data Landing Zone](tutorials/ui/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Google Cloud Storage](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
-         - [Oracle-Objektspeicher](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
+         - [Oracle Object Storage](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3 und Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - Einverständnis und Voreinstellungen {#consent}
@@ -246,10 +246,10 @@ ht-degree: 83%
          - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
       - Datenbanken {#databases}
          - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
-         - [Apache Hive auf Azure HDInsights](tutorials/ui/create/databases/hive.md)
-         - [Apache Spark auf Azure HDInsights](tutorials/ui/create/databases/spark.md)
-         - [Azure-Data Explorer](tutorials/ui/create/databases/data-explorer.md)
-         - [azure synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Apache Hive on Azure HDInsights](tutorials/ui/create/databases/hive.md)
+         - [Apache Spark on Azure HDInsights](tutorials/ui/create/databases/spark.md)
+         - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
+         - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/ui/create/databases/bigquery.md)
@@ -274,10 +274,10 @@ ht-degree: 83%
          - [Mailchimp-Mitglieder](tutorials/ui/create/marketing-automation/mailchimp-members.md)
          - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
          - [Oracle Responsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
-         - [Salesforce-Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
+         - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Zahlungen {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
-         - [Quadrat](tutorials/ui/create/payments/square.md)
+         - [Square](tutorials/ui/create/payments/square.md)
       - Protokolle {#protocols}
          - [Generic OData](tutorials/ui/create/protocols/odata.md)
       - Streaming {#streaming}
@@ -287,7 +287,7 @@ ht-degree: 83%
       - [Datenfluss der Analytics-Verbindung](tutorials/ui/dataflow/analytics.md)
       - [Datenfluss der Batch-Cloud-Speicherverbindung](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [Datenfluss der Streaming-Cloud-Speicher-Verbindung](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
-      - [Verbindungsdataflow für Einverständnis und Voreinstellungen](tutorials/ui/dataflow/consent-and-preferences.md)
+      - [Verbindungsdatenfluss für Einverständnis und Voreinstellungen](tutorials/ui/dataflow/consent-and-preferences.md)
       - [Datenfluss der CRM-Verbindung](tutorials/ui/dataflow/crm.md)
       - [Datenfluss der Customer-Success-Verbindung](tutorials/ui/dataflow/customer-success.md)
       - [Datenfluss der Datenbankverbindung](tutorials/ui/dataflow/databases.md)
@@ -295,7 +295,7 @@ ht-degree: 83%
       - [Datenfluss für Verbindung zur Marketing-Automatisierung](tutorials/ui/dataflow/marketing-automation.md)
       - [Datenfluss der Zahlungsverbindung](tutorials/ui/dataflow/payments.md)
       - [Datenfluss der Protokollverbindung](tutorials/ui/dataflow/protocols.md)
-   - [Erstellen eines Datenflusses für Quellen mithilfe von Vorlagen in der Benutzeroberfläche](tutorials/ui/templates.md)
+   - [Erstellen eines Quellen-Datenflusses mithilfe von Vorlagen in der Benutzeroberfläche](tutorials/ui/templates.md)
    - [Überwachen von Batch-Datenflüssen](tutorials/ui/monitor.md)
    - [Überwachen von Streaming-Datenflüssen](tutorials/ui/monitor-streaming.md)
    - [Aktualisieren von Konten](tutorials/ui/update.md)
@@ -303,15 +303,15 @@ ht-degree: 83%
    - [Löschen von Konten](tutorials/ui/delete-accounts.md)
    - [Löschen von Datenflüssen](tutorials/ui/delete.md)
    - [Abonnieren von Warnmeldungen für Quellen](tutorials/ui/alerts.md)
-- Self-Serve-Quellen (Batch-SDK) {#sdk}
+- Selbstbedienungsquellen (Batch-SDK) {#sdk}
    - [Übersicht](sources-sdk/overview.md)
-   - Verbindungsspezifikation konfigurieren {#config}
+   - Konfigurieren Ihrer Verbindungsspezifikation {#config}
       - [Konfigurationsoptionen](sources-sdk/config/config.md)
       - [Konfigurieren der Authentifizierungsspezifikation](sources-sdk/config/authspec.md)
       - [Konfigurieren der Quellspezifikation](sources-sdk/config/sourcespec.md)
       - [Konfigurieren der Analysespezifikation](sources-sdk/config/explorespec.md)
-   - Handbuch zur API für Self-Serve-Quellen (Batch SDK) {#self-serve-api}
-      - [Übersicht über die Self-Serve-Quellen-API (Batch SDK)](sources-sdk/api/api-overview.md)
+   - Handbuch zur API für Selbstbedienungsquellen (Batch SDK) {#self-serve-api}
+      - [Übersicht über die API für Selbstbedienungsquellen (Batch SDK)](sources-sdk/api/api-overview.md)
       - [Erste Schritte](sources-sdk/api/getting-started.md)
       - [Erstellen einer Verbindungsspezifikation](sources-sdk/api/create.md)
       - [Aktualisieren einer Verbindungsspezifikation](sources-sdk/api/update-connection-specs.md)
@@ -321,8 +321,8 @@ ht-degree: 83%
       - [Dokumentieren Ihrer Quelle in Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
       - [Verwenden der GitHub-Web-Oberfläche, um eine Seite mit der Quellendokumentation zu erstellen](sources-sdk/documentation/github.md)
       - [Verwenden eines Texteditors in Ihrer lokalen Umgebung, um die Seite mit der Quellendokumentation zu erstellen.](sources-sdk/documentation/text-editor.md)
-      - [Dokumentation-Self-Service-API-Vorlage](sources-sdk/documentation/template.md)
-      - [Vorlage für die Dokumentation-Self-Service-Benutzeroberfläche](sources-sdk/documentation/ui-template.md)
+      - [Dokumentationsvorlage für Selbstbedienungs-API](sources-sdk/documentation/template.md)
+      - [Dokumentationsvorlage für Selbstbedienungs-Benutzeroberfläche](sources-sdk/documentation/ui-template.md)
 - [Flusslaufbenachrichtigungen](notifications.md)
 - [IP-Adressen-Zulassungsliste](ip-address-allow-list.md)
 - [Häufig gestellte Fragen](./troubleshooting.md)
