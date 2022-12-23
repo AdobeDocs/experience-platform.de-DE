@@ -8,7 +8,7 @@ exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 source-git-commit: 784ec5f799c591185620e8376a6980b4930d914a
 workflow-type: tm+mt
 source-wordcount: '1123'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -35,12 +35,12 @@ Experience Platform ermöglicht die Aufnahme von Daten aus anderen Adobe-Program
 - [Übersicht über Adobe Analytics-Report Suite-Datenquellen](connectors/adobe-applications/analytics.md)
    - [Adobe Analytics-Quellverbindung über die Benutzeroberfläche erstellen](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Übersicht über Adobe Campaign Managed Cloud Services-Quellen](connectors/adobe-applications/campaign.md)
-   - [Managed Cloud Services-Quellverbindung mit Adobe Campaign in der UI erstellen](./tutorials/ui/create/adobe-applications/campaign.md)
+   - [Erstellen einer Quellverbindung zu Adobe Campaign Managed Cloud Services in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/campaign.md)
 - [Übersicht über die Quellen der Adobe-Datenerfassung](connectors/adobe-applications/data-collection.md)
    - [Erstellen einer Quellverbindung für Kundenattribute in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [Übersicht über [!DNL Marketo Engage]-Quellen](connectors/adobe-applications/marketo/marketo.md)
    - [Erstellen einer  [!DNL Marketo Engage] -Quellverbindung über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/marketo.md)
-- [Adobe Workfront-Quellübersicht](connectors/adobe-applications/workfront.md)
+- [Übersicht zu Adobe Workfront-Quellen](connectors/adobe-applications/workfront.md)
    - [Erstellen einer Workfront-Quellverbindung über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/workfront.md)
 
 ### Werbung {#advertising}

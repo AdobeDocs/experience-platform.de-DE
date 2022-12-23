@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Segmentierung; Segmentierung; Segmentierungsdienst; Kantensegmentierung; Edge-Segmentierung; Streaming-Edge
+keywords: Experience Platform;Startseite;beliebte Themen;Segmentierung;Segmentierung;Segmentierungs-Service;Kantensegmentierung;Edge-Segmentierung;Streaming-Kante
 solution: Experience Platform
 title: Edge-Segmentierung mithilfe der API
 topic-legacy: developer guide
-description: Dieses Dokument enthält Beispiele für die Verwendung der Kantensegmentierung mit der Adobe Experience Platform Segmentation Service-API.
+description: Dieses Dokument enthält Beispiele für die Verwendung der Edge-Segmentierung mit der Segmentierungs-Service-API von Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
 source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
 source-wordcount: '1187'
-ht-degree: 5%
+ht-degree: 96%
 
 ---
 
@@ -16,63 +16,63 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->Im folgenden Dokument erfahren Sie, wie Sie die Kantensegmentierung mithilfe der API durchführen. Informationen zur Kantensegmentierung mithilfe der Benutzeroberfläche finden Sie im Abschnitt [Handbuch zur Edge-Segmentierungsbenutzeroberfläche](../ui/edge-segmentation.md).
+>Im folgenden Dokument erfahren Sie, wie Sie die Edge-Segmentierung mithilfe der API durchführen. Informationen zur Edge-Segmentierung mithilfe der Benutzeroberfläche finden Sie im [Handbuch zur Benutzeroberfläche der Edge-Segmentierung](../ui/edge-segmentation.md).
 >
->Die Edge-Segmentierung ist jetzt allgemein für alle Platform-Benutzer verfügbar. Wenn Sie während der Beta-Phase Kantensegmente erstellt haben, sind diese Segmente weiterhin funktionsfähig.
+>Die Edge-Segmentierung ist jetzt allgemein für alle Benutzenden von Platform verfügbar. Wenn Sie während der Beta-Phase Edge-Segmente erstellt haben, sind diese Segmente weiterhin funktionsfähig.
 
-Bei der Edge-Segmentierung können Segmente in Adobe Experience Platform sofort am Rand ausgewertet werden, was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
+Bei der Edge-Segmentierung werden Segmente in Adobe Experience Platform sofort ausgewertet, was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
 
 >[!IMPORTANT]
 >
-> Die Edge-Daten werden an einem Edge-Server-Speicherort gespeichert, der am nächsten zum Erfassungsort liegt, und können an einem anderen Speicherort als dem als Hub (oder Prinzipal) für das Adobe Experience Platform-Rechenzentrum bezeichnet werden.
+> Die Edge-Daten werden an dem Edge-Server-Standort gespeichert, der am nächsten zum Erfassungsort liegt. Sie können auch an einem anderen Speicherort als dem als Hub (oder Prinzipal) für das Adobe Experience Platform-Rechenzentrum festgelegten gespeichert werden.
 >
-> Darüber hinaus berücksichtigt die Edge-Segmentierungsmodul nur Anforderungen an den Edge, an dem **one** mit Primärkennzeichnung versehene Identität, die mit nicht Edge-basierten primären Identitäten konsistent ist.
+> Außerdem wird die Edge-Segmentierungs-Engine nur Edge-Anfragen berücksichtigen, wenn **eine** primär markierte Identität vorhanden ist, was im Einklang mit nicht-Edge-basierten primären Identitäten steht.
 
 ## Erste Schritte
 
-Dieses Entwicklerhandbuch setzt ein Verständnis der verschiedenen [!DNL Adobe Experience Platform] Dienste, die mit der Kantensegmentierung verbunden sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
+Dieses Entwicklerhandbuch setzt Grundkenntnisse der verschiedenen [!DNL Adobe Experience Platform]-Services voraus, die mit Edge-Segmentierungen zusammenhängen. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Services:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Verbraucherprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
-- [[!DNL Segmentation]](../home.md): Ermöglicht die Erstellung von Segmenten und Zielgruppen aus Ihren [!DNL Real-time Customer Profile] Daten.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus verschiedenen Quellen beruht.
+- [[!DNL Segmentation]](../home.md): Ermöglicht die Erstellung von Segmenten und Zielgruppen aus Ihren [!DNL Real-time Customer Profile]-Daten.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Platform] organisiert werden.
 
-Informationen zum erfolgreichen Aufrufen von Experience Platform-API-Endpunkten finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../landing/api-guide.md) , um mehr über erforderliche Kopfzeilen und das Lesen von Beispiel-API-Aufrufen zu erfahren.
+Lesen Sie für erfolgreiche Aufrufe an API-Endpunkte in Experience Platform das Handbuch [Erste Schritte mit Platform-APIs](../../landing/api-guide.md), um mehr über erforderliche Kopfzeilen und Beispiele für API-Aufrufe zu erfahren.
 
-## Kantensegmentierungs-Abfragetypen {#query-types}
+## Abfragetypen für Edge-Segmentierungen {#query-types}
 
-Damit ein Segment mithilfe der Kantensegmentierung bewertet werden kann, muss die Abfrage den folgenden Richtlinien entsprechen:
+Damit ein Segment mithilfe der Edge-Segmentierung bewertet werden kann, muss die Abfrage den folgenden Richtlinien entsprechen:
 
 | Abfragetyp | Details | Beispiel | PQL-Beispiel |
 | ---------- | ------- | ------- | ----------- |
-| Einzelereignis | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung verweist. | Personen, die einen Artikel zum Warenkorb hinzugefügt haben. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
-| Einzelprofil | Alle Segmentdefinitionen, die auf ein einzelnes Attribut &quot;Nur Profil&quot;verweisen | Menschen, die in den USA leben. | `homeAddress.countryCode = "US"` |
-| Einzelereignis, das ein Profil referenziert | Jede Segmentdefinition, die auf ein oder mehrere Profilattribute und ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung verweist. | Personen, die in den USA leben und die Homepage besucht haben. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
-| Negatives einzelnes Ereignis mit einem Profilattribut | Jede Segmentdefinition, die auf ein negatives eingehendes Ereignis und ein oder mehrere Profilattribute verweist. | Menschen, die in den USA leben und **not** besuchte die Homepage. | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")]))` |
+| Einzelnes Ereignis | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung verweist. | Personen, die einen Artikel zum Warenkorb hinzugefügt haben. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
+| Einzelprofil | Alle Segmentdefinitionen, die auf ein einzelnes „Nur-Profil“-Attribut verweisen | Personen, die in den USA leben. | `homeAddress.countryCode = "US"` |
+| Einzelereignis, das auf ein Profil verweist | Jede Segmentdefinition, die ohne Zeitbeschränkung auf ein oder mehrere Profilattribute und ein einzelnes eingehendes Ereignis verweist. | Personen, die in den USA leben und die Homepage besucht haben. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
+| Negiertes einzelnes Ereignis mit einem Profilattribut | Jede Segmentdefinition, die auf ein negiertes eingehendes Ereignis und ein oder mehrere Profilattribute verweist. | Personen, die in den USA leben und die Homepage **nicht** besucht haben. | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")]))` |
 | Einzelnes Ereignis innerhalb eines Zeitfensters | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis innerhalb eines bestimmten Zeitraums verweist. | Personen, die die Homepage in den letzten 24 Stunden besucht haben. | `chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
 | Einzelnes Ereignis mit einem Profilattribut innerhalb eines Zeitfensters | Jede Segmentdefinition, die innerhalb eines bestimmten Zeitraums auf ein oder mehrere Profilattribute und ein einzelnes eingehendes Ereignis verweist. | Personen, die in den USA leben und die die Homepage in den letzten 24 Stunden besucht haben. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
-| Negatives einzelnes Ereignis mit einem Profilattribut innerhalb eines Zeitfensters | Jede Segmentdefinition, die innerhalb eines Zeitraums auf ein oder mehrere Profilattribute und ein negiertes einzelnes eingehendes Ereignis verweist. | Menschen, die in den USA leben und **not** die Homepage in den letzten 24 Stunden besucht haben. | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)]))` |
-| Frequenzereignis innerhalb eines 24-Stunden-Zeitfensters | Jede Segmentdefinition, die auf ein Ereignis verweist, das innerhalb eines Zeitfensters von 24 Stunden eine bestimmte Anzahl von Malen stattfindet. | Besucher der Homepage **mindestens** fünf Mal in den letzten 24 Stunden. | `chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
-| Häufigkeitsereignis mit einem Profilattribut innerhalb eines 24-Stunden-Zeitfensters | Jede Segmentdefinition, die sich auf ein oder mehrere Profilattribute und ein Ereignis bezieht, die innerhalb eines Zeitfensters von 24 Stunden eine bestimmte Anzahl von Malen stattfinden. | Personen aus den USA, die die Homepage besucht haben **mindestens** fünf Mal in den letzten 24 Stunden. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
-| Umgekehrtes Frequenzereignis mit einem Profil innerhalb eines Zeitfensters von 24 Stunden | Jede Segmentdefinition, die auf ein oder mehrere Profilattribute und ein negiertes Ereignis verweist, das innerhalb eines Zeitfensters von 24 Stunden eine bestimmte Anzahl von Malen stattfindet. | Personen, die die Homepage nicht besucht haben **more** in den letzten 24 Stunden mehr als fünfmal. | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] ))` |
-| Mehrere eingehende Treffer innerhalb eines Zeitprofils von 24 Stunden | Jede Segmentdefinition, die auf mehrere Ereignisse verweist, die innerhalb eines Zeitfensters von 24 Stunden auftreten. | Personen, die die Homepage besucht haben **oder** die Checkout-Seite innerhalb der letzten 24 Stunden besucht haben. | `chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
-| Mehrere Ereignisse mit einem Profil innerhalb eines 24-Stunden-Zeitfensters | Jede Segmentdefinition, die auf ein oder mehrere Profilattribute und mehrere Ereignisse verweist, die innerhalb eines Zeitfensters von 24 Stunden auftreten. | Personen aus den USA, die die Homepage besucht haben **und** die Checkout-Seite innerhalb der letzten 24 Stunden besucht haben. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
-| Segment von Segmenten | Jede Segmentdefinition, die einen oder mehrere Batch- oder Streaming-Segmente enthält. | Personen, die in den USA leben und sich im Segment &quot;vorhandenes Segment&quot;befinden. | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
-| Abfrage, die auf eine Zuordnung verweist | Jede Segmentdefinition, die auf eine Zuordnung von Eigenschaften verweist. | Personen, die ihrem Warenkorb auf der Grundlage externer Segmentdaten hinzugefügt haben. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
+| Negiertes einzelnes Ereignis mit einem Profilattribut innerhalb eines Zeitfensters | Jede Segmentdefinition, die innerhalb eines Zeitraums auf ein oder mehrere Profilattribute und ein negiertes einzelnes eingehendes Ereignis verweist. | Personen, die in den USA leben und die Homepage in den letzten 24 Stunden **nicht** besucht haben. | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)]))` |
+| Häufigkeitsereignis innerhalb eines Zeitfensters von 24 Stunden | Jede Segmentdefinition, die auf ein Ereignis verweist, das innerhalb eines Zeitfensters von 24 Stunden eine bestimmte Anzahl von Malen stattfindet. | Personen, die die Homepage in den letzten 24 Stunden **mindestens** fünf Mal besucht haben. | `chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
+| Häufigkeitsereignis mit einem Profilattribut innerhalb eines Zeitfensters von 24 Stunden | Jede Segmentdefinition, die auf ein oder mehrere Profilattribute und ein Ereignis verweist, die innerhalb eines Zeitfensters von 24 Stunden eine bestimmte Anzahl von Malen stattfinden. | Personen aus den USA, die die Homepage in den letzten 24 Stunden **mindestens** fünf Mal besucht haben. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
+| Negiertes Häufigkeitsereignis mit einem Profil innerhalb eines Zeitfensters von 24 Stunden | Jede Segmentdefinition, die auf ein oder mehrere Profilattribute und ein negiertes Ereignis verweist, das innerhalb eines Zeitfensters von 24 Stunden eine bestimmte Anzahl von Malen stattfindet. | Personen, die die Homepage in den letzten 24 Stunden nicht **mehr** als fünf Mal besucht haben. | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] ))` |
+| Mehrere eingehende Treffer innerhalb eines Zeitprofils von 24 Stunden | Jede Segmentdefinition, die auf mehrere Ereignisse verweist, die innerhalb eines Zeitfensters von 24 Stunden auftreten. | Personen, die innerhalb der letzten 24 Stunden die Homepage **oder** die Checkout-Seite besucht haben. | `chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
+| Mehrere Ereignisse mit einem Profil innerhalb eines 24-Stunden-Zeitfensters | Jede Segmentdefinition, die auf ein oder mehrere Profilattribute und mehrere Ereignisse verweist, die innerhalb eines Zeitfensters von 24 Stunden auftreten. | Personen aus den USA, die innerhalb der letzten 24 Stunden die Homepage **und** die Checkout-Seite besucht haben. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
+| Segment von Segmenten | Jede Segmentdefinition, die ein oder mehrere Batch- oder Streaming-Segmente enthält. | Personen, die in den USA leben und sich im Segment „vorhandenes Segment“ befinden. | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
+| Abfrage, die auf eine Zuordnung verweist | Jede Segmentdefinition, die auf eine Zuordnung von Eigenschaften verweist. | Personen, die ihrem Warenkorb auf der Grundlage externer Segmentdaten Elemente hinzugefügt haben. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
-Zusätzlich wird das Segment **must** an eine Zusammenführungsrichtlinie gebunden sein, die an der Kante aktiv ist. Weitere Informationen zu Zusammenführungsrichtlinien finden Sie im Abschnitt [Leitfaden zu Zusammenführungsrichtlinien](../../profile/api/merge-policies.md).
+Zusätzlich **muss** das Segment an eine Zusammenführungsrichtlinie gebunden sein, die an Edge aktiv ist. Weitere Informationen zu Zusammenführungsrichtlinien finden Sie im [Handbuch zu Zusammenführungsrichtlinien](../../profile/api/merge-policies.md).
 
 Eine Segmentdefinition **not** für die Kantensegmentierung in den folgenden Szenarien aktiviert sein:
 
 - Die Segmentdefinition umfasst eine Kombination aus einem einzelnen Ereignis und einer `inSegment` -Ereignis.
    - Wenn das Segment jedoch im `inSegment` Ereignis nur Profil ist, wird die Segmentdefinition **will** für die Kantensegmentierung aktiviert sein.
 
-## Alle für die Kantensegmentierung aktivierten Segmente abrufen
+## Abrufen aller für die Edge-Segmentierung aktivierten Segmente
 
-Sie können eine Liste aller Segmente abrufen, die für die Kantensegmentierung in Ihrer IMS-Organisation aktiviert sind, indem Sie eine GET-Anfrage an die `/segment/definitions` -Endpunkt.
+Sie können eine Liste aller Segmente abrufen, die für die Edge-Segmentierung in Ihrer IMS-Organisation aktiviert sind, indem Sie eine GET-Anfrage an den `/segment/definitions`-Endpunkt stellen.
 
 **API-Format**
 
-Um Segmente abzurufen, die für die Kantensegmentierung aktiviert sind, müssen Sie den Abfrageparameter einbeziehen `evaluationInfo.synchronous.enabled=true` im Anfragepfad.
+Um Segmente abzurufen, die für die Edge-Segmentierung aktiviert sind, müssen Sie den Abfrageparameter `evaluationInfo.synchronous.enabled=true` in den Anfragepfad aufnehmen.
 
 ```http
 GET /segment/definitions?evaluationInfo.synchronous.enabled=true
@@ -91,7 +91,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Reihe von Segmenten in Ihrer IMS-Organisation zurück, die für die Kantensegmentierung aktiviert sind. Detailliertere Informationen zur zurückgegebenen Segmentdefinition finden Sie im Abschnitt [Endleitfaden für Segmentdefinitionen](./segment-definitions.md).
+Bei einer erfolgreichen Antwort wird eine Gruppe von Segmenten in Ihrer IMS-Organisation zurückgegeben, die für die Edge-Segmentierung aktiviert sind. Detailliertere Informationen zur zurückgegebenen Segmentdefinition finden Sie im [Handbuch zum Segmentdefinitionenendpunkt](./segment-definitions.md).
 
 ```json
 {
@@ -178,9 +178,9 @@ Eine erfolgreiche Antwort gibt eine Reihe von Segmenten in Ihrer IMS-Organisatio
 }
 ```
 
-## Erstellen eines Segments, das für die Kantensegmentierung aktiviert ist
+## Erstellen eines Segments, das für die Edge-Segmentierung aktiviert ist
 
-Sie können ein Segment erstellen, das für die Kantensegmentierung aktiviert ist, indem Sie eine POST-Anfrage an die `/segment/definitions` -Endpunkt, der mit einem der [oben aufgeführte Kantensegmentierungs-Abfragetypen](#query-types).
+Sie können ein Segment erstellen, das für die Edge-Segmentierung aktiviert ist, indem Sie eine POST-Anfrage an den `/segment/definitions`-Endpunkt stellen, der [einem der oben aufgeführten Abfragetypen für die Edge-Segmentierung entspricht](#query-types).
 
 **API-Format**
 
@@ -192,7 +192,7 @@ POST /segment/definitions
 
 >[!NOTE]
 >
->Das folgende Beispiel stellt eine Standardanfrage zum Erstellen eines Segments dar. Weitere Informationen zum Erstellen einer Segmentdefinition finden Sie im Tutorial zu [Erstellen eines Segments](../tutorials/create-a-segment.md).
+>Das folgende Beispiel stellt eine Standardanfrage zum Erstellen eines Segments dar. Weiterführende Informationen zum Erstellen einer Segmentdefinition finden Sie im Tutorial zum [Erstellen von Segmenten](../tutorials/create-a-segment.md).
 
 ```shell
 curl -X POST \
@@ -219,7 +219,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der neu erstellten Segmentdefinition zurück, die für die Kantensegmentierung aktiviert ist.
+Bei einer erfolgreichen Antwort werden die Details der neu erstellten Segmentdefinition zurückgegeben, die für die Edge-Segmentierung aktiviert ist.
 
 ```json
 {
@@ -261,14 +261,14 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Segmentdefinition 
 
 ## Nächste Schritte
 
-Nachdem Sie nun wissen, wie Sie Segmente mit aktivierter Kantensegmentierung erstellen, können Sie sie verwenden, um Anwendungsfälle für die Personalisierung von derselben Seite und nächsten Seiten zu aktivieren.
+Nachdem Sie nun wissen, wie Sie Segmente mit aktivierter Edge-Segmentierung erstellen, können Sie sie verwenden, um Anwendungsfälle für die Personalisierung der gleichen Seite und der nächsten Seite zu ermöglichen.
 
 Weiterführende Informationen zum Durchführen ähnlicher Aktionen und zum Verwenden von Segmenten unter Einsatz der Benutzeroberfläche von Adobe Experience Platform finden Sie im [Segment Builder-Benutzerhandbuch](../ui/segment-builder.md).
 
 ## Anhang
 
-Im folgenden Abschnitt finden Sie häufig gestellte Fragen zur Kantensegmentierung:
+Im folgenden Abschnitt finden Sie häufig gestellte Fragen zur Edge-Segmentierung:
 
 ### Wie lange dauert es, bis ein Segment im Edge Network verfügbar ist?
 
-Es dauert bis zu eine Stunde, bis ein Segment im Edge Network verfügbar ist.
+Es dauert bis zu einer Stunde, bis ein Segment im Edge Network verfügbar ist.

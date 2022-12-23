@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; oracle;
+keywords: Experience Platform;Startseite;beliebte Themen;oracle;
 title: (Beta) Erstellen einer Oracle Responsys-Basisverbindung mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Oracle Responsys verbinden.
 hide: true
@@ -8,15 +8,15 @@ exl-id: 76659f5a-c923-488c-88f6-1919bc6a7bb5
 source-git-commit: 784ec5f799c591185620e8376a6980b4930d914a
 workflow-type: tm+mt
 source-wordcount: '552'
-ht-degree: 64%
+ht-degree: 100%
 
 ---
 
-# (Beta) Erstellen Sie eine [!DNL Oracle Responsys] Basisverbindung mit [!DNL Flow Service] API
+# (Beta) Erstellen einer [!DNL Oracle Responsys]-Basisverbindung mithilfe der [!DNL Flow Service]-API
 
 >[!NOTE]
 >
->Die [!DNL Oracle Responsys] -Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions), um weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren zu erhalten.
+>Die [!DNL Oracle Responsys]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions), um weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren zu erhalten.
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -27,7 +27,7 @@ Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindun
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Platform voraus:
 
 * [Quellen](../../../../home.md): Platform ermöglicht das Aufnehmen von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../../sandboxes/home.md)[!DNL Platform]:  bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Sandboxes](../../../../../sandboxes/home.md): Platform bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie für eine erfolgreiche Verbindung mit [!DNL Oracle Responsys] unter Verwendung der [!DNL Flow Service]-API benötigen.
 
@@ -37,12 +37,12 @@ Damit [!DNL Flow Service] eine Verbindung mit [!DNL Oracle Responsys] herstellen
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| `endpoint` | Die REST-Authentifizierungsendpunkt-URL Ihrer [!DNL Oracle Responsys] -Instanz. |
-| `clientId` | Die Client-ID Ihrer [!DNL Oracle Responsys] -Instanz. |
-| `clientSecret` | Das Client-Geheimnis Ihres [!DNL Oracle Responsys] -Instanz. |
-| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Der Wert für die Verbindungsspezifikations-ID der [!DNL Oracle Responsys] -Quelle wie folgt fest: `ff4274f2-c9a9-11eb-b8bc-0242ac130003`. |
+| `endpoint` | Die REST-Authentifizierungsendpunkt-URL Ihrer [!DNL Oracle Responsys]-Instanz. |
+| `clientId` | Die Client-ID Ihrer [!DNL Oracle Responsys]-Instanz. |
+| `clientSecret` | Das Client-Geheimnis Ihrer [!DNL Oracle Responsys]-Instanz. |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Der Wert für die Verbindungsspezifikations-ID der [!DNL Oracle Responsys]-Quelle ist wie folgt festgelegt: `ff4274f2-c9a9-11eb-b8bc-0242ac130003`. |
 
-Weitere Informationen zu Authentifizierungsberechtigungen für [!DNL Oracle Responsys], siehe [[!DNL Oracle Responsys] Authentifizierungshandbuch](https://docs.oracle.com/en/cloud/saas/marketing/responsys-develop/API/GetStarted/authentication.htm).
+Weitere Informationen zu Authentifizierungsdaten für [!DNL Oracle Responsys] finden Sie im [[!DNL Oracle Responsys] Authentifizierungshandbuch](https://docs.oracle.com/en/cloud/saas/marketing/responsys-develop/API/GetStarted/authentication.htm).
 
 ### Verwenden von Platform-APIs
 
@@ -93,12 +93,12 @@ curl -X POST \
 | Parameter | Beschreibung |
 | --- | --- |
 | `name` | Der Name Ihrer [!DNL Oracle Responsys]-Basisverbindung. Es wird empfohlen, einen beschreibenden Namen anzugeben, da Sie diesen Wert zum Nachschlagen Ihrer Basisverbindung verwenden können. |
-| `description` | (Optional) Eine Eigenschaft, die Sie einbeziehen können, um zusätzliche Informationen zu Ihrer Basisverbindung bereitzustellen. |
+| `description` | (Optional) Eine Eigenschaft, die Sie einbeziehen können, um ergänzende Informationen zu Ihrer Basisverbindung bereitzustellen. |
 | `auth.specName` | Der Authentifizierungstyp, der für die Verbindung verwendet wird. |
-| `auth.params.endpoint` | Die REST-Authentifizierungsendpunkt-URL Ihrer [!DNL Oracle Responsys] Server. |
-| `auth.params.clientId` | Die Client-ID Ihrer [!DNL Oracle Responsys] -Instanz. |
-| `auth.params.clientSecret` | Das Client-Geheimnis Ihres [!DNL Oracle Responsys] -Instanz. |
-| `connectionSpec.id` | Der Wert für die Verbindungsspezifikations-ID der [!DNL Oracle Responsys] -Quelle wie folgt fest: `ff4274f2-c9a9-11eb-b8bc-0242ac130003`. |
+| `auth.params.endpoint` | Die REST-Authentifizierungsendpunkt-URL Ihres [!DNL Oracle Responsys]-Servers. |
+| `auth.params.clientId` | Die Client-ID Ihrer [!DNL Oracle Responsys]-Instanz. |
+| `auth.params.clientSecret` | Das Client-Geheimnis Ihrer [!DNL Oracle Responsys]-Instanz. |
+| `connectionSpec.id` | Der Wert für die Verbindungsspezifikations-ID der [!DNL Oracle Responsys]-Quelle ist wie folgt festgelegt: `ff4274f2-c9a9-11eb-b8bc-0242ac130003`. |
 
 **Antwort**
 
@@ -113,7 +113,7 @@ Bei einer erfolgreichen Antwort werden Details zu der neu erstellten Basisverbin
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Oracle Responsys] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL Oracle Responsys]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
-* [Erstellen Sie einen Datenfluss, um Daten zur Marketing-Automatisierung mit der [!DNL Flow Service] API](../../collect/marketing-automation.md)
+* [Erstellen eines Datenflusses, um Daten zur Marketing-Automatisierung mithilfe der  [!DNL Flow Service] -API auf Platform zu übertragen](../../collect/marketing-automation.md)

@@ -8,7 +8,7 @@ exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '1727'
-ht-degree: 64%
+ht-degree: 96%
 
 ---
 
@@ -39,11 +39,11 @@ Das folgende Diagramm zeigt, wie die Richtliniendurchsetzung in den Datenfluss d
 
 ![](../images/enforcement/enforcement-flow.png)
 
-Wenn ein Segment zum ersten Mal aktiviert wird, [!DNL Policy Service] Prüfungen auf der Grundlage der folgenden Faktoren auf die anwendbaren Richtlinien:
+Wenn ein Segment zum ersten Mal aktiviert wird, prüft [!DNL Policy Service] anhand der folgenden Faktoren, ob einzuhaltende Richtlinien vorliegen:
 
 * Die Datennutzungsbezeichnungen, die auf Felder und Datensätze innerhalb des zu aktivierenden Segments angewendet werden.
 * Marketing-Zweck des Ziels.
-* Die Profile, die der Segmentaktivierung zugestimmt haben, basierend auf Ihren konfigurierten Zustimmungsrichtlinien.
+* Die Profile, die der Segmentaktivierung zugestimmt haben, basierend auf Ihren konfigurierten Einverständnisrichtlinien.
 
 >[!NOTE]
 >
@@ -66,14 +66,14 @@ In Experience Platform geht es bei der Durchsetzung der Richtlinien um folgende 
 1. Profilgruppen werden auf der Basis von gemeinsamen Attributen in **Segmente** unterteilt.
 1. Segmente werden für nachgelagerte **Ziele** aktiviert.
 
-Jede Phase in der obigen Zeitleiste stellt eine Entität dar, die zur Durchsetzung von Richtlinien beitragen kann, wie in der folgenden Tabelle dargestellt:
+Jeder Schritt in der oben genannten Timeline stellt eine Entität dar, die wie in der folgenden Tabelle dargestellt dazu beitragen kann, dass eine Richtlinie durchgesetzt wird:
 
 | Datenherkunftsphase | Rolle bei der Richtliniendurchsetzung |
 | --- | --- |
-| Datensatz | Datensätze enthalten Datennutzungsbeschriftungen (angewendet auf Datensatz- oder Feldebene), mit denen festgelegt wird, für welche Anwendungsfälle der gesamte Datensatz oder bestimmte Felder verwendet werden können. Richtlinienverletzungen treten auf, wenn ein Datensatz oder ein Feld mit bestimmten Beschriftungen für einen Zweck verwendet wird, den eine Richtlinie einschränkt.<br><br>Alle von Ihren Kunden erfassten Zustimmungsattribute werden ebenfalls in Datensätzen gespeichert. Wenn Sie Zugriff auf Zustimmungsrichtlinien haben, werden alle Profile, die nicht den Zustimmungsattributanforderungen Ihrer Richtlinien entsprechen, aus Segmenten ausgeschlossen, die für ein Ziel aktiviert sind. |
+| Datensatz | Datensätze enthalten Datennutzungsbeschriftungen (angewendet auf Datensatz- oder Feldebene), mit denen festgelegt wird, für welche Anwendungsfälle der gesamte Datensatz oder bestimmte Felder verwendet werden können. Richtlinienverletzungen treten auf, wenn ein Datensatz oder ein Feld mit bestimmten Beschriftungen für einen Zweck verwendet wird, den eine Richtlinie einschränkt.<br><br>Alle von Ihren Kunden erfassten Einverständnisattribute werden ebenfalls in Datensätzen gespeichert. Wenn Sie Zugriff auf Einverständnisrichtlinien haben, werden alle Profile, die nicht den Einverständnisattributanforderungen Ihrer Richtlinien entsprechen, aus Segmenten ausgeschlossen, die für ein Ziel aktiviert sind. |
 | Zusammenführungsrichtlinie | Zusammenführungsrichtlinien sind die Regeln, die Platform verwendet, um festzulegen, wie Daten beim Zusammenführen von Fragmenten aus mehreren Datensätzen priorisiert werden. Richtlinienverletzungen treten auf, wenn Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass Datensätze mit eingeschränkten Beschriftungen für ein Ziel aktiviert werden. Weitere Informationen dazu finden Sie in der [merge policies overview](../../profile/merge-policies/overview.md). |
 | Segment | Segmentregeln definieren, welche Attribute aus den Kundenprofilen einbezogen werden sollen. Je nachdem, welche Felder eine Segmentdefinition enthält, übernimmt das Segment alle angewendeten Nutzungsbeschriftungen für diese Felder. Richtlinienverletzungen treten je nach Marketing-Anwendungsfall auf, wenn Sie ein Segment aktivieren, dessen übernommene Beschriftungen aufgrund der jeweiligen Richtlinien des Zielorts der Zielgruppe eingeschränkt sind. |
-| Ziel | Beim Einrichten eines Ziels kann eine Marketing-Aktion (manchmal auch als Marketing-Anwendungsfall bezeichnet) definiert werden. Dieser Anwendungsfall korreliert mit einer Marketing-Aktion, wie in einer Richtlinie definiert. Mit anderen Worten: Die Marketing-Aktion, die Sie für ein Ziel definieren, bestimmt, welche Datennutzungsrichtlinien und Zustimmungsrichtlinien für dieses Ziel gelten.<br><br>Verstöße gegen Datennutzungsrichtlinien treten auf, wenn Sie ein Segment aktivieren, dessen Nutzungsbezeichnungen für die Marketing-Aktion des Zielziels eingeschränkt sind.<br><br>(Beta) Wenn ein Segment aktiviert wird, werden alle Profile, die nicht die erforderlichen Zustimmungsattribute für die Marketing-Aktion enthalten (wie durch Ihre Zustimmungsrichtlinien definiert), aus der aktivierten Zielgruppe ausgeschlossen. |
+| Ziel | Beim Einrichten eines Ziels kann eine Marketing-Aktion (manchmal auch als Marketing-Anwendungsfall bezeichnet) definiert werden. Dieser Anwendungsfall hängt von der in einer Richtlinie definierten Marketing-Aktion ab. Mit anderen Worten: Die Marketing-Aktion, die Sie für ein Ziel definieren, bestimmt, welche Datennutzungsrichtlinien und Einverständnisrichtlinien für dieses Ziel gelten.<br><br>Verstöße gegen Datennutzungsrichtlinien treten auf, wenn Sie ein Segment aktivieren, dessen Nutzungskennzeichnungen für die Marketing-Aktion des Ziels eingeschränkt sind.<br><br>(Beta) Wenn ein Segment aktiviert wird, werden alle Profile, die nicht die erforderlichen Einverständnisattribute für die Marketing-Aktion enthalten (gemäß der Definition in Ihren Einverständnisrichtlinien), aus der aktivierten Zielgruppe ausgeschlossen. |
 
 >[!IMPORTANT]
 >
@@ -83,16 +83,16 @@ Jede Phase in der obigen Zeitleiste stellt eine Entität dar, die zur Durchsetzu
 
 Wenn Richtlinienverletzungen auftreten, bieten die in der Benutzeroberfläche angezeigten Meldungen nützliche Werkzeuge, um die Datenherkunft, die zur Verletzung beiträgt, zu untersuchen und so zur Lösung des Problems beizutragen. Weitere Informationen finden Sie im nächsten Abschnitt.
 
-## Nachrichten zur Richtliniendurchsetzung {#enforcement}
+## Meldungen zur Richtliniendurchsetzung {#enforcement}
 
 In den folgenden Abschnitten werden die verschiedenen Meldungen zur Richtliniendurchsetzung beschrieben, die in der Benutzeroberfläche von Platform angezeigt werden:
 
 * [Verletzung von Datennutzungsrichtlinien](#data-usage-violation)
-* [Beurteilung der Einwilligungsrichtlinie](#consent-policy-evaluation)
+* [Auswertung der Einverständnisrichtlinie](#consent-policy-evaluation)
 
 ### Verletzung von Datennutzungsrichtlinien {#data-usage-violation}
 
-Wenn ein Richtlinienverstoß beim Versuch auftritt, ein Segment zu aktivieren (oder [ein bereits aktiviertes Segment zu bearbeiten](#policy-enforcement-for-activated-segments)), wird die Aktion verhindert und in einem Popup angezeigt, dass gegen eine oder mehrere Richtlinien verstoßen wurden. Nachdem ein Verstoß ausgelöst wurde, wird die Schaltfläche **[!UICONTROL Speichern]** für die Entität, die Sie bearbeiten, deaktiviert, bis die entsprechenden Komponenten aktualisiert wurden und den Datennutzungsrichtlinien entsprechen.
+Wenn ein Richtlinienverstoß beim Versuch auftritt, ein Segment zu aktivieren (oder [ein bereits aktiviertes Segment zu bearbeiten](#policy-enforcement-for-activated-segments)), wird die Aktion verhindert und in einem Pop-up angezeigt, dass gegen eine oder mehrere Richtlinien verstoßen wurde. Nachdem ein Verstoß ausgelöst wurde, wird die Schaltfläche **[!UICONTROL Speichern]** für die Entität, die Sie bearbeiten, deaktiviert, bis die entsprechenden Komponenten aktualisiert wurden und den Datennutzungsrichtlinien entsprechen.
 
 Wählen Sie einen Richtlinienverstoß in der linken Spalte des Popups aus, um Details zu diesem Verstoß anzuzeigen.
 
@@ -114,51 +114,51 @@ Wählen Sie **[!UICONTROL Listenansicht]** aus, um die Datenherkunft als Liste a
 
 ![](../images/enforcement/list-view.png)
 
-### Beurteilung der Einwilligungsrichtlinie {#consent-policy-evaluation}
+### Auswertung der Einverständnisrichtlinie {#consent-policy-evaluation}
 
-Wenn Sie [erstellte Zustimmungsrichtlinien](../policies/user-guide.md#consent-policy) und ein Segment für ein Ziel aktivieren, können Sie sehen, wie sich Ihre Zustimmungsrichtlinien auf den Prozentsatz der Profile auswirken, die in der Aktivierung enthalten sind.
+Wenn Sie [Einverständnisrichtlinien erstellt](../policies/user-guide.md#consent-policy) haben und ein Segment für ein Ziel aktivieren, können Sie sehen, wie sich Ihre Einverständnisrichtlinien auf den Prozentsatz der Profile auswirken, die in die Aktivierung eingebunden werden.
 
-#### Vor-Aktivierung-Evaluierung
+#### Auswertung vor der Aktivierung
 
-Sobald Sie die **[!UICONTROL Überprüfen]** Schritt bei [Aktivieren eines Ziels](../../destinations/ui/activation-overview.md)auswählen **[!UICONTROL Angewandte Richtlinien anzeigen]**.
+Wenn Sie beim [Aktivieren eines Ziels](../../destinations/ui/activation-overview.md) den Schritt **[!UICONTROL Überprüfen]** erreicht haben, wählen Sie **[!UICONTROL Angewendete Richtlinien anzeigen]** aus.
 
-![Schaltfläche &quot;Angewandte Richtlinien anzeigen&quot;im Workflow &quot;Ziel aktivieren&quot;](../images/enforcement/view-applied-policies.png)
+![Schaltfläche „Angewendete Richtlinien anzeigen“ im Workflow „Ziel aktivieren“](../images/enforcement/view-applied-policies.png)
 
-Es wird ein Dialogfeld mit einer Richtlinienüberprüfung angezeigt, in dem Sie eine Vorschau der Auswirkungen Ihrer Zustimmungsrichtlinien auf die einwilligte Zielgruppe der aktivierten Segmente anzeigen können.
+Es wird ein Dialogfeld für die Richtlinienüberprüfung angezeigt, in dem Sie eine Vorschau der Auswirkungen Ihrer Einverständnisrichtlinien auf die einverstandene Zielgruppe der aktivierten Segmente anzeigen können.
 
-![Dialogfeld für die Prüfung von Einwilligungsrichtlinien in der Platform-Benutzeroberfläche](../images/enforcement/consent-policy-check.png)
+![Dialogfeld für die Überprüfung von Einverständnisrichtlinien in der Platform-Benutzeroberfläche](../images/enforcement/consent-policy-check.png)
 
-Das Dialogfeld zeigt die einwilligte Zielgruppe für jeweils ein Segment an. Um die Richtlinienbewertung für ein anderes Segment anzuzeigen, wählen Sie im Dropdown-Menü über dem Diagramm ein Segment aus der Liste aus.
+Das Dialogfeld zeigt die einverstandene Zielgruppe für jeweils ein Segment an. Um die Richtlinienauswertung für ein anderes Segment anzuzeigen, wählen Sie im Dropdown-Menü über dem Diagramm ein Segment aus der Liste aus.
 
-![Segmentwechsel im Dialogfeld &quot;Richtlinienüberprüfung&quot;](../images/enforcement/segment-switcher.png)
+![Segmentwechsel im Dialogfeld zur Richtlinienüberprüfung](../images/enforcement/segment-switcher.png)
 
-Verwenden Sie die linke Leiste, um zwischen den entsprechenden Zustimmungsrichtlinien für das ausgewählte Segment zu wechseln. Nicht ausgewählte Richtlinien werden im Abschnitt[!UICONTROL Sonstige Politikbereiche]&quot;.
+Verwenden Sie die linke Leiste, um zwischen den geltenden Einverständnisrichtlinien für das ausgewählte Segment zu wechseln. Nicht ausgewählte Richtlinien werden im Abschnitt [!UICONTROL Sonstige Richtlinien] des Diagramms dargestellt.
 
-![Richtlinienwechsel im Dialogfeld &quot;Richtlinienüberprüfung&quot;](../images/enforcement/policy-switcher.png)
+![Richtlinienwechsel im Dialogfeld zur Richtlinienüberprüfung](../images/enforcement/policy-switcher.png)
 
 Das Diagramm zeigt die Überschneidung zwischen drei Profilgruppen:
 
 1. Profile, die für das ausgewählte Segment qualifiziert sind
-1. Profile, die für die ausgewählte Zustimmungsrichtlinie qualifiziert sind
-1. Profile, die für die anderen anwendbaren Zustimmungsrichtlinien für das Segment qualifiziert sind (als[!UICONTROL Sonstige Politikbereiche]&quot; in der Grafik)
+1. Profile, die für die ausgewählte Einverständnisrichtlinie qualifiziert sind
+1. Profile, die für die anderen geltenden Einverständnisrichtlinien für das Segment qualifiziert sind ([!UICONTROL Sonstige Richtlinien] im Diagramm)
 
-Die Profile, die für alle drei der oben genannten Gruppen qualifiziert sind, repräsentieren die einwilligte Zielgruppe für das ausgewählte Segment, zusammengefasst in der rechten Leiste.
+Die Profile, die für alle drei der oben genannten Gruppen qualifiziert sind, repräsentieren die einverstandene Zielgruppe für das ausgewählte Segment, zusammengefasst in der rechten Leiste.
 
-![Zusammenfassungsabschnitt im Dialogfeld &quot;Richtlinienüberprüfung&quot;](../images/enforcement/summary.png)
+![Zusammenfassungsabschnitt im Dialogfeld zur Richtlinienüberprüfung](../images/enforcement/summary.png)
 
 Bewegen Sie den Mauszeiger über eine der Zielgruppen im Diagramm, um die Anzahl der darin enthaltenen Profile anzuzeigen.
 
-![Markierung eines Diagrammabschnitts im Dialogfeld &quot;Richtlinienüberprüfung&quot;](../images/enforcement/highlight-segment.png)
+![Hervorheben eines Diagrammabschnitts im Dialogfeld zur Richtlinienüberprüfung](../images/enforcement/highlight-segment.png)
 
-Die einwilligte Zielgruppe wird durch die zentrale Überschneidung des Diagramms dargestellt und kann wie die anderen Abschnitte hervorgehoben werden.
+Die einverstandene Zielgruppe wird durch die zentrale Überschneidung des Diagramms dargestellt und kann wie die anderen Abschnitte hervorgehoben werden.
 
-![Hervorheben der zugestimmten Zielgruppe im Diagramm](../images/enforcement/consented-audience.png)
+![Hervorheben der einverstandenen Zielgruppe im Diagramm](../images/enforcement/consented-audience.png)
 
-#### Flussausführung - Durchsetzung
+#### Flussausführung – Durchsetzung
 
-Wenn Daten für ein Ziel aktiviert werden, zeigen die Details zur Flussausführung die Anzahl der Identitäten an, die aufgrund aktiver Zustimmungsrichtlinien ausgeschlossen wurden.
+Wenn Daten für ein Ziel aktiviert werden, wird in den Details zur Flussausführung die Anzahl der Identitäten angezeigt, die aufgrund aktiver Einverständnisrichtlinien ausgeschlossen wurden.
 
-![Ausgeschlossene Identitätsmetriken für einen Datenfluss](../images/enforcement/dataflow-run-enforcement.png)
+![Metriken für ausgeschlossene Identitäten für eine Datenflussausführung](../images/enforcement/dataflow-run-enforcement.png)
 
 ## Richtliniendurchsetzung für aktivierte Segmente {#policy-enforcement-for-activated-segments}
 

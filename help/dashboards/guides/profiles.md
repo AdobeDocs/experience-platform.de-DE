@@ -1,55 +1,55 @@
 ---
-keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Benutzeroberfläche; Benutzeroberfläche; Anpassung; Profil-Dashboard; Dashboard
-title: Handbuch zum Profil-Dashboard
+keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Benutzeroberfläche;Benutzeroberfläche;Anpassung;Profil-Dashboard;Dashboard
+title: Handbuch zum Profile-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
 source-git-commit: af01ac288a8afe59105be5859b2d40de5e346963
 workflow-type: tm+mt
 source-wordcount: '3381'
-ht-degree: 8%
+ht-degree: 98%
 
 ---
 
-# [!UICONTROL Profile] Dashboard
+# [!UICONTROL Profile]-Dashboard
 
-Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zu Ihrer [!DNL Real-time Customer Profile] Daten, wie sie in einer täglichen Momentaufnahme erfasst werden. In diesem Handbuch wird beschrieben, wie Sie auf das Profil-Dashboard in der Benutzeroberfläche zugreifen und mit ihm arbeiten können. Außerdem erhalten Sie Informationen zu den im Dashboard angezeigten Metriken.
+Die Benutzeroberfläche von Adobe Experience Platform verfügt über ein Dashboard, über das Sie wichtige Informationen über Ihre [!DNL Real-time Customer Profile]-Daten anzeigen können, die während eines täglichen Schnappschusses erfasst wurden. In diesem Handbuch wird beschrieben, wie Sie auf das Profile-Dashboard in der Benutzeroberfläche zugreifen und mit ihm arbeiten können. Außerdem erhalten Sie Informationen zu den im Dashboard angezeigten Metriken.
 
-Eine Übersicht über alle Profilfunktionen in der Benutzeroberfläche der Experience Platform finden Sie im Abschnitt [Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils](../../profile/ui/user-guide.md).
+Eine Übersicht über alle Profilfunktionen in der Benutzeroberfläche von Experience Platform finden Sie im [Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils](../../profile/ui/user-guide.md).
 
-## Profil-Dashboard-Daten
+## Daten des Profile-Dashboards
 
-Im Dashboard „Profile“ wird eine Momentaufnahme der Attributdaten (Datensatzdaten) wiedergegeben, die sich in Ihrem Unternehmen im Profilspeicher in Experience Platform befinden. Der Schnappschuss enthält keine Ereignisdaten (Zeitreihendaten).
+Im Dashboard „Profile“ wird eine Momentaufnahme der Attributdaten (Datensatzdaten) wiedergegeben, die sich für Ihre Organisation im Profilspeicher in Experience Platform befinden. Die Momentaufnahme enthält keine Ereignisdaten (Zeitreihendaten).
 
-Die Attributdaten im Snapshot zeigen die Daten exakt so an, wie sie zu dem Zeitpunkt angezeigt werden, zu dem die Momentaufnahme erstellt wurde. Mit anderen Worten, der Schnappschuss ist keine Annäherung oder Stichprobe der Daten, und das Profil-Dashboard wird nicht in Echtzeit aktualisiert.
-
->[!NOTE]
->
->Änderungen oder Aktualisierungen, die seit der Aufnahme des Schnappschusses an den Daten vorgenommen wurden, werden erst dann im Dashboard angezeigt, wenn der nächste Schnappschuss erstellt wurde.
-
-## Analyse des Profil-Dashboards
-
-Um in der Platform-Benutzeroberfläche zum Profil-Dashboard zu navigieren, wählen Sie **[!UICONTROL Profile]** Wählen Sie in der linken Leiste die **[!UICONTROL Übersicht]** zum Anzeigen des Dashboards.
+Die Attributdaten in der Momentaufnahme zeigen die Daten exakt so an, wie sie zum Zeitpunkt der Momentaufnahme vorgefunden werden. Das heißt, der Schnappschuss ist keine Annäherung oder Stichprobe der Daten und das Profile-Dashboard wird nicht in Echtzeit aktualisiert.
 
 >[!NOTE]
 >
->Wenn Ihr Unternehmen neu bei Platform ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt wurden, ist das Profil-Dashboard nicht sichtbar. Stattdessen wird die [!UICONTROL Übersicht] enthält Links und Dokumentation, die Ihnen bei den ersten Schritten mit dem Echtzeit-Kundenprofil helfen.
+>Änderungen oder Aktualisierungen, die seit der Aufnahme der Momentaufnahme an den Daten vorgenommen wurden, werden erst dann im Dashboard angezeigt, wenn die nächste Momentaufnahme erstellt wird.
+
+## Das Profile-Dashboard erkunden
+
+Um in der Platform-Benutzeroberfläche zum Profile-Dashboard zu navigieren, wählen Sie **[!UICONTROL Profile]** in der linken Leiste und dann die Registerkarte **[!UICONTROL Übersicht]** aus, um das Dashboard anzuzeigen.
+
+>[!NOTE]
+>
+>Wenn Platform neu für Ihr Unternehmen ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt hat, ist das Profile-Dashboard nicht zu sehen. Stattdessen werden auf der Registerkarte [!UICONTROL Übersicht] Links und Dokumentationen angezeigt, um Ihnen bei den ersten Schritten mit dem Echtzeit-Kundenprofil zu helfen.
 
 ![Das Dashboard Experience Platform Profile mit hervorgehobenen Profilen und Übersicht.](../images/profiles/dashboard-overview.png)
 
-### Ändern des Profil-Dashboards
+### Das Profile-Dashboard modifizieren
 
-Sie können das Erscheinungsbild des Dashboards Profile ändern, indem Sie **[!UICONTROL Dashboard ändern]**. Dadurch können Sie Widgets aus dem Dashboard verschieben, hinzufügen und entfernen sowie auf die **[!UICONTROL Widget-Bibliothek]** , um verfügbare Widgets zu erkunden und benutzerdefinierte Widgets für Ihre Organisation zu erstellen.
+Sie können das Erscheinungsbild des Profile-Dashboards ändern, indem Sie **[!UICONTROL Dashboard modifizieren]** auswählen. Dadurch können Sie Widgets im Dashboard verschieben, hinzufügen und entfernen sowie auf die **[!UICONTROL Widget-Bibliothek]** zugreifen, um verfügbare Widgets zu erkunden und benutzerdefinierte Widgets für Ihre Organisation zu erstellen.
 
-Weitere Informationen finden Sie unter [Ändern von Dashboards](../customize/modify.md) und [Übersicht über die Widget-Bibliothek](../customize/widget-library.md) Dokumentation .
+Weitere Informationen finden Sie in der Dokumentation [Dashboards modifizieren](../customize/modify.md) und [Widget-Bibliothek – Übersicht](../customize/widget-library.md).
 
-### Widgets hinzufügen {#add-widget}
+### Hinzufügen von Widgets {#add-widget}
 
-Auswählen **[!UICONTROL Widget hinzufügen]** um zur Widget-Bibliothek zu navigieren und eine Liste der verfügbaren Widgets anzuzeigen, die Sie Ihrem Dashboard hinzufügen können.
+Wählen Sie **[!UICONTROL Widget hinzufügen]** aus, um zur Widget-Bibliothek zu navigieren und eine Liste der verfügbaren Widgets anzuzeigen, die Sie Ihrem Dashboard hinzufügen können.
 
-![Die Übersicht über das Profil-Dashboard mit dem hinzugefügten Widget wird hervorgehoben.](../images/profiles/profiles-overview-add-widget.png)
+![Die Übersicht über das Profile-Dashboard mit der hervorgehobenen Option „Widget hinzufügen“.](../images/profiles/profiles-overview-add-widget.png)
 
-In der Widget-Bibliothek können Sie die Auswahl von standardmäßigen und benutzerdefinierten Segment-Widgets durchsuchen. Informationen zum Hinzufügen von Widgets finden Sie in der Dokumentation zur Widget-Bibliothek zum [Widget hinzufügen](../customize/widget-library.md#add-widgets).
+In der Widget-Bibliothek können Sie die standardmäßigen und benutzerdefinierten Segment-Widgets durchsuchen. Informationen zum Hinzufügen von Widgets finden Sie in der Widget-Bibliothek-Dokumentation zum [Hinzufügen eines Widgets](../customize/widget-library.md#add-widgets).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -67,168 +67,168 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 ## Profile durchsuchen {#browse-profiles}
 
-Die [!UICONTROL Durchsuchen] -Tab können Sie die schreibgeschützten Profile Ihrer Organisation durchsuchen und anzeigen. Von hier aus können Sie wichtige Informationen aus dem Profil bezüglich Voreinstellungen, vergangener Ereignisse, Interaktionen und Segmenten sehen
+Mit der Registerkarte [!UICONTROL Durchsuchen] können Sie die schreibgeschützten Profile Ihrer Organisation durchsuchen und anzeigen. Hier finden Sie wichtige Informationen über das Profil bezüglich Voreinstellungen, vergangener Ereignisse, Interaktionen und Segmente.
 
 Weitere Informationen zu den in der Platform-Benutzeroberfläche bereitgestellten Funktionen zur Profilanzeige finden Sie in der Dokumentation unter [Durchsuchen von Profilen in Adobe Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
 
 ## Zusammenführungsrichtlinien {#merge-policies}
 
-Die im Dashboard &quot;Profile&quot;angezeigten Metriken basieren auf Zusammenführungsrichtlinien, die auf Ihre Echtzeit-Kundenprofildaten angewendet werden. Wenn Daten aus mehreren Quellen zusammengeführt werden, um das Kundenprofil zu erstellen, können die Daten widersprüchliche Werte enthalten. Beispielsweise kann ein Datensatz einen Kunden als &quot;einzeln&quot;auflisten, während ein anderer Datensatz den Kunden als &quot;verheiratet&quot;auflisten kann. Es ist der Auftrag der Zusammenführungsrichtlinie, zu bestimmen, welche Daten als Teil des Profils priorisiert und angezeigt werden sollen.
+Die im Profile-Dashboard angezeigten Metriken basieren auf Zusammenführungsrichtlinien, die auf Ihre Echtzeit-Kundenprofildaten angewendet werden. Wenn Daten aus mehreren Quellen zusammengeführt werden, um das Kundenprofil zu erstellen, können die Daten widersprüchliche Werte enthalten. Beispielsweise kann ein Datensatz einen Kunden als „unverheiratet“ auflisten, während ein anderer Datensatz den Kunden als „verheiratet“ führt. Mithilfe der Zusammenführungsrichtlinie wird bestimmt, welche Daten als Teil des Profils priorisiert und angezeigt werden sollen.
 
-Weitere Informationen zu Zusammenführungsrichtlinien, einschließlich der Erstellung, Bearbeitung und Deklaration einer standardmäßigen Zusammenführungsrichtlinie für Ihre Organisation, finden Sie im Abschnitt [Übersicht über Zusammenführungsrichtlinien](../../profile/merge-policies/overview.md).
+Weitere Informationen zu Zusammenführungsrichtlinien, einschließlich der Erstellung, Bearbeitung und Deklaration einer standardmäßigen Zusammenführungsrichtlinie für Ihre Organisation, finden Sie im Abschnitt [Zusammenführungsrichtlinien – Übersicht](../../profile/merge-policies/overview.md).
 
 Im Dashboard wird automatisch eine zu verwendende Zusammenführungsrichtlinie ausgewählt. Die angewendete Zusammenführungsrichtlinie kann über das Dropdown-Menü neben dem Namen der Zusammenführungsrichtlinie geändert werden.
 
 >[!NOTE]
 >
->Im Dropdown-Menü werden nur Zusammenführungsrichtlinien angezeigt, die `_xdm.context.profile` Schema. Wenn Ihr Unternehmen jedoch mehrere Zusammenführungsrichtlinien erstellt hat, müssen Sie möglicherweise einen Bildlauf durchführen, um die vollständige Liste der verfügbaren Zusammenführungsrichtlinien anzuzeigen.
+>Im Dropdown-Menü werden nur Zusammenführungsrichtlinien angezeigt, die das `_xdm.context.profile`-Schema verwenden. Wenn Ihr Unternehmen jedoch mehrere Zusammenführungsrichtlinien erstellt hat, müssen Sie möglicherweise scrollen, um die vollständige Liste der verfügbaren Zusammenführungsrichtlinien zu sehen.
 
-![Die Registerkarte Übersicht über Profile mit der Dropdown-Liste Zusammenführungsrichtlinie wurde hervorgehoben.](../images/profiles/select-merge-policy.png)
+![Die Registerkarte „Profile – Übersicht“ mit hervorgehobenem Dropdown-Menü „Zusammenführungsrichtlinie“.](../images/profiles/select-merge-policy.png)
 
-## Vereinigungsschemas
+## Vereinigungsschemata
 
-Die [!UICONTROL Vereinigungsschema] Dashboard zeigt das Vereinigungsschema für eine bestimmte XDM-Klasse an. Durch Auswahl der **[!UICONTROL Klasse]** -Dropdown-Liste können Sie die Vereinigungsschemas für verschiedene XDM-Klassen anzeigen.
+Das Dashboard [!UICONTROL Vereinigungsschema] zeigt das Vereinigungsschema für eine bestimmte XDM-Klasse an. Durch Auswahl des Dropdown-Menüs **[!UICONTROL Klasse]** können Sie die Vereinigungsschemata für verschiedene XDM-Klassen anzeigen.
 
-Vereinigungsschemas bestehen aus mehreren Schemas, die dieselbe Klasse haben und für ein Profil aktiviert wurden. Sie ermöglichen es Ihnen, in einer einzigen Ansicht eine Zusammenführung aller Felder zu sehen, die in jedem Schema enthalten sind, das dieselbe Klasse aufweist.
+Vereinigungsschemata bestehen aus mehreren Schemata, die dieselbe Klasse haben und für Profil aktiviert wurden. Damit haben Sie die Möglichkeit, in einer einzigen Ansicht alle Felder zu sehen, die in allen Schemata derselben Klasse enthalten sind.
 
-Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche des Vereinigungsschemas . [Anzeigen von Vereinigungsschemas in der Platform-Benutzeroberfläche](../../profile/ui/union-schema.md#view-union-schemas).
+Weitere Informationen über das [Anzeigen von Vereinigungsschemata in der Platform-Benutzeroberfläche](../../profile/ui/union-schema.md#view-union-schemas) finden Sie im Handbuch zur Benutzeroberfläche des Vereinigungsschemas.
 
 ## Widgets und Metriken
 
 Das Dashboard besteht aus Widgets, die schreibgeschützte Metriken sind und wichtige Informationen zu Ihren Profildaten enthalten.
 
-Datum und Uhrzeit der letzten Momentaufnahme werden oben im [!UICONTROL Übersicht] neben dem Dropdown-Menü &quot;Zusammenführungsrichtlinie&quot;. Alle Widget-Daten sind ab diesem Datum und dieser Uhrzeit korrekt. Der Zeitstempel der Momentaufnahme wird in UTC bereitgestellt. Es befindet sich nicht in der Zeitzone des einzelnen Benutzers oder der Organisation.
+Datum und Uhrzeit des letzten Schnappschusses werden oben in der Registerkarte [!UICONTROL Übersicht] neben dem Dropdown-Menü „Zusammenführungsrichtlinie“ angezeigt. Alle Widget-Daten sind zum Stand dieses Datums und dieser Uhrzeit korrekt. Der Zeitstempel der Momentaufnahme wird im UTC-Format angegeben, nicht in der Zeitzone der jeweiligen Person oder Organisation.
 
-![Die Registerkarte Übersicht des Profil-Dashboards mit dem neuesten Snapshot-Zeitstempel wird hervorgehoben.](../images/profiles/snapshot-timestamp.png)
+![Die Registerkarte „Profile-Dashboard – Übersicht“ mit hervorgehobenem Zeitstempel des letzten Schnappschusses.](../images/profiles/snapshot-timestamp.png)
 
 ## Standard-Widgets {#standard-widgets}
 
-Adobe bietet mehrere Standard-Widgets, mit denen Sie verschiedene Metriken im Zusammenhang mit Ihren Profildaten visualisieren können. Sie können auch benutzerdefinierte Widgets erstellen, die für Ihre Organisation freigegeben werden, indem Sie die [!UICONTROL Widget-Bibliothek]. Um mehr über das Erstellen benutzerdefinierter Widgets zu erfahren, lesen Sie zunächst den Abschnitt [Übersicht über die Widget-Bibliothek](../customize/widget-library.md).
+Adobe bietet mehrere Standard-Widgets, mit denen Sie verschiedene Metriken im Zusammenhang mit Ihren Profildaten visualisieren können. Über die [!UICONTROL Widget-Bibliothek] können Sie auch benutzerdefinierte Widgets erstellen und für Ihre Organisation freigeben. Um mehr über das Erstellen benutzerdefinierter Widgets zu erfahren, lesen Sie zunächst den Abschnitt [Widget-Bibliothek – Übersicht](../customize/widget-library.md).
 
 Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen Sie den Namen eines Widgets aus der folgenden Liste aus:
 
 * [[!UICONTROL Anzahl der Profile]](#profile-count)
 * [[!UICONTROL Trend der Profilanzahl]](#profile-count-trend)
 * [[!UICONTROL Änderung der Profilanzahl]](#profile-count-change)
-* [[!UICONTROL Trend zur Änderung der Anzahl der Profile]](#profiles-count-change-trend)
-* [[!UICONTROL Änderung der Anzahl der Profile nach Identität]](#profiles-count-change-trend-by-identity)
+* [[!UICONTROL Trend der Änderung der Profilanzahl]](#profiles-count-change-trend)
+* [[!UICONTROL Trend der Änderung der Profilanzahl nach Identität]](#profiles-count-change-trend-by-identity)
 * [[!UICONTROL Profile nach Identität]](#profiles-by-identity)
 * [[!UICONTROL Identitätsüberschneidung]](#identity-overlap)
-* [[!UICONTROL Einzelne Identitätsprofile]](#single-identity-profiles)
+* [[!UICONTROL Einzelidentitätsprofile]](#single-identity-profiles)
 * [[!UICONTROL Einzelne Identitätsprofile nach Identität]](#single-identity-profiles-by-identity)
 * [[!UICONTROL Nicht segmentierte Profile]](#unsegmented-profiles)
-* [[!UICONTROL Trend zu nicht segmentierten Profilen]](#unsegmented-profiles-trend)
+* [[!UICONTROL Trend der nicht segmentierten Profile]](#unsegmented-profiles-trend)
 * [[!UICONTROL Nicht segmentierte Profile nach Identität]](#unsegmented-profiles-by-identity)
-* [[!UICONTROL Zielgruppen]](#audiences)
-* [[!UICONTROL Zielgruppen, die einem Zielstatus zugeordnet sind]](#audiences-mapped-to-destination-status)
-* [[!UICONTROL Zielgruppengröße]](#audiences-size)
+* [[!UICONTROL Audiences]](#audiences)
+* [[!UICONTROL Audiences, die einem Zielstatus zugeordnet sind]](#audiences-mapped-to-destination-status)
+* [[!UICONTROL Audience-Größe]](#audiences-size)
 * [[!UICONTROL Zielgruppenüberschneidung nach Zusammenführungsrichtlinie]](#audience-overlap-by-merge-policy)
-* [[!UICONTROL Bericht &quot;Zielgruppenüberschneidung&quot;]](#audience-overlap-report)
+* [[!UICONTROL Bericht zur Zielgruppenüberschneidung]](#audience-overlap-report)
 
 ### [!UICONTROL Anzahl der Profile] {#profile-count}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilecount"
 >title="Anzahl der Profile"
->abstract="Dieses Widget zeigt die Gesamtzahl der zusammengeführten Profile im Profilspeicher zum Zeitpunkt der Momentaufnahme an. Die Zahl hängt von der ausgewählten Zusammenführungsrichtlinie ab, die auf Ihre Profildaten angewendet wird."
+>abstract="Dieses Widget zeigt die Gesamtzahl der zusammengeführten Profile im Profilspeicher zum Zeitpunkt des Schnappschusses an. Die Zahl hängt von der ausgewählten Zusammenführungsrichtlinie ab, die auf Ihre Profildaten angewendet wird."
 
-Die **[!UICONTROL Profilanzahl]** Widget zeigt die Gesamtzahl der zusammengeführten Profile im Profilspeicher zum Zeitpunkt der Momentaufnahme an. Diese Zahl ist das Ergebnis der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, um Profilfragmente zu einem einzelnen Profil für jede Person zusammenzuführen.
+Das Widget **[!UICONTROL Profilanzahl]** zeigt die Gesamtzahl der zusammengeführten Profile im Profilspeicher zum Zeitpunkt des Schnappschusses an. Diese Zahl ist das Ergebnis der Anwendung der ausgewählten Zusammenführungsrichtlinie auf Ihre Profildaten, um für jede Person Profilfragmente zu einem einzigen Profil zusammenzuführen.
 
-Siehe [Abschnitt zu Zusammenführungsrichtlinien weiter oben in diesem Dokument](#merge-policies) , um mehr zu erfahren.
+Weitere Informationen finden Sie im [Abschnitt über Zusammenführungsrichtlinien weiter oben in diesem Dokument](#merge-policies).
 
 >[!NOTE]
 >
->Die [!UICONTROL Profilanzahl] Das Widget kann eine andere Zahl anzeigen als die in der [!UICONTROL Durchsuchen] im [!UICONTROL Profile] aus mehreren Gründen. Der häufigste Grund dafür ist, dass die [!UICONTROL Durchsuchen] -Registerkarte gibt die Gesamtzahl der zusammengeführten Profile basierend auf der standardmäßigen Zusammenführungsrichtlinie Ihres Unternehmens an, während die Variable [!UICONTROL Profilanzahl] -Widget verweist auf die Gesamtzahl der zusammengeführten Profile basierend auf der Zusammenführungsrichtlinie, die Sie im Dashboard angezeigt haben.
+>Das Widget [!UICONTROL Profilanzahl] kann aus mehreren Gründen eine andere Zahl anzeigen als die Registerkarte [!UICONTROL Durchsuchen] im Abschnitt [!UICONTROL Profile] der Benutzeroberfläche. Der häufigste Grund ist, dass die Registerkarte [!UICONTROL Durchsuchen] die Gesamtzahl der zusammengeführten Profile basierend auf der standardmäßigen Zusammenführungsrichtlinie Ihrer Organisation angibt, während das Widget [!UICONTROL Profilanzahl] die Gesamtzahl der zusammengeführten Profile basierend auf der Zusammenführungsrichtlinie referenziert, die Sie für die Anzeige im Dashboard ausgewählt haben.
 >
->Ein weiterer häufiger Grund sind die Unterschiede zwischen der Zeit, zu der der Dashboard-Schnappschuss erstellt wird, und der Zeit, zu der der Beispielauftrag für die [!UICONTROL Durchsuchen] Registerkarte. Sie können sehen, wann die [!UICONTROL Profilanzahl] Widget wurde zuletzt durch Überprüfen des Zeitstempels im Widget aktualisiert. Weitere Informationen dazu, wie der Beispielauftrag im [!UICONTROL Durchsuchen] Registerkarte, siehe [Abschnitt zur Profilanzahl im Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
+>Ein weiterer häufiger Grund besteht darin, dass der Dashboard-Schnappschuss und der Beispielvorgang für die Registerkarte [!UICONTROL Durchsuchen] zu unterschiedlichen Zeiten ausgeführt wird. Sie können sehen, wann das Widget [!UICONTROL Profilanzahl] zuletzt aktualisiert wurde, indem Sie den Zeitstempel im Widget überprüfen. Weitere Informationen dazu, wie der Beispielvorgang auf der Registerkarte [!UICONTROL Durchsuchen] ausgelöst wird, finden Sie im [Handbuch zur Echtzeit-Kundenprofil-Benutzeroberfläche im Abschnitt zur Profilanzahl](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=de#profile-count).
 
 ![Das Dashboard Experience Platform Profile mit hervorgehobenem Widget Profilanzahl.](../images/profiles/profile-count.png)
 
 ### [!UICONTROL Trend der Profilanzahl] {#profile-count-trend}
 
-Die [!UICONTROL Trend zur Profilanzahl] Widget verwendet ein Kantengraph, um den Trend der Gesamtanzahl der im System enthaltenen Profile im Zeitverlauf zu veranschaulichen. Diese Gesamtzahl enthält alle Profile, die seit der letzten täglichen Momentaufnahme in das System importiert wurden. Die Daten können über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt.
+Das Widget [!UICONTROL Trend der Profilanzahl] verwendet ein Liniendiagramm, um den Trend der Gesamtzahl der im System enthaltenen Profile im Zeitverlauf zu veranschaulichen. Diese Gesamtzahl enthält alle Profile, die seit dem letzten täglichen Schnappschuss in das System importiert wurden. Die Daten können über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt.
 
-![Das Trend-Widget zur Profilanzahl.](../images/profiles/profile-count-trend.png)
+![Das Widget „Trend der Profilanzahl“.](../images/profiles/profile-count-trend.png)
 
 ### [!UICONTROL Änderung der Profilanzahl] {#profile-count-change}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilescountchange"
 >title="Änderung der Profilanzahl"
->abstract="Dieses Widget zeigt die Gesamtzahl der zusammengeführten Profile an **hinzugefügt** zum Profilspeicher zum Zeitpunkt der letzten Momentaufnahme. Die Zahl hängt von der ausgewählten Zusammenführungsrichtlinie ab, die auf Ihre Profildaten angewendet wird."
+>abstract="Dieses Widget zeigt die Gesamtzahl der zusammengeführten Profile an, die zum Profilspeicher zum Zeitpunkt des letzten Schnappschusses **hinzugefügt** wurden. Die Zahl hängt von der ausgewählten Zusammenführungsrichtlinie ab, die auf Ihre Profildaten angewendet wird."
 
-Die **[!UICONTROL Änderung der Profilanzahl]** -Widget zeigt die Anzahl der zusammengeführten Profile an, die seit der vorherigen Momentaufnahme zum Profilspeicher hinzugefügt wurden. Diese Zahl ist das Ergebnis der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, um Profilfragmente zu einem einzelnen Profil für jede Person zusammenzuführen. Mit der Dropdown-Auswahl können Sie die Anzahl der Profile anzeigen, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten hinzugefügt wurden.
+Das Widget **[!UICONTROL Änderung der Profilanzahl]** zeigt die Anzahl der zusammengeführten Profile an, die seit dem vorherigen Schnappschuss zum Profilspeicher hinzugefügt wurden. Diese Zahl ist das Ergebnis der Anwendung der ausgewählten Zusammenführungsrichtlinie auf Ihre Profildaten, um für jede Person Profilfragmente zu einem einzigen Profil zusammenzuführen. Mit der Dropdown-Auswahl können Sie die Anzahl der Profile anzeigen, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten hinzugefügt wurden.
 
 >[!NOTE]
 >
->Die [!UICONTROL Änderung der Profilanzahl] Widget spiegelt die Anzahl der hinzugefügten Profile wider **after** die anfängliche Profilaufnahme und die Einrichtung des Profilspeichers. Mit anderen Worten: Wenn Ihr Unternehmen den Profilspeicher eingerichtet hat und 4.000.000 an Tag 1 aufgenommen hat, wäre das Dashboard innerhalb von 24 Stunden verfügbar, jedoch würde die [!UICONTROL Änderung der Profilanzahl] -Widget auf 0 gesetzt. Dies geschieht, um eine Spitze zu vermeiden, die mit der anfänglichen Aufnahme von Profilen in das System verbunden ist. In den nächsten 30 Tagen nimmt Ihr Unternehmen weitere 1.000.000 Profile in den Profilspeicher auf. Nachdem der nächste Schnappschuss erstellt wurde, wird die [!UICONTROL Änderung der Profilanzahl] würde das Widget insgesamt 1.000.000 Profile anzeigen, während die [!UICONTROL Profilanzahl] -Widget würde insgesamt 5.000.000 Profile anzeigen.
+>Das Widget [!UICONTROL Änderung der Profilanzahl] enthält die Anzahl der hinzugefügten Profile, die **nach** der ersten Profilaufnahme und der Einrichtung des Profilspeichers hinzugefügt wurden. Mit anderen Worten: Wenn Ihre Organisation den Profilspeicher einrichtet und am ersten Tag 4.000.000 aufnimmt, ist das Dashboard innerhalb von 24 Stunden verfügbar, jedoch wird im Widget [!UICONTROL Änderung der Profilanzahl] 0 angezeigt. Dies geschieht, um eine Spitze zu vermeiden, die mit der anfänglichen Aufnahme von Profilen in das System verbunden ist. In den nächsten 30 Tagen nimmt Ihre Organisation weitere 1.000.000 Profile in den Profilspeicher auf. Wenn der nächste Schnappschuss erstellt wird, zeigt das Widget [!UICONTROL Änderung der Profilanzahl] insgesamt 1.000.000 hinzugefügte Profile an, während das Widget [!UICONTROL Profilanzahl] insgesamt 5.000.000 Profile anzeigt.
 
-![Das Dashboard Platform UI Profiles mit dem Widget zur Änderung der Profilanzahl wurde hervorgehoben.](../images/profiles/profile-count-change.png)
+![Das Profile-Dashboard der Platform-Benutzeroberfläche mit dem hervorgehobenen Widget „Änderung der Profilanzahl“.](../images/profiles/profile-count-change.png)
 
-### [!UICONTROL Trend zur Änderung der Anzahl der Profile] {#profiles-count-change-trend}
+### [!UICONTROL Trend der Änderung der Profilanzahl] {#profiles-count-change-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesaddedtrend"
->title="Trend zur Änderung der Anzahl der Profile"
->abstract="Dieses Widget zeigt die Anzahl der zusammengeführten Profile an, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten täglich zum Profilspeicher hinzugefügt wurden. Die Zahl hängt auch von der ausgewählten Zusammenführungsrichtlinie ab, die auf Ihre Profildaten angewendet wird."
+>title="Trend der Änderung der Profilanzahl"
+>abstract="Dieses Widget zeigt die Zahl der zusammengeführten Profile an, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten täglich zum Profilspeicher hinzugefügt wurden. Die Zahl hängt auch von der ausgewählten Zusammenführungsrichtlinie ab, die auf Ihre Profildaten angewendet wird."
 
-Die **[!UICONTROL Trend zur Änderung der Anzahl der Profile]** Widget zeigt die Gesamtanzahl der zusammengeführten Profile an, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten täglich zum Profilspeicher hinzugefügt wurden. Diese Zahl wird jeden Tag aktualisiert, wenn die Momentaufnahme erstellt wird. Wenn Sie also Profile in Platform aufnehmen möchten, wird die Anzahl der Profile erst angezeigt, wenn die nächste Momentaufnahme erfolgt. Die Anzahl der hinzugefügten Profile ist das Ergebnis der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, um Profilfragmente zusammenzuführen und so für jede Person ein Profil zu erstellen.
+Das Widget **[!UICONTROL Trend der Änderung der Profilanzahl]** zeigt die Gesamtzahl der zusammengeführten Profile an, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten täglich zum Profilspeicher hinzugefügt wurden. Diese Zahl wird jeden Tag aktualisiert, wenn der Schnappschuss erstellt wird. Wenn Sie also Profile in Platform aufnehmen, wird die Anzahl der Profile erst beim nächsten Schnappschuss angezeigt. Die Anzahl der hinzugefügten Profile ist das Ergebnis der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, um Profilfragmente zusammenzuführen und so für jede Person ein Profil zu erstellen.
 
-Siehe [Abschnitt zu Zusammenführungsrichtlinien weiter oben in diesem Dokument](#merge-policies) , um mehr zu erfahren.
+Weitere Informationen finden Sie im [Abschnitt über Zusammenführungsrichtlinien weiter oben in diesem Dokument](#merge-policies).
 
-Die **[!UICONTROL Trend zur Änderung der Anzahl der Profile]** -Widget zeigt oben rechts im Widget die Schaltfläche &quot;Untertitel&quot;an. Auswählen **[!UICONTROL Untertitel]** , um das Dialogfeld mit den automatischen Beschriftungen zu öffnen.
+Das Widget **[!UICONTROL Trend der Änderung der Profilanzahl]** verfügt oben rechts im Widget über eine Schaltfläche für Beschriftungen. Wählen Sie **[!UICONTROL Beschriftungen]** aus, um das Dialogfeld „Automatische Beschriftungen“ zu öffnen.
 
-![Auf der Registerkarte Profilübersicht , auf der das Widget zur Anzahl der Profile angezeigt wird, ändert sich der Trend-Trend, wobei die Schaltfläche &quot;Beschriftungen&quot;hervorgehoben ist.](../images/profiles/profiles-count-change-trend-captions.png)
+![Die Registerkarte „Profilübersicht“ mit dem Widget „Trend der Änderung der Profilanzahl“ und der hervorgehobenen Schaltfläche „Beschriftungen“.](../images/profiles/profiles-count-change-trend-captions.png)
 
-Ein Modell für maschinelles Lernen generiert automatisch Untertitel zur Beschreibung der wichtigsten Trends und Ereignisse, indem es die Grafik und die Daten analysiert. Anmerkungen werden dem Diagramm basierend auf den Beschriftungen hinzugefügt. Wählen Sie eine Beschriftung aus, um sich auf die zugehörige Anmerkung zu konzentrieren.
+Ein Modell für maschinelles Lernen generiert automatisch Beschriftungen zur Beschreibung der wichtigsten Trends und Ereignisse, indem es das Diagramm und die Daten analysiert. Anmerkungen werden dem Diagramm basierend auf den Beschriftungen hinzugefügt. Wählen Sie eine Beschriftung aus, um sich auf die zugehörige Anmerkung zu konzentrieren.
 
-![Das Dialogfeld für automatische Beschriftungen für das Widget zur Anzahl der Profile ändert den Trend.](../images/profiles/profiles-added-trends-automatic-captions-dialog-with-annotation.png)
+![Das Dialogfeld für automatische Beschriftungen für das Widget „Trend der Änderung der Profilanzahl“.](../images/profiles/profiles-added-trends-automatic-captions-dialog-with-annotation.png)
 
-### [!UICONTROL Änderung der Anzahl der Profile nach Identität] {#profiles-count-change-trend-by-identity}
+### [!UICONTROL Trend der Änderung der Profilanzahl nach Identität] {#profiles-count-change-trend-by-identity}
 
 <!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
 
-Dieses Widget filtert die Profilanzahl anhand einer ausgewählten Quell-Identitäts- und Zusammenführungsrichtlinie und veranschaulicht dann die Änderung der Anzahl für verschiedene Zeiträume mithilfe eines Liniendiagramms. Die Zusammenführungsrichtlinie wird oben auf der Seite im Dropdown-Menü Übersicht ausgewählt. Die Quellidentität und der Zeitraum werden aus den Widget-Dropdown-Menüs ausgewählt. Der Trend kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden.
+Dieses Widget filtert die Profilanzahl anhand einer ausgewählten Quellidentität und Zusammenführungsrichtlinie und veranschaulicht dann mithilfe eines Liniendiagramms die Änderung der Anzahl für verschiedene Zeiträume. Die Zusammenführungsrichtlinie wird oben auf der Seite im Dropdown-Menü „Übersicht“ ausgewählt. Die Quellidentität und der Zeitraum werden aus den Widget-Dropdown-Menüs ausgewählt. Der Trend kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden.
 
-Dieses Widget unterstützt Sie bei der Verwaltung Ihrer Zielaktivierungsanforderungen, indem es das Wachstumsmuster der Profile demonstriert, die nach einer erforderlichen Identität gefiltert wurden.
+Dieses Widget hilft Ihnen bei der Verwaltung Ihrer Zielaktivierung, indem es das Wachstumsmuster der Profile darstellt, die nach der entsprechenden Identität gefiltert wurden.
 
-![Die Anzahl der Profile ändert den Trend nach dem Identitäts-Widget.](../images/profiles/profiles-count-change-trend-by-identity.png)
+![Der Trend der Veränderung der Profilanzahl nach Identitäts-Widget.](../images/profiles/profiles-count-change-trend-by-identity.png)
 
 ### [!UICONTROL Profile nach Identität] {#profiles-by-identity}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesbyidentity"
 >title="Profile nach Identität"
->abstract="Dieses Widget zeigt die Aufschlüsselung aller zusammengeführten Profile im Profilspeicher nach Identitäten an."
+>abstract="Dieses Widget zeigt die Aufschlüsselung aller zusammengeführten Profile im Profil Store nach Identitäten an."
 
-Die **[!UICONTROL Profile nach Identität]** -Widget zeigt die Aufschlüsselung der Identitäten über alle zusammengeführten Profile in Ihrem Profilspeicher an. Die Gesamtzahl der Profile nach Identität (d. h. das Addieren der für jeden Namespace angezeigten Werte) kann höher sein als die Gesamtzahl der zusammengeführten Profile, da einem Profil mehrere Namespaces zugeordnet sein können. Wenn beispielsweise ein Kunde mit Ihrer Marke auf mehr als einem Kanal interagiert, werden diesem einzelnen Kunden mehrere Namespaces zugeordnet.
+Das Widget **[!UICONTROL Profile nach Identität]** zeigt die Aufschlüsselung der Identitäten in allen zusammengeführten Profile in Ihrem Profile Store an. Die Gesamtzahl der Profile nach Identität (d. h. das Addieren der für jeden Namespace angezeigten Werte) kann höher sein als die Gesamtzahl der zusammengeführten Profile, da einem Profil mehrere Namespaces zugeordnet sein können. Wenn beispielsweise ein Kunde mit Ihrer Marke auf mehr als einem Kanal interagiert, werden diesem einzelnen Kunden mehrere Namespaces zugeordnet.
 
-Siehe [Abschnitt zu Zusammenführungsrichtlinien weiter oben in diesem Dokument](#merge-policies) , um mehr zu erfahren.
+Weitere Informationen finden Sie im [Abschnitt zu Zusammenführungsrichtlinien weiter oben in diesem Dokument](#merge-policies).
 
-![Das Dashboard Profilübersicht mit dem Widget Profile nach Identität hervorgehoben.](../images/profiles/profiles-by-identity.png)
+![Das Dashboard „Profile – Übersicht“ mit hervorgehobenem Widget „Profile nach Identität“.](../images/profiles/profiles-by-identity.png)
 
-Auswählen **[!UICONTROL Untertitel]** , um das Dialogfeld mit den automatischen Beschriftungen zu öffnen.
+Wählen Sie **[!UICONTROL Beschriftungen]** aus, um das Dialogfeld für automatische Beschriftungen zu öffnen.
 
-![Die Profile nach Identitätsbeschriftungen.](../images/profiles/profiles-by-identity-captions.png)
+![Das Dialogfeld für Beschriftung von Profilen nach Identität.](../images/profiles/profiles-by-identity-captions.png)
 
-Ein maschinelles Lernmodell generiert automatisch Dateneinblicke, indem es die Gesamtverteilung und die Schlüsseldimensionen der Daten analysiert.
+Ein maschinelles Lernmodell generiert automatisch Dateneinblicke, indem es die Gesamtverteilung und die Schlüsselaspekte der Daten analysiert.
 
-Weitere Informationen zu Identitäten finden Sie unter [Dokumentation zu Adobe Experience Platform Identity Service](../../identity-service/home.md).
+Weitere Informationen zu Identitäten finden Sie in der [Dokumentation zu Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
 ### [!UICONTROL Identitätsüberschneidung] {#identity-overlap}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_identityoverlap"
 >title="Identitätsüberschneidung"
->abstract="Dieses Widget verwendet ein Venn-Diagramm, um die Überschneidung von Profilen in Ihrem Profilspeicher anzuzeigen, die die beiden ausgewählten Identitäten enthalten."
+>abstract="Dieses Widget verwendet ein Venn-Diagramm, um die Überschneidung von Profilen in Ihrem Profile Store anzuzeigen, die die beiden ausgewählten Identitäten enthalten."
 
-Die **[!UICONTROL Identitätsüberschneidung]** Widget verwendet ein Venn-Diagramm oder ein Set-Diagramm, um die Überschneidung von Profilen in Ihrem Profilspeicher anzuzeigen, die die beiden ausgewählten Identitäten enthalten.
+Das Widget **[!UICONTROL Identitätsüberschneidung]** verwendet ein Venn-Diagramm, oder Mengendiagramm, um die Überschneidung von Profilen in Ihrem Profile Store anzuzeigen, die die beiden ausgewählten Identitäten enthalten.
 
-Verwenden Sie die Widget-Dropdown-Menüs, um die Identitäten auszuwählen, die Sie vergleichen möchten. Kreise zeigen die relative Gesamtzahl der Profile an, die jede Identität enthalten. Die Anzahl der Profile, die beide Identitäten enthalten, wird durch die Größe der Überschneidung zwischen den Kreisen dargestellt. Wenn ein Kunde mit Ihrer Marke auf mehr als einem Kanal interagiert, werden diesem einzelnen Kunden mehrere Identitäten zugeordnet. Daher ist es wahrscheinlich, dass Ihr Unternehmen über mehrere Profile verfügt, die Fragmente aus mehr als einer Identität enthalten.
+Verwenden Sie die Widget-Dropdown-Menüs, um die Identitäten auszuwählen, die Sie vergleichen möchten. Kreise zeigen die relative Gesamtzahl der Profile an, in denen jede Identität enthalten ist. Die Anzahl der Profile, in denen beide Identitäten enthalten sind, wird durch die Größe der Überschneidung zwischen den Kreisen dargestellt. Wenn ein Kunde mit Ihrer Marke über mehr als einen Kanal interagiert, werden diesem einzelnen Kunden mehrere Identitäten zugeordnet. Daher ist es wahrscheinlich, dass Ihre Organisation über mehrere Profile verfügt, die Fragmente aus mehr als einer Identität enthalten.
 
-Weiterführende Informationen zu Profilfragmenten finden Sie im Abschnitt zu [Profilfragmente im Vergleich zu zusammengeführten Profilen](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=en#profile-fragments-vs-merged-profiles) in der Übersicht über das Echtzeit-Kundenprofil .
+Weiterführende Informationen zu Profilfragmenten finden Sie im Abschnitt [Profilfragmente im Vergleich zu zusammengeführten Profilen](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=de#profile-fragments-vs-merged-profiles) in der Übersicht über das Echtzeit-Kundenprofil.
 
-Weitere Informationen zu Identitäten finden Sie unter [Dokumentation zu Adobe Experience Platform Identity Service](../../identity-service/home.md).
+Weitere Informationen zu Identitäten finden Sie in der [Dokumentation zu Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
 ![Die Übersicht über das Profil-Dashboard mit dem Widget zur Identitätsüberschneidung wurde hervorgehoben.](../images/profiles/identity-overlap.png)
 
@@ -237,17 +237,17 @@ Weitere Informationen zu Identitäten finden Sie unter [Dokumentation zu Adobe E
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_singleidentityprofiles"
 >title="Einzelne Identitätsprofile"
->abstract="Dieses Widget enthält die Profile Ihrer Organisation, die nur über einen ID-Typ verfügen, der ihre Identität erstellt. Dieser ID-Typ kann entweder eine E-Mail oder eine ECID sein."
+>abstract="Dieses Widget gibt die Anzahl der Profile in Ihrer Organisation an, die zur Erstellung ihrer Identität nur über einen einzigen ID-Typ verfügen. Dieser ID-Typ kann entweder eine E-Mail oder eine ECID sein."
 
-Die [!UICONTROL Einzelne Identitätsprofile] -Widget stellt die Anzahl der Profile Ihres Unternehmens bereit, die nur über einen ID-Typ verfügen, der ihre Identität erstellt. Dieser ID-Typ kann entweder eine E-Mail oder eine ECID sein. Die Anzahl der Profile wird aus den Daten der letzten Momentaufnahme generiert.
+Das Widget [!UICONTROL Einzelne Identitätsprofile] gibt die Anzahl der Profile Ihres Unternehmens an, die nur über einen einzigen ID-Typ verfügen, mit dem ihre Identität erstellt wird. Dieser ID-Typ kann entweder eine E-Mail oder eine ECID sein. Die Anzahl der Profile wird aus den Daten des letzten Schnappschusses generiert.
 
-![Widget Single Identity Profiles .](../images/profiles/single-identity-profiles.png)
+![Das Widget „Einzelne Identitätsprofile“.](../images/profiles/single-identity-profiles.png)
 
 ### [!UICONTROL Einzelne Identitätsprofile nach Identität] {#single-identity-profiles-by-identity}
 
 Dieses Widget verwendet ein Balkendiagramm, um die Gesamtanzahl der Profile zu veranschaulichen, die mit nur einer eindeutigen Kennung gekennzeichnet sind. Das Widget unterstützt bis zu fünf der am häufigsten vorkommenden Identitäten.
 
-Bewegen Sie den Mauszeiger über einzelne Balken, um ein Dialogfeld mit der Gesamtanzahl der Profile für eine Identität anzuzeigen.
+Bewegen Sie den Mauszeiger über die einzelnen Balken, um ein Dialogfeld mit der Gesamtanzahl der Profile für eine Identität aufzurufen.
 
 ![Die einzelnen Identitätsprofile nach Identitäts-Widget.](../images/profiles/single-identity-profiles-by-identity.png)
 
@@ -258,20 +258,20 @@ Bewegen Sie den Mauszeiger über einzelne Balken, um ein Dialogfeld mit der Gesa
 >title="Nicht segmentierte Profile"
 >abstract="Dieses Widget stellt die Gesamtanzahl aller Profile bereit, die keinem Segment zugeordnet sind, und bietet die Möglichkeit zur Profilaktivierung in Ihrer gesamten Organisation."
 
-Die [!UICONTROL Nicht segmentierte Profile] -Widget stellt die Gesamtanzahl aller Profile bereit, die an kein Segment angehängt sind. Der generierte Wert gibt die zum Zeitpunkt der letzten Momentaufnahme korrekte Anzahl an und zeigt, wie viele Profile in Ihrem gesamten Unternehmen aktiviert werden können. Sie zeigt auch die Möglichkeit an, Profile auszuschließen, die keinen angemessenen ROI bieten.
+Das Widget [!UICONTROL Nicht segmentierte Profile] gibt die Gesamtanzahl aller Profile an, die mit keinem Segment verbunden sind. Der generierte Wert gibt die zum Zeitpunkt der letzten Momentaufnahme korrekte Anzahl an und zeigt, wie viele Profile in Ihrer gesamten Organisation aktiviert werden können. Es zeigt auch die Möglichkeit an, Profile auszuschließen, die keinen angemessenen ROI liefern.
 
-![Das Widget Nicht segmentierte Profile .](../images/profiles/unsegmented-profiles.png)
+![Das Widget „Nicht segmentierte Profile“.](../images/profiles/unsegmented-profiles.png)
 
-### [!UICONTROL Trend zu nicht segmentierten Profilen] {#unsegmented-profiles-trend}
+### [!UICONTROL Der Trend von nicht segmentierten Profilen] {#unsegmented-profiles-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
->title="Trend zu nicht segmentierten Profilen"
+>title="Trend von nicht segmentierten Profilen"
 >abstract="Dieses Widget bietet eine grafische Darstellung der Anzahl der Profile, die in einem bestimmten Zeitraum nicht mit einem Segment verbunden sind. Der Trend der Profile, die keinem Segment zugeordnet sind, kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden."
 
-Die [!UICONTROL Trend für nicht segmentierte Profile] -Widget bietet eine Liniendiagrammdarstellung für die Anzahl der Profile, die in einem bestimmten Zeitraum nicht an ein Segment angehängt sind. Der Trend der Profile, die keinem Segment zugeordnet sind, kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt. Die Anzahl der Profile wird auf der Y-Achse und der Zeit auf der X-Achse angezeigt.
+Das Widget [!UICONTROL Trend von nicht segmentierten Profilen] bietet eine grafische Darstellung der Anzahl der Profile, die in einem bestimmten Zeitraum mit keinem Segment verbunden sind. Der Trend der Profile, die keinem Segment zugeordnet sind, kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt. Die Anzahl der Profile wird auf der Y-Achse und die Zeit auf der X-Achse dargestellt.
 
-![Das Widget Trend für nicht segmentierte Profile .](../images/profiles/unsegmented-profiles-trend.png)
+![Das Widget „Trend von nicht segmentierten Profilen“.](../images/profiles/unsegmented-profiles-trend.png)
 
 ### [!UICONTROL Nicht segmentierte Profile nach Identität] {#unsegmented-profiles-by-identity}
 
@@ -289,11 +289,11 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 
 ![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png) -->
 
-### [!UICONTROL Zielgruppen] {#audiences}
+### [!UICONTROL Audiences] {#audiences}
 
-Dieses Widget enthält die Gesamtzahl der Segmente, die entsprechend der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, aktiviert werden können.
+Dieses Widget ermittelt die Gesamtzahl der Segmente, die entsprechend der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, aktiviert werden können.
 
-Auswählen **[!UICONTROL Zielgruppen]** , um zur [!UICONTROL Segmente] Dashboard [!UICONTROL Durchsuchen] Registerkarte. Von dort aus können Sie eine Liste aller Segmentdefinitionen für Ihr Unternehmen sehen.
+Wählen Sie **[!UICONTROL Zielgruppen]** aus, um zum [!UICONTROL Segmente]-Dashboard und zur Registerkarte [!UICONTROL Durchsuchen] zu navigieren. Dort finden Sie eine Liste aller Segmentdefinitionen für Ihre Organisation.
 
 ![Das Zielgruppen-Widget.](../images/profiles/audiences.png)
 
@@ -308,60 +308,60 @@ The visualization allows you to monitor the overall health of audiences within A
 
 <!-- ![The Audiences change trend widget.]() -->
 
-### [!UICONTROL Bericht &quot;Zielgruppenüberschneidung&quot;] {#audience-overlap-report}
+### [!UICONTROL Der Bericht „Zielgruppenüberschneidung“] {#audience-overlap-report}
 
-Dieses Widget enthält eine tabellarische Darstellung der Daten zur Zielgruppenüberschneidung aus allen verfügbaren Segmenten, die nach Zusammenführungsrichtlinien gefiltert wurden. Eine Liste mit fünf Zielgruppen, die von den Prozentsätzen der höchsten bis zur niedrigsten Überschneidung sortiert sind, wird für die Zusammenführungsrichtlinie bereitgestellt, die oben im Bildschirm im Dropdown-Menü ausgewählt wird. Die beiden analysierten Segmente werden im [!UICONTROL SEGMENT A NAME] und [!UICONTROL SEGMENT B NAME] Spalten. Die prozentuale Überschneidung wird in der dritten Spalte genau auf zwölf Dezimalstellen angegeben.
+Dieses Widget enthält eine tabellarische Darstellung der Zielgruppenüberschneidungsdaten aus allen verfügbaren Segmenten, die nach Zusammenführungsrichtlinien gefiltert wurden. Für die Zusammenführungsrichtlinie, die oben im Bildschirm im Dropdown-Menü ausgewählt wird, wird eine Liste mit fünf Zielgruppen, sortiert von den höchsten bis zu den niedrigsten Überschneidungsprozentsätzen, bereitgestellt. Die beiden analysierten Segmente werden in den Spalten [!UICONTROL NAME SEGMENT A] und [!UICONTROL NAME SEGMENT B] aufgeführt. Die prozentuale Überschneidung wird in der dritten Spalte auf zwölf Dezimalstellen genau angegeben.
 
-Der Bericht zur Zielgruppenüberschneidung hilft Ihnen beim Erstellen neuer Hochleistungssegmente. Durch die Beobachtung hoher prozentualer Überschneidungen können Sie Zielgruppen unterdrücken und das Senden derselben Zielgruppe an verschiedene Ziele verhindern. Sie helfen Ihnen auch dabei, versteckte Einblicke zu identifizieren, die bei einer besseren Segmentierung hilfreich sein könnten. Eine geringe prozentuale Überschneidung hilft, eindeutige Profile zu finden, die verfolgt werden sollen.
+Der Bericht zur Zielgruppenüberschneidung hilft Ihnen beim Erstellen neuer, hochqualitativer Segmente. Durch die Beachtung hoher prozentualer Überschneidungen können Sie Zielgruppen unterdrücken und das Senden derselben Zielgruppe an verschiedene Ziele verhindern. Diese Daten helfen Ihnen auch dabei, verborgene Insights zu entdecken, die bei einer besseren Segmentierung hilfreich sein können. Eine geringe prozentuale Überschneidung hilft, eindeutige Profile zu finden, deren Kontaktierung Sie fortsetzen sollten.
 
-Auswählen **[!UICONTROL Mehr anzeigen]** , um ein Vollbilddialogfeld zu öffnen, das mehr Zielgruppendaten enthält, die sich überschneiden.
+Wählen Sie **[!UICONTROL Mehr anzeigen]** aus, um ein Vollbilddialogfeld zu öffnen, das mehr Daten zu Zielgruppenüberschneidungen enthält.
 
-![Das Berichts-Widget &quot;Zielgruppenüberschneidung&quot;wurde hervorgehoben.](../images/profiles/profiles-audience-overlap-report.png)
+![Das Widget „Bericht Zielgruppenüberscheidung“ mit hervorgehobener Option „Mehr anzeigen“.](../images/profiles/profiles-audience-overlap-report.png)
 
-Die [!UICONTROL Bericht &quot;Zielgruppenüberschneidung&quot;] angezeigt. Dieses Dialogfeld kann bis zu 50 Zeilen mit Analysen zur Zielgruppenüberschneidung enthalten, die in sechs Spalten unterteilt sind. Wählen Sie das Einstellungssymbol (![Das Einstellungssymbol.](../images/profiles/settings-icon.png)), um Spalten aus der Tabelle zu entfernen oder hinzuzufügen.
+Das Dialogfeld [!UICONTROL Bericht zur Zielgruppenüberschneidung] wird angezeigt. Dieses Dialogfeld kann bis zu 50 Zeilen mit Analysen zur Zielgruppenüberschneidung enthalten, die in sechs Spalten unterteilt sind. Wählen Sie das Einstellungssymbol (![Das Einstellungssymbol.](../images/profiles/settings-icon.png)) aus, um Spalten aus der Tabelle zu entfernen oder zur Tabelle hinzuzufügen.
 
-![Das Berichtdialogfeld &quot;Zielgruppenüberschneidung&quot;.](../images/profiles/profiles-audience-overlap-report-dialog.png)
+![Das Dialogfeld mit dem Bericht zur Zielgruppenüberschneidung.](../images/profiles/profiles-audience-overlap-report-dialog.png)
 
 >[!NOTE]
-Wählen Sie die **[!UICONTROL Überlappung]** Spaltenüberschrift verwenden, um die Rangfolge der Ergebnisse zwischen der höchsten und der niedrigsten bzw. der niedrigsten der höchsten zu ändern.
+Wählen Sie die Spaltenüberschrift **[!UICONTROL Überschneidung]** aus, um die Rangfolge der Ergebnisse vom höchsten zum niedrigsten bzw. vom niedrigsten zum höchsten zu ändern.
 
-Um den gesamten Bericht im PDF-Format herunterzuladen, wählen Sie das Optionsmenü (**`...`**) gefolgt von **[!UICONTROL Download]**.
+Um den gesamten Bericht im PDF-Format herunterzuladen, wählen Sie das Optionsmenü (**`...`**) und dann **[!UICONTROL Download]** aus.
 
-![Das Berichtdialogfeld Zielgruppenüberschneidung wurde mit den Auslassungszeichen und der Download-Option hervorgehoben.](../images/profiles/profiles-audience-overlap-report-dialog-download.png)
+![Das Dialogfeld mit dem Bericht zur Zielgruppenüberschneidung mit den Auslassungszeichen und der hervorgehobenen Download-Option.](../images/profiles/profiles-audience-overlap-report-dialog-download.png)
 
 Wählen Sie eine Zeile aus dem Bericht aus, um ein Venn-Diagramm der Überschneidungsanalyse zu öffnen. Bewegen Sie den Mauszeiger über einen Abschnitt des Venn-Diagramms, um die Profilanzahl in einem Dialogfeld anzuzeigen.
 
-![Das Berichtdialogfeld Zielgruppenüberschneidung wird mit einem Venn-Diagramm und einer hervorgehobenen Zeile angezeigt.](../images/profiles/profiles-audience-overlap-report-dialog-venn.png)
+![Das Dialogfeld „Bericht Zielgruppenüberschneidung“ mit Hervorhebung eines Venn-Diagramms und einer Zeile.](../images/profiles/profiles-audience-overlap-report-dialog-venn.png)
 
-Auswählen **[!UICONTROL Schließen]** , um zur [!UICONTROL Profile] Dashboard.
+Wählen Sie **[!UICONTROL Schließen]** aus, um zum [!UICONTROL Profile]-Dashboard zurückzukehren.
 
-### [!UICONTROL Zielgruppen, die einem Zielstatus zugeordnet sind] {#audiences-mapped-to-destination-status}
+### [!UICONTROL Audiences, die einem Zielstatus zugeordnet sind] {#audiences-mapped-to-destination-status}
 
-Die [!UICONTROL Zielgruppen, die dem Zielstatus zugeordnet sind] -Widget zeigt die Gesamtanzahl der zugeordneten und nicht zugeordneten Zielgruppen in einer einzelnen Metrik an und verwendet ein doppeltes Diagramm, um den proportionalen Unterschied zwischen den Summen zu veranschaulichen. Die berechneten Zahlen hängen von der gewählten Zusammenführungsrichtlinie ab.
+Das Widget [!UICONTROL Zielgruppen, die dem Zielstatus zugeordnet sind] stellt in einer gemeinsamen Metrik die Gesamtzahl der zugeordneten und nicht zugeordneten Zielgruppen dar und veranschaulicht in einem Ringdiagramm den proportionalen Unterschied zwischen den beiden Zahlen. Die berechneten Zahlen hängen von der gewählten Zusammenführungsrichtlinie ab.
 
-Einzelne Zählungen für zugeordnete oder nicht zugeordnete Zielgruppen werden in einem Dialogfeld angezeigt, wenn der Cursor den Mauszeiger über den entsprechenden Abschnitt des Ringdiagramms bewegt.
+Wenn der Mauszeiger über den entsprechenden Abschnitt des Ringdiagramms bewegt wird, werden die separaten Zählungen für zugeordnete oder nicht zugeordnete Zielgruppen in einem Dialogfeld angezeigt.
 
-![Die Zielgruppen, die dem Ziel-Status-Widget zugeordnet sind.](../images/profiles/audiences-mapped-to-destination-status.png)
+![Das Widget „Zielgruppen, die dem Zielstatus zugeordnet sind“.](../images/profiles/audiences-mapped-to-destination-status.png)
 
-### [!UICONTROL Zielgruppengröße] {#audiences-size}
+### [!UICONTROL Audience-Größe] {#audiences-size}
 
-Die [!UICONTROL Zielgruppengröße] Widget bietet eine zweispaltige Tabelle, die bis zu 20 Segmente und die Gesamtzahl der in jedem Segment enthaltenen Zielgruppen auflistet. Die Liste wird in Abhängigkeit von der Gesamtzahl der Zielgruppen von hoch zu niedrig geordnet. Die Gesamtzahl der Zielgruppengrößen hängt von der angewendeten Zusammenführungsrichtlinie ab.
+Das Widget [!UICONTROL Zielgruppengröße] bietet eine zweispaltige Tabelle, in der bis zu 20 Segmente und die Gesamtzahl der in den einzelnen Segmenten enthaltenen Zielgruppen aufgelistet sind. Die Liste ist gemäß der Gesamtzahl der Zielgruppen von der höchsten zur niedrigsten sortiert. Die Gesamtgröße der Zielgruppen hängt von der angewendeten Zusammenführungsrichtlinie ab.
 
-![Das Widget Größe von Zielgruppen .](../images/profiles/audiences-size.png)
+![Das Widget „Zielgruppengröße“.](../images/profiles/audiences-size.png)
 
-Um umfassende Informationen zu einem Segment anzuzeigen, wählen Sie einen Segmentnamen aus der bereitgestellten Liste aus, um zur [!UICONTROL Segmente] [!UICONTROL Detail] Seite. Außerdem durch Auswahl von **[!UICONTROL Alle Segmente anzeigen]** Sie können am Ende des Widgets zur [!UICONTROL Segmente] [!UICONTROL Durchsuchen] um ein vorhandenes Segment zu finden.
+Um umfassende Informationen zu einem Segment anzuzeigen, wählen Sie den entsprechenden Segmentnamen aus der bereitgestellten Liste aus, um zur [!UICONTROL Detailseite] des [!UICONTROL Segments] zu navigieren. Außerdem können Sie durch die Auswahl von **[!UICONTROL Alle Segmente anzeigen]** am Ende des Widgets zur Registerkarte [!UICONTROL Durchsuchen] von [!UICONTROL Segmenten] navigieren, um ein vorhandenes Segment zu finden.
 
-![Das Widget Größe von Zielgruppen mit einem Segmentnamen und Anzeige des gesamten markierten Segmenttexts.](../images/profiles/audiences-size-view-all-segments.png)
+![Das Widget „Zielgruppengröße“ mit Hervorhebung eines Segmentnamens und des Texts „Alle Segmente anzeigen“.](../images/profiles/audiences-size-view-all-segments.png)
 
-Weitere Informationen zu finden Sie in der Dokumentation . [[!UICONTROL Segmente] [!UICONTROL  Durchsuchen] tab](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
+Weitere Informationen zur Registerkarte [!UICONTROL Durchsuchen] von [[!UICONTROL Segmenten] finden Sie in der Dokumentation](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=de#browse).
 
 ### [!UICONTROL Zielgruppenüberschneidung nach Zusammenführungsrichtlinie] {#audience-overlap-by-merge-policy}
 
-Dieses Widget verwendet ein Venn-Diagramm, um die Überschneidung zweier ausgewählter Segmente anzuzeigen. Die Zusammenführungsrichtlinie wird oben auf der Seite aus dem Dropdown-Menü Übersicht ausgewählt und die Segmente für die Analyse werden aus zwei Dropdown-Menüs im Widget ausgewählt. Die Gesamtzahl der in der entsprechenden Segmentdefinition enthaltenen Profile kann durch Bewegen des Mauszeigers über einen Kreis oder die Schnittmenge angezeigt werden.
+Dieses Widget verwendet ein Venn-Diagramm, um die Überschneidung zweier ausgewählter Segmente anzuzeigen. Die Zusammenführungsrichtlinie wird oben auf der Seite aus dem Dropdown-Menü „Übersicht“ ausgewählt und die zu analysierenden Segmente werden aus zwei Dropdown-Menüs im Widget ausgewählt. Die Gesamtzahl der in der entsprechenden Segmentdefinition enthaltenen Profile kann durch Bewegen des Mauszeigers über einen Kreis oder die Schnittmenge angezeigt werden.
 
-Da das Widget den visuellen Crossover von Segmentdefinitionen anzeigt, können Sie Ihre Segmentierungsstrategie optimieren, indem Sie die Ähnlichkeiten zwischen Ihren Segmentdefinitionen untersuchen.
+Dieses Widget stellt die visuelle Überschneidung von Segmentdefinitionen dar und ermöglicht es Ihnen, die Segmentierungsstrategie zu optimieren, indem Sie die Ähnlichkeiten zwischen Ihren Segmentdefinitionen untersuchen.
 
-![Das Dashboard Platform UI Profile mit der Dropdown-Liste Zusammenführungsrichtlinie und den Dropdown-Listen Widget-Segmente werden hervorgehoben.](../images/profiles/audience-overlap-by-merge-policy.png)
+![Das Profile-Dashboard der Platform-Benutzeroberfläche mit Hervorhebung des Dropdown-Menüs „Zusammenführungsrichtlinie“ und der Dropdown-Menüs der Widget-Segmente.](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
 <!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
@@ -434,4 +434,4 @@ The three levels of completeness are:
 
 ## Nächste Schritte
 
-Durch Befolgen dieses Dokuments sollten Sie jetzt in der Lage sein, das Profil-Dashboard zu finden und die in den verfügbaren Widgets angezeigten Metriken zu verstehen. Weitere Informationen zum Arbeiten mit [!DNL Profile] Daten in der Experience Platform-Benutzeroberfläche, siehe [Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils](../../profile/ui/user-guide.md).
+Wenn Sie mit diesem Dokument fertig sind, sollten Sie in der Lage sein, das Profile-Dashboard zu finden und die in den verfügbaren Widgets angezeigten Metriken zu verstehen. Weitere Informationen zum Arbeiten mit [!DNL Profile]-Daten in der Experience Platform-Benutzeroberfläche finden Sie im [Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils](../../profile/ui/user-guide.md).

@@ -4,8 +4,8 @@ description: Erfahren Sie, wie Händler mit Adobe Commerce und Real-Time CDP das
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
 source-git-commit: 638a778d1d999ab6a1726333f9cde0a0b4fad57b
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '691'
+ht-degree: 100%
 
 ---
 
@@ -57,7 +57,7 @@ Nachdem Sie die Voraussetzungen erfüllt haben, stellen Sie eine Verbindung mit 
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die [Zugriffsberechtigung](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**. Lesen Sie die [Übersicht zur Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die [Zugriffsberechtigung](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 So stellen Sie eine Verbindung mit dem Ziel [!DNL Adobe Commerce] her:
 
@@ -93,7 +93,7 @@ Weitere Informationen zur Aktivierung von Zielgruppensegmenten für das Ziel [!D
 
 Nachdem Sie das [!DNL Commerce]-Ziel in Experience Platform konfiguriert haben, müssen Sie nun den [!DNL Commerce Admin] konfigurieren, um die von Ihnen erstellten Real-Time CDP-Segmente zu importieren. Weitere Informationen finden Sie in der [[!DNL Commerce] Dokumentation](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/customer-segment-rtcdp.html?lang=de).
 
-## Validieren der Zielgruppenaktivierung in Commerce {#exported-data}
+## Validieren von Audience Activation in Commerce {#exported-data}
 
 Nachdem Sie Real-Time CDP-Segmente für Ihr [!DNL Adobe Commerce]-Konto aktiviert haben, sehen Sie diese Segmente i [!DNL Admin], wenn Sie eine Warenkorb-Preisregel erstellen:
 

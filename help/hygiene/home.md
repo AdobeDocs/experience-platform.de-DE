@@ -5,7 +5,7 @@ exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
 source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
 source-wordcount: '886'
-ht-degree: 72%
+ht-degree: 84%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 72%
 
 >[!IMPORTANT]
 >
->Datenhygiene ist derzeit nur für Organisationen verfügbar, die **Adobe Gesundheitsschild** oder **Adobe Privacy &amp; Security Shield**.
+>Datenhygiene ist derzeit nur für Organisationen verfügbar, die **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben haben.
 
 Adobe Experience Platform bietet leistungsstarke Tools zur Verwaltung großer, komplizierter Datenvorgänge, was die Orchestrierung von Customer Experiences ermöglicht. Da im Laufe der Zeit Daten in das System aufgenommen werden, ist es wichtig, Ihre Datenspeicher so zu verwalten, dass Daten wie vorgesehen verwendet werden. So müssen Daten aktualisiert werden, um falsche Einträge zu korrigieren, und Daten gelöscht werden, wenn dies aufgrund von Unternehmensrichtlinien erforderlich ist.
 
@@ -50,8 +50,8 @@ Löschungs- und Datensatzablaufanfragen speichern jeweils ihre eigenen Verarbeit
 | --- | --- | --- |
 | Anfrage wird übermittelt | 0 Stunden | Ein Data Steward oder Datenschutzanalyst übermittelt eine Anfrage, dass ein Datensatz zu einem bestimmten Zeitpunkt ungültig werden soll. Nachdem sie übermittelt wurde, ist die Anfrage in der [!UICONTROL Datenhygiene-Benutzeroberfläche] sichtbar und verbleibt bis zum Ablauf der planmäßigen Gültigkeitsdauer im Status „Ausstehend“, wonach die Anfrage ausgeführt wird. |
 | Datensatz wird gelöscht | 1 Stunde | Der Datensatz wird aus der [Datensatzinventarseite](../catalog/datasets/user-guide.md) in der Benutzeroberfläche gelöscht. Die Daten im Data Lake werden nur vorläufig gelöscht und bleiben so bis zum Ende des Prozesses erhalten, wonach sie dauerhaft gelöscht werden. |
-| Anzahl der Profile wird aktualisiert | 30 Stunden | Je nach Inhalt des zu löschenden Datensatzes können einige Profile aus dem System entfernt werden, wenn alle zugehörigen Komponentenattribute mit diesem Datensatz verknüpft sind. 30 Stunden nach dem Löschen des Datensatzes werden alle resultierenden Änderungen der Gesamtprofilanzahl in [Dashboard-Widgets](../dashboards/guides/profiles.md#profile-count-trend) und anderen Berichten. |
-| Segmente werden aktualisiert | 48 Stunden | Sobald alle betroffenen Profile aktualisiert wurden, werden alle zugehörigen [Segmente](../segmentation/home.md) aktualisiert werden, um ihre neue Größe widerzuspiegeln. Je nach entferntem Datensatz und den Attributen, nach denen Sie segmentieren, kann die Größe jedes Segments infolge des Löschens zunehmen oder verringern. |
+| Anzahl der Profile wird aktualisiert | 30 Stunden | Je nach Inhalt des zu löschenden Datensatzes können einige Profile aus dem System entfernt werden, wenn alle zugehörigen Komponentenattribute mit diesem Datensatz verknüpft sind. 30 Stunden nach dem Löschen des Datensatzes werden alle resultierenden Änderungen der Gesamtprofilanzahl in [Dashboard-Widgets](../dashboards/guides/profiles.md#profile-count-trend) und anderen Berichten widergespiegelt. |
+| Segmente werden aktualisiert | 48 Stunden | Sobald alle betroffenen Profile aktualisiert worden sind, werden alle zugehörigen [Segmente](../segmentation/home.md) aktualisiert, damit ihre neue Größe widergespiegelt wird. Je nach entferntem Datensatz und den Attributen, nach denen Sie segmentieren, kann sich die Größe der einzelnen Segmente infolge des Löschens vergrößern oder verkleinern. |
 | Journeys und Ziele werden aktualisiert | 50 Stunden | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=de), [Kampagnen](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=de) und [Ziele](../destinations/home.md) werden entsprechend den Änderungen in den zugehörigen Segmenten aktualisiert. |
 | Dauerhafte Löschung wird abgeschlossen | 14 Tage | Alle Daten, die mit dem Datensatz in Zusammenhang stehen, werden dauerhaft aus dem Data Lake gelöscht. Der [Status des Hygienevorgangs](./ui/browse.md#view-details), durch den der Datensatz gelöscht wurde, wird aktualisiert, damit dies widergespiegelt wird. |
 
@@ -70,7 +70,7 @@ Folgendes geschieht, wenn ein [Löschanfrage aufzeichnen](./ui/record-delete.md)
 | Anfrage wird übermittelt | 0 Stunden | Ein Data Steward oder Datenschutzanalyst sendet eine Anfrage zum Löschen von Datensätzen. Die Anfrage ist in der [!UICONTROL Datenhygiene-Benutzeroberfläche] sichtbar |
 | Profil-Lookups werden aktualisiert | 3 Stunden | Die durch die gelöschte Identität verursachte Änderung der Anzahl der Profile spiegelt sich in [Dashboard-Widgets](../dashboards/guides/profiles.md#profile-count-trend) und anderen Berichten wider. |
 | Segmente werden aktualisiert | 24 Stunden | Wenn Profile entfernt worden sind, werden alle zugehörigen [Segmente](../segmentation/home.md) aktualisiert, damit ihre neue Größe widergespiegelt wird. |
-| Journeys und Ziele werden aktualisiert | 26 Stunden | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [Kampagnen](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html) und [Ziele](../destinations/home.md) werden entsprechend den Änderungen in verwandten Segmenten aktualisiert. |
+| Journeys und Ziele werden aktualisiert | 26 Stunden | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=de), [Kampagnen](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=de) und [Ziele](../destinations/home.md) werden entsprechend den Änderungen in verwandten Segmenten aktualisiert. |
 | Datensätze im Data Lake vorläufig gelöscht | 7 Tage | Die Daten werden vorläufig aus dem Data Lake gelöscht. |
 | Datenbereinigung abgeschlossen | 14 Tage | Der [Status des Hygienevorgangs](./ui/browse.md#view-details) wird aktualisiert, damit angezeigt wird, dass der Vorgang abgeschlossen ist. Das bedeutet, dass die Datenbereinigung im Data Lake abgeschlossen ist und die entsprechenden Datensätze endgültig gelöscht wurden. |
 

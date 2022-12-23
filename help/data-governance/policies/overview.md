@@ -8,7 +8,7 @@ exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '1164'
-ht-degree: 85%
+ht-degree: 97%
 
 ---
 
@@ -21,14 +21,14 @@ ht-degree: 85%
 
 Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in [!DNL Experience Platform] ausführen bzw. nicht ausführen dürfen.
 
-Es stehen zwei Arten von Richtlinien zur Verfügung:
+Es sind zwei Richtlinientypen verfügbar:
 
-* **[!UICONTROL Data Governance-Politik]**: Schränken Sie die Datenaktivierung auf der Grundlage der Marketing-Aktion und der Datennutzungsbezeichnungen der betreffenden Daten ein.
-* **[!UICONTROL Einverständnisrichtlinie]**: Filtern der Profile, für die aktiviert werden können [Ziele](../../destinations/home.md) auf der Grundlage der Zustimmung oder Voreinstellungen Ihrer Kunden
+* **[!UICONTROL Data Governance-Richtlinie]**: Zum Beschränken der Datenaktivierung auf Grundlage der durchgeführten Marketing-Aktion und der Datennutzungskennzeichnungen der betreffenden Daten
+* **[!UICONTROL Einverständnisrichtlinie]**: Zum Filtern der Profile, die für [Ziele](../../destinations/home.md) auf Grundlage der Zustimmung oder Voreinstellungen Ihrer Kunden aktiviert werden können
 
 >[!NOTE]
 >
->Datennutzungsrichtlinien dürfen nicht mit [Zugriffskontrollrichtlinien](../../access-control/abac/end-to-end-guide.md#policy), die bestimmen, ob bestimmte Platform-Benutzer in Ihrer Organisation auf bestimmte Datenfelder zugreifen können, und über die [!UICONTROL Berechtigungen] Registerkarte.
+>Datennutzungsrichtlinien sind nicht mit [Zugriffskontrollrichtlinien](../../access-control/abac/end-to-end-guide.md#policy) zu verwechseln, die bestimmen, ob bestimmte Platform-Benutzende in Ihrer Organisation auf bestimmte Datenfelder zugreifen können, und werden über die Registerkarte [!UICONTROL Berechtigungen] konfiguriert.
 
 Dieses Dokument bietet eine allgemeine Übersicht über die Richtlinien zur Datennutzung und enthält Links zu weiteren Dokumentationen zum Arbeiten mit Richtlinien in der Benutzeroberfläche oder API.
 
@@ -49,7 +49,7 @@ Wenn die Nutzung von Daten im Service Ihres Unternehmens stattfindet, sollten re
 
 >[!NOTE]
 >
->Sie können Marketing-Anwendungsfälle für Ziele einrichten, um die Durchsetzung von Richtlinien zu automatisieren. Siehe [Dokumentation zu Zielen](../../destinations/home.md) für weitere Informationen zu den Konfigurationsoptionen für Ihr bestimmtes Ziel.
+>Sie können Marketing-Anwendungsfälle für Ziele einrichten, um die Durchsetzung der Richtlinie zu automatisieren. Weitere Informationen zu den Konfigurationsoptionen für Ihr bestimmtes Ziel finden Sie in der [Dokumentation für Ziele](../../destinations/home.md).
 
 Eine Liste der [von Adobe definierten verfügbaren Marketing-Aktionen](#core-actions) finden Sie im Anhang zu diesem Dokument. Sie können Ihre eigenen benutzerspezifischen Marketing-Aktionen auch mit der [!DNL Policy Service]-API oder über die [!DNL Experience Platform]-Benutzeroberfläche definieren. Weitere Informationen zum Arbeiten mit Marketing-Aktionen und Richtlinien finden Sie im nächsten Abschnitt.
 
@@ -93,7 +93,7 @@ Die folgende Tabelle beschreibt die wichtigsten Marketing-Aktionen, die von Adob
 | --- | --- |
 | Analytics | Eine Aktion, die Daten zu Analysezwecken verwendet, z. B. zum Messen, Analysieren und Erstellen von Berichten über die Nutzung der Websites oder Programmen Ihres Unternehmens durch Kunden. |
 | Kombinieren mit direkt identifizierbaren Daten | Eine Aktion, die alle persönlichen identifizierbaren Informationen (PII) mit anonymen Daten kombiniert. Verträge über Daten, die aus Werbenetzwerken, Werbe-Servern und Drittanbietern von Daten bezogen werden, beinhalten häufig spezifische vertragliche Verbote der Verwendung solcher Daten mit direkt identifizierbaren Daten. |
-| Site-übergreifendes Targeting | Eine Aktion, die Daten für Site-übergreifendes Targeting von Anzeigen verwendet. Die Kombination von Daten aus verschiedenen Sites, einschließlich einer Kombination aus Daten in einer Site und Offsite-Daten oder einer Kombination von Daten aus verschiedenen Offsite-Quellen, wird als „Site-übergreifende Daten“ bezeichnet. Site-übergreifende Daten werden in der Regel gesammelt und verarbeitet, um Rückschlüsse auf die Interessen der Benutzer zu ziehen. |
+| Site-übergreifendes Targeting | Eine Aktion, die Daten für Site-übergreifendes Targeting von Anzeigen verwendet. Die Kombination von Daten aus verschiedenen Sites, einschließlich einer Kombination aus Daten in einer Site und Offsite-Daten oder einer Kombination von Daten aus verschiedenen Offsite-Quellen, wird als „Site-übergreifende Daten“ bezeichnet. Site-übergreifende Daten werden in der Regel gesammelt und verarbeitet, um Rückschlüsse auf die Interessen der Benutzenden zu ziehen. |
 | Data Science | Eine Aktion, die Daten für datenwissenschaftliche Workflows verwendet. Einige Verträge beinhalten ein explizites Verbot der Datennutzung für datenwissenschaftliche Zwecke. Manchmal wird dies so ausgedrückt, dass die Verwendung von Daten für künstliche Intelligenz (KI), maschinelles Lernen (ML) oder Modellierung verboten ist. |
 | E-Mail-Targeting | Eine Aktion, die Daten in E-Mail-Targeting-Kampagnen verwendet. |
 | Exportieren an Dritte | Eine Aktion, die Daten an Prozessoren und Entitäten exportiert, die keine direkten Beziehungen zu Kunden haben. Viele Datenanbieter haben Vertragsbedingungen, die den Export von Daten von dort, wo sie ursprünglich erfasst wurden, verbieten. So wird beispielsweise die Übertragung von Daten, die Sie von Social Media erhalten, oft durch deren Verträge eingeschränkt. |

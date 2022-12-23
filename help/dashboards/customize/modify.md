@@ -6,7 +6,7 @@ exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
 source-git-commit: 338aa6849f58b3c0fd6c871f1e199ebf6a73d115
 workflow-type: tm+mt
 source-wordcount: '510'
-ht-degree: 82%
+ht-degree: 91%
 
 ---
 
@@ -28,7 +28,7 @@ In jedem Dashboard (z. B. im Dashboard für [!UICONTROL Profile]) können Sie **
 
 ## Widgets neu anordnen
 
-Nachdem Sie sich entschieden haben, das Dashboard zu ändern, können Sie die Widgets neu anordnen, indem Sie den Widget-Titel auswählen und die Widgets in die gewünschte Reihenfolge ziehen. In diesem Beispiel wird die **[!UICONTROL Trend der Profilanzahl]** Das Widget wird in die oberste Zeile verschoben und die **[!UICONTROL Profilanzahl]** Widget wird nun in der zweiten Zeile angezeigt.
+Nachdem Sie sich entschieden haben, das Dashboard zu ändern, können Sie die Widgets neu anordnen, indem Sie den Widget-Titel auswählen und die Widgets in die gewünschte Reihenfolge ziehen. In diesem Beispiel wird das Widget **[!UICONTROL Trend der Profilanzahl]** in die oberste Zeile verschoben, und das Widget **[!UICONTROL Profilanzahl]** wird jetzt in der zweiten Zeile angezeigt.
 
 ![Das Dashboard Profile mit zwei neu sortierten Widgets wird hervorgehoben.](../images/customization/move-widget.png)
 
@@ -44,7 +44,7 @@ Sie können die Größe eines Widgets auch anpassen, indem Sie das Winkelsymbol 
 
 ## Dashboard-Aktualisierungen speichern
 
-Nachdem Sie die Verschieben- und Größenanpassung von Widgets abgeschlossen haben, wählen Sie **[!UICONTROL Speichern und beenden]** , um Ihre Änderungen zu speichern und zur Haupt-Dashboard-Ansicht zurückzukehren. Wenn Sie Ihre Änderungen nicht beibehalten möchten, wählen Sie **[!UICONTROL Abbrechen]** aus, um das Dashboard zurückzusetzen und zur Haupt-Dashboard-Ansicht zurückzukehren.
+Wenn Sie mit dem Anpassen und Verschieben von Widgets fertig sind, klicken Sie auf **[!UICONTROL Speichern und beenden]**, um Ihre Änderungen zu speichern und zur Hauptansicht des Dashboards zurückzukehren. Wenn Sie Ihre Änderungen nicht beibehalten möchten, wählen Sie **[!UICONTROL Abbrechen]** aus, um das Dashboard zurückzusetzen und zur Haupt-Dashboard-Ansicht zurückzukehren.
 
 ![Das Dashboard Profile , in dem sowohl Abbrechen als auch Speichern und Beenden hervorgehoben sind.](../images/customization/save-changes.png)
 

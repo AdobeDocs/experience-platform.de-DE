@@ -1,197 +1,197 @@
 ---
-keywords: Experience Platform; Profil; Segment; Segmente; Segmentierung; Benutzeroberfläche; Benutzeroberfläche; Anpassung; Segmentdashboard; Dashboard
-title: Dashboard-Anleitung für Segmente
-description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu Segmenten anzeigen können, die Ihr Unternehmen erstellt hat.
+keywords: Experience Platform;Profil;Segment;Segmente;Segmentierung;Benutzeroberfläche;UI;Anpassung;Segment-Dashboard;Dashboard
+title: Handbuch zum Segmente-Dashboard
+description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu Segmenten anzeigen können, die Ihre Organisation erstellt hat.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 source-git-commit: e5a4fddbd7f5b14280e283871d8b66a2e2f2407d
 workflow-type: tm+mt
 source-wordcount: '2105'
-ht-degree: 9%
+ht-degree: 98%
 
 ---
 
-# [!UICONTROL Segment-Dashboard] {#segment-dashboard}
+# [!UICONTROL Segmente-Dashboard] {#segment-dashboard}
 
-Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zu Ihren Segmenten anzeigen können, die während einer täglichen Momentaufnahme erfasst werden. In diesem Handbuch wird beschrieben, wie Sie in der Benutzeroberfläche auf das Segment-Dashboard zugreifen und mit ihm arbeiten können. Außerdem erhalten Sie weitere Informationen zu den im Dashboard angezeigten Visualisierungen.
+Die Adobe Experience Platform-Benutzeroberfläche (UI) verfügt über ein Dashboard, über das Sie wichtige Informationen zu Ihren Segmenten anzeigen können. Diese Informationen werden in Form einer täglichen Momentaufnahme erfasst. In diesem Handbuch wird beschrieben, wie Sie in der Benutzeroberfläche auf das Segmente-Dashboard zugreifen und mit ihm arbeiten können. Außerdem erhalten Sie weitere Informationen zu den im Dashboard angezeigten Visualisierungen.
 
-Einen Überblick über alle Funktionen des Adobe Experience Platform Segmentation Service in der Benutzeroberfläche von Platform erhalten Sie im [Handbuch zur Benutzeroberfläche des Segmentierungsdienstes](../../segmentation/ui/overview.md).
+Einen Überblick über alle Funktionen des Segmentierungs-Services von Adobe Experience Platform in der Platform-Benutzeroberfläche erhalten Sie im [Handbuch zur Benutzeroberfläche des Segmentierungs-Services](../../segmentation/ui/overview.md).
 
-## [!UICONTROL Segmente] Dashboard-Daten
+## Daten im [!UICONTROL Segmente]-Dashboard
 
-Das Segment-Dashboard zeigt eine Momentaufnahme der Attributdaten (Datensatzdaten) an, die Ihr Unternehmen im Profilspeicher in der Experience Platform hat. Der Schnappschuss enthält keine Ereignisdaten (Zeitreihendaten).
+Im Segmente-Dashboard wird eine Momentaufnahme der Attributdaten (Datensatzdaten) dargestellt, über die Ihre Organisation im Experience Platform-Profilspeicher verfügt. Die Momentaufnahme enthält keine Ereignisdaten (Zeitreihendaten).
 
-Die Attributdaten im Snapshot zeigen die Daten exakt so an, wie sie zu dem Zeitpunkt angezeigt werden, zu dem die Momentaufnahme erstellt wurde. Mit anderen Worten, der Schnappschuss ist keine Annäherung oder Stichprobe der Daten und das Segment-Dashboard wird nicht in Echtzeit aktualisiert.
-
->[!NOTE]
->
->Änderungen oder Aktualisierungen, die seit der Aufnahme des Schnappschusses an den Daten vorgenommen wurden, werden erst dann im Dashboard angezeigt, wenn der nächste Schnappschuss erstellt wurde.
-
-## Die [!UICONTROL Segmente] Dashboard {#explore}
-
-So navigieren Sie zum [!UICONTROL Segmente] Dashboard in der Platform-Benutzeroberfläche auswählen **[!UICONTROL Segmente]** Wählen Sie in der linken Leiste die **[!UICONTROL Übersicht]** zum Anzeigen des Dashboards.
+Die Attributdaten in der Momentaufnahme zeigen die Daten exakt so an, wie sie zum Zeitpunkt der Momentaufnahme vorgefunden werden. Das heißt, die Momentaufnahme ist keine Annäherung oder Stichprobe der Daten, und das Segmente-Dashboard wird nicht in Echtzeit aktualisiert.
 
 >[!NOTE]
 >
->Wenn Ihr Unternehmen neu bei Platform ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt wurden, wird die [!UICONTROL Segmente] Das Dashboard ist nicht sichtbar. Stattdessen wird die [!UICONTROL Übersicht] enthält Links und Dokumentation, die Ihnen bei den ersten Schritten mit der Segmentierung helfen.
+>Änderungen oder Aktualisierungen, die seit der Aufnahme der Momentaufnahme an den Daten vorgenommen wurden, werden erst dann im Dashboard angezeigt, wenn die nächste Momentaufnahme erstellt wird.
+
+## Erkunden des [!UICONTROL Segmente]-Dashboards {#explore}
+
+Um zum [!UICONTROL Segmente]-Dashboard in der Platform-Benutzeroberfläche zu navigieren, wählen Sie in der linken Leiste die Option **[!UICONTROL Segmente]** und dann die Registerkarte **[!UICONTROL Übersicht]** aus, um das Dashboard anzuzeigen.
+
+>[!NOTE]
+>
+>Wenn Ihre Organisation Platform erst seit kurzem nutzt und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt hat, ist das [!UICONTROL Segmente]-Dashboard nicht sichtbar. Stattdessen werden auf der Registerkarte [!UICONTROL Übersicht] Links und Dokumentation angezeigt, die Ihnen bei den ersten Schritten im Zusammenhang mit der Segmentierung helfen können.
 
 ![Im Tab Übersicht des Segments-Dashboards werden Segmente und Übersicht hervorgehoben.](../images/segments/dashboard-overview.png)
 
-### Ändern Sie die [!UICONTROL Segmente] Dashboard {#modify}
+### Ändern des [!UICONTROL Segmente]-Dashboards {#modify}
 
-Sie können das Erscheinungsbild der [!UICONTROL Segmente] Dashboard durch Auswahl von **[!UICONTROL Dashboard ändern]**. Dadurch können Sie Widgets aus dem Dashboard verschieben, hinzufügen und entfernen sowie auf die **[!UICONTROL Widget-Bibliothek]** , um verfügbare Widgets zu erkunden und benutzerdefinierte Widgets für Ihre Organisation zu erstellen.
+Sie können das Erscheinungsbild des [!UICONTROL Segmente]-Dashboards durch Auswahl von **[!UICONTROL Dashboard ändern]** ändern. Dadurch können Sie Widgets aus dem Dashboard verschieben, hinzufügen und entfernen sowie auf die **[!UICONTROL Widget-Bibliothek]** zugreifen, um verfügbare Widgets zu erkunden und benutzerdefinierte Widgets für Ihre Organisation zu erstellen.
 
-Weitere Informationen finden Sie unter [Ändern von Dashboards](../customize/modify.md) und [Übersicht über die Widget-Bibliothek](../customize/widget-library.md) Dokumentation .
+Weitere Informationen finden Sie in der Dokumentation zum [Ändern von Dashboards](../customize/modify.md) und zur [Übersicht über die Widget-Bibliothek](../customize/widget-library.md).
 
-### Widgets hinzufügen {#add-widget}
+### Hinzufügen von Widgets {#add-widget}
 
-Auswählen **[!UICONTROL Widget hinzufügen]** um zur Widget-Bibliothek zu navigieren und eine Liste der verfügbaren Widgets anzuzeigen, die Sie Ihrem Dashboard hinzufügen können.
+Wählen Sie **[!UICONTROL Widget hinzufügen]** aus, um zur Widget-Bibliothek zu navigieren und eine Liste der verfügbaren Widgets anzuzeigen, die Sie Ihrem Dashboard hinzufügen können.
 
-![Die Übersicht über das Dashboard Segmente mit dem Widget Hinzufügen wurde hervorgehoben.](../images/segments/segments-overview-add-widget.png)
+![Die Registerkarte „Übersicht“ des Segmente-Dashboards mit hervorgehobener Option „Widget hinzufügen“](../images/segments/segments-overview-add-widget.png)
 
-In der Widget-Bibliothek können Sie die Auswahl von standardmäßigen und benutzerdefinierten Segment-Widgets durchsuchen. Informationen zum Hinzufügen von Widgets finden Sie in der Dokumentation zur Widget-Bibliothek . [Widget hinzufügen](../customize/widget-library.md#add-widgets).
+Über die Widget-Bibliothek können Sie die Auswahl von standardmäßigen und benutzerdefinierten Segment-Widgets durchsuchen. Informationen zum [Hinzufügen von Widgets](../customize/widget-library.md#add-widgets) finden Sie in der Dokumentation zur Widget-Bibliothek.
 
-## Segment auswählen
+## Auswählen eines Segments
 
 Das Dashboard wählt automatisch ein anzuzeigendes Segment aus. Sie können das Segment jedoch über das Dropdown-Menü oder die Segmentauswahl ändern.
 
-Um ein anderes Segment auszuwählen, wählen Sie das Dropdown-Menü neben dem Segmentnamen aus oder verwenden Sie die Segmentauswahl, um das Dialogfeld für die Segmentauswahl zu öffnen.
+Für die Auswahl eines anderen Segments wählen Sie das Dropdown-Menü neben dem Segmentnamen aus oder verwenden Sie die Segmentauswahl, um das Dialogfeld für die Segmentauswahl zu öffnen.
 
 >[!IMPORTANT]
 >
 >In der Liste der auswählbaren Segmente werden nur Segmente angezeigt, deren Profilanzahl über null liegt.
 
-![Die Übersicht über das Segmente-Dashboard mit dem Dropdown-Menü für globale Segmente wurde hervorgehoben.](../images/segments/change-segment.png)
+![Die Registerkarte „Übersicht“ des Segmente-Dashboards mit hervorgehobenem Dropdown-Menü für globale Segmente](../images/segments/change-segment.png)
 
-![Das Dialogfeld Segment auswählen , in dem alle verfügbaren Segmente angezeigt werden.](../images/segments/select-segment-dialog.png)
+![Das Dialogfeld „Segment auswählen“ mit allen verfügbaren Segmenten](../images/segments/select-segment-dialog.png)
 
 ## Widgets und Metriken
 
-Das Segmente-Dashboard besteht aus Widgets, die schreibgeschützte Metriken sind und wichtige Informationen zu Ihrem ausgewählten Segment enthalten.
+Das Segmente-Dashboard besteht aus Widgets, bei denen es sich um schreibgeschützte Metriken handelt und die wichtige Informationen zum ausgewählten Segment enthalten.
 
-Datum und Uhrzeit der letzten Momentaufnahme werden oben im [!UICONTROL Übersicht] neben dem Dropdown-Menü &quot;Segment&quot;ein. Alle Widget-Daten sind ab diesem Datum und dieser Uhrzeit korrekt. Der Zeitstempel der Momentaufnahme wird in UTC bereitgestellt. Es befindet sich nicht in der Zeitzone des einzelnen Benutzers oder der Organisation.
+Datum und Uhrzeit der letzten Momentaufnahme werden oben auf der Registerkarte [!UICONTROL Übersicht] neben dem Dropdown-Menü des Segments angezeigt. Alle Widget-Daten sind zum Stand dieses Datums und dieser Uhrzeit korrekt. Der Zeitstempel der Momentaufnahme wird im UTC-Format angegeben, nicht in der Zeitzone der jeweiligen Person oder Organisation.
 
-![Die Registerkarte Segmentübersicht mit einem Widget-Zeitstempel hervorgehoben.](../images/segments/widget-timestamp.png)
+![Die Registerkarte „Übersicht“ der Segmente mit einem hervorgehobenem Zeitstempel eines Widgets](../images/segments/widget-timestamp.png)
 
 ## Standard-Widgets {#standard-widgets}
 
-Adobe bietet mehrere Standard-Widgets, mit denen Sie verschiedene Metriken im Zusammenhang mit Ihren Segmenten visualisieren können. Sie können auch benutzerdefinierte Widgets erstellen, die für Ihre Organisation freigegeben werden, indem Sie die [!UICONTROL Widget-Bibliothek]. Um mehr über das Erstellen benutzerdefinierter Widgets zu erfahren, lesen Sie zunächst den Abschnitt [Übersicht über die Widget-Bibliothek](../customize/widget-library.md).
+Adobe bietet mehrere Standard-Widgets, mit denen Sie verschiedene Metriken im Zusammenhang mit Ihren Segmenten visualisieren können. Sie können auch benutzerdefinierte Widgets erstellen, die über die [!UICONTROL Widget-Bibliothek] für Ihre Organisation freigegeben werden können. Um mehr über das Erstellen benutzerdefinierter Widgets zu erfahren, lesen Sie zunächst den Abschnitt [Widget-Bibliothek – Übersicht](../customize/widget-library.md).
 
 Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen Sie den Namen eines Widgets aus der folgenden Liste aus:
 
-* [[!UICONTROL Zielgruppengröße]](#audience-size)
-* [[!UICONTROL Zielgruppenaktivierungs-Reihenfolge]](#audience-activation-order)
-* [[!UICONTROL Trend der Zielgruppengröße]](#audience-size-trend)
-* [[!UICONTROL Trend bei der Änderung der Zielgruppengröße]](#audience-size-change-trend)
-* [[!UICONTROL Trend der Zielgruppengröße nach Identität]](#audience-size-trend-by-identity)
+* [[!UICONTROL Audience-Größe]](#audience-size)
+* [[!UICONTROL Reihenfolge der Audience-Aktivierung]](#audience-activation-order)
+* [[!UICONTROL Trend der Audience-Größe]](#audience-size-trend)
+* [[!UICONTROL Trend bei der Änderung der Audience-Größe]](#audience-size-change-trend)
+* [[!UICONTROL Trend der Audience-Größe nach Identität]](#audience-size-trend-by-identity)
 * [[!UICONTROL Zielgruppenüberschneidung]](#audience-overlap)
-* [[!UICONTROL Bericht &quot;Zielgruppenüberschneidung&quot;]](#audience-overlap-report)
+* [[!UICONTROL Bericht zur Zielgruppenüberschneidung]](#audience-overlap-report)
 * [[!UICONTROL Identitätsüberschneidung]](#identity-overlap)
 * [[!UICONTROL Profile nach Identität]](#profiles-by-identity)
 * [[!UICONTROL Geplante Aktivierungen]](#scheduled-activations)
 
-### [!UICONTROL Zielgruppengröße] {#audience-size}
+### [!UICONTROL Audience-Größe] {#audience-size}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesize"
->title="Zielgruppengröße"
+>title="Audience-Größe"
 >abstract="Dieses Widget zeigt die Gesamtzahl der zusammengeführten Profile innerhalb des ausgewählten Segments an. Diese Zahl hängt von der auf Ihre Daten angewendeten Zusammenführungsrichtlinie ab und ist zum Zeitpunkt der letzten Momentaufnahme korrekt."
 
-Die **[!UICONTROL Zielgruppengröße]** Widget zeigt die Gesamtzahl der zusammengeführten Profile innerhalb des ausgewählten Segments zum Zeitpunkt der Momentaufnahme an. Diese Zahl ist das Ergebnis der Anwendung der Segmentzusammenführungsrichtlinie auf Ihre Profildaten, um Profilfragmente zu einem einzigen Profil für jede Person im Segment zusammenzuführen.
+Das Widget **[!UICONTROL Zielgruppengröße]** zeigt die Gesamtzahl der zusammengeführten Profile innerhalb des ausgewählten Segments zum Zeitpunkt der Momentaufnahme an. Diese Zahl ist das Ergebnis der Anwendung der Segmentzusammenführungsrichtlinie auf Ihre Profildaten, um Profilfragmente zu einem einzigen Profil für jede Person im Segment zusammenzuführen.
 
-Weitere Informationen zu Fragmenten und zusammengeführten Profilen finden Sie im Abschnitt [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
+Weitere Informationen zu Fragmenten und zusammengeführten Profilen finden Sie in der [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
 
-![Die Übersicht über das Dashboard Segmente mit dem Widget Zielgruppengröße wird hervorgehoben.](../images/segments/audience-size.png)
+![Die Registerkarte „Übersicht“ des Segmente-Dashboards mit hervorgehobenem Widget „Zielgruppengröße“](../images/segments/audience-size.png)
 
-### [!UICONTROL Trend der Zielgruppengröße] {#audience-size-trend}
+### [!UICONTROL Trend der Audience-Größe] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesizetrend"
->title="Trend der Zielgruppengröße"
->abstract="Dieses Widget enthält Informationen zur Gesamtanzahl der Profile, die den Kriterien von **any** Segmentdefinition, die während der täglichen Momentaufnahme für die letzten 30 Tage, 90 Tage oder 12 Monate erfasst wurde."
+>title="Trend der Audience-Größe"
+>abstract="Dieses Widget liefert Informationen zur Gesamtanzahl der Profile, die den Kriterien **einer beliebigen** Segmentdefinition entsprechen und die während des täglichen Snapshots in den letzten 30 Tagen, 90 Tagen oder 12 Monate erfasst wurden."
 
-Die **[!UICONTROL Zielgruppengrößentrend]** Widget bietet eine Kantengraph-Illustration für die Gesamtzahl der Profile, die den Kriterien von **any** Segmentdefinition über einen bestimmten Zeitraum. Der Trend zur Zielgruppengröße kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt. Die Zielgruppengröße wird auf der Y-Achse und der Zeit auf der X-Achse dargestellt.
+Das Widget **[!UICONTROL Entwicklung der Zielgruppengröße]** bietet eine Kantengraph-Illustration für die Gesamtzahl der Profile, die die Kriterien **einer beliebigen** Segmentdefinition über einen bestimmten Zeitraum erfüllen. Die Entwicklung der Zielgruppengröße kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt. Die Zielgruppengröße wird auf der Y-Achse und die Zeit auf der X-Achse dargestellt.
 
-Dieses Widget enthält auch die automatische [!UICONTROL Untertitel] Funktion, bei der ein maschinelles Lernmodell die Diagramm- und Segmentdaten analysiert und automatisch Beschriftungen generiert, um die wichtigsten Trends und Ereignisse zu beschreiben. Auswählen **[!UICONTROL Untertitel]** , um das Dialogfeld mit den automatischen Beschriftungen zu öffnen.
+Dieses Widget enthält auch die Funktion für automatische [!UICONTROL Beschriftungen], bei der ein maschinelles Lernmodell die Diagramm- und Segmentdaten analysiert und automatisch Beschriftungen generiert, um die wichtigsten Entwicklungen und Ereignisse zu beschreiben. Wählen Sie **[!UICONTROL Beschriftungen]** aus, um das Dialogfeld für automatische Beschriftungen zu öffnen.
 
-![In der Segmentübersicht wird das Trend-Widget zur Zielgruppengröße angezeigt.](../images/segments/audience-size-trend-captions.png)
+![In der Segmentübersicht wird das Widget „Entwicklung der Zielgruppengröße“ angezeigt.](../images/segments/audience-size-trend-captions.png)
 
 Das Dialogfeld für automatische Beschriftungen wird geöffnet und bietet Einblicke in Ihre Daten.
 
-![Das Dialogfeld für automatische Beschriftungen für das Trend-Widget zur Zielgruppengröße.](../images/segments/audience-size-trend-automatic-captions-dialog.png)
+![Das Dialogfeld für automatische Beschriftungen für das Widget „Entwicklung der Zielgruppengröße“.](../images/segments/audience-size-trend-automatic-captions-dialog.png)
 
-Weiterführende Informationen zur Segmentauswertung und zur Qualifizierung und Ausstieg von Profilen finden Sie im Abschnitt [Dokumentation zum Segmentierungsdienst](../../segmentation/home.md).
+Weiterführende Informationen zur Segmentauswertung und dazu, wie Profile für Segmente qualifiziert und daraus entfernt werden, finden Sie in der [Dokumentation zum Segmentierungs-Service](../../segmentation/home.md).
 
-### [!UICONTROL Trend bei der Änderung der Zielgruppengröße] {#audience-size-change-trend}
+### [!UICONTROL Trend bei der Änderung der Audience-Größe] {#audience-size-change-trend}
 
-Dieses Widget bietet ein Liniendiagramm, das die Differenz der Gesamtzahl der Profile anzeigt, die sich im Zeitraum zwischen den jüngsten täglichen Snapshots für ein bestimmtes Segment qualifiziert haben. Das für die Analyse ausgewählte Segment wird aus der Dropdown-Liste Übersicht ausgewählt. Der Trend kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt. Die Zielgruppengröße wird auf der Y-Achse und der Zeit auf der X-Achse dargestellt.
+Dieses Widget bietet ein Liniendiagramm, das die Differenz der Gesamtzahl der Profile anzeigt, die sich im Zeitraum zwischen den jüngsten täglichen Snapshots für ein bestimmtes Segment qualifiziert haben. Das für die Analyse ausgewählte Segment wird aus dem Dropdown-Menü „Übersicht“ ausgewählt. Der Trend kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt. Die Zielgruppengröße wird auf der Y-Achse und die Zeit auf der X-Achse dargestellt.
 
-![Das Widget zur Zielgruppengröße ändert den Trend.](../images/segments/audience-size-change-trend.png)
+![Das Widget „Entwicklung der Veränderung der Zielgruppengröße“](../images/segments/audience-size-change-trend.png)
 
-### [!UICONTROL Trend der Zielgruppengröße nach Identität] {#audience-size-trend-by-identity}
+### [!UICONTROL Trend der Audience-Größe nach Identität] {#audience-size-trend-by-identity}
 
-Dieses Widget veranschaulicht den Trend zur Zielgruppengröße für ein bestimmtes Segment basierend auf dem Identitätstyp, der im Widget-Dropdown-Menü ausgewählt wurde. Das für die Analyse verwendete Segment wird aus der Dropdown-Liste Übersicht ausgewählt. Der Trend kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt.
+Dieses Widget veranschaulicht die Entwicklung der Zielgruppengröße für ein bestimmtes Segment basierend auf dem Identitätstyp, der im Widget-Dropdown-Menü ausgewählt wurde. Das für die Analyse verwendete Segment wird aus dem Dropdown-Menü „Übersicht“ ausgewählt. Der Trend kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt.
 
-![Der Trend zur Zielgruppengröße nach Identitäts-Widget.](../images/segments/audience-size-trend-by-identity.png)
+![Das Widget „Entwicklung der Zielgruppengröße nach Identität“](../images/segments/audience-size-trend-by-identity.png)
 
-### [!UICONTROL Zielgruppenaktivierungs-Reihenfolge] {#audience-activation-order}
+### [!UICONTROL Reihenfolge der Audience-Aktivierung] {#audience-activation-order}
 
-Die [!UICONTROL Aktivierungsreihenfolge für Zielgruppen] Widget bietet eine Tabelle mit drei Spalten, in der die [!UICONTROL Zielname], die [!UICONTROL platform]und der Aktivierung [!UICONTROL date] der Audience. Die Liste ist von oben nach unten geordnet, entsprechend der Neuigkeit, und kann bis zu 10 Zeilen aufnehmen.
+Das Widget [!UICONTROL Reihenfolge der Zielgruppenaktivierung] bietet eine dreispaltige Tabelle, in der der [!UICONTROL Zielname], die [!UICONTROL Plattform] und das [!UICONTROL Aktivierungsdatum] der Zielgruppe aufgelistet sind. Die Liste ist entsprechend der Aktualität von oben nach unten geordnet und kann bis zu 10 Zeilen enthalten.
 
-![Das Widget zur Zielgruppenaktivierungsreihenfolge .](../images/segments/audience-activation-order.png)
+![Das Widget „Reihenfolge der Zielgruppenaktivierung“](../images/segments/audience-activation-order.png)
 
 ### [!UICONTROL Zielgruppenüberschneidung] {#audience-overlap}
 
-Dieses Widget stellt die Anzahl der Profile aus zwei Segmenten dar, die die Kriterien für beide Segmentdefinitionen erfüllen. Die zum Vergleich verwendeten Segmente werden aus den Widget-Dropdown-Menüs ausgewählt. Die Gesamtzahl der in der relevanten Segmentdefinition enthaltenen Profile kann durch Bewegen des Mauszeigers über einen Kreis oder die Schnittmenge des Venn-Diagramms angezeigt werden.
+Dieses Widget stellt die Anzahl der Profile aus zwei Segmenten dar, die die Kriterien für beide Segmentdefinitionen erfüllen. Die verwendeten Segmente werden aus den Widget-Dropdown-Menüs ausgewählt. Die Gesamtzahl der in der relevanten Segmentdefinition enthaltenen Profile kann durch Bewegen des Mauszeigers über einen Kreis oder die Schnittmenge des Venn-Diagramms angezeigt werden.
 
 Mit diesem Widget können Sie Ihre Segmentierungsstrategie optimieren, indem Sie die Ähnlichkeiten in den Ergebnissen Ihrer Segmentdefinitionen visualisieren.
 
-![Das Widget Zielgruppenüberschneidung .](../images/segments/audience-overlap.png)
+![Das Widget „Zielgruppenüberschneidung“.](../images/segments/audience-overlap.png)
 
-### [!UICONTROL Bericht &quot;Zielgruppenüberschneidung&quot;] {#audience-overlap-report}
+### [!UICONTROL Bericht zur Zielgruppenüberschneidung] {#audience-overlap-report}
 
-Dieses Widget tabellarisiert die Daten zur Zielgruppenüberschneidung für ein bestimmtes Segment. Eine Liste mit fünf Zielgruppen, die von den Prozentsätzen der höchsten bis zur niedrigsten Überschneidung sortiert sind, wird für das Segment bereitgestellt, das oben im Bildschirm aus dem Dropdown-Menü ausgewählt wurde. Aus Gründen der Klarheit wird Ihr ausgewähltes Segment im [!UICONTROL SEGMENT A NAME] Spalte. Die Analyse der Zielgruppenüberschneidung wird für das zweite Segment bereitgestellt, das im [!UICONTROL SEGMENT B NAME] Spalte. Die prozentuale Überschneidung wird in der dritten Spalte genau auf zwölf Dezimalstellen angegeben.
+Dieses Widget stellt die Daten der Zielgruppenüberschneidung für ein bestimmtes Segment als Tabelle dar. Für das Segment, das oben im Bildschirm aus dem Dropdown-Menü ausgewählt wurde, wird eine Liste mit fünf Zielgruppen angezeigt, die vom höchsten bis zum niedrigsten Überschneidungsprozentsatz sortiert sind. Aus Gründen der Übersichtlichkeit wird Ihr ausgewähltes Segment in der Spalte [!UICONTROL Name des Segments A] aufgeführt. Die Analyse der Zielgruppenüberschneidung wird für das zweite Segment bereitgestellt, das in der Spalte [!UICONTROL Name von Segment B] aufgeführt ist. Die prozentuale Überschneidung wird in der dritten Spalte auf zwölf Dezimalstellen genau angegeben.
 
-Der Bericht zur Zielgruppenüberschneidung hilft Ihnen beim Erstellen neuer Hochleistungssegmente. Durch die Beobachtung hoher prozentualer Überschneidungen können Sie Zielgruppen unterdrücken und das Senden derselben Zielgruppe an verschiedene Ziele verhindern. Sie helfen Ihnen auch dabei, versteckte Einblicke zu identifizieren, die bei einer besseren Segmentierung hilfreich sein könnten. Eine geringe prozentuale Überschneidung hilft, eindeutige Profile zu finden, die verfolgt werden sollen.
+Der Bericht zur Zielgruppenüberschneidung hilft Ihnen beim Erstellen neuer, hochqualitativer Segmente. Durch die Beachtung hoher prozentualer Überschneidungen können Sie Zielgruppen unterdrücken und das Senden derselben Zielgruppe an verschiedene Ziele verhindern. Diese Daten helfen Ihnen auch dabei, verborgene Insights zu entdecken, die bei einer besseren Segmentierung hilfreich sein können. Eine geringe prozentuale Überschneidung hilft, eindeutige Profile zu finden, deren Kontaktierung Sie fortsetzen sollten.
 
-Auswählen **[!UICONTROL Mehr anzeigen]** , um ein Vollbilddialogfeld zu öffnen, das mehr Segmentüberlagerungsdaten enthält.
+Wählen Sie **[!UICONTROL Mehr anzeigen]** aus, um ein Vollbilddialogfeld zu öffnen, das mehr Segmentüberschneidungsdaten enthält.
 
-![Das Berichts-Widget &quot;Zielgruppenüberschneidung&quot;wurde hervorgehoben.](../images/segments/audience-overlap-report.png)
+![Das Widget mit dem Zielgruppenüberschneidungsbericht mit hervorgehobener Option „Mehr anzeigen“.](../images/segments/audience-overlap-report.png)
 
-Die [!UICONTROL Bericht &quot;Zielgruppenüberschneidung&quot;] angezeigt. Dieses Dialogfeld kann bis zu 50 Zeilen mit Analysen zur Zielgruppenüberschneidung enthalten, die in sechs Spalten unterteilt sind. Wählen Sie das Einstellungssymbol (![Das Einstellungssymbol.](../images/segments/settings-icon.png)), um Spalten aus der Tabelle zu entfernen oder hinzuzufügen.
+Das Dialogfeld [!UICONTROL Bericht zur Zielgruppenüberschneidung] wird angezeigt. Dieses Dialogfeld kann bis zu 50 Zeilen mit Analysen zur Zielgruppenüberschneidung enthalten, die in sechs Spalten unterteilt sind. Wählen Sie das Einstellungssymbol (![Das Einstellungssymbol.](../images/segments/settings-icon.png)) aus, um Spalten aus der Tabelle zu entfernen oder zur Tabelle hinzuzufügen.
 
-![Das Berichtdialogfeld &quot;Zielgruppenüberschneidung&quot;.](../images/segments/audience-overlap-report-dialog.png)
+![Das Dialogfeld mit dem Bericht zur Zielgruppenüberschneidung.](../images/segments/audience-overlap-report-dialog.png)
 
 >[!NOTE]
 >
->Wählen Sie die **[!UICONTROL Überlappung]** Spaltenüberschrift verwenden, um die Rangfolge der Ergebnisse zwischen der höchsten und der niedrigsten bzw. der niedrigsten der höchsten zu ändern.
+>Wählen Sie die Spaltenüberschrift **[!UICONTROL Überschneidung]** aus, um die Rangfolge der Ergebnisse vom höchsten zum niedrigsten bzw. vom niedrigsten zum höchsten zu ändern.
 
-Um den gesamten Bericht im PDF-Format herunterzuladen, wählen Sie das Optionsmenü (**`...`**) gefolgt von **[!UICONTROL Download]**.
+Um den gesamten Bericht im PDF-Format herunterzuladen, wählen Sie das Optionsmenü (**`...`**) und dann **[!UICONTROL Download]** aus.
 
-![Das Berichtdialogfeld Zielgruppenüberschneidung wurde mit den Auslassungszeichen und der Download-Option hervorgehoben.](../images/segments/segments-audience-overlap-report-dialog-download.png)
+![Das Dialogfeld mit dem Bericht zur Zielgruppenüberschneidung mit den Auslassungszeichen und der hervorgehobenen Download-Option.](../images/segments/segments-audience-overlap-report-dialog-download.png)
 
 Wählen Sie eine Zeile aus dem Bericht aus, um ein Venn-Diagramm der Überschneidungsanalyse zu öffnen. Bewegen Sie den Mauszeiger über einen Abschnitt des Venn-Diagramms, um die Profilanzahl in einem Dialogfeld anzuzeigen.
 
-![Das Berichtdialogfeld Zielgruppenüberschneidung wird mit einem Venn-Diagramm und einer hervorgehobenen Zeile angezeigt.](../images/segments/audience-overlap-report-dialog-venn.png)
+![Das Dialogfeld mit dem Bericht zur Zielgruppenüberschneidung mit einem Venn-Diagramm und einer hervorgehobenen Zeile.](../images/segments/audience-overlap-report-dialog-venn.png)
 
-Auswählen **[!UICONTROL Schließen]** , um zur [!UICONTROL Segmente] Dashboard.
+Wählen Sie **[!UICONTROL Schließen]** aus, um zum [!UICONTROL Segmente]-Dashboard zurückzukehren.
 
 ### [!UICONTROL Identitätsüberschneidung] {#identity-overlap}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_identityoverlap"
 >title="Identitätsüberschneidung"
->abstract="Dieses Widget zeigt die Überschneidung von Profilen in Ihrem Segment, die beide ausgewählte Identitäten enthalten. Die Kreise zeigen die relative Größe jeder Identität an. Die Anzahl der Profile, die beide Namespaces enthalten, wird durch die Überlappung der Kreise dargestellt."
+>abstract="Dieses Widget zeigt die Überschneidung von Profilen in Ihrem Segment ab, die beide ausgewählten Identitäten enthalten. Die Kreise zeigen die relative Größe jeder Identität an. Die Anzahl der Profile, die beide Namespaces enthalten, wird durch den Überschneidungsbereich der Kreise dargestellt."
 
-Die **[!UICONTROL Identitätsüberschneidung]** -Widget zeigt ein Venn-Diagramm oder ein Set-Diagramm an, das die Überschneidung von Profilen in Ihrem Segment mit mehreren Identitäten anzeigt.
+Das Widget **[!UICONTROL Identitätsüberschneidung]** zeigt ein Venn-Diagramm (oder Mengendiagramm) an, das die Überschneidung von Profilen in Ihrem Segment mit mehreren Identitäten anzeigt.
 
-Verwenden Sie die Dropdown-Menüs im Widget, um die Identitäten auszuwählen, die Sie vergleichen möchten. Die Kreise zeigen die relative Größe jeder ausgewählten Identität an, wobei die Anzahl der Profile, die beide Namespaces enthalten, durch die Größe der Überschneidung zwischen den Kreisen dargestellt wird.
+Verwenden Sie die Dropdown-Menüs im Widget, um die Identitäten auszuwählen, die Sie vergleichen möchten. Die Kreise zeigen die relative Größe jeder ausgewählten Identität an, wobei die Anzahl der Profile, die beide Namespaces enthalten, der Größe des Überschneidungsbereichs der Kreise entspricht.
 
-Wenn ein Kunde mit Ihrer Marke auf mehr als einem Kanal interagiert, werden diesem einzelnen Kunden mehrere Identitäten zugeordnet. Daher ist es wahrscheinlich, dass Ihr Unternehmen über mehrere Profile verfügt, die Fragmente aus mehr als einer Identität enthalten.
+Wenn ein Kunde mit Ihrer Marke über mehr als einen Kanal interagiert, werden diesem einzelnen Kunden mehrere Identitäten zugeordnet. Daher ist es wahrscheinlich, dass Ihre Organisation über mehrere Profile verfügt, die Fragmente aus mehr als einer Identität enthalten.
 
-Weitere Informationen zu Identitäten finden Sie unter [Dokumentation zu Adobe Experience Platform Identity Service](../../identity-service/home.md).
+Weitere Informationen zu Identitäten finden Sie in der [Dokumentation zu Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
-![Die Übersicht über das Dashboard &quot;Segmente&quot;mit dem Widget zur Identitätsüberschneidung wurde hervorgehoben.](../images/segments/identity-overlap.png)
+![Die Übersicht des Segmente-Dashboards mit dem hervorgehobenen Widget „Identitätsüberschneidung“.](../images/segments/identity-overlap.png)
 
 ### [!UICONTROL Profile nach Identität] {#profiles-by-identity}
 
@@ -200,24 +200,24 @@ Weitere Informationen zu Identitäten finden Sie unter [Dokumentation zu Adobe E
 >title="Profile nach Identität"
 >abstract="Dieses Widget zeigt die Aufschlüsselung der Identitäten für jedes zusammengeführte Profil in Ihrem ausgewählten Segment an."
 
-Die **[!UICONTROL Profile nach Identität]** Widget zeigt die Aufschlüsselung der Identitäten für jedes zusammengeführte Profil in Ihrem ausgewählten Segment an. Die Gesamtzahl der Profile nach Identität kann höher sein als die Gesamtzahl der Profile im Segment, da einem Profil mehrere Identitäten zugeordnet sein können. Das heißt, dass das Addieren der für jede Identität angezeigten Werte mehr als die gesamte Zielgruppengröße im Segment ausmacht, da bei der Interaktion eines Kunden mit Ihrer Marke auf mehr als einem Kanal mehrere Identitäten mit diesem einzelnen Kunden verknüpft werden können.
+Das Widget **[!UICONTROL Profile nach Identität]** zeigt die Aufschlüsselung der Identitäten für jedes zusammengeführte Profil in Ihrem ausgewählten Segment an. Die Gesamtzahl der Profile nach Identität kann höher sein als die Gesamtzahl der Profile im Segment, da einem Profil mehrere Identitäten zugeordnet sein können. Das heißt, dass die Summe der für jede Identität angezeigten Werte größer sein kann als die gesamte Zielgruppengröße im Segment, da bei der Interaktion eines Kunden mit Ihrer Marke über mehr als einen Kanal mehrere Identitäten mit diesem einzelnen Kunden verknüpft werden können.
 
-Auswählen **[!UICONTROL Untertitel]** , um das Dialogfeld mit den automatischen Beschriftungen zu öffnen.
+Wählen Sie **[!UICONTROL Beschriftungen]** aus, um den Dialog „Automatische Beschriftungen“ zu öffnen.
 
 ![Die Übersicht über das Dashboard &quot;Segmente&quot;mit der Option Profile nach Identitäts-Widget und Beschriftungen hervorgehoben.](../images/segments/profiles-by-identity.png)
 
-Ein maschinelles Lernmodell generiert automatisch Dateneinblicke, indem es die Gesamtverteilung und die Schlüsseldimensionen der Daten analysiert.
+Ein maschinelles Lernmodell generiert automatisch Dateneinblicke, indem es die Gesamtverteilung und die Schlüsselaspekte der Daten analysiert.
 
-Weitere Informationen zu Identitäten finden Sie unter [Dokumentation zu Adobe Experience Platform Identity Service](../../identity-service/home.md).
+Weitere Informationen zu Identitäten finden Sie in der [Dokumentation zu Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
 ### Geplante Aktivierungen {#scheduled-activations}
 
-Das [!UICONTROL Geplante Aktivierungen]-Widget bietet eine tabellarische Übersicht über die zuletzt aktivierten Ziele. Die Tabelle enthält die Zielplattform, den Namen Ihres Aktivierungsflusses zu diesem Ziel sowie das Start- und Enddatum der Aktivierung für das ausgewählte Segment. Wenn für die Aktivierung kein Enddatum angegeben wurde, wird dies als [!UICONTROL Laufend]. Das zu analysierende Segment wird oben auf der Seite aus dem Dropdown-Menü ausgewählt.
+Das Widget [!UICONTROL Geplante Aktivierungen] bietet eine tabellarische Übersicht über die zuletzt aktivierten Ziele. Die Tabelle enthält die Zielplattform, den Namen Ihres Aktivierungsflusses zu diesem Ziel sowie das Start- und Enddatum der Aktivierung für das ausgewählte Segment. Wenn für die Aktivierung kein Enddatum angegeben wurde, wird sie als [!UICONTROL Fortaufend] angezeigt. Das zu analysierende Segment wird oben auf der Seite aus dem Dropdown-Menü ausgewählt.
 
-Mit dem Widget können Sie auf einen Blick erkennen, wo und wann die Audience aktiviert wird, und doppelte oder unnötige Aktivierungen transparenter machen. Diese gesammelten Informationen zeigen auch, wo jegliche Aktivierungen ausgeschlossen wurden.
+Mit diesem Widget können Sie auf einen Blick erkennen, wo und wann die Zielgruppe aktiviert wird, und es macht doppelte oder unnötige Aktivierungen transparenter. Diese gesammelten Informationen zeigen auch, wo jegliche Aktivierungen ausgeschlossen wurden.
 
-![Das Widget Geplante Aktivierungen .](../images/segments/scheduled-activations.png)
+![Das Widget „Geplante Aktivierungen“.](../images/segments/scheduled-activations.png)
 
 ## Nächste Schritte
 
-Durch Befolgen dieses Dokuments sollten Sie jetzt in der Lage sein, das Segment-Dashboard zu finden und ein anzuzeigendes Segment auszuwählen. Sie sollten auch die Metriken verstehen, die in den verfügbaren Widgets angezeigt werden. Weitere Informationen zum Arbeiten mit Segmenten in der Experience Platform-Benutzeroberfläche finden Sie im Abschnitt [Handbuch zur Benutzeroberfläche des Segmentierungsdienstes](../../segmentation/ui/overview.md).
+Wenn Sie diesem Dokument gefolgt sind, sollten Sie jetzt in der Lage sein, das Segmente-Dashboard zu finden und ein Segment auszuwählen, das angezeigt werden soll. Sie sollten auch die Metriken verstehen, die in den verfügbaren Widgets angezeigt werden. Weitere Informationen zum Arbeiten mit Segmenten in der Experience Platform-Benutzeroberfläche finden Sie im [Handbuch zur Benutzeroberfläche des Segmentierungs-Services](../../segmentation/ui/overview.md).
