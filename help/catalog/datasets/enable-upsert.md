@@ -1,32 +1,32 @@
 ---
-keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; API; Datensatz aktivieren
-title: Datensatz für Profil-Updates mithilfe von APIs aktivieren
+keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;Datensatz aktivieren
+title: Aktivieren eines Datensatzes für Profilaktualisierungen mithilfe von APIs
 type: Tutorial
-description: In diesem Tutorial erfahren Sie, wie Sie mit Adobe Experience Platform-APIs einen Datensatz mit "upsert"-Funktionen aktivieren können, um Aktualisierungen an Echtzeit-Kundenprofildaten vorzunehmen.
+description: In diesem Tutorial erfahren Sie, wie Sie mit Adobe Experience Platform-APIs einen Datensatz mit „upsert“-Funktionen aktivieren können, um Aktualisierungen an Echtzeit-Kundenprofildaten vorzunehmen.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
 source-git-commit: 132407af947b97a1925799a1fb5e12caa2b0410c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1050'
-ht-degree: 20%
+ht-degree: 100%
 
 ---
 
-# Datensatz für Profilaktualisierungen mithilfe von APIs aktivieren
+# Aktivieren eines Datensatzes für Profilaktualisierungen mithilfe von APIs
 
-In diesem Tutorial wird die Aktivierung eines Datensatzes mit &quot;upsert&quot;-Funktionen beschrieben, um Aktualisierungen an Echtzeit-Kundenprofildaten vorzunehmen. Dies umfasst die Schritte zum Erstellen eines neuen Datensatzes und zum Konfigurieren eines vorhandenen Datensatzes.
+In diesem Tutorial wird die Aktivierung eines Datensatzes mit „upsert“-Funktionen beschrieben, um Aktualisierungen an Echtzeit-Kundenprofildaten vorzunehmen. Dazu gehören die Schritte zum Erstellen eines neuen Datensatzes und zum Konfigurieren eines vorhandenen Datensatzes.
 
 >[!NOTE]
 >
->Der aktualisierte Workflow funktioniert nur bei der Batch-Erfassung. Streaming-Erfassung ist **not** unterstützt.
+>Der Upsert-Workflow funktioniert nur für die Batch-Aufnahme. Die Streaming-Aufnahme wird **nicht** unterstützt.
 
 ## Erste Schritte
 
-Dieses Tutorial setzt Grundkenntnisse verschiedener Adobe Experience Platform-Dienste voraus, die mit der Verwaltung von profilaktivierten Datensätzen verbunden sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation zu diesen verwandten Themen [!DNL Platform] Dienste:
+Dieses Tutorial setzt Grundkenntnisse verschiedener Adobe Experience Platform-Services voraus, die mit der Verwaltung von profilaktivierten Datensätzen verbunden sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden [!DNL Platform]-Services:
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-- [[!DNL Catalog Service]](../../catalog/home.md): Eine RESTful-API, mit der Sie Datensätze erstellen und konfigurieren können für [!DNL Real-time Customer Profile] und [!DNL Identity Service].
+- [[!DNL Catalog Service]](../../catalog/home.md): Eine RESTful-API, mit der Sie Datensätze erstellen und für [!DNL Real-time Customer Profile] und [!DNL Identity Service] konfigurieren können.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Platform] organisiert werden.
-- [Batch-Erfassung](../../ingestion/batch-ingestion/overview.md): Mit der Batch-Aufnahme-API können Sie Daten als Batch-Dateien in Experience Platform erfassen.
+- [Batch-Aufnahme](../../ingestion/batch-ingestion/overview.md): Mit der Batch-Aufnahme-API können Sie Daten als Batch-Dateien in Experience Platform aufnehmen.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Platform-APIs erfolgreich aufrufen zu können.
 
@@ -42,19 +42,19 @@ Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierung
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Für alle Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zusätzliche `Content-Type` -Kopfzeile. Der richtige Wert für diese Kopfzeile wird bei Bedarf in den Beispielanfragen angezeigt.
+Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche `Content-Type`-Kopfzeile erforderlich. Der richtige Wert für diese Kopfzeile wird bei Bedarf in den Beispielanfragen angezeigt.
 
-Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Alle Anfragen an [!DNL Platform] APIs erfordern eine `x-sandbox-name` -Kopfzeile, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll. Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Platform]-APIs ist eine `x-sandbox-name`-Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll. Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 ## Erstellen eines Datensatzes, der für Profilaktualisierungen aktiviert ist
 
-Beim Erstellen eines neuen Datensatzes können Sie diesen Datensatz für Profil aktivieren und zum Zeitpunkt der Erstellung Aktualisierungsfunktionen aktivieren.
+Beim Erstellen eines neuen Datensatzes können Sie diesen Datensatz für das Profil aktivieren und zum Zeitpunkt der Erstellung Aktualisierungsfunktionen aktivieren.
 
 >[!NOTE]
 >
->Um einen neuen Datensatz mit aktiviertem Profil zu erstellen, müssen Sie die ID eines vorhandenen XDM-Schemas kennen, das für Profil aktiviert ist. Informationen zum Nachschlagen oder Erstellen eines Profilaktivierten Schemas finden Sie in der Anleitung zu [Erstellen eines Schemas mithilfe der Schema Registry-API](../../xdm/tutorials/create-schema-api.md).
+>Um einen neuen profilaktivierten Datensatz zu erstellen, müssen Sie die ID eines vorhandenen XDM-Schemas kennen, das für Profil aktiviert ist. Informationen zum Nachschlagen oder Erstellen eines profilaktivierten Schemas finden Sie im Tutorial zum [Erstellen eines Schemas mithilfe der Schemaregistrierungs-API](../../xdm/tutorials/create-schema-api.md).
 
-Um einen Datensatz zu erstellen, der für Profil und Updates aktiviert ist, verwenden Sie eine POST-Anfrage an die `/dataSets` -Endpunkt.
+Um einen Datensatz zu erstellen, der für Profil und Aktualisierungen aktiviert ist, verwenden Sie eine POST-Anfrage an den `/dataSets`-Endpunkt.
 
 **API-Format**
 
@@ -64,7 +64,7 @@ POST /dataSets
 
 **Anfrage**
 
-Indem Sie beide `unifiedIdentity` und `unifiedProfile` under `tags` im Anfrageinhalt wird der Datensatz für [!DNL Profile] bei der Erstellung. Innerhalb der `unifiedProfile` Array hinzufügen `isUpsert:true` fügt dem Datensatz die Möglichkeit hinzu, Aktualisierungen zu unterstützen.
+Indem Sie `unifiedIdentity` und `unifiedProfile` unter `tags` im Anfrageinhalt aufnehmen, wird der Datensatz bei der Erstellung für [!DNL Profile] aktiviert. Innerhalb des `unifiedProfile`-Arrays wird durch Hinzufügen von `isUpsert:true` zum Datensatz die Möglichkeit hinzugefügt, Aktualisierungen zu unterstützen.
 
 ```shell
 curl -X POST \
@@ -96,12 +96,12 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `schemaRef.id` | Die ID der [!DNL Profile]-aktiviertes Schema, auf dem der Datensatz basieren soll. |
-| `{TENANT_ID}` | Der Namespace innerhalb der [!DNL Schema Registry] enthält Ressourcen, die zu Ihrem Unternehmen gehören. Siehe [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) Abschnitt [!DNL Schema Registry] Entwicklerhandbuch für weitere Informationen. |
+| `schemaRef.id` | Die ID des [!DNL Profile]-aktivierten Schemas, auf dem der Datensatz basieren soll. |
+| `{TENANT_ID}` | Der Namespace innerhalb der [!DNL Schema Registry], der Ressourcen enthält, die zu Ihrer Organisation gehören. Weitere Informationen finden Sie im Abschnitt [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) des [!DNL Schema Registry]-Entwicklerhandbuchs. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort zeigt ein Array mit der Kennung des neu erstellten Datensatzes in der Form von `"@/dataSets/{DATASET_ID}"`.
+Eine erfolgreiche Antwort zeigt ein Array mit der ID des neu erstellten Datensatzes in der Form `"@/dataSets/{DATASET_ID}"`.
 
 ```json
 [
@@ -109,17 +109,17 @@ Eine erfolgreiche Antwort zeigt ein Array mit der Kennung des neu erstellten Dat
 ] 
 ```
 
-## Vorhandenen Datensatz konfigurieren {#configure-an-existing-dataset}
+## Konfigurieren eines vorhandenen Datensatzes {#configure-an-existing-dataset}
 
-Die folgenden Schritte beschreiben, wie Sie einen vorhandenen Datensatz mit aktiviertem Profil für die Aktualisierung (Aktualisierung) konfigurieren.
+Die folgenden Schritte beschreiben, wie Sie einen vorhandenen, für Profil aktivierten Datensatz für die Aktualisierung (upsert) konfigurieren.
 
 >[!NOTE]
 >
->Um einen vorhandenen Datensatz mit aktiviertem Profil für die Aktualisierung zu konfigurieren, müssen Sie zunächst den Datensatz für Profil deaktivieren und ihn dann neben der `isUpsert` -Tag. Wenn der vorhandene Datensatz nicht für Profil aktiviert ist, können Sie direkt mit den Schritten für [Aktivieren des Datensatzes für Profil und Hochladen](#enable-the-dataset). Wenn Sie sich nicht sicher sind, zeigen Ihnen die folgenden Schritte, wie Sie überprüfen können, ob der Datensatz bereits aktiviert ist.
+>Um einen vorhandenen profilaktivierten Datensatz für upsert zu konfigurieren, müssen Sie zunächst den Datensatz für Profil deaktivieren und ihn dann zusammen mit dem Tag `isUpsert` wieder aktivieren. Wenn der vorhandene Datensatz nicht für Profil aktiviert ist, können Sie direkt mit den Schritten für das [Aktivieren des Datensatzes für Profil und upsert](#enable-the-dataset) fortfahren. Wenn Sie sich nicht sicher sind, zeigen Ihnen die folgenden Schritte, wie Sie überprüfen können, ob der Datensatz bereits aktiviert ist.
 
-### Überprüfen Sie, ob der Datensatz für Profil aktiviert ist.
+### Überprüfen, ob der Datensatz für Profil aktiviert ist
 
-Verwenden der [!DNL Catalog] API können Sie einen vorhandenen Datensatz überprüfen, um festzustellen, ob er zur Verwendung in [!DNL Real-time Customer Profile]. Der folgende Aufruf ruft die Details eines Datensatzes nach Kennung ab.
+Mithilfe der [!DNL Catalog]-API können Sie einen vorhandenen Datensatz untersuchen, um festzustellen, ob er für die Verwendung in [!DNL Real-time Customer Profile] aktiviert ist. Der folgende Aufruf ruft die Details eines Datensatzes nach ID ab.
 
 **API-Format**
 
@@ -129,7 +129,7 @@ GET /dataSets/{DATASET_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{DATASET_ID}` | Die ID eines Datensatzes, den Sie überprüfen möchten. |
+| `{DATASET_ID}` | Die ID des Datensatzes, den Sie untersuchen möchten. |
 
 **Anfrage**
 
@@ -192,15 +192,15 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27
 }
 ```
 
-Unter dem `tags` -Eigenschaft, sehen Sie, dass `unifiedProfile` mit dem Wert vorhanden ist `enabled:true`. Daher [!DNL Real-time Customer Profile] für diesen Datensatz aktiviert ist.
+Unter der `tags`-Eigenschaft ist zu sehen, dass `unifiedProfile` mit dem Wert `enabled:true` vorliegt. Daher ist [!DNL Real-time Customer Profile] für diesen Datensatz aktiviert.
 
-### Datensatz für Profil deaktivieren
+### Deaktivieren des Datensatzes für Profil
 
-Um einen für Profile aktivierten Datensatz für Aktualisierungen zu konfigurieren, müssen Sie zunächst die `unifiedProfile` und `unifiedIdentity` Tags und aktivieren Sie sie dann neben dem `isUpsert` -Tag. Dies geschieht mit zwei PATCH-Anfragen, einmal zur Deaktivierung und einmal zur erneuten Aktivierung.
+Um einen Profil-aktivierten Datensatz für Aktualisierungen zu konfigurieren, müssen Sie zunächst die Tags `unifiedProfile` und `unifiedIdentity` deaktivieren und sie dann zusammen mit dem Tag `isUpsert` erneut aktivieren. Dies erfolgt über zwei PATCH-Anfragen: die eine zur Deaktivierung und die andere zur erneuten Aktivierung.
 
 >[!WARNING]
 >
->Daten, die während der Deaktivierung in den Datensatz aufgenommen werden, werden nicht in den Profilspeicher aufgenommen. Sie sollten die Aufnahme von Daten in den Datensatz vermeiden, bis er für Profil wieder aktiviert wurde.
+>Daten, die in einen deaktivierten Datensatz aufgenommen werden, werden nicht in den Profilspeicher aufgenommen. Sie sollten die Aufnahme von Daten in den Datensatz vermeiden, bis er erneut für Profil aktiviert wurde.
 
 **API-Format**
 
@@ -214,7 +214,7 @@ PATCH /dataSets/{DATASET_ID}
 
 **Anfrage**
 
-Der erste PATCH-Anforderungstext enthält eine `path` nach `unifiedProfile` und `path` nach `unifiedIdentity`, legen Sie die `value` nach `enabled:false` für beide Pfade verwenden, um die Tags zu deaktivieren.
+Der erste PATCH-Anfragetext enthält einen `path`-Verweis zu `unifiedProfile` und einen `path`-Verweis zu `unifiedIdentity`. Wird `value` für beide Pfade auf `enabled:false` festgelegt, werden die Tags deaktiviert.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
@@ -239,7 +239,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a2
 
 **Antwort**
 
-Bei erfolgreicher PATCH-Anfrage werden der HTTP-Status-Code 200 (OK) und ein Array mit der Kennung des aktualisierten Datensatzes zurückgegeben. Diese ID sollte mit der in der PATCH-Anfrage gesendeten ID übereinstimmen. Die `unifiedProfile` und `unifiedIdentity` -Tags wurden nun deaktiviert.
+Bei einer erfolgreichen PATCH-Anfrage wird der HTTP-Status 200 (OK) sowie ein Array mit der ID des gelöschten Datensatzes zurückgegeben. Diese ID sollte mit der in der PATCH-Anfrage gesendeten ID übereinstimmen. Die Tags `unifiedProfile` und `unifiedIdentity` sind nun deaktiviert.
 
 ```json
 [
@@ -247,13 +247,13 @@ Bei erfolgreicher PATCH-Anfrage werden der HTTP-Status-Code 200 (OK) und ein Arr
 ]
 ```
 
-### Datensatz für Profil aktivieren und aktualisieren {#enable-the-dataset}
+### Aktivieren des Datensatzes für Profil und upsert {#enable-the-dataset}
 
 Ein vorhandener Datensatz kann mit einer einzigen PATCH-Anfrage für Profil- und Attributaktualisierungen aktiviert werden.
 
 >[!IMPORTANT]
 >
->Stellen Sie beim Aktivieren Ihres Datensatzes für Profil sicher, dass das Schema, mit dem der Datensatz verknüpft ist, **auch** Profil-fähig. Wenn das Schema nicht für Profil aktiviert ist, wird der Datensatz **not** werden in der Platform-Benutzeroberfläche als Profil-fähig angezeigt.
+>Stellen Sie beim Aktivieren Ihres Datensatzes für Profil sicher, dass das Schema, mit dem der Datensatz verknüpft ist, **ebenfalls** Profil-aktiviert ist. Wenn das Schema nicht Profil-aktiviert ist, wird der Datensatz in der Platform-Benutzeroberfläche **nicht** als Profil-aktiviert angezeigt.
 
 **API-Format**
 
@@ -267,7 +267,7 @@ PATCH /dataSets/{DATASET_ID}
 
 **Anfrage**
 
-Der Anfrageinhalt enthält eine `path` nach `unifiedProfile` festlegen, `value` , um `enabled` und `isUpsert` Tags, die beide auf `true`und `path` nach `unifiedIdentity` festlegen, `value` , um `enabled` Tag auf `true`.
+Der Anfragetext enthält einen `path`-Verweis zu `unifiedProfile`. `value` umfasst dabei die Tags `enabled` und `isUpsert`, die beide auf `true` eingestellt sind. Der Anfragetext enthält auch einen `path`-Verweis zu `unifiedIdentity`, wobei `value` das Tag `enabled` mit der Einstellung `true` umfasst.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
@@ -297,7 +297,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a2
 
 **Antwort**
 
-Bei erfolgreicher PATCH-Anfrage werden der HTTP-Status-Code 200 (OK) und ein Array mit der Kennung des aktualisierten Datensatzes zurückgegeben. Diese ID sollte mit der in der PATCH-Anfrage gesendeten ID übereinstimmen. Die `unifiedProfile` Tag und `unifiedIdentity` -Tag wurden nun für Attributaktualisierungen aktiviert und konfiguriert.
+Bei einer erfolgreichen PATCH-Anfrage wird der HTTP-Status 200 (OK) sowie ein Array mit der ID des gelöschten Datensatzes zurückgegeben. Diese ID sollte mit der in der PATCH-Anfrage gesendeten ID übereinstimmen. Die Tags `unifiedProfile` und `unifiedIdentity` sind nun für Attributaktualisierungen aktiviert und konfiguriert.
 
 ```json
 [
@@ -307,4 +307,4 @@ Bei erfolgreicher PATCH-Anfrage werden der HTTP-Status-Code 200 (OK) und ein Arr
 
 ## Nächste Schritte
 
-Ihr Profil und Ihr hochaktivierter Datensatz können jetzt von Batch-Aufnahme-Workflows verwendet werden, um Aktualisierungen an Profildaten vorzunehmen. Um mehr über die Aufnahme von Daten in Adobe Experience Platform zu erfahren, lesen Sie zunächst das [Datenerfassung - Übersicht](../../ingestion/home.md).
+Ihr Profil- und upsert-aktivierter Datensatz kann nun von Batch-Aufnahme-Workflows verwendet werden, um Aktualisierungen an Profildaten vorzunehmen. Um mehr über die Aufnahme von Daten in Adobe Experience Platform zu erfahren, lesen Sie bitte zunächst die [Übersicht zur Datenaufnahme](../../ingestion/home.md).
