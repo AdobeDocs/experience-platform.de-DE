@@ -1,23 +1,24 @@
 ---
 description: Erfahren Sie, wie Sie beim Aktivieren von Daten für dateibasierte Ziele Dateiformatierungsoptionen konfigurieren
-title: (Beta) Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren
-source-git-commit: 23a7a1997e05d2bde26de5b73a23ea051bf2b3bb
-workflow-type: tm+mt
+title: (Beta) Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele
+exl-id: f59b1952-e317-40ba-81d1-35535e132a72
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+workflow-type: ht
 source-wordcount: '565'
-ht-degree: 20%
+ht-degree: 100%
 
 ---
 
-# (Beta) Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren
+# (Beta) Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele
 
 >[!IMPORTANT]
 >
->Die **[!UICONTROL Dateiformatierungsoptionen]** -Funktion in Adobe Experience Platform ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern.
->Wenden Sie sich an Ihre Adobe-Support-Mitarbeitenden, um Zugriff auf diese Funktion zu erhalten.
+>Die Funktionalität **[!UICONTROL Dateiformatierungsoptionen]** in Adobe Experience Platform ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalitäten können sich ändern.
+>Wenden Sie sich an den Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion zu erhalten.
 > 
 >Die in diesem Dokument beschriebenen Dateiformatierungsoptionen sind derzeit nur für CSV-Dateien verfügbar.
 
-Die Option zur Konfiguration verschiedener Dateiformatierungsoptionen für die exportierten Dateien ist verfügbar, wenn Sie [connect](/help/destinations/ui/connect-destination.md) in ein dateibasiertes Ziel, z. B. [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md#connect)oder [SFTP](/help/destinations/catalog/cloud-storage/sftp.md#connect).
+Die Option zur Konfiguration verschiedener Dateiformatierungsoptionen für die exportierten Dateien ist verfügbar, wenn Sie eine [Verbindung](/help/destinations/ui/connect-destination.md) mit einem dateibasierten Ziel herstellen, z. B. [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md#connect) oder [SFTP](/help/destinations/catalog/cloud-storage/sftp.md#connect).
 
 Mithilfe der Experience Platform-Benutzeroberfläche können Sie verschiedene Dateiformatierungsoptionen für exportierte Dateien konfigurieren. Sie können verschiedene Eigenschaften der exportierten Dateien an die Anforderungen des Dateiempfangssystems auf Ihrer Seite anpassen, um die aus Experience Platform empfangenen Dateien optimal zu lesen und zu interpretieren.
 
@@ -26,15 +27,15 @@ Mithilfe der Experience Platform-Benutzeroberfläche können Sie verschiedene Da
 * To configure file formatting options for exported files by using the Experience Platform Flow Service API, read [Flow Service API - Destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/).
 -->
 
-## Dateiformatierung {#file-configuration}
+## Konfiguration der Dateiformatierung {#file-configuration}
 
 >[!IMPORTANT]
 >
->Für das Ziel, mit dem Sie eine Verbindung herstellen, stehen möglicherweise nicht alle diese Optionen zur Verfügung. Es ist Sache des Ziel-Entwicklers, zu bestimmen, welche Dateiformatierungsoptionen am Ziel unterstützt werden sollen. Der Ziel-Entwickler kann bestimmen, welche Optionen beim Herstellen einer Verbindung zum Ziel verfügbar sind. Die erforderlichen Optionen sind in der Experience Platform-Benutzeroberfläche mit einem Sternchen gekennzeichnet.
+>Für das Ziel, mit dem Sie eine Verbindung herstellen, stehen möglicherweise nicht alle diese Optionen zur Verfügung. Der Zielentwickler kann bestimmen, welche Dateiformatierungsoptionen am Ziel unterstützt werden sollen. Der Zielentwickler kann bestimmen, welche Optionen beim Herstellen einer Verbindung mit dem Ziel verfügbar sind. Erforderliche Optionen sind in der Experience Platform-Benutzeroberfläche mit einem Sternchen gekennzeichnet.
 
-Um die Dateiformatierungsoptionen anzuzeigen, starten Sie die [Verbindung zum Ziel herstellen](/help/destinations/ui/connect-destination.md) Workflow und Auswahl von Segmenten als **Dateityp**. In diesem Abschnitt werden die für den exportierten `CSV` Dateien.
+Um die Dateiformatierungsoptionen anzuzeigen, starten Sie den Workflow [Mit Ziel verbinden](/help/destinations/ui/connect-destination.md) und wählen Sie Segmente als **Dateityp** aus. In diesem Abschnitt werden die Dateiformatierungseinstellungen beschrieben, die für exportierte `CSV`-Dateien verfügbar sind.
 
-![Bild mit einigen der verfügbaren Dateiformatierungsoptionen.](/help/destinations/assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
+![Abbildung mit einigen der verfügbaren Dateiformatierungsoptionen.](/help/destinations/assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
 ### Trennzeichen
 
@@ -52,46 +53,46 @@ Legt ein einzelnes Zeichen fest, das zum Maskieren von Anführungszeichen verwen
 
 Legt die Zeichenfolgendarstellung eines leeren Werts fest.
 
-### Nullwertausgabe
+### Ausgabe von Nullwerten
 
 Legt die Zeichenfolgendarstellung eines Nullwerts in den exportierten Dateien fest.
 
-Beispielausgabe mit **[!UICONTROL null]** selected: `male,NULL,TestLastName`
-Beispielausgabe mit **&quot;&quot;** selected: `male,"",TestLastName`
-Beispielausgabe mit **[!UICONTROL Leere Zeichenfolge]** selected: `male,,TestLastName`
+Beispielausgabe mit **[!UICONTROL null]** ausgewählt: `male,NULL,TestLastName`
+Beispielausgabe mit **&quot;&quot;** ausgewählt: `male,"",TestLastName`
+Beispielausgabe mit **[!UICONTROL Leere Zeichenfolge]** ausgewählt: `male,,TestLastName`
 
 ### Komprimierungsformat
 
-Legt fest, welcher Komprimierungscodec beim Speichern von Daten in einer Datei verwendet werden soll. Unterstützt werden GZIP und KEINE.
+Legt den Komprimierungs-Codec zum Speichern von Daten in einer Datei fest. Unterstützte Optionen sind GZIP und KEINE.
 
 ### Codierung
 
-*Nicht im UI-Screenshot angezeigt*. Gibt die Kodierung (Zeichensatz) gespeicherter CSV-Dateien an. Die Optionen sind UTF-8 oder UTF-16.
+*Nicht im Screenshot der Benutzeroberfläche dargestellt*. Gibt die Codierung (Zeichensatz) gespeicherter CSV-Dateien an. Die Optionen sind UTF-8 oder UTF-16.
 
-### Char to Escape Anführungszeichen
+### Escape-Zeichen für Anführungszeichen
 
-*Nicht im UI-Screenshot angezeigt*. Eine Markierung, die angibt, ob Werte, die Anführungszeichen enthalten, immer in Anführungszeichen gesetzt werden sollen.
+*Nicht im Screenshot der Benutzeroberfläche dargestellt*. Eine Markierung, das angibt, ob Werte, die Anführungszeichen enthalten, immer in Anführungszeichen gesetzt werden sollen.
 
 Standardmäßig werden alle Werte mit Escape-Zeichen versehen, die ein Anführungszeichen enthalten.
 
-### Zeilenabstand
+### Zeilentrennzeichen
 
-*Nicht im UI-Screenshot angezeigt*. Definiert das Zeilentrennzeichen, das zum Schreiben verwendet werden soll. Die maximale Länge beträgt 1 Zeichen.
+*Nicht im Screenshot der Benutzeroberfläche dargestellt*. Definiert das Zeilentrennzeichen, das zum Schreiben verwendet werden soll. Die maximale Länge beträgt 1 Zeichen.
 
-### Leere Leerzeichen ignorieren
+### Vorangestellte Leerzeichen ignorieren
 
-*Nicht im UI-Screenshot angezeigt*. Eine Markierung, die angibt, ob vorangestellte Leerzeichen aus den zu exportierenden Werten übersprungen werden sollen.
+*Nicht im Screenshot der Benutzeroberfläche dargestellt*. Eine Markierung, die angibt, ob vorangestellte Leerzeichen in den zu exportierenden Werten ignoriert werden sollen.
 
-Beispielausgabe mit **[!UICONTROL True]** selected: `"male","John","TestLastName"`
-Beispielausgabe mit **[!UICONTROL False]** selected: `" male","John","TestLastName"`
+Beispielausgabe mit **[!UICONTROL True]** ausgewählt: `"male","John","TestLastName"`
+Beispielausgabe mit **[!UICONTROL False]** ausgewählt: `" male","John","TestLastName"`
 
-### Leerzeichen am Ende ignorieren
+### Nachfolgende Leerzeichen ignorieren
 
-Nicht im Screenshot der Benutzeroberfläche angezeigt. Eine Markierung, die angibt, ob nachfolgende Leerzeichen aus den zu exportierenden Werten übersprungen werden sollen.
+Nicht im Screenshot der Benutzeroberfläche dargestellt. Eine Markierung, die angibt, ob nachfolgende Leerzeichen in den zu exportierenden Werten ignoriert werden sollen.
 
-Beispielausgabe mit **[!UICONTROL True]** selected: `"male","John","TestLastName"`
-Beispielausgabe mit **[!UICONTROL False]** selected: `"male ","John","TestLastName"`
+Beispielausgabe mit **[!UICONTROL True]** ausgewählt: `"male","John","TestLastName"`
+Beispielausgabe mit **[!UICONTROL False]** ausgewählt: `"male ","John","TestLastName"`
 
 ### Nächste Schritte {#next-steps}
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie Dateiexportoptionen für Ihre CSV-Datendateien konfigurieren können, um den Dateiinhalt an die Anforderungen Ihres nachgelagerten Dateiempfangssystems anzupassen. Als Nächstes können Sie die [Tutorial zur Aktivierung dateibasierter Ziele](/help/destinations/ui/activate-batch-profile-destinations.md) , um mit dem Export von Dateien an Ihren bevorzugten Cloud-Speicher zu beginnen.
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie Dateiexportoptionen für Ihre CSV-Datendateien konfigurieren können, um Dateiinhalte an die Anforderungen Ihres nachgelagerten Dateiempfangssystems anzupassen. Als Nächstes können Sie das [Tutorial zur Aktivierung dateibasierter Ziele](/help/destinations/ui/activate-batch-profile-destinations.md) lesen, um mit dem Export von Dateien in Ihren bevorzugten Cloud-Speicher zu beginnen.
