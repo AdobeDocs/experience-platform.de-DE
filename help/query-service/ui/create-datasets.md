@@ -1,56 +1,56 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Abfragedienst; Query Service; Datensätze generieren; Datensatz generieren; Datensatz erstellen; Datensatz erstellen
+keywords: Experience Platform;Startseite;beliebte Themen;Abfragedienst;Abfrage-Service;Datensätze generieren;Datensatz generieren;Datensatz erstellen
 solution: Experience Platform
-title: Generieren von Datensätzen aus Ergebnissen in Query Service
+title: Generieren von Datensätzen aus Ergebnissen im Abfrage-Service
 topic-legacy: queries
 type: Tutorial
-description: Adobe Experience Platform Query Service ermöglicht die Erstellung von Datensätzen über die Benutzeroberfläche. Nachdem ein Datensatz erstellt wurde, kann er wie jeder andere Datensatz im Data Lake aufgerufen und für eine Vielzahl von Anwendungsfällen verwendet werden.
+description: Der Abfrage-Service von Adobe Experience Platform ermöglicht die Erstellung von Datensätzen über die Benutzeroberfläche. Nachdem ein Datensatz erstellt wurde, kann er wie jeder andere Datensatz im Data Lake aufgerufen und für eine Vielzahl von Anwendungsfällen verwendet werden.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
 source-git-commit: 5ea5d48119eb3d7c1e66233f3b2629c1049d0784
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '493'
-ht-degree: 11%
+ht-degree: 100%
 
 ---
 
-# Generieren von Datensätzen aus Ergebnissen in [!DNL Query Service]
+# Generieren von Datensätzen aus Ergebnissen im [!DNL Query Service]
 
-[!DNL Query Service] ermöglicht Ihnen die Verwendung von Abfragen zum Generieren von Datensätzen im [!DNL Data Lake]. Diese Datensätze können dann als Eingabe für weitere Abfragen oder in anderen Diensten wie [!DNL Data Science Workspace], Echtzeit-Kundenprofil oder [!DNL Analysis Workspace].
+[!DNL Query Service] ermöglicht Ihnen die Verwendung von Abfragen zum Generieren von Datensätzen im [!DNL Data Lake]. Diese Datensätze können dann als Eingabe für weitere Abfragen oder in anderen Diensten wie [!DNL Data Science Workspace], Echtzeit-Kundenprofil oder [!DNL Analysis Workspace] verwendet werden.
 
 ## Generieren von Datensätzen über die Benutzeroberfläche von Adobe Experience Platform
 
 Gehen Sie wie folgt vor, um Datensätze über die Adobe Experience Platform-Benutzeroberfläche zu erstellen:
 
-1. Erstellen Sie eine Abfrage mit einem verbundenen Client und validieren Sie die Ausgabe. So erfahren Sie, wie Sie Abfragen mit [!DNL Query Editor], lesen Sie die [!DNL Query Editor] UI-Handbuch [Erstellen von Abfragen](./user-guide.md#writing-queries).
+1. Schreiben Sie Ihre Abfrage mit einem verbundenen Client und validieren Sie die Ausgabe. Um zu erfahren, wie Sie Abfragen mit dem [!DNL Query Editor] schreiben können, lesen Sie im Handbuch zur [!DNL Query Editor]-Benutzeroberfläche [über das Erstellen von Abfragen](./user-guide.md#writing-queries).
 
-2. Navigieren Sie in der Platform-Benutzeroberfläche zu **[!UICONTROL Abfragen]** gefolgt von **[!UICONTROL Vorlagen]** und wählen Sie die erstellte Abfrage aus. Weitere Informationen zum Anzeigen von Abfragen, die für Ihr Unternehmen in der Platform-Benutzeroberfläche erstellt und gespeichert wurden, finden Sie im Abschnitt [[!DNL Query Service] Übersicht](./overview.md#browse).
+2. Navigieren Sie in der Platform-Benutzeroberfläche zu **[!UICONTROL Abfragen]** und wählen Sie auf der Registerkarte **[!UICONTROL Vorlagen]** die erstellte Abfrage aus. Weitere Informationen zum Anzeigen von Abfragen, die für Ihre Organisation in der Platform-Benutzeroberfläche erstellt und gespeichert wurden, finden Sie in der [[!DNL Query Service] Übersicht](./overview.md#browse).
 
-3. Wählen Sie im Bereich &quot;Query details&quot;die Option **[!UICONTROL Ausgabedatensatz]**.
+3. Wählen Sie im Bedienfeld „Abfragedetails“ die Option **[!UICONTROL Ausgabedatensatz]** aus.
 
-   ![Auf der Registerkarte &quot;Vorlagen des Arbeitsbereichs &quot;Abfragen&quot;wurde die Option Ausgabedatensatz auswählen hervorgehoben.](../images/ui/create-datasets/output-dataset.png)
+   ![Die Registerkarte „Vorlagen“ des Arbeitsbereichs „Abfragen“ mit hervorgehobener Option zum Auswählen eines Ausgabedatensatzes](../images/ui/create-datasets/output-dataset.png)
 
-4. Geben Sie im angezeigten Dialogfeld einen Datensatznamen ein, dem Ihre LDAP-ID vorangestellt wird. Der Datensatzname muss nicht eindeutig oder SQL-sicher sein. Beachten Sie, dass der Tabellenname für Ihren Datensatz basierend auf dem hier erstellten Datensatznamen generiert wird.
+4. Geben Sie im angezeigten Dialogfeld einen Datensatznamen ein, dem Ihre LDAP-ID vorangestellt ist. Der Datensatzname muss nicht eindeutig oder SQL-sicher sein. Beachten Sie, dass der Tabellenname für Ihren Datensatz basierend auf dem hier erstellten Datensatznamen generiert wird.
 
-5. Geben Sie als Nächstes eine Beschreibung für Ihren Datensatz in die [!UICONTROL Beschreibung] Feld und wählen Sie **[!UICONTROL Abfrage ausführen]**.
+5. Geben Sie als Nächstes eine Beschreibung für Ihren Datensatz in das Feld [!UICONTROL Beschreibung] ein und klicken Sie auf **[!UICONTROL Abfrage ausführen]**.
 
-   ![Das Dialogfeld Ausgabedatensatz mit den Datensatzdetails und hervorgehobenen Ausführungsabfragen](../images/ui/create-datasets/run-query.png)
+   ![Das Dialogfeld „Ausgabedatensatz“ mit Hervorhebung der Datensatzdetails und der Ausführungsabfrage](../images/ui/create-datasets/run-query.png)
 
-6. Nachdem die Abfrage ausgeführt wurde, navigieren Sie zu **[!UICONTROL Datensätze]** , um den von Ihnen erstellten Datensatz anzuzeigen. Weitere Informationen zum Ausführen allgemeiner Aktionen beim Arbeiten mit Datensätzen in der Platform-Benutzeroberfläche finden Sie in der [Handbuch zur Benutzeroberfläche von Datensätzen](../../catalog/datasets/user-guide.md).
+6. Nachdem die Abfrage ausgeführt wurde, navigieren Sie zu **[!UICONTROL Datensätze]**, um den von Ihnen erstellten Datensatz anzuzeigen. Weitere Informationen zum Ausführen allgemeiner Aktionen beim Arbeiten mit Datensätzen in der Platform-Benutzeroberfläche finden Sie im [Handbuch zur Benutzeroberfläche von Datensätzen](../../catalog/datasets/user-guide.md).
 
-Nachdem ein Datensatz erstellt wurde, kann er wie jeder andere Datensatz im [!DNL Data Lake] und für eine Vielzahl von Anwendungsfällen verwendet werden.
+Nachdem ein Datensatz erstellt wurde, kann er wie jeder andere Datensatz im [!DNL Data Lake] aufgerufen und für eine Vielzahl von Anwendungsfällen verwendet werden.
 
 >[!NOTE]
 >
->In einer Live-Implementierung müssen Sie nach der Erstellung des Datensatzes die Data Governance-Beschriftungen angeben. Weitere Informationen zum Anwenden von Datennutzungsbezeichnungen auf Datensätze finden Sie unter [Datennutzungsbezeichnungen - Übersicht](../../data-governance/labels/overview.md).
+>In einer Live-Implementierung müssen Sie nach der Erstellung des Datensatzes die Data Governance-Beschriftungen angeben. Weitere Informationen zum Anwenden von Datennutzungskennzeichnungen auf Datensätze finden Sie in der [Übersicht über Datennutzungskennzeichnungen](../../data-governance/labels/overview.md).
 
-## Erstellen von Datensätzen mit einer vordefinierten [!DNL Experience Data Model] schema
+## Erstellen von Datensätzen mit einem vordefinierten [!DNL Experience Data Model]-Schema
 
-Verwenden Sie die SQL-Syntax, um einen Datensatz mit einer vordefinierten [!DNL Experience Data Model] (XDM)-Schema. Weitere Informationen zur Syntax, die von [!DNL Query Service], lesen Sie bitte die [SQL-Syntaxhandbuch](../sql/syntax.md#create-table-as-select).
+Verwenden Sie die SQL-Syntax, um einen Datensatz mit einem vordefinierten [!DNL Experience Data Model]-Schema (XDM) zu erstellen. Um weitere Informationen zur Syntax zu erhalten, die vom [!DNL Query Service] unterstützt wird, lesen Sie bitte das [Handbuch zur SQL-Syntax](../sql/syntax.md#create-table-as-select).
 
 ## Ausgeben von Datensätzen
 
-Mit dieser Funktionalität erstellte Datensätze werden mit einem Ad-hoc-Schema generiert, das der in der SQL-Anweisung definierten Struktur der Ausgabedaten entspricht. Einige nachgelagerte Dienste erfordern Datensätze mit bestimmten XDM-Schemas. Überprüfen Sie die Datenformatierungsanforderungen für nachgelagerte Dienste, bevor Sie Ihre Abfragen schreiben.
+Mit dieser Funktionalität erstellte Datensätze werden mit einem Ad-hoc-Schema generiert, das der in der SQL-Anweisung definierten Struktur der Ausgabedaten entspricht. Einige nachgelagerte Services erfordern Datensätze mit bestimmten XDM-Schemata. Überprüfen Sie die Datenformatierungsanforderungen für nachgelagerte Services, bevor Sie Ihre Abfragen schreiben.
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Dokuments sollten Sie jetzt wissen, wie Sie [!DNL Query Service] , um Datensätze über die Platform-Benutzeroberfläche zu generieren. Weitere Informationen zum Zugreifen auf, Schreiben und Ausführen von Abfragen in der Platform-Benutzeroberfläche finden Sie unter [[!DNL Query Service] Übersicht über die Benutzeroberfläche](./overview.md).
+Nach dem Lesen dieses Dokuments sollten Sie jetzt wissen, wie Sie den [!DNL Query Service] verwenden, um Datensätze über die Platform-Benutzeroberfläche zu generieren. Weitere Informationen zum Zugreifen auf, Schreiben und Ausführen von Abfragen in der Platform-Benutzeroberfläche finden Sie in der [[!DNL Query Service] Benutzeroberflächen-Übersicht](./overview.md).
