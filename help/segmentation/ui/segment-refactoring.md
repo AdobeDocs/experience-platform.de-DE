@@ -5,10 +5,10 @@ title: Anleitung zur überarbeiteten Segmentierungszeitbegrenzung
 topic-legacy: ui guide
 description: Segment Builder bietet eine umfangreiche Arbeitsfläche, über die Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen.
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '261'
-ht-degree: 13%
+source-wordcount: '297'
+ht-degree: 11%
 
 ---
 
@@ -20,12 +20,12 @@ Vor der Version vom Oktober 2020 bezogen sich alle Zeitbeschränkungen auf Regel
 
 Zuvor konnten an ein einzelnes Ereignis mehrere Zeitbegrenzungsregeln angehängt werden.
 
-![](../images/ui/segment-refactoring/former-time-constraint.png)
+![Der frühere Stil von Zeitbeschränkungen wird im Segment Builder hervorgehoben.](../images/ui/segment-refactoring/former-time-constraint.png)
 
 Wie Sie sehen können, weist dieses Segment auf der Regelebene zwei Begrenzungen auf: Eins für &quot;[!UICONTROL Heute]&quot; und der andere für &quot;[!UICONTROL Gestern]&quot;.
 
 Das vorherige Segment entspricht dem folgenden Segment - beide Zeitbeschränkungen auf Ereignisebene wurden über einen UND -Operator verbunden. Die erste Zeitbeschränkung auf Ereignisebene verweist auf ein Klickereignis, dessen Name &quot;Training&quot;entspricht und heute stattfindet, während die zweite Zeitbegrenzung auf Ereignisebene auf ein Klickereignis verweist, dessen Name &quot;Haustiere&quot;entspricht und gestern stattgefunden hat.
 
-![](../images/ui/segment-refactoring/time-constraint-1.png) ![](../images/ui/segment-refactoring/time-constraint-2.png)
+![Der neue Stil von Zeitbeschränkungen wird im Segment Builder hervorgehoben.](../images/ui/segment-refactoring/time-constraint-1.png) ![Der neue Stil von Zeitbeschränkungen wird im Segment Builder hervorgehoben.](../images/ui/segment-refactoring/time-constraint-2.png)
 
 Diese Umgestaltung von Zeitbeschränkungen wirkt sich auch auf Zeitbeschränkungen aus, die über einen ODER-Operator verbunden werden.

@@ -5,9 +5,9 @@ title: Benutzerhandbuch für Segment Builder
 topic-legacy: ui guide
 description: Der Segmentaufbau in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 1d70aee1bd225268b8f2a2d1dc24d446bb4ce633
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '3082'
+source-wordcount: '3101'
 ht-degree: 28%
 
 ---
@@ -55,7 +55,7 @@ Sie können dann einfach per Drag &amp; Drop [!DNL ExperienceEvents] und &quot;[
 
 Standardmäßig werden nur ausgefüllte Schemafelder aus Ihrem Datenspeicher angezeigt. Dazu gehören &quot;[!UICONTROL Ereignistypen]&quot;. Wenn die[!UICONTROL Ereignistypen]&quot;nicht sichtbar ist oder Sie nur &quot;[!UICONTROL Alle]&quot; als &quot;[!UICONTROL Ereignistyp]&quot;, wählen Sie die **Zahnradsymbol** neben **[!UICONTROL Felder]**, wählen Sie **[!UICONTROL Gesamtes XDM-Schema anzeigen]** under **[!UICONTROL Verfügbare Felder]**. Wählen Sie die **Zahnradsymbol** erneut zu **[!UICONTROL Felder]** und Sie sollten jetzt mehrere[!UICONTROL Ereignistypen]und Schemafeldern, unabhängig davon, ob sie Daten enthalten oder nicht.
 
-![](../images/ui/segment-builder/show-populated.png)
+![Optionsfelder, mit denen Sie auswählen können, ob nur Felder mit Daten angezeigt werden sollen oder ob alle XDM-Felder angezeigt werden sollen, werden hervorgehoben.](../images/ui/segment-builder/show-populated.png)
 
 #### Adobe Analytics Report Suite-Datensätze
 
@@ -73,10 +73,10 @@ Angenommen, Sie hatten zwei Report Suites mit den folgenden Variablen:
 | ----- | --------------------- | --------------------- |
 | eVar1 | Referrer-Domain | Angemeldet J/N |
 | eVar2 | Page Name | Mitglied-Treuekennung |
-| eVar3 | URL | Seitenname |
+| eVar3 | URL | Page Name |
 | eVar4 | Suchbegriffe | Produktname |
 | event1 | Klicks | Page Views |
-| event2 | Seitenansichten | Zusatz zum Warenkorb |
+| event2 | Page Views | Zusatz zum Warenkorb |
 | event3 | Zusatz zum Warenkorb | Checkouts |
 | event4 | Käufe | Käufe |
 
@@ -105,7 +105,7 @@ Wenn Sie mit dem Mauszeiger über das ⓘ neben einer Zielgruppe fahren, können
 
 ![Ein Bild, das zeigt, wie die Ordnerhierarchie für Zielgruppen funktioniert.](../images/ui/segment-builder/audience-folder-structure.png)
 
-Sie können auch über die Suchleiste, die [Suchsyntax von Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Wenn Sie auf dem Tab **[!UICONTROL Audiences]** einen Ordner der obersten Ebene auswählen, wird die Suchleiste angezeigt, sodass Sie in diesem Ordner suchen können. Suchergebnisse beginnen sich erst dann zu füllen, wenn ganze Wörter eingegeben werden. Um beispielsweise eine Zielgruppe mit dem Namen `Online Shoppers`, beginnen Sie in der Suchleiste mit der Eingabe von &quot;Online&quot;. Nach vollständiger Eingabe des Worts „Online“ erscheinen Suchergebnisse, die das Wort „Online“ enthalten.
+Sie können auch über die Suchleiste, die [Suchsyntax von Lucene](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax). Wenn Sie auf dem Tab **[!UICONTROL Audiences]** einen Ordner der obersten Ebene auswählen, wird die Suchleiste angezeigt, sodass Sie in diesem Ordner suchen können. Suchergebnisse beginnen sich erst dann zu füllen, wenn ganze Wörter eingegeben werden. Um beispielsweise eine Zielgruppe mit dem Namen `Online Shoppers`, beginnen Sie in der Suchleiste mit der Eingabe von &quot;Online&quot;. Nach vollständiger Eingabe des Worts „Online“ erscheinen Suchergebnisse, die das Wort „Online“ enthalten.
 
 ## Arbeitsfläche des Regel-Builders {#rule-builder-canvas}
 

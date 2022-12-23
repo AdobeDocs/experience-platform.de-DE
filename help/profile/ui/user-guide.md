@@ -4,9 +4,9 @@ title: Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils
 topic-legacy: guide
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Sicht Ihrer einzelnen Kunden und fasst Daten aus mehreren Kanälen (einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten) zusammen. Dieses Dokument dient als Leitfaden für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: d2790ddab74f989ebb5ca522ce44323033c53911
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '1776'
+source-wordcount: '1951'
 ht-degree: 10%
 
 ---
@@ -29,7 +29,7 @@ Wählen Sie in der Benutzeroberfläche &quot;Experience Platform&quot;die Option
 
 >[!NOTE]
 >
->Wenn Ihr Unternehmen neu bei Platform ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt wurden, wird die [!UICONTROL Profile] Das Dashboard ist nicht sichtbar. Stattdessen wird die [!UICONTROL Übersicht] enthält Links und Dokumentation, die Ihnen bei den ersten Schritten mit dem Echtzeit-Kundenprofil helfen.
+>Wenn Ihr Unternehmen neu bei Platform ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt wurden, wird die [!UICONTROL Profile] Das Dashboard ist nicht sichtbar. Stattdessen werden auf der Registerkarte [!UICONTROL Übersicht] Links und Dokumentationen angezeigt, um Ihnen bei den ersten Schritten mit dem Echtzeit-Kundenprofil zu helfen.
 
 ### Profil-Dashboard {#profile-dashboard}
 
@@ -37,7 +37,7 @@ Im Profil-Dashboard werden Schlüsselmetriken im Zusammenhang mit den Profildate
 
 Weitere Informationen finden Sie unter [Profil-Dashboard-Handbuch](../../dashboards/guides/profiles.md).
 
-![](../../dashboards/images/profiles/dashboard-overview.png)
+![Das Profil-Dashboard wird angezeigt.](../../dashboards/images/profiles/dashboard-overview.png)
 
 ## [!UICONTROL Durchsuchen] Registerkartenmetriken
 
@@ -51,7 +51,7 @@ Auf der rechten Seite des **[!UICONTROL Durchsuchen]** Registerkarte ist [Profil
 
 Zusätzlich zu diesen Metriken bietet dieser Abschnitt ein Datum und eine Uhrzeit der letzten Aktualisierung, die zeigen, wann die Metriken zuletzt ausgewertet wurden.
 
-![](../images/user-guide/browse-metrics.png)
+![Die Profilmetriken werden angezeigt und hervorgehoben.](../images/user-guide/browse-metrics.png)
 
 ### Anzahl der Profile {#profile-count}
 
@@ -75,7 +75,7 @@ Die **[!UICONTROL Profile nach Namespace]** zeigt die Gesamtanzahl und Aufschlü
 
 Im **[!UICONTROL Durchsuchen]** -Tab können Sie Beispielprofile mithilfe einer Zusammenführungsrichtlinie anzeigen oder mithilfe eines Identitäts-Namespace und -Werts nach bestimmten Profilen suchen.
 
-![](../images/user-guide/none-selected.png)
+![Die Profile, die zur Organisation gehören, werden angezeigt.](../images/user-guide/none-selected.png)
 
 ### Durchsuchen nach [!UICONTROL Zusammenführungsrichtlinie]
 
@@ -85,36 +85,35 @@ Die **[!UICONTROL Durchsuchen]** ist standardmäßig auf die standardmäßige Zu
 >
 >Wenn keine Zusammenführungsrichtlinie ausgewählt ist, verwenden Sie die Auswahlschaltfläche neben dem **[!UICONTROL Zusammenführungsrichtlinie]** -Feld, um das Auswahldialogfeld zu öffnen.
 
-![](../images/user-guide/browse-by-merge-policy.png)
+![Die Auswahl der Zusammenführungsrichtlinie ist hervorgehoben.](../images/user-guide/browse-by-merge-policy.png)
 
 So wählen Sie eine Zusammenführungsrichtlinie aus der **[!UICONTROL Zusammenführungsrichtlinie auswählen]** wählen Sie das Optionsfeld neben dem Richtliniennamen aus und verwenden Sie dann **[!UICONTROL Auswählen]** , um zur [!UICONTROL Durchsuchen] Registerkarte. Sie können dann **[!UICONTROL Ansicht]** , um die Beispielprofile zu aktualisieren und eine Auswahl von Profilen mit der neuen Zusammenführungsrichtlinie anzuzeigen.
 
-![](../images/user-guide/select-merge-policy.png)
+![Es wird ein Dialogfeld angezeigt, in dem Sie die Zusammenführungsrichtlinie auswählen können, nach der gefiltert werden soll.](../images/user-guide/select-merge-policy.png)
 
 Die angezeigten Profile stellen ein Beispiel von bis zu 20 Profilen aus dem Profilspeicher Ihres Unternehmens dar, nachdem die ausgewählte Zusammenführungsrichtlinie angewendet wurde. Die Beispielprofile für die ausgewählte Zusammenführungsrichtlinie werden aktualisiert, wenn dem Profilspeicher Ihres Unternehmens neue Daten hinzugefügt werden.
 
 Um die Details eines der Beispielprofile anzuzeigen, wählen Sie die **[!UICONTROL Profil-ID]**. Weitere Informationen finden Sie im Abschnitt weiter unten in diesem Handbuch unter [Anzeigen von Profildetails](#profile-detail).
 
-![](../images/user-guide/sample-profiles.png)
+![Beispielprofile, die mit der Zusammenführungsrichtlinie übereinstimmen, werden angezeigt.](../images/user-guide/sample-profiles.png)
 
 Weitere Informationen zu Zusammenführungsrichtlinien und ihrer Rolle in Platform finden Sie unter [Übersicht über Zusammenführungsrichtlinien](../merge-policies/overview.md).
-
 
 ### Durchsuchen nach [!UICONTROL Identität] {#browse-identity}
 
 Im **[!UICONTROL Durchsuchen]** -Registerkarte verwenden, können Sie einen Identitäts-Namespace verwenden, um ein bestimmtes Profil nach einem Identitätswert zu suchen. Für das Durchsuchen nach einer Identität müssen Sie eine Zusammenführungsrichtlinie, einen Identitäts-Namespace und einen Identitätswert angeben.
 
-![](../images/user-guide/browse-by-merge-policy.png)
+![Die Auswahl der Zusammenführungsrichtlinien ist hervorgehoben.](../images/user-guide/browse-by-merge-policy.png)
 
 Verwenden Sie bei Bedarf die **[!UICONTROL Zusammenführungsrichtlinie]** Auswahl zum Öffnen **[!UICONTROL Zusammenführungsrichtlinie auswählen]** und wählen Sie die Zusammenführungsrichtlinie aus, die Sie verwenden möchten.
 
-![](../images/user-guide/select-merge-policy.png)
+![Es wird ein Dialogfeld angezeigt, in dem Sie die Zusammenführungsrichtlinie auswählen können, nach der gefiltert werden soll.](../images/user-guide/select-merge-policy.png)
 
 Verwenden Sie dann die **[!UICONTROL Identitäts-Namespace]** Auswahl zum Öffnen **[!UICONTROL Identitäts-Namespace auswählen]** und wählen Sie den Namespace aus, nach dem Sie suchen möchten. Wenn Ihr Unternehmen über viele Namespaces verfügt, können Sie über die Suchleiste im Dialogfeld mit der Eingabe des Namens eines Namespace beginnen.
 
 Sie können einen Namespace auswählen, um weitere Details anzuzeigen, oder das Optionsfeld auswählen, um einen Namespace auszuwählen. Sie können dann **[!UICONTROL Auswählen]** , um fortzufahren.
 
-![](../images/user-guide/select-identity-namespace.png)
+![Es wird ein Dialogfeld angezeigt, in dem Sie den Identitäts-Namespace auswählen können, nach dem gefiltert werden soll.](../images/user-guide/select-identity-namespace.png)
 
 Nach Auswahl einer [!UICONTROL Identitäts-Namespace] und zurück zum [!UICONTROL Durchsuchen] Registerkarte können Sie eine **[!UICONTROL Identitätswert]** sich auf den ausgewählten Namespace beziehen.
 
@@ -122,11 +121,11 @@ Nach Auswahl einer [!UICONTROL Identitäts-Namespace] und zurück zum [!UICONTRO
 >
 >Dieser Wert ist spezifisch für ein einzelnes Kundenprofil und muss ein gültiger Eintrag für den angegebenen Namespace sein. Beispielsweise würde die Auswahl des Identitäts-Namespace &quot;E-Mail&quot;einen Identitätswert in Form einer gültigen E-Mail-Adresse erfordern.
 
-![](../images/user-guide/filter-identity-value.png)
+![Der Identitätswert, nach dem Sie filtern möchten, ist hervorgehoben.](../images/user-guide/filter-identity-value.png)
 
 Nachdem ein Wert eingegeben wurde, wählen Sie **[!UICONTROL Ansicht]** und ein einzelnes Profil, das dem Wert entspricht, zurückgegeben wird. Wählen Sie die **[!UICONTROL Profil-ID]** um die Profildetails anzuzeigen.
 
-![](../images/user-guide/filtered-identity-value.png)
+![Das Profil, das dem Identitätswert entspricht, wird hervorgehoben.](../images/user-guide/filtered-identity-value.png)
 
 ## Profildetails anzeigen {#profile-detail}
 
@@ -134,7 +133,7 @@ Nach Auswahl einer **[!UICONTROL Profil-ID]**, die **[!UICONTROL Detail]** -Regi
 
 Die angezeigten Standardfelder können auch auf Organisationsebene geändert werden, um die bevorzugten Profilattribute anzuzeigen. Weitere Informationen zum Anpassen dieser Felder, einschließlich einer schrittweisen Anleitung zum Hinzufügen und Entfernen von Attributen und zum Ändern der Größe von Dashboard-Bedienfeldern, finden Sie in der [Handbuch zur Profildetailanpassung](profile-customization.md).
 
-![](../images/user-guide/profile-detail.png)
+![Die Registerkarte Details wird hervorgehoben. Die Profildetails werden angezeigt.](../images/user-guide/profile-detail.png)
 
 Sie können zusätzliche Informationen zum individuellen Kundenprofil anzeigen, indem Sie auf eine andere der verfügbaren Registerkarten klicken. Diese Registerkarten umfassen Attribute, Ereignisse und die Registerkarte Segmentmitgliedschaft , auf der die Segmente angezeigt werden, für die das Profil derzeit qualifiziert ist.
 
@@ -144,15 +143,15 @@ Die **[!UICONTROL Attribute]** bietet eine Listenansicht, die alle Attribute zus
 
 Diese Attribute können auch als JSON-Objekt angezeigt werden, indem Sie **[!UICONTROL JSON anzeigen]**. Dies ist hilfreich für alle Benutzer, die besser verstehen möchten, wie die Profilattribute in Platform erfasst werden.
 
-![](../images/user-guide/attributes.png)
+![Die Registerkarte Attribute ist hervorgehoben. Die Profilattribute werden angezeigt.](../images/user-guide/attributes.png)
 
-### Registerkarte &quot;Ereignisse&quot;
+### Registerkarte „Ereignisse“
 
 Die **[!UICONTROL Veranstaltungen]** tab enthält Daten aus den 100 neuesten ExperienceEvents, die mit dem Kunden verknüpft sind. Diese Daten können E-Mail-Öffnungen, Warenkorbaktivitäten und Seitenansichten umfassen. Auswählen **[!UICONTROL Alle anzeigen]** für jedes einzelne Ereignis stellt zusätzliche Felder und Werte bereit, die als Teil des Ereignisses erfasst werden.
 
 Ereignisse können auch als JSON-Objekt angezeigt werden, indem Sie **[!UICONTROL JSON anzeigen]**. Dies ist hilfreich, um zu verstehen, wie Ereignisse in Platform erfasst werden.
 
-![](../images/user-guide/events.png)
+![Die Registerkarte Ereignisse wird hervorgehoben. Die Profilereignisse werden angezeigt.](../images/user-guide/events.png)
 
 ### Registerkarte Segmentmitgliedschaft
 
@@ -160,7 +159,7 @@ Die **[!UICONTROL Segmentmitgliedschaft]** zeigt eine Liste mit dem Namen und de
 
 Weitere Informationen zur Segmentierung in Experience Platform finden Sie im Abschnitt [Dokumentation zu Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
 
-![](../images/user-guide/segment-membership.png)
+![Die Registerkarte Segmentmitgliedschaft wird hervorgehoben. Die Details zur Mitgliedschaft in Profilsegmenten werden angezeigt.](../images/user-guide/segment-membership.png)
 
 ## Zusammenführungsrichtlinien
 
@@ -168,7 +167,7 @@ Aus der Hauptrolle **[!UICONTROL Profile]** auswählen, wählen Sie die **[!UICO
 
 Weiterführende Informationen zu Zusammenführungsrichtlinien finden Sie unter [Zusammenführungsrichtlinien – Übersicht](../merge-policies/overview.md).
 
-![](../images/user-guide/merge-policies.png)
+![Die Registerkarte &quot;Zusammenführungsrichtlinien&quot;ist hervorgehoben. Zusammenführungsrichtlinien, die zur Organisation gehören, werden angezeigt.](../images/user-guide/merge-policies.png)
 
 ## Vereinigungsschema {#union-schema}
 
@@ -176,7 +175,7 @@ Aus der Hauptrolle **[!UICONTROL Profile]** auswählen, wählen Sie die **[!UICO
 
 Weitere Informationen zu Vereinigungsschemas finden Sie im [UI-Handbuch für Vereinigungsschema](union-schema.md).
 
-![](../images/user-guide/union-schema.png)
+![Die Registerkarte &quot;Vereinigungsschema&quot;wird hervorgehoben. Es werden Vereinigungsschemas der Organisation angezeigt.](../images/user-guide/union-schema.png)
 
 ## Nächste Schritte
 

@@ -5,10 +5,10 @@ title: Handbuch zur Benutzeroberfläche für die Streaming-Segmentierung
 topic-legacy: ui guide
 description: Mit der Streaming-Segmentierung in Adobe Experience Platform können Sie die Segmentierung nahezu in Echtzeit durchführen und sich dabei auf die Relevanz der Daten konzentrieren. Im Rahmen der Streaming-Segmentierung erfolgt jetzt eine Segmentqualifizierung, wenn Daten in Platform aufgenommen werden. So wird die Notwendigkeit verringert, Segmentierungsaufträge zu planen und auszuführen. Mit dieser Funktion können die meisten Segmentregeln jetzt ausgewertet werden, während Daten an Platform übermittelt werden. Das bedeutet, dass die Segmentzugehörigkeit auch ohne Ausführung geplanter Segmentierungsaufträge auf dem neuesten Stand gehalten wird.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '1371'
-ht-degree: 97%
+source-wordcount: '1495'
+ht-degree: 89%
 
 ---
 
@@ -36,14 +36,14 @@ Eine Abfrage wird automatisch mithilfe der Streaming-Segmentierung ausgewertet, 
 
 | Abfragetyp | Details | Beispiel |
 | ---------- | ------- | ------- |
-| Einzelnes Ereignis | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung verweist. | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
-| Einzelnes Ereignis innerhalb eines relativen Zeitfensters | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis verweist. | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
-| Einzelnes Ereignis mit einem Zeitfenster | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis mit einem Zeitfenster verweist. | ![](../images/ui/streaming-segmentation/historic-time-window.png) |
+| Einzelnes Ereignis | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung verweist. | ![Ein Beispiel für ein einzelnes Ereignis wird angezeigt.](../images/ui/streaming-segmentation/incoming-hit.png) |
+| Einzelnes Ereignis innerhalb eines relativen Zeitfensters | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis verweist. | ![Ein Beispiel für ein einzelnes Ereignis innerhalb eines relativen Zeitfensters wird angezeigt.](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| Einzelnes Ereignis mit einem Zeitfenster | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis mit einem Zeitfenster verweist. | ![Ein Beispiel für ein einzelnes Ereignis mit einem Zeitfenster wird angezeigt.](../images/ui/streaming-segmentation/historic-time-window.png) |
 | Nur Profil | Jede Segmentdefinition, die nur auf ein Profilattribut verweist. |  |
-| Einzelnes Ereignis mit einem Profilattribut | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung und ein oder mehrere Profilattribute verweist. **Hinweis:** Die Abfrage wird sofort ausgewertet, wenn das Ereignis eintritt. Die Integration eines Profilereignisses erfolgt jedoch erst nach 24 Stunden. | ![](../images/ui/streaming-segmentation/profile-hit.png) |
-| Einzelnes Ereignis mit einem Profilattribut innerhalb eines relativen Zeitfensters | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis und ein oder mehrere Profilattribute verweist. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
-| Segment von Segmenten | Jede Segmentdefinition, die ein oder mehrere Batch- oder Streaming-Segmente enthält. **Hinweis**: Wenn ein Segment von Segmenten verwendet wird, erfolgt **alle 24 Stunden** eine Profildisqualifizierung. | ![](../images/ui/streaming-segmentation/two-batches.png) |
-| Mehrere Ereignisse mit einem Profilattribut | Jede Segmentdefinition, die **innerhalb der letzten 24 Stunden** auf mehrere Ereignisse verweist und (optional) ein oder mehrere Profilattribute hat. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
+| Einzelnes Ereignis mit einem Profilattribut | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung und ein oder mehrere Profilattribute verweist. **Hinweis:** Die Abfrage wird sofort ausgewertet, wenn das Ereignis eintritt. Die Integration eines Profilereignisses erfolgt jedoch erst nach 24 Stunden. | ![Ein Beispiel für ein einzelnes Ereignis mit einem Profilattribut wird angezeigt.](../images/ui/streaming-segmentation/profile-hit.png) |
+| Einzelnes Ereignis mit einem Profilattribut innerhalb eines relativen Zeitfensters | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis und ein oder mehrere Profilattribute verweist. | ![Ein Beispiel für ein einzelnes Ereignis mit einem Profilattribut in einem relativen Zeitfenster wird angezeigt.](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| Segment von Segmenten | Jede Segmentdefinition, die ein oder mehrere Batch- oder Streaming-Segmente enthält. **Hinweis**: Wenn ein Segment von Segmenten verwendet wird, erfolgt **alle 24 Stunden** eine Profildisqualifizierung. | ![Ein Beispiel für ein Segment von Segmenten wird angezeigt.](../images/ui/streaming-segmentation/two-batches.png) |
+| Mehrere Ereignisse mit einem Profilattribut | Jede Segmentdefinition, die **innerhalb der letzten 24 Stunden** auf mehrere Ereignisse verweist und (optional) ein oder mehrere Profilattribute hat. | ![Ein Beispiel für mehrere Ereignisse mit einem Profilattribut wird angezeigt.](../images/ui/streaming-segmentation/event-history-success.png) |
 
 Eine Segmentdefinition wird für die Streaming-Segmentierung in den folgenden Szenarien **nicht** aktiviert:
 
@@ -67,7 +67,7 @@ Darüber hinaus erfolgt die Aufhebung der Segmentqualifikation, ähnlich wie die
 
 Nachdem Sie ein für Streaming aktiviertes Segment erstellt haben, können Sie Details zu diesem Segment anzeigen.
 
-![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
+![Die Seite mit den Segmentdetails wird angezeigt.](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
 Insbesondere wird die Metrik **[!UICONTROL Gesamtzahl an Qualifizierten]** angezeigt, die die Gesamtzahl qualifizierter Zielgruppen basierend auf Batch- und Streaming-Auswertungen für dieses Segment umfasst.
 
@@ -79,11 +79,11 @@ Darunter befindet sich ein Liniendiagramm, das die Anzahl der neuen Zielgruppen 
 >
 >Weitere Informationen zu diesen Status finden Sie in der Statustabelle in der [Segmentierungsübersicht](./overview.md#browse).
 
-![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
+![Die Karte Profile im Zeitverlauf wird hervorgehoben und zeigt ein Liniendiagramm der Profile im Zeitverlauf an.](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
 Weitere Informationen zur letzten Segmentauswertung finden Sie, indem Sie die Informationsblase neben **[!UICONTROL Gesamtzahl der Qualifizierten]** anklicken.
 
-![](../images/ui/streaming-segmentation/info-bubble.png)
+![Die Informationsblase für die insgesamt qualifizierten Profile wurde ausgewählt. Dadurch werden Informationen zur letzten Segmentbewertungszeit angezeigt.](../images/ui/streaming-segmentation/info-bubble.png)
 
 Weitere Informationen zu Segmentdefinitionen finden Sie im vorherigen Abschnitt unter [Details zur Segmentdefinition](#segment-details).
 

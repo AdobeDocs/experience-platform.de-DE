@@ -5,10 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: In der Benutzeroberfläche von Adobe Experience Platform können Sie einfach jedes Vereinigungsschema innerhalb Ihres Unternehmens anzeigen und die Felder, Identitäten, Beziehungen und beitragenden Schemas für eine bestimmte Klasse in der Vorschau anzeigen. In diesem Handbuch finden Sie ausführliche Informationen zum Anzeigen und Erkunden von Vereinigungsschemas mithilfe der Platform-Benutzeroberfläche.
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '1044'
-ht-degree: 6%
+source-wordcount: '1199'
+ht-degree: 5%
 
 ---
 
@@ -36,7 +36,7 @@ Das Arbeiten mit Vereinigungsschemas erfordert ein tiefes Verständnis der XDM-S
 
 Um in der Platform-Benutzeroberfläche zu Vereinigungsschemas zu navigieren, wählen Sie **[!UICONTROL Profile]** Wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Vereinigungsschema]** Registerkarte. Die [!UICONTROL Vereinigungsschema] wird geöffnet, um das Vereinigungsschema für die aktuell ausgewählte Klasse anzuzeigen.
 
-![](../images/union-schema/union-schema-landing.png)
+![Die Seite Vereinigungsschema wird angezeigt, wobei die Registerkarte Profil und Vereinigungsschema hervorgehoben ist.](../images/union-schema/landing.png)
 
 ## Auswählen einer Klasse
 
@@ -44,45 +44,45 @@ Um das Vereinigungsschema für eine bestimmte XDM-Klasse anzuzeigen, wählen Sie
 
 Nachdem eine Klasse ausgewählt wurde, wird das angezeigte Schema aktualisiert, um das Vereinigungsschema für die ausgewählte Klasse widerzuspiegeln. Sie können beispielsweise **[!UICONTROL XDM Individual Profile]** , um das Vereinigungsschema für diese Klasse anzuzeigen.
 
-![](../images/union-schema/union-schema-class.png)
+![Eine Dropdown-Liste mit den Klassen des Vereinigungsschemas wird hervorgehoben.](../images/union-schema/class.png)
 
 ## Vereinigungsschemas durchsuchen
 
 Sie können das Vereinigungsschema erkunden, indem Sie nach oben und unten scrollen, um die gesamte Schemastruktur anzuzeigen, und indem Sie eine rechte Winkelklammer (`>`), um verschachtelte Felder zu erweitern.
 
-![](../images/union-schema/union-schema-explore.png)
+![Ein Satz verschachtelter Felder im Vereinigungsschema wird erweitert.](../images/union-schema/explore.png)
 
 Wählen Sie ein beliebiges Feld aus, um dessen Details anzuzeigen, einschließlich Anzeigename, Datentyp, Beschreibung, Pfad, Erstellungsdatum und Datum der letzten Änderung. Sie können auch eine Liste der beitragenden Schemata anzeigen, die das ausgewählte Feld enthalten.
 
-![](../images/union-schema/union-schema-explore-field.png)
+![Ein Vereinigungsschemafeld wird hervorgehoben. Details zum hervorgehobenen Feld werden auf der rechten Seitenleiste angezeigt.](../images/union-schema/explore-field.png)
 
 Wenn Sie den Namen eines beitragenden Schemas auswählen, werden die Namen der Datensätze angezeigt, die sich auf dieses Schema beziehen und Daten in das ausgewählte Feld aufnehmen. Jeder Datensatzname wird als Link angezeigt. Wenn Sie einen Datensatznamen auswählen, wird die Registerkarte &quot;Aktivität&quot;für diesen Datensatz in einem neuen Fenster geöffnet.
 
 Weitere Informationen zu Datensätzen, einschließlich Anzeigen der Datensatzaktivität und Anzeigen der Vorschau von Datensatzdaten in der Benutzeroberfläche finden Sie unter [Benutzerhandbuch zu Datensätzen](../../catalog/datasets/user-guide.md).
 
-![](../images/union-schema/union-schema-field-datasets.png)
+![Die Liste der mit dem Schema verknüpften Datensätze wird hervorgehoben.](../images/union-schema/datasets.png)
 
 ## Beitragsschemata anzeigen
 
 Durch Auswahl von **[!UICONTROL Alle beitragenden Schemata]** um die Liste der Schemas zu erweitern. Je nach ausgewählter Klasse und der Anzahl der Schemas, die Ihr Unternehmen in Platform erstellt hat, kann es sich hierbei um eine Kurzliste mit einem einzelnen Schema oder einer langen Liste mit vielen Schemas handeln.
 
-![](../images/union-schema/union-schema-contributing-schemas.png)
+![Die Liste der Schemas, die zum Vereinigungsschema beitragen, wird hervorgehoben.](../images/union-schema/contributing-schemas.png)
 
 Wenn Sie den Namen eines bestimmten Schemas auswählen, werden die Felder im Vereinigungsschema hervorgehoben, die Teil des ausgewählten Schemas sind. Nachdem ein Schema ausgewählt wurde, wird das Vereinigungsschema grau mit schwarzen Balken dargestellt, die die Felder angeben, die Teil des beitragenden Schemas sind.
 
-![](../images/union-schema/union-schema-select-schema.png)
+![Das ausgewählte Beitragsschema wird hervorgehoben. Die Felder, die Teil des Beitragsschemas sind, bleiben schwarz, während die Felder, die nicht Teil des beitragenden Schemas sind, grau dargestellt werden.](../images/union-schema/select-schema.png)
 
 ## Identitäten anzeigen
 
 Über die Benutzeroberfläche können Sie eine Liste der Identitäten anzeigen, die im Vereinigungsschema enthalten sind, indem Sie **[!UICONTROL Identitäten]** , um die Liste zu erweitern.
 
-![](../images/union-schema/union-schema-identities.png)
+![Die Identitäten, die zum Vereinigungsschema gehören, werden hervorgehoben.](../images/union-schema/identities.png)
 
 Wenn Sie eine individuelle Identität aus der Liste auswählen, wird das angezeigte Schema bei Bedarf automatisch aktualisiert, um das Identitätsfeld anzuzeigen. Dies kann die Erweiterung mehrerer Felder umfassen, wenn das Identitätsfeld verschachtelt ist.
 
 Das Identitätsfeld wird im Vereinigungsschema hervorgehoben und die Details der Identität werden auf der rechten Seite des Bildschirms angezeigt. Die Details enthalten eine Liste der beitragenden Schemas, die das Identitätsfeld enthalten. Sie können einen Drilldown durchführen, um Links zu den mit diesem Schema verknüpften Datensätzen zu finden, die Daten in das ausgewählte Identitätsfeld aufnehmen.
 
-![](../images/union-schema/union-schema-select-identity.png)
+![Die ausgewählte Identität wird hervorgehoben. Details zur ausgewählten Identität werden auf der rechten Seitenleiste angezeigt.](../images/union-schema/select-identity.png)
 
 ## Beziehungen anzeigen
 
@@ -92,11 +92,11 @@ Wenn für die ausgewählte Klasse Beziehungen hergestellt wurden, wählen Sie **
 
 Weitere Informationen zu Schemabeziehungen, einschließlich ihrer Definition über die Benutzeroberfläche, finden Sie unter [Dieses Dokument zu Schemabeziehungen](../../xdm/tutorials/relationship-ui.md).
 
-![](../images/union-schema/union-schema-relationships.png)
+![Die Beziehungen, die zum Vereinigungsschema gehören, werden hervorgehoben.](../images/union-schema/relationships.png)
 
 Wenn Sie ein Beziehungsfeld aus der Liste auswählen, wird das angezeigte Schema bei Bedarf aktualisiert, um das hervorgehobene Beziehungsfeld anzuzeigen. Dies kann die Erweiterung mehrerer Felder umfassen, wenn das Beziehungsfeld verschachtelt ist.
 
-![](../images/union-schema/union-schema-select-relationship.png)
+![Die ausgewählte Beziehung wird hervorgehoben. Das entsprechende Feld für die Beziehung wird ebenfalls hervorgehoben.](../images/union-schema/select-relationship.png)
 
 ## Nächste Schritte
 

@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform verwendet ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet. Dieses Dokument liefert standardmäßige Verwendungs- und Quotenbegrenzungen zur Hilfe bei der Modellierung Ihrer Profildaten, sodass eine optimale Systemleistung gewährleistet ist.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 67ed3e5a71231d9c243ca31693d2db70492bdb43
-workflow-type: ht
-source-wordcount: '1905'
-ht-degree: 100%
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+workflow-type: tm+mt
+source-wordcount: '1929'
+ht-degree: 98%
 
 ---
 
@@ -128,11 +128,11 @@ Das [!DNL Profile]-Datenspeichermodell besteht aus zwei Kernentitätstypen:
 
    Zeitunabhängige Attribute, auch „Datensatzdaten “genannt, werden mithilfe von [!DNL XDM Individual Profile] modelliert, während die auch als „Ereignisdaten“ bezeichneten Zeitreihendaten mit [!DNL XDM ExperienceEvent] modelliert werden. Wenn Datensatz- und Zeitreihendaten in Adobe Experience Platform aufgenommen werden, dient dies als Trigger für [!DNL Real-time Customer Profile], um mit der Aufnahme von Daten zu beginnen, die für diese Verwendung aktiviert wurden. Je mehr Interaktionen und Details erfasst werden, desto zuverlässiger werden die einzelnen Profile.
 
-   ![](images/guardrails/profile-entity.png)
+   ![Eine Infografik, in der die Unterschiede zwischen Datensatzdaten und Zeitreihendaten erläutert werden.](images/guardrails/profile-entity.png)
 
 * **Dimensionsentität:** Während der Profildatenspeicher, in dem Profildaten verwaltet werden, kein relativer Speicher ist, ermöglicht das Profil die Integration mit kleinen Dimensionsentitäten, um Segmente auf vereinfachte und intuitive Weise zu erstellen. Diese Integration wird als [Segmentierung mehrerer Entitäten](../segmentation/multi-entity-segmentation.md) bezeichnet. Ihr Unternehmen kann auch XDM-Klassen definieren, um abgesehen von Einzelpersonen auch andere Dinge zu beschreiben, z. B. Geschäfte, Produkte oder Eigenschaften. Diese Nicht-[!DNL XDM Individual Profile]-Schemas werden als „Dimensionsentitäten“ bezeichnet und enthalten keine Zeitreihendaten. Dimensionsentitäten stellen Suchdaten bereit, die Segmentdefinitionen mit mehreren Entitäten unterstützen und vereinfachen. Sie müssen klein genug sein, damit die Segmentierungsmaschine den gesamten Datensatz in den Speicher laden kann, um eine optimale Verarbeitung zu gewährleisten (schnelle Punktsuche).
 
-   ![](images/guardrails/profile-and-dimension-entities.png)
+   ![Eine Infografik, die anzeigt, dass eine Profilentität aus Dimensionentitäten besteht.](images/guardrails/profile-and-dimension-entities.png)
 
 ### Profilfragmente
 

@@ -5,10 +5,10 @@ title: Handbuch zur Benutzeroberfläche des Segmentierungsdienstes
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche zum Erstellen und Verwalten von Segmentdefinitionen.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: d2790ddab74f989ebb5ca522ce44323033c53911
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '2397'
-ht-degree: 15%
+source-wordcount: '2647'
+ht-degree: 18%
 
 ---
 
@@ -35,15 +35,15 @@ Wählen Sie in der Benutzeroberfläche &quot;Experience Platform&quot;die Option
 
 >[!NOTE]
 >
->Wenn Ihr Unternehmen neu bei Platform ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt wurden, wird die [!UICONTROL Segmente] Das Dashboard ist nicht sichtbar. Stattdessen wird die [!UICONTROL Übersicht] enthält Links und Dokumentation, die Ihnen bei den ersten Schritten mit Segmenten helfen.
+>Wenn Ihre Organisation Platform erst seit kurzem nutzt und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt hat, ist das [!UICONTROL Segmente]-Dashboard nicht sichtbar. Stattdessen wird die [!UICONTROL Übersicht] enthält Links und Dokumentation, die Ihnen bei den ersten Schritten mit Segmenten helfen.
 
-### [!UICONTROL Segment-Dashboard] {#segments-dashboard}
+### [!UICONTROL Segmente-Dashboard] {#segments-dashboard}
 
 Die **[!UICONTROL Segmente]** Im Dashboard werden Schlüsselmetriken im Zusammenhang mit den Segmentdaten Ihres Unternehmens beschrieben.
 
 Weitere Informationen finden Sie unter [Segment-Dashboard-Handbuch](../../dashboards/guides/segments.md).
 
-![](../../dashboards/images/segments/dashboard-overview.png)
+![Das Segment-Dashboard wird angezeigt. Es werden verschiedene Widgets angezeigt, darunter die Zielgruppengröße, Profile nach Identität, Identitätsüberlagerung und der Trend zur Änderung der Zielgruppengröße.](../../dashboards/images/segments/dashboard-overview.png)
 
 ## Durchsuchen {#browse}
 
@@ -60,15 +60,15 @@ Weitere Informationen finden Sie unter [Segment-Dashboard-Handbuch](../../dashbo
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
 >title="Alle Segmente zur Planung hinzufügen"
->abstract="Aktivieren Sie diese Option, um alle Batch-Auswertungssegmente in das tägliche geplante Update um 15:30 Uhr UTC einzuschließen. Deaktivieren Sie alle Segmente aus der geplanten Aktualisierung."
+>abstract="Aktivieren Sie diese Option, um alle Batch-Bewertungssegmente in die tägliche geplante Aktualisierung einzubeziehen. Deaktivieren Sie alle Segmente aus der geplanten Aktualisierung."
 
 Wählen Sie die **[!UICONTROL Durchsuchen]** um eine Liste aller Segmentdefinitionen für Ihre Organisation anzuzeigen.
 
-![](../images/ui/overview/segment-browse-all.png)
+![Der Bildschirm zum Durchsuchen von Segmenten wird angezeigt. Eine Liste aller Segmente, die zur Organisation gehören, wird angezeigt.](../images/ui/overview/segment-browse-all.png)
 
 Diese Ansicht listet Informationen zur Segmentdefinition auf, einschließlich der Anzahl der Profile, des Erstellungsdatums und des Datums der letzten Änderung.
 
-Sie können dieser Anzeige zusätzliche Felder hinzufügen, indem Sie BILD auswählen. Zu diesen zusätzlichen Feldern gehören Aufschlüsselung, Abwanderung, Auswertungsmethode und Auftrags-ID.
+Sie können dieser Anzeige zusätzliche Felder hinzufügen, indem Sie ![Filterattribut-Symbol](../images/ui/overview/filter-attribute.png). Zu diesen zusätzlichen Feldern gehören Aufschlüsselung, Abwanderung, Auswertungsmethode und Auftrags-ID.
 
 Wenn die Aufschlüsselung ausgewählt ist, zeigt die Anzeige ein Balkendiagramm an, in dem der Prozentsatz der Profile dargestellt wird, die zu jedem der folgenden Status gehören: [!UICONTROL Realisiert], [!UICONTROL Bestehend]und [!UICONTROL Beenden]. Außerdem wird die Aufschlüsselung auf der Seite [!UICONTROL Durchsuchen] -Tab ist die genaueste Aufschlüsselung des Segmentstatus. Wenn sich diese Zahl von der auf der [!UICONTROL Übersicht] verwenden, sollten Sie die Zahlen im [!UICONTROL Durchsuchen] als richtige Informationsquelle angeben, da die Variable [!UICONTROL Übersicht] Die Tabulatornummern werden nur einmal pro Tag aktualisiert.
 
@@ -82,7 +82,7 @@ Die Abwanderung stellt den Prozentsatz der Profile dar, die sich innerhalb einer
 
 Die Auswertungsmethode kann entweder Streaming, Batch oder Edge sein. Streaming-Segmente werden konstant ausgewertet, sobald Daten in das System strömen. Batch-Segmente werden gemäß einem festgelegten Zeitplan ausgewertet. Edge-Segmente werden in Echtzeit ausgewertet, was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
 
-![](../images/ui/overview/segment-browse-segments.png)
+![Die Segmente auf der Durchsuchen-Seite des Segments werden hervorgehoben.](../images/ui/overview/segment-browse-segments.png)
 
 Am oberen Rand der Seite finden Sie Optionen zum Hinzufügen aller Segmente zu einem Zeitplan und zum Erstellen eines neuen Segments.
 
@@ -90,11 +90,11 @@ Umschalten **[!UICONTROL Alle Segmente zur Planung hinzufügen]** aktiviert die 
 
 Auswählen **[!UICONTROL Segment erstellen]** gelangen Sie zum Segment Builder. Weitere Informationen zum Erstellen von Segmenten finden Sie im Abschnitt unter [Erstellen eines Segments im Benutzerhandbuch](#create-segment).
 
-![](../images/ui/overview/segment-browse-top.png)
+![Die obere Navigationsleiste auf der Seite zum Durchsuchen von Segmenten wird hervorgehoben. Diese Leiste enthält einen Umschalter zum Hinzufügen aller Segmente zu einem Zeitplan und eine Schaltfläche zum Erstellen eines Segments.](../images/ui/overview/segment-browse-top.png)
 
 Die rechte Seitenleiste enthält Informationen zu allen Segmenten in der Organisation, listet die Gesamtzahl der Segmente, das letzte Auswertungsdatum, das nächste Auswertungsdatum sowie eine Aufschlüsselung der Segmente nach Bewertungsmethode auf.
 
-![](../images/ui/overview/segment-browse-segment-info.png)
+![Die rechte Seitenleiste auf der Seite zum Durchsuchen von Segmenten wird hervorgehoben. Informationen zu den Segmenten in der Organisation werden angezeigt. Dazu gehören Informationen wie die Gesamtanzahl der Segmente, die letzte ausgewertete Zeit, das nächste ausgewertete Mal sowie eine Aufschlüsselung der verschiedenen Segmenttypen.](../images/ui/overview/segment-browse-segment-info.png)
 
 Die Auswahl der Zeile der Segmentdefinition bietet eine Zusammenfassung der Segmentdefinition, einschließlich Optionen zum Bearbeiten oder Löschen des Segments, zum Aktivieren des Segments für ein Ziel, der qualifizierten Zielgruppe für das Segment, der Gesamtgröße der Zielgruppe, zusätzlich zum Namen, der Beschreibung, der Auswertungsmethode, dem erstellten Datum und dem Datum der letzten Änderung.
 
@@ -102,7 +102,7 @@ Die Auswahl der Zeile der Segmentdefinition bietet eine Zusammenfassung der Segm
 >
 > Sie werden **not** ein Segment löschen können, das in einer Zielaktivierung verwendet wird.
 
-![](../images/ui/overview/segment-browse-details.png)
+![Details zum ausgewählten Segment werden angezeigt. Dies umfasst Details zur Anzahl der qualifizierten Profile, zur Prozentverteilung der qualifizierten Mitarbeiter im Vergleich zu den Gesamtprofilen sowie zum letzten Auswertungsdatum.](../images/ui/overview/segment-browse-details.png)
 
 ## Details zur Segmentdefinition {#segment-details}
 
@@ -110,7 +110,7 @@ Um weitere Details zu einer bestimmten Segmentdefinition anzuzeigen, wählen Sie
 
 Die Seite mit den Segmentdetails wird angezeigt. Oben finden Sie eine Zusammenfassung der Segmentdefinition, Informationen zur qualifizierten Zielgruppengröße sowie Ziele, für die das Segment aktiviert wird.
 
-![](../images/ui/overview/segment-details-summary.png)
+![Die Detailseite der Segmentdefinition wird angezeigt. Die Segmentzusammenfassung, die Gesamtzielgruppe im Segment und die aktivierten Zielkarten werden hervorgehoben.](../images/ui/overview/segment-details-summary.png)
 
 ### Segmentzusammenfassung {#segment-summary}
 
@@ -118,7 +118,7 @@ Die **[!UICONTROL Segmentzusammenfassung]** enthält Informationen wie die ID, d
 
 Darüber hinaus haben Sie die Möglichkeit, das Segment entweder für ein Ziel zu aktivieren oder es zu bearbeiten. Auswählen **[!UICONTROL Auf Ziel aktivieren]** können Sie das Segment für ein Ziel aktivieren. Detaillierte Informationen zum Aktivieren eines Segments für ein Ziel finden Sie im Abschnitt [Aktivierungsübersicht](../../destinations/ui/activation-overview.md).
 
-![](../images/ui/overview/segment-details-activate.png)
+![Die Schaltfläche In Ziel aktivieren ist hervorgehoben.](../images/ui/overview/segment-details-activate.png)
 
 Auswählen **[!UICONTROL Segment bearbeiten]** bringen Sie zum [!DNL Segment Builder]. Detaillierte Informationen zur Verwendung der [!DNL Segment Builder] Arbeitsbereich, lesen Sie bitte die [[!DNL Segment Builder] Benutzerhandbuch](./segment-builder.md).
 
@@ -158,13 +158,13 @@ Die Stichprobengröße der Prüfung hängt von der Gesamtanzahl der Entitäten i
 
 Detailliertere Informationen zu den einzelnen [!DNL Profile] angezeigt werden, indem Sie die [!DNL Profile] Kennung. Weitere Informationen zu Profildetails finden Sie im [[!DNL Real-time Customer Profile] Benutzerhandbuch](../../profile/ui/user-guide.md#profile-detail).
 
-![](../images/ui/overview/segment-details-profiles.png)
+![Die Beispielprofile für die Segmentdefinition werden hervorgehoben. Zu den Beispielprofilinformationen gehören die Profil-ID, der Vorname, der Nachname und die E-Mail-Adresse der Person.](../images/ui/overview/segment-details-profiles.png)
 
 ## Erstellen eines Segments {#create-segment}
 
 Auswählen **[!UICONTROL Segment erstellen]** in der oberen rechten Ecke öffnet sich das [!DNL Segment Builder] Arbeitsbereich, in dem Sie mit der Erstellung einer Segmentdefinition beginnen können.
 
-![](../images/ui/overview/segment-browse-create.png)
+![Auf der Durchsuchen-Seite Segment wird die Schaltfläche Segment erstellen hervorgehoben.](../images/ui/overview/segment-browse-create.png)
 
 ### [!DNL Segment Builder] Arbeitsbereich
 
@@ -172,7 +172,7 @@ Auswählen **[!UICONTROL Segment erstellen]** in der oberen rechten Ecke öffnet
 
 Detaillierte Informationen zur Verwendung der [!DNL Segment Builder] Arbeitsbereich, lesen Sie bitte die [[!DNL Segment Builder] Benutzerhandbuch](./segment-builder.md).
 
-![](../images/ui/overview/segment-builder.png)
+![Der Arbeitsbereich Segment Builder wird angezeigt.](../images/ui/overview/segment-builder.png)
 
 ## Geplante Segmentierung {#scheduled-segmentation}
 
@@ -186,17 +186,17 @@ Die Aktivierung Ihrer Segmentdefinitionen für eine geplante Auswertung kann üb
 
 >[!NOTE]
 >
->Die geplante Auswertung kann für Sandboxes mit maximal fünf (5) Zusammenführungsrichtlinien für [!DNL XDM Individual Profile]. Wenn Ihr Unternehmen mehr als fünf Zusammenführungsrichtlinien für [!DNL XDM Individual Profile] in einer Sandbox-Umgebung können Sie keine geplante Auswertung verwenden.
+>Die geplante Auswertung kann für Sandboxes mit maximal fünf (5) Zusammenführungsrichtlinien für [!DNL XDM Individual Profile] aktiviert werden. Wenn Ihre Organisation in einer Sandbox-Umgebung über mehr als fünf Zusammenführungsrichtlinien für [!DNL XDM Individual Profile] verfügt, können Sie keine geplante Auswertung verwenden.
 
 Zeitpläne können derzeit nur mit der API erstellt werden. Ausführliche Anweisungen zum Erstellen, Bearbeiten und Verwenden von Zeitplänen mithilfe der API finden Sie im Tutorial zum Auswerten und Aufrufen von Segmentergebnissen, insbesondere im Abschnitt zur [geplanten Auswertung mithilfe der API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
-![](../images/ui/overview/segment-browse-scheduled.png)
+![Der Umschalter Alle Segmente zu einem Zeitplan hinzufügen wird auf der Seite Segmentdurchsuchen markiert.](../images/ui/overview/segment-browse-scheduled.png)
 
 ## Audiences {#audiences}
 
 >[!IMPORTANT]
 >
->Die Funktion für Zielgruppen befindet sich derzeit in einer eingeschränkten Beta-Phase und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
+>Die Funktion für Zielgruppen befindet sich derzeit in einer eingeschränkten Beta-Phase und steht nicht allen Benutzern zur Verfügung. Dokumentation und Funktionalitäten können sich ändern.
 
 Wählen Sie die **[!UICONTROL Zielgruppen]** um eine Liste aller Zielgruppen für Ihre Organisation anzuzeigen.
 
@@ -274,11 +274,11 @@ Weitere Informationen zur Streaming-Segmentierung finden Sie im Abschnitt [Benut
 
 >[!NOTE]
 >
->Damit Streaming-Segmentierung funktioniert, müssen Sie die geplante Segmentierung für die Organisation aktivieren. Weitere Informationen zur Aktivierung der geplanten Segmentierung finden Sie unter [den Abschnitt zur Streaming-Segmentierung in diesem Benutzerhandbuch](#scheduled-segmentation).
+>Damit die Streaming-Segmentierung funktioniert, müssen Sie die geplante Segmentierung für die Organisation aktivieren. Weitere Informationen zur Aktivierung der geplanten Segmentierung finden Sie unter [den Abschnitt zur Streaming-Segmentierung in diesem Benutzerhandbuch](#scheduled-segmentation).
 
 ## Edge-Segmentierung {#edge-segmentation}
 
-Bei der Edge-Segmentierung können Segmente in Platform sofort am Rand ausgewertet werden, was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
+Bei der Edge-Segmentierung werden Segmente in Platform sofort am Edge ausgewertet, was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
 
 Weitere Informationen zur Kantensegmentierung finden Sie im Abschnitt [Handbuch zur Edge-Segmentierungsbenutzeroberfläche](./edge-segmentation.md)
 
@@ -290,7 +290,7 @@ Weitere Informationen zur Kantensegmentierung finden Sie im Abschnitt [Handbuch 
 
 Nachdem Sie Ihr Segment erstellt haben, wird das Segment von Adobe Experience Platform Data Governance analysiert, um sicherzustellen, dass keine Richtlinienverletzungen innerhalb des Segments auftreten. Siehe [Data Governance - Übersicht](../../data-governance/home.md) für weitere Informationen.
 
-![](../images/ui/overview/segment-dule-policy-violations.png)
+![Die Richtlinienverletzungen für das Segment werden angezeigt.](../images/ui/overview/segment-dule-policy-violations.png)
 
 ## Nächste Schritte und zusätzliche Ressourcen {#next-steps}
 
