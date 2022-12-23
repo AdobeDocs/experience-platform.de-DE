@@ -1,10 +1,11 @@
 ---
-title: Adobe Experience Platform - Versionshinweise - September 2022
-description: Die Versionshinweise für Adobe Experience Platform vom September 2022.
-source-git-commit: 4f85f38e4870f0c2429a3a2a50bd7f95075c6be4
-workflow-type: tm+mt
+title: Adobe Experience Platform – Versionshinweise, September 2022
+description: Versionshinweise September 2022 zu Adobe Experience Platform.
+exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+workflow-type: ht
 source-wordcount: '2934'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -32,16 +33,16 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 >[!IMPORTANT]
 >
->Die attributbasierte Zugriffssteuerung wird ab Oktober 2022 aktiviert. Wenn Sie ein frühzeitiger Anwendender sein möchten, wenden Sie sich an den Adobe-Support.
+>Die attributbasierte Zugriffssteuerung wird ab Oktober 2022 aktiviert. Wenn Sie ein frühzeitiger Anwendender sein möchten, wenden Sie sich an den Adobe-Support-Mitarbeiter.
 
 Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Platform, die datenschutzbewussten Marken größere Flexibilität bei der Verwaltung von Benutzerzugriffen gibt. Einzelne Objekte wie Schemafelder und Segmente können Benutzerrollen zugewiesen werden. Mit dieser Funktion können Sie bestimmten Platform-Benutzenden in Ihrer Organisation den Zugriff auf einzelne Objekte gewähren oder sperren.
 
-Mit der attributbasierten Zugriffssteuerung können Administratoren bzw. Administratorinnen Ihres Unternehmens den Zugriff von Benutzenden auf sensible persönliche Daten (SPD), persönlich identifizierbare Informationen (PII) und andere benutzerdefinierte Datentypen in allen Workflows und Ressourcen von Platform steuern. Administrierende können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
+Mit der attributbasierten Zugriffssteuerung können Administratoren bzw. Administratorinnen Ihres Unternehmens den Zugriff von Benutzenden auf sensible persönliche Daten (SPD), persönlich identifizierbare Informationen (PII) und andere benutzerdefinierte Datentypen in allen Workflows und Ressourcen von Platform steuern. Admins können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
 
 | Funktion | Beschreibung |
 | --- | --- |
 | Attributbasierte Zugriffssteuerung | Mit der attributbasierten Zugriffssteuerung können Sie Schemafelder und Segmente des Experience-Datenmodells (XDM) mit Kennzeichnungen versehen, die unterschiedliche Organisations- oder Datennutzungsbereiche definieren. Parallel dazu können Administratoren bzw. Administratorinnen die Benutzeroberfläche zur Verwaltung von Benutzenden und Rollen verwenden, um Zugriffsrichtlinien für XDM-Schemafelder und Segmente zu definieren. Damit kann der Zugriff durch Benutzende oder Benutzergruppen (interne, externe oder Drittparteien) besser verwaltet werden. Weitere Informationen finden Sie in der [Übersicht über die attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md). |
-| Berechtigungen | Berechtigungen sind der Bereich von Experience Cloud, in dem Administrierende Benutzerrollen und Zugriffsrichtlinien definieren können, um Zugriffsberechtigungen für Funktionen und Objekte in einem Produktprogramm zu verwalten. Über Berechtigungen können Sie Rollen erstellen und verwalten, die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen und Richtlinien erstellen, um Kennzeichnungen zu nutzen und zu definieren, welche Benutzerrollen Zugriff auf bestimmte Platform-Ressourcen haben. Mit Berechtigungen können Sie auch die Bezeichnungen, Sandboxes und Benutzer*innen verwalten, die einer bestimmten Rolle zugeordnet sind. Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche für Berechtigungen](../../access-control/abac/ui/browse.md). |
+| Berechtigungen | Berechtigungen sind der Bereich von Experience Cloud, in dem Admins Benutzerrollen und Zugriffsrichtlinien definieren können, um Zugriffsberechtigungen für Funktionen und Objekte in einem Produktprogramm zu verwalten. Über Berechtigungen können Sie Rollen erstellen und verwalten, die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen und Richtlinien erstellen, um Kennzeichnungen zu nutzen und zu definieren, welche Benutzerrollen Zugriff auf bestimmte Platform-Ressourcen haben. Mit Berechtigungen können Sie auch die Bezeichnungen, Sandboxes und Benutzenden verwalten, die einer bestimmten Rolle zugeordnet sind. Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche für Berechtigungen](../../access-control/abac/ui/browse.md). |
 
 Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter [Attributbasierte Zugriffssteuerung – Übersicht](../../access-control/abac/overview.md). Eine umfassende Anleitung zum attributbasierten Zugriffssteuerungs-Workflow finden Sie im [Handbuch zur attributbasierten Zugriffskontrolle](../../access-control/abac/end-to-end-guide.md).
 
@@ -62,7 +63,7 @@ Weitere Informationen zur Attributions-KI finden Sie in der [Übersicht zur Attr
 
 ### Kunden-KI
 
-In Real-time Customer Data Platform verfügbare Customer AI wird verwendet, um benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion für einzelne Profile in großem Maßstab zu generieren.
+Die in Real-time Customer Data Platform verfügbare Kunden-KI dient dazu, in großem Umfang benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion für einzelne Profile zu generieren.
 
 | Funktion | Beschreibung |
 | --- | --- |
@@ -135,7 +136,7 @@ Weitere Informationen zur Datenerfassung in Platform finden Sie in der [Übersic
 
 | Ziel | Beschreibung |
 | ----------- | ----------- |
-| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services bietet eine Plattform für die Gestaltung kanalübergreifender Kundenerlebnisse und eine Umgebung für die visuelle Orchestrierung von Kampagnen, Real-time Interaction Management und die kanalübergreifende Ausführung. [Erste Schritte mit Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=de). Beachten Sie, dass diese Integration mit [Adobe Campaign-Version 8.4 oder höher](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=de#release-8-4-1) kompatibel ist. |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services bietet eine Plattform für die Gestaltung kanalübergreifender Kundenerlebnisse und eine Umgebung für die visuelle Orchestrierung von Kampagnen, das Management von Interaktionen in Echtzeit und die kanalübergreifende Ausführung. [Erste Schritte mit Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=de). Beachten Sie, dass diese Integration mit [Adobe Campaign-Version 8.4 oder höher](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=de#release-8-4-1) kompatibel ist. |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | Das Ziel [!DNL Salesforce CRM] wurde aktualisiert und unterstützt jetzt sowohl Kontakt- als auch Lead-Aktualisierungen sowie Leistungsverbesserungen für schnellere Aktualisierungen. |
 
 {style=&quot;table-layout:auto&quot;}
