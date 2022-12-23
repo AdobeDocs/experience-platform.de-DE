@@ -1,77 +1,77 @@
 ---
-keywords: Plattform; Ziele; Arbeitsbereich "Ziele"; Arbeitsbereich; UI; Ziele in der Benutzeroberfläche; Katalog; Zielkatalog;
+keywords: Plattform;Ziele;Arbeitsbereich Ziele;Arbeitsbereich;Benutzeroberfläche;Ziele in der Benutzeroberfläche;Katalog;Zielkatalog;
 title: Arbeitsbereich „Ziele“
-description: 'Der Arbeitsbereich Ziele besteht aus fünf Bereichen: Überblick, Katalog, Durchsuchen, Konten und Systemansicht. Sie werden in den folgenden Abschnitten beschrieben.'
+description: 'Der Arbeitsbereich „Ziele“ besteht aus fünf Bereichen: Übersicht, Katalog, Durchsuchen, Konten und Systemansicht. Sie werden in den folgenden Abschnitten beschrieben.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 source-git-commit: 69e1f065cb3b302c4b144f39c84179075379f648
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1223'
-ht-degree: 17%
+ht-degree: 100%
 
 ---
 
 # Arbeitsbereich „Ziele“ {#destinations-workspace}
 
-Wählen Sie in Adobe Experience Platform **[!UICONTROL Ziele]** über die linke Navigationsleiste, um auf die [!UICONTROL Ziele] Arbeitsbereich.
+Wählen Sie in der linken Navigationsleiste von Adobe Experience Platform die Option **[!UICONTROL Ziele]** aus, um auf den Arbeitsbereich [!UICONTROL Ziele] zuzugreifen.
 
-Die [!UICONTROL Ziele] Arbeitsbereich besteht aus fünf Bereichen, [!UICONTROL Übersicht], [!UICONTROL Katalog], [!UICONTROL Durchsuchen], [!UICONTROL Konten]und [!UICONTROL Systemansicht], wie in den folgenden Abschnitten beschrieben.
+Der Arbeitsbereich [!UICONTROL Ziele] besteht aus fünf Abschnitten: [!UICONTROL Übersicht], [!UICONTROL Katalog], [!UICONTROL Durchsuchen], [!UICONTROL Konten] und [!UICONTROL Systemansicht]. Diese werden in den folgenden Abschnitten beschrieben.
 
 ![Dashboard der Zielübersicht mit drei Widgets.](../assets/ui/workspace/destinations-overview.png)
 
 ## [!UICONTROL Übersicht] {#overview}
 
-Die **[!UICONTROL Übersicht]** angezeigt wird, [!UICONTROL Ziele] Dashboard, das wichtige Metriken zu den Zieldaten Ihres Unternehmens bereitstellt. Weitere Informationen finden Sie unter [[!UICONTROL Ziele] Dashboard-Handbuch](../../dashboards/guides/destinations.md).
+Die Registerkarte **[!UICONTROL Übersicht]** zeigt das Dashboard [!UICONTROL Ziele] an, das Schlüsselmetriken zu den Zieldaten Ihrer Organisation bereitstellt. Weitere Informationen finden Sie im Handbuch für das Dashboard [[!UICONTROL Ziele]](../../dashboards/guides/destinations.md).
 
 >[!NOTE]
 >
->Wenn Ihr Unternehmen neu bei Experience Platform ist und noch keine aktiven Ziele hat, wird die [!UICONTROL Ziele] Dashboard und [!UICONTROL Übersicht] nicht sichtbar sind. Wählen Sie stattdessen [!UICONTROL Ziele] über die linke Navigation zeigt die [[!UICONTROL Katalog] tab](#catalog).
+>Wenn Ihre Organisation erst seit kurzem Experience Platform nutzt und noch keine aktiven Ziele hat, sind die Dashboards [!UICONTROL Ziele] und [!UICONTROL Übersicht] nicht sichtbar. Wenn Sie [!UICONTROL Ziele] in der linken Navigationsleiste auswählen, wird stattdessen die Registerkarte [[!UICONTROL Katalog] angezeigt](#catalog).
 
-![Die Registerkarte Ziele-Dashboard - Übersicht .](../../dashboards/images/destinations/dashboard-overview.png)
+![Die Registerkarte „Übersicht“ des Ziele-Dashboards.](../../dashboards/images/destinations/dashboard-overview.png)
 
 ## [!UICONTROL Katalog] {#catalog}
 
-Die **[!UICONTROL Katalog]** zeigt eine Liste aller Ziele an, die in [!DNL Platform], an die Sie Daten senden können.
+Auf der Registerkarte **[!UICONTROL Katalog]** wird eine Liste aller in [!DNL Platform] verfügbaren Ziele angezeigt, an die Sie Daten senden können.
 
-Die [!DNL Platform] Die Benutzeroberfläche bietet mehrere Such- und Filteroptionen auf der Zielkatalogseite:
+Die [!DNL Platform]-Benutzeroberfläche bietet mehrere Such- und Filteroptionen auf der Zielkatalogseite:
 
 * Verwenden Sie die Suchfunktion auf der Seite, um ein bestimmtes Ziel zu finden.
-* Filtern von Zielen mithilfe des [!UICONTROL Kategorien] Kontrolle.
-* Zwischen wechseln [!UICONTROL Alle Ziele] und [!UICONTROL Meine Ziele]. Wenn Sie **[!UICONTROL Alle Ziele]**, alle verfügbar [!DNL Platform] -Ziele angezeigt. Wenn Sie **[!UICONTROL Meine Ziele]**, können Sie nur die Ziele sehen, mit denen Sie eine Verbindung hergestellt haben.
-* Wählen Sie aus, um die **[!UICONTROL Verbindungen]** und/oder **[!UICONTROL Erweiterungen]** Typen. Um den Unterschied zwischen den beiden Kategorien zu verstehen, lesen Sie [Zieltypen und -kategorien](../destination-types.md).
+* Filtern Sie Ziele mithilfe der Steuerung [!UICONTROL Kategorien].
+* Schalten Sie zwischen [!UICONTROL Alle Ziele] und [!UICONTROL Meine Ziele] um. Wenn Sie **[!UICONTROL Alle Ziele]** auswählen, werden alle verfügbar [!DNL Platform]-Ziele angezeigt. Wenn Sie **[!UICONTROL Meine Ziele]** auswählen, können Sie nur die Ziele sehen, zu denen Sie eine Verbindung hergestellt haben.
+* Wählen Sie aus, die Typen von **[!UICONTROL Verbindungen]** und/oder **[!UICONTROL Erweiterungen]** anzuzeigen. Um den Unterschied zwischen den beiden Kategorien zu verstehen, lesen Sie [Zieltypen und -kategorien](../destination-types.md).
 
 ![Zielkatalog mit einigen Werbe- und Cloud-Speicher-Zielen.](../assets/ui/workspace/catalog.png)
 
-Die Zielkarten enthalten primäre und sekundäre Kontrolloptionen. Zu den primären Steuerelementen gehören [!UICONTROL Einrichten], [!UICONTROL Aktivieren], [!UICONTROL Segmente aktivieren]oder [!UICONTROL Exportieren von Datensätzen]. Die sekundären Steuerelemente ermöglichen die Anzeige von Optionen. Diese Steuerelemente werden nachfolgend beschrieben:
+Die Zielkarten enthalten primäre und sekundäre Steuerungsoptionen. Zu den primären Steuerelementen gehören [!UICONTROL Einrichten], [!UICONTROL Aktivieren], [!UICONTROL Segmente aktivieren] oder [!UICONTROL Datensätze exportieren]. Die sekundären Steuerelemente ermöglichen die Anzeige von Optionen. Diese Einstellungen werden nachfolgend beschrieben:
 
 | Kontrollvariante | Beschreibung |
 |---------|----------|
-| [!UICONTROL Setup] | Ermöglicht die Erstellung einer Verbindung zum Ziel. |
+| [!UICONTROL Einrichten] | Ermöglicht die Erstellung einer Verbindung zum Ziel. |
 | [!UICONTROL Aktivieren] | Nachdem Sie eine Verbindung zum Ziel hergestellt haben, können Sie Segmente aktivieren oder Datensätze zu diesem Ziel exportieren. |
 | [!UICONTROL Aktivieren von Segmenten] | Nachdem Sie eine Verbindung zum Ziel hergestellt haben, können Sie Segmente für dieses Ziel aktivieren. |
-| [!UICONTROL Exportieren von Datensätzen] | Nachdem Sie eine Verbindung zum Ziel hergestellt haben, können Sie Datensätze zu diesem Ziel exportieren. |
-| [!UICONTROL Konto anzeigen] | Zeigen Sie die Konten an, mit denen Sie eine Verbindung zu einem Ziel hergestellt haben. |
-| [!UICONTROL Datenflüsse anzeigen] | Zeigen Sie die Datenaktivierungsflüsse an, die für ein Ziel vorhanden sind. |
-| [!UICONTROL Dokumentation anzeigen] | Öffnet einen Link zur Dokumentationsseite für dieses spezifische Ziel, um weitere Informationen zu erhalten und Sie bei der Einrichtung zu unterstützen. |
+| [!UICONTROL Datensätze exportieren] | Nachdem Sie eine Verbindung zum Ziel hergestellt haben, können Sie Datensätze zu diesem Ziel exportieren. |
+| [!UICONTROL Konto anzeigen] | Zeigt die Konten an, mit denen Sie eine Verbindung zu einem Ziel hergestellt haben. |
+| [!UICONTROL Datenflüsse anzeigen] | Zeigt die Datenaktivierungsflüsse an, die für ein Ziel vorhanden sind. |
+| [!UICONTROL Dokumentation anzeigen] | Öffnet einen Link zur Dokumentationsseite für dieses spezifische Ziel, um weitere Informationen zu anzuzeigen und Sie bei der Einrichtung zu unterstützen. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ![Steuerelemente auf der Zielkarte](../assets/ui/workspace/destination-card-options.png)
 
-Wählen Sie eine Zielkarte im Katalog aus, um die rechte Leiste zu öffnen. Hier können Sie eine Beschreibung des Ziels sehen. Die rechte Leiste bietet dieselben in der obigen Tabelle beschriebenen Steuerelemente, einschließlich einer Beschreibung des Zielorts und einer Angabe der Zielkategorie und des Zieltyps.
+Wählen Sie ein Ziel im Katalog aus, um die rechte Leiste zu öffnen. Hier können Sie eine Beschreibung des Ziels sehen. Die rechte Leiste bietet dieselben in der obigen Tabelle beschriebenen Steuerelemente, einschließlich einer Beschreibung des Zielorts und einer Angabe der Zielkategorie und des Zieltyps.
 
 ![Optionen im Zielkatalog](../assets/ui/workspace/destination-right-rail.png)
 
-Weitere Informationen zu Zielkategorien und Informationen zu den einzelnen Zielen finden Sie in der [Zielkatalog](../catalog/overview.md) und [Zieltypen und Kategorien](../destination-types.md).
+Weitere Informationen zu Zielkategorien und Informationen zu den einzelnen Zielen finden Sie im [Zielkatalog](../catalog/overview.md) und unter [Zieltypen und -kategorien](../destination-types.md).
 
 ## [!UICONTROL Konten] {#accounts}
 
-Die **[!UICONTROL Konten]** zeigt Details zu den Verbindungen an, die Sie mit verschiedenen Zielen hergestellt haben, und ermöglicht es Ihnen, vorhandene Kontodetails zu aktualisieren oder zu löschen. Die nachstehende Tabelle enthält alle Informationen zu den einzelnen Zielkonten.
+Die Registerkarte **[!UICONTROL Konten]** zeigt Details zu den Verbindungen an, die Sie mit verschiedenen Zielen hergestellt haben, und ermöglicht es Ihnen, vorhandene Kontodetails zu aktualisieren oder zu löschen. In der nachstehenden Tabelle sehen Sie alle Informationen, die Sie über jedes Zielkonto erhalten können.
 
 >[!TIP]
 >
-> * Wählen Sie die Auslassungszeichen (`...`) im [!UICONTROL Plattform] und verwenden Sie die ![Kontrolle aktivieren](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Aktivieren ]**/**[!UICONTROL  Segmente aktivieren ]**/**[!UICONTROL  Exportieren von Datensätzen ]**-Steuerelement zum Exportieren von Segmenten oder Datensätzen in dieses Ziel.
-> * Wählen Sie die Auslassungszeichen (`...`) im [!UICONTROL Plattform] und verwenden Sie die ![Detailsteuerung bearbeiten](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL Details bearbeiten ]**Kontrolle an [update](update-accounts.md) die Details eines vorhandenen Zielkontos.
-> * Wählen Sie die Auslassungszeichen (`...`) im [!UICONTROL Plattform] und verwenden Sie die ![Steuerelement löschen](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Löschen ]**Kontrolle an [delete](delete-destination-account.md) ein vorhandenes Zielkonto.
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Platform] und verwenden Sie das Steuerelement ![Kontrolle aktivieren](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Aktivieren ]**/**[!UICONTROL  Segmente aktivieren ]**/**[!UICONTROL  Exportieren von Datensätzen ]**zum Exportieren von Segmenten oder Datensätzen an dieses Ziel.
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Platform] und verwenden Sie das Steuerelement ![Steuerung „Details bearbeiten“](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL Details bearbeiten ]**, um die Details eines vorhandenen Zielkontos zu [aktualisieren](update-accounts.md).
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Platform] und verwenden Sie das Steuerelement ![Steuerung „Löschen“](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Löschen ]**, um ein vorhandenes Zielkonto zu [löschen](delete-destination-account.md).
 
 
 ![Registerkarte „Konten“](../assets/ui/workspace/destination-account-options.png)
@@ -79,38 +79,38 @@ Die **[!UICONTROL Konten]** zeigt Details zu den Verbindungen an, die Sie mit ve
 | Element | Beschreibung |
 |---|---|
 | [!UICONTROL Plattform] | Das Ziel, für das Sie die Verbindung eingerichtet haben. |
-| [!UICONTROL Verbindungstyp] | Stellt den Verbindungstyp des Kontos zu Ihrem Speicherbehälter oder Ziel dar. Je nach Ziel stehen folgende Authentifizierungsoptionen zur Verfügung: <ul><li>Für E-Mail-Marketing-Ziele: Kann S3, FTP oder Azure Blob sein.</li><li>Bei Echtzeit-Werbezielen: Server-zu-Server.</li><li>Bei Amazon S3-Cloud-Speicherzielen: Zugriffsschlüssel. </li><li>Bei SFTP-Cloud-Speicherzielen: Grundlegende Authentifizierung für SFTP.</li><li>OAuth 1- oder OAuth 2-Authentifizierung</li><li>Trägertoken-Authentifizierung</li></ul> |
+| [!UICONTROL Verbindungstyp] | Gibt den Kontoverbindungstyp zu Ihrem Speicher-Behälter oder Ziel an. Je nach Ziel stehen folgende Authentifizierungsoptionen zur Verfügung: <ul><li>Bei E-Mail-Marketing-Zielen: S3, FTP oder Azure Blob.</li><li>Bei Echtzeit-Werbezielen: Server-zu-Server.</li><li>Bei Amazon S3-Cloud-Speicherzielen: Zugriffsschlüssel. </li><li>Bei SFTP-Cloud-Speicherzielen: Grundlegende Authentifizierung für SFTP.</li><li>OAuth 1- oder OAuth 2-Authentifizierung</li><li>Authentifizierung über Bearer-Token</li></ul> |
 | [!UICONTROL Benutzername] | Der Benutzername, den Sie im [Zielverbindungsassistenten](../catalog/email-marketing/overview.md#connect-destination) ausgewählt haben. |
-| [!UICONTROL Ziele] | Stellt die Anzahl der eindeutigen erfolgreichen Ziel-Datenflüsse dar, die mit grundlegenden Informationen verknüpft sind, die für ein Ziel erstellt wurden. |
+| [!UICONTROL Ziele] | Gibt die Zahl der eindeutigen erfolgreich verbundenen Ziel-Datenflüsse an, die für ein Ziel erstellt wurden, zusammen mit grundlegenden Informationen. |
 | [!UICONTROL Autorisiert] | Das Datum, an dem die Verbindung zu diesem Ziel genehmigt wurde. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## [!UICONTROL Durchsuchen] {#browse}
 
-Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, mit denen Sie eine Verbindung hergestellt haben. Ziele mit der **[!UICONTROL Aktiviert/Deaktiviert]** Umschalten aktiviert: Setzen Sie das Ziel auf &quot;aktiv&quot;bzw. &quot;inaktiv&quot;. Sie können auch die Ziele anzeigen, an denen Daten fließen, indem Sie **[!UICONTROL Segmente]** > **[!UICONTROL Durchsuchen]** und wählen Sie ein zu prüfendes Segment aus. Die nachstehende Tabelle enthält alle Informationen, die für die einzelnen Ziele in der [!UICONTROL Durchsuchen] tab:
+Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, mit denen Sie eine Verbindung hergestellt haben. Bei Zielen, für die der Umschalter **[!UICONTROL Aktiviert/Deaktiviert]** eingeschaltet ist, wird das Ziel auf „aktiv“ bzw. „inaktiv“ gesetzt. Sie können auch jene Ziele anzeigen, bei denen Daten fließen, indem Sie auf **[!UICONTROL Segmente]** > **[!UICONTROL Durchsuchen]** klicken und ein zu überprüfendes Segment auswählen. Die nachstehende Tabelle enthält alle Informationen, die für die einzelnen Ziele auf der Registerkarte [!UICONTROL Durchsuchen] verfügbar sind:
 
 >[!TIP]
 >
-> * Wählen Sie die Auslassungszeichen (`...`) im [!UICONTROL Name] und verwenden Sie die ![Kontrolle von Segmenten aktivieren](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Aktivieren ]**-Steuerelement zum Exportieren von Segmenten oder Datensätzen in dieses Ziel.
-> * Wählen Sie die Auslassungszeichen (`...`) im [!UICONTROL Name] und verwenden Sie die ![Steuerelement löschen](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Löschen ]**Kontrolle an [remove](delete-destinations.md) eine bestehende Verbindung zu einem Ziel.
-> * Wählen Sie die Auslassungszeichen (`...`) im [!UICONTROL Name] und verwenden Sie die ![Anzeigen im Überwachungssteuerelement](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Anzeigen in der Überwachung ]**Kontrolle zum Anzeigen von Aktivierungsinformationen für dieses Ziel im [Monitoring-Dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
-> * Wählen Sie die Auslassungszeichen (`...`) im [!UICONTROL Name] und verwenden Sie die ![Warnhinweise abonnieren ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL Warnhinweise abonnieren ]**Kontrolle zum Abonnieren von Ziel-Datenfluss-Warnhinweisen. Sie können Warnhinweise abonnieren, um Nachrichten zum Status, Erfolg oder Misserfolg Ihrer Workflow-Ausführung zu erhalten. Siehe [In-Context-Zielwarnungen abonnieren](alerts.md) für detaillierte Informationen zu Ziel-Datenfluss-Warnhinweisen.
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung „Segmente aktivieren“](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Aktivieren ]**, um Segmente oder Datensätze in dieses Ziel zu exportieren.
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung „Löschen“](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Löschen ]**, um eine bestehende Verbindung zu einem Ziel zu [löschen](delete-destinations.md).
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung „Im Monitoring anzeigen“](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL „Im Monitoring anzeigen“]**, um Aktivierungsinformationen für dieses Ziel im [Monitoring-Dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) anzuzeigen.
+> * Klicken Sie auf die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] und verwenden Sie das Steuerelement ![Steuerung „Warnhinweise abonnieren“](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL Warnhinweise abonnieren ]**, um Ziel-Datenfluss-Warnhinweise zu abonnieren. Sie können Warnhinweise abonnieren, um Nachrichten zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten. Ausführliche Informationen zu Ziel-Datenfluss-Warnhinweisen finden Sie unter [Abonnieren von kontextabhängigen Ziel-Warnhinweisen](alerts.md).
 
 
 ![Registerkarte „Durchsuchen“](../assets/ui/workspace/browse-tab.png)
 
 | Element | Beschreibung |
 |---------|----------|
-| Name | Der Name, den Sie für den Aktivierungsfluss zu diesem Ziel angegeben haben. Dieselbe Spalte enthält zwei Steuerelemente: [!UICONTROL Aktivieren ] und [!UICONTROL Ziel löschen]. |
-| [!UICONTROL Status des letzten Flusslaufs] | Der Status des letzten Datenflusses. Siehe [Zieldetails anzeigen](destination-details-page.md) für weitere Informationen zu Datenfluss-Läufen. |
-| [!UICONTROL Letztes Flusslaufdatum] | Zeit und Datum, an dem der letzte Datenfluss durchgeführt wurde. Siehe [Zieldetails anzeigen](destination-details-page.md) für weitere Informationen zu Datenfluss-Läufen. |
+| Name | Der Name, den Sie für den Aktivierungsfluss zu diesem Ziel angegeben haben. Dieselbe Spalte enthält zwei Steuerungen: [!UICONTROL Aktivieren] und [!UICONTROL Ziel löschen]. |
+| [!UICONTROL Letzter Ausführungsstatus für Datenfluss] | Der Status der letzten Datenflussausführung. Weitere Informationen zur Ausführung von Datenflüssen finden Sie unter [Anzeigen von Zieldetails](destination-details-page.md). |
+| [!UICONTROL Letztes Ausführungsdatum für Datenfluss] | Zeit und Datum, an dem der letzte Datenfluss ausgeführt wurde. Weitere Informationen zur Ausführung von Datenflüssen finden Sie unter [Anzeigen von Zieldetails](destination-details-page.md). |
 | [!UICONTROL Ziel] | Die Zielplattform, die Sie für Ihren Aktivierungsfluss ausgewählt haben. |
-| [!UICONTROL Verbindungstyp] | Stellt den Verbindungstyp zu Ihrem Speicher-Bucket oder Ziel dar. <ul><li>Für E-Mail-Marketing-Ziele: Kann S3, FTP oder [!DNL Azure Blob].</li><li>Für Werbeziele in Echtzeit: Server-zu-Server.</li><li>Für Streaming-Ziele: Kann [!DNL Azure Event Hubs] oder [!DNL Amazon Kinesis].</li></ul> |
+| [!UICONTROL Verbindungstyp] | Stellt den Verbindungstyp zu Ihrem Speicher-Bucket oder Ziel dar. <ul><li>Bei E-Mail-Marketing-Zielen: S3, FTP oder [!DNL Azure Blob].</li><li>Bei Echtzeit-Werbezielen: Server-zu-Server.</li><li>Bei Streaming-Zielen: [!DNL Azure Event Hubs] oder [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL Benutzername] | Die Kontoanmeldedaten, die Sie für den Zielfluss ausgewählt haben. |
-| [!UICONTROL Aktivierungsdaten] | Gibt die Anzahl der Segmente an, die für dieses Ziel aktiviert werden. Wählen Sie dieses Steuerelement aus, um mehr über die aktivierten Segmente zu erfahren. Siehe [Aktivierungsdaten](/help/destinations/ui/destination-details-page.md#activation-data) auf der Zieldetailseite finden Sie weitere Informationen zu den aktivierten Segmenten. |
-| [!UICONTROL Erstellt] | Datum und Uhrzeit (UTC) der Erstellung des Aktivierungsflusses zum Ziel. Wählen Sie das Pfeilsymbol nach oben/unten aus, um die Aktivierungsflüsse zuerst nach dem neuesten oder dem ältesten zu sortieren. |
-| [!UICONTROL Status] | `Enabled` oder `Disabled`. Gibt an, ob für dieses Ziel Daten aktiviert werden. |
+| [!UICONTROL Aktivierungsdaten] | Gibt die Zahl der Segmente an, die für dieses Ziel aktiviert werden. Klicken Sie auf diese Steuerung, um mehr über die aktivierten Segmente zu erfahren. Weitere Informationen zu den aktivierten Segmenten finden Sie auf der Seite mit den Zieldetails unter [Aktivierungsdaten](/help/destinations/ui/destination-details-page.md#activation-data). |
+| [!UICONTROL Erstellt] | Datum und Uhrzeit (UTC) der Erstellung des Aktivierungsflusses zum Ziel. Klicken Sie auf das Symbol mit dem Pfeil nach oben/unten, um nach den neuesten oder ältesten Aktivierungsflüssen zu sortieren. |
+| [!UICONTROL Status] | `Enabled` oder `Disabled`. Gibt an, ob für dieses Ziel Daten aktiviert sind. |
 
 Klicken Sie auf eine Zielzeile, um weitere Informationen zum Ziel in der rechten Leiste anzuzeigen.
 
@@ -120,10 +120,10 @@ Wählen Sie den Zielnamen aus, um Informationen zu den für dieses Ziel aktivier
 
 ## [!UICONTROL Systemansicht] {#system-view}
 
-Die **[!UICONTROL Systemansicht]** zeigt eine grafische Darstellung der Aktivierungsflüsse an, die Sie in der Adobe Experience Platform eingerichtet haben.
+Auf der Registerkarte **[!UICONTROL Systemansicht]** wird eine grafische Darstellung der Aktivierungsflüsse angezeigt, die Sie in Adobe Experience Platform eingerichtet haben.
 
-![Datenflüsse1](../assets/ui/workspace/data-flows1.png)
+![Data-flows1](../assets/ui/workspace/data-flows1.png)
 
-Wählen Sie eines der Ziele aus, die auf der Seite angezeigt werden, und klicken Sie auf **[!UICONTROL Datenflüsse anzeigen]** um Informationen zu allen Verbindungen anzuzeigen, die Sie für jedes Ziel eingerichtet haben.
+Wählen Sie eines der Ziele aus, die auf der Seite angezeigt werden, und klicken Sie auf **[!UICONTROL Datenflüsse anzeigen]**, um Informationen über alle Verbindungen anzuzeigen, die Sie für die einzelnen Ziele eingerichtet haben.
 
-![Datenflüsse2](../assets/ui/workspace/data-flows2.png)
+![Data-flows2](../assets/ui/workspace/data-flows2.png)
