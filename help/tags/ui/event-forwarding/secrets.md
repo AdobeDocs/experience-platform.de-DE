@@ -3,9 +3,9 @@ title: Konfigurieren von Geheimnissen bei der Ereignisweiterleitung
 description: Erfahren Sie, wie Sie Geheimnisse in der Benutzeroberfläche konfigurieren, um sich bei Endpunkten zu authentifizieren, die in den Eigenschaften der Ereignisweiterleitung verwendet werden.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
 source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1766'
-ht-degree: 74%
+ht-degree: 100%
 
 ---
 
@@ -19,12 +19,12 @@ Derzeit werden drei Typen von geheimen Daten unterstützt:
 | --- | --- |
 | [!UICONTROL Token] | Eine einzelne Zeichenfolge, die den Wert eines Authentifizierungs-Tokens darstellt, der von beiden Systemen verstanden wird. |
 | [!UICONTROL HTTP] | Enthält zwei Zeichenfolgen-Attribute für einen Benutzernamen und ein Kennwort. |
-| [!UICONTROL OAuth2] | Enthält mehrere Attribute zur Unterstützung der [Art des Zuschusses für Client-Anmeldeinformationen](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) für [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) Authentifizierungsspezifikation. Das System fordert von Ihnen die erforderlichen Informationen an. Anschließend übernimmt es die Verlängerung dieser Token für Sie in einem bestimmten Intervall. |
-| [!UICONTROL Google OAuth 2] | Enthält mehrere Attribute zur Unterstützung der [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) Authentifizierungsspezifikation für die Verwendung im [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) und [Pub/Sub-API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). Das System fordert von Ihnen die erforderlichen Informationen an. Anschließend übernimmt es die Verlängerung dieser Token für Sie in einem bestimmten Intervall. |
+| [!UICONTROL OAuth 2] | Enthält mehrere Attribute zur Unterstützung des [Grant-Typs der Client-Anmeldeinformationen](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) für die Authentifizierungsspezifikation [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749). Das System fordert von Ihnen die erforderlichen Informationen an. Anschließend übernimmt es die Verlängerung dieser Token für Sie in einem bestimmten Intervall. |
+| [!UICONTROL Google OAuth 2] | Enthält mehrere Attribute, um die [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749)-Authentifizierungsspezifikation zur Verwendung in der [Google Ads-API](https://developers.google.com/google-ads/api/docs/oauth/overview) und [Pub/Sub-API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview) zu unterstützen. Das System fordert von Ihnen die erforderlichen Informationen an. Anschließend übernimmt es die Verlängerung dieser Token für Sie in einem bestimmten Intervall. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Dieses Handbuch bietet einen allgemeinen Überblick darüber, wie Geheimnisse für die Ereignisweiterleitung konfiguriert werden ([!UICONTROL Edge]) in der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche.
+Dieses Handbuch bietet einen allgemeinen Überblick darüber, wie Geheimnisse für eine [!UICONTROL Edge]-Eigenschaft zur Ereignisweiterleitung in der Experience Platform- oder Datenerfassungs-Benutzeroberfläche konfiguriert werden.
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ Dieses Handbuch bietet einen allgemeinen Überblick darüber, wie Geheimnisse f�
 
 ## Voraussetzungen
 
-In diesem Handbuch wird davon ausgegangen, dass Sie bereits mit der Verwaltung von Ressourcen für Tags und die Ereignisweiterleitung in der Benutzeroberfläche vertraut sind, einschließlich der Erstellung eines Datenelements und einer Ereignisweiterleitungsregel. Wenn Sie eine Einführung benötigen, finden Sie weitere Informationen im Handbuch unter [Verwalten von Ressourcen](../managing-resources/overview.md).
+In diesem Handbuch wird davon ausgegangen, dass Sie bereits mit der Verwaltung von Ressourcen für Tags und mit der Ereignisweiterleitung in der Benutzeroberfläche vertraut sind, einschließlich der Erstellung eines Datenelements und einer Ereignisweiterleitungsregel. Wenn Sie eine Einführung benötigen, finden Sie weitere Informationen im Handbuch unter [Verwalten von Ressourcen](../managing-resources/overview.md).
 
 Außerdem sollten Sie über ein grundlegendes Verständnis des Veröffentlichungsflusses im Hinblick auf Tags und Ereignisweiterleitung verfügen, einschließlich der Möglichkeit, Ressourcen zu einer Bibliothek hinzuzufügen und einen Build zum Testen auf Ihrer Website zu installieren. Weitere Informationen finden Sie in der [Publishing-Übersicht](../publishing/overview.md).
 
@@ -41,10 +41,10 @@ Außerdem sollten Sie über ein grundlegendes Verständnis des Veröffentlichung
 >[!CONTEXTUALHELP]
 >id="platform_eventforwarding_secrets_environments"
 >title="Umgebungen für Geheimnisse"
->abstract="Damit geheime Daten durch die Ereignisweiterleitung verwendet werden können, müssen sie einer vorhandenen Umgebung zugewiesen werden. Wenn Sie keine Umgebungen für Ihre Ereignisweiterleitungs-Eigenschaft erstellt haben, müssen Sie diese konfigurieren, bevor Sie den Vorgang fortsetzen."
+>abstract="Damit geheime Daten durch die Ereignisweiterleitung verwendet werden können, müssen sie einer vorhandenen Umgebung zugewiesen werden. Wenn Sie keine Umgebungen für Ihre Ereignisweiterleitungseigenschaft erstellt haben, müssen Sie diese konfigurieren, bevor Sie fortfahren."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=de" text="Umgebungen – Übersicht"
 
-Um einen geheimen Schlüssel zu erstellen, wählen Sie **[!UICONTROL Ereignisweiterleitung]** Öffnen Sie in der linken Navigation die Ereignisweiterleitungs-Eigenschaft, unter der Sie das Geheimnis hinzufügen möchten. Wählen Sie anschließend im linken Navigationsbereich zunächst **[!UICONTROL Geheime Daten]** und dann **[!UICONTROL Neue geheime Daten erstellen]** aus.
+Um ein Geheimnis zu erstellen, wählen Sie in der linken Navigationsleiste **[!UICONTROL Ereignisweiterleitung]**, um die Ereignisweiterleitungseigenschaft, der Sie das Geheimnis hinzufügen möchten, zu öffnen. Wählen Sie anschließend im linken Navigationsbereich zunächst **[!UICONTROL Geheime Daten]** und dann **[!UICONTROL Neue geheime Daten erstellen]** aus.
 
 ![Neue geheimen Daten erstellen](../../images/ui/event-forwarding/secrets/create-new-secret.png)
 
@@ -72,7 +72,7 @@ Von hier aus unterscheiden sich die Schritte zum Erstellen der geheimen Daten je
 
 * [[!UICONTROL Token]](#token)
 * [[!UICONTROL HTTP]](#http)
-* [[!UICONTROL OAuth2]](#oauth2)
+* [[!UICONTROL OAuth 2]](#oauth2)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
 
 ### [!UICONTROL Token] {#token}
@@ -91,11 +91,11 @@ Um geheime Daten vom Typ „HTTP“ zu erstellen, wählen Sie in der Dropdown-Li
 
 ![Geheime Daten vom Typ „HTTP“](../../images/ui/event-forwarding/secrets/http-secret.png)
 
-### [!UICONTROL OAuth2] {#oauth2}
+### [!UICONTROL OAuth 2] {#oauth2}
 
-Um geheime Daten vom Typ „OAuth2“ zu erstellen, wählen Sie aus der Dropdown-Liste **[!UICONTROL Typ]** die Option **[!UICONTROL OAuth2]** aus. Geben Sie in den unten angezeigten Feldern Ihre [[!UICONTROL Client-ID] und [!UICONTROL Client Secret]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)sowie [[!UICONTROL Token-URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) für Ihre OAuth-Integration. Die [!UICONTROL Token-URL] -Feld in der Benutzeroberfläche ist eine Verkettung zwischen dem Autorisierungsserverhost und dem Tokenpfad.
+Um geheime Daten vom Typ „OAuth 2“ zu erstellen, wählen Sie aus der Dropdown-Liste **[!UICONTROL Typ]** die Option **[!UICONTROL OAuth 2]** aus. Geben Sie in den unten angezeigten Feldern Ihre [[!UICONTROL Client-ID] und Ihr [!UICONTROL Client-Geheimnis]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/) sowie die [[!UICONTROL Token-URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) für Ihre OAuth-Integration ein. Das Feld [!UICONTROL Token-URL] in der Benutzeroberfläche ist eine Verkettung zwischen dem Autorisierungs-Server-Host und dem Token-Pfad.
 
-![Geheime Daten vom Typ „OAuth2“](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
+![Geheime Daten vom Typ „OAuth 2“](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
 Unter **[!UICONTROL Anmeldedaten-Optionen]** können Sie weitere Optionen für die Anmeldedaten bereitstellen, z. B. `scope` und `audience` in Form von Schlüssel-Wert-Paaren. Um weitere Schlüssel-Wert-Paare hinzuzufügen, wählen Sie **[!UICONTROL Weitere hinzufügen]** aus.
 
@@ -115,30 +115,30 @@ Wenn beispielsweise der Zeitversatz zur Aktualisierung auf den Standardwert von 
 
 Wenn Sie fertig sind, wählen Sie die Option **[!UICONTROL Geheime Daten erstellen]** aus, um die geheimen Daten zu speichern.
 
-![OAuth2-Versatz speichern](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
+![OAuth 2-Versatz speichern](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
 
 ### [!UICONTROL Google OAuth 2] {#google-oauth2}
 
-Um ein Google OAuth 2-Geheimnis zu erstellen, wählen Sie **[!UICONTROL Google OAuth 2]** von **[!UICONTROL Typ]** Dropdown-Liste. under **[!UICONTROL Bereiche]** Wählen Sie die Google-APIs aus, für die Sie mithilfe dieses Geheimnisses Zugriff gewähren möchten. Die folgenden Produkte werden derzeit unterstützt:
+Um ein Geheimnis für Google OAuth 2 zu erstellen, wählen Sie aus der Dropdown-Liste **[!UICONTROL Typ]** die Option **[!UICONTROL Google OAuth 2]** aus. Wählen Sie unter **[!UICONTROL Bereiche]** die Google-APIs aus, für die Sie mithilfe dieses Geheimnisses Zugriff gewähren möchten. Die folgenden Produkte werden derzeit unterstützt:
 
-* [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview)
+* [Google Ads-API](https://developers.google.com/google-ads/api/docs/oauth/overview)
 * [Pub/Sub-API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview)
 
-Wenn Sie fertig sind, wählen Sie **[!UICONTROL Geheimnis erstellen]**.
+Klicken Sie abschließend auf **[!UICONTROL Geheimnis erstellen]**.
 
-![Google OAuth 2 - Geheimnis](../../images/ui/event-forwarding/secrets/google-oauth.png)
+![Google OAuth 2-Geheimnis](../../images/ui/event-forwarding/secrets/google-oauth.png)
 
-Ein Popup erscheint, das Sie darüber informiert, dass das Geheimnis manuell über Google autorisiert werden muss. Auswählen **[!UICONTROL Erstellen und Autorisieren]** , um fortzufahren.
+Ein Popup erscheint, das Sie darüber informiert, dass das Geheimnis manuell über Google autorisiert werden muss. Wählen Sie **[!UICONTROL Erstellen und autorisieren]** aus, um fortzufahren.
 
 ![Popup für Google-Autorisierung](../../images/ui/event-forwarding/secrets/google-authorization.png)
 
-Es wird ein Dialogfeld angezeigt, in dem Sie die Anmeldeinformationen für Ihr Google-Konto eingeben können. Befolgen Sie die Anweisungen, um der Ereignisweiterleitung unter dem ausgewählten Bereich Zugriff auf Ihre Daten zu gewähren. Sobald der Autorisierungsprozess abgeschlossen ist, wird der geheime Schlüssel erstellt.
+Es wird ein Dialogfeld angezeigt, in dem Sie die Anmeldeinformationen für Ihr Google-Konto eingeben können. Befolgen Sie die Anweisungen, um der Ereignisweiterleitung unter dem ausgewählten Bereich Zugriff auf Ihre Daten zu gewähren. Sobald der Autorisierungsprozess abgeschlossen ist, wird das Geheimnis erstellt.
 
 >[!IMPORTANT]
 >
->Wenn für Ihr Unternehmen eine Richtlinie zur erneuten Authentifizierung für Google Cloud-Anwendungen festgelegt ist, werden die erstellten Geheimnisse nach Ablauf der Authentifizierung nicht erfolgreich aktualisiert (zwischen 1 und 24 Stunden, je nach Richtlinienkonfiguration).
+>Falls für Ihre Organisation eine Richtlinie zur erneuten Authentifizierung für Google Cloud-Anwendungen festgelegt ist, werden die erstellten Geheimnisse nicht erfolgreich aktualisiert, wenn die Authentifizierung abgelaufen ist (je nach Richtlinienkonfiguration zwischen 1 und 24 Stunden).
 >
->Um dieses Problem zu beheben, melden Sie sich bei der Google Admin Console an und navigieren Sie zur **[!DNL App access control]** -Seite, damit Sie die Ereignisweiterleitungs-App (Adobe Real-Time CDP Event Forwarding) als [!DNL Trusted]. Weitere Informationen finden Sie in der Google-Dokumentation unter [Festlegen von Sitzungslängen für Google Cloud-Services](https://support.google.com/a/answer/9368756) für weitere Informationen.
+>Um dieses Problem zu beheben, melden Sie sich bei der Google Admin Console an und navigieren Sie zur **[!DNL App access control]**-Seite, damit Sie die Ereignisweiterleitungs-App (Adobe Real-Time CDP-Ereignisweiterleitung) als [!DNL Trusted] markieren können. Weitere Informationen finden Sie in der Google-Dokumentation unter [Festlegen von Sitzungslängen für Google Cloud-Services](https://support.google.com/a/answer/9368756).
 
 ## Geheime Daten bearbeiten
 
@@ -161,8 +161,8 @@ Sie können einen Austausch von geheimen Daten über den Bearbeitungsbildschirm 
 | Typ von geheimen Daten | Protokoll erneut versuchen |
 | --- | --- |
 | [!UICONTROL Token] | Wählen Sie die Option **[!UICONTROL Geheime Daten austauschen]** aus, um den Austausch der geheimen Daten erneut zu versuchen. Dieses Steuerelement ist nur verfügbar, wenn eine Umgebung mit den jeweiligen geheimen Daten verknüpft ist. |
-| [!UICONTROL HTTP] | Wenn keine Umgebung mit den jeweiligen geheimen Daten verknüpft ist, wählen Sie die Option **[!UICONTROL Geheime Daten austauschen]** aus, um die Berechtigung in base64 auszutauschen. Wenn eine Umgebung angehängt ist, wählen Sie die Option **[!UICONTROL Geheimnis austauschen und bereitstellen]** um auf base64 auszutauschen und das Geheimnis bereitzustellen. |
-| [!UICONTROL OAuth2] | Wählen Sie **[!UICONTROL Token erstellen]** aus, um die Anmeldeinformationen auszutauschen und ein Zugriffs-Token vom Authentifizierungsanbieter zurückzugeben. |
+| [!UICONTROL HTTP] | Wenn keine Umgebung mit den jeweiligen geheimen Daten verknüpft ist, wählen Sie die Option **[!UICONTROL Geheime Daten austauschen]** aus, um die Berechtigung in base64 auszutauschen. Wenn eine Umgebung angehängt ist, wählen Sie die Option **[!UICONTROL Geheimnis austauschen und bereitstellen]** aus, um zu Base64 zu wechseln und das Geheimnis bereitzustellen. |
+| [!UICONTROL OAuth 2] | Wählen Sie **[!UICONTROL Token erstellen]** aus, um die Anmeldeinformationen auszutauschen und ein Zugriffs-Token vom Authentifizierungsanbieter zurückzugeben. |
 
 ## Löschen von geheimen Daten
 
