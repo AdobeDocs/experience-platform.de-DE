@@ -1,28 +1,29 @@
 ---
-title: Accelerated Queries Endpoint
-description: Erfahren Sie, wie Sie statuslos auf den Abfrage-beschleunigten Speicher zugreifen können, um schnell Ergebnisse basierend auf aggregierten Daten zurückzugeben. Dieses Dokument enthält eine Beispiel-HTTP-Anforderung und -Antwort für den Endpunkt "Schnellabfragen"in Query Service.
-source-git-commit: 2a9d40fc783feb78a1d5ad7eb615ceb40097eb89
-workflow-type: tm+mt
+title: Endpunkt für beschleunigte Abfragen
+description: Erfahren Sie, wie Sie statuslos auf den abfragebeschleunigten Speicher zugreifen können, um schnell Ergebnisse basierend auf aggregierten Daten zurückzugeben. Dieses Dokument enthält eine beispielhafte HTTP-Anfrage und -Antwort für den Endpunkt für beschleunigte Abfragen des Abfrage-Service.
+exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+workflow-type: ht
 source-wordcount: '567'
-ht-degree: 11%
+ht-degree: 100%
 
 ---
 
-# Accelerated Query Endpoint
+# Endpunkt für beschleunigte Abfragen
 
-Im Rahmen der Data Distiller-SKU muss die [Query Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/) ermöglicht es Ihnen, stateless-Abfragen an den beschleunigten Speicher zu senden. Die zurückgegebenen Ergebnisse basieren auf aggregierten Daten. Die geringere Latenz der Ergebnisse ermöglicht einen interaktiveren Informationsaustausch. Die APIs für beschleunigte Abfragen werden auch verwendet, um [Benutzerdefinierte Dashboards](../../dashboards/user-defined-dashboards.md).
+Im Rahmen der Data Distiller SKU ermöglicht Ihnen die [Abfrage-Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/), statuslose Abfragen an den beschleunigten Speicher zu stellen. Die zurückgegebenen Ergebnisse basieren auf aggregierten Daten. Die geringere Latenz der Ergebnisse ermöglicht einen interaktiveren Informationsaustausch. Die APIs für beschleunigte Abfragen werden auch für [benutzerdefinierte Dashboards](../../dashboards/user-defined-dashboards.md) verwendet.
 
-Bevor Sie mit diesem Handbuch fortfahren, stellen Sie sicher, dass Sie die [Handbuch zur Query Service-API](./getting-started.md) , um die Query Service-API erfolgreich zu verwenden.
+Bevor Sie mit diesem Handbuch fortfahren, stellen Sie sicher, dass Sie das [Handbuch zur Abfrage-Service-API](./getting-started.md) gelesen und verstanden haben, um die Abfrage-Service-API erfolgreich verwenden zu können.
 
 ## Erste Schritte
 
-Die Data Distiller-SKU ist erforderlich, um den Abfrage-beschleunigten Store zu verwenden. Bitte beachten Sie die Dokumentation zu [Packaging](../packages.md), [Leitlinien](../guardrails.md#query-accelerated-store) und [Lizenzierung](../data-distiller/licence-usage.md), die sich auf die Data Distiller SKU bezieht. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich bitte an den Adobe-Support, um weitere Informationen zu erhalten.
+Die Data Distiller SKU ist erforderlich, um den abfragebeschleunigten Speicher zu verwenden. Bitte beachten Sie die Dokumentation zu [Packaging](../packages.md), [Leitlinien](../guardrails.md#query-accelerated-store) und [Lizenzierung](../data-distiller/licence-usage.md), die sich auf die Data Distiller SKU bezieht. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich bitte an den Adobe-Support, um weitere Informationen zu erhalten.
 
-In den folgenden Abschnitten werden die API-Aufrufe beschrieben, die für den statuslosen Zugriff auf den Abfrage-beschleunigten Speicher über die Query Service-API erforderlich sind. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+In den folgenden Abschnitten werden die API-Aufrufe beschrieben, die für den statuslosen Zugriff auf den abfragebeschleunigten Speicher über die Abfrage-Service-API erforderlich sind. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
-## Beschleunigte Abfrage ausführen {#run-accelerated-query}
+## Ausführen einer beschleunigten Abfrage {#run-accelerated-query}
 
-Stellen Sie eine POST-Anfrage an die `/accelerated-queries` Endpunkt zum Ausführen einer beschleunigten Abfrage. Die Abfrage ist entweder direkt in der Anfrage-Payload enthalten oder wird mit einer Vorlagen-ID referenziert.
+Stellen Sie eine POST-Anfrage an den `/accelerated-queries`-Endpunkt, um eine beschleunigte Abfrage auszuführen. Die Abfrage ist entweder direkt in der Payload der Anfrage enthalten oder wird mit einer Vorlagen-ID referenziert.
 
 **API-Format**
 
@@ -34,7 +35,7 @@ POST /accelerated-queries
 
 >[!IMPORTANT]
 >
->Anforderungen an `/accelerated-queries` -Endpunkt erfordert entweder eine SQL-Anweisung ODER eine Vorlagen-ID, aber nicht beide. Die Übermittlung beider Elemente in einer Anfrage führt zu einem Fehler.
+>Anfragen an den `/accelerated-queries`-Endpunkt erfordern entweder eine SQL-Anweisung ODER eine Vorlagen-ID, aber nicht beides. Die Übermittlung beider Elemente in einer Anfrage führt zu einem Fehler.
 
 Mit der folgenden Anfrage wird eine SQL-Abfrage im Anfragetext an den beschleunigten Speicher gesendet.
 
@@ -56,7 +57,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 '
 ```
 
-Diese alternative Anfrage sendet eine Vorlagen-ID im Anfrageinhalt an den beschleunigten Speicher. Die SQL aus der entsprechenden Vorlage wird zum Abfragen des beschleunigten Stores verwendet.
+Diese alternative Anfrage sendet eine Vorlagen-ID im Anfragetext an den beschleunigten Speicher. Die SQL aus der entsprechenden Vorlage wird zum Abfragen des beschleunigten Speichers verwendet.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
@@ -78,19 +79,19 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| `dbName` | Der Name der Datenbank, an die Sie eine beschleunigte Abfrage durchführen. Der Wert für `dbName` sollte das Format `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`. Die bereitgestellte Datenbank muss im beschleunigten Speicher vorhanden sein. Andernfalls wird die Anfrage zu einem Fehler führen. Sie müssen auch sicherstellen, dass die Variable `x-sandbox-name` Kopfzeile und Sandbox-Name in `dbName` auf dieselbe Sandbox verweisen. |
-| `sql` | Eine SQL-Anweisungszeichenfolge. Die maximal zulässige Größe beträgt 1000000 Zeichen. |
-| `templateId` | Die eindeutige Kennung einer Abfrage, die bei einer POST-Anfrage an die `/templates` -Endpunkt. |
+| `dbName` | Der Name der Datenbank, für die Sie eine beschleunigte Abfrage stellen. Der Wert für `dbName` sollte das Format `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}` haben. Die angegebene Datenbank muss im beschleunigten Speicher vorhanden sein. Andernfalls führt die Anfrage zu einem Fehler. Sie müssen zudem sicherstellen, dass die Kopfzeile `x-sandbox-name` und der Sandbox-Name in `dbName` auf dieselbe Sandbox verweisen. |
+| `sql` | Eine SQL-Anweisungszeichenfolge. Die maximal zulässige Größe beträgt 1.000.000 Zeichen. |
+| `templateId` | Die eindeutige Kennung einer Abfrage, die bei einer POST-Anfrage an den `/templates`-Endpunkt erstellt und als Vorlage gespeichert wird. |
 | `name` | Ein optionaler benutzerfreundlicher, beschreibender Name für die beschleunigte Abfrage. |
-| `description` | Ein optionaler Kommentar zum Zweck der Abfrage, der anderen Benutzern beim Verständnis des Zwecks hilft. Die maximal zulässige Größe beträgt 1.000 Byte. |
+| `description` | Ein optionaler Kommentar zur Zielsetzung der Abfrage, der anderen Benutzenden hilft, den Zweck zu verstehen. Die maximal zulässige Größe beträgt 1.000 Byte. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit dem von der Abfrage erstellten Ad-hoc-Schema zurück.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit dem von der Abfrage erstellten Ad-hoc-Schema zurückgegeben.
 
 >[!NOTE]
 >
->Die folgende Antwort wurde aus Gründen der Kürze abgeschnitten.
+>Die folgende Antwort wurde zur Vereinfachung gekürzt.
 
 ```json
 {
@@ -204,10 +205,9 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit dem von der Abfrage erste
 | Eigenschaft | Beschreibung |
 |---|---|
 | `queryId` | Der ID-Wert der erstellten Abfrage. |
-| `resultsMeta` | Dieses Objekt enthält die Metadaten für jede Spalte, die in den Ergebnissen zurückgegeben wird, damit Benutzer den Namen und den Typ jeder Spalte kennen. |
-| `resultsMeta._adhoc` | Ein Ad-hoc-Experience-Datenmodell (XDM)-Schema mit Feldern, die nur für die Verwendung durch einen einzigen Datensatz benannt wurden. |
+| `resultsMeta` | Dieses Objekt enthält die Metadaten für jede Spalte, die in den Ergebnissen zurückgegeben wird, damit Benutzende den Namen und den Typ jeder Spalte kennen. |
+| `resultsMeta._adhoc` | Ein Ad-hoc-Schema des Experience-Datenmodells (XDM) mit Feldern, die für die Verwendung durch nur einen einzigen Datensatz mit einem Namespace versehen wurden. |
 | `resultsMeta._adhoc.type` | Der Datentyp des Ad-hoc-Schemas. |
-| `resultsMeta._adhoc.meta:xdmType` | Dies ist ein systemgenerierter Wert für den XDM-Feldtyp. Weitere Informationen zu den verfügbaren Typen finden Sie in der Dokumentation unter [Verfügbare XDM-Typen](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html). |
+| `resultsMeta._adhoc.meta:xdmType` | Dies ist ein systemgenerierter Wert für den XDM-Feldtyp. Weitere Informationen zu den verfügbaren Typen finden Sie in der Dokumentation zu den [verfügbaren XDM-Typen](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html?lang=de). |
 | `resultsMeta._adhoc.properties` | Dies sind die Spaltennamen des abgefragten Datensatzes. |
 | `resultsMeta._adhoc.results` | Dies sind die Zeilennamen des abgefragten Datensatzes. Sie spiegeln jede der zurückgegebenen Spalten wider. |
-
