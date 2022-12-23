@@ -1,50 +1,50 @@
 ---
 title: Abfragevorlagen
-description: Abfragevorlagen sind wiederverwendbare gespeicherte SQL-Abfragen, die von anderen Benutzern wiederverwendet werden können, um Zeit und Mühe zu sparen. Sie können mit dem Abfrage-Editor oder der Query Service-API erstellt werden und sind für alle Experience Platform-Datensätze verfügbar.
+description: Abfragevorlagen sind wiederverwendbare gespeicherte SQL-Abfragen, die von anderen Benutzenden wiederverwendet werden können, um Zeit und Mühe zu sparen. Sie können mit dem Abfrage-Editor oder der Abfrage-Service-API erstellt werden und sind für alle Experience Platform-Datensätze verfügbar.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
 source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '436'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 # Abfragevorlagen
 
-Mit Adobe Experience Platform Query Service können Sie SQL-Code in Form von Abfragevorlagen speichern und wiederverwenden. Vorlagen ersparen Aufwand, da häufig ausgeführte Aufgaben nicht wiederholt werden. Sie können Vorlagen in Ihrem Unternehmen freigeben und die Abfragewerte einfach ändern, ohne auf die zugrunde liegende SQL zugreifen oder sie verstehen zu müssen.
+Mit dem Abfrage-Service von Adobe Experience Platform können Sie SQL-Code in Form von Abfragevorlagen speichern und wiederverwenden. Vorlagen sparen Arbeit, da häufig ausgeführte Aufgaben nicht wiederholt werden müssen. Sie können Vorlagen in Ihrer Organisation freigeben und die Abfragewerte einfach ändern, ohne auf die zugrunde liegende SQL zugreifen oder sie verstehen zu müssen.
 
-Dieses Dokument enthält die Informationen, die zum Erstellen von Abfragevorlagen in Query Service erforderlich sind.
+Dieses Dokument enthält die Informationen, die zum Erstellen von Abfragevorlagen im Abfrage-Service erforderlich sind.
 
 ## Voraussetzungen
 
-Sie müssen über die [!UICONTROL Abfragen verwalten] Zugriff auf den Abfrage-Editor und die Anzeige des Abfragen-Dashboards in der Platform-Benutzeroberfläche aktiviert. Die Berechtigung wird über die Adobe aktiviert [Admin Console](https://adminconsole.adobe.com/). Wenden Sie sich an den Administrator Ihrer Organisation, wenn Sie keine Administratorberechtigungen haben, um diese Berechtigung zu aktivieren. Weitere Informationen finden Sie in der Dokumentation zur Zugriffskontrolle für [Vollständige Anweisungen zum Hinzufügen von Berechtigungen über die Admin Console](../../access-control/home.md).
+Die Berechtigung [!UICONTROL Abfragen verwalten] muss aktiviert sein, damit Sie auf den Abfrage-Editor zugreifen und das Abfrage-Dashboard in der Platform-Benutzeroberfläche anzeigen können. Die Berechtigung wird über die Adobe [Admin Console](https://adminconsole.adobe.com/) aktiviert. Bitte wenden Sie sich an den Admin Ihrer Organisation, wenn Sie keine Administratorberechtigungen haben, um diese Berechtigung zu aktivieren. In der Dokumentation zur Zugriffskontrolle finden Sie [vollständige Anweisungen zum Hinzufügen von Berechtigungen über die Admin Console](../../access-control/home.md).
 
 ## Abfragevorlage erstellen
 
-Sie können Abfragevorlagen auf zwei Arten erstellen, indem Sie entweder eine POST-Anfrage an die Query Service-API richten `query-templates` -Endpunkt oder durch Schreiben, Benennen und Speichern einer Abfrage im Abfrage-Editor.
+Sie können Abfragevorlagen auf zwei Arten erstellen: entweder indem Sie eine POST-Anfrage an den `query-templates`-Endpunkt der Abfrage-Service-API stellen, oder indem Sie eine Abfrage über den Abfrage-Editor schreiben, benennen und speichern.
 
-### Verwenden Sie den Abfrage-Editor, um eine Abfrage zu erstellen und als Vorlage zu speichern.
+### Erstellen und Speichern einer Abfrage als Vorlage mithilfe des Abfrage-Editors
 
-In der Dokumentation finden Sie Anweisungen zur Verwendung des Abfrage-Editors für [schreiben](./user-guide.md#query-authoring) und [Abfragen speichern](./user-guide.md#saving-queries). Nachdem Sie Ihre Abfrage benannt und gespeichert haben, kann sie als Abfragevorlage aus dem [!UICONTROL Vorlagen] Registerkarte.
+In der Dokumentation finden Sie Anweisungen dazu, wie Sie mit dem Abfrage-Editor [Abfragen schreiben](./user-guide.md#query-authoring) und [speichern](./user-guide.md#saving-queries) können. Nachdem Sie Ihre Abfrage benannt und gespeichert haben, kann sie als Abfragevorlage über die Registerkarte [!UICONTROL Vorlagen] wiederverwendet werden.
 
-Wählen Sie im Arbeitsbereich Abfragen der Platform-Benutzeroberfläche die Option **[!UICONTROL Vorlagen]** , um die Liste der verfügbaren gespeicherten Abfragen anzuzeigen.
+Wählen Sie im Arbeitsbereich „Abfragen“ der Platform-Benutzeroberfläche die Option **[!UICONTROL Vorlagen]**, um die Liste der verfügbaren gespeicherten Abfragen anzuzeigen.
 
-![Der Arbeitsbereich &quot;Abfragen&quot;mit der Registerkarte &quot;Vorlagen&quot;wurde hervorgehoben.](../images/ui/query-templates/query-templates.png)
+![Der Arbeitsbereich „Abfragen“ mit hervorgehobener Registerkarte „Vorlagen“.](../images/ui/query-templates/query-templates.png)
 
-Um relevante Vorlageninformationen zu finden, wählen Sie eine beliebige Abfragevorlage aus der verfügbaren Liste aus, um den Detailbereich zu öffnen.
+Um relevante Vorlageninformationen zu finden, klicken Sie auf eine beliebige Abfragevorlage aus der verfügbaren Liste, um das Detailbedienfeld zu öffnen.
 
-![Das Detailbedienfeld im Arbeitsbereich &quot;Abfragen&quot;mit hervorgehobener Abfrage-ID.](../images/ui/query-templates/details-panel.png)
+![Das Detailbedienfeld im Arbeitsbereich „Abfragen“ mit hervorgehobener Abfrage-ID.](../images/ui/query-templates/details-panel.png)
 
-### Verwenden der Query Service-API zum Erstellen einer Vorlage
+### Erstellen einer Vorlage mithilfe der Abfrage-Service-API
 
-Anweisungen finden Sie in der Dokumentation zu [Erstellung einer Abfragevorlage](../api/query-templates.md#create-a-query-template) Verwendung der Query Service-API. Die Details einer neu erstellten Abfragevorlage sind im Antworttext enthalten.
+In der Dokumentation finden Sie Anweisungen dazu, wie Sie mit der Abfrage-Service-API [eine Abfragevorlage erstellen](../api/query-templates.md#create-a-query-template). Die Details einer neu erstellten Abfragevorlage sind im Antworttext enthalten.
 
 >[!NOTE]
 >
->Vorlagen, die mit der API erstellt wurden, sind auch auf der Registerkarte Query Service-Vorlagen der Platform-Benutzeroberfläche sichtbar.
+>Vorlagen, die mit der API erstellt wurden, sind auch auf der Registerkarte „Abfrage-Service-Vorlagen“ der Platform-Benutzeroberfläche sichtbar.
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments können Sie jetzt besser verstehen, wie Sie in Query Service Abfragevorlagen erstellen. Siehe [Übersicht über die Benutzeroberfläche](./overview.md)oder [Handbuch zur Query Service-API](../api/getting-started.md) , um mehr über die Funktionen von Query Service zu erfahren.
+Durch das Lesen dieses Dokuments können Sie jetzt besser verstehen, wie Sie im Abfrage-Service Abfragevorlagen erstellen. Weitere Informationen über die Funktionen des Abfrage-Services finden Sie in der [Benutzeroberflächen-Übersicht](./overview.md) oder im [Handbuch zur Abfrage-Service-API](../api/getting-started.md).
 
-Siehe [Endpunktleitfaden für geplante Abfragen](../api/scheduled-queries.md) , um zu erfahren, wie Sie Abfragen mithilfe der API planen, oder die [Anleitung zum Abfrage-Editor](./user-guide.md#scheduled-queries) für die Benutzeroberfläche.
+Weitere Informationen zum Planen von Abfragen mithilfe der API finden Sie im [Handbuch zu Endpunkten für geplante Abfragen](../api/scheduled-queries.md) oder im [Handbuch zum Abfrage-Editor](./user-guide.md#scheduled-queries) für die Benutzeroberfläche.
