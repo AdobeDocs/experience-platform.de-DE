@@ -3,15 +3,15 @@ title: Anzeigen von konfigurierten Dashboards
 description: Zeigen Sie eine Liste der konfigurierten Dashboards Ihrer Organisation in der Experience Platform-Benutzeroberfläche an.
 exl-id: b1fdb1aa-2d09-4c21-9c84-be379f34a9b7
 source-git-commit: bc3db67b5b9e3bfb98571541d6e4dd2ca19b3303
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '202'
-ht-degree: 65%
+ht-degree: 100%
 
 ---
 
 # Anzeigen von konfigurierten Dashboards
 
-Wenn Ihr Unternehmen über mehrere Dashboards in Adobe Experience Platform verfügt, können Sie den Dashboard-Bestand in der Benutzeroberfläche (UI) überprüfen.
+Wenn Ihre Organisation über mehrere Dashboards in Adobe Experience Platform verfügt, können Sie das Inventar aller Dashboards innerhalb der Benutzeroberfläche (UI) sehen.
 
 Um die Dashboards anzuzeigen, die von Ihrer Organisation konfiguriert wurden, wählen Sie in der linken Navigationsleiste **[!UICONTROL Dashboards]** und dann die Registerkarte **[!UICONTROL Durchsuchen]** aus.
 
@@ -25,6 +25,6 @@ Sie können ein einzelnes Dashboard anzeigen, indem Sie seinen Namen aus der Lis
 
 Wenn das Dashboard ausgewählt wird, wird es entweder in der Platform-Benutzeroberfläche oder in einem vollständig integrierten Anwendungs-Arbeitsbereich geöffnet, in dem Sie sich mit den erforderlichen Zugangsdaten anmelden müssen.
 
-## Benutzerdefinierte Dashboards erstellen
+## Erstellen benutzerdefinierter Dashboards
 
-Mit Adobe Experience Platform-Dashboards können Sie benutzerdefinierte Dashboards erstellen und verwalten, in denen Sie benutzerspezifische Widgets erstellen, hinzufügen und bearbeiten können, um für Ihr Unternehmen relevante Schlüsselmetriken zu visualisieren. Siehe [Benutzerhandbuch zu benutzerdefinierten Dashboards](./user-defined-dashboards.md) für vollständige Anweisungen zum Erstellen und Konfigurieren von benutzerdefinierten Dashboards.
+Mit Adobe Experience Platform-Dashboards können Sie benutzerdefinierte Dashboards erstellen und verwalten, in denen Sie maßgeschneiderte Widgets erstellen, hinzufügen und bearbeiten können, um für Ihre Organisation relevante Schlüsselmetriken zu visualisieren. Vollständige Anweisungen zum Erstellen und Konfigurieren von benutzerdefinierten Dashboards finden Sie im [Handbuch zu benutzerdefinierten Dashboards](./user-defined-dashboards.md).
