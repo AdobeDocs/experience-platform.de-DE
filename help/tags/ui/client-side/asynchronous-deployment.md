@@ -3,9 +3,9 @@ title: Asynchrone Implementierung
 description: Erfahren Sie, wie Sie Tag-Bibliotheken von Adobe Experience Platform asynchron auf Ihrer Website bereitstellen.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1079'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 94%
 >[!CONTEXTUALHELP]
 >id="platform_tags_asynchronous_deployment"
 >title="Asynchrone Implementierung"
->abstract="Wenn diese Option aktiviert ist und dieses Skript-Tag analysiert wird, beginnt der Browser mit dem Laden der JavaScript-Datei. Anstatt jedoch darauf zu warten, dass die Bibliothek geladen und ausgeführt wird, wird der Rest des Dokuments analysiert und gerendert. Dies kann die Webseitenleistung verbessern, hat jedoch wichtige Auswirkungen auf die Ausführung bestimmter Regeln. Einzelheiten finden Sie in der Dokumentation."
+>abstract="Wenn diese Option aktiviert ist, beginnt der Browser beim Parsen dieses Skript-Tags mit dem Laden der JavaScript-Datei, aber anstatt darauf zu warten, dass die Bibliothek geladen und ausgeführt wird, fährt er mit dem Parsen und Rendern des restlichen Dokuments fort. Dies kann die Leistung der Web-Seite verbessern, hat jedoch wichtige Auswirkungen auf die Ausführung bestimmter Regeln. Einzelheiten finden Sie in der Dokumentation."
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-Performance und blockierungsfreie Implementierung der von unseren Produkten benötigten JavaScript-Bibliotheken sind für Adobe Experience Cloud-Anwender zunehmend wichtig. Tools wie [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) empfehlen, dass die Benutzer die Art und Weise der Bereitstellung der Bibliotheken auf ihrer Site ändern. Dieser Artikel erklärt, wie Sie die Adobe-JavaScript-Bibliotheken asynchron verwenden können.
+Performance und blockierungsfreie Implementierung der von unseren Produkten benötigten JavaScript-Bibliotheken sind für Adobe Experience Cloud-Anwender zunehmend wichtig. Tools wie [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) empfehlen, dass die Benutzer die Art und Weise der Bereitstellung der Adobe Bibliotheken auf ihrer Site ändern. Dieser Artikel erklärt, wie Sie die Adobe-JavaScript-Bibliotheken asynchron verwenden können.
 
 ## Synchron und asynchron im Vergleich
 
@@ -32,7 +32,7 @@ Häufig werden Bibliotheken synchron im `<head>`-Tag einer Seite geladen. Beispi
 <script src="example.js"></script>
 ```
 
-Standardmäßig analysiert der Browser das Dokument, erreicht diese Zeile und ruft dann die JavaScript-Datei vom Server ab. Der Browser wartet, bis die Datei zurückgegeben wird, analysiert sie und führt sie aus. Schließlich wird die Analyse des übrigen HTML-Dokuments fortgesetzt.
+Standardmäßig analysiert der Browser das Dokument, erreicht diese Zeile und ruft dann die JavaScript-Datei vom Server ab. Der Browser wartet, bis die Datei zurückgegeben wird, analysiert die JavaScript-Datei und führt sie aus. Schließlich wird die Analyse des übrigen HTML-Dokuments fortgesetzt.
 
 Wenn der Parser vor dem Rendern sichtbarer Inhalte zum `<script>`-Tag gelangt, wird die Inhaltsanzeige verzögert. Wenn die geladene JavaScript-Datei nicht absolut erforderlich ist, um Ihren Benutzern Inhalte anzuzeigen, müssen Ihre Besucher unnötig auf Inhalte warten. Je größer die Bibliothek, desto länger die Verzögerung. Deshalb kennzeichnen Benchmark-Tools für Webperformance, wie z. B. [!DNL Google PageSpeed]oder [!DNL Lighthouse], häufig synchron geladene Skripte.
 
@@ -72,8 +72,8 @@ Regel A → Regel B → Regel C → Regel D
 Obwohl die Reihenfolge immer durchgesetzt wird, können einige Regeln sofort nach dem Laden der Tag-Bibliothek ausgeführt werden, während andere möglicherweise erst später ausgeführt werden. Folgendes tritt auf, wenn die Tag-Bibliothek geladen wird:
 
 1. Regel A wird sofort ausgeführt.
-1. Wenn das Browserereignis `DOMContentLoaded` (DOM bereit) bereits eingetreten ist, werden Regeln B und C sofort ausgeführt. Andernfalls werden Regel B und Regel C später ausgeführt, wenn das Browser-Ereignis [`DOMContentLoaded`](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded) eintritt.
-1. Wenn das Browser-Ereignis [`load`](https://developer.mozilla.org/de-DE/docs/Web/Events/load) (Fenster geladen) bereits eingetreten ist, wird Regel D sofort ausgeführt. Andernfalls wird Regel D später ausgeführt, wenn das Browser-Ereignis [`load`](https://developer.mozilla.org/en-US/docs/Web/Events/load) eintritt. Beachten Sie, dass – wenn Sie die Tag-Bibliothek gemäß Anweisungen installiert haben – der Ladevorgang der Tag-Bibliothek *immer* abgeschlossen wird, bevor das Browser-Ereignis [`load`](https://developer.mozilla.org/en-US/docs/Web/Events/load) auftritt.
+1. Wenn das Browserereignis `DOMContentLoaded` (DOM bereit) bereits eingetreten ist, werden Regeln B und C sofort ausgeführt. Andernfalls werden Regel B und Regel C später ausgeführt, wenn das Browser-Ereignis [`DOMContentLoaded`](https://developer.mozilla.org/de-DE/docs/Web/Events/DOMContentLoaded) eintritt.
+1. Wenn das Browser-Ereignis [`load`](https://developer.mozilla.org/de-DE/docs/Web/Events/load) (Fenster geladen) bereits eingetreten ist, wird Regel D sofort ausgeführt. Andernfalls wird Regel D später ausgeführt, wenn das Browser-Ereignis [`load`](https://developer.mozilla.org/de-DE/docs/Web/Events/load) eintritt. Beachten Sie, dass – wenn Sie die Tag-Bibliothek gemäß Anweisungen installiert haben – der Ladevorgang der Tag-Bibliothek *immer* abgeschlossen wird, bevor das Browser-Ereignis [`load`](https://developer.mozilla.org/de-DE/docs/Web/Events/load) auftritt.
 
 Beachten Sie beim Anwenden dieser Prinzipien auf Ihre eigene Website folgende Punkte:
 
