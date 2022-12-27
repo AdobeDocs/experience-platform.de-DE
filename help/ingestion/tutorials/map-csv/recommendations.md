@@ -9,7 +9,7 @@ ht-degree: 100%
 
 ---
 
-#  Zuordnen einer CSV-Datei zu einem XDM-Schema mithilfe der KI-generierten Empfehlungen (Beta)
+# Zuordnen einer CSV-Datei zu einem XDM-Schema mithilfe der KI-generierten Empfehlungen (Beta)
 
 >[!IMPORTANT]
 >
@@ -52,7 +52,7 @@ Bevor Sie fortfahren, können Sie optional die folgenden zusätzlichen Funktione
 | [!UICONTROL Datenflussdetails] | Geben Sie einen Namen und eine optionale Beschreibung für den Datenfluss ein, der die CSV-Daten in Platform einbringt. Dem Datenfluss wird beim Starten dieses Workflows automatisch ein Standardname zugewiesen. Das Ändern des Namens ist optional. |
 | [!UICONTROL Warnhinweise] | Wählen Sie aus einer Liste von [Warnhinweisen innerhalb des Produkts](../../../observability/alerts/overview.md) diejenigen aus, die Sie bezüglich des Status des Datenflusses erhalten möchten, nachdem er initiiert wurde. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Wenn Sie mit der Konfiguration des Datenflusses fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
 
