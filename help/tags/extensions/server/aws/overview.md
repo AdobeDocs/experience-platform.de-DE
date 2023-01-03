@@ -2,9 +2,9 @@
 title: Übersicht über die AWS-Erweiterung
 description: Erfahren Sie mehr über die AWS-Erweiterung für die Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: b4ff3dbc9c62dceefdf2b842cafa65132dde41fc
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '847'
 ht-degree: 8%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 8%
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
-[[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/) ist eine Cloud-Computing-Plattform, die eine breite Palette von Diensten anbietet, wie z. B. dezentrales Computing, Datenbankspeicherung, Inhaltsbereitstellung und Customer Relationship Management (CRM).
+[[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/) ist eine Cloud-Computing-Plattform, die eine breite Palette von Dienstleistungen anbietet, wie z. B. dezentrales Computing, Datenbankspeicherung, Inhaltsbereitstellung und SaaS-Integrationsdienste (Software-as-a-Service) für Customer Relationship Management (CRM) und Enterprise Resource Planning (ERP).
 
 Die [!DNL AWS] [Ereignisweiterleitung](../../../ui/event-forwarding/overview.md) Erweiterungsnutzungen [[!DNL Amazon Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/introduction.html) zum Senden von Ereignissen vom Adobe Experience Platform Edge Network an [!DNL AWS] zur weiteren Verarbeitung bestimmt. In diesem Handbuch wird beschrieben, wie Sie die Erweiterung installieren und ihre Funktionen in einer Ereignisweiterleitungsregel verwenden.
 
