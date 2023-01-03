@@ -5,10 +5,10 @@ title: Erstellen und Bearbeiten von Klassen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie Klassen in der Benutzeroberfläche von Experience Platform erstellen und bearbeiten.
 topic-legacy: user guide
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: c83b5616f46f6f7d752979fa66a66fad16f16102
+source-git-commit: 7b642744f12ec33ff45a4b41cdb57bfe37396a56
 workflow-type: tm+mt
-source-wordcount: '999'
-ht-degree: 4%
+source-wordcount: '893'
+ht-degree: 5%
 
 ---
 
@@ -50,10 +50,6 @@ Sie können jetzt beginnen [Hinzufügen von Feldern zur Klasse](#add-fields), da
 
 ## Vorhandene Klasse bearbeiten {#edit}
 
->[!IMPORTANT]
->
->Benutzerdefinierte Klassen, die nach dem 30. April 2022 erstellt wurden, können nicht direkt bearbeitet werden. Eine Korrektur befindet sich derzeit in der Entwicklung. Als Problemumgehung können Sie [Erstellen einer benutzerdefinierten Feldergruppe](./field-groups.md) und verwenden Sie es für jedes Schema erneut, das die benutzerdefinierte Klasse verwendet, die Sie erweitern möchten. Benutzerdefinierte Klassen, die vor dem 30. April 2022 erstellt wurden, sind von dieser Einschränkung nicht betroffen.
-
 >[!NOTE]
 >
 >Nur benutzerdefinierte Klassen, die von Ihrem Unternehmen definiert wurden, können vollständig bearbeitet und angepasst werden. Für von Adobe definierte Hauptklassen können nur die Anzeigenamen für ihre Felder im Kontext einzelner Schemas bearbeitet werden. Siehe Abschnitt zu [Bearbeiten von Anzeigenamen für Schemafelder](./schemas.md#display-names) für Details.
@@ -73,10 +69,6 @@ Die [!DNL Schema Editor] angezeigt, wobei die Struktur des Schemas auf der Arbei
 ![](../../images/ui/resources/classes/edit.png)
 
 ## Felder zu einer Klasse hinzufügen {#add-fields}
-
->[!IMPORTANT]
->
->Benutzerdefinierte Klassen, die nach dem 30. April 2022 erstellt wurden, können nicht direkt bearbeitet werden. Eine Korrektur befindet sich derzeit in der Entwicklung. Als Problemumgehung können Sie [Erstellen einer benutzerdefinierten Feldergruppe](./field-groups.md) und verwenden Sie es für jedes Schema erneut, das die benutzerdefinierte Klasse verwendet, die Sie erweitern möchten. Benutzerdefinierte Klassen, die vor dem 30. April 2022 erstellt wurden, sind von dieser Einschränkung nicht betroffen.
 
 Sobald Sie über ein Schema verfügen, das eine benutzerdefinierte Klasse verwendet, öffnen Sie im [!UICONTROL Schema Editor]können Sie damit beginnen, der Klasse Felder hinzuzufügen. Um ein neues Feld hinzuzufügen, wählen Sie die **plus (+)** neben dem Namen des Schemas.
 
