@@ -5,7 +5,7 @@ title: Zustimmungsverarbeitung in Adobe Experience Platform
 topic-legacy: getting started
 description: Erfahren Sie, wie Sie in Adobe Experience Platform mithilfe des Adobe 2.0-Standards Zustimmungssignale von Kunden verarbeiten.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 1%

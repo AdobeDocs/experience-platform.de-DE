@@ -3,10 +3,10 @@ keywords: Experience Platform;Zendesk;Quellen;Connectoren;Quell-Connectoren;Sour
 title: Erstellen einer Zendesk-Quellverbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Zendesk-Quellverbindung erstellen.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: 795c98fb555f79afd7a7035a23a9989cc734a1e1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '797'
-ht-degree: 32%
+ht-degree: 36%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 32%
 
 >[!NOTE]
 >
->Die [!DNL Zendesk] -Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
+>Die [!DNL Zendesk]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-gekennzeichneten Quellen.
 
 In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Zendesk] Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche.
 
@@ -25,7 +25,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 * [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
    * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemas vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
    * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
@@ -72,7 +72,7 @@ Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und
 
 ![neu](../../../../images/tutorials/create/zendesk/new.png)
 
-### Auswählen von Daten
+### Daten auswählen
 
 Sobald Ihre Quelle authentifiziert ist, wird die Seite in eine interaktive Schemastruktur aktualisiert, in der Sie die Hierarchie Ihrer Daten untersuchen und untersuchen können. Wählen Sie **[!UICONTROL Weiter]** aus, um fortzufahren.
 
@@ -80,7 +80,7 @@ Sobald Ihre Quelle authentifiziert ist, wird die Seite in eine interaktive Schem
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie sich authentifiziert und eine Quellverbindung zwischen Ihrer [!DNL Zendesk] -Konto und -Plattform. Sie können jetzt mit dem nächsten Tutorial fortfahren und [Erstellen eines Datenflusses, um Kundenerfolgsdaten in Platform zu bringen](../../dataflow/customer-success.md).
+In diesem Tutorial haben Sie eine Quellverbindung zwischen Ihrem [!DNL Zendesk]-Konto und Platform authentifiziert und hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [Erstellen eines Datenflusses, um Kundenerfolgsdaten in Platform zu bringen](../../dataflow/customer-success.md).
 
 ## Weitere Ressourcen
 

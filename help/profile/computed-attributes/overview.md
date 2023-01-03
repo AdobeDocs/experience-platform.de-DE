@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Berechnete Attribute sind Funktionen zum Aggregieren von Daten auf Ereignisebene in Profilattributen. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 47%
@@ -16,7 +16,7 @@ ht-degree: 47%
 
 >[!IMPORTANT]
 >
->Die Funktion für berechnete Attribute ist derzeit alphanumerisch und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
+>Die Funktion für berechnete Attribute ist derzeit alphanumerisch und steht nicht allen Benutzern zur Verfügung. Dokumentation und Funktionalitäten können sich ändern.
 
 Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignisebene in Attribute auf Profilebene aggregiert werden. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können.
 
@@ -26,7 +26,7 @@ Dieses Handbuch hilft Ihnen, die Rolle berechneter Attribute in Adobe Experience
 
 ## Berechnete Attribute
 
-Mit Adobe Experience Platform können Sie Daten aus mehreren Quellen einfach importieren und zusammenführen, um sie zu generieren [!DNL Real-time Customer Profiles]. Jedes Profil enthält wichtige Daten zu einer Person, wie z. B. ihre Kontaktdaten, Präferenzen und den Kaufverlauf, sodass eine 360-Grad-Ansicht des Kunden entsteht.
+Mit Adobe Experience Platform können Sie Daten aus mehreren Quellen einfach importieren und zusammenführen, um sie zu generieren [!DNL Real-Time Customer Profiles]. Jedes Profil enthält wichtige Daten zu einer Person, wie z. B. ihre Kontaktdaten, Präferenzen und den Kaufverlauf, sodass eine 360-Grad-Ansicht des Kunden entsteht.
 
 Manche der im Profil erfassten Daten sind beim direkten Lesen der Datenfelder leicht verständlich (z. B. „Vorname“), während bei anderen Daten mehrere Berechnungen oder andere Felder und Werte erforderlich sind, um die Daten zu generieren (z. B. „Lebenszeitkaufsumme“). Damit diese Daten auf einen Blick leichter zu verstehen sind, [!DNL Platform] ermöglicht die Erstellung berechneter Attribute, die diese Verweise und Berechnungen automatisch ausführen und den Wert im entsprechenden Feld zurückgeben.
 

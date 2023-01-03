@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '717'
-ht-degree: 98%
+ht-degree: 90%
 
 ---
 
@@ -20,7 +20,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
-- [[!DNL Real-time Customer Profile]](#profile)
+- [[!DNL Real-Time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
@@ -55,7 +55,7 @@ Weitere Informationen finden Sie in [Ziele – Übersicht](../../destinations/ho
 
 ## Echtzeit-Kundenprofil {#profile}
 
-Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Das Echtzeit-Kundenprofil liefert eine ganzheitliche Sicht auf jeden einzelnen Kunden, indem es Daten aus Online- und Offline-Kanälen ebenso wie aus CRMs und Drittanbieter-Datenquellen und anderen Kanälen miteinander kombiniert. Mit [!DNL Profile] können Sie Ihre unterschiedlichen Kundendaten in einer zentralen Ansicht zusammenführen, die eine aussagekräftige, im Zeitverlauf gezeichnete Darstellung jeder Kundeninteraktion bietet.
+Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Mit dem Echtzeit-Kundenprofil können Sie eine ganzheitliche Ansicht jedes einzelnen Kunden anzeigen, die Daten aus mehreren Kanälen kombiniert, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. Mit [!DNL Profile] können Sie Ihre unterschiedlichen Kundendaten in einer zentralen Ansicht zusammenführen, die eine aussagekräftige, im Zeitverlauf gezeichnete Darstellung jeder Kundeninteraktion bietet.
 
 **Neue Funktionen**
 
@@ -64,7 +64,7 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 | Löschen eines Datensatzes aus dem Profilspeicher | Wenn Sie einen Datensatz aus Experience Platform Data Lake löschen, wird er automatisch auch aus dem Profilspeicher gelöscht. Sie müssen nicht mehr den Vorgangs-API-Endpunkt von Profile System verwenden, um eine Löschanfrage zu erstellen und den Datensatz aus dem Profilspeicher zu löschen. Weitere Informationen finden Sie im [Handbuch zum Vorgangs-API-Endpunkt von Profile System](../../profile/api/profile-system-jobs.md). |
 | Geschätzte Anzahl der IDs pro Namespace für ein bestimmtes Segment | Die Vorschau-API meldet nun Folgendes für die Anzahl der geschätzten Profile:<ul><li>Gesamtanzahl der geschätzten Profile in einem Segment für einen bestimmten Namespace.</li><li>Gesamtanzahl der geschätzten Profil im Profil-Vereinigungsschema für einen bestimmten Namespace.</li></ul>Weitere Informationen finden Sie im [Handbuch zum Profilvorschau-API-Endpunkt](../../profile/api/preview-sample-status.md). |
 
-Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile]-Daten, finden Sie im [Überblick über das Echtzeit-Kundenprofil](../../profile/home.md).
+Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile] Daten, lesen Sie bitte zunächst die [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 

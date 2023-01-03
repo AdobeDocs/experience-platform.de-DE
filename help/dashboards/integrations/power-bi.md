@@ -2,22 +2,22 @@
 title: Power BI-Berichtsvorlagen für Platform-Dashboards
 description: Verwenden Sie Berichtvorlagen, um mithilfe von Power BI Experience Platform-Daten zu analysieren.
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-source-git-commit: 36fc6f996b4ffd33f542eb9be4fbc50f3fcdd1cb
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1472'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
 # Power BI-Berichtsvorlagen für Dashboards
 
-Mit der Berichtsvorlagenfunktion von Power BI können Sie ansprechende Berichte erstellen, die mit Daten aus Adobe Experience Platform gefüllt sind. Der vereinfachte Installationsprozess installiert automatisch Standard-Widgets für Echtzeit-Kundenprofil, Segmentierung und Ziele. Die Installation verbindet Power BI auch mit Ihren Datenmodellen, sodass Sie Ihre Berichtsvorlagen einfach anpassen und erweitern können. Diese Berichte können für Ihr gesamtes Unternehmen freigegeben werden, ohne dass die Empfänger Zugangsdaten für Ihre IMS-Organisation in Platform benötigen.
+Mit der Berichtsvorlagenfunktion von Power BI können Sie ansprechende Berichte erstellen, die mit Daten aus Adobe Experience Platform gefüllt sind. Der optimierte Installationsprozess installiert automatisch Standard-Widgets für Echtzeit-Kundenprofil, Segmentierung und Ziele. Die Installation verbindet Power BI auch mit Ihren Datenmodellen, sodass Sie Ihre Berichtsvorlagen einfach anpassen und erweitern können. Diese Berichte können für Ihr gesamtes Unternehmen freigegeben werden, ohne dass die Empfänger Zugangsdaten für Ihre IMS-Organisation in Platform benötigen.
 
 In diesem Dokument erfahren Sie, wie Sie Adobe Experience Platform mit der Power BI-Anwendung verbinden und mithilfe von Berichtsvorlagen wichtige, aus Platform-Daten gewonnene Einblicke mit externen Benutzern teilen können.
 
 ## Erste Schritte
 
-Bevor Sie mit diesem Tutorial fortfahren, sollten Sie ein gutes Verständnis über die [Schemakomposition](../../xdm/schema/composition.md) in Experience Platform haben und darüber, wie Attribute über das [Vereinigungsschema](../../xdm/schema/composition.md#union) in das Echtzeit-Kundenprofil eingefügt werden.
+Bevor Sie mit diesem Tutorial fortfahren, sollten Sie über gute Kenntnisse zu [Schemakomposition](../../xdm/schema/composition.md) in Experience Platform und wie Attribute im Echtzeit-Kundenprofil über das [Vereinigungsschema](../../xdm/schema/composition.md#union).
 
 Um die Power BI-Anwendungsintegration installieren zu können, müssen die Benutzer zunächst die folgenden Platform-Berechtigungen erhalten haben:
 

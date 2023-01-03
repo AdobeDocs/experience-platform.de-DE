@@ -5,10 +5,10 @@ title: Benutzerhandbuch zu Attribution AI
 topic-legacy: User guide
 description: Dieses Dokument dient als Leitfaden für die Interaktion mit Attribution AI in der Benutzeroberfläche von Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: cec2449525eb067fa7915073e929f9693a45575a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2960'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -54,7 +54,7 @@ Als Nächstes wird die Seite zum Einrichten von Attribution AI angezeigt, auf de
 
 ![Benennen einer Instanz](./images/user-guide/naming_instance.png)
 
-## Auswählen von Daten {#select-data}
+## Daten auswählen {#select-data}
 
 <!-- https://www.adobe.com/go/aai-select-data -->
 
@@ -266,7 +266,7 @@ Nachdem Sie Ihr Schulungsfenster ausgewählt haben, wählen Sie **[!UICONTROL Be
 
 ![Setup abgeschlossen](./images/user-guide/instance_setup_complete.png)
 
-## Governance-Strategien
+## Governance-Richtlinien
 
 Sobald Sie den Workflow durchlaufen haben, um eine Instanz zu erstellen und die Konfiguration des Modells zu übermitteln, wird die [Richtliniendurchsetzung](/help/data-governance/enforcement/auto-enforcement.md) überprüft, ob Verstöße vorliegen. Wenn ein Richtlinienverstoß auftritt, wird ein Popup angezeigt, das angibt, dass eine oder mehrere Richtlinien verletzt wurden. Dadurch soll sichergestellt werden, dass Ihre Datenvorgänge und Marketing-Aktionen in Platform mit Datennutzungsrichtlinien konform sind.
 
@@ -282,7 +282,7 @@ Das Popup-Fenster enthält spezifische Informationen zum Verstoß. Sie können d
 
 [Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Platform, mit der Administrierende den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen steuern können.](../../../help/access-control/abac/overview.md) Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. eine Bezeichnung, die einem Schemafeld oder Segment hinzugefügt wird. Administrierende definieren Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten.
 
-Mit dieser Funktion können Sie Experience-Datenmodell (XDM)-Schemafelder mit Bezeichnungen beschriften, die Organisations- oder Datennutzungsbereiche definieren. Parallel dazu können Administratoren die Benutzeroberfläche zur Verwaltung von Benutzern und Rollen verwenden, um Zugriffsrichtlinien für XDM-Schemafelder zu definieren und den Zugriff, der Benutzern oder Benutzergruppen (internen, externen oder Drittanbieterbenutzern) gewährt wird, besser zu verwalten. Darüber hinaus ermöglicht die attributbasierte Zugriffskontrolle Administrierenden die Verwaltung des Zugriffs auf bestimmte Segmente.
+Mit der attributbasierten Zugriffssteuerung können Sie Schemafelder des Experience-Datenmodells (XDM) mit Bezeichnungen versehen, die Organisations- oder Datennutzungsbereiche definieren. Parallel dazu können Admins die Benutzeroberfläche zur Verwaltung von Benutzenden und Rollen verwenden, um Zugriffsrichtlinien zu definieren, die XDM-Schemafelder abdecken, und den Zugriff, der Benutzenden oder Gruppen von Benutzenden (internen, externen oder Dritten) gewährt wird, besser verwalten. Darüber hinaus ermöglicht die attributbasierte Zugriffskontrolle Admins die Verwaltung des Zugriffs auf bestimmte Segmente.
 
 Mithilfe der attributbasierten Zugriffskontrolle können Administratoren den Zugriff der Benutzer auf sowohl sensible personenbezogene Daten (EPPD) als auch auf persönlich identifizierbare Informationen (PII) in allen Platform-Workflows und -Ressourcen steuern. Administratoren können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
 

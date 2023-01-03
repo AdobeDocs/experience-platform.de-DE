@@ -2,10 +2,11 @@
 keywords: Experience Platform;Startseite;beliebte Themen;
 title: (Beta) Erstellen einer Adobe Workfront-Quellverbindung über die Benutzeroberfläche
 description: In diesem Tutorial erfahren Sie, wie Sie eine Adobe Workfront-Quellverbindung erstellen, um Ihre Workfront-Daten mithilfe der Benutzeroberfläche an Adobe Experience Platform zu übertragen.
-source-git-commit: 1af0863766e29c599e02f2a553d237bc62f455d2
-workflow-type: ht
+exl-id: f82e852a-c9d1-4ecc-bc54-2b39d3b4cc1e
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+workflow-type: tm+mt
 source-wordcount: '771'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -26,7 +27,7 @@ In diesem Tutorial erfahren Sie, wie Sie eine Adobe Workfront-Quellverbindung er
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experience Platform voraus:
 
 * [Experience-Datenmodell (XDM)-System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
-* [Echtzeit-Kundenprofil](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+* [Echtzeit-Kundenprofil](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus mehreren Quellen basiert.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 ## Erstellen einer Workfront-Quellverbindung über die Benutzeroberfläche

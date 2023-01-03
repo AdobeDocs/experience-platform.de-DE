@@ -6,8 +6,8 @@ topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial wird beschrieben, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine CSV-Datei einem vorhandenen XDM-Schema zuordnen.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: 160a75a1811afa002717e167887550715eee5471
-workflow-type: ht
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 100%
 
@@ -121,4 +121,4 @@ Nachdem Ihre CSV-Datei erstellt und zugeordnet wurde, können Sie die Daten übe
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich eine einfache CSV-Datei einem XDM-Schema zugeordnet und in [!DNL Platform] aufgenommen. Diese Daten können jetzt von nachgelagerten [!DNL Platform]-Services wie [!DNL Real-time Customer Profile] verwendet werden. Weitere Informationen finden Sie in der Übersicht von [[!DNL Real-time Customer Profile]](../../../profile/home.md).
+In diesem Tutorial haben Sie erfolgreich eine einfache CSV-Datei einem XDM-Schema zugeordnet und in [!DNL Platform] aufgenommen. Diese Daten können jetzt von nachgelagerten [!DNL Platform]-Services wie [!DNL Real-Time Customer Profile] verwendet werden. Weitere Informationen finden Sie in der Übersicht von [[!DNL Real-Time Customer Profile]](../../../profile/home.md).

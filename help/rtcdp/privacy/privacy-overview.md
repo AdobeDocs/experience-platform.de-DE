@@ -3,7 +3,7 @@ keywords: Data Governance rtcdp;rtcdp Data Governance;Echtzeit-Data Profil Data 
 title: Datenschutz in Real-time Customer Data Platform
 description: Mit Adobe Real-time Customer Data Platform können Sie die Einhaltung von Datenschutzbestimmungen bei Ihren Datenvorgängen optimieren.
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 6%
@@ -26,7 +26,7 @@ Rechtliche Datenschutzbestimmungen wie die [!DNL General Data Protection Regulat
 
 ## Opt-out-Funktionen
 
-[!DNL Real-Time CDP] ermöglicht es Kunden, die Aufnahme ihrer personenbezogenen Daten in Segmentierungsanwendungsfälle abzuwählen. Die Opt-out-Voreinstellungen von Kunden werden erfasst und gespeichert von [!DNL Real-time Customer Profile]und können erzwungen werden, indem Benutzer ausgeschlossen werden, die sich mit boolescher Logik (&quot;AND NOT&quot;) in der Segmenteigenschaft von einem Segment abgemeldet haben.
+[!DNL Real-Time CDP] ermöglicht es Kunden, die Aufnahme ihrer personenbezogenen Daten in Segmentierungsanwendungsfälle abzuwählen. Die Opt-out-Voreinstellungen von Kunden werden erfasst und gespeichert von [!DNL Real-Time Customer Profile]und können erzwungen werden, indem Benutzer ausgeschlossen werden, die sich mit boolescher Logik (&quot;AND NOT&quot;) in der Segmenteigenschaft von einem Segment abgemeldet haben.
 
 Siehe Dokument unter [Berücksichtigung von Opt-out-Anfragen](../../segmentation/consents.md) Weitere Informationen finden Sie in der Dokumentation zu Adobe Experience Platform Segmentation Service .
 

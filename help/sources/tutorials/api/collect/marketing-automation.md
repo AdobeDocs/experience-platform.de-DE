@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Dieses Tutorial behandelt die Schritte zum Abrufen von Daten aus einem Marketing-Automatisierungssystem und zum Übertragen dieser Daten in Adobe Experience Platform mithilfe von Quell-Connectoren und APIs.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-source-git-commit: 2d3fbbb5c743b8e172e3e64bda31ebf3278b4f5b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1329'
-ht-degree: 95%
+ht-degree: 94%
 
 ---
 
@@ -656,7 +656,7 @@ Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie einen Quell-Connector erstellt, um entsprechend einem Zeitplan Daten aus einem Marketing-Automatisierungssystem zu erfassen. Eingehende Daten können jetzt von nachgelagerten Platform-Services wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+In diesem Tutorial haben Sie einen Quell-Connector erstellt, um entsprechend einem Zeitplan Daten aus einem Marketing-Automatisierungssystem zu erfassen. Eingehende Daten können jetzt von nachgelagerten Platform-Services wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 * [Übersicht über das Echtzeit-Kundenprofil](../../../../profile/home.md)
 * [Übersicht über Data Science Workspace](../../../../data-science-workspace/home.md)

@@ -5,7 +5,7 @@ title: API-Endpunkt für Segmentaufträge
 topic-legacy: developer guide
 description: Der Endpunkt für Segmentaufträge in der Segmentation Service-API von Adobe Experience Platform ermöglicht Ihnen die programmgesteuerte Verwaltung von Segmentaufträgen für Ihr Unternehmen.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: cb28f52029ac63e4d2c7c210c6199adcd855cf5a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1511'
 ht-degree: 24%
@@ -14,7 +14,7 @@ ht-degree: 24%
 
 # Endpunkt der Segmentaufträge
 
-Ein Segmentauftrag ist ein asynchroner Prozess, der ein Zielgruppensegment bei Bedarf erstellt. Sie verweist auf eine [Segmentdefinition](./segment-definitions.md)sowie [Zusammenführungsrichtlinien](../../profile/api/merge-policies.md) Steuern der [!DNL Real-time Customer Profile] Führt überlappende Attribute über Ihre Profilfragmente hinweg zusammen. Nach erfolgreichem Abschluss eines Segmentauftrags können Sie verschiedene Informationen über das Segment sammeln, z. B. Fehler, die bei der Verarbeitung aufgetreten sind, oder die endgültige Größe Ihrer Zielgruppe.
+Ein Segmentauftrag ist ein asynchroner Prozess, der ein Zielgruppensegment bei Bedarf erstellt. Sie verweist auf eine [Segmentdefinition](./segment-definitions.md)sowie [Zusammenführungsrichtlinien](../../profile/api/merge-policies.md) Steuern der [!DNL Real-Time Customer Profile] Führt überlappende Attribute über Ihre Profilfragmente hinweg zusammen. Nach erfolgreichem Abschluss eines Segmentauftrags können Sie verschiedene Informationen über das Segment sammeln, z. B. Fehler, die bei der Verarbeitung aufgetreten sind, oder die endgültige Größe Ihrer Zielgruppe.
 
 Dieses Handbuch enthält Informationen zum besseren Verständnis von Segmentaufträgen und umfasst Beispiel-API-Aufrufe zum Ausführen grundlegender Aktionen mit der API.
 

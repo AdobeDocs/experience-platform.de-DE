@@ -4,7 +4,7 @@ title: Einverständnis und Voreinstellungsfeldgruppe
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Schemafeldergruppe "Einwilligungen und Voreinstellungen".
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -182,7 +182,7 @@ Siehe Tutorial zu [Erstellen eines Schemas in der Benutzeroberfläche](https://w
 
 >[!IMPORTANT]
 >
->Wenn Sie Einwilligungsdaten an senden möchten [!DNL Real-time Customer Profile]müssen Sie eine [!DNL Profile]-aktiviertes Schema basierend auf dem [!DNL XDM Individual Profile] -Klasse, die die [!UICONTROL Einverständnis und Voreinstellungen] Feldergruppe. Der Datensatz, den Sie auf Grundlage dieses Schemas erstellen, muss auch für [!DNL Profile]. Spezifische Schritte zu [!DNL Real-time Customer Profile] Anforderungen für Schemas und Datensätze.
+>Wenn Sie Einwilligungsdaten an senden möchten [!DNL Real-Time Customer Profile]müssen Sie eine [!DNL Profile]-aktiviertes Schema basierend auf dem [!DNL XDM Individual Profile] -Klasse, die die [!UICONTROL Einverständnis und Voreinstellungen] Feldergruppe. Der Datensatz, den Sie auf Grundlage dieses Schemas erstellen, muss auch für [!DNL Profile]. Spezifische Schritte zu [!DNL Real-Time Customer Profile] Anforderungen für Schemas und Datensätze.
 >
 >Darüber hinaus müssen Sie sicherstellen, dass Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass sie die Datensätze priorisieren, die die neuesten Zustimmungs- und Voreinstellungsdaten enthalten, damit Kundenprofile korrekt aktualisiert werden. Siehe Übersicht unter [Zusammenführungsrichtlinien](../../../rtcdp/profile/merge-policies.md) für weitere Informationen.
 

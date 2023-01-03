@@ -4,7 +4,7 @@ title: Handbuch zur Segmentierungsdienst-API
 topic-legacy: guide
 description: Mit der Segmentation Service-API können Entwickler Segmentierungsvorgänge in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: 6133c3127aaf10243d5472540c29125155c99d7b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 9%
@@ -13,7 +13,7 @@ ht-degree: 9%
 
 # Handbuch zur Segmentierungsdienst-API
 
-[!DNL Adobe Experience Platform Segmentation Service] ermöglicht Ihnen das Erstellen von Segmenten und das Generieren von Zielgruppen in [!DNL Adobe Experience Platform] mit Ihren [!DNL Real-time Customer Profile]-Daten.
+[!DNL Adobe Experience Platform Segmentation Service] ermöglicht Ihnen das Erstellen von Segmenten und das Generieren von Zielgruppen in [!DNL Adobe Experience Platform] mit Ihren [!DNL Real-Time Customer Profile]-Daten.
 
 Die [!DNL Segmentation Service] Die API bietet mehrere Endpunkte, mit denen Sie Ihre Segmentierungsvorgänge in programmgesteuert verwalten können. [!DNL Experience Platform]. Dieses Übersichtsdokument enthält allgemeine Einführungsoptionen für jeden dieser Endpunkte und Links zu den zugehörigen Endpunkthandbüchern für Details. Lesen Sie vor dem Lesen der einzelnen Endpunkthandbücher die Informationen unter [Erste Schritte](./getting-started.md) für wichtige Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel-API-Aufrufen und mehr.
 

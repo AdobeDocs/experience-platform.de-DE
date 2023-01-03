@@ -2,7 +2,7 @@
 title: Abgeleitete Attribute
 description: Abgeleitete Attribute bieten eine praktische Möglichkeit, um Attribute Ihrer Wahl zu generieren, die bei jeder regulären Platzierung aktualisiert und optional in Ihren Echtzeit-Kundenprofildaten veröffentlicht werden können. Dieses Dokument bietet einen Überblick darüber, wie Sie mit Query Service abgeleitete Attribute zur Verwendung mit Ihren Profildaten erstellen können.
 exl-id: 5d52b268-e2a3-411c-8242-3aa32e759937
-source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Abgeleitete Attribute
 
-Die abgeleitete Attributfunktion bietet eine praktische Möglichkeit, Attribute Ihrer Wahl aus anderen im Data Lake verfügbaren Informationen zu generieren. Diese Attribute können in jedem normalen Cadence aktualisiert und optional in Ihren Echtzeit-Kundenprofildaten veröffentlicht werden. Abgeleitete Attribute decken die Notwendigkeit ab, komplexe Attribute wie Dezimalzahl, Perzentil und Quartil über einfachere Attribute wie max, count und average zu erstellen. Diese Attribute können speziell für einen einzelnen Benutzer oder für eine Geschäftsentität berechnet werden. Auf diese Weise können Sie Attribute ableiten, die direkt für eine Kennung akkreditiert werden können, z. B. E-Mail-Adressen, Geräte-IDs und Telefonnummern, und Attribute ableiten, die indirekt mit diesem Benutzer oder Geschäftsprofil verknüpft sind.
+Die abgeleitete Attributfunktion bietet eine praktische Möglichkeit, Attribute Ihrer Wahl aus anderen im Data Lake verfügbaren Informationen zu generieren. Diese Attribute können in jedem regulären Cadence aktualisiert und optional in Ihren Echtzeit-Kundenprofildaten veröffentlicht werden. Abgeleitete Attribute decken die Notwendigkeit ab, komplexe Attribute wie Dezimalzahl, Perzentil und Quartil über einfachere Attribute wie max, count und average zu erstellen. Diese Attribute können speziell für einen einzelnen Benutzer oder für eine Geschäftsentität berechnet werden. Auf diese Weise können Sie Attribute ableiten, die direkt für eine Kennung akkreditiert werden können, z. B. E-Mail-Adressen, Geräte-IDs und Telefonnummern, und Attribute ableiten, die indirekt mit diesem Benutzer oder Geschäftsprofil verknüpft sind.
 
 Abgeleitete Attribute werden für eine Vielzahl von Anwendungsfällen benötigt, wenn Daten im Data Lake analysiert werden. Diese Daten können dann für die Verwendung im Echtzeit-Kundenprofil markiert und in nachgelagerten Anwendungsfällen wie der Erstellung hochfokussierter Zielgruppen verwendet werden. Einige potenzielle Anwendungsfälle für diese Funktion könnten sein:
 

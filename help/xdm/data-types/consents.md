@@ -4,7 +4,7 @@ title: Datentyp "Einwilligungen und Voreinstellungen"
 description: Der Datentyp Einverständnis für Datenschutz, Personalisierung und Marketing-Voreinstellungen soll die Erfassung von Kundenberechtigungen und -präferenzen unterstützen, die von CMPs (Consent Management Platform) und anderen Quellen aus Ihren Datenvorgängen generiert werden.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 65ad76bb4a5318b03d79d68d3c7e030d7878cf30
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2058'
 ht-degree: 3%
@@ -263,7 +263,7 @@ Siehe Tutorial zu [Erstellen eines Schemas in der Benutzeroberfläche](https://w
 
 >[!IMPORTANT]
 >
->Wenn Sie Einwilligungsdaten an senden möchten [!DNL Real-time Customer Profile]müssen Sie eine [!DNL Profile]-aktiviertes Schema basierend auf dem [!DNL XDM Individual Profile] -Klasse, die die [!UICONTROL Einverständnis und Voreinstellungen] Datentyp. Der Datensatz, den Sie auf Grundlage dieses Schemas erstellen, muss auch für [!DNL Profile]. Spezifische Schritte zu [!DNL Real-time Customer Profile] Anforderungen für Schemas und Datensätze.
+>Wenn Sie Einwilligungsdaten an senden möchten [!DNL Real-Time Customer Profile]müssen Sie eine [!DNL Profile]-aktiviertes Schema basierend auf dem [!DNL XDM Individual Profile] -Klasse, die die [!UICONTROL Einverständnis und Voreinstellungen] Datentyp. Der Datensatz, den Sie auf Grundlage dieses Schemas erstellen, muss auch für [!DNL Profile]. Spezifische Schritte zu [!DNL Real-Time Customer Profile] Anforderungen für Schemas und Datensätze.
 >
 >Darüber hinaus müssen Sie sicherstellen, dass Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass sie die Datensätze priorisieren, die die neuesten Zustimmungs- und Voreinstellungsdaten enthalten, damit Kundenprofile korrekt aktualisiert werden. Siehe Übersicht unter [Zusammenführungsrichtlinien](../../rtcdp/profile/merge-policies.md) für weitere Informationen.
 
@@ -284,7 +284,7 @@ In der folgenden Tabelle sind die für `val`:
 | `y` | Ja (Opt-in) | Der Kunde hat sich für die Zustimmung oder Präferenz entschieden. Mit anderen Worten, sie **do** Zustimmung zur Verwendung ihrer Daten, wie durch die betreffende Einwilligung oder Präferenz angegeben. |
 | `n` | Nein (Opt-out) | Der Kunde hat sich von der Zustimmung oder Präferenz abgemeldet. Mit anderen Worten, sie **nicht** Zustimmung zur Verwendung ihrer Daten, wie durch die betreffende Einwilligung oder Präferenz angegeben. |
 | `p` | Ausstehende Überprüfung | Das System hat noch keinen endgültigen Zustimmungs- oder Präferenzwert erhalten. Dies wird meist im Rahmen einer Zustimmung verwendet, die eine zweistufige Überprüfung erfordert. Wenn sich ein Kunde beispielsweise für den Erhalt von E-Mails entscheidet, wird diese Zustimmung auf `p` bis er einen Link in einer E-Mail auswählt, um zu überprüfen, ob er die richtige E-Mail-Adresse angegeben hat; an diesem Punkt würde die Zustimmung auf `y`.<br><br>Wenn dieses Einverständnis oder diese Voreinstellung keinen zweistufigen Überprüfungsprozess verwendet, wird die `p` choice kann stattdessen verwendet werden, um anzugeben, dass der Kunde noch nicht auf die Einverständnisaufforderung reagiert hat. Sie können beispielsweise den Wert automatisch auf `p` auf der ersten Seite einer Website, bevor der Kunde auf die Einwilligungsaufforderung reagiert hat. In Rechtsordnungen, die keine ausdrückliche Zustimmung erfordern, können Sie damit auch angeben, dass der Kunde sich nicht ausdrücklich abgemeldet hat (d. h., die Zustimmung wird angenommen). |
-| `u` | „Unbekannt“ | Die Einwilligungs- oder Präferenzinformationen des Kunden sind unbekannt. |
+| `u` | Unbekannt | Die Einwilligungs- oder Präferenzinformationen des Kunden sind unbekannt. |
 | `dy` | Standardwert Ja (Opt-in) | Der Kunde hat selbst keinen Zustimmungswert angegeben und wird standardmäßig als Opt-in (&quot;Ja&quot;) behandelt. Mit anderen Worten, die Zustimmung wird angenommen, bis der Kunde etwas Anderes angibt.<br><br>Beachten Sie, dass Sie alle Profile, die Standardwerte enthalten, manuell aktualisieren müssen, wenn die Datenschutzrichtlinien Ihres Unternehmens Änderungen an den Standardeinstellungen einiger oder aller Benutzer zur Folge haben. |
 | `dn` | Standardwert Nein (Opt-out) | Der Kunde hat selbst keinen Zustimmungswert angegeben und wird standardmäßig als Opt-out (&quot;Nein&quot;) behandelt. Mit anderen Worten, es wird angenommen, dass der Kunde die Zustimmung verweigert hat, bis er etwas Anderes angibt.<br><br>Beachten Sie, dass Sie alle Profile, die Standardwerte enthalten, manuell aktualisieren müssen, wenn die Datenschutzrichtlinien Ihres Unternehmens Änderungen an den Standardeinstellungen einiger oder aller Benutzer zur Folge haben. |
 | `LI` | Rechtliches Interesse | Das berechtigte geschäftliche Interesse, diese Daten für den angegebenen Zweck zu sammeln und zu verarbeiten, überwiegt den potenziellen Schaden, den sie für die Person darstellt. |

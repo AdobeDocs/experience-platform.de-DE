@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial werden die Schritte dazu erläutert, wie mithilfe der Schema Registry-API ein Schema unter Verwendung einer Standardklasse erstellt wird.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2422'
 ht-degree: 50%
@@ -25,8 +25,8 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
    * [Grundlagen der Schemakomposition](../schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemakomposition.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die [Entwicklerhandbuch](../api/getting-started.md) für wichtige Informationen, die Sie benötigen, um erfolgreich Aufrufe an die [!DNL Schema Registry] API. Diese umfassen Ihre `{TENANT_ID}`, das Konzept sogenannter „Container“ und die für Anfragen erforderlichen Kopfzeilen, von denen insbesondere die Accept-Kopfzeile und deren mögliche Werte wichtig sind.
 
@@ -955,7 +955,7 @@ Bei Ausführung einer GET-Anfrage zum Nachschlagen des Schemas wird der Verweis 
 
 ### Definieren eines Identitätsdeskriptors
 
-Schemas werden zur Aufnahme von Daten in [!DNL Experience Platform]. Genutzt werden diese Daten schließlich von einer Vielzahl von Services, um eine umfassende, zentrale Sicht auf einzelne Personen zu schaffen. Für diesen Prozess wichtige Felder können als Identität klassifiziert und die in diesen Feldern aufgenommenen Daten in das Identitätsdiagramm der jeweiligen Person integriert werden. Auf die Diagrammdaten kann dann zugegriffen werden durch [[!DNL Real-time Customer Profile]](../../profile/home.md) und andere [!DNL Experience Platform] -Services, um eine zusammengesetzte Ansicht jedes einzelnen Kunden bereitzustellen.
+Schemas werden zur Aufnahme von Daten in [!DNL Experience Platform]. Genutzt werden diese Daten schließlich von einer Vielzahl von Services, um eine umfassende, zentrale Sicht auf einzelne Personen zu schaffen. Für diesen Prozess wichtige Felder können als Identität klassifiziert und die in diesen Feldern aufgenommenen Daten in das Identitätsdiagramm der jeweiligen Person integriert werden. Auf die Diagrammdaten kann dann zugegriffen werden durch [[!DNL Real-Time Customer Profile]](../../profile/home.md) und andere [!DNL Experience Platform] -Services, um eine zusammengesetzte Ansicht jedes einzelnen Kunden bereitzustellen.
 
 Zu den Feldern, die üblicherweise als &quot;Identität&quot;markiert sind, gehören: E-Mail-Adresse, Telefonnummer [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=de), CRM-ID oder andere eindeutige ID-Felder.
 
@@ -1016,9 +1016,9 @@ Bei erfolgreicher Anfrage wird der HTTP-Status-Code 201 (Erstellung bestätigt)
 }
 ```
 
-## Schema zur Verwendung in aktivieren [!DNL Real-time Customer Profile] {#profile}
+## Schema zur Verwendung in aktivieren [!DNL Real-Time Customer Profile] {#profile}
 
-Durch Hinzufügen des Tags &quot;union&quot;zum `meta:immutableTags` -Attribut können Sie das &quot;Loyalty Members&quot;-Schema zur Verwendung durch [!DNL Real-time Customer Profile].
+Durch Hinzufügen des Tags &quot;union&quot;zum `meta:immutableTags` -Attribut können Sie das &quot;Loyalty Members&quot;-Schema zur Verwendung durch [!DNL Real-Time Customer Profile].
 
 Weitere Informationen zum Arbeiten mit Vereinigungsansichten finden Sie im Abschnitt zu [Vereinigungen](../api/unions.md) im [!DNL Schema Registry] Entwicklerhandbuch.
 

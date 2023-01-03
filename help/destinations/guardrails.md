@@ -5,10 +5,11 @@ solution: Experience Platform
 product: experience platform
 type: Documentation
 description: Erfahren Sie mehr über die Standardnutzung und die Ratenbeschränkungen für die Datenaktivierung.
-source-git-commit: 69496d2e00ce866413786160d4524cabd03ae350
-workflow-type: ht
+exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+workflow-type: tm+mt
 source-wordcount: '1198'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -33,7 +34,7 @@ In diesem Dokument gibt es zwei Arten von Standardbeschränkungen:
 
 ## Aktivierungsbeschränkungen {#activation-limits}
 
-Die folgenden Leitlinien enthalten empfohlene Beschränkungen für die Aktivierung von Echtzeit-Kundenprofildaten für Ziele.
+Die folgenden Limits bieten empfohlene Einschränkungen bei der Aktivierung von Echtzeit-Kundenprofildaten für Ziele.
 
 ### Allgemeine Aktivierungsleitlinien {#general-activation-guardrails}
 
@@ -121,5 +122,5 @@ Hier finden Sie Informationen zu Leitlinien für andere Experience Platform-Serv
 
 * Leitlinien für [Datenaufnahme](/help/ingestion/guardrails.md)
 * Leitlinien für [[!DNL Identity Service] Daten](/help/identity-service/guardrails.md)
-* Leitlinien für [[!DNL Real-time Customer Profile] Daten](/help/profile/guardrails.md)
+* Leitlinien für [[!DNL Real-Time Customer Profile] Daten](/help/profile/guardrails.md)
 * Leitlinien für [[!DNL Query Service] Daten](/help/query-service/guardrails.md)

@@ -5,7 +5,7 @@ title: Unions-API-Endpunkt
 description: Mit dem Endpunkt /Vereinigungen in der Schema Registry-API können Sie XDM-Vereinigungsschemas in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 topic-legacy: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '911'
 ht-degree: 47%
@@ -14,7 +14,7 @@ ht-degree: 47%
 
 # Unions-Endpunkt
 
-Vereinigungen (oder Vereinigungsansichten) sind systemgenerierte schreibgeschützte Schemas, die die Felder aller Schemas aggregieren, die dieselbe Klasse ([!DNL XDM ExperienceEvent] oder [!DNL XDM Individual Profile]) und aktiviert sind für [[!DNL Real-time Customer Profile]](../../profile/home.md).
+Vereinigungen (oder Vereinigungsansichten) sind systemgenerierte schreibgeschützte Schemas, die die Felder aller Schemas aggregieren, die dieselbe Klasse ([!DNL XDM ExperienceEvent] oder [!DNL XDM Individual Profile]) und aktiviert sind für [[!DNL Real-Time Customer Profile]](../../profile/home.md).
 
 In diesem Dokument werden wesentliche Konzepte für die Arbeit mit Vereinigungen in der Schema Registry-API beschrieben, einschließlich Beispielaufrufen für verschiedene Vorgänge. Weitere allgemeine Informationen zu Vereinigungen in XDM finden Sie im Abschnitt zu Vereinigungen in den [Grundlagen der Schema-Komposition](../schema/composition.md#union).
 

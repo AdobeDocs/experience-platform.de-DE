@@ -5,7 +5,7 @@ title: Handbuch zur Fehlerbehebung bei der Streaming-Erfassung
 topic-legacy: troubleshooting
 description: In diesem Dokument finden Sie Antworten auf häufig gestellte Fragen zur Streaming-Erfassung in Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 64%
@@ -46,9 +46,9 @@ Wenn synchrone Validierung am angeforderten Ort nicht unterstützt wird, wird ei
 
 [!DNL Experience Platform] unterstützt die sichere Datenerfassung. Wenn authentifizierte Datenerfassung aktiviert ist, müssen Clients ein JSON Web Token (JWT) und ihre IMS-Organisations-Kennung als Anfragekopfzeilen senden. Weitere Informationen zum Senden authentifizierter Daten an [!DNL Platform], siehe Handbuch zu [authentifizierte Datenerfassung](../tutorials/create-authenticated-streaming-connection.md).
 
-### Wie lange dauert das Streaming von Daten auf? [!DNL Real-time Customer Profile]?
+### Wie lange dauert das Streaming von Daten auf? [!DNL Real-Time Customer Profile]?
 
-Streaming-Ereignisse werden im Allgemeinen in [!DNL Real-time Customer Profile] in weniger als 60 Sekunden. Reale Latenzwerte können aber je nach Datenvolumen, Nachrichtengröße und Bandbreiteneinschränkungen davon abweichen.
+Streaming-Ereignisse werden im Allgemeinen in [!DNL Real-Time Customer Profile] in weniger als 60 Sekunden. Reale Latenzwerte können aber je nach Datenvolumen, Nachrichtengröße und Bandbreiteneinschränkungen davon abweichen.
 
 ### Kann ich in eine API-Anfrage mehrere Nachrichten einschließen?
 
@@ -94,9 +94,9 @@ Die folgende JSON ist ein Beispielantwortobjekt für eine API-Anfrage mit zwei N
 }
 ```
 
-### Warum werden meine gesendeten Nachrichten nicht von [!DNL Real-time Customer Profile]?
+### Warum werden meine gesendeten Nachrichten nicht von [!DNL Real-Time Customer Profile]?
 
-Wenn [!DNL Real-time Customer Profile] eine Nachricht zurückweist, ist dies höchstwahrscheinlich auf falsche Identitätsinformationen zurückzuführen. Der Grund dafür kann sein, dass für eine Identität ein ungültiger Wert oder Namespace angegeben wurde.
+Wenn [!DNL Real-Time Customer Profile] eine Nachricht zurückweist, ist dies höchstwahrscheinlich auf falsche Identitätsinformationen zurückzuführen. Der Grund dafür kann sein, dass für eine Identität ein ungültiger Wert oder Namespace angegeben wurde.
 
 Es gibt zwei Arten von Identitäts-Namespaces: standardmäßige und benutzerdefinierte. Wenn Sie benutzerdefinierte Namespaces verwenden, stellen Sie sicher, dass der Namespace in registriert wurde. [!DNL Identity Service]. Weiterführende Informationen zur Verwendung von standardmäßigen und benutzerdefinierten Namespaces finden Sie in der [Übersicht zu Identitäts-Namespaces](../../identity-service/namespaces.md).
 

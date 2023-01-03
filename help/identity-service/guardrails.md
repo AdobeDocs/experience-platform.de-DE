@@ -3,10 +3,10 @@ keywords: Experience Platform; Identität; Identitätsdienst; Fehlerbehebung; Li
 title: Limits für Identity Service
 description: Dieses Dokument enthält Informationen zu Verwendung und Quotenbegrenzungen für Identity Service-Daten, die Sie bei der Optimierung Ihrer Verwendung des Identitätsdiagramms unterstützen.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 672d98135492350ab6e12eec51649e6e5a7e4923
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '490'
-ht-degree: 11%
+ht-degree: 15%
 
 ---
 
@@ -18,8 +18,8 @@ Dieses Dokument enthält Informationen zu Verwendung und Quotenbegrenzungen für
 
 Die folgenden Experience Platform-Dienste sind an der Modellierung von Identitätsdaten beteiligt:
 
-* [Identitäten](home.md): Bridge-Identitäten aus unterschiedlichen Datenquellen, während sie in Platform erfasst werden.
-* [[!DNL Real-time Customer Profile]](../profile/home.md): Erstellen Sie einheitliche Verbraucherprofile anhand von Daten aus mehreren Quellen.
+* [Identitäten](home.md): Überbrücken von Identitäten aus unterschiedlichen Datenquellen, während sie in Platform aufgenommen werden.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): Erstellen einheitlicher Verbraucherprofile anhand von Daten aus mehreren Quellen.
 
 ## Datenmodellbeschränkungen
 

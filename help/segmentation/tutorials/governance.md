@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Durchsetzen der Datennutzungskonformität für ein Zielgruppensegment mithilfe von APIs
 topic-legacy: tutorial
 type: Tutorial
-description: In diesem Tutorial werden die Schritte zur Durchsetzung der Datennutzungskonformität für Zielgruppensegmente von Echtzeit-Kundenprofilen mithilfe von APIs beschrieben.
+description: In diesem Tutorial werden die Schritte zum Durchsetzen der Datennutzungskonformität für Zielgruppensegmente des Echtzeit-Kundenprofils mithilfe von APIs beschrieben.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1368'
 ht-degree: 51%
@@ -15,15 +15,15 @@ ht-degree: 51%
 
 # Durchsetzen der Datennutzungskonformität für Zielgruppensegmente mithilfe von APIs
 
-In diesem Tutorial werden die Schritte zum Durchsetzen der Datennutzungskonformität für [!DNL Real-time Customer Profile] Zielgruppensegmente mithilfe von APIs verwenden.
+In diesem Tutorial werden die Schritte zum Durchsetzen der Datennutzungskonformität für [!DNL Real-Time Customer Profile] Zielgruppensegmente mithilfe von APIs verwenden.
 
 ## Erste Schritte
 
-Dieses Tutorial setzt ein Verständnis der folgenden Komponenten von voraus [!DNL Adobe Experience Platform]:
+Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von [!DNL Adobe Experience Platform] voraus.
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): [!DNL Real-time Customer Profile] ist ein generischer Suchentitätsspeicher und wird zum Verwalten von [!DNL Experience Data Model (XDM)] Daten in [!DNL Platform]. Das Profil führt Daten aus verschiedenen Unternehmensdaten-Assets zusammen und ermöglicht den Zugriff auf diese Daten in einer einheitlichen Darstellung.
-   - [Zusammenführungsrichtlinien](../../profile/api/merge-policies.md): Von [!DNL Real-time Customer Profile] um zu bestimmen, welche Daten unter bestimmten Bedingungen zu einer einheitlichen Ansicht zusammengeführt werden können. Zusammenführungsrichtlinien können für Data Governance-Zwecke konfiguriert werden.
-- [[!DNL Segmentation]](../home.md): How [!DNL Real-time Customer Profile] unterteilt eine große Gruppe von Einzelanwendern im Profilspeicher in kleinere Gruppen, die ähnliche Eigenschaften aufweisen und ähnlich auf Marketing-Strategien reagieren.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] ist ein generischer Suchentitätsspeicher und wird zum Verwalten von [!DNL Experience Data Model (XDM)] Daten in [!DNL Platform]. Das Profil führt Daten aus verschiedenen Unternehmensdaten-Assets zusammen und ermöglicht den Zugriff auf diese Daten in einer einheitlichen Darstellung.
+   - [Zusammenführungsrichtlinien](../../profile/api/merge-policies.md): Von [!DNL Real-Time Customer Profile] um zu bestimmen, welche Daten unter bestimmten Bedingungen zu einer einheitlichen Ansicht zusammengeführt werden können. Zusammenführungsrichtlinien können für Data Governance-Zwecke konfiguriert werden.
+- [[!DNL Segmentation]](../home.md): How [!DNL Real-Time Customer Profile] unterteilt eine große Gruppe von Einzelanwendern im Profilspeicher in kleinere Gruppen, die ähnliche Eigenschaften aufweisen und ähnlich auf Marketing-Strategien reagieren.
 - [Data Governance](../../data-governance/home.md): Data Governance bietet die Infrastruktur für die Kennzeichnung und Durchsetzung der Datennutzung unter Verwendung der folgenden Komponenten:
    - [Datennutzungsbezeichnungen](../../data-governance/labels/user-guide.md): Bezeichnungen, die zur Beschreibung von Datensätzen und Feldern in Bezug auf die Sensibilität, mit der die jeweiligen Daten verarbeitet werden sollen, verwendet werden.
    - [Datennutzungsrichtlinien](../../data-governance/policies/overview.md): Konfigurationen, die angeben, welche Marketing-Aktionen für Daten zulässig sind, die nach bestimmten Datennutzungsbezeichnungen kategorisiert sind.
@@ -58,7 +58,7 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 ## Suchen nach einer Zusammenführungsrichtlinie für eine Segmentdefinition {#merge-policy}
 
-Dieser Workflow beginnt mit dem Zugriff auf ein bekanntes Zielgruppensegment. Segmente, die für die Verwendung in [!DNL Real-time Customer Profile] enthalten eine Zusammenführungsrichtlinien-ID in ihrer Segmentdefinition. Diese Zusammenführungsrichtlinie enthält Informationen darüber, welche Datensätze in das Segment eingeschlossen werden sollen, die wiederum alle entsprechenden Beschriftungen zur Datennutzung enthalten.
+Dieser Workflow beginnt mit dem Zugriff auf ein bekanntes Zielgruppensegment. Segmente, die für die Verwendung in [!DNL Real-Time Customer Profile] enthalten eine Zusammenführungsrichtlinien-ID in ihrer Segmentdefinition. Diese Zusammenführungsrichtlinie enthält Informationen darüber, welche Datensätze in das Segment eingeschlossen werden sollen, die wiederum alle entsprechenden Beschriftungen zur Datennutzung enthalten.
 
 Verwenden der [!DNL Segmentation] API können Sie eine Segmentdefinition anhand ihrer Kennung nachschlagen, um die zugehörige Zusammenführungsrichtlinie zu finden.
 

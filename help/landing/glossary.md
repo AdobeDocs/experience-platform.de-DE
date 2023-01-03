@@ -5,7 +5,7 @@ title: Adobe Experience Platform-Glossar
 topic-legacy: getting started
 description: Ein Glossar wichtiger Experience Platform-Terminologie.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '7919'
 ht-degree: 4%
@@ -286,7 +286,7 @@ ht-degree: 4%
 
 **Identitäts-Namespace**: Ein Identitäts-Namespace definiert den Kontext einer Kennung wie eine E-Mail-Adresse oder eine CRM-ID.
 
-**Identity Service**: [!DNL Experience Platform Identity Service] ermöglicht die Erstellung und Verwaltung von Identitätstypen, sodass Sie Kundenidentitäten geräteübergreifend und kanalübergreifend verknüpfen können. Die Fähigkeit des Dienstes, Identitäten miteinander zu verknüpfen, ermöglicht es Echtzeit-Kundenprofil, eine vollständige Darstellung jedes einzelnen Kunden bereitzustellen.
+**Identity Service**: [!DNL Experience Platform Identity Service] ermöglicht die Erstellung und Verwaltung von Identitätstypen, sodass Sie Kundenidentitäten geräteübergreifend und kanalübergreifend verknüpfen können. Die Fähigkeit des Dienstes, Identitäten miteinander zu verknüpfen, ermöglicht es dem Echtzeit-Kundenprofil, eine vollständige Darstellung jedes einzelnen Kunden bereitzustellen.
 
 **Identitätszusammenfügung**: Beim Identitätszusammenfügen werden Datenfragmente identifiziert und zu einem vollständigen Profildatensatz zusammengeführt.
 
@@ -342,7 +342,7 @@ ht-degree: 4%
 
 **Marketing-Aktion**: Im Data Governance-Framework ist eine Marketing-Aktion (auch als Marketing-Anwendungsfall bezeichnet) eine Aktion, die ein Datennutzer von Experience Platform durchführt und bei der geprüft werden muss, ob gegen Datennutzungsrichtlinien verstoßen wurde.
 
-**Zusammenführungsmethode**: Beim Definieren einer Zusammenführungsrichtlinie mithilfe der Platform-Benutzeroberfläche gibt die Zusammenführungsmethode an, wie Datenfragmente bei einem Konflikt priorisiert werden sollen. Bei Verwendung der Echtzeit-Kundenprofil-API zur Definition einer Zusammenführungsrichtlinie wird die Zusammenführungsmethode mithilfe der `attributeMerge` -Objekt.
+**Zusammenführungsmethode**: Beim Definieren einer Zusammenführungsrichtlinie mithilfe der Platform-Benutzeroberfläche gibt die Zusammenführungsmethode an, wie Datenfragmente bei einem Konflikt priorisiert werden sollen. Wenn Sie die Echtzeit-Kundenprofil-API zum Definieren einer Zusammenführungsrichtlinie verwenden, wird die Zusammenführungsmethode mithilfe der `attributeMerge` -Objekt.
 
 **Zusammenführungsrichtlinie**: Zusammenführungsrichtlinien sind Regeln, mit denen Experience Platform bestimmt, wie Kundendatenfragmente aus mehreren Quellen kombiniert werden, um ein einzelnes Profil zu erstellen. Wenn ein Datenkonflikt auftritt, bestimmt die Zusammenführungsrichtlinie, welche Daten für die Aufnahme in das Profil priorisiert werden sollen.
 
@@ -522,9 +522,9 @@ ht-degree: 4%
 
 **Streaming-Erfassung**: Mit der Streaming-Erfassung können Sie Daten von Client- und Server-seitigen Geräten in Echtzeit an die Experience Platform senden.
 
-**Streaming-Segmentierung**: Streaming-Segmentierung ist ein fortlaufender Datenauswahlprozess, der Segmente als Reaktion auf Benutzeraktivitäten aktualisiert. Nachdem ein Segment erstellt und gespeichert wurde, wird die Segmentdefinition auf in [!DNL Real-time Customer Profile] eingehende Daten angewendet. Segmenthinzufügungen und -entfernungen werden regelmäßig verarbeitet, um sicherzustellen, dass Ihre Zielgruppe relevant bleibt.
+**Streaming-Segmentierung**: Streaming-Segmentierung ist ein fortlaufender Datenauswahlprozess, der Segmente als Reaktion auf Benutzeraktivitäten aktualisiert. Nachdem ein Segment erstellt und gespeichert wurde, wird die Segmentdefinition auf in [!DNL Real-Time Customer Profile] eingehende Daten angewendet. Segmenthinzufügungen und -entfernungen werden regelmäßig verarbeitet, um sicherzustellen, dass Ihre Zielgruppe relevant bleibt.
 
-**Systemansicht**: Die Systemansicht ist eine visuelle Darstellung von Quelldatensätzen, die durchlaufen werden. [!DNL Real-time Customer Profile] zu Zielen.
+**Systemansicht**: Die Systemansicht ist eine visuelle Darstellung von Quelldatensätzen, die durchlaufen werden. [!DNL Real-Time Customer Profile] zu Zielen.
 
 ## T
 
@@ -540,7 +540,7 @@ ht-degree: 4%
 
 ## U
 
-**Vereinigungsschema**: Ein Vereinigungsschema ist eine Konsolidierung von Schemas, die dieselbe Klasse teilen und für die [!DNL Real-time Customer Profile]. Für eine Organisation können mehrere Vereinigungsschemas vorhanden sein, es kann jedoch pro Klasse nur ein Vereinigungsschema geben.
+**Vereinigungsschema**: Ein Vereinigungsschema ist eine Konsolidierung von Schemas, die dieselbe Klasse teilen und für die [!DNL Real-Time Customer Profile]. Für eine Organisation können mehrere Vereinigungsschemas vorhanden sein, es kann jedoch pro Klasse nur ein Vereinigungsschema geben.
 
 ## V
 

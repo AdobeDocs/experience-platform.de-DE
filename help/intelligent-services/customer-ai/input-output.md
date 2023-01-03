@@ -6,10 +6,10 @@ title: Eingabe und Ausgabe in Customer AI
 topic-legacy: Getting started
 description: Erfahren Sie mehr über die erforderlichen Ereignisse, Eingaben und Ausgaben, die von Customer AI verwendet werden.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: e0e96a52e30f5c34e0695c3e291bed9b6c085e00
+source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
 workflow-type: tm+mt
 source-wordcount: '3195'
-ht-degree: 17%
+ht-degree: 15%
 
 ---
 
@@ -44,7 +44,7 @@ In der folgenden Tabelle sind einige häufig verwendete Begriffe in diesem Dokum
 | [Feldergruppen](../../xdm/schema/composition.md) | Eine Komponente, die ein oder mehrere Felder in einem Schema definiert. Feldergruppen erzwingen, wie ihre Felder in der Hierarchie des Schemas angezeigt werden, und weisen daher in jedem Schema, in dem sie enthalten sind, dieselbe Struktur auf. Feldergruppen sind nur mit bestimmten Klassen kompatibel, die durch ihre `meta:intendedToExtend` -Attribut. |
 | [Datentyp](../../xdm/schema/composition.md) | Eine Komponente, die auch ein oder mehrere Felder für ein Schema bereitstellen kann. Im Gegensatz zu Feldergruppen sind Datentypen jedoch nicht auf eine bestimmte Klasse beschränkt. Dadurch sind Datentypen flexibler, um allgemeine Datenstrukturen zu beschreiben, die über mehrere Schemas mit potenziell unterschiedlichen Klassen hinweg wiederverwendet werden können. Die in diesem Dokument beschriebenen Datentypen werden sowohl von den CEE- als auch von Adobe Analytics-Schemata unterstützt. |
 | Abwanderung | Eine Messung des Prozentsatzes der Konten, die ihre Abonnements stornieren oder nicht verlängern. Eine hohe Abwanderungsrate kann sich negativ auf den monatlichen wiederkehrenden Umsatz (MRR) auswirken und auch auf Unzufriedenheit mit einem Produkt oder einer Dienstleistung hinweisen. |
-| [Echtzeit-Kundenprofil](../../profile/home.md) | Das Echtzeit-Kundenprofil bietet ein zentralisiertes Kundenprofil für zielgerichtetes und personalisiertes Erlebnis-Management. Jedes Profil enthält Daten, die systemübergreifend aggregiert werden, sowie relevante, mit einem Zeitstempel versehene Ereignisse, an denen die entsprechende Person beteiligt ist und die in einem der Systeme stattfanden, die Sie in Verbindung mit Experience Platform verwenden. |
+| [Echtzeit-Kundenprofil](../../profile/home.md) | Das Echtzeit-Kundenprofil bietet ein zentralisiertes Kundenprofil für zielgerichtetes und personalisiertes Erlebnismanagement. Jedes Profil enthält Daten, die systemübergreifend aggregiert werden, sowie relevante, mit einem Zeitstempel versehene Ereignisse, an denen die entsprechende Person beteiligt ist und die in einem der Systeme stattfanden, die Sie in Verbindung mit Experience Platform verwenden. |
 
 ## Input-Daten von Customer AI
 
@@ -141,7 +141,7 @@ In diesem Abschnitt werden verschiedene Szenarien für Customer AI-Instanzen sow
 Die folgenden Ereignistypen sind für eine optimale Customer AI-Ausgabe mit diesem bestimmten Prognoseziel erforderlich. Es ist möglich, ein erforderliches Ereignis abhängig von Ihrem Prognoseziel auszuschließen. Das Ausschließen mehrerer Ereignisse kann jedoch zu schlechten Ergebnissen führen.
 
 - Reihenfolge
-- Checkouts
+- checkouts
 - purchases
 - webVisit
 - Suchen
@@ -159,7 +159,7 @@ Beliebige der übrigen [Ereignistypen](#standard-events) kann abhängig von der 
 Die folgenden Ereignistypen sind für eine optimale Customer AI-Ausgabe mit diesem bestimmten Prognoseziel erforderlich. Es ist möglich, ein erforderliches Ereignis abhängig von Ihrem Prognoseziel auszuschließen. Das Ausschließen mehrerer Ereignisse kann jedoch zu schlechten Ergebnissen führen.
 
 - Reihenfolge
-- Checkouts
+- checkouts
 - purchases
 - webVisit
 - Suchen
@@ -181,7 +181,7 @@ Beliebige der übrigen [Ereignistypen](#standard-events) kann abhängig von der 
 Die folgenden Ereignistypen sind für eine optimale Customer AI-Ausgabe mit diesem bestimmten Prognoseziel erforderlich. Es ist möglich, ein erforderliches Ereignis abhängig von Ihrem Prognoseziel auszuschließen. Das Ausschließen mehrerer Ereignisse kann jedoch zu schlechten Ergebnissen führen.
 
 - Reihenfolge
-- Checkouts
+- checkouts
 - purchases
 - webVisit
 - Suchen
@@ -199,7 +199,7 @@ Beliebige der übrigen [Ereignistypen](#standard-events) kann abhängig von der 
 Die folgenden Ereignistypen sind für eine optimale Customer AI-Ausgabe mit diesem bestimmten Prognoseziel erforderlich. Es ist möglich, ein erforderliches Ereignis abhängig von Ihrem Prognoseziel auszuschließen. Das Ausschließen mehrerer Ereignisse kann jedoch zu schlechten Ergebnissen führen.
 
 - Reihenfolge
-- Checkouts
+- checkouts
 - purchases
 - webVisit
 - Suchen
@@ -234,7 +234,7 @@ Beliebige der übrigen [Ereignistypen](#standard-events) kann abhängig von der 
 Die folgenden Ereignistypen sind für eine optimale Customer AI-Ausgabe mit diesem bestimmten Prognoseziel erforderlich. Es ist möglich, ein erforderliches Ereignis abhängig von Ihrem Prognoseziel auszuschließen. Das Ausschließen mehrerer Ereignisse kann jedoch zu schlechten Ergebnissen führen.
 
 - Reihenfolge
-- Checkouts
+- checkouts
 - purchases
 - webVisit
 - applicationCloses
@@ -287,7 +287,7 @@ Die folgende Tabelle beschreibt die verschiedenen Attribute, die in der Ausgabe 
 >[!NOTE]
 >
 > - Customer AI verwendet nur aktualisierte Daten für weitere Schulungen und Auswertungen. Ebenso verzichtet Customer AI bei der Anforderung, Daten zu löschen, auf die Verwendung der gelöschten Daten.
-> - Die Kunden-KI nutzt die Platform-Datensätze. Um Anfragen zu Verbraucherrechten zu unterstützen, die eine Marke erhalten kann, sollten Marken den Privacy Service von Platform nutzen, damit Verbraucher Anfragen zum Zugriff und zur Löschung ihrer Daten über den Data Lake, den Identity Service und das Echtzeit-Kundenprofil stellen können.
+> - Die Kunden-KI nutzt die Platform-Datensätze. Um Anfragen von Verbraucherrechten zu unterstützen, die eine Marke möglicherweise erhält, sollten Marken Platform Privacy Service verwenden, um Verbraucheranfragen auf Zugriff und Löschung zu übermitteln und um ihre Daten im Data Lake, Identity Service und Echtzeit-Kundenprofil zu entfernen.
 > - Alle Datensätze, die wir für die Eingabe/Ausgabe von Modellen verwenden, folgen den Platform-Richtlinien. Die Platform-Datenverschlüsselung gilt für Daten in Ruhezeit und während der Übertragung. Weitere Informationen zur [Datenverschlüsselung](../../../help/landing/governance-privacy-security/encryption.md) finden Sie in der Dokumentation
 
 

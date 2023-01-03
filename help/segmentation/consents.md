@@ -5,7 +5,7 @@ title: Einverständnis in Segmenten
 topic-legacy: overview
 description: Erfahren Sie, wie Sie die Zustimmungseinstellungen von Kunden für die Erfassung und Freigabe personenbezogener Daten in Segmentvorgängen berücksichtigen.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '675'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Einverständniserklärung in Segmenten
 
-Rechtliche Datenschutzbestimmungen wie die [!DNL California Consumer Privacy Act] (CCPA) bieten Verbrauchern das Recht, sich gegen die Erfassung oder Weitergabe personenbezogener Daten an Dritte zu entscheiden. Adobe Experience Platform bietet standardmäßige Experience-Datenmodell (XDM)-Komponenten, mit denen diese Voreinstellungen bezüglich der Kundenzustimmung in Echtzeit-Kundenprofildaten erfasst werden sollen.
+Rechtliche Datenschutzbestimmungen wie die [!DNL California Consumer Privacy Act] (CCPA) bieten Verbrauchern das Recht, sich gegen die Erfassung oder Weitergabe personenbezogener Daten an Dritte zu entscheiden. Adobe Experience Platform bietet standardmäßige XDM-Komponenten (Experience Data Model), mit denen diese Voreinstellungen bezüglich der Kundenzustimmung in Echtzeit-Kundenprofildaten erfasst werden sollen.
 
 Wenn ein Kunde die Freigabe seiner personenbezogenen Daten widerrufen oder verweigert hat, muss Ihr Unternehmen diese Voreinstellung beim Generieren von Zielgruppen für Marketingaktivitäten berücksichtigen. In diesem Dokument wird beschrieben, wie Sie mithilfe der Experience Platform-Benutzeroberfläche Kundenzustimmungswerte in Ihre Segmentdefinitionen integrieren.
 
@@ -23,8 +23,8 @@ Wenn ein Kunde die Freigabe seiner personenbezogenen Daten widerrufen oder verwe
 Die Einhaltung der Zustimmungswerte von Kunden erfordert ein Verständnis der verschiedenen [!DNL Adobe Experience Platform] beteiligte Dienste. Bevor Sie mit diesem Tutorial beginnen, sollten Sie mit den folgenden Diensten vertraut sein:
 
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten ordnet.
-* [[!DNL Real-time Customer Profile]](../profile/home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Ermöglicht das Erstellen von Zielgruppensegmenten aus [!DNL Real-time Customer Profile] Daten.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Ermöglicht das Erstellen von Zielgruppensegmenten aus [!DNL Real-Time Customer Profile] Daten.
 
 ## Einverständnisschemafelder
 

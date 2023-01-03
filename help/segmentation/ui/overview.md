@@ -5,7 +5,7 @@ title: Handbuch zur Benutzeroberfläche des Segmentierungsdienstes
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche zum Erstellen und Verwalten von Segmentdefinitionen.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2647'
 ht-degree: 18%
@@ -21,7 +21,7 @@ ht-degree: 18%
 Die Arbeit mit Segmentdefinitionen erfordert ein Verständnis der verschiedenen [!DNL Experience Platform] Dienste, die mit der Segmentierung verbunden sind. Bevor Sie dieses Benutzerhandbuch lesen, lesen Sie bitte die Dokumentation für folgende Dienste:
 
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] ermöglicht die Aufteilung der in [!DNL Experience Platform] die sich auf Einzelanwender (wie Kunden, Interessenten, Benutzer oder Organisationen) in kleinere Gruppen bezieht.
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Ermöglicht die Erstellung von Kundenprofilen durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, in die erfasst wird [!DNL Platform].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Platform] organisiert werden. Um die Segmentierung optimal zu nutzen, stellen Sie bitte sicher, dass Ihre Daten als Profile und Ereignisse gemäß dem [Best Practices für die Datenmodellierung](../../xdm/schema/best-practices.md).
 
@@ -156,7 +156,7 @@ Die Stichprobengröße der Prüfung hängt von der Gesamtanzahl der Entitäten i
 | 1 bis 20 Mio. | 1 Millionen |
 | Über 20 Millionen | 5 % des Gesamtbetrags |
 
-Detailliertere Informationen zu den einzelnen [!DNL Profile] angezeigt werden, indem Sie die [!DNL Profile] Kennung. Weitere Informationen zu Profildetails finden Sie im [[!DNL Real-time Customer Profile] Benutzerhandbuch](../../profile/ui/user-guide.md#profile-detail).
+Detailliertere Informationen zu den einzelnen [!DNL Profile] angezeigt werden, indem Sie die [!DNL Profile] Kennung. Weitere Informationen zu Profildetails finden Sie im [[!DNL Real-Time Customer Profile] Benutzerhandbuch](../../profile/ui/user-guide.md#profile-detail).
 
 ![Die Beispielprofile für die Segmentdefinition werden hervorgehoben. Zu den Beispielprofilinformationen gehören die Profil-ID, der Vorname, der Nachname und die E-Mail-Adresse der Person.](../images/ui/overview/segment-details-profiles.png)
 
@@ -176,7 +176,7 @@ Detaillierte Informationen zur Verwendung der [!DNL Segment Builder] Arbeitsbere
 
 ## Geplante Segmentierung {#scheduled-segmentation}
 
-Nachdem Sie Segmentdefinitionen erstellt haben, können Sie diese durch eine On-Demand- oder geplante (kontinuierliche) Auswertung auswerten. Auswertung bedeutet Verschieben [!DNL Real-time Customer Profile] Daten durch Segmentdefinitionen verwenden, um entsprechende Zielgruppen zu erstellen. Nach der Erstellung werden die Audiences gespeichert, sodass sie exportiert werden können mit [!DNL Experience Platform] APIs.
+Nachdem Sie Segmentdefinitionen erstellt haben, können Sie diese durch eine On-Demand- oder geplante (kontinuierliche) Auswertung auswerten. Auswertung bedeutet Verschieben [!DNL Real-Time Customer Profile] Daten durch Segmentdefinitionen verwenden, um entsprechende Zielgruppen zu erstellen. Nach der Erstellung werden die Audiences gespeichert, sodass sie exportiert werden können mit [!DNL Experience Platform] APIs.
 
 Bei der On-Demand-Auswertung wird die API zur Durchführung von Auswertungen und zum Aufbau von Zielgruppen nach Bedarf verwendet. Bei der geplanten Auswertung (auch „geplante Segmentierung“ genannt) können Sie hingegen einen Zeitplan erstellen, um die Segmentdefinitionen zu einem bestimmten Zeitpunkt (maximal einmal täglich) auszuwerten.
 
@@ -294,6 +294,6 @@ Nachdem Sie Ihr Segment erstellt haben, wird das Segment von Adobe Experience Pl
 
 ## Nächste Schritte und zusätzliche Ressourcen {#next-steps}
 
-Die [!DNL Segmentation Service] Die Benutzeroberfläche bietet einen umfassenden Workflow, mit dem Sie marktfähige Zielgruppen isolieren können von [!DNL Real-time Customer Profile] Daten.
+Die [!DNL Segmentation Service] Die Benutzeroberfläche bietet einen umfassenden Workflow, mit dem Sie marktfähige Zielgruppen isolieren können von [!DNL Real-Time Customer Profile] Daten.
 
 Weitere Informationen finden Sie unter [!DNL Segmentation Service], lesen Sie bitte die Dokumentation weiter. Erfahren Sie, wie Sie die [!DNL Segmentation Service] API, lesen Sie bitte die [[!DNL Segmentation Service] Entwicklerhandbuch](../api/overview.md).

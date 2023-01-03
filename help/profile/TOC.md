@@ -1,23 +1,23 @@
 ---
 audience: user
-user-guide-title: Anleitung zum Echtzeit-Kundenprofil
+user-guide-title: Handbuch zum Echtzeit-Kundenprofil
 user-guide-description: Führen Sie Kundendaten zusammen, um eine einheitliche, kanalübergreifende Ansicht von Kundeninteraktionen zu erstellen.
 feature: Profiles
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '135'
-ht-degree: 97%
+ht-degree: 92%
 
 ---
 
 
-# [!DNL Real-time Customer Profile] {#profile}
+# [!DNL Real-Time Customer Profile] {#profile}
 
 * [[!DNL Profile] – Übersicht](home.md)
 * [Profilüberblick (Video)](video/profile-overview.md)
 * [[!DNL Profile] und Segmentierungsleitplanken](guardrails.md)
 * [[!DNL Profile] dashboard](ui/profile-dashboard.md)
-* [Ablauf von Erlebnisereignissen](event-expirations.md)
+* [Gültigkeitsdauern von Erlebnisereignissen](event-expirations.md)
 * [!DNL Profile] API {#api}
    * [Übersicht](api/overview.md)
    * [Erste Schritte](api/getting-started.md)
@@ -50,4 +50,4 @@ ht-degree: 97%
 * [Verarbeitung von Datenschutzanfragen](privacy.md)
 * [[!DNL Profile] Handbuch zur Fehlerbehebung](troubleshooting.md)
 * [Profil-API-Referenz](https://www.adobe.com/go/profile-apis-en)
-* [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
+* [Platform – Versionshinweise](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=de)

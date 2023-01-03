@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Erfassungs-APIs beginnen können, die Bestandteil der Data Ingestion Service-APIs von Adobe Experience Platform sind.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: cedc53b78ea8eb8f3e93178b60ebe49b90c11650
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1204'
 ht-degree: 61%
@@ -22,7 +22,7 @@ In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Aufnah
 Für dieses Tutorial benötigen Sie Grundkenntnisse zu verschiedenen Adobe Experience Platform-Diensten. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Der standardisierte Rahmen, durch den [!DNL Platform] organisiert Erlebnisdaten.
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Verbraucherprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Verbraucherprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 - [Entwicklerhandbuch zur Schema Registry](../../xdm/api/getting-started.md): Ein umfassendes Handbuch, das alle verfügbaren Endpunkte der [!DNL Schema Registry] API und wie Sie Aufrufe an sie durchführen. Zum Beispiel müssen Sie Ihre `{TENANT_ID}` kennen, die in Aufrufen in diesem Tutorial immer wieder verwendet wird, und wissen, wie man Schemas erstellt, die zum Einrichten eines zu erfassenden Datensatzes dienen.
 
 Darüber hinaus setzt dieses Tutorial voraus, dass Sie bereits eine Streaming-Verbindung hergestellt haben. Weiterführende Informationen zum Erstellen einer Streaming-Verbindung finden Sie im Tutorial zum [Erstellen einer Streaming-Verbindung](./create-streaming-connection.md).
@@ -78,7 +78,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | Der Name, den Sie für Ihr Schema verwenden möchten. Dieser Name muss eindeutig sein. |
 | `description` | Eine aussagekräftige Beschreibung des Schemas, das Sie erstellen. |
-| `meta:immutableTags` | In diesem Beispiel wird die `union` -Tag verwendet wird, um Ihre Daten in [[!DNL Real-time Customer Profile]](../../profile/home.md). |
+| `meta:immutableTags` | In diesem Beispiel wird die `union` -Tag verwendet wird, um Ihre Daten in [[!DNL Real-Time Customer Profile]](../../profile/home.md). |
 
 **Antwort**
 
@@ -166,7 +166,7 @@ Fügen Sie anschließend dem oben erstellten Schema einen [Identitätsdeskriptor
 
 1. Die geschäftliche E-Mail-Adresse wird zu einem Pflichtfeld. Das bedeutet, dass Nachrichten, die ohne dieses Feld gesendet werden, bei der Validierung fehlschlagen und nicht erfasst werden.
 
-2. [!DNL Real-time Customer Profile] verwendet die geschäftliche E-Mail-Adresse als Kennung, um weitere Informationen zu dieser Person zusammenzufügen.
+2. [!DNL Real-Time Customer Profile] verwendet die geschäftliche E-Mail-Adresse als Kennung, um weitere Informationen zu dieser Person zusammenzufügen.
 
 ### Anfrage
 
@@ -226,7 +226,7 @@ Nachdem Sie Ihr Schema erstellt haben, müssen Sie nun einen Datensatz für die 
 
 >[!NOTE]
 >
->Dieser Datensatz wird für **[!DNL Real-time Customer Profile]** und **[!DNL Identity]** durch Festlegen der entsprechenden Tags.
+>Dieser Datensatz wird für **[!DNL Real-Time Customer Profile]** und **[!DNL Identity]** durch Festlegen der entsprechenden Tags.
 
 **API-Format**
 

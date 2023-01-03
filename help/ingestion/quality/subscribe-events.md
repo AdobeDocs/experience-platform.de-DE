@@ -5,7 +5,7 @@ title: Datenerfassungsbenachrichtigungen
 topic-legacy: overview
 description: Um die Überwachung des Aufnahmevorgangs zu unterstützen, ermöglicht es Adobe Experience Platform, eine Reihe von Ereignissen zu abonnieren, die von jedem Prozessschritt veröffentlicht werden. Dadurch werden Sie über den Status der aufgenommenen Daten und mögliche Fehler informiert.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '677'
 ht-degree: 28%
@@ -16,7 +16,7 @@ ht-degree: 28%
 
 Der Prozess der Datenaufnahme in Adobe Experience Platform besteht aus mehreren Schritten. Sobald Sie Datendateien identifiziert haben, die in aufgenommen werden müssen [!DNL Platform], beginnt der Aufnahmevorgang und jeder Schritt erfolgt nacheinander, bis die Daten erfolgreich erfasst wurden oder fehlschlagen. Der Erfassungsvorgang kann mit der [Adobe Data Ingestion-API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) oder über die Experience Platform-Benutzeroberfläche eingeleitet werden.[!DNL Experience Platform]
 
-In geladene Daten [!DNL Platform] muss mehrere Schritte durchlaufen, um sein Ziel zu erreichen. [!DNL Data Lake] oder [!DNL Real-time Customer Profile] Datenspeicher. Jeder Schritt umfasst die Verarbeitung der Daten, die Validierung der Daten und dann die Speicherung der Daten, bevor sie an den nächsten Schritt weitergeleitet werden. Je nachdem, wie viele Daten aufgenommen werden, kann dies ein zeitaufwendiger Prozess sein und es besteht immer die Möglichkeit, dass der Prozess aufgrund von Validierungs-, Semantik- oder Verarbeitungsfehlern fehlschlägt. Im Fall eines Fehlers müssen die Datenprobleme behoben werden und dann der gesamte Aufnahmevorgang mit den korrigierten Datendateien neu gestartet werden.
+In geladene Daten [!DNL Platform] muss mehrere Schritte durchlaufen, um sein Ziel zu erreichen. [!DNL Data Lake] oder [!DNL Real-Time Customer Profile] Datenspeicher. Jeder Schritt umfasst die Verarbeitung der Daten, die Validierung der Daten und dann die Speicherung der Daten, bevor sie an den nächsten Schritt weitergeleitet werden. Je nachdem, wie viele Daten aufgenommen werden, kann dies ein zeitaufwendiger Prozess sein und es besteht immer die Möglichkeit, dass der Prozess aufgrund von Validierungs-, Semantik- oder Verarbeitungsfehlern fehlschlägt. Im Fall eines Fehlers müssen die Datenprobleme behoben werden und dann der gesamte Aufnahmevorgang mit den korrigierten Datendateien neu gestartet werden.
 
 Unterstützung bei der Überwachung des Aufnahmevorgangs, [!DNL Experience Platform] ermöglicht es, eine Reihe von Ereignissen zu abonnieren, die von jedem Schritt des Prozesses veröffentlicht werden, und Sie über den Status der aufgenommenen Daten und mögliche Fehler zu informieren.
 
@@ -86,8 +86,8 @@ In der folgenden Tabelle sind die verfügbaren Statusbenachrichtigungen zur Date
 | --- | ---------------- | ------ | ----------------- |
 | `ing_load_success` | [!DNL Data Ingestion] | Erfolgreich | Ein Batch wurde erfolgreich in einen Datensatz innerhalb der [!DNL Data Lake]. |
 | `ing_load_failure` | [!DNL Data Ingestion] | Fehlgeschlagen | Ein Batch konnte nicht in einen Datensatz innerhalb der [!DNL Data Lake]. |
-| `ps_load_success` | [!DNL Real-time Customer Profile] | Erfolgreich | Ein Batch wurde erfolgreich in die [!DNL Profile] Datenspeicher. |
-| `ps_load_failure` | [!DNL Real-time Customer Profile] | Fehlgeschlagen | Ein Batch konnte nicht in die [!DNL Profile] Datenspeicher. |
+| `ps_load_success` | [!DNL Real-Time Customer Profile] | Erfolgreich | Ein Batch wurde erfolgreich in die [!DNL Profile] Datenspeicher. |
+| `ps_load_failure` | [!DNL Real-Time Customer Profile] | Fehlgeschlagen | Ein Batch konnte nicht in die [!DNL Profile] Datenspeicher. |
 | `ig_load_success` | [!DNL Identity Service] | Erfolgreich | Daten wurden erfolgreich in das Identitätsdiagramm geladen. |
 | `ig_load_failure` | [!DNL Identity Service] | Fehlgeschlagen | Daten konnten nicht in das Identitätsdiagramm geladen werden. |
 

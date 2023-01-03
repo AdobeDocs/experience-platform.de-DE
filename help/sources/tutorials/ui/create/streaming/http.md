@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: Diese Anleitung für die Benutzeroberfläche hilft Ihnen beim Erstellen einer Streaming-Verbindung für Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1058'
-ht-degree: 25%
+ht-degree: 27%
 
 ---
 
@@ -25,7 +25,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 - [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
    - [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemas vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
    - [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
 ## Aufbauen einer Streaming-Verbindung
 
@@ -56,7 +56,7 @@ Wenn Sie fertig sind, wählen Sie **[!UICONTROL Verbindung mit Quelle herstellen
 
 ![new-account](../../../../images/tutorials/create/http/new.png)
 
-## Auswählen von Daten
+## Daten auswählen
 
 Nach der Erstellung der HTTP-API-Verbindung muss die **[!UICONTROL Daten auswählen]** angezeigt, und erhalten Sie eine Oberfläche zum Hochladen und Anzeigen einer Vorschau Ihrer Daten.
 
@@ -64,7 +64,7 @@ Auswählen **[!UICONTROL Dateien hochladen]** , um Ihre Daten hochzuladen. Alter
 
 ![add-data](../../../../images/tutorials/create/http/add-data.png)
 
-Nach dem Hochladen Ihrer Daten können Sie die rechte Seite der Benutzeroberfläche verwenden, um eine Vorschau Ihrer Dateihierarchie anzuzeigen. Wählen Sie **[!UICONTROL Weiter]** aus, um fortzufahren.
+Nach dem Hochladen Ihrer Daten können Sie die rechte Seite der Benutzeroberfläche verwenden, um eine Vorschau Ihrer Dateihierarchie anzuzeigen. Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
 
 ![preview-sample-data](../../../../images/tutorials/create/http/preview-sample-data.png)
 
@@ -74,9 +74,9 @@ Die [!UICONTROL Zuordnung] -Schritt angezeigt und stellt eine Schnittstelle zum 
 
 Parquet-Dateien müssen XDM-konform sein und erfordern keine manuelle Konfiguration der Zuordnung. Bei CSV-Dateien ist es erforderlich, die Zuordnung explizit zu konfigurieren. Sie können jedoch festlegen, welche Quelldatenfelder zugeordnet werden sollen. JSON-Dateien, die als XDM-Beschwerde gekennzeichnet sind, erfordern keine manuelle Konfiguration. Wenn es jedoch nicht als XDM-kompatibel markiert ist, müssen Sie die Zuordnung explizit konfigurieren.
 
-Wählen Sie einen Datensatz für eingehende Daten aus, die in aufgenommen werden sollen. Sie können entweder einen vorhandenen Datensatz verwenden oder einen neuen erstellen.
+Wählen Sie einen Datensatz aus, in den eingehende Daten aufgenommen werden sollen. Sie können entweder einen vorhandenen Datensatz verwenden oder einen neuen erstellen.
 
-### Neuen Datensatz erstellen
+### Erstellen eines neuen Datensatzes
 
 Um einen neuen Datensatz zu erstellen, wählen Sie **[!UICONTROL Neuer Datensatz]**. Geben Sie im angezeigten Formular den Namen, eine optionale Beschreibung sowie das Zielschema für den Datensatz an. Wenn Sie eine [!DNL Profile]-aktiviertes Schema können Sie festlegen, ob der Datensatz auch [!DNL Profile]-enabled.
 

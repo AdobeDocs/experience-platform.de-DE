@@ -6,7 +6,7 @@ topic-legacy: policies
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Policy Service-API eine Data Governance-Richtlinie erstellen.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 91%
@@ -423,6 +423,6 @@ Bei einer erfolgreichen Antwort werden der HTTP-Status 200 (OK) und die Details 
 
 In dieser Anleitung haben Sie für eine Marketing-Aktion erfolgreich eine Datennutzungsrichtlinie erstellt. Sie können nun mit der Anleitung zum [Durchsetzen von Datennutzungsrichtlinien](../enforcement/api-enforcement.md) fortfahren, um zu erfahren, wie Sie in Ihrer Erlebnisanwendung Richtlinienverletzungen erkennen und behandeln können.
 
-Weiterführende Informationen zu den verschiedenen verfügbaren Vorgängen in der [!DNL Policy Service]-API finden Sie im [Entwicklerhandbuch für Policy Service](../api/getting-started.md). Informationen zum Durchsetzen von Richtlinien für [!DNL Real-time Customer Profile]-Daten finden Sie im Tutorial zum [Durchsetzen der Einhaltung von Datennutzungsregeln für Zielgruppensegmente](../../segmentation/tutorials/governance.md).
+Weiterführende Informationen zu den verschiedenen verfügbaren Vorgängen in der [!DNL Policy Service]-API finden Sie im [Entwicklerhandbuch für Policy Service](../api/getting-started.md). Informationen zum Durchsetzen von Richtlinien für [!DNL Real-Time Customer Profile]-Daten finden Sie im Tutorial zum [Durchsetzen der Einhaltung von Datennutzungsregeln für Zielgruppensegmente](../../segmentation/tutorials/governance.md).
 
 Informationen zum Verwalten von Nutzungsrichtlinien in der Benutzeroberfläche von [!DNL Experience Platform] finden Sie im [Benutzerhandbuch für Richtlinien](user-guide.md).

@@ -5,7 +5,7 @@ title: Filtern von Katalogdaten mithilfe von Abfrageparametern
 topic-legacy: developer guide
 description: Die Catalog Service-API ermöglicht ein Filtern von Antwortdaten mithilfe von Abfrageparametern für Anfragen. Zu den Best Practices bei Catalog gehört die Verwendung von Filtern in allen API-Aufrufen, da sie die Last der API reduzieren und die Gesamtleistung verbessern.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2121'
 ht-degree: 88%
@@ -210,7 +210,7 @@ Bei Verwendung von Tags sind einige Einschränkungen zu beachten:
 * Tag-Namen sind für Ihre IMS-Organisation eindeutig.
 * Adobe-Prozesse können Tags für bestimmte Verhaltensweisen nutzen. Den Namen dieser Tags wird standardmäßig „adobe“ vorangestellt. Daher sollten Sie diese Konvention beim Deklarieren von Tag-Namen vermeiden.
 * Die folgenden Tag-Namen sind für die Verwendung in allen [!DNL Experience Platform]und kann daher nicht als Tag-Name für Ihre Organisation deklariert werden:
-   * `unifiedProfile`: Dieser Tag-Name ist für Datensätze reserviert, die von [[!DNL Real-time Customer Profile]](../../profile/home.md) erfasst werden sollen.
+   * `unifiedProfile`: Dieser Tag-Name ist für Datensätze reserviert, die von [[!DNL Real-Time Customer Profile]](../../profile/home.md) erfasst werden sollen.
    * `unifiedIdentity`: Dieser Tag-Name ist für Datensätze reserviert, die von [[!DNL Identity Service]](../../identity-service/home.md) erfasst werden sollen.
 
 Nachfolgend finden Sie ein Beispiel für einen Datensatz, der eine `tags`-Eigenschaft enthält. Die Tags in dieser Eigenschaft haben die Form von Schlüssel-Wert-Paaren, wobei jeder Tag-Wert als Array mit einer einzelnen Zeichenfolge angezeigt wird:

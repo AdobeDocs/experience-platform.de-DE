@@ -7,7 +7,7 @@ landing-page-description: Hier finden Sie Antworten auf häufig gestellte Fragen
 topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: da3e93f6c10c89c173fff786604ef844f56081be
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1851'
 ht-degree: 63%
@@ -38,11 +38,11 @@ Eine IMS-Organisation ist eine Adobe-Darstellung eines Kunden. Alle lizenzierten
 
 ## Wo finde ich meinen API-Schlüssel? {#where-can-i-find-my-api-key}
 
-In allen API-Anfragen ist ein API-Schlüssel als Kopfzeile erforderlich. Sie finden sie über die [Adobe Developer-Konsole](https://www.adobe.com/go/devs_console_ui). Navigieren Sie in der Konsole auf der Registerkarte **Integrationen** zum Abschnitt **Übersicht** einer bestimmten Integration; Sie finden den Schlüssel dann unter **Client-Anmeldedaten**. Eine schrittweise Anleitung zum Authentifizieren bei [!DNL Platform], siehe [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en).
+In allen API-Anfragen ist ein API-Schlüssel als Kopfzeile erforderlich. Sie finden sie über die [Adobe Developer-Konsole](https://www.adobe.com/go/devs_console_ui). Navigieren Sie in der Konsole auf der Registerkarte **Integrationen** zum Abschnitt **Übersicht** einer bestimmten Integration; Sie finden den Schlüssel dann unter **Client-Anmeldedaten**. Eine schrittweise Anleitung zum Authentifizieren bei [!DNL Platform], siehe [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de).
 
 ## Woher bekomme ich ein Zugriffstoken? {#how-do-i-get-an-access-token}
 
-Zugriffstoken sind in der Autorisierungskopfzeile aller API-Aufrufe erforderlich. Sie können mit einem `curl`-Befehl generiert werden, vorausgesetzt, Sie haben Zugriff auf eine Integration für eine IMS-Organisation. Zugriffstoken sind nur 24 Stunden lang gültig. Danach muss ein neues Token generiert werden, wenn Sie die API weiter verwenden möchten. Weiterführende Informationen zum Generieren von Zugriffstoken finden Sie im [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en).
+Zugriffstoken sind in der Autorisierungskopfzeile aller API-Aufrufe erforderlich. Sie können mit einem `curl`-Befehl generiert werden, vorausgesetzt, Sie haben Zugriff auf eine Integration für eine IMS-Organisation. Zugriffstoken sind nur 24 Stunden lang gültig. Danach muss ein neues Token generiert werden, wenn Sie die API weiter verwenden möchten. Weiterführende Informationen zum Generieren von Zugriffstoken finden Sie im [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de).
 
 ## Wie verwende ich Abfrageparameter? {#how-do-i-user-query-parameters}
 
@@ -96,7 +96,7 @@ Die folgenden Status-Codes können bei allen [!DNL Experience Platform] API. Jed
 
 ## Fehler in der Anfragekopfzeile {#request-header-errors}
 
-Alle API-Aufrufe in [!DNL Platform] erfordert bestimmte Anfragekopfzeilen. Informationen dazu, welche Kopfzeilen für einzelne Dienste benötigt werden, finden Sie in der [API-Referenzdokumentation](https://www.adobe.com/go/platform-api-reference-en). Die Werte für die erforderlichen Authentifizierungskopfzeilen finden Sie im [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en). Wenn eine dieser Kopfzeilen beim Ausführen eines API-Aufrufs fehlt oder ungültig ist, können die folgenden Fehler auftreten.
+Alle API-Aufrufe in [!DNL Platform] erfordert bestimmte Anfragekopfzeilen. Informationen dazu, welche Kopfzeilen für einzelne Dienste benötigt werden, finden Sie in der [API-Referenzdokumentation](https://www.adobe.com/go/platform-api-reference-en). Die Werte für die erforderlichen Authentifizierungskopfzeilen finden Sie im [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de). Wenn eine dieser Kopfzeilen beim Ausführen eines API-Aufrufs fehlt oder ungültig ist, können die folgenden Fehler auftreten.
 
 ### OAuth-Token fehlt {#oauth-token-is-missing}
 
@@ -118,7 +118,7 @@ Diese Fehlermeldung wird angezeigt, wenn in einer API-Anfrage eine `Authorizatio
 }
 ```
 
-Diese Fehlermeldung wird angezeigt, wenn das in der `Authorization`-Kopfzeile angegebene Zugriffstoken ungültig ist. Vergewissern Sie sich, dass Sie das Token richtig eingegeben haben, oder [generieren Sie ein neues Token](https://www.adobe.com/go/platform-api-authentication-en) in der Adobe I/O-Konsole.
+Diese Fehlermeldung wird angezeigt, wenn das in der `Authorization`-Kopfzeile angegebene Zugriffstoken ungültig ist. Vergewissern Sie sich, dass Sie das Token richtig eingegeben haben, oder [generieren Sie ein neues Token](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) in der Adobe I/O-Konsole.
 
 ### API-Schlüssel erforderlich {#api-key-is-required}
 
@@ -218,5 +218,5 @@ Im Folgenden finden Sie eine Liste mit Handbüchern zur Fehlerbehebung und API-R
 | [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) |  |
 | [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) | [[!DNL XDM System] FAQs und Handbuch zur Fehlerbehebung](../xdm/troubleshooting-guide.md) |
 | [!DNL Flow Service] ([!DNL Sources] und [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/) |  |
-| [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) | [[!DNL Profile] Handbuch zur Fehlerbehebung](../profile/troubleshooting.md) |
+| [!DNL Real-Time Customer Profile] | [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) | [[!DNL Profile] Handbuch zur Fehlerbehebung](../profile/troubleshooting.md) |
 | Sandboxes | [Sandbox-API](https://www.adobe.io/experience-platform-apis/references/sandbox) | [Handbuch zur Fehlerbehebung bei Sandboxes](../sandboxes/troubleshooting-guide.md) |

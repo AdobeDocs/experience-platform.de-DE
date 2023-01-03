@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Mit Adobe Experience Platform können Sie Daten einfach als Batch-Dateien in Form von Parquet-Dateien oder Daten importieren, die einem bekannten Experience-Datenmodell (XDM)-Schema entsprechen.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: e7fc8a168a48cc6fadda62efda9ee9eb3025ab51
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 51%
@@ -75,23 +75,23 @@ Es wurde nun ein leerer Datensatz erstellt und Sie befinden sich wieder auf der 
 
 Auf der rechten Seite des Arbeitsbereichs &quot;Datensätze&quot;sehen Sie die **[!UICONTROL Info]** Registerkarte mit Informationen zu Ihrem neuen Datensatz, wie z. B. Datensatz-ID, Name, Beschreibung, Tabellenname, Schema, Streaming und Quelle. Die Registerkarte &quot;Info&quot;enthält auch Informationen zum Zeitpunkt der Erstellung des Datensatzes und zum Datum der letzten Änderung.
 
-Auf der Registerkarte &quot;Info&quot;befindet sich auch eine  **[!UICONTROL Profil]** Umschalten, das zum Aktivieren Ihres Datensatzes für die Verwendung mit [!DNL Real-time Customer Profile]. Verwendung dieses Umschalters und [!DNL Real-time Customer Profile]werden im folgenden Abschnitt ausführlicher erläutert.
+Auf der Registerkarte &quot;Info&quot;befindet sich auch eine  **[!UICONTROL Profil]** Umschalten, das zum Aktivieren Ihres Datensatzes für die Verwendung mit [!DNL Real-Time Customer Profile]. Verwendung dieses Umschalters und [!DNL Real-Time Customer Profile]werden im folgenden Abschnitt ausführlicher erläutert.
 
 ![Datensatzaktivität](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
-## Datensatz aktivieren für [!DNL Real-time Customer Profile]
+## Datensatz aktivieren für [!DNL Real-Time Customer Profile]
 
 Datensätze werden zur Aufnahme von Daten in [!DNL Experience Platform]und dass Daten letztendlich zur Identifizierung von Einzelpersonen und zum Zusammenführen von Informationen aus mehreren Quellen verwendet werden. Diese zusammengeführten Informationen werden als [!DNL Real-Time Customer Profile]. Zur [!DNL Platform] , um zu erfahren, welche Informationen in die [!DNL Real-Time Profile], können Datensätze zur Aufnahme mit der **[!UICONTROL Profil]** umschalten.
 
 Standardmäßig ist der Umschalter deaktiviert. Wenn Sie sich dafür entscheiden, [!DNL Profile]verwendet werden, werden alle im Datensatz erfassten Daten verwendet, um eine Person zu identifizieren und ihre [!DNL Real-Time Profile].
 
-Weitere Informationen finden Sie unter [!DNL Real-time Customer Profile] und mit Identitäten arbeiten, lesen Sie bitte die [Identity Service](../../identity-service/home.md) Dokumentation.
+Weitere Informationen finden Sie unter [!DNL Real-Time Customer Profile] und mit Identitäten arbeiten, lesen Sie bitte die [Identity Service](../../identity-service/home.md) Dokumentation.
 
-So aktivieren Sie den Datensatz für [!DNL Real-time Customer Profile], klicken Sie auf die **[!UICONTROL Profil]** Umschalten in der **[!UICONTROL Info]** Registerkarte.
+So aktivieren Sie den Datensatz für [!DNL Real-Time Customer Profile], klicken Sie auf die **[!UICONTROL Profil]** Umschalten in der **[!UICONTROL Info]** Registerkarte.
 
 ![Profil-Umschalter](../images/tutorials/ingest-batch-data/dataset-profile-toggle.png)
 
-Es wird ein Dialogfeld angezeigt, in dem Sie aufgefordert werden zu bestätigen, dass Sie den Datensatz für [!DNL Real-time Customer Profile].
+Es wird ein Dialogfeld angezeigt, in dem Sie aufgefordert werden zu bestätigen, dass Sie den Datensatz für [!DNL Real-Time Customer Profile].
 
 ![Dialog „Profil aktivieren“](../images/tutorials/ingest-batch-data/enable-dataset-for-profile.png)
 

@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem E-Commerce-System eines Drittanbieters und deren Aufnahme in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: 2d3fbbb5c743b8e172e3e64bda31ebf3278b4f5b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1284'
-ht-degree: 95%
+ht-degree: 94%
 
 ---
 
@@ -647,7 +647,7 @@ Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie einen Quell-Connector erstellt, um E-Commerce-Daten nach einem festgelegten Zeitplan zu erfassen. Eingehende Daten können jetzt von nachgelagerten [!DNL Platform]-Services wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+Mithilfe dieses Tutorials haben Sie einen Quell-Connector erstellt, um E-Commerce-Daten nach einem festgelegten Zeitplan zu erfassen. Eingehende Daten können jetzt von nachgelagerten [!DNL Platform]-Services wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 * [Übersicht über das Echtzeit-Kundenprofil](../../../../profile/home.md)
 * [Übersicht über Data Science Workspace](../../../../data-science-workspace/home.md)

@@ -5,7 +5,7 @@ title: Vorschau und Schätzung von API-Endpunkten
 topic-legacy: developer guide
 description: Bei der Entwicklung der Segmentdefinition können Sie die Schätzungs- und Vorschau-Tools in Adobe Experience Platform verwenden, um Informationen auf Zusammenfassungsebene anzuzeigen und so sicherzustellen, dass Sie die erwartete Zielgruppe isolieren.
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '978'
 ht-degree: 9%
@@ -40,7 +40,7 @@ Die Stichprobengröße der Prüfung hängt von der Gesamtanzahl der Entitäten i
 | Entitäten im Profilspeicher | Stichprobengröße |
 | ------------------------- | ----------- |
 | Weniger als 1 Million | Vollständiger Datensatz |
-| 1 bis 20 Mio. | 1 Mio. |
+| 1 bis 20 Mio. | 1 Millionen |
 | Über 20 Millionen | 5 % des Gesamtbetrags |
 
 >[!NOTE]

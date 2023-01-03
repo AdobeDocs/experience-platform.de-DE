@@ -5,10 +5,10 @@ title: XDM ExperienceEvent-Klasse
 topic-legacy: overview
 description: Dieses Dokument enthält einen Überblick über die XDM ExperienceEvent-Klasse und Best Practices für die Modellierung von Ereignisdaten.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 39e4ed1ff872de241bc07271cfb44310d41a2401
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1830'
-ht-degree: 96%
+ht-degree: 95%
 
 ---
 
@@ -28,7 +28,7 @@ Die [!DNL XDM ExperienceEvent]-Klasse selbst stellt mehrere zeitreihenbezogene F
 | `eventMergeId` | Wenn Sie [Adobe Experience Platform Web SDK](../../edge/home.md) verwenden, um Daten aufzunehmen, stellt dies die ID des erfassten Batches dar, der zur Erstellung des Datensatzes geführt hat. Dieses Feld wird bei der Datenaufnahme automatisch vom System ausgefüllt. Die Verwendung dieses Felds außerhalb des Kontexts einer Web SDK-Implementierung wird nicht unterstützt. |
 | `eventType` | Eine Zeichenfolge, die den Typ oder die Kategorie des Ereignisses angibt. Dieses Feld kann verwendet werden, wenn Sie innerhalb desselben Schemas und Datensatzes eine Unterscheidung zwischen verschiedenen Ereignistypen treffen möchten, z. B. eine Unterscheidung zwischen einem Produktansichtsereignis und einem Zum-Einkaufskorb-Hinzufügen-Ereignis bei einem Einzelhandelsunternehmen.<br><br>Standardwerte für diese Eigenschaft sind im [Anhang](#eventType) zusammen mit Beschreibungen des vorgesehenen Anwendungsfalls angegeben. Dieses Feld ist eine erweiterbare Aufzählung, d. h. Sie können auch eigene Ereignistyp-Zeichenfolgen verwenden, um die Ereignisse, die Sie nachverfolgen, zu kategorisieren.<br><br>`eventType` beschränkt Sie auf die Verwendung nur eines einzigen Ereignisses pro Treffer in Ihrem Programm. Daher müssen Sie berechnete Felder verwenden, um dem System mitzuteilen, welches Ereignis am wichtigsten ist. Weitere Informationen finden Sie im Abschnitt zu [Best Practices für berechnete Felder](#calculated). |
 | `producedBy` | Ein Zeichenfolge-Wert, der den Verursacher oder Ursprung des Ereignisses beschreibt. Dieses Feld kann verwendet werden, um bestimmte Ereignisverursacher bei Bedarf für Segmentierungszwecke herauszufiltern.<br><br>Einige empfohlene Werte für diese Eigenschaft sind im [Anhang](#producedBy) angegeben. Dieses Feld ist eine erweiterbare Aufzählung, d. h. Sie können auch eigene Zeichenfolgen verwenden, um verschiedene Ereignisverursacher darzustellen. |
-| `identityMap` | Ein Verknüpfungsfeld, das einen Satz von Identitäten mit Namespace für die Person enthält, für die das Ereignis gilt. Dieses Feld wird vom System automatisch aktualisiert, da Identitätsdaten erfasst werden. Damit sich dieses Feld wie vorgesehen für das [Echtzeit-Kundenprofil](../../profile/home.md) nutzen lässt, darf nicht versucht werden, bei Datenvorgängen den Inhalt des Feldes manuell zu aktualisieren.<br /><br />Siehe Abschnitt zu Identitätszuordnungen in [Grundlagen der Schemakomposition](../schema/composition.md#identityMap) für weitere Informationen zu ihrem Anwendungsfall. |
+| `identityMap` | Ein Verknüpfungsfeld, das einen Satz von Identitäten mit Namespace für die Person enthält, für die das Ereignis gilt. Dieses Feld wird vom System automatisch aktualisiert, da Identitätsdaten erfasst werden. Um dieses Feld ordnungsgemäß zu verwenden, verwenden Sie [Echtzeit-Kundenprofil](../../profile/home.md)versuchen Sie nicht, den Inhalt des Felds in Ihren Datenvorgängen manuell zu aktualisieren.<br /><br />Siehe Abschnitt zu Identitätszuordnungen in [Grundlagen der Schemakomposition](../schema/composition.md#identityMap) für weitere Informationen zu ihrem Anwendungsfall. |
 | `timestamp`<br>**(Erforderlich)** | Ein ISO 8601-Zeitstempel, der angibt, wann das Ereignis aufgetreten ist, formatiert gemäß [RFC 3339 Abschnitt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Dieser Zeitstempel muss in der Vergangenheit erfolgt sein. Best Practices zur Verwendung dieses Feldes finden Sie im nachstehenden Abschnitt [Zeitstempel](#timestamps). |
 
 {style=&quot;table-layout:auto&quot;}

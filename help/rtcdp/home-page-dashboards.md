@@ -3,7 +3,7 @@ keywords: Metriken - Übersicht; Übersicht über rtcdp-Metriken
 title: Real-time Customer Data Platform-Homepage und Dashboards
 description: Dashboards, Startseite und erstmalige Nutzung von Adobe Experience Platform
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 63%
@@ -47,7 +47,7 @@ Weiterführende Informationen über Datensätze finden Sie in der [Datensatzübe
 
 ### Profile
 
-Die **[!UICONTROL Profile]** count zeigt die Gesamtzahl der Personen mit Profilen in der [!DNL Real-time Customer Profile]. Profilfragmente werden nicht einbezogen. Dabei handelt es sich um Ihre gesamte adressierbare Zielgruppe.
+Die **[!UICONTROL Profile]** count zeigt die Gesamtzahl der Personen mit Profilen in der [!DNL Real-Time Customer Profile]. Profilfragmente werden nicht einbezogen. Dabei handelt es sich um Ihre gesamte adressierbare Zielgruppe.
 
 Der Zähler nutzt die standardmäßige [Zusammenführungsrichtlinie](profile/merge-policies.md), die in der Konfiguration der Zusammenführungsrichtlinien im einheitlichen Profil festgelegt ist.
 

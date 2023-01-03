@@ -5,18 +5,18 @@ title: Verarbeitung von Datenschutzanfragen im Echtzeit-Kundenprofil
 type: Documentation
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, die entsprechend diversen Datenschutzbestimmungen auf ihre personenbezogenen Daten zugreifen, deren Verkauf widersprechen oder sie löschen möchten. In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutzanfragen für Echtzeit-Kundenprofil behandelt.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1563'
 ht-degree: 30%
 
 ---
 
-# Verarbeiten von Datenschutzanfragen in [!DNL Real-time Customer Profile]
+# Verarbeiten von Datenschutzanfragen in [!DNL Real-Time Customer Profile]
 
 Der Adobe Experience Platform [!DNL Privacy Service] verarbeitet Anfragen von Kunden, die entsprechend den Datenschutzbestimmungen wie der Datenschutz-Grundverordnung (DSGVO) und dem [!DNL California Consumer Privacy Act] (CCPA) auf ihre personenbezogenen Daten zugreifen, deren Verkauf widersprechen oder sie löschen möchten.
 
-In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutzanfragen für [!DNL Real-time Customer Profile] innerhalb von Adobe Experience Platform dargelegt.
+In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutzanfragen für [!DNL Real-Time Customer Profile] innerhalb von Adobe Experience Platform dargelegt.
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ Sie sollten über Grundkenntnisse zu folgenden [!DNL Experience Platform]-Servic
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): Verwaltet Anfragen von Kunden hinsichtlich Zugriff auf, Opt-out vom Verkauf oder Löschen ihrer personenbezogenen Daten in allen Adobe Experience Cloud-Anwendungen.
 * [[!DNL Identity Service]](../identity-service/home.md): Löst das grundlegende Problem der Fragmentierung von Kundenerlebnisdaten, indem Identitäten geräte- und systemübergreifend zusammengeführt werden.
-* [[!DNL Real-time Customer Profile]](home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+* [[!DNL Real-Time Customer Profile]](home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
 ## Identitäts-Namespaces verstehen {#namespaces}
 
@@ -42,7 +42,7 @@ Weitere Informationen zu Identitäts-Namespaces in [!DNL Experience Platform] fi
 
 ## Übermitteln von Anfragen {#submit}
 
-In den folgenden Abschnitten wird beschrieben, wie Sie Datenschutzanfragen für [!DNL Real-time Customer Profile] mithilfe der [!DNL Privacy Service]-API oder -Benutzeroberfläche stellen. Bevor Sie diese Abschnitte lesen, wird dringend empfohlen, die [Privacy Service-API](../privacy-service/api/getting-started.md) oder [Privacy Service-Benutzeroberfläche](../privacy-service/ui/overview.md) Dokumentation für die vollständigen Schritte zum Senden eines Datenschutzauftrags, einschließlich der richtigen Formatierung gesendeter Benutzeridentitätsdaten in Anfrage-Payloads.
+In den folgenden Abschnitten wird beschrieben, wie Sie Datenschutzanfragen für [!DNL Real-Time Customer Profile] mithilfe der [!DNL Privacy Service]-API oder -Benutzeroberfläche stellen. Bevor Sie diese Abschnitte lesen, wird dringend empfohlen, die [Privacy Service-API](../privacy-service/api/getting-started.md) oder [Privacy Service-Benutzeroberfläche](../privacy-service/ui/overview.md) Dokumentation für die vollständigen Schritte zum Senden eines Datenschutzauftrags, einschließlich der richtigen Formatierung gesendeter Benutzeridentitätsdaten in Anfrage-Payloads.
 
 >[!IMPORTANT]
 >
@@ -111,7 +111,7 @@ curl -X POST \
 
 ### Verwenden der Benutzeroberfläche
 
-Stellen Sie beim Erstellen von Auftragsanfragen in der Benutzeroberfläche sicher, dass Sie **[!UICONTROL AEP Data Lake]** und/oder **[!UICONTROL Profil]** under **[!UICONTROL Produkte]** zur Verarbeitung von Aufträgen für Daten, die im Data Lake gespeichert sind, oder [!DNL Real-time Customer Profile]zurück.
+Stellen Sie beim Erstellen von Auftragsanfragen in der Benutzeroberfläche sicher, dass Sie **[!UICONTROL AEP Data Lake]** und/oder **[!UICONTROL Profil]** under **[!UICONTROL Produkte]** zur Verarbeitung von Aufträgen für Daten, die im Data Lake gespeichert sind, oder [!DNL Real-Time Customer Profile]zurück.
 
 ![Eine Zugriffsanfrage, die in der Benutzeroberfläche erstellt wird, wobei die Option Profil unter Produkte ausgewählt ist](./images/privacy/product-value.png)
 

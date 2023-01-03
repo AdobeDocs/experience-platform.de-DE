@@ -3,16 +3,16 @@ keywords: Experience Platform;Benutzeroberfläche;UI;Dashboards;Dashboard;Profil
 title: Bearbeiten eines Schemas, um benutzerdefinierte Dashboard-Widgets zu erstellen
 description: Dieses Handbuch enthält schrittweise Anweisungen zum Auswählen von Attributen und Konfigurieren des Schemas Ihres Unternehmens, um benutzerdefinierte Widgets für Adobe Experience Platform-Dashboards zu erstellen.
 exl-id: a744eb24-5ba7-4971-9183-3f891e807863
-source-git-commit: 9b89effa6f90fb513fac9d0b826722ab05020036
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '498'
-ht-degree: 89%
+ht-degree: 74%
 
 ---
 
 # Bearbeiten eines Schemas zum Erstellen benutzerdefinierter Widgets
 
-Um benutzerdefinierte Widgets für Adobe Experience Platform-Dashboards zu erstellen, müssen Sie zunächst die Echtzeit-Kundenprofilattribute identifizieren, auf denen die Widgets basieren werden.
+Um benutzerdefinierte Widgets für Adobe Experience Platform-Dashboards zu erstellen, müssen Sie zunächst die Echtzeit-Kundenprofilattribute identifizieren, auf denen die Widgets basieren.
 
 Dieses Handbuch enthält schrittweise Anweisungen zum Bearbeiten des Schemas Ihres Unternehmens, indem Sie Attribute auswählen, um benutzerdefinierte Dashboard-Widgets zu erstellen.
 

@@ -2,10 +2,11 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Adobe Campaign Managed Cloud Services; Kampagne; kampagnenverwaltete Dienste
 title: Adobe Campaign Managed Cloud Services
 description: Erfahren Sie, wie Sie Campaign Managed Cloud Services über die Benutzeroberfläche mit Platform verbinden.
-source-git-commit: 99f65889aecf8c045dbb72053ebaca9429c3ebe1
+exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '663'
-ht-degree: 8%
+ht-degree: 11%
 
 ---
 
@@ -13,7 +14,7 @@ ht-degree: 8%
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-Adobe Campaign Managed Cloud Services bietet eine Managed Services-Plattform für die Konzeption kanalübergreifender Kundenerlebnisse und eine Umgebung für die visuelle Kampagnenorchestrierung, Interaktionsverwaltung in Echtzeit und die kanalübergreifende Ausführung. Besuchen Sie die [Dokumentation zu Adobe Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=en) für weitere Informationen.
+Adobe Campaign Managed Cloud Services bietet eine Managed Services-Plattform für die Konzeption kanalübergreifender Kundenerlebnisse und eine Umgebung für die visuelle Kampagnenorchestrierung, Interaktionsverwaltung in Echtzeit und die kanalübergreifende Ausführung. Besuchen Sie die [Dokumentation zu Adobe Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=de) für weitere Informationen.
 
 Mit der Adobe Campaign Managed Cloud Services-Quelle können Sie Versandlogs und Trackinglog-Daten aus Adobe Campaign v8 in Adobe Experience Platform importieren.
 
@@ -61,7 +62,7 @@ Erstellen Sie anschließend ein XDM ExperienceEvent-Schema für Versandlogs und 
 
 >[!NOTE]
 >
->Ihr XDM ExperienceEvent-Schema muss Profil-fähig sein, damit Ihre Campaign-Daten in [!DNL Real-time Customer Profile].
+>Ihr XDM ExperienceEvent-Schema muss Profil-fähig sein, damit Ihre Campaign-Daten in [!DNL Real-Time Customer Profile].
 
 Detaillierte Anweisungen zum Erstellen eines Schemas finden Sie im Handbuch unter [Erstellen eines XDM-Schemas in der Benutzeroberfläche](../../../xdm/tutorials/create-schema-ui.md).
 

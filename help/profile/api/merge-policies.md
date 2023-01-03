@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich eine vollständige Ansicht über jeden einzelnen Ihrer Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden, um eine einheitliche Ansicht zu schaffen.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2472'
 ht-degree: 70%
@@ -16,7 +16,7 @@ ht-degree: 70%
 
 Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich eine vollständige Ansicht über jeden einzelnen Ihrer Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen [!DNL Platform] bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine einheitliche Ansicht zu schaffen.
 
-Wenn ein Kunde beispielsweise über mehrere Kanäle mit Ihrer Marke interagiert, verfügt Ihr Unternehmen über mehrere Profilfragmente, die sich auf diesen einzelnen Kunden beziehen und in mehreren Datensätzen enthalten sind. Wenn diese Fragmente in Platform aufgenommen werden, werden sie zusammengeführt, sodass ein zentrales Profil für diesen Kunden entsteht. Wenn die Daten aus mehreren Quellen in Konflikt stehen (z. B. listet ein Fragment den Kunden als „ledig“ auf, während ein anderes den Kunden als „verheiratet“ auflistet), bestimmt die Zusammenführungsrichtlinie, welche Informationen priorisiert und in das Profil für die Einzelperson aufgenommen werden sollen.
+Wenn ein Kunde beispielsweise über mehrere Kanäle mit Ihrer Marke interagiert, verfügt Ihre Organisation über mehrere Profilfragmente, die sich auf diesen einzelnen Kunden beziehen und in mehreren Datensätzen enthalten sind. Wenn diese Fragmente in Platform aufgenommen werden, werden sie zusammengeführt, sodass ein zentrales Profil für diesen Kunden entsteht. Wenn die Daten aus mehreren Quellen in Konflikt stehen (z. B. listet ein Fragment den Kunden als „ledig“ auf, während ein anderes den Kunden als „verheiratet“ auflistet), bestimmt die Zusammenführungsrichtlinie, welche Informationen priorisiert und in das Profil für die Einzelperson aufgenommen werden sollen.
 
 Über die RESTful APIs oder die Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen einrichten. In diesem Handbuch werden die Schritte zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der API beschrieben.
 
@@ -24,7 +24,7 @@ Informationen zum Arbeiten mit Zusammenführungsrichtlinien über die Benutzerob
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete API-Endpunkt ist Teil von [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Bevor Sie fortfahren, schauen Sie bitte im Handbuch in [Erste Schritte](getting-started.md) nach Links zu entsprechenden Dokumentationen, einem Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtigen Informationen zu erforderlichen Kopfzeilen, die für das Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil von [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Bevor Sie fortfahren, schauen Sie bitte im Handbuch in [Erste Schritte](getting-started.md) nach Links zu entsprechenden Dokumentationen, einem Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtigen Informationen zu erforderlichen Kopfzeilen, die für das Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
 
 ## Komponenten von Zusammenführungsrichtlinien {#components-of-merge-policies}
 
@@ -194,7 +194,7 @@ Um mehr über XDM zu erfahren und mit Schemas in Experience Platform zu arbeiten
 
 ## Zusammenführungsrichtlinien aufrufen {#access-merge-policies}
 
-Verwenden der [!DNL Real-time Customer Profile] API, die `/config/mergePolicies` Mit dem -Endpunkt können Sie eine Suchanfrage ausführen, um eine bestimmte Zusammenführungsrichtlinie anhand ihrer Kennung anzuzeigen oder auf alle Zusammenführungsrichtlinien in Ihrer IMS-Organisation zuzugreifen, gefiltert nach bestimmten Kriterien. Sie können auch die `/config/mergePolicies/bulk-get` Endpunkt zum Abrufen mehrerer Zusammenführungsrichtlinien anhand ihrer IDs. Die Schritte zum Ausführen dieser Aufrufe werden in den folgenden Abschnitten beschrieben.
+Verwenden der [!DNL Real-Time Customer Profile] API, die `/config/mergePolicies` Mit dem -Endpunkt können Sie eine Suchanfrage ausführen, um eine bestimmte Zusammenführungsrichtlinie anhand ihrer Kennung anzuzeigen oder auf alle Zusammenführungsrichtlinien in Ihrer IMS-Organisation zuzugreifen, gefiltert nach bestimmten Kriterien. Sie können auch die `/config/mergePolicies/bulk-get` Endpunkt zum Abrufen mehrerer Zusammenführungsrichtlinien anhand ihrer IDs. Die Schritte zum Ausführen dieser Aufrufe werden in den folgenden Abschnitten beschrieben.
 
 ### Auf eine einzelne Zusammenführungsrichtlinie anhand der Kennung zugreifen
 
@@ -761,6 +761,6 @@ Bei erfolgreicher Löschanfrage werden der HTTP-Status 200 (OK) und ein leerer A
 
 ## Nächste Schritte
 
-Nachdem Sie nun wissen, wie Sie Zusammenführungsrichtlinien für Ihr Unternehmen erstellen und konfigurieren, können Sie sie verwenden, um die Ansicht von Kundenprofilen in Platform anzupassen und Zielgruppensegmente aus Ihren [!DNL Real-time Customer Profile] Daten.
+Nachdem Sie nun wissen, wie Sie Zusammenführungsrichtlinien für Ihr Unternehmen erstellen und konfigurieren, können Sie sie verwenden, um die Ansicht von Kundenprofilen in Platform anzupassen und Zielgruppensegmente aus Ihren [!DNL Real-Time Customer Profile] Daten.
 
 Informationen zum Definieren und Verwenden von Segmenten finden Sie in der Dokumentation zu [Adobe Experience Platform Segmentation Service](../../segmentation/home.md).

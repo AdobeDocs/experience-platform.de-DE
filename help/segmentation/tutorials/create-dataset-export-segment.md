@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Dieses Tutorial führt Sie durch die Schritte, die zum Erstellen eines Datensatzes erforderlich sind, der zum Exportieren eines Zielgruppensegments mithilfe der Experience Platform-Benutzeroberfläche verwendet werden kann.
 exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
-source-git-commit: f7d204442c8bc2355671ba2adffff4c40ce08784
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '757'
 ht-degree: 13%
@@ -37,7 +37,7 @@ Auswählen **[!UICONTROL Datensätze]** im linken Navigationsbereich, um auf den
 
 >[!NOTE]
 >
->Wählen Sie das Filtersymbol neben der Suchleiste aus, um Filterfunktionen zu verwenden und nur die Datensätze anzuzeigen, für die [!DNL Real-time Customer Profile].
+>Wählen Sie das Filtersymbol neben der Suchleiste aus, um Filterfunktionen zu verwenden und nur die Datensätze anzuzeigen, für die [!DNL Real-Time Customer Profile].
 
 ![Der Arbeitsbereich &quot;Datensätze&quot;wird angezeigt.](../images/tutorials/segment-export-dataset/browse.png)
 

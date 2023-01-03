@@ -5,7 +5,7 @@ title: Übersicht über die Experience Platform-Benutzeroberfläche
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1811'
 ht-degree: 4%
@@ -168,7 +168,7 @@ Die Platform-Benutzeroberfläche verfügt über ein Dashboard, über das Sie wic
 
 >[!IMPORTANT]
 >
->Die Dashboard-Funktion zur Lizenznutzung befindet sich derzeit in der Alpha-Phase und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
+>Die Dashboard-Funktion zur Lizenznutzung befindet sich derzeit in der Alpha-Phase und steht nicht allen Benutzern zur Verfügung. Dokumentation und Funktionalitäten können sich ändern.
 
 ## Nächste Schritte
 

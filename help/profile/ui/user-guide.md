@@ -2,25 +2,25 @@
 keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; API; einheitliches Profil; Einheitliches Profil; einheitliches Profil; Profil; rtcp; Profil aktivieren; Profil aktivieren; Vereinigungsschema; UNION PROFILE; Vereinigungsprofil
 title: Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils
 topic-legacy: guide
-description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Sicht Ihrer einzelnen Kunden und fasst Daten aus mehreren Kanälen (einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten) zusammen. Dieses Dokument dient als Leitfaden für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
+description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Ansicht Ihrer einzelnen Kunden und kombiniert Daten aus verschiedenen Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. Dieses Dokument dient als Leitfaden für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1951'
-ht-degree: 10%
+ht-degree: 7%
 
 ---
 
-# Handbuch für die [!DNL Real-time Customer Profile]-Benutzeroberfläche
+# Handbuch für die [!DNL Real-Time Customer Profile]-Benutzeroberfläche
 
-[!DNL Real-time Customer Profile] erstellt eine ganzheitliche Ansicht Ihrer einzelnen Kunden, wobei Daten aus mehreren Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten, kombiniert werden. Dieses Dokument dient als Leitfaden für die Interaktion mit [!DNL Real-time Customer Profile] Daten in der Adobe Experience Platform-Benutzeroberfläche.
+[!DNL Real-Time Customer Profile] erstellt eine ganzheitliche Ansicht Ihrer einzelnen Kunden, wobei Daten aus mehreren Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten, kombiniert werden. Dieses Dokument dient als Leitfaden für die Interaktion mit [!DNL Real-Time Customer Profile] Daten in der Adobe Experience Platform-Benutzeroberfläche.
 
 ## Erste Schritte
 
-Dieses UI-Handbuch setzt ein Verständnis der verschiedenen [!DNL Experience Platform] Verwaltungsdienste [!DNL Real-time Customer Profiles]. Bevor Sie dieses Handbuch lesen oder in der Benutzeroberfläche arbeiten, lesen Sie bitte die Dokumentation für die folgenden Dienste:
+Dieses UI-Handbuch setzt ein Verständnis der verschiedenen [!DNL Experience Platform] Verwaltungsdienste [!DNL Real-Time Customer Profiles]. Bevor Sie dieses Handbuch lesen oder in der Benutzeroberfläche arbeiten, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
-* [[!DNL Real-time Customer Profile] Übersicht](../home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus mehreren Quellen basiert.
-* [[!DNL Identity Service]](../../identity-service/home.md): Aktiviert [!DNL Real-time Customer Profile] durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen bei der Erfassung in [!DNL Platform].
+* [[!DNL Real-Time Customer Profile] Übersicht](../home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [[!DNL Identity Service]](../../identity-service/home.md): Aktiviert [!DNL Real-Time Customer Profile] durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen bei der Erfassung in [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Platform] organisiert werden.
 
 ## [!UICONTROL Übersicht]
@@ -29,7 +29,7 @@ Wählen Sie in der Benutzeroberfläche &quot;Experience Platform&quot;die Option
 
 >[!NOTE]
 >
->Wenn Ihr Unternehmen neu bei Platform ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt wurden, wird die [!UICONTROL Profile] Das Dashboard ist nicht sichtbar. Stattdessen werden auf der Registerkarte [!UICONTROL Übersicht] Links und Dokumentationen angezeigt, um Ihnen bei den ersten Schritten mit dem Echtzeit-Kundenprofil zu helfen.
+>Wenn Ihr Unternehmen neu bei Platform ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt wurden, wird die [!UICONTROL Profile] Das Dashboard ist nicht sichtbar. Stattdessen wird die [!UICONTROL Übersicht] enthält Links und Dokumentation, die Ihnen bei den ersten Schritten mit dem Echtzeit-Kundenprofil helfen.
 
 ### Profil-Dashboard {#profile-dashboard}
 
@@ -171,7 +171,7 @@ Weiterführende Informationen zu Zusammenführungsrichtlinien finden Sie unter [
 
 ## Vereinigungsschema {#union-schema}
 
-Aus der Hauptrolle **[!UICONTROL Profile]** auswählen, wählen Sie die **[!UICONTROL Vereinigungsschema]** , um verfügbare Vereinigungsschemas für die erfassten Daten anzuzeigen. Ein Vereinigungsschema ist eine Zusammenfassung aller [!DNL Experience Data Model] (XDM)-Felder unter derselben Klasse, deren Schemas für die Verwendung in aktiviert wurden [!DNL Real-time Customer Profile].
+Aus der Hauptrolle **[!UICONTROL Profile]** auswählen, wählen Sie die **[!UICONTROL Vereinigungsschema]** , um verfügbare Vereinigungsschemas für die erfassten Daten anzuzeigen. Ein Vereinigungsschema ist eine Zusammenfassung aller [!DNL Experience Data Model] (XDM)-Felder unter derselben Klasse, deren Schemas für die Verwendung in aktiviert wurden [!DNL Real-Time Customer Profile].
 
 Weitere Informationen zu Vereinigungsschemas finden Sie im [UI-Handbuch für Vereinigungsschema](union-schema.md).
 

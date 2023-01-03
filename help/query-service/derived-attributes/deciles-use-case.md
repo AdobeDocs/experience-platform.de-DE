@@ -2,7 +2,7 @@
 title: Anwendungsfall für auf Entscheidungen basierende abgeleitete Attribute
 description: In diesem Handbuch werden die Schritte erläutert, die zur Verwendung von Query Service zum Erstellen von dezimalbasierten abgeleiteten Attributen für die Verwendung mit Ihren Profildaten erforderlich sind.
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
-source-git-commit: c1ec6f949bd0ab9ec3b1ccc58baf74d8c71deca0
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 3%
@@ -64,11 +64,11 @@ Die folgende Tabelle zeigt die Beispieldaten im `_profilefoundationreportingstg`
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
-| C435678623 | sfeldmark1vr@studiopress.com | 01.01.2022 | STATUS_MILES | Neues Mitglied | 5.000 | FLYER |
+| C435678623 | sfeldmark1vr@studiopress.com | 2022-01-01 | STATUS_MILES | Neues Mitglied | 5.000 | FLYER |
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | AWARD_MILES | JFK-FRA | 7500 | SILBER |
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | STATUS_MILES | JFK-FRA | 7500 | SILBER |
-| B789279247 | pgalton32n@barnesandnoble.com | 10.02.2022 | AWARD_MILES | FRA-JFK | 5.000 | SILBER |
-| A123487284 | rritson1zn@sciencedaily.com | 07.01.2022 | STATUS_MILES | Neue Kreditkarte | 10000 | FLYER |
+| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | AWARD_MILES | FRA-JFK | 5.000 | SILBER |
+| A123487284 | rritson1zn@sciencedaily.com | 2022-01-07 | STATUS_MILES | Neue Kreditkarte | 10000 | FLYER |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -80,7 +80,7 @@ Erstellen Sie ein &quot;Airline Loyalty Decile Schema&quot;, um mithilfe von Que
 
 ![Ein Diagramm des &quot;Airline Loyalty Decile Schemas&quot;.](../images/derived-attributes/deciles-use-case/airline-loyalty-decile-schema.png)
 
-### Aktivieren des Schemas für Echtzeit-Kundenprofil
+### Aktivieren des Schemas für das Echtzeit-Kundenprofil
 
 Daten, die zur Verwendung durch das Echtzeit-Kundenprofil in Experience Platform aufgenommen werden, müssen [ein Experience-Datenmodell (XDM)-Schema, das für Profil aktiviert ist](../../xdm/ui/resources/schemas.md). Damit ein Schema für Profile aktiviert werden kann, muss es entweder die XDM Individual Profile- oder die XDM ExperienceEvent-Klasse implementieren.
 

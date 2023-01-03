@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 exl-id: 8c3142af-4021-4f7e-acbd-c5277dd188d1
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1143'
-ht-degree: 98%
+ht-degree: 94%
 
 ---
 
@@ -27,7 +27,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM) System]](#xdm)
 - [[!DNL Identity Service]](#identity)
-- [[!DNL Real-time Customer Profile]](#profile)
+- [[!DNL Real-Time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
 
 ## (Beta) Dashboard {#dashboards}
@@ -56,7 +56,7 @@ Weitere allgemeine Informationen zu Data Science Workspace finden Sie im Abschni
 
 In Adobe Experience Platform werden Daten aus zahlreichen Quellen aufgenommen, analysiert und für eine Vielzahl an Zielen aktiviert. Plattform erleichtert das Tracking dieses potenziell nicht-linearen Datenflusses durch Transparenz.
 
-Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Diese Datenflüsse werden über verschiedene Services konfiguriert und unterstützen Sie dabei, Daten von den Quell-Connektoren in Zielgruppen-Datensätze zu verschieben, wo sie dann von [!DNL Identity Service] und [!DNL Real-time Customer Profile] verwendet werden, bevor sie schließlich für [!DNL Destinations] aktiviert werden.
+Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Diese Datenflüsse werden über verschiedene Services konfiguriert und unterstützen Sie dabei, Daten von den Quell-Connektoren in Zielgruppen-Datensätze zu verschieben, wo sie dann von [!DNL Identity Service] und [!DNL Real-Time Customer Profile] verwendet werden, bevor sie schließlich für [!DNL Destinations] aktiviert werden.
 
 **Neue Funktionen**
 
@@ -108,7 +108,7 @@ Weitere allgemeine Informationen zu [!DNL Identity Service] finden Sie unter [Id
 
 ## Echtzeit-Kundenprofil {#profile}
 
-Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Das Echtzeit-Kundenprofil liefert eine ganzheitliche Sicht auf jeden einzelnen Kunden, indem es Daten aus Online- und Offline-Kanälen ebenso wie aus CRMs und Drittanbieter-Datenquellen und anderen Kanälen miteinander kombiniert. Mit [!DNL Profile] können Sie Ihre unterschiedlichen Kundendaten in einer zentralen Ansicht zusammenführen, die eine aussagekräftige, im Zeitverlauf gezeichnete Darstellung jeder Kundeninteraktion bietet.
+Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Mit dem Echtzeit-Kundenprofil können Sie eine ganzheitliche Ansicht jedes einzelnen Kunden anzeigen, die Daten aus mehreren Kanälen kombiniert, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. Mit [!DNL Profile] können Sie Ihre unterschiedlichen Kundendaten in einer zentralen Ansicht zusammenführen, die eine aussagekräftige, im Zeitverlauf gezeichnete Darstellung jeder Kundeninteraktion bietet.
 
 **Neue Funktionen**
 
@@ -116,7 +116,7 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 | ------- | ----------- |
 | Berechnete Attribute (Alphaversion) | ***Hinweis: Diese Funktion befindet sich derzeit in der Alphaphase und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.*** <br/><br/>Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignisebene in Attribute auf Profilebene aggregiert werden. Anschließend können Sie die Aggregate in der Segmentierung, Aktivierung und Personalisierung verwenden. Einige Beispiele für diese Funktionen sind Anzahl, Summe, Durchschnitt, min, max, true/false. Berechnete Attribute stehen derzeit nur per API zur Verfügung. Weiterführende Informationen finden Sie unter [Berechnete Attribute – Übersicht](../../profile/computed-attributes/overview.md). |
 
-Für weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile]-Daten, lesen Sie zunächst [Echtzeit-Kundenprofil – Übersicht](../../profile/home.md).
+Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile] Daten, lesen Sie bitte zunächst die [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 

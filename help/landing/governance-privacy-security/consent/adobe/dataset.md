@@ -5,7 +5,7 @@ title: Konfigurieren eines Datensatzes zur Erfassung von Einwilligungs- und Prä
 topic-legacy: getting started
 description: Erfahren Sie, wie Sie ein Experience-Datenmodell (XDM)-Schema und einen -Datensatz konfigurieren, um Einwilligungs- und Präferenzdaten in Adobe Experience Platform zu erfassen.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 5%
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # Konfigurieren eines Datensatzes zur Erfassung von Einwilligungs- und Präferenzdaten
 
-Damit Adobe Experience Platform Ihre Zustimmungs-/Präferenzdaten von Kunden verarbeiten kann, müssen diese Daten an einen Datensatz gesendet werden, dessen Schema Felder enthält, die mit Zustimmung und anderen Berechtigungen zusammenhängen. Insbesondere muss dieser Datensatz auf der [!DNL XDM Individual Profile] und für die Verwendung in [!DNL Real-time Customer Profile].
+Damit Adobe Experience Platform Ihre Zustimmungs-/Präferenzdaten von Kunden verarbeiten kann, müssen diese Daten an einen Datensatz gesendet werden, dessen Schema Felder enthält, die mit Zustimmung und anderen Berechtigungen zusammenhängen. Insbesondere muss dieser Datensatz auf der [!DNL XDM Individual Profile] und für die Verwendung in [!DNL Real-Time Customer Profile].
 
 In diesem Dokument werden Schritte zum Konfigurieren eines Datensatzes zur Verarbeitung von Einwilligungsdaten in Experience Platform beschrieben. Einen Überblick über den gesamten Workflow zur Verarbeitung von Einwilligungs-/Einverständnisdaten in Platform erhalten Sie im Abschnitt [Übersicht zur Zustimmungsverarbeitung](./overview.md).
 
@@ -133,7 +133,7 @@ Wenn das bearbeitete Schema von der [!UICONTROL Profildatensatz] in Ihrem Platfo
 
 ## Datensatz basierend auf Ihrem Einverständnisschema erstellen {#dataset}
 
-Nachdem Sie ein Schema mit Einverständnisfeldern erstellt haben, müssen Sie einen Datensatz erstellen, in dem letztendlich die Einwilligungsdaten Ihrer Kunden erfasst werden. Dieser Datensatz muss für [!DNL Real-time Customer Profile].
+Nachdem Sie ein Schema mit Einverständnisfeldern erstellt haben, müssen Sie einen Datensatz erstellen, in dem letztendlich die Einwilligungsdaten Ihrer Kunden erfasst werden. Dieser Datensatz muss für [!DNL Real-Time Customer Profile].
 
 Wählen Sie zunächst **[!UICONTROL Datensätze]** Wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Datensatz erstellen]** in der oberen rechten Ecke.
 
@@ -151,7 +151,7 @@ Der Schritt **[!UICONTROL Datensatz konfigurieren]** wird angezeigt. Geben Sie e
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/dataset-details.png)
 
-Die Detailseite für den neu erstellten Datensatz wird angezeigt. Wenn der Datensatz auf Ihrem Zeitreihenschema basiert, ist der Prozess abgeschlossen. Wenn der Datensatz auf Ihrem Datensatzschema basiert, besteht der letzte Schritt im Prozess darin, den Datensatz zur Verwendung in [!DNL Real-time Customer Profile].
+Die Detailseite für den neu erstellten Datensatz wird angezeigt. Wenn der Datensatz auf Ihrem Zeitreihenschema basiert, ist der Prozess abgeschlossen. Wenn der Datensatz auf Ihrem Datensatzschema basiert, besteht der letzte Schritt im Prozess darin, den Datensatz zur Verwendung in [!DNL Real-Time Customer Profile].
 
 Wählen Sie in der rechten Leiste die **[!UICONTROL Profil]** umschalten.
 

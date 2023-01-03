@@ -4,7 +4,7 @@ title: Konfigurieren eines berechneten Attributfelds
 topic-legacy: guide
 type: Documentation
 description: Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignisebene in Attribute auf Profilebene aggregiert werden. Um ein berechnetes Attribut zu konfigurieren, müssen Sie zunächst das Feld ermitteln, das den berechneten Attributwert enthält. Dieses Feld kann mithilfe einer Schemafeldgruppe erstellt werden, um das Feld einem vorhandenen Schema hinzuzufügen, oder durch Auswahl eines Felds, das Sie bereits in einem Schema definiert haben.
-source-git-commit: 6e0f7578d0818f88e13b963f64cb2de6729f0574
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '859'
 ht-degree: 42%
@@ -16,7 +16,7 @@ ht-degree: 42%
 
 >[!IMPORTANT]
 >
->Die Funktion für berechnete Attribute ist derzeit alphanumerisch und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
+>Die Funktion für berechnete Attribute ist derzeit alphanumerisch und steht nicht allen Benutzern zur Verfügung. Dokumentation und Funktionalitäten können sich ändern.
 
 Um ein berechnetes Attribut zu konfigurieren, müssen Sie zunächst das Feld ermitteln, das den berechneten Attributwert enthält. Dieses Feld kann mithilfe einer Schemafeldgruppe erstellt werden, um das Feld einem vorhandenen Schema hinzuzufügen, oder durch Auswahl eines Felds, das Sie bereits in einem Schema definiert haben.
 
@@ -30,7 +30,7 @@ Der Workflow in diesem Tutorial verwendet eine [!DNL Profile]-aktiviertes Schema
 
 ## Schema anzeigen
 
-Die folgenden Schritte verwenden die Adobe Experience Platform-Benutzeroberfläche, um ein Schema zu suchen, eine Feldergruppe hinzuzufügen und ein Feld zu definieren. Wenn Sie die [!DNL Schema Registry] API, siehe [Entwicklerhandbuch zur Schema Registry](../../xdm/api/getting-started.md) Anweisungen zum Erstellen einer Feldergruppe, Hinzufügen einer Feldergruppe zu einem Schema und Aktivieren eines Schemas zur Verwendung mit [!DNL Real-time Customer Profile].
+Die folgenden Schritte verwenden die Adobe Experience Platform-Benutzeroberfläche, um ein Schema zu suchen, eine Feldergruppe hinzuzufügen und ein Feld zu definieren. Wenn Sie die [!DNL Schema Registry] API, siehe [Entwicklerhandbuch zur Schema Registry](../../xdm/api/getting-started.md) Anweisungen zum Erstellen einer Feldergruppe, Hinzufügen einer Feldergruppe zu einem Schema und Aktivieren eines Schemas zur Verwendung mit [!DNL Real-Time Customer Profile].
 
 Klicken Sie in der Benutzeroberfläche in der linken Leiste auf **[!UICONTROL Schemas]** und nutzen Sie die Suchleiste auf dem Tab **[!UICONTROL Durchsuchen]**, um das Schema, das Sie aktualisieren möchten, zu suchen.
 

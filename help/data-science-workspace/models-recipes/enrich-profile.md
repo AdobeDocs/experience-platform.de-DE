@@ -1,30 +1,30 @@
 ---
 keywords: Experience Platform; Modell für maschinelles Lernen; Data Science Workspace; Echtzeit-Kundenprofil; beliebte Themen; Einblicke in maschinelles Lernen
 solution: Experience Platform
-title: Echtzeit-Kundenprofil mit Einblicken aus maschinellem Lernen anreichern
+title: Anreicherung des Echtzeit-Kundenprofils mit Einblicken aus maschinellem Lernen
 topic-legacy: tutorial
 type: Tutorial
-description: Dieses Dokument bietet eine Anleitung zur Anreicherung von Echtzeit-Kundenprofil mit Einblicken aus maschinellem Lernen.
+description: Dieses Dokument bietet eine Anleitung zur Anreicherung des Echtzeit-Kundenprofils mit Einblicken aus maschinellem Lernen.
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: 89a9b64f2fb238c08a281f29a035ce0b24b34804
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 18%
 
 ---
 
-# Anreichern [!DNL Real-time Customer Profile] mit Einblicken aus maschinellem Lernen
+# Anreichern [!DNL Real-Time Customer Profile] mit Einblicken aus maschinellem Lernen
 
 Adobe Experience Platform [!DNL Data Science Workspace] bietet die Tools und Ressourcen zum Erstellen, Auswerten und Verwenden maschineller Lernmodelle, um Datenprognosen und -einblicke zu generieren. Wenn Einblicke aus maschinellem Lernen in eine [!DNL Profile]-aktivierter Datensatz, der dieselben Daten auch als [!DNL Profile] Datensätze, die dann mithilfe von [!DNL Adobe Experience Platform Segmentation Service].
 
-Dieses Dokument enthält Links zu Tutorials, die Ihnen die Anreicherung ermöglichen [!DNL Real-time Customer Profile] mit Ihren Einblicken aus maschinellem Lernen.
+Dieses Dokument enthält Links zu Tutorials, die Ihnen die Anreicherung ermöglichen [!DNL Real-Time Customer Profile] mit Ihren Einblicken aus maschinellem Lernen.
 
 ## Erste Schritte
 
-Um die unten stehenden Tutorials abschließen zu können, benötigen Sie ein grundlegendes Verständnis der Erfassung [!DNL Profile] Daten und der Erstellung von Segmenten. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
+Um die unten stehenden Tutorials abschließen zu können, benötigen Sie ein grundlegendes Verständnis der Erfassung [!DNL Profile] Daten und der Erstellung von Segmenten. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Services:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet eine vollständige, einheitliche Darstellung der einzelnen Kunden auf der Grundlage aggregierter Daten aus verschiedenen Quellen.
-- [[!DNL Identity Service]](../../identity-service/home.md): Aktiviert [!DNL Real-time Customer Profile] durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, die in Platform erfasst werden.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet eine vollständige, einheitliche Darstellung der einzelnen Kunden auf der Grundlage aggregierter Daten aus verschiedenen Quellen.
+- [[!DNL Identity Service]](../../identity-service/home.md): Aktiviert [!DNL Real-Time Customer Profile] durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, die in Platform erfasst werden.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten ordnet.
 
 Neben den oben genannten Dokumenten sollten Sie auch folgende Leitfäden zu Schemas und dem Schema-Editor lesen:
@@ -34,7 +34,7 @@ Neben den oben genannten Dokumenten sollten Sie auch folgende Leitfäden zu Sche
 
 ## Ausgabeschema und -datensatz erstellen und konfigurieren {#create-an-output-schema-and-dataset}
 
-Der erste Schritt zur Anreicherung [!DNL Real-time Customer Profile] mit Scoring-Einblicken weiß, welches reale Objekt (wie eine Person) Ihre Daten definieren. Wenn Sie Ihre Daten verstehen, können Sie eine Struktur beschreiben und entwerfen, um Bedeutung hinzuzufügen, ähnlich wie beim Entwerfen einer relationalen Datenbank.
+Der erste Schritt zur Anreicherung [!DNL Real-Time Customer Profile] mit Scoring-Einblicken weiß, welches reale Objekt (wie eine Person) Ihre Daten definieren. Wenn Sie Ihre Daten verstehen, können Sie eine Struktur beschreiben und entwerfen, um Bedeutung hinzuzufügen, ähnlich wie beim Entwerfen einer relationalen Datenbank.
 
 Das Erstellen eines Schemas beginnt mit dem Zuweisen einer Klasse. Klassen definieren die Verhaltensaspekte der Daten, die das Schema enthalten soll (Datensatz oder Zeitreihen). Um eigene Schemata zu erstellen, führen Sie die Schritte im Tutorial zu [Erstellen eines Schemas mit dem Schema Editor](../../xdm/tutorials/create-schema-ui.md). Beachten Sie, dass Sie, bevor Sie einen Datensatz für [!DNL Profile], müssen Sie das Schema des Datensatzes so konfigurieren, dass es ein primäres Identitätsfeld enthält, und dann das Schema für [!DNL Profile]. Wenn Daten in eine [!DNL Profile]-aktivierter Datensatz, der dieselben Daten auch als [!DNL Profile] Datensätze.
 
@@ -58,4 +58,4 @@ Die [!DNL Segment Builder] bietet einen umfassenden Arbeitsbereich, in dem Sie m
 
 Weitere Informationen zu Segmenten und dem [!DNL Segment Builder], lesen Sie die [Übersicht über den Segmentierungsdienst](../../segmentation/home.md).
 
-Weitere Informationen finden Sie unter [!DNL Real-time Customer Profile], lesen Sie die [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md)
+Weitere Informationen finden Sie unter [!DNL Real-Time Customer Profile], lesen Sie die [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md)

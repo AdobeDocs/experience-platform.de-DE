@@ -5,7 +5,7 @@ title: Edge-Segmentierung mithilfe der API
 topic-legacy: developer guide
 description: Dieses Dokument enthält Beispiele für die Verwendung der Edge-Segmentierung mit der Segmentierungs-Service-API von Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1187'
 ht-degree: 96%
@@ -32,8 +32,8 @@ Bei der Edge-Segmentierung werden Segmente in Adobe Experience Platform sofort a
 
 Dieses Entwicklerhandbuch setzt Grundkenntnisse der verschiedenen [!DNL Adobe Experience Platform]-Services voraus, die mit Edge-Segmentierungen zusammenhängen. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Services:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus verschiedenen Quellen beruht.
-- [[!DNL Segmentation]](../home.md): Ermöglicht die Erstellung von Segmenten und Zielgruppen aus Ihren [!DNL Real-time Customer Profile]-Daten.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus verschiedenen Quellen beruht.
+- [[!DNL Segmentation]](../home.md): Ermöglicht die Erstellung von Segmenten und Zielgruppen aus Ihren [!DNL Real-Time Customer Profile]-Daten.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Platform] organisiert werden.
 
 Lesen Sie für erfolgreiche Aufrufe an API-Endpunkte in Experience Platform das Handbuch [Erste Schritte mit Platform-APIs](../../landing/api-guide.md), um mehr über erforderliche Kopfzeilen und Beispiele für API-Aufrufe zu erfahren.

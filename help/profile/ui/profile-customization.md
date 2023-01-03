@@ -4,16 +4,16 @@ title: Anpassung der Profildetails in der Benutzeroberfläche
 description: Dieses Handbuch enthält schrittweise Anweisungen zum Anpassen der Art und Weise, wie Echtzeit-Kundenprofildaten in der Benutzeroberfläche von Adobe Experience Platform angezeigt werden.
 topic-legacy: guide
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1350'
 ht-degree: 0%
 
 ---
 
-# [!DNL Real-time Customer Profile]-Detailanpassung {#profile-detail-customization}
+# [!DNL Real-Time Customer Profile]-Detailanpassung {#profile-detail-customization}
 
-In der Benutzeroberfläche von Adobe Experience Platform können Sie [!DNL Real-time Customer Profile] Daten in Form von Kundenprofilen. Die in der Benutzeroberfläche angezeigten Profilinformationen wurden aus mehreren Profilfragmenten zusammengeführt, um für jeden einzelnen Kunden eine einzige Ansicht zu erstellen. Dazu gehören Details wie grundlegende Attribute, verknüpfte Identitäten und Kanalvoreinstellungen. Die in Profilen angezeigten Standardfelder können auch auf Organisationsebene geändert werden, um die bevorzugten Felder anzuzeigen [!DNL Profile] -Attribute. Dieses Handbuch enthält schrittweise Anweisungen zum Anpassen der [!DNL Profile] -Daten werden in der Platform-Benutzeroberfläche angezeigt.
+In der Benutzeroberfläche von Adobe Experience Platform können Sie [!DNL Real-Time Customer Profile] Daten in Form von Kundenprofilen. Die in der Benutzeroberfläche angezeigten Profilinformationen wurden aus mehreren Profilfragmenten zusammengeführt, um für jeden einzelnen Kunden eine einzige Ansicht zu erstellen. Dazu gehören Details wie grundlegende Attribute, verknüpfte Identitäten und Kanalvoreinstellungen. Die in Profilen angezeigten Standardfelder können auch auf Organisationsebene geändert werden, um die bevorzugten Felder anzuzeigen [!DNL Profile] -Attribute. Dieses Handbuch enthält schrittweise Anweisungen zum Anpassen der [!DNL Profile] -Daten werden in der Platform-Benutzeroberfläche angezeigt.
 
 Eine vollständige Anleitung zur Benutzeroberfläche &quot;Profile&quot;finden Sie unter [Handbuch zur Profil-UI](user-guide.md).
 

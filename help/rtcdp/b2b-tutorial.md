@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Erste Schritte mit Real-time Customer Data Platform B2B Edition
 description: Verwenden Sie dieses Beispielszenario als Beispiel für die Einrichtung Ihrer Implementierung von Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1206'
-ht-degree: 87%
+ht-degree: 83%
 
 ---
 
@@ -46,7 +46,7 @@ Das Dienstprogramm zur automatischen Generierung definierte die Datenmodellstruk
 > 
 >Wenn Sie das Dienstprogramm zur automatischen Generierung nicht verwenden oder eine neue Beziehung erstellen müssen, sehen Sie sich das Tutorial zum [Erstellen von Beziehungen zwischen B2B-Schemas](../xdm/tutorials/relationship-b2b.md) an.
 
-Das Echtzeit-Kundenprofil führt Daten aus unterschiedlichen Quellen zusammen, um konsolidierte Profile wichtiger B2B-Entitäten zu erstellen. Da Profile auf Basis einer einzelnen Klasse generiert werden, richtet das Dienstprogramm für die automatische Generierung basierend auf gängigen geschäftlichen Anwendungsfällen Beziehungen zwischen Schemas ein. Somit ist das Bodea-Team nun bereit, Daten basierend auf ihren B2B-Schemas aufzunehmen.
+Das Echtzeit-Kundenprofil führt Daten aus unterschiedlichen Quellen zusammen, um konsolidierte Profile der wichtigsten B2B-Entitäten zu erstellen. Da Profile auf Basis einer einzelnen Klasse generiert werden, richtet das Dienstprogramm für die automatische Generierung basierend auf gängigen geschäftlichen Anwendungsfällen Beziehungen zwischen Schemas ein. Somit ist das Bodea-Team nun bereit, Daten basierend auf ihren B2B-Schemas aufzunehmen.
 
 >[!NOTE]
 > 
@@ -86,7 +86,7 @@ In diesem Beispiel findet das Segment alle Personen, die in der Verkaufsabteilun
 > 
 >Anweisungen zum Erstellen von Segmenten zur Auswertung Ihrer Daten finden Sie im [Handbuch zur Benutzeroberfläche von Segment Builder](../segmentation/ui/segment-builder.md). Spezifischere Anwendungsfälle für die B2B-Segmentierung finden Sie im Abschnitt [Segmentierungsübersicht für Real-Time CDP B2B Edition](./segmentation/b2b.md).
 
-Mit Segment Builder können Sie aus Echtzeit-Kundenprofildaten eine vermarktbare Zielgruppe erstellen und Schätzungen Ihrer potenziellen Zielgruppe basierend auf der Kombination von Ihnen erstellten Attributen, Ereignissen und vorhandenen Zielgruppen anzeigen.
+Mit Segment Builder können Sie aus Echtzeit-Kundenprofildaten eine vermarktbare Zielgruppe erstellen und Schätzungen Ihrer potenziellen Zielgruppe basierend auf der Kombination von Attributen, Ereignissen und vorhandenen Zielgruppen anzeigen, die Sie definiert haben.
 
 ## Aktivieren von evaluierten Daten für ein Ziel
 

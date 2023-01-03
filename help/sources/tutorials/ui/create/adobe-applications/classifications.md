@@ -6,10 +6,10 @@ title: Erstellen einer Adobe Analytics-Quellverbindung für Classification-Daten
 topic-legacy: overview
 type: Tutorial
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '660'
-ht-degree: 24%
+ht-degree: 26%
 
 ---
 
@@ -22,7 +22,7 @@ In diesem Tutorial erfahren Sie, wie Sie eine Adobe Analytics Classifications-Da
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 * [[!DNL Sandboxes]](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 Der Data Connector von Analytics Classifications erfordert, dass Ihre Daten in die neue migriert wurden. [!DNL Classifications] -Infrastruktur von Adobe Analytics vor der Nutzung. Wenden Sie sich zur Bestätigung des Migrationsstatus Ihrer Daten an Ihren Customer Success Manager von Adobe.

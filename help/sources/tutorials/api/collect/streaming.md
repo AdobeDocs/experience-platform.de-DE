@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Streaming-Daten und deren Einbindung in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1099'
 ht-degree: 55%
@@ -485,7 +485,7 @@ Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenfluss
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie einen Datenfluss erstellt, um Streaming-Daten aus Ihrem Streaming-Connector zu erfassen. Eingehende Daten können jetzt von nachgelagerten Platform-Services wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+In diesem Tutorial haben Sie einen Datenfluss erstellt, um Streaming-Daten aus Ihrem Streaming-Connector zu erfassen. Eingehende Daten können jetzt von nachgelagerten Platform-Services wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 - [Übersicht über das Echtzeit-Kundenprofil](../../../../profile/home.md)
 - [Übersicht über Data Science Workspace](../../../../data-science-workspace/home.md)

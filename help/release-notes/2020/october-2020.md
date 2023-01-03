@@ -1,24 +1,24 @@
 ---
-title: Adobe Experience Platform - Versionshinweise, Oktober 2020
-description: Die Versionshinweise für Adobe Experience Platform vom Oktober 2020.
+title: Adobe Experience Platform – Versionshinweise, Oktober 2020
+description: Versionshinweise von Oktober 2020 für Adobe Experience Platform.
 doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 exl-id: 89f5e2bd-8892-4d3f-a3fe-5433bb5ece7a
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1016'
-ht-degree: 25%
+ht-degree: 26%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
 
-**Release-Datum: 14. Oktober 2020**
+**Veröffentlichungsdatum: 14. Oktober 2020**
 
 - [Datenvorbereitung](#data-prep)
 - [Echtzeit-Kundenprofil](#profile)
-- [Segmentierungs-Service](#segmentation)
+- [Segmentation Service](#segmentation)
 - [Quellen](#sources)
 - [Zeit bis Wert](#time-to-value)
 
@@ -37,18 +37,18 @@ Weitere Informationen finden Sie im [Datenvorbereitung - Übersicht](../../data-
 
 ## Echtzeit-Kundenprofil {#profile}
 
-Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Mit [!DNL Real-time Customer Profile]können Sie eine ganzheitliche Ansicht jedes einzelnen Kunden anzeigen, die Daten aus mehreren Kanälen kombiniert, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. [!DNL Profile] ermöglicht es Ihnen, Ihre unterschiedlichen Kundendaten in einer einheitlichen Ansicht zusammenzufassen, die eine umsetzbare, mit Zeitstempel versehene Übersicht über jede Kundeninteraktion bietet.
+Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Mit [!DNL Real-Time Customer Profile]können Sie eine ganzheitliche Ansicht jedes einzelnen Kunden anzeigen, die Daten aus mehreren Kanälen kombiniert, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. [!DNL Profile] ermöglicht es Ihnen, Ihre unterschiedlichen Kundendaten in einer einheitlichen Ansicht zusammenzufassen, die eine umsetzbare, mit Zeitstempel versehene Übersicht über jede Kundeninteraktion bietet.
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
 | API-Ergänzungen zur Profilvorschau | Die Profilvorschau-API (`/previewsamplestatus`) bietet jetzt die Möglichkeit, eine Aufschlüsselung der gesamten Profilfragmente in Ihrer IMS-Organisation anzuzeigen und die Verteilung der Profilfragmente über Identitäts-Namespaces hinweg anzuzeigen. |
 | Aktualisierungen der Schema-Ansicht von Vereinigungen | In der Experience Platform-Benutzeroberfläche können Benutzer leichter Informationen zu allen Schemas und Datensätzen finden, die zum Vereinigungsschema beitragen, sowie wichtige Oberflächenattribute wie Identitäts- und Beziehungsfelder. Diese Aktualisierungen verbessern die Fehlerbehebung und die Überprüfung der korrekten Konfiguration von Profilen, der korrekten Zuordnung von Identitäten und der erfolgreichen Erfassung von Daten. |
 
-Weitere Informationen finden Sie unter [!DNL Real-time Customer Profile], einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile] Daten lesen Sie bitte die [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
+Weitere Informationen finden Sie unter [!DNL Real-Time Customer Profile], einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile] Daten lesen Sie bitte die [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
 
 ## Segmentierungs-Service {#segmentation}
 
-Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Segmente erstellen und aus Ihren [!DNL Real-time Customer Profile]-Daten Zielgruppen generieren können. Diese Segmente werden zentral in [!DNL Platform] konfiguriert und gepflegt, sodass sie für jede Adobe-Anwendung leicht zugänglich sind.
+Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Segmente erstellen und aus Ihren [!DNL Real-Time Customer Profile]-Daten Zielgruppen generieren können. Diese Segmente werden zentral in [!DNL Platform] konfiguriert und gepflegt, sodass sie für jede Adobe-Anwendung leicht zugänglich sind.
 
 [!DNL Segmentation Service] definiert eine bestimmte Untergruppe von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Segmente können auf Datensatzdaten (z. B. demografische Daten) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
 

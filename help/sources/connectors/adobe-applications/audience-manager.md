@@ -5,14 +5,14 @@ title: Übersicht über die Audience Manager-Quelle
 topic-legacy: overview
 description: Die Adobe Audience Manager-Quelle streamt Erstanbieterdaten, die im Audience Manager erfasst wurden, an Adobe Experience Platform.
 exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
-source-git-commit: 37e810ce6faf40f9980841b2c9d6eb29e8b0e82a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1059'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# Audience Manager source
+# Audience Manager-Quelle
 
 Die Adobe Audience Manager-Quelle streamt Erstanbieterdaten, die in Adobe Audience Manager zur Aktivierung in Adobe Experience Platform erfasst wurden. Die Audience Manager-Quelle erfasst zwei Datentypen in Platform:
 

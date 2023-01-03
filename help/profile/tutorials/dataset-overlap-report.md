@@ -4,7 +4,7 @@ title: Generieren des Datensatzüberlagerungsberichts
 type: Tutorial
 description: In diesem Tutorial werden die Schritte beschrieben, die zum Generieren des Berichts zur Datensatzüberlappung mithilfe der Echtzeit-Kundenprofil-API erforderlich sind.
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 2%
@@ -17,7 +17,7 @@ Der Bericht zur Datensatzüberschneidung bietet Einblick in die Zusammensetzung 
 
 Dieser Bericht bietet nicht nur Einblicke in Ihre Daten, sondern ermöglicht Ihnen auch Maßnahmen zur Optimierung Ihrer Lizenznutzung, z. B. die Festlegung einer Beschränkung der Lebensdauer bestimmter Daten.
 
-In diesem Tutorial werden die Schritte beschrieben, die zum Generieren des Berichts zur Datensatzüberschneidung mit dem [!DNL Real-time Customer Profile] API verwenden und die Ergebnisse für Ihre Organisation interpretieren.
+In diesem Tutorial werden die Schritte beschrieben, die zum Generieren des Berichts zur Datensatzüberschneidung mit dem [!DNL Real-Time Customer Profile] API verwenden und die Ergebnisse für Ihre Organisation interpretieren.
 
 ## Erste Schritte
 

@@ -5,7 +5,7 @@ title: Übersicht über Segmentübereinstimmungen
 topic-legacy: overview
 description: Segmentabgleich ist ein Dienst zur Segmentfreigabe in Adobe Experience Platform, mit dem zwei oder mehr Platform-Benutzer Segmentdaten auf sichere, gesteuerte und datenschutzfreundliche Weise austauschen können.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 2329065b938d97f48a23be5250fec535355db770
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1998'
 ht-degree: 6%
@@ -37,7 +37,7 @@ Der erste Schritt zu den ersten Schritten mit [!DNL Segment Match] soll sicherst
 
 Identitäts-Namespaces sind eine Komponente von [Adobe Experience Platform Identity Service](../../../identity-service/home.md). Jede Kundenidentität enthält einen zugehörigen Namespace, der den Kontext der Identität angibt. Beispielsweise kann ein Namespace den Wert &quot;name&quot;unterscheiden<span>@email.com&quot; als E-Mail-Adresse oder &quot;443522&quot; als numerische CRM-ID.
 
-Eine vollqualifizierte Identität umfasst einen ID-Wert und einen Namespace. Bei der Zuordnung von Datensatzdaten zu Profilfragmenten (z. B. wann [!DNL Real-time Customer Profile] führt Profildaten zusammen), sowohl der Identitätswert als auch der Namespace müssen übereinstimmen.
+Eine vollqualifizierte Identität umfasst einen ID-Wert und einen Namespace. Bei der Zuordnung von Datensatzdaten zu Profilfragmenten (z. B. wann [!DNL Real-Time Customer Profile] führt Profildaten zusammen), sowohl der Identitätswert als auch der Namespace müssen übereinstimmen.
 
 Im Kontext von [!DNL Segment Match], werden Namespaces beim Datenaustausch im Überschneidungsprozess verwendet.
 
@@ -204,4 +204,4 @@ Durch Lesen dieses Dokuments haben Sie Verständnis für [!DNL Segment Match], s
 
 * [[!DNL Segmentation Service]](../../home.md)
 * [[!DNL Identity Service]](../../../identity-service/home.md)
-* [[!DNL Real-time Customer Profile] – Übersicht](../../../profile/home.md)
+* [[!DNL Real-Time Customer Profile] – Übersicht](../../../profile/home.md)

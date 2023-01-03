@@ -6,7 +6,7 @@ title: Insights mit Customer AI
 topic-legacy: Discovering insights
 description: Dieses Dokument dient als Leitfaden für die Interaktion mit Einblicken von Dienstinstanzen in der Benutzeroberfläche von Intelligent Services Customer AI.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: 417b3f885f75f107d2db06331053917a76c904c4
+source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
 workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 6%
@@ -151,7 +151,7 @@ Auswählen der **[!UICONTROL Segment erstellen]** -Schaltfläche in einem der Be
 
 >[!NOTE]
 >
->Die **[!UICONTROL Segment erstellen]** -Schaltfläche ist nur verfügbar, wenn Echtzeit-Kundenprofil für den Datensatz aktiviert ist. Weitere Informationen zum Aktivieren des Echtzeit-Kundenprofils finden Sie unter [Übersicht über das Echtzeit-Kundenprofil](../../../rtcdp/overview.md).
+>Die **[!UICONTROL Segment erstellen]** -Schaltfläche ist nur verfügbar, wenn das Echtzeit-Kundenprofil für den Datensatz aktiviert ist. Weitere Informationen zum Aktivieren des Echtzeit-Kundenprofils finden Sie unter [Übersicht über das Echtzeit-Kundenprofil](../../../rtcdp/overview.md).
 
 ![Klicken Sie auf Segment erstellen](../images/insights/influential-factors-create-segment.png)
 

@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;Leitlinien;Richtlinien;Limit;Entität;primäre Entität;Dimensionsentität;
-title: Standard-Leitlinien für Echtzeit-Kundenprofil-Daten
+title: Standardmäßige Limits für Echtzeit-Kundenprofildaten
 solution: Experience Platform
 product: experience platform
 type: Documentation
 description: Adobe Experience Platform verwendet ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet. Dieses Dokument liefert standardmäßige Verwendungs- und Quotenbegrenzungen zur Hilfe bei der Modellierung Ihrer Profildaten, sodass eine optimale Systemleistung gewährleistet ist.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1929'
-ht-degree: 98%
+ht-degree: 95%
 
 ---
 
-# Standard-Leitlinien für [!DNL Real-time Customer Profile]-Daten
+# Standard-Leitlinien für [!DNL Real-Time Customer Profile]-Daten
 
-Mit Adobe Experience Platform können Sie personalisierte kanalübergreifende Erlebnisse bereitstellen, die auf verhaltensbezogenen Insights und Kundenattributen in Form von Echtzeit-Kundenprofilen basieren. Um diesen neuen Ansatz bei Profilen zu unterstützen, verwendet Experience Platform ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet.
+Mit Adobe Experience Platform können Sie personalisierte kanalübergreifende Erlebnisse bereitstellen, die auf verhaltensbezogenen Einblicken und Kundenattributen in Form von Echtzeit-Kundenprofilen basieren. Um diesen neuen Ansatz bei Profilen zu unterstützen, verwendet Experience Platform ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet.
 
 Dieses Dokument liefert standardmäßige Verwendungs- und Quotenbegrenzungen zur Hilfe bei der Modellierung Ihrer Profildaten, sodass eine optimale Systemleistung gewährleistet ist. Bei der Überprüfung der folgenden Leitlinien wird davon ausgegangen, dass Sie die Daten korrekt modelliert haben. Wenden Sie sich bei Fragen zum Modellieren Ihrer Daten an Ihren Kundenbetreuer.
 
@@ -25,9 +25,9 @@ Dieses Dokument liefert standardmäßige Verwendungs- und Quotenbegrenzungen zur
 
 ## Erste Schritte
 
-Die folgenden Experience Platform-Services sind an der Modellierung von Echtzeit-Kundenprofil-Daten beteiligt:
+Die folgenden Experience Platform-Services sind mit der Modellierung von Echtzeit-Kundenprofildaten beteiligt:
 
-* [[!DNL Real-time Customer Profile]](home.md): Erstellen einheitlicher Verbraucherprofile anhand von Daten aus mehreren Quellen.
+* [[!DNL Real-Time Customer Profile]](home.md): Erstellen einheitlicher Verbraucherprofile anhand von Daten aus mehreren Quellen.
 * [Identitäten](../identity-service/home.md): Überbrücken von Identitäten aus unterschiedlichen Datenquellen, während sie in Platform aufgenommen werden.
 * [Schemata](../xdm/home.md): Experience-Datenmodell-Schemata (XDM) sind das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert.
 * [Segmente](../segmentation/home.md): Die Segmentierungs-Engine in Platform wird verwendet, um basierend auf Kundenverhalten und Kundenattributen Segmente aus Ihren Kundenprofilen zu erstellen.
@@ -46,7 +46,7 @@ In diesem Dokument gibt es zwei Arten von Standardbeschränkungen:
 
 ## Datenmodellbeschränkungen
 
-Die folgenden Leitlinien bieten empfohlene Beschränkungen bei der Modellierung von Echtzeit-Kundenprofildaten. Weitere Informationen zu primären Entitäten und Dimensionsentitäten finden Sie im Abschnitt zu [Entitätstypen](#entity-types) in der Anlage.
+Die folgenden Limits bieten empfohlene Einschränkungen bei der Modellierung von Echtzeit-Kundenprofildaten. Weitere Informationen zu primären Entitäten und Dimensionsentitäten finden Sie im Abschnitt zu [Entitätstypen](#entity-types) in der Anlage.
 
 ### Leitlinien für primäre Entitäten
 
@@ -124,9 +124,9 @@ Dieser Abschnitt enthält zusätzliche Details zu den Limits in diesem Dokument.
 
 Das [!DNL Profile]-Datenspeichermodell besteht aus zwei Kernentitätstypen:
 
-* **Primäre Entität:** Eine primäre Entität oder Profilentität führt Daten zu einer „Single Source of Truth“ für einen Kontakt zusammen. Diese einheitlichen Daten werden mithilfe einer so genannten „einheitlichen Ansicht“ dargestellt. Eine einheitliche Ansicht aggregiert die Felder aller Schemas, die dieselbe Klasse implementieren, in ein einziges einheitliches Schema. Das einheitliche Schema für [!DNL Real-time Customer Profile] ist ein denormalisiertes Hybrid-Datenmodell, das als Container für alle Profilattribute und Verhaltensereignisse fungiert.
+* **Primäre Entität:** Eine primäre Entität oder Profilentität führt Daten zu einer „Single Source of Truth“ für einen Kontakt zusammen. Diese einheitlichen Daten werden mithilfe einer so genannten „einheitlichen Ansicht“ dargestellt. Eine einheitliche Ansicht aggregiert die Felder aller Schemas, die dieselbe Klasse implementieren, in ein einziges einheitliches Schema. Das einheitliche Schema für [!DNL Real-Time Customer Profile] ist ein denormalisiertes Hybrid-Datenmodell, das als Container für alle Profilattribute und Verhaltensereignisse fungiert.
 
-   Zeitunabhängige Attribute, auch „Datensatzdaten “genannt, werden mithilfe von [!DNL XDM Individual Profile] modelliert, während die auch als „Ereignisdaten“ bezeichneten Zeitreihendaten mit [!DNL XDM ExperienceEvent] modelliert werden. Wenn Datensatz- und Zeitreihendaten in Adobe Experience Platform aufgenommen werden, dient dies als Trigger für [!DNL Real-time Customer Profile], um mit der Aufnahme von Daten zu beginnen, die für diese Verwendung aktiviert wurden. Je mehr Interaktionen und Details erfasst werden, desto zuverlässiger werden die einzelnen Profile.
+   Zeitunabhängige Attribute, auch „Datensatzdaten “genannt, werden mithilfe von [!DNL XDM Individual Profile] modelliert, während die auch als „Ereignisdaten“ bezeichneten Zeitreihendaten mit [!DNL XDM ExperienceEvent] modelliert werden. Wenn Datensatz- und Zeitreihendaten in Adobe Experience Platform aufgenommen werden, dient dies als Trigger für [!DNL Real-Time Customer Profile], um mit der Aufnahme von Daten zu beginnen, die für diese Verwendung aktiviert wurden. Je mehr Interaktionen und Details erfasst werden, desto zuverlässiger werden die einzelnen Profile.
 
    ![Eine Infografik, in der die Unterschiede zwischen Datensatzdaten und Zeitreihendaten erläutert werden.](images/guardrails/profile-entity.png)
 
@@ -136,7 +136,7 @@ Das [!DNL Profile]-Datenspeichermodell besteht aus zwei Kernentitätstypen:
 
 ### Profilfragmente
 
-In diesem Dokument gibt es mehrere Leitlinien, die auf „Profilfragmente“ verweisen. In Experience Platform werden mehrere Profilfragmente zusammengeführt, um das Echtzeit-Kundenprofil zu bilden. Jedes Fragment stellt eine eindeutige primäre Identität und den entsprechenden Datensatz oder vollständigen Satz von Ereignisdaten für diese ID in einem bestimmten Datensatz dar. Weitere Informationen zu Profilfragmenten finden Sie in der [Profilübersicht](home.md#profile-fragments-vs-merged-profiles).
+In diesem Dokument gibt es mehrere Leitlinien, die auf „Profilfragmente“ verweisen. In der Experience Platform werden mehrere Profilfragmente zusammengeführt, um das Echtzeit-Kundenprofil zu bilden. Jedes Fragment stellt eine eindeutige primäre Identität und den entsprechenden Datensatz oder vollständigen Satz von Ereignisdaten für diese ID in einem bestimmten Datensatz dar. Weitere Informationen zu Profilfragmenten finden Sie in der [Profilübersicht](home.md#profile-fragments-vs-merged-profiles).
 
 ### Zusammenführungsrichtlinien {#merge-policies}
 

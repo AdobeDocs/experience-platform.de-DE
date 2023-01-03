@@ -5,7 +5,7 @@ title: Erstellen von Datensätzen zur Erfassung von IAB TCF 2.0-Einverständnisd
 topic-legacy: privacy events
 description: Dieses Dokument enthält Schritte zum Einrichten der beiden erforderlichen Datensätze zur Erfassung der IAB TCF 2.0-Zustimmungsdaten.
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
-source-git-commit: 656d772335c2f5ae58b471b31bfbd6dfa82490cd
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1655'
 ht-degree: 3%
@@ -18,7 +18,7 @@ Damit Adobe Experience Platform Kundenzustimmungsdaten gemäß IAB verarbeiten k
 
 Für die Erfassung von TCF 2.0-Einwilligungsdaten sind zwei Datensätze erforderlich:
 
-* Ein Datensatz, der auf der [!DNL XDM Individual Profile] -Klasse, die für die Verwendung in aktiviert ist [!DNL Real-time Customer Profile].
+* Ein Datensatz, der auf der [!DNL XDM Individual Profile] -Klasse, die für die Verwendung in aktiviert ist [!DNL Real-Time Customer Profile].
 * Ein Datensatz, der auf der [!DNL XDM ExperienceEvent] -Klasse.
 
 >[!IMPORTANT]
@@ -35,7 +35,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
    * [Grundlagen der Schemakomposition](../../../../xdm/schema/composition.md): Erfahren Sie mehr über die Grundbausteine von XDM-Schemas.
 * [Adobe Experience Platform Identity Service](../../../../identity-service/home.md): Ermöglicht es Ihnen, Kundenidentitäten von unterschiedlichen Datenquellen über Geräte und Systeme hinweg zu verbinden.
    * [Identitäts-Namespaces](../../../../identity-service/namespaces.md): Kundenidentitätsdaten müssen unter einem bestimmten Identitäts-Namespace bereitgestellt werden, der vom Identity Service erkannt wird.
-* [Echtzeit-Kundenprofil](../../../../profile/home.md): Nutzung [!DNL Identity Service] , damit Sie aus Ihren Datensätzen in Echtzeit detaillierte Kundenprofile erstellen können. [!DNL Real-time Customer Profile] ruft Daten aus dem Data Lake ab und behält Kundenprofile in einem eigenen separaten Datenspeicher bei.
+* [Echtzeit-Kundenprofil](../../../../profile/home.md): Nutzung [!DNL Identity Service] , damit Sie aus Ihren Datensätzen in Echtzeit detaillierte Kundenprofile erstellen können. [!DNL Real-Time Customer Profile] ruft Daten aus dem Data Lake ab und behält Kundenprofile in einem eigenen separaten Datenspeicher bei.
 
 ## TCF 2.0-Feldergruppen {#field-groups}
 
@@ -67,7 +67,7 @@ Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Schemas
 
 >[!NOTE]
 >
->Wenn Sie über vorhandene XDM-Schemas verfügen, mit denen Sie stattdessen Einwilligungsdaten erfassen möchten, können Sie diese Schemas bearbeiten, anstatt neue Schemas zu erstellen. Wenn jedoch ein vorhandenes Schema für die Verwendung im Echtzeit-Kundenprofil aktiviert wurde, kann seine primäre Identität nicht ein direkt identifizierbares Feld sein, das in interessensbasierter Werbung, wie z. B. einer E-Mail-Adresse, nicht verwendet werden darf. Wenden Sie sich an Ihren Rechtsbeistand, wenn Sie sich nicht sicher sind, welche Felder eingeschränkt sind.
+>Wenn Sie über vorhandene XDM-Schemas verfügen, mit denen Sie stattdessen Einwilligungsdaten erfassen möchten, können Sie diese Schemas bearbeiten, anstatt neue Schemas zu erstellen. Wenn jedoch ein vorhandenes Schema für die Verwendung im Echtzeit-Kundenprofil aktiviert wurde, kann seine primäre Identität nicht ein direkt identifizierbares Feld sein, das nicht in interessensbasierter Werbung verwendet werden darf, z. B. eine E-Mail-Adresse. Wenden Sie sich an Ihren Rechtsbeistand, wenn Sie sich nicht sicher sind, welche Felder eingeschränkt sind.
 >
 >Darüber hinaus können bei der Bearbeitung vorhandener Schemas nur additive (nicht brechende) Änderungen vorgenommen werden. Siehe Abschnitt im Abschnitt [Grundsätze der Schemaentwicklung](../../../../xdm/schema/composition.md#evolution) für weitere Informationen.
 
@@ -97,11 +97,11 @@ Nachdem Sie einen Namen und eine Beschreibung angegeben haben, können Sie dem S
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-profile.png)
 
-Wenn Sie ein vorhandenes Schema bearbeiten, das bereits für die Verwendung in [!DNL Real-time Customer Profile]auswählen **[!UICONTROL Speichern]** , um Ihre Änderungen zu bestätigen, bevor Sie mit dem Abschnitt zum [Erstellen eines Datensatzes basierend auf Ihrem Einverständnisschema](#dataset). Wenn Sie ein neues Schema erstellen, führen Sie die im folgenden Unterabschnitt beschriebenen Schritte aus.
+Wenn Sie ein vorhandenes Schema bearbeiten, das bereits für die Verwendung in [!DNL Real-Time Customer Profile]auswählen **[!UICONTROL Speichern]** , um Ihre Änderungen zu bestätigen, bevor Sie mit dem Abschnitt zum [Erstellen eines Datensatzes basierend auf Ihrem Einverständnisschema](#dataset). Wenn Sie ein neues Schema erstellen, führen Sie die im folgenden Unterabschnitt beschriebenen Schritte aus.
 
-#### Aktivieren Sie das Schema zur Verwendung in [!DNL Real-time Customer Profile]
+#### Aktivieren Sie das Schema zur Verwendung in [!DNL Real-Time Customer Profile]
 
-Damit Platform die eingehenden Zustimmungsdaten bestimmten Kundenprofilen zuordnen kann, muss das Einwilligungsschema für die Verwendung in [!DNL Real-time Customer Profile].
+Damit Platform die eingehenden Zustimmungsdaten bestimmten Kundenprofilen zuordnen kann, muss das Einwilligungsschema für die Verwendung in [!DNL Real-Time Customer Profile].
 
 >[!NOTE]
 >
@@ -158,7 +158,7 @@ Nachdem die erforderlichen Feldergruppen hinzugefügt wurden, schließen Sie die
 
 ## Erstellen von Datensätzen basierend auf Ihren Einwilligungsschemas {#datasets}
 
-Für jedes der oben beschriebenen erforderlichen Schemas müssen Sie einen Datensatz erstellen, in dem letztendlich die Zustimmungsdaten Ihrer Kunden erfasst werden. Der Datensatz, der auf dem Datensatzschema basiert, muss für [!DNL Real-time Customer Profile], während der Datensatz auf der Grundlage des Zeitreihenschemas **nicht** be [!DNL Profile]-enabled.
+Für jedes der oben beschriebenen erforderlichen Schemas müssen Sie einen Datensatz erstellen, in dem letztendlich die Zustimmungsdaten Ihrer Kunden erfasst werden. Der Datensatz, der auf dem Datensatzschema basiert, muss für [!DNL Real-Time Customer Profile], während der Datensatz auf der Grundlage des Zeitreihenschemas **nicht** be [!DNL Profile]-enabled.
 
 Wählen Sie zunächst **[!UICONTROL Datensätze]** Wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Datensatz erstellen]** in der oberen rechten Ecke.
 
@@ -176,7 +176,7 @@ Der Schritt **[!UICONTROL Datensatz konfigurieren]** wird angezeigt. Geben Sie e
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-configure.png)
 
-Die Detailseite für den neu erstellten Datensatz wird angezeigt. Wenn der Datensatz auf Ihrem Zeitreihenschema basiert, ist der Prozess abgeschlossen. Wenn der Datensatz auf Ihrem Datensatzschema basiert, besteht der letzte Schritt im Prozess darin, den Datensatz zur Verwendung in [!DNL Real-time Customer Profile].
+Die Detailseite für den neu erstellten Datensatz wird angezeigt. Wenn der Datensatz auf Ihrem Zeitreihenschema basiert, ist der Prozess abgeschlossen. Wenn der Datensatz auf Ihrem Datensatzschema basiert, besteht der letzte Schritt im Prozess darin, den Datensatz zur Verwendung in [!DNL Real-Time Customer Profile].
 
 Wählen Sie in der rechten Leiste die **[!UICONTROL Profil]** Umschalten und dann auswählen **[!UICONTROL Aktivieren]** im Bestätigungs-Popup, um das Schema für [!DNL Profile].
 

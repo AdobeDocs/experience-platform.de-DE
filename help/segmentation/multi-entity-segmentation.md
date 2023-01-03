@@ -5,24 +5,24 @@ title: Segmentierung mit mehreren Entitäten - Überblick
 topic-legacy: overview
 description: Bei der Segmentierung mit mehreren Entitäten können Sie Profildaten um zusätzliche Daten erweitern, die auf Produkten, Geschäften oder anderen nicht-profilbasierten Klassen beruhen. Sobald eine Verbindung besteht, stehen Daten aus zusätzlichen Klassen zur Verfügung, so als wären sie im Profilschema nativ vorhanden.
 exl-id: 01a37fdc-2abe-4a84-b7da-fcbd141ff51f
-source-git-commit: d036ca8c3a378494f776c2bbb05e9d687bd2e201
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '699'
-ht-degree: 7%
+ht-degree: 9%
 
 ---
 
 # Segmentierung mit mehreren Entitäten - Übersicht
 
-Die Segmentierung mehrerer Entitäten ist eine erweiterte Funktion, die als Teil von Adobe Experience Platform verfügbar ist. [!DNL Segmentation Service]. Mit dieser Funktion können Sie die [!DNL Real-time Customer Profile] Daten mit zusätzlichen &quot;Nicht-Personen&quot;-Daten (auch als &quot;Dimensionsentitäten&quot;bezeichnet), die Ihr Unternehmen definieren kann, z. B. Daten zu Produkten oder Stores. Die Segmentierung mit mehreren Entitäten bietet Flexibilität bei der Definition von Zielgruppensegmenten basierend auf Daten, die für Ihre individuellen Geschäftsanforderungen relevant sind. Sie kann ohne Expertise auf dem Gebiet der Abfrage von Datenbanken durchgeführt werden. Mit der Segmentierung mit mehreren Entitäten können Sie Ihren Segmenten wichtige Daten hinzufügen, ohne teure Änderungen an Datenströmen vornehmen zu müssen oder auf eine Back-End-Datenzusammenführung zu warten.
+Die Segmentierung mehrerer Entitäten ist eine erweiterte Funktion, die als Teil von Adobe Experience Platform verfügbar ist. [!DNL Segmentation Service]. Mit dieser Funktion können Sie die [!DNL Real-Time Customer Profile] Daten mit zusätzlichen &quot;Nicht-Personen&quot;-Daten (auch als &quot;Dimensionsentitäten&quot;bezeichnet), die Ihr Unternehmen definieren kann, z. B. Daten zu Produkten oder Stores. Die Segmentierung mit mehreren Entitäten bietet Flexibilität bei der Definition von Zielgruppensegmenten basierend auf Daten, die für Ihre individuellen Geschäftsanforderungen relevant sind. Sie kann ohne Expertise auf dem Gebiet der Abfrage von Datenbanken durchgeführt werden. Mit der Segmentierung mit mehreren Entitäten können Sie Ihren Segmenten wichtige Daten hinzufügen, ohne teure Änderungen an Datenströmen vornehmen zu müssen oder auf eine Back-End-Datenzusammenführung zu warten.
 
 ## Erste Schritte
 
 Die Segmentierung mehrerer Entitäten erfordert ein Verständnis der verschiedenen Adobe Experience Platform-Dienste, die an der Segmentierung beteiligt sind. Bevor Sie mit diesem Handbuch fortfahren, lesen Sie bitte die folgende Dokumentation:
 
-* [[!DNL Real-time Customer Profile]](../profile/home.md): Bietet ein einheitliches Verbraucherprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus verschiedenen Quellen beruht.
    * [ProfilLimits](../profile/guardrails.md): Best Practices zum Erstellen von Datenmodellen, die von [!DNL Profile].
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Ermöglicht Ihnen das Erstellen von Segmenten aus [!DNL Real-time Customer Profile] Daten.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Ermöglicht Ihnen das Erstellen von Segmenten aus [!DNL Real-Time Customer Profile] Daten.
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten ordnet.
    * [Grundlagen der Schemakomposition](../xdm/schema/composition.md#union): Erfahren Sie mehr über Best Practices zum Erstellen von Schemas, die in Experience Platform verwendet werden sollen. Um die Segmentierung optimal zu nutzen, stellen Sie bitte sicher, dass Ihre Daten als Profile und Ereignisse gemäß dem [Best Practices für die Datenmodellierung](../xdm/schema/best-practices.md).
 

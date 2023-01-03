@@ -5,7 +5,7 @@ title: Identitätsfelder in der Benutzeroberfläche definieren
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Experience Platform ein Identitätsfeld definieren.
 topic-legacy: user guide
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 9%

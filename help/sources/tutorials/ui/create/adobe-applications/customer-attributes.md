@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Quellverbindung in der Benutzeroberfläche erstellen, um Kundenattributprofildaten in Adobe Experience Platform zu importieren.
 exl-id: 66bdab8f-c00e-4ebe-8b8e-f9e12cf86bbe
-source-git-commit: b1b820c93ff1731b797f2b5e3ace7d2d6995b98b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 39%
@@ -76,7 +76,7 @@ Der Schritt [!UICONTROL Überprüfung] wird angezeigt, sodass Sie Ihren neuen Da
 
 ## Nächste Schritte
 
-Nachdem die Verbindung erstellt wurde, werden automatisch ein Zielgruppenschema und ein Datensatz erstellt, die die eingehenden Daten enthalten. Nach Abschluss der ersten Aufnahme können Kundenattributprofildaten von nachgelagerten Platform-Diensten wie [!DNL Real-time Customer Profile] und [!DNL Segmentation Service]. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+Nachdem die Verbindung erstellt wurde, werden automatisch ein Zielgruppenschema und ein Datensatz erstellt, die die eingehenden Daten enthalten. Nach Abschluss der ersten Aufnahme können Kundenattributprofildaten von nachgelagerten Platform-Diensten wie [!DNL Real-Time Customer Profile] und [!DNL Segmentation Service]. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
-* [[!DNL Real-time Customer Profile] – Übersicht](../../../../../profile/home.md)
+* [[!DNL Real-Time Customer Profile] – Übersicht](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] – Übersicht](../../../../../segmentation/home.md)

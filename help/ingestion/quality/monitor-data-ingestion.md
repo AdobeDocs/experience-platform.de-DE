@@ -5,7 +5,7 @@ title: Überwachen der Datenerfassung
 topic-legacy: overview
 description: Dieses Benutzerhandbuch enthält eine Anleitung zum Überwachen Ihrer Daten in der Benutzeroberfläche von Adobe Experience Platform. Für dieses Handbuch benötigen Sie eine Adobe ID und Zugriff auf Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: dce7faa7fc680e37b537bf623c3a33e6c6e37169
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 34%
@@ -33,7 +33,7 @@ Dieses Benutzerhandbuch enthält Schritte zum Überwachen Ihrer Daten in der Ben
 
 Im [Experience Platform-Benutzeroberfläche](https://platform.adobe.com)auswählen **[!UICONTROL Überwachung]** im linken Navigationsmenü, gefolgt von **[!UICONTROL End-to-End-Streaming]**.
 
-Die Überwachungsseite **[!UICONTROL End-to-End-Streaming]** wird angezeigt. Dieser Arbeitsbereich bietet ein Diagramm, das die Rate der gestreamten Ereignisse anzeigt, die von [!DNL Platform], ein Diagramm, das die Rate der gestreamten Ereignisse anzeigt, die erfolgreich von [[!DNL Real-time Customer Profile]](../../profile/home.md)sowie eine detaillierte Liste der eingehenden Daten.
+Die Überwachungsseite **[!UICONTROL End-to-End-Streaming]** wird angezeigt. Dieser Arbeitsbereich bietet ein Diagramm, das die Rate der gestreamten Ereignisse anzeigt, die von [!DNL Platform], ein Diagramm, das die Rate der gestreamten Ereignisse anzeigt, die erfolgreich von [[!DNL Real-Time Customer Profile]](../../profile/home.md)sowie eine detaillierte Liste der eingehenden Daten.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 

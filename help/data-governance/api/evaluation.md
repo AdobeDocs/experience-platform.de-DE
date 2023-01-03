@@ -5,7 +5,7 @@ title: API-Endpunkte für die Richtlinienauswertung
 topic-legacy: developer guide
 description: Nachdem Marketing-Aktionen erstellt und Richtlinien definiert wurden, können Sie mit der Policy Service-API bewerten, ob Richtlinien durch bestimmte Aktionen verletzt werden. Die zurückgegebenen Beschränkungen bestehen aus einer Reihe von Richtlinien, gegen die verstoßen werden würde, wenn die Marketing-Aktion für die angegebenen Daten mit Datennutzungsbezeichnungen ausgeführt wird.
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1542'
 ht-degree: 98%
@@ -682,6 +682,6 @@ Eine erfolgreiche Antwort gibt eine Reihe von Auswertungsergebnissen zurück. Ei
 ]
 ```
 
-## Richtlinienauswertung für [!DNL Real-time Customer Profile]
+## Richtlinienauswertung für [!DNL Real-Time Customer Profile]
 
-Die [!DNL Policy Service]-API kann auch verwendet werden, um nach Richtlinienverstößen zu suchen, bei denen [!DNL Real-time Customer Profile]-Segmente verwendet werden. Weiterführende Informationen finden Sie im Tutorial zum [Durchsetzen der Datennutzungskonformität für Zielgruppensegmente](../../segmentation/tutorials/governance.md).
+Die [!DNL Policy Service]-API kann auch verwendet werden, um nach Richtlinienverstößen zu suchen, bei denen [!DNL Real-Time Customer Profile]-Segmente verwendet werden. Weiterführende Informationen finden Sie im Tutorial zum [Durchsetzen der Datennutzungskonformität für Zielgruppensegmente](../../segmentation/tutorials/governance.md).

@@ -5,10 +5,10 @@ title: XDM-System – Übersicht
 topic-legacy: overview
 description: Standardisierung und Interoperabilität sind Schlüsselkonzepte von Adobe Experience Platform. Das von Adobe unterstützte Experience-Datenmodell (XDM) ermöglicht die Standardisierung von Kundenerlebnisdaten und die Definition von Schemas für das Customer Experience Management.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2087'
-ht-degree: 100%
+ht-degree: 92%
 
 ---
 
@@ -110,23 +110,23 @@ Weitere Informationen zum Katalog finden Sie im Abschnitt [Catalog Service – �
 
 Mit Query Service von Adobe Experience Platform können Sie SQL-Standarddaten zur Abfrage von Experience Platform-Daten verwenden, um viele verschiedene Anwendungsfälle zu unterstützen.
 
-Nachdem ein Schema konzipiert und ein Datensatz erstellt wurde, der auf dieses Schema verweist, werden Daten aufgenommen und im Data Lake gespeichert. Mit Query Service können Sie beliebige Datensätze in den Data Lake einbinden und die Abfrageergebnisse als neuen Datensatz erfassen, der beim Reporting und maschinellen Lernen oder zur Aufnahme in das Echtzeit-Kundenprofil verwendet werden kann.
+Nachdem ein Schema konzipiert und ein Datensatz erstellt wurde, der auf dieses Schema verweist, werden Daten aufgenommen und im Data Lake gespeichert. Mithilfe von Query Service können Sie beliebige Datensätze in den Data Lake einbinden und die Abfrageergebnisse als neuen Datensatz erfassen, der für Berichte, maschinelles Lernen oder die Aufnahme in das Echtzeit-Kundenprofil verwendet werden kann.
 
 Weitere Informationen zu diesem Service finden Sie unter [Query Service – Übersicht](../query-service/home.md).
 
 ### Echtzeit-Kundenprofil
 
-Das Echtzeit-Kundenprofil bietet ein zentralisiertes Kundenprofil für zielgerichtetes und personalisiertes Erlebnis-Management. Jedes Profil enthält Daten, die systemübergreifend aggregiert werden, sowie relevante, mit einem Zeitstempel versehene Ereignisse, an denen die entsprechende Person beteiligt ist und die in einem der Systeme stattfanden, die Sie in Verbindung mit Experience Platform verwenden.
+Das Echtzeit-Kundenprofil bietet ein zentralisiertes Kundenprofil für zielgerichtetes und personalisiertes Erlebnismanagement. Jedes Profil enthält Daten, die systemübergreifend aggregiert werden, sowie relevante, mit einem Zeitstempel versehene Ereignisse, an denen die entsprechende Person beteiligt ist und die in einem der Systeme stattfanden, die Sie in Verbindung mit Experience Platform verwenden.
 
-Das Echtzeit-Kundenprofil nutzt schemaformatierte Daten basierend auf [!UICONTROL XDM Individual Profile] und [!UICONTROL XDM ExperienceEvent] und reagiert auf Abfragen, die auf diesen Daten basieren. Das Profil unterstützt nicht die Verwendung von Schemas, die auf anderen Klassen basieren.
+Das Echtzeit-Kundenprofil nutzt schemaformatierte Daten basierend auf dem [!UICONTROL XDM Individual Profile] und [!UICONTROL XDM ExperienceEvent] und antwortet auf Abfragen, die auf diesen Daten basieren. Das Profil unterstützt nicht die Verwendung von Schemas, die auf anderen Klassen basieren.
 
-Das System bildet für jedes Kundenprofil eine Instanz und vereint Daten einer Person zu einer „Single Source of Truth“. Diese zusammengeführten Daten werden mithilfe eines so genannten „Vereinigungsschemas“ dargestellt (auch als „Vereinigungsansicht“ bezeichnet). Ein Vereinigungsschema aggregiert die Felder aller Schemas, die dieselbe Klasse in ein einziges Schema implementieren.  Wenn Sie ein Schema mithilfe der Benutzeroberfläche oder API erstellen, können Sie es aktivieren, damit es mit dem Echtzeit-Kundenprofil verwendet werden kann, und es zur Aufnahme in die Vereinigung kennzeichnen. Das gekennzeichnete Schema wird dann Teil der Schemadefinition, die an das Profil übergeben wird.
+Das System bildet für jedes Kundenprofil eine Instanz und vereint Daten einer Person zu einer „Single Source of Truth“. Diese zusammengeführten Daten werden mithilfe eines so genannten „Vereinigungsschemas“ dargestellt (auch als „Vereinigungsansicht“ bezeichnet). Ein Vereinigungsschema aggregiert die Felder aller Schemas, die dieselbe Klasse in ein einziges Schema implementieren.  Beim Erstellen eines Schemas mithilfe der Benutzeroberfläche oder API können Sie das Schema zur Verwendung mit dem Echtzeit-Kundenprofil aktivieren und es zur Aufnahme in die Vereinigung taggen. Das gekennzeichnete Schema wird dann Teil der Schemadefinition, die an das Profil übergeben wird.
 
-Wenn Daten von [!UICONTROL XDM Individual Profile] und [!UICONTROL XDM ExperienceEvent] in den Data Lake aufgenommen werden, importiert das Echtzeit-Kundenprofil alle Daten, die für dessen Verwendung aktiviert wurden. Je mehr Interaktionen und Details aufgenommen werden, desto zuverlässiger werden die einzelnen Profile.
+As [!UICONTROL XDM Individual Profile] und [!UICONTROL XDM ExperienceEvent] -Daten in den Data Lake aufgenommen werden, erfasst das Echtzeit-Kundenprofil alle Daten, die für dessen Verwendung aktiviert wurden. Je mehr Interaktionen und Details aufgenommen werden, desto zuverlässiger werden die einzelnen Profile.
 
-Die Daten von [!UICONTROL XDM Individual Profile] helfen bei der Kommunikation und der Aktivierung von Aktionen auf allen Kanälen und allen Adobe-Produkten. In Kombination mit umfangreichen Verhaltens- und Interaktionsdaten können diese Daten für maschinelles Lernen verwendet werden. Darüber hinaus kann die Echtzeit-Kundenprofil-API genutzt werden, um die Funktionalität von Drittanbieterlösungen, CRM-Systemen und proprietären Lösungen zu erweitern.
+Die Daten von [!UICONTROL XDM Individual Profile] helfen bei der Kommunikation und der Aktivierung von Aktionen auf allen Kanälen und allen Adobe-Produkten. In Kombination mit umfangreichen Verhaltens- und Interaktionsdaten können diese Daten für maschinelles Lernen verwendet werden. Die Echtzeit-Kundenprofil-API kann auch verwendet werden, um die Funktionalität von Drittanbieterlösungen, CRMs und proprietären Lösungen zu erweitern.
 
-Weitere Informationen dazu finden Sie im Abschnitt [Echtzeit-Kundenprofil – Übersicht](../profile/home.md).
+Siehe [Übersicht über das Echtzeit-Kundenprofil](../profile/home.md) für weitere Informationen.
 
 ### Data Science Workspace
 

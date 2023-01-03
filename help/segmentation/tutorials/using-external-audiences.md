@@ -5,10 +5,10 @@ title: Importieren und Verwenden externer Zielgruppen
 description: In diesem Tutorial erfahren Sie, wie Sie externe Zielgruppen mit Adobe Experience Platform verwenden.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1621'
-ht-degree: 5%
+ht-degree: 3%
 
 ---
 
@@ -20,8 +20,8 @@ Adobe Experience Platform unterstützt die Möglichkeit, externe Zielgruppen zu 
 
 Dieses Tutorial setzt ein Verständnis der verschiedenen [!DNL Adobe Experience Platform] Dienste, die an der Erstellung von Zielgruppensegmenten beteiligt sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Services:
 
-- [Segmentation Service](../home.md): Ermöglicht Ihnen das Erstellen von Zielgruppensegmenten aus Echtzeit-Kundenprofildaten.
-- [Echtzeit-Kundenprofil](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+- [Segmentierungsdienst](../home.md): Ermöglicht das Erstellen von Zielgruppensegmenten aus Echtzeit-Kundenprofildaten.
+- [Echtzeit-Kundenprofil](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus mehreren Quellen basiert.
 - [Experience-Datenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert. Um die Segmentierung optimal zu nutzen, stellen Sie bitte sicher, dass Ihre Daten als Profile und Ereignisse gemäß dem [Best Practices für die Datenmodellierung](../../xdm/schema/best-practices.md).
 - [Datensätze](../../catalog/datasets/overview.md): Das Speicher- und Verwaltungskonstrukt für Datenpersistenz in Experience Platform.
 - [Streaming-Erfassung](../../ingestion/streaming-ingestion/overview.md): So erfasst und speichert Experience Platform Daten von Client- und Server-seitigen Geräten in Echtzeit.
@@ -62,7 +62,7 @@ Nachdem Ihr Schema erstellt wurde, müssen Sie angeben, welches Feld die Segment
 
 ![Die Kontrollkästchen, mit denen das ausgewählte Feld als primäre Identität markiert werden soll, werden im Schema Editor hervorgehoben.](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
-Nachdem Sie die `_id` als primäre Identität festlegen, wählen Sie den Titel des Schemas aus, gefolgt von dem Umschalter mit der Bezeichnung **[!UICONTROL Profil]**. Auswählen **[!UICONTROL Aktivieren]** , um das Schema für [!DNL Real-time Customer Profile].
+Nachdem Sie die `_id` als primäre Identität festlegen, wählen Sie den Titel des Schemas aus, gefolgt von dem Umschalter mit der Bezeichnung **[!UICONTROL Profil]**. Auswählen **[!UICONTROL Aktivieren]** , um das Schema für [!DNL Real-Time Customer Profile].
 
 ![Der Umschalter zum Aktivieren des Schemas für Profil wird im Schema-Editor hervorgehoben.](../images/tutorials/external-audiences/schema-profile.png)
 

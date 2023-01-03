@@ -3,10 +3,10 @@ keywords: Experience Platform;Benutzeroberfläche;UI;Dashboards;Dashboard;Profil
 title: Übersicht über die Dashboard-Anpassung
 description: Hier erfahren Sie mehr darüber, wie Sie anpassen können, welche Daten in Ihren Adobe Experience Platform-Dashboards angezeigt werden.
 exl-id: efabdb61-4148-4b0e-b7a1-6e788b5e43a8
-source-git-commit: 27252d547afd30acc7b334d5054f1350dc0031b7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '480'
-ht-degree: 95%
+ht-degree: 89%
 
 ---
 
@@ -48,7 +48,7 @@ Die vollständigen Schritte zum Erstellen Ihrer eigenen Widgets finden Sie im [H
 
 #### Schema-Bearbeitung {#edit-schema}
 
-Um ein [benutzerdefiniertes Widget](#custom-widgets) für Ihre Dashboards zu erstellen, müssen Sie zunächst das Echtzeit-Kundenprofilattribut identifizieren, auf dem das Widget basieren wird.
+Um eine [benutzerdefiniertes Widget](#custom-widgets) für Ihre Dashboards müssen Sie zunächst das Echtzeit-Kundenprofil-Attribut identifizieren, auf dem das Widget basieren soll.
 
 Schritt-für-Schritt-Anweisungen zum Bearbeiten des Schemas Ihres Unternehmens zum Erstellen benutzerdefinierter Dashboard-Widgets finden Sie im Handbuch zum [Bearbeiten Ihres Dashboard-Schemas](edit-schema.md).
 

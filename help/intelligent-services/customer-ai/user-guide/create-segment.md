@@ -6,10 +6,10 @@ title: Kundensegmente mit prognostizierten Werten erstellen
 topic-legacy: Create a segment
 description: Nach Abschluss einer Prognose werden die prognostizierten Tendenzwerte von Profilen automatisch übernommen. Ein Anreichern von Profilen mit Customer AI-Werten ermöglicht eine Erstellung von Kundensegmenten, die Zielgruppen basierend auf ihren Tendenzwerten finden. In diesem Abschnitt werden Schritte zum Erstellen von Segmenten mit Segment Builder beschrieben.
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
 workflow-type: tm+mt
 source-wordcount: '318'
-ht-degree: 83%
+ht-degree: 78%
 
 ---
 

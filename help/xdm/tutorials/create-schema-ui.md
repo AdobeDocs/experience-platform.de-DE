@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Erstellen eines Schemas mit dem Schema Editor in Experience Platform beschrieben.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '3754'
 ht-degree: 13%
@@ -29,7 +29,7 @@ Dieses Tutorial setzt ein Verständnis der verschiedenen Aspekte von Adobe Exper
 
 * [[!DNL Experience Data Model (XDM)]](../home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Platform] organisiert werden.
    * [Grundlagen der Schemakomposition](../schema/composition.md): Eine Übersicht über XDM-Schemas und ihre Bausteine, einschließlich Klassen, Schemafeldgruppen, Datentypen und einzelner Felder.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
 ## Öffnen Sie die [!UICONTROL Schemas] Arbeitsbereich {#browse}
 
@@ -195,13 +195,13 @@ Nach Abschluss des Vorgangs enthält das Loyalitätsobjekt Felder für die Treue
 
 Beim Definieren von Feldern in der [!DNL Schema Editor]Es gibt einige zusätzliche Optionen, die Sie auf grundlegende Feldtypen anwenden können, um weitere Einschränkungen für die Daten bereitzustellen, die das Feld enthalten kann. Die Anwendungsfälle für diese Einschränkungen werden in der folgenden Tabelle erläutert:
 
-| Einschränkung | Beschreibung |
+| Beschränkung | Beschreibung |
 | --- | --- |
 | [!UICONTROL Erforderlich] | Gibt an, dass das Feld für die Datenerfassung erforderlich ist. Daten, die auf Grundlage dieses Schemas in einen Datensatz hochgeladen wurden und dieses Feld nicht enthalten, schlagen bei der Aufnahme fehl. |
 | [!UICONTROL Array] | Gibt an, dass das Feld ein Array von Werten mit jeweils dem angegebenen Datentyp enthält. Verwenden Sie diese Einschränkung beispielsweise für ein Feld mit dem Datentyp &quot;[!UICONTROL Zeichenfolge]&quot; gibt an, dass das Feld ein Array von Zeichenfolgen enthält. |
 | [!UICONTROL Enum] | Gibt an, dass dieses Feld einen der Werte aus einer nummerierten Liste möglicher Werte enthalten muss. |
 | [!UICONTROL Identität] | Gibt an, dass dieses Feld ein Identitätsfeld ist. Weitere Informationen zu Identitätsfeldern finden Sie [weiter unten in diesem Tutorial](#identity-field). |
-| [!UICONTROL Beziehung] | Während Schemabeziehungen durch die Verwendung des Vereinigungsschemas und [!DNL Real-time Customer Profile], gilt dies nur für Schemas, die dieselbe Klasse teilen. Die [!UICONTROL Beziehung] -Beschränkung gibt an, dass dieses Feld auf die primäre Identität eines Schemas verweist, das auf einer anderen Klasse basiert, was eine Beziehung zwischen den beiden Schemas impliziert. Siehe Tutorial zu [Relation definieren](./relationship-ui.md) für weitere Informationen. |
+| [!UICONTROL Beziehung] | Während Schemabeziehungen durch die Verwendung des Vereinigungsschemas und [!DNL Real-Time Customer Profile], gilt dies nur für Schemas, die dieselbe Klasse teilen. Die [!UICONTROL Beziehung] -Beschränkung gibt an, dass dieses Feld auf die primäre Identität eines Schemas verweist, das auf einer anderen Klasse basiert, was eine Beziehung zwischen den beiden Schemas impliziert. Siehe Tutorial zu [Relation definieren](./relationship-ui.md) für weitere Informationen. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -291,11 +291,11 @@ Nach Anwendung der Änderung wird das Symbol für `loyaltyId` zeigt ein Fingerab
 
 Jetzt werden alle Daten in die `loyaltyId` wird verwendet, um diese Person zu identifizieren und eine einzelne Ansicht des Kunden zusammenzufügen. Weitere Informationen zum Arbeiten mit Identitäten finden Sie unter [!DNL Experience Platform], lesen Sie bitte die [[!DNL Identity Service]](../../identity-service/home.md) Dokumentation.
 
-## Aktivieren Sie das Schema zur Verwendung in [!DNL Real-time Customer Profile] {#profile}
+## Aktivieren Sie das Schema zur Verwendung in [!DNL Real-Time Customer Profile] {#profile}
 
-[[!DNL Real-time Customer Profile]](../../profile/home.md) nutzt Identitätsdaten in [!DNL Experience Platform] um einen ganzheitlichen Überblick über jeden einzelnen Kunden zu bieten. Der Dienst erstellt robuste 360°-Profile mit Kundenattributen sowie mit Zeitstempel versehene Konten für jede Interaktion, die Kunden über ein in [!DNL Experience Platform].
+[[!DNL Real-Time Customer Profile]](../../profile/home.md) nutzt Identitätsdaten in [!DNL Experience Platform] um einen ganzheitlichen Überblick über jeden einzelnen Kunden zu bieten. Der Dienst erstellt robuste 360°-Profile mit Kundenattributen sowie mit Zeitstempel versehene Konten für jede Interaktion, die Kunden über ein in [!DNL Experience Platform].
 
-Damit ein Schema für die Verwendung mit aktiviert wird [!DNL Real-time Customer Profile]muss eine primäre Identität definiert sein. Sie erhalten eine Fehlermeldung, wenn Sie versuchen, ein Schema zu aktivieren, ohne zuvor eine primäre Identität zu definieren.
+Damit ein Schema für die Verwendung mit aktiviert wird [!DNL Real-Time Customer Profile]muss eine primäre Identität definiert sein. Sie erhalten eine Fehlermeldung, wenn Sie versuchen, ein Schema zu aktivieren, ohne zuvor eine primäre Identität zu definieren.
 
 <img src="../images/tutorials/create-schema/missing_primary_identity.png" width="600" /><br>
 
@@ -311,7 +311,7 @@ Auswählen **[!UICONTROL Profil]** und ein Popup angezeigt wird, in dem Sie aufg
 
 >[!WARNING]
 >
->Sobald ein Schema für [!DNL Real-time Customer Profile] und gespeichert werden, kann sie nicht deaktiviert werden.
+>Sobald ein Schema für [!DNL Real-Time Customer Profile] und gespeichert werden, kann sie nicht deaktiviert werden.
 
 Auswählen **[!UICONTROL Aktivieren]** um Ihre Wahl zu bestätigen. Sie können die **[!UICONTROL Profil]** Schalten Sie das Schema wieder ein, um es zu deaktivieren, wenn Sie es wünschen, aber sobald das Schema gespeichert wurde, während [!DNL Profile] aktiviert ist, kann sie nicht mehr deaktiviert werden.
 

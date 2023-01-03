@@ -3,10 +3,10 @@ keywords: Experience Platform; Startseite; beliebte Themen; Audience Manager-Que
 title: Erstellen einer Adobe Audience Manager-Quellverbindung in der Benutzeroberfläche
 description: Dieses Tutorial führt Sie durch die Schritte, die zum Erstellen einer Quellverbindung für Adobe Audience Manager erforderlich sind, um Verbrauchererlebnisereignisdaten über die Benutzeroberfläche in Platform einzubringen.
 exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
-source-git-commit: 9cdb8933d166445bf41ed314d7ffc7d5762e1adb
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '583'
-ht-degree: 25%
+ht-degree: 28%
 
 ---
 
@@ -62,7 +62,7 @@ Die [!UICONTROL Überprüfen] angezeigt, sodass Sie Ihre ausgewählten Eigenscha
 
 ![überprüfen](../../../../images/tutorials/create/aam/review.png)
 
-Nachdem Sie Ihren Datenfluss überprüft haben, wählen Sie **[!UICONTROL Beenden]** und lassen Sie etwas Zeit für die Erstellung des Datenflusses zu.
+Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Beenden]** und gewähren Sie etwas Zeit für die Erstellung des Datenflusses.
 
 ## Nächste Schritte
 

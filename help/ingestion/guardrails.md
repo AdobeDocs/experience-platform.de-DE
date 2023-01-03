@@ -3,10 +3,10 @@ keywords: Experience Platform;Fehlerbehebung;Leitlinien;Richtlinien;
 title: Leitlinien für die Datenaufnahme
 description: Dieses Dokument enthält Anleitungen zu Leitlinien für die Datenaufnahme in Adobe Experience Platform
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: fa0ddc4c0053018d013c14c568ebb2fd231f4bd2
-workflow-type: ht
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+workflow-type: tm+mt
 source-wordcount: '546'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -40,5 +40,5 @@ In der folgenden Tabelle sind Leitlinien aufgeführt, die bei der Verwendung der
 
 In der folgenden Dokumentation finden Sie weitere Informationen zu Leitlinien für Daten und Verarbeitung in Experience Platform:
 
-* [Leitlinien für Echtzeit-Kundenprofil-Daten](../profile/guardrails.md)
+* [Limits für Echtzeit-Kundenprofil-Daten](../profile/guardrails.md)
 * [Leitlinien für Identity Service-Daten](../identity-service/guardrails.md)

@@ -3,10 +3,10 @@ keywords: Experience Platform; Startseite; beliebte Themen; Datenvorbereitung; D
 title: Teilweise Zeilenaktualisierungen an den Profildienst mithilfe der Datenvorbereitung senden
 description: In diesem Dokument erfahren Sie, wie Sie mithilfe der Datenvorbereitung Teilzeilenaktualisierungen an den Profildienst senden.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 4e24552c441c9096ef1139df66ad07d89f08a5d6
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1169'
-ht-degree: 10%
+ht-degree: 8%
 
 ---
 
@@ -24,7 +24,7 @@ Diese Übersicht setzt ein Verständnis der folgenden Komponenten von Adobe Expe
 
 * [[!DNL Data Prep]](./home.md): [!DNL Data Prep] ermöglicht Dateningenieuren das Zuordnen, Transformieren und Validieren von Daten in und aus dem Experience-Datenmodell (XDM).
 * [[!DNL Identity Service]](../identity-service/home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
-* [Echtzeit-Kundenprofil](../profile/home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+* [Echtzeit-Kundenprofil](../profile/home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 * [Quellen](../sources/home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 
 ## Verwenden von Streaming-Uploads in [!DNL Data Prep] {#streaming-upserts-in-data-prep}
@@ -54,7 +54,7 @@ Wenn neue Identitäten verknüpft werden müssen, müssen Sie einen zusätzliche
 
 #### Erforderliche Felder in den Schemas, die mit dem Identitätsdatensatz verknüpft sind {#identity-dataset-required-fileds}
 
-Wenn Ihr Schema erforderliche Felder enthält, muss die Validierung des Datensatzes unterdrückt werden, damit [!DNL Identity Service] um nur die Identitäten zu empfangen. Sie können die Validierung unterdrücken, indem Sie die `disabled` -Wert `acp_validationContext` Parameter. Siehe das Beispiel unten:
+Wenn Ihr Schema erforderliche Felder enthält, muss die Validierung des Datensatzes unterdrückt werden, damit [!DNL Identity Service] um nur die Identitäten zu empfangen. Sie können die Validierung unterdrücken, indem Sie die `disabled` -Wert `acp_validationContext` Parameter. Siehe Beispiel unten:
 
 ```shell
 curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257bef7a75461948ebcaaa' \

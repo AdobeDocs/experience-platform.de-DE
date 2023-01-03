@@ -2,7 +2,7 @@
 title: XDM Business Campaign-Schema-Feldergruppe "Mitgliederdetails"
 description: Dieses Dokument bietet einen Überblick über die Schemakonzerne XDM Business Campaign Member Details .
 exl-id: 597629c8-7f41-4c1c-95b6-aed5e16cee72
-source-git-commit: 7805e4c45a48070adefbaba25a57140efc3e86b1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '360'
 ht-degree: 6%
@@ -22,7 +22,7 @@ ht-degree: 6%
 | `firstRespondedDate` | [!UICONTROL DateTime] | Ein ISO 8601-Zeitstempel, der angibt, wann die Person zum ersten Mal auf die Kampagne reagiert hat. |
 | `hasReachedSuccess` | [!UICONTROL Boolesch] | Gibt an, ob dieses Kampagnenmitglied zu einer erfolgreichen Konvertierung geführt hat. |
 | `hasResponded` | [!UICONTROL Boolesch] | Gibt an, ob dieses Kampagnenmitglied auf die Kampagne reagiert hat. |
-| `isDeleted` | [!UICONTROL Boolesch] | Gibt an, ob dieses Kampagnenmitglied in Marketo Engage gelöscht wurde.<br><br>Bei Verwendung von [Marketo-Quell-Connector](../../../sources/connectors/adobe-applications/marketo/marketo.md), werden alle in Marketo gelöschten Datensätze automatisch im Echtzeit-Kundenprofil angezeigt. Datensätze, die sich auf diese Profile beziehen, können jedoch im Data Lake bestehen bleiben. Durch Festlegen von `isDeleted` nach `true`können Sie mithilfe des Felds herausfiltern, welche Datensätze bei der Abfrage des Data Lake aus Ihren Quellen gelöscht wurden. |
+| `isDeleted` | [!UICONTROL Boolesch] | Gibt an, ob dieses Kampagnenmitglied in Marketo Engage gelöscht wurde.<br><br>Bei Verwendung von [Marketo-Quell-Connector](../../../sources/connectors/adobe-applications/marketo/marketo.md), werden alle in Marketo gelöschten Datensätze automatisch in das Echtzeit-Kundenprofil übernommen. Datensätze, die sich auf diese Profile beziehen, können jedoch im Data Lake bestehen bleiben. Durch Festlegen von `isDeleted` nach `true`können Sie mithilfe des Felds herausfiltern, welche Datensätze bei der Abfrage des Data Lake aus Ihren Quellen gelöscht wurden. |
 | `isExhausted` | [!UICONTROL Boolesch] | Gibt an, ob dieses Kampagnenmitglied alle Kampagneninteraktionen ausgeschöpft hat. |
 | `lastStatus` | [!UICONTROL Zeichenfolge] | Der letzte Status für das Kampagnenmitglied. |
 | `memberStatus` | [!UICONTROL Zeichenfolge] | Der aktuelle Status für das Kampagnenmitglied. |

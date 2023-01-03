@@ -5,7 +5,7 @@ title: Datenerfassung – Übersicht
 topic-legacy: overview
 description: In diesem Dokument werden die drei Hauptwege für die Datenaufnahme in Platform vorgestellt, mit Links zu den jeweiligen Übersichtsdokumenten, in denen Sie weitere Informationen finden.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 100%
@@ -46,6 +46,6 @@ Dieses Dokument bietet eine kurze Einführung in die verschiedenen Aspekte von [
 
 >[!WARNING]
 >
->Der Begriff „Unified Profile“, der im folgenden Video verwendet wird, ist veraltet. Die Begriffe [!DNL "Profile"] oder [!DNL "Real-time Customer Profile"] sind die korrekten Begriffe, die in der [!DNL Experience Platform]-Dokumentation verwendet werden. Die neuesten Funktionen finden Sie in der Dokumentation.
+>Der Begriff „Unified Profile“, der im folgenden Video verwendet wird, ist veraltet. Die Begriffe [!DNL "Profile"] oder [!DNL "Real-Time Customer Profile"] sind die korrekten Begriffe, die in der [!DNL Experience Platform]-Dokumentation verwendet werden. Die neuesten Funktionen finden Sie in der Dokumentation.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)

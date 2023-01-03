@@ -4,7 +4,7 @@ title: Dashboard-Datensätze mithilfe von Query Service durchsuchen, überprüfe
 type: Documentation
 description: Erfahren Sie, wie Sie mit Query Service Rohdatensätze untersuchen und verarbeiten können, die Profil-, Segment- und Ziel-Dashboards in Experience Platform unterstützen.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: 4826731682bcaf5a43c7ce047220c1805d97243a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '970'
 ht-degree: 49%
@@ -17,7 +17,7 @@ Adobe Experience Platform bietet wichtige Informationen zu den Profil-, Segment-
 
 ## Erste Schritte mit [!DNL Query Service]
 
-Adobe Experience Platform [!DNL Query Service] unterstützt Marketingexperten dabei, Einblicke aus ihren Daten zu gewinnen, indem die Verwendung von Standard-SQL zur Abfrage von Daten im Data Lake ermöglicht wird. [!DNL Query Service] bietet eine Benutzeroberfläche und eine API, die verwendet werden kann, um einen beliebigen Datensatz in den Data Lake einzubinden und die Abfrageergebnisse als neue Datensätze zu erfassen, die für die Berichterstellung, das maschinelle Lernen oder die Aufnahme in das Echtzeit-Kundenprofil verwendet werden können.
+Adobe Experience Platform [!DNL Query Service] unterstützt Marketingexperten dabei, Einblicke aus ihren Daten zu gewinnen, indem die Verwendung von Standard-SQL zur Abfrage von Daten im Data Lake ermöglicht wird. [!DNL Query Service] bietet eine Benutzeroberfläche und eine API, die verwendet werden können, um einen beliebigen Datensatz in den Data Lake einzubinden und die Abfrageergebnisse als neue Datensätze zu erfassen, die für die Berichterstellung, das maschinelle Lernen oder die Aufnahme in das Echtzeit-Kundenprofil verwendet werden können.
 
 Weitere Informationen finden Sie unter [!DNL Query Service] und seiner Rolle innerhalb der Experience Platform, lesen Sie bitte zunächst die [[!DNL Query Service] Übersicht](../query-service/home.md).
 

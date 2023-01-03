@@ -5,7 +5,7 @@ title: IAB TCF 2.0-Feldergruppe für Einverständniserklärungen für Ereignissc
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die IAB TCF 2.0-Schemafeldgruppe für Einwilligungen für die XDM ExperienceEvent-Klasse.
 exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
-source-git-commit: 046486d5e154b45fc2c2f5408eee235dddf46a4d
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 8%
@@ -18,7 +18,7 @@ ht-degree: 8%
 >
 >Dieses Dokument behandelt die [!UICONTROL IAB TCF 2.0-Zustimmung] Schemafeldgruppe für die XDM ExperienceEvent-Klasse. Diese Feldergruppe sollte nur verwendet werden, wenn Sie Zustimmungsänderungsereignisse im Laufe der Zeit verfolgen möchten.
 >
->Beachten Sie, dass in Ereignisdaten aufgezeichnete Zustimmungswerte in automatischen Durchsetzungs-Workflows nicht berücksichtigt werden. Damit eine automatische Durchsetzung erfolgt, müssen Zustimmungswerte in die Klasse &quot;XDM Individual Profile&quot;aufgenommen und für Echtzeit-Kundenprofil aktiviert werden.
+>Beachten Sie, dass in Ereignisdaten aufgezeichnete Zustimmungswerte in automatischen Durchsetzungs-Workflows nicht berücksichtigt werden. Damit die automatische Durchsetzung erfolgt, müssen Zustimmungswerte in die Klasse &quot;XDM Individual Profile&quot;aufgenommen und für das Echtzeit-Kundenprofil aktiviert werden.
 >
 >Die Feldergruppe, die für die Klasse &quot;XDM Individual Profile&quot;vorgesehen ist, finden Sie im Folgenden. [Dokument](../profile/iab.md) anstatt.
 

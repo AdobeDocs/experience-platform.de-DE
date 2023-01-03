@@ -5,7 +5,7 @@ title: Klassen-API-Endpunkt
 description: Mit dem Endpunkt /classes in der Schema Registry-API können Sie XDM-Klassen in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 topic-legacy: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1532'
 ht-degree: 23%
@@ -255,7 +255,7 @@ Sie können eine benutzerdefinierte Klasse unter der `tenant` -Container, indem 
 >
 >Beim Erstellen eines Schemas, das auf einer von Ihnen definierten benutzerdefinierten Klasse basiert, können Sie keine Standardfeldgruppen verwenden. Jede Feldergruppe definiert die Klassen, mit denen sie kompatibel sind, in ihren `meta:intendedToExtend` -Attribut. Sobald Sie mit der Definition von Feldergruppen beginnen, die mit Ihrer neuen Klasse kompatibel sind (mithilfe der `$id` Ihrer neuen Klasse im `meta:intendedToExtend` -Feld der Feldergruppe), können Sie diese Feldergruppen jedes Mal wiederverwenden, wenn Sie ein Schema definieren, das die von Ihnen definierte Klasse implementiert. Siehe die Abschnitte unter [Erstellen von Feldergruppen](./field-groups.md#create) und [Erstellen von Schemata](./schemas.md#create) in den entsprechenden Endpunkthandbüchern für weitere Informationen.
 >
->Wenn Sie planen, Schemas zu verwenden, die auf benutzerdefinierten Klassen im Echtzeit-Kundenprofil basieren, sollten Sie auch beachten, dass Vereinigungsschemas nur auf Schemas erstellt werden, die dieselbe Klasse aufweisen. Wenn Sie ein benutzerdefiniertes Klassenschema in die Vereinigung für eine andere Klasse einfügen möchten, z. B. [!UICONTROL XDM Individual Profile] oder [!UICONTROL XDM ExperienceEvent]müssen Sie eine Beziehung zu einem anderen Schema herstellen, das diese Klasse verwendet. Siehe Tutorial zu [zur Herstellung einer Beziehung zwischen zwei Schemas in der API](../tutorials/relationship-api.md) für weitere Informationen.
+>Wenn Sie im Echtzeit-Kundenprofil planen, Schemas zu verwenden, die auf benutzerdefinierten Klassen basieren, sollten Sie auch beachten, dass Vereinigungsschemas nur auf Schemas erstellt werden, die dieselbe Klasse aufweisen. Wenn Sie ein benutzerdefiniertes Klassenschema in die Vereinigung für eine andere Klasse einfügen möchten, z. B. [!UICONTROL XDM Individual Profile] oder [!UICONTROL XDM ExperienceEvent]müssen Sie eine Beziehung zu einem anderen Schema herstellen, das diese Klasse verwendet. Siehe Tutorial zu [zur Herstellung einer Beziehung zwischen zwei Schemas in der API](../tutorials/relationship-api.md) für weitere Informationen.
 
 **API-Format**
 

@@ -5,10 +5,10 @@ title: Identity Service – Übersicht
 topic-legacy: overview
 description: Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihren Kunden und sein Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle persönliche digitale Erlebnisse sorgen.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 3e073d2c45f88c56473ccc2e3d18a2bbedd4f254
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1839'
-ht-degree: 96%
+ht-degree: 93%
 
 ---
 
@@ -52,7 +52,7 @@ Betrachten wir ein alltägliches Beispiel für die Beziehung eines Verbrauchers 
 
 ![Identitätszusammenfügung in Platform](./images/identity-service-stitching.png)
 
-Im Wesentlichen können Sie sich mit [!DNL Identity Service] ein vollständiges Bild von Ihrem Kunden machen, indem zusammengehörige Daten zusammengefasst werden, die andernfalls über verschiedene Systeme verstreut sein könnten. Die Identitätsbeziehungen, die [!DNL Identity Service] definiert und pflegt, werden vom Echtzeit-Kundenprofil genutzt, um das vollständige Bild eines Kunden und seiner Interaktionen mit Ihrer Marke zu erstellen. Weiterführende Informationen finden Sie in der [Übersicht zu Echtzeit-Kundenprofil](../profile/home.md).
+Im Wesentlichen können Sie sich mit [!DNL Identity Service] ein vollständiges Bild von Ihrem Kunden machen, indem zusammengehörige Daten zusammengefasst werden, die andernfalls über verschiedene Systeme verstreut sein könnten. Die Identitätsbeziehungen, die [!DNL Identity Service] definiert und verwaltet werden, die vom Echtzeit-Kundenprofil genutzt werden, um ein vollständiges Bild von einem Kunden und dessen Interaktionen mit Ihrer Marke zu erstellen. Weitere Informationen finden Sie unter [Übersicht über das Echtzeit-Kundenprofil](../profile/home.md).
 
 ### Anwendungsfälle
 
@@ -134,7 +134,7 @@ Wenn Sie beispielsweise Telefonnummernfelder als Identitätsfelder kennzeichnen,
 
 ### Datensatz für [!DNL Identity Service] konfigurieren
 
-Während der Streaming-Aufnahme extrahiert [!DNL Identity Service ]automatisch Identitätsdaten aus Datensatz- und Zeitreihendaten. Bevor Daten aufgenommen werden können, müssen sie jedoch für [!DNL Identity Service] aktiviert werden. Weiterführende Informationen finden Sie in der Anleitung zum [Konfigurieren eines Datensatzes für Echtzeit-Kundenprofil und Identity Service mit APIs](../profile/tutorials/dataset-configuration.md).
+Während der Streaming-Aufnahme extrahiert [!DNL Identity Service ]automatisch Identitätsdaten aus Datensatz- und Zeitreihendaten. Bevor Daten aufgenommen werden können, müssen sie jedoch für [!DNL Identity Service] aktiviert werden. Siehe Tutorial zu  [Konfigurieren eines Datensatzes für Echtzeit-Kundenprofil und Identity Service mithilfe von APIs](../profile/tutorials/dataset-configuration.md) für weitere Informationen.
 
 ### Daten in [!DNL Identity Service] aufnehmen
 

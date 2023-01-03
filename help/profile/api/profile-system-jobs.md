@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Mit Adobe Experience Platform können Sie einen Datensatz oder Batch aus dem Profilspeicher löschen, um Echtzeit-Kundenprofildaten zu entfernen, die nicht mehr benötigt werden oder fehlerhaft hinzugefügt wurden. Dazu muss die Profil-API zum Erstellen eines Profilsystemauftrags oder einer Löschanfrage verwendet werden.
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1316'
 ht-degree: 70%
@@ -14,7 +14,7 @@ ht-degree: 70%
 
 # Endpunkt für Profilsystemaufträge (Löschanfragen)
 
-Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen erfassen und zuverlässige Profile für einzelne Kunden einrichten. Daten, die in erfasst werden [!DNL Platform] wird im [!DNL Data Lake]und wenn die Datensätze für Profil aktiviert wurden, werden diese Daten im [!DNL Real-time Customer Profile] auch Datenspeicher. Gelegentlich kann es erforderlich sein, Datensätze oder Batches aus dem Profilspeicher zu löschen, um Daten zu entfernen, die nicht mehr benötigt werden oder irrtümlich hinzugefügt wurden. Dazu muss die [!DNL Real-time Customer Profile] API zum Erstellen einer [!DNL Profile] Systemauftrag oder `delete request`, die bei Bedarf auch geändert, überwacht oder entfernt werden können.
+Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen erfassen und zuverlässige Profile für einzelne Kunden einrichten. Daten, die in erfasst werden [!DNL Platform] wird im [!DNL Data Lake]und wenn die Datensätze für Profil aktiviert wurden, werden diese Daten im [!DNL Real-Time Customer Profile] auch Datenspeicher. Gelegentlich kann es erforderlich sein, Datensätze oder Batches aus dem Profilspeicher zu löschen, um Daten zu entfernen, die nicht mehr benötigt werden oder irrtümlich hinzugefügt wurden. Dazu muss die [!DNL Real-Time Customer Profile] API zum Erstellen einer [!DNL Profile] Systemauftrag oder `delete request`, die bei Bedarf auch geändert, überwacht oder entfernt werden können.
 
 >[!NOTE]
 >
@@ -22,7 +22,7 @@ Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen erfass
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete API-Endpunkt ist Teil von [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](getting-started.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den erforderlichen Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil von [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](getting-started.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den erforderlichen Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
 
 ## Löschanfragen anzeigen
 

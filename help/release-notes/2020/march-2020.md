@@ -6,7 +6,7 @@ last-update: March 10, 2020
 author: ens71067
 keywords: Versionshinweise;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 68%
@@ -111,7 +111,7 @@ Adobe Experience Platform kann Daten aus externen Quellen erfassen und gleichzei
 | ------- | ----------- |
 | Veraltete Signale für Adobe Audience Manager-Connector | Daten auf Signalebene von Audience Manager werden nicht mehr gesendet. Beachten Sie, dass die Segmentzugehörigkeit für Eigenschaften und Segmente weiterhin enthalten ist. Infolge dieser Änderung werden keine eingehenden Datensätze mehr generiert. |
 | Umbenannte Datensätze | Vom Audience Manager-Connector erstellte Datensätze erhalten aktualisierte Namen und Beschreibungen. |
-| Aktivieren [!DNL Profile] Umschalten in Audience Manager | [!DNL Profile] Umschalten kann aktiviert oder deaktiviert werden, um den Datensatz zu bewerben [!DNL Real-time Customer Profile]. Die Umschaltung ist standardmäßig aktiviert. |
+| Aktivieren [!DNL Profile] Umschalten in Audience Manager | [!DNL Profile] Umschalten kann aktiviert oder deaktiviert werden, um den Datensatz zu bewerben [!DNL Real-Time Customer Profile]. Die Umschaltung ist standardmäßig aktiviert. |
 | Unterstützung für Cloud-Speicher via Benutzeroberfläche | Neuer Quell-Connector für [!DNL Azure Data Lake Storage Gen2] in der Benutzeroberfläche. |
 | Benutzeroberflächenunterstützung für CRM-Systeme | Neuer Quell-Connector für [!DNL HubSpot], [!DNL Salesforce Service Cloud]und [!DNL ServiceNow] in der Benutzeroberfläche. |
 | Benutzeroberflächenunterstützung für Datenbanksysteme | Neuer Quell-Connector für [!DNL AWS Redshift], [!DNL Google BigQuery], [!DNL MariaDB], [!DNL Microsoft SQL Server]und [!DNL MySQL] in der Benutzeroberfläche. |

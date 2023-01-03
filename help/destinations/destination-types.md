@@ -3,10 +3,10 @@ keywords: Ziele;Ziel;Zieltypen
 title: Zieltypen und Kategorien
 description: Erfahren Sie mehr über die verschiedenen Zieltypen und -kategorien in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 606038116391e75ba4ffc36bab11757f963a8346
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '680'
-ht-degree: 98%
+ht-degree: 93%
 
 ---
 
@@ -22,7 +22,7 @@ In Adobe Experience Platform unterscheiden wir zwischen zwei Zieltypen: Verbindu
 
 ## Verbindungen {#connections}
 
-**[!UICONTROL Profilexporte]**, **[!UICONTROL Exporte von Streaming-Segmenten]** und Ziele von **[!DNL Edge Personalization]** in Adobe Experience Platform erfassen Ereignisdaten, kombinieren sie mit anderen Datenquellen, um das [Echtzeit-Kundenprofil](../profile/home.md) zu erstellen, wenden die Segmentierung an und exportieren Segmente und qualifizierte Profile zu Zielen.
+**[!UICONTROL Profilexport]**, **[!UICONTROL Export von Streaming-Segmenten]** und **[!DNL Edge Personalization]** Ziele in Adobe Experience Platform erfassen Ereignisdaten, kombinieren sie mit anderen Datenquellen, um die [Echtzeit-Kundenprofil](../profile/home.md), wenden Sie die Segmentierung an und exportieren Sie Segmente und qualifizierte Profile in Ziele.
 
 ## Profilexportziele {#profile-export}
 

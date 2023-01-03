@@ -5,7 +5,7 @@ title: Grundlagen der Schemakomposition
 topic-legacy: overview
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '4103'
 ht-degree: 26%
@@ -58,7 +58,7 @@ Sowohl Schemas der Datensätze als auch der Zeitreihen enthalten eine Zuordnung 
 
 Schemas werden zur Aufnahme von Daten in [!DNL Experience Platform]. Diese Daten können über mehrere Dienste hinweg verwendet werden, um eine einzelne, einheitliche Ansicht einer einzelnen Entität zu erstellen. Daher ist es wichtig, wenn man über Schemas nachdenkt, über Kundenidentitäten nachzudenken und welche Felder zur Identifizierung eines Subjekts verwendet werden können, unabhängig davon, woher die Daten stammen.
 
-Um diesen Prozess zu unterstützen, können Schlüsselfelder in Ihren Schemas als Identitäten markiert werden. Bei der Datenerfassung werden die Daten in diesen Feldern in die[!UICONTROL Identitätsdiagramm]&quot;für diese Person. Auf die Diagrammdaten kann dann zugegriffen werden durch [[!DNL Real-time Customer Profile]](../../profile/home.md) und andere [!DNL Experience Platform] -Services, um eine zusammengesetzte Ansicht jedes einzelnen Kunden bereitzustellen.
+Um diesen Prozess zu unterstützen, können Schlüsselfelder in Ihren Schemas als Identitäten markiert werden. Bei der Datenerfassung werden die Daten in diesen Feldern in die[!UICONTROL Identitätsdiagramm]&quot;für diese Person. Auf die Diagrammdaten kann dann zugegriffen werden durch [[!DNL Real-Time Customer Profile]](../../profile/home.md) und andere [!DNL Experience Platform] -Services, um eine zusammengesetzte Ansicht jedes einzelnen Kunden bereitzustellen.
 
 Felder, die normalerweise als[!UICONTROL Identität]&quot; include: E-Mail-Adresse, Telefonnummer [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=de), CRM-ID oder andere eindeutige ID-Felder. Sie sollten auch alle eindeutigen Kennungen berücksichtigen, die für Ihre Organisation spezifisch sind, da sie gut sein können &quot;[!UICONTROL Identität]&quot;.
 
@@ -114,7 +114,7 @@ Wie das Beispiel oben zeigt, enthält jeder Schlüssel im `identityMap` -Objekt 
 
 >[!NOTE]
 >
->Ein boolescher Wert, der angibt, ob der Wert eine primäre Identität ist (`primary`) kann auch für jeden Identitätswert bereitgestellt werden. Primäre Identitäten müssen nur für Schemata festgelegt werden, die in [!DNL Real-time Customer Profile]. Siehe Abschnitt zu [Vereinigungsschemas](#union) für weitere Informationen.
+>Ein boolescher Wert, der angibt, ob der Wert eine primäre Identität ist (`primary`) kann auch für jeden Identitätswert bereitgestellt werden. Primäre Identitäten müssen nur für Schemata festgelegt werden, die in [!DNL Real-Time Customer Profile]. Siehe Abschnitt zu [Vereinigungsschemas](#union) für weitere Informationen.
 
 ### Schema-Evolutionsprinzipien {#evolution}
 
@@ -273,7 +273,7 @@ while [!DNL Experience Platform] ermöglicht es Ihnen, Schemas für bestimmte An
 
 ![](../images/schema-composition/union.png)
 
-Durch Aktivierung eines Schemas zur Verwendung mit [!DNL Real-time Customer Profile], wird sie in die Vereinigung für diesen Klassentyp aufgenommen. [!DNL Profile] bietet robuste, zentralisierte Profile von Kundenattributen sowie ein mit Zeitstempel versehenes Konto für jedes Ereignis, das Kunden in allen Systemen hatten, die mit [!DNL Platform]. [!DNL Profile] verwendet die vereinigte Ansicht, um diese Daten zu repräsentieren und eine ganzheitliche Ansicht jedes einzelnen Kunden bereitzustellen.
+Durch Aktivierung eines Schemas zur Verwendung mit [!DNL Real-Time Customer Profile], wird sie in die Vereinigung für diesen Klassentyp aufgenommen. [!DNL Profile] bietet robuste, zentralisierte Profile von Kundenattributen sowie ein mit Zeitstempel versehenes Konto für jedes Ereignis, das Kunden in allen Systemen hatten, die mit [!DNL Platform]. [!DNL Profile] verwendet die vereinigte Ansicht, um diese Daten zu repräsentieren und eine ganzheitliche Ansicht jedes einzelnen Kunden bereitzustellen.
 
 Weitere Informationen zum Arbeiten mit [!DNL Profile], siehe [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
 

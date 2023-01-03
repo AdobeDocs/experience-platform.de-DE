@@ -3,10 +3,10 @@ keywords: Experience Platform; Startseite; beliebte Themen; Google Ads; Google A
 title: Erstellen einer Google Ads-Quellverbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie eine Google Ads-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: 56419f41188c9bfdbeda7dde680f269b980a37f0
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '661'
-ht-degree: 27%
+ht-degree: 30%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 27%
 
 >[!NOTE]
 >
->Die Google Ads-Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
+>Die Google Ads-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von als Beta gekennzeichneten Quellen finden Sie unter [Quellen – Übersicht](../../../../home.md#terms-and-conditions).
 
 In diesem Tutorial werden die Schritte zum Erstellen eines Quell-Connectors für Google Ads mithilfe der Adobe Experience Platform-Benutzeroberfläche beschrieben.
 
@@ -25,7 +25,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 * [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
    * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemas vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
    * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
 Wenn Sie bereits über eine gültige Google Ads-Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zu [Datenfluss konfigurieren](../../dataflow/advertising.md)
 
@@ -63,7 +63,7 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das Google Ads-Konto aus, mit
 
 ### Neues Konto
 
-Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]**. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre Google Ads-Anmeldedaten ein. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
+Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre Google Ads-Anmeldedaten ein. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
 
 ![Ein Bild des Bildschirms für die neue Kontoverbindung in der Experience Platform-Benutzeroberfläche](../../../../images/tutorials/create/ads/connect.png).
 

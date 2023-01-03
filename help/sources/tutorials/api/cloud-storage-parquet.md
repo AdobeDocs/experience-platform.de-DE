@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Flow Service-API verwendet, um Sie durch die Schritte zur Aufnahme von Apache Parquet-Daten aus einem Drittanbieter-Cloud-Speichersystem zu führen.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1095'
 ht-degree: 47%
@@ -428,7 +428,7 @@ Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenfluss
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie einen Quell-Connector erstellt, um Parquet-Daten aus Ihrem Drittanbieter-Cloud-Speicher auf geplanter Basis zu erfassen. Eingehende Daten können jetzt von nachgelagerten [!DNL Platform]-Services verwendet werden, wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace]. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+In diesem Tutorial haben Sie einen Quell-Connector erstellt, um Parquet-Daten aus Ihrem Drittanbieter-Cloud-Speicher auf geplanter Basis zu erfassen. Eingehende Daten können jetzt von nachgelagerten [!DNL Platform]-Services verwendet werden, wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace]. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 - [Übersicht über das Echtzeit-Kundenprofil](../../../profile/home.md)
 - [Übersicht über Data Science Workspace](../../../data-science-workspace/home.md)

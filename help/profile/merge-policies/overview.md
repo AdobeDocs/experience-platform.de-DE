@@ -4,10 +4,10 @@ title: Zusammenführungsrichtlinien – Übersicht
 type: Documentation
 description: Mit Adobe Experience Platform können Sie Datenfragmente aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich eine vollständige Ansicht über Ihre einzelnen Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine einheitliche Ansicht zu schaffen.
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
-source-git-commit: 965993bece32eeb0db6e7a9eab3131816a9de5cd
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1265'
-ht-degree: 97%
+ht-degree: 94%
 
 ---
 
@@ -21,8 +21,8 @@ Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusamm
 
 Dieses Handbuch setzt ein Grundverständnis für mehrere wichtige [!DNL Experience Platform]-Funktionen voraus. Bevor Sie dieses Handbuch befolgen und mit Zusammenführungsrichtlinien arbeiten, überprüfen Sie bitte die Dokumentation für die folgendenen Services:
 
-* [Echtzeit-Kundenprofil](../home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Ermöglicht es Echtzeit-Kundenprofil, Identitäten aus unterschiedlichen Datenquellen zu verbinden, die in erfasst werden. [!DNL Platform].
+* [Echtzeit-Kundenprofil](../home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Ermöglicht das Echtzeit-Kundenprofil durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, in die erfasst wird [!DNL Platform].
 * [Experience-Datenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
 
 ## Zusammenführungsrichtlinien verstehen

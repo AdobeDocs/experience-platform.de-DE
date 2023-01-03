@@ -2,7 +2,7 @@
 title: Definieren einer Beziehung zwischen zwei Schemas in Real-time Customer Data Platform B2B Edition
 description: Erfahren Sie, wie Sie in Adobe Real-time Customer Data Platform B2B Edition eine n:1-Beziehung zwischen zwei Schemas definieren.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1403'
 ht-degree: 5%
@@ -69,7 +69,7 @@ Zu Referenzzwecken wird in den folgenden Abschnitten die Struktur der einzelnen 
 
 Das Quellschema &quot;[!DNL Opportunities]&quot; basiert auf der Variablen [!UICONTROL XDM-Geschäftschancen] -Klasse. Eines der von der Klasse bereitgestellten Felder, `opportunityKey`dient als Kennung für das Schema. Insbesondere wird die `sourceKey` Feld unter `opportunityKey` -Objekt wird als primäre Identität des Schemas unter einem benutzerdefinierten Namespace mit dem Namen [!DNL B2B Opportunity].
 
-Siehe unter **[!UICONTROL Schemaeigenschaften]** wurde dieses Schema zur Verwendung in [!DNL Real-time Customer Profile].
+Siehe unter **[!UICONTROL Schemaeigenschaften]** wurde dieses Schema zur Verwendung in [!DNL Real-Time Customer Profile].
 
 ![Opportunities-Schema](../images/tutorials/relationship-b2b/opportunities.png)
 

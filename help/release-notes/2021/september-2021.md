@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platform - Versionshinweise - September 2021
-description: Die Versionshinweise für Adobe Experience Platform vom September 2021.
+title: Adobe Experience Platform – Versionshinweise, September 2021
+description: Versionshinweise September 2021 zu Adobe Experience Platform.
 exl-id: 96375409-803f-45af-805e-900207d972e4
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '377'
-ht-degree: 96%
+ht-degree: 95%
 
 ---
 
@@ -27,7 +27,7 @@ Datenerfassung in Adobe Experience Platform stellt die verschiedenen Methoden da
 
 | Funktion | Beschreibung |
 |------- | -----------|
-| Aktualisieren oder Patchen von Profildatensätzen mithilfe der Batch-Aufnahme | Das Echtzeit-Kundenprofil ermöglicht jetzt über die Batch-Aufnahme Aktualisierungen an Profilattributen in individuellen Profildatensatzdaten. Weitere Informationen finden Sie im [Entwicklerhandbuch zur Batch-Aufnahme](../../ingestion/batch-ingestion/api-overview.md). |
+| Aktualisieren oder Patchen von Profildatensätzen mithilfe der Batch-Aufnahme | Das Echtzeit-Kundenprofil ermöglicht nun über die Batch-Erfassung Aktualisierungen an Profilattributen in individuellen Profildatensatzdaten. Weitere Informationen finden Sie im [Entwicklerhandbuch zur Batch-Aufnahme](../../ingestion/batch-ingestion/api-overview.md). |
 
 Weitere Informationen zur Erfassung von Daten in Platform finden Sie in der [Datenerfassungsdokumentation](../../ingestion/home.md).
 

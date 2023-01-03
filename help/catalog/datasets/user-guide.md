@@ -5,10 +5,10 @@ title: Benutzerhandbuch zu Datensätzen
 topic-legacy: datasets
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform allgemeine Aktionen beim Arbeiten mit Datensätzen durchführen.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1476'
-ht-degree: 39%
+ht-degree: 37%
 
 ---
 
@@ -24,7 +24,7 @@ Das Benutzerhandbuch setzt ein grundlegendes Verständnis der folgenden Komponen
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
    * [Grundlagen der Schemakomposition](../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemakomposition.
    * [Schema Editor](../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mithilfe des [!DNL Schema Editor] innerhalb der [!DNL Platform] -Benutzeroberfläche.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Sorgen Sie bei der Nutzung von Kundendaten für die Einhaltung von Vorschriften, Begrenzungen und Richtlinien.
 
 ## Anzeigen von Datensätzen {#view-datasets}
@@ -106,9 +106,9 @@ Der Schritt **[!UICONTROL Daten hinzufügen]** wird angezeigt. Laden Sie die CSV
 
 ![Der Bildschirm Daten hinzufügen wird angezeigt. Der Speicherort, an den Sie die CSV-Datei für den Datensatz hochladen können, ist hervorgehoben.](../images/datasets/user-guide/add-csv-data.png)
 
-## Datensatz für Echtzeit-Kundenprofile aktivieren {#enable-profile}
+## Datensatz für Echtzeit-Kundenprofil aktivieren {#enable-profile}
 
-Jeder Datensatz bietet die Möglichkeit, Kundenprofile mit den erfassten Daten anzureichern. Dazu muss das Schema, dem der Datensatz entspricht, für die Verwendung in [!DNL Real-time Customer Profile]. Ein kompatibles Schema erfüllt folgende Anforderungen:
+Jeder Datensatz bietet die Möglichkeit, Kundenprofile mit den erfassten Daten anzureichern. Dazu muss das Schema, dem der Datensatz entspricht, für die Verwendung in [!DNL Real-Time Customer Profile]. Ein kompatibles Schema erfüllt folgende Anforderungen:
 
 * Das Schema weist mindestens ein Attribut auf, das als Identitätseigenschaft definiert wurde.
 * Das Schema verfügt über eine Identitätseigenschaft, die als primäre Identität definiert wurde.

@@ -2,10 +2,10 @@
 title: Übersicht über Auditprotokolle
 description: Erfahren Sie, wie Sie mithilfe von Audit-Protokollen sehen können, wer welche Aktionen in Adobe Experience Platform durchgeführt hat.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: fdc61c920ee9ae2c66344e781334844d38b44806
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '944'
-ht-degree: 17%
+ht-degree: 34%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 17%
 
 Um die Transparenz und Sichtbarkeit der im System durchgeführten Aktivitäten zu erhöhen, ermöglicht es Ihnen Adobe Experience Platform, die Benutzeraktivität für verschiedene Dienste und Funktionen in Form von &quot;Auditprotokollen&quot;zu überprüfen. Diese Protokolle bilden ein Audit-Protokoll, das Ihnen bei der Fehlerbehebung in Platform helfen und Ihrem Unternehmen helfen kann, die Richtlinien der Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen.
 
-In einem Prüfprotokoll wird **who** ausgeführt **what** Aktion und **when**. Jede in einem Protokoll aufgezeichnete Aktion enthält Metadaten, die den Aktionstyp, das Datum und die Uhrzeit, die E-Mail-ID des Benutzers, der die Aktion ausgeführt hat, und zusätzliche Attribute für den Aktionstyp angeben.
+In einem Auditprotokoll wird festgehalten, **wer** **welche** Aktion **wann** ausgeführt hat. Jede in einem Protokoll aufgezeichnete Aktion enthält Metadaten, die den Aktionstyp, das Datum und die Uhrzeit, die E-Mail-ID des/der Benutzenden, der/die die Aktion ausgeführt hat, und zusätzliche Attribute des Aktionstyps angeben.
 
 In diesem Dokument werden Auditprotokolle in Platform behandelt, einschließlich der Anzeige und Verwaltung in der Benutzeroberfläche oder API.
 
@@ -33,35 +33,35 @@ In der folgenden Tabelle sind die Aktionen aufgeführt, für die Ressourcen in A
 
 | Ressource | Aktionen |
 | --- | --- |
-| [Zugriffskontrollrichtlinie (attributbasierte Zugriffskontrolle)](../../../access-control/home.md) | <ul><li>Erstellung</li><li>Update</li><li>Löschen</li></ul> |
-| [Konto (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
-| [Attributions-KI-Instanz](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li></ul> |
+| [Zugriffskontrollrichtlinie (attributbasierte Zugriffskontrolle)](../../../access-control/home.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
+| [Konto (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
+| [Attributions-KI-Instanz](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li></ul> |
 | [Administratorprotokolle](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Exportieren</li></ul> |
-| [Klasse](../../../xdm/schema/composition.md#class) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
-| [Berechnetes Attribut](../../../profile/computed-attributes/overview.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
-| [Kunden-KI-Instanz](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li></ul> |
-| [Datensatz](../../../catalog/datasets/overview.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li><li>Aktivieren für [Echtzeit-Kundenprofil](../../../profile/home.md)</li><li>Profil deaktivieren</li><li>Hinzufügen von Daten</li><li>Batch löschen</li></ul> |
-| [Datenstrom](../../../edge/datastreams/overview.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>[Zuordnung bearbeiten](../../../edge/datastreams/data-prep.md)</li></ul> |
-| [Datentypen](../../../xdm/schema/composition.md#data-type) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
-| [Ziel](../../../destinations/home.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>Datensatz aktivieren</li><li>Datensatz entfernen</li><li>Profil aktivieren</li><li>Profil löschen</li></ul> |
-| [Feldergruppe](../../../xdm/schema/composition.md#field-group) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
+| [Klasse](../../../xdm/schema/composition.md#class) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
+| [Berechnetes Attribut](../../../profile/computed-attributes/overview.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
+| [Kunden-KI-Instanz](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li></ul> |
+| [Datensatz](../../../catalog/datasets/overview.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li><li>Aktivieren für [Echtzeit-Kundenprofil](../../../profile/home.md)</li><li>Profil deaktivieren</li><li>Daten hinzufügen</li><li>Batch löschen</li></ul> |
+| [Datenstrom](../../../edge/datastreams/overview.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>[Zuordnung bearbeiten](../../../edge/datastreams/data-prep.md)</li></ul> |
+| [Datentypen](../../../xdm/schema/composition.md#data-type) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
+| [Ziel](../../../destinations/home.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>Datensatz aktivieren</li><li>Datensatz entfernen</li><li>Profil aktivieren</li><li>Profil löschen</li></ul> |
+| [Feldergruppe](../../../xdm/schema/composition.md#field-group) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
 | [Identitätsdiagramm](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Ansicht</li></ul> |
-| [Identity-Namespace](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Erstellung</li><li>Aktualisieren</li></ul> |
-| [Zusammenführungsrichtlinie](../../../profile/merge-policies/overview.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
-| [Produktprofile](../../../access-control/home.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
+| [Identity-Namespace](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Erstellen</li><li>Update</li></ul> |
+| [Zusammenführungsrichtlinie](../../../profile/merge-policies/overview.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
+| [Produktprofile](../../../access-control/home.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
 | [Abfrage](../../../query-service/ui/overview.md) | <ul><li>Execute</li></ul> |
-| [Abfragevorlage](../../../query-service/ui/overview.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
-| [Rolle (attributbasierte Zugriffssteuerung)](../../../access-control/home.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li><li>Benutzer hinzufügen</li><li>Benutzer löschen</li></ul> |
-| [Sandbox](../../../sandboxes/home.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Zurücksetzen</li><li>Löschen</li></ul> |
-| [Geplante Abfrage](../../../query-service/ui/overview.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
-| [Schema](../../../xdm/schema/composition.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li><li>Profil aktivieren</li></ul> |
-| [Segment](../../../segmentation/home.md) | <ul><li>Erstellung</li><li>Löschen</li><li>Segmentaktivierung</li><li>Segment entfernen</li></ul> |
-| [Quelldatenfluss](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>Datensatz aktivieren</li><li>Datensatz entfernen</li><li>Profilaktivität</li><li>Profil entfernen</li></ul> |
-| [Arbeitsauftrag](../../../hygiene/home.md) | <ul><li>Erstellung</li></ul> |
+| [Abfragevorlage](../../../query-service/ui/overview.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
+| [Rolle (attributbasierte Zugriffssteuerung)](../../../access-control/home.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li><li>Benutzer hinzufügen</li><li>Benutzer löschen</li></ul> |
+| [Sandbox](../../../sandboxes/home.md) | <ul><li>Erstellen</li><li>Update</li><li>Zurücksetzen</li><li>Löschen</li></ul> |
+| [Geplante Abfrage](../../../query-service/ui/overview.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
+| [Schema](../../../xdm/schema/composition.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li><li>Profil aktivieren</li></ul> |
+| [Segment](../../../segmentation/home.md) | <ul><li>Erstellen</li><li>Löschen</li><li>Segmentaktivierung</li><li>Segment entfernen</li></ul> |
+| [Quelldatenfluss](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>Datensatz aktivieren</li><li>Datensatz entfernen</li><li>Profilaktivität</li><li>Profil entfernen</li></ul> |
+| [Arbeitsauftrag](../../../hygiene/home.md) | <ul><li>Erstellen</li></ul> |
 
-## Zugriff auf Prüfprotokolle
+## Zugriff auf Auditprotokolle
 
-Wenn die Funktion für Ihr Unternehmen aktiviert ist, werden bei auftretenden Aktivitäten automatisch Prüfprotokolle erfasst. Sie müssen die Datenerfassung in Auditprotokollen nicht manuell aktivieren.
+Wenn diese Funktion für Ihr Unternehmen aktiviert ist, werden bei Aktivitäten automatisch Auditprotokolle aufgezeichnet. Sie müssen die Datenerfassung in Auditprotokollen nicht manuell aktivieren.
 
 Um Prüfprotokolle anzeigen und exportieren zu können, benötigen Sie die **[!UICONTROL Protokoll zu Benutzeraktivitäten anzeigen]** Zugriffskontrollberechtigung erteilt (zu finden unter [!UICONTROL Data Governance] Kategorie). Informationen zum Verwalten individueller Berechtigungen für Platform-Funktionen finden Sie im Abschnitt [Zugriffssteuerungsdokumentation](../../../access-control/home.md).
 
@@ -77,18 +77,18 @@ Wählen Sie ein Ereignis aus der Liste aus, um seine Details in der rechten Leis
 
 ![Ereignisdetails](../../images/audit-logs/select-event.png)
 
-### Auditprotokolle filtern
+### Filtern von Auditprotokollen
 
 >[!NOTE]
 >
 >Da es sich hierbei um eine neue Funktion handelt, gehen die angezeigten Daten nur bis März 2022 zurück. Je nach ausgewählter Ressource stehen möglicherweise frühere Daten ab Januar 2022 zur Verfügung.
 
 
-Wählen Sie das Trichtersymbol (![Filtersymbol](../../images/audit-logs/icon.png)), um eine Liste von Filtersteuerelementen anzuzeigen, die die Eingrenzung der Ergebnisse unterstützen. Unabhängig von den ausgewählten Filtern werden nur die letzten 1000 Datensätze angezeigt.
+Wählen Sie das Trichtersymbol (![Filtersymbol](../../images/audit-logs/icon.png)) aus, um eine Liste von Filterfeldern anzuzeigen, mit denen die Ergebnisse eingegrenzt werden können. Unabhängig von den ausgewählten Filtern werden nur die letzten 1000 Datensätze angezeigt.
 
 ![Filter](../../images/audit-logs/filters.png)
 
-Die folgenden Filter sind für Prüfereignisse in der Benutzeroberfläche verfügbar:
+Die Benutzeroberfläche verfügt für Protokolle über folgende Filter:
 
 | Filter | Beschreibung |
 | --- | --- |
@@ -98,7 +98,7 @@ Die folgenden Filter sind für Prüfereignisse in der Benutzeroberfläche verfü
 | [!UICONTROL Status] | Filtern Sie nach, ob die Aktion zulässig (abgeschlossen) oder verweigert wurde, weil [Zugriffskontrolle](../../../access-control/home.md) Berechtigungen. |
 | [!UICONTROL Datum] | Wählen Sie ein Startdatum und/oder ein Enddatum aus, um einen Datumsbereich zu definieren, nach dem die Ergebnisse gefiltert werden sollen. Daten können mit einem Lookback-Zeitraum von 90 Tagen exportiert werden (z. B. 2021-12-15-2022-03-15). Dies kann je nach Ereignistyp unterschiedlich sein. |
 
-Um einen Filter zu entfernen, wählen Sie das &quot;X&quot;auf dem Pillensymbol für den betreffenden Filter aus oder wählen Sie **[!UICONTROL Alle löschen]** um alle Filter zu entfernen.
+Um einen Filter zu entfernen, klicken Sie auf das „X“ auf dem Symbol für den betreffenden Filter, oder wählen Sie **[!UICONTROL Alle löschen]** aus, um alle Filter zu entfernen.
 
 ![Filter löschen](../../images/audit-logs/clear-filters.png)
 

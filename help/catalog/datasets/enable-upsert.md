@@ -2,18 +2,18 @@
 keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;Datensatz aktivieren
 title: Aktivieren eines Datensatzes für Profilaktualisierungen mithilfe von APIs
 type: Tutorial
-description: In diesem Tutorial erfahren Sie, wie Sie mit Adobe Experience Platform-APIs einen Datensatz mit „upsert“-Funktionen aktivieren können, um Aktualisierungen an Echtzeit-Kundenprofildaten vorzunehmen.
+description: In diesem Tutorial erfahren Sie, wie Sie mit Adobe Experience Platform-APIs einen Datensatz mit "upsert"-Funktionen aktivieren können, um Aktualisierungen an den Echtzeit-Kundenprofildaten vorzunehmen.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 132407af947b97a1925799a1fb5e12caa2b0410c
-workflow-type: ht
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+workflow-type: tm+mt
 source-wordcount: '1050'
-ht-degree: 100%
+ht-degree: 95%
 
 ---
 
 # Aktivieren eines Datensatzes für Profilaktualisierungen mithilfe von APIs
 
-In diesem Tutorial wird die Aktivierung eines Datensatzes mit „upsert“-Funktionen beschrieben, um Aktualisierungen an Echtzeit-Kundenprofildaten vorzunehmen. Dazu gehören die Schritte zum Erstellen eines neuen Datensatzes und zum Konfigurieren eines vorhandenen Datensatzes.
+In diesem Tutorial wird die Aktivierung eines Datensatzes mit &quot;upsert&quot;-Funktionen beschrieben, um Aktualisierungen an den Echtzeit-Kundenprofildaten vorzunehmen. Dazu gehören die Schritte zum Erstellen eines neuen Datensatzes und zum Konfigurieren eines vorhandenen Datensatzes.
 
 >[!NOTE]
 >
@@ -23,8 +23,8 @@ In diesem Tutorial wird die Aktivierung eines Datensatzes mit „upsert“-Funkt
 
 Dieses Tutorial setzt Grundkenntnisse verschiedener Adobe Experience Platform-Services voraus, die mit der Verwaltung von profilaktivierten Datensätzen verbunden sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden [!DNL Platform]-Services:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-- [[!DNL Catalog Service]](../../catalog/home.md): Eine RESTful-API, mit der Sie Datensätze erstellen und für [!DNL Real-time Customer Profile] und [!DNL Identity Service] konfigurieren können.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+- [[!DNL Catalog Service]](../../catalog/home.md): Eine RESTful-API, mit der Sie Datensätze erstellen und für [!DNL Real-Time Customer Profile] und [!DNL Identity Service] konfigurieren können.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Platform] organisiert werden.
 - [Batch-Aufnahme](../../ingestion/batch-ingestion/overview.md): Mit der Batch-Aufnahme-API können Sie Daten als Batch-Dateien in Experience Platform aufnehmen.
 
@@ -119,7 +119,7 @@ Die folgenden Schritte beschreiben, wie Sie einen vorhandenen, für Profil aktiv
 
 ### Überprüfen, ob der Datensatz für Profil aktiviert ist
 
-Mithilfe der [!DNL Catalog]-API können Sie einen vorhandenen Datensatz untersuchen, um festzustellen, ob er für die Verwendung in [!DNL Real-time Customer Profile] aktiviert ist. Der folgende Aufruf ruft die Details eines Datensatzes nach ID ab.
+Mithilfe der [!DNL Catalog]-API können Sie einen vorhandenen Datensatz untersuchen, um festzustellen, ob er für die Verwendung in [!DNL Real-Time Customer Profile] aktiviert ist. Der folgende Aufruf ruft die Details eines Datensatzes nach ID ab.
 
 **API-Format**
 
@@ -192,7 +192,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27
 }
 ```
 
-Unter der `tags`-Eigenschaft ist zu sehen, dass `unifiedProfile` mit dem Wert `enabled:true` vorliegt. Daher ist [!DNL Real-time Customer Profile] für diesen Datensatz aktiviert.
+Unter der `tags`-Eigenschaft ist zu sehen, dass `unifiedProfile` mit dem Wert `enabled:true` vorliegt. Daher ist [!DNL Real-Time Customer Profile] für diesen Datensatz aktiviert.
 
 ### Deaktivieren des Datensatzes für Profil
 

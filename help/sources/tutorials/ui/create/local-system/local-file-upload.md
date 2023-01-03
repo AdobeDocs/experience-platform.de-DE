@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Quellverbindung für Ihr lokales System erstellen, um lokale Dateien auf Platform zu bringen.
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
-source-git-commit: 08805ed0d89d3d6908ddccdafda55d2f862e727e
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '770'
-ht-degree: 69%
+ht-degree: 71%
 
 ---
 
@@ -24,7 +24,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Platfo
 * [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Customer-Experience-Daten von Platform strukturiert werden.
    * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemas vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
    * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
 ## Hochladen lokaler Dateien in Platform
 
@@ -56,7 +56,7 @@ Wenn Sie ein Schema ausgewählt haben, geben Sie einen Namen für Ihren Datenflu
 
 ![new-dataset](../../../../images/tutorials/create/local/new-dataset.png)
 
-### Auswählen von Daten
+### Daten auswählen
 
 Der Schritt [!UICONTROL Auswählen von Daten] wird angezeigt und bietet Ihnen eine Schnittstelle zum Hochladen Ihrer lokalen Dateien und zur Vorschau ihrer Struktur und Inhalte. Wählen Sie **[!UICONTROL Dateien auswählen]** aus, um eine CSV-Datei von Ihrem lokalen System hochzuladen. Alternativ können Sie die CSV-Datei, die Sie hochladen möchten, per Drag-and-Drop in das Bedienfeld [!UICONTROL Dateien per Drag-and-Drop verschieben] ziehen.
 
@@ -86,10 +86,10 @@ Sobald Ihre Zuordnungssätze fertig sind, wählen Sie **[!UICONTROL Beenden]** u
 
 ![Zuordnung](../../../../images/tutorials/create/local/mapping.png)
 
-## Überwachen der Datenerfassung
+## Überwachen der Datenaufnahme
 
 Nachdem Ihre CSV-Datei zugeordnet und erstellt wurde, können Sie die über sie erfassten Daten mithilfe des Monitoring-Dashboards überwachen. Weitere Informationen finden Sie im Tutorial zu [Überwachen von Datenflüssen aus Quellen in der Benutzeroberfläche](../../../../../dataflows/ui/monitor-sources.md).
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich eine flache CSV-Datei einem XDM-Schema zugeordnet und in Platform aufgenommen. Diese Daten können jetzt nachgelagert verwendet werden [!DNL Platform] Dienste wie [!DNL Real-time Customer Profile]. Siehe Übersicht für [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) für weitere Informationen.
+In diesem Tutorial haben Sie erfolgreich eine flache CSV-Datei einem XDM-Schema zugeordnet und in Platform aufgenommen. Diese Daten können jetzt von nachgelagerten [!DNL Platform]-Services wie [!DNL Real-Time Customer Profile] verwendet werden. Weitere Informationen finden Sie in der Übersicht von [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md).

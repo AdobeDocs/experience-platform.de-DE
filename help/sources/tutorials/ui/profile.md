@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Eingehende Daten aus Ihrem Quell-Connector können zur Anreicherung und zum Ausfüllen Ihrer Echtzeit-Kundenprofildaten verwendet werden.
 exl-id: ddd3766a-3f55-4bbc-8358-c578eae2c629
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 22%
@@ -15,7 +15,7 @@ ht-degree: 22%
 
 # Aktivieren von eingehenden Quelldaten zum Ausfüllen von Kundenprofilen
 
-Eingehende Daten aus Ihrem Quell-Connector können zur Anreicherung und zum Ausfüllen Ihrer [!DNL Real-time Customer Profile] Daten.
+Eingehende Daten aus Ihrem Quell-Connector können zur Anreicherung und zum Ausfüllen Ihrer [!DNL Real-Time Customer Profile] Daten.
 
 ## Erste Schritte
 
@@ -24,13 +24,13 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 - [[!DNL Experience Data Model (XDM)] System](../../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
    - [Grundlagen der Schemakomposition](../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemas vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
    - [Tutorial zum Schema-Editor](../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
-- [[!DNL Real-time Customer Profile]](../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+- [[!DNL Real-Time Customer Profile]](../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
 Außerdem müssen Sie für dieses Tutorial bereits einen Quell-Connector erstellt und konfiguriert haben.  Eine Liste der Tutorials zum Erstellen verschiedener Connectoren in der Benutzeroberfläche finden Sie im [Übersicht über Quell-Connectoren](../../home.md).
 
-## Ihre [!DNL Real-time Customer Profile] data
+## Ihre [!DNL Real-Time Customer Profile] data
 
-Um Kundenprofile anzureichern, muss das Quellschema des Zieldatensatzes für die Verwendung in [!DNL Real-time Customer Profile]. Ein kompatibles Schema erfüllt folgende Anforderungen:
+Um Kundenprofile anzureichern, muss das Quellschema des Zieldatensatzes für die Verwendung in [!DNL Real-Time Customer Profile]. Ein kompatibles Schema erfüllt folgende Anforderungen:
 
 - Das Schema weist mindestens ein Attribut auf, das als Identitätseigenschaft definiert wurde.
 - Das Schema verfügt über eine Identitätseigenschaft, die als primäre Identität definiert wurde.
@@ -68,4 +68,4 @@ Wenn sowohl das Schema als auch der Datensatz für [!DNL Profile], füllen die i
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eingehende Daten für [!DNL Profile] Population. Weiterführende Informationen finden Sie in der [[!DNL Real-time Customer Profile] Übersicht](../../../profile/home.md).
+In diesem Tutorial haben Sie eingehende Daten für [!DNL Profile] Population. Weiterführende Informationen finden Sie in der [[!DNL Real-Time Customer Profile] Übersicht](../../../profile/home.md).

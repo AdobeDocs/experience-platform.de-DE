@@ -5,10 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: In der Benutzeroberfläche von Adobe Experience Platform können Sie einfach jedes Vereinigungsschema innerhalb Ihres Unternehmens anzeigen und die Felder, Identitäten, Beziehungen und beitragenden Schemas für eine bestimmte Klasse in der Vorschau anzeigen. In diesem Handbuch finden Sie ausführliche Informationen zum Anzeigen und Erkunden von Vereinigungsschemas mithilfe der Platform-Benutzeroberfläche.
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1199'
-ht-degree: 5%
+ht-degree: 4%
 
 ---
 
@@ -20,8 +20,8 @@ In der Benutzeroberfläche von Adobe Experience Platform können Sie einfach jed
 
 Dieses UI-Handbuch setzt ein Verständnis der verschiedenen [!DNL Experience Platform] Dienste, die mit der Verwaltung von Echtzeit-Kundenprofildaten verbunden sind. Bevor Sie dieses Handbuch lesen oder in der Benutzeroberfläche arbeiten, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
-* [[!DNL Real-time Customer Profile]](../home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-* [[!DNL Identity Service]](../../identity-service/home.md): Aktiviert [!DNL Real-time Customer Profile] durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen bei der Erfassung in [!DNL Platform].
+* [[!DNL Real-Time Customer Profile]](../home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+* [[!DNL Identity Service]](../../identity-service/home.md): Aktiviert [!DNL Real-Time Customer Profile] durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen bei der Erfassung in [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Platform] organisiert werden.
 
 ## Vereinigungsschemata

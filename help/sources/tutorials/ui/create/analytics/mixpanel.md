@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Que
 title: (Beta) Erstellen einer Mixpanel-Quellverbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie eine Quellverbindung für Mixpanel mithilfe der Adobe Experience Platform-Benutzeroberfläche erstellen.
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
-source-git-commit: bee13becb59e3277921549e6db027ce864bba28b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '874'
-ht-degree: 34%
+ht-degree: 35%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 34%
 
 >[!NOTE]
 >
->Die [!DNL Mixpanel] -Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
+>Die [!DNL Mixpanel]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-gekennzeichneten Quellen.
 
 In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Mixpanel] Quellverbindung über die Benutzeroberfläche von Adobe Experience Platform Platform.
 
@@ -25,7 +25,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 * [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
    * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemas vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
    * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
@@ -34,7 +34,7 @@ Um eine Verbindung zwischen [!DNL Mixpanel] und Platform herzustellen, müssen S
 | Anmeldedaten | Beschreibung | Beispiel |
 | --- | --- | --- |
 | Benutzername | Der Benutzername des Dienstkontos, der Ihrer [!DNL Mixpanel] -Konto. Siehe [[!DNL Mixpanel] Dokumentation zu Dienstkonten](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) für weitere Informationen. | `Test8.6d4ee7.mp-service-account` |
-| Passwort | Das Dienstkontokennwort, das Ihrer [!DNL Mixpanel] -Konto. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
+| Kennwort | Das Dienstkontokennwort, das Ihrer [!DNL Mixpanel] -Konto. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
 | Projekt-ID | Ihre [!DNL Mixpanel] Projekt-ID. Diese ID ist erforderlich, um eine Quellverbindung zu erstellen. Siehe [[!DNL Mixpanel] Dokumentation zu den Projekteinstellungen](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) und [[!DNL Mixpanel] Handbuch zum Erstellen und Verwalten von Projekten](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) für weitere Informationen. | `2384945` |
 | Zeitzone | Die Zeitzone, die Ihrer [!DNL Mixpanel] Projekt. Zum Erstellen einer Quellverbindung ist eine Zeitzone erforderlich. Siehe [Dokumentation zu den Projekteinstellungen in Mixpanel](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) für weitere Informationen. | `Pacific Standard Time` |
 
@@ -120,13 +120,13 @@ In der folgenden Tabelle sind die unterstützten Zuordnungen aufgeführt, die f�
 | Quelle | Typ |
 |---|---|
 | `distinct_id` | string |
-| `event_name` | Zeichenfolge |
+| `event_name` | string |
 | `import` | boolean |
-| `insert_id` | Zeichenfolge |
-| `item_id` | Zeichenfolge |
-| `item_name` | Zeichenfolge |
-| `item_price` | Zeichenfolge |
-| `mp_api_endpoint` | Zeichenfolge |
+| `insert_id` | string |
+| `item_id` | string |
+| `item_name` | string |
+| `item_price` | string |
+| `mp_api_endpoint` | string |
 | `mp_api_timestamp_ms` | integer |
 | `mp_processing_time_ms` | integer |
 | `time` | integer |

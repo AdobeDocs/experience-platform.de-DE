@@ -5,10 +5,10 @@ title: Verarbeitung von Datenschutzanfragen im Data Lake
 topic-legacy: overview
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, auf ihre personenbezogenen Daten zuzugreifen, sich gegen deren Verkauf zu wenden oder sie zu löschen, wie in den gesetzlichen und organisatorischen Datenschutzbestimmungen festgelegt. In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutzanfragen für im Data Lake gespeicherte Kundendaten behandelt.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1428'
-ht-degree: 77%
+ht-degree: 73%
 
 ---
 
@@ -20,7 +20,7 @@ In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutza
 
 >[!NOTE]
 >
->In diesem Handbuch wird nur beschrieben, wie Sie Datenschutzanfragen für den Data Lake in Experience Platform stellen. Wenn Sie auch Datenschutzanfragen für den Echtzeit-Kundenprofil-Datenspeicher vornehmen möchten, lesen Sie zusätzlich zu diesem Tutorial das Handbuch [Verarbeitung von Datenschutzanfragen für Profil](../profile/privacy.md).
+>In diesem Handbuch wird nur beschrieben, wie Sie Datenschutzanfragen für den Data Lake in Experience Platform stellen. Wenn Sie auch Datenschutzanfragen für den Echtzeit-Kundenprofil-Datenspeicher erstellen möchten, lesen Sie das Handbuch unter [Verarbeitung von Datenschutzanfragen für Profil](../profile/privacy.md) zusätzlich zu diesem Tutorial.
 >
 >Anweisungen zum Ausführen von Datenschutzanfragen für andere Adobe Experience Cloud-Programme finden Sie in der [Privacy Service-Dokumentation](../privacy-service/experience-cloud-apps.md).
 
@@ -213,7 +213,7 @@ Wenn auch `ProfileService` oder `identity` in der Datenschutzanfrage werden die 
 
 Durch Lesen dieses Dokuments haben Sie sich mit den wichtigen Konzepten der Verarbeitung von Datenschutzanfragen für den Data Lake vertraut gemacht. Wir empfehlen Ihnen, die Dokumentation in diesem Handbuch weiterzulesen, um Ihr Verständnis hinsichtlich der Verwaltung von Identitätsdaten und Erstellung von Datenschutzaufträgen zu vertiefen.
 
-Anweisungen zur Verarbeitung von Datenschutzanfragen für den [!DNL Profile]-Speicher finden Sie im Dokument zur [Verarbeitung von Datenschutzanfragen für Echtzeit-Kundenprofile](../profile/privacy.md).
+Siehe Dokument unter [Verarbeitung von Datenschutzanfragen für Echtzeit-Kundenprofil](../profile/privacy.md) für Schritte zur Verarbeitung von Datenschutzanfragen für die [!DNL Profile] speichern.
 
 ## Anhang
 

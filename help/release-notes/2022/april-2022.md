@@ -2,7 +2,7 @@
 title: Adobe Experience Platform - Versionshinweise, April 2022
 description: Die Versionshinweise für Adobe Experience Platform vom April 2022.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2916'
 ht-degree: 96%
@@ -63,7 +63,7 @@ Weitere Informationen finden Sie in der Dokumentation zu [[!DNL Profiles]](../..
 
 In Platform werden Daten aus vielen verschiedenen Quellen erfasst, innerhalb des Systems analysiert und für eine Vielzahl von Zielen aktiviert. Plattform erleichtert das Tracking dieses potenziell nicht-linearen Datenflusses durch Transparenz.
 
-Datenflüsse sind eine Darstellung von Aufträgen, die Daten innerhalb von Platform bewegen. Diese Datenflüsse werden über verschiedene Services konfiguriert, wodurch Daten von den Quell-Connectoren in Zieldatensätze verschoben werden können. Dort werden sie von Identity Service und vom Echtzeit-Kundenprofil verwendet, bevor sie schließlich für Ziele aktiviert werden.
+Datenflüsse sind eine Darstellung von Aufträgen, die Daten innerhalb von Platform bewegen. Diese Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen dabei, Daten aus Quell-Connectoren in Zieldatensätze zu verschieben, wo sie dann von Identity Service und Echtzeit-Kundenprofil verwendet werden, bevor sie schließlich für Ziele aktiviert werden.
 
 **Neue Funktionen**
 
@@ -189,7 +189,7 @@ Weitere Informationen zu [!DNL Intelligent Services] finden Sie in der [[!DNL In
 
 ### Kunden-KI
 
-In Real-time Customer Data Platform verfügbare Customer AI wird verwendet, um benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion für einzelne Profile in großem Maßstab zu generieren. Dies wird erreicht, ohne dass die Geschäftsanforderungen in ein Problem des maschinellen Lernens umgewandelt werden müssen bzw. ein Algorithmus ausgewählt, trainiert oder bereitgestellt werden muss.
+Die in Real-time Customer Data Platform verfügbare Kunden-KI dient dazu, in großem Umfang benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion für einzelne Profile zu generieren. Dies wird erreicht, ohne dass die Geschäftsanforderungen in ein Problem des maschinellen Lernens umgewandelt werden müssen bzw. ein Algorithmus ausgewählt, trainiert oder bereitgestellt werden muss.
 
 **Aktualisierte Funktionen**
 
@@ -200,7 +200,7 @@ In Real-time Customer Data Platform verfügbare Customer AI wird verwendet, um b
 
 Weitere Informationen zu [!DNL Intelligent Services] finden Sie in der [[!DNL Intelligent Services] Übersicht](../../intelligent-services/home.md).
 
-## Real-time Customer Data Platform B2B Edition {#B2B}
+## Real-Time Customer Data Platform B2B Edition {#B2B}
 
 Die auf Real-time Customer Data Platform (Real-Time CDP) aufbauende Real-Time CDP B2B Edition wurde speziell für Marketing-Experten entwickelt, die in einem Business-to-Business-Dienstleistungsmodell arbeiten. Es führt Daten aus verschiedenen Quellen zusammen und kombiniert sie zu einer einzigen Ansicht von Personen und Account-Profilen. Diese vereinheitlichten Daten ermöglichen es Marketing-Experten, bestimmte Zielgruppen präzise anzusprechen und über alle verfügbaren Kanäle anzusprechen.
 

@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: Im folgenden Handbuch werden die Schritte beschrieben, die zum Erstellen und Veröffentlichen eines Modells für maschinelles Lernen erforderlich sind.
 exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
-source-git-commit: ff8a3612f34d6547577564ba40261052cd78ef01
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1076'
-ht-degree: 11%
+ht-degree: 8%
 
 ---
 
@@ -96,6 +96,6 @@ Nachdem Sie ein Modell als Dienst veröffentlicht haben, können Sie geplante Sc
 
 Adobe Experience Platform [!DNL Data Science Workspace] bietet die Tools und Ressourcen zum Erstellen, Auswerten und Verwenden maschineller Lernmodelle, um Datenprognosen und -einblicke zu generieren. Wenn Einblicke aus maschinellem Lernen in eine [!DNL Profile]-aktivierter Datensatz, der dieselben Daten auch als [!DNL Profile] Datensätze, die dann mithilfe von [!DNL Adobe Experience Platform Segmentation Service].
 
-Bevor aufgenommene Profil- und Zeitreihendaten mit bestehenden Daten zusammengeführt werden und die Vereinigungsansicht aktualisiert wird, bestimmt das Echtzeit-Kundenprofil anhand der sogenannten Streaming-Segmentierung durchgehend automatisch, ob die neuen Daten in den Segmenten eingeschlossen oder von ihnen ausgeschlossen werden. Das Ergebnis: Berechnungen und Entscheidungen dazu, wie Sie Ihren Kunden herausragende, individuell auf sie abgestimmte Erlebnisse liefern, lassen sich direkt während ihrer Interaktion mit Ihrer Marke anstellen bzw. treffen.
+Da Profil- und Zeitreihendaten erfasst werden, entscheidet das Echtzeit-Kundenprofil automatisch, diese Daten über einen kontinuierlichen Prozess, der Streaming-Segmentierung genannt wird, ein- oder auszuschließen, bevor sie mit vorhandenen Daten zusammengeführt und die Vereinigungsansicht aktualisiert wird. Das Ergebnis: Berechnungen und Entscheidungen dazu, wie Sie Ihren Kunden herausragende, individuell auf sie abgestimmte Erlebnisse liefern, lassen sich direkt während ihrer Interaktion mit Ihrer Marke anstellen bzw. treffen.
 
 Besuchen Sie das Tutorial für [Anreicherung des Echtzeit-Kundenprofils mit Einblicken aus maschinellem Lernen](./enrich-profile.md) , um mehr darüber zu erfahren, wie Sie Einblicke aus maschinellem Lernen nutzen können.

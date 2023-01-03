@@ -6,7 +6,7 @@ description: Dieses Dokument bietet eine Anleitung zum Definieren einer Beziehun
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1173'
 ht-degree: 21%
@@ -32,7 +32,7 @@ ht-degree: 21%
 
 Die Möglichkeit, Beziehungen zwischen Ihren Kunden und deren Interaktionen mit Ihrer Marke kanalübergreifend zu analysieren, ist ein wichtiger Bestandteil von Adobe Experience Platform. Definieren dieser Beziehungen innerhalb der Struktur Ihrer [!DNL Experience Data Model] (XDM)-Schemas ermöglichen es Ihnen, komplexe Einblicke in Ihre Kundendaten zu erhalten.
 
-Während Schemabeziehungen durch die Verwendung des Vereinigungsschemas und [!DNL Real-time Customer Profile], gilt dies nur für Schemas, die dieselbe Klasse teilen. Um eine Beziehung zwischen zwei Schemas herzustellen, die zu verschiedenen Klassen gehören, muss einem Quellschema ein dediziertes Beziehungsfeld hinzugefügt werden, das auf die Identität eines Zielschemas verweist.
+Während Schemabeziehungen durch die Verwendung des Vereinigungsschemas und [!DNL Real-Time Customer Profile], gilt dies nur für Schemas, die dieselbe Klasse teilen. Um eine Beziehung zwischen zwei Schemas herzustellen, die zu verschiedenen Klassen gehören, muss einem Quellschema ein dediziertes Beziehungsfeld hinzugefügt werden, das auf die Identität eines Zielschemas verweist.
 
 Dieses Dokument enthält eine Anleitung zum Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema-Editors im [!DNL Experience Platform] -Benutzeroberfläche. Anweisungen zum Definieren von Schemabeziehungen mithilfe der API finden Sie in der Anleitung zum [Definieren einer Beziehung mithilfe der Schema Registry-API](relationship-api.md).
 
@@ -54,7 +54,7 @@ Wir gehen davon aus, dass Sie die beiden Schemas, die in der Beziehung definiert
 
 >[!IMPORTANT]
 >
->Um eine Beziehung herzustellen, müssen beide Schemas definierte primäre Identitäten aufweisen und für [!DNL Real-time Customer Profile]. Siehe Abschnitt zu [Aktivieren eines Schemas zur Verwendung in Profil](./create-schema-ui.md#profile) im Tutorial zur Erstellung von Schemas , wenn Sie Anleitungen zur entsprechenden Konfiguration Ihrer Schemas benötigen.
+>Um eine Beziehung herzustellen, müssen beide Schemas definierte primäre Identitäten aufweisen und für [!DNL Real-Time Customer Profile]. Siehe Abschnitt zu [Aktivieren eines Schemas zur Verwendung in Profil](./create-schema-ui.md#profile) im Tutorial zur Erstellung von Schemas , wenn Sie Anleitungen zur entsprechenden Konfiguration Ihrer Schemas benötigen.
 
 Schemabeziehungen werden durch ein dediziertes Feld in einer **Quellschema** , das auf ein anderes Feld in einer **Zielschema**. In den folgenden Schritten: &quot;[!DNL Loyalty Members]&quot; wird das Quellschema sein, während &quot;[!DNL Hotels]&quot; dient als Zielschema.
 
@@ -62,7 +62,7 @@ Zu Referenzzwecken wird in den folgenden Abschnitten die Struktur der einzelnen 
 
 ### [!DNL Loyalty Members] schema
 
-Das Quellschema &quot;[!DNL Loyalty Members]&quot; basiert auf der Variablen [!DNL XDM Individual Profile] und ist das Schema, das im Tutorial für [Erstellen eines Schemas in der Benutzeroberfläche](create-schema-ui.md). Er enthält `loyalty` Objekt unter `_tenantId` -Namespace, der mehrere loyalitätsspezifische Felder enthält. Eines dieser Felder, `loyaltyId`dient als primäre Identität für das Schema unter [!UICONTROL Email] Namespace. Siehe unter **[!UICONTROL Schemaeigenschaften]** wurde dieses Schema zur Verwendung in [!DNL Real-time Customer Profile].
+Das Quellschema &quot;[!DNL Loyalty Members]&quot; basiert auf der Variablen [!DNL XDM Individual Profile] und ist das Schema, das im Tutorial für [Erstellen eines Schemas in der Benutzeroberfläche](create-schema-ui.md). Er enthält `loyalty` Objekt unter `_tenantId` -Namespace, der mehrere loyalitätsspezifische Felder enthält. Eines dieser Felder, `loyaltyId`dient als primäre Identität für das Schema unter [!UICONTROL Email] Namespace. Siehe unter **[!UICONTROL Schemaeigenschaften]** wurde dieses Schema zur Verwendung in [!DNL Real-Time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
@@ -80,7 +80,7 @@ Um an einer Beziehung teilnehmen zu können, muss das Zielschema über eine prim
 >
 >Informationen zum Erstellen benutzerdefinierter Identitäts-Namespaces finden Sie im Abschnitt [Dokumentation zu Identity Service](../../identity-service/namespaces.md#manage-namespaces).
 
-Nachdem die primäre Identität festgelegt wurde, muss das Zielschema für [!DNL Real-time Customer Profile].
+Nachdem die primäre Identität festgelegt wurde, muss das Zielschema für [!DNL Real-Time Customer Profile].
 
 ![Profil aktivieren](../images/tutorials/relationship/hotel-profile.png)
 

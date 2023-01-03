@@ -5,7 +5,7 @@ title: Benutzerhandbuch für Segment Builder
 topic-legacy: ui guide
 description: Der Segmentaufbau in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '3101'
 ht-degree: 28%
@@ -254,7 +254,7 @@ Weitere Informationen zu den verschiedenen Auswertungsmethoden für die Segmentd
 
 ## Nächste Schritte {#next-steps}
 
-Segment Builder bietet einen umfassenden Workflow, mit dem Sie marktfähige Zielgruppen isolieren können von [!DNL Real-time Customer Profile] Daten. Nach dem Lesen dieses Handbuchs sollten Sie jetzt Folgendes können:
+Segment Builder bietet einen umfassenden Workflow, mit dem Sie marktfähige Zielgruppen isolieren können von [!DNL Real-Time Customer Profile] Daten. Nach dem Lesen dieses Handbuchs sollten Sie jetzt Folgendes können:
 
 - Segmentdefinitionen mit einer Kombination aus Attributen, Ereignissen und vorhandenen Zielgruppen als Bausteinen erstellen.
 - Die Arbeitsfläche des Regel-Builders und Container verwenden, um die Reihenfolge zu steuern, in der Segmentregeln ausgeführt werden.

@@ -4,10 +4,10 @@ title: Standardmäßige Warnhinweisregeln
 description: In diesem Dokument werden die von Experience Platform bereitgestellten vordefinierten Warnhinweisregeln behandelt.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 44e337778bbfe901687383418981dbae83b356a7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '922'
-ht-degree: 83%
+ht-degree: 82%
 
 ---
 
@@ -54,7 +54,7 @@ Die folgenden Warnhinweisregeln sind spezifisch für [Identity Service](../../id
 
 ## Echtzeit-Kundenprofil
 
-Die folgenden Warnhinweisregeln sind spezifisch für [Echtzeit-Kundenprofile](../../profile/home.md):
+Die folgenden Warnhinweisregeln sind spezifisch für [Echtzeit-Kundenprofil](../../profile/home.md):
 
 | E/A-Ereignis-Abonnement | Warnhinweisregel | Beschreibung |
 | --- | --- | --- |

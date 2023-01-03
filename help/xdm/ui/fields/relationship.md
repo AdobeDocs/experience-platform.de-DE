@@ -5,7 +5,7 @@ title: Beziehungsfelder in der Benutzeroberfläche definieren
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Experience Platform ein Beziehungsfeld definieren.
 topic-legacy: user guide
 exl-id: 8a6be545-0edb-4b9c-b164-e44a7a5f54f5
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%

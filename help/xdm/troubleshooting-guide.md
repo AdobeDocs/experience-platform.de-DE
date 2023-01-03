@@ -5,7 +5,7 @@ title: Handbuch zur Fehlerbehebung bei XDM-Systemen
 description: Hier finden Sie Antworten auf häufig gestellte Fragen zum Experience-Datenmodell (XDM), einschließlich Anweisungen zur Behebung häufiger API-Fehler.
 topic-legacy: troubleshooting
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 5ffc93c8715d1184b2a239c1d631b117a531e5c1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2060'
 ht-degree: 1%
@@ -42,7 +42,7 @@ Weitere Informationen finden Sie unter [Ressourcenkennung](api/getting-started.m
 
 ### Wann verhindert ein Schema das Umbrechen von Änderungen?
 
-Umfassende Änderungen können an einem Schema vorgenommen werden, solange es noch nie bei der Erstellung eines Datensatzes verwendet oder für die Verwendung in [[!DNL Real-time Customer Profile]](../profile/home.md). Sobald ein Schema bei der Erstellung eines Datensatzes verwendet oder für die Verwendung mit [!DNL Real-time Customer Profile], die Regeln der [Schemaentwicklung](schema/composition.md#evolution) streng durchgesetzt werden.
+Umfassende Änderungen können an einem Schema vorgenommen werden, solange es noch nie bei der Erstellung eines Datensatzes verwendet oder für die Verwendung in [[!DNL Real-Time Customer Profile]](../profile/home.md). Sobald ein Schema bei der Erstellung eines Datensatzes verwendet oder für die Verwendung mit [!DNL Real-Time Customer Profile], die Regeln der [Schemaentwicklung](schema/composition.md#evolution) streng durchgesetzt werden.
 
 ### Wie groß ist ein langer Feldtyp maximal?
 
@@ -72,17 +72,17 @@ Weitere Informationen zum Verwalten von Identitäten in der Benutzeroberfläche 
 
 ### Benötigt mein Schema eine primäre Identität?
 
-Primäre Identitäten sind optional, da Schemas entweder null oder eine davon haben können. Ein Schema muss jedoch über eine primäre Identität verfügen, damit das Schema zur Verwendung in [!DNL Real-time Customer Profile]. Siehe [identity](./tutorials/create-schema-ui.md#identity-field) Abschnitt des Tutorials zum Schema-Editor für weitere Informationen.
+Primäre Identitäten sind optional, da Schemas entweder null oder eine davon haben können. Ein Schema muss jedoch über eine primäre Identität verfügen, damit das Schema zur Verwendung in [!DNL Real-Time Customer Profile]. Siehe [identity](./tutorials/create-schema-ui.md#identity-field) Abschnitt des Tutorials zum Schema-Editor für weitere Informationen.
 
-### Wie aktiviere ich ein Schema zur Verwendung in [!DNL Real-time Customer Profile]?
+### Wie aktiviere ich ein Schema zur Verwendung in [!DNL Real-Time Customer Profile]?
 
-Schemas sind zur Verwendung in [[!DNL Real-time Customer Profile]](../profile/home.md) durch Hinzufügen eines &quot;union&quot;-Tags innerhalb der `meta:immutableTags` -Attribut des Schemas. Aktivieren eines Schemas zur Verwendung mit [!DNL Profile] kann über die API oder die Benutzeroberfläche erfolgen.
+Schemas sind zur Verwendung in [[!DNL Real-Time Customer Profile]](../profile/home.md) durch Hinzufügen eines &quot;union&quot;-Tags innerhalb der `meta:immutableTags` -Attribut des Schemas. Aktivieren eines Schemas zur Verwendung mit [!DNL Profile] kann über die API oder die Benutzeroberfläche erfolgen.
 
 #### Aktivieren eines vorhandenen Schemas für [!DNL Profile] Verwendung der API
 
 Stellen Sie eine PATCH-Anfrage, um das Schema zu aktualisieren und die `meta:immutableTags` -Attribut als Array mit dem Wert &quot;union&quot;. Wenn die Aktualisierung erfolgreich ist, zeigt die Antwort das aktualisierte Schema an, das jetzt das Vereinigungs-Tag enthält.
 
-Weitere Informationen zur Verwendung der API zum Aktivieren eines Schemas zur Verwendung in [!DNL Real-time Customer Profile], siehe [Vereinigungen](./api/unions.md) des [!DNL Schema Registry] Entwicklerhandbuch.
+Weitere Informationen zur Verwendung der API zum Aktivieren eines Schemas zur Verwendung in [!DNL Real-Time Customer Profile], siehe [Vereinigungen](./api/unions.md) des [!DNL Schema Registry] Entwicklerhandbuch.
 
 #### Aktivieren eines vorhandenen Schemas für [!DNL Profile] über die Benutzeroberfläche
 
@@ -230,9 +230,9 @@ Je nach verwendetem Endpunkt wird die `detailed-message` -Eigenschaft gibt an, w
 
 Eine Liste kompatibler Accept-Kopfzeilen für verschiedene API-Anfragen finden Sie in den entsprechenden Abschnitten im [Entwicklerhandbuch zur Schema Registry](./api/overview.md).
 
-### [!DNL Real-time Customer Profile] errors
+### [!DNL Real-Time Customer Profile] errors
 
-Die folgenden Fehlermeldungen sind mit Vorgängen verknüpft, die an der Aktivierung von Schemas für [!DNL Real-time Customer Profile]. Siehe [Vereinigungen](./api/unions.md) im Abschnitt [!DNL Schema Registry] API-Handbuch für weitere Informationen.
+Die folgenden Fehlermeldungen sind mit Vorgängen verknüpft, die an der Aktivierung von Schemas für [!DNL Real-Time Customer Profile]. Siehe [Vereinigungen](./api/unions.md) im Abschnitt [!DNL Schema Registry] API-Handbuch für weitere Informationen.
 
 #### Es muss einen Referenz-Identitätsdeskriptor geben
 

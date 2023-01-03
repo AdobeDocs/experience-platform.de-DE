@@ -4,7 +4,7 @@ title: Erste Schritte mit der Data Ingestion-API
 type: Documentation
 description: Im Erste-Schritte-Handbuch zur Datenerfassungs-API werden die wichtigsten Konzepte und grundlegenden Funktionen vorgestellt, die Sie kennen müssen, bevor Sie Daten mithilfe von APIs in die Experience Platform aufnehmen können.
 exl-id: 0653de2b-3268-478b-a23f-c458b6d3df7c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 51%
@@ -18,9 +18,9 @@ Mithilfe von API-Endpunkten für die Datenaufnahme können Sie grundlegende CRUD
 Die Verwendung der API-Handbücher setzt ein Verständnis der verschiedenen Adobe Experience Platform-Dienste voraus, die am Arbeiten mit Daten beteiligt sind. Bevor Sie die Data Ingestion-API verwenden, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
 * [Batch-Erfassung](./overview.md): Erlaubt Ihnen das Erfassen von Daten in Adobe Experience Platform in Form von Batch-Dateien.
-* [[!DNL Real-time Customer Profile]](../home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [[!DNL Real-Time Customer Profile]](../home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten ordnet.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um erfolgreich Aufrufe an [!DNL Profile] API-Endpunkte.
 

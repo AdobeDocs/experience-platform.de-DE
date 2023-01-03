@@ -5,7 +5,7 @@ title: API-Endpunkt für Segmentdefinitionen
 topic-legacy: developer guide
 description: Der Endpunkt "Segmentdefinitionen"in der Adobe Experience Platform Segmentation Service-API ermöglicht Ihnen die programmgesteuerte Verwaltung von Segmentdefinitionen für Ihr Unternehmen.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 28%
@@ -14,7 +14,7 @@ ht-degree: 28%
 
 # Endpunkt der Segmentdefinitionen
 
-Mit Adobe Experience Platform können Sie Segmente erstellen, die eine Gruppe spezifischer Attribute oder Verhaltensweisen aus einer Gruppe von Profilen definieren. Eine Segmentdefinition ist ein Objekt, das eine Abfrage enthält, die in [!DNL Profile Query Language] (PQL). Dieses Objekt wird auch als PQL-Prädikat bezeichnet. PQL-Prädikate definieren die Regeln für das Segment basierend auf Bedingungen, die sich auf Datensatz- oder Zeitreihendaten beziehen, die Sie für [!DNL Real-time Customer Profile]. Siehe [PQL-Handbuch](../pql/overview.md) für weitere Informationen zum Schreiben von PQL-Abfragen.
+Mit Adobe Experience Platform können Sie Segmente erstellen, die eine Gruppe spezifischer Attribute oder Verhaltensweisen aus einer Gruppe von Profilen definieren. Eine Segmentdefinition ist ein Objekt, das eine Abfrage enthält, die in [!DNL Profile Query Language] (PQL). Dieses Objekt wird auch als PQL-Prädikat bezeichnet. PQL-Prädikate definieren die Regeln für das Segment basierend auf Bedingungen, die sich auf Datensatz- oder Zeitreihendaten beziehen, die Sie für [!DNL Real-Time Customer Profile]. Siehe [PQL-Handbuch](../pql/overview.md) für weitere Informationen zum Schreiben von PQL-Abfragen.
 
 Dieses Handbuch enthält Informationen zum besseren Verständnis von Segmentdefinitionen und enthält Beispiel-API-Aufrufe zum Ausführen grundlegender Aktionen mit der API.
 

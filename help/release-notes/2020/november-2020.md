@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2184'
-ht-degree: 26%
+ht-degree: 24%
 
 ---
 
@@ -29,7 +29,7 @@ Aktualisierungen vorhandener Funktionen:
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations] Service](#destinations)
 - [[!DNL Intelligent Services]](#intelligent-services)
-- [[!DNL Real-time Customer Profile]](#profile)
+- [[!DNL Real-Time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
 
 ## Adobe Experience Platform Data Lake-Migration {#migration}
@@ -40,7 +40,7 @@ Weitere Informationen finden Sie im [Data Lake-Migrationshandbuch](../../landing
 
 ## [!DNL Access control] {#access-control}
 
-[!DNL Experience Platform] nutzt [Adobe Admin Console](https://adminconsole.adobe.com)-Produktprofile, um Benutzer mit Berechtigungen und Sandboxes zu verknüpfen. Berechtigungen steuern den Zugriff auf verschiedene Platform-Funktionen, einschließlich Datenmodellierung, Profil-Management und Sandbox-Verwaltung.
+[!DNL Experience Platform] nutzt [Adobe Admin Console](https://adminconsole.adobe.com)-Produktprofile, um Benutzende mit Berechtigungen und Sandboxes zu verknüpfen. Berechtigungen steuern den Zugriff auf verschiedene Platform-Funktionen, einschließlich Datenmodellierung, Profil-Management und Sandbox-Verwaltung.
 
 **Wichtigste Funktionen**
 
@@ -60,7 +60,7 @@ Weiterführende Informationen finden Sie unter [Zugriffskontrolle – Übersicht
 | Funktion | Beschreibung |
 | ------- | ----------- |
 | Zentralisierte Angebotsbibliothek | Die Oberfläche, auf der Sie die verschiedenen Elemente erstellen und verwalten, aus denen Ihre Angebote bestehen, und deren Regeln und Begrenzungen definieren. |
-| Offer Decisioning-Engine | Die Offer Decisioning-Engine nutzt [!DNL Platform] Daten und [!DNL Real-time Customer Profiles]zusammen mit der Angebotsbibliothek verwenden, um die richtigen Zeiten, Kunden und Kanäle für die Bereitstellung der Angebote auszuwählen. |
+| Offer Decisioning-Engine | Die Offer Decisioning-Engine nutzt [!DNL Platform] Daten und [!DNL Real-Time Customer Profiles]zusammen mit der Angebotsbibliothek verwenden, um die richtigen Zeiten, Kunden und Kanäle für die Bereitstellung der Angebote auszuwählen. |
 
 Weitere Informationen finden Sie im [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=de) Dokumentation.
 
@@ -104,7 +104,7 @@ Data Science Workspace nutzt maschinelles Lernen und künstliche Intelligenz, um
 
 Weitere Informationen finden Sie im Dokument unter [Erstellen eines Rezepts mit Jupyter Notebooks](../../data-science-workspace/jupyterlab/create-a-model.md).
 
-## [!DNL Destinations] Diensleistung {#destinations}
+## [!DNL Destinations] Service {#destinations}
 
 In [Real-time Customer Data Platform](../../rtcdp/overview.md), sind Ziele vordefinierte Integrationen mit Zielplattformen, die Daten für diese Partner nahtlos aktivieren.
 
@@ -181,7 +181,7 @@ Weitere Informationen finden Sie im [Customer AI - Übersicht](../../intelligent
 
 ## Echtzeit-Kundenprofil {#profile}
 
-Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Das Echtzeit-Kundenprofil liefert eine ganzheitliche Sicht auf jeden einzelnen Kunden, indem es Daten aus Online- und Offline-Kanälen ebenso wie aus CRMs und Drittanbieter-Datenquellen und anderen Kanälen miteinander kombiniert. [!DNL Profile] ermöglicht es Ihnen, Ihre unterschiedlichen Kundendaten in einer einheitlichen Ansicht zusammenzufassen, die eine umsetzbare, mit Zeitstempel versehene Übersicht über jede Kundeninteraktion bietet.
+Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Mit dem Echtzeit-Kundenprofil können Sie eine ganzheitliche Ansicht jedes einzelnen Kunden anzeigen, die Daten aus mehreren Kanälen kombiniert, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. [!DNL Profile] ermöglicht es Ihnen, Ihre unterschiedlichen Kundendaten in einer einheitlichen Ansicht zusammenzufassen, die eine umsetzbare, mit Zeitstempel versehene Übersicht über jede Kundeninteraktion bietet.
 
 **Wichtigste Funktionen**
 

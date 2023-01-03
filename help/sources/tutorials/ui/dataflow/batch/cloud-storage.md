@@ -3,10 +3,10 @@ keywords: Experience Platform; Startseite; beliebte Themen; Datenfluss; Datenflu
 title: Konfigurieren eines Datenflusses zum Aufnehmen von Batch-Daten aus einer Cloud-Speicherquelle in der Benutzeroberfläche
 description: In diesem Tutorial erfahren Sie, wie Sie einen neuen Datenfluss konfigurieren, um Batch-Daten aus einer Cloud-Speicherquelle in der Benutzeroberfläche zu erfassen
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 0910de76d817eea7c7c3cb2b988d81268b3e5812
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1795'
-ht-degree: 29%
+ht-degree: 32%
 
 ---
 
@@ -25,7 +25,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 * [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
    * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemas vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
    * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
 ### Unterstützte Dateiformate
 
@@ -36,7 +36,7 @@ Cloud-Speicherquellen für Batch-Daten unterstützen die folgenden Dateiformate 
 * [!DNL Apache Parquet]: Parquet-formatierte Datendateien müssen XDM-konform sein.
 * Komprimierte Dateien: JSON- und durch Trennzeichen getrennte Dateien können wie folgt komprimiert werden: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`und `tar`.
 
-## Hinzufügen von Daten
+## Daten hinzufügen
 
 Nachdem Sie Ihr Cloud-Speicherkonto erstellt haben, wird die **[!UICONTROL Daten hinzufügen]** angezeigt. Dieser Schritt bietet eine Oberfläche, über die Sie Ihre Cloud-Speicher-Dateihierarchie durchsuchen und den Ordner oder die spezifische Datei auswählen können, den/die Sie in Platform laden möchten.
 
@@ -172,7 +172,7 @@ Wählen Sie nach Abschluss der Konfiguration Ihres Aufnahmezeitplans **[!UICONTR
 
 Der Schritt **[!UICONTROL Überprüfung]** wird angezeigt, sodass Sie Ihren neuen Datenfluss überprüfen können, bevor er hergestellt wird. Die Details lassen sich wie folgt kategorisieren:
 
-* **[!UICONTROL Verbindung]**: Zeigt den Quelltyp, den relevanten Pfad der ausgewählten Quelldatei und die Anzahl der Spalten in dieser Quelldatei an.
+* **[!UICONTROL Verbindung]**: Zeigt den Quelltyp, den relevanten Pfad der ausgewählten Quelldatei und die Anzahl der Spalten innerhalb dieser Quelldatei an.
 * **[!UICONTROL Datensatz- und Zuordnungsfelder zuweisen]**: Zeigt an, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, dem der Datensatz entspricht.
 * **[!UICONTROL Planung]**: Zeigt den aktiven Zeitraum, die Häufigkeit und das Intervall des Aufnahmezeitplans an.
 
@@ -183,9 +183,9 @@ Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Be
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Daten aus einem externen Cloud-Speicher einzubringen und Einblicke in die Überwachung von Datensätzen zu erhalten. Um mehr über die Erstellung von Datenflüssen zu erfahren, ergänzen Sie Ihr Lernen, indem Sie sich das folgende Video ansehen. Darüber hinaus können eingehende Daten jetzt von nachgelagerten [!DNL Platform] Dienste wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace]. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Daten aus einem externen Cloud-Speicher einzubringen und Einblicke in die Überwachung von Datensätzen zu erhalten. Um mehr über die Erstellung von Datenflüssen zu erfahren, ergänzen Sie Ihr Lernen, indem Sie sich das folgende Video ansehen. Darüber hinaus können eingehende Daten jetzt von nachgelagerten [!DNL Platform] Dienste wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace]. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
-* [[!DNL Real-time Customer Profile] – Übersicht](../../../../../profile/home.md)
+* [[!DNL Real-Time Customer Profile] – Übersicht](../../../../../profile/home.md)
 * [[!DNL Data Science Workspace] – Übersicht](../../../../../data-science-workspace/home.md)
 
 >[!WARNING]

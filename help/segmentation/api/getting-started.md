@@ -5,22 +5,22 @@ title: Erste Schritte mit der Segmentation Service-API
 topic-legacy: developer guide
 description: Die folgende Dokumentation enthält zusätzliche Informationen, die Sie benötigen, um erfolgreich mit der Segmentation-API arbeiten zu können.
 exl-id: 41c0e50b-afed-45b8-85d7-a0c84ae090f5
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '353'
-ht-degree: 47%
+ht-degree: 56%
 
 ---
 
 # Erste Schritte mit der Segmentation Service-API {#getting-started}
 
-Adobe Experience Platform [!DNL Segmentation Service] ermöglicht Ihnen das Erstellen von Segmenten und das Generieren von Zielgruppen in Adobe Experience Platform über Ihre [!DNL Real-time Customer Profile] Daten.
+Adobe Experience Platform [!DNL Segmentation Service] ermöglicht Ihnen das Erstellen von Segmenten und das Generieren von Zielgruppen in Adobe Experience Platform über Ihre [!DNL Real-Time Customer Profile] Daten.
 
 Das Entwicklerhandbuch setzt ein Verständnis der verschiedenen [!DNL Experience Platform] Dienste, die mit der Nutzung von [!DNL Segmentation Service].
 
-- [[!DNL Segmentation]](../home.md): Ermöglicht das Erstellen von Zielgruppensegmenten aus [!DNL Real-time Customer Profile] Daten.
+- [[!DNL Segmentation]](../home.md): Ermöglicht das Erstellen von Zielgruppensegmenten aus [!DNL Real-Time Customer Profile] Daten.
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden. Um die Segmentierung optimal zu nutzen, stellen Sie bitte sicher, dass Ihre Daten als Profile und Ereignisse gemäß dem [Best Practices für die Datenmodellierung](../../xdm/schema/best-practices.md).
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um erfolgreich mit der [!DNL Segmentation] API.
@@ -37,13 +37,13 @@ Außerdem setzt die API-Dokumentation voraus, dass Sie das [Authentifizierungs-T
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Alle Anfragen an [!DNL Platform] APIs erfordern eine Kopfzeile, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Alle an [!DNL Platform]-APIs gerichtete Anfragen müssen über eine Kopfzeile verfügen, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Weitere Informationen zum Arbeiten mit Sandboxes finden Sie unter [!DNL Experience Platform], siehe [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>Weitere Informationen zum Arbeiten mit Sandboxes in [!DNL Experience Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 ## Nächste Schritte
 

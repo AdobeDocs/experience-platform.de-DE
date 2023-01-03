@@ -2,10 +2,10 @@
 title: Adobe Experience Platform - Versionshinweise, August 2022
 description: Die Versionshinweise für Adobe Experience Platform vom August 2022.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2131'
-ht-degree: 96%
+ht-degree: 91%
 
 ---
 
@@ -21,7 +21,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [[!DNL Destinations]](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Echtzeit-Kundenprofil](#profile)
-- [Segmentierungs-Service](#segmentation)
+- [Segmentation Service](#segmentation)
 - [Quellen](#sources)
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
@@ -36,7 +36,7 @@ Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Ko
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung für den Datenschutz | <ul><li> Die Attributions-KI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien für die Verwaltung von [Berechtigungen](../../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte in einer Produktanwendung. </li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li><li> Durch [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md), können Admins den Zugriff auf bestimmte Objekte und/oder Funktionen anhand bestimmter Attribute steuern. Dabei kann es sich um einem Objekt hinzugefügte Metadaten handeln, z. B. Beschriftungen. Admins können außerdem Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li><li>Die Attributions-KI nutzt Platform-Datensätze. Um Anfragen zu Verbraucherrechten zu unterstützen, die eine Marke erhalten kann, sollten Marken den Privacy Service von Platform nutzen, damit Verbraucher Anfragen zum Zugriff und zur Löschung ihrer Daten über den Data Lake, den Identity Service und das Echtzeit-Kundenprofil stellen können.  </li><li>Alle Datensätze, die für die Eingabe/Ausgabe von Modellen verwendet werden, folgen den Platform-Richtlinien. Die Platform-Datenverschlüsselung gilt für Daten in Ruhezeit und während der Übertragung. Weitere Informationen zur [Datenverschlüsselung](../../../help/landing/governance-privacy-security/encryption.md) finden Sie in der Dokumentation.</li></ul> |
+| Unterstützung für den Datenschutz | <ul><li> Die Attributions-KI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien für die Verwaltung von [Berechtigungen](../../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte in einer Produktanwendung. </li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li><li> Durch [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md), können Admins den Zugriff auf bestimmte Objekte und/oder Funktionen anhand bestimmter Attribute steuern. Dabei kann es sich um einem Objekt hinzugefügte Metadaten handeln, z. B. Beschriftungen. Admins können außerdem Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li><li>Die Attributions-KI nutzt Platform-Datensätze. Um Anfragen von Verbraucherrechten zu unterstützen, die eine Marke möglicherweise erhält, sollten Marken Platform Privacy Service verwenden, um Verbraucheranfragen auf Zugriff und Löschung zu übermitteln und um ihre Daten im Data Lake, Identity Service und Echtzeit-Kundenprofil zu entfernen.  </li><li>Alle Datensätze, die für die Eingabe/Ausgabe von Modellen verwendet werden, folgen den Platform-Richtlinien. Die Platform-Datenverschlüsselung gilt für Daten in Ruhezeit und während der Übertragung. Weitere Informationen zur [Datenverschlüsselung](../../../help/landing/governance-privacy-security/encryption.md) finden Sie in der Dokumentation.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -46,13 +46,13 @@ Weitere Informationen zu Attributions-KI finden Sie in der Übersicht [Attributi
 
 ### Kunden-KI
 
-In Real-time Customer Data Platform verfügbare Customer AI wird verwendet, um benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion für einzelne Profile in großem Maßstab zu generieren.
+Die in Real-time Customer Data Platform verfügbare Kunden-KI dient dazu, in großem Umfang benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion für einzelne Profile zu generieren.
 
 **Aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung für den Datenschutz | <ul><li> Kunden-KI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien, die der Verwaltung von [Berechtigungen](../../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte innerhalb einer Produktanwendung dienen. </li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li><li> Durch [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md) können Admins den Zugriff auf bestimmte Objekte und/oder Funktionen auf der Grundlage bestimmter Attribute steuern. Bei diesen Attributen kann es sich um Metadaten handeln, die einem Objekt hinzugefügt werden, wie z. B. Beschriftungen. Admins können auch Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li><li>Die Kunden-KI nutzt die Platform-Datensätze. Um Anfragen zu Verbraucherrechten zu unterstützen, die eine Marke erhalten kann, sollten Marken den Privacy Service von Platform nutzen, damit Verbraucher Anfragen zum Zugriff und zur Löschung ihrer Daten über den Data Lake, den Identity Service und das Echtzeit-Kundenprofil stellen können. </li><li>Alle Datensätze, die für die Eingabe/Ausgabe von Modellen verwendet werden, folgen den Platform-Richtlinien. Die Platform-Datenverschlüsselung gilt für Daten in Ruhezeit und während der Übertragung. Weitere Informationen zur [Datenverschlüsselung](../../../help/landing/governance-privacy-security/encryption.md) finden Sie in der Dokumentation.</li></ul> |
+| Unterstützung für den Datenschutz | <ul><li> Kunden-KI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien, die der Verwaltung von [Berechtigungen](../../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte innerhalb einer Produktanwendung dienen. </li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li><li> Durch [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md) können Admins den Zugriff auf bestimmte Objekte und/oder Funktionen auf der Grundlage bestimmter Attribute steuern. Bei diesen Attributen kann es sich um Metadaten handeln, die einem Objekt hinzugefügt werden, wie z. B. Beschriftungen. Admins können auch Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li><li>Die Kunden-KI nutzt die Platform-Datensätze. Um Anfragen von Verbraucherrechten zu unterstützen, die eine Marke möglicherweise erhält, sollten Marken Platform Privacy Service verwenden, um Verbraucheranfragen auf Zugriff und Löschung zu übermitteln und um ihre Daten im Data Lake, Identity Service und Echtzeit-Kundenprofil zu entfernen. </li><li>Alle Datensätze, die für die Eingabe/Ausgabe von Modellen verwendet werden, folgen den Platform-Richtlinien. Die Platform-Datenverschlüsselung gilt für Daten in Ruhezeit und während der Übertragung. Weitere Informationen zur [Datenverschlüsselung](../../../help/landing/governance-privacy-security/encryption.md) finden Sie in der Dokumentation.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -142,7 +142,7 @@ Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-S
 
 ## Echtzeit-Kundenprofil {#profile}
 
-Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Das Echtzeit-Kundenprofil liefert eine ganzheitliche Sicht auf jeden einzelnen Kunden, indem es Daten aus Online- und Offline-Kanälen ebenso wie aus CRMs und Drittanbieter-Datenquellen und anderen Kanälen miteinander kombiniert. Mit dem Profil können Sie Ihre Kundendaten in einer zentralen Ansicht zusammenführen, die eine aussagekräftige Darstellung jeder Kundeninteraktion mit Zeitstempel bietet.
+Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Mit dem Echtzeit-Kundenprofil können Sie eine ganzheitliche Ansicht jedes einzelnen Kunden anzeigen, die Daten aus mehreren Kanälen kombiniert, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. Mit dem Profil können Sie Ihre Kundendaten in einer zentralen Ansicht zusammenführen, die eine aussagekräftige Darstellung jeder Kundeninteraktion mit Zeitstempel bietet.
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
@@ -151,7 +151,7 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 
 {style=&quot;table-layout:auto&quot;}
 
-Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und Best Practices für die Arbeit mit Profildaten, finden Sie in der [Übersicht zum Echtzeit-Kundenprofil](../../profile/home.md).
+Um mehr über das Echtzeit-Kundenprofil zu erfahren, einschließlich Tutorials und Best Practices für die Arbeit mit Profildaten, lesen Sie zunächst das [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
 
 ## Segmentierungs-Service {#segmentation}
 

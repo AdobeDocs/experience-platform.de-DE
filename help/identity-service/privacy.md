@@ -3,7 +3,7 @@ keywords: Experience Platform;Startseite;beliebte Themen
 title: Verarbeitung von Datenschutzanfragen in Identity Service
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, die entsprechend diversen Datenschutzbestimmungen auf ihre personenbezogenen Daten zugreifen, deren Verkauf widersprechen oder sie löschen möchten. In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutzanfragen für Identity Service behandelt.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1038'
 ht-degree: 65%
@@ -18,7 +18,7 @@ In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutza
 
 >[!NOTE]
 >
->In diesem Handbuch wird nur beschrieben, wie Sie Datenschutzanfragen an den Identitätsdatenspeicher in Experience Platform stellen. Wenn Sie außerdem Datenschutzanfragen für den Platform Data Lake oder [!DNL Real-time Customer Profile], siehe Handbuch zu [Verarbeitung von Datenschutzanfragen im Data Lake](../catalog/privacy.md) und zum Handbuch [Verarbeitung von Datenschutzanfragen für Profil](../profile/privacy.md) zusätzlich zu diesem Tutorial.
+>In diesem Handbuch wird nur beschrieben, wie Sie Datenschutzanfragen an den Identitätsdatenspeicher in Experience Platform stellen. Wenn Sie außerdem Datenschutzanfragen für den Platform Data Lake oder [!DNL Real-Time Customer Profile], siehe Handbuch zu [Verarbeitung von Datenschutzanfragen im Data Lake](../catalog/privacy.md) und zum Handbuch [Verarbeitung von Datenschutzanfragen für Profil](../profile/privacy.md) zusätzlich zu diesem Tutorial.
 >
 >Anweisungen zum Ausführen von Datenschutzanfragen für andere Adobe Experience Cloud-Programme finden Sie in der [Privacy Service-Dokumentation](../privacy-service/experience-cloud-apps.md).
 
@@ -28,7 +28,7 @@ Sie sollten über Grundkenntnisse zu folgenden [!DNL Experience Platform]-Servic
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): Verwaltet Anfragen von Kunden hinsichtlich Zugriff auf, Opt-out vom Verkauf oder Löschen ihrer personenbezogenen Daten in allen Adobe Experience Cloud-Anwendungen.
 * [[!DNL Identity Service]](../identity-service/home.md): Löst das grundlegende Problem der Fragmentierung von Kundenerlebnisdaten, indem Identitäten geräte- und systemübergreifend zusammengeführt werden.
-* [[!DNL Real-time Customer Profile]](home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+* [[!DNL Real-Time Customer Profile]](home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
 ## Identitäts-Namespaces verstehen {#namespaces}
 

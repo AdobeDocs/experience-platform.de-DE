@@ -5,7 +5,7 @@ title: Best Practices für die Datenmodellierung
 topic-legacy: overview
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2699'
 ht-degree: 3%
@@ -205,7 +205,7 @@ Wenn Sie nicht sicher sind, ob ein bestimmtes Feld für die Aufnahme in ein Sche
 
 ### Identitätsfelder
 
-In Experience Platform werden als Identitäten markierte XDM-Felder verwendet, um Informationen über einzelne Kunden aus mehreren Datenquellen zusammenzufügen. Obwohl ein Schema mehrere Felder enthalten kann, die als Identitäten markiert sind, muss eine einzige primäre Identität definiert werden, damit das Schema zur Verwendung in [!DNL Real-time Customer Profile]. Siehe Abschnitt zu [Identitätsfelder](./composition.md#identity) in den Grundlagen der Schemakomposition für detailliertere Informationen zum Anwendungsfall dieser Felder.
+In Experience Platform werden als Identitäten markierte XDM-Felder verwendet, um Informationen über einzelne Kunden aus mehreren Datenquellen zusammenzufügen. Obwohl ein Schema mehrere Felder enthalten kann, die als Identitäten markiert sind, muss eine einzige primäre Identität definiert werden, damit das Schema zur Verwendung in [!DNL Real-Time Customer Profile]. Siehe Abschnitt zu [Identitätsfelder](./composition.md#identity) in den Grundlagen der Schemakomposition für detailliertere Informationen zum Anwendungsfall dieser Felder.
 
 Beim Entwerfen Ihrer Schemas sind alle Primärschlüssel in Ihren relationalen Datenbanktabellen wahrscheinlich Kandidaten für primäre Identitäten. Weitere Beispiele für anwendbare Identitätsfelder sind E-Mail-Adressen von Kunden, Telefonnummern, Konto-IDs und [ECID](../../identity-service/ecid.md).
 

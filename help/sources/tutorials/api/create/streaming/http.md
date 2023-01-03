@@ -3,7 +3,7 @@ keywords: Experience Platform; Startseite; beliebte Themen; Streaming-Verbindung
 title: Erstellen einer HTTP-API-Streaming-Verbindung mithilfe der Flow Service-API
 description: In diesem Tutorial erfahren Sie, wie Sie mithilfe der Flow Service-API eine Streaming-Verbindung mithilfe der HTTP-API-Quelle für Roh- und XDM-Daten erstellen
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 2b3f8b7b0a19214a95a2ad76c9fecd70ffd91743
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 40%
@@ -22,7 +22,7 @@ In diesem Tutorial wird die [[!DNL Flow Service] API](https://www.adobe.io/exper
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): Der standardisierte Rahmen, durch den [!DNL Platform] organisiert Erlebnisdaten.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Verbraucherprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Verbraucherprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 
 Zum Erstellen einer Streaming-Verbindung müssen Sie außerdem über ein Ziel-XDM-Schema und einen Datensatz verfügen. Um zu erfahren, wie Sie diese erstellen, lesen Sie bitte das Tutorial zu [Streaming von Datensatzdaten](../../../../../ingestion/tutorials/streaming-record-data.md) oder das Tutorial zu [Streaming von Zeitreihendaten](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 

@@ -2,7 +2,7 @@
 title: XDM Business Campaign-Schema-Feldergruppe
 description: Dieses Dokument bietet einen Überblick über die Schemakontrollgruppe XDM Business Campaign Details .
 exl-id: 3ef6c0b9-cba1-449e-8868-46446c00465f
-source-git-commit: 7805e4c45a48070adefbaba25a57140efc3e86b1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 8%
@@ -29,7 +29,7 @@ ht-degree: 8%
 | `expectedResponse` | [!UICONTROL Zeichenfolge] | Die erwartete Antwort für die Kampagne. |
 | `integrationPartnerName` | [!UICONTROL Zeichenfolge] | Der Name des Partners, der in diese Kampagne integriert hat. |
 | `isActive` | [!UICONTROL Boolesch] | Gibt an, ob diese Kampagne aktiv ist. |
-| `isDeleted` | [!UICONTROL Boolesch] | Gibt an, ob diese Kampagne in Marketo Engage gelöscht wurde.<br><br>Bei Verwendung von [Marketo-Quell-Connector](../../../sources/connectors/adobe-applications/marketo/marketo.md), werden alle in Marketo gelöschten Datensätze automatisch im Echtzeit-Kundenprofil angezeigt. Datensätze, die sich auf diese Profile beziehen, können jedoch im Data Lake bestehen bleiben. Durch Festlegen von `isDeleted` nach `true`können Sie mithilfe des Felds herausfiltern, welche Datensätze bei der Abfrage des Data Lake aus Ihren Quellen gelöscht wurden. |
+| `isDeleted` | [!UICONTROL Boolesch] | Gibt an, ob diese Kampagne in Marketo Engage gelöscht wurde.<br><br>Bei Verwendung von [Marketo-Quell-Connector](../../../sources/connectors/adobe-applications/marketo/marketo.md), werden alle in Marketo gelöschten Datensätze automatisch in das Echtzeit-Kundenprofil übernommen. Datensätze, die sich auf diese Profile beziehen, können jedoch im Data Lake bestehen bleiben. Durch Festlegen von `isDeleted` nach `true`können Sie mithilfe des Felds herausfiltern, welche Datensätze bei der Abfrage des Data Lake aus Ihren Quellen gelöscht wurden. |
 | `lastActivityDate` | [!UICONTROL DateTime] | Ein ISO 8601-Zeitstempel der letzten mit der Kampagne verknüpften Aktivität. |
 | `timeZone` | [!UICONTROL Zeichenfolge] | Die Zeitzone, in der die Kampagne ausgeführt wird. |
 | `timeZoneDelivery` | [!UICONTROL Zeichenfolge] | Die Zeitzone des Versands, in der die Kampagne ausgeführt wird. |

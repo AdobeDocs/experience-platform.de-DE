@@ -3,10 +3,10 @@ keywords: RTCDP-Profil;Profile RTCDP;RTCDP-Identitäten;RTCDP-Zusammenführungsr
 title: Handbuch zur Benutzeroberfläche von Account-Profilen
 description: Durch die Verwendung von Kontoprofilen ermöglicht Ihnen Adobe Real-time Customer Data Platform B2B Edition die Vereinheitlichung von Kontoinformationen aus verschiedenen Quellen. Dieses Handbuch enthält Details zur Interaktion mit Account-Profilen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1625'
-ht-degree: 60%
+ht-degree: 58%
 
 ---
 
@@ -126,7 +126,7 @@ Die Registerkarte **[!UICONTROL Personen]** enthält eine Liste der einzelnen Pe
 >
 >Auf der Registerkarte [!UICONTROL Personen] wird eine Liste mit bis zu 25 Personen angezeigt, die mit dem Account in Verbindung stehen. Bei Accounts mit mehr als 25 Personen zeigt das System eine Stichprobe von 25 Datensätzen an.
 
-Neben der Anzeige einer Momentaufnahme der Informationen für den Kontakt enthält jede aufgeführte Person auch eine **[!UICONTROL Profilkennung]**, bei der es sich um einen anklickbaren Link handelt, über den Sie das Echtzeit-Kundenprofil für diese Person ermitteln können. Weitere Informationen zum Anzeigen einzelner Kundenprofile in Bezug auf Ihre Konten finden Sie im Handbuch für [Durchsuchen von Profilen in Real-Time CDP, B2B Edition](../profile/profile-browse.md).
+Neben der Anzeige einer Momentaufnahme der Informationen für den Kontakt enthält jede aufgeführte Person auch eine **[!UICONTROL Profil-ID]**: ein anklickbarer Link, über den Sie das Echtzeit-Kundenprofil für diese Person ermitteln können. Weitere Informationen zum Anzeigen einzelner Kundenprofile in Bezug auf Ihre Konten finden Sie im Handbuch für [Durchsuchen von Profilen in Real-Time CDP, B2B Edition](../profile/profile-browse.md).
 
 ![Registerkarte „Personen“](images/b2b-account-people.png)
 

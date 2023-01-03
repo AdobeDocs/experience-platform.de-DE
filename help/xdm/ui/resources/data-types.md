@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Erfahren Sie, wie Sie Datentypen in der Benutzeroberfläche von Experience Platform erstellen und bearbeiten.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 14128b247b003a54cb0d91167bb46fccf16ed799
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 0%

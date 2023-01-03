@@ -4,10 +4,10 @@ title: Benutzerhandbuch für Benutzeroberfläche zu Zusammenführungsrichtlinien
 type: Documentation
 description: Beim Zusammenführen von Daten aus mehreren Quellen in Experience Platform stellen Zusammenführungsrichtlinien die Regeln dar, die Platform verwendet, um festzulegen, wie Daten priorisiert werden und welche Daten bei der Erstellung einzelner Kundenprofile kombiniert werden. Dieses Handbuch enthält schrittweise Anleitungen zum Verwenden von Zusammenführungsrichtlinien mit der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: e94756254a24ecadd7359589cd14cfb0745c789c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2321'
+ht-degree: 97%
 
 ---
 
@@ -24,8 +24,8 @@ Um mehr über Zusammenführungsrichtlinien und ihre Rolle in der Experience Plat
 
 Dieses Handbuch setzt ein Verständnis mehrerer wichtiger [!DNL Experience Platform] Funktionen voraus. Bevor Sie dieses Benutzerhandbuch lesen, lesen Sie bitte die Dokumentation für folgende Dienste:
 
-* [Echtzeit-Kundenprofil](../home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Ermöglicht es Echtzeit-Kundenprofil, Identitäten aus unterschiedlichen Datenquellen zu verbinden, die in erfasst werden. [!DNL Platform].
+* [Echtzeit-Kundenprofil](../home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Ermöglicht das Echtzeit-Kundenprofil durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, in die erfasst wird [!DNL Platform].
 * [Experience-Datenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
 
 ## Zusammenführungsrichtlinien anzeigen {#view-merge-policies}

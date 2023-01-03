@@ -4,7 +4,7 @@ title: Adobe Experience Platform End-to-End-Beispiel-Workflow
 topic-legacy: getting started
 description: Erfahren Sie auf hoher Ebene mehr über den grundlegenden End-to-End-Workflow für Adobe Experience Platform.
 exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
-source-git-commit: c9ebccb6584c687a9cc3fe693b9303c9392a1114
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1836'
 ht-degree: 11%
@@ -27,7 +27,7 @@ Dieser durchgängige Workflow verwendet mehrere Adobe Experience Platform-Dienst
 - [[!DNL Identity Service]](../identity-service/home.md): Bietet Ihnen einen umfassenden Überblick über Ihre Kunden und ihr Verhalten durch die Überbrückung von Identitäten zwischen Geräten und Systemen.
 - [Quellen](../sources/home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 - [[!DNL Segmentation Service]](../segmentation/home.md): [!DNL Segmentation Service] ermöglicht die Aufteilung der in [!DNL Experience Platform] die sich auf Einzelanwender (wie Kunden, Interessenten, Benutzer oder Organisationen) in kleinere Gruppen bezieht.
-- [[!DNL Real-time Customer Profile]](../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+- [[!DNL Real-Time Customer Profile]](../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 - [Datensätze](../catalog/datasets/overview.md): Das Speicher- und Verwaltungskonstrukt für Datenpersistenz in [!DNL Experience Platform].
 - [Ziele](../destinations/home.md): Ziele sind vordefinierte Integrationen mit häufig verwendeten Anwendungen, die die nahtlose Aktivierung von Daten aus Platform für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle ermöglichen.
 
@@ -37,13 +37,13 @@ Bevor Sie Daten in Platform erfassen, müssen Sie zunächst ein XDM-Schema erste
 
 Im obigen Tutorial erfahren Sie, wie Sie Identitätsfelder für Ihre Schemas festlegen. Ein Identitätsfeld stellt ein Feld dar, das zur Identifizierung einer Einzelperson verwendet werden kann, die mit einem Datensatz- oder Zeitreihenereignis verbunden ist. Identitätsfelder sind eine entscheidende Komponente bei der Erstellung von Identitätsdiagrammen für Kunden in Platform. Dies hat letztendlich Auswirkungen darauf, wie Echtzeit-Kundenprofil verschiedene Datenfragmente zusammenführt, um eine vollständige Ansicht des Kunden zu erhalten. Weitere Informationen zum Anzeigen von Identitätsdiagrammen in Platform finden Sie im Tutorial zu [Verwendung des Identitätsdiagramm-Viewers](../identity-service/ui/identity-graph-viewer.md).
 
-Sie müssen Ihr Schema für die Verwendung im Echtzeit-Kundenprofil aktivieren, damit Kundenprofile anhand der Daten auf der Basis Ihres Schemas erstellt werden können. Siehe Abschnitt zu [Aktivieren eines Schemas für Profil](../xdm/ui/resources/schemas.md#profile) Weitere Informationen finden Sie im Handbuch zur Schemabenutzeroberfläche .
+Sie müssen Ihr Schema für die Verwendung im Echtzeit-Kundenprofil aktivieren, damit Kundenprofile anhand der Daten basierend auf Ihrem Schema erstellt werden können. Siehe Abschnitt zu [Aktivieren eines Schemas für Profil](../xdm/ui/resources/schemas.md#profile) Weitere Informationen finden Sie im Handbuch zur Schemabenutzeroberfläche .
 
 ## Aufnehmen von Daten in Platform
 
 Nachdem Sie ein XDM-Schema erstellt haben, können Sie damit beginnen, Ihre Daten in das System zu übertragen.
 
-Alle Daten, die in Platform eingehen, werden bei der Erfassung in einzelnen Datensätzen gespeichert. Ein Datensatz ist eine Sammlung von Datensätzen, die einem bestimmten XDM-Schema zugeordnet sind. Bevor Ihre Daten von [!DNL Real-time Customer Profile], muss der betreffende Datensatz spezifisch konfiguriert werden. Vollständige Anweisungen zum Aktivieren eines Datensatzes für Profile finden Sie in der [Handbuch zur Benutzeroberfläche von Datensätzen](../catalog/datasets/user-guide.md#enable-profile) und [API-Tutorial zur Datensatzkonfiguration](../profile/tutorials/dataset-configuration.md). Nachdem der Datensatz konfiguriert wurde, können Sie Daten in den Datensatz eingeben.
+Alle Daten, die in Platform eingehen, werden bei der Erfassung in einzelnen Datensätzen gespeichert. Ein Datensatz ist eine Sammlung von Datensätzen, die einem bestimmten XDM-Schema zugeordnet sind. Bevor Ihre Daten von [!DNL Real-Time Customer Profile], muss der betreffende Datensatz spezifisch konfiguriert werden. Vollständige Anweisungen zum Aktivieren eines Datensatzes für Profile finden Sie in der [Handbuch zur Benutzeroberfläche von Datensätzen](../catalog/datasets/user-guide.md#enable-profile) und [API-Tutorial zur Datensatzkonfiguration](../profile/tutorials/dataset-configuration.md). Nachdem der Datensatz konfiguriert wurde, können Sie Daten in den Datensatz eingeben.
 
 Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken. Sie können Ihre Daten beispielsweise mithilfe von [Amazon S3](../sources/tutorials/api/create/cloud-storage/s3.md). Eine vollständige Liste der verfügbaren Quellen finden Sie im [Übersicht über Quell-Connectoren](../sources/home.md).
 
@@ -93,7 +93,7 @@ Anweisungen zum Aktivieren von Daten für Batch- oder E-Mail-Marketing-Ziele fin
 
 ## Überwachen von Platform-Datenaktivitäten
 
-Mit Platform können Sie verfolgen, wie Daten mithilfe von Datenflüssen verarbeitet werden. Dabei handelt es sich um Darstellungen von Aufträgen, die Daten über die verschiedenen Komponenten von Platform hinweg verschieben. Diese Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen dabei, Daten aus Quell-Connectoren in Zieldatensätze zu verschieben, wo sie dann von [!DNL Identity Service] und [!DNL Real-time Customer Profile] bevor sie schließlich für Ziele aktiviert werden. Das Monitoring-Dashboard bietet eine visuelle Darstellung des Journey eines Datenflusses. Informationen zum Überwachen von Datenflüssen in der Platform-Benutzeroberfläche finden Sie in den Tutorials zu [Überwachung von Datenflüssen für Quellen](../dataflows/ui/monitor-sources.md) und [Überwachen von Datenflüssen für Ziele](../dataflows/ui/monitor-destinations.md).
+Mit Platform können Sie verfolgen, wie Daten mithilfe von Datenflüssen verarbeitet werden. Dabei handelt es sich um Darstellungen von Aufträgen, die Daten über die verschiedenen Komponenten von Platform hinweg verschieben. Diese Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen dabei, Daten aus Quell-Connectoren in Zieldatensätze zu verschieben, wo sie dann von [!DNL Identity Service] und [!DNL Real-Time Customer Profile] bevor sie schließlich für Ziele aktiviert werden. Das Monitoring-Dashboard bietet eine visuelle Darstellung des Journey eines Datenflusses. Informationen zum Überwachen von Datenflüssen in der Platform-Benutzeroberfläche finden Sie in den Tutorials zu [Überwachung von Datenflüssen für Quellen](../dataflows/ui/monitor-sources.md) und [Überwachen von Datenflüssen für Ziele](../dataflows/ui/monitor-destinations.md).
 
 Sie können Platform-Aktivitäten auch mithilfe statistischer Metriken und Ereignisbenachrichtigungen überwachen, indem Sie [!DNL Observability Insights]. Sie können Benachrichtigungen über die Platform-Benutzeroberfläche abonnieren oder an einen konfigurierten Webhook senden. Weitere Informationen zum Anzeigen, Aktivieren, Deaktivieren und Abonnieren von verfügbaren Warnhinweisen über die Experience Platform-Benutzeroberfläche finden Sie in der [[!UICONTROL Warnhinweise] UI-Handbuch](../observability/alerts/ui.md). Weitere Informationen zum Empfang von Warnungen über Webhooks finden Sie im Handbuch unter [Abonnieren von Adobe I/O Event-Benachrichtigungen](../observability/alerts/subscribe.md).
 

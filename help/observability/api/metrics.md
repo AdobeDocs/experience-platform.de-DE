@@ -5,7 +5,7 @@ title: Metrik-API-Endpunkt
 topic-legacy: developer guide
 description: Erfahren Sie, wie Sie Beobachtbarkeitsmetriken in Experience Platform mithilfe der Observability Insights-API abrufen.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: dc7deab2c9fe1a1fa151731fceeb3c239dd18878
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1409'
 ht-degree: 27%
@@ -230,9 +230,9 @@ In der folgenden Tabelle sind die Metriken für Adobe Experience Platform aufgef
 
 {style=&quot;table-layout:auto&quot;}
 
-#### [!DNL Real-time Customer Profile] {#profile}
+#### [!DNL Real-Time Customer Profile] {#profile}
 
-In der folgenden Tabelle sind die Metriken für [!DNL Real-time Customer Profile].
+In der folgenden Tabelle sind die Metriken für [!DNL Real-Time Customer Profile].
 
 | Insights-Metrik | Beschreibung | ID-Abfrageparameter |
 | ---- | ---- | ---- |

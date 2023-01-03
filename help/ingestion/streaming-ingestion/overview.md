@@ -5,7 +5,7 @@ title: Streaming-Erfassung - Übersicht
 topic-legacy: overview
 description: Die Streaming-Erfassung für Adobe Experience Platform bietet Benutzern eine Methode, Daten von Client- und Server-seitigen Geräten in Echtzeit an die Experience Platform zu senden.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 18%
@@ -18,7 +18,7 @@ Die Streaming-Erfassung für Adobe Experience Platform bietet Benutzern eine Met
 
 ## Was können Sie mit Streaming-Erfassung tun?
 
-Mit Adobe Experience Platform können Sie koordinierte, konsistente und relevante Erlebnisse durch Generieren einer [!DNL Real-time Customer Profile] für jeden Ihrer Kunden. Die Streaming-Erfassung spielt bei der Erstellung dieser Profile eine wichtige Rolle, da Sie die Bereitstellung von [!DNL Profile] Daten in die [!DNL Data Lake] mit so wenig Latenz wie möglich.
+Mit Adobe Experience Platform können Sie koordinierte, konsistente und relevante Erlebnisse durch Generieren einer [!DNL Real-Time Customer Profile] für jeden Ihrer Kunden. Die Streaming-Erfassung spielt bei der Erstellung dieser Profile eine wichtige Rolle, da Sie die Bereitstellung von [!DNL Profile] Daten in die [!DNL Data Lake] mit so wenig Latenz wie möglich.
 
 Das folgende Video soll Ihnen dabei helfen, die Streaming-Erfassung zu verstehen, und beschreibt die oben genannten Konzepte.
 
@@ -32,7 +32,7 @@ Weiterführende Informationen finden Sie in der [Anleitung zum Erstellen einer S
 
 ### An Datensätze streamen
 
-Sobald Sie sicher sind, dass Ihre Daten sauber sind, können Sie Ihre Datensätze für [!DNL Real-time Customer Profile] und [!DNL Identity Service].
+Sobald Sie sicher sind, dass Ihre Daten sauber sind, können Sie Ihre Datensätze für [!DNL Real-Time Customer Profile] und [!DNL Identity Service].
 
 Weitere Informationen zum Aktivieren eines Datensatzes für [!DNL Profile] und [!DNL Identity Service], lesen Sie bitte die [Datensatz-Handbuch konfigurieren](../../profile/tutorials/dataset-configuration.md).
 

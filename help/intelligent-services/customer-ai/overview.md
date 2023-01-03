@@ -7,10 +7,10 @@ topic-legacy: Customer AI Overview
 description: Customer AI wird verwendet, um für einzelne Profile skaliert benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion zu berechnen. Dies wird erreicht, ohne dass die Geschäftsanforderungen in ein Problem des maschinellen Lernens umgewandelt, ein Algorithmus ausgewählt, trainiert oder bereitgestellt werden muss.
 landing-page-description: Customer AI wird verwendet, um für einzelne Profile skaliert benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion zu berechnen.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-source-git-commit: 6c0e001419dc78d4ff87bebd0604c7add07b635f
+source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
 workflow-type: tm+mt
 source-wordcount: '553'
-ht-degree: 71%
+ht-degree: 69%
 
 ---
 
@@ -30,7 +30,7 @@ Customer AI erlaubt Folgendes:
 - Bereitstellung hochgenauer Kundentendenzmodelle für eine bessere Segmentierung und Targeting.
 - Hilfe beim Verständnis der Einflussfaktoren und Wahrscheinlichkeiten hinter bestimmten Kundenverhaltensweisen.
 - Stellen Sie anpassbare Optionen für die einzigartigen Anwendungsfälle und Daten Ihres Unternehmens bereit.
-- Verbessern von Echtzeit-Kundenprofilen mit kundenspezifischen Tendenzwerten wie Abwanderung und Konversion.
+- Verbessern des Echtzeit-Kundenprofils mit kundenspezifischen Tendenzwerten wie Abwanderung und Konversion.
 - Optimierung von Kundenprofilen mit Einflussfaktoren für Tendenzwerte.
 - Erstellung von Kundensegmenten basierend auf Einflussfaktoren und Tendenzwerten.
 

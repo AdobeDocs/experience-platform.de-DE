@@ -6,10 +6,10 @@ title: Herunterladen von Bewertungen in Customer AI
 topic-legacy: Downloading scores
 description: Mit Customer AI können Sie Bewertungen im Parquet-Dateiformat herunterladen.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
 workflow-type: tm+mt
 source-wordcount: '961'
-ht-degree: 85%
+ht-degree: 81%
 
 ---
 
@@ -25,7 +25,7 @@ Um auf Bewertungen für Customer AI zuzugreifen, benötigen Sie außerdem eine D
 
 Derzeit gibt es zwei Möglichkeiten, Customer AI-Bewertungen herunterzuladen:
 
-1. Wenn Sie die Bewertungen auf der jeweiligen Ebene herunterladen möchten und/oder das Echtzeit-Kundenprofil nicht aktiviert ist, gehen Sie zuerst zu [Ermitteln Ihrer Datensatz-ID](#dataset-id).
+1. Wenn Sie die Bewertungen auf der jeweiligen Ebene herunterladen möchten und/oder das Echtzeit-Kundenprofil nicht aktiviert ist, navigieren Sie zu [Auffinden der Datensatz-ID](#dataset-id).
 2. Wenn Sie Profil aktiviert haben und Segmente herunterladen möchten, die Sie mit Customer AI konfiguriert haben, gehen Sie zu [Herunterladen eines mit Customer AI konfigurierten Segments](#segment).
 
 ## Ermitteln Ihrer Datensatz-ID {#dataset-id}
@@ -286,7 +286,7 @@ Alternativ können Sie Ihre Bewertungsdaten herunterladen, indem Sie Ihre Zielgr
 
 >[!IMPORTANT]
 >
->Um diese Exportmethode zu verwenden, muss Echtzeit-Kundenprofil für den Datensatz aktiviert sein.
+>Um diese Exportmethode zu verwenden, muss das Echtzeit-Kundenprofil für den Datensatz aktiviert werden.
 
 Im Abschnitt zum [Exportieren eines Segments](../../../segmentation/tutorials/evaluate-a-segment.md) im Handbuch zur Segmentbewertung werden die erforderlichen Schritte zum Exportieren eines Zielgruppendatensatzes beschrieben. Das Handbuch beschreibt und enthält Beispiele für Folgendes:
 

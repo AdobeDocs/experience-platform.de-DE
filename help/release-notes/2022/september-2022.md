@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise, September 2022
 description: Versionshinweise September 2022 zu Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
-workflow-type: ht
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+workflow-type: tm+mt
 source-wordcount: '2934'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -210,7 +210,7 @@ Weitere Informationen zu Identity Service finden Sie im Abschnitt [Identity Serv
 
 ## Query Service {#query-service}
 
-Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von Daten in Adobe Experience Platform [!DNL Data Lake]. Sie können beliebige Datensätze aus dem [!DNL Data Lake] verbinden und die Abfrageergebnisse als neuen Datensatz für die Verwendung in Berichten, im Data Science Workspace oder für die Aufnahme in das Echtzeit-Kundenprofil verwenden.
+Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von Daten in Adobe Experience Platform [!DNL Data Lake]. Sie können beliebige Datensätze aus der [!DNL Data Lake] und erfassen Sie die Abfrageergebnisse als neuen Datensatz zur Verwendung in Berichten, Data Science Workspace oder zur Aufnahme in das Echtzeit-Kundenprofil.
 
 **Aktualisierte Funktionen**
 
@@ -233,7 +233,7 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Auswirkungen der Audience Manager-Segmentpopulation auf das Echtzeit-Kundenprofil | Die Aufnahme umfangreicher Audience Manager-Segmentpopulationen hat einen direkten Einfluss auf Ihre Gesamtprofilanzahl, wenn Sie zum ersten Mal ein Audience Manager-Segment mithilfe der Audience Manager-Quelle an Platform senden. Das bedeutet, dass die Auswahl aller Segmente eine Profilanzahl ergeben kann, die über Ihrer Lizenznutzungsberechtigung liegt. Weitere Informationen finden Sie im Abschnitt [Übersicht über die Audience Manager-Quelle](../../sources/connectors/adobe-applications/audience-manager.md). Informationen zur Lizenznutzung finden Sie in der Dokumentation unter [Verwenden des Dashboards zur Lizenznutzung](../../dashboards/guides/license-usage.md). |
+| Auswirkungen der Population des Audience Manager-Segments auf das Echtzeit-Kundenprofil | Die Aufnahme umfangreicher Audience Manager-Segmentpopulationen hat einen direkten Einfluss auf Ihre Gesamtprofilanzahl, wenn Sie zum ersten Mal ein Audience Manager-Segment mithilfe der Audience Manager-Quelle an Platform senden. Das bedeutet, dass die Auswahl aller Segmente eine Profilanzahl ergeben kann, die über Ihrer Lizenznutzungsberechtigung liegt. Weitere Informationen finden Sie im Abschnitt [Übersicht über die Audience Manager-Quelle](../../sources/connectors/adobe-applications/audience-manager.md). Informationen zur Lizenznutzung finden Sie in der Dokumentation unter [Verwenden des Dashboards zur Lizenznutzung](../../dashboards/guides/license-usage.md). |
 | Unterstützung für Adobe Campaign Managed Cloud Service | Verwenden Sie die Adobe Campaign Managed Cloud Service-Quelle, um Ihre Versand- und Trackinglog-Daten von Adobe Campaign v8.4 nach Experience Platform zu übertragen. Weitere Informationen finden Sie im Handbuch unter [Erstellen einer Adobe Campaign Managed Cloud Service-Quellverbindung über die Benutzeroberfläche](../../sources/tutorials/ui/create/adobe-applications/campaign.md). |
 | API-Unterstützung für On-Demand-Aufnahme bei Batch-Quellen | Verwenden Sie die On-Demand-Aufnahme, um mit der [!DNL Flow Service]-API für einen bestimmten Datenfluss Ad-hoc-Flussausführungen zu erstellen. Die erstellten Flussausführungen müssen auf eine einmalige Aufnahme eingestellt sein. Weitere Informationen finden Sie im Handbuch unter [Erstellen einer Flussausführung für die On-Demand-Aufnahme mithilfe der API](../../sources/tutorials/api/on-demand-ingestion.md). |
 | API-Unterstützung für die Wiederholung fehlgeschlagener Datenflussausführungen für Batch-Quellen | Verwenden Sie den Vorgang `re-trigger`, um Ihren fehlgeschlagenen Datenfluss über die API erneut zu versuchen. Weitere Informationen finden Sie im Handbuch unter [Wiederholen fehlgeschlagener Datenflussausführungen mithilfe der API](../../sources/tutorials/api/retry-flows.md). |

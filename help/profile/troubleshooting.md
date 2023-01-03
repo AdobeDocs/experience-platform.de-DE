@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Echtzeit-Kundenprofil sowie eine Anleitung zur Fehlerbehebung bei häufigen Fehlern beim Arbeiten mit Profildaten mit Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 3%
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Echtzeit-Kundenprofil sowie eine Anleitung zur Fehlerbehebung bei häufigen Fehlern. Fragen und Antworten zur Fehlerbehebung bei anderen Diensten in Adobe Experience Platform finden Sie im Abschnitt [Handbuch zur Fehlerbehebung bei Experience Platformen](../landing/troubleshooting.md).
 
-Das [!DNL Real-time Customer Profile] ermöglicht Ihnen eine ganzheitliche Sicht auf jeden einzelnen Kunden, indem es Daten aus Online- und Offline-Kanälen ebenso wie aus CRMs und Drittanbieter-Datenquellen sowie anderen Kanälen miteinander kombiniert. Dadurch können Marketing-Experten koordinierte, konsistente und relevante Erlebnisse für Kunden über mehrere Kanäle hinweg bereitstellen.
+Das [!DNL Real-Time Customer Profile] ermöglicht Ihnen eine ganzheitliche Sicht auf jeden einzelnen Kunden, indem es Daten aus Online- und Offline-Kanälen ebenso wie aus CRMs und Drittanbieter-Datenquellen sowie anderen Kanälen miteinander kombiniert. Dadurch können Marketing-Experten koordinierte, konsistente und relevante Erlebnisse für Kunden über mehrere Kanäle hinweg bereitstellen.
 
 ## FAQs
 

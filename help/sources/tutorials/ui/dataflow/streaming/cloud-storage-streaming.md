@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen Platform-Datensatz aufnimmt. In diesem Tutorial werden Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Cloud-Speicher-Basis-Connector beschrieben.
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
-source-git-commit: 38f64f2ba0b40a20528aac6efff0e2fd6bc12ed2
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1055'
-ht-degree: 20%
+ht-degree: 25%
 
 ---
 
@@ -32,9 +32,9 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 - [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
    - [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemas vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
    - [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+- [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
-## Hinzufügen von Daten
+## Daten hinzufügen
 
 Nach der Erstellung Ihres Authentifizierungskontos für Ihren Streaming-Cloud-Speicher muss die **[!UICONTROL Daten auswählen]** angezeigt. Dort können Sie über eine Benutzeroberfläche auswählen, welchen Datenstrom Sie in Platform bringen.
 
@@ -61,7 +61,7 @@ Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 
 Die **[!UICONTROL Zuordnung]** -Schritt angezeigt und stellt eine Schnittstelle zum Zuordnen der Quelldaten zu einem Platform-Datensatz bereit.
 
-Wählen Sie einen Datensatz für eingehende Daten aus, die in aufgenommen werden sollen. Sie können entweder einen vorhandenen Datensatz verwenden oder einen neuen erstellen.
+Wählen Sie einen Datensatz aus, in den eingehende Daten aufgenommen werden sollen. Sie können entweder einen vorhandenen Datensatz verwenden oder einen neuen erstellen.
 
 ### Neuer Datensatz
 
@@ -126,7 +126,7 @@ Der Schritt **[!UICONTROL Überprüfung]** wird angezeigt, sodass Sie Ihren neue
 - **[!UICONTROL Verbindung]**: Zeigt Ihren Kontonamen, den Quelltyp und andere spezifische Informationen zur verwendeten Streaming-Cloud-Speicherquelle an.
 - **[!UICONTROL Datensatz- und Zuordnungsfelder zuweisen]**: Zeigt den Zieldatensatz und das Schema an, die Sie für Ihren Datenfluss verwenden.
 
-Nachdem Sie Ihren Datenfluss überprüft haben, wählen Sie **[!UICONTROL Beenden]** und lassen Sie etwas Zeit für die Erstellung des Datenflusses zu.
+Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Beenden]** und gewähren Sie etwas Zeit für die Erstellung des Datenflusses.
 
 ![überprüfen](../../../../images/tutorials/dataflow/cloud-storage/streaming/review.png)
 
@@ -136,7 +136,7 @@ Nachdem Ihr Streaming-Cloud-Speicher-Datenfluss erstellt wurde, können Sie die 
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Daten von einer Cloud-Speicherquelle zu streamen. Eingehende Daten können jetzt von nachgelagerten Platform-Services wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Daten von einer Cloud-Speicherquelle zu streamen. Eingehende Daten können jetzt von nachgelagerten Platform-Services wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
-- [[!DNL Real-time Customer Profile] – Übersicht](../../../../../profile/home.md)
+- [[!DNL Real-Time Customer Profile] – Übersicht](../../../../../profile/home.md)
 - [[!DNL Data Science Workspace] – Übersicht](../../../../../data-science-workspace/home.md)

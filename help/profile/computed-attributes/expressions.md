@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignisebene in Attribute auf Profilebene aggregiert werden. Diese Funktionen erfordern die Verwendung gültiger PQL-Ausdrücke (Profile Query Language). In diesem Handbuch werden einige der am häufigsten verwendeten PQL-Ausdrücke für berechnete Attribute vorgestellt.
 exl-id: 7c80e2d3-919a-47f9-a59f-833a70f02a8f
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '965'
 ht-degree: 4%
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->Die Funktion für berechnete Attribute ist derzeit alphanumerisch und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
+>Die Funktion für berechnete Attribute ist derzeit alphanumerisch und steht nicht allen Benutzern zur Verfügung. Dokumentation und Funktionalitäten können sich ändern.
 
 In Adobe Experience Platform sind berechnete Attribute Funktionen zum Aggregieren von Daten auf Ereignisebene in Profilattributen. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können. Jedes berechnete Attribut wird mit grundlegenden Informationen wie einem Namen und einer Beschreibung, der Schemaklasse und dem Pfad zum Feld, in dem der Wert gespeichert werden soll, sowie einem Ausdruck definiert, dessen berechneter Wert dem Wert entspricht, den Sie im berechneten Attribut speichern möchten.
 

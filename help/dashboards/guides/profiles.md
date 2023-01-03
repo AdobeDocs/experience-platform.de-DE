@@ -4,18 +4,18 @@ title: Handbuch zum Profile-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: af01ac288a8afe59105be5859b2d40de5e346963
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '3381'
-ht-degree: 98%
+ht-degree: 94%
 
 ---
 
 # [!UICONTROL Profile]-Dashboard
 
-Die Benutzeroberfläche von Adobe Experience Platform verfügt über ein Dashboard, über das Sie wichtige Informationen über Ihre [!DNL Real-time Customer Profile]-Daten anzeigen können, die während eines täglichen Schnappschusses erfasst wurden. In diesem Handbuch wird beschrieben, wie Sie auf das Profile-Dashboard in der Benutzeroberfläche zugreifen und mit ihm arbeiten können. Außerdem erhalten Sie Informationen zu den im Dashboard angezeigten Metriken.
+Die Benutzeroberfläche von Adobe Experience Platform verfügt über ein Dashboard, über das Sie wichtige Informationen über Ihre [!DNL Real-Time Customer Profile]-Daten anzeigen können, die während eines täglichen Schnappschusses erfasst wurden. In diesem Handbuch wird beschrieben, wie Sie auf das Profile-Dashboard in der Benutzeroberfläche zugreifen und mit ihm arbeiten können. Außerdem erhalten Sie Informationen zu den im Dashboard angezeigten Metriken.
 
-Eine Übersicht über alle Profilfunktionen in der Benutzeroberfläche von Experience Platform finden Sie im [Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils](../../profile/ui/user-guide.md).
+Eine Übersicht über alle Profilfunktionen in der Benutzeroberfläche der Experience Platform finden Sie im Abschnitt [Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils](../../profile/ui/user-guide.md).
 
 ## Daten des Profile-Dashboards
 
@@ -33,7 +33,7 @@ Um in der Platform-Benutzeroberfläche zum Profile-Dashboard zu navigieren, wäh
 
 >[!NOTE]
 >
->Wenn Platform neu für Ihr Unternehmen ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt hat, ist das Profile-Dashboard nicht zu sehen. Stattdessen werden auf der Registerkarte [!UICONTROL Übersicht] Links und Dokumentationen angezeigt, um Ihnen bei den ersten Schritten mit dem Echtzeit-Kundenprofil zu helfen.
+>Wenn Platform neu für Ihr Unternehmen ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt hat, ist das Profile-Dashboard nicht zu sehen. Stattdessen wird die [!UICONTROL Übersicht] enthält Links und Dokumentation, die Ihnen bei den ersten Schritten mit dem Echtzeit-Kundenprofil helfen.
 
 ![Das Dashboard Experience Platform Profile mit hervorgehobenen Profilen und Übersicht.](../images/profiles/dashboard-overview.png)
 
@@ -73,7 +73,7 @@ Weitere Informationen zu den in der Platform-Benutzeroberfläche bereitgestellte
 
 ## Zusammenführungsrichtlinien {#merge-policies}
 
-Die im Profile-Dashboard angezeigten Metriken basieren auf Zusammenführungsrichtlinien, die auf Ihre Echtzeit-Kundenprofildaten angewendet werden. Wenn Daten aus mehreren Quellen zusammengeführt werden, um das Kundenprofil zu erstellen, können die Daten widersprüchliche Werte enthalten. Beispielsweise kann ein Datensatz einen Kunden als „unverheiratet“ auflisten, während ein anderer Datensatz den Kunden als „verheiratet“ führt. Mithilfe der Zusammenführungsrichtlinie wird bestimmt, welche Daten als Teil des Profils priorisiert und angezeigt werden sollen.
+Die im Dashboard &quot;Profile&quot;angezeigten Metriken basieren auf Zusammenführungsrichtlinien, die auf Ihre Echtzeit-Kundenprofildaten angewendet werden. Wenn Daten aus mehreren Quellen zusammengeführt werden, um das Kundenprofil zu erstellen, können die Daten widersprüchliche Werte enthalten. Beispielsweise kann ein Datensatz einen Kunden als „unverheiratet“ auflisten, während ein anderer Datensatz den Kunden als „verheiratet“ führt. Mithilfe der Zusammenführungsrichtlinie wird bestimmt, welche Daten als Teil des Profils priorisiert und angezeigt werden sollen.
 
 Weitere Informationen zu Zusammenführungsrichtlinien, einschließlich der Erstellung, Bearbeitung und Deklaration einer standardmäßigen Zusammenführungsrichtlinie für Ihre Organisation, finden Sie im Abschnitt [Zusammenführungsrichtlinien – Übersicht](../../profile/merge-policies/overview.md).
 
@@ -140,7 +140,7 @@ Weitere Informationen finden Sie im [Abschnitt über Zusammenführungsrichtlinie
 >
 >Das Widget [!UICONTROL Profilanzahl] kann aus mehreren Gründen eine andere Zahl anzeigen als die Registerkarte [!UICONTROL Durchsuchen] im Abschnitt [!UICONTROL Profile] der Benutzeroberfläche. Der häufigste Grund ist, dass die Registerkarte [!UICONTROL Durchsuchen] die Gesamtzahl der zusammengeführten Profile basierend auf der standardmäßigen Zusammenführungsrichtlinie Ihrer Organisation angibt, während das Widget [!UICONTROL Profilanzahl] die Gesamtzahl der zusammengeführten Profile basierend auf der Zusammenführungsrichtlinie referenziert, die Sie für die Anzeige im Dashboard ausgewählt haben.
 >
->Ein weiterer häufiger Grund besteht darin, dass der Dashboard-Schnappschuss und der Beispielvorgang für die Registerkarte [!UICONTROL Durchsuchen] zu unterschiedlichen Zeiten ausgeführt wird. Sie können sehen, wann das Widget [!UICONTROL Profilanzahl] zuletzt aktualisiert wurde, indem Sie den Zeitstempel im Widget überprüfen. Weitere Informationen dazu, wie der Beispielvorgang auf der Registerkarte [!UICONTROL Durchsuchen] ausgelöst wird, finden Sie im [Handbuch zur Echtzeit-Kundenprofil-Benutzeroberfläche im Abschnitt zur Profilanzahl](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=de#profile-count).
+>Ein weiterer häufiger Grund besteht darin, dass der Dashboard-Schnappschuss und der Beispielvorgang für die Registerkarte [!UICONTROL Durchsuchen] zu unterschiedlichen Zeiten ausgeführt wird. Sie können sehen, wann das Widget [!UICONTROL Profilanzahl] zuletzt aktualisiert wurde, indem Sie den Zeitstempel im Widget überprüfen. Weitere Informationen dazu, wie der Beispielauftrag im [!UICONTROL Durchsuchen] Registerkarte, siehe [Abschnitt zur Profilanzahl im Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=de#profile-count).
 
 ![Das Dashboard Experience Platform Profile mit hervorgehobenem Widget Profilanzahl.](../images/profiles/profile-count.png)
 
@@ -226,7 +226,7 @@ Das Widget **[!UICONTROL Identitätsüberschneidung]** verwendet ein Venn-Diagra
 
 Verwenden Sie die Widget-Dropdown-Menüs, um die Identitäten auszuwählen, die Sie vergleichen möchten. Kreise zeigen die relative Gesamtzahl der Profile an, in denen jede Identität enthalten ist. Die Anzahl der Profile, in denen beide Identitäten enthalten sind, wird durch die Größe der Überschneidung zwischen den Kreisen dargestellt. Wenn ein Kunde mit Ihrer Marke über mehr als einen Kanal interagiert, werden diesem einzelnen Kunden mehrere Identitäten zugeordnet. Daher ist es wahrscheinlich, dass Ihre Organisation über mehrere Profile verfügt, die Fragmente aus mehr als einer Identität enthalten.
 
-Weiterführende Informationen zu Profilfragmenten finden Sie im Abschnitt [Profilfragmente im Vergleich zu zusammengeführten Profilen](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=de#profile-fragments-vs-merged-profiles) in der Übersicht über das Echtzeit-Kundenprofil.
+Weiterführende Informationen zu Profilfragmenten finden Sie im Abschnitt zu [Profilfragmente im Vergleich zu zusammengeführten Profilen](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=de#profile-fragments-vs-merged-profiles) in der Übersicht über das Echtzeit-Kundenprofil .
 
 Weitere Informationen zu Identitäten finden Sie in der [Dokumentation zu Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
@@ -434,4 +434,4 @@ The three levels of completeness are:
 
 ## Nächste Schritte
 
-Wenn Sie mit diesem Dokument fertig sind, sollten Sie in der Lage sein, das Profile-Dashboard zu finden und die in den verfügbaren Widgets angezeigten Metriken zu verstehen. Weitere Informationen zum Arbeiten mit [!DNL Profile]-Daten in der Experience Platform-Benutzeroberfläche finden Sie im [Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils](../../profile/ui/user-guide.md).
+Wenn Sie mit diesem Dokument fertig sind, sollten Sie in der Lage sein, das Profile-Dashboard zu finden und die in den verfügbaren Widgets angezeigten Metriken zu verstehen. Weitere Informationen zum Arbeiten mit [!DNL Profile] Daten in der Experience Platform-Benutzeroberfläche, siehe [Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils](../../profile/ui/user-guide.md).

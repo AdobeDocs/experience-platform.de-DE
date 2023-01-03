@@ -5,10 +5,10 @@ title: Datenflüsse – Übersicht
 topic-legacy: overview
 description: In diesem Dokument werden Datenflüsse vorgestellt und ihre Verwendung in Adobe Experience Platform erläutert.
 exl-id: 8fe08ffa-f095-4e9f-8bab-d060985f0236
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '238'
-ht-degree: 100%
+ht-degree: 85%
 
 ---
 
@@ -18,7 +18,7 @@ In Adobe Experience Platform werden Daten aus zahlreichen Quellen aufgenommen, a
 
 ## Verwenden von Datenflüssen
 
-Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Diese Datenflüsse werden über verschiedene Services konfiguriert, wodurch Daten von den Quell-Connectoren in Zieldatensätze verschoben werden können. Dort werden sie von Identity Service und vom Echtzeit-Kundenprofil verwendet, bevor sie schließlich für Ziele aktiviert werden.
+Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Diese Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen dabei, Daten aus Quell-Connectoren in Zieldatensätze zu verschieben, wo sie dann von Identity Service und Echtzeit-Kundenprofil verwendet werden, bevor sie schließlich für Ziele aktiviert werden.
 
 Weitere Informationen zur Verwendung von Datenflüssen in Quell-Connectoren finden Sie unter [Quellen – Übersicht](../sources/home.md).
 

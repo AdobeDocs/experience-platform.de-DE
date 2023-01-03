@@ -5,7 +5,7 @@ title: Marketo Engage-Connector
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den Marketo Engage-Quell-Connector, einschließlich Informationen zur Authentifizierung, Zuordnung und Datenlatenz.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '631'
 ht-degree: 13%
@@ -71,7 +71,7 @@ In der folgenden Tabelle wird die erwartete Latenz für die [!DNL Marketo] Daten
 
 | Ziel | Erwartete Latenz |
 | ----------- | ---------------- |
-| [!DNL Real-time Customer Profile] | &lt; 1 Minute |
+| [!DNL Real-Time Customer Profile] | &lt; 1 Minute |
 | Data Lake | &lt; 60 Minuten |
 
 ## Nächste Schritte und zusätzliche Ressourcen

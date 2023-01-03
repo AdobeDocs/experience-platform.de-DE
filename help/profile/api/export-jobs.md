@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Das Echtzeit-Kundenprofil ermöglicht es Ihnen, innerhalb von Adobe Experience Platform eine zentrale Ansicht einzelner Kunden zu erstellen, indem es Daten aus verschiedenen Quellen zusammenführt, einschließlich Attributdaten und Verhaltensdaten. Profildaten können dann zur weiteren Verarbeitung in einen Datensatz exportiert werden.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1519'
 ht-degree: 10%
@@ -14,7 +14,7 @@ ht-degree: 10%
 
 # Endpunkt der Profilexport-Aufträge
 
-[!DNL Real-time Customer Profile] ermöglicht Ihnen, eine zentrale Ansicht einzelner Kunden zu erstellen, indem Sie Daten aus verschiedenen Quellen zusammenführen, einschließlich Attributdaten und Verhaltensdaten. Profildaten können dann zur weiteren Verarbeitung in einen Datensatz exportiert werden. Beispielsweise Zielgruppensegmente aus [!DNL Profile] -Daten können zur Aktivierung exportiert und Profilattribute zur Berichterstellung exportiert werden.
+[!DNL Real-Time Customer Profile] ermöglicht Ihnen, eine zentrale Ansicht einzelner Kunden zu erstellen, indem Sie Daten aus verschiedenen Quellen zusammenführen, einschließlich Attributdaten und Verhaltensdaten. Profildaten können dann zur weiteren Verarbeitung in einen Datensatz exportiert werden. Beispielsweise Zielgruppensegmente aus [!DNL Profile] -Daten können zur Aktivierung exportiert und Profilattribute zur Berichterstellung exportiert werden.
 
 Dieses Dokument enthält eine schrittweise Anleitung zum Erstellen und Verwalten von Exportvorgängen mit dem [Profil-API](https://www.adobe.com/go/profile-apis-en).
 
@@ -26,7 +26,7 @@ Sie können nicht nur einen Exportauftrag erstellen, sondern auch auf [!DNL Prof
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [!DNL Real-time Customer Profile]-API. Bevor Sie fortfahren, werfen Sie im Handbuch [Erste Schritte](getting-started.md) einen Blick auf die Informationen zu Links zu entsprechenden Dokumentationen, den Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
+Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [!DNL Real-Time Customer Profile]-API. Bevor Sie fortfahren, werfen Sie im Handbuch [Erste Schritte](getting-started.md) einen Blick auf die Informationen zu Links zu entsprechenden Dokumentationen, den Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
 
 ## Erstellen eines Exportvorgangs
 
