@@ -5,10 +5,10 @@ title: Verwalten von Datenschutzaufträgen in der Privacy Service-Benutzeroberfl
 topic-legacy: UI guide
 description: Erfahren Sie, wie Sie mit der Privacy Service-Benutzeroberfläche Datenschutzanfragen in verschiedenen Experience Cloud-Anwendungen koordinieren und überwachen können.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '1100'
-ht-degree: 1%
+source-wordcount: '1151'
+ht-degree: 2%
 
 ---
 
@@ -24,13 +24,25 @@ Das Dashboard für die [!DNL Privacy Service] Die Benutzeroberfläche bietet zwe
 
 ### Regelungstyp
 
-[!DNL Privacy Service] unterstützt Auftragsanfragen für verschiedene Datenschutzbestimmungen:
+[!DNL Privacy Service] unterstützt Auftragsanfragen für verschiedene Datenschutzbestimmungen. In der folgenden Tabelle sind die unterstützten Verordnungen und die entsprechende Beschriftung in der Benutzeroberfläche aufgeführt:
 
-* Die [!DNL California Consumer Privacy Act] ([!UICONTROL CCPA])
-* Die Europäische Union [!DNL General Data Protection Regulation] ([!UICONTROL DSGVO])
-* Thailands [!DNL Personal Data Protection Act] ([!UICONTROL PDPA_THA])
-* Brasiliens [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
-* Neuseeland [!DNL Privacy Act] ([!UICONTROL NZPA_NZL])
+| UI-Bezeichnung | Verordnung |
+| --- | --- |
+| [!UICONTROL CCPA] | Die Menüauswahlmöglichkeiten für die [!DNL California Consumer Privacy Act] |
+| [!UICONTROL DSGVO] | Die Europäische Union [!DNL General Data Protection Regulation] |
+| [!UICONTROL PDPA_THA] | Thailands [!DNL Personal Data Protection Act] |
+| [!UICONTROL LGPD_BRA] | Brasiliens [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL NZPA_NZL] | Neuseeland [!DNL Privacy Act] |
+| [!UICONTROL VCDPA_USA] | Die Menüauswahlmöglichkeiten für die [!DNL Virginia Consumer Data Protection Act] |
+| [!UICONTROL CPRA_USA] | Die Menüauswahlmöglichkeiten für die [!DNL California Consumer Privacy Rights Act (CPRA)] |
+| [!UICONTROL APA_AUS] | Die Menüauswahlmöglichkeiten für die [!DNL Australia Privacy Act (Privacy Act)] |
+| [!UICONTROL HIPAA_AUS] | Die Menüauswahlmöglichkeiten für die [!DNL Health Insurance Portability and Accountability Act] |
+
+{style=&quot;table-layout:auto&quot;}
+
+>[!NOTE]
+>
+>Siehe Übersicht unter [unterstützte Datenschutzbestimmungen](../regulations/overview.md) für weitere Informationen über den rechtlichen Kontext der einzelnen Verordnungen.
 
 Aufträge für jeden Regulierungstyp werden separat verfolgt. Um zwischen Regeltypen zu wechseln, wählen Sie die **[!UICONTROL Regelungstyp]** und wählen Sie die gewünschte Regel aus der Liste aus.
 
