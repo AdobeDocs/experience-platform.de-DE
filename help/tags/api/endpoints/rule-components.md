@@ -2,10 +2,10 @@
 title: Rule components-Endpunkt
 description: Erfahren Sie, wie Sie den /rule_components-Endpunkt in der Reactor-API aufrufen.
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
-source-wordcount: '1205'
-ht-degree: 98%
+source-wordcount: '1190'
+ht-degree: 95%
 
 ---
 
@@ -305,22 +305,22 @@ Sie können eine neue Regelkomponente erstellen, indem Sie eine POST-Anfrage ste
 **API-Format**
 
 ```http
-POST /rules/{RULE_ID}/rule_components
+POST /properties/{PROPERTY_ID}/rule_components
 ```
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `RULE_ID` | Die `id` der Regel, für die Sie eine Regelkomponente definieren. |
+| `PROPERTY_ID` | Die `id` der Eigenschaft, unter der Sie die Regelkomponente definieren. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Die folgende Anfrage erstellt eine neue Regelkomponente für die angegebene Regel. Der Aufruf verknüpft die Regelkomponente auch mit einer vorhandenen Erweiterung über die Eigenschaft `relationships`. Weitere Informationen finden Sie im Handbuch zu [Beziehungen](../guides/relationships.md).
+Die folgende Anfrage erstellt eine neue Regelkomponente. In der Payload wird die `relationships` -Eigenschaft verknüpft die Komponente mit bestimmten Regeln und einer vorhandenen Erweiterung. Weitere Informationen finden Sie im Handbuch zu [Beziehungen](../guides/relationships.md).
 
 ```shell
 curl -X POST \
-  https://reactor.adobe.io/rules/RLf7b4f416b2e04ae1ba857ae681fee5bc/rule_components \
+  https://reactor.adobe.io/properties/PR97596432a82549ceb8e2a5d9df05c0e1/rule_components \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -366,7 +366,7 @@ curl -X POST \
 | `attributes.rule_order` | Eine Ganzzahl, die die Priorität angibt, mit der die verknüpfte Regel ausgelöst werden soll. |
 | `attributes.settings` | Ein JSON-Objekt vom Typ „Einstellungen“, das als Zeichenfolge dargestellt wird. |
 | `attributes.timeout` | Eine Ganzzahl, die die Zeitüberschreitung der Aktion angibt, die nacheinander ausgeführt wird. |
-| `relationships` | Ein Objekt, das die erforderlichen Beziehungen für die Regelkomponente herstellt. Es müssen zwei Beziehungen hergestellt werden: <ol><li>`extension`: Die Erweiterung, die diese Regelkomponente definiert. Dies muss dieselbe Erweiterung sein, deren Erweiterungspaket durch die `delegate_descriptor_id` gekennzeichnet ist.</li><li>`rules`: Die Regel, unter der diese Komponente definiert wird. Muss dieselbe Regel-ID sein wie im Anfragepfad angegeben.</li></ol>Allgemeine Informationen zu Beziehungen finden Sie im [Handbuch zu Beziehungen](../guides/relationships.md). |
+| `relationships` | Ein Objekt, das die erforderlichen Beziehungen für die Regelkomponente herstellt. Es müssen zwei Beziehungen hergestellt werden: <ol><li>`extension`: Die Erweiterung, die diese Regelkomponente definiert. Dies muss dieselbe Erweiterung sein, deren Erweiterungspaket durch die `delegate_descriptor_id` gekennzeichnet ist.</li><li>`rules`: Die Regel, unter der diese Komponente definiert wird.</li></ol>Allgemeine Informationen zu Beziehungen finden Sie im [Handbuch zu Beziehungen](../guides/relationships.md). |
 | `type` | Der Typ der zu erstellenden Ressource. Für diesen Endpunkt muss der Wert `rule_components` lauten. |
 
 {style=&quot;table-layout:auto&quot;}
