@@ -4,10 +4,10 @@ title: Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die Zielgruppendaten aktivieren, die Sie in Adobe Experience Platform haben, indem Sie Segmente an Ziele senden, die auf Batch-Profilen basieren.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 79fc200f4e56699013b1ba3f91f5e383cea77e2a
-workflow-type: ht
-source-wordcount: '3411'
-ht-degree: 100%
+source-git-commit: e2318509236fad5054ce82b384f399dd6cbbdc34
+workflow-type: tm+mt
+source-wordcount: '3414'
+ht-degree: 99%
 
 ---
 
@@ -207,7 +207,7 @@ Bei profilbasierten Zielen müssen Sie die Profilattribute auswählen, die Sie a
 
    ![Abbildung mit hervorgehobenen Informationen zur Auswahl eines Quellfelds](../assets/ui/activate-batch-profile-destinations/select-target-field.png)
 
-1. Wählen Sie auf der Seite **[!UICONTROL Feld auswählen]** die XDM-Attribute aus, die Sie an das Ziel senden möchten, und klicken Sie dann auf **[!UICONTROL Auswählen]**.
+1. Im **[!UICONTROL Feld auswählen]** Seite, wählen Sie die XDM-Attribute oder Identitäts-Namespaces aus, die Sie an das Ziel senden möchten, und wählen Sie **[!UICONTROL Auswählen]**.
 
    ![Abbildung mit den verschiedenen als Quellfelder verfügbaren Feldern](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 
