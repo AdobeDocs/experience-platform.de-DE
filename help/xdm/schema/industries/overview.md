@@ -4,9 +4,9 @@ title: Übersicht über Branchendatenmodelle
 topic-legacy: overview
 description: Erfahren Sie mehr über die standardisierten Datenmodelle für verschiedene vertikale Branchen, die mit standardmäßigen XDM-Komponenten (Experience-Datenmodell) erstellt werden können.
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
-source-git-commit: e44da39dcdd4af4ab883b3ff8f61ca2fd44adb0b
+source-git-commit: d3f914cb4bcd18980e433c6fd17a663ad0fb5a84
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '355'
 ht-degree: 2%
 
 ---
@@ -38,6 +38,7 @@ ERDs werden für die folgenden vertikalen Industrien bereitgestellt:
 
 * [[!UICONTROL Einzelhandel]](./retail.md)
 * [[!UICONTROL Finanz-Services]](./financial.md)
+* [[!UICONTROL Gesundheitswesen]](./healthcare.md)
 * [[!UICONTROL Telekommunikation]](./telecom.md)
 * [[!UICONTROL Reisen und Touristik]](./travel-hospitality.md)
 

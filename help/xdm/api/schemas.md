@@ -5,7 +5,7 @@ title: API-Endpunkt für Schemas
 description: Mit dem Endpunkt /schemas in der Schema Registry-API können Sie XDM-Schemas in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 666f424355fd1104971bb1566b72e207d00f4a56
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 21%
@@ -374,7 +374,7 @@ Einer der häufigsten PATCH-Vorgänge besteht darin, einem Schema zuvor definier
 **API-Format**
 
 ```http
-PATCH /tenant/schema/{SCHEMA_ID} 
+PATCH /tenant/schemas/{SCHEMA_ID} 
 ```
 
 | Parameter | Beschreibung |
@@ -465,7 +465,7 @@ Damit ein Schema an [Echtzeit-Kundenprofil](../../profile/home.md), müssen Sie 
 **API-Format**
 
 ```http
-PATCH /tenant/schema/{SCHEMA_ID} 
+PATCH /tenant/schemas/{SCHEMA_ID} 
 ```
 
 | Parameter | Beschreibung |
