@@ -2,10 +2,9 @@
 keywords: Experience Platform; Rezept für den Produktkauf; Data Science Workspace; beliebte Themen; Rezepte; Rezept vor dem Erstellen
 solution: Experience Platform
 title: Rezept für Vorhersagen bei Produktkäufen
-topic-legacy: overview
 description: Mit dem Rezept "Vorhersage für Produktkäufe"können Sie die Wahrscheinlichkeit eines bestimmten Typs von Kundenkaufereignissen vorhersagen, z. B. einen Produktkauf.
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 13%

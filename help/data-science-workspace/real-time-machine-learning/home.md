@@ -2,10 +2,9 @@
 keywords: Experience Platform; Entwicklerhandbuch; Data Science Workspace; beliebte Themen; Echtzeit-maschinelles Lernen
 solution: Experience Platform
 title: Übersicht über maschinelles Lernen in Echtzeit
-topic-legacy: Overview
 description: Das maschinelle Lernen in Echtzeit kann die Relevanz Ihrer digitalen Erlebnisinhalte für Ihre Endbenutzer erheblich steigern. Dies wird durch die Nutzung von Echtzeit-Unterscheidungen und kontinuierlichem Lernen am Experience Edge ermöglicht.
 exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 5%

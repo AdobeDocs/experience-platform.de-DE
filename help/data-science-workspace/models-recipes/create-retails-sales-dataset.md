@@ -2,11 +2,10 @@
 keywords: Experience Platform; Rezept für Einzelhandelsumsätze; Data Science Workspace; beliebte Themen; Rezepte
 solution: Experience Platform
 title: Erstellen des Schemas und Datensatzes für Einzelhandelsumsätze
-topic-legacy: tutorial
 type: Tutorial
 description: Diese Anleitung beinhaltet Informationen über die Voraussetzungen und Elemente, die bei allen anderen Anleitungen für Adobe Experience Platform Data Science Workspace benötigt werden. Danach stehen Ihnen und den Mitgliedern Ihrer IMS-Organisation in Experience Platform das Schema „Einzelhandelsumsätze“ und entsprechende Datensätze zur Verfügung.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 61%

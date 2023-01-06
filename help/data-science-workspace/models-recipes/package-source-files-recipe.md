@@ -2,11 +2,10 @@
 keywords: Experience Platform; Paketquelldateien; Data Science Workspace; beliebte Themen; Docker; Docker-Bild
 solution: Experience Platform
 title: Quelldateien in einem Rezept verpacken
-topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie die bereitgestellten Beispielquelldateien für Einzelhandelsumsätze in eine Archivdatei verpacken können, die zum Erstellen eines Rezepts in Adobe Experience Platform Data Science Workspace verwendet werden kann, indem Sie dem Workflow für den Rezeptimport entweder in der Benutzeroberfläche oder mithilfe der API folgen.
 exl-id: 199b8127-4f1b-43a4-82e6-58cb70fcdc08
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 1%

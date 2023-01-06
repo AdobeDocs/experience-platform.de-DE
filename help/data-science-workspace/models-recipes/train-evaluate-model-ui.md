@@ -2,11 +2,10 @@
 keywords: Experience Platform; Schulung und Auswertung; Data Science Workspace; beliebte Themen; Modell erstellen; Trainings-Lauf erstellen
 solution: Experience Platform
 title: Modell in der Benutzeroberfläche von Data Science Workspace trainieren und bewerten
-topic-legacy: tutorial
 type: Tutorial
 description: In Adobe Experience Platform Data Science Workspace können Sie ein Modell für maschinelles Lernen einrichten, indem Sie ein vorhandenes Rezept einbinden, das für den Zweck des Modells geeignet ist. Anschließend wird das Modell trainiert und bewertet, um seine Effizienz und Wirksamkeit zu erhöhen; dazu werden die entsprechenden Hyperparameter fein abgestimmt. Rezepte sind wiederverwendbar; mit einem Rezept können also verschiedene Modelle erstellt und auf individuelle Zwecke zugeschnitten werden.
 exl-id: 6f674cfa-c123-46a3-80e2-9342fe687976
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1092'
 ht-degree: 64%

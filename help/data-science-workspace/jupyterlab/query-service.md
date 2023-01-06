@@ -2,11 +2,10 @@
 keywords: Experience Platform; JupyterLab; Notebooks; Data Science Workspace; beliebte Themen; Query Service
 solution: Experience Platform
 title: Query Service in Jupyter Notebook
-topic-legacy: tutorial
 type: Tutorial
 description: Mit Adobe Experience Platform können Sie SQL (Structured Query Language) in Data Science Workspace verwenden, indem Sie Query Service als Standardfunktion in JupyterLab integrieren. In diesem Tutorial werden Beispiel-SQL-Abfragen für gängige Anwendungsfälle zur Untersuchung, Transformation und Analyse von Adobe Analytics-Daten vorgestellt.
 exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 60%

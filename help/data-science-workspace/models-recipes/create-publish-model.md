@@ -2,11 +2,10 @@
 keywords: Experience Platform; Modell für maschinelles Lernen; Data Science Workspace; beliebte Themen; Modell erstellen und veröffentlichen
 solution: Experience Platform
 title: Erstellen und Veröffentlichen eines Modells für maschinelles Lernen
-topic-legacy: tutorial
 type: Tutorial
 description: Im folgenden Handbuch werden die Schritte beschrieben, die zum Erstellen und Veröffentlichen eines Modells für maschinelles Lernen erforderlich sind.
 exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1076'
 ht-degree: 8%

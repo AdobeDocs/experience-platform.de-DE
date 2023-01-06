@@ -2,10 +2,9 @@
 keywords: Experience Platform; Entwicklerhandbuch; Data Science Workspace; beliebte Themen; Echtzeit-maschinelles Lernen
 solution: Experience Platform
 title: Erste Schritte mit maschinellem Lernen in Echtzeit
-topic-legacy: Getting started
 description: Im folgenden Dokument werden die Schritte beschrieben, die zum Erstellen eines Modells für maschinelles Lernen in Echtzeit in Adobe Experience Platform erforderlich sind.
 exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 1%
@@ -41,7 +40,7 @@ Um maschinelles Lernen in Echtzeit verwenden zu können, müssen Sie Zugriff auf
 
 Weitere Informationen zur Verwendung eines externen Datensatzes, z. B. zum Hochladen von Daten in Ihre [!DNL JupyterLab] Umgebung, Tutorial besuchen [Daten mithilfe von Notebooks analysieren](../jupyterlab/analyze-your-data.md#external-data).
 
-### Neuen Datensatz erstellen
+### Erstellen eines neuen Datensatzes
 
 Um einen neuen Datensatz zur Verwendung im Echtzeit-maschinellen Lernen zu erstellen, benötigen Sie ein Datenschema für Ihren Datensatz. Als Nächstes müssen Sie Daten mithilfe des von Ihnen erstellten Schemas erfassen. Verwenden Sie die folgenden Tutorials, um einen Datensatz für [!DNL Platform]:
 

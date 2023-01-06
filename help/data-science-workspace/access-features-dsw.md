@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; Data Science Workspace; beliebte Themen; Zugriffskontrolle; Sandbox; Intelligence Pack; DSW-Funktionen; DSW-Zugriff; Adobe Experience Platform Intelligence; Intelligence; AEP Intelligence-Paket
 solution: Experience Platform
 title: Zugriff auf Data Science Workspace und Funktionen
-topic-legacy: Access and features for data science workspace
 description: Im folgenden Dokument werden die Berechtigungen von Data Science Workspace und der Zugriff auf Funktionen beschrieben.
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 12%

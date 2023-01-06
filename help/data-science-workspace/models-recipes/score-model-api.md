@@ -2,11 +2,10 @@
 keywords: Experience Platform;Modell bewerten;Data Science Workspace;beliebte Themen;Sensei-API für maschinelles Lernen
 solution: Experience Platform
 title: Modellbewertung mit der Sensei Machine Learning API
-topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie die Sensei Machine Learning-APIs nutzen können, um ein Experiment und einen Experimentablauf zu erstellen.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 87%

@@ -2,10 +2,9 @@
 keywords: Experience Platform; Rezept für Produktempfehlungen; Data Science Workspace; beliebte Themen; Rezepte; Rezept vorerstellen
 solution: Experience Platform
 title: Rezept für Produktempfehlungen
-topic-legacy: overview
 description: Mit dem Rezept „Produktempfehlungen“ können Sie personalisierte Produktempfehlungen bereitstellen, die auf die Bedürfnisse und Interessen Ihrer Kunden zugeschnitten sind. Mit einem präzisen Prognosemodell können Sie anhand der Einkaufshistorie von Kunden feststellen, für welche Produkte sie sich interessieren.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
-source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 90%

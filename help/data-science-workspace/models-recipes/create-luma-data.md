@@ -2,14 +2,13 @@
 keywords: Experience Platform; Luma-Web-Daten; Data Science Workspace; beliebte Themen; Rezepte; Demodaten; Demowebdaten; Luma-Daten
 solution: Experience Platform
 title: Erstellen von Luma-Webschemata und -Datensätzen
-topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial erhalten Sie die Voraussetzungen und Assets, die für das Luma-Demo-Tendenzmodell erforderlich sind.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: f57ca64c34f569f4402cb998af72e1e9022510ca
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '466'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 1%
 
 In diesem Tutorial erhalten Sie die Voraussetzungen und Assets, die für alle anderen [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] Tutorials. Nach Abschluss des Vorgangs stehen Ihnen und Ihrer IMS-Organisation die folgenden Schemas und Datensätze zur Verfügung.
 
-**Schemas:**
+**Schemata:**
 
 - Luma-Webdatenschema
 - Schema für Tendenzmodelle mit Scoring-Ergebnissen

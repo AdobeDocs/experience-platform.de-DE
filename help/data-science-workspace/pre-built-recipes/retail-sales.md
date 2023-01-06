@@ -2,10 +2,9 @@
 keywords: Experience Platform; Rezept für Einzelhandelsumsätze; Data Science Workspace; beliebte Themen; Rezepte; Rezept vorab erstellen
 solution: Experience Platform
 title: Rezept für Einzelhandelsumsätze
-topic-legacy: overview
 description: Mit dem Rezept "Einzelhandelsumsätze"können Sie eine Prognose für die Umsätze aller für einen bestimmten Zeitraum ausgelieferten Geschäfte erstellen. Mit einem präzisen Prognosemodell könnte der Einzelhändler das Verhältnis zwischen Nachfrage und Preispolitik ermitteln und optimierte Preisentscheidungen treffen, um Verkäufe und Umsätze zu optimieren.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
-source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 21%

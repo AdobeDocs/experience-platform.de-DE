@@ -2,10 +2,9 @@
 keywords: Experience Platform; Entwicklerhandbuch; SDK; Data Access SDK; Data Science Workspace; beliebte Themen
 solution: Experience Platform
 title: Modell-Authoring mit dem Adobe Experience Platform Platform SDK
-topic-legacy: SDK authoring
 description: In diesem Tutorial erhalten Sie Informationen zum Konvertieren von data_access_sdk_python in das neue Python platform_sdk in sowohl Python als auch R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 79%

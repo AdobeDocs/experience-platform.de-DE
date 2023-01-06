@@ -2,11 +2,10 @@
 keywords: Experience Platform; JupyterLab; Notebooks; Data Science Workspace; beliebte Themen; Datennotebooks analysieren; eda; Datenanalyse; Datenwissenschaft
 solution: Experience Platform
 title: Notebook zur Sondierungsdatenanalyse (EDA)
-topic-legacy: overview
 type: Tutorial
 description: In diesem Handbuch wird beschrieben, wie Sie mit dem Notebook "Exploratory Data Analysis"(EDA) Muster in Webdaten erkennen, Ereignisse mit einem Prognoseziel aggregieren, aggregierte Daten bereinigen und die Beziehung zwischen Vorhersagen und Zielen verstehen können.
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '2760'
 ht-degree: 1%

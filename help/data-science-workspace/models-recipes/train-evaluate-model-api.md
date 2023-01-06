@@ -2,11 +2,10 @@
 keywords: Experience Platform; Schulung und Auswertung; Data Science Workspace; beliebte Themen; Sensei Machine Learning API
 solution: Experience Platform
 title: Modell mithilfe der Sensei Machine Learning API trainieren und bewerten
-topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie ein Modell mit Sensei Machine Learning-API-Aufrufen erstellen, trainieren und bewerten.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1235'
 ht-degree: 92%

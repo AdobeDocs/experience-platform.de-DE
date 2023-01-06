@@ -2,10 +2,9 @@
 keywords: Experience Platform; Entwicklerhandbuch; Endpunkt; Data Science Workspace; beliebte Themen; Instanzen; Sensei Machine Learning API
 solution: Experience Platform
 title: MLInstances API Endpoint
-topic-legacy: Developer guide
 description: Eine MLInstance ist eine Kopplung einer vorhandenen Engine mit einem entsprechenden Satz von Konfigurationen, die Trainings-Parameter, Scoring-Parameter oder Hardware-Ressourcenkonfigurationen definieren.
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 19%

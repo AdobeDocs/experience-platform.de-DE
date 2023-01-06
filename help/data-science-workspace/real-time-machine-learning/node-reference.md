@@ -2,10 +2,9 @@
 keywords: Experience Platform; Entwicklerhandbuch; Data Science Workspace; beliebte Themen; Echtzeit-maschinelles Lernen; Knotenreferenz;
 solution: Experience Platform
 title: Referenz zum Knoten für maschinelles Lernen in Echtzeit
-topic-legacy: Nodes reference
 description: Ein Knoten ist die grundlegende Einheit, aus der Diagramme gebildet werden. Jeder Knoten führt eine bestimmte Aufgabe aus und kann mithilfe von Links miteinander verkettet werden, um ein Diagramm zu bilden, das eine ML-Pipeline darstellt. Die von einem Knoten ausgeführte Aufgabe stellt einen Vorgang für Eingabedaten dar, z. B. eine Transformation von Daten oder Schemas oder eine Inferenz für maschinelles Lernen. Der Knoten gibt den umgewandelten oder abgeleiteten Wert an die nächsten Knoten aus.
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 1%
@@ -132,7 +131,7 @@ msg6 = model_train.process(msg5)
 
 ### Teilen
 
-Verwenden Sie den folgenden Knoten, um Ihren Dataframe in Zug und Test zu unterteilen, indem Sie `train_size` oder `test_size`. Dadurch wird ein Dataframe mit einem Multi-Index zurückgegeben. Sie können mithilfe des folgenden Beispiels auf Dataframes von Trainings- und Testzwecken zugreifen: `msg5.data.xs(“train”)`.
+Verwenden Sie den folgenden Knoten, um Ihren Dataframe in Zug und Test zu unterteilen, indem Sie `train_size` oder `test_size`. Dadurch wird ein Dataframe mit einem Multi-Index zurückgegeben. Sie können mithilfe des folgenden Beispiels auf Dataframes von Trainings- und Testzwecken zugreifen: `msg5.data.xs("train")`.
 
 ```python
 splitter = Split(params={"train_size": 0.7})

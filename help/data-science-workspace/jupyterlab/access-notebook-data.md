@@ -2,10 +2,9 @@
 keywords: Experience Platform; JupyterLab; Notebooks; Data Science Workspace; beliebte Themen;%Datensatz; interaktiver Modus; Batch-Modus; Spark-SDK; Python-SDK; Datenzugriff; Notebook-Datenzugriff
 solution: Experience Platform
 title: Datenzugriff in Jupyterlab-Notebooks
-topic-legacy: Developer Guide
 description: In diesem Handbuch wird beschrieben, wie Sie mit Jupyter Notebooks, die in Data Science Workspace erstellt wurden, auf Ihre Daten zugreifen können.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: 9e41db60580146fa90542ed00ceedd4eecb88b47
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '3294'
 ht-degree: 23%
@@ -44,49 +43,49 @@ Beim Lesen von Datensätzen mit PySpark- und Scala-Notebooks haben Sie die Mögl
 
 **XDM ExperienceEvent-Schema:** Sie sollten maximal 2 Millionen Zeilen (~6,1 GB Daten auf der Festplatte) von XDM-Daten in weniger als 22 Minuten lesen können. Das Hinzufügen zusätzlicher Zeilen kann zu Fehlern führen.
 
-| Anzahl Zeilen | 1 K | 10 K | 100.000 | 1 M | 2 M |
+| Anzahl Zeilen | 1K | 10K | 100.000 | 1 M | 2 M |
 | ----------------------- | ------ | ------ | ----- | ----- | ----- |
-| Größe auf Festplatte (MB) | 18,73 | 187,5 | 308 | 3000 | 6050 |
-| SDK (in Sekunden) | Artikel 20 Absatz 3 | 86,8 | 63 | 659 | 1315 |
+| Größe auf Festplatte (MB) | 18.73 | 187.5 | 308 | 3000 | 6050 |
+| SDK (in Sekunden) | 20.3 | 86.8 | 63 | 659 | 1315 |
 
 **Ad-hoc-Schema:** Sie sollten maximal 5 Millionen Zeilen (~5,6 GB Daten auf der Festplatte) von Nicht-XDM-Daten (Ad-hoc-Daten) in weniger als 14 Minuten lesen können. Das Hinzufügen zusätzlicher Zeilen kann zu Fehlern führen.
 
-| Zeilenanzahl | 1 K | 10 K | 100.000 | 1 M | 2 M | 3 M | 5 M |
+| Zeilenanzahl | 1K | 10K | 100.000 | 1M | 2M | 3 M | 5 M |
 | ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- | ------ |
-| Größe auf Festplatte (in MB) | 1,21 | 11,72 | 115 | 1120 | 2250 | 3380 | 5630 |
-| SDK (in Sekunden) | 7,27 | 9,04 | Artikel 27 Absatz 3 | 180 | 346 | 487 | 819 |
+| Größe auf Festplatte (in MB) | 1.21 | 11.72 | 115 | 1120 | 2250 | 3380 | 5630 |
+| SDK (in Sekunden) | 7.27 | 9.04 | 27.3 | 180 | 346 | 487 | 819 |
 
 ### R Notebook-Datenbeschränkungen
 
 **XDM ExperienceEvent-Schema:** Sie sollten maximal 1 Million Zeilen XDM-Daten (3 GB Daten auf der Festplatte) in weniger als 13 Minuten lesen können.
 
-| Zeilenanzahl | 1 K | 10 K | 100.000 | 1 M |
+| Zeilenanzahl | 1K | 10K | 100.000 | 1M |
 | ----------------------- | ------ | ------ | ----- | ----- |
-| Größe auf Festplatte (MB) | 18,73 | 187,5 | 308 | 3000 |
-| R-Kernel (in Sekunden) | 14,03 | 69,6 | 86,8 | 775 |
+| Größe auf Festplatte (MB) | 18.73 | 187.5 | 308 | 3000 |
+| R-Kernel (in Sekunden) | 14.03 | 69.6 | 86.8 | 775 |
 
 **Ad-hoc-Schema:** Sie sollten maximal 3 Millionen Zeilen Ad-hoc-Daten (293 MB Daten auf der Festplatte) in etwa 10 Minuten lesen können.
 
-| Zeilenanzahl | 1 K | 10 K | 100.000 | 1 M | 2 M | 3 M |
+| Zeilenanzahl | 1K | 10K | 100.000 | 1M | 2M | 3M |
 | ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- |
-| Größe auf Festplatte (in MB) | 0,082 | 0,612 | 9.0 | 91 | 188 | 293 |
-| R SDK (in Sek.) | 7,7 | 4,58 | 35,9 | 233 | 470,5 | 603 |
+| Größe auf Festplatte (in MB) | 0.082 | 0.612 | 9.0 | 91 | 188 | 293 |
+| R SDK (in Sek.) | 7.7 | 4.58 | 35.9 | 233 | 470.5 | 603 |
 
 ### PySpark ([!DNL Python] Kernel) Notebook-Datenbeschränkungen: {#pyspark-data-limits}
 
 **XDM ExperienceEvent-Schema:** Im interaktiven Modus sollten Sie maximal 5 Millionen Zeilen (~13,42 GB Daten auf der Festplatte) von XDM-Daten in etwa 20 Minuten lesen können. Der interaktive Modus unterstützt nur bis zu 5 Millionen Zeilen. Wenn Sie größere Datensätze lesen möchten, wird empfohlen, in den Batch-Modus zu wechseln. Im Batch-Modus sollten Sie in der Lage sein, maximal 500 Millionen Zeilen (~1,31 TB-Daten auf der Festplatte) von XDM-Daten in etwa 14 Stunden zu lesen.
 
-| Zeilenanzahl | 1 K | 10 K | 100.000 | 1 M | 2 M | 3 M | 5 M | 10 M | 50 M | 100 Min. | 500 Min. |
+| Zeilenanzahl | 1K | 10K | 100.000 | 1M | 2M | 3M | 5M | 10 M | 50M | 100M | 500M |
 |-------------------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
-| Größe auf der Festplatte | 2,93 MB | 4,38 MB | 29,02 | 2.69 GB | 5.39 GB | 8.09 GB | 13.42 GB | 26.82 GB | 134.24 GB | 268.39 GB | 1,31 TB |
+| Größe auf der Festplatte | 2.93 MB | 4.38 MB | 29.02 | 2.69 GB | 5.39 GB | 8.09 GB | 13.42 GB | 26.82 GB | 134.24 GB | 268.39 GB | 1.31TB |
 | SDK (interaktiver Modus) | 33 Sek. | 32.4 Sek. | 55.1 Sek. | 253.5 Sek. | 489.2 Sek. | 729.6 Sek. | 1206.8 Sek. | – | – | – | – |
 | SDK (Batch-Modus) | 815.8 Sek. | 492.8 Sek. | 379.1 Sek. | 637.4 Sek. | 624.5 Sek. | 869.2 Sek. | 1104.1 Sek. | 1786 Sek. | 5387.2 Sek. | 10624.6 Sek. | 50547 Sek. |
 
 **Ad-hoc-Schema:** Im interaktiven Modus sollten Sie maximal 5 Millionen Zeilen (~5,36 GB Daten auf der Festplatte) von Nicht-XDM-Daten in weniger als 3 Minuten lesen können. Im Batch-Modus sollten Sie in der Lage sein, maximal 1 Milliarde Zeilen (~1,05 TB Daten auf der Festplatte) von Nicht-XDM-Daten in etwa 18 Minuten zu lesen.
 
-| Zeilenanzahl | 1 K | 10 K | 100.000 | 1 M | 2 M | 3 M | 5 M | 10 M | 50 M | 100 Min. | 500 Min. | 1B |
+| Zeilenanzahl | 1K | 10K | 100.000 | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
 |--------------|--------|---------|---------|-------|-------|-------|--------|--------|---------|--------|---------|-------|
-| Größe der Festplatte | 1,12 MB | 11,24 MB | 109.48 MB | 2.69 GB | 2.14 GB | 3.21 GB | 5.36 GB | 10.71 GB | 53.58 GB | 107.52 GB | 535.88 GB | 1,05 TB |
+| Größe der Festplatte | 1.12 MB | 11.24 MB | 109.48 MB | 2.69 GB | 2.14 GB | 3.21 GB | 5.36 GB | 10.71 GB | 53.58 GB | 107.52 GB | 535.88 GB | 1.05TB |
 | Interaktiver SDK-Modus (in Sekunden) | 28.2 Sek. | 18.6 Sek. | 20.8 Sek. | 20.9 Sek. | 23.8 Sek. | 21.7 Sek. | 24.7 Sek. | – | – | – | – | – |
 | SDK-Batch-Modus (in Sekunden) | 428.8 Sek. | 578.8 Sek. | 641.4 Sek. | 538.5 Sek. | 630.9 Sek. | 467.3 Sek. | 411 Sek. | 675 Sek. | 702 Sek. | 719.2 Sek. | 1022.1 Sek. | 1122.3 Sek. |
 
@@ -94,17 +93,17 @@ Beim Lesen von Datensätzen mit PySpark- und Scala-Notebooks haben Sie die Mögl
 
 **XDM ExperienceEvent-Schema:** Im interaktiven Modus sollten Sie maximal 5 Millionen Zeilen (~13,42 GB Daten auf der Festplatte) von XDM-Daten in etwa 18 Minuten lesen können. Der interaktive Modus unterstützt nur bis zu 5 Millionen Zeilen. Wenn Sie größere Datensätze lesen möchten, wird empfohlen, in den Batch-Modus zu wechseln. Im Batch-Modus sollten Sie in der Lage sein, maximal 500 Millionen Zeilen (~1,31 TB-Daten auf der Festplatte) von XDM-Daten in etwa 14 Stunden zu lesen.
 
-| Zeilenanzahl | 1 K | 10 K | 100.000 | 1 M | 2 M | 3 M | 5 M | 10 M | 50 M | 100 Min. | 500 Min. |
+| Zeilenanzahl | 1K | 10K | 100.000 | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
 |---------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
-| Größe der Festplatte | 2,93 MB | 4,38 MB | 29,02 | 2.69 GB | 5.39 GB | 8.09 GB | 13.42 GB | 26.82 GB | 134.24 GB | 268.39 GB | 1,31 TB |
+| Größe der Festplatte | 2.93 MB | 4.38 MB | 29.02 | 2.69 GB | 5.39 GB | 8.09 GB | 13.42 GB | 26.82 GB | 134.24 GB | 268.39 GB | 1.31TB |
 | Interaktiver SDK-Modus (in Sekunden) | 37.9 Sek. | 22.7 Sek. | 45.6 Sek. | 231.7 Sek. | 444.7 Sek. | 660.6 Sek. | 1100 Sek. | – | – | – | – |
-| SDK-Batch-Modus (in Sekunden) | 374.4 Sek. | 398.5 Sek. | 527 Sek. | 487.9 Sek. | 588.9 Sek. | 829 Sek. | 939.1 Sek. | 1441 Sek. | 5473.2 Sek. | 10118,8 | 49207,6 |
+| SDK-Batch-Modus (in Sekunden) | 374.4 Sek. | 398.5 Sek. | 527 Sek. | 487.9 Sek. | 588.9 Sek. | 829 Sek. | 939.1 Sek. | 1441 Sek. | 5473.2 Sek. | 10118.8 | 49207.6 |
 
 **Ad-hoc-Schema:** Im interaktiven Modus sollten Sie maximal 5 Millionen Zeilen (~5,36 GB Daten auf der Festplatte) von Nicht-XDM-Daten in weniger als 3 Minuten lesen können. Im Batch-Modus sollten Sie in der Lage sein, maximal 1 Milliarde Zeilen (~1,05 TB Daten auf der Festplatte) von Nicht-XDM-Daten in etwa 16 Minuten zu lesen.
 
-| Zeilenanzahl | 1 K | 10 K | 100.000 | 1 M | 2 M | 3 M | 5 M | 10 M | 50 M | 100 Min. | 500 Min. | 1B |
+| Zeilenanzahl | 1K | 10K | 100.000 | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
 |--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|
-| Größe der Festplatte | 1,12 MB | 11,24 MB | 109.48 MB | 2.69 GB | 2.14 GB | 3.21 GB | 5.36 GB | 10.71 GB | 53.58 GB | 107.52 GB | 535.88 GB | 1,05 TB |
+| Größe der Festplatte | 1.12 MB | 11.24 MB | 109.48 MB | 2.69 GB | 2.14 GB | 3.21 GB | 5.36 GB | 10.71 GB | 53.58 GB | 107.52 GB | 535.88 GB | 1.05TB |
 | Interaktiver SDK-Modus (in Sekunden) | 35.7 Sek. | 31 Sek. | 19.5 Sek. | 25.3 Sek. | 23 Sek. | 33.2 Sek. | 25.5 Sek. | – | – | – | – | – |
 | SDK-Batch-Modus (in Sekunden) | 448.8 Sek. | 459.7 Sek. | 519 Sek. | 475.8 Sek. | 599.9 Sek. | 347.6 Sek. | 407.8 Sek. | 397 Sek. | 518.8 Sek. | 487.9 Sek. | 760.2 Sek. | 975.4 Sek. |
 

@@ -2,10 +2,9 @@
 keywords: Experience Platform; Entwicklerhandbuch; SDK; Modell-Authoring; Data Science Workspace; beliebte Themen; Tests
 solution: Experience Platform
 title: Modellerstellungs-SDK
-topic-legacy: Overview
 description: Mit dem Model Authoring SDK können Sie benutzerdefinierte Rezepte für maschinelles Lernen und Funktions-Pipelines entwickeln, die in Adobe Experience Platform Data Science Workspace verwendet werden können, und implementierbare Vorlagen in PySpark und Spark (Scala) bereitstellen.
 exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 70%

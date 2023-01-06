@@ -2,11 +2,10 @@
 keywords: Experience Platform; optimieren; Modell; Data Science Workspace; beliebte Themen; Modelleinblicke
 solution: Experience Platform
 title: Modell mithilfe des Model Insights Framework optimieren
-topic-legacy: tutorial
 type: Tutorial
 description: Das Model Insights Framework bietet Data Scientists Werkzeuge in Data Science Workspace, um auf der Grundlage von Experimenten schnelle und fundierte Entscheidungen für optimale maschinelle Lernmodelle zu treffen.
 exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
-source-git-commit: d3e1bc9bc075117dcc96c85b8b9c81d6ee617d29
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 88%
@@ -78,7 +77,7 @@ In der folgenden Tabelle sind die Standardmetriken für jede Klasse aufgeführt.
 | `evaluator.class` | Standardmetriken | `evaluation.metric` |
 | --- | --- | --- |
 | `DefaultBinaryClassificationEvaluator` | -Precision <br>-Recall <br>-Confusion Matrix <br>-F-Score <br>-Accuracy <br>-Receiver Operating Characteristics <br>-Area Under the Receiver Operating Characteristics | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
-| `DefaultMultiClassificationEvaluator` | -Precision <br>-Recall <br>-Verwirrungsmatrix <br>-F-Score <br>-Genauigkeit <br>-Bedienungsmerkmale des Receivers <br>-Bereich unter den Betriebseigenschaften des Receivers | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
+| `DefaultMultiClassificationEvaluator` | -Precision <br>-Recall <br>-Confusion Matrix <br>-F-Score <br>-Accuracy <br>-Receiver Operating Characteristics <br>-Area Under the Receiver Operating Characteristics | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
 | `RecommendationsEvaluator` | -Mean Average Precision (MAP) <br>-Normalized Discounted Cumulative Gain <br>-Mean Reciprocal Rank <br>-Metric K | -`MEAN_AVERAGE_PRECISION` <br>-`NDCG` <br>-`MRR` <br>-`METRIC_K` |
 
 

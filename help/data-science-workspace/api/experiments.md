@@ -2,10 +2,9 @@
 keywords: Experience Platform; Entwicklerhandbuch; Endpunkt; Data Science Workspace; beliebte Themen; Experimente; Sensei-API für maschinelles Lernen
 solution: Experience Platform
 title: Experiment-API-Endpunkt
-topic-legacy: Developer guide
 description: Modellentwicklung und -schulung finden auf Experimentebene statt, bei der ein Experiment aus einer MLInstance, Trainings-Läufen und Scoring-Läufen besteht.
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 17%

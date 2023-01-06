@@ -2,10 +2,9 @@
 keywords: Experience Platform; Fehlerbehebung; Data Science Workspace; beliebte Themen
 solution: Experience Platform
 title: Data Science Workspace - Anleitung zur Fehlerbehebung
-topic-legacy: Troubleshooting
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Adobe Experience Platform Data Science Workspace.
 exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
-source-git-commit: ec42d80e695ccf57c10c539ae1b5104c7948c473
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 0%
@@ -18,7 +17,7 @@ Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Adobe Experie
 
 ## JupyterLab Notebook-Abfragestatus im Ausführungsstatus stecken geblieben
 
-Ein JupyterLab-Notebook kann darauf hinweisen, dass sich eine Zelle in einigen Speicherbedingungen unbegrenzt im Ausführungsstatus befindet. Wenn Sie beispielsweise einen großen Datensatz abfragen oder mehrere nachfolgende Abfragen ausführen, kann dem JupyterLab-Notebook der verfügbare Speicher zum Speichern des resultierenden Dataframe-Objekts ausgehen. Es gibt einige Indikatoren, die in dieser Situation zu sehen sind. Zunächst wechselt der Kernel in den Leerlauf-Status, obwohl die Zelle als Ausführung angezeigt wird, wie durch die [`*`] neben der Zelle. Darüber hinaus gibt die untere Leiste die Menge des verwendeten/verfügbaren RAM an.
+Ein JupyterLab Notebook kann darauf hinweisen, dass sich eine Zelle in einigen Speicherbedingungen unbegrenzt im Ausführungsstatus befindet. Wenn Sie beispielsweise einen großen Datensatz abfragen oder mehrere nachfolgende Abfragen ausführen, kann dem JupyterLab-Notebook der verfügbare Speicher zum Speichern des resultierenden Dataframe-Objekts ausgehen. Es gibt einige Indikatoren, die in dieser Situation zu sehen sind. Zunächst wechselt der Kernel in den Leerlauf-Status, obwohl die Zelle als Ausführung angezeigt wird, wie durch die [`*`] neben der Zelle. Darüber hinaus gibt die untere Leiste die Menge des verwendeten/verfügbaren RAM an.
 
 ![Verfügbarer Speicher](./images/jupyterlab/user-guide/allocate-ram.png)
 

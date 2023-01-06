@@ -2,11 +2,10 @@
 keywords: Experience Platform;Modell bewerten;Data Science Workspace;beliebte Themen;ui;Scoring-Lauf;Scoring-Ergebnisse
 solution: Experience Platform
 title: Bewertung eines Modells in der Benutzeroberfläche von Data Science Workspace
-topic-legacy: tutorial
 type: Tutorial
 description: Scoring in Adobe Experience Platform Data Science Workspace kann durch Einspeisung von Eingabedaten in ein vorhandenes trainiertes Modell erreicht werden. Scoring-Ergebnisse werden dann als neuer Batch in einem angegebenen Ausgabedatensatz gespeichert und angezeigt.
 exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '648'
 ht-degree: 32%

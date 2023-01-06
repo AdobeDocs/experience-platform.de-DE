@@ -2,11 +2,10 @@
 keywords: Experience Platform; JupyterLab; Rezept; Notebooks; Data Science Workspace; beliebte Themen; Rezept erstellen
 solution: Experience Platform
 title: Erstellen eines Modells mit JupyterLab Notebooks
-topic-legacy: tutorial
 type: Tutorial
 description: Dieses Tutorial führt Sie durch die erforderlichen Schritte zum Erstellen eines Rezepts mithilfe der JupyterLab Notebook-Rezept-Builder-Vorlage.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: b4dabd36f54cc571b78a6c6c9535f9f08c403b64
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '2119'
 ht-degree: 34%
