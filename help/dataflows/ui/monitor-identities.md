@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Identitäten überwachen; Datenflüsse überwachen; Datenflüsse; Identitäten;
 description: Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihre Kunden und deren Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle und persönliche digitale Erlebnisse sorgen. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Experience Platform-Benutzeroberfläche Datenflüsse mit Identitäten überwachen können.
 title: Überwachen von Datenflüssen auf Identitäten in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
-source-git-commit: cfbc977efd09bba0927bf8b03147e40671eb362e
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1149'
 ht-degree: 14%

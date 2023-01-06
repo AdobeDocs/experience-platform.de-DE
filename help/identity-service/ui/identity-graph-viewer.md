@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Identitätsdiagramm-Viewer; Identitätsdiagramm-Viewer; Diagramm-Viewer; Graph-Viewer; Identitäts-Namespace; Identität; Identität; Identity Service; Identitätsdienst
 solution: Experience Platform
 title: Identitätsdiagramm-Viewer - Übersicht
-topic-legacy: tutorial
 description: Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identitäten für einen bestimmten Kunden und bietet Ihnen eine visuelle Darstellung, wie Ihr Kunde über verschiedene Kanäle hinweg mit Ihrer Marke interagiert.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 9%
@@ -128,5 +127,5 @@ Durch Lesen dieses Dokuments haben Sie erfahren, wie Sie die Identitätsdiagramm
 
 | Datum | Aktion |
 | ---- | ------ |
-| 01.2021 | <ul><li>Unterstützung für Streaming von erfassten Daten und Nicht-Produktions-Sandbox hinzugefügt.</li><li>Geringfügige Fehlerbehebungen.</li></ul> |
+| 2021-01 | <ul><li>Unterstützung für Streaming von erfassten Daten und Nicht-Produktions-Sandbox hinzugefügt.</li><li>Geringfügige Fehlerbehebungen.</li></ul> |
 | 2021-02 | <ul><li>Der Identitätsdiagramm-Viewer wird über die Datensatzvorschau verfügbar gemacht.</li><li>Geringfügige Fehlerbehebungen.</li><li>Der Identitätsdiagramm-Viewer wird allgemein verfügbar gemacht.</li></ul> |

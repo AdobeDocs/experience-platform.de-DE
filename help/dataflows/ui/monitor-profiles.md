@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Monitorprofile; Überwachen von Datenflüssen; Datenflüsse; Profil; Echtzeit-Kundenprofil;
 description: Mit dem Echtzeit-Kundenprofil können Sie eine ganzheitliche Sicht auf jeden einzelnen Kunden anzeigen, indem Sie Daten aus mehreren Kanälen, einschließlich Online, Offline, CRM und Drittanbieter, kombinieren. In diesem Tutorial erfahren Sie, wie Sie Datenflüsse mit Profilen über die Experience Platform-Benutzeroberfläche überwachen können.
 title: Überwachen von Datenflüssen für Profile in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1074'
 ht-degree: 9%

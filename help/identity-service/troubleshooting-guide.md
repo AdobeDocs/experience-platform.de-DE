@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Identitäts-Namespace; Identitäts-Namespace
 solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei Identity Service
-topic-legacy: troubleshooting
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Adobe Experience Platform Identity Service sowie eine Anleitung zur Behebung gängiger Fehler.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 3d308d18c926cabdf0bd4b52c0623d8ec9428ee8
+source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '2180'
 ht-degree: 78%
@@ -229,7 +228,7 @@ Bei diesem Fehler ist Ihr Zugriffstoken ungültig. Zugriffstoken laufen alle 24 
 }
 ```
 
-Bei diesem Fehler ist Ihr Zugriffstoken ungültig. Zugriffstoken laufen alle 24 Stunden ab und müssen neu generiert werden, damit sie weiterhin [!DNL Platform] APIs. Anweisungen zum Generieren neuer Zugriffstoken finden Sie im [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en).
+Bei diesem Fehler ist Ihr Zugriffstoken ungültig. Zugriffstoken laufen alle 24 Stunden ab und müssen neu generiert werden, damit sie weiterhin [!DNL Platform] APIs. Anweisungen zum Generieren neuer Zugriffstoken finden Sie im [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de).
 
 ### Anwender-Token weist keinen gültigen Produktkontext auf.
 
@@ -241,7 +240,7 @@ Bei diesem Fehler ist Ihr Zugriffstoken ungültig. Zugriffstoken laufen alle 24 
 }
 ```
 
-Diese Fehlermeldung wird angezeigt, wenn Ihr Zugriffstoken nicht aus einem [!DNL Experience Platform] Integration. Siehe [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) für Anweisungen zum Generieren neuer Zugriffstoken für eine [!DNL Experience Platform] Integration.
+Diese Fehlermeldung wird angezeigt, wenn Ihr Zugriffstoken nicht aus einem [!DNL Experience Platform] Integration. Siehe [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) für Anweisungen zum Generieren neuer Zugriffstoken für eine [!DNL Experience Platform] Integration.
 
 ### Interner Fehler beim Abrufen der nativen XID aus dem Identitäts- und Namespace-Code.
 

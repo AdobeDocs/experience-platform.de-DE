@@ -2,13 +2,12 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Identität;Identität;XDM-Diagramme;Identity Service;Identity Service
 solution: Experience Platform
 title: Identity Service – Übersicht
-topic-legacy: overview
 description: Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihren Kunden und sein Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle persönliche digitale Erlebnisse sorgen.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '1839'
-ht-degree: 93%
+ht-degree: 90%
 
 ---
 
@@ -32,7 +31,7 @@ Bevor wir in die Details von [!DNL Identity Service] eintauchen, hier eine kurze
 | --- | --- |
 | Identität | Eine Identität besteht aus Daten, die für eine Entität (normalerweise eine Person) eindeutig sind. Eine Identität wie z. B. eine Anmeldekennung, eine ECID oder eine Kundentreue-ID wird als „bekannte Identität“ bezeichnet. |
 | ECID | Experience Cloud ID (ECID) ist ein geteilter Identity-Namespace, der in Programmen von Experience Platform und Adobe Experience Cloud verwendet wird. ECID bietet eine Grundlage für die Kundenidentität und wird als primäre ID für Geräte und als Basisknoten für Identitätsdiagramme verwendet. Weiterführende Informationen dazu finden Sie in der [ECID-Übersicht](./ecid.md). |
-| Identity-Namespace | Ein Identity-Namespace dient zur Unterscheidung des Kontexts oder des Typs einer Identität. Beispielsweise unterscheidet eine Identität zwischen „name<span>@email.com“ als E-Mail-Adresse und „443522“ als numerischer CRM-ID. Identity-Namespaces werden verwendet, um einzelne Identitäten nachzuschlagen und den Kontext für Identitätswerte bereitzustellen. Auf diese Weise können Sie etwa feststellen, dass zwei [!DNL Profile]-Fragmente, die unterschiedliche primäre IDs enthalten, aber denselben Wert für den Identity-Namespace `email` aufweisen, tatsächlich dieselbe Person betreffen. Weiterführende Informationen dazu finden Sie unter [Übersicht zu Identitäts-Namespaces](./namespaces.md). |
+| Identity-Namespace | Ein Identity-Namespace dient zur Unterscheidung des Kontexts oder des Typs einer Identität. Beispielsweise unterscheidet eine Identität &quot;name&quot;<span>@email.com&quot; als E-Mail-Adresse oder &quot;443522&quot; als numerische CRM-ID. Identity-Namespaces werden verwendet, um einzelne Identitäten nachzuschlagen und den Kontext für Identitätswerte bereitzustellen. Auf diese Weise können Sie etwa feststellen, dass zwei [!DNL Profile]-Fragmente, die unterschiedliche primäre IDs enthalten, aber denselben Wert für den Identity-Namespace `email` aufweisen, tatsächlich dieselbe Person betreffen. Weiterführende Informationen dazu finden Sie unter [Übersicht zu Identitäts-Namespaces](./namespaces.md). |
 | Identitätsdiagramm | Ein Identitätsdiagramm ist eine Zusammenstellung von Beziehungen zwischen verschiedenen Identitäten, anhand derer Sie visualisieren und besser verstehen können, welche Kundenidentitäten zusammengeführt werden und wie. Weitere Informationen finden Sie im Tutorial zur [Verwendung des Identitätsdiagramm-Viewers](./ui/identity-graph-viewer.md). |
 | Persönlich identifizierbare Informationen (PII) | PII sind Informationen, mit denen ein Kunde direkt identifiziert werden kann, z. B. eine E-Mail-Adresse oder eine Telefonnummer. PII-Werte werden häufig verwendet, um die verschiedenen Identitäten eines Kunden in verschiedenen Systemen abzugleichen. |
 | Unbekannte oder anonyme Identitäten | Unbekannte oder anonyme Identitäten sind Indikatoren, die Geräte isolieren, ohne die tatsächliche Person zu identifizieren, die das Gerät verwendet. Unbekannte und anonyme Identitäten umfassen Informationen wie die IP-Adresse oder eine Cookie-ID eines Besuchers. Unbekannte und anonyme Identitäten können zwar Verhaltensdaten liefern, sind jedoch von begrenztem Nutzen, bis ein Kunde seine personenbezogenen Daten bereitstellt. |
@@ -47,8 +46,8 @@ Betrachten wir ein alltägliches Beispiel für die Beziehung eines Verbrauchers 
 - An dieser Stelle erscheint Marias Aktivität in zwei separaten Profilen:
    - Ihre E-Commerce-Anmeldung
    - Ihr Tablet-Gerät, möglicherweise identifiziert durch seine Geräte-ID
-- Maria setzt ihre Tablet-Sitzung später fort und gibt beim Abonnieren Ihres Newsletters ihre E-Mail-Adresse an. Im Anschluss daran fügt Streaming-Erfassung als Datensatzdaten in ihrem Profil eine neue Identität hinzu. Infolgedessen verknüpft [!DNL Identity Service] Marias Aktivitäten auf ihrem Tablet nun mit dem Verlauf ihres E-Commerce-Kontos.
-- Bis zum nächsten Klick auf ihr Tablet könnten Ihre Zielinhalte Marias gesamtes Profil inklusive Verlauf widerspiegeln, statt nur das Tablet eines unbekannten Erstkäufers.
+- Maria setzt ihre Tablet-Sitzung später fort und gibt beim Abonnieren Ihres Newsletters ihre E-Mail-Adresse an. Im Anschluss daran fügt Streaming-Erfassung als Datensatzdaten in ihrem Profil eine neue Identität hinzu. Daher [!DNL Identity Service] verknüpft nun Marias Aktivität auf Tablet-Geräten mit ihrem E-Commerce-Kontoverlauf.
+- Bis zum nächsten Klick auf das Tablet könnten Ihre Zielinhalte Marias gesamtes Profil inklusive Verlauf widerspiegeln, statt nur das Tablet eines unbekannten Kunden.
 
 ![Identitätszusammenfügung in Platform](./images/identity-service-stitching.png)
 
@@ -68,7 +67,7 @@ Zu den Beispielen für Implementierungen von [!DNL Identity Service] gehören:
 >[!CONTEXTUALHELP]
 >id="platform_identity_namespace"
 >title="Identity-Namespaces"
->abstract="Ein Identity-Namespace dient zur Unterscheidung des Kontexts oder des Typs einer Identität. Beispielsweise unterscheidet eine Identität zwischen „name<span>@email.com“ als E-Mail-Adresse und „443522“ als numerischer CRM-ID."
+>abstract="Ein Identity-Namespace dient zur Unterscheidung des Kontexts oder des Typs einer Identität. Beispielsweise unterscheidet eine Identität &quot;name&quot;<span>@email.com&quot; als E-Mail-Adresse oder &quot;443522&quot; als numerische CRM-ID."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
