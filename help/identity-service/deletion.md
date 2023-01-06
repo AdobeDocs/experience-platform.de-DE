@@ -1,9 +1,9 @@
 ---
 title: Löschungen im Identity Service
 description: Dieses Dokument bietet einen Überblick über die verschiedenen Mechanismen, mit denen Sie Ihre Identitätsdaten in Experience Platform löschen und Klarheit darüber schaffen können, wie sich Identitätsdiagramme auf diese Weise auswirken können.
-source-git-commit: 506d47035622e45f72a8d92aeff6c5ec4e3d0856
+source-git-commit: 17e39f6e9d6e62e22f867de91d571593ba945c71
 workflow-type: tm+mt
-source-wordcount: '1333'
+source-wordcount: '1318'
 ht-degree: 12%
 
 ---
@@ -49,7 +49,7 @@ Die folgende Tabelle zeigt die Unterschiede zwischen dem Löschen einzelner Iden
 | Angenommene Anwendungsfälle | Nur Datenschutzanfragen (DSGVO, CCPA). | Verwaltung der in Experience Platform gespeicherten Daten. |
 | Geschätzte Latenz | Tage bis Wochen | Days |
 | Betroffene Dienste | Durch das Löschen einer einzelnen Identität in Privacy Service können Sie festlegen, ob Daten aus Identity Service, Echtzeit-Kundenprofil oder Data Lake gelöscht werden sollen. | Durch das Löschen einer einzelnen Identität in der Datenhygiene werden die ausgewählten Daten über Identity Service, Echtzeit-Kundenprofil und Data Lake hinweg gelöscht. |
-| Löschmuster | Löschen Sie eine Identität aus Identity Service. | Löschen Sie eine Identität und alle zugehörigen Links vollständig aus Identity Service, für alle Datensätze oder für einen Datensatz. |
+| Löschmuster | Löschen Sie eine Identität aus Identity Service. | Löschen Sie eine Identität aus Identity Service. |
 
 {style=&quot;table-layout:auto&quot;}
 
