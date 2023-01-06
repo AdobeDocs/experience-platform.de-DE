@@ -5,7 +5,7 @@ title: Benutzerhandbuch zu Datensätzen
 topic-legacy: datasets
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform allgemeine Aktionen beim Arbeiten mit Datensätzen durchführen.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1509d14c0acbf7136d5869d6de2ee2cf9fad450a
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 37%
@@ -127,7 +127,7 @@ Um einen Datensatz für Profil zu aktivieren, greifen Sie auf dessen **[!UICONTR
 
 Mit Datennutzungsbeschriftungen können Sie Datensätze anhand der für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Weiterführende Informationen zu Bezeichnungen finden Sie in der [Übersicht zu Data Governance](../../data-governance/home.md) oder im [Benutzerhandbuch zu Datennutzungsbezeichnungen](../../data-governance/labels/overview.md), wo beschrieben wird, wie Sie Bezeichnungen auf Datensätze anwenden können.
 
-## Datensatz löschen
+## Datensatz löschen {#delete}
 
 Sie können einen Datensatz löschen, indem Sie zunächst auf den Bildschirm **[!UICONTROL Datensatzaktivität]** zugreifen. Wählen Sie anschließend **[!UICONTROL Datensatz löschen]** , um sie zu löschen.
 
