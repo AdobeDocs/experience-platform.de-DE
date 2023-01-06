@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Überwachung; Überwachung; Datenflüsse; Überwachung der Erfassung; Datenerfassung; Datenerfassung; Anzeigen von Datensätzen; Anzeigen von Stapeln;
 solution: Experience Platform
 title: Überwachen der Datenerfassung
-topic-legacy: overview
 description: Dieses Benutzerhandbuch enthält eine Anleitung zum Überwachen Ihrer Daten in der Benutzeroberfläche von Adobe Experience Platform. Für dieses Handbuch benötigen Sie eine Adobe ID und Zugriff auf Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 34%

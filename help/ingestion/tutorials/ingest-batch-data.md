@@ -2,11 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Erfassung; Erfassen von Batch-Daten; Tutorial; Batch-Erfassung; Tutorial; UI-Handbuch
 solution: Experience Platform
 title: Daten in Experience Platform aufnehmen
-topic-legacy: tutorial
 type: Tutorial
 description: Mit Adobe Experience Platform können Sie Daten einfach als Batch-Dateien in Form von Parquet-Dateien oder Daten importieren, die einem bekannten Experience-Datenmodell (XDM)-Schema entsprechen.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 51%

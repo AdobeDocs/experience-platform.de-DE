@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Batch-Erfassung; Batch-Erfassung; partielle Erfassung; partielle Erfassung; Fehler abrufen; Fehler abrufen; partielle Batch-Erfassung; partielle Batch-Erfassung; Teil; Erfassung; Aufnahme;
 solution: Experience Platform
 title: Partielle Batch-Erfassung - Übersicht
-topic-legacy: overview
 description: Dieses Dokument enthält eine Anleitung zum Verwalten der partiellen Batch-Erfassung.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '945'
-ht-degree: 46%
+ht-degree: 48%
 
 ---
 
@@ -25,7 +24,7 @@ Diese Anleitung setzt grundlegende Kenntnisse zu den verschiedenen Adobe Experie
 - [Batch-Erfassung](./overview.md)[!DNL Platform]: Die Methode, mit der Daten aus Datendateien wie CSV und Parquet erfasst und speichert.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Platform] organisiert werden.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um erfolgreich Aufrufe an [!DNL Platform] APIs.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die [!DNL Platform]-APIs erfolgreich aufrufen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 

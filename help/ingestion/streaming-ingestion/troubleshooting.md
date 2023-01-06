@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Streaming; Streaming-Erfassung; Fehlerbehebung; Fehlerbehebung bei Streaming-Erfassung; Fehlerbehebung bei Streaming-Erfassung; FAQ bei Streaming-Erfassung; FAQ;
 solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei der Streaming-Erfassung
-topic-legacy: troubleshooting
 description: In diesem Dokument finden Sie Antworten auf häufig gestellte Fragen zur Streaming-Erfassung in Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 64%

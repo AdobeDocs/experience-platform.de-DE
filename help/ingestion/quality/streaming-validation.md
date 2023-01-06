@@ -2,11 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Streaming; Streaming-Erfassung; Validierung der Streaming-Erfassung; Validierung; Validierung der Streaming-Erfassung; Validierung; synchrone Validierung; synchrone Validierung; asynchrone Validierung; asynchrone Validierung;
 solution: Experience Platform
 title: Validierung der Streaming-Erfassung
-topic-legacy: tutorial
 type: Tutorial
 description: Mit der Streaming-Erfassung können Sie Ihre Daten mithilfe von Streaming-Endpunkten in Echtzeit in Adobe Experience Platform hochladen. Streaming-Aufnahme-APIs unterstützen zwei Validierungsmodi - synchron und asynchron.
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-source-git-commit: ec8eb0e805f7127dd8712fc3fe08057d1d8c10c1
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '917'
 ht-degree: 25%
@@ -206,7 +205,7 @@ Dieser Abschnitt enthält Informationen darüber, was die verschiedenen Status-C
 | ----------- | ------------- |
 | 200 | Erfolgreich. Bei der synchronen Validierung bedeutet dies, dass die Validierungsprüfungen bestanden haben. Bei der asynchronen Validierung bedeutet dies, dass die Nachricht nur erfolgreich empfangen wurde. Benutzer können den Status einer Nachricht ermitteln, indem sie den Datensatz beobachten. |
 | 400 | Fehler. Mit deiner Anfrage stimmt etwas nicht. Von den Streaming-Validierungsdiensten wird eine Fehlermeldung mit weiteren Details empfangen. |
-| 401 | Fehler. Ihre Anfrage ist nicht autorisiert - Sie müssen sie mit einem Trägertoken anfordern. Weitere Informationen zum Anfordern des Zugriffs finden Sie in diesem [Tutorial](https://www.adobe.com/go/platform-api-authentication-en) oder [Blogpost](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
+| 401 | Fehler. Ihre Anfrage ist nicht autorisiert - Sie müssen sie mit einem Trägertoken anfordern. Weitere Informationen zum Anfordern des Zugriffs finden Sie in diesem [Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) oder [Blogpost](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
 | 500 | Fehler. Es gibt einen internen Systemfehler. |
 | 501 | Fehler. Das bedeutet, dass die synchrone Validierung **not** unterstützt. |
 | 503 | Fehler. Der Dienst ist derzeit nicht verfügbar. Clients sollten es mindestens dreimal mit einer exponentiellen Back-off-Strategie versuchen. |

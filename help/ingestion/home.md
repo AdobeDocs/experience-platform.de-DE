@@ -2,10 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenaufnahme;Datenspeicherort;Datenspeicherort;Daten-Management;Daten-Management;Abstammung;Abstammung;Batch;Batch;erfasste Daten
 solution: Experience Platform
 title: Datenerfassung – Übersicht
-topic-legacy: overview
 description: In diesem Dokument werden die drei Hauptwege für die Datenaufnahme in Platform vorgestellt, mit Links zu den jeweiligen Übersichtsdokumenten, in denen Sie weitere Informationen finden.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 100%

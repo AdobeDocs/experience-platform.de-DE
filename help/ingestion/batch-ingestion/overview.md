@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Datenerfassung; Batch; Batch; Datensatz aktivieren; Batch-Erfassung - Übersicht; Batch-Erfassung - Übersicht; Batch-Erfassung - Übersicht;
 solution: Experience Platform
 title: Batch Ingestion-API - Übersicht
-topic-legacy: overview
 description: Mit der Adobe Experience Platform Data Ingestion-API können Sie Daten als Batch-Dateien in Platform erfassen. Daten, die erfasst werden, können Profildaten aus einer reduzierten Datei in einem CRM-System (z. B. eine Parquet-Datei) oder Daten sein, die einem bekannten Schema in der Experience-Datenmodell (XDM)-Registry entsprechen.
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1387'
 ht-degree: 74%
@@ -26,7 +25,7 @@ Das folgende Diagramm zeigt den Vorgang der Batch-Erfassung.
 
 Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [Datenerfassungs-API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](getting-started.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den erforderlichen Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
 
-### [!DNL Data Ingestion] Voraussetzungen
+### Voraussetzungen für [!DNL Data Ingestion]
 
 - Die hochzuladenden Daten müssen im Parquet- oder JSON-Format vorliegen.
 - Ein Datensatz, der im [[!DNL Catalog services]](../../catalog/home.md).

@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Batch-Erfassung; Batch-Erfassung; partielle Erfassung; partielle Erfassung; Fehler abrufen; Fehler abrufen; partielle Batch-Erfassung; partielle Batch-Erfassung; Teil; Erfassung; Erfassung; Fehlerdiagnose; Fehlerdiagnose abrufen; Fehlerdiagnose erhalten; Fehler erhalten; Fehler abrufen; Fehler abrufen; Fehler abrufen; Fehler abrufen;
 solution: Experience Platform
 title: Fehlerdiagnose beim Abrufen der Datenerfassung
-topic-legacy: overview
 description: Dieses Dokument enthält Informationen zur Überwachung der Batch-Erfassung, zur Verwaltung von Fehlern bei der partiellen Batch-Erfassung sowie eine Referenz zu Typen der partiellen Batch-Erfassung.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 40%

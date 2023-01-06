@@ -2,11 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Abrufen fehlgeschlagener Batches; fehlgeschlagene Batches; Batch-Erfassung; Batch-Erfassung; fehlgeschlagene Batches; Abrufen fehlgeschlagener Batches; Abrufen fehlgeschlagener Batches; Herunterladen fehlgeschlagener Batches; Herunterladen fehlgeschlagener Batches;
 solution: Experience Platform
 title: Abrufen fehlgeschlagener Batches mit der Data Access API
-topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial wird erläutert, wie Sie mithilfe von APIs für die Datenaufnahme Informationen aus einem fehlgeschlagenen Batch abrufen.
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 83%
