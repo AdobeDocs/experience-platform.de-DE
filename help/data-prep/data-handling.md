@@ -2,10 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen;CSV zuordnen;CSV-Datei zuordnen;CSV-Datei zu xdm zuordnen;CSV zu xdm zuordnen;ui-Handbuch;Mapper;Zuordnung;Datenvorbereitung;Datenvorbereitung;Vorbereiten von Daten;
 solution: Experience Platform
 title: Verarbeiten von Datenformaten mit der Datenvorbereitung
-topic-legacy: overview
 description: In diesem Dokument erhalten Sie einen Überblick darüber, wie verschiedene Datentypen von der Datenvorbereitung verarbeitet werden.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: 15afb221a3576b7a37ea02195549f246833b800d
+source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 98%

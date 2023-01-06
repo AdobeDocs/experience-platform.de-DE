@@ -2,10 +2,9 @@
 keywords: Experience Platform;Startseite;Mapper;Zuordnungssatz;Zuordnung;
 solution: Experience Platform
 title: Übersicht über Zuordnungssätze
-topic-legacy: overview
 description: Erfahren Sie, wie Sie Zuordnungssätze mit der Funktion zur Datenvorbereitung von Adobe Experience Platform verwenden.
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 100%
