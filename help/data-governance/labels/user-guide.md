@@ -2,10 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Data Governance;Datennutzungsbeschriftung;Policy Service;Benutzerhandbuch zu Datennutzungsbeschriftungen
 solution: Experience Platform
 title: Verwalten von Datennutzungsbeschriftungen in der Benutzeroberfläche
-topic-legacy: labels
 description: Dieses Handbuch beschreibt die Schritte zum Arbeiten mit Datennutzungsbeschriftungen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1306'
 ht-degree: 86%
@@ -119,7 +118,7 @@ Siehe Tutorial zu [Verwalten von Beschriftungen auf Schemaebene](../../xdm/tutor
 >[!CONTEXTUALHELP]
 >id="platform_governance_createlabels"
 >title="Erstellen von Bezeichnungen"
->abstract="Mit Bezeichnungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Platform bietet einen Standardsatz von Bezeichnungen, die Sie verwenden können. Sie können aber auch benutzerdefinierte Bezeichnungen erstellen, die für Ihr Unternehmen spezifisch sind."
+>abstract="Mit Beschriftungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Platform bietet einen Standardsatz von Bezeichnungen, die Sie verwenden können. Sie können aber auch benutzerdefinierte Bezeichnungen erstellen, die für Ihr Unternehmen spezifisch sind."
 
 Sie können Ihre eigenen benutzerspezifischen Nutzungskennzeichnungen im Arbeitsbereich **[!UICONTROL Richtlinien]** in der Benutzeroberfläche von [!DNL Experience Platform] erstellen. Wählen Sie **[!UICONTROL Richtlinien]** in der linken Navigation und anschließend **[!UICONTROL Kennzeichnungen]**, um eine Liste der vorhandenen Kennzeichnungen zu sehen. Wählen Sie dort **[!UICONTROL Kennzeichnung erstellen]**.
 

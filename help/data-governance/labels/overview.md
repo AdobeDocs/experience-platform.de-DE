@@ -2,10 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenverwaltung;Datennutzungsbeschriftungs-API;Richtlinien-Service-API;Übersicht zu Datennutzungsbeschriftungen
 solution: Experience Platform
 title: Datennutzungsbeschriftungen – Übersicht
-topic-legacy: labels
 description: Erfahren Sie, wie Datennutzungsbezeichnungen verwendet werden, um die Einhaltung von Data Governance in Adobe Experience Platform zu erzwingen.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '680'
 ht-degree: 67%

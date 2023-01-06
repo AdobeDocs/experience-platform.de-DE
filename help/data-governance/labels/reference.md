@@ -2,10 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenverwaltung;Datennutzungskennzeichnungs- API;Policy Service-API;Unterstützte Datennutzungskennzeichnungen;Vertragskennzeichnungen;Identitätskennzeichnungen;sensible Kennzeichnungen
 solution: Experience Platform
 title: Glossar der Datennutzungskennzeichnungen
-topic-legacy: labels
 description: In diesem Dokument werden alle derzeit von Adobe Experience Platform unterstützten Datennutzungskennzeichnungen beschrieben.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '2108'
 ht-degree: 97%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Richtliniendurchsetzung;API-basierte Durchsetzung;Datenverwaltung
 solution: Experience Platform
 title: API-Endpunkt für Data Governance-Richtlinien
-topic-legacy: developer guide
 description: Data Governance-Richtlinien sind Regeln, die Ihr Unternehmen anwendet und die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in Experience Platform ausführen bzw. nicht ausführen dürfen. Der Endpunkt /policies wird für alle API-Aufrufe zum Anzeigen, Erstellen, Aktualisieren oder Löschen von Data Governance-Richtlinien verwendet.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1865'
 ht-degree: 91%

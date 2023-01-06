@@ -2,10 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Daten;DULE
 solution: Experience Platform
 title: Datennutzungsrichtlinien – Übersicht
-topic-legacy: policies
 description: Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in Adobe Experience Platform ausführen bzw. nicht ausführen dürfen.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 97%

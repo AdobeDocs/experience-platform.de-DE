@@ -2,10 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datensatz-API;Datenverwendung verwalten;Datenverwendungs-API
 solution: Experience Platform
 title: Verwalten von Datennutzungskennzeichnungen für Datensätze mithilfe von APIs
-topic-legacy: developer guide
 description: Mit der Datensatz-Service-API können Sie Nutzungsbezeichnungen für Datensätze anwenden und bearbeiten. Sie gehört zu den Datenkatalogfunktionen von Adobe Experience Platform, ist jedoch von der Katalog-Service-API getrennt, die Datensatz-Metadaten verwaltet.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '816'
 ht-degree: 91%
