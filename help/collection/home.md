@@ -2,10 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenerfassung;Start;Web-SDK
 solution: Experience Platform
 title: Datenerfassung – Übersicht
-topic-legacy: overview
 description: Erfahren Sie mehr über die verschiedenen Technologien zur Erfassung von Daten zu Kundenerlebnissen in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 69%

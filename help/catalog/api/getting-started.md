@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Katalogdienst; Katalog; Katalogdienst; Katalog
 solution: Experience Platform
 title: Handbuch zur Catalog Service API
-topic-legacy: developer guide
 description: Mit der Catalog Service-API können Entwickler Datensatzmetadaten in Adobe Experience Platform verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 64%

@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Batch erstellen; Katalogdienst; API
 solution: Experience Platform
 title: Erstellen eines Batches in der API
-topic-legacy: developer guide
 description: Sie können einen Batch erstellen, indem Sie eine POST-Anfrage an den Endpunkt /batches in der Catalog Service API richten.
 exl-id: 1d2cbca9-1cd6-4b89-9b77-3687268bd849
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 70%

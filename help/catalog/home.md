@@ -2,11 +2,10 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Katalog-Service;Katalog;Catalog-Service;Datenspeicherort;Datenspeicherort;Daten-Management;Daten-Management;Verlauf;Verlauf;Katalog;Datensatz aktivieren
 solution: Experience Platform
 title: Katalog-Service – Übersicht
-topic-legacy: overview
 description: Catalog Service ist ein Aufzeichnungssystem für Speicherort und Herkunft von Daten in Adobe Experience Platform. Alle Daten, die in Experience Platform aufgenommen werden, werden als Dateien und Ordner im Data Lake gespeichert. Der Katalog wiederum speichert die Metadaten und Beschreibungen dieser Dateien und Ordner für Such- und Überwachungszwecke.
 exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 100%
 

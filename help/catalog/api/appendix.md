@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Catalog Service; Katalog-API; Anhang
 solution: Experience Platform
 title: Anhang zum Catalog Service API-Handbuch
-topic-legacy: developer guide
 description: Dieses Dokument enthält zusätzliche Informationen, die Sie bei der Arbeit mit der Catalog-API in Adobe Experience Platform unterstützen.
 exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 79%

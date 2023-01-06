@@ -2,10 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenspeicherort;Datenspeicherplatz;Datenmanagement;Datenverwaltung;Ursprung;Herkunft;Datentyp;Datentypen
 solution: Experience Platform
 title: Übersicht zu Datensätzen
-topic-legacy: datasets
 description: Dieses Dokument bietet einen umfassenden Überblick über Datensätze in Experience Platform.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '784'
 ht-degree: 93%

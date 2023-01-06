@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Filter; Filtern; Filtern von Daten; Filtern von Daten
 solution: Experience Platform
 title: Katalogobjekte auflisten
-topic-legacy: developer guide
 description: Sie können über einen einzigen API-Aufruf eine Liste aller verfügbaren Objekte eines bestimmten Typs abrufen. Es empfiehlt sich, Filter einzubeziehen, um die Größe der Antwort beschränken.
 exl-id: 2c65e2bc-4ddd-445a-a52d-6ceb1153ccea
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 53%
