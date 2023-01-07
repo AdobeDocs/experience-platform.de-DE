@@ -5,10 +5,10 @@ title: Anleitung zur Fehlerbehebung bei Query Service
 topic-legacy: troubleshooting
 description: Dieses Dokument enthält häufig gestellte Fragen und Antworten zu Query Service. Zu den Themen gehören der Datenexport, Tools von Drittanbietern und PSQL-Fehler.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: deb9f314d5eaadebe2f3866340629bad5f39c60d
+source-git-commit: 491aadf161bd822cb40a5ef5dd107831bca1d2c4
 workflow-type: tm+mt
-source-wordcount: '4362'
-ht-degree: 3%
+source-wordcount: '4383'
+ht-degree: 4%
 
 ---
 
@@ -278,7 +278,7 @@ SELECT count(1) FROM myTableName
 
 Sie sollten auch die Dokumentation lesen, um Anleitungen zur Leistung zu erhalten [Geplante Abfragen in der Benutzeroberfläche](./ui/user-guide.md#scheduled-queries) und [die API](./api/scheduled-queries.md).
 
-Im Folgenden finden Sie eine Liste von Überlegungen zu geplanten Abfragen bei Verwendung der [!DNL Query Editor]. Sie gelten nicht für die [!DNL Query Service] API:<br/>Sie können einen Zeitplan nur zu einer Abfrage hinzufügen, die bereits erstellt, gespeichert und ausgeführt wurde.<br/>You **cannot** einen Zeitplan zu einer parametrisierten Abfrage hinzufügen.<br/>Geplante Abfragen **cannot** einen anonymen Block enthalten.<br/>Sie können **one** Abfragevorlage, die die Benutzeroberfläche verwendet. Wenn Sie einer Abfragevorlage zusätzliche Zeitpläne hinzufügen möchten, müssen Sie die API verwenden. Wenn ein Zeitplan bereits mithilfe der API hinzugefügt wurde, können Sie keine zusätzlichen Zeitpläne über die Benutzeroberfläche hinzufügen.
+Im Folgenden finden Sie eine Liste von Überlegungen zu geplanten Abfragen bei Verwendung der [!DNL Query Editor]. Sie gelten nicht für die [!DNL Query Service]-API:<br/>Sie können einen Zeitplan nur zu einer Abfrage hinzufügen, die bereits erstellt, gespeichert und ausgeführt wurde.<br/>Sie können **keinen** Zeitplan zu einer parametrisierten Abfrage hinzufügen.<br/>Geplante Abfragen können **keinen** anonymen Block enthalten.<br/>Sie können **one** Abfragevorlage, die die Benutzeroberfläche verwendet. Wenn Sie einer Abfragevorlage zusätzliche Zeitpläne hinzufügen möchten, müssen Sie die API verwenden. Wenn ein Zeitplan bereits mithilfe der API hinzugefügt wurde, können Sie keine zusätzlichen Zeitpläne über die Benutzeroberfläche hinzufügen.
 +++
 
 ### Was bedeutet der Fehler &quot;Sitzungsbegrenzung erreicht&quot;?
@@ -531,6 +531,11 @@ WHERE T2.ID IS NULL
 ### Kann ich den Zugriff auf bestimmte Datensätze und Spalten für eine bestimmte Verbindung steuern? Wie ist dies konfiguriert?
 
 ++ + Antwort Ja, die attributbasierte Zugriffssteuerung wird erzwungen, wenn konfiguriert. Siehe [Attributbasierte Zugriffskontrolle - Übersicht](../access-control/abac/overview.md) für weitere Informationen.
++++
+
+### Unterstützt Query Service den Befehl &quot;INSERT OVERWRITE INTO&quot;?
+
+++ + Antwort Nein, Query Service unterstützt den Befehl &quot;INSERT OVERWRITE INTO&quot; nicht.
 +++
 
 ## Exportieren von Daten {#exporting-data}
