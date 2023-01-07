@@ -2,9 +2,9 @@
 title: Definieren einer Beziehung zwischen zwei Schemas in Real-time Customer Data Platform B2B Edition
 description: Erfahren Sie, wie Sie in Adobe Real-time Customer Data Platform B2B Edition eine n:1-Beziehung zwischen zwei Schemas definieren.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1c2aabaaeadb41631fc75783db739bb34a3f53cc
 workflow-type: tm+mt
-source-wordcount: '1403'
+source-wordcount: '1391'
 ht-degree: 5%
 
 ---
@@ -123,4 +123,4 @@ Wenn Sie die Struktur des Zielschemas anzeigen, wird die Beziehungsmarke neben d
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie mithilfe der Funktion [!DNL Schema Editor]. Sobald Daten mit Datensätzen erfasst wurden, die auf diesen Schemas basieren, und diese Daten im Profildatenspeicher aktiviert wurden, können Sie Attribute aus beiden Schemas für Anwendungsfälle der Segmentierung mehrerer Klassen verwenden. Weitere Informationen finden Sie in der Dokumentation zu Real-Time CDP B2B Edition .
+In diesem Tutorial haben Sie mithilfe der Funktion [!DNL Schema Editor]. Sobald Daten mit Datensätzen erfasst wurden, die auf diesen Schemas basieren, und diese Daten im Profildatenspeicher aktiviert wurden, können Sie Attribute aus beiden Schemas für [Anwendungsfälle für die Segmentierung mehrerer Klassen](../../rtcdp/segmentation/b2b.md).

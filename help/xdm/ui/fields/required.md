@@ -3,7 +3,7 @@ keywords: Experience Platform; Startseite; beliebte Themen; API; XDM; XDM; XDM-S
 title: Definieren erforderlicher Felder in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Experience Platform-Benutzeroberfläche ein erforderliches XDM-Feld definieren.
 exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
-source-git-commit: 11dcb1a824020a5b803621025863e95539ab4d71
+source-git-commit: fe3d9a3fc473e7ca13f0e0c2f222bcc1b1a991c4
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Wenn das Feld ein Attribut auf der Stammebene unter dem Mandanten-ID-Objekt ist,
 
 Wenn ein erforderliches Feld jedoch innerhalb eines Objekts verschachtelt ist, das selbst nicht als erforderlich markiert ist, wird das verschachtelte Feld nicht unter **[!UICONTROL Erforderliche Felder]** in der linken Leiste.
 
-Im folgenden Beispiel wird die Variable `loyaltyId` -Feld ist wie erforderlich festgelegt, aber sein übergeordnetes Objekt `loyalty` ist nicht. In diesem Fall würden keine Validierungsfehler auftreten, wenn `loyalty` beim Erfassen von Daten ausgeschlossen wurde, obwohl das untergeordnete Feld `loyaltyId` als erforderlich markiert ist. Mit anderen Worten, während `loyalty` ist optional und muss eine `loyaltyId` -Feld in das -Ereignis ein.
+Im folgenden Beispiel wird die Variable `internalSKU` -Feld ist wie erforderlich festgelegt, aber sein übergeordnetes Objekt `SKUs` ist nicht. In diesem Fall würden keine Validierungsfehler auftreten, wenn `SKUs` wird bei der Aufnahme von Daten ausgeschlossen, auch wenn das untergeordnete Feld `internalSKU` als erforderlich markiert ist. Mit anderen Worten, während `SKUs` ist optional und muss eine `internalSKU` -Feld in das -Ereignis ein.
 
 ![Verschachteltes erforderliches Feld](../../images/ui/fields/required/nested.png)
 

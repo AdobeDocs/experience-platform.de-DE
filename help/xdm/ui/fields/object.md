@@ -5,7 +5,7 @@ title: Definieren von Objektfeldern in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Experience Platform ein Objekt definieren.
 topic-legacy: user guide
 exl-id: 5b7b3cf0-7f11-4e15-af87-09127f4423a5
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: fe3d9a3fc473e7ca13f0e0c2f222bcc1b1a991c4
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 0%
@@ -29,8 +29,6 @@ Um ein Unterfeld hinzuzufügen, wählen Sie die **plus (+)** neben dem Objektfel
 ![](../../images/ui/fields/special/object-add-field.png)
 
 Nachdem Sie das Unterfeld konfiguriert und ausgewählt haben **[!UICONTROL Anwenden]** können Sie dem Objekt weiterhin Felder hinzufügen, indem Sie denselben Prozess verwenden. Sie können auch Unterfelder hinzufügen, die Objekte selbst sind, sodass Sie Felder beliebig tief verschachteln können.
-
-![](../../images/ui/fields/special/object-nested.png)
 
 Nachdem Sie die Erstellung des Objekts abgeschlossen haben, sollten Sie dessen Struktur möglicherweise in verschiedenen Klassen und Feldergruppen wiederverwenden. In diesem Fall können Sie das Objekt in einen Datentyp konvertieren. Siehe Abschnitt zu [Konvertieren von Objekten in Datentypen](../resources/data-types.md#convert) im UI-Handbuch für Datentypen finden Sie weitere Informationen.
 

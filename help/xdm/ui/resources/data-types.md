@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Erfahren Sie, wie Sie Datentypen in der Benutzeroberfläche von Experience Platform erstellen und bearbeiten.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 81f700f7c68ba9ff2fc0a99bf62031bf3fe0c95f
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1156'
 ht-degree: 0%
 
 ---
@@ -88,11 +88,11 @@ Dies zeigt, wie flexible Datentypen in Bezug auf die Beschreibung Ihrer Daten se
 
 Nachdem Sie alle Felder zum Datentyp hinzugefügt haben, wählen Sie **[!UICONTROL Speichern]** , um Ihre Änderungen zu speichern und den Datentyp zum [!DNL Schema Library].
 
-## Hinzufügen des Datentyps zu einer Klasse oder Feldergruppe
+## Hinzufügen des Datentyps zu einem Schema
 
 Nachdem Sie einen Datentyp erstellt haben, können Sie ihn in Ihren Schemata verwenden. Da XDM-Schemas aus einer Klasse und null oder mehr Feldgruppen bestehen, können von einem Datentyp bereitgestellte Felder nicht direkt zu einem Schema hinzugefügt werden. Stattdessen müssen sie in eine Klasse oder Feldergruppe eingeschlossen sein.
 
-Führen Sie zunächst die mit [Hinzufügen eines Felds zu einer Klasse](./classes.md#add-fields) oder [Feld zu einer Feldergruppe hinzufügen](./field-groups.md#add-fields). Wenn Sie die **[!UICONTROL Typ]** Wählen Sie für das neue Feld den Namen Ihres Datentyps aus dem Dropdown-Menü aus.
+Führen Sie zunächst die mit [Hinzufügen eines Felds zu einer Klasse](./classes.md#add-fields) oder [Feld zu einer Feldergruppe hinzufügen](./field-groups.md#add-fields). Alternativ können Sie [Hinzufügen eines Felds direkt zu einem Schema](./schemas.md#add-individual-fields) und wählen Sie dort die übergeordnete Klasse oder Feldergruppe aus. Wenn Sie die **[!UICONTROL Typ]** Wählen Sie für das neue Feld den Namen Ihres Datentyps aus dem Dropdown-Menü aus.
 
 ## Konvertieren eines Objekts mit mehreren Feldern in einen Datentyp {#convert}
 
@@ -102,7 +102,7 @@ Um ein Feld vom Typ Objekt in einen Datentyp zu konvertieren, wählen Sie das Fe
 
 ![](../../images/ui/resources/data-types/convert-object.png)
 
-Die Arbeitsfläche aktualisiert den Datentyp des Felds von[!UICONTROL Objekt]&quot; auf den neuen Datentyp hinzu. Neben den Unterfeldern befinden sich auch kleine Sperrsymbole, die darauf hinweisen, dass es sich nicht mehr um einzelne Felder, sondern um Bereiche mit mehreren Feldern handelt. Diese Struktur kann jetzt in anderen Klassen und Feldergruppen wiederverwendet werden, indem Sie diesen Datentyp aus der **[!UICONTROL Typ]** bei der Definition eines neuen Felds.
+Die Arbeitsfläche aktualisiert den Datentyp des Felds von[!UICONTROL Objekt]&quot; auf den neuen Datentyp hinzu. Diese Struktur kann jetzt in anderen Klassen und Feldergruppen wiederverwendet werden, indem Sie diesen Datentyp aus der **[!UICONTROL Typ]** bei der Definition eines neuen Felds.
 
 ![](../../images/ui/resources/data-types/converted.png)
 

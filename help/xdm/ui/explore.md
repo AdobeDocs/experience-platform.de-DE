@@ -1,31 +1,31 @@
 ---
 keywords: Experience Platform; Startseite; beliebte Themen; UI; XDM; XDM; XDM-System; Experience-Datenmodell; Experience-Datenmodell; Experience-Datenmodell; Datenmodell; Datenmodell; erkunden; Klasse; Feldergruppe; Datentyp; Schema
 solution: Experience Platform
-title: Erkunden von XDM-Ressourcen in der Benutzeroberfläche
+title: Schema-Ressourcen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie vorhandene Schemas, Klassen, Schemafeldgruppen und Datentypen in der Experience Platform-Benutzeroberfläche untersuchen.
 topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 744d87c82b7e7e06782c6c1b9db2ec46a5444d28
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '957'
 ht-degree: 0%
 
 ---
 
-# Erkunden von XDM-Ressourcen in der Benutzeroberfläche
+# Schema-Ressourcen in der Benutzeroberfläche
 
-In Adobe Experience Platform werden alle Experience-Datenmodell (XDM)-Ressourcen im [!DNL Schema Library], einschließlich der Standardressourcen, die von der Adobe bereitgestellt werden, und der benutzerdefinierten Ressourcen, die von Ihrem Unternehmen definiert werden. In der Experience Platform-Benutzeroberfläche können Sie die Struktur und die Felder eines vorhandenen Schemas, einer vorhandenen Klasse, einer Schemafeldergruppe oder eines vorhandenen Datentyps im [!DNL Schema Library]. Dies ist besonders nützlich bei der Planung und Vorbereitung der Datenerfassung, da die Benutzeroberfläche Informationen zu den erwarteten Datentypen und Anwendungsfällen der einzelnen Felder bereitstellt, die von diesen XDM-Ressourcen bereitgestellt werden.
+In Adobe Experience Platform werden alle Schemaressourcen des Experience-Datenmodells (XDM) im [!DNL Schema Library], einschließlich der Standardressourcen, die von der Adobe bereitgestellt werden, und der benutzerdefinierten Ressourcen, die von Ihrem Unternehmen definiert werden. In der Experience Platform-Benutzeroberfläche können Sie die Struktur und die Felder eines vorhandenen Schemas, einer vorhandenen Klasse, einer vorhandenen Feldergruppe oder eines vorhandenen Datentyps im [!DNL Schema Library]. Dies ist besonders nützlich bei der Planung und Vorbereitung der Datenerfassung, da die Benutzeroberfläche Informationen zu den erwarteten Datentypen und Anwendungsfällen der einzelnen Felder bereitstellt, die von diesen XDM-Ressourcen bereitgestellt werden.
 
 In diesem Tutorial werden die Schritte zum Erkunden vorhandener Schemas, Klassen, Feldgruppen und Datentypen in der Experience Platform-Benutzeroberfläche beschrieben.
 
-## XDM-Ressource nachschlagen {#lookup}
+## Nach einer Schemaressource suchen {#lookup}
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Schemas]** in der linken Navigation. Die [!UICONTROL Schemas] Workspace bietet eine **[!UICONTROL Durchsuchen]** Registerkarte , um alle vorhandenen XDM-Ressourcen in Ihrer Organisation zu untersuchen, sowie zusätzliche spezielle Registerkarten zum Erkunden **[!UICONTROL Klassen]**, **[!UICONTROL Feldergruppen]** und **[!UICONTROL Datentypen]** speziell.
+Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Schemas]** in der linken Navigation. Die [!UICONTROL Schemas] Workspace bietet eine **[!UICONTROL Durchsuchen]** Registerkarte, um alle Schemas in Ihrer Organisation zu untersuchen, sowie zusätzliche spezielle Registerkarten zum Erkunden **[!UICONTROL Klassen]**, **[!UICONTROL Feldergruppen]** und **[!UICONTROL Datentypen]** bzw.
 
 ![](../images/ui/explore/tabs.png)
 
-Im [!UICONTROL Durchsuchen] können Sie das Filtersymbol (![Filtersymbol Bild](../images/ui/explore/icon.png)), um Steuerelemente in der linken Leiste anzuzeigen, um die aufgelisteten Ergebnisse einzuschränken.
+Das Filtersymbol (![Filtersymbol Bild](../images/ui/explore/icon.png)) zeigt Steuerelemente in der linken Leiste an, um die aufgelisteten Ergebnisse einzuschränken. Die angezeigten Steuerelemente variieren je nach Ressourcentyp.
 
 Um beispielsweise die Liste so zu filtern, dass nur die von Adobe bereitgestellten Standarddatentypen angezeigt werden, wählen Sie **[!UICONTROL Datentyp]** und **[!UICONTROL Adobe]** unter **[!UICONTROL Typ]** und **[!UICONTROL Inhaber]** angegeben.
 
@@ -33,15 +33,15 @@ Die **[!UICONTROL Im Profil enthalten]** Mit Umschalten können Sie Ergebnisse f
 
 ![](../images/ui/explore/filter.png)
 
-Sie können die Suchleiste auch verwenden, um die Ergebnisse weiter einzugrenzen. Wenn Sie nach einem Begriff suchen, stellen die obersten Elemente Ressourcen dar, deren Namen mit der Suchabfrage übereinstimmen. Unter diesen Elementen finden Sie unter **[!UICONTROL Standardfelder]** werden alle Ressourcen aufgelistet, die Felder enthalten, die mit der Abfrage übereinstimmen. Auf diese Weise können Sie nach XDM-Ressourcen suchen, die auf dem Datentyp basieren, den sie enthalten, ohne zuvor den Namen der Ressource kennen zu müssen.
+Beim Auflisten von Ressourcen auf der **[!UICONTROL Klassen]**, **[!UICONTROL Feldergruppen]** oder **[!UICONTROL Datentypen]** Registerkarten, können Sie **[!UICONTROL Adobe]** nur Standardressourcen anzeigen oder **[!UICONTROL Kunde]** , um nur die von Ihrer Organisation erstellten Ressourcen anzuzeigen.
+
+![](../images/ui/explore/filter-data-type.png)
+
+Sie können die Suchleiste auch verwenden, um die Ergebnisse weiter einzugrenzen.
 
 ![](../images/ui/explore/search.png)
 
 Die in den Suchergebnissen angezeigten Ressourcen werden zuerst nach Titel und dann nach Beschreibung geordnet. Je mehr Wörter in einer dieser Kategorien übereinstimmen, desto höher wird die Ressource in der Liste angezeigt.
-
->[!NOTE]
->
->Bei Standard-XDM-Ressourcen gibt die Suchfunktion nur einzelne Felder zurück, die eine `xdm` Namespace. Felder, die sich in einem anderen Namespace befinden (z. B. Ihre Mandanten-ID), werden nur zurückgegeben, wenn sie in einer benutzerdefinierten Ressource enthalten sind.
 
 Wenn Sie die Ressource gefunden haben, die Sie untersuchen möchten, wählen Sie deren Namen aus der Liste aus, um ihre Struktur auf der Arbeitsfläche anzuzeigen.
 
