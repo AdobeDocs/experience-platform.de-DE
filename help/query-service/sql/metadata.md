@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; PSQL; psql; Query Service; Query Service; Metadaten; Befehle; Metadatenbefehle
 solution: Experience Platform
 title: Metadaten-PostgreSQL-Befehle in Query Service
-topic-legacy: metadata
 description: Eine Liste der PostgreSQL-Befehle, die derzeit für die Abfrage von Metadaten in Adobe Experience Platform Query Service unterstützt werden.
 exl-id: bfcbad55-3086-44c9-9938-6ba0504e747b
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '335'
 ht-degree: 0%

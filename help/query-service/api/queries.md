@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Query Service; API-Handbuch; Abfragen; Abfrage; Query Service
 solution: Experience Platform
 title: Query API Endpoint
-topic-legacy: queries
 description: In den folgenden Abschnitten werden die Aufrufe erläutert, die Sie mithilfe des /queries -Endpunkts in der Query Service-API ausführen können.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 32%

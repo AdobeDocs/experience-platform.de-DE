@@ -2,11 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Query Service; Query Service; Schreiben von Abfragen; Schreiben von Abfragen;
 solution: Experience Platform
 title: Allgemeine Anleitung für die Ausführung von Abfragen in Query Service
-topic-legacy: queries
 type: Tutorial
 description: In diesem Dokument werden wichtige Informationen zum Schreiben von Abfragen in Adobe Experience Platform Query Service beschrieben.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '1047'
 ht-degree: 3%
@@ -293,22 +292,22 @@ LIMIT 50;
 
 | OperatingSystem | PageViews |
 | --------------- | --------- |
-| Windows 7 | 2781979,0 |
-| Windows XP | 1669824,0 |
-| Windows 8 | 420024,0 |
-| Adobe AIR | 315032,0 |
-| Windows Vista | 173566,0 |
-| Mobile iOS 6.1.3 | 119069,0 |
-| Linux | 56516,0 |
-| OSX 10.6.8 | 53652,0 |
-| Android 4.0.4 | 46167,0 |
-| Android 4.0.3 | 31852,0 |
-| Windows Server 2003 und XP x64 Edition | 28883,0 |
-| Android 4.1.1 | 24336,0 |
-| Android 2.3.6 | 15735,0 |
-| OSX 10.6 | 13357,0 |
-| Windows Phone 7.5 | 11054,0 |
-| Android 4.3 | 9221,0 |
+| Windows 7 | 2781979.0 |
+| Windows XP | 1669824.0 |
+| Windows 8 | 420024.0 |
+| Adobe AIR | 315032.0 |
+| Windows Vista | 173566.0 |
+| Mobile iOS 6.1.3 | 119069.0 |
+| Linux | 56516.0 |
+| OSX 10.6.8 | 53652.0 |
+| Android 4.0.4 | 46167.0 |
+| Android 4.0.3 | 31852.0 |
+| Windows Server 2003 und XP x64 Edition | 28883.0 |
+| Android 4.1.1 | 24336.0 |
+| Android 2.3.6 | 15735.0 |
+| OSX 10.6 | 13357.0 |
+| Windows Phone 7.5 | 11054.0 |
+| Android 4.3 | 9221.0 |
 
 ## Deduplizierung
 

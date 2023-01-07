@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Abfragedienst; Query Service; Adobe-definierte Funktionen; SQL;
 solution: Experience Platform
 title: Adobe-definierte SQL-Funktionen in Query Service
-topic-legacy: functions
 description: Dieses Dokument enthält Informationen zu den in Adobe Experience Platform Query Service verfügbaren Adobe-definierten Funktionen.
 exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '1486'
-ht-degree: 16%
+ht-degree: 18%
 
 ---
 
@@ -261,7 +260,7 @@ PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | --------- | ----------- |
 | `{KEY}` | Die Spalte oder das Feld aus dem Ereignis. |
 | `{SHIFT}` | (Optional) Die Anzahl der Ereignisse außerhalb des aktuellen Ereignisses. Der Standardwert ist 1. |
-| `{IGNORE_NULLS}` | (Optional) Ein boolescher Wert, der angibt, ob null `{KEY}` -Werte ignoriert werden. Standardmäßig lautet der Wert `false`. |
+| `{IGNORE_NULLS}` | (Optional) Ein boolescher Wert, der angibt, ob null `{KEY}` -Werte ignoriert werden. Standardmäßig ist der Wert `false`. |
 
 Eine Erläuterung der Parameter innerhalb der `OVER()` -Funktion finden Sie im Abschnitt [Bereich für Fensterfunktionen](#window-functions).
 
@@ -312,7 +311,7 @@ NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | --------- | ----------- |
 | `{KEY}` | Die Spalte oder das Feld aus dem Ereignis. |
 | `{SHIFT}` | (Optional) Die Anzahl der Ereignisse außerhalb des aktuellen Ereignisses. Der Standardwert ist 1. |
-| `{IGNORE_NULLS}` | (Optional) Ein boolescher Wert, der angibt, ob null `{KEY}` -Werte ignoriert werden. Standardmäßig lautet der Wert `false`. |
+| `{IGNORE_NULLS}` | (Optional) Ein boolescher Wert, der angibt, ob null `{KEY}` -Werte ignoriert werden. Standardmäßig ist der Wert `false`. |
 
 Eine Erläuterung der Parameter innerhalb der `OVER()` -Funktion finden Sie im Abschnitt [Bereich für Fensterfunktionen](#window-functions).
 

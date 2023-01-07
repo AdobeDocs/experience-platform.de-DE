@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Query Service; Query Service; postico; Postico; Verbindung mit Query Service
 solution: Experience Platform
 title: Verbindung mit Query Service
-topic-legacy: connect
 description: Dieses Dokument enthält den Link zur Installation des Backup-Clients Postico für Adobe Experience Platform Query Service.
 exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
-source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '291'
 ht-degree: 6%

@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Abfragedienst; Query Service; vorbereitete Anweisungen; vorbereitet; sql
 solution: Experience Platform
 title: Vorbereitete Anweisungen in Query Service
-topic-legacy: prepared statements
 description: In SQL werden vorbereitete Anweisungen verwendet, um ähnliche Abfragen oder Aktualisierungen als Vorlage zu verwenden. Adobe Experience Platform Query Service unterstützt vorbereitete Anweisungen durch Einsatz einer parametrisierten Abfrage.
 exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
-source-git-commit: 9f4e34edc47a333aa88153529d0af6a10f189a15
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 85%
@@ -108,7 +107,7 @@ Bei diesem Aufruf sehen Sie genau die gleichen Ergebnisse wie zuvor:
 | id | firstname | lastname | birthdate | email | city | country |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
 | 10000 | alexander | davis | 15.09.1993 | example@example.com | Vancouver | Kanada |
-| 10001 | Antoine | dubois | 14.03.1967 | example2@example.com | Paris | Frankreich |
+| 10001 | antoine | dubois | 14.03.1967 | example2@example.com | Paris | Frankreich |
 | 10002 | kyoko | sakura | 26.11.1999 | example3@example.com | Tokio | Japan |
 | 10003 | linus | pettersson | 03.06.1982 | example4@example.com | Stockholm | Schweden |
 | 10004 | aasir | waithaka | 17.12.1976 | example5@example.com | Nairobi | Kenia |

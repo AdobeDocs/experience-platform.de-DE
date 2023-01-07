@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Query Service; Query Service; Looker; Looker; Verbindung mit Query Service
 solution: Experience Platform
 title: Verbinden von Looker mit Query Service
-topic-legacy: connect
 description: In diesem Dokument werden die Schritte zum Verbinden von Looker mit dem Adobe Experience Platform Query Service beschrieben.
 exl-id: 806e9077-533a-4546-b5ca-8124751957f5
-source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '313'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -33,7 +32,7 @@ Von hier aus können Sie die Details für die Verbindungsparameter ausfüllen.
 ![Die Seite mit den Verbindungsparametern für eine neue Verbindung.](../images/clients/looker/new-connection.png)
 
 - **[!DNL Name]:** Der Name Ihrer Verbindung.
-- **[!DNL Dialect]:** Das für die SQL-Datenbank verwendete Dialogfeld. [!DNL Query Service] uses **[!DNL PostgreSQL]**.
+- **[!DNL Dialect]:** Das für die SQL-Datenbank verwendete Dialogfeld. [!DNL Query Service] verwendet **[!DNL PostgreSQL]**.
 - **[!DNL Host and Port]:** Der Host-Endpunkt und sein Port für [!DNL Query Service].
 - **[!DNL Database]:** Die zu verwendende Datenbank.
 - **[!DNL Username and Password]:** Die Anmeldeinformationen, die verwendet werden. Der Benutzername lautet wie folgt: `ORG_ID@AdobeOrg`.

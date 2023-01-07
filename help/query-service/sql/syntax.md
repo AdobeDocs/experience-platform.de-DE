@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Query Service; Query Service; SQL-Syntax; SQL; ctas; CTAS; Erstellen einer Tabelle als ausgewählt
 solution: Experience Platform
 title: SQL-Syntax in Query Service
-topic-legacy: syntax
 description: Dieses Dokument zeigt die von Adobe Experience Platform Query Service unterstützte SQL-Syntax.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '3156'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -461,7 +460,7 @@ Die Werte, die aus dem `source_dataset` werden zum Ausfüllen der Zieltabelle ve
 
 | SKU | _experience  | quantity | priceTotal |
 |---------------------|-----------------------------------|----------|--------------|
-| product-id-1 | (&quot;(&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;)&quot;)&quot;) | 5 | Artikel 10 Absatz 5 |
+| product-id-1 | (&quot;(&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;)&quot;)&quot;) | 5 | 10.5 |
 | product-id-5 | (&quot;(&quot;(&quot;(&quot;(A, pass, B, NULL)&quot;)&quot;)&quot;)&quot;) |  |  |
 | product-id-2 | (&quot;(&quot;(&quot;(&quot;(AF, C, D, NULL)&quot;)&quot;)&quot;)&quot;) | 6 | 40 |
 | product-id-4 | (&quot;(&quot;(&quot;(&quot;(BM, pass, NA, NULL)&quot;)&quot;)&quot;)&quot;) | 3 | 12 |
@@ -730,7 +729,7 @@ COPY query
 | Parameter | Beschreibung |
 | ------ | ------ |
 | `query` | Die Abfrage, die Sie kopieren möchten. |
-| `format_name` | Das Format, in das die Abfrage kopiert werden soll. Die `format_name` kann eines von `parquet`, `csv`oder `json`. Standardmäßig lautet der Wert `parquet`. |
+| `format_name` | Das Format, in das die Abfrage kopiert werden soll. Die `format_name` kann eines von `parquet`, `csv`oder `json`. Standardmäßig ist der Wert `parquet`. |
 
 >[!NOTE]
 >

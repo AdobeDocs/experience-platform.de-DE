@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform; Query Service; Query Service; Query
 title: Anwendungsbeispiel für Adobe Experience Platform Query Service
-topic-legacy: tutorial
 description: Ein durchgängiges Beispiel, um die Vielseitigkeit und Vorteile von Adobe Experience Platform Query Service zu demonstrieren.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 6f6256b5601ce5c230ef334a9ce71325b43fda45
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 3%
@@ -76,7 +75,7 @@ Adobe Experience Platform bietet ein Daten-Repository und die erforderlichen Too
 
 Durch Lesen dieses Dokuments sollten Sie jetzt verstehen, wie [!DNL Query Service] wirkt sich nicht nur auf die Qualität Ihrer Daten und die einfache Segmentierung aus, sondern auch auf deren Bedeutung innerhalb Ihrer Datenarchitektur für den gesamten End-to-End-Workflow. Für zutreffendere SQL-Beispiele, die Adobe Analytics mit [!DNL Query Service], siehe [Beispieldokumentation zu Adobe Analytics-Beispielabfragen](../sample-queries/adobe-analytics.md).
 
-Andere Dokumente, die die Vorteile von [!DNL Query Service] zu den strategischen Geschäftseinblicken Ihres Unternehmens zählen [Anwendungsfall für Bot-Filter](./bot-filtering.md) Beispiel.
+Andere Dokumente, die die Vorteile von [!DNL Query Service] zu den strategischen geschäftlichen Einblicken Ihres Unternehmens sind die [Anwendungsfall für Bot-Filter](./bot-filtering.md) Beispiel.
 
 Alternativ dazu können Sie diese Dokumente, von denen Sie wissen, [!DNL Query Service] Funktionen:
 

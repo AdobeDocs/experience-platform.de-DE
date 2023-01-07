@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Query Service; Query Service; Handbuch zur Fehlerbehebung; FAQ; Fehlerbehebung
 solution: Experience Platform
 title: Anleitung zur Fehlerbehebung bei Query Service
-topic-legacy: troubleshooting
 description: Dieses Dokument enthält häufig gestellte Fragen und Antworten zu Query Service. Zu den Themen gehören der Datenexport, Tools von Drittanbietern und PSQL-Fehler.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 491aadf161bd822cb40a5ef5dd107831bca1d2c4
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '4383'
 ht-degree: 4%

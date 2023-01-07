@@ -2,11 +2,10 @@
 keywords: Experience Platform;Home;beliebte Themen;Query Service;Query Service;Abfrage
 solution: Experience Platform
 title: Handbuch zur Abfrage-Service-API
-topic-legacy: query templates
 description: Mit der Abfrage-Service-API können Entwickler ihre Adobe Experience Platform-Daten mit Standard-SQL abfragen. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
-source-git-commit: 9f458a327c0b72a5984161f13f02d09b7a2e610e
-workflow-type: ht
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 100%
 

@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Abfragedienst; geplante Abfragen ausführen; geplante Abfrage ausführen; Abfragedienst; geplante Abfragen; geplante Abfrage
 solution: Experience Platform
 title: API-Endpunkt für geplante Abfragen - Ausführungen
-topic-legacy: runs for scheduled queries
 description: In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie für die Ausführung geplanter Abfragen mit der Query Service-API ausführen können.
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '696'
-ht-degree: 88%
+ht-degree: 90%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 88%
 
 ## Beispiel-API-Aufrufe
 
-Nachdem Sie nun wissen, welche Header verwendet werden sollen, können Sie mit den Aufrufen an die [!DNL Query Service] API. In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie mithilfe der [!DNL Query Service] API. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+Nachdem Sie nun wissen, welche Kopfzeilen zu verwenden sind, können Sie damit beginnen, die [!DNL Query Service]-API aufzurufen. In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie mithilfe der [!DNL Query Service] API. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
 ### Liste aller ausgeführten Vorgänge für eine bestimmte geplante Abfrage abrufen
 

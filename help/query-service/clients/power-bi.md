@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Abfragedienst; Query Service; Power BI; Power BI; Verbindung mit Query Service
 solution: Experience Platform
 title: Power BI zu Query Service verbinden
-topic-legacy: connect
 description: In diesem Dokument werden die Schritte zum Verbinden von Power BI mit Adobe Experience Platform Query Service erläutert.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 1%

@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Query Service; Query Service; Beispielabfragen; Beispielabfrage; Adobe Analytics
 solution: Experience Platform
 title: Beispielabfragen für Adobe Analytics-Daten
-topic-legacy: queries
 description: Daten aus ausgewählten Adobe Analytics Report Suites werden in XDM ExperienceEvents umgewandelt und als Datensätze in Adobe Experience Platform aufgenommen. In diesem Dokument wird eine Reihe von Anwendungsfällen beschrieben, in denen Query Service diese Daten nutzt, sowie Beispielabfragen, die für die Verwendung mit Ihren Adobe Analytics-Datensätzen entwickelt wurden.
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
-source-git-commit: e0cdfc514a9e1277134d4c0d5396fc0bdf9d9958
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 41%
