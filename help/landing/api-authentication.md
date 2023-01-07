@@ -2,11 +2,10 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Authentifizierung;Zugriff
 solution: Experience Platform
 title: Experience Platform-APIs authentifizieren und aufrufen
-topic-legacy: tutorial
 type: Tutorial
 description: Dieses Dokument bietet eine schrittweise Anleitung für den Zugriff auf ein Adobe Experience Platform-Entwicklerkonto, damit Sie Aufrufe an Experience Platform-APIs durchführen können.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 18%
@@ -81,7 +80,7 @@ Folgen Sie hier den Schritten, die im Tutorial zu [Hinzufügen einer API zu eine
 >
 >In einem bestimmten Schritt während des oben verknüpften Prozesses lädt Ihr Browser automatisch einen privaten Schlüssel und ein damit verknüpftes öffentliches Zertifikat herunter. Beachten Sie, wo dieser private Schlüssel auf Ihrem Computer gespeichert ist, da er in einem späteren Schritt in diesem Tutorial erforderlich ist.
 
-### Sammeln von Anmeldeinformationen
+### Sammeln von -Anmeldeinformationen
 
 Nachdem die API zum Projekt hinzugefügt wurde, wird die **[!UICONTROL Experience Platform-API]** -Seite für das Projekt werden die folgenden Anmeldeinformationen angezeigt, die für alle Aufrufe von Experience Platform-APIs erforderlich sind:
 

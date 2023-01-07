@@ -2,10 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Governance, Datenschutz und Sicherheitsübersicht
-topic-legacy: overview
 description: Adobe Experience Platform bietet verschiedene Dienste und Tools, mit denen Sie Ihre erfassten Erlebnisdaten sicher steuern können, um Ihre Geschäftspraktiken, rechtlichen Verpflichtungen und Ihren Entwicklungsprozess einzuhalten.
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
-source-git-commit: f456b28016af6d2978933deac68f45c2f8d37f80
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 18%

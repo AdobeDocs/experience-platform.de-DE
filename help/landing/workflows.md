@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Adobe Experience Platform; Benutzerhandbuch; UI-Handbuch; Workflows ui-Handbuch; Workflows; Workflows; Benutzerhandbuch zu Workflows
 solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Workflows
-topic-legacy: ui guide
 description: Erfahren Sie, wie Sie mehrstufige Workflows für die Durchführung gemeinsamer Vorgänge in der Benutzeroberfläche von Adobe Experience Platform ausführen.
 exl-id: f1a3ea83-09c9-48df-9493-62f03b403a95
-source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '307'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -18,7 +17,7 @@ Die **[!UICONTROL Workflows]** in der Adobe Experience Platform-Benutzeroberflä
 
 ![Workflows](./images/workflows/workflows.png)
 
-## [!UICONTROL Datenerfassung]
+## [!UICONTROL Datenaufnahme]
 
 Die **[!UICONTROL Zuordnen von CSV zu XDM-Schema]** Workflow ermöglicht das Hochladen und Konvertieren einer CSV-Datei in ein Experience-Datenmodell (XDM)-Schema. Weitere Informationen zu diesem Workflow finden Sie im Tutorial zu [Zuordnen einer CSV-Datei zu einem XDM-Schema](../ingestion/tutorials/map-csv/overview.md).
 

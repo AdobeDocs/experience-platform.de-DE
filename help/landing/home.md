@@ -2,10 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen;CJA;Journey Analytics;Customer Journey Analytics;Kampagnenorchestrierung;Orchestrierung;Customer Journey;Journey;Journey Orchestration;Möglichkeiten;Region
 solution: Experience Platform
 title: Überblick über Adobe Experience Platform
-topic-legacy: getting started
 description: Mit Adobe Experience Platform können Unternehmen Kundendaten zentral zusammenführen und standardisieren. Zusätzlich können mithilfe von Datenwissenschaft und maschinellem Lernen die Gestaltung und Bereitstellung umfassender, personalisierter Erlebnisse erheblich verbessert werden.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 100%

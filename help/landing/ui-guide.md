@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Adobe Experience Platform; Benutzerhandbuch; Benutzerhandbuch; Handbuch zur Plattform-Benutzeroberfläche; Einführung in die Plattform; Dashboard
 solution: Experience Platform
 title: Übersicht über die Experience Platform-Benutzeroberfläche
-topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1811'
 ht-degree: 4%

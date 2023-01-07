@@ -2,10 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datumsbereich
 solution: Experience Platform
 title: Erste Schritte mit der Observability Insights-API
-topic-legacy: developer guide
 description: Mit der Observability Insights-API können Sie Metrikdaten für verschiedene Adobe Experience Platform-Funktionen abrufen. Dieses Dokument bietet eine Einführung in die grundlegenden Konzepte, die Sie kennen müssen, bevor Sie Aufrufe an die Observability Insights-API durchführen.
 exl-id: 3b120bd6-155d-467e-b98e-05478f8a4cc5
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 60%

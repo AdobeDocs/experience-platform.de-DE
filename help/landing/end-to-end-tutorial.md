@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;CJA;Journey Analytics;Customer Journey Analytics;Kampagnenorchestrierung;Orchestrierung;Customer Journey;Journey;Journey Orchestration;Möglichkeiten;Region
 title: Adobe Experience Platform End-to-End-Beispiel-Workflow
-topic-legacy: getting started
 description: Erfahren Sie auf hoher Ebene mehr über den grundlegenden End-to-End-Workflow für Adobe Experience Platform.
 exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1836'
 ht-degree: 11%

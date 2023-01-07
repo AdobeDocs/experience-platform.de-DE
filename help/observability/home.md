@@ -2,10 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datumsbereich
 solution: Experience Platform
 title: Observability Insights – Übersicht
-topic-legacy: overview
 description: Adobe Experience Platform Observability Insights ist eine RESTful-API, mit der Sie Schlüsselmetriken zu Platform-Aktivitäten bereitstellen können. Diese Metriken liefern Einblicke in Statistiken zur Platform-Nutzung, Systemdiagnosen für Platform-Dienste, historische Trends und Leistungsindikatoren für verschiedene Platform-Funktionen.
 exl-id: ad9fcd1b-b649-47d8-93f3-4a3752480129
-source-git-commit: 444f63054c1e4e429498c95c7bba8c4ddd612799
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 100%
