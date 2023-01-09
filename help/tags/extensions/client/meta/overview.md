@@ -1,9 +1,10 @@
 ---
 title: Übersicht über Meta-Pixel-Erweiterung
 description: Erfahren Sie mehr über die Meta-Pixel-Tag-Erweiterung in Adobe Experience Platform.
-source-git-commit: a47e35a1b8c7ce2b0fa4ffe30fcdc7d22fc0f4c5
+exl-id: c5127bbc-6fe7-438f-99f1-6efdbe7d092e
+source-git-commit: 24001da61306a00d295bf9441c55041e20f488c0
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '834'
 ht-degree: 2%
 
 ---
@@ -14,13 +15,11 @@ ht-degree: 2%
 
 Die [!DNL Meta Pixel] Tag-Erweiterung ermöglicht Ihnen die Nutzung von [!DNL Pixel] -Funktionen in Ihren clientseitigen Tag-Bibliotheken. In diesem Dokument wird beschrieben, wie Sie die Erweiterung installieren und ihre Funktionen in einer [Regel](../../../ui/managing-resources/rules.md).
 
->[!NOTE]
->
->Wenn Sie versuchen, serverseitige Ereignisse an zu senden [!DNL Meta] anstelle der Client-Seite verwenden Sie die [[!DNL Meta Conversions API] Erweiterung](../../server/meta/overview.md) anstatt.
-
 ## Voraussetzungen
 
 Um die Erweiterung verwenden zu können, müssen Sie über eine gültige [!DNL Meta] Konto mit Zugriff auf [!DNL Ads Manager]. Insbesondere müssen Sie [eine neue [!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755) und kopieren sie [!DNL Pixel ID] damit die Erweiterung für Ihr Konto konfiguriert werden kann. Wenn Sie bereits eine [!DNL Meta Pixel], können Sie stattdessen die zugehörige ID verwenden.
+
+Es wird dringend empfohlen, [!DNL Meta Pixel] in Kombination mit [!DNL Meta Conversions API] , um dieselben Ereignisse vom Client- bzw. vom Server-seitigen freizugeben und zu senden, da dies dazu beitragen kann, Ereignisse wiederherzustellen, die nicht von abgerufen wurden [!DNL Meta Pixel]. Siehe Handbuch im [[!DNL Meta Conversions API] Erweiterung für die Ereignisweiterleitung](../../client/meta/overview.md) für Schritte zur Integration in Ihre serverseitigen Implementierungen. Beachten Sie, dass Ihre Organisation Zugriff auf [Ereignisweiterleitung](../../../ui/event-forwarding/overview.md) , um die serverseitige Erweiterung zu verwenden.
 
 ## Installieren der Erweiterung
 
@@ -36,7 +35,7 @@ In der angezeigten Konfigurationsansicht müssen Sie die Variable [!DNL Pixel] I
 >
 >Mithilfe eines Datenelements können Sie die [!DNL Pixel] ID, die von anderen Faktoren wie der Build-Umgebung verwendet wird. Siehe den Anhang unter [mit verschiedenen [!DNL Pixel] IDs für verschiedene Umgebungen](#id-data-element) für weitere Informationen.
 
-Sie können optional auch eine Ereignis-ID angeben, die mit der Erweiterung verknüpft werden soll. Damit werden identische Ereignisse zwischen [!DNL Meta Pixel] und [!DNL Meta Conversions API]. Siehe [!DNL Meta] Dokumentation zu [Verarbeiten von Duplikaten [!DNL Pixel] und [!DNL Conversions API] events](https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events/) für Details.
+Sie können optional auch eine Ereignis-ID angeben, die mit der Erweiterung verknüpft werden soll. Damit werden identische Ereignisse zwischen [!DNL Meta Pixel] und [!DNL Meta Conversions API]. Weitere Informationen finden Sie im Abschnitt unter [Ereignisdeduplizierung](../../server/meta/overview.md#event-deduplication) in der Übersicht für [!DNL Conversions API] -Erweiterung.
 
 Klicken Sie abschließend auf **[!UICONTROL Speichern]**
 
@@ -64,7 +63,9 @@ Nachdem Ihr aktualisierter Build auf Ihrer Website bereitgestellt wurde, können
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Daten an [!DNL Meta] mithilfe der [!DNL Meta Pixel] Tag-Erweiterung. Weiterführende Informationen zu Tags in Experience Platform finden Sie im Abschnitt [Tag-Übersicht](../../../home.md).
+In diesem Handbuch wurde beschrieben, wie Daten an [!DNL Meta] mithilfe der [!DNL Meta Pixel] Tag-Erweiterung. Wenn Sie auch serverseitige Ereignisse an senden möchten [!DNL Meta], können Sie jetzt mit der Installation und Konfiguration des [[!DNL Conversions API] Ereignisweiterleitungs-Erweiterung](../../server/meta/overview.md).
+
+Weiterführende Informationen zu Tags in Experience Platform finden Sie im Abschnitt [Tag-Übersicht](../../../home.md).
 
 ## Anhang: Unterschiedliche [!DNL Pixel] IDs für verschiedene Umgebungen {#id-data-element}
 
@@ -77,4 +78,3 @@ Das folgende Beispiel gibt eine falsche Produktions-ID zurück `exampleProductio
 ```js
 return (turbine.environment.stage === "production" ? 'exampleProductionKey' : 'exampleTestKey');
 ```
-
