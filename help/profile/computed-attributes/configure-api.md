@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; API
 title: Konfigurieren eines berechneten Attributfelds
-topic-legacy: guide
 type: Documentation
 description: Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignisebene in Attribute auf Profilebene aggregiert werden. Um ein berechnetes Attribut zu konfigurieren, müssen Sie zunächst das Feld ermitteln, das den berechneten Attributwert enthält. Dieses Feld kann mithilfe der Schema Registry-API erstellt werden, um ein Schema und eine benutzerdefinierte Feldergruppe zu definieren, die das berechnete Attributfeld enthalten.
 exl-id: 91c5d125-8ab5-4291-a974-48dd44c68a13
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '736'
 ht-degree: 16%
@@ -16,7 +15,7 @@ ht-degree: 16%
 
 >[!IMPORTANT]
 >
->Die Funktion für berechnete Attribute ist derzeit alphanumerisch und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
+>Die Funktion für berechnete Attribute ist derzeit alphanumerisch und steht nicht allen Benutzern zur Verfügung. Dokumentation und Funktionalitäten können sich ändern.
 
 Um ein berechnetes Attribut zu konfigurieren, müssen Sie zunächst das Feld ermitteln, das den berechneten Attributwert enthält. Dieses Feld kann mithilfe der Schema Registry-API erstellt werden, um ein Schema und eine benutzerdefinierte Schemafeldergruppe zu definieren, die das berechnete Attributfeld enthalten. Es wird empfohlen, ein eigenes Schema und eine separate Feldergruppe &quot;Berechnete Attribute&quot;zu erstellen, in die Ihre Organisation alle Attribute einfügen kann, die als berechnete Attribute verwendet werden sollen. Dadurch kann Ihr Unternehmen das berechnete Attributschema sauber von anderen Schemata trennen, die für die Datenerfassung verwendet werden.
 

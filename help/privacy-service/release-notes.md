@@ -2,13 +2,12 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Versionshinweise zu Privacy Service
-topic-legacy: release notes
 description: Die aktuellen Versionshinweise für Adobe Experience Platform Privacy Service.
 exl-id: 66ee38f1-f0d5-44ff-823d-d1b8a9765c6d
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '553'
-ht-degree: 51%
+ht-degree: 47%
 
 ---
 
@@ -62,7 +61,7 @@ Dieses Dokument enthält Informationen zu neuen Funktionen für Adobe Experience
 | Funktion | Beschreibung |
 | --- | --- |
 | Dashboard „Anfragemetriken“ | Das Dashboard der neuen Metriken im [!DNL Privacy Service] Die Benutzeroberfläche bietet Einblicke in gesendete, fehlerhafte und abgeschlossene DSGVO-Anfragen. |
-| Request Builder | Um Unternehmen mit technischen und nicht-technischen Benutzern, die DSGVO-Anfragen senden, zu unterstützen, wurde der Benutzeroberfläche eine Funktion zum Erstellen einer Anfrage hinzugefügt. Die JSON-Dateisendefunktion ist weiterhin im [!DNL Privacy Service] Benutzeroberfläche für Organisationen, die sie weiterhin verwenden möchten. |
+| Request Builder | Um Unternehmen mit technischen und nicht-technischen Benutzern, die DSGVO-Anfragen einreichen, zu unterstützen, wurde der Benutzeroberfläche die Funktion &quot;Anforderung erstellen&quot;hinzugefügt. Die JSON-Dateisendefunktion ist weiterhin im [!DNL Privacy Service] Benutzeroberfläche für Organisationen, die sie weiterhin verwenden möchten. |
 | Ereignisbenachrichtigungen für DSGVO-Aufträge | Ereignisbenachrichtigungen über den DSGVO-Auftragsstatus sind für viele Workflows von entscheidender Bedeutung. Während Benachrichtigungen bisher über individuelle E-Mail-Benachrichtigungen zugestellt wurden, handelt es sich bei DSGVO-Ereignisbenachrichtigungen um Nachrichten, die Adobe I/O-Ereignisse nutzen und an einen konfigurierten Webhook gesendet werden, der die Automatisierung von Auftragsanfragen erleichtert. [!DNL Privacy Service] Benutzer der Benutzeroberfläche können DSGVO-Ereignisse der Adobe I/O abonnieren, um Updates zu erhalten, wenn ein Produkt oder der DSGVO-Auftrag abgeschlossen wurde. |
 
 ## Donnerstag, 18. April 2019

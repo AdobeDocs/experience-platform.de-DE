@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; DSGVO; DSGVO; DSGVO; CCPA; ccpa; PDPA; pdpa; LGPD; lgpd; FAQ; FAQ; Regulierung; Regulierung; Verordnungen; Datenschutz; Datenschutz
 solution: Experience Platform
 title: Häufig gestellte Fragen zu Datenschutzbestimmungen
-topic-legacy: troubleshooting
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu unterstützten gesetzlichen Datenschutzbestimmungen und deren Implementierung in Adobe Experience Cloud.
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1599'
 ht-degree: 35%
@@ -48,7 +47,7 @@ Personenbezogene Daten können auch Informationen über Aktivitäten im Internet
 * Suchverlauf
 * Informationen zur Interaktion eines Verbrauchers mit einer Website, Anwendung oder Werbung
 
-Obwohl die Datenschutzbestimmungen eine breite Palette personenbezogener Daten abdecken, schreiben die Standardvertragsbedingungen der Adobe vor, dass vertrauliche personenbezogene Daten (wie SSN, Führerscheininformationen, Finanzkontoinformationen und biometrische Daten) generell nicht in Experience Cloud-Anwendungen importiert und verwendet werden dürfen.
+Obwohl die Datenschutzbestimmungen eine breite Palette personenbezogener Daten abdecken, schreiben die Standardvertragsbedingungen der Adobe vor, dass vertrauliche personenbezogene Daten (wie SSN, Führerscheininformationen, Finanzkontoinformationen und biometrische Daten) generell nicht importiert und in Experience Cloud-Anwendungen verwendet werden dürfen.
 
 ### Was ist der Unterschied zwischen einem Datenverantwortlichen und einem Datenverarbeiter?
 
@@ -58,7 +57,7 @@ A **Datenverantwortlicher** ist die Person oder Organisation, die befugt und
 
 ### Was ist der Unterschied zwischen der ausdrücklichen und eindeutigen Zustimmung der betroffenen Person?
 
-**Explizite Zustimmung** bezieht sich auf einen Einverständnisstandard, der eine spezifische, informierte und eindeutige Angabe der Wünsche der betroffenen Person in mündlicher oder schriftlicher Form umfasst. Einfach ausgedrückt muss die betroffene Person buchstäblich und explizit &quot;Ich stimme zu&quot;oder &quot;Ich stimme zu&quot;, damit die Einwilligung als explizit betrachtet wird. Darüber hinaus muss es so einfach sein, die Zustimmung zurückzuziehen, wie sie sein muss.
+**Explizite Zustimmung** bezieht sich auf einen Standard der Einwilligung, der eine spezifische, informierte und eindeutige Angabe der Wünsche der betroffenen Person in mündlicher oder schriftlicher Form umfasst. Einfach ausgedrückt muss die betroffene Person buchstäblich und explizit &quot;Ich stimme zu&quot;oder &quot;Ich stimme zu&quot;, damit die Einwilligung als explizit betrachtet wird. Darüber hinaus muss es so einfach sein, die Zustimmung zurückzuziehen, wie sie sein muss.
 
 **Eindeutige (implizite) Zustimmung** bezieht sich auf die Einwilligung, die nicht explizit vom Datensubjekt erteilt wurde, jedoch eindeutig ist. Während des Anmeldeprozesses für eine Unternehmens-Website wird beispielsweise darauf hingewiesen, dass das Datensubjekt durch Angabe einer E-Mail-Adresse dem Empfang von E-Mails zu Sonderangeboten zustimmt. Wenn das Datensubjekt den Hinweis liest, reicht die positive Aktion der Eingabe seiner E-Mail aus, um als eindeutige Einwilligung betrachtet zu werden.
 

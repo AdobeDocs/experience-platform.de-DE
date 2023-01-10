@@ -2,10 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei Privacy Services
-topic-legacy: troubleshooting
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Privacy Service sowie Informationen zu häufig aufgetretenen Fehlern in der API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '884'
 ht-degree: 2%
