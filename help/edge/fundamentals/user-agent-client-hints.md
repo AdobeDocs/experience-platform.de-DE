@@ -2,13 +2,13 @@
 title: Benutzeragenten-Client-Hinweise
 description: Erfahren Sie, wie Benutzeragenten-Client-Hinweise im Web SDK funktionieren.
 keywords: user-agent;client hints; Zeichenfolge; user-agent string; niedrige Entropie; hohe Entropie
-source-git-commit: 6c974d1a646ff1f3a8f7ad9d67a6840391fc739e
+exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
+source-git-commit: 4a2ae40fc64c4340ddb05db881c2176bb2aedc46
 workflow-type: tm+mt
-source-wordcount: '1081'
-ht-degree: 7%
+source-wordcount: '1065'
+ht-degree: 8%
 
 ---
-
 
 # Benutzeragenten-Client-Hinweise
 
@@ -34,7 +34,7 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 | Name der Layout-Engine | AppleWebKit |
 | Version der Layout-Engine | 537.36 |
 | Betriebssystem | Mac OS X |
-| Betriebssystemversion | 10,15,7 |
+| Betriebssystemversion | 10.15.7 |
 | Gerät | Intel Mac OS X 10_15_7 |
 
 ## Anwendungsbeispiele {#use-cases}
@@ -58,7 +58,7 @@ Trotz des wichtigen Zwecks [!DNL User-Agent] Zeichenfolgen dienen Site-Eigentüm
 
 Die von ihnen entwickelte Lösung heißt [Benutzeragenten-Client-Hinweise](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Client-Hinweise ermöglichen es Websites weiterhin, die erforderlichen Browser-, Betriebssystem- und Geräteinformationen zu erfassen und bieten gleichzeitig einen besseren Schutz vor verdeckten Tracking-Methoden wie dem Fingerabdruck.
 
-Clienthinweise ermöglichen es Website-Inhabern, auf einen Großteil der in der [!DNL User-Agent] -Zeichenfolge, aber auf eine mehr datenschutzfreundliche Weise.
+Mit Client-Hinweisen können Website-Besitzer auf viele der Informationen zugreifen, die auch in der [!DNL User-Agent]-Zeichenfolge enthalten sind, allerdings auf eine Weise, die die Privatsphäre besser schützt.
 
 Wenn moderne Browser einen Benutzer an einen Webserver senden, wird die gesamte [!DNL User-Agent] -Zeichenfolge wird bei jeder Anfrage gesendet, unabhängig davon, ob sie erforderlich ist. Client-Hinweise erzwingen dagegen ein Modell, bei dem der Server den Browser um die zusätzlichen Informationen bitten muss, die er über den Client wissen möchte. Nach Erhalt dieser Anfrage kann der Browser seine eigenen Richtlinien oder Benutzerkonfigurationen anwenden, um zu bestimmen, welche Daten zurückgegeben werden. Anstatt das gesamte [!DNL User-Agent] -Zeichenfolge standardmäßig bei allen Anforderungen, wird der Zugriff jetzt explizit und überprüfbar verwaltet.
 
@@ -116,13 +116,7 @@ Wenn Sie in Ihrer Umgebung keine Client-Hinweise mit hoher Entropie aktivieren, 
 
 ### Adobe Analytics-Berichte, die auf Client-Hinweisen mit hoher Entropie basieren {#analytics}
 
-Die folgenden Adobe Analytics-Berichte funktionieren nicht, während Client-Hinweise mit hoher Entropie deaktiviert sind.
-
-* [Browser](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser.html)
-* [Browser-Typ](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html)
-* [Betriebssystem](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html)
-* [Betriebssystemtypen](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html)
-* [Mobilgerätedimensionen](https://experienceleague.adobe.com/docs/analytics/components/dimensions/mobile-dimensions.html)
+Die [Betriebssystem](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) -Dimension umfasst die Betriebssystemversion, die als Client-Hinweis mit hoher Entropie gespeichert wird. Wenn Client-Hinweise mit hoher Entropie nicht aktiviert sind, kann die Betriebssystemversion für Treffer, die von Chromium-Browsern erfasst werden, ungenau sein.
 
 ### Audience Manager-Eigenschaften, die auf Client-Hinweisen mit hoher Entropie basieren {#aam}
 
