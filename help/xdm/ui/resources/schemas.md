@@ -3,9 +3,8 @@ keywords: Experience Platform; Startseite; beliebte Themen; API; XDM; XDM; XDM-S
 solution: Experience Platform
 title: Erstellen und Bearbeiten von Schemata in der Benutzeroberfläche
 description: Lernen Sie die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Benutzeroberfläche von Experience Platform kennen.
-topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '3156'
 ht-degree: 0%

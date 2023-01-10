@@ -2,11 +2,10 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Microsoft Dynamics;Mikrosoft dynamics;Dynamics;Dynamik
 solution: Experience Platform
 title: Erstellen einer Microsoft Dynamics-Quellverbindung in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung mit Microsoft Dynamics erstellen.
 exl-id: 1a7a66de-dc57-4a72-8fdd-5fd80175db69
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 37%

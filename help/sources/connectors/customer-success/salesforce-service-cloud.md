@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Salesforce Service Cloud; Salesforce Service Cloud
 solution: Experience Platform
 title: Salesforce Service Cloud Source Connector - Überblick
-topic-legacy: overview
 description: Erfahren Sie, wie Sie Salesforce Service Cloud mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
 exl-id: 9bebbc00-55b3-4aec-9357-4127c05844e2
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '228'
-ht-degree: 53%
+ht-degree: 72%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 53%
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-[!DNL Experience Platform] unterstützt die Aufnahme von Daten aus einem Drittanbieter-Kundenerfolgssystem. Zu den Support-Anbietern für den Kundenerfolg zählen: [!DNL Salesforce Service Cloud].
+[!DNL Experience Platform] ermöglicht Unterstützung für die Aufnahme von Daten aus einem Drittanbieter-System für Customer Success. Zu den Support-Anbietern für den Kundenerfolg zählen: [!DNL Salesforce Service Cloud].
 
 ## IP-Adressen-Zulassungsliste
 
@@ -27,10 +26,10 @@ Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Sales
 ## Verbinden von [!DNL Salesforce Service Cloud ] mit [!DNL Platform] mithilfe von APIs
 
 - [Erstellen einer Salesforce Service Cloud-Basisverbindung mithilfe der Flow Service-API](../../tutorials/api/create/customer-success/salesforce-service-cloud.md)
-- [Datentabellen mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/tabular.md)
-- [Erstellen eines Datenflusses für eine Kundenerfolgsquelle mithilfe der Flow Service-API](../../tutorials/api/collect/customer-success.md)
+- [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
+- [Erstellen eines Datenflusses für eine Customer Success-Quelle mithilfe der Flow Service-API](../../tutorials/api/collect/customer-success.md)
 
 ## Verbinden von [!DNL Salesforce Service Cloud] mit [!DNL Platform] über die Benutzeroberfläche
 
 - [Erstellen einer Quellverbindung der Salesforce Service Cloud über die Benutzeroberfläche](../../tutorials/ui/create/customer-success/salesforce-service-cloud.md)
-- [Erstellen Sie einen Datenfluss für eine Kundenerfolgsquellenverbindung in der Benutzeroberfläche.](../../tutorials/ui/dataflow/customer-success.md)
+- [Erstellen eines Datenflusses für eine Customer Success-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/customer-success.md)

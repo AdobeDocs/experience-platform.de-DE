@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; generische REST; generische Ruhezeit
 solution: Experience Platform
 title: Übersicht über den generischen REST API Source Connector
-topic-legacy: overview
 description: Erfahren Sie, wie Sie die generische REST-API mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
 exl-id: e3449e33-7261-4aa2-bce9-5530eb4fcc68
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '228'
-ht-degree: 44%
+ht-degree: 55%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 44%
 
 >[!NOTE]
 >
->Die [!DNL Generic REST API] -Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
+>Die [!DNL Generic REST API]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../home.md#terms-and-conditions), um weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren zu erhalten.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
@@ -33,5 +32,5 @@ Die folgende Dokumentation enthält Informationen zum Verbinden eines [!DNL Gene
 ## Verbinden von [!DNL Generic REST API] mit [!DNL Platform] mithilfe von APIs
 
 - [Erstellen einer generischen REST-API-Basisverbindung mit der Flow Service-API](../../tutorials/api/create/protocols/generic-rest.md)
-- [Datentabellen mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/tabular.md)
+- [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine Protokollquelle mithilfe der Flow Service-API](../../tutorials/api/collect/protocols.md)

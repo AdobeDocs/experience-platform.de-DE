@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Adresse; xdm:address; Datentyp; Datentyp; Datentyp; Datentyp;
 solution: Experience Platform
 title: Datentyp der Postanschrift
-topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp für Postadresse.
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 24%
@@ -38,7 +37,7 @@ ht-degree: 24%
 | `stateProvince` | Das Bundesland oder die Provinz der Beobachtung. Das Format entspricht der [ISO-Norm 3166-2 (Land und Unterteilung)](https://www.unece.org/cefact/locode/subdivisions.html). |
 | `status` | Gibt an, ob die Adresse derzeit verwendet werden kann. |
 | `statusReason` | Eine Beschreibung des aktuellen `status`. |
-| `street1` - `street4` | Diese vier Felder sollen Informationen auf der primären Straßenniveau, Wohnungsnummer, Straßennummer und Straßenname enthalten. `street2` nach `street4` sind optional. |
+| `street1` – `street4` | Diese vier Felder sollen Informationen auf der primären Straßenniveau, Wohnungsnummer, Straßennummer und Straßenname enthalten. `street2` nach `street4` sind optional. |
 
 {style=&quot;table-layout:auto&quot;}
 

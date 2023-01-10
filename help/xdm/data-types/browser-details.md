@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Browser; Browserdetails; Datentyp; Datentyp; Datentyp;
 solution: Experience Platform
 title: Datentyp "Browser Details"
-topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp "Browserdetails".
 exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '266'
-ht-degree: 25%
+ht-degree: 28%
 
 ---
 

@@ -2,13 +2,12 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
 solution: Experience Platform
 title: Erstellen eines Datenflusses für Zendesk mithilfe der Flow Service-API
-topic-legacy: tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Zendesk verbinden.
 exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
-source-git-commit: e92c2386d9f4a4709f0a749d3ed97e033f066610
+source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '1996'
-ht-degree: 64%
+ht-degree: 65%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 64%
 
 >[!NOTE]
 >
->Die [!DNL Zendesk] -Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
+>Die [!DNL Zendesk]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-gekennzeichneten Quellen.
 
 Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer Quellverbindung und eines Datenflusses, um [!DNL Zendesk]-Daten mithilfe der [[!DNL Flow Service] -API](https://www.adobe.io/experience-platform-apis/references/flow-service/) an Platform zu übermitteln.
 

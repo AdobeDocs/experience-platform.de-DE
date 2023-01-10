@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
 title: Flussspezifikationen mithilfe der Flow Service-API aktualisieren
-topic-legacy: developer guide
 description: Das folgende Dokument enthält Schritte zum Abrufen und Aktualisieren von Flussspezifikationen mithilfe der Flow Service-API für Self-Serve-Quellen (Batch SDK).
 exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 17%

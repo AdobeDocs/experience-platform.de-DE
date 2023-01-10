@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Marketing-Automatisierung
 solution: Experience Platform
 title: Erkunden eines Marketingautomatisierungssystems mithilfe der Flow Service-API
-topic-legacy: overview
 description: In diesem Tutorial wird die Flow Service-API verwendet, um Marketing-Automatisierungssysteme zu untersuchen.
 exl-id: 250c1ba0-1baa-444f-ab2b-58b3a025561e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 38%

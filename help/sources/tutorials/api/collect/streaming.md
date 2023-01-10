@@ -2,11 +2,10 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Cloud-Speicherdaten;Streaming-Daten;Streaming
 solution: Experience Platform
 title: Erstellen eines Streaming-Datenflusses für Rohdaten mithilfe der Flow Service-API
-topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Streaming-Daten und deren Einbindung in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1099'
 ht-degree: 55%

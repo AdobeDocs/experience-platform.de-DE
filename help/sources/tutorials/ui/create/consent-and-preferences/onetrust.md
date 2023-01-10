@@ -2,14 +2,13 @@
 keywords: Experience Platform; home; beliebte Themen; onetrust; OneTrust
 solution: Experience Platform
 title: (Beta) Erstellen einer OneTrust Source-Verbindung in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine OneTrust-Quellverbindung erstellen.
 exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
-source-git-commit: cfc6e7cb3877f3b5f716b7f82e7c2d308ef5ed10
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '527'
-ht-degree: 36%
+ht-degree: 38%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 36%
 
 >[!NOTE]
 >
->Die [!DNL OneTrust Integration] -Quelle befindet sich in der Beta-Phase. Die Funktionen und Dokumentation können sich ändern. Informationen zur Verwendung von Beta-beschrifteten Quellen finden Sie in der [Quellen - Übersicht](../../../../home.md#terms-and-conditions).
+>Die [!DNL OneTrust Integration]-Quelle befindet sich in der Beta-Phase. Die Funktionen und Dokumentation können sich ändern. Informationen zur Verwendung von Beta-beschrifteten Quellen finden Sie in der [Quellen - Übersicht](../../../../home.md#terms-and-conditions).
 
 In diesem Tutorial werden Schritte zum Erstellen eines [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) Quellverbindung zur Aufnahme von historischen und geplanten Einwilligungsdaten in Adobe Experience Platform über die Platform-Benutzeroberfläche.
 

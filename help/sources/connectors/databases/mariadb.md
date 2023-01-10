@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; MariaDB; Mariadb; Maria DB; Malaria db
 solution: Experience Platform
 title: Übersicht über den MariaDB Source Connector
-topic-legacy: overview
 description: Erfahren Sie, wie Sie MariaDB über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 37b8f991-dca9-4f85-9bdd-4927a015e4c0
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '232'
-ht-degree: 57%
+ht-degree: 61%
 
 ---
 
@@ -27,7 +26,7 @@ Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Maria
 ## Verbinden von [!DNL MariaDB] mit [!DNL Platform] mithilfe von APIs
 
 - [Erstellen einer MariaDB-Basisverbindung mithilfe der Flow Service-API](../../tutorials/api/create/databases/mariadb.md)
-- [Datentabellen mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/tabular.md)
+- [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine Datenbankquelle mithilfe der Flow Service-API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbinden von [!DNL MariaDB] mit [!DNL Platform] über die Benutzeroberfläche

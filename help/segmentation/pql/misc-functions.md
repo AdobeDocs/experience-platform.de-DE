@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Segmentierung; Segmentierung; Segmentierungsdienst; pql; PQL; Profile Query Language; verschiedene Funktionen; misc;
 solution: Experience Platform
 title: PQL - Verschiedene Funktionen
-topic-legacy: developer guide
 description: Die folgende Funktion ist eine sonstige Funktion für Profil Query Language (PQL).
 exl-id: a6ed31a2-a649-4dc8-89b1-48c1170b7f16
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 68%

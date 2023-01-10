@@ -2,10 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
 solution: Experience Platform
 title: Quelle dokumentieren
-topic-legacy: overview
 description: Der letzte Schritt, bevor Ihre neue Quelle in Adobe Experience Platform live geschaltet werden kann, besteht darin, Ihre neue Quelle zu dokumentieren.
 exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
-source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 3%

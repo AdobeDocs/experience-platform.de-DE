@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; PQL; pql; Profilabfragesprache
 solution: Experience Platform
 title: Profil Query Language (PQL) - Überblick
-topic-legacy: developer guide
 description: Dieses Handbuch bietet einen allgemeinen Überblick über PQL, einschließlich Formatierungsrichtlinien und Beispielausdrücken für PQLs.
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 14%

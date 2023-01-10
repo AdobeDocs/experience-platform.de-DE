@@ -2,11 +2,11 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Segmentierungsdienst; Segmentierungsdienst; Segmentierungsdienst; Benutzerhandbuch; Handbuch zu Zielgruppen; Benutzerhandbuch; Audience Builder; Zielgruppe; Zielgruppen; Benutzerhandbuch; Handbuch zu Zielgruppen;
 solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Zielgruppen
-topic-legacy: ui guide
 description: Der Audience Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Zielgruppen für Ihre Organisation.
 hide: true
 hidefromtoc: true
-source-git-commit: f71d49b576059e687c337cbacd6dd3d525e97834
+exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Audience Builder befindet sich derzeit in der Betaphase und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
+>Audience Builder befindet sich derzeit in der Betaphase und steht nicht allen Benutzern zur Verfügung. Dokumentation und Funktionalitäten können sich ändern.
 
 Audience Builder bietet einen Arbeitsbereich zum Erstellen und Bearbeiten von Zielgruppen mithilfe von Bausteinen, die zur Darstellung verschiedener Aktionen verwendet werden.
 

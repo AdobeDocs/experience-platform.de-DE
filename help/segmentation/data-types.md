@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Datentyp; Datentypen; Datentypen; Datentypen; Datentyp; Segmentierungsdatentypen; Segmentierung; Segmentierung; Segmentierungsdienst; Datentypen des Segmentierungsdienstes; Segmentierungsdienst
 solution: Experience Platform
 title: Unterstützte Datentypen im Segmentierungsdienst
-topic-legacy: overview
 description: Alle Experience-Datenmodell (XDM)-Datentypen werden in Adobe Segmentation Service unterstützt. Die Regeln, die eine Segmentdefinition bilden, werden durch die folgenden Datentypen kontextualisiert.
 exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 6%

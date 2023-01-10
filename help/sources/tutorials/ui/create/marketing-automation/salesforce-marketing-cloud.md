@@ -2,11 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Salesforce Marketing Cloud; Salesforce Marketing Cloud
 solution: Experience Platform
 title: Erstellen einer Salesforce-Marketing Cloud-Quellverbindung in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Salesforce Marketing Cloud-Quellverbindung erstellen.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 45%

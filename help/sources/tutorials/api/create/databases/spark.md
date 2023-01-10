@@ -2,14 +2,13 @@
 keywords: Experience Platform; home; beliebte Themen; Apache Spark; Apache-Funken; Azure HDInsights
 solution: Experience Platform
 title: Erstellen eines Apache Spark auf einer Azure HDInsights-Basisverbindung mithilfe der Flow Service-API
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Apache Spark auf Azure HDInsights mit Adobe Experience Platform verbinden.
 exl-id: 1f7ca86e-32f4-45f7-92c2-f87c5c0c4ea4
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '500'
-ht-degree: 53%
+ht-degree: 60%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 53%
 
 >[!NOTE]
 >
->Die [!DNL Apache Spark] on [!DNL Azure HDInsights] -Connector befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
+>Die [!DNL Apache Spark] on [!DNL Azure HDInsights] -Connector befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions), um weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren zu erhalten.
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -112,7 +111,7 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, ei
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Spark] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basis-Verbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL Spark] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
-* [Struktur und Inhalt Ihrer Datentabellen mithilfe des [!DNL Flow Service] API](../../explore/tabular.md)
+* [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um Datenbankdaten mit der [!DNL Flow Service] API](../../collect/database-nosql.md)

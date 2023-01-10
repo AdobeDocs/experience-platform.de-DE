@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Abonnement; Datentyp; Datentyp; Datentyp;
 solution: Experience Platform
 title: Abonnementdatentyp
-topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den Datentyp "Abonnement-Experience-Datenmodell (XDM)".
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
-source-git-commit: d99ddc65849a88350bf61977b399b07989554426
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 28%

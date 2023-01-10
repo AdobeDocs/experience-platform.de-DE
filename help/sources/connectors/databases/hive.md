@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Apache Hive; Hive; Hive; Azure HDInsights; Azure Hdinsights;
 solution: Experience Platform
 title: Apache Hive auf Azure HDInsights Source Connector - Übersicht
-topic-legacy: overview
 description: Erfahren Sie, wie Sie Apache Hive auf Azure HDInsights mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
 exl-id: f55f9e9a-779e-426a-bca6-7567ea843698
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '275'
-ht-degree: 38%
+ht-degree: 45%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 38%
 
 >[!NOTE]
 >
->Der Apache Hive auf Azure HDInsights-Connector befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
+>Der Apache Hive auf Azure HDInsights-Connector befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../home.md#terms-and-conditions), um weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren zu erhalten.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
@@ -31,7 +30,7 @@ Die folgende Dokumentation enthält Informationen zur Verbindung [!DNL Apache Hi
 ## Verbinden [!DNL Apache Hive] on [!DNL Azure HDInsights] nach [!DNL Platform] Verwenden von APIs
 
 - [Erstellen einer Apache Hive-Basisverbindung mit Azure HDInsights mithilfe der Flow Service-API](../../tutorials/api/create/databases/hive.md)
-- [Datentabellen mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/tabular.md)
+- [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine Datenbankquelle mithilfe der Flow Service-API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbinden [!DNL Apache Hive] on [!DNL Azure HDInsights] nach [!DNL Platform] über die Benutzeroberfläche

@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Zahlungselement; Datentyp; Datentyp; Datentyp;
 solution: Experience Platform
 title: Datentyp des Zahlungselements
-topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den Datentyp "Payment Item Experience Data Model (XDM)".
 exl-id: d25a358b-73c1-468b-a9c5-808385689932
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 34%

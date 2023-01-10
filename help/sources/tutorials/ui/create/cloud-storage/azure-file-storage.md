@@ -2,11 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Azure-Dateispeicher; Azure-Dateispeicher-Connector
 solution: Experience Platform
 title: Erstellen einer Azure File Storage Source-Verbindung in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Azure File Storage-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
 exl-id: 25d483b6-3975-4e80-9dbe-28b7b91cb063
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 45%

@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Google Cloud-Speicher; Google Cloud-Speicher
 solution: Experience Platform
 title: Google Cloud Storage Source Connector - Überblick
-topic-legacy: overview
 description: Erfahren Sie, wie Sie Google Cloud Storage über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '551'
-ht-degree: 60%
+ht-degree: 81%
 
 ---
 
@@ -22,21 +21,21 @@ Cloud-Speicher bieten eine Quelle, von der Sie Ihre Daten in Platform übertrage
 
 Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
 
-## Voraussetzungen für die Einrichtung der [!DNL Google Cloud Storage] account
+## Vorausgesetzte Einrichtung für das Verbinden Ihres [!DNL Google Cloud Storage]-Kontos
 
-Um eine Verbindung zu Platform herzustellen, müssen Sie zunächst die Interoperabilität für Ihre [!DNL Google Cloud Storage] -Konto. Um auf die Interoperabilitätseinstellung zuzugreifen, öffnen Sie [!DNL Google Cloud Platform] und wählen Sie **[!UICONTROL Einstellungen]** von **[!UICONTROL Cloud-Speicher]** im Navigationsbereich.
+Um eine Verbindung zu Platform herzustellen, müssen Sie zunächst die Interoperabilität für Ihre [!DNL Google Cloud Storage] -Konto. Um auf die Interoperabilitätseinstellung zuzugreifen, öffnen Sie [!DNL Google Cloud Platform] und wählen Sie **[!UICONTROL Einstellungen]** in der Option **[!UICONTROL Cloud-Speicher]** im Navigationsbereich aus.
 
 ![](../../images/tutorials/create/google-cloud-storage/nav.png)
 
-Die **[!UICONTROL Einstellungen]** angezeigt. Von hier aus können Sie Informationen zu Ihrer [!DNL Google] Projekt-ID und Details zu Ihrer [!DNL Google Cloud Storage] -Konto. Um auf die Interoperabilitätseinstellungen zuzugreifen, wählen Sie **[!UICONTROL Interoperabilität]** aus der oberen Kopfzeile.
+Die Seite **[!UICONTROL Einstellungen]** wird angezeigt. Von hier aus können Sie Informationen zu Ihrer [!DNL Google]-Projekt-ID und Details zu Ihrem [!DNL Google Cloud Storage]-Konto ansehen. Um auf die Interoperabilitätseinstellungen zuzugreifen, wählen Sie **[!UICONTROL Interoperabilität]** aus der oberen Kopfzeile aus.
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
-Die **[!UICONTROL Interoperabilität]** Seite enthält Informationen zur Authentifizierung, zu Zugriffsschlüsseln und zum Standardprojekt, das mit Ihrem Dienstkonto verknüpft ist. Um eine neue Zugriffsschlüssel-ID und einen geheimen Zugriffsschlüssel für Ihr Dienstkonto zu generieren, wählen Sie **[!UICONTROL Erstellen eines Schlüssels für ein Dienstkonto]**.
+Die Seite **[!UICONTROL Interoperabilität]** enthält Informationen zur Authentifizierung, zu Zugriffsschlüsseln und zum Standardprojekt, das mit Ihrem Service-Konto verknüpft ist. Um eine neue Zugriffsschlüssel-ID und einen geheimen Zugriffsschlüssel für Ihr Service-Konto zu generieren, wählen Sie **[!UICONTROL Schlüssel für ein Service-Konto erstellen]** aus.
 
 ![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
 
-Sie können die neu generierte Zugriffsschlüssel-ID und den geheimen Zugriffsschlüssel verwenden, um Ihre [!DNL Google Cloud Storage] -Konto auf Platform.
+Sie können die neu generierte Zugriffsschlüssel-ID und den geheimen Zugriffsschlüssel verwenden, um Ihr [!DNL Google Cloud Storage]-Konto mit Platform zu verbinden.
 
 ## Namensbeschränkungen für Dateien und Verzeichnisse
 

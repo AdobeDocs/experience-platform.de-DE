@@ -1,13 +1,12 @@
 ---
 solution: Experience Platform
 title: Datenmodell der Einzelhandelsbranche
-topic-legacy: overview
 description: Sehen Sie sich ein standardisiertes Datenmodell für den Einzelhandel an, das mit dem Experience-Datenmodell (XDM) kompatibel ist und in Adobe Experience Platform verwendet werden kann.
 exl-id: 40cbb243-668b-4280-815f-1f94a06b6b87
-source-git-commit: 2d7314f11837ca5c5ca1411553f20f58c4cad1ec
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '522'
-ht-degree: 15%
+ht-degree: 16%
 
 ---
 

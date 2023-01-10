@@ -2,22 +2,21 @@
 keywords: Experience Platform; Homepage; beliebte Themen[!DNL Azure Table Storage];[!DNL Azure Table Storage]Azure-Tabellenspeicher
 solution: Experience Platform
 title: Erstellen einer Azure Table Storage-Basisverbindung mit der Flow Service-API
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Azure Table Storage mit Adobe Experience Platform verbinden.
 exl-id: 8ebd5d77-ed1f-47e1-8212-efb6c5e84ec1
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '475'
-ht-degree: 59%
+ht-degree: 70%
 
 ---
 
-# Erstellen Sie eine [!DNL Azure Table Storage] Basisverbindung mit [!DNL Flow Service] API
+# Erstellen einer [!DNL Azure Table Storage]-Basisverbindung mithilfe der [!DNL Flow Service]-API
 
 >[!NOTE]
 >
->Die [!DNL Azure Table Storage] -Connector befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
+>Die [!DNL Azure Table Storage] -Connector befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions), um weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren zu erhalten.
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -105,7 +104,7 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, ei
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Azure Table Storage] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basis-Verbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL Azure Table Storage]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
-* [Struktur und Inhalt Ihrer Datentabellen mithilfe des [!DNL Flow Service] API](../../explore/tabular.md)
+* [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um Datenbankdaten mit der [!DNL Flow Service] API](../../collect/database-nosql.md)

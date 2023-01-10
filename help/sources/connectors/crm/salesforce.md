@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; crm-Schema; crm; CRM; Salesforce; Salesforce
 solution: Experience Platform
 title: Salesforce Source Connector - Überblick
-topic-legacy: overview
 description: Erfahren Sie, wie Sie Salesforce über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: e178e0df2653b8cb0d4176734be7cb421098e225
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '900'
-ht-degree: 17%
+ht-degree: 20%
 
 ---
 
@@ -35,7 +34,7 @@ Detaillierte Informationen zu den Feldzuordnungsregeln zwischen [!DNL Salesforce
 - [Rollen von Kontakten bei Opportunities](../adobe-applications/mapping/salesforce.md#opportunity-contact-role)
 - [Kampagnen](../adobe-applications/mapping/salesforce.md#campaign)
 - [Kampagnenmitglieder](../adobe-applications/mapping/salesforce.md#campaign-member)
-- [Kundenkontakt-Beziehung](../adobe-applications/mapping/salesforce.md#account-contact-relation)
+- [Account-Kontaktbeziehung](../adobe-applications/mapping/salesforce.md#account-contact-relation)
 
 ## Richten Sie die [!DNL Salesforce] Dienstprogramm zur automatischen Namespace- und Schemaerstellung
 
@@ -86,15 +85,15 @@ Die [!DNL Runner] -Benutzeroberfläche angezeigt. Vergewissern Sie sich von hier
 
 Eine erfolgreiche Anfrage erstellt die B2B-Namespaces und -Schemas gemäß den Beta-Spezifikationen.
 
-## Verbinden [!DNL Salesforce] zur Plattform mithilfe von APIs
+## Verbinden von [!DNL Salesforce] mit Platform mithilfe von APIs
 
 Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Salesforce] mit Platform mithilfe von APIs oder der Benutzeroberfläche:
 
 - [Salesforce-Basisverbindung mithilfe der Flow Service-API erstellen](../../tutorials/api/create/crm/salesforce.md)
-- [Datentabellen mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/tabular.md)
+- [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine CRM-Quelle mithilfe der Flow Service-API](../../tutorials/api/collect/crm.md)
 
-## Verbinden [!DNL Salesforce] zur Plattform mithilfe der Benutzeroberfläche
+## Verbinden von [!DNL Salesforce] mit Platform über die Benutzeroberfläche
 
 - [Erstellen einer Salesforce-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/crm/salesforce.md)
 - [Erstellen eines Datenflusses für eine CRM-Verbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/crm.md)

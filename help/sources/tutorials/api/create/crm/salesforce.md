@@ -2,14 +2,13 @@
 keywords: Experience Platform; Homepage; beliebte Themen; Salesforce; Salesforce
 solution: Experience Platform
 title: Erstellen einer Salesforce-Basisverbindung mit der Flow Service-API
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Adobe Experience Platform mit einem Salesforce-Konto verbinden.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '472'
-ht-degree: 58%
+ht-degree: 68%
 
 ---
 
@@ -98,7 +97,7 @@ curl -X POST \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort wird die neu erstellte Verbindung einschließlich der eindeutigen Kennung (`id`). Diese ID ist erforderlich, um Ihr CRM-System im nächsten Schritt zu untersuchen.
+Eine erfolgreiche Antwort gibt die neu erstellte Basisverbindung zurück, einschließlich ihrer eindeutigen Kennung (`id`). Diese ID ist erforderlich, um im nächsten Schritt Ihr CRM-System zu untersuchen.
 
 ```json
 {
@@ -109,7 +108,7 @@ Bei einer erfolgreichen Antwort wird die neu erstellte Verbindung einschließlic
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Salesforce] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basis-Verbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL Salesforce] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
-* [Struktur und Inhalt Ihrer Datentabellen mithilfe des [!DNL Flow Service] API](../../explore/tabular.md)
+* [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um CRM-Daten mithilfe des [!DNL Flow Service] API](../../collect/crm.md)

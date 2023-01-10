@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; cs; CS; Customer Success System
 solution: Experience Platform
 title: Erkunden eines Customer Success Systems mithilfe der Flow Service-API
-topic-legacy: overview
 description: In diesem Tutorial wird die Flow Service-API verwendet, um Customer Success (CS)-Systeme zu untersuchen.
 exl-id: 453be69d-3d72-4987-81cd-67fa3be7ee59
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 39%

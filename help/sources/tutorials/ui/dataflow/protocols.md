@@ -2,11 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Protokoll-Connector
 solution: Experience Platform
 title: Erstellen eines Datenflusses mithilfe einer Protokollquelle in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 description: Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen Platform-Datensatz aufnimmt. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Platform-Benutzeroberfläche einen Datenfluss für eine Protokollquelle erstellen.
 exl-id: 94631a78-14ea-41d7-876c-468634dfc6c1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1385'
 ht-degree: 50%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
 solution: Experience Platform
 title: Verwenden Sie einen Texteditor in Ihrer lokalen Umgebung, um eine Seite mit der Quellendokumentation zu erstellen.
-topic-legacy: tutorial
 description: In diesem Dokument erfahren Sie, wie Sie mit Ihrer lokalen Umgebung die Dokumentation für Ihre Quelle erstellen und eine Pull-Anforderung (PA) senden können.
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
-source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '650'
 ht-degree: 8%

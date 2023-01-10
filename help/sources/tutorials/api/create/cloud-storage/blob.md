@@ -2,18 +2,17 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Azure;Azure Blob;Blob;Blob
 solution: Experience Platform
 title: Erstellen einer Azure Blob-Basisverbindung mit der Flow Service-API
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Flow Service-API eine Verbindung zwischen Adobe Experience Platform und Azure Blob herstellen.
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
-source-git-commit: 0d891acd4e33eb7080da44e204672dc3601cf166
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '692'
-ht-degree: 40%
+ht-degree: 44%
 
 ---
 
-# Erstellen Sie eine [!DNL Azure Blob] Basisverbindung mit [!DNL Flow Service] API
+# Erstellen einer [!DNL Azure Blob]-Basisverbindung mithilfe der [!DNL Flow Service]-API
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -34,9 +33,9 @@ Zur [!DNL Flow Service] , um eine Verbindung mit Ihrer [!DNL Blob] Speicher, mü
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Eine Zeichenfolge, die die für die Authentifizierung erforderlichen Autorisierungsinformationen enthält [!DNL Blob] in die Experience Platform. Die [!DNL Blob] Verbindungszeichenfolgenmuster ist: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. Weitere Informationen zu Verbindungszeichenfolgen finden Sie in diesem [!DNL Blob] Dokument auf [Konfigurieren von Verbindungszeichenfolgen](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
+| `connectionString` | Eine Zeichenfolge, die die für die Authentifizierung erforderlichen Autorisierungsinformationen enthält [!DNL Blob] in die Experience Platform. Die [!DNL Blob] Verbindungszeichenfolgenmuster ist: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. Weitere Informationen zu Verbindungszeichenfolgen finden Sie in diesem [!DNL Blob] Dokument auf [Konfigurieren von Verbindungszeichenfolgen](https://docs.microsoft.com/de-de/azure/storage/common/storage-configure-connection-string). |
 | `sasUri` | Der URI für die gemeinsame Zugriffssignatur, den Sie als alternativen Authentifizierungstyp verwenden können, um Ihre [!DNL Blob] -Konto. Die [!DNL Blob] Das SAS-URI-Muster lautet: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` Weitere Informationen finden Sie in diesem [!DNL Blob] Dokument auf [URIs für freigegebene Zugriffssignatur](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication). |
-| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Blob] ist: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Blob] ist: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 ### Verwenden von Platform-APIs
 

@@ -3,9 +3,8 @@ keywords: Experience Platform;Startseite;beliebte Themen;API;XDM;XDM-System;Expe
 solution: Experience Platform
 title: API-Endpunkt für Schemas
 description: Mit dem Endpunkt /schemas in der Schema Registry-API können Sie XDM-Schemas in Ihrer Erlebnisanwendung programmgesteuert verwalten.
-topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 666f424355fd1104971bb1566b72e207d00f4a56
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 21%

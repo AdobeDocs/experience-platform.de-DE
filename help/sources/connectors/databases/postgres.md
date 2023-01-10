@@ -2,13 +2,12 @@
 keywords: Experience Platform;home;popular topics;PostgreSQL;postgresql
 solution: Experience Platform
 title: Übersicht über PostgreSQL Source Connector
-topic-legacy: overview
 description: Erfahren Sie, wie Sie PostgreSQL mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
 exl-id: 27b891c5-5fc5-4539-8f98-e3a53e2eefe3
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '225'
-ht-degree: 66%
+ht-degree: 69%
 
 ---
 
@@ -27,7 +26,7 @@ Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Postg
 ## Verbinden von [!DNL PostgreSQL] mit [!DNL Platform] mithilfe von APIs
 
 - [Erstellen einer  [!DNL PostgreSQL] -Basisverbindung mit der Flow Service-API](../../tutorials/api/create/databases/postgres.md)
-- [Datentabellen mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/tabular.md)
+- [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine Datenbankquelle mithilfe der Flow Service-API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbinden von [!DNL PostgreSQL] mit [!DNL Platform] über die Benutzeroberfläche

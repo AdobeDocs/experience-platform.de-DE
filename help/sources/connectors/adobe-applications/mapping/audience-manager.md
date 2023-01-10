@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Audience Manager-Mapping; Zielgruppen-Manager-Mapping
 solution: Experience Platform
 title: Zuordnen von Feldern für den Adobe Audience Manager Source Connector
-topic-legacy: overview
 description: Erfahren Sie, wie Sie Adobe Audience Manager-Daten (Echtzeit-, integrierte und Profildaten) den entsprechenden Experience-Datenmodell (XDM)-Feldern für den Audience Manager-Quell-Connector zuordnen.
 exl-id: b800ba43-c308-4334-adce-3d554d50cefb
-source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '175'
 ht-degree: 73%

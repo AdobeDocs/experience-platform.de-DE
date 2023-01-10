@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
 title: Konfigurieren von Erkundungsspezifikationen für Self-Serve-Quellen (Batch-SDK)
-topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung von Self-Serve-Quellen (Batch SDK) vorbereiten müssen.
 exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 7%

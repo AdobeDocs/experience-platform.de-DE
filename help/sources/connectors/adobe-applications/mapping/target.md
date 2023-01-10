@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Zielgruppen-Mapping; Zielgruppen-Mapping
 solution: Experience Platform
 title: Zuordnen von Adobe Target-Ereignisdaten zu XDM
-topic-legacy: overview
 description: Erfahren Sie, wie Sie Adobe Target-Ereignisfelder einem Experience-Datenmodell (XDM)-Schema zur Verwendung in Adobe Experience Platform zuordnen.
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 3%

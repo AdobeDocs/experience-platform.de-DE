@@ -2,14 +2,13 @@
 keywords: Experience Platform; Startseite; beliebte Themen; bigquery; Google; Google; Google BigQuery
 solution: Experience Platform
 title: Erstellen einer Google BigQuery-Basisverbindung mit der Flow Service-API
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Flow Service-API Adobe Experience Platform mit Google BigQuery verbinden.
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
-source-git-commit: 015a4fa06fc2157bb8374228380bb31826add37e
+source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '526'
-ht-degree: 53%
+ht-degree: 57%
 
 ---
 
@@ -112,7 +111,7 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, ei
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Google BigQuery] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basis-Verbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL Google BigQuery] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
-* [Struktur und Inhalt Ihrer Datentabellen mithilfe des [!DNL Flow Service] API](../../explore/tabular.md)
+* [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um Datenbankdaten mit der [!DNL Flow Service] API](../../collect/database-nosql.md)

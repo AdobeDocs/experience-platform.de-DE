@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; FTP; FTP;
 solution: Experience Platform
 title: FTP Source Connector - Übersicht
-topic-legacy: overview
 description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche einen FTP-Server mit Adobe Experience Platform verbinden.
 exl-id: a6186fad-8a7b-4103-80c7-a522ff69fe9e
-source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '457'
-ht-degree: 73%
+ht-degree: 76%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 73%
 
 >[!NOTE]
 >
->Der FTP-Connector befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
+>Der FTP-Connector befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../home.md#terms-and-conditions), um weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren zu erhalten.
 
 Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform] und [!DNL Azure], sodass Sie Ihre Daten aus diesen Systemen übernehmen können.
 

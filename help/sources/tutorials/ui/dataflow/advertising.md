@@ -2,11 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Datenfluss konfigurieren; Werbe-Connector
 solution: Experience Platform
 title: Erstellen eines Datenflusses mithilfe einer Werbequelle in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 description: Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen Platform-Datensatz aufnimmt. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Platform-Benutzeroberfläche einen Datenfluss für eine Werbequelle erstellen.
 exl-id: 8dd1d809-e812-4a13-8831-189726b2430e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1387'
 ht-degree: 50%

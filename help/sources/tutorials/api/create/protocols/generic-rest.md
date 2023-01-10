@@ -2,14 +2,13 @@
 keywords: Experience Platform; Startseite; beliebte Themen; generische REST; generische Ruhezeit
 solution: Experience Platform
 title: Erstellen einer generischen REST-API-Basisverbindung mit der Flow Service-API
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API eine Verbindung der generischen REST-API mit Adobe Experience Platform herstellen.
 exl-id: 6b414868-503e-49d5-8f4a-5b2fc003dab0
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '945'
-ht-degree: 54%
+ht-degree: 59%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 54%
 
 >[!NOTE]
 >
->Die [!DNL Generic REST API] -Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
+>Die [!DNL Generic REST API]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions), um weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren zu erhalten.
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -188,7 +187,7 @@ Eine erfolgreiche Antwort gibt die neu erstellte Basisverbindung zurück, einsch
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Generic REST API] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basis-Verbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL Generic REST API] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
-* [Struktur und Inhalt Ihrer Datentabellen mithilfe des [!DNL Flow Service] API](../../explore/tabular.md)
+* [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um Protokolldaten mit der [!DNL Flow Service] API](../../collect/protocols.md)

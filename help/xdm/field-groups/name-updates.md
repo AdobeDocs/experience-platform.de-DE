@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Endbenutzer; Endbenutzer; Endbenutzer; ID; Aktualisierungen;
 solution: Experience Platform
 title: Aktualisierung der Namen der Schemafeldgruppe
-topic-legacy: overview
 description: Eine Liste der letzten Änderungen am Namen der XDM-Schema-Feldergruppe.
 exl-id: 2c775b86-7262-4f05-b421-c626867de0a4
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 12%

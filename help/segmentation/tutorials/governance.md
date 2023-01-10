@@ -2,11 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Datennutzungskonformität; erzwingen; Einhaltung von Datennutzungsregeln durchsetzen; Segmentierungsdienst; Segmentierung; Segmentierung;
 solution: Experience Platform
 title: Durchsetzen der Datennutzungskonformität für ein Zielgruppensegment mithilfe von APIs
-topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Durchsetzen der Datennutzungskonformität für Zielgruppensegmente des Echtzeit-Kundenprofils mithilfe von APIs beschrieben.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1368'
 ht-degree: 51%

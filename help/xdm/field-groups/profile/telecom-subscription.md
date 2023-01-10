@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; individuelles Profil; Felder; Schemas; Schemas; Telekom; Abonnement; Telekommunikation; Schema-Design; Feldergruppe; Feldergruppe;
 solution: Experience Platform
 title: Feldgruppe "Telecom Subscription Schema"
-topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Feldergruppe "Telecom Subscription".
 exl-id: 00c20081-09d0-425c-9894-0f957558bd43
-source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '730'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 11%
 
 >[!NOTE]
 >
->Die Namen verschiedener Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
+>Die Namen mehrerer Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
 
 [!UICONTROL Telekom-Abonnement] ist eine Standardschemafeldgruppe für die [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) beschreibt den Telekom-Abonnementplan eines Kunden, einschließlich Preisen, Paketen und individuellen Produktabonnements.
 

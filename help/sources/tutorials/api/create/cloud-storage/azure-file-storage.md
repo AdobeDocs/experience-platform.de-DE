@@ -2,18 +2,17 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Azure; Azure-Dateispeicher; Azure-Dateispeicher
 solution: Experience Platform
 title: Erstellen einer Azure File Storage Base-Verbindung mithilfe der Flow Service-API
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Azure File Storage mit Adobe Experience Platform verbinden.
 exl-id: 0c585ae2-be2d-4167-b04b-836f7e2c04a9
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 62%
+ht-degree: 64%
 
 ---
 
-# Erstellen Sie eine [!DNL Azure File Storage] Basisverbindung mit [!DNL Flow Service] API
+# Erstellen einer [!DNL Azure File Storage]-Basisverbindung mithilfe der [!DNL Flow Service]-API
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 

@@ -3,9 +3,8 @@ keywords: Experience Platform;Startseite;beliebte Themen;API;XDM;XDM-System;Expe
 solution: Experience Platform
 title: Feldergruppen-API-Endpunkt
 description: Mit dem Endpunkt /fieldgroups in der Schema Registry-API können Sie XDM-Schemafeldgruppen in Ihrer Erlebnisanwendung programmgesteuert verwalten.
-topic-legacy: developer guide
 exl-id: d26257e4-c7d5-4bff-b555-7a2997c88c74
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1216'
 ht-degree: 13%

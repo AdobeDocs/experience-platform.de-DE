@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Audience Manager-Connector; Audience Manager; Audience Manager
 solution: Experience Platform
 title: Übersicht über die Audience Manager-Quelle
-topic-legacy: overview
 description: Die Adobe Audience Manager-Quelle streamt Erstanbieterdaten, die im Audience Manager erfasst wurden, an Adobe Experience Platform.
 exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 1%

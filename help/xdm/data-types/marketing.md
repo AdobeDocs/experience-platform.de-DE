@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Gerät; Datentyp; Datentyp; Datentyp;
 solution: Experience Platform
 title: Marketing-Datentyp
-topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den Marketing-XDM-Datentyp.
 exl-id: b5ac0127-15fe-42b6-b7fc-2fbcda7e7e27
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 7%

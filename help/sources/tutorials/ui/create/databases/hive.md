@@ -2,11 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Apache Hive; Azure HDInsights; Azure Hdinsights
 solution: Experience Platform
 title: Erstellen eines Apache Hive auf Azure HDInsights Source Connection in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung mit Apache Hive auf Azure HDInsights erstellen.
 exl-id: 3eb3cb02-9867-451a-b847-ab895310eedf
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 52%

@@ -2,11 +2,10 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Flow Service;Konten aktualisieren
 solution: Experience Platform
 title: Aktualisieren von Konten mithilfe der Flow Service-API
-topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Aktualisieren der Details und Anmeldeinformationen eines Kontos mithilfe der Flow Service-API beschrieben.
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 100%

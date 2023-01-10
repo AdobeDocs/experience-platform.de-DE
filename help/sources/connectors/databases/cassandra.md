@@ -2,9 +2,8 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Apache Cassandra;Apache Cassandra;Cassandra;Cassandra
 solution: Experience Platform
 title: Überblick über den Quell-Connector für Apache Cassandra
-topic-legacy: overview
 description: Erfahren Sie, wie Sie Apache Cassandra mithilfe von APIs mit Adobe Experience Platform verbinden.
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 39%

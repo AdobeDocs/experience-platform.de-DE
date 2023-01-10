@@ -1,10 +1,9 @@
 ---
 solution: Experience Platform
 title: Datenmodell für die Reise- und Gastgewerbe
-topic-legacy: overview
 description: Zeigen Sie ein Entitätsbeziehungsdiagramm (ERD) an, das ein standardisiertes Datenmodell für die Reise- und Gastgewerbe beschreibt, das mit dem Experience-Datenmodell (XDM) für die Verwendung in Adobe Experience Platform kompatibel ist.
 exl-id: 4d454160-9066-4702-815b-9509942f709e
-source-git-commit: 295dc040f3af7342226e3d78d0ae21e73db58d57
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '451'
 ht-degree: 17%

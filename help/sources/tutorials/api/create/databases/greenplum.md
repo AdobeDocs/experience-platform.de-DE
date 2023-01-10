@@ -2,14 +2,13 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Greenplum; Greenplum
 solution: Experience Platform
 title: Erstellen einer GreenPlum-Basisverbindung mit der Flow Service-API
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API eine Verbindung von GreenPlum mit Adobe Experience Platform herstellen.
 exl-id: c4ce452a-b4c5-46ab-83ab-61b296c271d0
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '434'
-ht-degree: 61%
+ht-degree: 66%
 
 ---
 
@@ -97,7 +96,7 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, ei
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL GreenPlum] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basis-Verbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL GreenPlum] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
-* [Struktur und Inhalt Ihrer Datentabellen mithilfe des [!DNL Flow Service] API](../../explore/tabular.md)
+* [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um Datenbankdaten mit der [!DNL Flow Service] API](../../collect/database-nosql.md)

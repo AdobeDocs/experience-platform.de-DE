@@ -2,21 +2,20 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Datenquelle der Einstiegszone
-topic-legacy: overview
 description: Erfahren Sie, wie Sie die Einstiegszone für Daten mit Adobe Experience Platform verbinden.
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '817'
-ht-degree: 22%
+ht-degree: 48%
 
 ---
 
 # [!DNL Data Landing Zone]
 
-[!DNL Data Landing Zone] ist eine von Adobe Experience Platform bereitgestellte [!DNL Azure Blob]-Speicherschnittstelle, die Ihnen Zugriff auf eine sichere, Cloud-basierte Dateispeichereinrichtung gewährt, um Dateien in Platform zu laden. Sie haben Zugriff auf eine [!DNL Data Landing Zone] Behälter pro Sandbox und das gesamte Datenvolumen über alle Container hinweg ist auf die Gesamtdaten beschränkt, die mit Ihrer Platform-Produkte- und -Services-Lizenz bereitgestellt werden. Alle Kunden von Platform und die zugehörigen Anwendungsdienste wie [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services]und [!DNL Adobe Real-Time Customer Data Platform] mit einem [!DNL Data Landing Zone] Container pro Sandbox. Sie können Dateien in Ihren Container lesen und schreiben, indem Sie [!DNL Azure Storage Explorer] oder der Befehlszeilenschnittstelle.
+[!DNL Data Landing Zone] ist eine von Adobe Experience Platform bereitgestellte [!DNL Azure Blob]-Speicherschnittstelle, die Ihnen Zugriff auf eine sichere, Cloud-basierte Dateispeichereinrichtung gewährt, um Dateien in Platform zu laden. Sie haben Zugriff auf einen [!DNL Data Landing Zone]-Container pro Sandbox, und das gesamte Datenvolumen über alle Container hinweg ist auf die Gesamtdaten beschränkt, die mit Ihrer Produkt- und Services-Lizenz von Platform bereitgestellt werden. Alle Kundinnen und Kunden von Platform sowie die zugehörigen Anwendungs-Services wie [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services] und [!DNL Adobe Real-Time Customer Data Platform] erhalten einen [!DNL Data Landing Zone]-Container pro Sandbox. Sie können Dateien in Ihren Container lesen und schreiben, indem Sie [!DNL Azure Storage Explorer] oder der Befehlszeilenschnittstelle.
 
-[!DNL Data Landing Zone] unterstützt die SAS-basierte Authentifizierung und die Daten sind durch Standard geschützt [!DNL Azure Blob] Sicherheitsmechanismen für die Lagerung im Ruhezustand und im Transit. Mit der SAS-basierten Authentifizierung können Sie sicher auf Ihre [!DNL Data Landing Zone] Container über eine öffentliche Internetverbindung. Es sind keine Netzwerkänderungen erforderlich, damit Sie auf Ihre [!DNL Data Landing Zone] -Container verwenden, müssen Sie also keine Zulassungslisten oder regionenübergreifenden Setups für Ihr Netzwerk konfigurieren. Platform erzwingt für alle Dateien, die in eine [!DNL Data Landing Zone] Container. Alle Dateien werden nach sieben Tagen gelöscht.
+[!DNL Data Landing Zone] unterstützt die SAS-basierte Authentifizierung, und die Daten werden im Ruhezustand und bei der Übertragung mit standardmäßigen [!DNL Azure Blob]-Speichersicherheitsmechanismen geschützt. Mit der SAS-basierten Authentifizierung können Sie sicher über eine öffentliche Internetverbindung auf Ihren [!DNL Data Landing Zone]-Container zugreifen. Für die Verwendung Ihres [!DNL Data Landing Zone]-Containers sind keine Netzwerkänderungen erforderlich. Sie müssen also keine Zulassungslisten oder regionenübergreifende Setups für Ihr Netzwerk konfigurieren. Platform erzwingt für alle Dateien, die in eine [!DNL Data Landing Zone] Container. Alle Dateien werden nach sieben Tagen gelöscht.
 
 ## Namensbeschränkungen für Dateien und Verzeichnisse
 
@@ -31,13 +30,13 @@ Im Folgenden finden Sie eine Liste von Einschränkungen, die Sie bei der Benennu
 
 ## Verwalten des Inhalts Ihrer [!DNL Data Landing Zone]
 
-Sie können [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) die Inhalte Ihrer [!DNL Data Landing Zone] Container.
+Sie können [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/de-de/features/storage-explorer/) verwenden, um die Inhalte Ihres [!DNL Data Landing Zone]-Containers zu verwalten.
 
-Im [!DNL Azure Storage Explorer] -Benutzeroberfläche das Verbindungssymbol im linken Navigationsbereich auswählen. Die **Ressource auswählen** -Fenster angezeigt, mit dem Sie eine Verbindung herstellen können. Auswählen **[!DNL Blob container]** zur Verbindung mit [!DNL Data Landing Zone].
+Im [!DNL Azure Storage Explorer] -Benutzeroberfläche das Verbindungssymbol im linken Navigationsbereich auswählen. Das Fenster **Ressource auswählen** wird angezeigt, in dem Sie Optionen für das Verbinden finden. Auswählen **[!DNL Blob container]** zur Verbindung mit [!DNL Data Landing Zone].
 
 ![select-resource](../../images/tutorials/create/dlz/select-resource.png)
 
-Wählen Sie als Nächstes **Shared Access Signature URL (SAS)** als Verbindungsmethode und wählen Sie dann **Nächste**.
+Wählen Sie als Nächstes **Shared Access Signature URL (SAS)** als Verbindungsmethode und klicken Sie dann auf **Weiter**.
 
 ![select-connection-method](../../images/tutorials/create/dlz/select-connection-method.png)
 
@@ -47,15 +46,15 @@ Nach Auswahl der Verbindungsmethode müssen Sie als Nächstes eine **Anzeigename
 >
 >Sie können Ihre [!DNL Data Landing Zone] Anmeldedaten aus dem Quellkatalog in der Platform-Benutzeroberfläche.
 
-Geben Sie Ihre [!DNL Data Landing Zone] SAS-URL und dann **Nächste**
+Geben Sie Ihre SAS-URL für die [!DNL Data Landing Zone] an und klicken Sie dann auf **Weiter**
 
 ![enter-connection-info](../../images/tutorials/create/dlz/enter-connection-info.png)
 
-Die **Zusammenfassung** -Fenster angezeigt, das Ihnen einen Überblick über Ihre Einstellungen einschließlich Informationen zu Ihrer [!DNL Blob] -Endpunkt und Berechtigungen. Wenn Sie bereit sind, wählen Sie **Verbinden**.
+Das Fenster **Zusammenfassung** wird angezeigt. Es gibt Ihnen einen Überblick über Ihre Einstellungen, einschließlich Informationen zu Ihrem [!DNL Blob]-Endpunkt und Berechtigungen. Wenn Sie bereit sind, klicken Sie auf **Verbinden**.
 
-![summary](../../images/tutorials/create/dlz/summary.png)
+![Zusammenfassung](../../images/tutorials/create/dlz/summary.png)
 
-Eine erfolgreiche Verbindung aktualisiert Ihre [!DNL Azure Storage Explorer] Benutzeroberfläche mit [!DNL Data Landing Zone] Container.
+Eine erfolgreiche Verbindung aktualisiert Ihre Benutzeroberfläche von [!DNL Azure Storage Explorer] mit Ihrem [!DNL Data Landing Zone]-Container.
 
 ![dlz-user-container](../../images/tutorials/create/dlz/dlz-user-container.png)
 
@@ -157,5 +156,5 @@ Die nachstehende Dokumentation enthält Informationen zum Datenimport von [!DNL 
 
 ### Verwenden der Benutzeroberfläche
 
-- [Verbinden [!DNL Data Landing Zone] zur Plattform mithilfe der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
+- [Verbinden von  [!DNL Data Landing Zone]  mit Platform über die Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [Erstellen eines Datenflusses für eine Cloud-Speicherverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)

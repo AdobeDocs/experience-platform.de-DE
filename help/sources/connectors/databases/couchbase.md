@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Couchbase; Couchbase
 solution: Experience Platform
 title: Übersicht über den Connector für Couchbase-Quellen
-topic-legacy: overview
 description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche eine Verbindung zwischen Couchbase und Adobe Experience Platform herstellen.
 exl-id: 4b1cc352-3b1a-4015-baee-b1d42c15a400
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '209'
-ht-degree: 36%
+ht-degree: 45%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 36%
 
 >[!NOTE]
 >
->Die [!DNL Couchbase] -Connector befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
+>Die [!DNL Couchbase] -Connector befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../home.md#terms-and-conditions), um weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren zu erhalten.
 
 Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie [!DNL Microsoft], MySQL und [!DNL Azure], sodass Sie Ihre Daten aus diesen Systemen mitbringen können. Es werden verschiedene Arten von Datenbanken von Drittanbietern unterstützt, darunter relationale Datenbanken, NoSQL-Datenbanken oder Data Warehouse. Unterstützung für Datenbankanbieter umfasst [!DNL Couchbase].
 
@@ -29,7 +28,7 @@ Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Couch
 ## Verbinden von [!DNL Couchbase] mit [!DNL Platform] mithilfe von APIs
 
 - [Erstellen einer Basisverbindung für Couchbase mithilfe der Flow Service-API](../../tutorials/api/create/databases/couchbase.md)
-- [Datentabellen mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/tabular.md)
+- [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine Datenbankquelle mithilfe der Flow Service-API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbinden von [!DNL Couchbase] mit [!DNL Platform] über die Benutzeroberfläche

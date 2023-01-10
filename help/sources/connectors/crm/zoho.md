@@ -2,13 +2,12 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Zoho CRM;Zoho crm;Zoho;Zoho
 solution: Experience Platform
 title: Übersicht über den Quell-Connector Zoho CRM
-topic-legacy: overview
 description: Erfahren Sie, wie Sie Zoho CRM über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 4a010453-3d09-4a47-b04e-5789ae4af48c
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '525'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -51,7 +50,7 @@ Ausführliche Anweisungen zur Anforderung Ihrer Anmeldedaten finden Sie im [[!DN
 Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Zoho CRM] mit Platform mithilfe von APIs oder der Benutzeroberfläche:
 
 - [Erstellen einer  [!DNL Zoho CRM] -Basisverbindung mit der Flow Service-API](../../tutorials/api/create/crm/zoho.md)
-- [Datentabellen mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/tabular.md)
+- [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine CRM-Quelle mithilfe der Flow Service-API](../../tutorials/api/collect/crm.md)
 
 ## Verbinden von [!DNL Zoho CRM] mit [!DNL Platform] über die Benutzeroberfläche

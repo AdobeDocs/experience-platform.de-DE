@@ -2,14 +2,13 @@
 keywords: Experience Platform; Startseite; beliebte Themen; PayPal-Connector; PayPal; Paypal
 solution: Experience Platform
 title: Erstellen einer PayPal-Basisverbindung mit der Flow Service-API
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie PayPal mithilfe der Flow Service-API mit Adobe Experience Platform verbinden.
 exl-id: 5e6ca7b4-5e2f-4706-a339-ac159e2e0938
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '464'
-ht-degree: 54%
+ht-degree: 59%
 
 ---
 
@@ -107,7 +106,7 @@ Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließ
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL PayPal] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basis-Verbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL PayPal] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
-* [Struktur und Inhalt Ihrer Datentabellen mithilfe des [!DNL Flow Service] API](../../explore/tabular.md)
+* [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um Zahlungsdaten mit der [!DNL Flow Service] API](../../collect/payments.md)

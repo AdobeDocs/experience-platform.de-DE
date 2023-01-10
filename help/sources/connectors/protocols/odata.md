@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; OData; Daten; oData; generische OData; generische Daten
 solution: Experience Platform
 title: Generic OData Source Overview
-topic-legacy: overview
 description: Erfahren Sie, wie Sie generische OData über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: ff50f883-d4fd-4f32-a9d6-fe4624a32e24
-source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '221'
-ht-degree: 55%
+ht-degree: 59%
 
 ---
 
@@ -27,7 +26,7 @@ Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Gener
 ## Verbinden von [!DNL Generic OData] mit [!DNL Platform] mithilfe von APIs
 
 - [Erstellen einer generischen OData-Basisverbindung mit der Flow Service-API](../../tutorials/api/create/protocols/odata.md)
-- [Datentabellen mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/tabular.md)
+- [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine Protokollquelle mithilfe der Flow Service-API](../../tutorials/api/collect/protocols.md)
 
 ## Verbinden von [!DNL Generic OData] mit [!DNL Platform] über die Benutzeroberfläche

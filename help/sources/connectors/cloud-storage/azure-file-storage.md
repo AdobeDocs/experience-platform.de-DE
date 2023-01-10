@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Azure-Dateispeicher; Azure-Dateispeicher
 solution: Experience Platform
 title: Azure File Storage Source Connector - Übersicht
-topic-legacy: overview
 description: Erfahren Sie, wie Sie Azure File Storage über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
-source-git-commit: 446436346e3368d98eb990dba1000ac0974b84dc
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 83%

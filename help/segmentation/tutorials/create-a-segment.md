@@ -2,11 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Segment; Segment erstellen; Segment erstellen; Segmentierung; Segment erstellen; Segmentierungsdienst
 solution: Experience Platform
 title: Erstellen eines Segments mithilfe der Segmentation Service-API
-topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie eine Segmentdefinition mithilfe der Adobe Experience Platform Segmentation Service-API entwickeln, testen, in der Vorschau anzeigen und speichern.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 21%

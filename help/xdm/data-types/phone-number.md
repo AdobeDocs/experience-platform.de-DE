@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Telefonnummer; xdm:phoneNumber; Datentyp; Datentyp; Datentyp;
 solution: Experience Platform
 title: Datentyp Telefonnummer
-topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp für Telefonnummern.
 exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
-source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 10%

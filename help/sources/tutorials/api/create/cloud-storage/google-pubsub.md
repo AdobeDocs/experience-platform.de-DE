@@ -2,14 +2,13 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Google PubSub;google pubsub
 solution: Experience Platform
 title: Erstellen einer Google PubSub-Quellverbindung mit der Flow Service-API
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit einem Google PubSub-Konto verbinden.
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '724'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -33,8 +32,8 @@ Um [!DNL Flow Service] mit [!DNL PubSub] zu verbinden, müssen Sie Werte für di
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
 | `projectId` | Die zur Authentifizierung von [!DNL PubSub] erforderliche Projekt-ID. |
-| `credentials` | Die zum Authentifizieren von [!DNL PubSub] erforderlichen Anmeldedaten bzw. der erforderliche Schlüssel. |
-| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen im Zusammenhang mit der Erstellung der Datenbank- und Quelle-Ziel-Verbindungen. Die Spezifikations-ID der [!DNL PubSub]-Verbindung lautet: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+| `credentials` | Die zur Authentifizierung von [!DNL PubSub] erforderlichen Anmeldeinformationen bzw. der Schlüssel. |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen im Zusammenhang mit der Erstellung der Basis- und Quell-Target-Verbindungen. Die Spezifikations-ID der [!DNL PubSub]-Verbindung lautet: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 Weitere Informationen zu diesen Werten finden Sie in diesem Dokument zur [[!DNL PubSub] Authentifizierung](https://cloud.google.com/pubsub/docs/authentication). Informationen zur Verwendung der auf Service-Konten basierenden Authentifizierung finden Sie in diesem [[!DNL PubSub] Handbuch zum Erstellen von Service-Konten](https://cloud.google.com/docs/authentication/production#create_service_account) in den Schritten zum Erstellen von Anmeldedaten.
 

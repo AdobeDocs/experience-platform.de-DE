@@ -2,11 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Marketing Automation Connector
 solution: Experience Platform
 title: Erstellen eines Datenflusses mithilfe einer Marketing-Automatisierungsquelle in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 description: Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen Platform-Datensatz aufnimmt. In diesem Tutorial erfahren Sie, wie Sie einen Datenfluss für eine Marketing-Automatisierungsquelle mithilfe der Platform-Benutzeroberfläche erstellen.
 exl-id: 8d31fc2d-b952-44f7-98e7-f51b0acc19ed
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1395'
 ht-degree: 49%

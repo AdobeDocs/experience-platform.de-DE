@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Gerät; Handel; Handel; Handel; Handel in;
 solution: Experience Platform
 title: Schema-Feldergruppe "Device Trade-in-Details"
-topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Schemakonferenz für das Schema "Device Trade-In Details".
 exl-id: 744557be-0297-453f-9134-9d0f4ef2df4d
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '178'
-ht-degree: 11%
+ht-degree: 16%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 11%
 
 >[!NOTE]
 >
->Die Namen verschiedener Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
+>Die Namen mehrerer Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
 
 [!UICONTROL Details zum Gerätehandel] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). Es bietet ein einzelnes Feld (`deviceTradeInDetails`), die eine Transaktion mit Geräten beschreibt, einschließlich des Handelswerts, der ursprünglichen Geräte-ID und der neuen Geräte-ID.
 

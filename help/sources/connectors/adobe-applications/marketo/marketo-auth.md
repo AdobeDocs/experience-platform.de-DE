@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Marketo Engage; Marketo Interaction; Marketo
 solution: Experience Platform
 title: Authentifizieren des Marketo-Quell-Connectors
-topic-legacy: overview
 description: Dieses Dokument enthält Informationen zum Generieren Ihrer Marketo-Authentifizierungsberechtigungen.
 exl-id: 594dc8b6-cd6e-49ec-9084-b88b1fe8167a
-source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 1%
@@ -56,7 +55,7 @@ Sie können eingeschränkte Berechtigungen für die API verwalten, wenn Sie Roll
 
 ![invited-new-user](../images/marketo/invite-new-user.png)
 
-Ein Popover-Dialogfeld wird angezeigt. Geben Sie die entsprechenden Informationen für Ihre E-Mail-Adresse, Vorname, Nachname und Grund an. In diesem Schritt können Sie auch ein Ablaufdatum für den Zugriff auf das neue Benutzerkonto festlegen, das Sie einladen. Wenn Sie fertig sind, wählen Sie **[!DNL Next]**.
+Ein Popover-Dialogfeld wird angezeigt. Geben Sie die entsprechenden Informationen für Ihre E-Mail-Adresse, Vorname, Nachname und Grund an. In diesem Schritt können Sie auch ein Ablaufdatum für den Zugriff auf das neue Benutzerkonto festlegen, das Sie einladen. Wenn Sie fertig sind, wählen Sie **[!DNL Next]** aus.
 
 >[!IMPORTANT]
 >

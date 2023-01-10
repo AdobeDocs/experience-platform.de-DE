@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; E-Commerce; eCommerce
 solution: Experience Platform
 title: Erkunden einer eCommerce-Verbindung mithilfe der Flow Service-API
-topic-legacy: overview
 description: In diesem Tutorial wird die Flow Service-API verwendet, um E-Commerce-Verbindungen zu untersuchen.
 exl-id: 832ce399-6c9f-40da-8e7c-5434503c16b6
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 35%
@@ -23,7 +22,7 @@ In diesem Tutorial wird die [!DNL Flow Service] API zur Erforschung eines Dritta
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [[!DNL Sources]](../../../home.md): [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten zu strukturieren, zu beschriften und zu erweitern, indem Sie [!DNL Platform] Dienste.
-* [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um eine erfolgreiche Verbindung zu einer **[!UICONTROL eCommerce]** Verbindung mithilfe der [!DNL Flow Service] API.
 

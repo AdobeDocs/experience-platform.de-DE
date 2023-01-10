@@ -2,13 +2,12 @@
 keywords: Experience Platform;home;popular topics;BigQuery;bigquery;Google BigQuery;Google bigquery
 solution: Experience Platform
 title: Google BigQuery Source Connector - Überblick
-topic-legacy: overview
 description: Erfahren Sie, wie Sie Google BigQuery über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
-source-git-commit: 7a62dcf1e9712d3c0c0d148b953e50dc11c91f1b
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '387'
-ht-degree: 34%
+ht-degree: 36%
 
 ---
 
@@ -47,7 +46,7 @@ Die folgende Dokumentation enthält Informationen dazu, wie Sie [!DNL Google Big
 ### Verwenden von APIs
 
 - [Erstellen einer Google BigQuery-Basisverbindung mithilfe der Flow Service-API](../../tutorials/api/create/databases/bigquery.md)
-- [Datentabellen mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/tabular.md)
+- [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine Datenbankquelle mithilfe der Flow Service-API](../../tutorials/api/collect/database-nosql.md)
 
 ### Verwenden der Benutzeroberfläche

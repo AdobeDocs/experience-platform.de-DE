@@ -2,14 +2,13 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Zoho CRM;Zoho crm;Zoho;Zoho
 solution: Experience Platform
 title: Erstellen einer Zoho CRM-Basisverbindung mithilfe der Flow Service-API
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit dem Zoho-CRM verbinden.
 exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '654'
-ht-degree: 92%
+ht-degree: 96%
 
 ---
 
@@ -123,7 +122,7 @@ Bei einer erfolgreichen Antwort werden Details zu der neu erstellten Basisverbin
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Zoho] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basis-Verbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL Zoho] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
-* [Struktur und Inhalt Ihrer Datentabellen mithilfe des [!DNL Flow Service] API](../../explore/tabular.md)
+* [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um CRM-Daten mithilfe des [!DNL Flow Service] API](../../collect/crm.md)

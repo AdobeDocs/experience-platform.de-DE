@@ -2,11 +2,10 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Marketing-Automatisierungssystem;Erfassen von Daten zur Marketing-Automatisierung
 solution: Experience Platform
 title: Erstellen Sie einen Datenfluss für Marketing-Automatisierungsquellen mithilfe der Flow Service-API
-topic-legacy: overview
 type: Tutorial
 description: Dieses Tutorial behandelt die Schritte zum Abrufen von Daten aus einem Marketing-Automatisierungssystem und zum Übertragen dieser Daten in Adobe Experience Platform mithilfe von Quell-Connectoren und APIs.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1329'
 ht-degree: 94%

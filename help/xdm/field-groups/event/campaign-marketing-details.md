@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Feldergruppe;
 solution: Experience Platform
 title: Feldgruppe "Campaign Marketing Details"
-topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Schemakontrolle des Campaign-Marketing-Details-Schemas.
 exl-id: be08b38b-68a0-4a74-9b8f-0344a0637395
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '150'
-ht-degree: 12%
+ht-degree: 18%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 12%
 
 >[!NOTE]
 >
->Die Namen verschiedener Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
+>Die Namen mehrerer Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
 
 [!UICONTROL Kampagnen-Marketingdetails] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md)verwendet, um Marketing-Kampagneninformationen wie Kampagnengruppe, Name und Trackingcode zu beschreiben.
 

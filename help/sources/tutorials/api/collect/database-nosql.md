@@ -2,11 +2,10 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenbankdatenbank;Datenbank von Drittanbietern
 solution: Experience Platform
 title: Erstellen eines Datenflusses für Datenbankquellen mit der Flow Service-API
-topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Datenbank und zum Aufnehmen in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1386'
 ht-degree: 95%

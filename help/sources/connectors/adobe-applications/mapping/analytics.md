@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Analytics-Zuordnungsfelder; Analytics-Zuordnung
 solution: Experience Platform
 title: Zuordnen von Feldern für den Adobe Analytics Source Connector
-topic-legacy: overview
 description: Mit Adobe Experience Platform können Sie Adobe Analytics-Daten über die Analytics-Quelle erfassen. Manche der über ADC erfassten Daten können direkt aus Analytics-Feldern Experience-Datenmodell (XDM)-Feldern zugeordnet werden, während andere Daten Transformationen und spezifische Funktionen erfordern, um sich richtig zuordnen zu lassen.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '3431'
 ht-degree: 97%
@@ -247,7 +246,7 @@ Folgende Tabelle enthält Spalten, die den Namen des Analytics-Felds (*Analytics
 | post_mvvar1 - post_mvvar3 | _experience.analytics.customDimensions.lists.list1.list[] - _experience.analytics.customDimensions.lists.list3.list[] | array | Eine Liste mit Variablenwerten. Enthält eine durch Trennzeichen getrennte Liste benutzerdefinierter Werte (je nach Implementierung). | {value (string), key (string)} |
 | post_cookies | environment.browserDetails.cookiesEnabled | Boolescher Wert | Die Variable, die in der Dimension „Cookie-Unterstützung“ verwendet wird. |
 | post_event_list | commerce.purchases, commerce.productViews, commerce.productListOpens, commerce.checkouts, commerce.productListAdds, commerce.productListRemovals, commerce.productListViews | Objekt | Beim Treffer ausgelöste Standard-Verkaufsereignisse. | {id (string), value (number)} |
-| post_event_list | _experience.analytics.event1to100.event1 - _experience.analytics.event1to100.event100, _experience.analytics.event101to200.event101 - _experience.analytics.event101to200.event20 _experience.analytics.event201to300.event201 - _experience.analytics.event201to300.event300, _experience.analytics.event301to400.event301 - _experience.analytics.event30 1to400.event400, _experience.analytics.event401to500.event401 - _experience.analytics.event401to500.event500, _experience.analytics.event501to600.event5 01 - _experience.analytics.event501to600.event600, _experience.analytics.event601to700.event601 - _experience.analytics.event601to700.event700, _experience.analytics.event7 01to800.event701 - _experience.analytics.event701to800.event800, _experience.analytics.event801to900.event801 - _experience.analytics.event801to900.event 900, _experience.analytics.event901to1000.event901 - _experience.analytics.event901to1000.event1000 | Objekt | Benutzerdefinierte Ereignisse, die beim Treffer ausgelöst werden. | {id (Object), value (Object)} |
+| post_event_list | _experience.analytics.event1to100.event1 - _experience.analytics.event1to100.event100, _experience.analytics.event101to200.event101 - _experience.analytics.event101to200.event200, _experience.analytics.event201to300.event201 - _experience.analytics.event201to300.event300, _experience.analytics.event301to400.event301 - _experience.analytics.event301to400.event400, _experience.analytics.event401to500.event401 - _experience.analytics.event401to500.event500, _experience.analytics.event501to600.event501 - _experience.analytics.event501to600.event600, _experience.analytics.event601to700.event601 - _experience.analytics.event601to700.event700, _experience.analytics.event701to800.event701 - _experience.analytics.event701to800.event800, _experience.analytics.event801to900.event801 - _experience.analytics.event801to900.event900, _experience.analytics.event901to1000.event901 - _experience.analytics.event901to1000.event1000 | Objekt | Benutzerdefinierte Ereignisse, die beim Treffer ausgelöst werden. | {id (Object), value (Object)} |
 | post_java_enabled | environment.browserDetails.javaEnabled | Boolescher Wert | Eine Markierung, die angibt, ob Java aktiviert ist. |
 | post_latitude | placeContext.geo._schema.latitude | number | <!-- MISSING --> |
 | post_longitude | placeContext.geo._schema.longitude | number | <!-- MISSING --> |

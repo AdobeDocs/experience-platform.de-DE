@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Segmentierung; Segmentierung; Segment Builder; Segment Builder
 solution: Experience Platform
 title: Anleitung zur überarbeiteten Segmentierungszeitbegrenzung
-topic-legacy: ui guide
 description: Segment Builder bietet eine umfangreiche Arbeitsfläche, über die Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen.
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '297'
 ht-degree: 11%

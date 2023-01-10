@@ -2,14 +2,13 @@
 keywords: Experience Platform; home; beliebte Themen; MySQL; mysql
 solution: Experience Platform
 title: Erstellen Sie eine [!DNL MySQL] Basisverbindung mit der Flow Service-API
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Flow Service-API eine Verbindung zwischen Adobe Experience Platform und MySQL herstellen.
 exl-id: 273da568-84ed-4a3d-bfea-0f5b33f1551a
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '450'
-ht-degree: 61%
+ht-degree: 66%
 
 ---
 
@@ -101,8 +100,8 @@ Bei einer erfolgreichen Antwort werden Details zu der neu erstellten Basisverbin
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL MySQL]Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basis-Verbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL MySQL]Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
-* [Struktur und Inhalt Ihrer Datentabellen mithilfe des [!DNL Flow Service] API](../../explore/tabular.md)
+* [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um Datenbankdaten mit der [!DNL Flow Service] API](../../collect/database-nosql.md)
 

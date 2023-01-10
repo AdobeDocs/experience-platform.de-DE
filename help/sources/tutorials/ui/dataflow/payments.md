@@ -2,11 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Payment Connector
 solution: Experience Platform
 title: Erstellen eines Datenflusses mithilfe einer Zahlungsquelle in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 description: Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen Platform-Datensatz aufnimmt. In diesem Tutorial erfahren Sie, wie Sie einen Datenfluss für eine Zahlungsquelle mithilfe der Platform-Benutzeroberfläche erstellen.
 exl-id: 7355435b-c038-4310-b04a-8ac6b6723b9b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1385'
 ht-degree: 50%

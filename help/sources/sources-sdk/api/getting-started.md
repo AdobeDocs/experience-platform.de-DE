@@ -2,10 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
 solution: Experience Platform
 title: Erste Schritte mit Self-Serve-Quellen (Batch-SDK)
-topic-legacy: developer guide
 description: Dieses Dokument bietet eine Einführung in die erforderlichen Informationen, die Sie kennen müssen, bevor Sie versuchen, eine neue Quelle mit Self-Serve-Quellen (Batch SDK) zu erstellen.
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 58%

@@ -1,14 +1,13 @@
 ---
 keywords: Experience Platform; Homepage; beliebte Themen; Snowflake
 title: Erstellen einer Snowflake-Quellverbindung in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Snowflake-Quellverbindung erstellen.
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: ac7910c971fbedf3afebd87633f814d597260cae
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '445'
-ht-degree: 39%
+ht-degree: 41%
 
 ---
 
@@ -33,7 +32,7 @@ Um auf Ihr Snowflake-Konto zuzugreifen, klicken Sie auf [!DNL Platform]müssen S
 | Warehouse | Die [!DNL Snowflake] Warehouse verwaltet den Prozess der Ausführung der Abfrage für die Anwendung. Jeder [!DNL Snowflake] Warehouse ist unabhängig voneinander und muss einzeln aufgerufen werden, wenn Daten an Platform übermittelt werden. |
 | Datenbank | Die [!DNL Snowflake] -Datenbank enthält die Daten, die Sie an Platform übermitteln möchten. |
 | Benutzername | Der Benutzername für die [!DNL Snowflake] -Konto. |
-| Passwort | Das Kennwort für die [!DNL Snowflake] Benutzerkonto. |
+| Kennwort | Das Kennwort für die [!DNL Snowflake] Benutzerkonto. |
 | Verbindungszeichenfolge | Die Verbindungszeichenfolge, über die die Verbindung zu Ihrem [!DNL Snowflake] -Instanz. Das Verbindungszeichenfolgenmuster für [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
 Weitere Informationen zu diesen Werten finden Sie unter [Dieses Snowflake-Dokument](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
@@ -58,7 +57,7 @@ Um ein bestehendes Konto zu verbinden, wählen Sie das Snowflake-Konto aus, mit 
 
 ### Neues Konto
 
-Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]**. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre Snowflake-Anmeldedaten ein. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Verbinden]** und dann etwas Zeit für die Einrichtung der neuen Verbindung.
+Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre Snowflake-Anmeldedaten ein. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Verbinden]** und dann etwas Zeit für die Einrichtung der neuen Verbindung.
 
 ![](../../../../images/tutorials/create/snowflake/new.png)
 

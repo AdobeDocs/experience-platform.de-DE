@@ -2,10 +2,9 @@
 keywords: Experience Platform; Homepage; beliebte Themen; Zahlung
 solution: Experience Platform
 title: Ein Zahlungssystem mithilfe der Flow Service-API durchsuchen
-topic-legacy: overview
 description: In diesem Tutorial wird die Flow Service-API verwendet, um Zahlungsanwendungen zu untersuchen.
 exl-id: 7d0231de-46c0-49df-8a10-aeb42a2c8822
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '597'
 ht-degree: 39%

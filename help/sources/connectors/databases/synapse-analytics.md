@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Azure synapse Analytics; azure synapse-Analyse; Synapse; Synapse
 solution: Experience Platform
 title: azure synapse Analytics Source Connector - Überblick
-topic-legacy: overview
 description: Erfahren Sie, wie Sie Azure synapse Analytics mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
 exl-id: 5b94ae74-e5a7-40e9-a952-41eddf06dcde
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '240'
-ht-degree: 55%
+ht-degree: 58%
 
 ---
 
@@ -27,7 +26,7 @@ Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Azure
 ## Verbinden von [!DNL Azure Synapse Analytics] mit [!DNL Platform] mithilfe von APIs
 
 - [Erstellen einer Basisverbindung für Azure synapse Analytics mithilfe der Flow Service-API](../../tutorials/api/create/databases/synapse-analytics.md)
-- [Datentabellen mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/tabular.md)
+- [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine Datenbankquelle mithilfe der Flow Service-API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbinden von [!DNL Azure Synapse Analytics] mit [!DNL Platform] über die Benutzeroberfläche

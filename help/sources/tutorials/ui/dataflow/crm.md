@@ -2,11 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; crm-Schema; crm; CRM; Datenfluss; Dataflow
 solution: Experience Platform
 title: Erstellen eines Datenflusses mithilfe einer CRM-Quelle in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 description: Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen Platform-Datensatz aufnimmt. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Platform-Benutzeroberfläche einen Datenfluss für eine CRM-Quelle erstellen.
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 48%

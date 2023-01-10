@@ -2,11 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Amazon S3; Azure Blob
 solution: Experience Platform
 title: Erstellen einer Azure Blob- oder Amazon S3-Quellverbindung in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung von Azure Blob oder Amazon S3 erstellen.
 exl-id: de2db0cb-3ce4-46d1-96c4-00f779f81670
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 27%

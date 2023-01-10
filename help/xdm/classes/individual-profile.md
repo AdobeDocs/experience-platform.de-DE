@@ -1,14 +1,13 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Schema;XDM;individuelles Profil;Felder;Schemas;Schemas;Identitätszuordnung;Identitätszuordnung;Schema-Design;Map;Map;Vereinigungsschema;Vereinigungsschema
+keywords: Experience Platform;Startseite;beliebte Themen;Schema;Schema;XDM;individuelles Profil;Felder;Schemas;Schemata;identityMap;identität zuordnen;Identität zuordnen;Schema-Design;map;Map;Vereinigungsschema;Vereinigung
 solution: Experience Platform
 title: XDM Individual Profile Class
-topic-legacy: overview
-description: Dieses Dokument bietet einen Überblick über die Klasse "XDM Individual Profile".
+description: Dieses Dokument bietet einen Überblick über die Klasse „XDM Individual Profile“.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '598'
-ht-degree: 32%
+ht-degree: 38%
 
 ---
 

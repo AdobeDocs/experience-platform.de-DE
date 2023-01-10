@@ -2,10 +2,9 @@
 keywords: Experience Platform; Homepage; beliebte Themen; Oracle-Objektspeicher; oracle-Objektspeicher
 solution: Experience Platform
 title: Oracle Object Storage Source Connector - Übersicht
-topic-legacy: overview
 description: Erfahren Sie, wie Sie mit APIs oder der Benutzeroberfläche eine Verbindung zwischen Oracle-Objektspeicher und Adobe Experience Platform herstellen.
 exl-id: 5e8b85c8-9f01-49a6-9556-7b9c7518fb4b
-source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 64%

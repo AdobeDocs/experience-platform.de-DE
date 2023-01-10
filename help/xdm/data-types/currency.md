@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Gerät; Datentyp; Datentyp; Datentyp; Währung;
 solution: Experience Platform
 title: Währungs-Datentyp
-topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den Währungs-XDM-Datentyp.
 exl-id: eaf4812e-32ec-4b07-82ef-60777f03623d
-source-git-commit: 5e92b288bb8c996cfcf343d8ac1ab1665b0d3ad0
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '127'
 ht-degree: 7%

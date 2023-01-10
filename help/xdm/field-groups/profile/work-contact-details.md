@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; individuelles Profil; Felder; Schemas; Schemas; Schemadesign; Mixin; Mixins; Arbeitsdetails; Profilarbeit;
 solution: Experience Platform
 title: Schema-Feldergruppe "Kontaktdetails bearbeiten"
-topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Feldergruppe "Arbeitskontaktdetails".
 exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '193'
-ht-degree: 12%
+ht-degree: 17%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 12%
 
 >[!NOTE]
 >
->Die Namen verschiedener Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
+>Die Namen mehrerer Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
 
 [!UICONTROL Kontaktangaben für Arbeitskontakte] ist eine Standardschemafeldgruppe für die [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). Die Feldergruppe bietet mehrere Felder, die berufsbezogene Informationen über eine Person erfassen, z. B. Arbeitsadresse, Arbeits-E-Mail, Berufs-Telefonnummer und Organisationen, zu denen die Person gehört.
 

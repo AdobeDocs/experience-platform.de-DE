@@ -2,11 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Einverständnis und Voreinstellungen; Einverständnis; Vertrauen; OneTrust
 solution: Experience Platform
 title: Erstellen eines Datenflusses mithilfe einer Einverständnis- und Voreinstellungsquelle in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 description: Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen Platform-Datensatz aufnimmt. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Platform-Benutzeroberfläche einen Datenfluss für eine Zustimmungs- und Voreinstellungsquelle erstellen.
 exl-id: 340b5945-baa1-4f79-88fa-2572606f6083
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 48%

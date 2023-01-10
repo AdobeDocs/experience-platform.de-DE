@@ -3,9 +3,8 @@ keywords: Experience Platform; Startseite; beliebte Themen; API; XDM; XDM; XDM-S
 solution: Experience Platform
 title: Erste Schritte mit der Schema Registry-API
 description: Dieses Dokument bietet eine Einführung in die wichtigsten Konzepte, die Sie kennen müssen, bevor Sie Aufrufe an die Schema Registry-API durchführen.
-topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1356'
 ht-degree: 48%

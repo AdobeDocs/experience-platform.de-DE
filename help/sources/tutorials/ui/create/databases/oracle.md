@@ -2,11 +2,10 @@
 keywords: Experience Platform; Homepage; beliebte Themen; Oracle DB; oracle-Db
 solution: Experience Platform
 title: Erstellen einer Oracle DB-Quellverbindung in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Oracle DB-Quellverbindung erstellen.
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 50%

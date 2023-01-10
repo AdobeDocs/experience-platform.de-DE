@@ -2,11 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Segmentauswertung; Segmentierungsdienst; Segmentierung; Segmentierung; Segmentierung; Segmentergebnisse auswerten; Segmentergebnisse auswerten und aufrufen;
 solution: Experience Platform
 title: Segmentergebnisse auswerten und aufrufen
-topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mithilfe der Adobe Experience Platform Segmentation Service-API Segmente auswerten und auf Segmentergebnisse zugreifen.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 20%

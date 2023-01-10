@@ -2,11 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; lokales System; Datei-Upload; CSV zuordnen; CSV-Datei zuordnen; CSV-Datei xdm zuordnen; CSV-Datei xdm zuordnen; Handbuch zu ui;
 solution: Experience Platform
 title: Erstellen eines Connectors für lokale Datei-Upload-Quelle in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Quellverbindung für Ihr lokales System erstellen, um lokale Dateien auf Platform zu bringen.
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 71%

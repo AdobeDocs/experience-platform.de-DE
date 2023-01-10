@@ -2,11 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Salesforce Service Cloud; Salesforce Service Cloud
 solution: Experience Platform
 title: Erstellen einer Salesforce Service Cloud-Quellverbindung in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Salesforce Service Cloud-Quellverbindung erstellen.
 exl-id: 38480a29-7852-46c6-bcea-5dc6bffdbd15
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 35%

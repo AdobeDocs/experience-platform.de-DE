@@ -2,11 +2,10 @@
 keywords: Experience Platform;Startseite;beliebte Themen;
 solution: Experience Platform
 title: Verbinden der Dateneinstiegszone mit Adobe Experience Platform mithilfe der Flow Service-API
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Flow Service-API Adobe Experience Platform mit Data Landing Zone verbinden.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1224'
 ht-degree: 20%
@@ -40,7 +39,7 @@ Der erste Schritt bei der Verwendung von APIs für den Zugriff [!DNL Data Landin
 GET /connectors/landingzone?type=user_drop_zone
 ```
 
-| Header | Beschreibung |
+| Kopfzeilen | Beschreibung |
 | --- | --- |
 | `user_drop_zone` | Die `user_drop_zone` Mit dem -Typ kann die API einen Einstiegszonen-Container von den anderen für Sie verfügbaren Behältertypen unterscheiden. |
 
@@ -128,7 +127,7 @@ Sie können Ihre `SASToken` , indem Sie eine POST an die `/credentials` Endpunkt
 POST /connectors/landingzone/credentials?type=user_drop_zone&action=refresh
 ```
 
-| Header | Beschreibung |
+| Kopfzeilen | Beschreibung |
 | --- | --- |
 | `user_drop_zone` | Die `user_drop_zone` Mit dem -Typ kann die API einen Einstiegszonen-Container von den anderen für Sie verfügbaren Behältertypen unterscheiden. |
 | `refresh` | Die `refresh` Mit dieser Aktion können Sie Ihre Landingzone-Anmeldedaten zurücksetzen und automatisch eine neue `SASToken`. |
@@ -322,7 +321,7 @@ In der folgenden Tabelle werden verschiedene Szenarien beschrieben, auf die Sie 
 | True | K. A. | Wenn `determineProperties` wird als Abfrageparameter bereitgestellt, wird die Erkennung der Dateieigenschaften durchgeführt und die Antwort gibt eine neue `properties` -Schlüssel, der Informationen zum Dateityp, zum Komprimierungstyp und zum Spaltentrennzeichen enthält. |
 | K. A. | True | Wenn die Werte für Dateityp, Komprimierungstyp und Spaltentrennzeichen manuell als Teil von `queryParams`, werden sie zum Generieren des Schemas verwendet und dieselben Eigenschaften werden als Teil der Antwort zurückgegeben. |
 | True | True | Wenn beide Optionen gleichzeitig ausgeführt werden, wird ein Fehler zurückgegeben. |
-| K. A. | K. A. | Wenn keine der beiden Optionen angegeben wird, wird ein Fehler zurückgegeben, da es keine Möglichkeit gibt, Eigenschaften für die Antwort abzurufen. |
+| K. A. | K. A. | Wenn keine der beiden Optionen angegeben wird, wird ein Fehler zurückgegeben, da es nicht möglich ist, Eigenschaften für die Antwort abzurufen. |
 
 **API-Format**
 

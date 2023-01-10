@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Amazon Redshift; Amazon redshift; redshift; Redshift
 solution: Experience Platform
 title: Übersicht über Snowflake Source Connector
-topic-legacy: overview
 description: Erfahren Sie, wie Sie Snowflake mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '237'
-ht-degree: 53%
+ht-degree: 61%
 
 ---
 
@@ -24,13 +23,13 @@ Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von I
 
 Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Snowflake] mit Platform mithilfe von APIs oder der Benutzeroberfläche:
 
-## Verbinden [!DNL Snowflake] zur Plattform mithilfe von APIs
+## Verbinden von [!DNL Snowflake] mit Platform mithilfe von APIs
 
 - [Erstellen einer Snowflake-Basisverbindung mit der Flow Service-API](../../tutorials/api/create/databases/snowflake.md)
-- [Datentabellen mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/tabular.md)
+- [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine Datenbankquelle mithilfe der Flow Service-API](../../tutorials/api/collect/database-nosql.md)
 
-## Verbinden [!DNL Snowflake] zur Plattform mithilfe der Benutzeroberfläche
+## Verbinden von [!DNL Snowflake] mit Platform über die Benutzeroberfläche
 
 - [Erstellen einer Snowflake-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/databases/snowflake.md)
 - [Erstellen eines Datenflusses für eine Datenbankquellenverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)

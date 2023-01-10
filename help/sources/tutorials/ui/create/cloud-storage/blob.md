@@ -2,11 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Azure Blob; Azure Blob; Azure Blob-Connector
 solution: Experience Platform
 title: Erstellen einer Azure Blob Source-Verbindung in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Benutzeroberfläche von Platform einen Azure Blob-Quell-Connector erstellen.
 exl-id: 0e54569b-7305-4065-981e-951623717648
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '644'
 ht-degree: 39%

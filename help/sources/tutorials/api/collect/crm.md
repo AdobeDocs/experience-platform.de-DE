@@ -2,11 +2,10 @@
 keywords: Experience Platform;Startseite;beliebte Themen;crm;CRM
 solution: Experience Platform
 title: Erstellen Sie mithilfe der Flow Service-API einen Datenfluss für CRM-Quellen
-topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem CRM-System von Drittanbietern und zum Einbringen dieser Daten in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1347'
 ht-degree: 95%

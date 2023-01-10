@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Schema;Schema;XDM;individuelles Profil;Felder;Schemas;Schemata;identityMap;identität zuordnen;Identität zuordnen;Schema-Design;map;Map;Vereinigungsschema;Vereinigung
 title: Schemafeldgruppe für IdentityMap
-topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Klasse „XDM Individual Profile“.
 exl-id: c9928e85-ef1e-4739-ba1d-80505a9e60c3
-source-git-commit: c59b4bd7ccc61ef4f9dc8a963903e3ec495558ed
-workflow-type: ht
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 100%
 

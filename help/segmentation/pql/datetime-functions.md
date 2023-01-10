@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Segmentierung; Segmentierung; Segmentierungsdienst; pql; PQL; Profilabfragesprache; Datums- und Uhrzeitfunktionen; Datums-/Uhrzeitfunktionen; Datum; Uhrzeit;
 solution: Experience Platform
 title: PQL-Datums- und Uhrzeitfunktionen
-topic-legacy: developer guide
 description: Mit Datums- und Uhrzeitfunktionen können Datums- und Uhrzeitvorgänge für Werte in der Profile Query Language (PQL) durchgeführt werden.
 exl-id: 8cbffcb6-1c25-454f-8f02-eca602318e5e
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 7%

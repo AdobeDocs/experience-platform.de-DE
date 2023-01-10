@@ -1,10 +1,9 @@
 ---
 solution: Experience Platform
 title: Einverständnis und Voreinstellungsfeldgruppe
-topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Schemafeldergruppe "Einwilligungen und Voreinstellungen".
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%

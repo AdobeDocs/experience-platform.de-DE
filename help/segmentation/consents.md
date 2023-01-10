@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Opt-out; Segmentierung; Segmentierungsdienst; Segmentierungsdienst; berücksichtigt Opt-outs; Opt-out; Opt-out; Opt-outs; Einverständnis; Freigabe; Sammeln;
 solution: Experience Platform
 title: Einverständnis in Segmenten
-topic-legacy: overview
 description: Erfahren Sie, wie Sie die Zustimmungseinstellungen von Kunden für die Erfassung und Freigabe personenbezogener Daten in Segmentvorgängen berücksichtigen.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '675'
 ht-degree: 2%

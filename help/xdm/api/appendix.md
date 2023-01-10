@@ -3,9 +3,8 @@ keywords: Experience Platform; Startseite; beliebte Themen; API; XDM; XDM; XDM-S
 solution: Experience Platform
 title: Handbuch zur Schema Registry-API
 description: Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mit der Schema Registry-API.
-topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '984'
 ht-degree: 36%

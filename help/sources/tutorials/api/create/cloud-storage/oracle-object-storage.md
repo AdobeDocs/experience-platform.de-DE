@@ -2,18 +2,17 @@
 keywords: Experience Platform; Homepage; beliebte Themen; Oracle-Objektspeicher; oracle-Objektspeicher
 solution: Experience Platform
 title: Erstellen einer Oracle-Objektspeicher-Basisverbindung mithilfe der Flow Service-API
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit dem Oracle-Objektspeicher verbinden.
 exl-id: a85faa44-7d5a-42a2-9052-af01744e13c9
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '555'
-ht-degree: 50%
+ht-degree: 51%
 
 ---
 
-# Erstellen Sie eine [!DNL Oracle Object Storage] Basisverbindung mit [!DNL Flow Service] API
+# Erstellen einer [!DNL Oracle Object Storage]-Basisverbindung mithilfe der [!DNL Flow Service]-API
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 

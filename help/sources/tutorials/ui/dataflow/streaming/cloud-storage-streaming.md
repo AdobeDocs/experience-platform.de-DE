@@ -2,11 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Streaming; Cloud-Speicher-Connector; Cloud-Speicher
 solution: Experience Platform
 title: Erstellen eines Streaming-Datenflusses für eine Cloud-Speicherquelle in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 description: Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen Platform-Datensatz aufnimmt. In diesem Tutorial werden Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Cloud-Speicher-Basis-Connector beschrieben.
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1055'
 ht-degree: 25%

@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; fullName; xdm:fullName; Personenname; Name; Datentyp; Datentyp;
 solution: Experience Platform
 title: Datentyp "Person Name"
-topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp "Personenname".
 exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
-source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 21%

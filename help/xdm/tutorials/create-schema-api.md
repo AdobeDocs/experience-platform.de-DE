@@ -2,11 +2,10 @@
 keywords: Experience Platform;Startseite;beliebte Themen;API;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Schemaregistrierung;Schemaregistrierung;Schema;Schema;Schemata;Erstellen
 solution: Experience Platform
 title: Erstellen eines Schemas mit der Schema Registry-API
-topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial werden die Schritte dazu erläutert, wie mithilfe der Schema Registry-API ein Schema unter Verwendung einer Standardklasse erstellt wird.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '2422'
 ht-degree: 50%

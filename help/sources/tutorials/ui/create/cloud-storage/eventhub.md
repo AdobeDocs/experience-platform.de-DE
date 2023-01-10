@@ -2,11 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Azure Event-Hub; Event-Hub; azer-Event-Hubs
 solution: Experience Platform
 title: Erstellen einer Azure Event Hub-Quellverbindung in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung für Azure Event Hub erstellen.
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 35%

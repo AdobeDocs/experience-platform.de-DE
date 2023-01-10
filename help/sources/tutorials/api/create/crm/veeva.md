@@ -2,14 +2,13 @@
 keywords: Experience Platform; Startseite; beliebte Themen; veeva crm; Veeva CRM; Veeva
 solution: Experience Platform
 title: Erstellen einer VEC CRM-Basisverbindung mit der Flow Service-API
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit dem VEC-CRM verbinden.
 exl-id: e1aea5a2-a247-43eb-8252-2e2ed96b82a1
-source-git-commit: ea20a850a5d83f648c699119913aa31e2ea16233
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '505'
-ht-degree: 71%
+ht-degree: 75%
 
 ---
 
@@ -115,7 +114,7 @@ Bei einer erfolgreichen Antwort werden Details zu der neu erstellten Basisverbin
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Veeva CRM] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basis-Verbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL Veeva CRM] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
-* [Struktur und Inhalt Ihrer Datentabellen mithilfe des [!DNL Flow Service] API](../../explore/tabular.md)
+* [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um CRM-Daten mithilfe des [!DNL Flow Service] API](../../collect/crm.md)

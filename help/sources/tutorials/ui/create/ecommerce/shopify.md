@@ -2,11 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Shopify; Shopify
 solution: Experience Platform
 title: Erstellen einer Quell-Verbindung aus einem Shop in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung mit Shopify erstellen.
 exl-id: 527cac95-3d9a-4089-98e4-66d746641b85
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '450'
 ht-degree: 50%

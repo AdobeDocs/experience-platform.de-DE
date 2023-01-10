@@ -3,9 +3,8 @@ keywords: Experience Platform; Startseite; beliebte Themen; API; XDM; XDM; XDM-S
 solution: Experience Platform
 title: Klassen-API-Endpunkt
 description: Mit dem Endpunkt /classes in der Schema Registry-API können Sie XDM-Klassen in Ihrer Erlebnisanwendung programmgesteuert verwalten.
-topic-legacy: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1532'
 ht-degree: 23%

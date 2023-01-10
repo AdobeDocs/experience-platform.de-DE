@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; Feldergruppe; Feldergruppe; Feldergruppen; Feldergruppen; Feldergruppen; Datentyp; Datentypen; Datentypen; Datentyp; Datentyp; Schemadesign; Schemadesign; Schemadesign; Zuordnung; Datentyp; Datentyp; Datentyp; Datentyp; Datentyp; Schemata; Schemas; Schemadesign; Map; Map
 solution: Experience Platform
 title: Einschränkungen für XDM-Feldtypen
-topic-legacy: overview
 description: Eine Referenz für Feldtypbegrenzungen im Experience-Datenmodell (XDM), einschließlich der anderen Serialisierungsformate, denen sie zugeordnet werden können, und wie Sie Ihre eigenen Feldtypen in der API definieren können.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 13%

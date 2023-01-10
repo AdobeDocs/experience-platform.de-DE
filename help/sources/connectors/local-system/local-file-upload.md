@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; lokal; lokales Datei-Upload; lokales System
 solution: Experience Platform
 title: Übersicht über den Connector für lokale Datei-Uploads
-topic-legacy: overview
 description: Erfahren Sie, wie Sie Ihr lokales System über die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 4b3cf486-7aff-4ffb-920c-10af04000083
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 15%

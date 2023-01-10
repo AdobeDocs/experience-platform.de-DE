@@ -2,13 +2,12 @@
 keywords: Experience Platform; Homepage; beliebte Themen; Salesforce Marketing Cloud; Salesforce-Marketing Cloud; Marketing-Automatisierung
 solution: Experience Platform
 title: Salesforce Marketing Cloud Source - Überblick
-topic-legacy: overview
 description: Erfahren Sie, wie Sie Salesforce Marketing Cloud über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '351'
-ht-degree: 28%
+ht-degree: 45%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 28%
 
 >[!NOTE]
 >
->Die [!DNL Salesforce Marketing Cloud] -Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
+>Die [!DNL Salesforce Marketing Cloud]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-gekennzeichneten Quellen.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
@@ -37,17 +36,17 @@ Weitere Informationen zu Bereichen, einschließlich einer Liste der zugehörigen
 
 Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
 
-## Verbinden [!DNL Salesforce Marketing Cloud] zur Plattform mithilfe von APIs
+## Verbinden von [!DNL Salesforce Marketing Cloud] mit Platform mithilfe von APIs
 
 Die folgende Dokumentation enthält Informationen zur Verbindung [!DNL Salesforce Marketing Cloud] zur Plattform mithilfe von APIs:
 
 * [Erstellen einer Salesforce-Marketing Cloud-Basisverbindung mithilfe der Flow Service-API](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
-* [Datentabellen mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/tabular.md)
+* [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 * [Erstellen eines Datenflusses für eine Marketing-Automatisierungsquelle mithilfe der Flow Service-API](../../tutorials/api/collect/marketing-automation.md)
 
-## Verbinden [!DNL Salesforce Marketing Cloud] zur Plattform mithilfe der Benutzeroberfläche
+## Verbinden von [!DNL Salesforce Marketing Cloud] mit Platform über die Benutzeroberfläche
 
 Die folgende Dokumentation enthält Informationen zur Verbindung [!DNL Salesforce Marketing Cloud] zur Plattform mithilfe der Benutzeroberfläche:
 
 * [Erstellen einer Salesforce-Marketing Cloud-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
-* [Erstellen eines Datenflusses für eine Verbindung zur Marketing-Automatisierungsquelle in der Benutzeroberfläche](../../tutorials/ui/dataflow/marketing-automation.md)
+* [Erstellen eines Datenflusses für eine Marketing-Automatisierungs-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/marketing-automation.md)

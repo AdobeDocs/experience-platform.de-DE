@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; iab; tcf; Einverständnis;
 solution: Experience Platform
 title: IAB TCF 2.0-Feldergruppe für Einverständniserklärungen für Ereignisschemata
-topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die IAB TCF 2.0-Schemafeldgruppe für Einwilligungen für die XDM ExperienceEvent-Klasse.
 exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 8%

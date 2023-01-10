@@ -2,11 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Azure Data Explorer; Azure Data Explorer; Data Explorer; Data Explorer
 solution: Experience Platform
 title: Erstellen einer Azure Data Explorer-Quellverbindung in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung mit Azure Data Explorer erstellen.
 exl-id: 561bf948-fc92-4401-8631-e2a408667507
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 46%

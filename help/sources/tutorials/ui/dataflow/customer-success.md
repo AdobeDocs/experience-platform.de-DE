@@ -2,11 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Datenfluss konfigurieren; Customer Success Connector
 solution: Experience Platform
 title: Erstellen eines Datenflusses mithilfe einer Customer Success Source in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 description: Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen Platform-Datensatz aufnimmt. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Platform-Benutzeroberfläche einen Datenfluss für eine Kunden-Erfolgsquelle erstellen.
 exl-id: d348a7f8-6302-45f1-9961-bab56ad0407e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1397'
 ht-degree: 49%

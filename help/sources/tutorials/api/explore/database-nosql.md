@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Drittanbieterdatenbank; Datenbankflussdienst
 solution: Experience Platform
 title: Datenbank mithilfe der Flow Service-API durchsuchen
-topic-legacy: overview
 description: In diesem Tutorial wird die Flow Service-API verwendet, um die Inhalte und Dateistruktur einer Drittanbieter-Datenbank zu untersuchen.
 exl-id: 94935492-a7be-48dc-8089-18476590bf98
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 38%

@@ -3,9 +3,8 @@ keywords: Experience Platform; Startseite; beliebte Themen; API; XDM; XDM; XDM-S
 solution: Experience Platform
 title: Auditprotokoll-API-Endpunkt
 description: Mit dem /auditlog-Endpunkt in der Schema Registry-API können Sie eine chronologische Liste der Änderungen abrufen, die an einer vorhandenen XDM-Ressource vorgenommen wurden.
-topic-legacy: developer guide
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '407'
 ht-degree: 15%

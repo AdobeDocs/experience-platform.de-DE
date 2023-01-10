@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Geo; Kreis; Datentyp; Datentyp; Datentyp;
 solution: Experience Platform
 title: Geo-Kreis-Datentyp
-topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp "Geo Circle".
 exl-id: fa041f4f-9955-44e9-b235-a643e07d402c
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 21%

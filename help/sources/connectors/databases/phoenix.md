@@ -2,13 +2,12 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Phoenix;Phoenix
 solution: Experience Platform
 title: Phoenix Source Connector - Übersicht
-topic-legacy: overview
 description: Erfahren Sie, wie Sie Phoenix über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '244'
-ht-degree: 54%
+ht-degree: 61%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 54%
 
 >[!NOTE]
 >
->Die [!DNL Phoenix] -Connector befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
+>Die [!DNL Phoenix] -Connector befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../home.md#terms-and-conditions), um weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren zu erhalten.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
@@ -31,7 +30,7 @@ Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Phoen
 ## Verbinden von [!DNL Phoenix] mit [!DNL Platform] mithilfe von APIs
 
 - [Erstellen einer Phoenix-Basisverbindung mit der Flow Service-API](../../tutorials/api/create/databases/phoenix.md)
-- [Datentabellen mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/tabular.md)
+- [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine Datenbankquelle mithilfe der Flow Service-API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbinden von [!DNL Phoenix] mit [!DNL Platform] über die Benutzeroberfläche

@@ -2,11 +2,10 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Marketo-Quell-Connector;Marketo-Connector;Marketo-Quelle;Marketo
 solution: Experience Platform
 title: Erstellen eines Quell-Connectors für Marketo Engage über die Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Erstellen eines Quell-Connectors für Marketo Engage über die Benutzeroberfläche beschrieben, um B2B-Daten in Adobe Experience Platform zu importieren.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1473'
 ht-degree: 92%

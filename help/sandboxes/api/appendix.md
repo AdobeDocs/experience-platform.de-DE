@@ -3,9 +3,8 @@ keywords: Experience Platform; Startseite; beliebte Themen; API; Sandbox; Sandbo
 solution: Experience Platform
 title: Anhang zum Sandbox-API-Handbuch
 description: Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mit der Sandbox-API.
-topic-legacy: developer guide
 exl-id: 48ffea01-f1b4-48c6-a6f5-c321074023d3
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 4%

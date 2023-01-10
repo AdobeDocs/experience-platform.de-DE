@@ -2,14 +2,13 @@
 keywords: Experience Platform; Homepage; beliebte Themen Dateiübertragungsprotokoll; Dateiübertragungsprotokoll
 solution: Experience Platform
 title: Erstellen einer FTP-Basisverbindung mit der Flow Service-API
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Flow Service-API eine Verbindung zwischen Adobe Experience Platform und einem FTP-Server (File Transfer Protocol) herstellen.
 exl-id: a7bef346-b357-49bc-ac54-ac8b42adac50
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '476'
-ht-degree: 54%
+ht-degree: 56%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 54%
 
 >[!NOTE]
 >
->Der FTP-Connector befindet sich in der Beta-Phase. Die Funktionen und Dokumentation können sich ändern. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
+>Der FTP-Connector befindet sich in der Beta-Phase. Die Funktionen und Dokumentation können sich ändern. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions), um weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren zu erhalten.
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 

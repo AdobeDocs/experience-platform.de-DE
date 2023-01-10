@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Kundenattribut-Connector
 solution: Experience Platform
 title: Übersicht über den Quell-Connector für Kundenattribute
-topic-legacy: overview
 description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche Kundenattribute mit Adobe Experience Platform verbinden.
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: 541cc87f218a6ef3dcca37573f6d0f9cf560edfb
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 19%

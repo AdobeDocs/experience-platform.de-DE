@@ -3,10 +3,9 @@ keywords: Experience Platform;Startseite;beliebte Themen;Datenflüsse aktualisie
 description: In diesem Tutorial werden die Schritte zum Aktualisieren eines Datenflusszeitplans beschrieben, einschließlich der Erfassungsfrequenz und der Intervallrate, die mithilfe des Arbeitsbereichs "Quellen"vorgenommen werden.
 solution: Experience Platform
 title: Aktualisieren eines Datenflusses für die Quellverbindung in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: 6a9ad0ce5d664e3b32cab4183b54fabd5d9d19e3
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 14%
@@ -48,7 +47,7 @@ Um die Informationen Ihres Datenflusses zu aktualisieren, wählen Sie **[!UICONT
 
 ![update-dataflow](../../images/tutorials/update-dataflows/update-dataflow.png)
 
-### Hinzufügen von Daten
+### Daten hinzufügen
 
 Der Schritt [!UICONTROL Daten hinzufügen] wird angezeigt. Wählen Sie das geeignete Datenformat aus, um den Inhalt der ausgewählten Daten zu überprüfen, und wählen Sie dann **[!UICONTROL Nächste]** um fortzufahren.
 
@@ -76,7 +75,7 @@ Von hier aus können Sie die Zuordnungsschnittstelle verwenden, um die auf Ihren
 
 ![Zuordnung](../../images/tutorials/update-dataflows/mapping.png)
 
-### Zeitplan
+### Planung
 
 Die [!UICONTROL Planung] angezeigt, sodass Sie den Aufnahmezeitplan Ihres Datenflusses aktualisieren und die ausgewählten Quelldaten automatisch mit den aktualisierten Zuordnungen erfassen können.
 

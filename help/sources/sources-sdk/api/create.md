@@ -2,10 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
 solution: Experience Platform
 title: Erstellen einer neuen Verbindungsspezifikation mithilfe der Flow Service-API
-topic-legacy: tutorial
 description: Im folgenden Dokument erfahren Sie, wie Sie eine Verbindungsspezifikation mithilfe der Flow Service-API erstellen und eine neue Quelle über Self-Serve-Quellen integrieren.
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: ae5bb475bca90b31d8eb7cf6b66d4d191d36ac5c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '800'
 ht-degree: 48%

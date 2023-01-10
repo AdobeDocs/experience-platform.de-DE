@@ -1,10 +1,9 @@
 ---
 solution: Experience Platform
 title: Datenmodell der Finanzdienstleistungsbranche
-topic-legacy: overview
 description: Zeigen Sie ein Entitätsbeziehungsdiagramm (ERD) an, in dem ein standardisiertes Datenmodell für die Bank-, Finanz- und Versicherungsbranche (BFSI) beschrieben wird. Dieses Datenmodell ist mit dem Experience-Datenmodell (XDM) für die Verwendung in Adobe Experience Platform kompatibel.
 exl-id: 2e8f6b2a-10e7-4394-b45f-c03db0f25400
-source-git-commit: 345380c9d4e371bc90acee1f35e75f9da8f9394e
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 11%

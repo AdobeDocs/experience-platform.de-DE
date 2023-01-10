@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Segmentierung; Segmentierung; Segmentdienst; Segmente; Segmente; mehrere Entitäten; Segmentierung mit mehreren Entitäten; Segmentierung mit mehreren Entitäten; Segmente mit mehreren Entitäten;
 solution: Experience Platform
 title: Segmentierung mit mehreren Entitäten - Überblick
-topic-legacy: overview
 description: Bei der Segmentierung mit mehreren Entitäten können Sie Profildaten um zusätzliche Daten erweitern, die auf Produkten, Geschäften oder anderen nicht-profilbasierten Klassen beruhen. Sobald eine Verbindung besteht, stehen Daten aus zusätzlichen Klassen zur Verfügung, so als wären sie im Profilschema nativ vorhanden.
 exl-id: 01a37fdc-2abe-4a84-b7da-fcbd141ff51f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 9%

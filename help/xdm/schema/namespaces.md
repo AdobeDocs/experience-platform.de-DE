@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; xdm; Experience-Datenmodell; Namespace; Namespaces; Kompatibilitätsmodus; behoben;
 solution: Experience Platform
 title: Namespace im Experience-Datenmodell (XDM)
-topic-legacy: overviews
 description: Erfahren Sie, wie Sie mit Namespacing im Experience-Datenmodell (XDM) Ihre Schemas erweitern und Feldkollisionen verhindern können, da verschiedene Schemakomponenten zusammengeführt werden.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: bcffd3d38cecba38e1e57a44ce0febfd2cf0f8fb
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '630'
 ht-degree: 1%

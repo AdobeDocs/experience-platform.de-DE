@@ -3,9 +3,8 @@ keywords: Experience Platform; Startseite; beliebte Themen; API; XDM; XDM; XDM-S
 solution: Experience Platform
 title: Ad-hoc-Schemata
 description: Unter bestimmten Umständen kann es erforderlich sein, ein XDM-Schema mit Feldern zu erstellen, die nur für die Verwendung durch einen einzigen Datensatz benannt sind. Dies wird als Ad-hoc-Schema bezeichnet.
-topic-legacy: developer guide
 exl-id: 8ee43bdc-3f16-4ec9-b17a-9942e4599023
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 15%

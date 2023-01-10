@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Webseitendetails; Datentyp; Datentyp; Datentyp; Datentyp; Webseite
 solution: Experience Platform
 title: Datentyp "Web Page Details"
-topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Webseitendetails zum Experience-Datenmodell (XDM)-Datentyp.
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 14%

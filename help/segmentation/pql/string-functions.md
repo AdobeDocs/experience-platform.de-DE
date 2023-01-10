@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Segmentierung; Segmentierung; Segmentierungsdienst; pql; PQL; Profile Query Language; Zeichenfolgenfunktionen; Zeichenfolge;
 solution: Experience Platform
 title: PQL-Zeichenfolgen-Funktionen
-topic-legacy: developer guide
 description: Profile Query Language (PQL) bietet Funktionen, die die Interaktion mit Zeichenfolgen vereinfachen.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
-source-git-commit: 1c9ed96cdbd9e670bd1f05467e33e8dab5bc2121
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '840'
 ht-degree: 64%

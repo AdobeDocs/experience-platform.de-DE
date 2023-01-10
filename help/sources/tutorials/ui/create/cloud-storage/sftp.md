@@ -2,11 +2,10 @@
 keywords: Experience Platform;Startseite;beliebte Themen;SFTP;SFTP
 solution: Experience Platform
 title: Erstellen einer SFTP-Quellverbindung in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine SFTP-Quellverbindung erstellen.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 22%

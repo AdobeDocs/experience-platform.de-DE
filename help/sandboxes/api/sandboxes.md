@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Sandbox-Entwicklerhandbuch
 solution: Experience Platform
 title: Sandbox-Management-API-Endpunkt
-topic-legacy: developer guide
 description: Mit dem Endpunkt /sandboxes in der Sandbox-API können Sie Sandboxes in Adobe Experience Platform programmgesteuert verwalten.
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1489'
-ht-degree: 46%
+ht-degree: 49%
 
 ---
 
@@ -194,7 +193,7 @@ Bei erfolgreicher Antwort werden Details zur Sandbox einschließlich `name`, `ti
 
 >[!NOTE]
 >
->Wenn eine neue Sandbox erstellt wird, müssen Sie diese neue Sandbox zunächst Ihrem Produktprofil in [Adobe Admin Console](https://adminconsole.adobe.com/) bevor Sie mit der Verwendung der neuen Sandbox beginnen können. Weitere Informationen finden Sie in der Dokumentation unter [Berechtigungen für ein Produktprofil verwalten](../../access-control/ui/permissions.md) für Informationen zur Bereitstellung einer Sandbox für ein Produktprofil.
+>Wenn eine neue Sandbox erstellt wird, müssen Sie diese neue Sandbox zunächst Ihrem Produktprofil in [Adobe Admin Console](https://adminconsole.adobe.com/) hinzufügen, bevor Sie sie verwenden können. Weitere Informationen zur Bereitstellung einer Sandbox für ein Produktprofil finden Sie in der Dokumentation unter [Verwalten von Berechtigungen für ein Produktprofil](../../access-control/ui/permissions.md).
 
 Sie können eine neue Entwicklungs- oder Produktions-Sandbox erstellen, indem Sie eine POST-Anfrage an die `/sandboxes` -Endpunkt.
 

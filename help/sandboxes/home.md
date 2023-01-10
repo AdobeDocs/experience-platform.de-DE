@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Sandbox; Sandbox; Test; Testen
 solution: Experience Platform
 title: Übersicht über Sandboxes
-topic-legacy: overview
 description: Sandboxes sind virtuelle Partitionen innerhalb einer Instanz von Experience Platform, die eine nahtlose Integration in den Entwicklungsprozess Ihrer Programme für digitale Erlebnisse ermöglichen.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1005'
-ht-degree: 60%
+ht-degree: 86%
 
 ---
 
@@ -24,17 +23,17 @@ Dieses Dokument bietet einen Überblick über Sandboxes in Experience Platform.
 
 Sandboxes sind virtuelle Partitionen innerhalb einer Instanz von Experience Platform, die eine nahtlose Integration in den Entwicklungsprozess Ihrer Programme für digitale Erlebnisse ermöglichen. Alle Inhalte und Aktionen, die innerhalb einer Sandbox ausgeführt werden, sind auf diese Sandbox beschränkt und wirken sich nicht auf andere Sandboxes aus. Es werden zwei Arten von Sandboxes für die Experience Platform unterstützt:
 
-* **Produktions-Sandbox**: Eine Produktions-Sandbox ist für die Verwendung mit Profilen in Ihrer Produktionsumgebung vorgesehen. Platform ermöglicht es Ihnen, mehrere Produktions-Sandboxes zu erstellen, um die richtigen Funktionen für Daten bereitzustellen und gleichzeitig die betriebliche Isolierung beizubehalten. Mit dieser Funktion können Sie bestimmte Produktions-Sandboxes unterschiedlichen Geschäftsbereichen, Marken, Projekten oder Regionen zuweisen. Produktions-Sandboxes unterstützen eine Vielzahl von Produktionsprofilen bis hin zu Ihren lizenzierten [!DNL Profile] Verpflichtung (kumulativ über alle Ihre autorisierten Produktions-Sandboxes gemessen). Sie sind berechtigt, lizenziertes durchschnittliches Profil pro autorisiertem [!DNL Profile] (kumulativ über alle Ihre zulässigen Produktions-Sandboxes gemessen).
-* **Entwicklungs-Sandbox**: Eine Entwicklungs-Sandbox ist eine Sandbox, die ausschließlich für Entwicklung und Tests mit Nicht-Produktionsprofilen verwendet werden kann. Entwicklungs-Sandboxes unterstützen eine Anzahl von Nicht-Produktions-Profilen mit bis zu 10 % Ihrer lizenzierten Profile. [!DNL Profile] Verpflichtung (kumulativ über alle autorisierten Entwicklungs-Sandboxes gemessen). Sie haben Anspruch auf:
-   * Durchschnittliche Reichweite des Nicht-Produktionsprofils von 75 Kilobytes pro autorisiertem Nicht-Produktionsprofil (kumulativ gemessen in allen autorisierten Entwicklungs-Sandboxes);
-   * Ein Batch-Segmentierungsauftrag pro Tag, pro Entwicklungs-Sandbox;
-   * Ein Durchschnitt von 120 [!DNL Profile] API-Aufrufe pro [!DNL Profile], pro Jahr (kumulativ über alle Ihre autorisierten Entwicklungs-Sandboxes hinweg gemessen).
+* **Produktions-Sandbox**: Eine Produktions-Sandbox ist für die Verwendung mit Profilen in Ihrer Produktionsumgebung vorgesehen. Platform ermöglicht es Ihnen, mehrere Produktions-Sandboxes zu erstellen, um die richtigen Funktionen für Daten zu bieten und gleichzeitig die Isolierung beim Betreiben beizubehalten. Mit dieser Funktion können Sie bestimmte Produktions-Sandboxes unterschiedlichen Geschäftsbereichen, Marken, Projekten oder Regionen zuweisen. Produktions-Sandboxes unterstützen eine Vielzahl von Produktionsprofilen bis hin zu Ihrer lizenzierten [!DNL Profile]-Verpflichtung (kumulativ über alle Ihre autorisierten Produktions-Sandboxes gemessen). Sie sind berechtigt, ein lizenziertes durchschnittliches Profil pro autorisiertem [!DNL Profile] zu verwenden (kumulativ über alle Ihre zulässigen Produktions-Sandboxes gemessen).
+* **Entwicklungs-Sandbox**: Eine Entwicklungs-Sandbox ist eine Sandbox, die ausschließlich für die Entwicklung und Tests mit Nicht-Produktionsprofilen verwendet werden kann. Entwicklungs-Sandboxes unterstützen eine Anzahl von Nicht-Produktions-Profilen mit bis zu 10 % Ihrer lizenzierten [!DNL Profile]-Verpflichtung (kumulativ über alle autorisierten Entwicklungs-Sandboxes gemessen). Sie haben maximal Anspruch auf Folgendes:
+   * Durchschnittlicher Umfang des Nicht-Produktionsprofils von 75 Kilobyte pro autorisiertem Nicht-Produktionsprofil (kumulativ gemessen in allen autorisierten Entwicklungs-Sandboxes);
+   * Ein Batch-Segmentierungsauftrag pro Tag und pro Entwicklungs-Sandbox;
+   * Ein Durchschnitt von 120 [!DNL Profile]-API-Aufrufen pro [!DNL Profile] pro Jahr (kumulativ über alle Ihre autorisierten Entwicklungs-Sandboxes hinweg gemessen).
 
 Eine Experience Platform-Instanz unterstützt mehrere Produktions- und Entwicklungs-Sandboxes, wobei jede Sandbox eine eigene unabhängige Bibliothek mit Platform-Ressourcen unterhält (einschließlich Schemas, Datensätzen, Profilen usw.). Darüber hinaus verfügen sowohl Produktions- als auch Entwicklungs-Sandboxes über eine Funktion zum Zurücksetzen, mit der alle vom Kunden erstellten Ressourcen aus der Sandbox entfernt werden. Entwicklungs-Sandboxes können nicht in Produktions-Sandboxes konvertiert werden.
 
-Mit einer Standardlizenz für Experience Platformen erhalten Sie insgesamt fünf Sandboxes, die Sie als  oder Entwicklung klassifizieren können. Sie können weitere Packs mit 10 Sandboxes bis zu insgesamt maximal 75 Sandboxes lizenzieren. Diese zusätzlichen Sandboxes können zum Erstellen von Produktions- und Entwicklungs-Sandboxes verwendet werden. Für weitere Informationen wenden Sie sich an Ihren IMS-Organisationsadministrator oder Ihren Adobe-Vertriebsmitarbeiter.
+Mit einer Standardlizenz für Experience Platform erhalten Sie insgesamt fünf Sandboxes, die Sie jeweils als Produktion oder Entwicklung klassifizieren können. Sie können Zusatzpakete von jeweils zehn Sandboxes bis zu einem Maximum von insgesamt 75 Sandboxes hinzufügen. Diese zusätzlichen Sandboxes können zum Erstellen von Produktions- und Entwicklungs-Sandboxes verwendet werden. Für weitere Informationen wenden Sie sich an Ihren IMS-Organisationsadministrator oder Ihren Adobe-Vertriebsmitarbeiter.
 
-Schließlich ist die standardmäßige Produktions-Sandbox die erste Produktions-Sandbox, die erstellt wird, wenn eine IMS-Organisation zum ersten Mal erstellt wird. Mit der standardmäßigen Produktions-Sandbox können Sie Daten aus Platform erfassen oder nutzen sowie Anforderungen akzeptieren, die keine Werte für einen Sandbox-Namen oder eine Sandbox-ID enthalten.
+Schließlich ist die standardmäßige Produktions-Sandbox die erste Produktions-Sandbox, die erstellt wird, wenn eine IMS-Organisation zum ersten Mal erstellt wird. Mit der standardmäßigen Produktions-Sandbox können Sie Daten aus Platform erfassen oder nutzen sowie Anfragen akzeptieren, die keine Werte für einen Sandbox-Namen oder eine Sandbox-ID enthalten.
 
 >[!NOTE]
 >

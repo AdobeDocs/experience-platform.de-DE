@@ -2,9 +2,8 @@
 keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; API; Einverständnis; Einverständnis; Voreinstellungen; Voreinstellungen; privacyOptOuts; marketingPreferences; optOutType; baseOfProcessing; Einverständnis; Einverständnis
 title: Datentyp "Einwilligungen und Voreinstellungen"
 description: Der Datentyp Einverständnis für Datenschutz, Personalisierung und Marketing-Voreinstellungen soll die Erfassung von Kundenberechtigungen und -präferenzen unterstützen, die von CMPs (Consent Management Platform) und anderen Quellen aus Ihren Datenvorgängen generiert werden.
-topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '2058'
 ht-degree: 3%

@@ -3,10 +3,9 @@ keywords: Experience Platform; Startseite; beliebte Themen; Konten aktualisieren
 description: Unter bestimmten Umständen kann es erforderlich sein, die Details eines vorhandenen Quellenkontos zu aktualisieren. Der Arbeitsbereich "Quellen"bietet Ihnen die Möglichkeit, Details zu einem vorhandenen Batch oder einer Streaming-Verbindung hinzuzufügen, zu bearbeiten und zu löschen, einschließlich Name, Beschreibung und Anmeldeinformationen.
 solution: Experience Platform
 title: Aktualisieren der Kontodetails der Quellverbindung in der Benutzeroberfläche
-topic-legacy: overview
 type: Tutorial
 exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 16%

@@ -2,13 +2,12 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Microsoft Dynamics;Mikrosoft dynamics;dynamics;Dynamics
 solution: Experience Platform
 title: Microsoft Dynamics Source Connector - Überblick
-topic-legacy: overview
 description: Erfahren Sie, wie Sie Microsoft Dynamics über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
-source-git-commit: 4fbf1b9a55c755d0bac9e15efbf6bdb25fa24deb
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '282'
-ht-degree: 56%
+ht-degree: 59%
 
 ---
 
@@ -42,7 +41,7 @@ Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Micro
 ## Verbinden von [!DNL Microsoft Dynamics] mit [!DNL Platform] mithilfe von APIs
 
 - [Erstellen einer Basisverbindung mit Microsoft Dynamics mithilfe der Flow Service-API](../../tutorials/api/create/crm/ms-dynamics.md)
-- [Datentabellen mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/tabular.md)
+- [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine CRM-Quelle mithilfe der Flow Service-API](../../tutorials/api/collect/crm.md)
 
 ## Verbinden von [!DNL Microsoft Dynamics] mit [!DNL Platform] über die Benutzeroberfläche

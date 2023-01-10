@@ -2,10 +2,9 @@
 solution: Experience Platform
 title: Exportieren von XDM-Schemas in die Benutzeroberfläche
 description: Erfahren Sie, wie Sie ein vorhandenes Schema in eine andere Sandbox oder IMS-Organisation in der Benutzeroberfläche von Adobe Experience Platform exportieren.
-topic-legacy: user guide
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: 2a58236031834bbe298576e2fcab54b04ec16ac3
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 0%

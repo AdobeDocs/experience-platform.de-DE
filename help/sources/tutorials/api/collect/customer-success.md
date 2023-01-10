@@ -2,11 +2,10 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Customer Success erfassen;Customer Success
 solution: Experience Platform
 title: Erstellen eines Datenflusses für Customer-Success-Quellen mithilfe der Flow Service-API
-topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Customer-Success-System und deren Aufnahme in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1237'
 ht-degree: 94%

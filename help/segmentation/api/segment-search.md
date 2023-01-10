@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;Segmentierung;Segmentierungsdienst;Fehlerbehebung;API;Suche;Segment;Segment;Suche;Segmentsuche
 title: Segment Search API Endpoint
-topic-legacy: guide
 description: In der Adobe Experience Platform Segmentation Service-API wird die Segmentsuche verwendet, um Felder aus verschiedenen Datenquellen zu durchsuchen und nahezu in Echtzeit zurückzugeben. Dieses Handbuch enthält Informationen zum besseren Verständnis der Segmentsuche sowie Beispiel-API-Aufrufe zum Ausführen grundlegender Aktionen mithilfe der API.
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1201'
 ht-degree: 6%
@@ -100,7 +99,7 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Erforderlich)** Wobei {SCHEMA} den Schemaklasse-Wert enthält, der den Suchobjekten zugeordnet ist. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
 | `namespace={NAMESPACE}` | **(Erforderlich)** Dabei enthält {NAMESPACE} den Namespace, in dem Sie suchen möchten. |
-| `s={SEARCH_TERM}` | *(Optional)* Dabei enthält {SEARCH_TERM} eine Abfrage, die der Implementierung von Microsoft entspricht. [Suchsyntax von Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Wenn kein Suchbegriff angegeben ist, werden alle Datensätze, die mit `schema.name` zurückgegeben. Eine ausführlichere Erläuterung finden Sie im Abschnitt [Anhang](#appendix) dieses Dokuments. |
+| `s={SEARCH_TERM}` | *(Optional)* Dabei enthält {SEARCH_TERM} eine Abfrage, die der Implementierung von Microsoft entspricht. [Suchsyntax von Lucene](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax). Wenn kein Suchbegriff angegeben ist, werden alle Datensätze, die mit `schema.name` zurückgegeben. Eine ausführlichere Erläuterung finden Sie im Abschnitt [Anhang](#appendix) dieses Dokuments. |
 | `entityId={ENTITY_ID}` | *(Optional)* Beschränkt Ihre Suche auf den angegebenen Ordner, der mit {ENTITY_ID} angegeben wird. |
 | `limit={LIMIT}` | *(Optional)* Wobei {LIMIT} die Anzahl der zurückzugebenden Suchergebnisse darstellt. Der Standardwert lautet 50. |
 | `page={PAGE}` | *(Optional)* Dabei steht {PAGE} für die Seitennummer, die zum Paginieren der Ergebnisse der gesuchten Abfrage verwendet wird. Beachten Sie, dass die Seitenzahl bei **0**. |
@@ -261,4 +260,4 @@ In der folgenden Tabelle finden Sie die Details zur Funktionsweise von Suchabfra
 | &quot;Hotel Airport&quot;\~5 | Näherungssuche. Diese Art der Suche wird verwendet, um Begriffe zu finden, die in einem Dokument nahe beieinander liegen. Beispielsweise die Wortgruppe `"hotel airport"~5` findet die Begriffe &quot;Hotel&quot; und &quot;Flughafen&quot; innerhalb von 5 Wörtern voneinander in einem Dokument. |
 | `/a[0-9]+b$/` | Suche nach regulären Ausdrücken. Diese Art der Suche findet eine Übereinstimmung basierend auf dem Inhalt zwischen Schrägstrichen &quot;/&quot;, wie in der RegExp-Klasse dokumentiert. Um beispielsweise Dokumente zu finden, die &quot;motel&quot;oder &quot;hotel&quot;enthalten, geben Sie `/[mh]otel/`. Die Suche nach regulären Ausdrücken wird mit einzelnen Wörtern abgeglichen. |
 
-Eine ausführlichere Dokumentation zur Abfragesyntax finden Sie im Abschnitt [Dokumentation zur Lucene-Abfragesyntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax).
+Eine ausführlichere Dokumentation zur Abfragesyntax finden Sie im Abschnitt [Dokumentation zur Lucene-Abfragesyntax](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax).

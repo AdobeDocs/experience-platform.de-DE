@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Hubspot; Hubspot; HubSpot
 solution: Experience Platform
 title: Übersicht über den HubSpot Source Connector
-topic-legacy: overview
 description: Erfahren Sie, wie Sie HubSpot über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 4bc279ac-9388-4bac-bfae-98878625a554
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '218'
-ht-degree: 61%
+ht-degree: 76%
 
 ---
 
@@ -27,10 +26,10 @@ Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL HubSp
 ## Verbinden von [!DNL HubSpot] mit [!DNL Platform] mithilfe von APIs
 
 - [Erstellen einer HubSpot-Basisverbindung mithilfe der Flow Service-API](../../tutorials/api/create/marketing-automation/hubspot.md)
-- [Datentabellen mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/tabular.md)
+- [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine Marketing-Automatisierungsquelle mithilfe der Flow Service-API](../../tutorials/api/collect/marketing-automation.md)
 
 ## Verbinden von [!DNL HubSpot] mit [!DNL Platform] über die Benutzeroberfläche
 
 - [Erstellen einer HubSpot-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/marketing-automation/hubspot.md)
-- [Erstellen eines Datenflusses für eine Verbindung zur Marketing-Automatisierungsquelle in der Benutzeroberfläche](../../tutorials/ui/dataflow/marketing-automation.md)
+- [Erstellen eines Datenflusses für eine Marketing-Automatisierungs-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/marketing-automation.md)

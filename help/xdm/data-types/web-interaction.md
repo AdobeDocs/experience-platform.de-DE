@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Web-Interaktion; Datentyp; Datentyp; Datentyp;
 solution: Experience Platform
 title: Web Interaction-Datentyp
-topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den Datentyp des Experience-Datenmodells (XDM) für Webinteraktionen.
 exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 12%

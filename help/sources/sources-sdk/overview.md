@@ -2,10 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
 solution: Experience Platform
 title: Überblick über Self-Serve-Quellen (Batch SDK)
-topic-legacy: overview
 description: Adobe Experience Platform Self-Serve Sources (Batch SDK) ist ein Satz von Konfigurations-APIs, mit denen Sie eine REST API-basierte Quelle mithilfe der Flow Service-API integrieren können, um Ihre Daten in die Experience Platform zu bringen.
 exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 8%

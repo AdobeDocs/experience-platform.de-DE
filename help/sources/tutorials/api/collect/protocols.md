@@ -2,11 +2,10 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Protokolldaten erfassen;Protokolldaten
 solution: Experience Platform
 title: Erstellen eines Datenflusses für Protokollquellen mithilfe der Flow Service-API
-topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Protokollprogramm und deren Aufnahme in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 94%

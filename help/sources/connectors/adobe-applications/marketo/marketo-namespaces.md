@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Marketo-Quell-Connector; Namespaces; Schemas; b2b; B2B
 solution: Experience Platform
 title: B2B-Namespaces und -Schemata
-topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über benutzerdefinierte Namespaces, die beim Erstellen eines B2B-Quell-Connectors erforderlich sind.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1707'
 ht-degree: 14%

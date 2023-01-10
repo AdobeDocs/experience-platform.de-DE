@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; individuelles Profil; Felder; Schemas; Schemas; Schemadesign; Feldergruppe; Feldergruppe; Personen; Personendetails; Profilpersonendetails; Person
 solution: Experience Platform
 title: Schemafeldgruppe "Demografische Details"
-topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Schemafeldergruppe "Demografische Details".
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '282'
-ht-degree: 26%
+ht-degree: 30%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 26%
 
 >[!NOTE]
 >
->Die Namen verschiedener Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
+>Die Namen mehrerer Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
 
 [!UICONTROL Demografische Details] ist eine Standardschemafeldgruppe für die [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). Die Feldergruppe stellt eine Stammebene bereit `person` -Objekt, dessen Unterfelder Informationen über eine Person beschreiben.
 

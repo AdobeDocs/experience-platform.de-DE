@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Umgebung; Datentyp; Datentyp; Datentyp;
 solution: Experience Platform
 title: Umgebungstyp
-topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den Umgebungs-XDM-Datentyp.
 exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '468'
 ht-degree: 18%

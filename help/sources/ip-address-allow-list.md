@@ -3,9 +3,8 @@ keywords: Experience Platform;Homepage;beliebte Themen;IP-Adresse;IP-Adressen;IP
 description: IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bevor sie mit Quell-Connectoren arbeiten können.
 solution: Experience Platform
 title: IP-Adressen-Zulassungsliste für Quellverbindungen
-topic-legacy: overview
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: 40a6a6888fe075d653c565e5925874d737aa5c59
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 100%

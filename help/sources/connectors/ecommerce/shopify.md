@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Shopify; Shopify;
 solution: Experience Platform
 title: Übersicht über den Quell-Connector konfigurieren
-topic-legacy: overview
 description: Erfahren Sie, wie Sie über APIs oder die Benutzeroberfläche Shopify mit Adobe Experience Platform verbinden.
 exl-id: 636b31a7-e5f9-434a-acd1-226096522495
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '160'
-ht-degree: 44%
+ht-degree: 49%
 
 ---
 
@@ -23,7 +22,7 @@ Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Shopi
 ## Verbinden von [!DNL Shopify] mit [!DNL Platform] mithilfe von APIs
 
 - [Erstellen einer Shopify-Basisverbindung mit der Flow Service-API](../../tutorials/api/create/ecommerce/shopify.md)
-- [Datentabellen mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/tabular.md)
+- [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine eCommerce-Quelle mithilfe der Flow Service-API](../../tutorials/api/collect/ecommerce.md)
 
 ## Verbinden von [!DNL Shopify] mit [!DNL Platform] über die Benutzeroberfläche

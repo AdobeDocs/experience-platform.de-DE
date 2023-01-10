@@ -2,10 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Apache Cassandra;Apache Cassandra;Cassandra;Cassandra
 solution: Experience Platform
 title: Erstellen einer Apache Cassandra-Quellverbindung mithilfe der Flow Service-API
-topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie Apache Cassandra mithilfe der Flow Service-API mit Adobe Experience Platform verbinden.
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 44%

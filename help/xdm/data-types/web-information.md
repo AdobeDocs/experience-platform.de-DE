@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Webseitendetails; Datentyp; Datentyp; Datentyp; Datentyp; Webseite
 solution: Experience Platform
 title: Datentyp für Webinformationen
-topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den Webinformationen-Datentyp Experience-Datenmodell (XDM) .
 exl-id: bfb00835-5908-4baf-af2a-6d845710e340
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 15%

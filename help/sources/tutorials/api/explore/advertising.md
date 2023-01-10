@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Werbesystem; Werbesystem
 solution: Experience Platform
 title: Erkunden eines Werbesystems mithilfe der Flow Service-API
-topic-legacy: overview
 description: Mit Flow Service werden Kundendaten aus verschiedenen Quellen in Adobe Experience Platform erfasst und zentralisiert. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen verbunden werden können. In diesem Tutorial wird die Flow Service-API verwendet, um Werbetechnologien zu untersuchen.
 exl-id: 3016ce1e-12e6-47ce-a4c5-52f8d440f515
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 20%

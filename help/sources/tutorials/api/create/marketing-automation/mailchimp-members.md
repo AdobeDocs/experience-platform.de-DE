@@ -2,10 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
 solution: Experience Platform
 title: Erstellen eines Datenflusses für Mailchimp-Mitglieder mithilfe der Flow Service-API
-topic-legacy: tutorial
 description: Erfahren Sie, wie Sie mit der Flow Service-API eine Verbindung zwischen Adobe Experience Platform und MailChimp-Mitgliedern herstellen.
 exl-id: 900d4073-129c-47ba-b7df-5294d25a7219
-source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '2123'
 ht-degree: 86%

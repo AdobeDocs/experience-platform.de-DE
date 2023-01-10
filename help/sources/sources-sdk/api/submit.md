@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
 title: Quelle übermitteln
-topic-legacy: overview
 description: Das folgende Dokument enthält Schritte zum Testen und Überprüfen einer neuen Quelle mithilfe der Flow Service-API und zur Integration einer neuen Quelle über Self-Serve-Quellen (Batch SDK).
 exl-id: 9e945ba1-51b6-40a9-b92f-e0a52b3f92fa
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 16%

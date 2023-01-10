@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; individuelles Profil; Felder; Schemas; Schemas; Segment; Segmentzugehörigkeit; Segmentmitgliedschaft; Schemadesign; Karte; Map;
 solution: Experience Platform
 title: Schemafeldgruppe "Segmentzugehörigkeitsdetails"
-topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Schemakonzerne "Segmentzugehörigkeitsdetails".
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 5f28c9eceb42ee19f7a8b22604ff36f8ffbd89b1
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '430'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->Die Namen verschiedener Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
+>Die Namen mehrerer Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
 
 [!UICONTROL Details zur Segmentzugehörigkeit] ist eine Standardschemafeldgruppe für die [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). Die Feldergruppe bietet ein einzelnes Zuordnungsfeld, das Informationen zur Segmentzugehörigkeit erfasst, einschließlich der Segmente, zu denen die Person gehört, der letzten Qualifikationszeit und des Zeitpunkts, zu dem die Mitgliedschaft gültig ist, bis.
 

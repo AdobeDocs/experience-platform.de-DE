@@ -2,13 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; HP Vertica; hp vertica
 solution: Experience Platform
 title: HP Vertica Source Connector - Überblick
-topic-legacy: overview
 description: Erfahren Sie, wie Sie HP Vertica über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 5785d8bb-ccda-4d53-a79b-030923e3ae81
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '215'
-ht-degree: 35%
+ht-degree: 44%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 35%
 
 >[!NOTE]
 >
->Die [!DNL HP Vertica] -Connector befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
+>Die [!DNL HP Vertica] -Connector befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../home.md#terms-and-conditions), um weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren zu erhalten.
 
 Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie [!DNL Microsoft], MySQL und [!DNL Azure]. Sie können Ihre Daten aus diesen Systemen in [!DNL Platform].
 
@@ -31,7 +30,7 @@ Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL HP Ve
 ## Verbinden von [!DNL HP Vertica] mit [!DNL Platform] mithilfe von APIs
 
 - [Erstellen einer HP Vertica-Quellverbindung mithilfe der Flow Service-API](../../tutorials/api/create/databases/hp-vertica.md)
-- [Datentabellen mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/tabular.md)
+- [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine Datenbankquelle mithilfe der Flow Service-API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbinden von [!DNL HP Vertica] mit [!DNL Platform] über die Benutzeroberfläche
