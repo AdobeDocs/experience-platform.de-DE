@@ -5,7 +5,7 @@ title: Verbinden der Dateneinstiegszone mit Adobe Experience Platform mithilfe d
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Flow Service-API Adobe Experience Platform mit Data Landing Zone verbinden.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 249f2076dd55a589c638648eb25214036a47c05a
 workflow-type: tm+mt
 source-wordcount: '1224'
 ht-degree: 20%
@@ -80,7 +80,7 @@ So rufen Sie Anmeldeinformationen für ein [!DNL Data Landing Zone], stellen Sie
 **API-Format**
 
 ```http
-GET /connectors/landingzone/credentials?type=user_drop_zone
+GET /data/foundation/connectors/landingzone/credentials?type=user_drop_zone
 ```
 
 **Anfrage**
@@ -124,7 +124,7 @@ Sie können Ihre `SASToken` , indem Sie eine POST an die `/credentials` Endpunkt
 **API-Format**
 
 ```http
-POST /connectors/landingzone/credentials?type=user_drop_zone&action=refresh
+POST /data/foundation/connectors/landingzone/credentials?type=user_drop_zone&action=refresh
 ```
 
 | Kopfzeilen | Beschreibung |
