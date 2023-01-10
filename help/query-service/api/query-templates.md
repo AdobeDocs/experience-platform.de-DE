@@ -4,10 +4,10 @@ solution: Experience Platform
 title: API-Endpunkt für Abfragevorlagen
 description: In diesem Handbuch werden die verschiedenen API-Aufrufe für Abfragevorlagen beschrieben, die Sie mit der Query Service-API ausführen können.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: e0287076cc9f1a843d6e3f107359263cd98651e6
 workflow-type: tm+mt
-source-wordcount: '668'
-ht-degree: 89%
+source-wordcount: '894'
+ht-degree: 65%
 
 ---
 
@@ -129,15 +129,19 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
-        "sql": "SELECT * FROM accounts;",
-        "name": "Sample query template"
+        "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
+        "name": "Sample query template",
+        "queryParameters": {
+            user_id : {USER_ID}
+            }
     }'
 ```
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `sql` | Die SQL-Abfrage, die Sie erstellen möchten. |
+| `sql` | Die SQL-Abfrage, die Sie erstellen möchten. Sie können entweder Standard-SQL oder eine Parameterersetzung verwenden. Um einen Parameteraustausch in der SQL zu verwenden, müssen Sie dem Parameterschlüssel eine `$`. Beispiel: `$key`und geben Sie die Parameter an, die in SQL als JSON-Schlüsselwertpaare im `queryParameters` -Feld. Die hier übergebenen Werte sind die Standardparameter, die in der Vorlage verwendet werden. Wenn Sie diese Parameter überschreiben möchten, müssen Sie sie in der POST-Anfrage überschreiben. |
 | `name` | Der Name der Abfragevorlage. |
+| `queryParameters` | Eine Schlüsselwertpaarung zum Ersetzen von parametrisierten Werten in der SQL-Anweisung. Dies ist nur erforderlich **if** Sie verwenden Parameterersetzungen innerhalb der von Ihnen bereitgestellten SQL. An diesen Schlüsselwertpaaren wird keine Wertüberprüfung durchgeführt. |
 
 **Antwort**
 
@@ -145,7 +149,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit Details zur 
 
 ```json
 {
-    "sql": "SELECT * FROM accounts;",
+    "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
     "name": "Sample query template",
     "id": "0094d000-9062-4e6a-8fdb-05606805f08f",
     "updated": "2020-01-09T00:20:09.670Z",
@@ -265,8 +269,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `sql` | Die SQL-Abfrage, die Sie aktualisieren möchten. |
-| `name` | Der Name der geplanten Abfrage. |
+| `sql` | Die SQL-Abfrage, die Sie erstellen möchten. Sie können entweder Standard-SQL oder eine Parameterersetzung verwenden. Um einen Parameteraustausch in der SQL zu verwenden, müssen Sie dem Parameterschlüssel eine `$`. Beispiel: `$key`und geben Sie die Parameter an, die in SQL als JSON-Schlüsselwertpaare im `queryParameters` -Feld. Die hier übergebenen Werte sind die Standardparameter, die in der Vorlage verwendet werden. Wenn Sie diese Parameter überschreiben möchten, müssen Sie sie in der POST-Anfrage überschreiben. |
+| `name` | Der Name der Abfragevorlage. |
+| `queryParameters` | Eine Schlüsselwertpaarung zum Ersetzen von parametrisierten Werten in der SQL-Anweisung. Dies ist nur erforderlich **if** Sie verwenden Parameterersetzungen innerhalb der von Ihnen bereitgestellten SQL. An diesen Schlüsselwertpaaren wird keine Wertüberprüfung durchgeführt. |
 
 **Antwort**
 
