@@ -1,12 +1,12 @@
 ---
 keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;Echtzeit-Kundendatenplattform;Echtzeit-Kundendatenplattform;b2b;cdp;Customer AI
 title: Überblick über Real-Time CDP B2B Edition
-description: Übersicht über das Real-time Customer Data Platform B2B Edition-Konto
+description: Übersicht über das Konto in der B2B-Edition von Real-time Customer Data Platform
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1084'
-ht-degree: 59%
+ht-degree: 60%
 
 ---
 

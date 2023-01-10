@@ -1,12 +1,12 @@
 ---
 keywords: RTCDP B2B;B2B;Account;Account-Profil;Account-Profile RTCDP;Real-Time Customer Data Platform;
 title: Kontoprofile in Real-Time CDP B2B Edition
-description: Erfahren Sie, wie Sie mit Adobe Real-time Customer Data Platform B2B Edition Kontoinformationen aus mehreren Quellen mithilfe von Kontoprofilen vereinheitlichen können.
+description: Erfahren Sie, wie Sie mit der B2B-Edition von Adobe Real-time Customer Data Platform Kontoinformationen aus verschiedenen Quellen mithilfe von Kontoprofilen vereinheitlichen können.
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '277'
-ht-degree: 52%
+ht-degree: 60%
 
 ---
 

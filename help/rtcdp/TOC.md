@@ -2,19 +2,19 @@
 product: adobe experience platform
 solution: Real-time Customer Data Platform
 audience: user
-user-guide-title: Real-time Customer Data Platform-Handbuch
+user-guide-title: Handbuch zu Real-time Customer Data Platform
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppen-Segmente aus diesen Profilen zu erstellen und diese Segmente für Drittanbieterziele bereitzustellen.
 source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
 source-wordcount: '205'
-ht-degree: 60%
+ht-degree: 64%
 
 ---
 
 
 # Hilfe zur Echtzeit-Kundendatenplattform {#rtcdp}
 
-* [Übersicht über Real-Time CDP](overview.md)
+* [Real-Time CDP – Übersicht](overview.md)
 * [Übersicht über Real-Time CDP B2B Edition](b2b-overview.md)
 * Erste Schritte {#intro}
    * Real-Time CDP {#rtcdp-intro}

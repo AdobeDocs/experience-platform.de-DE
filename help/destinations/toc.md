@@ -5,7 +5,7 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 source-git-commit: d046c17a7b376f5c2e2f25c38fac0916ed2dba73
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '985'
 ht-degree: 100%
 

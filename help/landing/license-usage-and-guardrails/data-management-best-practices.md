@@ -6,7 +6,7 @@ exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
 source-git-commit: 9a8e247784dc51d7dc667b7467042399df700b3c
 workflow-type: tm+mt
 source-wordcount: '2134'
-ht-degree: 91%
+ht-degree: 92%
 
 ---
 
@@ -133,7 +133,7 @@ Es stehen verschiedene Berichte zur Verfügung, die Ihnen Einblicke in die Zusam
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
-#### Ablauf von Erlebnisereignissen {#event-expirations}
+#### Gültigkeitsdauern von Erlebnisereignissen {#event-expirations}
 
 Mit dieser Funktion können Sie Verhaltensdaten automatisch aus einem für Profile aktivierten Datensatz entfernen, der für Ihre Anwendungsfälle nicht mehr nützlich ist. Siehe Übersicht unter [Ablauf von Erlebnisereignissen](../../profile/event-expirations.md) für Details darüber, wie dieser Prozess funktioniert, nachdem er für einen Datensatz aktiviert wurde.
 
@@ -156,10 +156,10 @@ In der folgenden Tabelle finden Sie eine Liste der derzeit verfügbaren Funktion
 | Funktion | Beschreibung |
 | --- | --- |
 | [Datensätze für ein Profil aktivieren/deaktivieren](../../catalog/datasets/user-guide.md) | Aktivieren oder Deaktivieren der Datensatzaufnahme in den Profil-Service |
-| [Ablauf von Erlebnisereignissen](../../profile/event-expirations.md) | Wenden Sie eine Ablaufzeit für alle Ereignisse an, die in einen Profil-aktivierten Datensatz aufgenommen werden. Wenden Sie sich an Ihren Support-Mitarbeiter für Adoben, um diese Funktion zu aktivieren. |
+| [Gültigkeitsdauern von Erlebnisereignissen](../../profile/event-expirations.md) | Wenden Sie eine Ablaufzeit für alle Ereignisse an, die in einen Profil-aktivierten Datensatz aufgenommen werden. Wenden Sie sich an Ihren Support-Mitarbeiter für Adoben, um diese Funktion zu aktivieren. |
 | [Adobe Analytics-Datenvorbereitungsfilter](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Anwenden von [!DNL Kafka]-Filtern zum Ausschließen unnötiger Daten von der Aufnahme |
 | [Quell-Connector-Filter von Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Anwenden von Audience Manager-Quellverbindungsfiltern, um unnötige Daten von der Aufnahme auszuschließen |
-| [Alloy-SDK-Datenfilter](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | Anwenden von Alloy-Filtern, um unnötige Daten von der Aufnahme auszuschließen |
+| [Alloy-SDK-Datenfilter](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=de#fundamentals) | Anwenden von Alloy-Filtern, um unnötige Daten von der Aufnahme auszuschließen |
 | [Datenfilter für die Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) | Anwenden von Server-seitigen [!DNL Kafka]-Filtern, um unnötige Daten von der Aufnahme auszuschließen.  Weitere Informationen finden Sie in der Dokumentation unter [Tag-Regeln](../../tags/ui/managing-resources/rules.md). |
 | [Lizenznutzungs-Dashboard](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Ansicht eines Snapshots der lizenzbezogenen Daten Ihres Unternehmens für Experience Platform. |
 | [Dataset Overlap Report API](../../profile/tutorials/dataset-overlap-report.md) | Gibt die Datensätze an, die am meisten zu Ihrer Addressable Audience beitragen. |

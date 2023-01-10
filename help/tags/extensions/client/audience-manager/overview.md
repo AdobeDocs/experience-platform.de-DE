@@ -67,7 +67,7 @@ Fügen Sie die von [DIL.create](https://experiencecloud.adobe.com/resources/help
 
 Wählen Sie **[!UICONTROL Element auswählen]**, um weitere Eigenschaften hinzuzufügen.
 
-Bewegen Sie den Mauszeiger über die „i“-Symbole, um zu erfahren, welche Funktion die einzelnen Eigenschaften haben. Weitere Informationen zu den Eigenschaften finden Sie in der [Audience Manager-DIL-Dokumentation](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html).
+Bewegen Sie den Mauszeiger über die „i“-Symbole, um zu erfahren, welche Funktion die einzelnen Eigenschaften haben. Weitere Informationen zu den Eigenschaften finden Sie in der [Audience Manager-DIL-Dokumentation](https://experiencecloud.adobe.com/resources/help/de_DE/aam/r_dil_create.html).
 
 Klicken Sie auf **[!UICONTROL Speichern]**, wenn Sie mit der Konfiguration der Erweiterung fertig sind.
 

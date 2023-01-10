@@ -7,7 +7,7 @@ feature: Schemas
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '503'
-ht-degree: 83%
+ht-degree: 84%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 83%
    * [Plan](./classes/plan.md)
    * [Richtlinie](./classes/policy.md)
    * [Produkt](./classes/product.md)
-   * [Anbieter](./classes/provider.md)
+   * [Provider](./classes/provider.md)
    * [Segmentdefinition](./classes/segment-definition.md)
    * B2B-Klassen {#b2b}
       * [XDM Business Account](./classes/b2b/business-account.md)

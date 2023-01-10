@@ -5,7 +5,7 @@ breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
 source-git-commit: 46c9ec0c561f7ed3e38f05ef7b1e3ffec0eaed57
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '860'
 ht-degree: 100%
 

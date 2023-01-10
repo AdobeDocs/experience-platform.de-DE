@@ -12,7 +12,7 @@ ht-degree: 100%
 ---
 
 
-# Zugriff auf Adobe Experience Platform-Daten {#data-access}
+# Adobe Experience Platform Data Access {#data-access}
 
 - [Übersicht über den Datenzugriff](home.md)
 - [Datenzugriffs-API](api.md)

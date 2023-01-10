@@ -7,7 +7,7 @@ feature: Data Ingestion
 source-git-commit: f77bbc60f2bc1f12970e8050ec6a924b9713f303
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 86%
+ht-degree: 89%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 86%
    - [Abrufen fehlgeschlagener Batches](quality/retrieve-failed-batches.md)
    - [Validieren der Streaming-Erfasssung](quality/streaming-validation.md)
    - [Benachrichtigungen zur Datenerfassung](quality/subscribe-events.md)
-- [Limits für die Datenerfassung](guardrails.md)
+- [Leitlinien für Datenaufnahme](guardrails.md)
 - [Quellen-Connectoren](source-connectors.md)
 - [API-Referenz](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
 - [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)

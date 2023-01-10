@@ -7,7 +7,7 @@ feature: Access Control
 source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
 workflow-type: tm+mt
 source-wordcount: '124'
-ht-degree: 95%
+ht-degree: 98%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 95%
       * [Rollen](abac/ui/roles.md)
       * [Sandboxes](abac/ui/sandboxes.md)
       * [Benutzer](abac/ui/users.md)
-   * Attributbasierte Zugriffssteuerungs-API {#abac-api}
+   * Attributbasierte Zugriffssteuerung – API {#abac-api}
       * [Übersicht](abac/api/overview.md)
       * [Erste Schritte](abac/api/getting-started.md)
       * [Rollen](abac/api/roles.md)
