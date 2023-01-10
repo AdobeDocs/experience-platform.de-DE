@@ -2,10 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Zugangssteuerung;API;Erste Schritte
 solution: Experience Platform
 title: Handbuch der Zugangssteuerungs-APIs
-topic-legacy: developer guide
 description: Mit der Zugangssteuerung in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Funktionen der Plattform mithilfe von Adobe Admin Console verwalten. Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Schema Registry-API erfolgreich aufrufen zu können.
 exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 97%

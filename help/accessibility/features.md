@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;Einheitliches Profil;Einheitliches Profil;Profil;RTCP;XDM-Diagramme
 title: Allgemeine Funktionen zur Barrierefreiheit in Platform
-topic-legacy: guide
 type: Documentation
 description: Erfahren Sie mehr über die allgemeinen Funktionen zur Barrierefreiheit, die von Adobe Experience Platform unterstützt werden, einschließlich Tastaturnavigation, Farbpaletten und Kontrast sowie Unterstützung durch Hilfstechnologien.
 exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '484'
 ht-degree: 100%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;Home;beliebte Themen;Zugriffssteuerung;Adobe Admin Console
 solution: Experience Platform
 title: Benutzeroberfläche der Zugriffssteuerung – Übersicht
-topic-legacy: user guide
 description: Mit der Zugriffssteuerung in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Funktionen der Plattform mithilfe von Adobe Admin Console verwalten. Dieses Dokument dient als Anleitung zum Navigieren in der Admin Console zum Verwalten der Zugriffssteuerung für Platform.
 exl-id: 6d83cbf5-c09f-4e2a-9678-b124981f8e83
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '194'
 ht-degree: 100%

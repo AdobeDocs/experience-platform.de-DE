@@ -2,10 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Produktprofil
 solution: Experience Platform
 title: Erstellen eines neuen Produktprofils in Adobe Admin Console
-topic-legacy: user guide
 description: In diesem Dokument werden die erforderlichen Schritte zur Erstellung eines neuen Produktprofils in Adobe Admin Console beschrieben. Um mit dem Erstellen eines neuen Profils zu beginnen, gehen Sie zur Registerkarte „Produktprofile“ und klicken Sie auf „Neues Profil“.
 exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 100%

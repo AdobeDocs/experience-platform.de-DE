@@ -2,13 +2,12 @@
 keywords: Experience Platform;Home;beliebte Themen;Fehlerbehebung;Zugriffssteuerung
 solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei der Zugriffssteuerung
-topic-legacy: troubleshooting guide
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zur Zugriffskontrolle in Adobe Experience Platform.
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
-source-git-commit: 79ffdf35e27d74a64ea8e25544fdeeb293b58306
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '408'
-ht-degree: 78%
+ht-degree: 97%
 
 ---
 
@@ -36,4 +35,4 @@ Weiterführende Informationen zur Bereitstellung rollenbasierter Zugriffskontrol
 
 ## Was passiert mit Berechtigungen nach der Migration von Adobe IO zu Business ID?
 
-Die Zugriffskontrolle verwendet die Benutzer-ID (eine interne eindeutige ID, die einem Benutzer zugewiesen ist) für die Erteilung von Berechtigungen. Wenn eine Organisation von Adobe ID zu Business ID migriert wird, gehen alle für ihre Benutzer festgelegten Berechtigungen verloren, da sich die Benutzer-ID ändert und die Zugriffskontrolle die neu generierte Benutzer-ID verwendet. Wenn Ihr Unternehmen zu einer Business ID migriert wird, wenden Sie sich an Ihren Kundenbetreuer, um Ihre Adobe-ID von Adobe ID zu Business ID zu migrieren.
+Die Zugriffssteuerung verwendet die Benutzer-ID (eine interne eindeutige ID, die einem Benutzer zugewiesen ist) zum Gewähren von Berechtigungen. Wenn eine Organisation von Adobe ID zu Business ID migriert wird, gehen alle für ihre Benutzer festgelegten Berechtigungen verloren, da sich die Benutzer-ID ändert und die Zugriffssteuerung die neu generierte Benutzer-ID verwendet. Wenn Ihre Organisation zu Business ID migriert wird, wenden Sie sich an den Adobe-Support-Mitarbeiter, um Ihre Benutzer-ID von Adobe ID zu Business ID zu migrieren.

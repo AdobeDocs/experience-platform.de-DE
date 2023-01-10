@@ -2,10 +2,9 @@
 keywords: Experience Platform;Home;beliebte Themen;Effektive Richtlinien;Zugriffssteuerungs-API
 solution: Experience Platform
 title: API-Endpunkt für effektive Richtlinien
-topic-legacy: developer guide
 description: Erfahren Sie, wie Sie effektive Zugriffsrichtlinien mithilfe der Access Control-API für Adobe Experience Platform anzeigen können.
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 80%

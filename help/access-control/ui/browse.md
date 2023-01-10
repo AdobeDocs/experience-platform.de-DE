@@ -2,10 +2,9 @@
 keywords: Experience Platform;Home;beliebte Themen
 solution: Experience Platform
 title: Wählen Sie ein Produktprofil aus, um Zugriffssteuerungsberechtigungen zu bearbeiten
-topic-legacy: user guide
 description: In diesem Dokument werden die erforderlichen Schritte zum Durchsuchen des Arbeitsbereichs „Zugriffssteuerung“ beschrieben. Um die Zugriffskontrolle für Experience Platform über die Adobe Admin Console zu konfigurieren, müssen Sie Administrator einer IMS-Organisation sein, die über ein Abonnement für Experience Platform verfügt.
 exl-id: 1d3c894e-b412-43ba-ba91-ddfa35303d73
-source-git-commit: 8dc88f3b9aa6ea25a43427d043749c665e0e9281
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 100%

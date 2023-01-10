@@ -1,12 +1,11 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Zugangssteuerung;adobe Admin Console
 solution: Experience Platform
-topic-legacy: overview
 title: Zugangssteuerung – Übersicht
 description: Die Zugangssteuerung für Adobe Experience Platform wird über Adobe Admin Console geboten. Diese Funktion nutzt Produktprofile in Admin Console, um Anwender mit Berechtigungen und Sandboxes zu verknüpfen.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: e2d3267715f693a321b2f4ce1bae0650f38c21d7
-workflow-type: ht
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+workflow-type: tm+mt
 source-wordcount: '1419'
 ht-degree: 100%
 
