@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Grundlagen der Schemakomposition
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: b67349baa909cc59f3ff1d7aac22f7926f2b36ff
 workflow-type: tm+mt
-source-wordcount: '4103'
+source-wordcount: '4108'
 ht-degree: 26%
 
 ---
@@ -87,7 +87,7 @@ Ein Beispiel für eine einfache Identitätszuordnung würde wie folgt aussehen:
   "email": [
     {
       "id": "jsmith@example.com",
-      "primary": false
+      "primary": true
     }
   ],
   "ECID": [
@@ -100,10 +100,10 @@ Ein Beispiel für eine einfache Identitätszuordnung würde wie folgt aussehen:
       "primary": false
     }
   ],
-  "loyaltyId": [
+  "CRMID": [
     {
       "id": "2e33192000007456-0365c00000000000",
-      "primary": true
+      "primary": false
     }
   ]
 }
@@ -197,7 +197,7 @@ Feldergruppen definieren, mit welchen Klassen sie kompatibel sind, basierend auf
 
 [!DNL Experience Platform] umfasst viele Standardfeldgruppen für Adoben, ermöglicht es jedoch Anbietern, Feldgruppen für ihre  zu definieren, und einzelnen Benutzern, Feldgruppen für ihre eigenen spezifischen Konzepte zu definieren.
 
-So erfassen Sie beispielsweise Details wie[!UICONTROL Vorname]&quot; und &quot;[!UICONTROL Hausanschrift]&quot; für Ihre &quot;[!UICONTROL Mitglieder des Treueprogramms]&quot;Schema&quot;, können Sie Standardfeldgruppen verwenden, die diese gemeinsamen Konzepte definieren. Für weniger häufige Anwendungsfälle spezifische Konzepte (z. B.[!UICONTROL Treueprogramm-Ebene]&quot;) häufig keine vordefinierte Feldergruppe haben. In diesem Fall müssen Sie Ihre eigene Feldergruppe definieren, um diese Informationen zu erfassen.
+So erfassen Sie beispielsweise Details wie[!UICONTROL Vorname]&quot; und &quot;[!UICONTROL Hausanschrift]&quot; für Ihre &quot;[!UICONTROL Mitglieder des Treueprogramms]&quot;Schema&quot;, können Sie Standardfeldgruppen verwenden, die diese gemeinsamen Konzepte definieren. Konzepte, die für Ihr Unternehmen spezifischer sind (z. B. Details zum Treueprogramm oder Produktattribute), die möglicherweise nicht von Standardfeldgruppen abgedeckt werden. In diesem Fall müssen Sie Ihre eigene Feldergruppe definieren, um diese Informationen zu erfassen.
 
 >[!NOTE]
 >
