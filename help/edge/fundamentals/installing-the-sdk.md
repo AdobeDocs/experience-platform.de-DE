@@ -3,7 +3,7 @@ title: Installieren des Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie das Experience Platform Web SDK installieren.
 keywords: Web SDK-Installation;Web SDK installieren;Internet Explorer;Zusage;npm-Paket
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: c3476d7f9e758678cdf270ab55f8b85c0614b546
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 30%
@@ -20,7 +20,7 @@ Es werden drei Möglichkeiten zur Verwendung des Adobe Experience Platform Web S
 
 ## Option 1: Installieren der Tag-Erweiterung
 
-Die Dokumentation zur Tag-Erweiterung finden Sie unter [Launch-Dokumentation](../../tags/extensions/client/sdk/overview.md)
+Die Dokumentation zur Tag-Erweiterung finden Sie unter [Dokumentation zu Tags](../../tags/extensions/client/sdk/overview.md)
 
 ## Option 2: Installieren der vordefinierten eigenständigen Version
 
@@ -145,7 +145,7 @@ alloy("sendEvent", { ... });
 
 ### Unterstützen von Internet Explorer
 
-Das Adobe Experience Platform-SDK verwendet Versprechen, die eine Methode darstellen, um den Abschluss asynchroner Aufgaben zu kommunizieren. Die [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) Die vom SDK verwendete Implementierung wird nativ von allen Ziel-Browsern unterstützt, mit Ausnahme von [!DNL Internet Explorer]. So verwenden Sie das SDK in [!DNL Internet Explorer], müssen Sie `window.Promise` [Polyfill](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+Das Adobe Experience Platform-SDK verwendet Versprechen, die eine Methode darstellen, um den Abschluss asynchroner Aufgaben zu kommunizieren. Die [Promise](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/Promise) Die vom SDK verwendete Implementierung wird nativ von allen Ziel-Browsern unterstützt, mit Ausnahme von [!DNL Internet Explorer]. So verwenden Sie das SDK in [!DNL Internet Explorer], müssen Sie `window.Promise` [Polyfill](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
 Eine Bibliothek, die Sie zum Polyfill-Promise verwenden können, ist Promise-Polyfill. Siehe [Promise-Polyfill-Dokumentation](https://www.npmjs.com/package/promise-polyfill) für weitere Informationen zur Installation mit NPM.
 
