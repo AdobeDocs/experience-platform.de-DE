@@ -2,10 +2,9 @@
 keywords: Experience Cloud; Erste Schritte; Inhalts- und Commerce-Hilfe; beliebte Themen; Intelligente Dienste; CCAI
 solution: Experience Platform
 title: Inhalts- und Commerce-KI - Überblick
-topic-legacy: Content and Commerce AI
 description: Content and Commerce AI ist eine Reihe von KI-Diensten, mit denen Sie intelligente Funktionen aus Ihren Inhalten extrahieren, den Inhaltsfluss organisieren, optimieren und Ihren Kunden wirkungsvollere, personalisierte Erlebnisse bereitstellen können.
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
-source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 1%

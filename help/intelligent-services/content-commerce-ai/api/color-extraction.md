@@ -2,10 +2,9 @@
 keywords: Experience Platform; Erste Schritte; Inhaltsai; Commerce-API; Inhalts- und Commerce-API; Farbextraktion; Farbextraktion
 solution: Experience Platform
 title: Farbextraktion in der Inhalts- und Commerce-API
-topic-legacy: Developer guide
 description: Der Farbextraktionsdienst kann, wenn er ein Bild erhält, das Histogramm der Pixelfarben berechnen und durch dominante Farben in Behälter sortieren.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 3%

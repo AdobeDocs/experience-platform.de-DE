@@ -2,10 +2,9 @@
 keywords: Experience Platform; Einblicke; Attributionsai; beliebte Themen; Attributionai-Einblicke
 feature: Attribution AI
 title: Discover Insights in Attribution AI
-topic-legacy: Attribution AI insights
 description: Dieses Dokument dient als Handbuch für die Interaktion mit Einblicken der Dienstinstanz in der Benutzeroberfläche von Adobe Intelligent Services.
 exl-id: 6b8e51e7-1b56-4f4e-94cf-96672b426c88
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '1656'
 ht-degree: 49%

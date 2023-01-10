@@ -2,10 +2,9 @@
 keywords: Experience Platform; Startseite; Intelligent Services; beliebte Themen; intelligenter Dienst; Intelligent Service
 solution: Experience Platform
 title: Vorbereiten von Daten für die Verwendung in Intelligent Services
-topic-legacy: Intelligent Services
 description: Damit Intelligent Services Einblicke aus Ihren Marketing-Ereignisdaten gewinnen kann, müssen die Daten semantisch angereichert und in einer Standardstruktur verwaltet werden. Intelligent Services verwenden dazu Experience-Datenmodell (XDM)-Schemas.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '2936'
 ht-degree: 2%
@@ -183,13 +182,13 @@ Die folgende Tabelle enthält einige Beispiele für Marketing-Kanäle, die dem `
 | Kanal | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
 | Paid Search | https:/<span>/ns.adobe.com/xdm/channel-types/search | bezahlt | clicks |
-| Social - Marketing | https:/<span>/ns.adobe.com/xdm/channel-types/social | Earned | Klicks |
-| Anzeigen | https:/<span>/ns.adobe.com/xdm/channel-types/display | bezahlt | Klicks |
-| E-Mail | https:/<span>/ns.adobe.com/xdm/channel-types/email | bezahlt | Klicks |
-| Interner Referrer | https:/<span>/ns.adobe.com/xdm/channel-types/direct | Eigentümer | Klicks |
+| Social - Marketing | https:/<span>/ns.adobe.com/xdm/channel-types/social | Earned | clicks |
+| Anzeigen | https:/<span>/ns.adobe.com/xdm/channel-types/display | bezahlt | clicks |
+| E-Mail | https:/<span>/ns.adobe.com/xdm/channel-types/email | bezahlt | clicks |
+| Interner Referrer | https:/<span>/ns.adobe.com/xdm/channel-types/direct | Eigentümer | clicks |
 | Display ViewThrough | https:/<span>/ns.adobe.com/xdm/channel-types/display | bezahlt | impressions |
-| QR-Code-Umleitung | https:/<span>/ns.adobe.com/xdm/channel-types/direct | Eigentümer | Klicks |
-| Mobile | https:/<span>/ns.adobe.com/xdm/channel-types/mobile | Eigentümer | Klicks |
+| QR-Code-Umleitung | https:/<span>/ns.adobe.com/xdm/channel-types/direct | Eigentümer | clicks |
+| Mobile | https:/<span>/ns.adobe.com/xdm/channel-types/mobile | Eigentümer | clicks |
 
 ### Empfohlene Felder
 

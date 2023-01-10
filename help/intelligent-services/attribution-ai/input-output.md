@@ -2,10 +2,9 @@
 keywords: Experience Platform; Erste Schritte; Attribution ai; beliebte Themen; Attribution AI-Eingabe; Attribution AI-Ausgabe;
 feature: Attribution AI
 title: Eingabe und Ausgabe in Attribution AI
-topic-legacy: Input and Output data for Attribution AI
 description: Im folgenden Dokument werden die verschiedenen Ein- und Ausgabedaten beschrieben, die in Attribution AI verwendet werden.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '2504'
 ht-degree: 4%

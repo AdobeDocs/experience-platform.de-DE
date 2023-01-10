@@ -2,10 +2,9 @@
 keywords: Experience Platform; Erste Schritte; Attribution; beliebte Themen
 feature: Attribution AI
 title: Erste Schritte mit Attribution AI
-topic-legacy: Getting started
 description: Folgende Handbücher setzen ein Verständnis der verschiedenen Adobe Experience Platform-Dienste voraus, die mit der Verwendung von Attribution AI verbunden sind. Bevor Sie mit den Tutorials beginnen, lesen Sie folgende Dokumente.
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
-source-git-commit: a14f857f87482e1468211152976530c718d56e38
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 62%

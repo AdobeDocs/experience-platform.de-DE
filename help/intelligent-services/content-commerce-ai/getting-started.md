@@ -2,10 +2,9 @@
 keywords: Experience Platform; Erste Schritte; Content-Hilfe; Commerce-API; Inhalts- und Commerce-API
 solution: Experience Platform
 title: Erste Schritte mit Content and Commerce AI
-topic-legacy: Getting started
 description: Die Inhalts- und Commerce-KI verwendet Adobe I/O-APIs. Um Adobe I/O-APIs und die I/O-Konsolenintegration aufzurufen, müssen Sie zunächst das Authentifizierungs-Tutorial abschließen.
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 14%
@@ -50,7 +49,7 @@ Sie werden umgeleitet und aufgefordert, eine Umgebungsdatei von Ihrem Computer a
 
 ![](./images/click-open.png)
 
-Sie werden zurück zum *Umgebungen verwalten* mit einem neuen Umgebungsnamen. Wählen Sie den Umgebungsnamen aus, um die in Postman verfügbaren Variablen anzuzeigen und zu bearbeiten. Sie müssen die `JWT_TOKEN` und `ACCESS_TOKEN`. Diese Werte sollten beim Abschließen der [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en).
+Sie werden zurück zum *Umgebungen verwalten* mit einem neuen Umgebungsnamen. Wählen Sie den Umgebungsnamen aus, um die in Postman verfügbaren Variablen anzuzeigen und zu bearbeiten. Sie müssen die `JWT_TOKEN` und `ACCESS_TOKEN`. Diese Werte sollten beim Abschließen der [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de).
 
 ![](./images/re-direct.png)
 
