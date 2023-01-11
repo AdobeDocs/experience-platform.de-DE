@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform-Glossar
 description: Ein Glossar wichtiger Experience Platform-Terminologie.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
 workflow-type: tm+mt
-source-wordcount: '7919'
+source-wordcount: '7929'
 ht-degree: 4%
 
 ---
@@ -327,7 +327,7 @@ ht-degree: 4%
 
 **Bibliothek**: Im Kontext von Tags ist eine Bibliothek ein Satz von Geschäftslogik, die Anweisungen dazu enthält, wie sich die Tag-Bibliothek auf dem Client-Gerät verhalten sollte.
 
-**Suchentitäten**: Im Kontext der Datenmodellierung stellen Lookup-Entitäten Konzepte dar, die sich auf eine einzelne Person beziehen, aber nicht direkt zur Identifizierung der Person verwendet werden können. Entitäten, die unter diese Kategorie fallen, sollten durch Schemas dargestellt werden, die auf benutzerdefinierten Experience-Datenmodell (XDM)-Klassen basieren.
+**Suchentitäten**: Im Kontext der Datenmodellierung stellen Lookup-Entitäten Konzepte dar, die sich auf eine einzelne Person beziehen, aber nicht direkt zur Identifizierung der Person verwendet werden können. Entitäten, die unter diese Kategorie fallen, sollten durch Schemas repräsentiert werden, die auf benutzerdefinierten Experience-Datenmodell (XDM)-Klassen basieren, und mit einer Profilentität über eine [Schemabeziehung](../xdm/tutorials/relationship-ui.md).
 
 ## M
 

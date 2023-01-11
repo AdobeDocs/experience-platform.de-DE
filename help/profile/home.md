@@ -3,10 +3,10 @@ keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;Ei
 title: Echtzeit-Kundenprofil - Überblick
 description: Das Echtzeit-Kundenprofil führt Daten aus verschiedenen Quellen zusammen und bietet Zugriff auf diese Daten in Form von individuellen Kundenprofilen und zugehörigen Zeitreihenereignissen. die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 737a67b7e30f770d65751b1a924d8378af8bde52
 workflow-type: tm+mt
-source-wordcount: '2046'
-ht-degree: 90%
+source-wordcount: '2098'
+ht-degree: 87%
 
 ---
 
@@ -26,7 +26,7 @@ Die Beziehung zwischen Echtzeit-Kundenprofil und anderen Diensten innerhalb von 
 
 ### Entitätskomposition des Profils
 
-Ein Echtzeit-Kundenprofil besteht aus einer Hauptentität, der so genannten **primäre Entität** und verschiedenen unterstützenden Entitäten. Die primäre Entität besteht aus Eigenschaften, Verhaltensweisen und Segmentzugehörigkeiten eines Profils. Andere Entitäten ermöglichen es der Segmentierungs-Engine, Daten außerhalb der primären Entität des Profils zu verwenden, und umfassen Folgendes:
+Ein Echtzeit-Kundenprofil besteht aus einer Hauptentität, der so genannten **primäre Entität** und verschiedenen unterstützenden Entitäten. Im Kontext der Experience Platform ist die primäre Entität normalerweise ein **Profilentität**, das aus Eigenschaften, Verhaltensweisen und Segmentmitgliedschaften einer einzelnen Person besteht. Andere Entitäten ermöglichen es der Segmentierungs-Engine, Daten außerhalb der primären Entität des Profils zu verwenden, und umfassen Folgendes:
 
 - **Dimensionsentität**: Die Entität, die zur Vereinfachung des Datenmodellierungsprozesses für Informationen verwendet wird, die über Ereignisse oder Profildatensätze hinweg freigegeben werden. Dies wird auch als Lookup-Entität oder Klassifizierungsentität bezeichnet.
 - **B2B-Entität**: Entitäten, die die Beziehung des Profils zu B2B-Konten und Opportunities beschreiben.
@@ -36,6 +36,11 @@ Ein Echtzeit-Kundenprofil besteht aus einer Hauptentität, der so genannten **pr
 >[!IMPORTANT]
 >
 >Da dimensionale und B2B-Entitäten nur außerhalb der primären Entität existieren, werden diese nur für die Stapelsegmentierung verwendet.
+
+Dimensional- und B2B-Entitäten werden über die primäre Entität mit der primären Entität verknüpft **Schemabeziehungen**. Weitere Informationen finden Sie in der folgenden Dokumentation:
+
+- [Erstellen einer Eins-zu-Eins-Schema-Beziehung für Lookup-Entitäten](../xdm/tutorials/relationship-ui.md)
+- [Erstellen einer n:1-Schemabeziehung für B2B-Entitäten](../xdm/tutorials/relationship-b2b.md)
 
 ### Profil-Datenspeicher
 

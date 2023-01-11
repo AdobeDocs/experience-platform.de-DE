@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Best Practices für die Datenmodellierung
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
 workflow-type: tm+mt
-source-wordcount: '2699'
+source-wordcount: '2722'
 ht-degree: 3%
 
 ---
@@ -50,7 +50,7 @@ Nachdem Sie eine ERD erstellt haben, um die wesentlichen Entitäten zu identifiz
 | Kategorie | Beschreibung |
 | --- | --- |
 | Profilentitäten | Profilentitäten stellen Attribute dar, die sich auf eine einzelne Person beziehen, normalerweise einen Kunden. Stellen, die unter diese Kategorie fallen, sollten anhand der **[!DNL XDM Individual Profile]class**. |
-| Suchentitäten | Lookup-Entitäten stellen Konzepte dar, die sich auf eine einzelne Person beziehen, aber nicht direkt zur Identifizierung der Person verwendet werden können. Stellen, die unter diese Kategorie fallen, sollten durch Schemata vertreten werden, die auf **benutzerdefinierte Klassen**. |
+| Suchentitäten | Lookup-Entitäten stellen Konzepte dar, die sich auf eine einzelne Person beziehen, aber nicht direkt zur Identifizierung der Person verwendet werden können. Stellen, die unter diese Kategorie fallen, sollten durch Schemata vertreten werden, die auf **benutzerdefinierte Klassen** und über mit Profilen und Ereignissen verknüpft sind [Schemabeziehungen](../tutorials/relationship-ui.md). |
 | Ereignisentitäten | Ereignisentitäten stellen Konzepte dar, die sich auf Aktionen beziehen, die ein Kunde ausführen kann, Systemereignisse oder andere Konzepte, bei denen Sie Änderungen im Laufe der Zeit verfolgen möchten. Stellen, die unter diese Kategorie fallen, sollten anhand der **[!DNL XDM ExperienceEvent]class**. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -186,7 +186,7 @@ Die Kategorie, unter der eine Entität sortiert wurde, sollte die XDM-Klasse bes
 
 * Profilentitäten sollten [!DNL XDM Individual Profile] -Klasse.
 * Ereignisentitäten sollten die [!DNL XDM ExperienceEvent] -Klasse.
-* Lookup-Entitäten sollten benutzerdefinierte XDM-Klassen verwenden, die von Ihrem Unternehmen definiert wurden.
+* Lookup-Entitäten sollten benutzerdefinierte XDM-Klassen verwenden, die von Ihrem Unternehmen definiert wurden. Profil- und Ereignisentitäten können diese Lookup-Entitäten dann über Schemabeziehungen referenzieren.
 
 >[!NOTE]
 >
