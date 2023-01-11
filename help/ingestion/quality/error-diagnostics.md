@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Fehlerdiagnose beim Abrufen der Datenerfassung
 description: Dieses Dokument enthält Informationen zur Überwachung der Batch-Erfassung, zur Verwaltung von Fehlern bei der partiellen Batch-Erfassung sowie eine Referenz zu Typen der partiellen Batch-Erfassung.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '981'
 ht-degree: 40%
 
 ---
@@ -132,7 +132,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt JSON-Objekte zurück, die `path` Objekte, die detailliert angeben, wo die Diagnose gespeichert wurde. Die Antwort gibt die `path` Objekte in [JSON-Zeilen](https://jsonlines.org/) Format.
+Eine erfolgreiche Antwort gibt JSON-Objekte zurück, die `path` Objekte, die detailliert angeben, wo die Diagnose gespeichert wurde. Die Antwort gibt die `path` Objekte in [JSON-Zeilen](https://jsonlines.readthedocs.io/en/latest/) Format.
 
 ```json
 {"path": "F1.json"}

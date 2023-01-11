@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Namespace im Experience-Datenmodell (XDM)
 description: Erfahren Sie, wie Sie mit Namespacing im Experience-Datenmodell (XDM) Ihre Schemas erweitern und Feldkollisionen verhindern können, da verschiedene Schemakomponenten zusammengeführt werden.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '634'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ Die folgenden Abschnitte zeigen, wie Namespaces in der XDM-Syntax zugewiesen wer
 
 Die standardmäßige XDM-Syntax bietet Einblicke in die Darstellung von Namespaces in Schemas (einschließlich [wie sie in Adobe Experience Platform übersetzt werden](#compatibility)).
 
-Standard-XDM-Verwendung [JSON-LD](https://json-ld.org/) -Syntax, um Feldern Namespaces zuzuweisen. Dieser Namespace wird in Form eines URI (z. B. `https://ns.adobe.com/xdm` für `xdm` -Namespace) oder als Shorthand-Präfix, das im `@context` -Attribut eines Schemas.
+Standard-XDM-Verwendung [JSON-LD](https://www.w3.org/TR/json-ld11/#basic-concepts) -Syntax, um Feldern Namespaces zuzuweisen. Dieser Namespace wird in Form eines URI (z. B. `https://ns.adobe.com/xdm` für `xdm` -Namespace) oder als Shorthand-Präfix, das im `@context` -Attribut eines Schemas.
 
 Im Folgenden finden Sie ein Beispielschema für ein Produkt mit standardmäßiger XDM-Syntax. Mit Ausnahme von `@id` (die eindeutige Kennung, wie durch die JSON-LD-Spezifikation definiert), jedes Feld unter `properties` beginnt mit einem Namespace und endet mit dem Feldnamen. Wenn Sie ein Shorthand-Präfix verwenden, das unter `@context`, werden der Namespace und der Feldname durch einen Doppelpunkt (`:`). Wenn Sie kein Präfix verwenden, werden der Namespace und der Feldname durch einen Schrägstrich (`/`).
 
@@ -75,7 +75,7 @@ Im Folgenden finden Sie ein Beispielschema für ein Produkt mit standardmäßige
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `@context` | Ein Objekt, das die Kurzschreibpräfixe definiert, die anstelle eines vollständigen Namespace-URI unter verwendet werden können. `properties`. |
-| `@id` | Eine eindeutige Kennung für den Datensatz, wie durch die [JSON-LD spec](https://json-ld.org/spec/latest/json-ld/#node-identifiers). |
+| `@id` | Eine eindeutige Kennung für den Datensatz, wie durch die [JSON-LD spec](https://www.w3.org/TR/json-ld11/#node-identifiers). |
 | `xdm:sku` | Ein Beispiel für ein Feld, in dem ein Namespace mit einem Shorthand-Präfix gekennzeichnet wird. In diesem Fall `xdm` ist der Namespace (`https://ns.adobe.com/xdm`) und `sku` ist der Feldname. |
 | `https://ns.adobe.com/xdm/channels/application` | Ein Beispiel für ein Feld, das den vollständigen Namespace-URI verwendet. In diesem Fall `https://ns.adobe.com/xdm/channels` ist der Namespace und `application` ist der Feldname. |
 | `https://ns.adobe.com/vendorA/product/stockNumber` | Felder, die von Ressourcen des Anbieters bereitgestellt werden, verwenden ihre eigenen eindeutigen Namespaces. In diesem Beispiel `https://ns.adobe.com/vendorA/product` ist der Namespace des Anbieters und `stockNumber` ist der Feldname. |
