@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Abfragedienst;Abfrage-S
 title: API-Endpunkt für Warnhinweis-Abonnements
 description: Dieses Handbuch enthält Beispiele für HTTP-Anfragen und -Antworten für die verschiedenen API-Aufrufe, die Sie mit der Abfrage-Service-API an den Endpunkt für Warnhinweis-Abonnements stellen können.
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
-workflow-type: ht
-source-wordcount: '2289'
-ht-degree: 100%
+source-git-commit: 8673b6ceb9386677171334ce99d39c93e5e8159c
+workflow-type: tm+mt
+source-wordcount: '2668'
+ht-degree: 89%
 
 ---
 
@@ -50,7 +50,23 @@ Rufen Sie eine Liste aller Warnhinweise für eine Organisations-Sandbox ab, inde
 
 ```http
 GET /alert-subscriptions
+GET /alert-subscriptions?{QUERY_PARAMETERS}
 ```
+
+| Eigenschaft | Beschreibung |
+| --------- | ----------- |
+| `{QUERY_PARAMETERS}` | (Optional) Dem Anfragepfad hinzugefügte Parameter, die die in der Antwort zurückgegebenen Ergebnisse konfigurieren. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (&amp;) voneinander getrennt werden. Die verfügbaren Parameter sind unten aufgeführt. |
+
+**Abfrageparameter**
+
+Im Folgenden finden Sie eine Liste der verfügbaren Abfrageparameter zur Auflistung von Abfragen. Alle diese Parameter sind optional. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren Abfragen abgerufen.
+
+| Parameter | Beschreibung |
+| --------- | ----------- |
+| `orderby` | Das Feld, das die Reihenfolge der Ergebnisse angibt. Die unterstützten Felder sind `created` und `updated`. Hängen Sie dem Eigenschaftsnamen voran mit `+` für aufsteigende und `-` in absteigender Reihenfolge. Die Standardeinstellung lautet `-created`. Beachten Sie, dass das Pluszeichen (`+`) muss mit `%2B`. Beispiel `%2Bcreated` ist der Wert für eine aufsteigende erstellte Bestellung. |
+| `pagesize` | Verwenden Sie diesen Parameter, um die Anzahl der Datensätze zu steuern, die Sie vom API-Aufruf pro Seite abrufen möchten. Standardmäßig ist die maximale Anzahl von 50 Datensätzen pro Seite festgelegt. |
+| `page` | Geben Sie die Seitenzahl der zurückgegebenen Ergebnisse an, für die die Datensätze angezeigt werden sollen. |
+| `property` | Filtern Sie die Ergebnisse nach ausgewählten Feldern. Die Filter **müssen** mit HTML-Escape-Zeichen versehen sein. Kommas dienen dazu, mehrere Filter zu kombinieren. Die folgenden Eigenschaften ermöglichen das Filtern: <ul><li>id</li><li>assetId</li><li>status</li><li>alertType</li></ul> Unterstützte Operatoren sind `==` (gleich). Beispiel: `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` gibt den Warnhinweis mit einer übereinstimmenden ID zurück. |
 
 **Anfrage**
 
@@ -267,7 +283,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 sowie das `alerts`-Arra
 | `assetId` | Der Warnhinweis ist mit dieser ID verknüpft. Die ID kann entweder eine Abfrage- oder Zeitplan-ID sein. |
 | `id` | Der Name des Warnhinweises. Dieser Name wird vom Warnhinweis-Service generiert und im Warnhinweis-Dashboard verwendet. Der Name des Warnhinweises besteht aus dem Ordner, in dem der Warnhinweis gespeichert wird, dem `alertType` und der Fluss-ID. Informationen zu den verfügbaren Warnhinweisen finden Sie in der [Dokumentation zum Warnhinweis-Dashboard von Platform](../../observability/alerts/ui.md). |
 | `status` | Der Warnhinweis weist vier Statuswerte auf: `enabled`, `enabling`, `disabled` und `disabling`. Ein Warnhinweis wartet entweder aktiv auf die Ereignisse, wird für die zukünftige Verwendung angehalten, wobei alle relevanten Abonnenten und Einstellungen beibehalten werden, oder wechselt zwischen diesen Zuständen. |
-| `alertType` | Jeder Warnhinweis kann drei verschiedene Arten von Warnhinweistypen aufweisen. Dabei handelt es sich um: <ul><li>`start`: Benachrichtigt Benutzende, wenn die Ausführung der Abfrage begonnen hat.</li><li>`success`: Benachrichtigt Benutzende, wenn die Abfrage abgeschlossen wurde.</li><li>`failure`: Benachrichtigt Benutzende, wenn die Abfrage fehlschlägt.</li></ul> |
+| `alertType` | Jeder Warnhinweis kann drei verschiedene Arten von Warnhinweistypen aufweisen. Dabei handelt es sich um: <ul><li>`start`: Benachrichtigt Benutzende, wenn die Ausführung der Abfrage begonnen hat.</li><li>`success`: Benachrichtigt Benutzende, wenn die Abfrage abgeschlossen ist.</li><li>`failure`: Benachrichtigt Benutzende, wenn die Abfrage fehlschlägt.</li></ul> |
 | `subscriptions.emailNotifications` | Eine Reihe von bei Adobe registrierten E-Mail-Adressen von Benutzenden, die sich für den Erhalt von E-Mails für den Warnhinweis angemeldet haben. |
 | `subscriptions.inContextNotifications` | Ein Array von Adobe-registrierten E-Mail-Adressen für Benutzende, die Benachrichtigungen der Benutzeroberfläche für den Warnhinweis abonniert haben. |
 
@@ -284,7 +300,7 @@ GET /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Parameter | Beschreibung |
 | -------- | ----------- |
-| `ALERT_TYPE` | Jeder Warnhinweis kann drei verschiedene Arten von Warnhinweistypen aufweisen. Dabei handelt es sich um: <ul><li>`start`: Benachrichtigt Benutzende, wenn die Ausführung der Abfrage begonnen hat.</li><li>`success`: Benachrichtigt Benutzende, wenn die Abfrage abgeschlossen wurde.</li><li>`failure`: Benachrichtigt Benutzende, wenn die Abfrage fehlschlägt.</li></ul> |
+| `ALERT_TYPE` | Diese Eigenschaft beschreibt den Ausführungsstatus von Abfragen, bei denen ein Warnhinweis von Triggern ausgegeben wird. Die Antwort enthält nur Informationen zum Warnhinweis-Abonnement für Warnhinweise dieses Typs. Jeder Warnhinweis kann drei verschiedene Arten von Warnhinweistypen aufweisen. Dabei handelt es sich um: <ul><li>`start`: Benachrichtigt Benutzende, wenn die Ausführung der Abfrage begonnen hat.</li><li>`success`: Benachrichtigt Benutzende, wenn die Abfrage abgeschlossen ist.</li><li>`failure`: Benachrichtigt Benutzende, wenn die Abfrage fehlschlägt.</li></ul> |
 | `QUERY_ID` | Die eindeutige Kennung der zu aktualisierenden Abfrage. |
 | `SCHEDULE_ID` | Die eindeutige Kennung der geplanten Abfrage, die aktualisiert werden soll. |
 
@@ -353,7 +369,7 @@ Bei einer erfolgreichen Antwort werden der HTTP-Status 200 sowie alle Warnhinwei
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `assetId` | Die Abfrage-ID, die den Warnhinweis mit einer bestimmten Abfrage verknüpft hat. |
-| `alertType` | Der Typ des Warnhinweises. Es gibt die folgenden drei möglichen Werte für einen Warnhinweis: <ul><li>`start`: Benachrichtigt Benutzende, wenn die Ausführung der Abfrage begonnen hat.</li><li>`success`: Benachrichtigt Benutzende, wenn die Abfrage abgeschlossen wurde.</li><li>`failure`: Benachrichtigt Benutzende, wenn die Abfrage fehlschlägt.</li></ul> |
+| `alertType` | Der Typ des Warnhinweises. Es gibt die folgenden drei möglichen Werte für einen Warnhinweis: <ul><li>`start`: Benachrichtigt Benutzende, wenn die Ausführung der Abfrage begonnen hat.</li><li>`success`: Benachrichtigt Benutzende, wenn die Abfrage abgeschlossen ist.</li><li>`failure`: Benachrichtigt Benutzende, wenn die Abfrage fehlschlägt.</li></ul> |
 | `subscriptions` | Ein Objekt, das verwendet wird, um die mit den Warnhinweisen verknüpften registrierten E-Mail-IDs von Adobe sowie die Kanäle zu übergeben, in denen die Benutzenden die Warnhinweise erhalten. |
 | `subscriptions.inContextNotifications` | Ein Array von Adobe-registrierten E-Mail-Adressen für Benutzende, die Benachrichtigungen der Benutzeroberfläche für den Warnhinweis abonniert haben. |
 | `subscriptions.emailNotifications` | Eine Reihe von bei Adobe registrierten E-Mail-Adressen von Benutzenden, die sich für den Erhalt von E-Mails für den Warnhinweis angemeldet haben. |
@@ -371,6 +387,10 @@ GET /alert-subscriptions/user-subscriptions/{EMAIL_ID}
 | Parameter | Beschreibung |
 | -------- | ----------- |
 | `{EMAIL_ID}` | Eine E-Mail-Adresse, die für ein Adobe-Konto registriert ist, wird zur Identifizierung der Personen verwendet, die Warnhinweise abonniert haben. |
+| `orderby` | Das Feld, das die Reihenfolge der Ergebnisse angibt. Die unterstützten Felder sind `created` und `updated`. Hängen Sie dem Eigenschaftsnamen voran mit `+` für aufsteigende und `-` in absteigender Reihenfolge. Die Standardeinstellung lautet `-created`. Beachten Sie, dass das Pluszeichen (`+`) muss mit `%2B`. Beispiel `%2Bcreated` ist der Wert für eine aufsteigende erstellte Bestellung. |
+| `pagesize` | Verwenden Sie diesen Parameter, um die Anzahl der Datensätze zu steuern, die Sie vom API-Aufruf pro Seite abrufen möchten. Standardmäßig ist die maximale Anzahl von 50 Datensätzen pro Seite festgelegt. |
+| `page` | Geben Sie die Seitenzahl der zurückgegebenen Ergebnisse an, für die die Datensätze angezeigt werden sollen. |
+| `property` | Filtern Sie die Ergebnisse nach ausgewählten Feldern. Die Filter **müssen** mit HTML-Escape-Zeichen versehen sein. Kommas dienen dazu, mehrere Filter zu kombinieren. Die folgenden Eigenschaften ermöglichen das Filtern: <ul><li>id</li><li>assetId</li><li>status</li><li>alertType</li></ul> Unterstützte Operatoren sind `==` (gleich). Beispiel: `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` gibt den Warnhinweis mit einer übereinstimmenden ID zurück. |
 
 **Anfrage**
 
@@ -482,7 +502,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 sowie das Array `items`
 | `name` | Der Name des Warnhinweises. Dieser Name wird vom Warnhinweis-Service generiert und im Warnhinweis-Dashboard verwendet. Der Name des Warnhinweises besteht aus dem Ordner, in dem der Warnhinweis gespeichert wird, dem `alertType` und der Fluss-ID. Informationen zu den verfügbaren Warnhinweisen finden Sie in der [Dokumentation zum Warnhinweis-Dashboard von Platform](../../observability/alerts/ui.md). |
 | `assetId` | Die Abfrage-ID, die den Warnhinweis mit einer bestimmten Abfrage verknüpft hat. |
 | `status` | Der Warnhinweis weist vier Statuswerte auf: `enabled`, `enabling`, `disabled` und `disabling`. Ein Warnhinweis wartet entweder aktiv auf die Ereignisse, wird für die zukünftige Verwendung angehalten, wobei alle relevanten Abonnenten und Einstellungen beibehalten werden, oder wechselt zwischen diesen Zuständen. |
-| `alertType` | Der Typ des Warnhinweises. Es gibt die folgenden drei möglichen Werte für einen Warnhinweis: <ul><li>`start`: Benachrichtigt Benutzende, wenn die Ausführung der Abfrage begonnen hat.</li><li>`success`: Benachrichtigt Benutzende, wenn die Abfrage abgeschlossen wurde.</li><li>`failure`: Benachrichtigt Benutzende, wenn die Abfrage fehlschlägt.</li></ul> |
+| `alertType` | Der Typ des Warnhinweises. Es gibt die folgenden drei möglichen Werte für einen Warnhinweis: <ul><li>`start`: Benachrichtigt Benutzende, wenn die Ausführung der Abfrage begonnen hat.</li><li>`success`: Benachrichtigt Benutzende, wenn die Abfrage abgeschlossen ist.</li><li>`failure`: Benachrichtigt Benutzende, wenn die Abfrage fehlschlägt.</li></ul> |
 | `subscriptions` | Ein Objekt, das verwendet wird, um die mit den Warnhinweisen verknüpften registrierten E-Mail-IDs von Adobe sowie die Kanäle zu übergeben, in denen die Benutzenden die Warnhinweise erhalten. |
 | `subscriptions.inContextNotifications` | Ein boolescher Wert, der bestimmt, wie Benutzende Benachrichtigungen zu Warnhinweisen erhalten. Der Wert `true` bestätigt, dass Warnhinweise über die Benutzeroberfläche bereitgestellt werden sollten. Der Wert `false` stellt sicher, dass die Benutzenden nicht über diesen Kanal benachrichtigt werden. |
 | `subscriptions.emailNotifications` | Ein boolescher Wert, der bestimmt, wie Benutzende Benachrichtigungen zu Warnhinweisen erhalten. Der Wert `true` bestätigt, dass Warnhinweise per E-Mail bereitgestellt werden sollten. Der Wert `false` stellt sicher, dass Benutzende nicht über diesen Kanal benachrichtigt werden. |

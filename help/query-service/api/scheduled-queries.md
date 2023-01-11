@@ -4,10 +4,10 @@ solution: Experience Platform
 title: API-Endpunkt für geplante Abfragen
 description: In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie für geplante Abfragen mit der Query Service-API ausführen können.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 2ad86b0cf3cdc89825501b94bd609df751026420
 workflow-type: tm+mt
-source-wordcount: '1113'
-ht-degree: 36%
+source-wordcount: '1139'
+ht-degree: 34%
 
 ---
 
@@ -311,7 +311,7 @@ Für die PATCH-Anfrage werden zwei Pfade unterstützt: `/state` und `/schedule/s
 
 ### Aktualisierung des geplanten Abfragestatus
 
-Sie können `/state` um den Status der ausgewählten geplanten Abfrage zu aktualisieren - AKTIVIERT oder DEAKTIVIERT. Geben Sie zur Aktualisierung des Status den Wert `enable` oder `disable` an.
+Sie können den Status der ausgewählten geplanten Abfrage aktualisieren, indem Sie die Variable `path` Eigenschaft auf `/state` und `value` Eigenschaft als `enable` oder `disable`.
 
 **API-Format**
 
@@ -347,6 +347,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
+| `op` | Der Vorgang, der gemäß dem Abfragezeitplan ausgeführt werden soll. Der zulässige Wert ist `replace`. |
 | `path` | Der Pfad des Werts, den Sie ändern möchten. Da Sie in diesem Fall den Status der geplanten Abfrage aktualisieren, müssen Sie den Wert von `path` nach `/state`. |
 | `value` | Der aktualisierte Wert von `/state`. Dieser Wert kann entweder als `enable` oder `disable` , um die geplante Abfrage zu aktivieren oder zu deaktivieren. |
 
@@ -363,7 +364,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit der folgende
 
 ### Geplanten Abfragezeitplan aktualisieren
 
-Sie können `/schedule/schedule` , um den Cron-Zeitplan der geplanten Abfrage zu aktualisieren. Weitere Informationen zu Cron-Zeitplänen finden Sie in der Dokumentation zum [Format von Cron-Ausdrücken](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
+Sie können den Cron-Zeitplan der geplanten Abfrage aktualisieren, indem Sie die Variable `path` Eigenschaft auf `/schedule/schedule` im Anfrageinhalt. Weitere Informationen zu Cron-Zeitplänen finden Sie in der Dokumentation zum [Format von Cron-Ausdrücken](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
 
 **API-Format**
 
@@ -398,6 +399,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
+| `op` | Der Vorgang, der gemäß dem Abfragezeitplan ausgeführt werden soll. Der zulässige Wert ist `replace`. |
 | `path` | Der Pfad des Werts, den Sie ändern möchten. Da Sie in diesem Fall den Zeitplan der geplanten Abfrage aktualisieren, müssen Sie den Wert von `path` nach `/schedule/schedule`. |
 | `value` | Der aktualisierte Wert von `/schedule`. Dieser Wert muss in Form eines Cron-Zeitplans angegeben werden. In diesem Beispiel wird die geplante Abfrage also stündlich mit der 45-Minuten-Markierung ausgeführt. |
 

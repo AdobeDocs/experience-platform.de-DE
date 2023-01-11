@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Query API Endpoint
 description: In den folgenden Abschnitten werden die Aufrufe erläutert, die Sie mithilfe des /queries -Endpunkts in der Query Service-API ausführen können.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: e0287076cc9f1a843d6e3f107359263cd98651e6
+source-git-commit: 08e19149a84273231c6261d2a4e09584dfb6e38d
 workflow-type: tm+mt
-source-wordcount: '825'
-ht-degree: 26%
+source-wordcount: '868'
+ht-degree: 25%
 
 ---
 
@@ -140,9 +140,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
         "dbName": "prod:all",
-        "sql": "SELECT account_balance FROM user_data WHERE $user_id;",
+        "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
         "queryParameters": {
-            $user_id : {USER_ID}
+            user_id : {USER_ID}
             }
         "name": "Sample Query",
         "description": "Sample Description"
@@ -295,9 +295,9 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Information
 >
 >Sie können den Wert von `_links.cancel` nach [Ihre erstellte Abfrage abbrechen](#cancel-a-query).
 
-### Abbrechen einer Abfrage
+### Abfragen abbrechen oder löschen
 
-Sie können das Löschen einer bestimmten Abfrage anfordern, indem Sie eine PATCH-Anfrage an die `/queries` -Endpunkt und Bereitstellung der `id` -Wert im Anfragepfad.
+Sie können eine bestimmte Abfrage abbrechen oder eine Soft-Löschung anfordern, indem Sie eine PATCH-Anfrage an die `/queries` -Endpunkt und Bereitstellung der `id` -Wert im Anfragepfad.
 
 **API-Format**
 
@@ -305,9 +305,9 @@ Sie können das Löschen einer bestimmten Abfrage anfordern, indem Sie eine PATC
 PATCH /queries/{QUERY_ID}
 ```
 
-| Eigenschaft | Beschreibung |
+| Parameter | Beschreibung |
 | -------- | ----------- |
-| `{QUERY_ID}` | Die `id` -Wert der Abfrage, die Sie abbrechen möchten. |
+| `{QUERY_ID}` | Die `id` -Wert der Abfrage, für die Sie den Vorgang ausführen möchten. |
 
 
 **Anfrage**
@@ -328,7 +328,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `op` | Um die Abfrage abzubrechen, müssen Sie den Parameter op mit dem Wert `cancel `. |
+| `op` | Der Typ des Vorgangs, der für die Ressource ausgeführt werden soll. Die zulässigen Werte sind `cancel` und `soft_delete`. Um die Abfrage abzubrechen, müssen Sie den Parameter op mit dem Wert `cancel `. Beachten Sie, dass der Soft-Löschvorgang die Rückgabe der Abfrage bei GET-Anfragen stoppt, sie jedoch nicht aus dem System löscht. |
 
 **Antwort**
 
