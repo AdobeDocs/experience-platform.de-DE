@@ -4,10 +4,10 @@ title: Standardmäßige Warnhinweisregeln
 description: In diesem Dokument werden die von Experience Platform bereitgestellten vordefinierten Warnhinweisregeln behandelt.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 6650894c145fd1f42731fd5ed8aeb6e38062aa61
 workflow-type: tm+mt
-source-wordcount: '922'
-ht-degree: 82%
+source-wordcount: '961'
+ht-degree: 79%
 
 ---
 
@@ -73,7 +73,7 @@ Die folgenden Warnhinweisregeln sind spezifisch für den [Segmentierungs-Service
 | --- | --- | --- |
 | Informationen zu Segmentauswertungsavorgängen | Start des Segmentvorgangs | Dieser Warnhinweis wird ausgelöst, wenn ein Vorgang zur Segmentauswertung mit der Verarbeitung von Daten beginnt. |
 | Informationen zu Segmentauswertungsavorgängen | Erfolgreicher Vorgang zur Segmentauswertung | Dieser Warnhinweis wird ausgelöst, wenn ein Vorgang zur Segmentauswertung erfolgreich abgeschlossen wurde. |
-| Verzögerungen, Fehler und Fehler bei Vorgängen zur Segmentauswertung | Verzögerung bei Segmentvorgängen | Dieser Warnhinweis wird ausgelöst, wenn ein Vorgang zur Segmentauswertung länger als 150 Minuten dauert. |
+| Verzögerungen, Fehler und Fehler bei Vorgängen zur Segmentauswertung | Verzögerung bei Segmentvorgängen | Dieser Warnhinweis wird ausgelöst, wenn ein Vorgang zur Segmentauswertung länger als 150 Minuten dauert. <br> Es wird einer der folgenden Status angezeigt: <br>- FIRING - Die Bedingung für einen Fehler oder eine Verzögerung wurde erfüllt (betrachten Sie sie als AKTIV). <br>- INAKTIV - Die Bedingung wurde nicht erfüllt oder nicht behoben (betrachten Sie sie als RESOLVED-Status). |
 | Verzögerungen, Fehler und Fehler bei Vorgängen zur Segmentauswertung | Fehler beim Segmentvorgang | Dieser Warnhinweis wird ausgelöst, wenn ein Vorgang zur Segmentauswertung zu einem Fehler führt. |
 | Verzögerungen, Fehler und Fehler bei Vorgängen zur Segmentauswertung | Segmentdefinition deaktiviert | Dieser Warnhinweis wird ausgelöst, wenn eine Segmentdefinition aufgrund eines internen Fehlers deaktiviert ist. Dadurch wird automatisch ein Fehlerbericht für ein Adobe-Entwicklungsteam ausgelöst, um das Problem zu untersuchen. Dieser Warnhinweis dient nur zur Information und erfordert keine Aktion von Ihnen. |
 
