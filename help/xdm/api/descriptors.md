@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Descriptors-API-Endpunkt
 description: Mit dem Endpunkt /descriptors in der Schema Registry-API können Sie XDM-Deskriptoren in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1900'
-ht-degree: 45%
+ht-degree: 44%
 
 ---
 
@@ -385,15 +385,15 @@ Beziehungsdeskriptoren beschreiben eine Beziehung zwischen zwei verschiedenen Sc
 | `xdm:sourceSchema` | Der `$id`-URI des Schemas, wo der Deskriptor definiert wird. |
 | `xdm:sourceVersion` | Die Hauptversion des Quellschemas. |
 | `xdm:sourceProperty` | Der Pfad zum Feld im Quellschema, in dem die Beziehung definiert wird. Sollte mit einem „/“ beginnen und nicht mit einem solchen enden. Schließen Sie „properties“ nicht in den Pfad ein (z. B. „/personalEmail/address“ anstelle von „/properties/personalEmail/properties/address“). |
-| `xdm:destinationSchema` | Der `$id`-URI des Zielschemas, mit dem dieser Deskriptor eine Beziehung definiert. |
-| `xdm:destinationVersion` | Die Hauptversion des Zielschemas. |
-| `xdm:destinationProperty` | Optionaler Pfad zu einem Zielfeld im Zielschema. Wenn diese Eigenschaft weggelassen wird, wird das Zielfeld von allen Feldern mit einem entsprechenden Referenzidentitätsdeskriptor abgeleitet (siehe unten). |
+| `xdm:destinationSchema` | Die `$id` URI des Referenzschemas, mit dem dieser Deskriptor eine Beziehung definiert. |
+| `xdm:destinationVersion` | Die Hauptversion des Referenzschemas. |
+| `xdm:destinationProperty` | Optionaler Pfad zu einem Zielfeld im Referenzschema. Wenn diese Eigenschaft weggelassen wird, wird das Zielfeld von allen Feldern mit einem entsprechenden Referenzidentitätsdeskriptor abgeleitet (siehe unten). |
 
 {style=&quot;table-layout:auto&quot;}
 
 #### Referenzidentitätsdeskriptor
 
-Referenzidentitätsdeskriptoren stellen einen Referenzkontext für die primäre Identität eines Schemafelds bereit, der es ermöglicht, von Feldern in anderen Schemas darauf zu verweisen. Für das Zielschema muss bereits ein primäres Identitätsfeld definiert sein, bevor über diesen Deskriptor durch andere Schemas darauf verwiesen werden kann.
+Referenzidentitätsdeskriptoren stellen einen Referenzkontext für die primäre Identität eines Schemafelds bereit, der es ermöglicht, von Feldern in anderen Schemas darauf zu verweisen. Das Referenzschema muss bereits über ein primäres Identitätsfeld verfügen, bevor über diesen Deskriptor andere Schemas auf dieses Feld verweisen können.
 
 ```json
 {
@@ -410,7 +410,7 @@ Referenzidentitätsdeskriptoren stellen einen Referenzkontext für die primäre 
 | `@type` | Der Typ des zu definierenden Deskriptors. Für einen Referenzidentitätsdeskriptor muss dieser Wert auf `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | Der `$id`-URI des Schemas, wo der Deskriptor definiert wird. |
 | `xdm:sourceVersion` | Die Hauptversion des Quellschemas. |
-| `xdm:sourceProperty` | Pfad zum Feld im Quellschema, das zum Verweis auf das Zielschema verwendet wird. Sollte mit einem „/“ beginnen und nicht mit einem solchen enden. Schließen Sie &quot;properties&quot;nicht in den Pfad ein (z. B. `/personalEmail/address` anstelle von `/properties/personalEmail/properties/address`). |
+| `xdm:sourceProperty` | Pfad zum Feld im Quellschema, das zum Verweis auf das Referenzschema verwendet wird. Sollte mit einem „/“ beginnen und nicht mit einem solchen enden. Schließen Sie &quot;properties&quot;nicht in den Pfad ein (z. B. `/personalEmail/address` anstelle von `/properties/personalEmail/properties/address`). |
 | `xdm:identityNamespace` | Der Identitäts-Namespace-Code für die Quelleigenschaft. |
 
 {style=&quot;table-layout:auto&quot;}

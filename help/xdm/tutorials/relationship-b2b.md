@@ -2,7 +2,7 @@
 title: Definieren einer Beziehung zwischen zwei Schemas in Real-time Customer Data Platform B2B Edition
 description: Erfahren Sie, wie Sie in Adobe Real-time Customer Data Platform B2B Edition eine n:1-Beziehung zwischen zwei Schemas definieren.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 1c2aabaaeadb41631fc75783db739bb34a3f53cc
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1391'
 ht-degree: 5%
@@ -40,11 +40,11 @@ Dieses Tutorial setzt ein grundlegendes Verständnis von [!DNL XDM System] und d
 * [Grundlagen der Schemakomposition](../schema/composition.md): Eine Einführung in die Bausteine von XDM-Schemas.
 * [Erstellen Sie ein Schema mit dem [!DNL Schema Editor]](create-schema-ui.md): Ein Tutorial, in dem die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Benutzeroberfläche erläutert werden.
 
-## Quell- und Zielschemas definieren
+## Quell- und Referenzschema definieren
 
 Wir gehen davon aus, dass Sie die beiden Schemas, die in der Beziehung definiert werden sollen, bereits erstellt haben. Zu Demonstrationszwecken wird in diesem Tutorial eine Beziehung zwischen Geschäftschancen (definiert in einem[!DNL Opportunities]&quot;-Schema) und dem zugehörigen Geschäftskonto (definiert in einem &quot;[!DNL Accounts]&quot; schema).
 
-Schemabeziehungen werden durch ein dediziertes Feld in einer **Quellschema** , das auf das primäre Identitätsfeld eines **Zielschema**. In den folgenden Schritten: &quot;[!DNL Opportunities]&quot; dient als Quellschema, während &quot;[!DNL Accounts]&quot; dient als Zielschema.
+Schemabeziehungen werden durch ein dediziertes Feld in einer **Quellschema** , das auf das primäre Identitätsfeld eines **Referenzschema**. In den folgenden Schritten: &quot;[!DNL Opportunities]&quot; dient als Quellschema, während &quot;[!DNL Accounts]&quot; dient als Referenzschema.
 
 ### Identitäten in B2B-Beziehungen verstehen
 
@@ -53,7 +53,7 @@ Schemabeziehungen werden durch ein dediziertes Feld in einer **Quellschema** , d
 >title="Referenz-Identitäts-Namespace"
 >abstract="Der Namespace (Typ) für das primäre Identitätsfeld des Referenzschemas. Das Referenzschema muss über ein festgestelltes primäres Identitätsfeld verfügen, um an einer Beziehung teilnehmen zu können. Weitere Informationen zu Identitäten in B2B-Beziehungen finden Sie in der Dokumentation ."
 
-Um eine Beziehung herzustellen, muss das Zielschema über eine definierte primäre Identität verfügen. Beachten Sie beim Festlegen einer primären Identität für eine B2B-Entität, dass sich die Zeichenfolgen-basierten Entitäts-IDs überschneiden können, wenn Sie sie über verschiedene Systeme oder Standorte hinweg erfassen. Dies könnte zu Datenkonflikten in Platform führen.
+Um eine Beziehung herzustellen, muss das Referenzschema über eine definierte primäre Identität verfügen. Beachten Sie beim Festlegen einer primären Identität für eine B2B-Entität, dass sich die Zeichenfolgen-basierten Entitäts-IDs überschneiden können, wenn Sie sie über verschiedene Systeme oder Standorte hinweg erfassen. Dies könnte zu Datenkonflikten in Platform führen.
 
 Um dies zu berücksichtigen, enthalten alle standardmäßigen B2B-Klassen &quot;key&quot;-Felder, die dem [[!UICONTROL B2B-Quelle] Datentyp](../data-types/b2b-source.md). Dieser Datentyp stellt Felder für eine Zeichenfolgenkennung für die B2B-Entität zusammen mit anderen Kontextinformationen zur Quelle der Kennung bereit. Eines dieser Felder, `sourceKey`verkettet die Werte der anderen Felder im Datentyp, um eine vollständig eindeutige Kennung für die Entität zu erhalten. Dieses Feld sollte immer als primäre Identität für B2B-Entitätsschemas verwendet werden.
 
@@ -75,7 +75,7 @@ Siehe unter **[!UICONTROL Schemaeigenschaften]** wurde dieses Schema zur Verwend
 
 ### [!DNL Accounts] schema
 
-Das Zielschema &quot;[!DNL Accounts]&quot; basiert auf der Variablen [!UICONTROL XDM-Konto] -Klasse. Die Stammebene `accountKey` -Feld enthält die `sourceKey` , die als primäre Identität unter einem benutzerdefinierten Namespace mit dem Namen [!DNL B2B Account]. Dieses Schema wurde auch für die Verwendung in Profil aktiviert.
+Das Referenzschema &quot;[!DNL Accounts]&quot; basiert auf der Variablen [!UICONTROL XDM-Konto] -Klasse. Die Stammebene `accountKey` -Feld enthält die `sourceKey` , die als primäre Identität unter einem benutzerdefinierten Namespace mit dem Namen [!DNL B2B Account]. Dieses Schema wurde auch für die Verwendung in Profil aktiviert.
 
 ![Kontoschema](../images/tutorials/relationship-b2b/accounts.png)
 
@@ -91,11 +91,11 @@ Das Zielschema &quot;[!DNL Accounts]&quot; basiert auf der Variablen [!UICONTROL
 >title="Beziehungsname aus Referenzschema"
 >abstract="Eine Beschriftung, die die Beziehung vom Referenzschema zum aktuellen Schema beschreibt (z. B. &quot;Verwandte Möglichkeiten&quot;). Diese Bezeichnung wird in Profil und Segmentierung verwendet, um Kontext zu Daten verwandter B2B-Entitäten zu geben. Weitere Informationen zum Erstellen von B2B-Schemabeziehungen finden Sie in der Dokumentation ."
 
-Um eine Beziehung zwischen zwei Schemas zu definieren, muss das Quellschema über ein dediziertes Feld verfügen, das auf die primäre Identität des Zielschemas verweist. Standard-B2B-Klassen enthalten dedizierte Quellschlüsselfelder für häufig verwandte Geschäftsentitäten. Beispiel: die [!UICONTROL XDM-Geschäftschancen] -Klasse enthält Quellschlüsselfelder für ein verwandtes Konto (`accountKey`) und einer damit verbundenen Kampagne (`campaignKey`). Sie können jedoch auch andere [!UICONTROL B2B-Quelle] -Felder durch Verwendung benutzerdefinierter Feldergruppen zum Schema hinzufügen, wenn Sie mehr als die Standardkomponenten benötigen.
+Um eine Beziehung zwischen zwei Schemas zu definieren, muss das Quellschema über ein dediziertes Feld verfügen, das die primäre Identität des Referenzschemas angibt. Standard-B2B-Klassen enthalten dedizierte Quellschlüsselfelder für häufig verwandte Geschäftsentitäten. Beispiel: die [!UICONTROL XDM-Geschäftschancen] -Klasse enthält Quellschlüsselfelder für ein verwandtes Konto (`accountKey`) und einer damit verbundenen Kampagne (`campaignKey`). Sie können jedoch auch andere [!UICONTROL B2B-Quelle] -Felder durch Verwendung benutzerdefinierter Feldergruppen zum Schema hinzufügen, wenn Sie mehr als die Standardkomponenten benötigen.
 
 >[!NOTE]
 >
->Derzeit können von einem Quellschema zu einem Zielschema nur n-zu-eins- und 1-zu-1-Beziehungen definiert werden. Bei 1:n-Beziehungen müssen Sie das Beziehungsfeld im Schema definieren, das die &quot;viele&quot;darstellt.
+>Derzeit können von einem Quellschema zu einem Referenzschema nur n:1- und 1:1-Beziehungen definiert werden. Bei 1:n-Beziehungen müssen Sie das Beziehungsfeld im Schema definieren, das die &quot;viele&quot;darstellt.
 
 Um ein Beziehungsfeld festzulegen, wählen Sie das Pfeilsymbol (![Pfeilsymbol](../images/tutorials/relationship-b2b/arrow.png)) neben dem entsprechenden Feld auf der Arbeitsfläche. Im Falle der [!DNL Opportunities] schema, dies ist das `accountKey.sourceKey` -Feld, da das Ziel darin besteht, eine Viele-zu-Eins-Beziehung zu einem Konto herzustellen.
 
@@ -105,11 +105,11 @@ Es wird ein Dialogfeld angezeigt, in dem Sie Details zur Beziehung angeben könn
 
 ![Dialog über Beziehungen](../images/tutorials/relationship-b2b/relationship-dialog.png)
 
-under **[!UICONTROL Referenzschema]** verwenden, suchen Sie in der Suchleiste nach dem Namen des Zielschemas. Wenn Sie den Namen des Zielschemas markieren, wird die **[!UICONTROL Referenz-Identitäts-Namespace]** -Feld aktualisiert automatisch den Namespace der primären Identität des Schemas.
+under **[!UICONTROL Referenzschema]** verwenden, suchen Sie in der Suchleiste nach dem Namen des Referenzschemas. Wenn Sie den Namen des Referenzschemas markieren, wird die **[!UICONTROL Referenz-Identitäts-Namespace]** -Feld aktualisiert automatisch den Namespace der primären Identität des Schemas.
 
 ![Referenzschema](../images/tutorials/relationship-b2b/reference-schema.png)
 
-under **[!UICONTROL Beziehungsname aus aktuellem Schema]** und **[!UICONTROL Beziehungsname aus Referenzschema]**, geben benutzerfreundliche Namen für die Beziehung im Kontext der Quell- bzw. Zielschemas an. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Speichern]** , um die Änderungen anzuwenden und das Schema zu speichern.
+under **[!UICONTROL Beziehungsname aus aktuellem Schema]** und **[!UICONTROL Beziehungsname aus Referenzschema]**, geben Anzeigenamen für die Beziehung im Kontext der Quell- bzw. Referenzschemas an. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Speichern]** , um die Änderungen anzuwenden und das Schema zu speichern.
 
 ![Beziehungsname](../images/tutorials/relationship-b2b/relationship-name.png)
 
@@ -117,7 +117,7 @@ Die Arbeitsfläche wird wieder angezeigt, wobei das Beziehungsfeld jetzt mit dem
 
 ![Angewendete Beziehung](../images/tutorials/relationship-b2b/relationship-applied.png)
 
-Wenn Sie die Struktur des Zielschemas anzeigen, wird die Beziehungsmarke neben dem primären Identitätsfeld des Schemas und in der linken Leiste angezeigt.
+Wenn Sie die Struktur des Referenzschemas anzeigen, wird die Beziehungsmarke neben dem primären Identitätsfeld des Schemas und in der linken Leiste angezeigt.
 
 ![Zielschema-Beziehungsmarkierung](../images/tutorials/relationship-b2b/destination-relationship.png)
 

@@ -4,10 +4,10 @@ title: Definieren einer Beziehung zwischen zwei Schemas mithilfe der Schema Regi
 description: Dieses Dokument bietet eine Anleitung zum Definieren einer Eins-zu-Eins-Beziehung zwischen zwei Schemas, die von Ihrer Organisation mithilfe der Schema Registry-API definiert wurden.
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
-source-wordcount: '1367'
-ht-degree: 32%
+source-wordcount: '1398'
+ht-degree: 27%
 
 ---
 
@@ -15,7 +15,11 @@ ht-degree: 32%
 
 Die Möglichkeit, Beziehungen zwischen Ihren Kunden und deren Interaktionen mit Ihrer Marke kanalübergreifend zu analysieren, ist ein wichtiger Bestandteil von Adobe Experience Platform. Definieren dieser Beziehungen innerhalb der Struktur Ihrer [!DNL Experience Data Model] (XDM)-Schemas ermöglichen es Ihnen, komplexe Einblicke in Ihre Kundendaten zu erhalten.
 
-Während Schemabeziehungen durch die Verwendung des Vereinigungsschemas und [!DNL Real-Time Customer Profile], gilt dies nur für Schemas, die dieselbe Klasse teilen. Um eine Beziehung zwischen zwei Schemas herzustellen, die zu verschiedenen Klassen gehören, muss einem Quellschema ein dediziertes Beziehungsfeld hinzugefügt werden, das auf die Identität eines Zielschemas verweist.
+Während Schemabeziehungen durch die Verwendung des Vereinigungsschemas und [!DNL Real-Time Customer Profile], gilt dies nur für Schemas, die dieselbe Klasse teilen. Um eine Beziehung zwischen zwei Schemas herzustellen, die zu verschiedenen Klassen gehören, muss ein dediziertes Beziehungsfeld zu einem **Quellschema**, der die Identität eines separaten **Referenzschema**.
+
+>[!NOTE]
+>
+>Die Schema Registry-API verweist auf Referenzschemas als &quot;Zielschemas&quot;. Diese sind nicht mit Zielschemata in zu verwechseln [Zuordnungssätze für die Datenvorbereitung](../../data-prep/mapping-set.md) oder Schemata für [Zielverbindungen](../../destinations/home.md).
 
 Dieses Dokument enthält eine Anleitung zum Definieren einer Eins-zu-Eins-Beziehung zwischen zwei Schemas, die von Ihrer Organisation mithilfe der [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -30,11 +34,11 @@ Dieses Tutorial setzt ein grundlegendes Verständnis von [!DNL Experience Data M
 
 Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die [Entwicklerhandbuch](../api/getting-started.md) für wichtige Informationen, die Sie benötigen, um erfolgreich Aufrufe an die [!DNL Schema Registry] API. Dies umfasst Ihre `{TENANT_ID}`, das Konzept der &quot;Container&quot;und die erforderlichen Kopfzeilen für Anfragen (mit besonderem Augenmerk auf die [!DNL Accept] -Kopfzeile und die möglichen Werte).
 
-## Quell- und Zielschemas definieren {#define-schemas}
+## Quell- und Referenzschema definieren {#define-schemas}
 
 Wir gehen davon aus, dass Sie die beiden Schemas, die in der Beziehung definiert werden sollen, bereits erstellt haben. In diesem Tutorial wird eine Beziehung zwischen Mitgliedern des aktuellen Treueprogramms einer Organisation (definiert in einem[!DNL Loyalty Members]&quot; schema) und ihren Lieblingshotels (definiert in einem &quot;[!DNL Hotels]&quot; schema).
 
-Schemabeziehungen werden durch ein **Quellschema** mit einem Feld dargestellt, das auf ein anderes Feld innerhalb eines **Zielschemas** verweist. In den folgenden Schritten: &quot;[!DNL Loyalty Members]&quot; wird das Quellschema sein, während &quot;[!DNL Hotels]&quot; dient als Zielschema.
+Schemabeziehungen werden durch eine **Quellschema** mit einem Feld, das auf ein anderes Feld in einer **Referenzschema**. In den folgenden Schritten: &quot;[!DNL Loyalty Members]&quot; wird das Quellschema sein, während &quot;[!DNL Hotels]&quot; dient als Referenzschema.
 
 >[!IMPORTANT]
 >
@@ -108,13 +112,13 @@ Notieren Sie sich die `$id`-Werte der beiden Schemas, für die Sie eine Beziehun
 
 ## Referenzfeld für das Quellschema definieren
 
-Innerhalb der [!DNL Schema Registry], funktionieren Beziehungsdeskriptoren ähnlich wie Fremdschlüssel in relationalen Datenbanktabellen: Ein Feld im Quellschema dient als Verweis auf das primäre Identitätsfeld eines Zielschemas. Wenn Ihr Quellschema über kein Feld zu diesem Zweck verfügt, müssen Sie möglicherweise eine Schemafeldergruppe mit dem neuen Feld erstellen und zum Schema hinzufügen. Dieses neue Feld muss eine `type` Wert von `string`.
+Innerhalb der [!DNL Schema Registry], funktionieren Beziehungsdeskriptoren ähnlich wie Fremdschlüssel in relationalen Datenbanktabellen: Ein Feld im Quellschema dient als Verweis auf das primäre Identitätsfeld eines Referenzschemas. Wenn Ihr Quellschema über kein Feld zu diesem Zweck verfügt, müssen Sie möglicherweise eine Schemafeldergruppe mit dem neuen Feld erstellen und zum Schema hinzufügen. Dieses neue Feld muss eine `type` Wert von `string`.
 
 >[!IMPORTANT]
 >
 >Das Quellschema kann seine primäre Identität nicht als Referenzfeld verwenden.
 
-In diesem Tutorial wurde das Zielschema &quot;[!DNL Hotels]&quot; enthält ein `hotelId` -Feld, das als primäre Identität des Schemas dient. Das Quellschema &quot;[!DNL Loyalty Members]&quot; verfügt nicht über ein dediziertes Feld, das als Verweis auf `hotelId`und daher muss eine benutzerdefinierte Feldergruppe erstellt werden, um dem Schema ein neues Feld hinzuzufügen: `favoriteHotel`.
+In diesem Tutorial wird das Referenzschema &quot;[!DNL Hotels]&quot; enthält ein `hotelId` -Feld, das als primäre Identität des Schemas dient. Das Quellschema &quot;[!DNL Loyalty Members]&quot; verfügt nicht über ein dediziertes Feld, das als Verweis auf `hotelId`und daher muss eine benutzerdefinierte Feldergruppe erstellt werden, um dem Schema ein neues Feld hinzuzufügen: `favoriteHotel`.
 
 >[!NOTE]
 >
@@ -378,8 +382,8 @@ curl -X POST \
 | `@type` | Der Typ des zu definierenden Deskriptors. Für Referenzdeskriptoren muss der Wert `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | Die `$id`-URL des Quellschemas. |
 | `xdm:sourceVersion` | Die Versionsnummer des Quellschemas. |
-| `sourceProperty` | Der Pfad zum Feld im Quellschema, das verwendet wird, um auf die primäre Identität des Zielschemas zu verweisen. |
-| `xdm:identityNamespace` | Der Identitäts-Namespace des Referenzfelds. Dieser Namespace muss mit der primären Identität des Zielschemas übereinstimmen. Weiterführende Informationen dazu finden Sie unter [Übersicht zu Identitäts-Namespaces](../../identity-service/home.md). |
+| `sourceProperty` | Der Pfad zum Feld im Quellschema, das verwendet wird, um auf die primäre Identität des Referenzschemas zu verweisen. |
+| `xdm:identityNamespace` | Der Identitäts-Namespace des Referenzfelds. Dieser Namespace muss mit der primären Identität des Referenzschemas übereinstimmen. Weiterführende Informationen dazu finden Sie unter [Übersicht zu Identitäts-Namespaces](../../identity-service/home.md). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -401,7 +405,7 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Referenzdeskriptor
 
 ## Beziehungsdeskriptor erstellen {#create-descriptor}
 
-Beziehungsdeskriptoren stellen eine Eins-zu-Eins-Beziehung zwischen einem Quellschema und einem Zielschema her. Nachdem Sie einen Referenzidentitätsdeskriptor für das entsprechende Feld im Quellschema definiert haben, können Sie einen neuen Beziehungsdeskriptor erstellen, indem Sie eine POST-Anfrage an die `/tenant/descriptors` -Endpunkt.
+Beziehungsdeskriptoren stellen eine Eins-zu-Eins-Beziehung zwischen einem Quellschema und einem Referenzschema her. Nachdem Sie einen Referenzidentitätsdeskriptor für das entsprechende Feld im Quellschema definiert haben, können Sie einen neuen Beziehungsdeskriptor erstellen, indem Sie eine POST-Anfrage an die `/tenant/descriptors` -Endpunkt.
 
 **API-Format**
 
@@ -411,7 +415,7 @@ POST /tenant/descriptors
 
 **Anfrage**
 
-Die folgende Anfrage erstellt einen neuen Beziehungsdeskriptor mit &quot;[!DNL Loyalty Members]&quot; als Quellschema und &quot;[!DNL Hotels]&quot; als Zielschema.
+Die folgende Anfrage erstellt einen neuen Beziehungsdeskriptor mit &quot;[!DNL Loyalty Members]&quot; als Quellschema und &quot;[!DNL Hotels]&quot; als Referenzschema.
 
 ```shell
 curl -X POST \
@@ -438,9 +442,9 @@ curl -X POST \
 | `xdm:sourceSchema` | Die `$id`-URL des Quellschemas. |
 | `xdm:sourceVersion` | Die Versionsnummer des Quellschemas. |
 | `xdm:sourceProperty` | Der Pfad zum Referenzfeld im Quellschema. |
-| `xdm:destinationSchema` | Die `$id`-URL des Zielschemas. |
-| `xdm:destinationVersion` | Die Versionsnummer des Zielschemas. |
-| `xdm:destinationProperty` | Der Pfad zum primären Identitätsfeld im Zielschema. |
+| `xdm:destinationSchema` | Die `$id` URL des Referenzschemas. |
+| `xdm:destinationVersion` | Die Versionsnummer des Referenzschemas. |
+| `xdm:destinationProperty` | Der Pfad zum primären Identitätsfeld im Referenzschema. |
 
 {style=&quot;table-layout:auto&quot;}
 

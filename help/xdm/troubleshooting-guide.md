@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei XDM-Systemen
 description: Hier finden Sie Antworten auf häufig gestellte Fragen zum Experience-Datenmodell (XDM), einschließlich Anweisungen zur Behebung häufiger API-Fehler.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
-source-wordcount: '2060'
+source-wordcount: '2074'
 ht-degree: 1%
 
 ---
@@ -213,7 +213,7 @@ Ausführliche Beispiele für ordnungsgemäße Datenstrukturen für XDM-Ressource
 }
 ```
 
-GET-Anforderungen in [!DNL Schema Registry] API erfordert `Accept` -Kopfzeile, damit das System bestimmen kann, wie die Antwort formatiert werden soll. Dieser Fehler tritt auf, wenn erforderlich `Accept` -Kopfzeile ist ungültig oder fehlt.
+GET-Anforderungen in [!DNL Schema Registry] API erfordert `Accept` -Kopfzeile, damit das System bestimmen kann, wie die Antwort formatiert wird. Dieser Fehler tritt auf, wenn erforderlich `Accept` -Kopfzeile ist ungültig oder fehlt.
 
 Je nach verwendetem Endpunkt wird die `detailed-message` -Eigenschaft gibt an, was gültig ist `Accept` -Kopfzeile sollte wie für eine erfolgreiche Antwort aussehen. Vergewissern Sie sich, dass Sie die `Accept` -Kopfzeile, die mit der API-Anfrage kompatibel ist, die Sie erstellen möchten, bevor Sie es erneut versuchen.
 
@@ -269,7 +269,13 @@ Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, ein Schema für [!DNL Pr
 }
 ```
 
-So aktivieren Sie Schemas, die Beziehungsdeskriptoren enthalten, für die Verwendung in [!DNL Profile], müssen der Namespace des Quellfelds und der primäre Namespace des Zielfelds identisch sein. Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, ein Schema zu aktivieren, das einen nicht übereinstimmenden Namespace für den Referenzidentitätsdeskriptor enthält. Stellen Sie sicher, dass `xdm:namespace` -Wert des Identitätsfelds des Zielschemas mit dem des `xdm:identityNamespace` -Eigenschaft im Referenz-Identitätsdeskriptor des Quellfelds verwenden, um dieses Problem zu beheben.
+>[!NOTE]
+>
+>Für diesen Fehler bezieht sich das &quot;Zielschema&quot;auf das Referenzschema in der Beziehung.
+
+So aktivieren Sie Schemas, die Beziehungsdeskriptoren enthalten, für die Verwendung in [!DNL Profile], müssen der Namespace des Quellfelds und der primäre Namespace des Referenzfelds identisch sein. Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, ein Schema zu aktivieren, das einen nicht übereinstimmenden Namespace für den Referenzidentitätsdeskriptor enthält.
+
+Stellen Sie sicher, dass `xdm:namespace` -Wert des Identitätsfelds des Referenzschemas mit dem des `xdm:identityNamespace` -Eigenschaft im Referenz-Identitätsdeskriptor des Quellfelds verwenden, um dieses Problem zu beheben.
 
 Eine Liste der standardmäßigen Identitäts-Namespace-Codes finden Sie im Abschnitt unter [Standard-Namespaces](../identity-service/namespaces.md) in der Übersicht zum Identitäts-Namespace.
 
