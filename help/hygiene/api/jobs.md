@@ -4,18 +4,18 @@ description: Erfahren Sie, wie Sie die gespeicherten personenbezogenen Daten Ihr
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: da8b5d9fffdf8a176a4d70be5df5b3021cf0df7b
+source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 95%
+source-wordcount: '484'
+ht-degree: 97%
 
 ---
 
 # Datensätze mithilfe der Data Hygiene API löschen
 
->[!IMPORTANT]
+<!-- >[!IMPORTANT]
 >
->Dieser Endpunkt stellt die Betafunktion für Löschvorgänge von Datensätzen dar. Die neuesten Funktionen finden Sie unter [`/workorder`Endpunkt](./workorder.md)
+>This endpoint represents the beta functionality for record deletes. For the latest functionality, please use the [`/workorder` endpoint](./workorder.md) instead. -->
 
 Mit der Datenhygiene-API können Sie die in Adobe Experience Platform gespeicherten personenbezogenen Daten Ihrer Kundinnen und Kunden programmatisch korrigieren oder löschen.
 

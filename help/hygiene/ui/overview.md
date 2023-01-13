@@ -2,10 +2,10 @@
 title: Handbuch zur Verwendung der Datenhygiene-Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche Datenhygiene-Aufgaben verwalten können.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: d4073f18844de65b9181667d0332c0315ee1cc09
+source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 76%
+source-wordcount: '213'
+ht-degree: 77%
 
 ---
 
@@ -33,4 +33,4 @@ Hier können Sie bestehende Arbeitsaufträge einsehen und neue Datenhygienevorg�
 
 * [Durchsuchen vorhandener Arbeitsaufträge](./browse.md)
 * [Erstellen einer Anfrage zur Datensatzgültigkeit](./dataset-expiration.md)
-* [Datensatzlöschanfrage erstellen](./record-delete.md)
+<!-- * [Create a record delete request](./record-delete.md) -->
