@@ -2,9 +2,9 @@
 title: Extension packages-Endpunkt
 description: Erfahren Sie, wie Sie den /extension_packages-Endpunkt in der Reactor-API aufrufen.
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '954'
 ht-degree: 97%
 
 ---
@@ -944,7 +944,7 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Erweiterungspakets
 
 Nachdem Sie das Testen des Erweiterungspakets abgeschlossen haben, können Sie es privat freigeben. Dadurch wird es für alle Eigenschaften in Ihrem Unternehmen verfügbar.
 
-Nachdem Sie die Veröffentlichung privat durchgeführt haben, können Sie den Prozess der öffentlichen Veröffentlichung starten, indem Sie das [Anfrageformular für die öffentliche Freigabe](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=7DRB5U) ausfüllen.
+Nachdem Sie die Veröffentlichung privat durchgeführt haben, können Sie den Prozess der öffentlichen Veröffentlichung starten, indem Sie das [Anfrageformular für die öffentliche Freigabe](https://experiencecloudpanel.adobe.com/c/r/DCExtensionReleaseRequest) ausfüllen.
 
 **API-Format**
 
