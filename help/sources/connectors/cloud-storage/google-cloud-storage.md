@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Google Cloud Storage Source Connector - Überblick
 description: Erfahren Sie, wie Sie Google Cloud Storage über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 648dcd04de1f88318e3e771d5f044ac5b5ddaf2d
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 81%
@@ -25,15 +25,15 @@ Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von I
 
 Um eine Verbindung zu Platform herzustellen, müssen Sie zunächst die Interoperabilität für Ihre [!DNL Google Cloud Storage] -Konto. Um auf die Interoperabilitätseinstellung zuzugreifen, öffnen Sie [!DNL Google Cloud Platform] und wählen Sie **[!UICONTROL Einstellungen]** in der Option **[!UICONTROL Cloud-Speicher]** im Navigationsbereich aus.
 
-![](../../images/tutorials/create/google-cloud-storage/nav.png)
+<!-- ![](../../images/tutorials/create/google-cloud-storage/nav.png) -->
 
 Die Seite **[!UICONTROL Einstellungen]** wird angezeigt. Von hier aus können Sie Informationen zu Ihrer [!DNL Google]-Projekt-ID und Details zu Ihrem [!DNL Google Cloud Storage]-Konto ansehen. Um auf die Interoperabilitätseinstellungen zuzugreifen, wählen Sie **[!UICONTROL Interoperabilität]** aus der oberen Kopfzeile aus.
 
-![](../../images/tutorials/create/google-cloud-storage/project-access.png)
+<!-- ![](../../images/tutorials/create/google-cloud-storage/project-access.png) -->
 
 Die Seite **[!UICONTROL Interoperabilität]** enthält Informationen zur Authentifizierung, zu Zugriffsschlüsseln und zum Standardprojekt, das mit Ihrem Service-Konto verknüpft ist. Um eine neue Zugriffsschlüssel-ID und einen geheimen Zugriffsschlüssel für Ihr Service-Konto zu generieren, wählen Sie **[!UICONTROL Schlüssel für ein Service-Konto erstellen]** aus.
 
-![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
+<!-- ![](../../images/tutorials/create/google-cloud-storage/interoperability.png) -->
 
 Sie können die neu generierte Zugriffsschlüssel-ID und den geheimen Zugriffsschlüssel verwenden, um Ihr [!DNL Google Cloud Storage]-Konto mit Platform zu verbinden.
 

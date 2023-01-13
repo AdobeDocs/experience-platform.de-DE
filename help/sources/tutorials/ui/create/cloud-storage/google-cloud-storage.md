@@ -5,10 +5,10 @@ title: Erstellen einer Google Cloud-Speicherquellenverbindung in der Benutzerobe
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung für Google Cloud Storage erstellen.
 exl-id: 3258ccd7-757c-4c4a-b7bb-0e8c9de3b50a
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 648dcd04de1f88318e3e771d5f044ac5b5ddaf2d
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 32%
+source-wordcount: '567'
+ht-degree: 34%
 
 ---
 
@@ -31,7 +31,7 @@ Wenn Sie bereits über eine gültige GCS-Verbindung verfügen, können Sie den R
 
 [!DNL Experience Platform] unterstützt die folgenden Dateiformate, die aus externen Speichern erfasst werden:
 
-* Trennzeichen (DSV): Die Unterstützung für DSV-formatierte Datendateien ist derzeit auf kommagetrennte Werte beschränkt. Der Wert der Feldkopfzeilen in DSV-formatierten Dateien darf nur aus alphanumerischen Zeichen und Unterstrichen bestehen. Unterstützung für allgemeine DSV-Dateien wird in Zukunft bereitgestellt.
+* Trennzeichen (DSV): Jeder einzelne Wert kann als Trennzeichen für Datendateien im DSV-Format verwendet werden.
 * JavaScript Object Notation (JSON): JSON-formatierte Datendateien müssen XDM-konform sein.
 * Apache Parquet: Parquet formatierte Datendateien müssen XDM-konform sein.
 
