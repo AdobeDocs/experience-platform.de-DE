@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Aqua Data Studio mit Query Service verbinden
 description: In diesem Dokument werden die Schritte zum Verbinden von Aqua Data Studio mit Query Service von Adobe Experience Platform erläutert.
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 3ffb535e9a6648f037678acebba0de5f2088e79e
 workflow-type: tm+mt
-source-wordcount: '487'
-ht-degree: 10%
+source-wordcount: '565'
+ht-degree: 6%
 
 ---
 
@@ -27,19 +27,15 @@ So erwerben Sie die erforderlichen Anmeldeinformationen zum Herstellen einer Ver
 
 ## Server registrieren {#register-server}
 
-Nach der Installation [!DNL Aqua Data Studio]müssen Sie zunächst den Server registrieren. Wählen Sie im Hauptmenü die Option **[!DNL Server]**, gefolgt von **[!DNL Register Server]**.
+Nach der Installation [!DNL Aqua Data Studio]müssen Sie zunächst den Server registrieren. Anweisungen dazu finden Sie in der offiziellen Aqua Data Studio-Dokumentation . [starten Sie die [!DNL Register Server] dialog](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation18/page/81/Registering-a-Database-Server#launching_the_register_server_dialog) und [Server registrieren](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation18/page/81/Registering-a-Database-Server#steps_to_register_a_server_in_aqua_data_studio).
 
-![Das Dropdown-Menü Server mit hervorgehobenem Register Server.](../images/clients/aqua-data-studio/register-server.png)
-
-Die **[!DNL Register Server]** angezeigt. Unter dem **[!DNL General]** Registerkarte, wählen Sie **[!DNL PostgreSQL]** aus der Liste auf der linken Seite. Ein Dialogfeld wird angezeigt. Geben Sie darin die folgenden Details für die Servereinstellungen ein.
+Einmal **[!DNL Register Server]** für einen PostgresSQL-Server angezeigt wird, geben Sie die folgenden Details für die Servereinstellungen an.
 
 - **[!DNL Name]**: Der Name Ihrer Verbindung. Es wird empfohlen, einen benutzerfreundlichen Namen anzugeben, um die Verbindung zu erkennen.
 - **[!DNL Login Name]**: Der Anmeldename ist Ihre Platform-Organisations-ID. Sie hat folgende Form: `ORG_ID@AdobeOrg`.
 - **[!DNL Password]**: Dies ist eine alphanumerische Zeichenfolge, die auf der [!DNL Query Service] Anmeldedaten-Dashboard.
 - **[!DNL Host and Port]**: Der Host-Endpunkt und sein Port für [!DNL Query Service]. Sie müssen Port 80 verwenden, um eine Verbindung mit [!DNL Query Service].
 - **[!DNL Database]:** Die zu verwendende Datenbank. Verwenden Sie den Wert für die Anmeldedaten der Platform-Benutzeroberfläche `dbname`: `prod:all`.
-
-![Die [!DNL Aqua Data Studio] Registerkarte Allgemein mit den erforderlichen Eingabefeldern hervorgehoben.](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
 ### [!DNL Query Service] Anmeldeinformationen
 
@@ -49,15 +45,13 @@ Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei der [!DNL Platform] 
 
 ### SSL-Modus festlegen
 
-Wählen Sie als Nächstes die **[!DNL Driver]** Registerkarte. under **[!DNL Parameters]**, setzen Sie den Wert auf `?sslmode=require`
+Als Nächstes müssen Sie den SSL-Moduswert auf `?sslmode=require`. Dies geschieht über die [!DNL Driver] des [!DNL Edit Server Properties] angezeigt. Anweisungen dazu finden Sie in der offiziellen Aqua Data Studio-Dokumentation . [Treibereigenschaften bearbeiten](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation13/page/116/PostgreSQL#drivers) und [SSL konfigurieren für [!DNL PostgreSQL]](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation20/page/SSL-Configuration/SSL-Configuration). Verwenden Sie die Suchleiste, um die `sslmode` -Eigenschaft.
 
 >[!IMPORTANT]
 >
 >Siehe [[!DNL Query Service] SSL-Dokumentation](./ssl-modes.md) Erfahren Sie mehr über die SSL-Unterstützung für Drittanbieterverbindungen zu Adobe Experience Platform Query Service und über die Verbindung mit `verify-full` SSL-Modus.
 
-![Die [!DNL Aqua Data Studio] Registerkarte Treiber mit dem Feld Parameter hervorgehoben.](../images/clients/aqua-data-studio/register-server-driver-tab.png)
-
-Nachdem Sie Ihre Verbindungsdetails eingegeben haben, wählen Sie **[!DNL Test Connection]** , um sicherzustellen, dass Ihre Anmeldeinformationen ordnungsgemäß funktionieren. Wenn Ihr Verbindungstest erfolgreich ist, wählen Sie **[!DNL Save]** um Ihren Server zu registrieren. Es wird ein Bestätigungsdialogfeld angezeigt, in dem die Verbindung bestätigt wird und die Verbindung im Dashboard angezeigt wird. Sie können jetzt eine Verbindung zum Server herstellen und seine Schemaobjekte anzeigen.
+Nachdem Sie Ihre Verbindungsdetails eingegeben haben, wählen Sie auf derselben Registerkarte die Option **[!DNL Test Connection]** , um sicherzustellen, dass Ihre Anmeldeinformationen ordnungsgemäß funktionieren. Wenn Ihr Verbindungstest erfolgreich ist, wählen Sie **[!DNL Save]** um Ihren Server zu registrieren. Es wird ein Bestätigungsdialogfeld angezeigt, in dem die Verbindung bestätigt wird und das Verbindungssymbol im Dashboard angezeigt wird. Sie können jetzt eine Verbindung zum Server herstellen und seine Schemaobjekte anzeigen.
 
 ## Nächste Schritte
 
