@@ -5,7 +5,7 @@ title: Entwickeln von ETL-Integrationen für Adobe Experience Platform
 description: Im Handbuch zur ETL-Integration werden die grundlegenden Schritte für die Erstellung von hochperformanten, sicheren Connectoren für Experience Platform und für die Aufnahme von Daten in Platform erläutert.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4075'
 ht-degree: 100%
 
