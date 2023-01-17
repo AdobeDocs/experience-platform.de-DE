@@ -1,153 +1,153 @@
 ---
-title: Data Governance - End-to-End-Handbuch
-description: Befolgen Sie den vollständigen Prozess zum Erzwingen von Datennutzungsbeschränkungen für Felder und Datensätze in Adobe Experience Platform.
+title: Data Governance – End-to-End-Handbuch
+description: Befolgen Sie den vollständigen Prozess zur Durchsetzung von Datennutzungsbeschränkungen für Felder und Datensätze in Adobe Experience Platform.
 exl-id: f18ae032-027a-4c97-868b-e04753237c81
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1513'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# Data Governance - End-to-End-Handbuch
+# Data Governance – End-to-End-Handbuch
 
 Um zu steuern, welche Marketing-Aktionen für bestimmte Datensätze und Felder in Adobe Experience Platform durchgeführt werden können, müssen Sie Folgendes einrichten:
 
-1. [Anwenden von Beschriftungen](#labels) auf die Datensätze und Felder, deren Nutzung Sie beschränken möchten.
-1. [Data Governance-Richtlinien konfigurieren und aktivieren](#policy) bestimmt, welche Arten von gekennzeichneten Daten für bestimmte Marketing-Aktionen verwendet werden können.
-1. [Anwenden von Marketing-Aktionen auf Ihre Ziele](#destinations) , um anzugeben, welche Richtlinien für an diese Ziele gesendete Daten gelten.
+1. [Wenden Sie Kennzeichnungen](#labels) auf die Datensätze und Felder an, deren Verwendung Sie einschränken möchten.
+1. [Konfigurieren und aktivieren Sie Data-Governance-Richtlinien](#policy), die festlegen, welche Arten von gekennzeichneten Daten für bestimmte Marketing-Aktionen verwendet werden können.
+1. [Wenden Sie Marketing-Aktionen auf Ihre Ziele an](#destinations), um anzugeben, welche Richtlinien für Daten gelten, die an diese Ziele gesendet werden.
 
-Nachdem Sie die Konfiguration Ihrer Bezeichnungen, Governance-Richtlinien und Marketing-Aktionen abgeschlossen haben, können Sie [Testen der Richtliniendurchsetzung](#test) um sicherzustellen, dass sie erwartungsgemäß funktioniert.
+Sobald Sie die Konfiguration Ihrer Kennzeichnungen, Governance-Richtlinien und Marketing-Aktionen abgeschlossen haben, können Sie die [Durchsetzung Ihrer Richtlinien testen](#test), um sicherzustellen, dass sie wie erwartet funktionieren.
 
-Dieses Handbuch führt Sie durch den gesamten Prozess der Konfiguration und Durchsetzung einer Data Governance-Richtlinie in der Platform-Benutzeroberfläche. Weitere Informationen zu den in diesem Handbuch verwendeten Funktionen finden Sie in der Übersichtsdokumentation zu den folgenden Themen:
+Dieses Handbuch führt Sie durch den gesamten Prozess der Konfiguration und Durchsetzung einer Data-Governance-Richtlinie in der Platform-Benutzeroberfläche. Weitere Informationen zu den in diesem Handbuch verwendeten Funktionen finden Sie in der Übersichtsdokumentation zu den folgenden Themen:
 
-* [Adobe Experience Platform Data Governance](./home.md)
-* [Datennutzungsbezeichnungen](./labels/overview.md)
+* [Data Governance in Adobe Experience Platform](./home.md)
+* [Datennutzungskennzeichnungen](./labels/overview.md)
 * [Datennutzungsrichtlinien](./policies/overview.md)
 * [Durchsetzung von Richtlinien](./enforcement/overview.md)
 
 >[!NOTE]
 >
->In diesem Handbuch wird beschrieben, wie Sie Richtlinien für die Verwendung oder Aktivierung von Daten in Experience Platform einrichten und durchsetzen. Wenn Sie versuchen, **access** Informationen zu den Daten selbst für bestimmte Platform-Benutzer in Ihrer Organisation finden Sie im End-to-End-Handbuch unter [attributbasierte Zugriffssteuerung](../access-control/abac/end-to-end-guide.md) anstatt. Die attributbasierte Zugriffskontrolle verwendet auch Beschriftungen und Richtlinien, jedoch für einen anderen Anwendungsfall als Data Governance.
+>In diesem Handbuch wird beschrieben, wie Sie Richtlinien für die Verwendung oder Aktivierung von Daten in Experience Platform einrichten und durchsetzen. Wenn Sie den **Zugriff** auf die Daten selbst für bestimmte Platform-Benutzende innerhalb Ihrer Organisation einschränken möchten, lesen Sie stattdessen das End-to-End-Handbuch zur [attributbasierten Zugriffssteuerung](../access-control/abac/end-to-end-guide.md). Die attributbasierte Zugriffssteuerung verwendet ebenfalls Beschriftungen und Kennzeichnungen, allerdings für einen anderen Anwendungsfall als Data Governance.
 
-## Anwenden von Beschriftungen {#labels}
+## Anwenden von Kennzeichnungen {#labels}
 
-Wenn es einen bestimmten Datensatz gibt, für den Sie Datennutzungsbeschränkungen erzwingen möchten, können Sie [Anwenden von Bezeichnungen direkt auf diesen Datensatz](#dataset-labels) oder bestimmte Felder in diesem Datensatz.
+Wenn es einen bestimmten Datensatz gibt, für den Sie Einschränkungen bei der Datennutzung durchsetzen möchten, können Sie [Kennzeichnungen direkt auf diesen Datensatz anwenden](#dataset-labels) oder auf bestimmte Felder innerhalb dieses Datensatzes.
 
-Alternativ können Sie [Anwenden von Bezeichnungen auf ein Schema](#schema-labels) sodass alle auf diesem Schema basierenden Datensätze dieselben Bezeichnungen übernehmen.
+Alternativ können Sie [für ein Schema Kennzeichnungen anwenden](#schema-labels), sodass alle Datensätze, die auf diesem Schema basieren, dieselben Beschriftung übernehmen.
 
 >[!NOTE]
 >
->Weitere Informationen zu den verschiedenen Datennutzungsbezeichnungen und deren Verwendungszweck finden Sie in der [Referenz zu Datennutzungsbezeichnungen](./labels/reference.md). Wenn die verfügbaren Kernbezeichnungen nicht alle Ihrer gewünschten Anwendungsfälle abdecken, können Sie [eigene benutzerdefinierte Beschriftungen definieren](./labels/user-guide.md#manage-custom-labels) sowie
+>Weitere Informationen zu den verschiedenen Datennutzungskennzeichnungen und deren Verwendungszweck finden Sie in der [Referenz zu Datennutzungskennzeichnungen](./labels/reference.md). Wenn die verfügbaren Kernkennzeichnungen nicht alle Ihre gewünschten Anwendungsfälle abdecken, können Sie auch [Ihre eigenen benutzerdefinierten Kennzeichnungen definieren](./labels/user-guide.md#manage-custom-labels).
 
 ### Anwenden von Kennzeichnungen auf einen Datensatz {#dataset-labels}
 
-Auswählen **[!UICONTROL Datensätze]** Wählen Sie im linken Navigationsbereich den Namen des Datensatzes aus, auf den Sie Beschriftungen anwenden möchten. Sie können optional das Suchfeld verwenden, um die Liste der angezeigten Datensätze einzugrenzen.
+Wählen Sie in der linken Navigationsleiste **[!UICONTROL Datensätze]** und klicken Sie auf den Namen des Datensatzes, den Sie mit Kennzeichnungen versehen möchten. Sie können optional das Suchfeld verwenden, um die Liste der angezeigten Datensätze einzugrenzen.
 
-![Bild, das einen Datensatz anzeigt, der in der Platform-Benutzeroberfläche ausgewählt wird](./images/e2e/select-dataset.png)
+![Bild, das die Auswahl eines Datensatzes in der Platform-Benutzeroberfläche zeigt](./images/e2e/select-dataset.png)
 
-Die Detailansicht für den Datensatz wird angezeigt. Wählen Sie die **[!UICONTROL Data Governance]** um eine Liste der Felder des Datensatzes und aller Bezeichnungen anzuzeigen, die bereits auf sie angewendet wurden. Aktivieren Sie die Kontrollkästchen neben den Feldern, denen Sie Beschriftungen hinzufügen möchten, und wählen Sie dann **[!UICONTROL Bearbeiten von Governance-Titeln]** in der rechten Leiste.
+Die Detailansicht für den Datensatz wird angezeigt. Wählen Sie die Registerkarte **[!UICONTROL Data Governance]**, um eine Liste der Felder des Datensatzes und der ihnen bereits zugewiesenen Kennzeichnungen anzuzeigen. Aktivieren Sie die Kontrollkästchen neben den Feldern, denen Sie Kennzeichnungen hinzufügen möchten, und wählen Sie dann **[!UICONTROL Governance-Kennzeichnungen bearbeiten]** in der rechten Leiste.
 
-![Bild mit mehreren für die Beschriftung ausgewählten Datensatzfeldern](./images/e2e/dataset-field-label.png)
+![Bild mit mehreren für die Kennzeichnung ausgewählten Datensatzfeldern](./images/e2e/dataset-field-label.png)
 
 >[!NOTE]
 >
->Wenn Sie dem gesamten Datensatz Bezeichnungen hinzufügen möchten, aktivieren Sie das Kontrollkästchen neben **[!UICONTROL Feldname]** Alle Felder vor der Auswahl markieren **[!UICONTROL Bearbeiten von Governance-Titeln]**.
+>Wenn Sie dem gesamten Datensatz Kennzeichnungen hinzufügen möchten, aktivieren Sie das Kontrollkästchen neben dem **[!UICONTROL Feldnamen]**, um alle Felder zu markieren, bevor Sie auf **[!UICONTROL Governance-Kennzeichnungen bearbeiten]** klicken.
 >
 >![Bild mit allen für einen Datensatz markierten Feldern](./images/e2e/label-whole-dataset.png)
 
-Wählen Sie im nächsten Dialogfeld die Beschriftungen aus, die Sie auf die zuvor ausgewählten Datensatzfelder anwenden möchten. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Änderungen speichern]**.
+Wählen Sie im nächsten Dialogfeld die Kennzeichnungen aus, die Sie auf die zuvor ausgewählten Datensatzfelder anwenden möchten. Klicken Sie abschließend auf **[!UICONTROL Speichern]**.
 
 ![Bild mit allen für einen Datensatz markierten Feldern](./images/e2e/save-dataset-labels.png)
 
-Gehen Sie wie oben beschrieben vor, um bei Bedarf Beschriftungen auf verschiedene Felder (oder Datensätze) anzuwenden. Wenn Sie fertig sind, können Sie mit dem nächsten Schritt von [Data Governance-Richtlinien aktivieren](#policy).
+Gehen Sie wie oben beschrieben vor, um bei Bedarf Kennzeichnungen auf verschiedene Felder (oder Datensätze) anzuwenden. Wenn Sie fertig sind, können Sie mit dem nächsten Schritt fortfahren, indem Sie die [Data-Governance-Richtlinien aktivieren](#policy).
 
-### Anwenden von Bezeichnungen auf ein Schema {#schema-labels}
+### Anwenden von Kennzeichnungen auf ein Schema {#schema-labels}
 
-Auswählen **[!UICONTROL Schemas]** Wählen Sie im linken Navigationsbereich das Schema aus, dem Sie Beschriftungen hinzufügen möchten.
+Wählen Sie **[!UICONTROL Schema]** in der linken Navigationsleiste und klicken Sie dann in der Liste auf das Schema, dem Sie Kennzeichnungen hinzufügen möchten.
 
 >[!TIP]
 >
->Wenn Sie nicht sicher sind, welches Schema für einen bestimmten Datensatz gilt, wählen Sie **[!UICONTROL Datensätze]** im linken Navigationsbereich und wählen Sie dann den Link unter dem **[!UICONTROL Schema]** Spalte für den gewünschten Datensatz. Wählen Sie den Schemanamen im Popover aus, der angezeigt wird, um das Schema im Schema Editor zu öffnen.
+>Wenn Sie nicht sicher sind, welches Schema für einen bestimmten Datensatz gilt, wählen Sie in der linken Navigationsleiste **[!UICONTROL Datensätze]** und klicken dann auf den Link unter der Spalte **[!UICONTROL Schema]** für den gewünschten Datensatz. Wählen Sie den Namen des Schemas in dem Popup, das erscheint, um das Schema im Schema-Editor zu öffnen.
 >
 >![Bild, das einen Link zum Schema eines Datensatzes anzeigt](./images/e2e/schema-from-dataset.png)
 
-Die Struktur des Schemas wird im Schema-Editor angezeigt. Wählen Sie von hier aus die **[!UICONTROL Bezeichnungen]** um eine Listenansicht der Schemafelder und der bereits auf sie angewendeten Bezeichnungen anzuzeigen. Aktivieren Sie die Kontrollkästchen neben den Feldern, denen Sie Beschriftungen hinzufügen möchten, und wählen Sie dann **[!UICONTROL Bearbeiten von Governance-Titeln]** in der rechten Leiste.
+Die Struktur des Schemas wird im Schema-Editor angezeigt. Wählen Sie von hier aus die Registerkarte **[!UICONTROL Kennzeichnungen]**, um eine Listenansicht der Felder des Schemas und der ihnen bereits zugewiesenen Kennzeichnungen anzuzeigen. Aktivieren Sie die Kontrollkästchen neben den Feldern, denen Sie Beschriftungen hinzufügen möchten, und klicken Sie dann auf **[!UICONTROL Governance-Kennzeichnungen bearbeiten]** in der rechten Leiste.
 
-![Bild mit einem einzelnen Schemafeld für Governance-Beschriftungen](./images/e2e/schema-field-label.png)
+![Bild mit einem einzelnen Schemafeld für Governance-Kennzeichnungen](./images/e2e/schema-field-label.png)
 
 >[!NOTE]
 >
->Wenn Sie allen Feldern im Schema Beschriftungen hinzufügen möchten, wählen Sie das Stiftsymbol in der oberen Zeile aus.
+>Wenn Sie allen Feldern im Schema Kennzeichnungen hinzufügen möchten, wählen Sie das Stiftsymbol in der oberen Zeile aus.
 >
->![Bild mit dem ausgewählten Stiftsymbol in der Ansicht &quot;Schemabeschriftungen&quot;](./images/e2e/label-whole-schema.png)
+>![Bild mit dem ausgewählten Stiftsymbol in der Ansicht der Schemakennzeichnungen](./images/e2e/label-whole-schema.png)
 
-Wählen Sie im nächsten Dialogfeld die Beschriftungen aus, die Sie auf die zuvor ausgewählten Schemafelder anwenden möchten. Klicken Sie abschließend auf **[!UICONTROL Speichern]**.
+Wählen Sie im nächsten Dialogfeld die Kennzeichnungen aus, die Sie auf die zuvor ausgewählten Schemafelder anwenden möchten. Klicken Sie abschließend auf **[!UICONTROL Speichern]**.
 
-![Bild mit mehreren Beschriftungen, die einem Schemafeld hinzugefügt werden](./images/e2e/save-schema-labels.png)
+![Bild mit mehreren Kennzeichnungen, die einem Schemafeld hinzugefügt werden](./images/e2e/save-schema-labels.png)
 
-Gehen Sie wie oben beschrieben vor, um bei Bedarf Beschriftungen für verschiedene Felder (oder Schemas) anzuwenden. Wenn Sie fertig sind, können Sie mit dem nächsten Schritt von [Data Governance-Richtlinien aktivieren](#policy).
+Gehen Sie wie oben beschrieben vor, um bei Bedarf Kennzeichnungen für verschiedene Felder (oder Schemata) anzuwenden. Wenn Sie fertig sind, können Sie mit dem nächsten Schritt fortfahren, indem Sie die [Data-Governance-Richtlinien aktivieren](#policy). 
 
-## Data Governance-Richtlinien aktivieren {#policy}
+## Aktivieren von Data-Governance-Richtlinien {#policy}
 
-Nachdem Sie Ihre Schemas und/oder Datensätze mit Bezeichnungen versehen haben, können Sie Data Governance-Richtlinien erstellen, die die Marketing-Aktionen einschränken, für die bestimmte Bezeichnungen verwendet werden können.
+Nachdem Sie Ihren Schemata und/oder Datensätzen Kennzeichnungen zugewiesen haben, können Sie Data-Governance-Richtlinien erstellen, welche die Marketing-Aktionen einschränken, für die bestimmte Kennzeichnungen verwendet werden können.
 
-Auswählen **[!UICONTROL Richtlinien]** im linken Navigationsbereich eine Liste der von Adobe definierten Core-Richtlinien sowie aller zuvor von Ihrem Unternehmen erstellten benutzerdefinierten Richtlinien anzeigen.
+Wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Richtlinien]** aus, um eine Liste der von Adobe definierten Kernrichtlinien sowie der benutzerdefinierten Richtlinien anzuzeigen, die zuvor von Ihrer Organisation erstellt wurden.
 
-Jede Kernbeschriftung verfügt über eine zugehörige Kernrichtlinie, die bei Aktivierung die entsprechenden Aktivierungseinschränkungen für alle Daten erzwingt, die diese Beschriftung enthalten. Um eine Kernrichtlinie zu aktivieren, wählen Sie sie aus der Liste aus und wählen Sie dann die **[!UICONTROL Richtlinienstatus]** Umschalten auf **[!UICONTROL Aktiviert]**.
+Jede Kernkennzeichnung hat eine zugehörige Kernrichtlinie, die, wenn sie aktiviert ist, die entsprechenden Aktivierungsbeschränkungen für alle Daten durchsetzt, die diese Kennzeichnung enthalten. Um eine Kernrichtlinie zu aktivieren, wählen Sie sie aus der Liste aus und legen Sie dann den Umschalter **[!UICONTROL Richtlinienstatus]** auf **[!UICONTROL Aktiviert]** fest.
 
 ![Bild, das anzeigt, dass eine Kernrichtlinie in der Benutzeroberfläche aktiviert ist](./images/e2e/enable-core-policy.png)
 
-Wenn die verfügbaren Core-Richtlinien nicht alle Ihre Anwendungsfälle abdecken (z. B. wenn Sie benutzerdefinierte Beschriftungen verwenden, die Sie unter Ihrem Unternehmen definiert haben), können Sie stattdessen eine benutzerdefinierte Richtlinie definieren. Aus dem **[!UICONTROL Richtlinien]** Arbeitsbereich, wählen Sie **[!UICONTROL Richtlinie erstellen]**.
+Wenn die verfügbaren Kernrichtlinien nicht alle Ihre Anwendungsfälle abdecken (z. B. wenn Sie benutzerdefinierte Kennzeichnungen verwenden, die Sie in Ihrer Organisation definiert haben), können Sie stattdessen eine benutzerdefinierte Richtlinie definieren. Wählen Sie im Arbeitsbereich **[!UICONTROL Richtlinien]** die Option **[!UICONTROL Richtlinie erstellen]** aus.
 
-![Bild, das die [!UICONTROL Richtlinie erstellen] Schaltfläche, die in der Benutzeroberfläche ausgewählt wird](./images/e2e/create-policy.png)
+![Bild der Schaltfläche [!UICONTROL Richtlinie erstellen], die in der Benutzeroberfläche ausgewählt wurde](./images/e2e/create-policy.png)
 
-Es wird ein Popup angezeigt, in dem Sie aufgefordert werden, den zu erstellenden Richtlinientyp auszuwählen. Auswählen **[!UICONTROL Data Governance-Politik]**, wählen Sie **[!UICONTROL Weiter]**.
+Es erscheint ein Pop-up, in dem Sie aufgefordert werden, die Art der Richtlinie, die Sie erstellen möchten, auszuwählen. Wählen Sie **[!UICONTROL Data-Governance-Richtlinien]** aus und klicken Sie auf **[!UICONTROL Weiter]**.
 
-![Bild, das die [!UICONTROL Data Governance-Politik] Auswahl der Option](./images/e2e/governance-policy.png)
+![Bild, das die ausgewählte Option [!UICONTROL Data-Governance-Richtlinien] zeigt](./images/e2e/governance-policy.png)
 
-Geben Sie im nächsten Bildschirm eine **[!UICONTROL Name]** und optional **[!UICONTROL Beschreibung]** für die Richtlinie. Wählen Sie in der folgenden Tabelle die Beschriftungen aus, nach denen diese Richtlinie geprüft werden soll. Mit anderen Worten: Dies sind die Bezeichnungen, die die Richtlinie verhindert, für die Marketing-Aktion(n) verwendet wird, die Sie im nächsten Schritt angeben.
+Geben Sie auf dem nächsten Bildschirm einen **[!UICONTROL Namen]** und optional eine **[!UICONTROL Beschreibung]** für die Richtlinie ein. Wählen Sie in der folgenden Tabelle die Kennzeichnungen aus, auf die diese Richtlinie prüfen soll. Es handelt sich also um die Kennzeichnungen, deren Verwendung für die Marketing-Aktion(en), die Sie im nächsten Schritt festlegen, durch die Richtlinie verhindert wird.
 
-Wenn Sie mehrere Beschriftungen auswählen, können Sie mithilfe der Optionen in der rechten Leiste bestimmen, ob alle Beschriftungen vorhanden sein müssen, damit die Richtlinie Nutzungsbeschränkungen erzwingt oder ob nur eine der Beschriftungen vorhanden sein muss. Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
+Wenn Sie mehrere Kennzeichnungen auswählen, können Sie mit den Optionen in der rechten Leiste festlegen, ob alle Kennzeichnungen vorhanden sein müssen, damit die Richtlinie Nutzungsbeschränkungen durchsetzen kann, oder ob nur eine der Kennzeichnungen vorhanden sein muss. Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 
 ![Bild, das die grundlegende Konfiguration der Richtlinie anzeigt, die in der Benutzeroberfläche abgeschlossen wurde](./images/e2e/configure-policy.png)
 
-Wählen Sie im nächsten Bildschirm die Marketing-Aktionen aus, für die diese Richtlinie die Verwendung der zuvor ausgewählten Bezeichnungen einschränkt. Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
+Wählen Sie auf dem nächsten Bildschirm die Marketing-Aktionen aus, für die diese Richtlinie die Verwendung der zuvor ausgewählten Beschriftungen einschränken soll. Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
 
-![Bild, das die einer Richtlinie zugeordnete Marketing-Aktion in der Benutzeroberfläche anzeigt](./images/e2e/select-marketing-action.png)
+![Bild, das die einer Richtlinie zugewiesene Marketing-Aktion in der Benutzeroberfläche anzeigt](./images/e2e/select-marketing-action.png)
 
-Der letzte Bildschirm zeigt eine Zusammenfassung der Details der Richtlinie und der Aktionen, die darauf beschränkt sind, für welche Beschriftungen sie gelten. Auswählen **[!UICONTROL Beenden]** , um die Richtlinie zu erstellen.
+Der letzte Bildschirm zeigt eine Zusammenfassung der Details der Richtlinie und darüber, welche Aktionen sie für welche Kennzeichnungen einschränken wird. Klicken Sie auf **[!UICONTROL Beenden]**, um die Richtlinie zu erstellen.
 
-![Bild, das die in der Benutzeroberfläche zu bestätigende Richtlinienkonfiguration anzeigt](./images/e2e/confirm-policy.png)
+![Bild mit der Bestätigung der Richtlinienkonfiguration in der Benutzeroberfläche](./images/e2e/confirm-policy.png)
 
-Die Richtlinie wird erstellt, aber auf [!UICONTROL Behinderte] Standardmäßig. Wählen Sie die Richtlinie aus der Liste aus und legen Sie die **[!UICONTROL Richtlinienstatus]** Umschalten auf **[!UICONTROL Aktiviert]** , um die Richtlinie zu aktivieren.
+Die Richtlinie wird erstellt, ist aber standardmäßig auf [!UICONTROL Deaktiviert] eingestellt. Wählen Sie die Richtlinie aus der Liste aus und legen Sie den Umschalter für den **[!UICONTROL Richtlinienstatus]** auf **[!UICONTROL Aktiviert]** fest, um die Richtlinie zu aktivieren.
 
-![Bild, das die in der Benutzeroberfläche aktivierte Richtlinie anzeigt](./images/e2e/enable-created-policy.png)
+![Bild, das zeigt, wie die erstellte Richtlinie in der Benutzeroberfläche aktiviert wird](./images/e2e/enable-created-policy.png)
 
-Führen Sie die oben beschriebenen Schritte aus, um die erforderlichen Richtlinien zu erstellen und zu aktivieren, bevor Sie mit dem nächsten Schritt fortfahren.
+Setzen Sie die obigen Schritte fort, um die von Ihnen benötigten Richtlinien zu erstellen und zu aktivieren, bevor Sie zum nächsten Schritt übergehen.
 
-## Marketing-Aktionen für Ziele verwalten {#destinations}
+## Verwalten von Marketing-Aktionen für Ziele {#destinations}
 
 Damit Ihre aktivierten Richtlinien genau bestimmen können, welche Daten für ein Ziel aktiviert werden können, müssen Sie diesem Ziel bestimmte Marketing-Aktionen zuweisen.
 
-Angenommen, eine aktivierte Richtlinie verhindert Daten, die eine `C2` Beschriftung für die Marketing-Aktion &quot;[!UICONTROL Export in Dritte]&quot;. Beim Aktivieren von Daten für ein Ziel überprüft die Richtlinie, welche Marketing-Aktionen auf dem Ziel vorhanden sind. Wenn[!UICONTROL Export in Dritte]&quot;vorhanden ist, um Daten mit einer `C2` -Beschriftung zu einer Richtlinienverletzung führt. Wenn[!UICONTROL Export in Dritte]&quot;nicht vorhanden ist, wird die Richtlinie nicht für das Ziel erzwungen und Daten mit `C2` Etiketten können frei aktiviert werden.
+Ein Beispiel: Eine aktivierte Richtlinie verhindert, dass Daten, die eine Kennzeichnung `C2` enthalten, für die Marketing-Aktion „[!UICONTROL Export an Dritte]“ verwendet werden. Beim Aktivieren von Daten für ein Ziel überprüft die Richtlinie, welche Marketing-Aktionen für das Ziel vorhanden sind. Wenn „[!UICONTROL Export an Dritte]“ vorhanden ist, führt der Versuch, Daten mit einer Kennzeichnung `C2` zu aktivieren, zu einem Verstoß gegen die Richtlinie. Wenn „[!UICONTROL Export in Dritte]“ nicht vorhanden ist, wird die Richtlinie für das Ziel nicht erzwungen und Daten mit der Kennzeichnung `C2` können frei aktiviert werden.
 
-Wann [Verbinden eines Ziels in der Benutzeroberfläche](../destinations/ui/connect-destination.md), die **[!UICONTROL Governance]** -Schritt im Workflow können Sie die Marketing-Aktionen auswählen, die für dieses Ziel gelten und letztendlich bestimmen, welche Data Governance-Richtlinien für das Ziel durchgesetzt werden.
+Beim [Verbinden eines Ziels in der Benutzeroberfläche](../destinations/ui/connect-destination.md) ermöglicht Ihnen der Schritt **[!UICONTROL Governance]** im Workflow die Auswahl der Marketing-Aktionen, die für dieses Ziel gelten und die letztendlich bestimmen, welche Data-Governance-Richtlinien für das Ziel durchgesetzt werden.
 
 ![Bild mit Marketing-Aktionen, die für ein Ziel ausgewählt werden](./images/e2e/destination-marketing-actions.png)
 
 ## Durchsetzung von Testrichtlinien {#test}
 
-Nachdem Sie Ihre Daten gekennzeichnet, Richtlinien zur Data Governance aktiviert und Ihren Zielen Marketing-Aktionen zugewiesen haben, können Sie testen, ob Ihre Richtlinien erwartungsgemäß durchgesetzt werden.
+Nachdem Sie Ihre Daten gekennzeichnet, Data-Governance-Richtlinien aktiviert und Ihren Zielen Marketing-Aktionen zugewiesen haben, können Sie testen, ob Ihre Richtlinien erwartungsgemäß durchgesetzt werden.
 
-Wenn Sie die Einstellungen korrekt einrichten und versuchen, durch Ihre Richtlinien eingeschränkte Daten zu aktivieren, wird die Aktivierung automatisch verweigert und es wird eine Richtlinienverletzungsmeldung angezeigt, in der detaillierte Informationen zur Datenherkunft darüber enthalten sind, was die Verletzung verursacht hat.
+Wenn Sie alles richtig eingestellt haben, wird bei dem Versuch, Daten zu aktivieren, die durch Ihre Richtlinien eingeschränkt sind, die Aktivierung automatisch verweigert, und es wird eine Meldung über einen Richtlinienverstoß angezeigt, die detaillierte Informationen über die Datenherkunft enthält, die den Verstoß verursacht hat.
 
-Siehe Dokument unter [automatische Richtliniendurchsetzung](./enforcement/auto-enforcement.md) für Details zur Interpretation von Nachrichten zu Richtlinienverletzungen.
+Siehe das Dokument [Automatische Richtliniendurchsetzung](./enforcement/auto-enforcement.md) für Details zur Interpretation von Meldungen über Richtlinienverletzungen.
 
 ## Nächste Schritte
 
-In diesem Handbuch wurden die erforderlichen Schritte zum Konfigurieren und Durchsetzen von Data Governance-Richtlinien in Ihren Aktivierungs-Workflows beschrieben. Weitere Informationen zu den in diesem Handbuch verwendeten Data Governance-Komponenten finden Sie in der folgenden Dokumentation:
+Dieses Handbuch behandelt die erforderlichen Schritte zur Konfiguration und Durchsetzung von Data-Governance-Richtlinien in Ihren Aktivierungs-Workflows. Ausführlichere Informationen zu den Data-Governance-Komponenten, die in diesem Handbuch behandelt werden, finden Sie in der folgenden Dokumentation:
 
-* [Datennutzungsbezeichnungen](./labels/overview.md)
+* [Datennutzungskennzeichnungen](./labels/overview.md)
 * [Datennutzungsrichtlinien](./policies/overview.md)
 * [Durchsetzung von Richtlinien](./enforcement/overview.md)
