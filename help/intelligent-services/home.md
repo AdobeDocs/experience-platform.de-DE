@@ -5,7 +5,7 @@ title: Intelligent Services – Übersicht
 description: Mit Intelligent Services können Marketing-Analysten und -Experten die Vorteile von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen nutzen. So können Marketing-Analysten mithilfe von Konfigurationen auf Unternehmensebene spezifische Prognosen für die Anforderungen der Firma erstellen, ohne dass hierfür Kenntnisse aus der Datenwissenschaft erforderlich ist. Darüber hinaus können Marketing-Experten Prognosen in Adobe Experience Cloud, Adobe Experience Platform und Anwendungen anderer Anbieter aktivieren.
 exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
 source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '502'
 ht-degree: 100%
 
