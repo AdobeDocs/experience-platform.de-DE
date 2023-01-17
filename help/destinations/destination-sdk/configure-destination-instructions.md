@@ -2,10 +2,10 @@
 description: Auf dieser Seite werden die Schritte zum Konfigurieren eines Streaming-Ziels mit dem Destination SDK aufgeführt und beschrieben.
 title: Verwenden des Destination SDK zum Konfigurieren eines Streaming-Ziels
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: abc9b9857e4a93a334440e855ca0ae562c695df1
+source-git-commit: 0d58d949ff24b9059d6afe81de354da0783ec8a4
 workflow-type: tm+mt
-source-wordcount: '752'
-ht-degree: 91%
+source-wordcount: '825'
+ht-degree: 82%
 
 ---
 
@@ -169,7 +169,7 @@ Nachdem Sie das Ziel mit den Konfigurationsendpunkten in den vorherigen Schritte
 
 Im Rahmen des Testvorgangs Ihres Ziels müssen Sie die Experience Platform-Benutzeroberfläche zum Erstellen von Segmenten verwenden, die Sie für Ihr Ziel aktivieren. Anweisungen zum Erstellen von Segmenten in Experience Platform finden Sie in den beiden nachstehenden Ressourcen:
 
-* [Erstellen einer Dokumentationsseite für Segmente](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=de#create-segment)
+* [Erstellen einer Dokumentationsseite für Segmente](/help/segmentation/ui/overview.md#create-segment)
 * [Videoanleitung zum Erstellen von Segmenten](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=de)
 
 ## Schritt 7: Veröffentlichen des Ziels {#publish-destination}
@@ -187,3 +187,11 @@ Verwenden Sie nach dem Konfigurieren und Testen Ihres Ziels die [Zielveröffentl
 >Dieser Schritt ist nicht erforderlich, wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen und es nicht im Zielkatalog veröffentlichen möchten, damit andere Kunden ihn verwenden können.
 
 Wenn Sie ein unabhängiger Software-Anbieter (ISV) oder Systemintegrator (SI) sind, der eine [produktbezogene Integration](./overview.md#productized-custom-integrations) erstellt, verwenden Sie den [Self-Service-Dokumentationsprozess](./docs-framework/documentation-instructions.md), um eine Produktdokumentationsseite für Ihr Ziel im [Experience Platform-Zielkatalog](/help/destinations/catalog/overview.md) zu erstellen.
+
+## Schritt 9: Ziel für Überprüfung durch die Adobe übermitteln {#submit-for-review}
+
+>[!NOTE]
+>
+>Dieser Schritt ist nicht erforderlich, wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen und es nicht im Zielkatalog veröffentlichen möchten, damit andere Kunden ihn verwenden können.
+
+Bevor das Ziel im Experience Platform-Katalog veröffentlicht und für alle Experience Platform-Kunden sichtbar ist, müssen Sie das Ziel offiziell zur Überprüfung durch die Adobe übermitteln. Vollständige Informationen zum [zur Überprüfung eines in der Destination SDK erstellten produktiven Ziels einreichen](/help/destinations/destination-sdk/submit-destination.md).
