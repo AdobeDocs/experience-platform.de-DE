@@ -7,7 +7,7 @@ exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '545'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -29,13 +29,13 @@ Marketing-Aktionen (auch als Marketing-Anwendungsfälle bezeichnet) im Rahmen de
 
 ## Richtlinien
 
-Data Governance-Richtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in [!DNL Experience Platform].
+Data-Governance-Richtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, welche Sie mit Daten innerhalb von [!DNL Experience Platform] durchführen dürfen bzw. nicht durchführen dürfen.
 
 >[!NOTE]
 >
->Data Governance-Richtlinien dürfen nicht mit Zugriffssteuerungsrichtlinien verwechselt werden, die die spezifischen Datenattribute festlegen, auf die bestimmte Platform-Benutzer in Ihrer Organisation zugreifen können. Siehe Handbuch unter [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md) für weitere Informationen.
+>Data-Governance-Richtlinien sind nicht zu verwechseln mit Zugriffssteuerungsrichtlinien, die die spezifischen Datenattribute festlegen, auf die bestimmte Benutzende von Platform in Ihrer Organisation zugreifen können. Weitere Informationen finden Sie im Handbuch zur [attributbasierten Zugriffssteuerung](../../access-control/abac/overview.md).
 
-Eine Data Governance-Richtlinie wird wie folgt definiert:
+Eine Data-Governance-Richtlinie ist durch Folgendes definiert:
 
 1. Eine bestimmte Marketing-Aktion
 1. Die Datennutzungsbeschriftung(en), für die diese Aktion nicht ausgeführt werden darf

@@ -7,19 +7,19 @@ exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1306'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
 # Verwalten von Datennutzungsbeschriftungen in der Benutzeroberfläche
 
-Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Datennutzungsbeschriftungen in der Benutzeroberfläche von [!DNL Experience Platform]. 
+Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Datennutzungskennzeichnungen in der Benutzeroberfläche von [!DNL Experience Platform]. 
 
-## Verwalten von Beschriftungen auf der Datensatzebene
+## Verwalten von Kennzeichnungen auf der Datensatzebene
 
 >[!IMPORTANT]
 >
->Das Anwenden von Bezeichnungen auf Datensatzebene wird nur für Data Governance-Anwendungsfälle unterstützt. Wenn Sie Zugriffsrichtlinien für die Daten erstellen möchten, müssen Sie [Anwenden von Bezeichnungen auf das Schema](../../xdm/tutorials/labels.md) , auf dem der Datensatz basiert. Siehe Übersicht unter [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md) für weitere Informationen.
+>Das Anwenden von Kennzeichnungen auf Datensatzebene wird nur für Data-Governance-Anwendungsfälle unterstützt. Wenn Sie Zugriffsrichtlinien für die Daten erstellen möchten, müssen Sie [Kennzeichnungen auf das Schema anwenden](../../xdm/tutorials/labels.md), auf dem der Datensatz basiert. Weitere Informationen finden Sie in der Übersicht zur [attributbasierten Zugriffssteuerung](../../access-control/abac/overview.md).
 
 Zum Verwalten der Datennutzungsbeschriftungen auf Datensatzebene müssen Sie einen vorhandenen Datensatz auswählen oder einen neuen erstellen. Wählen Sie nach der Anmeldung bei Adobe Experience Platform den Punkt **[!UICONTROL Datensätze]** in der linken Navigation aus, um den Arbeitsbereich **[!UICONTROL Datensätze]** zu öffnen. Auf dieser Seite werden alle erstellten Datensätze, die zu Ihrem Unternehmen gehören, sowie nützliche Details zu jedem Datensatz angezeigt.
 
@@ -77,11 +77,11 @@ Der Umschalter **[!UICONTROL Übernommene Beschriftungen anzeigen]** ist standar
 
 ![Ausblenden von übernommenen Beschriftungen](../images/labels/inherited-labels.png)
 
-## Verwalten von Bezeichnungen auf Datensatzfeldebene
+## Verwalten von Kennzeichnungen auf der Ebene der Datensatzfelder
 
 >[!IMPORTANT]
 >
->Das Anwenden von Bezeichnungen auf Datensatzfeldebene wird nur für Data Governance-Anwendungsfälle unterstützt. Wenn Sie Zugriffsrichtlinien für die Daten erstellen möchten, müssen Sie [Anwenden von Bezeichnungen auf das Schema](../../xdm/tutorials/labels.md) , auf dem der Datensatz basiert. Siehe Übersicht unter [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md) für weitere Informationen.
+>Das Anwenden von Kennzeichnungen auf der Ebene der Datensatzfelder wird nur für Anwendungsfälle der Data Governance unterstützt. Wenn Sie Zugriffsrichtlinien für die Daten erstellen möchten, müssen Sie [Kennzeichnungen auf das Schema anwenden](../../xdm/tutorials/labels.md), auf dem der Datensatz basiert. Weitere Informationen finden Sie in der Übersicht zur [attributbasierten Zugriffssteuerung](../../access-control/abac/overview.md).
 
 Wenn Sie den Arbeitsablauf zum [Hinzufügen und Bearbeiten von Datennutzungskennzeichnungen auf Datensatzebene](#add-labels) fortsetzen, können Sie im Arbeitsbereich **[!UICONTROL Data Governance]** auch Kennzeichnungen auf Feldebene für diesen Datensatz verwalten.
 
@@ -107,18 +107,18 @@ Sie können diese Schritte wiederholen, um weiterhin Kennzeichnungen auf Feldebe
 
 Es ist wichtig, sich zu merken, dass die Vererbung nur von der obersten Ebene nach unten möglich ist wird (Datensatz → Felder). Das bedeutet, dass auf Feldebene angewendete Kennzeichnungen nicht in andere Felder oder Datensätze übertragen werden.
 
-## Verwalten von Bezeichnungen auf Schemaebene
+## Verwalten von Kennzeichnungen auf Schemaebene
 
-Sie können einem Schema oder Feldern innerhalb dieses Schemas direkt Beschriftungen hinzufügen. Alle auf Schemaebene angewendeten Felder werden auf alle Datensätze übertragen, die auf diesem Schema basieren.
+Sie können Kennzeichnungen direkt zu einem Schema oder zu Feldern innerhalb dieses Schemas hinzufügen. Alle Felder, die auf der Schemaebene angewendet werden, werden auf alle Datensätze übertragen, die auf diesem Schema basieren.
 
-Siehe Tutorial zu [Verwalten von Beschriftungen auf Schemaebene](../../xdm/tutorials/labels.md) für weitere Informationen.
+Weitere Informationen finden Sie in der Anleitung zur [Verwaltung von Kennzeichnungen auf Schemaebene](../../xdm/tutorials/labels.md).
 
 ## Verwalten von benutzerdefinierten Kennzeichnungen {#manage-custom-labels}
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_createlabels"
->title="Erstellen von Bezeichnungen"
->abstract="Mit Beschriftungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Platform bietet einen Standardsatz von Bezeichnungen, die Sie verwenden können. Sie können aber auch benutzerdefinierte Bezeichnungen erstellen, die für Ihr Unternehmen spezifisch sind."
+>title="Erstellen von Kennzeichnungen"
+>abstract="Mit Kennzeichnungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Platform stellt Ihnen eine Reihe von Standardkennzeichnungen zur Verfügung, aber Sie können auch benutzerdefinierte Kennzeichnungen erstellen, die speziell auf Ihre Organisation zugeschnitten sind."
 
 Sie können Ihre eigenen benutzerspezifischen Nutzungskennzeichnungen im Arbeitsbereich **[!UICONTROL Richtlinien]** in der Benutzeroberfläche von [!DNL Experience Platform] erstellen. Wählen Sie **[!UICONTROL Richtlinien]** in der linken Navigation und anschließend **[!UICONTROL Kennzeichnungen]**, um eine Liste der vorhandenen Kennzeichnungen zu sehen. Wählen Sie dort **[!UICONTROL Kennzeichnung erstellen]**.
 

@@ -7,7 +7,7 @@ exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '939'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -52,10 +52,10 @@ Eine Abfrage kann mithilfe der Edge-Segmentierung ausgewertet werden, wenn sie e
 | Segment von Segmenten | Jede Segmentdefinition, die ein oder mehrere Batch- oder Streaming-Segmente enthält. | Personen, die in den USA leben und sich im Segment „vorhandenes Segment“ befinden. | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
 | Abfrage, die auf eine Zuordnung verweist | Jede Segmentdefinition, die auf eine Zuordnung von Eigenschaften verweist. | Personen, die ihrem Warenkorb auf der Grundlage externer Segmentdaten Elemente hinzugefügt haben. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
-Eine Segmentdefinition **not** für die Kantensegmentierung in den folgenden Szenarien aktiviert sein:
+Eine Segmentdefinition wird für die Edge-Segmentierung in den folgenden Szenarien **nicht** aktiviert:
 
-- Die Segmentdefinition umfasst eine Kombination aus einem einzelnen Ereignis und einer `inSegment` -Ereignis.
-   - Wenn das Segment jedoch im `inSegment` Ereignis nur Profil ist, wird die Segmentdefinition **will** für die Kantensegmentierung aktiviert sein.
+- Die Segmentdefinition umfasst eine Kombination aus einem einzelnen Ereignis und einem `inSegment`-Ereignis.
+   - Wenn es sich bei dem im `inSegment`-Ereignis enthaltenen Segment jedoch nur um ein Profil handelt, **wird** die Segmentdefinition für die Edge-Segmentierung aktiviert.
 
 ## Nächste Schritte
 

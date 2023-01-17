@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Daten-Governance;Datennutzungsrichtlinie
+keywords: Experience Platform;Startseite;beliebte Themen;Data Governance;Datennutzungsrichtlinie
 solution: Experience Platform
-title: Erstellen einer Data Governance-Richtlinie in der API
+title: Erstellen einer Data-Governance-Richtlinie in der API
 type: Tutorial
-description: Erfahren Sie, wie Sie mithilfe der Policy Service-API eine Data Governance-Richtlinie erstellen.
+description: Erfahren Sie, wie Sie mit der Richtlinien-Service-API eine Data-Governance-Richtlinie erstellen.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1200'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
-# Erstellen einer Data Governance-Richtlinie in der API
+# Erstellen einer Data-Governance-Richtlinie in der API
 
-Die [Policy Service-API](https://www.adobe.io/experience-platform-apis/references/policy-service/) ermöglicht Ihnen das Erstellen und Verwalten von Data Governance-Richtlinien, um zu bestimmen, welche Marketing-Aktionen für Daten durchgeführt werden können, die bestimmte Datennutzungsbezeichnungen enthalten.
+Mit der [Richtlinien-Service-API](https://www.adobe.io/experience-platform-apis/references/policy-service/) können Sie Data-Governance-Richtlinien erstellen und verwalten, um festzulegen, welche Marketingmaßnahmen für Daten ergriffen werden können, die bestimmte Datennutzungskennzeichnungen enthalten.
 
-Dieses Dokument enthält eine schrittweise Anleitung zum Erstellen einer Governance-Richtlinie mithilfe der [!DNL Policy Service] API.
+Dieses Dokument enthält eine Schritt-für-Schritt-Anleitung zur Erstellung einer Governance-Richtlinie unter Verwendung der [!DNL Policy Service]-API.
 
 >[!NOTE]
 >
->Anweisungen zum Erstellen einer Zugriffskontrollrichtlinie finden Sie unter `/policies` Endpunkthandbuch für [Access Control-API](../../access-control/abac/api/policies.md). Informationen zum Erstellen einer Einwilligungsrichtlinie finden Sie unter [Richtlinien-UI-Handbuch](./user-guide.md#consent-policy).
+>Wie Sie eine Zugriffssteuerungsrichtlinie erstellen, erfahren Sie im `/policies`Endpunkthandbuch für die [Zugriffssteuerungs-API](../../access-control/abac/api/policies.md). Wie Sie eine Zustimmungsrichtlinie erstellen können, erfahren Sie im [Handbuch zur Richtlinien-Benutzeroberfläche](./user-guide.md#consent-policy).
 
 ## Erste Schritte
 

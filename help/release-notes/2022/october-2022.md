@@ -124,4 +124,4 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 | --- | --- | 
 | Beta-Verfügbarkeit der Adobe Workfront-Quelle | Verwenden Sie die [Adobe Workfront-Quelle](../../sources/connectors/adobe-applications/workfront.md), um Ihre Workfront-Daten in die Experience Platform zu bringen und bestimmte Anwendungsfälle auszuführen, z. B. die Kombination Ihrer Arbeitsdatensätze mit Drittanbieterdaten, die Anwendung von Verlaufs- und Zeitreihenanalysen auf Arbeitsdatensätze und das Abfragen von Arbeitsdaten mit standardmäßiger SQL. Weitere Informationen finden Sie im Handbuch zum [Erstellen einer Workfront-Quellverbindung in der Benutzeroberfläche](../../sources/tutorials/ui/create/adobe-applications/workfront.md). |
 
-Weiterführende Informationen zu Quellen finden Sie im Abschnitt [Quellen – Übersicht](../../sources/home.md).
+Weiterführende Informationen zu Quellen finden Sie in der [Übersicht über Quellen](../../sources/home.md).

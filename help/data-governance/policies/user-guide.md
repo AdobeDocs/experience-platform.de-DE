@@ -7,17 +7,17 @@ exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1411'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
 # Verwalten von Datennutzungsrichtlinien in der Benutzeroberfläche
 
-In diesem Dokument wird die Verwendung der **[!UICONTROL Richtlinien]** Arbeitsbereich in der Adobe Experience Platform-Benutzeroberfläche zum Erstellen und Verwalten von Datennutzungsrichtlinien.
+Dieses Dokument beschreibt, wie Sie den Arbeitsbereich **[!UICONTROL Richtlinien]** in der Adobe Experience Platform-Benutzeroberfläche verwenden, um Richtlinien zur Datennutzung zu erstellen und zu verwalten.
 
 >[!NOTE]
 >
->Informationen zum Verwalten von Zugriffskontrollrichtlinien in der Benutzeroberfläche finden Sie im Abschnitt [Benutzeroberflächen-Handbuch zur attributbasierten Zugriffskontrolle](../../access-control/abac/ui/policies.md) anstatt.
+>Informationen über die Verwaltung von Zugriffssteuerungsrichtlinien in der Benutzeroberfläche finden Sie dagegen im [Handbuch für die Benutzeroberfläche der attributbasierten Zugriffssteuerung](../../access-control/abac/ui/policies.md).
 
 >[!IMPORTANT]
 >
@@ -86,7 +86,7 @@ Die Registerkarte **[!UICONTROL Durchsuchen]** wird erneut angezeigt, wo die neu
 
 >[!IMPORTANT]
 >
->Einverständnisrichtlinien sind nur für Unternehmen verfügbar, die **Adobe Gesundheitsschild** oder **Adobe Privacy &amp; Security Shield**.
+>Einverständnisrichtlinien sind nur für Organisationen verfügbar, die **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben haben.
 
 Wenn Sie sich für das Erstellen einer Einverständnisrichtlinie entschieden haben, wird ein weiterer Bildschirm angezeigt, in dem Sie die neue Richtlinie konfigurieren können.
 

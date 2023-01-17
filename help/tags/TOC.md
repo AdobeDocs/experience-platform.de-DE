@@ -8,7 +8,7 @@ solution: Data Collection
 source-git-commit: f2106d1e5bc0442df4d0ba84323821f6f2d9b1c7
 workflow-type: tm+mt
 source-wordcount: '965'
-ht-degree: 75%
+ht-degree: 100%
 
 ---
 
@@ -57,19 +57,19 @@ ht-degree: 75%
    * [Übersicht](./ui/event-forwarding/overview.md)
    * [Erste Schritte](./ui/event-forwarding/getting-started.md)
    * [Konfigurieren von Geheimnissen](./ui/event-forwarding/secrets.md)
-   * [Überwachung (Beta)](./ui/event-forwarding/monitoring.md)
+   * [Monitoring (Beta)](./ui/event-forwarding/monitoring.md)
 * Administration {#admin}
    * [Übersicht](./ui/administration/overview.md)
    * [Unternehmen und Eigenschaften](./ui/administration/companies-and-properties.md)
    * [Benutzerberechtigungen](./ui/administration/user-permissions.md)
 * Erweiterungen {#extensions}
    * [Übersicht](./extensions/overview.md)
-   * Tag-Erweiterungen (clientseitig) {#client}
+   * Tag-Erweiterungen (Client-seitig) {#client}
       * [Übersicht](./extensions/client/overview.md)
       * [Barrierefreie Metriken zur Site-Geschwindigkeit](https://exchange.adobe.com/apps/ec/103053)
       * [Activity Map Customizer](https://exchange.adobe.com/apps/ec/101531)
       * [Aktualisieren der Aktionsseite](https://exchange.adobe.com/apps/ec/102848)
-      * [Adform Website Tracking](https://exchange.adobe.com/apps/ec/103195)
+      * [Adform-Website-Tracking](https://exchange.adobe.com/apps/ec/103195)
       * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)
       * Adobe Analytics {#analytics}
          * [Übersicht](./extensions/client/analytics/overview.md)
@@ -81,7 +81,7 @@ ht-degree: 75%
       * Adobe Analytics Product String {#product-string}
          * [Übersicht](./extensions/client/product-string/overview.md)
          * [Versionshinweise](./extensions/client/product-string/release-notes.md)
-      * [Adobe Analytics Product String Builder](https://exchange.adobe.com/apps/ec/101461)
+      * [Adobe Analytics Produktzeichenfolgen-Builder](https://exchange.adobe.com/apps/ec/101461)
       * Adobe Audience Manager {#audience-manager}
          * [Übersicht](./extensions/client/audience-manager/overview.md)
       * Adobe Client-Datenschicht {#client-data-layer}
@@ -116,10 +116,10 @@ ht-degree: 75%
       * Adobe Target v2 {#target-v2}
          * [Übersicht](./extensions/client/target-v2/overview.md)
          * [Versionshinweise](./extensions/client/target-v2/release-notes.md)
-      * [Adobe Target Toolkit](https://exchange.adobe.com/apps/ec/100640)
+      * [Adobe Target-Toolkit](https://exchange.adobe.com/apps/ec/100640)
       * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)
       * [AEM Asset Insights](https://exchange.adobe.com/apps/ec/103406)
-      * [Airbremse JS-Notifizierer](https://exchange.adobe.com/apps/ec/103342)
+      * [Airbrake JS Notifier](https://exchange.adobe.com/apps/ec/103342)
       * [Amplitude](https://exchange.adobe.com/apps/ec/108010)
       * [Apollo QAX](https://exchange.adobe.com/apps/ec/105068)
       * [Awin Advertiser MasterTag](https://exchange.adobe.com/apps/ec/103176)
@@ -132,8 +132,8 @@ ht-degree: 75%
          * [Versionshinweise](./extensions/client/brightcove/release-notes.md)
       * [CallTrackingMetrics](https://exchange.adobe.com/apps/ec/107695)
       * [Kennung der Kanalquelle](https://exchange.adobe.com/apps/ec/101412)
-      * [Cheetah-Erlebnisse](https://exchange.adobe.com/apps/ec/102759)
-      * [Clicktale](https://exchange.adobe.com/apps/ec/100082)
+      * [Cheetah Experiences](https://exchange.adobe.com/apps/ec/102759)
+      * [ClickTale](https://exchange.adobe.com/apps/ec/100082)
       * Common Analytics Plugins {#plugins}
          * [Übersicht](./extensions/client/plugins/overview.md)
          * [Versionshinweise](./extensions/client/plugins/release-notes.md)
@@ -142,11 +142,11 @@ ht-degree: 75%
          * [Versionshinweise](./extensions/client/web-sdk-plugins/release-notes.md)
       * [Verknüpfen](https://exchange.adobe.com/apps/ec/104690)
       * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
-      * [Cookie-Einverständnisverwaltung durch Benutzercentrics CMP v2](https://exchange.adobe.com/apps/ec/107037)
+      * [Cookie-Einverständnisverwaltung durch Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/107037)
       * Core {#core}
          * [Übersicht](./extensions/client/core/overview.md)
          * [Versionshinweise](./extensions/client/core/release-notes.md)
-      * [Benutzerdefinierter Debug-Logger](https://exchange.adobe.com/apps/ec/104698)
+      * [Custom Debug Logger](https://exchange.adobe.com/apps/ec/104698)
       * [Kundenerkennung](https://exchange.adobe.com/apps/ec/100688)
       * [Datenelement-Assistent (DEA)](https://exchange.adobe.com/apps/ec/101413)
       * [Datenschicht-Manager](https://exchange.adobe.com/apps/ec/101462)
@@ -154,8 +154,8 @@ ht-degree: 75%
       * [Demandbase](https://exchange.adobe.com/apps/ec/101605)
       * [Differenzdatenschutz](https://exchange.adobe.com/apps/ec/104535)
       * [Dynamic Media-Viewer](https://exchange.adobe.com/apps/ec/103048)
-      * [EDDL Helper](https://exchange.adobe.com/apps/ec/107691)
-      * [Flashspeak OneTag](https://exchange.adobe.com/apps/ec/101392)
+      * [EDDL-Helfer](https://exchange.adobe.com/apps/ec/107691)
+      * [Flashtalking OneTag](https://exchange.adobe.com/apps/ec/101392)
       * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
       * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
       * [Prädiktive Interaktion in Genesys](https://exchange.adobe.com/apps/ec/106148)
@@ -164,39 +164,39 @@ ht-degree: 75%
          * [Versionshinweise](./extensions/client/google-data-layer/release-notes.md)
       * [Google Global Site Tag (gtag)](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag)
       * [InMoment](https://exchange.adobe.com/apps/ec/100847)
-      * [JSON Helper](https://exchange.adobe.com/apps/ec/106449)
+      * [JSON-Helfer](https://exchange.adobe.com/apps/ec/106449)
       * [JW Player Analytics](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/sdi-toolkit)dobe.com/apps/ec/101523)
       * [KickFire](https://exchange.adobe.com/apps/ec/101621)
       * [Zuordnungstabelle](https://exchange.adobe.com/apps/ec/103136)
       * [!DNL Marketo Munchkin] {#marketo}
          * [Übersicht](./extensions/client/marketo/overview.md)
          * [Versionshinweise](./extensions/client/marketo/release-notes.md)
-      * [Übergeordneter Eigenschaftenmanager](https://exchange.adobe.com/apps/ec/102992)
+      * [Übergeordneter Eigenschaften-Manager](https://exchange.adobe.com/apps/ec/102992)
       * [!DNL Meta Pixel] {#meta}
          * [Übersicht](./extensions/client/meta/overview.md)
-      * [Bildschirm](https://exchange.adobe.com/apps/ec/106544)
+      * [Monita](https://exchange.adobe.com/apps/ec/106544)
       * [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)
       * [OneTrust-Einverständnisverwaltung für Cookies](https://exchange.adobe.com/apps/ec/100340)
       * [Pepperjam](https://exchange.adobe.com/apps/ec/103587)
       * [Persado Connect](https://exchange.adobe.com/apps/ec/103745)
-      * [Pinterest-Konversions-Tracking](https://exchange.adobe.com/apps/ec/100523)
+      * [Pinterest Conversion Tracking](https://exchange.adobe.com/apps/ec/100523)
       * [Pixel Loader](https://exchange.adobe.com/apps/ec/100152)
       * [Qualtrics Website Feedback](https://exchange.adobe.com/apps/ec/101569)
-      * [Quantenmetrik](https://exchange.adobe.com/apps/ec/101535)
-      * [Momentum auflösen](https://exchange.adobe.com/apps/ec/108352)
+      * [Quantum Metric](https://exchange.adobe.com/apps/ec/101535)
+      * [Resolve Momentum](https://exchange.adobe.com/apps/ec/108352)
       * [Rokt](https://exchange.adobe.com/apps/ec/107591)
-      * [SDI-Umfrage](https://exchange.adobe.com/apps/ec/102991)
+      * [SDI Survey](https://exchange.adobe.com/apps/ec/102991)
       * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)
       * [SessionCam](https://exchange.adobe.com/apps/ec/100517)
-      * [SPA-Ansichtsereignis](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
+      * [SPA-Ansichtsänderungsereignis](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
       * [Storage Spanner](https://exchange.adobe.com/apps/ec/102990)
-      * [TAGS nach Loop Horizon](https://exchange.adobe.com/apps/ec/106092)
+      * [TAGS by Loop Horizon](https://exchange.adobe.com/apps/ec/106092)
       * [Tealium Collect](https://exchange.adobe.com/apps/ec/104217)
       * [Tealium-Datenanreicherung](https://exchange.adobe.com/apps/ec/104217)
       * [TMMData Foundation Platform](https://exchange.adobe.com/apps/ec/100148)
-      * [TrustArc Cookie Consent Manager](https://exchange.adobe.com/apps/ec/107037)
-      * [Videowiedergabe](https://exchange.adobe.com/apps/ec/108937)
-      * [Web-Vitals](https://exchange.adobe.com/apps/ec/106769)
+      * [TrustArc Cookie Einverständnis-Manager](https://exchange.adobe.com/apps/ec/107037)
+      * [Vimeo-Wiedergabe](https://exchange.adobe.com/apps/ec/108937)
+      * [Web Vitals](https://exchange.adobe.com/apps/ec/106769)
       * [XDM Composer](https://exchange.adobe.com/apps/ec/106062)
       * [Yahoo Dot](https://exchange.adobe.com/apps/ec/106062)
       * [Yext Conversion Tracking](https://exchange.adobe.com/apps/ec/103174)
@@ -204,13 +204,13 @@ ht-degree: 75%
       * [!DNL YouTube]-Video-Tracking {#youtube}
          * [Übersicht](./extensions/client/youtube/overview.md)
          * [Versionshinweise](./extensions/client/youtube/release-notes.md)
-   * Erweiterungen für die Ereignisweiterleitung (serverseitig) {#server}
+   * Erweiterungen für die Ereignisweiterleitung (Server-seitig) {#server}
       * [Übersicht](./extensions/server/overview.md)
       * Adobe Experience Platform Cloud Connector {#cloud-connector}
          * [Übersicht](./extensions/server/cloud-connector/overview.md)
       * [!DNL AWS] {#aws}
          * [Übersicht](./extensions/server/aws/overview.md)
-      * [Cloud Connector für Google Analytics](https://exchange.adobe.com/apps/ec/106542)
+      * [Cloud-Connector für Google Analytics](https://exchange.adobe.com/apps/ec/106542)
       * Core {#core}
          * [Übersicht](./extensions/server/core/overview.md)
       * Erweiterte Konvertierungen von Google Ads {#google-ads-enhanced-conversions}
@@ -295,7 +295,7 @@ ht-degree: 75%
       * [Geheimnisse](./api/guides/secrets.md)
 * [FAQs](./faq.md)
 * [Aktualisierungen der Terminologie](./term-updates.md)
-* [Veraltete Unterstützung für Internet Explorer 10 und 11](./ie-deprecation.md)
+* [Auslaufende Unterstützung für Internet Explorer 10 und 11](./ie-deprecation.md)
 * Versionshinweise {#release-notes}
    * [Neueste Version](./release-notes/current.md)
    * [Versionshinweise für 2021](./release-notes/2021.md)

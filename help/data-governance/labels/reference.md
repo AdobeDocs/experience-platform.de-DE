@@ -7,7 +7,7 @@ exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '2108'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -19,9 +19,9 @@ ht-degree: 97%
 >abstract="Es gibt mehrere Kategorien von Datennutzungskennzeichnungen. Zu den von Adobe definierten Kennzeichnungen gehören Vertragskennzeichnungen, Identitätskennzeichnungen und vertrauliche Kennzeichnungen. Von Ihrem Unternehmen definierte Kennzeichnungen werden als benutzerdefinierte Kennzeichnungen kategorisiert."
 >text="See the data usage labels glossary for more information on these label types."
 
-Mit Datennutzungsbezeichnungen können Sie Datensätze und Felder anhand von [Governance-Strategien](../policies/overview.md) und [Zugriffskontrollrichtlinien](../../access-control/abac/overview.md) die für diese Daten gelten. Adobe Experience Platform bietet mehrere gebrauchsfertige, grundlegende Datennutzungskennzeichnungen, die Sie verwenden können, um Ihre Daten zu kategorisieren.
+Mit Datennutzungskennzeichnungen können Sie Datensätze und -felder anhand der für diese Daten geltenden [Governance-Richtlinien](../policies/overview.md) und [Richtlinien für die Zugriffssteuerung](../../access-control/abac/overview.md) kategorisieren. Adobe Experience Platform bietet mehrere gebrauchsfertige, grundlegende Datennutzungskennzeichnungen, die Sie verwenden können, um Ihre Daten zu kategorisieren.
 
-In diesem Dokument werden die derzeit von Experience Platform bereitgestellten grundlegenden Datennutzungsbezeichnungen beschrieben.
+In diesem Dokument werden die derzeit von Experience Platform bereitgestellten grundlegenden Datennutzungskennzeichnungen erläutert.
 
 ## Vertragsbezeichnungen
 
@@ -134,7 +134,7 @@ Einige Verträge beinhalten ein explizites Verbot der Datennutzung für datenwis
 
 #### C10 {#c10}
 
-Einige Data Governance-Richtlinien beschränken die Verwendung von zusammengeführten Identitätsdaten für die Personalisierung. Die Kennzeichnung C10 wird automatisch auf Segmente angewendet, wenn deren Zusammenführungsrichtlinien die Option „Privates Diagramm“ verwenden.
+Einige Data-Governance-Richtlinien beschränken die Verwendung von Daten aus zusammengefügten Identitäten für die Personalisierung. Die Kennzeichnung C10 wird automatisch auf Segmente angewendet, wenn deren Zusammenführungsrichtlinien die Option „Privates Diagramm“ verwenden.
 
 #### C11 {#c11}
 

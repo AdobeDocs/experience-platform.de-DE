@@ -7,7 +7,7 @@ exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1727'
-ht-degree: 93%
+ht-degree: 97%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 93%
 
 >[!IMPORTANT]
 >
->Die automatische Richtliniendurchsetzung ist nur für Unternehmen verfügbar, die **Adobe Gesundheitsschild** oder **Adobe Privacy &amp; Security Shield**.
+>Die automatische Durchsetzung von Richtlinien ist nur für Organisationen verfügbar, die **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben haben.
 
-Sobald Daten gekennzeichnet und Datennutzungsrichtlinien definiert sind, können Sie die Einhaltung von Datennutzungsrichtlinien durchsetzen. Beim Aktivieren von Zielgruppensegmenten in Zielen setzt Adobe Experience Platform automatisch Nutzungsrichtlinien durch, falls Verstöße auftreten sollten.
+Sobald die Daten gekennzeichnet und die Datennutzungsrichtlinien definiert sind, können Sie die Einhaltung der Datennutzungsrichtlinien durchsetzen. Beim Aktivieren von Zielgruppensegmenten in Zielen setzt Adobe Experience Platform automatisch Nutzungsrichtlinien durch, falls Verstöße auftreten sollten.
 
 >[!NOTE]
 >
->Dieses Dokument konzentriert sich auf die Durchsetzung von Data Governance- und Zustimmungsrichtlinien. Informationen zu Zugriffssteuerungsrichtlinien finden Sie in der Dokumentation unter [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md).
+>Dieses Dokument konzentriert sich auf die Durchsetzung von Richtlinien zu Data Governance und Einverständnis. Informationen zu Richtlinien für die Zugriffssteuerung finden Sie in der Dokumentation zur [attributbasierten Zugriffssteuerung](../../access-control/abac/overview.md).
 
 ## Voraussetzungen
 

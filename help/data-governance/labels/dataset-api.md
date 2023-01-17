@@ -7,7 +7,7 @@ exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '816'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -17,7 +17,7 @@ Mit [[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/r
 
 >[!IMPORTANT]
 >
->Das Anwenden von Bezeichnungen auf Datensatzebene wird nur für Data Governance-Anwendungsfälle unterstützt. Wenn Sie Zugriffsrichtlinien für die Daten erstellen möchten, müssen Sie [Anwenden von Bezeichnungen auf das Schema](../../xdm/tutorials/labels.md) , auf dem der Datensatz basiert. Siehe Übersicht unter [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md) für weitere Informationen.
+>Das Anwenden von Kennzeichnungen auf Datensatzebene wird nur für Data-Governance-Anwendungsfälle unterstützt. Wenn Sie Zugriffsrichtlinien für die Daten erstellen möchten, müssen Sie [Kennzeichnungen auf das Schema anwenden](../../xdm/tutorials/labels.md), auf dem der Datensatz basiert. Weitere Informationen finden Sie in der Übersicht zur [attributbasierten Zugriffssteuerung](../../access-control/abac/overview.md).
 
 In diesem Dokument wird beschrieben, wie Sie Kennzeichnungen für Datensätze und Felder mit der [!DNL Dataset Service API] verwalten. Anweisungen zum Verwalten von Datennutzungskennzeichnungen selbst mithilfe von API-Aufrufen finden Sie im [Handbuch zu Endpunktkennzeichnungen](../api/labels.md) für die [!DNL Policy Service API].
 
@@ -158,6 +158,6 @@ Eine erfolgreiche Antwort gibt den aktualisierten Satz von Kennzeichnungen für 
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Dokuments haben Sie gelernt, wie Sie mit der [!DNL Dataset Service]-API Datennutzungskennzeichnungen für Datensätze und Felder verwalten können. Sie können jetzt [Datennutzungsrichtlinien](../policies/overview.md) und [Zugriffskontrollrichtlinien](../../access-control/abac/ui/policies.md) basierend auf den von Ihnen angewendeten Bezeichnungen.
+Durch das Lesen dieses Dokuments haben Sie gelernt, wie Sie mit der [!DNL Dataset Service]-API Datennutzungskennzeichnungen für Datensätze und Felder verwalten können. Sie können jetzt [Datennutzungsrichtlinien](../policies/overview.md) und [Zugriffssteuerungsrichtlinien](../../access-control/abac/ui/policies.md) basierend auf den von Ihnen angewendeten Kennzeichnungen definieren.
 
 Weitere Informationen zum Verwalten von Datensätzen in [!DNL Experience Platform] finden Sie unter [Datensätze – Übersicht](../../catalog/datasets/overview.md).

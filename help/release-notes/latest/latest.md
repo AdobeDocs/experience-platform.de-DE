@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f8e8ec0fb13fc988d47bb3bbe85f953e66b33f13
 workflow-type: tm+mt
 source-wordcount: '453'
-ht-degree: 79%
+ht-degree: 100%
 
 ---
 
@@ -27,11 +27,11 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 | Funktion | Beschreibung |
 | --- | --- |
-| [!DNL AWS]-Erweiterung für die Ereignisweiterleitung | Sie können jetzt Daten an senden [!DNL Amazon Web Services] ([!DNL AWS]) mithilfe einer [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) -Erweiterung. Weiterführende Informationen dazu finden Sie in der [[!DNL AWS] Übersicht der Erweiterungen](../../tags/extensions/server/aws/overview.md). |
-| [!DNL Google Ads Enhanced Conversions]-Erweiterung für die Ereignisweiterleitung | Sie können jetzt Konversionsdaten an senden [!DNL Google Ads] mit [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) -Erweiterung. Weiterführende Informationen dazu finden Sie in der [[!DNL Google Ads Enhanced Conversions] Übersicht der Erweiterungen](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md). |
+| [!DNL AWS]-Erweiterung für die Ereignisweiterleitung | Sie können jetzt Daten an [!DNL Amazon Web Services] ([!DNL AWS]) über eine Erweiterung für die [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) senden. Weiterführende Informationen dazu finden Sie in der [[!DNL AWS] Übersicht der Erweiterungen](../../tags/extensions/server/aws/overview.md). |
+| [!DNL Google Ads Enhanced Conversions]-Erweiterung für die Ereignisweiterleitung | Sie können jetzt Konvertierungsdaten an [!DNL Google Ads] senden, indem Sie eine Erweiterung für die [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) verwenden. Weiterführende Informationen dazu finden Sie in der [[!DNL Google Ads Enhanced Conversions] Übersicht der Erweiterungen](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md). |
 | [!DNL Microsoft Azure]-Erweiterung für die Ereignisweiterleitung | Sie können jetzt Daten mithilfe einer Erweiterung zur [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) an [!DNL Microsoft Azure] senden. Weiterführende Informationen dazu finden Sie in der [[!DNL Microsoft Azure] Übersicht der Erweiterungen](../../tags/extensions/server/azure/overview.md). |
 
-Weitere Informationen zu den Datenerfassungsfunktionen von Platform finden Sie unter [Datenerfassung - Übersicht](../../collection/home.md).
+Weitere Informationen zu den Datenerfassungsfunktionen von Platform finden Sie unter [Datenerfassung – Übersicht](../../collection/home.md).
 
 ## Experience-Datenmodell (XDM) {#xdm}
 
@@ -41,7 +41,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Weisen Sie beim direkten Hinzufügen zu einem Schema benutzerdefinierten Klassen Felder zu | Wann [Hinzufügen eines einzelnen Felds direkt zu einem Schema](../../xdm/ui/resources/schemas.md#add-individual-fields), konnten Sie zuvor nur das Feld einer Feldergruppe als übergeordnete Ressource zuweisen. Zusätzlich zu den Feldergruppen können Sie [das Feld einer benutzerdefinierten Klasse zuweisen](../../xdm/ui/resources/schemas.md#add-to-class) als übergeordnete Ressource. |
+| Zuweisen von Feldern zu benutzerdefinierten Klassen beim direkten Hinzufügen zu einem Schema | Wenn Sie [ein einzelnes Feld direkt zu einem Schema hinzufügen](../../xdm/ui/resources/schemas.md#add-individual-fields), konnten Sie das Feld bisher nur einer Feldergruppe als übergeordnete Ressource zuweisen. Jetzt können Sie zusätzlich zu den Feldergruppen [das Feld stattdessen einer benutzerdefinierten Klasse](../../xdm/ui/resources/schemas.md#add-to-class) als übergeordnete Ressource zuweisen. |
 
 {style=&quot;table-layout:auto&quot;}
 

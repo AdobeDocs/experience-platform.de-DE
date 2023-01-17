@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Richtliniendurchsetzung;API-basierte Durchsetzung;Datenverwaltung
+keywords: Experience Platform;Startseite;beliebte Themen;Richtliniendurchsetzung;API-basierte Durchsetzung;Data Governance
 solution: Experience Platform
 title: API-Endpunkt für Data Governance-Richtlinien
-description: Data Governance-Richtlinien sind Regeln, die Ihr Unternehmen anwendet und die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in Experience Platform ausführen bzw. nicht ausführen dürfen. Der Endpunkt /policies wird für alle API-Aufrufe zum Anzeigen, Erstellen, Aktualisieren oder Löschen von Data Governance-Richtlinien verwendet.
+description: Data Governance-Richtlinien sind Regeln, die Ihr Unternehmen verabschiedet hat und die die Arten von Marketing-Aktionen beschreiben, die Sie mit den Daten in Experience Platform durchführen dürfen bzw. die Ihnen untersagt sind. Der Endpunkt /policies wird für alle API-Aufrufe im Zusammenhang mit dem Anzeigen, Erstellen, Aktualisieren oder Löschen von Data Governance-Richtlinien verwendet.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1865'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
-# Endpunkt von Data Governance-Richtlinien
+# Endpunkt für Data Governance-Richtlinien
 
-Data Governance-Richtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in [!DNL Experience Platform]. Die `/policies` -Endpunkt im [!DNL Policy Service API] ermöglicht Ihnen die programmgesteuerte Verwaltung von Data Governance-Richtlinien für Ihr Unternehmen.
+Data Governance-Richtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie mit Daten innerhalb von [!DNL Experience Platform] durchführen dürfen bzw. nicht durchführen dürfen. Der `/policies`-Endpunkt in der [!DNL Policy Service API] ermöglicht Ihnen die programmatische Verwaltung von Data Governance-Richtlinien für Ihre Organisation.
 
 >[!IMPORTANT]
 >
->Governance-Richtlinien dürfen nicht mit Zugriffssteuerungsrichtlinien verwechselt werden, die die spezifischen Datenattribute festlegen, auf die bestimmte Platform-Benutzer in Ihrer Organisation zugreifen können. Siehe Abschnitt `/policies` Endpunkthandbuch für [Access Control-API](../../access-control/abac/api/policies.md) für Details zur programmgesteuerten Verwaltung von Zugriffskontrollrichtlinien.
+>Governance-Richtlinien sind nicht zu verwechseln mit Zugriffssteuerungsrichtlinien, die die spezifischen Datenattribute festlegen, auf die bestimmte Platform-Benutzende in Ihrer Organisation zugreifen können.  Im `/policies`-Endpunkt-Handbuch für die [Zugriffssteuerungs-API](../../access-control/abac/api/policies.md) finden Sie Einzelheiten zur programmgesteuerten Verwaltung von Zugriffssteuerungsrichtlinien.
 
 ## Erste Schritte
 
@@ -610,7 +610,7 @@ Sie können den Löschvorgang überprüfen, indem Sie erneut versuchen, nach der
 
 ## Eine Liste von aktivierten Kernrichtlinien abrufen {#list-enabled-core}
 
-Standardmäßig nehmen nur aktivierte Data Governance-Richtlinien an der Bewertung teil. Sie können eine Liste der derzeit von Ihrem Unternehmen aktivierten Kernrichtlinien abrufen, indem Sie eine GET-Anfrage an den `/enabledCorePolicies`-Endpunkt stellen.
+Standardmäßig sind nur aktivierte Data Governance-Richtlinien an der Bewertung beteiligt. Sie können eine Liste der derzeit von Ihrem Unternehmen aktivierten Kernrichtlinien abrufen, indem Sie eine GET-Anfrage an den `/enabledCorePolicies`-Endpunkt stellen.
 
 **API-Format**
 
@@ -662,7 +662,7 @@ Eine erfolgreiche Antwort gibt die Liste der aktivierten Kernrichtlinien unter e
 
 ## Aktualisieren der Liste der aktivierten Kernrichtlinien {#update-enabled-core}
 
-Standardmäßig nehmen nur aktivierte Data Governance-Richtlinien an der Bewertung teil. Wenn Sie eine PUT-Anfrage an den `/enabledCorePolicies`-Endpunkt stellen, können Sie die Liste der aktivierten Kernrichtlinien für Ihr Unternehmen mit einem einzigen Aufruf aktualisieren.
+Standardmäßig sind nur aktivierte Data Governance-Richtlinien an der Bewertung beteiligt. Wenn Sie eine PUT-Anfrage an den `/enabledCorePolicies`-Endpunkt stellen, können Sie die Liste der aktivierten Kernrichtlinien für Ihr Unternehmen mit einem einzigen Aufruf aktualisieren.
 
 >[!NOTE]
 >

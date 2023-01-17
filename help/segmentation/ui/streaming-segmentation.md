@@ -7,7 +7,7 @@ exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1495'
-ht-degree: 89%
+ht-degree: 91%
 
 ---
 
@@ -48,8 +48,8 @@ Eine Segmentdefinition wird für die Streaming-Segmentierung in den folgenden Sz
 
 - Die Segmentdefinition umfasst Segmente oder Eigenschaften aus Adobe Audience Manager (AAM).
 - Die Segmentdefinition umfasst mehrere Entitäten (Abfragen mit mehreren Entitäten).
-- Die Segmentdefinition umfasst eine Kombination aus einem einzelnen Ereignis und einer `inSegment` -Ereignis.
-   - Wenn das Segment jedoch im `inSegment` Ereignis nur Profil ist, wird die Segmentdefinition **will** für Streaming-Segmentierung aktiviert sein.
+- Die Segmentdefinition umfasst eine Kombination aus einem einzelnen Ereignis und einem `inSegment`-Ereignis.
+   - Wenn das im `inSegment`-Ereignis enthaltene Segment jedoch nur ein Profil ist, wird die Segmentdefinition für die Streaming-Segmentierung **aktiviert**.
 
 Bitte beachten Sie bei der Streaming-Segmentierung die folgenden Richtlinien:
 

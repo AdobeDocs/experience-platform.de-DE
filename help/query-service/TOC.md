@@ -7,7 +7,7 @@ feature: Queries
 source-git-commit: b8c2a9ab44274e2719e7178119a58f14d0442955
 workflow-type: tm+mt
 source-wordcount: '232'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 98%
    - [Attributionsanalyse](use-cases/attribution-analysis.md)
    - [Bot-Filterung](use-cases/bot-filtering.md)
    - [Web- und mobile Analyseeinblicke](use-cases/analytics-insights.md)
-   - [Propensity Score](use-cases/propensity-score.md)
+   - [Tendenz-Bewertung](use-cases/propensity-score.md)
    - [SQLAlchemy](use-cases/sqlalchemy.md)
 - Query Service-API {#api}
    - [Erste Schritte](api/getting-started.md)
@@ -45,7 +45,7 @@ ht-degree: 98%
    - [Verwenden von Query Service-Anmeldeinformationen](ui/credentials.md)
    - [Generieren von Datensätzen aus Abfrageergebnissen](ui/create-datasets.md)
 - [Überwachen von Abfragen](monitor-queries.md)
-- Abfrage-beschleunigte Speicherung{#query-accelerated-store}
+- Abfrage-beschleunigte Speicherung {#query-accelerated-store}
    - [Reporting-Insights-Datenmodell](query-accelerated-store/reporting-insights-data-model.md)
 - Best Practices {#best-practices}
    - [Allgemeine Leitlinien für die Ausführung von Abfragen](best-practices/writing-queries.md)

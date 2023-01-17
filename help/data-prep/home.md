@@ -7,7 +7,7 @@ exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '788'
-ht-degree: 73%
+ht-degree: 100%
 
 ---
 
@@ -38,11 +38,11 @@ Weitere Informationen zu den verschiedenen Zuordnungsfunktionen finden Sie im [H
 
 Berechnete Felder ermöglichen die Erstellung von Werten anhand der Attribute im Eingabeschema. Diese Werte können dann Attributen im Zielschema zugewiesen und mit einem Namen und einer Beschreibung versehen werden, um eine einfachere Referenz zu ermöglichen. Berechnete Felder haben eine maximale Länge von 4096 Zeichen.
 
-Weitere Informationen zu berechneten Feldern finden Sie im Abschnitt [Handbuch zu berechneten Feldern](./functions.md#calculated-fields).
+Um mehr über berechnete Felder zu erfahren, lesen Sie bitte den [Leitfaden für berechnete Felder](./functions.md#calculated-fields).
 
-### Escape-Sonderzeichen {#escape-special-characters}
+### Sonderzeichen mit Escape-Zeichen versehen {#escape-special-characters}
 
-Sie können Sonderzeichen in einem Feld mit `${...}`. JSON-Dateien mit Feldern mit einem Punkt (`.`) werden von diesem Mechanismus nicht unterstützt. Wenn bei der Interaktion mit Hierarchien ein untergeordnetes Attribut einen Punkt (`.`), müssen Sie einen umgekehrten Schrägstrich (`\`), um Sonderzeichen zu maskieren. Beispiel: `address` ist ein Objekt, das das Attribut enthält `street.name`, kann dies dann als `address.street\.name` anstelle von `address.street.name`.
+Sie können Sonderzeichen in einem Feld durch die Verwendung von `${...}` mit Escape-Zeichen versehen. Allerdings werden JSON-Dateien, die Felder mit einem Punkt (`.`) enthalten, von diesem Mechanismus nicht unterstützt. Wenn Sie mit Hierarchien arbeiten und ein untergeordnetes Attribut einen Punkt (`.`) enthält, müssen Sie einen Backslash (`\`) verwenden, um Sonderzeichen zu umgehen. Ein Beispiel: `address` ist ein Objekt, das das Attribut `street.name` enthält. Auf dieses kann sich dann durch `address.street\.name` anstelle von `address.street.name` bezogen werden.
 
 ## Zuordnungssatz
 
@@ -54,17 +54,17 @@ Weitere Informationen zu Zuordnungssätzen, einschließlich der Verwendung von F
 
 Datenvorbereitung kann verschiedene Datenformate, die in Platform erfasst werden, zuverlässig verarbeiten. Weitere Informationen zum Verarbeiten verschiedener Datentypen durch die Datenvorbereitung finden Sie in der [Übersicht zur Verarbeitung von Datenformaten](./data-handling.md).
 
-## Teilzeilenaktualisierungen senden mit [!DNL Data Prep]
+## Senden Sie partielle Zeilenaktualisierungen mit [!DNL Data Prep]
 
-Streaming-Aktualisierungen in [!DNL Data Prep] ermöglicht es Ihnen, Teilzeilenaktualisierungen an zu senden [!DNL Profile Service] -Daten sowie beim Erstellen und Erstellen neuer Identitätslinks mit einer einzelnen API-Anfrage. Weitere Informationen zum Streamen von Uploads finden Sie in [!DNL Data Prep], siehe das Dokument unter [Teilzeilenaktualisierungen senden](./upserts.md).
+Das Streamen von Upserts in [!DNL Data Prep] ermöglicht es Ihnen, partielle Zeilenaktualisierungen an [!DNL Profile Service]-Daten zu senden und gleichzeitig neue Identitätsverknüpfungen mit einer einzigen API-Anfrage zu erstellen und herzustellen. Mehr darüber, wie Sie Upserts in [!DNL Data Prep] streamen, erfahren Sie im Dokument zum [Senden von partiellen Zeilenaktualisierungen](./upserts.md).
 
 ## Attributbasierte Zugriffssteuerung in [!DNL Data Prep]
 
 Die attributbasierte Zugriffssteuerung in Adobe Experience Platform ermöglicht Admins, den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen zu steuern.
 
-Attributbasierte Zugriffskontrolle stellt sicher, dass Sie nur die Attribute zuordnen können, auf die Sie Zugriff haben. Attribute, auf die Sie keinen Zugriff haben, können nicht in Passthrough-Zuordnungen und berechneten Feldern verwendet werden. Wenn Sie also keinen Zugriff auf ein erforderliches Feld haben, können Sie eine Zuordnung nicht erfolgreich speichern. Außerdem können Sie keine Objekte oder Objekt-Arrays zuordnen, wenn Sie keinen Zugriff auf eines der untergeordneten Attribute haben. Sie können jedoch andere Elemente innerhalb des Objekt- oder Objekt-Arrays einzeln zuordnen.
+Die attributbasierte Zugriffssteuerung stellt sicher, dass Sie nur die Attribute zuordnen können, auf die Sie Zugriff haben. Attribute, auf die Sie keinen Zugriff haben, können nicht in Passthrough-Zuordnungen und berechneten Feldern verwendet werden. Wenn Sie also keinen Zugriff auf ein erforderliches Feld haben, können Sie eine Zuordnung nicht erfolgreich speichern. Außerdem können Sie keine Objekte oder Objekt-Arrays zuordnen, wenn Sie auf eines der untergeordneten Attribute keinen Zugriff haben. Sie können jedoch andere Elemente innerhalb des Objekts oder Objekt-Arrays einzeln zuordnen.
 
-Siehe [Attributbasierte Zugriffskontrolle - Übersicht](../access-control/abac/overview.md) für weitere Informationen.
+Weitere Informationen finden Sie in der [Übersicht über die attributbasierte Zugriffssteuerung](../access-control/abac/overview.md).
 
 ## Nächste Schritte
 
