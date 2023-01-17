@@ -5,7 +5,7 @@ title: Datenerfassung – Übersicht
 description: In diesem Dokument werden die drei Hauptwege für die Datenaufnahme in Platform vorgestellt, mit Links zu den jeweiligen Übersichtsdokumenten, in denen Sie weitere Informationen finden.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '461'
 ht-degree: 100%
 
