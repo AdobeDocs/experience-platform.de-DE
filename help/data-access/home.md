@@ -5,7 +5,7 @@ title: Data Access – Übersicht
 description: Data Access unterstützt Adobe Experience Platform, indem es den Benutzern Tools bietet, die auf die Auffindbarkeit und Zugänglichkeit der aufgenommenen Platform-Datensätze ausgerichtet sind.
 exl-id: 76e3585b-44df-412e-9ac3-aeca5f85d403
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '185'
 ht-degree: 100%
 
