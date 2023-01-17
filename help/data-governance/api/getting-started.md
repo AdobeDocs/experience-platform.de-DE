@@ -5,7 +5,7 @@ title: Erste Schritte mit der Richtlinien-Service-API
 description: Mit der Policy Service-API können Sie verschiedene Ressourcen im Zusammenhang mit der Data Governance von Adobe Experience Platform erstellen und verwalten. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen sollten, bevor Sie Aufrufe an die Policy Service-API durchführen.
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '444'
 ht-degree: 100%
 
