@@ -2,10 +2,10 @@
 description: Auf dieser Seite finden Sie alle Informationen, die Sie zum Überprüfen eines mit Destination SDK erstellten produktiven Ziels übermitteln müssen.
 title: Zur Überprüfung eines in der Destination SDK erstellten produktisierten Ziels übermitteln
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: e68ae7d1cb87d078d9fce5a5df501cc6ce944403
+source-git-commit: 1eab40687c599d37c71b919bc3a4aeae274b0a49
 workflow-type: tm+mt
-source-wordcount: '683'
-ht-degree: 65%
+source-wordcount: '928'
+ht-degree: 42%
 
 ---
 
@@ -29,23 +29,25 @@ Bevor Ihr Ziel im [Experience Platform-Zielkatalog](/help/destinations/catalog/o
 Auf dieser Seite sind alle Informationen aufgeführt, die Sie angeben müssen, wenn Sie ein mit dem Adobe Experience Platform Destination SDK erstelltes Ziel übermitteln oder aktualisieren. Um ein Ziel in Adobe Experience Platform erfolgreich zu übermitteln, senden Sie eine E-Mail an <aepdestsdk@adobe.com>, die folgende Informationen enthält:
 
 * Eine Beschreibung der Anwendungsfälle, die Ihr Ziel löst. Dies ist nicht erforderlich, wenn Sie eine vorhandene Zielkonfiguration aktualisieren.
-* Testergebnisse nach Verwendung des Destination API-Endpunkts zum Ausführen eines HTTP-Aufrufs an Ihr Ziel. Bitte teilen Sie Adobe Folgendes mit:
-   * Ein API-Aufruf an Ihren Ziel-Endpunkt.
-   * Die API-Antwort, die von Ihrem Ziel-Endpunkt empfangen wurde.
+* Testergebnisse nach Verwendung des Destination API-Endpunkts zum Ausführen eines HTTP-Aufrufs an Ihr Ziel. Geben Sie an Adobe einen API-Aufruf für Ihren Ziel-Endpunkt und die API-Antwort weiter, die Sie von Ihrem Ziel-Endpunkt erhalten haben.
+* Zusätzliche Anforderungen für dateibasierte Ziele:
+   * Geben Sie nach Verwendung der Test-API eine Anfrage und ein Antwort-Beispiel für [Testen Ihres dateibasierten Ziels mit Beispielprofilen](/help/destinations/destination-sdk/file-based-destination-testing-api.md).
+   * Fügen Sie eine Beispieldatei an, die von Ihrem Ziel generiert und an Ihren Speicherort exportiert wurde.
+   * Senden Sie eine Form des Nachweises, dass Sie die exportierte Datei erfolgreich vom Speicherort in Ihr System aufgenommen haben.
 * Nachweis, dass Sie eine Anfrage zur Veröffentlichung eines Ziels für Ihr Ziel mithilfe der [Zielveröffentlichungs-API](./destination-publish-api.md) übermittelt haben.
 * Eine Dokumentation-PR (Pull-Anforderung) entsprechend den Anweisungen im Abschnitt [Self-Service-Dokumentationsprozess](./docs-framework/documentation-instructions.md).
 * Eine Grafikdatei, die als Logo für Ihre Zielkarte im Zielkatalog von Experience Platform angezeigt werden soll.
 
 Detaillierte Informationen zu den einzelnen Elementen finden Sie in den folgenden Abschnitten:
 
-## Beschreibung der Anwendungsfälle
+## Beschreibung der Anwendungsfälle {#use-case-description}
 
 Geben Sie eine Beschreibung der Anwendungsfälle an, die Ihr Ziel für Experience Platform-Kunden löst. Ihre Beschreibungen können Anwendungsfällen von vorhandenen Partnern ähneln:
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Erstellen Sie Zielgruppen aus Ihren Kundenlisten, Personen, die Ihre Site besucht haben, oder Personen, die bereits mit Ihren Inhalten in Pinterest interagiert haben.
 * [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX-APIs sind für Advertiser verfügbar, die eine bestimmte Zielgruppen-Gruppe ansprechen möchten, die von E-Mail-Adressen in Verizon Media (VMG) abgeleitet wurde. Diese können schnell ein neues Segment erstellen und die gewünschte Zielgruppe mithilfe der API von VMGs nahezu in Echtzeit übertragen.
 
-## Testergebnisse nach Verwendung der Test-Ziel-API
+## Testergebnisse nach Verwendung der Test-Ziel-API {#testing-api-response}
 
 Stellen Sie Testergebnisse bereit, nachdem Sie den Endpunkt [Test-Ziel-API](./test-destination.md) verwendet haben, um einen HTTP-Aufruf an Ihr Ziel durchzuführen. Dazu gehören:
 
@@ -215,15 +217,35 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 }
 ```
 
-## Nachweis, dass Sie eine Zielveröffentlichungsanfrage übermittelt haben
+## Zusätzliche Anforderungen für dateibasierte Ziele {#additional-file-based-destination-requirements}
+
+Bei dateibasierten Zielen müssen Sie einen zusätzlichen Nachweis darüber erbringen, dass Sie Ihr Ziel korrekt eingerichtet haben. Stellen Sie sicher, dass Sie die folgenden Elemente einschließen:
+
+### API-Antwort testen {#testing-api-response-file-based}
+
+Schließen Sie eine Anfrage und ein Antwort-Beispiel ein, nachdem Sie die Test-API verwendet haben, um [Testen Ihres dateibasierten Ziels mit Beispielprofilen](/help/destinations/destination-sdk/file-based-destination-testing-api.md).
+
+### Exportierte Datei anhängen {#attach-exported-file}
+
+In [Einsendenummer](#download-sample-email), fügen Sie eine CSV-Datei an, die von dem von Ihnen eingerichteten Ziel in Ihren Speicherort exportiert wurde.
+
+### Nachweis der erfolgreichen Aufnahme {#proof-of-successful-ingestion}
+
+Schließlich müssen Sie eine Form des Nachweises vorlegen, dass die Daten nach dem Export in den von Ihnen angegebenen Speicherort erfolgreich in Ihr System aufgenommen wurden. Bitte geben Sie eine der folgenden Informationen an:
+
+* Screenshots oder ein kurzes Screenshot-Video, in dem Sie die Datei manuell vom Speicherort abrufen und in Ihr System aufnehmen.
+* Screenshots oder ein kurzes Screenshot-Video, in dem die Benutzeroberfläche Ihres Systems bestätigt, dass der von Experience Platform generierte Dateiname erfolgreich in Ihr System aufgenommen wurde.
+* Loggen Sie Zeilen aus Ihrem System ein, die die Adobe entweder mit dem Dateinamen oder mit den von der Experience Platform generierten Daten korrelieren kann.
+
+## Nachweis, dass Sie eine Zielveröffentlichungsanfrage übermittelt haben {#destination-publishing-request-proof}
 
 Nachdem Sie Ihr Ziel erfolgreich getestet haben, müssen Sie die [Zielveröffentlichungs-API](./destination-publish-api.md) verwenden, um das Ziel zur Überprüfung und Veröffentlichung an Adobe zu übermitteln.
 
 Geben Sie die ID der Veröffentlichungsanfrage für Ihr Ziel an. Weitere Informationen zum Abrufen der Veröffentlichungsanfragen-ID finden Sie unter [Auflisten der Veröffentlichungsanfragen für Ziele](./destination-publish-api.md#retrieve-list).
 
-## Zieldokumentations-PR (Pull-Anfrage) für produktbezogene Integrationen
+## Zieldokumentations-PR (Pull-Anfrage) für produktbezogene Integrationen {#documentation-pr}
 
-Wenn Sie als unabhängiger Software-Anbieter (ISV) oder Systemintegrator (SI) eine [produktbezogene Integration](./overview.md#productized-custom-integrations) erstellen, verwenden Sie den [Selbstbedienungs-Dokumentationsprozess](./docs-framework/documentation-instructions.md), um eine Produktdokumentationsseite für Ihr Ziel zu erstellen. Stellen Sie als Teil des Übermittlungsprozesses die Pull-Anfrage (PR) für Ihre Zieldokumentation bereit.
+Wenn Sie ein unabhängiger Software-Anbieter (ISV) oder Systemintegrator (SI) sind und eine [produktive Integration](./overview.md#productized-custom-integrations), müssen Sie die [Self-Service-Dokumentationsprozess](./docs-framework/documentation-instructions.md) , um eine Produktdokumentationsseite für Ihr Ziel zu erstellen. Stellen Sie als Teil des Übermittlungsprozesses die Pull-Anfrage (PR) für Ihre Zieldokumentation bereit.
 
 ## Logo für Ihr Ziel {#logo}
 
@@ -233,6 +255,6 @@ Die Bildanforderungen sind:
 * **Format**: `SVG`
 * **Größe**: weniger als 2 MB
 
-## Herunterladen einer Beispiel-E-Mail
+## Herunterladen einer Beispiel-E-Mail {#download-sample-email}
 
 Laden Sie [hier](./assets/sample-email-submit-destination.rtf) eine Beispiel-E-Mail mit allen Informationen herunter, die Sie Adobe zur Verfügung stellen müssen.
