@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Tags
 solution: Data Collection
-source-git-commit: f2106d1e5bc0442df4d0ba84323821f6f2d9b1c7
+source-git-commit: c2312a65388e8aec7cdeb8daf20fe9de7d1fa4fc
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '967'
 ht-degree: 100%
 
 ---
@@ -208,6 +208,7 @@ ht-degree: 100%
       * [Übersicht](./extensions/server/overview.md)
       * Adobe Experience Platform Cloud Connector {#cloud-connector}
          * [Übersicht](./extensions/server/cloud-connector/overview.md)
+         * [Versionshinweise](./extensions/server/cloud-connector/release-notes.md)
       * [!DNL AWS] {#aws}
          * [Übersicht](./extensions/server/aws/overview.md)
       * [Cloud-Connector für Google Analytics](https://exchange.adobe.com/apps/ec/106542)
