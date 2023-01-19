@@ -5,9 +5,9 @@ title: Erstellen eines Schemas mit dem Schema Editor
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Erstellen eines Schemas mit dem Schema Editor in Experience Platform beschrieben.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '3893'
+source-wordcount: '3924'
 ht-degree: 10%
 
 ---
@@ -16,11 +16,13 @@ ht-degree: 10%
 
 In der Benutzeroberfläche von Adobe Experience Platform können Sie [!DNL Experience Data Model] (XDM)-Schemas in einer interaktiven visuellen Arbeitsfläche namens [!DNL Schema Editor]. In diesem Tutorial wird beschrieben, wie Sie ein Schema mit dem [!DNL Schema Editor].
 
+Zu Demonstrationszwecken wird in diesem Tutorial ein Beispielschema erstellt, in dem die Mitglieder eines Kundentreueprogramms beschrieben werden. Sie können diese Schritte zwar verwenden, um ein anderes Schema für Ihre eigenen Zwecke zu erstellen, es wird jedoch empfohlen, zunächst das Beispielschema zu erstellen, um mehr über die Funktionen des [!DNL Schema Editor].
+
 >[!NOTE]
 >
->Zu Demonstrationszwecken wird in diesem Tutorial ein Beispielschema erstellt, in dem die Mitglieder eines Kundentreueprogramms beschrieben werden. Sie können diese Schritte zwar verwenden, um ein anderes Schema für Ihre eigenen Zwecke zu erstellen, es wird jedoch empfohlen, zunächst das Beispielschema zu erstellen, um mehr über die Funktionen des [!DNL Schema Editor].
-
-Wenn Sie lieber ein Schema mit der [!DNL Schema Registry] API stattdessen verwenden, indem Sie die [[!DNL Schema Registry] Entwicklerhandbuch](../api/getting-started.md) vor dem Versuch des Tutorials auf [Erstellen eines Schemas mithilfe der API](create-schema-api.md).
+>Wenn Sie CSV-Daten in Platform erfassen, können Sie [Ordnen Sie diese Daten einem XDM-Schema zu, das von AI-generierten Empfehlungen erstellt wurde.](../../ingestion/tutorials/map-csv/recommendations.md) (aktuell in der Beta-Phase), ohne das Schema manuell selbst erstellen zu müssen.
+>
+>Wenn Sie lieber ein Schema mit der [!DNL Schema Registry] API, lesen Sie zunächst die [[!DNL Schema Registry] Entwicklerhandbuch](../api/getting-started.md) vor dem Versuch des Tutorials auf [Erstellen eines Schemas mithilfe der API](create-schema-api.md).
 
 ## Erste Schritte
 

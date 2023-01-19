@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Schema Registry-API
 description: Mit der Schema Registry-API können Entwickler alle Schemas und zugehörigen Experience-Datenmodell (XDM)-Ressourcen in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '1084'
-ht-degree: 9%
+source-wordcount: '1118'
+ht-degree: 8%
 
 ---
 
@@ -29,7 +29,9 @@ Um alle verfügbaren Endpunkte und CRUD-Vorgänge anzuzeigen, besuchen Sie die [
 
 XDM-Schemata stellen die Struktur und das Format der in Platform erfassten Daten dar und validieren sie. Ein Schema besteht aus einer Klasse und keiner oder mehr Schemafeldgruppen. Sie können Schemata mit dem `/schemas` -Endpunkt. Informationen zur Verwendung dieses Endpunkts finden Sie unter [Endpunktleitfaden für Schemata](./schemas.md).
 
-Eine schrittweise Anleitung zum Erstellen eines vollständigen Schemas in der Schema Registry-API, einschließlich Erstellen und Hinzufügen von Feldergruppen und Datentypen, finden Sie im Abschnitt [Tutorial zur Erstellung von API-Schemas](../tutorials/create-schema-api.md).
+Eine schrittweise Anleitung zum manuellen Erstellen eines kompletten Schemas in der Schema Registry-API, einschließlich Erstellen und Hinzufügen von Feldergruppen und Datentypen, finden Sie in der [Tutorial zur Erstellung von API-Schemas](../tutorials/create-schema-api.md).
+
+Wenn Sie CSV-Daten erfassen, lesen Sie den Abschnitt unter [Konvertierung von CSV in Schemas](#csv-to-schema).
 
 ## Verhalten
 
@@ -62,6 +64,10 @@ Informationen zum Anzeigen von Vereinigungen in der Schema Registry-API finden S
 Sie können automatisch ein XDM-Schema mit einer CSV-Datei als Vorlage generieren, um Vorlagen zum Massenimport von Schemafeldern zu erstellen und die manuelle API- oder UI-Arbeit zu reduzieren.
 
 Siehe [Handbuch zur Konversion von CSV zu Schemas](./export.md) für weitere Informationen.
+
+>[!NOTE]
+>
+>Sie können die Benutzeroberfläche auch für [Zuordnen einer CSV zu einem Schema mithilfe von KI-generierten Empfehlungen](../../ingestion/tutorials/map-csv/recommendations.md) (derzeit in der Beta-Phase).
 
 ## Exportieren {#export}
 

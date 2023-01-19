@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen und Bearbeiten von Schemata in der Benutzeroberfläche
 description: Lernen Sie die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Benutzeroberfläche von Experience Platform kennen.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '3156'
+source-wordcount: '3203'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,10 @@ Dieses Handbuch bietet einen Überblick darüber, wie Sie Experience-Datenmodell
 Dieses Handbuch setzt ein Verständnis des XDM-Systems voraus. Siehe Abschnitt [XDM-Übersicht](../../home.md) für eine Einführung in die Rolle von XDM im Experience Platform-Ökosystem und die [Grundlagen der Schemakomposition](../../schema/composition.md) für einen Überblick darüber, wie Schemas erstellt werden.
 
 ## Erstellen eines neuen Schemas {#create}
+
+>[!NOTE]
+>
+>In diesem Abschnitt wird beschrieben, wie Sie ein neues Schema in der Benutzeroberfläche manuell erstellen. Wenn Sie CSV-Daten in Platform erfassen, können Sie [Ordnen Sie diese Daten einem XDM-Schema zu, das von AI-generierten Empfehlungen erstellt wurde.](../../../ingestion/tutorials/map-csv/recommendations.md) (aktuell in der Beta-Phase), ohne das Schema manuell selbst erstellen zu müssen.
 
 Im [!UICONTROL Schemas] Arbeitsbereich, wählen Sie **[!UICONTROL Schema erstellen]** in der oberen rechten Ecke. Im angezeigten Dropdown-Menü können Sie zwischen **[!UICONTROL XDM Individual Profile]** und **[!UICONTROL XDM ExperienceEvent]** als Basisklasse für das Schema. Alternativ können Sie **[!UICONTROL Durchsuchen]** aus der vollständigen Liste der verfügbaren Klassen auszuwählen oder [eine neue benutzerdefinierte Klasse erstellen](./classes.md#create) anstatt.
 

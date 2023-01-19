@@ -5,9 +5,9 @@ title: Erstellen eines Schemas mit der Schema Registry-API
 type: Tutorial
 description: In diesem Tutorial werden die Schritte dazu erläutert, wie mithilfe der Schema Registry-API ein Schema unter Verwendung einer Standardklasse erstellt wird.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: 030874e91b88b18f7de0cc2d12200243b7ed1d31
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '2556'
+source-wordcount: '2588'
 ht-degree: 37%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 37%
 Die [!DNL Schema Registry] wird verwendet, um auf die [!DNL Schema Library] innerhalb von Adobe Experience Platform. Die [!DNL Schema Library] enthält Ressourcen, die Ihnen nach Adobe zur Verfügung gestellt werden; [!DNL Experience Platform] Partner und Anbieter, deren Anwendungen Sie verwenden. Die Registry bietet eine Benutzeroberfläche und RESTful-API, über die auf alle in der Bibliothek verfügbaren Ressourcen zugegriffen werden kann.
 
 In diesem Tutorial wird die [!DNL Schema Registry] API, um Sie durch die Schritte zum Erstellen eines Schemas mithilfe einer Standardklasse zu führen. Wenn Sie die Benutzeroberfläche in [!DNL Experience Platform], die [Tutorial zum Schema Editor](create-schema-ui.md) enthält schrittweise Anweisungen zum Ausführen ähnlicher Aktionen im Schema-Editor.
+
+>[!NOTE]
+>
+>Wenn Sie CSV-Daten in Platform erfassen, können Sie [Ordnen Sie diese Daten einem XDM-Schema zu, das von AI-generierten Empfehlungen erstellt wurde.](../../ingestion/tutorials/map-csv/recommendations.md) (aktuell in der Beta-Phase), ohne das Schema manuell selbst erstellen zu müssen.
 
 ## Erste Schritte
 
