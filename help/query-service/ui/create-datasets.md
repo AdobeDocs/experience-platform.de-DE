@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Abfragedienst;Abfrage-Service;Datensätze generieren;Datensatz generieren;Datensatz erstellen
 solution: Experience Platform
-title: Generieren von Datensätzen aus Ergebnissen im Abfrage-Service
+title: Generieren von Ausgabedatensätzen aus Abfrageergebnissen
 type: Tutorial
 description: Der Abfrage-Service von Adobe Experience Platform ermöglicht die Erstellung von Datensätzen über die Benutzeroberfläche. Nachdem ein Datensatz erstellt wurde, kann er wie jeder andere Datensatz im Data Lake aufgerufen und für eine Vielzahl von Anwendungsfällen verwendet werden.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '493'
-ht-degree: 95%
+ht-degree: 93%
 
 ---
 
-# Generieren von Datensätzen aus Ergebnissen im [!DNL Query Service]
+# Generieren von Ausgabedatensätzen aus Abfrageergebnissen
 
 [!DNL Query Service] ermöglicht Ihnen die Verwendung von Abfragen zum Generieren von Datensätzen im [!DNL Data Lake]. Diese Datensätze können dann als Eingabe für weitere Abfragen oder in anderen Diensten wie [!DNL Data Science Workspace], Echtzeit-Kundenprofil oder [!DNL Analysis Workspace].
 

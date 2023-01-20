@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handbuch zur Abfrage-Service-Benutzeroberfläche
 description: Der Abfrage-Service von Adobe Experience Platform bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzenden in Ihrer IMS-Organisation gespeichert wurden.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1095'
 ht-degree: 86%
@@ -46,7 +46,7 @@ Sobald eine Abfrage geplant wurde, wird sie in der Liste der geplanten Abfragen 
 | **[!UICONTROL Zeitstempel der letzten Ausführung]** | Der Zeitstempel der letzten Ausführung der Abfrage. Diese Spalte zeigt, ob eine Abfrage gemäß ihrem aktuellen Zeitplan ausgeführt wurde. |
 | **[!UICONTROL Status der letzten Ausführung]** | Der Status der letzten Abfrageausführung. Die drei Statuswerte sind `successful`, `failed` oder `in progress`. |
 
-Weitere Informationen zum [Abfragen über die Query Service-Benutzeroberfläche überwachen](../monitor-queries.md).
+Weitere Informationen zum [Abfragen über die Query Service-Benutzeroberfläche überwachen](./monitor-queries.md).
 
 ## Vorlagen {#browse}
 

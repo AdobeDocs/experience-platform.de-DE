@@ -4,7 +4,7 @@ solution: Experience Platform
 title: RStudio mit Query Service verbinden
 description: In diesem Dokument werden die Schritte zum Verbinden von R Studio mit Adobe Experience Platform Query Service beschrieben.
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-source-git-commit: d40aa52240ab8f15feea62ec5fb8de073dd6a053
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 10%
@@ -57,7 +57,7 @@ Eine Meldung in der Konsolenausgabe bestätigt die Verbindung zu Query Service.
 
 Nachdem Sie sich mit [!DNL Query Service], können Sie Abfragen schreiben, um SQL-Anweisungen auszuführen und zu bearbeiten. Beispielsweise können Sie `dbGetQuery(con, sql)` zum Durchführen von Abfragen verwenden, bei denen `sql` die SQL-Abfrage ist, die Sie ausführen möchten.
 
-Die folgende Abfrage verwendet einen Datensatz mit [Erlebnisereignisse](../sample-queries/experience-event.md) und erstellt ein Histogramm mit Seitenansichten einer Website, je nach Bildschirmhöhe des Geräts.
+Die folgende Abfrage verwendet einen Datensatz mit [Erlebnisereignisse](../../xdm/classes/experienceevent.md) und erstellt ein Histogramm mit Seitenansichten einer Website, je nach Bildschirmhöhe des Geräts.
 
 ```sql
 df_pageviews <- dbGetQuery(con,

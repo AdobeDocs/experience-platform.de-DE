@@ -2,7 +2,7 @@
 title: Best Practices für die Organisation von Daten-Assets in Query Service
 description: In diesem Dokument wird eine logische Methode zur Organisation von Daten beschrieben, um die Verwendung von Query Service zu erleichtern.
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: 36fc6f996b4ffd33f542eb9be4fbc50f3fcdd1cb
+source-git-commit: d3ea7ee751962bb507c91e1afea0da35da60a66d
 workflow-type: tm+mt
 source-wordcount: '788'
 ht-degree: 0%
@@ -170,4 +170,4 @@ DROP SCHEMA databaseA.schema2;
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments erhalten Sie jetzt ein besseres Verständnis der Best Practices in Bezug auf die Organisation und Struktur Ihrer Daten-Assets zur Verwendung mit Adobe Experience Platform Query Service. Es wird empfohlen, sich weiter mit Best Practices für Query Service vertraut zu machen, indem Sie mehr über [Dokumentation zur Datendeduplizierung](./deduplication.md).
+Durch Lesen dieses Dokuments erhalten Sie jetzt ein besseres Verständnis der Best Practices in Bezug auf die Organisation und Struktur Ihrer Daten-Assets zur Verwendung mit Adobe Experience Platform Query Service. Es wird empfohlen, sich weiter mit Best Practices für Query Service vertraut zu machen, indem Sie mehr über [Dokumentation zur Datendeduplizierung](../essential-concepts/deduplication.md).

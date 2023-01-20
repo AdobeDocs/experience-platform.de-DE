@@ -2,10 +2,10 @@
 title: Auditprotokollintegration für Query Service
 description: Die Auditprotokolle von Query Service enthalten Aufzeichnungen zu verschiedenen Benutzeraktionen, um ein Audit-Protokoll zur Fehlerbehebung bei Problemen oder zur Einhaltung von Richtlinien zur Unternehmensdatenverwaltung und Regulierungsanforderungen zu erstellen. Dieses Tutorial bietet einen Überblick über die Auditprotokollfunktionen, die speziell für Query Service gelten.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: 40de87ae407884d4ec7c75215fc7319721fbe1d0
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '935'
-ht-degree: 2%
+ht-degree: 8%
 
 ---
 
@@ -17,7 +17,7 @@ Weitere Informationen zur Benutzeroberfläche der Prüfprotokolle finden Sie im 
 
 ## Voraussetzungen
 
-Sie müssen über die [!DNL Data Governance] [!UICONTROL Protokoll zu Benutzeraktivitäten anzeigen] -Berechtigung zum Anzeigen des Auditprotokoll-Dashboards in der Platform-Benutzeroberfläche aktiviert. Die Berechtigung wird über die Adobe aktiviert [Admin Console](https://adminconsole.adobe.com/). Wenden Sie sich an den Administrator Ihrer Organisation, wenn Sie keine Administratorberechtigungen haben, um diese Berechtigung zu aktivieren. Weitere Informationen finden Sie in der Dokumentation zur Zugriffskontrolle für [Vollständige Anweisungen zum Hinzufügen von Berechtigungen über die Admin Console](../../access-control/home.md).
+Sie müssen über die [!DNL Data Governance] [!UICONTROL Protokoll zu Benutzeraktivitäten anzeigen] -Berechtigung zum Anzeigen des Auditprotokoll-Dashboards in der Platform-Benutzeroberfläche aktiviert. Die Berechtigung wird über die Adobe [Admin Console](https://adminconsole.adobe.com/) aktiviert. Bitte wenden Sie sich an den Admin Ihrer Organisation, wenn Sie keine Administratorberechtigungen haben, um diese Berechtigung zu aktivieren. In der Dokumentation zur Zugriffskontrolle finden Sie [vollständige Anweisungen zum Hinzufügen von Berechtigungen über die Admin Console](../../access-control/home.md).
 
 ## [!DNL Query Service] Prüfprotokollkategorien {#audit-log-categories}
 

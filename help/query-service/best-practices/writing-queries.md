@@ -5,9 +5,9 @@ title: Allgemeine Anleitung für die Ausführung von Abfragen in Query Service
 type: Tutorial
 description: In diesem Dokument werden wichtige Informationen zum Schreiben von Abfragen in Adobe Experience Platform Query Service beschrieben.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1072'
 ht-degree: 3%
 
 ---
@@ -311,7 +311,7 @@ LIMIT 50;
 
 ## Deduplizierung
 
-Query Service unterstützt die Deduplizierung von Daten oder das Entfernen doppelter Zeilen aus Daten. Weitere Informationen zur Deduplizierung finden Sie im [Handbuch zur Query Service-Deduplizierung](./deduplication.md).
+Query Service unterstützt die Deduplizierung von Daten oder das Entfernen doppelter Zeilen aus Daten. Weitere Informationen zur Deduplizierung finden Sie im [Handbuch zur Query Service-Deduplizierung](../essential-concepts/deduplication.md).
 
 ## Zeitzonenberechnungen in Query Service
 
@@ -325,4 +325,7 @@ Weitere Beispiele für Abfragen, die in Query Service verwendet werden können, 
 
 - [Analytics-Einblicke](../use-cases/analytics-insights.md)
 - [Aktivitätsanalyse mit Adobe Target](../use-cases/activity-analysis-with-adobe-target.md)
-- [Beispielabfragen für ExperienceEvent](../sample-queries/experience-event.md).
+- [Erstellen eines Trendberichts mit Ereignissen](../use-cases/trended-report-of-events.md)
+- [Anzeigen eines Rollup-Berichts eines Besuchers](../use-cases/roll-up-report-of-a-visitor.md)
+- [Auflisten der Seitenansichten eines Benutzers](../use-cases/list-visitor-sessions.md)
+- [Besucher nach Anzahl der Seitenansichten auflisten](../use-cases/visitors-by-number-of-page-views.md)

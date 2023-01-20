@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Abfragedienst;Abfrage-Service;Warnhinweis;
-title: API-Endpunkt für Warnhinweis-Abonnements
+title: Warnungsabonnement-Endpunkt
 description: Dieses Handbuch enthält Beispiele für HTTP-Anfragen und -Antworten für die verschiedenen API-Aufrufe, die Sie mit der Abfrage-Service-API an den Endpunkt für Warnhinweis-Abonnements stellen können.
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
-source-git-commit: 8673b6ceb9386677171334ce99d39c93e5e8159c
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '2668'
-ht-degree: 89%
+source-wordcount: '2667'
+ht-degree: 88%
 
 ---
 
-# API-Endpunkt für Warnhinweis-Abonnements
+# Endpunkt &quot;Warnungsanmeldungen&quot;
 
-Mit dem Adobe Experience Platform-Abfrage-Service können Sie Warnhinweise für ungeplante und geplante Abfragen abonnieren. Warnhinweise können per E-Mail, über die Platform-Benutzeroberfläche oder über beide empfangen werden. Der Benachrichtigungsinhalt ist für Warnhinweise in Platform und für E-Mail-Warnungen identisch. Derzeit können Abfrage-Warnhinweise nur mithilfe der [Abfrage-Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/) abonniert werden.
+Mit dem Adobe Experience Platform-Abfrage-Service können Sie Warnhinweise für ungeplante und geplante Abfragen abonnieren. Warnhinweise können per E-Mail, über die Platform-Benutzeroberfläche oder über beide empfangen werden. Der Benachrichtigungsinhalt ist für Warnhinweise in Platform und für E-Mail-Warnungen identisch. Derzeit können Abfragewarnungen nur über die [Query Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/).
 
 >[!IMPORTANT]
 >

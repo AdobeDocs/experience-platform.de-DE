@@ -2,10 +2,10 @@
 title: Adobe Experience Platform - Versionshinweise Januar 2022
 description: Die Versionshinweise für Adobe Experience Platform vom Januar 2022.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1342'
-ht-degree: 96%
+ht-degree: 94%
 
 ---
 
@@ -39,7 +39,7 @@ Weitere Informationen zu Warnhinweisen in Platform finden Sie im Abschnitt [Warn
 
 ## [!DNL Dashboards] {#dashboards}
 
-Adobe Experience Platform bietet mehrere Dashboards, in denen Sie wichtige Informationen zu den Daten Ihres Unternehmens sehen, basierend auf täglichen Schnappschüssen der Daten.
+Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Insights zu den Daten Ihres Unternehmens erhalten, die in täglichen Snapshots erfasst werden.
 
 | Funktion | Beschreibung |
 | --- | --- |
@@ -91,7 +91,7 @@ Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Ziel
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Anonymer Block | Das anonyme Block-SQL-Konstrukt ermöglicht es Ihnen, umfangreiche Datenvorbereitungsvorgänge im Abfrage-Service in kleinere Aufgaben zu zerlegen, sie dann wiederzuverwenden und nacheinander zum inkrementellen Laden der Daten zu verwenden. Weitere Informationen finden Sie in der [Dokumentation zu Beispielabfragen für den anonymen Block](../../query-service/best-practices/anonymous-block.md). |
+| Anonymer Block | Das anonyme Block-SQL-Konstrukt ermöglicht es Ihnen, umfangreiche Datenvorbereitungsvorgänge im Abfrage-Service in kleinere Aufgaben zu zerlegen, sie dann wiederzuverwenden und nacheinander zum inkrementellen Laden der Daten zu verwenden. Weitere Informationen finden Sie in der [Dokumentation zu Beispielabfragen für den anonymen Block](../../query-service/essential-concepts/anonymous-block.md). |
 | Datensatzstruktur | Bietet eine kohärente, logische Datenstruktur zur Organisation Ihrer Datenelemente für die Verwendung mit dem Abfrage-Service, wenn die Anzahl der Datenelemente innerhalb der Sandbox zunimmt. Weitere Informationen finden Sie in der [Dokumentation zum Organisieren von Datenelementen](../../query-service/best-practices/organize-data-assets.md). |
 
 Weitere Informationen zu [!DNL Query Service] finden Sie in der [[!DNL Query Service] Übersicht](../../query-service/home.md).

@@ -3,10 +3,10 @@ keywords: RTCDP; CDP; Real-time Customer Data Platform; Echtzeit-Kundendatenplat
 title: Anwendungsbeispiel für Real-time Customer Data Platform B2B Edition
 description: Dieses Beispiel-Szenario zeigt eine mögliche Konfiguration Ihrer Implementierung der B2B-Edition von Adobe Real-time Customer Data Platform.
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '1135'
-ht-degree: 85%
+ht-degree: 83%
 
 ---
 
@@ -42,7 +42,7 @@ Im letzten Monat hat `p2@townsend.com` die neue Produktseite besucht und dieser 
 
 ## Das Problem
 
-Sparte 1 hat gerade ein neues Software-Produkt auf den Markt gebracht und möchte es dem bestehenden Kundenstamm von Bodea als Upsell anbieten. Bodea startet eine Marketing-Kampagne, die genau auf diese Zielgruppe ausgerichtet ist.
+Line 1 hat soeben ein neues Softwareprodukt veröffentlicht und möchte es an Bodeas bestehenden erstklassigen Kundenstamm verkaufen. Bodea startet eine Marketing-Kampagne, die genau auf diese Zielgruppe ausgerichtet ist.
 
 Da die relevanten Townsend-Informationen in Marketo 1 als Account 1 und in Marketo 2 als Account 2 gespeichert sind, kann das Marketing-Team von Bodea die Informationen in den beiden Silos nicht effizient nutzen.
 

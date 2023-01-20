@@ -2,7 +2,7 @@
 title: Adobe Experience Platform – Versionshinweise, Oktober 2022
 description: Versionshinweise von Oktober 2022 für Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 97%
@@ -104,8 +104,8 @@ Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von 
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Überwachen von Abfragen über die Platform-Benutzeroberfläche | Die Abfrage-Service-Registerkarte [!UICONTROL Geplante Abfragen] bietet über die Benutzeroberfläche eine verbesserte Sichtbarkeit des Status aller Abfrageaufträge. Wichtige Informationen zum Status Ihrer Abfrageausführungen, einschließlich Fehlermeldungen und -Codes, falls sie fehlschlagen, finden Sie jetzt auf der Registerkarte [!UICONTROL Geplante Abfragen]. Sie können über die Benutzeroberfläche für jede dieser Abfragen auch Warnhinweise auf der Grundlage des Abfragestatus abonnieren. Weitere Informationen zu dieser Funktion finden Sie im Dokument [Überwachen von Abfragen](../../query-service/monitor-queries.md). |
-| Datenmodell für die Abfrage von beschleunigten Berichtseinblicken | Im Rahmen der Data Distiller SKU können Sie mit dem abfragebeschleunigten Speicher die Zeit und Verarbeitungsleistung reduzieren, die erforderlich sind, um wichtige Einblicke aus Ihren Daten zu gewinnen. Mit dem abfragebeschleunigten Speicher können Sie ein benutzerdefiniertes Datenmodell erstellen und/oder vorhandene Adobe Real-time Customer Data Platform-Datenmodelle erweitern, um Ihre Reporting-Insights und deren Visualisierungen zu verbessern. Siehe das Dokument [Reporting-Insights des abfragebeschleunigten Speichers](../../query-service/query-accelerated-store/reporting-insights-data-model.md), um mehr über diese Funktion zu erfahren. |
+| Überwachen von Abfragen über die Platform-Benutzeroberfläche | Die Abfrage-Service-Registerkarte [!UICONTROL Geplante Abfragen] bietet über die Benutzeroberfläche eine verbesserte Sichtbarkeit des Status aller Abfrageaufträge. Wichtige Informationen zum Status Ihrer Abfrageausführungen, einschließlich Fehlermeldungen und -Codes, falls sie fehlschlagen, finden Sie jetzt auf der Registerkarte [!UICONTROL Geplante Abfragen]. Sie können über die Benutzeroberfläche für jede dieser Abfragen auch Warnhinweise auf der Grundlage des Abfragestatus abonnieren. Weitere Informationen zu dieser Funktion finden Sie im Dokument [Überwachen von Abfragen](../../query-service/ui/monitor-queries.md). |
+| Datenmodell für die Abfrage von beschleunigten Berichtseinblicken | Im Rahmen der Data Distiller SKU können Sie mit dem abfragebeschleunigten Speicher die Zeit und Verarbeitungsleistung reduzieren, die erforderlich sind, um wichtige Einblicke aus Ihren Daten zu gewinnen. Mit dem abfragebeschleunigten Speicher können Sie ein benutzerdefiniertes Datenmodell erstellen und/oder vorhandene Adobe Real-time Customer Data Platform-Datenmodelle erweitern, um Ihre Reporting-Insights und deren Visualisierungen zu verbessern. Siehe das Dokument [Reporting-Insights des abfragebeschleunigten Speichers](../../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md), um mehr über diese Funktion zu erfahren. |
 
 {style=&quot;table-layout:auto&quot;}
 

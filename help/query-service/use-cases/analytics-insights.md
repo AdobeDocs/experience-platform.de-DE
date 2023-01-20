@@ -2,16 +2,16 @@
 title: Analytics Insights für Web- und Mobile-Interaktionen
 description: In diesem Dokument wird erläutert, wie Sie mithilfe von Query Service praktische Einblicke aus erfassten Adobe Analytics-Daten erstellen können.
 exl-id: f64e61ef-0157-4f0a-88f8-bbe4f9aa83f0
-source-git-commit: d573c01a0aa9989f581796a0be4aec6904ffc569
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '232'
 ht-degree: 1%
 
 ---
 
 # Analytics-Einblicke für Web- und mobile Interaktionen
 
-Mit Adobe Experience Platform können Sie Daten aus Adobe Analytics Report Suites mithilfe von XDM-Feldern (Experience-Datenmodell) erfassen, um Datensätze zu füllen. Query Service kann diese Analysedaten dann nutzen, indem Sie SQL-Abfragen ausführen, um wertvolle Einblicke aus dem Benutzerverhalten über die digitalen Plattformen zu generieren.
+Mit Adobe Experience Platform können Sie Daten aus Adobe Analytics Report Suites mithilfe von XDM-Feldern (Experience-Datenmodell) erfassen, um Datensätze zu füllen. Diese Analysedaten werden entsprechend dem [!DNL XDM ExperienceEvent] -Klasse. Query Service kann diese Daten dann nutzen, indem SQL-Abfragen ausgeführt werden, um wertvolle Einblicke aus dem Verhalten eines Benutzers gegenüber den digitalen Plattformen zu erhalten.
 
 Dieses Dokument bietet eine Vielzahl von SQL-Beispielabfragen, die gängige Anwendungsfälle beim Erstellen von Einblicken aus Web- und mobilen Analytics-Daten veranschaulichen.
 

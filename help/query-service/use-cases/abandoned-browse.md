@@ -3,7 +3,7 @@ keywords: Experience Platform; Query Service; Query Service; Query
 title: Anwendungsbeispiel für Adobe Experience Platform Query Service
 description: Ein durchgängiges Beispiel, um die Vielseitigkeit und Vorteile von Adobe Experience Platform Query Service zu demonstrieren.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 3%
@@ -73,11 +73,11 @@ Adobe Experience Platform bietet ein Daten-Repository und die erforderlichen Too
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments sollten Sie jetzt verstehen, wie [!DNL Query Service] wirkt sich nicht nur auf die Qualität Ihrer Daten und die einfache Segmentierung aus, sondern auch auf deren Bedeutung innerhalb Ihrer Datenarchitektur für den gesamten End-to-End-Workflow. Für zutreffendere SQL-Beispiele, die Adobe Analytics mit [!DNL Query Service], siehe [Beispieldokumentation zu Adobe Analytics-Beispielabfragen](../sample-queries/adobe-analytics.md).
+Durch Lesen dieses Dokuments sollten Sie jetzt verstehen, wie [!DNL Query Service] wirkt sich nicht nur auf die Qualität Ihrer Daten und die einfache Segmentierung aus, sondern auch auf deren Bedeutung innerhalb Ihrer Datenarchitektur für den gesamten End-to-End-Workflow. Für zutreffendere SQL-Beispiele, die Adobe Analytics mit [!DNL Query Service], siehe [Anwendungsfall für Adobe Analytics Merchandising-Variablen](./merchandising-variables.md).
 
 Andere Dokumente, die die Vorteile von [!DNL Query Service] zu den strategischen geschäftlichen Einblicken Ihres Unternehmens sind die [Anwendungsfall für Bot-Filter](./bot-filtering.md) Beispiel.
 
-Alternativ dazu können Sie diese Dokumente, von denen Sie wissen, [!DNL Query Service] Funktionen:
+Alternativ können diese Dokumente für Ihr Verständnis von [!DNL Query Service] Funktionen:
 
 * [Anleitung zur Ausführung von Abfragen](../best-practices/writing-queries.md)
 * [Informationen zur Ordnung von Daten-Medienelementen](../best-practices/organize-data-assets.md).

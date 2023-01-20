@@ -2,7 +2,7 @@
 title: Adobe Experience Platform – Versionshinweise, September 2022
 description: Versionshinweise September 2022 zu Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '2934'
 ht-degree: 98%
@@ -41,8 +41,8 @@ Mit der attributbasierten Zugriffssteuerung können Administratoren bzw. Adminis
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Attributbasierte Zugriffssteuerung | Mit der attributbasierten Zugriffssteuerung können Sie Schemafelder und Segmente des Experience-Datenmodells (XDM) mit Kennzeichnungen versehen, die unterschiedliche Organisations- oder Datennutzungsbereiche definieren. Parallel dazu können Administratoren bzw. Administratorinnen die Benutzeroberfläche zur Verwaltung von Benutzenden und Rollen verwenden, um Zugriffsrichtlinien für XDM-Schemafelder und Segmente zu definieren. Damit kann der Zugriff durch Benutzende oder Benutzergruppen (interne, externe oder Drittparteien) besser verwaltet werden. Weitere Informationen finden Sie in der [Übersicht über die attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md). |
-| Berechtigungen | Berechtigungen sind der Bereich von Experience Cloud, in dem Admins Benutzerrollen und Zugriffsrichtlinien definieren können, um Zugriffsberechtigungen für Funktionen und Objekte in einem Produktprogramm zu verwalten. Über Berechtigungen können Sie Rollen erstellen und verwalten, die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen und Richtlinien erstellen, um Kennzeichnungen zu nutzen und zu definieren, welche Benutzerrollen Zugriff auf bestimmte Platform-Ressourcen haben. Mit Berechtigungen können Sie auch die Bezeichnungen, Sandboxes und Benutzenden verwalten, die einer bestimmten Rolle zugeordnet sind. Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche für Berechtigungen](../../access-control/abac/ui/browse.md). |
+| Attributbasierte Zugriffssteuerung | Mit der attributbasierten Zugriffssteuerung können Sie Schemafelder und Segmente des Experience-Datenmodells (XDM) mit Kennzeichnungen versehen, die unterschiedliche Organisations- oder Datennutzungsbereiche definieren. Parallel dazu können Administrierende die Benutzeroberfläche zur Verwaltung von Benutzenden und Rollen verwenden, um Zugriffsrichtlinien für XDM-Schemafelder und Segmente zu definieren. Damit kann der Zugriff durch Benutzende oder Benutzergruppen (interne, externe oder Drittparteien) besser verwaltet werden. Weitere Informationen finden Sie in der [Übersicht über die attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md). |
+| Berechtigungen | Berechtigungen sind der Bereich von Experience Cloud, in dem Admins Benutzerrollen und Zugriffsrichtlinien definieren können, um Zugriffsberechtigungen für Funktionen und Objekte in einem Produktprogramm zu verwalten. Über Berechtigungen können Sie Rollen erstellen und verwalten, die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen und Richtlinien erstellen, um Kennzeichnungen zu nutzen und zu definieren, welche Benutzerrollen Zugriff auf bestimmte Platform-Ressourcen haben. Mit Berechtigungen können Sie auch die Bezeichnungen, Sandboxes und Benutzende verwalten, die einer bestimmten Rolle zugeordnet sind. Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche für Berechtigungen](../../access-control/abac/ui/browse.md). |
 
 Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter [Attributbasierte Zugriffssteuerung – Übersicht](../../access-control/abac/overview.md). Eine umfassende Anleitung zum attributbasierten Zugriffssteuerungs-Workflow finden Sie im [Handbuch zur attributbasierten Zugriffskontrolle](../../access-control/abac/end-to-end-guide.md).
 
@@ -56,7 +56,7 @@ Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Ko
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Entwurfsinstanz speichern | Diese neue Funktion ermöglicht es Marketing-Analysten und -Analystinnen, eine Modellkonfiguration vor dem Training und Scoring als Entwurfsinstanz zu speichern und weiter zu bearbeiten. Diese Funktion ist beispielsweise dann hilfreich, wenn ein/e Benutzende(r) mehrere Felder im Workflow definieren muss, dies aber aus Zeitgründen nicht möglich ist. Diese Funktion ist auch nützlich, wenn eine oder mehrere Datensatzstatistiken gerade verarbeitet werden und noch nicht verfügbar sind. Lesen Sie für weitere Informationen das [Benutzerhandbuch zur Attributions-KI](../../intelligent-services/attribution-ai/user-guide.md#governance-policies). |
+| Entwurfsinstanz speichern | Diese neue Funktion ermöglicht es Marketing-Analysten und -Analystinnen, eine Modellkonfiguration vor dem Training und Scoring als Entwurfsinstanz zu speichern und weiter zu bearbeiten. Diese Funktion ist beispielsweise dann hilfreich, wenn Benutzende mehrere Felder im Workflow definieren müssen, dies aber aus Zeitgründen nicht möglich ist. Diese Funktion ist auch nützlich, wenn eine oder mehrere Datensatzstatistiken gerade verarbeitet werden und noch nicht verfügbar sind. Lesen Sie für weitere Informationen das [Benutzerhandbuch zur Attributions-KI](../../intelligent-services/attribution-ai/user-guide.md#governance-policies). |
 | Governance-Richtlinien | Nachdem Benutzende die Erstellung einer Instanz über den Konfigurations-Workflow übermittelt haben, prüft der neue Service zur Richtliniendurchsetzung, ob Richtlinienverletzungen bei der Datennutzung vorliegen, und zeigt die Details in einem Popup an. Dadurch wird sichergestellt, dass Datenvorgänge und Marketing-Aktionen mit den in Adobe Experience Platform konfigurierten Datennutzungsrichtlinien konform sind. |
 
 Weitere Informationen zur Attributions-KI finden Sie in der [Übersicht zur Attributions-KI](../../intelligent-services/attribution-ai/overview.md). Informationen über Richtlinien zur Daten-Governance finden Sie in der [Übersicht zu Richtlinien](../../data-governance/policies/overview.md).
@@ -67,7 +67,7 @@ Die in Real-time Customer Data Platform verfügbare Kunden-KI dient dazu, in gro
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Entwurfsinstanz speichern | Diese neue Funktion ermöglicht es Marketing-Analysten und -Analystinnen, eine Modellkonfiguration vor dem Training und Scoring als Entwurfsinstanz zu speichern und weiter zu bearbeiten. Diese Funktion ist beispielsweise dann hilfreich, wenn ein/e Benutzende(r) mehrere Felder im Workflow definieren muss, dies aber aus Zeitgründen nicht möglich ist. Diese Funktion ist auch nützlich, wenn eine oder mehrere Datensatzstatistiken gerade verarbeitet werden und noch nicht verfügbar sind. Lesen Sie das [Benutzerhandbuch für Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md#governance-policies), um mehr zu erfahren. |
+| Entwurfsinstanz speichern | Diese neue Funktion ermöglicht es Marketing-Analysten und -Analystinnen, eine Modellkonfiguration vor dem Training und Scoring als Entwurfsinstanz zu speichern und weiter zu bearbeiten. Diese Funktion ist beispielsweise dann hilfreich, wenn Benutzende mehrere Felder im Workflow definieren müssen, dies aber aus Zeitgründen nicht möglich ist. Diese Funktion ist auch nützlich, wenn eine oder mehrere Datensatzstatistiken gerade verarbeitet werden und noch nicht verfügbar sind. Lesen Sie das [Benutzerhandbuch für Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md#governance-policies), um mehr zu erfahren. |
 | Governance-Richtlinien | Nachdem Benutzende die Erstellung einer Instanz über den Konfigurations-Workflow übermittelt haben, prüft der neue Service zur Richtliniendurchsetzung, ob Richtlinienverletzungen bei der Datennutzung vorliegen, und zeigt die Details in einem Popup an. Dadurch wird sichergestellt, dass Datenvorgänge und Marketing-Aktionen mit den in Adobe Experience Platform konfigurierten Datennutzungsrichtlinien konform sind. |
 
 Weitere Informationen zur Kunden-KI finden Sie in der [Übersicht zur Kunden-KI](../../intelligent-services/customer-ai/overview.md). Informationen über die Richtlinien zu Daten-Governance finden Sie unter [Richtlinien-Übersicht](../../data-governance/policies/overview.md)
@@ -84,7 +84,7 @@ Mit Experience Platform können Sie die Benutzeraktivität in Verbindung mit ver
 
 {style=&quot;table-layout:auto&quot;}
 
-Weitere Informationen zu den verschiedenen ressourcenspezifischen Ereignistypen, die von Audit-Potokollen in Platform verfolgt werden, finden Sie in der [Übersicht zu Audit-Protokollen](../../landing/governance-privacy-security/audit-logs/overview.md).
+Weitere Informationen zu den verschiedenen ressourcenspezifischen Ereignistypen, die von Audit-Protokollen in Platform verfolgt werden, finden Sie in der [Übersicht zu Audit-Protokollen](../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## [!DNL Dashboards] {#dashboards}
 
@@ -108,7 +108,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | Funktion | Beschreibung |
 | --- | --- |
 | Integration der linken Navigation in der Platform-Benutzeroberfläche | Alle Funktionen, die bisher ausschließlich in der Benutzeroberfläche für die Datenerfassung enthalten waren (einschließlich Tags, Ereignisweiterleitung und Datenströme), sind jetzt auch über die linke Navigationsleiste von Experience Platform unter der Kategorie **[!UICONTROL Datenerfassung]** verfügbar Dadurch entfällt die Notwendigkeit, beim Arbeiten mit Datenerfassungsfunktionen in Platform zwischen Benutzeroberflächen zu wechseln. |
-| Benutzerattribution in Tags und Ereignisweiterleitung | Bei der Auflistung verfügbarer [!UICONTROL Eigenschaften] in Tags und bei der Ereignisweiterleitung wird jetzt für jede aufgelistete Eigenschaft angezeigt, wann sie zuletzt aktualisiert wurde und von welchem Benutzer die Aktualisierung vorgenommen wurde. |
+| Benutzerattribution in Tags und Ereignisweiterleitung | Bei der Auflistung verfügbarer [!UICONTROL Eigenschaften] in Tags und bei der Ereignisweiterleitung wird jetzt für jede aufgelistete Eigenschaft angezeigt, wann sie zuletzt aktualisiert wurde und von welchem Benutzenden die Aktualisierung vorgenommen wurde. |
 | [[!DNL Snap Conversions API] Erweiterung](https://exchange.adobe.com/apps/ec/108550) für die Ereignisweiterleitung | Sie können jetzt Daten mithilfe einer Erweiterung zur [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) an die [!DNL Snapchat Conversions API] senden. Weitere Informationen zur Authentifizierung und Verwendung der API finden Sie in der [[!DNL Snapchat Marketing API] Dokumentation](https://marketingapi.snapchat.com/docs/conversion.html). |
 | [[!DNL User-Agent Client Hints] im Web SDK](../../edge/fundamentals/user-agent-client-hints.md) | Web-SDK unterstützt jetzt [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Mit Client-Hinweisen können Website-Besitzer auf viele der Informationen zugreifen, die auch in der [!DNL User-Agent]-Zeichenfolge enthalten sind, allerdings auf eine Weise, die die Privatsphäre besser schützt. |
 | [Seitenweise Migration zu Web SDK](../../edge/home.md#migrating-to-web-sdk) | Sie können jetzt Ihre vorhandenen Web-Eigenschaften aus anderen Bibliotheken von Experience Cloud, wie etwa [!DNL at.js], Seite für Seite ins Web-SDK migrieren. Dies ermöglicht einen stufenweisen Ansatz für die Web-SDK-Migration, sodass nicht alle Seiten gleichzeitig migriert werden müssen. |
@@ -217,7 +217,7 @@ Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von 
 | Funktion | Beschreibung |
 | --- | --- |
 | Warnhinweis-Abonnement-API | Mit dem Adobe Experience Platform-Abfrage-Service können Sie Warnhinweise für ungeplante und geplante Abfragen abonnieren. Warnhinweise können per E-Mail, über die Platform-Benutzeroberfläche oder über beide empfangen werden. Zurzeit können Abfrage-Warnhinweise nur mit der [Abfrage-Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/) abonniert werden. |
-| Datensatzbeispiele | Mit den Muster-Datensätzen des Abfrage-Service können Sie explorative Abfragen zu Big Data durchführen. Dies verkürzt die Verarbeitungszeit, während die Abfragegenauigkeit verringert wird. Weitere Informationen erhalten Sie im [Handbuch zu Datensatzmustern](../../query-service/sql/dataset-samples.md). |
+| Datensatzbeispiele | Mit den Muster-Datensätzen des Abfrage-Service können Sie explorative Abfragen zu Big Data durchführen. Dies verkürzt die Verarbeitungszeit, während die Abfragegenauigkeit verringert wird. Weitere Informationen erhalten Sie im [Handbuch zu Datensatzmustern](../../query-service/essential-concepts/dataset-samples.md). |
 
 Weitere Informationen zu [!DNL Query Service] finden Sie in der [[!DNL Query Service] Übersicht](../../query-service/home.md).
 

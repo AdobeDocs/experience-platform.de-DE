@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform; Startseite; beliebte Themen; Abfragedienst; Query Service; geplante Abfragen; geplante Abfrage;
 solution: Experience Platform
-title: API-Endpunkt für geplante Abfragen
+title: Zeitplan-Endpunkt
 description: In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie für geplante Abfragen mit der Query Service-API ausführen können.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 2ad86b0cf3cdc89825501b94bd609df751026420
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1136'
 ht-degree: 34%
 
 ---
 
-# Endpunkt für geplante Abfragen
+# Endpunkt &quot;Zeitpläne&quot;
 
 ## Beispiel-API-Aufrufe
 

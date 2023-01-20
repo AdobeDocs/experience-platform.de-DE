@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;abfrage-service;Abfrage-Service;Handbuch zur Fehlerbehebung;FAQ;Fehlerbehebung
 solution: Experience Platform
-title: Handbuch zur Fehlerbehebung beim Abfrage-Service
+title: Häufig gestellte Fragen
 description: Dieses Dokument enthält häufig gestellte Fragen und Antworten zum Abfrage-Service. Zu den Themen gehören der Datenexport, Tools von Drittanbietern und PSQL-Fehler.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '4383'
 ht-degree: 99%
 
 ---
 
-# [!DNL Query Service] – Handbuch zur Fehlerbehebung
+# Häufig gestellte Fragen
 
 Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Abfrage-Service und eine Liste der häufig verwendeten Fehler-Codes bei der Verwendung des Abfrage-Service. Fragen und Fehlerbehebungen für andere Services in Adobe Experience Platform finden Sie im [Handbuch zur Fehlerbehebung in Experience Platform](../landing/troubleshooting.md).
 
@@ -116,7 +116,7 @@ Die folgenden Schritte beschreiben, wie Sie eine tabellarische Ansicht eines Dat
 
 ![Das XDM-Schema und die Tabellenansicht der vereinfachten Daten. Der Spaltenname eines verschachtelten Datensatzes wird in der Benutzeroberfläche hervorgehoben.](./images/troubleshooting/column-name.png)
 
-Die vollständige Anleitung finden Sie in der Dokumentation zum [Arbeiten mit verschachtelten Datenstrukturen](./best-practices/nested-data-structures.md) mit dem Abfrage-Editor oder dem Client eines Drittanbieters.
+Die vollständige Anleitung finden Sie in der Dokumentation zum [Arbeiten mit verschachtelten Datenstrukturen](./essential-concepts/nested-data-structures.md) mit dem Abfrage-Editor oder dem Client eines Drittanbieters.
 +++
 
 ### Wie beschleunige ich eine Abfrage für einen Datensatz, der Arrays enthält?
@@ -156,7 +156,7 @@ Es wird ein Dropdown-Banner mit dem Bereich [!UICONTROL Hilfe und Support] geöf
 +++Antwort
 Mit der Funktion für anonyme Blöcke können Sie eine oder mehrere SQL-Anweisungen verketten, die nacheinander ausgeführt werden. Sie beinhalten auch die Möglichkeit der Ausnahmebehandlung.
 
-Weitere Informationen finden Sie in der [Dokumentation zu anonymen Blöcken](./best-practices/anonymous-block.md).
+Weitere Informationen finden Sie in der [Dokumentation zu anonymen Blöcken](./essential-concepts/anonymous-block.md).
 +++
 
 ### Wie implementiere ich eine benutzerdefinierte Attribution im Abfrage-Service?
@@ -245,7 +245,7 @@ AS SELECT '1' as _id,
 ### Wie kann ich die neuen Daten, die täglich in das System gelangen, schnell verarbeiten?
 
 +++Antwort 
-Die [`SNAPSHOT`](./sql/syntax.md#snapshot-clause)-Klausel kann verwendet werden, um Daten einer Tabelle basierend auf einer Schnappschuss-ID inkrementell zu lesen. Dies eignet sich ideal für die Verwendung mit dem Design-Muster für [inkrementelles Laden](./best-practices/incremental-load.md), bei dem nur Informationen im Datensatz verarbeitet werden, die seit der letzten Ausführung des Ladevorgangs erstellt oder geändert wurden. Dadurch hat es eine höhere Verarbeitungseffizienz und kann sowohl bei der Streaming- als auch bei der Batch-Datenverarbeitung verwendet werden.
+Die [`SNAPSHOT`](./sql/syntax.md#snapshot-clause)-Klausel kann verwendet werden, um Daten einer Tabelle basierend auf einer Schnappschuss-ID inkrementell zu lesen. Dies eignet sich ideal für die Verwendung mit dem Design-Muster für [inkrementelles Laden](./essential-concepts/incremental-load.md), bei dem nur Informationen im Datensatz verarbeitet werden, die seit der letzten Ausführung des Ladevorgangs erstellt oder geändert wurden. Dadurch hat es eine höhere Verarbeitungseffizienz und kann sowohl bei der Streaming- als auch bei der Batch-Datenverarbeitung verwendet werden.
 +++
 
 ### Warum unterscheiden sich die in der Profil-Benutzeroberfläche angezeigten Zahlen von den aus dem Profil-Exportdatensatz berechneten Zahlen?

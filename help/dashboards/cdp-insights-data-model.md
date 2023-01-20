@@ -2,16 +2,16 @@
 title: Real-time Customer Data Platform Insights-Datenmodell
 description: Erfahren Sie, wie Sie SQL-Abfragen mit den Real-time Customer Data Platform Insights-Datenmodellen verwenden können, um Ihre eigenen Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle anzupassen.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 9f33ad0146b72f820530233b651370c43fafe713
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
 # Real-time Customer Data Platform Insights-Datenmodell
 
-Die Real-time Customer Data Platform Insights-Datenmodell-Funktion stellt die Datenmodelle und SQL bereit, die die Einblicke für verschiedene Profil-, Ziel- und Segmentierungs-Widgets optimieren. Sie können diese SQL-Abfragevorlagen anpassen, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle (Key Performance Indicators) zu erstellen. Diese Insights können dann als benutzerdefinierte Widgets für benutzerdefinierte Dashboards verwendet werden. Weitere Informationen finden Sie in der Dokumentation zu den abfragebeschleunigten Store-Berichtseinblicken . [Erstellen eines Berichtseinblicke-Datenmodells über Query Service zur Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards](../query-service/query-accelerated-store/reporting-insights-data-model.md).
+Die Real-time Customer Data Platform Insights-Datenmodell-Funktion stellt die Datenmodelle und SQL bereit, die die Einblicke für verschiedene Profil-, Ziel- und Segmentierungs-Widgets nutzen. Sie können diese SQL-Abfragevorlagen anpassen, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle (Key Performance Indicators) zu erstellen. Diese Insights können dann als benutzerdefinierte Widgets für benutzerdefinierte Dashboards verwendet werden. Weitere Informationen finden Sie in der Dokumentation zu den abfragebeschleunigten Store-Berichtseinblicken . [Erstellen eines Berichtseinblicke-Datenmodells über Query Service zur Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
 
 ## Voraussetzungen
 
@@ -92,7 +92,7 @@ Die folgende Abbildung enthält die relevanten Datenfelder in jedem Datensatz.
 
 #### Profile nach Identitätsanwendungsfall
 
-Die [!UICONTROL Profile nach Identität] -Widget zeigt die Aufschlüsselung der Identitäten über alle zusammengeführten Profile in Ihrem Profilspeicher an. Siehe [[!UICONTROL Profile nach Identität] Widget-Dokumentation](./guides/profiles.md#profiles-by-identity) für weitere Informationen.
+Das Widget [!UICONTROL Profile nach Identität] zeigt die Aufschlüsselung der Identitäten in allen zusammengeführten Profile in Ihrem Profile Store an. Siehe [[!UICONTROL Profile nach Identität] Widget-Dokumentation](./guides/profiles.md#profiles-by-identity) für weitere Informationen.
 
 Die SQL, die die [!UICONTROL Profile nach Identität] Widget wird im ausblendbaren Abschnitt unten angezeigt.
 
@@ -212,7 +212,7 @@ GROUP BY cast(adwh_dim_segments.create_date AS date), adwh_dim_merge_policies.me
 
 #### Anwendungsfall für die am häufigsten verwendeten Ziele
 
-Die in der [!UICONTROL Am häufigsten verwendete Ziele] -Widget listet die am häufigsten verwendeten Ziele Ihrer Organisation entsprechend der Anzahl der ihnen zugeordneten Segmente auf. Dieses Ranking bietet Einblicke, welche Ziele verwendet werden, und zeigt möglicherweise auch diejenigen, die möglicherweise nicht genutzt werden. Weitere Informationen finden Sie in der Dokumentation unter [[!UICONTROL Am häufigsten verwendete Ziele] Widget](./guides/destinations.md#most-used-destinations) für weitere Informationen.
+Die in der [!UICONTROL Am häufigsten verwendete Ziele] -Widget listet die am häufigsten verwendeten Ziele Ihrer Organisation entsprechend der Anzahl der ihnen zugeordneten Segmente auf. Diese Rangfolge bietet Einblicke, welche Ziele verwendet werden, und zeigt gleichzeitig, welche möglicherweise nicht genügend genutzt werden. Weitere Informationen finden Sie in der Dokumentation unter [[!UICONTROL Am häufigsten verwendete Ziele] Widget](./guides/destinations.md#most-used-destinations) für weitere Informationen.
 
 Die SQL, die die [!UICONTROL Am häufigsten verwendete Ziele] Widget wird im ausblendbaren Abschnitt unten angezeigt.
 
@@ -239,7 +239,7 @@ FROM
 
 #### Anwendungsfall für kürzlich aktivierte Segmente
 
-Die Logik für die [!UICONTROL Kürzlich aktivierte Segmente] -Widget stellt eine Liste der Segmente bereit, die einem Ziel zuletzt zugeordnet wurden. Diese Liste enthält eine Momentaufnahme der Segmente und Ziele, die aktiv im System verwendet werden, und kann bei der Fehlerbehebung bei fehlerhaften Zuordnungen helfen. Siehe [[!UICONTROL Kürzlich aktivierte Segmente] Widget-Dokumentation](./guides/destinations.md#recently-activated-segments) für weitere Informationen.
+Die Logik für die [!UICONTROL Kürzlich aktivierte Segmente] -Widget stellt eine Liste der Segmente bereit, die einem Ziel zuletzt zugeordnet wurden. Diese Liste enthält eine Momentaufnahme der Segmente und Ziele, die aktiv im System verwendet werden, und kann bei der Fehlerbehebung bei fehlerhaften Zuordnungen hilfreich sein. Siehe [[!UICONTROL Kürzlich aktivierte Segmente] Widget-Dokumentation](./guides/destinations.md#recently-activated-segments) für weitere Informationen.
 
 Die SQL, die die [!UICONTROL Kürzlich aktivierte Segmente] Widget wird im ausblendbaren Abschnitt unten angezeigt.
 
