@@ -4,10 +4,10 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: d046c17a7b376f5c2e2f25c38fac0916ed2dba73
+source-git-commit: bdc6ef162e9684065b60a13670848dac64be21fd
 workflow-type: tm+mt
-source-wordcount: '985'
-ht-degree: 100%
+source-wordcount: '988'
+ht-degree: 99%
 
 ---
 
@@ -153,6 +153,7 @@ ht-degree: 100%
       * [KickFire-Erweiterung](./catalog/personalization/kickfire.md)
       * [Marketo Web-Personalisierungserweiterung](./catalog/personalization/marketo-web-personalization.md)
       * [Pega Customer Decision Hub-Verbindung](./catalog/personalization/pega.md)
+      * [Pega-Profil-Verbindung](./catalog/personalization/pega-profile.md)
    * Social-Media-Ziele {#social}
       * [Social-Media-Ziele – Übersicht](./catalog/social/overview.md)
       * [Adobe Livefyre-Erweiterung](./catalog/social/adobe-livefyre.md)
