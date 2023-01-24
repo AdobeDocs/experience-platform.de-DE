@@ -4,7 +4,7 @@ title: Lizenznutzungs-Dashboard Handbuch
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen anzeigen können.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 255de9b9e83c11aeed747a3c0cdb7bd7a7949bd2
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '935'
 ht-degree: 16%
@@ -23,7 +23,7 @@ Das Dashboard zur Lizenznutzung zeigt eine Momentaufnahme der lizenzbezogenen Da
 
 >[!NOTE]
 >
->Änderungen oder Aktualisierungen, die seit der Aufnahme des Schnappschusses an den Daten vorgenommen wurden, werden erst dann im Dashboard angezeigt, wenn der nächste Schnappschuss erstellt wurde.
+>Änderungen oder Aktualisierungen, die seit der Aufnahme der Momentaufnahme an den Daten vorgenommen wurden, werden erst dann im Dashboard angezeigt, wenn die nächste Momentaufnahme erstellt wird.
 
 ## Dashboard zur Lizenznutzung
 
@@ -68,7 +68,7 @@ Das Dashboard zur Lizenznutzung besteht aus Widgets, die schreibgeschützte Metr
 
 Jedes Widget zeigt ein Liniendiagramm an, in dem die tatsächlichen Zahlen für Ihr Unternehmen mit den im Rahmen der Lizenzierung Ihres Unternehmens insgesamt verfügbaren Zahlen verglichen werden, und zeigt einen Prozentsatz der Gesamtnutzung an.
 
-![Die Registerkarte Übersicht des Dashboards zur Lizenznutzung mit dem Liniendiagramm des Widgets zur Metrik zur Beispiellizenzverwendung wurde hervorgehoben.](../images/license-usage/widgets.png)
+![Die Registerkarte Übersicht des Dashboards zur Lizenznutzung mit dem Liniendiagramm des Widgets zur Beispiellizenznutzung wurde hervorgehoben.](../images/license-usage/widgets.png)
 
 ## Verfügbare Metriken
 
@@ -88,7 +88,7 @@ Die Verfügbarkeit und spezifische Definition dieser Metriken hängen von der vo
 | <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL BIS 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL BIS 50M</li></ul> | [Adobe Real-time Customer Data Platform](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:OD-AKTIVIERUNG</li><li>AEP:OD ACTIVATION PRFL BIS 10 M</li><li>AEP:OD ACTIVATION PRFL BIS ZU 50 M</li></ul> | [Adobe Experience Platform Activation](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
-| <ul><li>Journey Optimizer SELECT:OD</li><li>Journey Optimizer PRIME:OD</li><li>Journey Optimizer ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP Real-Time CDP:OD PROFILE ORCHESTRATION</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/legal/product-descriptions/adobe-journey-optimizer.html) |
+| <ul><li>Journey Optimizer SELECT:OD</li><li>Journey Optimizer PRIME:OD</li><li>Journey Optimizer ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP Real-Time CDP:OD PROFILE ORCHESTRATION</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/de/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
 >

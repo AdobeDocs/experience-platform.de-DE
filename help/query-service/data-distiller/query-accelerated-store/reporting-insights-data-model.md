@@ -2,7 +2,7 @@
 title: Anleitung zu Query Accelerated Store Reporting Insights
 description: Erfahren Sie, wie Sie mit dem Abfrage-Service ein Reporting-Insights-Datenmodell zur Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards erstellen.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 97%
@@ -23,7 +23,7 @@ In diesem Tutorial werden benutzerdefinierte Dashboards verwendet, um Daten aus 
 
 ## Erste Schritte
 
-Die Data Distiller SKU ist erforderlich, um ein benutzerdefiniertes Datenmodell für Ihre Reporting-Insights zu erstellen und um die Real-Time CDP-Datenmodelle zu erweitern, die angereicherte Platform-Daten enthalten. Bitte beachten Sie die Dokumentation zu [Packaging](../../packages.md), [Leitlinien](../../guardrails.md#query-accelerated-store) und [Lizenzierung](../../data-distiller/licence-usage.md), die sich auf die Data Distiller SKU bezieht. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich bitte an den Adobe-Support, um weitere Informationen zu erhalten.
+Die Data Distiller SKU ist erforderlich, um ein benutzerdefiniertes Datenmodell für Ihre Reporting-Insights zu erstellen und um die Real-Time CDP-Datenmodelle zu erweitern, die angereicherte Platform-Daten enthalten. Bitte beachten Sie die Dokumentation zu [Packaging](../../packages.md), [Leitlinien](../../guardrails.md#query-accelerated-store) und [Lizenzierung](../../data-distiller/license-usage.md), die sich auf die Data Distiller SKU bezieht. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich bitte an den Adobe-Support, um weitere Informationen zu erhalten.
 
 ## Erstellen eines Reporting-Insights-Datenmodells
 

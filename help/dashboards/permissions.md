@@ -4,7 +4,7 @@ title: Erhalten & Gewähren von Zugriffsberechtigungen für Experience Platform-
 type: Documentation
 description: Gewähren Sie Benutzern die Möglichkeit, Experience Platform-Dashboards mithilfe von Adobe Admin Console anzuzeigen, zu bearbeiten und zu aktualisieren.
 exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
-source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '645'
 ht-degree: 32%
@@ -28,7 +28,7 @@ Die [!DNL Dashboards] -Dienst bietet drei Berechtigungen, die, wenn sie kombinie
 | Berechtigung | Beschreibung |
 |---|---|
 | **Standard-Dashboards verwalten** | Diese Berechtigung ist eine **globale Lese- und Schreibberechtigungen**. Damit können Sie [Erstellen benutzerdefinierter Widgets](./customize/custom-widgets.md) und [Widget-Schema bearbeiten](./customize/edit-schema.md) durch [!UICONTROL Widget-Bibliothek]. |
-| **Standard-Dashboards anzeigen** | Diese **schreibgeschützt** -Funktion [!UICONTROL Profile], [!UICONTROL Ziele]und [!UICONTROL Segmente] Dashboards verwenden und über die linke Navigation von Platform Zugriff auf diese zulassen. Außerdem wird [!UICONTROL Dashboards] zur linken Navigation und Zugriff auf die [!UICONTROL Dashboards] Registerkarte &quot;Inventar und Integrationen&quot;. |
+| **Standard-Dashboards anzeigen** | Diese **schreibgeschützt** -Funktion [!UICONTROL Profile], [!UICONTROL Ziele]und [!UICONTROL Segmente] Dashboards erstellen und den Zugriff darauf über die linke Navigation von Platform zulassen. Außerdem wird [!UICONTROL Dashboards] zur linken Navigation und Zugriff auf die [!UICONTROL Dashboards] Registerkarte &quot;Inventar und Integrationen&quot;. |
 | **Anzeigen des Dashboards zur Lizenznutzung** | Diese Berechtigung ermöglicht Benutzern **schreibgeschützt** Zugriff auf [das Dashboard zur Lizenznutzung](./guides/license-usage.md) in der Experience Platform-Benutzeroberfläche. |
 
 Es gibt fünf Berechtigungen, die nicht im [!DNL Dashboard] -Kategorie, die je nach Ihren Anforderungen möglicherweise erforderlich ist. In der folgenden Tabelle sind die Kategoriestandorte in der Admin Console aufgeführt:

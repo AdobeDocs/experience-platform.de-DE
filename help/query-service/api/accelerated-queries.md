@@ -2,8 +2,8 @@
 title: Endpunkt für beschleunigte Abfragen
 description: Erfahren Sie, wie Sie statuslos auf den abfragebeschleunigten Speicher zugreifen können, um schnell Ergebnisse basierend auf aggregierten Daten zurückzugeben. Dieses Dokument enthält eine beispielhafte HTTP-Anfrage und -Antwort für den Endpunkt für beschleunigte Abfragen des Abfrage-Service.
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
-workflow-type: ht
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 100%
 
@@ -17,7 +17,7 @@ Bevor Sie mit diesem Handbuch fortfahren, stellen Sie sicher, dass Sie das [Hand
 
 ## Erste Schritte
 
-Die Data Distiller SKU ist erforderlich, um den abfragebeschleunigten Speicher zu verwenden. Bitte beachten Sie die Dokumentation zu [Packaging](../packages.md), [Leitlinien](../guardrails.md#query-accelerated-store) und [Lizenzierung](../data-distiller/licence-usage.md), die sich auf die Data Distiller SKU bezieht. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich bitte an den Adobe-Support, um weitere Informationen zu erhalten.
+Die Data Distiller SKU ist erforderlich, um den abfragebeschleunigten Speicher zu verwenden. Bitte beachten Sie die Dokumentation zu [Packaging](../packages.md), [Leitlinien](../guardrails.md#query-accelerated-store) und [Lizenzierung](../data-distiller/license-usage.md), die sich auf die Data Distiller SKU bezieht. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich bitte an den Adobe-Support, um weitere Informationen zu erhalten.
 
 In den folgenden Abschnitten werden die API-Aufrufe beschrieben, die für den statuslosen Zugriff auf den abfragebeschleunigten Speicher über die Abfrage-Service-API erforderlich sind. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 

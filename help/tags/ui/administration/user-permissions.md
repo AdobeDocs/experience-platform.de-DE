@@ -2,10 +2,10 @@
 title: Benutzerberechtigungen für Tags
 description: Hier erfahren Sie mehr über die verschiedenen Arten von Berechtigungen, die für Tags verfügbar sind, und über einige grundlegende Implementierungsstrategien für verschiedene geschäftliche Anwendungsfälle.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '1308'
-ht-degree: 93%
+ht-degree: 91%
 
 ---
 
@@ -68,7 +68,7 @@ Unternehmensrechte gelten für Berechtigungen, die mehrere Eigenschaften umfasse
 | --- | --- |
 | **Eigenschaften verwalten** | Hiermit können Sie die folgenden Aktionen durchführen:<ul><li>Erstellen neuer Eigenschaften</li><li>Ändern von Metadaten und Einstellungen auf Eigenschaftsebene</li><li>Löschen von Eigenschaften</li></ul>In der Regel führen Administratoren diese Rolle aus. Weitere Informationen finden Sie in der [Dokumentation zu Eigenschaften](companies-and-properties.md). |
 | **Entwickeln von Erweiterungen** | Ermöglicht die Erstellung und Änderung von Erweiterungspaketen, die dem Unternehmen gehören, einschließlich privater Versionen und Anfragen zur Veröffentlichung. |
-| **Mobile-App-Konfigurationen verwalten** | Dies ist nur verfügbar, wenn Sie über eine Lizenz für Adobe Journey Optimizer oder eine andere Lösung verfügen, die Zugriff auf mobile In-App- und Push-Nachrichten gewährt. Damit können Sie die Mobile Apps verwalten, die Experience Cloud bekannt sind, zusammen mit den notwendigen Push-Zugangsdaten, die für die Kommunikation mit dem Firebase Cloud Messaging-Service und dem Apple Push Notification Service benötigt werden. |
+| **Mobile-App-Konfigurationen verwalten** | Dies ist nur verfügbar, wenn Sie über eine Lizenz für Adobe Journey Optimizer oder eine andere Lösung verfügen, die Zugriff auf mobile In-App- und Push-Nachrichten gewährt.  Damit können Sie die Mobile Apps verwalten, die Experience Cloud bekannt sind, zusammen mit den notwendigen Push-Zugangsdaten, die für die Kommunikation mit dem Firebase Cloud Messaging-Service und dem Apple Push Notification Service benötigt werden. |
 
 {style=&quot;table-layout:auto&quot;}
 

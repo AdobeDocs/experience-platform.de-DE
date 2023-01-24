@@ -2,10 +2,10 @@
 title: Power BI-Berichtsvorlagen für Platform-Dashboards
 description: Verwenden Sie Berichtvorlagen, um mithilfe von Power BI Experience Platform-Daten zu analysieren.
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '1472'
-ht-degree: 96%
+ht-degree: 93%
 
 ---
 
@@ -32,7 +32,7 @@ Außerdem benötigen Sie ein Power BI-Konto, um diesem Tutorial zu folgen. Um ei
 
 >[!NOTE]
 >
->Damit die Registerkarte „Dashboards“ im linken Navigationsbereich der Platform-Benutzeroberfläche angezeigt wird und die Dashboard-Inventaransicht sichtbar ist, müssen Sie als Teil Ihrer Platform-Lizenz Zugriff auf eines der Profil-, Segmentierungs- oder Ziel-Dashboards haben.
+>Damit die Registerkarte Dashboards im linken Navigationsbereich der Platform-Benutzeroberfläche angezeigt wird und die Dashboard-Lagerbestandsansicht sichtbar ist, müssen Sie als Teil Ihrer Platform-Lizenz Zugriff auf eines der Profil-, Segment- oder Ziel-Dashboards haben.
 
 ## Installieren der Power BI-Anwendungsintegration
 
