@@ -4,10 +4,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
-source-git-commit: 46c9ec0c561f7ed3e38f05ef7b1e3ffec0eaed57
+source-git-commit: 79773c35cf70bc967b29a8bcca729106bd7dd4f0
 workflow-type: tm+mt
-source-wordcount: '860'
-ht-degree: 100%
+source-wordcount: '872'
+ht-degree: 98%
 
 ---
 
@@ -59,6 +59,7 @@ ht-degree: 100%
    - CRM {#crm}
       - [Microsoft Dynamics-Connector](connectors/crm/ms-dynamics.md)
       - [Salesforce-Connector](connectors/crm/salesforce.md)
+      - [SugarCRM-Connector](connectors/crm/sugarcrm.md)
       - [Veva CRM-Connector](connectors/crm/veeva.md)
       - [Zoho CRM-Connector](connectors/crm/zoho.md)
    - Customer Success {#customer-success}
@@ -129,6 +130,8 @@ ht-degree: 100%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
+         - [SugarCRM-Konten und -Kontakte](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
+         - [SugarCRM-Ereignisse](tutorials/api/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
          - [Zoho CRM](tutorials/api/create/crm/zoho.md)
       - Customer Success {#customer-success}
@@ -237,6 +240,8 @@ ht-degree: 100%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
+         - [SugarCRM-Konten und -Kontakte](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
+         - [SugarCRM-Ereignisse](tutorials/ui/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
          - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - Customer Success {#customer-success}
