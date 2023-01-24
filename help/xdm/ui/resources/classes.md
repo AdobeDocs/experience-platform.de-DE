@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen und Bearbeiten von Klassen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie Klassen in der Benutzeroberfläche von Experience Platform erstellen und bearbeiten.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 3a9b97b25980d88e0fff3d71e43407b641e6454d
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '902'
 ht-degree: 5%
 
 ---
@@ -77,7 +77,9 @@ Sobald Sie über ein Schema verfügen, das eine benutzerdefinierte Klasse verwen
 >
 >Beachten Sie, dass alle Felder, die Sie zu einer Klasse hinzufügen, in allen Schemas verwendet werden, die diese Klasse verwenden. Daher sollten Sie sorgfältig überlegen, welche Felder in allen Anwendungsfällen des Schemas nützlich sein werden. Wenn Sie erwägen, ein Feld hinzuzufügen, das möglicherweise nur in einigen Schemas unter dieser Klasse verwendet wird, sollten Sie erwägen, es diesen Schemas hinzuzufügen, indem Sie [Erstellen einer Feldergruppe](./field-groups.md#create) anstatt.
 
-A **[!UICONTROL Neues Feld]** wird auf der Arbeitsfläche angezeigt und die rechte Leiste wird aktualisiert, um Steuerelemente zum Konfigurieren der Feldeigenschaften anzuzeigen. under **[!UICONTROL Zuweisen zu]** auswählen **[!UICONTROL Klasse]**.
+Ein **[!UICONTROL Unbenanntes Feld]** Platzhalter wird in der Arbeitsfläche angezeigt und die rechte Leiste aktualisiert, um Steuerelemente zum Konfigurieren der Feldeigenschaften anzuzeigen. under **[!UICONTROL Zuweisen zu]** auswählen **[!UICONTROL Klasse]**.
+
+![](../../images/ui/resources/classes/assign-to-class.png)
 
 ![](../../images/ui/resources/classes/assign-to-class.png)
 

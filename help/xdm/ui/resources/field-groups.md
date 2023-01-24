@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen und Bearbeiten von Schemafeldgruppen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie Schemafeldgruppen in der Benutzeroberfläche "Experience Platform"erstellen und bearbeiten.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 542ad49f475ac9586da506a8afa5408e83262121
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '839'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,11 @@ Um Felder zu einer benutzerdefinierten Feldergruppe hinzuzufügen, wählen Sie z
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-A **[!UICONTROL Neues Feld]** wird auf der Arbeitsfläche angezeigt und die rechte Leiste wird aktualisiert, um Steuerelemente zum Konfigurieren der Feldeigenschaften anzuzeigen. Siehe Handbuch unter [Definieren von Feldern in der Benutzeroberfläche](../fields/overview.md#define) für spezifische Schritte zur Konfiguration verschiedener Feldtypen.
+Ein **[!UICONTROL Unbenanntes Feld]** Platzhalter wird in der Arbeitsfläche angezeigt und die rechte Leiste aktualisiert, um Steuerelemente zum Konfigurieren der Feldeigenschaften anzuzeigen. Siehe Handbuch unter [Definieren von Feldern in der Benutzeroberfläche](../fields/overview.md#define) für spezifische Schritte zur Konfiguration verschiedener Feldtypen.
+
+under **[!UICONTROL Zuweisen zu]**, wählen Sie die **[!UICONTROL Feldergruppe]** und wählen Sie dann im Dropdown-Menü die gewünschte Feldergruppe aus der Liste aus. Sie können mit der Eingabe des Namens der Feldergruppe beginnen, um die Ergebnisse einzugrenzen.
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
 
 under **[!UICONTROL Zuweisen zu]**, wählen Sie die **[!UICONTROL Feldergruppe]** und wählen Sie dann im Dropdown-Menü die gewünschte Feldergruppe aus der Liste aus. Sie können mit der Eingabe des Namens der Feldergruppe beginnen, um die Ergebnisse einzugrenzen.
 
