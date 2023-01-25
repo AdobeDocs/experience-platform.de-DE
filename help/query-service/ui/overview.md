@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Abfrage-Service-Benutzeroberfläche
 description: Der Abfrage-Service von Adobe Experience Platform bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzenden in Ihrer IMS-Organisation gespeichert wurden.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 8a5f741b8992bc61cb25864a6695e55768e7aac2
+source-git-commit: 5a027200efc22051cca6d4c041e857b2abc7d96f
 workflow-type: tm+mt
-source-wordcount: '1117'
-ht-degree: 79%
+source-wordcount: '1135'
+ht-degree: 78%
 
 ---
 
@@ -63,7 +63,7 @@ Die Registerkarte **[!UICONTROL Vorlagen]** enthält Abfragen, die von Benutzend
 
 Siehe [Abfragevorlagen](./query-templates.md) Dokumentation finden Sie weitere Informationen zu Vorlagen in der Platform-Benutzeroberfläche.
 
-## Protokoll
+## Protokoll {#log}
 
 Die Registerkarte **[!UICONTROL Protokoll]** enthält eine Liste der Abfragen, die bereits ausgeführt wurden. Standardmäßig werden die Abfragen im Protokoll in umgekehrter chronologischer Reihenfolge aufgelistet.
 
@@ -81,6 +81,8 @@ Die Registerkarte **[!UICONTROL Protokoll]** enthält eine Liste der Abfragen, d
 
 >!![Note]
 Wählen Sie das Stiftsymbol (![Ein Bleistiftsymbol.](../images/ui/overview/edit-icon.png)) aus einer beliebigen Zeile des Abfrageprotokolls, um zur [!DNL Query Editor]. Die Abfrage wird vorab ausgefüllt, um die Bearbeitung zu erleichtern.
+
+Siehe [Dokumentation zu Abfrageprotokollen](./query-logs.md) für weitere Informationen zu den Protokolldateien, die automatisch von einem Abfrageereignis generiert werden.
 
 ## Anmeldeinformationen
 
