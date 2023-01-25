@@ -5,10 +5,10 @@ title: Segmentergebnisse auswerten und aufrufen
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mithilfe der Adobe Experience Platform Segmentation Service-API Segmente auswerten und auf Segmentergebnisse zugreifen.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 378f9260703d388976054431a76ac285724a9ae3
 workflow-type: tm+mt
-source-wordcount: '1595'
-ht-degree: 20%
+source-wordcount: '1615'
+ht-degree: 21%
 
 ---
 
@@ -22,7 +22,7 @@ Dieses Tutorial setzt ein Verständnis der verschiedenen [!DNL Adobe Experience 
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Ermöglicht das Erstellen von Zielgruppensegmenten aus [!DNL Real-Time Customer Profile] Daten.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten ordnet. Um die Segmentierung optimal zu nutzen, stellen Sie bitte sicher, dass Ihre Daten als Profile und Ereignisse gemäß dem [Best Practices für die Datenmodellierung](../../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten ordnet. Um die Segmentierung optimal zu nutzen, stellen Sie sicher, dass Ihre Daten als Profile und Ereignisse gemäß den [Best Practices für die Datenmodellierung](../../xdm/schema/best-practices.md) aufgenommen werden.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
 
 ### Erforderliche Kopfzeilen
@@ -130,6 +130,10 @@ Das folgende Beispiel zeigt, was die `segmentMembership` -Attribut für jeden ei
 | -------- | ----------- |
 | `lastQualificationTime` | Der Zeitstempel, zu dem die Bestätigung der Segmentzugehörigkeit erfolgte und das Profil in das Segment eintrat oder es verließ. |
 | `status` | Der Status der Segmentbeteiligung als Teil der aktuellen Anfrage. Muss einem der folgenden bekannten Werte entsprechen: <ul><li>`existing`: Die Entität befindet sich weiterhin im Segment.</li><li>`realized`: Entität gibt das Segment ein.</li><li>`exited`: Entität beendet das Segment.</li></ul> |
+
+>[!NOTE]
+>
+>Jede Segmentzugehörigkeit, die sich im `exited` Status für mehr als 30 Tage, basierend auf der Variablen `lastQualificationTime`, kann gelöscht werden.
 
 ## Auf Segmentergebnisse zugreifen
 

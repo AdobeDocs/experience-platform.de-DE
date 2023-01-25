@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Schemafeldgruppe "Segmentzugehörigkeitsdetails"
 description: Dieses Dokument bietet einen Überblick über die Schemakonzerne "Segmentzugehörigkeitsdetails".
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: fda47171cde3f58f48ee721357923017918a7d4e
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '470'
 ht-degree: 8%
 
 ---
@@ -75,11 +75,15 @@ Im Folgenden finden Sie ein Beispiel `segmentMembership` zuordnen, dass das Syst
 | --- | --- |
 | `xdm:version` | Die Version des Segments, für das dieses Profil qualifiziert ist. |
 | `xdm:lastQualificationTime` | Ein Zeitstempel, der angibt, wann sich dieses Profil zuletzt für das Segment qualifiziert hat. |
-| `xdm:validUntil` | Ein Zeitstempel, der angibt, wann die Segmentzugehörigkeit nicht mehr als gültig betrachtet werden soll. |
+| `xdm:validUntil` | Ein Zeitstempel, der angibt, wann die Segmentzugehörigkeit nicht mehr als gültig betrachtet werden soll. Wenn dieses Feld für externe Zielgruppen nicht festgelegt ist, wird die Segmentzugehörigkeit nur 30 Tage lang von der `lastQualificationTime`. |
 | `xdm:status` | Ein Zeichenfolgenfeld, das anzeigt, ob die Segmentzugehörigkeit im Rahmen der aktuellen Anforderung realisiert wurde. Folgende Werte werden akzeptiert: <ul><li>`existing`: Das Profil war bereits vor der Anfrage Teil des Segments und behält weiterhin seine Mitgliedschaft bei.</li><li>`realized`: Das Profil gibt das Segment als Teil der aktuellen Anforderung ein.</li><li>`exited`: Das Profil beendet das Segment als Teil der aktuellen Anforderung.</li></ul> |
 | `xdm:payload` | Einige Segmentmitgliedschaften enthalten eine Payload, die zusätzliche Werte beschreibt, die direkt mit der Mitgliedschaft in Verbindung stehen. Für jede Mitgliedschaft kann nur eine Payload eines bestimmten Typs angegeben werden. `xdm:payloadType` gibt den Payload-Typ an (`boolean`, `number`, `propensity`oder `string`), während seine gleichrangige Eigenschaft den Wert für den Payload-Typ bereitstellt. |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!NOTE]
+>
+>Jede Segmentzugehörigkeit, die sich im `exited` Status für mehr als 30 Tage, basierend auf der Variablen `lastQualificationTime`, kann gelöscht werden.
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 

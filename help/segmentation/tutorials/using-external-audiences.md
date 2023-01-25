@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Importieren und Verwenden externer Zielgruppen
 description: In diesem Tutorial erfahren Sie, wie Sie externe Zielgruppen mit Adobe Experience Platform verwenden.
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 57586104f1119f5cda926faf286c1663fbb0b240
 workflow-type: tm+mt
-source-wordcount: '1621'
-ht-degree: 3%
+source-wordcount: '1664'
+ht-degree: 4%
 
 ---
 
@@ -21,7 +21,7 @@ Dieses Tutorial setzt ein Verständnis der verschiedenen [!DNL Adobe Experience 
 
 - [Segmentierungsdienst](../home.md): Ermöglicht das Erstellen von Zielgruppensegmenten aus Echtzeit-Kundenprofildaten.
 - [Echtzeit-Kundenprofil](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus mehreren Quellen basiert.
-- [Experience-Datenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert. Um die Segmentierung optimal zu nutzen, stellen Sie bitte sicher, dass Ihre Daten als Profile und Ereignisse gemäß dem [Best Practices für die Datenmodellierung](../../xdm/schema/best-practices.md).
+- [Experience-Datenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert. Um die Segmentierung optimal zu nutzen, stellen Sie sicher, dass Ihre Daten als Profile und Ereignisse gemäß den [Best Practices für die Datenmodellierung](../../xdm/schema/best-practices.md) aufgenommen werden.
 - [Datensätze](../../catalog/datasets/overview.md): Das Speicher- und Verwaltungskonstrukt für Datenpersistenz in Experience Platform.
 - [Streaming-Erfassung](../../ingestion/streaming-ingestion/overview.md): So erfasst und speichert Experience Platform Daten von Client- und Server-seitigen Geräten in Echtzeit.
 
@@ -257,3 +257,7 @@ Nachfolgend finden Sie ein Beispiel der Payload der externen Zielgruppenmitglied
 | `xdmEntity._id` | Eine geeignete ID, die verwendet wird, um den Datensatz im Datensatz eindeutig zu identifizieren. |
 | `{TENANT_NAME}.identities` | Dieser Abschnitt wird verwendet, um die Feldergruppe der benutzerdefinierten Identitäten mit den zuvor importierten Benutzern zu verbinden. |
 | `segmentMembership.{IDENTITY_NAMESPACE}` | Dies ist die Bezeichnung des zuvor erstellten benutzerdefinierten Identitäts-Namespace. Wenn Sie beispielsweise Ihren Identitäts-Namespace &quot;externalAudience&quot;nennen, würden Sie ihn als Schlüssel des Arrays verwenden. |
+
+>[!NOTE]
+>
+>Standardmäßig werden externe Zielgruppenmitgliedschaften nur 30 Tage lang aufbewahrt. Um sie länger als 30 Tage aufzubewahren, verwenden Sie bitte die `validUntil` beim Erfassen Ihrer Zielgruppendaten. Weitere Informationen zu diesem Feld finden Sie im Handbuch unter [Feldgruppen des Schemas Segmentzugehörigkeitsdetails](../../xdm/field-groups/profile/segmentation.md).
