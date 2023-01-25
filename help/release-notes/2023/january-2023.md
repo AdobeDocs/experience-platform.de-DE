@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform - Versionshinweise Januar 2023
 description: Die Versionshinweise für Adobe Experience Platform vom Januar 2023.
-source-git-commit: 68e5baac9012a33d179f8ebff23deda7a8efd26b
+source-git-commit: 5657473ad10880b907a5b010fa99e08a5e45e174
 workflow-type: tm+mt
-source-wordcount: '1371'
-ht-degree: 38%
+source-wordcount: '1994'
+ht-degree: 30%
 
 ---
 
@@ -16,6 +16,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [Assurance](#assurance)
 - [Datenerfassung](#data-collection)
+- [[!DNL Destinations]](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Echtzeit-Kundenprofil](#profile)
 - [Segmentation Service](#segmentation)
@@ -47,6 +48,53 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | Senden von Daten an [!DNL Google Ads] mit der Ereignisweiterleitung | Sie können jetzt die [[!DNL Google Ads Enhanced Conversions] API-Erweiterung](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) für die Ereignisweiterleitung, kombiniert mit [Google Oauth 2 Geheimnisse](../../tags/ui/event-forwarding/secrets.md#google-oauth2), um Server-seitige Daten sicher an zu senden [!DNL Google Ads] in Echtzeit. |
 
 {style=&quot;table-layout:auto&quot;}
+
+## Ziele {#destinations}
+
+[!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+
+**Neue Ziele**
+
+| Ziel | Beschreibung |
+| ----------- | ----------- |
+| [(Beta) Verbindung zu Adobe Experience Cloud Audiences](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Verwenden Sie die [!UICONTROL (Beta) Adobe Experience Cloud-Zielgruppen] Verbindung zum Freigeben von Segmenten aus Experience Platform für verschiedene Experience Platform-Lösungen wie Audience Manager, Analytics, Advertising Cloud, Adobe Campaign, Target oder Marketo. |
+| [Pega-Profil-Verbindung](../../destinations/catalog/personalization/pega-profile.md) | Verwenden Sie die [!DNL Pega Profile Connector] in Adobe Experience Platform , um eine ausgehende Live-Verbindung zu Ihrer [!DNL Amazon] S3-Datenspeicherung , um Profildaten regelmäßig in CSV-Dateien aus Adobe Experience Platform in Ihre eigenen S3-Behälter zu exportieren. In [!DNL Pega Customer Decision Hub]können Sie Datenaufträge planen, um diese Profildaten aus dem S3-Speicher zu importieren, um die [!DNL Pega Customer Decision Hub] Profil. |
+| [(Beta) Verbindung des Trade Desk CRM EU](../../destinations/catalog/advertising/tradedesk-emails.md) | Mit der Veröffentlichung der EUID (European Unified ID) sehen Sie jetzt zwei [!DNL The Trade Desk - CRM] Ziele im [Zielkatalog](/help/destinations/catalog/overview.md). <ul><li> Wenn Sie Daten in der EU beziehen, verwenden Sie bitte die **[!DNL The Trade Desk - CRM (EU)]** Ziel.</li><li> Wenn Sie Daten in der APAC- oder NAMER-Region beziehen, verwenden Sie bitte die **[!DNL The Trade Desk - CRM (NAMER & APAC)]** Ziel. </li></ul> |
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktionalität | Beschreibung |
+| ----------- | ----------- |
+| Neue Trennzeichenoptionen für Beta-Cloud-Speicher-Ziel-Connectoren | Drei neue Trennzeichenoptionen (Doppelpunkt `:`, Pipe `|`, Semikolon `;`) sind jetzt für die neuen Beta-Cloud-Speicher-Ziele verfügbar - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Beta) Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(Beta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> Informationen zu den unterstützten [Dateiformatierungsoptionen](/help/destinations/ui/batch-destinations-file-formatting-options.md) für dateibasierte Ziele. |
+| Neuer optionaler Parameter verfügbar in [Kundendatenfelder](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) Konfigurationen in [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`: Verwenden Sie dies, wenn Sie ein Kundendatenfeld erstellen müssen, dessen Wert über alle von der Organisation eines Benutzers eingerichteten Ziel-Datenflüsse hinweg eindeutig sein muss. <br> Beispiel: die **[!UICONTROL Integrationsalias]** im Feld [[!UICONTROL Benutzerdefinierte Personalisierung]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) Das Ziel muss eindeutig sein, d. h. zwei separate Datenflüsse zu diesem Ziel dürfen für dieses Feld nicht denselben Wert haben. |
+
+**Fehlerbehebungen und Verbesserungen** {#fixes-and-enhancements}
+
+<!--
+
+| Fix or enhancement | Description |
+| ----------- | ----------- |
+| UI and API validation for required mappings and duplicate mappings (PLAT-123316) | Validation is now enforced as follows in the UI and API when [mapping fields](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) in the activate destinations workflow:<ul><li>**Required mappings**: If the destination has been set up by the destination developer with required mappings (for example, the [Google Ad Manager 360](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#activate) destination), then these required mappings need to be added by the user when activating data to the destination. </li><li>**Duplicate mappings**: expand on allowed and forbidden source-to-target mappings.</li></ul> |
+| Updated profile export behavior to cloud storage destinations (PLAT-123316) | We fixed an issue in the behavior of [mandatory attributes](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) when exporting data files to batch destinations. <br> Previously, every record in the output files was verified to contain both: <ol><li>A non-null value of the `mandatoryField` column and</li><li>also contain a non-null value on at least one of the other non-mandatory fields.</li></ol> The second condition has been removed. As a result, you might be seeing more output rows in your exported data files. |
+
+-->
+
+<table>
+    <tr>
+        <td><b>Fehlerbehebung oder Verbesserung</b></td>
+        <td><b>Beschreibung</b></td>
+    </tr>
+    <tr>
+        <td>UI- und API-Validierung für erforderliche Zuordnungen und doppelte Zuordnungen (PLAT-123316)</td>
+        <td>Die Validierung wird jetzt in der Benutzeroberfläche und in der API wie folgt erzwungen, wenn <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">Zuordnungsfelder</a> im Workflow Ziele aktivieren :<ul><li><b>Erforderliche Zuordnungen</b>: Wenn das Ziel vom Zielentwickler mit den erforderlichen Zuordnungen eingerichtet wurde (z. B. die <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> Ziel), müssen diese erforderlichen Zuordnungen vom Benutzer hinzugefügt werden, wenn er Daten für das Ziel aktiviert. </li><li><b>Duplizieren von Zuordnungen</b>: Im Zuordnungsschritt des Aktivierungs-Workflows können Sie doppelte Werte in den Quellfeldern, aber nicht in den Zielfeldern hinzufügen. In der folgenden Tabelle finden Sie ein Beispiel für zulässige und verbotene Zuordnungskombinationen. <br><table><thead><tr><th>Zulässig/verboten</th><th>Quellfeld</th><th>Zielfeld</th></tr></thead><tbody><tr><td>Zugelassen</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>email alias2</li></ul></td></tr><tr><td>Verboten</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
+    </tr>
+    <tr>
+        <td>Aktualisiertes Exportverhalten für dateibasierte Ziele (PLAT-123316)</td>
+        <td>Es wurde ein Problem im Verhalten von <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mandatory-attributes">obligatorische Attribute</a> beim Exportieren von Datendateien in Batch-Ziele. <br> Zuvor wurde überprüft, ob jeder Datensatz in den Ausgabedateien beide enthält: <ol><li>Ein Wert ungleich null des <code>mandatoryField</code> Spalte und</li><li>Ein Wert ungleich null für mindestens eines der anderen nicht obligatorischen Felder.</li></ol> Die zweite Bedingung wurde entfernt. Daher werden möglicherweise mehr Ausgabezeilen in Ihren exportierten Datendateien angezeigt, wie im folgenden Beispiel gezeigt:<br> <b> Beispielverhalten vor der Version vom Januar 2023 </b> <br> Obligatorisches Feld: <code>emailAddress</code> <br> <b>Eingabedaten zur Aktivierung</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>Aktivierungsausgabe</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> Beispielverhalten nach der Version vom Januar 2023 </b> <br> <b>Aktivierungsausgabe</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> </td>
+    </tr>
+</table>
+
+Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
 ## Experience-Datenmodell (XDM) {#xdm}
 
