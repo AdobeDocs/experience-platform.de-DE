@@ -1,14 +1,11 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Google PubSub;google pubsub
-solution: Experience Platform
 title: Erstellen eines Quell-Connectors für Google PubSub in der Benutzeroberfläche
-type: Tutorial
 description: Erfahren Sie, wie Sie einen Google PubSub-Quell-Connector in der Platform-Benutzeroberfläche erstellen.
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f56cdc2dc67f2d4820d80d8e5bdec8306d852891
 workflow-type: tm+mt
-source-wordcount: '493'
-ht-degree: 100%
+source-wordcount: '612'
+ht-degree: 79%
 
 ---
 
@@ -31,8 +28,9 @@ Um eine Verbindung von [!DNL PubSub] mit Platform herzustellen, müssen Sie eine
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `projectId` | Die zum Authentifizieren von [!DNL PubSub] erforderliche Projekt-ID. |
-| `credentials` | Die für die Authentifizierung von [!DNL PubSub] erforderliche Kennung der Anmeldeinformationen oder des privaten Schlüssels. |
+| Projekt-ID | Die zur Authentifizierung von [!DNL PubSub] erforderliche Projekt-ID. |
+| Anmeldeinformationen | Die für die Authentifizierung von [!DNL PubSub] erforderliche Kennung der Anmeldeinformationen oder des privaten Schlüssels. |
+| Themen-ID | Die ID für die [!DNL PubSub] -Ressource, die einen Feed von Nachrichten darstellt. Sie müssen eine Themen-ID angeben, wenn Sie Zugriff auf einen bestimmten Datenstrom in Ihrer [!DNL Google PubSub] -Quelle. |
 
 Weitere Informationen zu diesen Werten finden Sie im folgenden Dokument [PubSub-Authentifizierung](https://cloud.google.com/pubsub/docs/authentication). Wenn Sie die auf dem Service-Account basierende Authentifizierung verwenden, lesen Sie das folgende [PubSub-Handbuch](https://cloud.google.com/docs/authentication/production#create_service_account), in dem die Schritte zum Generieren Ihrer Anmeldeinformationen beschrieben werden.
 
@@ -42,11 +40,11 @@ Weitere Informationen zu diesen Werten finden Sie im folgenden Dokument [PubSub-
 
 Nachdem Sie die erforderlichen Anmeldeinformationen zusammen haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL PubSub]-Konto mit Platform zu verknüpfen.
 
-## Verbinden Sie Ihr [!DNL PubSub]-Konto
+## Verbinden Ihres [!DNL PubSub]-Kontos
 
-Wählen Sie in der [Platform-Benutzeroberfläche](https://platform.adobe.com) in der linken Navigationsleiste **[!UICONTROL Quellen]** aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** in der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können..
 
-Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchleiste finden.
+Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
 Wählen Sie unter der Kategorie [!UICONTROL Cloud-Speicherplatz] die Option **[!UICONTROL Google PubSub]** und dann die Option **[!UICONTROL Daten hinzufügen]** aus.
 
@@ -62,7 +60,13 @@ Um ein vorhandenes Konto zu verwenden, wählen Sie das [!DNL PubSub]-Konto, mit 
 
 ### Neues Konto
 
-Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** aus und geben Sie dann einen Namen, eine optionale Beschreibung und Ihre [!DNL PubSub]-Anmeldeinformationen zur Authentifizierung für das Eingabeformular an. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Verbindung mit Quelle herstellen]** und warten Sie dann einige Zeit, bis die neue Verbindung hergestellt ist.
+Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** aus und geben Sie dann einen Namen, eine optionale Beschreibung und Ihre [!DNL PubSub]-Anmeldeinformationen zur Authentifizierung für das Eingabeformular an. In diesem Schritt können Sie die Daten definieren, auf die Ihr Konto Zugriff hat, indem Sie eine Themen-ID angeben. Nur die mit dieser Themen-ID verknüpften Abonnements sind verfügbar.
+
+>[!NOTE]
+>
+>einem öffentlichen Projekt zugewiesene Prinzipale (Rollen) werden in allen Themen und Abonnements übernommen, die innerhalb eines [!DNL PubSub] Projekt. Wenn Sie einen Prinzipal (eine Rolle) hinzufügen möchten, um Zugriff auf ein bestimmtes Thema zu erhalten, muss dieser Prinzipal (die Rolle) auch zum entsprechenden Abonnement des Themas hinzugefügt werden. Weitere Informationen finden Sie im Abschnitt [[!DNL PubSub] Dokumentation zur Zugriffskontrolle](https://cloud.google.com/pubsub/docs/access-control).
+
+Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
 
 ![neu](../../../../images/tutorials/create/google-pubsub/new.png)
 

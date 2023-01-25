@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Google Cloud Storage Source Connector - Überblick
 description: Erfahren Sie, wie Sie Google Cloud Storage über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: 648dcd04de1f88318e3e771d5f044ac5b5ddaf2d
+source-git-commit: ae22e423119bf378a068349d481f0717a75171bb
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 81%
+source-wordcount: '573'
+ht-degree: 78%
 
 ---
 
@@ -36,6 +36,8 @@ Die Seite **[!UICONTROL Interoperabilität]** enthält Informationen zur Authent
 <!-- ![](../../images/tutorials/create/google-cloud-storage/interoperability.png) -->
 
 Sie können die neu generierte Zugriffsschlüssel-ID und den geheimen Zugriffsschlüssel verwenden, um Ihr [!DNL Google Cloud Storage]-Konto mit Platform zu verbinden.
+
+Weitere Informationen finden Sie im Handbuch unter [Erstellen und Verwalten von Dienstkontoschlüsseln](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) von [!DNL Google Cloud] Dokumentation.
 
 ## Namensbeschränkungen für Dateien und Verzeichnisse
 
