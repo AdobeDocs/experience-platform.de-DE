@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK-Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: f406ad74da00a7f4bf7ef1b52bee59cd91435d8f
+source-git-commit: 47e92e4e7475a23c5c65085db57dfc7a2822b8b6
 workflow-type: tm+mt
-source-wordcount: '1496'
-ht-degree: 41%
+source-wordcount: '1528'
+ht-degree: 40%
 
 ---
 
@@ -13,6 +13,14 @@ ht-degree: 41%
 # Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zum SDK finden Sie in der [Versionshinweise zum Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Version 2.15.0 - 25. Januar 2023
+
+* Es wurde ein Problem behoben, bei dem Benutzer ohne Zugriff auf Datenspeicher die Erweiterungskonfiguration nicht bearbeiten konnten.
+* Zusätzliche Unterstützung für Oberflächen im `sendEvent` Aktion.
+
+Enthält Version 2.14.0 des Adobe Experience Platform Web SDK.
+
 
 ## Version 2.14.1 - 13. Oktober 2022
 

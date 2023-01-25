@@ -3,9 +3,9 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK; Platform Web SDK; Web SDK; Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f406ad74da00a7f4bf7ef1b52bee59cd91435d8f
+source-git-commit: 6009592d47cf8f3d0d31e919aff0552e370b2063
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1470'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,19 @@ ht-degree: 3%
 
 In diesem Dokument werden die Versionshinweise für das Adobe Experience Platform Web SDK behandelt.
 Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in der [Versionshinweise zur Web SDK-Tag-Erweiterung](extension/web-sdk-ext-release-notes.md).
+
+## Version 2.14.0 - 25. Januar 2023
+
+**Neue Funktionen**
+
+* (Beta) Unterstützung für AJO-Oberflächen und -Vorschläge hinzugefügt.
+
+**Fehlerbehebungen und Verbesserungen**
+
+* Es wurde ein Problem mit benutzerspezifischen Adobe Target VEC-Code-Aktionen behoben, bei dem der Code an einer anderen Stelle als in [!DNL at.js].
+* Es wurde ein Problem behoben, bei dem der Header &quot;referer&quot;in manchen Edge-Fällen bei Anforderungen an das Edge-Netzwerk nicht ordnungsgemäß festgelegt wurde.
+* Es wurde ein Problem behoben, bei dem [Benutzeragenten-Clienthinweis](fundamentals/user-agent-client-hints.md) -Eigenschaften auf einen falschen Typ eingestellt werden.
+* Es wurde ein Problem behoben, bei dem `placeContext.localTime` nicht mit dem Schema übereinstimmt.
 
 ## Version 2.13.1 - 13. Oktober 2022
 
