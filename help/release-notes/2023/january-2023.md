@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform - Versionshinweise Januar 2023
 description: Die Versionshinweise für Adobe Experience Platform vom Januar 2023.
-source-git-commit: 0f2ddad37db87d8818281067e3a30cc1b2fb6418
+source-git-commit: 68e5baac9012a33d179f8ebff23deda7a8efd26b
 workflow-type: tm+mt
-source-wordcount: '1316'
-ht-degree: 36%
+source-wordcount: '1371'
+ht-degree: 38%
 
 ---
 
@@ -18,6 +18,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [Datenerfassung](#data-collection)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Echtzeit-Kundenprofil](#profile)
+- [Segmentation Service](#segmentation)
 - [Quellen](#sources)
 
 ## Assurance {#assurance}
@@ -93,15 +94,6 @@ Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-S
 
 Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Mit dem Echtzeit-Kundenprofil können Sie eine ganzheitliche Ansicht jedes einzelnen Kunden anzeigen, die Daten aus mehreren Kanälen kombiniert, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. Mit dem Profil können Sie Ihre Kundendaten in einer zentralen Ansicht zusammenführen, die eine aussagekräftige Darstellung jeder Kundeninteraktion mit Zeitstempel bietet.
 
-**Neue oder aktualisierte Funktionen**
-
-| Funktion | Beschreibung |
-| ------- | ----------- |
-| Von der Plattform generierte Segmentmitgliedschaftsgültigkeit | Jede Segmentzugehörigkeit, die sich im `Exited` für mehr als 30 Tage, basierend auf dem `lastQualificationTime` -Feld kann gelöscht werden. |
-| Ablauf der Mitgliedschaft in einer externen Zielgruppe | Standardmäßig werden externe Zielgruppenmitgliedschaften 30 Tage lang aufbewahrt. Um sie länger aufzubewahren, verwenden Sie die `validUntil` -Feld während der Erfassung von Zielgruppendaten. |
-
-{style=&quot;table-layout:auto&quot;}
-
 **Bevorstehende Einstellung** {#deprecation}
 
 Um Redundanz im Lebenszyklus der Segmentmitgliedschaft zu entfernen, muss die `Existing` Der Status wird vom [Segmentzugehörigkeitszuordnung](../../xdm/field-groups/profile/segmentation.md) Ende März 2023. Eine Folgenachricht enthält das genaue Datum der Einstellung.
@@ -111,6 +103,21 @@ Nach der Einstellung werden in einem Segment qualifizierte Profile als `Realized
 Diese Änderung könnte sich auf Sie auswirken, wenn Sie [Enterprise-Ziele](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, HTTP API) und haben automatisierte nachgelagerte Prozesse basierend auf der `Existing` Status. Überprüfen Sie Ihre nachgelagerten Integrationen, falls dies für Sie der Fall ist. Wenn Sie über einen bestimmten Zeitraum hinaus an der Identifizierung neu qualifizierter Profile interessiert sind, sollten Sie eine Kombination aus `Realized` und `lastQualificationTime` in Ihrer Segmentzugehörigkeitszuordnung. Weitere Informationen erhalten Sie von Ihrem Kundenbetreuer bei der Adobe.
 
 Um mehr über das Echtzeit-Kundenprofil zu erfahren, einschließlich Tutorials und Best Practices für die Arbeit mit Profildaten, lesen Sie zunächst das [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
+
+## Segmentierungs-Service {#segmentation}
+
+[!DNL Segmentation Service] definiert eine bestimmte Untergruppe von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Segmente können auf Datensatzdaten (z. B. demografische Daten) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Von der Plattform generierte Segmentmitgliedschaftsgültigkeit | Jede Segmentzugehörigkeit, die sich im `Exited` für mehr als 30 Tage, basierend auf dem `lastQualificationTime` -Feld kann gelöscht werden. |
+| Ablauf der Mitgliedschaft in einer externen Zielgruppe | Standardmäßig werden externe Zielgruppenmitgliedschaften 30 Tage lang aufbewahrt. Um sie länger aufzubewahren, verwenden Sie die `validUntil` -Feld während der Erfassung von Zielgruppendaten. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Übersicht zu Segmentierung](../../segmentation/home.md).
 
 ## Quellen {#sources}
 
