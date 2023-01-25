@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Descriptors-API-Endpunkt
 description: Mit dem Endpunkt /descriptors in der Schema Registry-API können Sie XDM-Deskriptoren in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
 workflow-type: tm+mt
-source-wordcount: '1900'
-ht-degree: 44%
+source-wordcount: '1956'
+ht-degree: 42%
 
 ---
 
@@ -357,7 +357,7 @@ Mit Anzeigenamendeskriptoren können Benutzer die `title`, `description`und `met
 | `xdm:title` | Der neue Titel, den Sie für dieses Feld anzeigen möchten, geschrieben mit großem Anfangsbuchstaben. |
 | `xdm:description` | Zusammen mit dem Titel kann eine optionale Beschreibung hinzugefügt werden. |
 | `meta:enum` | Wenn das Feld durch `xdm:sourceProperty` ein Zeichenfolgenfeld ist, `meta:enum` kann verwendet werden, um empfohlene Werte für das Feld in der Segmentierungsbenutzeroberfläche hinzuzufügen. Es ist wichtig festzustellen, dass `meta:enum` deklariert keine Auflistung oder stellt keine Datenvalidierung für das XDM-Feld bereit.<br><br>Dies sollte nur für von Adobe definierte Core-XDM-Felder verwendet werden. Wenn die Quelleigenschaft ein von Ihrer Organisation definiertes benutzerdefiniertes Feld ist, sollten Sie stattdessen die `meta:enum` -Eigenschaft direkt über eine PATCH-Anfrage an die übergeordnete Ressource des Felds. |
-| `meta:excludeMetaEnum` | Wenn das Feld durch `xdm:sourceProperty` ist ein Zeichenfolgenfeld, in dem vorhandene empfohlene Werte unter einem `meta:enum` -Feld können Sie dieses Objekt in einen Anzeigenamendeskriptor einschließen, um einige oder alle dieser Werte aus der Segmentierung auszuschließen. Schlüssel und Wert für jeden Eintrag müssen mit denen im Original übereinstimmen `meta:enum` des Felds, damit der Eintrag ausgeschlossen wird. |
+| `meta:excludeMetaEnum` | Wenn das Feld durch `xdm:sourceProperty` ist ein Zeichenfolgenfeld, in dem vorhandene empfohlene Werte unter einem `meta:enum` -Feld können Sie dieses Objekt in einen Anzeigenamendeskriptor einschließen, um einige oder alle dieser Werte aus der Segmentierung auszuschließen. Schlüssel und Wert für jeden Eintrag müssen mit denen im Original übereinstimmen `meta:enum` des Felds, damit der Eintrag ausgeschlossen wird.<br><br>Beachten Sie, dass Sie Werte nur für Zeichenfolgenfelder ausschließen können, die **nur empfohlene Werte**. Wenn das Zeichenfolgenfeld &quot;IST&quot;enthält `enum` -Beschränkungen festlegen, können die zugehörigen vorgeschlagenen Werte nicht deaktiviert werden. `enum` Felder aus benutzerdefinierten Ressourcen, die von Ihrem Unternehmen definiert wurden, können zwar über PATCH-Anfragen bearbeitet werden, `enum` -Felder aus von Adoben definierten Standardressourcen können nicht entfernt werden. |
 
 {style=&quot;table-layout:auto&quot;}
 

@@ -2,9 +2,9 @@
 title: Definieren von XDM-Feldern in der Schema Registry-API
 description: Erfahren Sie, wie Sie beim Erstellen benutzerdefinierter Experience-Datenmodell (XDM)-Ressourcen in der Schema Registry-API verschiedene Felder definieren.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 6277725cd69bc94325d3584177742df1a7fd4f95
+source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1202'
 ht-degree: 3%
 
 ---
@@ -101,7 +101,7 @@ Sie können optional für jeden Wert unter einer `meta:enum` -Eigenschaft, wobei
 
 >[!NOTE]
 >
->Die `meta:enum` Wert: **not** Deklarieren Sie eine Auflistung oder führen Sie eine Datenvalidierung allein durch. In den meisten Fällen werden unter `meta:enum` werden auch `enum` , um sicherzustellen, dass die Daten begrenzt sind. Es gibt jedoch einige Anwendungsfälle, in denen `meta:enum` ohne entsprechende `enum` Array. Siehe Tutorial zu [Definieren empfohlener Werte](../tutorials/suggested-values.md) für weitere Informationen.
+>Die `meta:enum` Wert: **not** Deklarieren Sie eine Auflistung oder führen Sie eine Datenvalidierung allein durch. In den meisten Fällen werden unter `meta:enum` werden auch `enum` , um sicherzustellen, dass die Daten begrenzt sind. Es gibt jedoch einige Anwendungsfälle, in denen `meta:enum` ohne entsprechende `enum` Array. Siehe Tutorial zu [Definieren empfohlener Werte in der API](../tutorials/suggested-values.md) für weitere Informationen.
 
 Sie können optional eine `default` -Eigenschaft zum Angeben der Standardeinstellung `enum` -Wert, den das Feld verwendet, wenn kein Wert angegeben ist.
 
