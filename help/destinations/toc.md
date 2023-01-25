@@ -4,9 +4,9 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: bdc6ef162e9684065b60a13670848dac64be21fd
+source-git-commit: f89c6a11199bff2d91414e8370c1fd9693308fc6
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '992'
 ht-degree: 99%
 
 ---
@@ -48,6 +48,7 @@ ht-degree: 99%
    * [Zielkatalog – Übersicht](./catalog/overview.md)
    * Adobe-Ziele {#adobe}
       * [Adobe-Ziele – Übersicht](./catalog/adobe/overview.md)
+      * [(Beta) Experience Cloud-Zielgruppen](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Marketo Engage-Verbindung](./catalog/adobe/marketo-engage.md)
       * [Segmentfreigabe in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de)
    * Werbeziele {#advertising}

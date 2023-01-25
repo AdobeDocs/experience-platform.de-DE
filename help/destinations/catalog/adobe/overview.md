@@ -3,10 +3,10 @@ keywords: Ziele; Experience Cloud-Lösungen; Zielgruppe; Zielbestimmung; Adcloud
 title: Adobe-Ziele – Übersicht
 description: Verwalten Sie Ihr Kundenerlebnis, indem Sie Ihre Daten in Platform mit anderen Adobe Experience Cloud-Lösungen für Anzeigen-Targeting, Personalisierung, Marketing-Automatisierung und mehr verbinden.
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 4ac73a83188a11900f38307ca8d743de4c186fdb
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 32%
+source-wordcount: '230'
+ht-degree: 31%
 
 ---
 
@@ -24,7 +24,10 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 
 ### Verbindungen
 
+* [Adobe Advertising Cloud DSP-Verbindung](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md)
 * [Adobe Campaign-Verbindung](../email-marketing/adobe-campaign.md)
+* [Adobe Target-Verbindung](/help/destinations/catalog/personalization/adobe-target-connection.md)
+* [(Beta) Experience Cloud-Zielgruppen](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 * [Marketo Engage-Verbindung](/help/destinations/catalog/adobe/marketo-engage.md)
 
 ### Erweiterungen
