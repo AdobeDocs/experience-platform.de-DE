@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform - Versionshinweise Januar 2023
 description: Die Versionshinweise für Adobe Experience Platform vom Januar 2023.
-source-git-commit: 3fd3e96d5db6b1e63df338efe383d209690eb1f6
+source-git-commit: 0f2ddad37db87d8818281067e3a30cc1b2fb6418
 workflow-type: tm+mt
-source-wordcount: '936'
-ht-degree: 43%
+source-wordcount: '1316'
+ht-degree: 36%
 
 ---
 
@@ -14,9 +14,25 @@ ht-degree: 43%
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
+- [Assurance](#assurance)
 - [Datenerfassung](#data-collection)
 - [Experience-Datenmodell (XDM)](#xdm)
+- [Echtzeit-Kundenprofil](#profile)
 - [Quellen](#sources)
+
+## Assurance {#assurance}
+
+Mit Adobe Assurance können Sie die Datenerfassung und die Bereitstellung von Erlebnissen in Ihrer App überprüfen, testen, simulieren und überprüfen.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Validierungs-Editor | Es wurden neue Verbesserungen am Validierungs-Editor hinzugefügt. Zu diesen Verbesserungen gehören Überprüfungsspalten, neue Tools zur Codeerstellung und verbesserte Ansichten. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Weitere Informationen zur Zuverlässigkeitserklärung finden Sie im [Dokumentation zur Sicherheit](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
 ## Datenerfassung {#data-collection}
 
@@ -72,6 +88,29 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 {style=&quot;table-layout:auto&quot;}
 
 Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md).
+
+## Echtzeit-Kundenprofil {#profile}
+
+Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Mit dem Echtzeit-Kundenprofil können Sie eine ganzheitliche Ansicht jedes einzelnen Kunden anzeigen, die Daten aus mehreren Kanälen kombiniert, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. Mit dem Profil können Sie Ihre Kundendaten in einer zentralen Ansicht zusammenführen, die eine aussagekräftige Darstellung jeder Kundeninteraktion mit Zeitstempel bietet.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Von der Plattform generierte Segmentmitgliedschaftsgültigkeit | Jede Segmentzugehörigkeit, die sich im `Exited` für mehr als 30 Tage, basierend auf dem `lastQualificationTime` -Feld kann gelöscht werden. |
+| Ablauf der Mitgliedschaft in einer externen Zielgruppe | Standardmäßig werden externe Zielgruppenmitgliedschaften 30 Tage lang aufbewahrt. Um sie länger aufzubewahren, verwenden Sie die `validUntil` -Feld während der Erfassung von Zielgruppendaten. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Bevorstehende Einstellung** {#deprecation}
+
+Um Redundanz im Lebenszyklus der Segmentmitgliedschaft zu entfernen, muss die `Existing` Der Status wird vom [Segmentzugehörigkeitszuordnung](../../xdm/field-groups/profile/segmentation.md) Ende März 2023. Eine Folgenachricht enthält das genaue Datum der Einstellung.
+
+Nach der Einstellung werden in einem Segment qualifizierte Profile als `Realized` und Profile, die disqualifiziert sind, weiterhin als `Exited`. Dies führt zu Parität mit dateibasierten Zielen mit `Active` und `Expired` Segmentstatus.
+
+Diese Änderung könnte sich auf Sie auswirken, wenn Sie [Enterprise-Ziele](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, HTTP API) und haben automatisierte nachgelagerte Prozesse basierend auf der `Existing` Status. Überprüfen Sie Ihre nachgelagerten Integrationen, falls dies für Sie der Fall ist. Wenn Sie über einen bestimmten Zeitraum hinaus an der Identifizierung neu qualifizierter Profile interessiert sind, sollten Sie eine Kombination aus `Realized` und `lastQualificationTime` in Ihrer Segmentzugehörigkeitszuordnung. Weitere Informationen erhalten Sie von Ihrem Kundenbetreuer bei der Adobe.
+
+Um mehr über das Echtzeit-Kundenprofil zu erfahren, einschließlich Tutorials und Best Practices für die Arbeit mit Profildaten, lesen Sie zunächst das [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
 
 ## Quellen {#sources}
 
