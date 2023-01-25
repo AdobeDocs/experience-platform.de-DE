@@ -2,10 +2,10 @@
 title: Überwachung geplanter Abfragen
 description: Erfahren Sie, wie Sie Abfragen über die Benutzeroberfläche des Abfrage-Service überwachen.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 7b5a22d849f0f46a9ff14843c594b743bbd01c9d
+source-git-commit: d4966eea90884cea8fbb4b72be8d9625d5745d57
 workflow-type: tm+mt
-source-wordcount: '1044'
-ht-degree: 98%
+source-wordcount: '1204'
+ht-degree: 74%
 
 ---
 
@@ -15,7 +15,7 @@ Adobe Experience Platform bietet über die Benutzeroberfläche eine verbesserte 
 
 ## [!UICONTROL Geplante Abfragen]
 
-Die Registerkarte [!UICONTROL Geplante Abfragen] bietet einen Überblick über die ausgeführten und geplanten Abfragen. Der Arbeitsbereich enthält alle CTAS- und ITAS-Abfragen, die entweder ausgeführt werden sollen oder mindestens einmal ausgeführt wurden. Sie finden Ausführungsdetails für alle geplanten Abfragen sowie Fehler-Codes und Meldungen für fehlgeschlagene Abfragen.
+Die [!UICONTROL Geplante Abfragen] bietet einen Überblick über alle geplanten CTAS- und ITAS-Abfragen. Ausführungsdetails finden Sie für alle geplanten Abfragen sowie Fehlercodes und Meldungen für fehlgeschlagene Abfragen.
 
 Um zur Registerkarte [!UICONTROL Geplante Abfragen] zu navigieren, wählen Sie **[!UICONTROL Abfragen]** in der linken Navigationsleiste und anschließend **[!UICONTROL Geplante Abfragen]**
 
@@ -29,14 +29,14 @@ In der folgenden Tabelle werden die einzelnen verfügbaren Spalten beschrieben.
 
 | Spalte | Beschreibung |
 |---|---|
-| Name | Das Namensfeld enthält entweder den Namen der Vorlage oder die ersten Zeichen Ihrer SQL-Abfrage. Jede Abfrage, die über die Benutzeroberfläche mit dem Abfrage-Editor erstellt wurde, wird zu Beginn benannt. Wenn die Abfrage über die API erstellt wurde, ist der Name der Abfrage ein Ausschnitt des ursprünglichen SQL-Codes, der zum Erstellen der Abfrage verwendet wurde. |
-| Vorlage | Der Name der Abfragevorlage. Klicken Sie auf einen Vorlagennamen, um zum Abfrage-Editor zu navigieren. Die Abfragevorlage wird aus praktischen Gründen im Abfrage-Editor angezeigt. Wenn kein Vorlagenname vorhanden ist, wird die Zeile mit einem Bindestrich markiert und es ist nicht möglich, zum Abfrage-Editor umzuleiten, um die Abfrage anzuzeigen. |
-| SQL | Ein Ausschnitt der SQL-Abfrage. |
-| Ausführungshäufigkeit | Dies ist die Kadenz, in der Ihre Abfrage ausgeführt werden soll. Die unterstützten Werte sind `Run once` und `Scheduled`. Abfragen können entsprechend ihrer Ausführungshäufigkeit gefiltert werden. |
-| Erstellt von | Der Name der Person, die die Abfrage erstellt hat. |
-| Erstellt | Der Zeitstempel der Erstellung der Abfrage im UTC-Format. |
-| Zeitstempel der letzten Ausführung | Der Zeitstempel der letzten Ausführung der Abfrage. Diese Spalte zeigt, ob eine Abfrage gemäß ihrem aktuellen Zeitplan ausgeführt wurde. |
-| Status der letzten Ausführung | Der Status der letzten Abfrageausführung. Die drei Statuswerte sind `successful`, `failed` oder `in progress`. |
+| **[!UICONTROL Name]** | Das Namensfeld enthält entweder den Namen der Vorlage oder die ersten Zeichen Ihrer SQL-Abfrage. Jede Abfrage, die über die Benutzeroberfläche mit dem Abfrage-Editor erstellt wurde, wird zu Beginn benannt. Wenn die Abfrage über die API erstellt wurde, wird ihr Name zu einem Snippet der ursprünglichen SQL, die zur Erstellung der Abfrage verwendet wurde. Wählen Sie ein Element aus dem [!UICONTROL Name] -Spalte, um eine Liste aller mit der Abfrage verknüpften Ausführungen anzuzeigen. Weitere Informationen finden Sie unter [Zeitplandetails der Abfrage ausführen](#query-runs) Abschnitt. |
+| **[!UICONTROL Vorlage]** | Der Name der Abfragevorlage. Klicken Sie auf einen Vorlagennamen, um zum Abfrage-Editor zu navigieren. Die Abfragevorlage wird aus praktischen Gründen im Abfrage-Editor angezeigt. Wenn kein Vorlagenname vorhanden ist, wird die Zeile mit einem Bindestrich markiert und es ist nicht möglich, zum Abfrage-Editor umzuleiten, um die Abfrage anzuzeigen. |
+| **[!UICONTROL SQL]** | Ein Ausschnitt der SQL-Abfrage. |
+| **[!UICONTROL Ausführungshäufigkeit]** | Dies ist die Kadenz, in der Ihre Abfrage ausgeführt werden soll. Die unterstützten Werte sind `Run once` und `Scheduled`. Abfragen können entsprechend ihrer Ausführungshäufigkeit gefiltert werden. |
+| **[!UICONTROL Erstellt von]** | Der Name der Person, die die Abfrage erstellt hat. |
+| **[!UICONTROL Erstellt]** | Der Zeitstempel der Erstellung der Abfrage im UTC-Format. |
+| **[!UICONTROL Zeitstempel der letzten Ausführung]** | Der Zeitstempel der letzten Ausführung der Abfrage. Diese Spalte zeigt, ob eine Abfrage gemäß ihrem aktuellen Zeitplan ausgeführt wurde. |
+| **[!UICONTROL Status der letzten Ausführung]** | Der Status der letzten Abfrageausführung. Die Statuswerte sind: `Success`, `Failed`, `In progress`und `No runs`. |
 
 >[!TIP]
 >
@@ -64,7 +64,7 @@ Sie können Warnhinweise über die Registerkarte [!UICONTROL Geplante Abfragen] 
 
 Siehe [Dokumentation zur API für Warnhinweise](../api/alert-subscriptions.md) für weitere Informationen.
 
-### Filtern von Abfragen
+### Filtern von Abfragen {#filter}
 
 Sie können Abfragen nach der Ausführungsfrequenz filtern. Wählen Sie dazu über die Registerkarte [!UICONTROL Geplante Abfragen] das Filtersymbol (![Filtersymbol](../images/ui/monitor-queries/filter-icon.png)) aus, um die Filter-Seitenleiste zu öffnen.
 
@@ -80,7 +80,7 @@ Wählen Sie für die Ausführungshäufigkeit entweder das Kontrollkästchen **[!
 
 Nachdem Sie Ihre Filterkriterien aktiviert haben, wählen Sie **[!UICONTROL Filter ausblenden]** aus, um den Filterbereich zu schließen.
 
-## Zeitplandetails für Abfragendurchläufe
+## Zeitplandetails für Abfragen {#query-runs}
 
 Klicken Sie auf einen Abfragenamen, um zur Seite mit den Zeitplandetails zu navigieren. Diese Ansicht enthält eine Liste aller im Rahmen dieser geplanten Abfrage ausgeführten Durchläufe. Die bereitgestellten Informationen umfassen die Anfangs- und Endzeit, den Status und den verwendeten Datensatz.
 
@@ -90,23 +90,23 @@ Diese Informationen werden in einer fünfspaltigen Tabelle bereitgestellt. Jede 
 
 | Spaltenname | Beschreibung |
 |---|---|
-| ID der Abfrageausführung | Die ID der Abfrageausführung für die tägliche Ausführung. |
-| Start der Abfrageausführung | Der Zeitstempel, wann die Abfrage ausgeführt wurde. Dieser liegt im UTC-Format vor. |
-| Abfrageausführung abgeschlossen | Der Zeitstempel, wann die Abfrage abgeschlossen wurde. Dieser liegt im UTC-Format vor. |
-| Status | Der Status der letzten Abfrageausführung. Die drei Statuswerte sind: `successful`, `failed` oder `in progress`. |
-| Datensatz | Der an der Ausführung beteiligte Datensatz. |
+| **[!UICONTROL ID der Abfrageausführung]** | Die ID der Abfrageausführung für die tägliche Ausführung. Wählen Sie die **[!UICONTROL Abfragelaufkennung]** , um zur [!UICONTROL Übersicht über die Ausführung von Abfragen]. |
+| **[!UICONTROL Start der Abfrageausführung]** | Der Zeitstempel, wann die Abfrage ausgeführt wurde. Dieser liegt im UTC-Format vor. |
+| **[!UICONTROL Abfrageausführung abgeschlossen]** | Der Zeitstempel, wann die Abfrage abgeschlossen wurde. Dieser liegt im UTC-Format vor. |
+| **[!UICONTROL Status]** | Der Status der letzten Abfrageausführung. Die drei Statuswerte sind `successful`, `failed` oder `in progress`. |
+| **[!UICONTROL Datensatz]** | Der an der Ausführung beteiligte Datensatz. |
 
 Details zur geplanten Abfrage finden Sie im Bedienfeld [!UICONTROL Eigenschaften]. Dieses Bedienfeld enthält die anfängliche Abfrage-ID, den Client-Typ, den Vorlagennamen, die Abfrage-SQL und die Kadenz des Zeitplans.
 
 ![Die Seite mit den Zeitplandetails mit hervorgehobenem Eigenschaftenbereich.](../images/ui/monitor-queries/properties-panel.png)
 
-### Ausführungsdetails
-
 Wählen Sie eine ID für die Abfrageausführung aus, um zur Seite mit den Ausführungsdetails zu navigieren und Abfrageinformationen anzuzeigen.
 
 ![Der Bildschirm mit den Zeitplandetails mit einer hervorgehobenen Ausführungs-ID.](../images/ui/monitor-queries/navigate-to-run-details.png)
 
-Diese Ansicht enthält Informationen zu den einzelnen Ausführungen für diese geplante Abfrage sowie eine detailliertere Aufschlüsselung des Ausführungsstatus. Auf dieser Seite finden Sie außerdem die Client-Informationen und Details zu Fehlern, die zum Fehlschlagen der Abfrage geführt haben.
+## Übersicht über die Ausführung von Abfragen {#query-run-overview}
+
+Die [!UICONTROL Übersicht über die Ausführung von Abfragen] enthält Informationen zu einzelnen Ausführungen für diese geplante Abfrage und eine detailliertere Aufschlüsselung des Ausführungsstatus. Auf dieser Seite finden Sie außerdem die Client-Informationen und Details zu Fehlern, die dazu geführt haben, dass die Abfrage fehlschlägt.
 
 ![Der Bildschirm mit den Ausführungsdetails mit hervorgehobenem Übersichtsabschnitt.](../images/ui/monitor-queries/query-run-details.png)
 
@@ -117,6 +117,20 @@ Der Abschnitt „Abfragestatus“ enthält den Fehler-Code und die Fehlermeldung
 Sie können die Abfrage-SQL aus dieser Ansicht in die Zwischenablage kopieren. Wählen Sie das Kopiersymbol oben rechts im SQL-Snippet aus, um die Abfrage zu kopieren. Eine Popup-Meldung bestätigt, dass der Code kopiert wurde.
 
 ![Der Bildschirm mit den Ausführungsdetails mit hervorgehobenem Symbol „SQL-Kopie“.](../images/ui/monitor-queries/copy-sql.png)
+
+### Ausführliche Informationen zu Abfragen mit anonymen Bausteinen {#anonymous-block-queries}
+
+Abfragen, die anonyme Bausteine verwenden, um ihre SQL-Anweisungen zu enthalten, werden in ihre einzelnen Abfragen unterteilt. Auf diese Weise können Sie die Ausführungsdetails für jeden Abfrageblock einzeln überprüfen.
+
+Anonyme Bausteine werden mithilfe eines `$$` vor der Abfrage. Siehe [Anonym-Blockdokument](../essential-concepts/anonymous-block.md) um mehr über anonyme Bausteine im Abfragedienst zu erfahren.
+
+Abfragen anonymer Bausteine verfügen über Registerkarten links neben dem Ausführungsstatus. Wählen Sie eine Registerkarte aus, um die Ausführungsdetails anzuzeigen.
+
+![Die Übersicht über die Ausführung von Abfragen mit einer anonymen Blockabfrage. Die Tabs für mehrere Abfragen sind hervorgehoben.](../images/ui/monitor-queries/anonymous-block-overview.png)
+
+Wenn eine anonyme Blockabfrage fehlschlägt, können Sie über diese Benutzeroberfläche den Fehlercode für diesen Baustein finden.
+
+![Die Übersicht über die Abfrage-Ausführung zeigt eine anonyme Blockabfrage an, wobei der Fehlercode für einen einzelnen Block hervorgehoben ist.](../images/ui/monitor-queries/anonymous-block-failed-query.png)
 
 Wählen Sie **[!UICONTROL Abfrage]** aus, um zum Bildschirm mit den Zeitplandetails zurückzukehren, oder wählen Sie **[!UICONTROL Geplante Abfragen]** aus, um zur Registerkarte [!UICONTROL Geplante Abfragen] zurückzukehren.
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Anleitung zu Query Service-Anmeldedaten
 description: Der Abfrage-Service von Adobe Experience Platform bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzenden in Ihrer IMS-Organisation gespeichert wurden.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: d5d69134627b1a162691bda95732d989bd6e3469
 workflow-type: tm+mt
-source-wordcount: '1317'
-ht-degree: 5%
+source-wordcount: '1330'
+ht-degree: 6%
 
 ---
 
@@ -28,11 +28,11 @@ Sie können ablaufende Anmeldedaten verwenden, um schnell eine Verbindung zu ein
 
 Die **[!UICONTROL Ablaufberechtigungen]** enthält die folgenden Informationen:
 
-- **[!UICONTROL Host]**: Der Name des Hosts, mit dem Sie eine Verbindung herstellen möchten. Für die Verbindung mit Query Service enthält dies den Namen der IMS-Organisation, die Sie derzeit verwenden.
-- **[!UICONTROL Port]**: Die Anschlussnummer des Hosts, mit dem Sie eine Verbindung herstellen möchten.
-- **[!UICONTROL Datenbank]**: Der Name der Datenbank, mit der Sie eine Verbindung herstellen möchten.
-- **[!UICONTROL Benutzername]**: Der Benutzername, mit dem Sie eine Verbindung zu Query Service herstellen.
-- **[!UICONTROL Passwort]**: Das Kennwort, mit dem Sie eine Verbindung zu Query Service herstellen.
+- **[!UICONTROL Host]**: Der Name des Hosts, mit dem Ihr Client verbunden werden soll. Dies beinhaltet den Namen Ihres Unternehmens, der im oberen Band der Platform-Benutzeroberfläche angezeigt wird.
+- **[!UICONTROL Port]**: Die Anschlussnummer des Hosts, mit dem eine Verbindung hergestellt werden soll.
+- **[!UICONTROL Datenbank]**: Der Name der Datenbank, mit der ein Client verbunden werden soll.
+- **[!UICONTROL Benutzername]**: Der Benutzername, der für die Verbindung mit Query Service verwendet wird.
+- **[!UICONTROL Passwort]**: Das Kennwort für die Verbindung mit Query Service. Passwörter in der Benutzeroberfläche wurden aus Sicherheitsgründen gehasht. Wählen Sie das Kopiersymbol (![Das Kopiersymbol.](../images/ui/credentials/copy-icon.png)), um Ihre vollständigen, nicht gehashten Anmeldedaten in die Zwischenablage zu kopieren.
 - **[!UICONTROL PSQL-Befehl]**: Ein Befehl, der automatisch alle relevanten Informationen eingefügt hat, damit Sie über PSQL über die Befehlszeile eine Verbindung zu Query Service herstellen können.
 - **[!UICONTROL Läuft ab]**: Das Ablaufdatum und die Ablaufzeit für die ablaufenden Anmeldeinformationen. Die standardmäßige Gültigkeitsdauer des Tokens beträgt 24 Stunden. Sie kann jedoch in den erweiterten Einstellungen der Admin Console geändert werden.
 

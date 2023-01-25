@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Abfrage-Service-Benutzeroberfläche
 description: Der Abfrage-Service von Adobe Experience Platform bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzenden in Ihrer IMS-Organisation gespeichert wurden.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 8a5f741b8992bc61cb25864a6695e55768e7aac2
 workflow-type: tm+mt
-source-wordcount: '1095'
-ht-degree: 86%
+source-wordcount: '1117'
+ht-degree: 79%
 
 ---
 
@@ -61,6 +61,8 @@ Die Registerkarte **[!UICONTROL Vorlagen]** enthält Abfragen, die von Benutzend
 | **[!UICONTROL Geändert von]** | Der letzte Benutzer, der die Abfrage geändert hat. Jeder Benutzer in Ihrer Organisation, der Zugriff auf [!DNL Query Service] hat, kann Abfragen ändern. |
 | **[!UICONTROL Zuletzt geändert]** | Datum und Uhrzeit der letzten Änderung der Abfrage in der Zeitzone des Browsers. |
 
+Siehe [Abfragevorlagen](./query-templates.md) Dokumentation finden Sie weitere Informationen zu Vorlagen in der Platform-Benutzeroberfläche.
+
 ## Protokoll
 
 Die Registerkarte **[!UICONTROL Protokoll]** enthält eine Liste der Abfragen, die bereits ausgeführt wurden. Standardmäßig werden die Abfragen im Protokoll in umgekehrter chronologischer Reihenfolge aufgelistet.
@@ -69,13 +71,16 @@ Die Registerkarte **[!UICONTROL Protokoll]** enthält eine Liste der Abfragen, d
 
 | Spalte | Beschreibung |
 | --- | --- |
-| **[!UICONTROL Name]** | Der Abfragename, der aus den ersten Zeichen der SQL-Abfrage besteht. Wenn Sie auf den Namen klicken, wird der [!DNL Query Editor] geöffnet, wo Sie die Abfrage bearbeiten können. Sie können die Suchleiste verwenden, um nach dem Namen einer Abfrage zu suchen. Bei Suchen wird zwischen Groß- und Kleinschreibung unterschieden. |
-| **[!UICONTROL Erstellt von]** | Der Name der Person, die die Abfrage erstellt hat. |
-| **[!UICONTROL Client]** | Der für die Abfrage verwendete Client. |
-| **[!UICONTROL Datensatz]** | Der von der Abfrage verwendete Eingabedatensatz. Wählen Sie den Datensatz aus, um zum Bildschirm mit den Details des Eingabedatensatzes zu gelangen. |
+| **[!UICONTROL Name]** | Der Abfragename, der aus den ersten Zeichen der SQL-Abfrage besteht. Wählen Sie den Vorlagennamen aus, um den [!UICONTROL Details zum Abfrage-Protokoll] anzeigen. Sie können die Suchleiste verwenden, um nach dem Namen einer Abfrage zu suchen. Bei Suchen wird zwischen Groß- und Kleinschreibung unterschieden. |
+| **[!UICONTROL Startzeit]** | Der Zeitpunkt, zu dem die Abfrage ausgeführt wurde. |
+| **[!UICONTROL Abschlusszeit]** | Die Zeit, zu der die Abfrage ausgeführt wurde. |
 | **[!UICONTROL Status]** | Der aktuelle Status der Abfrage. |
-| **[!UICONTROL Letzte Ausführung]** | Wann die Abfrage zuletzt ausgeführt wurde. Sie können die Liste in auf- oder absteigender Reihenfolge sortieren, indem Sie auf den Pfeil über dieser Spalte klicken. |
-| **[!UICONTROL Laufzeit]** | Die Zeit, die zum Ausführen der Abfrage benötigt wurde. |
+| **[!UICONTROL Datensatz]** | Der von der Abfrage verwendete Eingabedatensatz. Wählen Sie den Datensatz aus, um zum Bildschirm mit den Details des Eingabedatensatzes zu gelangen. |
+| **[!UICONTROL Client]** | Der für die Abfrage verwendete Client. |
+| **[!UICONTROL Erstellt von]** | Der Name der Person, die die Abfrage erstellt hat. |
+
+>!![Note]
+Wählen Sie das Stiftsymbol (![Ein Bleistiftsymbol.](../images/ui/overview/edit-icon.png)) aus einer beliebigen Zeile des Abfrageprotokolls, um zur [!DNL Query Editor]. Die Abfrage wird vorab ausgefüllt, um die Bearbeitung zu erleichtern.
 
 ## Anmeldeinformationen
 

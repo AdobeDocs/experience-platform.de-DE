@@ -2,10 +2,10 @@
 title: Abfragevorlagen
 description: Abfragevorlagen sind wiederverwendbare gespeicherte SQL-Abfragen, die von anderen Benutzenden wiederverwendet werden können, um Zeit und Mühe zu sparen. Sie können mit dem Abfrage-Editor oder der Abfrage-Service-API erstellt werden und sind für alle Experience Platform-Datensätze verfügbar.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
-workflow-type: ht
-source-wordcount: '436'
-ht-degree: 100%
+source-git-commit: d5d69134627b1a162691bda95732d989bd6e3469
+workflow-type: tm+mt
+source-wordcount: '504'
+ht-degree: 86%
 
 ---
 
@@ -27,6 +27,8 @@ Sie können Abfragevorlagen auf zwei Arten erstellen: entweder indem Sie eine PO
 
 In der Dokumentation finden Sie Anweisungen dazu, wie Sie mit dem Abfrage-Editor [Abfragen schreiben](./user-guide.md#query-authoring) und [speichern](./user-guide.md#saving-queries) können. Nachdem Sie Ihre Abfrage benannt und gespeichert haben, kann sie als Abfragevorlage über die Registerkarte [!UICONTROL Vorlagen] wiederverwendet werden.
 
+## Abfragevorlagen durchsuchen {#browse}
+
 Wählen Sie im Arbeitsbereich „Abfragen“ der Platform-Benutzeroberfläche die Option **[!UICONTROL Vorlagen]**, um die Liste der verfügbaren gespeicherten Abfragen anzuzeigen.
 
 ![Der Arbeitsbereich „Abfragen“ mit hervorgehobener Registerkarte „Vorlagen“.](../images/ui/query-templates/query-templates.png)
@@ -34,6 +36,13 @@ Wählen Sie im Arbeitsbereich „Abfragen“ der Platform-Benutzeroberfläche di
 Um relevante Vorlageninformationen zu finden, klicken Sie auf eine beliebige Abfragevorlage aus der verfügbaren Liste, um das Detailbedienfeld zu öffnen.
 
 ![Das Detailbedienfeld im Arbeitsbereich „Abfragen“ mit hervorgehobener Abfrage-ID.](../images/ui/query-templates/details-panel.png)
+
+Im Detailbereich können Sie vier separate Aktionen ausführen:
+
+* Auswählen **[!UICONTROL Ausgabedatensatz]** , um den Ausgabedatensatz für die ausgewählte Vorlage zu bearbeiten.
+* Auswählen **[!UICONTROL Zeitplan anzeigen]** , um zur [!UICONTROL Zeitpläne] Registerkarte. Diese Ansicht enthält alle Planinformationen, die mit der Abfrage verknüpft sind.
+* Auswählen **[!UICONTROL Abfrage löschen]** , um die Vorlage zu löschen.
+* Wählen Sie den Vorlagennamen aus, um zum Abfrage-Editor zu navigieren, in dem die SQL vorab zur Bearbeitung ausgefüllt ist.
 
 ### Erstellen einer Vorlage mithilfe der Abfrage-Service-API
 
