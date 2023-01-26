@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Analytics Source Connector; Analytics; Analytics; AAID;
 title: Adobe Analytics Source Connector für Report Suite-Daten
 description: Dieses Dokument bietet Ihnen einen Überblick über Analytics und beschreibt die Anwendungsfälle für Analytics-Daten.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 486f5bdd834808c6262f41c0b0187721fc9b0799
 workflow-type: tm+mt
-source-wordcount: '1014'
-ht-degree: 20%
+source-wordcount: '1040'
+ht-degree: 19%
 
 ---
 
@@ -20,7 +19,7 @@ Dieses Dokument bietet einen Überblick über [!DNL Analytics] und beschreibt di
 
 [!DNL Analytics] ist eine leistungsstarke Engine, die Ihnen hilft, mehr über Ihre Kunden zu erfahren, wie sie mit Ihren Web-Eigenschaften interagieren, zu sehen, wo Ihre Ausgaben für digitales Marketing effektiv sind, und zu identifizieren, welche Verbesserungsmöglichkeiten es gibt. [!DNL Analytics] verarbeitet jährlich Billionen von Web-Transaktionen und [!DNL Analytics] Mit dem Quell-Connector können Sie diese umfangreichen Verhaltensdaten einfach aufrufen und die [!DNL Real-Time Customer Profile] innerhalb von Minuten.
 
-![](./images/analytics-data-experience-platform.png)
+![Eine Grafik, die die Journey von Daten aus verschiedenen Adobe Apps, einschließlich Adobe Analytics, veranschaulicht.](./images/analytics-data-experience-platform.png)
 
 Auf hoher Ebene [!DNL Analytics] erfasst Daten aus verschiedenen digitalen Kanälen und Rechenzentren auf der ganzen Welt. Nachdem die Daten erfasst wurden, werden VISTA-Regeln (Visitor Identification, Segmentation and Transformation Architecture) und Verarbeitungsregeln angewendet, um die eingehenden Daten zu formen. Nachdem die Rohdaten diese einfache Verarbeitung durchlaufen haben, werden sie von [!DNL Real-Time Customer Profile]. In einem Prozess, der parallel zu den oben genannten erfolgt, werden dieselben verarbeiteten Daten in Mikro-Batches gepackt und in Platform-Datensätzen erfasst, die von [!DNL Data Science Workspace], [!DNL Query Service]und anderen Anwendungen zur Datenerkennung.
 
@@ -35,6 +34,10 @@ Durch Einhaltung von XDM-Standards können Daten einheitlich integriert werden, 
 Weiterführende Informationen zu XDM finden Sie in der [XDM-Systemübersicht](../../../xdm/home.md).
 
 ## Wie werden Felder von Adobe Analytics XDM zugeordnet?
+
+>[!IMPORTANT]
+>
+>Datenvorbereitung-Transformationen können zum Datenfluss insgesamt Latenzzeiten hinzufügen. Die zusätzliche Latenz variiert je nach Komplexität der Umwandlungslogik.
 
 Wenn eine Quellverbindung für [!DNL Analytics] Daten über die Platform-Benutzeroberfläche in Experience Platform übertragen werden, werden Datenfelder automatisch zugeordnet und in [!DNL Real-Time Customer Profile] innerhalb von Minuten. Anweisungen zum Erstellen einer Quellverbindung mit [!DNL Analytics] Informationen zur Platform-Benutzeroberfläche finden Sie unter [Analytics-Quell-Connector-Tutorial](../../tutorials/ui/create/adobe-applications/analytics.md).
 
@@ -79,8 +82,8 @@ Die [!DNL Analytics] -Quelle übergibt diese Identitäten an Experience Platform
 
 Diese Felder sind nicht als Identitäten markiert. Stattdessen werden dieselben Identitäten in die `identityMap` als Schlüssel-Wert-Paare:
 
-* `{ “key”: “AAID”, “value”: [ { “id”: “<identity>”, “primary”: <true or false> } ] }`
-* `{ “key”: “ECID”, “value”: [ { “id”: “<identity>”, “primary”: <true or false> } ] }`
-* `{ “key”: “AACUSTOMID”, “value”: [ { “id”: “<identity>”, “primary”: false } ] }`
+* `{ "key": "AAID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
+* `{ "key": "ECID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
+* `{ "key": "AACUSTOMID", "value": [ { "id": "<identity>", "primary": false } ] }`
 
 Wenn in der Identitätszuordnung ECID vorhanden ist, wird es als primäre Identität für das Ereignis markiert. In diesem Fall kann AAID aufgrund der [Übergangsphase für Identity Service](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). Andernfalls wird AAID als primäre Identität für das Ereignis markiert. AACUSTOMID wird nie als primäre ID für das Ereignis markiert. Wenn jedoch AACUSTOMID vorhanden ist, basiert AAID aufgrund der Reihenfolge der Vorgänge in Experience Cloud auf AACUSTOMID.
