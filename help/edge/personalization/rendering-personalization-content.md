@@ -3,20 +3,20 @@ title: Rendern von personalisierten Inhalten mit dem Adobe Experience Platform W
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Adobe Experience Platform Web SDK rendern.
 keywords: personalization;renderDecisions;sendEvent;DecisionScopes;propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 0d8e19d8428191cc0c6c56e629e8c5528a96115c
+source-git-commit: c75a8bdeaba67259b5f4b4ce025d5e128d763040
 workflow-type: tm+mt
-source-wordcount: '924'
-ht-degree: 3%
+source-wordcount: '962'
+ht-degree: 4%
 
 ---
 
 # Rendern von personalisierten Inhalten
 
-Das Adobe Experience Platform Web SDK unterstützt das Abrufen personalisierter Inhalte aus Personalisierungslösungen von Adoben, darunter [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) und [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=de).
+Das Adobe Experience Platform Web SDK unterstützt das Abrufen personalisierter Inhalte aus Personalisierungslösungen von Adoben, darunter [Adobe Target](https://business.adobe.com/de/products/target/adobe-target.html), [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=de) und [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=de).
 
 Darüber hinaus ermöglicht das Web SDK Personalisierungsfunktionen für die gleiche Seite und die nächste Seite über Adobe Experience Platform-Personalisierungsziele, z. B. [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) und [Benutzerdefinierte Personalisierungsverbindung](../../destinations/catalog/personalization/custom-personalization.md). Informationen zum Konfigurieren der Experience Platform für die Personalisierung der gleichen Seite und der nächsten Seite finden Sie unter [dediziertes Handbuch](../../destinations/ui/configure-personalization-destinations.md).
 
-In Adobe Target erstellte Inhalte [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) kann automatisch vom SDK abgerufen und gerendert werden. In Adobe Target erstellte Inhalte [Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) oder Offer decisioning kann nicht automatisch vom SDK gerendert werden. Stattdessen müssen Sie diesen Inhalt mit dem SDK anfordern und dann den Inhalt manuell selbst rendern.
+In Adobe Target erstellte Inhalte [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) und Adobe Journey Optimizer [Web-Campaign-Benutzeroberfläche](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) kann automatisch vom SDK abgerufen und gerendert werden. In Adobe Target erstellte Inhalte [Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=de) oder Offer decisioning kann nicht automatisch vom SDK gerendert werden. Stattdessen müssen Sie diesen Inhalt mit dem SDK anfordern und dann den Inhalt manuell selbst rendern.
 
 ## Automatisches Rendern von Inhalten
 
@@ -107,7 +107,7 @@ Im Beispiel wird die `renderDecisions` -Option wurde nicht auf `true` wenn die `
 
 Wenn Sie stattdessen die Variable `renderDecisions` -Option `true` Beim Senden des Ereignisses hätte das SDK versucht, alle Vorschläge zu rendern, die für das automatische Rendering infrage kommen (wie zuvor beschrieben). Daher würde jedes der Vorschlagsobjekte seine `renderAttempted` Eigenschaft auf `true`. In diesem Fall müssen diese Vorschläge nicht manuell gerendert werden.
 
-Bislang haben wir nur Personalisierungsinhalte besprochen, die für die automatische Wiedergabe geeignet sind (d. h. alle Inhalte, die im Visual Experience Composer von Adobe Target erstellt wurden). Abrufen von Personalisierungsinhalten _not_ für das automatische Rendering geeignet ist, müssen Sie den Inhalt anfordern, indem Sie die `decisionScopes` -Option beim Senden des Ereignisses. Ein Perimeter ist eine Zeichenfolge, die einen bestimmten Vorschlag identifiziert, den Sie vom Server abrufen möchten.
+Bislang haben wir nur Personalisierungsinhalte besprochen, die für das automatische Rendering infrage kommen (d. h. alle Inhalte, die im Visual Experience Composer von Adobe Target oder in der Web-Campaign-Benutzeroberfläche von Adobe Journey Optimizer erstellt wurden). Abrufen von Personalisierungsinhalten _not_ für das automatische Rendering geeignet ist, müssen Sie den Inhalt anfordern, indem Sie die `decisionScopes` -Option beim Senden des Ereignisses. Ein Perimeter ist eine Zeichenfolge, die einen bestimmten Vorschlag identifiziert, den Sie vom Server abrufen möchten.
 
 Siehe folgendes Beispiel:
 
@@ -303,7 +303,7 @@ Die `applyPropositions` -Befehl ermöglicht es Ihnen, ein Array von Vorschlägen
 
 >[!IMPORTANT]
 >
->Wenn Vorschläge für die `__view__` der Bereich beim Laden der Seite gerendert wurde, `renderAttempted` -Markierung wird auf `true`. Die `applyPropositions` -Befehl gibt die `__view__` Vorschläge mit dem `renderAttempted: true` Markierung.
+>Wenn Vorschläge für die `__view__` Umfang (oder eine Weboberfläche) beim Laden der Seite gerendert wurden, `renderAttempted` -Markierung wird auf `true`. Die `applyPropositions` -Befehl gibt die `__view__` Vorschläge für den Umfang (oder die Weboberfläche) mit `renderAttempted: true` Markierung.
 
 ### Anwendungsfall 1: Wiedergeben von Vorschlägen für die Ansicht von Einzelseiten-Apps
 
