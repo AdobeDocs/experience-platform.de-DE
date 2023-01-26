@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Zuordnungsfunktionen für Datenvorbereitung
 description: In diesem Dokument werden die mit der Datenvorbereitung verwendeten Zuordnungsfunktionen vorgestellt.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: 4a033d782c2cc4a42edacf0abc146bd128fdb07c
 workflow-type: tm+mt
-source-wordcount: '4367'
+source-wordcount: '4398'
 ht-degree: 8%
 
 ---
@@ -23,7 +23,7 @@ Wenn ein Feldname dieser Konvention nicht entspricht, muss der Feldname mit `${}
 
 >[!TIP]
 >
->Wenn bei der Interaktion mit Hierarchien ein untergeordnetes Attribut einen Punkt (`.`), müssen Sie einen umgekehrten Schrägstrich (`\`), um Sonderzeichen zu maskieren. Weitere Informationen finden Sie im Handbuch unter [Maskieren von Sonderzeichen](home.md#escape-special-characters).
+>Wenn Sie mit Hierarchien arbeiten und ein untergeordnetes Attribut einen Punkt (`.`) enthält, müssen Sie einen Backslash (`\`) verwenden, um Sonderzeichen zu umgehen. Weitere Informationen finden Sie im Handbuch unter [Maskieren von Sonderzeichen](home.md#escape-special-characters).
 
 Wenn ein Feldname **any** der folgenden reservierten Schlüsselwörter, muss sie mit `${}`:
 
@@ -138,10 +138,10 @@ In den folgenden Tabellen sind alle unterstützten Zuordnungsfunktionen aufgefü
 
 | Funktion | Beschreibung | Parameter | Aufbau | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| is_empty | Prüft, ob ein Objekt leer ist. | <ul><li>EINGABE: **Erforderlich** Das Objekt, das Sie überprüfen möchten, ist leer.</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
-| arrays_to_object | Erstellt eine Liste von Objekten. | <ul><li>EINGABE: **Erforderlich** Eine Gruppierung von Schlüssel- und Array-Paaren.</li></ul> | arrays_to_object(INPUT) | Bedarfsbeispiel | Bedarfsbeispiel |
+| is_empty | Prüft, ob ein Objekt leer ist. | <ul><li>EINGABE: **Erforderlich** Das Objekt, das Sie überprüfen möchten, ist leer.</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | false |
+| arrays_to_object | Erstellt eine Liste von Objekten. | <ul><li>EINGABE: **Erforderlich** Eine Gruppierung von Schlüssel- und Array-Paaren.</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\|'), 'price', [22.5,14.35])` | [{ &quot;sku&quot;: &quot;id1&quot;, &quot;price&quot;: 22.5 }, { &quot;sku&quot;: &quot;id2&quot;, &quot;price&quot;: 14.35 }] |
 | to_object | Erstellt ein Objekt basierend auf den angegebenen flachen Schlüssel/Wert-Paaren. | <ul><li>EINGABE: **Erforderlich** Eine flache Liste von Schlüssel/Wert-Paaren.</li></ul> | to_object(INPUT) | to_object &#x200B;(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
-| str_to_object | Erstellt ein Objekt aus der Eingabezeichenfolge. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, die analysiert wird, um ein Objekt zu erstellen.</li><li>VALUE_DELIMITER: *Optional* Das Trennzeichen, das ein Feld vom Wert trennt. Das Standardtrennzeichen ist `:`.</li><li>FIELD_DELIMITER: *Optional* Das Trennzeichen, das Feldwertpaare trennt. Das Standardtrennzeichen ist `,`.</li></ul> | str_to_object &#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object(&quot;firstName=John,lastName=Doe,phone=123 456 7890&quot;, &quot;=&quot;, &quot;,&quot;) | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
+| str_to_object | Erstellt ein Objekt aus der Eingabezeichenfolge. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, die analysiert wird, um ein Objekt zu erstellen.</li><li>VALUE_DELIMITER: *Optional* Das Trennzeichen, das ein Feld vom Wert trennt. Das Standardtrennzeichen ist `:`.</li><li>FIELD_DELIMITER: *Optional* Das Trennzeichen, das Feldwertpaare trennt. Das Standardtrennzeichen ist `,`.</li></ul> | str_to_object &#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) **Hinweis**: Sie können die `get()` -Funktion zusammen mit `str_to_object()` , um Werte für die Schlüssel in der Zeichenfolge abzurufen. | <ul><li>Beispiel 1: str_to_object(&quot;firstName - John ; lastName - ; - 123 345 7890&quot;, &quot;-&quot;, &quot;;&quot;)</li><li>Beispiel 2: str_to_object(&quot;firstName - John ; lastName - ; phone - 123 456 7890&quot;, &quot;-&quot;, &quot;;&quot;).get(&quot;firstName&quot;)</li></ul> | <ul><li>Beispiel 1:`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>Beispiel 2: &quot;John&quot;</li></ul> |
 | contains_key | Überprüft, ob das Objekt in den Quelldaten vorhanden ist. **Hinweis:** Diese Funktion ersetzt die veraltete `is_set()` -Funktion. | <ul><li>EINGABE: **Erforderlich** Der Pfad, der überprüft werden soll, wenn er in den Quelldaten vorhanden ist.</li></ul> | contains_key(INPUT) | contains_key(&quot;evars.evar.field1&quot;) | wahr |
 | nullify | Legt den Wert des Attributs auf `null`. Dies sollte verwendet werden, wenn Sie das Feld nicht in das Zielschema kopieren möchten. |  | nullify() | nullify() | `null` |
 | get_keys | Analysiert die Schlüssel/Wert-Paare und gibt alle Schlüssel zurück. | <ul><li>OBJEKT: **Erforderlich** Das Objekt, aus dem die Schlüssel extrahiert werden.</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;: &quot;Stolz und Vorurteile&quot;, &quot;Buch2&quot;: &quot;1984&quot;}) | `["book1", "book2"]` |
