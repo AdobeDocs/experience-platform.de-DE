@@ -2,10 +2,10 @@
 title: Vorlage für Dokumentations-Self-Service // Ersetzen Sie durch den Namen Ihres Ziels.
 description: Verwenden Sie diese Vorlage, um eine öffentliche Dokumentation für Ihr Ziel im Adobe Experience Platform-Katalog zu erstellen. // Ersetzen Sie durch den Absatz im Abschnitt "Übersicht".
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 46e8f6cf3e135b31dc508274598f9d76df857c8f
+source-git-commit: 49b3553c3e408d2dfbca491b1df71be1d4aefaae
 workflow-type: tm+mt
-source-wordcount: '1488'
-ht-degree: 6%
+source-wordcount: '1534'
+ht-degree: 28%
 
 ---
 
@@ -60,9 +60,9 @@ Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie die *YourDestination* 
 
 *Fügen Sie in diesem Abschnitt Informationen zu den Identitäten hinzu, die von Ihrem Ziel unterstützt werden. Wir haben die Tabelle mit einigen Standardwerten vorausgefüllt. Löschen Sie die Werte, die nicht auf Ihr Ziel zutreffen, sowie alle Werte, die nicht vorausgefüllt sind.*
 
-*YourDestination* unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Weitere Informationen [identities](/help/identity-service/namespaces.md).
+*YourDestination* unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md).
 
-| Zielgruppenidentität | Beschreibung | Zu beachten |
+| Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
 | GAID | Google Advertising ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
 | IDFA | Apple ID für Advertiser | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
@@ -73,40 +73,41 @@ Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie die *YourDestination* 
 
 {style=&quot;table-layout:auto&quot;}
 
-## Exportart und -frequenz {#export-type-frequency}
+## Exporttyp und -häufigkeit {#export-type-frequency}
 
 *Behalten Sie in der Tabelle nur die Zeilen bei, die Ihrem Ziel entsprechen. Sie sollten eine Zeile für den Exporttyp und eine Zeile für die Exporthäufigkeit haben. Löschen Sie die Werte, die nicht auf Ihr Ziel zutreffen.*
 
-Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten stehenden Tabelle.
+Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
 | Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer oder andere), die im *YourDestination* Ziel. |
-| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm Profilattribute im [Zielaktivierungs-Workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind &quot;immer auf&quot;-API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Mehr dazu [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
-| Exporthäufigkeit | **[!UICONTROL Batch]** | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Mehr dazu [Batch-dateibasierte Ziele](/help/destinations/destination-types.md#file-based). |
+| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B. E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm „Auswählen der Profilattribute“ im [Zielaktivierungs-Workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) festgelegt. |
+| Exporttyp | **[!UICONTROL Datensatzexport]** | Sie exportieren Rohdatensätze, die nicht nach Zielgruppeninteressen oder Qualifikationen gruppiert oder strukturiert sind. |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporthäufigkeit | **[!UICONTROL Batch]** | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Weitere Informationen finden Sie unter [Batch-Datei-basierte Ziele](/help/destinations/destination-types.md#file-based). |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Herstellen einer Verbindung mit der Datenbank {#connect}
+## Herstellen einer Verbindung mit dem Ziel {#connect}
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele verwalten]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle - Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die [Zugriffsberechtigung](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**. Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
+Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
-### An Ziel authentifizieren {#authenticate}
+### Beim Ziel authentifizieren {#authenticate}
 
 *Fügen Sie die Felder hinzu, die Kunden bei der Authentifizierung für Ihr Ziel ausfüllen müssen. Diese Felder sind zielspezifisch und hängen von Ihrer Konfiguration in Destination SDK ab. Die Felder Ihres Ziels entsprechen möglicherweise nicht den unten aufgeführten. Bitte fügen Sie auch einen Screenshot hinzu, der dem unten gezeigten Beispiel-Screenshot ähnelt.*
 
-Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]**.
+Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und klicken Sie auf **[!UICONTROL Mit Ziel verbinden]**.
 
 ![Beispiel-Screenshot mit der Authentifizierung für das Ziel](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
 
 * **[!UICONTROL Trägertoken]**: Füllen Sie das Trägertoken aus, um sich beim Ziel zu authentifizieren.
 
-### Zieldetails ausfüllen {#destination-details}
+### Ausfüllen der Zieldetails {#destination-details}
 
 *Fügen Sie die Felder hinzu, die Kunden beim Konfigurieren eines neuen Ziels ausfüllen müssen. Diese Felder sind zielspezifisch und hängen von Ihrer Konfiguration in Destination SDK ab. Die Felder Ihres Ziels entsprechen möglicherweise nicht den unten aufgeführten. Bitte fügen Sie auch einen Screenshot hinzu, der dem unten gezeigten Beispiel-Screenshot ähnelt.*
 
@@ -114,27 +115,29 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 ![Beispiel-Screenshot, der zeigt, wie Details für Ihr Ziel ausgefüllt werden](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
 
-* **[!UICONTROL Name]**: Ein Name, mit dem Sie dieses Ziel in der Zukunft erkennen werden.
-* **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen dabei hilft, dieses Ziel in der Zukunft zu identifizieren.
+* **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
+* **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
 * **[!UICONTROL Konto-ID]**: Ihre *YourDestination* Konto-ID.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
-Sie können Warnhinweise aktivieren, um Benachrichtigungen über den Status des Datenflusses an Ihr Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnungen finden Sie im Handbuch unter [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
+Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnungen finden Sie im Handbuch unter [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie alle Details für Ihre Zielverbindung angegeben haben, wählen Sie **[!UICONTROL Nächste]**.
+Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle - Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-*Entf, falls zutreffend - Wenn Sie ein neues Streaming-Ziel dokumentieren, behalten Sie den ersten Absatz unten bei. Wenn Sie ein neues dateibasiertes Ziel dokumentieren, behalten Sie den zweiten Absatz bei.*
+*Entf, falls zutreffend - Wenn Sie ein neues Streaming-Ziel dokumentieren, behalten Sie den ersten Absatz unten bei. Wenn Sie ein neues dateibasiertes Ziel dokumentieren, behalten Sie den zweiten Absatz bei. Wenn Sie ein Ziel dokumentieren, das Datensätze exportiert, behalten Sie den dritten Absatz bei.*
 
-Lesen [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](/help/destinations/ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel.
+Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 Lesen [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](/help/destinations/ui/activate-batch-profile-destinations.md) für Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel.
+
+Lesen [(Beta) Exportieren von Datensätzen](/help/destinations/ui/export-datasets.md) ausführliche Anweisungen zum Exportieren von Datensätzen an dieses Ziel.
 
 ### Zuordnen von Attributen und Identitäten {#map}
 
@@ -189,6 +192,6 @@ Lesen [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](/help/des
 
 Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Ausführliche Informationen darüber, wie [!DNL Adobe Experience Platform] Data Governance erzwingt, finden Sie unter [Data Governance - Übersicht](/help/data-governance/home.md).
 
-## Weitere Ressourcen {#additional-resources}
+## Zusätzliche Ressourcen {#additional-resources}
 
 *Sie können weitere Links zu Ihrer Produktdokumentation oder anderen Ressourcen bereitstellen, die Sie für den Erfolg des Kunden als wichtig erachten.*
