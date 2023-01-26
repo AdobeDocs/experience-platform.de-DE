@@ -3,10 +3,10 @@ keywords: Ziele; Adobe Experience Platform; Plattform; Ziele - Übersicht; aktiv
 title: Ziele – Übersicht
 description: Ziele sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Ziele in der Adobe Experience Platform verwenden, um Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 842aaa7104b277cf415d1ed9ee2744a200c07ce8
+source-git-commit: 944f307ecb4cf174c9f9818ded17546057f445e4
 workflow-type: tm+mt
 source-wordcount: '633'
-ht-degree: 35%
+ht-degree: 41%
 
 ---
 
@@ -15,6 +15,13 @@ ht-degree: 35%
 ![Übersichtsbanner Ziele](./assets/overview/destinations-overview-banner.png)
 
 **[!DNL Destinations]** sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
 
 ## Ziele und Quellen {#destinations-and-sources}
 
@@ -57,9 +64,9 @@ Weiterführende Informationen zu Zugangssteuerungen finden Sie im [Benutzerhandb
 
 ### Attributbasierte Zugriffskontrolle für Ziele {#attribute-based-access}
 
-Die attributbasierte Zugriffskontrolle in Adobe Experience Platform ermöglicht es Administratoren, den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen zu steuern.
+Die attributbasierte Zugriffssteuerung in Adobe Experience Platform ermöglicht Admins, den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen zu steuern.
 
-Mit der attributbasierten Zugriffskontrolle können Sie Zuordnungskonfigurationen auf Felder anwenden, für die Sie über Berechtigungen verfügen. Außerdem können Sie keine Daten an ein Ziel exportieren, wenn Sie nicht Zugriff auf alle Felder im Datensatz haben.
+Mit der attributbasierten Zugriffssteuerung können Sie Zuordnungskonfigurationen auf Felder anwenden, für die Sie über Berechtigungen verfügen. Außerdem können Sie keine Daten an ein Ziel exportieren, wenn Sie nicht Zugriff auf alle Felder im Datensatz haben.
 
 Weitere Informationen dazu, wie Ziele mit attributbasierten Zugriffssteuerelementen funktionieren, finden Sie in der [Attributbasierte Zugriffskontrolle - Übersicht](../access-control/abac/overview.md#destinations).
 

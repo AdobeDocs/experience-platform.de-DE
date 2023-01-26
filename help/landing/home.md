@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Überblick über Adobe Experience Platform
 description: Mit Adobe Experience Platform können Unternehmen Kundendaten zentral zusammenführen und standardisieren. Zusätzlich können mithilfe von Datenwissenschaft und maschinellem Lernen die Gestaltung und Bereitstellung umfassender, personalisierter Erlebnisse erheblich verbessert werden.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
-workflow-type: ht
+source-git-commit: 944f307ecb4cf174c9f9818ded17546057f445e4
+workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 100%
 
@@ -16,6 +16,13 @@ ht-degree: 100%
 Adobe Experience Platform ist eines der leistungsfähigsten, flexibelsten und offensten auf dem Markt verfügbaren Systeme für die Einrichtung und Verwaltung umfassender Lösungen zur Umsetzung starker Kundenerlebnisse. [!DNL Experience Platform]Mit können Unternehmen Kundendaten und Content aus beliebigen Systemen zentral zusammenführen und standardisieren. Zusätzlich können mithilfe von Datenwissenschaft und maschinellem Lernen die Gestaltung und Bereitstellung umfassender, personalisierter Erlebnisse erheblich verbessert werden.
 
 [!DNL Experience Platform] stellt Entwicklern auf der Grundlage von RESTful-APIs die volle Funktionalität des Systems zur Verfügung und erleichtert so die Integration von Unternehmenslösungen mit bekannten Tools. [!DNL Experience Platform] Außerdem ist auf die Integration von Produkten und Technologien ausgelegt, die unsere Partner für das System entwickeln. Diese Flexibilität ist im Markt bislang einzigartig und macht [!DNL Experience Platform] zu einem hochleistungsfähigen System. Es liefert Partnern, Kunden und einer Community von Entwicklern das Fundament, auf dem Innovationen für das Experience Business geschaffen werden – durch laufend verbesserte, umfassend personalisierte Erlebnisse gestützt auf eine 360-Grad-Rundumsicht auf jeden einzelnen Kunden und seine individuellen Wünsche und Bedürfnisse.
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
 
 ## [!DNL Experience Platform] Dokumentation
 
