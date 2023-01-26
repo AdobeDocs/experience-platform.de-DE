@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform - Versionshinweise Januar 2023
 description: Die Versionshinweise für Adobe Experience Platform vom Januar 2023.
-source-git-commit: fbdd3a3270e8aad95cb12281bcd4623a88b13f47
+source-git-commit: 08ad27303b88826fd7e0fcc0a8b3d498de58c260
 workflow-type: tm+mt
-source-wordcount: '1995'
-ht-degree: 30%
+source-wordcount: '1848'
+ht-degree: 32%
 
 ---
 
@@ -74,10 +74,6 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
     <tr>
         <td><b>Fehlerbehebung oder Verbesserung</b></td>
         <td><b>Beschreibung</b></td>
-    </tr>
-    <tr>
-        <td>UI- und API-Validierung für erforderliche Zuordnungen und doppelte Zuordnungen (PLAT-123316)</td>
-        <td>Die Validierung wird jetzt in der Benutzeroberfläche und in der API wie folgt erzwungen, wenn <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">Zuordnungsfelder</a> im Workflow Ziele aktivieren :<ul><li><b>Erforderliche Zuordnungen</b>: Wenn das Ziel vom Zielentwickler mit den erforderlichen Zuordnungen eingerichtet wurde (z. B. die <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> Ziel), müssen diese erforderlichen Zuordnungen vom Benutzer hinzugefügt werden, wenn er Daten für das Ziel aktiviert. </li><li><b>Duplizieren von Zuordnungen</b>: Im Zuordnungsschritt des Aktivierungs-Workflows können Sie doppelte Werte in den Quellfeldern, aber nicht in den Zielfeldern hinzufügen. In der folgenden Tabelle finden Sie ein Beispiel für zulässige und verbotene Zuordnungskombinationen. <br><table><thead><tr><th>Zulässig/verboten</th><th>Quellfeld</th><th>Zielfeld</th></tr></thead><tbody><tr><td>Zugelassen</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>email alias2</li></ul></td></tr><tr><td>Verboten</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
     </tr>
     <tr>
         <td>Aktualisiertes Exportverhalten für dateibasierte Ziele (PLAT-123316)</td>
