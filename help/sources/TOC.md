@@ -4,9 +4,9 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
-source-git-commit: 79773c35cf70bc967b29a8bcca729106bd7dd4f0
+source-git-commit: 2d9cd6ed1db7bcbbe9b35c154e09a6b03f9a132d
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '875'
 ht-degree: 98%
 
 ---
@@ -206,6 +206,7 @@ ht-degree: 98%
    - [Wiederholen fehlgeschlagener Datenfluss-Ausführungen](tutorials/api/retry-flows.md)
    - [Löschen von Konten](tutorials/api/delete.md)
    - [Löschen von Datenflüssen](tutorials/api/delete-dataflows.md)
+   - [Verschlüsselte Daten erfassen](tutorials/api/encrypt-data.md)
 - Tutorials zur Benutzeroberfläche {#ui-tutorials}
    - Erstellen einer Quellverbindung {#create}
       - Adobe-Programme {#adobe-applications}
