@@ -2,14 +2,23 @@
 title: Versionshinweise für Tags und Ereignisweiterleitung
 description: Die neuesten Versionshinweise für Tags und Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 892d22a88546ff270af4f5b253a013015349898b
+source-git-commit: 18599d223733cb151c7517abb77b1745d2e634b7
 workflow-type: tm+mt
-source-wordcount: '418'
-ht-degree: 88%
+source-wordcount: '497'
+ht-degree: 75%
 
 ---
 
 # Versionshinweise für Tags und Ereignisweiterleitung
+
+## 25. Januar 2022
+
+* **Neuer Startbildschirm**: Die Startseite der Datenerfassungs-Benutzeroberfläche wurde aktualisiert und enthält jetzt hilfreiche Onboarding-Informationen und Links zur Optimierung der Produktivität. Dazu gehören:
+   1. Dokumentation und empfohlene Workflows für die ersten Schritte
+   1. Letzte Eigenschaften, Regeln und Datenelemente
+   1. Beliebte Erweiterungen
+   1. Neue Erweiterungs-Updates mit einer Schnellinstallationsfunktion
+* **Senden von Daten an [!DNL Google Ads] mit der Ereignisweiterleitung**: Sie können jetzt die [[!DNL Google Ads Enhanced Conversions] API-Erweiterung](../extensions/server/google-ads-enhanced-conversions/overview.md) für die Ereignisweiterleitung, kombiniert mit [Google Oauth 2 Geheimnisse](../ui/event-forwarding/secrets.md#google-oauth2), um Server-seitige Daten sicher an zu senden [!DNL Google Ads] in Echtzeit.
 
 ## 23. November 2022
 
