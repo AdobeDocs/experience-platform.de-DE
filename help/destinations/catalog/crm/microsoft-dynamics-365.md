@@ -2,13 +2,14 @@
 keywords: crm;CRM;CRM-Ziele;Microsoft Dynamics 365;Microsoft Dynamics 365 CRM-Ziel
 title: Verbindung mit Microsoft Dynamics 365
 description: Mit dem Microsoft Dynamics 365-Ziel können Sie Ihre Kontodaten exportieren und in Microsoft Dynamics 365 für Ihre geschäftlichen Anforderungen aktivieren.
-source-git-commit: 12af2ee40d355119104d741630654d2847df6cc5
-workflow-type: ht
+last-substantial-update: 2022-11-08T00:00:00Z
+exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
+source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
+workflow-type: tm+mt
 source-wordcount: '1790'
 ht-degree: 100%
 
 ---
-
 
 # [!DNL Microsoft Dynamics 365]-Verbindung
 
@@ -124,7 +125,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
-Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Warnhinweisen zu Zielen über die Benutzeroberfläche](../../ui/alerts.md).
+Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
 Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
 
