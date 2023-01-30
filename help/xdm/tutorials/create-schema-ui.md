@@ -5,9 +5,9 @@ title: Erstellen eines Schemas mit dem Schema Editor
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Erstellen eines Schemas mit dem Schema Editor in Experience Platform beschrieben.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 9f39130c8d470b236764993f7ebca9c1cdc748bb
+source-git-commit: ecf757e98c3da568173d161aa5d4701881ec2337
 workflow-type: tm+mt
-source-wordcount: '3947'
+source-wordcount: '3985'
 ht-degree: 10%
 
 ---
@@ -177,8 +177,10 @@ Wählen Sie die **plus (+)** Symbol neben `loyaltyTier` -Objekt, um mit dem Hinz
 
 Für jedes Feld sind die folgenden Informationen erforderlich:
 
-* **[!UICONTROL Feldname]:** Der Name des Felds, in Binnenmajuskel-Schreibweise geschrieben. Beispiel: LoyalitätsStufe
-* **[!UICONTROL Anzeigename]:** Der Name des Felds, in Titelschreibweise geschrieben. Beispiel: Loyalitäts-Stufe
+* **[!UICONTROL Feldname]:** Der Name des Felds, vorzugsweise in camelCase geschrieben. Leerzeichen sind nicht zulässig. Dies ist der Name, der verwendet wird, um auf das Feld im Code und in anderen nachgelagerten Anwendungen zu verweisen.
+   * Beispiel: LoyalitätsStufe
+* **[!UICONTROL Anzeigename]:** Der Name des Felds, in Titelschreibweise geschrieben. Dies ist der Name, der auf der Arbeitsfläche angezeigt wird, wenn das Schema angezeigt oder bearbeitet wird.
+   * Beispiel: Loyalitäts-Stufe
 * **[!UICONTROL Typ]:** Der Datentyp des Felds. Dazu gehören grundlegende Skalartypen und alle Datentypen, die in der Variablen [!DNL Schema Registry]. Beispiele: [!UICONTROL Zeichenfolge], [!UICONTROL Ganzzahl], [!UICONTROL Boolesch], [!UICONTROL Person], [!UICONTROL Adresse], [!UICONTROL Telefonnummer], usw.
 * **[!UICONTROL Beschreibung]:** Eine optionale Beschreibung des Felds sollte mit maximal 200 Zeichen enthalten sein.
 

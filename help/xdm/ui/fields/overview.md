@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definieren von XDM-Feldern in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie XDM-Felder in der Experience Platform-Benutzeroberfläche definieren.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: f1a8bcc7c1ba33d74e1f687b4cfd83bddce2fadc
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1407'
 ht-degree: 5%
 
 ---
@@ -44,7 +44,7 @@ Je nachdem, ob Sie ein Feld direkt zu einem Schema oder seiner zugehörigen Klas
 
 ## Definieren der Eigenschaften eines Felds {#define}
 
-Nach Auswahl der **plus (+)** -Symbol, ein **[!UICONTROL Neues Feld]** wird in der Arbeitsfläche angezeigt, die sich in einem Objekt befindet, das der eindeutigen Mandanten-ID zugewiesen ist (siehe `_tenantId` im Beispiel unten). Alle benutzerdefinierten Felder, die einem Schema hinzugefügt werden, werden automatisch in diesen Namespace eingefügt, um Konflikte mit anderen Feldern aus von der Adobe bereitgestellten Klassen und Feldergruppen zu vermeiden.
+Nach Auswahl der **plus (+)** -Symbol, ein **[!UICONTROL Unbenanntes Feld]** Platzhalter wird in der Arbeitsfläche angezeigt.
 
 ![](../../images/ui/fields/overview/new-field.png)
 
@@ -52,8 +52,8 @@ In der rechten Leiste unter **[!UICONTROL Feldeigenschaften]** können Sie die D
 
 | Feldeigenschaft | Beschreibung |
 | --- | --- |
-| [!UICONTROL Feldname] | Ein eindeutiger, beschreibender Name für das Feld. Beachten Sie, dass der Feldname nach dem Speichern des Schemas nicht mehr geändert werden kann.<br><br>Der Name sollte idealerweise in camelCase geschrieben werden. Sie kann alphanumerische Zeichen, Bindestriche oder Unterstriche enthalten, sie enthält jedoch **darf nicht** Beginnen Sie mit einem Unterstrich.<ul><li>**Richtig**: `fieldName`</li><li>**Zulässig:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Falsch**: `_fieldName`</li></ul> |
-| [!UICONTROL Anzeigename] | Ein benutzerfreundlicher Name für das Feld. |
+| [!UICONTROL Feldname] | Ein eindeutiger, beschreibender Name für das Feld. Beachten Sie, dass der Feldname nach dem Speichern des Schemas nicht mehr geändert werden kann. Dieser Wert wird verwendet, um das Feld im Code und in anderen nachgelagerten Anwendungen zu identifizieren und zu referenzieren.<br><br>Der Name sollte idealerweise in camelCase geschrieben werden. Sie kann alphanumerische Zeichen, Bindestriche oder Unterstriche enthalten, sie enthält jedoch **darf nicht** Beginnen Sie mit einem Unterstrich.<ul><li>**Richtig**: `fieldName`</li><li>**Zulässig:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Falsch**: `_fieldName`</li></ul> |
+| [!UICONTROL Anzeigename] | Ein Anzeigename für das Feld. Dies ist der Name, mit dem das Feld auf der Arbeitsfläche des Schema-Editors dargestellt wird. |
 | [!UICONTROL Typ] | Der Datentyp, den das Feld enthalten soll. In diesem Dropdown-Menü können Sie eine der [Standard-Skalartypen](../../schema/field-constraints.md) unterstützt von XDM oder einem der Felder mit mehreren Feldern [Datentypen](../resources/data-types.md) die zuvor in der [!DNL Schema Registry].<br><br>Sie können auch **[!UICONTROL Erweiterte Typsuche]** , um vorhandene Datentypen zu suchen und zu filtern und den gewünschten Typ leichter zu finden. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -70,7 +70,7 @@ Nachdem Sie die Konfiguration des Felds abgeschlossen haben, wählen Sie **[!UIC
 
 ![](../../images/ui/fields/overview/field-details.png)
 
-Die Arbeitsfläche wird aktualisiert, um den Namen und Typ des Felds anzuzeigen. In der rechten Leiste wird jetzt der Pfad des Felds zusätzlich zu den anderen Eigenschaften aufgelistet.
+Die Arbeitsfläche wird aktualisiert und zeigt das neu hinzugefügte Feld an, das sich in einem Objekt befindet, das mit Ihrer eindeutigen Mandanten-ID benannt ist (angezeigt als `_tenantId` im Beispiel unten). Alle benutzerdefinierten Felder, die einem Schema hinzugefügt werden, werden automatisch in diesen Namespace eingefügt, um Konflikte mit anderen Feldern aus von der Adobe bereitgestellten Klassen und Feldergruppen zu vermeiden. In der rechten Leiste wird jetzt der Pfad des Felds zusätzlich zu den anderen Eigenschaften aufgelistet.
 
 ![](../../images/ui/fields/overview/field-added.png)
 

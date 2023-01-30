@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Grundlagen der Schemakomposition
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: f1a8bcc7c1ba33d74e1f687b4cfd83bddce2fadc
 workflow-type: tm+mt
-source-wordcount: '4108'
+source-wordcount: '4119'
 ht-degree: 26%
 
 ---
@@ -215,11 +215,11 @@ Die aktuellste Liste der verfügbaren Standard-XDM-Feldgruppen finden Sie im Abs
 
 ### Datentyp {#data-type}
 
-Datentypen werden als Referenzfeldtypen in Klassen oder Schemata auf die gleiche Weise verwendet wie grundlegende literale Felder. Der wesentliche Unterschied besteht darin, dass Datentypen mehrere Teilfelder definieren können. Ähnlich wie bei einer Feldergruppe ermöglicht ein Datentyp die konsistente Verwendung einer Struktur mit mehreren Feldern, bietet jedoch mehr Flexibilität als eine Feldergruppe, da ein Datentyp an einer beliebigen Stelle in ein Schema eingefügt werden kann, indem er ihn als &quot;Datentyp&quot;eines Felds hinzufügt.
+Datentypen werden als Referenzfeldtypen in Klassen oder Schemata auf die gleiche Weise verwendet wie grundlegende literale Felder. Der wesentliche Unterschied besteht darin, dass Datentypen mehrere Teilfelder definieren können. Sie können mehrere Unterfelder auf dieselbe Weise wie Feldergruppen definieren. Der wesentliche Unterschied besteht jedoch darin, dass Datentypen an einer beliebigen Stelle in ein Schema eingefügt werden können, indem sie es als &quot;Datentyp&quot;eines Felds hinzugefügt werden. Während Feldergruppen nur mit bestimmten Klassen kompatibel sind, können Datentypen in jede übergeordnete Klasse oder Feldergruppe aufgenommen werden.
 
 [!DNL Experience Platform] bietet eine Reihe gemeinsamer Datentypen als Teil der [!DNL Schema Registry] Unterstützung der Verwendung von Standardmustern zur Beschreibung gemeinsamer Datenstrukturen. Weitere Informationen hierzu finden Sie im Abschnitt [!DNL Schema Registry] -Tutorials, in denen es bei den Schritten zur Definition von Datentypen klarer wird.
 
-Der folgende Screenshot zeigt, wie Datentypen in der Platform-Benutzeroberfläche dargestellt werden. Eines der Felder, die vom [!UICONTROL Demografische Details] -Feldergruppe verwendet die[!UICONTROL Personenname]&quot;Datentyp, wie durch den Text nach dem senkrechten Strich (`|`) neben dem Feldnamen. Dieser bestimmte Datentyp bietet mehrere Unterfelder, die sich auf den Namen einer Person beziehen, ein Konstrukt, das für andere Felder wiederverwendet werden kann, in denen der Name einer Person erfasst werden muss.
+Der folgende Screenshot zeigt, wie Datentypen in der Platform-Benutzeroberfläche dargestellt werden. Eines der Felder, die vom [!UICONTROL Demografische Details] -Feldergruppe verwendet die[!UICONTROL Objekt]&quot;Datentyp, wie durch den Text nach dem senkrechten Strich (`|`) neben dem Feldnamen. Dieser bestimmte Datentyp bietet mehrere Unterfelder, die sich auf den Namen einer Person beziehen, ein Konstrukt, das für andere Felder wiederverwendet werden kann, in denen der Name einer Person erfasst werden muss.
 
 ![](../images/schema-composition/data-type.png)
 
