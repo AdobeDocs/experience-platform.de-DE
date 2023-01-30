@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform - Versionshinweise Januar 2023
 description: Die Versionshinweise für Adobe Experience Platform vom Januar 2023.
-source-git-commit: 3ea2ac1b048adb14aa93b42e5b23ea70bb995414
+source-git-commit: 855ce02dc371621cd8a4b02348e1e74a573123f3
 workflow-type: tm+mt
-source-wordcount: '1905'
+source-wordcount: '1911'
 ht-degree: 31%
 
 ---
@@ -61,11 +61,11 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | [Pega-Profil-Verbindung](../../destinations/catalog/personalization/pega-profile.md) | Verwenden Sie die [!DNL Pega Profile Connector] in Adobe Experience Platform , um eine ausgehende Live-Verbindung zu Ihrer [!DNL Amazon] S3-Datenspeicherung , um Profildaten regelmäßig in CSV-Dateien aus Adobe Experience Platform in Ihre eigenen S3-Behälter zu exportieren. In [!DNL Pega Customer Decision Hub]können Sie Datenaufträge planen, um diese Profildaten aus dem S3-Speicher zu importieren, um die [!DNL Pega Customer Decision Hub] Profil. |
 | [(Beta) Verbindung des Trade Desk CRM EU](../../destinations/catalog/advertising/tradedesk-emails.md) | Mit der Veröffentlichung der EUID (European Unified ID) sehen Sie jetzt zwei [!DNL The Trade Desk - CRM] Ziele im [Zielkatalog](/help/destinations/catalog/overview.md). <ul><li> Wenn Sie Daten in der EU beziehen, verwenden Sie bitte die **[!DNL The Trade Desk - CRM (EU)]** Ziel.</li><li> Wenn Sie Daten in der APAC- oder NAMER-Region beziehen, verwenden Sie bitte die **[!DNL The Trade Desk - CRM (NAMER & APAC)]** Ziel. </li></ul> |
 
-**Neue oder aktualisierte Funktionen**
+**Neue oder aktualisierte Funktionen** {#destinations-new-updated-functionality}
 
 | Funktionalität | Beschreibung |
 | ----------- | ----------- |
-| Verbesserung der Paid Media-Zustimmung für Integrationen mit Streaming-Zielen | Eine Verbesserung von [Durchsetzung von Zustimmungsrichtlinien](/help/data-governance/enforcement/auto-enforcement.md) on [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations) für Anwendungsfälle zur Aktivierung gebührenpflichtiger Medien. Profile, die das Einverständnis eines bestimmten Erlebnisses widerrufen haben, werden jetzt proaktiv aus diesen Zielen entfernt. <br> <b>Hinweis</b>: Diese Funktion steht nur Kunden von **[!UICONTROL Datenschutz und Sicherheitsschild]** und der **[!UICONTROL Gesundheitsschild]**. |
+| Verbesserung der Richtlinie zur Zustimmung für Paid Media für Integrationen mit Streaming-Zielen | Eine Verbesserung von [Durchsetzung von Zustimmungsrichtlinien](/help/data-governance/enforcement/auto-enforcement.md) on [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations) für Anwendungsfälle zur Aktivierung gebührenpflichtiger Medien. Wenn Profile nicht mehr für eine Zustimmungsrichtlinie qualifiziert sind, kommuniziert Experience Platform jetzt proaktiv ihren Richtlinienausstieg an Streaming-Ziele. <br> <b>Hinweis</b>: Diese Funktion steht nur Kunden von **[!UICONTROL Datenschutz und Sicherheitsschild]** und der **[!UICONTROL Gesundheitsschild]**. |
 | Neue Trennzeichenoptionen für Beta-Cloud-Speicher-Ziel-Connectoren | Drei neue Trennzeichenoptionen (Doppelpunkt `:`, Pipe, Semikolon `;`) sind jetzt für die neuen Beta-Cloud-Speicher-Ziele verfügbar - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Beta) Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(Beta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> Informationen zu den unterstützten [Dateiformatierungsoptionen](/help/destinations/ui/batch-destinations-file-formatting-options.md) für dateibasierte Ziele. |
 | Neuer optionaler Parameter verfügbar in [Kundendatenfelder](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) Konfigurationen in [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`: Verwenden Sie diesen Parameter, wenn Sie ein Kundendatenfeld erstellen müssen, dessen Wert über alle von der Organisation eines Benutzers eingerichteten Ziel-Datenflüsse hinweg eindeutig sein muss. <br> Beispiel: die **[!UICONTROL Integrationsalias]** im Feld [[!UICONTROL Benutzerdefinierte Personalisierung]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) Das Ziel muss eindeutig sein, d. h. zwei separate Datenflüsse zu diesem Ziel dürfen für dieses Feld nicht denselben Wert haben. |
 
