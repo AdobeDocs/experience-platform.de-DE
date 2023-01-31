@@ -2,18 +2,18 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Segmentierungsdienst; Segmentierung; Segmentierungsdienst; Benutzerhandbuch; Benutzerhandbuch; Handbuch zur Segmentierung; Segment Builder; Segment Builder
 solution: Experience Platform
 title: Benutzerhandbuch für Segment Builder
-description: Der Segmentaufbau in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen.
+description: Der Segmentaufbau in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 28b9458d29ce69bcbfdff53c0cb6bd7f427e4a2e
 workflow-type: tm+mt
-source-wordcount: '3101'
-ht-degree: 28%
+source-wordcount: '3258'
+ht-degree: 27%
 
 ---
 
 # Handbuch für die [!DNL Segment Builder]-Benutzeroberfläche
 
-[!DNL Segment Builder] bietet einen umfassenden Arbeitsbereich, in dem Sie mit [!DNL Profile] Datenelemente. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen.
+[!DNL Segment Builder] bietet einen umfangreichen Arbeitsbereich, in dem Sie mit [!DNL Profile]-Datenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 
 ![Die Segment Builder-Benutzeroberfläche wird angezeigt.](../images/ui/segment-builder/segment-builder.png)
 
@@ -94,7 +94,7 @@ Nachdem die Report Suites zugeordnet wurden, können Sie diese neu zugeordneten 
 | Einzelne Report Suite | Der Anzeigenamendeskriptor ist in generischen Variablen enthalten. <br><br>**Beispiel:** Seitenname (eVar2) | <ul><li>Der Anzeigenamendeskriptor ist mit allgemeinen Variablen enthalten.</li><li>Abfragen verwenden Daten aus dem spezifischen Datensatz, da es sich um den einzigen Datensatz handelt</li></ul> | Abfragen können Adobe Analytics-Daten und möglicherweise andere Quellen verwenden. |
 | Mehrere Report Suites | In generischen Variablen sind keine Anzeigenamendeskriptoren enthalten. <br><br>**Beispiel:** eVar2 | <ul><li>Jedes Feld mit mehreren Deskriptoren wird als generisch angezeigt. Das bedeutet, dass in der Benutzeroberfläche keine Anzeigenamen angezeigt werden.</li><li>Abfragen können Daten aus allen Datensätzen verwenden, die die eVar enthalten. Dies kann zu gemischten oder falschen Ergebnissen führen.</li></ul> | Abfragen verwenden korrekt kombinierte Ergebnisse aus mehreren Datensätzen. |
 
-### Audiences
+### Zielgruppen
 
 Die **[!UICONTROL Zielgruppen]** auf der Registerkarte werden alle Zielgruppen aufgelistet, die aus externen Quellen wie Adobe Audience Manager importiert wurden, sowie Zielgruppen, die in [!DNL Experience Platform].
 
@@ -125,6 +125,22 @@ Bei der Auswahl eines Werts für das Attribut wird eine Liste mit Enum-Werten an
 Wenn Sie einen Wert aus dieser Auflistungsliste auswählen, wird der Wert mit einem durchgehenden Rand dargestellt. Für Felder, die `meta:enum` (weiche) Auflistungen können Sie auch einen Wert auswählen, der **not** aus der Liste der Auflistungen. Wenn Sie einen eigenen Wert erstellen, wird dieser mit einem gepunkteten Rahmen und einer Warnung versehen, dass dieser Wert nicht in der Enum-Liste enthalten ist.
 
 ![Ein Warnhinweis, der angezeigt wird, wenn Sie einen Wert einfügen, der nicht in die Aufzählungsliste aufgenommen wird.](../images/ui/segment-builder/enum-warning.png)
+
+Wenn Sie mehrere Werte erstellen, können Sie sie alle gleichzeitig hinzufügen, indem Sie den Massen-Upload verwenden. Wählen Sie die ![Plus-Symbol](../images/ui/segment-builder/plus-icon.png) , um **[!UICONTROL Stapelweises Hinzufügen von Werten]** Popover.
+
+![Das Pluszeichen wird hervorgehoben und zeigt die Schaltfläche an, über die Sie auf das Popup-Fenster für den Massen-Upload zugreifen können.](../images/ui/segment-builder/add-bulk-values.png)
+
+Im **[!UICONTROL Stapelweises Hinzufügen von Werten]** -Popup-Fenster können Sie eine CSV- oder TSV-Datei hochladen.
+
+![Das Popup Werte in Batch hinzufügen wird angezeigt. Das Dialogfeld, das Sie auswählen können, um eine CSV- oder TSV-Datei hochzuladen, wird hervorgehoben.](../images/ui/segment-builder/bulk-values-popover.png)
+
+Alternativ können Sie manuell durch Kommas getrennte Werte hinzufügen.
+
+![Das Popup Werte in Batch hinzufügen wird angezeigt. Sowohl das Dialogfeld, das Sie zum Einfügen von Werten verwenden können, als auch die hinzugefügten Werte werden hervorgehoben.](../images/ui/segment-builder/bulk-values-comma-separated.png)
+
+Bitte beachten Sie, dass maximal 250 Werte zulässig sind. Wenn Sie diesen Wert überschreiten, müssen Sie einige Werte entfernen, bevor Sie weitere hinzufügen.
+
+![Es wird eine Warnung angezeigt, die anzeigt, dass Sie die maximale Anzahl von Werten erreicht haben.](../images/ui/segment-builder/maximum-values.png)
 
 ### Hinzufügen von Zielgruppen
 

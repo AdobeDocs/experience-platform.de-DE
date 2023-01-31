@@ -1,9 +1,9 @@
 ---
-title: Adobe Experience Platform - Versionshinweise Januar 2023
+title: Adobe Experience Platform – Versionshinweise
 description: Die Versionshinweise für Adobe Experience Platform vom Januar 2023.
-source-git-commit: 855ce02dc371621cd8a4b02348e1e74a573123f3
+source-git-commit: 39d00824a17fd0b72de84425e5753945ad454b20
 workflow-type: tm+mt
-source-wordcount: '1911'
+source-wordcount: '1948'
 ht-degree: 31%
 
 ---
@@ -148,8 +148,9 @@ Um mehr über das Echtzeit-Kundenprofil zu erfahren, einschließlich Tutorials u
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Von der Plattform generierte Segmentmitgliedschaftsgültigkeit | Jede Segmentzugehörigkeit, die sich im `Exited` für mehr als 30 Tage, basierend auf dem `lastQualificationTime` -Feld kann gelöscht werden. |
+| Massenwertimport in Segment Builder | Segment Builder unterstützt jetzt den Import mehrerer Werte, entweder durch Hochladen einer CSV- oder TSV-Datei oder durch manuelles Einfügen von durch Kommas getrennten Werten. Weitere Informationen finden Sie im [Segment Builder-Handbuch](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 | Ablauf der Mitgliedschaft in einer externen Zielgruppe | Standardmäßig werden externe Zielgruppenmitgliedschaften 30 Tage lang aufbewahrt. Um sie länger aufzubewahren, verwenden Sie die `validUntil` -Feld während der Erfassung von Zielgruppendaten. |
+| Von der Plattform generierte Segmentmitgliedschaftsgültigkeit | Jede Segmentzugehörigkeit, die sich im `Exited` für mehr als 30 Tage, basierend auf dem `lastQualificationTime` -Feld kann gelöscht werden. |
 
 {style=&quot;table-layout:auto&quot;}
 
