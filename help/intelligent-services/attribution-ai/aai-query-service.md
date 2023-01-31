@@ -4,7 +4,7 @@ feature: Attribution AI
 title: Analyse von Attributionsbewertungen mithilfe von Query Service
 description: Erfahren Sie, wie Sie mit Adobe Experience Platform Query Service Attribution AI-Bewertungen analysieren können.
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Jede Zeile in den Daten stellt eine Konversion dar, in der Informationen für ve
 
 Wählen Sie in der Adobe Experience Platform-Benutzeroberfläche die Option **[!UICONTROL Datensätze]** in der linken Navigation. Die **[!UICONTROL Datensätze]** angezeigt. Wählen Sie als Nächstes die **[!UICONTROL Durchsuchen]** und suchen Sie den Ausgabedatensatz für Ihre Attribution AI-Bewertungen.
 
-![Zugreifen auf Ihre Instanz](./images/aai-query/datasets_browse.png)
+![Zugriff auf Ihr Modell](./images/aai-query/datasets_browse.png)
 
 Wählen Sie Ihren Ausgabedatensatz aus. Die Seite mit der Datensatzaktivität wird angezeigt.
 
@@ -305,7 +305,7 @@ Diese Abfrage reduziert die Strukturspalte in mehrere Einzelspalten und explodie
 
 >[!TIP]
 >
-> In diesem Beispiel müssen Sie `{COLUMN_NAME}` zusätzlich zu `_tenantId` und `your_score_output_dataset`. Die `COLUMN_NAME` kann die Werte der optionalen Weiterleitung durch Spaltennamen (Berichtsspalten) annehmen, die beim Konfigurieren Ihrer Attribution AI-Instanz hinzugefügt wurden. Sehen Sie sich Ihr Scoring-Ausgabeschema an, um die `{COLUMN_NAME}` Werte, die zum Abschließen dieser Abfrage erforderlich sind.
+> In diesem Beispiel müssen Sie `{COLUMN_NAME}` zusätzlich zu `_tenantId` und `your_score_output_dataset`. Die `COLUMN_NAME` kann die Werte der optionalen Übergabe durch Spaltennamen (Berichtsspalten) annehmen, die bei der Konfiguration Ihres Attribution AI-Modells hinzugefügt wurden. Sehen Sie sich Ihr Scoring-Ausgabeschema an, um die `{COLUMN_NAME}` Werte, die zum Abschließen dieser Abfrage erforderlich sind.
 
 ```sql
 SELECT 

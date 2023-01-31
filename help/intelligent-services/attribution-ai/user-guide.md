@@ -4,10 +4,10 @@ feature: Attribution AI
 title: Benutzerhandbuch zu Attribution AI
 description: Dieses Dokument dient als Leitfaden für die Interaktion mit Attribution AI in der Benutzeroberfläche von Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
 workflow-type: tm+mt
-source-wordcount: '2960'
-ht-degree: 6%
+source-wordcount: '2443'
+ht-degree: 1%
 
 ---
 
@@ -17,41 +17,41 @@ Attribution AI als Teil von Intelligent Services ist ein algorithmischer Attribu
 
 Dieses Dokument dient als Leitfaden für die Interaktion mit Attribution AI in der Benutzeroberfläche von Intelligent Services.
 
-## Erstellen einer Instanz
+## Erstellen eines Modells
 
 Im [!DNL Adobe Experience Platform] Benutzeroberfläche, auswählen **[!UICONTROL Dienste]** in der linken Navigation. Die **[!UICONTROL Dienste]** angezeigt und zeigt verfügbare Adobe Intelligence Services an. Wählen Sie im Container für Attribution AI die Option **[!UICONTROL Öffnen]**.
 
-![Zugreifen auf Ihre Instanz](./images/user-guide/open_Attribution_ai.png)
+![Zugriff auf Ihr Modell](./images/user-guide/open_Attribution_ai.png)
 
-Die Seite des Attribution AI-Service wird angezeigt. Auf dieser Seite werden Dienstinstanzen von Attribution AI aufgelistet und Informationen zu diesen angezeigt, einschließlich des Namens der Instanz, der Konversionsereignisse, der Häufigkeit der Ausführung der Instanz und des Status der letzten Aktualisierung.
+Die Seite des Attribution AI-Service wird angezeigt. Auf dieser Seite werden Dienstmodelle von Attribution AI aufgelistet und Informationen zu ihnen angezeigt, einschließlich Modellname, Konversionsereignisse, Häufigkeit der Modellausführung und Status der letzten Aktualisierung.
 
-Sie finden die **[!UICONTROL Gesamtzahl der bewerteten Konversionsereignisse]** Metrik unten rechts im **[!UICONTROL Instanz erstellen]** Container. Diese Metrik verfolgt die Gesamtzahl der Konversionsereignisse, die von Attribution AI für das aktuelle Kalenderjahr bewertet wurden, einschließlich aller Sandbox-Umgebungen und aller gelöschten Dienstinstanzen.
+Sie finden die **[!UICONTROL Gesamtzahl der bewerteten Konversionsereignisse]** Metrik unten rechts im **[!UICONTROL Modell erstellen]** Container. Diese Metrik verfolgt die Gesamtzahl der Konversionsereignisse, die von Attribution AI für das aktuelle Kalenderjahr bewertet wurden, einschließlich aller Sandbox-Umgebungen und aller gelöschten Dienstmodelle.
 
 ![Gesamtkonversionen](./images/user-guide/total_conversions.png)
 
-Dienstinstanzen können mithilfe der Steuerelemente auf der rechten Seite der Benutzeroberfläche bearbeitet, geklont und gelöscht werden. Um diese Steuerelemente anzuzeigen, wählen Sie eine Instanz aus Ihrer vorhandenen **[!UICONTROL Dienstinstanzen]**. Die Steuerelemente enthalten die folgenden Informationen:
+Dienstmodelle können mithilfe der Steuerelemente auf der rechten Seite der Benutzeroberfläche bearbeitet, geklont und gelöscht werden. Um diese Steuerelemente anzuzeigen, wählen Sie ein Modell aus Ihrer vorhandenen **[!UICONTROL Dienstmodelle]**. Die Steuerelemente enthalten die folgenden Informationen:
 
-- **[!UICONTROL Bearbeiten]**: Auswählen **[!UICONTROL Bearbeiten]** können Sie eine vorhandene Dienstinstanz ändern. Sie können den Namen, die Beschreibung, den Status und die Scoring-Häufigkeit der Instanz bearbeiten.
-- **[!UICONTROL Klonen]**: Auswählen **[!UICONTROL Klonen]** kopiert die ausgewählte Dienstinstanz. Anschließend können Sie den Workflow ändern, um kleinere Änderungen vorzunehmen, und ihn in eine neue Instanz umbenennen.
-- **[!UICONTROL Löschen]**: Sie können eine Dienstinstanz einschließlich aller historischen Ausführungen löschen. Der entsprechende Ausgabedatensatz wird aus Platform gelöscht. Bewertungen, die mit dem Echtzeit-Kundenprofil synchronisiert wurden, werden jedoch nicht gelöscht.
+- **[!UICONTROL Bearbeiten]**: Auswählen **[!UICONTROL Bearbeiten]** können Sie ein vorhandenes Dienstmodell ändern. Sie können den Namen, die Beschreibung, den Status, die Scoring-Häufigkeit des Modells und zusätzliche Score-Datensatzspalten bearbeiten.
+- **[!UICONTROL Klonen]**: Auswählen **[!UICONTROL Klonen]** kopiert das ausgewählte Dienstmodell. Anschließend können Sie den Workflow ändern, um kleinere Änderungen vorzunehmen, und ihn als neues Modell umbenennen.
+- **[!UICONTROL Löschen]**: Sie können ein Dienstmodell einschließlich aller historischen Ausführungen löschen. Der entsprechende Ausgabedatensatz wird aus Platform gelöscht. Bewertungen, die mit dem Echtzeit-Kundenprofil synchronisiert wurden, werden jedoch nicht gelöscht.
 - **[!UICONTROL Datenquelle]**: Ein Link zum verwendeten Datensatz. Wenn mehr als ein Datensatz von Attribution AI verwendet wird, wird &quot;Mehrere&quot;gefolgt von der Anzahl der Datensätze angezeigt. Bei Auswahl des Hyperlinks wird das Popup-Fenster für die Datensatzvorschau angezeigt.
 - **[!UICONTROL Letzte Ausführungsdetails]**: Dies wird nur angezeigt, wenn eine Ausführung fehlschlägt. Informationen dazu, warum die Ausführung fehlgeschlagen ist, wie Fehlercodes, werden hier angezeigt.
 
 ![Seitenbereich](./images/user-guide/multiple-datasets-pane.png)
 
-- **[!UICONTROL Konversionsereignisse]**: Ein kurzer Überblick über die für diese Instanz konfigurierten Konversionsereignisse.
+- **[!UICONTROL Konversionsereignisse]**: Ein kurzer Überblick über die für dieses Modell konfigurierten Konversionsereignisse.
 - **[!UICONTROL Lookback-Fenster]**: Der von Ihnen definierte Zeitrahmen, der angibt, wie viele Tage vor den Touchpoints des Konversionsereignisses vergangen sind.
-- **[!UICONTROL Touchpoints]**: Eine Liste aller Touchpoints, die Sie beim Erstellen dieser Instanz definiert haben.
+- **[!UICONTROL Touchpoints]**: Eine Liste aller Touchpoints, die Sie beim Erstellen dieses Modells definiert haben.
 
 ![](./images/user-guide/side_panel_2.png)
 
-Auswählen **[!UICONTROL Instanz erstellen]** um zu beginnen.
+Auswählen **[!UICONTROL Modell erstellen]** um zu beginnen.
 
-![Instanz erstellen](./images/user-guide/landing_page.png)
+![Modell erstellen](./images/user-guide/landing_page.png)
 
-Als Nächstes wird die Seite zum Einrichten von Attribution AI angezeigt, auf der Sie einen Namen und eine optionale Beschreibung für Ihre Dienstinstanz angeben können.
+Als Nächstes wird die Seite zum Einrichten von Attribution AI angezeigt, auf der Sie einen Namen und eine optionale Beschreibung für Ihr Dienstmodell angeben können.
 
-![Benennen einer Instanz](./images/user-guide/naming_instance.png)
+![Benennen eines Modells](./images/user-guide/naming_instance.png)
 
 ## Daten auswählen {#select-data}
 
@@ -227,7 +227,7 @@ Um die Tageszeit zu ändern, zu der die Auswertung erfolgen soll, wählen Sie da
 
 ### Zusätzliche Ergebnisdatensatzspalten (optional)
 
-Standardmäßig wird für jede Dienstinstanz in einem Standardschema ein Bewertungsdatensatz erstellt. Sie können der Scoring-Datensatzausgabe zusätzliche Spalten hinzufügen, die auf Ihren Konversionsereignis- und Touchpoint-Konfigurationen basieren. Wählen Sie zunächst Spalten aus Ihrem Eingabedatensatz aus und ziehen Sie sie per Drag-and-Drop, um die Reihenfolge zu ändern. Halten Sie dazu die linke Maustaste über dem Hamburger-Symbol gedrückt.
+Standardmäßig wird für jedes Dienstmodell in einem Standardschema ein Bewertungsdatensatz erstellt. Sie können der Scoring-Datensatzausgabe zusätzliche Spalten hinzufügen, die auf Ihren Konversionsereignis- und Touchpoint-Konfigurationen basieren. Wählen Sie zunächst Spalten aus Ihrem Eingabedatensatz aus und ziehen Sie sie per Drag-and-Drop, um die Reihenfolge zu ändern. Halten Sie dazu die linke Maustaste über dem Hamburger-Symbol gedrückt.
 
 ![Hinzufügung der Datensatzspalte](./images/user-guide/Add-score-dataset.png)
 
@@ -265,49 +265,11 @@ Nachdem Sie Ihr Schulungsfenster ausgewählt haben, wählen Sie **[!UICONTROL Be
 
 ![Setup abgeschlossen](./images/user-guide/instance_setup_complete.png)
 
-## Governance-Richtlinien
-
-Sobald Sie den Workflow durchlaufen haben, um eine Instanz zu erstellen und die Konfiguration des Modells zu übermitteln, wird die [Richtliniendurchsetzung](/help/data-governance/enforcement/auto-enforcement.md) überprüft, ob Verstöße vorliegen. Wenn ein Richtlinienverstoß auftritt, wird ein Popup angezeigt, das angibt, dass eine oder mehrere Richtlinien verletzt wurden. Dadurch soll sichergestellt werden, dass Ihre Datenvorgänge und Marketing-Aktionen in Platform mit Datennutzungsrichtlinien konform sind.
-
-![Popover mit Richtlinienverstoß](./images/user-guide/policy-violation-popover-aai.png)
-
-Das Popup-Fenster enthält spezifische Informationen zum Verstoß. Sie können diese Verstöße durch Richtlinieneinstellungen und andere Maßnahmen beheben, die nicht direkt mit dem Konfigurations-Workflow zusammenhängen. Sie können beispielsweise die Beschriftungen so ändern, dass bestimmte Felder für datenwissenschaftliche Zwecke verwendet werden dürfen. Alternativ können Sie auch die Modellkonfiguration selbst so ändern, dass sie nichts mit einer Bezeichnung verwendet. Weitere Informationen zum Einrichten finden Sie in der Dokumentation . [policies](/help/data-governance/policies/overview.md).
-
-## Attributbasierte Zugriffssteuerung
-
->[!IMPORTANT]
->
->Die attributbasierte Zugriffskontrolle ist derzeit nur in einer eingeschränkten Version verfügbar.
-
-[Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Platform, mit der Administrierende den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen steuern können.](../../../help/access-control/abac/overview.md) Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. eine Bezeichnung, die einem Schemafeld oder Segment hinzugefügt wird. Administrierende definieren Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten.
-
-Mit der attributbasierten Zugriffssteuerung können Sie Schemafelder des Experience-Datenmodells (XDM) mit Bezeichnungen versehen, die Organisations- oder Datennutzungsbereiche definieren. Parallel dazu können Admins die Benutzeroberfläche zur Verwaltung von Benutzenden und Rollen verwenden, um Zugriffsrichtlinien zu definieren, die XDM-Schemafelder abdecken, und den Zugriff, der Benutzenden oder Gruppen von Benutzenden (internen, externen oder Dritten) gewährt wird, besser verwalten. Darüber hinaus ermöglicht die attributbasierte Zugriffskontrolle Admins die Verwaltung des Zugriffs auf bestimmte Segmente.
-
-Mithilfe der attributbasierten Zugriffskontrolle können Administratoren den Zugriff der Benutzer auf sowohl sensible persönliche Daten (EPPD) als auch personenbezogene Daten (PII) in allen Platform-Workflows und -Ressourcen steuern. Administratoren können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
-
-Aufgrund der attributbasierten Zugriffskontrolle sind einige Felder und Funktionen möglicherweise eingeschränkt und stehen für bestimmte Attribution AI-Dienstinstanzen nicht zur Verfügung. Beispiele sind &quot;Identität&quot;, &quot;Score-Definition&quot;und &quot;Klon&quot;.
-
-Oben im Arbeitsbereich &quot;Attribution AI&quot; **Insight-Seite**, haben die Details, die in der Seitenleiste angezeigt werden, eingeschränkten Zugriff.
-
-![Der Arbeitsbereich Attribution AI mit hervorgehobenen eingeschränkten Schemafeldern.](./images/user-guide/access-restricted.png)
-
-Wenn Sie Datensätze mit eingeschränkten Schemas im **[!UICONTROL Workflow &quot;Instanz erstellen&quot;]** -Seite wird neben dem Datensatznamen ein Warnzeichen mit der Meldung angezeigt: [!UICONTROL Eingeschränkte Informationen sind ausgeschlossen].
-
-![Der Arbeitsbereich Attribution AI mit hervorgehobenen eingeschränkten Datensatzfeldern.](./images/user-guide/restricted-info-excluded.png)
-
-Bei der Vorschau von Datensätzen mit eingeschränktem Schema auf der **[!UICONTROL Workflow &quot;Instanz erstellen&quot;]** angezeigt wird, erscheint ein Warnhinweis, der Ihnen mitteilt, dass [!UICONTROL Aufgrund von Zugriffsbeschränkungen werden bestimmte Informationen nicht in der Datensatzvorschau angezeigt.]
-
-![Der Arbeitsbereich Attribution AI mit den eingeschränkten Feldern für die Vorschau des Schemas zeigt die Ergebnisse an.](./images/user-guide/restricted-dataset-preview.png)
-
-Nachdem Sie eine Instanz mit eingeschränkten Informationen erstellt haben, fahren Sie mit dem **[!UICONTROL Ziel definieren]** Schritt, wird oben eine Warnung angezeigt: [!UICONTROL Aufgrund von Zugriffsbeschränkungen werden bestimmte Informationen nicht in der Konfiguration angezeigt.]
-
-![Der Arbeitsbereich Attribution AI mit den eingeschränkten Feldern der Instanz wird hervorgehoben.](./images/user-guide/information-not-displayed-save-and-exit.png)
-
 ## Nächste Schritte
 
 In diesem Tutorial haben Sie erfolgreich eine Dienstinstanz in Attribution AI erstellt. Sobald die Instanz die Auswertung abgeschlossen hat (bis zu 24 Stunden erlauben), können Sie [Attribution AI Einblicke entdecken](./discover-insights.md). Wenn Sie Ihre Scoring-Ergebnisse herunterladen möchten, besuchen Sie außerdem das [Herunterladen von Bewertungen](./download-scores.md) Dokumentation.
 
-## Weitere Ressourcen
+## Zusätzliche Ressourcen
 
 Im folgenden Video wird ein durchgängiger Workflow zum Erstellen einer neuen Instanz in Attribution AI beschrieben.
 
