@@ -4,10 +4,10 @@ title: Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die Zielgruppendaten aktivieren, die Sie in Adobe Experience Platform haben, indem Sie Segmente an Ziele senden, die auf Batch-Profilen basieren.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: e2318509236fad5054ce82b384f399dd6cbbdc34
+source-git-commit: 9bde403338187409892d76de68805535de03d59f
 workflow-type: tm+mt
-source-wordcount: '3414'
-ht-degree: 99%
+source-wordcount: '3537'
+ht-degree: 94%
 
 ---
 
@@ -463,19 +463,29 @@ Wenn Sie zu Ihren exportierten Dateien während der Beta-Phase Identitäts-Names
 
 Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihrer Auswahl sehen. Wählen Sie **[!UICONTROL Abbrechen]**, um den Fluss abzubrechen, **[!UICONTROL Zurück]**, um die Einstellungen zu ändern, oder **[!UICONTROL Fertig stellen]**, um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
 
->[!IMPORTANT]
->
->In diesem Schritt prüft Adobe Experience Platform, ob Verstöße gegen Datennutzungsrichtlinien vorliegen. Nachstehend ist ein Beispiel angegeben, bei dem eine Richtlinie verletzt wird. Sie können den Workflow zur Segmentaktivierung erst abschließen, nachdem Sie den Verstoß behoben haben. Informationen dazu, wie Richtlinienverletzungen behoben werden, finden Sie unter [Durchsetzung von Richtlinien](../../rtcdp/privacy/data-governance-overview.md#enforcement) im Dokumentationsabschnitt zur Data Governance.
+![Auswahlzusammenfassung im Überprüfungsschritt.](/help/destinations/assets/ui/activate-batch-profile-destinations/review.png)
 
-![Abbildung mit einem Beispiel für eine Datenrichtlinienverletzung](../assets/common/data-policy-violation.png)
+### Auswertung der Einverständnisrichtlinie {#consent-policy-evaluation}
 
-Wenn keine Richtlinienverletzungen festgestellt wurden, klicken Sie auf **[!UICONTROL Beenden]**, um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
+Wenn Ihr Unternehmen **Adobe Gesundheitsschild** oder **Adobe Privacy &amp; Security Shield** auswählen **[!UICONTROL Gültige Zustimmungsrichtlinien anzeigen]** , um zu sehen, welche Zustimmungsrichtlinien angewendet werden und wie viele Profile infolge dieser Aktivierung in die Aktivierung einbezogen werden. Informationen [Bewertung der Einwilligungsrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) für weitere Informationen.
 
-![Abbildung des Überprüfungsbildschirms des Segmentaktivierungs-Workflows](../assets/ui/activate-batch-profile-destinations/review.png)
+### Prüfungen von Datennutzungsrichtlinien {#data-usage-policy-checks}
+
+Im **[!UICONTROL Überprüfen]** -Schritt, überprüft Experience Platform auch auf Verstöße gegen Datennutzungsrichtlinien. Nachstehend ist ein Beispiel angegeben, bei dem eine Richtlinie verletzt wird. Sie können den Workflow zur Segmentaktivierung erst abschließen, nachdem Sie den Verstoß behoben haben. Informationen zum Beheben von Richtlinienverletzungen finden Sie unter [Verstöße gegen Datennutzungsrichtlinien](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) im Abschnitt Data Governance-Dokumentation .
+
+![Verletzung von Datenrichtlinien](../assets/common/data-policy-violation.png)
+
+### Filtern von Segmenten {#filter-segments}
+
+Außerdem können Sie in diesem Schritt die verfügbaren Filter auf der Seite verwenden, um nur die Segmente anzuzeigen, deren Zeitplan oder Zuordnung im Rahmen dieses Workflows aktualisiert wurde. Sie können auch umschalten, welche Tabellenspalten angezeigt werden sollen.
+
+![Bildschirmaufzeichnung, die die verfügbaren Segmentfilter im Überprüfungsschritt anzeigt.](/help/destinations/assets/ui/activate-batch-profile-destinations/filter-segments-batch-review.gif)
+
+Wenn Sie mit Ihrer Auswahl zufrieden sind und keine Richtlinienverletzungen festgestellt wurden, wählen Sie **[!UICONTROL Beenden]** , um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
 
 ## Überprüfen der Segmentaktivierung {#verify}
 
-Bei E-Mail-Marketing- und Cloud-Speicher-Zielen erstellt Adobe Experience Platform eine Datei des Typs `.csv` am von Ihnen angegebenen Speicherort. Wahrscheinlich wird eine neue Datei an Ihrem Speicherort entsprechend dem Zeitplan erstellt, den Sie im Workflow festgelegt haben. Das standardmäßige Dateiformat lautet:
+Bei E-Mail-Marketing- und Cloud-Speicher-Zielen erstellt Adobe Experience Platform eine Datei des Typs `.csv` am von Ihnen angegebenen Speicherort. Wahrscheinlich wird eine neue Datei an Ihrem Speicherort entsprechend dem Zeitplan erstellt, den Sie im Workflow festgelegt haben. Das standardmäßige Dateiformat ist unten dargestellt, Sie können jedoch [Bearbeiten der Komponenten des Dateinamens](#file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 Wenn Sie beispielsweise eine tägliche Exportfrequenz auswählen, könnten die Dateien, die Sie an drei aufeinander folgenden Tagen erhalten würden, wie folgt aussehen:

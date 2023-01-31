@@ -4,10 +4,10 @@ title: Aktivieren von Zielgruppendaten für Exportziele von Streaming-Profilen
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppendaten aktivieren können, indem Sie Segmente an profilbasierte Ziele senden.
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: af761155bc510d96cea2b0bd475ee4a3bc4abe16
+source-git-commit: 9bde403338187409892d76de68805535de03d59f
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 60%
+source-wordcount: '743'
+ht-degree: 51%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 60%
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle - Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 ## Übersicht {#overview}
 
@@ -80,15 +80,25 @@ Dateiexporte variieren auf folgende Weise, je nachdem, ob `segmentMembership.sta
 
 Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihrer Auswahl sehen. Wählen Sie **[!UICONTROL Abbrechen]**, um den Fluss abzubrechen, **[!UICONTROL Zurück]**, um die Einstellungen zu ändern, oder **[!UICONTROL Fertig stellen]**, um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
 
->[!IMPORTANT]
->
->In diesem Schritt prüft Adobe Experience Platform, ob Verstöße gegen Datennutzungsrichtlinien vorliegen. Nachstehend ist ein Beispiel angegeben, bei dem eine Richtlinie verletzt wird. Sie können den Workflow zur Segmentaktivierung erst abschließen, nachdem Sie den Verstoß behoben haben. Informationen dazu, wie Richtlinienverletzungen behoben werden, finden Sie unter [Durchsetzung von Richtlinien](../../rtcdp/privacy/data-governance-overview.md#enforcement) im Dokumentationsabschnitt zur Data Governance.
+![Auswahlzusammenfassung im Überprüfungsschritt.](/help/destinations/assets/ui/activate-streaming-profile-destinations/review.png)
 
-![Bild, das eine Verletzung einer Datenrichtlinie im Überprüfungsschritt anzeigt.](../assets/common/data-policy-violation.png)
+### Auswertung der Einverständnisrichtlinie {#consent-policy-evaluation}
 
-Wenn keine Richtlinienverletzungen festgestellt wurden, wählen Sie **[!UICONTROL Beenden]**, um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
+Wenn Ihr Unternehmen **Adobe Gesundheitsschild** oder **Adobe Privacy &amp; Security Shield** auswählen **[!UICONTROL Gültige Zustimmungsrichtlinien anzeigen]** , um zu sehen, welche Zustimmungsrichtlinien angewendet werden und wie viele Profile infolge dieser Aktivierung in die Aktivierung einbezogen werden. Informationen [Bewertung der Einwilligungsrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) für weitere Informationen.
 
-![Bild, das den Überprüfungsschritt des Aktivierungs-Workflows anzeigt.](../assets/ui/activate-streaming-profile-destinations/review.png)
+### Prüfungen von Datennutzungsrichtlinien {#data-usage-policy-checks}
+
+Im **[!UICONTROL Überprüfen]** -Schritt, überprüft Experience Platform auch auf Verstöße gegen Datennutzungsrichtlinien. Nachstehend ist ein Beispiel angegeben, bei dem eine Richtlinie verletzt wird. Sie können den Workflow zur Segmentaktivierung erst abschließen, nachdem Sie den Verstoß behoben haben. Informationen zum Beheben von Richtlinienverletzungen finden Sie unter [Verstöße gegen Datennutzungsrichtlinien](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) im Abschnitt Data Governance-Dokumentation .
+
+![Verletzung von Datenrichtlinien](../assets/common/data-policy-violation.png)
+
+### Filtern von Segmenten {#filter-segments}
+
+Außerdem können Sie in diesem Schritt die verfügbaren Filter auf der Seite verwenden, um nur die Segmente anzuzeigen, deren Zeitplan oder Zuordnung im Rahmen dieses Workflows aktualisiert wurde.
+
+![Bildschirmaufzeichnung, die die verfügbaren Segmentfilter im Überprüfungsschritt anzeigt.](/help/destinations/assets/ui/activate-streaming-profile-destinations/filter-segments-review-step.gif)
+
+Wenn Sie mit Ihrer Auswahl zufrieden sind und keine Richtlinienverletzungen festgestellt wurden, wählen Sie **[!UICONTROL Beenden]** , um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
 
 ## Überprüfen der Segmentaktivierung {#verify}
 

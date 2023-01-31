@@ -4,10 +4,10 @@ title: Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppendaten aktivieren, indem Sie Segmente Segmenten Segmentstreaming-Zielen zuordnen.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
+source-git-commit: 9bde403338187409892d76de68805535de03d59f
 workflow-type: tm+mt
-source-wordcount: '811'
-ht-degree: 36%
+source-wordcount: '935'
+ht-degree: 31%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 36%
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle - Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 ## Übersicht {#overview}
 
@@ -59,7 +59,7 @@ Bei einigen Segmentstreaming-Zielen müssen Sie Quellattribute oder Identitäts-
 
    ![Neue Zuordnung hinzufügen](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
 
-1. Wählen Sie den Pfeil rechts neben dem **[!UICONTROL Quellfeld]** eingeben.
+1. Wählen Sie den Pfeil rechts neben dem Eintrag **[!UICONTROL Quellfeld]** aus.
 
    ![Quellfeld auswählen](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
 
@@ -125,15 +125,25 @@ Um alle für Ihr Ziel aktivierten Segmente anzuzeigen, verwenden Sie die Filtero
 
 Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihrer Auswahl sehen. Wählen Sie **[!UICONTROL Abbrechen]**, um den Fluss abzubrechen, **[!UICONTROL Zurück]**, um die Einstellungen zu ändern, oder **[!UICONTROL Fertig stellen]**, um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
 
->[!IMPORTANT]
->
->In diesem Schritt prüft Adobe Experience Platform, ob Verstöße gegen Datennutzungsrichtlinien vorliegen. Nachstehend ist ein Beispiel angegeben, bei dem eine Richtlinie verletzt wird. Sie können den Workflow zur Segmentaktivierung erst abschließen, nachdem Sie den Verstoß behoben haben. Informationen dazu, wie Richtlinienverletzungen behoben werden, finden Sie unter [Durchsetzung von Richtlinien](../../rtcdp/privacy/data-governance-overview.md#enforcement) im Dokumentationsabschnitt zur Data Governance.
+![Auswahlzusammenfassung im Überprüfungsschritt.](/help/destinations/assets/ui/activate-segment-streaming-destinations/review.png)
+
+### Auswertung der Einverständnisrichtlinie {#consent-policy-evaluation}
+
+Wenn Ihr Unternehmen **Adobe Gesundheitsschild** oder **Adobe Privacy &amp; Security Shield** auswählen **[!UICONTROL Gültige Zustimmungsrichtlinien anzeigen]** , um zu sehen, welche Zustimmungsrichtlinien angewendet werden und wie viele Profile infolge dieser Aktivierung in die Aktivierung einbezogen werden. Informationen [Bewertung der Einwilligungsrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) für weitere Informationen.
+
+### Prüfungen von Datennutzungsrichtlinien {#data-usage-policy-checks}
+
+Im **[!UICONTROL Überprüfen]** -Schritt, überprüft Experience Platform auch auf Verstöße gegen Datennutzungsrichtlinien. Nachstehend ist ein Beispiel angegeben, bei dem eine Richtlinie verletzt wird. Sie können den Workflow zur Segmentaktivierung erst abschließen, nachdem Sie den Verstoß behoben haben. Informationen zum Beheben von Richtlinienverletzungen finden Sie unter [Verstöße gegen Datennutzungsrichtlinien](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) im Abschnitt Data Governance-Dokumentation .
 
 ![Verletzung von Datenrichtlinien](../assets/common/data-policy-violation.png)
 
-Wenn keine Richtlinienverletzungen festgestellt wurden, wählen Sie **[!UICONTROL Beenden]**, um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
+### Filtern von Segmenten {#filter-segments}
 
-![Überprüfung](../assets/ui/activate-segment-streaming-destinations/review.png)
+Außerdem können Sie in diesem Schritt die verfügbaren Filter auf der Seite verwenden, um nur die Segmente anzuzeigen, deren Zeitplan oder Zuordnung im Rahmen dieses Workflows aktualisiert wurde. Sie können auch umschalten, welche Tabellenspalten angezeigt werden sollen.
+
+![Bildschirmaufzeichnung, die die verfügbaren Segmentfilter im Überprüfungsschritt anzeigt.](/help/destinations/assets/ui/activate-segment-streaming-destinations/filter-segments-review-step.gif)
+
+Wenn Sie mit Ihrer Auswahl zufrieden sind und keine Richtlinienverletzungen festgestellt wurden, wählen Sie **[!UICONTROL Beenden]** , um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
 
 ## Überprüfen der Segmentaktivierung {#verify}
 
