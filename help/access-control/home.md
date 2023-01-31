@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Zugangssteuerung – Übersicht
 description: Die Zugangssteuerung für Adobe Experience Platform wird über Adobe Admin Console geboten. Diese Funktion nutzt Produktprofile in Admin Console, um Anwender mit Berechtigungen und Sandboxes zu verknüpfen.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
-workflow-type: ht
-source-wordcount: '1419'
-ht-degree: 100%
+source-git-commit: 56f1cbc622450b154e6e29a8116789b316901f66
+workflow-type: tm+mt
+source-wordcount: '1473'
+ht-degree: 96%
 
 ---
 
@@ -79,6 +79,12 @@ In der folgenden Tabelle sind die für [!DNL Experience Platform] in der [!DNL A
 
 | Kategorie | Berechtigung | Beschreibung |
 | --- | --- | --- |
+| [!DNL Alerts] | [!UICONTROL Verlauf von Warnhinweisen anzeigen] | Schreibgeschützter Zugriff für den Warnhinweisverlauf. |
+| [!DNL Alerts] | [!UICONTROL Auflösen von Warnhinweisen] | Zugriff auf das Lesen, Bearbeiten und Löschen von Warnhinweisen. |
+| [!DNL Alerts] | [!UICONTROL Anzeigen von Warnhinweisen] | Schreibgeschützter Zugriff für Warnhinweise. |
+| [!DNL Alerts] | [!UICONTROL Verwalten von Warnhinweisen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen des Warnhinweisverlaufs. |
+| [!DNL Data Hygiene] | [!UICONTROL Datenhygiene anzeigen] | Schreibgeschützter Zugriff für Datenhygiene. |
+| [!DNL Data Hygiene] | [!UICONTROL Verwalten der Datenhygiene] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Datenhygiene. |
 | [!DNL Data Modeling] | [!UICONTROL Verwalten von Schemas] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Schemas und zugehörigen Ressourcen. |
 | [!DNL Data Modeling] | [!UICONTROL Anzeigen von Schemas] | Schreibgeschützter Zugriff auf Schemas und zugehörige Ressourcen. |
 | [!DNL Data Modeling] | [!UICONTROL Verwalten von Beziehungen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Schema-Beziehungen. |
@@ -94,9 +100,9 @@ In der folgenden Tabelle sind die für [!DNL Experience Platform] in der [!DNL A
 | [!DNL Profile Management] | [!UICONTROL Anzeigen von Zusammenführungsrichtlinien] | Schreibgeschützter Zugriff auf verfügbare Zusammenführungsrichtlinien. |
 | [!DNL Profile Management] | [!UICONTROL Exportieren der Zielgruppe für das Segment] | Fähigkeit, eine ausgewertetes Zielgruppensegment in einen Datensatz zu exportieren. |
 | [!DNL Profile Management] | [!UICONTROL Auswerten von Segmenten für eine Zielgruppe] | Möglichkeit, Profile für eine Zielgruppe zu generieren, indem eine Segmentdefinition ausgewertet wird. |
-| [!DNL Identities] | [!UICONTROL Verwalten von Identitäts-Namensräumen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Identitäts-Namensräumen. |
-| [!DNL Identities] | [!UICONTROL Anzeigen von Identitäts-Namensräumen] | Schreibgeschützter Zugriff für Identitäts-Namensräume. |
-| [!DNL Identities] | [!UICONTROL Anzeigen von Identitätsdiagrammen] | Schreibgeschützter Zugriff für Identitätsdiagramme. |
+| [!DNL Identity Management] | [!UICONTROL Verwalten von Identitäts-Namensräumen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Identitäts-Namensräumen. |
+| [!DNL Identity Management] | [!UICONTROL Anzeigen von Identitäts-Namensräumen] | Schreibgeschützter Zugriff für Identitäts-Namensräume. |
+| [!DNL Identity Management] | [!UICONTROL Anzeigen von Identitätsdiagrammen] | Schreibgeschützter Zugriff für Identitätsdiagramme. |
 | [!DNL Sandbox Administration] | [!UICONTROL Verwalten von Sandboxes] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Sandboxes. |
 | [!DNL Sandbox Administration] | [!UICONTROL Anzeigen von Sandboxes] | Schreibgeschützter Zugriff für Sandboxes Ihrer Organisation. |
 | [!DNL Sandbox Administration] | [!UICONTROL Zurücksetzen einer Sandbox] | Fähigkeit, eine Sandbox zurückzusetzen. |
