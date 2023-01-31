@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die Versionshinweise für Adobe Experience Platform vom Januar 2023.
-source-git-commit: 39d00824a17fd0b72de84425e5753945ad454b20
+source-git-commit: f7bcd009882d9753638ba2ce692df9fe80287641
 workflow-type: tm+mt
-source-wordcount: '1948'
-ht-degree: 31%
+source-wordcount: '2293'
+ht-degree: 29%
 
 ---
 
@@ -14,6 +14,7 @@ ht-degree: 31%
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
 - [Assurance](#assurance)
 - [Datenerfassung](#data-collection)
 - [[!DNL Destinations]](#destinations)
@@ -21,6 +22,39 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [Echtzeit-Kundenprofil](#profile)
 - [Segmentation Service](#segmentation)
 - [Quellen](#sources)
+
+## Künstliche Intelligenz/Dienstleistungen des maschinellen Lernens {#ai-ml}
+
+Mit den Services für künstliche Intelligenz und maschinelles Lernen können Marketing-Analysten und Praktiker die Leistung von KI/ML in Anwendungsfällen mit Kundenerlebnissen nutzen. So können Marketing-Analysten mithilfe von Konfigurationen auf Unternehmensebene Prognosen erstellen, die auf die Anforderungen eines Unternehmens zugeschnitten sind, ohne dass datenwissenschaftliche Kenntnisse erforderlich sind.
+
+### Attributions-KI
+
+Attribution AI wird verwendet, um Touchpoints, die zu Konversionsereignissen führen, Gutschriften zuzuordnen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
+
+**Aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| HIPAA-Bereitschaft | Gesundheitsschutzschild-Kunden können jetzt geschützte Gesundheitsinformationen in Attribution AIS und bestimmten anderen Experience Platformen empfangen, verwenden, verwalten oder übermitteln. Der Gesundheitsschild ist für Kunden im Gesundheitswesen bestimmt, die entweder eine gedeckte Einheit oder ein Unternehmensverbund im Rahmen des HIPAA sind. Weitere Informationen finden Sie in der Dokumentation unter [HIPAA und Adobe - Produkte und Dienstleistungen](https://www.adobe.com/trust/compliance/hipaa-ready.html) |
+| Zusätzliche Datensatzspalten mit Bewertungen bearbeiten | Sie können jetzt beim Bearbeiten vorhandener Modelle zusätzliche Score-Datensatzspalten (Berichtsspalten) hinzufügen oder entfernen. Dies erweitert die Flexibilität der Attributionsbewertungen, um Ihnen Einblicke in zusätzliche Dimensionen zu bieten, nachdem ein Modell bereits erstellt wurde. Siehe [Handbuch zur Attribution UI](../../intelligent-services/attribution-ai/user-guide.md) , um mehr zu erfahren. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Siehe [KI-/ML-Dienste](../../intelligent-services/attribution-ai/overview.md) Übersicht für weitere Informationen.
+
+### Kunden-KI
+
+Customer AI für Real-time Customer Data Platform wird verwendet, um benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion für einzelne Profile in großem Maßstab zu generieren. Dies wird erreicht, ohne dass die Geschäftsanforderungen in ein Problem des maschinellen Lernens umgewandelt werden müssen bzw. ein Algorithmus ausgewählt, trainiert oder bereitgestellt werden muss.
+
+**Aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| HIPAA-Bereitschaft | Gesundheitsschutzschild-Kunden können jetzt geschützte Gesundheitsinformationen in Customer AI für Real-time Customer Data Platform und bestimmte andere Experience Platform-basierte Anwendungen empfangen, verwenden, verwalten oder übermitteln. Der Gesundheitsschild ist für Kunden im Gesundheitswesen bestimmt, die entweder eine gedeckte Einheit oder ein Unternehmensverbund im Rahmen des HIPAA sind. Weitere Informationen finden Sie in der Dokumentation unter [HIPAA und Adobe - Produkte und Dienstleistungen](https://www.adobe.com/trust/compliance/hipaa-ready.html) |
+
+{style=&quot;table-layout:auto&quot;}
+
+Siehe [KI-/ML-Dienste](../../intelligent-services/customer-ai/overview.md) Übersicht für weitere Informationen.
 
 ## Assurance {#assurance}
 
