@@ -1,24 +1,24 @@
 ---
 title: Data Distiller - Übersicht
 description: Eine Zusammenfassung der Data Distiller-Nutzungsbeschränkungen für Query Service-Daten im Zusammenhang mit Ihrer Lizenzberechtigung.
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: b3003cc62e8d3555b887a23f0614020bd2c5e81e
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '571'
 ht-degree: 0%
 
 ---
 
 # Data Distiller - Übersicht
 
-Data Distiller ist ein Package, das eine Untergruppe der Funktionen von Adobe Experience Platform enthält. Mit Data Distiller können Sie nach der Erfassung Datenvorbereitung (z. B. Reinigung, Formatierung und Bearbeitung) für Echtzeit-Kundenprofile oder Analytics-Anwendungsfälle durchführen, indem Sie in Query Service Batch-Abfragen ausführen. Ihre Verwendung von Data Distiller hängt von Ihrer aktuellen und fortlaufenden Lizenz für mindestens eine der folgenden Bedingungen ab: Adobe Real-time Customer Data Platform, Customer Journey Analytics und/oder Adobe Journey Optimizer.
+Data Distiller ist ein Package, das eine Untergruppe der Funktionen von Adobe Experience Platform enthält. Mit Data Distiller können Sie nach der Erfassung Datenvorbereitung (z. B. Reinigung, Formatierung und Bearbeitung) für Echtzeit-Kundenprofile oder Analytics-Anwendungsfälle durchführen, indem Sie in Query Service Batch-Abfragen ausführen. Ihre Verwendung von Data Distiller hängt von Ihrer Berechtigung für plattformbasierte Anwendungen ab.
 
 ## Lizenznutzung {#license-usage}
 
-Siehe [Nutzungsdokument zur Distiller-Lizenz](./license-usage.md) , um wichtige Informationen zur Nutzung der Query Service-Lizenz Ihres Unternehmens anzuzeigen.
+Die  [Datennutzungs-Dashboard für Distiller-Lizenzen](./license-usage.md) ist verfügbar, sobald Sie Data Distiller Compute-Stunden erworben haben. Mit dem Dashboard zur Lizenznutzung können Sie den Verbrauch berechtigter Berechnungsstunden überwachen. Siehe [Nutzungsdokument zur Distiller-Lizenz](./license-usage.md) , um wichtige Informationen zur Nutzung der Query Service-Lizenz Ihres Unternehmens anzuzeigen.
 
 ## Scoping-Parameter {#scoping-parameters}
 
-Scoping-Parameter sind Nutzungsbeschränkungen, die sich auf das Scoping Ihres vorgeschlagenen Anwendungsfalls beziehen, wie durch Ihre Lizenzkapazität definiert. Ohne Add-ons lauten die Scoping-Parameter von Data Distiller wie folgt:
+Scoping-Parameter sind Nutzungsbeschränkungen, die sich auf den Umfang Ihrer erforderlichen Einrichtung beziehen und durch Ihre Lizenzkapazität definiert werden. Ohne Add-ons lauten die Scoping-Parameter von Data Distiller wie folgt:
 
 * **Berechnungsstunden**: Sie können PSQL oder die Query Service-API verwenden, um in einer beliebigen (geplanten oder anderweitig) Sandbox ausgeführte Batch-Abfragen zum Überprüfen und Schreiben von Daten auszuführen. Dabei werden die zugewiesenen Compute Hours pro Jahr verwendet, wie im Scoping-Prozess Ihres Lizenzvertrags festgelegt. Die Gesamtbetriebszeit wird für alle Sandboxes gesammelt.
 * **Aufgenommene Daten**: Die in Adobe Experience Platform erfassten Daten, die mit Data Distiller abgefragt werden können, unterliegen den Einschränkungen, die in Ihrer damaligen aktuellen Lizenz für Adobe Real-time Customer Data Platform, Customer Journey Analytics und/oder Adobe Journey Optimizer beschrieben sind.
@@ -38,6 +38,7 @@ Eine statische Begrenzung ist die Nutzungsbegrenzung, die sich auf die funktiona
    * Zum Ausführen von SQL-Abfragen für die Datenanalyse und die Vorbereitung der Datenerfassung nach der Erfassung (Bereinigen, Gestalten und Bearbeiten).
    * So führen Sie SQL-Abfragen aus, um Datenaggregationsmetriken zu erstellen, die direkt in ein BI-Tool einfließen.
    * So überprüfen Sie Daten schnell in Adobe Experience Platform.
+   * So generieren Sie aussagekräftige Einblicke aus Ihren Daten.
 * **Berichterstellungs-API-Aufruf**: Um sicherzustellen, dass Abfragen auf aggregierten Daten mithilfe der Reporting-API ausgeführt werden, verfügen sie über genügend Ressourcen, um effizient auszuführen. Dazu gehören Abfragen, die vorhandene Datenmodelle wie die von Real-time Customer Data Platform bereitgestellten erweitern. Die Reporting-API verfolgt die Ressourcenauslastung, indem jeder Abfrage Gleichzeitigkeitsfenster zugewiesen werden. Es sind maximal 4 Berichterstellungs-API-Aufrufe gleichzeitig verfügbar. Wenn Sie über ein BI-Tool auf die Berichterstellungs-API zugreifen und mehr Zeitfenster für gleichzeitige Nutzung benötigen, ist ein BI-Server erforderlich.
 
 
