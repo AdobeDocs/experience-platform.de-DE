@@ -3,7 +3,7 @@ title: Vergleich von at.js mit dem Experience Platform Web SDK
 description: Erfahren Sie, wie die at.js-Funktionen mit dem Experience Platform Web SDK verglichen werden.
 keywords: Target; adobe target; activity.id; experience.id; renderDecisions; DecisionScopes; Vorabausblenden von Snippet; VEC; Form-Based Experience Composer; xdm; Zielgruppen; Entscheidungen; Umfang; Schema; Systemdiagramm; Diagramm
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 3c229dfced2ea404e8b333a25cd8148ac81a91c2
+source-git-commit: 519d77ca7bfb910b03fea3567e08824e6f852eb4
 workflow-type: tm+mt
 source-wordcount: '2286'
 ht-degree: 7%
@@ -30,10 +30,10 @@ URL-Struktur: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js ODER 
 
 Beispiel:
 
-* Minimiert: [https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js)
-* Nicht minimiert: [https://cdn1.adoberesources.net/alloy/2.6.4/alloy.js](https://cdn1.adoberesources.net/alloy/2.6.4/alloy.js)
+* Minimiert: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js)
+* Nicht minimiert: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js)
 
-[Weitere Infos](../../fundamentals/installing-the-sdk.md)
+[Weitere Informationen](../../fundamentals/installing-the-sdk.md)
 
 ## Bibliotheken konfigurieren
 
@@ -97,7 +97,7 @@ alloy("configure", {
 
 Es gibt viele Optionen, die während der Konfiguration festgelegt werden können. Alle Optionen sind nachstehend nach Kategorie gruppiert aufgeführt.
 
-[Weitere Infos](../../fundamentals/configuring-the-sdk.md)
+[Weitere Informationen](../../fundamentals/configuring-the-sdk.md)
 
 
 ## Anfordern und automatischen Rendern von Target-Angeboten für Seitenladevorgänge
@@ -208,7 +208,7 @@ Experience Platform Web SDK sendet automatisch eine Benachrichtigung mit den vom
 }
 ```
 
-[Weitere Infos](../rendering-personalization-content.md)
+[Weitere Informationen](../rendering-personalization-content.md)
 
 ## Anfordern und NICHT automatisch Rendern von Target-Angeboten für Seitenladevorgänge
 
@@ -287,7 +287,7 @@ alloy("sendEvent", {
   });
 ```
 
-[Weitere Infos](../rendering-personalization-content.md#manually-rendering-content)
+[Weitere Informationen](../rendering-personalization-content.md#manually-rendering-content)
 
 
 ## Anfordern bestimmter formularbasierter Target-Mboxes
@@ -445,7 +445,7 @@ alloy("sendEvent", {
 });
 ```
 
-[Weitere Infos](../rendering-personalization-content.md#manually-rendering-content)
+[Weitere Informationen](../rendering-personalization-content.md#manually-rendering-content)
 
 ## Anwenden der Target-Aktivitäten
 
@@ -631,7 +631,7 @@ alloy("sendEvent", {
 });
 ```
 
-[Weitere Infos](../rendering-personalization-content.md#manually-rendering-content)
+[Weitere Informationen](../rendering-personalization-content.md#manually-rendering-content)
 
 ## Trigger einer Ansichtsänderung in einer Einzelseiten-App
 
@@ -667,7 +667,7 @@ alloy("sendEvent", {
 });
 ```
 
-[Weitere Infos](./spa-implementation.md#implementing-xdm-views)
+[Weitere Informationen](./spa-implementation.md#implementing-xdm-views)
 
 ## Verwenden von Antwort-Token
 
@@ -731,7 +731,7 @@ alloy("sendEvent", {
   });
 ```
 
-[Weitere Infos](./accessing-response-tokens.md)
+[Weitere Informationen](./accessing-response-tokens.md)
 
 ## Beheben von Flackern
 
