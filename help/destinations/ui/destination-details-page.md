@@ -3,10 +3,10 @@ keywords: Ziele; Ziel; Zieldetailseite; Zieldetailseite; Zieldetailseite
 title: Anzeigen von Zieldetails
 description: Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails. Zu den Zieldetails gehören der Zielname, die ID, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung und zum Aktivieren und Deaktivieren des Datenflusses.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 165d8719cbf5d4b0555d5b9ef84252e3cbd82d42
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 7%
+source-wordcount: '799'
+ht-degree: 21%
 
 ---
 
@@ -24,11 +24,11 @@ In der Adobe Experience Platform-Benutzeroberfläche können Sie die Attribute u
 
 Gehen Sie wie folgt vor, um weitere Details zu einem vorhandenen Ziel anzuzeigen.
 
-1. Melden Sie sich bei der [Experience Platform-Benutzeroberfläche](https://platform.adobe.com/) und wählen Sie **[!UICONTROL Ziele]** über die linke Navigationsleiste. Auswählen **[!UICONTROL Durchsuchen]** aus der oberen Kopfzeile, um Ihre vorhandenen Ziele anzuzeigen.
+1. Melden Sie sich bei der [Experience Platform-Benutzeroberfläche](https://platform.adobe.com/) an und wählen Sie **[!UICONTROL Ziele]** über die linke Navigationsleiste aus. Auswählen **[!UICONTROL Durchsuchen]** aus der oberen Kopfzeile, um Ihre vorhandenen Ziele anzuzeigen.
 
    ![Ziele durchsuchen](../assets/ui/details-page/browse-destinations.png)
 
-1. Filtersymbol auswählen ![Filter-Symbol](../assets/ui/details-page/filter.png) oben links, um das Sortierungsfenster zu öffnen. Das Sortierungsfenster bietet eine Liste aller Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Datenflüssen anzuzeigen, die mit dem ausgewählten Ziel verknüpft sind.
+1. Wählen Sie das Symbol ![Filter](../assets/ui/details-page/filter.png) oben links, um das Sortier-Bedienfeld zu öffnen. Das Sortier-Bedienfeld bietet eine Liste aller Ihrer Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Datenflüssen anzuzeigen, die mit dem ausgewählten Ziel verknüpft sind.
 
    ![Ziele filtern](../assets/ui/details-page/filter-destinations.png)
 
@@ -78,21 +78,27 @@ Die [!UICONTROL Datenfluss-Abläufe] -Tab enthält Metrikdaten zu Ihren Datenfl�
 
 >[!NOTE]
 >
->* Die Funktion zur Zielüberwachung wird derzeit für alle Ziele in Experience Platform unterstützt *Ausnahme* die [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) und [Benutzerdefinierte Personalisierung](/help/destinations/catalog/personalization/custom-personalization.md) Ziele.
+>* Die Funktion zur Zielüberwachung wird derzeit für alle Ziele in Experience Platform unterstützt *Ausnahme* die [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Benutzerdefinierte Personalisierung](/help/destinations/catalog/personalization/custom-personalization.md) und [Experience Cloud Audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md) Ziele.
 >* Für [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)und [HTTP-API](/help/destinations/catalog/streaming/http-destination.md) Ziele, ausgeschlossene Identitäten werden derzeit nicht angezeigt.
 
 
 ![Datenfluss-Ausführungsansicht](../assets/ui/details-page/dataflow-runs.png)
 
+### Dauer der Datenflüsse {#dataflow-runs-duration}
+
+Es gibt ein bekanntes Problem in der angezeigten Dauer von Datenfluss-Läufen. Während **[!UICONTROL Verarbeitungsdauer]** für die meisten Datenflug-Läufe etwa vier Stunden beträgt, wie in der Abbildung unten dargestellt, ist die tatsächliche Verarbeitungszeit für jeden Datenflug-Lauf viel kürzer. Dataflow-Ausführungsfenster bleiben länger geöffnet, falls die Experience Platform erneut Aufrufe an das Ziel ausführen muss.
+
+![Bild der Seite &quot;Datenfluss wird ausgeführt&quot;, wobei die Spalte Verarbeitungszeit hervorgehoben ist.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run.png)
+
 ## [!UICONTROL Aktivierungsdaten] {#activation-data}
 
-Die [!UICONTROL Aktivierungsdaten] zeigt eine Liste der Segmente an, die dem Ziel zugeordnet wurden, einschließlich des Anfangs- und Enddatums (falls zutreffend) sowie anderer relevanter Informationen für den Datenexport, wie Exporttyp, -zeitplan und -frequenz. Um die Details zu einem bestimmten Segment anzuzeigen, wählen Sie dessen Namen aus der Liste aus.
+Die Registerkarte [!UICONTROL Aktivierungsdaten] zeigt eine Liste der Segmente an, die dem Ziel zugeordnet wurden, einschließlich des Anfangs- und Enddatums (falls zutreffend) sowie weiterer relevanter Informationen für den Datenexport, wie Exporttyp, -zeitplan und -frequenz. Um Details zu einem bestimmten Segment anzuzeigen, wählen Sie dessen Namen aus der Liste aus.
 
 >[!TIP]
 >
 >Um Details zu den Attributen und Identitäten anzuzeigen und zu bearbeiten, die einem Ziel zugeordnet sind, wählen Sie **[!UICONTROL Segmente aktivieren]** im [rechte Leiste](#right-rail).
 
-![Batch-Ziel der Aktivierungsdatenansicht](../assets/ui/details-page/activation-data-batch.png)
+![Batch-Ziel für die Aktivierungsdatenansicht](../assets/ui/details-page/activation-data-batch.png)
 
 ![Streaming-Ziel für Aktivierungsdaten-Ansicht](../assets/ui/details-page/activation-data-streaming.png)
 
