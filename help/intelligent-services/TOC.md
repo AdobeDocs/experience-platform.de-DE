@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Intelligent Services-Hilfe
 breadcrumb-title: Handbuch zu Intelligent Services
 user-guide-description: Nutzen Sie intelligente KI-Services, um Scores zu generieren, Insights zu erhalten und Segmente aus Ihren Marketing-Ereignisdaten zu erstellen.
-source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
+source-git-commit: 5448333a68560aeb83e8f31a36c75c539fc4bf1b
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 100%
+source-wordcount: '149'
+ht-degree: 93%
 
 ---
 
@@ -23,6 +23,12 @@ ht-degree: 100%
    - [Handbuch zur Benutzeroberfläche](attribution-ai/user-guide.md)
    - [Einblicke erlangen](attribution-ai/discover-insights.md)
    - [Scores herunterladen](attribution-ai/download-scores.md)
+   - Data Governance {#aai-data-governance}
+      - [Zugriffskontrollen](attribution-ai/aai-data-governance/access-controls.md)
+      - [Auditprotokolle](attribution-ai/aai-data-governance/audit-logs.md)
+      - [Vom Kunden verwaltete Schlüssel](attribution-ai/aai-data-governance/customer-managed-keys.md)
+      - [Data Governance](attribution-ai/aai-data-governance/data-governance.md)
+      - [Governance-Richtlinien](attribution-ai/aai-data-governance/governance-policies.md)
    - [Scores mithilfe von Query Service analysieren](attribution-ai/aai-query-service.md)
    - [Fehlerbehebung](attribution-ai/troubleshooting.md)
 - Content and Commerce AI (Beta) {#content-commerce-ai}
@@ -44,4 +50,10 @@ ht-degree: 100%
       - [Erstellen von Segmenten mit Scores von Kunden-KI](customer-ai/user-guide/create-segment.md)
       - [Scores herunterladen](customer-ai/user-guide/download-scores.md)
    - [Fehlerbehebung](customer-ai/troubleshooting.md)
+   - Data Governance {#cai-data-governance}
+      - [Zugriffskontrollen](customer-ai/cai-data-governance/access-controls.md)
+      - [Auditprotokolle](customer-ai/cai-data-governance/audit-logs.md)
+      - [Vom Kunden verwaltete Schlüssel](customer-ai/cai-data-governance/customer-managed-keys.md)
+      - [Data Governance](customer-ai/cai-data-governance/data-governance.md)
+      - [Governance-Richtlinien](customer-ai/cai-data-governance/governance-policies.md)
 - [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)

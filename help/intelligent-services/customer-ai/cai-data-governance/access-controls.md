@@ -4,7 +4,7 @@ solution: Experience Platform
 feature: Customer AI
 title: Zugriffskontrolle für Customer AI
 description: Dieses Dokument enthält Informationen zur attributbasierten Zugriffskontrolle für Customer AI.
-source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
+source-git-commit: 6f386d859b8553050ead266fad0e473c7cf7095e
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 37%
@@ -42,8 +42,8 @@ Nachdem Sie ein Modell mit eingeschränkten Informationen erstellt haben, fahren
 
 Bei Verwendung der Zugriffssteuerung muss die **Anzeigen von Customer AI** und **Customer AI verwalten** -Berechtigungen gewähren Zugriff auf verschiedene Funktionen von Customer AI. Die **Customer AI verwalten** -Berechtigung **erstellen**,**update**, **delete**, **enable** oder **disable** ein Modell während **Anzeigen von Customer AI** Sie können sie lesen oder anzeigen. Die **erstellen**, **update** und **delete** -Aktionen werden in Auditprotokollen aufgezeichnet.
 
-Weitere Informationen finden Sie in der Dokumentation . [Zuweisen von Berechtigungen für die Zugriffskontrolle](../../../help/access-control/home.md) oder wie [Verwenden Sie Auditprotokolle zur Überwachung von Zugriff und Aktivität.](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
+Weitere Informationen finden Sie in der Dokumentation . [Zuweisen von Berechtigungen für die Zugriffskontrolle](../../../access-control/home.md) oder wie [Verwenden Sie Auditprotokolle zur Überwachung von Zugriff und Aktivität.](../../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Handbuchs haben Sie sich mit den Hauptgrundsätzen der Zugangssteuerung in [!DNL Experience Platform] vertraut gemacht. Nun können Sie im [Benutzerhandbuch für die Zugangssteuerung](./ui/overview.md) ausführliche Schritte nachlesen, wie Sie die [!DNL Admin Console] zur Erstellung von Produktprofilen und zur Erteilung von Berechtigungen für [!DNL Platform] nutzen.
+Durch das Lesen dieses Handbuchs haben Sie sich mit den Hauptgrundsätzen der Zugangssteuerung in [!DNL Experience Platform] vertraut gemacht. Nun können Sie im [Benutzerhandbuch für die Zugangssteuerung](../overview.md) ausführliche Schritte nachlesen, wie Sie die [!DNL Admin Console] zur Erstellung von Produktprofilen und zur Erteilung von Berechtigungen für [!DNL Platform] nutzen.

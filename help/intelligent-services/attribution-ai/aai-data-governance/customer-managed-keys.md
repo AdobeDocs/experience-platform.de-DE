@@ -1,9 +1,8 @@
 ---
 keywords: Einblicke; Attributionsai; Attributionsai-Einblicke; AAI-Abfragedienst; Attributionsabfragen; Attributionsbewertungen; Vom Kunden verwaltete Schlüssel in AAI
-feature: Customer-Managed Keys in Attribution AI
 title: Vom Kunden verwaltete Schlüssel
 description: Erfahren Sie, wie Sie kundenverwaltete Schlüssel für Attribution AI einrichten.
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: f80cdd553c36ee10cfbf07c5cbbb14e9a4ae6757
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 24%

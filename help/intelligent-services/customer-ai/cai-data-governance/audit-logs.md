@@ -1,11 +1,10 @@
 ---
 keywords: Einblicke; Kundenai; Kundenai-Einblicke; CAI-Abfragedienst; Kundenai-Abfragen; Kundenai-Bewertungen
-feature: Customer AI audit logs
-title: Übersicht über Auditprotokolle
+title: Übersicht über Auditprotokolle in Customer AI
 description: Erfahren Sie, wie Sie Auditprotokolle in Customer AI anzeigen und verwalten.
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: 6f386d859b8553050ead266fad0e473c7cf7095e
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '279'
 ht-degree: 36%
 
 ---
@@ -22,4 +21,4 @@ In einem Auditprotokoll wird festgehalten, wer welche Aktion wann ausgeführt ha
 
 Wenn diese Funktion für Ihr Unternehmen aktiviert ist, werden bei Aktivitäten automatisch Auditprotokolle aufgezeichnet. Sie müssen die Datenerfassung in Auditprotokollen nicht manuell aktivieren.
 
-Um Auditprotokolle anzeigen und exportieren zu können, benötigen Sie in der Adobe-Konsole die Zugriffsberechtigung Zugriff auf Auditprotokolle. Informationen zum Verwalten individueller Berechtigungen für Customer AI-Funktionen finden Sie im Abschnitt [Zugriffssteuerungsdokumentation](../../customer-ai/user-guide/access-controls.md).
+Um Auditprotokolle anzeigen und exportieren zu können, benötigen Sie in der Adobe-Konsole die Zugriffsberechtigung Zugriff auf Auditprotokolle. Informationen zum Verwalten individueller Berechtigungen für Customer AI-Funktionen finden Sie im Abschnitt [Zugriffssteuerungsdokumentation](../cai-data-governance/access-controls.md).
