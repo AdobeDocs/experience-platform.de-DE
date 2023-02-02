@@ -4,10 +4,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
-source-git-commit: 2d9cd6ed1db7bcbbe9b35c154e09a6b03f9a132d
+source-git-commit: 33aeeb58e5bfa2c1553a5c49fee07dc5020f4efb
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 98%
+source-wordcount: '928'
+ht-degree: 92%
 
 ---
 
@@ -329,6 +329,15 @@ ht-degree: 98%
       - [Verwenden eines Texteditors in Ihrer lokalen Umgebung, um die Seite mit der Quellendokumentation zu erstellen.](sources-sdk/documentation/text-editor.md)
       - [Dokumentationsvorlage für Selbstbedienungs-API](sources-sdk/documentation/template.md)
       - [Dokumentationsvorlage für Selbstbedienungs-Benutzeroberfläche](sources-sdk/documentation/ui-template.md)
+   - Streaming-SDK {#streaming-sdk}
+      - [Erste Schritte mit Self-Serve-Quellen (Streaming-SDK)](sources-sdk/streaming/getting-started.md)
+      - [Verbindungsspezifikation für eine Streaming-Quelle erstellen](sources-sdk/streaming/create.md)
+      - [Verbindungsspezifikation für eine Streaming-Quelle aktualisieren](sources-sdk/streaming/update-connection-specs.md)
+      - [Streaming-Flussspezifikation aktualisieren](sources-sdk/streaming/update-flow-specs.md)
+      - [Testen und Senden Ihrer Verbindungsspezifikation zur Verifizierung](sources-sdk/streaming/submit.md)
+      - [Dokumentieren Ihrer Quelle (Streaming-SDK)](sources-sdk/streaming/document-streaming.md)
+      - [Dokumentation zur Self-Service-API-Streaming-Vorlage](sources-sdk/streaming/streaming-template-api.md)
+      - [Dokumentation zur Self-Service-UI-Streaming-Vorlage](sources-sdk/streaming/streaming-template-ui.md)
 - [Flusslaufbenachrichtigungen](notifications.md)
 - [IP-Adressen-Zulassungsliste](ip-address-allow-list.md)
 - [Häufig gestellte Fragen](./troubleshooting.md)
