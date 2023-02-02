@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform - Versionshinweise Januar 2023
 description: Die Versionshinweise für Adobe Experience Platform vom Januar 2023.
-source-git-commit: f7bcd009882d9753638ba2ce692df9fe80287641
+source-git-commit: 667e868f2faba3ac3f241a2e2cd04d6de67f48c7
 workflow-type: tm+mt
-source-wordcount: '2294'
-ht-degree: 29%
+source-wordcount: '2444'
+ht-degree: 27%
 
 ---
 
@@ -83,7 +83,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 {style=&quot;table-layout:auto&quot;}
 
-## Ziele {#destinations}
+## Ziele (am 2. Februar aktualisiert) {#destinations}
 
 [!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 
@@ -114,6 +114,10 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
         <td>Aktualisiertes Exportverhalten für dateibasierte Ziele (PLAT-123316)</td>
         <td>Es wurde ein Problem im Verhalten von <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mandatory-attributes">obligatorische Attribute</a> beim Exportieren von Datendateien in Batch-Ziele. <br> Zuvor wurde überprüft, ob jeder Datensatz in den Ausgabedateien beide enthält: <ol><li>Ein Wert ungleich null des <code>mandatoryField</code> Spalte und</li><li>Ein Wert ungleich null für mindestens eines der anderen nicht obligatorischen Felder.</li></ol> Die zweite Bedingung wurde entfernt. Daher werden möglicherweise mehr Ausgabezeilen in Ihren exportierten Datendateien angezeigt, wie im folgenden Beispiel gezeigt:<br> <b> Beispielverhalten vor der Version vom Januar 2023 </b> <br> Obligatorisches Feld: <code>emailAddress</code> <br> <b>Eingabedaten zur Aktivierung</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>Aktivierungsausgabe</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> Beispielverhalten nach der Version vom Januar 2023 </b> <br> <b>Aktivierungsausgabe</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> </td>
     </tr>
+    <tr>
+        <td>UI- und API-Validierung für erforderliche Zuordnungen und doppelte Zuordnungen (PLAT-123316)</td>
+        <td>Die Validierung wird jetzt in der Benutzeroberfläche und in der API wie folgt erzwungen, wenn <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">Zuordnungsfelder</a> im Workflow Ziele aktivieren :<ul><li><b>Erforderliche Zuordnungen</b>: Wenn das Ziel vom Zielentwickler mit den erforderlichen Zuordnungen eingerichtet wurde (z. B. die <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> Ziel), müssen diese erforderlichen Zuordnungen vom Benutzer hinzugefügt werden, wenn er Daten für das Ziel aktiviert. </li><li><b>Duplizieren von Zuordnungen</b>: Im Zuordnungsschritt des Aktivierungs-Workflows können Sie doppelte Werte in den Quellfeldern, aber nicht in den Zielfeldern hinzufügen. In der folgenden Tabelle finden Sie ein Beispiel für zulässige und verbotene Zuordnungskombinationen. <br><table><thead><tr><th>Zulässig/verboten</th><th>Quellfeld</th><th>Zielfeld</th></tr></thead><tbody><tr><td>Zugelassen</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>email alias2</li></ul></td></tr><tr><td>Verboten</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
+    </tr>    
 </table>
 
 Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
