@@ -4,10 +4,10 @@ solution: Experience Platform
 title: XDM ExperienceEvent-Klasse
 description: Dieses Dokument enthält einen Überblick über die XDM ExperienceEvent-Klasse und Best Practices für die Modellierung von Ereignisdaten.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
+source-git-commit: e4e87fdb5f6dfbca882f924d38397a904d8b0cff
 workflow-type: tm+mt
-source-wordcount: '1853'
-ht-degree: 93%
+source-wordcount: '1865'
+ht-degree: 92%
 
 ---
 
@@ -42,7 +42,7 @@ Das `timestamp`-Feld im Stamm eines Ereignisschemas kann **nur** die Beobachtung
 
 Beispiel: Wenn ein Unternehmen des Reise- und Beherbergungsgewerbes ein Flugreservierungsereignis modelliert, gibt das `timestamp`-Feld auf Klassenebene den Zeitpunkt an, zu dem das Reservierungsereignis beobachtet wurde. Andere Zeitstempel, die mit dem Ereignis in Verbindung stehen, wie z. B. das Startdatum der Reisereservierung, sollten in separaten Feldern erfasst werden, die von standardmäßigen oder benutzerdefinierten Feldergruppen bereitgestellt werden.
 
-![](../images/classes/experienceevent/timestamps.png)
+![Ein Beispiel für ein Erlebnisereignis-Schema mit hervorgehobenem Flugreservierungs- und Startdatum.](../images/classes/experienceevent/timestamps.png)
 
 Indem Sie den Zeitstempel auf Klassenebene von anderen zugehörigen Datums-/Zeitwerten in Ihren Ereignisschemata trennen, können Sie flexible Anwendungsfälle für die Segmentierung implementieren und gleichzeitig ein Kundenkonto mit Zeitstempel in Ihrem Erlebnisprogramm beibehalten.
 
