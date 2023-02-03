@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Automatische Richtliniendurchsetzung
 description: In diesem Dokument wird erläutert, wie Datennutzungsrichtlinien automatisch erzwungen werden, wenn in Experience Platform Segmente für Ziele aktiviert werden.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: c0f077d685c688f96d1778a02b24c0959a5dd822
 workflow-type: tm+mt
-source-wordcount: '1727'
-ht-degree: 97%
+source-wordcount: '1883'
+ht-degree: 89%
 
 ---
 
@@ -116,6 +116,16 @@ Wählen Sie **[!UICONTROL Listenansicht]** aus, um die Datenherkunft als Liste a
 ### Auswertung der Einverständnisrichtlinie {#consent-policy-evaluation}
 
 Wenn Sie [Einverständnisrichtlinien erstellt](../policies/user-guide.md#consent-policy) haben und ein Segment für ein Ziel aktivieren, können Sie sehen, wie sich Ihre Einverständnisrichtlinien auf den Prozentsatz der Profile auswirken, die in die Aktivierung eingebunden werden.
+
+#### Verbesserung der Einwilligungsrichtlinie für gebührenpflichtige Medien {#consent-policy-enhancement}
+
+Die Durchsetzung von Zustimmungsrichtlinien für Streaming-Ziele, einschließlich der Aktivierung gebührenpflichtiger Medien, wurde verbessert. Diese Verbesserung steht Kunden des Datenschutzschilds oder des Gesundheitsschilds zur Verfügung und entfernt proaktiv Profile aus Streaming-Zielen, wenn sich der Zustimmungsstatus ändert. Außerdem wird sichergestellt, dass Einwilligungsänderungen sofort propagiert werden, sodass immer die richtige Zielgruppe angesprochen wird.
+
+Diese Verbesserungen ermöglichen ein größeres Vertrauen in Ihre Marketing-Strategie, da Marketingexperten nicht mehr gezwungen sind, ihrem Segmentausdruck manuell Zustimmungsattribute hinzuzufügen. Dadurch wird sichergestellt, dass keine Profile versehentlich für Marketingerlebnisse angesprochen werden, nachdem die Einwilligung widerrufen wurde oder nicht mehr für eine Einwilligungsrichtlinie qualifiziert ist. Die Marketing-Einwilligungsrichtlinien, die Regeln dafür festlegen, wie Einwilligungs- oder Vorzugsdaten über verschiedene Marketing-Workflows hinweg verwaltet werden sollen, werden jetzt in Aktivierungs-Workflows in nachgelagerten Lösungen automatisch durchgesetzt.
+
+>[!NOTE]
+>
+>Aufgrund dieser Verbesserung gibt es keine Änderungen an der Benutzeroberfläche.
 
 #### Auswertung vor der Aktivierung
 

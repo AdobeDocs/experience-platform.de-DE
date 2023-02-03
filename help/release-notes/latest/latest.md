@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die Versionshinweise für Adobe Experience Platform vom Januar 2023.
-source-git-commit: 667e868f2faba3ac3f241a2e2cd04d6de67f48c7
+source-git-commit: c60c58e563a324c4f8f90eac04686f2190e8448d
 workflow-type: tm+mt
 source-wordcount: '2443'
 ht-degree: 28%
@@ -99,7 +99,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 | Funktionalität | Beschreibung |
 | ----------- | ----------- |
-| Verbesserung der Richtlinie zur Zustimmung für Paid Media für Integrationen mit Streaming-Zielen | Eine Verbesserung von [Durchsetzung von Zustimmungsrichtlinien](/help/data-governance/enforcement/auto-enforcement.md) on [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations) für Anwendungsfälle zur Aktivierung gebührenpflichtiger Medien. Wenn Profile nicht mehr für eine Zustimmungsrichtlinie qualifiziert sind, kommuniziert Experience Platform jetzt proaktiv ihren Richtlinienausstieg an Streaming-Ziele. <br> <b>Hinweis</b>: Diese Funktion steht nur Kunden von **[!UICONTROL Datenschutz und Sicherheitsschild]** und der **[!UICONTROL Gesundheitsschild]**. |
+| Verbesserung der Richtlinie zur Zustimmung für Paid Media für Integrationen mit Streaming-Zielen | Ein [Verbesserung der Durchsetzung von Zustimmungsrichtlinien](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) on [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations) für Anwendungsfälle zur Aktivierung gebührenpflichtiger Medien. Wenn Profile nicht mehr für eine Zustimmungsrichtlinie qualifiziert sind, kommuniziert Experience Platform jetzt proaktiv ihren Richtlinienausstieg an Streaming-Ziele. <br> <b>Hinweis</b>: Diese Funktion steht nur Kunden von **[!UICONTROL Datenschutz und Sicherheitsschild]** und der **[!UICONTROL Gesundheitsschild]**. |
 | Neue Trennzeichenoptionen für Beta-Cloud-Speicher-Ziel-Connectoren | Drei neue Trennzeichenoptionen (Doppelpunkt `:`, Pipe, Semikolon `;`) sind jetzt für die neuen Beta-Cloud-Speicher-Ziele verfügbar - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Beta) Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(Beta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> Informationen zu den unterstützten [Dateiformatierungsoptionen](/help/destinations/ui/batch-destinations-file-formatting-options.md) für dateibasierte Ziele. |
 | Neuer optionaler Parameter verfügbar in [Kundendatenfelder](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) Konfigurationen in [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`: Verwenden Sie diesen Parameter, wenn Sie ein Kundendatenfeld erstellen müssen, dessen Wert über alle von der Organisation eines Benutzers eingerichteten Ziel-Datenflüsse hinweg eindeutig sein muss. <br> Beispiel: die **[!UICONTROL Integrationsalias]** im Feld [[!UICONTROL Benutzerdefinierte Personalisierung]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) Das Ziel muss eindeutig sein, d. h. zwei separate Datenflüsse zu diesem Ziel dürfen für dieses Feld nicht denselben Wert haben. |
 
