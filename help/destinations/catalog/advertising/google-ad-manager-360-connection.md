@@ -2,10 +2,10 @@
 title: (Beta)  [!DNL Google Ad Manager 360] -Verbindung
 description: Google Ad Manager 360 ist eine Adserving-Plattform von Google, die Publishern die Möglichkeit gibt, das Anzeigen von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
-workflow-type: ht
-source-wordcount: '914'
-ht-degree: 100%
+source-git-commit: ec4d064f90348f9eafb1d0fe4b9df5e102295507
+workflow-type: tm+mt
+source-wordcount: '926'
+ht-degree: 85%
 
 ---
 
@@ -45,7 +45,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den entsprechenden Schemafeldern (z. B. Ihre PPID), wie sie im Bildschirm „Profilattribute auswählen“ des [Zielaktivierungs-Workflows](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) ausgewählt wurden. |
+| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Teile eines Segments zusammen mit den entsprechenden Schemafeldern (wie etwa Ihre PPID), gemäß der Auswahl im Bildschirm „Profilattribute auswählen“ des [Zielaktivierungs-Workflows](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | Exporthäufigkeit | **[!UICONTROL Batch]** | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Weitere Informationen finden Sie unter [Batch-Datei-basierte Ziele](/help/destinations/destination-types.md#file-based). |
 
 {style=&quot;table-layout:auto&quot;}
@@ -54,19 +54,15 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 ### Zulassungsauflistung {#allow-listing}
 
+Die Zulassungsauflistung ist obligatorisch, bevor Sie Ihr erstes [!DNL Google Ad Manager 360]-Ziel in Platform einrichten. Stellen Sie sicher, dass Sie den unten beschriebenen Zulassungsauflistungsprozess abgeschlossen haben, bevor Sie Ihr Ziel erstellen.
+
 >[!NOTE]
 >
->Die Zulassungsliste ist notwendig, bevor Sie Ihr erstes [!DNL Google Ad Manager]-Ziel in Platform einrichten. Vergewissern Sie sich, dass der im Folgenden beschriebene Prozess der Zulassungsliste durch [!DNL Google] abgeschlossen wurde, bevor Sie ein Ziel erstellen.
+>Die Ausnahme für diese Regel ist für bestehende [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=de) -Kunden. Wenn Sie bereits eine Verbindung zu diesem Google-Ziel in Audience Manager erstellt haben, ist es nicht erforderlich, den Zulassungsauflistungsprozess erneut zu durchlaufen. Sie können mit den nächsten Schritten fortfahren.
 
->[!IMPORTANT]
->
->Google hat die Verbindung von externen Zielgruppen-Management-Plattformen mit Google Ad Manager 360 vereinfacht. Sie können jetzt den Vorgang zum Verknüpfen mit Google Ad Manager 360 selbständig durchführen. Lesen Sie [Segmente aus Data-Management-Plattformen](https://support.google.com/admanager/answer/3289669?hl=de) in der Google-Dokumentation. Sie sollten über die unten aufgeführten IDs verfügen.
+1. Führen Sie die im Abschnitt [Dokumentation zu Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=de) , um Adobe als verknüpfte Data Management Platform (DMP) hinzuzufügen.
+2. Im [!DNL Google Ad Manager] Benutzeroberfläche, navigieren Sie zu **[!UICONTROL Admin]** > **[!UICONTROL Globale Einstellungen]** > **[!UICONTROL Netzwerkeinstellungen]** und aktivieren Sie die **[!UICONTROL API-Zugriff]** festlegen.
 
-* **Konto-ID**: Dies ist die Konto-ID von Adobe bei Google. Konto-ID: 87933855.
-* **Kunden-ID**: Dies ist die Kundenkonto-ID von Adobe bei Google. Kunden-ID: 89690775.
-* **Netzwerk-Code**: Dies ist Ihre Netzwerk-ID bei [!DNL Google Ad Manager], die unter **[!UICONTROL Admin > Globale Einstellungen]** in der Google-Benutzeroberfläche sowie in der URL zu finden ist.
-* **Zielgruppen-Link-ID**: Dies ist eine spezifische Kennung, die mit Ihrem [!DNL Google Ad Manager]-Netzwerk (nicht Ihrem [!DNL Network code]) verbunden ist und die auch unter **[!UICONTROL Admin > Globale Einstellungen]** in der Google-Benutzeroberfläche zu finden ist.
-* Ihr Kontotyp. DFP von Google oder AdX Buyer.
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
@@ -91,12 +87,12 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 * **[!UICONTROL Name]**: Geben Sie einen bevorzugten Namen für das Ziel ein.
 * **[!UICONTROL Beschreibung]**: Optional. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden.
-* **[!UICONTROL Behältername]**: Geben Sie den Namen des [!DNL Google Cloud Storage]-Behälters ein, der von diesem Ziel verwendet werden soll.
 * **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad zum Zielordner ein, in dem die exportierten Dateien gespeichert werden.
-* **[!UICONTROL Konto-ID]**: Geben Sie Ihre Zielgruppen-Link-ID für [!DNL Google] ein.
-* **[!UICONTROL Kontotyp]**: Wählen Sie je nach Konto bei Google eine Option aus:
-   * Verwenden von `DFP by Google` für [!DNL DoubleClick] for Publishers
+* **[!UICONTROL Behältername]**: Geben Sie den Namen des [!DNL Google Cloud Storage]-Behälters ein, der von diesem Ziel verwendet werden soll.
+* **[!UICONTROL Konto-ID]**: Geben Sie Ihre [!DNL Audience Link ID] von [!DNL Google] -Konto. Dies ist eine spezifische Kennung, die mit Ihrem [!DNL Google Ad Manager] Netzwerk (nicht [!DNL Network code]). Sie finden dies unter **[!UICONTROL Admin > Globale Einstellungen]** im [!DNL Google Ad Manager] -Schnittstelle.
+* **[!UICONTROL Kontotyp]**: Wählen Sie je nach [!DNL Google] Konto:
    * Verwenden von `AdX buyer` für [!DNL Google AdX]
+   * Verwenden von `DFP by Google` für [!DNL DoubleClick] for Publishers
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -127,3 +123,12 @@ Diese Zuordnungen sind erforderlich für [!DNL Google Ad Manager 360] und werden
 ## Exportierte Daten {#exported-data}
 
 Um festzustellen, ob die Daten erfolgreich exportiert wurden, überprüfen Sie Ihren [!DNL Google Cloud Storage]-Behälter und stellen Sie sicher, dass die exportierten Dateien die erwarteten Profilpopulationen enthalten.
+
+## Fehlerbehebung {#troubleshooting}
+
+Falls bei der Verwendung dieses Ziels Fehler auftreten und Sie eine Verbindung zu Adobe oder Google herstellen müssen, halten Sie die folgenden IDs bereit.
+
+Dies sind die Google-Konto-IDs der Adobe:
+
+* **[!UICONTROL Konto-ID]**: 87933855
+* **[!UICONTROL Kunden-ID]**: 89690775
