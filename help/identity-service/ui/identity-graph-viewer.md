@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Identitätsdiagramm-Viewer - Übersicht
 description: Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identitäten für einen bestimmten Kunden und bietet Ihnen eine visuelle Darstellung, wie Ihr Kunde über verschiedene Kanäle hinweg mit Ihrer Marke interagiert.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 9%
@@ -35,7 +35,7 @@ Die Arbeit mit dem Identitätsdiagramm-Viewer erfordert ein Verständnis der ver
 - **Verknüpfung (Kante):** Ein Link oder ein Edge stellt die Verbindung zwischen Identitäten dar.
 - **Diagramm (Cluster):** Ein Diagramm oder ein Cluster ist eine Gruppe von Identitäten und Links, die eine Person repräsentieren.
 
-## Zugriff auf den Identitätsdiagramm-Viewer
+## Zugriff auf den Identitätsdiagramm-Viewer {#access-identity-graph-viewer}
 
 Um den Identitätsdiagramm-Viewer in der Benutzeroberfläche zu verwenden, wählen Sie **[!UICONTROL Identitäten]** in der linken Navigation und wählen Sie dann die **[!UICONTROL Identitätsdiagramm]** Registerkarte. Aus dem **[!UICONTROL Identitäts-Namespace]** auf das **[!UICONTROL Identitäts-Namespace auswählen]** -Symbol, um nach dem Namespace zu suchen, den Sie verwenden möchten.
 

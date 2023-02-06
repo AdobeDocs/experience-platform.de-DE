@@ -3,10 +3,10 @@ keywords: Ziele; Adobe Experience Platform; Plattform; Ziele - Übersicht; aktiv
 title: Ziele – Übersicht
 description: Ziele sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Ziele in der Adobe Experience Platform verwenden, um Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 944f307ecb4cf174c9f9818ded17546057f445e4
+source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 41%
+source-wordcount: '755'
+ht-degree: 33%
 
 ---
 
@@ -35,7 +35,7 @@ Eine der Kernfunktionen von Platform besteht darin, Ihre Erstanbieterdaten zu er
 
 ## Steuerelemente {#controls}
 
-Mit den Steuerelementen im [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md) können Sie folgende Aufgaben erledigen:
+Die Steuerelemente in der [Zielarbeitsbereich](./ui/destinations-workspace.md) ermöglichen Ihnen Folgendes:
 
 * Katalog der Zielplattformen durchsuchen, wo Sie Ihre Daten aktivieren können;
 * Datenflüsse zu den Zielen im Katalog erstellen, bearbeiten, aktivieren und deaktivieren;
@@ -45,7 +45,7 @@ Mit den Steuerelementen im [Arbeitsbereich „Ziele“](./ui/destinations-worksp
 
 ## Zieltypen und Kategorien {#types-and-categories}
 
-Detaillierte Informationen finden Sie im Abschnitt [Zieltypen und Kategorien - Übersicht](./destination-types.md).
+Mit Experience Platform können Sie Daten für verschiedene Zieltypen aktivieren, um Ihre Aktivierungs-Anwendungsfälle zu erfüllen. Die Ziele reichen von API-basierten Integrationen über Integrationen mit Dateiempfangssystemen bis hin zu Profilsuche-Zielen und mehr. Detaillierte Informationen zu allen verfügbaren Zielen finden Sie im Abschnitt [Zieltypen und Kategorien - Übersicht](./destination-types.md).
 
 ## Ziele und Zugriffskontrollen {#access-controls}
 
@@ -69,6 +69,12 @@ Die attributbasierte Zugriffssteuerung in Adobe Experience Platform ermöglicht 
 Mit der attributbasierten Zugriffssteuerung können Sie Zuordnungskonfigurationen auf Felder anwenden, für die Sie über Berechtigungen verfügen. Außerdem können Sie keine Daten an ein Ziel exportieren, wenn Sie nicht Zugriff auf alle Felder im Datensatz haben.
 
 Weitere Informationen dazu, wie Ziele mit attributbasierten Zugriffssteuerelementen funktionieren, finden Sie in der [Attributbasierte Zugriffskontrolle - Übersicht](../access-control/abac/overview.md#destinations).
+
+## Zielüberwachung {#destinations-monitoring}
+
+Nachdem Sie eine Verbindung zu einem Ziel hergestellt und den Aktivierungs-Workflow abgeschlossen haben, können Sie die Datenexporte an Ihr Empfangssystem überwachen. Lesen Sie die [Handbuch zur Überwachung von Datenflüssen zu Zielen in der Benutzeroberfläche](/help/dataflows/ui/monitor-destinations.md) für weitere Informationen.
+
+Sie können auch überprüfen, ob die Daten erfolgreich zu Ihrem Ziel gelangen. Die meisten Zieldokumentationsseiten im Katalog verfügen über eine *Abschnitt &quot;Datenexport überprüfen&quot;*, der anzeigt, wie Sie in der Zielplattform überprüfen können, ob Daten erfolgreich aus Experience Platform importiert wurden.
 
 ## Einschränkungen von Data Governance beim Aktivieren von Daten für Ziele {#data-governance}
 

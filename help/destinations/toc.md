@@ -4,10 +4,10 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: f89c6a11199bff2d91414e8370c1fd9693308fc6
+source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
-source-wordcount: '992'
-ht-degree: 99%
+source-wordcount: '1016'
+ht-degree: 96%
 
 ---
 
@@ -17,6 +17,10 @@ ht-degree: 99%
 * [Ziele – Übersicht](./home.md)
 * [Zieltypen und Kategorien](./destination-types.md)
 * [Leitlinien für Ziele (Aktivierung)](./guardrails.md)
+* Funktionsweise von Zielen {#how-destinations-work}
+   * [Konfigurierbare und allgemeine Exporteinstellungen in Zielen](./how-destinations-work/destinations-configurations.md)
+   * [Profil-Exportverhalten für verschiedene Zieltypen](./how-destinations-work/profile-export-behavior.md)
+   * [Identitätsverarbeitung im Workflow für die Zielaktivierung](./how-destinations-work/identity-handling.md)
 * API-Tutorials {#api}
    * [Verbinden Sie sich mit Streaming-Zielen und aktivieren Sie Daten über die Flow Service-API](./api/streaming-destinations.md)
    * [Verbinden Sie sich mit Batch-Cloud-Speicher und E-Mail-Marketing-Zielen und aktivieren Sie Daten mit der Flow Service-API](./api/connect-activate-batch-destinations.md)
