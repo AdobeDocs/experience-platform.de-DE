@@ -1,7 +1,7 @@
 ---
 title: Profilexportverhalten
 description: Erfahren Sie, wie sich das Verhalten beim Profilexport zwischen den verschiedenen Integrationspattern unterscheidet, die in Experience Platform-Zielen unterstützt werden.
-source-git-commit: 1c844d86834ef78d1206a8698dbcbfe2fae49661
+source-git-commit: 07b92bc06f28bc37673ae71a45ff0e76de9bce9b
 workflow-type: tm+mt
 source-wordcount: '2926'
 ht-degree: 24%
@@ -126,7 +126,7 @@ Ein Profilexport an das Ziel kann durch ein Profil bestimmt werden, das sich fü
 
 Aus Sicht der Profilattribute bestimmen alle Änderungen an den drei oben zugeordneten Attributen einen Zielexport.
 
->[!BEGINSHADEBOX]
+>[!ENDSHADEBOX]
 
 ## Batch-Ziele (dateibasiert) {#file-based-destinations}
 
