@@ -2,10 +2,10 @@
 title: Verwalten von vorgeschlagenen Werten in der API
 description: Erfahren Sie, wie Sie einem Zeichenfolgenfeld in der Schema Registry-API empfohlene Werte hinzufügen.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: b1ef2de1e6f9c6168a5ee2a62b55812123783a3a
+source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
-source-wordcount: '942'
-ht-degree: 6%
+source-wordcount: '658'
+ht-degree: 1%
 
 ---
 
@@ -69,11 +69,11 @@ Alternativ können Sie ein Zeichenfolgenfeld definieren, das keine `enum` -Array
 
 Da die Zeichenfolge keine `enum` Array zum Definieren von Begrenzungen, sein `meta:enum` -Eigenschaft kann erweitert werden, um neue Werte einzuschließen.
 
-## Verwalten von vorgeschlagenen Werten für Standardfelder
+<!-- ## Manage suggested values for standard fields
 
-Für vorhandene Standardfelder können Sie [empfohlene Werte hinzufügen](#add-suggested-standard) oder [empfohlene Werte deaktivieren](#disable-suggested-standard).
+For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). -->
 
-### Hinzufügen empfohlener Werte zu einem Standardfeld {#add-suggested-standard}
+## Hinzufügen empfohlener Werte zu einem Standardfeld {#add-suggested-standard}
 
 So erweitern Sie die `meta:enum` In einem Standard-Zeichenfolgenfeld können Sie eine [Anzeigenamendeskriptor](../api/descriptors.md#friendly-name) für das betreffende Feld in einem bestimmten Schema.
 
@@ -151,25 +151,19 @@ Nach Anwendung des Deskriptors antwortet die Schema Registry beim Abrufen des Sc
 >}
 >```
 
-### Deaktivierung der vorgeschlagenen Werte für ein Standardfeld {#disable-suggested-standard}
+<!-- ### Remove suggested values {#remove-suggested-standard}
 
-Wenn das Feld für Standardzeichenfolgen vordefinierte empfohlene Werte enthält unter `meta:enum`können Sie alle Werte deaktivieren, die nicht in der Segmentierung angezeigt werden sollen. Dies geschieht durch Erstellen einer [Anzeigenamendeskriptor](../api/descriptors.md#friendly-name) für das Schema, das eine `xdm:excludeMetaEnum` -Eigenschaft.
+If a standard string field has predefined suggested values, you can remove any values that you do not wish to see in segmentation. This is done through by creating a [friendly name descriptor](../api/descriptors.md#friendly-name) for the schema that includes an `xdm:excludeMetaEnum` property.
 
->[!IMPORTANT]
->
->Sie können die vorgeschlagenen Werte nur für Standardfelder deaktivieren, für die keine entsprechenden Enum-Einschränkungen gelten. Das heißt, wenn das Feld über eine `enum` Array, dann `meta:excludeMetaEnum` hat keine Wirkung.
->
->Siehe Abschnitt zu [Evolutionsregeln für Auflistungen und empfohlene Werte](../ui/fields/enum.md#evolution) Weitere Informationen zu Einschränkungen für die Bearbeitung vorhandener Felder.
-
-**API-Format**
+**API format**
 
 ```http
 POST /tenant/descriptors
 ```
 
-**Anfrage**
+**Request**
 
-Die folgende Anfrage deaktiviert die vorgeschlagenen Werte &quot;[!DNL Web Form Filled Out]&quot; und &quot;[!DNL Media ping]&quot; `eventType` in einem Schema, das auf der [XDM ExperienceEvent-Klasse](../classes/experienceevent.md).
+The following request removes the suggested values "[!DNL Web Form Filled Out]" and "[!DNL Media ping]" for `eventType` in a schema based on the [XDM ExperienceEvent class](../classes/experienceevent.md).
 
 ```shell
 curl -X POST \
@@ -191,19 +185,19 @@ curl -X POST \
       }'
 ```
 
-| Eigenschaft | Beschreibung |
+| Property | Description |
 | --- | --- |
-| `@type` | Der Typ des zu definierenden Deskriptors. Bei einem Anzeigenamendeskriptor muss dieser Wert auf `xdm:alternateDisplayInfo`. |
-| `xdm:sourceSchema` | Der `$id`-URI des Schemas, wo der Deskriptor definiert wird. |
-| `xdm:sourceVersion` | Die Hauptversion des Quellschemas. |
-| `xdm:sourceProperty` | Der Pfad zur spezifischen Eigenschaft, deren empfohlene Werte Sie verwalten möchten. Der Pfad sollte mit einem Schrägstrich (`/`) und nicht mit einer enden. Nicht einschließen `properties` im Pfad (verwenden Sie beispielsweise `/personalEmail/address` anstelle von `/properties/personalEmail/properties/address`). |
-| `meta:excludeMetaEnum` | Ein Objekt, das die vorgeschlagenen Werte beschreibt, die für das Feld in der Segmentierung ausgeschlossen werden sollen. Schlüssel und Wert für jeden Eintrag müssen mit denen im Original übereinstimmen `meta:enum` des Felds, damit der Eintrag ausgeschlossen wird. |
+| `@type` | The type of descriptor being defined. For a friendly name descriptor, this value must be set to `xdm:alternateDisplayInfo`. |
+| `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
+| `xdm:sourceVersion` | The major version of the source schema. |
+| `xdm:sourceProperty` | The path to the specific property whose suggested values you want to manage. The path should begin with a slash (`/`) and not end with one. Do not include `properties` in the path (for example, use `/personalEmail/address` instead of `/properties/personalEmail/properties/address`). |
+| `meta:excludeMetaEnum` | An object that describes the suggested values that should be excluded for the field in segmentation. The key and value for each entry must match those included in the original `meta:enum` of the field in order for the entry to be excluded.  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-**Antwort**
+**Response**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) sowie die Details des neu erstellten Deskriptors zurück. Die unter `xdm:excludeMetaEnum` wird nun in der Segmentierungsbenutzeroberfläche ausgeblendet.
+A successful response returns HTTP status 201 (Created) and the details of the newly created descriptor. The suggested values included under `xdm:excludeMetaEnum` will now be hidden from the Segmentation UI.
 
 ```json
 {
@@ -217,7 +211,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) sowie die Details 
   "meta:containerId": "tenant",
   "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
 }
-```
+``` -->
 
 ## Verwalten von vorgeschlagenen Werten für ein benutzerdefiniertes Feld {#suggested-custom}
 
