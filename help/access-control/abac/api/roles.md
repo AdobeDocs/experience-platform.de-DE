@@ -4,16 +4,20 @@ solution: Experience Platform
 title: Rollen-API-Endpunkt
 description: Mit dem Endpunkt /roles in der API für die attributbasierte Zugriffssteuerung können Sie Rollen in Adobe Experience Platform programmgesteuert verwalten.
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
-source-wordcount: '1583'
-ht-degree: 10%
+source-wordcount: '1606'
+ht-degree: 27%
 
 ---
 
 # Benutzerendpunkt
 
-Rollen definieren den Zugriff, den ein Administrator, ein Spezialist oder ein Endbenutzer auf Ressourcen in Ihrem Unternehmen hat. In einer rollenbasierten Zugriffskontrollumgebung erfolgt die Bereitstellung des Benutzerzugriffs über gemeinsame Zuständigkeiten und Anforderungen. Eine Rolle verfügt über bestimmte Berechtigungen und Mitglieder Ihrer Organisation können je nach dem Umfang der Ansicht oder des Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden.
+>[!NOTE]
+>
+>Wenn ein Benutzer-Token übergeben wird, muss der Benutzer des Tokens über die Rolle &quot;org admin&quot;für die angeforderte Organisation verfügen.
+
+Rollen definieren den Zugriff, den ein Administrator, ein Spezialist oder ein Endbenutzer auf Ressourcen in Ihrem Unternehmen hat. In einer rollenbasierten Zugriffssteuerungsumgebung erfolgt die Bereitstellung des Benutzerzugriffs über gemeinsame Zuständigkeiten und Anforderungen. Eine Rolle verfügt über bestimmte Berechtigungen, wobei Mitglieder Ihrer Organisation je nach dem Umfang des Lese- oder Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden können.
 
 Die `/roles` -Endpunkt in der attributbasierten API zur Zugriffskontrolle können Sie Rollen in Ihrem Unternehmen programmgesteuert verwalten.
 
@@ -101,7 +105,7 @@ Bei einer erfolgreichen Antwort wird eine Liste der Rollen in Ihrer Organisation
 | `name` | Der Name Ihrer Rolle. |
 | `description` | Die Eigenschaft &quot;description&quot;enthält zusätzliche Informationen zu Ihrer Rolle. |
 | `roleType` | Der vorgesehene Typ der Rolle. Die möglichen Werte für den Rollentyp sind: `user-defined` und `system-defined`. |
-| `permissionSets` | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Administrator auf eine Rolle anwenden kann. Ein Administrator kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
+| `permissionSets` | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Admin auf eine Rolle anwenden kann. Ein Admin kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
 | `sandboxes` | Diese Eigenschaft zeigt die Sandboxes innerhalb Ihres Unternehmens an, die für eine bestimmte Rolle bereitgestellt wurden. |
 | `subjectAttributes` | Die Attribute, die die Korrelation zwischen einem Betreff und den Platform-Ressourcen angeben, auf die sie Zugriff haben. |
 | `subjectAttributes.labels` | Zeigt die Datennutzungsbezeichnungen an, die auf die abgefragte Rolle angewendet wurden. |
@@ -168,7 +172,7 @@ Bei einer erfolgreichen Antwort werden Details zur abgefragten Rollen-ID zurück
 | `name` | Der Name Ihrer Rolle. |
 | `description` | Die Eigenschaft &quot;description&quot;enthält zusätzliche Informationen zu Ihrer Rolle. |
 | `roleType` | Der vorgesehene Typ der Rolle. Die möglichen Werte für den Rollentyp sind: `user-defined` und `system-defined`. |
-| `permissionSets` | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Administrator auf eine Rolle anwenden kann. Ein Administrator kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
+| `permissionSets` | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Admin auf eine Rolle anwenden kann. Ein Admin kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
 | `sandboxes` | Diese Eigenschaft zeigt die Sandboxes innerhalb Ihres Unternehmens an, die für eine bestimmte Rolle bereitgestellt wurden. |
 | `subjectAttributes` | Die Attribute, die die Korrelation zwischen einem Betreff und den Platform-Ressourcen angeben, auf die sie Zugriff haben. |
 | `subjectAttributes.labels` | Zeigt die Datennutzungsbezeichnungen an, die auf die abgefragte Rolle angewendet wurden. |
@@ -316,7 +320,7 @@ Bei einer erfolgreichen Antwort werden Ihre neu erstellte Rolle mit der zugehör
 | `name` | Der Name Ihrer Rolle. |
 | `description` | Die Eigenschaft &quot;description&quot;enthält zusätzliche Informationen zu Ihrer Rolle. |
 | `roleType` | Der vorgesehene Typ der Rolle. Die möglichen Werte für den Rollentyp sind: `user-defined` und `system-defined`. |
-| `permissionSets` | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Administrator auf eine Rolle anwenden kann. Ein Administrator kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
+| `permissionSets` | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Admin auf eine Rolle anwenden kann. Ein Admin kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
 | `sandboxes` | Diese Eigenschaft zeigt die Sandboxes innerhalb Ihres Unternehmens an, die für eine bestimmte Rolle bereitgestellt wurden. |
 | `subjectAttributes` | Die Attribute, die die Korrelation zwischen einem Betreff und den Platform-Ressourcen angeben, auf die sie Zugriff haben. |
 | `subjectAttributes.labels` | Zeigt die Datennutzungsbezeichnungen an, die auf die abgefragte Rolle angewendet wurden. |
@@ -396,7 +400,7 @@ Bei einer erfolgreichen Antwort wird die aktualisierte Rolle zurückgegeben, ein
 | `name` | Der Name Ihrer Rolle. |
 | `description` | Die Eigenschaft &quot;description&quot;enthält zusätzliche Informationen zu Ihrer Rolle. |
 | `roleType` | Der vorgesehene Typ der Rolle. Die möglichen Werte für den Rollentyp sind: `user-defined` und `system-defined`. |
-| `permissionSets` | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Administrator auf eine Rolle anwenden kann. Ein Administrator kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
+| `permissionSets` | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Admin auf eine Rolle anwenden kann. Ein Admin kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
 | `sandboxes` | Diese Eigenschaft zeigt die Sandboxes innerhalb Ihres Unternehmens an, die für eine bestimmte Rolle bereitgestellt wurden. |
 | `subjectAttributes` | Die Attribute, die die Korrelation zwischen einem Betreff und den Platform-Ressourcen angeben, auf die sie Zugriff haben. |
 | `subjectAttributes.labels` | Zeigt die Datennutzungsbezeichnungen an, die auf die abgefragte Rolle angewendet wurden. |
@@ -470,7 +474,7 @@ Bei erfolgreicher Ausführung wird Ihre aktualisierte Rolle zurückgegeben, eins
 | `name` | Der Name Ihrer Rolle. |
 | `description` | Die Eigenschaft &quot;description&quot;enthält zusätzliche Informationen zu Ihrer Rolle. |
 | `roleType` | Der vorgesehene Typ der Rolle. Die möglichen Werte für den Rollentyp sind: `user-defined` und `system-defined`. |
-| `permissionSets` | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Administrator auf eine Rolle anwenden kann. Ein Administrator kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
+| `permissionSets` | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Admin auf eine Rolle anwenden kann. Ein Admin kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
 | `sandboxes` | Diese Eigenschaft zeigt die Sandboxes innerhalb Ihres Unternehmens an, die für eine bestimmte Rolle bereitgestellt wurden. |
 | `subjectAttributes` | Die Attribute, die die Korrelation zwischen einem Betreff und den Platform-Ressourcen angeben, auf die sie Zugriff haben. |
 | `subjectAttributes.labels` | Zeigt die Datennutzungsbezeichnungen an, die auf die abgefragte Rolle angewendet wurden. |

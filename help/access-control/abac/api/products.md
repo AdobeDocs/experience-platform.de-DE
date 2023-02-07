@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Produkt-API-Endpunkt
 description: Mit dem Endpunkt /products in der API für die attributbasierte Zugriffssteuerung können Sie Produkte in Adobe Experience Platform programmgesteuert verwalten.
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
-source-wordcount: '492'
-ht-degree: 13%
+source-wordcount: '515'
+ht-degree: 25%
 
 ---
 
 # Endpunkt &quot;Produkte&quot;
+
+>[!NOTE]
+>
+>Wenn ein Benutzer-Token übergeben wird, muss der Benutzer des Tokens über die Rolle &quot;org admin&quot;für die angeforderte Organisation verfügen.
 
 Die `/products` -Endpunkt in der attributbasierten Zugriffssteuerungs-API können Sie Produkte sowie Berechtigungskategorien und Berechtigungssätze, die mit Produkten in Ihrer Organisation verknüpft sind, programmgesteuert verwalten.
 
@@ -231,10 +235,10 @@ Bei einer erfolgreichen Antwort werden die mit der abgefragten Produkt-ID verkn�
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `permission-sets` | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Administrator auf eine Rolle anwenden kann. Ein Administrator kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
+| `permission-sets` | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Admin auf eine Rolle anwenden kann. Ein Admin kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
 | `id` | Die entsprechende ID des abgefragten Berechtigungssatzes. |
 | `name` | Der entsprechende Name des abgefragten Berechtigungssatzes. |
 | `category` | Die verfügbare Berechtigungskategorie. |
-| `permissions` | Zu den Berechtigungen gehört die Möglichkeit, Platform-Funktionen anzuzeigen und/oder zu verwenden, z. B. das Erstellen von Sandboxes, das Definieren von Schemas und das Verwalten von Datensätzen. |
+| `permissions` | Zu den Berechtigungen gehört die Möglichkeit, Adobe Campaign-Funktionen anzuzeigen und/oder zu verwenden, z. B. das Erstellen von Sandboxes, das Definieren von Schemata und die Verwaltung von Datensätzen. |
 | `permissions.resource` | Das Asset oder Objekt, auf das ein Betreff zugreifen kann oder nicht. Ressourcen können Dateien, Anwendungen, Server oder sogar APIs sein. |
 | `permissions.actions` | Die Aktion, die ein Betreff gegen eine abgefragte Ressource ausführen darf. Mögliche Werte sind: `view`, `read`, `create`, `edit`und `delete` |
