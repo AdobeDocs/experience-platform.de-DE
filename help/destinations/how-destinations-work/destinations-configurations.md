@@ -1,10 +1,10 @@
 ---
 title: Konfigurierbare und allgemeine Exporteinstellungen in Zielen
 description: Erfahren Sie, welche Exporteinstellungen in Zielen auf Zielebene konfigurierbar sind und die fest eingestellt sind und nicht bearbeitet werden können.
-source-git-commit: 04322d10a88b27d5641ab9474c8387945aab9982
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '829'
-ht-degree: 3%
+source-wordcount: '845'
+ht-degree: 2%
 
 ---
 
@@ -63,5 +63,7 @@ Erfahren Sie mehr über die verschiedenen Optionen und Schritte, die im Aktivier
 ## Nächste Schritte {#next-steps}
 
 Nach dem Lesen dieses Dokuments wissen Sie jetzt, welche Exporteinstellungen für Ziele bei allen Zieltypen gelten, welche von Entwicklern auf individueller Zielebene konfiguriert werden können und welche Einstellungen von Benutzern im Aktivierungs-Workflow bearbeitet werden können.
+
+Als Nächstes können Sie detailliertere Informationen zum [Allgemeine Exportverhaltensmuster pro Zieltyp](/help/destinations/how-destinations-work/profile-export-behavior.md).
 
 Für Zielentwickler können Sie [Erste Schritte](/help/destinations/destination-sdk/getting-started.md) mit Destination SDK. Benutzer, die Daten aktivieren möchten, können alle verfügbaren Ziele im Abschnitt [Katalog](/help/destinations/catalog/overview.md).

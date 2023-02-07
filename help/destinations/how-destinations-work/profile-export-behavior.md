@@ -1,9 +1,9 @@
 ---
 title: Profilexportverhalten
 description: Erfahren Sie, wie sich das Verhalten beim Profilexport zwischen den verschiedenen Integrationspattern unterscheidet, die in Experience Platform-Zielen unterstützt werden.
-source-git-commit: 07b92bc06f28bc37673ae71a45ff0e76de9bce9b
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '2926'
+source-wordcount: '2944'
 ht-degree: 24%
 
 ---
@@ -87,9 +87,9 @@ Aus Sicht der Profilattribute bestimmen alle Änderungen an den vier oben zugeor
 
 ## API-basierte Streaming-Ziele {#streaming-api-based-destinations}
 
-Das Verhalten beim Profilexport für Streaming-Ziele wie Facebook, Trade Desk und andere API-basierte Integrationen ist mit dem oben stehenden identisch.
+Das Verhalten beim Profilexport für Streaming-Ziele wie Facebook, Trade Desk und andere API-basierte Integrationen ähnelt dem oben beschriebenen Verhalten für Enterprise-Ziele.
 
-Zielbeispiele: Werbung, soziale Netzwerke usw.
+Beispiele für Streaming-Ziele sind die Ziele, die zu der [Sozial- und Werbekategorien](/help/destinations/destination-types.md#categories) im Katalog.
 
 Experience Platform optimiert das Verhalten beim Profilexport an Ihr Streaming-Ziel, sodass nur Daten an Streaming-API-basierte Ziele exportiert werden, wenn nach der Segmentqualifizierung oder anderen wichtigen Ereignissen relevante Profilaktualisierungen vorgenommen wurden. Profile werden in den folgenden Situationen an Ihr Ziel exportiert:
 

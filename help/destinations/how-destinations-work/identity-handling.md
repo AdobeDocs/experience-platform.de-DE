@@ -1,9 +1,9 @@
 ---
 title: Identitätsverarbeitung im Workflow für die Zielaktivierung
 description: Erfahren Sie, wie der Identitätsexport im Aktivierungs-Workflow je nach Zieltyp verarbeitet wird.
-source-git-commit: 6ccf26cbdbbe675d0d731f59cee589d63ca6f8ad
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1186'
 ht-degree: 3%
 
 ---
@@ -107,3 +107,5 @@ Beim Konfigurieren eines Datastreams, wie in der oben stehenden Dokumentation be
 Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie herausfinden können, welche Identitäten für einzelne Ziele unterstützt oder erforderlich sind. Jetzt wissen Sie auch, wie die Identitätsauswahl für jeden Zieltyp funktioniert.
 
 Als Nächstes können Sie lesen, welche [Exporteinstellungen](/help/destinations/how-destinations-work/destinations-configurations.md) für Ziele sind in allen Zieltypen üblich, die von Entwicklern auf individueller Zielebene konfiguriert werden können und welche Einstellungen von Benutzern im Aktivierungs-Workflow bearbeitet werden können.
+
+Sie können auch alle verfügbaren Ziele im [Katalog](/help/destinations/catalog/overview.md).
