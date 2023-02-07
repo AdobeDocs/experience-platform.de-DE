@@ -1,13 +1,11 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; oracle; oracle eloqua; eloqua
-solution: Experience Platform
 title: Oracle Eloqua Connector - Überblick
 description: Erfahren Sie, wie Sie Oracle Eloqua mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
 exl-id: ebe16bff-4c89-4d45-9973-e5aa13b61a36
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e8f54f06ad3431227e140219a9960e8e04f83ccc
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 78%
+source-wordcount: '218'
+ht-degree: 81%
 
 ---
 
