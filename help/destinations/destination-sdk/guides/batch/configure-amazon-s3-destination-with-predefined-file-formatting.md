@@ -1,11 +1,11 @@
 ---
 description: Erfahren Sie, wie Sie mit Destination SDK ein Amazon S3-Ziel mit vordefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration konfigurieren.
-title: Konfigurieren Sie ein Amazon S3-Ziel mit vordefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration.
+title: Konfigurieren eines Amazon S3-Ziels mit vordefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration.
 exl-id: 0ecd3575-dcda-4e5c-af5c-247d4ea13fa1
-source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
+source-git-commit: 04e4b0f6b6d84d04d0a24a462383420ebd9a2daf
 workflow-type: tm+mt
 source-wordcount: '746'
-ht-degree: 10%
+ht-degree: 12%
 
 ---
 
@@ -48,9 +48,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
     "name": "Amazon S3 destination server with predefined default CSV options",
     "destinationServerType": "FILE_BASED_S3",
     "fileBasedS3Destination": {
-        "bucket": {
+        "bucketName": {
             "templatingStrategy": "PEBBLE_V1",
-            "value": "{{customerData.bucket}}"
+            "value": "{{customerData.bucketName}}"
         },
         "path": {
             "templatingStrategy": "PEBBLE_V1",
@@ -165,11 +165,12 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    ],
    "customerDataFields":[
       {
-         "name":"bucket",
+         "name":"bucketName",
          "title":"Enter the name of your Amazon S3 bucket",
          "description":"Amazon S3 bucket name",
          "type":"string",
          "isRequired":true,
+         "pattern": "(?=^.{3,63}$)(?!^(\\d+\\.)+\\d+$)(^(([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])\\.)*([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])$)",
          "readOnly":false,
          "hidden":false
       },
@@ -179,7 +180,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
          "description":"Enter the path to your S3 bucket folder",
          "type":"string",
          "isRequired":true,
-         "pattern":"^[A-Za-z]+$",
+         "pattern": "^[0-9a-zA-Z\\/\\!\\-_\\.\\*\\''\\(\\)]*((\\%SEGMENT_(NAME|ID)\\%)?\\/?)+$",
          "readOnly":false,
          "hidden":false
       },

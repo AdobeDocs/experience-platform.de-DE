@@ -1,15 +1,15 @@
 ---
 description: Erfahren Sie, wie Sie mit Destination SDK ein Amazon S3-Ziel mit benutzerdefinierten Dateinamen- und Formatierungsoptionen konfigurieren.
-title: Konfigurieren Sie ein Amazon S3-Ziel mit benutzerdefinierten Dateinamen- und Formatierungsoptionen.
+title: Konfigurieren eines Amazon S3-Ziels mit benutzerdefinierten Dateinamen- und Formatierungsoptionen.
 exl-id: eed73572-5050-44fa-ba16-90729c65495e
-source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
+source-git-commit: 04e4b0f6b6d84d04d0a24a462383420ebd9a2daf
 workflow-type: tm+mt
 source-wordcount: '734'
-ht-degree: 10%
+ht-degree: 13%
 
 ---
 
-# Amazon S3-Ziel mit benutzerdefinierten Dateinamen- und Formatierungsoptionen konfigurieren
+# Konfigurieren eines Amazon S3-Ziels mit benutzerdefinierten Dateinamen- und Formatierungsoptionen
 
 ## Übersicht {#overview}
 
@@ -47,9 +47,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    "name":"Amazon S3 destination server with custom file formatting options",
    "destinationServerType":"FILE_BASED_S3",
    "fileBasedS3Destination":{
-      "bucket":{
+      "bucketName":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"{{customerData.bucket}}"
+         "value":"{{customerData.bucketName}}"
       },
       "path":{
          "templatingStrategy":"PEBBLE_V1",
@@ -164,11 +164,12 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    ],
    "customerDataFields":[
       {
-         "name":"bucket",
+         "name":"bucketName",
          "title":"Enter the name of your Amazon S3 bucket",
          "description":"Amazon S3 bucket name",
          "type":"string",
          "isRequired":true,
+         "pattern": "(?=^.{3,63}$)(?!^(\\d+\\.)+\\d+$)(^(([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])\\.)*([a-z0-9]|[a-z0-9][a-z0-9\\-]*[a-z0-9])$)",
          "readOnly":false,
          "hidden":false
       },
@@ -178,7 +179,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
          "description":"Enter the path to your S3 bucket folder",
          "type":"string",
          "isRequired":true,
-         "pattern":"^[A-Za-z]+$",
+         "pattern": "^[0-9a-zA-Z\\/\\!\\-_\\.\\*\\''\\(\\)]*((\\%SEGMENT_(NAME|ID)\\%)?\\/?)+$",
          "readOnly":false,
          "hidden":false
       },
