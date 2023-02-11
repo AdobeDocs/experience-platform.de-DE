@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform - Versionshinweise Januar 2023
 description: Die Versionshinweise für Adobe Experience Platform vom Januar 2023.
-source-git-commit: c60c58e563a324c4f8f90eac04686f2190e8448d
+source-git-commit: 6388c72aa0be8f5f91efaaa6a0edd22f3eb99de8
 workflow-type: tm+mt
-source-wordcount: '2444'
-ht-degree: 27%
+source-wordcount: '2432'
+ht-degree: 28%
 
 ---
 
@@ -130,7 +130,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Deaktivierung empfohlener Werte für Zeichenfolgenfelder | Sie können jetzt [Deaktivieren einzelner empfohlener Werte für Zeichenfolgenfelder](../../xdm/ui/fields/enum.md) im [!UICONTROL Schemas] Arbeitsbereich, einschließlich derjenigen aus Standardkomponenten. Diese Funktion ist nur für Felder mit empfohlenen Werten verfügbar und wird nicht für Enum-Begrenzungen unterstützt. |
+| Verbesserungen bei Anzeigenamen in der Schemastruktur | Zuvor wurden Feldnamen in der Benutzeroberfläche angezeigt, aber jetzt sind die Anzeigenamen für Schemafelder auf der Schema-Arbeitsfläche lesbarer. |
 
 **Neue XDM-Komponenten**
 
