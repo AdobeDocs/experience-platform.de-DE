@@ -1,20 +1,20 @@
 ---
-keywords: Segmentierung; Segmentierungsrtcdp;Segmentierung der Echtzeit-Kundendatenplattform
-title: Segmentierungsdienst in Real-time Customer Data Platform
-description: Adobe Real-Time Customer Data Platform basiert auf Adobe Experience Platform und nutzt viele der Experience Platform Services und Funktionen. Mit dem Segmentierungsdienst können Sie für ein maßgeschneidertes Marketing sorgen, indem Sie Ihre Kunden in kleinere Gruppen mit ähnlichen Eigenschaften aufteilen.
+keywords: Segmentierung;Segmentierung rtcdp;Real-time Customer Data Platform-Segmentierung
+title: Segmentierungs-Service in Real-time Customer Data Platform
+description: Adobe Real-time Customer Data Platform basiert auf Adobe Experience Platform und nutzt viele Services und Funktionen von Experience Platform. Mit dem Segmentierungs-Service können Sie für ein maßgeschneidertes Marketing sorgen, indem Sie Ihre Kundinnen und Kunden in kleinere Gruppen mit ähnlichen Eigenschaften aufteilen.
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '540'
-ht-degree: 31%
+ht-degree: 100%
 
 ---
 
 # [!DNL Segmentation Service] in [!DNL Real-Time Customer Data Platform]
 
-[!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP) ermöglicht es Ihnen, Daten aus verschiedenen Quellen zusammenzuführen, um für ein koordiniertes und konsistentes Kundenerlebnis zu sorgen. Die Bereitstellung relevanter personalisierter Marketing-Kampagnen kann mithilfe des [!DNL Segmentation Service], Teil von Adobe Experience Platform.
+Mit [!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP) können Sie Daten aus verschiedenen Quellen zusammenführen, um für ein koordiniertes und konsistentes Kundenerlebnis zu sorgen. Relevante und personalisierte Marketing-Kampagnen lassen sich mit dem [!DNL Segmentation Service] bereitstellen, der Teil von Adobe Experience Platform ist.
 
-Real-Time CDP basiert auf Adobe Experience Platform und nutzt viele der [!DNL Experience Platform] Dienste und Funktionen. Verwenden der [!DNL Segmentation Service]können Sie ein maßgeschneidertes Marketing bereitstellen, indem Sie Ihre Kunden in kleinere Gruppen mit ähnlichen Eigenschaften aufteilen.
+Real-Time CDP basiert auf Adobe Experience Platform und nutzt viele Services und Funktionen von [!DNL Experience Platform]. Mit dem [!DNL Segmentation Service] können Sie für maßgeschneidertes Marketing sorgen, indem Sie Ihre Kundinnen und Kunden in kleinere Gruppen mit ähnlichen Eigenschaften aufteilen.
 
 ## Segmentierung
 
@@ -26,30 +26,30 @@ Bei Segmentierung handelt es sich um den Prozess der Definition spezifischer Att
 
 ## Kunden-KI
 
-Die in Real-time Customer Data Platform enthaltene Customer AI bietet Ihnen die Möglichkeit, Kundenprognosen auf individueller Ebene mit Erläuterungen zu generieren.
+Kunden-KI, enthalten in Real-time Customer Data Platform, bietet Ihnen die Möglichkeit, Kundenprognosen auf individueller Ebene mit Erläuterungen zu generieren.
 
-Mithilfe von Einflussfaktoren kann Customer AI vorhersagen, was ein Kunde wahrscheinlich tun wird und warum. Darüber hinaus können Sie von Prognosen und Einblicken von Customer AI profitieren, um Kundenerlebnisse zu personalisieren, indem Sie die am besten geeigneten Angebote und Botschaften bereitstellen. Customer AI kann bei Folgendem helfen:
+Mithilfe von Einflussfaktoren kann Kunden-KI vorhersagen, was eine Kundin oder ein Kunde wahrscheinlich tun wird und warum. Darüber hinaus können Sie von Prognosen und Insights mittels Kunden-KI profitieren, um Kundenerlebnisse durch Bereitstellung der am besten geeigneten Angebote und Botschaften zu personalisieren. Kunden-KI kann bei Folgendem helfen:
 
-* Bereitstellung von hochpräzisen kundenspezifischen Tendenzmodellen für eine stärkere Segmentierung und Targeting.
-* Verstehen der Einflussfaktoren und Wahrscheinlichkeiten hinter bestimmten Kundenverhaltensweisen.
-* Bereitstellung anpassbarer Optionen für die einzigartigen Anwendungsfälle und Daten Ihres Unternehmens.
-* Verbesserung des Echtzeit-Kundenprofils mit kundenspezifischen Tendenzwerten wie Abwanderung und Konversion.
-* Verbesserung von Kundenprofilen mit Einflussfaktoren für Tendenzwerte.
-* Erstellen von Kundensegmenten basierend auf Einflussfaktoren und Tendenzwerten.
+* Bereitstellung hochgenauer Kundentendenzmodelle für eine bessere Segmentierung und Zielgruppenbestimmung
+* Verständnis der Einflussfaktoren hinter bestimmten Kundenverhaltensweisen und deren Wahrscheinlichkeiten 
+* Bereitstellung anpassbarer Optionen für die einzigartigen Anwendungsfälle und Daten Ihrer Firma
+* Optimierung von Echtzeit-Kundenprofilen mit kundenspezifischen Tendenzwerten wie Abwanderung und Konversion
+* Optimierung von Kundenprofilen mit Einflussfaktoren für Tendenzwerte
+* Erstellung von Kundensegmenten basierend auf Einflussfaktoren und Tendenzwerten
 
-Customer AI befindet sich im **[!UICONTROL Dienste]** Registerkarte unter **[!UICONTROL Adobe-Dienste]**.
+Auf Kunden-KI kann über die Registerkarte **[!UICONTROL Services]** unter **[!UICONTROL Adobe-Services]** zugegriffen werden.
 
-![Customer AI-Position](../assets/overview/rtcdp-customer-ai.png)
+![Kunden-KI-Position](../assets/overview/rtcdp-customer-ai.png)
 
-### Erste Schritte in Kunden-KI
+### Erste Schritte mit Kunden-KI
 
-Um mit Customer AI zu beginnen, müssen Sie folgende Schritte ausführen: [Tutorial zur Datenvorbereitung](../../intelligent-services/data-preparation.md) und konfigurieren Sie das Eingabeschema entsprechend Ihrem Anwendungsfall. Als Nächstes müssen Sie [Konfigurieren einer Customer AI-Instanz](../../intelligent-services/customer-ai/user-guide/configure.md). Nach dem Konfigurieren einer Instanz wird ein Modell generiert, in dem Sie [Anzeigen Ihrer Einblicke und Bewertungen](../../intelligent-services/customer-ai/user-guide/discover-insights.md). Mithilfe der von Ihrem Modell generierten Daten können Sie Segmente für datengesteuerte Aktivierung erstellen.
+Für die ersten Schritte mit Kunden-KI müssen Sie dem [Tutorial zur Datenvorbereitung](../../intelligent-services/data-preparation.md) folgen und das Eingabeschema entsprechend Ihrem Anwendungsfall konfigurieren. Als Nächstes müssen Sie [eine Kunden-KI-Instanz konfigurieren](../../intelligent-services/customer-ai/user-guide/configure.md). Nach dem Konfigurieren einer Instanz wird ein Modell generiert, mit dem Sie [Ihre Insights und Bewertungen anzeigen](../../intelligent-services/customer-ai/user-guide/discover-insights.md) können. Mithilfe der von Ihrem Modell generierten Daten können Sie Segmente zur datengesteuerten Aktivierung erstellen.
 
-Um mehr über Customer AI zu erfahren, besuchen Sie zunächst das [Customer AI - Übersicht](../../intelligent-services/customer-ai/overview.md). Darüber hinaus wird im folgenden Video gezeigt, wie Customer AI Kundenprofile mit KI-basierten Eigenschaften anreichert und die Kundensegmentierung und Zielgruppenbestimmung stärkt.
+Weitere Informationen zu Kunden-KI finden Sie in der [Kunden-KI-Übersicht](../../intelligent-services/customer-ai/overview.md). In diesem Video wird zudem gezeigt, wie Kunden-KI Kundenprofile mit KI-basierten Tendenzen anreichert sowie bei der Kundensegmentierung und Zielgruppenbestimmung hilft.
 
 >[!VIDEO](https://video.tv.adobe.com/v/40374/?quality=12&learn=on)
 
 
 ## Nächste Schritte
 
-Nach Lesen dieser Übersicht sollten Sie nun verstehen, wie Real-Time CDP [!DNL Segmentation Service] zur Verbesserung der Anpassung und Personalisierung von Marketing-Kampagnen. Weitere Informationen zum [!DNL Segmentation Service], lesen Sie bitte die [Dokumentation zur Segmentierung](../../segmentation/home.md).
+Nachdem Sie diese Übersicht gelesen haben, sollten Sie wissen, wie Real-Time CDP den [!DNL Segmentation Service] nutzt, um die Anpassung und Personalisierung von Marketing-Kampagnen zu optimieren. Weiterführende Informationen zum [!DNL Segmentation Service] finden Sie in der [Dokumentation zur Segmentierung](../../segmentation/home.md).
