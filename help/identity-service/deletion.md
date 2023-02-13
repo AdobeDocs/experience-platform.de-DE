@@ -1,51 +1,51 @@
 ---
-title: Löschungen im Identity Service
-description: Dieses Dokument bietet einen Überblick über die verschiedenen Mechanismen, mit denen Sie Ihre Identitätsdaten in Experience Platform löschen und Klarheit darüber schaffen können, wie sich Identitätsdiagramme auf diese Weise auswirken können.
+title: Löschungen in Identity Service
+description: Dieses Dokument bietet einen Überblick über die verschiedenen Mechanismen, mit denen Sie Ihre Identitätsdaten in Experience Platform löschen und Klarheit darüber schaffen können, wie sich dies auf Identitätsdiagramme auswirken kann.
 source-git-commit: da1ce4560d28d43db47318883f9656cebb2eb487
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1207'
-ht-degree: 13%
+ht-degree: 100%
 
 ---
 
-# Löschungen im Identity Service
+# Löschungen in Identity Service
 
 Adobe Experience Platform Identity Service generiert Identitätsdiagramme, indem Identitäten für eine Person über Geräte und Systeme hinweg deterministisch miteinander verknüpft werden. Identitätsdiagramm-Verknüpfungen werden eingerichtet, wenn innerhalb derselben Datenzeile zwei oder mehr markierte Identitäten empfangen werden.
 
-Identitätsdiagramme werden vom Echtzeit-Kundenprofil genutzt, um eine umfassende und einzigartige Ansicht Ihrer Kundenattribute und Verhaltensweisen zu erstellen, sodass Sie effektive, persönliche digitale Erlebnisse in Echtzeit für Personen und nicht für Geräte bereitstellen können.
+Identitätsdiagramme werden vom Echtzeit-Kundenprofil genutzt, um eine umfassende und einzigartige Sicht auf Kundenattribute und -verhalten zu erhalten, sodass Sie eindrucksvolle, persönliche digitale Erlebnisse in Echtzeit für Personen und nicht für Geräte bereitstellen können.
 
-Dieses Dokument bietet einen Überblick über die verschiedenen Mechanismen, mit denen Sie Ihre Identitätsdaten in Experience Platform löschen und Klarheit darüber schaffen können, wie sich Identitätsdiagramme auf diese Weise auswirken können.
+Dieses Dokument bietet einen Überblick über die verschiedenen Mechanismen, mit denen Sie Ihre Identitätsdaten in Experience Platform löschen und Klarheit darüber schaffen können, wie sich dies auf Identitätsdiagramme auswirken kann.
 
 ## Erste Schritte
 
-Das folgende Dokument verweist auf die folgenden Funktionen von Experience Platform:
+Das nachstehende Dokument verweist auf die folgenden Funktionen von Experience Platform:
 
-* [Identity Service](home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
-   * [Identitätsdiagramm](./ui/identity-graph-viewer.md): Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identitäten für einen bestimmten Kunden und bietet Ihnen eine visuelle Darstellung, wie Ihr Kunde über verschiedene Kanäle hinweg mit Ihrer Marke interagiert.
-   * [Identitäts-Namespaces](namespaces.md): Identitäts-Namespaces sind eine Komponente des Identity Service , die als Indikatoren für den Kontext dient, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert von „name<span>@email.com“ als E-Mail-Adresse oder „443522“ als numerische CRM-ID.
-* [Catalog Service](../catalog/home.md): Erkunden Sie die Datenherkunft, Metadaten, Dateibeschreibungen, Verzeichnisse und Datensätze im Data Lake.
-* [Datenhygiene](../hygiene/home.md): Verwalten Sie Ihre gespeicherten Verbraucherdaten, indem Sie automatisierte Datensatzabläufe planen oder einzelne Datensätze aus einem Datensatz oder allen Datensätzen löschen.
-* [Adobe Experience Platform Privacy Service](../privacy-service/home.md): Verwalten Sie Kundenanfragen für den Zugriff auf, die Abmeldung vom Verkauf oder das Löschen ihrer personenbezogenen Daten in allen Adobe Experience Cloud-Anwendungen.
-* [Echtzeit-Kundenprofil](../profile/home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [Identity Service](home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kundinnen und Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
+   * [Identitätsdiagramm](./ui/identity-graph-viewer.md): In einem Identitätsdiagramm werden die Beziehungen zwischen den verschiedenen Identitäten einer Kundin oder eines Kunden zusammengefasst. Dort wird visuell veranschaulicht, wie die Kundin oder der Kunde auf unterschiedlichen Kanälen mit Ihrer Marke interagiert.
+   * [Identity-Namespaces](namespaces.md): Identity-Namespaces sind eine Komponente von Identity Service, die als Indikatoren für den Kontext dienen, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert von „name<span>@email.com“ als E-Mail-Adresse oder „443522“ als numerische CRM-ID.
+* [Katalog-Service](../catalog/home.md): Informieren Sie sich über Datenherkunft, Metadaten, Dateibeschreibungen, Verzeichnisse und Datensätze im Data Lake.
+* [Datenhygiene](../hygiene/home.md): Verwalten Sie Ihre gespeicherten Verbraucherdaten, indem Sie einen automatisierten Ablauf von Datensätzen planen oder einzelne Datensätze aus einem Datensatz oder allen Datensätzen löschen.
+* [Adobe Experience Platform Privacy Service](../privacy-service/home.md): Verwalten Sie Kundenanfragen für den Zugriff, den Opt-out vom Verkauf oder das Löschen ihrer personenbezogenen Daten in allen Adobe Experience Cloud-Anwendungen.
+* [Echtzeit-Kundenprofil](../profile/home.md): Das Echtzeit-Kundenprofli bietet ein einheitliches, kundenspezifisches Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 
 ## Löschen einzelner Identitäten
 
-Einzelne Identitätslöschanfragen ermöglichen das Löschen einer Identität innerhalb eines Diagramms, sodass Links entfernt werden, die mit einer einzelnen Benutzeridentität verknüpft sind, die mit einem Identitäts-Namespace verknüpft ist. Sie können Mechanismen verwenden, die von [Privacy Service](../privacy-service/home.md) für Anwendungsfälle wie Kundenanfragen zum Löschen von Daten und Einhaltung von Datenschutzbestimmungen wie der Datenschutz-Grundverordnung (DSGVO).
+Anfragen zum Löschen einzelner Identitäten ermöglichen das Löschen einer Identität innerhalb eines Diagramms, sodass Links entfernt werden, die mit einer einzelnen mit einem Identity-Namespace verknüpften Benutzeridentität verbunden sind. Sie können Mechanismen verwenden, die von [Privacy Service](../privacy-service/home.md) für Anwendungsfälle wie Kundenanfragen zum Löschen von Daten und die Einhaltung von Datenschutzbestimmungen, etwa der Datenschutz-Grundverordnung (DSGVO), bereitgestellt werden.
 
-Die folgenden Abschnitte beschreiben die Mechanismen, die Sie für einzelne Identitätslöschanfragen in Experience Platform verwenden können.
+Die folgenden Abschnitte beschreiben die Mechanismen, die Sie für Anfragen zum Löschen einzelner Identitäten in Experience Platform verwenden können.
 
-### Löschen einer einzelnen Identität in Privacy Service
+### Löschen einzelner Identitäten in Privacy Service
 
-Der Privacy Service verarbeitet Anfragen von Kunden hinsichtlich Zugriff auf, Opt-out vom Verkauf oder Löschen ihrer personenbezogenen Daten, wie in Datenschutzvorschriften wie der Datenschutz-Grundverordnung (DSGVO) und dem California Consumer Privacy Act (CCPA) definiert. Mit Privacy Service können Sie Auftragsanfragen über die API oder die Benutzeroberfläche senden. Wenn Experience Platform von Privacy Service eine Löschanfrage erhält, sendet Platform eine Bestätigung an Privacy Service, dass die Anfrage empfangen wurde und die betroffenen Daten zum Löschen markiert wurden. Das Löschen einer einzelnen Identität basiert auf dem angegebenen Namespace- und/oder ID-Wert. Darüber hinaus erfolgt der Löschvorgang für alle Sandboxes, die mit einer bestimmten Organisation verbunden sind. Weitere Informationen finden Sie im Handbuch unter [Verarbeitung von Datenschutzanfragen in Identity Service](privacy.md).
+Der Privacy Service verarbeitet Anfragen von Kunden hinsichtlich Zugriff auf, Opt-out vom Verkauf oder Löschen ihrer personenbezogenen Daten, wie in Datenschutzvorschriften wie der Datenschutz-Grundverordnung (DSGVO) und dem California Consumer Privacy Act (CCPA) definiert. Mit Privacy Service können Sie Auftragsanfragen über die API oder die Benutzeroberfläche senden. Wenn Experience Platform von Privacy Service eine Löschanfrage erhält, sendet Platform eine Bestätigung an Privacy Service, dass die Anfrage empfangen wurde und die betroffenen Daten zum Löschen markiert wurden. Das Löschen einer einzelnen Identität basiert auf dem angegebenen Namespace- und/oder ID-Wert. Darüber hinaus erfolgt der Löschvorgang für alle mit einer bestimmten Organisation verbundenen Sandboxes. Weiterführende Informationen finden Sie im Handbuch zum [Verarbeiten von Datenschutzanfragen in Identity Service](privacy.md).
 
-Die nachstehende Tabelle enthält eine Aufschlüsselung des einzelnen Identitätslöschens in Privacy Service :
+Die nachstehende Tabelle enthält eine Aufschlüsselung der Löschvorgänge für einzelne Identitäten in Privacy Service:
 
 | Löschen einer einzelnen Identität | Privacy Service |
 | --- | --- |
-| Angenommene Anwendungsfälle | Nur Datenschutzanfragen (DSGVO, CCPA). |
-| Geschätzte Latenz | Tage bis Wochen |
-| Betroffene Dienste | Durch das Löschen einer einzelnen Identität in Privacy Service können Sie festlegen, ob Daten aus Identity Service, Echtzeit-Kundenprofil oder Data Lake gelöscht werden sollen. |
-| Löschmuster | Löschen Sie eine Identität aus Identity Service. |
+| Akzeptierte Anwendungsfälle | Nur Datenschutzanfragen (DSGVO, CCPA). |
+| Geschätzte Latenz | Tage bis Wochen. |
+| Betroffene Services | Durch das Löschen einer einzelnen Identität in Privacy Service können Sie festlegen, ob Daten aus Identity Service, dem Echtzeit-Kundenprofil oder dem Data Lake gelöscht werden sollen. |
+| Löschmuster | Löschen einer Identität aus Identity Service. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -53,42 +53,42 @@ Die nachstehende Tabelle enthält eine Aufschlüsselung des einzelnen Identität
 
 Die folgenden Abschnitte beschreiben die Mechanismen, die zum Löschen von Datensätzen und zugehörigen Identitätsverknüpfungen in Experience Platform verwendet werden können.
 
-### Löschen von Datensätzen in Catalog Service
+### Löschen von Datensätzen im Katalog-Service
 
-Sie können den Catalog Service verwenden, um Anforderungen zum Löschen von Datensätzen zu senden. Weitere Informationen zum Löschen von Datensätzen mit Catalog Service finden Sie im Handbuch unter [Löschen von Objekten mithilfe der Catalog Service-API](../catalog/api/delete-object.md). Alternativ können Sie die Platform-Benutzeroberfläche verwenden, um Anforderungen zum Löschen von Datensätzen zu senden. Weitere Informationen finden Sie im Abschnitt [Benutzerhandbuch zu Datensätzen](../catalog/datasets/user-guide.md#delete-a-dataset).
+Sie können den Katalog-Service verwenden, um Anfragen zum Löschen von Datensätzen zu senden. Weiterführende Informationen zum Löschen von Datensätzen mit dem Katalog-Service finden Sie im Handbuch zum [Löschen von Objekten mithilfe der Katalog-Service-API](../catalog/api/delete-object.md). Sie können auch die Platform-Benutzeroberfläche verwenden, um Anfragen zum Löschen von Datensätzen zu senden. Weiterführende Informationen finden Sie im [Benutzerhandbuch zu Datensätzen](../catalog/datasets/user-guide.md#delete-a-dataset).
 
-### Datensatzabläufe in der Datenhygiene
+### Datensatzablauf im Rahmen der Datenhygiene
 
-Der Arbeitsbereich [[!UICONTROL Datenhygiene]](../hygiene/ui/overview.md) in der Adobe Experience Platform-Benutzeroberfläche bietet Ihnen die Möglichkeit, die Gültigkeitsdauer für Datensätze festzulegen. Wenn ein Datensatz sein Ablaufdatum erreicht, beginnen der Data Lake, der Identity Service und das Echtzeit-Kundenprofil separate Prozesse, um den Inhalt des Datensatzes aus den entsprechenden Diensten zu entfernen. Weitere Informationen finden Sie im Handbuch unter [Verwalten der Datensatzabläufe mithilfe der Variablen [!UICONTROL Datenhygiene] Arbeitsbereich](../hygiene/ui/dataset-expiration.md).
+Der Arbeitsbereich [[!UICONTROL Datenhygiene]](../hygiene/ui/overview.md) in der Adobe Experience Platform-Benutzeroberfläche bietet Ihnen die Möglichkeit, die Gültigkeitsdauer für Datensätze festzulegen. Wenn ein Datensatz sein Ablaufdatum erreicht, starten der Data Lake, der Identity Service und das Echtzeit-Kundenprofil separate Prozesse, um den Inhalt des Datensatzes aus den entsprechenden Services zu entfernen. Weiterführende Informationen finden Sie im Handbuch zum [Verwalten des Datensatzablaufs mithilfe des Arbeitsbereichs für die [!UICONTROL Datenhygiene]](../hygiene/ui/dataset-expiration.md).
 
-Die folgende Tabelle enthält eine Aufschlüsselung der Unterschiede zwischen dem Löschen von Datensätzen in Catalog Service und der Datenhygiene:
+Die folgende Tabelle enthält eine Aufschlüsselung der Unterschiede zwischen dem Löschen von Datensätzen im Katalog-Service und im Rahmen der Datenhygiene:
 
 | Löschen von Datensätzen | Katalog-Service | Datenhygiene |
 | --- | --- | --- |
-| Angenommene Anwendungsfälle | Löschen Sie vollständige Datensätze und die zugehörigen Identitätsdaten in Platform. | Verwaltung der in Experience Platform gespeicherten Daten. |
-| Geschätzte Latenz | Days | Days |
-| Betroffene Dienste | Beim Löschen von Datensätzen durch den Katalogdienst werden Daten aus Identity Service, Echtzeit-Kundenprofil und Data Lake gelöscht. | Durch das Löschen von Datensätzen durch Datenhygiene werden Daten aus Identity Service, Echtzeit-Kundenprofil und Data Lake gelöscht. |
-| Löschmuster | Löschen Sie verknüpfte Identitäten aus Identity Service, der von einem bestimmten Datensatz erstellt wurde. | Löschen Sie verknüpfte Identitäten aus Identity Service, der von einem bestimmten Datensatz basierend auf dem Ablaufzeitplan eingerichtet wurde. |
+| Akzeptierte Anwendungsfälle | Löschen vollständiger Datensätze und ihrer zugehörigen Identitätsdaten in Platform. | Verwaltung der in Experience Platform gespeicherten Daten. |
+| Geschätzte Latenz | Tage | Tage |
+| Betroffene Services | Beim Löschen von Datensätzen durch den Katalog-Service werden Daten aus dem Identity Service, dem Echtzeit-Kundenprofil und dem Data Lake gelöscht. | Durch das Löschen von Datensätzen im Rahmen der Datenhygiene werden Daten aus dem Identity Service, dem Echtzeit-Kundenprofil und dem Data Lake gelöscht. |
+| Löschmuster | Löschen verknüpfter Identitäten aus dem Identity Service, festgelegt von einem bestimmten Datensatz. | Löschen verknüpfter Identitäten aus dem Identity Service, festgelegt von einem bestimmten Datensatz basierend auf dem Ablaufzeitplan. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Verschiedene Status von Identitätsdiagrammen nach dem Löschen
 
-Alle Löschungen von Identitätsdiagrammen führen dazu, dass Verknüpfungen zwischen zwei oder mehr Identitäten entfernt werden, wie in der Löschanfrage angegeben. Bei Anforderungen zum Löschen von Datensätzen werden alle vom angegebenen Datensatz festgelegten Identitätsverknüpfungen entfernt und können Identitäten aus Diagrammen entfernen. Bei einzelnen Identitätslöschanfragen werden Identitätsverknüpfungen für die angegebene Identität entfernt, sodass der Identitätswert selbst aus allen Identitätsdiagrammen entfernt wird. Identitäten ohne einzelne Verknüpfung mit einer anderen Identität werden nicht im Identity Service gespeichert.
+Alle Löschvorgänge von Identitätsdiagrammen führen dazu, dass Verknüpfungen zwischen zwei oder mehr Identitäten entfernt werden, wie in der Löschanfrage angegeben. Bei Anfragen zum Löschen von Datensätzen werden alle vom angegebenen Datensatz festgelegten Identitätsverknüpfungen entfernt und es können Identitäten aus Diagrammen entfernt werden. Bei Anfragen zum Löschen einzelner Identitäten werden Identitätsverknüpfungen für die angegebene Identität entfernt, sodass der Identitätswert selbst aus allen Identitätsdiagrammen entfernt wird. Identitäten ohne einzelne Verknüpfung mit einer anderen Identität werden nicht in Identity Service gespeichert.
 
 Nachstehend finden Sie einen Überblick über die möglichen Auswirkungen von Löschungen auf den Status von Identitätsdiagrammen.
 
 | Identitätsdiagramm-Status | Beschreibung |
 | --- | --- |
-| Teilweise aktualisiert | Ein Diagramm wird teilweise aktualisiert, wenn mindestens zwei Identitäten innerhalb eines Diagramms verknüpft bleiben, nachdem eine Löschanfrage erfolgreich verarbeitet wurde. Nach dem Löschen können die verbleibenden Identitätslinks miteinander verbunden bleiben oder je nach gelöschten Identitäten in zwei oder mehr separate Diagramme unterteilt werden. |
-| Vollständige Entfernung | Ein Diagramm muss mindestens zwei verknüpfte Identitäten aufweisen, damit es existieren kann. Wenn daher eine Löschanfrage dazu führt, dass alle vorhandenen Links in einem Diagramm entfernt werden, wird das Diagramm vollständig entfernt. |
-| Keine Änderung | Ein Diagramm wird nicht beeinflusst, wenn eine bestimmte Löschanfrage eine Identität oder einen Datensatz enthält, die mit keinem Mitglied des Diagramms verknüpft sind. Außerdem wird ein Diagramm nicht aktualisiert, auch wenn mit der Löschanfrage eine Verknüpfung zwischen einem Datensatz oder einer Kombination aus Identitäts-Datensatz entfernt wird, da die Verknüpfung durch eine andere, nicht gelöschte Verknüpfung hergestellt wurde. Wenn also eine Verknüpfung in zwei verschiedenen Datensätzen vorhanden ist, wird das Diagramm nicht aktualisiert, da nur einer der Datensätze entfernt wird. |
+| Teilweise Aktualisierung | Ein Diagramm wird teilweise aktualisiert, wenn mindestens zwei Identitäten innerhalb eines Diagramms verknüpft bleiben, nachdem eine Löschanfrage erfolgreich verarbeitet wurde. Nach dem Löschen können die verbleibenden Identitätsverknüpfungen miteinander verbunden bleiben oder je nach gelöschten Identitäten in zwei oder mehr separate Diagramme unterteilt werden. |
+| Vollständige Entfernung | Ein Diagramm muss mindestens zwei verknüpfte Identitäten aufweisen, damit es existieren kann. Wenn eine Löschanfrage dazu führt, dass alle vorhandenen Verknüpfungen in einem Diagramm entfernt werden, wird das Diagramm daher vollständig entfernt. |
+| Keine Änderung | Ein Diagramm wird nicht beeinflusst, wenn eine bestimmte Löschanfrage Identitäten oder Datensätze enthält, die mit keinem Mitglied des Diagramms verknüpft sind. Außerdem wird ein Diagramm nicht aktualisiert, auch wenn mit der Löschanfrage eine Verknüpfung zwischen einem Datensatz oder einer Identitäts-Datensatz-Kombination entfernt wird, da die Verknüpfung durch eine andere, nicht gelöschte Verknüpfung hergestellt wurde. Wenn also eine Verknüpfung in zwei verschiedenen Datensätzen vorhanden ist, wird das Diagramm nicht aktualisiert, da nur einer der Datensätze entfernt wird. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Nächste Schritte
 
-In diesem Dokument wurden die verschiedenen Mechanismen behandelt, mit denen Sie Identitäten und Datensätze in Experience Platform löschen können. In diesem Dokument wurde auch erläutert, wie sich das Löschen von Identitäts- und Datensätzen auf Identitätsdiagramme auswirken kann. Weitere Informationen zu Identity Service finden Sie im Abschnitt [Identity Service - Übersicht](home.md).
+In diesem Dokument wurden die verschiedenen Mechanismen behandelt, mit denen Sie Identitäten und Datensätze in Experience Platform löschen können. In diesem Dokument wurde auch erläutert, wie sich das Löschen von Identitäten und Datensätzen auf Identitätsdiagramme auswirken kann. Weiterführende Informationen zu Identity Service finden Sie in der [Übersicht zu Identity Service](home.md).
 
 <!--
 
