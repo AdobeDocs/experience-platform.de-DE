@@ -2,10 +2,10 @@
 description: Auf dieser Seite finden Sie alle Informationen, die Sie zum Überprüfen eines mit Destination SDK erstellten produktiven Ziels übermitteln müssen.
 title: Zur Überprüfung eines in der Destination SDK erstellten produktisierten Ziels übermitteln
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 1eab40687c599d37c71b919bc3a4aeae274b0a49
+source-git-commit: 73f1faaffd4a77c9c09eccf00d5a0ff98580b232
 workflow-type: tm+mt
-source-wordcount: '928'
-ht-degree: 42%
+source-wordcount: '1012'
+ht-degree: 38%
 
 ---
 
@@ -28,7 +28,8 @@ Bevor Ihr Ziel im [Experience Platform-Zielkatalog](/help/destinations/catalog/o
 
 Auf dieser Seite sind alle Informationen aufgeführt, die Sie angeben müssen, wenn Sie ein mit dem Adobe Experience Platform Destination SDK erstelltes Ziel übermitteln oder aktualisieren. Um ein Ziel in Adobe Experience Platform erfolgreich zu übermitteln, senden Sie eine E-Mail an <aepdestsdk@adobe.com>, die folgende Informationen enthält:
 
-* Eine Beschreibung der Anwendungsfälle, die Ihr Ziel löst. Dies ist nicht erforderlich, wenn Sie eine vorhandene Zielkonfiguration aktualisieren.
+* Eine Beschreibung der Anwendungsfälle, die Ihr Ziel löst. Dies ist nur erforderlich, wenn Sie eine neue Zielkonfiguration übermitteln.
+* Eine Beschreibung des Grundes für die Zielübermittlung. Dies ist nur erforderlich, wenn Sie eine vorhandene Zielkonfiguration aktualisieren.
 * Testergebnisse nach Verwendung des Destination API-Endpunkts zum Ausführen eines HTTP-Aufrufs an Ihr Ziel. Geben Sie an Adobe einen API-Aufruf für Ihren Ziel-Endpunkt und die API-Antwort weiter, die Sie von Ihrem Ziel-Endpunkt erhalten haben.
 * Zusätzliche Anforderungen für dateibasierte Ziele:
    * Geben Sie nach Verwendung der Test-API eine Anfrage und ein Antwort-Beispiel für [Testen Ihres dateibasierten Ziels mit Beispielprofilen](/help/destinations/destination-sdk/file-based-destination-testing-api.md).
@@ -46,6 +47,14 @@ Geben Sie eine Beschreibung der Anwendungsfälle an, die Ihr Ziel für Experienc
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Erstellen Sie Zielgruppen aus Ihren Kundenlisten, Personen, die Ihre Site besucht haben, oder Personen, die bereits mit Ihren Inhalten in Pinterest interagiert haben.
 * [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX-APIs sind für Advertiser verfügbar, die eine bestimmte Zielgruppen-Gruppe ansprechen möchten, die von E-Mail-Adressen in Verizon Media (VMG) abgeleitet wurde. Diese können schnell ein neues Segment erstellen und die gewünschte Zielgruppe mithilfe der API von VMGs nahezu in Echtzeit übertragen.
+
+## Grund für die Aktualisierung {#reason-for-update}
+
+>[!NOTE]
+>
+>Dieser Abschnitt ist nur erforderlich, wenn Sie eine vorhandene Konfiguration aktualisieren.
+
+Geben Sie eine kurze Beschreibung des Problems, das Ihre Übermittlung für das vorhandene Ziel löst. Beispielsweise könnte Ihre Übermittlung den Namen, die Beschreibung und das Logo Ihres Ziels aktualisieren, wenn Sie von der Beta-Version zur allgemeinen Verfügbarkeit wechseln. Oder Ihre Übermittlung kann einen Fehler beheben, der in Ihrer Zielkonfiguration gefunden wurde.
 
 ## Testergebnisse nach Verwendung der Test-Ziel-API {#testing-api-response}
 
