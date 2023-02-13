@@ -3,9 +3,9 @@ title: Adobe Experience Platform – Versionshinweise, September 2022
 description: Versionshinweise September 2022 zu Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
-workflow-type: tm+mt
-source-wordcount: '2934'
-ht-degree: 98%
+workflow-type: ht
+source-wordcount: '0'
+ht-degree: 100%
 
 ---
 
@@ -42,7 +42,7 @@ Mit der attributbasierten Zugriffssteuerung können Administratoren bzw. Adminis
 | Funktion | Beschreibung |
 | --- | --- |
 | Attributbasierte Zugriffssteuerung | Mit der attributbasierten Zugriffssteuerung können Sie Schemafelder und Segmente des Experience-Datenmodells (XDM) mit Kennzeichnungen versehen, die unterschiedliche Organisations- oder Datennutzungsbereiche definieren. Parallel dazu können Administrierende die Benutzeroberfläche zur Verwaltung von Benutzenden und Rollen verwenden, um Zugriffsrichtlinien für XDM-Schemafelder und Segmente zu definieren. Damit kann der Zugriff durch Benutzende oder Benutzergruppen (interne, externe oder Drittparteien) besser verwaltet werden. Weitere Informationen finden Sie in der [Übersicht über die attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md). |
-| Berechtigungen | Berechtigungen sind der Bereich von Experience Cloud, in dem Admins Benutzerrollen und Zugriffsrichtlinien definieren können, um Zugriffsberechtigungen für Funktionen und Objekte in einem Produktprogramm zu verwalten. Über Berechtigungen können Sie Rollen erstellen und verwalten, die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen und Richtlinien erstellen, um Kennzeichnungen zu nutzen und zu definieren, welche Benutzerrollen Zugriff auf bestimmte Platform-Ressourcen haben. Mit Berechtigungen können Sie auch die Bezeichnungen, Sandboxes und Benutzende verwalten, die einer bestimmten Rolle zugeordnet sind. Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche für Berechtigungen](../../access-control/abac/ui/browse.md). |
+| Berechtigungen | Berechtigungen sind der Bereich von Experience Cloud, in dem Administrierende Benutzerrollen und Zugriffsrichtlinien definieren können, um Zugriffsberechtigungen für Funktionen und Objekte in einem Produktprogramm zu verwalten. Über Berechtigungen können Sie Rollen erstellen und verwalten, die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen und Richtlinien erstellen, um Kennzeichnungen zu nutzen und zu definieren, welche Benutzerrollen Zugriff auf bestimmte Platform-Ressourcen haben. Mit Berechtigungen können Sie auch die Bezeichnungen, Sandboxes und Benutzende verwalten, die einer bestimmten Rolle zugeordnet sind. Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche für Berechtigungen](../../access-control/abac/ui/browse.md). |
 
 Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter [Attributbasierte Zugriffssteuerung – Übersicht](../../access-control/abac/overview.md). Eine umfassende Anleitung zum attributbasierten Zugriffssteuerungs-Workflow finden Sie im [Handbuch zur attributbasierten Zugriffskontrolle](../../access-control/abac/end-to-end-guide.md).
 
@@ -70,7 +70,7 @@ Die in Real-time Customer Data Platform verfügbare Kunden-KI dient dazu, in gro
 | Entwurfsinstanz speichern | Diese neue Funktion ermöglicht es Marketing-Analysten und -Analystinnen, eine Modellkonfiguration vor dem Training und Scoring als Entwurfsinstanz zu speichern und weiter zu bearbeiten. Diese Funktion ist beispielsweise dann hilfreich, wenn Benutzende mehrere Felder im Workflow definieren müssen, dies aber aus Zeitgründen nicht möglich ist. Diese Funktion ist auch nützlich, wenn eine oder mehrere Datensatzstatistiken gerade verarbeitet werden und noch nicht verfügbar sind. Lesen Sie das [Benutzerhandbuch für Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md#governance-policies), um mehr zu erfahren. |
 | Governance-Richtlinien | Nachdem Benutzende die Erstellung einer Instanz über den Konfigurations-Workflow übermittelt haben, prüft der neue Service zur Richtliniendurchsetzung, ob Richtlinienverletzungen bei der Datennutzung vorliegen, und zeigt die Details in einem Popup an. Dadurch wird sichergestellt, dass Datenvorgänge und Marketing-Aktionen mit den in Adobe Experience Platform konfigurierten Datennutzungsrichtlinien konform sind. |
 
-Weitere Informationen zur Kunden-KI finden Sie in der [Übersicht zur Kunden-KI](../../intelligent-services/customer-ai/overview.md). Informationen über die Richtlinien zu Daten-Governance finden Sie unter [Richtlinien-Übersicht](../../data-governance/policies/overview.md)
+Weitere Informationen zur Kunden-KI finden Sie in der [Übersicht zur Kunden-KI](../../intelligent-services/customer-ai/overview.md). Informationen über die Richtlinien zu Daten-Governance finden Sie unter [Richtlinien-Übersicht](../../data-governance/policies/overview.md).
 
 ## Auditprotokolle {#audit-logs}
 
@@ -97,7 +97,7 @@ Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Insi
 | Datenmodell von Customer Data Platform Insights | Die Insights-Datenmodell-Funktion von Customer Data Platform (CDP) stellt die Datenmodelle und SQL zur Verfügung, die den Insights für verschiedene Profil-, Ziel- und Segmentierungs-Widgets zugrunde liegen. Sie können diese SQL-Abfragevorlagen anpassen, um CDP-Berichte für Marketing-Zwecke und Key Performance Indicators zu erstellen. Diese Insights können dann als benutzerdefinierte Widgets für benutzerdefinierte Dashboards verwendet werden. Weitere Informationen finden Sie im [Handbuch zu Funktionen des CDP-Insights-Datenmodells](../../dashboards/cdp-insights-data-model.md). |
 | Widget für Bericht zur Zielgruppenüberschneidung | Dieses Widget ist sowohl für [!UICONTROL Profil-] als auch für [!UICONTROL Segment]-Dashboards verfügbar. Der Bericht bietet eine geordnete Liste von Zielgruppen, die nach den höchsten oder niedrigsten Überschneidungsprozentsätzen für Ihr ausgewähltes Segment sortiert sind. Vom [!UICONTROL Profil]-Dashboard aus können Sie Zielgruppenüberschneidungen nach Zusammenführungsrichtlinien aus allen verfügbaren Segmenten filtern und anzeigen. Mit [!UICONTROL Segment]-Dashboards können Sie Zielgruppenüberschneidungen nach einem bestimmten Segment filtern.<br>Verwenden Sie diese Analyse, um neue leistungsstarke Segmente zu erstellen und um zu vermeiden, dass dieselbe Zielgruppe an verschiedene Ziele gesendet wird. Der Bericht hilft auch, versteckte Insights zu identifizieren. So können Sie die Segmentierung verbessern oder eindeutige Profile finden, die verfolgt werden sollen. Weitere Informationen zu [Profilen](../../dashboards/guides/profiles.md#audience-overlap-report) und [Segmenten](../../dashboards/guides/segments.md#audience-overlap-report) finden Sie in den Widget-Handbüchern. |
 
-Weitere Informationen zu [!DNL Dashboards] finden Sie in der [[!DNL Dashboards] Übersicht](../../dashboards/home.md)
+Weitere Informationen zu [!DNL Dashboards] finden Sie in der [[!DNL Dashboards] Übersicht](../../dashboards/home.md).
 
 ## Datenerfassung {#data-collection}
 
@@ -210,7 +210,7 @@ Weitere Informationen zu Identity Service finden Sie im Abschnitt [Identity Serv
 
 ## Query Service {#query-service}
 
-Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von Daten in Adobe Experience Platform [!DNL Data Lake]. Sie können beliebige Datensätze aus der [!DNL Data Lake] und erfassen Sie die Abfrageergebnisse als neuen Datensatz zur Verwendung in Berichten, Data Science Workspace oder zur Aufnahme in das Echtzeit-Kundenprofil.
+Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von Daten in Adobe Experience Platform [!DNL Data Lake]. Sie können beliebige Datensätze aus dem [!DNL Data Lake] verbinden und die Abfrageergebnisse als neuen Datensatz für die Verwendung in Berichten, im Datenwissenschafts-Arbeitsbereich oder für die Aufnahme in das Echtzeit-Kundenprofil verwenden.
 
 **Aktualisierte Funktionen**
 
@@ -233,7 +233,7 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Auswirkungen der Population des Audience Manager-Segments auf das Echtzeit-Kundenprofil | Die Aufnahme umfangreicher Audience Manager-Segmentpopulationen hat einen direkten Einfluss auf Ihre Gesamtprofilanzahl, wenn Sie zum ersten Mal ein Audience Manager-Segment mithilfe der Audience Manager-Quelle an Platform senden. Das bedeutet, dass die Auswahl aller Segmente eine Profilanzahl ergeben kann, die über Ihrer Lizenznutzungsberechtigung liegt. Weitere Informationen finden Sie im Abschnitt [Übersicht über die Audience Manager-Quelle](../../sources/connectors/adobe-applications/audience-manager.md). Informationen zur Lizenznutzung finden Sie in der Dokumentation unter [Verwenden des Dashboards zur Lizenznutzung](../../dashboards/guides/license-usage.md). |
+| Auswirkungen der Audience Manager-Segmentpopulation auf das Echtzeit-Kundenprofil | Die Aufnahme umfangreicher Audience Manager-Segmentpopulationen hat einen direkten Einfluss auf Ihre Gesamtprofilanzahl, wenn Sie zum ersten Mal ein Audience Manager-Segment mithilfe der Audience Manager-Quelle an Platform senden. Das bedeutet, dass die Auswahl aller Segmente eine Profilanzahl ergeben kann, die über Ihrer Lizenznutzungsberechtigung liegt. Weitere Informationen finden Sie im Abschnitt [Übersicht über die Audience Manager-Quelle](../../sources/connectors/adobe-applications/audience-manager.md). Informationen zur Lizenznutzung finden Sie in der Dokumentation unter [Verwenden des Dashboards zur Lizenznutzung](../../dashboards/guides/license-usage.md). |
 | Unterstützung für Adobe Campaign Managed Cloud Service | Verwenden Sie die Adobe Campaign Managed Cloud Service-Quelle, um Ihre Versand- und Trackinglog-Daten von Adobe Campaign v8.4 nach Experience Platform zu übertragen. Weitere Informationen finden Sie im Handbuch unter [Erstellen einer Adobe Campaign Managed Cloud Service-Quellverbindung über die Benutzeroberfläche](../../sources/tutorials/ui/create/adobe-applications/campaign.md). |
 | API-Unterstützung für On-Demand-Aufnahme bei Batch-Quellen | Verwenden Sie die On-Demand-Aufnahme, um mit der [!DNL Flow Service]-API für einen bestimmten Datenfluss Ad-hoc-Flussausführungen zu erstellen. Die erstellten Flussausführungen müssen auf eine einmalige Aufnahme eingestellt sein. Weitere Informationen finden Sie im Handbuch unter [Erstellen einer Flussausführung für die On-Demand-Aufnahme mithilfe der API](../../sources/tutorials/api/on-demand-ingestion.md). |
 | API-Unterstützung für die Wiederholung fehlgeschlagener Datenflussausführungen für Batch-Quellen | Verwenden Sie den Vorgang `re-trigger`, um Ihren fehlgeschlagenen Datenfluss über die API erneut zu versuchen. Weitere Informationen finden Sie im Handbuch unter [Wiederholen fehlgeschlagener Datenflussausführungen mithilfe der API](../../sources/tutorials/api/retry-flows.md). |
