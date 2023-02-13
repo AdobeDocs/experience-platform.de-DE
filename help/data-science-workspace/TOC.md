@@ -6,9 +6,9 @@ user-guide-description: Nutzen Sie maschinelles Lernen, um Modelle und Rezepte m
 feature: Data Science Workspace
 solution: Experience Platform
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '236'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -58,7 +58,7 @@ ht-degree: 96%
    * [Bewerten eines Modells (Benutzeroberfläche)](models-recipes/score-model-ui.md)
    * [Bewerten eines Modells (API)](models-recipes/score-model-api.md)
    * [Optimieren eines Modells](models-recipes/optimize-model.md)
-   * [Anreicherung des Echtzeit-Kundenprofils mit Einblicken aus maschinellem Lernen](models-recipes/enrich-profile.md)
+   * [Anreichern des Echtzeit-Kundenprofils mit Einblicken aus maschinellem Lernen](models-recipes/enrich-profile.md)
    * [Veröffentlichen eines Modells als Service (Benutzeroberfläche)](models-recipes/publish-model-service-ui.md)
    * [Veröffentlichen eines Modells als Service (API)](models-recipes/publish-model-service-api.md)
    * [Planen von automatisiertem Training und Auswertung eines Service (Benutzeroberfläche)](models-recipes/schedule-models-ui.md)
