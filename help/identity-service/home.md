@@ -5,9 +5,9 @@ title: Identity Service – Übersicht
 description: Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihren Kunden und sein Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle persönliche digitale Erlebnisse sorgen.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1839'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +31,7 @@ Bevor wir in die Details von [!DNL Identity Service] eintauchen, hier eine kurze
 | --- | --- |
 | Identität | Eine Identität besteht aus Daten, die für eine Entität (normalerweise eine Person) eindeutig sind. Eine Identität wie z. B. eine Anmeldekennung, eine ECID oder eine Kundentreue-ID wird als „bekannte Identität“ bezeichnet. |
 | ECID | Experience Cloud ID (ECID) ist ein geteilter Identity-Namespace, der in Programmen von Experience Platform und Adobe Experience Cloud verwendet wird. ECID bietet eine Grundlage für die Kundenidentität und wird als primäre ID für Geräte und als Basisknoten für Identitätsdiagramme verwendet. Weiterführende Informationen dazu finden Sie in der [ECID-Übersicht](./ecid.md). |
-| Identity-Namespace | Ein Identity-Namespace dient zur Unterscheidung des Kontexts oder des Typs einer Identität. Beispielsweise unterscheidet eine Identität &quot;name&quot;<span>@email.com&quot; als E-Mail-Adresse oder &quot;443522&quot; als numerische CRM-ID. Identity-Namespaces werden verwendet, um einzelne Identitäten nachzuschlagen und den Kontext für Identitätswerte bereitzustellen. Auf diese Weise können Sie etwa feststellen, dass zwei [!DNL Profile]-Fragmente, die unterschiedliche primäre IDs enthalten, aber denselben Wert für den Identity-Namespace `email` aufweisen, tatsächlich dieselbe Person betreffen. Weiterführende Informationen dazu finden Sie unter [Übersicht zu Identitäts-Namespaces](./namespaces.md). |
+| Identity-Namespace | Ein Identity-Namespace dient zur Unterscheidung des Kontexts oder des Typs einer Identität. Beispielsweise unterscheidet eine Identität zwischen „name<span>@email.com“ als E-Mail-Adresse und „443522“ als numerischer CRM-ID. Identity-Namespaces werden verwendet, um einzelne Identitäten nachzuschlagen und den Kontext für Identitätswerte bereitzustellen. Auf diese Weise können Sie etwa feststellen, dass zwei [!DNL Profile]-Fragmente, die unterschiedliche primäre IDs enthalten, aber denselben Wert für den Identity-Namespace `email` aufweisen, tatsächlich dieselbe Person betreffen. Weiterführende Informationen dazu finden Sie unter [Übersicht zu Identitäts-Namespaces](./namespaces.md). |
 | Identitätsdiagramm | Ein Identitätsdiagramm ist eine Zusammenstellung von Beziehungen zwischen verschiedenen Identitäten, anhand derer Sie visualisieren und besser verstehen können, welche Kundenidentitäten zusammengeführt werden und wie. Weitere Informationen finden Sie im Tutorial zur [Verwendung des Identitätsdiagramm-Viewers](./ui/identity-graph-viewer.md). |
 | Persönlich identifizierbare Informationen (PII) | PII sind Informationen, mit denen ein Kunde direkt identifiziert werden kann, z. B. eine E-Mail-Adresse oder eine Telefonnummer. PII-Werte werden häufig verwendet, um die verschiedenen Identitäten eines Kunden in verschiedenen Systemen abzugleichen. |
 | Unbekannte oder anonyme Identitäten | Unbekannte oder anonyme Identitäten sind Indikatoren, die Geräte isolieren, ohne die tatsächliche Person zu identifizieren, die das Gerät verwendet. Unbekannte und anonyme Identitäten umfassen Informationen wie die IP-Adresse oder eine Cookie-ID eines Besuchers. Unbekannte und anonyme Identitäten können zwar Verhaltensdaten liefern, sind jedoch von begrenztem Nutzen, bis ein Kunde seine personenbezogenen Daten bereitstellt. |
@@ -46,12 +46,12 @@ Betrachten wir ein alltägliches Beispiel für die Beziehung eines Verbrauchers 
 - An dieser Stelle erscheint Marias Aktivität in zwei separaten Profilen:
    - Ihre E-Commerce-Anmeldung
    - Ihr Tablet-Gerät, möglicherweise identifiziert durch seine Geräte-ID
-- Maria setzt ihre Tablet-Sitzung später fort und gibt beim Abonnieren Ihres Newsletters ihre E-Mail-Adresse an. Im Anschluss daran fügt Streaming-Erfassung als Datensatzdaten in ihrem Profil eine neue Identität hinzu. Daher [!DNL Identity Service] verknüpft nun Marias Aktivität auf Tablet-Geräten mit ihrem E-Commerce-Kontoverlauf.
+- Maria setzt ihre Tablet-Sitzung später fort und gibt beim Abonnieren Ihres Newsletters ihre E-Mail-Adresse an. Im Anschluss daran fügt Streaming-Erfassung als Datensatzdaten in ihrem Profil eine neue Identität hinzu. Infolgedessen verknüpft [!DNL Identity Service] Marias Aktivitäten auf ihrem Tablet nun mit dem Verlauf ihres E-Commerce-Kontos.
 - Bis zum nächsten Klick auf das Tablet könnten Ihre Zielinhalte Marias gesamtes Profil inklusive Verlauf widerspiegeln, statt nur das Tablet eines unbekannten Kunden.
 
 ![Identitätszusammenfügung in Platform](./images/identity-service-stitching.png)
 
-Im Wesentlichen können Sie sich mit [!DNL Identity Service] ein vollständiges Bild von Ihrem Kunden machen, indem zusammengehörige Daten zusammengefasst werden, die andernfalls über verschiedene Systeme verstreut sein könnten. Die Identitätsbeziehungen, die [!DNL Identity Service] definiert und verwaltet werden, die vom Echtzeit-Kundenprofil genutzt werden, um ein vollständiges Bild von einem Kunden und dessen Interaktionen mit Ihrer Marke zu erstellen. Weitere Informationen finden Sie unter [Übersicht über das Echtzeit-Kundenprofil](../profile/home.md).
+Im Wesentlichen können Sie sich mit [!DNL Identity Service] ein vollständiges Bild von Ihrem Kunden machen, indem zusammengehörige Daten zusammengefasst werden, die andernfalls über verschiedene Systeme verstreut sein könnten. Die Identitätsbeziehungen, die [!DNL Identity Service] definiert und pflegt, werden vom Echtzeit-Kundenprofil genutzt, um das vollständige Bild einer Kundin oder eines Kunden und deren Interaktionen mit Ihrer Marke zu erstellen. Weiterführende Informationen finden Sie in der [Übersicht zum Echtzeit-Kundenprofil](../profile/home.md).
 
 ### Anwendungsfälle
 
@@ -67,13 +67,13 @@ Zu den Beispielen für Implementierungen von [!DNL Identity Service] gehören:
 >[!CONTEXTUALHELP]
 >id="platform_identity_namespace"
 >title="Identity-Namespaces"
->abstract="Ein Identity-Namespace dient zur Unterscheidung des Kontexts oder des Typs einer Identität. Beispielsweise unterscheidet eine Identität &quot;name&quot;<span>@email.com&quot; als E-Mail-Adresse oder &quot;443522&quot; als numerische CRM-ID."
+>abstract="Ein Identity-Namespace dient zur Unterscheidung des Kontexts oder des Typs einer Identität. Beispielsweise unterscheidet eine Identität zwischen „name<span>@email.com“ als E-Mail-Adresse und „443522“ als numerischer CRM-ID."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_value"
 >title="Identitätswerte"
->abstract="Ein Identitätswert ist ein Bezeichner, der eine eindeutige Person, Organisation oder ein Asset darstellt. Der Kontext oder der Typ der Identität, den der Wert darstellt, wird durch einen entsprechenden Identitäts-Namespace definiert. Bei der Zuordnung von Datensatzdaten zu Profilfragmenten müssen Namespace und Identitätswert übereinstimmen. Bei der Zuordnung von Datensatzdaten zu Profilfragmenten müssen Namespace und Identitätswert übereinstimmen."
+>abstract="Ein Identitätswert ist eine Kennung, die für eine eindeutige Person, eine eindeutige Organisation oder ein eindeutiges Asset steht. Der Kontext oder der Typ der Identität, den der Wert darstellt, wird durch einen entsprechenden Identity-Namespace definiert. Bei der Zuordnung von Datensatzdaten zu Profilfragmenten müssen Namespace und Identitätswert übereinstimmen. Bei der Zuordnung von Datensatzdaten zu Profilfragmenten müssen Namespace und Identitätswert übereinstimmen."
 >text="Learn more in documentation"
 
 Wenn Sie eine Person ohne weiteren Kontext fragen würden, wie ihre Identität lautet, würde es ihr wahrscheinlich schwer fallen, eine sinnvolle Antwort zu geben. Nach der gleichen Logik ist ein Zeichenfolgenwert, der einen Identitätswert darstellt (unabhängig davon, ob es sich um eine vom System erzeugte Kennung oder eine E-Mail-Adresse handelt), nur dann vollständig, wenn ein Qualifizierer mit dem Kontext des Zeichenfolgenwerts angegeben wird: der Identitäts-Namespace.
@@ -133,7 +133,7 @@ Wenn Sie beispielsweise Telefonnummernfelder als Identitätsfelder kennzeichnen,
 
 ### Datensatz für [!DNL Identity Service] konfigurieren
 
-Während der Streaming-Aufnahme extrahiert [!DNL Identity Service ]automatisch Identitätsdaten aus Datensatz- und Zeitreihendaten. Bevor Daten aufgenommen werden können, müssen sie jedoch für [!DNL Identity Service] aktiviert werden. Siehe Tutorial zu  [Konfigurieren eines Datensatzes für Echtzeit-Kundenprofil und Identity Service mithilfe von APIs](../profile/tutorials/dataset-configuration.md) für weitere Informationen.
+Während der Streaming-Aufnahme extrahiert [!DNL Identity Service ]automatisch Identitätsdaten aus Datensatz- und Zeitreihendaten. Bevor Daten aufgenommen werden können, müssen sie jedoch für [!DNL Identity Service] aktiviert werden. Weiterführende Informationen finden Sie im Tutorial zum [Konfigurieren eines Datensatzes für das Echtzeit-Kundenprofil und Identity Service mit APIs](../profile/tutorials/dataset-configuration.md).
 
 ### Daten in [!DNL Identity Service] aufnehmen
 
