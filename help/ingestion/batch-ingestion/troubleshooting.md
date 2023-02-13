@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; erfasste Daten; Fehlerbehebung; FAQ; Aufnahme; Batch-Erfassung; Batch-Erfassung;
+keywords: Experience Platform;Startseite;beliebte Themen;aufgenommene Daten;Fehlerbehebung;häufig gestellte Fragen;Aufnahme;Batch-Aufnahme;Batchaufnahme;
 solution: Experience Platform
-title: Handbuch zur Fehlerbehebung bei der Batch-Erfassung
-description: Diese Dokumentation hilft bei der Beantwortung häufig gestellter Fragen zu Adobe Experience Platform Batch Data Ingestion-APIs.
+title: Handbuch zur Fehlerbehebung bei der Batch-Aufnahme
+description: Diese Dokumentation hilft bei der Beantwortung häufig gestellter Fragen zu Adobe Experience Platform-APIs für die Batch-Aufnahme von Daten.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1416'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
-# Handbuch zur Fehlerbehebung bei der Batch-Erfassung
+# Handbuch zur Fehlerbehebung bei der Batch-Aufnahme
 
-Diese Dokumentation hilft bei der Beantwortung häufig gestellter Fragen zu Adobe Experience Platform [!DNL Batch Data Ingestion] APIs.
+Diese Dokumentation hilft bei der Beantwortung häufig gestellter Fragen zu Adobe Experience Platform [!DNL Batch Data Ingestion]-APIs.
 
 ## Batch-API-Aufrufe
 
@@ -59,7 +59,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ### Warum werden die hochgeladenen Daten nicht im Datensatz angezeigt?
 
-Damit Daten im Datensatz angezeigt werden, muss der Batch als abgeschlossen markiert werden. Alle Dateien, die Sie aufnehmen möchten, müssen hochgeladen werden, bevor der Batch als abgeschlossen markiert wird. Ein Beispiel für die Kennzeichnung eines Batches als abgeschlossen finden Sie unten:
+Damit Daten im Datensatz angezeigt werden, muss der Batch als abgeschlossen markiert worden sein. Alle Dateien, die Sie aufnehmen möchten, müssen hochgeladen werden, bevor der Batch als abgeschlossen markiert wird. Ein Beispiel für die Markierung eines Batches als abgeschlossen finden Sie unten:
 
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
@@ -120,7 +120,7 @@ Bei mehrzeiliger JSON kann ein Objekt mehrere Zeilen belegen, während alle Obje
 ]
 ```
 
-Standardmäßig [!DNL Batch Data Ingestion] verwendet einzeilige JSON.
+Standardmäßig verwendet [!DNL Batch Data Ingestion] ein einzeiliges JSON-Format.
 
 ### Wird CSV-Erfassung unterstützt?
 
@@ -182,7 +182,7 @@ Ein Batch kann in seinem Lebenszyklus die folgenden Status durchlaufen:
 | Status | In Master geschriebene Daten | Beschreibung |
 | ------ | ---------------------- | ----------- |
 | Vorzeitig beendet |  | Der Client hat den Batch im erwarteten Zeitrahmen nicht abgeschlossen. |
-| Abgebrochen |  | Der Client hat explizit über die [!DNL Batch Data Ingestion] APIs, ein Unterbrechungsvorgang für den angegebenen Batch. Sobald sich ein Batch im Status „Geladen“ befindet, kann der Batch nicht mehr abgebrochen werden. |
+| Abgebrochen |  | Der Client hat über die [!DNL Batch Data Ingestion]-APIs explizit einen Abbruchvorgang für den angegebenen Batch aufgerufen. Sobald sich ein Batch im Status „Geladen“ befindet, kann der Batch nicht mehr abgebrochen werden. |
 | Aktiv/Erfolg | x | Der Batch wurde erfolgreich von „Staging“ zu „Master“ höher gestuft und steht nun für den nachgelagerten Gebrauch zur Verfügung. **Hinweis:** „Aktiv“ und „Erfolg“ werden synonym verwendet. |
 | Archiviert |  | Der Batch wurde in Cold Storage archiviert. |
 | Fehlgeschlagen/Fehler |  | Ein Terminal-Status, der entweder auf eine fehlerhafte Konfiguration und/oder auf fehlerhafte Daten zurückzuführen ist. Zusammen mit dem Batch wird ein eine Aktion erfordernder Fehler aufgezeichnet, um es Clients zu erlauben, die Daten zu korrigieren und erneut zu übermitteln. **Hinweis:** „Fehlgeschlagen“ und „Fehler“ werden synonym verwendet. |
@@ -204,7 +204,7 @@ Wenn ein Batch den Status „Wird wiederholt“ aufweist, bedeutet dies, dass di
 
 ### Was bedeutet das, wenn ein Stapel „angehalten“ wurde?
 
-Befindet sich ein Batch in &quot;Angehalten&quot;, bedeutet dies, dass [!DNL Data Ingestion Services] Schwierigkeiten bei der Aufnahme des Batches auftreten und alle weiteren Versuche sind erschöpft.
+Befindet sich ein Batch im Status „Angehalten“, bedeutet dies, dass [!DNL Data Ingestion Services] Schwierigkeiten bei der Batch-Aufnahme hat und alle Wiederholungsversuche ausgeschöpft wurden.
 
 ### Was bedeutet es, wenn der Status eines Batch immer noch „Wird geladen“ lautet?
 
@@ -239,7 +239,7 @@ Nach der Korrektur der Fehler kann der Batch erneut hochgeladen werden.
 
 ### Wie sollten Batches gelöscht werden?
 
-Statt direkt aus zu löschen [!DNL Catalog], sollten Batches mit einer der folgenden Methoden entfernt werden:
+Batches sollten nicht direkt aus dem [!DNL Catalog] gelöscht werden, sondern mit einer der folgenden Methoden:
 
 1. Wenn der Batch in Bearbeitung ist, sollte der Batch abgebrochen werden.
 2. Wenn der Batch erfolgreich zum „Master“ höher gestuft wurde, sollte der Batch zurückgesetzt werden.
@@ -250,11 +250,11 @@ Für Batches mit dem Status „Aktiv“/„Erfolg“ stehen auf Batch­Ebene die
 
 | Metrik | Beschreibung |
 | ------ | ----------- |
-| inputByteSize | Die Gesamtzahl der für [!DNL Data Ingestion Services] zu verarbeiten. |
-| inputRecordSize | Die Gesamtzahl der für [!DNL Data Ingestion Services] zu verarbeiten. |
-| outputByteSize | Die Gesamtzahl der von [!DNL Data Ingestion Services] nach [!DNL Data Lake]. |
-| outputRecordSize | Die Gesamtzahl der von [!DNL Data Ingestion Services] nach [!DNL Data Lake]. |
-| partitionCount | Die Gesamtzahl der Partitionen, die in [!DNL Data Lake]. |
+| inputByteSize | Die Gesamtzahl der für die Verarbeitung durch [!DNL Data Ingestion Services] bereitgestellten Bytes. |
+| inputRecordSize | Die Gesamtzahl der für die Verarbeitung durch [!DNL Data Ingestion Services] bereitgestellten Zeilen. |
+| outputByteSize | Die Gesamtzahl der von [!DNL Data Ingestion Services] an den [!DNL Data Lake] ausgegebenen Bytes. |
+| outputRecordSize | Die Gesamtzahl der von [!DNL Data Ingestion Services] an den [!DNL Data Lake] ausgegebenen Zeilen. |
+| partitionCount | Die Gesamtzahl der in den [!DNL Data Lake] geschriebenen Partitionen. |
 
 ### Warum sind Metriken nicht bei allen Batches verfügbar?
 
