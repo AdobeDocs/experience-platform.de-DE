@@ -5,9 +5,9 @@ breadcrumb-title: Anleitung zum Platform Identity Service
 user-guide-description: Verknüpfen Sie Kundenidentitäten zwischen Geräten und Systemen, um personalisierte digitale Erlebnisse bereitzustellen.
 feature: Identities
 source-git-commit: ed091c95952b731ce1f7567b99a1072a8be2b4a5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '112'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 87%
 
 - [Identity Service – Übersicht](home.md)
 - [Übersicht über Identitäts-Namespaces](namespaces.md)
-- [Limits für Identitätsdaten](guardrails.md)
+- [Leitlinien für Identitätsdaten](guardrails.md)
 - Identity Service-API {#api}
    - [Erste Schritte](api/getting-started.md)
    - [Kennzeichnen eines Felds als Identität](api/label-identities.md)
@@ -29,9 +29,9 @@ ht-degree: 87%
 - Benutzeroberfläche von Identity Service {#ui}
    - [Identitätsdiagramm-Viewer](ui/identity-graph-viewer.md)
    - [Erkennung von gemeinsamen Geräten](ui/shared-device-detection.md)
-   - [Identitätsfelder in der Benutzeroberfläche definieren](ui/label-identities.md)
+   - [Definieren von Identitätsfeldern in der Benutzeroberfläche](ui/label-identities.md)
 - [ECID-Übersicht](ecid.md)
-- [Löschungen im Identity Service](deletion.md)
+- [Löschungen in Identity Service](deletion.md)
 - [Verarbeitung von Datenschutzanfragen](privacy.md)
 - [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
 - [API-Referenz](https://www.adobe.io/experience-platform-apis/references/identity-service)
