@@ -5,9 +5,9 @@ title: Datenerfassung – Übersicht
 description: Erfahren Sie mehr über die verschiedenen Technologien zur Erfassung von Daten zu Kundenerlebnissen in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '514'
-ht-degree: 69%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ Die Datenerfassung wird für die folgenden Client-seitigen Quellen unterstützt:
 * Native Mobile Apps
 * OTT-Programme (Over-the-top)
 
-Die Datenerfassung konzentriert sich auf die Erkennung und Zugänglichkeit erfasster Datensätze und umfasst Folgendes:
+Die Datenerfassung konzentriert sich auf die Auffindbarkeit und Zugänglichkeit aufgenommener Datensätze und umfasst Folgendes:
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html?lang=de)
 * [Tags](../tags/home.md)
@@ -33,11 +33,11 @@ Die Datenerfassung konzentriert sich auf die Erkennung und Zugänglichkeit erfas
 * [Experience-Datenmodell (XDM)](../xdm/home.md)
 * [Adobe Experience Platform Identity Service](../identity-service/home.md)
 
-Dieses Handbuch bietet eine allgemeine Einführung in die Datenerfassung und die Funktionsweise des Versands von Daten an Adobe Experience Cloud-Produkte und Nicht-Adobe-Anwendungen über das Platform Edge Network.
+Dieses Handbuch bietet eine allgemeine Einführung in die Datenerfassung und dazu, wie damit Daten über das Platform Edge Network an Adobe Experience Cloud-Produkte und nicht von Adobe stammende Anwendungen gesendet werden.
 
 ## Tags, Web SDK und Mobile SDK
 
-Das Platform Web SDK und Platform Mobile SDK reduzieren und komprimieren alle Adobe-Produktbibliotheken in einem einzigen Entwicklungs-Kit für Web- bzw. Mobilplattformen. Diese können mit Rohcode oder mithilfe von [tags](../tags/home.md) über die Datenerfassungs-Benutzeroberfläche oder die Adobe Experience Platform-Benutzeroberfläche.
+Das Platform Web SDK und Platform Mobile SDK reduzieren und komprimieren alle Adobe-Produktbibliotheken in einem einzigen Entwicklungs-Kit für Web- bzw. Mobilplattformen. Diese können mit Raw-Code oder mithilfe von [Tags](../tags/home.md) über die Datenerfassungsoberfläche oder die Adobe Experience Platform-Benutzeroberfläche implementiert werden.
 
 Durch Komprimieren dieser Bibliotheken wird die Datenerfassung beschleunigt und Vorgänge werden von Client-seitigen Geräten bis Platform Edge Network zu einem einzigen Stream zusammengefasst.
 
@@ -47,7 +47,7 @@ Durch Komprimieren dieser Bibliotheken wird die Datenerfassung beschleunigt und 
 
 Platform Edge Network ist ein global verteiltes, schnelles und zuverlässiges Netzwerk von Servern, die Daten in einem enormen Umfang empfangen und verarbeiten können. Mit Tags können Sie [Datenströme](../edge/datastreams/overview.md) für Produkte wie Adobe Target, Adobe Audience Manager und Adobe Analytics einrichten. Dadurch können Sie diese Produkte Server-seitig aktivieren, ohne den Client-seitigen Code zu ändern.
 
-Darüber hinaus sind Datenspeicher in verschiedene Platform-Funktionen integriert, mit denen sichergestellt wird, dass vertrauliche Daten, die Sie senden, im Hinblick auf organisatorische Richtlinien und rechtliche Vorschriften angemessen verarbeitet werden. Siehe Abschnitt zu [Umgang mit sensiblen Daten](../edge/datastreams/overview.md#sensitive) in der Dokumentation zu Datastreams für weitere Informationen.
+Darüber hinaus sind Datenströme in verschiedene Platform-Funktionen integriert, mit denen sichergestellt wird, dass sensible Daten, die Sie senden, im Hinblick auf Unternehmensrichtlinien und rechtliche Vorschriften angemessen verarbeitet werden. Weiterführende Informationen finden Sie im Abschnitt zum [Umgang mit sensiblen Daten](../edge/datastreams/overview.md#sensitive) in der Dokumentation zu Datenströmen.
 
 ![Datenströme und Adobe-Lösungen](./images/home/adobe-solutions.png)
 
@@ -63,11 +63,11 @@ Darüber hinaus sind Datenspeicher in verschiedene Platform-Funktionen integrier
 
 >[!NOTE]
 >
->Die Ereignisweiterleitung ist eine gebührenpflichtige Funktion, die nur im Rahmen von Adobe Real-time Customer Data Platform-Verbindungen angeboten wird.
+>Die Ereignisweiterleitung ist eine gebührenpflichtige Funktion, die nur im Rahmen von Adobe Real-time Customer Data Platform Connections angeboten wird.
 
 ## Nächste Schritte
 
-Dieses Dokument bietet einen allgemeinen Überblick darüber, wie die Datenerfassung dazu beiträgt, den Prozess des Sendens Ihrer erfassten Kundenerlebnisdaten an Adobe-Produkte und Drittanbieterziele zu automatisieren.
+Dieses Dokument bietet einen allgemeinen Überblick darüber, wie die Datenerfassung dazu beiträgt, den Prozess des Versands Ihrer erfassten Kundenerlebnisdaten an Adobe-Produkte und Drittanbieterziele zu automatisieren.
 
 ![Datenerfassungs-Framework](./images/home/collection.png)
 
