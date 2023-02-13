@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Quellen; Erfassung; Fehlerbehebung; Fehlerbehebung; Quellen FAQ; FAQ; Quell-Connectoren; Quell-Connector; FAQ für Quell-Connectoren; Fehlerbehebung bei Quell-Connectoren;
+keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Aufnahme;Fehlerbehebung;Fehlerbehebung bei Quellen;Häufig gestellte Fragen zu Quellen;Häufig gestellte Fragen;Quell-Connectoren;Quell-Connector;Häufig gestellte Fragen zu Quell-Connectoren;Fehlerbehebung bei Quell-Connectoren,
 solution: Experience Platform
 title: Fehlerbehebung bei Quellen
-description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Quellen in Adobe Experience Platform.
+description: In diesem Dokument finden Sie Antworten auf häufig gestellte Fragen zu Quellen in Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '748'
-ht-degree: 18%
+ht-degree: 100%
 
 ---
 
 # Handbuch zur Fehlerbehebung bei Quellen
 
-Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Quellen in Adobe Experience Platform. Für Fragen und Fehlerbehebung im Zusammenhang mit anderen [!DNL Platform] Dienste, einschließlich der Dienste, die in allen [!DNL Platform] APIs, siehe [Handbuch zur Fehlerbehebung bei Experience Platformen](../landing/troubleshooting.md).
+In diesem Dokument finden Sie Antworten auf häufig gestellte Fragen zu Quellen in Adobe Experience Platform. Fragen und Antworten zur Fehlerbehebung bei anderen [!DNL Platform]-Diensten, einschließlich solcher, die für alle [!DNL Platform]-APIs gelten, finden Sie im [Handbuch zur Fehlerbehebung in Experience Platform](../landing/troubleshooting.md).
 
 ## Häufig gestellte Fragen
 
@@ -21,19 +21,19 @@ Im Folgenden finden Sie eine Liste von Antworten auf häufig gestellte Fragen zu
 
 ### Muss ich Änderungen an unseren Netzwerksicherheitseinstellungen vornehmen, um Quellen zu aktivieren?
 
-Möglicherweise müssen Sie bestimmte IP-Adressen in Zulassungslisten eintragen, um Quellen zu aktivieren. Weitere Informationen finden Sie in der Dokumentation zu Ihrem jeweiligen Quell-Connector.
+Möglicherweise müssen Sie bestimmte IP-Adressen auf die Zulassungsliste setzen, um Quellen zu aktivieren. Weitere Informationen finden Sie in der Dokumentation zu Ihrem jeweiligen Quell-Connector.
 
-### Welche Authentifizierungstypen werden von Quellen unterstützt?
+### Welche Authentifizierungsarten werden von Quellen unterstützt?
 
-Quellen können mithilfe von Verbindungszeichenfolgen, Benutzernamen und Kennwörtern oder Zugriffstoken und -schlüssel authentifiziert werden. Spezifische Details zu unterstützten Authentifizierungstypen finden Sie in der Dokumentation zum angegebenen Quell-Connector.
+Quellen können mithilfe von Verbindungszeichenfolgen, Benutzernamen und Kennwörtern oder Zugriffstoken und -schlüsseln authentifiziert werden. Spezifische Details zu unterstützten Authentifizierungsarten finden Sie in der Dokumentation des jeweiligen Quell-Connectors.
 
-### Warum schlagen alle meine aktuellen Flüsse fehl?
+### Warum schlagen alle meine aktuellen Durchläufe fehl?
 
-Wenn Sie feststellen, dass alle Ihre letzten Durchsatzausführungen fehlschlagen, können Ihre Anmeldedaten geändert oder abgelaufen sein. Um dieses Problem zu beheben, versuchen Sie, Ihre Verbindung mit den neuesten Anmeldedaten zu aktualisieren.
+Wenn Sie feststellen, dass alle Ihre letzten Durchläufe fehlgeschlagen sind, haben sich Ihre Anmeldedaten entweder geändert oder sind abgelaufen. Um dieses Problem zu beheben, versuchen Sie, Ihre Verbindung mit den neuesten Anmeldedaten zu aktualisieren.
 
 ### Welche Dateitypen werden unterstützt?
 
-Derzeit werden als Dateitypen getrennte Dateien, JSON und Parquet unterstützt.
+Derzeit werden die folgenden Dateitypen unterstützt: Dateien mit Trennzeichen, JSON und Parquet.
 
 ### Welche Einschränkungen gelten für Dateinamen und Dateigrößen?
 
@@ -53,26 +53,26 @@ Im Folgenden finden Sie eine Liste von Einschränkungen, die Sie für Dateien in
 
 Zu den unterstützten Datentypen gehören Ganzzahlen, Zeichenfolgen, Boolesche Werte, Datetime-Objekte, Arrays und Objekte.
 
-### Welche Datums- und Uhrzeitformate werden unterstützt?
+### Welche Datums- und Zeitformate werden unterstützt?
 
-Quellen unterstützen eine Vielzahl von Datenzeitformaten bei der Erfassung von Daten. Weitere Informationen zu unterstützten Datumszeitformaten finden Sie im Abschnitt Datumsangaben im Abschnitt [Handbuch zur Handhabung von Datenformaten](../data-prep/data-handling.md#dates) in der Datenvorbereitung-Dokumentation.
+Quellen unterstützen eine Vielzahl von Datums- und Zeitformaten bei der Datenaufnahme. Weitere Informationen über die unterstützten Datums- und Zeitformate finden Sie im Abschnitt „Datumsangaben“ im [Handbuch zur Handhabung von Datenformaten](../data-prep/data-handling.md#dates) in der Datenvorbereitungs-Dokumentation.
 
 ### Wie formatiere ich Arrays in CSV-, JSON- und Parquet-Dateien?
 
-JSON- und Parquet-Dateien unterstützen nativ Arrays. Bei flachen Strukturen wie CSVs werden Arrays nicht unterstützt. Zeichenfolgen mit mehreren Werten können jedoch mithilfe von Datenvorbereitungsfunktionen wie Explodieren und Verbinden in ein Array aufgeteilt werden. Weitere Informationen zu diesen Datenvorbereitungsfunktionen finden Sie im [Funktionsleitfaden für Datenvorbereitung](../data-prep/functions.md#string)
+JSON- und Parquet-Dateien unterstützen nativ Arrays. Bei flachen Strukturen, wie beispielsweise CSVs werden Arrays nicht unterstützt. Zeichenfolgen mit mehreren Werten können jedoch mithilfe von Datenvorbereitungsfunktionen wie Explodieren und Verbinden in ein Array aufgeteilt werden. Weitere Informationen zu diesen Datenvorbereitungsfunktionen finden Sie im [Handbuch der Datenvorbereitungsfunktionen](../data-prep/functions.md#string)
 
-### Welche Quellen unterstützen die partielle Erfassung?
+### Welche Quellen unterstützen die partielle Aufnahme?
 
-Alle Batch-Erfassungsquellen unterstützen die partielle Erfassung. Streaming-Erfassungsquellen unterstützen jedoch keine partielle Erfassung.
+Alle Batch-Aufnahme-Quellen unterstützen eine partielle Aufnahme. Streaming-Aufnahme-Quellen unterstützen jedoch keine partielle Aufnahme.
 
-### Wann sollte ich die partielle Erfassung anwenden?
+### Wann sollte ich die partielle Aufnahme verwenden?
 
-Wenn Sie dies tun, sollte die partielle Erfassung verwendet werden **not** haben Einschränkungen, z. B. die Aufnahme der gesamten Datei in Platform. Alternativ sollte eine partielle Erfassung verwendet werden, wenn Sie keine Daten erfassen möchten, die Fehler enthalten können.
+Die partielle Aufnahme sollte verwendet werden, wenn Sie **keine** Einschränkungen haben, z.B. dass die gesamte Datei in Platform aufgenommen werden muss. Als Alternative bietet sich eine partielle Aufnahme an, sofern Sie bereit sind, Daten aufzunehmen, die Fehler enthalten können.
 
-### Was ist der typische Fehlerschwellenwert bei der partiellen Erfassung?
+### Was ist der typische Fehlerschwellenwert bei der partiellen Aufnahme?
 
-Es gibt keinen &quot;typischen Fehlerschwellenwert&quot;für die partielle Erfassung. Stattdessen kann dieser Wert von Anwendungsfall zu Anwendungsfall variieren. Standardmäßig ist der Fehlerschwellenwert auf 5 % festgelegt.
+Es gibt keinen „typischen Fehlerschwellenwert“ bei der partiellen Aufnahme. Vielmehr kann dieser Wert von einem Anwendungsfall zum anderen variieren. Standardmäßig ist der Fehlerschwellenwert auf 5 % festgelegt.
 
-### Wie lange dauert es, bis ein Flusslaufstatus nach der Erstellung eines neuen Datenflusses aktualisiert wird?
+### Wie lange dauert es, bis der Status eines Flussdurchgangs nach der Erstellung eines neuen Datenflusses aktualisiert wird?
 
-Flussläufe werden nicht sofort generiert und können etwa zwei bis drei Minuten dauern, bis sie nach der Zuweisung aktualisiert werden. `startTime`. Beim Überprüfen des Status eines Flusslaufs werden unmittelbar nach der Erstellung eines neuen Datenflusses keine Informationen zum Ausführungsablauf zurückgegeben. `lastRunDetails` wie es noch nicht geschehen ist. Es wird empfohlen, den Datenfluss einige Minuten zu generieren, bevor der Status der Flussausführung überprüft wird.
+Flussdurchgänge werden nicht sofort generiert. Es kann etwa zwei bis drei Minuten dauern, bis sie nach der zugewiesenen `startTime` aktualisiert werden. Beim Überprüfen des Status eines Flussdurchgangs werden unmittelbar nach der Erstellung eines neuen Datenflusses keine `lastRunDetails`-Informationen zum Flussdurchgang zurückgegeben, weil dieser noch nicht stattgefunden hat. Es wird empfohlen, der Generierung des Datenflusses einige Minuten Zeit zu geben, bevor der Status des Flussdurchgangs überprüft wird.
