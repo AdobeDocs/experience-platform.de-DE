@@ -5,8 +5,8 @@ title: Verbinden von Power BI mit dem Abfrage-Service
 description: In diesem Dokument werden die Schritte zum Verbinden von Power BI mit Abfrage-Service von Adobe Experience Platform beschrieben.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
-workflow-type: ht
-source-wordcount: '0'
+workflow-type: tm+mt
+source-wordcount: '1067'
 ht-degree: 100%
 
 ---

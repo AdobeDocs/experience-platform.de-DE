@@ -7,7 +7,7 @@ exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '4383'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -41,13 +41,13 @@ Eine potenzielle Ursache ist die Funktion zur automatischen Vervollständigung. 
 
 ### Kann ich [!DNL Postman] für die Abfrage-Service-API verwenden?
 
-+++ Antwort
++++Antwort
 Ja, Sie können alle Adobe-API-Dienste mithilfe von [!DNL Postman] (eine kostenlose Drittanbieteranwendung) visualisieren und mit ihnen interagieren. Sehen Sie sich das [[!DNL Postman] Setup-Handbuch](https://video.tv.adobe.com/v/28832) an, um schrittweise Anleitungen zum Einrichten eines Projekts in der Adobe Developer Console und zum Abrufen aller erforderlichen Anmeldeinformationen für die Verwendung mit [!DNL Postman] zu erhalten. In der offiziellen Dokumentation finden Sie [Anleitungen zum Starten, Ausführen und Freigeben von  [!DNL Postman] -Sammlungen](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Gibt es eine Begrenzung für die maximale Anzahl von Zeilen, die von einer Abfrage über die Benutzeroberfläche zurückgegeben werden?
 
-+++ Antwort
++++Antwort
 Ja, der Abfrage-Service wendet intern eine Beschränkung von 50.000 Zeilen an, es sei denn, extern wird eine explizite Begrenzung angegeben. Weitere Informationen finden Sie in den Leitlinien zur [interaktiven Ausführung von Abfragen](./best-practices/writing-queries.md#interactive-query-execution).
 +++
 
@@ -76,7 +76,7 @@ SELECT * FROM customers LIMIT 0;
 
 ### Wie kann ich verhindern, dass meine Abfragen nach 10 Minuten ablaufen?
 
-+++ Antwort
++++Antwort
 Es werden eine oder mehrere der folgenden Lösungen empfohlen, wenn bei Abfragen eine Zeitüberschreitung auftritt.
 
 - [Konvertieren Sie die Abfrage in eine CTAS-Abfrage](./sql/syntax.md#create-table-as-select) und planen Sie die Ausführung. Eine Ausführung kann entweder [über die Benutzeroberfläche](./ui/user-guide.md#scheduled-queries) oder die [API](./api/scheduled-queries.md#create) geplant werden.
@@ -94,7 +94,7 @@ Nr. Der Abfrage-Service verfügt über eine Funktion zur automatischen Skalierun
 
 ### Kann ich reservierte Keywords als Spaltennamen verwenden?
 
-&#39;+++Antwort
++++Antwort
 Es gibt bestimmte reservierte Keywords, die nicht als Spaltenname verwendet werden können, z. B.: `ORDER`, `GROUP BY`, `WHERE` und `DISTINCT`. Wenn Sie diese Keywords verwenden möchten, müssen Sie diese Spalten mit Escape-Zeichen versehen.
 +++
 
@@ -360,7 +360,7 @@ LIMIT 100;
 
 ### Wie ändere ich die Zeitzone von und zu einem UTC-Zeitstempel?
 
-+++ Antwort
++++Antwort
 Adobe Experience Platform behält Daten im UTC-Zeitstempelformat (Coordinated Universal Time) bei. Ein Beispiel für das UTC-Format ist `2021-12-22T19:52:05Z`
 
 Der Abfrage-Service unterstützt integrierte SQL-Funktionen zum Konvertieren eines bestimmten Zeitstempels in das und aus dem UTC-Format. Sowohl die Methode `to_utc_timestamp()` als auch `from_utc_timestamp()` benötigt zwei Parameter: Zeitstempel und Zeitzone.
@@ -579,9 +579,10 @@ Ja, eine über Port 80 hergestellte Verbindung verwendet immer noch SSL. Sie kö
 Ja, die attributbasierte Zugriffssteuerung wird erzwungen, wenn sie konfiguriert ist. Weitere Informationen finden Sie in der [Übersicht über die attributbasierte Zugriffssteuerung](../access-control/abac/overview.md).
 +++
 
-### Unterstützt Query Service den Befehl &quot;INSERT OVERWRITE INTO&quot;?
+### Unterstützt Query Service den Befehl „INSERT OVERWRITE INTO“?
 
-++ + Antwort Nein, Query Service unterstützt den Befehl &quot;INSERT OVERWRITE INTO&quot; nicht.
++++Antwort 
+Nein, Query Service unterstützt den Befehl „INSERT OVERWRITE INTO“ nicht.
 +++
 
 ## Exportieren von Daten {#exporting-data}

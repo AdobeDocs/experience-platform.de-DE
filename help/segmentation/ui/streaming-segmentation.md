@@ -7,7 +7,7 @@ exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1495'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -78,11 +78,11 @@ Darunter befindet sich ein Liniendiagramm, das die Anzahl der neuen Zielgruppen 
 >
 >Weitere Informationen zu diesen Status finden Sie in der Statustabelle in der [Segmentierungsübersicht](./overview.md#browse).
 
-![Die Karte Profile im Zeitverlauf wird hervorgehoben und zeigt ein Liniendiagramm der Profile im Zeitverlauf an.](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
+![Die Karte für Profile im Zeitverlauf wird hervorgehoben und zeigt ein Liniendiagramm der Profile im Zeitverlauf an.](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
-Weitere Informationen zur letzten Segmentauswertung finden Sie, indem Sie die Informationsblase neben **[!UICONTROL Gesamtzahl der Qualifizierten]** anklicken.
+Weitere Informationen zur letzten Segmentauswertung erhalten Sie, indem Sie die Informationsblase neben **[!UICONTROL Gesamtzahl der Qualifizierten]** anklicken.
 
-![Die Informationsblase für die insgesamt qualifizierten Profile wurde ausgewählt. Dadurch werden Informationen zur letzten Segmentbewertungszeit angezeigt.](../images/ui/streaming-segmentation/info-bubble.png)
+![Die Informationsblase für die insgesamt qualifizierten Profile wurde ausgewählt. Dadurch werden Informationen zur letzten Segmentauswertungszeit angezeigt.](../images/ui/streaming-segmentation/info-bubble.png)
 
 Weitere Informationen zu Segmentdefinitionen finden Sie im vorherigen Abschnitt unter [Details zur Segmentdefinition](#segment-details).
 
