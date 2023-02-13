@@ -5,9 +5,9 @@ title: Segmentierungs-Service – Übersicht
 description: Erfahren Sie mehr über den Segmentierungs-Service von Adobe Experience Platform und die Rolle, die dieser im Platform-Ökosystem spielt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1635'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -43,9 +43,9 @@ Informationen zum Erstellen von Segmentdefinitionen mithilfe der API finden Sie 
 >
 >Bei einer Erweiterung eines Schemas müssen bei allen künftigen Uploads auch die neu hinzugefügten Felder entsprechend aktualisiert werden. Weitere Informationen zum Anpassen von [!DNL Experience Data Model] (XDM) finden Sie im [Tutorial zum Schema-Editor](../xdm/tutorials/create-schema-ui.md).
 >
->Wenn außerdem ein Erlebnisereignis-Ablaufwert für den Datensatz aktiviert ist, kann sich dies auf die Mitgliedschaft des erstellten Segments auswirken. Lesen Sie das Handbuch unter [Ablauf von Erlebnisereignissen](../profile/event-expirations.md) Weitere Informationen dazu, wie sich diese Funktion auf die Segmentierung auswirken kann.
+>Wenn für den Datensatz ein Wert der Gültigkeitsdauer von Erlebnisereignissen aktiviert ist, könnte sich dies auf die Zugehörigkeit des erstellten Segments auswirken. Weiterführende Informationen dazu, wie sich diese Funktion auf die Segmentierung auswirken kann, finden Sie im Handbuch zur [Gültigkeitsdauer von Erlebnisereignissen](../profile/event-expirations.md).
 
-## Evaluieren von Segmenten {#evaluate-segments}
+## Bewerten von Segmenten {#evaluate-segments}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
