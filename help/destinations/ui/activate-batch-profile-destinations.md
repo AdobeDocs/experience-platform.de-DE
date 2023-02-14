@@ -4,10 +4,10 @@ title: Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die Zielgruppendaten aktivieren, die Sie in Adobe Experience Platform haben, indem Sie Segmente an Ziele senden, die auf Batch-Profilen basieren.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 9bde403338187409892d76de68805535de03d59f
+source-git-commit: 7d680567cee8b47532bb66434e2f0582cde68532
 workflow-type: tm+mt
-source-wordcount: '3537'
-ht-degree: 94%
+source-wordcount: '3595'
+ht-degree: 92%
 
 ---
 
@@ -466,6 +466,11 @@ Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihr
 ![Auswahlzusammenfassung im Überprüfungsschritt.](/help/destinations/assets/ui/activate-batch-profile-destinations/review.png)
 
 ### Auswertung der Einverständnisrichtlinie {#consent-policy-evaluation}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_viewApplicableConsentPolicies"
+>title="Gültige Zustimmungsrichtlinien anzeigen"
+>abstract="Wenn Ihr Unternehmen **Adobe Gesundheitsschild** oder **Adobe Privacy &amp; Security Shield** auswählen **[!UICONTROL Gültige Zustimmungsrichtlinien anzeigen]** , um zu sehen, welche Zustimmungsrichtlinien angewendet werden und wie viele Profile infolge dieser Aktivierung in die Aktivierung einbezogen werden. Dieses Steuerelement ist deaktiviert, wenn Ihr Unternehmen keinen Zugriff auf die oben genannten SKUs hat."
 
 Wenn Ihr Unternehmen **Adobe Gesundheitsschild** oder **Adobe Privacy &amp; Security Shield** auswählen **[!UICONTROL Gültige Zustimmungsrichtlinien anzeigen]** , um zu sehen, welche Zustimmungsrichtlinien angewendet werden und wie viele Profile infolge dieser Aktivierung in die Aktivierung einbezogen werden. Informationen [Bewertung der Einwilligungsrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) für weitere Informationen.
 
