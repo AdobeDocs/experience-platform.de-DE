@@ -3,16 +3,16 @@ keywords: Experience Platform; Identität; Identitätsdienst; Fehlerbehebung; Li
 title: Limits für Identity Service
 description: Dieses Dokument enthält Informationen zu Verwendung und Quotenbegrenzungen für Identity Service-Daten, die Sie bei der Optimierung Ihrer Verwendung des Identitätsdiagramms unterstützen.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: b5368382b42f478f6019c5ee925e56ec91ea6930
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 15%
 
 ---
 
-# Leitlinien für [!DNL Identity Service]Daten
+# Leitplanken für [!DNL Identity Service]Daten
 
-Dieses Dokument enthält Informationen zu Verwendung und Quotenbegrenzungen für [!DNL Identity Service] Daten, die Ihnen bei der Optimierung Ihrer Verwendung des Identitätsdiagramms helfen. Bei der Überprüfung der folgenden Leitlinien wird davon ausgegangen, dass Sie die Daten korrekt modelliert haben. Wenden Sie sich bei Fragen zum Modellieren Ihrer Daten an Ihren Kundenbetreuer.
+Dieses Dokument enthält Informationen zu Verwendung und Quotenbegrenzungen für [!DNL Identity Service] Daten, die Ihnen bei der Optimierung Ihrer Verwendung des Identitätsdiagramms helfen. Bei der Überprüfung der folgenden Leitplanken wird davon ausgegangen, dass Sie die Daten korrekt modelliert haben. Wenden Sie sich bei Fragen zum Modellieren Ihrer Daten an Ihren Kundenbetreuer.
 
 ## Erste Schritte
 
@@ -29,7 +29,7 @@ Die folgenden Tabellen enthalten Anleitungen zu Limits für statische Limits sow
 
 In der folgenden Tabelle sind statische Beschränkungen für Identitätsdaten aufgeführt.
 
-| Beschränkung | Limit | Anmerkungen |
+| Leitplanke | Limit | Anmerkungen |
 | --- | --- | --- |
 | Anzahl der Identitäten in einem Diagramm | 150 | Die Begrenzung wird auf Sandbox-Ebene angewendet. Das Identitätsdiagramm wird nach Erreichen des Grenzwerts nicht mehr aktualisiert. **Hinweis**: Die maximale Anzahl von Identitäten in einem Identitätsdiagramm **für ein einzelnes zusammengeführtes Profil** as 50. Zusammengeführte Profile, die auf Identitätsdiagrammen mit mehr als 50 Identitäten basieren, werden aus dem Echtzeit-Kundenprofil ausgeschlossen. Weitere Informationen finden Sie im Handbuch unter [Limits für Profildaten](../profile/guardrails.md). |
 | Anzahl der Identitäten in einem XDM-Datensatz | 20 | Die erforderliche Mindestanzahl von XDM-Datensätzen beträgt zwei. |
@@ -48,7 +48,7 @@ In der folgenden Tabelle sind die vorhandenen Regeln aufgeführt, die Sie befolg
 
 ### Erfassung von Identitäts-Namespaces
 
-Ab dem 31. Januar 2023 blockiert Identity Service die Erfassung von Adobe Analytics ID (AAID) für neue Kunden. Diese Identität wird normalerweise über die [Adobe Analytics-Quelle](../sources/connectors/adobe-applications/analytics.md) und [Adobe Audience Manager-Quelle](../sources//connectors/adobe-applications/audience-manager.md) und ist redundant, da die ECID denselben Webbrowser darstellt. Wenden Sie sich an Ihren Kundenbetreuer, wenn Sie diese Standardkonfiguration ändern möchten.
+Ab dem 31. März 2023 blockiert Identity Service die Erfassung von Adobe Analytics ID (AAID) für neue Kunden. Diese Identität wird normalerweise über die [Adobe Analytics-Quelle](../sources/connectors/adobe-applications/analytics.md) und [Adobe Audience Manager-Quelle](../sources//connectors/adobe-applications/audience-manager.md) und ist redundant, da die ECID denselben Webbrowser darstellt. Wenden Sie sich an Ihren Kundenbetreuer, wenn Sie diese Standardkonfiguration ändern möchten.
 
 ## Nächste Schritte
 
