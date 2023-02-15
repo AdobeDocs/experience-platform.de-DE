@@ -1,10 +1,11 @@
 ---
 title: Konfigurieren eines Datenstroms
 description: Verbinden Sie Ihre Client-seitige Experience Platform SDK-Integration mit Adobe-Produkten und Zielen von Drittanbietern.
-source-git-commit: 82703fae72e8637bb7d5e08a6699d9e1466afd8b
-workflow-type: ht
+exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
+source-git-commit: aa271fed242d03ecac6025721c2566a3b550b6bb
+workflow-type: tm+mt
 source-wordcount: '1658'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -38,11 +39,11 @@ Wenn Sie diesen Datenstrom zur Verwendung in Experience Platform konfigurieren u
 
 Wählen Sie **[!UICONTROL Erweiterte Optionen]** aus, um zusätzliche Steuerelemente zum Konfigurieren des Datenstroms anzuzeigen.
 
-![Erweiterte Konfigurationsoptionen](../assets/datastreams/configure/advanced-options.png)
+![Erweiterte Konfigurationsoptionen](../assets/datastreams/configure/advanced-options.png) {#advanced-options}
 
 | Einstellung | Beschreibung |
 | --- | --- |
-| [!UICONTROL Geografie – Standort] | Hiermit legen Sie fest, ob anhand der IP-Adresse des Benutzers GPS-Suchen stattfinden. Mit der Standardeinstellung **[!UICONTROL Keine]** werden alle GPS-Suchen deaktiviert, während die Einstellung **[!UICONTROL Ort]** GPS-Koordinaten auf zwei Dezimalstellen genau bereitstellt. |
+| [!UICONTROL Geografie – Standort] | Bestimmt, ob Geo-Suchen basierend auf der IP-Adresse des Benutzers stattfinden. Die Standardeinstellung **[!UICONTROL Keines]** deaktiviert alle Geo-Suchen, während die **[!UICONTROL Ort]** -Einstellung stellt GPS-Koordinaten auf zwei Dezimalstellen bereit. |
 | [!UICONTROL First-Party-ID-Cookie] | Wenn diese Einstellung aktiviert ist, weist sie das Edge-Netzwerk an, bei der Suche nach einer [First-Party-Geräte-ID](../identity/first-party-device-ids.md) ein bestimmtes Cookie zu verwenden, anstatt nach diesem Wert in der Identity Map zu suchen.<br><br>Wenn Sie diese Einstellung aktivieren, müssen Sie den Namen des Cookies angeben, in dem die ID gespeichert ist. |
 | [!UICONTROL Synchronisierung der Third-Party-ID] | ID-Synchronisationen können in Container zusammengefasst werden, damit verschiedene ID-Synchronisationen zu unterschiedlichen Zeiten ausgeführt werden können. Wenn diese Einstellung aktiviert ist, können Sie festlegen, welcher Container mit ID-Synchronisationen für diesen Datenstrom ausgeführt werden soll. |
 | [!UICONTROL Zugriffstyp] | Legt den Authentifizierungstyp fest, den das Edge Network für den Datenstrom akzeptiert. <ul><li>**[!UICONTROL Gemischte Authentifizierung]**: Wenn diese Option aktiviert ist, akzeptiert das Edge Network sowohl authentifizierte als auch nicht authentifizierte Anfragen. Wählen Sie diese Option, wenn Sie das Web SDK oder das [Mobile SDK](https://aep-sdks.gitbook.io/docs/) zusammen mit der [Server-API](../../server-api/overview.md) verwenden möchten. </li><li>**[!UICONTROL Nur authentifiziert]**: Wenn diese Option aktiviert ist, akzeptiert das Edge Network nur authentifizierte Anfragen. Wählen Sie diese Option aus, wenn Sie beabsichtigen, nur die Server-API zu verwenden und verhindern möchten, dass nicht authentifizierte Anfragen vom Edge Network verarbeitet werden.</li></ul> |
