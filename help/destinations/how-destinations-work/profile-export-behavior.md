@@ -1,9 +1,9 @@
 ---
 title: Profilexportverhalten
 description: Erfahren Sie, wie sich das Verhalten beim Profilexport zwischen den verschiedenen Integrationspattern unterscheidet, die in Experience Platform-Zielen unterstützt werden.
-source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
+source-git-commit: 5d404d723ea0b7cc72c5188dcff1f59a1874cfe2
 workflow-type: tm+mt
-source-wordcount: '2944'
+source-wordcount: '2979'
 ht-degree: 24%
 
 ---
@@ -169,11 +169,11 @@ Basierend auf den Informationen im obigen Abschnitt kann das Verhalten beim Prof
 
 **Vollständige Dateiexporte**
 
-Die gesamte Population des Segments wird täglich exportiert.
+Die vollständige aktive Population des Segments wird täglich exportiert.
 
 | Was einen Zielexport bestimmt | Was ist in der exportierten Datei enthalten? |
 |---------|----------|
-| <ul><li>Der in der Benutzeroberfläche oder API festgelegte Exportzeitplan und die Benutzeraktion (Auswahl von [Datei jetzt exportieren](/help/destinations/ui/export-file-now.md) in der Benutzeroberfläche oder mithilfe der [Ad-hoc-Aktivierungs-API](/help/destinations/api/ad-hoc-activation-api.md)) den Start eines Zielexports bestimmen.</li><li>Alle Änderungen an der Segmentzugehörigkeit eines Profils, unabhängig davon, ob es sich für das Segment qualifiziert oder von ihm abweicht, qualifizieren ein Profil für die Aufnahme in inkrementelle Exporte.</li></ul> | In vollständigen Dateiexporten wird die gesamte Profilpopulation eines Segments, basierend auf der neuesten Segmentbewertung, in jeden Dateiexport einbezogen. Die neuesten Werte für jedes für den Export ausgewählte XDM-Attribut werden ebenfalls als Spalten in jeder Datei enthalten sein. |
+| <ul><li>Der in der Benutzeroberfläche oder API festgelegte Exportzeitplan und die Benutzeraktion (Auswahl von [Datei jetzt exportieren](/help/destinations/ui/export-file-now.md) in der Benutzeroberfläche oder mithilfe der [Ad-hoc-Aktivierungs-API](/help/destinations/api/ad-hoc-activation-api.md)) den Start eines Zielexports bestimmen.</li><li>Alle Änderungen an der Segmentzugehörigkeit eines Profils, unabhängig davon, ob es sich für das Segment qualifiziert oder von ihm abweicht, qualifizieren ein Profil für die Aufnahme in inkrementelle Exporte.</li></ul> | Bei vollständigen Dateiexporten wird die gesamte aktive Profilpopulation eines Segments, basierend auf der neuesten Segmentbewertung, in jeden Dateiexport einbezogen. Die neuesten Werte für jedes für den Export ausgewählte XDM-Attribut werden ebenfalls als Spalten in jeder Datei enthalten sein. Beachten Sie, dass Profile mit dem Status &quot;Ausgeschlossen&quot;nicht in den Dateiexport einbezogen werden. |
 
 {style=&quot;table-layout:fixed&quot;}
 
@@ -183,7 +183,7 @@ Im ersten Dateiexport nach der Einrichtung des Aktivierungs-Workflows wird die g
 
 | Was einen Zielexport bestimmt | Was ist in der exportierten Datei enthalten? |
 |---------|----------|
-| <ul><li>Der in der Benutzeroberfläche oder API festgelegte Exportzeitplan bestimmt den Beginn eines Zielexports.</li><li>Alle Änderungen an der Segmentzugehörigkeit eines Profils, unabhängig davon, ob es sich für das Segment qualifiziert oder von ihm abweicht, qualifizieren ein Profil für die Aufnahme in inkrementelle Exporte. Änderungen an Attributen oder in Identitätszuordnungen für ein Profil *nicht* ein Profil für inkrementelle Exporte qualifizieren.</li></ul> | Die Profile, für die die Segmentzugehörigkeit geändert wurde, sowie die neuesten Informationen zu jedem für den Export ausgewählten XDM-Attribut. |
+| <ul><li>Der in der Benutzeroberfläche oder API festgelegte Exportzeitplan bestimmt den Beginn eines Zielexports.</li><li>Alle Änderungen an der Segmentzugehörigkeit eines Profils, unabhängig davon, ob es sich für das Segment qualifiziert oder von ihm abweicht, qualifizieren ein Profil für die Aufnahme in inkrementelle Exporte. Änderungen an Attributen oder in Identitätszuordnungen für ein Profil *nicht* ein Profil für inkrementelle Exporte qualifizieren.</li></ul> | <p>Die Profile, für die die Segmentzugehörigkeit geändert wurde, sowie die neuesten Informationen zu jedem für den Export ausgewählten XDM-Attribut.</p><p>Profile mit dem Status &quot;Exit&quot;werden in Zielexporte einbezogen, wenn die Variable `segmentMembership.status` Das XDM-Feld wird im Zuordnungsschritt ausgewählt.</p> |
 
 {style=&quot;table-layout:fixed&quot;}
 
