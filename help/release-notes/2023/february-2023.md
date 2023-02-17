@@ -1,21 +1,16 @@
 ---
-title: Adobe Experience Platform - Versionshinweise Januar 2023
-description: Die Versionshinweise für Adobe Experience Platform vom Januar 2023.
-source-git-commit: 78b21c0eee2a1b29ee2d2bd647fec1ce8f535705
+title: Adobe Experience Platform - Versionshinweise - Februar 2023
+description: Die Versionshinweise für Adobe Experience Platform vom Februar 2023.
+source-git-commit: b14ef8783a39fc063183e385f195af473acbc33d
 workflow-type: tm+mt
-source-wordcount: '36'
-ht-degree: 47%
+source-wordcount: '30'
+ht-degree: 53%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
 
-**Versionsdatum: 25. Januar 2023**
+**Veröffentlichungsdatum: 22. Februar 2023**
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
-
-- [Assurance](#assurance)
-
-## Künstliche Intelligenz und maschinelles Lernen {#assurance}
-
 
