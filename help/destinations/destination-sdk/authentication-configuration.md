@@ -2,10 +2,10 @@
 description: Verwenden Sie die unterstützten Authentifizierungskonfigurationen im Adobe Experience Platform Destination SDK, um Benutzer zu authentifizieren und Daten für Ihren Zielendpunkt zu aktivieren.
 title: Authentifizierungskonfiguration
 exl-id: 33eaab24-f867-4744-b424-4ba71727373c
-source-git-commit: 9b4c7da5aa02ae27608c2841b1d825445ac3015e
+source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 91%
+source-wordcount: '498'
+ht-degree: 83%
 
 ---
 
@@ -18,8 +18,9 @@ Die von Ihnen gewählte Authentifizierungskonfiguration bestimmt, wie sich Exper
 Adobe Experience Platform Destination SDK unterstützt mehrere Authentifizierungstypen:
 
 * [Bearer-Authentifizierung](#bearer)
+* [Einfache Authentifizierung](#basic)
 * [[!DNL Amazon S3]-Authentifizierung](#s3)
-* [[!DNL Azure Blob] Speicherung](#blob)
+* [[!DNL Azure Blob] Speicher](#blob)
 * [[!DNL Azure Data Lake Storage]](#adls)
 * [[!DNL Google Cloud Storage]](#gcs)
 * [SFTP mit SSH-Schlüssel](#sftp-ssh)
@@ -34,6 +35,22 @@ In den folgenden Abschnitten finden Sie Details zur Authentifizierungskonfigurat
 
 * [Authentifizierungskonfigurationen für Streaming-Ziele](destination-configuration.md#customer-authentication-configurations)
 * [Authentifizierungskonfigurationen für dateibasierte Ziele](file-based-destination-configuration.md#customer-authentication-configurations)
+
+## Einfache Authentifizierung {#basic}
+
+Die grundlegende Authentifizierung wird für Streaming-Ziele in Experience Platform unterstützt.
+
+Wenn Sie den grundlegenden Authentifizierungstyp konfigurieren, müssen Benutzer einen Benutzernamen und ein Kennwort eingeben, um eine Verbindung zu Ihrem Ziel herzustellen.
+
+Um eine einfache Authentifizierung für Ihr Ziel einzurichten, konfigurieren Sie die `customerAuthenticationConfigurations` über die `/destinations` Endpunkt wie unten gezeigt:
+
+```json
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"BASIC"
+   }
+]
+```
 
 ## Bearer-Authentifizierung {#bearer}
 

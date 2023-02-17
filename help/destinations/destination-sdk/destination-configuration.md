@@ -2,10 +2,10 @@
 description: Mit dieser Konfiguration können Sie grundlegende Informationen wie Zielname, Kategorie, Beschreibung, Logo und mehr angeben. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
 title: Konfigurationsoptionen für Streaming-Ziele für das Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: f0f2ed2059cbbb017dbbbdc0d1f215abee17f514
+source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
 workflow-type: tm+mt
-source-wordcount: '1894'
-ht-degree: 89%
+source-wordcount: '1907'
+ht-degree: 88%
 
 ---
 
@@ -152,7 +152,7 @@ Benutzer wählen **[!UICONTROL Mit Ziel verbinden]** aus, um den OAuth 2-Authent
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
 | `customerAuthenticationConfigurations` | Zeichenfolge | Gibt die Konfiguration an, die zum Authentifizieren von Experience Platform-Kunden auf Ihrem Server verwendet wird. Siehe `authType` unten für gültige Werte. |
-| `authType` | Zeichenfolge | Zulässige Werte für Streaming-Ziele sind:<ul><li>`BEARER`. Wenn Ihr Ziel die Bearer-Authentifizierung unterstützt, legen Sie `"authType":"Bearer"` und `"authenticationRule":"CUSTOMER_AUTHENTICATION"` im [Zielbereitstellungs-Abschnitt](./destination-configuration.md) fest.</li><li>`OAUTH2`. Wenn Ihr Ziel die OAuth 2-Authentifizierung unterstützt, legen Sie `"authType":"OAUTH2"` fest und fügen Sie, wie auf der Seite zur [OAuth 2-Authentifizierung mit dem Destination SDK](./oauth2-authentication.md) beschrieben, die erforderlichen Felder für OAuth 2 hinzu. Wählen Sie außerdem `"authenticationRule":"CUSTOMER_AUTHENTICATION"` im [Zielbereitstellungs-Abschnitt](./destination-configuration.md).</li> |
+| `authType` | Zeichenfolge | Zulässige Werte für Streaming-Ziele sind:<ul><li>`BASIC`. Wenn Ihr Ziel die grundlegende Authentifizierung unterstützt, legen Sie `"authType":"Basic"` und  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` im [Zielversandabschnitt](./destination-configuration.md).</li><li>`BEARER`. Wenn Ihr Ziel die Bearer-Authentifizierung unterstützt, legen Sie `"authType":"Bearer"` und `"authenticationRule":"CUSTOMER_AUTHENTICATION"` im [Zielbereitstellungs-Abschnitt](./destination-configuration.md) fest.</li><li>`OAUTH2`. Wenn Ihr Ziel die OAuth 2-Authentifizierung unterstützt, legen Sie `"authType":"OAUTH2"` fest und fügen Sie, wie auf der Seite zur [OAuth 2-Authentifizierung mit dem Destination SDK](./oauth2-authentication.md) beschrieben, die erforderlichen Felder für OAuth 2 hinzu. Wählen Sie außerdem `"authenticationRule":"CUSTOMER_AUTHENTICATION"` im [Zielbereitstellungs-Abschnitt](./destination-configuration.md).</li> |
 
 {style=&quot;table-layout:auto&quot;}
 
