@@ -3,10 +3,10 @@ title: Verwandte Konten in Real-Time CDP B2B Edition
 type: Documentation
 description: Eine Übersicht und weitere Informationen über die zugehörige Kontofunktion in Experience Platform Real-Time CDP B2B.
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5d1488b26391d8ac758a2968194a6d070ad5b561
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 25%
+source-wordcount: '433'
+ht-degree: 23%
 
 ---
 
@@ -31,6 +31,16 @@ mit den entsprechenden Konten, [!DNL Real-Time CDP B2B] zeigt Ihnen jetzt eine L
 ![Bildschirm mit verwandten Konten in der Experience Platform-Benutzeroberfläche.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
 Verwenden Sie diese Funktion, um verwandte Kontoprofile für ein Kontoprofil in der Experience Platform-Benutzeroberfläche anzuzeigen und dann die zugehörigen Konten in Ihre Segmentdefinitionen aufzunehmen, um Ihre Reichweite zu erweitern oder umfassendere Kriterien in Ihren  anzuwenden.
+
+## Aktivieren des zugehörigen Kontodienstes {#enable}
+
+Um den Dienst zu aktivieren, wählen Sie **[!UICONTROL Profile]** in der Seitenleiste gefolgt von **[!UICONTROL Einstellungen]**.
+
+![Experience Platform-Benutzeroberfläche zur Hervorhebung von Profilen und Einstellungen.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
+
+Umschalten neben [!UICONTROL Zugehörige Konten aktivieren] , um den Dienst zu aktivieren, und wählen Sie dann **[!UICONTROL Speichern]**.
+
+![Bildschirm &quot;Kontoeinstellungen&quot;, der die Umschaltung und das Speichern markiert.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
 
 ## Funktionsweise {#how-it-works}
 
