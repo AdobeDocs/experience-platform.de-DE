@@ -2,10 +2,10 @@
 title: Erstellen eines Quell-Connectors für Google PubSub in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie einen Google PubSub-Quell-Connector in der Platform-Benutzeroberfläche erstellen.
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: f56cdc2dc67f2d4820d80d8e5bdec8306d852891
+source-git-commit: 2b72d384e8edd91c662364dfac31ce4edff79172
 workflow-type: tm+mt
-source-wordcount: '612'
-ht-degree: 79%
+source-wordcount: '658'
+ht-degree: 73%
 
 ---
 
@@ -31,6 +31,7 @@ Um eine Verbindung von [!DNL PubSub] mit Platform herzustellen, müssen Sie eine
 | Projekt-ID | Die zur Authentifizierung von [!DNL PubSub] erforderliche Projekt-ID. |
 | Anmeldeinformationen | Die für die Authentifizierung von [!DNL PubSub] erforderliche Kennung der Anmeldeinformationen oder des privaten Schlüssels. |
 | Themen-ID | Die ID für die [!DNL PubSub] -Ressource, die einen Feed von Nachrichten darstellt. Sie müssen eine Themen-ID angeben, wenn Sie Zugriff auf einen bestimmten Datenstrom in Ihrer [!DNL Google PubSub] -Quelle. |
+| Abonnement-ID | Die ID Ihrer [!DNL PubSub] Abonnement. In [!DNL PubSub], können Sie über Abonnements Nachrichten empfangen, indem Sie sich für das Thema anmelden, in dem Nachrichten veröffentlicht wurden. |
 
 Weitere Informationen zu diesen Werten finden Sie im folgenden Dokument [PubSub-Authentifizierung](https://cloud.google.com/pubsub/docs/authentication). Wenn Sie die auf dem Service-Account basierende Authentifizierung verwenden, lesen Sie das folgende [PubSub-Handbuch](https://cloud.google.com/docs/authentication/production#create_service_account), in dem die Schritte zum Generieren Ihrer Anmeldeinformationen beschrieben werden.
 
@@ -48,7 +49,7 @@ Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirms
 
 Wählen Sie unter der Kategorie [!UICONTROL Cloud-Speicherplatz] die Option **[!UICONTROL Google PubSub]** und dann die Option **[!UICONTROL Daten hinzufügen]** aus.
 
-![Katalog](../../../../images/tutorials/create/google-pubsub/catalog.png)
+![Der Quellkatalog in der Experience Platform-Benutzeroberfläche.](../../../../images/tutorials/create/google-pubsub/catalog.png)
 
 Die Seite **[!UICONTROL Verbinden mit Google PubSub]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
@@ -56,7 +57,7 @@ Die Seite **[!UICONTROL Verbinden mit Google PubSub]** wird angezeigt. Auf diese
 
 Um ein vorhandenes Konto zu verwenden, wählen Sie das [!DNL PubSub]-Konto, mit dem Sie einen neuen Datenfluss erstellen möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**, um fortzufahren.
 
-![vorhanden](../../../../images/tutorials/create/google-pubsub/existing.png)
+![Die vorhandene Kontoauswahl im Ursprungs-Workflow.](../../../../images/tutorials/create/google-pubsub/existing.png)
 
 ### Neues Konto
 
@@ -68,7 +69,7 @@ Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** aus
 
 Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
 
-![neu](../../../../images/tutorials/create/google-pubsub/new.png)
+![Die neue Kontoschnittstelle im Ursprungs-Workflow.](../../../../images/tutorials/create/google-pubsub/new.png)
 
 ## Nächste Schritte
 
