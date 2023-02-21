@@ -1,17 +1,19 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Marketo-Quell-Connector; Namespaces; Schemas; b2b; B2B
-solution: Experience Platform
 title: B2B-Namespaces und -Schemata
 description: Dieses Dokument bietet einen Überblick über benutzerdefinierte Namespaces, die beim Erstellen eines B2B-Quell-Connectors erforderlich sind.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fa3f937862dd8b6078f73b2a172b3fb5db652dc7
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1727'
 ht-degree: 14%
 
 ---
 
 # B2B-Namespaces und -Schemata
+
+>[!NOTE]
+>
+>Sie können Vorlagen in der Adobe Experience Platform-Benutzeroberfläche verwenden, um die Asset-Erstellung für B2B- und B2C-Daten zu beschleunigen. Weitere Informationen finden Sie im Handbuch unter [Verwenden von Vorlagen in der Platform-Benutzeroberfläche](../../../tutorials/ui/templates.md).
 
 Dieses Dokument enthält Informationen über die zugrunde liegende Einrichtung für Namespaces und Schemas, die mit B2B-Quellen verwendet werden sollen. In diesem Dokument finden Sie außerdem Informationen zum Einrichten Ihres Automatisierungsdienstprogramms für Postman, das zum Generieren von B2B-Namespaces und -Schemas erforderlich ist.
 

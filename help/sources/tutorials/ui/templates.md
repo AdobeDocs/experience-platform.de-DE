@@ -1,21 +1,28 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;
 description: Adobe Experience Platform stellt vorkonfigurierte Vorlagen bereit, mit denen Sie den Datenerfassungsprozess beschleunigen können. Zu Vorlagen gehören automatisch generierte Assets wie Schemas, Datensätze, Zuordnungsregeln, Identitäten, Identitäts-Namespaces und Datenflüsse, die Sie beim Einbringen von Daten aus einer Quelle in Experience Platform verwenden können.
-title: (Alpha) Quellen-Datenfluss mithilfe von Vorlagen in der Benutzeroberfläche erstellen
+title: (Beta) Erstellen eines Datenflusses für Quellen mithilfe von Vorlagen in der Benutzeroberfläche
+badge1: "Beta"
 hide: true
 hidefromtoc: true
-source-git-commit: d6d8281d1be1468b0c2b7474b80be96949dc7d4c
-workflow-type: ht
-source-wordcount: '1184'
-ht-degree: 100%
+exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
+source-git-commit: c4cb3783cbbab6f9bf25ffaa5b27a200c555b181
+workflow-type: tm+mt
+source-wordcount: '1337'
+ht-degree: 76%
 
 ---
 
-# (Alpha) Quellen-Datenfluss mithilfe von Vorlagen in der Benutzeroberfläche erstellen
+# (Beta) Erstellen eines Datenflusses für Quellen mithilfe von Vorlagen in der Benutzeroberfläche
 
 >[!IMPORTANT]
 >
->Vorlagen befinden sich in Alpha und werden derzeit nur von der [[!DNL Marketo Engage] Quelle](../../connectors/adobe-applications/marketo/marketo.md) unterstützt. Dokumentation und Funktionalität können sich ändern.
+>Vorlagen befinden sich in der Beta-Phase und werden von den folgenden Quellen unterstützt:
+>
+>* [[!DNL Marketo Engage]](../../connectors/adobe-applications/marketo/marketo.md)
+>* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
+>* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
+>
+>Dokumentation und Funktionalität können sich ändern.
 
 Adobe Experience Platform stellt vorkonfigurierte Vorlagen bereit, mit denen Sie den Datenerfassungsprozess beschleunigen können. Zu Vorlagen gehören automatisch generierte Assets wie Schemas, Datensätze, Identitäten, Zuordnungsregeln, Identitäts-Namespaces und Datenflüsse, die Sie beim Einbringen von Daten aus einer Quelle in Experience Platform verwenden können.
 
@@ -25,7 +32,7 @@ Mit Vorlagen können Sie:
 * Fehler minimieren, die während der manuellen Datenerfassung auftreten können.
 * automatisch generierte Assets zu jedem Zeitpunkt entsprechend Ihren Anwendungsfällen aktualisieren.
 
-Das folgende Tutorial enthält Schritte zur Verwendung von Vorlagen in der Platform-Benutzeroberfläche mithilfe der [[!DNL Marketo Engage] Quelle](../../connectors/adobe-applications/marketo/marketo.md).
+Das folgende Tutorial enthält Schritte zur Verwendung von Vorlagen in der Platform-Benutzeroberfläche.
 
 ## Erste Schritte
 
@@ -43,11 +50,11 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 >abstract="Wählen Sie den entsprechenden Geschäftstyp für Ihren Anwendungsfall aus. Ihr Zugriff variiert je nach Ihrem Real-time Customer Data Platform-Abonnementkonto."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=de" text="Real-Time CDP – Übersicht"
 
-Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der [!UICONTROL Katalog]-Bildschirm zeigt eine Vielzahl von Quellen an, die zum Erstellen eines Kontos verwendet werden können.
+Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** über die linke Navigationsleiste auf [!UICONTROL Quellen] Arbeitsbereich und sehen Sie sich einen in Experience Platform verfügbaren Quellkatalog an.
 
-Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchleiste finden.
+Verwenden Sie die *[!UICONTROL Kategorien]* Menü zum Filtern von Quellen nach Kategorie. Geben Sie alternativ einen Quellnamen in die Suchleiste ein, um eine bestimmte Quelle aus dem Katalog zu finden.
 
-Wählen Sie unter der Kategorie [!UICONTROL Adobe-Programme] das Programm **[!UICONTROL Marketo Engage]** und dann **[!UICONTROL Daten hinzufügen]** aus.
+Navigieren Sie zu [!UICONTROL Adobe Apps] -Kategorie, die angezeigt werden soll [!DNL Marketo Engage] Quellkarte und wählen Sie dann [!UICONTROL Daten hinzufügen] um zu beginnen.
 
 ![Katalog des Quellarbeitsbereichs mit hervorgehobener Marketo Engage-Quelle.](../../images/tutorials/templates/catalog.png)
 
@@ -64,21 +71,25 @@ Um automatisch generierte Assets zu verwenden, wählen Sie **[!UICONTROL Vorlage
 
 Der Authentifizierungsschritt wird angezeigt und Sie werden aufgefordert, entweder ein neues Konto zu erstellen oder ein vorhandenes Konto zu verwenden.
 
-#### Vorhandenes Konto
+>[!BEGINTABS]
+
+>[!TAB Vorhandenes Konto verwenden]
 
 Um ein vorhandenes Konto zu verwenden, wählen Sie [!UICONTROL Vorhandenes Konto] und dann das Konto, das Sie verwenden möchten, aus der angezeigten Liste aus.
 
 ![Die Auswahlseite für ein vorhandenes Konto mit einer Liste vorhandener Konten, auf die Sie zugreifen können.](../../images/tutorials/templates/existing-account.png)
 
-#### Neues Konto
+>[!TAB Neues Konto erstellen]
 
 Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** aus und geben Sie dann Ihre Details zur Quellverbindung und Anmeldedaten für die Kontoauthentifizierung an. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie dann einige Zeit, bis die neue Verbindung hergestellt ist.
 
 ![Die Authentifizierungsseite für ein neues Konto mit Details zur Quellverbindung und Anmeldeinformationen zur Kontoauthentifizierung.](../../images/tutorials/templates/new-account.png)
 
+>[!ENDTABS]
+
 ### Vorlagen auswählen
 
-Nachdem Sie sich authentifiziert und Ihr Konto ausgewählt haben, wird eine Liste mit Vorlagen angezeigt. Wählen Sie das Vorschausymbol neben einem Vorlagennamen aus, um eine Vorschau der Beispieldaten aus der Vorlage anzuzeigen.
+Je nach ausgewähltem Geschäftstyp wird eine Liste mit Vorlagen angezeigt. Vorschausymbol auswählen ![Vorschausymbol](../../images/tutorials/templates/preview-icon.png) neben einem Vorlagennamen, um eine Vorschau der Beispieldaten aus der Vorlage anzuzeigen.
 
 ![Liste von Vorlagen mit hervorgehobenem Vorschausymbol.](../../images/tutorials/templates/templates.png)
 
@@ -95,6 +106,22 @@ Wenn Sie ein oder mehrere Elemente aus der Liste der verfügbaren Vorlagen ausw�
 >Bereits verwendete Vorlagen werden von der Auswahl ausgeschlossen.
 
 ![Die Liste der Vorlagen mit der ausgewählten Vorlage „Rolle von Opportunity-Kontakt“.](../../images/tutorials/templates/select-template.png)
+
+### Legen Sie einen Zeitplan fest
+
+Die [!DNL Microsoft Dynamics] und [!DNL Salesforce] -Quellen unterstützen beide die Planung von Datenflüssen.
+
+Verwenden Sie die Planungsschnittstelle, um einen Aufnahmezeitplan für Ihre Datenflüsse zu konfigurieren. Legen Sie die Aufnahmefrequenz auf **Einmal** , um eine einmalige Erfassung zu erstellen.
+
+![Die Planungsschnittstelle für Dynamics- und Salesforce-Vorlagen.](../../images/tutorials/templates/schedule.png)
+
+Alternativ können Sie die Aufnahmefrequenz auf **Minute**, **Stunde**, **Tag** oder **Woche**. Wenn Sie Ihren Datenfluss für mehrere Erfassungsvorgänge planen, müssen Sie ein Intervall festlegen, um einen Zeitrahmen zwischen jeder Aufnahme festzulegen. Eine Erfassungsfrequenz, die beispielsweise auf **Stunde** und ein Intervall, das auf **15** bedeutet, dass Ihr Datenfluss Daten alle **15 Stunden**.
+
+Während dieses Schritts können Sie auch **Aufstockung** und definieren eine Spalte für die inkrementelle Datenaufnahme. Die Aufstockung wird verwendet, um historische Daten zu erfassen, während die Spalte, die Sie für die inkrementelle Erfassung definieren, es ermöglicht, neue Daten von vorhandenen Daten zu unterscheiden.
+
+Nachdem Sie die Konfiguration Ihres Aufnahmezeitplans abgeschlossen haben, wählen Sie **[!UICONTROL Beenden]**.
+
+![Die Planungsschnittstelle für Dynamics- und Salesforce-Vorlagen mit aktivierter Aufstockung.](../../images/tutorials/templates/backfill.png)
 
 ### Überprüfen von Assets {#review-assets}
 
