@@ -3,7 +3,7 @@ title: Verwenden des letzten XDM-Attributs für die Qualifikationszeit in den ne
 description: Erfahren Sie, wie Sie das XDM-Attribut für die letzte Qualifikationszeit in den neuen Beta-Cloud-Speicher-Zielen verwenden
 hidefromtoc: y
 hide: y
-source-git-commit: 7dd525d8c71cdfb9fb2393181faa3270ad1dc4cc
+source-git-commit: 03031dcaad82932f92e76177adf3b55447c3c153
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 8%
@@ -24,7 +24,7 @@ So verwenden Sie die letzte Qualifikationszeit (`lastQualificationTime`) XDM-Att
 
 ## Verwendung des XDM-Attributs für die letzte Qualifikationszeit {#how-to-use}
 
-Wenn Sie einen der sechs neuen Beta-Connectoren für Cloud-Speicher verwenden, können Sie das XDM-Attribut für die letzte Qualifikationszeit im [Zuordnungsschritt](//help/destinations/ui/activate-batch-profile-destinations.md#mapping) des Aktivierungs-Workflows, um eine Spalte in der exportierten Datei mit dem neuesten Zeitstempel zu erstellen, von der aus erkannt wird, wann sich ein Profil für ein Segment qualifiziert hat. Dies kann Ihnen bei bestimmten Mess- oder Analytics-Anwendungsfällen helfen und Ihnen eine bessere Vorstellung davon vermitteln, wann bestimmte Zielgruppen aktiviert werden.
+Wenn Sie einen der sechs neuen Beta-Connectoren für Cloud-Speicher verwenden, können Sie das XDM-Attribut für die letzte Qualifikationszeit im [Zuordnungsschritt](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) des Aktivierungs-Workflows, um eine Spalte in der exportierten Datei mit dem neuesten Zeitstempel zu erstellen, von der aus erkannt wird, wann sich ein Profil für ein Segment qualifiziert hat. Dies kann Ihnen bei bestimmten Mess- oder Analytics-Anwendungsfällen helfen und Ihnen eine bessere Vorstellung davon vermitteln, wann bestimmte Zielgruppen aktiviert werden.
 
 Beachten Sie, dass `lastQualificationTime` in Ihren Dateiexporten verwenden, müssen Sie derzeit den Wert manuell einfügen `xdm: segmentMembership.ups.seg_id.lastQualificationTime` in das Quellfeld ein, wie unten dargestellt. Sie können das Zielfeld auch in `lastQualificationTime` oder einen anderen Wert, der dieser Spalte einen Namen geben soll. Beachten Sie, dass die Syntax der `xdm: segmentMembership.ups.seg_id.lastQualificationTime` kann sich in Zukunft ändern.
 
