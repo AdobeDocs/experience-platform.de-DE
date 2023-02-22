@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Marketo Engage-Connector
 description: Dieses Dokument bietet einen Überblick über den Marketo Engage-Quell-Connector, einschließlich Informationen zur Authentifizierung, Zuordnung und Datenlatenz.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: d8cd69524d984fdb828447287f3f4a4fe5913d61
 workflow-type: tm+mt
-source-wordcount: '631'
-ht-degree: 13%
+source-wordcount: '658'
+ht-degree: 12%
 
 ---
 
@@ -77,8 +77,9 @@ In der folgenden Tabelle wird die erwartete Latenz für die [!DNL Marketo] Daten
 
 Die folgende Dokumentation enthält weitere Informationen zum Erstellen eines [!DNL Marketo] Quellverbindung:
 
-* Informationen zum Verbinden Ihrer [!DNL Marketo] Daten an Platform weiterleiten, siehe Tutorial zu [Erstellen eines Quell-Connectors für Marketo über die Benutzeroberfläche](../../../tutorials/ui/create/adobe-applications/marketo.md).
-* Informationen zur zugrunde liegenden Einrichtung für die B2B-Namespaces und -Schemata, die mit [!DNL Marketo]finden Sie in der Dokumentation für [B2B-Namespaces und -Schemata](./marketo-namespaces.md).
-* Informationen zum Auffinden Ihrer [!DNL Marketo] Munchkin-ID und Generieren Ihrer Anmeldeinformationen finden Sie im Abschnitt [[!DNL Marketo] Authentifizierungshandbuch](./marketo-auth.md).
-* Informationen zu den spezifischen Zuordnungsregeln für [!DNL Marketo] Datensätze finden Sie in der Dokumentation unter [[!DNL Marketo] Feldzuordnungen](../mapping/marketo.md).
-* Allgemeine Informationen [!DNL Real-Time Customer Data Platform B2B Edition] und deren Funktionen finden Sie in der Dokumentation unter [[!DNL Real-Time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).
+* Informationen zum Verbinden Ihrer [!DNL Marketo] Daten an Platform übermitteln, lesen Sie das Tutorial unter [Erstellen einer [!DNL Marketo] Quellverbindung in der Benutzeroberfläche](../../../tutorials/ui/create/adobe-applications/marketo.md).
+   * Informationen zum Einrichten von Schemata und zum Erfassen benutzerdefinierter Aktivitätsdaten finden Sie im Tutorial zu [Erstellen einer Quellverbindung und eines Datenflusses für [!DNL Marketo] benutzerdefinierte Aktivitätsdaten](../../../tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
+* Informationen zur zugrunde liegenden Einrichtung für die B2B-Namespaces und -Schemata, die mit [!DNL Marketo], lesen Sie die Dokumentation für [B2B-Namespaces und -Schemata](./marketo-namespaces.md).
+* Informationen zum Auffinden Ihrer [!DNL Marketo] Munchkin-ID und Generieren Ihrer Anmeldeinformationen lesen Sie den Abschnitt [[!DNL Marketo] Authentifizierungshandbuch](./marketo-auth.md).
+* Informationen zu den spezifischen Zuordnungsregeln für [!DNL Marketo] Datensätze, lesen Sie die Dokumentation unter [[!DNL Marketo] Feldzuordnungen](../mapping/marketo.md).
+* Allgemeine Informationen [!DNL Real-Time Customer Data Platform B2B Edition] und deren Funktionen lesen Sie die Dokumentation unter [[!DNL Real-Time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).
