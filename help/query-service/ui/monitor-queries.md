@@ -2,10 +2,10 @@
 title: Überwachung geplanter Abfragen
 description: Erfahren Sie, wie Sie Abfragen über die Benutzeroberfläche des Abfrage-Service überwachen.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 26765c7f8daadabe325d2d519543c0fcd92c7717
+source-git-commit: 5e6fa112ccca7405c3dfd0653d3d6cad8b9ed2af
 workflow-type: tm+mt
-source-wordcount: '1230'
-ht-degree: 73%
+source-wordcount: '1204'
+ht-degree: 74%
 
 ---
 
@@ -118,11 +118,7 @@ Sie können die Abfrage-SQL aus dieser Ansicht in die Zwischenablage kopieren. W
 
 ![Der Bildschirm mit den Ausführungsdetails mit hervorgehobenem Symbol „SQL-Kopie“.](../images/ui/monitor-queries/copy-sql.png)
 
-### (Eingeschränkte Version) Details für Abfragen mit anonymen Bausteinen ausführen {#anonymous-block-queries}
-
->[!IMPORTANT]
->
->Die Funktion zur Abfragenüberwachung, die Ausführungsdetails für anonyme Blockabfragen anzeigt, ist derzeit in einer eingeschränkten Version verfügbar und steht nicht allen Kunden zur Verfügung.
+### Ausführliche Informationen zu Abfragen mit anonymen Bausteinen {#anonymous-block-queries}
 
 Abfragen, die anonyme Bausteine verwenden, um ihre SQL-Anweisungen zu enthalten, werden in ihre einzelnen Abfragen unterteilt. Auf diese Weise können Sie die Ausführungsdetails für jeden Abfrageblock einzeln überprüfen.
 

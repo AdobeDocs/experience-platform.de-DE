@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Abfrage-Editors
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 90829713e85e930e4fd6a32b0dbd38aeb837b84e
 workflow-type: tm+mt
-source-wordcount: '1715'
-ht-degree: 87%
+source-wordcount: '1696'
+ht-degree: 88%
 
 ---
 
@@ -63,11 +63,7 @@ Um Ihre Entwicklungszeit zu minimieren, sollten Sie Ihre Abfragen mit Begrenzung
 
 ![Die Eingabe im Abfrage-Editor mit einem Dropdown-Menü mit Tabellennamenvorschlägen.](../images/ui/query-editor/tables-auto.png)
 
-### (Eingeschränkte Version) Konfigurationsumschalter für die automatische Vervollständigung der Benutzeroberfläche {#auto-complete}
-
->[!IMPORTANT]
->
->Der Konfigurationsumschalter für die automatische Vervollständigung der Benutzeroberfläche befindet sich derzeit in einer eingeschränkten Version und steht nicht allen Kunden zur Verfügung.
+### Umschalter für die Konfiguration der Benutzeroberfläche für die automatische Vervollständigung {#auto-complete}
 
 [!DNL Query Editor] schlägt automatisch potenzielle SQL-Schlüsselwörter zusammen mit Tabellen- oder Spaltendetails für die Abfrage vor, während Sie sie schreiben. Die Funktion zur automatischen Vervollständigung ist standardmäßig aktiviert und kann jederzeit deaktiviert oder aktiviert werden, indem Sie den Umschalter [!UICONTROL Automatische Syntaxvervollständigung] oben rechts im Abfrage-Editor auswählen.
 
