@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2023.
-source-git-commit: 38c9325e2eb5d396472ea55ca082083040d6e590
+source-git-commit: ff276de35ca2aaeec168f4c4386d849f3352ad57
 workflow-type: tm+mt
-source-wordcount: '817'
-ht-degree: 35%
+source-wordcount: '987'
+ht-degree: 36%
 
 ---
 
@@ -14,10 +14,31 @@ ht-degree: 35%
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
+- [[!DNL Destinations]](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Query Service](#query-service)
 - [Verwandte Konten in Real-Time CDP B2B Edition](#related-accounts)
 - [Quellen](#sources)
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+
+**Neue oder aktualisierte Funktionen** {#destinations-new-updated-features}
+
+| Funktion | Beschreibung |
+| ----------- | ----------- |
+| [Verbesserung der Einwilligungsrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) für Integrationen mit [dateibasierte (Batch-)Ziele](/help/destinations/destination-types.md#file-based) | <p> Wenn Profile nicht mehr für eine Zustimmungsrichtlinie qualifiziert sind, kommuniziert Experience Platform jetzt proaktiv ihren Richtlinienausstieg an dateibasierte Ziele. Dies folgt dem [-Version im Februar 2023](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) derselben Funktionalität für Streaming-Ziele. </p> <p> <b>Hinweis</b>: Diese Funktion steht nur Kunden von **[!UICONTROL Datenschutz und Sicherheitsschild]** und der **[!UICONTROL Gesundheitsschild]**. </p> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Neue oder aktualisierte Dokumentation** {#destinations-new-updated-documentation}
+
+| Dokumentation | Beschreibung |
+| ----------- | ----------- |
+| Funktionsweise der Dokumentation zu Zielen | <p>Wir haben drei neue Erklärungsartikel zur Funktionsweise von Zielen veröffentlicht, die auf allgemeinen Fragen von Benutzern basieren:</p> <p><ul><li>[Konfigurierbare und allgemeine Exporteinstellungen in Zielen](/help/destinations/how-destinations-work/destinations-configurations.md)</li><li>[Profil-Exportverhalten für verschiedene Zieltypen](/help/destinations/how-destinations-work/profile-export-behavior.md)</li><li>[Identitätsverarbeitung im Workflow für die Zielaktivierung](/help/destinations/how-destinations-work/identity-handling.md)</li></p> |
+
+Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
 ## Experience-Datenmodell (XDM) {#xdm}
 
