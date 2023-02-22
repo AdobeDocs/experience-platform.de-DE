@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie Ihren Experience-Datenmodell (XDM)-Schemas ei
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
+source-git-commit: 07faf4dd749219a955df720a8c740427113a5de2
 workflow-type: tm+mt
 source-wordcount: '1208'
 ht-degree: 0%
@@ -27,7 +27,7 @@ In diesem Handbuch werden die verschiedenen Methoden zum Hinzufügen einzelner F
 
 In diesem Tutorial wird davon ausgegangen, dass Sie mit dem [Zusammensetzung von XDM-Schemas](../schema/composition.md) und wie Sie den Schema-Editor in der Platform-Benutzeroberfläche verwenden. Um fortzufahren, sollten Sie den Prozess von [Erstellen eines neuen Schemas](./resources/schemas.md) und Zuweisen zu einer Standardklasse, bevor Sie mit diesem Handbuch fortfahren.
 
-## Felder, die zu Standardfeldgruppen hinzugefügt wurden, entfernen
+## Felder, die zu Standardfeldgruppen hinzugefügt wurden, entfernen {#remove-field-group}
 
 Nachdem Sie einem Schema eine Standardfeldgruppe hinzugefügt haben, können Sie alle nicht benötigten Standardfelder entfernen.
 
@@ -91,7 +91,7 @@ Geben Sie von hier aus einen Anzeigenamen und einen Datentyp für das Feld ein. 
 >
 >Wenn Sie eine vorhandene benutzerdefinierte Feldergruppe auswählen, übernehmen alle anderen Schemas, die diese Feldergruppe verwenden, auch das neu hinzugefügte Feld, nachdem Sie Ihre Änderungen gespeichert haben. Wählen Sie daher nur dann eine existierende Feldergruppe aus, wenn Sie diese Art von Vermehrung wünschen. Andernfalls sollten Sie stattdessen eine neue benutzerdefinierte Feldergruppe erstellen.
 
-Wenn Sie fertig sind, wählen Sie **[!UICONTROL Anwenden]**.
+Wenn Sie fertig sind, wählen Sie **[!UICONTROL Anwenden]** aus.
 
 ![Feld anwenden](../images/ui/field-based-workflows/apply-field.png)
 

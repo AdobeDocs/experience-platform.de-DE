@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descriptors-API-Endpunkt
 description: Mit dem Endpunkt /descriptors in der Schema Registry-API können Sie XDM-Deskriptoren in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 44%
@@ -417,7 +417,7 @@ Referenzidentitätsdeskriptoren stellen einen Referenzkontext für die primäre 
 
 #### Veralteter Felddeskriptor
 
-Sie können [Verwerfen eines Felds in einer benutzerdefinierten XDM-Ressource](../tutorials/field-deprecation.md#custom) durch Hinzufügen eines `meta:status` -Attribut auf `deprecated` auf das entsprechende Feld. Wenn Sie Felder, die von standardmäßigen XDM-Ressourcen in Ihren Schemas bereitgestellt werden, veraltet sein möchten, können Sie dem betreffenden Schema jedoch einen veralteten Felddeskriptor zuweisen, um denselben Effekt zu erzielen. Verwenden der [korrekt `Accept` header](../tutorials/field-deprecation.md#verify-deprecation)können Sie dann anzeigen, welche Standardfelder für ein Schema nicht mehr unterstützt werden, wenn Sie es in der API nachschlagen.
+Sie können [Verwerfen eines Felds in einer benutzerdefinierten XDM-Ressource](../tutorials/field-deprecation-api.md#custom) durch Hinzufügen eines `meta:status` -Attribut auf `deprecated` auf das entsprechende Feld. Wenn Sie Felder, die von standardmäßigen XDM-Ressourcen in Ihren Schemas bereitgestellt werden, veraltet sein möchten, können Sie dem betreffenden Schema jedoch einen veralteten Felddeskriptor zuweisen, um denselben Effekt zu erzielen. Verwenden der [korrekt `Accept` header](../tutorials/field-deprecation-api.md#verify-deprecation)können Sie dann anzeigen, welche Standardfelder für ein Schema nicht mehr unterstützt werden, wenn Sie es in der API nachschlagen.
 
 ```json
 {
