@@ -3,9 +3,9 @@ keywords: Experience Platform; Startseite; beliebte Themen; Streaming-Verbindung
 title: Erstellen einer HTTP-API-Streaming-Verbindung mithilfe der Flow Service-API
 description: In diesem Tutorial erfahren Sie, wie Sie mithilfe der Flow Service-API eine Streaming-Verbindung mithilfe der HTTP-API-Quelle für Roh- und XDM-Daten erstellen
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: '1496'
 ht-degree: 40%
 
 ---
@@ -208,7 +208,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `auth.params.sourceId` | Eine zusätzliche Kennung, die beim Erstellen einer authentifizierten Basisverbindung verwendet werden kann. Dieser Parameter ist optional und verwendet denselben Wert wie die `name` -Attribut, wenn es nicht angegeben wird. |
-| `auth.params.authenticationRequired` | Der Parameter, der angibt, dass die erstellte Streaming-Verbindung hergestellt wurde |
+| `auth.params.authenticationRequired` | Dieser Parameter gibt an, ob für die Streaming-Verbindung Authentifizierung erforderlich ist. Wenn `authenticationRequired` auf `true` muss die Authentifizierung für die Streaming-Verbindung bereitgestellt werden. Wenn `authenticationRequired` auf `false` ist keine Authentifizierung erforderlich. |
 
 **Antwort**
 
