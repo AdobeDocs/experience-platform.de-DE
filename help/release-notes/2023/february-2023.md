@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform - Versionshinweise - Februar 2023
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2023.
-source-git-commit: 2084583823acb5d5d16ea5bfdbfff98a7c5ac490
+source-git-commit: 66ca8d3972045cffe4a1614f638546f4e7838680
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '1138'
 ht-degree: 36%
 
 ---
@@ -45,10 +45,31 @@ Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Ziel
 XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definitionen (Schemas) für Daten bereitstellt, die in Adobe Experience Platform importiert werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
 
 **Aktualisierte Funktionen**
-&#x200B; | Funktion | Beschreibung | | — | — | | Einstellung von Feldern über die Benutzeroberfläche | Nach der Erfassung von Daten können Sie Felder aus Ihren Schemata jetzt nicht mehr unterstützen. Die Einstellung von XDM-Feldern ermöglicht es Ihnen, Felder aus der UI-Ansicht zu entfernen und sie gleichzeitig für die Verwendung beizubehalten. Bei Bedarf können veraltete Felder erneut angezeigt werden. Alle Segmente, Abfragen oder nachgelagerten Lösungen, die auf die Felder verweisen, werden wie gewohnt ausgeführt. |
+&#x200B; | Funktion | Beschreibung | | — | — | | Einstellung von Feldern über die Benutzeroberfläche | Jetzt können Sie [veraltete Felder aus Ihren Schemata, nachdem Daten erfasst wurden](../../xdm/tutorials/field-deprecation-ui.md). Die Einstellung von XDM-Feldern ermöglicht es Ihnen, Felder aus der UI-Ansicht zu entfernen und sie gleichzeitig für die Verwendung beizubehalten. Bei Bedarf können veraltete Felder erneut angezeigt werden. Alle Segmente, Abfragen oder nachgelagerten Lösungen, die auf die Felder verweisen, werden wie gewohnt ausgeführt. |
 
-{style=&quot;table-layout:auto&quot;} &#x200B; Weitere Informationen zu XDM in Platform finden Sie im Abschnitt [XDM-System - Übersicht](../../xdm/home.md). &#x200B;
-<!-- Field deprecation: https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation.html -->
+{style=&quot;table-layout:auto&quot;}
+
+**Neue XDM-Komponenten**
+
+| Typ der Komponente | Name | Beschreibung |
+| --- | --- | --- |
+| Klasse | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1669/files) | Die Klasse &quot;XDM Individual Prospect Profile&quot;führt von Partnern bereitgestellte IDs ein. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Aktualisierte XDM-Komponenten**
+
+| Typ der Komponente | Name | Beschreibung |
+| --- | --- | --- |
+| Feldergruppe | [!UICONTROL Begrenzung der Häufigkeit] | Die [!UICONTROL Begrenzung der Häufigkeit] Feldergruppe wurde [aktualisiert, um Wiederholungs- und benutzerdefinierte Ereignisse zu unterstützen](https://github.com/adobe/xdm/pull/1641/files). |
+| Datentyp | [!UICONTROL Webverweiser] | Eigenschaften von Webverweisen [aktualisiert um `xdm:linkName` und `xdm:linkRegion`](https://github.com/adobe/xdm/pull/1666/files). Dies sind jeweils der Name und die Region des HTML-Elements, das auf der vorherigen Seite ausgewählt wurde. |
+| Feldergruppe | [!UICONTROL Adobe CJM ExperienceEvent – Details zur Nachrichteninteraktion] | [Die [!UICONTROL Tracker-URL] wurde hinzugefügt](https://github.com/adobe/xdm/pull/1665/files) der [!UICONTROL Adobe CJM ExperienceEvent]. Dieser Tracker stellt die vom Benutzer ausgewählte URL bereit. |
+| Feldergruppe | [!UICONTROL Adobe CJM ExperienceEvent - Details zur Nachrichteninteraktion] | [Leer `meta:enum` Eigenschaft wurde entfernt](https://github.com/adobe/xdm/pull/1668/files) aus der URL [!UICONTROL Tracking-Typ] -Feld. |
+| Datentyp | [!UICONTROL Media information] | [Das Regex-Muster aus dem `videoSegment` -Eigenschaft in [!UICONTROL Medieninformationen] Datentyp wurde entfernt](https://github.com/adobe/xdm/pull/1667/files). |
+
+{style=&quot;table-layout:auto&quot;}
+
+Weitere Informationen zu XDM in Platform finden Sie unter [XDM-System - Übersicht](../../xdm/home.md)&#x200B;
 
 ## Query Service {#query-service}
 
