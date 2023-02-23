@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2023.
-source-git-commit: ff276de35ca2aaeec168f4c4386d849f3352ad57
+source-git-commit: 2084583823acb5d5d16ea5bfdbfff98a7c5ac490
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '952'
 ht-degree: 36%
 
 ---
@@ -17,7 +17,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [[!DNL Destinations]](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Query Service](#query-service)
-- [Verwandte Konten in Real-Time CDP B2B Edition](#related-accounts)
+- [Real-Time Customer Data Platform B2B Edition](#b2b)
 - [Quellen](#sources)
 
 ## [!DNL Destinations] {#destinations}
@@ -47,7 +47,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 **Aktualisierte Funktionen**
 &#x200B; | Funktion | Beschreibung | | — | — | | Einstellung von Feldern über die Benutzeroberfläche | Nach der Erfassung von Daten können Sie Felder aus Ihren Schemata jetzt nicht mehr unterstützen. Die Einstellung von XDM-Feldern ermöglicht es Ihnen, Felder aus der UI-Ansicht zu entfernen und sie gleichzeitig für die Verwendung beizubehalten. Bei Bedarf können veraltete Felder erneut angezeigt werden. Alle Segmente, Abfragen oder nachgelagerten Lösungen, die auf die Felder verweisen, werden wie gewohnt ausgeführt. |
 
-&#x200B; Weitere Informationen zu XDM in Platform finden Sie im Abschnitt [XDM-System - Übersicht](../../xdm/home.md). &#x200B;
+{style=&quot;table-layout:auto&quot;} &#x200B; Weitere Informationen zu XDM in Platform finden Sie im Abschnitt [XDM-System - Übersicht](../../xdm/home.md). &#x200B;
 <!-- Field deprecation: https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation.html -->
 
 ## Query Service {#query-service}
@@ -57,20 +57,16 @@ Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von 
 **Aktualisierte Funktionen**
 &#x200B; | Funktion | Beschreibung | | — | — | | Aktivieren von Datensätzen für Profile mit SQL | Verwenden Sie LABELs in CTAS-Abfragen, um einen Datensatz &quot;profile enabled&quot;zu machen, oder verwenden Sie ALTER, um vorhandene Datensätze zu aktualisieren und für Profile zu aktivieren. | | Planmäßige Abfragen überwachen | Im Tab Geplante Abfragen finden Sie wichtige Informationen zu Ihren Abfrageausführungen und abonnieren Warnhinweise. Überwachen Sie Abfragen auf Planungsdetails, Status und Fehlermeldungen/Codes, falls diese fehlschlagen.  | | Funktion zur automatischen Vervollständigung ein/aus | Beseitigen Sie bestimmte Metadatenbefehle und verbessern Sie die Verarbeitungszeiten, indem Sie die Funktion für die automatische Vervollständigung des Abfrage-Editors aktivieren. Diese Funktion schlägt während des Schreibens automatisch potenzielle SQL-Schlüsselwörter und Tabellendetails für die Abfrage vor. | | Datensatzbeispiele | Legen Sie eine Stichprobenrate in Ihrer Abfrage fest und verwenden Sie Datensatzbeispiele, um eine einheitliche Stichprobe zu erstellen, oder erstellen Sie bedingte Beispiele basierend auf bestimmten Kriterien. |
 
-&#x200B; Weitere Informationen zu Query Services finden Sie im Abschnitt [Query Service - Übersicht](../../query-service/home.md). &#x200B;
+{style=&quot;table-layout:auto&quot;} &#x200B; Weitere Informationen zu Query Services finden Sie im Abschnitt [Query Service - Übersicht](../../query-service/home.md). &#x200B;
 <!-- Links for QS feature docs after release day: -->
 <!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
 <!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
 <!-- Toggle auto-complete feature link: https://experienceleague.adobe.com/docs/experience-platform/query/ui/user-guide.html#auto-complete -->
 <!-- dataset samples: https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/dataset-samples.html -->
 
-## Verwandte Konten in Real-Time CDP B2B Edition {#related-accounts}
+## Real-Time Customer Data Platform B2B Edition {#b2b}
 
->[!NOTE]
->
->Die Funktion „verwandte Konten“ ist nur für Kunden der Real-Time CDP B2B Edition verfügbar.
-
-Verwandte Konten, [!DNL Real-Time CDP B2B] bietet Ihnen die Möglichkeit, eine Liste von Konten anzuzeigen, die dem von Ihnen verwendeten Konto ähnlich sind. Sie können die verwandten Konten in Ihre Segmentdefinitionen einbeziehen, um Ihre Reichweite zu erweitern oder umfassendere Kriterien auf Ihre Segmente anzuwenden.
+Real-Time CDP B2B Edition basiert auf Real-time Customer Data Platform (Real-Time CDP) und wurde speziell für Marketingexpertinnen und -experten mit einem Business-to-Business-Service-Modell entwickelt. Es führt Daten aus verschiedenen Quellen zusammen und kombiniert sie zu einer einzigen Ansicht von Personen und Account-Profilen. Diese vereinheitlichten Daten ermöglichen es Marketing-Experten, bestimmte Zielgruppen präzise anzusprechen und über alle verfügbaren Kanäle anzusprechen.
 
 **Aktualisierte Funktionen**
 
@@ -79,12 +75,6 @@ Verwandte Konten, [!DNL Real-Time CDP B2B] bietet Ihnen die Möglichkeit, eine L
 | Zugehörige Kontodienste aktivieren | Mit der neuen Umschalter-Funktion können Sie den zugehörigen Kontodienst für Ihr Konto aktivieren. Weitere Informationen finden Sie im Handbuch unter [Aktivieren des zugehörigen Kontodienstes](../../rtcdp/b2b-ai-ml-services/related-accounts.md#enable). |
 
 {style=&quot;table-layout:auto&quot;}
-
-Weitere Informationen zu verwandten Kontofunktionen finden Sie auf den folgenden Dokumentationsseiten:
-
-- [Übersicht über verwandte Konten in Real-Time CDP B2B Edition](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
-- [Registerkarte „Verwandte Konten“ im Handbuch zur Benutzeroberfläche für Kontoprofile](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
-- [Verwendung verwandter Konten in Segmentdefinitionen](../../rtcdp/segmentation/b2b.md#related-accounts)
 
 Weitere Informationen zu Real-Time CDP B2B Edition finden Sie im Abschnitt [Übersicht über Real-Time CDP B2B Edition](../../rtcdp/overview.md).
 
