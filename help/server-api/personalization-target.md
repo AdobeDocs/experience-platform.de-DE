@@ -2,9 +2,9 @@
 title: Personalisierung über Adobe Target
 description: Erfahren Sie, wie Sie mit der Server-API personalisierte Erlebnisse bereitstellen und rendern können, die in Adobe Target erstellt wurden.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 3730a9a20644291db844ecfad88355daa4a1cba7
+source-git-commit: 091d5440d7346861b7c882fa0a17bd03d528e438
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '620'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ Die Edge Network Server-API kann mithilfe des [Form-Based Experience Composer](h
 
 >[!IMPORTANT]
 >
->Personalisierungserlebnisse, die durch das [Target Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) von der Server-API nicht vollständig unterstützt. Die Server-API kann **abrufen** Aktivitäten, die von VEC erstellt wurden, die Server-API jedoch nicht **render** Aktivitäten, die von VEC erstellt wurden. Wenn Sie von VEC erstellte Aktivitäten rendern möchten, implementieren Sie [Hybridpersonalisierung](../edge/personalization/hybrid-personalization.md) unter Verwendung des Web SDK und der Edge Network Server-API.
+>Personalisierungserlebnisse, die durch das [Target Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=de) von der Server-API nicht vollständig unterstützt. Die Server-API kann **abrufen** Aktivitäten, die von VEC erstellt wurden, die Server-API jedoch nicht **render** Aktivitäten, die von VEC erstellt wurden. Wenn Sie von VEC erstellte Aktivitäten rendern möchten, implementieren Sie [Hybridpersonalisierung](../edge/personalization/hybrid-personalization.md) unter Verwendung des Web SDK und der Edge Network Server-API.
 
 ## Konfigurieren Ihres Datenspeichers {#configure-your-datastream}
 
@@ -28,15 +28,6 @@ Siehe [Handbuch zum Hinzufügen von Diensten zu einem Datastream](../edge/datast
 Beim Konfigurieren Ihres Datastreams können Sie (optional) Werte für [!DNL Property Token], [!DNL Target Environment ID]und [!DNL Target Third Party ID Namespace].
 
 ![UI-Bild, das den Konfigurationsbildschirm des Datastream-Dienstes mit ausgewähltem Adobe Target anzeigt](assets/target-datastream.png)
-
-Sie können zwischen folgenden Optionen wählen: [!DNL Analytics Logging] options:
-
-* **[!DNL Server Side]**: Dies ist die Standardoption für [[!DNL A4T]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=de). Wenn diese Option aktiviert ist, wird jedes Mal, wenn Target Personalisierungsinhalte zurückgibt, die entsprechende [!DNL A4T] -Daten werden basierend auf der Antwort der Target-Personalisierungs-Engine automatisch an Analytics gesendet.
-* **[!DNL Client Side]**: Wenn diese Option aktiviert ist, wird jedes Mal, wenn Target Personalisierungsinhalte zurückgibt, die entsprechende [!DNL A4T] -Daten an die aufrufende Anwendung zurückgegeben werden. Wenn Sie diese Daten in Analytics aufzeichnen möchten, müssen Sie sicherstellen, dass sie bei einem nachfolgenden Aufruf an [!DNL Analytics].
-
-   >[!IMPORTANT]
-   >
-   >Zusätzlich zur Auswahl **[!UICONTROL Client-seitig]** in der Target-Konfiguration müssen Sie Analytics ebenfalls deaktivieren, damit das Edge-Netzwerk die [!DNL A4T] Informationen zurück zur Antwort.
 
 
 ## Benutzerdefinierte Parameter {#custom-parameters}
