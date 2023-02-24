@@ -2,10 +2,10 @@
 title: Erstellen einer Chatlio-Quellverbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Chatlio-Quellverbindung erstellen.
 badge: "Beta"
-source-git-commit: 4a2ed14a55736a9dde1adbb8c7996a5659216ec8
+source-git-commit: c35daa60db315f1ed04ed6424464f1ae7bfb4243
 workflow-type: tm+mt
 source-wordcount: '1168'
-ht-degree: 20%
+ht-degree: 22%
 
 ---
 
@@ -111,7 +111,7 @@ Der Schritt **[!UICONTROL Überprüfung]** wird angezeigt, sodass Sie Ihren neue
 * **[!UICONTROL Verbindung]**: Zeigt den Quelltyp, den relevanten Pfad der ausgewählten Quelldatei und die Anzahl der Spalten innerhalb dieser Quelldatei an.
 * **[!UICONTROL Datensatz- und Zuordnungsfelder zuweisen]**: Zeigt an, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, dem der Datensatz entspricht.
 
-Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Beenden]** und lassen Sie etwas Zeit für die Erstellung des Datenflusses zu.
+Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Beenden]** und gewähren Sie etwas Zeit für die Erstellung des Datenflusses.
 
 ![Der Überprüfungsschritt des Ursprungs-Workflows.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/review.png)
 

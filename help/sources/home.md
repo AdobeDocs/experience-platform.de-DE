@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über Quell-Connectoren
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: e880a643150de5cc2d2fb3948b15888da54f7244
+source-git-commit: 0108d0dcb130e17007faeaa08f97e5c13d71578f
 workflow-type: tm+mt
 source-wordcount: '1133'
 ht-degree: 99%
@@ -54,6 +54,7 @@ Experience Platform ermöglicht die Aufnahme von Daten aus Werbesystemen von Dri
 Experience Platform bietet Unterstützung für die Aufnahme von Daten aus einer Analyseplattform eines Drittanbieters. Näheres hierzu finden Sie in den folgenden Dokumenten:
 
 - [[!DNL Mixpanel]](connectors/analytics/mixpanel.md)
+- [[!DNL Pendo]](connectors/analytics/pendo-webhook.md)
 
 ### Cloud-Speicherplatz {#cloud-storage}
 
