@@ -4,10 +4,10 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
 breadcrumb-title: Anleitung zum Query Service
 user-guide-description: Verwenden Sie Standard-SQL, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
-source-git-commit: 3c91e39958a9cba001ae0f0ac70f920263fa041d
+source-git-commit: 135691e0d2b77cc8e2581ff3a614fe26c7969cdd
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 70%
+source-wordcount: '270'
+ht-degree: 69%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 70%
 
 - [Query Service – Übersicht](home.md)
 - [Packaging des Abfrage-Services](packages.md)
-- [Leitlinien des Abfrage-Services](guardrails.md)
+- [Leitplanken des Abfrage-Services](guardrails.md)
 - Erste Schritte {#get-started}
    - [Voraussetzungen](get-started/prerequisites.md)
 - Data Distiller {#data-distiller}
@@ -27,6 +27,7 @@ ht-degree: 70%
       - [Leitfaden zum Reporting von Insights-Datenmodell](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
    - Abgeleitete Attribute {#derived-attributes}
       - [Übersicht](data-distiller/derived-attributes/overview.md)
+      - [Nahtloser SQL-Ablauf](data-distiller/derived-attributes/seamless-sql-flow.md)
       - [Erstellen von dezimalbasierten abgeleiteten Attributen](data-distiller/derived-attributes/decile-based-derived-attributes.md)
 - Anwendungsfälle {#use-cases}
    - [Abgebrochenes Durchsuchen](use-cases/abandoned-browse.md)
