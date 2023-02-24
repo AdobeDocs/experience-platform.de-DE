@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Target v2-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Target v2“ in Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: e086359916b3aeef73ba9c98e1bfa13da5a974cd
+source-git-commit: ffbb68c9c84b834984e1adb2640d8806ce9f9962
 workflow-type: tm+mt
-source-wordcount: '628'
-ht-degree: 91%
+source-wordcount: '650'
+ht-degree: 88%
 
 ---
 
@@ -18,6 +18,12 @@ ht-degree: 91%
 ## v0.19.2 (14. Februar 2023)
 
 - Es wurde ein Problem behoben, durch das Timeout auf ein Datenelement festgelegt werden konnte.
+
+## v0.19.1 (3. Februar 2023)
+
+- Es wurde eine Aktualisierung vorgenommen, sodass `at.js` v2.10.1 unterstützt wird
+- Benutzerdefinierte Mbox-Parameter des Clients unterstützen jetzt die Punktnotation korrekt
+- In VEC nicht mehr ausgeführte Bereitstellungsaufrufe
 
 ## v0.19.0 (19. September 2022)
 
