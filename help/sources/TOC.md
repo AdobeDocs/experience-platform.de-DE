@@ -4,10 +4,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
-source-git-commit: 11fa9ca8d7044843c295126f8416e5a36600d244
+source-git-commit: e880a643150de5cc2d2fb3948b15888da54f7244
 workflow-type: tm+mt
-source-wordcount: '934'
-ht-degree: 92%
+source-wordcount: '937'
+ht-degree: 91%
 
 ---
 
@@ -92,6 +92,7 @@ ht-degree: 92%
    - Lokales System {#local-system}
       - [Connector für den Upload lokaler Dateien](connectors/local-system/local-file-upload.md)
    - Marketing-Automatisierung {#marketing-automation}
+      - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
       - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
       - [HubSpot-Connector](connectors/marketing-automation/hubspot.md)
       - [Mailchimp-Connector](connectors/marketing-automation/mailchimp.md)
@@ -163,6 +164,7 @@ ht-degree: 92%
       - E-Commerce {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - Marketing-Automatisierung {#marketing-automation}
+         - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
          - [MailChimp-Kampagne](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
@@ -278,6 +280,7 @@ ht-degree: 92%
       - Lokales System {#local-system}
          - [Lokaler Datei-Upload](tutorials/ui/create/local-system/local-file-upload.md)
       - Marketing-Automatisierung {#marketing-automation}
+         - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [Mailchimp-Kampagnen](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)

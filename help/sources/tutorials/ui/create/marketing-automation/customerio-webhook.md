@@ -2,9 +2,9 @@
 title: Erstellen einer Customer.io-Quellverbindung und eines Datenflusses in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung von Customer.io erstellen.
 badge: "Beta"
-source-git-commit: 7ec7900f8a2fe3d7ad63ac061f286657c4a6b4d8
+source-git-commit: f2f3279b5c68cd636ca7da0fe2221e1b0a94fbad
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1233'
 ht-degree: 20%
 
 ---
@@ -64,13 +64,13 @@ Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen
 
 Verwenden Sie die *[!UICONTROL Kategorien]* Menü zum Filtern von Quellen nach Kategorie. Geben Sie alternativ einen Quellnamen in die Suchleiste ein, um eine bestimmte Quelle aus dem Katalog zu finden.
 
-Navigieren Sie zu [!UICONTROL Marketing-Automatisierung] -Kategorie, die angezeigt werden soll [!DNL Customer.io] Quellkarte. Wählen Sie zunächst [!UICONTROL Daten hinzufügen].
+Navigieren Sie zu [!UICONTROL Marketing-Automatisierung] -Kategorie, die angezeigt werden soll [!DNL Customer.io] Quellkarte. Wählen Sie zunächst **[!UICONTROL Daten hinzufügen]**.
 
 ![Screenshot der Platform-Benutzeroberfläche für Katalog mit Customer.io-Karte](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
 
 ## Daten auswählen {#select-data}
 
-Die **[!UICONTROL Daten auswählen]** angezeigt, um eine Oberfläche zur Auswahl der Daten bereitzustellen, die Sie in Platform importieren.
+Die **[!UICONTROL Daten auswählen]** angezeigt, um eine Oberfläche zur Auswahl der Daten bereitzustellen, die Sie an Platform übermitteln möchten.
 
 * Der linke Teil der Benutzeroberfläche ist ein Browser, mit dem Sie die verfügbaren Datenströme in Ihrem Konto anzeigen können.
 * Im rechten Bereich der Benutzeroberfläche können Sie eine Vorschau von bis zu 100 Zeilen mit Daten aus einer JSON-Datei anzeigen.

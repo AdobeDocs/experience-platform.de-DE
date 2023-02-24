@@ -2,7 +2,7 @@
 title: Überblick über die Quelle von Customer.io
 description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche Customer.io mit Adobe Experience Platform verbinden können, indem Sie Webhooks nutzen.
 badge: "Beta"
-source-git-commit: cb4b92f4d71d42d57363e16d4764217b6de7f8ee
+source-git-commit: 516ec2cbfb954764f1a6fb2007e20acac425607d
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 16%
@@ -21,9 +21,9 @@ Experience Platform unterstützt die Aufnahme von Daten aus Streaming-Anwendunge
 
 [[!DNL Customer.io]](https://customer.io/) ist eine automatisierte Messaging-Plattform für Marketing-Experten, die mehr Kontrolle und Flexibilität beim Erstellen und Senden datengesteuerter E-Mails, Push-Benachrichtigungen, In-App-Nachrichten und SMS wünschen.
 
-Die [!DNL Customer.io] -Quelle können Sie unterstützte Webhook-Ereignisschemas und die zugehörigen Ereignisdaten aus [!DNL Customer.io] mithilfe der [[!DNL Customer.io] Webhooks für Berichterstellung](https://customer.io/docs/api/webhooks/).
+Die [!DNL Customer.io] -Quelle können Sie unterstützte Webhook-Ereignisschemata und die zugehörigen Ereignisdaten aus [!DNL Customer.io] mithilfe der [[!DNL Customer.io] Webhooks für Berichterstellung](https://customer.io/docs/api/webhooks/).
 
-Folgende Webhook-Ereignisschemas werden unterstützt:
+Folgende Webhook-Ereignisschemata werden unterstützt:
 
 * Kundenereignisse
 * E-Mail-Ereignisse
