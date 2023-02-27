@@ -1,16 +1,16 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2023.
-source-git-commit: deb8512d3c585512520dae04e555c6497d74ba4c
+source-git-commit: 72ae96f72bfffe376fec5c0e1dcf79406cb86a26
 workflow-type: tm+mt
-source-wordcount: '1137'
-ht-degree: 39%
+source-wordcount: '1171'
+ht-degree: 38%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
 
-**Veröffentlichungsdatum: 22. Februar 2023**
+**Versionsdatum: 22. Februar 2023**
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
@@ -82,20 +82,14 @@ Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von 
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Aktivieren von Datensätzen für Profile mit SQL | Verwenden Sie ETIKETTEN in CTAS-Abfragen, um einen Datensatz &quot;profile&quot;zu aktivieren, oder verwenden Sie ALTER, um vorhandene Datensätze zu aktualisieren und für Profile zu aktivieren. |
-| Geplante Abfragen überwachen | Auf der Registerkarte Geplante Abfragen finden Sie wichtige Informationen zu Ihren Abfrageausführungen und abonnieren Warnungen. Überwachen Sie Abfragen auf Planungsdetails, Status und Fehlermeldungen/Codes, falls diese fehlschlagen. |
-| Umschalten der Funktion zur automatischen Vervollständigung | Beseitigen Sie bestimmte Metadatenbefehle und verbessern Sie die Verarbeitungszeiten, indem Sie die Funktion für die automatische Vervollständigung des Abfrage-Editors aktivieren. Diese Funktion schlägt während des Schreibens automatisch potenzielle SQL-Schlüsselwörter und Tabellendetails für die Abfrage vor. |
-| Datensatzbeispiele | Geben Sie eine Stichprobenrate in Ihrer Abfrage an und verwenden Sie Datensatzbeispiele, um eine einheitliche zufällige Stichprobe zu erstellen, oder erstellen Sie bedingte Beispiele basierend auf bestimmten Kriterien. |
+| Aktivieren von Datensätzen für Profile mit SQL | [Verwenden Sie LABELs in CTAS-Abfragen, um einen Datensatz &quot;profile&quot;zu aktivieren](../../query-service/sql/syntax.md#create-table-as-select)oder verwenden Sie ALTER, um vorhandene Datensätze zu aktualisieren, damit sie für das Profil aktiviert werden. Sie können dieses erweiterte SQL-Konstrukt verwenden, um nahtlose Unterstützung für abgeleitete Attribute für Ihre geschäftlichen Anwendungsfälle des Echtzeit-Kundenprofils bereitzustellen. Siehe [Nahtloser SQL-Ablauf für das Dokument mit abgeleiteten Attributen](../../query-service/data-distiller/derived-attributes/seamless-sql-flow.md) für weitere Details. |
+| Geplante Abfragen überwachen | Verwenden Sie die [Registerkarte &quot;Geplante Abfragen&quot;](../../query-service/ui/monitor-queries.md) , um wichtige Informationen zu Ihren Abfrageausführungen zu erhalten und Warnhinweise zu abonnieren. Überwachen Sie Abfragen auf Planungsdetails, Status und Fehlermeldungen/Codes, falls diese fehlschlagen. |
+| Umschalten der Funktion zur automatischen Vervollständigung | Beseitigen Sie bestimmte Metadatenbefehle und verbessern Sie die Verarbeitungszeiten durch [Umschalten der Funktion zum automatischen Vervollständigen des Abfrage-Editors](../../query-service/ui/user-guide.md#auto-complete). Diese Funktion schlägt während des Schreibens automatisch potenzielle SQL-Schlüsselwörter und Tabellendetails für die Abfrage vor. |
+| Datensatzbeispiele | Geben Sie in Ihrer Abfrage eine Sampling-Rate an und [Verwenden Sie Datensatzbeispiele, um eine einheitliche Stichprobe zu erstellen.](../../query-service/essential-concepts/dataset-samples.md), oder erstellen Sie bedingte Beispiele basierend auf bestimmten Kriterien. |
 
 {style=&quot;table-layout:auto&quot;}
 
 Weitere Informationen über Abfrage-Services finden Sie unter [Abfrage-Service – Übersicht](../../query-service/home.md).
-
-<!-- Links for QS feature docs after release day: -->
-<!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
-<!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
-<!-- Toggle auto-complete feature link: https://experienceleague.adobe.com/docs/experience-platform/query/ui/user-guide.html#auto-complete -->
-<!-- dataset samples: https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/dataset-samples.html -->
 
 ## Real-Time Customer Data Platform B2B Edition {#b2b}
 
