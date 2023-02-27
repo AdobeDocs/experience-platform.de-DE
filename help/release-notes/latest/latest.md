@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2023.
-source-git-commit: 66ca8d3972045cffe4a1614f638546f4e7838680
+source-git-commit: deb8512d3c585512520dae04e555c6497d74ba4c
 workflow-type: tm+mt
 source-wordcount: '1137'
-ht-degree: 37%
+ht-degree: 39%
 
 ---
 
@@ -45,9 +45,12 @@ Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Ziel
 XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definitionen (Schemas) für Daten bereitstellt, die in Adobe Experience Platform importiert werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
 
 **Aktualisierte Funktionen**
-&#x200B; | Funktion | Beschreibung | | — | — | | Einstellung von Feldern über die Benutzeroberfläche | Jetzt können Sie [veraltete Felder aus Ihren Schemata, nachdem Daten erfasst wurden](../../xdm/tutorials/field-deprecation-ui.md). Die Einstellung von XDM-Feldern ermöglicht es Ihnen, Felder aus der UI-Ansicht zu entfernen und sie gleichzeitig für die Verwendung beizubehalten. Bei Bedarf können veraltete Felder erneut angezeigt werden. Alle Segmente, Abfragen oder nachgelagerten Lösungen, die auf die Felder verweisen, werden wie gewohnt ausgeführt. |
 
+| Funktion | Beschreibung |
+| --- | --- |
+| Einstellung von Feldern über die Benutzeroberfläche | Sie können jetzt [veraltete Felder aus Ihren Schemata, nachdem Daten erfasst wurden](../../xdm/tutorials/field-deprecation-ui.md). Die Einstellung von XDM-Feldern ermöglicht es Ihnen, Felder aus der UI-Ansicht zu entfernen und sie gleichzeitig für die Verwendung beizubehalten. Bei Bedarf können veraltete Felder erneut angezeigt werden. Alle Segmente, Abfragen oder nachgelagerten Lösungen, die auf die Felder verweisen, werden wie gewohnt ausgeführt. |
 
+{style=&quot;table-layout:auto&quot;}
 
 **Neue XDM-Komponenten**
 
@@ -76,9 +79,18 @@ Weitere Informationen zu XDM in Platform finden Sie unter [XDM-System - Übersic
 Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von Daten in Adobe Experience Platform [!DNL Data Lake]. Sie können beliebige Datensätze aus Data Lake verbinden und die Abfrageergebnisse als neuen Datensatz erfassen, der für die Berichterstellung, Data Science Workspace oder für die Aufnahme in das Echtzeit-Kundenprofil verwendet werden kann.
 
 **Aktualisierte Funktionen**
-&#x200B; | Funktion | Beschreibung | | — | — | | Aktivieren von Datensätzen für Profile mit SQL | Verwenden Sie LABELs in CTAS-Abfragen, um einen Datensatz &quot;profile enabled&quot;zu machen, oder verwenden Sie ALTER, um vorhandene Datensätze zu aktualisieren und für Profile zu aktivieren. | | Planmäßige Abfragen überwachen | Im Tab Geplante Abfragen finden Sie wichtige Informationen zu Ihren Abfrageausführungen und abonnieren Warnhinweise. Überwachen Sie Abfragen auf Planungsdetails, Status und Fehlermeldungen/Codes, falls diese fehlschlagen.  | | Funktion zur automatischen Vervollständigung ein/aus | Beseitigen Sie bestimmte Metadatenbefehle und verbessern Sie die Verarbeitungszeiten, indem Sie die Funktion für die automatische Vervollständigung des Abfrage-Editors aktivieren. Diese Funktion schlägt während des Schreibens automatisch potenzielle SQL-Schlüsselwörter und Tabellendetails für die Abfrage vor. | | Datensatzbeispiele | Legen Sie eine Stichprobenrate in Ihrer Abfrage fest und verwenden Sie Datensatzbeispiele, um eine einheitliche Stichprobe zu erstellen, oder erstellen Sie bedingte Beispiele basierend auf bestimmten Kriterien. |
 
-&#x200B; Weitere Informationen zu Query Services finden Sie im Abschnitt [Query Service - Übersicht](../../query-service/home.md). &#x200B;
+| Funktion | Beschreibung |
+| --- | --- |
+| Aktivieren von Datensätzen für Profile mit SQL | Verwenden Sie ETIKETTEN in CTAS-Abfragen, um einen Datensatz &quot;profile&quot;zu aktivieren, oder verwenden Sie ALTER, um vorhandene Datensätze zu aktualisieren und für Profile zu aktivieren. |
+| Geplante Abfragen überwachen | Auf der Registerkarte Geplante Abfragen finden Sie wichtige Informationen zu Ihren Abfrageausführungen und abonnieren Warnungen. Überwachen Sie Abfragen auf Planungsdetails, Status und Fehlermeldungen/Codes, falls diese fehlschlagen. |
+| Umschalten der Funktion zur automatischen Vervollständigung | Beseitigen Sie bestimmte Metadatenbefehle und verbessern Sie die Verarbeitungszeiten, indem Sie die Funktion für die automatische Vervollständigung des Abfrage-Editors aktivieren. Diese Funktion schlägt während des Schreibens automatisch potenzielle SQL-Schlüsselwörter und Tabellendetails für die Abfrage vor. |
+| Datensatzbeispiele | Geben Sie eine Stichprobenrate in Ihrer Abfrage an und verwenden Sie Datensatzbeispiele, um eine einheitliche zufällige Stichprobe zu erstellen, oder erstellen Sie bedingte Beispiele basierend auf bestimmten Kriterien. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Weitere Informationen über Abfrage-Services finden Sie unter [Abfrage-Service – Übersicht](../../query-service/home.md).
+
 <!-- Links for QS feature docs after release day: -->
 <!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
 <!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
