@@ -3,10 +3,10 @@ keywords: Experience Platform; Startseite; beliebte Themen; Streaming-Verbindung
 title: Erstellen einer HTTP-API-Streaming-Verbindung mithilfe der Flow Service-API
 description: In diesem Tutorial erfahren Sie, wie Sie mithilfe der Flow Service-API eine Streaming-Verbindung mithilfe der HTTP-API-Quelle für Roh- und XDM-Daten erstellen
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
+source-git-commit: 7ff297973f951d7bfd940983bf4fa39dcc9f1542
 workflow-type: tm+mt
-source-wordcount: '1496'
-ht-degree: 40%
+source-wordcount: '1544'
+ht-degree: 38%
 
 ---
 
@@ -475,6 +475,8 @@ POST /flows
 
 >[!TAB Ohne Umwandlungen]
 
+Die folgende Anfrage erstellt einen Streaming-Datenfluss für die HTTP-API ohne Datenumwandlungen.
+
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -500,6 +502,10 @@ curl -X POST \
 ```
 
 >[!TAB Mit Umwandlungen]
+
+Die folgenden Anfragen erstellen einen Streaming-Datenfluss für die HTTP-API mit auf Ihre Daten angewendeten Zuordnungs-Transformationen.
+
+Wenn Sie einen Datenfluss mit Transformationen erstellen, wird die `name` kann nicht geändert werden. Dieser Wert muss immer auf `Mapping`.
 
 ```shell
 curl -X POST \
