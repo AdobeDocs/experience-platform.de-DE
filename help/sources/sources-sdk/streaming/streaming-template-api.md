@@ -3,10 +3,10 @@ title: Dokumentation - Self-Service-Vorlage für Streaming-SDK-API
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Streaming-Daten aus einer Quelle an Adobe Experience Platform übertragen können.
 hide: true
 hidefromtoc: true
-source-git-commit: 7744fef9751212a40f8f20df52812d38130c42fc
+source-git-commit: eb317f38499a32b1a6eb072ec74e68cdfebf994f
 workflow-type: tm+mt
-source-wordcount: '1775'
-ht-degree: 43%
+source-wordcount: '1699'
+ht-degree: 42%
 
 ---
 
@@ -55,7 +55,7 @@ Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer *YOURSOU
 
 ### Erstellen einer Quellverbindung {#source-connection}
 
-Um eine Quellverbindung für Ihre Streaming-Quelle zu erstellen, stellen Sie eine POST-Anfrage an die `/sourceConnections` Endpunkt der [!DNL Flow Service] API bei Angabe eines Namens für Ihre Verbindung, der Verbindungsspezifikations-ID Ihrer Quelle und des Formats Ihrer Daten.
+Erstellen Sie eine Quellverbindung, indem Sie eine POST-Anfrage an die [!DNL Flow Service] API, während Sie die Verbindungsspezifikations-ID Ihrer Quelle, Details wie Name und Beschreibung und das Format Ihrer Daten angeben.
 
 **API-Format**
 
@@ -259,9 +259,6 @@ Der letzte Schritt zur Datenübermittlung von *YOURSOURCE* in Platform einen Dat
 * [Zuordnungs-ID](#mapping)
 
 Ein Datenfluss ist für die Planung und Erfassung von Daten aus einer Quelle verantwortlich. Sie können einen Datenfluss erstellen, indem Sie eine POST-Anfrage ausführen und dabei die oben genannten Werte in der Payload angeben.
-
-Um eine Aufnahme zu planen, legen Sie zunächst den Startzeitwert auf die Epochenzeit in Sekunden fest. Anschließend müssen Sie den Frequenzwert auf eine der fünf Optionen festlegen: `once`, `minute`, `hour`, `day` oder `week`. Der Intervallwert gibt den Zeitraum zwischen zwei aufeinander folgenden Erfassungsschritten an. Für die Erstellung einer einmaligen Erfassung ist jedoch kein Intervall erforderlich. Für alle anderen Frequenzen muss der Intervallwert auf gleich oder größer als `15` festgelegt werden.
-
 
 **API-Format**
 
