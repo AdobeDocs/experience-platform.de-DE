@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API-Endpunkt für Segmentdefinitionen
 description: Der Endpunkt "Segmentdefinitionen"in der Adobe Experience Platform Segmentation Service-API ermöglicht Ihnen die programmgesteuerte Verwaltung von Segmentdefinitionen für Ihr Unternehmen.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9aa86b8d541836504be6b8667a2e069116c6002c
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1261'
 ht-degree: 28%
 
 ---
@@ -178,6 +178,17 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
             "format": "pql/text",
             "value": "workAddress.country = \"US\""
         },
+        "evaluationInfo": {
+            "batch": {
+                "enabled": true
+            },
+            "continuous": {
+                "enabled": false
+            },
+            "synchronous": {
+                "enabled": false
+            }
+        },
         "schema": {
             "name": "_xdm.context.profile"
         },
@@ -189,6 +200,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `name` | **Erforderlich.** Ein eindeutiger Name, mit dem auf das Segment verwiesen wird. |
+| `description` | Eine Beschreibung der Segmentdefinition, die Sie erstellen. |
+| `evaluationInfo` | Der Typ des Segments, das Sie erstellen. Wenn Sie ein Batch-Segment erstellen möchten, legen Sie `evaluationInfo.batch.enabled` auf wahr zu sein. Wenn Sie ein Streaming-Segment erstellen möchten, legen Sie `evaluationInfo.continuous.enabled` auf wahr zu sein. Wenn Sie ein Kantensegment erstellen möchten, legen Sie `evaluationInfo.synchronous.enabled` auf wahr zu sein. Wenn das Segment leer gelassen wird, wird es als **Batch** Segment. |
 | `schema` | **Erforderlich.** Das mit den Entitäten im Segment verknüpfte Schema. Besteht aus einer der beiden `id` oder `name` -Feld. |
 | `expression` | **Erforderlich.** Eine Entität, die Feldinformationen zur Segmentdefinition enthält. |
 | `expression.type` | Gibt den Ausdruckstyp an. Derzeit wird nur &quot;PQL&quot;unterstützt. |
@@ -251,7 +264,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur neu erstellte
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `id` | Eine systemgenerierte ID Ihrer neu erstellten Segmentdefinition. |
-| `evaluationInfo` | Ein systemgeneriertes Objekt, das angibt, welcher Auswertungstyp für die Segmentdefinition durchgeführt wird. Es kann sich um Batch-, kontinuierliche (auch als Streaming bezeichnet) oder synchrone Segmentierung handeln. |
+| `evaluationInfo` | Ein Objekt, das angibt, welcher Evaluierungstyp für die Segmentdefinition durchgeführt wird. Dabei kann es sich um Batch-, Streaming- (auch als fortlaufend bezeichnet) oder Edge-Segmentierung (auch als synchrone Segmentierung bezeichnet) handeln. |
 
 ## Abrufen einer bestimmten Segmentdefinition {#get}
 
@@ -333,7 +346,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Information
 | `expression.format` | Gibt die Struktur des Ausdrucks in Wert an. Derzeit wird das folgende Format unterstützt: <ul><li>`pql/text`: Eine Textdarstellung einer Segmentdefinition gemäß der veröffentlichten PQL-Grammatik.  Beispiel: `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | Ein Ausdruck, der dem in `expression.format`. |
 | `description` | Eine für Menschen lesbare Beschreibung der Definition. |
-| `evaluationInfo` | Ein systemgeneriertes Objekt, das angibt, welcher Typ von Auswertung, Batch, kontinuierlicher (auch als Streaming bezeichnet) oder synchroner Segmentdefinition unterzogen wird. |
+| `evaluationInfo` | Ein Objekt, das angibt, welcher Typ von Auswertung, Batch, Streaming (auch als kontinuierlich bezeichnet) oder Edge (auch als synchron bezeichnet) die Segmentdefinition durchlaufen wird. |
 
 ## Massenabruf von Segmentdefinitionen {#bulk-get}
 
@@ -466,7 +479,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 207 mit den angeforderten Segment
 | `expression.format` | Gibt die Struktur des Ausdrucks in Wert an. Derzeit wird das folgende Format unterstützt: <ul><li>`pql/text`: Eine Textdarstellung einer Segmentdefinition gemäß der veröffentlichten PQL-Grammatik.  Beispiel: `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | Ein Ausdruck, der dem in `expression.format`. |
 | `description` | Eine für Menschen lesbare Beschreibung der Definition. |
-| `evaluationInfo` | Ein systemgeneriertes Objekt, das angibt, welcher Typ von Auswertung, Batch, kontinuierlicher (auch als Streaming bezeichnet) oder synchroner Segmentdefinition unterzogen wird. |
+| `evaluationInfo` | Ein Objekt, das angibt, welcher Typ von Auswertung, Batch, Streaming (auch als kontinuierlich bezeichnet) oder Edge (auch als synchron bezeichnet) die Segmentdefinition durchlaufen wird. |
 
 ## Löschen einer bestimmten Segmentdefinition {#delete}
 
@@ -474,7 +487,7 @@ Sie können das Löschen einer bestimmten Segmentdefinition anfordern, indem Sie
 
 >[!NOTE]
 >
-> Sie werden **not** ein Segment löschen können, das in einer Zielaktivierung verwendet wird.
+> Sie können ein Segment, das in einer Zielaktivierung verwendet wird, **nicht** löschen.
 
 **API-Format**
 

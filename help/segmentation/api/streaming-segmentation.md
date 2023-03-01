@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Auswerten von Ereignissen mit Streaming-Segmentierung nahezu in Echtzeit
 description: Dieses Dokument enthält Beispiele für die Verwendung der Streaming-Segmentierung mit der Segmentierungs-Service-API von Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 1c4da50b2c211aae06d6702d75e5650447fae0eb
 workflow-type: tm+mt
 source-wordcount: '1971'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -86,8 +86,8 @@ Eine Segmentdefinition wird für die Streaming-Segmentierung in den folgenden Sz
 
 - Die Segmentdefinition umfasst Segmente oder Eigenschaften aus Adobe Audience Manager (AAM).
 - Die Segmentdefinition umfasst mehrere Entitäten (Abfragen mit mehreren Entitäten).
-- Die Segmentdefinition umfasst eine Kombination aus einem einzelnen Ereignis und einer `inSegment` -Ereignis.
-   - Wenn das Segment jedoch im `inSegment` Ereignis nur Profil ist, wird die Segmentdefinition **will** für Streaming-Segmentierung aktiviert sein.
+- Die Segmentdefinition umfasst eine Kombination aus einem einzelnen Ereignis und einem `inSegment`-Ereignis.
+   - Wenn das im `inSegment`-Ereignis enthaltene Segment jedoch nur ein Profil ist, wird die Segmentdefinition für die Streaming-Segmentierung **aktiviert**.
 
 Bitte beachten Sie bei der Streaming-Segmentierung die folgenden Richtlinien:
 
@@ -244,6 +244,17 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
+    },
+    "evaluationInfo": {
+        "batch": {
+            "enabled": false
+        },
+        "continuous": {
+            "enabled": true
+        },
+        "synchronous": {
+            "enabled": false
+        }
     }
 }'
 ```

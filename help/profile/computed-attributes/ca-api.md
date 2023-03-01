@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; API
+keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;
 title: API-Endpunkt für berechnete Attribute
 type: Documentation
 description: In Adobe Experience Platform sind berechnete Attribute Funktionen zum Aggregieren von Daten auf Ereignisebene in Profilattributen. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können. In diesem Handbuch erfahren Sie, wie Sie berechnete Attribute mithilfe der Echtzeit-Kundenprofil-API erstellen, anzeigen, aktualisieren und löschen.
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 1c4da50b2c211aae06d6702d75e5650447fae0eb
 workflow-type: tm+mt
 source-wordcount: '2275'
-ht-degree: 63%
+ht-degree: 64%
 
 ---
 
@@ -610,6 +610,17 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
         },
         "dataGovernancePolicy": {
             "excludeOptOut": true
+        },
+        "evaluationInfo": {
+            "batch": {
+                "enabled": false
+            },
+            "continuous": {
+                "enabled": true
+            },
+            "synchronous": {
+                "enabled": false
+            }
         }
     }'
 ```

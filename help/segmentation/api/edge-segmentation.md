@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Edge-Segmentierung mithilfe der API
 description: Dieses Dokument enthält Beispiele für die Verwendung der Edge-Segmentierung mit der Segmentierungs-Service-API von Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 1c4da50b2c211aae06d6702d75e5650447fae0eb
 workflow-type: tm+mt
 source-wordcount: '1187'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -60,10 +60,10 @@ Damit ein Segment mithilfe der Edge-Segmentierung bewertet werden kann, muss die
 
 Zusätzlich **muss** das Segment an eine Zusammenführungsrichtlinie gebunden sein, die an Edge aktiv ist. Weitere Informationen zu Zusammenführungsrichtlinien finden Sie im [Handbuch zu Zusammenführungsrichtlinien](../../profile/api/merge-policies.md).
 
-Eine Segmentdefinition **not** für die Kantensegmentierung in den folgenden Szenarien aktiviert sein:
+Eine Segmentdefinition wird für die Edge-Segmentierung in den folgenden Szenarien **nicht** aktiviert:
 
-- Die Segmentdefinition umfasst eine Kombination aus einem einzelnen Ereignis und einer `inSegment` -Ereignis.
-   - Wenn das Segment jedoch im `inSegment` Ereignis nur Profil ist, wird die Segmentdefinition **will** für die Kantensegmentierung aktiviert sein.
+- Die Segmentdefinition umfasst eine Kombination aus einem einzelnen Ereignis und einem `inSegment`-Ereignis.
+   - Wenn es sich bei dem im `inSegment`-Ereignis enthaltenen Segment jedoch nur um ein Profil handelt, **wird** die Segmentdefinition für die Edge-Segmentierung aktiviert.
 
 ## Abrufen aller für die Edge-Segmentierung aktivierten Segmente
 
@@ -212,6 +212,17 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
+    },
+    "evaluationInfo": {
+        "batch": {
+            "enabled": false
+        },
+        "continuous": {
+            "enabled": false
+        },
+        "synchronous": {
+            "enabled": true
+        }
     }
 }'
 ```
