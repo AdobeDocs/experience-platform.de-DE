@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2023.
-source-git-commit: 72ae96f72bfffe376fec5c0e1dcf79406cb86a26
+source-git-commit: ccd3df0bc045f98306901b2d734cf17262275f18
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1316'
 ht-degree: 38%
 
 ---
@@ -14,11 +14,30 @@ ht-degree: 38%
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
+- [Datenerfassung](#data-collection)
 - [[!DNL Destinations]](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Query Service](#query-service)
 - [Real-Time Customer Data Platform B2B Edition](#b2b)
 - [Quellen](#sources)
+
+## Datenerfassung {#data-collection}
+
+Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kundenerlebnisdaten erfassen und an das Adobe Experience Platform Edge Network senden können, wo sie angereichert und transformiert und an Adobe- oder Drittanbieter-Ziele weitergegeben werden können.
+
+### Assurance {#assurance}
+
+Mit Adobe Assurance können Sie die Datenerfassung und die Bereitstellung von Erlebnissen in Ihrer App überprüfen, testen, simulieren und überprüfen.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Öffentliche APIs | Die Adobe Assurance-APIs sind jetzt verfügbar. Die Assurance-APIs sind eine Sammlung von APIs, mit denen Benutzer ihre eigenen Web- und mobilen Apps testen und debuggen können, wenn sie mit der Adobe Assurance-Erweiterung mit dem Mobile SDK ausgestattet sind. Weitere Informationen zu den Assurance-APIs finden Sie im Abschnitt [Übersicht über die Assurance-API](https://developer.adobe.com/adobe-assurance-public-apis/). |
+
+{style=&quot;table-layout:auto&quot;}
+
+Weitere Informationen zur Zuverlässigkeitserklärung finden Sie im [Dokumentation zur Sicherheit](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
 ## [!DNL Destinations] {#destinations}
 
