@@ -3,10 +3,10 @@ title: Verschlüsselte Datenerfassung
 description: Mit Adobe Experience Platform können Sie verschlüsselte Dateien über Cloud-Speicher-Batch-Quellen erfassen.
 hide: true
 hidefromtoc: true
-source-git-commit: f0bbefcd9b4595f02c400ea0c5bb76bfa6c5e33e
+source-git-commit: a1babf70a7a4e20f3e535741c95ac927597c9f48
 workflow-type: tm+mt
-source-wordcount: '914'
-ht-degree: 21%
+source-wordcount: '967'
+ht-degree: 20%
 
 ---
 
@@ -16,11 +16,15 @@ Mit Adobe Experience Platform können Sie verschlüsselte Dateien über Cloud-Sp
 
 Der verschlüsselte Datenerfassungsprozess sieht wie folgt aus:
 
-1. [Erstellen eines Verschlüsselungs-Schlüsselpaars mit Experience Platform-APIs](#create-encryption-key-pair). Das Verschlüsselungsschlüsselpaar besteht aus einem privaten Schlüssel und einem öffentlichen Schlüssel. Nach der Erstellung können Sie den öffentlichen Schlüssel zusammen mit der zugehörigen öffentlichen Schlüssel-ID und der Ablaufzeit kopieren oder herunterladen. Während dieses Vorgangs wird der private Schlüssel von Experience Platform in einem sicheren Vault gespeichert.
+1. [Erstellen eines Verschlüsselungs-Schlüsselpaars mit Experience Platform-APIs](#create-encryption-key-pair). Das Verschlüsselungsschlüsselpaar besteht aus einem privaten Schlüssel und einem öffentlichen Schlüssel. Nach der Erstellung können Sie den öffentlichen Schlüssel zusammen mit der zugehörigen öffentlichen Schlüssel-ID und der Ablaufzeit kopieren oder herunterladen. Während dieses Vorgangs wird der private Schlüssel von Experience Platform in einem sicheren Vault gespeichert. **HINWEIS:** Der öffentliche Schlüssel in der Antwort ist Base64-kodiert und muss vor der Verwendung entschlüsselt werden.
 2. Verwenden Sie den öffentlichen Schlüssel, um die Datendatei zu verschlüsseln, die Sie erfassen möchten.
 3. Platzieren Sie Ihre verschlüsselte Datei in Ihrem Cloud-Speicher.
 4. Sobald die verschlüsselte Datei fertig ist, [Quellverbindung und einen Datenfluss für Ihre Cloud-Speicherquelle erstellen](#create-a-dataflow-for-encrypted-data). Während des Schritts zur Flusserstellung müssen Sie eine `encryption` und fügen Sie Ihre öffentliche Schlüssel-ID hinzu.
 5. Experience Platform ruft den privaten Schlüssel aus dem sicheren Vault ab, um die Daten zum Zeitpunkt der Erfassung zu entschlüsseln.
+
+>[!IMPORTANT]
+>
+>Die maximale Größe einer einzelnen verschlüsselten Datei beträgt 100 MB. Sie können beispielsweise Daten im Wert von 2 GB in einem einzelnen Datenfluss erfassen, jedoch darf jede einzelne Datei in diesen Daten nicht größer als 100 MB sein.
 
 In diesem Dokument wird beschrieben, wie Sie ein Verschlüsselungsschlüsselpaar zum Verschlüsseln Ihrer Daten generieren und diese verschlüsselten Daten mithilfe von Cloud-Speicher-Quellen in die Experience Platform aufnehmen.
 
@@ -73,7 +77,7 @@ curl -X POST \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden Ihr öffentlicher Schlüssel, die Kennung des öffentlichen Schlüssels und die Ablaufzeit Ihrer Schlüssel zurückgegeben. Die Ablaufzeit wird automatisch auf 180 Tage nach dem Datum der Schlüsselgenerierung eingestellt. Die Ablaufzeit kann derzeit nicht konfiguriert werden.
+Bei einer erfolgreichen Antwort werden Ihr Base64-kodierter öffentlicher Schlüssel, die Kennung des öffentlichen Schlüssels und die Ablaufzeit Ihrer Schlüssel zurückgegeben. Die Ablaufzeit wird automatisch auf 180 Tage nach dem Datum der Schlüsselgenerierung eingestellt. Die Ablaufzeit kann derzeit nicht konfiguriert werden.
 
 ```json
 {
