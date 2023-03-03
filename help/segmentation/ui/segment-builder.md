@@ -7,7 +7,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 28b9458d29ce69bcbfdff53c0cb6bd7f427e4a2e
 workflow-type: tm+mt
 source-wordcount: '3258'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -126,21 +126,21 @@ Wenn Sie einen Wert aus dieser Aufzählungsliste auswählen, wird der Wert mit e
 
 ![Eine Warnung, die angezeigt wird, wenn Sie einen Wert einfügen, der nicht zur Aufzählungsliste gehört](../images/ui/segment-builder/enum-warning.png)
 
-Wenn Sie mehrere Werte erstellen, können Sie sie alle gleichzeitig hinzufügen, indem Sie den Massen-Upload verwenden. Wählen Sie die ![Plus-Symbol](../images/ui/segment-builder/plus-icon.png) , um **[!UICONTROL Stapelweises Hinzufügen von Werten]** Popover.
+Wenn Sie mehrere Werte erstellen, können Sie sie alle gleichzeitig hinzufügen, indem Sie den Massen-Upload verwenden. Wählen Sie das ![Pluszeichen](../images/ui/segment-builder/plus-icon.png), um das Pop-up **[!UICONTROL Werte in Massen hinzufügen]** anzuzeigen.
 
-![Das Pluszeichen wird hervorgehoben und zeigt die Schaltfläche an, über die Sie auf das Popup-Fenster für den Massen-Upload zugreifen können.](../images/ui/segment-builder/add-bulk-values.png)
+![Das Pluszeichen wird hervorgehoben und zeigt die Schaltfläche an, auf die Sie klicken können, um auf das Pop-up für den Massen-Upload zuzugreifen.](../images/ui/segment-builder/add-bulk-values.png)
 
-Im **[!UICONTROL Stapelweises Hinzufügen von Werten]** -Popup-Fenster können Sie eine CSV- oder TSV-Datei hochladen.
+Im Pop-up **[!UICONTROL Werte in Massen hinzufügen]** können Sie eine CSV- oder TSV-Datei hochladen.
 
-![Das Popup Werte in Batch hinzufügen wird angezeigt. Das Dialogfeld, das Sie auswählen können, um eine CSV- oder TSV-Datei hochzuladen, wird hervorgehoben.](../images/ui/segment-builder/bulk-values-popover.png)
+![Das Pop-up „Werte in Massen hinzufügen“ wird angezeigt. Das Dialogfeld, das Sie auswählen können, um eine CSV- oder TSV-Datei hochzuladen, ist hervorgehoben.](../images/ui/segment-builder/bulk-values-popover.png)
 
 Alternativ können Sie manuell durch Kommas getrennte Werte hinzufügen.
 
-![Das Popup Werte in Batch hinzufügen wird angezeigt. Sowohl das Dialogfeld, das Sie zum Einfügen von Werten verwenden können, als auch die hinzugefügten Werte werden hervorgehoben.](../images/ui/segment-builder/bulk-values-comma-separated.png)
+![Das Pop-up „Werte in Massen hinzufügen“ wird angezeigt. Sowohl das Dialogfeld, das Sie zum Einfügen von Werten verwenden können, als auch die hinzugefügten Werte sind hervorgehoben.](../images/ui/segment-builder/bulk-values-comma-separated.png)
 
-Bitte beachten Sie, dass maximal 250 Werte zulässig sind. Wenn Sie diesen Wert überschreiten, müssen Sie einige Werte entfernen, bevor Sie weitere hinzufügen.
+Beachten Sie, dass maximal 250 Werte zulässig sind. Wenn Sie diese Grenze überschreiten, müssen Sie einige Werte entfernen, bevor Sie weitere hinzufügen.
 
-![Es wird eine Warnung angezeigt, die anzeigt, dass Sie die maximale Anzahl von Werten erreicht haben.](../images/ui/segment-builder/maximum-values.png)
+![Es erscheint eine Warnung, die anzeigt, dass Sie die maximale Anzahl von Werten erreicht haben.](../images/ui/segment-builder/maximum-values.png)
 
 ### Hinzufügen von Zielgruppen
 

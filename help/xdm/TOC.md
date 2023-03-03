@@ -7,7 +7,7 @@ feature: Schemas
 source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
 workflow-type: tm+mt
 source-wordcount: '518'
-ht-degree: 81%
+ht-degree: 98%
 
 ---
 
@@ -33,11 +33,11 @@ ht-degree: 81%
    * [Individuelles XDM-Profil](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Medizin](./classes/medication.md)
-   * [Player](./classes/payer.md)
+   * [Kostenträger](./classes/payer.md)
    * [Plan](./classes/plan.md)
    * [Richtlinie](./classes/policy.md)
    * [Produkt](./classes/product.md)
-   * [Provider](./classes/provider.md)
+   * [Anbieter](./classes/provider.md)
    * [Segmentdefinition](./classes/segment-definition.md)
    * B2B-Klassen {#b2b}
       * [XDM Business Account](./classes/b2b/business-account.md)
@@ -79,17 +79,17 @@ ht-degree: 81%
       * [Flugreservierung](./field-groups/event/flight-reservation.md)
       * [IAB TCF 2.0-Zustimmung](./field-groups/event/iab.md)
       * [Unterkunftsreservierung](./field-groups/event/lodging-reservation.md)
-      * [Anführungsanfragedetails](./field-groups/event/quote-request-details.md)
+      * [Preisanfragedetails](./field-groups/event/quote-request-details.md)
       * [Buchungsdetails](./field-groups/event/reservation-details.md)
       * [Sitetool-Details](./field-groups/event/sitetool-details.md)
-      * [Support Site Search](./field-groups/event/support-site-search.md)
+      * [Unterstützungs-Site-Suche](./field-groups/event/support-site-search.md)
       * [Upgrade-Details](./field-groups/event/upgrade-details.md)
       * [Upselling-Details](./field-groups/event/upsell-details.md)
       * [Web-Details](./field-groups/event/web-details.md)
    * XDM Business Campaign {#b2b-campaign}
-      * [XDM-Geschäftskampagnendetails](./field-groups/b2b-campaign/details.md)
-   * XDM Business Campaign Members {#b2b-campaign-members}
-      * [Details zu XDM-Business-Campaign-Mitgliedern](./field-groups/b2b-campaign-members/details.md)
+      * [XDM Business Campaign-Details](./field-groups/b2b-campaign/details.md)
+   * XDM Business Campaign-Mitglieder {#b2b-campaign-members}
+      * [XDM Business Campaign-Mitgliederdetails](./field-groups/b2b-campaign-members/details.md)
    * Medizin {#medication}
       * [Arzneimittel](./field-groups/medication/healthcare-medication.md)
    * Plan {#plan}
@@ -102,7 +102,7 @@ ht-degree: 81%
    * [Namensänderungen der Feldergruppe](./field-groups/name-updates.md)
 * Datentypen {#data-types}
    * [Kontodetails](./data-types/account-details.md)
-   * [Werbeunterbrechung](./data-types/ad-break.md)
+   * [Anzeigenunterbrechung](./data-types/ad-break.md)
    * [Programm](./data-types/application.md)
    * [Beacon](./data-types/beacon.md)
    * [Browser-Details](./data-types/browser-details.md)
@@ -193,12 +193,12 @@ ht-degree: 81%
    * [Hinzufügen bestimmter Felder zu einem Schema (API)](./tutorials/specific-fields-api.md)
    * [Definieren benutzerdefinierter Felder (API)](./tutorials/custom-fields-api.md)
    * [Hinzufügen empfohlener Werte zu einem Feld (API)](tutorials/suggested-values.md)
-   * [Veraltetes XDM-Feld in der Benutzeroberfläche](tutorials/field-deprecation-ui.md)
+   * [Einstellen eines XDM-Felds in der Benutzeroberfläche](tutorials/field-deprecation-ui.md)
    * [Veraltetes XDM-Feld in der API](tutorials/field-deprecation-api.md)
    * [Definieren einer Schemabeziehung in der Benutzeroberfläche](tutorials/relationship-ui.md)
    * [Definieren einer Schemabeziehung in der API](tutorials/relationship-api.md)
-   * [Definieren einer Schemabeziehung in Real-Time CDP B2B Edition](tutorials/relationship-b2b.md)
-   * [Verwalten von Datennutzungsbezeichnungen für ein Schema](tutorials/labels.md)
+   * [Definieren einer Schemabeziehung in Real-time CDP B2B Edition](tutorials/relationship-b2b.md)
+   * [Verwalten von Datennutzungskennzeichnungen für ein Schema](tutorials/labels.md)
    * [Erstellen eines Ad-hoc-Schemas](tutorials/ad-hoc.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
 * [API-Referenz](https://www.adobe.io/experience-platform-apis/references/schema-registry/)

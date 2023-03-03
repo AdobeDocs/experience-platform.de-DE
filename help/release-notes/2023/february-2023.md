@@ -4,7 +4,7 @@ description: Die Versionshinweise für Adobe Experience Platform vom Februar 202
 source-git-commit: 0935a50527800b255901f8047051c47b45ab33b8
 workflow-type: tm+mt
 source-wordcount: '1317'
-ht-degree: 37%
+ht-degree: 45%
 
 ---
 
@@ -27,7 +27,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 ### Assurance {#assurance}
 
-Mit Adobe Assurance können Sie die Datenerfassung und die Bereitstellung von Erlebnissen in Ihrer App überprüfen, testen, simulieren und überprüfen.
+Mit Adobe Assurance können Sie die Datenerfassung und die Bereitstellung von Erlebnissen in Ihrer App untersuchen, testen, simulieren und überprüfen.
 
 **Neue oder aktualisierte Funktionen**
 
@@ -37,7 +37,7 @@ Mit Adobe Assurance können Sie die Datenerfassung und die Bereitstellung von Er
 
 {style=&quot;table-layout:auto&quot;}
 
-Weitere Informationen zur Zuverlässigkeitserklärung finden Sie im [Dokumentation zur Sicherheit](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
+Weitere Informationen zu Assurance finden Sie in der [Assurance-Dokumentation](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
 ## [!DNL Destinations] {#destinations}
 
@@ -47,7 +47,7 @@ Weitere Informationen zur Zuverlässigkeitserklärung finden Sie im [Dokumentati
 
 | Funktion | Beschreibung |
 | ----------- | ----------- |
-| [Verbesserung der Einwilligungsrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) für Integrationen mit [dateibasierte (Batch-)Ziele](/help/destinations/destination-types.md#file-based) | <p> Wenn Profile nicht mehr für eine Zustimmungsrichtlinie qualifiziert sind, kommuniziert Experience Platform jetzt proaktiv ihren Richtlinienausstieg an dateibasierte Ziele. Dies folgt dem [-Version im Februar 2023](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) derselben Funktionalität für Streaming-Ziele. </p> <p> <b>Hinweis</b>: Diese Funktion steht nur Kunden von **[!UICONTROL Datenschutz und Sicherheitsschild]** und der **[!UICONTROL Gesundheitsschild]**. </p> |
+| [Verbesserung der Einwilligungsrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) für Integrationen mit [dateibasierte (Batch-)Ziele](/help/destinations/destination-types.md#file-based) | <p> Wenn Profile nicht mehr für eine Zustimmungsrichtlinie qualifiziert sind, kommuniziert Experience Platform jetzt proaktiv ihren Richtlinienausstieg an dateibasierte Ziele. Dies folgt dem [-Version im Februar 2023](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) derselben Funktionalität für Streaming-Ziele. </p> <p> <b>Notiz</b>: Diese Funktion steht nur Kunden von **[!UICONTROL Privacy und Security Shield]** sowie **[!UICONTROL Healthcare Shield]** zur Verfügung. </p> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -55,7 +55,7 @@ Weitere Informationen zur Zuverlässigkeitserklärung finden Sie im [Dokumentati
 
 | Dokumentation | Beschreibung |
 | ----------- | ----------- |
-| Funktionsweise der Dokumentation zu Zielen | <p>Wir haben drei neue Erklärungsartikel zur Funktionsweise von Zielen veröffentlicht, die auf allgemeinen Fragen von Benutzern basieren:</p> <p><ul><li>[Konfigurierbare und allgemeine Exporteinstellungen in Zielen](/help/destinations/how-destinations-work/destinations-configurations.md)</li><li>[Profil-Exportverhalten für verschiedene Zieltypen](/help/destinations/how-destinations-work/profile-export-behavior.md)</li><li>[Identitätsverarbeitung im Workflow für die Zielaktivierung](/help/destinations/how-destinations-work/identity-handling.md)</li></p> |
+| Funktionsweise der Dokumentation zu Zielen | <p>Wir haben drei neue Erklärungsartikel zur Funktionsweise von Zielen veröffentlicht, die auf allgemeinen Fragen von Benutzern basieren:</p> <p><ul><li>[Konfigurierbare und allgemeine Exporteinstellungen in Zielen](/help/destinations/how-destinations-work/destinations-configurations.md)</li><li>[Profilexportverhalten für verschiedene Zieltypen](/help/destinations/how-destinations-work/profile-export-behavior.md)</li><li>[Umgang mit Identitäten im Aktivierungs-Workflow für Ziele](/help/destinations/how-destinations-work/identity-handling.md)</li></p> |
 
 Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
@@ -102,7 +102,7 @@ Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von 
 | Funktion | Beschreibung |
 | --- | --- |
 | Aktivieren von Datensätzen für Profile mit SQL | [Verwenden Sie LABELs in CTAS-Abfragen, um einen Datensatz &quot;profile&quot;zu aktivieren](../../query-service/sql/syntax.md#create-table-as-select)oder verwenden Sie ALTER, um vorhandene Datensätze zu aktualisieren, damit sie für das Profil aktiviert werden. Sie können dieses erweiterte SQL-Konstrukt verwenden, um nahtlose Unterstützung für abgeleitete Attribute für Ihre geschäftlichen Anwendungsfälle des Echtzeit-Kundenprofils bereitzustellen. Siehe [Nahtloser SQL-Ablauf für das Dokument mit abgeleiteten Attributen](../../query-service/data-distiller/derived-attributes/seamless-sql-flow.md) für weitere Details. |
-| Geplante Abfragen überwachen | Verwenden Sie die [Registerkarte &quot;Geplante Abfragen&quot;](../../query-service/ui/monitor-queries.md) , um wichtige Informationen zu Ihren Abfrageausführungen zu erhalten und Warnhinweise zu abonnieren. Überwachen Sie Abfragen auf Planungsdetails, Status und Fehlermeldungen/Codes, falls diese fehlschlagen. |
+| Überwachen von geplanten Abfragen  | Verwenden Sie die [Registerkarte &quot;Geplante Abfragen&quot;](../../query-service/ui/monitor-queries.md) , um wichtige Informationen zu Ihren Abfrageausführungen zu erhalten und Warnhinweise zu abonnieren. Überwachen Sie Abfragen auf Planungsdetails, Status und Fehlermeldungen/Codes, falls diese fehlschlagen. |
 | Umschalten der Funktion zur automatischen Vervollständigung | Beseitigen Sie bestimmte Metadatenbefehle und verbessern Sie die Verarbeitungszeiten durch [Umschalten der Funktion zum automatischen Vervollständigen des Abfrage-Editors](../../query-service/ui/user-guide.md#auto-complete). Diese Funktion schlägt während des Schreibens automatisch potenzielle SQL-Schlüsselwörter und Tabellendetails für die Abfrage vor. |
 | Datensatzbeispiele | Geben Sie in Ihrer Abfrage eine Sampling-Rate an und [Verwenden Sie Datensatzbeispiele, um eine einheitliche Stichprobe zu erstellen.](../../query-service/essential-concepts/dataset-samples.md), oder erstellen Sie bedingte Beispiele basierend auf bestimmten Kriterien. |
 
@@ -127,7 +127,7 @@ Weitere Informationen zu Real-Time CDP B2B Edition finden Sie im Abschnitt [Übe
 
 ## Quellen {#sources}
 
-Adobe Experience Platform kann Daten aus externen Quellen erfassen und ermöglicht es Ihnen, diese Daten mithilfe von Platform-Diensten zu strukturieren, zu beschriften und zu erweitern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Mit Adobe Experience Platform können Sie Daten aus externen Quellen aufnehmen und mithilfe von Platform-Services strukturieren, kennzeichnen und verbessern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 

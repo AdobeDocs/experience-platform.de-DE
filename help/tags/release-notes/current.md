@@ -5,7 +5,7 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 source-git-commit: 2b11fb87523c777d5c2d855e97a4af78a8483abe
 workflow-type: tm+mt
 source-wordcount: '497'
-ht-degree: 75%
+ht-degree: 100%
 
 ---
 
@@ -15,22 +15,22 @@ ht-degree: 75%
 
 * **Neuer Startbildschirm**: Die Startseite der Datenerfassungs-Benutzeroberfläche wurde aktualisiert und enthält jetzt hilfreiche Onboarding-Informationen und Links zur Optimierung der Produktivität. Dazu gehören:
    1. Dokumentation und empfohlene Workflows für die ersten Schritte
-   1. Letzte Eigenschaften, Regeln und Datenelemente
+   1. Aktuelle Eigenschaften, Regeln und Datenelemente
    1. Beliebte Erweiterungen
-   1. Neue Erweiterungs-Updates mit einer Schnellinstallationsfunktion
-* **Senden von Daten an [!DNL Google Ads] mit der Ereignisweiterleitung**: Sie können jetzt die [[!DNL Google Ads Enhanced Conversions] API-Erweiterung](../extensions/server/google-ads-enhanced-conversions/overview.md) für die Ereignisweiterleitung, kombiniert mit [Google Oauth 2 Geheimnisse](../ui/event-forwarding/secrets.md#google-oauth2), um Server-seitige Daten sicher an zu senden [!DNL Google Ads] in Echtzeit.
+   1. Neue Erweiterungsaktualisierungen mit Schnellinstallationsfunktion
+* **Datenversand an [!DNL Google Ads] mittels Ereignisweiterleitung**: Sie können jetzt die [[!DNL Google Ads Enhanced Conversions] API-Erweiterung](../extensions/server/google-ads-enhanced-conversions/overview.md) für die Ereignisweiterleitung in Kombination mit [Google Oauth 2-Geheimnissen](../ui/event-forwarding/secrets.md#google-oauth2) verwenden, um Server-seitige Daten sicher und in Echtzeit an [!DNL Google Ads] zu senden.
 
 ## 23. November 2022
 
 * **[!DNL AWS]-Erweiterung für die Ereignisweiterleitung**: Sie können jetzt Daten an [!DNL Amazon Web Services] ([!DNL AWS]) senden, indem Sie eine Erweiterung für die [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) verwenden. Weiterführende Informationen dazu finden Sie in der [[!DNL AWS] Übersicht der Erweiterungen](../../tags/extensions/server/aws/overview.md).
-* **[!DNL Google Ads Enhanced Conversions]Erweiterung für die Ereignisweiterleitung**: Sie können jetzt Konversionsdaten an senden [!DNL Google Ads] mit [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) -Erweiterung. Weiterführende Informationen dazu finden Sie in der [[!DNL Google Ads Enhanced Conversions] Übersicht der Erweiterungen](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md).
-* **[!DNL Microsoft Azure]Erweiterung für die Ereignisweiterleitung**: Sie können jetzt Daten an senden [!DNL Microsoft Azure] mit [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) -Erweiterung. Weiterführende Informationen dazu finden Sie in der [[!DNL Microsoft Azure] Übersicht der Erweiterungen](../../tags/extensions/server/azure/overview.md).
+* **[!DNL Google Ads Enhanced Conversions]-Erweiterung für die Ereignisweiterleitung**: Sie können jetzt Konversionsdaten an [!DNL Google Ads] senden, indem Sie eine Erweiterung für die [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) verwenden. Weiterführende Informationen dazu finden Sie in der [[!DNL Google Ads Enhanced Conversions] Übersicht der Erweiterungen](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md).
+* **[!DNL Microsoft Azure]-Erweiterung für die Ereignisweiterleitung**: Sie können jetzt Daten an [!DNL Microsoft Azure] senden, indem Sie eine Erweiterung für die [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) verwenden. Weiterführende Informationen dazu finden Sie in der [[!DNL Microsoft Azure] Übersicht der Erweiterungen](../../tags/extensions/server/azure/overview.md).
 
 ## 26. Oktober 2022
 
 * **Behandlung sensibler Daten für Datenströme**: Datenströme nutzen jetzt mehrere Platform-Technologien, um sensible Daten entsprechend den Vorschriften wie dem Health Insurance Portability and Accountability Act (HIPAA) zu behandeln. Weitere Informationen finden Sie im Abschnitt [Umgang mit sensiblen Daten in Datenströmen](../../edge/datastreams/overview.md#sensitive).
-* **[!DNL Splunk]-Erweiterung für die Ereignisweiterleitung**: Sie können jetzt Daten mithilfe einer Erweiterung für die [!DNL Splunk]Ereignisweiterleitung[ an ](../ui/event-forwarding/overview.md) senden. Weiterführende Informationen dazu finden Sie in der [[!DNL Splunk] Übersicht der Erweiterungen](../extensions/server/splunk/overview.md).
-* **[!DNL Zendesk]Erweiterung für die Ereignisweiterleitung**: Sie können jetzt Daten an senden [!DNL Zendesk] mit [Ereignisweiterleitung](../ui/event-forwarding/overview.md) -Erweiterung. Weiterführende Informationen dazu finden Sie in der [[!DNL Zendesk] Übersicht der Erweiterungen](../extensions/server/zendesk/overview.md).
+* **[!DNL Splunk]-Erweiterung für die Ereignisweiterleitung**: Sie können jetzt Daten an [!DNL Splunk] senden, indem Sie eine Erweiterung für die [Ereignisweiterleitung](../ui/event-forwarding/overview.md) verwenden. Weiterführende Informationen dazu finden Sie in der [[!DNL Splunk] Übersicht der Erweiterungen](../extensions/server/splunk/overview.md).
+* **[!DNL Zendesk]-Erweiterung für die Ereignisweiterleitung**: Sie können jetzt Daten an [!DNL Zendesk] senden, indem Sie eine Erweiterung für die [Ereignisweiterleitung](../ui/event-forwarding/overview.md) verwenden. Weiterführende Informationen dazu finden Sie in der [[!DNL Zendesk] Übersicht der Erweiterungen](../extensions/server/zendesk/overview.md).
 
 ## 28. September 2022
 

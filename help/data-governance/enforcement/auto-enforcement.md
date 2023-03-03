@@ -7,7 +7,7 @@ exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 source-git-commit: c0f077d685c688f96d1778a02b24c0959a5dd822
 workflow-type: tm+mt
 source-wordcount: '1883'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -115,17 +115,17 @@ Wählen Sie **[!UICONTROL Listenansicht]** aus, um die Datenherkunft als Liste a
 
 ### Auswertung der Einverständnisrichtlinie {#consent-policy-evaluation}
 
-Wenn Sie [Einverständnisrichtlinien erstellt](../policies/user-guide.md#consent-policy) haben und ein Segment für ein Ziel aktivieren, können Sie sehen, wie sich Ihre Einverständnisrichtlinien auf den Prozentsatz der Profile auswirken, die in die Aktivierung eingebunden werden.
+Wenn Sie [Einverständnisrichtlinien erstellt haben](../policies/user-guide.md#consent-policy) und ein Segment für ein Ziel aktivieren, können Sie sehen, wie sich Ihre Einverständnisrichtlinien auf den Prozentsatz der Profile auswirken, die in die Aktivierung eingebunden werden.
 
-#### Verbesserung der Einwilligungsrichtlinie für gebührenpflichtige Medien {#consent-policy-enhancement}
+#### Verbesserung der Einverständnisrichtlinie für bezahlte Medien {#consent-policy-enhancement}
 
-Die Durchsetzung von Zustimmungsrichtlinien für Streaming-Ziele, einschließlich der Aktivierung gebührenpflichtiger Medien, wurde verbessert. Diese Verbesserung steht Kunden des Datenschutzschilds oder des Gesundheitsschilds zur Verfügung und entfernt proaktiv Profile aus Streaming-Zielen, wenn sich der Zustimmungsstatus ändert. Außerdem wird sichergestellt, dass Einwilligungsänderungen sofort propagiert werden, sodass immer die richtige Zielgruppe angesprochen wird.
+Die Durchsetzung der Einverständnisrichtlinie für Streaming-Ziele wurde verbessert, einschließlich der Aktivierung bezahlter Medien. Diese Verbesserung steht Kundinnen und Kunden des Privacy and Security Shield oder des Healthcare Shield zur Verfügung und entfernt proaktiv Profile aus Streaming-Zielen, wenn sich der Einverständnisstatus ändert. Außerdem wird sichergestellt, dass Einverständnisänderungen sofort propagiert werden, sodass immer die richtige Zielgruppe angesprochen wird.
 
-Diese Verbesserungen ermöglichen ein größeres Vertrauen in Ihre Marketing-Strategie, da Marketingexperten nicht mehr gezwungen sind, ihrem Segmentausdruck manuell Zustimmungsattribute hinzuzufügen. Dadurch wird sichergestellt, dass keine Profile versehentlich für Marketingerlebnisse angesprochen werden, nachdem die Einwilligung widerrufen wurde oder nicht mehr für eine Einwilligungsrichtlinie qualifiziert ist. Die Marketing-Einwilligungsrichtlinien, die Regeln dafür festlegen, wie Einwilligungs- oder Vorzugsdaten über verschiedene Marketing-Workflows hinweg verwaltet werden sollen, werden jetzt in Aktivierungs-Workflows in nachgelagerten Lösungen automatisch durchgesetzt.
+Diese Verbesserungen ermöglichen ein größeres Vertrauen in Ihre Marketing-Strategie, da Marketing-Fachleute nicht mehr gezwungen sind, ihrem Segmentausdruck manuell Einverständnisattribute hinzuzufügen. Dadurch wird sichergestellt, dass keine Profile versehentlich auf Marketing-Erlebnisse angesprochen werden, nachdem das Einverständnis widerrufen wurde oder das Profil nicht mehr für eine Einverständnisrichtlinie qualifiziert ist. Die Marketing-Einverständnisrichtlinien, die Regeln dafür festlegen, wie Einverständnis- oder Präferenzdaten über verschiedene Marketing-Workflows hinweg verwaltet werden sollen, werden jetzt in Aktivierungs-Workflows in nachgelagerten Lösungen automatisch durchgesetzt.
 
 >[!NOTE]
 >
->Aufgrund dieser Verbesserung gibt es keine Änderungen an der Benutzeroberfläche.
+>Es gibt keine Änderungen aufgrund dieser Verbesserung an der Benutzeroberfläche.
 
 #### Auswertung vor der Aktivierung
 

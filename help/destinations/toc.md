@@ -7,7 +7,7 @@ feature: Destinations
 source-git-commit: 92000a9276d0ec379414de22f36865a04ab9a359
 workflow-type: tm+mt
 source-wordcount: '1034'
-ht-degree: 95%
+ht-degree: 98%
 
 ---
 
@@ -19,8 +19,8 @@ ht-degree: 95%
 * [Leitplanken für Ziele (Aktivierung)](./guardrails.md)
 * Funktionsweise von Zielen {#how-destinations-work}
    * [Konfigurierbare und allgemeine Exporteinstellungen in Zielen](./how-destinations-work/destinations-configurations.md)
-   * [Profil-Exportverhalten für verschiedene Zieltypen](./how-destinations-work/profile-export-behavior.md)
-   * [Identitätsverarbeitung im Workflow für die Zielaktivierung](./how-destinations-work/identity-handling.md)
+   * [Profilexportverhalten für verschiedene Zieltypen](./how-destinations-work/profile-export-behavior.md)
+   * [Umgang mit Identitäten im Aktivierungs-Workflow für Ziele](./how-destinations-work/identity-handling.md)
 * API-Tutorials {#api}
    * [Verbinden Sie sich mit Streaming-Zielen und aktivieren Sie Daten über die Flow Service-API](./api/streaming-destinations.md)
    * [Verbinden Sie sich mit Batch-Cloud-Speicher und E-Mail-Marketing-Zielen und aktivieren Sie Daten mit der Flow Service-API](./api/connect-activate-batch-destinations.md)
@@ -160,7 +160,7 @@ ht-degree: 95%
       * [KickFire-Erweiterung](./catalog/personalization/kickfire.md)
       * [Marketo Web-Personalisierungserweiterung](./catalog/personalization/marketo-web-personalization.md)
       * [Pega Customer Decision Hub-Verbindung](./catalog/personalization/pega.md)
-      * [Pega-Profil-Verbindung](./catalog/personalization/pega-profile.md)
+      * [Pega-Profilverbindung](./catalog/personalization/pega-profile.md)
    * Social-Media-Ziele {#social}
       * [Social-Media-Ziele – Übersicht](./catalog/social/overview.md)
       * [Adobe Livefyre-Erweiterung](./catalog/social/adobe-livefyre.md)

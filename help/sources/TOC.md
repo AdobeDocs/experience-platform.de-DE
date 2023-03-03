@@ -7,7 +7,7 @@ feature: Sources
 source-git-commit: 0108d0dcb130e17007faeaa08f97e5c13d71578f
 workflow-type: tm+mt
 source-wordcount: '940'
-ht-degree: 91%
+ht-degree: 98%
 
 ---
 
@@ -212,7 +212,7 @@ ht-degree: 91%
    - [Wiederholen fehlgeschlagener Datenfluss-Ausführungen](tutorials/api/retry-flows.md)
    - [Löschen von Konten](tutorials/api/delete.md)
    - [Löschen von Datenflüssen](tutorials/api/delete-dataflows.md)
-   - [Verschlüsselte Daten erfassen](tutorials/api/encrypt-data.md)
+   - [Aufnehmen verschlüsselter Daten](tutorials/api/encrypt-data.md)
 - Tutorials zur Benutzeroberfläche {#ui-tutorials}
    - Erstellen einer Quellverbindung {#create}
       - Adobe-Programme {#adobe-applications}
@@ -340,14 +340,14 @@ ht-degree: 91%
       - [Dokumentationsvorlage für Selbstbedienungs-API](sources-sdk/documentation/template.md)
       - [Dokumentationsvorlage für Selbstbedienungs-Benutzeroberfläche](sources-sdk/documentation/ui-template.md)
    - Streaming-SDK {#streaming-sdk}
-      - [Erste Schritte mit Self-Serve-Quellen (Streaming-SDK)](sources-sdk/streaming/getting-started.md)
-      - [Verbindungsspezifikation für eine Streaming-Quelle erstellen](sources-sdk/streaming/create.md)
-      - [Verbindungsspezifikation für eine Streaming-Quelle aktualisieren](sources-sdk/streaming/update-connection-specs.md)
-      - [Streaming-Flussspezifikation aktualisieren](sources-sdk/streaming/update-flow-specs.md)
-      - [Testen und Senden Ihrer Verbindungsspezifikation zur Verifizierung](sources-sdk/streaming/submit.md)
-      - [Dokumentieren Ihrer Quelle (Streaming-SDK)](sources-sdk/streaming/document-streaming.md)
-      - [Dokumentation zur Self-Service-API-Streaming-Vorlage](sources-sdk/streaming/streaming-template-api.md)
-      - [Dokumentation zur Self-Service-UI-Streaming-Vorlage](sources-sdk/streaming/streaming-template-ui.md)
+      - [Erste Schritte mit Selbstbedienungsquellen (Streaming-SDK)](sources-sdk/streaming/getting-started.md)
+      - [Erstellen einer Verbindungsspezifikation für eine Streaming-Quelle](sources-sdk/streaming/create.md)
+      - [Aktualisierung einer Verbindungsspezifikation für eine Streaming-Quelle](sources-sdk/streaming/update-connection-specs.md)
+      - [Aktualisieren der Streaming-Flussspezifikation](sources-sdk/streaming/update-flow-specs.md)
+      - [Testen und Senden einer Verbindungsspezifikation zur Verifizierung](sources-sdk/streaming/submit.md)
+      - [Dokumentieren einer Quelle (Streaming-SDK)](sources-sdk/streaming/document-streaming.md)
+      - [Dokumentation einer Streaming-Vorlage für eine Selbstbedienungs-API](sources-sdk/streaming/streaming-template-api.md)
+      - [Dokumentation einer Streaming-Vorlage für eine Selbstbedienungs-Benutzeroberfläche](sources-sdk/streaming/streaming-template-ui.md)
 - [Flusslaufbenachrichtigungen](notifications.md)
 - [IP-Adressen-Zulassungsliste](ip-address-allow-list.md)
 - [Häufig gestellte Fragen](./troubleshooting.md)

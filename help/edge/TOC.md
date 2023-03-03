@@ -8,7 +8,7 @@ feature: Web SDK
 source-git-commit: b53be9f2f2d55d5f9e8081fb0ca6732dcc2a8c11
 workflow-type: tm+mt
 source-wordcount: '209'
-ht-degree: 77%
+ht-degree: 94%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 77%
    * [Debugging](fundamentals/debugging.md)
    * [Konfigurieren eines CSP](fundamentals/configuring-a-csp.md)
    * [Interaktion mit mehreren Eigenschaften](fundamentals/interacting-with-multiple-properties.md)
-   * [Benutzeragenten-Client-Hinweise](fundamentals/user-agent-client-hints.md)
+   * [Benutzeragent-Client-Hinweise](fundamentals/user-agent-client-hints.md)
 * Datenströme {#datastreams}
    * [Übersicht](./datastreams/overview.md)
    * [Konfigurieren eines Datenstroms](./datastreams/configure.md)
@@ -55,12 +55,12 @@ ht-degree: 77%
       * [Übersicht](personalization/adobe-target/target-overview.md)
       * [Implementierung von Einzelseitenanwendungen](personalization/adobe-target/spa-implementation.md)
       * [Zugriff auf Antwort-Token](personalization/adobe-target/accessing-response-tokens.md)
-      * [Verwenden der Mbox-Drittanbieter-ID](personalization/adobe-target/using-mbox-3rdpartyid.md)
+      * [Verwenden der mBox-Drittanbieter-ID](personalization/adobe-target/using-mbox-3rdpartyid.md)
       * [Vergleich der at.js-Bibliothek mit dem Web SDK](personalization/adobe-target/web-sdk-atjs-comparison.md)
-      * Protokollierung von Analytics for Target (A4T) {#a4t}
+      * Analytics for Target(A4T)-Protokollierung {#a4t}
          * [Überblick](personalization/adobe-target/analytics-logging/overview.md)
          * [Client-seitig Protokollierung](personalization/adobe-target/analytics-logging/client-side.md)
-         * [Serverseitige Protokollierung](personalization/adobe-target/analytics-logging/server-side.md)
+         * [Server-seitige Protokollierung](personalization/adobe-target/analytics-logging/server-side.md)
    * Offer Decisioning {#offer-decisioning}
       * [Übersicht](personalization/offer-decisioning/offer-decisioning-overview.md)
    * Adobe Journey Optimizer {#ajo}
