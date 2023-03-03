@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Benutzerhandbuch; Kundenunterstützung; beliebte Themen; Zugriffskontrollen; Modell erstellen
+keywords: Experience Platform; Benutzerhandbuch; Kundinnen- und Kunden-KI; beliebte Themen; Zugriffskontrollen; Modell erstellen;
 solution: Experience Platform
 feature: Customer AI
-title: Zugriffskontrolle für Customer AI
-description: Dieses Dokument enthält Informationen zur attributbasierten Zugriffskontrolle für Customer AI.
+title: Zugriffskontrolle für Kundinnen- und Kunden-KI
+description: Dieses Dokument enthält Informationen zur attributbasierten Zugriffskontrolle für Kundinnen- und Kunden-KI.
 source-git-commit: 6f386d859b8553050ead266fad0e473c7cf7095e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '516'
-ht-degree: 37%
+ht-degree: 100%
 
 ---
 
@@ -16,33 +16,33 @@ ht-degree: 37%
 
 >[!IMPORTANT]
 >
->Die attributbasierte Zugriffskontrolle ist derzeit nur in einer eingeschränkten Version verfügbar.
+>Die attributbasierte Zugriffssteuerung ist derzeit nur in einer eingeschränkten Version verfügbar.
 
-[Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Platform, mit der Administrierende den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen steuern können.](../../../access-control/abac/overview.md) Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. eine Bezeichnung, die einem Schemafeld oder Segment hinzugefügt wird. Administrierende definieren Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten.
+Die [attributbasierte Zugriffssteuerung](../../../access-control/abac/overview.md) ist eine Funktion von Adobe Experience Platform, mit der Admins den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen steuern können. Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. eine Bezeichnung, die einem Schemafeld oder Segment hinzugefügt wird. Administrierende definieren Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten.
 
 Mit der attributbasierten Zugriffssteuerung können Sie Schemafelder des Experience-Datenmodells (XDM) mit Bezeichnungen versehen, die Organisations- oder Datennutzungsbereiche definieren. Parallel dazu können Admins die Benutzeroberfläche zur Verwaltung von Benutzenden und Rollen verwenden, um Zugriffsrichtlinien zu definieren, die XDM-Schemafelder abdecken, und den Zugriff, der Benutzenden oder Gruppen von Benutzenden (internen, externen oder Dritten) gewährt wird, besser verwalten. Darüber hinaus ermöglicht die attributbasierte Zugriffskontrolle Admins die Verwaltung des Zugriffs auf bestimmte Segmente.
 
-Mithilfe der attributbasierten Zugriffskontrolle können Administratoren Ihres Unternehmens den Zugriff der Benutzer auf sowohl sensible persönliche Daten (EPPD) als auch personenbezogene Daten (PII) in allen Platform-Workflows und -Ressourcen steuern. Admins können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
+Mithilfe der attributbasierten Zugriffssteuerung können Admins Ihrer Organisation den Zugriff der Benutzenden sowohl auf sensible persönliche Daten (Sensitive Personal Data, SPD) als auch auf personenbezogene Daten (PII) für alle Platform-Workflows und -Ressourcen steuern. Admins können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
 
-Aufgrund der attributbasierten Zugriffskontrolle wären für einige Felder und Funktionen Zugriffsbeschränkungen eingeschränkt und für bestimmte Customer AI-Dienstmodelle nicht verfügbar. Beispiele sind &quot;Identität&quot;, &quot;Score-Definition&quot;und &quot;Klon&quot;.
+Aufgrund der attributbasierten Zugriffskontrolle hätten einige Felder und Funktionen Zugriffsbeschränkungen und wären für bestimmte Kundinnen- und Kunden-KI-Service-Modelle nicht verfügbar. Beispiele sind „Identität“, „Bewertungsdefinition“ und „Klon“.
 
-![Der Arbeitsbereich Customer AI mit den eingeschränkten Feldern des Dienstmodells wird hervorgehoben.](../images/user-guide/unavailable-functionalities.png)
+![Der Arbeitsbereich für die Kundinnen- oder Kunden-KI mit den eingeschränkten Feldern des Service-Modells wird hervorgehoben.](../images/user-guide/unavailable-functionalities.png)
 
-Am oberen Rand des Arbeitsbereichs &quot;Customer AI&quot; **Insight-Seite** Beachten Sie, dass die Details in der Seitenleiste, der Bewertungsdefinition, der Identität und den Profilattributen alle &quot;Zugriff eingeschränkt&quot;anzeigen.
+Am oberen Rand der **Insight-Seite** des Arbeitsbereichs der Kundinnen- und Kunden-KI sehen Sie, dass die Details in der Seitenleiste, Bewertungsdefinition, Identität und Profilattribute alle „Zugriff eingeschränkt“ anzeigen.
 
-![Der Arbeitsbereich Customer AI mit den eingeschränkten Feldern des Schemas wird hervorgehoben.](../images/user-guide/access-restricted.png)
+![Der Arbeitsbereich der Kundinnen- und Kunden-KI mit den eingeschränkten Feldern des Schemas wird hervorgehoben.](../images/user-guide/access-restricted.png)
 
-Bei der Vorschau von Datensätzen mit eingeschränktem Schema auf der **[!UICONTROL Modell-Workflow erstellen]** angezeigt wird, erscheint ein Warnhinweis, der Ihnen mitteilt, dass [!UICONTROL Aufgrund von Zugriffsbeschränkungen werden bestimmte Informationen nicht in der Datensatzvorschau angezeigt.]
+Bei der Vorschau von Datensätzen mit eingeschränktem Schema auf der Seite **[!UICONTROL Modell-Workflow erstellen]** erscheint ein Warnhinweis, der Ihnen Folgendes mitteilt: [!UICONTROL Aufgrund von Zugriffsbeschränkungen werden bestimmte Informationen nicht in der Datensatzvorschau angezeigt.]
 
-![Der Customer AI-Arbeitsbereich mit den eingeschränkten Feldern der Vorschau-Datensätze mit eingeschränkten Schemaergebnissen hervorgehoben.](../images/user-guide/restricted-dataset-preview-save-and-exit-cai.png)
+![Der Arbeitsbereich der Kundinnen- und Kunden-KI mit den eingeschränkten Feldern der Vorschaudatensätze mit eingeschränkten Schemaergebnissen wird hervorgehoben.](../images/user-guide/restricted-dataset-preview-save-and-exit-cai.png)
 
-Nachdem Sie ein Modell mit eingeschränkten Informationen erstellt haben, fahren Sie mit dem **[!UICONTROL Ziel definieren]** Schritt, wird oben eine Warnung angezeigt: [!UICONTROL Aufgrund von Zugriffsbeschränkungen werden bestimmte Informationen nicht in der Konfiguration angezeigt.]
+Nachdem Sie ein Modell mit eingeschränkten Informationen erstellt haben und mit dem Schritt **[!UICONTROL Ziel festlegen]** fortfahren, wird oben eine Warnung angezeigt: [!UICONTROL Aufgrund von Zugriffsbeschränkungen werden bestimmte Informationen nicht in der Konfiguration angezeigt.]
 
-![Der Arbeitsbereich Customer AI mit den eingeschränkten Feldern des Dienstmodells wird hervorgehoben.](../images/user-guide/information-not-displayed-save-and-exit.png)
+![Der Arbeitsbereich der Kundinnen- und Kunden-KI mit den eingeschränkten Feldern des Service-Modells wird hervorgehoben.](../images/user-guide/information-not-displayed-save-and-exit.png)
 
-Bei Verwendung der Zugriffssteuerung muss die **Anzeigen von Customer AI** und **Customer AI verwalten** -Berechtigungen gewähren Zugriff auf verschiedene Funktionen von Customer AI. Die **Customer AI verwalten** -Berechtigung **erstellen**,**update**, **delete**, **enable** oder **disable** ein Modell während **Anzeigen von Customer AI** Sie können sie lesen oder anzeigen. Die **erstellen**, **update** und **delete** -Aktionen werden in Auditprotokollen aufgezeichnet.
+Bei Verwendung der Zugriffssteuerung gewähren die Berechtigungen **Anzeigen der Kundinnen- und Kunden-KI** und **Verwalten der Kundinnen- und Kunden-KI** Zugriff auf verschiedene Funktionen der Kundinnen- und Kunden-KI. Die Berechtigung **Verwalten der Kundinnen- und Kunden-KI** erlaubt es Ihnen, ein Modell zu **erstellen**, zu **aktualisieren**, zu **löschen**, zu **aktivieren** oder zu **deaktivieren**, während Sie es mit **Anzeigen der Kundinnen- und Kunden-KI** lesen bzw. anzeigen können. Die Aktionen **Erstellen**, **Aktualisieren** und **Löschen** werden in Adminprotokollen aufgezeichnet.
 
-Weitere Informationen finden Sie in der Dokumentation . [Zuweisen von Berechtigungen für die Zugriffskontrolle](../../../access-control/home.md) oder wie [Verwenden Sie Auditprotokolle zur Überwachung von Zugriff und Aktivität.](../../../landing/governance-privacy-security/audit-logs/overview.md).
+Weitere Informationen finden Sie in der Dokumentation [Zuweisen von Berechtigungen für die Zugriffskontrolle](../../../access-control/home.md) oder [Verwenden von Adminprotokollen zur Überwachung von Zugriff und Aktivität](../../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Nächste Schritte
 
