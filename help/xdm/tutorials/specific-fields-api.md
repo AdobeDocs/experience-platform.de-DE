@@ -1,32 +1,32 @@
 ---
 title: Hinzufügen bestimmter Felder zu einem Schema mithilfe der Schema Registry-API
-description: Erfahren Sie, wie Sie mithilfe der Schema Registry-API einzelne Felder aus bereits vorhandenen Feldergruppen zu einem Experience-Datenmodell (XDM)-Schema hinzufügen.
+description: Erfahren Sie, wie Sie mithilfe der Schema Registry-API einzelne Felder aus bereits vorhandenen Feldergruppen zu einem Experience-Datenmodell(XDM)-Schema hinzufügen.
 source-git-commit: 4bcd949e901c11bb933000f7ae76f17134dda496
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '629'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 # Hinzufügen bestimmter Felder zu einem Schema mithilfe der Schema Registry-API
 
-Experience-Datenmodell (XDM)-Schemas bestehen aus einer Basisklasse, wobei zusätzliche Felder durch die Verwendung von Standardfeldgruppen eingeschlossen werden, die von der Adobe definiert werden, sowie aus benutzerdefinierten Feldergruppen, die von Ihrem Unternehmen definiert werden.
+Experience-Datenmodell(XDM)-Schemas bestehen aus einer Basisklasse, wobei zusätzliche Felder durch die Verwendung von Standardfeldgruppen eingeschlossen werden, die von Adobe definiert werden, sowie aus benutzerdefinierten Feldergruppen, die von Ihrem Unternehmen definiert werden.
 
-Beim Erstellen eines Schemas können Sie einige Felder aus einer bestimmten Feldergruppe verwenden und gleichzeitig andere Felder aus derselben Gruppe ausschließen, die Sie nicht benötigen. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Schema Registry-API einzelne Felder aus einer Feldergruppe zu einem Schema hinzufügen.
+Beim Erstellen eines Schemas können Sie einige Felder aus einer bestimmten Feldergruppe verwenden und gleichzeitig andere nicht benötigte Felder aus derselben Gruppe ausschließen. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Schema Registry-API einzelne Felder aus einer Feldergruppe zu einem Schema hinzufügen.
 
 >[!NOTE]
 >
->Informationen zum Hinzufügen und Entfernen einzelner Schemafelder in der Adobe Experience Platform-Benutzeroberfläche finden Sie im Handbuch unter [feldbasierte Workflows](../ui/field-based-workflows.md) (derzeit in der Beta-Phase).
+>Informationen zum Hinzufügen und Entfernen einzelner Schemafelder in der Adobe Experience Platform-Benutzeroberfläche finden Sie im Handbuch zu [feldbasierten Workflows](../ui/field-based-workflows.md) (derzeit in der Beta-Phase).
 
 ## Voraussetzungen
 
-Dieses Tutorial beinhaltet Aufrufe an die [Schema Registry-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Bevor Sie beginnen, lesen Sie bitte die [Entwicklerhandbuch](../api/getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich Ihrer `{TENANT_ID}`, das Konzept von Containern und die erforderlichen Kopfzeilen für Anfragen.
+Dieses Tutorial beinhaltet Aufrufe an die [Schema Registry-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Bevor Sie beginnen, lesen Sie das [Entwicklerhandbuch](../api/getting-started.md). Es enthält wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, u. a. zu Ihrer `{TENANT_ID}`, dem Konzept von Containern und den erforderlichen Headern für Anfragen.
 
-## Grundlagen zum `meta:refProperty` field
+## Grundlegendes zum Feld `meta:refProperty` 
 
-Für ein bestimmtes Schema werden die Klassen- und Feldergruppen, die die Struktur enthalten, unter dem `allOf` Array. Jede Komponente wird als Objekt dargestellt, das eine `$ref` -Eigenschaft, die auf den URI der Komponente verweist `$id`.
+Für ein bestimmtes Schema werden die Klassen- und Feldergruppen, die die Struktur enthalten, unter dem zugehörigen `allOf`-Array referenziert. Jede Komponente wird als Objekt mit einer `$ref`-Eigenschaft dargestellt, die auf den Komponenten-URI `$id` verweist.
 
-Die folgende JSON stellt ein vereinfachtes Schema dar, das eine einzelne Klasse (`experienceevent`) und Feldergruppe (`experienceevent-all`):
+Das folgende JSON stellt ein vereinfachtes Schema dar, das eine einzelne Klasse (`experienceevent`) und Feldergruppe (`experienceevent-all`) nutzt:
 
 ```json
 {
@@ -44,13 +44,13 @@ Die folgende JSON stellt ein vereinfachtes Schema dar, das eine einzelne Klasse 
 }
 ```
 
-Für alle Objekte im `allOf` Array, das auf eine Feldergruppe verweist, können Sie ein gleichrangiges `meta:refProperty` -Feld, um anzugeben, welche Felder in der Gruppe in das Schema aufgenommen werden sollen.
+Für alle Objekte im `allOf`-Array, das auf eine Feldergruppe verweist, können Sie ein gleichrangiges Feld `meta:refProperty` hinzufügen, um anzugeben, welche Felder in der Gruppe in das Schema aufgenommen werden sollen.
 
 >[!NOTE]
 >
->Jedes Feld wird mithilfe einer JSON Pointer-Zeichenfolge angegeben, die den Pfad zum Feld innerhalb der entsprechenden Feldergruppe darstellt. Die Zeichenfolge muss mit einem Schrägstrich (`/`) und sollte keine `properties` Namespaces. Beispiel: `/_experience/campaign/message/id`.
+>Jedes Feld wird mithilfe einer JSON Pointer-Zeichenfolge angegeben, die den Pfad zum Feld innerhalb der entsprechenden Feldergruppe darstellt. Die Zeichenfolge muss mit einem Schrägstrich (`/`) beginnen und sollte keine `properties`-Namespaces enthalten. Beispiel: `/_experience/campaign/message/id`.
 
-Wenn als Zeichenfolge angegeben, `meta:refProperty` kann sich auf ein einzelnes Feld in einer Gruppe beziehen. Andere Felder derselben Gruppe können mit derselben `$ref` Wert in einem anderen Objekt mit einer anderen `meta:refProperty` -Wert.
+Wenn als Zeichenfolge angegeben, kann `meta:refProperty` sich auf ein einzelnes Feld in einer Gruppe beziehen. Andere Felder derselben Gruppe können mit demselben `$ref`-Wert in einem anderen Objekt mit anderem `meta:refProperty`-Wert aufgenommen werden.
 
 ```json
 {
@@ -73,7 +73,7 @@ Wenn als Zeichenfolge angegeben, `meta:refProperty` kann sich auf ein einzelnes 
 }
 ```
 
-Alternativ: `meta:refProperty` kann als Array bereitgestellt werden, in dem Sie mehrere Felder angeben können, die aus einer bestimmten Gruppe in einer Gruppe einbezogen werden sollen `allOf` Listenelement:
+`meta:refProperty` kann auch als Array bereitgestellt werden, sodass Sie mehrere Felder angeben können, die aus einer bestimmten Gruppe innerhalb eines einzelnen `allOf`-Listenelements aufgenommen werden sollen:
 
 ```json
 {
@@ -96,9 +96,9 @@ Alternativ: `meta:refProperty` kann als Array bereitgestellt werden, in dem Sie 
 }
 ```
 
-## Felder mithilfe eines PUT-Vorgangs hinzufügen
+## Hinzufügen von Feldern mithilfe eines PUT-Vorgangs
 
-Sie können eine PUT-Anfrage verwenden, um ein ganzes Schema neu zu schreiben und die Felder zu konfigurieren, die Sie unter einbeziehen möchten `allOf`.
+Sie können eine PUT-Anfrage verwenden, um ein ganzes Schema neu zu schreiben und die Felder zu konfigurieren, die Sie unter `allOf` einschließen möchten.
 
 **API-Format**
 
@@ -108,11 +108,11 @@ PUT /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SCHEMA_ID}` | Die `meta:altId` oder URL-kodiert `$id` des Schemas, das Sie umschreiben möchten. |
+| `{SCHEMA_ID}` | Die `meta:altId` oder URL-codierte `$id` des Schemas, das Sie umschreiben möchten. |
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert die spezifischen Felder, die aus der Feldergruppe unter der `allOf` Array.
+Die folgende Anfrage aktualisiert die spezifischen Felder aus der Feldergruppe unter dem `allOf`-Array.
 
 ```shell
 curl -X PUT \
@@ -189,11 +189,11 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück.
 
 >[!NOTE]
 >
->Weitere Informationen zu PUT-Anfragen für Schemas finden Sie im Abschnitt [Endpunktleitfaden für Schemata](../api/schemas.md#put).
+>Weitere Informationen zu PUT-Anfragen für Schemata finden Sie im [Handbuch zu Schema-Endpunkten](../api/schemas.md#put).
 
-## Felder mithilfe eines PATCH-Vorgangs hinzufügen
+## Hinzufügen von Feldern mithilfe eines PATCH-Vorgangs
 
-Sie können eine PATCH-Anfrage verwenden, um einzelne Felder zu einem Schema hinzuzufügen, ohne andere zu überschreiben. Die Schema Registry unterstützt alle standardmäßigen JSON Patch-Vorgänge, einschließlich `add`, `remove`und `replace`. Weitere Informationen zum JSON Patch finden Sie im Abschnitt [API-Grundlagenhandbuch](../../landing/api-fundamentals.md#json-patch).
+Sie können eine PATCH-Anfrage verwenden, um einzelne Felder zu einem Schema hinzuzufügen, ohne andere zu überschreiben. Die Schema Registry-API unterstützt alle standardmäßigen JSON-Patch-Vorgänge, einschließlich `add`, `remove` und `replace`. Weitere Informationen zu JSON-Patch-Vorgängen finden Sie im [API-Grundlagenhandbuch](../../landing/api-fundamentals.md#json-patch).
 
 **API-Format**
 
@@ -203,11 +203,11 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SCHEMA_ID}` | Die `meta:altId` oder URL-kodiert `$id` des Schemas, das Sie umschreiben möchten. |
+| `{SCHEMA_ID}` | Die `meta:altId` oder URL-codierte `$id` des Schemas, das Sie umschreiben möchten. |
 
 **Anfrage**
 
-Die folgende Anfrage fügt dem Schema ein neues Objekt hinzu `allOf` Array, das die hinzuzufügenden Felder angibt.
+Die folgende Anfrage fügt dem Schema des `allOf`-Arrays ein neues Objekt hinzu. Dabei werden die hinzuzufügenden Felder angegeben.
 
 ```shell
 curl -X PATCH \
@@ -280,10 +280,10 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück.
 
 >[!NOTE]
 >
->Weitere Informationen zu PATCH-Anfragen für Schemas finden Sie im Abschnitt [Endpunktleitfaden für Schemata](../api/schemas.md#patch).
+>Weitere Informationen zu PATCH-Anfragen für Schemata finden Sie im [Handbuch zu Schema-Endpunkten](../api/schemas.md#patch).
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde die Verwendung von API-Aufrufen zum Hinzufügen einzelner Felder aus einer vorhandenen Feldergruppe zu einem Schema beschrieben. Weitere Informationen zum Ausführen ähnlicher feldbasierter Aufgaben in der Platform-Benutzeroberfläche finden Sie im Handbuch unter [feldbasierte Workflows](../ui/field-based-workflows.md).
+In diesem Handbuch wird die Verwendung von API-Aufrufen zum Hinzufügen einzelner Felder aus einer vorhandenen Feldergruppe zu einem Schema beschrieben. Weitere Informationen zum Ausführen ähnlicher feldbasierter Aufgaben in der Platform-Benutzeroberfläche finden Sie im Handbuch zu [feldbasierten Workflows](../ui/field-based-workflows.md).
 
-Weitere Informationen zu den Funktionen der Schema Registry-API finden Sie im Abschnitt [API-Übersicht](../api/overview.md) für eine vollständige Liste der Endpunkte und Prozesse.
+Weitere Informationen zu den Funktionen der Schema Registry-API und eine vollständige Liste der Endpunkte und Prozesse finden Sie in der [API-Übersicht](../api/overview.md).
