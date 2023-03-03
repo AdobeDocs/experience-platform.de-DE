@@ -1,9 +1,9 @@
 ---
 title: Profilexportverhalten
 description: Erfahren Sie, wie sich das Verhalten beim Profilexport zwischen den verschiedenen Integrationsmustern unterscheidet, die in Experience Platform-Zielen unterstützt werden.
-source-git-commit: 5d404d723ea0b7cc72c5188dcff1f59a1874cfe2
+source-git-commit: 90964189396b3b89f35a96eb4c04e248dc34b9b4
 workflow-type: tm+mt
-source-wordcount: '2979'
+source-wordcount: '2954'
 ht-degree: 97%
 
 ---
@@ -173,7 +173,7 @@ Die vollständige aktive Population des Segments wird täglich exportiert.
 
 | Was einen Zielexport bestimmt | In der exportierten Datei enthaltene Informationen |
 |---------|----------|
-| <ul><li>Der in der Benutzeroberfläche oder API festgelegte Exportzeitplan und die Benutzeraktion (Auswahl von [Datei jetzt exportieren](/help/destinations/ui/export-file-now.md) in der Benutzeroberfläche oder Verwendung der [Ad-hoc-Aktivierungs-API](/help/destinations/api/ad-hoc-activation-api.md)) bestimmen den Start eines Zielexports.</li><li>Alle Änderungen an der Segmentzugehörigkeit eines Profils, unabhängig davon, ob es für das Segment qualifiziert oder nicht qualifiziert ist, qualifizieren ein Profil für die Aufnahme in inkrementelle Exporte.</li></ul> | Bei vollständigen Dateiexporten wird die gesamte aktive Profilpopulation eines Segments, basierend auf der neuesten Segmentbewertung, in jeden Dateiexport einbezogen. Die neuesten Werte für jedes für den Export ausgewählte XDM-Attribut werden ebenfalls als Spalten in jeder Datei eingeschlossen. Beachten Sie, dass Profile mit dem Status &quot;Ausgeschlossen&quot;nicht in den Dateiexport einbezogen werden. |
+| <ul><li>Der in der Benutzeroberfläche oder API festgelegte Exportzeitplan und die Benutzeraktion (Auswahl von [Datei jetzt exportieren](/help/destinations/ui/export-file-now.md) in der Benutzeroberfläche oder Verwendung der [Ad-hoc-Aktivierungs-API](/help/destinations/api/ad-hoc-activation-api.md)) bestimmen den Start eines Zielexports.</li></ul> | Bei vollständigen Dateiexporten wird die gesamte aktive Profilpopulation eines Segments, basierend auf der neuesten Segmentbewertung, in jeden Dateiexport einbezogen. Die neuesten Werte für jedes für den Export ausgewählte XDM-Attribut werden ebenfalls als Spalten in jeder Datei eingeschlossen. Beachten Sie, dass Profile mit dem Status &quot;Ausgeschlossen&quot;nicht in den Dateiexport einbezogen werden. |
 
 {style=&quot;table-layout:fixed&quot;}
 
