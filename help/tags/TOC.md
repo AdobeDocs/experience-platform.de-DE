@@ -6,7 +6,7 @@ user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeige
 feature: Tags
 solution: Data Collection
 source-git-commit: e34661f70a3550e579afe5133d85f76b1125e004
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '961'
 ht-degree: 100%
 
@@ -282,7 +282,7 @@ ht-degree: 100%
       * [Callbacks](./api/endpoints/callbacks.md)
       * [Anmerkungen](./api/endpoints/notes.md)
       * [Profil](./api/endpoints/profile.md)
-      * [Durchsuchen](./api/endpoints/search.md)
+      * [Suche](./api/endpoints/search.md)
       * [Geheimnisse](./api/endpoints/secrets.md)
    * Handbücher {#guides}
       * [Delegaten-Deskriptor-IDs](./api/guides/delegate-descriptor-ids.md)
