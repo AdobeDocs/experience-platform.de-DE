@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffskontrolle;attri
 title: Anleitung zur attributbasierten Zugriffssteuerung (End-to-End)
 description: Dieses Dokument bietet eine durchgängige Anleitung zur attributbasierten Zugriffskontrolle in Adobe Experience Platform
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: bf6fd07404ac6d937aa8660a0de024173f24f5c9
+source-git-commit: 004f6183f597132629481e3792b5523317b7fb2f
 workflow-type: tm+mt
-source-wordcount: '2425'
-ht-degree: 11%
+source-wordcount: '1726'
+ht-degree: 13%
 
 ---
 
@@ -44,7 +44,8 @@ Sie werden:
 
 * [Rollen für Ihre Benutzer beschriften](#label-roles): Verwenden Sie das Beispiel eines Gesundheitsdienstleisters (ACME Business Group), dessen Marketinggruppe mit externen Agenturen zusammenarbeitet.
 * [Ressourcen beschriften (Schemafelder und Segmente)](#label-resources): Zuweisen der **[!UICONTROL PHI/Reguläre Gesundheitsdaten]** -Beschriftung für Schemaressourcen und -segmente.
-* [Erstellen Sie die Richtlinie, die sie miteinander verknüpft](#policy): Erstellen Sie eine Richtlinie, um die Beschriftungen in Ihren Ressourcen mit den Beschriftungen in Ihrer Rolle zu verknüpfen und den Zugriff auf Schemafelder und Segmente zu verweigern. Dadurch erhalten Benutzer mit übereinstimmenden Bezeichnungen Zugriff auf das Schemafeld und das Segment in allen Sandboxes.
+* 
+   * [Aktivieren Sie die Richtlinie, die sie miteinander verknüpft: ](#policy): Aktivieren Sie die Standardrichtlinie, um den Zugriff auf Schemafelder und Segmente zu verhindern, indem Sie die Beschriftungen in Ihren Ressourcen mit den Beschriftungen in Ihrer Rolle verbinden. Benutzer mit übereinstimmenden Bezeichnungen erhalten dann Zugriff auf das Schemafeld und das Segment für alle Sandboxes.
 
 ## Berechtigungen
 
@@ -152,82 +153,102 @@ Die **[!UICONTROL Bearbeiten von Bezeichnungen]** angezeigt, sodass Sie die Besc
 
 Wiederholen Sie die obigen Schritte mit **[!UICONTROL Insulin &lt;50]**.
 
-## Zugriffskontrollrichtlinie erstellen {#policy}
+## Zugriffssteuerungsrichtlinie aktivieren {#policy}
+
+Die standardmäßige Zugriffssteuerungsrichtlinie nutzt Beschriftungen, um zu definieren, welche Benutzerrollen Zugriff auf bestimmte Platform-Ressourcen haben. In diesem Beispiel wird der Zugriff auf Schemafelder und -segmente in allen Sandboxes Benutzern verweigert, die sich nicht in einer Rolle befinden, die über die entsprechenden Beschriftungen im Schemafeld verfügt.
+
+Um die Zugriffskontrollrichtlinie zu aktivieren, wählen Sie [!UICONTROL Berechtigungen] aus der linken Navigation und wählen Sie dann **[!UICONTROL Richtlinien]**.
+
+![Liste der angezeigten Richtlinien](../images/abac-end-to-end-user-guide/abac-policies-page.png)
+
+Wählen Sie als Nächstes die Auslassungszeichen (`...`) neben dem Richtliniennamen und in einem Dropdown-Menü werden Steuerelemente zum Bearbeiten, Aktivieren, Löschen oder Duplizieren der Rolle angezeigt. Auswählen **[!UICONTROL Aktivieren]** aus dem Dropdown-Menü aus.
+
+![Dropdown zur Aktivierung der Richtlinie](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
+
+Das Dialogfeld Richtlinie aktivieren wird angezeigt, in dem Sie zur Bestätigung der Aktivierung aufgefordert werden. Auswählen **[!UICONTROL Bestätigen]**.
+
+![Dialogfeld &quot;Richtlinie aktivieren&quot;](../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
+
+Die Aktivierung der Richtlinie wird bestätigt und Sie werden zum [!UICONTROL Richtlinien] Seite.
+
+![Richtlinienbestätigung aktivieren](../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
+
+<!-- ## Create an access control policy {#policy}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about"
->title="Was sind politische Maßnahmen?"
->abstract="Richtlinien sind Anweisungen, die Attribute zusammenbringen, um zulässige und unzulässige Handlungen festzustellen. Jede Organisation verfügt über eine Standardrichtlinie, die Sie aktivieren müssen, um Regeln für Ressourcen wie Segmente und Schemafelder zu definieren. Standardrichtlinien können weder bearbeitet noch gelöscht werden. Standardrichtlinien können jedoch aktiviert oder deaktiviert werden."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en" text="Verwalten von Richtlinien"
+>title="What are policies?"
+>abstract="Policies are statements that bring attributes together to establish permissible and impermissible actions. Every organization comes with a default policy that you must activate to define rules for resources like segments and schema fields. Default policies can neither be edited nor deleted. However, default policies can be activated or deactivated."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en" text="Manage policies"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about_create"
->title="Erstellen einer Richtlinie"
->abstract="Erstellen Sie eine Richtlinie, um die Aktionen zu definieren, die Ihre Benutzer für Ihre Segmente und Schemafelder ausführen können und nicht."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#create-a-new-policy" text="Erstellen einer Richtlinie"
+>title="Create a policy"
+>abstract="Create a policy to define the actions that your users can and cannot take against your segments and schema fields."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#create-a-new-policy" text="Create a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
->title="Zulässige und unzulässige Aktionen für eine Richtlinie konfigurieren"
->abstract="A <b>Zugriff auf verweigern</b> -Richtlinie verweigert Benutzern den Zugriff, wenn die Kriterien erfüllt sind. Kombiniert mit <b>Folgendes ist falsch</b> - allen Benutzern wird der Zugriff verweigert, es sei denn, sie erfüllen die entsprechenden Kriterien. Mit dieser Art von Richtlinie können Sie eine sensible Ressource schützen und nur den Zugriff auf Benutzer mit entsprechenden Beschriftungen zulassen. <br>A <b>den Zugriff auf</b> -Richtlinie ermöglicht Benutzern den Zugriff, wenn die Kriterien erfüllt sind. Bei Kombination mit <b>Folgendes ist wahr</b> - Benutzer erhalten Zugriff, wenn sie die entsprechenden Kriterien erfüllen. Dadurch wird Benutzern nicht explizit der Zugriff verweigert, sondern der Zugriff auf eine Genehmigung hinzugefügt. Mit dieser Art von Richtlinie können Sie zusätzlichen Zugriff auf Ressourcen und zusätzlich zu den Benutzern gewähren, die bereits über Rollenberechtigungen Zugriff haben.&quot;</br>
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Bearbeiten einer Richtlinie"
+>title="Configure permissible and impermissible actions for a policy"
+>abstract="A <b>deny access to</b> policy will deny users access when the criteria is met. Combined with <b>The following being false</b> - all users will be denied access unless they meet the matching criteria set. This type of policy allows you to protect a sensitive resource and only allow access to users with matching labels. <br>A <b>permit access to</b> policy will permit users access when the criteria are met. When combined with <b>The following being true</b> - users will be given access if they meet the matching criteria set. This does not explicitly deny access to users, but adds a permit access. This type of policy allows you to give additional access to resource and in addition to those users who might already have access through role permissions."</br>
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Edit a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_resource"
->title="Berechtigungen für Ressourcen konfigurieren"
->abstract="Eine Ressource ist das Asset oder Objekt, auf das ein Benutzer zugreifen kann oder nicht. Ressourcen können Segmente oder Schemafelder sein. Sie können Berechtigungen zum Schreiben, Lesen oder Löschen für Segmente und Schemafelder konfigurieren."
+>title="Configure permissions for a resource"
+>abstract="A resource is the asset or object that a user can or cannot access. Resources can be segments or schemas fields. You can configure write, read, or delete permissions for segments and schema fields."
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_condition"
->title="Bedingungen bearbeiten"
->abstract="Wenden Sie bedingte Anweisungen auf Ihre Richtlinie an, um den Benutzerzugriff auf bestimmte Ressourcen zu konfigurieren. Wählen Sie &quot;Übereinstimmung mit allen&quot;aus, damit Benutzer Rollen mit denselben Bezeichnungen wie eine Ressource erhalten, für die der Zugriff gestattet werden soll. Wählen Sie Entsprechung für alle aus, damit Benutzer nur eine Rolle mit einer Bezeichnung haben müssen, die einer Ressource entspricht. Beschriftungen können entweder als Kern- oder benutzerdefinierte Beschriftungen definiert werden. Kernbeschriftungen stellen von Adobe erstellte und bereitgestellte Beschriftungen dar und stellen benutzerdefinierte Beschriftungen dar, die von Ihnen für Ihr Unternehmen erstellte Beschriftungen darstellen."
+>title="Edit conditions"
+>abstract="Apply conditional statements to your policy to configure user access to certain resources. Select match all to require users to have roles with the same labels as a resource to be permitted access. Select match any to require users to have a role with just one label matching a label on a resource. Labels can either be defined as core or custom labels, with core labels representing labels created and provided by Adobe and custom labels representing labels that you created for your organization."
 
-Zugriffssteuerungsrichtlinien nutzen Beschriftungen, um zu definieren, welche Benutzerrollen Zugriff auf bestimmte Platform-Ressourcen haben. Richtlinien können lokal oder global sein und andere Richtlinien überschreiben. In diesem Beispiel wird der Zugriff auf Schemafelder und Segmente in allen Sandboxes Benutzern verweigert, die nicht über die entsprechenden Beschriftungen im Schemafeld verfügen.
+Access control policies leverage labels to define which user roles have access to specific Platform resources. Policies can either be local or global and can override other policies. In this example, access to schema fields and segments will be denied in all sandboxes for users who don't have the corresponding labels in the schema field.
 
 >[!NOTE]
 >
->Es wird eine &quot;Richtlinie zum Verweigern&quot;erstellt, um Zugriff auf sensible Ressourcen zu gewähren, da die Rolle den Personen Berechtigungen erteilt. Die geschriebene Richtlinie in diesem Beispiel **Leugnungen** Sie greifen auf zu, wenn Sie die erforderlichen Beschriftungen fehlen.
+>A "deny policy" is created to grant access to sensitive resources because the role grants permission to the subjects. The written policy in this example **denies** you access if you are missing the required labels.
 
-Um eine Zugriffskontrollrichtlinie zu erstellen, wählen Sie **[!UICONTROL Berechtigungen]** aus der linken Navigation und wählen Sie dann **[!UICONTROL Richtlinien]**. Wählen Sie als Nächstes **[!UICONTROL Richtlinie erstellen]**.
+To create an access control policy, select **[!UICONTROL Permissions]** from the left navigation and then select **[!UICONTROL Policies]**. Next, select **[!UICONTROL Create policy]**.
 
-![Bild mit der Option Richtlinie erstellen , die in den Berechtigungen ausgewählt wird](../images/abac-end-to-end-user-guide/abac-create-policy.png)
+![Image showing Create policy being selected in the Permissions](../images/abac-end-to-end-user-guide/abac-create-policy.png)
 
-Die **[!UICONTROL Neue Richtlinie erstellen]** angezeigt, in dem Sie aufgefordert werden, einen Namen und eine optionale Beschreibung einzugeben. Auswählen **[!UICONTROL Bestätigen]** wenn fertig.
+The **[!UICONTROL Create new policy]** dialog appears, prompting you to enter a name and an optional description. Select **[!UICONTROL Confirm]** when finished.
 
-![Bild mit dem Dialogfeld Neue Richtlinie erstellen und Bestätigen auswählen](../images/abac-end-to-end-user-guide/abac-create-policy-details.png)
+![Image showing the Create new policy dialog and selecting Confirm](../images/abac-end-to-end-user-guide/abac-create-policy-details.png)
 
-Um den Zugriff auf die Schemafelder zu verweigern, verwenden Sie den Dropdown-Pfeil und wählen Sie **[!UICONTROL Zugriff auf verweigern]** und wählen Sie **[!UICONTROL Keine Ressource ausgewählt]**. Wählen Sie als Nächstes **[!UICONTROL Schemafeld]** und wählen Sie **[!UICONTROL Alle]**.
+To deny access to the schema fields, use the dropdown arrow and select **[!UICONTROL Deny access to]** and then select **[!UICONTROL No resource selected]**. Next, select **[!UICONTROL Schema Field]** and then select **[!UICONTROL All]**.
 
-![Bild mit Auswahl von Zugriff und Ressourcen verweigern](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-schema.png)
+![Image showing Deny access and resources selected](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-schema.png)
 
-Die folgende Tabelle zeigt die Bedingungen, die beim Erstellen einer Richtlinie verfügbar sind:
+The table below shows the conditions available when creating a policy:
 
-| Bedingungen | Beschreibung |
+| Conditions | Description |
 | --- | --- |
-| Folgendes ist falsch | Wenn &quot;Zugriff auf verweigern&quot;festgelegt ist, wird der Zugriff eingeschränkt, wenn der Benutzer die ausgewählten Kriterien nicht erfüllt. |
-| Folgendes ist wahr | Wenn die Option &quot;Zugriff auf gewähren&quot;festgelegt ist, ist der Zugriff zulässig, wenn der Benutzer die ausgewählten Kriterien erfüllt. |
-| Entspricht allen | Der Benutzer verfügt über eine Beschriftung, die allen auf eine Ressource angewendeten Bezeichnungen entspricht. |
-| Entspricht allen | Der Benutzer verfügt über alle Bezeichnungen, die mit allen Bezeichnungen übereinstimmen, die auf eine Ressource angewendet werden. |
-| Core-Bezeichnung | Eine Kernbeschriftung ist eine von der Adobe definierte Bezeichnung, die in allen Platform-Instanzen verfügbar ist. |
-| Eigene Bezeichnung | Eine benutzerdefinierte Bezeichnung ist eine Bezeichnung, die von Ihrem Unternehmen erstellt wurde. |
+| The following being false| When 'Deny access to' is set, access will be restricted if the user does not meet the criteria selected. |
+| The following being true| When 'Permit access to' is set, access will be permitted if the user meets the selected criteria. |
+| Matches any| The user has a label that matches any label applied to a resource. |
+| Matches all| The user has all labels that matches all labels applied to a resource. |
+| Core label| A core label is an Adobe-defined label that is available in all Platform instances.|
+| Custom label| A custom label is a label that has been created by your organization.|
 
-Auswählen **[!UICONTROL Folgendes ist falsch]** und wählen Sie **[!UICONTROL Kein Attribut ausgewählt]**. Wählen Sie als Nächstes den Benutzer aus. **[!UICONTROL Core-Bezeichnung]**, wählen Sie **[!UICONTROL Entspricht allen]**. Ressource auswählen **[!UICONTROL Core-Bezeichnung]** und wählen Sie schließlich **[!UICONTROL Ressource hinzufügen]**.
+Select **[!UICONTROL The following being false]** and then select **[!UICONTROL No attribute selected]**. Next, select the user **[!UICONTROL Core label]**, then select **[!UICONTROL Matches all]**. Select the resource **[!UICONTROL Core label]** and finally select **[!UICONTROL Add resource]**.
 
-![Bild mit den ausgewählten Bedingungen und der ausgewählten Ressource hinzufügen](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-schema-expression.png)
+![Image showing the conditions being selected and Add resource being selected](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-schema-expression.png)
 
 >[!TIP]
 >
->Eine Ressource ist das Asset oder Objekt, auf das ein Subjekt zugreifen kann oder nicht. Ressourcen können Segmente oder Schemata sein.
+>A resource is the asset or object that a subject can or cannot access. Resources can be segments or schemas.
 
-Um den Zugriff auf die Segmente zu verweigern, verwenden Sie den Dropdown-Pfeil und wählen Sie **[!UICONTROL Zugriff auf verweigern]** und wählen Sie **[!UICONTROL Keine Ressource ausgewählt]**. Wählen Sie als Nächstes **[!UICONTROL Segment]** und wählen Sie **[!UICONTROL Alle]**.
+To deny access to the segments, use the dropdown arrow and select **[!UICONTROL Deny access to]** and then select **[!UICONTROL No resource selected]**. Next, select **[!UICONTROL Segment]** and then select **[!UICONTROL All]**.
 
-Auswählen **[!UICONTROL Folgendes ist falsch]** und wählen Sie **[!UICONTROL Kein Attribut ausgewählt]**. Wählen Sie als Nächstes den Benutzer aus. **[!UICONTROL Core-Bezeichnung]**, wählen Sie **[!UICONTROL Entspricht allen]**. Ressource auswählen **[!UICONTROL Core-Bezeichnung]** und wählen Sie schließlich **[!UICONTROL Speichern]**.
+Select **[!UICONTROL The following being false]** and then select **[!UICONTROL No attribute selected]**. Next, select the user **[!UICONTROL Core label]**, then select **[!UICONTROL Matches all]**. Select the resource **[!UICONTROL Core label]** and finally select **[!UICONTROL Save]**.
 
-![Bild mit ausgewählten Bedingungen und ausgewähltem Speichern](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-segment.png)
+![Image showing conditions selected and Save being selected](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-segment.png)
 
-Auswählen **[!UICONTROL Aktivieren]** um die Richtlinie zu aktivieren. Daraufhin wird ein Dialogfeld angezeigt, in dem Sie zur Bestätigung der Aktivierung aufgefordert werden. Auswählen **[!UICONTROL Bestätigen]** und wählen Sie **[!UICONTROL Schließen]**.
+Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears which prompts you to confirm activation. Select **[!UICONTROL Confirm]** and then select **[!UICONTROL Close]**.
 
-![Bild mit der aktivierten Richtlinie ](../images/abac-end-to-end-user-guide/abac-create-policy-activation.png)
+![Image showing the Policy being activated ](../images/abac-end-to-end-user-guide/abac-create-policy-activation.png) -->
 
 ## Nächste Schritte
 

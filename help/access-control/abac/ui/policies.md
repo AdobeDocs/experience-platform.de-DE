@@ -3,137 +3,138 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;attri
 title: Richtlinien zur Zugriffssteuerung verwalten
 description: Dieses Dokument enthält Informationen zum Verwalten von Zugriffskontrollrichtlinien über die Benutzeroberfläche "Berechtigungen"in Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 504c73fc73ce41f2c1b3159478fc7fe9b4d20a9d
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 86%
+source-wordcount: '251'
+ht-degree: 31%
 
 ---
 
 # Richtlinien zur Zugriffskontrolle verwalten
 
-Zugriffskontrollrichtlinien sind Anweisungen, die Attribute zusammenführen, um zulässige und unzulässige Maßnahmen festzulegen. Zugriffsrichtlinien können entweder lokal oder global sein und andere Richtlinien überschreiben.
+Zugriffskontrollrichtlinien sind Anweisungen, die Attribute zusammenführen, um zulässige und unzulässige Maßnahmen festzulegen. Zugriffsrichtlinien können entweder lokal oder global sein und andere Richtlinien überschreiben. Adobe bietet eine Standardrichtlinie, die sofort oder sobald Ihr Unternehmen bereit ist, den Zugriff auf bestimmte Objekte anhand von Bezeichnungen zu steuern, aktiviert werden kann. Die Standardrichtlinie nutzt Beschriftungen, die auf Ressourcen angewendet werden, um den Zugriff zu verweigern, es sei denn, die Benutzer haben eine Rolle mit einer übereinstimmenden Beschriftung.
 
 >[!IMPORTANT]
 >
 >Zugriffsrichtlinien dürfen nicht mit Datennutzungsrichtlinien verwechselt werden, die steuern, wie Daten in Adobe Experience Platform verwendet werden, anstatt welche Benutzer in Ihrem Unternehmen Zugriff darauf haben. Siehe Handbuch zum Erstellen [Datennutzungsrichtlinien](../../../data-governance/policies/create.md) für weitere Informationen.
 
-## Erstellen einer neuen Richtlinie
+<!-- ## Create a new policy
 
-Um eine neue Richtlinie zu erstellen, wählen Sie die Registerkarte **[!UICONTROL Richtlinien]** in der Seitenleiste aus und klicken Sie auf **[!UICONTROL Richtlinie erstellen]**.
+To create a new policy, select the **[!UICONTROL Policies]** tab in the sidebar and select **[!UICONTROL Create Policy]**.
 
 ![flac-new-policy](../../images/flac-ui/flac-new-policy.png)
 
-Das Dialogfeld **[!UICONTROL Neue Richtlinie erstellen]** wird angezeigt, in dem Sie aufgefordert werden, einen Namen und eine optionale Beschreibung einzugeben. Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Bestätigen]**.
+The **[!UICONTROL Create a new policy]** dialog appears, prompting you to enter a name, and an optional description. When finished, select **[!UICONTROL Confirm]**.
 
 ![flac-create-new-policy](../../images/flac-ui/flac-create-new-policy.png)
 
-Wählen Sie mithilfe des Dropdown-Pfeils aus, ob Sie **Zugriff auf eine Ressource zulassen** (![flac-permission-access-to](../../images/flac-ui/flac-permit-access-to.png)) oder **Zugriff auf eine Ressource verweigern** (![flac-deny-access-to](../../images/flac-ui/flac-deny-access-to.png)) möchten.
+Using the dropdown arrow select if you would like to **Permit access to** (![flac-permit-access-to](../../images/flac-ui/flac-permit-access-to.png)) a resource or **Deny access to** (![flac-deny-access-to](../../images/flac-ui/flac-deny-access-to.png)) a resource.
 
-Wählen Sie anschließend über das Dropdown-Menü die Ressource aus, die Sie in die Richtlinie aufnehmen möchten, und suchen Sie nach dem Zugriffstyp (Lesen oder Schreiben).
+Next, select the resource that you would like to include in the policy using the dropdown menu and search access type, read or write.
 
 ![flac-flac-policy-resource-dropdown](../../images/flac-ui/flac-policy-resource-dropdown.png)
 
-Wählen Sie anschließend mithilfe des Dropdown-Pfeils die Bedingung aus, die Sie auf diese Richtlinie anwenden möchten: **Folgendes ist wahr** (![flac-policy-true](../../images/flac-ui/flac-policy-true.png)) oder **Folgendes ist falsch** (![flac-policy-false](../../images/flac-ui/flac-policy-false.png)).
+Next, using the dropdown arrow select the condition you would like to apply to this policy, **The following being true** (![flac-policy-true](../../images/flac-ui/flac-policy-true.png)) or **The following being false** (![flac-policy-false](../../images/flac-ui/flac-policy-false.png)).
 
-Klicken Sie auf das Pluszeichen, um für die Ressource einen **Ausdruck für Übereinstimmungen** oder eine **Ausdrucksgruppe** hinzuzufügen.
+Select the plus icon to **Add matches expression** or **Add expression group** for the resource. 
 
 ![flac-policy-expression](../../images/flac-ui/flac-policy-expression.png)
 
-Wählen Sie mithilfe des Dropdown-Menüs die **Ressource** aus.
+Using the dropdown, select the **Resource**.
 
 ![flac-policy-resource-dropdown](../../images/flac-ui/flac-policy-resource-dropdown-1.png)
 
-Wählen Sie anschließend mithilfe des Dropdown-Menüs die **Übereinstimmungen** aus.
+Next, using the dropdown select the **Matches**.
 
 ![flac-policy-matches-dropdown](../../images/flac-ui/flac-policy-matches-dropdown.png)
 
-Wählen Sie anschließend mithilfe des Dropdown-Menüs den Titel (**[!UICONTROL Core-Bezeichnung]** oder **[!UICONTROL Benutzerdefinierte Bezeichnung]**) aus, sodass er mit der dem Benutzer in den Rollen zugewiesenen Bezeichnung übereinstimmt.
+Next, using the dropdown, select the type of label (**[!UICONTROL Core label]** or **[!UICONTROL Custom label]**) to match the label assigned to the User in roles.
 
 ![flac-policy-user-dropdown](../../images/flac-ui/flac-policy-user-dropdown.png)
 
-Wählen Sie abschließend mithilfe des Dropdown-Menüs die **Sandbox** aus, auf die die Richtlinienbedingungen angewendet werden sollen.
+Finally, select the **Sandbox** that you would like the policy conditions to apply to, using the dropdown menu.
 
 ![flac-policy-sandboxes-dropdown](../../images/flac-ui/flac-policy-sandboxes-dropdown.png)
 
-Wählen Sie **Ressource hinzufügen** aus, um weitere Ressourcen hinzuzufügen. Klicken Sie dann auf **[!UICONTROL Speichern und beenden]**.
+Select **Add resource** to add more resources. Once finished, select **[!UICONTROL Save and exit]**.
 
 ![flac-policy-save-and-exit](../../images/flac-ui/flac-policy-save-and-exit.png)
 
-Die neue Richtlinie wurde erfolgreich erstellt, und Sie werden zur Registerkarte **[!UICONTROL Richtlinien]** weitergeleitet, wo die neu erstellte Richtlinie in der Liste angezeigt wird.
+The new policy is successfully created, and you are redirected to the **[!UICONTROL Policies]** tab, where you will see the newly created policy appear in the list. 
 
 ![flac-policy-saved](../../images/flac-ui/flac-policy-saved.png)
 
-## Bearbeiten einer Richtlinie
+## Edit a policy
 
-Um eine vorhandene Richtlinie zu bearbeiten, wählen Sie die Richtlinie auf der Registerkarte **[!UICONTROL Richtlinien]** aus. Alternativ können Sie die Filteroption verwenden, um die Ergebnisse zu filtern und die Richtlinie zu finden, die Sie bearbeiten möchten.
+To edit an existing policy, select the policy from the **[!UICONTROL Policies]** tab. Alternatively, use the filter option to filter the results to find the policy you want to edit.
 
 ![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
 
-Klicken Sie als Nächstes auf das Auslassungszeichen (`…`) neben dem Richtliniennamen. In einem Dropdown-Menü werden dann Steuerelemente zum Bearbeiten, Deaktivieren, Löschen oder Duplizieren der Rolle angezeigt. Wählen Sie „Bearbeiten“ aus dem Dropdown-Menü aus.
+Next, select the ellipsis (`…`) next to the policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select edit from the dropdown.
 
 ![flac-policy-edit](../../images/flac-ui/flac-policy-edit.png)
 
-Der Bildschirm „Richtlinienberechtigungen“ wird angezeigt. Nehmen Sie die Aktualisierungen vor und klicken Sie auf **[!UICONTROL Speichern und beenden]**.
+The policy permissions screen appears. Make the updates then select **[!UICONTROL Save and exit]**.
 
 ![flac-policy-save-and-exit](../../images/flac-ui/flac-policy-save-and-exit.png)
 
-Die Richtlinie wurde erfolgreich aktualisiert, und Sie werden zur Registerkarte **[!UICONTROL Richtlinien]** weitergeleitet.
+The policy is successfully updated, and you are redirected to the **[!UICONTROL Policies]** tab.
 
-## Duplizieren einer Richtlinie
+## Duplicate a policy
 
-Um eine vorhandene Richtlinie zu duplizieren, wählen Sie die Richtlinie auf der Registerkarte **[!UICONTROL Richtlinien]** aus. Alternativ können Sie die Filteroption verwenden, um die Ergebnisse zu filtern und die Richtlinie zu finden, die Sie bearbeiten möchten.
+To duplicate an existing policy, select the policy from the **[!UICONTROL Policies]** tab. Alternatively, use the filter option to filter the results to find the policy you want to edit.
 
 ![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
 
-Klicken Sie als Nächstes auf das Auslassungszeichen (`…`) neben einem Richtliniennamen. In einem Dropdown-Menü werden dann Steuerelemente zum Bearbeiten, Deaktivieren, Löschen oder Duplizieren der Rolle angezeigt. Wählen Sie „Duplizieren“ aus dem Dropdown-Menü aus.
+Next, select the ellipsis (`…`) next to a policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select duplicate from the dropdown.
 
 ![flac-policy-duplicate](../../images/flac-ui/flac-policy-duplicate.png)
 
-Das Dialogfeld **[!UICONTROL Richtlinie duplizieren]** wird angezeigt, in dem Sie aufgefordert werden, die Duplizierung zu bestätigen.
+The **[!UICONTROL Duplicate policy]** dialog appears, prompting you to confirm the duplication. 
 
 ![flac-policy-duplicate-confirm](../../images/flac-ui/flac-duplicate-confirm.png)
 
-Die neue Richtlinie wird in der Liste auf der Registerkarte **[!UICONTROL Richtlinien]** als Kopie des Originals angezeigt.
+The new policy appears in the list as a copy of the original on the **[!UICONTROL Policies]** tab.
 
 ![flac-role-duplicate-saved](../../images/flac-ui/flac-role-duplicate-saved.png)
 
-## Löschen einer Richtlinie
+## Delete a policy
 
-Um eine vorhandene Richtlinie zu löschen, wählen Sie die Richtlinie auf der Registerkarte **[!UICONTROL Richtlinien]** aus. Alternativ können Sie die Filteroption verwenden, um die Ergebnisse zu filtern und die Richtlinie zu finden, die Sie löschen möchten.
+To delete an existing policy, select the policy from the **[!UICONTROL Policies]** tab. Alternatively, use the filter option to filter the results to find the policy you want to delete.
 
 ![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
 
-Klicken Sie als Nächstes auf das Auslassungszeichen (`…`) neben einem Richtliniennamen. Daraufhin werden in einem Dropdown-Menü Steuerelemente zum Bearbeiten, Deaktivieren, Löschen oder Duplizieren der Rolle angezeigt. Wählen Sie im Dropdown-Menü die Option „Löschen“ aus.
+Next, select the ellipsis (`…`) next to a policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select delete from the dropdown.
 
 ![flac-policy-delete](../../images/flac-ui/flac-policy-delete.png)
 
-Das Dialogfeld **[!UICONTROL Benutzerrichtlinie löschen]** wird angezeigt, in dem Sie aufgefordert werden, den Löschvorgang zu bestätigen.
+The **[!UICONTROL Delete user policy]** dialog appears, prompting you to confirm the deletion. 
 
 ![flac-policy-delete-confirm](../../images/flac-ui/flac-policy-delete-confirm.png)
 
-Sie kehren zur Registerkarte **[!UICONTROL Richtlinien]** zurück, und ein Popup-Fenster mit einer Bestätigung des Löschvorgangs wird angezeigt.
+You are returned to the **[!UICONTROL policies]** tab and a confirmation of deletion pop over appears.
 
-![flac-policy-delete-confirmation](../../images/flac-ui/flac-policy-delete-confirmation.png)
+![flac-policy-delete-confirmation](../../images/flac-ui/flac-policy-delete-confirmation.png) -->
 
 ## Aktivieren von Richtlinien
 
-Um eine vorhandene Richtlinie zu aktivieren, wählen Sie die Richtlinie auf der Registerkarte **[!UICONTROL Richtlinien]** aus. Alternativ können Sie die Filteroption verwenden, um die Ergebnisse zu filtern und die Richtlinie zu finden, die Sie löschen möchten.
+Um eine vorhandene Richtlinie zu aktivieren, wählen Sie die Richtlinie auf der Registerkarte **[!UICONTROL Richtlinien]** aus.
 
-![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
+![flac-policy-select](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
 Klicken Sie als Nächstes auf das Auslassungszeichen (`…`) neben einem Richtliniennamen. Daraufhin werden in einem Dropdown-Menü Steuerelemente zum Bearbeiten, Aktivieren, Löschen oder Duplizieren der Rolle angezeigt. Wählen Sie im Dropdown-Menü die Option „Aktivieren“ aus.
 
-![flac-policy-activate](../../images/flac-ui/flac-policy-delete.png)
+![flac-policy-activate](../../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
-Das Dialogfeld **[!UICONTROL Benutzerrichtlinie aktivieren]** wird angezeigt, in dem Sie aufgefordert werden, die Aktivierung zu bestätigen.
+Die **[!UICONTROL Richtlinie aktivieren]** angezeigt, in dem Sie aufgefordert werden, die Aktivierung zu bestätigen.
 
-![flac-policy-activate-confirm](../../images/flac-ui/flac-policy-activate-confirm.png)
+![flac-policy-activate-confirm](../../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
+
 
 Sie kehren zur Registerkarte **[!UICONTROL Richtlinien]** zurück, und ein Popup-Fenster mit einer Bestätigung der Aktivierung wird angezeigt. Als Richtlinienstatus wird „aktiv“ angegeben.
 
-![flac-policy-activated](../../images/flac-ui/flac-policy-activated.png)
+![flac-policy-activated](../../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 
 ## Nächste Schritte
 
-Nachdem eine neue Richtlinie erstellt wurde, können Sie im nächsten Schritt mit dem [Verwalten der Berechtigungen für eine Rolle](permissions.md) fortfahren.
+Wenn eine Richtlinie aktiviert ist, können Sie mit dem nächsten Schritt fortfahren, um [Berechtigungen für eine Rolle verwalten](permissions.md).
