@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Zugangssteuerung;adobe Admin Console
+keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;Adobe Admin Console
 solution: Experience Platform
 title: Zugangssteuerung – Übersicht
-description: Die Zugangssteuerung für Adobe Experience Platform wird über Adobe Admin Console geboten. Diese Funktion nutzt Produktprofile in Admin Console, um Anwender mit Berechtigungen und Sandboxes zu verknüpfen.
+description: Die Zugangssteuerung für Adobe Experience Platform wird über Adobe Admin Console geboten. Diese Funktion nutzt Produktprofile in Admin Console, um Benutzende mit Berechtigungen und Sandboxes zu verknüpfen.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
 source-git-commit: 56f1cbc622450b154e6e29a8116789b316901f66
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1473'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -79,12 +79,12 @@ In der folgenden Tabelle sind die für [!DNL Experience Platform] in der [!DNL A
 
 | Kategorie | Berechtigung | Beschreibung |
 | --- | --- | --- |
-| [!DNL Alerts] | [!UICONTROL Verlauf von Warnhinweisen anzeigen] | Schreibgeschützter Zugriff für den Warnhinweisverlauf. |
-| [!DNL Alerts] | [!UICONTROL Auflösen von Warnhinweisen] | Zugriff auf das Lesen, Bearbeiten und Löschen von Warnhinweisen. |
-| [!DNL Alerts] | [!UICONTROL Anzeigen von Warnhinweisen] | Schreibgeschützter Zugriff für Warnhinweise. |
-| [!DNL Alerts] | [!UICONTROL Verwalten von Warnhinweisen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen des Warnhinweisverlaufs. |
-| [!DNL Data Hygiene] | [!UICONTROL Datenhygiene anzeigen] | Schreibgeschützter Zugriff für Datenhygiene. |
-| [!DNL Data Hygiene] | [!UICONTROL Verwalten der Datenhygiene] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Datenhygiene. |
+| [!DNL Alerts] | [!UICONTROL Warnhinweisverlauf anzeigen] | Schreibgeschützter Zugriff auf den Warnhinweisverlauf. |
+| [!DNL Alerts] | [!UICONTROL Auflösen von Warnhinweisen] | Zugriff zum Lesen, Bearbeiten und Löschen von Warnhinweisen. |
+| [!DNL Alerts] | [!UICONTROL Anzeigen von Warnhinweisen] | Schreibgeschützter Zugriff auf Warnhinweise |
+| [!DNL Alerts] | [!UICONTROL Verwalten von Warnhinweisen] | Zugriff zum Lesen, Erstellen, Bearbeiten und Löschen des Warnhinweisverlaufs. |
+| [!DNL Data Hygiene] | [!UICONTROL Anzeigen der Datenhygiene] | Schreibgeschützter Zugriff auf die Datenhygiene. |
+| [!DNL Data Hygiene] | [!UICONTROL Verwalten der Datenhygiene] | Zugriff zum Lesen, Erstellen, Bearbeiten und Löschen der Datenhygiene. |
 | [!DNL Data Modeling] | [!UICONTROL Verwalten von Schemas] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Schemas und zugehörigen Ressourcen. |
 | [!DNL Data Modeling] | [!UICONTROL Anzeigen von Schemas] | Schreibgeschützter Zugriff auf Schemas und zugehörige Ressourcen. |
 | [!DNL Data Modeling] | [!UICONTROL Verwalten von Beziehungen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Schema-Beziehungen. |
