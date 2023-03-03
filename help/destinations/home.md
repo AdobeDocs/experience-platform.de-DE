@@ -1,12 +1,12 @@
 ---
-keywords: Ziele; Adobe Experience Platform; Plattform; Ziele - Übersicht; aktivieren von Daten; Aktivieren;
+keywords: Ziele;Adobe Experience Platform;Plattform;Übersicht Ziele;Aktivieren von Daten;Aktivieren;
 title: Ziele – Übersicht
-description: Ziele sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Ziele in der Adobe Experience Platform verwenden, um Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
+description: Ziele sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Ziele in Adobe Experience Platform nutzen, um bekannte und unbekannte Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
 source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '755'
-ht-degree: 33%
+ht-degree: 100%
 
 ---
 
@@ -25,76 +25,76 @@ ht-degree: 33%
 
 ## Ziele und Quellen {#destinations-and-sources}
 
-Eine der Kernfunktionen von Platform besteht darin, Ihre Erstanbieterdaten zu erfassen und sie für Ihre geschäftlichen Anforderungen zu aktivieren. Verwendung [sources](../sources/home.md) , um Daten in Platform und Ziele zu erfassen und sie aus Platform zu exportieren.
+Eine der Kernfunktionen von Platform besteht darin, Ihre Daten von Erstparteien zu erfassen und für Ihre geschäftlichen Anforderungen zu aktivieren. Verwenden Sie [Quellen](../sources/home.md), um Daten in Platform aufzunehmen, und Ziele, um Daten aus Platform zu exportieren.
 
 ## Ziele – Schritte {#steps}
 
-* Wählen Sie aus einer [Self-Service-Katalog](./catalog/overview.md) aller in Platform verfügbaren Ziele.
-* Verwenden Sie Ziele, um Profile oder Segmente an Plattformen zur Marketing-Automatisierung, digitale Werbeplattformen und mehr zu senden.
+* Wählen Sie in einem [Selbstbedienungs-Katalog](./catalog/overview.md) unter allen in Platform verfügbaren Zielen.
+* Verwenden Sie Ziele, um Profile oder Segmente an Plattformen für Marketing-Automatisierung, digitale Werbung und andere zu senden.
 * Planen Sie Datenexporte an Ihre bevorzugten Ziele zu regelmäßigen Zeiten.
 
 ## Steuerelemente {#controls}
 
-Die Steuerelemente in der [Zielarbeitsbereich](./ui/destinations-workspace.md) ermöglichen Ihnen Folgendes:
+Mit den Steuerelementen im [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md) können Sie folgende Aufgaben erledigen:
 
 * Katalog der Zielplattformen durchsuchen, wo Sie Ihre Daten aktivieren können;
 * Datenflüsse zu den Zielen im Katalog erstellen, bearbeiten, aktivieren und deaktivieren;
-* Erstellen Sie ein Konto an einem Speicherort oder verknüpfen Sie Platform mit dem Konto in der Zielplattform.
+* ein Konto an einem Speicherort erstellen oder Platform mit dem Konto auf der Zielplattform verknüpfen;
 * auswählen, welche Segmente für Ziele aktiviert werden sollen;
 * auswählen, welche [Experience Data Model (XDM)-Felder](../xdm/home.md) exportiert werden sollen, wenn Segmente für E-Mail-Marketing-Ziele aktiviert werden.
 
 ## Zieltypen und Kategorien {#types-and-categories}
 
-Mit Experience Platform können Sie Daten für verschiedene Zieltypen aktivieren, um Ihre Aktivierungs-Anwendungsfälle zu erfüllen. Die Ziele reichen von API-basierten Integrationen über Integrationen mit Dateiempfangssystemen bis hin zu Profilsuche-Zielen und mehr. Detaillierte Informationen zu allen verfügbaren Zielen finden Sie im Abschnitt [Zieltypen und Kategorien - Übersicht](./destination-types.md).
+Mit Experience Platform können Sie Daten für verschiedene Zieltypen aktivieren, um Ihren Aktivierungs-Anwendungsfällen gerecht zu werden. Die Ziele reichen von API-basierten Integrationen über Integrationen mit Dateiempfangssystemen bis hin zu Profilsuchzielen und mehr. Detaillierte Informationen zu allen verfügbaren Zielen finden Sie unter [Zieltypen und Kategorien – Übersicht](./destination-types.md).
 
-## Ziele und Zugriffskontrollen {#access-controls}
+## Ziele und Zugriffssteuerungen {#access-controls}
 
-Die Zielfunktion in Platform funktioniert mit Zugriffssteuerungsberechtigungen von Adobe Experience Platform. Je nach Berechtigungsstufe Ihres Anwenders können Sie Ziele anzeigen, verwalten und aktivieren. Informationen zu den individuellen Berechtigungen finden Sie unter [Zugangssteuerung in Adobe Experience Platform](../access-control/home.md); scrollen Sie nach unten bis zum Ende der Seite.
+Die Funktion „Ziele“ in Platform arbeitet mit Zugriffssteuerungsberechtigungen von Adobe Experience Platform. Je nach Berechtigungsstufe Ihres Anwenders können Sie Ziele anzeigen, verwalten und aktivieren. Informationen zu den individuellen Berechtigungen finden Sie unter [Zugangssteuerung in Adobe Experience Platform](../access-control/home.md); scrollen Sie nach unten bis zum Ende der Seite.
 
 In der folgenden Tabelle sind die Berechtigungen und Berechtigungskombinationen aufgeführt, die zum Ausführen bestimmter Aktionen für Ziele erforderlich sind:
 
 | Berechtigungsebene | Beschreibung |
 | ---- | ----|
-| **[!UICONTROL Verwalten von Zielen]** | Um eine Verbindung zu Zielen herzustellen, benötigen Sie die **[!UICONTROL Ziele verwalten]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** | Um Segmente für Ziele zu aktivieren, benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Verwalten von Zielen]** | Um eine Verbindung zu Zielen herzustellen, benötigen Sie die [Zugriffssteuerungsberechtigung](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**. |
+| **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** | Um Segmente für Ziele zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Weiterführende Informationen zu Zugangssteuerungen finden Sie im [Benutzerhandbuch zur Zugangssteuerung](../access-control/ui/overview.md).
+Weiterführende Informationen zu Zugriffssteuerungen finden Sie im [Benutzerhandbuch zur Zugriffssteuerung](../access-control/ui/overview.md).
 
-### Attributbasierte Zugriffskontrolle für Ziele {#attribute-based-access}
+### Attributbasierte Zugriffssteuerung für Ziele {#attribute-based-access}
 
 Die attributbasierte Zugriffssteuerung in Adobe Experience Platform ermöglicht Admins, den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen zu steuern.
 
-Mit der attributbasierten Zugriffssteuerung können Sie Zuordnungskonfigurationen auf Felder anwenden, für die Sie über Berechtigungen verfügen. Außerdem können Sie keine Daten an ein Ziel exportieren, wenn Sie nicht Zugriff auf alle Felder im Datensatz haben.
+Mit der attributbasierten Zugriffssteuerung können Sie Zuordnungskonfigurationen auf Felder anwenden, für die Sie über Berechtigungen verfügen. Im Übrigen können Sie keine Daten an ein Ziel exportieren, wenn Sie nicht auf alle Felder im Datensatz Zugriff haben.
 
-Weitere Informationen dazu, wie Ziele mit attributbasierten Zugriffssteuerelementen funktionieren, finden Sie in der [Attributbasierte Zugriffskontrolle - Übersicht](../access-control/abac/overview.md#destinations).
+Weitere Informationen dazu, wie Ziele mit attributbasierten Zugriffssteuerelementen funktionieren, finden Sie unter [Attributbasierte Zugriffssteuerung – Übersicht](../access-control/abac/overview.md#destinations).
 
 ## Zielüberwachung {#destinations-monitoring}
 
-Nachdem Sie eine Verbindung zu einem Ziel hergestellt und den Aktivierungs-Workflow abgeschlossen haben, können Sie die Datenexporte an Ihr Empfangssystem überwachen. Lesen Sie die [Handbuch zur Überwachung von Datenflüssen zu Zielen in der Benutzeroberfläche](/help/dataflows/ui/monitor-destinations.md) für weitere Informationen.
+Nachdem Sie eine Verbindung zu einem Ziel hergestellt und den Aktivierungs-Workflow abgeschlossen haben, können Sie die Datenexporte an Ihr Empfangssystem überwachen. Weitere Informationen finden Sie im [Handbuch zur Überwachung von Datenflüssen zu Zielen in der Benutzeroberfläche](/help/dataflows/ui/monitor-destinations.md).
 
-Sie können auch überprüfen, ob die Daten erfolgreich zu Ihrem Ziel gelangen. Die meisten Zieldokumentationsseiten im Katalog verfügen über eine *Abschnitt &quot;Datenexport überprüfen&quot;*, der anzeigt, wie Sie in der Zielplattform überprüfen können, ob Daten erfolgreich aus Experience Platform importiert wurden.
+Sie können auch überprüfen, ob die Daten erfolgreich zum Ziel gelangen. Die meisten Zieldokumentationsseiten im Katalog verfügen über einen *Abschnitt „Datenexport validieren“*, der anzeigt, wie Sie in der Zielplattform feststellen können, ob Daten erfolgreich aus Experience Platform importiert wurden.
 
-## Einschränkungen von Data Governance beim Aktivieren von Daten für Ziele {#data-governance}
+## Data-Governance-Beschränkungen beim Aktivieren von Daten für Ziele {#data-governance}
 
 Data Governance wird für Platform-Ziele durchgesetzt durch:
 
-* *Marketing-Aktionen* die Sie im Workflow Ziele erstellen auswählen können;
-* *Datennutzungsrichtlinien* die die Aktivierung von Daten, die bestimmte Nutzungsbezeichnungen enthalten, auf Ziele mit bestimmten Marketing-Aktionen beschränkt.
+* *Marketing-Aktionen*, die Sie im Workflow zum Erstellen von Zielen auswählen können;
+* *Datenrichtlinien*, die verhindern, dass Daten mit bestimmten Nutzungskennzeichnungen für Ziele mit bestimmten Marketing-Aktionen aktiviert werden.
 
-Weitere Informationen finden Sie in der Dokumentation zu Data Governance in Platform . [Marketing-Aktionen](../data-governance/policies/overview.md) und [Beheben von Verstößen gegen Datenrichtlinien](../data-governance/enforcement/auto-enforcement.md).
+Weitere Informationen zu [Marketing-Aktionen](../data-governance/policies/overview.md) und zum [Beheben von Verstößen gegen Datenrichtlinien](../data-governance/enforcement/auto-enforcement.md) finden Sie in der Dokumentation zu Data Governance in Platform.
 
-Weitere Informationen zur Auswahl von Marketing-Aktionen im Workflow &quot;Ziel erstellen&quot;finden Sie auf den folgenden Seiten für die verschiedenen Zieltypen in Platform:
+Weitere Informationen zur Auswahl von Marketing-Aktionen im Workflow zum Erstellen von Zielen finden Sie auf den folgenden Seiten für die verschiedenen Zieltypen in Platform:
 
-* [Werbeziele - Google Ad Manager ](./catalog/advertising/google-ad-manager.md)
-* [Werbeziele - Google Ads](./catalog/advertising/google-ads-destination.md)
-* [Werbeziele - Google Display &amp; Video 360 ](./catalog/advertising/google-dv360.md)
+* [Werbeziele – Google Ad Manager ](./catalog/advertising/google-ad-manager.md)
+* [Werbeziele – Google Ads](./catalog/advertising/google-ads-destination.md)
+* [Werbeziele – Google Display &amp; Video 360 ](./catalog/advertising/google-dv360.md)
 * [Cloud-Speicher-Ziele](./catalog/cloud-storage/overview.md)
 * [E-Mail-Marketing-Ziele ](./catalog/email-marketing/overview.md)
 * [Social-Media-Ziele ](./catalog/social/overview.md)
 
-Weitere Informationen zu Verstößen gegen Datenrichtlinien im Workflow für die Segmentaktivierung finden Sie unter **[!UICONTROL Überprüfen]** in die folgenden Handbücher zu übernehmen:
+Weitere Informationen zu Verstößen gegen Datenrichtlinien im Workflow für die Segmentaktivierung finden Sie im Schritt **[!UICONTROL Überprüfen]** der folgenden Handbücher:
 
 * [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](./ui/activate-segment-streaming-destinations.md#review)
 * [Aktivieren von Zielgruppendaten für Exportziele von Streaming-Profilen](./ui/activate-streaming-profile-destinations.md#review)
