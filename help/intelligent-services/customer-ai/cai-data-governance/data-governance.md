@@ -1,30 +1,30 @@
 ---
-keywords: Experience Platform; Data Governance; Kundenunterstützung; beliebte Themen
+keywords: Experience Platform;Data Governance;Kunden-KI;beliebte Themen
 solution: Experience Platform
 feature: Customer AI
-title: Data Governance in Customer AI
-description: Adobe Experience Platform bietet verschiedene Dienste und Tools, mit denen Sie Ihre erfassten Erlebnisdaten sicher steuern können, um Ihre Geschäftspraktiken, rechtlichen Verpflichtungen und Ihren Entwicklungsprozess einzuhalten.
+title: Data Governance in Kunden-KI
+description: Adobe Experience Platform bietet verschiedene Services und Tools, mit denen Sie Ihre erfassten Erlebnisdaten gemäß Ihren Geschäftspraktiken, Ihren rechtlichen Verpflichtungen und Ihrem Entwicklungsprozess sicher steuern können.
 source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '221'
-ht-degree: 9%
+ht-degree: 100%
 
 ---
 
-# Customer AI und Data Governance
+# Kunden-KI und Data Governance
 
-Sämtliche Einstellungen zur Data Governance in Customer AI werden von Adobe Experience Platform übernommen.
+Alle Einstellungen in Bezug auf die Data Governance in Kunden-KI werden von Adobe Experience Platform übernommen.
 
 ## Data Governance {#governance}
 
-Die Integration zwischen Customer AI und Adobe Experience Platform Data Governance bietet Ihnen die Möglichkeit, Ihre Daten über Platform im gesamten Journey zu steuern und zu verstehen. Dazu gehört die Aufrechterhaltung der Datenqualität, der Datenherkunft, der Datenkatalogisierung und mehr.
+Die Integration zwischen Kunden-KI und Adobe Experience Platform Data Governance bietet Ihnen die Möglichkeit, Ihre Daten über Platform während ihrer gesamten Journey zu steuern und zu erfassen. Dazu gehört die Aufrechterhaltung der Datenqualität, der Datenherkunft, der Datenkatalogisierung und mehr.
 
-Datennutzungsbezeichnungen und Richtlinien, die für von Platform verwendete Datensätze erstellt wurden, können im Customer AI-Konfigurations-Workflow angezeigt werden. Diese Beschriftungen stoppen oder warnen Benutzer, die beschriftete Felder verwenden.
+Datennutzungskennzeichnungen und -richtlinien, die für von Platform genutzte Datensätze erstellt wurden, können im Kunden-KI-Datenansichts-Workflow angezeigt werden. Diese Kennzeichnungen stoppen oder warnen Benutzende, die gekennzeichnete Felder verwenden.
 
-Durch diese Integration können Sie die Compliance effizienter verwalten. Datenverantwortliche in Ihrem Unternehmen können Richtlinien festlegen, um die Nutzung zu beschränken. Daher können Sie Daten verwenden, die den von Data Stewards definierten Richtlinien entsprechen. Lesen Sie die Dokumentation unter [Beschriftungen und Richtlinien](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html?lang=de) , um mehr zu erfahren.
+Diese Integration ermöglicht ein effizienteres Compliance-Management. Datenverantwortliche in Ihrem Unternehmen können Richtlinien festlegen, um die Nutzung zu beschränken. So können Sie Daten verwenden, die den von Datenverantwortlichen definierten Richtlinien entsprechen. Weitere Informationen finden Sie in der Dokumentation zu [Kennzeichnungen und Richtlinien](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html?lang=de).
 
 Weitere Informationen zu dieser Funktion finden Sie hier:
 
-[Erste Schritte mit Customer AI](../../customer-ai/getting-started.md)
-[Adobe Experience Platform und Anwendungen](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html)
-[Architekturdiagramme in Adobe Experience Cloud](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html)
+[Erste Schritte mit Kunden-KI](../../customer-ai/getting-started.md)
+[Adobe Experience Platform und Anwendungen](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=de)
+[Adobe Experience Cloud-Architekturdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html?lang=de)
