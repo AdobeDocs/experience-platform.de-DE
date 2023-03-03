@@ -1,69 +1,69 @@
 ---
 title: Konfigurierbare und allgemeine Exporteinstellungen in Zielen
-description: Erfahren Sie, welche Exporteinstellungen in Zielen auf Zielebene konfigurierbar sind und die fest eingestellt sind und nicht bearbeitet werden können.
+description: Erfahren Sie, welche Exporteinstellungen in Zielen auf Zielebene konfigurierbar sind und welche fest eingestellt sind und nicht bearbeitet werden können.
 source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '845'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 
 # Konfigurierbare und allgemeine Exporteinstellungen in Zielen
 
-Wenn Sie über das Exportverhalten für Experience Platform-Ziele nachdenken, müssen Sie drei separate Ebenen berücksichtigen, auf denen Konfigurationen funktionieren.
+Hinsichtlich des Exportverhaltens für Experience Platform-Ziele müssen Sie drei separate Ebenen berücksichtigen, auf denen Konfigurationen funktionieren.
 
-* Auf der ersten Ebene sind einige Einstellungen im Zusammenhang mit dem Profil-Exportverhalten und den Konfigurationseinstellungen für alle Ziele, die zu einem Zieltyp gehören, üblich. Diese Einstellungen beziehen sich darauf, welche Trigger ein Zielexport hat und was in einem Export enthalten ist und von Zielentwicklern oder Echtzeit-CDP-Benutzern nicht bearbeitet werden kann.
-* Auf zweiter Ebene können einige Einstellungen vom Zielentwickler beim Authoring von Zielen mit Destination SDK auf Zielebene angepasst werden.
-* Auf dritter Ebene gibt es Konfigurationseinstellungen, die von Benutzern der Echtzeit-Kundendatenplattform in den Aktivierungs-Workflows festgelegt werden können.
+* Auf der ersten Ebene sind bestimmte Einstellungen im Zusammenhang mit dem Verhalten beim Profilexport und den Konfigurationseinstellungen allen Zielen, die zu einem Zieltyp gehören, gemein. Diese Einstellungen beziehen sich darauf, was einen Zielexport auslöst und was in einem Export enthalten ist und von Personen, die Ziele entwickeln oder Real-Time CDP benutzen, nicht bearbeitet werden kann.
+* Auf zweiter Ebene können bestimmte Einstellungen vom Zielentwickler-Team beim Authoring von Zielen mit Destination SDK auf Zielebene angepasst werden.
+* Auf dritter Ebene gibt es Konfigurationseinstellungen, die von Real-Time CDP-Benutzenden in den Aktivierungs-Workflows festgelegt werden können.
 
 ![Abbildung der Wechselwirkung zwischen allgemeinen und konfigurierbaren Exporteinstellungen für Ziele](/help/destinations/assets/how-destinations-work/profile-export-behavior-diagram.png)
 
-Auf dieser Seite werden alle gängigen und konfigurierbaren Exporteinstellungen für Ziele auf den drei oben beschriebenen Ebenen beschrieben oder mit diesen verlinkt.
+Auf dieser Seite werden alle gängigen und konfigurierbaren Exporteinstellungen für Ziele auf den drei oben beschriebenen Ebenen beschrieben oder zu diesen verlinkt.
 
-## Allgemeine Exporteinstellungen für Zieltypen {#common-settings-across-destination-types}
+## Allgemeine Exporteinstellungen über alle Zieltypen hinweg {#common-settings-across-destination-types}
 
-Das Verhalten beim Zielexport ist bei allen Zielen, die zu einem Zieltyp gehören, in Bezug auf *Was Trigger ein Zielexport?* und *was in den Zielexporten enthalten ist*. Zielexporte werden durch Benachrichtigungen ausgelöst, die der Zieldienst vom [Upstream-Echtzeit-Kundenprofildienst](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=en#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
+Das Verhalten beim Zielexport ist bei allen Zielen, die zu einem Zieltyp gehören, in Bezug darauf, *was einen Zielexport auslöst* und *was in den Zielexporten enthalten ist*, einheitlich. Zielexporte werden durch Benachrichtigungen ausgelöst, die der Ziel-Service vom [Upstream-Echtzeit-Kundenprofil-Service](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=de#adobe-experience-platform-%26-applications-detailed-architecture-diagram) erhält.
 
-Was in den Zielexporten enthalten ist, variiert geringfügig zwischen den Zieltypen. Mehr über [Allgemeine Exportverhaltensmuster pro Zieltyp](/help/destinations/how-destinations-work/profile-export-behavior.md). Diese Einstellungen können nicht von Zielentwicklern oder Echtzeit-CDP-Benutzern bearbeitet werden.
+Was in den Zielexporten enthalten ist, variiert geringfügig zwischen den Zieltypen. Erfahren Sie mehr über [allgemeine Exportverhaltensmuster nach Zieltyp](/help/destinations/how-destinations-work/profile-export-behavior.md). Diese Einstellungen können nicht von Personen bearbeitet werden, die Ziele entwickeln oder Real-Time CDP benutzen.
 
-## Anpassbare Exporteinstellungen nach Ziel-Entwicklern {#customizable-settings-by-destination-developers}
+## Durch Zielentwicklerinnen und -entwickler anpassbare Exporteinstellungen {#customizable-settings-by-destination-developers}
 
-Zielentwickler können [Destination SDK](/help/destinations/destination-sdk/overview.md) , um benutzerdefinierte oder produktionalisierte (private oder öffentliche) Ziele zu erstellen. Destination SDK bietet Entwicklern eine große Flexibilität bei der Konfiguration von Zielen basierend auf den nachgelagerten Funktionen ihrer API-Endpunkte und Dateiempfangssysteme. Basierend auf den nachgelagerten Funktionen stehen den Zielentwicklern beim Konfigurieren eines Ziels mit Destination SDK die folgenden Konfigurationsoptionen zur Verfügung:
+Zielentwicklerinnen und -entwickler können mit [Destination SDK](/help/destinations/destination-sdk/overview.md) benutzer- oder produktdefinierte (private oder öffentliche) Ziele erstellen. Destination SDK bietet Entwickelnden eine große Flexibilität bei der Konfiguration von Zielen basierend auf den Downstream-Funktionen ihrer API-Endpunkte und Dateiempfangssysteme. Auf Grundlage der Downstream-Funktionen stehen Zielentwicklerinnen und -entwickler beim Konfigurieren eines Ziels mit Destination SDK die folgenden Konfigurationsoptionen zur Verfügung:
 
-* Bestimmen Sie, welche Attribute und Identitäten aus Experience Platform zum Ziel exportiert werden können. Bestimmen Sie auch, welche Identitäten für ihre Ziele für einen erfolgreichen Datenexport erforderlich sind.
-* Legen Sie eine Aggregationsrichtlinie fest, die bestimmt, wie lange die Experience Platform beim Aggregieren von HTTP-Nachrichten warten soll, die an API-Integrationen gesendet werden. Ziel-Entwickler können verschiedene Aggregattypen konfigurieren, um zu bestimmen, wie viele Profile in ausgehenden HTTP-Nachrichten enthalten sein sollen und wie lange die Experience Platform warten soll, bis die HTTP-Nachricht gesendet wird. Weitere Informationen zu [Konfigurationsoptionen für Aggregationsrichtlinien](/help/destinations/destination-sdk/destination-configuration.md#aggregation) für Zielentwickler in der Dokumentation zur Destination SDK verfügbar.
-* Bestimmen Sie, ob HTTP-Nachrichtenexporte Profile enthalten sollen, die sich für Segmente qualifizieren, die aus Segmenten entfernt werden oder beides.
-* Legen Sie fest, welche Konfigurationen für Dateinamen und Dateiformatierung Benutzern beim Exportieren von Dateien zur Verfügung stehen sollen.
+* Sie können bestimmen, welche Attribute und Identitäten aus Experience Platform für das Ziel exportiert werden können. Sie können auch bestimmen, welche Identitäten von ihren Zielen für einen erfolgreichen Datenexport erforderlich sind.
+* Sie können eine Aggregationsrichtlinie festlegen, die bestimmt, wie lange Experience Platform beim Aggregieren von HTTP-Nachrichten warten soll, die an API-Integrationen gesendet werden. Sie können verschiedene Aggregationstypen konfigurieren, um zu bestimmen, wie viele Profile in ausgehenden HTTP-Nachrichten enthalten sein sollen und wie lange Experience Platform warten soll, bis die HTTP-Nachricht gesendet wird. Weitere Informationen zu den [Konfigurationsoptionen für Aggregationsrichtlinien](/help/destinations/destination-sdk/destination-configuration.md#aggregation) stehen Zielentwicklerinnen und -entwicklern in der Destination SDK-Dokumentation zur Verfügung.
+* Sie können bestimmen, ob HTTP-Nachrichtenexporte Profile enthalten sollen, die sich für Segmente qualifizieren oder aus Segmenten entfernt werden oder beides.
+* Sie können bestimmen, welche Dateinamens- und Dateiformatierungskonfigurationen Benutzenden beim Exportieren von Dateien zur Verfügung stehen sollen.
 
-## Von Benutzern anpassbare Einstellungen auf der Datenflussebene {#settings-on-dataflow-level}
+## Benutzerseitig anpassbare Einstellungen auf Datenflussebene {#settings-on-dataflow-level}
 
-Neben den nicht bearbeitbaren Einstellungen, die vom Zieltyp und den vom Zielentwickler konfigurierten Einstellungen abhängen, gibt es bestimmte Exporteinstellungen, die Benutzer im Aktivierungs-Workflow konfigurieren können. Diese Einstellungen beziehen sich auf den Exportplan für einen bestimmten Datenfluss zu einem Ziel, die Attribute und Identitätsfelder, die in einen Datenfluss exportiert werden sollen, oder die Dateiformatierungsoptionen für exportierte Dateien.
+Neben den nicht bearbeitbaren Einstellungen, die vom Zieltyp und den vom Zielentwickler-Team konfigurierten Einstellungen abhängen, gibt es bestimmte Exporteinstellungen, die Benutzende im Aktivierungs-Workflow konfigurieren können. Diese Einstellungen beziehen sich auf den Exportzeitplan für einen bestimmten Datenfluss zu einem Ziel, die Attribute und Identitätsfelder, die in einen Datenfluss exportiert werden sollen, oder die Dateiformatierungsoptionen für exportierte Dateien.
 
-Die Einstellungen, die Benutzern beim Herstellen einer Verbindung zu einem Ziel zur Verfügung stehen, hängen davon ab, wie das Ziel vom Zielentwickler konfiguriert wurde und welche Einstellungen den Benutzern zur Verfügung gestellt wurden.
+Die Einstellungen, die Benutzenden beim Herstellen einer Zielverbindung zur Verfügung stehen, hängen davon ab, wie das Ziel vom Zielentwickler-Team konfiguriert wurde und welche Einstellungen den Benutzenden zur Verfügung gestellt wurden.
 
-Beispiel: für [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations)kann ein Zielentwickler konfigurieren, welche Identitäten sein Ziel akzeptiert und nur diese Identitäten dem Benutzer in [Zuordnungsschritt des Aktivierungs-Workflows](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), wie unten dargestellt:
+Beispiel: Für [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations) kann ein Zielentwickler-Team konfigurieren, welche Identitäten vom Ziel akzeptiert werden. Nur diese Identitäten werden dann den Benutzenden im [Zuordnungsschritt des Aktivierungs-Workflows](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) angezeigt, wie unten dargestellt:
 
 ![Bildschirmaufzeichnung der Identitätsauswahl für das Zielfeld im Zuordnungsschritt des Aktivierungs-Workflows. ](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
 
-Entsprechend gilt für [dateibasierte Ziele](/help/destinations/destination-types.md#file-based), kann der Zielentwickler bestimmen, [Dateinamenanhängen-Optionen](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) sie für ihren Bestimmungsort verfügbar machen möchten oder [Dateiformatierungsoptionen](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md) Sie möchten sie verfügbar machen und der Benutzer kann nur aus diesen Optionen auswählen, wie unten dargestellt:
+Entsprechend kann das Zielentwickler-Team für [dateibasierte Ziele](/help/destinations/destination-types.md#file-based) bestimmen, welche [Optionen zum Anhängen von Dateinamen](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) für das Ziel bzw. welche [Optionen zum Formatieren von Dateien](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md) verfügbar gemacht werden sollen. Die Benutzenden können dann nur aus diesen Optionen auswählen, wie unten dargestellt:
 
-![Bildschirmaufzeichnung der Dateiformatierungsoption beim Herstellen einer Verbindung zu einem dateibasierten Ziel.](/help/destinations/assets/how-destinations-work/file-formatting-options.gif)
+![Bildschirmaufzeichnung der Dateiformatierungsoption beim Verbinden mit einem dateibasierten Ziel.](/help/destinations/assets/how-destinations-work/file-formatting-options.gif)
 
-![Bildschirmaufzeichnung der Option &quot;Dateiname anhängen&quot;im Planungsschritt des Aktivierungs-Workflows. ](/help/destinations/assets/how-destinations-work/filename-append-options.gif)
+![Bildschirmaufzeichnung der Option zum Anhängen von Dateinamen im Planungsschritt des Aktivierungs-Workflows. ](/help/destinations/assets/how-destinations-work/filename-append-options.gif)
 
-Erfahren Sie mehr über die verschiedenen Optionen und Schritte, die im Aktivierungs-Workflow verfügbar sind:
+Die folgenden verschiedenen Optionen und Schritte sind im Aktivierungs-Workflow verfügbar:
 
 * [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md)
-* [Aktivieren von Zielgruppendaten für Unternehmensziele](/help/destinations/ui/activate-streaming-profile-destinations.md)
+* [Aktivieren von Zielgruppendaten für Unternehmensziele ](/help/destinations/ui/activate-streaming-profile-destinations.md)
 * [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](/help/destinations/ui/activate-segment-streaming-destinations.md)
-* [Exportieren von Dateien On-Demand an Batch-Ziele](/help/destinations/ui/export-file-now.md)
+* [Exportieren von Dateien nach Bedarf an Batch-Ziele](/help/destinations/ui/export-file-now.md)
 * [(Beta) Exportieren von Datensätzen an Cloud-Speicher-Ziele](/help/destinations/ui/export-datasets.md)
 
 ## Nächste Schritte {#next-steps}
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, welche Exporteinstellungen für Ziele bei allen Zieltypen gelten, welche von Entwicklern auf individueller Zielebene konfiguriert werden können und welche Einstellungen von Benutzern im Aktivierungs-Workflow bearbeitet werden können.
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, welche Exporteinstellungen für Ziele bei allen Zieltypen häufig sind, welche von Entwicklerinnen und Entwicklern auf individueller Zielebene konfiguriert werden können und welche Einstellungen von Benutzenden im Aktivierungs-Workflow bearbeitet werden können.
 
-Als Nächstes können Sie detailliertere Informationen zum [Allgemeine Exportverhaltensmuster pro Zieltyp](/help/destinations/how-destinations-work/profile-export-behavior.md).
+Ausführliche Informationen zum allgemeinen Exportverhalten für verschiedene Zieltypen [finden Sie hier](/help/destinations/how-destinations-work/profile-export-behavior.md).
 
-Für Zielentwickler können Sie [Erste Schritte](/help/destinations/destination-sdk/getting-started.md) mit Destination SDK. Benutzer, die Daten aktivieren möchten, können alle verfügbaren Ziele im Abschnitt [Katalog](/help/destinations/catalog/overview.md).
+[in dieser Anleitung](/help/destinations/destination-sdk/getting-started.md) für Zielentwicklerinnen und -entwickler finden Sie Informationen zu den ersten Schritten mit Destination SDK. Wenn Sie Daten aktivieren möchten, finden Sie alle verfügbaren Ziele im [Katalog](/help/destinations/catalog/overview.md).
