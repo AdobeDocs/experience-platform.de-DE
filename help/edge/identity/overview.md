@@ -3,9 +3,9 @@ title: Identitätsdaten im Platform Web SDK
 description: Erfahren Sie, wie Sie Adobe Experience Cloud IDs (ECIDs) mit dem Adobe Experience Platform Web SDK abrufen und verwalten.
 keywords: Identität; Erstanbieter-Identität; Identity-Dienst; Drittanbieter-Identität; ID-Migration; Besucher-ID; Drittanbieter-Identität; thirdPartyCookiesEnabled; idMigrationEnabled; getIdentity; Syncing Identities; syncIdentity; sendEvent; identityMap; primary; ecid; Identity-Namespace; Namespace-ID; authenticationState; hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: d6aed404828d06bf223f348dd97960652b05933a
+source-git-commit: 0edd9422d6ea1b8e3aeaba1b24bc38b42ca809d8
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1404'
 ht-degree: 2%
 
 ---
@@ -113,6 +113,8 @@ Jedes Identitätsobjekt im Identitäten-Array enthält die folgenden Eigenschaft
 | `id` | Zeichenfolge | **(Erforderlich)** Die ID, die Sie für den angegebenen Namespace festlegen möchten. |
 | `authenticationState` | Zeichenfolge | **(Erforderlich)** Der Authentifizierungsstatus der ID. Zu den möglichen Werten gehören `ambiguous`, `authenticated` und `loggedOut`. |
 | `primary` | Boolesch | Bestimmt, ob diese Identität als primäres Fragment im Profil verwendet werden soll. Standardmäßig wird die ECID als primäre Kennung für den Benutzer festgelegt. Wenn dieses Wert weggelassen wird, wird standardmäßig `false` verwendet. |
+
+Verwenden der `identityMap` -Feld zur Identifizierung von Geräten oder Benutzern führt zum gleichen Ergebnis wie bei Verwendung der [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=en) -Methode [!DNL ID Service API]. Siehe [Dokumentation zur ID-Dienst-API](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=en) für weitere Details.
 
 ## Migration von der Besucher-API zur ECID
 
