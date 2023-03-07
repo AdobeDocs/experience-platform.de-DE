@@ -3,10 +3,10 @@ keywords: Ziele; Ziel; Zieldetailseite; Zieldetailseite; Zieldetailseite
 title: Anzeigen von Zieldetails
 description: Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails. Zu den Zieldetails gehören der Zielname, die ID, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung und zum Aktivieren und Deaktivieren des Datenflusses.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: a84d67e433d70cc6194ca20abc656e4b141d42a6
+source-git-commit: 0a300660ce0fc53c403d2ceeb3d4d7d2c32ac117
 workflow-type: tm+mt
-source-wordcount: '802'
-ht-degree: 21%
+source-wordcount: '912'
+ht-degree: 18%
 
 ---
 
@@ -64,7 +64,7 @@ Die folgende Tabelle enthält die von der rechten Leiste bereitgestellten Steuer
 | [!UICONTROL Erstellt von] | Gibt den Benutzer an, der dieses Ziel erstellt hat. |
 | [!UICONTROL Erstellt] | Gibt den UTC-Datum an, zu dem dieses Ziel erstellt wurde. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## [!UICONTROL Aktiviert]/[!UICONTROL Behinderte] Umschalten {#enabled-disabled-toggle}
 
@@ -86,9 +86,23 @@ Die [!UICONTROL Datenfluss-Abläufe] -Tab enthält Metrikdaten zu Ihren Datenfl�
 
 ### Dauer der Datenflüsse {#dataflow-runs-duration}
 
-Es gibt ein bekanntes Problem in der angezeigten Dauer von Datenfluss-Läufen. Während **[!UICONTROL Verarbeitungsdauer]** für die meisten Datenflug-Läufe etwa vier Stunden beträgt, wie in der Abbildung unten dargestellt, ist die tatsächliche Verarbeitungszeit für jeden Datenflug-Lauf viel kürzer. Dataflow-Ausführungsfenster bleiben länger geöffnet, falls die Experience Platform erneut Aufrufe an das Ziel ausführen muss.
+Es gibt einen Unterschied in der angezeigten Dauer von Datenfluss-Läufen zwischen Streaming- und dateibasierten Zielen.
 
-![Bild der Seite &quot;Datenfluss wird ausgeführt&quot;, wobei die Spalte Verarbeitungszeit hervorgehoben ist.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run.png)
+### Streaming-Ziele {#streaming}
+
+Während **[!UICONTROL Verarbeitungsdauer]** für die meisten Streaming-Datenfluss-Läufe etwa vier Stunden beträgt, wie in der Abbildung unten dargestellt, ist die tatsächliche Verarbeitungszeit für jeden Datenfluss viel kürzer. Dataflow-Run-Fenster bleiben länger geöffnet, falls die Experience Platform erneut Aufrufe an das Ziel tätigen muss, und stellen Sie sicher, dass sie keine verspäteten Daten für dasselbe Zeitfenster verpasst.
+
+![Bild der Seite &quot;Datenfluss&quot;, auf der die Spalte Verarbeitungszeit für ein Streaming-Ziel hervorgehoben ist.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
+
+Weitere Informationen finden Sie unter [Datenfluss läuft zu Streaming-Zielen](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) in der Überwachungsdokumentation.
+
+### Dateibasierte Ziele {#file-based}
+
+Für Datenflüsse, die an dateibasierte Ziele ausgeführt werden, muss die Variable **[!UICONTROL Verarbeitungsdauer]** hängt von der Größe der zu exportierenden Daten und der Systemlast ab. Beachten Sie außerdem, dass der Datenfluss zu dateibasierten Zielen nach Segment aufgeschlüsselt wird.
+
+![Bild der Seite Datenfluss wird ausgeführt, wobei die Spalte Verarbeitungszeit für ein dateibasiertes Ziel hervorgehoben ist.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
+
+Weitere Informationen finden Sie unter [Datenfluss wird an Batch-(dateibasierte) Ziele ausgeführt](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) in der Überwachungsdokumentation.
 
 ## [!UICONTROL Aktivierungsdaten] {#activation-data}
 
