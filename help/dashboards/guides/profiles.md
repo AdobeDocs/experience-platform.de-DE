@@ -4,10 +4,10 @@ title: Handbuch zum Profile-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: a28c1c00fd0b33af3b797ecf2b4d45154dedc823
 workflow-type: tm+mt
-source-wordcount: '3381'
-ht-degree: 94%
+source-wordcount: '3385'
+ht-degree: 92%
 
 ---
 
@@ -117,7 +117,7 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 * [[!UICONTROL Einzelidentitätsprofile]](#single-identity-profiles)
 * [[!UICONTROL Einzelne Identitätsprofile nach Identität]](#single-identity-profiles-by-identity)
 * [[!UICONTROL Nicht segmentierte Profile]](#unsegmented-profiles)
-* [[!UICONTROL Trend der nicht segmentierten Profile]](#unsegmented-profiles-trend)
+* [[!UICONTROL Trendänderung von nicht segmentierten Profilen]](#unsegmented-profiles-change-trend)
 * [[!UICONTROL Nicht segmentierte Profile nach Identität]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL Audiences]](#audiences)
 * [[!UICONTROL Audiences, die einem Zielstatus zugeordnet sind]](#audiences-mapped-to-destination-status)
@@ -262,21 +262,22 @@ Das Widget [!UICONTROL Nicht segmentierte Profile] gibt die Gesamtanzahl aller P
 
 ![Das Widget „Nicht segmentierte Profile“.](../images/profiles/unsegmented-profiles.png)
 
-### [!UICONTROL Der Trend von nicht segmentierten Profilen] {#unsegmented-profiles-trend}
+### [!UICONTROL Trendänderung von nicht segmentierten Profilen] {#unsegmented-profiles-change-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="Trend von nicht segmentierten Profilen"
 >abstract="Dieses Widget bietet eine grafische Darstellung der Anzahl der Profile, die in einem bestimmten Zeitraum nicht mit einem Segment verbunden sind. Der Trend der Profile, die keinem Segment zugeordnet sind, kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden."
 
-Das Widget [!UICONTROL Trend von nicht segmentierten Profilen] bietet eine grafische Darstellung der Anzahl der Profile, die in einem bestimmten Zeitraum mit keinem Segment verbunden sind. Der Trend der Profile, die keinem Segment zugeordnet sind, kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt. Die Anzahl der Profile wird auf der Y-Achse und die Zeit auf der X-Achse dargestellt.
+Die [!UICONTROL Trendänderung von nicht segmentierten Profilen] -Widget verwendet ein Liniendiagramm, um die Anzahl der Profile zu veranschaulichen, die seit der letzten täglichen Momentaufnahme hinzugefügt wurden und an kein Segment angehängt sind. Der Änderungstrend von Profilen, die keinem Segment zugeordnet sind, kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt. Die Anzahl der Profile wird auf der Y-Achse und die Zeit auf der X-Achse dargestellt.
 
-![Das Widget „Trend von nicht segmentierten Profilen“.](../images/profiles/unsegmented-profiles-trend.png)
+![Das Trend-Widget für nicht segmentierte Profile ändert sich.](../images/profiles/unsegmented-profiles-change-trend.png)
 
 ### [!UICONTROL Nicht segmentierte Profile nach Identität] {#unsegmented-profiles-by-identity}
 
->!![NOTE]
-Das Widget Nicht segmentierte Profile nach Identität wird seit Oktober 2022 nicht mehr unterstützt und ist nicht mehr verfügbar.
+>[!NOTE]
+>
+>Das Widget Nicht segmentierte Profile nach Identität wird seit Oktober 2022 nicht mehr unterstützt und ist nicht mehr verfügbar.
 
 <!-- 
 
@@ -323,7 +324,8 @@ Das Dialogfeld [!UICONTROL Bericht zur Zielgruppenüberschneidung] wird angezeig
 ![Das Dialogfeld mit dem Bericht zur Zielgruppenüberschneidung.](../images/profiles/profiles-audience-overlap-report-dialog.png)
 
 >[!NOTE]
-Wählen Sie die Spaltenüberschrift **[!UICONTROL Überschneidung]** aus, um die Rangfolge der Ergebnisse vom höchsten zum niedrigsten bzw. vom niedrigsten zum höchsten zu ändern.
+>
+>Wählen Sie die Spaltenüberschrift **[!UICONTROL Überschneidung]** aus, um die Rangfolge der Ergebnisse vom höchsten zum niedrigsten bzw. vom niedrigsten zum höchsten zu ändern.
 
 Um den gesamten Bericht im PDF-Format herunterzuladen, wählen Sie das Optionsmenü (**`...`**) und dann **[!UICONTROL Download]** aus.
 
