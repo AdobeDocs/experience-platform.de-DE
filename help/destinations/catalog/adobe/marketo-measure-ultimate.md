@@ -2,10 +2,10 @@
 title: Marketo Measure Ultimate-Ziel
 description: Erfahren Sie, wie Sie Daten mit dem Marketo Measure Ultimate-Ziel verbinden und aktivieren.
 last-substantial-update: 2023-03-07T00:00:00Z
-source-git-commit: 60ea8a608b85661f3a5d23dc3ba52cb0952fe2d2
+source-git-commit: bd2869e48c2d831460fb817c6ddfb800f88b8600
 workflow-type: tm+mt
-source-wordcount: '646'
-ht-degree: 38%
+source-wordcount: '654'
+ht-degree: 37%
 
 ---
 
@@ -60,21 +60,23 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
 
+![Der Workflow Mit Ziel verbinden für das Marketo Measure-Ziel.](/help/destinations/assets/catalog/adobe/marketo-measure-ultimate/marketo-measure-connect-to-destination.png)
+
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
 
-## Aktivieren von Segmenten für dieses Ziel {#activate}
+## Exportieren von Datensätzen in dieses Ziel {#export-datasets}
 
 >[!IMPORTANT]
 > 
 >Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Verwalten und Aktivieren von Datensatzzielen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Lesen [(Beta) Exportieren von Datensätzen](/help/destinations/ui/export-datasets.md) ausführliche Anweisungen zum Exportieren von Datensätzen an dieses Ziel.
+Lesen Sie die [(Beta) Exportieren von Datensätzen](/help/destinations/ui/export-datasets.md) Tutorial für ausführliche Anweisungen zum Exportieren von Datensätzen in dieses Ziel.
 
-## Export von Daten/Export validieren {#exported-data}
+## Überprüfen des Datenexports {#exported-data}
 
 Um einen erfolgreichen Datensatz-Export zu überprüfen, können Sie überprüfen, ob Ihr Datensatz ihn erfolgreich an Ihre [Snowflake Data Warehouse](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=en).
 
@@ -82,5 +84,6 @@ Um einen erfolgreichen Datensatz-Export zu überprüfen, können Sie überprüfe
 
 Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Ausführliche Informationen darüber, wie [!DNL Adobe Experience Platform] Data Governance erzwingt, finden Sie unter [Data Governance - Übersicht](/help/data-governance/home.md).
 
-## Zusätzliche Ressourcen {#additional-resources}
+<!--## Additional resources {#additional-resources}-->
+
 
