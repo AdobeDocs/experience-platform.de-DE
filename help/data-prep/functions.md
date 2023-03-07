@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Zuordnungsfunktionen für Datenvorbereitung
 description: In diesem Dokument werden die mit der Datenvorbereitung verwendeten Zuordnungsfunktionen vorgestellt.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 2584e804674cc54f9cdd0b3a28ee6fb1600b6216
+source-git-commit: da7eff7966679635efa71cbbd33768ef4f412241
 workflow-type: tm+mt
-source-wordcount: '4392'
+source-wordcount: '4557'
 ht-degree: 8%
 
 ---
@@ -64,7 +64,7 @@ In den folgenden Tabellen sind alle unterstützten Zuordnungsfunktionen aufgefü
 | gleich | Vergleicht zwei Zeichenketten, um sicherzustellen, dass sie gleich sind. Bei dieser Funktion wird zwischen Groß- und Kleinschreibung unterschieden. | <ul><li>STRING1: **Erforderlich** Die erste Zeichenfolge, die Sie vergleichen möchten.</li><li>STRING2: **Erforderlich** Die zweite Zeichenfolge, die Sie vergleichen möchten.</li></ul> | STRING1. &#x200B;equals( &#x200B; STRING2) | &quot;string1&quot;. &#x200B;equals &#x200B;(&quot;STRING1&quot;) | false |
 | equalsIgnoreCase | Vergleicht zwei Zeichenketten, um sicherzustellen, dass sie gleich sind. Diese Funktion ist **not** Groß-/Kleinschreibung beachten. | <ul><li>STRING1: **Erforderlich** Die erste Zeichenfolge, die Sie vergleichen möchten.</li><li>STRING2: **Erforderlich** Die zweite Zeichenfolge, die Sie vergleichen möchten.</li></ul> | STRING1. &#x200B;equalsIgnoreCase &#x200B;(STRING2) | &quot;string1&quot;. &#x200B;equalsIgnoreCase &#x200B;(&quot;STRING1) | wahr |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Funktionen mit reguläreren Ausdrücken
 
@@ -73,7 +73,7 @@ In den folgenden Tabellen sind alle unterstützten Zuordnungsfunktionen aufgefü
 | extract_regex | Extrahiert basierend auf einem regulären Ausdruck Gruppen aus der Eingabezeichenfolge. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, aus der Sie die Gruppen extrahieren.</li><li>REGEX: **Erforderlich** Der reguläre Ausdruck, mit dem die Gruppe übereinstimmen soll.</li></ul> | extract_regex(STRING, REGEX) | extract_regex &#x200B;(&quot;E259,E259B_009,1_1&quot; &#x200B;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | [&quot;E259,E259B_009,1_1&quot;, &quot;E259&quot;, &quot;1_1&quot;] |
 | matches_regex | Überprüft, ob die Zeichenfolge mit dem eingegebenen regulären Ausdruck übereinstimmt. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, die Sie überprüfen, entspricht dem regulären Ausdruck.</li><li>REGEX: **Erforderlich** Der reguläre Ausdruck, mit dem Sie vergleichen.</li></ul> | matches_regex(STRING, REGEX) | matches_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | wahr |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Hashfunktionen {#hashing}
 
@@ -89,7 +89,7 @@ In den folgenden Tabellen sind alle unterstützten Zuordnungsfunktionen aufgefü
 | md5 | Nimmt eine Eingabe und erzeugt einen Hash-Wert mit MD5. | <ul><li>EINGABE: **Erforderlich** Der Klartext, der gehasht werden soll.</li><li>CHARSET: *Optional* Der Name des Zeichensatzes. Mögliche Werte sind UTF-8, UTF-16, ISO-8859-1 und US-ASCII. </li></ul> | md5(INPUT, CHARSET) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 &#x200B; e9bd0198d03ba6852c7 |
 | crc32 | Eine Eingabe verwendet einen CRC-Algorithmus (zyklische Redundanzprüfung), um einen 32-Bit-zyklischen Code zu erzeugen. | <ul><li>EINGABE: **Erforderlich** Der Klartext, der gehasht werden soll.</li><li>CHARSET: *Optional* Der Name des Zeichensatzes. Mögliche Werte sind UTF-8, UTF-16, ISO-8859-1 und US-ASCII.</li></ul> | crc32(INPUT, CHARSET) | crc32(&quot;my text&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### URL-Funktionen {#url}
 
@@ -104,8 +104,10 @@ In den folgenden Tabellen sind alle unterstützten Zuordnungsfunktionen aufgefü
 | get_url_port | Gibt den Port der angegebenen URL zurück. Wenn die Eingabe ungültig ist, wird null zurückgegeben. | <ul><li>URL: **Erforderlich** Die URL, aus der der Port extrahiert werden muss.</li></ul> | get_url_port(URL) | get_url_port &#x200B;(&quot;sftp://example.com//home/ &#x200B; joe/employee.csv&quot;) | 22 |
 | get_url_path | Gibt den Pfad der angegebenen URL zurück. Standardmäßig wird der vollständige Pfad zurückgegeben. | <ul><li>URL: **Erforderlich** Die URL, aus der der Pfad extrahiert werden muss.</li><li>FULL_PATH: *Optional* Ein boolean -Wert, der bestimmt, ob der vollständige Pfad zurückgegeben wird. Wenn der Wert auf &quot;false&quot;gesetzt ist, wird nur das Ende des Pfads zurückgegeben.</li></ul> | get_url_path &#x200B;(URL, FULL_PATH) | get_url_path &#x200B;(&quot;sftp://example.com// &#x200B; home/joe/employee.csv&quot;) | &quot;//home/joe/&#x200B; employee.csv&quot; |
 | get_url_query_str | Gibt die Abfragezeichenfolge einer angegebenen URL als Zuordnung des Abfragezeichenfolgennamens und des Abfragezeichenfolgenwerts zurück. | <ul><li>URL: **Erforderlich** Die URL, von der Sie die Abfragezeichenfolge abrufen möchten.</li><li>ANCHOR: **Erforderlich** Bestimmt, was mit dem Anker in der Abfragezeichenfolge ausgeführt wird. Kann einer von drei Werten sein: &quot;keep&quot;, &quot;remove&quot;oder &quot;append&quot;.<br><br>Wenn der Wert &quot;keep&quot;lautet, wird der Anker an den zurückgegebenen Wert angehängt.<br>Wenn der Wert &quot;remove&quot;lautet, wird der Anker aus dem zurückgegebenen Wert entfernt.<br>Wenn der Wert &quot;append&quot;lautet, wird der Anker als separater Wert zurückgegeben.</li></ul> | get_url_query_str &#x200B;(URL, ANCHOR) | get_url_query_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/dahin?name= &#x200B; ferret#nose&quot;, &quot;keep&quot;)<br>get_url_query_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/dahin?name= &#x200B; ferret#nose&quot;, &quot;remove&quot;)<br>get_url_query_str &#x200B;(&quot;foo://example.com &#x200B;:8042/over/gibt &#x200B;?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_encoded | Diese Funktion akzeptiert eine URL als Eingabe und ersetzt oder kodiert die Sonderzeichen durch ASCII-Zeichen. Weitere Informationen zu Sonderzeichen finden Sie im Abschnitt [Liste der Sonderzeichen](#special-characters) im Anhang dieses Dokuments. | <ul><li>URL: **Erforderlich** Die Eingabe-URL mit Sonderzeichen, die Sie ersetzen oder mit ASCII-Zeichen kodieren möchten.</li></ul> | get_url_encoded(URL) | get_url_encoded(&quot;https</span>://example.com/partneralliance_asia-pacific_2022&quot;) | https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022 |
+| get_url_decoded | Diese Funktion akzeptiert eine URL als Eingabe und dekodiert die ASCII-Zeichen in Sonderzeichen.  Weitere Informationen zu Sonderzeichen finden Sie im Abschnitt [Liste der Sonderzeichen](#special-characters) im Anhang dieses Dokuments. | <ul><li>URL: **Erforderlich** Die Eingabe-URL mit ASCII-Zeichen, die Sie in Sonderzeichen dekodieren möchten.</li></ul> | get_url_decoded(URL) | get_url_decoded(&quot;https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022&quot;) | https</span>://example.com/partneralliance_asia-pacific_2022 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Datums- und Uhrzeitfunktionen {#date-and-time}
 
@@ -116,7 +118,7 @@ In den folgenden Tabellen sind alle unterstützten Zuordnungsfunktionen aufgefü
 | Funktion | Beschreibung | Parameter | Aufbau | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | Ruft die aktuelle Zeit ab. |  | now() | now() | `2021-10-26T10:10:24Z` |
-| timestamp | Ruft die aktuelle Unix-Zeit ab. |  | timestamp() | timestamp() | 1571850624571 |
+| Zeitstempel | Ruft die aktuelle Unix-Zeit ab. |  | Zeitstempel() | Zeitstempel() | 1571850624571 |
 | format | Formatiert das Eingabedatum in einem angegebenen Format. | <ul><li>DATUM: **Erforderlich** Das Eingabedatum als ZonedDateTime -Objekt, das Sie formatieren möchten.</li><li>FORMAT: **Erforderlich** Das Format, in das das Datum geändert werden soll.</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11):24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | `2019-10-23 11:24:35` |
 | dformat | Konvertiert einen Zeitstempel in eine Datums-Zeichenfolge in einem angegebenen Format. | <ul><li>ZEITSTEMPEL: **Erforderlich** Der Zeitstempel, den Sie formatieren möchten. Dies wird in Millisekunden geschrieben.</li><li>FORMAT: **Erforderlich** Das Format, in dem der Zeitstempel verwendet werden soll.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH&quot;:mm:ss.SSSX&quot;) | `2019-10-23T11:24:35.000Z` |
 | date | Konvertiert eine Datums-Zeichenfolge in ein ZonedDateTime-Objekt (ISO 8601-Format). | <ul><li>DATUM: **Erforderlich** Die Zeichenfolge, die das Datum darstellt.</li><li>FORMAT: **Erforderlich** Die Zeichenfolge, die das Format des Quelldatums darstellt.**Hinweis:** Dies geschieht **not** das Format darstellen, in das Sie die Datums-Zeichenfolge konvertieren möchten. </li><li>DEFAULT_DATE: **Erforderlich** Das Standarddatum, das zurückgegeben wird, wenn das angegebene Datum null ist.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyy-MM-dd HH:mm&quot;, now()) | `2019-10-23T11:24:00Z` |
@@ -128,7 +130,7 @@ In den folgenden Tabellen sind alle unterstützten Zuordnungsfunktionen aufgefü
 | zone_date_to_utc | Konvertiert ein Datum in einer beliebigen Zeitzone in ein Datum in UTC. | <ul><li>DATUM: **Erforderlich** Das Datum, das Sie konvertieren möchten.</li></ul> | zone_date_to_utc &#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12 PST` | `2019-10-17T19:55:12Z` |
 | zone_date_to_zone | Konvertiert ein Datum aus einer Zeitzone in eine andere Zeitzone. | <ul><li>DATUM: **Erforderlich** Das Datum, das Sie konvertieren möchten.</li><li>ZONE: **Erforderlich** Die Zeitzone, in die Sie das Datum konvertieren möchten.</li></ul> | zone_date_to_zone &#x200B;(DATE, ZONE) | `zone_date_to_utc&#x200B;(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Hierarchien - Objekte {#objects}
 
@@ -147,7 +149,7 @@ In den folgenden Tabellen sind alle unterstützten Zuordnungsfunktionen aufgefü
 | get_keys | Analysiert die Schlüssel/Wert-Paare und gibt alle Schlüssel zurück. | <ul><li>OBJEKT: **Erforderlich** Das Objekt, aus dem die Schlüssel extrahiert werden.</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;: &quot;Stolz und Vorurteile&quot;, &quot;Buch2&quot;: &quot;1984&quot;}) | `["book1", "book2"]` |
 | get_values | Analysiert die Schlüssel-Wert-Paare und gibt den Wert der Zeichenfolge basierend auf dem angegebenen Schlüssel zurück. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, die Sie analysieren möchten.</li><li>SCHLÜSSEL: **Erforderlich** Der Schlüssel, für den der Wert extrahiert werden muss.</li><li>VALUE_DELIMITER: **Erforderlich** Das Trennzeichen, das das Feld und den Wert trennt. Wenn eine `null` oder eine leere Zeichenfolge angegeben wird, lautet dieser Wert `:`.</li><li>FIELD_DELIMITER: *Optional* Das Trennzeichen, das Feld- und Wertpaare trennt. Wenn eine `null` oder eine leere Zeichenfolge angegeben wird, lautet dieser Wert `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena , phone - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | John |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Informationen zur Objektkopierfunktion finden Sie im Abschnitt . [below](#object-copy).
 
@@ -169,7 +171,7 @@ Informationen zur Objektkopierfunktion finden Sie im Abschnitt . [below](#object
 | upsert_array_append | Mit dieser Funktion werden alle Elemente im gesamten Eingabe-Array an das Ende des Arrays in Profil angehängt. Diese Funktion ist **only** anwendbar während Aktualisierungen. Wenn diese Funktion im Kontext von Einfügen verwendet wird, gibt sie die Eingabe unverändert zurück. | <ul><li>ARRAY: **Erforderlich** Das Array, an das das Array im Profil angehängt werden soll.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
 | upsert_array_replace | Diese Funktion wird verwendet, um Elemente in einem Array zu ersetzen. Diese Funktion ist **only** anwendbar während Aktualisierungen. Wenn diese Funktion im Kontext von Einfügen verwendet wird, gibt sie die Eingabe unverändert zurück. | <ul><li>ARRAY: **Erforderlich** Das Array, das das Array im Profil ersetzen soll.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Logische Operatoren {#logical-operators}
 
@@ -182,7 +184,7 @@ Informationen zur Objektkopierfunktion finden Sie im Abschnitt . [below](#object
 | decode | Bei einem Schlüssel und einer Liste mit Schlüsselwertpaaren, die als Array reduziert werden, gibt die Funktion den Wert zurück, wenn der Schlüssel gefunden wird, oder gibt einen Standardwert zurück, wenn er im Array vorhanden ist. | <ul><li>SCHLÜSSEL: **Erforderlich** Der Schlüssel, der abgeglichen werden soll.</li><li>OPTIONS: **Erforderlich** Ein reduziertes Array von Schlüssel/Wert-Paaren. Optional kann ein Standardwert am Ende gesetzt werden.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | Wenn der angegebene stateCode &quot;ca&quot;ist, &quot;California&quot;.<br>Wenn der angegebene stateCode &quot;pa&quot;ist, &quot;Pennsylvania&quot;.<br>Wenn der stateCode nicht mit dem folgenden übereinstimmt, &quot;N/A&quot;. |
 | iif | Wertet einen bestimmten booleschen Ausdruck aus und gibt den angegebenen Wert basierend auf dem Ergebnis zurück. | <ul><li>AUSDRUCK: **Erforderlich** Der boolesche Ausdruck, der ausgewertet wird.</li><li>TRUE_VALUE: **Erforderlich** Der Wert, der zurückgegeben wird, wenn der Ausdruck &quot;true&quot;ergibt.</li><li>FALSE_VALUE: **Erforderlich** Der Wert, der zurückgegeben wird, wenn der Ausdruck &quot;false&quot;ergibt.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Aggregation {#aggregation}
 
@@ -195,7 +197,7 @@ Informationen zur Objektkopierfunktion finden Sie im Abschnitt . [below](#object
 | min | Gibt das Minimum der angegebenen Argumente zurück. Verwendet die natürliche Reihenfolge. | <ul><li>OPTIONS: **Erforderlich** Ein oder mehrere Objekte, die miteinander verglichen werden können.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | Gibt das Maximum der angegebenen Argumente zurück. Verwendet die natürliche Reihenfolge. | <ul><li>OPTIONS: **Erforderlich** Ein oder mehrere Objekte, die miteinander verglichen werden können.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Typkonvertierungen {#type-conversions}
 
@@ -210,7 +212,7 @@ Informationen zur Objektkopierfunktion finden Sie im Abschnitt . [below](#object
 | to_float | Konvertiert einen String in einen Float-Wert. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, die in eine Gleitkommazahl konvertiert werden soll.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
 | to_integer | Konvertiert eine Zeichenfolge in eine Ganzzahl. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, die in eine Ganzzahl umgewandelt werden soll.</li></ul> | to_integer(STRING) | to_integer(&quot;12&quot;) | 12 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### JSON-Funktionen {#json}
 
@@ -222,7 +224,7 @@ Informationen zur Objektkopierfunktion finden Sie im Abschnitt . [below](#object
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | json_to_object | Deserialisieren Sie den JSON-Inhalt aus der angegebenen Zeichenfolge. | <ul><li>STRING: **Erforderlich** Die zu deserialisierende JSON-Zeichenfolge.</li></ul> | json_to_object &#x200B;(STRING) | json_to_object &#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;: &quot;Doe&quot;}) | Ein Objekt, das die JSON darstellt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Sondermaßnahmen {#special-operations}
 
@@ -234,7 +236,7 @@ Informationen zur Objektkopierfunktion finden Sie im Abschnitt . [below](#object
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uid /<br>guid | Generiert eine Pseudo-Zufallskennung. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Benutzeragenten-Funktionen {#user-agent}
 
@@ -258,7 +260,7 @@ Jede der in der folgenden Tabelle enthaltenen Benutzeragenten-Funktionen kann ei
 | ua_agent_name | Extrahiert den Agentennamen aus der Benutzeragenten-Zeichenfolge. | <ul><li>USER_AGENT: **Erforderlich** Die Benutzeragenten-Zeichenfolge.</li></ul> | ua_agent_name &#x200B;(USER_AGENT) | ua_agent_name &#x200B;(&quot;Mozilla/5.0 (iPhone) CPU iPhone OS 5_1_1 (wie Mac OS X) AppleWebKit/534.46 (KHTML, wie Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
 | ua_device_class | Extrahiert die Geräteklasse aus der Benutzeragenten-Zeichenfolge. | <ul><li>USER_AGENT: **Erforderlich** Die Benutzeragenten-Zeichenfolge.</li></ul> | ua_device_class &#x200B;(USER_AGENT) | ua_device_class &#x200B;(&quot;Mozilla/5.0 (iPhone) CPU iPhone OS 5_1_1 (wie Mac OS X) AppleWebKit/534.46 (KHTML, wie Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Telefon |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Objektkopie {#object-copy}
 
@@ -302,3 +304,43 @@ Um sicherzustellen, dass die automatische Zuordnung funktioniert, müssen die fo
 * Neue Attribute sollten über übereinstimmende Namen im Quellschema und im XDM-Schema verfügen.
 
 Wenn eine der Voraussetzungen nicht erfüllt ist, müssen Sie das Quellschema mithilfe von data prep manuell dem XDM-Schema zuordnen.
+
+## Anhang
+
+Im Folgenden finden Sie weitere Informationen zur Verwendung der Zuordnungsfunktionen für die Datenvorbereitung
+
+### Sonderzeichen {#special-characters}
+
+Die nachstehende Tabelle enthält eine Liste der reservierten Zeichen und der zugehörigen kodierten Zeichen.
+
+| Reserviertes Zeichen | Kodiertes Zeichen |
+| --- | --- |
+| space | %20 |
+| ! | %21 |
+| “ | %22 |
+| # | %23 |
+| $ | %24 |
+| % | %25 |
+| &amp; | %26 |
+| &#39; | %27 |
+| ( | %28 |
+| ) | %29 |
+| * | %2A |
+| + | %2B |
+| , | %2C |
+| / | %2F |
+| : | %3A |
+|   | %3B |
+| &lt; | %3C |
+| = | %3D |
+| > | %3E |
+| ? | %3F |
+| @ | %40 |
+| [ | %5B |
+| | | %5C |
+| ] | %5D |
+| ^ | %5E |
+| &grave; | %60 |
+| ~ | %7E |
+
+{style="table-layout:auto"}
