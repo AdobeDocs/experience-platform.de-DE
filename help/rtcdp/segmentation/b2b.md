@@ -2,9 +2,9 @@
 title: Anwendungsfälle für die Segmentierung für Real-time Customer Data Platform B2B Edition
 description: Ein Überblick über die verschiedenen Anwendungsfälle der Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: b436aeb8a8628d9b481041be518c1113fb54c342
 workflow-type: tm+mt
-source-wordcount: '1283'
+source-wordcount: '1427'
 ht-degree: 0%
 
 ---
@@ -84,13 +84,13 @@ Finden Sie alle Personen, die ein &quot;Entscheidungsträger&quot;sind, von jede
 
 ### Beispiel 5: B2B-Profile nach Möglichkeiten nach Abteilungsname und Opportunity-Menge suchen {#find-department-opportunity-amount}
 
-Finden Sie alle Personen, die in einer Personalabteilung (HR) arbeiten und mit jedem Konto verbunden sind, das mindestens eine offene Chance im Wert des angegebenen Betrags (1 Million Dollar) oder mehr hat. Dieses Segment erfordert eine Verknüpfung zwischen dem [!UICONTROL XDM Individual Profile] Klasse, [!UICONTROL XDM-Geschäftskonto] -Klasse und [!UICONTROL XDM-Geschäftschancen] -Klasse.
+Finden Sie alle Personen, die in einer Personalabteilung arbeiten und über ein Konto verfügen, das mindestens eine offene Chance im Wert des angegebenen Betrags (1 Million Dollar) oder mehr hat. Dieses Segment erfordert eine Verknüpfung zwischen dem [!UICONTROL XDM Individual Profile] Klasse, [!UICONTROL XDM-Geschäftskonto] -Klasse und [!UICONTROL XDM-Geschäftschancen] -Klasse.
 
 ![Benutzeroberfläche mit Beispiel-5-Einstellungen](../assets/segmentation/example-5.png)
 
 ### Beispiel 6: B2B-Profile nach Berufsbezeichnung und Jahresumsatz suchen {#find-by-job-title-and-revenue}
 
-Finden Sie alle Personen, deren Berufsbezeichnung Vizepräsident ist und die mit einem beliebigen Konto verbunden sind, dessen Jahresumsatz den angegebenen Betrag (100 Millionen Dollar) oder mehr beträgt, und haben die Preisseite im letzten Monat mindestens dreimal besucht. Dieses Segment erfordert eine Verknüpfung zwischen dem [!UICONTROL XDM Individual Profile] Klasse, [!UICONTROL XDM-Geschäftskonto] -Klasse und [!UICONTROL XDM ExperienceEvent] -Klasse.
+Finden Sie alle Personen, deren Berufsbezeichnung Vizepräsident ist und die einen beliebigen Jahresumsatz von mindestens 100 Millionen Euro haben und die die Preisseite im letzten Monat mindestens dreimal besucht haben. Dieses Segment erfordert eine Verknüpfung zwischen dem [!UICONTROL XDM Individual Profile] Klasse, [!UICONTROL XDM-Geschäftskonto] -Klasse und [!UICONTROL XDM ExperienceEvent] -Klasse.
 
 ![Benutzeroberfläche mit Beispiel 6-Einstellungen](../assets/segmentation/example-6.png)
 
@@ -104,13 +104,37 @@ Finden Sie alle Personen, die ein &quot;Entscheidungsträger&quot;jeder verloren
 
 Finden Sie alle Personen, die in einer Personalabteilung (HR) arbeiten und mit einem beliebigen Konto in Verbindung stehen. *oder eines der damit verbundenen Konten* die mindestens eine offene Chance im Wert des angegebenen Betrags (1 Million Dollar) oder mehr hat. Dieses Segment erfordert eine Verknüpfung zwischen dem [!UICONTROL XDM Individual Profile] Klasse, [!UICONTROL XDM-Geschäftskonto] -Klasse und [!UICONTROL XDM-Geschäftschancen] -Klasse.
 
-![Benutzeroberfläche zur Segmentierung verwandter Konten](../assets/segmentation/segmentation-related-accounts.png)
+![Benutzeroberfläche zur Segmentierung verwandter Konten](../assets/segmentation/example-8.png)
 
 ### Beispiel 9: Lead-Bewertungen und/oder Kontobewertungen zur Profilqualifizierung verwenden {#account-scoring}
 
 Finden Sie alle Profile mit einem Lead-Ergebnis über 80.
 
-![Benutzeroberfläche mit Segmentierung für prädiktive Lead- und Kontobewertung](../assets/segmentation/segmentation-predictive-lead-and-account-scoring.png)
+![Benutzeroberfläche mit Segmentierung für prädiktive Lead- und Kontobewertung](../assets/segmentation/example-9.png)
+
+### Beispiel 10: Suchen Sie nach B2B-Profilen, die mit Konten verknüpft sind, deren übergeordnete Organisation über einen bestimmten Dollarbetrag Umsatz verfügt. {#find-parent-org-amount}
+
+Finden Sie alle Personen, die mit Konten verknüpft sind, deren übergeordnete Organisation einen Umsatz hat, der über dem angegebenen Betrag liegt ($100.000.000).
+
+![Benutzeroberfläche mit übergeordneter Segmentierungsorganisation](../assets/segmentation/example-10.png)
+
+### Beispiel 11: Suchen von B2B-Profilen nach Berufsbezeichnung und Kontoname mit aktiver Beziehung {#find-by-job-title-and-account-name}
+
+Suchen Sie alle Personen, die ein &quot;Manager&quot;sind, im Konto &quot;Acme&quot;, wobei die Kontobeziehung &quot;aktiv&quot;ist.
+
+![Benutzeroberfläche mit übergeordneter Segmentierungsorganisation](../assets/segmentation/example-11.png)
+
+### Beispiel 12: Suchen Sie nach B2B-Profilen, die für Kampagnen bestimmt sind, bei denen die tatsächlichen Kosten die budgetedCost überschreiten. {#find-actualcost-exceed-budgetcost}
+
+Finden Sie alle Personen, die für Kampagnen angesprochen werden, bei denen die tatsächlichen Kosten die budgetedCost überstiegen haben.
+
+![Benutzeroberfläche mit übergeordneter Segmentierungsorganisation](../assets/segmentation/example-12.png)
+
+### Beispiel 13: Suchen Sie nach B2B-Profilen, die zu einer statischen Marketo-Liste gehören, und isDeleted=false {#find-marketo-static-list}
+
+Suchen Sie alle Personen, die zur statischen Marketo-Liste &quot;Jubiläumsbenutzer&quot;gehören, wobei isDeleted=false lautet.
+
+![Benutzeroberfläche mit übergeordneter Segmentierungsorganisation](../assets/segmentation/example-13.png)
 
 ## Nächste Schritte {#next-steps}
 
