@@ -1,10 +1,10 @@
 ---
 title: Erstellen einer Marketo Engage-Quellverbindung und eines Datenflusses für benutzerdefinierte Aktivitätsdaten in der Benutzeroberfläche
 description: In diesem Tutorial erfahren Sie, wie Sie in der Benutzeroberfläche eine Marketo Engage-Quellverbindung und einen Datenfluss erstellen, um benutzerdefinierte Aktivitätsdaten in Adobe Experience Platform zu importieren.
-source-git-commit: d049a29d4c39fa41917e8da1dde530966f4cbaf4
+source-git-commit: e584fbdfa64516a0dad1e7b99eb347f18e59d6d5
 workflow-type: tm+mt
-source-wordcount: '1365'
-ht-degree: 23%
+source-wordcount: '1481'
+ht-degree: 22%
 
 ---
 
@@ -145,9 +145,30 @@ Nachdem Sie Ihren Datenfluss überprüft haben, wählen Sie **[!UICONTROL Speich
 
 ![Der letzte Schritt zur Überprüfung, der Informationen zu den Feldern für Verbindung, Datensatz und Zuordnung zusammenfasst.](../../../../images/tutorials/create/marketo-custom-activities/review.png)
 
->[!NOTE]
->
->Nach Abschluss der Erfassung enthält der aufgenommene Datensatz alle Aktivitäten, einschließlich sowohl standardmäßiger als auch benutzerdefinierter Aktivitäten aus Ihren [!DNL Marketo] -Instanz. Um Ihre benutzerdefinierten Aktivitätsdatensätze in Platform auszuwählen, müssen Sie [Query Service](../../../../../query-service/home.md) und geben die geeigneten Eigenschaften an.
+### Hinzufügen benutzerdefinierter Aktivitäten zu einem vorhandenen Aktivitäten-Datenfluss {#add-to-existing-dataflows}
+
+Um einem vorhandenen Datenfluss benutzerdefinierte Aktivitätsdaten hinzuzufügen, ändern Sie die Zuordnungen eines vorhandenen Aktivitäts-Datenflusses mit den benutzerdefinierten Aktivitätsdaten, die Sie erfassen möchten. Auf diese Weise können Sie benutzerdefinierte Aktivitäten in denselben vorhandenen Aktivitäts-Datensatz aufnehmen. Weitere Informationen zum Aktualisieren der Zuordnungen eines vorhandenen Datenflusses finden Sie im Handbuch unter [Aktualisieren von Datenflüssen in der Benutzeroberfläche](../../update-dataflows.md).
+
+### Verwendung [!DNL Query Service] Filtern von Aktivitäten für benutzerdefinierte Aktivitäten {#query-service-filter}
+
+Sobald Ihr Datenfluss abgeschlossen ist, können Sie [Query Service](../../../../../query-service/home.md) , um Aktivitäten nach Ihren benutzerdefinierten Aktivitätsdaten zu filtern.
+
+Wenn benutzerdefinierte Aktivitäten in Platform erfasst werden, wird der API-Name der benutzerdefinierten Aktivität automatisch zu `eventType`. Verwendung `eventType={API_NAME}` , um nach benutzerdefinierten Aktivitätsdaten zu filtern.
+
+```sql
+SELECT * FROM with_custom_activities_ds_today WHERE eventType='aepCustomActivityDemo1' 
+```
+
+Verwenden Sie die `IN` -Klausel zum Filtern mehrerer benutzerdefinierter Aktivitäten:
+
+```sql
+SELECT * FROM $datasetName WHERE eventType='{API_NAME}'
+SELECT * FROM $datasetName WHERE eventType IN ('aepCustomActivityDemo1', 'aepCustomActivityDemo2')
+```
+
+Die folgende Abbildung zeigt eine Beispiel-SQL-Anweisung im [Abfrage-Editor](../../../../../query-service/ui/user-guide.md) , das nach benutzerdefinierten Aktivitätsdaten filtert.
+
+![Platform-Benutzeroberfläche, die ein Abfragebeispiel für benutzerdefinierte Aktivitäten anzeigt.](../../../../images/tutorials/create/marketo-custom-activities/queries.png)
 
 ## Nächste Schritte
 
