@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Identitätsfelder in der Benutzeroberfläche definieren
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Experience Platform ein Identitätsfeld definieren.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 857c1d4f74b6352e90f9c97ef22d686a883e3563
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 9%
+source-wordcount: '610'
+ht-degree: 10%
 
 ---
 
-# Identitätsfelder in der Benutzeroberfläche definieren
+# Definieren von Identitätsfeldern in der Benutzeroberfläche
 
 Im Experience-Datenmodell (XDM) stellt ein Identitätsfeld ein Feld dar, das zur Identifizierung einer einzelnen Person verwendet werden kann, die mit einem Datensatz- oder Zeitreihenereignis verbunden ist. In diesem Dokument wird beschrieben, wie Sie ein Identitätsfeld in der Adobe Experience Platform-Benutzeroberfläche definieren.
 
@@ -23,7 +23,12 @@ Identitätsfelder sind eine entscheidende Komponente bei der Erstellung von Iden
    * [Identity-Namespaces](../../../identity-service/namespaces.md): In Identity-Namespaces werden die verschiedenen Arten von Identitätsinformationen definiert, die sich auf eine einzelne Person beziehen können. Sie sind eine erforderliche Komponente für jedes Identitätsfeld.
 * [Echtzeit-Kundenprofil](../../../profile/home.md): Nutzen von Identitätsdiagrammen für Kunden, um ein einheitliches Verbraucherprofil basierend auf aggregierten Daten aus mehreren Quellen bereitzustellen, die nahezu in Echtzeit aktualisiert werden.
 
-## Identitätsfeld definieren
+## Identitätsfeld definieren {#define-a-identity-field}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_identityField_primaryIdentityRestriction"
+>title="Einschränkungen der primären Identität"
+>abstract="Dieses Schema verwendet eine Feldergruppe, die für die Verwendung in einer bestimmten Quellverbindung vorgesehen ist. Für die Verbindung muss identityMap als primäre Identität verwendet werden und muss automatisch festgelegt werden."
 
 Wann [Definieren eines neuen Felds](./overview.md#define) in der Benutzeroberfläche können Sie es als Identitätsfeld festlegen, indem Sie die **[!UICONTROL Identität]** in der rechten Leiste.
 

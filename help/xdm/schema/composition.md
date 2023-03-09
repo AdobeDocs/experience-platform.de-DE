@@ -2,12 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; Enum; Mixin; Feldergruppe; Feldergruppen; Feldergruppen; Mixins; Datentyp; Datentypen; Datentyp; Datentyp; primäre Identität; primäre Identität; XDM-individuelles Profil; XDM-Felder; Enum-Datentyp; Erlebnis-Ereignis; XDM Experience Event; XDM ExperienceEvent; ExperienceEvent; XDM ExperienceEvent; Schemadesign; Klasse; Klasse;Klassen;Datentyp;Datentyp;Datentyp;Datentyp;Datentyp;Schemas;Schemas;Identitätszuordnung;Identitätszuordnung;Identitätszuordnung;Schema-Design;Map;Map;Vereinigungsschema;Vereinigung
 solution: Experience Platform
 title: Grundlagen der Schemakomposition
-description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
+description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemata und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemata, die in Adobe Experience Platform verwendet werden können.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: f1a8bcc7c1ba33d74e1f687b4cfd83bddce2fadc
+source-git-commit: a3f38a18693e0ef4bc93765c090eafd56dcd15d3
 workflow-type: tm+mt
-source-wordcount: '4119'
-ht-degree: 26%
+source-wordcount: '4140'
+ht-degree: 25%
 
 ---
 
@@ -191,6 +191,11 @@ Die aktuellste Liste der verfügbaren Standard-XDM-Klassen finden Sie im Abschni
 >title="Feldergruppe"
 >abstract="Feldergruppen sind wiederverwendbare Komponenten, mit denen Sie Schemas mit zusätzlichen Attributen erweitern können. Die meisten Feldergruppen sind nur mit bestimmten Klassen kompatibel. Sie können Standardfeldgruppen verwenden, die von Adobe definiert werden, oder Sie können manuell eigene benutzerdefinierte Feldgruppen definieren. Weitere Informationen zur Beteiligung von Feldergruppen an der Schemakomposition finden Sie in der Dokumentation ."
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_fieldgroup_requiredFieldgroup"
+>title="Erforderliche Feldergruppe"
+>abstract="Diese Feldergruppe ist für die verwendete Quelle erforderlich. Aus diesem Grund können Sie ihn nicht aus Ihrem Schema löschen."
+
 Eine Feldergruppe ist eine wiederverwendbare Komponente, die ein oder mehrere Felder definiert, die bestimmte Funktionen wie persönliche Details, Hotelpräferenzen oder Adressen implementieren. Feldergruppen sind als Teil eines Schemas vorgesehen, das eine kompatible Klasse implementiert.
 
 Feldergruppen definieren, mit welchen Klassen sie kompatibel sind, basierend auf dem Verhalten der Daten, die sie darstellen (Datensatz oder Zeitreihen). Das bedeutet, dass nicht alle Feldergruppen für alle Klassen verfügbar sind.
@@ -327,7 +332,7 @@ Bei der Auswahl von Objekten gegenüber Freiformfeldern bei der Erstellung von S
 | Erhöht die Verschachtelung | Weniger oder keine Verschachtelung |
 | Erstellt logische Feldgruppierungen | Felder werden an Ad-hoc-Positionen platziert |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### Objekte
 
