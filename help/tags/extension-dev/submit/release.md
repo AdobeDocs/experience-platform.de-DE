@@ -2,7 +2,7 @@
 title: Freigeben einer Erweiterung
 description: Erfahren Sie, wie Sie eine Tag-Erweiterung in Adobe Experience Platform privat oder öffentlich freigeben.
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
+source-git-commit: 3e349c5d78d964c8c2a5b635ef1866d4f41ef6bb
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 98%
@@ -36,4 +36,4 @@ Wenn Sie Ihre Erweiterung mit privater Verfügbarkeit direkt über die API freig
 
 Sobald Sie die private Freigabe abgeschlossen haben, können Sie Adobe um die öffentliche Freigabe bitten.  Dadurch wird Ihre Erweiterung im öffentlichen Katalog verfügbar gemacht. Jeder Nutzer der Datenerfassung kann Ihre Erweiterung für jede Eigenschaft installieren.
 
-Bitte füllen Sie das [Anfrageformular für eine öffentliche Freigabe](https://experiencecloudpanel.adobe.com/c/r/DCExtensionReleaseRequest) aus, um den Freigabeprozess zu starten.
+Bitte füllen Sie das [Anfrageformular für eine öffentliche Freigabe](https://www.feedbackprogram.adobe.com/c/r/DCExtensionReleaseRequest) aus, um den Freigabeprozess zu starten.
