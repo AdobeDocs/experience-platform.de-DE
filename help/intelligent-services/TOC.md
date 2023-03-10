@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Intelligent Services-Hilfe
 breadcrumb-title: Handbuch zu Intelligent Services
 user-guide-description: Nutzen Sie intelligente KI-Services, um Scores zu generieren, Insights zu erhalten und Segmente aus Ihren Marketing-Ereignisdaten zu erstellen.
-source-git-commit: 5448333a68560aeb83e8f31a36c75c539fc4bf1b
-workflow-type: ht
-source-wordcount: '149'
-ht-degree: 100%
+source-git-commit: a98639851e7245b9cbd6fe42b35b4730dd19c3f8
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 92%
 
 ---
 
@@ -31,15 +31,13 @@ ht-degree: 100%
       - [Governance-Richtlinien](attribution-ai/aai-data-governance/governance-policies.md)
    - [Werte mithilfe von Abfrage-Service analysieren](attribution-ai/aai-query-service.md)
    - [Fehlerbehebung](attribution-ai/troubleshooting.md)
-- Content and Commerce AI (Beta) {#content-commerce-ai}
-   - [Übersicht](content-commerce-ai/overview.md)
-   - [Erste Schritte](content-commerce-ai/getting-started.md)
-   - Content and Commerce AI-API {#api}
-      - [Farbextraktion](content-commerce-ai/api/color-extraction.md)
-      - [Keyword-Extraktion](content-commerce-ai/api/keyword-extraction.md)
-      - [Textklassifizierung](content-commerce-ai/api/text-classification.md)
-      - [Visuelle Ähnlichkeit](content-commerce-ai/api/visual-similarity.md)
-      - [Textpräsenz- und optische Zeichenerkennung](content-commerce-ai/api/optical-character-recognition.md)
+- Inhalts-Tagging {#content-tagging-ai}
+   - [Übersicht](content-tagging/overview.md)
+   - [Erste Schritte](content-tagging/getting-started.md)
+   - Content Tagging-API{#api}
+      - [Farb-Tagging](content-tagging/api/color-tagging.md)
+      - [Keyword-Tagging](content-tagging/api/keyword-tagging.md)
+      - [Textpräsenz- und optische Zeichenerkennung](content-tagging/api/optical-character-recognition.md)
 - Customer AI {#customer-ai}
    - [Übersicht](customer-ai/overview.md)
    - [Erste Schritte in Kunden-KI](customer-ai/getting-started.md)
