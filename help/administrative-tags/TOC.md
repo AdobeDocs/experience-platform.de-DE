@@ -1,19 +1,19 @@
 ---
 audience: user
-user-guide-title: Admin Tags in der Hilfe zu Adobe Experience Platform
-breadcrumb-title: Administratorhandbuch für Tags
-user-guide-description: Verwenden Sie administrative Tags, um Metadaten-Taxonomien zu verwalten. Erfahren Sie, wie Sie Tag-Kategorien und Tags erstellen.
-source-git-commit: c72b2244e7905c3823fd60212c071614222d0c4f
+user-guide-title: Einheitliche Tags in der Adobe Experience Platform-Hilfe
+breadcrumb-title: Anleitung für Unified Tags
+user-guide-description: Verwenden Sie einheitliche Tags, um Metadaten-Taxonomien zu verwalten. Erfahren Sie, wie Sie Tag-Kategorien und Tags erstellen.
+source-git-commit: de258d0e9fe8304b239633c6901a62e3d7b9e214
 workflow-type: tm+mt
-source-wordcount: '37'
+source-wordcount: '39'
 ht-degree: 0%
 
 ---
 
 
-# Administrative Tags {#administrative-tags}
+# Einheitliche Tags (Beta){#administrative-tags}
 
-* [Übersicht über Admin-Tags](overview.md)
-* Benutzeroberfläche für administrative Tags {#ui}
+* [Übersicht über Unified Tags (Beta)](overview.md)
+* Unified Tags-Benutzeroberfläche {#ui}
    * [Verwalten von Tags](ui/managing-tags.md)
    * [Tagkategorien](ui/tags-categories.md)

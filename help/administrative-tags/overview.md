@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform; Startseite; beliebte Themen; einheitliche Tags; Tags;
-title: (Beta) Übersicht über Unified Tags
+title: Übersicht über Unified Tags (Beta)
 description: Dieses Dokument enthält Informationen zu einheitlichen Tags in Adobe Experience Platform
-source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
+source-git-commit: de258d0e9fe8304b239633c6901a62e3d7b9e214
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 1%
 
 ---
 
-# (Beta) Übersicht über einheitliche Tags
+# Übersicht über Unified Tags (Beta)
 
 >[!IMPORTANT]
 >
