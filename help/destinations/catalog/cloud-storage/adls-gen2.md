@@ -2,9 +2,9 @@
 title: (Beta) Verbindung zu Azure Data Lake Storage Gen2
 description: Erfahren Sie, wie Sie eine Verbindung zu Azure Data Lake Storage Gen2 herstellen, um Segmente zu aktivieren und Datensätze zu exportieren.
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
+source-git-commit: 010818b56154067402a7cd66f489dd2080142e53
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '680'
 ht-degree: 90%
 
 ---
@@ -28,7 +28,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 | Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Teile eines Segments zusammen mit den entsprechenden Schemafeldern (wie etwa Ihre PPID), gemäß der Auswahl im Bildschirm „Profilattribute auswählen“ des [Zielaktivierungs-Workflows](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | Exporthäufigkeit | **[!UICONTROL Batch]** | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Weitere Informationen finden Sie unter [Batch-Datei-basierte Ziele](/help/destinations/destination-types.md#file-based). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Voraussetzungen {#prerequisites}
 
@@ -44,7 +44,7 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 
 Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
 
-* **[!UICONTROL URL]**: Der Endpunkt für [!DNL Azure Data Lake Storage Gen2]. Das Endpunktmuster ist: `https://<accountname>.dfs.core.windows.net`.
+* **[!UICONTROL URL]**: Der Endpunkt für [!DNL Azure Data Lake Storage Gen2]. Das Endpunktmuster ist: `abfss://<container>@<accountname>.dfs.core.windows.net`.
 * **[!UICONTROL Mandant]**: Die Mandanteninformationen, die Ihre Anwendung enthalten.
 * **[!UICONTROL Service-Prinzipal-ID]**: Die Client-ID der Anwendung.
 * **[!UICONTROL Service-Prinzipal-Schlüssel]**: Der Schlüssel der Anwendung.
