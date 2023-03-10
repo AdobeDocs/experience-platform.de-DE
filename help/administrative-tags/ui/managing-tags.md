@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform; Verwalten von Tags; Tags;
-title: Verwalten administrativer Tags
-description: Dieses Dokument enthält Informationen zum Verwalten von Admin-Tags in Adobe Experience Cloud
-source-git-commit: f184e94350a79936cbbd9072791650af99fa945f
+title: Verwalten von einheitlichen Tags
+description: Dieses Dokument enthält Informationen zum Verwalten von einheitlichen Tags in Adobe Experience Cloud
+source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
 workflow-type: tm+mt
 source-wordcount: '1070'
 ht-degree: 0%
