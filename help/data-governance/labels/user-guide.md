@@ -4,14 +4,19 @@ solution: Experience Platform
 title: Verwalten von Datennutzungsbeschriftungen in der Benutzeroberfläche
 description: Dieses Handbuch beschreibt die Schritte zum Arbeiten mit Datennutzungsbeschriftungen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1308'
 ht-degree: 100%
 
 ---
 
-# Verwalten von Datennutzungsbeschriftungen in der Benutzeroberfläche
+# Verwalten von Datennutzungsbeschriftungen in der Benutzeroberfläche {#user-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataGovernance_description"
+>title="Beschreibung"
+>abstract=""
 
 Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Datennutzungskennzeichnungen in der Benutzeroberfläche von [!DNL Experience Platform]. 
 
@@ -77,7 +82,12 @@ Der Umschalter **[!UICONTROL Übernommene Beschriftungen anzeigen]** ist standar
 
 ![Ausblenden von übernommenen Beschriftungen](../images/labels/inherited-labels.png)
 
-## Verwalten von Kennzeichnungen auf der Ebene der Datensatzfelder
+## Verwalten von Kennzeichnungen auf der Ebene der Datensatzfelder {#manage-labels-at-dataset-field-level}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataGovernance_instructions"
+>title="Anleitung"
+>abstract=""
 
 >[!IMPORTANT]
 >

@@ -4,14 +4,19 @@ solution: Experience Platform
 title: Datennutzungskennzeichnungen – Übersicht
 description: Erfahren Sie, wie Datennutzungskennzeichnungen verwendet werden, um die Einhaltung von Data-Governance-Richtlinien in Adobe Experience Platform durchzusetzen.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '682'
 ht-degree: 100%
 
 ---
 
-# Datennutzungskennzeichnungen – Übersicht
+# Datennutzungskennzeichnungen – Übersicht {#overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataUsageLabels_description"
+>title="Beschreibung"
+>abstract=""
 
 Mit Adobe Experience Platform können Sie Datennutzungskennzeichnungen auf Datensätze und Felder anwenden und diese entsprechend den zugehörigen [Data-Governance-Richtlinien](../policies/overview.md) und [Zugriffssteuerungsrichtlinien](../../access-control/abac/ui/policies.md) kategorisieren.
 
@@ -42,6 +47,11 @@ Weitere Informationen zur Funktionsweise der automatischen Durchsetzung in Platf
 Informationen dazu, wie bestimmte Datenexportsteuerelemente den Datennutzungskennzeichnungen in [!DNL Platform] zugeordnet werden, finden Sie in der [Audience Manager-Dokumentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de#aam-data-export-control-in-aep).
 
 ## Verwalten von Datennutzungsbeschriftungen in [!DNL Experience Platform] {#manage-labels}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataUsageLabels_instructions"
+>title="Anleitung"
+>abstract=""
 
 Sie können Datennutzungsbeschriftungen mit [!DNL Experience Platform]-APIs oder der Benutzeroberfläche verwalten. Einzelheiten finden Sie in den nachfolgenden Abschnitten.
 

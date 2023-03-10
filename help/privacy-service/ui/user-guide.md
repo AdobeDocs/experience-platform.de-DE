@@ -4,14 +4,19 @@ solution: Experience Platform
 title: Verwalten von Datenschutzaufträgen in der Privacy Service-Benutzeroberfläche
 description: Erfahren Sie, wie Sie mit der Privacy Service-Benutzeroberfläche Datenschutzanfragen in verschiedenen Experience Cloud-Anwendungen koordinieren und überwachen können.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
 workflow-type: tm+mt
-source-wordcount: '1151'
+source-wordcount: '1150'
 ht-degree: 2%
 
 ---
 
-# Verwalten von Datenschutzaufträgen in der Privacy Service-Benutzeroberfläche
+# Verwalten von Datenschutzaufträgen in der Privacy Service-Benutzeroberfläche {#user-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_requests_description"
+>title="Beschreibung"
+>abstract=""
 
 In diesem Dokument werden die Schritte zum Erstellen und Verwalten von Datenschutzanfragen mithilfe des [!DNL Privacy Service] -Benutzeroberfläche.
 
@@ -37,7 +42,7 @@ Das Dashboard für die [!DNL Privacy Service] Die Benutzeroberfläche bietet zwe
 | [!UICONTROL APA_AUS] | Die Menüauswahlmöglichkeiten für die [!DNL Australia Privacy Act (Privacy Act)] |
 | [!UICONTROL HIPAA_AUS] | Die Menüauswahlmöglichkeiten für die [!DNL Health Insurance Portability and Accountability Act] |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -93,7 +98,12 @@ Wenn eine Lösung zusätzliche Daten bereitgestellt hat, ist dies in diesem Dial
 
 Um die vollständigen Auftragsdaten als CSV-Datei herunterzuladen, wählen Sie **[!UICONTROL Exportieren in CSV]** oben rechts im Dialogfeld.
 
-## Neue Datenschutzauftragsanforderung erstellen
+## Neue Datenschutzauftragsanforderung erstellen {#create-a-new-privacy-job-request}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_requests_instructions"
+>title="Anleitung"
+>abstract=""
 
 >[!NOTE]
 >

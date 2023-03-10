@@ -2,20 +2,25 @@
 title: Verwalten von Datensatzgültigkeiten
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform die Gültigkeit eines Datensatzes planen.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
 workflow-type: tm+mt
-source-wordcount: '535'
-ht-degree: 94%
+source-wordcount: '537'
+ht-degree: 100%
 
 ---
 
-# Verwalten von Datensatzgültigkeiten
+# Verwalten von Datensatzgültigkeiten {#dataset-expiration}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_scheduleDatasetExpiration_description"
+>title="Beschreibung"
+>abstract=""
 
 >[!IMPORTANT]
 >
 >Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben haben.
 
-Der Arbeitsbereich [[!UICONTROL Datenhygiene]](./overview.md) in der Adobe Experience Platform-Benutzeroberfläche bietet Ihnen die Möglichkeit, die Gültigkeitsdauer für Datensätze festzulegen. Wenn ein Datensatz sein Ablaufdatum erreicht, beginnen der Data Lake, der Identity Service und das Echtzeit-Kundenprofil separate Prozesse, um den Inhalt des Datensatzes aus den entsprechenden Diensten zu entfernen. Sobald die Daten aus allen drei Services gelöscht wurden, wird der Ablauf als abgeschlossen markiert.
+Der Arbeitsbereich [[!UICONTROL Datenhygiene]](./overview.md) in der Adobe Experience Platform-Benutzeroberfläche bietet Ihnen die Möglichkeit, die Gültigkeitsdauer für Datensätze festzulegen. Wenn ein Datensatz sein Ablaufdatum erreicht, starten der Data Lake, der Identity Service und das Echtzeit-Kundenprofil separate Prozesse, um den Inhalt des Datensatzes aus den entsprechenden Services zu entfernen. Sobald die Daten aus allen drei Services gelöscht wurden, wird der Ablauf als abgeschlossen markiert.
 
 >[!WARNING]
 >
@@ -23,7 +28,12 @@ Der Arbeitsbereich [[!UICONTROL Datenhygiene]](./overview.md) in der Adobe Exper
 
 In diesem Dokument wird beschrieben, wie Sie Datensatzgültigkeiten in der Platform-Benutzeroberfläche planen und verwalten.
 
-## Planen einer Datensatzgültigkeit
+## Planen einer Datensatzgültigkeit {#schedule-dataset-expiration}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
+>title="Anleitung"
+>abstract=""
 
 Um eine neue Anfrage zu erstellen, wählen Sie auf der Hauptseite im Arbeitsbereich die Option **[!UICONTROL Anfrage erstellen]** aus.
 
