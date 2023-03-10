@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform; Erste Schritte; Content-Hilfe; Commerce-API; Content-Tagging-API; Keyword-Tagging; Keyword-Tagging
+keywords: Experience Platform; Erste Schritte; Inhalt; Inhalts-Tagging-API; Keyword-Tagging; Keyword-Tagging
 solution: Experience Platform
 title: Keyword-Tagging in der Inhalts-Tagging-API
-description: Der Keyword-Tagging-Dienst extrahiert bei der Eingabe eines Textdokuments automatisch Suchbegriffe oder Suchbegriffe, die den Betreff des Dokuments am besten beschreiben. Um Suchbegriffe zu extrahieren, wird eine Kombination aus benannten Algorithmen zur Identifikation von Unternehmen (NER) und unbeaufsichtigten Keyword-Tagging-Algorithmen verwendet.
+description: Der Keyword-Tagging-Dienst extrahiert bei der Bereitstellung eines Textdokuments automatisch Suchbegriffe oder Suchbegriffe, die den Betreff des Dokuments am besten beschreiben. Um Suchbegriffe zu extrahieren, wird eine Kombination aus benannten Algorithmen zur Identifikation von Unternehmen (NER) und unbeaufsichtigten Keyword-Tagging-Algorithmen verwendet.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '450'
 ht-degree: 6%
 
 ---

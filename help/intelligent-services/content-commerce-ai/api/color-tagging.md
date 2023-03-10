@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform; Erste Schritte; Inhaltsai; Commerce-Hilfe; Inhalts-Tagging; Farb-Tagging; Farbextraktion;
+keywords: Experience Platform; Erste Schritte; Inhalt; Tagging von Inhalten; Farbmarkierung; Farbextraktion;
 solution: Experience Platform
 title: Farb-Tagging in der Inhalts-Tagging-API
-description: Der Farb-Tagging-Dienst kann, wenn ein Bild vorhanden ist, das Histogramm der Pixelfarben berechnen und durch dominante Farben in Behälter sortieren.
+description: Der Color Tagging-Dienst kann, wenn ihm ein Bild gegeben wird, das Histogramm der Pixelfarben berechnen und sie anhand dominanter Farben in Behältern sortieren.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '497'
 ht-degree: 5%
 
 ---

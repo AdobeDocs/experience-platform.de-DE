@@ -1,12 +1,12 @@
 ---
-keywords: Experience Cloud; Erste Schritte; Inhalts- und Commerce-Hilfe; beliebte Themen; Intelligente Dienste; CCAI
+keywords: Experience Cloud; Erste Schritte; Content-Tagging; beliebte Themen; Intelligent Services
 solution: Experience Platform
 title: Übersicht über Content Tagging
-description: Content and Commerce AI ist eine Reihe von KI-Diensten, mit denen Sie intelligente Funktionen aus Ihren Inhalten extrahieren, den Inhaltsfluss organisieren, optimieren und Ihren Kunden wirkungsvollere, personalisierte Erlebnisse bereitstellen können.
+description: Content Tagging ist eine Reihe von KI-Diensten, mit denen Sie intelligente Funktionen aus Ihren Inhalten extrahieren, den Inhaltsfluss organisieren, optimieren und Ihren Kunden wirkungsvollere, personalisierte Erlebnisse bereitstellen können.
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '319'
 ht-degree: 1%
 
 ---
