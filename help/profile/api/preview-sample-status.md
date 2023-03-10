@@ -3,7 +3,7 @@ keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; AP
 title: API-Endpunkt "Vorschaustatus"(Profilvorschau)
 description: Mit dem Beispielstatusendpunkt "Vorschau"der Echtzeit-Kundenprofil-API können Sie eine Vorschau des neuesten erfolgreichen Beispiels Ihrer Profildaten anzeigen, die Profilverteilung nach Datensatz und Identität auflisten und Berichte mit Datensatzüberschneidungen, Identitätsüberschneidungen und nicht zugewiesenen Profilen erstellen.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: a6173860adda4bd71c94750e5cce6dd4cbe820c6
 workflow-type: tm+mt
 source-wordcount: '2874'
 ht-degree: 5%
@@ -369,7 +369,7 @@ Dieser Bericht enthält die folgenden Informationen:
 * Es gibt 107 Profile, die nur aus Daten aus einem Datensatz bestehen `5eeda0032af7bb19162172a7`.
 * Insgesamt gibt es 454.642 Profile in der Organisation.
 
-## Bericht zur Identitäts-Namespace-Überschneidung erstellen
+## Bericht zur Identitäts-Namespace-Überschneidung erstellen {#identity-overlap-report}
 
 Der Bericht zur Überschneidung von Identitäts-Namespaces bietet Einblick in die Zusammensetzung des Profilspeichers Ihres Unternehmens, indem er die Identitäts-Namespaces offenlegt, die am meisten zu Ihrer adressierbaren Zielgruppe (zusammengeführten Profilen) beitragen. Dazu gehören sowohl die von Adobe bereitgestellten standardmäßigen Identitäts-Namespaces als auch die von Ihrem Unternehmen definierten benutzerdefinierten Identitäts-Namespaces.
 

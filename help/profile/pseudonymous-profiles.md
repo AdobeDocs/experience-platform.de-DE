@@ -5,9 +5,9 @@ title: Pseudonyme Profildaten - Ablauf
 description: Dieses Dokument enthält allgemeine Anleitungen zum Konfigurieren des Datenablaufs für Pseudonyme Profile in Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 3f776255ca858a86f501fd587c44fe176c45e103
+source-git-commit: a6173860adda4bd71c94750e5cce6dd4cbe820c6
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Der Ablauf der pseudonymen Profildaten kann nicht über die Platform-Benutzerobe
 
 - Die Identitätstypen, die für das Löschen eines Pseudonymen Profils berücksichtigt werden sollen.
    - Beispiel: `ECID` nur `AAID` nur oder eine Kombination aus `ECID` und `AAID`.
-- Die Wartezeit vor dem Löschen eines pseudonymen Profils. Die Standardempfehlung für Kunden beträgt 30 Tage. Dieser Wert kann jedoch je nach Anwendungsfall unterschiedlich sein.
+- Die Wartezeit vor dem Löschen eines pseudonymen Profils. Die Standardempfehlung für Kunden beträgt 14 Tage. Dieser Wert kann jedoch je nach Anwendungsfall unterschiedlich sein.
 - Die aktuelle Profilanzahl im Vergleich zur Lizenzprofilanzahl.
 
 ## Häufig gestellte Fragen {#faq}
@@ -37,10 +37,10 @@ Im folgenden Abschnitt finden Sie häufig gestellte Fragen zum Ablauf der Daten 
 
 ### Welche Benutzer sollten das Ablaufdatum der Pseudonymen Profildaten verwenden?
 
-- Wenn Sie einen Connector verwenden, der Daten direkt von der Quelle an Platform sendet.
+- Wenn Sie eine Streaming-Quelle verwenden, die direkt Daten an Platform sendet.
 - Wenn Sie eine Website haben, die nicht authentifizierte Kunden en masse bereitstellt.
 - Wenn Sie in Ihren Datensätzen übermäßige Profilzahlen haben und bestätigt haben, dass diese übermäßige Profilanzahl auf einem anonymen Cookie-basierten Identitätstyp basiert.
-   - Um dies zu ermitteln, sollten Sie den Bericht zur Identitätstypüberschneidung verwenden. Weitere Informationen zu diesem Bericht finden Sie unter LINK
+   - Um dies zu ermitteln, sollten Sie den Bericht zur Identitätstypüberschneidung verwenden. Weitere Informationen zu diesem Bericht finden Sie im [Berichtabschnitt zur Identitätsüberschneidung](./api/preview-sample-status.md#identity-overlap-report) im Beispiel-Status-API-Handbuch für die Vorschau.
 
 ### Welche Einschränkungen sollten Sie beachten, bevor Sie die Datengültigkeit von Pseudonymen-Profilen verwenden?
 
