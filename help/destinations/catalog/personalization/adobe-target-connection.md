@@ -5,7 +5,7 @@ description: Adobe Target ist ein Programm, das bei allen eingehenden Kundeninte
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 source-git-commit: f97b667f8d4dc311683b018bb1c1792aae871648
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '1011'
 ht-degree: 54%
 
 ---
@@ -57,7 +57,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 | Exporttyp | **[!DNL Profile request]** | Sie fordern alle Segmente an, die im Adobe Target-Ziel für ein einzelnes Profil zugeordnet sind. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Anwendungsfälle {#use-cases}
 

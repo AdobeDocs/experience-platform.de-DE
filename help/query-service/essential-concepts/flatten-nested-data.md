@@ -4,7 +4,7 @@ title: Reduzieren verschachtelter Datenstrukturen für die Verwendung mit BI-Too
 description: In diesem Dokument wird erläutert, wie Sie XDM-Schemata für alle Tabellen und Ansichten während einer Sitzung reduzieren, wenn Sie BI-Tools von Drittanbieterfirmen mit dem Abfrage-Service verwenden.
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
 source-git-commit: 1c590350c9d519dba60375b92de7bbbbd77961dc
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 100%
 

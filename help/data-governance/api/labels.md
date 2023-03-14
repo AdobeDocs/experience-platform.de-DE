@@ -5,7 +5,7 @@ title: Beschriftungs-API-Endpunkt
 description: Erfahren Sie, wie Sie mit der Richtlinien-Service-API Datennutzungsbeschriftungen in Experience Platform verwalten.
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '506'
 ht-degree: 100%
 

@@ -7,8 +7,8 @@ type: Tutorial
 exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 17%
+source-wordcount: '819'
+ht-degree: 16%
 
 ---
 
@@ -85,7 +85,7 @@ curl -X POST \
 | `$ref` | Das Datenverhalten für die neue Klasse. Für Ad-hoc-Klassen muss dieser Wert auf `https://ns.adobe.com/xdm/data/adhoc`. |
 | `properties._adhoc` | Ein Objekt, das die benutzerdefinierten Felder für die Klasse enthält, ausgedrückt als Schlüssel-Wert-Paare von Feldnamen und Datentypen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -148,7 +148,7 @@ Eine erfolgreiche Antwort gibt die Details der neuen Klasse zurück und ersetzt 
 | --- | --- |
 | `$id` | Ein URI, der als schreibgeschützte, vom System generierte eindeutige Kennung für die neue Ad-hoc-Klasse dient. Dieser Wert wird im nächsten Schritt zum Erstellen eines Ad-hoc-Schemas verwendet. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Erstellen eines Ad-hoc-Schemas
 
@@ -241,7 +241,7 @@ GET /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | Die URL-kodierte `$id` URI oder `meta:altId` des Ad-hoc-Schemas, auf das Sie zugreifen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 

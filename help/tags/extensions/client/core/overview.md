@@ -524,7 +524,7 @@ Geben Sie einen Datumsbereich an. Wählen Sie das Datum und die Uhrzeit aus, nac
 Geben Sie an, wie oft die Bedingung „true“ zurückgibt. Sie können aus den folgenden Optionen auswählen:
 
 * Page view
-* Sitzungen
+* Sessions
 * Visitor
 * Seconds
 * Minutes
@@ -592,7 +592,7 @@ Wenn die Option &quot;Run rule components in sequence&quot;in den Eigenschaftene
 
 *JavaScript*
 
-Beim Erstellen einer benutzerdefinierten JavaScript-Code-Aktion können Sie einen [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) in Ihrer Aktion zurückgeben. Die nächste Aktion in der Regel wird nur ausgeführt, wenn der zurückgegebene Promise ausgeführt wurde. Wenn der Promise abgelehnt wird, werden die nächsten Aktionen der Regel nicht ausgeführt.
+Beim Erstellen einer benutzerdefinierten JavaScript-Code-Aktion können Sie einen [Promise](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/Promise) in Ihrer Aktion zurückgeben. Die nächste Aktion in der Regel wird nur ausgeführt, wenn der zurückgegebene Promise ausgeführt wurde. Wenn der Promise abgelehnt wird, werden die nächsten Aktionen der Regel nicht ausgeführt.
 
 >[!NOTE]
 >
@@ -800,7 +800,7 @@ Sie können eines der folgenden Seitenattribute auswählen, um es in Ihrem Daten
 * URL
 * Hostname
 * Pathname
-* Protokoll
+* Protocol
 * Referrer
 * Title
 

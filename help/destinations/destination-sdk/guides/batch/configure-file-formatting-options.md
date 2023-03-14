@@ -1,14 +1,15 @@
 ---
-description: Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren
+description: Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele
 title: Erfahren Sie, wie Sie mit Destination SDK Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren.
-source-git-commit: 9b4c7da5aa02ae27608c2841b1d825445ac3015e
+exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
-source-wordcount: '932'
-ht-degree: 2%
+source-wordcount: '929'
+ht-degree: 3%
 
 ---
 
-# Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren
+# Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele
 
 ## Übersicht {#overview}
 
@@ -713,7 +714,7 @@ Betrachten Sie zum Beispiel den Export einer Datei mit den folgenden Werten:
 | Michael | Rose | USA | NY |
 | James | Smith |  | null |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Dies würde zu einer Ausgabe führen, wie unten dargestellt. Beachten Sie, dass der Nullwert aus der Tabelle fälschlicherweise als maskiertes Anführungszeichen exportiert wird.
 

@@ -4,7 +4,7 @@ title: Konfigurationsoptionen für dateibasierte Ziel-Server-Spezifikationen
 exl-id: 56434e36-0458-45d9-961d-f6505de998f7
 source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '1248'
+source-wordcount: '1227'
 ht-degree: 57%
 
 ---
@@ -53,7 +53,7 @@ Das folgende Beispiel zeigt eine korrekte Zielserverkonfiguration für ein Amazo
 | `fileBasedS3Destination.path.value` | Zeichenfolge | Der Pfad zum Zielordner, in dem die exportierten Dateien gespeichert werden. |
 | `fileConfigurations` | Objekt | Siehe [Dateiformatierungskonfiguration](#file-configuration) für ausführliche Erläuterungen zu diesem Abschnitt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Spezifikation des dateibasierten SFTP-Ziel-Servers {#sftp-example}
 
@@ -93,7 +93,7 @@ Das folgende Beispiel zeigt eine korrekte Zielserverkonfiguration für ein SFTP-
 | `encryptionMode` | Zeichenfolge | Gibt an, ob eine Dateiverschlüsselung verwendet werden soll. Unterstützte Werte: <ul><li>PGP</li><li>Keine</li></ul> |
 | `fileConfigurations` | Objekt | Siehe [Dateiformatierungskonfiguration](#file-configuration) für ausführliche Erläuterungen zu diesem Abschnitt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Dateibasierte Ziel-Server-Spezifikation für [!DNL Azure Data Lake Storage] ([!DNL ADLS]) {#adls-example}
 
@@ -123,7 +123,7 @@ Das folgende Beispiel zeigt eine korrekte Zielserverkonfiguration für eine [!DN
 | `fileBasedAdlsGen2Destination.path.value` | Zeichenfolge | Der Pfad zum Zielordner, in dem die exportierten Dateien gespeichert werden. |
 | `fileConfigurations` | Objekt | Siehe [Dateiformatierungskonfiguration](#file-configuration) für ausführliche Erläuterungen zu diesem Abschnitt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Dateibasierte Ziel-Server-Spezifikation für [!DNL Azure Blob Storage] {#blob-example}
 
@@ -159,7 +159,7 @@ Das folgende Beispiel zeigt eine korrekte Zielserverkonfiguration für eine [!DN
 | `fileBasedAzureBlobDestination.container.value` | Zeichenfolge | Der Name des [!DNL Azure Blob Storage]-Containers, der von diesem Ziel verwendet werden soll. |
 | `fileConfigurations` | Objekt | Siehe [Dateiformatierungskonfiguration](#file-configuration) für ausführliche Erläuterungen zu diesem Abschnitt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Dateibasierte Ziel-Server-Spezifikation für [!DNL Data Landing Zone] ([!DNL DLZ]) {#dlz-example}
 
@@ -190,7 +190,7 @@ Das folgende Beispiel zeigt eine korrekte Zielserverkonfiguration für eine [!DN
 | `fileBasedDlzDestination.path.value` | Zeichenfolge | Der Pfad zum Zielordner, in dem die exportierten Dateien gespeichert werden. |
 | `fileConfigurations` | Objekt | Siehe [Dateiformatierungskonfiguration](#file-configuration) für ausführliche Erläuterungen zu diesem Abschnitt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Dateibasierte Ziel-Server-Spezifikation für [!DNL Google Cloud Storage] {#gcs-example}
 
@@ -226,9 +226,9 @@ Das folgende Beispiel zeigt eine korrekte Zielserverkonfiguration für eine [!DN
 | `fileBasedGoogleCloudStorageDestination.path.value` | Zeichenfolge | Der Pfad zum Zielordner, in dem die exportierten Dateien gespeichert werden. |
 | `fileConfigurations` | Objekt | Siehe [Dateiformatierungskonfiguration](#file-configuration) für ausführliche Erläuterungen zu diesem Abschnitt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Dateiformatierung {#file-configuration}
+## Konfiguration der Dateiformatierung {#file-configuration}
 
 In diesem Abschnitt werden die Dateiformatierungseinstellungen für die exportierten `CSV`-Dateien beschrieben. Sie können verschiedene Eigenschaften der exportierten Dateien an die Anforderungen des Dateiempfangssystems auf Ihrer Seite anpassen, um die aus Experience Platform empfangenen Dateien optimal zu lesen und zu interpretieren.
 
@@ -358,16 +358,16 @@ Nachstehend finden Sie eine vollständige Referenz aller verfügbaren Dateiforma
 | `fileType.value` | Optional | Spezifiziert das Ausgabedateiformat. Unterstützte Werte: `csv`, `parquet` und `json`. | `csv` | – | – |
 | `csvOptions.quote.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt ein einzelnes Zeichen fest, das zum Maskieren von angegebenen Werten verwendet wird, wobei das Trennzeichen Teil des Werts sein kann. | `null` | – | – |
 | `csvOptions.quoteAll.value` | Optional | *Nur für`"fileType.value": "csv"`*. Gibt an, ob alle Werte immer in Anführungszeichen gesetzt werden sollen. Mit der Standardeinstellung werden nur Werte mit Escape-Zeichen versehen, die ein Anführungszeichen haben. | `false` | `quoteAll`:`false` --> `male,John,"TestLastName"` | `quoteAll`:`true` -->`"male","John","TestLastName"` |
-| `csvOptions.delimiter.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt für jedes Feld und jeden Wert ein Trennzeichen fest. Dieses Trennzeichen kann ein oder mehrere Zeichen sein. | `,` | `delimiter`:`,` —> `comma-separated values"` | `delimiter`:`\t` —> `tab-separated values` |
-| `csvOptions.escape.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt ein einzelnes Zeichen fest, das zum Maskieren von Anführungszeichen verwendet wird, die innerhalb eines bereits mit Anführungszeichen versehenen Werts liegen. | `\` | `"escape"`:`"\\"` —> `male,John,"Test,\"LastName5"` | `"escape"`:`"'"` —> `male,John,"Test,'''"LastName5"` |
+| `csvOptions.delimiter.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt für jedes Feld und jeden Wert ein Trennzeichen fest. Dieses Trennzeichen kann ein oder mehrere Zeichen sein. | `,` | `delimiter`:`,` --> `comma-separated values"` | `delimiter`:`\t` --> `tab-separated values` |
+| `csvOptions.escape.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt ein einzelnes Zeichen fest, das zum Maskieren von Anführungszeichen verwendet wird, die innerhalb eines bereits mit Anführungszeichen versehenen Werts liegen. | `\` | `"escape"`:`"\\"` --> `male,John,"Test,\"LastName5"` | `"escape"`:`"'"` --> `male,John,"Test,'''"LastName5"` |
 | `csvOptions.escapeQuotes.value` | Optional | *Nur für`"fileType.value": "csv"`*. Gibt an, ob Werte, die Anführungszeichen enthalten, immer in Anführungszeichen gesetzt werden sollen. Standardmäßig werden alle Werte mit Escape-Zeichen versehen, die ein Anführungszeichen enthalten. | `true` | – | – |
 | `csvOptions.header.value` | Optional | *Nur für`"fileType.value": "csv"`*. Gibt an, ob die Namen der Spalten als erste Zeile in die exportierte Datei geschrieben werden sollen. | `true` | – | – |
-| `csvOptions.ignoreLeadingWhiteSpace.value` | Optional | *Nur für`"fileType.value": "csv"`*. Gibt an, ob vorangestellte Leerzeichen aus Werten entfernt werden sollen. | `true` | `ignoreLeadingWhiteSpace`:`true` —> `"male","John","TestLastName"` | `ignoreLeadingWhiteSpace`:`false`--> `"    male","John","TestLastName"` |
-| `csvOptions.ignoreTrailingWhiteSpace.value` | Optional | *Nur für`"fileType.value": "csv"`*. Gibt an, ob nachfolgende Leerzeichen aus Werten beschnitten werden sollen. | `true` | `ignoreTrailingWhiteSpace`:`true` —> `"male","John","TestLastName"` | `ignoreTrailingWhiteSpace`:`false`—> `"male    ","John","TestLastName"` |
-| `csvOptions.nullValue.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt die Zeichenfolgendarstellung eines Nullwerts fest. | `""` | `nullvalue`:`""` —> `male,"",TestLastName` | `nullvalue`:`"NULL"` —> `male,NULL,TestLastName` |
-| `csvOptions.dateFormat.value` | Optional | *Nur für`"fileType.value": "csv"`*. Gibt das Datumsformat an. | `yyyy-MM-dd` | `dateFormat`:`yyyy-MM-dd` —> `male,TestLastName,John,2022-02-24` | `dateFormat`:`MM/dd/yyyy` —> `male,TestLastName,John,02/24/2022` |
+| `csvOptions.ignoreLeadingWhiteSpace.value` | Optional | *Nur für`"fileType.value": "csv"`*. Gibt an, ob vorangestellte Leerzeichen aus Werten entfernt werden sollen. | `true` | `ignoreLeadingWhiteSpace`:`true` --> `"male","John","TestLastName"` | `ignoreLeadingWhiteSpace`:`false`--> `"    male","John","TestLastName"` |
+| `csvOptions.ignoreTrailingWhiteSpace.value` | Optional | *Nur für`"fileType.value": "csv"`*. Gibt an, ob nachfolgende Leerzeichen aus Werten beschnitten werden sollen. | `true` | `ignoreTrailingWhiteSpace`:`true` --> `"male","John","TestLastName"` | `ignoreTrailingWhiteSpace`:`false`--> `"male    ","John","TestLastName"` |
+| `csvOptions.nullValue.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt die Zeichenfolgendarstellung eines Nullwerts fest. | `""` | `nullvalue`:`""` --> `male,"",TestLastName` | `nullvalue`:`"NULL"` --> `male,NULL,TestLastName` |
+| `csvOptions.dateFormat.value` | Optional | *Nur für`"fileType.value": "csv"`*. Gibt das Datumsformat an. | `yyyy-MM-dd` | `dateFormat`:`yyyy-MM-dd` --> `male,TestLastName,John,2022-02-24` | `dateFormat`:`MM/dd/yyyy` --> `male,TestLastName,John,02/24/2022` |
 | `csvOptions.timestampFormat.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt die Zeichenfolge für ein Zeitstempelformat fest. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` | – | – |
 | `csvOptions.charToEscapeQuoteEscaping.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt ein einzelnes Zeichen fest, das zum Maskieren des Escape-Zeichens für das Anführungszeichen verwendet wird. | `\` wenn Escape- und Anführungszeichen unterschiedlich sind. `\0` wenn Escape- und Anführungszeichen identisch sind. | – | – |
-| `csvOptions.emptyValue.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt die Zeichenfolgendarstellung eines leeren Werts fest. | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` —> `male,empty,John` |
+| `csvOptions.emptyValue.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt die Zeichenfolgendarstellung eines leeren Werts fest. | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

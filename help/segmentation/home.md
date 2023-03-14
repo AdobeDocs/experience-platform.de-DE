@@ -5,7 +5,7 @@ title: Segmentierungs-Service – Übersicht
 description: Erfahren Sie mehr über den Segmentierungs-Service von Adobe Experience Platform und die Rolle, die dieser im Platform-Ökosystem spielt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1635'
 ht-degree: 100%
 

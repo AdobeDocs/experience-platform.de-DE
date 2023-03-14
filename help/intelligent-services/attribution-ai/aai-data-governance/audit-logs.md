@@ -3,7 +3,7 @@ keywords: Insights;Attributions-KI;Attributions-KI-Insights;AAI-Query-Service;At
 title: Audit-Protokolle in Attributions-KI – Übersicht
 description: Erfahren Sie, wie Sie Audit-Protokolle in Attributions-KI anzeigen und verwalten können.
 source-git-commit: a68d4634c6341f27673fdd70d96f7e214032b5a9
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 100%
 

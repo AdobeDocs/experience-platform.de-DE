@@ -5,7 +5,7 @@ title: Zugangssteuerung – Übersicht
 description: Die Zugangssteuerung für Adobe Experience Platform wird über Adobe Admin Console geboten. Diese Funktion nutzt Produktprofile in Admin Console, um Benutzende mit Berechtigungen und Sandboxes zu verknüpfen.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
 source-git-commit: 56f1cbc622450b154e6e29a8116789b316901f66
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1473'
 ht-degree: 100%
 

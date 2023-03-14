@@ -5,7 +5,7 @@ exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
 source-git-commit: 486f5bdd834808c6262f41c0b0187721fc9b0799
 workflow-type: tm+mt
 source-wordcount: '1040'
-ht-degree: 19%
+ht-degree: 20%
 
 ---
 
@@ -23,7 +23,7 @@ Dieses Dokument bietet einen Überblick über [!DNL Analytics] und beschreibt di
 
 Auf hoher Ebene [!DNL Analytics] erfasst Daten aus verschiedenen digitalen Kanälen und Rechenzentren auf der ganzen Welt. Nachdem die Daten erfasst wurden, werden VISTA-Regeln (Visitor Identification, Segmentation and Transformation Architecture) und Verarbeitungsregeln angewendet, um die eingehenden Daten zu formen. Nachdem die Rohdaten diese einfache Verarbeitung durchlaufen haben, werden sie von [!DNL Real-Time Customer Profile]. In einem Prozess, der parallel zu den oben genannten erfolgt, werden dieselben verarbeiteten Daten in Mikro-Batches gepackt und in Platform-Datensätzen erfasst, die von [!DNL Data Science Workspace], [!DNL Query Service]und anderen Anwendungen zur Datenerkennung.
 
-Siehe [Übersicht über Verarbeitungsregeln](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html) für weitere Informationen zu Verarbeitungsregeln.
+Siehe [Übersicht über Verarbeitungsregeln](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html?lang=de) für weitere Informationen zu Verarbeitungsregeln.
 
 ## Experience-Datenmodell (XDM)
 

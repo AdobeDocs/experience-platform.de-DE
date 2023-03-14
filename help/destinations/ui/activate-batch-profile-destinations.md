@@ -6,7 +6,7 @@ description: Erfahren Sie, wie Sie die Zielgruppendaten aktivieren, die Sie in A
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: 7d680567cee8b47532bb66434e2f0582cde68532
 workflow-type: tm+mt
-source-wordcount: '3595'
+source-wordcount: '3592'
 ht-degree: 92%
 
 ---
@@ -185,7 +185,7 @@ Zielname und Segment-ID können nicht aus Dateinamen entfernt werden. Zusätzlic
 | **[!UICONTROL Organisationsname]** | Ihr Organisationsname in Experience Platform. <br> **Hinweis**: Diese Option zum Anhängen von Dateinamen steht nur Beta-Kundinnen und -Kunden zur Verfügung, die am Beta-Programm mit der verbesserten Dateiexportfunktion teilnehmen. Wenden Sie sich an den Adobe-Support-Mitarbeiter oder die Kundenunterstützung, wenn Sie Zugang zum Beta-Programm erhalten möchten. |
 | **[!UICONTROL Sandbox-Name]** | Die ID der Sandbox, die Sie zum Exportieren des Segments verwenden. <br> **Hinweis**: Diese Option zum Anhängen von Dateinamen steht nur Beta-Kundinnen und -Kunden zur Verfügung, die am Beta-Programm mit der verbesserten Dateiexportfunktion teilnehmen. Wenden Sie sich an den Adobe-Support-Mitarbeiter oder die Kundenunterstützung, wenn Sie Zugang zum Beta-Programm erhalten möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Klicken Sie auf **[!UICONTROL Änderungen übernehmen]**, um Ihre Auswahl zu bestätigen.
 

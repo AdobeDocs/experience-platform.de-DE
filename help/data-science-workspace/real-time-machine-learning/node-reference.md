@@ -5,7 +5,7 @@ title: Knotenreferennz für maschinelles Lernen in Echtzeit
 description: Ein Knoten ist die grundlegende Einheit, aus der Diagramme gebildet werden. Jeder Knoten führt eine bestimmte Aufgabe aus und kann mithilfe von Verknüpfungen mit anderen Knoten verkettet werden, um ein Diagramm zu bilden, das für eine ML-Pipeline steht. Die von einem Knoten ausgeführte Aufgabe stellt einen Vorgang an Eingabedaten dar, beispielsweise eine Umwandlung von Daten oder Schemata oder eine Schlussfolgerung durch maschinelles Lernen. Der Knoten gibt den transformierten oder abgeleiteten Wert an den oder die nächsten Knoten aus.
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 100%
 
@@ -83,7 +83,7 @@ node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_pag
 
 Der folgende Pandas-Knoten ermöglicht den Import jeder `pd.DataFrame`-Methode oder einer beliebigen allgemeinen Pandas-Funktion auf oberster Ebene. Weitere Informationen zu Pandas-Methoden finden Sie in der [Dokumentation zu Pandas-Methoden](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Weitere Informationen zu Funktionen der obersten Ebene finden Sie im [Pandas-API-Referenzhandbuch für allgemeine Funktionen](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
 
-Der nachstehende Knoten verwendet `"import": "map"`, um den Methodennamen als Zeichenfolge in die Parameter zu importieren, gefolgt von der Eingabe der Parameter als Zuordnungsfunktion. Im folgenden Beispiel wird dazu `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}` verwendet. Nachdem Sie die Zuordnung eingerichtet haben, haben Sie die Möglichkeit, `inplace` als `True` oder `False` festzulegen. Legen Sie `inplace` als `True` oder `False` fest, je nachdem, ob Sie die Umwandlung an Ort und Stelle anwenden möchten oder nicht. Standardmäßig erstellt `"inplace": False` eine neue Spalte. Es ist geplant, die Unterstützung für die Bereitstellung eines neuen Spaltennamens in einer nachfolgenden Version hinzuzufügen. Die letzte Zeile `cols` kann ein einzelner Spaltenname oder eine Spaltenliste sein. Geben Sie die Spalten an, auf die Sie die Umwandlung anwenden wollen. In diesem Beispiel ist `device` festgelegt.
+Der nachstehende Knoten verwendet `"import": "map"`, um den Methodennamen als Zeichenfolge in die Parameter zu importieren, gefolgt von der Eingabe der Parameter als Zuordnungsfunktion. Im folgenden Beispiel wird dazu `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}` verwendet. Nach erfolgter Zuordnung haben Sie die Möglichkeit, `inplace` als `True` oder `False` festzulegen. Legen Sie `inplace` als `True` oder `False` fest, je nachdem, ob Sie die Umwandlung an Ort und Stelle anwenden wollen oder nicht. Standardmäßig erstellt `"inplace": False` eine neue Spalte. Es ist geplant, die Unterstützung für die Bereitstellung eines neuen Spaltennamens in einer nachfolgenden Version hinzuzufügen. Die letzte Zeile `cols` kann ein einzelner Spaltenname oder eine Spaltenliste sein. Geben Sie die Spalten an, auf die Sie die Umwandlung anwenden wollen. In diesem Beispiel ist `device` festgelegt.
 
 ```python
 #  df["device"] = df["device"].map({"Desktop":1, "Mobile":0}, na_action=0)

@@ -4,7 +4,7 @@ description: Dieses Dokument bietet einen Überblick über die Schemafeldgruppe 
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
 source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '888'
 ht-degree: 100%
 
 ---
@@ -33,7 +33,7 @@ Die Feldgruppe stellt ein einzelnes `_experience`-Objekt für ein Schema bereit,
 | `event1to100`<br><br>`event101to200`<br><br>`event201to300`<br><br>`event301to400`<br><br>`event401to500`<br><br>`event501to100`<br><br>`event601to700`<br><br>`event701to800`<br><br>`event801to900`<br><br>`event901to1000` | Objekt | Die Feldgruppe stellt Objektfelder bereit, mit denen bis zu 1.000 benutzerspezifische Ereignisse erfasst werden können. Weitere Informationen zu diesen Feldern finden Sie im [nachfolgenden Unterabschnitt](#events). |
 | `session` | Objekt | Erfasst Informationen über die Sitzung, die das Ereignis ausgelöst hat. Weitere Informationen zum Inhalt dieses Objekts finden Sie im [nachfolgenden Unterabschnitt](#session). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `customDimensions` {#custom-dimensions}
 
@@ -51,7 +51,7 @@ Die Feldgruppe stellt ein einzelnes `_experience`-Objekt für ein Schema bereit,
 | `postalCode` | Zeichenfolge | Eine vom Kunden bereitgestellte Postleitzahl. |
 | `stateProvince` | Zeichenfolge | Ein vom Kunden bereitgestellter Bundeslands- oder Regionsstandort. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `endUser` {#end-user}
 

@@ -4,7 +4,7 @@ description: Versionshinweise von Oktober 2022 für Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1337'
 ht-degree: 100%
 
 ---
@@ -41,7 +41,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | [!DNL Splunk]-Erweiterung für die Ereignisweiterleitung | Sie können jetzt Daten mithilfe einer Erweiterung zur [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) an [!DNL Splunk] senden. Weiterführende Informationen dazu finden Sie in der [[!DNL Splunk] Übersicht der Erweiterungen](../../tags/extensions/server/splunk/overview.md). |
 | [!DNL Zendesk]-Erweiterung für die Ereignisweiterleitung | Sie können jetzt Daten mithilfe einer Erweiterung zur [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) an [!DNL Zendesk] senden. Weiterführende Informationen dazu finden Sie in der [[!DNL Zendesk] Übersicht der Erweiterungen](../../tags/extensions/server/zendesk/overview.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## [!DNL Destinations] {#destinations}
 
@@ -54,7 +54,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | (Beta) Datensatzexporte | Die [Beta-Funktion für Datensatzexporte](/help/destinations/ui/export-datasets.md) ermöglicht Ihnen den Export von Daten der ersten Generation (wie in der [Real-Time Customer Data Platform-Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) definiert) aus Adobe Experience Platform in Ihre eigenen externen Kundensysteme, und zwar über die Ziel-Benutzeroberfläche. Damit können Sie Daten aus Experience Platform mit einem Code-freien/Code-armen Workflow an sechs Cloud-Speicherziele (in der folgenden Tabelle aufgeführt) für analytische und Compliance-Anwendungsfälle übertragen. |
 | (Beta) Verbesserte Dateiexport-Funktionen | Sie können jetzt beim Exportieren von Dateien aus Experience Platform von erweiterten Anpassungsfunktionen profitieren: <br><ul><li>Zusätzliche [Dateibenennungsoptionen](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).</li><li>Möglichkeit zum Festlegen benutzerdefinierter Datei-Kopfzeilen in exportierten Dateien durch den [verbesserten Zuordnungsschritt](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[Möglichkeit, die Formatierung von exportierten CSV-Datendateien anzupassen](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> <br> Diese Funktionalität wird von den sechs neuen Beta-Cloud-Speicherkarten unterstützt, die in der folgenden Tabelle aufgeführt sind. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Neue oder aktualisierte Funktionen**
 
@@ -70,7 +70,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) | Wenn Sie die Betaversion verwenden, sehen Sie jetzt im Zielkatalog zwei [!DNL Azure Blob]-Zielkarten nebeneinander. Das neue Beta-Ziel bietet eine erweiterte Dateiexportfunktionalität und unterstützt Datensatzexporte. |
 | [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog) | Wenn Sie die Betaversion verwenden, sehen Sie jetzt im Zielkatalog zwei [!DNL SFTP]-Zielkarten nebeneinander. Das neue Beta-Ziel bietet eine erweiterte Dateiexportfunktionalität und unterstützt Datensatzexporte. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Neue oder aktualisierte Dokumentation**
 
@@ -92,7 +92,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 | Datentyp | [[!UICONTROL Informationen zu Werbedetails]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` wurde in `friendlyName` und `ID` in `name` umbenannt. |
 | Datentyp | [[!UICONTROL Informationen zu Fehlerdetails]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` wurde in `name` umbenannt.  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md).
 
@@ -107,7 +107,7 @@ Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von 
 | Überwachen von Abfragen über die Platform-Benutzeroberfläche | Die Abfrage-Service-Registerkarte [!UICONTROL Geplante Abfragen] bietet über die Benutzeroberfläche eine verbesserte Sichtbarkeit des Status aller Abfrageaufträge. Wichtige Informationen zum Status Ihrer Abfrageausführungen, einschließlich Fehlermeldungen und -Codes, falls sie fehlschlagen, finden Sie jetzt auf der Registerkarte [!UICONTROL Geplante Abfragen]. Sie können über die Benutzeroberfläche für jede dieser Abfragen auch Warnhinweise auf der Grundlage des Abfragestatus abonnieren. Weitere Informationen zu dieser Funktion finden Sie im Dokument [Überwachen von Abfragen](../../query-service/ui/monitor-queries.md). |
 | Datenmodell für die Abfrage von beschleunigten Berichtseinblicken | Im Rahmen der Data Distiller SKU können Sie mit dem abfragebeschleunigten Speicher die Zeit und Verarbeitungsleistung reduzieren, die erforderlich sind, um wichtige Einblicke aus Ihren Daten zu gewinnen. Mit dem abfragebeschleunigten Speicher können Sie ein benutzerdefiniertes Datenmodell erstellen und/oder vorhandene Adobe Real-time Customer Data Platform-Datenmodelle erweitern, um Ihre Reporting-Insights und deren Visualisierungen zu verbessern. Siehe das Dokument [Reporting-Insights des abfragebeschleunigten Speichers](../../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md), um mehr über diese Funktion zu erfahren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen über Abfrage-Services finden Sie unter [Abfrage-Service – Übersicht](../../query-service/home.md).
 Neue Funktionen in Adobe Experience Platform:

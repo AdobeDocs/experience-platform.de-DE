@@ -4,7 +4,7 @@ title: Übersicht zum Echtzeit-Kundenprofil
 description: Das Echtzeit-Kundenprofil führt Daten aus verschiedenen Quellen zusammen und bietet Zugriff auf diese Daten in Form von individuellen Kundenprofilen und zugehörigen Zeitreihenereignissen. die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 source-git-commit: 737a67b7e30f770d65751b1a924d8378af8bde52
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2098'
 ht-degree: 100%
 
@@ -48,9 +48,9 @@ Das [!DNL Real-Time Customer Profile] verarbeitet zwar aufgenommene Daten und f�
 
 Der Profil-Store verwendet eine Microsoft Azure Cosmos DB-Infrastruktur und der Platform Data Lake verwendet Microsoft Azure Data Lake-Datenspeicherung.
 
-### Leitlinien für Profile
+### Leitplanken für Profile
 
-Experience Platform bietet eine Reihe von Leitlinien, mit denen Sie vermeiden können, [Experience-Datenmodell(XDM)-Schemata](../xdm/home.md) zu erstellen, die vom Echtzeit-Kundenprofil nicht unterstützt werden können. Dies umfasst weiche Beschränkungen, die zu Leistungsbeeinträchtigungen führen, sowie harte Beschränkungen, die zu Fehlern und Systembrüchen führen. Weitere Informationen, einschließlich einer Liste von Richtlinien und Beispielanwendungsfällen, finden Sie in der Dokumentation zu [Profil-Schutzvorrichtungen](guardrails.md).
+Experience Platform bietet eine Reihe von Schutzmaßnahmen, mit denen Sie vermeiden können, [Experience-Datenmodell(XDM)-Schemata](../xdm/home.md) zu erstellen, die vom Echtzeit-Kundenprofil nicht unterstützt werden können. Dies umfasst weiche Beschränkungen, die zu Leistungsbeeinträchtigungen führen, sowie harte Beschränkungen, die zu Fehlern und Systembrüchen führen. Weitere Informationen, einschließlich einer Liste von Richtlinien und Beispielanwendungsfällen, finden Sie in der Dokumentation zu [Profilleitplanken](guardrails.md).
 
 ### Profil-Dashboard {#profile-dashboard}
 

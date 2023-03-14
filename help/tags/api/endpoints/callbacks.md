@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie den /callback-Endpunkt in der Reactor-API auf
 exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
 source-git-commit: 7f3b9ef9270b7748bc3366c8c39f503e1aee2100
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '600'
 ht-degree: 97%
 
 ---
@@ -51,7 +51,7 @@ GET  /properties/{PROPERTY_ID}/callbacks
 | --- | --- |
 | `{PROPERTY_ID}` | Die `id` der Eigenschaft, deren Callbacks Sie auflisten möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -130,7 +130,7 @@ GET /callbacks/{CALLBACK_ID}
 | --- | --- |
 | `CALLBACK_ID` | Die `id` des Callbacks, den Sie suchen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -194,7 +194,7 @@ POST /properties/{PROPERTY_ID}/callbacks
 | --- | --- |
 | `PROPERTY_ID` | Die `id` der [Eigenschaft](./properties.md), unter der Sie den Callback definieren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -223,7 +223,7 @@ curl -X POST \
 | `url` | Das URL-Ziel für die Callback-Nachricht. Die URL muss die HTTPS-Protokollerweiterung verwenden. |
 | `subscriptions` | Ein Array von Strings, das die Audit-Ereignistypen angibt, die den Callback auslösen werden. Eine Liste der möglichen Ereignistypen finden Sie im [Handbuch zum audit events-Endpunkt](./audit-events.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -275,7 +275,7 @@ PATCH /callbacks/{CALLBACK_ID}
 | --- | --- |
 | `CALLBACK_ID` | Die `id` des Callbacks, den Sie aktualisieren möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -310,7 +310,7 @@ curl -X PATCH \
 | `id` | Die `id` des Callbacks, den Sie aktualisieren möchten. Diese sollte mit dem `{CALLBACK_ID}`-Wert übereinstimmen, der im Anfragepfad angegeben ist. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `callbacks` lauten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -363,7 +363,7 @@ DELETE /callbacks/{CALLBACK_ID}
 | --- | --- |
 | `CALLBACK_ID` | Die `id` des Callbacks, den Sie löschen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 

@@ -4,7 +4,7 @@ title: Grundlegendes zum Echtzeit-Kundenprofil in Real-Time CDP
 description: Erfahren Sie, wie Sie mit Adobe Real-time Customer Data Platform unter Verwendung von Echtzeit-Kundenprofilen koordinierte, konsistente und relevante Erlebnisse für Kundinnen und Kunden erstellen können.
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 100%
 

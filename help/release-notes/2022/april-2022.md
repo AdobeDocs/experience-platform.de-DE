@@ -3,8 +3,8 @@ title: Adobe Experience Platform – Versionshinweise April 2022
 description: Versionshinweise April 2022 für Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: ht
-source-wordcount: '2916'
+workflow-type: tm+mt
+source-wordcount: '2904'
 ht-degree: 100%
 
 ---
@@ -55,7 +55,7 @@ Die folgenden Widgets sind über die Widget-Bibliothek in den jeweiligen Dashboa
 | ------- | --------- | ----------- |
 | Bereinigung der Zugehörigkeit zu verwaisten Profilsegmenten | Profile und Lizenznutzung | Der Profil-Service entfernt jetzt täglich übrig gebliebene Segmentmitglieder, um eine genauere Darstellung Ihrer Profile in Ihrem System zu bieten. Diese Bereinigung erfolgt, nachdem alle Profilfragmente für ein bestimmtes Profil gelöscht wurden. Dies kann zu einem Rückgang der Metrik „Adressierbare Zielgruppe“ im Lizenznutzungs-Dashboard und zu einem Rückgang der Metrik „Profilanzahl“ im Profil-Dashboard führen, da diese Metriken vor dieser Version übrig gebliebene Segmentfragmente einbezogen haben. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen finden Sie in der Dokumentation zu [[!DNL Profiles]](../../dashboards/guides/profiles.md)-, [[!DNL Destinations]](../../dashboards/guides/destinations.md)- und [[!DNL Segments]](../../dashboards/guides/segments.md)-Dashboards.
 
@@ -126,7 +126,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 | --- | --- |
 | Hinzufügen oder Entfernen einzelner Standardfelder für ein Schema | Mit der Benutzeroberfläche des Schema-Editors können Sie nun Teile von Standardfeldergruppen zu Ihren Schemas hinzufügen und haben so mehr Flexibilität bei der Auswahl der Felder, die Sie einbeziehen möchten, ohne dass Sie benutzerdefinierte Ressourcen von Grund auf neu erstellen müssen.<br><br>Sie können jetzt auch benutzerdefinierte Ad-hoc-Felder direkt in der Schemastruktur definieren und sie einer neuen oder vorhandenen benutzerdefinierten Feldergruppe zuweisen, ohne die Feldergruppe zuvor erstellen oder bearbeiten zu müssen.<br><br>Weitere Informationen zu diesen neuen Workflows finden Sie in der Anleitung zum [Erstellen und Bearbeiten von Schemas in der Benutzeroberfläche](../../xdm/ui/resources/schemas.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Neue XDM-Komponenten**
 
@@ -151,7 +151,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 | Erweiterung (Workfront) | [[!UICONTROL Arbeitsprogramm-Attribute]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/program.schema.json) | Erfasst Details zu einem Arbeitsprogramm. |
 | Erweiterung (Workfront) | [[!UICONTROL Arbeitsprojekt-Attribute]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/project.schema.json) | Erfasst Details zu einem Arbeitsprojekt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Aktualisierte XDM-Komponenten**
 
@@ -167,7 +167,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 | Erweiterung (Workfront) | [[!UICONTROL Arbeitsaufgaben-Attribute]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/task.schema.json) | Mehrere Felder wurden hinzugefügt. |
 | Erweiterung (Workfront) | [[!UICONTROL Arbeitsobjekt]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobject.schema.json) | Neue Felder für den übergeordneten Objekttyp und benutzerdefinierte Formularfelder. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md).
 
@@ -177,7 +177,7 @@ KI/ML-Services ermöglichen es Marketing-Analysten und -Praktikern, die Leistung
 
 ### Attributions-KI
 
-Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
+Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Fachleuten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
 
 **Aktualisierte Funktionen**
 

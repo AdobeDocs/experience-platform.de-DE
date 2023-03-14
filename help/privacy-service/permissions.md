@@ -3,8 +3,8 @@ title: Verwalten der Berechtigungen für den Privacy Service
 description: Erfahren Sie, wie Sie die Benutzerrechte für den Adobe Experience Platform Privacy Service mit der Adobe Admin Console verwenden können.
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
 source-git-commit: ebcfdc9f73fc9120cf3819169d72bd828d0b35a6
-workflow-type: ht
-source-wordcount: '964'
+workflow-type: tm+mt
+source-wordcount: '961'
 ht-degree: 100%
 
 ---
@@ -37,7 +37,7 @@ In der folgenden Tabelle finden Sie eine Übersicht über die verfügbaren Berec
 | [!UICONTROL Opt-out von Verkaufsberechtigungen] | [!UICONTROL Leseberechtigung – Opt-out vom Verkauf] | Legt fest, ob Benutzende bestehende Opt-out-Anträge zusammen mit ihren Details einsehen können. |
 | [!UICONTROL Opt-out von Verkaufsberechtigungen] | [!UICONTROL Schreibberechtigung – Opt-out vom Verkauf] | Legt fest, ob Benutzende neue Opt-out-Kaufanfragen erstellen können. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Verwalten von Berechtigungen {#manage}
 

@@ -4,7 +4,7 @@ description: Mit dem Endpunkt /ttl in der Datenhygiene-API können Sie programmg
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '1456'
+source-wordcount: '1426'
 ht-degree: 98%
 
 ---
@@ -49,7 +49,7 @@ GET /ttl?{QUERY_PARAMETERS}
 | --- | --- |
 | `{QUERY_PARAMETERS}` | Eine Liste optionaler Abfrageparameter mit mehreren durch `&`-Zeichen getrennten Parametern. Zu den gebräuchlichen Parametern gehören `size` und `page` für Paginierungszwecke. Eine vollständige Liste der unterstützten Abfrageparameter finden Sie im [Anhang](#query-params). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -106,7 +106,7 @@ Eine erfolgreiche Antwort listet die resultierenden Datensatzgültigkeiten auf. 
 | `totalRecords` | Anzahl der Datensatzgültigkeiten, die den Parametern des Auflistungsaufrufs entsprechen. |
 | `ttlDetails` | Enthält die Details der zurückgegebenen Datensatzgültigkeiten. Weitere Informationen zu den Eigenschaften einer Datensatzgültigkeit finden Sie im Antwort-Abschnitt zum Erstellen eines [Suchaufrufs](#lookup). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Nachschlagen einer Datensatzgültigkeit {#lookup}
 
@@ -122,7 +122,7 @@ GET /ttl/{DATASET_ID}
 | --- | --- |
 | `{DATASET_ID}` | ID des Datensatzes, dessen Gültigkeit Sie nachschlagen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -167,7 +167,7 @@ Eine erfolgreiche Antwort gibt die Details der Datensatzgültigkeit zurück.
 | `displayName` | Der Anzeigename für die Anfrage zur Gültigkeit. |
 | `description` | Eine Beschreibung für die Anfrage zur Gültigkeit. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Gültigkeits-Tags des Katalogs
 
@@ -230,7 +230,7 @@ curl -X PUT \
 | `displayName` | Ein Anzeigename für die Anfrage zur Gültigkeit. |
 | `description` | Eine optionale Beschreibung für die Anfrage zur Gültigkeit. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -260,7 +260,7 @@ Eine erfolgreiche Antwort gibt die Details der Datensatzgültigkeit mit dem HTTP
 | `updatedAt` | Ein Zeitstempel, der angibt, wann die Gültigkeit zuletzt aktualisiert wurde. |
 | `updatedBy` | Die Person, der die Gültigkeit zuletzt aktualisiert hat. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Abbrechen der Datensatzgültigkeit {#delete}
 
@@ -280,7 +280,7 @@ DELETE /ttl/{EXPIRATION_ID}
 | --- | --- |
 | `{EXPIRATION_ID}` | Die `workorderId` der Datensatzgültigkeit, die Sie abbrechen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -313,7 +313,7 @@ GET /ttl/{DATASET_ID}?include=history
 | --- | --- |
 | `{DATASET_ID}` | ID des Datensatzes, dessen Gültigkeitsprotokoll Sie aufrufen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -377,7 +377,7 @@ Eine erfolgreiche Antwort geben die Details der Datensatzgültigkeit mit einem `
 | `imsOrg` | Die Kennung Ihrer Organisation. |
 | `history` | Listet das Protokoll der Aktualisierungen für die Gültigkeit als Array von Objekten auf, wobei jedes Objekt die Attribute `status`, `expiry`, `updatedAt` und `updatedBy` für die Gültigkeit zum Zeitpunkt der Aktualisierung enthält. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Anhang
 
@@ -402,4 +402,4 @@ In der folgenden Tabelle sind die verfügbaren Abfrageparameter beim [Auflisten 
 | `completedDate` / `completedToDate` / `completedFromDate` | Gibt die Gültigkeiten wieder, die im angegebenen Intervall ausgeführt wurden. | `completedToDate=2021-11-11-06:00` |
 | `expiryDate` / `expiryToDate` / `expiryFromDate` | Gibt die Gültigkeiten wieder, die im angegebenen Intervall ausgeführt werden sollen oder bereits ausgeführt wurden. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

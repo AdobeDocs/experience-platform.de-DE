@@ -6,7 +6,7 @@ description: Mit Adobe Experience Platform können Sie Adobe Analytics-Daten üb
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '3431'
+source-wordcount: '3419'
 ht-degree: 97%
 
 ---
@@ -122,7 +122,7 @@ Folgende Tabelle enthält Spalten, die den Namen des Analytics-Felds (*Analytics
 | videopausetime | media.mediaTimed.pauseTime | Objekt | <!-- MISSING --> | {id (string), value (number)} |
 | videosecondssincelastcall | media.mediaTimed.primaryAssetViewDetails.sessionTimeout | Ganzzahl |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Aufgeteilte Zuordnungsfelder
 
@@ -134,7 +134,7 @@ Diese Felder verfügen über eine einzige Quelle, sind aber **mehreren** XDM-Pos
 | mobileosversion | environment.operatingSystem, environment.operatingSystemVersion | Zeichenfolge | Version des mobilen Betriebssystems. |
 | videoadlength | advertising.adAssetReference._xmpDM.duration | Ganzzahl | Länge der Videoanzeige. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Generierte Zuordnungsfelder
 
@@ -194,7 +194,7 @@ Folgende Tabelle enthält Spalten, die den Namen des Analytics-Felds (*Analytics
 | videochapter | media.mediaTimed.mediaChapter.chapterAssetReference._xmpDM.duration | Ganzzahl | Der Name des Videokapitels. |
 | videolength | media.mediaTimed.primaryAssetReference._xmpDM.duration | Ganzzahl | Die Länge des Videos. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Erweiterte Zuordnungsfelder
 
@@ -274,4 +274,4 @@ Folgende Tabelle enthält Spalten, die den Namen des Analytics-Felds (*Analytics
 | visit_search_engine | _experience.analytics.session.search.searchEngine | Zeichenfolge | Numerische ID der ersten Suchmaschine des Besuchs. |
 | visit_start_time_gmt | _experience.analytics.session.timestamp | Ganzzahl | Zeitstempel des ersten Treffers des Besuchs in Unix-Zeit. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

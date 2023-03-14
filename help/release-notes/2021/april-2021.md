@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Platform – Versionshinweise April 2021
-description: Die Versionshinweise für Adobe Experience Platform vom April 2021.
+description: Versionshinweise April 2021 für Adobe Experience Platform.
 doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
@@ -8,7 +8,7 @@ exl-id: cc78e48a-3578-4c55-ae86-1946d62bddb9
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '888'
-ht-degree: 96%
+ht-degree: 97%
 
 ---
 
@@ -63,7 +63,7 @@ Weitere Informationen zu unterstützten Datensätzen finden Sie in der [[!DNL In
 
 ### Attribution AI
 
-Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
+Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Fachleuten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
 
 | Funktion | Beschreibung |
 | ------- | ----------- |

@@ -4,7 +4,7 @@ description: Lernen Sie, wie Ressourcenbeziehungen in der Reactor-API hergestell
 exl-id: 23976978-a639-4eef-91b6-380a29ec1c14
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '762'
 ht-degree: 100%
 
 ---
@@ -40,7 +40,7 @@ POST /properties/{PROPERTY_ID}/{RESOURCE_TYPE}
 | `{PROPERTY_ID}` | Die ID der Eigenschaft, zu der die Ressource gehört. |
 | `{RESOURCE_TYPE}` | Die Art der zu erstellenden Ressource. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -89,7 +89,7 @@ curl -X POST \
 | `id` | Die eindeutige ID einer Ressource. Jeder `id` muss eine gleichrangige `type`-Eigenschaft hinzugefügt werden, die den Typ der betreffenden Ressource angibt. |
 | `type` | Der Ressourcentyp, der durch ein gleichrangiges `id`-Feld referenziert wird. Akzeptierte Werte umfassen `data_elements`, `rules`, `extensions` und `environments`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Erstellen einer Beziehung nach URL {#url}
 
@@ -136,7 +136,7 @@ curl -X POST \
 | `id` | Die eindeutige ID einer Ressource. Jeder `id` muss eine gleichrangige `type`-Eigenschaft hinzugefügt werden, die den Typ der betreffenden Ressource angibt. |
 | `type` | Der Ressourcentyp, der durch ein gleichrangiges `id`-Feld referenziert wird. Akzeptierte Werte umfassen `data_elements`, `rules`, `extensions` und `environments`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Beziehungsanforderungen nach Ressource {#requirements}
 
@@ -153,7 +153,7 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | `property` | ✓ |  |  |
 | `entity` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Builds
 
@@ -166,7 +166,7 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | `library` | ✓ |  |  |
 | `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Callbacks
 
@@ -174,7 +174,7 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | :--- | :---: | :---: | :---: |
 | `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Firmen
 
@@ -182,7 +182,7 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | :--- | :---: | :---: | :---: |
 | `properties` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Datenelemente
 
@@ -197,7 +197,7 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | `updated_with_extension` | ✓ |  |  |
 | `updated_with_extension_package` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Umgebungen
 
@@ -208,7 +208,7 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | `host` | ✓ | ✓ |  |
 | `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Erweiterungen
 
@@ -222,7 +222,7 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | `extension_package` | ✓ | ✓ |  |
 | `updated_with_extension_package` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Hosts
 
@@ -230,7 +230,7 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | :--- | :---: | :---: | :---: |
 | `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Bibliotheken
 
@@ -246,7 +246,7 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | `property` | ✓ |  |  |
 | `last_build` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Anmerkungen
 
@@ -254,7 +254,7 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | :--- | :---: | :---: | :---: |
 | `resource` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Eigenschaften
 
@@ -268,7 +268,7 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | `extensions` |  |  |  |
 | `extensions` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Regel Komponenten
 
@@ -283,7 +283,7 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | `rules` | ✓ | ✓ |  |
 | `revisions` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Regeln
 

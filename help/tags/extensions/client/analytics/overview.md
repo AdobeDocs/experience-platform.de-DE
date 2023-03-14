@@ -292,7 +292,7 @@ Wichtig: Die Verwendung einer „Variablen festlegen“-Aktion sendet das Signal
 
 #### eVars
 
-Legen Sie eine oder mehrere [eVars](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html) fest.
+Legen Sie eine oder mehrere [eVars](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html?lang=de) fest.
 
 1. Wählen Sie im Dropdown-Menü eine eVar aus.
 1. Geben Sie an, ob Sie die eVar als Wert festlegen (Festlegen als) oder eine andere eVar kopieren (Formular duplizieren) möchten.

@@ -5,7 +5,7 @@ title: Handbuch zur Fehlerbehebung bei der Batch-Aufnahme
 description: Diese Dokumentation hilft bei der Beantwortung häufig gestellter Fragen zu Adobe Experience Platform-APIs für die Batch-Aufnahme von Daten.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 100%
 

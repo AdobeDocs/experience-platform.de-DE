@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platform - Versionshinweise, November 2020
-description: Versionshinweise von November 2020 für Adobe Experience Platform.
+title: Adobe Experience Platform – Versionshinweise November 2020
+description: Die Versionshinweise von November 2020 für Adobe Experience Platform.
 doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
@@ -8,7 +8,7 @@ exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2184'
-ht-degree: 24%
+ht-degree: 26%
 
 ---
 
@@ -181,7 +181,7 @@ Weitere Informationen finden Sie im [Customer AI - Übersicht](../../intelligent
 
 ## Echtzeit-Kundenprofil {#profile}
 
-Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Mit dem Echtzeit-Kundenprofil können Sie eine ganzheitliche Ansicht jedes einzelnen Kunden anzeigen, die Daten aus mehreren Kanälen kombiniert, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. [!DNL Profile] ermöglicht es Ihnen, Ihre unterschiedlichen Kundendaten in einer einheitlichen Ansicht zusammenzufassen, die eine umsetzbare, mit Zeitstempel versehene Übersicht über jede Kundeninteraktion bietet.
+Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Ihre Kundinnen und Kunden, unabhängig davon, wo und wann sie mit Ihrer Marke interagieren. Das Echtzeit-Kundenprofil liefert eine ganzheitliche Sicht auf jede einzelne Kundin und jeden einzelnen Kunden, indem es Daten aus verschiedenen Kanälen, darunter Online-, Offline-, CRM- und Drittanbieter-Datenquellen, miteinander kombiniert. [!DNL Profile] ermöglicht es Ihnen, Ihre unterschiedlichen Kundendaten in einer einheitlichen Ansicht zusammenzufassen, die eine umsetzbare, mit Zeitstempel versehene Übersicht über jede Kundeninteraktion bietet.
 
 **Wichtigste Funktionen**
 

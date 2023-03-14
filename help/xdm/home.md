@@ -5,7 +5,7 @@ title: XDM-System – Übersicht
 description: Standardisierung und Interoperabilität sind Schlüsselkonzepte von Adobe Experience Platform. Das von Adobe unterstützte Experience-Datenmodell (XDM) ermöglicht die Standardisierung von Kundenerlebnisdaten und die Definition von Schemas für das Customer Experience Management.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2087'
 ht-degree: 100%
 

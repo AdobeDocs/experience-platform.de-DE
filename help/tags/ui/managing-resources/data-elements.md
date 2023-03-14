@@ -260,5 +260,5 @@ Einige häufige Anwendungsfälle lauten wie folgt:
 Sie müssen zusätzliche benutzerdefinierte Datenelemente erstellen, wenn Sie zuvor eines der folgenden Datenelemente verwendet haben:
 
 * URI
-* Protokoll
+* Protocol
 * Hostname

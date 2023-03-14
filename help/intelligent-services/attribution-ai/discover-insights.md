@@ -189,7 +189,7 @@ Höhere Touchpoint-Volumen garantieren keine höhere Effizienz.
 
 Sobald Sie die Daten gefiltert haben und die entsprechenden Informationen anzeigen können, können Sie auf die Bewertungen zuzugreifen. Eine ausführliche Anleitung zum Zugriff auf Ihre Bewertungen finden Sie im [Tutorial für den Zugriff auf Bewertungen in Attribution AI](./download-scores.md). Darüber hinaus können Sie die Zusammenfassungsdaten herunterladen, wie in [Mehr Aktionen](#more-actions) angegeben. Wenn Sie „Zusammenfassungsdaten herunterladen“ auswählen, werden die nach Datumsangaben aggregierten Zusammenfassungsdaten heruntergeladen.
 
-## Weitere Ressourcen
+## Zusätzliche Ressourcen
 
 Im folgenden Video erfahren Sie, wie Sie mithilfe der Attribution AI Insights-Seite den ROI von Marketingkanälen und Kampagnen nachvollziehen können.
 

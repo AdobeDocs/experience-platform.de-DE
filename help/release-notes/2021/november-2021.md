@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platform - Versionshinweise, November 2021
+title: Adobe Experience Platform – Versionshinweise November 2021
 description: Versionshinweise von November 2021 für Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '799'
-ht-degree: 79%
+ht-degree: 86%
 
 ---
 
@@ -27,11 +27,11 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [Attributions-KI](#attribution-ai)
 - [Kunden-KI](#customer-ai)
 
-### Real-time Customer Data Platform B2B Edition {#B2B}
+### Real-Time Customer Data Platform B2B Edition {#B2B}
 
 **Veröffentlichungsdatum: 12. November 2021**
 
-Die auf Real-time Customer Data Platform (Real-Time CDP) aufbauende Real-Time CDP B2B Edition wurde speziell für Marketing-Experten entwickelt, die in einem Business-to-Business-Dienstleistungsmodell arbeiten. Es führt Daten aus verschiedenen Quellen zusammen und kombiniert sie zu einer einzigen Ansicht von Personen und Account-Profilen. Diese vereinheitlichten Daten ermöglichen es Marketing-Experten, bestimmte Zielgruppen präzise anzusprechen und über alle verfügbaren Kanäle anzusprechen.
+Real-Time CDP B2B Edition basiert auf Real-time Customer Data Platform (Real-Time CDP) und wurde speziell für Marketingexpertinnen und -experten mit einem Business-to-Business-Service-Modell entwickelt. Es führt Daten aus verschiedenen Quellen zusammen und kombiniert sie zu einer einzigen Ansicht von Personen und Account-Profilen. Diese vereinheitlichten Daten ermöglichen es Marketing-Experten, bestimmte Zielgruppen präzise anzusprechen und über alle verfügbaren Kanäle anzusprechen.
 
 Es gibt Verbesserungen an einer Vielzahl von Adobe Experience Platform-Funktionen, die Real-Time CDP B2B Edition von seinem B2C-Gegenstück unterscheiden. Dazu gehören Verbesserungen am Experience-Datenmodell (XDM) für B2B-Anwendungsfälle, Upgrades für die Identitätsauflösung und die Profilsegmentierung sowie ein maßgeschneiderter Connector und ein Ziel für Marketo Engage. Mit dem Marketo-Connector können B2B-Marken ihre branchenführenden B2B-Interaktionsdaten mit Verhaltensinformationen verknüpfen, um Leads zu pflegen und Maßnahmen für Account-basiertes Marketing zu verbessern.
 
@@ -70,7 +70,7 @@ Mit der Ad-hoc-Aktivierungs-API können Marketing-Experten Zielgruppensegmente s
 
 ### Attributions-KI {#attribution-ai}
 
-Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
+Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Fachleuten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
 
 | Funktion | Beschreibung |
 |-----------|---------------|
@@ -81,7 +81,7 @@ Weitere Informationen zu Attributions-KI finden Sie in der [Dokumentation zu Att
 
 ### Kunden-KI {#customer-ai}
 
-In Real-time Customer Data Platform verfügbare Customer AI wird verwendet, um benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion für einzelne Profile in großem Maßstab zu generieren. Dies wird erreicht, ohne dass die Geschäftsanforderungen in ein Problem des maschinellen Lernens umgewandelt werden müssen bzw. ein Algorithmus ausgewählt, trainiert oder bereitgestellt werden muss.
+Die in Real-time Customer Data Platform verfügbare Kunden-KI dient dazu, in großem Umfang benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion für einzelne Profile zu generieren. Dies wird erreicht, ohne dass die Geschäftsanforderungen in ein Problem des maschinellen Lernens umgewandelt werden müssen bzw. ein Algorithmus ausgewählt, trainiert oder bereitgestellt werden muss.
 
 **Aktualisierte Funktionen**
 

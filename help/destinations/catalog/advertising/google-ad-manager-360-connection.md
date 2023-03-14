@@ -4,7 +4,7 @@ description: Google Ad Manager 360 ist eine Adserving-Plattform von Google, die 
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
 source-git-commit: ec4d064f90348f9eafb1d0fe4b9df5e102295507
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '920'
 ht-degree: 85%
 
 ---
@@ -37,7 +37,7 @@ Beachten Sie folgende Details, die speziell für [!DNL Google Ad Manager 360]-Zi
 |---|---|---|
 | PPID | [!DNL Publisher provided ID] | Wählen Sie diese Zielidentität aus, um Zielgruppen an [!DNL Google Ad Manager 360] zu senden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
@@ -48,7 +48,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 | Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Teile eines Segments zusammen mit den entsprechenden Schemafeldern (wie etwa Ihre PPID), gemäß der Auswahl im Bildschirm „Profilattribute auswählen“ des [Zielaktivierungs-Workflows](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | Exporthäufigkeit | **[!UICONTROL Batch]** | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Weitere Informationen finden Sie unter [Batch-Datei-basierte Ziele](/help/destinations/destination-types.md#file-based). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Voraussetzungen {#prerequisites}
 

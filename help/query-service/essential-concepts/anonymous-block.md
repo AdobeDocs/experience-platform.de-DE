@@ -3,7 +3,7 @@ title: Anonymer Block in Query Service
 description: Der anonyme Block ist eine SQL-Syntax, die von Adobe Experience Platform Query Service unterstützt wird und mit der Abfragen effizient ausgeführt werden können.
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
 source-git-commit: d3ea7ee751962bb507c91e1afea0da35da60a66d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 100%
 

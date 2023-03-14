@@ -8,7 +8,7 @@ exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
 source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
 source-wordcount: '2588'
-ht-degree: 37%
+ht-degree: 38%
 
 ---
 
@@ -20,7 +20,7 @@ In diesem Tutorial wird die [!DNL Schema Registry] API, um Sie durch die Schritt
 
 >[!NOTE]
 >
->Wenn Sie CSV-Daten in Platform erfassen, können Sie [Ordnen Sie diese Daten einem XDM-Schema zu, das von AI-generierten Empfehlungen erstellt wurde.](../../ingestion/tutorials/map-csv/recommendations.md) (aktuell in der Beta-Phase), ohne das Schema manuell selbst erstellen zu müssen.
+>Wenn Sie CSV-Daten in Platform aufnehmen, können Sie [diese Daten einem XDM-Schema zuordnen, das durch KI-generierte Empfehlungen erstellt wurde](../../ingestion/tutorials/map-csv/recommendations.md) (aktuell in der Beta-Phase), ohne das Schema manuell selbst erstellen zu müssen.
 
 ## Erste Schritte
 
@@ -201,7 +201,7 @@ Das Antwortformat hängt von der `Accept` -Header mit der -Anfrage gesendet. Exp
 }
 ```
 
-### Feldergruppe hinzufügen {#add-a-field-group}
+### Hinzufügen einer Feldergruppe {#add-a-field-group}
 
 Nachdem das &quot;Loyalty Members&quot;-Schema erstellt und bestätigt wurde, können Feldergruppen hinzugefügt werden.
 

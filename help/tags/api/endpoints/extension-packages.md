@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie den /extension_packages-Endpunkt in der React
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
 source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '939'
 ht-degree: 97%
 
 ---
@@ -249,7 +249,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | Die `id` des Erweiterungspakets, das Sie suchen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -717,7 +717,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | Die `id` des Erweiterungspakets, das Sie aktualisieren möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -956,7 +956,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | Die `id` des Erweiterungspakets, das Sie privat freigeben möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -1201,7 +1201,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | Die `id` des Erweiterungspakets, das Sie beenden möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -1294,7 +1294,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}/versions
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | Die `id` des Erweiterungspakets, dessen Versionen Sie auflisten möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 

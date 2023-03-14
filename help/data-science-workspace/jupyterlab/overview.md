@@ -5,7 +5,7 @@ title: Übersicht über die Benutzeroberfläche von JupyterLab
 description: JupyterLab ist eine Web-basierte Benutzeroberfläche für Project Jupyter und ist eng in Adobe Experience Platform integriert. Sie bietet eine interaktive Entwicklungsumgebung für Datenwissenschaftlerinnen und Datenwissenschaftler, die mit Jupyter-Notebooks, -Code und -Daten arbeiten möchten. In diesem Dokument erhalten Sie einen Überblick über JupyterLab und die Funktionen sowie Anleitungen zum Durchführen häufiger Aktionen.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1820'
 ht-degree: 100%
 

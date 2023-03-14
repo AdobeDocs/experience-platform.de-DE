@@ -57,7 +57,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Fehlerkorrekturen**:
 
-* [AppMeasurement wurde auf Version 2.22.1 aktualisiert](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
+* [AppMeasurement wurde auf Version 2.22.1 aktualisiert](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de).
 * Der Fallback-linkName wurde aktualisiert und spiegelt nun die Activity Map-Logik statt der Verwendung von innerHTML wider.
 
 ## 6. August 2020
@@ -70,7 +70,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Funktionen**:
 
-* AppMeasurement wurde aktualisiert auf [Version 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
+* AppMeasurement wurde aktualisiert auf [Version 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de).
 * Geringfügige Änderung an der Benutzeroberfläche: Die zusätzliche Einstellung wird jetzt in einem Accordion konsolidiert angezeigt anstatt in einem Kontrollkästchen.
 
 ## 2. Juni 2020
@@ -98,7 +98,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Funktionen**:
 
-* [AppMeasurement wurde auf Version 2.20.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) aktualisiert.
+* [AppMeasurement wurde auf Version 2.20.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de) aktualisiert.
 
 ## 2. März 2020
 
@@ -110,7 +110,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Funktionen**:
 
-* [AppMeasurement wurde auf Version 2.18.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) aktualisiert.
+* [AppMeasurement wurde auf Version 2.18.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de) aktualisiert.
 * DIL-Bibliothek im Audience Manager-Modul wurde auf Version 9.4 aktualisiert.
 * Länge der Eingabefelder in der Erweiterung wurde erhöht.
 * eVars und Props in den Erweiterungs- und Aktionskonfigurationen zeigen jetzt den Anzeigenamen von Analytics an.
@@ -171,7 +171,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 * Aktualisierung der Adobe Analytics-Erweiterung für die Unterstützung von DIL 9.2 für Audience Manager
 
-* Aktualisierung der Erweiterung zur Unterstützung von [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.15.0)
+* Aktualisierung der Erweiterung zur Unterstützung von [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de#version-2.15.0)
 * Das folgende Kontrollkästchen wurde entfernt, da es nicht mehr unterstützt wird: &quot;Verbinden Sie den Ziel-Publishing-IFRAME nicht mit dem DOM oder den Löschzielen&quot;
 
 ## 4. Juni 2019

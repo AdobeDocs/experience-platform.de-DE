@@ -64,12 +64,12 @@ In der folgenden Tabelle sind die vordefinierten Header aufgeführt. Sie sind ni
 | Header | Beschreibung |
 |---|---|
 | [A-IM](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers/Accept) |  |
-| [Accept](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) |  |
+| [Accept](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers/Accept) |  |
 | [Accept-Charset](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Charset) |  |
 | [Accept-Encoding](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding) |  |
 | [Accept-Language](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language) |  |
-| [Accept-Datetime](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) | Wird von einem Benutzeragenten zur Angabe übertragen, dass er auf einen früheren Zustand einer Originalressource zugreifen möchte. Zu diesem Zweck wird der `Accept-Datetime`-Header in einer HTTP-Anfrage an ein TimeGate für eine ursprüngliche Ressource übermittelt. Der Wert gibt den Zeitpunkt des gewünschten früheren Zustands der Originalressource an. |
-| Access-Control-Request-Headers | Wird von Browsern bei einer [Preflight-Anfrage](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request) verwendet, um dem Server mitzuteilen, welche [HTTP-Header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) der Client bei der eigentlichen Anfrage senden könnte. |
+| [Accept-Datetime](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers/Accept) | Wird von einem Benutzeragenten zur Angabe übertragen, dass er auf einen früheren Zustand einer Originalressource zugreifen möchte. Zu diesem Zweck wird der `Accept-Datetime`-Header in einer HTTP-Anfrage an ein TimeGate für eine ursprüngliche Ressource übermittelt. Der Wert gibt den Zeitpunkt des gewünschten früheren Zustands der Originalressource an. |
+| Access-Control-Request-Headers | Wird von Browsern bei einer [Preflight-Anfrage](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request) verwendet, um dem Server mitzuteilen, welche [HTTP-Header](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers) der Client bei der eigentlichen Anfrage senden könnte. |
 | Access-Control-Request-Method | Wird von Browsern bei einer [Preflight-Anfrage](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request) verwendet, um dem Server mitzuteilen, welche [HTTP-Methode](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Methods) bei der eigentlichen Anfrage verwendet wird. Dieser Header ist erforderlich, da die Preflight-Anfrage immer eine [OPTION](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS) ist und nicht dieselbe Methode wie die eigentliche Anfrage verwendet. |
 | Authorization | Enthält die Anmeldeinformationen zum Authentifizieren eines Benutzeragenten bei einem Server. |
 | [Cache-Control](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers/Cache-Control) | Anweisungen für Caching-Mechanismen sowohl in Anfragen als auch in Antworten. |

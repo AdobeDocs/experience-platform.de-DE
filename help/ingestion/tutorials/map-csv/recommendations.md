@@ -1,10 +1,10 @@
 ---
-title:  Zuordnen einer CSV-Datei zu einem XDM-Schema mithilfe der KI-generierten Empfehlungen (Beta)
+title: Zuordnen einer CSV-Datei zu einem XDM-Schema mithilfe der KI-generierten Empfehlungen (Beta)
 description: In diesem Tutorial wird beschrieben, wie Sie eine CSV-Datei mithilfe von KI-generierten Empfehlungen einem XDM-Schema zuordnen.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
 source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
-workflow-type: ht
-source-wordcount: '1043'
+workflow-type: tm+mt
+source-wordcount: '1040'
 ht-degree: 100%
 
 ---

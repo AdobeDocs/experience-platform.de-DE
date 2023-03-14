@@ -4,8 +4,8 @@ description: Mit dem /quota-Endpunkt in der Data Hygiene API können Sie die Dat
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
 source-git-commit: 1c6a5df6473e572cae88a5980fe0db9dfcf9944e
 workflow-type: tm+mt
-source-wordcount: '350'
-ht-degree: 88%
+source-wordcount: '347'
+ht-degree: 89%
 
 ---
 
@@ -83,4 +83,4 @@ Bei einer erfolgreichen Antwort werden die Details Ihrer Datenhygiene-Kontingent
 | --- | --- |
 | `quotas` | Listet die Kontingentinformationen für jeden Datenhygiene-Vorgangstyp auf. Jedes Kontingentobjekt enthält die folgenden Eigenschaften:<ul><li>`name`: Datenhygiene-Vorgangstyp:<ul><li>`expirationDatasetQuota`: Datensatzgültigkeiten</li><li>`deleteIdentityWorkOrderDatasetQuota`: Löschen von Datensätzen</li></ul></li><li>`description`: Eine Beschreibung des Datenhygiene-Vorgangstyps.</li><li>`consumed`: Die Anzahl der Vorgänge dieses Typs, die im aktuellen Monatszeitraum ausgeführt wird.</li><li>`quota`: Die Kontingentbegrenzung für diesen Vorgangstyp. Bei Datensatzlöschungen und -aktualisierungen stellt dies die Anzahl der Aufträge dar, die für jeden monatlichen Zeitraum ausgeführt werden können. Bei Datensatzabläufen stellt dies die Anzahl der Vorgänge dar, die gleichzeitig aktiv sein können.</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

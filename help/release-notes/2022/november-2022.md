@@ -3,8 +3,8 @@ title: Adobe Experience Platform – Versionshinweise November 2022
 description: Die Versionshinweise von November 2022 für Adobe Experience Platform.
 exl-id: 1048cfae-6e7a-4d05-a004-c5c095a17fc4
 source-git-commit: ccfc46714069e8c29f1777dea5ba73e318c0a4a6
-workflow-type: ht
-source-wordcount: '454'
+workflow-type: tm+mt
+source-wordcount: '451'
 ht-degree: 100%
 
 ---
@@ -43,7 +43,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 | --- | --- |
 | Zuweisen von Feldern zu benutzerdefinierten Klassen beim direkten Hinzufügen zu einem Schema | Wenn Sie [ein einzelnes Feld direkt zu einem Schema hinzufügen](../../xdm/ui/resources/schemas.md#add-individual-fields), konnten Sie das Feld bisher nur einer Feldergruppe als übergeordnete Ressource zuweisen. Jetzt können Sie zusätzlich zu den Feldergruppen [das Feld stattdessen einer benutzerdefinierten Klasse](../../xdm/ui/resources/schemas.md#add-to-class) als übergeordnete Ressource zuweisen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md).
 

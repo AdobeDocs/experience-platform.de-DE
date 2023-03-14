@@ -5,7 +5,7 @@ title: Sandbox-Übersicht
 description: Sandboxes sind virtuelle Partitionen innerhalb einer Instanz von Experience Platform, die eine nahtlose Integration in den Entwicklungsprozess Ihrer Programme für digitale Erlebnisse ermöglichen.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1005'
 ht-degree: 100%
 

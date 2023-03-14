@@ -9,7 +9,7 @@ ht-degree: 74%
 
 ---
 
-# Geplante Abfragen überwachen
+# Überwachen von geplanten Abfragen 
 
 Adobe Experience Platform bietet über die Benutzeroberfläche eine verbesserte Sichtbarkeit für den Status aller Abfrageaufträge. Auf der Registerkarte [!UICONTROL Geplante Abfragen] finden Sie jetzt wichtige Informationen zur Ausführung Ihrer Abfragen, darunter den Status, Details zum Zeitplan sowie Fehlermeldungen und -Codes, falls eine Abfrage fehlschlägt. Sie können über die Benutzeroberfläche auf der Registerkarte [!UICONTROL Geplante Abfragen] für jede dieser Abfragen auch Benachrichtigungen für Abfragen basierend auf ihrem Status abonnieren.
 

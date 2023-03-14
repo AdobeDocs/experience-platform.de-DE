@@ -128,7 +128,7 @@ Die Aufrufenden müssen die Unterstützung für die Speicherung von Client-Statu
 | Attribut | Typ | Beschreibung |
 | --- | --- | --- |
 | `cookiesEnabled` | Boolesch | Wenn festgelegt, ermöglicht es die Unterstützung von Cookies. Der Standardwert ist `false`. |
-| `domain` | Zeichenfolge | Erforderlich wenn `cookiesEnabled: true`. Die Domain auf oberster Ebene, in die die Cookies geschrieben werden sollen. Das Edge Network verwendet diesen Wert, um zu entscheiden, ob der Status als Cookies beibehalten werden kann. |
+| `domain` | Zeichenfolge | Erforderlich, wenn `cookiesEnabled: true`. Die Domain auf oberster Ebene, in die die Cookies geschrieben werden sollen. Das Edge Network verwendet diesen Wert, um zu entscheiden, ob der Status als Cookies beibehalten werden kann. |
 
 Selbst wenn die Cookie-Unterstützung über das Flag `cookiesEnabled` aktiviert ist, schreibt das Adobe Experience Platform Edge Network die Statuseinträge nur, wenn die Top-Level-Domain der Anforderung mit der von den Aufrufenden angegebenen `domain` übereinstimmt. Bei Nichtübereinstimmung werden die Einträge in einem `state:store`-Handle zurückgegeben.
 

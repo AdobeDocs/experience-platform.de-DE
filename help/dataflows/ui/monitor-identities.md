@@ -21,7 +21,7 @@ Das Monitoring-Dashboard bietet eine visuelle Darstellung der Datenaktivität in
 
 - [Datenflüsse](../home.md): Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in [!DNL Identity] und [!DNL Profile] sowie in [!DNL Destinations].
    - [Datenfluss-Abläufe](../../sources/notifications.md): Datenfluss-Ausführungen sind die wiederkehrenden geplanten Aufträge, die auf der Frequenzkonfiguration ausgewählter Datenflüsse basieren.
-- [Identity Service](../../identity-service/home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
+- [Identity Service](../../identity-service/home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kundinnen und Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
 
 ## Identitäten-Dashboard überwachen {#identity-metrics}
@@ -74,7 +74,7 @@ Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
 
 | Metrik | Beschreibung |
 | -------| ----------- |
-| **[!UICONTROL Dataflow]** | Der Name des Datenflusses. |
+| **[!UICONTROL Datenfluss]** | Der Name des Datenflusses. |
 | **[!UICONTROL Datensatz]** | Der Name des Datensatzes, in den der Datenfluss eingefügt wird. |
 | **[!UICONTROL Name der Quelle]** | Der Name der Quelle, zu der der Datenfluss gehört. |
 | **[!UICONTROL Erhaltene Aufzeichnungen]** | Die Anzahl der vom Data Lake empfangenen Datensätze. |

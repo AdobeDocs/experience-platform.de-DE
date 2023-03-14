@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;Fehlerbehebung;Leitlinien;Richtlinien;
-title: Leitlinien für die Datenaufnahme
-description: Dieses Dokument enthält Anleitungen zu Leitlinien für die Datenaufnahme in Adobe Experience Platform
+keywords: Experience Platform;Fehlerbehebung;Leitplanken;Richtlinien;
+title: Schutzmaßnahmen bei der Datenaufnahme
+description: Dieses Dokument enthält Anleitungen zu Schutzmaßnahmen bei der Datenaufnahme in Adobe Experience Platform
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
@@ -10,15 +10,15 @@ ht-degree: 98%
 
 ---
 
-# Leitlinien für die Datenaufnahme
+# Schutzmaßnahmen bei der Datenaufnahme
 
-Leitlinien sind Schwellenwerte, die Anhaltspunkte für die Daten- und Systemnutzung, die Leistungsoptimierung und die Vermeidung von Fehlern oder unerwarteten Ergebnissen in Adobe Experience Platform bieten. Leitlinien können sich auf Ihre Nutzung oder Verwendung von Daten und Verarbeitung im Zusammenhang mit Ihren Lizenzierungsberechtigungen beziehen.
+Leitplanken sind Schwellenwerte, die Anhaltspunkte für die Daten- und Systemnutzung, die Leistungsoptimierung und die Vermeidung von Fehlern oder unerwarteten Ergebnissen in Adobe Experience Platform bieten. Leitplanken können sich auf Ihre Nutzung oder Verwendung von Daten und Verarbeitung im Zusammenhang mit Ihren Lizenzierungsberechtigungen beziehen.
 
-Dieses Dokument enthält Anleitungen zu Leitlinien für die Datenaufnahme in Adobe Experience Platform.
+Dieses Dokument enthält Anleitungen zu Schutzmaßnahmen bei der Datenaufnahme in Adobe Experience Platform.
 
-## Leitlinien für die Batch-Aufnahme
+## Schutzmaßnahmen bei der Batch-Aufnahme
 
-In der folgenden Tabelle sind Leitlinien aufgeführt, die bei der Verwendung der [Batch-Aufnahme-API](./batch-ingestion/overview.md) oder von Quellen zu beachten sind:
+In der folgenden Tabelle sind Schutzmaßnahmen aufgeführt, die bei der Verwendung der [Batch-Aufnahme-API](./batch-ingestion/overview.md) oder von Quellen zu beachten sind:
 
 | Art der Aufnahme | Leitlinien | Anmerkungen |
 | --- | --- | --- |
@@ -27,9 +27,9 @@ In der folgenden Tabelle sind Leitlinien aufgeführt, die bei der Verwendung der
 | Batch-Aufnahme in Profil | <ul><li>Sie können bis zu 120 GB Daten pro Stunde aufnehmen.</li><li>Die maximale Größe einer Datensatzklasse beträgt 100 KB (Soft).</li><li>Die maximale Größe einer ExperienceEvent-Klasse beträgt 10 KB (Soft).</li><li>Die maximale Größe eines einzelnen Datensatzes beträgt 1 MB.</li></ul> |
 | Anzahl der täglich aufgenommenen Profil- oder ExperienceEvent-Batches | **Die maximale Anzahl von Profil- oder ExperienceEvent-Batches, die pro Tag aufgenommen werden, beträgt 90.** Das bedeutet, dass die Gesamtanzahl der pro Tag aufgenommenen Profil- und ExperienceEvent-Batches 90 nicht überschreiten darf. Das Aufnehmen zusätzlicher Batches beeinträchtigt die Systemleistung. | Dies ist ein weiches Limit. Es ist möglich, über ein weiches Limit hinauszugehen, jedoch stellen weiche Limits einen empfohlenen Richtwert für die Systemleistung dar. |
 
-## Leitlinien für die Streaming-Aufnahme
+## Schutzmaßnahmen bei der Streaming-Aufnahme
 
-In der folgenden Tabelle sind Leitlinien aufgeführt, die bei der Verwendung der [Streaming-Aufnahme-API](./streaming-ingestion/overview.md) oder von Streaming-Quellen zu beachten sind:
+In der folgenden Tabelle sind Schutzmaßnahmen aufgeführt, die bei der Verwendung der [Streaming-Aufnahme-API](./streaming-ingestion/overview.md) oder von Streaming-Quellen zu beachten sind:
 
 | Art der Aufnahme | Leitlinien | Anmerkungen |
 | --- | --- | --- |
@@ -38,7 +38,7 @@ In der folgenden Tabelle sind Leitlinien aufgeführt, die bei der Verwendung der
 
 ## Nächste Schritte
 
-In der folgenden Dokumentation finden Sie weitere Informationen zu Leitlinien für Daten und Verarbeitung in Experience Platform:
+In der folgenden Dokumentation finden Sie weitere Informationen zu Leitplanken für Daten und Verarbeitung in Experience Platform:
 
 * [Limits für Echtzeit-Kundenprofil-Daten](../profile/guardrails.md)
-* [Leitlinien für Identity Service-Daten](../identity-service/guardrails.md)
+* [Leitplanken für Identity Service-Daten](../identity-service/guardrails.md)

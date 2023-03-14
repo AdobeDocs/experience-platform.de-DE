@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platform - Versionshinweise, April 2020
-description: Die Versionshinweise für Adobe Experience Platform vom April 2020.
+title: Adobe Experience Platform – Versionshinweise April 2020
+description: Versionshinweise April 2020 für Adobe Experience Platform.
 doc-type: release notes
 last-update: April 13, 2020
 author: ens71067
@@ -9,7 +9,7 @@ exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '983'
-ht-degree: 67%
+ht-degree: 70%
 
 ---
 
@@ -111,7 +111,7 @@ Neue gesetzliche und organisatorische Vorschriften geben Benutzern das Recht, au
 | Funktion | Beschreibung |
 | --- | --- |
 | Unterstützung für PDPA | Datenschutzanfragen können jetzt mit Blick auf das Datenschutzgesetz (PDPA) in Thailand erstellt und verfolgt werden. Bei Datenschutzanfragen in der API akzeptiert das `regulation`-Array nun den Wert „pdpa_tha“. |
-| Namespace-Typen in der Benutzeroberfläche | Sie können jetzt verschiedene Namespace-Typen im Anforderungs-Builder im [!DNL Privacy Service] Benutzeroberfläche. Weiterführende Informationen dazu finden Sie im [Benutzerhandbuch](../../privacy-service/ui/user-guide.md). |
+| Namespace-Typen in der Benutzeroberfläche | Sie können jetzt im Request Builder in der [!DNL Privacy Service]-Benutzeroberfläche verschiedene Namespace-Typen angeben. Weiterführende Informationen dazu finden Sie im [Benutzerhandbuch](../../privacy-service/ui/user-guide.md). |
 | Einstellung des alten Endpunkts | Der alte API-Endpunkt (`data/privacy/gdpr`) wird nicht mehr unterstützt. |
 
 Bekannte Probleme

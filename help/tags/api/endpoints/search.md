@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie den /search-Endpunkt in der Reactor-API aufru
 exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '655'
 ht-degree: 100%
 
 ---
@@ -100,7 +100,7 @@ curl -X POST \
 | `sort` | Ein Array von Objekten, das die Reihenfolge angibt, in der Ergebnisse sortiert werden sollen. Jedes Objekt muss eine einzelne Eigenschaft enthalten: Der Schlüssel stellt den Feldpfad dar, nach dem sortiert werden soll, und der Wert stellt die Sortierreihenfolge (`asc` für aufsteigende, `desc` für absteigende Werte) dar. |
 | `resource_types` | Ein Array von Zeichenfolgen, die die zu suchenden Ressourcentypen angeben. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 

@@ -7,13 +7,13 @@ exl-id: 09d66be3-30dc-4488-84a1-cfd09c44470d
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '220'
-ht-degree: 81%
+ht-degree: 80%
 
 ---
 
 # Filterfunktionen
 
-Filterfunktionen werden verwendet, um Daten in Arrays in zu filtern. [!DNL Profile Query Language] (PQL). Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] Übersicht](./overview.md).
+Filterfunktionen dienen zum Filtern von Daten in Arrays in [!DNL Profile Query Language] (PQL). Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] Übersicht](./overview.md).
 
 ## Filter
 

@@ -4,7 +4,7 @@ description: Hier erfahren Sie mehr über die verschiedenen Arten von Berechtigu
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
 source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1299'
 ht-degree: 91%
 
 ---
@@ -58,7 +58,7 @@ In der folgenden Tabelle sind die verfügbaren Eigenschaftsrechte und die Funkti
 | **Erweiterungen verwalten** | Hiermit können Sie die folgenden Aktionen durchführen: <ul><li>Installieren neuer Erweiterungen für eine Eigenschaft</li><li>Ändern der Konfiguration für eine bereits installierte Erweiterung</li><li>Löschen einer Erweiterung</li></ul>In der Übersichtsdokumentation zu Erweiterungen finden Sie [weitere Informationen zu Erweiterungen](../managing-resources/extensions/overview.md). Diese Rolle gehört normalerweise zu IT oder Marketing, je nach Aufbau Ihrer Organisation. |
 | **Umgebungen verwalten** | Hiermit können Sie Umgebungen erstellen und ändern. Konsultieren Sie die [Dokumentation zu Umgebungen](../publishing/environments.md) für weitere Informationen. Diese Rolle gehört normalerweise zur IT-Gruppe. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Unternehmensrechte
 
@@ -70,7 +70,7 @@ Unternehmensrechte gelten für Berechtigungen, die mehrere Eigenschaften umfasse
 | **Entwickeln von Erweiterungen** | Ermöglicht die Erstellung und Änderung von Erweiterungspaketen, die dem Unternehmen gehören, einschließlich privater Versionen und Anfragen zur Veröffentlichung. |
 | **Mobile-App-Konfigurationen verwalten** | Dies ist nur verfügbar, wenn Sie über eine Lizenz für Adobe Journey Optimizer oder eine andere Lösung verfügen, die Zugriff auf mobile In-App- und Push-Nachrichten gewährt.  Damit können Sie die Mobile Apps verwalten, die Experience Cloud bekannt sind, zusammen mit den notwendigen Push-Zugangsdaten, die für die Kommunikation mit dem Firebase Cloud Messaging-Service und dem Apple Push Notification Service benötigt werden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Gesamt-Benutzerberechtigungen
 
@@ -117,7 +117,7 @@ In der folgenden Tabelle finden Sie einige Beispiele für die Rollentypen, die S
 | Erweiterungsentwickler | Entwickelt Erweiterungen und kann sie zur Genehmigung einreichen, kann sie jedoch nicht veröffentlichen oder zu vorhandenen Eigenschaften hinzufügen. | Automatisch einfügen | <ul><li>Entwickeln</li></ul> | <ul><li>Eigenschaften verwalten</li><li>Entwickeln von Erweiterungen</li></ul> |
 | Der Super-Anwender | Macht alles. | Automatisch einfügen | <ul><li>Entwickeln</li><li>Genehmigen</li><li>Veröffentlichen Sie</li><li>Erweiterungen verwalten</li><li>Umgebungen verwalten</li></ul> | <ul><li>Eigenschaften verwalten</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Nächste Schritte
 

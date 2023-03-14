@@ -18,7 +18,7 @@ ht-degree: 26%
 
 - [Datenvorbereitung](#data-prep)
 - [Echtzeit-Kundenprofil](#profile)
-- [Segmentation Service](#segmentation)
+- [Segmentierungs-Service](#segmentation)
 - [Quellen](#sources)
 - [Zeit bis Wert](#time-to-value)
 
@@ -37,7 +37,7 @@ Weitere Informationen finden Sie im [Datenvorbereitung - Übersicht](../../data-
 
 ## Echtzeit-Kundenprofil {#profile}
 
-Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Mit [!DNL Real-Time Customer Profile]können Sie eine ganzheitliche Ansicht jedes einzelnen Kunden anzeigen, die Daten aus mehreren Kanälen kombiniert, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. [!DNL Profile] ermöglicht es Ihnen, Ihre unterschiedlichen Kundendaten in einer einheitlichen Ansicht zusammenzufassen, die eine umsetzbare, mit Zeitstempel versehene Übersicht über jede Kundeninteraktion bietet.
+Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Ihre Kundinnen und Kunden, unabhängig davon, wo und wann sie mit Ihrer Marke interagieren. Mit [!DNL Real-Time Customer Profile]können Sie eine ganzheitliche Ansicht jedes einzelnen Kunden anzeigen, die Daten aus mehreren Kanälen kombiniert, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. [!DNL Profile] ermöglicht es Ihnen, Ihre unterschiedlichen Kundendaten in einer einheitlichen Ansicht zusammenzufassen, die eine umsetzbare, mit Zeitstempel versehene Übersicht über jede Kundeninteraktion bietet.
 
 | Funktion | Beschreibung |
 | ------- | ----------- |

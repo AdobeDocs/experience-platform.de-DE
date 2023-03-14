@@ -7,7 +7,7 @@ description: Erfahren Sie, wie Sie eine Quellverbindung für Adobe Analytics üb
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
-source-wordcount: '2345'
+source-wordcount: '2384'
 ht-degree: 61%
 
 ---
@@ -21,7 +21,7 @@ In diesem Tutorial erfahren Sie, wie Sie in der Benutzeroberfläche eine Adobe A
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experience Platform voraus:
 
 * [Experience-Datenmodell (XDM)-System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
-* [Echtzeit-Kundenprofil](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [Echtzeit-Kundenprofil](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 ### Wichtige Terminologie
@@ -67,7 +67,7 @@ So erstellen Sie eine [!DNL Analytics] Quellverbindung, wählen Sie eine Report 
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
-<!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
+&lt;!—Analytics Report Suites können für jeweils eine Sandbox konfiguriert werden. Um dieselbe Report Suite in eine andere Sandbox zu importieren, muss der Datensatzfluss gelöscht und über die Konfiguration für eine andere Sandbox erneut instanziiert werden.—>
 
 ### Zuordnung
 

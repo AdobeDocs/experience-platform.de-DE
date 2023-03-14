@@ -3,7 +3,7 @@ title: Server-seitige Personalisierung mithilfe der Edge Network Server-API
 description: Dieser Artikel zeigt, wie Sie die Edge Network Server-API verwenden können, um eine Server-seitige Personalisierung für Ihre Web-Eigenschaften bereitzustellen.
 keywords: Personalisierung;Server-API;Edge-Netzwerk;Server-seitig;
 source-git-commit: 3e7084953a5e158059074c857bfce4940a83661b
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '574'
 ht-degree: 100%
 

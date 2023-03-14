@@ -6,7 +6,7 @@ hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '481'
 ht-degree: 97%
 
 ---
@@ -110,7 +110,7 @@ curl -X POST \
 | `companyContexts` | Ein Array mit Authentifizierungsinformationen für Ihr Unternehmen. Sie muss ein einzelnes Objekt mit den folgenden Eigenschaften enthalten: <ul><li>`namespace`: Muss auf `imsOrgID` festgelegt werden.</li><li>`value`: Ihre IMS-Organisationskennung. Dies ist derselbe Wert, der in der `x-gw-ims-org-id`-Kopfzeile angegeben wird.</li></ul> |
 | `users` | Ein Array mit einer Sammlung von mindestens einem Benutzer, dessen Informationen Sie löschen möchten. Jedes Benutzerobjekt enthält die folgenden Informationen: <ul><li>`key`: Ein Identifikator für einen Benutzer, der verwendet wird, um die separaten Auftrags-Identifikatoren in den Antwortdaten zu qualifizieren. Es gilt als Best Practice, eine eindeutige, leicht identifizierbare Zeichenfolge für diesen Wert zu wählen, damit später ein einfaches Verweisen auf oder Nachschlagen des Werts möglich ist.</li><li>`action`: Ein Array, das die gewünschten Aktionen zur Übernahme der Benutzerdaten auflistet. Muss einen einzelnen Zeichenfolgenwert enthalten: `delete`.</li><li>`userIDs`: Eine Sammlung von Identitäten für den Benutzer. Die Anzahl der Identitäten, die ein einzelner Benutzer haben kann, ist auf neun begrenzt. Jede Identität enthält die folgenden Eigenschaften: <ul><li>`namespace`: Der mit der ID verknüpfte [Identity-Namespace](../../identity-service/namespaces.md). Dabei kann es sich um einen [Standard-Namespace](../../privacy-service/api/appendix.md#standard-namespaces) handeln, der von Platform erkannt wird, oder um einen von Ihrem Unternehmen definierten benutzerdefinierten Namespace. Der Typ des verwendeten Namespace muss in der Eigenschaft `type` angegeben werden.</li><li>`value`: Der Identitätswert.</li><li>`type`: Muss auf `standard` gesetzt werden, wenn Sie einen global anerkannten Namespace verwenden, oder auf `custom`, wenn Sie einen von Ihrem Unternehmen definierten Namespace verwenden.</li></ul></li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 

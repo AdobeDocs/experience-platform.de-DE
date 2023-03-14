@@ -4,7 +4,7 @@ title: Konfigurationsoptionen für dateibasierte Ziele für das Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
 source-git-commit: 74f617afe8a0f678d43fb7b949d43cef25e78b9d
 workflow-type: tm+mt
-source-wordcount: '3012'
+source-wordcount: '2982'
 ht-degree: 59%
 
 ---
@@ -323,7 +323,7 @@ Nachfolgend finden Sie ein Beispiel für ein privates benutzerdefiniertes Amazon
 | `maxProfileAttributes` | Zeichenfolge | Gibt die maximale Anzahl von Profilattributen an, die Kunden zum Ziel exportieren können. Der Standardwert lautet `2000`. |
 | `maxIdentityAttributes` | Zeichenfolge | Gibt die maximale Anzahl von Identitäts-Namespaces an, die Kunden zum Ziel exportieren können. Der Standardwert lautet `10`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Konfigurationen der Benutzerauthentifizierung {#customer-authentication-configurations}
 
@@ -572,7 +572,7 @@ Sie können in der Vorlage auf die Kundeneingaben aus den Kundendatenfeldern zug
 | `enum` | Zeichenfolge | Rendert das benutzerdefinierte Feld als Dropdown-Menü und listet die für den Benutzer verfügbaren Optionen auf. |
 | `default` | Zeichenfolge | Definiert den Standardwert aus einer `enum`-Liste. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Benutzeroberflächenattribute {#ui-attributes}
 
@@ -600,7 +600,7 @@ Dieser Abschnitt bezieht sich auf die Benutzeroberflächenelemente in der obigen
 | `monitoringSupported` | Boolesch | Gibt an, ob die Zielverbindung in der [Monitoring-Benutzeroberfläche](../ui/destinations-workspace.md#browse) enthalten ist. Wenn Sie dies auf `true` setzen, wird die Option **[!UICONTROL Im Monitoring anzeigen]** auf der Seite für die Zielsuche angezeigt. |
 | `frequency` | Zeichenfolge | Bezieht sich auf die Art des Datenexports, die vom Ziel unterstützt wird. Für dateibasierte Ziele auf `Batch` festgelegt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Zielbereitstellung {#destination-delivery}
 
@@ -630,7 +630,7 @@ Die `deliveryMatchers` ist optional und kann verwendet werden, wenn Sie mehrere 
 | `authenticationRule` | Zeichenfolge | Gibt an, wie [!DNL Platform]-Kunden eine Verbindung zu Ihrem Ziel herstellen. Akzeptierte Werte sind `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Verwenden Sie `CUSTOMER_AUTHENTICATION`, wenn sich Platform-Kunden über eine der folgenden Methoden bei Ihrem System anmelden: <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Verwenden Sie `PLATFORM_AUTHENTICATION`, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel besteht und der [!DNL Platform]-Kunde keine Anmeldeinformationen zur Authentifizierung angeben muss, um eine Verbindung mit Ihrem Ziel herzustellen. In diesem Fall müssen Sie ein Objekt für die [Anmeldeinformationen](./credentials-configuration-api.md) mithilfe der Konfiguration erstellen. </li><li>Verwenden Sie `NONE`, wenn keine Authentifizierung erforderlich ist, um Daten an Ihre Zielplattform zu senden. </li></ul> |
 | `destinationServerId` | Zeichenfolge | Die `instanceId` des [Zielserverkonfiguration](./server-and-file-configuration.md) dass Sie [created](/help/destinations/destination-sdk/destination-server-api.md#create-file-based) für dieses Ziel. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Konfiguration der Segmentzuordnung {#segment-mapping}
 
@@ -692,7 +692,7 @@ Sie können statische, fest programmierte Schemafelder erstellen oder ein dynami
 | `segmentRequired` | Boolesch | Verwenden Sie immer `segmentRequired:true`. |
 | `identityRequired` | Boolesch | Verwenden Sie `true`, wenn Benutzer in der Lage sein sollen, Identitäts-Namespaces von Experience Platform Ihrem gewünschten Schema zuzuordnen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Dynamische Schemakonfiguration im Zuordnungsschritt {#dynamic-schema-configuration}
 
@@ -724,7 +724,7 @@ Verwenden Sie die Parameter in  `dynamicSchemaConfig` , um Ihr eigenes Schema dy
 | `value` | Zeichenfolge | Der Name des Schemas, das in der Experience Platform-Benutzeroberfläche im Zuordnungsschritt angezeigt werden soll. |
 | `responseFormat` | Zeichenfolge | Die Einstellung ist immer `SCHEMA`, wenn ein benutzerdefiniertes Schema definiert wird. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Erforderliche Zuordnungen {#required-mappings}
 
@@ -775,7 +775,7 @@ Verwenden Sie die in der folgenden Tabelle beschriebenen Parameter, wenn Sie im 
 | `requiredMappings.source` | Zeichenfolge | Gibt an, was das erforderliche Quellfeld sein soll. |
 | `requiredMappings.destination` | Zeichenfolge | Gibt an, was das erforderliche Zielfeld sein soll. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Identitäten und Attribute {#identities-and-attributes}
 
@@ -857,7 +857,7 @@ Dieser Abschnitt enthält die Einstellungen für die Dateibenennung und Exportpl
 | `filenameConfig.defaultFilenameAppendOptions` | Zeichenfolge | *Erforderlich*. Vorausgewählte Standardmakros für Dateinamen, die von Benutzern deaktiviert werden können.<br><br> Die Makros in dieser Liste sind eine Teilmenge der in `allowedFilenameAppendOptions`. |
 | `filenameConfig.defaultFilename` | Zeichenfolge | *Optional*. Definiert die standardmäßigen Dateinamenmakros für die exportierten Dateien. Diese können von Benutzern nicht überschrieben werden. <br><br>Jedes von `allowedFilenameAppendOptions` wird angehängt, nachdem die `defaultFilename` Makros. <br><br>Wenn `defaultFilename` leer ist, müssen Sie mindestens ein Makro in `allowedFilenameAppendOptions`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Dateinamenkonfiguration {#file-name-configuration}
 
@@ -881,7 +881,7 @@ Verwenden Sie Dateinamenkonfigurationsmakros, um zu definieren, welche Namen der
 | `CUSTOM_TEXT` | [!UICONTROL Benutzerdefinierter Text] | Benutzerdefinierter benutzerdefinierter Text, der in den Dateinamen eingefügt werden soll. Kann nicht in verwendet werden `defaultFilename`. | My_custom_text |
 | `TIMESTAMP` | [!UICONTROL Datum und Uhrzeit] | 10-stelliger Zeitstempel der Zeit, zu der die Datei generiert wurde, im Unix-Format. | 1652131584 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ![Benutzeroberflächenbild mit dem Konfigurationsbildschirm für Dateinamen mit vorab ausgewählten Makros](assets/file-name-configuration.png)
 
@@ -915,7 +915,7 @@ Sie können den Parameter `backfillHistoricalProfileData` in der Zielkonfigurati
 |---------|----------|------|
 | `backfillHistoricalProfileData` | Boolesch | Steuert, ob historische Profildaten exportiert werden, wenn Segmente für das Ziel aktiviert werden. <br> <ul><li> `true`: [!DNL Platform] sendet die historischen Benutzerprofile, die sich für das Segment qualifiziert haben, bevor das Segment aktiviert wird. </li><li> `false`: [!DNL Platform] enthält nur Benutzerprofile, die sich für das Segment qualifizieren, nachdem das Segment aktiviert wurde. </li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Wie diese Konfiguration alle erforderlichen Informationen für Ihr Ziel verbindet  {#connecting-all-configurations}
 

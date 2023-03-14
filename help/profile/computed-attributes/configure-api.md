@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; API
+keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;
 title: Konfigurieren eines berechneten Attributfelds
 type: Documentation
 description: Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignisebene in Attribute auf Profilebene aggregiert werden. Um ein berechnetes Attribut zu konfigurieren, müssen Sie zunächst das Feld ermitteln, das den berechneten Attributwert enthält. Dieses Feld kann mithilfe der Schema Registry-API erstellt werden, um ein Schema und eine benutzerdefinierte Feldergruppe zu definieren, die das berechnete Attributfeld enthalten.
@@ -7,7 +7,7 @@ exl-id: 91c5d125-8ab5-4291-a974-48dd44c68a13
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '736'
-ht-degree: 16%
+ht-degree: 17%
 
 ---
 

@@ -8,7 +8,7 @@ exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1320'
-ht-degree: 94%
+ht-degree: 95%
 
 ---
 
@@ -691,5 +691,5 @@ Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen
 
 Mithilfe dieses Tutorials haben Sie einen Quell-Connector erstellt, um Daten aus einem Werbesystem nach einem festgelegtem Zeitplan zu erfassen. Eingehende Daten können jetzt von nachgelagerten Platform-Services wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
-* [Übersicht über das Echtzeit-Kundenprofil](../../../../profile/home.md)
+* [Übersicht zum Echtzeit-Kundenprofil](../../../../profile/home.md)
 * [Übersicht über Data Science Workspace](../../../../data-science-workspace/home.md)

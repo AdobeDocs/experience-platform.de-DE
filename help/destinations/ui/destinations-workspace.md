@@ -4,8 +4,8 @@ title: Arbeitsbereich „Ziele“
 description: 'Der Arbeitsbereich „Ziele“ besteht aus fünf Bereichen: Übersicht, Katalog, Durchsuchen, Konten und Systemansicht. Sie werden in den folgenden Abschnitten beschrieben.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 source-git-commit: 69e1f065cb3b302c4b144f39c84179075379f648
-workflow-type: ht
-source-wordcount: '1223'
+workflow-type: tm+mt
+source-wordcount: '1217'
 ht-degree: 100%
 
 ---
@@ -53,7 +53,7 @@ Die Zielkarten enthalten primäre und sekundäre Steuerungsoptionen. Zu den prim
 | [!UICONTROL Datenflüsse anzeigen] | Zeigt die Datenaktivierungsflüsse an, die für ein Ziel vorhanden sind. |
 | [!UICONTROL Dokumentation anzeigen] | Öffnet einen Link zur Dokumentationsseite für dieses spezifische Ziel, um weitere Informationen zu anzuzeigen und Sie bei der Einrichtung zu unterstützen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ![Steuerelemente auf der Zielkarte](../assets/ui/workspace/destination-card-options.png)
 
@@ -84,7 +84,7 @@ Die Registerkarte **[!UICONTROL Konten]** zeigt Details zu den Verbindungen an, 
 | [!UICONTROL Ziele] | Gibt die Zahl der eindeutigen erfolgreich verbundenen Ziel-Datenflüsse an, die für ein Ziel erstellt wurden, zusammen mit grundlegenden Informationen. |
 | [!UICONTROL Autorisiert] | Das Datum, an dem die Verbindung zu diesem Ziel genehmigt wurde. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## [!UICONTROL Durchsuchen] {#browse}
 

@@ -4,7 +4,7 @@ title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '837'
 ht-degree: 55%
 
 ---
@@ -58,9 +58,9 @@ Der Zugriff auf die Destination SDK variiert je nach Ihrem Status als Partner od
 ---------|----------|
 | Unabhängiger Software-Anbieter (ISV) | Werden Sie Mitglied im [Adobe Exchange-Programm](https://partners.adobe.com/exchangeprogram/experiencecloud.html) und beantragen Sie die Bereitstellung einer Experience Platform-Sandbox für den Zugriff auf das Destination SDK. |
 | Systemintegrator (SI) | Sie müssen entweder den Gold- oder Platin-Status im [Adobe-Lösungspartner-Programm](https://solutionpartners.adobe.com/home.html) erreicht haben, um eine Experience Platform-Sandbox und Zugriff auf das Destination SDK zu erhalten. |
-| Experience Platform-Kunde auf der [Real-Time CDP Ultimate-Package](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | Standardmäßig erhalten Sie Zugriff auf Experience Platform-Sandboxes und Destination SDK, sodass Sie private Ziele für Ihr Unternehmen erstellen können. |
+| Experience Platform-Kunde auf der [Real-Time CDP Ultimate-Package](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) | Standardmäßig erhalten Sie Zugriff auf Experience Platform-Sandboxes und Destination SDK, sodass Sie private Ziele für Ihr Unternehmen erstellen können. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Allgemeine Vorgehensweise {#process}
 

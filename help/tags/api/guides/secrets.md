@@ -4,8 +4,8 @@ description: Hier erfahren Sie mehr über die Grundlagen zum Konfigurieren von g
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1241'
-ht-degree: 87%
+source-wordcount: '1232'
+ht-degree: 89%
 
 ---
 
@@ -21,7 +21,7 @@ Es gibt derzeit drei unterstützte Typen von geheimen Daten, die in dem Attribut
 | `simple-http` | Enthält zwei Zeichenfolgen-Attribute für einen Benutzernamen und ein Kennwort. |
 | `oauth2-client_credentials` | Enthält mehrere Attribute zur Unterstützung der [OAuth](https://datatracker.ietf.org/doc/html/rfc6749)-Authentifizierungsspezifikation. Die Ereignisweiterleitung fragt Sie nach den erforderlichen Informationen und behandelt dann die Verlängerung dieser Token für Sie in einem bestimmten Intervall. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Dieses Handbuch bietet einen allgemeinen Überblick darüber, wie geheime Daten für die Verwendung in der Ereignisweiterleitung konfiguriert werden. Ausführliche Anleitungen zum Verwalten von geheimen Daten in der Reactor-API, einschließlich Beispiel-JSON der Struktur geheimer Daten, finden Sie im [Handbuch zum Secrets-Endpunkt](../endpoints/secrets.md).
 
@@ -42,7 +42,7 @@ Geheime Daten mit einem `type_of`-Wert von `token` erfordern nur ein einziges At
 | --- | --- | --- |
 | `token` | Zeichenfolge | Ein geheimes Token, das vom Zielsystem verstanden wird. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Das Token wird als statischer Wert gespeichert, weswegen die Eigenschaften `expires_at` und `refresh_at` auf `null` festgelegt werden, wenn die geheimen Daten erstellt werden.
 
@@ -55,7 +55,7 @@ Geheime Daten mit einem `type_of`-Wert von `simple-http` erfordern die folgenden
 | `username` | Zeichenfolge | Ein Benutzername. |
 | `password` | Zeichenfolge | Ein Kennwort. Dieser Wert ist nicht in der API-Antwort enthalten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Wenn die geheimen Daten erstellt werden, werden die beiden Attribute mit einer BASE64-Codierung von `username:password` ausgetauscht. Nach dem Austausch sind die Eigenschaften `expires_at` und `refresh_at` auf `null` festgelegt.
 

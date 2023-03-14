@@ -2,7 +2,7 @@
 title: Konfigurierbare und allgemeine Exporteinstellungen in Zielen
 description: Erfahren Sie, welche Exporteinstellungen in Zielen auf Zielebene konfigurierbar sind und welche fest eingestellt sind und nicht bearbeitet werden können.
 source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '845'
 ht-degree: 100%
 

@@ -134,7 +134,20 @@ Eine Typdefinition ist ein Objekt, mit dem ein Ereignis-, Bedingungs-, Aktions- 
       <td><code>schema</code></td>
       <td>Ein Objekt vom Typ <a href="https://json-schema.org/">JSON-Schema</a>, das das Format eines gültigen Einstellungsobjekts beschreibt, das vom Benutzer gespeichert werden kann. Die Einstellungen werden normalerweise von einem Benutzer über die Datenerfassungs-Benutzeroberfläche konfiguriert und gespeichert. In diesen Fällen kann die Ansicht der Erweiterung die erforderlichen Schritte zur Überprüfung der vom Benutzer bereitgestellten Einstellungen durchführen. Auf der anderen Seite entscheiden sich einige Benutzer dafür, Tag-APIs direkt ohne die Hilfe einer Benutzeroberfläche zu verwenden. Mit diesem Schema wird Platform in die Lage versetzt, genau zu überprüfen, ob die von den Benutzern gespeicherten settings-Objekte unabhängig davon, ob eine Benutzeroberfläche verwendet wird, in einem Format vorliegen, das mit dem Bibliotheksmodul kompatibel ist, das zur Laufzeit das settings-Objekt verarbeitet.<br><br>Ein Beispiel für ein schema-Objekt:<br>
 <pre class="JSON language-JSON hljs">
-{ "$schema": "http://json-schema.org/draft-04/schema#", "type": "object", "properties": { "delay": { "type": "number", "minimum": 1 } }, "required": [ "delay" ], "additionalProperties": false }
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "delay": {
+      "type": "number",
+      "minimum": 1
+    }
+  },
+  "required": [
+    "delay"
+  ],
+  "additionalProperties": false
+}
 </pre>
       Es wird empfohlen, zum manuellen Testen Ihres Schemas ein Tool wie <a href="https://www.jsonschemavalidator.net/">JSON Schema Validator</a> zu verwenden.</td>
     </tr>

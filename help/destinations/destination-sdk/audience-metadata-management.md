@@ -4,7 +4,7 @@ title: Verwaltung von Zielgruppen-Metadaten
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
 source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1040'
 ht-degree: 100%
 
 ---
@@ -69,7 +69,7 @@ Beachten Sie, dass in einigen Beispielen Makro-Felder wie `{{authData.accessToke
 | `validate` | Führt Überprüfungen für alle Felder in der Vorlagenkonfiguration durch, bevor Sie die Partner-API aufrufen. Sie können beispielsweise überprüfen, ob die Account-ID des Benutzers korrekt eingegeben wurde. |
 | `notify` | Gilt nur für dateibasierte Ziele. Umfasst alle erforderlichen Komponenten (URL, HTTP-Methode, Header, Anfrage- und Antworttext), um einen HTTP-Aufruf an Ihre API durchzuführen und Sie über erfolgreiche Dateiexporte zu informieren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Streaming-Beispiel 1 {#example-1}
 
@@ -540,4 +540,4 @@ Um Informationen wie Segment-IDs, Zugriffs-Token, Fehlermeldungen und mehr zwisc
 | `{{body.segments[0].segment.id}}` | Gibt die eindeutige Kennung der erstellten Zielgruppe als Wert des Schlüssels `externalAudienceId` zurück. |
 | `{{error.message}}` | Gibt eine Fehlermeldung zurück, die Benutzern in der Benutzeroberfläche von Experience Platform angezeigt wird. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

@@ -4,7 +4,7 @@ description: Hier erfahren Sie, wie Fehler in der Reactor-API gehandhabt werden.
 exl-id: 336c0ced-1067-4519-94e1-85aea700fce6
 source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1062'
 ht-degree: 100%
 
 ---
@@ -49,7 +49,7 @@ Fehlerantworten zielen auf die Einhaltung der [JSON:API-Fehlerspezifikation](htt
 | `source` | Ein Objekt, das Verweise auf die Quelle des Fehlers enthält, optional einschließlich eines der folgenden Elemente:<ul><li>`pointer`: eine [JSON Pointer-Zeichenfolge (RFC6901)](https://datatracker.ietf.org/doc/html/rfc6901), die auf die verknüpfte Entität im Anfragedokument verweist (z. B. `/data` für ein Primärdatenobjekt oder `/data/attributes/title` für ein bestimmtes Attribut).</li></ul> |
 | `meta` | Ein Objekt, das nicht standardmäßige Metadaten zum Fehler enthält. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Fehlerreferenz
 
@@ -107,4 +107,4 @@ In der folgenden Tabelle sind die verschiedenen Fehler aufgeführt, die die API 
 | `upgraded-extension-required` | Nachdem Sie ein Erweiterungs-Upgrade installiert haben, müssen Sie es in alle Bibliotheken einbeziehen, bis das Upgrade zur Produktion gelangt. Die einzige Ausnahme besteht, wenn die Erweiterung noch nicht veröffentlicht wurde. |
 | `upstream-build-required` | Bevor Sie diesen erstellen können, ist ein erfolgreicher Build für die Upstream-Bibliothek erforderlich. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

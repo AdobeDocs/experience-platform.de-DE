@@ -8,7 +8,7 @@ exl-id: bf401f3a-b088-4cbd-9a64-224294b797b9
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '863'
-ht-degree: 40%
+ht-degree: 43%
 
 ---
 
@@ -70,13 +70,13 @@ Verschiedene Rechts- und Verwaltungsvorschriften geben Benutzern das Recht, auf 
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung für LGPD (Brasilien) | Datenschutzaufträge können jetzt im Rahmen der [!DNL Lei Geral de Proteção de Dados] Verordnung (LGPD). Diese Aufträge werden unter dem Regelungscode nachverfolgt `lgpd_bra`. |
+| Unterstützung für LGPD (Brasilien) | Datenschutzaufträge können jetzt im Rahmen der [!DNL Lei Geral de Proteção de Dados] (LGPD)-Verordnung erstellt werden. Diese Aufträge werden unter dem Regulierungs-Code `lgpd_bra` verfolgt. |
 
 Siehe [Übersicht über Privacy Service](../../privacy-service/home.md) für weitere Informationen zum Dienst.
 
 ## Echtzeit-Kundenprofil {#profile}
 
-Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Mit [!DNL Real-Time Customer Profile]können Sie eine ganzheitliche Ansicht jedes einzelnen Kunden anzeigen, die Daten aus mehreren Kanälen kombiniert, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. [!DNL Profile] ermöglicht es Ihnen, Ihre unterschiedlichen Kundendaten in einer einheitlichen Ansicht zusammenzufassen, die eine umsetzbare, mit Zeitstempel versehene Übersicht über jede Kundeninteraktion bietet.
+Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Ihre Kundinnen und Kunden, unabhängig davon, wo und wann sie mit Ihrer Marke interagieren. Mit [!DNL Real-Time Customer Profile]können Sie eine ganzheitliche Ansicht jedes einzelnen Kunden anzeigen, die Daten aus mehreren Kanälen kombiniert, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. [!DNL Profile] ermöglicht es Ihnen, Ihre unterschiedlichen Kundendaten in einer einheitlichen Ansicht zusammenzufassen, die eine umsetzbare, mit Zeitstempel versehene Übersicht über jede Kundeninteraktion bietet.
 
 | Funktion | Beschreibung |
 | ------- | ----------- |

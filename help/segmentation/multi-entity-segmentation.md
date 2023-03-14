@@ -7,7 +7,7 @@ exl-id: 01a37fdc-2abe-4a84-b7da-fcbd141ff51f
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '699'
-ht-degree: 9%
+ht-degree: 13%
 
 ---
 
@@ -23,9 +23,9 @@ Die Segmentierung mehrerer Entitäten erfordert ein Verständnis der verschieden
    * [ProfilLimits](../profile/guardrails.md): Best Practices zum Erstellen von Datenmodellen, die von [!DNL Profile].
 * [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Ermöglicht Ihnen das Erstellen von Segmenten aus [!DNL Real-Time Customer Profile] Daten.
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten ordnet.
-   * [Grundlagen der Schemakomposition](../xdm/schema/composition.md#union): Erfahren Sie mehr über Best Practices zum Erstellen von Schemas, die in Experience Platform verwendet werden sollen. Um die Segmentierung optimal zu nutzen, stellen Sie bitte sicher, dass Ihre Daten als Profile und Ereignisse gemäß dem [Best Practices für die Datenmodellierung](../xdm/schema/best-practices.md).
+   * [Grundlagen der Schemakomposition](../xdm/schema/composition.md#union): Erfahren Sie mehr über Best Practices zum Erstellen von Schemas, die in Experience Platform verwendet werden sollen. Um die Segmentierung optimal zu nutzen, stellen Sie sicher, dass Ihre Daten als Profile und Ereignisse gemäß den [Best Practices für die Datenmodellierung](../xdm/schema/best-practices.md) aufgenommen werden.
 
-## Anwendungsbeispiele
+## Anwendungsfälle
 
 Um den Wert der Segmentierung mit mehreren Entitäten zu veranschaulichen, sollten Sie drei Standardanwendungsfälle für das Marketing berücksichtigen, die die Herausforderungen veranschaulichen, die in den meisten Marketing-Anwendungen auftreten:
 

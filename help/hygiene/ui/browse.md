@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie bestehende Datenhygiene-Arbeitsaufträge in d
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '862'
 ht-degree: 87%
 
 ---
@@ -62,7 +62,7 @@ Die folgenden Filter gelten für Anfragen zur Gültigkeit von Datensätzen:
 | [!UICONTROL Ablaufdatum] | Filtern Sie Datensatz-Gültigkeitsanfragen nach dem geplanten Löschdatum für den jeweiligen Datensatz. |
 | [!UICONTROL Aktualisierungsdatum] | Filtern Sie nach dem Zeitpunkt, zu dem der Arbeitsauftrag zuletzt aktualisiert wurde. Erstellungen und Abläufe werden als Aktualisierungen gezählt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Anzeigen der Details eines Arbeitsauftrags {#view-details}
 

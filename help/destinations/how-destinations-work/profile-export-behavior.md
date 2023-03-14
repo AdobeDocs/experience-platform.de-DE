@@ -3,7 +3,7 @@ title: Profilexportverhalten
 description: Erfahren Sie, wie sich das Verhalten beim Profilexport zwischen den verschiedenen Integrationsmustern unterscheidet, die in Experience Platform-Zielen unterstützt werden.
 source-git-commit: 90964189396b3b89f35a96eb4c04e248dc34b9b4
 workflow-type: tm+mt
-source-wordcount: '2954'
+source-wordcount: '2942'
 ht-degree: 97%
 
 ---
@@ -63,7 +63,7 @@ Was die Daten betrifft, die für ein bestimmtes Profil exportiert werden, ist es
 |---------|----------|
 | <ul><li>Zugeordnete Attribute und Segmente dienen als Hinweis für einen Zielexport. Das bedeutet, dass ein Zielexport gestartet wird, wenn zugeordnete Segmente den Status ändern (von null zu realisiert oder von realisiert/existierend zu verlassend) oder alle zugeordneten Attribute aktualisiert werden.</li><li>Da Identitäten derzeit nicht Unternehmenszielen zugeordnet werden können, bestimmen Änderungen an der Identität eines bestimmten Profils auch die Zielexporte.</li><li>Als Änderung für ein Attribut wird jede Aktualisierung des Attributs definiert, unabhängig davon, ob es sich um denselben Wert handelt oder nicht. Das bedeutet, dass das Überschreiben eines Attributs als Änderung gilt, selbst wenn sich der Wert selbst nicht geändert hat.</li></ul> | <ul><li>Das `segmentMembership`-Objekt enthält das Segment, das im Aktivierungsdatenfluss zugeordnet ist und für das sich der Status des Profils nach einem Qualifikations- oder Segmentaustrittsereignis geändert hat. Beachten Sie, dass andere nicht zugeordnete Segmente, für die sich das Profil qualifiziert hat, Teil des Zielexports sein können, wenn diese Segmente zu derselben [Zusammenführungsrichtlinie](/help/profile/merge-policies/overview.md) wie das im Aktivierungsdatenfluss zugeordnete Segment gehören. </li><li>Alle Identitäten im `identityMap`-Objekt sind ebenfalls enthalten (Experience Platform unterstützt derzeit keine Identitätszuordnung im Unternehmensziel).</li><li>Nur die zugeordneten Attribute werden in den Zielexport einbezogen.</li></ul> |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 >[!IMPORTANT]
 >
@@ -110,7 +110,7 @@ Was die Daten betrifft, die für ein bestimmtes Profil exportiert werden, ist es
 |---------|----------|
 | <ul><li>Zugeordnete Attribute und Segmente dienen als Hinweis für einen Zielexport. Das bedeutet, dass ein Zielexport gestartet wird, wenn zugeordnete Segmente den Status ändern (von null zu realisiert oder von realisiert/existierend zu verlassend) oder alle zugeordneten Attribute aktualisiert werden.</li><li>Eine Änderung in der Identitätszuordnung wird als eine Identität definiert, die für das [Identitätsdiagramm](/help/identity-service/ui/identity-graph-viewer.md) des Profils hinzugefügt/entfernt wird – für Identity-Namespaces, die für den Export zugeordnet sind.</li><li>Als Änderung für ein Attribut wird jede Aktualisierung des Attributs definiert – für Attribute, die dem Ziel zugeordnet sind.</li></ul> | <ul><li>Die Segmente, die dem Ziel zugeordnet sind und sich geändert haben, werden in das Objekt `segmentMembership` eingeschlossen. In einigen Szenarien können sie mit mehreren Aufrufen exportiert werden. In einigen Szenarien können auch bestimmte Segmente, die sich nicht geändert haben, in den Aufruf eingeschlossen werden. In jedem Fall werden nur zugeordnete Segmente exportiert.</li><li>Alle Identitäten aus den Namespaces, die dem Ziel im Objekt `identityMap` zugeordnet sind, sind ebenfalls eingeschlossen.</li><li>Nur die zugeordneten Attribute werden in den Zielexport einbezogen.</li></ul> |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 >[!IMPORTANT]
 >
@@ -175,7 +175,7 @@ Die vollständige aktive Population des Segments wird täglich exportiert.
 |---------|----------|
 | <ul><li>Der in der Benutzeroberfläche oder API festgelegte Exportzeitplan und die Benutzeraktion (Auswahl von [Datei jetzt exportieren](/help/destinations/ui/export-file-now.md) in der Benutzeroberfläche oder Verwendung der [Ad-hoc-Aktivierungs-API](/help/destinations/api/ad-hoc-activation-api.md)) bestimmen den Start eines Zielexports.</li></ul> | Bei vollständigen Dateiexporten wird die gesamte aktive Profilpopulation eines Segments, basierend auf der neuesten Segmentbewertung, in jeden Dateiexport einbezogen. Die neuesten Werte für jedes für den Export ausgewählte XDM-Attribut werden ebenfalls als Spalten in jeder Datei eingeschlossen. Beachten Sie, dass Profile mit dem Status &quot;Ausgeschlossen&quot;nicht in den Dateiexport einbezogen werden. |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 **Inkrementelle Dateiexporte**
 
@@ -185,7 +185,7 @@ Im ersten Dateiexport nach der Einrichtung des Aktivierungs-Workflows wird die g
 |---------|----------|
 | <ul><li>Der in der Benutzeroberfläche oder API festgelegte Exportzeitplan bestimmt den Start eines Zielexports.</li><li>Alle Änderungen an der Segmentzugehörigkeit eines Profils, unabhängig davon, ob es für das Segment qualifiziert oder nicht qualifiziert ist, qualifizieren ein Profil für die Aufnahme in inkrementelle Exporte. Änderungen an Attributen oder Identitätszuordnungen für ein Profil qualifizieren ein Profil *nicht* für die Aufnahme in inkrementelle Exporte.</li></ul> | <p>Die Profile, für die die Segmentzugehörigkeit geändert wurde, sowie die neuesten Informationen zu jedem für den Export ausgewählten XDM-Attribut.</p><p>Profile mit dem Status &quot;Exit&quot;werden in Zielexporte einbezogen, wenn die Variable `segmentMembership.status` Das XDM-Feld wird im Zuordnungsschritt ausgewählt.</p> |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 >[!TIP]
 >

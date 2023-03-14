@@ -5,8 +5,8 @@ title: Best Practices für die Datenmodellierung
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemata und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemata, die in Adobe Experience Platform verwendet werden können.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
 source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
-workflow-type: ht
-source-wordcount: '2722'
+workflow-type: tm+mt
+source-wordcount: '2713'
 ht-degree: 100%
 
 ---
@@ -53,7 +53,7 @@ Nachdem Sie ein ERD erstellt haben, um die wesentlichen Entitäten zu identifizi
 | Lookup-Entitäten | Lookup-Entitäten stellen Konzepte dar, die sich auf eine einzelne Person beziehen, aber nicht direkt zur Identifizierung der Person verwendet werden können. Entitäten, die unter diese Kategorie fallen, sollten durch Schemata dargestellt werden, die auf **benutzerdefinierten Klassen** basieren, und sind durch [Schemabeziehungen](../tutorials/relationship-ui.md) mit Profilen und Ereignissen verknüpft. |
 | Ereignisentitäten | Ereignisentitäten stellen Konzepte dar, die sich auf Aktionen, die eine Kundin oder eine Kunde ausführen kann, Systemereignisse oder andere Konzepte, bei denen Sie vielleicht Änderungen im Laufe der Zeit verfolgen möchten, beziehen. Entitäten, die unter diese Kategorie fallen, sollten durch Schemata auf Basis der **[!DNL XDM ExperienceEvent]-Klasse** dargestellt werden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Überlegungen zum Sortieren von Entitäten
 
@@ -88,7 +88,7 @@ Wenn Sie analysieren möchten, wie sich bestimmte Attribute innerhalb einer Enti
 | 1234567 | Hinzufügen | 486502 | 1 | 1. Oktober, 10:41 Uhr |
 | 1234567 | Hinzufügen | 910482 | 5 | 3. Oktober, 14:15 Uhr |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### Anwendungsfälle für die Segmentierung
 
@@ -131,7 +131,7 @@ In der folgenden Tabelle sind einige allgemeine Entitätsbeziehungen und die dar
 | Kunden und Treuekonten | Eins zu eins | Eine Kundin oder ein Kunde kann nur über ein Treuekonto verfügen und umgekehrt. Da es sich um eine Eins-zu-eins-Beziehung handelt, stellen sowohl Kunden als auch Treuekonten Profilentitäten dar. |
 | Kunden und Abonnements | Eins zu viele | Eine Kundin oder ein Kunde kann über viele Abonnements verfügen. Da es dem Unternehmen nur um die aktuellen Abonnements einer Kundin oder eines Kunden geht, handelt es sich bei den Kunden um eine Profilentität, bei den Abonnements hingegen um eine Lookup-Entität. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Vor- und Nachteile verschiedener Entitätsklassen {#pros-and-cons}
 

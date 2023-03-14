@@ -5,7 +5,7 @@ description: Erstellen Sie eine aktive ausgehende Verbindung zu Ihrem S3-Speiche
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '950'
 ht-degree: 88%
 
 ---
@@ -43,7 +43,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 | Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B. E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm „Auswählen der Profilattribute“ im [Zielaktivierungs-Workflow](../../ui/activate-batch-profile-destinations.md#select-attributes) festgelegt. |
 | Exporthäufigkeit | **[!UICONTROL Batch]** | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Weitere Informationen finden Sie unter [Batch-Datei-basierte Ziele](/help/destinations/destination-types.md#file-based). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ![Auf dem Amazon S3-Profil basierender Exporttyp](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 

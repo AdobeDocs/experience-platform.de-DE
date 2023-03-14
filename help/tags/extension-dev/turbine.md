@@ -4,7 +4,7 @@ description: Machen Sie sich mit dem turbine-Objekt vertraut, einer freien Varia
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
 source-git-commit: 27dd38cc509040ea9dc40fc7030dcdec9a182d55
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '619'
 ht-degree: 100%
 
 ---
@@ -39,7 +39,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 | `turbineBuildDate` | Das ISO-8601-Datum, an dem die im aktuellen Container verwendete [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine)-Version erstellt wurde. |
 | `buildDate` | Das ISO-8601-Datum, an dem die aktuelle Bibliothek erstellt wurde. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `environment`
 
@@ -61,7 +61,7 @@ console.log(turbine.environment.stage);
 | `id` | Die ID der Umgebung. |
 | `stage` | Die Umgebung, für die diese Bibliothek erstellt wurde. Zu den möglichen Werten gehören `development`, `staging` und `production`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `debugEnabled`
 

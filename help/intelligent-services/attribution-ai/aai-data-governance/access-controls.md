@@ -5,7 +5,7 @@ feature: Attribution AI
 title: Zugriffssteuerung für Attributions-KI
 description: Dieses Dokument enthält Informationen zur attributbasierten Zugriffssteuerung für Attributions-KI.
 source-git-commit: d82fd8dd5efbe314c09d32905f8ab964640cc11a
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 100%
 

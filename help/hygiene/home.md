@@ -4,7 +4,7 @@ description: Mit der Datenhygiene von Adobe Experience Platform können Sie den 
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '607'
+source-wordcount: '604'
 ht-degree: 100%
 
 ---
@@ -55,7 +55,7 @@ Anfragen zum Löschen von Datensätzen und zum Ablauf von Datensätzen haben jew
 | Journeys und Ziele werden aktualisiert | 50 Stunden | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=de), [Kampagnen](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=de) und [Ziele](../destinations/home.md) werden entsprechend den Änderungen in den zugehörigen Segmenten aktualisiert. |
 | Dauerhafte Löschung wird abgeschlossen | 14 Tage | Alle Daten, die mit dem Datensatz in Zusammenhang stehen, werden dauerhaft aus dem Data Lake gelöscht. Der [Status des Hygienevorgangs](./ui/browse.md#view-details), durch den der Datensatz gelöscht wurde, wird aktualisiert, damit dies widergespiegelt wird. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 <!-- ### Record deletes {#record-delete-transparency}
 

@@ -5,7 +5,7 @@ title: Handbuch zur Fehlerbehebung bei der Streaming-Aufnahme
 description: In diesem Dokument finden Sie Antworten auf häufig gestellte Fragen zur Streaming-Aufnahme in Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 100%
 

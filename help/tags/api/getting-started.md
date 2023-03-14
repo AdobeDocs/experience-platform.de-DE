@@ -4,7 +4,7 @@ description: Hier erfahren Sie, wie Sie mit der Reactor-API beginnen, einschlie�
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1057'
 ht-degree: 100%
 
 ---
@@ -149,7 +149,7 @@ Eine erfolgreiche Antwort gibt ein neues Zugriffs-Token sowie die Anzahl der Sek
 | `access_token` | Der neu generierte Wert des Zugriffs-Tokens. Dieser Wert wird für den erforderlichen `Authorization`-Header verwendet und muss im Format `Bearer {ACCESS_TOKEN}` angegeben werden. |
 | `expires_in` | Die verbleibende Zeit bis zum Ablauf des Tokens in Millisekunden. Sobald ein Token abläuft, muss ein neues generiert werden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Nächste Schritte
 

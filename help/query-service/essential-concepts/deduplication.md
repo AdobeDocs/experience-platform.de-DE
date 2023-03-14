@@ -6,7 +6,7 @@ type: Tutorial
 description: 'In diesem Dokument werden Beispiele für Unterauswahlen und vollständige Abfragen zur Deduplizierung von drei gängigen Anwendungsfällen beschrieben: Erlebnisereignisse, Käufe und Metriken.'
 exl-id: 46ba6bb6-67d4-418b-8420-f2294e633070
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 100%
 

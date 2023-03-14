@@ -4,7 +4,7 @@ description: Hier erfahren Sie, wie Sie bei der Auflistung von Ressourcen in der
 exl-id: 8a91f3dd-4ead-4a10-abb1-e71acb0d73b6
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '553'
 ht-degree: 100%
 
 ---
@@ -38,7 +38,7 @@ GET {ENDPOINT}?filter[{ATTRIBUTE_NAME}]={OPERATOR} {VALUE}
 | `{OPERATOR}` | Der Operator, der bestimmt, wie die Ergebnisse anhand des bereitgestellten `{VALUE}` ausgewertet werden. Die unterstützten Operatoren sind im [Anhang](#supported-operators) aufgeführt. |
 | `{VALUE}` | Der Wert, mit dem die zurückgegebenen Ergebnisse verglichen werden sollen. Beim Vergleich auf Gleichheit mit dem Operator `EQ` muss der Wert eine exakte Übereinstimmung sein, bei der Groß- und Kleinschreibung berücksichtigt werden, damit er in die Antwort aufgenommen werden kann. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 

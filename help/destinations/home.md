@@ -4,8 +4,8 @@ title: Ziele – Übersicht
 description: Ziele sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Ziele in Adobe Experience Platform nutzen, um bekannte und unbekannte Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
 source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
-workflow-type: ht
-source-wordcount: '755'
+workflow-type: tm+mt
+source-wordcount: '752'
 ht-degree: 100%
 
 ---
@@ -58,7 +58,7 @@ In der folgenden Tabelle sind die Berechtigungen und Berechtigungskombinationen 
 | **[!UICONTROL Verwalten von Zielen]** | Um eine Verbindung zu Zielen herzustellen, benötigen Sie die [Zugriffssteuerungsberechtigung](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**. |
 | **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** | Um Segmente für Ziele zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weiterführende Informationen zu Zugriffssteuerungen finden Sie im [Benutzerhandbuch zur Zugriffssteuerung](../access-control/ui/overview.md).
 

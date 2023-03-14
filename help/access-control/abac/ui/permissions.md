@@ -4,7 +4,7 @@ title: Attributbasierte Zugriffssteuerung − Rollenberechtigungen verwalten
 description: Dieses Dokument enthält Informationen dazu, wie Berechtigungen für eine Rolle über die Benutzeroberfläche „Berechtigungen“ in Adobe Experience Cloud konfiguriert werden
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: a94cf02a57bd91d2342b53ced7da98836343aa2b
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 100%
 
@@ -18,7 +18,7 @@ ht-degree: 100%
 
 Berechtigungen sind der Bereich von Experience Cloud, in dem Admins Benutzerrollen und Zugriffsrichtlinien definieren können, um Zugriffsberechtigungen für Funktionen und Objekte in einem Produktprogramm zu verwalten.
 
-Über Berechtigungen können Sie Rollen erstellen und verwalten sowie die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen. Mit Berechtigungen können Sie auch die Bezeichnungen, Sandboxes und Benutzenden verwalten, die einer bestimmten Rolle zugeordnet sind.
+Über Berechtigungen können Sie Rollen erstellen und verwalten sowie die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen. Mit Berechtigungen können Sie auch die Bezeichnungen, Sandboxes und Benutzende verwalten, die einer bestimmten Rolle zugeordnet sind. 
 
 Nach dem [Erstellen einer neuen Rolle](#create-a-new-role) werden Sie sofort zur Registerkarte **[!UICONTROL Rollen]** zurückgeleitet. Wenn Sie Berechtigungen für eine vorhandene Rolle bearbeiten, wählen Sie die Rolle auf der Registerkarte **[!UICONTROL Rollen]** aus. Alternativ können Sie die Filteroption verwenden, um die Ergebnisse zu filtern und nach einer Rolle zu suchen.
 

@@ -6,8 +6,8 @@ description: Dieses Dokument enthält einen Überblick über die XDM ExperienceE
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
-source-wordcount: '1842'
-ht-degree: 94%
+source-wordcount: '1836'
+ht-degree: 95%
 
 ---
 
@@ -30,7 +30,7 @@ Die [!DNL XDM ExperienceEvent]-Klasse selbst stellt mehrere zeitreihenbezogene F
 | `identityMap` | Ein Verknüpfungsfeld, das einen Satz von Identitäten mit Namespace für die Person enthält, für die das Ereignis gilt. Dieses Feld wird vom System automatisch aktualisiert, da Identitätsdaten erfasst werden. Um dieses Feld ordnungsgemäß zu verwenden, verwenden Sie [Echtzeit-Kundenprofil](../../profile/home.md)versuchen Sie nicht, den Inhalt des Felds in Ihren Datenvorgängen manuell zu aktualisieren.<br /><br />Siehe Abschnitt zu Identitätszuordnungen in [Grundlagen der Schemakomposition](../schema/composition.md#identityMap) für weitere Informationen zu ihrem Anwendungsfall. |
 | `timestamp`<br>**(Erforderlich)** | Ein ISO 8601-Zeitstempel, der angibt, wann das Ereignis aufgetreten ist, formatiert gemäß [RFC 3339 Abschnitt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Dieser Zeitstempel muss in der Vergangenheit erfolgt sein. Best Practices zur Verwendung dieses Feldes finden Sie im nachstehenden Abschnitt [Zeitstempel](#timestamps). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Best Practices für die Ereignismodellierung
 
@@ -78,7 +78,7 @@ Adobe bietet mehrere Standardfeldgruppen zur Verwendung mit der [!DNL XDM Experi
 * [[!UICONTROL Flugreservierung]](../field-groups/event/flight-reservation.md)
 * [[!UICONTROL IAB TCF 2.0-Einverständnis]](../field-groups/event/iab.md)
 * [[!UICONTROL Unterkunftsreservierung]](../field-groups/event/lodging-reservation.md)
-* [[!UICONTROL Anführungsanfragedetails]](../field-groups/event/quote-request-details.md)
+* [[!UICONTROL Preisanfragedetails]](../field-groups/event/quote-request-details.md)
 * [[!UICONTROL Reservierungsdetails]](../field-groups/event/reservation-details.md)
 * [[!UICONTROL Web-Details]](../field-groups/event/web-details.md)
 
@@ -144,7 +144,7 @@ In der folgenden Tabelle sind die akzeptierten Werte für `eventType` zusammen m
 | `web.webinteraction.linkClicks` | Ein Link wurde mindestens einmal ausgewählt. |
 | `web.webpagedetails.pageViews` | Eine Web-Seite wurde mindestens einmal besucht. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Vorgeschlagene Werte für `producedBy` {#producedBy}
 

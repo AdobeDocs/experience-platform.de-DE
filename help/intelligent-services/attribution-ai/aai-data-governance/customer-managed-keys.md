@@ -3,7 +3,7 @@ keywords: Insights;Attributions-KI;Attributions-KI-Insights;AAI-Abfrage-Service;
 title: Kundenseitig verwaltete Schlüssel
 description: Erfahren Sie, wie Sie kundenseitig verwaltete Schlüssel für die Attributions-KI einrichten.
 source-git-commit: f80cdd553c36ee10cfbf07c5cbbb14e9a4ae6757
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 100%
 

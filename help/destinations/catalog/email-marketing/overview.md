@@ -67,7 +67,7 @@ Lesen Sie die Artikel zu den jeweiligen E-Mail-Marketing-Zielen, um zu erfahren,
 * [Adobe Campaign](adobe-campaign.md)
 * [Oracle Eloqua](oracle-eloqua.md)
 * [Oracle Responsys](oracle-responsys.md)
-* [Salesforce-Marketing Cloud](salesforce-marketing-cloud.md)
+* [Salesforce Marketing Cloud](salesforce-marketing-cloud.md)
 
 ## Aktivieren von Segmenten für E-Mail-Marketing-Ziele {#activate}
 

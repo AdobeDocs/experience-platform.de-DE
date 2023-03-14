@@ -4,7 +4,7 @@ description: Versionshinweise September 2022 zu Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '2934'
+source-wordcount: '2916'
 ht-degree: 100%
 
 ---
@@ -52,7 +52,7 @@ KI/ML-Services ermöglichen es Marketing-Leuten und Fachleuten, die Leistungsfä
 
 ### Attributions-KI
 
-Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
+Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Fachleuten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
 
 | Funktion | Beschreibung |
 | --- | --- |
@@ -82,7 +82,7 @@ Mit Experience Platform können Sie die Benutzeraktivität in Verbindung mit ver
 | --- | --- | --- |
 | Ressourcen hinzugefügt | <ul><li>Attributions-KI-Instanz</li><li>Kunden-KI-Instanz</li><li>Datenstrom</li></ul> | Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet. Wenn die Funktion aktiviert ist, müssen Sie die Protokollerfassung nicht manuell aktivieren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zu den verschiedenen ressourcenspezifischen Ereignistypen, die von Audit-Protokollen in Platform verfolgt werden, finden Sie in der [Übersicht zu Audit-Protokollen](../../landing/governance-privacy-security/audit-logs/overview.md).
 
@@ -113,7 +113,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | [[!DNL User-Agent Client Hints] im Web SDK](../../edge/fundamentals/user-agent-client-hints.md) | Web-SDK unterstützt jetzt [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Mit Client-Hinweisen können Website-Besitzer auf viele der Informationen zugreifen, die auch in der [!DNL User-Agent]-Zeichenfolge enthalten sind, allerdings auf eine Weise, die die Privatsphäre besser schützt. |
 | [Seitenweise Migration zu Web SDK](../../edge/home.md#migrating-to-web-sdk) | Sie können jetzt Ihre vorhandenen Web-Eigenschaften aus anderen Bibliotheken von Experience Cloud, wie etwa [!DNL at.js], Seite für Seite ins Web-SDK migrieren. Dies ermöglicht einen stufenweisen Ansatz für die Web-SDK-Migration, sodass nicht alle Seiten gleichzeitig migriert werden müssen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 <!-- | [[!DNL Adobe Journey Optimizer] support for datastreams](../../edge/datastreams/overview.md#aep)| The Adobe Experience Platform service for datastreams now supports [!DNL Adobe Journey Optimizer]. This option allows you to use web and app-based inbound channels in [!DNL Adobe Journey Optimizer].|
 -->
@@ -130,7 +130,7 @@ Weitere Informationen zur Datenerfassung in Platform finden Sie in der [Übersic
 | ----------- | ----------- |
 | Destination SDK | Destination SDK bietet jetzt vollständige Unterstützung für Partner und Kunden, die Batch- oder dateibasierte produktbezogene oder private Ziele erstellen. Weitere Informationen finden Sie auf den folgenden Dokumentationsseiten: <ul><li>[Übersicht über Destination SDK](/help/destinations/destination-sdk/overview.md)</li><li>[Konfigurieren eines dateibasierten Ziels](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Testen von dateibasierten Zielen](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Neue oder aktualisierte Funktionen**
 
@@ -139,7 +139,7 @@ Weitere Informationen zur Datenerfassung in Platform finden Sie in der [Übersic
 | [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services bietet eine Plattform für die Gestaltung kanalübergreifender Kundenerlebnisse und eine Umgebung für die visuelle Orchestrierung von Kampagnen, das Management von Interaktionen in Echtzeit und die kanalübergreifende Ausführung. [Erste Schritte mit Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=de). Beachten Sie, dass diese Integration mit [Adobe Campaign-Version 8.4 oder höher](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=de#release-8-4-1) kompatibel ist. |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | Das Ziel [!DNL Salesforce CRM] wurde aktualisiert und unterstützt jetzt sowohl Kontakt- als auch Lead-Aktualisierungen sowie Leistungsverbesserungen für schnellere Aktualisierungen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Neue oder aktualisierte Dokumentation**
 
@@ -168,7 +168,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 | Feldergruppe | [[!UICONTROL Informationen zu Mediendetails]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | Verfolgt Informationen zu Mediendetails. |
 | Feldergruppe | [[!UICONTROL Adobe CJM ExperienceEvent – Oberflächen]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/surfaces.schema.json) | Beschreibt Oberflächen für Erlebnisereignisse in Adobe Journey Optimizer. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Aktualisierte XDM-Komponenten**
 
@@ -190,7 +190,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 | (Mehrfach) | (Mehrfach) | Adobe Journey Optimizer-Entitäten wurden [stabilisiert](https://github.com/adobe/xdm/pull/1625/files). |
 | (Mehrfach) | (Mehrfach) | Die Namespaces bestimmter Felder für verschiedene experimentelle Komponenten wurden [aktualisiert, um Konsistenz zu gewährleisten](https://github.com/adobe/xdm/pull/1626/files). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md).
 

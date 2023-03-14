@@ -5,7 +5,7 @@ title: Übersicht zu maschinellem Lernen in Echtzeit
 description: Maschinelles Lernen in Echtzeit kann die Relevanz der Inhalte Ihrer digitalen Erlebnisse für Ihre Endbenutzenden erheblich steigern. Dies wird durch die Nutzung von Ableitungen in Echtzeit und kontinuierlichem Lernen im Experience Edge ermöglicht.
 exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 100%
 

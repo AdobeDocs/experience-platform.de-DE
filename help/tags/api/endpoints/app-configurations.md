@@ -4,8 +4,8 @@ description: Lernen Sie, wie Sie den /app_configurations-Endpunkt in der Reactor
 exl-id: 88a1ec36-b4d2-4fb6-92cb-1da04268492a
 source-git-commit: 36320addc790e844a1102314890e8692841dc5d0
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 97%
+source-wordcount: '565'
+ht-degree: 96%
 
 ---
 
@@ -33,7 +33,7 @@ GET /companies/{COMPANY_ID}/app_configurations
 | --- | --- |
 | `COMPANY_ID` | Die `id` des [Unternehmens](./companies.md), dem die App-Konfigurationen gehören. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -113,7 +113,7 @@ GET /app_configurations/{APP_CONFIGURATION_ID}
 | --- | --- |
 | `APP_CONFIGURATION_ID` | Die `id` der App-Konfiguration, die Sie suchen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -178,7 +178,7 @@ POST /companies/{COMPANY_ID}/app_configurations
 | --- | --- |
 | `COMPANY_ID` | Die `id` des [Unternehmens](./companies.md), unter dem Sie die App-Konfiguration definieren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -217,7 +217,7 @@ curl -X POST \
 | `key_type` | Stellt das Protokoll dar, das ein Push-Service-Anbieter unterstützt, und bestimmt das Format des Objekts `push_credential`. Bei der Weiterentwicklung der Protokolle für Messaging-Services werden neue `key_type`-Werte erstellt, die die aktualisierten Protokolle unterstützen. |
 | `push_credential` | Der eigentliche Anmeldeinformationswert, der im Ruhezustand verschlüsselt wird. Dieses Feld wird normalerweise nicht entschlüsselt oder in API-Antworten aufgenommen. Nur bestimmte Adobe-Services können eine Antwort erhalten, die eine entschlüsselte Push-Anmeldeinformation enthält. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -270,7 +270,7 @@ PATCH /app_configurations/{APP_CONFIGURATION_ID}
 | --- | --- |
 | `APP_CONFIGURATION_ID` | Die `id` der App-Konfiguration, die Sie aktualisieren möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -301,7 +301,7 @@ curl -X PATCH \
 | `id` | Die `id` der App-Konfiguration, die Sie aktualisieren möchten. Diese sollte mit dem `{APP_CONFIGURATION_ID}`-Wert übereinstimmen, der im Anfragepfad angegeben ist. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `app_configurations` lauten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -354,7 +354,7 @@ DELETE /app_configurations/{APP_CONFIGURATION_ID}
 | --- | --- |
 | `APP_CONFIGURATION_ID` | Die `id` der App-Konfiguration, die Sie löschen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 

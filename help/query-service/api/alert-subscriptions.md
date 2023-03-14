@@ -5,7 +5,7 @@ description: Dieses Handbuch enthält Beispiele für HTTP-Anfragen und -Antworte
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '2667'
+source-wordcount: '2661'
 ht-degree: 88%
 
 ---
@@ -551,9 +551,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alert-subscriptions
 | `subscriptions` | Ein Objekt, das verwendet wird, um die mit den Warnhinweisen verknüpften registrierten E-Mail-IDs von Adobe sowie die Kanäle zu übergeben, in denen die Benutzenden die Warnhinweise erhalten. |
 | `subscriptions.emailIds` | Ein Array von E-Mail-Adressen zur Identifizierung der Benutzenden, die die Warnhinweise erhalten sollen. Die E-Mail-Adressen **müssen** bei einem Adobe-Konto registriert sein. |
 | `subscriptions.inContextNotifications` | Ein boolescher Wert, der bestimmt, wie Benutzende Benachrichtigungen zu Warnhinweisen erhalten. Der Wert `true` bestätigt, dass Warnhinweise über die Benutzeroberfläche bereitgestellt werden sollten. Der Wert `false` stellt sicher, dass die Benutzenden nicht über diesen Kanal benachrichtigt werden. |
-| `subscriptions.emailNotifications` | Ein boolescher Wert, der bestimmt, wie Benutzende Benachrichtigungen zu Warnhinweisen erhalten. Der Wert `true` bestätigt, dass Warnhinweise per E-Mail bereitgestellt werden sollten. Der Wert `false` stellt sicher, dass die Benutzenden nicht über diesen Kanal benachrichtigt werden. |
+| `subscriptions.emailNotifications` | Ein boolescher Wert, der bestimmt, wie Benutzende Benachrichtigungen zu Warnhinweisen erhalten. Der Wert `true` bestätigt, dass Warnhinweise per E-Mail bereitgestellt werden sollten. Der Wert `false` stellt sicher, dass Benutzende nicht über diesen Kanal benachrichtigt werden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -643,7 +643,7 @@ curl -X PATCH 'https://platform.adobe.io/data/foundation/query/alert-subscriptio
 | `path` | Dieser Wert bezieht sich auf den Namespace im Endpunkt. Derzeit ist der einzige akzeptierte Wert `/status`. |
 | `value` | Bei einer erfolgreichen PATCH-Anfrage wird damit der `status`-Wert des Warnhinweises geändert. Derzeit lauten die zulässigen Werte `enable` oder `disable`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 

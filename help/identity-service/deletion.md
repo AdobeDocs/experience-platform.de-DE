@@ -2,8 +2,8 @@
 title: Löschungen in Identity Service
 description: Dieses Dokument bietet einen Überblick über die verschiedenen Mechanismen, mit denen Sie Ihre Identitätsdaten in Experience Platform löschen und Klarheit darüber schaffen können, wie sich dies auf Identitätsdiagramme auswirken kann.
 source-git-commit: da1ce4560d28d43db47318883f9656cebb2eb487
-workflow-type: ht
-source-wordcount: '1207'
+workflow-type: tm+mt
+source-wordcount: '1198'
 ht-degree: 100%
 
 ---
@@ -47,7 +47,7 @@ Die nachstehende Tabelle enthält eine Aufschlüsselung der Löschvorgänge für
 | Betroffene Services | Durch das Löschen einer einzelnen Identität in Privacy Service können Sie festlegen, ob Daten aus Identity Service, dem Echtzeit-Kundenprofil oder dem Data Lake gelöscht werden sollen. |
 | Löschmuster | Löschen einer Identität aus Identity Service. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Löschen von Datensätzen
 
@@ -70,7 +70,7 @@ Die folgende Tabelle enthält eine Aufschlüsselung der Unterschiede zwischen de
 | Betroffene Services | Beim Löschen von Datensätzen durch den Katalog-Service werden Daten aus dem Identity Service, dem Echtzeit-Kundenprofil und dem Data Lake gelöscht. | Durch das Löschen von Datensätzen im Rahmen der Datenhygiene werden Daten aus dem Identity Service, dem Echtzeit-Kundenprofil und dem Data Lake gelöscht. |
 | Löschmuster | Löschen verknüpfter Identitäten aus dem Identity Service, festgelegt von einem bestimmten Datensatz. | Löschen verknüpfter Identitäten aus dem Identity Service, festgelegt von einem bestimmten Datensatz basierend auf dem Ablaufzeitplan. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Verschiedene Status von Identitätsdiagrammen nach dem Löschen
 
@@ -84,7 +84,7 @@ Nachstehend finden Sie einen Überblick über die möglichen Auswirkungen von L�
 | Vollständige Entfernung | Ein Diagramm muss mindestens zwei verknüpfte Identitäten aufweisen, damit es existieren kann. Wenn eine Löschanfrage dazu führt, dass alle vorhandenen Verknüpfungen in einem Diagramm entfernt werden, wird das Diagramm daher vollständig entfernt. |
 | Keine Änderung | Ein Diagramm wird nicht beeinflusst, wenn eine bestimmte Löschanfrage Identitäten oder Datensätze enthält, die mit keinem Mitglied des Diagramms verknüpft sind. Außerdem wird ein Diagramm nicht aktualisiert, auch wenn mit der Löschanfrage eine Verknüpfung zwischen einem Datensatz oder einer Identitäts-Datensatz-Kombination entfernt wird, da die Verknüpfung durch eine andere, nicht gelöschte Verknüpfung hergestellt wurde. Wenn also eine Verknüpfung in zwei verschiedenen Datensätzen vorhanden ist, wird das Diagramm nicht aktualisiert, da nur einer der Datensätze entfernt wird. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Nächste Schritte
 

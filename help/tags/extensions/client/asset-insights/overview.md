@@ -37,7 +37,7 @@ Die Tag-Erweiterung *Adobe Analytics* für Adobe Experience Platform muss in die
 
 ### Adobe Experience Manager (AEM)
 
-1. Aktivieren Sie [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html). Wählen Sie in AEM **[!UICONTROL Tools > Assets]** aus und öffnen Sie dann das Bedienfeld **[!UICONTROL Insights-Konfiguration]**.
+1. Aktivieren Sie [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=de). Wählen Sie in AEM **[!UICONTROL Tools > Assets]** aus und öffnen Sie dann das Bedienfeld **[!UICONTROL Insights-Konfiguration]**.
 
 1. Deaktivieren Sie UUID-Tracking.
 
@@ -61,7 +61,7 @@ Die empfohlene Integration von [Platform](https://experienceleague.adobe.com/doc
 
 ### Aktivieren von Asset Insight in AEM
 
-Anweisungen zum Aktivieren von Asset Insights finden Sie im [Benutzerhandbuch zu Experience Manager 6.5 Assets](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html).
+Anweisungen zum Aktivieren von Asset Insights finden Sie im [Benutzerhandbuch zu Experience Manager 6.5 Assets](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=de).
 
 ### Aktivieren von UUID-Tracking für Assets
 
@@ -132,7 +132,7 @@ Konfigurieren Sie wie oben beschrieben drei Regeln:
 
    * Im Anzeigebereich des Browsers gab es nie ein Kreativelement.
 
-   * Auf der Seite wurden keine Kreativelemente konfiguriert, für die [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html) in AEM aktiviert war.
+   * Auf der Seite wurden keine Kreativelemente konfiguriert, für die [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=de) in AEM aktiviert war.
 
 **Klicks**
 
@@ -142,7 +142,7 @@ Konfigurieren Sie wie oben beschrieben drei Regeln:
 
 Bei der resultierenden Analytics-Bildanforderung (auf der nächsten Seite) funktioniert die Regel ordnungsgemäß, wenn in `a.assets.idlist` die Asset-IDs auf der Zielseite vorhanden sind und `a.assets.clickedid` die Asset-ID des Assets enthält, das auf der Ausgangsseite ausgewählt wurde.
 
-Wenn `a.assets.clickedid` nicht in der Bildanforderung enthalten ist, liegt der Grund meist darin, dass in AEM [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html) nicht für das ausgewählte Asset aktiviert war.
+Wenn `a.assets.clickedid` nicht in der Bildanforderung enthalten ist, liegt der Grund meist darin, dass in AEM [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=de) nicht für das ausgewählte Asset aktiviert war.
 
 **Klicks ohne Ziel**
 
@@ -152,4 +152,4 @@ Wenn `a.assets.clickedid` nicht in der Bildanforderung enthalten ist, liegt der 
 
 In der resultierenden Analytics-Bildanforderung funktioniert die Regel ordnungsgemäß, wenn die Kreativelement-ID in `a.assets.clickedid` vorhanden ist.
 
-Wenn `a.assets.clickedid` nicht in der Bildanforderung enthalten ist, liegt der Grund meist darin, dass in AEM [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html) nicht für das ausgewählte Asset aktiviert war.
+Wenn `a.assets.clickedid` nicht in der Bildanforderung enthalten ist, liegt der Grund meist darin, dass in AEM [Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=de) nicht für das ausgewählte Asset aktiviert war.

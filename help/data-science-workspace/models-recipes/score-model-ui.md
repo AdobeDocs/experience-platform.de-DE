@@ -57,7 +57,7 @@ Ein Scoring-Lauf kann mit einem der folgenden Status angezeigt werden:
 - Ausstehend
 - Abgeschlossen
 - Fehlgeschlagen
-- Läuft
+- Wird ausgeführt
 
 Status werden automatisch aktualisiert. Fahren Sie mit dem nächsten Schritt fort, wenn der Status **[!UICONTROL Fertig]** oder **[!UICONTROL Fehlgeschlagen]**.
 

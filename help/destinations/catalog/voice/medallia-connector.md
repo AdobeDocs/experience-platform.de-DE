@@ -4,8 +4,8 @@ description: Aktivieren Sie Profile für gezielte Medallia-Umfragen und Feedback
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
 source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1102'
-ht-degree: 10%
+source-wordcount: '1096'
+ht-degree: 37%
 
 ---
 
@@ -19,7 +19,7 @@ Aktivieren Sie Profile für gezielte Medallia-Umfragen und Feedback-Sammlungen, 
 >
 >Diese Dokumentationsseite wurde vom Medallia-Team erstellt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an adobe-integrations@medallia.com.
 
-## Anwendungsbeispiele {#use-cases}
+## Anwendungsfälle {#use-cases}
 
 Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie das Medallia-Ziel verwenden sollten, finden Sie hier Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
 
@@ -44,37 +44,37 @@ Wenden Sie sich an Ihr Medallia-Versand-Team, um diese Details zu erhalten.
 
 ## Unterstützte Identitäten {#supported-identities}
 
-Medallia unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Weitere Informationen [identities](/help/identity-service/namespaces.md).
+Medallia unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md).
 
-| Zielgruppenidentität | Beschreibung | Zu beachten |
+| Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
 | email | E-Mail Adresse | Wählen Sie die E-Mail-Zielidentität aus, wenn Sie Umfragen per E-Mail einladen möchten. Wenn ein Profil mit mehreren E-Mail-Adressen verknüpft ist, wird die Einladung nur an die erste E-Mail Trigger. |
 | phone | Telefonnummern im Format E.164 gehasht | Wählen Sie die Telefonzielgruppenkennung aus, wenn Sie SMS-basierte Umfragen senden möchten. Die Telefonnummer muss im E.164-Format vorliegen, das ein Pluszeichen (+), eine internationale Telefonnummer, eine Ortsvorwahl und eine Telefonnummer enthält. Beispiel: (+)(Landesvorwahl)(Ortsvorwahl)(Telefonnummer). Wenn ein Profil mit mehreren Telefonnummern verknüpft ist, Trigger Medallia nur die Einladung zur ersten Telefonnummer. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Exportart und -frequenz {#export-type-frequency}
+## Exporttyp und -häufigkeit {#export-type-frequency}
 
-Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten stehenden Tabelle.
+Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
 | Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle neu qualifizierten Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm Profilattribute im [Zielaktivierungs-Workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind &quot;immer auf&quot;-API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Mehr dazu [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Herstellen einer Verbindung mit der Datenbank {#connect}
+## Herstellen einer Verbindung mit dem Ziel {#connect}
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele verwalten]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle - Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die [Zugriffsberechtigung](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**. Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
+Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
-### An Ziel authentifizieren {#authenticate}
+### Beim Ziel authentifizieren {#authenticate}
 
-Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]**.
+Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
 
 * **[!UICONTROL OAuth-Token-Endpunkt-URL]**: In der Regel hat das Format https://instance.medallia.tld/oauth/tenant/token.
 * **[!UICONTROL Client-ID]**: Besorgen Sie sich bei Ihrem Medallia-Versand-Team.
@@ -82,12 +82,12 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus
 
 ![Bild, das den Authentifizierungsbildschirm für dieses Ziel anzeigt.](/help/destinations/assets/catalog/voice/medallia-destination-oauth.png)
 
-### Zieldetails ausfüllen {#destination-details}
+### Ausfüllen der Zieldetails {#destination-details}
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
-* **[!UICONTROL Name]**: Ein Name, mit dem Sie dieses Ziel in der Zukunft erkennen werden.
-* **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen dabei hilft, dieses Ziel in der Zukunft zu identifizieren.
+* **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
+* **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
 * **[!UICONTROL API-Gateway-URL]**: Besorgen Sie sich bei Ihrem Medallia-Versand-Team. In der Regel hat das Format https://instance-tenant.apis.medallia.com.
 * **[!UICONTROL Import API Name]**: Besorgen Sie sich bei Ihrem Medallia-Versand-Team. Name der Media Import-API (auch als Web-Feed bezeichnet), die in dieser Verbindung verwendet werden soll. Sie können verschiedene Segmente für verschiedene Import-APIs aktivieren, um verschiedene Umfrageprogramme Trigger.
 
@@ -95,17 +95,17 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
-Sie können Warnhinweise aktivieren, um Benachrichtigungen über den Status des Datenflusses an Ihr Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnungen finden Sie im Handbuch zu [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
+Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie alle Details für Ihre Zielverbindung angegeben haben, wählen Sie **[!UICONTROL Nächste]**.
+Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle - Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Zugriffssteuerung – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Lesen [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](/help/destinations/ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel.
+Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 ### Zuordnen von Attributen und Identitäten {#map}
 
@@ -149,4 +149,4 @@ Nachfolgend finden Sie ein Beispiel für eine JSON-Datei der exportierten Daten,
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Detaillierte Informationen zur [!DNL Adobe Experience Platform] erzwingt Data Governance, siehe [Data Governance - Übersicht](/help/data-governance/home.md).
+Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Ausführliche Informationen darüber, wie [!DNL Adobe Experience Platform] Data Governance erzwingt, finden Sie unter [Data Governance – Übersicht](/help/data-governance/home.md).

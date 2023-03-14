@@ -4,7 +4,7 @@ title: Arbeiten mit verschachtelten Datenstrukturen in Query Service
 description: Dieses Dokument bietet ein Anwendungsbeispiel für die Verarbeitung und Transformation verschachtelter Datenfelder mithilfe von CTAS- und INSERT INTO-Anweisungen.
 exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
 source-git-commit: d3ea7ee751962bb507c91e1afea0da35da60a66d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '795'
 ht-degree: 100%
 

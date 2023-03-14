@@ -4,8 +4,8 @@ description: Erfahren Sie, wie Sie den /hosts-Endpunkt in der Reactor-API aufruf
 exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
 source-git-commit: 905384b3190cd55e7caa9c4560d6b2774280eee7
 workflow-type: tm+mt
-source-wordcount: '821'
-ht-degree: 93%
+source-wordcount: '797'
+ht-degree: 92%
 
 ---
 
@@ -41,7 +41,7 @@ GET /properties/{PROPERTY_ID}/hosts
 | --- | --- |
 | `PROPERTY_ID` | Die `id` der Eigenschaft, zu der die Hosts gehören. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -123,7 +123,7 @@ GET /hosts/{HOST_ID}
 | --- | --- |
 | `HOST_ID` | Die `id` des Hosts, den Sie suchen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -190,7 +190,7 @@ POST /properties/{PROPERTY_ID}/hosts
 | --- | --- |
 | `PROPERTY_ID` | Die `id` der [Eigenschaft](./properties.md), unter der Sie den Host definieren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -232,7 +232,7 @@ curl -X POST \
 | `attributes.username` | Ein optionaler Benutzername für die Authentifizierung. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `hosts` lauten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -292,7 +292,7 @@ PATCH /hosts/{HOST_ID}
 | --- | --- |
 | `HOST_ID` | Die `id` des Hosts, den Sie aktualisieren möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -322,7 +322,7 @@ curl -X PATCH \
 | `id` | Die `id` des Hosts, den Sie aktualisieren möchten. Diese sollte mit dem `{HOST_ID}`-Wert übereinstimmen, der im Anfragepfad angegeben ist. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `hosts` lauten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -378,7 +378,7 @@ DELETE /hosts/{HOST_ID}
 | --- | --- |
 | `HOST_ID` | Die `id` des Hosts, den Sie löschen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -414,7 +414,7 @@ GET /hosts/{HOST_ID}/property
 | --- | --- |
 | `{HOST_ID}` | Die `id` des Hosts, dessen Eigenschaft Sie nachschlagen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 

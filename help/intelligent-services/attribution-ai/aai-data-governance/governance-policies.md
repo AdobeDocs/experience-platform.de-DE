@@ -4,7 +4,7 @@ feature: Attribution AI
 title: Governance-Richtlinien für Attributions-KI
 description: Adobe Experience Platform bietet verschiedene Dienste und Tools, mit denen Sie Ihre erfassten Erlebnisdaten sicher kontrollieren können.
 source-git-commit: 2cce166592c4d4b7f9d62bc3385fb8ccdd74c958
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 100%
 

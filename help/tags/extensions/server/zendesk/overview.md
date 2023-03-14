@@ -4,8 +4,8 @@ description: Erweiterung der Zendesk-Ereignisweiterleitung für Adobe Experience
 exl-id: 22e94699-5b84-4a73-b007-557221d3e223
 source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
 workflow-type: tm+mt
-source-wordcount: '1286'
-ht-degree: 98%
+source-wordcount: '1271'
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,7 @@ Sie müssen ebenfalls die folgenden Details für Ihre Zendesk-Konfiguration erhe
 | Subdomain | Während des Registrierungsprozesses wird eine einzigartige **Subdomain** für das Konto erstellt. Weitere Informationen finden Sie in der [Zendesk-Dokumentation](https://developer.zendesk.com/documentation/ticketing/working-with-oauth/creating-and-using-oauth-tokens-with-the-api/). | `xxxxx.zendesk.com` (wobei `xxxxx` der Wert ist, der bei der Erstellung des Kontos angegeben wurde) |
 | API-Token | Zendesk verwendet Inhaber-Token als Authentifizierungsmechanismus für die Kommunikation mit der Zendesk-API. Generieren Sie nach der Anmeldung am Zendesk-Portal ein API-Token. Weitere Informationen finden Sie in der [Zendesk-Dokumentation](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token). | `cwWyOtHAv12w4dhpiulfe9BdZFTz3OKaTSzn2QvV` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Abschließend müssen Sie ein Geheimnis für die Ereignisweiterleitung für das API-Token erstellen. Setzen Sie den Geheimnistyp auf **[!UICONTROL Token]** und setzen Sie den Wert auf das API-Token, das Sie aus Ihrer Zendesk-Konfiguration erhalten haben. Weitere Informationen zum Konfigurieren von Geheimnissen finden Sie in der Dokumentation zu [Geheimnissen in der Ereignisweiterleitung](../../../ui/event-forwarding/secrets.md).
 
@@ -54,7 +54,7 @@ Geben Sie unter **[!UICONTROL Zendesk Domain]** den Wert für Ihre Zendesk-Subdo
 
 ## Konfigurieren einer Ereignisweiterleitungsregel
 
-Beginnen Sie mit der Erstellung einer neuen [Regel](../../../ui/managing-resources/rules.md) für die Ereignisweiterleitung und konfigurieren Sie die Bedingungen nach Bedarf. Wählen Sie bei der Auswahl der Aktionen für die Regel die [!UICONTROL Zendesk] Erweiterung und wählen Sie dann die [!UICONTROL Ereignis erstellen] Aktionstyp.
+Beginnen Sie mit der Erstellung einer neuen [Regel](../../../ui/managing-resources/rules.md) für die Ereignisweiterleitung und konfigurieren Sie die Bedingungen nach Bedarf. Wählen Sie bei der Auswahl der Aktionen für die Regel die [!UICONTROL Zendesk]-Erweiterung aus, und klicken Sie dann auf den Aktionstyp [!UICONTROL Ereignis erstellen].
 
 ![Regel festlegen](../../../images/extensions/server/zendesk/rule.png)
 
@@ -78,7 +78,7 @@ Die folgenden Schlüssel können innerhalb des `event`-Objekts beim Mapping auf 
 | `created_at` | Zeichenfolge | `arc.event.xdm.timestamp` | Ein ISO-8601-Zeitstempel, der den Zeitpunkt angibt, zu dem das Ereignis erstellt wurde. | Nein | (Nicht angegeben) |
 | `properties` | Objekt | `arc.event.xdm._extconndev.EventProperties` | Ein benutzerdefiniertes JSON-Objekt mit Details über das Ereignis. | Ja | (Nicht angegeben) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ Die folgenden Schlüssel können innerhalb des `profile`-Objekts beim Mapping au
 | `identifiers` | Array | `arc.event.xdm._extconndev.identifiers` | Ein Array, das mindestens einen Bezeichner enthält. Jeder Bezeichner besteht aus einem Typ und einem Wert. | Ja | Weitere Informationen über das Array `identifiers` finden Sie in der [Zendesk-Dokumentation](https://developer.zendesk.com/api-reference/custom-data/profiles_api/profiles_api/#identifiers-array). Alle Felder und Werte müssen einzigartig sein. |
 | `attributes` | Objekt | `arc.event.xdm._extconndev.attrbutes` | Ein Objekt, das benutzerdefinierte Eigenschaften über die Person enthält. | Nein | Weitere Informationen zu Profilattributen finden Sie in der [Zendesk-Dokumentation](https://developer.zendesk.com/documentation/custom-data/profiles/anatomy-of-a-profile/#attributes). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Validieren von Daten in Zendesk {#validate}
 
@@ -125,7 +125,7 @@ Je nach Kontotyp kann die Zendesk [!DNL Events API] die folgende Anzahl von Anfr
 | [!DNL Enterprise] | 750 |
 | [!DNL Enterprise Plus] | 1000 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zu diesen Obergrenzen finden Sie in der [Zendesk-Dokumentation](https://developer.zendesk.com/api-reference/ticketing/account-configuration/usage_limits/#:~:text=API%20requests%20made%20by%20Zendesk%20apps%20are%20subject,sources%20for%20the%20account%2C%20including%20internal%20product%20requests.).
 
@@ -141,7 +141,7 @@ Bei der Verwendung oder Konfiguration der Erweiterung können die folgenden Fehl
 | 403 | **Unzureichende Berechtigungen**: Dieser Fehler tritt auf, wenn keine ausreichenden Berechtigungen für den Zugriff auf die Ressource bereitgestellt wurden. | Überprüfen Sie, ob die erforderlichen Berechtigungen bereitgestellt wurden. | `{"error": [{"code":"PermissionDenied","title": "Insufficient permisssions to perform operation"}]}` |
 | 429 | **Zu viele Anfragen**: Dieser Fehler tritt auf, wenn das Datensatzlimit für das Endpunktobjekt überschritten wurde. | Einzelheiten zu den Beschränkungen für einzelnen Anfragen finden Sie im obigen Abschnitt über [Anfragebeschränkungen](#limits). | `{"error": [{"code":"TooManyRequests","title": "Too Many Requests"}]}` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Nächste Schritte
 

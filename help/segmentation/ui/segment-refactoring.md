@@ -5,7 +5,7 @@ title: Handbuch zur umgestalteten Benutzeroberfläche für Segmentierungszeitbes
 description: Segment Builder bietet eine umfangreiche Arbeitsfläche, über die Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen.
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '297'
 ht-degree: 100%
 

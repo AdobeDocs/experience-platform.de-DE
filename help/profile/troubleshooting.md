@@ -5,7 +5,7 @@ type: Documentation
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Echtzeit-Kundenprofil sowie eine Anleitung zur Behebung gängiger Fehler beim Arbeiten mit Profildaten mit Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 100%
 

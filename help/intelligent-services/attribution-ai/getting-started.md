@@ -7,7 +7,7 @@ exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
 source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '619'
-ht-degree: 62%
+ht-degree: 66%
 
 ---
 
@@ -55,7 +55,7 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 Bei der Verwendung rollenbasierter Zugriffssteuerung muss die **Attribution AI anzeigen** und **Attribution AI verwalten** -Berechtigungen gewähren Zugriff auf verschiedene Funktionen von Attribution AI. Die **Attribution AI verwalten** ermöglicht **erstellen**, **clone**, **edit**, **delete**, **enable** oder **disable** eine Instanz während **Attribution AI anzeigen** ermöglicht **lesen** oder **Ansicht** es. Die **erstellen**, **edit** und **delete** -Aktionen werden in Auditprotokollen aufgezeichnet.
 
-Weitere Informationen finden Sie in der Dokumentation . [Zuweisen von Berechtigungen für die Zugriffskontrolle](../../../help/access-control/home.md) oder wie [Verwenden Sie Auditprotokolle zur Überwachung von Zugriff und Aktivität.](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
+Weitere Informationen finden Sie in der Dokumentation [Zuweisen von Berechtigungen für die Zugriffskontrolle](../../../help/access-control/home.md) oder [Verwenden von Adminprotokollen zur Überwachung von Zugriff und Aktivität](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Nächste Schritte {#next-steps}
 

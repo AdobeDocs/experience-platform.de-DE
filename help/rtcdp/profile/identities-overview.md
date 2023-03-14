@@ -4,7 +4,7 @@ title: Identitäten in Real-time Customer Data Platform
 description: Mit Adobe Experience Platform Identity Service können Sie sich einen genaueren Überblick über Kundinnen und Kunden und ihr Verhalten verschaffen, indem Sie Identitäten über Geräte und Systeme hinweg zusammenführen.
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 100%
 
