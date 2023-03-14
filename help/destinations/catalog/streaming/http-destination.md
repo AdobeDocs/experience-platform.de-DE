@@ -3,10 +3,10 @@ keywords: Streaming; HTTP-Ziel
 title: HTTP-API-Verbindung
 description: Verwenden Sie das HTTP-API-Ziel in Adobe Experience Platform, um Profildaten an Drittanbieter-HTTP-Endpunkte zu senden. Damit können Sie Ihre eigenen Analysen oder andere Vorgänge ausführen, die Sie möglicherweise für Profildaten benötigen, die aus Experience Platform exportiert wurden.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 01e4a32222bb94ab87751b2375ad616e5b5c0738
+source-git-commit: b6d7ae987bbc97b3f58bd10ef181145ae89aa63e
 workflow-type: tm+mt
-source-wordcount: '2535'
-ht-degree: 91%
+source-wordcount: '2436'
+ht-degree: 95%
 
 ---
 
@@ -158,7 +158,7 @@ Wenn Sie den Authentifizierungstyp **[!UICONTROL Client-Anmeldeinformationen fü
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="Zeitstempel für Segmente einschließen"
->abstract="Schalten Sie diese Option ein, wenn der Datenexport den UNIX-Zeitstempel enthalten soll, an dem die Segmente erstellt und aktualisiert wurden, sowie den UNIX-Zeitstempel, an dem die Segmente dem Ziel für die Aktivierung zugeordnet wurden. In der Dokumentation finden Sie ein Beispiel für einen Datenexport mit dieser Option.<p>Inhalt aus erster Aufzählung</p><p>Inhalt aus zweiter Aufzählung</p><ul><li>Listenelement eins.</li><li>Listenelement 2.</li></ul> - Weitere Textzeilen. - Noch mehr Textzeilen. Formatierungstest, um festzustellen, ob Folgendes möglich ist: <br>HTML formatieren</p><p>Oder verwenden Sie sogar Absatz-Tags. Dies ist Zeile eins.</p><p>Und mehr Absatz-Tags, für Zeile zwei.</p><p>Alle Absatz-Tags. Für Zeile drei.</p>Endlich testen, um Links mit Markdown einzuschließen [https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html](absoluter Link) und HTML <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=de">Link-Text</a> syntax.Wirklich endlich ein Test zum Einschließen von Links mit Markdown [../overview.md](relative Links) und HTML <a href="../overview.md">relativer Link-Text</a> Syntax."
+>abstract="Schalten Sie diese Option ein, wenn der Datenexport den UNIX-Zeitstempel enthalten soll, an dem die Segmente erstellt und aktualisiert wurden, sowie den UNIX-Zeitstempel, an dem die Segmente dem Ziel für die Aktivierung zugeordnet wurden. In der Dokumentation finden Sie ein Beispiel für einen Datenexport mit dieser Option."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
