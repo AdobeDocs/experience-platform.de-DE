@@ -4,9 +4,9 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: 0dbd050a9057f491537777ab539bfc687f8c89cb
+source-git-commit: 09f7a3f4c1fde5d12f91308342f2c44f67ff961b
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1039'
 ht-degree: 97%
 
 ---
@@ -122,6 +122,7 @@ ht-degree: 97%
       * [Salesforce-CRM-Verbindung](./catalog/crm/salesforce.md)
       * [Verbindung mit Microsoft Dynamics 365](./catalog/crm/microsoft-dynamics-365.md)
       * [Outreach-Verbindung](catalog/crm/outreach.md)
+      * [Zendesk-Verbindung](catalog/crm/zendesk.md)
    * Data Management Platform-Ziele {#data-management}
       * [Data Management Platform (DMP)-Ziele – Übersicht](./catalog/data-management/overview.md)
       * [Audience Manager DIL-Erweiterung](./catalog/data-management/aam-dil-extension.md)
