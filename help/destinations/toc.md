@@ -4,10 +4,10 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: 09f7a3f4c1fde5d12f91308342f2c44f67ff961b
+source-git-commit: 9fd11ecbd2d9747088a31b0f25fc8be9990292e3
 workflow-type: tm+mt
-source-wordcount: '1039'
-ht-degree: 97%
+source-wordcount: '1044'
+ht-degree: 96%
 
 ---
 
@@ -135,7 +135,8 @@ ht-degree: 97%
       * [E-Mail-Marketing-Ziele – Übersicht](./catalog/email-marketing/overview.md)
       * [Adobe Campaign-Verbindung](./catalog/email-marketing/adobe-campaign.md)
       * [Adobe Campaign Managed Cloud Services-Verbindung](./catalog/email-marketing/adobe-campaign-managed-services.md)
-      * [Oracle Eloqua-Verbindung](./catalog/email-marketing/oracle-eloqua.md)
+      * [(API) Oracle Eloqua-Verbindung](./catalog/email-marketing/oracle-eloqua-api.md)
+      * [(Dateien) Oracle Eloqua-Verbindung](./catalog/email-marketing/oracle-eloqua.md)
       * [Oracle Responsys-Verbindung](./catalog/email-marketing/oracle-responsys.md)
       * [(API) Salesforce Marketing Cloud-Verbindung](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
       * [(Dateien) Salesforce Marketing Cloud-Verbindung](./catalog/email-marketing/salesforce-marketing-cloud.md)
