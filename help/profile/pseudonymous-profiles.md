@@ -5,9 +5,9 @@ title: Pseudonyme Profildaten - Ablauf
 description: Dieses Dokument enthält allgemeine Anleitungen zum Konfigurieren des Datenablaufs für Pseudonyme Profile in Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: a6173860adda4bd71c94750e5cce6dd4cbe820c6
+source-git-commit: ab5eb1e7a3f2c20efcb44b1699a5938f6d54fa04
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '885'
 ht-degree: 0%
 
 ---
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 In Adobe Experience Platform wird ein Profil für den Ablauf von Pseudonymen Daten berücksichtigt, wenn es die folgenden Bedingungen erfüllt:
 
-- Die Identitätstypen des zugeordneten Profils stimmen mit denen überein, die der Kunde als pseudonymen oder unbekannten Identitätstyp angegeben hat.
-   - Wenn der Identitätstyp des Profils beispielsweise `ECID`, `GAID`oder `AAID`. Das zugeordnete Profil hat keine IDs eines anderen Identitätstyps. In diesem Beispiel wird ein zugeordnetes Profil **not** entweder eine E-Mail- oder eine CRM-Identität aufweisen.
+- Die Identitäts-Namespaces des zugeordneten Profils stimmen mit denen überein, die der Kunde als pseudonymen oder unbekannten Identitäts-Namespace angegeben hat.
+   - Wenn beispielsweise der Identitäts-Namespace des Profils `ECID`, `GAID`oder `AAID`. Das zugeordnete Profil hat keine IDs aus einem anderen Identitäts-Namespace. In diesem Beispiel wird ein zugeordnetes Profil **not** entweder eine E-Mail- oder eine CRM-Identität aufweisen.
 - In einem benutzerdefinierten Zeitraum hat keine Aktivität stattgefunden. Aktivität wird entweder durch alle erfassten Erlebnisereignisse oder durch Kunden initiierte Aktualisierungen der Profilattribute definiert.
    - Beispielsweise wird ein neues Seitenansichtsereignis oder eine Aktualisierung des Seitenattributs als Aktivität betrachtet. Eine nicht vom Benutzer initiierte Aktualisierung der Segmentmitgliedschaft ist jedoch **not** als Aktivität betrachtet werden. Zur Berechnung des Datenablaufs basiert das Tracking auf Profilebene derzeit auf dem Zeitpunkt der Erfassung.
 
@@ -26,7 +26,7 @@ In Adobe Experience Platform wird ein Profil für den Ablauf von Pseudonymen Dat
 
 Der Ablauf der pseudonymen Profildaten kann nicht über die Platform-Benutzeroberfläche oder APIs konfiguriert werden. Stattdessen müssen Sie sich an den Support wenden, um diese Funktion zu aktivieren. Bitte geben Sie bei der Kontaktaufnahme mit dem Support die folgenden Informationen an:
 
-- Die Identitätstypen, die für das Löschen eines Pseudonymen Profils berücksichtigt werden sollen.
+- Die Identitäts-Namespaces, die für das Löschen eines Pseudonymen Profils berücksichtigt werden sollen.
    - Beispiel: `ECID` nur `AAID` nur oder eine Kombination aus `ECID` und `AAID`.
 - Die Wartezeit vor dem Löschen eines pseudonymen Profils. Die Standardempfehlung für Kunden beträgt 14 Tage. Dieser Wert kann jedoch je nach Anwendungsfall unterschiedlich sein.
 - Die aktuelle Profilanzahl im Vergleich zur Lizenzprofilanzahl.
@@ -37,10 +37,10 @@ Im folgenden Abschnitt finden Sie häufig gestellte Fragen zum Ablauf der Daten 
 
 ### Welche Benutzer sollten das Ablaufdatum der Pseudonymen Profildaten verwenden?
 
-- Wenn Sie eine Streaming-Quelle verwenden, die direkt Daten an Platform sendet.
+- Wenn Sie das Web SDK verwenden, um Daten direkt an Platform zu senden.
 - Wenn Sie eine Website haben, die nicht authentifizierte Kunden en masse bereitstellt.
-- Wenn Sie in Ihren Datensätzen übermäßige Profilzahlen haben und bestätigt haben, dass diese übermäßige Profilanzahl auf einem anonymen Cookie-basierten Identitätstyp basiert.
-   - Um dies zu ermitteln, sollten Sie den Bericht zur Identitätstypüberschneidung verwenden. Weitere Informationen zu diesem Bericht finden Sie im [Berichtabschnitt zur Identitätsüberschneidung](./api/preview-sample-status.md#identity-overlap-report) im Beispiel-Status-API-Handbuch für die Vorschau.
+- Wenn Sie in Ihren Datensätzen eine übermäßige Anzahl an Profilen haben und bestätigt haben, dass diese übermäßige Anzahl von Profilen auf anonymen Cookie-basierten Identitäts-Namespace zurückzuführen ist.
+   - Um dies zu ermitteln, sollten Sie den Bericht zur Überschneidung von Identitäts-Namespaces verwenden. Weitere Informationen zu diesem Bericht finden Sie im [Berichtabschnitt zur Identitätsüberschneidung](./api/preview-sample-status.md#identity-overlap-report) im Beispiel-Status-API-Handbuch für die Vorschau.
 
 ### Welche Einschränkungen sollten Sie beachten, bevor Sie die Datengültigkeit von Pseudonymen-Profilen verwenden?
 
@@ -62,9 +62,9 @@ Der Ablauf von Pseudonymen Profildaten funktioniert in einer **Sandbox** Ebene. 
 
 #### Identitätstypen
 
-Datenablauf für Erlebnisereignisse entfernt Ereignisse **only** basierend auf dem Zeitstempel des Ereignisdatensatzes. Die enthaltenen Identitätstypen sind **Ignoriert** für Ablaufzwecke.
+Datenablauf für Erlebnisereignisse entfernt Ereignisse **only** basierend auf dem Zeitstempel des Ereignisdatensatzes. Die darin enthaltenen Identitäts-Namespaces sind **Ignoriert** für Ablaufzwecke.
 
-Pseudonyme Profildaten - Ablauf **only** berücksichtigt Profile mit Identitätsdiagrammen, die vom Kunden ausgewählte Identitätstypen enthalten, z. B. `ECID`, `AAID`oder andere Cookie-Typen. Wenn das Profil **any** zusätzlicher Identitätstyp, der **not** in der ausgewählten Liste des Kunden wird das Profil **not** gelöscht werden.
+Pseudonyme Profildaten - Ablauf **only** berücksichtigt Profile mit Identitätsdiagrammen, die vom Kunden ausgewählte Identitäts-Namespaces enthalten, z. B. `ECID`, `AAID`oder andere Cookie-Typen. Wenn das Profil **any** zusätzlicher Identitäts-Namespace, der **not** in der ausgewählten Liste des Kunden wird das Profil **not** gelöscht werden.
 
 #### Entfernte Elemente
 
