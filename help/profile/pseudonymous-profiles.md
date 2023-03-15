@@ -5,9 +5,9 @@ title: Pseudonyme Profildaten - Ablauf
 description: Dieses Dokument enthält allgemeine Anleitungen zum Konfigurieren des Datenablaufs für Pseudonyme Profile in Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: ab5eb1e7a3f2c20efcb44b1699a5938f6d54fa04
+source-git-commit: 6ba219162f6fde37d8bd258c43ed1bdbbbcdf569
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '875'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,6 @@ Der Ablauf der pseudonymen Profildaten kann nicht über die Platform-Benutzerobe
 - Die Identitäts-Namespaces, die für das Löschen eines Pseudonymen Profils berücksichtigt werden sollen.
    - Beispiel: `ECID` nur `AAID` nur oder eine Kombination aus `ECID` und `AAID`.
 - Die Wartezeit vor dem Löschen eines pseudonymen Profils. Die Standardempfehlung für Kunden beträgt 14 Tage. Dieser Wert kann jedoch je nach Anwendungsfall unterschiedlich sein.
-- Die aktuelle Profilanzahl im Vergleich zur Lizenzprofilanzahl.
 
 ## Häufig gestellte Fragen {#faq}
 
