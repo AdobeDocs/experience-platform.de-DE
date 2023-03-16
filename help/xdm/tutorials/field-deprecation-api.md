@@ -1,38 +1,38 @@
 ---
 title: Verwerfen eines XDM-Felds in der API
-description: Erfahren Sie, wie Sie Experience-Datenmodell (XDM)-Felder in der Schema Registry-API verwerfen.
+description: Erfahren Sie, wie Sie Experience-Datenmodell-Felder (XDM) in der Schema Registry-API verwerfen.
 exl-id: e49517c4-608d-4e05-8466-75724ca984a8
 source-git-commit: f9f783b75bff66d1bf3e9c6d1ed1c543bd248302
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '588'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-# Veraltetes XDM-Feld in der API
+# Ein XDM-Feld in der API verwerfen
 
-Im Experience-Datenmodell (XDM) können Sie ein Feld in einem Schema oder einer benutzerdefinierten Ressource verwerfen, indem Sie die [Schema Registry-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Wenn ein Feld veraltet wird, wird es in den nachgelagerten Benutzeroberflächen wie der [!UICONTROL Profile] Arbeitsbereich und Customer Journey Analytics, es handelt sich jedoch andernfalls um eine nicht brechende Änderung, die sich nicht negativ auf bestehende Datenflüsse auswirkt.
+Im Experience-Datenmodell (XDM) können Sie ein Feld in einem Schema oder einer benutzerdefinierten Ressource verwerfen, indem Sie die [Schema Registry-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) verwenden. Wenn ein Feld verworfen wird, wird es in nachgelagerten Benutzeroberflächen wie dem Arbeitsbereich [!UICONTROL Profile] und Customer Journey Analytics ausgeblendet; dies ist jedoch keine grundlegende Veränderung und wirkt sich nicht negativ auf bestehende Datenflüsse aus.
 
-In diesem Dokument wird beschrieben, wie Felder für verschiedene XDM-Ressourcen nicht mehr unterstützt werden. Anweisungen zum Verwerfen eines XDM-Felds mithilfe des Schema-Editors in der Experience Platform-Benutzeroberfläche finden Sie im Tutorial zu [Veraltung eines XDM-Felds in der Benutzeroberfläche](./field-deprecation-ui.md).
+In diesem Dokument wird beschrieben, wie Felder für verschiedene XDM-Ressourcen verworfen werden können. Anweisungen zum Verwerfen eines XDM-Felds mithilfe des Schema-Editors in der Experience Platform-Benutzeroberfläche finden Sie im Tutorial zum [Verwerfen eines XDM-Felds in der Benutzeroberfläche](./field-deprecation-ui.md).
 
 ## Erste Schritte
 
-Dieses Tutorial erfordert Aufrufe an die Schema Registry-API. Lesen Sie die [Entwicklerhandbuch](../api/getting-started.md) für wichtige Informationen, die Sie für diese API-Aufrufe benötigen. Dies umfasst Ihre `{TENANT_ID}`, das Konzept der &quot;Container&quot;und die erforderlichen Kopfzeilen für Anfragen (mit besonderem Augenmerk auf die `Accept` -Kopfzeile und die möglichen Werte).
+Dieses Tutorial erfordert Aufrufe an die Schema Registry-API. Lesen Sie das [Entwicklerhandbuch](../api/getting-started.md) für wichtige Informationen, die Sie für diese API-Aufrufe benötigen. Dazu gehören Ihre `{TENANT_ID}`, das Konzept der „Container“ und die erforderlichen Header für Anfragen (mit besonderem Augenmerk auf den `Accept`-Header und seine möglichen Werte).
 
-## Benutzerdefiniertes Feld verwerfen {#custom}
+## Verwerfen eines benutzerdefinierten Felds {#custom}
 
-Um ein Feld in einer benutzerdefinierten Klasse, Feldergruppe oder einem Datentyp als veraltet zu kennzeichnen, aktualisieren Sie die benutzerdefinierte Ressource über eine PUT- oder PATCH-Anfrage und fügen Sie das Attribut hinzu `meta:status: deprecated` auf das entsprechende Feld.
+Um ein Feld in einer benutzerdefinierten Klasse, Feldergruppe oder einem Datentyp zu verwerfen, aktualisieren Sie die benutzerdefinierte Ressource über eine PUT- oder PATCH-Anfrage und fügen Sie dem entsprechenden Feld das Attribut `meta:status: deprecated` hinzu.
 
 >[!NOTE]
 >
 >Allgemeine Informationen zum Aktualisieren von benutzerdefinierten Ressourcen in XDM finden Sie in der folgenden Dokumentation:
 >
->* [Klasse aktualisieren](../api/classes.md#patch)
->* [Aktualisieren von Feldergruppen](../api/field-groups.md#patch)
->* [Datentyp aktualisieren](../api/data-types.md#patch)
+>* [Aktualisieren einer Klasse](../api/classes.md#patch)
+>* [Aktualisieren einer Feldergruppe](../api/field-groups.md#patch)
+>* [Aktualisieren eines Datentyps](../api/data-types.md#patch)
 
 
-Der folgende Beispiel-API-Aufruf stellt ein Feld in einem benutzerdefinierten Datentyp ein.
+Im folgenden Beispiel für einen API-Aufruf wird ein Feld in einem benutzerdefinierten Datentyp verworfen.
 
 **API-Format**
 
@@ -42,7 +42,7 @@ PATCH /tenant/datatypes/{DATA_TYPE_ID}
 
 **Anfrage**
 
-Die folgende Anfrage stellt die `expansionArea` für einen Datentyp, der eine Immobilien-Property beschreibt.
+Die folgende Anfrage verwirft das Feld `expansionArea` für einen Datentyp, der ein Immobilienobjekt beschreibt.
 
 ```shell
 curl -X PATCH \
@@ -63,7 +63,7 @@ curl -X PATCH \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Aktualisierungsdetails der benutzerdefinierten Ressource zurück, wobei das veraltete Feld eine `meta:status` Wert von `deprecated`. Die folgende Beispielantwort wurde aus Platzgründen gekürzt.
+Eine erfolgreiche Antwort gibt die Aktualisierungsdetails der benutzerdefinierten Ressource zurück, wobei das verworfene Feld den Wert `meta:status` von `deprecated` enthält. Die folgende Beispielantwort wurde aus Platzgründen gekürzt.
 
 ```json
 {
@@ -163,13 +163,13 @@ Eine erfolgreiche Antwort gibt die Aktualisierungsdetails der benutzerdefinierte
 }
 ```
 
-## Standardfelder in Schemata nicht mehr verwenden {#standard}
+## Verwerfen eines Standardfelds in einem Schema {#standard}
 
-Felder von Standardklassen, Feldergruppen und Datentypen können nicht direkt entfernt werden. Stattdessen können Sie deren Verwendung in den einzelnen Schemas, die diese Standardressourcen verwenden, mithilfe eines Deskriptors verzögern.
+Felder von Standardklassen, Feldergruppen und Datentypen können nicht direkt verworfen werden. Stattdessen kann mithilfe eines Deskriptors ihre Verwendung in den einzelnen Schemata verworfen werden, die diese Standardressourcen verwenden.
 
-### Erstellen eines Deskriptors für die Einstellung von Feldern {#create-descriptor}
+### Erstellen eines Deskriptors zum Verwerfen eines Felds {#create-descriptor}
 
-Um einen Deskriptor für die Schemafelder zu erstellen, die veraltet werden sollen, stellen Sie eine POST-Anfrage an die `/tenant/descriptors` -Endpunkt.
+Um einen Deskriptor für die Schemafelder zu erstellen, die verworfen werden sollen, stellen Sie eine POST-Anfrage an den Endpunkt `/tenant/descriptors`.
 
 **API-Format**
 
@@ -197,9 +197,9 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `@type` | Der Typ des Deskriptors. Für einen Deskriptor zur Einstellung von Feldern muss dieser Wert auf `xdm:descriptorDeprecated`. |
+| `@type` | Der Typ des Deskriptors. Für einen Deskriptor zum Verwerfen von Feldern muss dieser Wert auf `xdm:descriptorDeprecated` gesetzt werden. |
 | `xdm:sourceSchema` | Der URI `$id` des Schemas, auf das Sie den Deskriptor anwenden. |
-| `xdm:sourceVersion` | Die Version des Schemas, auf das Sie den Deskriptor anwenden. Sollte auf `1`. |
+| `xdm:sourceVersion` | Die Version des Schemas, auf das Sie den Deskriptor anwenden. Sollte auf `1` gesetzt werden. |
 | `xdm:sourceProperty` | Der Pfad zur Eigenschaft innerhalb des Schemas, auf das Sie den Deskriptor anwenden. Wenn Sie den Deskriptor auf mehrere Eigenschaften anwenden möchten, können Sie eine Liste von Pfaden in Form eines Arrays bereitstellen (z. B. `["/firstName", "/lastName"]`). |
 
 **Antwort**
@@ -219,13 +219,13 @@ curl -X POST \
 }
 ```
 
-### Veraltetes Feld überprüfen {#verify-deprecation}
+### Überprüfen des verworfenen Felds {#verify-deprecation}
 
-Nachdem der Deskriptor angewendet wurde, können Sie überprüfen, ob das Feld veraltet ist, indem Sie das betreffende Schema nachschlagen und dabei die entsprechende `Accept` -Kopfzeile.
+Nachdem der Deskriptor angewendet wurde, können Sie überprüfen, ob das Feld verworfen wurde, indem Sie das betreffende Schema nachschlagen und dabei den entsprechenden `Accept`-Header verwenden.
 
 >[!NOTE]
 >
->Das Anzeigen veralteter Felder bei der Auflistung von Schemas wird derzeit nicht unterstützt.
+>Das Anzeigen verworfener Felder bei der Auflistung von Schemata wird derzeit nicht unterstützt.
 
 **API-Format**
 
@@ -235,7 +235,7 @@ GET /tenant/schemas
 
 **Anfrage**
 
-Um Informationen zu veralteten Feldern in die API-Antwort aufzunehmen, müssen Sie die Variable `Accept` -Kopfzeile zu `application/vnd.adobe.xed-deprecatefield+json; version=1`.
+Um Informationen zu verworfenen Feldern in die API-Antwort aufzunehmen, müssen Sie den `Accept`-Header auf `application/vnd.adobe.xed-deprecatefield+json; version=1` setzen.
 
 ```shell
 curl -X GET \
@@ -249,7 +249,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des Schemas zurück, wobei das veraltete Feld eine `meta:status` Wert von `deprecated`. Die folgende Beispielantwort wurde aus Platzgründen gekürzt.
+Eine erfolgreiche Antwort gibt die Details des Schemas zurück, wobei das verworfene Feld den Wert `meta:status` von `deprecated` enthält. Die folgende Beispielantwort wurde aus Platzgründen gekürzt.
 
 ```json
 "faxPhone": {
@@ -266,4 +266,4 @@ Eine erfolgreiche Antwort gibt die Details des Schemas zurück, wobei das veralt
 
 ## Nächste Schritte
 
-In diesem Dokument wurde beschrieben, wie XDM-Felder mithilfe der Schema Registry-API nicht mehr unterstützt werden. Weitere Informationen zum Konfigurieren von Feldern für benutzerdefinierte Ressourcen finden Sie im Handbuch unter [Definieren von XDM-Feldern in der API](./custom-fields-api.md). Weitere Informationen zum Verwalten von Deskriptoren finden Sie unter [Endpunktleitfaden für Deskriptoren](../api/descriptors.md).
+In diesem Dokument wird beschrieben, wie Sie XDM-Felder mithilfe der Schema Registry-API verwerfen können. Weitere Informationen zum Konfigurieren von Feldern für benutzerdefinierte Ressourcen finden Sie im Handbuch unter [Definieren von XDM-Feldern in der API](./custom-fields-api.md). Weitere Informationen zum Verwalten von Deskriptoren finden Sie unter [Handbuch für Deskriptoren-Endpunkte](../api/descriptors.md).
