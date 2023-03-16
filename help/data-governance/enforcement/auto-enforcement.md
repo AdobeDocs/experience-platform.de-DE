@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Automatische Richtliniendurchsetzung
 description: In diesem Dokument wird erläutert, wie Datennutzungsrichtlinien automatisch erzwungen werden, wenn in Experience Platform Segmente für Ziele aktiviert werden.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 30d8cc73128cff444ce06a8ab913aeb8fa816ed1
+source-git-commit: d0113390f49ba7ba7ecbbc40bdcd750a26040006
 workflow-type: tm+mt
 source-wordcount: '1887'
 ht-degree: 97%
@@ -119,7 +119,7 @@ Wenn Sie [Einverständnisrichtlinien erstellt haben](../policies/user-guide.md#c
 
 #### Verbesserung der Einverständnisrichtlinie für bezahlte Medien {#consent-policy-enhancement}
 
-Die Durchsetzung von Zustimmungsrichtlinien für Batch- und Streaming-Ziele, einschließlich der Aktivierung von Paid Media, wurde verbessert. Diese Verbesserung steht Kunden des Privacy and Security Shield oder des Health Care Shield zur Verfügung und entfernt proaktiv Profile aus Batch- und Streaming-Zielen, wenn sich der Zustimmungsstatus ändert. Außerdem wird sichergestellt, dass Einverständnisänderungen sofort propagiert werden, sodass immer die richtige Zielgruppe angesprochen wird.
+Verbesserung der Durchsetzung von Zustimmungsrichtlinien in [Batch](../../destinations/destination-types.md#file-based) und [Streaming](../../destinations/destination-types.md#streaming-destinations) -Ziele, einschließlich der Aktivierung gebührenpflichtiger Medien, wurden durchgeführt. Diese Verbesserung steht Kunden des Privacy and Security Shield oder des Health Care Shield zur Verfügung und entfernt proaktiv Profile aus Batch- und Streaming-Zielen, wenn sich der Zustimmungsstatus ändert. Außerdem wird sichergestellt, dass Einverständnisänderungen sofort propagiert werden, sodass immer die richtige Zielgruppe angesprochen wird.
 
 Diese Verbesserungen ermöglichen ein größeres Vertrauen in Ihre Marketing-Strategie, da Marketing-Fachleute nicht mehr gezwungen sind, ihrem Segmentausdruck manuell Einverständnisattribute hinzuzufügen. Dadurch wird sichergestellt, dass keine Profile versehentlich auf Marketing-Erlebnisse angesprochen werden, nachdem das Einverständnis widerrufen wurde oder das Profil nicht mehr für eine Einverständnisrichtlinie qualifiziert ist. Die Marketing-Einverständnisrichtlinien, die Regeln dafür festlegen, wie Einverständnis- oder Präferenzdaten über verschiedene Marketing-Workflows hinweg verwaltet werden sollen, werden jetzt in Aktivierungs-Workflows in nachgelagerten Lösungen automatisch durchgesetzt.
 
