@@ -2,23 +2,24 @@
 keywords: Experience Platform; Attributionsai-Übersicht; beliebte Themen; Attribution ai; Attribution ai
 feature: Attribution AI
 title: Attribution AI - Übersicht
-description: Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren. Beispiele für Touchpoints sind Impressionen auf Display-Anzeigen, E-Mail-Sendungen, E-Mail-Öffnungen und Paid-Search-Klicks.
-landing-page-description: Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
+description: Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Fachleuten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren. Beispiele für Touchpoints sind Impressionen auf Display-Anzeigen, E-Mail-Sendungen, E-Mail-Öffnungen und Paid-Search-Klicks.
+landing-page-description: Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Fachleuten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
+short-description: Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: b21367814e38fb5ee017709a29b39de982d59d24
 workflow-type: tm+mt
 source-wordcount: '499'
-ht-degree: 35%
+ht-degree: 40%
 
 ---
 
 # Attribution AI – Übersicht
 
-Attribution AI ist als Teil von Intelligent Services ein algorithmischer Mehrkanal-Zuordnungsdienst, der den Einfluss und die inkrementelle Auswirkung von Kundeninteraktionen auf bestimmte Ergebnisse berechnet. Mit Attribution AI können Marketing-Experten die Ausgaben für Marketing und Werbung messen und optimieren, indem sie die Auswirkungen jeder einzelnen Kundeninteraktion in jeder Phase der Journey verstehen.
+Attribution AI ist als Teil von Intelligent Services ein algorithmischer Mehrkanal-Zuordnungsdienst, der den Einfluss und die inkrementelle Auswirkung von Kundeninteraktionen auf bestimmte Ergebnisse berechnet. Mit Attribution AI können Marketing-Fachleute die Ausgaben für Marketing und Werbung messen und optimieren, indem sie die Auswirkungen einzelner Kundeninteraktionen in jeder Phase der Kunden-Journeys untersuchen.
 
 ## Grundlagen zu Attribution AI
 
-Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren. Beispiele für Touchpoints sind Impressionen auf Display-Anzeigen, E-Mail-Sendungen, E-Mail-Öffnungen und Paid-Search-Klicks.
+Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Fachleuten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren. Beispiele für Touchpoints sind Impressionen auf Display-Anzeigen, E-Mail-Sendungen, E-Mail-Öffnungen und Paid-Search-Klicks.
 
 Attribution AI-Ausgaben können in verschiedenen Dimensionen verteilt und auf verschiedenen Stufen der Journey verwendet werden. Dies wird erreicht, ohne dass geschäftliche Anforderungen in Probleme mit maschinellem Lernen übersetzt werden müssen, Algorithmen ausgewählt, Schulungen durchgeführt oder Modelle bereitgestellt werden müssen.
 
