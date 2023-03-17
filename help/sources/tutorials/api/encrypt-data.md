@@ -6,7 +6,7 @@ hidefromtoc: true
 source-git-commit: a1babf70a7a4e20f3e535741c95ac927597c9f48
 workflow-type: tm+mt
 source-wordcount: '967'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +16,7 @@ Mit Adobe Experience Platform können Sie verschlüsselte Dateien über Cloud-Sp
 
 Die verschlüsselte Datenaufnahme läuft wie folgt ab:
 
-1. [Erstellen Sie zunächst ein Verschlüsselungsschlüsselpaar mit Experience Platform-APIs](#create-encryption-key-pair). Das Verschlüsselungsschlüsselpaar besteht aus einem privaten Schlüssel und einem öffentlichen Schlüssel. Nach der Erstellung können Sie den öffentlichen Schlüssel zusammen mit der zugehörigen öffentlichen Schlüssel-ID und der Ablaufzeit kopieren oder herunterladen. Während dieses Vorgangs wird der private Schlüssel von Experience Platform in einem sicheren Tresor gespeichert. **HINWEIS:** Der öffentliche Schlüssel in der Antwort ist Base64-kodiert und muss vor der Verwendung entschlüsselt werden.
+1. [Erstellen Sie zunächst ein Verschlüsselungsschlüsselpaar mit Experience Platform-APIs](#create-encryption-key-pair). Das Verschlüsselungsschlüsselpaar besteht aus einem privaten Schlüssel und einem öffentlichen Schlüssel. Nach der Erstellung können Sie den öffentlichen Schlüssel zusammen mit der zugehörigen öffentlichen Schlüssel-ID und der Ablaufzeit kopieren oder herunterladen. Während dieses Vorgangs wird der private Schlüssel von Experience Platform in einem sicheren Tresor gespeichert. **HINWEIS**: Der öffentliche Schlüssel in der Antwort ist mit Base64 verschlüsselt und muss vor der Verwendung entschlüsselt werden.
 2. Verwenden Sie den öffentlichen Schlüssel, um die aufzunehmende Datendatei zu verschlüsseln.
 3. Legen Sie Ihre verschlüsselte Datei in Ihrem Cloud-Speicher ab.
 4. Sobald die verschlüsselte Datei fertig ist, [erstellen Sie eine Quellverbindung und einen Datenfluss für Ihre Cloud-Speicherquelle](#create-a-dataflow-for-encrypted-data). Während des Schritts zur Flusserstellung müssen Sie einen `encryption`-Parameter angeben und Ihre öffentliche Schlüssel-ID einschließen.
@@ -24,7 +24,7 @@ Die verschlüsselte Datenaufnahme läuft wie folgt ab:
 
 >[!IMPORTANT]
 >
->Die maximale Größe einer einzelnen verschlüsselten Datei beträgt 100 MB. Sie können beispielsweise Daten im Wert von 2 GB in einem einzelnen Datenfluss erfassen, jedoch darf jede einzelne Datei in diesen Daten nicht größer als 100 MB sein.
+>Die maximale Größe einer einzelnen verschlüsselten Datei beträgt 100 MB. Sie können beispielsweise Daten im Wert von 2 GB in einem einzelnen Datenfluss aufnehmen, jedoch darf jede einzelne Datei in diesen Daten nicht größer als 100 MB sein.
 
 In diesem Dokument wird beschrieben, wie Sie ein Verschlüsselungsschlüsselpaar zum Verschlüsseln Ihrer Daten generieren und diese verschlüsselten Daten mithilfe von Cloud-Speicherquellen in Experience Platform aufnehmen.
 
@@ -77,7 +77,7 @@ curl -X POST \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden Ihr Base64-kodierter öffentlicher Schlüssel, die Kennung des öffentlichen Schlüssels und die Ablaufzeit Ihrer Schlüssel zurückgegeben. Die Ablaufzeit wird automatisch auf 180 Tage nach dem Datum der Schlüsselgenerierung eingestellt. Die Ablaufzeit kann derzeit nicht konfiguriert werden.
+Bei erfolgreicher Antwort werden Ihr öffentlicher, mit Base64 verschlüsselter Schlüssel, die ID des öffentlichen Schlüssels und die Ablaufzeit Ihrer Schlüssel zurückgegeben. Die Ablaufzeit wird automatisch auf 180 Tage nach dem Datum der Schlüsselgenerierung eingestellt. Die Ablaufzeit kann derzeit nicht konfiguriert werden.
 
 ```json
 {

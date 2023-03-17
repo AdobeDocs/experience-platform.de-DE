@@ -7,7 +7,7 @@ feature: Queries
 source-git-commit: 135691e0d2b77cc8e2581ff3a614fe26c7969cdd
 workflow-type: tm+mt
 source-wordcount: '270'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 98%
       - [Handbuch zum Reporting-Insights-Datenmodell](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
    - Abgeleitete Attribute {#derived-attributes}
       - [Übersicht](data-distiller/derived-attributes/overview.md)
-      - [Nahtloser SQL-Ablauf](data-distiller/derived-attributes/seamless-sql-flow.md)
+      - [Nahtloser SQL-Fluss](data-distiller/derived-attributes/seamless-sql-flow.md)
       - [Erstellen von dezilbasierten abgeleiteten Attributen](data-distiller/derived-attributes/decile-based-derived-attributes.md)
 - Anwendungsfälle {#use-cases}
    - [Abgebrochenes Durchsuchen](use-cases/abandoned-browse.md)

@@ -7,7 +7,7 @@ feature: Schemas
 source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
 workflow-type: tm+mt
 source-wordcount: '518'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -194,7 +194,7 @@ ht-degree: 98%
    * [Definieren benutzerdefinierter Felder (API)](./tutorials/custom-fields-api.md)
    * [Hinzufügen empfohlener Werte zu einem Feld (API)](tutorials/suggested-values.md)
    * [Einstellen eines XDM-Felds in der Benutzeroberfläche](tutorials/field-deprecation-ui.md)
-   * [Veraltetes XDM-Feld in der API](tutorials/field-deprecation-api.md)
+   * [Ein XDM-Feld in der API verwerfen](tutorials/field-deprecation-api.md)
    * [Definieren einer Schemabeziehung in der Benutzeroberfläche](tutorials/relationship-ui.md)
    * [Definieren einer Schemabeziehung in der API](tutorials/relationship-api.md)
    * [Definieren einer Schemabeziehung in Real-time CDP B2B Edition](tutorials/relationship-b2b.md)

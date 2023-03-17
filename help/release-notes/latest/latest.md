@@ -3,8 +3,8 @@ title: Adobe Experience Platform – Versionshinweise
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2023.
 source-git-commit: ccd3df0bc045f98306901b2d734cf17262275f18
 workflow-type: tm+mt
-source-wordcount: '1316'
-ht-degree: 45%
+source-wordcount: '1292'
+ht-degree: 100%
 
 ---
 
@@ -33,9 +33,9 @@ Mit Adobe Assurance können Sie die Datenerfassung und die Bereitstellung von Er
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Öffentliche APIs | Die Adobe Assurance-APIs sind jetzt verfügbar. Die Assurance-APIs sind eine Sammlung von APIs, mit denen Benutzer ihre eigenen Web- und mobilen Apps testen und debuggen können, wenn sie mit der Adobe Assurance-Erweiterung mit dem Mobile SDK ausgestattet sind. Weitere Informationen zu den Assurance-APIs finden Sie im Abschnitt [Übersicht über die Assurance-API](https://developer.adobe.com/adobe-assurance-public-apis/). |
+| Öffentliche APIs | Die Adobe Assurance-APIs sind jetzt verfügbar. Die Assurance-APIs sind eine Sammlung von APIs, mit denen Benutzende ihre eigenen Web- und mobilen Apps testen und debuggen können, wenn sie mit der Adobe Assurance-Erweiterung mit dem Mobile SDK ausgestattet sind. Weitere Informationen zu den Assurance-APIs finden Sie in der [Übersicht über die Assurance-API](https://developer.adobe.com/adobe-assurance-public-apis/). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zu Assurance finden Sie in der [Assurance-Dokumentation](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
@@ -47,15 +47,15 @@ Weitere Informationen zu Assurance finden Sie in der [Assurance-Dokumentation](h
 
 | Funktion | Beschreibung |
 | ----------- | ----------- |
-| [Verbesserung der Einwilligungsrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) für Integrationen mit [dateibasierte (Batch-)Ziele](/help/destinations/destination-types.md#file-based) | <p> Wenn Profile nicht mehr für eine Zustimmungsrichtlinie qualifiziert sind, kommuniziert Experience Platform jetzt proaktiv ihren Richtlinienausstieg an dateibasierte Ziele. Dies folgt dem [-Version im Februar 2023](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) derselben Funktionalität für Streaming-Ziele. </p> <p> <b>Notiz</b>: Diese Funktion steht nur Kunden von **[!UICONTROL Privacy und Security Shield]** sowie **[!UICONTROL Healthcare Shield]** zur Verfügung. </p> |
+| [Verbesserung der Einverständnisrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) für Integrationen in [dateibasierte (Batch-)Ziele](/help/destinations/destination-types.md#file-based) | <p> Wenn Profile nicht mehr für eine Einverständnisrichtlinie qualifiziert sind, wird deren Richtlinienausstieg nun proaktiv von Experience Platform an dateibasierten Zielen mitgeteilt. Dies folgt der [Freigabe im Februar 2023](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) der gleichen Funktionalität für Streaming-Ziele. </p> <p> <b>Hinweis</b>: Diese Funktion steht nur Kunden von **[!UICONTROL Privacy und Security Shield]** sowie **[!UICONTROL Healthcare Shield]** zur Verfügung. </p> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Neue oder aktualisierte Dokumentation** {#destinations-new-updated-documentation}
 
 | Dokumentation | Beschreibung |
 | ----------- | ----------- |
-| Funktionsweise der Dokumentation zu Zielen | <p>Wir haben drei neue Erklärungsartikel zur Funktionsweise von Zielen veröffentlicht, die auf allgemeinen Fragen von Benutzern basieren:</p> <p><ul><li>[Konfigurierbare und allgemeine Exporteinstellungen in Zielen](/help/destinations/how-destinations-work/destinations-configurations.md)</li><li>[Profilexportverhalten für verschiedene Zieltypen](/help/destinations/how-destinations-work/profile-export-behavior.md)</li><li>[Umgang mit Identitäten im Aktivierungs-Workflow für Ziele](/help/destinations/how-destinations-work/identity-handling.md)</li></p> |
+| Funktionsweise der Dokumentation zu Zielen | <p>Wir haben drei neue Erklärungsartikel zur Funktionsweise von Zielen veröffentlicht, die auf allgemeinen Fragen von Benutzenden basieren:</p> <p><ul><li>[Konfigurierbare und allgemeine Exporteinstellungen in Zielen](/help/destinations/how-destinations-work/destinations-configurations.md)</li><li>[Profilexportverhalten für verschiedene Zieltypen](/help/destinations/how-destinations-work/profile-export-behavior.md)</li><li>[Umgang mit Identitäten im Aktivierungs-Workflow für Ziele](/help/destinations/how-destinations-work/identity-handling.md)</li></p> |
 
 Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
@@ -67,46 +67,46 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Einstellung von Feldern über die Benutzeroberfläche | Sie können jetzt [veraltete Felder aus Ihren Schemata, nachdem Daten erfasst wurden](../../xdm/tutorials/field-deprecation-ui.md). Die Einstellung von XDM-Feldern ermöglicht es Ihnen, Felder aus der UI-Ansicht zu entfernen und sie gleichzeitig für die Verwendung beizubehalten. Bei Bedarf können veraltete Felder erneut angezeigt werden. Alle Segmente, Abfragen oder nachgelagerten Lösungen, die auf die Felder verweisen, werden wie gewohnt ausgeführt. |
+| Einstellung von Feldern über die Benutzeroberfläche | Sie können jetzt [Felder aus Ihren Schemata verwerfen, nachdem Daten erfasst wurden](../../xdm/tutorials/field-deprecation-ui.md). Das Verwerfen von XDM-Feldern ermöglicht es Ihnen, Felder aus der Ansicht der Benutzeroberfläche zu entfernen und sie gleichzeitig für die Verwendung beizubehalten. Bei Bedarf können verworfene Felder erneut angezeigt werden. Alle Segmente, Abfragen oder nachgelagerten Lösungen, die auf die Felder verweisen, werden wie gewohnt ausgeführt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Neue XDM-Komponenten**
 
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
-| Klasse | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1669/files) | Die Klasse &quot;XDM Individual Prospect Profile&quot;führt von Partnern bereitgestellte IDs ein. |
+| Klasse | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1669/files) | Die Klasse „XDM Individual Prospect Profile“ führt IDs ein, die von Partnerseite bereitgestellt werden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Aktualisierte XDM-Komponenten**
 
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
-| Feldergruppe | [!UICONTROL Begrenzung der Häufigkeit] | Die [!UICONTROL Begrenzung der Häufigkeit] Feldergruppe wurde [aktualisiert, um Wiederholungs- und benutzerdefinierte Ereignisse zu unterstützen](https://github.com/adobe/xdm/pull/1641/files). |
-| Datentyp | [!UICONTROL Webverweiser] | Eigenschaften von Webverweisen [aktualisiert um `xdm:linkName` und `xdm:linkRegion`](https://github.com/adobe/xdm/pull/1666/files). Dies sind jeweils der Name und die Region des HTML-Elements, das auf der vorherigen Seite ausgewählt wurde. |
-| Feldergruppe | [!UICONTROL Adobe CJM ExperienceEvent – Details zur Nachrichteninteraktion] | [Die [!UICONTROL Tracker-URL] wurde hinzugefügt](https://github.com/adobe/xdm/pull/1665/files) der [!UICONTROL Adobe CJM ExperienceEvent]. Dieser Tracker stellt die vom Benutzer ausgewählte URL bereit. |
-| Feldergruppe | [!UICONTROL Adobe CJM ExperienceEvent - Details zur Nachrichteninteraktion] | [Leer `meta:enum` Eigenschaft wurde entfernt](https://github.com/adobe/xdm/pull/1668/files) aus der URL [!UICONTROL Tracking-Typ] -Feld. |
-| Datentyp | [!UICONTROL Media information] | [Das Regex-Muster aus dem `videoSegment` -Eigenschaft in [!UICONTROL Medieninformationen] Datentyp wurde entfernt](https://github.com/adobe/xdm/pull/1667/files). |
+| Feldergruppe | [!UICONTROL Frequency Capping Constraints] | Die Feldergruppe [!UICONTROL Frequency Capping Constraints] wurde [aktualisiert, um Wiederholungs- und benutzerdefinierte Ereignisse zu unterstützen](https://github.com/adobe/xdm/pull/1641/files). |
+| Datentyp | [!UICONTROL Web-Referrer] | Eigenschaften der Web-Referrer wurden [aktualisiert, sodass sie `xdm:linkName` und `xdm:linkRegion`](https://github.com/adobe/xdm/pull/1666/files) beinhalten. Dabei handelt es sich um den Namen und die Region des HTML-Elements, das auf der vorherigen Seite ausgewählt wurde. |
+| Feldergruppe | [!UICONTROL Adobe CJM ExperienceEvent – Details zur Nachrichteninteraktion] | [Das Feld [!UICONTROL Tracker URL] wurde](https://github.com/adobe/xdm/pull/1665/files) der Klasse [!UICONTROL Adobe CJM ExperienceEvent] hinzugefügt. Dieser Tracker stellt die von Benutzenden ausgewählte URL bereit. |
+| Feldergruppe | [!UICONTROL Adobe CJM ExperienceEvent – Details zur Nachrichteninteraktion] | [Die leere Eigenschaft `meta:enum` wurde](https://github.com/adobe/xdm/pull/1668/files) aus dem Feld URL [!UICONTROL Tracking Type] entfernt. |
+| Datentyp | [!UICONTROL Media information] | [Das Regex-Muster wurde aus der Eigenschaft `videoSegment` im Datentyp [!UICONTROL Medieninformationen] entfernt](https://github.com/adobe/xdm/pull/1667/files). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-Weitere Informationen zu XDM in Platform finden Sie unter [XDM-System - Übersicht](../../xdm/home.md).
+Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md).
 
 ## Query Service {#query-service}
 
-Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von Daten in Adobe Experience Platform [!DNL Data Lake]. Sie können beliebige Datensätze aus Data Lake verbinden und die Abfrageergebnisse als neuen Datensatz erfassen, der für die Berichterstellung, Data Science Workspace oder für die Aufnahme in das Echtzeit-Kundenprofil verwendet werden kann.
+Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von Daten in Adobe Experience Platform [!DNL Data Lake]. Sie können beliebige Datensätze aus dem Data Lake verbinden und die Abfrageergebnisse als neuen Datensatz für die Verwendung in Berichten, im Datenwissenschafts-Arbeitsbereich oder für die Aufnahme in das Echtzeit-Kundenprofil verwenden.
 
 **Aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Aktivieren von Datensätzen für Profile mit SQL | [Verwenden Sie LABELs in CTAS-Abfragen, um einen Datensatz &quot;profile&quot;zu aktivieren](../../query-service/sql/syntax.md#create-table-as-select)oder verwenden Sie ALTER, um vorhandene Datensätze zu aktualisieren, damit sie für das Profil aktiviert werden. Sie können dieses erweiterte SQL-Konstrukt verwenden, um nahtlose Unterstützung für abgeleitete Attribute für Ihre geschäftlichen Anwendungsfälle des Echtzeit-Kundenprofils bereitzustellen. Siehe [Nahtloser SQL-Ablauf für das Dokument mit abgeleiteten Attributen](../../query-service/data-distiller/derived-attributes/seamless-sql-flow.md) für weitere Details. |
-| Überwachen von geplanten Abfragen  | Verwenden Sie die [Registerkarte &quot;Geplante Abfragen&quot;](../../query-service/ui/monitor-queries.md) , um wichtige Informationen zu Ihren Abfrageausführungen zu erhalten und Warnhinweise zu abonnieren. Überwachen Sie Abfragen auf Planungsdetails, Status und Fehlermeldungen/Codes, falls diese fehlschlagen. |
+| Aktivieren von Datensätzen für Profile mit SQL | [Verwenden Sie LABELs in CTAS-Abfragen, um einen Datensatz als „profile enabled“ zu markieren](../../query-service/sql/syntax.md#create-table-as-select), oder verwenden Sie ALTER, um vorhandene Datensätze zu aktualisieren, damit sie für das Profil aktiviert werden. Sie können dieses erweiterte SQL-Konstrukt verwenden, um nahtlose Unterstützung für abgeleitete Attribute für Ihre geschäftlichen Anwendungsfälle des Echtzeit-Kundenprofils bereitzustellen. Weitere Informationen finden Sie unter [Nahtloser SQL-Ablauf für das Dokument mit abgeleiteten Attributen](../../query-service/data-distiller/derived-attributes/seamless-sql-flow.md). |
+| Überwachen von geplanten Abfragen  | Verwenden Sie die [Registerkarte „Geplante Abfragen“](../../query-service/ui/monitor-queries.md), um wichtige Informationen zur Ausführung Ihrer Abfragen zu erhalten und Warnhinweise zu abonnieren. Überwachen Sie Abfragen auf Planungsdetails, Status und Fehlermeldungen/-codes, falls sie fehlschlagen. |
 | Umschalten der Funktion zur automatischen Vervollständigung | Beseitigen Sie bestimmte Metadatenbefehle und verbessern Sie die Verarbeitungszeiten durch [Umschalten der Funktion zum automatischen Vervollständigen des Abfrage-Editors](../../query-service/ui/user-guide.md#auto-complete). Diese Funktion schlägt während des Schreibens automatisch potenzielle SQL-Schlüsselwörter und Tabellendetails für die Abfrage vor. |
-| Datensatzbeispiele | Geben Sie in Ihrer Abfrage eine Sampling-Rate an und [Verwenden Sie Datensatzbeispiele, um eine einheitliche Stichprobe zu erstellen.](../../query-service/essential-concepts/dataset-samples.md), oder erstellen Sie bedingte Beispiele basierend auf bestimmten Kriterien. |
+| Datensatzbeispiele | Geben Sie in Ihrer Abfrage eine Sampling-Rate an und [verwenden Sie Datensatzbeispiele, um eine einheitliche Stichprobe zu erstellen](../../query-service/essential-concepts/dataset-samples.md), oder erstellen Sie bedingte Beispiele basierend auf bestimmten Kriterien. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen über Abfrage-Services finden Sie unter [Abfrage-Service – Übersicht](../../query-service/home.md).
 
@@ -118,11 +118,11 @@ Real-Time CDP B2B Edition basiert auf Real-time Customer Data Platform (Real-Tim
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Zugehörige Kontodienste aktivieren | Mit der neuen Umschalter-Funktion können Sie den zugehörigen Kontodienst für Ihr Konto aktivieren. Weitere Informationen finden Sie im Handbuch unter [Aktivieren des zugehörigen Kontodienstes](../../rtcdp/b2b-ai-ml-services/related-accounts.md#enable). |
+| Aktivieren zugehöriger Kontodienste | Mit der neuen Umschalter-Funktion können Sie den zugehörigen Kontodienst für Ihr Konto aktivieren. Weitere Informationen finden sich im Handbuch unter [Aktivieren des zugehörigen Kontodienstes](../../rtcdp/b2b-ai-ml-services/related-accounts.md#enable). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-Weitere Informationen zu Real-Time CDP B2B Edition finden Sie im Abschnitt [Übersicht über Real-Time CDP B2B Edition](../../rtcdp/overview.md).
+Weitere Informationen über Real-Time CDP B2B Edition finden Sie in der [Übersicht zu Real-Time CDP B2B Edition](../../rtcdp/overview.md).
 
 ## Quellen {#sources}
 
@@ -134,10 +134,10 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Zugriff auf Abonnementebene festlegen mit [!DNL Google PubSub] | Sie können jetzt den Zugriff auf ein bestimmtes Themenabo definieren, wenn Sie die [!DNL Google PubSub] Quelle durch Angabe der Anmelde-ID bei der Authentifizierung. Weitere Informationen finden Sie im Abschnitt [!DNL Google PubSub] Authentifizierungs-Tutorial [Verwenden der Flow Service-API](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) oder [Platform-Benutzeroberfläche](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
-| Erfassen benutzerdefinierter Aktivitätsdaten aus [!DNL Marketo] | Sie können jetzt benutzerdefinierte Aktivitätsdaten aus Ihren [!DNL Marketo] -Instanz zu Experience Platform. Um benutzerdefinierte Aktivitätsdaten zu erfassen, müssen Sie im Schema B2B-Aktivitäten benutzerdefinierte Aktivitätsfeldgruppen einrichten und einen Datenfluss mithilfe des Aktivitäts-Datensatzes erstellen. Sobald der Datenfluss abgeschlossen ist, enthält der aufgenommene Datensatz sowohl standardmäßige als auch benutzerdefinierte Aktivitäten aus Ihren [!DNL Marketo] -Instanz. Sie können dann [Query Service](../../query-service/home.md) , um auf Ihre benutzerdefinierten Aktivitätsdatensätze in Platform zuzugreifen. Weitere Informationen finden Sie im Handbuch unter [Erstellen eines Datenflusses für benutzerdefinierte Aktivitätsdaten](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
-| Nicht beanspruchte Konten ausschließen von [!DNL Marketo] | Sie können jetzt konfigurieren, ob nicht beanspruchte Konten bei der Erfassung ausgeschlossen oder einbezogen werden sollen, wenn Sie einen Datenfluss für Unternehmensdaten erstellen. Weitere Informationen finden Sie im Handbuch unter [Erstellen einer Quellverbindung und eines Datenflusses für [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
+| Festlegen des Zugriffs auf Abonnementebene mit [!DNL Google PubSub] | Sie können jetzt den Zugriff auf ein bestimmtes Themenabonnement definieren, wenn Sie die Quelle [!DNL Google PubSub] durch Angabe der Anmelde-ID bei der Authentifizierung verwenden. Weitere Informationen finden sich im [!DNL Google PubSub]-Authentifizierungs-Tutorial im Abschnitt [Verwenden der Flow Service-API](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) oder [Platform-Benutzeroberfläche](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
+| Aufnehmen benutzerdefinierter Aktivitätsdaten aus [!DNL Marketo] | Jetzt können benutzerdefinierte Aktivitätsdaten aus Ihrer [!DNL Marketo]-Instanz zu Experience Platform hinzugefügt werden. Um benutzerdefinierte Aktivitätsdaten aufzunehmen, müssen im Schema „B2B-Aktivitäten“ benutzerdefinierte Aktivitätsfeldgruppen eingerichtet und ein Datenfluss mithilfe des Aktivitäts-Datensatzes erstellt werden. Sobald der Datenfluss abgeschlossen ist, enthält der aufgenommene Datensatz sowohl standardmäßige als auch benutzerdefinierte Aktivitäten aus Ihrer [!DNL Marketo]-Instanz. Sie können dann den [Abfrage-Service](../../query-service/home.md) verwenden, um in Platform auf die Datensätze der benutzerdefinierten Aktivitäten zuzugreifen. Weitere Informationen finden sich im Handbuch unter [Erstellen eines Datenflusses für Daten zu benutzerdefinierten Aktivitäten](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
+| Ausschließen nicht beanspruchter Konten von [!DNL Marketo] | Jetzt kann beim Erstellen eines Datenflusses für Unternehmensdaten konfiguriert werden, ob nicht beanspruchte Konten bei der Erfassung ausgeschlossen oder einbezogen werden sollen. Weitere Informationen finden sich im Handbuch unter [Erstellen einer Quellverbindung und eines Datenflusses für [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weiterführende Informationen zu Quellen finden Sie in der [Übersicht über Quellen](../../sources/home.md).

@@ -8,7 +8,7 @@ feature: Web SDK
 source-git-commit: b53be9f2f2d55d5f9e8081fb0ca6732dcc2a8c11
 workflow-type: tm+mt
 source-wordcount: '209'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -32,8 +32,8 @@ ht-degree: 94%
    * [Konfigurieren eines Datenstroms](./datastreams/configure.md)
    * [Datenvorbereitung für die Datenerfassung](./datastreams/data-prep.md)
    * Datenanreicherung {#data-enrichment}
-      * [Wetterdaten nach dem Wetterkanal](./datastreams/data-enrichment/weather.md)
-      * [Wetterdatenfeldzuordnungen](./datastreams/data-enrichment/weather-reference.md)
+      * [Wetterdaten von „The Weather Channel“](./datastreams/data-enrichment/weather.md)
+      * [Wetterdaten-Feldzuordnungen](./datastreams/data-enrichment/weather-reference.md)
 * Identität {#identity}
    * [Übersicht](identity/overview.md)
    * [IDs von Erstanbieter-Geräten](identity/first-party-device-ids.md)
@@ -57,7 +57,7 @@ ht-degree: 94%
       * [Zugriff auf Antwort-Token](personalization/adobe-target/accessing-response-tokens.md)
       * [Verwenden der mBox-Drittanbieter-ID](personalization/adobe-target/using-mbox-3rdpartyid.md)
       * [Vergleich der at.js-Bibliothek mit dem Web SDK](personalization/adobe-target/web-sdk-atjs-comparison.md)
-      * Analytics for Target(A4T)-Protokollierung {#a4t}
+      * Analytics for Target (A4T)-Protokollierung {#a4t}
          * [Überblick](personalization/adobe-target/analytics-logging/overview.md)
          * [Client-seitig Protokollierung](personalization/adobe-target/analytics-logging/client-side.md)
          * [Server-seitige Protokollierung](personalization/adobe-target/analytics-logging/server-side.md)

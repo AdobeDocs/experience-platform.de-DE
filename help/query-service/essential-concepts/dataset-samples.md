@@ -5,7 +5,7 @@ exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
 source-git-commit: 13779e619345c228ff2a1981efabf5b1917c4fdb
 workflow-type: tm+mt
 source-wordcount: '639'
-ht-degree: 76%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +18,7 @@ Da viele Benutzende keine genaue Antwort für einen Aggregatvorgang für einen D
 Um Ihnen bei der Verwaltung Ihrer Beispiele für die annähernde Abfrageverarbeitung zu helfen, unterstützt der Abfrage-Service die folgenden Vorgänge für Datensatzbeispiele:
 
 - [Erstellen einer einheitlichen Stichprobe für zufällige Datensätze.](#create-a-sample)
-- [Optional Filterkriterien angeben](##optional-filter-criteria)
+- [Optionale Filterkriterien angeben.](##optional-filter-criteria)
 - [Anzeigen der Beispielliste für eine ADLS-Tabelle.](#view-list-of-samples)
 - [Direktes Abfragen der Beispieldatensätze.](#query-sample-datasets)
 - [Löschen eines Beispiels.](#delete-a-sample)
@@ -26,7 +26,7 @@ Um Ihnen bei der Verwaltung Ihrer Beispiele für die annähernde Abfrageverarbei
 
 ## Erste Schritte {#get-started}
 
-Um die in diesem Dokument beschriebenen Funktionen zum Erstellen und Löschen von Näherungsabfragen zu verwenden, müssen Sie das Sitzungs-Flag auf `true`. Geben Sie in der Befehlszeile des Abfrage-Editors oder Ihres PSQL-Clients die `SET aqp=true;` Befehl.
+Um die in diesem Dokument beschriebenen Funktionen zum Erstellen und Löschen von Näherungsabfragen zu verwenden, müssen Sie das Sitzungs-Flag auf `true` setzen. Geben Sie in der Befehlszeile des Abfrage-Editors oder Ihres PSQL-Clients den Befehl `SET aqp=true;` ein.
 
 >[!NOTE]
 >
@@ -48,9 +48,9 @@ Die Stichprobenrate ist der Prozentsatz der Datensätze, die aus dem ursprüngli
 ANALYZE TABLE example_dataset_name TABLESAMPLE SAMPLERATE 5.0;
 ```
 
-## Optional Filterkriterien angeben {#optional-filter-criteria}
+## Optionale Filterkriterien angeben {#optional-filter-criteria}
 
-Sie können auch ein Filterkriterium für Ihre einheitlichen zufälligen Proben festlegen. Auf diese Weise können Sie ein Muster erstellen, das auf der gefilterten Untergruppe der analysierten Tabelle basiert.
+Sie können auch ein Filterkriterium für Ihre einheitlichen zufälligen Beispiele festlegen. Auf diese Weise können Sie ein Muster erstellen, das auf der gefilterten Untergruppe der analysierten Tabelle basiert.
 
 Beim Erstellen eines Beispiels wird zunächst der optionale Filter angewendet, dann wird das Beispiel aus der gefilterten Ansicht des Datensatzes erstellt. Ein Datensatzbeispiel mit angewendetem Filter folgt dem folgenden Abfrageformat:
 
@@ -68,7 +68,7 @@ Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestam
 Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND (product.name = "product1" OR product.name = "product2")) SAMPLERATE 10;
 ```
 
-In den bereitgestellten Beispielen lautet der Tabellenname `large_table`, lautet die Filterbedingung für die ursprüngliche Tabelle . `month(to_timestamp(timestamp)) in ('8', '9')`und die Stichprobenrate (X % der gefilterten Daten) beträgt, in diesem Fall `10`.
+In den bereitgestellten Beispielen lautet der Tabellenname `large_table`, die Filterbedingung für die ursprüngliche Tabelle lautet `month(to_timestamp(timestamp)) in ('8', '9')`, und die Stichprobenrate (X % der gefilterten Daten) ist in diesem Fall `10`.
 
 ## Anzeigen der Liste der Stichproben {#view-list-of-samples}
 
