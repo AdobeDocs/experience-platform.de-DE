@@ -2,9 +2,9 @@
 title: Adobe Analytics Source Connector für Report Suite-Daten
 description: Dieses Dokument bietet Ihnen einen Überblick über Analytics und beschreibt die Anwendungsfälle für Analytics-Daten.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 486f5bdd834808c6262f41c0b0187721fc9b0799
+source-git-commit: 35298fc6b3e272c1b7b14cfa17713d18427ba2ce
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1042'
 ht-degree: 20%
 
 ---
@@ -50,7 +50,7 @@ Die erwartete Latenz für Analytics-Daten in Platform ist in der folgenden Tabel
 | Analytics-Daten | Erwartete Latenz |
 | -------------- | ---------------- |
 | Neue Daten in [!DNL Real-Time Customer Profile] (A4T **not** enabled) | &lt; 2 Minuten |
-| Neue Daten in [!DNL Real-Time Customer Profile] (A4T **is** enabled) | &lt; 15 Minuten |
+| Neue Daten in [!DNL Real-Time Customer Profile] (A4T **is** enabled) | bis zu 30 Minuten |
 | Neue Daten an Data Lake | &lt; 90 Minuten |
 | Aufstockung von weniger als 10 Milliarden Ereignissen | &lt; 4 Wochen |
 
