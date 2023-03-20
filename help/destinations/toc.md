@@ -4,9 +4,9 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: 9fd11ecbd2d9747088a31b0f25fc8be9990292e3
+source-git-commit: 5095ba2a2c40194aac3b9b0c985d36fd9fca864b
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1046'
 ht-degree: 98%
 
 ---
@@ -169,6 +169,7 @@ ht-degree: 98%
       * [Adobe Livefyre-Erweiterung](./catalog/social/adobe-livefyre.md)
       * [Facebook-Verbindung](./catalog/social/facebook.md)
       * [LinkedIn Matched Audiences-Verbindung](./catalog/social/linkedin.md)
+      * [TikTok-Verbindung](./catalog/social/tiktok.md)
       * [[!DNL Twitter Custom Audiences]-Verbindung](./catalog/social/twitter.md)
    * Streaming-Ziele {#streaming}
       * [HTTP-API-Verbindung](./catalog/streaming/http-destination.md)
