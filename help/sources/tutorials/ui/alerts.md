@@ -3,18 +3,22 @@ keywords: Experience Platform; Homepage; beliebte Themen Warnungen
 description: Sie können Warnhinweise abonnieren, wenn Sie einen Datenfluss erstellen, um Warnhinweise zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten.
 title: In-Context-Warnhinweise in der Benutzeroberfläche abonnieren
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: d450dc7b0dc0303c9d33c3e8e003659e3140cf5b
+source-git-commit: 3f7f66c0d58d127299ad12027869ca0e9837f5cd
 workflow-type: tm+mt
-source-wordcount: '845'
-ht-degree: 14%
+source-wordcount: '868'
+ht-degree: 16%
 
 ---
 
 # Warnhinweise für Datenflüsse zu Quellen in der Benutzeroberfläche abonnieren
 
+>[!NOTE]
+>
+>Warnhinweise werden in Nicht-Produktions-Sandboxes nicht unterstützt. Um Warnhinweise abonnieren zu können, müssen Sie sicherstellen, dass Sie eine Produktions-Sandbox verwenden.
+
 Mit Adobe Experience Platform können Sie ereignisbasierte Warnhinweise zu Adobe Experience Platform-Aktivitäten abonnieren. Warnhinweise verringern oder beseitigen die Notwendigkeit, die [[!DNL Observability Insights] API](../../../observability/api/overview.md) abzufragen, um zu überprüfen, ob ein Auftrag abgeschlossen wurde, ob ein bestimmter Meilenstein innerhalb eines Arbeitsablaufs erreicht wurde oder ob Fehler aufgetreten sind.
 
-Sie können Warnhinweise abonnieren, wenn Sie einen Datenfluss erstellen, um Warnhinweise zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten.
+Sie können jetzt beim Erstellen eines Ziel-Datenflusses Warnhinweise abonnieren, um Benachrichtigungen zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten.
 
 In diesem Dokument erfahren Sie, wie Sie Warnhinweise für Ihren Datenfluss zu Quellen abonnieren.
 
@@ -103,7 +107,7 @@ Weitere Informationen zur Verarbeitung von Datenflug-Fehlern finden Sie im Handb
 
 Warnhinweise für Ihre Datenflüsse werden Ihnen auch per E-Mail zugestellt. Wählen Sie den Namen des Datenflusses im E-Mail-Textkörper aus, um weitere Informationen zu Ihrem Datenfluss anzuzeigen.
 
-![email](../../images/tutorials/alerts/email.png)
+![E-Mail](../../images/tutorials/alerts/email.png)
 
 Ähnlich wie bei der UI-Warnung wird die [!UICONTROL Übersicht über Datenfluss] angezeigt werden. Sie erhalten eine Oberfläche, über die Sie alle mit Ihrem Datenfluss verbundenen Fehler untersuchen können.
 

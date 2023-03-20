@@ -4,14 +4,18 @@ title: Warnhinweise – Übersicht
 description: Erfahren Sie mehr über Warnhinweise in Adobe Experience Platform, einschließlich der Struktur der Definition von Warnhinweisregeln.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: b1c82169056e66b9cdcf99f73daa7d37a3a01600
+source-git-commit: 37700c3b3b728b59083fd51cabf1d8e4b8213580
 workflow-type: tm+mt
-source-wordcount: '760'
-ht-degree: 97%
+source-wordcount: '774'
+ht-degree: 94%
 
 ---
 
 # Warnhinweise – Übersicht
+
+>[!NOTE]
+>
+>Warnhinweise werden in Nicht-Produktions-Sandboxes nicht unterstützt. Um Warnhinweise abonnieren zu können, müssen Sie sicherstellen, dass Sie eine Produktions-Sandbox verwenden.
 
 Mit Adobe Experience Platform können Sie ereignisbasierte Warnhinweise zu Adobe Experience Platform-Aktivitäten abonnieren. Warnhinweise verringern oder beseitigen die Notwendigkeit, die [[!DNL Observability Insights] API](../api/overview.md) abzufragen, um zu überprüfen, ob ein Auftrag abgeschlossen wurde, ob ein bestimmter Meilenstein innerhalb eines Arbeitsablaufs erreicht wurde oder ob Fehler aufgetreten sind.
 
@@ -29,7 +33,7 @@ Warnhinweise von Platform können einmalig gesendet werden oder in einem vordefi
 | Wiederholt sich nicht. | Kann sich wiederholen, wenn die anormale Bedingung bestehen bleibt. |
 | Zu den Beispielen gehören:<ul><li>Die Datenaufnahme wurde erfolgreich abgeschlossen.</li><li>Die Ausführung einer Abfrage wurde abgeschlossen.</li><li>Die Daten wurden gelöscht.</li></ul> | Zu den Beispielen gehören:<ul><li>Die Aufnahmedauer überschreitet den übersteigt das vereinbarte Service-Niveau (SLA).</li><li>Die tägliche Aufnahme erfolgte in den letzten 24 Stunden nicht.</li><li>Die Fehlerrate des Stream-Prozessors liegt über dem konfigurierten Schwellenwert.</li><li>Die Gesamtzahl der Profile übersteigt die zulässige Anzahl.</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Anatomie eines Warnhinweises
 
@@ -43,7 +47,7 @@ Ein Warnhinweis kann in die folgenden Komponenten unterteilt werden:
 | **Aktion** | Wenn ein Warnhinweis ausgelöst wird, wird eine Aktion ausgeführt. Insbesondere werden Nachrichten über einen Versandkanal an die entsprechenden Empfänger gesendet, z. B. einen vorkonfigurierten Webhook oder die Experience Platform-Benutzeroberfläche. |
 | **Häufigkeit** | (Optional) Ein Warnhinweis kann so konfiguriert werden, dass er seine Aktion in einem bestimmten Intervall wiederholt, solange seine Bedingung wahr bleibt oder anderweitig ungelöst ist. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Empfangen und Verwalten von Warnungen
 
@@ -71,7 +75,7 @@ Um mit Warnhinweisen in der Platform-Benutzeroberfläche zu arbeiten, müssen Si
 | Verwalten von Warnhinweisen* | Ermöglicht die Aktivierung und Deaktivierung von Warnhinweisregeln über die Registerkarte [!UICONTROL Warnhinweise]. |
 | Auflösen von Warnhinweisen* | Ermöglicht die Auflösung von ausgelösten Warnhinweisen über die Registerkarte [!UICONTROL Warnhinweise]. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 * *Um auf die Registerkarte [!UICONTROL Warnhinweise] zugreifen zu können, müssen Sie außerdem über die Berechtigung „Warnhinweise anzeigen“ verfügen.*
 
