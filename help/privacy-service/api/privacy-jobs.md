@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy Jobs API Endpoint
 description: Erfahren Sie, wie Sie mit der Privacy Service-API Datenschutzaufträge für Experience Cloud-Apps verwalten.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
 workflow-type: tm+mt
-source-wordcount: '1451'
-ht-degree: 63%
+source-wordcount: '1549'
+ht-degree: 58%
 
 ---
 
@@ -40,7 +40,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 | `{PAGE}` | Die Seite der anzuzeigenden Daten mit 0-basierter Nummerierung. Die Standardeinstellung lautet `0`. |
 | `{SIZE}` | Die Anzahl der Ergebnisse, die auf jeder Seite angezeigt werden sollen. Der Standardwert ist `1` und der Maximalwert ist `100`. Wenn Sie den Maximalwert überschreiten, gibt die API einen 400-Code-Fehler zurück. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -63,6 +63,12 @@ Eine erfolgreiche Antwort gibt eine Liste von Aufträgen zurück, wobei jeder Au
 Um den nächsten Ergebnissatz in einer paginierten Antwort abzurufen, müssen Sie einen weiteren API-Aufruf an denselben Endpunkt ausführen, während Sie den Abfrageparameter `page` um 1 erhöhen.
 
 ## Erstellen eines Datenschutzauftrags {#create-job}
+
+>[!IMPORTANT]
+>
+>Privacy Service ist nur für Anfragen der betroffenen Person und von Verbraucherrechten vorgesehen. Jegliche andere Verwendung von Privacy Service für die Datenbereinigung oder -wartung wird nicht unterstützt oder ist nicht zulässig. Die Adobe ist gesetzlich verpflichtet, sie rechtzeitig zu erfüllen. Daher sind Lasttests auf dem Privacy Service nicht zulässig, da es sich um eine reine Produktionsumgebung handelt und einen unnötigen Rückstau gültiger Datenschutzanfragen erzeugt.
+>
+>Es gibt jetzt eine feste tägliche Upload-Grenze, um Missbrauch des Dienstes zu verhindern. Benutzer, bei denen das System missbraucht wurde, haben keinen Zugriff auf den Dienst. Anschließend wird mit ihnen ein Treffen abgehalten, auf dem ihre Maßnahmen erörtert und die annehmbare Verwendung für den Privacy Service erörtert werden.
 
 Bevor Sie eine neue Auftragsanfrage erstellen, müssen Sie zunächst identifizierende Informationen zu den betroffenen Personen erfassen, deren Daten Sie aufrufen, löschen oder für die Sie ein Opt-out aus dem Verkauf erwirken möchten. Sobald Sie über die erforderlichen Daten verfügen, müssen Sie sie in der Payload einer POST-Anfrage an die `/jobs` -Endpunkt.
 
@@ -162,7 +168,7 @@ curl -X POST \
 | `mergePolicyId` | Bei Datenschutzanfragen für Echtzeit-Kundenprofil (`profileService`), können Sie optional die ID der spezifischen [Zusammenführungsrichtlinie](../../profile/merge-policies/overview.md) die Sie für die ID-Zuordnung verwenden möchten. Durch Angabe einer Zusammenführungsrichtlinie können Datenschutzanfragen bei der Rückgabe von Daten an einen Kunden Segmentinformationen enthalten. Pro Anfrage kann nur eine Zusammenführungsrichtlinie angegeben werden. Wenn keine Zusammenführungsrichtlinie angegeben wird, werden Segmentierungsinformationen nicht in die Antwort aufgenommen. |
 | `regulation` **(Erforderlich)** | Die Verordnung für den Datenschutzauftrag. Folgende Werte werden akzeptiert: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>Siehe Übersicht unter [unterstützte Verordnungen](../regulations/overview.md) für weitere Informationen zu den Datenschutzbestimmungen, die die obigen Werte darstellen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -214,7 +220,7 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Aufträge zurück.
 | --- | --- |
 | `jobId` | Eine schreibgeschützte, eindeutige, systemgenerierte ID für einen Auftrag. Dieser Wert wird im nächsten Schritt der Suche nach einem bestimmten Auftrag verwendet. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Nachdem Sie die Auftragsanfrage erfolgreich gesendet haben, können Sie mit dem nächsten Schritt zur [Überprüfung des Auftragsstatus](#check-status) fortfahren.
 
@@ -236,7 +242,7 @@ GET /jobs/{JOB_ID}
 | --- | --- |
 | `{JOB_ID}` | Die ID des Auftrags, den Sie nachschlagen möchten. Diese ID wird unter zurückgegeben. `jobId` in erfolgreichen API-Antworten für [Erstellen eines Auftrags](#create-job) und [Auflisten aller Aufträge](#list). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -334,7 +340,7 @@ Eine erfolgreiche Antwort gibt die Details des angegebenen Auftrags zurück.
 | `productStatusResponse.results` | Für bestimmte Status können einige Produkte einen `results` -Objekt, das zusätzliche Informationen bereitstellt, die nicht von `responseMsgDetail`. |
 | `downloadURL` | Ist der Auftragsstatus `complete`, stellt dieses Attribut eine URL zum Herunterladen der Auftragsergebnisse als ZIP-Datei bereit. Diese Datei kann bis zu 60 Tagen nach Abschluss des Auftrags heruntergeladen werden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Auftragsstatus-Kategorien {#status-categories}
 
@@ -347,7 +353,7 @@ In der folgenden Tabelle sind die verschiedenen möglichen Auftragsstatus-Katego
 | `submitted` | Der Auftrag wird bei allen anwendbaren Anwendungen eingereicht. |
 | `error` | Bei der Verarbeitung des Auftrags ist etwas fehlgeschlagen – spezifischere Informationen können Sie durch Abrufen einzelner Auftragsdetails erhalten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >

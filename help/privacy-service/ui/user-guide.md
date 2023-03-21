@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verwalten von Datenschutzaufträgen in der Privacy Service-Benutzeroberfläche
 description: Erfahren Sie, wie Sie mit der Privacy Service-Benutzeroberfläche Datenschutzanfragen in verschiedenen Experience Cloud-Anwendungen koordinieren und überwachen können.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
+source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
 workflow-type: tm+mt
-source-wordcount: '1150'
+source-wordcount: '1266'
 ht-degree: 2%
 
 ---
@@ -19,6 +19,12 @@ ht-degree: 2%
 >abstract=""
 
 In diesem Dokument werden die Schritte zum Erstellen und Verwalten von Datenschutzanfragen mithilfe des [!DNL Privacy Service] -Benutzeroberfläche.
+
+>[!IMPORTANT]
+>
+>Privacy Service ist nur für Anfragen der betroffenen Person und von Verbraucherrechten vorgesehen. Jegliche andere Verwendung von Privacy Service für die Datenbereinigung oder -wartung wird nicht unterstützt oder ist nicht zulässig. Die Adobe ist gesetzlich verpflichtet, sie rechtzeitig zu erfüllen. Daher sind Lasttests auf dem Privacy Service nicht zulässig, da es sich um eine reine Produktionsumgebung handelt und einen unnötigen Rückstau gültiger Datenschutzanfragen erzeugt.
+>
+>Es gibt jetzt eine feste tägliche Upload-Grenze, um Missbrauch des Dienstes zu verhindern. Benutzer, bei denen das System missbraucht wurde, haben keinen Zugriff auf den Dienst. Anschließend wird mit ihnen ein Treffen abgehalten, auf dem ihre Maßnahmen erörtert und die annehmbare Verwendung für den Privacy Service erörtert werden.
 
 ## Durchsuchen Sie die [!DNL Privacy Service] UI-Dashboard
 

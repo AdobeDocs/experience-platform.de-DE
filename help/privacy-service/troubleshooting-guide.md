@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei Privacy Service
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Privacy Service sowie Informationen zu häufig aufgetretenen Fehlern in der API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
-workflow-type: ht
-source-wordcount: '884'
-ht-degree: 100%
+source-git-commit: fc115801ac8e75cd58356060ad98f1e340d2494a
+workflow-type: tm+mt
+source-wordcount: '917'
+ht-degree: 92%
 
 ---
 
@@ -65,7 +65,9 @@ Weiterführende Informationen zur Bereitstellung von Informationen zu Benutzerid
 
 ## Kann ich [!DNL Privacy Service] verwenden, um Daten zu bereinigen, die versehentlich an [!DNL Platform] gesendet wurden?
 
-Adobe unterstützt nicht die Verwendung von [!DNL Privacy Service] zum Löschen von Daten, die versehentlich an ein Produkt gesendet wurden. [!DNL Privacy Service] unterstützt Sie bei der Erfüllung Ihrer Verpflichtungen bezüglich Auskunfts- oder Löschanfragen von betroffenen Personen (oder Verbraucherinnen und Verbrauchern). Diese Anfragen sind zeitkritisch und werden im Zusammenhang mit dem geltenden Datenschutzrecht ausgeführt. Die Übermittlung von Anfragen, bei denen es sich nicht um Anfragen zum Zugriff auf Daten oder zur Löschung von Daten von Betroffenen oder Verbraucherinnen und Verbrauchern handelt, wirkt sich auf alle Kundinnen und Kunden von [!DNL Privacy Service] und auf die Fähigkeit von [!DNL Privacy Service] aus, die entsprechenden rechtlichen Fristen einzuhalten.
+Adobe unterstützt nicht die Verwendung von [!DNL Privacy Service] zum Löschen von Daten, die versehentlich an ein Produkt gesendet wurden. [!DNL Privacy Service] unterstützt Sie bei der Erfüllung Ihrer Verpflichtungen bezüglich Auskunfts- oder Löschanfragen von betroffenen Personen (oder Verbraucherinnen und Verbrauchern). Jegliche andere Verwendung von Privacy Service für die Datenbereinigung oder -wartung wird nicht unterstützt oder ist nicht zulässig.
+
+Datenschutzanfragen sind zeitkritisch und werden im Zusammenhang mit dem geltenden Datenschutzrecht ausgeführt. die Einreichung von Anfragen, die keine Zugriffs- oder Löschanfragen von Datensubjekten/Verbrauchern sind, wirkt sich auf alle [!DNL Privacy Service] und die Fähigkeit [!DNL Privacy Service] Unterstützung der entsprechenden Fristen. Es gibt jetzt eine feste tägliche Upload-Grenze, um Missbrauch des Dienstes zu verhindern.
 
 Wenden Sie sich an Ihren Account Manager (CDM), um die Entfernung von personenbezogenen Daten oder die Beseitigung von Datenproblemen koordinieren zu lassen.
 

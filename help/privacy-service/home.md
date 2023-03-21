@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über Privacy Service
 description: Mit Privacy Service können Sie die automatische Einhaltung gesetzlicher Datenschutzbestimmungen bei der Handhabung von Daten in Experience Cloud erleichtern.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
 workflow-type: tm+mt
-source-wordcount: '1389'
-ht-degree: 100%
+source-wordcount: '1505'
+ht-degree: 92%
 
 ---
 
@@ -18,6 +18,12 @@ Um eine bessere Kundenerfahrung zu bieten, müssen Sie die personenbezogenen Dat
 Adobe Experience Platform [!DNL Privacy Service] wurde als Reaktion auf eine grundlegende Änderung der Art und Weise entwickelt, wie Unternehmen die personenbezogenen Daten ihrer Kunden verwalten müssen. Der zentrale Zweck von [!DNL Privacy Service] ist die Automatisierung der Einhaltung von Datenschutzbestimmungen, die bei Verstößen zu erheblichen Geldbußen und Störungen des Datenbetriebs für Ihr Unternehmen führen können.
 
 [!DNL Privacy Service] bietet eine RESTful-API und eine Benutzeroberfläche, die Sie bei der Verwaltung von Kundendatenanfragen unterstützen. Mit [!DNL Privacy Service] können Sie Anfragen zum Zugriff auf und Löschen von personenbezogenen oder vertraulichen Kundendaten aus Adobe Experience Cloud-Programmen stellen, was die automatische Einhaltung gesetzlicher und unternehmensinterner Datenschutzbestimmungen erleichtert.
+
+>[!IMPORTANT]
+>
+>Privacy Service ist nur für Anfragen der betroffenen Person und von Verbraucherrechten vorgesehen. Jegliche andere Verwendung von Privacy Service für die Datenbereinigung oder -wartung wird nicht unterstützt oder ist nicht zulässig. Die Adobe ist gesetzlich verpflichtet, sie rechtzeitig zu erfüllen. Daher sind Lasttests auf dem Privacy Service nicht zulässig, da es sich um eine reine Produktionsumgebung handelt und einen unnötigen Rückstau gültiger Datenschutzanfragen erzeugt.
+>
+>Es gibt jetzt eine feste tägliche Upload-Grenze, um Missbrauch des Dienstes zu verhindern. Benutzer, bei denen das System missbraucht wurde, haben keinen Zugriff auf den Dienst. Anschließend wird mit ihnen ein Treffen abgehalten, auf dem ihre Maßnahmen erörtert und die annehmbare Verwendung für den Privacy Service erörtert werden.
 
 ## Erste Schritte mit [!DNL Privacy Service] {#getting-started}
 
