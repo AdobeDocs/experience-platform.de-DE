@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Übersicht über Privacy Service
 description: Mit Privacy Service können Sie die automatische Einhaltung gesetzlicher Datenschutzbestimmungen bei der Handhabung von Daten in Experience Cloud erleichtern.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
+source-git-commit: e09f0598e1d8dc007d0fdfcf13da11d5cad94c54
 workflow-type: tm+mt
-source-wordcount: '1505'
-ht-degree: 92%
+source-wordcount: '1608'
+ht-degree: 86%
 
 ---
 
 # [!DNL Privacy Service] – Übersicht
+
+>[!IMPORTANT]
+>
+>Die Berechtigungen für Adobe Experience Platform Privacy Service wurden verbessert, um die Granularität zu erhöhen. Diese Änderungen ermöglichen es Unternehmensadministratoren, mehr Benutzern Zugriff mit der gewünschten Rollen- und Berechtigungsebene zu gewähren. Benutzer technischer Konten müssen ihre Privacy Service-Berechtigungen aktualisieren, da diese bevorstehende Aktualisierung für sie eine wesentliche Änderung darstellt. Die Durchsetzung dieser Berechtigungsänderung erfolgt in **28. März 2023**.
+>
+>Technische Konten stehen Unternehmenskunden zur Verfügung und werden über die Adobe Developers Console erstellt. Die Adobe ID eines Inhabers eines technischen Kontos endet in `@techacct.adobe.com`. Wenden Sie sich an Ihren Organisationsadministrator, wenn Sie sich nicht sicher sind, ob Sie technischer Kontoinhaber sind.
 
 Um eine bessere Kundenerfahrung zu bieten, müssen Sie die personenbezogenen Daten Ihrer Kunden erfassen und speichern. Bei der Verwendung dieser Daten ist es wichtig, die Privatsphäre Ihrer Kunden zu überschauen und respektieren. Neue gesetzliche und organisatorische Vorschriften geben Benutzern das Recht, auf Anfrage auf ihre personenbezogenen Daten zuzugreifen bzw. diese Daten aus Ihren Datenspeichern löschen zu lassen.
 
