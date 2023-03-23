@@ -2,10 +2,10 @@
 title: (Beta) Experience Cloud Audiences
 description: Erfahren Sie, wie Sie Segmente von Experience Platform für verschiedene Experience Platform-Lösungen freigeben können.
 last-substantial-update: 2023-01-25T00:00:00Z
-source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
+source-git-commit: 32222aa1c96537b51cd0db35d9cdabce9210f64a
 workflow-type: tm+mt
-source-wordcount: '1521'
-ht-degree: 22%
+source-wordcount: '1512'
+ht-degree: 23%
 
 ---
 
@@ -61,8 +61,8 @@ Note: briefly talk about when to share segments to these destinations using the 
 >[!IMPORTANT]
 >
 > * Dieses Ziel steht für [Adobe Real-time Customer Data Platform Prime und Ultimate](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) -Kunden.
-> * Sie benötigen eine Audience Manager-Lizenz, um die im obigen Abschnitt erwähnten Anwendungsfälle für die Data Management Platform zu aktivieren.
-> * You *nicht benötigen* eine Audience Manager-Lizenz zum Freigeben von Segmenten für Experience Platformen mit Adobe Advertising Cloud, Adobe Target, Marketo und anderen Experience Cloud-Lösungen über die Experience Cloud Audiences-Integration.
+> * Sie benötigen eine Audience Manager-Lizenz, um die [Anwendungsfälle für Data Management Platform](#dmp-use-cases) weiter oben erwähnt.
+> * You *nicht benötigen* eine Audience Manager-Lizenz zum Freigeben von Experience Platform-Segmenten für Adobe Advertising Cloud, Adobe Target, Marketo und andere Experience Cloud-Lösungen, die in der [Abschnitt oben](#share-segments-with-other-solutions).
 
 
 ### Für Kunden, die die alte Segmentfreigabe-Lösung verwenden
@@ -91,12 +91,12 @@ Die Profile, die in die [!UICONTROL Experience Cloud Audiences] Ziel werden den 
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| ECID | Experience Cloud ID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Alias referenziert werden: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Siehe folgendes Dokument unter [ECID](/help/identity-service/ecid.md) für weitere Informationen. |
+| ECID | Experience Cloud ID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Siehe folgendes Dokument unter [ECID](/help/identity-service/ecid.md) für weitere Informationen. |
 | GAID | Google Advertising ID | Profile, die in Experience Platform mit der primären Kennung Google Advertising ID (GAID) erfasst werden, können an dieses Ziel exportiert werden. |
 | IDFA | Apple ID für Advertiser | Profile, die in Experience Platform mit der primären ID Apple ID for Advertisers (IDFA) erfasst werden, können an dieses Ziel exportiert werden. |
 | email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Profile, die in Experience Platform mit einer primären Identität von Hash-E-Mail-Adressen erfasst werden, können an dieses Ziel exportiert werden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
@@ -107,7 +107,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 | Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe), das die im obigen Abschnitt aufgelisteten Identitäten enthält. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
