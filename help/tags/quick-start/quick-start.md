@@ -2,9 +2,9 @@
 title: Schnellstartanleitung
 description: Erfahren Sie, wie Sie mit Tags in Adobe Experience Platform schnell startklar werden.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1525'
 ht-degree: 92%
 
 ---
@@ -135,5 +135,5 @@ Weitere Informationen zu den verschiedenen Status und Optionen, die während des
 Weitere Informationen zu Tags finden Sie in den folgenden Ressourcen:
 
 * **[Datensammlungs-Community](https://forums.adobe.com/community/experience-cloud/platform/launch)**: Stellen und beantworten Sie Fragen, reichen Sie Ideen ein, stimmen Sie über die Ideen anderer ab. Melden Sie sich mit Ihrer Adobe ID an.
-* **[Entwicklerdokumente](https://developer.adobelaunch.com/)**: Beteiligen Sie sich an der Tag-Entwickler-Community, um Erweiterungen zu erstellen oder die Tag-APIs zu verwenden
+* **[Entwicklerdokumente](../api/overview.md)**: Beteiligen Sie sich an der Tag-Entwickler-Community, um Erweiterungen zu erstellen oder die Tag-APIs zu verwenden
 * **[Tutorials - Überblick](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=de)**: Diese Dokumente enthalten eine Einführung in Tag-Konzepte, einschließlich Ereignisweiterleitung und Mobile SDK in Android-Mobile-Apps.

@@ -2,10 +2,10 @@
 title: Handbuch zur Fehlerbehebung bei Tags
 description: Erhalten Sie Antworten auf häufig gestellte Fragen zu Tags in Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: b0cc02478273c0b6035488a5d21191ce5cc0e268
+source-git-commit: 9701a14dc2915e0d6dcc6051c15d5113f305487f
 workflow-type: tm+mt
-source-wordcount: '1051'
-ht-degree: 91%
+source-wordcount: '1044'
+ht-degree: 89%
 
 ---
 
@@ -45,6 +45,8 @@ Das virtuelle Self-Service-Portal von Tags ermöglicht es Entwicklern von Erweit
 
 Wir haben viele Kunden, die sich auch dafür entscheiden, ihre eigenen privaten Erweiterungen zu erstellen, die nur innerhalb ihres eigenen Unternehmens verwendet werden und die die gleichen Methoden zur Entwicklung von Erweiterungen verwenden.
 
+Informationen zum Entwickeln einer Erweiterung finden Sie im Abschnitt [Übersicht über die Erweiterungsentwicklung](./extension-dev/overview.md) Seite.
+
 ## Erfüllen Tags die Sicherheitsstandards meines Unternehmens?
 
 Tags sind mit SOC-2 und dem Gramm-Leach-Bliley Act kompatibel. Tags bieten auch die Möglichkeit des Selbst-Hostings. JavaScript-Bibliotheken und mobile Konfigurationen können von Ihren eigenen Servern oder dem CDN Ihrer Wahl bereitgestellt werden. IT- und Sicherheitsteams können dadurch automatisierte Tests durchführen, die Dateien in ihrem eigenen Versionskontrollsystem prüfen und die internen Produktionsmigrationsprozesse (sicherheitsbezogene oder anderweitige) vollständig einhalten.
@@ -71,22 +73,7 @@ Tags sind so konzipiert, dass Marketing- und Werbetechnologien mithilfe moderner
 
 ## Welche Browser werden von Tags unterstützt?
 
-Browser-Unterstützung für Tags:
-
-- [!DNL Chrome] (neueste Version)
-- [!DNL Safari] (neueste Version)
-- [!DNL Firefox] (neueste Version)
-- [!DNL Microsoft Edge] (neueste Version)
-- [!DNL Internet Explorer] (10 und höher)
-- [!DNL iOS Safari] (neueste Version)
-- [!DNL Android Chrome] (neueste Version)
-
-Browser-Unterstützung für die Benutzeroberfläche der Tags-Anwendung:
-
-- [!DNL Chrome] (neueste Version)
-- [!DNL Safari] (neueste Version)
-- [!DNL Firefox] (neueste Version)
-- [!DNL Microsoft Edge] (neueste Version)
+Unterstützte Browser anzeigen [here](./extension-dev/browsers.md).
 
 Die meisten Adobe-Kunden nutzen mittlerweile modernere Web-Plattformfunktionen in aktuellen Browsern, um bessere Benutzererlebnisse zu erstellen, einschließlich Single Page Applications und interaktiver Ajax-lastiger Websites und Seiten. Da die meisten Kunden zu moderneren Konzepten für ihre Sites wechseln, fordern sie eine Lösung wie Tags, die diese Ansätze ermöglicht.
 

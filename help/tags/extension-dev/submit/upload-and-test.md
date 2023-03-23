@@ -2,10 +2,10 @@
 title: Hochladen und Implementieren von End-to-End-Tests für eine Erweiterung
 description: Erfahren Sie, wie Sie Ihre Erweiterung in Adobe Experience Platform validieren, hochladen und testen können.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 9b99ec5e526fcbe34a41d3ce397b34a9b4105819
 workflow-type: tm+mt
-source-wordcount: '2394'
-ht-degree: 95%
+source-wordcount: '2382'
+ht-degree: 92%
 
 ---
 
@@ -39,7 +39,7 @@ Ein konkretes Beispiel ist Ihre Logodatei: Fügen Sie die Zeile `"iconPath": "e
 
 Um die API oder die Befehlszeilen-Tools verwenden zu können, benötigen Sie ein technisches Konto bei Adobe I/O. Sie müssen das technische Konto in der I/O-Konsole erstellen und dann das Erweiterungspaket mit dem Uploader-Tool hochladen.
 
-Informationen zum Erstellen eines technischen Kontos für die Verwendung mit Tags in Adobe Experience Platform finden Sie im Handbuch zu [Zugriffs-Token](https://developer.adobelaunch.com/api/guides/access_tokens/).
+Informationen zum Erstellen eines technischen Kontos für die Verwendung mit Tags in Adobe Experience Platform finden Sie im Abschnitt [Reactor-API - Erste Schritte](../../api/getting-started.md) Handbuch.
 
 >[!IMPORTANT]
 >
@@ -112,7 +112,7 @@ Um Ihre Erweiterung hinzuzufügen, wählen Sie die Registerkarte **Katalog**.
 
 Im Katalog werden Kartensymbole für alle verfügbaren Erweiterungen angezeigt. Wenn Ihre Erweiterung nicht im Katalog angezeigt wird, vergewissern Sie sich, dass Sie die zuvor unter „Einrichten der Adobe Administration Console“ und „Erstellen eines Erweiterungspakets“ beschriebenen Schritte ausgeführt haben. Ihr Erweiterungspaket wird möglicherweise als „Ausstehend“ angezeigt, wenn die ursprüngliche Verarbeitung in Platform nicht abgeschlossen wurde.
 
-Wenn Sie die vorherigen Schritte ausgeführt haben und immer noch kein Erweiterungspaket vom Typ „Ausstehend“ oder „Fehlgeschlagen“ im Katalog angezeigt wird, sollten Sie den Status Ihres Erweiterungspakets direkt mithilfe der API überprüfen. Informationen zum Ausführen des entsprechenden API-Aufrufs finden Sie unter [Abrufen eines Erweiterungspakets](https://developer.adobelaunch.com/api/reference/1.0/extension_packages/fetch/) in der API-Dokumentation.
+Wenn Sie die vorherigen Schritte ausgeführt haben und immer noch kein Erweiterungspaket vom Typ Ausstehend oder Fehlgeschlagen im Katalog angezeigt wird, sollten Sie den Status Ihres Erweiterungspakets direkt mithilfe der API überprüfen. Informationen zum Ausführen des entsprechenden API-Aufrufs finden Sie unter [Abrufen eines Erweiterungspakets](../../api/endpoints/extension-packages.md#lookup) in der API-Dokumentation.
 
 Nachdem das Erweiterungspaket fertig verarbeitet wurde, wählen Sie unten auf der Karte **Installieren** aus.
 

@@ -2,10 +2,10 @@
 title: Erste Schritte bei der Entwicklung von Erweiterungen
 description: So beginnen Sie mit der Entwicklung Ihrer eigenen Tag-Erweiterungen in Adobe Experience Platform.
 exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 100%
+source-wordcount: '451'
+ht-degree: 95%
 
 ---
 
@@ -61,3 +61,7 @@ So kann beispielsweise ermittelt werden, ob der Benutzer den Browser Chrome verw
 >* Es können mehrere Ereignisse, Bedingungen und Aktionen hinzugefügt werden.
 >* Es darf nur eine Konfigurationsansicht vorhanden sein.
 
+
+## Nächste Schritte
+
+* Befolgen Sie die [Übersicht über den Übermittlungsprozess](./submit/overview.md) und Vorbereitung [validate](./submit/upload-and-test.md#validate) und [hochladen](./submit/upload-and-test.md#integration) Ihre Erweiterung zum Testen im Tag-Ökosystem.

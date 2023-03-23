@@ -2,9 +2,9 @@
 title: Freigeben einer Erweiterung
 description: Erfahren Sie, wie Sie eine Tag-Erweiterung in Adobe Experience Platform privat oder öffentlich freigeben.
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 3e349c5d78d964c8c2a5b635ef1866d4f41ef6bb
+source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '311'
 ht-degree: 98%
 
 ---
@@ -30,7 +30,7 @@ Sie müssen Ihre Erweiterung als private Erweiterung freigeben, bevor Sie sie ö
 
 Die einfachste Möglichkeit, Ihre Erweiterung mit privater Verfügbarkeit freizugeben, ist die Verwendung des [Freigabeprogramms für Tag-Erweiterungen](https://www.npmjs.com/package/@adobe/reactor-releaser). Weitere Anweisungen finden Sie in der zugehörigen Dokumentation.
 
-Wenn Sie Ihre Erweiterung mit privater Verfügbarkeit direkt über die API freigeben möchten, finden Sie weitere Details im Beispielaufruf für die [private Freigabe eines Erweiterungspakets](https://developer.adobelaunch.com/api/reference/1.0/extension_packages/release_private/) in den API-Dokumenten.
+Wenn Sie Ihre Erweiterung mit privater Verfügbarkeit direkt über die API freigeben möchten, finden Sie weitere Details im Beispielaufruf für die [private Freigabe eines Erweiterungspakets](../../api/endpoints/extension-packages.md/#private-release) in den API-Dokumenten.
 
 ## Öffentliche Freigabe
 
