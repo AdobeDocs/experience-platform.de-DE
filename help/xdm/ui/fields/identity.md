@@ -7,7 +7,7 @@ exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 source-git-commit: 857c1d4f74b6352e90f9c97ef22d686a883e3563
 workflow-type: tm+mt
 source-wordcount: '610'
-ht-degree: 10%
+ht-degree: 15%
 
 ---
 
@@ -28,7 +28,7 @@ Identitätsfelder sind eine entscheidende Komponente bei der Erstellung von Iden
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identityField_primaryIdentityRestriction"
 >title="Einschränkungen der primären Identität"
->abstract="Dieses Schema verwendet eine Feldergruppe, die für die Verwendung in einer bestimmten Quellverbindung vorgesehen ist. Für die Verbindung muss identityMap als primäre Identität verwendet werden und muss automatisch festgelegt werden."
+>abstract="Dieses Schema verwendet eine Feldergruppe, die für die Verwendung in einer bestimmten Quellverbindung vorgesehen ist. Für die Verbindung muss identityMap als primäre Identität verwendet werden, was automatisch eingestellt ist."
 
 Wann [Definieren eines neuen Felds](./overview.md#define) in der Benutzeroberfläche können Sie es als Identitätsfeld festlegen, indem Sie die **[!UICONTROL Identität]** in der rechten Leiste.
 

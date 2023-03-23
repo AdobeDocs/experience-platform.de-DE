@@ -7,11 +7,11 @@ hidefromtoc: true
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
 source-wordcount: '1184'
-ht-degree: 56%
+ht-degree: 61%
 
 ---
 
-# Datensätze löschen
+# Löschen von Datensätzen
 
 Die [[!UICONTROL Datenhygiene] Arbeitsbereich](./overview.md) in der Adobe Experience Platform-Benutzeroberfläche können Sie Datensätze löschen, die am Identity Service und Echtzeit-Kundenprofil teilnehmen. Diese Datensätze können an einzelne Verbraucher oder eine andere Entität gebunden werden, die im Identitätsdiagramm enthalten ist.
 
@@ -20,7 +20,7 @@ Die [[!UICONTROL Datenhygiene] Arbeitsbereich](./overview.md) in der Adobe Exper
 >Löschanfragen von Datensätzen stehen nur für Unternehmen zur Verfügung, die **Adobe Gesundheitsschild**.
 >
 >
->Löschvorgänge von Datensätzen dienen zur Datenbereinigung, zum Entfernen anonymer Daten oder zur Datenminimierung. Sie sind **not** für Anfragen von Datensubjekten nach Datenschutzbestimmungen wie der Datenschutz-Grundverordnung (DSGVO) verwendet werden. Verwenden Sie für alle Anwendungsfälle der Kompatibilität Folgendes: [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) anstatt.
+>Löschvorgänge von Datensätzen dienen zur Datenbereinigung, zum Entfernen anonymer Daten oder zur Datenminimierung. Sie dürfen **nicht** für Anfragen zu den Rechten der betroffenen Personen (Compliance) verwendet werden, da sie sich auf Datenschutzbestimmungen wie die Datenschutz-Grundverordnung (DSGVO) beziehen. Verwenden Sie stattdessen [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) für alle Compliance-Anwendungsfälle.
 
 ## Voraussetzungen
 

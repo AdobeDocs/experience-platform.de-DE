@@ -3,8 +3,8 @@ title: Konfigurieren von Geheimnissen bei der Ereignisweiterleitung
 description: Erfahren Sie, wie Sie Geheimnisse in der Benutzeroberfläche konfigurieren, um sich bei Endpunkten zu authentifizieren, die in den Eigenschaften der Ereignisweiterleitung verwendet werden.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
 source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
-workflow-type: ht
-source-wordcount: '1766'
+workflow-type: tm+mt
+source-wordcount: '1763'
 ht-degree: 100%
 
 ---
@@ -22,7 +22,7 @@ Derzeit werden drei Typen von geheimen Daten unterstützt:
 | [!UICONTROL OAuth 2] | Enthält mehrere Attribute zur Unterstützung des [Grant-Typs der Client-Anmeldeinformationen](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) für die Authentifizierungsspezifikation [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749). Das System fordert von Ihnen die erforderlichen Informationen an. Anschließend übernimmt es die Verlängerung dieser Token für Sie in einem bestimmten Intervall. |
 | [!UICONTROL Google OAuth 2] | Enthält mehrere Attribute, um die [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749)-Authentifizierungsspezifikation zur Verwendung in der [Google Ads-API](https://developers.google.com/google-ads/api/docs/oauth/overview) und [Pub/Sub-API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview) zu unterstützen. Das System fordert von Ihnen die erforderlichen Informationen an. Anschließend übernimmt es die Verlängerung dieser Token für Sie in einem bestimmten Intervall. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Dieses Handbuch bietet einen allgemeinen Überblick darüber, wie Geheimnisse für eine [!UICONTROL Edge]-Eigenschaft zur Ereignisweiterleitung in der Experience Platform- oder Datenerfassungs-Benutzeroberfläche konfiguriert werden.
 

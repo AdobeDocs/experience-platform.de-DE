@@ -5,7 +5,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: cf6ff8bcd3dfebe551ac3d7289fa8d5fb2a78079
 workflow-type: tm+mt
 source-wordcount: '946'
-ht-degree: 34%
+ht-degree: 42%
 
 ---
 
@@ -14,12 +14,12 @@ ht-degree: 34%
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="Top-Aktionen"
->abstract="Dieses Widget zeigt die wichtigsten Arten von Aktionen an, die innerhalb des ausgewählten Zeitraums in Experience Platform ausgeführt wurden. Um die vollständige Liste der aufgezeichneten Aktionen in Platform anzuzeigen, wählen Sie **Prüfungen** in der linken Navigation."
+>abstract="Dieses Widget zeigt die wichtigsten Arten von Aktionen an, die innerhalb des ausgewählten Zeitraums in Experience Platform ausgeführt wurden. Um die vollständige Liste der aufgezeichneten Aktionen in Platform anzuzeigen, wählen Sie **Audits** im linken Navigationsbereich aus."
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
 >title="Top-Benutzer"
->abstract="Dieses Widget zeigt die Benutzer, die innerhalb des ausgewählten Zeitraums die meisten Aktionen in der Experience Platform ausgeführt haben. Um die vollständige Liste der aufgezeichneten Aktionen in Platform anzuzeigen, wählen Sie **Prüfungen** in der linken Navigation."
+>abstract="Dieses Widget zeigt die Benutzerinnen und Benutzer, die innerhalb des ausgewählten Zeitraums die meisten Aktionen in Experience Platform ausgeführt haben. Um die vollständige Liste der aufgezeichneten Aktionen in Platform anzuzeigen, wählen Sie **Audits** im linken Navigationsbereich aus."
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
@@ -38,31 +38,31 @@ In der folgenden Tabelle sind die Aktionen aufgeführt, für die Ressourcen in A
 
 | Ressource | Aktionen |
 | --- | --- |
-| [Zugriffskontrollrichtlinie (attributbasierte Zugriffskontrolle)](../../../access-control/home.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
-| [Konto (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
-| [Attributions-KI-Instanz](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li></ul> |
+| [Zugriffskontrollrichtlinie (attributbasierte Zugriffskontrolle)](../../../access-control/home.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
+| [Konto (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
+| [Attributions-KI-Instanz](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li></ul> |
 | [Administratorprotokolle](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Exportieren</li></ul> |
-| [Klasse](../../../xdm/schema/composition.md#class) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
-| [Berechnetes Attribut](../../../profile/computed-attributes/overview.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
-| [Kunden-KI-Instanz](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li></ul> |
-| [Datensatz](../../../catalog/datasets/overview.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li><li>Aktivieren für [Echtzeit-Kundenprofil](../../../profile/home.md)</li><li>Profil deaktivieren</li><li>Daten hinzufügen</li><li>Batch löschen</li></ul> |
-| [Datenstrom](../../../edge/datastreams/overview.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>[Zuordnung bearbeiten](../../../edge/datastreams/data-prep.md)</li></ul> |
-| [Datentypen](../../../xdm/schema/composition.md#data-type) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
-| [Ziel](../../../destinations/home.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>Datensatz aktivieren</li><li>Datensatz entfernen</li><li>Profil aktivieren</li><li>Profil löschen</li></ul> |
-| [Feldergruppe](../../../xdm/schema/composition.md#field-group) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
+| [Klasse](../../../xdm/schema/composition.md#class) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
+| [Berechnetes Attribut](../../../profile/computed-attributes/overview.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
+| [Kunden-KI-Instanz](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li></ul> |
+| [Datensatz](../../../catalog/datasets/overview.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li><li>Aktivieren für [Echtzeit-Kundenprofil](../../../profile/home.md)</li><li>Profil deaktivieren</li><li>Daten hinzufügen</li><li>Batch löschen</li></ul> |
+| [Datenstrom](../../../edge/datastreams/overview.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>[Zuordnung bearbeiten](../../../edge/datastreams/data-prep.md)</li></ul> |
+| [Datentypen](../../../xdm/schema/composition.md#data-type) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
+| [Ziel](../../../destinations/home.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>Datensatz aktivieren</li><li>Datensatz entfernen</li><li>Profil aktivieren</li><li>Profil löschen</li></ul> |
+| [Feldergruppe](../../../xdm/schema/composition.md#field-group) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
 | [Identitätsdiagramm](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Ansicht</li></ul> |
-| [Identity-Namespace](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Erstellen</li><li>Update</li></ul> |
-| [Zusammenführungsrichtlinie](../../../profile/merge-policies/overview.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
-| [Produktprofile](../../../access-control/home.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
+| [Identity-Namespace](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Erstellen von</li><li>Update</li></ul> |
+| [Zusammenführungsrichtlinie](../../../profile/merge-policies/overview.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
+| [Produktprofile](../../../access-control/home.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
 | [Abfrage](../../../query-service/ui/overview.md) | <ul><li>Execute</li></ul> |
-| [Abfragevorlage](../../../query-service/ui/overview.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
-| [Rolle (attributbasierte Zugriffssteuerung)](../../../access-control/home.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li><li>Benutzer hinzufügen</li><li>Benutzer löschen</li></ul> |
-| [Sandbox](../../../sandboxes/home.md) | <ul><li>Erstellen</li><li>Update</li><li>Zurücksetzen</li><li>Löschen</li></ul> |
-| [Geplante Abfrage](../../../query-service/ui/overview.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
-| [Schema](../../../xdm/schema/composition.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li><li>Profil aktivieren</li></ul> |
-| [Segment](../../../segmentation/home.md) | <ul><li>Erstellen</li><li>Löschen</li><li>Segmentaktivierung</li><li>Segment entfernen</li></ul> |
-| [Quelldatenfluss](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>Datensatz aktivieren</li><li>Datensatz entfernen</li><li>Profilaktivität</li><li>Profil entfernen</li></ul> |
-| [Arbeitsauftrag](../../../hygiene/home.md) | <ul><li>Erstellen</li></ul> |
+| [Abfragevorlage](../../../query-service/ui/overview.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
+| [Rolle (attributbasierte Zugriffssteuerung)](../../../access-control/home.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li><li>Benutzer hinzufügen</li><li>Benutzer löschen</li></ul> |
+| [Sandbox](../../../sandboxes/home.md) | <ul><li>Erstellen von</li><li>Update</li><li>Zurücksetzen</li><li>Löschen</li></ul> |
+| [Geplante Abfrage](../../../query-service/ui/overview.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
+| [Schema](../../../xdm/schema/composition.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li><li>Aktivieren Sie es für das Profil</li></ul> |
+| [Segment](../../../segmentation/home.md) | <ul><li>Erstellen von</li><li>Löschen</li><li>Segmentaktivierung</li><li>Segment entfernen</li></ul> |
+| [Quelldatenfluss](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>Datensatz aktivieren</li><li>Datensatz entfernen</li><li>Profilaktivität</li><li>Profil entfernen</li></ul> |
+| [Arbeitsauftrag](../../../hygiene/home.md) | <ul><li>Erstellen von</li></ul> |
 
 ## Zugriff auf Auditprotokolle
 

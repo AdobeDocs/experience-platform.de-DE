@@ -6,7 +6,7 @@ description: Die folgenden Tabellen enthalten die Zuordnungen zwischen den Felde
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '922'
 ht-degree: 100%
 
 ---
@@ -133,7 +133,7 @@ Weitere Informationen zu den XDM-Klassen und XDM-Feldergruppen finden Sie in der
 | `directMarketing.emailSent.testVariantName` | `directMarketing.emailSent.testVariantName` |
 | `directMarketing.emailSent.automationRunID` | `directMarketing.emailSent.automationRunID` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Programme {#programs}
 
@@ -164,7 +164,7 @@ Weitere Informationen zur XDM-Klasse finden Sie in der [Übersicht über XDM Bus
 | `endDate` | `campaignEndDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Programmmitgliedschaften {#program-memberships}
 
@@ -197,7 +197,7 @@ Weitere Informationen zur XDM-Klasse finden Sie in der [XDM Business Campaign Me
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Firmen {#companies}
 
@@ -229,7 +229,7 @@ Weitere Informationen zur XDM-Klasse finden Sie in der [Übersicht über XDM Bus
 | `iif(mktoCdpParentOrgId != null && mktoCdpParentOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpParentOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpParentOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Statische Listen {#static-lists}
 
@@ -247,7 +247,7 @@ Weitere Informationen zur XDM-Klasse finden Sie in der [Übersicht zu XDM Busine
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Mitgliedschaften in statischen Listen {#static-list-memberships}
 
@@ -264,7 +264,7 @@ Weitere Informationen zur XDM-Klasse finden Sie in der [Übersicht über XDM Bus
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Benannte Konten {#named-accounts}
 
@@ -296,7 +296,7 @@ Weitere Informationen zur XDM-Klasse finden Sie in der [Übersicht über XDM Bus
 | `sourceType` | `accountSourceType` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Opportunitys {#opportunities}
 
@@ -333,7 +333,7 @@ Weitere Informationen zur XDM-Klasse finden Sie in der [XDM Business Opportunity
 | `nextStep` | `nextStep` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Rollen von Kontakten bei Opportunitys {#opportunity-contact-roles}
 
@@ -354,7 +354,7 @@ Weitere Informationen zur XDM-Klasse finden Sie in der [Übersicht über XDM Bus
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Personen {#persons}
 
@@ -412,7 +412,7 @@ Weitere Informationen zur XDM-Klasse finden Sie in der [XDM Individual Profile-�
 | `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `b2b.convertedContactKey` | Dies ist ein berechnetes Feld. |
 | `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `personComponents.sourceConvertedContactKey` | Dies ist ein berechnetes Feld. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >

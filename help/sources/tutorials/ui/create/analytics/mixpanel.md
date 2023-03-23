@@ -84,7 +84,7 @@ Nach einigen Augenblicken wird die richtige Oberfläche in ein Vorschaufenster a
 
 Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Mixpanel]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Analysedaten in Platform zu importieren](../../dataflow/analytics.md).
 
-## Weitere Ressourcen {#additional-resources}
+## Zusätzliche Ressourcen {#additional-resources}
 
 Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei der Verwendung der Variablen [!DNL Mixpanel] -Quelle.
 

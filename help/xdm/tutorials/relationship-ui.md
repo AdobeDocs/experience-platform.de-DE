@@ -8,7 +8,7 @@ exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 15%
+ht-degree: 18%
 
 ---
 
@@ -26,12 +26,12 @@ ht-degree: 15%
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_identity_namespace"
->title="Referenz-Identitäts-Namespace"
+>title="Referenz-Identity-Namespace"
 >abstract="Der Namespace (Typ) für das primäre Identitätsfeld des Referenzschemas. Das Referenzschema muss über ein festgestelltes primäres Identitätsfeld verfügen, um an einer Beziehung teilnehmen zu können. Weitere Informationen zu Schemabeziehungen finden Sie in der Dokumentation ."
 
 Die Möglichkeit, Beziehungen zwischen Ihren Kunden und deren Interaktionen mit Ihrer Marke kanalübergreifend zu analysieren, ist ein wichtiger Bestandteil von Adobe Experience Platform. Definieren dieser Beziehungen innerhalb der Struktur Ihrer [!DNL Experience Data Model] (XDM)-Schemas ermöglichen es Ihnen, komplexe Einblicke in Ihre Kundendaten zu erhalten.
 
-Während Schemabeziehungen durch die Verwendung des Vereinigungsschemas und [!DNL Real-Time Customer Profile], gilt dies nur für Schemas, die dieselbe Klasse teilen. Um eine Beziehung zwischen zwei Schemas herzustellen, die zu verschiedenen Klassen gehören, muss einem Quellschema ein dediziertes Beziehungsfeld hinzugefügt werden, das auf die Identität des anderen verwandten Schemas verweist.
+Während Schemabeziehungen durch die Verwendung des Vereinigungsschemas und [!DNL Real-Time Customer Profile] abgeleitet werden können, gilt dies nur für Schemata einer gemeinsamen Klasse. Um eine Beziehung zwischen zwei Schemas herzustellen, die zu verschiedenen Klassen gehören, muss einem Quellschema ein dediziertes Beziehungsfeld hinzugefügt werden, das auf die Identität des anderen verwandten Schemas verweist.
 
 Dieses Dokument enthält eine Anleitung zum Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema-Editors im [!DNL Experience Platform] -Benutzeroberfläche. Anweisungen zum Definieren von Schemabeziehungen mithilfe der API finden Sie in der Anleitung zum [Definieren einer Beziehung mithilfe der Schema Registry-API](relationship-api.md).
 
@@ -69,7 +69,7 @@ Das Quellschema &quot;[!DNL Loyalty Members]&quot; basiert auf der Variablen [!D
 
 Das Referenzschema &quot;[!DNL Hotels]&quot; basiert auf einem benutzerdefinierten &quot;[!DNL Hotels]&quot; und enthält Felder, die ein Hotel beschreiben. Um an einer Beziehung teilnehmen zu können, muss das Referenzschema auch über eine primäre Identität verfügen, die definiert und für [!UICONTROL Profil]. In diesem Fall `_tenantId.hotelId`fungiert als primäre Identität für das Schema, wobei ein benutzerdefinierter &quot;[!DNL Hotel ID]&quot;Identitäts-Namespace.
 
-![Profil aktivieren](../images/tutorials/relationship/hotels.png)
+![Aktivieren Sie es für das Profil](../images/tutorials/relationship/hotels.png)
 
 >[!NOTE]
 >
@@ -91,7 +91,7 @@ Auf der Arbeitsfläche wird ein neuer Feld-Platzhalter angezeigt. under **[!UICO
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
-Wenn Sie fertig sind, wählen Sie **[!UICONTROL Anwenden]**.
+Wenn Sie fertig sind, wählen Sie **[!UICONTROL Anwenden]** aus.
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 

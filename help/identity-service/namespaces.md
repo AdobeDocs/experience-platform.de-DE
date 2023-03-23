@@ -7,7 +7,7 @@ exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 source-git-commit: 482de6a50d14b9de095014b070ce400a2fd273cc
 workflow-type: tm+mt
 source-wordcount: '1681'
-ht-degree: 28%
+ht-degree: 32%
 
 ---
 
@@ -49,7 +49,7 @@ Die folgenden Identitätstypen sind in [!DNL Platform]:
 | Geräteübergreifende ID | Geräteübergreifende IDs identifizieren eine Person und verbinden normalerweise andere IDs miteinander. Beispiele sind eine Anmelde-ID, CRM-ID und Loyalitäts-ID. Dies deutet darauf hin, dass [!DNL Identity Service] um den Wert sensibel zu behandeln. |
 | Geräte-ID | Geräte-IDs identifizieren Hardwaregeräte wie IDFA (iPhone und iPad), GAID (Android) und RIDA (Roku) und können von mehreren Personen in Haushalten gemeinsam genutzt werden. |
 | E-Mail Adresse | E-Mail-Adressen sind oft mit einer einzelnen Person verknüpft und können daher zur kanalübergreifenden Identifizierung dieser Person verwendet werden. Identitäten dieser Art beinhalten personenbezogene Daten (PII). Dies deutet darauf hin, dass [!DNL Identity Service] um den Wert sensibel zu behandeln. |
-| Personenidentifizierung | Nicht-Personen-IDs werden zum Speichern von Kennungen verwendet, die Namespaces erfordern, aber nicht mit einem Personen-Cluster verbunden sind. Beispielsweise eine Produkt-SKU, Daten, die sich auf Produkte, Organisationen oder Geschäfte beziehen. |
+| Nichtpersonenkennung | Nicht-Personen-IDs werden zum Speichern von Kennungen verwendet, die Namespaces erfordern, aber nicht mit einem Personen-Cluster verbunden sind. Beispielsweise eine Produkt-SKU, Daten, die sich auf Produkte, Organisationen oder Geschäfte beziehen. |
 | Telefonnummer | Telefonnummern sind häufig mit einer einzelnen Person verknüpft und können daher zur kanalübergreifenden Identifizierung dieser Person verwendet werden. Identitäten dieser Art umfassen PII. Dies deutet darauf hin, dass [!DNL Identity Service] um den Wert sensibel zu behandeln. |
 
 ### Standard-Namespaces {#standard}
@@ -83,7 +83,7 @@ Folgende Standard-Namespaces stehen allen Organisationen in Platform zur Verfüg
 >[!CONTEXTUALHELP]
 >id="platform_identity_view_integration_identities"
 >title="Integrationsidentitäten anzeigen"
->abstract="Integrationsidentitäten sind Namespaces, die zur Verbindung mit anderen Systemen verwendet werden und nicht in der Identitätsauflösung oder zum Zuordnen von Identitäten verwendet werden. <br> Diese Identitäten sind standardmäßig ausgeblendet. Verwenden Sie den Umschalter, um Integrations-Namespaces anzuzeigen."
+>abstract="Integrationsidentitäten sind Namespaces, die zur Verbindung mit anderen Systemen verwendet werden und nicht in der Identitätsauflösung oder zum Zusammenfügen von Identitäten verwendet werden. <br> Diese Identitäten sind standardmäßig ausgeblendet. Verwenden Sie den Umschalter, um Integrations-Namespaces anzuzeigen."
 
 Um Identitäts-Namespaces in der Benutzeroberfläche anzuzeigen, wählen Sie **[!UICONTROL Identitäten]** in der linken Navigation und wählen Sie dann **[!UICONTROL Durchsuchen]**.
 

@@ -1,8 +1,8 @@
 ---
 audience: user
 user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
-breadcrumb-title: Anleitung zum Query Service
-user-guide-description: Verwenden Sie Standard-SQL, um Daten im Data Lake in Experience Platform abzufragen.
+breadcrumb-title: Handbuch zum Abfragedienst
+user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
 source-git-commit: 135691e0d2b77cc8e2581ff3a614fe26c7969cdd
 workflow-type: tm+mt

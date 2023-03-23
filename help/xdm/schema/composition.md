@@ -7,7 +7,7 @@ exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 source-git-commit: a3f38a18693e0ef4bc93765c090eafd56dcd15d3
 workflow-type: tm+mt
 source-wordcount: '4140'
-ht-degree: 25%
+ht-degree: 30%
 
 ---
 
@@ -53,7 +53,7 @@ Sowohl Schemas der Datensätze als auch der Zeitreihen enthalten eine Zuordnung 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
 >title="Identitäten in Schemata"
->abstract="Identitäten sind Schlüsselfelder innerhalb eines Schemas, mit denen ein Betreff identifiziert werden kann, z. B. eine E-Mail-Adresse oder eine Marketing-ID. Diese Felder werden verwendet, um das Identitätsdiagramm für jede Person zu erstellen und Kundenprofile zu erstellen. Weitere Informationen zu Identitäten in Schemas finden Sie in der Dokumentation ."
+>abstract="Identitäten sind Schlüsselfelder innerhalb eines Schemas, mit denen eine Person identifiziert werden kann, z. B. eine E-Mail-Adresse oder eine Marketing-ID. Diese Felder werden verwendet, um das Identitätsdiagramm für jede Person zu erstellen und Kundenprofile zu erstellen. Weitere Informationen zu Identitäten in Schemata finden Sie in der Dokumentation."
 
 Schemas werden zur Aufnahme von Daten in [!DNL Experience Platform]. Diese Daten können über mehrere Dienste hinweg verwendet werden, um eine einzelne, einheitliche Ansicht einer einzelnen Entität zu erstellen. Daher ist es wichtig, wenn man über Schemas nachdenkt, über Kundenidentitäten nachzudenken und welche Felder zur Identifizierung eines Subjekts verwendet werden können, unabhängig davon, woher die Daten stammen.
 
@@ -170,7 +170,7 @@ Schemas werden nach folgender Formel zusammengestellt:
 >[!CONTEXTUALHELP]
 >id="platform_schemas_class"
 >title="Klasse"
->abstract="Jedes Schema basiert auf einer einzelnen Klasse. Die Klasse definiert das Verhalten des Schemas und die allgemeinen Eigenschaften, die alle Schemas, die auf dieser Klasse basieren, enthalten müssen. Weitere Informationen dazu, wie Klassen in die Schemakomposition eingebunden sind, finden Sie in der Dokumentation ."
+>abstract="Jedes Schema basiert auf einer einzelnen Klasse. Die Klasse definiert das Verhalten des Schemas und die allgemeinen Eigenschaften, die alle Schemata, die auf dieser Klasse basieren, enthalten müssen. Weitere Informationen dazu, wie Klassen in die Schemakomposition eingebunden sind, finden Sie in der Dokumentation."
 
 Das Erstellen eines Schemas beginnt mit dem Zuweisen einer Klasse. Klassen definieren die Verhaltensaspekte der Daten, die das Schema enthalten soll (Datensatz oder Zeitreihen). Darüber hinaus beschreiben Klassen die kleinste Anzahl gemeinsamer Eigenschaften, die alle Schemas, die auf dieser Klasse basieren, beinhalten müssen, und bieten eine Möglichkeit zum Zusammenführen mehrerer kompatibler Datensätze.
 
@@ -189,12 +189,12 @@ Die aktuellste Liste der verfügbaren Standard-XDM-Klassen finden Sie im Abschni
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup"
 >title="Feldergruppe"
->abstract="Feldergruppen sind wiederverwendbare Komponenten, mit denen Sie Schemas mit zusätzlichen Attributen erweitern können. Die meisten Feldergruppen sind nur mit bestimmten Klassen kompatibel. Sie können Standardfeldgruppen verwenden, die von Adobe definiert werden, oder Sie können manuell eigene benutzerdefinierte Feldgruppen definieren. Weitere Informationen zur Beteiligung von Feldergruppen an der Schemakomposition finden Sie in der Dokumentation ."
+>abstract="Feldergruppen sind wiederverwendbare Komponenten, mit denen Sie Schemata mit zusätzlichen Attributen erweitern können. Die meisten Feldergruppen sind nur mit bestimmten Klassen kompatibel. Sie können Standardfeldgruppen verwenden, die von Adobe definiert werden, oder Sie können manuell eigene benutzerdefinierte Feldergruppen definieren. Weitere Informationen zur Beteiligung von Feldergruppen an der Schemakomposition finden Sie in der Dokumentation."
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_requiredFieldgroup"
 >title="Erforderliche Feldergruppe"
->abstract="Diese Feldergruppe ist für die verwendete Quelle erforderlich. Aus diesem Grund können Sie ihn nicht aus Ihrem Schema löschen."
+>abstract="Diese Feldergruppe ist für die verwendete Quelle erforderlich. Aus diesem Grund können Sie sie nicht aus Ihrem Schema löschen."
 
 Eine Feldergruppe ist eine wiederverwendbare Komponente, die ein oder mehrere Felder definiert, die bestimmte Funktionen wie persönliche Details, Hotelpräferenzen oder Adressen implementieren. Feldergruppen sind als Teil eines Schemas vorgesehen, das eine kompatible Klasse implementiert.
 

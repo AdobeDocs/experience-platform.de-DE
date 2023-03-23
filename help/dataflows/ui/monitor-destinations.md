@@ -8,7 +8,7 @@ exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 source-git-commit: 133b3e6b8074bab52f23330ac8d3efc468f29d55
 workflow-type: tm+mt
 source-wordcount: '3228'
-ht-degree: 2%
+ht-degree: 12%
 
 ---
 
@@ -49,11 +49,11 @@ Weitere Informationen zu Status finden Sie in der folgenden Tabelle:
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
 >title="Datenfluss-Ausführungsdetails"
->abstract="Die Ausführungsdetails des Ziel-Datenflusses enthalten Informationen zum Aktivierungsstatus des Segments und zu den Metriken, die aus dem Echtzeit-Kundenprofil abgerufen wurden, um eindeutige Identitäten zu generieren. Weitere Informationen finden Sie im Handbuch Metrikdefinitionen ."
+>abstract="Die Ausführungsdetails des Ziel-Datenflusses enthalten Informationen zum Aktivierungsstatus des Segments und zu den Metriken, die aus dem Echtzeit-Kundenprofil abgerufen wurden, um eindeutige Identitäten zu generieren. Weitere Informationen finden Sie im Handbuch zu Metrikdefinitionen."
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_streaming"
->title="Vorgenommene Profile"
+>title="Empfangene Profile"
 >abstract="Die Gesamtzahl der im Datenfluss empfangenen Profile. Dieser Wert wird alle 60 Minuten aktualisiert."
 
 >[!CONTEXTUALHELP]
@@ -64,12 +64,12 @@ Weitere Informationen zu Status finden Sie in der folgenden Tabelle:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_streaming"
 >title="Ausgeschlossene Identitäten"
->abstract="Die Anzahl der einzelnen Profildatensätze, die aufgrund fehlender Attribute und Zustimmungsverletzungen von der Aktivierung für das ausgewählte Ziel ausgeschlossen sind."
+>abstract="Die Anzahl der einzelnen Profildatensätze, die aufgrund fehlender Attribute oder Einverständnisverletzungen von der Aktivierung für das ausgewählte Ziel ausgeschlossen sind."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesfailed_streaming"
->title="Identitäten fehlgeschlagen"
->abstract="Die Anzahl der individuellen Profilidentitäten, die für das ausgewählte Ziel fehlgeschlagen sind. Weitere Informationen finden Sie unter Fehlerdiagnose ."
+>title="Fehlgeschlagene Identitäten"
+>abstract="Die Anzahl der individuellen Profilidentitäten, die für das ausgewählte Ziel fehlgeschlagen sind. Weitere Informationen finden Sie in der Fehlerdiagnose."
 
 Bei Streaming-Zielen muss die Variable [!UICONTROL Datenfluss-Abläufe] -Tab bietet eine stündliche Aktualisierung für Metrikdaten zu Ihren Datenfluss-Läufen. Die auffälligsten gekennzeichneten Statistiken sind für Identitäten.
 
@@ -112,12 +112,12 @@ Auf der Detailseite wird auch eine Liste mit fehlgeschlagenen Identitäten und a
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="Datenfluss-Ausführungsdetails"
->abstract="Die Ausführungsdetails des Ziel-Datenflusses enthalten Informationen zum Aktivierungsstatus des Segments und zu den Metriken, die aus dem Echtzeit-Kundenprofil abgerufen wurden, um eindeutige Identitäten zu generieren. Weitere Informationen finden Sie im Handbuch Metrikdefinitionen ."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="Datenfluss-Ausführungen für Streaming-Ziele"
+>abstract="Die Ausführungsdetails des Ziel-Datenflusses enthalten Informationen zum Aktivierungsstatus des Segments und zu den Metriken, die aus dem Echtzeit-Kundenprofil abgerufen wurden, um eindeutige Identitäten zu generieren. Weitere Informationen finden Sie im Handbuch zu Metrikdefinitionen."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=de#dataflow-runs-for-streaming-destinations" text="Datenfluss-Ausführungen für Streaming-Ziele"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
->title="Vorgenommene Profile"
+>title="Empfangene Profile"
 >abstract="Die Gesamtzahl der im Datenfluss empfangenen Profile. Dieser Wert wird alle 60 Minuten aktualisiert."
 
 >[!CONTEXTUALHELP]
@@ -128,7 +128,7 @@ Auf der Detailseite wird auch eine Liste mit fehlgeschlagenen Identitäten und a
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_batch"
 >title="Ausgeschlossene Identitäten"
->abstract="Die Anzahl der einzelnen Profildatensätze, die aufgrund fehlender Attribute und Zustimmungsverletzungen von der Aktivierung für das ausgewählte Ziel ausgeschlossen sind."
+>abstract="Die Anzahl der einzelnen Profildatensätze, die aufgrund fehlender Attribute oder Einverständnisverletzungen von der Aktivierung für das ausgewählte Ziel ausgeschlossen sind."
 
 Bei Batch-Zielen muss die Variable [!UICONTROL Datenfluss-Abläufe] -Tab enthält Metrikdaten zu Ihren Datenfluss-Läufen. Es wird eine Liste einzelner Ausführungen und der jeweiligen Metriken mit den folgenden Gesamtwerten für Identitäten angezeigt:
 
@@ -208,9 +208,9 @@ Die **[!UICONTROL Aktivierung]** zeigt eine Liste von Zielen an, die mindestens 
 
 | Metrik | Zieltyp |
 ---------|----------|
-| **[!UICONTROL Vorgenommene Profile]** | Streaming und Batch |
+| **[!UICONTROL Empfangene Profile]** | Streaming und Batch |
 | **[!UICONTROL Aktivierte Identitäten]** | Streaming und Batch |
-| **[!UICONTROL Identitäten fehlgeschlagen]** | Streaming |
+| **[!UICONTROL Fehlgeschlagene Identitäten]** | Streaming |
 | **[!UICONTROL Ausgeschlossene Identitäten]** | Streaming und Batch |
 | **[!UICONTROL Aktivierungsrate]** | Streaming |
 | **[!UICONTROL Gesamtzahl fehlgeschlagener Datenflüsse]** | Batch |
