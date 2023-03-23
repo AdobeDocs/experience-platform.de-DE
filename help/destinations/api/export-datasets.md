@@ -3,9 +3,9 @@ solution: Experience Platform
 title: (Beta) Exportieren von Datensätzen mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie mit der Flow Service-API Datensätze für ausgewählte Ziele exportieren können.
 type: Tutorial
-source-git-commit: c16fbc89b7bc7a8f1ee4a0ca4fd9f7541df095ca
+source-git-commit: d0de642eb6118e6597925c12c76917ffa98c3a5a
 workflow-type: tm+mt
-source-wordcount: '3326'
+source-wordcount: '3347'
 ht-degree: 17%
 
 ---
@@ -24,6 +24,19 @@ In diesem Artikel wird der Workflow erläutert, der zur Verwendung der [!DNL Flo
 >[!TIP]
 >
 >Sie können auch die Experience Platform-Benutzeroberfläche verwenden, um Datensätze zu exportieren. Lesen Sie die [Tutorial zur Benutzeroberfläche von Datensätzen exportieren](/help/destinations/ui/export-datasets.md) für weitere Informationen.
+
+## Unterstützte Ziele {#supported-destinations}
+
+Derzeit können Sie Datensätze zu den im Screenshot hervorgehobenen und unten aufgeführten Cloud-Speicher-Zielen exportieren.
+
+![Ziele, die Datensatzexporte unterstützen](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+
+* [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
+* [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
+* [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
+* [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
+* [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
 ## Erste Schritte {#get-started}
 
@@ -88,7 +101,7 @@ Bevor Sie mit dem Workflow zum Exportieren eines Datensatzes beginnen, identifiz
 | [!DNL Google Cloud Storage] | `c5d93acb-ea8b-4b14-8f53-02138444ae99` | `585c15c4-6cbf-4126-8f87-e26bff78b657` |
 | SFTP | `36965a81-b1c6-401b-99f8-22508f1e6a26` | `354d6aad-4754-46e4-a576-1b384561c440` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Sie benötigen diese IDs, um verschiedene [!DNL Flow Service] -Entitäten. Sie müssen auch auf Teile der [!DNL Connection Spec] selbst, um bestimmte Entitäten einzurichten, damit Sie die [!DNL Connection Spec] von [!DNL Flow Service APIs]. Siehe die folgenden Beispiele zum Abrufen von Verbindungsspezifikationen für alle Ziele in der Tabelle:
 
@@ -966,14 +979,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: <SANDBOX-NAME>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "name": "Data Landing Zone(DLZ) Base Connection",
-  "auth": {
-    "name": "Data Landing Zone(DLZ) Base Connection",
-    "description": "Data Landing Zone(DLZ) Base Connection",
-    "connectionSpec": {
-        "id": "10440537-2a7b-4583-ac39-ed38d4b848e8",
-        "version": "1.0"
-    }
+  "name": "Data Landing Zone(DLZ) Base Connection"
 }'
 ```
 

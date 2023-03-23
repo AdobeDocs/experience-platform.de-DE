@@ -3,10 +3,10 @@ title: (Beta) Exportieren von Datensätzen an Cloud-Speicher-Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Datensätze aus Adobe Experience Platform in Ihren bevorzugten Cloud-Speicher exportieren.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: aebb1494a6ed667730997048d30a2ca3e00f9452
+source-git-commit: d0de642eb6118e6597925c12c76917ffa98c3a5a
 workflow-type: tm+mt
-source-wordcount: '1335'
-ht-degree: 96%
+source-wordcount: '1359'
+ht-degree: 94%
 
 ---
 
@@ -22,6 +22,19 @@ ht-degree: 96%
 In diesem Artikel wird der Workflow erläutert, der zum Exportieren erforderlich ist [Datensätze](/help/catalog/datasets/overview.md) von Adobe Experience Platform zu Ihrem bevorzugten Cloud-Speicher, z. B. [!DNL Amazon S3], SFTP-Speicherorten oder [!DNL Google Cloud Storage] durch Verwendung der Experience Platform-Benutzeroberfläche.
 
 Sie können auch die Experience Platform-APIs verwenden, um Datensätze zu exportieren. Lesen Sie die [API-Tutorial zum Exportieren von Datensätzen](/help/destinations/api/export-datasets.md) für weitere Informationen.
+
+## Unterstützte Ziele {#supported-destinations}
+
+Derzeit können Sie Datensätze zu den im Screenshot hervorgehobenen und unten aufgeführten Cloud-Speicher-Zielen exportieren.
+
+![Ziele, die Datensatzexporte unterstützen](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+
+* [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
+* [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
+* [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
+* [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
+* [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
 ## Wann Segmente zu aktivieren und wann Datensätze zu exportieren sind {#when-to-activate-segments-or-activate-datasets}
 
