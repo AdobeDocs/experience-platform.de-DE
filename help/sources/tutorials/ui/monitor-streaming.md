@@ -53,7 +53,7 @@ Die [!UICONTROL Datenflussaktivität] Seite zeigt spezifische Informationen zu I
 
 Standardmäßig enthalten die angezeigten Daten die Aufnahmeraten der letzten sieben Tage. Auswählen **[!UICONTROL Letzte 7 Tage]** , um den Zeitrahmen der angezeigten Datensätze anzupassen.
 
-Es wird ein Kalender-Popup-Fenster mit Optionen für alternative Erfassungszeitrahmen angezeigt. Sie können den Zeitrahmen für die Ausführung des Datenflusses so konfigurieren, dass die Flüsse der letzten sieben Tage oder der letzten 30 Tage angezeigt werden. Alternativ können Sie den interaktiven Kalender so konfigurieren, dass ein benutzerdefinierter Zeitrahmen Ihrer Wahl festgelegt wird. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Anwenden]**.
+Es wird ein Kalender-Popup-Fenster mit Optionen für alternative Erfassungszeitrahmen angezeigt. Sie können den Zeitrahmen für die Ausführung des Datenflusses so konfigurieren, dass die Flüsse der letzten sieben Tage oder der letzten 30 Tage angezeigt werden. Alternativ können Sie den interaktiven Kalender so konfigurieren, dass ein benutzerdefinierter Zeitrahmen Ihrer Wahl festgelegt wird. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Anwenden]** aus.
 
 ![calendar](../../images/tutorials/monitor-streaming/calendar.png)
 
