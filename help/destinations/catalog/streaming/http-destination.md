@@ -3,10 +3,10 @@ keywords: Streaming; HTTP-Ziel
 title: HTTP-API-Verbindung
 description: Verwenden Sie das HTTP-API-Ziel in Adobe Experience Platform, um Profildaten an Drittanbieter-HTTP-Endpunkte zu senden. Damit können Sie Ihre eigenen Analysen oder andere Vorgänge ausführen, die Sie möglicherweise für Profildaten benötigen, die aus Experience Platform exportiert wurden.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: e22472443eef8aa053aeb0eb35488de581e4b2bd
+source-git-commit: 658cd7ec2d88d4b3633412f5c6d571351904e70b
 workflow-type: tm+mt
-source-wordcount: '2648'
-ht-degree: 88%
+source-wordcount: '2436'
+ht-degree: 95%
 
 ---
 
@@ -158,12 +158,12 @@ Wenn Sie den Authentifizierungstyp **[!UICONTROL Client-Anmeldeinformationen fü
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="Zeitstempel für Segmente einschließen"
->abstract="Schalten Sie diese Option ein, wenn der Datenexport den UNIX-Zeitstempel enthalten soll, an dem die Segmente erstellt und aktualisiert wurden, sowie den UNIX-Zeitstempel, an dem die Segmente dem Ziel für die Aktivierung zugeordnet wurden. In der Dokumentation finden Sie ein Beispiel für einen Datenexport mit dieser Option.**Überwachen von Benutzeraktivitäten in Platform**<h2>Beschreibung</h2><p>Sie können die Benutzeraktivität auf verschiedene Platform-Dienste und -Funktionen in Form von Prüfprotokollen überwachen. Diese Protokolle bilden ein Audit-Protokoll, das <b>who</b> ausgeführt <b>what</b> Maßnahmen und <b>when</b>. Audit-Protokolle können bei der Fehlerbehebung in Platform helfen und Ihrem Unternehmen helfen, die Richtlinien zur Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen.</p><h2>Anleitung</h2><ul><li>Auswählen <b>Prüfungen</b> in der linken Navigation. Der Arbeitsbereich &quot;Prüfungen&quot;zeigt eine Liste der aufgezeichneten Protokolle an, die standardmäßig von der letzten zur letzten sortiert sind.</li>   <li> HINWEIS: Prüfprotokolle werden 365 Tage lang aufbewahrt, danach werden sie aus dem System gelöscht. Daher können Sie nur für einen Zeitraum von maximal 365 Tagen zurückkehren. Wenn Sie auf Daten zurückgreifen müssen, die älter als 365 Tage sind, sollten Sie Protokolle regelmäßig exportieren, um Ihre internen Richtlinienanforderungen zu erfüllen. </li><li>Wählen Sie ein Ereignis aus der Liste aus, um seine Details in der rechten Leiste anzuzeigen. </li><li>Wählen Sie das Trichtersymbol aus, um eine Liste von Filtersteuerelementen anzuzeigen, mit denen die Ergebnisse eingegrenzt werden können. Unabhängig von den ausgewählten Filtern werden nur die letzten 1000 Datensätze angezeigt. </li><li>Um die aktuelle Liste der Prüfprotokolle zu exportieren, wählen Sie **Protokoll herunterladen**.</li><li>Weitere Hilfe zu dieser Funktion finden Sie im Abschnitt <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=de">Übersicht über Auditprotokolle</a> auf Experience League.</li></ul>"
+>abstract="Schalten Sie diese Option ein, wenn der Datenexport den UNIX-Zeitstempel enthalten soll, an dem die Segmente erstellt und aktualisiert wurden, sowie den UNIX-Zeitstempel, an dem die Segmente dem Ziel für die Aktivierung zugeordnet wurden. In der Dokumentation finden Sie ein Beispiel für einen Datenexport mit dieser Option."
 
-[!CONTEXTUALHELP]
-id="platform_destinations_connect_http_queryparameters"
-title="Abfrageparameter"
-abstract="Optional können Sie Abfrageparameter zur HTTP-Endpunkt-URL hinzufügen. Formatieren Sie die verwendeten Abfrageparameter wie folgt: `parameter1=value&parameter2=value`."
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_queryparameters"
+>title="Abfrageparameter"
+>abstract="Optional können Sie Abfrageparameter zur HTTP-Endpunkt-URL hinzufügen. Formatieren Sie die verwendeten Abfrageparameter wie folgt: `parameter1=value&parameter2=value`."
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
@@ -186,7 +186,8 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klic
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
 
 >[!IMPORTANT]
-Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+> 
+>Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Profil-Exportziele](../../ui/activate-streaming-profile-destinations.md).
 

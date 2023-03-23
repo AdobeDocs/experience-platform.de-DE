@@ -2,10 +2,10 @@
 title: Übersicht über Auditprotokolle
 description: Erfahren Sie, wie Sie mithilfe von Audit-Protokollen sehen können, wer welche Aktionen in Adobe Experience Platform durchgeführt hat.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: cf6ff8bcd3dfebe551ac3d7289fa8d5fb2a78079
+source-git-commit: 658cd7ec2d88d4b3633412f5c6d571351904e70b
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 42%
+source-wordcount: '1157'
+ht-degree: 35%
 
 ---
 
@@ -23,8 +23,8 @@ ht-degree: 42%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
->title="Beschreibung"
->abstract=""
+>title="Überwachen von Benutzeraktivitäten in Platform"
+>abstract="<h2>Beschreibung</h2><p>Sie können die Benutzeraktivität auf verschiedene Platform-Dienste und -Funktionen in Form von Prüfprotokollen überwachen. Diese Protokolle bilden ein Audit-Protokoll, das <b>who</b> ausgeführt <b>what</b> Maßnahmen und <b>when</b>. Audit-Protokolle können bei der Fehlerbehebung in Platform helfen und Ihrem Unternehmen helfen, die Richtlinien zur Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen.</p><h2>Anleitung</h2><ul><li>Auswählen <b>Prüfungen</b> in der linken Navigation. Der Arbeitsbereich &quot;Prüfungen&quot;zeigt eine Liste der aufgezeichneten Protokolle an, die standardmäßig von der letzten zur letzten sortiert sind.</li>   <li> HINWEIS: Prüfprotokolle werden 365 Tage lang aufbewahrt, danach werden sie aus dem System gelöscht. Daher können Sie nur für einen Zeitraum von maximal 365 Tagen zurückkehren. Wenn Sie auf Daten zurückgreifen müssen, die älter als 365 Tage sind, sollten Sie Protokolle regelmäßig exportieren, um Ihre internen Richtlinienanforderungen zu erfüllen. </li><li>Wählen Sie ein Ereignis aus der Liste aus, um seine Details in der rechten Leiste anzuzeigen. </li><li>Wählen Sie das Trichtersymbol aus, um eine Liste von Filtersteuerelementen anzuzeigen, mit denen die Ergebnisse eingegrenzt werden können. Unabhängig von den ausgewählten Filtern werden nur die letzten 1000 Datensätze angezeigt. </li><li>Um die aktuelle Liste der Prüfprotokolle zu exportieren, wählen Sie **Protokoll herunterladen**.</li><li>Weitere Hilfe zu dieser Funktion finden Sie im Abschnitt <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=de">Übersicht über Auditprotokolle</a> auf Experience League.</li></ul>"
 
 Um die Transparenz und Sichtbarkeit der im System durchgeführten Aktivitäten zu erhöhen, ermöglicht es Ihnen Adobe Experience Platform, die Benutzeraktivität für verschiedene Dienste und Funktionen in Form von &quot;Auditprotokollen&quot;zu überprüfen. Diese Protokolle bilden ein Audit-Protokoll, das Ihnen bei der Fehlerbehebung in Platform helfen und Ihrem Unternehmen helfen kann, die Richtlinien der Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen.
 
@@ -72,10 +72,10 @@ Um Prüfprotokolle anzeigen und exportieren zu können, benötigen Sie die **[!U
 
 ## Verwalten von Prüfprotokollen in der Benutzeroberfläche {#managing-audit-logs-in-the-ui}
 
->[!CONTEXTUALHELP]
->id="platform_privacyConsole_audits_instructions"
->title="Anleitung"
->abstract=""
+[!CONTEXTUALHELP]
+id="platform_privacyConsole_audits_instructions"
+title="Anleitung"
+abstract=""
 
 Sie können Prüfprotokolle für verschiedene Funktionen der Experience Platform im **[!UICONTROL Prüfungen]** Arbeitsbereich in der Platform-Benutzeroberfläche. Der Arbeitsbereich zeigt eine Liste der aufgezeichneten Protokolle an, die standardmäßig von der letzten zur letzten sortiert sind.
 
@@ -90,8 +90,7 @@ Wählen Sie ein Ereignis aus der Liste aus, um seine Details in der rechten Leis
 ### Filtern von Auditprotokollen
 
 >[!NOTE]
->
->Da es sich hierbei um eine neue Funktion handelt, gehen die angezeigten Daten nur bis März 2022 zurück. Je nach ausgewählter Ressource stehen möglicherweise frühere Daten ab Januar 2022 zur Verfügung.
+Da es sich hierbei um eine neue Funktion handelt, gehen die angezeigten Daten nur bis März 2022 zurück. Je nach ausgewählter Ressource stehen möglicherweise frühere Daten ab Januar 2022 zur Verfügung.
 
 
 Wählen Sie das Trichtersymbol (![Filtersymbol](../../images/audit-logs/icon.png)) aus, um eine Liste von Filterfeldern anzuzeigen, mit denen die Ergebnisse eingegrenzt werden können. Unabhängig von den ausgewählten Filtern werden nur die letzten 1000 Datensätze angezeigt.
