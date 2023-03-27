@@ -5,9 +5,9 @@ user-guide-title: Intelligent Services-Hilfe
 breadcrumb-title: Handbuch zu Intelligent Services
 user-guide-description: Nutzen Sie intelligente KI-Services, um Scores zu generieren, Insights zu erhalten und Segmente aus Ihren Marketing-Ereignisdaten zu erstellen.
 source-git-commit: 56f0ea4ee1fcefecb317eb2a078b01f7a9767c52
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '140'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 93%
 - Inhalts-Tagging {#content-commerce-ai}
    - [Übersicht](content-commerce-ai/overview.md)
    - [Erste Schritte](content-commerce-ai/getting-started.md)
-   - Content Tagging-API{#api}
+   - Inhalts-Tagging-API {#api}
       - [Farb-Tagging](content-commerce-ai/api/color-tagging.md)
       - [Keyword-Tagging](content-commerce-ai/api/keyword-tagging.md)
       - [Textpräsenz- und optische Zeichenerkennung](content-commerce-ai/api/optical-character-recognition.md)
