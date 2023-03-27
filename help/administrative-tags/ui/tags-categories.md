@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;Tag-Kategorien;Tags;
 title: Tag-Kategorien
-description: Dieses Dokument enthält Informationen zur Verwaltung von einheitlichen Tag-Kategorien in Adobe Experience Cloud
+description: Dieses Dokument enthält Informationen zum Verwalten von Kategorien einheitlicher Tags in Adobe Experience Cloud
 source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
 workflow-type: tm+mt
 source-wordcount: '417'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
