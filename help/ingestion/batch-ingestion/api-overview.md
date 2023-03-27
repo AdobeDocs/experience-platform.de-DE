@@ -4,22 +4,22 @@ solution: Experience Platform
 title: Handbuch zur Batch Ingestion-API
 description: Dieses Dokument enthält eine umfassende Anleitung für Entwickler, die mit Batch-Aufnahme-APIs für Adobe Experience Platform arbeiten.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 49281d6ef959c84c3da964f0a9e19859fd8901a5
+source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
 workflow-type: tm+mt
-source-wordcount: '2413'
-ht-degree: 77%
+source-wordcount: '2412'
+ht-degree: 76%
 
 ---
 
 # Entwicklerhandbuch zur Batch-Erfassung
 
-Dieses Dokument enthält eine umfassende Anleitung zur Verwendung von [API-Endpunkte für die Batch-Erfassung](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) in Adobe Experience Platform. Einen Überblick über Batch-Aufnahme-APIs, einschließlich Voraussetzungen und Best Practices, erhalten Sie im Abschnitt [Batch-Aufnahme-API - Übersicht](overview.md).
+Dieses Dokument enthält eine umfassende Anleitung zur Verwendung von [API-Endpunkte für die Batch-Erfassung](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) in Adobe Experience Platform. Einen Überblick über Batch-Aufnahme-APIs, einschließlich Voraussetzungen und Best Practices, erhalten Sie im Abschnitt [Batch-Aufnahme-API - Übersicht](overview.md).
 
 Der Anhang zu diesem Dokument enthält Informationen zur [Formatierung von Daten, die zur Erfassung verwendet werden sollen](#data-transformation-for-batch-ingestion), einschließlich Beispiel-CSV- und JSON-Datendateien.
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [Datenerfassungs-API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Data Ingestion bietet eine RESTful-API, mit der Sie bei unterstützten Objekttypen grundlegende CRUD-Vorgänge durchführen können.
+Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [Batch-Aufnahme-API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Die Batch-Erfassung wird über eine RESTful-API bereitgestellt, mit der Sie grundlegende CRUD-Vorgänge für die unterstützten Objekttypen durchführen können.
 
 Bevor Sie fortfahren, lesen Sie bitte die [Batch-Aufnahme-API - Übersicht](overview.md) und [Erste Schritte](getting-started.md).
 

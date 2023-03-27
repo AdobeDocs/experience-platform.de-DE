@@ -4,10 +4,10 @@ user-guide-title: Hilfe zur Datenerfassung in Adobe Experience Platform
 breadcrumb-title: Anleitung zur Datenaufnahme
 user-guide-description: Implementieren Sie Ihre Daten in Experience Platform durch die Batch- oder Streaming-Aufnahme.
 feature: Data Ingestion
-source-git-commit: f77bbc60f2bc1f12970e8050ec6a924b9713f303
+source-git-commit: 6110bf51cbd0005428e7dab4552944c5c9b54d03
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 89%
+source-wordcount: '156'
+ht-degree: 78%
 
 ---
 
@@ -44,7 +44,8 @@ ht-degree: 89%
    - [Abrufen fehlgeschlagener Batches](quality/retrieve-failed-batches.md)
    - [Validieren der Streaming-Erfasssung](quality/streaming-validation.md)
    - [Benachrichtigungen zur Datenerfassung](quality/subscribe-events.md)
-- [Leitlinien für Datenaufnahme](guardrails.md)
-- [Quellen-Connectoren](source-connectors.md)
-- [API-Referenz](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
+- [Schutzmaßnahmen bei der Datenaufnahme](guardrails.md)
+- [Quell-Connectoren](source-connectors.md)
+- [Referenz zur Batch Ingestion-API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
+- [Referenz zur Streaming-Aufnahme-API](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
 - [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)

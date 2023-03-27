@@ -5,10 +5,10 @@ title: Senden mehrerer Nachrichten in einer einzelnen HTTP-Anfrage
 type: Tutorial
 description: Dieses Dokument enthält ein Tutorial zum Senden mehrerer Nachrichten an Adobe Experience Platform in einer einzelnen HTTP-Anfrage mithilfe der Streaming-Erfassung.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 3ad5c06db07b360df255d3afb1c177cc5de613bb
 workflow-type: tm+mt
-source-wordcount: '1493'
-ht-degree: 68%
+source-wordcount: '1490'
+ht-degree: 65%
 
 ---
 
@@ -508,7 +508,7 @@ Die zweite Nachricht schlug fehl, weil der Nachrichtentext fehlte. Die Erfassung
     },
 ```
 
-Die dritte Meldung ist fehlgeschlagen, da eine ungültige IMS-Organisations-ID in der Kopfzeile verwendet wird. Die IMS-Organisation muss mit der {CONNECTION_ID} übereinstimmen, auf der Sie veröffentlichen möchten. Um festzustellen, welche IMS-Organisations-ID mit der von Ihnen verwendeten Streaming-Verbindung übereinstimmt, können Sie eine `GET inlet` -Anfrage mithilfe der [[!DNL Data Ingestion API]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Ein Beispiel zum Abrufen zuvor erstellter Streaming-Verbindungen finden Sie unter [Abrufen einer Streaming-Verbindung](./create-streaming-connection.md#get-data-collection-url).
+Die dritte Nachricht schlug fehl, weil in der Kopfzeile eine ungültige Organisations-ID verwendet wurde. Die Organisation muss mit der {CONNECTION_ID} übereinstimmen, in der Sie veröffentlichen möchten. Um festzustellen, welche Organisations-ID mit der verwendeten Streaming-Verbindung übereinstimmt, können Sie eine `GET inlet` -Anfrage mithilfe der [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/). Ein Beispiel zum Abrufen zuvor erstellter Streaming-Verbindungen finden Sie unter [Abrufen einer Streaming-Verbindung](./create-streaming-connection.md#get-data-collection-url).
 
 Die vierte Meldung ist fehlgeschlagen, da sie nicht dem erwarteten XDM-Schema entsprach. Das `xdmSchema`, das in der Kopfzeile und im Text der Anfrage enthalten ist, stimmt nicht mit dem XDM-Schema der `{DATASET_ID}` überein. Durch das Korrigieren des Schemas in der Kopfzeile und im Nachrichtentext kann die DCCS-Validierung bestehen und erfolgreich an gesendet werden [!DNL Platform]. Der Nachrichtentext muss ebenfalls aktualisiert werden, um mit dem XDM-Schema der `{DATASET_ID}` , damit die Streaming-Validierung an [!DNL Platform]. Weitere Informationen zu Nachrichten, die erfolgreich an Platform gesendet werden, finden Sie im Abschnitt [Bestätigen von aufgenommenen Nachrichten](#confirm-messages-ingested) in diesem Tutorial.
 

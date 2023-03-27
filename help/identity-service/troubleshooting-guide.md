@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei Identity Service
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Adobe Experience Platform Identity Service sowie eine Anleitung zur Behebung gängiger Fehler.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
+source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
 workflow-type: tm+mt
 source-wordcount: '2180'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -282,7 +282,7 @@ Dieser Fehler wird angezeigt, wenn bei Ausführung eines [!DNL Platform]-Service
 
 [!DNL Identity Service] nimmt Identitätsdaten aus Datensatz- und Zeitreihendaten auf, die mithilfe einer Batch-Aufnahme in [!DNL Platform] hochgeladen werden. Da die Batch-Erfassung ein asynchroner Vorgang ist, müssen Sie die Details für einen Batch anzeigen, um Fehler zu prüfen. Während der Batch-Verarbeitung werden Fehler gesammelt, bis der Batch abgeschlossen ist.
 
-Im Folgenden finden Sie eine Liste von Fehlermeldungen im Zusammenhang mit [!DNL Identity Service], die bei Verwendung der [Datenaufnahme-API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) auftreten können.
+Im Folgenden finden Sie eine Liste von Fehlermeldungen im Zusammenhang mit [!DNL Identity Service] Sie können bei der Verwendung von [Batch-Aufnahme-API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).
 
 ### Unbekanntes XDM-Schema
 
