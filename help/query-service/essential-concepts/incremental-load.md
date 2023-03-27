@@ -3,7 +3,7 @@ title: Inkrementelles Laden im Abfrage-Service
 description: Die inkrementelle Ladefunktion verwendet Funktionen sowohl für anonyme Blöcke als auch für Momentaufnahmen, um eine nahezu in Echtzeit entstehende Lösung zum Verschieben von Daten aus dem Data Lake in Ihr Data Warehouse zu bieten, ohne übereinstimmende Daten zu berücksichtigen.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
 source-git-commit: 11a947addce65887385c983ac81d884fb4244291
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '688'
 ht-degree: 100%
 
@@ -40,7 +40,7 @@ Die folgenden Schritte zeigen, wie Sie Daten mithilfe von Momentaufnahmen und de
       WHERE false;
    ```
 
-1. Füllen Sie die `checkpoint_log`-Tabelle mit einer leeren Eingabe für den Datensatz, der eine inkrementelle Verarbeitung erfordert. `DIM_TABLE_ABC` ist der Datensatz, der im folgenden Beispiel verarbeitet werden soll. Bei der erstmaligen Verarbeitung von `DIM_TABLE_ABC` ist `last_snapshot_id` als `null` initialisiert. Auf diese Weise können Sie den gesamten Datensatz beim ersten Mal und danach inkrementell verarbeiten.
+1. Füllen Sie die `checkpoint_log`-Tabelle mit einer leeren Eingabe für den Datensatz, wodurch eine inkrementelle Verarbeitung erfordert wird. `DIM_TABLE_ABC` ist der Datensatz, der im folgenden Beispiel verarbeitet werden soll. Bei der erstmaligen Verarbeitung von `DIM_TABLE_ABC` ist `last_snapshot_id` als `null` initialisiert. Auf diese Weise können Sie den gesamten Datensatz beim ersten Mal und danach inkrementell verarbeiten.
 
    ```SQL
    INSERT INTO
@@ -90,7 +90,7 @@ Die folgenden Schritte zeigen, wie Sie Daten mithilfe von Momentaufnahmen und de
    $$;
    ```
 
-1. Verwenden Sie die inkrementelle Datenladelogik im folgenden Beispiel für anonyme Blöcke, um zu ermöglichen, dass neue Daten aus dem Quelldatensatz (seit dem letzten Zeitstempel) verarbeitet und regelmäßig an die Zieltabelle angehängt werden. Im Beispiel werden Datenänderungen an `DIM_TABLE_ABC` verarbeitet und an `DIM_TABLE_ABC_incremental` angehängt.
+1. Verwenden Sie die inkrementelle Datenladelogik im folgenden Beispiel für anonyme Blöcke, um zu ermöglichen, dass neue Daten (seit dem letzten Zeitstempel) aus dem Quelldatensatz verarbeitet und regelmäßig an die Zieltabelle angehängt werden. Im Beispiel werden Datenänderungen an `DIM_TABLE_ABC` verarbeitet und an `DIM_TABLE_ABC_incremental` angehängt.
 
    >[!NOTE]
    >
