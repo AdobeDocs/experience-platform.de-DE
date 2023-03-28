@@ -5,9 +5,9 @@ title: Erstellen einer Adobe Analytics-Quellverbindung über die Benutzeroberfl�
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Quellverbindung für Adobe Analytics über die Benutzeroberfläche erstellen, um Kundendaten in Adobe Experience Platform zu importieren.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 3530c91cd36e9e2729515827978e6115857f2405
 workflow-type: tm+mt
-source-wordcount: '2384'
+source-wordcount: '2390'
 ht-degree: 61%
 
 ---
@@ -159,7 +159,7 @@ Die folgende Dokumentation enthält weitere Ressourcen zum Verständnis von Date
 * [Funktionen zur Datenvorbereitung](../../../../../data-prep/functions.md)
 * [Hinzufügen von berechneten Feldern](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
-### Filtern nach [!DNL Profile Service] (Beta) {#filtering-for-profile}
+### Filterung nach Echtzeit-Kundenprofil (Beta) {#filtering-for-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
@@ -170,7 +170,7 @@ Die folgende Dokumentation enthält weitere Ressourcen zum Verständnis von Date
 >
 >Filterunterstützung [!DNL Analytics] -Daten befinden sich derzeit in der Beta-Phase und stehen nicht allen Benutzern zur Verfügung. Dokumentation und Funktionalitäten können sich ändern.
 
-Nachdem Sie die Zuordnungen für Ihre [!DNL Analytics] Report Suite-Daten verwenden, können Sie Filterregeln und -bedingungen anwenden, um Daten selektiv in die [!DNL Profile Service]. Filterunterstützung ist nur verfügbar für [!DNL Analytics] Daten und Daten werden nur vor der Eingabe gefiltert [!DNL Profile.] Alle Daten werden in den Daten-Pool aufgenommen.
+Nachdem Sie die Zuordnungen für Ihre [!DNL Analytics] Report Suite-Daten können Sie Filterregeln und -bedingungen anwenden, um Daten selektiv in das Echtzeit-Kundenprofil ein- oder auszuschließen. Filterunterstützung ist nur verfügbar für [!DNL Analytics] Daten und Daten werden nur vor der Eingabe gefiltert [!DNL Profile.] Alle Daten werden in den Daten-Pool aufgenommen.
 
 #### Filterung auf Zeilenebene
 
