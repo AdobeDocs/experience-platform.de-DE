@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Aktivieren von Segmenten für dateibasierte Ziele mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie mit der Flow Service-API Dateien mit qualifizierten Profilen in Cloud-Speicher-Ziele exportieren können.
 type: Tutorial
-source-git-commit: 6ed78a96f099fb4552716ac4a598c43f4d65cf37
+source-git-commit: d925802489d5da006cd9cfacb89b3e880663edaf
 workflow-type: tm+mt
 source-wordcount: '4337'
 ht-degree: 11%
@@ -3645,6 +3645,8 @@ Die ID in der Antwort stellt die eindeutige Kennung des von Ihnen erstellten Ein
 
 Als Nächstes müssen Sie das Ausgabeschema für Ihren Export einrichten. Zunächst müssen Sie Ihr bestehendes Partnerschema finden und untersuchen.
 
+>[!BEGINSHADEBOX]
+
 **Anfrage**
 
 +++ Anfrage zum Abrufen des Partnerschemas für das Ausgabeschema
@@ -3957,7 +3959,7 @@ Als Nächstes müssen Sie ein Ausgabeschema erstellen. Kopieren Sie die JSON-Ant
 
 **Anfrage**
 
-+++ Ausgabeschema erstellen - Anfrage
++++Ausgabeschema erstellen - Anfrage
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/schemas' \
@@ -3977,7 +3979,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 **Antwort**
 
-+++ Ausgabeschema erstellen - Antwort
++++Ausgabeschema erstellen - Antwort
 
 ```json
 {
@@ -4287,7 +4289,7 @@ Die ID in der Antwort stellt die eindeutige Kennung des von Ihnen erstellten Ein
 
 >[!ENDSHADEBOX]
 
-### Erstellen von Zuordnungssätzen
+### Zuordnungssatz erstellen {#create-mapping-set}
 
 Verwenden Sie als Nächstes das [Datenvorbereitung-API](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet) , um den Zuordnungssatz mithilfe der Eingabe-Schema-ID, der Ausgabeschema-ID und der gewünschten Feldzuordnungen zu erstellen.
 
@@ -4295,7 +4297,7 @@ Verwenden Sie als Nächstes das [Datenvorbereitung-API](https://developer.adobe.
 
 **Anfrage**
 
-+++ Zuordnungssatz erstellen - Anfrage
++++Mapping-Satz erstellen - Anfrage
 
 >[!IMPORTANT]
 >
@@ -4304,7 +4306,7 @@ Verwenden Sie als Nächstes das [Datenvorbereitung-API](https://developer.adobe.
 >* Beachten Sie auch, dass die folgende Beispielkonfiguration Folgendes enthält: `Email` und `Phone_E.164`können Sie pro Datenfluss nur ein Identitätsattribut exportieren.
 
 
-```shell{line-numbers="true" start-line="1" highlight="16-38"}
+```shell {line-numbers="true" start-line="1" highlight="16-38"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
