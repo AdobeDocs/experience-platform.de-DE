@@ -1,13 +1,15 @@
 ---
-keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; API
+keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;
 title: Beispiel-PQL-Ausdrücke für berechnete Attribute
 type: Documentation
 description: Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignisebene in Attribute auf Profilebene aggregiert werden. Diese Funktionen erfordern die Verwendung gültiger PQL-Ausdrücke (Profile Query Language). In diesem Handbuch werden einige der am häufigsten verwendeten PQL-Ausdrücke für berechnete Attribute vorgestellt.
 exl-id: 7c80e2d3-919a-47f9-a59f-833a70f02a8f
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+hide: true
+hidefromtoc: true
+source-git-commit: 5ae7ddbcbc1bc4d7e585ca3e3d030630bfb53724
 workflow-type: tm+mt
 source-wordcount: '965'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
