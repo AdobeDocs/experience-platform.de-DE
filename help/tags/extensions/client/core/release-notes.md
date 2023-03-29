@@ -2,10 +2,10 @@
 title: Versionshinweise zur Core-Erweiterung
 description: Aktuelle Versionshinweise zur Core-Erweiterung in Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 0955646164269d868be5161a117c6e12dbd9a4cb
 workflow-type: tm+mt
-source-wordcount: '1565'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -14,6 +14,26 @@ ht-degree: 100%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+
+## 29. März 2023
+
+v3.4.1
+
+* Fügt neue webnative Delegationsereignisse hinzu:
+   * Keydown
+   * KeyUp
+* Fügt die Möglichkeit hinzu, mit vielen Werten (&quot;Weitere hinzufügen&quot;-Optionen) gegen die folgenden Delegaten zu testen:
+   * Ereignisse
+      * Änderung
+   * Bedingungen
+      * Cookie
+      * Landing Page
+      * Query String Parameter
+      * Traffic-Quelle
+      * Variable
+* Ändert den &quot;events/EntersViewport&quot;-Delegaten für die Verwendung der [Schnittstellenbeobachter-API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) anstelle der manuellen Erkennung von Elementen, die in den Viewport gelangen.
+* Entfernt Code, der DTM-Cookies zu LocalStorage migriert hat.
+* Protokolliert eine Warnung auf der Konsole, wenn die LocalStorage- und SessionStorage-APIs nicht verfügbar sind.
 
 ## 4. Januar 2022
 
