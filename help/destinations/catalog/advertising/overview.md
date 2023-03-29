@@ -3,10 +3,10 @@ keywords: Werbeziele; Ziele; Plattformziele
 title: Werbeziele – Übersicht
 description: Verbinden Sie Adobe Experience Platform mit einer Drittanbieter-Werbeplattform (z. B. DSP, Werbenetzwerk, SSP) und geben Sie für diese Plattformen pseudonyme Zielgruppen frei.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 30e75b8fbaa4a8269a32f82ade435b67767630c5
+source-git-commit: 732e6d3d53d983f3390941f4694d2c542d882004
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 49%
+source-wordcount: '258'
+ht-degree: 57%
 
 ---
 
@@ -26,7 +26,8 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 
 ### Verbindungen
 
-* [Adobe Advertising Cloud-Verbindung](adobe-advertising-cloud-connection.md)
+* [Adobe Advertising Cloud-Verbindung](adobe-advertising-cloud-connection.md)
+* [(Beta) Amazon Ads-Verbindung](amazon-ads.md)
 * [(Beta) Criteo-Verbindung](criteo.md)
 * [Google Display &amp; Video 360-Verbindung](google-dv360.md)
 * [Google Ads-Verbindung](google-ads-destination.md)
@@ -36,8 +37,8 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 * [Microsoft Bing-Verbindung](bing.md)
 * [Pinterest Customer List-Verbindung](pinterest.md)
 * [(Beta) Snapchat Ads-Verbindung](snap-inc.md)
-* [The Trade Desk-Verbindung](tradedesk.md)
-* [(Beta) Die CRM-Verbindung des Trade Desk](tradedesk-emails.md)
+* [Verbindung mit The Trade Desk](tradedesk.md)
+* [(Beta) The Trade Desk CRM-Verbindung ](tradedesk-emails.md)
 * [Yahoo/Verizon DataX](datax.md)
 
 ### Erweiterungen
@@ -58,4 +59,4 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 
 ## Mit einem neuen Werbeziel verbinden {#connect-destination}
 
-Um Segmente für Ihre Kampagnen an Werbeziele zu senden, muss Platform zunächst eine Verbindung zum Ziel herstellen. Siehe [Tutorial zur Zielerstellung](../../ui/connect-destination.md) für detaillierte Informationen zur Einrichtung eines neuen Ziels.
+Um Segmente für Ihre Kampagnen an Werbeziele zu senden, muss Platform zunächst eine Verbindung zum Ziel herstellen. Siehe das [Tutorial zur Zielerstellung](../../ui/connect-destination.md) für detaillierte Informationen zur Einrichtung eines neuen Ziels.
