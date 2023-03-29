@@ -4,10 +4,10 @@ solution: Real-time Customer Data Platform
 audience: user
 user-guide-title: Handbuch zu Real-time Customer Data Platform
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppen-Segmente aus diesen Profilen zu erstellen und diese Segmente für Drittanbieterziele bereitzustellen.
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: a36ec71cbec2316eaa08daf5f1edb36509271e7c
 workflow-type: tm+mt
 source-wordcount: '205'
-ht-degree: 64%
+ht-degree: 67%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 64%
 * Erste Schritte {#intro}
    * Real-Time CDP {#rtcdp-intro}
       * [Erste Schritte mit Real-Time CDP](get-started.md)
-      * [Metriken – Übersicht](home-page-dashboards.md)
+      * [Startseite](home-page-dashboards.md)
    * Real-Time CDP B2B Edition {#rtcdpb2b-intro}
       * [Beispielanwendungsfall](./b2b-use-case.md)
       * [Tutorial mit der Beschreibung aller Schritte](./b2b-tutorial.md)
@@ -48,7 +48,7 @@ ht-degree: 64%
 * Real-Time CDP B2B Edition AI/ML-Dienste {#b2b-cdp-ai-ml}
    * [Verwandte Konten](b2b-ai-ml-services/related-accounts.md)
    * [Lead-Konto-Zuordnung](b2b-ai-ml-services/lead-to-account-matching.md)
-   * Prädiktive Lead- und Kontobewertung {#predictive-lead-and-account-scoring-intro}
+   * Prädiktives Lead- und Konto-Scoring {#predictive-lead-and-account-scoring-intro}
       * [Prädiktive Lead- und Kontobewertung - Übersicht](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
       * [Prädiktive Lead- und Kontobewertung verwalten](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
 * Schemas {#schemas}

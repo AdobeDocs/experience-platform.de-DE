@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise März 2023
 description: Versionshinweise März 2023 für Adobe Experience Platform.
-source-git-commit: 38c3461f1d84fca83fd04eef57aae28de4744e17
+source-git-commit: 74b609572b6e5e9b5e641fe497f53f3463b900c4
 workflow-type: tm+mt
-source-wordcount: '1065'
-ht-degree: 35%
+source-wordcount: '1110'
+ht-degree: 34%
 
 ---
 
@@ -43,6 +43,7 @@ Die Datenvorbereitung ermöglicht es Dateningenieuren, Daten dem Experience-Date
 
 | Funktion | Beschreibung |
 | --- | --- |
+| Allgemeine Verfügbarkeit der Filterung von Adobe Analytics-Daten | Sie können jetzt Datenvorbereitung verwenden, um Regeln und Bedingungen zum Filtern Ihrer Analytics-Daten anzuwenden, bevor Sie sie in das Echtzeit-Kundenprofil aufnehmen. Weitere Informationen finden Sie im Handbuch unter [Filtern von Analytics-Daten für die Profilaufnahme](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-profile). |
 | Neue Funktionen für die Kodierung und Dekodierung von URL-Zeichenfolgen | <ul><li>Die `get_url_encoded` -Funktion verwendet eine URL als Eingabe und ersetzt oder kodiert Sonderzeichen durch ASCII-Zeichen.</li><li>Die `get_url_decoded` nimmt eine URL als Eingabe und dekodiert ASCII-Zeichen in Sonderzeichen.</li></ul> Weitere Informationen finden Sie im Abschnitt [Handbuch zu Datenvorbereitung-Funktionen](../../data-prep/functions.md). Eine umfassende Liste der reservierten Zeichen und der zugehörigen kodierten Zeichen finden Sie im Handbuch unter [Sonderzeichen](../../data-prep/functions.md#special-characters). |
 
 Weitere Informationen zur Datenvorbereitung finden Sie im [Datenvorbereitung - Übersicht](../../data-prep/home.md).
