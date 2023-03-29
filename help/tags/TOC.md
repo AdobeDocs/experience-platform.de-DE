@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Tags
 solution: Data Collection
-source-git-commit: e34661f70a3550e579afe5133d85f76b1125e004
-workflow-type: ht
-source-wordcount: '961'
+source-git-commit: 7bff76b6c06e3d596dd811d04b3673c08ed9c250
+workflow-type: tm+mt
+source-wordcount: '962'
 ht-degree: 100%
 
 ---
@@ -222,6 +222,8 @@ ht-degree: 100%
          * [Übersicht](./extensions/server/meta/overview.md)
       * [!UICONTROL Microsoft Azure] {#azure}
          * [Übersicht](./extensions/server/azure/overview.md)
+      * [!DNL Mixpanel] {#mixpanel}
+         * [Übersicht](./extensions/server/mixpanel/overview.md)
       * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)
       * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)
       * [!DNL Splunk] {#splunk}
