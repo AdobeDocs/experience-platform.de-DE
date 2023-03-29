@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise März 2023
 description: Versionshinweise März 2023 für Adobe Experience Platform.
-source-git-commit: c5061a759f1098ce1dcc7e3f00c52e064239d7c5
+source-git-commit: 38c3461f1d84fca83fd04eef57aae28de4744e17
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 42%
+source-wordcount: '1065'
+ht-degree: 35%
 
 ---
 
@@ -16,6 +16,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [Datenerfassung](#data-collection)
 - [Datenvorbereitung](#data-prep)
+- [Ziele](#destinations)
 - [Segmentierungs-Service](#segmentation)
 - [Quellen](#sources)
 
@@ -45,6 +46,41 @@ Die Datenvorbereitung ermöglicht es Dateningenieuren, Daten dem Experience-Date
 | Neue Funktionen für die Kodierung und Dekodierung von URL-Zeichenfolgen | <ul><li>Die `get_url_encoded` -Funktion verwendet eine URL als Eingabe und ersetzt oder kodiert Sonderzeichen durch ASCII-Zeichen.</li><li>Die `get_url_decoded` nimmt eine URL als Eingabe und dekodiert ASCII-Zeichen in Sonderzeichen.</li></ul> Weitere Informationen finden Sie im Abschnitt [Handbuch zu Datenvorbereitung-Funktionen](../../data-prep/functions.md). Eine umfassende Liste der reservierten Zeichen und der zugehörigen kodierten Zeichen finden Sie im Handbuch unter [Sonderzeichen](../../data-prep/functions.md#special-characters). |
 
 Weitere Informationen zur Datenvorbereitung finden Sie im [Datenvorbereitung - Übersicht](../../data-prep/home.md).
+
+## Ziele {#destinations}
+
+[!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+
+**Neue Ziele** {#new-destinations}
+
+| Ziel | Beschreibung |
+| ----------- | ----------- |
+| [[!DNL Adobe Commerce] Verbindung GA](../../destinations/catalog/personalization/adobe-commerce.md) | Die [!DNL Adobe Commerce] Mit dem Ziel-Connector (jetzt allgemein verfügbar) können Sie eine oder mehrere Real-Time CDP-Zielgruppen auswählen, die für Ihre [!DNL Adobe Commerce] -Konto ein dynamisches personalisiertes Erlebnis für Ihre Kunden bereitstellen. |
+| [[!DNL Snap Inc] Verbindung GA](../../destinations/catalog/advertising/snap-inc.md) | Die [!DNL Snap Inc] Mit dem Ziel-Connector (jetzt allgemein verfügbar) können Marketing-Experten in Experience Platform erstellte Benutzersegmente in importieren [!DNL Snapchat Ads] und verwenden sie zum Targeting ihrer Anzeigen. |
+| [(API) Oracle Eloqua-Verbindung](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) | Verwenden Sie die API-basierte Verbindung, um [!DNL Oracle Eloqua] Planung und Ausführung von Kampagnen bei Bereitstellung eines personalisierten Kundenerlebnisses für potenzielle Kunden in [!DNL Oracle Eloqua]. |
+| [(Beta)  [!DNL Amazon Ads] -Verbindung](../../destinations/catalog/advertising/amazon-ads.md) | Die [!DNL Amazon Ads] Integration mit Adobe Experience Platform bietet eine schlüsselfertige Integration in [!DNL Amazon Ads] Produkte, einschließlich [!DNL Amazon DSP (ADSP)]. Verwenden der [!DNL Amazon Ads] Zielgruppe in Adobe Experience Platform können Benutzer Advertiser-Zielgruppen für Targeting und Aktivierung auf der [!DNL Amazon DSP]. |
+| [[!DNL Marketo Measure Ultimate] -Verbindung](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] (ehemals Bizible) gibt Marketing-Experten Einblicke, welche Marketing-Maßnahmen bei der Steigerung des Umsatzes und der Maximierung der Kapitalrendite für ihr Unternehmen am effektivsten sind. Das Ziel ermöglicht den B2B-Datenfluss (Business-to-Business) von Adobe Experience Platform nach [!DNL Marketo Measure]. Die Karte steht nur zur Verfügung für [!DNL Marketo Measure Ultimate] -Kunden. |
+| [TikTok-Verbindung](../../destinations/catalog/social/tiktok.md) | Erstellen Sie benutzerdefinierte Zielgruppen in TikTok mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. |
+| [Zendesk-Verbindung](../../destinations/catalog/crm/zendesk.md) | Verwenden Sie dieses Ziel, um Identitäten innerhalb eines Segments als Kontakte innerhalb von zu erstellen und zu aktualisieren. [!DNL Zendesk]. |
+
+{style="table-layout:auto"}
+
+**Neue oder aktualisierte Funktionen** {#destinations-new-updated-functionality}
+
+| Funktionalität | Beschreibung |
+| ----------- | ----------- |
+| Neue Zugriffssteuerungsberechtigung für Ziele: [[!DNL Activate Segments without Mapping]](../../access-control/home.md#permissions) | Die neue Berechtigung gibt Benutzern die Möglichkeit, Segmente für vorhandene Ziele zu aktivieren, ohne die [Zuordnungsschritt](../../destinations/ui/activate-batch-profile-destinations.md#mapping). Benutzer können in Aktivierungs-Workflows Segmente hinzufügen und entfernen, jedoch keine zugeordneten Attribute oder Identitäten hinzufügen oder entfernen. |
+
+{style="table-layout:auto"}
+
+**Korrekturen und Verbesserungen** {#destinations-fixes-and-enhancements}
+
+Wir veröffentlichen eine Fehlerbehebung für die PGP/GPG-Verschlüsselung in dateibasierten Zielen für die Echtzeit-Kundendatenplattform. Mit dieser Änderung generieren vorhandene dateibasierte Ziele, die derzeit die Verschlüsselung verwenden, einen Dateinamen mit einer anderen Erweiterung als zuvor.
+
+- Aktuelle Erweiterung bei Verwendung der Verschlüsselung: `filename.csv`
+- Zukünftige Erweiterung bei Verwendung der Verschlüsselung: `filename.csv.gpg`
+
+Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
 ## Segmentierungs-Service {#segmentation}
 
