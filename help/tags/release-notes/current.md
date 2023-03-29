@@ -2,14 +2,27 @@
 title: Versionshinweise für Tags und Ereignisweiterleitung
 description: Die neuesten Versionshinweise für Tags und Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 2b11fb87523c777d5c2d855e97a4af78a8483abe
+source-git-commit: f2f2f9abc50f2016e41fd23bfbb66553fadf6fce
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 100%
+source-wordcount: '679'
+ht-degree: 74%
 
 ---
 
 # Versionshinweise für Tags und Ereignisweiterleitung
+
+## 29. März 2023
+
+**Schnellstartarbeitsabläufe (Beta)**
+
+Greifen Sie über den Startseite der Datenerfassung auf neue Schnellstartarbeitsabläufe unter &quot;Erste Schritte&quot;zu! Die folgenden Workflows stehen Kunden jetzt als öffentliche Betaversion zur Verfügung.
+* **[Meta Conversions-API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start)**: Kunden mit Ereignisweiterleitung können Ereignisdaten schnell erfassen und serverseitig an Meta weiterleiten, um Anzeigenkonversionen in nur wenigen einfachen Schritten zu ermöglichen.
+* **[Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)**: Kunden können das Mobile SDK schnell implementieren und einfache mobile Ereignisse in nur wenigen einfachen Schritten validieren.
+
+Es wurden neue Erweiterungen veröffentlicht:
+
+* **[!DNL Braze]Ereignisweiterleitungs-Erweiterung**: Die [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) Mit der Ereignisweiterleitungs-Erweiterung können Sie die im Adobe Experience Platform Edge Network erfassten Daten nutzen und an senden. [!DNL Braze] in Form von serverseitigen Ereignissen, bei denen die [!DNL Braze] APIs für die Benutzerverfolgung.
+* **[!DNL Mixpanel]Ereignisweiterleitungs-Erweiterung**: Die [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) Mit der -Erweiterung können Sie die Ereignisweiterleitung nutzen, um Ereignisinformationen im Adobe Experience Platform Edge Network zu erfassen und über die API &quot;Ereignisse verfolgen&quot;an Mixpanel zu senden.
 
 ## 25. Januar 2023
 
