@@ -4,10 +4,10 @@ title: Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die Zielgruppendaten aktivieren, die Sie in Adobe Experience Platform haben, indem Sie Segmente an Ziele senden, die auf Batch-Profilen basieren.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 7d680567cee8b47532bb66434e2f0582cde68532
+source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
 workflow-type: tm+mt
-source-wordcount: '3592'
-ht-degree: 92%
+source-wordcount: '3629'
+ht-degree: 91%
 
 ---
 
@@ -15,9 +15,12 @@ ht-degree: 92%
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+> * So aktivieren Sie Daten und aktivieren die [Zuordnungsschritt](#mapping) des Workflows benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
+> * So aktivieren Sie Daten, ohne die [Zuordnungsschritt](#mapping) des Workflows benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Segment ohne Zuordnung aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
+> 
+> Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 >
->Bei einigen Kundinnen und Kunden, die am Beta-Programm mit der verbesserten Dateiexportfunktion teilnehmen, erfolgt der neue **[!UICONTROL Zuordnungsschritt]** im Rahmen ihres Aktivierungs-Workflows zu den [neuen Beta-Cloud-Speicherzielen](/help/release-notes/2022/october-2022.md#destinations). Beachten Sie bitte auch die [bekannten Einschränkungen](#known-limitations), die mit der Version verbunden sind.
+> Bei einigen Kundinnen und Kunden, die am Beta-Programm mit der verbesserten Dateiexportfunktion teilnehmen, erfolgt der neue **[!UICONTROL Zuordnungsschritt]** im Rahmen ihres Aktivierungs-Workflows zu den [neuen Beta-Cloud-Speicherzielen](/help/release-notes/2022/october-2022.md#destinations). Beachten Sie bitte auch die [bekannten Einschränkungen](#known-limitations), die mit der Version verbunden sind.
 
 ## Übersicht {#overview}
 
