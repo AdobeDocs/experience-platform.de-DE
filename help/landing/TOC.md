@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Überblick über Adobe Experience Platform
 breadcrumb-title: Übersicht zu Experience Platform
 user-guide-description: Erfahren Sie, wie Sie Ihren Kunden mithilfe von Experience Platform in Echtzeit personalisierte Erlebnisse liefern können.
-source-git-commit: 695675aed5a1de4bb6869b733769f8e7e86a0d5b
+source-git-commit: bc781aadb620ad4b383d441d36e39626b0875901
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 92%
+source-wordcount: '258'
+ht-degree: 91%
 
 ---
 
@@ -29,6 +29,7 @@ ht-degree: 92%
    * [Tour durch die Benutzeroberfläche von Platform (Video)](video/platform-ui.md)
    * [Handbuch zur Benutzeroberfläche von Workflows](workflows.md)
    * [Browser- und Sprachunterstützung](browser-language-support.md)
+   * [Umfrage zur Selbstidentifizierung](self-identification.md)
 * Experience Platform-APIs {#platform-apis}
    * [Erste Schritte mit Platform-APIs](api-guide.md)
    * [Platform-APIs authentifizieren und aufrufen](api-authentication.md)
@@ -56,7 +57,7 @@ ht-degree: 92%
          * [Übersicht](./governance-privacy-security/consent/iab/overview.md)
          * [Konfigurieren eines Datensatzes zur Erfassung von Einwilligungs- und Präferenzdaten](./governance-privacy-security/consent/iab/dataset.md)
       * [Integrieren des Platform Web SDK zur Verarbeitung von Einverständnis- und Voreinstellungsdaten](./governance-privacy-security/consent/sdk.md)
-   * Auditprotokolle {#audit-logs}
+   * Audit-Protokolle {#audit-logs}
       * [Übersicht](./governance-privacy-security/audit-logs/overview.md)
       * Audit Query API {#audit-api}
          * [Übersicht](./governance-privacy-security/audit-logs/api/overview.md)
