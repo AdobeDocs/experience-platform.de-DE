@@ -1,26 +1,26 @@
 ---
 title: Fuzzy Match in Query Service
 description: Erfahren Sie, wie Sie eine Übereinstimmung mit Ihren Platform-Daten durchführen, die Ergebnisse aus mehreren Datensätzen kombiniert, indem Sie ungefähr eine Zeichenfolge Ihrer Wahl abgleichen.
-source-git-commit: a3a4ca4179610348eba73cf1239861265d2bf887
+source-git-commit: 633210fe5e824d8686a23b877a406db3780ebdd4
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '813'
 ht-degree: 1%
 
 ---
 
-# Fuzzy Match
+# Fuzzy Match in Query Service
 
-Verwenden Sie eine Fuzzy-Übereinstimmung in Ihren Platform-Daten, um die wahrscheinlichsten, ungefähren Übereinstimmungen zurückzugeben, ohne nach Zeichenfolgen mit identischen Zeichen suchen zu müssen. Dies ermöglicht eine wesentlich flexiblere Suche nach Ihren Daten und erleichtert den Zugriff auf Ihre Daten, indem Zeit und Mühe eingespart werden.
+Verwenden Sie eine &quot;unscharfe&quot;Übereinstimmung Ihrer Adobe Experience Platform-Daten, um die wahrscheinlichsten, ungefähren Übereinstimmungen zurückzugeben, ohne nach Zeichenfolgen mit identischen Zeichen suchen zu müssen. Dies ermöglicht eine wesentlich flexiblere Suche nach Ihren Daten und erleichtert den Zugriff auf Ihre Daten, indem Zeit und Mühe eingespart werden.
 
-Statt zu versuchen, die Suchzeichenfolgen neu zu formatieren, um sie abzugleichen, analysiert die unscharfe Übereinstimmung das Verhältnis der Ähnlichkeit zwischen zwei Sequenzen und gibt den Prozentsatz der Ähnlichkeit zurück. [!DNL FuzzyWuzzy] wird für diesen Prozess empfohlen, da seine Funktionen besser dazu geeignet sind, Zeichenfolgen in komplexeren Situationen im Vergleich zu [!DNL regex] oder [!DNL difflib].
+Statt zu versuchen, die Suchzeichenfolgen neu zu formatieren, um sie abzugleichen, analysiert die unscharfe Übereinstimmung das Verhältnis der Ähnlichkeit zwischen zwei Sequenzen und gibt den Prozentsatz der Ähnlichkeit zurück. [[!DNL FuzzyWuzzy]](https://pypi.org/project/fuzzywuzzy/) wird für diesen Prozess empfohlen, da seine Funktionen besser dazu geeignet sind, Zeichenfolgen in komplexeren Situationen im Vergleich zu [!DNL regex] oder [!DNL difflib].
 
-Das in diesem Nutzungsszenario bereitgestellte Beispiel konzentriert sich auf die Zuordnung ähnlicher Attribute aus einer Hotelraumsuche über zwei verschiedene Reisebüro-Datensätze hinweg. Das Dokument zeigt, wie Zeichenfolgen anhand ihres Ähnlichkeitsgrads mit großen separaten Datenquellen abgeglichen werden. In diesem Beispiel vergleicht die Fuzzy Match die Suchergebnisse für die Funktionen eines Zimmers der Reisebüros Luma und Acme.
+Das in diesem Anwendungsfall bereitgestellte Beispiel konzentriert sich auf das Abgleichen ähnlicher Attribute aus einer Hotelzimmersuche über zwei verschiedene Reisebüro-Datensätze hinweg. Das Dokument zeigt, wie Zeichenfolgen anhand ihres Ähnlichkeitsgrads mit großen separaten Datenquellen abgeglichen werden. In diesem Beispiel vergleicht die Fuzzy Match die Suchergebnisse für die Funktionen eines Zimmers der Reisebüros Luma und Acme.
 
 ## Erste Schritte {#getting-started}
 
 Im Rahmen dieses Prozesses müssen Sie ein Modell für maschinelles Lernen trainieren. In diesem Dokument wird davon ausgegangen, dass Sie über Kenntnisse in einer oder mehreren Umgebungen für maschinelles Lernen verfügen.
 
-Dieses Beispiel verwendet [!DNL Python] und [!DNL Jupyter Notebook] Entwicklungsumgebung. Es stehen zwar viele Optionen zur Verfügung, [!DNL Jupyter Notebook] wird empfohlen, da es sich um eine Open-Source-Webanwendung mit niedrigen Rechenanforderungen handelt. Es kann [heruntergeladen von der offiziellen Jupyter-Website](https://jupyter.org/).
+Dieses Beispiel verwendet [!DNL Python] und [!DNL Jupyter Notebook] Entwicklungsumgebung. Es stehen zwar viele Optionen zur Verfügung, [!DNL Jupyter Notebook] wird empfohlen, da es sich um eine Open-Source-Webanwendung mit niedrigen Rechenanforderungen handelt. Es kann heruntergeladen werden von [die offizielle Jupyter-Site](https://jupyter.org/).
 
 Bevor Sie beginnen, müssen Sie die erforderlichen Bibliotheken importieren. [!DNL FuzzyWuzzy] ist eine Open-Source-Lösung [!DNL Python] Bibliothek, die auf der [!DNL difflib] -Bibliothek und verwendet, um Zeichenfolgen zuzuordnen. Sie verwendet [!DNL Levenshtein Distance] um die Unterschiede zwischen Sequenzen und Mustern zu berechnen. [!DNL FuzzyWuzzy] die folgenden Anforderungen erfüllt:
 
