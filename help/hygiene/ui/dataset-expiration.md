@@ -2,10 +2,10 @@
 title: Verwalten von Datensatzgültigkeiten
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform die Gültigkeit eines Datensatzes planen.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 2913e9e687843e566db4ebf2031e610d1891d4c9
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 93%
+source-wordcount: '736'
+ht-degree: 73%
 
 ---
 
@@ -13,8 +13,8 @@ ht-degree: 93%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
->title="Beschreibung"
->abstract=""
+>title="Unerwünschte oder abgelaufene Kundendatensätze und -datensätze löschen"
+>abstract="<h2>Beschreibung</h2><p>Um den Lebenszyklus Ihrer Experience Platform-Daten unabhängig von der Einhaltung gesetzlicher Vorschriften zu verwalten, können Sie Kundendatensätze löschen und Ablaufdaten für Datensätze planen. Informationen zum Erstellen oder Verwalten von Anfragen von Datensubjekten finden Sie in der Fallblock &quot;Datenschutz-Anfragen von Datensubjekten berücksichtigen&quot;.</p>"
 
 >[!IMPORTANT]
 >
@@ -33,7 +33,7 @@ In diesem Dokument wird beschrieben, wie Sie Datensatzgültigkeiten in der Platf
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
 >title="Anleitung"
->abstract=""
+>abstract="<ul><li>Auswählen <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html?lang=de">Datenhygiene</a> Wählen Sie im linken Navigationsbereich die Option <b>Anforderung erstellen</b>.</li><li>Wenn Sie Datensätze löschen möchten:</li>   <li>Auswählen <b>Datensatz</b>.</li>   <li>Wählen Sie einen bestimmten Datensatz aus, aus dem Datensätze gelöscht werden sollen, oder wählen Sie die Option aus, ihn aus allen Datensätzen zu löschen.</li>   <li>Geben Sie die Identitäten der Verbraucher an, deren Datensätze gelöscht werden sollen. Auswählen <b>Identität hinzufügen</b> , um die Identitäten einzeln anzugeben, oder wählen Sie <b>Dateien auswählen</b> , um stattdessen eine JSON-Datei mit Identitäten hochzuladen.</li>   <li>Wählen Sie bei Bedarf <b>Vorlage</b> , um das erwartete Format der JSON-Datei anzuzeigen.</li><li>Anweisungen finden Sie in der Dokumentation . <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">Ablaufdaten für Datensätze planen</a>.</li></ul>"
 
 Um eine neue Anfrage zu erstellen, wählen Sie auf der Hauptseite im Arbeitsbereich die Option **[!UICONTROL Anfrage erstellen]** aus.
 
@@ -54,8 +54,7 @@ Wählen Sie danach unter **[!UICONTROL Datensatzdetails]** das Datenbanksymbol (
 ![Bild mit dem ausgewählten Datensatz](../images/ui/ttl/select-dataset.png)
 
 >[!NOTE]
->
->Es werden nur Datensätze angezeigt, die zur aktuellen Sandbox gehören.
+Es werden nur Datensätze angezeigt, die zur aktuellen Sandbox gehören.
 
 ### Senden der Anfrage
 
@@ -68,8 +67,7 @@ Sie werden aufgefordert, das Datum zu bestätigen, an dem der Datensatz gelösch
 Nachdem die Anfrage übermittelt wurde, wird ein Arbeitsauftrag erstellt und auf der Hauptregisterkarte des Arbeitsbereichs [!UICONTROL Datenhygiene] angezeigt. Hier können Sie den Fortschritt des Arbeitsauftrags überwachen.
 
 >[!NOTE]
->
->Der Abschnitt mit der Übersicht über [Timelines und Transparenz](../home.md#dataset-expiration-transparency) enthält Details dazu, wie die Gültigkeit von Datensätzen verarbeitet wird, nachdem sie abgelaufen ist.
+Der Abschnitt mit der Übersicht über [Timelines und Transparenz](../home.md#dataset-expiration-transparency) enthält Details dazu, wie die Gültigkeit von Datensätzen verarbeitet wird, nachdem sie abgelaufen ist.
 
 ## Bearbeiten oder Abbrechen einer Datensatzgültigkeit
 

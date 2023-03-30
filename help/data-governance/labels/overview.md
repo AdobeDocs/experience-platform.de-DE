@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Datennutzungskennzeichnungen – Übersicht
 description: Erfahren Sie, wie Datennutzungskennzeichnungen verwendet werden, um die Einhaltung von Data-Governance-Richtlinien in Adobe Experience Platform durchzusetzen.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
-workflow-type: ht
-source-wordcount: '682'
-ht-degree: 100%
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+workflow-type: tm+mt
+source-wordcount: '794'
+ht-degree: 85%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 100%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_description"
->title="Beschreibung"
->abstract=""
+>title="Zugriff auf vertrauliche und geschützte Daten steuern"
+>abstract="<h2>Beschreibung</h2><p>Steuerung des Zugriffs auf bestimmte Datenattribute und/oder Segmente, sodass Sie flexible Workflows für die verschiedenen Rollen und Teams erstellen können, die in der Experience Platform arbeiten.</p>"
 
 Mit Adobe Experience Platform können Sie Datennutzungskennzeichnungen auf Datensätze und Felder anwenden und diese entsprechend den zugehörigen [Data-Governance-Richtlinien](../policies/overview.md) und [Zugriffssteuerungsrichtlinien](../../access-control/abac/ui/policies.md) kategorisieren.
 
@@ -51,7 +51,7 @@ Informationen dazu, wie bestimmte Datenexportsteuerelemente den Datennutzungsken
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_instructions"
 >title="Anleitung"
->abstract=""
+>abstract="<ul><li>Beschriften Sie XDM-Felder und Segmente, um die Felder und Segmente zu klassifizieren, auf die Sie den Zugriff beschränken möchten.</li><li>Bezeichnungsrollen: Durch Hinzufügen von Bezeichnungen zu einer Rolle können Sie festlegen, welche Bezeichnungen Mitglieder dieser Rolle Einschränkungen unterliegen sollten.</li><li>Richtlinien erstellen, erstellt eine Richtlinie eine Beziehung zwischen den Beschriftungen für beschriftete Objekte wie XDM-Felder und Segmente und den Beschriftungen für Rollen. Wenn die Bezeichnungen übereinstimmen, kann entweder eine Erlaubnis oder ein eingeschränkter Zugriff definiert werden.</li></ul>"
 
 Sie können Datennutzungsbeschriftungen mit [!DNL Experience Platform]-APIs oder der Benutzeroberfläche verwalten. Einzelheiten finden Sie in den nachfolgenden Abschnitten.
 
