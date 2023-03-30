@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5ec1ede39489ce48fc20739030884ec3811a8426
+source-git-commit: 2b8307422e4f073451c23ae9b35061d845f0893c
 workflow-type: tm+mt
-source-wordcount: '1528'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -13,6 +13,20 @@ ht-degree: 100%
 # Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zum SDK finden Sie in den [Versionshinweisen zum Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=de).
+
+## Version 2.16.0 - 30. März 2023
+
+**Neue Funktionen**
+
+* (Beta) hinzugefügt **[!UICONTROL Variable aktualisieren]** Maßnahmen und **[!UICONTROL Variable]** Datenelement.
+* Konfiguration hinzugefügt für [`onBeforeLinkClickSend`](../fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) Callback-Funktion.
+
+**Fehlerbehebungen und Verbesserungen**
+
+* Es wurde ein Fehler behoben, der dazu führte, dass das Klicken auf Elemente in einem Anker-Tag nicht funktionierte, wenn die Variable **[!UICONTROL Umleiten mit Identität]** -Aktion verwendet wurde.
+* Es wurde ein Problem behoben, bei dem XDM-Objektdatenelemente nicht funktionierten, wenn nur ein Schema vorhanden war.
+* Enthält Version 2.15.0 des Adobe Experience Platform Web SDK.
+
 
 ## Version 2.15.1 – 26. Januar 2023
 

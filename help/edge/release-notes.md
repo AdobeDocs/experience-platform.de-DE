@@ -3,10 +3,10 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 6009592d47cf8f3d0d31e919aff0552e370b2063
-workflow-type: ht
-source-wordcount: '1470'
-ht-degree: 100%
+source-git-commit: 009475c8bab3eb29a5d8a97763967d49ccf0999d
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -16,11 +16,21 @@ ht-degree: 100%
 In diesem Dokument werden die Versionshinweise für das Adobe Experience Platform Web SDK behandelt.
 Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Versionshinweisen zur Tag-Erweiterung für Web SDK](extension/web-sdk-ext-release-notes.md).
 
-## Version 2.14.0 – 25. Januar 2023
+## Version 2.15.0 - 30. März 2023
 
 **Neue Funktionen**
 
-* (Beta) Es wurde Unterstützung für AJO-Oberflächen und -Vorschläge hinzugefügt.
+* Hinzugefügte Unterstützung für [`onBeforeLinkClickSend`](fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) Link-Klick-Rückruf.
+* Adobe Journey Optimizer-Klick-Tracking wird nun unterstützt.
+
+**Fehlerbehebungen und Verbesserungen**
+
+* Die Linkerfassung enthält jetzt den Linknamen und die Besucherregion.
+* Konsolenfehler für fehlgeschlagene URL-Ziele wurde entfernt.
+
+## Version 2.14.0 – 25. Januar 2023
+
+* (Beta) Zusätzliche Unterstützung für Adobe Journey Optimizer-Oberflächen und -Vorschläge.
 
 **Fehlerbehebungen und Verbesserungen**
 
@@ -49,7 +59,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 * Befehle für das Auslösen eines Validierungsfehlers, wenn unbekannte Optionen angegeben waren, wurden aktualisiert.
 * Die `_experience.decisioning.propositionEventType`-Eigenschaft wird jetzt beim automatischen Senden von Anzeige- und Interaktions-Personalisierungsereignissen gefüllt.
 * Es wurde eine duplizierte Namespace-Validierung für den `getIdentity`-Befehl hinzugefügt.
-* Es wurde eine duplizierte Validierung des Entscheidungsbereichs für den `sendEvent`-Befehl hinzugefügt.
+* Es wurde eine duplizierte Validierung des Entscheidungsumfangs für den `sendEvent`-Befehl hinzugefügt.
 
 ## Version 2.12.0 – 29. Juni 2022
 
