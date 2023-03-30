@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über Quell-Connectoren
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 9d6a4b5f60f7895e2c1833493926db147064f3f1
+source-git-commit: ac5eb6467d0fcaf13c27c31a9bcdfb57d3b90e01
 workflow-type: tm+mt
-source-wordcount: '1322'
+source-wordcount: '1320'
 ht-degree: 84%
 
 ---
@@ -189,7 +189,7 @@ Die attributbasierte Zugriffssteuerung in Adobe Experience Platform ermöglicht 
 
 Mit der attributbasierten Zugriffssteuerung können Sie Zuordnungskonfigurationen auf Felder anwenden, für die Sie über Berechtigungen verfügen. Im Übrigen können Sie keine Daten in einen Datensatz aufnehmen, wenn Sie nicht auf alle Felder im Datensatz Zugriff haben.
 
-#### Unterstützung für attributbasierte Zugriffskontrolle in Quellen [!BADGE Neue Funktion]
+#### Unterstützung für attributbasierte Zugriffskontrolle in Quellen
 
 >[!TIP]
 >

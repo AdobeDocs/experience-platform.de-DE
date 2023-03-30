@@ -5,9 +5,9 @@ title: Erstellen einer Adobe Analytics-Quellverbindung über die Benutzeroberfl�
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Quellverbindung für Adobe Analytics über die Benutzeroberfläche erstellen, um Kundendaten in Adobe Experience Platform zu importieren.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 3530c91cd36e9e2729515827978e6115857f2405
+source-git-commit: 9c2ede973aa4348f15362ba80fdcd7a231577909
 workflow-type: tm+mt
-source-wordcount: '2390'
+source-wordcount: '2365'
 ht-degree: 61%
 
 ---
@@ -159,16 +159,12 @@ Die folgende Dokumentation enthält weitere Ressourcen zum Verständnis von Date
 * [Funktionen zur Datenvorbereitung](../../../../../data-prep/functions.md)
 * [Hinzufügen von berechneten Feldern](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
-### Filterung nach Echtzeit-Kundenprofil (Beta) {#filtering-for-profile}
+### Filtern nach Echtzeit-Kundenprofil {#filtering-for-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
 >title="Filterregeln erstellen"
 >abstract="Definieren Sie beim Senden von Daten an das Echtzeit-Kundenprofil Filterregeln auf Zeilen- und Spaltenebene. Verwenden Sie die Filterung auf Zeilenebene, um Bedingungen anzuwenden und anzugeben, welche Daten verwendet werden sollen **Einschließen in die Profilaufnahme**. Verwenden Sie die Filterung auf Spaltenebene, um die Datenspalten auszuwählen, die Sie verwenden möchten **zur Profilaufnahme ausschließen**. Filterregeln gelten nicht für Daten, die an den Data Lake gesendet werden."
-
->[!IMPORTANT]
->
->Filterunterstützung [!DNL Analytics] -Daten befinden sich derzeit in der Beta-Phase und stehen nicht allen Benutzern zur Verfügung. Dokumentation und Funktionalitäten können sich ändern.
 
 Nachdem Sie die Zuordnungen für Ihre [!DNL Analytics] Report Suite-Daten können Sie Filterregeln und -bedingungen anwenden, um Daten selektiv in das Echtzeit-Kundenprofil ein- oder auszuschließen. Filterunterstützung ist nur verfügbar für [!DNL Analytics] Daten und Daten werden nur vor der Eingabe gefiltert [!DNL Profile.] Alle Daten werden in den Daten-Pool aufgenommen.
 
