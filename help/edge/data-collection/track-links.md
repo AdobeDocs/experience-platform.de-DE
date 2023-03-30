@@ -3,10 +3,10 @@ title: Verfolgen von Links mit dem Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie Linkdaten mit Experience Platform Web SDK an Adobe Analytics senden.
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;Web Interaction;Seitenansichten;Linktracking;Links;Link verfolgen;ClickCollection;ClickCollection;Sammlung;
 exl-id: d5a1804c-8f91-4083-a46e-ea8f7edf36b6
-source-git-commit: dac14cd358922b577c71f8d9b7f7c9b7e1b4f87d
+source-git-commit: 04078a53bc6bdc01d8bfe0f2e262a28bbaf542da
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 0%
+source-wordcount: '470'
+ht-degree: 1%
 
 ---
 
@@ -34,6 +34,8 @@ alloy("sendEvent", {
   }
 });
 ```
+
+Ab Version 2.15.0 erfasst das Web SDK die `region` des angeklickten HTML-Elements. Dadurch wird die [Activity Map](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/activity-map.html?lang=de) Berichtsfunktionen in Adobe Analytics.
 
 Der Linktyp kann einen von drei Werten sein:
 
@@ -90,3 +92,23 @@ alloy("configure", {
 });
 ```
 
+Ab Web SDK-Version 2.15.0 können die mit dem automatischen Linktracking erfassten Daten durch Bereitstellung einer [onBeforeLinkClickSend-Rückruffunktion](../fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend).
+
+Diese Rückruffunktion wird nur ausgeführt, wenn ein automatisches Link-Klick-Ereignis auftritt.
+
+```javascript
+alloy("configure", {
+  onBeforeLinkClickSend: function(options) {
+    if (options.xdm.web.webInteraction.type === "download") {
+      options.xdm.web.webInteraction.name = undefined;
+    }
+  }
+});
+```
+
+Beim Filtern von Linktracking-Ereignissen mithilfe des `onBeforeLinkClickSend` Befehl, Adobe empfiehlt, `false` für die Link-Klicks, die nicht verfolgt werden sollen. Bei jeder anderen Antwort sendet das Web SDK die Daten an das Edge-Netzwerk.
+
+
+>[!NOTE]
+>
+>** Wenn beide `onBeforeEventSend` und `onBeforeLinkClickSend` Callback-Funktionen festgelegt sind, führt das Web SDK die `onBeforeLinkClickSend` Callback-Funktion zum Filtern und Erweitern des Link-Klickinteraktionsereignisses, gefolgt von der `onBeforeEventSend` Callback-Funktion.
