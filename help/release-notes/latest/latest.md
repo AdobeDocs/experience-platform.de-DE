@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise März 2023 für Adobe Experience Platform.
-source-git-commit: 74b609572b6e5e9b5e641fe497f53f3463b900c4
+source-git-commit: 582305583aa5869d8cc29f871aeb3fa0ef0b6ab1
 workflow-type: tm+mt
-source-wordcount: '1057'
-ht-degree: 35%
+source-wordcount: '1671'
+ht-degree: 41%
 
 ---
 
@@ -14,11 +14,29 @@ ht-degree: 35%
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
+- [Dashboards](#dashboards)
 - [Datenerfassung](#data-collection)
 - [Datenvorbereitung](#data-prep)
 - [Ziele](#destinations)
+- [Experience-Datenmodell](#xdm)
+- [Abfrage-Service](#query-service)
+- [Real-Time Customer Data Platform B2B Edition](#b2b)
 - [Segmentierungs-Service](#segmentation)
 - [Quellen](#sources)
+
+## Dashboards {#dashboards}
+
+Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Insights zu den Daten Ihres Unternehmens erhalten, die in täglichen Snapshots erfasst werden.
+
+**Neue oder aktualisierte Funktionen** {#dashboards-new-updated-features}
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Benutzerdefinierte Dashboards | Sie können jetzt **Beispielattributwerte** vor dem Hinzufügen eines Attributs zu einem Widget im benutzerdefinierten Widget-Composer für Dashboards. Einige Beispielwerte aus dieser Attributspalte sind für einzelne Attribute beim Erstellen eines Widgets verfügbar.<br>Sie können jetzt **X- und Y-Achse tauschen** auf Ihrem Widget mit der Schaltfläche Achse austauschen . Dadurch sparen Sie Zeit und erhalten beim Hinzufügen von Attributen zu Widgets ein ergonomischeres Erlebnis. Dadurch müssen Sie beide Attribute erneut im Attributbereich finden.<br>Sie können jetzt **Speicherort und Titel der Legende ändern** in Ihren Widgets. Nachdem eine Legende in einem Widget vorhanden ist, können Sie diese Legende an eine beliebige Stelle im Diagramm verschieben und den Legendentitel wie bei Achsenbeschriftungen und dem Widget-Titel umbenennen. |
+
+{style="table-layout:auto"}
+
+Weitere Informationen zu Dashboards, einschließlich der Gewährung von Zugriffsberechtigungen und der Erstellung benutzerdefinierter Widgets, erhalten Sie in der [Übersicht über Dashboards](../../dashboards/home.md).
 
 ## Datenerfassung {#data-collection}
 
@@ -81,6 +99,48 @@ Wir veröffentlichen eine Fehlerbehebung für die PGP/GPG-Verschlüsselung in da
 - Zukünftige Erweiterung bei Verwendung der Verschlüsselung: `filename.csv.gpg`
 
 Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
+
+## Experience-Datenmodell (XDM) {#xdm}
+
+XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definitionen (Schemas) für Daten bereitstellt, die in Adobe Experience Platform importiert werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
+
+**Aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| CSV zur Schemaempfehlung | Sie können jetzt Ihre lokalen Dateien hochladen, um durch maschinelles Lernen generierte Schemas zu erstellen, die die manuelle Erstellung eines Schemas ersparen. Aus dem [!UICONTROL Quellen] Arbeitsbereich, laden Sie eine CSV-Beispieldatei hoch und die Algorithmen für maschinelles Lernen von Adobe schlagen Ihnen basierend auf den Zielfeldern ein Schema vor. Weitere Informationen finden Sie in der [Dokumentation.&quot;](../../ingestion/tutorials/map-csv/recommendations.md) |
+
+{style="table-layout:auto"}
+
+Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md).
+
+## Query Service {#query-service}
+
+Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von Daten in Adobe Experience Platform [!DNL Data Lake]. Sie können beliebige Datensätze aus dem Data Lake verbinden und die Abfrageergebnisse als neuen Datensatz für die Verwendung in Berichten, im Datenwissenschafts-Arbeitsbereich oder für die Aufnahme in das Echtzeit-Kundenprofil verwenden.
+
+**Aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Attributbasierte Zugriffssteuerung auf dem beschleunigten Speicher | Verwenden Sie die attributbasierte Zugriffssteuerung mit Data Distiller , um die Zugriffskontrolle für alle Datensätze im beschleunigten Speicher zu definieren. Dadurch wird der Zugriff auf die benutzerdefinierten Datenmodelle gesteuert, die von Benutzern erstellt und in einem beschleunigten Speicher gespeichert werden, um benutzerdefinierte Dashboards zu erstellen. |
+
+{style="table-layout:auto"}
+
+Weitere Informationen über Abfrage-Services finden Sie unter [Abfrage-Service – Übersicht](../../query-service/home.md).
+
+## Real-Time Customer Data Platform B2B Edition {#b2b}
+
+Real-Time CDP B2B Edition basiert auf Real-time Customer Data Platform (Real-Time CDP) und wurde speziell für Marketingexpertinnen und -experten mit einem Business-to-Business-Service-Modell entwickelt. Es führt Daten aus verschiedenen Quellen zusammen und kombiniert sie zu einer einzigen Ansicht von Personen und Account-Profilen. Diese vereinheitlichten Daten ermöglichen es Marketing-Experten, bestimmte Zielgruppen präzise anzusprechen und über alle verfügbaren Kanäle anzusprechen.
+
+**Aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Bugfix | Um eine genauere Darstellung der Profile in Ihrem System zu gewährleisten, enthält das System keine internen Profile mehr in der Gesamtprofilanzahl oder der adressierbaren Zielgruppenmetrik für die Real-time Customer Data Platform B2B Edition. Ab heute kann es zu einem einmaligen Rückgang der Metrik für die Gesamtzahl der Profile/adressierbaren Zielgruppen kommen. Keine Ihrer Daten wurde gelöscht. Dies ist lediglich eine Änderung der Anzahl. Wenden Sie sich bei Fragen an Ihren Ansprechpartner bei Ihrer Adobe. |
+
+{style="table-layout:auto"}
+
+Weitere Informationen über Real-Time CDP B2B Edition finden Sie in der [Übersicht zu Real-Time CDP B2B Edition](../../rtcdp/overview.md).
 
 ## Segmentierungs-Service {#segmentation}
 
