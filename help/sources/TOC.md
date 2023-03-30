@@ -4,10 +4,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
-source-git-commit: 840ad16b3762afee0b36bdd93c5be566c5a29b18
+source-git-commit: 10edb5dfd9ce99b69cf5bb014f4903942c9bff3e
 workflow-type: tm+mt
-source-wordcount: '952'
-ht-degree: 98%
+source-wordcount: '963'
+ht-degree: 97%
 
 ---
 
@@ -352,6 +352,9 @@ ht-degree: 98%
       - [Dokumentieren einer Quelle (Streaming-SDK)](sources-sdk/streaming/document-streaming.md)
       - [Dokumentation einer Streaming-Vorlage für eine Selbstbedienungs-API](sources-sdk/streaming/streaming-template-api.md)
       - [Dokumentation einer Streaming-Vorlage für eine Selbstbedienungs-Benutzeroberfläche](sources-sdk/streaming/streaming-template-ui.md)
+- Fehlermeldungen {#errors}
+   - [Fehlermeldungen in Quellen](./errors/sources-errors.md)
+   - [Fehlermeldungen im Flussdienst](./errors/flow-service-errors.md)
 - [Flusslaufbenachrichtigungen](notifications.md)
 - [IP-Adressen-Zulassungsliste](ip-address-allow-list.md)
 - [Häufig gestellte Fragen](./troubleshooting.md)
