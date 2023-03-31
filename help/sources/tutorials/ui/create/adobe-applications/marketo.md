@@ -2,10 +2,10 @@
 title: Erstellen einer Marketo Engage-Quellverbindung und eines Datenflusses in der Benutzeroberfläche
 description: In diesem Tutorial erfahren Sie, wie Sie eine Marketo Engage-Quellverbindung und einen Datenfluss in der Benutzeroberfläche erstellen, um B2B-Daten in Adobe Experience Platform zu importieren.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: d049a29d4c39fa41917e8da1dde530966f4cbaf4
+source-git-commit: b271d28677543f773fe1ba471fc08574e7c5542b
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 82%
+source-wordcount: '1693'
+ht-degree: 76%
 
 ---
 
@@ -183,3 +183,24 @@ Nach dem Vorbild dieses Tutorials haben Sie erfolgreich einen Datenfluss erstell
 
 * [[!DNL Real-Time Customer Profile] – Übersicht](/help/profile/home.md)
 * [[!DNL Data Science Workspace] – Übersicht](/help/data-science-workspace/home.md)
+
+## Anhang {#appendix}
+
+Die folgenden Abschnitte enthalten zusätzliche Richtlinien, die Sie bei der Verwendung von [!DNL Marketo] -Quelle.
+
+### Fehlermeldungen in der Benutzeroberfläche {#error-messages}
+
+Die folgenden Fehlermeldungen werden in der Benutzeroberfläche angezeigt, wenn Platform Probleme mit Ihrem Setup erkennt:
+
+#### [!DNL Munchkin ID] ist nicht der entsprechenden Organisation zugeordnet
+
+Die Authentifizierung wird verweigert, wenn Ihre [!DNL Munchkin ID] nicht der Platform-Organisation zugeordnet ist, die Sie verwenden. Konfigurieren Sie die Zuordnung zwischen Ihrem [!DNL Munchkin ID] und Ihrer Organisation, die [[!DNL Marketo] Benutzeroberfläche](https://app-sjint.marketo.com/#MM0A1).
+
+![Eine Fehlermeldung, die anzeigt, dass die Marketo-Instanz nicht korrekt der Adobe-Organisation zugeordnet ist.](../../../../images/tutorials/create/marketo/munchkin-not-mapped.png)
+
+#### Primäre Identität fehlt
+
+Wenn eine primäre Identität fehlt, kann ein Datenfluss nicht gespeichert und erfasst werden. Stellen Sie sicher, dass [eine primäre Identität innerhalb Ihres XDM-Schemas vorhanden ist](../../../../../xdm/tutorials/create-schema-ui.md), bevor Sie versuchen, einen Datenfluss zu konfigurieren.
+
+![Eine Fehlermeldung, die anzeigt, dass die primäre Identität im XDM-Schema fehlt.](../../../../images/tutorials/create/marketo/no-primary-identity.png)
+
