@@ -2,12 +2,12 @@
 keywords: Email;e-mail;E-Mail;E-Mail-Ziele
 title: E-Mail-Marketing-Ziele – Übersicht
 type: Tutorial
-description: E-Mail-Service-Anbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-E-Mail-Kampagnen.
+description: E-Mail-Service-Anbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-E-Mail-Kampagnen. Erfahren Sie, welche ESPs als Experience Platform-Ziele unterstützt werden.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: ccbc633bfce8f4f66577b50064c28cfc26cb6dca
+source-git-commit: d6ea94b275ab0ed7c0638200188fe7ada7bacf5c
 workflow-type: tm+mt
-source-wordcount: '388'
-ht-degree: 99%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -17,16 +17,17 @@ ht-degree: 99%
 
 E-Mail-Service-Anbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-E-Mail-Kampagnen. Adobe Experience Platform lässt sich mit ESPs integrieren und ermöglicht es Ihnen, Segmente für E-Mail-Marketing-Ziele zu aktivieren.
 
-Platform exportiert Ihre Segmente als `.csv`-Dateien und stellt sie an Ihrem gewünschten Speicherort bereit. Planen Sie den Datenimport in Ihre E-Mail-Marketing-Plattform vom Speicherort, der in [!DNL Platform] aktiviert ist. Das Verfahren zum Importieren von Daten ist je nach Partner unterschiedlich. Weiterführende Informationen finden Sie in den Artikeln zu den einzelnen Zielen.
-
 ## Unterstützte E-Mail-Marketing-Ziele {#supported-destinations}
 
 Adobe Experience Platform unterstützt die folgenden E-Mail-Marketing-Ziele:
 
 * [Adobe Campaign](adobe-campaign.md)
-* [Oracle Eloqua](oracle-eloqua.md)
+* [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
+* [(API) Oracle Eloqua](oracle-eloqua-api.md)
+* [(API) Salesforce Marketing Cloud](salesforce-marketing-cloud-exact-target.md)
+* [(Dateien) Oracle Eloqua](oracle-eloqua.md)
+* [(Dateien) Salesforce-Marketing Cloud](salesforce-marketing-cloud.md)
 * [Oracle Responsys](oracle-responsys.md)
-* [Salesforce Marketing Cloud](salesforce-marketing-cloud.md)
 * [SendGrid](sendgrid.md)
 
 ## Verbinden mit einem neuen E-Mail-Marketing-Ziel {#connect-destination}
@@ -45,7 +46,9 @@ Adobe empfiehlt die Auswahl einer eindeutigen Kennung aus Ihrem [Vereinigungssch
 | Telefon | `mobilePhone.number` |
 | Treueprogramm-Kennung | `Customer-defined XDM field` |
 
-### Andere Zielattribute
+{style="table-layout:auto"}
+
+### Andere Zielattribute {#other-destination-attributes}
 
 Wählen Sie in der Schemafeldauswahl die anderen Felder aus, die Sie an das E-Mail-Ziel exportieren möchten. Zu den empfohlenen Optionen gehören:
 
@@ -60,20 +63,17 @@ Wählen Sie in der Schemafeldauswahl die anderen Felder aus, die Sie an das E-Ma
 | Geburtstag | `person.birthDayAndMonth` |
 | Segmentzugehörigkeit | `segmentMembership.status` |
 
-## Importieren von Daten aus Ihrem Speicherort in das Ziel {#import-data-into-destination}
-
-Lesen Sie die Artikel zu den jeweiligen E-Mail-Marketing-Zielen, um zu erfahren, wie Sie Daten von Ihrem Speicherort in Ziele importieren können:
-
-* [Adobe Campaign](adobe-campaign.md)
-* [Oracle Eloqua](oracle-eloqua.md)
-* [Oracle Responsys](oracle-responsys.md)
-* [Salesforce Marketing Cloud](salesforce-marketing-cloud.md)
+{style="table-layout:auto"}
 
 ## Aktivieren von Segmenten für E-Mail-Marketing-Ziele {#activate}
 
-Anweisungen zum Aktivieren von Segmenten für E-Mail-Marketing-Ziele finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](../../ui/activate-batch-profile-destinations.md).
+Einige E-Mail-Marketing-Ziele in den Katalogprofilen werden streaming über eine API-Integration mit dem Ziel exportiert.
 
-## Weitere Ressourcen
+Andere Ziele exportieren Dateien an einen Cloud-Speicher-Speicherort. Nach Abschluss des Exports müssen Sie Daten vom Cloud-Speicher in Ihr E-Mail-Marketing-Ziel importieren.
+
+Befolgen Sie die Links im [unterstützte E-Mail-Marketing-Ziele](#supported-destinations) Informationen zum Aktivieren von Segmenten für jedes E-Mail-Marketing-Ziel.
+
+## Weitere Ressourcen {#additional-resources}
 
 * [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](../../ui/activate-batch-profile-destinations.md)
 * [Erstellen von E-Mail-Marketing-Zielen und Aktivieren von Daten mithilfe der Flow Service-API](../../api/connect-activate-batch-destinations.md)
