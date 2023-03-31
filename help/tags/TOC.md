@@ -5,10 +5,10 @@ breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Tags
 solution: Data Collection
-source-git-commit: 83ac7ba5bcdb0b0f728b42c709eef11b25fb3cef
+source-git-commit: 95a56982d38bd1e2c72dd84e2fa48b9de659741f
 workflow-type: tm+mt
-source-wordcount: '963'
-ht-degree: 100%
+source-wordcount: '970'
+ht-degree: 99%
 
 ---
 
@@ -216,6 +216,7 @@ ht-degree: 100%
       * [Cloud-Connector für Google Analytics](https://exchange.adobe.com/apps/ec/106542)
       * Core {#core}
          * [Übersicht](./extensions/server/core/overview.md)
+      * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)
       * Erweiterte Konvertierungen von Google Ads {#google-ads-enhanced-conversions}
          * [Übersicht](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
