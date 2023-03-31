@@ -1,7 +1,7 @@
 ---
 title: Data Distiller - Übersicht
 description: Eine Zusammenfassung der Data Distiller-Nutzungsbeschränkungen für Query Service-Daten im Zusammenhang mit Ihrer Lizenzberechtigung.
-source-git-commit: ae4ecd43071a198592193a1a598a064cdc6be2f6
+source-git-commit: c7e753e54f087ee45daabb9094edeb51e54271fc
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 1%
@@ -14,7 +14,7 @@ Data Distiller ist ein Package, das eine Untergruppe der Funktionen von Adobe Ex
 
 ## Lizenznutzung {#license-usage}
 
-Die  [Datennutzungs-Dashboard für Distiller-Lizenzen](./license-usage.md) ist verfügbar, sobald Sie Data Distiller Compute-Stunden erworben haben. Mit dem Dashboard zur Lizenznutzung können Sie den Verbrauch berechtigter Berechnungsstunden überwachen. Siehe [Nutzungsdokument zur Distiller-Lizenz](./license-usage.md) , um wichtige Informationen zur Nutzung der Query Service-Lizenz Ihres Unternehmens anzuzeigen.
+Die [Datennutzungs-Dashboard für Distiller-Lizenzen](./license-usage.md) ist verfügbar, sobald Sie Data Distiller Compute-Stunden erworben haben. Mit dem Dashboard zur Lizenznutzung können Sie den Verbrauch berechtigter Berechnungsstunden überwachen. Siehe [Nutzungsdokument zur Distiller-Lizenz](./license-usage.md) , um wichtige Informationen zur Nutzung der Query Service-Lizenz Ihres Unternehmens anzuzeigen.
 
 <!-- Update these descriptions post 23.3 release
 ## Scoping parameters {#scoping-parameters}
