@@ -3,9 +3,9 @@ title: Verwalten der Berechtigungen für den Privacy Service
 description: Erfahren Sie, wie Sie die Benutzerrechte für den Adobe Experience Platform Privacy Service mit der Adobe Admin Console verwenden können.
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
 source-git-commit: 37a67b19fa0cb38e9e34066c869dd9dc49edefd6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1064'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 90%
 
 >[!IMPORTANT]
 >
->Die Berechtigungen für Adobe Experience Platform Privacy Service wurden verbessert, um die Granularität zu erhöhen. Diese Änderungen ermöglichen es Unternehmensadministratoren, mehr Benutzern Zugriff mit der gewünschten Rollen- und Berechtigungsebene zu gewähren. Benutzer technischer Konten müssen ihre Privacy Service-Berechtigungen aktualisieren, da diese bevorstehende Aktualisierung für sie eine wesentliche Änderung darstellt. Die Durchsetzung dieser Berechtigungsänderung erfolgt in **28. März 2023**.
+>Die Berechtigungen für Adobe Experience Platform Privacy Service wurden verbessert, um die Granularität zu erhöhen. Diese Änderungen ermöglichen es Organisationsadmins, mehr Benutzenden Zugriff mit der gewünschten Rollen- und Berechtigungsebene zu gewähren.Benutzende mit technischen Konten müssen ihre Privacy Service-Berechtigungen aktualisieren, da diese bevorstehende Aktualisierung für sie eine wesentliche Änderung darstellt.Die Durchsetzung dieser Berechtigungsänderung erfolgt am **28. März 2023**.
 >
->Technische Konten stehen Unternehmenskunden zur Verfügung und werden über die Adobe Developers Console erstellt. Die Adobe ID eines Inhabers eines technischen Kontos endet in `@techacct.adobe.com`. Wenden Sie sich an Ihren Organisationsadministrator, wenn Sie sich nicht sicher sind, ob Sie technischer Kontoinhaber sind.
+>Technische Konten stehen Unternehmenskunden zur Verfügung und werden über die Adobe Developers Console erstellt. Die Adobe ID des Inhabenden eines technischen Kontos endet auf `@techacct.adobe.com`. Wenden Sie sich an Ihren Organisationsadmin, wenn Sie sich nicht sicher sind, ob Sie über ein technisches Konto verfügen.
 
 Der Zugriff auf den [Adobe Experience Platform Privacy Service](./home.md) wird über granulare rollenbasierte Berechtigungen in der Adobe Admin Console gesteuert. Durch die Erstellung von Produktprofilen, die Gruppen von Benutzern Berechtigungen zuweisen, können Sie festlegen, wer auf welche Funktionen in der Privacy Service-[Benutzeroberfläche](./ui/overview.md) und der -[API](./api/overview.md) Zugriff hat.
 
