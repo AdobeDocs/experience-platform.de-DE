@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Anleitung zu Query Service-Anmeldedaten
 description: Der Abfrage-Service von Adobe Experience Platform bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzenden in Ihrer IMS-Organisation gespeichert wurden.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 879f3eb1f6856470e8e2d87537ca12438ca25d22
+source-git-commit: d86e1118fc8886f3a55b0224a2e065b33d96daf2
 workflow-type: tm+mt
 source-wordcount: '1338'
 ht-degree: 6%
@@ -129,7 +129,7 @@ In der folgenden Tabelle sind die Parameter aufgeführt, die normalerweise für 
 | **Port** | Der Anschluss für den Server/Host, mit dem Sie eine Verbindung herstellen. <ul><li>Dieser Wert wird sowohl für ablaufende als auch für nicht ablaufende Anmeldeinformationen verwendet und befindet sich unter **[!UICONTROL Port]** im [!UICONTROL LAUFENDE ANMELDEDATEN] Abschnitt.</ul></li> | `80` |
 | **Datenbank** | Die Datenbank, mit der Sie eine Verbindung herstellen. <ul><li>Dieser Wert wird sowohl für ablaufende als auch nicht ablaufende Anmeldeinformationen verwendet und befindet sich unter **[!UICONTROL Datenbank]** im [!UICONTROL LAUFENDE ANMELDEDATEN] Abschnitt. </ul></li> | `prod:all` |
 | **Benutzername** | Der Benutzername für den Benutzer, der eine Verbindung zum externen Client herstellt. <ul><li>Dieser Wert wird sowohl für ablaufende als auch für nicht ablaufende Anmeldeinformationen verwendet. Sie hat die Form einer alphanumerischen Zeichenfolge, bevor `@AdobeOrg`. Dieser Wert befindet sich unter **[!UICONTROL Benutzername]**.</li></ul> | `ECBB80245ECFC73E8A095EC9@AdobeOrg` |
-| **Passwort** | Das Kennwort für den Benutzer, der eine Verbindung zum externen Client herstellt. <ul><li>Wenn Sie ablaufende Anmeldeinformationen verwenden, finden Sie dies unter **[!UICONTROL Passwort]** innerhalb der [!UICONTROL LAUFENDE ANMELDEDATEN] Abschnitt.</li><li>Wenn Sie nicht ablaufende Anmeldeinformationen verwenden, ist dieser Wert die verketteten Argumente aus der technicalAccountID und die Berechtigung aus der JSON-Konfigurationsdatei. Der Kennwortwert hat folgende Form: `{technicalAccountId}:{credential}`.</li></ul> | <ul><li>Ein ablaufendes Berechtigungskennwort ist mehr als tausend Zeichen eine alphanumerische Zeichenfolge. Es wird kein Beispiel gegeben.</li><li>Ein nicht ablaufendes Berechtigungskennwort lautet wie folgt:`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
+| **Passwort** | Das Kennwort für den Benutzer, der eine Verbindung zum externen Client herstellt. <ul><li>Wenn Sie ablaufende Anmeldeinformationen verwenden, finden Sie dies unter **[!UICONTROL Passwort]** innerhalb der [!UICONTROL LAUFENDE ANMELDEDATEN] Abschnitt.</li><li>Wenn Sie nicht ablaufende Anmeldeinformationen verwenden, ist dieser Wert die verketteten Argumente aus der technicalAccountID und die Berechtigung aus der JSON-Konfigurationsdatei. Der Kennwortwert hat folgende Form: `{technicalAccountId}:{credential}`.</li></ul> | <ul><li>Ein ablaufendes Berechtigungskennwort ist mehr als tausend Zeichen eine alphanumerische Zeichenfolge. Es wird kein Beispiel gegeben.</li><li>Ein nicht ablaufendes Berechtigungskennwort lautet wie folgt:<br>`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
 
 {style="table-layout:auto"}
 
