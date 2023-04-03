@@ -2,10 +2,10 @@
 title: Verwalten der Berechtigungen für den Privacy Service
 description: Erfahren Sie, wie Sie die Benutzerrechte für den Adobe Experience Platform Privacy Service mit der Adobe Admin Console verwenden können.
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
-source-git-commit: 37a67b19fa0cb38e9e34066c869dd9dc49edefd6
-workflow-type: ht
-source-wordcount: '1064'
-ht-degree: 100%
+source-git-commit: fc6c22ab1185b9692ece86de75149102ce020474
+workflow-type: tm+mt
+source-wordcount: '1095'
+ht-degree: 97%
 
 ---
 
@@ -34,6 +34,10 @@ In dieser Anleitung wird davon ausgegangen, dass Sie mit den grundlegenden Konze
 ## Verfügbare Berechtigungen
 
 In der folgenden Tabelle finden Sie eine Übersicht über die verfügbaren Berechtigungen für den Privacy Service mit Beschreibungen der spezifischen Funktionen, auf die sie Zugriff gewähren:
+
+>[!NOTE]
+>
+>Alle Privacy Service und [!UICONTROL Opt-out aus dem Verkauf] -Berechtigungen sind voneinander getrennt und voneinander ohne funktionale Überschneidung. Dies ist möglich, da die Privacy Service-API als idempotent betrachtet wird.
 
 | Kategorie | Berechtigung | Beschreibung |
 | --- | --- | --- |
