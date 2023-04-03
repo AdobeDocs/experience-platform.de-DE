@@ -5,9 +5,9 @@ title: Übersicht über Privacy Service
 description: Mit Privacy Service können Sie die automatische Einhaltung gesetzlicher Datenschutzbestimmungen bei der Handhabung von Daten in Experience Cloud erleichtern.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
 source-git-commit: e09f0598e1d8dc007d0fdfcf13da11d5cad94c54
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1608'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 86%
 
 >[!IMPORTANT]
 >
->Die Berechtigungen für Adobe Experience Platform Privacy Service wurden verbessert, um die Granularität zu erhöhen. Diese Änderungen ermöglichen es Unternehmensadministratoren, mehr Benutzern Zugriff mit der gewünschten Rollen- und Berechtigungsebene zu gewähren. Benutzer technischer Konten müssen ihre Privacy Service-Berechtigungen aktualisieren, da diese bevorstehende Aktualisierung für sie eine wesentliche Änderung darstellt. Die Durchsetzung dieser Berechtigungsänderung erfolgt in **28. März 2023**.
+>Die Berechtigungen für Adobe Experience Platform Privacy Service wurden verbessert, um die Granularität zu erhöhen. Diese Änderungen ermöglichen es Organisationsadmins, mehr Benutzenden Zugriff mit der gewünschten Rollen- und Berechtigungsebene zu gewähren.Benutzende mit technischen Konten müssen ihre Privacy Service-Berechtigungen aktualisieren, da diese bevorstehende Aktualisierung für sie eine wesentliche Änderung darstellt.Die Durchsetzung dieser Berechtigungsänderung erfolgt am **28. März 2023**.
 >
->Technische Konten stehen Unternehmenskunden zur Verfügung und werden über die Adobe Developers Console erstellt. Die Adobe ID eines Inhabers eines technischen Kontos endet in `@techacct.adobe.com`. Wenden Sie sich an Ihren Organisationsadministrator, wenn Sie sich nicht sicher sind, ob Sie technischer Kontoinhaber sind.
+>Technische Konten stehen Unternehmenskunden zur Verfügung und werden über die Adobe Developers Console erstellt. Die Adobe ID des Inhabenden eines technischen Kontos endet auf `@techacct.adobe.com`. Wenden Sie sich an Ihren Organisationsadmin, wenn Sie sich nicht sicher sind, ob Sie über ein technisches Konto verfügen.
 
 Um eine bessere Kundenerfahrung zu bieten, müssen Sie die personenbezogenen Daten Ihrer Kunden erfassen und speichern. Bei der Verwendung dieser Daten ist es wichtig, die Privatsphäre Ihrer Kunden zu überschauen und respektieren. Neue gesetzliche und organisatorische Vorschriften geben Benutzern das Recht, auf Anfrage auf ihre personenbezogenen Daten zuzugreifen bzw. diese Daten aus Ihren Datenspeichern löschen zu lassen.
 
@@ -27,9 +27,9 @@ Adobe Experience Platform [!DNL Privacy Service] wurde als Reaktion auf eine gru
 
 >[!IMPORTANT]
 >
->Privacy Service ist nur für Anfragen der betroffenen Person und von Verbraucherrechten vorgesehen. Jegliche andere Verwendung von Privacy Service für die Datenbereinigung oder -wartung wird nicht unterstützt oder ist nicht zulässig. Die Adobe ist gesetzlich verpflichtet, sie rechtzeitig zu erfüllen. Daher sind Lasttests auf dem Privacy Service nicht zulässig, da es sich um eine reine Produktionsumgebung handelt und einen unnötigen Rückstau gültiger Datenschutzanfragen erzeugt.
+>Privacy Service ist nur für Anfragen der betroffenen Person und für Verbraucherrechtsanfragen vorgesehen. Jegliche andere Verwendung von Privacy Service für die Datenbereinigung oder -wartung wird nicht unterstützt und ist nicht zulässig. Adobe ist gesetzlich verpflichtet, diese rechtzeitig zu erfüllen. Daher sind Lasttests auf Privacy Service nicht zulässig, da es sich um eine reine Produktionsumgebung handelt und ein unnötiger Rückstau gültiger Datenschutzanfragen erzeugt wird.
 >
->Es gibt jetzt eine feste tägliche Upload-Grenze, um Missbrauch des Dienstes zu verhindern. Benutzer, bei denen das System missbraucht wurde, haben keinen Zugriff auf den Dienst. Anschließend wird mit ihnen ein Treffen abgehalten, auf dem ihre Maßnahmen erörtert und die annehmbare Verwendung für den Privacy Service erörtert werden.
+>Es gibt jetzt eine feste tägliche Upload-Grenze, um einen Missbrauch des Dienstes zu verhindern. Für Benutzende, bei denen ein Missbrauch des Systems festgestellt wurde, wird der Zugriff auf den Dienst deaktiviert. Anschließend wird mit ihnen ein Meeting abgehalten, bei dem ihr Handeln und die akzeptable Verwendung von Privacy Service erörtert wird.
 
 ## Erste Schritte mit [!DNL Privacy Service] {#getting-started}
 
