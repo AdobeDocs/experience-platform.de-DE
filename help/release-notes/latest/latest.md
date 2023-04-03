@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise März 2023 für Adobe Experience Platform.
-source-git-commit: 1ead97aa9b197cd1c046175bdcd06c03fd35ac17
+source-git-commit: e597656949ba81b4a07c2962a02ddd94c6dc23e3
 workflow-type: tm+mt
-source-wordcount: '1709'
-ht-degree: 40%
+source-wordcount: '2153'
+ht-degree: 39%
 
 ---
 
@@ -110,6 +110,38 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 | Funktion | Beschreibung |
 | --- | --- |
 | CSV zur Schemaempfehlung | Sie können jetzt Ihre lokalen Dateien hochladen, um durch maschinelles Lernen generierte Schemas zu erstellen, die die manuelle Erstellung eines Schemas ersparen. Aus dem [!UICONTROL Quellen] Arbeitsbereich, laden Sie eine CSV-Beispieldatei hoch und die Algorithmen für maschinelles Lernen von Adobe schlagen Ihnen basierend auf den Zielfeldern ein Schema vor. Weitere Informationen finden Sie in der [Dokumentation.&quot;](../../ingestion/tutorials/map-csv/recommendations.md) |
+
+{style="table-layout:auto"}
+
+**Neue XDM-Komponenten**
+
+| Typ der Komponente | Name | Beschreibung |
+| --- | --- | --- |
+| Klasse | [[!UICONTROL Angebotselement]](https://github.com/adobe/xdm/pull/1678/files) | Klasse, die ein Angebot darstellt. |
+| Klasse | [[!UICONTROL Entscheidungselement]](https://github.com/adobe/xdm/pull/1678/files) | Ein Element, das einer Entscheidung unterzogen werden kann. Die Ausgabe eines Entscheidungsprozesses ist ein oder mehrere Entscheidungselemente. |
+| Klasse | [[!UICONTROL Zeitüberschreitung des Mediensitzungs-Servers]](https://github.com/adobe/xdm/pull/1676/files) | Dies gibt die Zeit in Sekunden an, die zwischen der letzten bekannten Interaktion des Benutzers und dem Zeitpunkt, zu dem die Sitzung geschlossen wurde, vergangen ist. |
+| Feldergruppe | [[!UICONTROL Berechnete XDM-Profilattribute]](https://github.com/adobe/xdm/pull/1686/files) | Dadurch werden berechnete Attribute aus internen Adobe-Diensten zu eingehenden Kundendaten hinzugefügt. Dies sollte von Kunden nicht zur Aufnahme von Daten verwendet werden. |
+| Datentyp | [[!UICONTROL Erstattungsbetrag]](https://github.com/adobe/xdm/pull/1685/files) | Gibt an, ob eine Erstattung mit einer Bestellung verbunden ist, und definiert die Art der Erstattung, den Betrag und die zugehörige Währung. |
+| Datentyp | [[!UICONTROL Kategoriedaten]](https://github.com/adobe/xdm/pull/1677/files) | Dieser neue Datentyp stellt die Kategorie eines Produkts dar. |
+| Schema | [[!UICONTROL Adobe Target-Klassifizierungsfelder]](https://github.com/adobe/xdm/pull/1682/files) | Für Target Classification-Datensätze wurde ein neues XDM-Schema erstellt. Es enthält eine Reihe von Metadatenfeldern, die Target-Aktivitäten und -Erlebnisse klassifizieren. |
+
+{style="table-layout:auto"}
+
+**Aktualisierte XDM-Komponenten**
+
+| Typ der Komponente | Name | Beschreibung |
+| --- | --- | --- |
+| Feldergruppe | [[!UICONTROL Details der Inhaltskomponente]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` wurde entfernt von [!UICONTROL Details der Inhaltskomponente] |
+| Feldergruppe | [[!UICONTROL AJO Entity-Tags]](https://github.com/adobe/xdm/pull/1672/files) | AJO Entity-Tags wurden zu [!UICONTROL AJO-Entitätsfelder], die einer Journey oder Kampagne entsprechen |
+| Feldergruppe | (Mehrfach) | Es wurden mehrere Felder für [[!UICONTROL Allgemeine Felder für Journey Orchestration Step-Ereignisse]](https://github.com/adobe/xdm/pull/1671/files) |
+| Feldergruppe | (Mehrfach) | [Es wurden mehrere XDM-Ereignistypen für [!UICONTROL Medienberichte]](https://github.com/adobe/xdm/pull/1670/files). |
+| Feldergruppe | [!UICONTROL Workfront-Änderungsereignis] | Die `Full Record` und `Accessor Employee Ids` Feldergruppen hinzugefügt. |
+| Datentyp | [[!UICONTROL Produktlistenelement]](https://github.com/adobe/xdm/pull/1685/files) | Die [!UICONTROL Erstattungsbetrag] wurde hinzugefügt, um den gegebenenfalls für den Posten rückerstatteten Betrag anzugeben. |
+| Datentyp | [[!UICONTROL Auftrag ]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Erstattungsliste] wurde der Liste der Erstattungen für diese Bestellung hinzugefügt. |
+| Datentyp | [[!UICONTROL Produktlistenelement ]](https://github.com/adobe/xdm/pull/1677/files) | Produktkategorien wurden zur Liste der Kategoriedaten dieses Produkts hinzugefügt. |
+| Datentyp | [!UICONTROL Informationen zu Sitzungsdetails] | Der `pev3` Zeichenfolgenfeld, das [gibt den Typ des für die Berichterstellung verwendeten Medien-Streams an](https://github.com/adobe/xdm/pull/1676/files). Außerdem wurde `pccr` -Eigenschaft gibt an, ob eine Umleitung erfolgt ist. |
+| Datentyp | [!UICONTROL Anforderungsliste] | Stellt die [Eigenschaften der Anforderungsliste](https://github.com/adobe/xdm/pull/1675/files). Dazu gehören Name, ID und Beschreibung. |
+| Datentyp | [!UICONTROL Commerce] | Die [Der Commerce-Datentyp wurde aktualisiert.](https://github.com/adobe/xdm/pull/1675/files) um `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals`und `requisitionList`. |
 
 {style="table-layout:auto"}
 
