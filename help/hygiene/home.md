@@ -3,9 +3,9 @@ title: Übersicht über die Datenhygiene
 description: Mit der Datenhygiene von Adobe Experience Platform können Sie den Lebenszyklus Ihrer Daten verwalten, indem Sie veraltete oder falsche Datensätze aktualisieren oder bereinigen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
 source-git-commit: 2913e9e687843e566db4ebf2031e610d1891d4c9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '639'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 94%
 
 >[!IMPORTANT]
 >
->Datenhygiene ist derzeit nur für Organisationen verfügbar, die **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben haben. Diese Funktionen sollen in naher Zukunft allgemein veröffentlicht werden. Weitere Informationen zu der bevorstehenden Verfügbarkeit erhalten Sie von Ihrem Adobe-Kundenbetreuer. Sie können jedoch sofort [Löschen von Datensätzen über die [!UICONTROL Datensätze] Benutzeroberfläche](../catalog/datasets/user-guide.md#delete).
+>Datenhygiene ist derzeit nur für Organisationen verfügbar, die **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben haben. Diese Funktionen sollen in naher Zukunft allgemein veröffentlicht werden. Weitere Informationen zu der bevorstehenden Verfügbarkeit erhalten Sie von der Adobe-Kundenbetreuung. Sie können jedoch [über die Benutzeroberfläche [!UICONTROL Datensätze] sofort Datensätze löschen](../catalog/datasets/user-guide.md#delete).
 
 Adobe Experience Platform bietet leistungsstarke Tools zur Verwaltung großer, komplizierter Datenvorgänge, was die Orchestrierung von Customer Experiences ermöglicht. Da im Laufe der Zeit Daten in das System aufgenommen werden, ist es wichtig, Ihre Datenspeicher so zu verwalten, dass Daten wie vorgesehen verwendet werden. So müssen Daten aktualisiert werden, um falsche Einträge zu korrigieren, und Daten gelöscht werden, wenn dies aufgrund von Unternehmensrichtlinien erforderlich ist.
 
