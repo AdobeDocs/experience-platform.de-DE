@@ -5,10 +5,10 @@ title: Verarbeitung von Datenschutzanfragen im Echtzeit-Kundenprofil
 type: Documentation
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, die entsprechend diversen Datenschutzbestimmungen auf ihre personenbezogenen Daten zugreifen, deren Verkauf widersprechen oder sie löschen möchten. In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutzanfragen für Echtzeit-Kundenprofil behandelt.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 4cb6280ea646f813a064eb08fef4ab29126ec3ea
+source-git-commit: e5ea0672ba8e9b5951464396a75decc5d8508ff4
 workflow-type: tm+mt
-source-wordcount: '1612'
-ht-degree: 26%
+source-wordcount: '1573'
+ht-degree: 27%
 
 ---
 
@@ -186,10 +186,6 @@ Um sicherzustellen, dass Ihre Datenschutzanfragen alle relevanten Kundenattribut
 ## Verarbeitung von Löschanfragen {#delete}
 
 Wenn [!DNL Experience Platform] von [!DNL Privacy Service] eine DELETE-Anfrage erhält, sendet [!DNL Platform] eine Bestätigung an [!DNL Privacy Service], dass die Anfrage empfangen wurde und die betroffenen Daten zum Löschen markiert wurden. Die Datensätze werden dann entfernt, sobald der Datenschutzauftrag abgeschlossen ist.
-
->[!IMPORTANT]
->
->Datenschutzlöschanfragen sind nicht unmittelbar und können je nach betroffenen Diensten und anderen Faktoren, die sich auf den geografischen Standort auswirken, variieren. Der Zeitrahmen für die Fertigstellung von Datenschutzaufträgen kann zwischen 15 und 45 Tagen betragen, ist jedoch nicht garantiert.
 
 Je nachdem, ob Sie auch Identity Service eingeschlossen haben (`identity`) und dem Datensee (`aepDataLake`) als Produkte in Ihrer Datenschutzanfrage für Profil (`ProfileService`), werden verschiedene Datensätze, die sich auf das Profil beziehen, zu unterschiedlichen Zeitpunkten aus dem System entfernt:
 
