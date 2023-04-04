@@ -3,10 +3,10 @@ keywords: Experience Platform;Fehlerbehebung;Leitplanken;Richtlinien;
 title: Schutzmaßnahmen bei der Datenaufnahme
 description: Dieses Dokument enthält Anleitungen zu Schutzmaßnahmen bei der Datenaufnahme in Adobe Experience Platform
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 96ab28f9f909cedd1148d6b27610aebb7cf61b29
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 98%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +24,7 @@ In der folgenden Tabelle sind Schutzmaßnahmen aufgeführt, die bei der Verwendu
 | --- | --- | --- |
 | Data-Lake-Aufnahme mithilfe der Batch-Aufnahme-API | <ul><li>Mit der Batch-Aufnahme-API können Sie bis zu 20 GB Daten pro Stunde in den Data Lake aufnehmen.</li><li>Die maximale Anzahl von Dateien pro Batch beträgt 1.500.</li><li>Die maximale Batch-Größe beträgt 100 GB.</li><li>Die maximale Anzahl von Eigenschaften oder Feldern pro Zeile beträgt 10.000.</li><li>Die maximale Anzahl der Batches pro Minute und anwendender Person beträgt 138.</li></ul> |
 | Data-Lake-Aufnahme mithilfe von Batch-Quellen | <ul><li>Sie können mit Batch-Aufnahme-Quellen wie [!DNL Azure Blob], [!DNL Amazon S3] und [!DNL SFTP] bis zu 200 GB Daten pro Stunde in den Data Lake aufnehmen.</li><li>Die Größe eines Batches sollte zwischen 256 MB und 100 GB liegen.</li><li>Die maximale Anzahl von Dateien pro Batch beträgt 1.500.</li></ul> | In der [Quellenübersicht](../sources/home.md) finden Sie einen Katalog der Quellen, die Sie für die Datenaufnahme verwenden können. |
-| Batch-Aufnahme in Profil | <ul><li>Sie können bis zu 120 GB Daten pro Stunde aufnehmen.</li><li>Die maximale Größe einer Datensatzklasse beträgt 100 KB (Soft).</li><li>Die maximale Größe einer ExperienceEvent-Klasse beträgt 10 KB (Soft).</li><li>Die maximale Größe eines einzelnen Datensatzes beträgt 1 MB.</li></ul> |
+| Batch-Aufnahme in Profil | <ul><li>Die maximale Größe einer Datensatzklasse beträgt 100 KB (Soft).</li><li>Die maximale Größe einer ExperienceEvent-Klasse beträgt 10 KB (Soft).</li><li>Die maximale Größe eines einzelnen Datensatzes beträgt 1 MB.</li></ul> |
 | Anzahl der täglich aufgenommenen Profil- oder ExperienceEvent-Batches | **Die maximale Anzahl von Profil- oder ExperienceEvent-Batches, die pro Tag aufgenommen werden, beträgt 90.** Das bedeutet, dass die Gesamtanzahl der pro Tag aufgenommenen Profil- und ExperienceEvent-Batches 90 nicht überschreiten darf. Das Aufnehmen zusätzlicher Batches beeinträchtigt die Systemleistung. | Dies ist ein weiches Limit. Es ist möglich, über ein weiches Limit hinauszugehen, jedoch stellen weiche Limits einen empfohlenen Richtwert für die Systemleistung dar. |
 
 ## Schutzmaßnahmen bei der Streaming-Aufnahme
