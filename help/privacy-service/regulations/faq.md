@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Häufig gestellte Fragen zu Datenschutzbestimmungen
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu unterstützten gesetzlichen Datenschutzbestimmungen und deren Implementierung in Adobe Experience Cloud.
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 7e86721f6dd6fd280ae7e7e67aca21b4258ffb66
 workflow-type: tm+mt
-source-wordcount: '1599'
+source-wordcount: '1619'
 ht-degree: 35%
 
 ---
@@ -80,7 +80,11 @@ In vielen Datenschutzbestimmungen ist festgelegt, dass betroffene Personen, die 
 
 Wenn das Unternehmen personenbezogene Daten gesammelt hat und die Identität eines bestimmten Verbrauchers authentifizieren oder überprüfen kann, können Datenschutzbestimmungen ein bestimmtes Zeitfenster für die Erfüllung einer Verbraucheranfrage vorsehen. In der folgenden Tabelle sind die Zeitfenster für jede Verordnung mit Anmerkungen zu einigen Ausnahmen aufgeführt:
 
-| Verordnung | Kompatibilitätsfenster | Anmerkungen |
+>[!NOTE]
+>
+>Der Zeitrahmen für die Reaktion in &quot;Tagen&quot;spiegelt die Fristen wider, die jedes Regulierungsgesetz für die Erfüllung einer Verbraucheranfrage vorsieht.
+
+| Verordnung | Zeitrahmen für die Antwort | Anmerkungen |
 | --- | --- | --- |
 | CCPA (Kalifornien) | 45 Tage |  |
 | DSGVO (Europäische Union) | 30 Tage | Wenn die Anfrage komplex ist oder zahlreiche Anfragen von demselben Datensubjekt gestellt wurden, kann die Anfrage auf 60 Tage verlängert werden. |
