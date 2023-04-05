@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Segmentierungs-Service
 description: Der Segmentierungs-Service von Adobe Experience Platform bietet eine Benutzeroberfläche zum Erstellen und Verwalten von Segmentdefinitionen.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 11a4bb90b5d88f86ac14d702a213f56432a30c24
+source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
-source-wordcount: '2686'
-ht-degree: 94%
+source-wordcount: '2650'
+ht-degree: 96%
 
 ---
 
@@ -69,12 +69,11 @@ Diese Ansicht listet Daten zur Segmentdefinition auf, einschließlich der Profil
 
 Sie können dieser Anzeige zusätzliche Felder hinzufügen, indem Sie das ![Filterattribut-Symbol](../images/ui/overview/filter-attribute.png) auswählen. Zu diesen zusätzlichen Feldern gehören Aufschlüsselung, Auswertungsmethode und Auftrags-ID.
 
-Wenn die Aufschlüsselung ausgewählt ist, zeigt die Anzeige ein Balkendiagramm an, in dem der Prozentsatz der Profile dargestellt wird, die zu den einzelnen der folgenden berechneten Profilstatus gehören: [!UICONTROL Realisiert], [!UICONTROL Bestehend]und [!UICONTROL Beenden]. Außerdem ist die auf der Registerkarte [!UICONTROL Durchsuchen] angezeigte Aufschlüsselung die genaueste Aufschlüsselung des Segmentstatus. Wenn diese Zahl von den Angaben auf der Registerkarte [!UICONTROL Übersicht] abweicht, sollten Sie als korrekte Informationsquelle die Zahlen auf der Registerkarte [!UICONTROL Durchsuchen] verwenden, da die Zahlen auf der Registerkarte [!UICONTROL Übersicht] nur einmal pro Tag aktualisiert werden.
+Wenn die Aufschlüsselung ausgewählt ist, zeigt die Anzeige ein Balkendiagramm an, in dem der Prozentsatz der Profile dargestellt wird, die zu den einzelnen der folgenden berechneten Profilstatus gehören: [!UICONTROL Realisiert] und [!UICONTROL Beenden]. Außerdem ist die auf der Registerkarte [!UICONTROL Durchsuchen] angezeigte Aufschlüsselung die genaueste Aufschlüsselung des Segmentstatus. Wenn diese Zahl von den Angaben auf der Registerkarte [!UICONTROL Übersicht] abweicht, sollten Sie als korrekte Informationsquelle die Zahlen auf der Registerkarte [!UICONTROL Durchsuchen] verwenden, da die Zahlen auf der Registerkarte [!UICONTROL Übersicht] nur einmal pro Tag aktualisiert werden.
 
 | Status | Beschreibung |
 | ------ | ----------- |
 | Realisiert | Die Anzahl der Profile, die sich in den letzten 24 Stunden für das Segment qualifizieren. Die Anzahl der Profile, die sich seit der letzten Ausführung des Batch-Segmentauftrags für das Segment qualifizieren. |
-| Bestehend | Die Anzahl der Profile, die in den letzten 24 Stunden für das Segment qualifiziert blieben. Die Anzahl der Profile, die seit der letzten Ausführung des Batch-Segmentauftrags für das Segment qualifiziert blieben. |
 | Verlassen | Die Anzahl der Profile, die das Segment in den letzten 24 Stunden verlassen haben. Die Anzahl der Profile, die sich seit der letzten Ausführung des Batch-Segmentauftrags nicht mehr für das Segment qualifizieren. |
 
 Die Auswertungsmethode kann entweder Streaming, Batch oder Edge sein. Streaming-Segmente werden konstant ausgewertet, sobald Daten in das System strömen. Batch-Segmente werden gemäß einem festgelegten Zeitplan ausgewertet. Edge-Segmente werden in Echtzeit ausgewertet, was die Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.

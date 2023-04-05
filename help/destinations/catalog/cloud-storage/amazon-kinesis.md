@@ -3,10 +3,10 @@ keywords: Amazon Kinesis; Kinesis-Ziel; Kinesis
 title: Amazon Kinesis-Verbindung
 description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrem Amazon Kinesis-Speicher, um Daten von Adobe Experience Platform zu streamen.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: ce20c273cb6a87264363c03611ccfdfb783e595f
+source-git-commit: 4d1f9fa19bd35095e3ccbd8d83bcc33dcd4c45a8
 workflow-type: tm+mt
-source-wordcount: '1949'
-ht-degree: 66%
+source-wordcount: '1944'
+ht-degree: 64%
 
 ---
 
@@ -169,7 +169,7 @@ Für die Daten, die für ein bestimmtes Profil exportiert werden, ist es wichtig
 
 | Was einen Zielexport bestimmt | Im Zielexport enthaltene Informationen |
 |---------|----------|
-| <ul><li>Zugeordnete Attribute und Segmente dienen als Hinweis für einen Zielexport. Das bedeutet, dass ein Zielexport gestartet wird, wenn zugeordnete Segmente den Status ändern (von null zu realisiert oder von realisiert/existierend zu verlassend) oder alle zugeordneten Attribute aktualisiert werden.</li><li>Da Identitäten derzeit nicht zugeordnet werden können [!DNL Amazon Kinesis] Ziele, Änderungen an einer Identität in einem bestimmten Profil bestimmen auch die Zielexporte.</li><li>Als Änderung für ein Attribut wird jede Aktualisierung des Attributs definiert, unabhängig davon, ob es sich um denselben Wert handelt oder nicht. Das bedeutet, dass das Überschreiben eines Attributs als Änderung gilt, selbst wenn sich der Wert selbst nicht geändert hat.</li></ul> | <ul><li>Das `segmentMembership`-Objekt enthält das Segment, das im Aktivierungsdatenfluss zugeordnet ist und für das sich der Status des Profils nach einem Qualifikations- oder Segmentaustrittsereignis geändert hat. Beachten Sie, dass andere nicht zugeordnete Segmente, für die sich das Profil qualifiziert hat, Teil des Zielexports sein können, wenn diese Segmente zu derselben [Zusammenführungsrichtlinie](/help/profile/merge-policies/overview.md) wie das im Aktivierungsdatenfluss zugeordnete Segment gehören. </li><li>Alle Identitäten in der `identityMap` -Objekt wird ebenfalls einbezogen (Experience Platform unterstützt derzeit keine Identitätszuordnung in der [!DNL Amazon Kinesis] Ziel).</li><li>Nur die zugeordneten Attribute werden in den Zielexport einbezogen.</li></ul> |
+| <ul><li>Zugeordnete Attribute und Segmente dienen als Hinweis für einen Zielexport. Dies bedeutet, dass, wenn zugeordnete Segmente den Status ändern (aus `null` nach `realized` oder von `realized` nach `exiting`) oder alle zugeordneten Attribute aktualisiert werden, wird ein Zielexport gestartet.</li><li>Da Identitäten derzeit nicht zugeordnet werden können [!DNL Amazon Kinesis] Ziele, Änderungen an einer Identität in einem bestimmten Profil bestimmen auch die Zielexporte.</li><li>Als Änderung für ein Attribut wird jede Aktualisierung des Attributs definiert, unabhängig davon, ob es sich um denselben Wert handelt oder nicht. Das bedeutet, dass das Überschreiben eines Attributs als Änderung gilt, selbst wenn sich der Wert selbst nicht geändert hat.</li></ul> | <ul><li>Das `segmentMembership`-Objekt enthält das Segment, das im Aktivierungsdatenfluss zugeordnet ist und für das sich der Status des Profils nach einem Qualifikations- oder Segmentaustrittsereignis geändert hat. Beachten Sie, dass andere nicht zugeordnete Segmente, für die sich das Profil qualifiziert hat, Teil des Zielexports sein können, wenn diese Segmente zu derselben [Zusammenführungsrichtlinie](/help/profile/merge-policies/overview.md) wie das im Aktivierungsdatenfluss zugeordnete Segment gehören. </li><li>Alle Identitäten in der `identityMap` -Objekt wird ebenfalls einbezogen (Experience Platform unterstützt derzeit keine Identitätszuordnung in der [!DNL Amazon Kinesis] Ziel).</li><li>Nur die zugeordneten Attribute werden in den Zielexport einbezogen.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -209,11 +209,11 @@ Ihre exportierten [!DNL Experience Platform]-Daten landen in Ihrem [!DNL Amazon 
       },
       "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae":{
          "lastQualificationTime":"2022-01-02T23:37:33Z",
-         "status":"existing"
+         "status":"realized"
       },
       "947c1c46-008d-40b0-92ec-3af86eaf41c1":{
          "lastQualificationTime":"2021-08-25T23:37:33Z",
-         "status":"existing"
+         "status":"realized"
       },
       "5114d758-ce71-43ba-b53e-e2a91d67b67f":{
          "lastQualificationTime":"2022-01-11T23:37:33Z",
@@ -251,7 +251,7 @@ Im Folgenden finden Sie weitere Beispiele für exportierte Daten, abhängig von 
         "ups": {
           "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
             "lastQualificationTime": "2019-04-15T02:41:50+0000",
-            "status": "existing",
+            "status": "realized",
             "createdAt": 1648553325000,
             "updatedAt": 1648553330000,
             "mappingCreatedAt": 1649856570000,
@@ -271,7 +271,7 @@ Im Folgenden finden Sie weitere Beispiele für exportierte Daten, abhängig von 
         "ups": {
           "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
             "lastQualificationTime": "2019-04-15T02:41:50+0000",
-            "status": "existing",
+            "status": "realized",
             "createdAt": 1648553325000,
             "updatedAt": 1648553330000,
             "mappingCreatedAt": 1649856570000,

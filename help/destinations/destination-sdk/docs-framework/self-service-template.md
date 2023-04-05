@@ -2,10 +2,10 @@
 title: Vorlage für Dokumentations-Self-Service // Ersetzen Sie durch den Namen Ihres Ziels.
 description: Verwenden Sie diese Vorlage, um eine öffentliche Dokumentation für Ihr Ziel im Adobe Experience Platform-Katalog zu erstellen. // Ersetzen Sie durch den Absatz im Abschnitt "Übersicht".
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 49b3553c3e408d2dfbca491b1df71be1d4aefaae
+source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
 workflow-type: tm+mt
-source-wordcount: '1534'
-ht-degree: 28%
+source-wordcount: '1528'
+ht-degree: 29%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 28%
 >
 >Diese Dokumentationsseite wurde von der *YourDestination* Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an *Fügen Sie einen Link oder eine E-Mail-Adresse ein, an die Sie zur Aktualisierung gelangen können, z. B. `support@YourDestination.com`.*
 
-## Anwendungsbeispiele {#use-cases}
+## Anwendungsfälle {#use-cases}
 
 Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie die *YourDestination* Ziel, hier finden Sie Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
 
@@ -66,12 +66,12 @@ Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie die *YourDestination* 
 |---|---|---|
 | GAID | Google Advertising ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
 | IDFA | Apple ID für Advertiser | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
-| ECID | Experience Cloud ID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Alias referenziert werden: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Lesen Sie das folgende Dokument unter [ECID](/help/identity-service/ecid.md) für weitere Informationen. |
+| ECID | Experience Cloud ID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Lesen Sie das folgende Dokument unter [ECID](/help/identity-service/ecid.md) für weitere Informationen. |
 | phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Sowohl einfache als auch SHA256-Hash-Telefonnummern werden von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die **[!UICONTROL Umwandlung anwenden]** -Option, um [!DNL Platform] die Daten bei Aktivierung automatisch hash. |
 | email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen werden von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die **[!UICONTROL Umwandlung anwenden]** -Option, um [!DNL Platform] die Daten bei Aktivierung automatisch hash. |
 | extern_id | Benutzerdefinierte Benutzer-IDs | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein benutzerdefinierter Namespace ist. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
@@ -87,7 +87,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 | Exporthäufigkeit | **[!UICONTROL Batch]** | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Weitere Informationen finden Sie unter [Batch-Datei-basierte Ziele](/help/destinations/destination-types.md#file-based). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
@@ -163,7 +163,7 @@ Lesen [(Beta) Exportieren von Datensätzen](/help/destinations/ui/export-dataset
       },
       "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
         "lastQualificationTime": "2020-05-25T23:37:33Z",
-        "status": "existing"
+        "status": "realized"
       }
     }
   },

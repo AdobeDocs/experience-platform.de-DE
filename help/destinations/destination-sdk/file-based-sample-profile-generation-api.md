@@ -1,15 +1,15 @@
 ---
 description: Auf dieser Seite wird erläutert, wie Sie mit dem API-Endpunkt /sample-profiles von Destination SDK Beispielprofile generieren können, die auf einem Quellschema basieren. Sie können diese Beispielprofile verwenden, um Ihre dateibasierte Zielkonfiguration zu testen.
-title: Erstellen von Beispielprofilen basierend auf einem Quellschema
+title: Generieren von Beispielprofilen basierend auf einem Quellschema
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
-source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
+source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
-source-wordcount: '678'
-ht-degree: 13%
+source-wordcount: '652'
+ht-degree: 15%
 
 ---
 
-# Erstellen von Beispielprofilen basierend auf einem Quellschema
+# Generieren von Beispielprofilen basierend auf einem Quellschema
 
 ## Übersicht {#overview}
 
@@ -108,10 +108,10 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit der angegebenen Anzahl vo
 | -------- | ----------- |
 | `segmentMembership` | Ein map -Objekt, das die Segmentmitgliedschaften des Kontakts beschreibt. Weitere Informationen finden Sie unter `segmentMembership`, lesen [Details zur Segmentzugehörigkeit](../../xdm/field-groups/profile/segmentation.md). |
 | `lastQualificationTime` | Ein Zeitstempel, der angibt, wann sich dieses Profil zuletzt für das Segment qualifiziert hat. |
-| `status` | Ein Zeichenfolgenfeld, das anzeigt, ob die Segmentzugehörigkeit im Rahmen der aktuellen Anforderung realisiert wurde. Folgende Werte werden akzeptiert: <ul><li>`existing`: Das Profil war bereits vor der Anfrage Teil des Segments und behält weiterhin seine Mitgliedschaft bei.</li><li>`realized`: Das Profil gibt das Segment als Teil der aktuellen Anforderung ein.</li><li>`exited`: Das Profil beendet das Segment als Teil der aktuellen Anforderung.</li></ul> |
+| `status` | Ein Zeichenfolgenfeld, das anzeigt, ob die Segmentzugehörigkeit im Rahmen der aktuellen Anforderung realisiert wurde. Folgende Werte werden akzeptiert: <ul><li>`realized`: Das Profil ist Teil des Segments.</li><li>`exited`: Das Profil beendet das Segment als Teil der aktuellen Anforderung.</li></ul> |
 | `identityMap` | Ein Feld vom Typ Zuordnung , das die verschiedenen Identitätswerte einer Person zusammen mit den zugehörigen Namespaces beschreibt. Weitere Informationen finden Sie unter `identityMap`, siehe [Grundlage der Schemakomposition](../../xdm/schema/composition.md#identityMap). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 

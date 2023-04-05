@@ -2,9 +2,9 @@
 description: Auf dieser Seite werden das Nachrichtenformat und die Profilumwandlung von aus Adobe Experience Platform in Ziele exportierten Daten behandelt.
 title: Nachrichtenformat
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: bd89df0659604c05ffd049682343056dbe5667e3
+source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
 workflow-type: tm+mt
-source-wordcount: '2272'
+source-wordcount: '2267'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 Um das Nachrichtenformat sowie den Profilkonfigurations- und -konvertierungsprozess auf der Adobe zu verstehen, machen Sie sich mit den folgenden Konzepten der Experience Platform vertraut:
 
-* **Experience-Datenmodell (XDM)**. [XDM-Übersicht](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=de) und  [Erstellen eines XDM-Schemas in Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en).
+* **Experience-Datenmodell (XDM)**. [XDM-Übersicht](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=de) und  [Erstellen eines XDM-Schemas in Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=de).
 * **Klasse**. [Erstellen und Bearbeiten von Klassen in der Benutzeroberfläche](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/classes.html?lang=en).
 * **IdentityMap**. Die Identitätszuordnung stellt eine Zuordnung aller Endbenutzeridentitäten in Adobe Experience Platform dar. Siehe `xdm:identityMap` im [Wörterbuch der XDM-Felder](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
 * **SegmentMembership**. Die [segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) Das XDM-Attribut informiert darüber, zu welchen Segmenten ein Profil gehört. Für die drei verschiedenen Werte im `status` -Feld, lesen Sie die Dokumentation unter [Feldergruppe Segmentzugehörigkeitsdetails](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html).
@@ -84,7 +84,7 @@ In Bezug auf das Nachrichtenformat lauten die entsprechenden Umwandlungen wie fo
 | `_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
 | `personalEmail.address` | `attributes.external_id` | `external_id` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Profilstruktur in Experience Platform {#profile-structure}
 
@@ -93,7 +93,7 @@ Um die unten aufgeführten Beispiele auf der Seite zu verstehen, müssen Sie die
 Profile haben drei Bereiche:
 
 * `segmentMembership` (immer in einem Profil vorhanden)
-   * Dieser Abschnitt enthält alle Segmente, die im Profil vorhanden sind. Die Segmente können einen von drei Status aufweisen: `realized`, `existing`, `exited`.
+   * Dieser Abschnitt enthält alle Segmente, die im Profil vorhanden sind. Die Segmente können einen von zwei Status aufweisen: `realized` oder `exited`.
 * `identityMap` (immer in einem Profil vorhanden)
    * Dieser Abschnitt enthält alle Identitäten, die im Profil vorhanden sind (E-Mail, Google GAID, Apple IDFA usw.) und die der Benutzer für den Export im Aktivierungs-Workflow zugeordnet hat.
 * -Attribute (je nach Zielkonfiguration können diese im Profil vorhanden sein). Es gibt auch einen geringfügigen Unterschied zwischen vordefinierten Attributen und Freiformattributen:
@@ -110,7 +110,7 @@ Siehe zwei Beispiele für Profile in Experience Platform:
     "ups": {
       "11111111-1111-1111-1111-111111111111": {
         "lastQualificationTime": "2019-04-15T02:41:50.000+0000",
-        "status": "existing"
+        "status": "realized"
       }
     }
   },
@@ -139,7 +139,7 @@ Siehe zwei Beispiele für Profile in Experience Platform:
     "ups": {
       "11111111-1111-1111-1111-111111111111": {
         "lastQualificationTime": "2019-04-15T02:41:50.000+0000",
-        "status": "existing"
+        "status": "realized"
       }
     }
   },
@@ -268,7 +268,7 @@ Profil 1:
       },
       "788d8874-8007-4253-92b7-ee6b6c20c6f3": {
         "lastQualificationTime": "2019-11-20T13:15:49Z",
-        "status": "existing"
+        "status": "realized"
       },
       "8f812592-3f06-416b-bd50-e7831848a31a": {
         "lastQualificationTime": "2019-11-20T13:15:49Z",
@@ -291,7 +291,7 @@ Profil 2:
       },
       "af854278-894a-4192-a96b-320fbf2623fd": {
         "lastQualificationTime": "2021-08-20T16:44:37Z",
-        "status": "existing"
+        "status": "realized"
       },
       "66505bf9-bc08-4bac-afbc-8b6706650ea4": {
         "lastQualificationTime": "2019-08-20T17:23:04Z",
@@ -511,7 +511,7 @@ Profil 1:
             },
             "788d8874-8007-4253-92b7-ee6b6c20c6f3": {
               "lastQualificationTime": "2019-11-20T13:15:49Z",
-              "status": "existing"
+              "status": "realized"
             },
             "8f812592-3f06-416b-bd50-e7831848a31a": {
                 "lastQualificationTime": "2019-11-20T13:15:49Z",
@@ -685,7 +685,7 @@ Profil 1:
             },
             "788d8874-8007-4253-92b7-ee6b6c20c6f3": {
               "lastQualificationTime": "2019-11-20T13:15:49Z",
-              "status": "existing"
+              "status": "realized"
             },
             "8f812592-3f06-416b-bd50-e7831848a31a": {
                 "lastQualificationTime": "2019-11-20T13:15:49Z",
@@ -874,7 +874,7 @@ Profil 1:
       "ups":{
          "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
             "lastQualificationTime":"2020-11-20T13:15:49Z",
-            "status":"existing"
+            "status":"realized"
          }
       }
    }
@@ -894,7 +894,7 @@ Profil 2:
       "ups":{
          "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
             "lastQualificationTime":"2020-11-20T13:15:49Z",
-            "status":"existing"
+            "status":"realized"
          }
       }
    }
@@ -914,7 +914,7 @@ Profil 3:
       "ups":{
          "8f812592-3f06-416b-bd50-e7831848a31a":{
             "lastQualificationTime":"2021-02-20T12:00:00Z",
-            "status":"existing"
+            "status":"realized"
          }
       }
    }
@@ -934,11 +934,11 @@ Profil 4:
       "ups":{
          "8f812592-3f06-416b-bd50-e7831848a31a":{
             "lastQualificationTime":"2021-02-20T12:00:00Z",
-            "status":"existing"
+            "status":"realized"
          },
          "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
             "lastQualificationTime":"2020-11-20T13:15:49Z",
-            "status":"existing"
+            "status":"realized"
          }
       }
    }
@@ -1194,10 +1194,10 @@ Die nachstehende Tabelle enthält Beschreibungen der Funktionen in den obigen Be
 | `input.profile` | Das Profil, dargestellt als [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Folgt dem weiter oben erwähnten Partner-XDM-Schema auf dieser Seite. |
 | `destination.segmentAliases` | Ordnen Sie Segmentkennungen im Adobe Experience Platform-Namespace Segmentaliasen im System des Partners zu. |
 | `destination.segmentNames` | Ordnen Sie Segmentnamen im Adobe Experience Platform-Namespace Segmentnamen im System des Partners zu. |
-| `addedSegments(listOfSegments)` | Gibt nur Segmente mit Status zurück `realized` oder `existing`. |
+| `addedSegments(listOfSegments)` | Gibt nur Segmente mit Status zurück `realized`. |
 | `removedSegments(listOfSegments)` | Gibt nur Segmente mit Status zurück `exited`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Nächste Schritte {#next-steps}
 

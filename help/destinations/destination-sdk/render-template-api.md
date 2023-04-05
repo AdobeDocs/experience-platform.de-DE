@@ -2,9 +2,9 @@
 description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mithilfe des API-Endpunkts „/authoring/testing/template/render“ durchführen können, um exportierte Daten für Ihr Ziel basierend auf Ihrer Nachrichtenumwandlungsvorlage zu rendern.
 title: API-Vorgänge für Rendervorlagen
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '803'
 ht-degree: 100%
 
 ---
@@ -45,7 +45,7 @@ POST authoring/testing/template/render
 | `template` | Die mit Escape-Zeichen versehene Version der Vorlage, basierend auf der Sie exportierte Profile rendern. |
 | `profiles` | *Optional*. Sie können Profile zum Anfrageinhalt hinzufügen. Wenn Sie keine Profile hinzufügen, erstellt Experience Platform automatisch Profile und fügt sie der Anfrage hinzu. <br> Wenn Sie Profile zum Hauptteil des Aufrufs hinzufügen möchten, können Sie einige mithilfe der [API zur Erzeugung von Musterprofilen](./sample-profile-generation-api.md) erzeugen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Beachten Sie, dass die vom API-Endpunkt für Render-Vorlagen zurückgegebene Antwort je nach Ziel-Aggregationsrichtlinie unterschiedlich ist. Wenn Ihr Ziel über eine konfigurierbare Aggregationsrichtlinie verfügt, wird der Aggregationsschlüssel, der bestimmt, wie Profile aggregiert werden, auch in der Antwort zurückgegeben. Weitere Informationen über [Aggregationsrichtlinien](./destination-configuration.md#aggregation) finden Sie im Dokument zur Zielkonfiguration.
 
@@ -84,7 +84,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
                 "ups": {
                     "segmentid1": {
                         "lastQualificationTime": "2021-10-26T16:59:00.828461Z",
-                        "status": "existing"
+                        "status": "realized"
                     },
                     "segmentid3": {
                         "lastQualificationTime": "2021-10-26T16:59:00.828469Z",
@@ -139,7 +139,7 @@ Bei einer fehlerhaften Antwort wird der HTTP-Status 400 zusammen mit Beschreibun
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T16:59:00.828461Z",
-                                "status": "existing"
+                                "status": "realized"
                             },
                             "segmentid3": {
                                 "lastQualificationTime": "2021-10-26T16:59:00.828469Z",
@@ -205,7 +205,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
                 "ups": {
                     "segmentid1": {
                         "lastQualificationTime": "2021-10-26T17:41:55.947859Z",
-                        "status": "existing"
+                        "status": "realized"
                     },
                     "segmentid3": {
                         "lastQualificationTime": "2021-10-26T17:41:55.947860Z",
@@ -255,7 +255,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
                 "ups": {
                     "segmentid1": {
                         "lastQualificationTime": "2021-10-26T17:41:55.948187Z",
-                        "status": "existing"
+                        "status": "realized"
                     },
                     "segmentid3": {
                         "lastQualificationTime": "2021-10-26T17:41:55.948188Z",
@@ -509,7 +509,7 @@ Bei einer fehlerhaften Antwort wird der HTTP-Status 400 zusammen mit Beschreibun
             "aggregationKey": {
                 "destinationInstanceId": "49966037-32cd-4457-a105-2cbf9c01826a",
                 "segmentId": "segmentid1",
-                "segmentStatus": "existing",
+                "segmentStatus": "realized",
                 "identityNamespaces": [
                     "android_channel",
                     "amazon_channel",
@@ -523,7 +523,7 @@ Bei einer fehlerhaften Antwort wird der HTTP-Status 400 zusammen mit Beschreibun
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -545,7 +545,7 @@ Bei einer fehlerhaften Antwort wird der HTTP-Status 400 zusammen mit Beschreibun
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -567,7 +567,7 @@ Bei einer fehlerhaften Antwort wird der HTTP-Status 400 zusammen mit Beschreibun
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -589,7 +589,7 @@ Bei einer fehlerhaften Antwort wird der HTTP-Status 400 zusammen mit Beschreibun
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -611,7 +611,7 @@ Bei einer fehlerhaften Antwort wird der HTTP-Status 400 zusammen mit Beschreibun
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -633,7 +633,7 @@ Bei einer fehlerhaften Antwort wird der HTTP-Status 400 zusammen mit Beschreibun
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -655,7 +655,7 @@ Bei einer fehlerhaften Antwort wird der HTTP-Status 400 zusammen mit Beschreibun
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -677,7 +677,7 @@ Bei einer fehlerhaften Antwort wird der HTTP-Status 400 zusammen mit Beschreibun
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -950,7 +950,7 @@ Bei einer fehlerhaften Antwort wird der HTTP-Status 400 zusammen mit Beschreibun
             "aggregationKey": {
                 "destinationInstanceId": "49966037-32cd-4457-a105-2cbf9c01826a",
                 "segmentId": "segmentid1",
-                "segmentStatus": "existing",
+                "segmentStatus": "realized",
                 "identityNamespaces": [
                     "named_user_id"
                 ]
@@ -961,7 +961,7 @@ Bei einer fehlerhaften Antwort wird der HTTP-Status 400 zusammen mit Beschreibun
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -983,7 +983,7 @@ Bei einer fehlerhaften Antwort wird der HTTP-Status 400 zusammen mit Beschreibun
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },

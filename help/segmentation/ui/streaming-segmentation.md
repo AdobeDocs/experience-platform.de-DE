@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche für die Streaming-Segmentierung
 description: Mit der Streaming-Segmentierung in Adobe Experience Platform können Sie die Segmentierung nahezu in Echtzeit durchführen und sich dabei auf die Relevanz der Daten konzentrieren. Im Rahmen der Streaming-Segmentierung erfolgt jetzt eine Segmentqualifizierung, wenn Daten in Platform aufgenommen werden. So wird die Notwendigkeit verringert, Segmentierungsaufträge zu planen und auszuführen. Mit dieser Funktion können die meisten Segmentregeln jetzt ausgewertet werden, während Daten an Platform übermittelt werden. Das bedeutet, dass die Segmentzugehörigkeit auch ohne Ausführung geplanter Segmentierungsaufträge auf dem neuesten Stand gehalten wird.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
-source-wordcount: '1495'
-ht-degree: 100%
+source-wordcount: '1490'
+ht-degree: 99%
 
 ---
 
@@ -74,7 +74,7 @@ Darunter befindet sich ein Liniendiagramm, das die Anzahl der neuen Zielgruppen 
 
 >[!NOTE]
 >
->Ein Segment gilt als qualifiziert, wenn es von der Statuslosigkeit oder vom Status „beendet“ zum Status „realisiert“ wechselt. Ein Segment gilt als nicht qualifiziert, wenn es vom Status „realisiert“ oder „existiert“ zum Status „beendet“ wechselt.
+>Ein Segment gilt als qualifiziert, wenn es von der Statuslosigkeit oder vom Status „beendet“ zum Status „realisiert“ wechselt. Ein Segment wird als nicht qualifiziert betrachtet, wenn es von realisiert zu beendet wechselt.
 >
 >Weitere Informationen zu diesen Status finden Sie in der Statustabelle in der [Segmentierungsübersicht](./overview.md#browse).
 

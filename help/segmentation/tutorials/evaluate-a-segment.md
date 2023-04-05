@@ -5,9 +5,9 @@ title: Segmentergebnisse auswerten und aufrufen
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mithilfe der Adobe Experience Platform Segmentation Service-API Segmente auswerten und auf Segmentergebnisse zugreifen.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 378f9260703d388976054431a76ac285724a9ae3
+source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1608'
 ht-degree: 21%
 
 ---
@@ -109,7 +109,7 @@ Das folgende Beispiel zeigt, was die `segmentMembership` -Attribut für jeden ei
     "UPS": {
       "04a81716-43d6-4e7a-a49c-f1d8b3129ba9": {
         "timestamp": "2018-04-26T15:52:25+00:00",
-        "status": "existing"
+        "status": "realized"
       },
       "53cba6b2-a23b-454a-8069-fc41308f1c0f": {
         "lastQualificationTime": "2018-04-26T15:52:25+00:00",
@@ -129,7 +129,7 @@ Das folgende Beispiel zeigt, was die `segmentMembership` -Attribut für jeden ei
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `lastQualificationTime` | Der Zeitstempel, zu dem die Bestätigung der Segmentzugehörigkeit erfolgte und das Profil in das Segment eintrat oder es verließ. |
-| `status` | Der Status der Segmentbeteiligung als Teil der aktuellen Anfrage. Muss einem der folgenden bekannten Werte entsprechen: <ul><li>`existing`: Die Entität befindet sich weiterhin im Segment.</li><li>`realized`: Entität gibt das Segment ein.</li><li>`exited`: Entität beendet das Segment.</li></ul> |
+| `status` | Der Status der Segmentbeteiligung als Teil der aktuellen Anfrage. Muss einem der folgenden bekannten Werte entsprechen: <ul><li>`realized`: Entität qualifiziert sich für das Segment.</li><li>`exited`: Entität beendet das Segment.</li></ul> |
 
 >[!NOTE]
 >

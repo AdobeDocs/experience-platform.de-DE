@@ -2,10 +2,10 @@
 description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt "/authoring/sample-profiles"ausführen können, um Beispielprofile zu generieren, die für Zieltests verwendet werden können.
 title: Beispiele für API-Vorgänge zur Profilerstellung
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 789a3928379d200af292c722806f7ca72441d9f3
+source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
-source-wordcount: '975'
-ht-degree: 15%
+source-wordcount: '943'
+ht-degree: 14%
 
 ---
 
@@ -62,7 +62,7 @@ GET authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&co
 | `{DESTINATION_INSTANCE_ID}` | Die ID der Zielinstanz, basierend auf der Sie Beispielprofile generieren. |
 | `{COUNT}` | *Optional*. Die Anzahl der Beispielprofile, die Sie generieren. Der Parameter kann Werte zwischen `1 - 1000`. <br> Wenn der Parameter count nicht angegeben ist, wird die Standardanzahl der generierten Profile durch die Variable `maxUsersPerRequest` Wert in [Zielserverkonfiguration](./destination-server-api.md#create). Wenn diese Eigenschaft nicht definiert ist, generiert Adobe ein Beispielprofil. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 
 **Anfrage**
@@ -183,10 +183,10 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit der angegebenen Anzahl vo
 | -------- | ----------- |
 | `segmentMembership` | Ein map -Objekt, das die Segmentmitgliedschaften des Kontakts beschreibt. Weitere Informationen finden Sie unter `segmentMembership`, lesen [Details zur Segmentzugehörigkeit](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
 | `lastQualificationTime` | Ein Zeitstempel, der angibt, wann sich dieses Profil zuletzt für das Segment qualifiziert hat. |
-| `xdm:status` | Ein Zeichenfolgenfeld, das anzeigt, ob die Segmentzugehörigkeit im Rahmen der aktuellen Anforderung realisiert wurde. Folgende Werte werden akzeptiert: <ul><li>`existing`: Das Profil war bereits vor der Anfrage Teil des Segments und behält weiterhin seine Mitgliedschaft bei.</li><li>`realized`: Das Profil gibt das Segment als Teil der aktuellen Anforderung ein.</li><li>`exited`: Das Profil beendet das Segment als Teil der aktuellen Anforderung.</li></ul> |
+| `xdm:status` | Ein Zeichenfolgenfeld, das anzeigt, ob die Segmentzugehörigkeit im Rahmen der aktuellen Anforderung realisiert wurde. Folgende Werte werden akzeptiert: <ul><li>`realized`: Das Profil ist Teil des Segments.</li><li>`exited`: Das Profil beendet das Segment als Teil der aktuellen Anforderung.</li></ul> |
 | `identityMap` | Ein Feld vom Typ Zuordnung , das die verschiedenen Identitätswerte einer Person zusammen mit den zugehörigen Namespaces beschreibt. Weitere Informationen finden Sie unter `identityMap`, lesen [Grundlage der Schemakomposition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Generieren von Beispielprofilen basierend auf dem Zielschema, das bei der Erstellung einer Nachrichtenumwandlungsvorlage verwendet werden soll {#generate-sample-profiles-target-schema}
 
@@ -213,7 +213,7 @@ GET authoring/sample-profiles?destinationId={DESTINATION_ID}&count={COUNT}
 | `{DESTINATION_ID}` | Die ID der Zielkonfiguration, basierend auf der Sie Beispielprofile generieren. |
 | `{COUNT}` | *Optional*. Die Anzahl der Beispielprofile, die Sie generieren. Der Parameter kann Werte zwischen `1 - 1000`. <br> Wenn der Parameter count nicht angegeben ist, wird die Standardanzahl der generierten Profile durch die Variable `maxUsersPerRequest` Wert in [Zielserverkonfiguration](./destination-server-api.md#create). Wenn diese Eigenschaft nicht definiert ist, generiert Adobe ein Beispielprofil. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -240,7 +240,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit der angegebenen Anzahl vo
             "ups": {
                 "segmentid1": {
                     "lastQualificationTime": "2021-06-30T18:42:27.609326Z",
-                    "status": "existing"
+                    "status": "realized"
                 },
                 "segmentid3": {
                     "lastQualificationTime": "2021-06-30T18:42:27.609328Z",
@@ -285,7 +285,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit der angegebenen Anzahl vo
             "ups": {
                 "segmentid1": {
                     "lastQualificationTime": "2021-06-30T18:42:27.609626Z",
-                    "status": "existing"
+                    "status": "realized"
                 },
                 "segmentid3": {
                     "lastQualificationTime": "2021-06-30T18:42:27.609627Z",
@@ -330,7 +330,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit der angegebenen Anzahl vo
             "ups": {
                 "segmentid1": {
                     "lastQualificationTime": "2021-06-30T18:42:27.609823Z",
-                    "status": "existing"
+                    "status": "realized"
                 },
                 "segmentid3": {
                     "lastQualificationTime": "2021-06-30T18:42:27.609824Z",

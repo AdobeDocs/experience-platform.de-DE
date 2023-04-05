@@ -1,10 +1,10 @@
 ---
 title: Profilexportverhalten
 description: Erfahren Sie, wie sich das Verhalten beim Profilexport zwischen den verschiedenen Integrationsmustern unterscheidet, die in Experience Platform-Zielen unterstützt werden.
-source-git-commit: 90964189396b3b89f35a96eb4c04e248dc34b9b4
+source-git-commit: 4d1f9fa19bd35095e3ccbd8d83bcc33dcd4c45a8
 workflow-type: tm+mt
-source-wordcount: '2942'
-ht-degree: 100%
+source-wordcount: '2933'
+ht-degree: 97%
 
 ---
 
@@ -61,7 +61,7 @@ Was die Daten betrifft, die für ein bestimmtes Profil exportiert werden, ist es
 
 | Was einen Zielexport bestimmt | Im Zielexport enthaltene Informationen |
 |---------|----------|
-| <ul><li>Zugeordnete Attribute und Segmente dienen als Hinweis für einen Zielexport. Das bedeutet, dass ein Zielexport gestartet wird, wenn zugeordnete Segmente den Status ändern (von null zu realisiert oder von realisiert/existierend zu verlassend) oder alle zugeordneten Attribute aktualisiert werden.</li><li>Da Identitäten derzeit nicht Unternehmenszielen zugeordnet werden können, bestimmen Änderungen an der Identität eines bestimmten Profils auch die Zielexporte.</li><li>Als Änderung für ein Attribut wird jede Aktualisierung des Attributs definiert, unabhängig davon, ob es sich um denselben Wert handelt oder nicht. Das bedeutet, dass das Überschreiben eines Attributs als Änderung gilt, selbst wenn sich der Wert selbst nicht geändert hat.</li></ul> | <ul><li>Das `segmentMembership`-Objekt enthält das Segment, das im Aktivierungsdatenfluss zugeordnet ist und für das sich der Status des Profils nach einem Qualifikations- oder Segmentaustrittsereignis geändert hat. Beachten Sie, dass andere nicht zugeordnete Segmente, für die sich das Profil qualifiziert hat, Teil des Zielexports sein können, wenn diese Segmente zu derselben [Zusammenführungsrichtlinie](/help/profile/merge-policies/overview.md) wie das im Aktivierungsdatenfluss zugeordnete Segment gehören. </li><li>Alle Identitäten im `identityMap`-Objekt sind ebenfalls enthalten (Experience Platform unterstützt derzeit keine Identitätszuordnung im Unternehmensziel).</li><li>Nur die zugeordneten Attribute werden in den Zielexport einbezogen.</li></ul> |
+| <ul><li>Zugeordnete Attribute und Segmente dienen als Hinweis für einen Zielexport. Dies bedeutet, dass, wenn zugeordnete Segmente den Status ändern (aus `null` nach `realized` oder von `realized` nach `exiting`) oder alle zugeordneten Attribute aktualisiert werden, wird ein Zielexport gestartet.</li><li>Da Identitäten derzeit nicht Unternehmenszielen zugeordnet werden können, bestimmen Änderungen an der Identität eines bestimmten Profils auch die Zielexporte.</li><li>Als Änderung für ein Attribut wird jede Aktualisierung des Attributs definiert, unabhängig davon, ob es sich um denselben Wert handelt oder nicht. Das bedeutet, dass das Überschreiben eines Attributs als Änderung gilt, selbst wenn sich der Wert selbst nicht geändert hat.</li></ul> | <ul><li>Das `segmentMembership`-Objekt enthält das Segment, das im Aktivierungsdatenfluss zugeordnet ist und für das sich der Status des Profils nach einem Qualifikations- oder Segmentaustrittsereignis geändert hat. Beachten Sie, dass andere nicht zugeordnete Segmente, für die sich das Profil qualifiziert hat, Teil des Zielexports sein können, wenn diese Segmente zu derselben [Zusammenführungsrichtlinie](/help/profile/merge-policies/overview.md) wie das im Aktivierungsdatenfluss zugeordnete Segment gehören. </li><li>Alle Identitäten im `identityMap`-Objekt sind ebenfalls enthalten (Experience Platform unterstützt derzeit keine Identitätszuordnung im Unternehmensziel).</li><li>Nur die zugeordneten Attribute werden in den Zielexport einbezogen.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -108,7 +108,7 @@ Was die Daten betrifft, die für ein bestimmtes Profil exportiert werden, ist es
 
 | Was einen Zielexport bestimmt | Im Zielexport enthaltene Informationen |
 |---------|----------|
-| <ul><li>Zugeordnete Attribute und Segmente dienen als Hinweis für einen Zielexport. Das bedeutet, dass ein Zielexport gestartet wird, wenn zugeordnete Segmente den Status ändern (von null zu realisiert oder von realisiert/existierend zu verlassend) oder alle zugeordneten Attribute aktualisiert werden.</li><li>Eine Änderung in der Identitätszuordnung wird als eine Identität definiert, die für das [Identitätsdiagramm](/help/identity-service/ui/identity-graph-viewer.md) des Profils hinzugefügt/entfernt wird – für Identity-Namespaces, die für den Export zugeordnet sind.</li><li>Als Änderung für ein Attribut wird jede Aktualisierung des Attributs definiert – für Attribute, die dem Ziel zugeordnet sind.</li></ul> | <ul><li>Die Segmente, die dem Ziel zugeordnet sind und sich geändert haben, werden in das Objekt `segmentMembership` eingeschlossen. In einigen Szenarien können sie mit mehreren Aufrufen exportiert werden. In einigen Szenarien können auch bestimmte Segmente, die sich nicht geändert haben, in den Aufruf eingeschlossen werden. In jedem Fall werden nur zugeordnete Segmente exportiert.</li><li>Alle Identitäten aus den Namespaces, die dem Ziel im Objekt `identityMap` zugeordnet sind, sind ebenfalls eingeschlossen.</li><li>Nur die zugeordneten Attribute werden in den Zielexport einbezogen.</li></ul> |
+| <ul><li>Zugeordnete Attribute und Segmente dienen als Hinweis für einen Zielexport. Dies bedeutet, dass, wenn zugeordnete Segmente den Status ändern (aus `null` nach `realized` oder von `realized` nach `exiting`) oder alle zugeordneten Attribute aktualisiert werden, wird ein Zielexport gestartet.</li><li>Eine Änderung in der Identitätszuordnung wird als eine Identität definiert, die für das [Identitätsdiagramm](/help/identity-service/ui/identity-graph-viewer.md) des Profils hinzugefügt/entfernt wird – für Identity-Namespaces, die für den Export zugeordnet sind.</li><li>Als Änderung für ein Attribut wird jede Aktualisierung des Attributs definiert – für Attribute, die dem Ziel zugeordnet sind.</li></ul> | <ul><li>Die Segmente, die dem Ziel zugeordnet sind und sich geändert haben, werden in das Objekt `segmentMembership` eingeschlossen. In einigen Szenarien können sie mit mehreren Aufrufen exportiert werden. In einigen Szenarien können auch bestimmte Segmente, die sich nicht geändert haben, in den Aufruf eingeschlossen werden. In jedem Fall werden nur zugeordnete Segmente exportiert.</li><li>Alle Identitäten aus den Namespaces, die dem Ziel im Objekt `identityMap` zugeordnet sind, sind ebenfalls eingeschlossen.</li><li>Nur die zugeordneten Attribute werden in den Zielexport einbezogen.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -122,7 +122,7 @@ Betrachten Sie beispielsweise diesen Datenfluss zu einem Streaming-Ziel, bei dem
 
 ![Streaming-Ziel-Datenfluss](/help/destinations/assets/how-destinations-work/streaming-destination-example-dataflow.png)
 
-Ein Profilexport an das Ziel kann durch ein Profil bestimmt werden, das sich für eines der drei zugeordneten Segmente qualifiziert. Wenn sich ein Profil für das Segment **Kundschaft mit DeLorean-Autos** qualifziert hat, wird dadurch ein Export ausgelöst. Die anderen Segmente (**Stadt – Dallas** und **Grundlegende Site-Aktivität**) können auch exportiert werden, wenn das Profil dieses Segment mit einem der möglichen Status (`realized`, `existing`, `exited`) aufweist. Nicht zugeordnete Segmente (z. B. **Science-Fiction-Fans**) werden nicht exportiert.
+Ein Profilexport an das Ziel kann durch ein Profil bestimmt werden, das sich für eines der drei zugeordneten Segmente qualifiziert. Wenn sich ein Profil für das Segment **Kundschaft mit DeLorean-Autos** qualifziert hat, wird dadurch ein Export ausgelöst. Die anderen Segmente (**Stadt - Dallas** und **Grundlegende Site-Aktivität**) kann auch exportiert werden, wenn das Profil dieses Segment mit einem der möglichen Status (`realized` oder `exited`). Nicht zugeordnete Segmente (z. B. **Science-Fiction-Fans**) werden nicht exportiert.
 
 Was die Profilattribute angeht, bestimmt jede Änderung an den drei oben zugeordneten Attributen einen Zielexport.
 

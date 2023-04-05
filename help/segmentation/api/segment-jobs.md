@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API-Endpunkt für Segmentaufträge
 description: Der Endpunkt für Segmentaufträge in der Segmentation Service-API von Adobe Experience Platform ermöglicht Ihnen die programmgesteuerte Verwaltung von Segmentaufträgen für Ihr Unternehmen.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
-source-wordcount: '1511'
+source-wordcount: '1498'
 ht-degree: 24%
 
 ---
@@ -130,7 +130,6 @@ Wenn weniger als 1500 Segmente in Ihrem Segmentauftrag ausgeführt werden, wird 
                 "segmentedProfileByStatusCounter":{
                     "94509dba-7387-452f-addc-5d8d979f6ae8":{
                         "exited":144646,
-                        "existing":10,
                         "realized":2056
                     }
                 },
@@ -226,7 +225,6 @@ Wenn mehr als 1500 Segmente in Ihrem Segmentauftrag ausgeführt werden, wird die
                 "segmentedProfileByStatusCounter":{
                     "94509dba-7387-452f-addc-5d8d979f6ae8":{
                         "exited":144646,
-                        "existing":10,
                         "realized":2056
                     }
                 },
@@ -275,7 +273,7 @@ Wenn mehr als 1500 Segmente in Ihrem Segmentauftrag ausgeführt werden, wird die
 | `metrics.profileSegmentationTime` | Ein Objekt, das Informationen zum Beginn und zum Ende der Segmentierungsauswertung sowie zur insgesamt benötigten Zeit enthält. |
 | `metrics.segmentProfileCounter` | Die Anzahl der pro Segment qualifizierten Profile. |
 | `metrics.segmentedProfileByNamespaceCounter` | Die Anzahl der für jeden Identitäts-Namespace qualifizierten Profile pro Segment. |
-| `metrics.segmentProfileByStatusCounter` | Die Anzahl der Profile für jeden Status. Die folgenden drei Status werden unterstützt: <ul><li>&quot;realisiert&quot;- Die Anzahl neuer Profile, die in das Segment eingegeben wurden.</li><li>&quot;vorhandene&quot;- Die Anzahl der Profile, die weiterhin im Segment vorhanden sind.</li><li>&quot;Exited&quot;- Die Anzahl der Profilsegmente, die im Segment nicht mehr vorhanden sind.</li></ul> |
+| `metrics.segmentProfileByStatusCounter` | Die Anzahl der Profile für jeden Status. Die folgenden drei Status werden unterstützt: <ul><li>&quot;realisiert&quot;- Die Anzahl der Profile, die für das Segment qualifiziert sind.</li><li>&quot;Exited&quot;- Die Anzahl der Profilsegmente, die im Segment nicht mehr vorhanden sind.</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | Die Gesamtzahl der zusammengeführten Profile je Zusammenführungsrichtlinie. |
 
 ## Neuen Segmentauftrag erstellen {#create}
@@ -373,7 +371,6 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrem ne
         "segmentedProfileByStatusCounter":{
             "7863c010-e092-41c8-ae5e-9e533186752e":{
                 "exited":144646,
-                "existing":10,
                 "realized":2056
             }
         },
@@ -494,7 +491,6 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrem neu erst
         "segmentedProfileByStatusCounter":{
             "7863c010-e092-41c8-ae5e-9e533186752e":{
                 "exited":144646,
-                "existing":10,
                 "realized":2056
             }
         },
@@ -674,7 +670,6 @@ Wenn mehr als 1500 Segmente in Ihrem Segmentauftrag ausgeführt werden, wird die
         "segmentedProfileByStatusCounter":{
             "7863c010-e092-41c8-ae5e-9e533186752e":{
                 "exited":144646,
-                "existing":10,
                 "realized":2056
             }
         },
