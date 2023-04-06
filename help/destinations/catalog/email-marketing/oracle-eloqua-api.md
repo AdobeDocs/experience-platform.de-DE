@@ -2,24 +2,25 @@
 title: (API) Oracle Eloqua-Verbindung
 description: Mit dem (API) Oracle Eloqua-Ziel können Sie Ihre Kontodaten exportieren und innerhalb von Oracle Eloqua für Ihre Geschäftsanforderungen aktivieren.
 last-substantial-update: 2023-03-14T00:00:00Z
-source-git-commit: 3197eddcf9fef2870589fdf9f09276a333f30cd1
+source-git-commit: e8aa09545c95595e98b4730188bd8a528ca299a9
 workflow-type: tm+mt
-source-wordcount: '1494'
-ht-degree: 40%
+source-wordcount: '1642'
+ht-degree: 37%
 
 ---
+
 
 # [!DNL (API) Oracle Eloqua]-Verbindung
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) ermöglicht es Marketing-Experten, Kampagnen zu planen und auszuführen und gleichzeitig ein personalisiertes Kundenerlebnis für ihre potenziellen Kunden bereitzustellen. Dank integrierter Lead-Verwaltung und einfacher Kampagnenerstellung können Marketingexperten die richtige Zielgruppe zum richtigen Zeitpunkt auf der Journey ansprechen und elegant skalieren, um Zielgruppen kanalübergreifend zu erreichen, einschließlich E-Mail, Display-Suche, Video und Mobil. Vertriebsteams können mehr Angebote schneller schließen und so den Marketing-ROI durch Echtzeiteinblicke steigern.
 
-Diese [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt die [Kontakt aktualisieren](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) Vorgang von [!DNL Oracle Eloqua] REST-API, mit der Sie Identitäten innerhalb eines Segments in [!DNL Oracle Eloqua].
+Diese [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt die [Kontakt aktualisieren](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) Vorgang von [!DNL Oracle Eloqua] REST-API, mit der Sie **Identitäten aktualisieren** innerhalb eines Segments in [!DNL Oracle Eloqua].
 
 [!DNL Oracle Eloqua] uses [Grundlegende Authentifizierung](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) zur Kommunikation mit dem [!DNL Oracle Eloqua] REST-API. Anweisungen zur Authentifizierung bei Ihrer [!DNL Oracle Eloqua]-Instanz sehen Sie weiter unten im Abschnitt [Authentifizieren bei Ziel](#authenticate).
 
 ## Anwendungsbeispiele {#use-cases}
 
-Als Marketing-Experte können Sie Ihren Benutzern personalisierte Erlebnisse auf der Basis von Attributen aus ihren Adobe Experience Platform-Profilen bereitstellen. Sie können Segmente aus Ihren Offline-Daten erstellen und diese Segmente an [!DNL Oracle Eloqua] senden, damit sie in den Feeds der Benutzer angezeigt werden, sobald Segmente und Profile in Adobe Experience Platform aktualisiert werden.
+Die Marketingabteilung einer Online-Plattform möchte eine E-Mail-basierte Marketing-Kampagne an eine kuratierte Zielgruppe von Leads senden. Das Marketing-Team der Plattform kann vorhandene Lead-Informationen über Adobe Experience Platform aktualisieren, Segmente aus eigenen Offline-Daten erstellen und diese Segmente an senden [!DNL Oracle Eloqua], die dann zum Versand der E-Mail-Adresse der Marketing-Kampagne verwendet werden kann.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -54,15 +55,26 @@ Beachten Sie die folgenden Elemente, bevor Sie sich bei der [!DNL Oracle Eloqua]
 * Wenn diese Grenze überschritten wird, tritt bei der Experience Platform ein Fehler auf. Dies liegt daran, dass die Variable [!DNL Oracle Eloqua] Die API kann die Anfrage nicht validieren und antwortet mit einem - *400: Überprüfungsfehler* - Fehlermeldung, die das Problem beschreibt.
 * Wenn Sie die oben angegebene Grenze erreicht haben, müssen Sie vorhandene Zuordnungen aus Ihrem Ziel entfernen und die entsprechenden benutzerdefinierten Kontaktfelder in Ihrem [!DNL Oracle Eloqua] , bevor Sie weitere Segmente exportieren können.
 
-* Siehe Abschnitt [Oracle Eloqua Erstellen von Kontaktfeldern](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm) Seite mit Informationen zu zusätzlichen Beschränkungen.
+* Siehe Abschnitt [[!DNL Oracle Eloqua] Erstellen von Kontaktfeldern](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm) Seite mit Informationen zu zusätzlichen Beschränkungen.
 
 ## Unterstützte Identitäten {#supported-identities}
 
 [!DNL Oracle Eloqua] unterstützt die Aktualisierung von Identitäten, die in der folgenden Tabelle beschrieben werden. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md).
 
-| Ziel-Identität | Beispiel | Beschreibung | Obligatorisch |
-|---|---|---|---|
-| `EloquaId` | `111111` | Eindeutige Kennung des Kontakts. | Ja |
+| Ziel-Identität | Beschreibung | Obligatorisch |
+|---|---|---|
+| `EloquaId` | Eindeutige Kennung des Kontakts. | Ja |
+
+## Exporttyp und -häufigkeit {#export-type-frequency}
+
+Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
+
+| Element | Typ | Anmerkungen |
+---------|----------|---------|
+| Exporttyp | **[!UICONTROL Profilbasiert]** | <ul><li>Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern *(z. B.: E-Mail-Adresse, Telefonnummer, Nachname)*, entsprechend Ihrer Feldzuordnung.</li><li> Für jedes ausgewählte Segment in Platform muss die entsprechende [!DNL Oracle Eloqua] Segmentstatus mit dem Segmentstatus von Platform aktualisiert.</li></ul> |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | <ul><li>Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+
+{style="table-layout:auto"}
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
@@ -111,42 +123,37 @@ Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie 
 
 Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!DNL Oracle Eloqua]-Ziel zu senden, müssen Sie den Schritt zur Feldzuordnung durchlaufen. Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres Experience-Datenmodells (XDM) in Ihrem Platform-Konto und den jeweiligen Entsprechungen vom Ziel zu erstellen.
 
-`EloquaID` ist erforderlich, um Attribute zu aktualisieren, die der Identität entsprechen. Die `emailAddress` ist auch erforderlich, da ohne sie die API einen Fehler wie unten angegeben ausgibt:
-
-```json
-{
-   "type":"ObjectValidationError",
-   "container":{
-      "type":"ObjectKey",
-      "objectType":"Contact"
-   },
-   "property":"emailAddress",
-   "requirement":{
-      "type":"EmailAddressRequirement"
-   },
-   "value":"<null>"
-}
-```
-
-In der Variablen **[!UICONTROL Zielfeld]** sollte genau wie in der Tabelle der Attributzuordnungen beschrieben benannt werden, da diese Attribute den Anfragetext bilden.
-
-In der Variablen **[!UICONTROL Quellfeld]** keine solchen Einschränkungen befolgen. Sie können sie jedoch nach Bedarf zuordnen, wenn das Datenformat beim Senden an [!DNL Oracle Eloqua] wird ein Fehler ausgegeben.
-
-Sie können beispielsweise **[!UICONTROL Quellfeld]** Identitäts-Namespace `contact key`, `ABC ID` usw. nach **[!UICONTROL Zielfeld]** : `EloquaID` nachdem sichergestellt wurde, dass die ID-Werte dem Format entsprechen, das von [!DNL Oracle Eloqua].
-
-Um Ihre XDM-Felder den [!DNL Oracle Eloqua]-Zielfeldern korrekt zuzuordnen, führen Sie die folgenden Schritte aus:
+So ordnen Sie Ihre XDM-Felder dem [!DNL Oracle Eloqua] Führen Sie die folgenden Schritte aus:
 
 1. Wählen Sie Im Schritt **[!UICONTROL Zuordnung]** die Option **[!UICONTROL Neue Zuordnung hinzufügen]** aus. Auf dem Bildschirm wird eine neue Zuordnungszeile angezeigt.
 1. Im **[!UICONTROL Quellfeld auswählen]** Fenster, wählen Sie die **[!UICONTROL Attribute auswählen]** und wählen Sie das XDM-Attribut aus oder wählen Sie die **[!UICONTROL Identitäts-Namespace auswählen]** und wählen Sie eine Identität aus.
-1. Im **[!UICONTROL Zielgruppenfeld auswählen]** Fenster, wählen Sie die **[!UICONTROL Identitäts-Namespace auswählen]** und wählen Sie eine Identität oder **[!UICONTROL Benutzerdefinierte Attribute auswählen]** und wählen Sie nach Bedarf ein Attribut aus.
-   * Wiederholen Sie diese Schritte, um die folgenden Zuordnungen zwischen Ihrem XDM-Profilschema und Ihrem [!DNL Oracle Eloqua] instance: |Quellfeld|Zielfeld| Erforderlich| |—|—|—| |`xdm: personalEmail.address`|`Attribute: emailAddress`| Ja | |`IdentityMap: Eid`|`Identity: EloquaId`| Ja |
+1. Im **[!UICONTROL Zielgruppenfeld auswählen]** Fenster, wählen Sie **[!UICONTROL Identitäts-Namespace auswählen]** und wählen Sie eine Identität oder **[!UICONTROL Benutzerdefinierte Attribute auswählen]** und geben Sie den gewünschten Attributnamen in die **[!UICONTROL Attributname]** -Feld. Der Attributname, den Sie angeben, sollte mit dem vorhandenen Kontaktattribut in [!DNL Oracle Eloqua]. Siehe [[!DNL create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) für die genauen Attributnamen, die Sie in [!DNL Oracle Eloqua].
+   * Wiederholen Sie diese Schritte, um sowohl die erforderlichen als auch alle gewünschten Attributzuordnungen zwischen Ihrem XDM-Profilschema und [!DNL Oracle Eloqua]: | Quellfeld | Zielfeld | Obligatorisch | |—|—|—| |`IdentityMap: Eid`|`Identity: EloquaId`| Ja | |`xdm: personalEmail.address`|`Attribute: emailAddress`| Ja | |`xdm: personName.firstName`|`Attribute: firstName`| | |`xdm: personName.lastName`|`Attribute: lastName`| | |`xdm: workAddress.street1`|`Attribute: address1`| | |`xdm: workAddress.street2`|`Attribute: address2`| | |`xdm: workAddress.street3`|`Attribute: address3`| | |`xdm: workAddress.postalCode`|`Attribute: postalCode`| | |`xdm: workAddress.country`|`Attribute: country`| | |`xdm: workAddress.city`|`Attribute: city`| |
 
-   * Nachfolgend finden Sie ein Beispiel für die Verwendung dieser Zuordnungen:
+   * Nachfolgend finden Sie ein Beispiel mit den oben aufgeführten Zuordnungen:
       ![Screenshot der Platform-Benutzeroberfläche mit Attributzuordnungen.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
 
-      >[!IMPORTANT]
-      >
-      >Beide `emailAddress` und `EloquaId` Zielattribut-Zuordnungen sind obligatorisch.
+>[!IMPORTANT]
+>
+>* In der Variablen **[!UICONTROL Zielfeld]** sollte genau so benannt werden, wie in der [[!DNL Create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) da diese Attribute den Anfragetext bilden.
+>* In der Variablen **[!UICONTROL Quellfeld]** keine solchen Einschränkungen befolgen. Sie können sie jedoch nach Bedarf zuordnen, wenn das Datenformat beim Senden an [!DNL Oracle Eloqua] wird ein Fehler ausgegeben. Sie können beispielsweise die **[!UICONTROL Quellfeld]** Identitäts-Namespace `contact key`, `ABC ID` usw. nach **[!UICONTROL Zielfeld]** : `EloquaId` nachdem sichergestellt wurde, dass die ID-Werte mit dem Format übereinstimmen, das von [!DNL Oracle Eloqua].
+>* Die `EloquaID` -Zuordnung ist erforderlich, um Attribute zu aktualisieren, die der Identität entsprechen.
+>* Die `emailAddress` -Zuordnung erforderlich. Andernfalls gibt die API einen Fehler aus, wie unten dargestellt:
+>
+>```json
+>{
+>     "type":"ObjectValidationError",
+>     "container":{
+>           "type":"ObjectKey",
+>           "objectType":"Contact"
+>     },
+>     "property":"emailAddress",
+>     "requirement":{
+>           "type":"EmailAddressRequirement"
+>     },
+>     "value":"<null>"
+>}
+>```
 
 Wenn Sie mit der Bereitstellung der Zuordnungen für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Nächste]**.
 
@@ -182,6 +189,7 @@ Siehe Abschnitt [[!DNL Oracle Eloqua] HTTP-Statuscodes](https://docs.oracle.com/
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-Weitere nützliche Informationen aus der [!DNL Oracle ELoqua]Dokumentation finden Sie im Folgenden:
+Weitere Informationen finden Sie im Abschnitt [!DNL Oracle Eloqua] Dokumentation:
+
 * [Oracle Eloqua Marketing Automation](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
 * [REST-API für Oracle Eloqua Marketing Cloud Service](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
