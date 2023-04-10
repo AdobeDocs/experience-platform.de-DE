@@ -2,7 +2,7 @@
 title: Übersicht über die API-Erweiterung für Meta Conversions
 description: Erfahren Sie mehr über die Meta Conversions API-Erweiterung für die Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: fcc8e794bdfc3c6287d12c35e7d837d2f697239c
+source-git-commit: 6538599e10d4980c3890a8fba65c8ef51c24496a
 workflow-type: tm+mt
 source-wordcount: '2256'
 ht-degree: 1%
@@ -165,7 +165,7 @@ Wählen Sie als Nächstes das Dropdown-Menü neben **[!UICONTROL In Bibliothek s
 
 Wiederholen Sie diese Schritte für jedes andere Meta-Konversionsereignis, das Sie konfigurieren möchten.
 
-#### Datenschichtkonfiguration
+#### Datenschichtkonfiguration {#configuration}
 
 >[!IMPORTANT]
 >
