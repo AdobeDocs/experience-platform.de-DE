@@ -6,8 +6,8 @@ description: Dieses Handbuch beschreibt die Schritte zum Arbeiten mit Datennutzu
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: 1a4e71ee07900fb4f1581274f740ddb96cb93289
 workflow-type: tm+mt
-source-wordcount: '1529'
-ht-degree: 86%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
