@@ -2,9 +2,9 @@
 title: Häufig gestellte Fragen zum Adobe Experience Platform Web SDK
 description: Erhalten Sie Antworten auf häufig gestellte Fragen zum Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 5586c788f4ae5c61b3b94f93b4180fc293d7e179
+source-git-commit: a8f6bb8c3e35f4c17812ef944440210b7fe3f87b
 workflow-type: tm+mt
-source-wordcount: '2101'
+source-wordcount: '2104'
 ht-degree: 3%
 
 ---
@@ -101,7 +101,7 @@ Das Adobe Experience Platform Web SDK wurde für folgende Personen entwickelt:
 
 ## Wie erhalte ich Zugriff auf die Verwendung des Adobe Experience Platform Web SDK?
 
-Das Web SDK ist derzeit für die allgemeine Öffentlichkeit verfügbar und kann zum Senden von Daten an Adobe Experience Cloud-Produkte verwendet werden. Die Möglichkeit, Daten an Drittanbieterlösungen zu senden, wird in naher Zukunft eingeführt. Das SDK ist kostenlos, wird von Adobe kostenlos gehostet und kann heruntergeladen werden, damit Sie es auf Ihren eigenen Servern hosten können, falls gewünscht, kostenlos. Das Platform Web SDK benötigt Zugriff auf Datastream-Konfigurationen und den Adobe Experience Platform XDM-Schema-Builder, damit die Server der Adobe eingehende Daten aus dem SDK ordnungsgemäß verarbeiten können. Wenn Sie Zugriff erhalten möchten, wenden Sie sich an Ihren Customer Success Manager (CSM), um den Anforderungsprozess zu starten.
+Das Web SDK ist derzeit für die allgemeine Öffentlichkeit verfügbar und kann zum Senden von Daten an Adobe Experience Cloud-Produkte verwendet werden. Die Möglichkeit, Daten an Drittanbieterlösungen zu senden, wird in naher Zukunft eingeführt. Das SDK ist gebührenfrei und wird von Adobe kostenlos gehostet. Bei Bedarf können Sie es herunterladen und kostenlos auf Ihren eigenen Servern hosten. Das Platform Web SDK benötigt Zugriff auf Datastream-Konfigurationen und den Adobe Experience Platform XDM-Schema-Builder, damit die Server der Adobe eingehende Daten aus dem SDK ordnungsgemäß verarbeiten können. Wenn Sie Zugriff erhalten möchten, wenden Sie sich an Ihr Adobe-Kundenbetreuungsteam, um den Anforderungsprozess zu starten.
 
 ## Welche Anwendungsfälle werden derzeit vom Web SDK unterstützt?
 

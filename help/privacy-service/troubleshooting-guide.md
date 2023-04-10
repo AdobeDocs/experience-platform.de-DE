@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei Privacy Service
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Privacy Service sowie Informationen zu häufig aufgetretenen Fehlern in der API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: fc115801ac8e75cd58356060ad98f1e340d2494a
-workflow-type: ht
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+workflow-type: tm+mt
 source-wordcount: '917'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -69,7 +69,7 @@ Adobe unterstützt nicht die Verwendung von [!DNL Privacy Service] zum Löschen 
 
 Diese Anfragen sind zeitkritisch und werden gemäß dem geltenden Datenschutzrecht ausgeführt. Die Übermittlung von Anfragen, bei denen es sich nicht um Anfragen zum Zugriff auf Daten oder zur Löschung von Daten von Betroffenen oder Verbraucherinnen und Verbrauchern handelt, wirkt sich auf alle Kundinnen und Kunden von [!DNL Privacy Service] und auf die Fähigkeit von [!DNL Privacy Service] aus, die entsprechenden rechtlichen Fristen einzuhalten. Es gibt jetzt eine feste tägliche Upload-Grenze, um einen Missbrauch des Dienstes zu verhindern.
 
-Wenden Sie sich an Ihren Account Manager (CDM), um die Entfernung von personenbezogenen Daten oder die Beseitigung von Datenproblemen koordinieren zu lassen.
+Wenden Sie sich an Ihr Adobe-Kundenbetreuungsteam, um PII- oder Datenprobleme zu beheben und entsprechende Maßnahmen zu ergreifen.
 
 ## Wie erhalte ich Informationen über den Status meiner Datenschutzanfrage bzw. meines Auftrags?
 

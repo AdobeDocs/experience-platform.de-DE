@@ -2,9 +2,9 @@
 title: Gewähren von Benutzerzugriff
 description: Richten Sie die Tag-Benutzerkonten und -Berechtigungen Ihrer Team-Mitglieder in Adobe Experience Platform ein.
 exl-id: c7235e50-13b3-4487-b171-873063875621
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: b0615a2fd2bd9d9dd729d506f71ce4a91c64a4fd
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '218'
 ht-degree: 36%
 
 ---
@@ -23,4 +23,4 @@ Damit ein Benutzer auf Tag-Funktionen zugreifen kann, muss ein Administrator sei
 
 ## Bestätigen der Bereitstellung
 
-Nachdem Ihr Unternehmen Zugriff auf Tags erhalten und Ihre Benutzer wie oben beschrieben eingerichtet wurden, sollten Sie über die Benutzeroberfläche für die Datenerfassung und Experience Platform auf die Benutzeroberfläche für die Datenerfassung zugreifen können [Adobe Experience Cloud-Dashboard](https://experience.adobe.com/). Wenn Sie nach Abschluss der oben genannten Schritte immer noch nicht auf eine der beiden Benutzeroberflächen zugreifen können, wenden Sie sich an Ihren Support-Mitarbeiter für Adoben.
+Nachdem Ihr Unternehmen Zugriff auf Tags erhalten und Ihre Benutzer wie oben beschrieben eingerichtet wurden, sollten Sie über die Benutzeroberfläche für die Datenerfassung und Experience Platform auf die Benutzeroberfläche für die Datenerfassung zugreifen können [Adobe Experience Cloud-Dashboard](https://experience.adobe.com/). Wenn Sie nach Abschluss der oben genannten Schritte immer noch nicht auf eine der beiden Benutzeroberflächen zugreifen können, wenden Sie sich an das Kundenbetreuungsteam Ihrer Adobe.

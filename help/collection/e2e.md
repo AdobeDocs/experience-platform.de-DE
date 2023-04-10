@@ -2,9 +2,9 @@
 title: Datenerfassung End-to-End – Übersicht
 description: Eine allgemeine Übersicht darüber, wie Sie Ereignisdaten mithilfe der Datenerfassungsfunktionen von Adobe Experience Platform an Adobe Experience Cloud-Lösungen senden.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
-source-wordcount: '2619'
+source-wordcount: '2621'
 ht-degree: 95%
 
 ---
@@ -30,7 +30,7 @@ In diesem Tutorial wird die Datenerfassungs-Benutzeroberfläche verwendet, um ei
 
 Siehe Handbuch unter [Verwalten von Berechtigungen für die Datenerfassung](./permissions.md) , um zu erfahren, wie Sie Zugriff auf Eigenschaften und Eigentumsrechte gewähren.
 
-Um die verschiedenen in diesem Handbuch erwähnten Datenerfassungsprodukte verwenden zu können, müssen Sie außerdem Zugriff auf Datenströme haben sowie die Möglichkeit, Schemas zu erstellen und zu verwalten. Wenn Sie Zugriff auf eine dieser Funktionen benötigen, wenden Sie sich an Ihren CSM, um den erforderlichen Zugriff zu erhalten. Wenn Sie Adobe Experience Platform noch nicht erworben haben, erhalten Sie von Adobe den erforderlichen Zugriff, damit Sie das SDK ohne Aufpreis nutzen können.
+Um die verschiedenen in diesem Handbuch erwähnten Datenerfassungsprodukte verwenden zu können, müssen Sie außerdem Zugriff auf Datenströme haben sowie die Möglichkeit, Schemas zu erstellen und zu verwalten. Wenn Sie Zugriff auf eine dieser Funktionen benötigen, wenden Sie sich an Ihr Adobe Account-Team, um den erforderlichen Zugriff zu erhalten. Wenn Sie Adobe Experience Platform noch nicht erworben haben, erhalten Sie von Adobe den erforderlichen Zugriff, damit Sie das SDK ohne Aufpreis nutzen können.
 
 Wenn Sie bereits Zugriff auf Platform haben, müssen Sie sicherstellen, dass alle [Berechtigungen](../access-control/home.md#permissions) unter den folgenden Kategorien aktiviert sind:
 

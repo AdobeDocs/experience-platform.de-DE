@@ -3,10 +3,10 @@ title: Erste Schritte mit der Ereignisweiterleitung
 description: In diesem Schritt-für-Schritt-Tutorial erfahren Sie, wie Sie mit der Ereignisweiterleitung in Adobe Experience Platform beginnen.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
-source-wordcount: '872'
-ht-degree: 88%
+source-wordcount: '873'
+ht-degree: 87%
 
 ---
 
@@ -29,7 +29,7 @@ Nachdem Sie Daten an das Edge-Netzwerk gesendet haben, können Sie die Adobe-Lö
 
 ## Voraussetzungen
 
-* Adobe Experience Platform Collection Enterprise (Preise erhalten Sie von Ihrem Account Manager)
+* Adobe Experience Platform Collection Enterprise (Informationen zu Preisen erhalten Sie von Ihrem Adobe-Kundenbetreuungsteam)
 * Ereignisweiterleitung in Adobe Experience Platform
 * Adobe Experience Platform Web oder Mobile SDK, konfiguriert zum Senden von Daten an Edge Network
 * Zuordnen von Daten zum Experience-Datenmodell (XDM) (diese Zuordnung kann über Tags erfolgen)

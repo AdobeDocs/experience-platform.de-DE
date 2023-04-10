@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht zu Segment Match
 description: Segment Match ist ein Service zur Segmentfreigabe in Adobe Experience Platform, mit dem zwei oder mehr Platform-Benutzende Segmentdaten auf sichere, geregelte und datenschutzsensible Weise austauschen können.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
 source-wordcount: '1998'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -56,7 +56,7 @@ Sie müssen eine Einverständniskonfiguration bereitstellen und deren Standardwe
 
 Die Opt-in- und Opt-out-Einverständnisprüfung bestimmt, ob Sie basierend auf dem Einverständnis, Benutzerdaten standardmäßig freigeben dürfen. Wenn die Einverständniskonfiguration standardmäßig auf `opt-out` festgelegt ist, können Benutzerdaten freigegeben werden, es sei denn, Benutzende schließen die Freigabe ausdrücklich aus. Wenn der Standardwert auf `opt-in` festgelegt ist, können Benutzerdaten nicht freigegeben werden, es sei denn, Benutzende lassen dies ausdrücklich zu.
 
-Die standardmäßige Einverständniskonfiguration für [!DNL Segment Match] ist auf `opt-out` festgelegt. Um ein Opt-in-Modell für Ihre Daten zu erzwingen, senden Sie eine E-Mail-Anfrage an die Adobe-Kundenbetreuung.
+Die standardmäßige Einverständniskonfiguration für [!DNL Segment Match] ist auf `opt-out` festgelegt. Um ein Opt-in-Modell für Ihre Daten zu erzwingen, senden Sie bitte eine E-Mail-Anfrage an Ihr Adobe-Kontoteam.
 
 Weitere Informationen über das `share`-Attribut, das zum Festlegen des Einverständniswerts für eine Datenfreigabe verwendet wird, finden Sie in der folgenden Dokumentation zu [Datenschutz- und Einverständnis-Feldergruppen](../../../xdm/field-groups/profile/consents.md). Informationen zu der spezifischen Feldergruppe, mit der das Verbrauchereinverständnis zur Sammlung und Verwendung von Daten im Zusammenhang mit Datenschutz-, Personalisierungs- und Marketing-Voreinstellungen erfasst wird, finden Sie im folgenden [GitHub-Beispiel zu den Voreinstellungen für das Einverständnis für Datenschutz, Personalisierung und Marketing](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 
