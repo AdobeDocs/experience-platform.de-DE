@@ -165,7 +165,7 @@ Auf der Detailseite wird auch eine Liste mit fehlgeschlagenen Identitäten und a
 
 ![Datenflussdatensätze für Batch-Ziele](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
-## Dashboard &quot;Ziele überwachen&quot; {#monitoring-destinations-dashboard}
+## Dashboard "Ziele überwachen" {#monitoring-destinations-dashboard}
 
 >[!NOTE]
 >
