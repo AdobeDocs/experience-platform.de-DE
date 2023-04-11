@@ -2,10 +2,10 @@
 keywords: Ereignisweiterleitungs-Erweiterung;Ausblenden;Ausblenden der Ereignisweiterleitungs-Erweiterung
 title: Braze Event Forwarding-Erweiterung
 description: Diese Ereignisweiterleitungs-Erweiterung von Adobe Experience Platform sendet Adobe Experience Edge Network-Ereignisse an Braze.
-source-git-commit: 88e589eb17c249a8bdc82fe7a041a5581a60c7e6
+source-git-commit: 6815b5eb0426efd1dde901db1e8b86e86615530a
 workflow-type: tm+mt
-source-wordcount: '1874'
-ht-degree: 5%
+source-wordcount: '1863'
+ht-degree: 6%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 5%
 - Richten Sie bestimmte Benutzer für Marketing- und Werbekampagnen ein, um die Anzahl der wiederkehrenden Kunden zu erhöhen.
 - Untersuchen Sie das Benutzerverhalten und die Muster, um bestimmte Zielgruppen mit personalisierten Nachrichten anzusprechen, was zur Umsatzsteigerung beitragen könnte.
 
-Die [!DNL Braze Track Events API] [Ereignisweiterleitung](../../../ui/event-forwarding/overview.md) -Erweiterung ermöglicht es Ihnen, die im Adobe Experience Platform Edge Network erfassten Daten zu nutzen und an [!DNL Braze] in Form von serverseitigen Ereignissen, bei denen die [[!DNL Braze User Identify]](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify) und [[!DNL Braze User Track]](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) APIs.
+Die [!DNL Braze Track Events API] [Ereignisweiterleitung](../../../ui/event-forwarding/overview.md) -Erweiterung ermöglicht es Ihnen, die im Adobe Experience Platform Edge Network erfassten Daten zu nutzen und an [!DNL Braze] in Form von serverseitigen Ereignissen, bei denen die [[!DNL Braze User Track]](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) API.
 
 In diesem Dokument werden die Anwendungsfälle der Erweiterung, die Installation in Ihren Ereignisweiterleitungsbibliotheken und die Verwendung ihrer Funktionen in der Ereignisweiterleitung behandelt. [Regel](../../../ui/managing-resources/rules.md).
 
@@ -130,7 +130,7 @@ Benutzerattribute können ein JSON-Objekt sein, das Felder enthält, die ein Att
 | [!UICONTROL Geschlecht] | Eine der folgenden Zeichenfolgen: &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (sonstiges), &quot;N&quot; (nicht zutreffend), &quot;P&quot; (es vorziehen, nicht zu sagen). |
 | [!UICONTROL Stadt] |  |
 | [!UICONTROL Country] | Land als Zeichenfolge in [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) Format. |
-| [!UICONTROL Sprache] | Sprache als Zeichenfolge in [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) Format. |
+| [!UICONTROL Sprache] | Sprache als Zeichenfolge in [ISO-639-1](https://de.wikipedia.org/wiki/Liste_der_ISO-639-1-Codes) Format. |
 | [!UICONTROL Geburtsdatum] | Zeichenfolge im Format &quot;JJJ-MM-TT&quot;(z. B. 1980-12-21). |
 | [!UICONTROL Zeitzone] | Zeitzonenname aus [IANA-Zeitzonen-Datenbank](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (z. B. ’America/New_York’ oder ’Eastern Time (US &amp; Canada)’). |
 | [!UICONTROL Facebook] | Hash, der eine beliebige ID (Zeichenfolge), &quot;Gefällt mir&quot;(Array von Zeichenfolgen), &quot;num_friends&quot;(Ganzzahl) enthält. |
@@ -189,7 +189,7 @@ Benutzerattribute können ein JSON-Objekt sein, das Felder enthält, die ein Att
 | [!UICONTROL Geschlecht] | Eine der folgenden Zeichenfolgen: &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (sonstiges), &quot;N&quot; (nicht zutreffend), &quot;P&quot; (es vorziehen, nicht zu sagen). |
 | [!UICONTROL Stadt] |  |
 | [!UICONTROL Country] | Land als Zeichenfolge in [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) Format. |
-| [!UICONTROL Sprache] | Sprache als Zeichenfolge in [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) Format. |
+| [!UICONTROL Sprache] | Sprache als Zeichenfolge in [ISO-639-1](https://de.wikipedia.org/wiki/Liste_der_ISO-639-1-Codes) Format. |
 | [!UICONTROL Geburtsdatum] | Zeichenfolge im Format &quot;JJJ-MM-TT&quot;(z. B. 1980-12-21). |
 | [!UICONTROL Zeitzone] | Zeitzonenname aus [IANA-Zeitzonen-Datenbank](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (z. B. ’America/New_York’ oder ’Eastern Time (US &amp; Canada)’). |
 | [!UICONTROL Facebook] | Hash, der eine beliebige ID (Zeichenfolge), &quot;Gefällt mir&quot;(Array von Zeichenfolgen), &quot;num_friends&quot;(Ganzzahl) enthält. |
