@@ -13,13 +13,13 @@ ht-degree: 35%
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
->title="Top-Aktionen"
->abstract="Dieses Widget zeigt die wichtigsten Arten von Aktionen an, die innerhalb des ausgewählten Zeitraums in Experience Platform ausgeführt wurden. Um die vollständige Liste der aufgezeichneten Aktionen in Platform anzuzeigen, wählen Sie **Audits** im linken Navigationsbereich aus."
+>title="Häufigste Aktionen"
+>abstract="Dieses Widget zeigt die häufigsten Arten von Aktionen an, die innerhalb des ausgewählten Zeitraums in Experience Platform ausgeführt wurden. Um die vollständige Liste der aufgezeichneten Aktionen in Platform anzuzeigen, wählen Sie in der linken Navigationsleiste **Audits**."
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
->title="Top-Benutzer"
->abstract="Dieses Widget zeigt die Benutzerinnen und Benutzer, die innerhalb des ausgewählten Zeitraums die meisten Aktionen in Experience Platform ausgeführt haben. Um die vollständige Liste der aufgezeichneten Aktionen in Platform anzuzeigen, wählen Sie **Audits** im linken Navigationsbereich aus."
+>title="Am häufigsten anwesende Benutzende"
+>abstract="Dieses Widget zeigt die Benutzenden an, die innerhalb des ausgewählten Zeitraums die meisten Aktionen in Experience Platform ausgeführt haben. Um die vollständige Liste der aufgezeichneten Aktionen in Platform anzuzeigen, wählen Sie in der linken Navigationsleiste **Audits**."
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"

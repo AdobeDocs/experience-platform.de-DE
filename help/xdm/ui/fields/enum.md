@@ -7,7 +7,7 @@ exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
 source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
 source-wordcount: '1257'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_enum_suggestedvalue"
->title="Auflistungen und empfohlene Werte"
->abstract="Ein **Enum** beschränkt ein Zeichenfolgenfeld so, dass nur Daten erfasst werden können, die mit einem vordefinierten Satz von Werten übereinstimmen. Jeder Enum-Einschränkung kann ein **Anzeigename** die Dropdown-Listen mit Attributen in der Segmentierungsbenutzeroberfläche füllt. **Vorgeschlagene Werte** für ein Feld die Erfassung nicht einschränken und nur die in der Segmentierung angezeigten Anzeigenamen bestimmen. Wenn Sie mehrere Schemas haben, die ein Feld teilen, das zu einer gemeinsamen Klasse oder Feldergruppe gehört, und Sie verschiedene Auflistungen oder vorgeschlagene Werte für dieses Feld zwischen den einzelnen Schemas definieren, werden diese Werte zusammengeführt und im Vereinigungsschema angehängt."
+>title="Aufzählungen und empfohlene Werte"
+>abstract="Eine **Aufzählung** beschränkt ein Zeichenfolgen-Feld so, dass nur Daten aufgenommen werden können, die mit einem vordefinierten Satz von Werten übereinstimmen. Jeder Aufzählungs-Beschränkung kann ein **Anzeigename** zugewiesen werden, mit dem in der Segmentierungs-Benutzeroberfläche Attribut-Dropdown-Listen befüllt werden. **Vorgeschlagene Werte** für ein Feld schränken die Aufnahme nicht ein, sondern bestimmen nur die in der Segmentierung dargestellten Anzeigenamen. Wenn Sie mehrere Schemata haben, die ein Feld gemeinsam nutzen, das zu einer gemeinsamen Klasse oder Feldergruppe gehört, und Sie zwischen den einzelnen Schemata unterschiedliche Aufzählungen oder vorgeschlagene Werte für dieses Feld definieren, werden diese Werte zusammengeführt und im Vereinigungsschema angefügt."
 
 Im Experience-Datenmodell (XDM) kann einem Zeichenfolgenfeld ein vordefinierter Satz von akzeptierten oder vorgeschlagenen Werten zugewiesen werden, um besser steuern zu können, welche Werte in dieses Feld aufgenommen werden oder wie es sich bei der Segmentierung verhalten wird.
 

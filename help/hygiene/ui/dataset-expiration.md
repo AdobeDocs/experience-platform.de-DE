@@ -5,7 +5,7 @@ exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
 source-wordcount: '736'
-ht-degree: 73%
+ht-degree: 78%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 73%
 
 >[!IMPORTANT]
 >
->Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben haben. Diese Funktionen sollen in naher Zukunft allgemein veröffentlicht werden. Weitere Informationen zu der bevorstehenden Verfügbarkeit erhalten Sie von Ihrem Adobe-Kundenbetreuer. Sie können jedoch sofort [Löschen von Datensätzen über die [!UICONTROL Datensätze] Benutzeroberfläche](../../catalog/datasets/user-guide.md#delete).
+>Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben haben. Diese Funktionen sollen in naher Zukunft allgemein veröffentlicht werden. Weitere Informationen zu der bevorstehenden Verfügbarkeit erhalten Sie von der Adobe-Kundenbetreuung. Sie können jedoch [über die Benutzeroberfläche [!UICONTROL Datensätze] sofort Datensätze löschen](../../catalog/datasets/user-guide.md#delete).
 
 Der Arbeitsbereich [[!UICONTROL Datenhygiene]](./overview.md) in der Adobe Experience Platform-Benutzeroberfläche bietet Ihnen die Möglichkeit, die Gültigkeitsdauer für Datensätze festzulegen. Wenn ein Datensatz sein Ablaufdatum erreicht, starten der Data Lake, der Identity Service und das Echtzeit-Kundenprofil separate Prozesse, um den Inhalt des Datensatzes aus den entsprechenden Services zu entfernen. Sobald die Daten aus allen drei Services gelöscht wurden, wird der Ablauf als abgeschlossen markiert.
 

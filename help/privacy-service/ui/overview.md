@@ -7,7 +7,7 @@ exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '207'
-ht-degree: 5%
+ht-degree: 25%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 5%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacy_privacyconsole_requests"
->title="Datensubjektanforderungen"
->abstract="Dieses Widget zeigt die Anzahl der gesendeten und abgeschlossenen Anfragen von Datensubjekten an, die von Privacy Services an einem bestimmten Tag verarbeitet werden. Weitere Informationen zu Ihren Privacy Service-Prozessen erhalten Sie unter **Anforderungen** in der linken Navigation."
+>title="Anfragen durch betroffene Personen"
+>abstract="Dieses Widget zeigt die Anzahl der gesendeten und abgeschlossenen Anfragen durch betroffene Personen an, die an einem bestimmten Tag von Privacy Service verarbeitet wurden. Weitere Informationen zu Ihren Privacy Service-Prozessen finden Sie in der linken Navigationsleiste unter **Anfragen**."
 
 Die Privacy Service-Benutzeroberfläche [!DNL Privacy Service] ermöglicht die Koordinierung von Datenschutz- und Compliance-Anfragen über verschiedene Adobe Experience Cloud-Anwendungen hinweg.
 
@@ -24,7 +24,7 @@ Die Privacy Service-Benutzeroberfläche [!DNL Privacy Service] ermöglicht die K
 >
 >Informationen zum programmgesteuerten Verwalten von Compliance-Anfragen mithilfe der Privacy Service-API finden Sie in der [Handbuch zur Privacy Service-API](../api/overview.md).
 
-## Melden Sie sich bei der [!DNL Privacy Service] Benutzeroberfläche
+## Melden Sie sich bei der [!DNL Privacy Service]-Benutzeroberfläche an
 
 >[!IMPORTANT]
 >

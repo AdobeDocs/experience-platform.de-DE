@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Zugriffskontrolle; attributbasierte Zugriffskontrolle; ABAC
+keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;attributbasierte Zugriffssteuerung;ABAC
 title: Attributbasierte Zugriffskontrolle - Bezeichnungen verwalten
 description: Dieses Dokument enthält Informationen zum Verwalten von Bezeichnungen über die Benutzeroberfläche "Berechtigungen"in Adobe Experience Cloud
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '173'
-ht-degree: 23%
+ht-degree: 42%
 
 ---
 
@@ -18,8 +18,8 @@ Mit Beschriftungen können Sie Datensätze und Felder entsprechend den für dies
 
 >[!CONTEXTUALHELP]
 >id="platform_abac_labelusage"
->title="Beschriftung"
->abstract="Sie können benutzerdefinierte Beschriftungen verwenden, um Data Governance- und Zugriffssteuerungskonfigurationen auf Ihre Daten anzuwenden."
+>title="Verwendung von Kennzeichnungen"
+>abstract="Sie können benutzerdefinierte Kennzeichnungen verwenden, um Data-Governance- und Zugriffssteuerungs-Konfigurationen auf Ihre Daten anzuwenden."
 
 >[!NOTE]
 >
@@ -33,4 +33,4 @@ Die **[!UICONTROL Neue Bezeichnung erstellen]** angezeigt, in dem Sie aufgeforde
 
 ![new-label-info](../../images/flac-ui/new-label-info.png)
 
-Wenn Sie fertig sind, wählen Sie **[!UICONTROL Bestätigen]**.
+Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Bestätigen]**.

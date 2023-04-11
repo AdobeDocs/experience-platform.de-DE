@@ -7,7 +7,7 @@ exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1923'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
@@ -34,7 +34,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
 >title="Segmente"
->abstract="Die Segmentansicht enthält Informationen zu allen Segmenten Ihrer IMS-Organisation mit weiteren Informationen zu deren Aktivierungs- und Auswertungsaufträgen."
+>abstract="Die Segmentansicht enthält Informationen zu allen Segmenten Ihrer IMS-Organisation sowie zu ihren Aktivierungs- und Evaluierungsvorgängen."
 
 So greifen Sie auf die **[!UICONTROL Segmente]** Dashboard, auswählen **[!UICONTROL Überwachung]** in der linken Navigation. Einmal im **[!UICONTROL Überwachung]** Seite, wählen Sie die **[!UICONTROL Segmente]** Karte.
 
@@ -100,7 +100,7 @@ Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
 
 | Metrik | Beschreibung |
 | ------ | ----------- |
-| **[!UICONTROL Vorgenommene Profile]** | Die Gesamtzahl der im Aktivierungsfluss empfangenen Profile. |
+| **[!UICONTROL Empfangene Profile]** | Die Gesamtzahl der im Aktivierungsfluss empfangenen Profile. |
 | **[!UICONTROL Aktivierte Identitäten]** | Die Gesamtzahl der Identitäten, die erfolgreich für das Ziel aktiviert wurden, basierend auf den empfangenen Profilen. |
 | **[!UICONTROL Ausgeschlossene Identitäten]** | Die Gesamtzahl der Identitäten, die von der Aktivierung für das Ziel ausgeschlossen wurden, basierend auf den empfangenen Profilen. Diese Identitäten können aufgrund fehlender Attribute oder Zustimmungsverletzungen ausgeschlossen werden. |
 | **[!UICONTROL Datengröße]** | Die Größe des zu aktivierenden Datenflusses. |
@@ -172,8 +172,8 @@ Für den Segmentabschnitt stehen die folgenden Metriken zur Verfügung:
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"
->title="Segmentaufträge"
->abstract="Die Ansicht &quot;Segmentaufträge&quot;enthält Informationen zu den Evaluierungs- und Exportvorgängen für alle Ihre Segmente."
+>title="Segmentvorgänge"
+>abstract="Die Segmentvorgangs-Ansicht enthält Informationen zu Evaluierungs- und Exportvorgängen für Ihre Segmente."
 
 So greifen Sie auf die **[!UICONTROL Segmentaufträge]** Dashboard, auswählen **[!UICONTROL Überwachung]** (![Überwachungssymbol](../assets/ui/monitor-destinations/monitoring-icon.png)) in der linken Navigation. Einmal im [!UICONTROL Überwachung] Seite, wählen Sie **[!UICONTROL Segmentaufträge]**. Die [!UICONTROL Überwachung] Dashboard enthält Metriken und Informationen zu den Segmentbewertungs- und Exportvorgängen.
 

@@ -7,7 +7,7 @@ exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '1476'
-ht-degree: 37%
+ht-degree: 39%
 
 ---
 
@@ -31,7 +31,7 @@ Das Benutzerhandbuch setzt ein grundlegendes Verständnis der folgenden Komponen
 >[!CONTEXTUALHELP]
 >id="platform_datasets_negative_numbers"
 >title="Negative Zahlen in der Datensatzaktivität"
->abstract="Negative Zahlen in aufgenommenen Datensätzen bedeuten, dass ein Benutzer bestimmte Batches in einem ausgewählten Zeitraum gelöscht hat."
+>abstract="Negative Zahlen in aufgenommenen Datensätzen bedeuten, dass ein Benutzer oder eine Benutzerin bestimmte Batches im ausgewählten Zeitraum gelöscht hat."
 >text="Learn more in documentation"
 
 Im [!DNL Experience Platform] Benutzeroberfläche, auswählen **[!UICONTROL Datensätze]** im linken Navigationsbereich, um die **[!UICONTROL Datensätze]** Dashboard. Das Dashboard listet alle verfügbaren Datensätze für Ihre Organisation auf. Zu jedem aufgelisteten Datensatz werden Details angezeigt, einschließlich seines Namens, des Schemas, dem der Datensatz entspricht, und des Status des letzten Erfassungslaufs.

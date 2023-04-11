@@ -5,7 +5,7 @@ exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '737'
-ht-degree: 6%
+ht-degree: 10%
 
 ---
 
@@ -37,8 +37,8 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_editgovernancelabels"
->title="Bearbeiten von Governance-Titeln"
->abstract="Wenden Sie eine Beschriftung auf ein Schemafeld an, um die Nutzungsrichtlinien anzugeben, die für die in diesem spezifischen Feld enthaltenen Daten gelten."
+>title="Governance-Kennzeichnungen bearbeiten"
+>abstract="Wenden Sie eine Kennzeichnung auf ein Schemafeld an, um die Nutzungsrichtlinien festzulegen, die für die in diesem Feld enthaltenen Daten gelten."
 
 Um Beschriftungen hinzuzufügen, müssen Sie zunächst [ein vorhandenes Schema zur Bearbeitung auswählen](../ui/resources/schemas.md#edit) oder [Erstellen eines neuen Schemas](../ui/resources/schemas.md#create) , um die Struktur im Schema-Editor anzuzeigen.
 

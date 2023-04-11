@@ -7,7 +7,7 @@ exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
 source-git-commit: d86e1118fc8886f3a55b0224a2e065b33d96daf2
 workflow-type: tm+mt
 source-wordcount: '1338'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -19,8 +19,8 @@ Mit Adobe Experience Platform Query Service können Sie eine Verbindung mit exte
 
 >[!CONTEXTUALHELP]
 >id="platform_queryservice_credentials_expiringcredentials"
->title="SSL-Modus des Kunden"
->abstract="SSL muss in Clients aktiviert sein, die mit Query Service verbunden sind. Stellen Sie sicher, dass der SSL-Modus auf &quot;erforderlich&quot;eingestellt ist."
+>title="Client-SSL-Modus"
+>abstract="In Clients, die mit dem Abfragedienst verbunden sind, muss SSL aktiviert sein. Stellen Sie sicher, dass der SSL-Modus auf „erforderlich“ eingestellt ist."
 
 Sie können ablaufende Anmeldedaten verwenden, um schnell eine Verbindung zu einem externen Client herzustellen.
 

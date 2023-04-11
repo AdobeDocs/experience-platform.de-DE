@@ -7,7 +7,7 @@ exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
 source-wordcount: '3203'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -251,8 +251,8 @@ Nachdem Sie Ihre Änderungen angewendet haben, wird das neue Feld unter Ihrem Ma
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"
->title="Aktivieren eines Schemas für Profil"
->abstract="Wenn ein Schema für Profil aktiviert ist, beteiligen sich alle Datensätze, die aus diesem Schema erstellt wurden, an Echtzeit-Kundenprofil, das Daten aus unterschiedlichen Quellen zusammenführt, um eine vollständige Ansicht jedes Kunden zu erstellen. Sobald ein Schema zur Aufnahme von Daten in das Profil verwendet wird, kann es nicht mehr deaktiviert werden. Weitere Informationen finden Sie in der Dokumentation."
+>title="Aktivieren eines Schemas für das Echtzeit-Kundenprofil"
+>abstract="Wenn ein Schema für das Echtzeit-Kundenprofil aktiviert ist, werden alle Datensätze, die aus diesem Schema erstellt werden, für das Echtzeit-Kundenprofil verwendet. Dieses führt Daten aus unterschiedlichen Quellen zusammen und erstellt eine vollständige Ansicht jedes Kunden. Nachdem ein Schema verwendet wurde, um Daten in das Echtzeit-Kundenprofil aufzunehmen, kann es nicht mehr deaktiviert werden. Weitere Informationen finden Sie in der Dokumentation."
 
 [Echtzeit-Kundenprofil](../../../profile/home.md) führt Daten aus unterschiedlichen Quellen zusammen, um eine vollständige Ansicht jedes einzelnen Kunden zu erhalten. Wenn die von einem Schema erfassten Daten an diesem Prozess teilnehmen sollen, müssen Sie das Schema zur Verwendung in [!DNL Profile].
 

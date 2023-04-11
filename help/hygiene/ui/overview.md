@@ -5,7 +5,7 @@ exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
 source-wordcount: '213'
-ht-degree: 77%
+ht-degree: 87%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 77%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
 >title="Status von Datenhygiene-Anfragen"
->abstract="Dieses Widget zeigt die Gesamtzahl der erstellten, fehlgeschlagenen und abgeschlossenen Löschaufträge von Datensätzen in Data Hygiene. Weitere Informationen zu Ihren Datenhygieneprozessen finden Sie unter **Datenhygiene** in der linken Navigation."
+>abstract="Dieses Widget zeigt die Gesamtzahl der erstellten, fehlgeschlagenen und abgeschlossenen Datensatz-Löschvorgänge im Rahmen der Datenhygiene. Weitere Informationen zu Ihren Datenhygieneprozessen finden Sie unter **Datenhygiene** in der linken Navigation."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"

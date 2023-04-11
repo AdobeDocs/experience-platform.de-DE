@@ -6,7 +6,7 @@ exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
 source-git-commit: 3bb9858c236c91e1567fd8e78988f4049537ffe3
 workflow-type: tm+mt
 source-wordcount: '950'
-ht-degree: 16%
+ht-degree: 21%
 
 ---
 
@@ -30,8 +30,8 @@ Dieses Dokument setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 >[!CONTEXTUALHELP]
 >id="platform_destination_alerts_subscribe"
->title="Zielbenachrichtigungen abonnieren"
->abstract="Warnhinweise ermöglichen es Ihnen, Benachrichtigungen basierend auf dem Status Ihrer Ziel-Datenflüsse zu erhalten. Sie können Warnhinweise so einrichten, dass Aktualisierungen abgerufen werden, wenn Ihr Datenfluss gestartet wurde, erfolgreich war, fehlgeschlagen ist oder keine Daten an Ihr Ziel gesendet hat."
+>title="Abonnieren von Warnhinweisen für Ziele"
+>abstract="Mit Warnhinweisen erhalten Sie Benachrichtigungen zum Status Ihrer Ziel-Datenflüsse. Sie können die Warnhinweise so einrichten, dass Sie Aktualisierungen erhalten, wenn Ihr Datenfluss gestartet wurde, erfolgreich war, fehlgeschlagen ist oder keine Daten an Ihr Ziel gesendet hat."
 >text="Learn more in documentation"
 
 >[!IMPORTANT]

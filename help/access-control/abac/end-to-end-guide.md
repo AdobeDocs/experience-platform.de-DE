@@ -66,13 +66,13 @@ Der Arbeitsbereich &quot;Berechtigungen&quot;für die Platform-Benutzeroberfläc
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="Was sind Kennzeichnungen?"
->abstract="Mit Kennzeichnungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Platform bietet verschiedene von Adobe definierte „Kern“-Kennzeichnungen für die Datennutzung, die eine Vielzahl gängiger Einschränkungen für Data Governance abdecken. Mit „S“-Kennzeichnungen (für „sensibel“) wie RHD (Regulated Health Data) können Sie beispielsweise Daten kategorisieren, die sich auf geschützte Gesundheitsinformationen (PHI) beziehen. Sie können auch eigene benutzerdefinierte Kennzeichnungen definieren, die den Anforderungen Ihres Unternehmens entsprechen."
+>abstract="Mit Kennzeichnungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Platform bietet einige von Adobe definierte Kennzeichnungen für die Datennutzung, die eine Vielzahl häufiger Einschränkungen beim Daten-Management abdecken. Beispielsweise können Sie mit der Kennzeichnung „S“ sensible Daten kategorisieren, wie etwa RHD (Regulated Health Data, gesetzlich geregelte Gesundheitsdaten), die geschützte Gesundheitsinformationen (Protected Health Information, PHI) enthalten. Sie können auch eigene Kennzeichnungen entsprechend den Anforderungen Ihres Unternehmens definieren."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=de#understanding-data-usage-labels" text="Datennutzungskennzeichnungen – Übersicht"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about_create"
->title="Erstellen einer neuen Kennzeichnung"
->abstract="Sie können eigene benutzerdefinierte Kennzeichnungen erstellen, die den Anforderungen Ihres Unternehmens entsprechen. Benutzerdefinierte Kennzeichnungen können verwendet werden, um sowohl Data Governance- als auch Zugriffssteuerungskonfigurationen auf Ihre Daten anzuwenden."
+>title="Erstellen neuer Kennzeichnungen"
+>abstract="Sie können eigene Kennzeichnungen entsprechend den Anforderungen Ihres Unternehmens definieren. Mithilfe benutzerdefinierter Kennzeichnungen können Sie auf Ihre Daten Konfigurationen für Data Governance und Zugriffssteuerung anwenden."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=de#manage-labels" text="Verwalten von benutzerdefinierten Kennzeichnungen"
 
 >[!CONTEXTUALHELP]
@@ -84,13 +84,13 @@ Der Arbeitsbereich &quot;Berechtigungen&quot;für die Platform-Benutzeroberfläc
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="Erstellen einer neuen Rolle"
->abstract="Sie können eine neue Rolle erstellen, um Benutzerinnen und Benutzer, die auf Ihre Platform-Instanz zugreifen, besser zu kategorisieren. Sie können beispielsweise eine Rolle für ein internes Marketing-Team erstellen und die RHD-Kennzeichnung auf diese Rolle anwenden, sodass Ihr internes Marketing-Team auf geschützte Gesundheitsinformationen (PHI) zugreifen kann. Alternativ können Sie auch eine Rolle für eine externe Agentur erstellen und ihr diesen Rollenzugriff auf PHI-Daten verweigern, indem Sie die RHD-Kennzeichnung nicht auf diese Rolle anwenden."
+>abstract="Sie können eine neue Rolle erstellen, um Benutzende, die auf Ihre Platform-Instanz zugreifen, besser zu kategorisieren. So können Sie beispielsweise eine Rolle für ein internes Marketing-Team erstellen und die RHD-Kennzeichnung auf diese Rolle anwenden, sodass Ihr internes Marketing-Team auf geschützte Gesundheitsinformationen (PHI) zugreifen kann. Alternativ können Sie auch eine Rolle für eine externe Agentur erstellen und dieser Rolle den Zugriff auf PHI-Daten verweigern, indem Sie die RHD-Kennzeichnung nicht auf diese Rolle anwenden."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=de#create-a-new-role" text="Erstellen einer neuen Rolle"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_details"
 >title="Rollenübersicht"
->abstract="Im Dialogfeld „Rollenübersicht“ werden die Ressourcen und Sandboxes angezeigt, auf die eine bestimmte Rolle zugreifen darf."
+>abstract="Im Dialogfenster „Rollenübersicht“ werden die Ressourcen und Sandboxes angezeigt, auf die eine bestimmte Rolle zugreifen darf."
 
 Rollen dienen der Kategorisierung der Arten von Benutzern, die mit Ihrer Platform-Instanz interagieren, und bilden Bausteine von Richtlinien zur Zugriffssteuerung. Eine Rolle verfügt über bestimmte Berechtigungen und Mitglieder Ihrer Organisation können je nach Umfang des benötigten Zugriffs einer oder mehreren Rollen zugewiesen werden.
 

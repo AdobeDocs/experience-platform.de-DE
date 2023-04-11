@@ -6,7 +6,7 @@ exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '874'
-ht-degree: 35%
+ht-degree: 43%
 
 ---
 
@@ -68,9 +68,9 @@ Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_mixpanel_timezone"
->title="Zeitzone für die Mixpanel-Erfassung festlegen"
->abstract="Die Zeitzone muss mit der Zeitzone Ihres Mixpanel-Profils übereinstimmen, da Platform die dafür vorgesehene Zeitzone des Projekts verwendet, um relevante Daten aus Mixpanel zu erfassen. Mixpanel passt seine Zeitzone an die Koordination mit Ihrer Projekt-Zeitzone an, bevor das Ereignis in einem Mixpanel-Datenspeicher aufgezeichnet wird."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="Weitere Informationen finden Sie in der Dokumentation"
+>title="Festlegen der Zeitzone für die Mixpanel-Aufnahme"
+>abstract="Die Zeitzone muss mit der Zeitzone Ihres Mixpanel-Profils übereinstimmen, da Platform die angegebene Projektzeitzone verwendet, um von Mixpanel relevante Daten aufzunehmen. Mixpanel passt seine Zeitzone an Ihre Projekt-Zeitzone an, bevor das Ereignis in einem Mixpanel-Datenspeicher festgehalten wird."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=de#project-id-and-timezone" text="Weitere Informationen finden Sie in der Dokumentation"
 
 Geben Sie nach der Authentifizierung Ihrer Quelle Ihre Projekt-ID und Zeitzone ein und wählen Sie **[!UICONTROL Auswählen]**.
 

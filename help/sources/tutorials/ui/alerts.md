@@ -6,7 +6,7 @@ exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 source-git-commit: 3f7f66c0d58d127299ad12027869ca0e9837f5cd
 workflow-type: tm+mt
 source-wordcount: '868'
-ht-degree: 16%
+ht-degree: 20%
 
 ---
 
@@ -35,7 +35,7 @@ Dieses Dokument setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 >[!CONTEXTUALHELP]
 >id="platform_sources_alerts_subscribe"
 >title="Abonnieren von Warnmeldungen für Quellen"
->abstract="Warnhinweise ermöglichen den Empfang von Benachrichtigungen basierend auf dem Status Ihrer Datenflüsse aus Quellen. Sie können Warnhinweise so einrichten, dass Aktualisierungen abgerufen werden, wenn Ihr Datenfluss gestartet wurde, erfolgreich war, fehlgeschlagen ist oder keine Daten erfasst hat."
+>abstract="Warnhinweise ermöglichen den Empfang von Benachrichtigungen zum Status Ihrer Quell-Datenflüsse. Sie können die Warnhinweise so einrichten, dass Sie Aktualisierungen erhalten, wenn Ihr Datenfluss gestartet wurde, erfolgreich war, fehlgeschlagen ist oder keine Daten aufgenommen hat."
 >text="Learn more in documentation"
 
 >[!IMPORTANT]

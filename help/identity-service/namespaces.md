@@ -35,8 +35,8 @@ Zwei Profilfragmente können beispielsweise unterschiedliche primäre IDs enthal
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
->title="Identitätstyp angeben"
->abstract="Der Identitätstyp steuert, ob Daten im Identitätsdiagramm gespeichert werden. Nicht-Personen-IDs werden nicht gespeichert, und alle anderen Identitätstypen werden gespeichert."
+>title="Angeben des Identitätstyps"
+>abstract="Der Identitätstyp bestimmt, ob Daten im Identitätsdiagramm gespeichert werden oder nicht. Nicht-Personen-IDs werden nicht gespeichert. Alle anderen Identitätstypen werden gespeichert."
 >text="Learn more in documentation"
 
 Daten können anhand verschiedener Identitätstypen identifiziert werden. Der Identitätstyp wird zum Zeitpunkt der Erstellung des Identitäts-Namespace angegeben und steuert, ob die Daten im Identitätsdiagramm persistiert werden oder nicht. Außerdem gibt es spezielle Anweisungen zum Umgang mit diesen Daten. Alle Identitätstypen außer **Personenidentifizierung** Gehen Sie genauso vor wie beim Zuordnen eines Namespace und des zugehörigen ID-Werts zu einem Identitätsdiagramm-Cluster. Daten werden bei Verwendung von **Personenidentifizierung**.
@@ -82,8 +82,8 @@ Folgende Standard-Namespaces stehen allen Organisationen in Platform zur Verfüg
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_view_integration_identities"
->title="Integrationsidentitäten anzeigen"
->abstract="Integrationsidentitäten sind Namespaces, die zur Verbindung mit anderen Systemen verwendet werden und nicht in der Identitätsauflösung oder zum Zusammenfügen von Identitäten verwendet werden. <br> Diese Identitäten sind standardmäßig ausgeblendet. Verwenden Sie den Umschalter, um Integrations-Namespaces anzuzeigen."
+>title="Anzeigen von Integrationsidentitäten"
+>abstract="Integrationsidentitäten sind Namespaces, die zur Verbindung mit anderen Systemen verwendet werden. Sie werden nicht bei der Identitätsauflösung oder zum Zusammenfügen von Identitäten verwendet. <br> Diese Identitäten sind standardmäßig ausgeblendet. Mit dem Umschalter können Sie Integrations-Namespaces anzeigen."
 
 Um Identitäts-Namespaces in der Benutzeroberfläche anzuzeigen, wählen Sie **[!UICONTROL Identitäten]** in der linken Navigation und wählen Sie dann **[!UICONTROL Durchsuchen]**.
 

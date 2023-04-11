@@ -8,7 +8,7 @@ exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 18%
+ht-degree: 27%
 
 ---
 
@@ -17,17 +17,17 @@ ht-degree: 18%
 >[!CONTEXTUALHELP]
 >id="platform_schemas_relationships"
 >title="Schemabeziehungen"
->abstract="Schemas, die zu verschiedenen Klassen gehören, können kontextgebunden über Beziehungsfelder verknüpft werden, sodass Sie komplexere Segmentierungsregeln erstellen können. Weitere Informationen zu Schemabeziehungen finden Sie in der Dokumentation ."
+>abstract="Schemata, die zu verschiedenen Klassen gehören, können über Beziehungsfelder kontextuell miteinander verknüpft werden und ermöglichen es Ihnen dadurch, komplexere Segmentierungsregeln zu erstellen. Weitere Informationen zu Schemabeziehungen finden Sie in der Dokumentation."
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_reference_schema"
 >title="Referenzschema"
->abstract="Wählen Sie das Schema aus, mit dem Sie eine Beziehung herstellen möchten. Dieses Schema kann eine andere Klasse sein als das aktuelle Schema. Weitere Informationen zu Schemabeziehungen finden Sie in der Dokumentation ."
+>abstract="Wählen Sie das Schema aus, mit dem Sie eine Beziehung herstellen möchten. Dieses Schema kann eine andere Klasse sein als das aktuelle Schema. Weitere Informationen zu Schemabeziehungen finden Sie in der Dokumentation."
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_identity_namespace"
 >title="Referenz-Identity-Namespace"
->abstract="Der Namespace (Typ) für das primäre Identitätsfeld des Referenzschemas. Das Referenzschema muss über ein festgestelltes primäres Identitätsfeld verfügen, um an einer Beziehung teilnehmen zu können. Weitere Informationen zu Schemabeziehungen finden Sie in der Dokumentation ."
+>abstract="Der Namespace (Typ) für das primäre Identitätsfeld des Referenzschemas. Das Referenzschema muss über ein festgelegtes primäres Identitätsfeld verfügen, um Teil einer Beziehung sein zu können. Weitere Informationen zu Schemabeziehungen finden Sie in der Dokumentation."
 
 Die Möglichkeit, Beziehungen zwischen Ihren Kunden und deren Interaktionen mit Ihrer Marke kanalübergreifend zu analysieren, ist ein wichtiger Bestandteil von Adobe Experience Platform. Definieren dieser Beziehungen innerhalb der Struktur Ihrer [!DNL Experience Data Model] (XDM)-Schemas ermöglichen es Ihnen, komplexe Einblicke in Ihre Kundendaten zu erhalten.
 

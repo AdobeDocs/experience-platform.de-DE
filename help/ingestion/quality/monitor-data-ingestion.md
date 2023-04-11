@@ -7,7 +7,7 @@ exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '654'
-ht-degree: 34%
+ht-degree: 37%
 
 ---
 
@@ -21,10 +21,10 @@ Dieses Benutzerhandbuch enthält Schritte zum Überwachen Ihrer Daten in der Ben
 
 >[!CONTEXTUALHELP]
 >id="platform_ingestion_streaming_ingestionrate"
->title="Aufnahmerate"
+>title="Aufnahmegeschwindigkeit"
 >abstract="Die Anzahl der erfolgreich verarbeiteten Ereignisse pro Sekunde."
 >text="Learn more in the documentation"
->additional-url="http://www.adobe.com/go/monitor-dataflows-en" text="Überwachen von Datenflüssen auf Quellen in der Benutzeroberfläche"
+>additional-url="http://www.adobe.com/go/monitor-dataflows-en" text="Überwachen von Datenflüssen für Quellen in der Benutzeroberfläche"
 
 >[!TIP]
 >

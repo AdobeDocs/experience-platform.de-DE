@@ -8,7 +8,7 @@ exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
 source-git-commit: 9c2ede973aa4348f15362ba80fdcd7a231577909
 workflow-type: tm+mt
 source-wordcount: '2365'
-ht-degree: 61%
+ht-degree: 65%
 
 ---
 
@@ -163,8 +163,8 @@ Die folgende Dokumentation enthält weitere Ressourcen zum Verständnis von Date
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
->title="Filterregeln erstellen"
->abstract="Definieren Sie beim Senden von Daten an das Echtzeit-Kundenprofil Filterregeln auf Zeilen- und Spaltenebene. Verwenden Sie die Filterung auf Zeilenebene, um Bedingungen anzuwenden und anzugeben, welche Daten verwendet werden sollen **Einschließen in die Profilaufnahme**. Verwenden Sie die Filterung auf Spaltenebene, um die Datenspalten auszuwählen, die Sie verwenden möchten **zur Profilaufnahme ausschließen**. Filterregeln gelten nicht für Daten, die an den Data Lake gesendet werden."
+>title="Erstellen von Filterregeln"
+>abstract="Definieren Sie beim Senden von Daten an das Echtzeit-Kundenprofil Filterregeln auf Zeilen- und Spaltenebene. Verwenden Sie die Filterung auf Zeilenebene, um Bedingungen anzuwenden und festzulegen, welche Daten **in die Profilaufnahme** eingeschlossen werden sollen. Verwenden Sie die Filterung auf Spaltenebene, um die Datenspalten auszuwählen, die **bei der Profilaufnahme** ausgeschlossen werden sollen. Die Filterregeln gelten nicht für Daten, die an den Data Lake gesendet werden."
 
 Nachdem Sie die Zuordnungen für Ihre [!DNL Analytics] Report Suite-Daten können Sie Filterregeln und -bedingungen anwenden, um Daten selektiv in das Echtzeit-Kundenprofil ein- oder auszuschließen. Filterunterstützung ist nur verfügbar für [!DNL Analytics] Daten und Daten werden nur vor der Eingabe gefiltert [!DNL Profile.] Alle Daten werden in den Daten-Pool aufgenommen.
 
@@ -172,7 +172,7 @@ Nachdem Sie die Zuordnungen für Ihre [!DNL Analytics] Report Suite-Daten könne
 
 >[!IMPORTANT]
 >
->Verwenden Sie die Filterung auf Zeilenebene, um Bedingungen anzuwenden und anzugeben, welche Daten verwendet werden sollen **Einschließen in die Profilaufnahme**. Verwenden Sie die Filterung auf Spaltenebene, um die Datenspalten auszuwählen, die Sie verwenden möchten **zur Profilaufnahme ausschließen**.
+>Verwenden Sie die Filterung auf Zeilenebene, um Bedingungen anzuwenden und festzulegen, welche Daten **in die Profilaufnahme** eingeschlossen werden sollen. Verwenden Sie die Filterung auf Spaltenebene, um die Datenspalten auszuwählen, die **bei der Profilaufnahme** ausgeschlossen werden sollen.
 
 Sie können Daten nach [!DNL Profile] Aufnahme auf Zeilen- und Spaltenebene. Mit der Filterung auf Zeilenebene können Sie Kriterien definieren, z. B. Zeichenfolge enthält, gleich, beginnt oder endet mit. Sie können auch die Filterung auf Zeilenebene verwenden, um Join-Bedingungen mithilfe von `AND` sowie `OR`und die Bedingungen mithilfe von `NOT`.
 

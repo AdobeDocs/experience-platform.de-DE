@@ -7,7 +7,7 @@ exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
 source-wordcount: '1463'
-ht-degree: 2%
+ht-degree: 10%
 
 ---
 
@@ -22,9 +22,9 @@ In diesem Dokument werden die Schritte zum Erstellen und Verwalten von Datenschu
 
 >[!IMPORTANT]
 >
->Privacy Service ist nur für Anfragen der betroffenen Person und von Verbraucherrechten vorgesehen. Jegliche andere Verwendung von Privacy Service für die Datenbereinigung oder -wartung wird nicht unterstützt oder ist nicht zulässig. Die Adobe ist gesetzlich verpflichtet, sie rechtzeitig zu erfüllen. Daher sind Lasttests auf dem Privacy Service nicht zulässig, da es sich um eine reine Produktionsumgebung handelt und einen unnötigen Rückstau gültiger Datenschutzanfragen erzeugt.
+>Privacy Service ist nur für Anfragen der betroffenen Person und für Verbraucherrechtsanfragen vorgesehen. Jegliche andere Verwendung von Privacy Service für die Datenbereinigung oder -wartung wird nicht unterstützt und ist nicht zulässig. Adobe ist gesetzlich verpflichtet, diese rechtzeitig zu erfüllen. Daher sind Lasttests auf Privacy Service nicht zulässig, da es sich um eine reine Produktionsumgebung handelt und ein unnötiger Rückstau gültiger Datenschutzanfragen erzeugt wird.
 >
->Es gibt jetzt eine feste tägliche Upload-Grenze, um Missbrauch des Dienstes zu verhindern. Benutzer, bei denen das System missbraucht wurde, haben keinen Zugriff auf den Dienst. Anschließend wird mit ihnen ein Treffen abgehalten, auf dem ihre Maßnahmen erörtert und die annehmbare Verwendung für den Privacy Service erörtert werden.
+>Es gibt jetzt eine feste tägliche Upload-Grenze, um einen Missbrauch des Dienstes zu verhindern. Für Benutzende, bei denen ein Missbrauch des Systems festgestellt wurde, wird der Zugriff auf den Dienst deaktiviert. Anschließend wird mit ihnen ein Meeting abgehalten, bei dem ihr Handeln und die akzeptable Verwendung von Privacy Service erörtert wird.
 
 ## Durchsuchen Sie die [!DNL Privacy Service] UI-Dashboard
 

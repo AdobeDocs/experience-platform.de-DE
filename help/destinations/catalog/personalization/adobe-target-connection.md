@@ -6,7 +6,7 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 source-git-commit: f97b667f8d4dc311683b018bb1c1792aae871648
 workflow-type: tm+mt
 source-wordcount: '1011'
-ht-degree: 54%
+ht-degree: 60%
 
 ---
 
@@ -70,8 +70,8 @@ Ein Unternehmen, das Häuser vermietet und verkauft, möchte seine Homepage mit 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
 >title="Informationen zu Datenstrom-IDs"
->abstract="Diese Option bestimmt, in welchen Datenerfassungsdatastream die Segmente einbezogen werden. Das Dropdown-Menü zeigt nur Datensätze an, für die die Target-Konfiguration aktiviert ist. Um die Kantensegmentierung zu verwenden, müssen Sie eine Datastream-ID auswählen. Wenn Sie Kein auswählen, werden alle Anwendungsfälle deaktiviert, die Kantensegmentierung verwenden."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="Erfahren Sie mehr über die Auswahl von Datastreams"
+>abstract="Mit dieser Option wird festgelegt, in welchen Datenerfassungs-Datenstrom die Segmente einbezogen werden. Das Dropdown-Menü enthält nur Datenströme, für die die Zielkonfiguration aktiviert ist. Um die Edge-Segmentierung zu verwenden, müssen Sie eine Datenstrom-ID auswählen. Wenn Sie „Keine“ auswählen, werden alle Anwendungsfälle deaktiviert, die die Edge-Segmentierung verwenden."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html?lang=de#parameters" text="Weitere Informationen zur Auswahl von Datenströmen"
 
 >[!IMPORTANT]
 > 

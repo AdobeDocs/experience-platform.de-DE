@@ -6,7 +6,7 @@ exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
 source-git-commit: 647f2780798dcf55a68e156af3318924c352a442
 workflow-type: tm+mt
 source-wordcount: '1034'
-ht-degree: 14%
+ht-degree: 24%
 
 ---
 
@@ -65,26 +65,26 @@ In der unteren Hälfte der Seite werden Informationen zur Anzahl der empfangenen
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_received"
->title="Erhaltene Aufzeichnungen"
->abstract="Die Metrik &quot;Erhaltene Datensätze&quot;gibt die Gesamtzahl der im Datenfluss empfangenen Datensätze an."
+>title="Empfangene Einträge"
+>abstract="Die Metrik „Empfangene Einträge“ gibt die Gesamtzahl der im Datenfluss empfangenen Einträge an."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_ingested"
->title="Aufgenommene Datensätze"
->abstract="Die Metrik Aufgenommene Datensätze gibt die Gesamtzahl der in den Data Lake erfassten Datensätze an."
+>title="Aufgenommene Einträge"
+>abstract="Die Metrik „Aufgenommene Einträge“ gibt die Gesamtzahl der in den Data Lake aufgenommenen Einträge an."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_failed"
->title="Fehlgeschlagene Datensätze"
->abstract="Die Metrik &quot;Datensätze fehlgeschlagen&quot;gibt die Gesamtzahl der Datensätze an, die aufgrund von Fehlern in den Daten nicht in den Daten-Pool aufgenommen wurden."
+>title="Fehlgeschlagene Einträge"
+>abstract="Die Metrik „Fehlgeschlagene Einträge“ gibt die Gesamtzahl der Einträge an, die aufgrund von Datenfehlern nicht in den Data Lake aufgenommen wurden."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_warnings"
->title="Datensätze mit Warnungen"
->abstract="Datensätze mit Warnungen geben die Gesamtzahl der Datensätze an, die mit Mapper-Transformationswarnungen erfasst wurden. Alle Mapper-Transformationsfehler werden als Warnungen und teilweise aufgenommene Zeilen mit einer Warnung als erfolgreich gemeldet"
+>title="Einträge mit Warnhinweisen"
+>abstract="Einträge mit Warnhinweisen geben die Gesamtzahl der aufgenommenen Einträge mit Warnhinweisen für die Mapper-Transformation an. Alle Fehler bei der Mapper-Transformation werden als Warnhinweise protokolliert und Zeilen, die teilweise aufgenommen wurden, werden als erfolgreich erachtet, jedoch mit einem Warnhinweis versehen."
 >text="Learn more in documentation"
 
 Jeder einzelne Datenfluss zeigt die folgenden Details an:

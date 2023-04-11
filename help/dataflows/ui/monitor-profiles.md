@@ -7,7 +7,7 @@ exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1074'
-ht-degree: 9%
+ht-degree: 17%
 
 ---
 
@@ -23,7 +23,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 - [Datenflüsse](../home.md): Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in [!DNL Identity] und [!DNL Profile] sowie in [!DNL Destinations].
    - [Datenfluss-Abläufe](../../sources/notifications.md): Datenfluss-Ausführungen sind die wiederkehrenden geplanten Aufträge, die auf der Frequenzkonfiguration ausgewählter Datenflüsse basieren.
-- [Echtzeit-Kundenprofil](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus mehreren Quellen basiert.
+- [Echtzeit-Kundenprofil](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
 
 ## Profil-Dashboard überwachen {#profile-metrics}
@@ -31,13 +31,13 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profile_processing"
 >title="Profilverarbeitung"
->abstract="Die Ansicht &quot;Profilverarbeitung&quot;enthält Informationen zu den Datensätzen, die für den Profildienst erfasst werden, einschließlich der Anzahl der erstellten Profilfragmente, der aktualisierten Profilfragmente und der Gesamtzahl der Profilfragmente."
+>abstract="Die Profilverarbeitungs-Ansicht enthält Informationen zu den in den Profildienst aufgenommenen Datensätzen, einschließlich der Anzahl der erstellten und aktualisierten Profilfragmente sowie der Gesamtzahl der Profilfragmente."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_profile"
->title="Datenfluss-Ausführungsdetails"
->abstract="Auf der Seite mit den Ausführungsdetails für den Datenfluss werden weitere Informationen zum Datenfluss in Ihrem Profil angezeigt, einschließlich der Organisations-ID und der Kennung des Datenflusses."
+>title="Datenflussausführungs-Details"
+>abstract="Auf der Seite mit den Datenflussausführungs-Details werden weitere Informationen zur Ausführung des Profil-Datenflusses angezeigt, einschließlich der Organisations-ID und der Datenflussausführungs-ID."
 
 So greifen Sie auf die **[!UICONTROL Profile]** Dashboard, auswählen **[!UICONTROL Überwachung]** in der linken Navigation. Einmal im **[!UICONTROL Überwachung]** Seite, wählen Sie die **[!UICONTROL Profile]** Karte.
 
@@ -56,8 +56,8 @@ Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
 | Metrik | Beschreibung |
 | -------| ----------- |
 | **[!UICONTROL Name der Quelle]** | Der Name der Quelle. |
-| **[!UICONTROL Erhaltene Aufzeichnungen]** | Die Anzahl der vom Data Lake empfangenen Datensätze. |
-| **[!UICONTROL Fehlgeschlagene Datensätze]** | Die Anzahl der Datensätze, die erfasst wurden, jedoch nicht in [!DNL Profile] aufgrund von Fehlern. |
+| **[!UICONTROL Empfangene Einträge]** | Die Anzahl der vom Data Lake empfangenen Datensätze. |
+| **[!UICONTROL Fehlgeschlagene Einträge]** | Die Anzahl der Datensätze, die erfasst wurden, jedoch nicht in [!DNL Profile] aufgrund von Fehlern. |
 | **[!UICONTROL Erstellen von Profilfragmenten]** | Die Zahl der neuen Nettoempfänger [!DNL Profile] Fragmente hinzugefügt. |
 | **[!UICONTROL Profilfragmente aktualisiert]** | Die Anzahl der vorhandenen [!DNL Profile] Fragmente aktualisiert. |
 | **[!UICONTROL Profilfragmente insgesamt]** | Die Gesamtzahl der in [!DNL Profile], einschließlich aller vorhandenen [!DNL Profile] Fragmente aktualisiert und neu [!DNL Profile] erstellte Fragmente. |
@@ -75,11 +75,11 @@ Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
 
 | Metrik | Beschreibung |
 | -------| ----------- |
-| **[!UICONTROL Dataflow]** | Der Name des Datenflusses. |
+| **[!UICONTROL Datenfluss]** | Der Name des Datenflusses. |
 | **[!UICONTROL Datensatz]** | Der Name des Datensatzes, in den der Datenfluss eingefügt wird. |
 | **[!UICONTROL Name der Quelle]** | Der Name der Quelle, zu der der Datenfluss gehört. |
-| **[!UICONTROL Erhaltene Datensätze**] | Die Anzahl der vom Data Lake empfangenen Datensätze. |
-| **[!UICONTROL Fehlgeschlagene Datensätze]** | Die Anzahl der Datensätze, die erfasst wurden, jedoch nicht in [!DNL Profile] aufgrund von Fehlern. |
+| **[!UICONTROL Empfangene Einträge**] | Die Anzahl der vom Data Lake empfangenen Datensätze. |
+| **[!UICONTROL Fehlgeschlagene Einträge]** | Die Anzahl der Datensätze, die erfasst wurden, jedoch nicht in [!DNL Profile] aufgrund von Fehlern. |
 | **[!UICONTROL Erstellen von Profilfragmenten]** | Die Zahl der neuen Nettoempfänger [!DNL Profile] Fragmente hinzugefügt. |
 | **[!UICONTROL Profilfragmente aktualisiert]** | Die Anzahl der vorhandenen [!DNL Profile] Fragmente aktualisiert |
 | **[!UICONTROL Profilfragmente insgesamt]** | Die Gesamtzahl der in [!DNL Profile], einschließlich aller vorhandenen [!DNL Profile] Fragmente aktualisiert und neu [!DNL Profile] erstellte Fragmente. |
@@ -98,8 +98,8 @@ Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
 
 | Metrik | Beschreibung |
 | -------| ----------- |
-| **[!UICONTROL Erhaltene Aufzeichnungen]** | Die Anzahl der vom Data Lake empfangenen Datensätze. |
-| **[!UICONTROL Fehlgeschlagene Datensätze]** | Die Anzahl der Datensätze, die erfasst wurden, jedoch nicht in [!DNL Profile] aufgrund von Fehlern. |
+| **[!UICONTROL Empfangene Einträge]** | Die Anzahl der vom Data Lake empfangenen Datensätze. |
+| **[!UICONTROL Fehlgeschlagene Einträge]** | Die Anzahl der Datensätze, die erfasst wurden, jedoch nicht in [!DNL Profile] aufgrund von Fehlern. |
 | **[!UICONTROL Erstellen von Profilfragmenten]** | Die Zahl der neuen Nettoempfänger [!DNL Profile] Fragmente hinzugefügt. |
 | **[!UICONTROL Profilfragmente aktualisiert]** | Die Anzahl der vorhandenen [!DNL Profile] Fragmente aktualisiert. |
 | **[!UICONTROL Status]** | Definiert den Gesamtstatus eines Datenflusses. Mögliche Statuswerte sind: <ul><li>`Success`: Gibt an, dass ein Datenfluss aktiv ist und Daten gemäß dem festgelegten Zeitplan erfasst.</li><li>`Failed`: Gibt an, dass der Aktivierungsprozess eines Datenflusses aufgrund von Fehlern unterbrochen wurde. </li><li>`Processing`: Gibt an, dass der Datenfluss noch nicht aktiv ist. Dieser Status tritt oft unmittelbar nach der Erstellung eines neuen Datenflusses auf.</li></ul> |
