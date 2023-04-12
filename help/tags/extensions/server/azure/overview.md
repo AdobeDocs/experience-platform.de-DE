@@ -2,10 +2,11 @@
 title: Übersicht über die Microsoft Azure-Erweiterung
 description: Erfahren Sie mehr über die Microsoft Azure-Erweiterung für die Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 2337d99d-861e-44e7-94ed-ba21ef28d815
-source-git-commit: f6c11fadc0d8019044fbdd2923af00ce18ce39e1
+last-substantial-update: 2022-11-23T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
-source-wordcount: '937'
-ht-degree: 7%
+source-wordcount: '931'
+ht-degree: 6%
 
 ---
 
@@ -53,7 +54,7 @@ Das rechte Bedienfeld wird aktualisiert und zeigt Konfigurationsoptionen für di
 | [!UICONTROL SAS-Zugriffsschlüssel] | Der Primärschlüssel der Regel für die gemeinsame Zugriffsberechtigung für Ihre gesamte [!DNL Event Hubs] -Namespace oder die spezifische Ereignis-Hub-Instanz, an die Sie Daten senden möchten. Siehe den Anhang unter [Abrufen von SAS-Genehmigungswerten](#sas) für weitere Informationen. |
 | [!UICONTROL Partition ID] | [!DNL Event Hubs] ermöglicht Ihnen Folgendes: [Ereignisse direkt an bestimmte Partitionen senden](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/event-hubs/partitioning-in-event-hubs-and-kafka). Um diese Funktion zu nutzen, geben Sie die Kennung der Partition an, die die Ereignisse empfangen soll. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Daten**
 
@@ -61,7 +62,7 @@ Das rechte Bedienfeld wird aktualisiert und zeigt Konfigurationsoptionen für di
 | --- | --- |
 | [!UICONTROL Payload] | Dieses Feld enthält die Daten, die an die [!DNL Event Hubs]. Die Daten können ein JSON-Objekt, eine Zeichenfolge oder ein Datenelement sein. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Wenn Sie fertig sind, wählen Sie **[!UICONTROL Änderungen beibehalten]** , um die Aktion zur Regelkonfiguration hinzuzufügen. Wenn Sie mit der Regel zufrieden sind, wählen Sie **[!UICONTROL In Bibliothek speichern]**.
 

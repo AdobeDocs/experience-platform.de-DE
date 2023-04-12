@@ -2,7 +2,8 @@
 keywords: Ereignisweiterleitungs-Erweiterung;Mixpanel;Ereignisweiterleitungserweiterung "mixpanel"
 title: Ereignisweiterleitungserweiterung für die Mixpanel Track Events API
 description: Diese Ereignisweiterleitungs-Erweiterung von Adobe Experience Platform sendet Adobe Experience Edge Network-Ereignisse an Mixpanel.
-source-git-commit: 8538e3a2899c3e2451519996cabeffc4b42d706c
+last-substantial-update: 2023-03-29T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 2%

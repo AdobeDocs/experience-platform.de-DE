@@ -2,10 +2,11 @@
 title: Übersicht über die AWS-Erweiterung
 description: Erfahren Sie mehr über die AWS-Erweiterung für die Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
-source-git-commit: b4ff3dbc9c62dceefdf2b842cafa65132dde41fc
+last-substantial-update: 2022-11-23T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
-source-wordcount: '847'
-ht-degree: 8%
+source-wordcount: '841'
+ht-degree: 7%
 
 ---
 
@@ -59,7 +60,7 @@ Das rechte Bedienfeld wird aktualisiert und zeigt Konfigurationsoptionen für di
 | [!UICONTROL AWS-Region] | Die [!DNL AWS] Region, in der [!DNL Kinesis] Datenstrom erstellt. |
 | [!UICONTROL Partition Key] | Die [partition key](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key) , die die Erweiterung beim Senden von Daten an den Datenstrom verwendet.<br><br>[!DNL Kinesis Data Streams] Trennt die zu einem Stream gehörenden Datendatensätze in mehrere Shards. Es verwendet den mit jedem Datensatz gesendeten Partitionsschlüssel, um zu bestimmen, zu welchem Teil ein bestimmter Datensatz gehört.<br><br>Ein guter Partitionsschlüssel für die Verteilung von Kunden kann die Kundennummer sein, da sie für jeden Kunden unterschiedlich ist. Ein schlechter Partitionsschlüssel könnte ihre Postleitzahl haben, da sie alle in der Nähe leben können. Im Allgemeinen sollten Sie einen Partitionsschlüssel wählen, der den höchsten Bereich unterschiedlicher potenzieller Werte aufweist. Siehe [!DNL AWS] Artikel zu [Skalieren [!DNL Kinesis] Datenströme](https://aws.amazon.com/blogs/big-data/under-the-hood-scaling-your-kinesis-data-streams/) für Best Practices bei der Verwaltung von Partitionsschlüsseln. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **[!UICONTROL Daten]**
 
@@ -67,7 +68,7 @@ Das rechte Bedienfeld wird aktualisiert und zeigt Konfigurationsoptionen für di
 | --- | --- |
 | [!UICONTROL Payload] | Dieses Feld enthält die Daten, die an die [!DNL Kinesis] Datenstream im JSON-Format.<br><br>Unter dem **[!UICONTROL Roh]** können Sie das JSON-Objekt direkt in das bereitgestellte Textfeld einfügen oder das Datenelementsymbol (![Datensatzsymbol](../../../images/extensions/server/aws/data-element-icon.png)), um aus einer Liste vorhandener Datenelemente zur Darstellung der Payload auszuwählen.<br><br>Sie können auch die **[!UICONTROL JSON-Schlüssel-Wert-Paare-Editor]** Option zum manuellen Hinzufügen jedes Schlüssel-Wert-Paares über einen UI-Editor. Jeder Wert kann durch eine Roheingabe dargestellt werden oder stattdessen kann ein Datenelement ausgewählt werden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Wenn Sie fertig sind, wählen Sie **[!UICONTROL Änderungen beibehalten]** , um die Aktion zur Regelkonfiguration hinzuzufügen. Wenn Sie mit der Regel zufrieden sind, wählen Sie **[!UICONTROL In Bibliothek speichern]**.
 

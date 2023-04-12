@@ -2,9 +2,10 @@
 title: Google Ads Enhanced Conversions-Erweiterung
 description: Erfahren Sie mehr über die Google Ads Enhanced Conversions-Erweiterung für die Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+last-substantial-update: 2022-11-23T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1311'
 ht-degree: 1%
 
 ---
@@ -59,7 +60,7 @@ Das Installationsdialogfeld wird angezeigt. Wählen Sie von hier aus **[!UICONTR
 | Konto-ID | Ihre [!DNL Google Ads] Konto-ID. Um diesen Wert zu finden, melden Sie sich bei [!DNL Google Ads] und navigieren Sie zu: **[!DNL Tools and Settings]** > **[!DNL Conversions]** > **[!DNL Select a conversion action]** > **[!DNL Tag Setup]** > **[!DNL Install the Tag yourself]**. Die Konto-ID-Zeichenfolge finden Sie im Code-Snippet-Fenster, das mit `AW-` oder `d`. |
 | Produkt | Auswählen **[!UICONTROL Google Ads (AdWords)]**. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Wenn Sie fertig sind, wählen Sie **[!UICONTROL Konto hinzufügen]**, wählen Sie **[!UICONTROL Speichern]**.
 
@@ -119,7 +120,7 @@ Im rechten Bereich werden neue Steuerelemente angezeigt, mit denen Sie Ihre Konv
 
 | Eingabe | Beschreibung |
 | --- | --- |
-| Kundin bzw. Kunde ID | Ihre [!DNL Google Ads] Kunden-ID. Die Standardeinstellung ist die Kunden-ID, die Sie beim [Installieren der Erweiterung](#install-enhanced-conversions). |
+| Kunden-ID | Ihre [!DNL Google Ads] Kunden-ID. Die Standardeinstellung ist die Kunden-ID, die Sie beim [Installieren der Erweiterung](#install-enhanced-conversions). |
 | Konversions-ID oder Konversionsbezeichnung | Tracking-Werte aus [!DNL Google Ads] beim Einrichten des Konversions-Trackings. Werte beginnen mit `AW-`.<br><br>Weitere Informationen zum Auffinden dieser Werte finden Sie im Abschnitt [[!DNL Google Ads] Dokumentation](https://support.google.com/tagmanager/answer/6105160?hl=en). |
 | Transaction ID | Wählen Sie ein Datenelement aus, das denselben Transaktions-ID-Wert hat wie [von Client-Seite gesendet](#conversion-action-tags) mithilfe der [!DNL Google Global Site Tag] -Erweiterung. |
 

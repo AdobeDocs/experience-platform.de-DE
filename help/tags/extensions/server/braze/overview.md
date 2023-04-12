@@ -2,7 +2,8 @@
 keywords: Ereignisweiterleitungs-Erweiterung;Ausblenden;Ausblenden der Ereignisweiterleitungs-Erweiterung
 title: Braze Event Forwarding-Erweiterung
 description: Diese Ereignisweiterleitungs-Erweiterung von Adobe Experience Platform sendet Adobe Experience Edge Network-Ereignisse an Braze.
-source-git-commit: 6815b5eb0426efd1dde901db1e8b86e86615530a
+last-substantial-update: 2023-03-29T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
 source-wordcount: '1863'
 ht-degree: 6%
@@ -132,7 +133,7 @@ Benutzerattribute können ein JSON-Objekt sein, das Felder enthält, die ein Att
 | [!UICONTROL Country] | Land als Zeichenfolge in [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) Format. |
 | [!UICONTROL Sprache] | Sprache als Zeichenfolge in [ISO-639-1](https://de.wikipedia.org/wiki/Liste_der_ISO-639-1-Codes) Format. |
 | [!UICONTROL Geburtsdatum] | Zeichenfolge im Format &quot;JJJ-MM-TT&quot;(z. B. 1980-12-21). |
-| [!UICONTROL Zeitzone] | Zeitzonenname aus [IANA-Zeitzonen-Datenbank](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (z. B. ’America/New_York’ oder ’Eastern Time (US &amp; Canada)’). |
+| [!UICONTROL Zeitzone] | Zeitzonenname aus [IANA-Zeitzonen-Datenbank](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (z. B. &quot;America/New_York&quot;oder &quot;Eastern Time (US &amp; Canada)&quot;). |
 | [!UICONTROL Facebook] | Hash, der eine beliebige ID (Zeichenfolge), &quot;Gefällt mir&quot;(Array von Zeichenfolgen), &quot;num_friends&quot;(Ganzzahl) enthält. |
 | [!UICONTROL Twitter] | Hash, der ID (Integer), screen_name (Zeichenfolge, Twitter-Handle), followers_count (Integer), friends_count (Integer), statuses_count(Integer) enthält. |
 
@@ -191,7 +192,7 @@ Benutzerattribute können ein JSON-Objekt sein, das Felder enthält, die ein Att
 | [!UICONTROL Country] | Land als Zeichenfolge in [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) Format. |
 | [!UICONTROL Sprache] | Sprache als Zeichenfolge in [ISO-639-1](https://de.wikipedia.org/wiki/Liste_der_ISO-639-1-Codes) Format. |
 | [!UICONTROL Geburtsdatum] | Zeichenfolge im Format &quot;JJJ-MM-TT&quot;(z. B. 1980-12-21). |
-| [!UICONTROL Zeitzone] | Zeitzonenname aus [IANA-Zeitzonen-Datenbank](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (z. B. ’America/New_York’ oder ’Eastern Time (US &amp; Canada)’). |
+| [!UICONTROL Zeitzone] | Zeitzonenname aus [IANA-Zeitzonen-Datenbank](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (z. B. &quot;America/New_York&quot;oder &quot;Eastern Time (US &amp; Canada)&quot;). |
 | [!UICONTROL Facebook] | Hash, der eine beliebige ID (Zeichenfolge), &quot;Gefällt mir&quot;(Array von Zeichenfolgen), &quot;num_friends&quot;(Ganzzahl) enthält. |
 | [!UICONTROL Twitter] | Hash, der ID (Integer), screen_name (Zeichenfolge, Twitter-Handle), followers_count (Integer), friends_count (Integer), statuses_count(Integer) enthält. |
 
