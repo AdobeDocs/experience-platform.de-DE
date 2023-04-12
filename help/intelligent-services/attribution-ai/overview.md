@@ -4,12 +4,12 @@ feature: Attribution AI
 title: Attribution AI - Übersicht
 description: Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Fachleuten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren. Beispiele für Touchpoints sind Impressionen auf Display-Anzeigen, E-Mail-Sendungen, E-Mail-Öffnungen und Paid-Search-Klicks.
 landing-page-description: Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Fachleuten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
-short-description: Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
+short-description: Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Fachleuten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
 source-git-commit: b21367814e38fb5ee017709a29b39de982d59d24
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 40%
+source-wordcount: '532'
+ht-degree: 44%
 
 ---
 

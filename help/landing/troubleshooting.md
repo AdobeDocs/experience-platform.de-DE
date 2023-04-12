@@ -4,12 +4,12 @@ solution: Experience Platform
 title: Häufig gestellte Fragen zu Adobe Experience Platform und Handbuch zur Fehlerbehebung
 description: Hier finden Sie Antworten auf häufig gestellte Fragen und eine Anleitung zur Fehlerbehebung bei häufigen Fehlern in Experience Platform.
 landing-page-description: Hier finden Sie Antworten auf häufig gestellte Fragen und eine Anleitung zur Fehlerbehebung bei häufigen Fehlern in Experience Platform.
-short-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
+short-description: Hier finden Sie Antworten auf häufig gestellte Fragen und eine Anleitung zur Fehlerbehebung bei häufigen Fehlern in Experience Platform.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
 workflow-type: tm+mt
-source-wordcount: '1861'
+source-wordcount: '1877'
 ht-degree: 99%
 
 ---
