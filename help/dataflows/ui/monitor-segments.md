@@ -4,10 +4,10 @@ description: Mit der Segmentierung können Sie aus Ihren Echtzeit-Kundenprofilda
 title: Überwachen von Datenflüssen für Segmente in der Benutzeroberfläche
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1923'
-ht-degree: 8%
+source-wordcount: '1919'
+ht-degree: 7%
 
 ---
 
@@ -34,7 +34,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
 >title="Segmente"
->abstract="Die Segmentansicht enthält Informationen zu allen Segmenten Ihrer IMS-Organisation sowie zu ihren Aktivierungs- und Evaluierungsvorgängen."
+>abstract="Die Segmentansicht enthält Informationen zu allen Segmenten Ihres Unternehmens sowie weitere Informationen zu deren Aktivierungs- und Auswertungsaufträgen."
 
 So greifen Sie auf die **[!UICONTROL Segmente]** Dashboard, auswählen **[!UICONTROL Überwachung]** in der linken Navigation. Einmal im **[!UICONTROL Überwachung]** Seite, wählen Sie die **[!UICONTROL Segmente]** Karte.
 
@@ -48,7 +48,7 @@ Das Dashboard selbst enthält Metriken für Segmente und Segmentaufträge. Stand
 >
 >Derzeit werden nur Segmente aktiviert, für die [Batch-Ziele (dateibasiert)](../../destinations/destination-types.md#file-based) werden für das Dashboard der Überwachungssegmente unterstützt.
 
-![Das Segmente-Dashboard. Informationen zu den verschiedenen Segmenten in Ihrer IMS-Organisation und Sandbox werden angezeigt.](../assets/ui/monitor-segments/segment-monitoring-dashboard.png)
+![Das Segmente-Dashboard. Informationen zu den verschiedenen Segmenten in Ihrer Organisation und Sandbox werden angezeigt.](../assets/ui/monitor-segments/segment-monitoring-dashboard.png)
 
 Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
 
@@ -109,7 +109,7 @@ Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
 | **[!UICONTROL Start des Datenflusses]** | Datum und Uhrzeit des Starts des Aktivierungsauftrags. |
 | **[!UICONTROL Dataflow-Ausführungsende]** | Datum und Uhrzeit des Endes des Aktivierungsauftrags. |
 | **[!UICONTROL Dataflow-run-ID]** | Die ID des aktuellen Aktivierungsauftrags. |
-| **[!UICONTROL Kennung der IMS-Organisation]** | Die Kennung der IMS-Organisation, zu der der Aktivierungsauftrag gehört. |
+| **[!UICONTROL Kennung der IMS-Organisation]** | Die ID der Organisation, zu der der Aktivierungsauftrag gehört. |
 | **[!UICONTROL Zielname]** | Der Name des Ziels, für das die Daten aktiviert werden. |
 
 Unter den Metriken wird ein Umschalter angezeigt, um zwischen den Ausführungsfehlern des Datenflusses und den Segmenten auszuwählen.
@@ -151,7 +151,7 @@ Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
 | **[!UICONTROL Auftragstyp]** | Der Typ des Segmentauftrags. In diesem Fall handelt es sich immer um einen Segmentbewertungsauftrag. |
 | **[!UICONTROL Testtyp]** | Die Art der durchgeführten Bewertung. Dies kann entweder **[!UICONTROL Batch]** oder **[!UICONTROL Streaming]**. |
 | **[!UICONTROL Auftrags-ID]** | Die ID des Auswertungsauftrags. |
-| **[!UICONTROL Kennung der IMS-Organisation]** | Die Kennung der IMS-Organisation, zu der der Auswertungsauftrag gehört. |
+| **[!UICONTROL Kennung der IMS-Organisation]** | Die ID der Organisation, zu der der Auswertungsauftrag gehört. |
 | **[!UICONTROL Segmentname]** | Der Name des Segments, das ausgewertet wird. |
 | **[!UICONTROL Segment-ID]** | Die ID des Segments, das ausgewertet wird. |
 
