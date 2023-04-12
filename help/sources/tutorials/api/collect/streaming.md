@@ -5,9 +5,9 @@ title: Erstellen eines Streaming-Datenflusses für Rohdaten mithilfe der Flow Se
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Streaming-Daten und deren Einbindung in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1098'
 ht-degree: 55%
 
 ---
@@ -204,7 +204,7 @@ Eine erfolgreiche Antwort gibt ein Array zurück, das die Kennung des neu erstel
 
 ## Erstellen einer Zielverbindung {#target-connection}
 
-Target-Verbindungen erstellen und verwalten eine Zielverbindung zu Platform oder einem beliebigen Standort, an dem die übertragenen Daten landen. Target-Verbindungen enthalten Informationen zu Datenziel, Datenformat und der Zielverbindungs-ID, die zum Erstellen eines Datenflusses erforderlich ist. Target-Verbindungsinstanzen sind spezifisch für einen Mandanten und eine IMS-Organisation.
+Target-Verbindungen erstellen und verwalten eine Zielverbindung zu Platform oder einem beliebigen Standort, an dem die übertragenen Daten landen. Target-Verbindungen enthalten Informationen zu Datenziel, Datenformat und der Zielverbindungs-ID, die zum Erstellen eines Datenflusses erforderlich ist. Target-Verbindungsinstanzen sind spezifisch für einen Mandanten und eine Organisation.
 
 Um eine Zielverbindung zu erstellen, stellen Sie eine POST-Anfrage an die `/targetConnections` Endpunkt der [!DNL Flow Service] API. Im Rahmen der Anfrage müssen Sie das Datenformat, das `dataSetId` im vorherigen Schritt abgerufen wurden, und die ID der festen Verbindungsspezifikation, an die [!DNL Data Lake]. Diese ID lautet `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
@@ -486,5 +486,5 @@ Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenfluss
 
 In diesem Tutorial haben Sie einen Datenfluss erstellt, um Streaming-Daten aus Ihrem Streaming-Connector zu erfassen. Eingehende Daten können jetzt von nachgelagerten Platform-Services wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
-- [Übersicht über das Echtzeit-Kundenprofil](../../../../profile/home.md)
+- [Übersicht zum Echtzeit-Kundenprofil](../../../../profile/home.md)
 - [Übersicht über Data Science Workspace](../../../../data-science-workspace/home.md)

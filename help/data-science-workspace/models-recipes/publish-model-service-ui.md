@@ -3,22 +3,22 @@ keywords: Experience Platform; Modell veröffentlichen; Data Science Workspace; 
 solution: Experience Platform
 title: Veröffentlichen eines Modells als Dienst in der Benutzeroberfläche von Data Science Workspace
 type: Tutorial
-description: Mit dem Adobe Experience Platform Data Science Workspace können Sie Ihr trainiertes und bewertetes Modell als Service veröffentlichen, damit Benutzer in Ihrer IMS-Organisation Daten bewerten können, ohne eigene Modelle erstellen zu müssen.
+description: Mit Adobe Experience Platform Data Science Workspace können Sie Ihr trainiertes und ausgewertetes Modell als Service veröffentlichen, sodass Benutzer in Ihrem Unternehmen Daten bewerten können, ohne eigene Modelle erstellen zu müssen.
 exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 50%
+source-wordcount: '499'
+ht-degree: 36%
 
 ---
 
 # Veröffentlichen eines Modells als Dienst in der Benutzeroberfläche von Data Science Workspace
 
-Mit dem Adobe Experience Platform Data Science Workspace können Sie Ihr trainiertes und bewertetes Modell als Service veröffentlichen, damit Benutzer in Ihrer IMS-Organisation Daten bewerten können, ohne eigene Modelle erstellen zu müssen.
+Mit Adobe Experience Platform Data Science Workspace können Sie Ihr trainiertes und ausgewertetes Modell als Service veröffentlichen, sodass Benutzer in Ihrem Unternehmen Daten bewerten können, ohne eigene Modelle erstellen zu müssen.
 
 ## Erste Schritte
 
-Um dieses Tutorial abzuschließen, benötigen Sie Zugriff auf [!DNL Experience Platform]. Wenn Sie keinen Zugriff auf eine IMS-Organisation in [!DNL Experience Platform]Wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
+Um dieses Tutorial abzuschließen, benötigen Sie Zugriff auf [!DNL Experience Platform]. Wenn Sie keinen Zugriff auf eine Organisation in [!DNL Experience Platform]Wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
 
 Diese Anleitung setzt ein vorhandenes Modell mit einem erfolgreichen Trainings-Lauf voraus. Wenn Sie über kein veröffentlichungsfähiges Modell verfügen, führen Sie die Anleitung [Modell in der Benutzeroberfläche trainieren und bewerten](./train-evaluate-model-ui.md) aus, bevor Sie fortfahren.
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei der Zugriffssteuerung
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zur Zugriffskontrolle in Adobe Experience Platform.
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
-workflow-type: ht
-source-wordcount: '408'
-ht-degree: 100%
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+workflow-type: tm+mt
+source-wordcount: '407'
+ht-degree: 92%
 
 ---
 
@@ -19,7 +19,7 @@ Dieses Dokument enthält Antworten auf häufig gestellte Fragen zur Zugriffskont
 
 ## Wo finde ich meine aktuellen Zugriffsberechtigungen?
 
-Wenn Sie Systemadministrator, Produktadministrator oder Produktprofiladministrator für Ihre IMS-Organisation sind, können Sie Ihr zugewiesenes Produktprofil und die damit verbundenen Berechtigungen in der Adobe Admin Console anzeigen. Anweisungen zum Navigieren der für das Anzeigen der Berechtigungen eines Produktprofils finden Sie im [Benutzerhandbuch zur Zugriffskontrolle](./ui/overview.md) [!DNL Admin Console].
+Wenn Sie Systemadministrator, Produktadministrator oder Produktprofiladministrator für Ihr Unternehmen sind, können Sie Ihr zugewiesenes Produktprofil und die damit verbundenen Berechtigungen in der Adobe Admin Console anzeigen. Anweisungen zum Navigieren der für das Anzeigen der Berechtigungen eines Produktprofils finden Sie im [Benutzerhandbuch zur Zugriffskontrolle](./ui/overview.md) [!DNL Admin Console].
 
 Wenn Sie kein Administrator sind, können Sie Ihre aktuellen Zugriffsberechtigungen dennoch anzeigen, indem Sie eine Anfrage an den `/acl/effective-policies`-Endpunkt in der Access Control-API senden. Weiterführende Informationen finden Sie im Abschnitt „Gültige Richtlinien anzeigen“ im [Entwicklerhandbuch zur Zugriffskontrolle](./api/effective-policies.md).
 

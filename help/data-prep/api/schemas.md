@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Datenvorbereitung;API-H
 solution: Experience Platform
 title: API-Endpunkt für Schemas
 description: Sie können den Endpunkt „/schemas“ in der Adobe Experience Platform-API verwenden, um Schemas zur Verwendung mit Mapper in Platform programmgesteuert abzurufen, zu erstellen und zu aktualisieren.
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 100%
+source-wordcount: '611'
+ht-degree: 94%
 
 ---
 
@@ -22,7 +22,7 @@ Schemas können mit Mapper verwendet werden, um dafür zu sorgen, dass die von I
 
 ## Abrufen aller Schemas
 
-Sie können eine Liste aller verfügbaren Mapper-Schemas für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an den `/schemas`-Endpunkt senden.
+Sie können eine Liste aller für Ihr Unternehmen verfügbaren Mapper-Schemas abrufen, indem Sie eine GET-Anfrage an die `/schemas` -Endpunkt.
 
 **API-Format**
 
@@ -43,7 +43,7 @@ GET /schemas?limit={LIMIT}&start={START}&orderBy={ORDER_BY}
 
 **Anfrage**
 
-Mit der folgenden Anfrage werden die letzten beiden erstellten Schemas für Ihre IMS-Organisation abgerufen.
+Mit der folgenden Anfrage werden die letzten beiden erstellten Schemas für Ihre Organisation abgerufen.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0&limit=2 \

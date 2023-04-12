@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erste Schritte mit Self-Serve-Quellen (Batch-SDK)
 description: Dieses Dokument bietet eine Einführung in die erforderlichen Informationen, die Sie kennen müssen, bevor Sie versuchen, eine neue Quelle mit Self-Serve-Quellen (Batch SDK) zu erstellen.
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 2a5d545db18a5dd33c5ff2ac5c543ec35db4ca00
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '386'
 ht-degree: 58%
 
 ---
@@ -17,7 +17,7 @@ Self-Serve-Quellen (Batch SDK) ermöglichen Ihnen die Integration Ihrer eigenen 
 
 ## Voraussetzungen
 
-Um Self-Serve-Quellen (Batch SDK) zu verwenden, müssen Sie sicherstellen, dass Sie Zugriff auf eine mit Adobe Experience Platform-Quellen bereitgestellte IMS-Organisations-Sandbox haben.
+Um Self-Serve-Quellen (Batch-SDK) zu verwenden, müssen Sie sicherstellen, dass Sie Zugriff auf eine mit Adobe Experience Platform-Quellen bereitgestellte Sandbox der Organisation haben.
 
 Dieses Handbuch setzt außerdem ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 

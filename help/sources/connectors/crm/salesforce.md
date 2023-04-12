@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Salesforce Source Connector - Überblick
 description: Erfahren Sie, wie Sie Salesforce über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '900'
-ht-degree: 20%
+source-wordcount: '896'
+ht-degree: 19%
 
 ---
 
@@ -62,14 +62,14 @@ Die folgende Tabelle enthält Beispielwerte sowie zusätzliche Informationen zum
 | `IMS` | Das Identity Management-System (IMS) bietet das Framework für die Authentifizierung bei Adobe-Diensten. Im Hinblick auf [!DNL Marketo]festgelegt ist, wird dieser Wert festgelegt und immer auf Folgendes festgelegt: `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
 | `IMS_ORG` | Eine Unternehmenseinheit, die Produkte und Dienste besitzen oder lizenzieren und Zugriff auf ihre Mitglieder gewähren kann. Siehe Tutorial zu [Einrichten der Entwicklerkonsole und [!DNL Postman]](../../../landing/postman.md) Anweisungen zum Abrufen Ihrer `{ORG_ID}` Informationen. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | Der Name der von Ihnen verwendeten virtuellen Sandbox-Partition. | `prod` |
-| `TENANT_ID` | Eine ID, mit der sichergestellt wird, dass die von Ihnen erstellten Ressourcen den richtigen Namespace aufweisen und in Ihrer IMS-Organisation enthalten sind. | `b2bcdpproductiontest` |
+| `TENANT_ID` | Eine ID, mit der sichergestellt wird, dass die von Ihnen erstellten Ressourcen den richtigen Namespace aufweisen und in Ihrem Unternehmen enthalten sind. | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | Der URL-Endpunkt, an den Sie API-Aufrufe durchführen. Dieser Wert ist fest festgelegt und immer auf Folgendes festgelegt: `http://platform.adobe.io/`. | `http://platform.adobe.io/` |
 | `munchkinId` | Die eindeutige ID für Ihre [!DNL Marketo] -Konto. Siehe Tutorial zu [Ihre [!DNL Marketo] instance](../adobe-applications/marketo/marketo-auth.md) Informationen zum Abrufen Ihrer `munchkinId`. | `123-ABC-456` |
 | `sfdc_org_id` | Die Organisations-ID für Ihre [!DNL Salesforce] -Konto. Siehe Folgendes [[!DNL Salesforce] Handbuch](https://help.salesforce.com/articleView?id=000325251&amp;type=1&amp;mode=1) Weitere Informationen zum Erwerb Ihrer [!DNL Salesforce] Organisations-ID. | `00D4W000000FgYJUA0` |
 | `has_abm` | Ein boolean -Wert, der anzeigt, ob Sie ein Abonnement für [!DNL Marketo Account-Based Marketing]. | `false` |
 | `has_msi` | Ein boolean -Wert, der anzeigt, ob Sie sich bei [!DNL Marketo Sales Insight]. | `false` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Scripts ausführen
 

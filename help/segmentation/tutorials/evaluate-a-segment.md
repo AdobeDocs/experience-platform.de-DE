@@ -5,9 +5,9 @@ title: Segmentergebnisse auswerten und aufrufen
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mithilfe der Adobe Experience Platform Segmentation Service-API Segmente auswerten und auf Segmentergebnisse zugreifen.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1608'
+source-wordcount: '1607'
 ht-degree: 21%
 
 ---
@@ -55,7 +55,7 @@ Wenn Sie die [Erstellen eines Segments mithilfe der Segmentation-API](./create-a
 
 ## Geplante Auswertung {#scheduled-evaluation}
 
-Durch die geplante Auswertung kann Ihre IMS-Organisation einen wiederkehrenden Zeitplan erstellen, um Exportaufträge automatisch auszuführen.
+Durch die geplante Auswertung kann Ihr Unternehmen einen Zeitplan für die automatische Ausführung von Exportvorgängen erstellen.
 
 >[!NOTE]
 >

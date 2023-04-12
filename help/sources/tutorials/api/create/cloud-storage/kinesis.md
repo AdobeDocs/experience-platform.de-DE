@@ -5,10 +5,10 @@ title: Erstellen einer Amazon Kinesis-Quellverbindung mithilfe der Flow Service-
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Flow Service-API eine Verbindung zwischen Adobe Experience Platform und einer Amazon Kinesis-Quelle herstellen.
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 68%
+source-wordcount: '729'
+ht-degree: 67%
 
 ---
 
@@ -88,7 +88,7 @@ curl -X POST \
 | `auth.params.accessKeyId` | Die Zugriffsschlüssel-ID für Ihre [!DNL Kinesis] -Konto. |
 | `auth.params.secretKey` | Der geheime Zugriffsschlüssel für Ihre [!DNL Kinesis] -Konto. |
 | `auth.params.region` | Die Region für Ihre [!DNL Kinesis] -Konto. |
-| `connectionSpec.id` | Die [!DNL Kinesis] Verbindungsspezifikations-ID: `86043421-563b-46ec-8e6c-e23184711bf6` |
+| `connectionSpec.id` | Die [!DNL Kinesis]-Verbindungsspezifikations-ID: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **Antwort**
 
@@ -103,7 +103,7 @@ Bei einer erfolgreichen Antwort werden Details zu der neu erstellten Basisverbin
 
 ## Erstellen einer Quellverbindung {#source}
 
-Eine Quellverbindung erstellt und verwaltet die Verbindung zu der externen Quelle, aus der Daten erfasst werden. Eine Quellverbindung besteht aus Informationen wie der Datenquelle, dem Datenformat und der Kennung der Quellverbindung, die zum Erstellen eines Datenflusses erforderlich ist. Eine Quellverbindungsinstanz ist für einen Mandanten und eine IMS-Organisation spezifisch.
+Eine Quellverbindung erstellt und verwaltet die Verbindung zu der externen Quelle, aus der Daten erfasst werden. Eine Quellverbindung besteht aus Informationen wie der Datenquelle, dem Datenformat und der Kennung der Quellverbindung, die zum Erstellen eines Datenflusses erforderlich ist. Eine Quellverbindungsinstanz ist für einen Mandanten und eine Organisation spezifisch.
 
 Um eine Quellverbindung zu erstellen, stellen Sie eine POST-Anfrage an den `/sourceConnections`-Endpunkt der [!DNL Flow Service]-API.
 

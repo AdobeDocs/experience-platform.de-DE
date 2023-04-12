@@ -2,9 +2,9 @@
 title: Standorthinweise
 description: In diesem Artikel wird erläutert, wie Standorthinweise in der Edge Network Server-API funktionieren, sodass Endbenutzeranfragen immer an denselben Server weitergeleitet werden können.
 exl-id: 8cd2f8e2-2065-4b7e-8d35-4ed1a716f1b3
-source-git-commit: 80c527ab3c82e01fe19e5003e224d63e79b23bdc
+source-git-commit: 2c7a5f007189d897ed32302a2a80c1e16af6af80
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '414'
 ht-degree: 0%
 
 ---
@@ -62,4 +62,4 @@ POST 'https://edge.adobedc.net/ee/{LOCATION_HINT}/v2/interact?dataStreamId={Data
 
 Um sicherzustellen, dass der vom Edge-Netzwerk zurückgegebene Standorthinweis für die Dauer der Sitzung beibehalten wird, können Sie den Standort-Hint-Wert in einem Cookie speichern, zusammen mit der Cookie-Lebensdauer, die in der Variablen `ttlSeconds` -Feld (in der Regel 1800 Sekunden).
 
-Wie bei den meisten Cookies sollten Sie die Lebensdauer dieses Cookies jedes Mal verlängern, wenn eine Antwort vom Edge Network eingeht. Um eine maximale Kompatibilität mit dem Web SDK sicherzustellen, verwenden Sie den Cookie-Namen `kndctr_{IMSORG}_AdobeOrg_cluster`. IMS-Organisations-IDs enden normalerweise mit `@AdobeOrg`. Die `@` muss in einen Unterstrich umgewandelt werden, um sicherzustellen, dass das Cookie im richtigen Format vorliegt.
+Wie bei den meisten Cookies sollten Sie die Lebensdauer dieses Cookies jedes Mal verlängern, wenn eine Antwort vom Edge Network eingeht. Um eine maximale Kompatibilität mit dem Web SDK sicherzustellen, verwenden Sie den Cookie-Namen `kndctr_{IMSORG}_AdobeOrg_cluster`. Organisations-IDs enden normalerweise mit `@AdobeOrg`. Die `@` muss in einen Unterstrich umgewandelt werden, um sicherzustellen, dass das Cookie im richtigen Format vorliegt.

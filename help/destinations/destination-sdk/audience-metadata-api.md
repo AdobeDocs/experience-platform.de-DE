@@ -2,10 +2,10 @@
 description: Auf dieser Seite werden alle API-Vorgänge beschrieben, die Sie mithilfe des API-Endpunkts „/authoring/audience-templates“ durchführen können.
 title: API-Vorgänge für Zielgruppen-Metadaten-Endpunkte
 exl-id: 3444da8c-b2be-4254-980a-8cce7560134d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '879'
-ht-degree: 100%
+source-wordcount: '873'
+ht-degree: 91%
 
 ---
 
@@ -196,7 +196,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | `validations.field` | Zeichenfolge | Gibt an, ob Überprüfungen für Felder durchgeführt werden sollen, bevor API-Aufrufe an Ihr Ziel gesendet werden. Sie können beispielsweise `{{validations.accountId}}` verwenden, um die Konto-ID des Benutzers zu überprüfen. |
 | `validations.regex` | Zeichenfolge | Gibt an, wie das Feld strukturiert sein sollte, damit die Validierung erfolgreich ist. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -318,7 +318,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 ## Abrufen einer Liste von Zielgruppenvorlagen {#retrieve-list}
 
-Sie können eine Liste aller Zielgruppenvorlagen für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/authoring/audience-templates` senden.
+Sie können eine Liste aller Zielgruppenvorlagen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an die `/authoring/audience-templates` -Endpunkt.
 
 **API-Format**
 
@@ -329,7 +329,7 @@ GET /authoring/audience-templates
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird die Liste der Zielgruppenvorlagen abgerufen, auf die Sie Zugriff haben, basierend auf der IMS-Organisation und der Sandbox-Konfiguration.
+Mit der folgenden Anfrage wird die Liste der Zielgruppenvorlagen abgerufen, auf die Sie Zugriff haben, basierend auf der Organisations- und Sandbox-Konfiguration.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-templates \
@@ -341,7 +341,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 **Antwort**
 
-Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste von Zielgruppen-Metadatenvorlagen zurück, auf die Sie Zugriff haben, basierend auf der von Ihnen verwendeten IMS-Organisations-ID und dem Sandbox-Namen. Eine `instanceId` entspricht der Vorlage für jeweils ein Ziel. Die Antwort wird verkürzt angegeben.
+Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste von Zielgruppen-Metadatenvorlagen zurück, auf die Sie Zugriff haben, basierend auf der verwendeten Organisations-ID und dem Sandbox-Namen. Eine `instanceId` entspricht der Vorlage für jeweils ein Ziel. Die Antwort wird verkürzt angegeben.
 
 ```json
 {

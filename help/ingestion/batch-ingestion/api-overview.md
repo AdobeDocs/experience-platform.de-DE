@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Batch Ingestion-API
 description: Dieses Dokument enthält eine umfassende Anleitung für Entwickler, die mit Batch-Aufnahme-APIs für Adobe Experience Platform arbeiten.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '2412'
-ht-degree: 76%
+source-wordcount: '2411'
+ht-degree: 75%
 
 ---
 
@@ -549,7 +549,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{TENANT_ID}` | Diese Kennung stellt sicher, dass die von Ihnen erstellten Ressourcen den richtigen Namespace aufweisen und in Ihrer IMS-Organisation enthalten sind. |
+| `{TENANT_ID}` | Diese ID wird verwendet, um sicherzustellen, dass von Ihnen erstellte Ressourcen ordnungsgemäß benannt werden und in Ihrem Unternehmen enthalten sind. |
 | `{SCHEMA_ID}` | Die Kennung des erstellten Schemas. |
 
 ### Batch erstellen

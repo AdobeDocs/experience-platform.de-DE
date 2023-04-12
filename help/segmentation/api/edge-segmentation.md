@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Edge-Segmentierung mithilfe der API
 description: Dieses Dokument enthält Beispiele für die Verwendung der Edge-Segmentierung mit der Segmentierungs-Service-API von Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 1c4da50b2c211aae06d6702d75e5650447fae0eb
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1187'
-ht-degree: 100%
+source-wordcount: '1185'
+ht-degree: 96%
 
 ---
 
@@ -67,7 +67,7 @@ Eine Segmentdefinition wird für die Edge-Segmentierung in den folgenden Szenari
 
 ## Abrufen aller für die Edge-Segmentierung aktivierten Segmente
 
-Sie können eine Liste aller Segmente abrufen, die für die Edge-Segmentierung in Ihrer IMS-Organisation aktiviert sind, indem Sie eine GET-Anfrage an den `/segment/definitions`-Endpunkt stellen.
+Sie können eine Liste aller Segmente abrufen, die für die Kantensegmentierung in Ihrem Unternehmen aktiviert sind, indem Sie eine GET-Anfrage an die `/segment/definitions` -Endpunkt.
 
 **API-Format**
 
@@ -90,7 +90,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort wird eine Gruppe von Segmenten in Ihrer IMS-Organisation zurückgegeben, die für die Edge-Segmentierung aktiviert sind. Detailliertere Informationen zur zurückgegebenen Segmentdefinition finden Sie im [Handbuch zum Segmentdefinitionenendpunkt](./segment-definitions.md).
+Eine erfolgreiche Antwort gibt eine Reihe von Segmenten in Ihrer Organisation zurück, die für die Kantensegmentierung aktiviert sind. Detailliertere Informationen zur zurückgegebenen Segmentdefinition finden Sie im [Handbuch zum Segmentdefinitionenendpunkt](./segment-definitions.md).
 
 ```json
 {

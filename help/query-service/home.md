@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Query Service – Übersicht
 description: Dieses Dokument gibt einen Überblick über die Rolle von Query Service in Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 100%
+source-wordcount: '721'
+ht-degree: 96%
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Experience Platform nimmt Daten aus einer Vielzahl von Quellen auf. Eine g
 
 ## Verwenden [!DNL Query Service]
 
-[!DNL Query Service] bietet eine Benutzeroberfläche und eine RESTful-API, mit der Sie SQL-Abfragen erstellen können, um Ihre Daten besser zu analysieren. Über die Benutzeroberfläche können Sie Abfragen schreiben und ausführen, zuvor ausgeführte Abfragen anzeigen und auf Abfragen zugreifen, die von Benutzern in Ihrer IMS-Organisation gespeichert wurden. Die Benutzeroberfläche soll als Sandbox zum Testen Ihrer Abfragen verwendet werden, bevor Sie sie auf Ihren größeren Datensatz anwenden. Weitere Informationen zur Verwendung des interaktiven Diensts innerhalb von [!DNL Platform] finden Sie im [Handbuch zur Query Service-Benutzeroberfläche](ui/overview.md). Die RESTful-API bietet ein ähnliches Erlebnis, mit dem Sie programmatisch Abfragen schreiben und ausführen, Abfragen für die spätere Verwendung und Wiederholung planen und Vorlagen für Abfragen erstellen können, die Sie schreiben möchten. Weitere Informationen zur Verwendung der [!DNL Query Service]-API finden Sie im [Query Service-Entwicklerhandbuch](api/getting-started.md).
+[!DNL Query Service] bietet eine Benutzeroberfläche und eine RESTful-API, mit der Sie SQL-Abfragen erstellen können, um Ihre Daten besser zu analysieren. Über die Benutzeroberfläche können Sie Abfragen schreiben und ausführen, zuvor ausgeführte Abfragen anzeigen und auf Abfragen zugreifen, die von Benutzern in Ihrer Organisation gespeichert wurden. Die Benutzeroberfläche soll als Sandbox zum Testen Ihrer Abfragen verwendet werden, bevor Sie sie auf Ihren größeren Datensatz anwenden. Weitere Informationen zur Verwendung des interaktiven Diensts innerhalb von [!DNL Platform] finden Sie im [Handbuch zur Query Service-Benutzeroberfläche](ui/overview.md). Die RESTful-API bietet ein ähnliches Erlebnis, mit dem Sie programmatisch Abfragen schreiben und ausführen, Abfragen für die spätere Verwendung und Wiederholung planen und Vorlagen für Abfragen erstellen können, die Sie schreiben möchten. Weitere Informationen zur Verwendung der [!DNL Query Service]-API finden Sie im [Query Service-Entwicklerhandbuch](api/getting-started.md).
 
 ## [!DNL Query Service] und [!DNL Experience Platform]-Services
 

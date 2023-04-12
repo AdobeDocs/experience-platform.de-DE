@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Konto-API-Endpunkt
 description: Sie können ein Query Service-Konto für beständig erstellen.
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '494'
 ht-degree: 5%
 
 ---
@@ -31,7 +31,7 @@ POST /accounts
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird ein neues Query Service-Integrationskonto für Ihre IMS-Organisation erstellt.
+Mit der folgenden Anfrage wird ein neues Query Service-Integrationskonto für Ihre Organisation erstellt.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \

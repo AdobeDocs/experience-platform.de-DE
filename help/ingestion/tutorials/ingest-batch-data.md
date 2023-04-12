@@ -5,9 +5,9 @@ title: Daten in Experience Platform aufnehmen
 type: Tutorial
 description: Mit Adobe Experience Platform können Sie Daten einfach als Batch-Dateien in Form von Parquet-Dateien oder Daten importieren, die einem bekannten Experience-Datenmodell (XDM)-Schema entsprechen.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1322'
+source-wordcount: '1320'
 ht-degree: 51%
 
 ---
@@ -18,13 +18,13 @@ Adobe Experience Platform ermöglicht den einfachen Import von Daten in [!DNL Pl
 
 ## Erste Schritte
 
-Um dieses Tutorial abzuschließen, benötigen Sie Zugriff auf [!DNL Experience Platform]. Wenn Sie keinen Zugriff auf eine IMS-Organisation in [!DNL Experience Platform]Wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
+Um dieses Tutorial abzuschließen, benötigen Sie Zugriff auf [!DNL Experience Platform]. Wenn Sie keinen Zugriff auf eine Organisation in [!DNL Experience Platform]Wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
 
 Wenn Sie Daten lieber mit Data Ingestion-APIs erfassen möchten, lesen Sie zunächst das [Entwicklerhandbuch zur Batch-Erfassung](../batch-ingestion/api-overview.md).
 
 ## Arbeitsbereich „Datensätze“
 
-Der Arbeitsbereich &quot;Datensätze&quot;in [!DNL Experience Platform] ermöglicht Ihnen, alle Datensätze, die Ihre IMS-Organisation erstellt hat, anzuzeigen und zu verwalten sowie neue Datensätze zu erstellen.
+Der Arbeitsbereich &quot;Datensätze&quot;in [!DNL Experience Platform] ermöglicht Ihnen, alle Datensätze, die Ihr Unternehmen erstellt hat, anzuzeigen und zu verwalten sowie neue Datensätze zu erstellen.
 
 Zeigen Sie den Arbeitsbereich „Datensätze“ an, indem Sie im Navigationsbereich auf der linken Seite auf **[!UICONTROL Datensätze]** klicken. Der Arbeitsbereich &quot;Datensätze&quot;enthält eine Liste von Datensätzen, einschließlich der Spalten mit dem Namen, der erstellten Erstellung (Datum und Uhrzeit), der Quelle, dem Schema und dem Status des letzten Batches sowie dem Datum und der Uhrzeit der letzten Aktualisierung des Datensatzes.
 

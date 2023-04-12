@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Erste Schritte mit der Sandbox-API
 description: Mit der Sandbox-API können Entwickler Sandboxes in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '376'
-ht-degree: 89%
+source-wordcount: '375'
+ht-degree: 85%
 
 ---
 
@@ -19,7 +19,7 @@ In diesem Entwicklerhandbuch finden Sie Anweisungen dazu, wie Sie die Sandbox-AP
 
 ## Voraussetzungen
 
-Um Sandboxes für Ihre IMS-Organisation zu verwalten, benötigen Sie Sandbox Administration-Berechtigungen. Benutzer ohne Zugriffsberechtigungen können nur die [verfügbarer Sandbox-Endpunkt](./available.md) , um aktive Sandboxes für den aktuellen Benutzer aufzulisten. Weiterführende Informationen zum Zuweisen von Sandbox-Berechtigungen für Experience Platform finden Sie unter [Zugriffskontrolle – Übersicht](../../access-control/home.md).
+Um Sandboxes für Ihre Organisation verwalten zu können, benötigen Sie Sandbox-Administratorberechtigungen. Benutzer ohne Zugriffsberechtigungen können nur die [verfügbarer Sandbox-Endpunkt](./available.md) , um aktive Sandboxes für den aktuellen Benutzer aufzulisten. Weiterführende Informationen zum Zuweisen von Sandbox-Berechtigungen für Experience Platform finden Sie unter [Zugriffskontrolle – Übersicht](../../access-control/home.md).
 
 ### Lesen von Beispiel-API-Aufrufen
 

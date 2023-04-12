@@ -4,10 +4,10 @@ solution: Experience Platform
 title: API-Endpunkt für Segmentdefinitionen
 description: Der Endpunkt "Segmentdefinitionen"in der Adobe Experience Platform Segmentation Service-API ermöglicht Ihnen die programmgesteuerte Verwaltung von Segmentdefinitionen für Ihr Unternehmen.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 9aa86b8d541836504be6b8667a2e069116c6002c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1261'
-ht-degree: 28%
+source-wordcount: '1258'
+ht-degree: 25%
 
 ---
 
@@ -23,7 +23,7 @@ Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [!DNL Adobe Exper
 
 ## Abrufen einer Liste von Segmentdefinitionen {#list}
 
-Sie können eine Liste aller Segmentdefinitionen für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an den `/segment/definitions`-Endpunkt senden.
+Sie können eine Liste aller Segmentdefinitionen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an die `/segment/definitions` -Endpunkt.
 
 **API-Format**
 
@@ -46,7 +46,7 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 
 **Anfrage**
 
-Mit der folgenden Anfrage werden die letzten beiden Segmentdefinitionen abgerufen, die in Ihrer IMS-Organisation veröffentlicht wurden.
+Mit der folgenden Anfrage werden die letzten beiden Segmentdefinitionen abgerufen, die innerhalb Ihres Unternehmens veröffentlicht wurden.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 \
@@ -58,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Segmentdefinitionen für die angegebene IMS-Organisation als JSON zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Segmentdefinitionen für die angegebene Organisation als JSON zurück.
 
 ```json
 {

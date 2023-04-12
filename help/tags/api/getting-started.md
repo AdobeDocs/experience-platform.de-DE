@@ -2,10 +2,10 @@
 title: Erste Schritte mit der Reactor-API
 description: Hier erfahren Sie, wie Sie mit der Reactor-API beginnen, einschließlich der Schritte zum Generieren erforderlicher Zugriffsberechtigungen.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1050'
-ht-degree: 97%
+source-wordcount: '1049'
+ht-degree: 95%
 
 ---
 
@@ -31,7 +31,7 @@ Mithilfe der Adobe-Entwicklerkonsole müssen Sie die folgenden drei Zugriffsbere
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-Die ID (`{ORG_ID}`) Ihrer IMS-Organisation und der API-Schlüssel (`{API_KEY}`) können, wenn sie einmal generiert worden sind, in zukünftigen API-Aufrufen wiederverwendet werden. Ihr Zugriffs-Token (`{ACCESS_TOKEN}`) ist jedoch temporär und muss alle 24 Stunden neu generiert werden.
+Die Kennung Ihres Unternehmens (`{ORG_ID}`) und API-Schlüssel (`{API_KEY}`) können in zukünftigen API-Aufrufen wiederverwendet werden, nachdem sie ursprünglich generiert wurden. Ihr Zugriffs-Token (`{ACCESS_TOKEN}`) ist jedoch temporär und muss alle 24 Stunden neu generiert werden.
 
 Die Schritte zum Generieren dieser Werte werden im Folgenden detailliert beschrieben.
 

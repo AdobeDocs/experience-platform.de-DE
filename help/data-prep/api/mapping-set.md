@@ -4,10 +4,10 @@ solution: Experience Platform
 title: API-Endpunkt für Zuordnungssätze
 description: Sie können den Endpunkt „/mappingSets“ in der Adobe Experience Platform-API nutzen, um Zuordnungssätze programmgesteuert abzurufen, zu erstellen, zu aktualisieren und zu validieren.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '854'
-ht-degree: 94%
+source-wordcount: '852'
+ht-degree: 90%
 
 ---
 
@@ -17,7 +17,7 @@ Mit Zuordnungssätzen lässt sich definieren, wie Daten in einem Quellschema den
 
 ## Auflisten von Zuordnungssätzen
 
-Sie können eine Liste aller Zuordnungssätze für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an den `/mappingSets`-Endpunkt senden.
+Sie können eine Liste aller Zuordnungssätze für Ihre Organisation abrufen, indem Sie eine GET-Anfrage an die `/mappingSets` -Endpunkt.
 
 **API-Format**
 
@@ -40,7 +40,7 @@ GET /mappingSets?limit={LIMIT}&start={START}&expandSchema={EXPAND_SCHEMA}
 
 **Anfrage**
 
-Mit der folgenden Anfrage werden die letzten beiden Zuordnungssätze in Ihrer IMS-Organisation abgerufen.
+Mit der folgenden Anfrage werden die letzten beiden Zuordnungssätze in Ihrer Organisation abgerufen.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?limit=2&start=0 \

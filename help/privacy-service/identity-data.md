@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Identitätsdaten für Datenschutzanfragen
 description: In diesem Dokument finden Sie allgemeine Anweisungen zur Konfiguration Ihrer Datenvorgänge und zur Nutzung der Adobe-Technologien, um die entsprechenden Identitätsinformationen für Datenschutzanfragen von Kunden effektiv abzurufen.
 exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '645'
 ht-degree: 45%
 
 ---
@@ -21,7 +21,7 @@ In diesem Dokument finden Sie allgemeine Anweisungen zur Konfiguration Ihrer Dat
 
 Wenn ein Kunde mit Ihrer Marke über mehrere verschiedene Kanal interagieren kann, kann es schwierig sein, die unterschiedlichen Kennungen, die aus diesen vielen Interaktionen erfasst werden, miteinander in Einklang zu bringen. Dies wiederum kann es schwierig machen, zu bestimmen, welche Daten zu einer bestimmten Person in Ihrer [!DNL Experience Cloud] Anwendungen.
 
-Beispielsweise bei der Verarbeitung von Kundendatenanfragen in [!DNL Privacy Service]kann eine Identität einen Cookie-Wert darstellen, der unter einer von der Adobe gesteuerten Domäne gesetzt wird, einen Cookie-Wert unter einer Drittanbieterdomäne, der für Adobe freigegeben ist, oder eine benutzerdefinierte Kennung, die Sie explizit in Ihrer IMS-Organisation definieren.
+Beispielsweise bei der Verarbeitung von Kundendatenanfragen in [!DNL Privacy Service]kann eine Identität einen Cookie-Wert darstellen, der unter einer von der Adobe gesteuerten Domäne gesetzt wird, einen Cookie-Wert unter einer Drittanbieterdomäne, der für Adobe freigegeben ist, oder eine benutzerdefinierte Kennung, die Sie explizit in Ihrem Unternehmen definieren.
 
 Daher ist es erforderlich, dass jede Identität an [!DNL Privacy Service] wird von einem Namespace begleitet, der Kontext bietet, indem der Identitätswert mit seinem Ursprungssystem in Beziehung gesetzt wird. Ein Namespace kann ein allgemeines Konzept wie eine E-Mail-Adresse („E-Mail“) darstellen oder die Identität einer bestimmten Anwendung zuordnen, z. B. eine Adobe Advertising Cloud-ID („AdCloud“) oder eine Adobe Target-ID („TNTID“).
 

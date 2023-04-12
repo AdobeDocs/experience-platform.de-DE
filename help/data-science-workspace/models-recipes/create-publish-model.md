@@ -5,9 +5,9 @@ title: Erstellen und Veröffentlichen eines Modells für maschinelles Lernen
 type: Tutorial
 description: Im folgenden Handbuch werden die Schritte beschrieben, die zum Erstellen und Veröffentlichen eines Modells für maschinelles Lernen erforderlich sind.
 exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1076'
+source-wordcount: '1074'
 ht-degree: 8%
 
 ---
@@ -21,7 +21,7 @@ Im folgenden Handbuch werden die Schritte beschrieben, die zum Erstellen und Ver
 
 Bevor Sie mit diesem Tutorial beginnen, müssen Sie folgende Voraussetzungen erfüllen:
 
-- Zugriff auf [!DNL Adobe Experience Platform]. Wenn Sie keinen Zugriff auf eine IMS-Organisation in [!DNL Experience Platform]Wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
+- Zugriff auf [!DNL Adobe Experience Platform]. Wenn Sie keinen Zugriff auf eine Organisation in [!DNL Experience Platform]Wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
 
 - Alle Data Science Workspace-Tutorials verwenden das Luma-Tendenzmodell. Um fortfahren zu können, müssen Sie die [Luma-Eigenschaftenmodellschemata und -datensätze](./create-luma-data.md).
 
@@ -79,7 +79,7 @@ Um zu erfahren, wie Sie Ihr Modell bewerten, besuchen Sie die Bewertung eines Mo
 
 ## Veröffentlichen eines bewerteten Modells als Dienst
 
-Mit Data Science Workspace können Sie Ihr trainiertes Modell als Dienst veröffentlichen. Dadurch können Benutzer in Ihrer IMS-Organisation Daten bewerten, ohne eigene Modelle erstellen zu müssen.
+Mit Data Science Workspace können Sie Ihr trainiertes Modell als Dienst veröffentlichen. Dadurch können Benutzer in Ihrer Organisation Daten bewerten, ohne eigene Modelle erstellen zu müssen.
 
 Informationen zum Veröffentlichen eines Modells als Dienst finden Sie unter [UI-Tutorial](./publish-model-service-ui.md) oder [API-Tutorial](./publish-model-service-api.md).
 

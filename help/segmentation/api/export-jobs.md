@@ -4,10 +4,10 @@ solution: Experience Platform
 title: API-Endpunkt für Segmentexport-Aufträge
 description: Exportaufträge sind asynchrone Prozesse, mit denen Zielgruppensegmentmitglieder in Datensätzen beibehalten werden. Sie können den Endpunkt /export/jobs in der Adobe Experience Platform Segmentation Service-API verwenden, mit dem Sie Exportaufträge programmgesteuert abrufen, erstellen und abbrechen können.
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: d28cebaf4b9fe5c35240e28653e99424db08d9d2
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1631'
-ht-degree: 16%
+source-wordcount: '1629'
+ht-degree: 15%
 
 ---
 
@@ -25,7 +25,7 @@ Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [!DNL Adobe Exper
 
 ## Liste mit Exportaufträgen abrufen {#retrieve-list}
 
-Sie können eine Liste aller Exportaufträge für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an den `/export/jobs`-Endpunkt senden.
+Sie können eine Liste aller Exportaufträge für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an die `/export/jobs` -Endpunkt.
 
 **API-Format**
 
@@ -46,7 +46,7 @@ GET /export/jobs?status={STATUS}
 
 **Anfrage**
 
-Mit der folgenden Anfrage werden die letzten beiden Exportaufträge innerhalb Ihrer IMS-Organisation abgerufen.
+Mit der folgenden Anfrage werden die letzten beiden Exportaufträge innerhalb Ihres Unternehmens abgerufen.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \

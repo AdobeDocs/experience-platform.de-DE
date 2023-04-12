@@ -2,10 +2,10 @@
 description: Auf dieser Seite sind alle API-Vorgänge aufgelistet und beschrieben, die Sie mithilfe des API-Endpunkts „/authoring/destinations/publish“ ausführen können.
 title: API-Endpunktvorgänge für Veröffentlichungsziele
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 1fb0fde2054528679235268ae96e3b7e78de80ef
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '779'
-ht-degree: 67%
+source-wordcount: '770'
+ht-degree: 60%
 
 ---
 
@@ -67,7 +67,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `destinationId` | Zeichenfolge | Die Ziel-ID der Zielkonfiguration, die Sie für eine Veröffentlichung übermitteln. Rufen Sie die Ziel-ID einer Zielkonfiguration unter Verwendung der [API-Referenz für die Zielkonfiguration](./destination-configuration-api.md#retrieve-list) ab. |
 | `destinationAccess` | Zeichenfolge | Verwendung `ALL` damit Ihr Ziel im Katalog für alle Experience Platform-Kunden angezeigt wird. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -75,7 +75,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 201 mit Details zu Ihrer Zi
 
 ## Auflisten der Zielveröffentlichungsanfragen {#retrieve-list}
 
-Sie können eine Liste aller für Ihre IMS-Organisation zur Veröffentlichung übermittelten Ziele abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/authoring/destinations/publish` stellen.
+Sie können eine Liste aller Ziele abrufen, die zur Veröffentlichung für Ihr Unternehmen übermittelt wurden, indem Sie eine GET-Anfrage an die `/authoring/destinations/publish` -Endpunkt.
 
 **API-Format**
 
@@ -85,7 +85,7 @@ GET /authoring/destinations/publish
 
 **Anfrage**
 
-Die folgende Anfrage ruft basierend auf der IMS-Organisation und der Sandbox-Konfiguration die Liste der Ziele ab, die zur Veröffentlichung gesendet wurden, auf die Sie Zugriff haben.
+Mit der folgenden Anfrage wird die Liste der Ziele, die zur Veröffentlichung gesendet wurden und auf die Sie Zugriff haben, basierend auf der Organisations- und Sandbox-Konfiguration abgerufen.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -97,7 +97,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Antwort**
 
-Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste von Zielen zurück, die zur Veröffentlichung übermittelt wurden und auf die Sie Zugriff haben. Diese Liste basiert auf der von Ihnen verwendeten IMS-Organisations-ID und dem Sandbox-Namen der IMS-Organisation. Eine `configId` entspricht der Veröffentlichungsanfrage für jeweils ein Ziel.
+Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste von Zielen zurück, die zur Veröffentlichung gesendet wurden und auf die Sie Zugriff haben. Diese Liste basiert auf der verwendeten Organisations-ID und dem Sandbox-Namen. Eine `configId` entspricht der Veröffentlichungsanfrage für jeweils ein Ziel.
 
 ```json
 {
@@ -125,7 +125,7 @@ Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste von Zielen zurück
 | `publishDetailsList.destinationType` | Zeichenfolge | Der Zieltyp. Werte können `DEV` und `PUBLIC`. `DEV` entspricht dem Ziel in Ihrer Experience Platform-Organisation. `PUBLIC` entspricht dem Ziel, das Sie zur Veröffentlichung übermittelt haben. Stellen Sie sich diese beiden Optionen in Git-Begriffen vor, wobei die `DEV` -Version steht für Ihre lokale Authoring-Verzweigung und die `PUBLIC` version steht für den Remote-Hauptzweig. |
 | `publishDetailsList.publishedDate` | Zeichenfolge | Das Datum, an dem das Ziel zur Veröffentlichung gesendet wurde, angegeben in Epochenzeit. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Abrufen des Status einer bestimmten Anfrage zum Ziel einer Veröffentlichung {#get}
 

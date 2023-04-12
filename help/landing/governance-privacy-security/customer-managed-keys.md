@@ -2,9 +2,9 @@
 title: Vom Kunden verwaltete Schlüssel in Adobe Experience Platform
 description: Erfahren Sie, wie Sie eigene Verschlüsselungsschlüssel für in Adobe Experience Platform gespeicherte Daten einrichten.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: ca92839bd2a775ae323da5d5d0750b2026f8052d
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1618'
+source-wordcount: '1617'
 ht-degree: 92%
 
 ---
@@ -207,7 +207,7 @@ curl -X POST \
 | --- | --- |
 | `name` | Ein Name für die Konfiguration. Stellen Sie sicher, dass Sie sich diesen Wert merken, da er erforderlich ist, um den Konfigurationsstatus in einem [späteren Schritt](#check-status) zu überprüfen. Bei dem Wert ist die Groß-/Kleinschreibung zu beachten. |
 | `type` | Der Konfigurationstyp. Muss auf `BYOK_CONFIG` festgelegt werden. |
-| `imsOrgId` | Die Kennung Ihrer IMS-Organisation. Dieser Wert muss mit dem Wert übereinstimmen, der unter der `x-gw-ims-org-id`-Kopfzeile angegeben wird. |
+| `imsOrgId` | Ihre Organisations-ID. Dieser Wert muss mit dem Wert übereinstimmen, der unter der `x-gw-ims-org-id`-Kopfzeile angegeben wird. |
 | `configData` | Enthält die folgenden Details zur Konfiguration:<ul><li>`providerType`: Muss auf `AZURE_KEYVAULT` festgelegt werden.</li><li>`keyVaultKeyIdentifier`: Der URI für den Schlüsseltresor, den Sie [zuvor](#send-to-adobe) kopiert haben.</li></ul> |
 
 **Antwort**

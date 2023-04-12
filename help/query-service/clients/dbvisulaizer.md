@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Verbinden von DbVisualizer mit Query Service
 description: In diesem Dokument werden die Schritte zum Verbinden von DbVisualizer mit Adobe Experience Platform Query Service beschrieben.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 106a2e4606e94f71d6359cf947e05f193c19c660
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '922'
-ht-degree: 1%
+source-wordcount: '921'
+ht-degree: 6%
 
 ---
 
@@ -17,9 +17,9 @@ In diesem Dokument werden die Schritte zum Verbinden des [!DNL DbVisualizer] Dat
 
 ## Erste Schritte
 
-Für dieses Handbuch benötigen Sie bereits Zugriff auf [!DNL DbVisualizer] -Desktop-Programm verwenden und mit dem Navigieren in der -Benutzeroberfläche vertraut sind. So laden Sie die [!DNL DbVisualizer] Desktop-Programm oder weitere Informationen finden Sie unter [offiziell [!DNL DbVisualizer] Dokumentation](https://www.dbvis.com/download/).
+Für dieses Handbuch müssen Sie bereits Zugriff auf die [!DNL DbVisualizer] Desktop-App haben und mit dem Navigieren in der zugehörigen Benutzeroberfläche vertraut sein. So laden Sie die [!DNL DbVisualizer] Desktop-Programm oder weitere Informationen finden Sie unter [offiziell [!DNL DbVisualizer] Dokumentation](https://www.dbvis.com/download/).
 
-So erwerben Sie die erforderlichen Anmeldeinformationen zum Herstellen einer Verbindung [!DNL  DbVisualizer] zur Experience Platform benötigen Sie Zugriff auf den Arbeitsbereich Abfragen in der Platform-Benutzeroberfläche. Wenden Sie sich an Ihren IMS-Organisationsadministrator, wenn Sie derzeit keinen Zugriff auf den Arbeitsbereich &quot;Abfragen&quot;haben.
+Um die erforderlichen Anmeldeinformationen zum Verbinden von [!DNL  DbVisualizer] mit Experience Platform zu erhalten, benötigen Sie Zugriff auf den Arbeitsbereich „Abfragen“ in der Platform-Benutzeroberfläche. Wenden Sie sich an Ihren Organisationsadministrator, wenn Sie derzeit keinen Zugriff auf den Arbeitsbereich &quot;Abfragen&quot;haben.
 
 ## Datenbankverbindung erstellen {#connect-database}
 

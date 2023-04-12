@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aqua Data Studio mit Query Service verbinden
 description: In diesem Dokument werden die Schritte zum Verbinden von Aqua Data Studio mit Query Service von Adobe Experience Platform erläutert.
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-source-git-commit: 3ffb535e9a6648f037678acebba0de5f2088e79e
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '564'
 ht-degree: 11%
 
 ---
@@ -23,7 +23,7 @@ Für dieses Handbuch benötigen Sie bereits Zugriff auf [!DNL Aqua Data Studio] 
 >
 >Es gibt [!DNL Windows] und [!DNL macOS] Versionen von [!DNL Aqua Data Studio]. Screenshots in diesem Handbuch wurden mit dem [!DNL macOS] Desktop-Programm. In der Benutzeroberfläche können zwischen den Versionen geringfügige Unterschiede bestehen.
 
-Um die erforderlichen Anmeldeinformationen zum Verbinden von [!DNL Aqua Data Studio] mit Experience Platform zu erhalten, benötigen Sie Zugriff auf den Arbeitsbereich „Abfragen“ in der Platform-Benutzeroberfläche.  Wenden Sie sich an Ihren IMS-Organisationsadministrator, wenn Sie derzeit keinen Zugriff auf die [!UICONTROL Abfragen] Arbeitsbereich.
+Um die erforderlichen Anmeldeinformationen zum Verbinden von [!DNL Aqua Data Studio] mit Experience Platform zu erhalten, benötigen Sie Zugriff auf den Arbeitsbereich „Abfragen“ in der Platform-Benutzeroberfläche.  Wenden Sie sich an Ihren Organisationsadministrator, wenn Sie derzeit keinen Zugriff auf die [!UICONTROL Abfragen] Arbeitsbereich.
 
 ## Server registrieren {#register-server}
 

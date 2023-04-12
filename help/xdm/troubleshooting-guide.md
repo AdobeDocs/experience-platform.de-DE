@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung beim XDM-System
 description: Hier finden Sie Antworten auf häufig gestellte Fragen zum Experience-Datenmodell (XDM), einschließlich schrittweiser Anweisungen zur Behebung gängiger API-Fehler.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2074'
-ht-degree: 100%
+source-wordcount: '2073'
+ht-degree: 98%
 
 ---
 
@@ -177,7 +177,7 @@ Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, eine Ressource mit einem
 
 Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, eine Ressource mit Feldern zu erstellen, die über keinen ordnungsgemäßen Namespace verfügen, oder einer vorhandenen Ressource Felder mit falschem Namespace hinzuzufügen.
 
-Ressourcen, die von Ihrer IMS-Organisation definiert werden, müssen ihre Felder unter Ihrer Mandanten-ID mit einem Namespace versehen, um Konflikte mit anderen Ressourcen der Branche und des Anbieters zu vermeiden. Beim Erstellen eines Schemas mit Standardfeldgruppen müssen alle benutzerdefinierten Felder, die Sie innerhalb der Struktur dieser Feldgruppen hinzufügen, auch unter Ihrer Mandanten-ID mit einem Namespace versehen werden.
+Ressourcen, die von Ihrem Unternehmen definiert werden, müssen ihre Felder unter Ihrer Mandanten-ID mit Namespace versehen, um Konflikte mit anderen Ressourcen der Branche und des Anbieters zu vermeiden. Beim Erstellen eines Schemas mit Standardfeldgruppen müssen alle benutzerdefinierten Felder, die Sie innerhalb der Struktur dieser Feldgruppen hinzufügen, auch unter Ihrer Mandanten-ID mit einem Namespace versehen werden.
 
 >[!NOTE]
 >

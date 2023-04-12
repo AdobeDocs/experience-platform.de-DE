@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Datenzugriff in Jupyterlab-Notebooks
 description: In diesem Handbuch wird beschrieben, wie Sie mit Jupyter Notebooks, die in Data Science Workspace erstellt wurden, auf Ihre Daten zugreifen können.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '3294'
-ht-degree: 23%
+source-wordcount: '3292'
+ht-degree: 29%
 
 ---
 
@@ -17,7 +17,7 @@ Jeder unterstützte Kernel bietet native Funktionen, mit denen Sie Platform-Date
 
 ## Erste Schritte
 
-Bevor Sie dieses Handbuch lesen, lesen Sie bitte die [[!DNL JupyterLab] Benutzerhandbuch](./overview.md) für eine Einführung auf hoher Ebene in [!DNL JupyterLab] und seiner Rolle in Data Science Workspace.
+Bevor Sie dieses Handbuch lesen, nutzen Sie bitte das [[!DNL JupyterLab] Benutzerhandbuch](./overview.md) für eine allgemeine Einführung in [!DNL JupyterLab] und dessen Rolle im Datenwissenschafts-Arbeitsbereich.
 
 ## Einschränkungen für Notebook-Daten {#notebook-data-limits}
 
@@ -31,7 +31,7 @@ Für [!DNL Python] und R, ein mit 40 GB RAM konfigurierter Notebook-Server, wurd
 
 Die verwendeten ExperienceEvent-Schemadaten variierten in ihrer Größe von 1.000 Zeilen (1.000) bis zu einer Milliarde (1.000) Zeilen. Beachten Sie Folgendes für den PySpark und [!DNL Spark] Metriken wurde für die XDM-Daten ein Datumsbereich von 10 Tagen verwendet.
 
-Die Ad-hoc-Schemadaten wurden mit [!DNL Query Service] Erstellen Sie eine Tabelle als &quot;Select&quot;(CTAS). Diese Daten variierten auch von 100 (1.000) Zeilen bis zu einer Milliarde (1.000) Zeilen.
+Die Ad-hoc-Schemadaten wurden mithilfe von [!DNL Query Service] Erstellen Sie eine Tabelle als &quot;Select&quot;(CTAS). Diese Daten variierten auch von 100 (1.000) Zeilen bis zu einer Milliarde (1.000) Zeilen.
 
 ### Verwendung des Batch-Modus im Vergleich zum interaktiven Modus {#mode}
 
@@ -78,16 +78,16 @@ Beim Lesen von Datensätzen mit PySpark- und Scala-Notebooks haben Sie die Mögl
 | Zeilenanzahl | 1K | 10K | 100.000 | 1M | 2M | 3M | 5M | 10 M | 50M | 100M | 500M |
 |-------------------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
 | Größe auf der Festplatte | 2.93 MB | 4.38 MB | 29.02 | 2.69 GB | 5.39 GB | 8.09 GB | 13.42 GB | 26.82 GB | 134.24 GB | 268.39 GB | 1.31TB |
-| SDK (interaktiver Modus) | 33 Sek. | 32.4 Sek. | 55.1 Sek. | 253.5 Sek. | 489.2 Sek. | 729.6 Sek. | 1206.8 Sek. | – | – | – | – |
-| SDK (Batch-Modus) | 815.8 Sek. | 492.8 Sek. | 379.1 Sek. | 637.4 Sek. | 624.5 Sek. | 869.2 Sek. | 1104.1 Sek. | 1786 Sek. | 5387.2 Sek. | 10624.6 Sek. | 50547 Sek. |
+| SDK (interaktiver Modus) | 33s | 32.4s | 55.1s | 253.5s | 489.2s | 729.6s | 1206.8s | – | – | – | – |
+| SDK (Batch-Modus) | 815.8s | 492.8s | 379.1s | 637.4s | 624.5s | 869.2s | 1104.1s | 1786s | 5387.2s | 10624.6s | 50547s |
 
 **Ad-hoc-Schema:** Im interaktiven Modus sollten Sie maximal 5 Millionen Zeilen (~5,36 GB Daten auf der Festplatte) von Nicht-XDM-Daten in weniger als 3 Minuten lesen können. Im Batch-Modus sollten Sie in der Lage sein, maximal 1 Milliarde Zeilen (~1,05 TB Daten auf der Festplatte) von Nicht-XDM-Daten in etwa 18 Minuten zu lesen.
 
 | Zeilenanzahl | 1K | 10K | 100.000 | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
 |--------------|--------|---------|---------|-------|-------|-------|--------|--------|---------|--------|---------|-------|
 | Größe der Festplatte | 1.12 MB | 11.24 MB | 109.48 MB | 2.69 GB | 2.14 GB | 3.21 GB | 5.36 GB | 10.71 GB | 53.58 GB | 107.52 GB | 535.88 GB | 1.05TB |
-| Interaktiver SDK-Modus (in Sekunden) | 28.2 Sek. | 18.6 Sek. | 20.8 Sek. | 20.9 Sek. | 23.8 Sek. | 21.7 Sek. | 24.7 Sek. | – | – | – | – | – |
-| SDK-Batch-Modus (in Sekunden) | 428.8 Sek. | 578.8 Sek. | 641.4 Sek. | 538.5 Sek. | 630.9 Sek. | 467.3 Sek. | 411 Sek. | 675 Sek. | 702 Sek. | 719.2 Sek. | 1022.1 Sek. | 1122.3 Sek. |
+| Interaktiver SDK-Modus (in Sekunden) | 28.2s | 18.6s | 20.8s | 20.9s | 23.8s | 21.7s | 24.7s | – | – | – | – | – |
+| SDK-Batch-Modus (in Sekunden) | 428.8s | 578.8s | 641.4s | 538.5s | 630.9s | 467.3s | 411s | 675s | 702s | 719.2s | 1022.1s | 1122.3s |
 
 ### [!DNL Spark] (Scala-Kernel) Notebook-Datenbeschränkungen: {#scala-data-limits}
 
@@ -96,16 +96,16 @@ Beim Lesen von Datensätzen mit PySpark- und Scala-Notebooks haben Sie die Mögl
 | Zeilenanzahl | 1K | 10K | 100.000 | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
 |---------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
 | Größe der Festplatte | 2.93 MB | 4.38 MB | 29.02 | 2.69 GB | 5.39 GB | 8.09 GB | 13.42 GB | 26.82 GB | 134.24 GB | 268.39 GB | 1.31TB |
-| Interaktiver SDK-Modus (in Sekunden) | 37.9 Sek. | 22.7 Sek. | 45.6 Sek. | 231.7 Sek. | 444.7 Sek. | 660.6 Sek. | 1100 Sek. | – | – | – | – |
-| SDK-Batch-Modus (in Sekunden) | 374.4 Sek. | 398.5 Sek. | 527 Sek. | 487.9 Sek. | 588.9 Sek. | 829 Sek. | 939.1 Sek. | 1441 Sek. | 5473.2 Sek. | 10118.8 | 49207.6 |
+| Interaktiver SDK-Modus (in Sekunden) | 37.9s | 22.7s | 45.6s | 231.7s | 444.7s | 660.6s | 1100s | – | – | – | – |
+| SDK-Batch-Modus (in Sekunden) | 374.4s | 398.5s | 527s | 487.9s | 588.9s | 829s | 939.1s | 1441s | 5473.2s | 10118.8 | 49207.6 |
 
 **Ad-hoc-Schema:** Im interaktiven Modus sollten Sie maximal 5 Millionen Zeilen (~5,36 GB Daten auf der Festplatte) von Nicht-XDM-Daten in weniger als 3 Minuten lesen können. Im Batch-Modus sollten Sie in der Lage sein, maximal 1 Milliarde Zeilen (~1,05 TB Daten auf der Festplatte) von Nicht-XDM-Daten in etwa 16 Minuten zu lesen.
 
 | Zeilenanzahl | 1K | 10K | 100.000 | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
 |--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|
 | Größe der Festplatte | 1.12 MB | 11.24 MB | 109.48 MB | 2.69 GB | 2.14 GB | 3.21 GB | 5.36 GB | 10.71 GB | 53.58 GB | 107.52 GB | 535.88 GB | 1.05TB |
-| Interaktiver SDK-Modus (in Sekunden) | 35.7 Sek. | 31 Sek. | 19.5 Sek. | 25.3 Sek. | 23 Sek. | 33.2 Sek. | 25.5 Sek. | – | – | – | – | – |
-| SDK-Batch-Modus (in Sekunden) | 448.8 Sek. | 459.7 Sek. | 519 Sek. | 475.8 Sek. | 599.9 Sek. | 347.6 Sek. | 407.8 Sek. | 397 Sek. | 518.8 Sek. | 487.9 Sek. | 760.2 Sek. | 975.4 Sek. |
+| Interaktiver SDK-Modus (in Sekunden) | 35.7s | 31s | 19.5s | 25.3s | 23s | 33.2s | 25.5s | – | – | – | – | – |
+| SDK-Batch-Modus (in Sekunden) | 448.8s | 459.7s | 519s | 475.8s | 599.9s | 347.6s | 407.8s | 397s | 518.8s | 487.9s | 760.2s | 975.4s |
 
 ## Python Notebooks {#python-notebook}
 
@@ -148,7 +148,7 @@ df = dataset_reader.limit(100).offset(10).read()
 
 ### Schreiben in einen Datensatz in Python {#write-python}
 
-Um in einen Datensatz in Ihrem JupyterLab-Notebook zu schreiben, wählen Sie im linken Navigationsbereich von JupyterLab die Registerkarte Datensymbol (unten hervorgehoben). Die **[!UICONTROL Datensätze]** und **[!UICONTROL Schemas]** -Verzeichnissen angezeigt. Auswählen **[!UICONTROL Datensätze]** Klicken Sie mit der rechten Maustaste und wählen Sie dann die **[!UICONTROL Daten in Notebook schreiben]** im Dropdown-Menü des Datensatzes, den Sie verwenden möchten. Unten im Notebook wird ein ausführbarer Code-Eintrag angezeigt.
+Um in einen Datensatz in Ihrem JupyterLab-Notebook zu schreiben, wählen Sie im linken Navigationsbereich von JupyterLab die Registerkarte Datensymbol (unten hervorgehoben). Die Verzeichnisse **[!UICONTROL Datensätze]** und **[!UICONTROL Schemata]** werden angezeigt. Auswählen **[!UICONTROL Datensätze]** Klicken Sie mit der rechten Maustaste und wählen Sie dann die **[!UICONTROL Daten in Notebook schreiben]** im Dropdown-Menü des Datensatzes, den Sie verwenden möchten. Unten im Notebook wird ein ausführbarer Code-Eintrag angezeigt.
 
 ![](../images/jupyterlab/data-access/write-dataset.png)
 
@@ -169,9 +169,9 @@ write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 
 ### Abfragedaten verwenden [!DNL Query Service] in [!DNL Python] {#query-data-python}
 
-[!DNL JupyterLab] on [!DNL Platform] ermöglicht Ihnen die Verwendung von SQL in einer [!DNL Python] Notebook für den Datenzugriff über [Adobe Experience Platform Query Service](https://docs.adobe.com/content/help/de-DE/experience-platform/query/home.html). Zugriff auf Daten über [!DNL Query Service] kann aufgrund der kürzeren Ausführungszeiten bei der Verarbeitung großer Datensätze nützlich sein. Beachten Sie, dass die Datenabfrage mithilfe von [!DNL Query Service] hat eine Verarbeitungszeitbeschränkung von zehn Minuten.
+[!DNL JupyterLab] on [!DNL Platform] ermöglicht Ihnen die Verwendung von SQL in einer [!DNL Python] Notebook für den Datenzugriff über [Adobe Experience Platform Query Service](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=de). Der Zugriff auf Daten über den [!DNL Query Service] kann aufgrund der kürzeren Ausführungszeiten bei der Bearbeitung großer Datensätze nützlich sein. Beachten Sie, dass Datenabfragen mit dem [!DNL Query Service] ein Limit bei der Verarbeitungszeit von 10 Minuten aufweisen.
 
-Vor der Verwendung von [!DNL Query Service] in [!DNL JupyterLab], stellen Sie sicher, dass Sie ein Verständnis der [[!DNL Query Service] SQL-Syntax](https://docs.adobe.com/content/help/de-DE/experience-platform/query/home.html#!api-specification/markdown/narrative/technical_overview/query-service/sql/syntax.md).
+Bevor Sie den [!DNL Query Service] in [!DNL JupyterLab] verwenden, sollten Sie Grundlagenkenntnisse zur [[!DNL Query Service] -SQL-Syntax](https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html?lang=de) besitzen.
 
 Abfrage von Daten mit [!DNL Query Service] erfordert, dass Sie den Namen des Zieldatensatzes angeben. Sie können die erforderlichen Code-Zellen generieren, indem Sie den gewünschten Datensatz mit dem **[!UICONTROL Data Explorer]** suchen. Klicken Sie mit der rechten Maustaste auf die Datensatzliste und klicken Sie auf **[!UICONTROL Abfragedaten in Notebook]** , um zwei Code-Zellen in Ihrem Notebook zu generieren. Diese beiden Zellen werden nachfolgend detaillierter beschrieben.
 
@@ -284,7 +284,7 @@ df0 <- dataset_reader$limit(100L)$offset(10L)$read()
 
 ### Schreiben in einen Datensatz in R {#write-r}
 
-Um in einen Datensatz in Ihrem JupyterLab-Notebook zu schreiben, wählen Sie im linken Navigationsbereich von JupyterLab die Registerkarte Datensymbol (unten hervorgehoben). Die **[!UICONTROL Datensätze]** und **[!UICONTROL Schemas]** -Verzeichnissen angezeigt. Auswählen **[!UICONTROL Datensätze]** Klicken Sie mit der rechten Maustaste und wählen Sie dann die **[!UICONTROL Daten in Notebook schreiben]** im Dropdown-Menü des Datensatzes, den Sie verwenden möchten. Unten im Notebook wird ein ausführbarer Code-Eintrag angezeigt.
+Um in einen Datensatz in Ihrem JupyterLab-Notebook zu schreiben, wählen Sie im linken Navigationsbereich von JupyterLab die Registerkarte Datensymbol (unten hervorgehoben). Die Verzeichnisse **[!UICONTROL Datensätze]** und **[!UICONTROL Schemata]** werden angezeigt. Auswählen **[!UICONTROL Datensätze]** Klicken Sie mit der rechten Maustaste und wählen Sie dann die **[!UICONTROL Daten in Notebook schreiben]** im Dropdown-Menü des Datensatzes, den Sie verwenden möchten. Unten im Notebook wird ein ausführbarer Code-Eintrag angezeigt.
 
 ![](../images/jupyterlab/data-access/r-write-dataset.png)
 
@@ -388,15 +388,15 @@ Benutzerdefiniert [!DNL Data Science Workspace] Zauberbefehl zum Lesen oder Schr
 >
 > Zwischenspeichern von Daten mithilfe von `df.cache()` vor dem Schreiben von Daten kann die Notebook-Leistung erheblich verbessern. Dies kann hilfreich sein, wenn Sie einen der folgenden Fehler erhalten:
 > 
-> - Vorgang aufgrund von Staging-Fehler abgebrochen ... Kann nur RDDs mit derselben Anzahl von Elementen in jeder Partition komprimieren.
-> - Remote RPC Client getrennt und andere Speicherfehler.
+> - Auftrag aufgrund von Staging-Fehler abgebrochen ... Kann nur RDDs mit derselben Anzahl von Elementen in jeder Partition komprimieren.
+> - Remote RPC-Client getrennt und andere Speicherfehler.
 > - Schlechte Leistung beim Lesen und Schreiben von Datensätzen.
 > 
 > Siehe [Handbuch zur Fehlerbehebung](../troubleshooting-guide.md) für weitere Informationen.
 
 Sie können die oben genannten Beispiele automatisch im JupyterLab-Buy mit der folgenden Methode generieren:
 
-Wählen Sie im linken Navigationsbereich von JupyterLab die Registerkarte Datensymbol (unten hervorgehoben). Die **[!UICONTROL Datensätze]** und **[!UICONTROL Schemas]** -Verzeichnissen angezeigt. Auswählen **[!UICONTROL Datensätze]** Klicken Sie mit der rechten Maustaste und wählen Sie dann die **[!UICONTROL Daten in Notebook schreiben]** im Dropdown-Menü des Datensatzes, den Sie verwenden möchten. Unten im Notebook wird ein ausführbarer Code-Eintrag angezeigt.
+Wählen Sie im linken Navigationsbereich von JupyterLab die Registerkarte Datensymbol (unten hervorgehoben). Die Verzeichnisse **[!UICONTROL Datensätze]** und **[!UICONTROL Schemata]** werden angezeigt. Auswählen **[!UICONTROL Datensätze]** Klicken Sie mit der rechten Maustaste und wählen Sie dann die **[!UICONTROL Daten in Notebook schreiben]** im Dropdown-Menü des Datensatzes, den Sie verwenden möchten. Unten im Notebook wird ein ausführbarer Code-Eintrag angezeigt.
 
 - Verwendung **[!UICONTROL Daten in Notebook erkunden]** , um eine Lese-Zelle zu generieren.
 - Verwendung **[!UICONTROL Daten in Notebook schreiben]** , um eine Schreibzelle zu erstellen.
@@ -488,8 +488,8 @@ In Scala können Sie `clientContext` Um Platform-Werte abzurufen und zurückzuge
 >
 > Zwischenspeichern von Daten mithilfe von `df.cache()` vor dem Schreiben von Daten kann die Notebook-Leistung erheblich verbessern. Dies kann hilfreich sein, wenn Sie einen der folgenden Fehler erhalten:
 > 
-> - Vorgang aufgrund von Staging-Fehler abgebrochen ... Kann nur RDDs mit derselben Anzahl von Elementen in jeder Partition komprimieren.
-> - Remote RPC Client getrennt und andere Speicherfehler.
+> - Auftrag aufgrund von Staging-Fehler abgebrochen ... Kann nur RDDs mit derselben Anzahl von Elementen in jeder Partition komprimieren.
+> - Remote RPC-Client getrennt und andere Speicherfehler.
 > - Schlechte Leistung beim Lesen und Schreiben von Datensätzen.
 > 
 > Siehe [Handbuch zur Fehlerbehebung](../troubleshooting-guide.md) für weitere Informationen.
@@ -519,7 +519,7 @@ df1.show(10)
 | df1 | Eine Variable, die den Pandas-Dataframe darstellt, der zum Lesen und Schreiben von Daten verwendet wird. |
 | user-token | Ihr Benutzertoken, das automatisch mit `clientContext.getUserToken()`. |
 | service-token | Ihr Service-Token, das automatisch mit `clientContext.getServiceToken()`. |
-| ims-org | Ihre IMS-Organisations-ID, die automatisch mithilfe von `clientContext.getOrgId()`. |
+| ims-org | Ihre Organisations-ID, die automatisch mit `clientContext.getOrgId()`. |
 | api-key | Ihr API-Schlüssel, der automatisch mit `clientContext.getApiKey()`. |
 
 >[!TIP]
@@ -528,7 +528,7 @@ df1.show(10)
 
 Sie können das obige Beispiel automatisch im JupyterLab-Buy mit der folgenden Methode generieren:
 
-Wählen Sie im linken Navigationsbereich von JupyterLab die Registerkarte Datensymbol (unten hervorgehoben). Die **[!UICONTROL Datensätze]** und **[!UICONTROL Schemas]** -Verzeichnissen angezeigt. Auswählen **[!UICONTROL Datensätze]** Klicken Sie mit der rechten Maustaste und wählen Sie dann die **[!UICONTROL Daten in Notebook erkunden]** im Dropdown-Menü des Datensatzes, den Sie verwenden möchten. Unten im Notebook wird ein ausführbarer Code-Eintrag angezeigt.
+Wählen Sie im linken Navigationsbereich von JupyterLab die Registerkarte Datensymbol (unten hervorgehoben). Die Verzeichnisse **[!UICONTROL Datensätze]** und **[!UICONTROL Schemata]** werden angezeigt. Wählen Sie **[!UICONTROL Datensätze]** aus, klicken Sie mit der rechten Maustaste und wählen Sie dann im Dropdown-Menü des Datensatzes, den Sie verwenden möchten, die Option **[!UICONTROL Daten in Notebook erkunden]** aus. Unten im Notebook wird ein ausführbarer Code-Eintrag angezeigt.
 Und
 - Verwendung **[!UICONTROL Daten in Notebook erkunden]** , um eine Lese-Zelle zu generieren.
 - Verwendung **[!UICONTROL Daten in Notebook schreiben]** , um eine Schreibzelle zu erstellen.
@@ -543,8 +543,8 @@ In Scala können Sie `clientContext` Um Platform-Werte abzurufen und zurückzuge
 >
 > Zwischenspeichern von Daten mithilfe von `df.cache()` vor dem Schreiben von Daten kann die Notebook-Leistung erheblich verbessern. Dies kann hilfreich sein, wenn Sie einen der folgenden Fehler erhalten:
 > 
-> - Vorgang aufgrund von Staging-Fehler abgebrochen ... Kann nur RDDs mit derselben Anzahl von Elementen in jeder Partition komprimieren.
-> - Remote RPC Client getrennt und andere Speicherfehler.
+> - Auftrag aufgrund von Staging-Fehler abgebrochen ... Kann nur RDDs mit derselben Anzahl von Elementen in jeder Partition komprimieren.
+> - Remote RPC-Client getrennt und andere Speicherfehler.
 > - Schlechte Leistung beim Lesen und Schreiben von Datensätzen.
 > 
 > Siehe [Handbuch zur Fehlerbehebung](../troubleshooting-guide.md) für weitere Informationen.
@@ -566,12 +566,12 @@ df1.write.format("com.adobe.platform.query")
   .save()
 ```
 
-| element  | description |
+| element  | Beschreibung |
 | ------- | ----------- |
 | df1 | Eine Variable, die den Pandas-Dataframe darstellt, der zum Lesen und Schreiben von Daten verwendet wird. |
 | user-token | Ihr Benutzertoken, das automatisch mit `clientContext.getUserToken()`. |
 | service-token | Ihr Service-Token, das automatisch mit `clientContext.getServiceToken()`. |
-| ims-org | Ihre IMS-Organisations-ID, die automatisch mithilfe von `clientContext.getOrgId()`. |
+| ims-org | Ihre Organisations-ID, die automatisch mit `clientContext.getOrgId()`. |
 | api-key | Ihr API-Schlüssel, der automatisch mit `clientContext.getApiKey()`. |
 
 >[!TIP]

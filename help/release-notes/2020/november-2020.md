@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2184'
+source-wordcount: '2182'
 ht-degree: 26%
 
 ---
@@ -34,7 +34,7 @@ Aktualisierungen vorhandener Funktionen:
 
 ## Adobe Experience Platform Data Lake-Migration {#migration}
 
-Während Adobe den Data Lake von Gen1 zu Gen2 migriert, können Benutzer zwar vom Data Lake aus lesen, aber alle Funktionen, die in den Data Lake schreiben, sind betroffen. Adobe wird sich an Systemadministratoren wenden, um die Auswirkungen der Migration ausführlich zu erörtern und die Migrationsdaten und -zeiten für bestimmte IMS-Organisationen zu bestätigen.
+Während Adobe den Data Lake von Gen1 zu Gen2 migriert, können Benutzer zwar vom Data Lake aus lesen, aber alle Funktionen, die in den Data Lake schreiben, sind betroffen. Adobe wird sich an Systemadministratoren wenden, um die Auswirkungen der Migration ausführlich zu erörtern und die Migrationsdaten und -zeiten für bestimmte Einrichtungen zu bestätigen.
 
 Weitere Informationen finden Sie im [Data Lake-Migrationshandbuch](../../landing/adls2-gen2-migration.md).
 
@@ -213,7 +213,7 @@ Adobe Experience Platform kann Daten aus externen Quellen erfassen und gleichzei
 | Hierarchische Zuordnung | Sie können während der Datenerfassung eine Vorschau einer hierarchischen Quelldatei wie JSON oder Parquet anzeigen. Weitere Informationen finden Sie im Tutorial unter [Konfigurieren eines Datenflusses für Cloud-Speicher-Connectoren in der Benutzeroberfläche](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) für weitere Informationen. |
 | API-Unterstützung für die Zuordnung in Streaming-Quellen | Sie können jetzt APIs verwenden, um Zuordnungsfunktionen mit Streaming-Quellen auszuführen. |
 | API-Unterstützung für benutzerdefinierte Trennzeichen für Cloud-Speicher-Quellen | Sie können jetzt nicht CSV-getrennte Dateien mithilfe von Cloud-Speicher-Quellen erfassen. Sie können ein beliebiges Trennzeichen für einzelne Spalten wie Tabulatoren, Kommas, senkrechte Striche, Semikolons oder Hash verwenden, um flache Dateien in jedem beliebigen Format zu erfassen. |
-| Sandbox-Unterstützung für Adobe Audience Manager-Connector | Der Audience Manager-Connector ist jetzt Sandbox-unterstützt. Benutzer können den Connector aktivieren, um Audience Manager-Datensätze an die Sandbox ihrer Wahl zu leiten (einschließlich Nicht-Produktions-Sandboxes). Die Konfiguration ist auf eine Sandbox pro IMS-Organisation beschränkt. |
+| Sandbox-Unterstützung für Adobe Audience Manager-Connector | Der Audience Manager-Connector ist jetzt Sandbox-unterstützt. Benutzer können den Connector aktivieren, um Audience Manager-Datensätze an die Sandbox ihrer Wahl zu leiten (einschließlich Nicht-Produktions-Sandboxes). Die Konfiguration ist auf eine Sandbox pro Organisation beschränkt. |
 | UX-Verbesserungen | Die dateibasierte Erfassung ist jetzt über den Quellkatalog verfügbar. |
 
 Weitere Informationen zu Quellen finden Sie im Abschnitt [Quellen – Übersicht](../../sources/home.md).

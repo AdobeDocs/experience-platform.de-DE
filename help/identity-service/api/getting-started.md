@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Identity Service API-Anleitung
 description: Mit der Identity Service-API können Entwickler die geräteübergreifende, kanalübergreifende und nahezu echtzeitübergreifende Identifizierung Ihrer Kunden mithilfe von Identitätsdiagrammen in Adobe Experience Platform verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
-source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '767'
+source-wordcount: '764'
 ht-degree: 36%
 
 ---
@@ -51,7 +51,7 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 ### regionenbasiertes Routing
 
-Die [!DNL Identity Service] API verwendet regionenspezifische Endpunkte, für die die Einbeziehung einer `{REGION}` als Teil des Anfragepfads. Während der Bereitstellung Ihrer IMS-Organisation wird eine Region in Ihrem IMS-Org-Profil bestimmt und gespeichert. Durch Verwendung des richtigen Bereichs für jeden Endpunkt wird sichergestellt, dass alle Anfragen, die mit dem [!DNL Identity Service] Die API wird an die entsprechende Region weitergeleitet.
+Die [!DNL Identity Service] API verwendet regionenspezifische Endpunkte, für die die Einbeziehung einer `{REGION}` als Teil des Anfragepfads. Während der Bereitstellung Ihres Unternehmens wird eine Region bestimmt und in Ihrem Unternehmensprofil gespeichert. Durch Verwendung des richtigen Bereichs für jeden Endpunkt wird sichergestellt, dass alle Anfragen, die mit dem [!DNL Identity Service] Die API wird an die entsprechende Region weitergeleitet.
 
 Derzeit werden zwei Regionen unterstützt von [!DNL Identity Service] APIs: VA7 und NLD2.
 
@@ -66,7 +66,7 @@ Die folgende Tabelle zeigt Beispielpfade mit Regionen:
 >
 >Anfragen, die ohne Angabe einer Region durchgeführt werden, können dazu führen, dass Aufrufe an die falsche Region weitergeleitet werden oder dass Aufrufe unerwartet fehlschlagen.
 
-Wenn Sie die Region in Ihrem IMS-Org-Profil nicht finden können, wenden Sie sich an Ihren Systemadministrator, um Unterstützung zu erhalten.
+Wenn Sie die Region in Ihrem Unternehmensprofil nicht finden können, wenden Sie sich an Ihren Systemadministrator, um Unterstützung zu erhalten.
 
 ## Verwenden der [!DNL Identity Service] API
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht zu Segment Match
 description: Segment Match ist ein Service zur Segmentfreigabe in Adobe Experience Platform, mit dem zwei oder mehr Platform-Benutzende Segmentdaten auf sichere, geregelte und datenschutzsensible Weise austauschen können.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1998'
-ht-degree: 99%
+source-wordcount: '1997'
+ht-degree: 98%
 
 ---
 
@@ -76,7 +76,7 @@ Es gibt zwei Berechtigungen, die mit [!DNL Segment Match] verknüpft sind:
 
 | Berechtigung | Beschreibung |
 | --- | --- |
-| Verbindungen für Zielgruppenfreigaben verwalten | Mit dieser Berechtigung können Sie den Partner-Handshake-Prozess abschließen, der zwei IMS-Organisationen verbindet, um [!DNL Segment Match]-Flüsse zu aktivieren. |
+| Verbindungen für Zielgruppenfreigaben verwalten | Mit dieser Berechtigung können Sie den Partner-Handshake-Prozess abschließen, der zwei Organisationen verbindet, um [!DNL Segment Match] Flüsse. |
 | Zielgruppenfreigaben verwalten | Mit dieser Berechtigung können Sie Feeds (das für [!DNL Segment Match] verwendete Datenpaket) für aktive Partner (Partner, die vom Administrationspersonal mit Zugriff auf **[!UICONTROL Verbindungen für Zielgruppenfreigaben]** verbunden wurden) erstellen, bearbeiten und veröffentlichen. |
 
 Weiterführende Informationen zu Zugriffssteuerung und Berechtigungen finden Sie in der [Übersicht zur Zugriffssteuerung](../../../access-control/home.md).

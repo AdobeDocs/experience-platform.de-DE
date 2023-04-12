@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Schema Registry-API
 description: Mit der Schema Registry-API können Entwickler alle Schemas und zugehörigen Experience-Datenmodell (XDM)-Ressourcen in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1118'
-ht-degree: 8%
+source-wordcount: '1116'
+ht-degree: 9%
 
 ---
 
@@ -71,7 +71,7 @@ Siehe [Handbuch zur Konversion von CSV zu Schemas](./export.md) für weitere Inf
 
 ## Exportieren {#export}
 
-Mit der Schema Registry-API können Sie XDM-Ressourcen zwischen Sandboxes und IMS-Organisationen übertragen und freigeben. Für jedes Schema, jede Feldergruppe oder jeden Datentyp können Sie eine Export-Payload generieren, die die Struktur der Ressource und alle abhängigen Ressourcen enthält. Diese Payload kann dann verwendet werden, um die Ressource in eine Ziel-Sandbox und IMS-Organisation zu importieren.
+Mit der Schema Registry-API können Sie XDM-Ressourcen zwischen Sandboxes und Organisationen übertragen und freigeben. Für jedes Schema, jede Feldergruppe oder jeden Datentyp können Sie eine Export-Payload generieren, die die Struktur der Ressource und alle abhängigen Ressourcen enthält. Diese Payload kann dann verwendet werden, um die Ressource in eine Ziel-Sandbox und eine Organisation zu importieren.
 
 Siehe [Export-Endpunkthandbuch](./export.md) für weitere Informationen zum Erstellen einer Export-Payload für eine vorhandene XDM-Ressource.
 

@@ -4,10 +4,10 @@ title: API-Endpunkt "Zusammenführungsrichtlinien"
 type: Documentation
 description: Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich eine vollständige Ansicht über jeden einzelnen Ihrer Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden, um eine einheitliche Ansicht zu schaffen.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2472'
-ht-degree: 71%
+source-wordcount: '2468'
+ht-degree: 68%
 
 ---
 
@@ -27,7 +27,7 @@ Der in diesem Handbuch verwendete API-Endpunkt ist Teil von [[!DNL Real-Time Cus
 
 ## Komponenten von Zusammenführungsrichtlinien {#components-of-merge-policies}
 
-Zusammenführungsrichtlinien gelten jeweils als privat für Ihre IMS-Organisation, sodass Sie verschiedene Richtlinien erstellen können, um Schemas auf die gewünschte Weise zusammenzuführen. Alle API-Zugriffe [!DNL Profile] -Daten erfordert eine Zusammenführungsrichtlinie. Es wird jedoch eine Standardeinstellung verwendet, wenn keine explizite Angabe erfolgt. [!DNL Platform] stellt Unternehmen eine standardmäßige Zusammenführungsrichtlinie zur Verfügung. Alternativ können Sie eine Zusammenführungsrichtlinie für eine bestimmte Experience-Datenmodell (XDM)-Schemaklasse erstellen und sie als Standard für Ihre Organisation markieren.
+Zusammenführungsrichtlinien sind für Ihre Organisation privat, sodass Sie verschiedene Richtlinien erstellen können, um Schemas auf die gewünschte Weise zusammenzuführen. Alle API-Zugriffe [!DNL Profile] -Daten erfordert eine Zusammenführungsrichtlinie. Es wird jedoch eine Standardeinstellung verwendet, wenn keine explizite Angabe erfolgt. [!DNL Platform] stellt Unternehmen eine standardmäßige Zusammenführungsrichtlinie zur Verfügung. Alternativ können Sie eine Zusammenführungsrichtlinie für eine bestimmte Experience-Datenmodell (XDM)-Schemaklasse erstellen und sie als Standard für Ihre Organisation markieren.
 
 Während jede Organisation potenziell über mehrere Zusammenführungsrichtlinien pro Schemaklasse verfügen kann, kann jede Klasse nur eine standardmäßige Zusammenführungsrichtlinie haben. Alle als Standard festgelegten Zusammenführungsrichtlinien werden verwendet, wenn der Name der Schemaklasse angegeben und eine Zusammenführungsrichtlinie erforderlich, jedoch nicht angegeben ist.
 
@@ -37,7 +37,7 @@ Während jede Organisation potenziell über mehrere Zusammenführungsrichtlinien
 
 Um sicherzustellen, dass alle Profilnutzer in den Randbereichen mit derselben Ansicht arbeiten, können Zusammenführungsrichtlinien als am Rand aktiv markiert werden. Damit ein Segment im Randbereich aktiviert (bzw. als Randsegment markiert) werden kann, muss es mit einer Zusammenführungsrichtlinie verknüpft sein, die als im Randbereich aktiv markiert ist. Wenn ein Segment **nicht** mit einer Zusammenführungsrichtlinie verknüpft ist, die als im Randbereich aktiv markiert ist, wird das Segment nicht als im Randbereich aktiv, sondern als Streaming-Segment markiert.
 
-Darüber hinaus kann jede IMS-Organisation nur über **eine** Zusammenführungsrichtlinie verfügen, die im Randbereich aktiv ist. Wenn eine Zusammenführungsrichtlinie am Edge aktiv ist, kann sie für andere Systeme am Edge-Rand wie Edge Profile, Edge Segmentation und Ziele an Edge verwendet werden.
+Darüber hinaus kann jede Organisation **one** Zusammenführungsrichtlinie, die an der Kante aktiv ist. Wenn eine Zusammenführungsrichtlinie am Edge aktiv ist, kann sie für andere Systeme am Edge-Rand wie Edge Profile, Edge Segmentation und Ziele an Edge verwendet werden.
 
 ### Komplettes Zusammenführungsrichtlinienobjekt
 
@@ -193,7 +193,7 @@ Um mehr über XDM zu erfahren und mit Schemas in Experience Platform zu arbeiten
 
 ## Zusammenführungsrichtlinien aufrufen {#access-merge-policies}
 
-Verwenden der [!DNL Real-Time Customer Profile] API, die `/config/mergePolicies` Mit dem -Endpunkt können Sie eine Suchanfrage ausführen, um eine bestimmte Zusammenführungsrichtlinie anhand ihrer Kennung anzuzeigen oder auf alle Zusammenführungsrichtlinien in Ihrer IMS-Organisation zuzugreifen, gefiltert nach bestimmten Kriterien. Sie können auch die `/config/mergePolicies/bulk-get` Endpunkt zum Abrufen mehrerer Zusammenführungsrichtlinien anhand ihrer IDs. Die Schritte zum Ausführen dieser Aufrufe werden in den folgenden Abschnitten beschrieben.
+Verwenden der [!DNL Real-Time Customer Profile] API, die `/config/mergePolicies` Mit dem -Endpunkt können Sie eine Suchanfrage ausführen, um eine bestimmte Zusammenführungsrichtlinie anhand ihrer Kennung anzuzeigen oder auf alle Zusammenführungsrichtlinien in Ihrer Organisation zuzugreifen, gefiltert nach bestimmten Kriterien. Sie können auch die `/config/mergePolicies/bulk-get` Endpunkt zum Abrufen mehrerer Zusammenführungsrichtlinien anhand ihrer IDs. Die Schritte zum Ausführen dieser Aufrufe werden in den folgenden Abschnitten beschrieben.
 
 ### Auf eine einzelne Zusammenführungsrichtlinie anhand der Kennung zugreifen
 
@@ -347,7 +347,7 @@ Einzelheiten zu den einzelnen Elementen, aus denen eine Zusammenführungsrichtli
 
 ### Mehrere Zusammenführungsrichtlinien anhand von Kriterien auflisten
 
-Sie können verschiedene Zusammenführungsrichtlinien innerhalb Ihrer IMS-Organisation auflisten, indem Sie eine GET-Anfrage an den `/config/mergePolicies`-Endpunkt richten und optionale Abfrageparameter zum Filtern, Sortieren und Paginieren der Antwort verwenden. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (&amp;) voneinander getrennt werden. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren Zusammenführungsrichtlinien abgerufen.
+Sie können mehrere Zusammenführungsrichtlinien innerhalb Ihres Unternehmens auflisten, indem Sie eine GET-Anfrage an die `/config/mergePolicies` -Endpunkt und Verwendung optionaler Abfrageparameter zum Filtern, Sortieren und Paginieren der Antwort. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (&amp;) voneinander getrennt werden. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren Zusammenführungsrichtlinien abgerufen.
 
 **API-Format**
 

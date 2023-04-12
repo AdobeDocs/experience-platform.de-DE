@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Zeitplan-API-Endpunkt
 description: Zeitpläne sind ein Tool, mit dem Batch-Segmentierungsaufträge einmal täglich automatisch ausgeführt werden können.
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: e24a2ba0321ebaa8e91f96477f58bfa4915f47ce
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2011'
-ht-degree: 25%
+source-wordcount: '2009'
+ht-degree: 24%
 
 ---
 
@@ -52,7 +52,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 
 **Antwort**
 
-Bei erfolgreicher Antwort wird der HTTP-Status-Code 200 mit einer Liste der für die angegebene IMS-Organisation abgerufenen Zeitpläne als JSON zurückgegeben.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Zeitplänen für die angegebene Organisation als JSON zurück.
 
 >[!NOTE]
 >
@@ -274,7 +274,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `path` | Der Pfad des Werts, den Sie ändern möchten. Da Sie in diesem Fall den Status des Zeitplans aktualisieren, müssen Sie den Wert von `path` auf &quot;/state&quot;. |
-| `value` | Der aktualisierte Wert des Status des Zeitplans. Dieser Wert kann entweder als &quot;aktiv&quot;oder &quot;inaktiv&quot;festgelegt werden, um den Zeitplan zu aktivieren oder zu deaktivieren. Bitte beachten Sie, dass Sie **cannot** einen Zeitplan deaktivieren, wenn die IMS-Organisation für Streaming aktiviert wurde. |
+| `value` | Der aktualisierte Wert des Status des Zeitplans. Dieser Wert kann entweder als &quot;aktiv&quot;oder &quot;inaktiv&quot;festgelegt werden, um den Zeitplan zu aktivieren oder zu deaktivieren. Bitte beachten Sie, dass Sie **cannot** einen Zeitplan deaktivieren, wenn die Organisation für Streaming aktiviert wurde. |
 
 **Antwort**
 

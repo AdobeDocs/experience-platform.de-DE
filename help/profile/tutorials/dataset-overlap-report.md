@@ -4,9 +4,9 @@ title: Generieren des Datensatzüberlagerungsberichts
 type: Tutorial
 description: In diesem Tutorial werden die Schritte beschrieben, die zum Generieren des Berichts zur Datensatzüberlappung mithilfe der Echtzeit-Kundenprofil-API erforderlich sind.
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '888'
+source-wordcount: '884'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ Die erforderlichen Kopfzeilen für alle API-Aufrufe in diesem Tutorial sind:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`: Die `Authorization` -Kopfzeile erfordert ein Zugriffstoken, dem das Wort vorangestellt wird `Bearer`. Ein neuer Zugriffstoken-Wert muss alle 24 Stunden generiert werden.
 * `x-api-key: {API_KEY}`: Die `API Key` wird auch als `Client ID` und ist ein Wert, der nur einmal generiert werden muss.
-* `x-gw-ims-org-id: {ORG_ID}`: Die `IMS Org` wird auch als `Organization ID` und nur einmal generiert werden.
+* `x-gw-ims-org-id: {ORG_ID}`: Die Organisations-ID muss nur einmal generiert werden.
 
 Nachdem Sie das Authentifizierungs-Tutorial abgeschlossen und die Werte für die erforderlichen Kopfzeilen erfasst haben, können Sie mit dem Aufrufen der Echtzeit-Kunden-API beginnen.
 

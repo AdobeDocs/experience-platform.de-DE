@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über die Adobe Privacy JavaScript Library
 description: Mit der Adobe Privacy JavaScript Library können Sie Identitäten von Datensubjekten abrufen, die in Privacy Service verwendet werden können.
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1006'
 ht-degree: 57%
 
 ---
@@ -207,7 +207,7 @@ Im Folgenden finden Sie eine Liste der zulässigen Konfigurationsparameter für 
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `imsOrgID` | Die Kennung Ihrer IMS-Organisation. |
+| `imsOrgID` | Ihre Organisations-ID. |
 
 **Adobe Target**
 

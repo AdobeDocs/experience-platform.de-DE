@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Filtern von Katalogdaten mithilfe von Abfrageparametern
 description: Die Catalog Service-API ermöglicht ein Filtern von Antwortdaten mithilfe von Abfrageparametern für Anfragen. Zu den Best Practices bei Catalog gehört die Verwendung von Filtern in allen API-Aufrufen, da sie die Last der API reduzieren und die Gesamtleistung verbessern.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '2121'
+source-wordcount: '2120'
 ht-degree: 88%
 
 ---
@@ -206,7 +206,7 @@ Einige Catalog-Objekte unterstützen die Verwendung eines `tags`-Attributs. Tags
 Bei Verwendung von Tags sind einige Einschränkungen zu beachten:
 
 * Die einzigen Catalog-Objekte, die derzeit Tags unterstützen, sind Datensätze, Batches und Verbindungen.
-* Tag-Namen sind für Ihre IMS-Organisation eindeutig.
+* Tag-Namen sind für Ihre Organisation eindeutig.
 * Adobe-Prozesse können Tags für bestimmte Verhaltensweisen nutzen. Den Namen dieser Tags wird standardmäßig „adobe“ vorangestellt. Daher sollten Sie diese Konvention beim Deklarieren von Tag-Namen vermeiden.
 * Die folgenden Tag-Namen sind für die Verwendung in allen [!DNL Experience Platform]und kann daher nicht als Tag-Name für Ihre Organisation deklariert werden:
    * `unifiedProfile`: Dieser Tag-Name ist für Datensätze reserviert, die von [[!DNL Real-Time Customer Profile]](../../profile/home.md) erfasst werden sollen.

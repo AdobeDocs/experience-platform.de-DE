@@ -2,10 +2,10 @@
 description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt „/authoring/destination-servers“ ausführen können. Die Server- und Vorlagenspezifikationen für Ihr Ziel können im Adobe Experience Platform Destination SDK über den allgemeinen Endpunkt „/authoring/destination-servers“ konfiguriert werden.
 title: API-Vorgänge für Ziel-Server-Endpunkte
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1358'
-ht-degree: 95%
+source-wordcount: '1355'
+ht-degree: 90%
 
 ---
 
@@ -603,7 +603,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrer neu erst
 
 ## Auflisten von Ziel-Server-Konfigurationen {#retrieve-list}
 
-Sie können eine Liste aller Ziel-Server-Konfigurationen für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/authoring/destination-servers` senden.
+Sie können eine Liste aller Zielserverkonfigurationen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an die `/authoring/destination-servers` -Endpunkt.
 
 **API-Format**
 
@@ -613,7 +613,7 @@ GET /authoring/destination-servers
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird die Liste der Ziel-Server-Konfigurationen abgerufen, auf die Sie Zugriff haben, basierend auf der IMS-Organisation und der Sandbox-Konfiguration.
+Mit der folgenden Anfrage wird die Liste der Zielserverkonfigurationen abgerufen, auf die Sie je nach Organisations- und Sandbox-Konfiguration Zugriff haben.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -625,7 +625,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Antwort**
 
-Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste der Ziel-Server-Konfigurationen zurück, auf die Sie Zugriff haben, basierend auf der von Ihnen verwendeten IMS-Organisations-ID und dem Sandbox-Namen. Eine `instanceId` entspricht der Vorlage für einen Ziel-Server. Die Antwort wird verkürzt angegeben.
+Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste von Ziel-Server-Konfigurationen zurück, auf die Sie Zugriff haben, basierend auf der Organisations-ID und dem Sandbox-Namen, die Sie verwendet haben. Eine `instanceId` entspricht der Vorlage für einen Ziel-Server. Die Antwort wird verkürzt angegeben.
 
 ```json
 {

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei Privacy Service
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Privacy Service sowie Informationen zu häufig aufgetretenen Fehlern in der API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '917'
-ht-degree: 97%
+source-wordcount: '916'
+ht-degree: 96%
 
 ---
 
@@ -107,7 +107,7 @@ In der folgenden Tabelle sind einige häufige Fehler in [!DNL Privacy Service] m
 | Ungültiger Namespace. | Ein für eine Benutzer-ID bereitgestellter Identity-Namespace war ungültig. Eine Liste der zulässigen Namespaces finden Sie im Anhang des [!DNL Privacy Service]-API-Handbuchs im Abschnitt zu [Standard-Identity-Namespaces](./api/appendix.md#standard-namespaces). Wenn Sie einen benutzerdefinierten Namespace verwenden, stellen Sie sicher, dass Sie die `type`-Eigenschaft der ID als benutzerdefiniert festlegen. |
 | Teilweise abgeschlossen. | Der Auftrag wurde erfolgreich abgeschlossen. Einige Daten waren jedoch für die jeweilige Anfrage nicht anwendbar und wurden übersprungen. |
 | Die Daten haben nicht das erforderliche Format. | Einer oder mehrere Datenwerte für die angegebene Anwendung haben nicht das korrekte Format. Weitere Informationen finden Sie in den Auftragsdetails. |
-| IMS-Organisation nicht bereitgestellt. | Diese Meldung tritt auf, wenn Ihre IMS-Organisation nicht für [!DNL Privacy Service] bereitgestellt wurde. Weiterführende Informationen erhalten Sie von Ihren Admins. |
+| IMS-Organisation nicht bereitgestellt. | Diese Meldung tritt auf, wenn Ihr Unternehmen nicht für [!DNL Privacy Service]. Weiterführende Informationen erhalten Sie von Ihren Admins. |
 | Zugriff und Berechtigungen sind erforderlich. | Zugriff und Berechtigungen sind erforderlich, um [!DNL Privacy Service] verwenden zu können. Wenden Sie sich an Ihre Admins, um Zugriff zu erhalten. |
 | Beim Hochladen und Archivieren der Zugriffsdaten ist ein Problem aufgetreten. | Laden Sie bei diesem Fehler die Zugriffsdaten erneut hoch und versuchen Sie es erneut. |
 | Arbeitslast für aktuelles Limit der Dokumentzahl überschritten. | Reduzieren Sie bei diesem Fehler die Übermittlungsrate und versuchen Sie es erneut. |

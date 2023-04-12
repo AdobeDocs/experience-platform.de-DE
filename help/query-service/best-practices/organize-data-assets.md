@@ -2,9 +2,9 @@
 title: Best Practices für die Organisation von Daten-Assets in Query Service
 description: In diesem Dokument wird eine logische Methode zur Organisation von Daten beschrieben, um die Verwendung von Query Service zu erleichtern.
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: d3ea7ee751962bb507c91e1afea0da35da60a66d
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '786'
 ht-degree: 0%
 
 ---
@@ -129,7 +129,7 @@ dataset3| table
 
 ## Aktualisieren oder Entfernen von Daten-Assets aus einem Datencontainer
 
-Wenn die Anzahl der Daten-Assets in Ihrer IMS-Organisation (oder Sandbox) zunimmt, ist es erforderlich, Daten-Assets aus einem Datencontainer zu aktualisieren oder zu entfernen. Einzelne Assets können aus dem Organisations-Container entfernt werden, indem mithilfe der Punktnotation auf die entsprechende Datenbank und den entsprechenden Schemanamen verwiesen wird. Die Tabelle und Ansicht (`t1` und `v1` bzw. hinzugefügt zu `databaseA.schema1` im ersten Beispiel werden mithilfe der Syntax im folgenden Beispiel entfernt.
+Wenn die Anzahl der Daten-Assets in Ihrer Organisation (oder Sandbox) zunimmt, ist es erforderlich, Daten-Assets aus einem Datencontainer zu aktualisieren oder zu entfernen. Einzelne Assets können aus dem Organisations-Container entfernt werden, indem mithilfe der Punktnotation auf die entsprechende Datenbank und den entsprechenden Schemanamen verwiesen wird. Die Tabelle und Ansicht (`t1` und `v1` bzw. hinzugefügt zu `databaseA.schema1` im ersten Beispiel werden mithilfe der Syntax im folgenden Beispiel entfernt.
 
 ```sql
 ALTER TABLE databaseA.schema2.t1 REMOVE SCHEMA databaseA.schema2;
@@ -138,7 +138,7 @@ ALTER VIEW databaseA.schema2.v1 REMOVE SCHEMA databaseA.schema2;
 
 ### Entfernen von Daten-Assets
 
-Die [DROP TABLE](../sql/syntax.md#drop-table) -Funktion entfernt ein Daten-Asset nur physisch aus der [!DNL Data Lake] wenn eine einzige Referenz auf die Tabelle in allen Datenbanken Ihrer IMS-Organisation vorhanden ist.
+Die [DROP TABLE](../sql/syntax.md#drop-table) -Funktion entfernt ein Daten-Asset nur physisch aus der [!DNL Data Lake] wenn eine einzige Referenz auf die Tabelle in allen Datenbanken Ihres Unternehmens vorhanden ist.
 
 ```sql
 DROP TABLE databaseA.schema2.t1;

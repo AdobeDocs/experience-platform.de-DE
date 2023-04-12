@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; API
+keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;
 title: Profil-Export-Auftrags-API-Endpunkt
 type: Documentation
 description: Das Echtzeit-Kundenprofil ermöglicht es Ihnen, innerhalb von Adobe Experience Platform eine zentrale Ansicht einzelner Kunden zu erstellen, indem es Daten aus verschiedenen Quellen zusammenführt, einschließlich Attributdaten und Verhaltensdaten. Profildaten können dann zur weiteren Verarbeitung in einen Datensatz exportiert werden.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1519'
-ht-degree: 10%
+source-wordcount: '1517'
+ht-degree: 11%
 
 ---
 
@@ -180,7 +180,7 @@ Eine erfolgreiche Antwort gibt einen Datensatz zurück, der mit Profildaten gef�
 
 ## Alle Exportaufträge auflisten
 
-Sie können eine Liste aller Exportaufträge für eine bestimmte IMS-Organisation zurückgeben, indem Sie eine GET-Anfrage an die `export/jobs` -Endpunkt. Die Anfrage unterstützt auch die Abfrageparameter `limit` und `offset`, wie unten dargestellt.
+Sie können eine Liste aller Exportaufträge für eine bestimmte Organisation zurückgeben, indem Sie eine GET-Anfrage an die `export/jobs` -Endpunkt. Die Anfrage unterstützt auch die Abfrageparameter `limit` und `offset`, wie unten dargestellt.
 
 **API-Format**
 
@@ -209,7 +209,7 @@ curl -X GET \
 
 **Antwort**
 
-Die Antwort enthält eine `records` -Objekt, das die von Ihrer IMS-Organisation erstellten Exportaufträge enthält.
+Die Antwort enthält eine `records` -Objekt, das die von Ihrem Unternehmen erstellten Exportaufträge enthält.
 
 ```json
 {

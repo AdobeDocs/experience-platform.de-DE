@@ -5,10 +5,10 @@ title: Experience Platform-APIs authentifizieren und aufrufen
 type: Tutorial
 description: Dieses Dokument bietet eine schrittweise Anleitung für den Zugriff auf ein Adobe Experience Platform-Entwicklerkonto, damit Sie Aufrufe an Experience Platform-APIs durchführen können.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1269'
-ht-degree: 17%
+source-wordcount: '1267'
+ht-degree: 16%
 
 ---
 
@@ -31,7 +31,7 @@ In diesem Tutorial wird beschrieben, wie Sie die erforderlichen Anmeldeinformati
 
 Um Experience Platform-APIs erfolgreich aufrufen zu können, benötigen Sie Folgendes:
 
-* Eine IMS-Organisation mit Zugriff auf Adobe Experience Platform.
+* Eine Organisation mit Zugriff auf Adobe Experience Platform.
 * Ein Admin Console-Administrator, der Sie als Entwickler und Anwender für ein Produktprofil hinzufügen kann.
 
 Sie müssen auch über eine Adobe ID verfügen, um dieses Tutorial abzuschließen. Wenn Sie keine Adobe ID haben, können Sie wie folgt eine erstellen:
@@ -54,7 +54,7 @@ Nachdem Sie als Entwickler zugewiesen wurden, können Sie mit der Erstellung von
 
 Ihre [!DNL Admin Console] -Administrator muss Sie auch als Benutzer zum selben Produktprofil hinzufügen. Siehe Handbuch unter [Verwalten von Benutzergruppen in [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) für weitere Informationen.
 
-## API-Schlüssel, Kennung der IMS-Organisation und Client-Geheimnis generieren {#api-ims-secret}
+## API-Schlüssel, Organisations-ID und Client-Geheimnis generieren {#api-ims-secret}
 
 >[!NOTE]
 >

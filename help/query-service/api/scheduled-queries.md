@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Zeitplan-Endpunkt
 description: In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie für geplante Abfragen mit der Query Service-API ausführen können.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1136'
-ht-degree: 34%
+source-wordcount: '1132'
+ht-degree: 35%
 
 ---
 
@@ -19,7 +19,7 @@ Nachdem Sie nun wissen, welche Kopfzeilen zu verwenden sind, können Sie damit b
 
 ### Liste geplanter Abfragen abrufen
 
-Sie können eine Liste aller geplanten Abfragen für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an die `/schedules` -Endpunkt.
+Sie können eine Liste aller geplanten Abfragen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an die `/schedules` -Endpunkt.
 
 **API-Format**
 
@@ -45,7 +45,7 @@ Im Folgenden finden Sie eine Liste der verfügbaren Abfrageparameter für die Au
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird die neueste geplante Abfrage abgerufen, die für Ihre IMS-Organisation erstellt wurde.
+Mit der folgenden Anfrage wird die neueste geplante Abfrage abgerufen, die für Ihr Unternehmen erstellt wurde.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
@@ -57,7 +57,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste geplanter Abfragen für die angegebene IMS-Organisation zurück. Die folgende Antwort gibt die neueste geplante Abfrage zurück, die für Ihre IMS-Organisation erstellt wurde.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste geplanter Abfragen für die angegebene Organisation zurück. Die folgende Antwort gibt die neueste geplante Abfrage zurück, die für Ihr Unternehmen erstellt wurde.
 
 ```json
 {

@@ -6,10 +6,10 @@ description: In Adobe Experience Platform sind berechnete Attribute Funktionen z
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
 hide: true
 hidefromtoc: true
-source-git-commit: 5ae7ddbcbc1bc4d7e585ca3e3d030630bfb53724
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2275'
-ht-degree: 64%
+source-wordcount: '2274'
+ht-degree: 62%
 
 ---
 
@@ -83,7 +83,7 @@ curl -X POST \
 | `name` | Name des berechneten Attributfelds als Zeichenfolge. |
 | `path` | Pfad zum Feld mit dem berechneten Attribut. Dieser Pfad befindet sich im `properties`-Attribut des Schemas und sollte NICHT den Feldnamen im Pfad beinhalten. Lassen Sie beim Schreiben des Pfads die verschiedenen Ebenen von `properties`-Attributen weg. |
 | `{TENANT_ID}` | Wenn Sie Ihre Mandantenkennung nicht kennen, lesen Sie bitte die Anleitung zum Finden Ihrer Mandantenkennung im [Entwicklerhandbuch zur Schema Registry](../../xdm/api/getting-started.md#know-your-tenant_id). |
-| `description` | Eine Beschreibung des berechneten Attributs. Dies ist besonders nützlich, wenn verschiedene berechnete Attribute definiert wurden, da sie Kollegen in Ihrer IMS-Organisation hilft, das gewünschte berechnete Attribut zu finden. |
+| `description` | Eine Beschreibung des berechneten Attributs. Dies ist besonders nützlich, wenn mehrere berechnete Attribute definiert wurden, da es anderen in Ihrer Organisation dabei hilft, das richtige berechnete Attribut zu bestimmen, das verwendet werden soll. |
 | `expression.value` | Eine gültige [!DNL Profile Query Language] (PQL)-Ausdruck. Berechnete Attribute unterstützen derzeit die folgenden Funktionen: sum, count, min, max, and boolean. Eine Liste der Beispielausdrücke finden Sie im Abschnitt [Beispiel-PQL-Ausdrücke](expressions.md) Dokumentation. |
 | `schema.name` | Die Klasse, auf der das Schema mit dem berechneten Attributfeld basiert. Beispiel: `_xdm.context.experienceevent` bei einem Schema, das auf der XDM ExperienceEvent-Klasse basiert. |
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sandbox-Management-API-Endpunkt
 description: Mit dem Endpunkt /sandboxes in der Sandbox-API können Sie Sandboxes in Adobe Experience Platform programmgesteuert verwalten.
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1488'
 ht-degree: 49%
 
 ---
@@ -21,7 +21,7 @@ Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [[!DNL Sandbox] API]
 
 ## Liste von Sandboxes abrufen {#list}
 
-Sie können alle Sandboxes auflisten, die zu Ihrer IMS-Organisation gehören (aktiv oder anderweitig), indem Sie eine GET-Anfrage an die `/sandboxes` -Endpunkt.
+Sie können alle Sandboxes auflisten, die zu Ihrer Organisation gehören (aktiv oder anderweitig), indem Sie eine GET-Anfrage an die `/sandboxes` -Endpunkt.
 
 **API-Format**
 

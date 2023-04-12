@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Query API Endpoint
 description: In den folgenden Abschnitten werden die Aufrufe erläutert, die Sie mithilfe des /queries -Endpunkts in der Query Service-API ausführen können.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 08e19149a84273231c6261d2a4e09584dfb6e38d
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '868'
-ht-degree: 25%
+source-wordcount: '864'
+ht-degree: 26%
 
 ---
 
@@ -19,7 +19,7 @@ In den folgenden Abschnitten werden die Aufrufe erläutert, die Sie mithilfe der
 
 ### Abrufen einer Abfrageliste
 
-Sie können eine Liste aller Abfragen für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an die `/queries` -Endpunkt.
+Sie können eine Liste aller Abfragen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an die `/queries` -Endpunkt.
 
 **API-Format**
 
@@ -46,7 +46,7 @@ Im Folgenden finden Sie eine Liste der verfügbaren Abfrageparameter zur Auflist
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird die neueste für Ihre IMS-Organisation erstellte Abfrage abgerufen.
+Mit der folgenden Anfrage wird die neueste für Ihr Unternehmen erstellte Abfrage abgerufen.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
@@ -58,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Abfragen für die angegebene IMS-Organisation als JSON zurück. Die folgende Antwort gibt die neueste für Ihre IMS-Organisation erstellte Abfrage zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Abfragen für die angegebene Organisation als JSON zurück. Die folgende Antwort gibt die neueste für Ihr Unternehmen erstellte Abfrage zurück.
 
 ```json
 {

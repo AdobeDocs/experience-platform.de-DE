@@ -5,10 +5,10 @@ title: Importieren eines gepackten Rezepts mit der Sensei Machine Learning API
 type: Tutorial
 description: In diesem Tutorial wird die Sensei Machine Learning-API verwendet, um eine Engine zu erstellen, die in der Benutzeroberfläche auch als Rezept bezeichnet wird.
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1007'
-ht-degree: 31%
+source-wordcount: '1006'
+ht-degree: 30%
 
 ---
 
@@ -38,7 +38,7 @@ Für dieses Tutorial ist eine gepackte Rezeptdatei in Form einer Docker-URL erfo
 Für dieses Tutorial müssen Sie die [Tutorial zur Authentifizierung bei Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) , um erfolgreich Aufrufe an [!DNL Platform] APIs. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - `{ACCESS_TOKEN}`: Ihr spezifischer Bearer-Tokenwert, der nach der Authentifizierung bereitgestellt wird.
-- `{ORG_ID}`: Ihre IMS-Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.
+- `{ORG_ID}`: Ihre Organisationsberechtigungen finden Sie in Ihrer eindeutigen Adobe Experience Platform-Integration.
 - `{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer eindeutigen Adobe Experience Platform-Integration.
 
 ## Engine erstellen

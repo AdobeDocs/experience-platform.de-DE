@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Erste Schritte mit Real-time Customer Data Platform B2B Edition
 description: Verwenden Sie dieses Beispielszenario als Beispiel für die Einrichtung Ihrer Implementierung von Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1206'
-ht-degree: 83%
+source-wordcount: '1205'
+ht-degree: 82%
 
 ---
 
@@ -64,7 +64,7 @@ Als Nächstes verwendet der Bodea-Marketing-Experte den [Marketo Engage-Connecto
 
 Um eine Verbindung zwischen einem Marketo-Account und Platform herzustellen, müssen Sie Authentifizierungsdaten anfordern. Detaillierte Anleitungen finden Sie im [Handbuch zum Erlangen der Authentifizierungsdaten für den Marketo-Quell-Connector](../sources/connectors/adobe-applications/marketo/marketo-auth.md).
 
-Nachdem er nun über Authentifizierungsdaten verfügt, erstellt der Bodea-Marketing-Experte eine Verbindung zwischen dem Marketo-Account und seiner Platform IMS-Organisation. Anleitungen zum [Verbinden eines Marketo-Accounts über die Platform-Benutzeroberfläche](../sources/tutorials/ui/create/adobe-applications/marketo.md) finden Sie in der Dokumentation.
+Nach dem Erwerb von Authentifizierungsberechtigungen erstellt der Bodea-Marketing-Experte eine Verbindung zwischen dem Marketo-Konto und seiner Platform-Organisation. Anleitungen zum [Verbinden eines Marketo-Accounts über die Platform-Benutzeroberfläche](../sources/tutorials/ui/create/adobe-applications/marketo.md) finden Sie in der Dokumentation.
 
 Der Marketo Engage-Quell-Connector bietet eine Funktion zur automatischen Zuordnung, mit der Sie all Ihre Datenfelder denen der neu erstellten Schemas zuordnen können.
 

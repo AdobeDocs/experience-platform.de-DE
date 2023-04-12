@@ -7,10 +7,10 @@ landing-page-description: Hier finden Sie Antworten auf häufig gestellte Fragen
 short-description: Hier finden Sie Antworten auf häufig gestellte Fragen und eine Anleitung zur Fehlerbehebung bei häufigen Fehlern in Experience Platform.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1877'
-ht-degree: 99%
+source-wordcount: '1868'
+ht-degree: 89%
 
 ---
 
@@ -32,9 +32,9 @@ Anfrageformate variieren je nach der verwendeten [!DNL Platform]-API. Am einfach
 
 Weiterführende Informationen zum Erstellen von API-Anfragen finden Sie in den Ersten Schritten für die Platform-API im Abschnitt zum [Lesen beispielhafter API-Aufrufe](./api-guide.md#sample-api).
 
-## Was ist meine IMS-Organisation? {#what-is-my-ims-organization}
+## Was ist meine Einrichtung? {#what-is-my-ims-organization}
 
-Eine IMS-Organisation ist eine Adobe-Darstellung eines Kunden. Alle lizenzierten Adobe-Lösungen sind in diese Kundenorganisation integriert. Wenn eine IMS-Organisation über die Berechtigung [!DNL Experience Platform] verfügt, kann sie Entwicklern Zugriff zuweisen. Die IMS-Organisations-ID (`x-gw-ims-org-id`) stellt die Organisation dar, für die ein API-Aufruf ausgeführt werden soll, und ist daher in allen API-Anfragen als Kopfzeile obligatorisch. Diese ID können Sie unter Verwendung der [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) suchen: Navigieren Sie auf der Registerkarte **Integrationen** zum Abschnitt **Übersicht** einer bestimmten Integration, um unter **Client-Anmeldedaten** die ID anzuzeigen. Eine schrittweise Anleitung zum Authentifizieren bei [!DNL Platform] finden Sie im [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de).
+Eine Organisation ist eine Kundenvertretung in der Adobe. Alle lizenzierten Adobe-Lösungen sind in diese Kundenorganisation integriert. Wenn eine Organisation berechtigt ist [!DNL Experience Platform], kann sie Entwicklern Zugriff zuweisen. Die Organisations-ID (`x-gw-ims-org-id`) stellt die Organisation dar, für die ein API-Aufruf ausgeführt werden soll, und ist daher in allen API-Anfragen als Kopfzeile erforderlich. Diese ID können Sie unter Verwendung der [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) suchen: Navigieren Sie auf der Registerkarte **Integrationen** zum Abschnitt **Übersicht** einer bestimmten Integration, um unter **Client-Anmeldedaten** die ID anzuzeigen. Eine schrittweise Anleitung zum Authentifizieren bei [!DNL Platform] finden Sie im [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de).
 
 ## Wo finde ich meinen API-Schlüssel? {#where-can-i-find-my-api-key}
 
@@ -42,7 +42,7 @@ In allen API-Anfragen ist ein API-Schlüssel als Kopfzeile erforderlich. Sie kö
 
 ## Woher bekomme ich ein Zugriffs-Token? {#how-do-i-get-an-access-token}
 
-Zugriffstoken sind in der Autorisierungskopfzeile aller API-Aufrufe erforderlich. Sie können mit einem `curl`-Befehl generiert werden, vorausgesetzt, Sie haben Zugriff auf eine Integration für eine IMS-Organisation. Zugriffstoken sind nur 24 Stunden lang gültig. Danach muss ein neues Token generiert werden, wenn Sie die API weiter verwenden möchten. Weiterführende Informationen zum Generieren von Zugriffstoken finden Sie im [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de).
+Zugriffstoken sind in der Autorisierungskopfzeile aller API-Aufrufe erforderlich. Sie können mit einem CURL-Befehl generiert werden, vorausgesetzt, Sie haben Zugriff auf eine Integration für eine Organisation. Zugriffstoken sind nur 24 Stunden lang gültig. Danach muss ein neues Token generiert werden, wenn Sie die API weiter verwenden möchten. Weiterführende Informationen zum Generieren von Zugriffstoken finden Sie im [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de).
 
 ## Wie verwende ich Abfrageparameter? {#how-do-i-user-query-parameters}
 
@@ -151,7 +151,7 @@ Diese Fehlermeldung wird angezeigt, wenn der Wert der bereitgestellten API-Schl�
 }
 ```
 
-Diese Fehlermeldung wird angezeigt, wenn in einer API-Anfrage eine Kopfzeile für die IMS-Organisation (`x-gw-ims-org-id`) fehlt. Stellen Sie sicher, dass die Kopfzeile die Kennung Ihrer IMS-Organisation enthält, bevor Sie es erneut versuchen.
+Diese Fehlermeldung wird angezeigt, wenn eine Organisations-Kopfzeile (`x-gw-ims-org-id`) fehlt in einer API-Anfrage. Stellen Sie sicher, dass die Kopfzeile mit der ID Ihres Unternehmens übereinstimmt, bevor Sie es erneut versuchen.
 
 ### Profil ist ungültig {#profile-is-not-valid}
 
@@ -162,7 +162,7 @@ Diese Fehlermeldung wird angezeigt, wenn in einer API-Anfrage eine Kopfzeile fü
 }
 ```
 
-Diese Fehlermeldung wird angezeigt, wenn die Benutzerin oder der Benutzer oder die Adobe I/O-Integration (identifiziert durch das [Zugriffstoken](#how-do-i-get-an-access-token) in der `Authorization`-Kopfzeile) nicht dazu berechtigt ist, für die in der `x-gw-ims-org-id`-Kopfzeile angegebene IMS-Organisation Aufrufe an [!DNL Experience Platform]-APIs auszuführen. Stellen Sie sicher, dass Sie in der Kopfzeile die richtige Kennung für Ihre IMS-Organisation eingegeben haben, bevor Sie es erneut versuchen. Wenn Sie die Kennung Ihrer Organisation nicht kennen, können Sie sie in der [Adobe I/O-Konsole](https://console.adobe.io) finden: Navigieren Sie auf der Registerkarte **Integrationen** zum Abschnitt **Übersicht** einer bestimmten Integration, um die Kennung unter **Client-Anmeldedaten** anzuzeigen.
+Diese Fehlermeldung wird angezeigt, wenn der Benutzer bzw. die Adobe I/O (durch die Variable [Zugriffstoken](#how-do-i-get-an-access-token) im `Authorization` -Kopfzeile) nicht berechtigt ist, Aufrufe an [!DNL Experience Platform] APIs für die in der `x-gw-ims-org-id` -Kopfzeile. Stellen Sie sicher, dass Sie in der Kopfzeile die richtige ID für Ihr Unternehmen angegeben haben, bevor Sie es erneut versuchen. Wenn Sie die Kennung Ihrer Organisation nicht kennen, können Sie sie in der [Adobe I/O-Konsole](https://console.adobe.io) finden: Navigieren Sie auf der Registerkarte **Integrationen** zum Abschnitt **Übersicht** einer bestimmten Integration, um die Kennung unter **Client-Anmeldedaten** anzuzeigen.
 
 ### eTag-Fehler bei Aktualisierung {#refresh-etag-error}
 
@@ -199,7 +199,7 @@ Diese Fehlermeldung wird angezeigt, wenn eine POST-, PUT- oder PATCH-Anfrage ein
 ```
 
 Diese Fehlermeldung wird in einem der beiden folgenden Fälle angezeigt:
-- Wenn eine falsche oder falsch formatierte Kopfzeile der IMS-Organisation (`x-gw-ims-org-id`) in einer API-Anfrage übergeben wird. Stellen Sie sicher, dass die richtige Kennung Ihrer IMS-Organisation vorhanden ist, bevor Sie es erneut versuchen.
+- Wenn die Kopfzeile einer falschen oder fehlerhaften Organisations-ID (`x-gw-ims-org-id`) wird in einer API-Anfrage übergeben. Stellen Sie sicher, dass die richtige Kennung Ihres Unternehmens vorhanden ist, bevor Sie es erneut versuchen.
 - Wenn Ihr Konto (wie durch die angegebenen Authentifizierungs-Anmeldeinformationen dargestellt) nicht mit einem Produktprofil für Experience Platform verknüpft ist. Befolgen Sie im Tutorial zur Platform-API-Authentifizierung die Schritte zum [Generieren von Anmeldeinformationen für den Zugriff](./api-authentication.md#authentication-for-each-session), um Platform zu Ihrem Konto hinzuzufügen und Ihre Authentifizierungs-Anmeldeinformationen entsprechend zu aktualisieren.
 
 ## Verzeichnis zur Fehlerbehebung bei Diensten {#service-troubleshooting-directory}

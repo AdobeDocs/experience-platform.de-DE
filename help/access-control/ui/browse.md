@@ -2,22 +2,22 @@
 keywords: Experience Platform;Home;beliebte Themen
 solution: Experience Platform
 title: Wählen Sie ein Produktprofil aus, um Zugriffssteuerungsberechtigungen zu bearbeiten
-description: In diesem Dokument werden die erforderlichen Schritte zum Durchsuchen des Arbeitsbereichs „Zugriffssteuerung“ beschrieben. Um die Zugriffskontrolle für Experience Platform über die Adobe Admin Console zu konfigurieren, müssen Sie Administrator einer IMS-Organisation sein, die über ein Abonnement für Experience Platform verfügt.
+description: In diesem Dokument werden die erforderlichen Schritte zum Durchsuchen des Arbeitsbereichs „Zugriffssteuerung“ beschrieben. Um die Zugriffskontrolle für die Experience Platform über Adobe Admin Console zu konfigurieren, müssen Sie Administrator einer Organisation sein, die über ein Abonnement für Experience Platform verfügt.
 exl-id: 1d3c894e-b412-43ba-ba91-ddfa35303d73
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '317'
-ht-degree: 100%
+source-wordcount: '311'
+ht-degree: 61%
 
 ---
 
 # Wählen Sie ein Produktprofil aus, um seine Zugriffssteuerungsberechtigungen zu verwalten
 
-Um die Zugriffssteuerung für [!DNL Experience Platform] über Adobe Admin Console zu konfigurieren, müssen Sie Administrator einer IMS-Organisation sein, die über ein Abonnement für [!DNL Experience Platform] verfügt. Zwar unterstützt Adobe flexible Administrationshierarchien für IMS-Organisationen, doch benötigen Sie zur Konfiguration der Zugriffskontrolle Systemadministrator-, Produktadministrator- oder Produktprofiladministrator-Berechtigungen. Weiterführende Informationen zu [Verwaltungsrollen](https://helpx.adobe.com/de/enterprise/using/admin-roles.html) finden Sie im Adobe Help Center-Artikel.
+So konfigurieren Sie die Zugriffskontrolle für [!DNL Experience Platform] über die Adobe Admin Console müssen Sie Administrator für eine Organisation sein, die über ein Abonnement für [!DNL Experience Platform]. Während Adobe flexible Administrationshierarchien für Unternehmen unterstützt, müssen Sie über Systemadministrator-, Produktadministrator- oder Produktprofiladministrator-Berechtigungen verfügen, um die Zugriffskontrolle zu konfigurieren. Weiterführende Informationen zu [Verwaltungsrollen](https://helpx.adobe.com/de/enterprise/using/admin-roles.html) finden Sie im Adobe Help Center-Artikel.
 
 Wenn Sie keine Administratorrechte haben, wenden Sie sich an Ihren Systemadministrator, um Zugriff zu erhalten.
 
-Sobald Sie über Administratorrechte verfügen, wechseln Sie zur [Adobe Admin Console](https://adminconsole.adobe.com) und melden Sie sich mit Ihren Adobe-Anmeldedaten an. Nach der Anmeldung wird die Seite **[!UICONTROL Übersicht]** für die IMS-Org angezeigt, für die Sie Administratorrechte haben. Auf dieser Seite werden die Produkte angezeigt, die Ihre IMS-Org abonniert hat, zusammen mit anderen Steuerelementen, mit denen sich Benutzer und Administratoren zur IMS-Org als Ganzes hinzufügen lassen. Wählen Sie **[!UICONTROL Adobe Experience Platform]**, um den Arbeitsbereich „Zugriffssteuerung“ für Ihre Platform-Integration zu öffnen.
+Sobald Sie über Administratorrechte verfügen, wechseln Sie zur [Adobe Admin Console](https://adminconsole.adobe.com) und melden Sie sich mit Ihren Adobe-Anmeldedaten an. Nach der Anmeldung muss die **[!UICONTROL Übersicht]** für die Organisation angezeigt, für die Sie Administratorrechte haben. Auf dieser Seite werden die Produkte angezeigt, die Ihr Unternehmen abonniert hat, sowie weitere Steuerelemente zum Hinzufügen von Benutzern und Administratoren zur Organisation als Ganzes. Wählen Sie **[!UICONTROL Adobe Experience Platform]**, um den Arbeitsbereich „Zugriffssteuerung“ für Ihre Platform-Integration zu öffnen.
 
 ![select-product](../images/select-product.png)
 

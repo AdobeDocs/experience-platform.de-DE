@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite; beliebte Themen;Datenvorbereitung;API-
 solution: Experience Platform
 title: API-Endpunkt für Beispieldaten
 description: Sie können den Endpunkt „/samples“ in der Adobe Experience Platform-API verwenden, um Beispieldaten von Zuordnungen programmgesteuert abzurufen, zu erstellen, zu aktualisieren und zu validieren.
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 100%
+source-wordcount: '399'
+ht-degree: 90%
 
 ---
 
@@ -17,7 +17,7 @@ Beispieldaten können beim Erstellen eines Schemas für Ihren Zuordnungssatz ver
 
 ## Auflisten von Beispieldaten
 
-Sie können eine Liste aller Beispieldaten einer Zuordnung für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an den `/samples`-Endpunkt senden.
+Sie können eine Liste aller Mapping-Beispieldaten für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an die `/samples` -Endpunkt.
 
 **API-Format**
 
@@ -34,7 +34,7 @@ GET /samples?limit={LIMIT}&start={START}
 
 **Anfrage**
 
-Mit der folgenden Anfrage werden die letzten beiden Beispieldatenobjekte der Zuordnung in Ihrer IMS-Organisation abgerufen.
+Mit der folgenden Anfrage werden die letzten beiden Zuordnungs-Beispieldaten innerhalb Ihres Unternehmens abgerufen.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2&start=0 \

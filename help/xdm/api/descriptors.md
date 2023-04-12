@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Descriptors-API-Endpunkt
 description: Mit dem Endpunkt /descriptors in der Schema Registry-API können Sie XDM-Deskriptoren in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1900'
-ht-degree: 44%
+source-wordcount: '1872'
+ht-degree: 46%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 44%
 
 Schemas definieren eine statische Ansicht von Datenentitäten, geben jedoch nicht spezifisch an, wie sich Daten, die auf diesen Schemas basieren (z. B. Datensätze), zueinander verhalten. Mit Adobe Experience Platform können Sie diese Beziehungen und andere interpretative Metadaten über ein Schema mithilfe von Deskriptoren beschreiben.
 
-Schemadeskriptoren sind Metadaten auf Mandantenebene, das heißt, sie sind für Ihre IMS-Organisation eindeutig und alle Deskriptorvorgänge finden im Mandanten-Container statt.
+Schemadeskriptoren sind Metadaten auf Mandantenebene, d. h. sie sind für Ihre Organisation eindeutig und alle Deskriptorvorgänge finden im Mandanten-Container statt.
 
 Auf jedes Schema können eine oder mehrere Schemadeskriptorentitäten angewendet werden. Jede Schemadeskriptorentität enthält einen Deskriptor `@type` und das `sourceSchema`, auf das er angewendet wird. Nach der Anwendung gelten diese Deskriptoren für alle mit dem Schema erstellten Datensätze.
 
@@ -60,7 +60,7 @@ Das Antwortformat hängt von der `Accept` -Kopfzeile, die in der Anfrage gesende
 | `application/vnd.adobe.xdm+json` | Gibt ein Array mit erweiterten Deskriptorobjekten zurück |
 | `application/vnd.adobe.xdm-v2+json` | Diese `Accept` -Kopfzeile muss verwendet werden, um Paging-Funktionen nutzen zu können. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -98,7 +98,7 @@ GET /tenant/descriptors/{DESCRIPTOR_ID}
 | --- | --- |
 | `{DESCRIPTOR_ID}` | Die `@id` des Deskriptors, den Sie nachschlagen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -207,7 +207,7 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 | --- | --- |
 | `{DESCRIPTOR_ID}` | Die `@id` des Deskriptors, den Sie aktualisieren möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -264,7 +264,7 @@ DELETE /tenant/descriptors/{DESCRIPTOR_ID}
 | --- | --- |
 | `{DESCRIPTOR_ID}` | Die `@id` des Deskriptors, den Sie löschen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -318,7 +318,7 @@ Ein Identitätsdeskriptor signalisiert, dass der[!UICONTROL sourceProperty]&quot
 | `xdm:property` | Entweder `xdm:id` oder `xdm:code`, je nach verwendetem `xdm:namespace`. |
 | `xdm:isPrimary` | Ein optionaler boolescher Wert. Wenn „true“, wird das Feld als primäre Identität angezeigt. Schemas dürfen nur eine primäre Identität enthalten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### Anzeigenamendeskriptor {#friendly-name}
 
@@ -359,7 +359,7 @@ Mit Anzeigenamendeskriptoren können Benutzer die `title`, `description`und `met
 | `meta:enum` | Wenn das Feld durch `xdm:sourceProperty` ein Zeichenfolgenfeld ist, `meta:enum` kann verwendet werden, um empfohlene Werte für das Feld in der Segmentierungsbenutzeroberfläche hinzuzufügen. Es ist wichtig festzustellen, dass `meta:enum` deklariert keine Auflistung oder stellt keine Datenvalidierung für das XDM-Feld bereit.<br><br>Dies sollte nur für von Adobe definierte Core-XDM-Felder verwendet werden. Wenn die Quelleigenschaft ein von Ihrer Organisation definiertes benutzerdefiniertes Feld ist, sollten Sie stattdessen die `meta:enum` -Eigenschaft direkt über eine PATCH-Anfrage an die übergeordnete Ressource des Felds. |
 | `meta:excludeMetaEnum` | Wenn das Feld durch `xdm:sourceProperty` ist ein Zeichenfolgenfeld, in dem vorhandene empfohlene Werte unter einem `meta:enum` -Feld können Sie dieses Objekt in einen Anzeigenamendeskriptor einschließen, um einige oder alle dieser Werte aus der Segmentierung auszuschließen. Schlüssel und Wert für jeden Eintrag müssen mit denen im Original übereinstimmen `meta:enum` des Felds, damit der Eintrag ausgeschlossen wird. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### Beziehungsdeskriptor
 
@@ -389,7 +389,7 @@ Beziehungsdeskriptoren beschreiben eine Beziehung zwischen zwei verschiedenen Sc
 | `xdm:destinationVersion` | Die Hauptversion des Referenzschemas. |
 | `xdm:destinationProperty` | Optionaler Pfad zu einem Zielfeld im Referenzschema. Wenn diese Eigenschaft weggelassen wird, wird das Zielfeld von allen Feldern mit einem entsprechenden Referenzidentitätsdeskriptor abgeleitet (siehe unten). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### Referenzidentitätsdeskriptor
 
@@ -413,7 +413,7 @@ Referenzidentitätsdeskriptoren stellen einen Referenzkontext für die primäre 
 | `xdm:sourceProperty` | Pfad zum Feld im Quellschema, das zum Verweis auf das Referenzschema verwendet wird. Sollte mit einem „/“ beginnen und nicht mit einem solchen enden. Schließen Sie &quot;properties&quot;nicht in den Pfad ein (z. B. `/personalEmail/address` anstelle von `/properties/personalEmail/properties/address`). |
 | `xdm:identityNamespace` | Der Identitäts-Namespace-Code für die Quelleigenschaft. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### Veralteter Felddeskriptor
 
@@ -430,9 +430,9 @@ Sie können [Verwerfen eines Felds in einer benutzerdefinierten XDM-Ressource](.
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `@type` | Der Typ des Deskriptors. Für einen Deskriptor zur Einstellung von Feldern muss dieser Wert auf `xdm:descriptorDeprecated`. |
+| `@type` | Der Typ des Deskriptors. Für einen Deskriptor zum Verwerfen von Feldern muss dieser Wert auf `xdm:descriptorDeprecated` gesetzt werden. |
 | `xdm:sourceSchema` | Der URI `$id` des Schemas, auf das Sie den Deskriptor anwenden. |
-| `xdm:sourceVersion` | Die Version des Schemas, auf das Sie den Deskriptor anwenden. Sollte auf `1`. |
+| `xdm:sourceVersion` | Die Version des Schemas, auf das Sie den Deskriptor anwenden. Sollte auf `1` gesetzt werden. |
 | `xdm:sourceProperty` | Der Pfad zur Eigenschaft innerhalb des Schemas, auf das Sie den Deskriptor anwenden. Wenn Sie den Deskriptor auf mehrere Eigenschaften anwenden möchten, können Sie eine Liste von Pfaden in Form eines Arrays bereitstellen (z. B. `["/firstName", "/lastName"]`). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

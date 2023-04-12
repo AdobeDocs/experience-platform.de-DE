@@ -5,9 +5,9 @@ title: Aktivieren von Zielgruppensegmenten für Batch-Ziele über die Ad-hoc-Akt
 description: Dieser Artikel veranschaulicht den End-to-End-Workflow zum Aktivieren von Zielgruppensegmenten über die Ad-hoc-Aktivierungs-API, einschließlich der Segmentierungsaufträge, die vor der Aktivierung ausgeführt werden.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1563'
+source-wordcount: '1553'
 ht-degree: 18%
 
 ---
@@ -32,7 +32,7 @@ Das folgende Diagramm zeigt den End-to-End-Workflow zum Aktivieren von Segmenten
 
 
 
-## Anwendungsbeispiele {#use-cases}
+## Anwendungsfälle {#use-cases}
 
 ### Flash-Verkäufe oder -Promotions
 
@@ -46,7 +46,7 @@ Ein Hotel erwartet ein schlechtes Wetter an den folgenden Tagen, und das Team m�
 
 IT-Manager können die Ad-hoc-Aktivierungs-API der Experience Platform verwenden, um Segmente bei Bedarf zu exportieren, sodass sie ihre benutzerdefinierte Integration mit Adobe Experience Platform testen und sicherstellen können, dass alles ordnungsgemäß funktioniert.
 
-## Leitlinien {#guardrails}
+## Leitplanken {#guardrails}
 
 Beachten Sie bei der Verwendung der Ad-hoc-Aktivierungs-API die folgenden Limits.
 
@@ -62,7 +62,7 @@ Adobe Experience Platform führt geplante Segmentierungsaufträge einmal alle 24
 
 Bevor Sie die Adobe Experience Platform-APIs aufrufen können, stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen:
 
-* Sie verfügen über ein IMS-Organisationskonto mit Zugriff auf Adobe Experience Platform.
+* Sie haben ein Organisationskonto mit Zugriff auf Adobe Experience Platform.
 * Ihr Experience Platform-Konto verfügt über die `developer` und `user` Rollen, die für das Adobe Experience Platform API-Produktprofil aktiviert sind. Wenden Sie sich an [Admin Console](../../access-control/home.md) Administrator, um diese Rollen für Ihr Konto zu aktivieren.
 * Du hast einen Adobe ID. Wenn Sie keine Adobe ID haben, navigieren Sie zum [Adobe Developer-Konsole](https://developer.adobe.com/console) und erstellen Sie ein neues Konto.
 
@@ -169,7 +169,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 | <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Die IDs der Zielinstanzen, für die Sie Segmente aktivieren möchten. Sie können diese IDs über die Platform-Benutzeroberfläche abrufen, indem Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]** und auf die gewünschte Zielzeile klicken, um die Ziel-ID in der rechten Leiste anzuzeigen. Weitere Informationen finden Sie im Abschnitt [Dokumentation zum Zielarbeitsbereich](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Die IDs der Segmente, die Sie für das ausgewählte Ziel aktivieren möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Anfrage mit Export-IDs (nicht mehr unterstützt) {#request-deprecated}
 
@@ -207,7 +207,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Die IDs der Segmente, die Sie für das ausgewählte Ziel aktivieren möchten. |
 | <ul><li>`exportId1`</li></ul> | Die in der Antwort der [Segmentexport](../../segmentation/api/export-jobs.md#retrieve-list) Auftrag. Siehe [Schritt 4: Abrufen der neuesten Segmentexportauftrag-ID](#segment-export-id) für Anweisungen zum Auffinden dieser ID. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Antwort {#response}
 
@@ -231,7 +231,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 zurück.
 | `order` | Die ID des Ziels, für das das Segment aktiviert wurde. |
 | `statusURL` | Die Status-URL des Aktivierungsflusses. Sie können den Flussfortschritt mithilfe der [Flussdienst-API](../../sources/tutorials/api/monitor.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 

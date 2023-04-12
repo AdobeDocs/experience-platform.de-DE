@@ -2,10 +2,10 @@
 title: Profil-Endpunkt
 description: Erfahren Sie, wie Sie den /profiles-Endpunkt in der Reactor-API aufrufen.
 exl-id: d0434098-f49a-45f3-9772-488bd3c134aa
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 100%
+source-wordcount: '169'
+ht-degree: 78%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 In der Reactor-API stellt ein Profil einen Adobe Experience Platform-Benutzer dar. Die Reactor-API unterhält keine eigene Benutzer- und Berechtigungsdatenbank und verlässt sich stattdessen auf Adobe IDs, die vom [Identity Management System (IMS) von Adobe](https://helpx.adobe.com/de/enterprise/using/identity.html) verwaltet werden.
 
-Ein Profil enthält alle Informationen zum angemeldeten Benutzer, einschließlich aller IMS-Organisationen, zu denen er gehört, der Produktprofile, zu denen er in jeder Organisation gehört, und der Rechte, die ihm aus jedem Produktprofil zugewiesen sind.
+Ein Profil enthält alle Informationen zum angemeldeten Benutzer, einschließlich aller Organisationen, denen er angehört, der Produktprofile, zu denen er in jeder Organisation gehört, und der Rechte, die ihm aus jedem Produktprofil zugewiesen sind.
 
 ## Erste Schritte
 
@@ -51,14 +51,14 @@ Eine erfolgreiche Antwort gibt die Details des Profils zurück.
     "id": "UR0bd696624e844d6ba5bfc248ba1eca11",
     "type": "users",
     "attributes": {
-      "active_org": "{IMS_ORG_1}",
+      "active_org": "{ORG_1}",
       "expires_in": 0,
       "display_name": "John Smith",
       "job_function": null,
       "email": "jsmith@example.com",
       "organizations": {
-        "{IMS_ORG_1}": {
-          "name": "Example IMS Org A",
+        "{ORG_1}": {
+          "name": "Example organization A",
           "admin": true,
           "active": true,
           "login_companies": [
@@ -73,8 +73,8 @@ Eine erfolgreiche Antwort gibt die Details des Profils zurück.
           ],
           "tenant_id": "{TENANT_ID_1}"
         },
-        "{IMS_ORG_2}": {
-          "name": "Example IMS Org B",
+        "{ORG_2}": {
+          "name": "Example organization B",
           "admin": false,
           "active": false,
           "login_companies": [

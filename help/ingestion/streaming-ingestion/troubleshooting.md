@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei der Streaming-Aufnahme
 description: In diesem Dokument finden Sie Antworten auf häufig gestellte Fragen zur Streaming-Aufnahme in Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1025'
-ht-degree: 100%
+source-wordcount: '1024'
+ht-degree: 97%
 
 ---
 
@@ -43,7 +43,7 @@ Wenn synchrone Validierung am angeforderten Ort nicht unterstützt wird, wird ei
 
 ### Wie stelle ich sicher, dass Daten nur aus vertrauenswürdigen Quellen erfasst werden?
 
-[!DNL Experience Platform] unterstützt eine sichere Datenerfassung. Wenn authentifizierte Datenerfassung aktiviert ist, müssen Clients ein JSON Web Token (JWT) und ihre IMS-Organisations-Kennung als Anfragekopfzeilen senden. Weiterführende Informationen zum Senden authentifizierter Daten an [!DNL Platform] finden Sie im Handbuch zur [Erfassung authentifizierter Daten](../tutorials/create-authenticated-streaming-connection.md).
+[!DNL Experience Platform] unterstützt eine sichere Datenerfassung. Wenn die authentifizierte Datenerfassung aktiviert ist, müssen Clients ein JSON Web Token (JWT) und ihre Organisations-ID als Anfragekopfzeilen senden. Weiterführende Informationen zum Senden authentifizierter Daten an [!DNL Platform] finden Sie im Handbuch zur [Erfassung authentifizierter Daten](../tutorials/create-authenticated-streaming-connection.md).
 
 ### Wie ist die Latenz beim Streaming von Daten an [!DNL Real-Time Customer Profile]?
 

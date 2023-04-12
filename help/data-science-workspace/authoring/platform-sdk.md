@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Modell-Authoring mit dem Adobe Experience Platform Platform SDK
 description: In diesem Tutorial erhalten Sie Informationen zum Konvertieren von data_access_sdk_python in das neue Python platform_sdk in sowohl Python als auch R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 79%
+source-wordcount: '489'
+ht-degree: 69%
 
 ---
 
@@ -21,7 +21,7 @@ Diese Anleitung bietet Ihnen Informationen zum Konvertieren von `data_access_sdk
 
 ## Authentifizierung erstellen {#build-authentication}
 
-Authentifizierung ist erforderlich, um Aufrufe an [!DNL Adobe Experience Platform]und besteht aus API-Schlüssel, IMS-Organisations-ID, einem Benutzer-Token und einem Service-Token.
+Authentifizierung ist erforderlich, um Aufrufe an [!DNL Adobe Experience Platform]und besteht aus API-Schlüssel, Organisations-ID, einem Benutzer-Token und einem Service-Token.
 
 ### Python
 
@@ -31,7 +31,7 @@ Wenn Sie Jupyter Notebook verwenden, nutzen Sie den folgenden Code, um den `clie
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Wenn Sie kein Jupyter Notebook verwenden oder die IMS-Org ändern müssen, nutzen Sie das folgende Code-Beispiel:
+Wenn Sie kein Jupyter Notebook verwenden oder die Organisation ändern müssen, verwenden Sie das folgende Codebeispiel:
 
 ```python
 from platform_sdk.client_context import ClientContext
@@ -54,7 +54,7 @@ py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
 client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Wenn Sie kein Jupyter Notebook verwenden oder die IMS-Org ändern müssen, nutzen Sie das folgende Code-Beispiel:
+Wenn Sie kein Jupyter Notebook verwenden oder die Organisation ändern müssen, verwenden Sie das folgende Codebeispiel:
 
 ```r
 library(reticulate)
@@ -79,7 +79,7 @@ Wenn das Lesen zu lange dauert, können Sie eine der folgenden Filteroptionen ve
 
 >[!NOTE]
 >
-> Die IMS-Org wird im `client_context` festgelegt.
+>Die Organisation wird innerhalb der `client_context`.
 
 ### Python
 
@@ -195,7 +195,7 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 >[!NOTE]
 >
-> Die IMS-Org wird im `client_context` festgelegt.
+>Die Organisation wird innerhalb der `client_context`.
 
 Um Daten in Python und R zu schreiben, verwenden Sie eines der folgenden Beispiele:
 

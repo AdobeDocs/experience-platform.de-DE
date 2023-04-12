@@ -4,9 +4,9 @@ title: Aktivieren eines Datensatzes für Profil und Identity Service mithilfe vo
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie einen Datensatz für die Verwendung mit Echtzeit-Kundenprofil und Identity Service mithilfe von Adobe Experience Platform-APIs aktivieren.
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1072'
 ht-degree: 94%
 
 ---
@@ -93,7 +93,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 |---|---|
 | `schemaRef.id` | Die ID des [!DNL Profile]-aktivierten Schemas, auf dem der Datensatz basieren soll. |
-| `{TENANT_ID}` | Der Namespace innerhalb der [!DNL Schema Registry], der Ressourcen Ihrer IMS-Organisation enthält. Weitere Informationen finden Sie im Abschnitt [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) des [!DNL Schema Registry]-Entwicklerhandbuchs. |
+| `{TENANT_ID}` | Der Namespace innerhalb der [!DNL Schema Registry], der Ressourcen enthält, die zu Ihrer Organisation gehören. Weitere Informationen finden Sie im Abschnitt [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) des [!DNL Schema Registry]-Entwicklerhandbuchs. |
 
 **Antwort**
 
@@ -220,7 +220,8 @@ curl -X PATCH \
 Der Anfragetext enthält einen `path` zu zwei Arten von Tags, `unifiedProfile` und `unifiedIdentity`. Als `value` sind jeweils Arrays mit der Zeichenfolge `enabled:true` angegeben.
 
 **Antwort**
-Eine erfolgreiche PATCH-Anfrage gibt den HTTP-Status 200 (OK) und ein Array mit der ID des aktualisierten Datensatzes zurück. Diese ID sollte mit der in der PATCH-Anfrage gesendeten ID übereinstimmen. Die Tags `unifiedProfile` und `unifiedIdentity` wurden hinzugefügt und der Datensatz ist für Profil und Identity Service aktiviert.
+
+Bei einer erfolgreichen PATCH-Anfrage wird der HTTP-Status 200 (OK) sowie ein Array mit der ID des gelöschten Datensatzes zurückgegeben. Diese ID sollte mit der in der PATCH-Anfrage gesendeten ID übereinstimmen. Die Tags `unifiedProfile` und `unifiedIdentity` wurden hinzugefügt und der Datensatz ist für Profil und Identity Service aktiviert.
 
 ```json
 [

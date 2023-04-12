@@ -5,10 +5,10 @@ title: Abrufen fehlgeschlagener Batches mit der Data Access API
 type: Tutorial
 description: In diesem Tutorial wird erläutert, wie Sie mithilfe von APIs für die Datenaufnahme Informationen aus einem fehlgeschlagenen Batch abrufen.
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '647'
-ht-degree: 83%
+source-wordcount: '645'
+ht-degree: 80%
 
 ---
 
@@ -194,9 +194,9 @@ Dieser Abschnitt enthält Informationen zu anderen möglichen Fehlern bei der Au
 
 Wie der Zeitstempel-Fehler im Beispiel zuvor sind auch diese Fehler auf ein falsch formatiertes XDM zurückzuführen. Die Fehlermeldungen sind je nach Art des Problems unterschiedlich. Daher kann an dieser Stelle kein Beispiel für einen spezifischen Fehler angegeben werden.
 
-### Fehlende oder ungültige IMS-Org-ID
+### Fehlende oder ungültige Organisations-ID
 
-Dieser Fehler wird angezeigt, wenn die IMS-Org-ID in der Payload fehlt oder ungültig ist.
+Dieser Fehler wird angezeigt, wenn die Organisations-ID in der Payload fehlt oder ungültig ist.
 
 ```json
 {

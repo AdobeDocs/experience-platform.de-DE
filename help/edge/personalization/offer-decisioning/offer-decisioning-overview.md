@@ -3,9 +3,9 @@ title: Verwenden von Offer decisioning mit dem Platform Web SDK
 description: Das Adobe Experience Platform Web SDK kann personalisierte Angebote bereitstellen und rendern, die unter Offer decisioning verwaltet werden. Sie können Ihre Angebote und andere verwandte Objekte mithilfe der Offer decisioning-Benutzeroberfläche oder -API erstellen.
 keywords: offer decisioning; Entscheidungsfindung; Web SDK; Platform Web SDK; personalisierte Angebote; Angebote bereitstellen; Bereitstellung von Angeboten; Personalisierung von Angeboten;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '863'
 ht-degree: 20%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 20%
 
 >[!NOTE]
 >
->Die Verwendung von Offer decisioning im Adobe Experience Platform Web SDK ist für ausgewählte Benutzer in einem frühen Stadium verfügbar. Diese Funktion ist nicht für alle IMS-Organisationen verfügbar.
+>Die Verwendung von Offer decisioning im Adobe Experience Platform Web SDK ist für ausgewählte Benutzer in einem frühen Stadium verfügbar. Diese Funktion ist nicht für alle Organisationen verfügbar.
 
 Adobe Experience Platform [!DNL Web SDK] kann personalisierte Angebote bereitstellen und rendern, die in Offer Decisioning verwaltet werden. Sie können Ihre Angebote und andere verwandte Objekte über APIs oder die Benutzeroberfläche (UI) von Offer Decisioning erstellen.
 
 ## Voraussetzungen
 
-* Die IMS-Organisation ist für die Edge-Entscheidung aktiviert.
+* Die Organisation ist für die Edge-Entscheidung aktiviert.
 * Angebote, erstellte Aktivitäten
 * Datenspeicher wird veröffentlicht
 

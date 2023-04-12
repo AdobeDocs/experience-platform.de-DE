@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Metrik-API-Endpunkt
 description: Erfahren Sie, wie Sie Beobachtbarkeitsmetriken in Experience Platform mithilfe der Observability Insights-API abrufen.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1409'
-ht-degree: 27%
+source-wordcount: '1384'
+ht-degree: 24%
 
 ---
 
@@ -86,7 +86,7 @@ curl -X POST \
 | `aggregator` | Gibt die Aggregationsfunktion an, die zum Gruppieren mehrerer Datensätze aus Zeitreihen zu einzelnen Ergebnissen verwendet werden soll. Detaillierte Informationen zu den verfügbaren Aggregatoren finden Sie im Abschnitt [OpenTSDB-Dokumentation](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
 | `downsample` | Ein optionales Feld, mit dem Sie eine Aggregationsfunktion angeben können, um die Sampling-Rate von Metrikdaten zu reduzieren, indem Sie Felder in Intervalle (oder &quot;Behälter&quot;) sortieren. Das Intervall für die Neuberechnung wird durch die `granularity` -Eigenschaft. Ausführliche Informationen zum Downsampling finden Sie im Abschnitt [OpenTSDB-Dokumentation](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -180,7 +180,7 @@ Eine erfolgreiche Antwort gibt die resultierenden Datenpunkte für die in der An
 | `groupBy` | Wenn mehrere Datensätze im `filter` -Eigenschaft für eine Metrik und die `groupBy` in der Anfrage auf true festgelegt wurde, enthält dieses Objekt die Kennung des Datensatzes, zu dem die entsprechende `dps` -Eigenschaft gilt für .<br><br>Wenn dieses Objekt in der Antwort leer erscheint, wird die entsprechende `dps` -Eigenschaft gilt für alle Datensätze, die im `filters` Array (oder alle Datensätze in [!DNL Platform] , wenn keine Filter angegeben wurden). |
 | `dps` | Die zurückgegebenen Daten für die angegebene Metrik, den Filter und den Zeitraum. Jeder Schlüssel in diesem Objekt stellt einen Zeitstempel mit einem entsprechenden Wert für die angegebene Metrik dar. Der Zeitraum zwischen den einzelnen Datenpunkten hängt von der `granularity` -Wert, der in der Anfrage angegeben ist. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Anhang
 
@@ -211,7 +211,7 @@ In der folgenden Tabelle sind die Metriken für Adobe Experience Platform aufgef
 | **timeseries.data.collection.inlet.success** | Gesamtzahl erfolgreicher HTTP-Aufrufe an einen Daten-Inlet oder an alle Daten-Inlets. | Inlet-ID |
 | **timeseries.data.collection.inlet.failure** | Gesamtzahl fehlgeschlagener HTTP-Aufrufe an einen Daten-Inlet oder an alle Daten-Inlets. | Inlet-ID |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### [!DNL Identity Service] {#identity}
 
@@ -223,11 +223,11 @@ In der folgenden Tabelle sind die Metriken für Adobe Experience Platform aufgef
 | timeseries.identity.dataset.recordfailed.count | Anzahl fehlgeschlagener Datensätze nach [!DNL Identity Service], für einen Datensatz oder für alle Datensätze. | Datensatz-ID |
 | timeseries.identity.dataset.namespacecode.recordfailed.count | Anzahl der Identitätseinträge, die aufgrund eines Namespace fehlgeschlagen sind. | Namespace-ID (**erforderlich**) |
 | timeseries.identity.dataset.namespacecode.recordskipped.count | Anzahl der Identitätseinträge, die von einem Namespace übersprungen wurden. | Namespace-ID (**erforderlich**) |
-| timeseries.identity.graph.imsorg.uniqueidentities.count | Anzahl der eindeutigen Identitäten, die im Identitätsdiagramm für Ihre IMS-Organisation gespeichert sind. | K. A. |
+| timeseries.identity.graph.imsorg.uniqueidentities.count | Anzahl der eindeutigen Identitäten, die im Identitätsdiagramm für Ihre Organisation gespeichert sind. | K. A. |
 | timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | Anzahl der eindeutigen Identitäten, die im Identitätsdiagramm für einen Namespace gespeichert sind. | Namespace-ID (**erforderlich**) |
-| timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Anzahl der eindeutigen Identitäten, die im Identitätsdiagramm für Ihre IMS-Organisation für eine bestimmte Diagrammstärke („unbekannt“, „schwach oder „stark“) gespeichert sind. | Diagrammstärke (**erforderlich**) |
+| timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Anzahl der eindeutigen Identitäten, die im Identitätsdiagramm für Ihre Organisation für eine bestimmte Diagrammstärke (&quot;unbekannt&quot;, &quot;schwach&quot;oder &quot;stark&quot;) gespeichert sind. | Diagrammstärke (**erforderlich**) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### [!DNL Real-Time Customer Profile] {#profile}
 
@@ -239,7 +239,7 @@ In der folgenden Tabelle sind die Metriken für [!DNL Real-Time Customer Profile
 | timeseries.profiles.dataset.recordsuccess.count | Anzahl der in ihre Datenquelle geschriebenen Datensätze nach [!DNL Profile], für einen Datensatz oder für alle Datensätze. | Datensatz-ID |
 | timeseries.profiles.dataset.batchsuccess.count | Anzahl der [!DNL Profile] Batches, die für einen Datensatz oder für alle Datensätze erfasst werden. | Datensatz-ID |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Fehlermeldungen
 
@@ -272,9 +272,9 @@ Antworten von `/metrics` Endpunkt kann unter bestimmten Bedingungen Fehlermeldun
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `title` | Eine Zeichenfolge, die die Fehlermeldung und den möglichen Grund für den Fehler enthält. |
-| `report` | Enthält Kontextdaten zum Fehler, einschließlich der Sandbox und der IMS-Organisation, die in dem Vorgang verwendet werden, der den Fehler ausgelöst hat. |
+| `report` | Enthält Kontextdaten zum Fehler, einschließlich der Sandbox und der Organisation, die in dem Vorgang verwendet werden, der den Fehler ausgelöst hat. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 In der folgenden Tabelle sind die verschiedenen Fehlercodes aufgeführt, die von der API zurückgegeben werden können:
 
@@ -284,6 +284,6 @@ In der folgenden Tabelle sind die verschiedenen Fehlercodes aufgeführt, die von
 | `INSGHT-1001-400` | Metrikabfrage fehlgeschlagen | Beim Versuch, die Metrikdatenbank abzufragen, trat ein Fehler auf, da eine ungültige Anforderung oder die Abfrage selbst nicht analysierbar war. Stellen Sie sicher, dass Ihre Anforderung korrekt formatiert ist, bevor Sie es erneut versuchen. |
 | `INSGHT-1001-500` | Metrikabfrage fehlgeschlagen | Beim Versuch, die Metrikdatenbank abzufragen, trat aufgrund eines Serverfehlers ein Fehler auf. Versuchen Sie es erneut. Wenn das Problem weiterhin auftritt, wenden Sie sich an den Support von Adobe. |
 | `INSGHT-1002-500` | Dienstfehler | Die Anfrage konnte aufgrund eines internen Fehlers nicht verarbeitet werden. Versuchen Sie es erneut. Wenn das Problem weiterhin auftritt, wenden Sie sich an den Support von Adobe. |
-| `INSGHT-1003-401` | Sandbox-Validierungsfehler | Die Anfrage konnte aufgrund eines Sandbox-Validierungsfehlers nicht verarbeitet werden. Stellen Sie sicher, dass der Sandbox-Name, den Sie im `x-sandbox-name` -Kopfzeile stellt eine gültige, aktivierte Sandbox für Ihre IMS-Organisation dar, bevor Sie die Anfrage erneut ausführen. |
+| `INSGHT-1003-401` | Sandbox-Validierungsfehler | Die Anfrage konnte aufgrund eines Sandbox-Validierungsfehlers nicht verarbeitet werden. Stellen Sie sicher, dass der Sandbox-Name, den Sie im `x-sandbox-name` -Kopfzeile stellt eine gültige, aktivierte Sandbox für Ihre Organisation dar, bevor Sie die Anfrage erneut ausführen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

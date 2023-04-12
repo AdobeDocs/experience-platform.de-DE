@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Auswerten von Ereignissen mit Streaming-Segmentierung nahezu in Echtzeit
 description: Dieses Dokument enthält Beispiele für die Verwendung der Streaming-Segmentierung mit der Segmentierungs-Service-API von Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 1c4da50b2c211aae06d6702d75e5650447fae0eb
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1971'
-ht-degree: 100%
+source-wordcount: '1967'
+ht-degree: 96%
 
 ---
 
@@ -102,7 +102,7 @@ Darüber hinaus erfolgt die Aufhebung der Segmentqualifikation, ähnlich wie die
 
 ## Abrufen aller für Streaming-Segmentierung aktivierten Segmente
 
-Sie können eine Liste aller Segmente abrufen, die für die Streaming-Segmentierung innerhalb Ihrer IMS-Organisation aktiviert sind, indem Sie eine GET-Anfrage an die `/segment/definitions`-Endpunkt stellen.
+Sie können eine Liste aller Segmente abrufen, die für die Streaming-Segmentierung innerhalb Ihres Unternehmens aktiviert sind, indem Sie eine GET-Anfrage an die `/segment/definitions` -Endpunkt.
 
 **API-Format**
 
@@ -126,7 +126,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Gruppe von Segmenten in Ihrer IMS-Organisation zurück, die für Streaming-Segmentierung aktiviert sind.
+Eine erfolgreiche Antwort gibt eine Reihe von Segmenten in Ihrer Organisation zurück, die für Streaming-Segmentierung aktiviert sind.
 
 ```json
 {
@@ -307,7 +307,7 @@ Eine erfolgreiche Antwort gibt die Details der Definition des neu erstellten Str
 
 ## Geplante Auswertung aktivieren {#enable-scheduled-segmentation}
 
-Nach dem Aktivieren der Streaming-Auswertung muss eine Grundlinie eingerichtet werden (danach ist das Segment immer auf dem neuesten Stand). Geplante Auswertungen (auch als geplante Segmentierung bezeichnet) müssen zuerst aktiviert werden, damit das System automatisch Grundlinien erstellt. Bei einer geplanten Segmentierung kann Ihre IMS-Organisation einen wiederkehrenden Zeitplan einhalten, um Exportaufträge zur Auswertung von Segmenten automatisch auszuführen.
+Nach dem Aktivieren der Streaming-Auswertung muss eine Grundlinie eingerichtet werden (danach ist das Segment immer auf dem neuesten Stand). Geplante Auswertungen (auch als geplante Segmentierung bezeichnet) müssen zuerst aktiviert werden, damit das System automatisch Grundlinien erstellt. Bei geplanter Segmentierung kann Ihr Unternehmen einen Zeitplan einhalten, um Exportaufträge automatisch zur Auswertung von Segmenten auszuführen.
 
 >[!NOTE]
 >
@@ -353,7 +353,7 @@ curl -X POST \
 | `properties` | **(Erforderlich)** Ein Objekt, das zusätzliche Eigenschaften im Zusammenhang mit dem Zeitplan enthält. |
 | `properties.segments` | **(Erforderlich, wenn `type` gleich `batch_segmentation`)** Die Verwendung von `["*"]` stellt sicher, dass alle Segmente einbezogen werden. |
 | `schedule` | **(Erforderlich)** Eine Zeichenfolge, die den Auftragszeitplan enthält. Aufträge können nur einmal pro Tag ausgeführt werden, d. h., Sie können einen Auftrag nicht so planen, dass er während eines Zeitraums von 24 Stunden mehr als einmal ausgeführt wird. Das folgende Beispiel (`0 0 1 * * ?`) bedeutet, dass der Auftrag jeden Tag um 1:00:00 Uhr (UTC) ausgelöst wird. Weitere Informationen finden Sie im Anhang zum [Cron-Ausdrucksformat](./schedules.md#appendix) in der Dokumentation zu Zeitplänen innerhalb der Segmentierung. |
-| `state` | *(Optional)* Zeichenfolge, die den Zeitplanstatus enthält. Verfügbare Werte: `active` und `inactive`. Der Standardwert ist `inactive`. Eine IMS-Organisation kann nur einen Zeitplan erstellen. Schritte zum Aktualisieren des Zeitplans finden Sie weiter unten in dieser Anleitung. |
+| `state` | *(Optional)* Zeichenfolge, die den Zeitplanstatus enthält. Verfügbare Werte: `active` und `inactive`. Der Standardwert ist `inactive`. Eine Organisation kann nur einen Zeitplan erstellen. Schritte zum Aktualisieren des Zeitplans finden Sie weiter unten in dieser Anleitung. |
 
 **Antwort**
 

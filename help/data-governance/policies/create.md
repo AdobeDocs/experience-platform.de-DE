@@ -5,10 +5,10 @@ title: Erstellen einer Data-Governance-Richtlinie in der API
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Richtlinien-Service-API eine Data-Governance-Richtlinie erstellen.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1200'
-ht-degree: 100%
+source-wordcount: '1199'
+ht-degree: 98%
 
 ---
 
@@ -57,7 +57,7 @@ GET /marketingActions/custom
 
 **Anfrage**
 
-Die folgende Anfrage nutzt den `marketingActions/custom`-Endpunkt, der eine Liste aller von Ihrer IMS-Organisation definierten Marketing-Aktionen abruft.
+Die folgende Anfrage verwendet die `marketingActions/custom` -Endpunkt, der eine Liste aller von Ihrer Organisation definierten Marketing-Aktionen abruft.
 
 ```shell
 curl -X GET \

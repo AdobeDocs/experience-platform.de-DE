@@ -2,16 +2,16 @@
 title: Power BI-Berichtsvorlagen für Platform-Dashboards
 description: Verwenden Sie Berichtvorlagen, um mithilfe von Power BI Experience Platform-Daten zu analysieren.
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1472'
-ht-degree: 93%
+source-wordcount: '1471'
+ht-degree: 92%
 
 ---
 
 # Power BI-Berichtsvorlagen für Dashboards
 
-Mit der Berichtsvorlagenfunktion von Power BI können Sie ansprechende Berichte erstellen, die mit Daten aus Adobe Experience Platform gefüllt sind. Der optimierte Installationsprozess installiert automatisch Standard-Widgets für Echtzeit-Kundenprofil, Segmentierung und Ziele. Die Installation verbindet Power BI auch mit Ihren Datenmodellen, sodass Sie Ihre Berichtsvorlagen einfach anpassen und erweitern können. Diese Berichte können für Ihr gesamtes Unternehmen freigegeben werden, ohne dass die Empfänger Zugangsdaten für Ihre IMS-Organisation in Platform benötigen.
+Mit der Berichtsvorlagenfunktion von Power BI können Sie ansprechende Berichte erstellen, die mit Daten aus Adobe Experience Platform gefüllt sind. Der optimierte Installationsprozess installiert automatisch Standard-Widgets für Echtzeit-Kundenprofil, Segmentierung und Ziele. Die Installation verbindet Power BI auch mit Ihren Datenmodellen, sodass Sie Ihre Berichtsvorlagen einfach anpassen und erweitern können. Diese Berichte können für Ihre gesamte Organisation freigegeben werden, ohne dass die Empfänger Anmeldeinformationen für Ihre Organisation in Platform benötigen.
 
 In diesem Dokument erfahren Sie, wie Sie Adobe Experience Platform mit der Power BI-Anwendung verbinden und mithilfe von Berichtsvorlagen wichtige, aus Platform-Daten gewonnene Einblicke mit externen Benutzern teilen können.
 

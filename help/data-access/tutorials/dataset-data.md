@@ -5,9 +5,9 @@ title: Datensatzdaten mit der Data Access API anzeigen
 type: Tutorial
 description: Erfahren Sie, wie Sie in einem Datensatz gespeicherte Daten mithilfe der Data Access API in Adobe Experience Platform suchen, aufrufen und herunterladen können. Außerdem werden Sie mit einigen der einzigartigen Funktionen der Data Access API, wie z. B. dem Paging und partiellen Downloads, vertraut gemacht.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1390'
+source-wordcount: '1388'
 ht-degree: 18%
 
 ---
@@ -62,7 +62,7 @@ Bevor Sie mit der Verwendung des [!DNL Data Access] API müssen Sie den Speicher
 
 Für eine umfassende Liste von Endpunkten im [!DNL Catalog] API, siehe [API-Referenz](https://www.adobe.io/experience-platform-apis/references/catalog/).
 
-## Abrufen einer Liste von Batches unter Ihrer IMS-Organisation
+## Abrufen einer Liste von Batches unter Ihrer Organisation
 
 Verwenden der [!DNL Catalog] API können Sie eine Liste von Batches unter Ihrem Unternehmen zurückgeben:
 
@@ -84,7 +84,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches/' \
 
 **Antwort**
 
-Die Antwort enthält ein Objekt, das alle Batches auflistet, die mit der IMS-Organisation verbunden sind, wobei jeder Wert der obersten Ebene einen Batch darstellt. Die einzelnen Batch-Objekte enthalten die Details für diesen Batch. Die folgende Antwort wurde aus Platzgründen minimiert.
+Die Antwort enthält ein -Objekt, das alle Batches auflistet, die mit der Organisation verbunden sind, wobei jeder Wert der obersten Ebene einen Batch darstellt. Die einzelnen Batch-Objekte enthalten die Details für diesen Batch. Die folgende Antwort wurde aus Platzgründen minimiert.
 
 ```json
 {

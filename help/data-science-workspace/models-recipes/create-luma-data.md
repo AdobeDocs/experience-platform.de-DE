@@ -5,16 +5,16 @@ title: Erstellen von Luma-Webschemata und -Datensätzen
 type: Tutorial
 description: In diesem Tutorial erhalten Sie die Voraussetzungen und Assets, die für das Luma-Demo-Tendenzmodell erforderlich sind.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '465'
 ht-degree: 2%
 
 ---
 
 # Erstellen von Luma-Propensity-Modellschemas und -Datensätzen
 
-In diesem Tutorial erhalten Sie die Voraussetzungen und Assets, die für alle anderen [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] Tutorials. Nach Abschluss des Vorgangs stehen Ihnen und Ihrer IMS-Organisation die folgenden Schemas und Datensätze zur Verfügung.
+In diesem Tutorial erhalten Sie die Voraussetzungen und Assets, die für alle anderen [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] Tutorials. Nach Abschluss des Vorgangs stehen Ihnen und Ihrer Organisation die folgenden Schemas und Datensätze zur Verfügung.
 
 **Schemata:**
 
@@ -43,7 +43,7 @@ Das folgende Tutorial verwendet ein benutzerdefiniertes Luma-Kaufneigungsmodell.
 
 ### Erstellen des Luma-Webdatenschemas und Erfassen der Daten
 
-Um ein Modell zu erstellen, müssen Sie über einen Datensatz in Platform verfügen, der zum Trainieren und Bewertung Ihres Modells verwendet wird. Das folgende Video-Tutorial aus dem [Data Science Workspace-Kurs](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw) führt Sie durch die Erstellung des Luma-Schemas und die Erfassung der vom Kaufpropensionsmodell verwendeten Daten.
+Um ein Modell zu erstellen, müssen Sie über einen Datensatz in Platform verfügen, der zum Trainieren und Bewertung Ihres Modells verwendet wird. Das folgende Video-Tutorial aus dem [Data Science Workspace-Kurs](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=de) führt Sie durch die Erstellung des Luma-Schemas und die Erfassung der vom Kaufpropensionsmodell verwendeten Daten.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333312)
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: API-Endpunkt für Abfragevorlagen
 description: In diesem Handbuch werden die verschiedenen API-Aufrufe für Abfragevorlagen beschrieben, die Sie mit der Query Service-API ausführen können.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: ee6a54aeba4ddfeb98ee5e11283c299f00969a53
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '894'
-ht-degree: 65%
+source-wordcount: '890'
+ht-degree: 58%
 
 ---
 
@@ -21,7 +21,7 @@ Siehe [Dokumentation zu Benutzeroberflächenabfragevorlagen](../ui/query-templat
 
 ### Liste von Abfragevorlagen abrufen
 
-Sie können eine Liste aller Abfragevorlagen für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an den `/query-templates`-Endpunkt senden.
+Sie können eine Liste aller Abfragevorlagen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an die `/query-templates` -Endpunkt.
 
 **API-Format**
 
@@ -47,7 +47,7 @@ Im Folgenden finden Sie eine Liste der verfügbaren Abfrageparameter zum Auflist
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird die neueste Abfragevorlage abgerufen, die für Ihre IMS-Organisation erstellt wurde.
+Mit der folgenden Anfrage wird die neueste Abfragevorlage abgerufen, die für Ihr Unternehmen erstellt wurde.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limit=1
@@ -59,7 +59,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Abfragevorlagen für die angegebene IMS-Organisation zurück. Die folgende Antwort gibt die neueste Abfragevorlage zurück, die für Ihre IMS-Organisation erstellt wurde.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Abfragevorlagen für die angegebene Organisation zurück. Die folgende Antwort gibt die neueste Abfragevorlage zurück, die für Ihr Unternehmen erstellt wurde.
 
 ```json
 {

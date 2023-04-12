@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Erste Schritte mit der Richtlinien-Service-API
 description: Mit der Policy Service-API können Sie verschiedene Ressourcen im Zusammenhang mit der Data Governance von Adobe Experience Platform erstellen und verwalten. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen sollten, bevor Sie Aufrufe an die Policy Service-API durchführen.
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 100%
+source-wordcount: '443'
+ht-degree: 93%
 
 ---
 
@@ -52,7 +52,7 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 Innerhalb der [!DNL Policy Service]-API werden alle Richtlinien und Marketing-Aktionen entweder als `core`- oder als `custom`-Ressourcen bezeichnet.
 
-`core`-Ressourcen sind die von Adobe definierten und verwalteten Ressourcen, während `custom`-Ressourcen von Ihrer Organisation erstellt und verwaltet werden und daher einzigartig und nur für Ihre IMS-Organisation sichtbar sind. Darum sind Auflistungs- und Nachschlagevorgänge (`GET`) die einzigen Vorgänge, die bei `core`-Ressourcen zulässig sind, während bei `custom`-Ressourcen Auflistungs-, Nachschlage- und Aktualisierungsvorgänge (`POST`, `PUT`, `PATCH` und `DELETE`) verfügbar sind.
+`core` die von der Adobe festgelegten und verwalteten Ressourcen, während `custom` -Ressourcen sind die Ressourcen, die von Ihrer Organisation erstellt und gepflegt werden. Sie sind daher eindeutig und nur für Ihre Organisation sichtbar. Darum sind Auflistungs- und Nachschlagevorgänge (`GET`) die einzigen Vorgänge, die bei `core`-Ressourcen zulässig sind, während bei `custom`-Ressourcen Auflistungs-, Nachschlage- und Aktualisierungsvorgänge (`POST`, `PUT`, `PATCH` und `DELETE`) verfügbar sind.
 
 ## Nächste Schritte
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Datenqualität
 description: Das folgende Dokument bietet eine Zusammenfassung der unterstützten Prüf- und Validierungsverfahren für die Batch- und Streaming-Erfassung in Adobe Experience Platform.
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 57%
+source-wordcount: '423'
+ht-degree: 54%
 
 ---
 
@@ -49,7 +49,7 @@ Die folgenden Validierungen werden für die Streaming-Erfassung durchgeführt:
 | Schema | Stellt sicher, dass das Schema **nicht** leer ist und wie folgt einen Verweis auf das Schema „Vereinigung“ enthält: `"meta:immutableTags": ["union"]` |
 | `identityField` | Stellt sicher, dass alle gültigen Identitätsdeskriptoren definiert sind. |
 | JSON | Stellt sicher, dass die JSON gültig ist. |
-| IMS-Organisation | Stellt sicher, dass die aufgelistete IMS-Organisation eine gültige Organisation ist. |
+| Organisation | Stellt sicher, dass die aufgelistete Organisation eine gültige Organisation ist. |
 | Name der Quelle | Stellt sicher, dass der Name der Datenquelle angegeben ist. |
 | Datensatz | Stellt sicher, dass der Datensatz angegeben, aktiviert und nicht entfernt wurde. |
 | Kopfzeile | Stellt sicher, dass die Kopfzeile angegeben und gültig ist. |

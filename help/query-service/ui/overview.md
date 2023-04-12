@@ -2,18 +2,18 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Service;Abfrage-Service;Abfrage;Abfrageeditor;Abfrage-Editor;Abfrage-Editor;
 solution: Experience Platform
 title: Handbuch zur Abfrage-Service-Benutzeroberfläche
-description: Der Abfrage-Service von Adobe Experience Platform bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzenden in Ihrer IMS-Organisation gespeichert wurden.
+description: Adobe Experience Platform Query Service bietet eine Benutzeroberfläche, mit der Sie Abfragen schreiben und ausführen, zuvor ausgeführte Abfragen anzeigen und auf Abfragen zugreifen können, die von Benutzern in Ihrer Organisation gespeichert wurden.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 5a027200efc22051cca6d4c041e857b2abc7d96f
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1135'
-ht-degree: 78%
+source-wordcount: '1133'
+ht-degree: 72%
 
 ---
 
 # Handbuch für die [!DNL Query Service]-Benutzeroberfläche
 
-Der [!DNL Query Service] von Adobe Experience Platform bietet eine Benutzeroberfläche, die zum Schreiben und Ausführen von Abfragen, zum Anzeigen zuvor ausgeführter Abfragen und zum Zugriff auf Abfragen verwendet werden kann, die von Benutzenden in Ihrer IMS-Organisation gespeichert wurden. Um auf die Benutzeroberfläche in [Adobe Experience Platform](https://platform.adobe.com) zuzugreifen, wählen Sie in der linken Navigationsleiste **[!UICONTROL Abfragen]** aus.
+Die Adobe Experience Platform [!DNL Query Service] bietet eine Benutzeroberfläche, die zum Schreiben und Ausführen von Abfragen, zum Anzeigen zuvor ausgeführter Abfragen und zum Zugriff auf Abfragen verwendet werden kann, die von Benutzern in Ihrer Organisation gespeichert wurden. Um auf die Benutzeroberfläche in [Adobe Experience Platform](https://platform.adobe.com) zuzugreifen, wählen Sie in der linken Navigationsleiste **[!UICONTROL Abfragen]** aus.
 
 ## [!DNL Query Editor]
 

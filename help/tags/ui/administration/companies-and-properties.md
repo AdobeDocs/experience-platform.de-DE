@@ -2,10 +2,10 @@
 title: Eigenschaften
 description: Erfahren Sie, wie Erweiterungen, Umgebung und Bibliotheken für Ihr Unternehmen in Adobe Experience Platform organisiert und gruppiert werden.
 exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1178'
-ht-degree: 100%
+source-wordcount: '1176'
+ht-degree: 97%
 
 ---
 
@@ -25,7 +25,7 @@ Mobile-Eigenschaften können mehrere Anwendungen enthalten. In einer Mobile-Eige
 
 ## Best Practices für die Planung von Eigenschaften {#best-practices-for-planning-properties}
 
-Tag-Implementierungen in Adobe Experience Platform können sehr unterschiedlich sein. Sie haben verschiedensten Anforderungen bezüglich Datenerfassung, Variablennutzung, Erweiterungen, Drittanbieter-Tags, anderer Systeme und Technologien, Personen, Teams, geografischer Regionen usw. Sie sollten Ihre Eigenschaften so strukturieren, dass sie zum Workflow und den Prozessen Ihrer IMS-Organisation passen.
+Tag-Implementierungen in Adobe Experience Platform können sehr unterschiedlich sein. Sie haben verschiedensten Anforderungen bezüglich Datenerfassung, Variablennutzung, Erweiterungen, Drittanbieter-Tags, anderer Systeme und Technologien, Personen, Teams, geografischer Regionen usw. Sie sollten Ihre Eigenschaften so strukturieren, dass sie dem Workflow und den Prozessen Ihres Unternehmens entsprechen.
 
 Beachten Sie bei der Planung von Eigenschaften Folgendes:
 
@@ -67,7 +67,7 @@ Wenn Sie z. B. [!DNL Adobe Analytics], [!DNL Target] sowie dieselben Drittanbie
 
 Benötigen die Personen, Teams und Organisationen, die in Adobe Experience Platform arbeiten, Zugriff auf all Ihre Websites und Programme, auf einige oder nur auf eine(s)?
 
-Mit der User-Management-Funktion können Sie verschiedenen Personen unterschiedliche Rollen zuweisen – entweder für alle oder für einzelne Properties. Wenn jemand über ausreichende Rechte verfügt, kann diese Person administrative Aktionen für alle Eigenschaften in diesem Platform-IMS-Unternehmen durchführen. Alle anderen Rollen können pro Eigenschaft zugewiesen werden. Sie können eine Eigenschaft sogar für bestimmte Benutzer (nicht Administratoren) ausblenden, indem Sie ihnen in der betreffenden Eigenschaft keine Rolle zuweisen.
+Mit der User-Management-Funktion können Sie verschiedenen Personen unterschiedliche Rollen zuweisen – entweder für alle oder für einzelne Properties. Wenn jemand über ausreichende Rechte verfügt, kann diese Person administrative Aktionen für alle Eigenschaften in dieser Platform-Organisation durchführen. Alle anderen Rollen können pro Eigenschaft zugewiesen werden. Sie können eine Eigenschaft sogar für bestimmte Benutzer (nicht Administratoren) ausblenden, indem Sie ihnen in der betreffenden Eigenschaft keine Rolle zuweisen.
 
 ## Eigenschaften-Seite
 

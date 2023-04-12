@@ -2,10 +2,10 @@
 description: Auf dieser Seite werden alle API-Vorgänge beschrieben, die Sie mit dem API-Endpunkt „/authoring/credentials“ ausführen können.
 title: API-Vorgänge für Zugriffsdaten-Endpunkte
 exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 100%
+source-wordcount: '791'
+ht-degree: 91%
 
 ---
 
@@ -132,7 +132,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 | `servicePrincipalKey` | Zeichenfolge | Azure Service Principal Key für Azure Data Lake Storage |
 | `connectionString` | Zeichenfolge | Azure Blob Storage-Verbindungszeichenfolge |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -140,7 +140,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur neu erstellte
 
 ## Anzeigen der Zugangsdaten-Konfigurationen {#retrieve-list}
 
-Sie können eine Liste aller Zugangsdaten-Konfigurationen für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an den `/authoring/credentials`-Endpunkt senden.
+Sie können eine Liste aller Anmeldekonfigurationen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an die `/authoring/credentials` -Endpunkt.
 
 **API-Format**
 
@@ -151,7 +151,7 @@ GET /authoring/credentials
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird die Liste der Zugangsdaten-Konfigurationen abgerufen, auf die Sie je nach IMS-Organisation und Sandbox-Konfiguration Zugriff haben.
+Mit der folgenden Anfrage wird die Liste der Anmeldekonfigurationen abgerufen, auf die Sie je nach Organisations- und Sandbox-Konfiguration Zugriff haben.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -163,7 +163,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 **Antwort**
 
-Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste von Anmeldedaten-Konfigurationen zurück, auf die Sie Zugriff haben. Diese Liste ist abhängig von der von Ihnen verwendeten IMS-Organisations-ID und dem Sandbox-Namen. Eine `instanceId` entspricht der Vorlage für eine einzige Anmeldedaten-Konfiguration. Die Antwort wird verkürzt angegeben.
+Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste von Anmeldekonfigurationen zurück, auf die Sie Zugriff haben, basierend auf der Organisations-ID und dem Sandbox-Namen, die Sie verwendet haben. Eine `instanceId` entspricht der Vorlage für eine einzige Anmeldedaten-Konfiguration. Die Antwort wird verkürzt angegeben.
 
 ```json
 {

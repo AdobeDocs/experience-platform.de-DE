@@ -2,10 +2,10 @@
 title: API-Endpunkt exportieren
 description: Mit dem Endpunkt /export in der Schema Registry-API können Sie XDM-Ressourcen zwischen Sandboxes freigeben.
 exl-id: 1dcbfa59-af98-4db5-b6f4-f848e5bf5e81
-source-git-commit: 32d4a364ba740194d4fd7a0f4df7bd69f25f62b8
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '414'
-ht-degree: 14%
+source-wordcount: '410'
+ht-degree: 13%
 
 ---
 
@@ -33,7 +33,7 @@ GET /rpc/export/{RESOURCE_ID}
 | --- | --- |
 | `{RESOURCE_ID}` | Die `meta:altId` oder URL-kodiert `$id` der XDM-Ressource, die Sie exportieren möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -51,7 +51,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Array von Objekten zurück, die die Ziel-XDM-Ressource und alle abhängigen Ressourcen darstellen. In diesem Beispiel ist das erste Objekt im Array ein von einem Mandanten erstellter `Property` Datentyp, der `Restaurant` -Feldergruppe verwendet, während das zweite Objekt die `Restaurant` Feldergruppe selbst. Diese Payload kann dann verwendet werden, um [Importieren der Ressource](#import) in eine andere Sandbox oder IMS-Organisation.
+Eine erfolgreiche Antwort gibt ein Array von Objekten zurück, die die Ziel-XDM-Ressource und alle abhängigen Ressourcen darstellen. In diesem Beispiel ist das erste Objekt im Array ein von einem Mandanten erstellter `Property` Datentyp, der `Restaurant` -Feldergruppe verwendet, während das zweite Objekt die `Restaurant` Feldergruppe selbst. Diese Payload kann dann verwendet werden, um [Importieren der Ressource](#import) in eine andere Sandbox oder Organisation.
 
 Beachten Sie, dass alle Instanzen der Mandanten-ID der Ressource durch `<XDM_TENANTID_PLACEHOLDER>`. Dadurch kann die Schema Registry die richtige Mandantenkennung automatisch auf die Ressourcen anwenden, je nachdem, wo sie im nachfolgenden Importaufruf gesendet werden.
 

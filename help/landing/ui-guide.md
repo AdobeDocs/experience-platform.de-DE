@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über die Experience Platform-Benutzeroberfläche
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1811'
+source-wordcount: '1797'
 ht-degree: 4%
 
 ---
@@ -29,13 +29,13 @@ Das Metriken-Dashboard bietet Karten, in denen Sie Informationen zu Datensätzen
 
 ![](images/user-guide/homepage-dashboard.png)
 
-Die **[!UICONTROL Datensätze]** zeigt die Anzahl der Datensätze in Ihrer IMS-Organisation an. Diese Zahl wird aktualisiert, wenn ein neuer Datensatz erstellt wird. Weitere Informationen zu Datensätzen finden Sie im [Datensätze - Übersicht](../catalog/datasets/overview.md).
+Die **[!UICONTROL Datensätze]** zeigt die Anzahl der Datensätze in Ihrer Organisation an. Diese Zahl wird aktualisiert, wenn ein neuer Datensatz erstellt wird. Weitere Informationen zu Datensätzen finden Sie im [Datensätze - Übersicht](../catalog/datasets/overview.md).
 
-Die **[!UICONTROL Profile]** zeigt die Gesamtzahl der Personen mit Profilen in Ihrer IMS-Organisation, ausgenommen Profilfragmente. Diese Gesamtzahl an Personen stellt die gesamte adressierbare Zielgruppe dar und wird alle 24 Stunden aktualisiert. Weitere Informationen zu Profilen finden Sie im Abschnitt [Übersicht über das Echtzeit-Kundenprofil](../profile/home.md).
+Die **[!UICONTROL Profile]** zeigt die Gesamtzahl der Personen mit Profilen in Ihrer Organisation, ausgenommen Profilfragmente. Diese Gesamtzahl an Personen stellt die gesamte adressierbare Zielgruppe dar und wird alle 24 Stunden aktualisiert. Weitere Informationen zu Profilen finden Sie im Abschnitt [Übersicht über das Echtzeit-Kundenprofil](../profile/home.md).
 
-Die **[!UICONTROL Segmente]** zeigt die Gesamtzahl der Segmente an, die innerhalb Ihrer IMS-Organisation erstellt wurden. Diese Zahl wird bei der Erstellung eines neuen Segments aktualisiert. Weitere Informationen zu Segmenten finden Sie im Abschnitt [Übersicht über den Segmentierungsdienst](../segmentation/home.md).
+Die **[!UICONTROL Segmente]** zeigt die Gesamtzahl der in Ihrem Unternehmen erstellten Segmente an. Diese Zahl wird bei der Erstellung eines neuen Segments aktualisiert. Weitere Informationen zu Segmenten finden Sie im Abschnitt [Übersicht über den Segmentierungsdienst](../segmentation/home.md).
 
-Die **[!UICONTROL Ziele]** zeigt die Gesamtzahl der Ziele an, die für die IMS-Organisation erstellt wurden. Diese Zahl wird aktualisiert, wenn ein neues Ziel erstellt wird. Weitere Informationen zu Zielen finden Sie im [Ziele - Übersicht](../destinations/home.md).
+Die **[!UICONTROL Ziele]** zeigt die Gesamtzahl der Ziele an, die für die Organisation erstellt wurden. Diese Zahl wird aktualisiert, wenn ein neues Ziel erstellt wird. Weitere Informationen zu Zielen finden Sie im [Ziele - Übersicht](../destinations/home.md).
 
 ### Letzte Daten
 
@@ -43,13 +43,13 @@ Das Daten-Dashboard der letzten Zeit enthält Informationen zu kürzlich erstell
 
 ![](images/user-guide/homepage-recent.png)
 
-Die **[!UICONTROL Letzte Datensätze]** enthält die fünf zuletzt erstellten Datensätze in Ihrer IMS-Organisation. Diese Liste wird jedes Mal aktualisiert, wenn ein neuer Datensatz erstellt wird. Sie können einen Datensatz aus der Liste auswählen, um weitere Informationen zum angegebenen Datensatz anzuzeigen, oder **[!UICONTROL Alle anzeigen]** um eine Liste aller erstellten Datensätze anzuzeigen. Weitere Informationen zu Datensätzen finden Sie im [Datensätze - Übersicht](../catalog/datasets/overview.md).
+Die **[!UICONTROL Letzte Datensätze]** enthält die fünf zuletzt erstellten Datensätze in Ihrem Unternehmen. Diese Liste wird jedes Mal aktualisiert, wenn ein neuer Datensatz erstellt wird. Sie können einen Datensatz aus der Liste auswählen, um weitere Informationen zum angegebenen Datensatz anzuzeigen, oder **[!UICONTROL Alle anzeigen]** um eine Liste aller erstellten Datensätze anzuzeigen. Weitere Informationen zu Datensätzen finden Sie im [Datensätze - Übersicht](../catalog/datasets/overview.md).
 
-Die **[!UICONTROL Letzte Quellen]** im Abschnitt werden die fünf zuletzt erstellten Quell-Connectoren innerhalb Ihrer IMS-Organisation aufgelistet. Diese Liste wird jedes Mal aktualisiert, wenn ein neuer Quell-Connector erstellt wird. Sie können eine Quellverbindung aus der Liste auswählen, um weitere Informationen zum angegebenen Connector anzuzeigen, oder Sie können **[!UICONTROL Alle anzeigen]** um eine Liste aller erstellten Quellverbindungen anzuzeigen. Weitere Informationen zu Quellen finden Sie im [Quellen - Übersicht](../sources/home.md).
+Die **[!UICONTROL Letzte Quellen]** im Abschnitt werden die fünf zuletzt erstellten Quell-Connectoren innerhalb Ihres Unternehmens aufgelistet. Diese Liste wird jedes Mal aktualisiert, wenn ein neuer Quell-Connector erstellt wird. Sie können eine Quellverbindung aus der Liste auswählen, um weitere Informationen zum angegebenen Connector anzuzeigen, oder Sie können **[!UICONTROL Alle anzeigen]** um eine Liste aller erstellten Quellverbindungen anzuzeigen. Weitere Informationen zu Quellen finden Sie im [Quellen - Übersicht](../sources/home.md).
 
-Die **[!UICONTROL Letzte Segmente]** enthält die fünf zuletzt erstellten Segmentdefinitionen in Ihrer IMS-Organisation. Diese Liste wird jedes Mal aktualisiert, wenn eine neue Segmentdefinition erstellt wird. Sie können eine Segmentdefinition aus der Liste auswählen, um weitere Informationen zur angegebenen Segmentdefinition anzuzeigen, oder Sie können **[!UICONTROL Alle anzeigen]** um eine Liste aller erstellten Segmentdefinitionen anzuzeigen. Weitere Informationen zu Segmenten finden Sie im Abschnitt [Übersicht über den Segmentierungsdienst](../segmentation/home.md).
+Die **[!UICONTROL Letzte Segmente]** enthält die fünf zuletzt erstellten Segmentdefinitionen in Ihrem Unternehmen. Diese Liste wird jedes Mal aktualisiert, wenn eine neue Segmentdefinition erstellt wird. Sie können eine Segmentdefinition aus der Liste auswählen, um weitere Informationen zur angegebenen Segmentdefinition anzuzeigen, oder Sie können **[!UICONTROL Alle anzeigen]** um eine Liste aller erstellten Segmentdefinitionen anzuzeigen. Weitere Informationen zu Segmenten finden Sie im Abschnitt [Übersicht über den Segmentierungsdienst](../segmentation/home.md).
 
-Die **[!UICONTROL Letzte Ziele]** enthält die fünf Ziele, die Sie in Ihrer IMS-Organisation zuletzt erstellt haben. Diese Liste wird jedes Mal aktualisiert, wenn ein neues Ziel erstellt wird. Sie können ein Ziel aus der Liste auswählen, um weitere Informationen über das angegebene Ziel anzuzeigen, oder **[!UICONTROL Alle anzeigen]** um eine Liste aller erstellten Ziele anzuzeigen. Weitere Informationen zu Zielen finden Sie im [Ziele - Übersicht](../destinations/home.md).
+Die **[!UICONTROL Letzte Ziele]** enthält die fünf Ziele, die Sie in Ihrem Unternehmen zuletzt erstellt haben. Diese Liste wird jedes Mal aktualisiert, wenn ein neues Ziel erstellt wird. Sie können ein Ziel aus der Liste auswählen, um weitere Informationen über das angegebene Ziel anzuzeigen, oder **[!UICONTROL Alle anzeigen]** um eine Liste aller erstellten Ziele anzuzeigen. Weitere Informationen zu Zielen finden Sie im [Ziele - Übersicht](../destinations/home.md).
 
 ### Empfohlenes Lernen
 
@@ -59,23 +59,23 @@ Die **[!UICONTROL Empfohlenes Lernen]** enthält Links zur nützlichen Dokumenta
 
 ## Navigationsleiste oben
 
-In der oberen Navigationsleiste der Platform-Benutzeroberfläche wird die IMS-Organisation angezeigt, bei der Sie sich derzeit angemeldet haben, und es werden verschiedene wichtige Steuerelemente bereitgestellt.
+In der oberen Navigationsleiste der Platform-Benutzeroberfläche wird die Organisation angezeigt, bei der Sie sich derzeit angemeldet haben, und es werden verschiedene wichtige Steuerelemente bereitgestellt.
 
 Auf der linken Seite der Navigationsleiste befindet sich das Adobe Experience Platform-Logo. Wenn Sie dieses Logo jederzeit auswählen, gelangen Sie zurück zum Startbildschirm der Platform-Benutzeroberfläche.
 
 ![](./images/user-guide/homepage-top-nav-bar.png)
 
-### IMS-Organisationswechsel
+### Organisationswechsel
 
-Das erste Element auf der rechten Seite der oberen Navigationsleiste ist die **IMS-Organisationswechsel**.
+Das erste Element auf der rechten Seite der oberen Navigationsleiste ist die **Organisationswechsel**.
 
 ![](./images/user-guide/homepage-ims-org-switcher.png)
 
-Wenn Sie den Umschalter auswählen, wird ein Dropdown-Menü mit IMS-Organisationen geöffnet, auf die Sie Zugriff haben, sofern verfügbar. Um zu einer anderen IMS-Organisation zu wechseln, wählen Sie eine aufgelistete Option aus.
+Wenn Sie den Umschalter auswählen, wird ein Dropdown-Menü mit Organisationen geöffnet, auf die Sie Zugriff haben, sofern verfügbar. Um zu einer anderen Organisation zu wechseln, wählen Sie eine aufgelistete Option aus.
 
 ### Wechseln von Anwendungen
 
-Das nächste Element auf der rechten Seite der oberen Navigation ist die **Anwendungsschalter**, vertreten durch ![Anwendungsschalter](./images/user-guide/app-switcher-icon.png) Symbol. Wenn Sie dieses Symbol auswählen, können Sie zwischen Adobe-Anwendungen, auf die Ihre IMS-Organisation Zugriff hat, wie z. B. Experience Platform, Analytics, Assets und andere wechseln.
+Das nächste Element auf der rechten Seite der oberen Navigation ist die **Anwendungsschalter**, vertreten durch ![Anwendungsschalter](./images/user-guide/app-switcher-icon.png) Symbol. Wenn Sie dieses Symbol auswählen, können Sie zwischen Adobe Apps, auf die Ihr Unternehmen Zugriff hat, wie z. B. Experience Platform, Analytics, Assets und andere wechseln.
 
 ### Hilfe
 
@@ -139,7 +139,7 @@ Die **[!UICONTROL Richtlinien]** können Sie Datennutzungsrichtlinien erstellen 
 
 Die **[!UICONTROL Anforderungen]** können Sie Datenschutzanfragen erstellen und verwalten. Beachten Sie, dass Sie auf die Zulassungsliste gesetzt sein müssen, um Zugriff auf die Benutzeroberfläche von Privacy Service zu erhalten. Weitere Informationen zur Verwendung des Abschnitts Anforderungen finden Sie im Abschnitt [Benutzerhandbuch für Privacy Service](../privacy-service/ui/user-guide.md). Weitere Informationen zum Privacy Service finden Sie im [Übersicht über Privacy Service](../privacy-service/home.md).
 
-### [!UICONTROL Data Science]
+### [!UICONTROL Datenwissenschaft]
 
 Die **[!UICONTROL Notebooks]** bietet Zugriff auf JupyterLab, eine interaktive Entwicklungsumgebung, in der Sie Ihre Daten untersuchen, analysieren und modellieren können. Weitere Informationen zur Verwendung des Abschnitts Notebooks finden Sie im Abschnitt [JupyterLab-Benutzerhandbuch](../data-science-workspace/jupyterlab/overview.md). Weitere Informationen zu Data Science Workspace finden Sie im [Data Science Workspace - Übersicht](../data-science-workspace/home.md)
 

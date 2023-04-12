@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über die Privacy Service-Benutzeroberfläche
 description: Beginnen Sie mit der Verwendung der Privacy Service-Benutzeroberfläche, um Datenschutzanfragen über verschiedene Experience Cloud-Anwendungen hinweg zu koordinieren und zu überwachen.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '206'
 ht-degree: 25%
 
 ---
@@ -28,7 +28,7 @@ Die Privacy Service-Benutzeroberfläche [!DNL Privacy Service] ermöglicht die K
 
 >[!IMPORTANT]
 >
->Sie müssen über eine Adobe ID verfügen, um sich bei der [!DNL Privacy Service] Benutzeroberfläche. Darüber hinaus müssen Sie über Systemadministratorberechtigungen in Ihrer IMS-Organisation verfügen.
+>Sie müssen über eine Adobe ID verfügen, um sich bei der [!DNL Privacy Service] Benutzeroberfläche. Darüber hinaus müssen Sie in Ihrem Unternehmen über Systemadministratorberechtigungen verfügen.
 
 Um auf die Benutzeroberfläche zuzugreifen, melden Sie sich bei [Adobe Experience Cloud](https://experience.adobe.com/) und wählen Sie **[!UICONTROL Datenschutz-Benutzeroberfläche]** unter dem Schnellzugriffsmenü.
 

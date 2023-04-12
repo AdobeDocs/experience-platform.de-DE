@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Erste Schritte mit der Schema Registry-API
 description: Dieses Dokument bietet eine Einführung in die wichtigsten Konzepte, die Sie kennen müssen, bevor Sie Aufrufe an die Schema Registry-API durchführen.
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1356'
-ht-degree: 48%
+source-wordcount: '1350'
+ht-degree: 45%
 
 ---
 
@@ -54,7 +54,7 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 ## Ihre TENANT_ID {#know-your-tenant_id}
 
-In den API-Handbüchern finden Sie Verweise auf eine `TENANT_ID`. Diese Kennung stellt sicher, dass die von Ihnen erstellten Ressourcen den richtigen Namespace aufweisen und in Ihrer IMS-Organisation enthalten sind. Wenn Sie Ihre ID nicht kennen, können Sie sie mit der folgenden GET-Anfrage abrufen:
+In den API-Handbüchern finden Sie Verweise auf eine `TENANT_ID`. Diese ID wird verwendet, um sicherzustellen, dass von Ihnen erstellte Ressourcen ordnungsgemäß benannt werden und in Ihrem Unternehmen enthalten sind. Wenn Sie Ihre ID nicht kennen, können Sie sie mit der folgenden GET-Anfrage abrufen:
 
 **API-Format**
 
@@ -168,7 +168,7 @@ GET /global/classes
 
 ### Mandanten-Container
 
-Nicht zu verwechseln mit Ihrer eindeutigen `TENANT_ID`, die `tenant` -Container enthält alle Klassen, Feldergruppen, Datentypen, Schemata und Deskriptoren, die von einer IMS-Organisation definiert wurden. Sie sind für jede Organisation eindeutig, d h. sie sind für andere IMS-Organisationen nicht sichtbar oder verwaltbar. Sie können alle CRUD-Vorgänge (GET, POST, PUT, PATCH, DELETE) für Ressourcen ausführen, die Sie in der `tenant` Container.
+Nicht zu verwechseln mit Ihrer eindeutigen `TENANT_ID`, die `tenant` -Container enthält alle Klassen, Feldergruppen, Datentypen, Schemata und Deskriptoren, die von einer Organisation definiert werden. Diese sind für jede Organisation eindeutig, d. h. sie sind für andere Organisationen nicht sichtbar oder verwaltbar. Sie können alle CRUD-Vorgänge (GET, POST, PUT, PATCH, DELETE) für Ressourcen ausführen, die Sie in der `tenant` Container.
 
 Ein Beispiel für einen Aufruf, bei dem die `tenant` -Container würde wie folgt aussehen:
 
@@ -212,7 +212,7 @@ In der folgenden Tabelle sind die kompatiblen `Accept` -Kopfzeilenwerte, einschl
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref`-Attribute und `allOf` aufgelöst. Deskriptoren sind enthalten. |
 | `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` und `allOf` aufgelöst, verfügt über Titel und Beschreibungen. Veraltete Felder werden mit einem `meta:status` Attribut `deprecated`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >

@@ -5,9 +5,9 @@ title: Planen eines Modells in der Benutzeroberfläche von Data Science Workspac
 type: Tutorial
 description: Mit Adobe Experience Platform Data Science Workspace können Sie geplante Scoring- und Trainings-Läufe auf einem Dienst für maschinelles Lernen einrichten. Die Automatisierung des Trainings- und Bewertungsvorgangs kann dazu beitragen, die Effizienz eines Service im Laufe der Zeit zu erhalten und zu verbessern, indem Sie über Muster in Ihren Daten auf dem Laufenden bleiben.
 exl-id: 51f6f328-7c63-4de1-9184-2ba526bb82e2
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '554'
 ht-degree: 20%
 
 ---
@@ -23,7 +23,7 @@ In diesem Tutorial werden die Schritte zum Konfigurieren von Trainings- und Scor
 
 ## Erste Schritte
 
-Um dieses Tutorial abzuschließen, benötigen Sie Zugriff auf [!DNL Experience Platform]. Wenn Sie keinen Zugriff auf eine IMS-Organisation in [!DNL Experience Platform]Wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
+Um dieses Tutorial abzuschließen, benötigen Sie Zugriff auf [!DNL Experience Platform]. Wenn Sie keinen Zugriff auf eine Organisation in [!DNL Experience Platform]Wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
 
 Für dieses Tutorial ist ein vorhandener Dienst erforderlich. Wenn Sie keinen barrierefreien Dienst haben, mit dem Sie arbeiten können, können Sie einen erstellen, indem Sie dem Tutorial für [Veröffentlichen eines Modells als Dienst](./publish-model-service-ui.md).
 

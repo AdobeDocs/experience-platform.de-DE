@@ -2,10 +2,10 @@
 description: Auf dieser Seite werden alle API-Abläufe aufgelistet und beschrieben, die Sie mit dem API-Endpunkt „/authoring/destinations“ ausführen können.
 title: API-Endpunktvorgänge für Ziele
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '2545'
-ht-degree: 91%
+source-wordcount: '2536'
+ht-degree: 88%
 
 ---
 
@@ -180,7 +180,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | Boolesch | Siehe Parameter in der Beispielkonfiguration [hier](./destination-configuration.md#example-configuration). Verwenden Sie diesen Parameter, um anzugeben, ob die exportierten Profile in Gruppen einer einzigen Identität zusammengefasst werden sollen (GAID, IDFA, Telefonnummern, E-Mail usw.). |
 | `aggregation.configurableAggregation.aggregationKey.groups` | Zeichenfolge | Siehe Parameter in der Beispielkonfiguration [hier](./destination-configuration.md#example-configuration). Erstellen Sie Listen mit Identitätsgruppen, wenn Sie Profile gruppieren möchten, die nach Gruppen von Identitäts-Namespace in Ihr Ziel exportiert wurden. Beispielsweise können Sie Profile, die die Kennungen IDFA und GAID für Mobilgeräte enthalten, mithilfe der im Beispiel beschriebenen Konfiguration zu einem Aufruf an Ihr Ziel und E-Mails zu einem anderen kombinieren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -443,7 +443,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zu Ihrer ne
 
 ## Auflisten der Zielkonfigurationen {#retrieve-list}
 
-Sie können eine Liste aller Zielkonfigurationen für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/authoring/destinations` stellen.
+Sie können eine Liste aller Zielkonfigurationen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an die `/authoring/destinations` -Endpunkt.
 
 **API-Format**
 
@@ -454,7 +454,7 @@ GET /authoring/destinations
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird die Liste der Zielkonfigurationen abgerufen, auf die Sie Zugriff haben, basierend auf der IMS-Organisation und der Sandbox-Konfiguration.
+Mit der folgenden Anfrage wird die Liste der Zielkonfigurationen abgerufen, auf die Sie je nach Organisation und Sandbox-Konfiguration Zugriff haben.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations \
@@ -466,7 +466,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Antwort**
 
-Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste von Zielkonfigurationen zurück, auf die Sie Zugriff haben, basierend auf der von Ihnen verwendeten IMS-Organisations-ID und dem Sandbox-Namen. Eine `instanceId` entspricht der Vorlage für jeweils ein Ziel. Die Antwort wird verkürzt angegeben.
+Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste von Zielkonfigurationen zurück, auf die Sie Zugriff haben, basierend auf der Organisations-ID und dem Sandbox-Namen, die Sie verwendet haben. Eine `instanceId` entspricht der Vorlage für jeweils ein Ziel. Die Antwort wird verkürzt angegeben.
 
 ```json
 {
@@ -604,7 +604,7 @@ Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste von Zielkonfigurat
 | `segmentMappingConfig.mapExperiencePlatformSegmentName` | Boolesch | Steuert, ob die Segmentzuordnungs-ID im Zielaktivierungs-Workflow der Experience Platform-Segmentname ist. |
 | `segmentMappingConfig.audienceTemplateId` | Boolesch | Die `instanceId` der [Zielgruppen-Metadatenvorlage](./audience-metadata-management.md), die für dieses Ziel verwendet wird. Weitere Informationen zum Einrichten einer Zielgruppen-Metadatenvorlage finden Sie in der [API-Referenz für Zielgruppen-Metadaten](./audience-metadata-api.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Aktualisieren einer vorhandenen Zielkonfiguration {#update}
 

@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Sandbox-API-Anleitung
 description: Sandboxes in Adobe Experience Platform stellen isolierte Entwicklungsumgebungen bereit, mit denen Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen können, ohne Ihre Produktionsumgebung zu beeinträchtigen.
 exl-id: c77e96dc-d138-4126-bbb0-b67beb0a02d6
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '329'
 ht-degree: 38%
 
 ---
 
 # [!DNL Sandbox]-API-Handbuch
 
-Die [!DNL Sandbox] Die API bietet mehrere Endpunkte, mit denen Sie programmatisch alle Sandboxes verwalten können, die Ihnen in Ihrer IMS-Organisation zur Verfügung stehen. Diese Endpunkte werden nachfolgend beschrieben. Weitere Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel-API-Aufrufen und mehr finden Sie in den einzelnen Endpunkthandbüchern sowie in den [Ersten Schritten](./getting-started.md).
+Die [!DNL Sandbox] Die API bietet mehrere Endpunkte, mit denen Sie programmatisch alle Sandboxes verwalten können, die Ihnen in Ihrem Unternehmen zur Verfügung stehen. Diese Endpunkte werden nachfolgend beschrieben. Weitere Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel-API-Aufrufen und mehr finden Sie in den einzelnen Endpunkthandbüchern sowie in den [Ersten Schritten](./getting-started.md).
 
 Um alle verfügbaren Endpunkte und CRUD-Vorgänge anzuzeigen, besuchen Sie die [[!DNL Sandbox] API-Referenz](https://www.adobe.io/experience-platform-apis/references/sandbox).
 

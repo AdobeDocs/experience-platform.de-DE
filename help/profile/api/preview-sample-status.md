@@ -3,9 +3,9 @@ keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; AP
 title: API-Endpunkt "Vorschaustatus"(Profilvorschau)
 description: Mit dem Beispielstatusendpunkt "Vorschau"der Echtzeit-Kundenprofil-API können Sie eine Vorschau des neuesten erfolgreichen Beispiels Ihrer Profildaten anzeigen, die Profilverteilung nach Datensatz und Identität auflisten und Berichte mit Datensatzüberschneidungen, Identitätsüberschneidungen und nicht zugewiesenen Profilen erstellen.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: a6173860adda4bd71c94750e5cce6dd4cbe820c6
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2874'
+source-wordcount: '2873'
 ht-degree: 5%
 
 ---
@@ -45,7 +45,7 @@ Die Profilanzahl und die Profile nach Namespace-Metriken sind auch in der Variab
 
 ## Letzten Beispielstatus anzeigen {#view-last-sample-status}
 
-Sie können eine GET-Anfrage an die `/previewsamplestatus` -Endpunkt, um die Details für den letzten erfolgreichen Beispielauftrag anzuzeigen, der für Ihre IMS-Organisation ausgeführt wurde. Dazu gehören die Gesamtzahl der Profile im Beispiel sowie die Profilzählung oder die Gesamtanzahl der Profile, die Ihr Unternehmen innerhalb von Experience Platform hat.
+Sie können eine GET-Anfrage an die `/previewsamplestatus` -Endpunkt, um die Details für den letzten erfolgreichen Beispielauftrag anzuzeigen, der für Ihr Unternehmen ausgeführt wurde. Dazu gehören die Gesamtzahl der Profile im Beispiel sowie die Profilzählung oder die Gesamtanzahl der Profile, die Ihr Unternehmen innerhalb von Experience Platform hat.
 
 Die Profilanzahl wird nach dem Zusammenführen von Profilfragmenten generiert, um für jeden einzelnen Kunden ein einzelnes Profil zu erstellen. Mit anderen Worten: Wenn Profilfragmente zusammengeführt werden, geben sie die Anzahl der Profile &quot;1&quot;zurück, da sie alle mit derselben Person verbunden sind.
 

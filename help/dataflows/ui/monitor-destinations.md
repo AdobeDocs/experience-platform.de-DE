@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Überwachen von Datenflüssen für Ziele in der Benutzeroberfläche
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 133b3e6b8074bab52f23330ac8d3efc468f29d55
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '3228'
+source-wordcount: '3227'
 ht-degree: 12%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 12%
 
 Mit Zielen können Sie Ihre Daten von Adobe Experience Platform für unzählige externe Partner aktivieren. Platform erleichtert das Tracking des Datenflusses zu Ihren Zielen, indem Datenflüsse für Transparenz sorgen.
 
-Das Monitoring-Dashboard bietet eine visuelle Darstellung der Journey eines Datenflusses, einschließlich des Ziels, für das die Daten aktiviert werden. In diesem Tutorial erfahren Sie, wie Sie Datenflüsse entweder direkt im Arbeitsbereich &quot;Ziele&quot;überwachen oder das Monitoring-Dashboard verwenden können, um Datenflüsse für Ihre Ziele mithilfe der Experience Platform-Benutzeroberfläche zu überwachen.
+Das Monitoring-Dashboard bietet eine visuelle Darstellung des Journey eines Datenflusses, einschließlich des Ziels, für das die Daten aktiviert werden. In diesem Tutorial erfahren Sie, wie Sie Datenflüsse entweder direkt im Arbeitsbereich &quot;Ziele&quot;überwachen oder das Monitoring-Dashboard verwenden können, um Datenflüsse für Ihre Ziele mithilfe der Experience Platform-Benutzeroberfläche zu überwachen.
 
 ## Erste Schritte {#getting-started}
 
@@ -165,7 +165,7 @@ Auf der Detailseite wird auch eine Liste mit fehlgeschlagenen Identitäten und a
 
 ![Datenflussdatensätze für Batch-Ziele](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
-## Dashboard "Ziele überwachen" {#monitoring-destinations-dashboard}
+## Dashboard &quot;Ziele überwachen&quot; {#monitoring-destinations-dashboard}
 
 >[!NOTE]
 >
@@ -289,7 +289,7 @@ Um weitere Details zu einem bestimmten Datenfluss-Lauf anzuzeigen, wählen Sie d
 Auf der Seite mit den Ausführungsdetails des Datenflusses werden zusätzlich zu den Details, die in der Liste der Datenflüsse angezeigt werden, spezifischere Informationen zum Datenfluss angezeigt:
 
 - **[!UICONTROL Dataflow-run-ID]**: Die Kennung des Datenflusses.
-- **[!UICONTROL Kennung der IMS-Organisation]**: Die IMS-Organisation, zu der der Datenfluss gehört.
+- **[!UICONTROL Kennung der IMS-Organisation]**: Die Organisation, zu der der Datenfluss gehört.
 - **[!UICONTROL Letzte Aktualisierung]**: Die Zeit, zu der der Datenfluss zuletzt aktualisiert wurde.
 
 Auf der Detailseite können Sie auch zwischen Datenfluss-Ausführungsfehlern und Segmenten wechseln. Diese Option ist nur für Datenfluss-Ausführungen in Batch-Zielen verfügbar.
