@@ -3,7 +3,7 @@ title: (Alpha) [!DNL LiveRamp SFTP] connection
 description: Erfahren Sie, wie Sie mit dem LiveRamp-Connector Zielgruppen von Adobe Real-time Customer Data Platform nach LiveRamp Connect integrieren können.
 hidefromtoc: true
 hide: true
-source-git-commit: b308def0e9b9643cfc1dcc8ac7db19eb733750ea
+source-git-commit: 367ef59f623acc38e636a6cae0c85f186eaccfda
 workflow-type: tm+mt
 source-wordcount: '1738'
 ht-degree: 19%
@@ -91,7 +91,7 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus
 >id="platform_destinations_liveramp_subkey"
 >title="Verschlüsselungs-Unterschlüssel-ID"
 >abstract="Die für die Verschlüsselung verwendete Subkey-ID, die auf dem öffentlichen LiveRamp-Verschlüsselungsschlüssel basiert. Dieses Feld ist erforderlich, wenn Sie im Authentifizierungsschritt einen Verschlüsselungsschlüssel bereitgestellt haben."
->additional-url="https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key" text="Erfahren Sie, wie Sie die Subkey-ID abrufen."
+>additional-url="https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key" text="Erfahren Sie, wie Sie die subkey-ID abrufen."
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
