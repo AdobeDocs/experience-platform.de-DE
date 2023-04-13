@@ -2,7 +2,7 @@
 title: Übersicht über Auditprotokolle
 description: Erfahren Sie, wie Sie mithilfe von Audit-Protokollen sehen können, wer welche Aktionen in Adobe Experience Platform durchgeführt hat.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
 source-wordcount: '1156'
 ht-degree: 35%
@@ -43,7 +43,7 @@ In der folgenden Tabelle sind die Aktionen aufgeführt, für die Ressourcen in A
 | [Attributions-KI-Instanz](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li></ul> |
 | [Administratorprotokolle](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Exportieren</li></ul> |
 | [Klasse](../../../xdm/schema/composition.md#class) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
-| [Berechnetes Attribut](../../../profile/computed-attributes/overview.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
+| Berechnetes Attribut | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
 | [Kunden-KI-Instanz](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li></ul> |
 | [Datensatz](../../../catalog/datasets/overview.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li><li>Aktivieren für [Echtzeit-Kundenprofil](../../../profile/home.md)</li><li>Profil deaktivieren</li><li>Daten hinzufügen</li><li>Batch löschen</li></ul> |
 | [Datenstrom](../../../edge/datastreams/overview.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>[Zuordnung bearbeiten](../../../edge/datastreams/data-prep.md)</li></ul> |

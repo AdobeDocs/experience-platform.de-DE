@@ -3,9 +3,9 @@ keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;Ei
 title: Übersicht zum Echtzeit-Kundenprofil
 description: Das Echtzeit-Kundenprofil führt Daten aus verschiedenen Quellen zusammen und bietet Zugriff auf diese Daten in Form von individuellen Kundenprofilen und zugehörigen Zeitreihenereignissen. die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 737a67b7e30f770d65751b1a924d8378af8bde52
+source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
-source-wordcount: '2098'
+source-wordcount: '1991'
 ht-degree: 100%
 
 ---
@@ -90,13 +90,13 @@ Eines der wichtigsten Merkmale des [!DNL Real-Time Customer Profile] ist seine F
 
 Weitere Informationen zu Vereinigungsschemas, einschließlich dem Zugriff auf Vereinigungsschemas in der Benutzeroberfläche, finden Sie im [Handbuch zur Benutzeroberfläche der Vereinigungsschemas](ui/union-schema.md).
 
-### (Alpha) Berechnete Attribute
+<!-- ### (Alpha) Computed attributes
 
 >[!IMPORTANT]
 >
->Die Funktionalität der berechneten Attribute befindet sich in der Alpha-Phase. Dokumentation und Funktionalität können sich ändern.
+>Computed attribute functionality is in alpha. The documentation and functionality are subject to change.
 
-Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignisebene in Attribute auf Profilebene aggregiert werden. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können. Mit diesen Berechnungen können Sie Fragen im Zusammenhang mit dem Kaufwert über die gesamte Lebensdauer, der Zeit zwischen Käufen oder der Anzahl der Anwendungsöffnungen leicht beantworten, ohne für jede benötigte Information manuell komplexe Berechnungen ausführen zu müssen. Um weitere Informationen zu berechneten Attributen zu erhalten und zu verstehen, welche Rolle berechnete Attribute innerhalb von Adobe Experience Platform spielen, lesen Sie zunächst [Berechnete Attribute – Übersicht](computed-attributes/overview.md).
+Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
 
 ## Profile und Segmente
 
