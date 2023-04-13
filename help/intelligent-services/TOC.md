@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Intelligent Services-Hilfe
 breadcrumb-title: Handbuch zu Intelligent Services
 user-guide-description: Nutzen Sie intelligente KI-Services, um Scores zu generieren, Insights zu erhalten und Segmente aus Ihren Marketing-Ereignisdaten zu erstellen.
-source-git-commit: 56f0ea4ee1fcefecb317eb2a078b01f7a9767c52
-workflow-type: ht
-source-wordcount: '140'
-ht-degree: 100%
+source-git-commit: a8a721cde2ebd68e72a1ee36b6d9274792474b3d
+workflow-type: tm+mt
+source-wordcount: '139'
+ht-degree: 98%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 100%
 - Customer AI {#customer-ai}
    - [Übersicht](customer-ai/overview.md)
    - [Erste Schritte in Kunden-KI](customer-ai/getting-started.md)
-   - [Eingabe und Ausgabe](customer-ai/input-output.md)
+   - [Datenanforderungen](customer-ai/data-requirements.md)
    - Handbücher zur Benutzeroberfläche {#user-guide}
       - [Instanz konfigurieren](customer-ai/user-guide/configure.md)
       - [Einblicke erlangen](customer-ai/user-guide/discover-insights.md)

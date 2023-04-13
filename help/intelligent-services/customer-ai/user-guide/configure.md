@@ -5,7 +5,7 @@ feature: Customer AI
 title: Konfigurieren einer Customer AI-Instanz
 description: AI-/ML-Dienste bieten Customer AI als einfach zu verwendenden Adobe Sensei-Dienst, der für verschiedene Anwendungsfälle konfiguriert werden kann. Die folgenden Abschnitte enthalten Schritte zum Konfigurieren einer Instanz von Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 6aff88c0bc5cd15b8b3ffb32458402e1edc873c8
+source-git-commit: 3bc750b5e1cf47cbca6b037d099936c80c926cf8
 workflow-type: tm+mt
 source-wordcount: '2828'
 ht-degree: 8%
@@ -163,7 +163,7 @@ Standardmäßig werden Tendenzwerte für alle Profile generiert, es sei denn, es
 
 ### Benutzerspezifische Ereignisse (*optional*) {#custom-events}
 
-Wenn Sie zusätzlich zur [Standardereignisfelder](../input-output.md#standard-events) von Customer AI verwendet wird, um Tendenzwerte zu generieren, wird eine benutzerdefinierte Ereignisoption bereitgestellt. Mit dieser Option können Sie zusätzliche Ereignisse hinzufügen, die Sie als einflussreich erachten, was die Qualität Ihres Modells verbessern und zu genaueren Ergebnissen beitragen kann. Wenn der ausgewählte Datensatz benutzerdefinierte Ereignisse enthält, die in Ihrem Schema definiert sind, können Sie sie zu Ihrer Instanz hinzufügen.
+Wenn Sie zusätzlich zur [Standardereignisfelder](../data-requirements.md#standard-events) von Customer AI verwendet wird, um Tendenzwerte zu generieren, wird eine benutzerdefinierte Ereignisoption bereitgestellt. Mit dieser Option können Sie zusätzliche Ereignisse hinzufügen, die Sie als einflussreich erachten, was die Qualität Ihres Modells verbessern und zu genaueren Ergebnissen beitragen kann. Wenn der ausgewählte Datensatz benutzerdefinierte Ereignisse enthält, die in Ihrem Schema definiert sind, können Sie sie zu Ihrer Instanz hinzufügen.
 
 >[!NOTE]
 >
@@ -187,7 +187,7 @@ Wählen Sie nach Abschluss **[!UICONTROL Nächste]** oben rechts, um fortzufahre
 
 ### Benutzerdefinierte Profilattribute (*optional*)
 
-Sie können in Ihren Daten neben dem [Standardereignisfelder](../input-output.md#standard-events) wird von Customer AI verwendet, um Tendenzwerte zu generieren. Mit dieser Option können Sie zusätzliche Profilattribute hinzufügen, die Sie als einflussreich erachten, was die Qualität Ihres Modells verbessern und genauere Ergebnisse liefern kann. Durch das Hinzufügen benutzerdefinierter Profilattribute kann Customer AI außerdem besser zeigen, wie bestimmte Profile zu einem Tendenzbehälter gelangten.
+Sie können in Ihren Daten neben dem [Standardereignisfelder](../data-requirements.md#standard-events) wird von Customer AI verwendet, um Tendenzwerte zu generieren. Mit dieser Option können Sie zusätzliche Profilattribute hinzufügen, die Sie als einflussreich erachten, was die Qualität Ihres Modells verbessern und genauere Ergebnisse liefern kann. Durch das Hinzufügen benutzerdefinierter Profilattribute kann Customer AI außerdem besser zeigen, wie bestimmte Profile zu einem Tendenzbehälter gelangten.
 
 >[!NOTE]
 >

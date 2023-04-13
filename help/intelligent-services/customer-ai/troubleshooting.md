@@ -6,8 +6,8 @@ title: Fehlerbehebung bei der Kunden-KI
 description: Hier finden Sie Antworten auf häufige Fehler in der Kunden-KI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
-workflow-type: ht
+source-git-commit: 3bc750b5e1cf47cbca6b037d099936c80c926cf8
+workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 100%
 
@@ -48,7 +48,7 @@ Wenn der Fehler „[!UICONTROL Modellqualität ist schlecht. Es wird empfohlen, 
 Überprüfen Sie zunächst die Genauigkeit Ihrer Daten. Es ist wichtig, dass Ihre Daten die erforderlichen Felder enthalten, die für Ihr prognostiziertes Ergebnis erforderlich sind.
 
 - Überprüfen Sie, ob Ihr Datensatz die neuesten Daten enthält. Die Kunden-KI geht immer davon aus, dass die Daten beim Auslösen des Modells aktuell sind.
-- Überprüfen Sie im definierten Prognose- und Eignungsfenster, ob Daten fehlen. Ihre Daten müssen vollständig und lückenlos sein. Stellen Sie außerdem sicher, dass Ihr Datensatz die [Kunden-KI-Anforderungen an historische Daten](./input-output.md#data-requirements) erfüllt.
+- Überprüfen Sie im definierten Prognose- und Eignungsfenster, ob Daten fehlen. Ihre Daten müssen vollständig und lückenlos sein. Stellen Sie außerdem sicher, dass Ihr Datensatz die [Kunden-KI-Anforderungen an historische Daten](./data-requirements.md#data-requirements) erfüllt.
 - Suchen Sie in den Eigenschaften Ihres Schemafelds nach fehlenden Daten in Commerce, Anwendung, Web und Suche.
 
 Wenn das Problem offenbar nicht auf Ihre Daten zurückzuführen ist, versuchen Sie, die Eignungsbedingung der Population zu ändern, um das Modell auf bestimmte Profile zu beschränken (z. B. `_experience.analytics.customDimensions.eVars.eVar142` in den letzten 56 Tagen vorhanden). Dadurch werden die Population und die Größe der im Trainings-Fenster verwendeten Daten eingeschränkt.

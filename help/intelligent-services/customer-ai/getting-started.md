@@ -5,7 +5,7 @@ feature: Customer AI
 title: Erste Schritte mit Customer AI
 description: In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: 596921163bf64d11545dcde49039bcdd07c253dd
+source-git-commit: 3bc750b5e1cf47cbca6b037d099936c80c926cf8
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 66%
@@ -49,4 +49,4 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ## Nächste Schritte
 
-Nachdem Sie die im obigen Dokument beschriebenen Schritte ausgeführt haben, besuchen Sie die [Eingabe und Ausgabe](./input-output.md) Dokumentation. In diesem Dokument erhalten Sie einen kurzen Überblick darüber, welche Datentypen in Customer AI verwendet und erstellt werden.
+Nachdem Sie die im obigen Dokument beschriebenen Schritte ausgeführt haben, besuchen Sie die [Eingabe und Ausgabe](./data-requirements.md) Dokumentation. In diesem Dokument erhalten Sie einen kurzen Überblick darüber, welche Datentypen in Customer AI verwendet und erstellt werden.

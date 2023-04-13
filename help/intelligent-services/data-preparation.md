@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Vorbereiten von Daten für die Verwendung in Intelligent Services
 description: Damit Intelligent Services Einblicke aus Ihren Marketing-Ereignisdaten gewinnen kann, müssen die Daten semantisch angereichert und in einer Standardstruktur verwaltet werden. Intelligent Services verwenden dazu Experience-Datenmodell (XDM)-Schemas.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 87a8ad253abb219662034652b5f8c4fabfa40484
 workflow-type: tm+mt
 source-wordcount: '2936'
 ht-degree: 2%
@@ -23,7 +23,7 @@ Dieses Dokument bietet allgemeine Anleitungen zum Zuordnen Ihrer Marketing-Ereig
 
 Wenn Sie beispielsweise Customer AI verwenden, um die Tendenz zum Kauf eines Produkts vorherzusagen, benötigt das Modell für Customer AI sowohl Beispiele für erfolgreiche Kaufpfade als auch Beispiele für nicht erfolgreiche Pfade. Dies liegt daran, dass Customer AI während der Modellschulung versucht zu verstehen, welche Ereignisse und Journey zu einem Kauf führen. Dazu gehören auch die Aktionen von Kunden, die nichts gekauft haben, z. B. von Personen, die ihre Journey beim Hinzufügen eines Artikels zum Warenkorb angehalten haben. Diese Kunden können jedoch ähnliche Verhaltensweisen aufweisen. Customer AI kann jedoch Einblicke bieten und die wichtigsten Unterschiede und Faktoren, die zu einem höheren Tendenzwert führen, detailliert aufzeigen. In ähnlicher Weise erfordert Attribution AI sowohl Ereignistypen als auch Journey, um Metriken wie Touchpoint-Effektivität, Top-Konversionspfade und Aufschlüsselungen nach Touchpoint-Position anzuzeigen.
 
-Weitere Beispiele und Informationen zu den Anforderungen an historische Daten finden Sie unter [Customer AI](./customer-ai/input-output.md#data-requirements) oder [Attribution AI](./attribution-ai/input-output.md#data-requirements) Anforderungen an historische Daten in der Eingabe-/Ausgabedokumentation.
+Weitere Beispiele und Informationen zu den Anforderungen an historische Daten finden Sie unter [Customer AI](./customer-ai/data-requirements.md#data-requirements) oder [Attribution AI](./attribution-ai/input-output.md#data-requirements) Anforderungen an historische Daten in der Eingabe-/Ausgabedokumentation.
 
 ### Richtlinien für die Datenzuordnung
 
@@ -39,7 +39,7 @@ Der Vorbereitungsprozess hängt davon ab, ob Ihre Daten in Adobe Experience Plat
 
 Wenn Ihre Daten außerhalb von Experience Platform gespeichert werden, müssen Sie Ihre Daten den erforderlichen und relevanten Feldern in einer [Consumer ExperienceEvent-Schema](#cee-schema). Dieses Schema kann mit benutzerdefinierten Feldergruppen erweitert werden, um Ihre Kundendaten besser zu erfassen. Nach der Zuordnung können Sie einen Datensatz mit Ihrem Customer ExperienceEvent-Schema erstellen und [Daten in Platform erfassen](../ingestion/home.md). Der CEE-Datensatz kann dann beim Konfigurieren eines [!DNL Intelligent Service].
 
-Je nach [!DNL Intelligent Service] Sie können verschiedene Felder verwenden. Es empfiehlt sich, einem Feld Daten hinzuzufügen, wenn die Daten verfügbar sind. Weitere Informationen zu den erforderlichen Feldern finden Sie unter [Attribution AI](./attribution-ai/input-output.md) oder [Customer AI](./customer-ai/input-output.md) Eingabe-/Ausgabehandbuch.
+Je nach [!DNL Intelligent Service] Sie können verschiedene Felder verwenden. Es empfiehlt sich, einem Feld Daten hinzuzufügen, wenn die Daten verfügbar sind. Weitere Informationen zu den erforderlichen Feldern finden Sie unter [Attribution AI](./attribution-ai/input-output.md) oder [Customer AI](./customer-ai/data-requirements.md) Handbuch zu Datenanforderungen.
 
 ### Adobe Analytics-Datenvorbereitung {#analytics-data}
 
@@ -65,7 +65,7 @@ GROUP BY channel.typeAtSource
 
 >[!IMPORTANT]
 >
->Der Adobe Analytics-Connector benötigt bis zu vier Wochen, um Daten aufzustocken. Wenn Sie kürzlich eine Verbindung eingerichtet haben, sollten Sie sicherstellen, dass der Datensatz die für den Kunden oder Attribution AI erforderliche Mindestlänge von Daten aufweist. Lesen Sie die Abschnitte zu historischen Daten unter [Customer AI](./customer-ai/input-output.md#data-requirements) oder [Attribution AI](./attribution-ai/input-output.md#data-requirements)und überprüfen Sie, ob Sie über genügend Daten für Ihr Prognoseziel verfügen.
+>Der Adobe Analytics-Connector benötigt bis zu vier Wochen, um Daten aufzustocken. Wenn Sie kürzlich eine Verbindung eingerichtet haben, sollten Sie sicherstellen, dass der Datensatz die für den Kunden oder Attribution AI erforderliche Mindestlänge von Daten aufweist. Lesen Sie die Abschnitte zu historischen Daten unter [Customer AI](./customer-ai/data-requirements.md#data-requirements) oder [Attribution AI](./attribution-ai/input-output.md#data-requirements)und überprüfen Sie, ob Sie über genügend Daten für Ihr Prognoseziel verfügen.
 
 ### Adobe Audience Manager-Datenvorbereitung (nur Customer AI) {#AAM-data}
 
@@ -75,7 +75,7 @@ Sobald der Quell-Connector Ihre Daten an Experience Platform streamt, können Si
 
 >[!IMPORTANT]
 >
->Wenn Sie kürzlich einen Connector eingerichtet haben, sollten Sie sicherstellen, dass der Datensatz die erforderliche Mindestlänge von Daten aufweist. Lesen Sie diesbezüglich auch den Abschnitt historische Daten im Abschnitt [Eingabe-/Ausgabedokumentation](./customer-ai/input-output.md) für Customer AI verwenden und überprüfen Sie, ob Sie über genügend Daten für Ihr Prognoseziel verfügen.
+>Wenn Sie kürzlich einen Connector eingerichtet haben, sollten Sie sicherstellen, dass der Datensatz die erforderliche Mindestlänge von Daten aufweist. Lesen Sie diesbezüglich auch den Abschnitt historische Daten im Abschnitt [Eingabe-/Ausgabedokumentation](./customer-ai/data-requirements.md) für Customer AI verwenden und überprüfen Sie, ob Sie über genügend Daten für Ihr Prognoseziel verfügen.
 
 ### [!DNL Experience Platform] Datenvorbereitung
 
@@ -120,7 +120,7 @@ Sie müssen basierend auf der Quelle und der Art Ihrer Daten festlegen, welches 
 >
 >Die Experience Cloud-ID (ECID) wird auch als MCID bezeichnet und wird weiterhin in Namespaces verwendet.
 
-* &quot;email&quot;
+* &quot;E-Mail&quot;
 * &quot;phone&quot;
 * &quot;mcid&quot;(für Adobe Audience Manager IDs)
 * &quot;aaid&quot;(für Adobe Analytics IDs)
@@ -138,13 +138,13 @@ Um eine primäre Identität festzulegen, navigieren Sie über das **[!UICONTROL 
 
 Navigieren Sie anschließend zu dem Feld, das Sie als primäre Identität festlegen möchten, und wählen Sie es aus. Die **[!UICONTROL Feldeigenschaften]** für dieses Feld geöffnet.
 
-![Feld auswählen](./images/data-preparation/find_field.png)
+![Wählen Sie das Feld  aus](./images/data-preparation/find_field.png)
 
-Im **[!UICONTROL Feldeigenschaften]** Menü, scrollen Sie nach unten, bis Sie die **[!UICONTROL Identität]** aktivieren. Nach dem Aktivieren des Kontrollkästchens die Option zum Festlegen der ausgewählten Identität als **[!UICONTROL Primäre Identität]** angezeigt. Wählen Sie auch dieses Feld aus.
+Im **[!UICONTROL Feldeigenschaften]** Menü, scrollen Sie nach unten, bis Sie die **[!UICONTROL Identität]** aktivieren. Nach dem Aktivieren des Kontrollkästchens die Option zum Festlegen der ausgewählten Identität als **[!UICONTROL Primäre Identität]** angezeigt. Aktivieren Sie dieses Kontrollkästchen ebenfalls.
 
 ![Kontrollkästchen aktivieren](./images/data-preparation/set_primary_identity.png)
 
-Als Nächstes müssen Sie eine **[!UICONTROL Identitäts-Namespace]** aus der Liste der vordefinierten Namespaces im Dropdown-Menü. In diesem Beispiel wird der ECID-Namespace seit einer Adobe Audience Manager ID ausgewählt `mcid.id` verwendet wird. Auswählen **[!UICONTROL Anwenden]** Um die Aktualisierungen zu bestätigen, wählen Sie **[!UICONTROL Speichern]** in der oberen rechten Ecke, um die Änderungen am Schema zu speichern.
+Als Nächstes müssen Sie einen **[!UICONTROL Identity-Namespace]** aus der Liste der vordefinierten Namespaces im Dropdown-Menü angeben. In diesem Beispiel wird der ECID-Namespace seit einer Adobe Audience Manager ID ausgewählt `mcid.id` verwendet wird. Auswählen **[!UICONTROL Anwenden]** Um die Aktualisierungen zu bestätigen, wählen Sie **[!UICONTROL Speichern]** in der oberen rechten Ecke, um die Änderungen am Schema zu speichern.
 
 ![Speichern Sie die Änderungen](./images/data-preparation/select_namespace.png)
 
