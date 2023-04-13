@@ -1,8 +1,10 @@
 ---
 title: Überblick über die Quelle von Customer.io
 description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche Customer.io mit Adobe Experience Platform verbinden können, indem Sie Webhooks nutzen.
-badge: "Beta"
-source-git-commit: 9d6a4b5f60f7895e2c1833493926db147064f3f1
+badge: Beta
+last-substantial-update: 2023-03-29T00:00:00Z
+exl-id: 0f4ee106-c22b-465c-9c5e-83709e8424f5
+source-git-commit: 0cc4eab97dcd56d2b1d679cf5f35932976d22634
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 16%
@@ -57,4 +59,3 @@ Die folgende Dokumentation enthält Informationen zum Erstellen einer [!DNL Cust
 ### Verbinden von [!DNL Customer.io] mit Platform über die Benutzeroberfläche {#connect-to-platform-using-ui}
 
 * [Erstellen Sie eine Quellverbindung und einen Datenfluss, um [!DNL Customer.io] Daten an Platform mithilfe der Benutzeroberfläche](../../tutorials/ui/create/marketing-automation/customerio-webhook.md)
-

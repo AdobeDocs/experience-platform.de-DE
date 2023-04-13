@@ -1,8 +1,10 @@
 ---
 title: Pendo Source Overview
 description: Erfahren Sie, wie Sie Pendo über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden können, indem Sie Webhooks nutzen.
-badge: "Beta"
-source-git-commit: 24691e3ded33c3af31fd0cee107f2f3ca898585f
+badge: Beta
+last-substantial-update: 2023-03-29T00:00:00Z
+exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
+source-git-commit: 0cc4eab97dcd56d2b1d679cf5f35932976d22634
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 20%
@@ -50,4 +52,3 @@ Die folgende Dokumentation enthält Informationen zum Erstellen einer [!DNL Pend
 ### Verbinden von [!DNL Pendo] mit Platform über die Benutzeroberfläche {#connect-to-platform-using-ui}
 
 * [Erstellen Sie eine Quellverbindung, um sie zu bringen. [!DNL Pendo] Daten an Platform mithilfe der Benutzeroberfläche](../../tutorials/ui/create/analytics/pendo-webhook.md)
-
