@@ -2,10 +2,10 @@
 title: Referenz zu Ereignisweiterleitungserweiterungen
 description: Dokumentation für Erweiterungen für die Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 30ac89d9af3e1d69c464650879d239a8c3edb525
+source-git-commit: e0c1b4e2cc7444ab97d0eae6ff4f3455b0017d4a
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '165'
+ht-degree: 50%
 
 ---
 
@@ -14,6 +14,13 @@ ht-degree: 0%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
 
 Im Folgenden finden Sie eine Liste der Dokumentation für Erweiterungen für die serverseitige Ereignisweiterleitung. Eine Liste der verfügbaren clientseitigen Erweiterungen finden Sie unter [Tag-Erweiterungs-Referenz](../client/overview.md) anstatt.
 
