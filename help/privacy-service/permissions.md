@@ -2,10 +2,10 @@
 title: Verwalten der Berechtigungen für den Privacy Service
 description: Erfahren Sie, wie Sie die Benutzerrechte für den Adobe Experience Platform Privacy Service mit der Adobe Admin Console verwenden können.
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
-source-git-commit: fc6c22ab1185b9692ece86de75149102ce020474
+source-git-commit: 1e164166f58540cbaaa4ad789b10cdfc40fa8a70
 workflow-type: tm+mt
-source-wordcount: '1095'
-ht-degree: 97%
+source-wordcount: '1634'
+ht-degree: 60%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 97%
 
 >[!IMPORTANT]
 >
->Die Berechtigungen für Adobe Experience Platform Privacy Service wurden verbessert, um die Granularität zu erhöhen. Diese Änderungen ermöglichen es Organisationsadmins, mehr Benutzenden Zugriff mit der gewünschten Rollen- und Berechtigungsebene zu gewähren.Benutzende mit technischen Konten müssen ihre Privacy Service-Berechtigungen aktualisieren, da diese bevorstehende Aktualisierung für sie eine wesentliche Änderung darstellt.Die Durchsetzung dieser Berechtigungsänderung erfolgt am **28. März 2023**.
+>Die Berechtigungen für Adobe Experience Platform Privacy Service wurden verbessert, um die Granularität zu erhöhen. Diese Änderungen ermöglichen es Organisationsadmins, mehr Benutzenden Zugriff mit der gewünschten Rollen- und Berechtigungsebene zu gewähren.Benutzende mit technischen Konten müssen ihre Privacy Service-Berechtigungen aktualisieren, da diese bevorstehende Aktualisierung für sie eine wesentliche Änderung darstellt. Die Durchsetzung dieser Berechtigungsänderung erfolgt in **13. April 2023**. Weitere Informationen finden Sie in der Dokumentation unter [Migration von Legacy-API-Anmeldeinformationen](#migrate-tech-accounts) für Anleitungen zur Lösung dieses Problems.
 >
 >Technische Konten stehen Unternehmenskunden zur Verfügung und werden über die Adobe Developers Console erstellt. Die Adobe ID des Inhabenden eines technischen Kontos endet auf `@techacct.adobe.com`. Wenden Sie sich an Ihren Organisationsadmin, wenn Sie sich nicht sicher sind, ob Sie über ein technisches Konto verfügen.
 
@@ -99,11 +99,49 @@ Weitere Informationen zur Verwaltung von Benutzern für ein Produktprofil finden
 >
 >Dieser Abschnitt gilt nur für bestehende API-Anmeldeinformationen, die erstellt wurden, bevor die Privacy Service-Berechtigungen in Adobe Admin Console integriert wurden. Für neue Anmeldeinformationen werden Produktprofile (und deren Berechtigungen) stattdessen über [Adobe Developer Console-Projekte](https://developer.adobe.com/developer-console/docs/guides/projects/) zugewiesen.<br><br>Weitere Informationen finden Sie im Abschnitt [Zuweisung von Produktprofilen zu einem Projekt](./api/getting-started.md#product-profiles) im Handbuch zu den ersten Schritten mit der Privacy Service-API.
 
-Um ältere API-Anmeldeinformationen in das Produktprofil zu migrieren, wählen Sie **[!UICONTROL API-Anmeldeinformationen]**, gefolgt von **[!UICONTROL API-Anmeldeinformationen hinzufügen]**.
+Zuvor benötigten technische Konten kein Produktprofil für die Integration und Berechtigungen. Aufgrund kürzlich verbesserter Privacy Service-Berechtigungen ist es jetzt jedoch erforderlich, ältere API-Anmeldeinformationen in das Produktprofil zu migrieren. Diese Aktualisierung ermöglicht die Erteilung detaillierter Berechtigungen an technische Kontoinhaber. Gehen Sie wie folgt vor, um die technischen Kontoberechtigungen für Privacy Service zu aktualisieren.
 
-![[!UICONTROL API-Zugangsdaten hinzufügen] wird in Admin Console unter der Registerkarte [!UICONTROL API-Zugangsdaten] für ein Produktprofil ausgewählt](./images/permissions/api-credentials.png)
+#### Aktualisieren der technischen Kontoberechtigungen {#update-tech-account-permissions}
 
-Wählen Sie die gewünschten Developer Console-Projekte aus der Liste aus und klicken Sie dann auf **[!UICONTROL Speichern]**, um sie zum Produktprofil hinzuzufügen. Alle API-Aufrufe, die die Anmeldeinformationen dieser Projekte verwenden, erben die vom Produktprofil gewährten detaillierten Berechtigungen.
+Der erste Schritt bei der Zuweisung eines Berechtigungssatzes für Ihr technisches Konto besteht darin, zur [Adobe Admin Console](https://adminconsole.adobe.com/) und erstellen Sie ein neues Produktprofil für den Privacy Service.
+
+Wählen Sie in der Admin Console-Benutzeroberfläche die Option **Produkte** aus der Navigationsleiste, gefolgt von **[!UICONTROL Experience Cloud]** und **[!UICONTROL Adobe Experience Platform Privacy Service]** in der linken Seitenleiste. Die [!UICONTROL Produktprofile] angezeigt. Auswählen **Neues Profil** , um ein neues Produktprofil für den Privacy Service zu erstellen.
+
+![Die Registerkarte Experience Platform Privacy Service-Produktprofile in Adobe Admin Console mit dem Hinweis &quot;Neues Profil&quot;.](./images/permissions/create-product-profile.png)
+
+Die [!UICONTROL Neues Produktprofil erstellen] angezeigt. Umfassende Anweisungen zum Erstellen eines Produktprofils finden Sie im Abschnitt [UI-Handbuch zum Erstellen von Profilen](../access-control/ui/create-profile.md).
+
+Nachdem Sie Ihr neues Produktprofil gespeichert haben, navigieren Sie zum [Adobe Developer-Konsole](https://developer.adobe.com/console/home) und melden Sie sich bei diesem Produkt oder Projekt an. Auswählen **[!UICONTROL Projekte]** aus der oberen Navigation, gefolgt von der Karte für Ihr Projekt.
+
+>[!NOTE]
+>
+>Möglicherweise müssen Sie Ihren Cache löschen und/oder einige Zeit warten, bis das neue Projekt in Ihrer Liste der Entwicklerkonsole-Projekte angezeigt wird.
+
+Nachdem Sie sich bei Ihrem Projekt angemeldet haben, wählen Sie die **[!UICONTROL Privacy Service-API]** Integration über die linke Seitenleiste.
+
+![Die Registerkarte &quot;Projekte&quot;der Adobe Developer-Konsole mit hervorgehobenen Projekten und Privacy Service-API.](./images/permissions/login-to-dev-console-project.png)
+
+Das Dashboard zur Privacy Service-API-Integration wird angezeigt. Über dieses Dashboard können Sie das mit diesem Projekt verknüpfte Produktprofil bearbeiten. Auswählen **[!UICONTROL Bearbeiten von Produktprofilen]** , um den Prozess zu starten. Die [!UICONTROL API konfigurieren] angezeigt.
+
+![Das Dashboard zur Privacy Service-API-Integration in der Adobe Developer-Konsole mit hervorgehobenem Symbol Produktprofile bearbeiten](./images/permissions/edit-product-profiles.png)
+
+Die [!UICONTROL API konfigurieren] zeigt die verfügbaren Produktprofile an, die derzeit im Dienst vorhanden sind. Sie korrelieren mit den in der Admin Console erstellten Produktprofilen. Aktivieren Sie in der Admin Console in der Liste der verfügbaren Produktprofile das Kontrollkästchen für das neue Produktprofil, das Sie für das technische Konto erstellt haben. Dadurch wird dieses technische Konto automatisch mit den Berechtigungen im ausgewählten Produktprofil verknüpft. Auswählen **[!UICONTROL Konfigurierte API speichern]** um Ihre Einstellungen zu bestätigen.
+
+>[!NOTE]
+>
+>Wenn bereits ein technisches Konto mit einem Produktprofil verknüpft ist, wird bereits eines der Kontrollkästchen in der Liste der verfügbaren Produktprofile ausgewählt.
+
+![Das Dialogfeld API konfigurieren in der Adobe Developer Console mit einem Produktprofil-Kontrollkästchen und konfigurierte API speichern wurde hervorgehoben.](./images/permissions/select-profile-for-tech-account.png)
+
+#### Validieren Sie, ob Ihre Einstellungen angewendet wurden. {#confirm-applied-settings}
+
+Um zu bestätigen, dass Ihre Einstellungen auf das Konto angewendet wurden. Kehren Sie zu [Admin Console](https://adminconsole.adobe.com/) und navigieren Sie zu Ihrem neu erstellten Produktprofil. Wählen Sie die **[!UICONTROL API-Anmeldeinformationen]** um eine Liste der verknüpften Projekte anzuzeigen. Das Projekt, das in der Developer Console verwendet wird, wo Sie das Produktprofil dem technischen Konto zugewiesen haben, wird in der Liste der Anmeldeinformationen angezeigt. Der Name jeder API-Berechtigung besteht aus dem Projektnamen mit einer zufällig generierten Zahl, die an das Ende angehängt wird. Wählen Sie eine Berechtigung aus, um die [!UICONTROL Details] Bereich.
+
+![Ein Produktprofil in der Admin Console mit der Registerkarte &quot;API-Anmeldeinformationen&quot;und einer Reihe von Projektanmeldedaten hervorgehoben.](./images/permissions/confirm-credentials-in-admin-console.png)
+
+Die [!UICONTROL Details] enthält Informationen zu den API-Anmeldedaten, einschließlich der zugehörigen technischen ID, des API-Schlüssels, des Erstellungsdatums und des Datums der letzten Änderung sowie der zugehörigen Adobe Products.
+
+![Das hervorgehobene Detailbedienfeld einer API-Berechtigung in Admin Console.](./images/permissions/admin-console-details-panel.png)
 
 ## Nächste Schritte
 

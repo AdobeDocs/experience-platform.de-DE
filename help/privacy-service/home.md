@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über Privacy Service
 description: Mit Privacy Service können Sie die automatische Einhaltung gesetzlicher Datenschutzbestimmungen bei der Handhabung von Daten in Experience Cloud erleichtern.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: e09f0598e1d8dc007d0fdfcf13da11d5cad94c54
-workflow-type: ht
-source-wordcount: '1608'
-ht-degree: 100%
+source-git-commit: 3296209a15a5f88ab14e16de25d554b9df712445
+workflow-type: tm+mt
+source-wordcount: '1623'
+ht-degree: 98%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Die Berechtigungen für Adobe Experience Platform Privacy Service wurden verbessert, um die Granularität zu erhöhen. Diese Änderungen ermöglichen es Organisationsadmins, mehr Benutzenden Zugriff mit der gewünschten Rollen- und Berechtigungsebene zu gewähren.Benutzende mit technischen Konten müssen ihre Privacy Service-Berechtigungen aktualisieren, da diese bevorstehende Aktualisierung für sie eine wesentliche Änderung darstellt.Die Durchsetzung dieser Berechtigungsänderung erfolgt am **28. März 2023**.
+>Die Berechtigungen für Adobe Experience Platform Privacy Service wurden verbessert, um die Granularität zu erhöhen. Diese Änderungen ermöglichen es Organisationsadmins, mehr Benutzenden Zugriff mit der gewünschten Rollen- und Berechtigungsebene zu gewähren.Benutzende mit technischen Konten müssen ihre Privacy Service-Berechtigungen aktualisieren, da diese bevorstehende Aktualisierung für sie eine wesentliche Änderung darstellt. Die Durchsetzung dieser Berechtigungsänderung erfolgt in **13. April 2023**. Weitere Informationen finden Sie in der Dokumentation unter [Migration von Legacy-API-Anmeldeinformationen](./permissions.md#migrate-tech-accounts) für Anleitungen zur Lösung dieses Problems.
 >
 >Technische Konten stehen Unternehmenskunden zur Verfügung und werden über die Adobe Developers Console erstellt. Die Adobe ID des Inhabenden eines technischen Kontos endet auf `@techacct.adobe.com`. Wenden Sie sich an Ihren Organisationsadmin, wenn Sie sich nicht sicher sind, ob Sie über ein technisches Konto verfügen.
 
