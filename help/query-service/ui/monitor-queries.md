@@ -2,10 +2,10 @@
 title: Überwachung geplanter Abfragen
 description: Erfahren Sie, wie Sie Abfragen über die Benutzeroberfläche des Abfrage-Service überwachen.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 5e6fa112ccca7405c3dfd0653d3d6cad8b9ed2af
+source-git-commit: 1b4554e204663d40c3a18da792614305abb7d296
 workflow-type: tm+mt
-source-wordcount: '1204'
-ht-degree: 74%
+source-wordcount: '1252'
+ht-degree: 72%
 
 ---
 
@@ -120,11 +120,15 @@ Sie können die Abfrage-SQL aus dieser Ansicht in die Zwischenablage kopieren. W
 
 ### Ausführliche Informationen zu Abfragen mit anonymen Bausteinen {#anonymous-block-queries}
 
-Abfragen, die anonyme Bausteine verwenden, um ihre SQL-Anweisungen zu enthalten, werden in ihre einzelnen Abfragen unterteilt. Auf diese Weise können Sie die Ausführungsdetails für jeden Abfrageblock einzeln überprüfen.
+Abfragen, die anonyme Bausteine verwenden, um ihre SQL-Anweisungen zu enthalten, werden in ihre einzelnen Unterabfragen unterteilt. Auf diese Weise können Sie die Ausführungsdetails für jeden Abfrageblock einzeln überprüfen.
+
+>[!NOTE]
+>
+>Die Ausführungsdetails eines anonymen Bausteins, der den Befehl DROP verwendet, werden **not** als separate Unterabfrage gemeldet werden. Separate Ausführungsdetails sind für CTAS-Abfragen, ITAS-Abfragen und COPY-Anweisungen verfügbar, die als anonyme Block-Subabfragen verwendet werden. Ausführungsdetails für den DROP-Befehl werden derzeit nicht unterstützt.
 
 Anonyme Bausteine werden mithilfe eines `$$` vor der Abfrage. Siehe [Anonym-Blockdokument](../essential-concepts/anonymous-block.md) um mehr über anonyme Bausteine im Abfragedienst zu erfahren.
 
-Abfragen anonymer Bausteine verfügen über Registerkarten links neben dem Ausführungsstatus. Wählen Sie eine Registerkarte aus, um die Ausführungsdetails anzuzeigen.
+Unterabfragen anonymer Bausteine verfügen über Registerkarten links neben dem Ausführungsstatus. Wählen Sie eine Registerkarte aus, um die Ausführungsdetails anzuzeigen.
 
 ![Die Übersicht über die Ausführung von Abfragen mit einer anonymen Blockabfrage. Die Tabs für mehrere Abfragen sind hervorgehoben.](../images/ui/monitor-queries/anonymous-block-overview.png)
 
