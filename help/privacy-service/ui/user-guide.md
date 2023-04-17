@@ -7,7 +7,7 @@ exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
 source-wordcount: '1463'
-ht-degree: 10%
+ht-degree: 23%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 10%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_description"
->title="Datenschutz-Anfragen von Datensubjekten berücksichtigen"
->abstract="<h2>Beschreibung</h2><p>Mit Adobe Experience Platform Privacy Service können Sie Datenschutzanfragen für Kunden erstellen und verwalten, die ihre personenbezogenen Daten gemäß den gesetzlichen Datenschutzbestimmungen aufrufen oder löschen möchten.</p>"
+>title="Berücksichtigen von Datenschutzanträgen betroffener Personen"
+>abstract="<h2>Beschreibung</h2><p>Mit Adobe Experience Platform Privacy Service können Sie Datenschutzanfragen für Kundinnen und Kunden erstellen und verwalten, die ihre personenbezogenen Daten gemäß den gesetzlichen Datenschutzbestimmungen aufrufen oder löschen möchten.</p>"
 
 In diesem Dokument werden die Schritte zum Erstellen und Verwalten von Datenschutzanfragen mithilfe des [!DNL Privacy Service] -Benutzeroberfläche.
 
@@ -109,7 +109,7 @@ Um die vollständigen Auftragsdaten als CSV-Datei herunterzuladen, wählen Sie *
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_instructions"
 >title="Anleitung"
->abstract="<ul><li>Auswählen <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html#logging-in-from-experience-platform">Anforderungen</a> in der linken Navigation, um die Datenschutz-URL zu öffnen, und wählen Sie <b>Anforderung erstellen</b>.</li><li>Von hier aus können Sie entweder den Anforderungs-Builder verwenden oder eine JSON-Datei mit Datensubjekten hochladen.</li><li>Wenn Sie den Anforderungs-Builder verwenden, wählen Sie den Auftragstyp (Zugriff und/oder Löschen) und wählen Sie dann den Typ der von Ihnen bereitgestellten Identität (E-Mail, ECID oder AAID) aus oder geben Sie einen benutzerdefinierten Identitäts-Namespace ein. Geben Sie die entsprechenden Identitätswerte für die Kunden ein und wählen Sie <b>Erstellen</b> wenn fertig.</li><li>Wählen Sie beim Hochladen einer JSON-Datei den Pfeil neben Anforderung erstellen aus. Wählen Sie aus der Liste der Optionen die Option <b>JSON hochladen</b> und laden Sie Ihre Datei hoch. Wenn Sie keine JSON-Datei zum Hochladen haben, wählen Sie <b>Adobe-DSGVO-Request.json herunterladen</b> , um eine Vorlage herunterzuladen, die Sie füllen können. Laden Sie die JSON hoch und wählen Sie <b>Erstellen</b> wenn fertig.</li><li>Weitere Informationen zu dieser Funktion finden Sie im Abschnitt <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/user-guide.html?lang=de">Benutzerhandbuch für Privacy Service</a> auf Experience League.</li></ul>"
+>abstract="<ul><li>Wählen Sie <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html?lang=de#logging-in-from-experience-platform">Anfragen</a> in der linken Navigation aus, um die Datenschutz-URL zu öffnen, und wählen Sie dann <b>Anfrage erstellen</b> aus.</li><li>Von hier aus können Sie entweder den Anfrage-Builder verwenden oder eine JSON-Datei mit betroffenen Personen hochladen.</li><li>Wenn Sie den Anfrage-Builder verwenden, wählen Sie den Auftragstyp (Zugriff und/oder Löschen) aus und wählen Sie dann den Typ der von Ihnen bereitgestellten Identität (E-Mail, ECID oder AAID) aus oder geben Sie einen benutzerdefinierten Identity-Namespace ein. Geben Sie die entsprechenden Identitätswerte für die Kundinnen bzw. Kunden ein und klicken Sie auf <b>Erstellen</b>, wenn Sie fertig sind.</li><li>Wählen Sie beim Hochladen einer JSON-Datei den Pfeil neben „Anfrage erstellen“ aus. Wählen Sie aus der Liste der Optionen <b>JSON hochladen</b> aus und laden Sie Ihre Datei hoch. Wenn Sie keine JSON-Datei zum Hochladen haben, wählen Sie <b>Adobe-GDPR-Request.json herunterladen</b> aus, um eine Vorlage herunterzuladen, die Sie ausfüllen können. Laden Sie die JSON-Datei hoch und klicken Sie auf <b>Erstellen</b>, wenn Sie fertig sind.</li><li>Weitere Informationen zu dieser Funktion finden Sie im <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/user-guide.html?lang=de">Benutzerhandbuch zum Privacy Service</a> auf Experience League.</li></ul>"
 
 >[!NOTE]
 >

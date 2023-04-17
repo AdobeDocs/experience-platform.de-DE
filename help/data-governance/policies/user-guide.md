@@ -7,7 +7,7 @@ exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
 source-wordcount: '1618'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 87%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_description"
->title="Integrieren und Erzwingen der Kundenzustimmung in Ihren Profildaten"
->abstract="<h2>Beschreibung</h2><p>Mit Platform können Sie die von Ihren Kunden erfassten Einwilligungsdaten in ihre jeweiligen Profile integrieren. Anschließend können Sie Einwilligungsrichtlinien einrichten, um zu bestimmen, ob diese Daten in Segmente aufgenommen werden können, die für bestimmte Ziele aktiviert sind.</p>"
+>title="Integrieren und Erzwingen der Kundenzustimmung in den Profildaten"
+>abstract="<h2>Beschreibung</h2><p>Mit Platform können die von Kundinnen und Kunden erfassten Einverständnisdaten in ihre jeweiligen Profile integriert werden. Anschließend können Einwilligungsrichtlinien eingerichtet werden, um zu bestimmen, ob diese Daten in Segmente aufgenommen werden können, die für bestimmte Ziele aktiviert sind.</p>"
 
 Dieses Dokument beschreibt, wie Sie den Arbeitsbereich **[!UICONTROL Richtlinien]** in der Adobe Experience Platform-Benutzeroberfläche verwenden, um Richtlinien zur Datennutzung zu erstellen und zu verwalten.
 
@@ -92,7 +92,7 @@ Die Registerkarte **[!UICONTROL Durchsuchen]** wird erneut angezeigt, wo die neu
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_instructions"
 >title="Anleitung"
->abstract="<ul><li>Stellen Sie sicher, dass Sie über den OneTrust-Quell-Connector oder das Standard-XDM-Schema zur Zustimmung Voreinstellungsdaten in Ihre Vereinigungsschemas aufnehmen.</li><li>Auswählen <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=de">Richtlinien</a> Wählen Sie im linken Navigationsbereich die Option <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">Richtlinie erstellen</a>.</li><li>Unter dem <b>Wenn</b> Beschreiben Sie die Bedingungen oder Aktionen, die die Richtlinienüberprüfung Trigger werden.</li><li>Unter dem <b>Dann</b> Geben Sie die Zustimmungsattribute ein, die vorhanden sein müssen, damit ein Profil in die Aktion aufgenommen wird, die die Richtlinie ausgelöst hat.</li><li>Auswählen <b>Speichern</b> , um die Richtlinie zu erstellen. Um die Richtlinie zu aktivieren, wählen Sie die <b>Status</b> in der rechten Leiste ein-/ausschalten.</li><li>Experience Platform erzwingt automatisch Ihre aktivierten Zustimmungsrichtlinien, wenn Sie Segmente für Ziele aktivieren, und liefert Details dazu, wie sich die einzelnen Richtlinien auf Ihre Zielgruppengröße auswirken.</li><li>Weitere Hilfe zu dieser Funktion finden Sie im Handbuch zu <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#consent-policy">Erstellen von Zustimmungsrichtlinien</a> auf Experience League.</li></ul>"
+>abstract="<ul><li>Stellen Sie sicher, dass Voreinstellungsdaten über den OneTrust-Quell-Connector oder das Standard-XDM-Schema zum Einverständnis in das Vereinigungsschemas aufgenommen werden.</li><li>Wählen Sie im linken Navigationsbereich <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=de">Richtlinien</a> und dann die Option <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy?lang=de">Richtlinie erstellen</a> aus.</li><li>Beschreiben Sie im Abschnitt <b>Wenn</b> die Bedingungen oder Aktionen, die Trigger für die Richtlinienüberprüfung sein sollen.</li><li>Geben Sie im Abschnitt <b>Dann</b> die Einverständnisattribute ein, die vorhanden sein müssen, damit ein Profil in die Aktion, die die Richtlinie ausgelöst hat, einbezogen wird.</li><li>Wählen Sie <b>Speichern</b>, um die Richtlinie zu erstellen. Um die Richtlinie zu aktivieren, wählen Sie in der rechten Leiste den Umschalter <b>Status</b>.</li><li>Experience Platform erzwingt automatisch die aktivierten Zustimmungsrichtlinien, wenn Segmente für Ziele aktiviert werden, und liefert Details dazu, wie sich die einzelnen Richtlinien auf Ihre Zielgruppengröße auswirken.</li><li>Weitere Hilfe zu dieser Funktion enthält das Handbuch zum <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#consent-policy?lang=de">Erstellen von Zustimmungsrichtlinien</a> auf Experience League.</li></ul>"
 
 >[!IMPORTANT]
 >

@@ -5,7 +5,7 @@ exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
 source-wordcount: '736'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
@@ -13,8 +13,8 @@ ht-degree: 78%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
->title="Unerwünschte oder abgelaufene Kundendatensätze und -datensätze löschen"
->abstract="<h2>Beschreibung</h2><p>Um den Lebenszyklus Ihrer Experience Platform-Daten unabhängig von der Einhaltung gesetzlicher Vorschriften zu verwalten, können Sie Kundendatensätze löschen und Ablaufdaten für Datensätze planen. Informationen zum Erstellen oder Verwalten von Anfragen von Datensubjekten finden Sie in der Fallblock &quot;Datenschutz-Anfragen von Datensubjekten berücksichtigen&quot;.</p>"
+>title="Löschen unerwünschter oder abgelaufener Kundendatensätze"
+>abstract="<h2>Beschreibung</h2><p>Um den Lebenszyklus der Experience Platform-Daten unabhängig von der Einhaltung gesetzlicher Vorschriften zu verwalten, können Kundendatensätze gelöscht und Ablaufdaten für Datensätze geplant werden. Informationen zum Erstellen oder Verwalten von Anfragen betroffener Personen sind im Abschnitt über den Anwendungsfall „Berücksichtigen von Datenschutzanträgen betroffener Personen“ zu finden.</p>"
 
 >[!IMPORTANT]
 >
@@ -33,7 +33,7 @@ In diesem Dokument wird beschrieben, wie Sie Datensatzgültigkeiten in der Platf
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
 >title="Anleitung"
->abstract="<ul><li>Auswählen <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html?lang=de">Datenhygiene</a> Wählen Sie im linken Navigationsbereich die Option <b>Anforderung erstellen</b>.</li><li>Wenn Sie Datensätze löschen möchten:</li>   <li>Auswählen <b>Datensatz</b>.</li>   <li>Wählen Sie einen bestimmten Datensatz aus, aus dem Datensätze gelöscht werden sollen, oder wählen Sie die Option aus, ihn aus allen Datensätzen zu löschen.</li>   <li>Geben Sie die Identitäten der Verbraucher an, deren Datensätze gelöscht werden sollen. Auswählen <b>Identität hinzufügen</b> , um die Identitäten einzeln anzugeben, oder wählen Sie <b>Dateien auswählen</b> , um stattdessen eine JSON-Datei mit Identitäten hochzuladen.</li>   <li>Wählen Sie bei Bedarf <b>Vorlage</b> , um das erwartete Format der JSON-Datei anzuzeigen.</li><li>Anweisungen finden Sie in der Dokumentation . <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">Ablaufdaten für Datensätze planen</a>.</li></ul>"
+>abstract="<ul><li>Wählen Sie im linken Navigationsbereich <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html?lang=de">Datenhygiene</a> und anschließend die Option <b>Anforderung erstellen</b> aus.</li><li>Wenn Sie Datensätze löschen möchten:</li>   <li>Wählen Sie <b>Datensatz</b> aus.</li>   <li>Wählen Sie einen bestimmten Datensatz aus, aus dem Datensätze gelöscht werden sollen, oder wählen Sie die Option aus, sie aus allen Datensätzen zu löschen.</li>   <li>Geben Sie die Identitäten der Personen an, deren Datensätze gelöscht werden sollen. Wählen Sie <b>Identität hinzufügen</b> aus, um die Identitäten einzeln anzugeben, oder wählen Sie <b>Dateien auswählen</b> aus, um stattdessen eine JSON-Datei mit Identitäten hochzuladen.</li>   <li>Wählen Sie bei Bedarf <b>Vorlage</b> aus, um das erwartete Format der JSON-Datei anzuzeigen.</li><li>Anweisungen zum <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration?lang=de">Planen von Ablaufdaten für Datensätze</a> finden Sie in der Dokumentation.</li></ul>"
 
 Um eine neue Anfrage zu erstellen, wählen Sie auf der Hauptseite im Arbeitsbereich die Option **[!UICONTROL Anfrage erstellen]** aus.
 

@@ -5,7 +5,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
 source-wordcount: '1156'
-ht-degree: 35%
+ht-degree: 57%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 35%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
 >title="Überwachen von Benutzeraktivitäten in Platform"
->abstract="<h2>Beschreibung</h2><p>Sie können die Benutzeraktivität auf verschiedene Platform-Dienste und -Funktionen in Form von Prüfprotokollen überwachen. Diese Protokolle bilden ein Audit-Protokoll, das <b>who</b> ausgeführt <b>what</b> Maßnahmen und <b>when</b>. Audit-Protokolle können bei der Fehlerbehebung in Platform helfen und Ihrem Unternehmen helfen, die Richtlinien zur Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen.</p>"
+>abstract="<h2>Beschreibung</h2><p>Sie können die Benutzeraktivität für verschiedene Platform-Dienste und -Funktionen in Form von Audit-Protokollen überwachen. Diese Protokolle bilden ein Audit-Protokoll, in dem verzeichnet wird, <b>wer</b> <b>welche</b> Aktion <b>wann</b> ausgeführt hat. Audit-Protokolle können die Fehlerbehebung in Platform erleichtern und Ihrem Unternehmen helfen, die Richtlinien zur Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen.</p>"
 
 Um die Transparenz und Sichtbarkeit der im System durchgeführten Aktivitäten zu erhöhen, ermöglicht es Ihnen Adobe Experience Platform, die Benutzeraktivität für verschiedene Dienste und Funktionen in Form von &quot;Auditprotokollen&quot;zu überprüfen. Diese Protokolle bilden ein Audit-Protokoll, das Ihnen bei der Fehlerbehebung in Platform helfen und Ihrem Unternehmen helfen kann, die Richtlinien der Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen.
 
@@ -75,13 +75,13 @@ Um Prüfprotokolle anzeigen und exportieren zu können, benötigen Sie die **[!U
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_instructions"
 >title="Anleitung"
->abstract="<ul><li>Auswählen <b>Prüfungen</b> in der linken Navigation. Der Arbeitsbereich &quot;Prüfungen&quot;zeigt eine Liste der aufgezeichneten Protokolle an, die standardmäßig von der letzten zur letzten sortiert sind.</li>   <li> HINWEIS: Prüfprotokolle werden 365 Tage lang aufbewahrt, danach werden sie aus dem System gelöscht. Daher können Sie nur für einen Zeitraum von maximal 365 Tagen zurückkehren. Wenn Sie auf Daten zurückgreifen müssen, die älter als 365 Tage sind, sollten Sie Protokolle regelmäßig exportieren, um Ihre internen Richtlinienanforderungen zu erfüllen. </li><li>Wählen Sie ein Ereignis aus der Liste aus, um seine Details in der rechten Leiste anzuzeigen. </li><li>Wählen Sie das Trichtersymbol aus, um eine Liste von Filtersteuerelementen anzuzeigen, mit denen die Ergebnisse eingegrenzt werden können. Unabhängig von den ausgewählten Filtern werden nur die letzten 1000 Datensätze angezeigt. </li><li>Um die aktuelle Liste der Prüfprotokolle zu exportieren, wählen Sie **Protokoll herunterladen**.</li><li>Weitere Hilfe zu dieser Funktion finden Sie im Abschnitt <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=de">Übersicht über Auditprotokolle</a> auf Experience League.</li></ul>"
+>abstract="<ul><li>Wählen Sie <b>Audits</b> in der linken Navigation aus. Der Arbeitsbereich „Audits“ zeigt eine Liste der aufgezeichneten Protokolle an, die standardmäßig absteigend nach ihrer Aktualität sortiert sind.</li>   <li> HINWEIS: Audit-Protokolle werden 365 Tage lang aufbewahrt und danach aus dem System gelöscht. Daher können Sie nur für einen Zeitraum von maximal 365 Tagen zurückgehen. Wenn Sie auf Daten zurückgreifen müssen, die älter als 365 Tage sind, sollten Sie Protokolle regelmäßig exportieren, um Ihre internen Richtlinienanforderungen zu erfüllen. </li><li>Wählen Sie ein Ereignis aus der Liste aus, um seine Details in der rechten Leiste anzuzeigen. </li><li>Wählen Sie das Trichtersymbol aus, um eine Liste von Filterfeldern anzuzeigen, mit denen die Ergebnisse eingegrenzt werden können. Unabhängig von den ausgewählten Filtern werden nur die letzten 1.000 Datensätze angezeigt. </li><li>Um die aktuelle Liste der Audit-Prüfprotokolle zu exportieren, wählen Sie **Protokoll herunterladen** aus.</li><li>Weitere Hilfe zu dieser Funktion finden Sie im Abschnitt <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=de">Übersicht über Audit-Protokolle</a> auf Experience League.</li></ul>"
 
-Sie können Prüfprotokolle für verschiedene Funktionen der Experience Platform im **[!UICONTROL Prüfungen]** Arbeitsbereich in der Platform-Benutzeroberfläche. Der Arbeitsbereich zeigt eine Liste der aufgezeichneten Protokolle an, die standardmäßig von der letzten zur letzten sortiert sind.
+Sie können Prüfprotokolle für verschiedene Funktionen der Experience Platform im **[!UICONTROL Prüfungen]** Arbeitsbereich in der Platform-Benutzeroberfläche. Der Arbeitsbereich „“ zeigt eine Liste der aufgezeichneten Protokolle an, die standardmäßig absteigend nach ihrer Aktualität sortiert sind.
 
 ![Dashboard &quot;Audit logs&quot;](../../images/audit-logs/audits.png)
 
-Prüfprotokolle werden 365 Tage lang aufbewahrt, danach werden sie aus dem System gelöscht. Daher können Sie nur für einen Zeitraum von maximal 365 Tagen zurückkehren. Wenn Sie Daten von mehr als 365 Tagen benötigen, sollten Sie Protokolle regelmäßig exportieren, um Ihre internen Richtlinienanforderungen zu erfüllen.
+Prüfprotokolle werden 365 Tage lang aufbewahrt, danach werden sie aus dem System gelöscht. Daher können Sie nur für einen Zeitraum von maximal 365 Tagen zurückgehen. Wenn Sie Daten von mehr als 365 Tagen benötigen, sollten Sie Protokolle regelmäßig exportieren, um Ihre internen Richtlinienanforderungen zu erfüllen.
 
 Wählen Sie ein Ereignis aus der Liste aus, um seine Details in der rechten Leiste anzuzeigen.
 
@@ -113,7 +113,7 @@ Um einen Filter zu entfernen, klicken Sie auf das „X“ auf dem Symbol für de
 
 ### Auditprotokolle exportieren
 
-Um die aktuelle Liste der Prüfprotokolle zu exportieren, wählen Sie **[!UICONTROL Protokoll herunterladen]**.
+Um die aktuelle Liste der Audit-Prüfprotokolle zu exportieren, wählen Sie **[!UICONTROL Protokoll herunterladen]** aus.
 
 ![Protokoll herunterladen](../../images/audit-logs/download.png)
 

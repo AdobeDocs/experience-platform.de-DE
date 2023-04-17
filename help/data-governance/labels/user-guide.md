@@ -7,7 +7,7 @@ exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: 1a4e71ee07900fb4f1581274f740ddb96cb93289
 workflow-type: tm+mt
 source-wordcount: '1529'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 86%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
->title="Datennutzung in Platform steuern"
+>title="Steuerung der Datennutzung in Platform"
 >abstract="<h2>Beschreibung</h2><p>Mit dem Data Governance-Framework in Experience Platform können Sie Attribute und Datensätze anhand von Datennutzungsbeschränkungen beschriften und Richtlinien einrichten, die diese Einschränkungen für bestimmte Marketing-Aktionen identifizieren und berücksichtigen.</p>"
 
 Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Datennutzungskennzeichnungen in der Benutzeroberfläche von [!DNL Experience Platform]. 
@@ -87,7 +87,7 @@ Der Umschalter **[!UICONTROL Übernommene Beschriftungen anzeigen]** ist standar
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"
 >title="Anleitung"
->abstract="<ol><li>Auswählen <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=de">Datensätze</a> Wählen Sie im linken Navigationsbereich den Datensatz aus, dessen Daten Sie beschränken möchten.</li><li>Wählen Sie in der Ansicht mit den Datensatzdetails die <b>Data Governance</b> Registerkarte.</li><li>Wählen Sie die Datensatzfelder aus, die Sie beschränken möchten, und wählen Sie dann <b>Bearbeiten von Governance-Titeln</b> , um die Daten anhand von Nutzungsbeschränkungen zu beschriften.</li><li>Wählen Sie nach der Beschriftung Ihrer Daten die Option <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=de">Richtlinien</a> Wählen Sie im linken Navigationsbereich die Option <b>Richtlinie erstellen</b>.</li><li>Wählen Sie zum Erstellen einer <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">Data Governance-Richtlinie</a>und wählen Sie dann die Datennutzungsbezeichnungen aus, die die Richtlinie auf die Richtlinie anwenden soll.</li><li>Wählen Sie die Marketing-Aktion(n) aus, die die Richtlinie für alle Daten mit diesen Bezeichnungen verweigern soll. Nachdem die Richtlinie erstellt wurde, wählen Sie sie aus der Liste aus und aktivieren Sie sie mithilfe des Umschalters in der rechten Leiste.</li><li>Für jede aktivierte Richtlinie verhindert Platform, dass Daten mit den angegebenen Bezeichnungen für die definierten Marketing-Aktionen verwendet werden. Diese Durchsetzung erfolgt automatisch, wenn Sie versuchen, gekennzeichnete Daten für ein Ziel mit zugehörigen Marketing-Aktionen zu aktivieren (Anwendungsfälle).</li></ol>"
+>abstract="<ol><li>Wählen Sie im linken Navigationsbereich <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=de">Datensätze</a> und anschließend den Datensatz aus, dessen Daten beschränkt werden sollen.</li><li>Wählen Sie in der Ansicht mit den Datensatzdetails die Registerkarte <b>Data Governance</b> aus.</li><li>Wählen Sie die Datensatzfelder aus, die beschränkt werden sollen, und wählen Sie anschließend <b>Governance-Kennzeichnungen bearbeiten</b>, um die Daten anhand von Nutzungsbeschränkungen zu kennzeichnen.</li><li>Wählen Sie nach dem Beschriften der Daten im linken Navigationsbereich die Option <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=de">Richtlinien</a> und anschließend die Option <b>Richtlinie erstellen</b> aus.</li><li>Wählen Sie das Erstellen einer <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy?lang=de">Data Governance-Richtlinie</a>, und wählen Sie anschließend die Datennutzungskennzeichnungen, auf die die Richtlinie angewendet werden soll.</li><li>Wählen Sie die Marketing-Aktion(en) aus, die die Richtlinie für alle Daten mit diesen Kennzeichnungen verweigern soll. Nachdem Sie die Richtlinie erstellt haben, wählen Sie sie aus der Liste aus und aktivieren Sie sie mithilfe des Umschalters in der rechten Leiste.</li><li>Für jede aktivierte Richtlinie verhindert Platform, dass Daten mit den angegebenen Kennzeichnungen für die definierte(n) Marketing-Aktion(en) verwendet werden. Dies wird automatisch erzwungen, wenn versucht wird, gekennzeichnete Daten für ein Ziel mit zugehörigen Marketing-Aktionen zu aktivieren (Anwendungsfälle).</li></ol>"
 
 >[!IMPORTANT]
 >

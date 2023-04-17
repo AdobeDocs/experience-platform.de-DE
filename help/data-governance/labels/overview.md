@@ -7,7 +7,7 @@ exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
 source-wordcount: '794'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 85%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_description"
->title="Zugriff auf vertrauliche und geschützte Daten steuern"
->abstract="<h2>Beschreibung</h2><p>Steuerung des Zugriffs auf bestimmte Datenattribute und/oder Segmente, sodass Sie flexible Workflows für die verschiedenen Rollen und Teams erstellen können, die in der Experience Platform arbeiten.</p>"
+>title="Steuerung des Zugriffs auf vertrauliche und geschützte Daten"
+>abstract="<h2>Beschreibung</h2><p>Steuern Sie den Zugriff auf bestimmte Datenattribute und/oder Segmente, sodass Sie flexible Workflows für die verschiedenen Rollen und Teams, die mit Experience Platform-Anwendungsfällen arbeiten, entwerfen können.</p>"
 
 Mit Adobe Experience Platform können Sie Datennutzungskennzeichnungen auf Datensätze und Felder anwenden und diese entsprechend den zugehörigen [Data-Governance-Richtlinien](../policies/overview.md) und [Zugriffssteuerungsrichtlinien](../../access-control/abac/ui/policies.md) kategorisieren.
 
@@ -51,7 +51,7 @@ Informationen dazu, wie bestimmte Datenexportsteuerelemente den Datennutzungsken
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_instructions"
 >title="Anleitung"
->abstract="<ul><li>Beschriften Sie XDM-Felder und Segmente, um die Felder und Segmente zu klassifizieren, auf die Sie den Zugriff beschränken möchten.</li><li>Bezeichnungsrollen: Durch Hinzufügen von Bezeichnungen zu einer Rolle können Sie festlegen, welche Bezeichnungen Mitglieder dieser Rolle Einschränkungen unterliegen sollten.</li><li>Richtlinien erstellen, erstellt eine Richtlinie eine Beziehung zwischen den Beschriftungen für beschriftete Objekte wie XDM-Felder und Segmente und den Beschriftungen für Rollen. Wenn die Bezeichnungen übereinstimmen, kann entweder eine Erlaubnis oder ein eingeschränkter Zugriff definiert werden.</li></ul>"
+>abstract="<ul><li>Beschriften Sie XDM-Felder und -Segmente, um die Felder und Segmente zu klassifizieren, auf die Sie den Zugriff beschränken möchten.</li><li>Beschriftung von Rollen: Durch Hinzufügen von Beschriftungen zu einer Rolle können Sie Beschriftungen festlegen, für die Mitglieder dieser Rolle Einschränkungen unterliegen sollen.</li><li>Richtlinien erstellen: Eine Richtlinie erstellt eine Beziehung zwischen den Beschriftungen für beschriftete Objekte, wie XDM-Felder und Segmente, und den Beschriftungen für Rollen. Wenn die Beschriftungen sich entsprechen, kann entweder eine Erlaubnis oder ein eingeschränkter Zugriff definiert werden.</li></ul>"
 
 Sie können Datennutzungsbeschriftungen mit [!DNL Experience Platform]-APIs oder der Benutzeroberfläche verwalten. Einzelheiten finden Sie in den nachfolgenden Abschnitten.
 
