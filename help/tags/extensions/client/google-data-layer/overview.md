@@ -2,18 +2,14 @@
 title: Google-Datenschichterweiterung
 description: Erfahren Sie mehr über die Google Client-Datenschicht-Tag-Erweiterung in Adobe Experience Platform.
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 9c608f69f6ba219f9cb4e938a77bd4838158d42c
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 8%
+source-wordcount: '867'
+ht-degree: 15%
 
 ---
 
-# Google Data Layer-Erweiterung (Beta)
-
->[!IMPORTANT]
->
->Diese Erweiterung befindet sich derzeit in der Beta-Phase und wurde noch nicht vollständig in der Produktion getestet.
+# Google Data Layer-Erweiterung
 
 Mit der Google Data Layer-Erweiterung können Sie eine Google-Datenschicht in Ihrer Tag-Implementierung verwenden. Die Erweiterung kann unabhängig oder gleichzeitig mit Google-Lösungen und der Open Source von Google verwendet werden [Data Layer Helper Library](https://github.com/google/data-layer-helper).
 
@@ -21,45 +17,50 @@ Die Hilfsbibliothek bietet ähnliche ereignisgesteuerte Funktionen wie der Adobe
 
 ## Laufzeit
 
-Version 1.0.x der Erweiterung ist eine Beta-Version. Diese Erweiterung wurde in der Produktion nicht vollständig getestet.
+Version 1.2.x ist eine Beta-Version, die in der Produktion verwendet wird.
 
 ## Installation
 
-Um die Erweiterung zu installieren, navigieren Sie zum Erweiterungskatalog in der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche und wählen Sie **Google-Datenschicht**.
+Um die Erweiterung zu installieren, navigieren Sie zum Erweiterungskatalog in der Datenerfassungs-Benutzeroberfläche und wählen Sie **[!UICONTROL Google-Datenschicht]**.
 
-Nach der Installation erstellt oder greift die Erweiterung jedes Mal, wenn die Tag-Bibliothek auf Ihre Website geladen wird, auf eine Datenschicht zu.
+Nach der Installation erstellt oder greift die Erweiterung auf eine Datenschicht bei jedem Laden der Adobe Experience Platform Tags-Bibliothek zu.
 
 ## Erweiterungsansicht
 
-Beim Konfigurieren der Erweiterung (entweder während der Installation der Erweiterung oder durch Auswahl von **[!UICONTROL Konfigurieren]** aus dem Erweiterungskatalog) müssen Sie den Namen der Datenschicht definieren, die die Erweiterung nutzt. Wenn beim Laden der Bibliothek keine Datenschicht mit dem konfigurierten Namen vorhanden ist, erstellt die Erweiterung stattdessen eine.
+Die Erweiterungskonfiguration kann verwendet werden, um den Namen der Datenschicht zu definieren, die die Erweiterung nutzt. Wenn beim Laden von Adobe Experience Platform-Tags keine Datenschicht mit dem konfigurierten Namen vorhanden ist, erstellt die Erweiterung eine.
+
+Der Standardwert für den Datenschichtnamen ist der Google-Standardname `dataLayer`.
 
 >[!NOTE]
 >
->Es spielt keine Rolle, ob Google- oder Adobe-Code zuerst geladen wird und die Datenschicht erstellt. Beide Systeme erstellen die Datenschicht, falls nicht vorhanden, oder verwenden die vorhandene Datenschicht.
-
-Standardmäßig verwendet die Datenschicht den Google-Standardnamen `dataLayer`.
+>Es spielt keine Rolle, ob Google- oder Adobe-Code zuerst geladen wird und die Datenschicht erstellt. Beide Systeme verhalten sich gleich - erstellen Sie die Datenschicht, falls sie nicht vorhanden ist, oder verwenden Sie die vorhandene Datenschicht.
 
 ## Ereignisse
 
-Mit der Erweiterung können Sie auf Änderungen (Ereignisse) innerhalb der Datenschicht warten. Ein Ereignis kann eines der folgenden sein:
+>[!NOTE]
+>
+>Das Wort _event_ wird überlastet, wenn in Adobe Experience Platform-Tags eine ereignisbasierte Datenschicht verwendet wird. _Veranstaltungen_ kann sein:
+> - Adobe Experience Platform Tags-Ereignisse (Bibliothek geladen usw.).
+> - JavaScript-Ereignisse.
+> - Daten, die mit der _event_ Keyword.
 
-* Tag-Ereignisse (z. B. eine Bibliothek, die geladen wird)
-* JavaScript-Ereignisse
-* Daten, die mit der `event` Keyword.
 
-Es ist wichtig, die Verwendung der [`event` Keyword](https://developers.google.com/tag-platform/devguides/datalayer#use_a_data_layer_with_event_handlers) wenn Daten auf eine Google-Datenschicht übertragen werden, ähnlich wie auf die Adobe Client-Datenschicht. Die `event` -Keyword ändert das Verhalten der Google-Datenschicht, sodass das Verhalten der Erweiterung entsprechend aktualisiert wird.
+Die Erweiterung bietet Ihnen die Möglichkeit, auf Änderungen auf der Datenschicht zu warten.
 
-In den folgenden Abschnitten werden die verschiedenen Ereignistypen beschrieben, auf die die Erweiterung warten kann.
+>[!NOTE]
+>
+>Es ist wichtig, die Verwendung der _event_ Keyword, wenn Daten auf eine Google-Datenschicht übertragen werden, ähnlich wie bei der Adobe Client-Datenschicht. Die _event_ -Keyword ändert das Verhalten der Google-Datenschicht und daher diese Erweiterung.\
+> Lesen Sie die Dokumentation zu Google oder recherchieren Sie, wenn Sie sich diesbezüglich nicht sicher sind.
 
 ### Suchen Sie nach allen Push-Benachrichtigungen auf der Datenschicht.
 
-Wenn Sie diese Option auswählen, überwacht die Erweiterung alle Änderungen an der Datenschicht.
+Wenn Sie diese Option auswählen, überwacht Ihr Ereignis-Listener alle Änderungen an der Datenschicht.
 
 ### Nach Push-Benachrichtigungen zum Ausschließen von Ereignissen suchen
 
-Wenn Sie diese Option auswählen, überwacht die Erweiterung alle an die Datenschicht gepushten Elemente, wobei Ereignisse ausgeschlossen sind.
+Wenn Sie diese Option auswählen, überwacht Ihr Ereignis-Listener alle Datenübertragungen an die Datenschicht, wobei Ereignisse ausgeschlossen sind.
 
-Das folgende Beispiel-Push-Ereignis wird vom Listener verfolgt:
+Das folgende Beispiel für Push-Ereignisse wird vom Listener verfolgt:
 
 ```js
 dataLayer.push({"data":"something"})
@@ -74,7 +75,7 @@ dataLayer.push({"event":"myevent","data":"something"})
 
 ### Alle Ereignisse überwachen
 
-Wenn Sie diese Option auswählen, überwacht die Erweiterung alle Ereignisse, die an die Datenschicht gesendet werden.
+Wenn Sie diese Option auswählen, überwacht Ihr Ereignis-Listener alle Ereignisse, die an die Datenschicht gepusht werden.
 
 Das folgende Beispiel für Push-Ereignisse wird vom Listener verfolgt:
 
@@ -91,7 +92,7 @@ dataLayer.push({"data":"something"})
 
 ### Suchen nach bestimmten Ereignissen
 
-Wenn Sie auf ein bestimmtes Ereignis warten möchten, wählen Sie diese Option aus, damit der Ereignis-Listener alle Ereignisse verfolgt, die mit einer bestimmten Zeichenfolge übereinstimmen.
+Wenn Sie ein Ereignis angeben, verfolgt der Ereignis-Listener alle Ereignisse, die mit einer bestimmten Zeichenfolge übereinstimmen.
 
 Wenn Sie beispielsweise `myEvent` bei Verwendung dieser Konfiguration festlegen, verfolgt der Listener nur das folgende Push-Ereignis:
 
@@ -99,7 +100,9 @@ Wenn Sie beispielsweise `myEvent` bei Verwendung dieser Konfiguration festlegen,
 dataLayer.push({"event":"myEvent"})
 ```
 
-Sie können auch eine Regex-Zeichenfolge verwenden, um Ereignisnamen zuzuordnen. Beispiel: `myEvent\d` verfolgt Ereignisse, die mit beginnen `myEvent` gefolgt von einer Ziffer:
+Es kann ein (ECMAScript-/JavaScript-) Regex verwendet werden, um Ereignisnamen zuzuordnen.
+
+Wenn beispielsweise &quot;myEvent\d&quot;festgelegt wird, wird `myEvent` mit einer Ziffer (\d):
 
 ```js
 dataLayer.push({"event":"myEvent1"})
@@ -108,11 +111,13 @@ dataLayer.push({"event":"myEvent2"})
 
 ## Aktionen
 
-In den folgenden Abschnitten werden die verschiedenen Aktionen beschrieben, die die Erweiterung ausführen kann, wenn sie in einer [Regel](../../../ui/managing-resources/rules.md).
-
 ### Pushen zur Datenschicht {#push-to-data-layer}
 
-Durch diese Aktion wird der JSON-Inhalt auf die Datenschicht selbst übertragen, sodass Datenelemente direkt in JSON-Payloads verwendet werden können. Im bereitgestellten JSON-Editor können Sie Datenelemente mit der Prozentnotation referenzieren (z. B. `%dataElementName%`).
+Die -Erweiterung bietet zwei Aktionen, um JSON an die Datenschicht zu pushen. ein freies Textfeld zur manuellen Erstellung des zu übertragenden JSON-Codes und ab Version 1.2.0 ein Multifield-Dialogfeld mit Schlüsselwerten.
+
+#### Free text JSON
+
+Die Aktion &quot;Freitext&quot;ermöglicht die direkte Verwendung von Datenelementen in der JSON-Datei. Innerhalb des JSON-Editors sollten Datenelemente mit der Prozentnotation referenziert werden. Beispiel: `%dataElementName%`.
 
 ```json
 {
@@ -124,27 +129,27 @@ Durch diese Aktion wird der JSON-Inhalt auf die Datenschicht selbst übertragen,
 }
 ```
 
+#### Mehrfeld für Schlüssel-Wert
+
+Das neuere multifield-Dialogfeld mit dem Schlüssel-Wert-Wert ist eine benutzerfreundlichere Benutzeroberfläche, mit der ein Push-Vorgang konfiguriert werden kann, ohne JSON manuell zu schreiben.
+
 ### Google DL auf berechneten Status zurücksetzen
 
->[!NOTE]
->
->Diese Aktion ist ab Version 1.0.5 verfügbar.
-
-Durch diese Aktion wird die Datenschicht zurückgesetzt. Wenn sie in einer Regel verwendet wird, die eine Google-Datenschichtänderung verarbeitet, wird die Datenschicht zum Zeitpunkt der Regelauslösung auf den berechneten Status der Datenschicht zurückgesetzt. Wenn die Aktion in einer Regel verwendet wird, die keine Änderung der Google-Datenschicht verarbeitet, wird die Datenschicht durch die Aktion geleert.
+Die -Erweiterung bietet Ihnen eine Aktion zum Zurücksetzen der Datenschicht. Wenn sie in einer Regel verwendet wird, die eine Google-Datenschichtänderung verarbeitet, wird die Datenschicht zum Zeitpunkt der Regelauslösung auf den berechneten Status der Datenschicht zurückgesetzt. Wenn die Aktion in einer Regel verwendet wird, die keine Änderung der Google-Datenschicht verarbeitet, wird die Datenschicht durch die Aktion geleert.
 
 ## Datenelemente
 
-Die Erweiterung bietet ein eindeutiges Datenelement, das mithilfe eines Schlüssels auf die Datenschicht zugreift (z. B. `page.url` im [Ausschnitt oben](#push-to-data-layer)).
+Das bereitgestellte Datenelement kann während der Ausführung einer Regel verwendet werden, die durch eine Google-Datenschichtänderung (Push-Ereignis) ausgelöst wird, oder in einer nicht verwandten Regel wie &quot;Bibliothek geladen&quot;. Im ersten Fall gibt das Datenelement einen Wert zurück, der aus dem berechneten Status zum Zeitpunkt der Datenschichtänderung entnommen wurde. Im letzteren Fall wird der berechnete Status zum Zeitpunkt der Regelausführung verwendet.
 
-Das Datenelement kann Folgendes bereitstellen:
+Mit einem Umschalter können Sie auswählen, ob das Datenelement Werte aus dem gesamten berechneten Status oder nur aus Ereignisinformationen zurückgeben soll (wenn es in einer durch eine Datenschichtänderung ausgelösten Regel verwendet wird).
 
-* Ein bestimmter Wert aus der Datenschicht (z. B. `page.url`)
-* Das gesamte Datenschichtarray (leeres Schlüsselfeld)
-* Werte aus einem Datenschichtereignis mithilfe des Schlüssels (wenn die Variable `event` Keyword wurde verwendet)
-* Das gesamte Ereignisobjekt (leeres Schlüsselfeld)
+Das Datenelement kann daher Folgendes zurückgeben:
 
-Die Erweiterung gibt Ereignisinformationen immer Priorität. Wenn eine Datenschicht `event` verarbeitet wird, werden Werte immer aus diesem Ereignis gelesen. Wenn eine `event` nicht vorhanden ist, werden Werte stattdessen aus der direkten Datenschicht gelesen.
+- Leeres Feld: berechneter Status der Datenschicht.
+- Feld mit Schlüssel (z. B. page.previous_url im obigen Beispiel): -Wert des Schlüssels im Ereignisobjekt oder im berechneten Status.
 
 ## Zusätzliche Informationen
 
-Weitere Informationen finden Sie im Abschnitt [Projekt README](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md) und in den Datenelement- und Ereignisdialogfeldern der Erweiterung.
+Die Datenelement- und Ereignisdialogfelder der Erweiterung enthalten detaillierte Nutzungsinformationen und Beispiele.
+
+Weitere allgemeine Informationen finden Sie unter [Projekt README](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)
