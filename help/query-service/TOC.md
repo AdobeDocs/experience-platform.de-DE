@@ -5,9 +5,9 @@ breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
 source-git-commit: 83d1889450ba292573a6f995120691fc57cb6cfa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '275'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 98%
    - [Erstellen eines Trendberichts mit Ereignissen](use-cases/trended-report-of-events.md)
    - [Kundenlebenszeitwert](use-cases/customer-lifetime-value.md)
    - [Dezilbasierte abgeleitete Attribute](use-cases/deciles-use-case.md)
-   - [Fuzzy Match](use-cases/fuzzy-match.md)
+   - [Ungefähre Übereinstimmung](use-cases/fuzzy-match.md)
    - [Auflisten der Seitenansichten von Benutzenden](use-cases/list-visitor-sessions.md)
    - [Besuchende nach Seitenansichten auflisten](use-cases/visitors-by-number-of-page-views.md)
    - [Tendenz-Bewertung](use-cases/propensity-score.md)
