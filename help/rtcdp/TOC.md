@@ -3,27 +3,27 @@ product: adobe experience platform
 solution: Real-time Customer Data Platform
 audience: user
 user-guide-title: Handbuch zu Real-time Customer Data Platform
-user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppen-Segmente aus diesen Profilen zu erstellen und diese Segmente für Drittanbieterziele bereitzustellen.
+user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppensegmente aus diesen Profilen zu erstellen und diese Segmente für Drittanbieterziele bereitzustellen.
 source-git-commit: a36ec71cbec2316eaa08daf5f1edb36509271e7c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '205'
-ht-degree: 67%
+ht-degree: 100%
 
 ---
 
 
-# Hilfe zur Echtzeit-Kundendatenplattform {#rtcdp}
+# Hilfe zur Real-Time Customer Data Platform {#rtcdp}
 
 * [Real-Time CDP – Übersicht](overview.md)
-* [Übersicht über Real-Time CDP B2B Edition](b2b-overview.md)
+* [Real-Time CDP B2B Edition – Übersicht](b2b-overview.md)
 * Erste Schritte {#intro}
    * Real-Time CDP {#rtcdp-intro}
-      * [Erste Schritte mit Real-Time CDP](get-started.md)
+      * [Erste Schritte mit Real-time CDP](get-started.md)
       * [Startseite](home-page-dashboards.md)
    * Real-Time CDP B2B Edition {#rtcdpb2b-intro}
       * [Beispielanwendungsfall](./b2b-use-case.md)
       * [Tutorial mit der Beschreibung aller Schritte](./b2b-tutorial.md)
-      * [Limits für Real-Time CDP B2B Edition](b2b-guardrails.md)
+      * [Leitlinien für die Real-time CDP B2B Edition](b2b-guardrails.md)
 * Account-Profile {#account}
    * [Übersicht über Account-Profile](accounts/account-profile-overview.md)
    * [Handbuch zur Benutzeroberfläche von Account-Profilen](accounts/account-profile-ui-guide.md)
@@ -34,7 +34,7 @@ ht-degree: 67%
    * [Datenqualität in Platform](datasets/data-quality.md)
 * Ziele {#destinations}
    * [Ziele – Übersicht](destinations/overview.md)
-   * [Ziele in Real-Time CDP B2B Edition](destinations/b2b.md)
+   * [Ziele in der Real-time CDP B2B Edition](destinations/b2b.md)
 * Identitäten {#identity}
    * [Identitäten und Identity-Namespaces](profile/identities-overview.md)
 * Zusammenführungsrichtlinien {#merge-policies}
@@ -45,22 +45,22 @@ ht-degree: 67%
 * Profile {#profile}
    * [Profil – Übersicht](profile/profile-overview.md)
    * [Profil durchsuchen](profile/profile-browse.md)
-* Real-Time CDP B2B Edition AI/ML-Dienste {#b2b-cdp-ai-ml}
+* Real-Time CDP B2B Edition – KI/ML-Dienste {#b2b-cdp-ai-ml}
    * [Verwandte Konten](b2b-ai-ml-services/related-accounts.md)
    * [Lead-Konto-Zuordnung](b2b-ai-ml-services/lead-to-account-matching.md)
    * Prädiktives Lead- und Konto-Scoring {#predictive-lead-and-account-scoring-intro}
-      * [Prädiktive Lead- und Kontobewertung - Übersicht](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
-      * [Prädiktive Lead- und Kontobewertung verwalten](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
+      * [Prädiktives Lead- und Konto-Scoring – Übersicht](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
+      * [Verwalten von prädiktivem Lead- und Konto-Scoring](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
 * Schemas {#schemas}
    * [Übersicht über Schemas](schemas/overview.md)
-   * [Schemata in Real-Time CDP B2B Edition](schemas/b2b.md)
+   * [Schemata in der Real-time CDP B2B Edition](schemas/b2b.md)
 * Segmente {#segmentation}
    * [Segmentierung – Übersicht](segmentation/segmentation-overview.md)
    * [Segment Builder-Handbuch](segmentation/segment-builder-guide.md)
-   * [Segmentierung in Real-Time CDP B2B Edition](segmentation/b2b.md)
+   * [Segmentierung in der Real-time CDP B2B Edition](segmentation/b2b.md)
    * [Kunden-KI](segmentation/customer-ai.md)
 * Quellen {#sources}
    * [Quellen – Übersicht](sources/sources-overview.md)
-   * [Quellen in Real-Time CDP B2B Edition](sources/b2b.md)
+   * [Quellen in der Real-time CDP B2B Edition](sources/b2b.md)
 * [Experience Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
 * [Glossar zu Experience Platform](https://docs.adobe.com/content/help/de-DE/experience-platform/landing/glossary.html)
