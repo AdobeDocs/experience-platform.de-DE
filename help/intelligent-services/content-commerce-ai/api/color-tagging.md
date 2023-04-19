@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Farb-Tagging in der Inhalts-Tagging-API
 description: Der Color Tagging-Dienst kann, wenn ihm ein Bild gegeben wird, das Histogramm der Pixelfarben berechnen und sie anhand dominanter Farben in Behältern sortieren.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-source-git-commit: e6ea347252b898f73c2bc495b0324361ee6cae9b
+source-git-commit: fd8891bdc7d528e327d2a72c2427f7bbc6dc8a03
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '653'
 ht-degree: 6%
 
 ---
@@ -25,7 +25,7 @@ Diese Methode verwendet einen auf tiefem Lernen basierenden Vordergrundextraktor
 
 **Tonextraktion**
 
-Zusätzlich zu den oben genannten Varianten kann der Dienst so konfiguriert werden, dass ein Histogramm mit Tönen abgerufen wird für:
+Zusätzlich zu den oben erwähnten Varianten können Sie den Dienst so konfigurieren, dass ein Histogramm mit Tönen abgerufen wird für:
 
 - Das Gesamtbild (bei Verwendung der vollständigen Bildvariante)
 - Das Gesamtbild sowie die Vordergrund- und Hintergrundbereiche (bei Verwendung der Variante mit Maskierung)
@@ -161,7 +161,7 @@ Beachten Sie, dass das Ergebnis hier eine Farbe für den Bildbereich &quot;insge
 
 **Anfrage - maskierte Bildvariante**
 
-Die folgende Beispielanfrage verwendet die Maskierungsmethode für das Farb-Tagging. Wir aktivieren dies, indem Sie die `enable_mask` Parameter auf `true` in der Anfrage.
+Die folgende Beispielanfrage verwendet die Maskierungsmethode für das Farb-Tagging. Dies wird aktiviert, indem Sie die `enable_mask` Parameter auf `true` in der Anfrage.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -202,7 +202,9 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@1431RDMJANELLERAWJACKE_2.jpg'
 ```
 
->Hinweis: Darüber hinaus legen wir `retrieve_tone` Parameter auf `true` in der obigen Anfrage. Dadurch können wir ein Tonverteilungs-Histogramm über warme, neutrale und kühle Töne in den gesamten, Vordergrund- und Hintergrundbereichen des Bildes abrufen.
+>[!NOTE]
+>
+>Darüber hinaus wird die `retrieve_tone` -Parameter auch auf `true` in der obigen Anfrage. Dies ermöglicht es uns, ein Tonverteilungs-Histogramm über warme, neutrale und kühle Töne in den gesamten, Vordergrund- und Hintergrundbereichen des Bildes abzurufen.
 
 **Antwort - maskierte Bildvariante**
 
@@ -352,7 +354,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 }]
 ```
 
-Zusätzlich zu den Farben des Gesamtbilds können Sie jetzt auch Farben aus den Vordergrund- und Hintergrundbereichen sehen. Da wir für jede der oben genannten Regionen die Tonabfrage aktivieren, können wir auch ein Tonhistogramm abrufen.
+Zusätzlich zu den Farben des Gesamtbilds können Sie jetzt auch Farben aus den Vordergrund- und Hintergrundbereichen sehen. Da der Tonabruf für jeden der oben genannten Bereiche aktiviert ist, können Sie auch das Histogramm eines Tons abrufen.
 
 **Eingabeparameter**
 
@@ -361,7 +363,7 @@ Zusätzlich zu den Farben des Gesamtbilds können Sie jetzt auch Farben aus den 
 | `documents` | array (Document-Object) | Ja | – | Siehe unten | Liste der JSON-Elemente mit jedem Element in der Liste, das ein Dokument darstellt. |
 | `top_n` | number | Nein | 0 | Nicht negative Ganzzahl | Anzahl der zurückzugebenden Ergebnisse. 0, um alle Ergebnisse zurückzugeben. Bei Verwendung in Verbindung mit einem Schwellenwert ist die Anzahl der zurückgegebenen Ergebnisse kleiner als die beiden Begrenzungen. |
 | `min_coverage` | number | Nein | 0.05 | Real number | Deckungsschwellenwert, über den die Ergebnisse zurückgegeben werden müssen. Parameter ausschließen , um alle Ergebnisse zurückzugeben. |
-| `resize_image` | number | Nein | True | True/False | Gibt an, ob die Größe des Eingabebilds geändert werden soll oder nicht. Standardmäßig wird die Größe der Bilder auf 320 x 320 Pixel geändert, bevor die Farbextrahierung durchgeführt wird. Zu Debugging-Zwecken können wir auch zulassen, dass der Code auf Vollbild ausgeführt wird, indem dieser auf &quot;False&quot;gesetzt wird. |
+| `resize_image` | number | Nein | True | True/False | Gibt an, ob die Größe des Eingabebilds geändert werden soll oder nicht. Standardmäßig wird die Größe der Bilder auf 320 x 320 Pixel geändert, bevor die Farbextrahierung durchgeführt wird. Zu Debugging-Zwecken können wir zulassen, dass der Code auch auf Vollbild ausgeführt wird, indem wir `False`. |
 | `enable_mask` | number | Nein | False | True/False | Aktiviert/Deaktiviert die Farbextraktion |
 | `retrieve_tone` | number | Nein | False | True/False | Aktiviert/Deaktiviert die Tonextraktion |
 
@@ -369,7 +371,7 @@ Zusätzlich zu den Farben des Gesamtbilds können Sie jetzt auch Farben aus den 
 
 | Name | Datentyp | Erforderlich | Standard | Werte | Beschreibung |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | string | – | – | – | Vordefinierte URL des Dokuments, aus dem Schlüsselbegriffe extrahiert werden sollen. |
-| `sensei:repoType` | Zeichenfolge | – | – | HTTPS | Typ des Repositorys, in dem das Dokument gespeichert wird. |
-| `sensei:multipart_field_name` | Zeichenfolge | – | – | – | Verwenden Sie dies, wenn Sie das Dokument als mehrteiliges Argument übergeben, anstatt vorsignierte URLs zu verwenden. |
-| `dc:format` | Zeichenfolge | Ja | – | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | Die Dokumentkodierung wird vor der Verarbeitung mit den zulässigen Eingabekodierungstypen abgeglichen. |
+| `repo:path` | string | – | – | – | Vordefinierte URL des Dokuments. |
+| `sensei:repoType` | Zeichenfolge | – | – | HTTPS | Typ des Repositorys, in dem das Bild gespeichert wird. |
+| `sensei:multipart_field_name` | Zeichenfolge | – | – | – | Verwenden Sie dies, wenn Sie die Bilddatei als mehrteiliges Argument übergeben, anstatt vorsignierte URLs zu verwenden. |
+| `dc:format` | Zeichenfolge | Ja | – | &quot;image/jpg&quot;,<br>&quot;image/jpeg&quot;,<br>&quot;image/png&quot;,<br>&quot;image/tiff&quot; | Die Bildkodierung wird vor der Verarbeitung mit den zulässigen Eingabekodierungstypen abgeglichen. |
