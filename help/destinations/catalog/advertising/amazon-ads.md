@@ -1,11 +1,11 @@
 ---
 title: Amazon Ads
-description: Amazon Ads bietet eine Reihe von Optionen, mit denen Sie Ihre Werbeziele für registrierte Verkäufer, Anbieter, Buchhersteller, Autoren von Kindle Direct Publishing (KDP), App-Entwickler und/oder Agenturen erreichen können. Die Amazon Ads-Integration mit Adobe Experience Platform bietet eine schlüsselfertige Integration in Amazon Ads-Produkte, einschließlich der Amazon DSP (ADSP). Mit dem Amazon Ads-Ziel in Adobe Experience Platform können Benutzer Advertiser-Zielgruppen für Targeting und Aktivierung auf dem Amazon-DSP definieren.
+description: Amazon Ads bietet eine Reihe von Optionen, die Ihnen beim Erreichen Ihrer Werbeziele für Agenturen und/oder registrierte Verkäuferschaft, Anbieterschaft, Buchhändlerinnen und -händler, Entwickelnde von Apps oder Autorinnen bzw. Autoren von Kindle Direct Publishing (KDP) hilft. Die Amazon Ads-Integration mit Adobe Experience Platform bietet eine schlüsselfertige Integration in Amazon Ads-Produkte, einschließlich Amazon DSP (ADSP). Mit dem Amazon Ads-Ziel in Adobe Experience Platform können Benutzerinnen und Benutzer Advertiser-Zielgruppen für Targeting und Aktivierung im Amazon DSP definieren.
 last-substantial-update: 2023-03-29T00:00:00Z
 source-git-commit: 732e6d3d53d983f3390941f4694d2c542d882004
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1277'
-ht-degree: 29%
+ht-degree: 100%
 
 ---
 
@@ -14,38 +14,38 @@ ht-degree: 29%
 
 ## Übersicht {#overview}
 
-Amazon Ads bietet eine Reihe von Optionen, mit denen Sie Ihre Werbeziele für registrierte Verkäufer, Anbieter, Buchhersteller, Autoren von Kindle Direct Publishing (KDP), App-Entwickler und/oder Agenturen erreichen können.
+Amazon Ads bietet eine Reihe von Optionen, die Ihnen beim Erreichen Ihrer Werbeziele für Agenturen und/oder registrierte Verkäuferschaft, Anbieterschaft, Buchhändlerinnen und -händler, Entwickelnde von Apps oder Autorinnen bzw. Autoren von Kindle Direct Publishing (KDP) hilft.
 
-Die Amazon Ads-Integration mit Adobe Experience Platform bietet eine schlüsselfertige Integration in Amazon Ads-Produkte, einschließlich der Amazon DSP (ADSP). Mit dem Amazon Ads-Ziel in Adobe Experience Platform können Benutzer Advertiser-Zielgruppen für Targeting und Aktivierung auf dem Amazon-DSP definieren.
+Die Amazon Ads-Integration mit Adobe Experience Platform bietet eine schlüsselfertige Integration in Amazon Ads-Produkte, einschließlich Amazon DSP (ADSP). Mit dem Amazon Ads-Ziel in Adobe Experience Platform können Benutzerinnen und Benutzer Advertiser-Zielgruppen für Targeting und Aktivierung im Amazon DSP definieren.
 
-Diese Verbindung unterstützt die Erstellung von Zielgruppen in den folgenden Amazon Marketplace: `US`, `CA`, `MX`, `BR`.
+Diese Verbindung unterstützt die Erstellung von Zielgruppen in den folgenden Amazon Marketplaces: `US`, `CA`, `MX`, `BR`.
 
 >[!IMPORTANT]
 >
->Diese Dokumentationsseite wurde von der *Amazon Ads* Team. Dies ist derzeit ein Beta-Produkt und die Funktionalität kann sich ändern. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an *`amc-support@amazon.com`.*
+>Diese Dokumentationsseite wurde vom *Amazon Ads*-Team erstellt. Dies ist derzeit ein Beta-Produkt, und die Funktionalität kann sich ändern. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an *`amc-support@amazon.com`.*
 
 ## Anwendungsfälle {#use-cases}
 
-Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie die *Amazon Ads* Ziel, hier finden Sie Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
+Damit Sie besser verstehen können, wie und wann Sie das *Amazon Ads*-Ziel verwenden sollten, finden Sie hier einige Beispielanwendungsfälle, die Kundinnen und Kunden von Adobe Experience Platform mit diesem Ziel bewältigen können.
 
 ### Aktivierung und Zielgruppenbestimmung {#activation-and-targeting}
 
-Durch diese Integration mit Amazon DSP können Amazon Ads-Advertiser CDP-Segmente von Adobe Experience Platform an Amazons DSP weiterleiten, um Advertiser-Zielgruppen für das Anzeigen-Targeting zu erstellen. Zielgruppen können innerhalb der Amazon-DSP für positives Targeting sowie für negatives Targeting (Unterdrückung) ausgewählt werden. Darüber hinaus können Advertiser mithilfe von Signalen, die über Amazon Marketing Cloud generiert werden, ihre Advertiser-Zielgruppen optimieren, um Zielgruppenänderungen mit Amazon-DSP zu synchronisieren.
+Durch diese Integration mit Amazon DSP können Amazon Ads-Advertiser CDP-Segmente von Adobe Experience Platform an Amazons DSP weiterleiten, um Advertiser-Zielgruppen für das Anzeigen-Targeting zu erstellen. Zielgruppen können innerhalb der Amazon-DSP für positives Targeting sowie für negatives Targeting (Unterdrückung) ausgewählt werden. Darüber hinaus können Advertiser mithilfe von Signalen, die über die Amazon Marketing Cloud generiert werden, ihre Advertiser-Zielgruppen optimieren, um Zielgruppenänderungen mit Amazon DSP zu synchronisieren.
 
 ## Voraussetzungen {#prerequisites}
 
-Um die Amazon Ads-Verbindung mit Adobe Experience Platform verwenden zu können, müssen Benutzer zunächst Zugriff auf ein Amazon DSP Advertiser-Konto haben.  Um diese Instanzen bereitzustellen, besuchen Sie die folgende Seite auf der Amazon Ads-Website:
+Um die Amazon Ads-Verbindung mit Adobe Experience Platform verwenden zu können, müssen Benutzerinnen und Benutzer zunächst Zugriff auf ein Amazon DSP Advertiser-Konto haben.  Um diese Instanzen bereitzustellen, besuchen Sie die folgende Seite auf der Amazon Ads-Website:
 
 * [Erste Schritte mit Amazon DSP](https://advertising.amazon.com/solutions/products/amazon-dsp?ref_=a20m_us_hnav_p_dsp_adtech)
 
 ## Unterstützte Identitäten {#supported-identities}
 
-Die *Amazon Ads* -Verbindung unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md). Weitere Informationen zu den von Amazon Ads unterstützten Identitäten finden Sie unter [Amazon DSP Support Center](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
+Die *Amazon Ads*-Verbindung unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md). Weitere Informationen zu den von Amazon Ads unterstützten Identitäten finden Sie im [Amazon DSP Support Center](https://advertising.amazon.com/dsp/help/ss/de/audiences#GA6BC9BW52YFXBNE).
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Sowohl einfache als auch SHA256-Hash-Telefonnummern werden von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die **[!UICONTROL Umwandlung anwenden]** -Option, um [!DNL Platform] die Daten bei Aktivierung automatisch hash. |
-| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen werden von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die **[!UICONTROL Umwandlung anwenden]** -Option, um [!DNL Platform] die Daten bei Aktivierung automatisch hash. |
+| phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
+| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
 
 {style="table-layout:auto"}
 
@@ -55,7 +55,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer oder andere), die im *Amazon Ads* Ziel. |
+| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer oder sonstiges), die im *Amazon Ads*-Ziel verwendet werden. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -72,9 +72,9 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 
 Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
 
-Sie gelangen zur Amazon Ads-Verbindungsschnittstelle, über die Sie zunächst die Advertiser-Konten auswählen, mit denen Sie eine Verbindung herstellen möchten.  Nach der Verbindung werden Sie mit einer neuen Verbindung zurück zu Adobe Experience Platform geleitet, wobei die ID des von Ihnen ausgewählten Advertiser-Kontos angegeben ist. Wählen Sie im Zielkonfigurationsbildschirm das entsprechende Advertiser-Konto aus, um fortzufahren.
+Sie gelangen zur Amazon Ads-Verbindungsschnittstelle, über die Sie zunächst die Advertiser-Konten auswählen, mit denen Sie eine Verbindung herstellen möchten.  Beim Verbinden werden Sie mit einer neuen Verbindung zurück zu Adobe Experience Platform geleitet, wobei die ID des von Ihnen ausgewählten Advertiser-Kontos angegeben ist. Wählen Sie im Zielkonfigurationsbildschirm das entsprechende Advertiser-Konto aus, um fortzufahren.
 
-* **[!UICONTROL Trägertoken]**: Füllen Sie das Trägertoken aus, um sich beim Ziel zu authentifizieren.
+* **[!UICONTROL Bearer-Token]**: Füllen Sie das Bearer-Token aus, um sich beim Ziel zu authentifizieren.
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
@@ -82,9 +82,9 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Amazon Ads Advertiser ID]**: Wählen Sie die ID für das Amazon Ads-Zielkonto aus, das für das Ziel verwendet wird.
+* **[!UICONTROL Amazon Ads Advertiser-ID]**: Wählen Sie die ID für das Amazon Ads-Zielkonto aus, das für das Ziel verwendet wird.
 
-Hinweis: Nachdem Sie diese Amazon Ads Advertiser-ID ausgewählt haben, müssen Sie ein neues Ziel erstellen, um dies zu ändern. Wenn Sie die OAuth-Anmeldeinformationen erneut authentifizieren und eine neue Advertiser-ID auswählen, gelten Ihre Änderungen nicht.
+Hinweis: Nachdem Sie diese Amazon Ads Advertiser-ID ausgewählt haben, müssen Sie ein neues Ziel erstellen, um dies zu ändern. Wenn Sie die OAuth-Anmeldeinformationen erneut authentifizieren und eine neue Advertiser-ID auswählen, werden Ihre Änderungen nicht angewendet.
 
 ![Neues Ziel konfigurieren](../../assets/catalog/advertising/amazon_ads_image_1.png)
 
@@ -104,25 +104,25 @@ Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie 
 
 ### Zuordnen von Attributen und Identitäten {#map}
 
-Die Amazon Ads-Verbindung unterstützt Hash-E-Mail-Adressen und Hash-Telefonnummern für Identitätsabgleichzwecke.  Der folgende Screenshot zeigt ein Beispiel für eine Übereinstimmung, die mit der Amazon Ads-Verbindung kompatibel ist:
+Die Amazon Ads-Verbindung unterstützt Hash-E-Mail-Adressen und Hash-Telefonnummern zum Abgleichen der Identität.  Der folgende Screenshot zeigt ein Beispiel für eine Übereinstimmung, die mit der Amazon Ads-Verbindung kompatibel ist:
 
 ![Zuordnung von Adobe zu Amazon Ads](../../assets/catalog/advertising/amazon_ads_image_2.png)
 
-* Um Hash-E-Mail-Adressen zuzuordnen, wählen Sie die `Email_LC_SHA256` Identitäts-Namespace als Quellfeld.
-* Um Hash-Telefonnummern zuzuordnen, wählen Sie die `Phone_SHA256` Identitäts-Namespace als Quellfeld.
-* Um ungehashte E-Mail-Adressen oder Telefonnummern zuzuordnen, wählen Sie die entsprechenden Identitäts-Namespaces als Quellfelder aus und überprüfen Sie die `Apply Transformation` -Option, damit Platform die Identitäten bei der Aktivierung hasst.
+* Um Hash-E-Mail-Adressen zuzuordnen, wählen Sie den Identity-Namespace von `Email_LC_SHA256` als ein Quellfeld aus.
+* Um Hash-Telefonnummern zuzuordnen, wählen Sie den Identity-Namespace von `Phone_SHA256` als ein Quellfeld aus.
+* Um ungehashte E-Mail-Adressen oder Telefonnummern zuzuordnen, wählen Sie die entsprechenden Identity-Namespaces als Quellfelder aus und überprüfen Sie die Option `Apply Transformation`, damit Platform die Identitäten bei der Aktivierung hasht.
 
-Es wird dringend empfohlen, so viele Felder zuzuordnen, wie verfügbar sind. Wenn nur ein Quellattribut verfügbar ist, können Sie ein einzelnes Feld zuordnen.  Das Amazon Ads-Ziel nutzt alle zugeordneten Felder für Zuordnungszwecke, wodurch höhere Übereinstimmungsraten erzielt werden, wenn mehr Felder bereitgestellt werden. Weitere Informationen zu den zulässigen Kennungen finden Sie im [Hilfeseite zur Amazon Ads-Hash-Zielgruppe](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
+Es wird dringend empfohlen, so viele Felder zuzuordnen, wie verfügbar sind. Wenn nur ein Quellattribut verfügbar ist, können Sie ein einzelnes Feld zuordnen.  Das Amazon Ads-Ziel nutzt alle zugeordneten Felder für Zuordnungszwecke, sodass höhere Übereinstimmungsraten erzielt werden, wenn mehr Felder bereitgestellt werden. Weitere Informationen zu den zulässigen IDs finden Sie auf der [Hilfeseite zu gehashten Zielgruppen von Amazon Ads](https://advertising.amazon.com/dsp/help/ss/de/audiences#GA6BC9BW52YFXBNE).
 
-## Export von Daten/Export validieren {#exported-data}
+## Exportierte Daten/Datenexport validieren {#exported-data}
 
-Nach dem Hochladen Ihrer Audience können Sie mithilfe der folgenden Schritte überprüfen, ob Ihre Audience korrekt erstellt und hochgeladen wurde:
+Nach dem Hochladen Ihrer Zielgruppe können Sie mithilfe der folgenden Schritte überprüfen, ob Ihre Zielgruppe korrekt erstellt und hochgeladen wurde:
 
 **Für Amazon DSP**
 
-Navigieren Sie zu Ihrer Advertiser-ID → Zielgruppen → Advertiser-Zielgruppen. Wenn Ihre Zielgruppe erfolgreich erstellt wurde und die Mindestanzahl an Zielgruppenmitgliedern erreicht, wird der Status von `Active`.  Weitere Informationen zur Größe und Reichweite Ihrer Zielgruppe finden Sie im Bedienfeld &quot;Erwartete Reichweite&quot;auf der rechten Seite der Benutzeroberfläche von Amazon DSP.
+Navigieren Sie zu Ihrer Advertiser-ID → „Zielgruppen“ → „Advertiser-Zielgruppen“. Wenn Ihre Zielgruppe erfolgreich erstellt wurde und die Mindestanzahl an Zielgruppenmitgliedern erreicht, wird der Status von `Active` angezeigt.  Weitere Informationen zur Größe und Reichweite Ihrer Zielgruppe finden Sie im Bedienfeld „Prognostizierte Reichweite“ auf der rechten Seite der Benutzeroberfläche von Amazon DSP.
 
-![Validierung der Erstellung von Amazon DSP Zielgruppen](../../assets/catalog/advertising/amazon_ads_image_3.png)
+![Validierung der Erstellung von Amazon DSP-Zielgruppen](../../assets/catalog/advertising/amazon_ads_image_3.png)
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
@@ -132,4 +132,4 @@ Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Date
 
 Weitere Hilfedokumentation finden Sie in den folgenden Amazon Ads-Hilferessourcen:
 
-* [Amazon DSP Help Center](https://advertising.amazon.com/dsp/help/ss/en/audiences#/)
+* [Hilfezentrum von Amazon DSP](https://advertising.amazon.com/dsp/help/ss/de/audiences#/)
