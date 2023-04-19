@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform – Versionshinweise März 2023
 description: Versionshinweise März 2023 für Adobe Experience Platform.
-source-git-commit: 5b8dd4b295f9363fd7e848070b1ec21ff519c524
+exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '2206'
-ht-degree: 38%
+ht-degree: 86%
 
 ---
 
@@ -26,13 +27,13 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 ## Dashboards {#dashboards}
 
-Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Insights zu den Daten Ihres Unternehmens erhalten, die in täglichen Snapshots erfasst werden.
+Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Einblicke zu den Daten Ihres Unternehmens erhalten, die in täglichen Schnappschüssen erfasst werden.
 
 **Neue oder aktualisierte Funktionen** {#dashboards-new-updated-features}
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Benutzerdefinierte Dashboards | Sie können jetzt **Beispielattributwerte** vor dem Hinzufügen eines Attributs zu einem Widget im benutzerdefinierten Widget-Composer für Dashboards. Einige Beispielwerte aus dieser Attributspalte sind für einzelne Attribute beim Erstellen eines Widgets verfügbar.<br>Sie können jetzt **X- und Y-Achse tauschen** auf Ihrem Widget mit der Schaltfläche Achse austauschen . Dadurch sparen Sie Zeit und erhalten beim Hinzufügen von Attributen zu Widgets ein ergonomischeres Erlebnis. Dadurch müssen Sie beide Attribute erneut im Attributbereich finden.<br> Sie können jetzt **Speicherort und Titel der Legende ändern** in Ihren Widgets. Nachdem eine Legende in einem Widget vorhanden ist, können Sie diese Legende an eine beliebige Stelle im Diagramm verschieben und den Legendentitel wie bei Achsenbeschriftungen und dem Widget-Titel umbenennen. |
+| Benutzerdefinierte Dashboards | Vor dem Hinzufügen eines Attributs zu einem Widget im benutzerdefinierten Widget-Composer für Dashboards können jetzt **Attributwerte ausprobiert** werden. Einige Beispielwerte aus dieser Attributspalte sind für einzelne Attribute beim Erstellen eines Widgets verfügbar.<br>In einem Widget können mit der Schaltfläche „Achse vertauschen“ die **X- und Y-Achse vertauscht** werden. Dadurch lässt sich Zeit sparen, und das Hinzufügen von Attributen zu Widgets wird ergonomischer. Dadurch müssen beide Attribute nicht erneut im Attributbereich gesucht werden.<br> Jetzt können in Widgets **Speicherort und Titel der Legende geändert werden**. Wenn eine Legende in einem Widget vorhanden ist, kann diese Legende an eine beliebige Stelle im Diagramm verschoben und der Legendentitel ebenso wie Achsenbeschriftungen und der Widget-Titel umbenannt werden. |
 
 {style="table-layout:auto"}
 
@@ -46,26 +47,26 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Neuer Schnellstart-Workflow für die Meta Conversions-API (Beta) | Greifen Sie über den Startseite der Datenerfassung auf neue Schnellstartarbeitsabläufe unter &quot;Erste Schritte&quot;zu! Die [Schnellstart-Workflow für die Meta Conversions-API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start) ermöglicht Kunden die schnelle Erfassung und Weiterleitung von Ereignisdaten, serverseitig zu Meta für Anzeigenkonversionen in nur wenigen einfachen Schritten. |
-| Neuer Schnellstart-Workflow für Mobile SDK (Beta) | Greifen Sie über den Startseite der Datenerfassung auf neue Schnellstartarbeitsabläufe unter &quot;Erste Schritte&quot;zu! Die [Schnellstartarbeitsablauf für das Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) ermöglicht Ihnen die schnelle Implementierung des Mobile SDK und die Validierung einfacher mobiler Ereignisse in nur wenigen einfachen Schritten. |
-| [!DNL Braze] Ereignisweiterleitungs-Erweiterung | Die [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) Mit der Ereignisweiterleitungs-Erweiterung können Sie die im Adobe Experience Platform Edge Network erfassten Daten nutzen und an senden. [!DNL Braze] in Form von serverseitigen Ereignissen, bei denen die [!DNL Braze] APIs für die Benutzerverfolgung. |
-| [!DNL Epsilon] Ereignisweiterleitungs-Erweiterung | Die [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html) Mit der -Erweiterung können Sie die Ereignisweiterleitung nutzen, um Ereignisinformationen im Adobe Experience Platform Edge Network zu erfassen und an zu senden. [!DNL Epsilon] mithilfe der [!DNL Epsilon] Ereignis-API. |
-| [!DNL Mixpanel] Ereignisweiterleitungs-Erweiterung | Die [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) -Erweiterung ermöglicht es Kunden, die Ereignisweiterleitung zu nutzen, um Ereignisinformationen im Adobe Experience Platform Edge Network zu erfassen und über die Track Events-API an Mixpanel zu senden. |
+| Neuer Schnellstart-Workflow für die Meta Conversions-API (Beta) | Greifen Sie über die Startseite der Datenerfassung unter „Erste Schritte“ auf neue Schnellstart-Workflows zu! Der [Schnellstart-Workflow für die Meta Conversions-API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=de#quick-start) ermöglicht es, Ereignisdaten schnell zu erfassen und in wenigen einfachen Schritten Server-seitig an Meta für Anzeigenkonversionen weiterzuleiten. |
+| Neuer Schnellstart-Workflow für das Mobile SDK (Beta) | Greifen Sie über die Startseite der Datenerfassung unter „Erste Schritte“ auf neue Schnellstart-Workflows zu! Der [Schnellstart-Workflow für das Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) ermöglicht die schnelle Implementierung des Mobile SDK und die Validierung einfacher Ereignisse auf Mobilgeräten in nur wenigen einfachen Schritten. |
+| [!DNL Braze]-Erweiterung zur Ereignisweiterleitung | Mit der Ereignisweiterleitungserweiterung [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=de) können die im Adobe Experience Platform Edge Network erfassten Daten genutzt und in Form von Server-seitigen Ereignissen mithilfe der [!DNL Braze]-APIs für die Benutzernachverfolgung an [!DNL Braze] gesendet werden. |
+| [!DNL Epsilon]-Erweiterung zur Ereignisweiterleitung | Die [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html?lang=de) Mit der -Erweiterung können Sie die Ereignisweiterleitung nutzen, um Ereignisinformationen im Adobe Experience Platform Edge Network zu erfassen und an zu senden. [!DNL Epsilon] mithilfe der [!DNL Epsilon] Ereignis-API. |
+| [!DNL Mixpanel]-Erweiterung zur Ereignisweiterleitung | Die [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=de)-Erweiterung ermöglicht es, die Ereignisweiterleitung zu nutzen, um Ereignisinformationen im Adobe Experience Platform Edge Network zu erfassen und über die API zur Nachverfolgung von Ereignissen an Mixpanel zu senden. |
 
 {style="table-layout:auto"}
 
 ## Datenvorbereitung {#data-prep}
 
-Die Datenvorbereitung ermöglicht es Dateningenieuren, Daten dem Experience-Datenmodell (XDM) zuzuordnen, umzuformen und zu validieren.
+Die Datenvorbereitung ermöglicht es Dateningenieurinnen und -ingenieuren, Daten dem Experience-Datenmodell (XDM) zuzuordnen, umzuformen und zu validieren.
 
 **Aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Allgemeine Verfügbarkeit der Filterung von Adobe Analytics-Daten | Sie können jetzt Datenvorbereitung verwenden, um Regeln und Bedingungen zum Filtern Ihrer Analytics-Daten anzuwenden, bevor Sie sie in das Echtzeit-Kundenprofil aufnehmen. Weitere Informationen finden Sie im Handbuch unter [Filtern von Analytics-Daten für die Profilaufnahme](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-profile). |
-| Neue Funktionen für die Kodierung und Dekodierung von URL-Zeichenfolgen | <ul><li>Die `get_url_encoded` -Funktion verwendet eine URL als Eingabe und ersetzt oder kodiert Sonderzeichen durch ASCII-Zeichen.</li><li>Die `get_url_decoded` nimmt eine URL als Eingabe und dekodiert ASCII-Zeichen in Sonderzeichen.</li></ul> Weitere Informationen finden Sie im Abschnitt [Handbuch zu Datenvorbereitung-Funktionen](../../data-prep/functions.md). Eine umfassende Liste der reservierten Zeichen und der zugehörigen kodierten Zeichen finden Sie im Handbuch unter [Sonderzeichen](../../data-prep/functions.md#special-characters). |
+| Allgemeine Verfügbarkeit der Filterung von Adobe Analytics-Daten | Mithilfe von Funktionen zur Datenvorbereitung können Regeln und Bedingungen zum Filtern von Analytics-Daten angewendet werden, bevor diese in das Echtzeit-Kundenprofil aufgenommen werden. Weitere Informationen finden Sie im Handbuch zum [Filtern von Analytics-Daten für die Profilaufnahme](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-profile). |
+| Neue Funktionen für die Codierung und Decodierung von URL-Zeichenfolgen | <ul><li>Die Funktion `get_url_encoded` verwendet eine URL als Eingabe und ersetzt oder codiert Sonderzeichen durch ASCII-Zeichen.</li><li>Die Funktion `get_url_decoded` nimmt eine URL als Eingabe und decodiert ASCII-Zeichen in Sonderzeichen.</li></ul> Weitere Informationen finden Sie im [Handbuch zu Datenvorbereitungsfunktionen](../../data-prep/functions.md). Eine umfassende Liste der reservierten Zeichen und der zugehörigen codierten Zeichen finden Sie im Handbuch zu [Sonderzeichen](../../data-prep/functions.md#special-characters). |
 
-Weitere Informationen zur Datenvorbereitung finden Sie im [Datenvorbereitung - Übersicht](../../data-prep/home.md).
+Weitere Informationen zur Datenvorbereitung finden Sie in der [Übersicht zur Datenvorbereitung](../../data-prep/home.md).
 
 ## Ziele {#destinations}
 
@@ -75,13 +76,13 @@ Weitere Informationen zur Datenvorbereitung finden Sie im [Datenvorbereitung - �
 
 | Ziel | Beschreibung |
 | ----------- | ----------- |
-| [[!DNL Adobe Commerce] Verbindung GA](../../destinations/catalog/personalization/adobe-commerce.md) | Die [!DNL Adobe Commerce] Mit dem Ziel-Connector (jetzt allgemein verfügbar) können Sie eine oder mehrere Real-Time CDP-Zielgruppen auswählen, die für Ihre [!DNL Adobe Commerce] -Konto ein dynamisches personalisiertes Erlebnis für Ihre Kunden bereitstellen. |
-| [[!DNL Snap Inc] Verbindung GA](../../destinations/catalog/advertising/snap-inc.md) | Die [!DNL Snap Inc] Mit dem Ziel-Connector (jetzt allgemein verfügbar) können Marketing-Experten in Experience Platform erstellte Benutzersegmente in importieren [!DNL Snapchat Ads] und verwenden sie zum Targeting ihrer Anzeigen. |
-| [(API) Oracle Eloqua-Verbindung](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) | Verwenden Sie die API-basierte Verbindung, um [!DNL Oracle Eloqua] Planung und Ausführung von Kampagnen bei Bereitstellung eines personalisierten Kundenerlebnisses für potenzielle Kunden in [!DNL Oracle Eloqua]. |
-| [(Beta)  [!DNL Amazon Ads] -Verbindung](../../destinations/catalog/advertising/amazon-ads.md) | Die [!DNL Amazon Ads] Integration mit Adobe Experience Platform bietet eine schlüsselfertige Integration in [!DNL Amazon Ads] Produkte, einschließlich [!DNL Amazon DSP (ADSP)]. Verwenden der [!DNL Amazon Ads] Zielgruppe in Adobe Experience Platform können Benutzer Advertiser-Zielgruppen für Targeting und Aktivierung auf der [!DNL Amazon DSP]. |
-| [[!DNL Marketo Measure Ultimate] -Verbindung](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] (ehemals Bizible) gibt Marketing-Experten Einblicke, welche Marketing-Maßnahmen bei der Steigerung des Umsatzes und der Maximierung der Kapitalrendite für ihr Unternehmen am effektivsten sind. Das Ziel ermöglicht den B2B-Datenfluss (Business-to-Business) von Adobe Experience Platform nach [!DNL Marketo Measure]. Die Karte steht nur zur Verfügung für [!DNL Marketo Measure Ultimate] -Kunden. |
-| [TikTok-Verbindung](../../destinations/catalog/social/tiktok.md) | Erstellen Sie benutzerdefinierte Zielgruppen in TikTok mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. |
-| [Zendesk-Verbindung](../../destinations/catalog/crm/zendesk.md) | Verwenden Sie dieses Ziel, um Identitäten innerhalb eines Segments als Kontakte innerhalb von zu erstellen und zu aktualisieren. [!DNL Zendesk]. |
+| [[!DNL Adobe Commerce] -Verbindung allgemein verfügbar](../../destinations/catalog/personalization/adobe-commerce.md) | Mit dem Ziel-Connector für [!DNL Adobe Commerce] (jetzt allgemein verfügbar) können Sie ein oder mehrere Real-Time CDP-Zielgruppen auswählen, die Sie in Ihrem [!DNL Adobe Commerce]-Konto aktivieren, um Kundinnen und Kunden ein dynamisches, personalisiertes Erlebnis zu bieten. |
+| [[!DNL Snap Inc] -Verbindung allgemein verfügbar](../../destinations/catalog/advertising/snap-inc.md) | Mit dem Ziel-Connector für [!DNL Snap Inc] (jetzt allgemein verfügbar) können Marketing-Fachleute Benutzersegmente, die in Experience Platform erstellt wurden, in [!DNL Snapchat Ads] importieren und für das Targeting von Anzeigen verwenden. |
+| [(API) Oracle Eloqua-Verbindung](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) | Verwenden Sie die API-basierte Verbindung zu [!DNL Oracle Eloqua], um Kampagnen zu planen und auszuführen und dabei ein personalisiertes Kundenerlebnis für deren potenzielle Kundinnen und Kunden in [!DNL Oracle Eloqua] zu liefern. |
+| [(Beta)  [!DNL Amazon Ads] -Verbindung](../../destinations/catalog/advertising/amazon-ads.md) | Die [!DNL Amazon Ads]-Integration in Adobe Experience Platform bietet eine schlüsselfertige Integration für [!DNL Amazon Ads]-Produkte, einschließlich [!DNL Amazon DSP (ADSP)]. Mithilfe des [!DNL Amazon Ads]-Ziels in Adobe Experience Platform können Benutzerinnen und Benutzer Advertiser-Zielgruppen für Targeting und Aktivierung in [!DNL Amazon DSP] definieren. |
+| [[!DNL Marketo Measure Ultimate] -Verbindung](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] (ehemals Bizible) bietet Marketing-Fachleuten einen Einblick in die Frage, welche Marketing-Maßnahmen zur Steigerung des Umsatzes und der Maximierung des ROI für ihr Unternehmen am effektivsten sind. Das Ziel ermöglicht Business-to-Business-Datenflüsse (B2B) von Adobe Experience Platform zu [!DNL Marketo Measure]. Die Karte steht nur Kundinnen und Kunden von [!DNL Marketo Measure Ultimate] zur Verfügung. |
+| [TikTok-Verbindung](../../destinations/catalog/social/tiktok.md) | Erstellen Sie auf TikTok benutzerdefinierte Zielgruppen mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. |
+| [Zendesk-Verbindung](../../destinations/catalog/crm/zendesk.md) | Verwenden Sie dieses Ziel, um Identitäten innerhalb eines Segments als Kontakte innerhalb von [!DNL Zendesk] zu erstellen und zu aktualisieren. |
 
 {style="table-layout:auto"}
 
@@ -89,16 +90,16 @@ Weitere Informationen zur Datenvorbereitung finden Sie im [Datenvorbereitung - �
 
 | Funktionalität | Beschreibung |
 | ----------- | ----------- |
-| Neue Zugriffssteuerungsberechtigung für Ziele: [[!DNL Activate Segments without Mapping]](../../access-control/home.md#permissions) | Die neue Berechtigung gibt Benutzern die Möglichkeit, Segmente für vorhandene Ziele zu aktivieren, ohne die [Zuordnungsschritt](../../destinations/ui/activate-batch-profile-destinations.md#mapping). Benutzer können in Aktivierungs-Workflows Segmente hinzufügen und entfernen, jedoch keine zugeordneten Attribute oder Identitäten hinzufügen oder entfernen. |
+| Neue Zugriffssteuerungsberechtigung für Ziele: [[!DNL Activate Segments without Mapping]](../../access-control/home.md#permissions) | Die neue Berechtigung gibt Benutzerinnen und Benutzern die Möglichkeit, Segmente für vorhandene Ziele zu aktivieren, ohne den [Zuordnungsschritt](../../destinations/ui/activate-batch-profile-destinations.md#mapping) anzuzeigen. Benutzerinnen  und Bbenutzer können in Aktivierungs-Workflows Segmente, jedoch keine zugeordneten Attribute oder Identitäten hinzufügen oder entfernen. |
 
 {style="table-layout:auto"}
 
 **Korrekturen und Verbesserungen** {#destinations-fixes-and-enhancements}
 
-Wir veröffentlichen eine Fehlerbehebung für die PGP/GPG-Verschlüsselung in dateibasierten Zielen für die Echtzeit-Kundendatenplattform. Mit dieser Änderung generieren vorhandene dateibasierte Ziele, die derzeit die Verschlüsselung verwenden, einen Dateinamen mit einer anderen Erweiterung als zuvor.
+Wir veröffentlichen eine Fehlerbehebung für die PGP/GPG-Verschlüsselung in dateibasierten Zielen für Real-Time CDP. Mit dieser Änderung generieren vorhandene dateibasierte Ziele, die derzeit eine Verschlüsselung verwenden, einen Dateinamen mit einer anderen Erweiterung als zuvor.
 
-- Aktuelle Erweiterung bei Verwendung der Verschlüsselung: `filename.csv`
-- Zukünftige Erweiterung bei Verwendung der Verschlüsselung: `filename.csv.gpg`
+- Aktuelle Erweiterung bei Verwendung einer Verschlüsselung: `filename.csv`
+- Zukünftige Erweiterung bei Verwendung einer Verschlüsselung: `filename.csv.gpg`
 
 Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
@@ -110,7 +111,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Funktion | Beschreibung |
 | --- | --- |
-| CSV zur Schemaempfehlung | Sie können jetzt Ihre lokalen Dateien hochladen, um durch maschinelles Lernen generierte Schemas zu erstellen, die die manuelle Erstellung eines Schemas ersparen. Aus dem [!UICONTROL Quellen] Arbeitsbereich, laden Sie eine CSV-Beispieldatei hoch und die Algorithmen für maschinelles Lernen von Adobe schlagen Ihnen basierend auf den Zielfeldern ein Schema vor. Weitere Informationen finden Sie in der [Dokumentation.&quot;](../../ingestion/tutorials/map-csv/recommendations.md) |
+| CSV-zu-Schema-Empfehlung | Sie können jetzt Ihre lokalen Dateien hochladen, um durch maschinelles Lernen generierte Schemata zu erstellen, die die manuelle Erstellung eines Schemas überflüssig machen. Laden Sie eine CSV-Beispieldatei aus dem Arbeitsbereich [!UICONTROL Quellen] hoch, und die Algorithmen für maschinelles Lernen von Adobe schlagen ein Schema auf der Grundlage der Zielfelder vor. Weitere Informationen finden Sie in der [Dokumentation](../../ingestion/tutorials/map-csv/recommendations.md).“ |
 
 {style="table-layout:auto"}
 
@@ -156,7 +157,7 @@ Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von 
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Attributbasierte Zugriffssteuerung auf dem beschleunigten Speicher | Verwenden Sie die attributbasierte Zugriffssteuerung mit Data Distiller , um die Zugriffskontrolle für alle Datensätze im beschleunigten Speicher zu definieren. Dadurch wird der Zugriff auf die benutzerdefinierten Datenmodelle gesteuert, die von Benutzern erstellt und in einem beschleunigten Speicher gespeichert werden, um benutzerdefinierte Dashboards zu erstellen. |
+| Attributbasierte Zugriffssteuerung für die beschleunigte Speicherung | Verwenden Sie die attributbasierte Zugriffssteuerung mit Data Distiller, um die Zugriffssteuerung für alle Datensätze des beschleunigten Speichers zu definieren. Dadurch wird der Zugriff auf die benutzerdefinierten Datenmodelle gesteuert, die von Benutzenden erstellt und in einem beschleunigten Speicher abgelegt werden, um benutzerdefinierte Dashboards zu betreiben. |
 
 {style="table-layout:auto"}
 
@@ -170,11 +171,11 @@ Real-Time CDP B2B Edition basiert auf Real-time Customer Data Platform (Real-Tim
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Bugfix | Um eine genauere Darstellung der Profile in Ihrem System zu gewährleisten, enthält das System keine internen Profile mehr in der Gesamtprofilanzahl oder der adressierbaren Zielgruppenmetrik für die Real-time Customer Data Platform B2B Edition. Ab heute kann es zu einem einmaligen Rückgang der Metrik für die Gesamtzahl der Profile/adressierbaren Zielgruppen kommen. Keine Ihrer Daten wurde gelöscht. Dies ist lediglich eine Änderung der Anzahl. Wenden Sie sich bei Fragen an Ihren Ansprechpartner bei Ihrer Adobe. |
+| Fehlerbehebung | Um eine genauere Darstellung der Profile in Ihrem System zu gewährleisten, enthält das System für die Real-time Customer Data Platform B2B Edition keine internen Profile mehr in der Gesamtprofilanzahl oder der adressierbaren Zielgruppenmetrik. Ab heute kann es zu einem einmaligen Rückgang der Metrik für die Gesamtzahl der Profile bzw. adressierbaren Zielgruppen kommen. Keine Ihrer Daten wurden gelöscht. Dies ist lediglich eine Änderung der Zählung. Wenden Sie sich bei Fragen an Ihren Kundenkontakt bei Adobe. |
 
 {style="table-layout:auto"}
 
-Weitere Informationen über Real-Time CDP B2B Edition finden Sie in der [Übersicht zu Real-Time CDP B2B Edition](../../rtcdp/overview.md).
+Weitere Informationen zur Real-Time CDP B2B Edition finden Sie in der [Übersicht zur Real-Time CDP B2B Edition](../../rtcdp/overview.md).
 
 ## Segmentierungs-Service {#segmentation}
 
@@ -200,10 +201,10 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Verfügbarkeit der Betaversion von [!DNL Chatlio] | Die [!DNL Chatlio] -Quelle ist jetzt in der Beta-Version verfügbar. Verwenden Sie die [!DNL Chatlio] Quelle zum Streamen Ihrer [!DNL Chatlio] Ereignisdaten in Experience Platform. Weitere Informationen finden Sie im [[!DNL Chatlio] Überblick](../../sources/connectors/marketing-automation/chatlio-webhook.md). |
-| Verfügbarkeit der Betaversion von [!DNL Customer.io] | Die [!DNL Customer.io] -Quelle ist jetzt in der Beta-Version verfügbar. Verwenden Sie die [!DNL Customer.io] -Quelle, um Ihre Kundenereignisdaten an Experience Platform zu streamen. Weitere Informationen finden Sie im [[!DNL Customer.io] Überblick](../../sources/connectors/marketing-automation/customerio-webhook.md). |
-| Verfügbarkeit der Betaversion von [!DNL Pendo] | Die [!DNL Pendo] -Quelle ist jetzt in der Beta-Version verfügbar. Verwenden Sie die [!DNL Pendo] -Quelle, um Ihre Produktanalysedaten an Experience Platform zu streamen. Weitere Informationen finden Sie im [[!DNL Pendo] Überblick](../../sources/connectors/analytics/pendo-webhook.md). |
-| Unterstützung für Datenflussentwürfe | Sie können jetzt die Flow Service-API verwenden, um Ihre Datenflüsse auf den Entwurfsstatus festzulegen. Entworfene Datenflüsse können später aktualisiert und mit neuen Informationen veröffentlicht werden. Weitere Informationen finden Sie im Handbuch unter [Festlegen der Datenflüsse für Quellen als Entwürfe](../../sources/tutorials/api/draft.md). |
+| Verfügbarkeit der Betaversion von [!DNL Chatlio] | Die [!DNL Chatlio]-Quelle ist jetzt in der Beta-Version verfügbar. Verwenden Sie die [!DNL Chatlio]-Quelle, um Ihre [!DNL Chatlio]-Ereignisdaten zu Experience Platform zu streamen. Weitere Informationen finden Sie in der [[!DNL Chatlio] Übersicht](../../sources/connectors/marketing-automation/chatlio-webhook.md). |
+| Verfügbarkeit der Betaversion von [!DNL Customer.io] | Die [!DNL Customer.io]-Quelle ist jetzt in der Beta-Version verfügbar. Verwenden Sie die [!DNL Customer.io]-Quelle, um Ihre Kundenereignisdaten zu Experience Platform zu streamen. Weitere Informationen finden Sie in der [[!DNL Customer.io] Übersicht](../../sources/connectors/marketing-automation/customerio-webhook.md). |
+| Verfügbarkeit der Betaversion von [!DNL Pendo] | Die [!DNL Pendo]-Quelle ist jetzt in der Beta-Version verfügbar. Verwenden Sie die [!DNL Pendo]-Quelle, um Ihre Produktanalysedaten zu Experience Platform zu streamen. Weitere Informationen finden Sie in der [[!DNL Pendo] Übersicht](../../sources/connectors/analytics/pendo-webhook.md). |
+| Unterstützung für Entwürfe von Datenflüssen | Sie können jetzt die Flow Service-API verwenden, um Ihre Datenflüsse in einen Entwurfsstatus zu versetzen. Entworfene Datenflüsse können später aktualisiert und mit neuen Informationen veröffentlicht werden. Weitere Informationen finden Sie im Handbuch zum [Festlegen der Datenflüsse für Quellen als Entwürfe](../../sources/tutorials/api/draft.md). |
 
 {style="table-layout:auto"}
 

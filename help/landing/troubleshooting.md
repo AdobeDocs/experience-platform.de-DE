@@ -10,7 +10,7 @@ exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1868'
-ht-degree: 89%
+ht-degree: 90%
 
 ---
 
@@ -209,8 +209,8 @@ Im Folgenden finden Sie eine Liste mit Handbüchern zur Fehlerbehebung und API-R
 | Service | API-Referenz | Fehlerbehebung |
 | --- | --- | --- |
 | Zugangssteuerung | [Zugangssteuerungs-API](https://www.adobe.io/experience-platform-apis/references/access-control/) | [Handbuch zur Fehlerbehebung bei der Zugriffskontrolle](../access-control/troubleshooting-guide.md) |
-| Datenerfassung in Adobe Experience Platform | [[!DNL Batch Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) | [Handbuch zur Fehlerbehebung bei der Batch-Erfassung](../ingestion/batch-ingestion/troubleshooting.md) |
-| Datenerfassung in Adobe Experience Platform | [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) | [Handbuch zur Fehlerbehebung bei der Streaming-Erfassung](../ingestion/streaming-ingestion/troubleshooting.md) |
+| Datenerfassung in Adobe Experience Platform | [[!DNL Batch Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) | [Handbuch zur Fehlerbehebung bei der Batch-Aufnahme](../ingestion/batch-ingestion/troubleshooting.md) |
+| Datenaufnahme in Adobe Experience Platform | [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) | [Handbuch zur Fehlerbehebung bei der Streaming-Aufnahme](../ingestion/streaming-ingestion/troubleshooting.md) |
 | Adobe Experience Platform-Datenwissenschafts-Arbeitsbereich | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] Handbuch zur Fehlerbehebung](../data-science-workspace/troubleshooting-guide.md) |
 | Data Governance in Adobe Experience Platform | [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) |  |
 | Adobe Experience Platform Identity Service | [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) | [[!DNL Identity Service] Handbuch zur Fehlerbehebung](../identity-service/troubleshooting-guide.md) |

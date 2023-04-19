@@ -5,7 +5,7 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 source-git-commit: 52c6420a7fba6474dd2e9e97c9b2f49b5208be1d
 workflow-type: tm+mt
 source-wordcount: '1620'
-ht-degree: 95%
+ht-degree: 98%
 
 ---
 
@@ -18,16 +18,16 @@ In diesem Dokument werden die Versionshinweise für die Adobe Experience Platfor
 
 * Es wurde ein Problem mit XDM-Objekt- und Variablen-Datenelementen behoben, bei dem Sie kein Schema aus einer nicht standardmäßigen Sandbox auswählen konnten.
 
-## Version 2.16.0 - 30. März 2023
+## Version 2.16.0 – 30. März 2023
 
 **Neue Funktionen**
 
-* (Beta) hinzugefügt **[!UICONTROL Variable aktualisieren]** Maßnahmen und **[!UICONTROL Variable]** Datenelement.
-* Konfiguration hinzugefügt für [`onBeforeLinkClickSend`](../fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) Callback-Funktion.
+* (Beta) Aktion **[!UICONTROL Variable aktualisieren]** und Datenelement **[!UICONTROL Variable]** hinzugefügt.
+* Konfiguration hinzugefügt für Callback-Funktion [`onBeforeLinkClickSend`](../fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend).
 
 **Fehlerbehebungen und Verbesserungen**
 
-* Es wurde ein Fehler behoben, der dazu führte, dass das Klicken auf Elemente in einem Anker-Tag nicht funktionierte, wenn die Variable **[!UICONTROL Umleiten mit Identität]** -Aktion verwendet wurde.
+* Es wurde ein Problem behoben, das dazu führte, dass das Klicken auf Elemente in einem Anker-Tag nicht funktionierte, wenn die Aktion **[!UICONTROL Umleiten mit Identität]** verwendet wurde.
 * Es wurde ein Problem behoben, bei dem XDM-Objektdatenelemente nicht funktionierten, wenn nur ein Schema vorhanden war.
 * Enthält Version 2.15.0 des Adobe Experience Platform Web SDK.
 

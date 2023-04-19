@@ -7,7 +7,7 @@ feature: Destinations
 source-git-commit: fb1a8f3a8f78578a0c7d6b8ab4feb60d8c5da1af
 workflow-type: tm+mt
 source-wordcount: '1072'
-ht-degree: 97%
+ht-degree: 99%
 
 ---
 

@@ -7,7 +7,7 @@ exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
 source-wordcount: '2650'
-ht-degree: 96%
+ht-degree: 98%
 
 ---
 
@@ -73,7 +73,7 @@ Wenn die Aufschlüsselung ausgewählt ist, zeigt die Anzeige ein Balkendiagramm 
 
 | Status | Beschreibung |
 | ------ | ----------- |
-| Realisiert | Die Anzahl der Profile, die sich in den letzten 24 Stunden für das Segment qualifizieren. Die Anzahl der Profile, die sich seit der letzten Ausführung des Batch-Segmentauftrags für das Segment qualifizieren. |
+| Realisiert | Die Anzahl der Profile, die sich in den letzten 24 Stunden für das Segment qualifizierten. Die Anzahl der Profile, die sich seit der letzten Ausführung des Batch-Segmentauftrags für das Segment qualifizieren. |
 | Verlassen | Die Anzahl der Profile, die das Segment in den letzten 24 Stunden verlassen haben. Die Anzahl der Profile, die sich seit der letzten Ausführung des Batch-Segmentauftrags nicht mehr für das Segment qualifizieren. |
 
 Die Auswertungsmethode kann entweder Streaming, Batch oder Edge sein. Streaming-Segmente werden konstant ausgewertet, sobald Daten in das System strömen. Batch-Segmente werden gemäß einem festgelegten Zeitplan ausgewertet. Edge-Segmente werden in Echtzeit ausgewertet, was die Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.

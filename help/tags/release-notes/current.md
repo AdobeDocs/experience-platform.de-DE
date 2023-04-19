@@ -5,7 +5,7 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 source-git-commit: 3ebf8df16f88660eab481bd0a0ba88816b470255
 workflow-type: tm+mt
 source-wordcount: '720'
-ht-degree: 70%
+ht-degree: 95%
 
 ---
 
@@ -13,17 +13,17 @@ ht-degree: 70%
 
 ## 29. März 2023
 
-**Schnellstartarbeitsabläufe (Beta)**
+**Schnellstart-Workflows (Beta)**
 
-Greifen Sie über den Startseite der Datenerfassung auf neue Schnellstartarbeitsabläufe unter &quot;Erste Schritte&quot;zu! Die folgenden Workflows stehen Kunden jetzt als öffentliche Betaversion zur Verfügung.
-* **[Meta Conversions-API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start)**: Kunden mit Ereignisweiterleitung können Ereignisdaten schnell erfassen und serverseitig an Meta weiterleiten, um Anzeigenkonversionen in nur wenigen einfachen Schritten zu ermöglichen.
-* **[Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)**: Kunden können das Mobile SDK schnell implementieren und einfache mobile Ereignisse in nur wenigen einfachen Schritten validieren.
+Greifen Sie über die Startseite der Datenerfassung unter „Erste Schritte“ auf neue Schnellstart-Workflows zu! Die folgenden Workflows stehen Kundinnen und Kunden jetzt als öffentliche Beta-Version zur Verfügung.
+* **[Meta Conversions-API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=de#quick-start)**: Kundinnen und Kunden mit Ereignisweiterleitung können Ereignisdaten schnell erfassen und Server-seitig an Meta weiterleiten, um Anzeigenkonversionen in nur wenigen einfachen Schritten zu ermöglichen.
+* **[Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)**: Kundinnen und Kunden können das Mobile SDK schnell implementieren und einfache Ereignisse auf Mobilgeräten in nur wenigen einfachen Schritten validieren.
 
 Es wurden neue Erweiterungen veröffentlicht:
 
-* **[!DNL Braze]Ereignisweiterleitungs-Erweiterung**: Die [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) Mit der Ereignisweiterleitungs-Erweiterung können Sie die im Adobe Experience Platform Edge Network erfassten Daten nutzen und an senden. [!DNL Braze] in Form von serverseitigen Ereignissen, bei denen die [!DNL Braze] APIs für die Benutzerverfolgung.
-* **[Epsilon Events API] Ereignisweiterleitungs-Erweiterung**: Die [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) Mit der -Erweiterung können Sie die Ereignisweiterleitung nutzen, um Ereignisinformationen im Adobe Experience Platform Edge Network zu erfassen und an zu senden. [!DNL Epsilon] mithilfe der [!DNL Epsilon] Ereignis-API.
-* **[!DNL Mixpanel]Ereignisweiterleitungs-Erweiterung**: Die [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) Mit der -Erweiterung können Sie die Ereignisweiterleitung nutzen, um Ereignisinformationen im Adobe Experience Platform Edge Network zu erfassen und an zu senden. [!DNL Mixpanel] Verwendung der Tracking-Events-API.
+* **[!DNL Braze]-Erweiterung zur Ereignisweiterleitung**: Mit der Ereignisweiterleitungserweiterung [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=de) können Sie die im Adobe Experience Platform Edge Network erfassten Daten nutzen und in Form von Server-seitigen Ereignissen mithilfe der APIs von [!DNL Braze] für die Benutzernachverfolgung an [!DNL Braze] senden.
+* **[Epsilon Events API] Ereignisweiterleitungs-Erweiterung**: Die [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=de) Mit der -Erweiterung können Sie die Ereignisweiterleitung nutzen, um Ereignisinformationen im Adobe Experience Platform Edge Network zu erfassen und an zu senden. [!DNL Epsilon] mithilfe der [!DNL Epsilon] Ereignis-API.
+* **[!DNL Mixpanel]-Erweiterung zur Ereignisweiterleitung**: Mit der [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=de)[!DNL Mixpanel]-Erweiterung können Sie die Ereignisweiterleitung nutzen, um Ereignisinformationen im Adobe Experience Platform Edge Network zu erfassen und über die API zur Nachverfolgung von Ereignissen an zu senden.
 
 ## 25. Januar 2023
 
