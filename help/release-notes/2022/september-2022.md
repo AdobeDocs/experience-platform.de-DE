@@ -3,9 +3,9 @@ title: Adobe Experience Platform – Versionshinweise, September 2022
 description: Versionshinweise September 2022 zu Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
 source-git-commit: 3d829018b527aacb81c16db5e889b2e50f625e28
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2940'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -52,7 +52,7 @@ KI/ML-Services ermöglichen es Marketing-Leuten und Fachleuten, die Leistungsfä
 
 ### Attributions-KI
 
-Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Fachleuten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
+Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Fachleuten genutzt werden, um auf diversen Customer Journeys die Auswirkungen jedes einzelnen Marketing-Touchpoints zu quantifizieren.
 
 | Funktion | Beschreibung |
 | --- | --- |
@@ -112,7 +112,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | [[!DNL Snap Conversions API] Erweiterung](https://exchange.adobe.com/apps/ec/108550) für die Ereignisweiterleitung | Sie können jetzt Daten mithilfe einer Erweiterung zur [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) an die [!DNL Snapchat Conversions API] senden. Weitere Informationen zur Authentifizierung und Verwendung der API finden Sie in der [[!DNL Snapchat Marketing API] Dokumentation](https://marketingapi.snapchat.com/docs/conversion.html). |
 | [[!DNL User-Agent Client Hints] im Web SDK](../../edge/fundamentals/user-agent-client-hints.md) | Web-SDK unterstützt jetzt [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Mit Client-Hinweisen können Website-Besitzer auf viele der Informationen zugreifen, die auch in der [!DNL User-Agent]-Zeichenfolge enthalten sind, allerdings auf eine Weise, die die Privatsphäre besser schützt. |
 | [Seitenweise Migration zu Web SDK](../../edge/home.md#migrating-to-web-sdk) | Sie können jetzt Ihre vorhandenen Web-Eigenschaften aus anderen Bibliotheken von Experience Cloud, wie etwa [!DNL at.js], Seite für Seite ins Web-SDK migrieren. Dies ermöglicht einen stufenweisen Ansatz für die Web-SDK-Migration, sodass nicht alle Seiten gleichzeitig migriert werden müssen. |
-| [[!DNL Adobe Journey Optimizer] Unterstützung für Datastreams](../../edge/datastreams/overview.md#aep) | Der Adobe Experience Platform-Dienst für Datenspeicher unterstützt jetzt [!DNL Adobe Journey Optimizer]. Mit dieser Option können Sie Web- und App-basierte eingehende Kanäle in [!DNL Adobe Journey Optimizer]. |
+| [[!DNL Adobe Journey Optimizer] Unterstützung für Datenströme](../../edge/datastreams/overview.md#aep) | Der Adobe Experience Platform-Service für Datenströme unterstützt jetzt [!DNL Adobe Journey Optimizer]. Mit dieser Option können Sie Web- und App-basierte eingehende Kanäle in [!DNL Adobe Journey Optimizer] verwenden. |
 
 {style="table-layout:auto"}
 
