@@ -4,9 +4,9 @@ description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SD
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 source-git-commit: 009475c8bab3eb29a5d8a97763967d49ccf0999d
-workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '1507'
+ht-degree: 100%
 
 ---
 
@@ -16,21 +16,21 @@ ht-degree: 0%
 In diesem Dokument werden die Versionshinweise für das Adobe Experience Platform Web SDK behandelt.
 Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Versionshinweisen zur Tag-Erweiterung für Web SDK](extension/web-sdk-ext-release-notes.md).
 
-## Version 2.15.0 - 30. März 2023
+## Version 2.15.0 – 30. März 2023
 
 **Neue Funktionen**
 
-* Hinzugefügte Unterstützung für [`onBeforeLinkClickSend`](fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) Link-Klick-Rückruf.
+* Unterstützung für [`onBeforeLinkClickSend`](fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) Link-Klick-Rückruf hinzugefügt.
 * Adobe Journey Optimizer-Klick-Tracking wird nun unterstützt.
 
 **Fehlerbehebungen und Verbesserungen**
 
-* Die Linkerfassung enthält jetzt den Linknamen und die Besucherregion.
+* Die Link-Erfassung enthält jetzt den Link-Namen und die Besucherregion.
 * Konsolenfehler für fehlgeschlagene URL-Ziele wurde entfernt.
 
 ## Version 2.14.0 – 25. Januar 2023
 
-* (Beta) Zusätzliche Unterstützung für Adobe Journey Optimizer-Oberflächen und -Vorschläge.
+* (Beta) Zusätzliche Unterstützung für Adobe Journey Optimizer-Oberflächen und Vorschläge.
 
 **Fehlerbehebungen und Verbesserungen**
 
