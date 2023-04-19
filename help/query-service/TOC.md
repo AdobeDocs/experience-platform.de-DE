@@ -4,9 +4,9 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
 breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
-source-git-commit: 83d1889450ba292573a6f995120691fc57cb6cfa
-workflow-type: ht
-source-wordcount: '275'
+source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
+workflow-type: tm+mt
+source-wordcount: '270'
 ht-degree: 100%
 
 ---
@@ -31,7 +31,6 @@ ht-degree: 100%
       - [Erstellen von dezilbasierten abgeleiteten Attributen](data-distiller/derived-attributes/decile-based-derived-attributes.md)
 - Anwendungsfälle {#use-cases}
    - [Abgebrochenes Durchsuchen](use-cases/abandoned-browse.md)
-   - [Aktivitätsanalyse mit Adobe Target](use-cases/activity-analysis-with-adobe-target.md)
    - [Attributionsanalyse](use-cases/attribution-analysis.md)
    - [Bot-Filterung](use-cases/bot-filtering.md)
    - [Erstellen eines Trendberichts mit Ereignissen](use-cases/trended-report-of-events.md)
