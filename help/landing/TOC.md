@@ -4,9 +4,9 @@ user-guide-title: Überblick über Adobe Experience Platform
 breadcrumb-title: Übersicht zu Experience Platform
 user-guide-description: Erfahren Sie, wie Sie Ihren Kunden mithilfe von Experience Platform in Echtzeit personalisierte Erlebnisse liefern können.
 source-git-commit: bc781aadb620ad4b383d441d36e39626b0875901
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '258'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 91%
 * [Ein auf Platform basierendes Kundenerlebnis (Video)](video/customer-experience.md)
 * [Hinter den Kulissen eines auf Platform basierenden Kundenerlebnisses (Video)](video/customer-experience-bts.md)
 * Erste Schritte {#getting-started}
-   * [Beispiel-Workflow von Ende zu Ende](end-to-end-tutorial.md)
+   * [Beispiel für einen End-to-End-Workflow](end-to-end-tutorial.md)
    * [Schlüsselfunktionen (Video)](video/key-capabilities.md)
    * [Häufige Anwendungsfälle (Video)](video/platform-use-cases.md)
    * [Architektur von Platform (Video)](video/platform-architecture.md)
@@ -41,7 +41,7 @@ ht-degree: 91%
    * [Sprachunterstützung](documentation/language-support.md)
 * Auf Platform aufbauende Anwendungs-Services {#ecosystem}
    * [Übersicht](application-services.md)
-   * [Adobe Real-time Customer Data Platform (alle Editionen)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=de)
+   * [Adobe Real-Time Customer Data Platform (alle Editionen)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=de)
    * [Programme und Intelligent Services (Video)](video/application-intelligent-services.md)
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=de)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=de)
@@ -59,14 +59,14 @@ ht-degree: 91%
       * [Integrieren des Platform Web SDK zur Verarbeitung von Einverständnis- und Voreinstellungsdaten](./governance-privacy-security/consent/sdk.md)
    * Audit-Protokolle {#audit-logs}
       * [Übersicht](./governance-privacy-security/audit-logs/overview.md)
-      * Audit Query API {#audit-api}
+      * Audit-Abfrage-API {#audit-api}
          * [Übersicht](./governance-privacy-security/audit-logs/api/overview.md)
          * [Erste Schritte](./governance-privacy-security/audit-logs/api/getting-started.md)
          * [Ereignisse](./governance-privacy-security/audit-logs/api/events.md)
          * [Exportieren](./governance-privacy-security/audit-logs/api/export.md)
    * [Datenverschlüsselung](./governance-privacy-security/encryption.md)
    * [Kundenverwaltete Schlüssel](./governance-privacy-security/customer-managed-keys.md)
-* Lizenzverwendung und Limits {#license}
+* Lizenznutzung und Leitlinien {#license}
    * [Best Practices für die Verwaltung von Daten im Rahmen von Lizenzberechtigungen](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Dashboard zur Lizenzverwendung](./license-usage-and-guardrails/license-usage-dashboard.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting.md)
