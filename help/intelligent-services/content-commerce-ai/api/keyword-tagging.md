@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Keyword-Tagging in der Inhalts-Tagging-API
 description: Der Keyword-Tagging-Dienst extrahiert bei der Bereitstellung eines Textdokuments automatisch Suchbegriffe oder Suchbegriffe, die den Betreff des Dokuments am besten beschreiben. Um Suchbegriffe zu extrahieren, wird eine Kombination aus benannten Algorithmen zur Identifikation von Unternehmen (NER) und unbeaufsichtigten Keyword-Tagging-Algorithmen verwendet.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
+source-git-commit: 7c8c1d69f4c4e0a1374603d541b634ac7f64ab38
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '447'
 ht-degree: 6%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 6%
 
 Wenn ein Textdokument angegeben wird, extrahiert der Keyword-Tagging-Dienst automatisch Suchbegriffe oder Schlüsselbegriffe, die den Betreff des Dokuments am besten beschreiben. Um Suchbegriffe zu extrahieren, wird eine Kombination aus benannten Algorithmen zur Identifikation von Unternehmen (NER) und unbeaufsichtigten Keyword-Tagging-Algorithmen verwendet.
 
-In der folgenden Tabelle sind die benannten Entitäten aufgeführt, die [!DNL Content Tagging] hat identifiziert:
+In der folgenden Tabelle sind die benannten Entitäten aufgeführt, die [!DNL Content Tagging] kann identifizieren:
 
 | Entitätsname | Beschreibung |
 | --- | --- |
@@ -86,15 +86,18 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@simple-text.pdf'
 ```
 
+**Eingabeparameter**
+
 | Eigenschaft | Beschreibung | Obligatorisch |
 | --- | --- | --- |
-| `application-id` | Die ID der erstellten Anwendung. | Ja |
 | `top_n` | Anzahl der zurückzugebenden Ergebnisse. 0, um alle Ergebnisse zurückzugeben. Bei Verwendung in Verbindung mit einem Schwellenwert liegt die Anzahl der zurückgegebenen Ergebnisse unter beiden Beschränkungen. | Nein |
 | `min_relevance` | Punktschwellenwert, unterhalb dessen Ergebnisse zurückgegeben werden müssen. Schließen Sie den Parameter aus, um alle Ergebnisse zurückzugeben. | Nein |
 | `min_key_phrase_length` | Mindestanzahl von Wörtern, die in Schlüsselwörtern erforderlich sind. | Nein |
 | `max_key_phrase_length` | Maximale Anzahl an Wörtern, die in Schlüsselwörtern erforderlich sind. | Nein |
 | `last_semantic_unit_type` | Gibt in der hierarchischen Antwort nur semantische Einheiten bis zur angegebenen Ebene zurück. &quot;key_phrase&quot;gibt nur Schlüsselbegriffe zurück, &quot;linked_entity&quot;gibt nur Schlüsselbegriffe und die zugehörigen verknüpften Entitäten zurück und &quot;concept&quot;gibt Schlüsselbegriffe, verknüpfte Entitäten und Konzepte zurück. | Nein |
 | `entity_types` | Typen von Entitäten, die als Schlüsselbegriffe zurückgegeben werden sollen. | Nein |
+
+**Dokumentobjekt**
 
 | Name | Datentyp | Erforderlich | Standard | Werte | Beschreibung |
 | -----| --------- | -------- | ------- | ------ | ----------- |

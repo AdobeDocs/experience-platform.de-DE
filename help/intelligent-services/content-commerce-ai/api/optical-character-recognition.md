@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Textpräsenz und optische Zeichenerkennung
 description: In der Content Tagging API kann der Dienst für die Texterkennung (OCR) angeben, ob in einem Bild Text vorhanden ist. Wenn Text vorhanden ist, kann OCR den Text zurückgeben.
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: 82722ddf7ff543361177b555fffea730a7879886
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 4%
@@ -110,7 +110,7 @@ Eine erfolgreiche Antwort gibt den Text zurück, der in der `tags` Liste für je
       "tags": [
         {
           "text": "yosemite",
-          "relevance": 0.05604639115920341
+          "relevance": 0.06
         }
       ],
       "request_element_id": 0
