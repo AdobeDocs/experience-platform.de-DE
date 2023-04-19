@@ -6,9 +6,9 @@ user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeige
 feature: Tags
 solution: Data Collection
 source-git-commit: 95a56982d38bd1e2c72dd84e2fa48b9de659741f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '970'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
