@@ -5,10 +5,10 @@ title: Allgemeine Anleitung für die Ausführung von Abfragen in Query Service
 type: Tutorial
 description: In diesem Dokument werden wichtige Informationen zum Schreiben von Abfragen in Adobe Experience Platform Query Service beschrieben.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
 workflow-type: tm+mt
-source-wordcount: '1072'
-ht-degree: 3%
+source-wordcount: '1067'
+ht-degree: 4%
 
 ---
 
@@ -324,8 +324,7 @@ Durch Lesen dieses Dokuments haben Sie einige wichtige Aspekte beim Schreiben vo
 Weitere Beispiele für Abfragen, die in Query Service verwendet werden können, finden Sie in der folgenden Anwendungsfalldokumentation:
 
 - [Analytics-Einblicke](../use-cases/analytics-insights.md)
-- [Aktivitätsanalyse mit Adobe Target](../use-cases/activity-analysis-with-adobe-target.md)
 - [Erstellen eines Trendberichts mit Ereignissen](../use-cases/trended-report-of-events.md)
 - [Anzeigen eines Rollup-Berichts eines Besuchers](../use-cases/roll-up-report-of-a-visitor.md)
-- [Auflisten der Seitenansichten eines Benutzers](../use-cases/list-visitor-sessions.md)
+- [Auflisten der Seitenansichten von Benutzenden](../use-cases/list-visitor-sessions.md)
 - [Besucher nach Anzahl der Seitenansichten auflisten](../use-cases/visitors-by-number-of-page-views.md)
