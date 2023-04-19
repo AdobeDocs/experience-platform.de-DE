@@ -5,9 +5,9 @@ breadcrumb-title: Anleitung zur Datenaufnahme
 user-guide-description: Implementieren Sie Ihre Daten in Experience Platform durch die Batch- oder Streaming-Aufnahme.
 feature: Data Ingestion
 source-git-commit: 6110bf51cbd0005428e7dab4552944c5c9b54d03
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '156'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
@@ -28,8 +28,8 @@ ht-degree: 78%
 - Tutorials {#tutorials}
    - Zuordnen einer CSV-Datei zu XDM {#map-csv}
       - [Übersicht](./tutorials/map-csv/overview.md)
-      - [CSV-Datei einem vorhandenen Schema zuordnen](./tutorials/map-csv/existing-schema.md)
-      - [Zuordnen einer CSV-Datei mit KI-generierten Empfehlungen](./tutorials/map-csv/recommendations.md)
+      - [Zuordnen einer CSV-Datei zu einem vorhandenen Schema](./tutorials/map-csv/existing-schema.md)
+      - [Zuordnen einer CSV-Datei unter Verwendung von KI-generierten Empfehlungen](./tutorials/map-csv/recommendations.md)
    - [Aufnahmen von Batch-Daten über die Benutzeroberfläche](tutorials/ingest-batch-data.md)
    - [Erstellen einer authentifizierten Streaming-Verbindung](tutorials/create-authenticated-streaming-connection.md)
    - [Aufbauen einer Streaming-Verbindung (API)](tutorials/create-streaming-connection.md)
@@ -46,6 +46,6 @@ ht-degree: 78%
    - [Benachrichtigungen zur Datenerfassung](quality/subscribe-events.md)
 - [Schutzmaßnahmen bei der Datenaufnahme](guardrails.md)
 - [Quell-Connectoren](source-connectors.md)
-- [Referenz zur Batch Ingestion-API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
+- [Referenz zur Batch-Aufnahme-API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 - [Referenz zur Streaming-Aufnahme-API](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
 - [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
