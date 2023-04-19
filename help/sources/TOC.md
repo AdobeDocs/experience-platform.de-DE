@@ -5,9 +5,9 @@ breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
 source-git-commit: 10edb5dfd9ce99b69cf5bb014f4903942c9bff3e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '963'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -354,7 +354,7 @@ ht-degree: 97%
       - [Dokumentation einer Streaming-Vorlage für eine Selbstbedienungs-Benutzeroberfläche](sources-sdk/streaming/streaming-template-ui.md)
 - Fehlermeldungen {#errors}
    - [Fehlermeldungen in Quellen](./errors/sources-errors.md)
-   - [Fehlermeldungen im Flussdienst](./errors/flow-service-errors.md)
+   - [Fehlermeldungen in Flow Service](./errors/flow-service-errors.md)
 - [Flusslaufbenachrichtigungen](notifications.md)
 - [IP-Adressen-Zulassungsliste](ip-address-allow-list.md)
 - [Häufig gestellte Fragen](./troubleshooting.md)
