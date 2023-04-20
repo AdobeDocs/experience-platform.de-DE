@@ -3,10 +3,10 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager-Verbindung
 description: Google Ad Manager, früher als DoubleClick für Herausgeber oder DoubleClick AdX bekannt, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: ec4d064f90348f9eafb1d0fe4b9df5e102295507
+source-git-commit: ea480854c6058d84615b66a7df2d7c8fbd619bab
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 87%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -39,7 +39,7 @@ Beachten Sie folgende Details, die speziell für [!DNL Google Ad Manager]-Ziele 
 | MAID | Microsoft Advertising-ID. Diese ID identifiziert Geräte, auf denen Windows 10 ausgeführt wird, eindeutig. |  |
 | Amazon Fire TV ID | Diese ID identifiziert Amazon Fire TVs eindeutig. |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
@@ -50,7 +50,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 | Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) in das Google-Ziel. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Voraussetzungen {#prerequisites}
 
@@ -73,6 +73,11 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tut
 
 ### Verbindungsparameter {#parameters}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_gam_appendSegmentID"
+>title="Segment-ID an Segmentname anhängen"
+>abstract="Wählen Sie diese Option, damit der Segmentname in Google Ad Manager die Segment-ID aus Experience Platform wie folgt enthält: `Segment Name (Segment ID)`"
+
 Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
 * **[!UICONTROL Name]**: Geben Sie den gewünschten Namen für das Ziel ein.
@@ -82,6 +87,11 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
    * Verwenden von `DFP by Google` für [!DNL DoubleClick] for Publishers
    * Verwenden von `AdX buyer` für [!DNL Google AdX]
 
+<!--
+
+*  **[!UICONTROL Append segment ID to segment name]**: Select this option to have the segment name in Google Ad Manager include the segment ID from Experience Platform, like this: `Segment Name (Segment ID)`
+
+-->
 
 >[!NOTE]
 >
