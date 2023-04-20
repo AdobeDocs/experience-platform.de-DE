@@ -3,20 +3,23 @@ title: Verwenden von Adobe Target mit dem Platform Web SDK
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK mit Adobe Target rendern
 keywords: Target; adobe target; activity.id; experience.id; renderDecisions; DecisionScopes; Vorabausblenden von Snippet; VEC; Form-Based Experience Composer; xdm; Zielgruppen; Entscheidungen; Umfang; Schema; Systemdiagramm; Diagramm
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 5a048505be139b58dbb3bf85120df5e3cc46881e
 workflow-type: tm+mt
-source-wordcount: '1273'
-ht-degree: 6%
+source-wordcount: '1318'
+ht-degree: 7%
 
 ---
 
 # Verwenden [!DNL Adobe Target] mit dem [!DNL Platform Web SDK]
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK] kann personalisierte Erlebnisse bereitstellen und rendern, die in verwaltet werden [!DNL Adobe Target] zum Webkanal hinzu. Sie können einen WYSIWYG-Editor mit dem Namen [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC) oder einer nicht visuellen Benutzeroberfläche, der [Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), um Ihre Aktivitäten und Personalisierungserlebnisse zu erstellen, zu aktivieren und bereitzustellen.
+[!DNL Adobe Experience Platform] [!DNL Web SDK] kann personalisierte Erlebnisse bereitstellen und rendern, die in verwaltet werden [!DNL Adobe Target] zum Webkanal hinzu. Sie können einen WYSIWYG-Editor mit dem Namen [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC) oder einer nicht visuellen Benutzeroberfläche, der [Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=de), um Ihre Aktivitäten und Personalisierungserlebnisse zu erstellen, zu aktivieren und bereitzustellen.
 
 >[!IMPORTANT]
 >
->Die [Adobe Target-Dokumentation](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/aep-implementation/aep-web-sdk.html?lang=en) enthält Themen mit Informationen, die speziell für das Platform Web SDK gelten und sich auf Target-Funktionen beziehen.
+>Erfahren Sie, wie Sie Ihre Target-Implementierung mit dem [Migrieren von Target von at.js 2.x zum Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html?lang=de) Tutorial.
+>
+>Erfahren Sie, wie Sie Target zum ersten Mal mit der [Implementieren von Adobe Experience Cloud mit dem Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=de) Tutorial. Spezifische Informationen zu Target finden Sie im Tutorial-Abschnitt mit dem Titel [Target mit dem Platform Web SDK einrichten](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
+
 
 Die folgenden Funktionen wurden getestet und werden derzeit in [!DNL Target]:
 
@@ -168,9 +171,9 @@ Die [!DNL Platform Web SDK] ermöglicht die Aktualisierung des Profils auf [!DNL
 
 So aktualisieren Sie eine [!DNL Target] Profil erstellen, müssen Sie sicherstellen, dass die Profildaten mit Folgendem übergeben werden:
 
-* Unter `“data {“`
-* Unter `“__adobe.target”`
-* Präfix `“profile.”` z. B. wie folgt
+* Unter `"data {"`
+* Unter `"__adobe.target"`
+* Präfix `"profile."` z. B. wie folgt
 
 | Schlüssel | Typ | Beschreibung |
 | --- | --- | --- |
