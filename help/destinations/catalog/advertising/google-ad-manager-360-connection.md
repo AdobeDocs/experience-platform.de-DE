@@ -2,10 +2,10 @@
 title: (Beta)  [!DNL Google Ad Manager 360] -Verbindung
 description: Google Ad Manager 360 ist eine Adserving-Plattform von Google, die Publishern die Möglichkeit gibt, das Anzeigen von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: ea480854c6058d84615b66a7df2d7c8fbd619bab
 workflow-type: tm+mt
-source-wordcount: '920'
-ht-degree: 85%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -83,6 +83,11 @@ Weitere Informationen zu diesen Werten finden Sie im Handbuch [HMAC-Schlüssel f
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_gam360_appendSegmentID"
+>title="Segment-ID an Segmentname anhängen"
+>abstract="Wählen Sie diese Option aus, damit der Segmentname in Google Ad Manager 360 die Segment-ID aus Experience Platform wie folgt enthält: `Segment Name (Segment ID)`"
+
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
 * **[!UICONTROL Name]**: Geben Sie einen bevorzugten Namen für das Ziel ein.
@@ -93,6 +98,12 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 * **[!UICONTROL Kontotyp]**: Wählen Sie je nach [!DNL Google] Konto:
    * Verwenden von `AdX buyer` für [!DNL Google AdX]
    * Verwenden von `DFP by Google` für [!DNL DoubleClick] for Publishers
+
+<!--
+
+*  **[!UICONTROL Append segment ID to segment name]**: Select this option to have the segment name in Google Ad Manager 360 include the segment ID from Experience Platform, like this: `Segment Name (Segment ID)`
+
+-->
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
