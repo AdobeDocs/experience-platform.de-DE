@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Analytics-Quell-Connector;Analytics-Connector;Analytics-Quelle;Analytics;Filtern;Filtern nach Profil;Echtzeit-Kundenprofil;Filter;Profildaten filtern;Filterung auf Zeilenebene;Filterung auf Spaltenebene
 title: Erstellen einer Adobe Analytics-Quellverbindung über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie eine Quellverbindung für Adobe Analytics über die Benutzeroberfläche erstellen, um Kundendaten in Adobe Experience Platform zu importieren.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 23a99a46cfd6e42dd0f4815bb972dbe46104b60f
+source-git-commit: 3b86c071c4b5dc151bf83ad0042c10ac7a5648db
 workflow-type: tm+mt
-source-wordcount: '2380'
+source-wordcount: '2352'
 ht-degree: 64%
 
 ---
