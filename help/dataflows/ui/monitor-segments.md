@@ -7,7 +7,7 @@ exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1919'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -34,7 +34,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
 >title="Segmente"
->abstract="Die Segmentansicht enthält Informationen zu allen Segmenten Ihres Unternehmens sowie weitere Informationen zu deren Aktivierungs- und Auswertungsaufträgen."
+>abstract="Die Segmentansicht enthält Informationen zu allen Segmenten Ihrer Organisation sowie zu ihren Aktivierungs- und Evaluierungsvorgängen."
 
 So greifen Sie auf die **[!UICONTROL Segmente]** Dashboard, auswählen **[!UICONTROL Überwachung]** in der linken Navigation. Einmal im **[!UICONTROL Überwachung]** Seite, wählen Sie die **[!UICONTROL Segmente]** Karte.
 

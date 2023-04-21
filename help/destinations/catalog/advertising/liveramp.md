@@ -3,13 +3,13 @@ title: (Alpha) [!DNL LiveRamp SFTP] connection
 description: Erfahren Sie, wie Sie mit dem LiveRamp-Connector Zielgruppen von Adobe Real-time Customer Data Platform nach LiveRamp Connect integrieren können.
 hidefromtoc: true
 hide: true
-source-git-commit: 367ef59f623acc38e636a6cae0c85f186eaccfda
+exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
+source-git-commit: d7625018b7b36d8e9516f7884fc00b726d391103
 workflow-type: tm+mt
 source-wordcount: '1738'
-ht-degree: 19%
+ht-degree: 23%
 
 ---
-
 
 # (Alpha) [!DNL LiveRamp - SFTP] connection {#liveramp-destination}
 
@@ -45,7 +45,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer oder andere), die im [!DNL LiveRamp SFTP] Ziel. |
+| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer oder sonstiges), die im [!DNL LiveRamp SFTP]-Ziel verwendet werden. |
 | Exporthäufigkeit | **[!UICONTROL Täglicher Batch]** | Da Profile in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert werden, werden die Profile (Identitäten) einmal täglich nachgelagert zur Zielplattform aktualisiert. Weitere Informationen finden Sie unter [Batch-Datei-basierte Ziele](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -90,8 +90,8 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_subkey"
 >title="Verschlüsselungs-Unterschlüssel-ID"
->abstract="Die für die Verschlüsselung verwendete Subkey-ID, die auf dem öffentlichen LiveRamp-Verschlüsselungsschlüssel basiert. Dieses Feld ist erforderlich, wenn Sie im Authentifizierungsschritt einen Verschlüsselungsschlüssel bereitgestellt haben."
->additional-url="https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key" text="Erfahren Sie, wie Sie die subkey-ID abrufen."
+>abstract="Die für die Verschlüsselung verwendete Unterschlüssel-ID, die auf dem öffentlichen LiveRamp-Verschlüsselungsschlüssel basiert. Dieses Feld ist erforderlich, wenn Sie im Authentifizierungsschritt einen Verschlüsselungsschlüssel bereitgestellt haben."
+>additional-url="https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key" text="Erfahren Sie, wie Sie die Unterschlüssel-ID erhalten"
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
@@ -173,7 +173,7 @@ Im **[!UICONTROL Zuordnung]** Schritt, die **[!UICONTROL Zielfeld]** -Zuordnung 
 
 Nachdem Sie alle gewünschten Zuordnungen hinzugefügt haben, wählen Sie **[!UICONTROL Nächste]** und beenden Sie den Aktivierungs-Workflow.
 
-## Export von Daten/Export validieren {#exported-data}
+## Exportierte Daten/Datenexport validieren {#exported-data}
 
 Ihre Daten werden in die [!DNL LiveRamp SFTP] Speicherort, den Sie konfiguriert haben, als CSV-Dateien.
 
