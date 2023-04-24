@@ -1,16 +1,16 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Zugriffskontrolle; attributbasierte Zugriffskontrolle; ABAC
+keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;attributbasierte Zugriffssteuerung;ABAC
 title: Attributbasierte Zugriffssteuerung - Benutzer verwalten
 description: Dieses Dokument enthält Informationen zum Verwalten von Benutzern und Benutzergruppen über die Benutzeroberfläche "Berechtigungen"in Adobe Experience Cloud
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: fa4786b081b46c8f3c0030282ae3900891fbd652
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 2%
+source-wordcount: '218'
+ht-degree: 6%
 
 ---
 
-# Benutzer verwalten
+# Verwalten der Benutzenden
 
 Wenn Sie Benutzerdetails und Rollen anzeigen möchten, denen sie zugewiesen sind, wählen Sie die **[!UICONTROL Benutzer]** Registerkarte.
 
@@ -25,6 +25,14 @@ Die Registerkarte &quot;Details&quot;bietet einen Überblick über den Benutzer.
 Wählen Sie die **[!UICONTROL Rollen]** um die Rollen anzuzeigen, denen der Benutzer zugewiesen ist.
 
 ![flac-users-roles](../../images/flac-ui/flac-users-roles.png)
+
+## Entwickler- und API-Zugriffskontrolle mit Experience Platform-Berechtigungen
+
+>[!NOTE]
+>
+>Nur Systemadministratoren können API-Anmeldeinformationen in den Berechtigungen anzeigen und verwalten.
+
+Der Übergang zu Adobe Experience Platform-Berechtigungen umfasst zusätzliche Schritte, die für den Entwickler-API-Workflow durchgeführt werden müssen, der zuvor auf Produktprofile angewiesen war. Siehe Handbuch unter [API-Authentifizierung](../../../landing/api-authentication.md) für weitere Informationen.
 
 ## Nächste Schritte
 
