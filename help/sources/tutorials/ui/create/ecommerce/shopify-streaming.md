@@ -1,10 +1,9 @@
 ---
 title: Erstellen einer Streaming-Verbindung mit Shopify und eines Datenflusses in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Benutzeroberfläche von Platform eine Verbindung mit der Shopify Streaming-Quelle und einen Datenfluss erstellen.
-badge: „Beta“
-hidefromtoc: y
-hide: y
-source-git-commit: 279d8e307c8ca5a799a47c6f903b9a082d9cf034
+badge: Beta
+exl-id: 3368ecf6-0c61-49ce-bc9c-29ee50b3f037
+source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 35%
@@ -95,4 +94,3 @@ Um Ihren Streaming-Endpunkt abzurufen, navigieren Sie zum [!UICONTROL Datenfluss
 ## Nächste Schritte
 
 In diesem Tutorial haben Sie eine Quellverbindung und einen Datenfluss zu Ihrem [!DNL Shopify Streaming] -Konto. Anweisungen zum Verbinden Ihrer [!DNL Shopify Streaming] -Konto mithilfe der API nutzen, lesen Sie bitte das Tutorial unter [Erstellen einer Quellverbindung und eines Datenflusses zum Streamen [!DNL Shopify] Daten mithilfe der Flow Service-API](../../../api/create/ecommerce/shopify-streaming.md).
-

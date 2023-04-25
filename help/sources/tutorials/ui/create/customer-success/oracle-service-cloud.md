@@ -3,18 +3,14 @@ keywords: Experience Platform;Startseite;Beliebte Themen;Oracle Service Cloud;or
 title: Erstellen einer Oracle Service Cloud-Quellverbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Oracle Service Cloud-Quellverbindung erstellen.
 exl-id: e5869c09-b61e-4d23-a594-5a07769da3c4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '480'
 ht-degree: 100%
 
 ---
 
-# (Beta) Erstellen einer Oracle Service Cloud-Quellverbindung in der Benutzeroberfläche
-
->[!NOTE]
->
->Die Oracle Service Cloud-Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-gekennzeichneten Quellen.
+# Erstellen einer Oracle Service Cloud-Quellverbindung in der Benutzeroberfläche
 
 In diesem Tutorial werden die Schritte zum Erstellen einer Oracle Service Cloud-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche beschrieben.
 

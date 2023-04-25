@@ -2,10 +2,10 @@
 title: Adobe Analytics Source Connector für Report Suite-Daten
 description: Dieses Dokument bietet Ihnen einen Überblick über Analytics und beschreibt die Anwendungsfälle für Analytics-Daten.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 35298fc6b3e272c1b7b14cfa17713d18427ba2ce
+source-git-commit: 83ce7d46e4e64fbe961c964ed5a17ec12a7ec15f
 workflow-type: tm+mt
-source-wordcount: '1042'
-ht-degree: 20%
+source-wordcount: '1112'
+ht-degree: 18%
 
 ---
 
@@ -54,7 +54,12 @@ Die erwartete Latenz für Analytics-Daten in Platform ist in der folgenden Tabel
 | Neue Daten an Data Lake | &lt; 90 Minuten |
 | Aufstockung von weniger als 10 Milliarden Ereignissen | &lt; 4 Wochen |
 
-Analytics-Aufstockungen sind standardmäßig auf 13 Monate eingestellt. Die in der obigen Tabelle genannte Begrenzung von 10 Mrd. Ereignissen entspricht streng der erwarteten Latenz.
+Die Analytics-Aufstockung für Produktions-Sandboxes beträgt standardmäßig 13 Monate. Für Analytics-Daten in Nicht-Produktions-Sandboxes wird die Aufstockung auf drei Monate festgelegt. Die in der obigen Tabelle genannte Begrenzung von 10 Mrd. Ereignissen entspricht streng der erwarteten Latenz.
+
+Wenn Sie einen Analytics-Quell-Datenfluss in einer Produktions-Sandbox erstellen, werden zwei Datenflüsse erstellt:
+
+* Ein Datenfluss, der eine 13-monatige Aufstockung historischer Report Suite-Daten in den Data Lake ausführt. Dieser Datenfluss endet, wenn die Aufstockung abgeschlossen ist.
+* Ein Datenfluss, der Live-Daten an den Daten-See und an [!DNL Real-Time Customer Profile]. Dieser Datenfluss wird kontinuierlich ausgeführt.
 
 >[!NOTE]
 >

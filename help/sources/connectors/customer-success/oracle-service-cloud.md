@@ -2,18 +2,15 @@
 keywords: Experience Platform;Startseite;Beliebte Themen;Oracle Service Cloud;oracle service cloud
 title: Oracle Service Cloud-Quell-Connector – Übersicht
 description: Erfahren Sie, wie Sie Oracle Service Cloud über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
-source-git-commit: 078a266967cd7b0818f958283a58a8af4c886a21
-workflow-type: ht
-source-wordcount: '269'
-ht-degree: 100%
+exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
+source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
+workflow-type: tm+mt
+source-wordcount: '249'
+ht-degree: 98%
 
 ---
 
-# (Beta) Oracle Service Cloud-Quelle
-
->[!NOTE]
->
->Die Oracle Service Cloud-Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-gekennzeichneten Quellen.
+# Oracle Service Cloud-Quelle
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 

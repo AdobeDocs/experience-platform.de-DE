@@ -2,18 +2,15 @@
 keywords: Experience Platform;Startseite;Beliebte Themen;Oracle Service Cloud;oracle service cloud
 title: Erstellen einer Oracle Service Cloud-Quellverbindung mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Oracle Service Cloud verbinden.
-source-git-commit: 078a266967cd7b0818f958283a58a8af4c886a21
-workflow-type: ht
-source-wordcount: '547'
+exl-id: 00c0bc9c-a740-4bab-a882-2cfed8abe758
+source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
+workflow-type: tm+mt
+source-wordcount: '527'
 ht-degree: 100%
 
 ---
 
-# (Beta) Erstellen einer Oracle Service Cloud-Quellverbindung mit der [!DNL Flow Service]-API
-
->[!NOTE]
->
->Die Oracle Service Cloud-Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-gekennzeichneten Quellen.
+# Erstellen einer Oracle Service Cloud-Quellverbindung mit der [!DNL Flow Service]-API
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 

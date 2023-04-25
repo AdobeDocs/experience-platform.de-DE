@@ -2,7 +2,8 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Flussdienst; Flow Service-API; Quellen; Quellen
 title: Filtern von Daten auf Zeilenebene für eine Quelle mithilfe der Flow Service-API
 description: In diesem Tutorial werden die Schritte zum Filtern von Daten auf Quellebene mithilfe der Flow Service-API beschrieben.
-source-git-commit: 122f6bda2fbcf72bf098b972ff7b081f4c5e3388
+exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
+source-git-commit: da6f5a79b1ee16fb0d44a5c2990ed1b8be1f99e2
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 17%
@@ -13,7 +14,14 @@ ht-degree: 17%
 
 >[!IMPORTANT]
 >
->Unterstützung für das Filtern von Daten auf Zeilenebene für eine Quelle ist derzeit nur für die [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md) und [[!DNL Snowflake]](../../connectors/databases/snowflake.md) Quellen.
+>Die Unterstützung für das Filtern von Daten auf Zeilenebene ist derzeit nur für die folgenden Quellen verfügbar:
+>
+>* [Google BigQuery](../../connectors/databases/bigquery.md)
+>* [Microsoft Dynamics](../../connectors/crm/ms-dynamics.md)
+>* [Salesforce](../../connectors/crm/salesforce.md)
+>* [Salesforce Marketing Cloud](../../connectors/marketing-automation/salesforce-marketing-cloud.md)
+>* [Snowflake](../../connectors/databases/snowflake.md)
+
 
 Dieses Tutorial enthält Schritte zum Filtern von Daten auf Zeilenebene für eine Quelle mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -103,7 +111,7 @@ Eine erfolgreiche Antwort gibt die Verbindungsspezifikationen für [!DNL Google 
 | `attributes.filterAtSource.columnNameEscapeChar` | Legt das Zeichen fest, das als Escape-Zeichen für Spalten verwendet werden soll. |
 | `attributes.filterAtSource.valueEscapeChar` | Bestimmt, wie Werte beim Schreiben einer SQL-Abfrage eingebunden werden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### Vergleichsoperatoren 
 
@@ -118,7 +126,7 @@ Eine erfolgreiche Antwort gibt die Verbindungsspezifikationen für [!DNL Google 
 | `like` | Filter durch Verwendung in einer `WHERE` -Klausel, um nach einem angegebenen Muster zu suchen. |
 | `in` | Filtert nach, ob sich die Eigenschaft innerhalb eines angegebenen Bereichs befindet. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Filterbedingungen für die Aufnahme festlegen
 
