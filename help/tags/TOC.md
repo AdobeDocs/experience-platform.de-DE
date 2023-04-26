@@ -5,10 +5,10 @@ breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Tags
 solution: Data Collection
-source-git-commit: 95a56982d38bd1e2c72dd84e2fa48b9de659741f
-workflow-type: ht
-source-wordcount: '970'
-ht-degree: 100%
+source-git-commit: 9d9e02c2a4f628ebe04aaa63942e830f3354729f
+workflow-type: tm+mt
+source-wordcount: '983'
+ht-degree: 98%
 
 ---
 
@@ -82,6 +82,7 @@ ht-degree: 100%
          * [Übersicht](./extensions/client/product-string/overview.md)
          * [Versionshinweise](./extensions/client/product-string/release-notes.md)
       * [Adobe Analytics Produktzeichenfolgen-Builder](https://exchange.adobe.com/apps/ec/101461)
+      * [Adobe Analytics über das Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
       * Adobe Audience Manager {#audience-manager}
          * [Übersicht](./extensions/client/audience-manager/overview.md)
       * Adobe Client-Datenschicht {#client-data-layer}
