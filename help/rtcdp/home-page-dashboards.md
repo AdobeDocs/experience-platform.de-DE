@@ -2,20 +2,15 @@
 keywords: Metriken - Übersicht; Übersicht über rtcdp-Metriken
 title: Real-time Customer Data Platform-Homepage und Dashboards
 description: Dashboards, Startseite und erstmalige Nutzung von Adobe Experience Platform
-badge: "Beta"
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: cc6d962e1c4a9afe1b608dfa06e9812b33dc7e6d
+source-git-commit: 8ea657e379248616d3140bc0a7b0c25a918bc857
 workflow-type: tm+mt
-source-wordcount: '817'
+source-wordcount: '802'
 ht-degree: 17%
 
 ---
 
 # [!DNL Real-Time Customer Data Platform] Startseite
-
->[!NOTE]
->
->Die [!DNL Real-Time Customer Data Platform] Die Homepage befindet sich in der Beta-Phase. Die Funktionen und Dokumentation können sich ändern.
 
 Die Startseite von Adobe Real-time Customer Data Platform (Real-Time CDP) ist die erste Seite, die nach der Anmeldung bei Real-Time CDP angezeigt wird.
 
