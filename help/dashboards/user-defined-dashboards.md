@@ -2,10 +2,10 @@
 title: Benutzerdefinierte Dashboards
 description: Erfahren Sie, wie Sie benutzerdefinierte Dashboards erstellen und verwalten, in denen Sie maßgeschneiderte Widgets erstellen, hinzufügen und bearbeiten können, um wichtige Metriken zu visualisieren.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: a0be2f8625ca60f9c8f355c1230a889002436d6d
+source-git-commit: 8507ecceca47fac3d321b89e4fed018ee9784777
 workflow-type: tm+mt
-source-wordcount: '1307'
-ht-degree: 5%
+source-wordcount: '1608'
+ht-degree: 4%
 
 ---
 
@@ -112,6 +112,20 @@ Durch Hinzufügen eines Attributs als Filter können Sie auswählen, welche Wert
 
 ![Das Dialogfeld &quot;Filter&quot;, um Werte aus Ihrem Widget zu filtern.](./images/user-defined-dashboards/filter-dialog.png)
 
+#### Filtern von historischen Daten {#filter-historical-data}
+
+Um historische Daten aus den von Ihrem Widget generierten Einblicken herauszufiltern, fügen Sie die `date_key` Attribut als Filter auswählen und **[!UICONTROL Letztes Datum]** gefolgt von **[!UICONTROL Anwenden]**. Dieser Filter stellt sicher, dass die Daten, die zum Ableiten von Einblicken verwendet werden, aus dem neuesten Systemabbild übernommen werden.
+
+![Die [!UICONTROL Filter: date_key] Dialogfeld mit [!UICONTROL Letztes Datum] und [!UICONTROL Anwenden] hervorgehoben.](./images/user-defined-dashboards/recent-date.png)
+
+Alternativ können Sie einen benutzerdefinierten Zeitraum erstellen, nach dem Ihre Daten gefiltert werden sollen. Auswählen **[!UICONTROL Datumsangaben auswählen]** , um das Dialogfeld mit einer Liste der verfügbaren Daten zu erweitern. Verwenden Sie die **[!UICONTROL Alle auswählen]** aktivieren, um alle verfügbaren Optionen zu aktivieren bzw. zu deaktivieren, oder aktivieren Sie das Kontrollkästchen für jeden Tag einzeln. Wählen Sie abschließend **[!UICONTROL Anwenden]** um Ihre Auswahl zu bestätigen.
+
+>[!NOTE]
+>
+>Wenn die Variable `date_key` -Attribut bereits als Filter hinzugefügt wurde, wählen Sie die Auslassungspunkte gefolgt von **[!UICONTROL Bearbeiten]** aus den Dropdown-Optionen, um den Filterzeitraum zu ändern.
+
+![Die [!UICONTROL Filter: date_key] mit einzelnen Tag-Checkboxes sowohl aktiviert als auch deaktiviert.](./images/user-defined-dashboards/select-dates.png)
+
 ### Widget-Eigenschaften
 
 Wählen Sie das Eigenschaftensymbol (![Das Symbol &quot;Eigenschaften&quot;.](./images/user-defined-dashboards/properties-icon.png)) in der rechten Leiste, um den Eigenschaftenbereich zu öffnen. Im [!UICONTROL Eigenschaften] -Bedienfeld ein, geben Sie einen Namen für das Widget im [!UICONTROL Widget title] Textfeld.
@@ -135,6 +149,22 @@ Widgets können in diesem Arbeitsbereich neu angeordnet und in der Größe angep
 ![Das benutzerdefinierte Dashboard mit einem benutzerdefinierten Widget und die Schaltfläche zum Speichern hervorgehoben.](./images/user-defined-dashboards/user-defined-dashboard.png)
 
 Um sicherzustellen, dass jede Abfrage für ein Adobe Real-time Customer Data Platform Insights-Dashboard über genügend Ressourcen verfügt, um effizient auszuführen, verfolgt die API die Ressourcennutzung, indem sie jeder Abfrage Gleichzeitigkeitsfenster zuweist. Das System kann bis zu vier gleichzeitige Abfragen verarbeiten. Daher stehen vier gleichzeitige Abfrageplätze jederzeit zur Verfügung. Abfragen werden basierend auf gleichzeitigen Slots in eine Warteschlange gestellt und dann in der Warteschlange gewartet, bis genügend gleichzeitige Slots verfügbar sind.
+
+### Widget duplizieren
+
+Nachdem Sie ein Widget erstellt haben, können Sie das gesamte Widget duplizieren und seine Attribute anpassen, um ein eindeutiges Widget zu erstellen, ohne von Grund auf neu beginnen zu müssen. Um ein Widget zu duplizieren, navigieren Sie zunächst zum Dashboard-Inventar. Wählen Sie dann den Dashboard-Namen aus der Inventarliste aus. Ihr angepasstes Dashboard wird angezeigt.
+
+![Die Platform-Benutzeroberfläche mit Dashboards und einem benutzerdefinierten Dashboard-Namen wird hervorgehoben.](./images/user-defined-dashboards/dashbaord-inventory.png)
+
+Wählen Sie das Stiftsymbol (![Ein Bleistiftsymbol.](./images/user-defined-dashboards/edit-icon.png)) oben rechts im Dashboard, um in den Bearbeitungsmodus zu wechseln.
+
+![Ein benutzerdefiniertes Dashboard mit hervorgehobenem Stiftsymbol.](./images/user-defined-dashboards/edit-mode.png)
+
+Wählen Sie dann die Auslassungspunkte oben rechts im Widget aus, das Sie kopieren möchten, gefolgt von **[!UICONTROL Duplizieren]** aus der Liste der verfügbaren Optionen.
+
+![Ein Widget in einem benutzerdefinierten Dashboard mit markierten Ellipsen und dupliziertem Widget.](./images/user-defined-dashboards/duplicate.png)
+
+Ein dupliziertes Widget wird in Ihrem benutzerdefinierten Dashboard angezeigt. Wählen Sie die Auslassungszeichen Ihres neuen Widgets aus, gefolgt von **[!UICONTROL Bearbeiten]**, um Ihr neues Widget anzupassen.
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
