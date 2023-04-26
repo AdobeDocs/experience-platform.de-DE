@@ -4,9 +4,9 @@ title: Exportieren von XDM-Schemas in die Benutzeroberfläche
 description: Erfahren Sie, wie Sie ein vorhandenes Schema in eine andere Sandbox oder Organisation in der Benutzeroberfläche von Adobe Experience Platform exportieren.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -25,17 +25,17 @@ Um diesem Bedarf zu begegnen, muss die [!UICONTROL Schemas] Mit Workspace in der
 
 Die Platform-Benutzeroberfläche ermöglicht den Export von XDM-Ressourcen. Sie müssen jedoch die Schema Registry-API verwenden, um diese Ressourcen in andere Sandboxes oder Organisationen zu importieren und den Workflow abzuschließen. Weitere Informationen finden Sie im Handbuch [Erste Schritte mit der Schema Registry-API](../api/getting-started.md) wichtige Informationen zu erforderlichen Authentifizierungskopfzeilen erhalten, bevor Sie diesem Handbuch folgen.
 
-## Exportnutzlast generieren
+## Exportnutzlast generieren {#generate-export-payload}
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Schemas]** in der linken Navigation. Innerhalb der [!UICONTROL Schemas] Suchen Sie im Arbeitsbereich das Schema, das Sie exportieren möchten, und öffnen Sie es im [!DNL Schema Editor].
+Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Schemas]** in der linken Navigation. Innerhalb der [!UICONTROL Schemas] Arbeitsbereich wählen Sie die Zeile für das Schema aus, das Sie exportieren möchten, um Schemadetails in der rechten Seitenleiste anzuzeigen.
 
 >[!TIP]
 >
 >Siehe Handbuch unter [Erkunden von XDM-Ressourcen](./explore.md) für Details zum Auffinden der gesuchten XDM-Ressource.
 
-Nachdem Sie das Schema geöffnet haben, wählen Sie die **[!UICONTROL JSON kopieren]** Symbol (![Kopiersymbol](../images/ui/export/icon.png)) oben rechts auf der Arbeitsfläche.
+Wählen Sie als Nächstes die **[!UICONTROL JSON kopieren]** Symbol (![Kopiersymbol](../images/ui/export/icon.png)) aus den verfügbaren Optionen.
 
-![](../images/ui/export/copy-json.png)
+![Der Arbeitsbereich &quot;Schemas&quot;mit einer Schemazeile und [!UICONTROL Kopieren in JSON] hervorgehoben.](../images/ui/export/copy-json.png)
 
 Dadurch wird eine JSON-Payload in die Zwischenablage kopiert, die basierend auf der Schemastruktur generiert wurde. Für &quot;[!DNL Loyalty Members]&quot; Schema oben gezeigt, wird die folgende JSON generiert:
 

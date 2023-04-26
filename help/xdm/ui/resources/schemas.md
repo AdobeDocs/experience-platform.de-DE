@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen und Bearbeiten von Schemata in der Benutzeroberfläche
 description: Lernen Sie die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Benutzeroberfläche von Experience Platform kennen.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
+source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
 workflow-type: tm+mt
-source-wordcount: '3203'
+source-wordcount: '3340'
 ht-degree: 3%
 
 ---
@@ -57,6 +57,18 @@ Um ein vorhandenes Schema zu bearbeiten, wählen Sie die **[!UICONTROL Durchsuch
 
 Sobald Sie ein Schema auswählen, wird die [!DNL Schema Editor] angezeigt, wobei die Struktur des Schemas auf der Arbeitsfläche angezeigt wird. Sie können jetzt [Feldergruppen hinzufügen](#add-field-groups) zum Schema (oder [Hinzufügen einzelner Felder](#add-individual-fields) aus diesen Gruppen), [Anzeigenamen von Feldern bearbeiten](#display-names)oder [Bearbeiten vorhandener benutzerdefinierter Feldergruppen](./field-groups.md#edit) , wenn das Schema eine verwendet.
 
+## Umschalter für Anzeigename {#display-name-toggle}
+
+Der Schema Editor bietet einen Umschalter zum Ändern zwischen den ursprünglichen Feldnamen und den für Menschen lesbareren Anzeigenamen. Diese Flexibilität ermöglicht eine verbesserte Erkennung und Bearbeitung von Feldern Ihrer Schemata. Der Umschalter befindet sich oben rechts in der Ansicht &quot;Schema Editor&quot;.
+
+>[!NOTE]
+>
+>Die Änderung von Feldnamen zu Anzeigenamen ist rein kosmetischer Natur und ändert keine nachgelagerten Ressourcen.
+
+![Der Schema-Editor mit [!UICONTROL Anzeigenamen für Felder anzeigen] hervorgehoben.](../../images/ui/resources/schemas/display-name-toggle.png)
+
+Die Anzeigenamen für Standardfeldgruppen werden systemgeneriert, können jedoch angepasst werden, wie in der [Anzeigenamen](#display-names) Abschnitt. Anzeigenamen werden in mehreren Ansichten der Benutzeroberfläche angezeigt, einschließlich der Zuordnung und Datensatzvorschau. Die Standardeinstellung ist deaktiviert und zeigt die Feldnamen anhand ihrer ursprünglichen Werte an.
+
 ## Hinzufügen von Feldergruppen zu einem Schema {#add-field-groups}
 
 >[!NOTE]
@@ -65,7 +77,7 @@ Sobald Sie ein Schema auswählen, wird die [!DNL Schema Editor] angezeigt, wobei
 
 Nachdem Sie ein Schema im [!DNL Schema Editor]können Sie dem Schema mithilfe von Feldergruppen Felder hinzufügen. Wählen Sie zunächst **[!UICONTROL Hinzufügen]** neben **[!UICONTROL Feldergruppen]** in der linken Leiste.
 
-![](../../images/ui/resources/schemas/add-field-group-button.png)
+![Der Schema-Editor mit dem [!UICONTROL Hinzufügen] von [!UICONTROL Feldergruppen] hervorgehoben.](../../images/ui/resources/schemas/add-field-group-button.png)
 
 Es wird ein Dialogfeld mit einer Liste von Feldergruppen angezeigt, die Sie für das Schema auswählen können. Da Feldergruppen nur mit einer Klasse kompatibel sind, werden nur die Feldergruppen aufgelistet, die mit der ausgewählten Klasse des Schemas verknüpft sind. Standardmäßig werden die aufgelisteten Feldergruppen nach ihrer Nutzungspersönlichkeit in Ihrem Unternehmen sortiert.
 
