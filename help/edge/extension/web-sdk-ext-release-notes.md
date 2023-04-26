@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 52c6420a7fba6474dd2e9e97c9b2f49b5208be1d
+source-git-commit: ccd02ea014d514b56a8e1bd540bb2c2c4bb2eb1b
 workflow-type: tm+mt
-source-wordcount: '1620'
-ht-degree: 98%
+source-wordcount: '1654'
+ht-degree: 96%
 
 ---
 
@@ -13,6 +13,17 @@ ht-degree: 98%
 # Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zum SDK finden Sie in den [Versionshinweisen zum Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=de).
+
+## Version 2.17.0 - 25. April 2023
+
+**Neue Funktionen**
+
+* Unterstützung für Überschreibungen der Datastream-Konfiguration hinzugefügt.
+* Fügen Sie dem `datasetId` -Option auf `sendEvent` Befehl.
+
+**Fehlerbehebungen und Verbesserungen**
+
+* Es wurde ein Problem behoben, durch das beim Scrollen in Safari der Datastream-Selektor geschlossen wurde.
 
 ## Version 2.16.1 - 14. April 2023
 
