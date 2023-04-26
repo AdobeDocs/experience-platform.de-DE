@@ -2,10 +2,11 @@
 title: (API) Oracle Eloqua-Verbindung
 description: Mit dem (API) Oracle Eloqua-Ziel können Sie Ihre Kontodaten exportieren und innerhalb von Oracle Eloqua für Ihre Geschäftsanforderungen aktivieren.
 last-substantial-update: 2023-03-14T00:00:00Z
-source-git-commit: e8aa09545c95595e98b4730188bd8a528ca299a9
+exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
+source-git-commit: 3d54b89ab5f956710ad595a0e8d3567e1e773d0a
 workflow-type: tm+mt
-source-wordcount: '1642'
-ht-degree: 37%
+source-wordcount: '2125'
+ht-degree: 29%
 
 ---
 
@@ -34,14 +35,20 @@ Weitere Informationen finden Sie in der Dokumentation zur Experience Platform f�
 
 So exportieren Sie Daten von Platform in Ihre [!DNL Oracle Eloqua] -Konto, für das Sie eine [!DNL Oracle Eloqua] -Konto.
 
+Darüber hinaus benötigen Sie mindestens die Variable *&quot;Erweiterte Benutzer - Marketing-Berechtigungen&quot;* für Ihre [!DNL Oracle Eloqua] -Instanz. Siehe Abschnitt *&quot;Sicherheitsgruppen&quot;* im Abschnitt [Sicherer Benutzerzugriff](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm) Seite für Anleitungen. Der Zugriff ist für das Ziel erforderlich, um [die Basis-URL bestimmen](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html) beim Aufrufen der [!DNL Oracle Eloqua] API.
+
 #### Sammeln von [!DNL Oracle Eloqua]-Anmeldeinformationen {#gather-credentials}
 
 Beachten Sie die folgenden Elemente, bevor Sie sich bei der [!DNL Oracle Eloqua] Ziel:
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
+| `Company Name` | Der mit Ihrer [!DNL Oracle Eloqua] -Konto. <br>Sie verwenden später die `Company Name` und [!DNL Oracle Eloqua] `Username` als verkettete Zeichenfolge, die als **[!UICONTROL Benutzername]** when [beim Ziel authentifizieren](#authenticate). |
 | `Username` | Der Benutzername Ihres [!DNL Oracle Eloqua] -Konto. |
 | `Password` | Das Kennwort Ihres [!DNL Oracle Eloqua] -Konto. |
+| `Pod` | [!DNL Oracle Eloqua] unterstützt mehrere Rechenzentren mit jeweils einem eindeutigen Domänennamen. [!DNL Oracle Eloqua] bezeichnet diese als &quot;Pods&quot;, es gibt derzeit insgesamt sieben - p01, p02, p03, p04, p06, p07 und p08. Um zu erfahren, welchen POD Sie verwenden, melden Sie sich bei an. [!DNL Oracle Eloqua] und beachten Sie die URL in Ihrem Browser, nachdem Sie sich erfolgreich angemeldet haben. Wenn Ihre Browser-URL beispielsweise `secure.p01.eloqua.com` Ihre `pod` is `p01`. Siehe Abschnitt [Bestimmen Ihres POD](https://community.oracle.com/topliners/discussion/4470225/determining-your-pod-number-for-oracle-eloqua) für zusätzliche Anleitungen. |
+
+Siehe Abschnitt [Anmelden bei [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/Administration/Tasks/SigningInToEloqua.htm#Signing) für Leitlinien.
 
 ## Leitplanken {#guardrails}
 
@@ -88,9 +95,14 @@ Suchen Sie in **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** nach [!DNL (API)
 
 ### Beim Ziel authentifizieren {#authenticate}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_apioracleeloqua_companyname_username"
+>title="Firmenname\Benutzername"
+>abstract="Füllen Sie dieses Feld mit Ihrem Firmennamen und Benutzernamen von Oracle Eloqua aus. `{COMPANY_NAME}\{USERNAME}`"
+
 Füllen Sie die erforderlichen Felder aus. Eine Anleitung dazu finden Sie im Abschnitt [ [!DNL Oracle Eloqua] Sammeln von -Anmeldeinformationen](#gather-credentials).
 * **[!UICONTROL Passwort]**: Das Kennwort Ihres [!DNL Oracle Eloqua] -Konto.
-* **[!UICONTROL Benutzername]**: Der Benutzername Ihres [!DNL Oracle Eloqua] -Konto.
+* **[!UICONTROL Benutzername]**: Eine verkettete Zeichenfolge, die aus [!DNL Oracle Eloqua] Firmenname und [!DNL Oracle Eloqua] Benutzername.<br>Der verkettete Wert hat die Form `{COMPANY_NAME}\{USERNAME}`.<br> Beachten Sie, dass Sie keine Leerzeichen oder Leerzeichen verwenden und die `\`. <br>Beispiel: Wenn [!DNL Oracle Eloqua] Firmenname ist `MyCompany` und [!DNL Oracle Eloqua] Benutzername ist `Username`, der verkettete Wert, den Sie im **[!UICONTROL Benutzername]** Feld ist `MyCompany\Username`.
 
 Um sich beim Ziel zu authentifizieren, wählen Sie **[!UICONTROL Mit Ziel verbinden]**.
 ![Screenshot der Platform-Benutzeroberfläche, auf dem die Authentifizierung gezeigt wird.](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)
@@ -99,11 +111,18 @@ Wenn die angegebenen Details gültig sind, zeigt die Benutzeroberfläche den Sta
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_apioracleeloqua_pod"
+>title="Pod"
+>abstract="Um Ihre Podnummer zu finden, melden Sie sich bei Oracle Eloqua an. Notieren Sie die URL in Ihrem Browser, nachdem Sie sich erfolgreich angemeldet haben. "
+>additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle-Wissensdatenbank - Erfahren Sie mehr über Ihre Werbeunterbrechungsnummer"
+
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 ![Screenshot der Platform-Benutzeroberfläche mit den Zieldetails.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
+* **[!UICONTROL Pod]**: Ermitteln, `pod` Sie sind auf, melden Sie sich bei [!DNL Oracle Eloqua] und beachten Sie die URL in Ihrem Browser, nachdem Sie sich erfolgreich angemeldet haben. Wenn Ihre Browser-URL beispielsweise `secure.p01.eloqua.com` die `pod` Wert, den Sie auswählen müssen, ist `p01`. Siehe Abschnitt [Gather [!DNL Oracle Eloqua] Anmeldeinformationen](#gather-credentials) für zusätzliche Hinweise.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -193,3 +212,18 @@ Weitere Informationen finden Sie im Abschnitt [!DNL Oracle Eloqua] Dokumentation
 
 * [Oracle Eloqua Marketing Automation](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
 * [REST-API für Oracle Eloqua Marketing Cloud Service](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
+
+### Änderungsprotokoll
+
+In diesem Abschnitt werden die Funktionen und wesentlichen Aktualisierungen der Dokumentation an diesem Ziel-Connector erfasst.
+
++++ Anzeigen von changelog
+
+| Veröffentlichungsmonat | Aktualisierungstyp | Beschreibung |
+|---|---|---|
+| April 2023 | Aktualisierung der Dokumentation | <ul><li>Wir haben die [Anwendungsfälle](#use-cases) -Abschnitt mit einem klareren Beispiel dafür, wann Kunden von der Verwendung dieses Ziels profitieren würden.</li> <li>Wir haben die [Mapping](#mapping-considerations-example) mit klaren Beispielen für obligatorische und optionale Zuordnungen.</li> <li>Wir haben die [Mit Ziel verbinden](#connect) -Abschnitt mit einem Beispiel zum Erstellen des verketteten Werts für die **[!UICONTROL Benutzername]** -Feld mithilfe des [!DNL Oracle Eloqua] Firmenname und [!DNL Oracle Eloqua] Benutzername. (PLATIR-28343)</li><li>Wir haben die [Gather [!DNL Oracle Eloqua] Anmeldeinformationen](#gather-credentials) und [Zieldetails ausfüllen](#destination-details) Abschnitte mit Anleitungen [!DNL Oracle Eloqua] **[!UICONTROL Pod]** auswählen. Die *&quot;Pod&quot;* -Wert wird vom Ziel verwendet, um die Basis-URL für die API-Aufrufe zu erstellen. Die [[!DNL Oracle Eloqua] Voraussetzungen](#prerequisites-destination) wurde auch mit Anleitungen zum Zuweisen von *&quot;Erweiterte Benutzer - Marketing-Berechtigungen&quot;* als erforderlich *&quot;Sicherheitsgruppen&quot;* für Ihre [!DNL Oracle Eloqua] -Instanz.</li></ul> |
+| März 2023 | Erstmalige Veröffentlichung | Erste Zielversion und Veröffentlichung der Dokumentation. |
+
+{style="table-layout:auto"}
+
++++
