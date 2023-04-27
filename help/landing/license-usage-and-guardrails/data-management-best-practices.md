@@ -3,10 +3,10 @@ keywords: Experience Platform; Startseite; beliebte Themen; Daten-Management; Li
 title: Best Practices für die Verwaltung von Daten im Rahmen von Lizenzberechtigungen
 description: Erfahren Sie mehr über Best Practices und Werkzeuge, die Sie zur besseren Verwaltung Ihrer Lizenzberechtigungen mit Adobe Experience Platform einsetzen können.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5b5afceff59105eb6e0d17e22c2810a5c25ae760
+source-git-commit: fd594e19e13ca6e7f9f92674107d8ac6dabac9d6
 workflow-type: tm+mt
-source-wordcount: '2133'
-ht-degree: 81%
+source-wordcount: '2169'
+ht-degree: 79%
 
 ---
 
@@ -122,8 +122,6 @@ Der Profilspeicher besteht aus den folgenden Komponenten:
 
 {style="table-layout:auto"}
 
-
-
 #### Komprimierungsberichte aus dem Profilspeicher
 
 Es stehen verschiedene Berichte zur Verfügung, die Ihnen helfen, die Zusammensetzung des Profilspeichers zu verstehen. Diese Berichte helfen Ihnen dabei, fundierte Entscheidungen darüber zu treffen, wie und wo Sie Ihre Erlebnisereignis-Abläufe festlegen können, um Ihre Lizenznutzung besser zu optimieren:
@@ -132,6 +130,10 @@ Es stehen verschiedene Berichte zur Verfügung, die Ihnen helfen, die Zusammense
 * **Identity Overlap Report API**: Zeigt die Identity-Namespaces, die am meisten zu Ihrer Addressable Audience beitragen. Weitere Informationen dazu finden Sie im Tutorial zum [Erstellen des Identity Overlap Reports](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report).
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
+
+#### Pseudonyme Profildatenabläufe {#pseudonymous-profile-expirations}
+
+Mit dieser Funktion können Sie alte Pseudonyme Profile automatisch aus dem Profilspeicher entfernen. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Übersicht über den Ablauf der pseudonymen Profildaten](../../profile/pseudonymous-profiles.md).
 
 #### Gültigkeitsdauern von Erlebnisereignissen {#event-expirations}
 
@@ -144,7 +146,7 @@ Im Folgenden finden Sie eine Liste empfohlener Best Practices, die Sie befolgen 
 * Verwenden Sie das [Lizenznutzungs-Dashboard](../../dashboards/guides/license-usage.md), um die Nutzung durch Kunden zu verfolgen und zu überwachen. Dadurch können Sie potenziellen Überschreitungen rechtzeitig gegensteuern.
 * Konfigurieren Sie [Aufnahmefilter](#ingestion-filters), indem Sie die Ereignisse bestimmen, die für Ihre Segmentierungs- und Personalisierungs-Anwendungsfälle erforderlich sind. Dies ermöglicht Ihnen, nur wichtige Ereignisse zu senden, die für Ihre Anwendungsfälle nötig sind.
 * Stellen Sie sicher, dass Sie nur [Datensätze für Profile aktiviert haben](#ingestion-filters), die für Ihre Segmentierungs- und Personalisierungs-Anwendungsfälle erforderlich sind.
-* Konfigurieren Sie eine [Ablauf des Erlebnisereignisses](#event-expirations) für hochfrequente Daten wie Webdaten.
+* Konfigurieren [Ablauf von Erlebnisereignissen](#event-expirations) und [Pseudonyme Profildatenabläufe](#pseudonymous-profile-expirations) für hochfrequente Daten wie Webdaten.
 * Prüfen Sie regelmäßig die [Berichte zur Profilgruppierung](#profile-store-composition-reports) , um Ihre Profilspeicherkomposition zu verstehen. Auf diese Weise können Sie die Datenquellen ermitteln, die im Rahmen Ihrer Lizenzberechtigung die meisten Daten nutzen.
 
 ## Funktionsüberblick und -verfügbarkeit {#feature-summary}

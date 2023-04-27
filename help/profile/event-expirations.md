@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gültigkeitsdauern von Erlebnisereignissen
 description: Dieses Dokument enthält allgemeine Anleitungen zum Konfigurieren der Gültigkeitsdauern für einzelne Erlebnisereignisse in einem Adobe Experience Platform-Datensatz.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: 0fce883528abc62075914abc4a8f81d2bff8f2e6
+source-git-commit: bb2d0075b234ec750046e1f28cac07a58a9d7e72
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '849'
 ht-degree: 90%
 
 ---
@@ -43,3 +43,37 @@ Wenn Sie beispielsweise am 15. Mai einen Gültigkeitswert von 30 Tagen angewende
 Sie müssen sicherstellen, dass die Lookback-Fenster für Ihre Segmente innerhalb der Gültigkeitsgrenzen ihrer abhängigen Datensätze liegen, um die Ergebnisse genau zu halten. Wenn Sie beispielsweise einen Gültigkeitswert von 30 Tagen anwenden und ein Segment verwenden, das versucht, Daten von bis zu 45 Tagen anzuzeigen, ist die resultierende Audience wahrscheinlich ungenau.
 
 Daher sollten Sie nach Möglichkeit für alle Datensätze denselben Gültigkeitswert für Erlebnisereignisse beibehalten, um die Auswirkungen verschiedener Gültigkeitswerte auf verschiedene Datensätze in Ihrer Segmentierungslogik zu vermeiden.
+
+## Häufig gestellte Fragen {#faq}
+
+Im folgenden Abschnitt finden Sie häufig gestellte Fragen zum Ablauf von Erlebnisereignissen:
+
+### Worin unterscheidet sich das Ablaufdatum von Erlebnisereignisdaten vom Ablauf der pseudonymen Profildaten?
+
+Das Auslaufen von Erlebnisereignisdaten und das Auslaufen von Pseudonymen Profildaten sind komplementäre Funktionen.
+
+#### Granularität
+
+Ablauf von Erlebnisereignisdaten funktioniert auf **Datensatz**-Ebene. Daher kann jeder Datensatz eine andere Datenablaufeinstellung haben.
+
+Ablauf von Daten pseudonymer Profile funktioniert auf **Sandbox**-Ebene. Das bedeutet, dass sich der Ablauf von Daten auf alle Profile in der Sandbox auswirkt.
+
+#### Identitätstypen
+
+Ablauf von Erlebnisereignisdaten entfernt Ereignisse **nur** basierend auf dem Zeitstempel des Ereignisdatensatzes. Die darin enthaltenen Identity-Namespaces werden für den Zweck des Datenablaufs **ignoriert**.
+
+Ablauf von Daten pseudonymer Profile berücksichtigt **nur** Profile mit Identitätsdiagrammen, die vom Kunden ausgewählte Identity-Namespaces enthalten, z. B. `ECID`, `AAID` oder andere Arten von Cookies. Wenn das Profil **irgendeine Art von** zusätzlichen Identity-Namespaces hat, die **nicht** in der ausgewählten Liste des Kunden waren, wird das Profil **nicht** gelöscht.
+
+#### Entfernte Elemente
+
+Ablauf von Erlebnisereignisdaten entfernt **nur** Ereignisse, **keine** Profilklassendaten. Die Profilklassendaten werden nur entfernt, wenn alle Daten über **alle** Datensätze hinweg entfernt werden und es **keine** Profilklassendatensätze gibt, die für das Profil verbleiben.
+
+Ablauf von Daten pseudonymer Profile entfernt Ereignis- **und** Profildatensätze. Daher werden auch die Profilklassendaten entfernt.
+
+### Wie kann Ablauf von Daten pseudonymer Profile in Verbindung mit Ablauf von Erlebnisereignisdaten verwendet werden?
+
+Ablauf von Daten pseudonymer Profile und Ablauf von Erlebnisereignisdaten können ergänzend zueinander verwendet werden.
+
+Sie sollten **immer** Ablauf von Erlebnisereignisdaten in Ihren Datensätzen eingerichtet haben, je nach Ihrem Aufbewahrungsbedarf für die Daten Ihrer bekannten Kunden. Wenn Ablauf von Erlebnisereignisdaten eingerichtet ist, können Sie Ablauf von Daten pseudonymer Profile verwenden, um pseudonyme Profile automatisch zu entfernen. In der Regel ist der Datenablaufzeitraum für pseudonyme Profile kürzer als der Datenablaufzeitraum für Erlebnisereignisse.
+
+Für einen typischen Anwendungsfall können Sie den Ablauf von Erlebnisereignisdaten auf der Grundlage der Werte von Daten Ihrer bekannten Benutzer festlegen und für Ablauf von Daten pseudonymer Profile eine wesentlich kürzere Dauer wählen, um die Auswirkungen von pseudonymen Profilen auf die Einhaltung Ihrer Platform-Lizenzverträge zu begrenzen.
