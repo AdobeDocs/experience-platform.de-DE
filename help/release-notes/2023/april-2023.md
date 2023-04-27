@@ -2,16 +2,16 @@
 title: Adobe Experience Platform – Versionshinweise April 2023
 description: Versionshinweise April 2023 für Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
+source-git-commit: efd69011f1ba81ece0a1c270cc71b9706ab7b88f
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1297'
 ht-degree: 42%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
 
-**Versionsdatum: 26. April 2023**
+**Veröffentlichungsdatum: 26. April 2023**
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
@@ -82,7 +82,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | Funktionalität | Beschreibung |
 | ----------- | ----------- |
 | Dataflow-Überwachung für [!DNL Custom Personalization] und [!DNL Adobe Commerce] Ziele | <p> Sie können nun Aktivierungsmetriken für die [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [Benutzerdefinierte Personalisierung](../../destinations/catalog/personalization/custom-personalization.md) und [Benutzerdefinierte Personalisierung mit Attributen](../../destinations/catalog/personalization/custom-personalization.md) Verbindungen. </p> <p>![Adobe Commerce-Bild](/help/destinations/assets/common/adobe-commerce-metrics.png "Adobe Commerce-Metriken"){width="100" zoomable="yes"}</p>  Siehe [Überwachen von Datenflüssen im Arbeitsbereich &quot;Ziele&quot;](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace) für weitere Details. |
-| Neu **[!UICONTROL Segment-ID an Segmentname anhängen]** -Feld für [!DNL Google Ad Manager] und [!DNL Google Ad Manager 360] Ziele | Sie können jetzt den Segmentnamen in [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) und [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) schließen Sie die Segment-ID aus Experience Platform wie folgt ein: `Segment Name (Segment ID)`. |
+| Neu **[!UICONTROL Segment-ID an Segmentname anhängen]** -Feld für [!DNL Google Ad Manager] und [!DNL Google Ad Manager 360] Ziele | <p>Sie können jetzt den Segmentnamen in [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) und [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) schließen Sie die Segment-ID aus Experience Platform wie folgt ein: `Segment Name (Segment ID)`.</p><p>![Segment-ID-Bild anhängen](/help/destinations/assets/common/append-segment-id-to-segment-name.png "Neue Segment-ID an Feld für Segmentname anhängen "){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
 
@@ -97,7 +97,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 **Korrekturen und Verbesserungen** {#destinations-fixes-and-enhancements}
 
 - Wir haben ein Problem in der **Ausgeschlossene Identitäten** Berichtsmetriken für dateibasierte Zielexporte. Kunden erhielten wie erwartet alle exportierten IDs aus dem aktivierten Export. Die Variable **Ausgeschlossene Identitäten** -Berichtsmetrik in der Benutzeroberfläche zeigte fälschlicherweise eine hohe Anzahl ausgeschlossener Identitäten an, da Identitäten falsch gezählt wurden, die nie exportiert werden sollten. (PLAT-149774)
-- Im Schritt Planung des Aktivierungs-Workflows wurde ein Problem behoben. Für Ziele, für die eine Zuordnungs-ID erforderlich ist, konnten Kunden keine Zuordnungs-ID für Segmente hinzufügen, die zu vorhandenen Zielverbindungen hinzugefügt wurden. (PLAT-148808)
+- Wir haben ein Problem in der **Planung** Schritt des Aktivierungs-Workflows. Für Ziele, für die eine Zuordnungs-ID erforderlich ist, konnten Kunden keine Zuordnungs-ID für Segmente hinzufügen, die zu vorhandenen Zielverbindungen hinzugefügt wurden. (PLAT-148808)
 
 <!--
 - We have fixed an issue with the beta SFTP destination where the port number was previously hardcoded to 22. The port is now configurable for this destination. 
