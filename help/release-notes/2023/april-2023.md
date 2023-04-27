@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise April 2023
 description: Versionshinweise April 2023 für Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: 8b77b3a91d8724591ec389aa214c81c4bef6baf8
+source-git-commit: 7c4bdee9f8599e27ffab776c4df5083d2e29e26c
 workflow-type: tm+mt
-source-wordcount: '1373'
-ht-degree: 39%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +31,7 @@ Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Einb
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Benutzerdefinierte Dashboards | Sie können jetzt **historische Daten filtern** aus Ihren Widget-Einblicken und verwenden Sie entweder aktuelle Daten oder einen benutzerdefinierten Analysezeitraum.<br>Sie können jetzt auch **vorhandene Widgets duplizieren**. Wenn Sie ein Duplikat anpassen und dessen Attribute bearbeiten, können Sie vermeiden, bei der Erstellung eines neuen, eindeutigen Widgets von Anfang an neu zu beginnen. |
+| Benutzerdefinierte Dashboards | Sie können jetzt **historische Daten filtern** aus Ihren Widget-Einblicken und verwenden Sie entweder aktuelle Daten oder einen benutzerdefinierten Analysezeitraum. Siehe [Benutzerhandbuch zu benutzerdefinierten Dashboards](../../dashboards/user-defined-dashboards.md#filter-historical-data) für weitere Informationen.<br>Sie können jetzt auch **vorhandene Widgets duplizieren**. Wenn Sie ein Duplikat anpassen und dessen Attribute bearbeiten, können Sie vermeiden, bei der Erstellung eines neuen, eindeutigen Widgets von Anfang an neu zu beginnen. Lesen Sie die [Widget-Duplizierungshandbuch](../../dashboards/user-defined-dashboards.md#duplicate-a-widget) , um mehr zu erfahren. |
 
 {style="table-layout:auto"}
 
@@ -107,7 +107,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Umschalten zwischen Anzeigenamen | Der Schema Editor bietet jetzt einen Schalter zum Ändern zwischen den ursprünglichen Feldnamen und den für Menschen lesbareren Anzeigenamen. Diese Flexibilität ermöglicht eine verbesserte Erkennung und Bearbeitung von Feldern Ihrer Schemata. Die Anzeigenamen für Standardfeldgruppen werden systemgeneriert, können aber bei Bedarf auch über die Benutzeroberfläche angepasst werden. |
+| Umschalten zwischen Anzeigenamen | Der Schema Editor bietet jetzt einen Schalter zum Ändern zwischen den ursprünglichen Feldnamen und den für Menschen lesbareren Anzeigenamen.<br>![Der Schema Editor mit dem Anzeigenamen wird hervorgehoben.](../../xdm/images/ui/resources/schemas/display-name-toggle.png "Anzeigename im Schema Editor umschalten"){width="100" zoomable="yes"}<br>Diese Flexibilität ermöglicht eine verbesserte Erkennung und Bearbeitung von Feldern Ihrer Schemata. Die Anzeigenamen für Standardfeldgruppen werden systemgeneriert, können aber bei Bedarf auch über die Benutzeroberfläche angepasst werden. Bitte lesen Sie die [Umschalten zwischen Anzeige-Namen und Dokumentation](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle) , um mehr zu erfahren. |
 
 {style="table-layout:auto"}
 
