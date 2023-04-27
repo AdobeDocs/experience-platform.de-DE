@@ -2,9 +2,9 @@
 title: Konfigurieren der Adobe Experience Platform Web SDK-Erweiterung
 description: So konfigurieren Sie die Adobe Experience Platform Web SDK-Tag-Erweiterung in der Benutzeroberfläche.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 3ab02646968222c0ad09c1d8ce8fda04de7aaac6
+source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '1184'
 ht-degree: 6%
 
 ---
@@ -93,7 +93,7 @@ Wenn Sie bestimmte Teile ausblenden möchten, wenn Ihre Site beim Laden personal
 
 ### [!UICONTROL Callback-Funktion]
 
-Die in der Erweiterung bereitgestellte Rückruffunktion wird auch als [`onBeforeEventSend` function](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en) in der Bibliothek. Mit dieser Funktion können Sie Ereignisse global ändern, bevor sie an Adobe Edge Network gesendet werden. Ausführlichere Informationen zur Verwendung dieser Funktion finden Sie unter [here](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally).
+Die in der Erweiterung bereitgestellte Rückruffunktion wird auch als [`onBeforeEventSend` function](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=de) in der Bibliothek. Mit dieser Funktion können Sie Ereignisse global ändern, bevor sie an Adobe Edge Network gesendet werden. Ausführlichere Informationen zur Verwendung dieser Funktion finden Sie unter [here](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally).
 
 ### [!UICONTROL Klickdatenerfassung]
 
@@ -102,6 +102,23 @@ Das SDK kann automatisch Link-Klickinformationen für Sie erfassen. Standardmä�
 ### [!UICONTROL Automatisch erfasste Kontextdaten]
 
 Standardmäßig erfasst das SDK bestimmte Kontextdaten in Bezug auf Gerät, Web, Umgebung und Ortskontext. Wenn Sie eine Liste der von der Adobe erfassten Informationen sehen möchten, finden Sie sie [here](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). Wenn Sie diese Daten nicht erfassen möchten oder nur bestimmte Datenkategorien erfassen möchten, können Sie diese Optionen ändern.
+
+## [!UICONTROL Überschreibungen der Datastream-Konfiguration]
+
+Mit Datastream-Überschreibungen können Sie zusätzliche Konfigurationen für Ihre Datenspeicher definieren, die über das Web SDK an das Edge-Netzwerk übergeben werden.
+
+Dies hilft Ihnen beim Trigger verschiedener Datenspeicherverhaltensweisen als der Standardeinstellungen, ohne einen neuen Datenspeicher zu erstellen oder Ihre vorhandenen Einstellungen zu ändern.
+
+Die Außerkraftsetzung der Datastream-Konfiguration besteht aus zwei Schritten:
+
+1. Zunächst müssen Sie Ihre Überschreibungen der Datastream-Konfiguration im [Datastream-Konfigurationsseite](../datastreams/configure.md).
+2. Anschließend müssen Sie die Überschreibungen entweder über einen Web SDK-Befehl oder mithilfe der Web SDK-Tag-Erweiterung an das Edge-Netzwerk senden.
+
+Anzeigen des Datenspeichers [Dokumentation zu Konfigurationsüberschreibungen](../datastreams/overrides.md) für detaillierte Anweisungen zum Überschreiben von Datenspeicherkonfigurationen.
+
+Als Alternative zum Übergeben der Überschreibungen über einen Web SDK-Befehl können Sie die Überschreibungen im Bildschirm für die Tag-Erweiterung konfigurieren, der unten dargestellt wird.
+
+![Bild, das die Konfiguration des Datenspeichers anzeigt, überschreibt die Seite Web SDK-Tag-Erweiterung.](../assets/extension/overview/datastream-overrides.png)
 
 ## [!UICONTROL Erweiterte Einstellungen]
 

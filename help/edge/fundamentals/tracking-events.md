@@ -3,10 +3,10 @@ title: Verfolgen von Ereignissen mit dem Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie Adobe Experience Platform Web SDK-Ereignisse verfolgen.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;Send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 9b108d0e1722ea1b895c08fd7f42104a0d0da5df
+source-git-commit: a6948e3744aa754eda22831a7e68b847eb904e76
 workflow-type: tm+mt
-source-wordcount: '1177'
-ht-degree: 32%
+source-wordcount: '1194'
+ht-degree: 31%
 
 ---
 
@@ -138,7 +138,12 @@ alloy("sendEvent", {
 
 ### Überschreiben der Datensatz-ID
 
+>[!IMPORTANT]
+>
+>Die `datasetId` von der `sendEvent` nicht mehr unterstützt. Um eine Datensatz-ID zu überschreiben, verwenden Sie [Konfigurationsüberschreibungen](../datastreams/overrides.md) anstatt.
+
 In einigen Anwendungsfällen möchten Sie möglicherweise ein Ereignis an einen anderen Datensatz als den in der Konfigurationsoberfläche konfigurierten senden. Dazu müssen Sie die `datasetId` -Option auf `sendEvent` command:
+
 
 
 ```javascript
@@ -217,7 +222,7 @@ Die `sendEvent` gibt einen Promise zurück, der mit einer `result` -Objekt. Die 
 
 >[!WARNING]
 >
->`destinations` ist derzeit als Betaversion verfügbar. Dokumentation und Funktionalität können sich ändern.
+>`destinations` ist derzeit als Betaversion verfügbar. Dokumentation und Funktionalitäten können sich ändern.
 
 ## Globale Änderung von Ereignissen {#modifying-events-globally}
 

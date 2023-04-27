@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise April 2023 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: f8ef0c6fb949cb5c9071e84d88a9151a5558848f
+source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1284'
 ht-degree: 42%
 
 ---
@@ -61,7 +61,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | Funktion | Beschreibung |
 | --- | --- |
 | Verschleierung von IP-Adressen für Datastreams | Sie können jetzt Optionen für die IP-Verschleierung auf der Ebene eines partiellen oder vollständigen Datenspeichers im [Benutzeroberfläche für die Datenspeicherkonfiguration](../../edge/datastreams/configure.md). <br><br>Die Einstellung für die IP-Verschleierung auf Datenasterebene hat Vorrang vor jeder in Adobe Target und Audience Manager konfigurierten IP-Verschleierung. <br><br>An Adobe Analytics gesendete Daten sind von der Datenasterebene nicht betroffen [!UICONTROL IP-Verschleierung] -Einstellung. Adobe Analytics erhält derzeit nicht verschleierte IP-Adressen. Damit Analytics verschleierte IP-Adressen empfangen kann, müssen Sie die IP-Verschleierung separat in Adobe Analytics konfigurieren. Dieses Verhalten wird in zukünftigen Versionen aktualisiert.<br><br> Weitere Informationen zur IP-Verschleierung und Anweisungen zur Konfiguration finden Sie unter [Dokumentation zur Datastream-Konfiguration](../../edge/datastreams/configure.md#advanced-options). |
-| Überschreibungen der Datastream-Konfiguration | Sie können jetzt zusätzliche Konfigurationsoptionen für Datastreams definieren, mit denen Sie bestimmte Einstellungen wie Ereignis-Datensätze, Target-Eigenschafts-Token, ID-Synchronisierungs-Container und Analytics-Report Suites überschreiben können. <br><br>Das Außerkraftsetzen von Datastream-Konfigurationen ist ein zweistufiger Prozess. Zunächst müssen Sie Ihre Überschreibungen der Datastream-Konfiguration in der Benutzeroberfläche von datastreams definieren. Anschließend müssen Sie die Überschreibungen über einen Web SDK-Befehl an das Edge-Netzwerk senden. |
+| [Überschreibungen der Datastream-Konfiguration](../../edge/datastreams/overrides.md) | Sie können jetzt zusätzliche Konfigurationsoptionen für Datastreams definieren, mit denen Sie bestimmte Einstellungen wie Ereignis-Datensätze, Target-Eigenschafts-Token, ID-Synchronisierungs-Container und Analytics-Report Suites überschreiben können. <br><br>Das Überschreiben von Datenspeicherkonfigurationen ist ein zweistufiger Prozess: <ol><li>Zunächst müssen Sie Ihre Überschreibungen der Datastream-Konfiguration im [Datastream-Konfigurationsseite](../../edge/datastreams/configure.md).</li><li>Anschließend müssen Sie die Überschreibungen entweder über einen Web SDK-Befehl oder mithilfe des Web SDK an das Edge-Netzwerk senden [Tag-Erweiterung](../../edge/extension/web-sdk-extension-configuration.md).</li></ol> |
 
 {style="table-layout:auto"}
 
