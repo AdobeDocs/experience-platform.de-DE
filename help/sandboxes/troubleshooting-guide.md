@@ -5,9 +5,9 @@ title: Handbuch zur Fehlerbehebung bei Sandboxes
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Sandboxes in Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '855'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -45,7 +45,7 @@ Sandboxes sind voneinander isolierte Partitionen einer einzelnen Platform-Instan
 
 ## Was ist die standardmäßige Produktions-Sandbox?
 
-Die standardmäßige Produktions-Sandbox ist die erste Produktions-Sandbox, die erstellt wird, wenn eine Organisation zum ersten Mal bereitgestellt wird. Mit der standardmäßigen Produktions-Sandbox können Sie Daten aus Platform erfassen oder nutzen sowie Anfragen akzeptieren, die keine Werte für einen Sandbox-Namen oder eine Sandbox-ID enthalten. Die standardmäßige Produktions-Sandbox kann zurückgesetzt, aber nicht gelöscht werden.
+Die standardmäßige Produktions-Sandbox ist die erste Produktions-Sandbox, die bei der ersten Bereitstellung einer Organisation erstellt wird. Mit der standardmäßigen Produktions-Sandbox können Sie Daten aus Platform erfassen oder nutzen sowie Anfragen akzeptieren, die keine Werte für einen Sandbox-Namen oder eine Sandbox-ID enthalten. Die standardmäßige Produktions-Sandbox kann zurückgesetzt, aber nicht gelöscht werden.
 
 ## Wie viele Produktions-Sandboxes können wir nutzen?
 
@@ -63,7 +63,7 @@ Sie können den Titel einer Produktions-Sandbox aktualisieren. Eine Produktions-
 
 ## Wie viele Entwicklungs-Sandboxes können wir nutzen?
 
-Durch die Experience Platform können derzeit maximal 75 Sandboxes (Produktion und Entwicklung) in einem Unternehmen aktiv sein.
+In Experience Platform können derzeit maximal 75 Sandboxes (Produktion und Entwicklung) in einer einzelnen Organisation aktiv sein.
 
 Entwicklungs-Sandboxes unterstützen Funktionen zum Zurücksetzen und Löschen.
 
