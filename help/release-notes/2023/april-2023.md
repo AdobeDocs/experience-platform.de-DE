@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise April 2023
 description: Versionshinweise April 2023 für Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: a8e59d6386a51c4d5d3173be16ee45311f8d2929
+source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
 workflow-type: tm+mt
-source-wordcount: '1422'
-ht-degree: 38%
+source-wordcount: '1492'
+ht-degree: 36%
 
 ---
 
@@ -62,6 +62,8 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | --- | --- |
 | Verschleierung von IP-Adressen für Datastreams | Sie können jetzt Optionen für die IP-Verschleierung auf der Ebene eines partiellen oder vollständigen Datenspeichers im [Benutzeroberfläche für die Datenspeicherkonfiguration](../../edge/datastreams/configure.md). <br><br>Die Einstellung für die IP-Verschleierung auf Datenasterebene hat Vorrang vor jeder in Adobe Target und Audience Manager konfigurierten IP-Verschleierung. <br><br>An Adobe Analytics gesendete Daten sind von der Datenasterebene nicht betroffen [!UICONTROL IP-Verschleierung] -Einstellung. Adobe Analytics erhält derzeit nicht verschleierte IP-Adressen. Damit Analytics verschleierte IP-Adressen empfangen kann, müssen Sie die IP-Verschleierung separat in Adobe Analytics konfigurieren. Dieses Verhalten wird in zukünftigen Versionen aktualisiert.<br><br> Weitere Informationen zur IP-Verschleierung und Anweisungen zur Konfiguration finden Sie unter [Dokumentation zur Datastream-Konfiguration](../../edge/datastreams/configure.md#advanced-options). |
 | [Überschreibungen der Datastream-Konfiguration](../../edge/datastreams/overrides.md) | Sie können jetzt zusätzliche Konfigurationsoptionen für Datastreams definieren, mit denen Sie bestimmte Einstellungen wie Ereignis-Datensätze, Target-Eigenschafts-Token, ID-Synchronisierungs-Container und Analytics-Report Suites überschreiben können. <br><br>Das Überschreiben von Datenspeicherkonfigurationen ist ein zweistufiger Prozess: <ol><li>Zunächst müssen Sie Ihre Überschreibungen der Datastream-Konfiguration im [Datastream-Konfigurationsseite](../../edge/datastreams/configure.md).</li><li>Anschließend müssen Sie die Überschreibungen entweder über einen Web SDK-Befehl oder mithilfe des Web SDK an das Edge-Netzwerk senden [Tag-Erweiterung](../../edge/extension/web-sdk-extension-configuration.md).</li></ol> |
+| OAuth JWT Secret | Die [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) ermöglicht Kunden die Verwendung von Adobe- und Google Service-Token zur Unterstützung von Server-zu-Server-Interaktionen bei der Ereignisweiterleitung. |
+| [!DNL Pinterest Conversions API]-Erweiterung  | Die [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) Mit der Ereignisweiterleitungs-Erweiterung können Sie die im Adobe Experience Platform Edge Network erfassten Daten nutzen und an senden. [!DNL Pinterest] in Form von serverseitigen Ereignissen, bei denen die [!DNL Pinterest Conversions API]. |
 
 {style="table-layout:auto"}
 

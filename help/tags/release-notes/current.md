@@ -2,14 +2,22 @@
 title: Versionshinweise für Tags und Ereignisweiterleitung
 description: Die neuesten Versionshinweise für Tags und Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 3ebf8df16f88660eab481bd0a0ba88816b470255
+source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
 workflow-type: tm+mt
-source-wordcount: '720'
-ht-degree: 95%
+source-wordcount: '798'
+ht-degree: 86%
 
 ---
 
 # Versionshinweise für Tags und Ereignisweiterleitung
+
+## 26. April 2023
+
+* **OAuth JWT Secret**: Die [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) ermöglicht Kunden die Verwendung von Adobe- und Google Service-Token zur Unterstützung von Server-zu-Server-Interaktionen bei der Ereignisweiterleitung.
+
+Die folgende neue Erweiterung wurde veröffentlicht:
+
+* **[!DNL Pinterest Conversions API]Erweiterung**: Die [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) Mit der Ereignisweiterleitungs-Erweiterung können Sie die im Adobe Experience Platform Edge Network erfassten Daten nutzen und an senden. [!DNL Pinterest] in Form von serverseitigen Ereignissen, bei denen die [!DNL Pinterest Conversions API].
 
 ## 29. März 2023
 
