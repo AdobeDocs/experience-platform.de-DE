@@ -5,9 +5,9 @@ title: Sandbox-Übersicht
 description: Sandboxes sind virtuelle Partitionen innerhalb einer Instanz von Experience Platform, die eine nahtlose Integration in den Entwicklungsprozess Ihrer Programme für digitale Erlebnisse ermöglichen.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1002'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -31,9 +31,9 @@ Sandboxes sind virtuelle Partitionen innerhalb einer Instanz von Experience Plat
 
 Eine Experience Platform-Instanz unterstützt mehrere Produktions- sowie Entwicklungs-Sandboxes, wobei jede eine eigene unabhängige Bibliothek mit Platform-Ressourcen (einschließlich Schemata, Datensätzen, Profilen usw.) unterhält. Darüber hinaus verfügen Produktions- und Entwicklungs-Sandboxes über eine Funktion zum Zurücksetzen, mit der sich alle kundenseitig erstellten Ressourcen aus der Sandbox entfernen lassen. Entwicklungs-Sandboxes können nicht in Produktions-Sandboxes umgewandelt werden.
 
-Mit einer Standardlizenz für Experience Platform erhalten Sie insgesamt fünf Sandboxes, die Sie jeweils als Produktion oder Entwicklung klassifizieren können. Sie können Zusatzpakete von jeweils zehn Sandboxes bis zu einem Maximum von insgesamt 75 Sandboxes hinzufügen. Diese zusätzlichen Sandboxes können zum Erstellen von Produktions- und Entwicklungs-Sandboxes verwendet werden. Weitere Informationen erhalten Sie von Ihrem Organisationsadministrator oder Ihrem Adobe-Vertriebsmitarbeiter.
+Mit einer Standardlizenz für Experience Platform erhalten Sie insgesamt fünf Sandboxes, die Sie jeweils als Produktion oder Entwicklung klassifizieren können. Sie können Zusatzpakete von jeweils zehn Sandboxes bis zu einem Maximum von insgesamt 75 Sandboxes hinzufügen. Diese zusätzlichen Sandboxes können zum Erstellen von Produktions- und Entwicklungs-Sandboxes verwendet werden. Wenden Sie sich an die Admins Ihrer Organisation oder das Adobe-Vertriebspersonal, um weitere Informationen zu erhalten.
 
-Schließlich ist die standardmäßige Produktions-Sandbox die erste Produktions-Sandbox, die beim ersten Erstellen einer Organisation erstellt wird. Mit der standardmäßigen Produktions-Sandbox können Sie Daten aus Platform aufnehmen oder nutzen sowie Anfragen akzeptieren, die keine Werte für einen Sandbox-Namen oder eine Sandbox-ID enthalten.
+Die standardmäßige Produktions-Sandbox ist letztendlich die erste Produktions-Sandbox, die bei der Ersterstellung einer Organisation erstellt wird. Mit der standardmäßigen Produktions-Sandbox können Sie Daten aus Platform aufnehmen oder nutzen sowie Anfragen akzeptieren, die keine Werte für einen Sandbox-Namen oder eine Sandbox-ID enthalten.
 
 >[!NOTE]
 >
@@ -42,7 +42,7 @@ Schließlich ist die standardmäßige Produktions-Sandbox die erste Produktions-
 Zusammenfassend kann man sagen, dass Sandboxes folgende Vorteile bieten:
 
 * **Application Lifecycle Management**: Richten Sie separate virtuelle Umgebungen ein, um Programme für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
-* **Projekt- und Markenmanagement**: Mehrere Projekte können innerhalb derselben Organisation parallel ausgeführt werden, während Isolation und Zugriffskontrolle gewährleistet sind. Zukünftige Versionen werden Unterstützung zur Bereitstellung in verschiedenen Regionen bieten.
+* **Projekt- und Markenverwaltung**: Lassen Sie es zu, dass in derselben Organisation verschiedene Projekte parallel ausgeführt werden, während Isolation und Zugriffskontrolle sichergestellt werden. Zukünftige Versionen werden Unterstützung zur Bereitstellung in verschiedenen Regionen bieten.
 * **Flexibles Entwicklungsökosystem**: Stellen Sie Sandboxes auf nahtlose, skalierbare und kostengünstige Weise für Erkundungs-, Unterstützungs- und Demonstrationszwecke bereit.
 
 ## Zugriffskontrolle für Sandboxes
