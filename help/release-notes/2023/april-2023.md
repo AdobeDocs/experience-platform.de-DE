@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise April 2023
 description: Versionshinweise April 2023 für Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: 7c4bdee9f8599e27ffab776c4df5083d2e29e26c
+source-git-commit: a8e59d6386a51c4d5d3173be16ee45311f8d2929
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1422'
+ht-degree: 38%
 
 ---
 
@@ -122,6 +122,8 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 | Funktion | Beschreibung |
 | ------- | ----------- |
 | Ablauf der Profildaten | Der Ablauf der pseudonymen Profildaten ist jetzt allgemein verfügbar! Mit dieser Version werden alte pseudonyme Profile kontinuierlich aus Ihrer Experience Platform-Instanz entfernt, sobald sie aktiviert wurden. Weitere Informationen zu dieser Funktion und den Pseudonymen Profilen finden Sie im Abschnitt [Anleitung zum Ablauf von Pseudonymen Profildaten](../../profile/pseudonymous-profiles.md). |
+
+{style="table-layout:auto"}
 
 ## Quellen {#sources}
 
