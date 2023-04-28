@@ -3,10 +3,10 @@ title: Vergleich von at.js mit dem Experience Platform Web SDK
 description: Erfahren Sie, wie die at.js-Funktionen mit dem Experience Platform Web SDK verglichen werden.
 keywords: Target; adobe target; activity.id; experience.id; renderDecisions; DecisionScopes; Vorabausblenden von Snippet; VEC; Form-Based Experience Composer; xdm; Zielgruppen; Entscheidungen; Umfang; Schema; Systemdiagramm; Diagramm
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 519d77ca7bfb910b03fea3567e08824e6f852eb4
+source-git-commit: 5065d76ad8008988c843c88e33a25731fb5284d0
 workflow-type: tm+mt
 source-wordcount: '2286'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -597,7 +597,7 @@ alloy("sendEvent", {
     // Find the discount proposition, if it exists.
     for (var i = 0; i < propositions.length; i++) {
       var proposition = propositions[i];
-      for (var j = 0; j < proposition.items; j++) {
+      for (var j = 0; j < proposition.items.length; j++) {
         var item = proposition.items[j];
 
         if (item.schema === "https://ns.adobe.com/personalization/measurement") {
