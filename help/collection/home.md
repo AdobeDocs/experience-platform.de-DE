@@ -5,9 +5,9 @@ title: Datenerfassung – Übersicht
 description: Erfahren Sie mehr über die verschiedenen Technologien zur Erfassung von Daten zu Kundenerlebnissen in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 source-git-commit: 13c02dd5930905e3851ff147c0ea4d914e3dc6c7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '516'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -63,7 +63,7 @@ Darüber hinaus sind Datenströme in verschiedene Platform-Funktionen integriert
 
 >[!NOTE]
 >
->Die Ereignisweiterleitung ist eine gebührenpflichtige Funktion, die im Rahmen der Adobe Real-time Customer Data Platform-Angebote für Verbindungen, Prime oder Ultimate bereitgestellt wird.
+>Die Ereignisweiterleitung ist eine gebührenpflichtige Funktion, die im Rahmen von Adobe Real-time Customer Data Platform Connections, Prime und Ultimate angeboten wird.
 
 ## Nächste Schritte
 
