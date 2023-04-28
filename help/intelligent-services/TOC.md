@@ -5,9 +5,9 @@ user-guide-title: Intelligent Services-Hilfe
 breadcrumb-title: Handbuch zu Intelligent Services
 user-guide-description: Nutzen Sie intelligente KI-Services, um Scores zu generieren, Insights zu erhalten und Segmente aus Ihren Marketing-Ereignisdaten zu erstellen.
 source-git-commit: a8a721cde2ebd68e72a1ee36b6d9274792474b3d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '139'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
