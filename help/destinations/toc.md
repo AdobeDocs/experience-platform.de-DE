@@ -6,8 +6,8 @@ description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience
 feature: Destinations
 source-git-commit: fb1a8f3a8f78578a0c7d6b8ab4feb60d8c5da1af
 workflow-type: tm+mt
-source-wordcount: '1072'
-ht-degree: 99%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -81,7 +81,7 @@ ht-degree: 99%
       * [Google Display &amp; Video 360-Verbindung](./catalog/advertising/google-dv360.md)
       * [Google gtag-Erweiterung](./catalog/advertising/gtag-advertising.md)
       * [LinkedIn Insight Tag-Erweiterung](./catalog/advertising/linkedin.md)
-      * [(Alpha) LiveRamp - SFTP-Verbindung](./catalog/advertising/liveramp.md)
+      * [(Alpha) LiveRamp – SFTP-Verbindung](./catalog/advertising/liveramp.md)
       * [Microsoft Bing-Verbindung](./catalog/advertising/bing.md)
       * [Pinterest Conversion Tracking-Erweiterung](./catalog/advertising/pinterest-extension.md)
       * [Pinterest Customer List-Verbindung](./catalog/advertising/pinterest.md)

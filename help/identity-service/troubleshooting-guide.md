@@ -7,7 +7,7 @@ exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
 source-wordcount: '2176'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -204,7 +204,7 @@ Diese Fehlermeldung wird angezeigt, wenn einem `graph-type`-Abfrageparameter im 
 }
 ```
 
-Diese Fehlermeldung wird angezeigt, wenn Ihr Unternehmen nicht über die entsprechenden Berechtigungen für [!DNL Identity Service]. Wenden Sie sich an Ihren Systemadministrator, um das Problem zu beheben.
+Diese Fehlermeldung wird angezeigt, wenn Ihre Organisation nicht über die erforderlichen Berechtigungen für [!DNL Identity Service] verfügt. Wenden Sie sich an Ihren Systemadministrator, um das Problem zu beheben.
 
 ### Dienst-Token von Gateway ist ungültig.
 
@@ -264,7 +264,7 @@ Wenn [!DNL Identity Service] eine Identität beibehält, wird der Kennung der Id
 }
 ```
 
-Diese Fehlermeldung wird angezeigt, wenn Ihr Unternehmen nicht über die entsprechenden Berechtigungen für [!DNL Identity Service]. Wenden Sie sich an Ihren Systemadministrator, um das Problem zu beheben.
+Diese Fehlermeldung wird angezeigt, wenn Ihre Organisation nicht über die erforderlichen Berechtigungen für [!DNL Identity Service] verfügt. Wenden Sie sich an Ihren Systemadministrator, um das Problem zu beheben.
 
 ### Interner Server-Fehler
 
@@ -330,9 +330,9 @@ Dieser Fehler wird angezeigt, wenn die ersten 100 Zeilen eines Batch keine Ident
 }
 ```
 
-Dieser Fehler wird angezeigt, wenn ein erfasster Datensatz eine Identität enthält, deren verknüpfter Namespace nicht vorhanden ist oder für Ihr Unternehmen nicht zugänglich ist.
+Dieser Fehler wird angezeigt, wenn ein aufgenommener Eintrag eine Identität enthält, deren verknüpfter Namespace nicht vorhanden ist oder für Ihre Organisation nicht zugänglich ist.
 
-### Batch-Erfassung wird übersprungen, da für das private Identitätsdiagramm keine IMS-Organisation angegeben wurde.
+### Batch-Erfassung wird übersprungen, da für das private Identitätsdiagramm keine IMS-Organisation angegeben wurde
 
 ```json
 {
@@ -342,7 +342,7 @@ Dieser Fehler wird angezeigt, wenn ein erfasster Datensatz eine Identität enth�
 }
 ```
 
-Bei der Aufnahme von Batch-Daten wird diese Fehlermeldung angezeigt, wenn Ihr Unternehmen nicht über die erforderlichen Berechtigungen für [!DNL Identity Service]. Wenden Sie sich an Ihren Systemadministrator, um das Problem zu beheben.
+Beim Aufnehmen von Batch-Daten wird diese Fehlermeldung angezeigt, wenn Ihre Organisation nicht über die erforderlichen Berechtigungen für [!DNL Identity Service] verfügt. Wenden Sie sich an Ihren Systemadministrator, um das Problem zu beheben.
 
 ### Interner Fehler
 

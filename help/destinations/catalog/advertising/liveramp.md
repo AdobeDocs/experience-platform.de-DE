@@ -1,43 +1,43 @@
 ---
-title: (Alpha) [!DNL LiveRamp SFTP] connection
-description: Erfahren Sie, wie Sie mit dem LiveRamp-Connector Zielgruppen von Adobe Real-time Customer Data Platform nach LiveRamp Connect integrieren können.
+title: (Alpha) [!DNL LiveRamp SFTP] Verbindung
+description: Erfahren Sie, wie Sie mit dem LiveRamp-Connector Zielgruppen von Adobe Real-time Customer Data Platform in LiveRamp Connect integrieren können.
 hidefromtoc: true
 hide: true
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
 source-git-commit: d7625018b7b36d8e9516f7884fc00b726d391103
 workflow-type: tm+mt
 source-wordcount: '1738'
-ht-degree: 23%
+ht-degree: 100%
 
 ---
 
-# (Alpha) [!DNL LiveRamp - SFTP] connection {#liveramp-destination}
+# (Alpha) [!DNL LiveRamp - SFTP]-Verbindung {#liveramp-destination}
 
-Verwenden Sie die LiveRamp-Verbindung, um Zielgruppen von Adobe Real-time Customer Data Platform nach zu integrieren. [!DNL LiveRamp Connect].
+Verwenden Sie die LiveRamp-Verbindung, um Zielgruppen von Adobe Real-time Customer Data Platform in [!DNL LiveRamp Connect] zu integrieren.
 
 >[!IMPORTANT]
 >
-><p>Diese Zielverbindung befindet sich derzeit in der Alpha-Phase und steht nur einer begrenzten Auswahl von Kunden zur Verfügung. Die Funktionalität und Dokumentation können sich ändern.</p>
-&gt;<p>Die endgültige Version dieser Zielverbindung erfordert möglicherweise eine Kundenmigration.</p>
+><p>Diese Zielverbindung befindet sich derzeit in der Alpha-Phase und steht nur einer begrenzten Auswahl von Kundinnen und Kunden zur Verfügung. Die Funktionalität und Dokumentation können sich ändern.</p>
+&gt;<p>Für die endgültige Version dieser Zielverbindung ist gegebenenfalls eine Kundenmigration erforderlich.</p>
 
 
 ## Anwendungsfälle {#use-cases}
 
-Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie die [!DNL LiveRamp SFTP] Ziel, hier ein Beispielanwendungsfall, den Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
+Damit Sie besser verstehen können, wie und wann Sie das [!DNL LiveRamp SFTP]-Ziel verwenden sollten, finden Sie hier ein Anwendungsbeispiel, das für Kundinnen und Kunden von Adobe Experience Platform mit diesem Ziel geeignet ist.
 
-Als Marketer möchte ich Zielgruppen von Adobe Experience Platform an integrierte Identitäten in senden [!DNL LiveRamp Connect] damit ich Benutzer ansprechen kann in [!DNL CTV] Plattformen, die die [!DNL Ramp ID] Kennung.
+Als Marketing-Experte möchte ich Zielgruppen von Adobe Experience Platform zur Integration von Identitäten an [!DNL LiveRamp Connect] senden, damit ich Benutzende auf [!DNL CTV]-Plattformen ansprechen kann, die die [!DNL Ramp ID]-Kennung nutzen.
 
 ## Voraussetzungen {#prerequisites}
 
-Die [!DNL LiveRamp - SFTP] Verbindungsexporte verwenden [LiveRamp-SFTP](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html) Speicher.
+Die [!DNL LiveRamp - SFTP]-Verbindung exportiert Dateien mithilfe des [LiveRamp-SFTP](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)-Speichers.
 
-Bevor Sie Daten von Experience Platform an senden können [!DNL LiveRamp SFTP], benötigen Sie [!DNL LiveRamp] Anmeldedaten. Bitte wenden Sie sich an Ihre [!DNL LiveRamp] -Mitarbeiter, um Ihre Anmeldeinformationen zu erhalten, falls Sie noch nicht über diese verfügen.
+Um Daten von Experience Platform an [!DNL LiveRamp SFTP] senden zu können, benötigen Sie [!DNL LiveRamp]-Anmeldeinformationen. Wenden Sie sich an den für Sie zuständigen [!DNL LiveRamp]-Mitarbeiter bzw. -Mitarbeiterin, um Ihre Anmeldeinformationen zu beziehen, falls Sie noch nicht über diese verfügen.
 
 ## Unterstützte Identitäten {#supported-identities}
 
-LiveRamp SFTP unterstützt die Aktivierung von Identitäten wie PII-basierten Kennungen, bekannten Kennungen und benutzerdefinierten Kennungen, die im offiziellen Dokument beschrieben werden [LiveRamp-Dokumentation](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers).
+LiveRamp SFTP unterstützt die Aktivierung von Identitäten wie PII-basierten Kennungen, bekannten Kennungen und benutzerdefinierten IDs, die in der offiziellen [LiveRamp-Dokumentation](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers) beschrieben werden.
 
-Im [Zuordnungsschritt](#map) des Aktivierungs-Workflows müssen Sie die Zielgruppen-Mappings als benutzerdefinierte Attribute definieren.
+Im [Zuordnungsschritt](#map) des Aktivierungs-Workflows müssen Sie die Zielzuordnungen als benutzerdefinierte Attribute definieren.
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
@@ -46,7 +46,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
 | Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer oder sonstiges), die im [!DNL LiveRamp SFTP]-Ziel verwendet werden. |
-| Exporthäufigkeit | **[!UICONTROL Täglicher Batch]** | Da Profile in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert werden, werden die Profile (Identitäten) einmal täglich nachgelagert zur Zielplattform aktualisiert. Weitere Informationen finden Sie unter [Batch-Datei-basierte Ziele](/help/destinations/destination-types.md#file-based). |
+| Exporthäufigkeit | **[!UICONTROL Täglicher Batch]** | Da Profile in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert werden, werden die Profile (Identitäten) einmal täglich nachgelagert auf der Zielplattform aktualisiert. Weitere Informationen finden Sie unter [Batch-Datei-basierte Ziele](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -64,34 +64,34 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus
 
 **SFTP-Authentifizierung mit Passwort** {#sftp-password}
 
-![Screenshot eines Beispiels, in dem gezeigt wird, wie eine Authentifizierung am Ziel mithilfe von SFTP mit Kennwort erfolgt](../../assets/catalog/advertising/liveramp/liveramp-sftp-password.png)
+![Beispiel-Screenshot, der zeigt, wie eine Authentifizierung beim Ziel mithilfe von SFTP mit Passwort erfolgt](../../assets/catalog/advertising/liveramp/liveramp-sftp-password.png)
 
-* **[!UICONTROL Benutzername]**: Der Benutzername für Ihre [!DNL LiveRamp SFTP] Speicherort.
-* **[!UICONTROL Passwort]**: Das Kennwort für Ihre [!DNL LiveRamp SFTP] Speicherort.
-* **[!UICONTROL PGP/GPG-Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien Verschlüsselung hinzuzufügen. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der Abbildung unten. Wenn Sie einen Verschlüsselungsschlüssel bereitstellen, müssen Sie auch einen **[!UICONTROL Verschlüsselungs-Unterschlüssel-ID]** im [Zieldetails](#destination-details) Abschnitt.
+* **[!UICONTROL Benutzername]**: Der Benutzername für Ihren [!DNL LiveRamp SFTP]-Speicherort.
+* **[!UICONTROL Passwort]**: Das Passwort für Ihren [!DNL LiveRamp SFTP]-Speicherort.
+* **[!UICONTROL PGP/GPG-Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihre exportierten Dateien zu verschlüsseln. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung. Wenn Sie einen Verschlüsselungsschlüssel bereitstellen, müssen Sie auch eine **[!UICONTROL Verschlüsselungs-Unterschlüssel-ID]** im Abschnitt mit den [Zieldetails](#destination-details) angeben.
 
-   ![Bild, das ein Beispiel eines korrekt formatierten PGP-Schlüssels in der Benutzeroberfläche anzeigt](../../assets/catalog/advertising/liveramp/pgp-key.png)
+   ![Abbildung eines Beispiels für einen korrekt formatierten PGP-Schlüssel in der Benutzeroberfläche](../../assets/catalog/advertising/liveramp/pgp-key.png)
 
 **SFTP mit SSH-Schlüsselauthentifizierung** {#sftp-ssh}
 
-![Beispiel-Screenshot, der zeigt, wie eine Authentifizierung für das Ziel mithilfe des SSH-Schlüssels erfolgt](../../assets/catalog/advertising/liveramp/liveramp-sftp-ssh.png)
+![Beispiel-Screenshot, der zeigt, wie eine Authentifizierung beim Ziel mithilfe eines SSH-Schlüssels erfolgt](../../assets/catalog/advertising/liveramp/liveramp-sftp-ssh.png)
 
-* **[!UICONTROL Benutzername]**: Der Benutzername für Ihre [!DNL LiveRamp SFTP] Speicherort.
-* **[!UICONTROL SSH-Schlüssel]**: Der private [!DNL SSH] Schlüssel für die Anmeldung bei [!DNL LiveRamp SFTP] Speicherort. Der private Schlüssel muss als [!DNL Base64]-kodierte Zeichenfolge und dürfen nicht kennwortgeschützt sein.
+* **[!UICONTROL Benutzername]**: Der Benutzername für Ihren [!DNL LiveRamp SFTP]-Speicherort.
+* **[!UICONTROL SSH-Schlüssel]**: Der private [!DNL SSH]-Schlüssel für die Anmeldung bei Ihrem [!DNL LiveRamp SFTP]-Speicherort. Der private Schlüssel muss als eine [!DNL Base64]-verschlüsselte Zeichenfolge formatiert sein und darf nicht passwortgeschützt sein.
 
-   * Um eine Verbindung herzustellen [!DNL SSH] Schlüssel zum [!DNL LiveRamp SFTP] Server, müssen Sie ein Ticket über senden [!DNL LiveRamp]das Portal für technischen Support und stellen Sie Ihren öffentlichen Schlüssel bereit. Weitere Informationen finden Sie unter [LiveRamp-Dokumentation](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html#upload-with-an-sftp-client).
+   * Um Ihren [!DNL SSH]-Schlüssel mit dem [!DNL LiveRamp SFTP]-Server zu verbinden, müssen Sie ein Ticket über das [!DNL LiveRamp]-Portal für technischen Support einreichen und Ihren öffentlichen Schlüssel bereitstellen. Weitere Informationen finden Sie in der [LiveRamp-Dokumentation](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html#upload-with-an-sftp-client).
 
-* **[!UICONTROL PGP/GPG-Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien Verschlüsselung hinzuzufügen. Wenn Sie einen Verschlüsselungsschlüssel bereitstellen, müssen Sie auch einen **[!UICONTROL Verschlüsselungs-Unterschlüssel-ID]** im [Zieldetails](#destination-details) Abschnitt. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der Abbildung unten.
+* **[!UICONTROL PGP/GPG-Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihre exportierten Dateien zu verschlüsseln. Wenn Sie einen Verschlüsselungsschlüssel bereitstellen, müssen Sie auch eine **[!UICONTROL Verschlüsselungs-Unterschlüssel-ID]** im Abschnitt mit den [Zieldetails](#destination-details) angeben. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung.
 
-   ![Bild, das ein Beispiel eines korrekt formatierten PGP-Schlüssels in der Benutzeroberfläche anzeigt](../../assets/catalog/advertising/liveramp/pgp-key.png)
+   ![Abbildung eines Beispiels für einen korrekt formatierten PGP-Schlüssel in der Benutzeroberfläche](../../assets/catalog/advertising/liveramp/pgp-key.png)
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_subkey"
 >title="Verschlüsselungs-Unterschlüssel-ID"
->abstract="Die für die Verschlüsselung verwendete Unterschlüssel-ID, die auf dem öffentlichen LiveRamp-Verschlüsselungsschlüssel basiert. Dieses Feld ist erforderlich, wenn Sie im Authentifizierungsschritt einen Verschlüsselungsschlüssel bereitgestellt haben."
->additional-url="https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key" text="Erfahren Sie, wie Sie die Unterschlüssel-ID erhalten"
+>abstract="Die für die Verschlüsselung verwendete Unterschüssel-ID, die auf dem öffentlichen LiveRamp-Verschlüsselungsschlüssel basiert. Dieses Feld ist erforderlich, wenn Sie im Authentifizierungsschritt einen Verschlüsselungsschlüssel bereitgestellt haben."
+>additional-url="https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key" text="Erfahren Sie, wie Sie die Unterschlüssel-ID abrufen"
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
@@ -99,14 +99,14 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Ordnerpfad]**: Der Pfad zum [!DNL LiveRamp] `uploads` -Unterordner, in dem die exportierten Dateien gehostet werden. Die `uploads` -Präfix wird automatisch zum Ordnerpfad hinzugefügt.
-   * Wenn Sie beispielsweise Ihre Dateien in `uploads/my_export_folder`, Typ in `my_export_folder` im **[!UICONTROL Ordnerpfad]** -Feld.
-* **[!UICONTROL Komprimierungsformat]**: Wählen Sie den Komprimierungstyp aus, den die Experience Platform für die exportierten Dateien verwenden soll. Verfügbare Optionen sind **[!UICONTROL GZIP]** oder **[!UICONTROL Keines]**.
-* **[!UICONTROL Verschlüsselungs-Unterschlüssel-ID]**: Der für die Verschlüsselung verwendete Unterschlüssel, basierend auf der [!DNL LiveRamp] öffentlichen Verschlüsselungsschlüssel. Dieses Feld ist erforderlich, wenn Sie im [Authentifizierung](#authenticate) Schritt. Siehe [!DNL LiveRamp] [Verschlüsselungsdokumentation](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) , um zu erfahren, wie Sie die Subkey-ID abrufen.
+* **[!UICONTROL Ordnerpfad]**: Der Pfad zum [!DNL LiveRamp] `uploads`-Unterordner, in dem die exportierten Dateien gespeichert werden. Das `uploads`-Präfix wird automatisch zum Ordnerpfad hinzugefügt.
+   * Wenn Sie beispielsweise Ihre Dateien nach `uploads/my_export_folder` exportieren möchten, geben Sie `my_export_folder` in das Feld **[!UICONTROL Ordnerpfad]** ein.
+* **[!UICONTROL Komprimierungsformat]**: Wählen Sie den Komprimierungstyp aus, den Experience Platform für die exportierten Dateien verwenden soll. Verfügbare Optionen sind **[!UICONTROL GZIP]** oder **[!UICONTROL Keines]**.
+* **[!UICONTROL Verschlüsselungs-Unterschlüssel-ID]**: Der für die Verschlüsselung verwendete Unterschlüssel, basierend auf dem öffentlichen [!DNL LiveRamp]-Verschlüsselungsschlüssel. Dieses Feld ist erforderlich, wenn Sie im [Authentifizierungsschritt](#authenticate) einen Verschlüsselungsschlüssel bereitgestellt haben. Informationen zum Abrufen der Unterschlüssel-ID finden Sie in der [!DNL LiveRamp] [Verschlüsselungsdokumentation](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key).
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
-Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnungen finden Sie im Handbuch unter [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
+Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Warnhinweisen zu Zielen über die Benutzeroberfläche](../../ui/alerts.md).
 
 Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
 
@@ -116,30 +116,30 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klic
 > 
 >Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Lesen [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](/help/destinations/ui/activate-batch-profile-destinations.md) für Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel.
+Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ### Planung {#scheduling}
 
-Im [!UICONTROL Planung] erstellen Sie für jedes Segment einen Exportzeitplan mit den unten aufgeführten Einstellungen.
+Erstellen Sie im [!UICONTROL Planungsschritt] für jedes Segment einen Exportzeitplan mit den unten aufgeführten Einstellungen.
 
 >[!IMPORTANT]
 >
->Alle für dieses Ziel aktivierten Segmente müssen mit exakt demselben Zeitplan konfiguriert werden, wie unten dargestellt.
+>Alle für dieses Ziel aktivierten Segmente müssen mit identischem Zeitplan konfiguriert werden, wie unten dargestellt.
 
-* **[!UICONTROL Dateiexportoptionen]**: [!UICONTROL Exportieren von vollständigen Dateien]. [Inkrementelle Dateiexporte](../../ui/activate-batch-profile-destinations.md#export-incremental-files) werden derzeit nicht unterstützt für [!DNL LiveRamp] Ziel.
+* **[!UICONTROL Dateiexportoptionen]**: [!UICONTROL Exportieren Sie vollständige Dateien]. [Inkrementelle Dateiexporte](../../ui/activate-batch-profile-destinations.md#export-incremental-files) werden derzeit nicht für das [!DNL LiveRamp]-Ziel unterstützt.
 * **[!UICONTROL Häufigkeit]**: [!UICONTROL Täglich]
-* Festlegen der Exportzeit auf **[!UICONTROL Nach Segmentbewertung]**. Geplante Segmentexporte und [On-Demand-Dateiexporte](../../ui/export-file-now.md) werden derzeit nicht unterstützt für [!DNL LiveRamp] Ziel.
-* **[!UICONTROL Datum]**: Wählen Sie die Start- und Endzeiten des Exports nach Wunsch aus.
+* Stellen Sie die Exportzeit auf **[!UICONTROL Nach Segmentbewertung]** ein. Geplante Segmentexporte und [On-Demand-Dateiexporte](../../ui/export-file-now.md) werden derzeit nicht für das [!DNL LiveRamp]-Ziel unterstützt.
+* **[!UICONTROL Datum]**: Wählen Sie die Start- und Endzeiten für den Export wie gewünscht aus.
 
 ![Screenshot der Platform-Benutzeroberfläche mit dem Schritt zur Segmentplanung.](../../assets/catalog/advertising/liveramp/liveramp-segment-scheduling.png)
 
-Der exportierte Dateiname kann derzeit nicht vom Benutzer konfiguriert werden. Alle Dateien, die in die [!DNL LiveRamp SFTP] Ziel wird automatisch anhand der folgenden Vorlage benannt:
+Der Name der exportierten Datei kann derzeit nicht benutzerseitig konfiguriert werden. Alle an das [!DNL LiveRamp SFTP]-Ziel exportierten Dateien werden automatisch anhand der folgenden Vorlage benannt:
 
 `%ORGANIZATION_NAME%_%DESTINATION%_%DESTINATION_INSTANCE_ID%_%DATETIME%`
 
-![Screenshot der Platform-Benutzeroberfläche mit der Vorlage für den exportierten Dateinamen.](../../assets/catalog/advertising/liveramp/liveramp-file-name.png)
+![Screenshot der Platform-Benutzeroberfläche mit der Namensvorlage für exportierte Dateien.](../../assets/catalog/advertising/liveramp/liveramp-file-name.png)
 
-Beispielsweise der Name einer exportierten Datei für eine Organisation mit dem Namen [!DNL Luma] könnte in etwa wie folgt aussehen:
+Beispielsweise könnte der Name einer exportierten Datei für eine Organisation mit dem Namen [!DNL Luma] in etwa wie folgt aussehen:
 
 ```json
 Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
@@ -147,39 +147,39 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 
 ### Zuordnen von Attributen und Identitäten {#map}
 
-Im **[!UICONTROL Zuordnung]** Schritt, können Sie auswählen, welche Attribute und Identitäten Sie für Ihre Profile exportieren möchten.
+Im **[!UICONTROL Zuordnungsschritt]** können Sie auswählen, welche Attribute und Identitäten für Ihre Profile exportiert werden sollen.
 
 >[!IMPORTANT]
 >
->Dieses Ziel unterstützt die Aktivierung eines Quell-Identitäts-Namespace pro Aktivierungsfluss. Wenn Sie mehrere Identitäts-Namespaces exportieren müssen, z. B. `Email` und `Phone`, müssen Sie [Erstellen eines separaten Aktivierungsflusses](../../ui/activate-batch-profile-destinations.md) für jede Identität.
+>Dieses Ziel unterstützt die Aktivierung eines Quell-Identity-Namespace pro Aktivierungsfluss. Wenn Sie mehrere Identity-Namespaces exportieren müssen, z. B. `Email` und `Phone`, müssen Sie für jede Identität [einen separaten Aktivierungsfluss erstellen](../../ui/activate-batch-profile-destinations.md).
 
-Im **[!UICONTROL Zuordnung]** Schritt, die **[!UICONTROL Zielfeld]** -Zuordnung definiert den Namen der Spaltenüberschrift in der exportierten CSV-Datei. Sie können die CSV-Spaltenüberschriften in der exportierten Datei in einen beliebigen Anzeigenamen ändern, indem Sie einen benutzerdefinierten Namen für die **[!UICONTROL Zielfeld]**.
+Im **[!UICONTROL Zuordnungsschritt]** definiert die **[!UICONTROL Zielfeld]**-Zuordnung den Namen der Spaltenüberschrift in der exportierten CSV-Datei. Sie können die CSV-Spaltenüberschriften in der exportierten Datei in einen beliebigen Anzeigenamen ändern, indem Sie einen benutzerdefinierten Namen für das **[!UICONTROL Zielfeld]** angeben.
 
 1. Wählen Sie Im Schritt **[!UICONTROL Zuordnung]** die Option **[!UICONTROL Neue Zuordnung hinzufügen]** aus. Auf dem Bildschirm wird eine neue Zuordnungszeile angezeigt.
 
-   ![Bildschirme der Benutzeroberfläche der Experience Platform zeigen den Bildschirm &quot;Zuordnung&quot;.](../../assets/catalog/advertising/liveramp/liveramp-add-new-mapping.png)
+   ![Screenshot der Experience Platform-Benutzeroberfläche mit dem Bildschirm „Zuordnung“.](../../assets/catalog/advertising/liveramp/liveramp-add-new-mapping.png)
 
-2. Im **[!UICONTROL Quellfeld auswählen]** Fenster, wählen Sie die **[!UICONTROL Attribute auswählen]** und wählen Sie das XDM-Attribut aus, das Sie zuordnen möchten, oder wählen Sie die **[!UICONTROL Identitäts-Namespace auswählen]** und wählen Sie eine Identität aus, die Ihrem Ziel zugeordnet werden soll.
+2. Wählen Sie im Fenster **[!UICONTROL Quellfeld auswählen]** die Kategorie **[!UICONTROL Attribute auswählen]** und dann das XDM-Attribut aus, das Sie zuordnen möchten, oder wählen Sie die Kategorie **[!UICONTROL Identity-Namespace auswählen]** und dann eine Identität aus, die Ihrem Ziel zugeordnet werden soll.
 
-   ![Bildschirme der Experience Platform-Benutzeroberfläche zeigen den Bildschirm &quot;Quellzuordnung&quot;.](../../assets/catalog/advertising/liveramp/liveramp-source-mapping.png)
+   ![Screenshot der Experience Platform-Benutzeroberfläche mit dem Bildschirm für die Quellzuordnung.](../../assets/catalog/advertising/liveramp/liveramp-source-mapping.png)
 
-3. Im **[!UICONTROL Zielgruppenfeld auswählen]** eingeben, geben Sie den Attributnamen ein, dem Sie das ausgewählte Quellfeld zuordnen möchten. Der hier definierte Attributname spiegelt sich in der exportierten CSV-Datei als Spaltenüberschrift wider.
+3. Geben Sie im Fenster **[!UICONTROL Zielfeld auswählen]** den Attributnamen ein, dem Sie das ausgewählte Quellfeld zuordnen möchten. Der hier definierte Attributname spiegelt sich in der exportierten CSV-Datei als Spaltenüberschrift wider.
 
-   ![Bildschirme der Benutzeroberfläche der Experience Platform zeigen den Bildschirm Zielzuordnung an.](../../assets/catalog/advertising/liveramp/liveramp-target-mapping.png)
+   ![Screenshot der Experience Platform-Benutzeroberfläche mit dem Bildschirm für die Zielzuordnung.](../../assets/catalog/advertising/liveramp/liveramp-target-mapping.png)
 
-   Sie können den Attributnamen auch eingeben, indem Sie ihn direkt in die **[!UICONTROL Zielfeld]**.
+   Sie können den Attributnamen auch direkt in das **[!UICONTROL Zielfeld]** eingeben.
 
-   ![Bildschirme der Benutzeroberfläche der Experience Platform zeigen den Bildschirm Zielzuordnung an.](../../assets/catalog/advertising/liveramp/liveramp-target-field.png)
+   ![Screenshot der Experience Platform-Benutzeroberfläche mit dem Bildschirm für die Zielzuordnung.](../../assets/catalog/advertising/liveramp/liveramp-target-field.png)
 
-Nachdem Sie alle gewünschten Zuordnungen hinzugefügt haben, wählen Sie **[!UICONTROL Nächste]** und beenden Sie den Aktivierungs-Workflow.
+Wählen Sie nach dem Hinzufügen aller gewünschten Zuordnungen die Option **[!UICONTROL Weiter]** aus und beenden Sie den Aktivierungs-Workflow.
 
 ## Exportierte Daten/Datenexport validieren {#exported-data}
 
-Ihre Daten werden in die [!DNL LiveRamp SFTP] Speicherort, den Sie konfiguriert haben, als CSV-Dateien.
+Ihre Daten werden an den von Ihnen konfigurierten [!DNL LiveRamp SFTP]-Speicherort als CSV-Dateien exportiert.
 
-Beim Exportieren von Dateien in [!DNL LiveRamp SFTP] Ziel: Platform generiert für jede [Zusammenführungsrichtlinienkennung](../../../profile/merge-policies/overview.md).
+Beim Exportieren von Dateien an das [!DNL LiveRamp SFTP]-Ziel generiert Platform eine CSV-Datei für jede [Zusammenführungsrichtlinien-ID](../../../profile/merge-policies/overview.md).
 
-Betrachten wir beispielsweise die folgenden Segmente:
+Nehmen wir beispielsweise folgende Segmente an:
 
 * Segment A (Zusammenführungsrichtlinie 1)
 * Segment B (Zusammenführungsrichtlinie 2)
@@ -188,19 +188,19 @@ Betrachten wir beispielsweise die folgenden Segmente:
 
 Platform exportiert zwei CSV-Dateien nach [!DNL LiveRamp SFTP]:
 
-* Eine CSV-Datei mit den Segmenten A, C und D;
-* Eine CSV-Datei, die Segment B enthält.
+* eine CSV-Datei mit den Segmenten A, C und D;
+* eine CSV-Datei, die Segment B enthält.
 
-Exportierte CSV-Dateien enthalten Profile mit den ausgewählten Attributen und dem entsprechenden Segmentstatus in separaten Spalten mit dem Attributnamen und den Segment-IDs als Spaltenüberschriften.
+Exportierte CSV-Dateien enthalten Profile mit den ausgewählten Attributen und dem entsprechenden Segmentstatus in separaten Spalten, wobei der Attributname und die Segment-IDs als Spaltenüberschriften dienen.
 
 Die in den exportierten Dateien enthaltenen Profile können mit einem der folgenden Segmentqualifikationsstatus übereinstimmen:
 
 * `Active`: Das Profil ist derzeit für das Segment qualifiziert.
-* `Expired`: Das Profil ist nicht mehr für das Segment qualifiziert, hat sich jedoch in der Vergangenheit qualifiziert.
-* `""`(leere Zeichenfolge): Das Profil hat sich nie für das Segment qualifiziert.
+* `Expired`: Das Profil ist nicht mehr für das Segment qualifiziert, war jedoch in der Vergangenheit qualifiziert.
+* `""`(leere Zeichenfolge): Das Profil war nie für das Segment qualifiziert.
 
 
-Beispiel: eine exportierte CSV-Datei mit einer `email` -Attribut und drei Segmente könnten wie folgt aussehen:
+Eine exportierte CSV-Datei mit einem `email`-Attribut und drei Segmenten könnte beispielsweise wie folgt aussehen:
 
 ```csv
 email,aa2e3d98-974b-4f8b-9507-59f65b6442df,45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -212,19 +212,19 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-Da Platform eine CSV-Datei für jede [Zusammenführungsrichtlinienkennung](../../../profile/merge-policies/overview.md), generiert es außerdem einen separaten Datenfluss für jede Zusammenführungsrichtlinien-ID.
+Da Platform eine CSV-Datei für jede [Zusammenführungsrichtlinien-ID](../../../profile/merge-policies/overview.md) generiert, wird auch eine separate Datenflussausführung für jede Zusammenführungsrichtlinien-ID erzeugt.
 
-Das bedeutet, dass die Variable **[!UICONTROL Aktivierte Identitäten]** und **[!UICONTROL Vorgenommene Profile]** Metriken in [Datenfluss-Ausführung](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) -Seite werden für jede Gruppe von Segmenten aggregiert, die dieselbe Zusammenführungsrichtlinie verwenden, anstatt für jedes Segment angezeigt zu werden.
+Das bedeutet, dass die Metriken **[!UICONTROL Aktivierte Identitäten]** und **[!UICONTROL Empfangene Profile]** auf der Seite mit den [Datenflussausführungen](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) für jede Gruppe von Segmenten aggregiert werden, die dieselbe Zusammenführungsrichtlinie verwenden, und nicht für jedes Segment angezeigt werden.
 
-Infolge der Generierung von Datenfluss-Läufen für eine Gruppe von Segmenten, die dieselbe Zusammenführungsrichtlinie verwenden, werden die Segmentnamen nicht in der [Monitoring-Dashboard](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
+Infolge der generierten Datenflussausführungen für eine Gruppe von Segmenten, die dieselbe Zusammenführungsrichtlinie verwenden, werden die Segmentnamen nicht im [Monitoring-Dashboard](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) angezeigt.
 
-![Bildschirme der Experience Platform-Benutzeroberfläche zeigen die aktivierte Metrik der Identitäten an.](../../assets/catalog/advertising/liveramp/liveramp-metrics.png)
+![Screenshot der Experience Platform-Benutzeroberfläche mit der Metrik „Aktivierte Identitäten“.](../../assets/catalog/advertising/liveramp/liveramp-metrics.png)
 
-## Hochladen exportierter Daten in LiveRamp {#upload-to-liveramp}
+## Hochladen exportierter Daten nach LiveRamp {#upload-to-liveramp}
 
-Nachdem Ihre Daten erfolgreich in die [!DNL LiveRamp - SFTP] speichern, müssen Sie die Daten in die [!DNL LiveRamp] Plattform.
+Nach dem erfolgreichen Export Ihrer Daten in den [!DNL LiveRamp - SFTP]-Speicher müssen Sie die Daten in die [!DNL LiveRamp]-Plattform hochladen.
 
-Weitere Informationen zum Hochladen Ihrer Dateien aus dem [!DNL LiveRamp - SFTP] Speicher in [!DNL LiveRamp] Zielgruppe, siehe folgende Dokumentation: [Überlegungen zum Hochladen der ersten Datei in eine Zielgruppe](https://docs.liveramp.com/connect/en/considerations-when-uploading-the-first-file-to-an-audience.html#considerations-when-uploading-the-first-file-to-an-audience).
+Weitere Informationen zum Hochladen Ihrer Dateien aus dem [!DNL LiveRamp - SFTP]-Speicher in eine [!DNL LiveRamp]-Zielgruppe finden Sie in der Dokumentation mit [Hinweisen zum Hochladen der ersten Datei in eine Zielgruppe](https://docs.liveramp.com/connect/en/considerations-when-uploading-the-first-file-to-an-audience.html#considerations-when-uploading-the-first-file-to-an-audience).
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
@@ -232,4 +232,4 @@ Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Date
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-Weitere Informationen zum Konfigurieren des LiveRamp SFTP-Speichers finden Sie unter [amtliche Dokumentation](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html).
+Weitere Informationen zum Konfigurieren des LiveRamp-SFTP-Speichers finden Sie in der [offiziellen Dokumentation](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html).

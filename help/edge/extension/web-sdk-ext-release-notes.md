@@ -4,8 +4,8 @@ description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 source-git-commit: edd1745467a95804681b5d6c6d33458329641c39
 workflow-type: tm+mt
-source-wordcount: '1663'
-ht-degree: 96%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 96%
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zum SDK finden Sie in den [Versionshinweisen zum Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=de).
 
-## Version 2.17.0 - 25. April 2023
+## Version 2.17.0 – 25. April 2023
 
 **Neue Funktionen**
 
@@ -27,9 +27,9 @@ In diesem Dokument werden die Versionshinweise für die Adobe Experience Platfor
 
 * Es wurde ein Problem behoben, durch das beim Scrollen in Safari der Datastream-Selektor geschlossen wurde.
 
-## Version 2.16.1 - 14. April 2023
+## Version 2.16.1 – 14. April 2023
 
-* Es wurde ein Problem mit XDM-Objekt- und Variablen-Datenelementen behoben, bei dem Sie kein Schema aus einer nicht standardmäßigen Sandbox auswählen konnten.
+* Es wurde ein Problem mit XDM-Objekt- und -Variablen-Datenelementen behoben, durch das die Auswahl eines Schemas aus einer nicht standardmäßigen Sandbox verhindert wurde.
 
 ## Version 2.16.0 – 30. März 2023
 
