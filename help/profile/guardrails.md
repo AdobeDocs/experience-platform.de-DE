@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;Leitlinien;Richtlinien;Limit;Entität;primäre Entität;Dimensionsentität;
+keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;Leitplanken;Richtlinien;Limit;Entität;primäre Entität;Dimensionsentität;
 title: Standardmäßige Limits für Echtzeit-Kundenprofildaten
 solution: Experience Platform
 product: experience platform
 type: Documentation
 description: Adobe Experience Platform verwendet ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet. Dieses Dokument liefert standardmäßige Verwendungs- und Quotenbegrenzungen zur Hilfe bei der Modellierung Ihrer Profildaten, sodass eine optimale Systemleistung gewährleistet ist.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1c092cd66a8a96623359a0e56de76e2a3d077c8d
+source-git-commit: 8ee68e5416c28a08dffc358dad70055e9b4cdd28
 workflow-type: tm+mt
-source-wordcount: '1982'
-ht-degree: 89%
+source-wordcount: '1980'
+ht-degree: 88%
 
 ---
 
-# Standard-Leitlinien für [!DNL Real-Time Customer Profile]-Daten
+# Standard-Leitplanken für [!DNL Real-Time Customer Profile]-Daten
 
 Mit Adobe Experience Platform können Sie personalisierte kanalübergreifende Erlebnisse bereitstellen, die auf verhaltensbezogenen Einblicken und Kundenattributen in Form von Echtzeit-Kundenprofilen basieren. Um diesen neuen Ansatz bei Profilen zu unterstützen, verwendet Experience Platform ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet.
 
-Dieses Dokument liefert standardmäßige Verwendungs- und Quotenbegrenzungen zur Hilfe bei der Modellierung Ihrer Profildaten, sodass eine optimale Systemleistung gewährleistet ist. Bei der Überprüfung der folgenden Leitlinien wird davon ausgegangen, dass Sie die Daten korrekt modelliert haben. Wenden Sie sich bei Fragen zum Modellieren Ihrer Daten an Ihren Kundenbetreuer.
+Dieses Dokument liefert standardmäßige Verwendungs- und Quotenbegrenzungen zur Hilfe bei der Modellierung Ihrer Profildaten, sodass eine optimale Systemleistung gewährleistet ist. Bei der Überprüfung der folgenden Leitplanken wird davon ausgegangen, dass Sie die Daten korrekt modelliert haben. Wenden Sie sich bei Fragen zum Modellieren Ihrer Daten an Ihren Kundenbetreuer.
 
 >[!NOTE]
 >
@@ -48,9 +48,11 @@ In diesem Dokument gibt es zwei Arten von Standardbeschränkungen:
 
 Die folgenden Limits bieten empfohlene Einschränkungen bei der Modellierung von Echtzeit-Kundenprofildaten. Weitere Informationen zu primären Entitäten und Dimensionsentitäten finden Sie im Abschnitt zu [Entitätstypen](#entity-types) in der Anlage.
 
-### Leitlinien für primäre Entitäten
+![Ein Diagramm mit den verschiedenen Limits für Profildaten in Adobe Experience Platform.](./images/guardrails/profile-guardrails.png)
 
-| Beschränkung | Limit | Art von Limit | Beschreibung |
+### Leitplanken für primäre Entitäten
+
+| Leitplanke | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
 | XDM Individual Profile-Klassendatensätze | 20 | Weich | Es werden maximal 20 Datensätze empfohlen, die die XDM Individual Profile-Klasse nutzen. |
 | XDM ExperienceEvent-Klassendatensätze | 20 | Weich | Es werden maximal 20 Datensätze empfohlen, die die XDM ExperienceEvent-Klasse nutzen. |
@@ -61,29 +63,29 @@ Die folgenden Limits bieten empfohlene Einschränkungen bei der Modellierung von
 | Array-Kardinalität in ExperienceEvent | &lt;=10 | Soft | Die optimale Array-Kardinalität in ExperienceEvent (Zeitreihendaten) ist &lt;=10. |
 | Identitätsanzahl im Identitätsdiagramm eines einzelnen Profils | 50 | Hard | **Die maximale Anzahl von Identitäten in einem Identitätsdiagramm für ein einzelnes Profil ist 50.** Alle Profile mit mehr als 50 Identitäten sind von der Segmentierung, dem Export und der Suche ausgeschlossen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-### Leitlinien für Dimensionsentitäten
+### Leitplanken für Dimensionsentitäten
 
-| Beschränkung | Limit | Art von Limit | Beschreibung |
+| Leitplanke | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
 | Keine Zeitreihendaten zulässig für Nicht-[!DNL XDM Individual Profile]-Entitäten | 0 | Hart | **Zeitreihendaten sind für Nicht-[!DNL XDM Individual Profile]-Entitäten im Profil-Service nicht zulässig.** Wenn ein Zeitreihen-Datensatz mit einer Nicht-[!DNL XDM Individual Profile]-ID verknüpft ist, sollte der Datensatz nicht für [!DNL Profile] aktiviert sein. |
 | Keine verschachtelten Beziehungen | 0 | Weich | Sie sollten keine Beziehung zwischen zwei Nicht-[!DNL XDM Individual Profile]-Schemas erstellen. Die Möglichkeit, Beziehungen zu erstellen, wird für keine Schemas empfohlen, die nicht Teil des einheitlichen [!DNL Profile]-Schemas sind. |
 | JSON-Tiefe für primäres ID-Feld | 4 | Soft | Die empfohlene maximale JSON-Tiefe für das primäre ID-Feld ist 4. Das bedeutet, dass Sie in einem stark verschachtelten Schema kein Feld als primäre ID auswählen sollten, wenn es mehr als vier Ebenen tief verschachtelt ist. Ein Feld, das sich auf der vierten verschachtelten Ebene befindet, kann als primäre ID verwendet werden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Datengrößenbeschränkungen
 
-In den folgenden Leitlinien erhalten Sie Informationen zur Datengröße und zu empfohlenen Beschränkungen für Daten, um eine problemlose Aufnahme, Speicherung und Abfrage zu gewährleisten. Weitere Informationen zu primären Entitäten und Dimensionsentitäten finden Sie im Abschnitt zu [Entitätstypen](#entity-types) in der Anlage.
+Die folgenden Leitplanken beziehen sich auf die Datengröße und bieten empfohlene Grenzwerte für Daten, die wie vorgesehen aufgenommen, gespeichert und abgefragt werden können. Weitere Informationen zu primären Entitäten und Dimensionsentitäten finden Sie im Abschnitt zu [Entitätstypen](#entity-types) in der Anlage.
 
 >[!NOTE]
 >
 >Die Datengröße wird an den unkomprimierten Daten in JSON zum Zeitpunkt der Aufnahme gemessen.
 
-### Leitlinien für primäre Entitäten
+### Leitplanken für primäre Entitäten
 
-| Beschränkung | Limit | Art von Limit | Beschreibung |
+| Leitplanke | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
 | Maximale ExperienceEvent-Größe | 10 KB | Hard | **Die maximale Größe eines Ereignisses ist 10 KB.** Die Aufnahme wird fortgesetzt, jedoch werden alle Ereignisse, die größer als 10 KB sind, entfernt. |
 | Maximale Größe von Profildatensätzen | 100 KB | Hard | **Die maximale Größe eines einzelnen Profildatensatzes ist 100 MB.** Die Aufnahme wird fortgesetzt, jedoch werden Profildatensätze, die größer als 100 KB sind, entfernt. |
@@ -92,30 +94,30 @@ In den folgenden Leitlinien erhalten Sie Informationen zur Datengröße und zu e
 | Anzahl der täglich aufgenommenen Profil- oder ExperienceEvent-Batches | 90 | Soft | **Die maximale Anzahl von Profil- oder ExperienceEvent-Batches, die pro Tag aufgenommen werden, beträgt 90.** Das bedeutet, dass die Gesamtanzahl der pro Tag aufgenommenen Profil- und ExperienceEvent-Batches 90 nicht überschreiten darf. Das Aufnehmen zusätzlicher Batches beeinträchtigt die Systemleistung. |
 | Anzahl der ExperienceEvents pro Profildatensatz | 5.000 | Soft | **Die maximale Anzahl von ExperienceEvents pro Profildatensatz beträgt 5.000.** Profile mit mehr als 5000 ExperienceEvents werden **not** für die Segmentierung berücksichtigt werden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-### Leitlinien für Dimensionsentitäten
+### Leitplanken für Dimensionsentitäten
 
-| Beschränkung | Limit | Art von Limit | Beschreibung |
+| Leitplanke | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
 | Gesamtgröße für alle dimensionalen Entitäten | 5 GB | Weich | Die empfohlene Gesamtgröße für alle dimensionalen Entitäten beträgt 5 GB. Die Aufnahme großer Dimensionsentitäten kann die Systemleistung beeinträchtigen. Es wird beispielsweise nicht empfohlen, einen 10 GB großen Produktkatalog als Dimensionsentität zu laden. |
 | Datensätze pro Dimensionsentitätsschema | 5 | Weich | Es wird empfohlen, maximal 5 Datensätze mit jedem Dimensionsschema zu verknüpfen. Wenn Sie beispielsweise ein Schema für „Produkte“ erstellen und fünf beitragende Datensätze hinzufügen, sollten Sie keinen sechsten Datensatz erstellen, der mit dem Produktschema verknüpft ist. |
 | Dimensionsentitäts-Batches, die pro Tag aufgenommen werden | 4 pro Entität | Weich | Die empfohlene maximale Anzahl von Dimensionsentitäts-Batches, die pro Tag aufgenommen werden, beträgt 4 pro Entität. Sie können beispielsweise Aktualisierungen an einem Produktkatalog bis zu 4-mal täglich aufnehmen. Die Aufnahme zusätzlicher Dimensionsentitäts-Batches für dieselbe Entität kann sich auf die Systemleistung auswirken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Leitlinien für die Segmentierung
+## Leitplanken für die Segmentierung
 
-Die in diesem Abschnitt beschriebenen Leitlinien beziehen sich auf die Anzahl und Beschaffenheit der Segmente, die ein Unternehmen in Experience Platform erstellen kann, sowie auf die Zuordnung von Segmenten zu Zielen bzw. ihre Aktivierung für Ziele.
+Die in diesem Abschnitt beschriebenen Leitplanken beziehen sich auf die Anzahl und Beschaffenheit der Segmente, die ein Unternehmen in Experience Platform erstellen kann, sowie auf die Zuordnung von Segmenten zu Zielen bzw. ihre Aktivierung für Ziele.
 
-| Beschränkung | Limit | Art von Limit | Beschreibung |
+| Leitplanke | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
 | Segmente pro Sandbox | 4.000 | Soft | Eine Organisation kann insgesamt über mehr als 4000 Segmente verfügen, sofern in jeder einzelnen Sandbox weniger als 4000 Segmente vorhanden sind. Der Versuch, zusätzliche Segmente zu erstellen, kann sich auf die Systemleistung auswirken. |
 | Edge-Segmente pro Sandbox | 150 | Soft | Eine Organisation kann insgesamt über mehr als 150 Edge-Segmente verfügen, sofern in jeder einzelnen Sandbox weniger als 150 Edge-Segmente vorhanden sind. Der Versuch, zusätzliche Edge-Segmente zu erstellen, kann sich negativ auf die Systemleistung auswirken. |
 | Streaming-Segmente pro Sandbox | 500 | Soft | Eine Organisation kann insgesamt über mehr als 500 Streaming-Segmente verfügen, sofern in jeder einzelnen Sandbox weniger als 500 Streaming-Segmente vorhanden sind. Der Versuch, zusätzliche Streaming-Segmente zu erstellen, kann sich negativ auf die Systemleistung auswirken. |
 | Batch-Segmente pro Sandbox | 4.000 | Soft | Eine Organisation kann insgesamt über mehr als 4000 Batch-Segmente verfügen, sofern in jeder einzelnen Sandbox weniger als 4000 Batch-Segmente vorhanden sind. Der Versuch, zusätzliche Batch-Segmente zu erstellen, kann sich negativ auf die Systemleistung auswirken. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Anhang
 
@@ -145,7 +147,7 @@ Dimensionsentitäten stellen Suchdaten bereit, die Segmentdefinitionen mit mehre
 
 ### Profilfragmente
 
-In diesem Dokument gibt es mehrere Leitlinien, die auf „Profilfragmente“ verweisen. In der Experience Platform werden mehrere Profilfragmente zusammengeführt, um das Echtzeit-Kundenprofil zu bilden. Jedes Fragment stellt eine eindeutige primäre Identität und den entsprechenden Datensatz oder vollständigen Satz von Ereignisdaten für diese ID in einem bestimmten Datensatz dar. Weitere Informationen zu Profilfragmenten finden Sie in der [Profilübersicht](home.md#profile-fragments-vs-merged-profiles).
+In diesem Dokument gibt es mehrere Leitplanken, die sich auf „Profilfragmente“ beziehen. In der Experience Platform werden mehrere Profilfragmente zusammengeführt, um das Echtzeit-Kundenprofil zu bilden. Jedes Fragment stellt eine eindeutige primäre Identität und den entsprechenden Datensatz oder vollständigen Satz von Ereignisdaten für diese ID in einem bestimmten Datensatz dar. Weitere Informationen zu Profilfragmenten finden Sie in der [Profilübersicht](home.md#profile-fragments-vs-merged-profiles).
 
 ### Zusammenführungsrichtlinien {#merge-policies}
 
