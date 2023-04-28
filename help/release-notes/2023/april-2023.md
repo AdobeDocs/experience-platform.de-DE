@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise April 2023
 description: Versionshinweise April 2023 für Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
+source-git-commit: 3594b20ee495dadf91d745958eac1a06647cae24
 workflow-type: tm+mt
-source-wordcount: '1492'
+source-wordcount: '1662'
 ht-degree: 36%
 
 ---
@@ -110,6 +110,26 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 | Funktion | Beschreibung |
 | --- | --- |
 | Umschalten zwischen Anzeigenamen | Der Schema Editor bietet jetzt einen Schalter zum Ändern zwischen den ursprünglichen Feldnamen und den für Menschen lesbareren Anzeigenamen.<br>![Der Schema Editor mit dem Anzeigenamen wird hervorgehoben.](../../xdm/images/ui/resources/schemas/display-name-toggle.png "Anzeigename im Schema Editor umschalten"){width="100" zoomable="yes"}<br>Diese Flexibilität ermöglicht eine verbesserte Erkennung und Bearbeitung von Feldern Ihrer Schemata. Die Anzeigenamen für Standardfeldgruppen werden systemgeneriert, können aber bei Bedarf auch über die Benutzeroberfläche angepasst werden. Bitte lesen Sie die [Umschalten zwischen Anzeige-Namen und Dokumentation](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle) , um mehr zu erfahren. |
+
+{style="table-layout:auto"}
+
+**Neue XDM-Komponenten**
+
+| Typ der Komponente | Name | Beschreibung |
+| --- | --- | --- |
+| Schema | [[!UICONTROL Adobe Target-Klassifizierungsfelder]](https://github.com/adobe/xdm/pull/1719/files) | Ein neues XDM-Schema für Target Classification-Datensätze, das eine Reihe von Metadatenfeldern enthält, um Target-Aktivitäten und -Erlebnisse zu klassifizieren. |
+
+{style="table-layout:auto"}
+
+**Aktualisierte XDM-Komponenten**
+
+| Typ der Komponente | Name | Beschreibung |
+| --- | --- | --- |
+| Feldergruppe | [[!UICONTROL Adobe Unified Profile Service-Kontovereinigung-Erweiterung]](https://github.com/adobe/xdm/pull/1696/files) | Es wurde eine Feldergruppe zur Kontoerweiterung für das Echtzeit-Kundenprofil hinzugefügt, mit der Benutzer eine Segmentmitgliedschaft zur Kontounion hinzufügen können. |
+| Schema | [[!UICONTROL Systemschema für berechnete Attribute]](https://github.com/adobe/xdm/pull/1696/files) | Die Feldergruppe Berechnete Attribute , die vom Echtzeit-Kundenprofil verwendet wird, wurde in ein schreibgeschütztes globales Schema des Systems aktualisiert. |
+| Feldergruppe | Mehrfach | Es wurden mehrere Ereignisse als Felder für [[!UICONTROL Zeitreihenschema]](https://github.com/adobe/xdm/pull/1718/files). |
+| Feldergruppe | Details zur Profilloyalität | [Titel korrigiert](https://github.com/adobe/xdm/pull/1717/files) für `xdm:upgradeDate` von &quot;Programmname&quot;zu &quot;Upgrade-Datum&quot;. |
+| Feldergruppe | Mehrfach | Mehrere Felder aus [[!UICONTROL Entscheidungselement]](https://github.com/adobe/xdm/pull/1714/files) wurden aktualisiert, um die doppelte verschachtelte Hierarchie zu entfernen. |
 
 {style="table-layout:auto"}
 
