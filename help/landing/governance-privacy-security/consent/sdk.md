@@ -2,10 +2,10 @@
 title: Verarbeiten von Kundeneinwilligungsdaten mit dem Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie das Adobe Experience Platform Web SDK integrieren, um Kundeneinwilligungsdaten in Adobe Experience Platform zu verarbeiten.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: dc269f952d0970cb5be1b28ab91c6006de975df3
 workflow-type: tm+mt
-source-wordcount: '1375'
-ht-degree: 2%
+source-wordcount: '1349'
+ht-degree: 3%
 
 ---
 
@@ -28,13 +28,13 @@ Dieses Handbuch folgt dem Workflow zum Einrichten des SDK mithilfe der Tag-Erwei
 * [Installieren des SDK](../../../edge/fundamentals/installing-the-sdk.md)
 * [Konfigurieren des SDK für Zustimmungsbefehle](../../../edge/consent/supporting-consent.md)
 
-Die Installationsschritte in diesem Handbuch erfordern ein Verständnis der Tag-Erweiterungen und deren Installation in Webanwendungen. Weitere Informationen finden Sie in der folgenden Dokumentation:
+Die Installationsschritte in diesem Handbuch erfordern ein Verständnis der Tag-Erweiterungen und deren Installation in Webanwendungen. Weiterführende Informationen finden Sie in der folgenden Dokumentation:
 
 * [Übersicht über Tags](../../../tags/home.md)
 * [Schnellstartanleitung](../../../tags/quick-start/quick-start.md)
 * [Veröffentlichungsübersicht](../../../tags/ui/publishing/overview.md)
 
-## Einrichten eines Datastreams
+## Einrichten eines Datenstroms
 
 Damit das SDK Daten an Experience Platform senden kann, müssen Sie zunächst einen Datenspeicher konfigurieren. Wählen Sie in der Datenerfassungs-Benutzeroberfläche oder der Benutzeroberfläche &quot;Experience Platform&quot;die Option **[!UICONTROL Datenspeicher]** in der linken Navigation.
 
@@ -45,7 +45,6 @@ Nachdem Sie einen neuen Datensatz erstellt oder einen vorhandenen ausgewählt ha
 | Datenspeicherfeld | Wert |
 | --- | --- |
 | [!UICONTROL Sandbox] | Der Name der Plattform [Sandbox](../../../sandboxes/home.md) , die die erforderliche Streaming-Verbindung und Datensätze zum Einrichten des Datastreams enthält. |
-| [!UICONTROL Streaming-Inlet] | Eine gültige Streaming-Verbindung für die Experience Platform. Siehe Tutorial zu [Erstellen einer Streaming-Verbindung](../../../ingestion/tutorials/create-streaming-connection-ui.md) , wenn Sie keinen Streaming-Inlet haben. |
 | [!UICONTROL Ereignis-Datensatz] | Ein [!DNL XDM ExperienceEvent] Datensatz, an den Sie Ereignisdaten mit dem SDK senden möchten. Sie müssen zwar einen Ereignis-Datensatz bereitstellen, um einen Platform-Datenspeicher zu erstellen, beachten Sie jedoch, dass über Ereignisse gesendete Zustimmungsdaten in nachgelagerten Durchsetzungs-Workflows nicht berücksichtigt werden. |
 | [!UICONTROL Profildatensatz] | Die [!DNL Profile]-aktivierter Datensatz mit von Ihnen erstellten Feldern zur Kundenzustimmung [früher](#prerequisites). |
 
