@@ -3,10 +3,11 @@ title: Verschlüsselte Datenaufnahme
 description: Mit Adobe Experience Platform können Sie verschlüsselte Dateien über Cloud-Speicher-Batch-Quellen aufnehmen.
 hide: true
 hidefromtoc: true
-source-git-commit: a1babf70a7a4e20f3e535741c95ac927597c9f48
+exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
+source-git-commit: 8531459da97be648d0a63ffc2af77ce41124585d
 workflow-type: tm+mt
 source-wordcount: '967'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -24,7 +25,7 @@ Die verschlüsselte Datenaufnahme läuft wie folgt ab:
 
 >[!IMPORTANT]
 >
->Die maximale Größe einer einzelnen verschlüsselten Datei beträgt 100 MB. Sie können beispielsweise Daten im Wert von 2 GB in einem einzelnen Datenfluss aufnehmen, jedoch darf jede einzelne Datei in diesen Daten nicht größer als 100 MB sein.
+>Die maximale Größe einer einzelnen verschlüsselten Datei beträgt 1 GB. Sie können beispielsweise Daten im Wert von 2 GB in einem einzigen Datenfluss erfassen, jedoch darf jede einzelne Datei in diesen Daten 1 GB nicht überschreiten.
 
 In diesem Dokument wird beschrieben, wie Sie ein Verschlüsselungsschlüsselpaar zum Verschlüsseln Ihrer Daten generieren und diese verschlüsselten Daten mithilfe von Cloud-Speicherquellen in Experience Platform aufnehmen.
 
