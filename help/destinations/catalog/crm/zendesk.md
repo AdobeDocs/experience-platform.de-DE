@@ -2,10 +2,10 @@
 title: Zendesk-Verbindung
 description: Mit dem Zendesk-Ziel können Sie Ihre Kontodaten exportieren und innerhalb von Zendesk für Ihre geschäftlichen Anforderungen aktivieren.
 last-substantial-update: 2023-03-14T00:00:00Z
-source-git-commit: 3197eddcf9fef2870589fdf9f09276a333f30cd1
+source-git-commit: 55f1eafa68124b044d20f8f909f6238766076a7a
 workflow-type: tm+mt
-source-wordcount: '1340'
-ht-degree: 60%
+source-wordcount: '1471'
+ht-degree: 52%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 60%
 
 [[!DNL Zendesk]](https://www.zendesk.de) ist eine Kunden-Service-Lösung und ein Vertriebswerkzeug.
 
-Diese [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt die [[!DNL Zendesk] Kontakt-API](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/), um Identitäten innerhalb eines Segments als Kontakte innerhalb von zu erstellen und zu aktualisieren [!DNL Zendesk].
+Diese [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt die [[!DNL Zendesk] Kontakt-API](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/), um **Erstellen und Aktualisieren von Identitäten** innerhalb eines Segments als Kontakte innerhalb [!DNL Zendesk].
 
 [!DNL Zendesk] verwendet Trägertoken als Authentifizierungsmechanismus für die Kommunikation mit dem [!DNL Zendesk] Kontaktiert die API. Anweisungen zur Authentifizierung bei Ihrer [!DNL Zendesk]-Instanz sehen Sie weiter unten im Abschnitt [Authentifizieren bei Ziel](#authenticate).
 
 ## Anwendungsbeispiele {#use-cases}
 
-Als Marketing-Experte können Sie Ihren Benutzern personalisierte Erlebnisse auf der Basis von Attributen aus ihren Adobe Experience Platform-Profilen bereitstellen. Sie können Segmente aus Ihren Offline-Daten erstellen und diese Segmente an [!DNL Zendesk] senden, damit sie in den Feeds der Benutzer angezeigt werden, sobald Segmente und Profile in Adobe Experience Platform aktualisiert werden.
+Die Kundendienstabteilung einer mehrkanaligen B2C-Plattform möchte für ihre Kunden ein nahtloses personalisiertes Erlebnis gewährleisten. Die Abteilung kann Segmente aus eigenen Offline-Daten erstellen, um neue Benutzerprofile zu erstellen oder vorhandene Profilinformationen aus verschiedenen Interaktionen zu aktualisieren (z. B. Käufe, Rückgaben usw.). und senden Sie diese Segmente von Adobe Experience Platform an [!DNL Zendesk]. Aktualisierte Informationen finden Sie unter [!DNL Zendesk] stellt sicher, dass der Kundendienstmitarbeiter sofort über die neuesten Informationen des Kunden verfügt, was schnellere Antworten und eine schnellere Lösung ermöglicht.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -118,17 +118,15 @@ Um Ihre XDM-Felder den [!DNL Zendesk]-Zielfeldern korrekt zuzuordnen, führen Si
 
 1. Wählen Sie Im Schritt **[!UICONTROL Zuordnung]** die Option **[!UICONTROL Neue Zuordnung hinzufügen]** aus. Auf dem Bildschirm wird eine neue Zuordnungszeile angezeigt.
 1. Im **[!UICONTROL Quellfeld auswählen]** Fenster, wählen Sie die **[!UICONTROL Attribute auswählen]** und wählen Sie das XDM-Attribut aus oder wählen Sie die **[!UICONTROL Identitäts-Namespace auswählen]** und wählen Sie eine Identität aus.
-1. Im **[!UICONTROL Zielgruppenfeld auswählen]** Fenster, wählen Sie die **[!UICONTROL Identitäts-Namespace auswählen]** und wählen Sie eine Identität oder **[!UICONTROL Benutzerdefinierte Attribute auswählen]** und wählen Sie nach Bedarf ein Attribut aus.
-   * Wiederholen Sie diese Schritte, um die folgenden Zuordnungen zwischen Ihrem XDM-Profilschema und Ihrem [!DNL Zendesk] instance: |Quellfeld|Zielfeld| Erforderlich| |—|—|—| |`xdm: person.name.lastName`|`Attribute: last_name` <br>oder `Attribute: name`| Ja | |`IdentityMap: Email`|`Identity: email`| Ja |
+1. Im **[!UICONTROL Zielgruppenfeld auswählen]** Fenster, wählen Sie die **[!UICONTROL Identitäts-Namespace auswählen]** und wählen Sie eine Zielidentität aus oder wählen Sie die **[!UICONTROL Attribute auswählen]** und wählen Sie eines der unterstützten Schemaattribute aus.
+   * Wiederholen Sie diese Schritte, um die folgenden obligatorischen Zuordnungen hinzuzufügen. Sie können auch alle anderen Attribute hinzufügen, die Sie zwischen Ihrem XDM-Profilschema und Ihrem [!DNL Zendesk] instance: |Quellfeld|Zielfeld| Erforderlich| |—|—|—| |`xdm: person.name.lastName`|`xdm: last_name`| Ja | |`IdentityMap: Email`|`Identity: email`| Ja | |`xdm: person.name.firstName`|`xdm: first_name`| |
 
    * Nachfolgend finden Sie ein Beispiel für die Verwendung dieser Zuordnungen:
       ![Screenshot der Platform-Benutzeroberfläche mit Attributzuordnungen.](../../assets/catalog/crm/zendesk/mappings.png)
 
-      >[!IMPORTANT]
-      >
-      >Die Zielfeldzuordnungen sind obligatorisch und für [!DNL Zendesk] arbeiten.
-      >
-      >Die Zuordnung für *Nachname* oder *Name* ist erforderlich, andernfalls wird [!DNL Zendesk] Die API reagiert nicht mit einem Fehler und übergebene Attributwerte werden ignoriert.
+>[!IMPORTANT]
+>
+>Die `Attribute: last_name` und `Identity: email` Zielgruppen-Mappings sind für dieses Ziel obligatorisch. Wenn diese Zuordnungen fehlen, werden alle anderen Zuordnungen ignoriert und nicht an gesendet [!DNL Zendesk].
 
 Wenn Sie mit der Bereitstellung der Zuordnungen für Ihre Zielverbindung fertig sind, wählen Sie **[!UICONTROL Nächste]**.
 
@@ -167,3 +165,18 @@ Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Date
 Weitere nützliche Informationen aus der [!DNL Zendesk]Dokumentation finden Sie im Folgenden:
 * [Erstmaliger Aufruf](https://developer.zendesk.com/documentation/sales-crm/first-call/)
 * [Benutzerdefinierte Felder](https://developer.zendesk.com/api-reference/sales-crm/requests/#custom-fields)
+
+### Änderungsprotokoll
+
+In diesem Abschnitt werden die Funktionen und wesentlichen Aktualisierungen der Dokumentation an diesem Ziel-Connector erfasst.
+
++++ Anzeigen von changelog
+
+| Veröffentlichungsmonat | Aktualisierungstyp | Beschreibung |
+|---|---|---|
+| April 2023 | Aktualisierung der Dokumentation | <ul><li>Wir haben die [Anwendungsfälle](#use-cases) -Abschnitt mit einem klareren Beispiel dafür, wann Kunden von der Verwendung dieses Ziels profitieren würden.</li> <li>Wir haben die [Mapping](#mapping-considerations-example) , um die richtigen erforderlichen Zuordnungen widerzuspiegeln. Die `Attribute: last_name` und `Identity: email` Zielgruppen-Mappings sind für dieses Ziel obligatorisch. Wenn diese Zuordnungen fehlen, werden alle anderen Zuordnungen ignoriert und nicht an gesendet [!DNL Zendesk].</li> <li>Wir haben die [Mapping](#mapping-considerations-example) mit klaren Beispielen für obligatorische und optionale Zuordnungen.</li></ul> |
+| März 2023 | Erstmalige Veröffentlichung | Erste Zielversion und Veröffentlichung der Dokumentation. |
+
+{style="table-layout:auto"}
+
++++
