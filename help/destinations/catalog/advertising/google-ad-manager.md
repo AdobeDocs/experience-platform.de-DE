@@ -6,7 +6,7 @@ exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
 source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
 workflow-type: tm+mt
 source-wordcount: '938'
-ht-degree: 82%
+ht-degree: 84%
 
 ---
 
@@ -75,7 +75,7 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tut
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam_appendSegmentID"
->title="Segment-ID an Segmentname anhängen"
+>title="Segment-ID an Segmentname anfügen"
 >abstract="Wählen Sie diese Option, damit der Segmentname in Google Ad Manager die Segment-ID aus Experience Platform wie folgt enthält: `Segment Name (Segment ID)`"
 
 Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:

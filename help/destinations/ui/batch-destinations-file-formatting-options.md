@@ -5,7 +5,7 @@ exl-id: f59b1952-e317-40ba-81d1-35535e132a72
 source-git-commit: b1e9b781f3b78a22b8b977fe08712d2926254e8c
 workflow-type: tm+mt
 source-wordcount: '1214'
-ht-degree: 41%
+ht-degree: 54%
 
 ---
 
@@ -153,9 +153,9 @@ Zeigen Sie die folgenden Beispiele des Inhalts aus exportierten CSV-Dateien mit 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_compressionFormat"
 >title="Komprimierungsformat"
->abstract="Legt fest, welcher Komprimierungstyp beim Speichern von Daten in einer Datei verwendet werden soll. Unterstützte Optionen sind GZIP und KEINE. In der Dokumentation finden Sie Beispiele für jede Auswahl."
+>abstract="Legt den Komprimierungstyp zum Speichern von Daten in einer Datei fest. Unterstützte Optionen sind GZIP und KEINE. In der Dokumentation finden Sie Beispiele für jede Auswahl."
 
-Legt fest, welcher Komprimierungstyp beim Speichern von Daten in einer Datei verwendet werden soll. Unterstützte Optionen sind GZIP und KEINE. Diese Option bestimmt, ob Sie komprimierte Dateien exportieren.
+Legt den Komprimierungstyp zum Speichern von Daten in einer Datei fest. Unterstützte Optionen sind GZIP und KEINE. Diese Option bestimmt, ob Sie komprimierte Dateien exportieren.
 
 ### Codierung
 

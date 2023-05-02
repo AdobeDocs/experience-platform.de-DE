@@ -5,7 +5,7 @@ exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
 source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
 workflow-type: tm+mt
 source-wordcount: '974'
-ht-degree: 80%
+ht-degree: 83%
 
 ---
 
@@ -85,7 +85,7 @@ Weitere Informationen zu diesen Werten finden Sie im Handbuch [HMAC-Schlüssel f
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="Segment-ID an Segmentname anhängen"
+>title="Segment-ID an Segmentname anfügen"
 >abstract="Wählen Sie diese Option aus, damit der Segmentname in Google Ad Manager 360 die Segment-ID aus Experience Platform wie folgt enthält: `Segment Name (Segment ID)`"
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
