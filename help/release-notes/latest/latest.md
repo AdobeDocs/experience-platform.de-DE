@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise April 2023 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 3594b20ee495dadf91d745958eac1a06647cae24
+source-git-commit: da28de44fc8ab37d530c2f9b3c167e365f00dca6
 workflow-type: tm+mt
-source-wordcount: '1661'
-ht-degree: 36%
+source-wordcount: '1841'
+ht-degree: 34%
 
 ---
 
@@ -20,6 +20,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [Datenerfassung](#data-collection)
 - [Ziele](#destinations)
 - [Experience-Datenmodell](#xdm)
+- [Real-Time Customer Data Platform](#rtcdp)
 - [Echtzeit-Kundenprofil](#profile)
 - [Quellen](#sources)
 
@@ -134,6 +135,19 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 {style="table-layout:auto"}
 
 Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md).
+
+## Real-Time Customer Data Platform
+
+Basierend auf Experience Platform, Real-time Customer Data Platform ([!DNL Real-Time CDP]) hilft Unternehmen, bekannte und unbekannte Daten zusammenzuführen, um Kundenprofile durch intelligente Entscheidungen auf der gesamten Journey zu aktivieren. [!DNL Real-Time CDP] kombiniert mehrere Unternehmensdatenquellen, um Kundenprofile in Echtzeit zu erstellen. Segmente, die aus diesen Profilen erstellt wurden, können dann an nachgelagerte Ziele gesendet werden, um eine Eins-zu-Eins-Kundenerfahrung über alle Kanäle und Geräte hinweg bereitzustellen.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Erweiterte Real-Time CDP-Startseite | Die [Real-Time CDP-Homepage](https://experience.adobe.com) wurde um einen aktualisierten Look und eine verbesserte Leistung erweitert. Die Startseite ist jetzt berechtigungsorientiert und enthält Widgets, die für die Funktionen relevant sind, auf die Sie Zugriff haben. Weitere Informationen finden Sie im Abschnitt [Übersicht über das Dashboard der Real-Time CDP-Startseite](../../rtcdp/home-page-dashboards.md). |
+| Umfrage zur Selbstidentifizierung | Die Umfrage zur Selbstidentifizierung ist ein kurzer Fragebogen, der auf der Startseite der Adobe Experience Platform-Benutzeroberfläche vorgestellt wird. Verwenden Sie die Umfrage zur Identifizierung Ihrer Experience Platform, um Ihr persönliches Profil zu erstellen und auf Ihre Auswahl abgestimmte Richtlinien zu erhalten. Weitere Informationen finden Sie im Abschnitt [Selbstidentifizierungs-Umfrage - Überblick](../../landing/self-identification.md). |
+
+Weitere Informationen finden Sie unter [!DNL Real-Time CDP], siehe [[!DNL Real-Time CDP] Übersicht](../../rtcdp/overview.md).
 
 ## Echtzeit-Kundenprofil {#profile}
 
