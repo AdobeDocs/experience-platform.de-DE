@@ -32,7 +32,7 @@ Datastreams bietet drei Methoden, die Sie bei der sicheren Verarbeitung vertraul
 
 * [Verbesserte Verschlüsselung](#encryption)
 * [Data Governance](#governance)
-* [Auditprotokolle](#audit-logs)
+* [Audit-Protokolle](#audit-logs)
 
 ### Verbesserte Verschlüsselung {#encryption}
 
@@ -56,7 +56,7 @@ Wenn beim Erstellen eines neuen Datastreams das ausgewählte Schema vertrauliche
 
 Wenn ein Schema in einem vorhandenen Datastream mit nicht HIPAA-fähigen Diensten verwendet wird, führt der Versuch, dem Schema eine Beschriftung zur sensiblen Datennutzung hinzuzufügen, zu einer Richtlinienverletzungsmeldung und die Aktion wird verhindert. Die Meldung gibt an, welcher Datastream den Verstoß ausgelöst hat, und schlägt vor, alle nicht HIPAA-fähigen Dienste aus dem Datastream zu entfernen, um das Problem zu beheben.
 
-### Auditprotokolle
+### Audit-Protokolle
 
 In Experience Platform können Datastream-Aktivitäten in Form von Prüfprotokollen überwacht werden. Ein Auditprotokoll teilt **who** ausgeführt **what** Aktion und **when**, zusammen mit anderen Kontextdaten, die Ihnen bei der Fehlerbehebung von Problemen im Zusammenhang mit Datastreams helfen können, damit Ihr Unternehmen die Richtlinien zur Unternehmensdatenverwaltung und die gesetzlichen Vorschriften einhalten kann.
 

@@ -7,7 +7,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
 workflow-type: tm+mt
 source-wordcount: '7929'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -223,7 +223,7 @@ ht-degree: 4%
 
 **Ereignis**: Im Kontext von Tags ist ein Ereignis ein bestimmter Regeltyp, d. h. ein Trigger, der auf einem Client-Gerät auftritt, um die Ausführung einer Regel zu starten.
 
-**Ereignisentitäten**: Im Rahmen der Datenmodellierung stellen Ereignisentitäten Konzepte dar, die sich auf Aktionen beziehen, die ein Kunde ausführen kann, Systemereignisse oder andere Konzepte, bei denen Sie Änderungen im Zeitverlauf verfolgen möchten. Stellen, die unter diese Kategorie fallen, sollten anhand der [!DNL XDM ExperienceEvent] -Klasse.
+**Ereignisentitäten**: Im Rahmen der Datenmodellierung stellen Ereignisentitäten Konzepte dar, die sich auf Aktionen beziehen, die ein Kunde ausführen kann, Systemereignisse oder andere Konzepte, bei denen Sie Änderungen im Zeitverlauf verfolgen möchten. Entitäten, die unter diese Kategorie fallen, sollten durch Schemata auf Basis der [!DNL XDM ExperienceEvent]-Klasse dargestellt werden.
 
 **Veranstaltungen**: Ereignisse sind die mit einem Profil verknüpften Verhaltensdaten.
 
@@ -263,7 +263,7 @@ ht-degree: 4%
 
 **DSGVO (Datenschutz-Grundverordnung)**: Die Datenschutz-Grundverordnung (DSGVO) ist ein Rechtsrahmen, der Richtlinien für die Erhebung und Verarbeitung personenbezogener Daten von Personen in der Europäischen Union (EU) festlegt. Die DSGVO legt die Grundsätze für das Datenmanagement und die Rechte des Einzelnen fest und erfasst alle Unternehmen, die mit den Daten von EU-Bürgern zu tun haben.
 
-**Schutzschilde**: Limits sind Schwellenwerte, die die Datennutzung und Systemnutzung, Leistungsoptimierung und Vermeidung von Fehlern oder unerwarteten Ergebnissen in Adobe Experience Platform unterstützen. Leitlinien können sich auf Ihre Nutzung oder Verwendung von Daten und Verarbeitung im Zusammenhang mit Ihren Lizenzierungsberechtigungen beziehen.
+**Schutzschilde**: Limits sind Schwellenwerte, die die Datennutzung und Systemnutzung, Leistungsoptimierung und Vermeidung von Fehlern oder unerwarteten Ergebnissen in Adobe Experience Platform unterstützen. Leitplanken können sich auf Ihre Nutzung oder Verwendung von Daten und Verarbeitung im Zusammenhang mit Ihren Lizenzierungsberechtigungen beziehen.
 
 ## H
 
@@ -409,7 +409,7 @@ ht-degree: 4%
 
 **Profildatenspeicher**: Der Profildatenspeicher (manchmal auch als Profilspeicher bezeichnet) ist ein vom Daten-Pool getrenntes Datenspeichersystem, das vom Echtzeit-Kundenprofil zum Erstellen und Speichern von Profilen verwendet wird.
 
-**Profilentitäten**: Profilentitäten stellen Attribute dar, die sich auf eine einzelne Person beziehen, normalerweise einen Kunden. Stellen, die unter diese Kategorie fallen, sollten anhand der [!DNL XDM Individual Profile] -Klasse. Siehe auch: Profilzugriff
+**Profilentitäten**: Profilentitäten stellen Attribute dar, die sich auf eine einzelne Person beziehen, normalerweise einen Kunden. Entitäten, die unter diese Kategorie fallen, sollten durch Schemata auf Basis der [!DNL XDM Individual Profile]-Klasse dargestellt werden. Siehe auch: Profilzugriff
 
 **Profilexport**: [!DNL Profile] Der Export ist einer der beiden Zieltypen in der Experience Platform. [!DNL Profile] export erzeugt eine Datei mit Profilen und Attributen und verwendet rohe PII-Daten mit E-Mail, um sie in Marketing- und E-Mail-Automatisierungsplattformen zu integrieren.
 
