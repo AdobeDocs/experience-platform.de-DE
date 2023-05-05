@@ -5,24 +5,24 @@ title: Ablauf von Daten pseudonymer Profile
 description: Dieses Dokument enthält allgemeine Anleitungen zum Konfigurieren des Ablaufs von Daten pseudonymer Profile in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 source-git-commit: 07ed7eb9644b2e8cc4da02743c48037afc247614
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '912'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
-# Datenablauf bei Pseudonymen Profilen
+# Ablauf von Daten pseudonymer Profile
 
-In Adobe Experience Platform können Sie Ablaufzeiten für Pseudonyme Profile konfigurieren, sodass Sie automatisch Daten aus dem Profilspeicher entfernen können, die für Ihre Anwendungsfälle nicht mehr gültig oder nützlich sind.
+In Adobe Experience Platform können Sie Ablaufzeiten für pseudonyme Profile konfigurieren, sodass Sie automatisch Daten aus dem Profilspeicher entfernen lassen können, die für Ihre Anwendungsfälle nicht mehr gültig oder nützlich sind.
 
-## Pseudonym-Profil {#pseudonymous-profile}
+## Pseudonymes Profil {#pseudonymous-profile}
 
-Ein Profil wird für den Ablauf von Pseudonymen Daten berücksichtigt, wenn es die folgenden Bedingungen erfüllt:
+Ein Profil kommt für den Ablauf von pseudonymen Daten infrage, wenn es die folgenden Bedingungen erfüllt:
 
 - Die Identity-Namespaces des zugeordneten Profils stimmen mit denen überein, die der Kunde als pseudonymen oder unbekannten Identity-Namespace angegeben hat.
    - Wenn beispielsweise der Identity-Namespace des Profils `ECID`, `GAID` oder `AAID` ist. Das zusammengefügte Profil hat keine IDs aus einem anderen Identity-Namespace. In diesem Beispiel hat ein zusammengefügtes Profil **keine** E-Mail- oder CRM-Identität.
 - In einem benutzerdefinierten Zeitraum hat keine Aktivität stattgefunden. Aktivität wird entweder durch alle erfassten Erlebnisereignisse oder durch von Kunden initiierte Aktualisierungen der Profilattribute definiert.
-   - Beispielsweise wird ein neues Seitenansichtsereignis oder eine Aktualisierung des Seitenattributs als Aktivität angesehen. Eine nicht vom Benutzer initiierte Aktualisierung der Segmentzugehörigkeit wird jedoch **nicht** als Aktivität angesehen. Zur Berechnung des Datenablaufs basiert das Tracking auf Profilebene derzeit auf dem Zeitpunkt des Ereignisses für Erlebnisereignisse und dem Zeitpunkt der Aufnahme für Profilattribute.
+   - Beispielsweise wird ein neues Seitenansichtsereignis oder eine Aktualisierung des Seitenattributs als Aktivität angesehen. Eine nicht vom Benutzer initiierte Aktualisierung der Segmentzugehörigkeit wird jedoch **nicht** als Aktivität angesehen. Zur Berechnung des Datenablaufs basiert das Tracking auf Profilebene derzeit für Erlebnisereignisse auf dem Zeitpunkt des Ereignisses und für Profilattribute auf dem Zeitpunkt der Aufnahme.
 
 ## Zugriff auf {#access}
 
@@ -36,7 +36,7 @@ Ablauf von Daten pseudonymer Profile kann nicht über die Platform-Benutzeroberf
 
 Im folgenden Abschnitt finden Sie häufig gestellte Fragen zu Ablauf von Daten pseudonymer Profile:
 
-### Worin unterscheidet sich das Ablaufdatum von Pseudonymen Profildaten vom Ablauf von Erlebnisereignisdaten?
+### Wie unterscheidet sich Ablauf von Daten pseudonymer Profile vom Ablauf von Erlebnisereignisdaten?
 
 Ablauf von Daten pseudonymer Profie und Ablauf von Erlebnisereignisdaten sind komplementäre Funktionen.
 
