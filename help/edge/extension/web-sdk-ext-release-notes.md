@@ -4,8 +4,8 @@ description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 source-git-commit: edd1745467a95804681b5d6c6d33458329641c39
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1663'
+ht-degree: 100%
 
 ---
 
@@ -19,13 +19,13 @@ In diesem Dokument werden die Versionshinweise für die Adobe Experience Platfor
 **Neue Funktionen**
 
 * Enthält Version 2.16.0 des Adobe Experience Platform Web SDK.
-* Hinzugefügte Unterstützung für [Überschreibungen der Datastream-Konfiguration](../datastreams/overrides.md).
-* Fügen Sie dem `datasetId` -Option auf `sendEvent` Befehl.
+* Es wurde Unterstützung für [Überschreibungen der Datenstromkonfiguration](../datastreams/overrides.md) hinzugefügt.
+* Der Option `datasetId` des Befehls `sendEvent` wurde ein Hinweis hinzugefügt, dass sie veraltet ist.
 
 
 **Fehlerbehebungen und Verbesserungen**
 
-* Es wurde ein Problem behoben, durch das beim Scrollen in Safari der Datastream-Selektor geschlossen wurde.
+* Es wurde ein Problem behoben, durch das beim Scrollen in Safari die Datenstromauswahl geschlossen wurde.
 
 ## Version 2.16.1 – 14. April 2023
 
