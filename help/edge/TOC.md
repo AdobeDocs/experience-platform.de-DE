@@ -6,9 +6,9 @@ breadcrumb-title: Web SDK-Handbuch
 user-guide-description: Interagieren Sie mit Experience Cloud-Services über das Edge-Netzwerk.
 feature: Web SDK
 source-git-commit: 5a64beb2f5826bda585111e9ce7f760b939bf9b9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '212'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 98%
 * Datenströme {#datastreams}
    * [Übersicht](./datastreams/overview.md)
    * [Konfigurieren eines Datenstroms](./datastreams/configure.md)
-   * [Überschreibungen von Datastreams konfigurieren](./datastreams/overrides.md)
+   * [Konfigurieren von Überschreibungen für Datenströme](./datastreams/overrides.md)
    * [Datenvorbereitung für die Datenerfassung](./datastreams/data-prep.md)
    * Datenanreicherung {#data-enrichment}
       * [Wetterdaten von „The Weather Channel“](./datastreams/data-enrichment/weather.md)
