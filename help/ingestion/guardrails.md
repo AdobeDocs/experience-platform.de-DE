@@ -3,10 +3,10 @@ keywords: Experience Platform;Fehlerbehebung;Leitplanken;Richtlinien;
 title: Schutzmaßnahmen bei der Datenaufnahme
 description: Dieses Dokument enthält Anleitungen zu Schutzmaßnahmen bei der Datenaufnahme in Adobe Experience Platform
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 96ab28f9f909cedd1148d6b27610aebb7cf61b29
+source-git-commit: 582f6ffdea6fa1978f6af6f0f0f92e50a12f6200
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '534'
+ht-degree: 97%
 
 ---
 
@@ -33,7 +33,7 @@ In der folgenden Tabelle sind Schutzmaßnahmen aufgeführt, die bei der Verwendu
 
 | Art der Aufnahme | Leitlinien | Anmerkungen |
 | --- | --- | --- |
-| Streaming-Aufnahme | <ul><li>Die maximale Datensatzgröße beträgt 1 MB, wobei die empfohlene Größe bei 10 KB liegt.</li><li>Sie können 20.000 Anfragen pro Sekunde an das Profil in weniger als einer Minute verarbeiten.</li><li>Sie können bis zu 20.000 Anfragen pro Sekunde an den Data Lake in weniger als 15 Minuten verarbeiten.</li></ul> | Verwenden Sie die Batch-Aufnahme-API, wenn Sie einen höheren Datendurchsatz benötigen. |
+| Streaming-Aufnahme | <ul><li>Die maximale Datensatzgröße beträgt 1 MB, wobei die empfohlene Größe bei 10 KB liegt.</li><li>Sie können bis zu 2500 Anfragen pro Sekunde an Profile verarbeiten.</li><li>Sie können bis zu 20.000 Anfragen pro Sekunde an den Data Lake in weniger als 15 Minuten verarbeiten.</li></ul> | Verwenden Sie die Batch-Aufnahme-API, wenn Sie einen höheren Datendurchsatz benötigen. |
 | Streaming-Quellen | <ul><li>Die maximale Datensatzgröße beträgt 1 MB, wobei die empfohlene Größe bei 10 KB liegt.</li><li>Streaming-Quellen unterstützen bei Erstellung einer neuen Quellverbindung zwischen 4.000 und 5.000 Anfragen pro Sekunde. **Hinweis**: Es kann bis zu 30 Minuten dauern, bis die Streaming-Daten vollständig im Data Lake verarbeitet sind.</li><li>Sie können zwischen 4.000 und 5.000 Anfragen pro Sekunde an den Data Lake verarbeiten. **Hinweis**: Es kann bis zu 30 Minuten dauern, bis die Streaming-Daten vollständig im Data Lake verarbeitet sind.</li></ul> | Streaming-Quellen wie [!DNL Kafka], [!DNL Azure Event Hubs] und [!DNL Amazon Kinesis] verwenden nicht die Route des [!DNL Data Collection Core Service] (DCCS) und können unterschiedliche Durchsatzbeschränkungen aufweisen. In der [Quellenübersicht](../sources/home.md) finden Sie einen Katalog der Quellen, die Sie für die Datenaufnahme verwenden können. |
 
 ## Nächste Schritte
