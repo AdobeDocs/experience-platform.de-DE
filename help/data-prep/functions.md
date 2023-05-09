@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Zuordnungsfunktionen für Datenvorbereitung
 description: In diesem Dokument werden die mit der Datenvorbereitung verwendeten Zuordnungsfunktionen vorgestellt.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: cce2d7b4f950248807bd700bae5e371418df634d
+source-git-commit: a89faf5f1d1befdc057cd872fcd190703c620c2d
 workflow-type: tm+mt
-source-wordcount: '4591'
-ht-degree: 8%
+source-wordcount: '4916'
+ht-degree: 7%
 
 ---
 
@@ -246,6 +246,8 @@ Jede der in der folgenden Tabelle enthaltenen Benutzeragenten-Funktionen kann ei
 * Telefon - Ein Mobilgerät mit kleinem Bildschirm (allgemein &lt; 7&quot;)
 * Mobile : Ein Mobilgerät, das noch nicht identifiziert wurde. Bei diesem Mobilgerät kann es sich um einen eReader, ein Tablet, ein Telefon, eine Uhr usw. handeln.
 
+Weitere Informationen zu Gerätefeldwerten finden Sie im Abschnitt [Liste der Gerätefeldwerte](#device-field-values) im Anhang dieses Dokuments.
+
 >[!NOTE]
 >
 >Bitte scrollen Sie nach links/rechts, um den gesamten Tabelleninhalt anzuzeigen.
@@ -343,5 +345,36 @@ Die nachstehende Tabelle enthält eine Liste der reservierten Zeichen und der zu
 | ^ | %5E |
 | &grave; | %60 |
 | ~ | %7E |
+
+{style="table-layout:auto"}
+
+### Gerätefeldwerte {#device-field-values}
+
+Die nachstehende Tabelle enthält eine Liste der Gerätefeldwerte und der zugehörigen Beschreibungen.
+
+| Gerät | Beschreibung |
+| --- | --- |
+| Desktop | Ein Desktop- oder Laptop-Gerät. |
+| Anonymisiert | Ein anonymes Gerät. In einigen Fällen sind dies `useragents` die von einer Anonymisierungssoftware geändert wurden. |
+| Unbekannt | Ein unbekanntes Gerät. Diese sind normalerweise `useragents` die keine Informationen über das Gerät enthalten. |
+| Mobile | Ein Mobilgerät, das noch nicht identifiziert wurde. Bei diesem Mobilgerät kann es sich um einen eReader, ein Tablet, ein Telefon, eine Uhr usw. handeln. |
+| Tablet | Ein Mobilgerät mit einem großen Bildschirm (in der Regel > 7&quot;). |
+| Telefon | Ein Mobilgerät mit kleinem Bildschirm (normalerweise &lt; 7&quot;). |
+| Watch | Ein Mobilgerät mit einem winzigen Bildschirm (normalerweise &lt; 2&quot;). Diese Geräte dienen normalerweise als zusätzlicher Bildschirm für Geräte vom Typ Telefon/Tablet. |
+| Erweiterte Realität | Ein Mobilgerät mit AR-Funktionen. |
+| Virtuelle Realität | Ein Mobilgerät mit VR-Funktionen. |
+| eReader | Gerät, das einem Tablet ähnelt, in der Regel jedoch mit einem [!DNL eInk] angezeigt. |
+| Set-Top-Box | Ein angeschlossenes Gerät, das die Interaktion über einen Bildschirm im TV-Format ermöglicht. |
+| TV | Ein Gerät, das der Set-Top-Box ähnelt, aber in den Fernseher integriert ist. |
+| Hauseinheit | Ein (normalerweise großes) Haushaltsgerät, wie ein Kühlschrank. |
+| Spielekonsole | Ein festes Spielsystem wie [!DNL Playstation] oder [!DNL XBox]. |
+| Handheld Game Console | Ein mobiles Gaming-System wie ein [!DNL Nintendo Switch]. |
+| Stimme | Ein stimmgesteuertes Gerät wie ein [!DNL Amazon Alexa] oder [!DNL Google Home]. |
+| Auto | Ein fahrzeugbasierter Browser. |
+| Robot | Roboter, die eine Website besuchen. |
+| Robot Mobile | Roboter, die eine Website besuchen, aber angeben, dass sie als mobiler Besucher angesehen werden sollen. |
+| Robot Imitator | Roboter, die eine Website besuchen, tun so, als wären Roboter wie [!DNL Google], aber nicht. **Hinweis**: In den meisten Fällen sind Roboterimmitatoren tatsächlich Roboter. |
+| Cloud | Eine Cloud-basierte Anwendung. Das sind weder Roboter noch Hacker, aber es sind Anwendungen, die eine Verbindung herstellen müssen. Dazu gehören [!DNL Mastodon] Server. |
+| Hacker | Dieser Gerätewert wird verwendet, falls Skripterstellung im `useragent` Zeichenfolge. |
 
 {style="table-layout:auto"}
