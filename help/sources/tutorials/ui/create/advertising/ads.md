@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Google Ads; Google Ads-Quell-Connector; Google Ads-Connector
 title: Erstellen einer Google Ads-Quellverbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie eine Google Ads-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ac87434c857a39f4be3714cba57519cbb4fa54a6
 workflow-type: tm+mt
-source-wordcount: '661'
-ht-degree: 30%
+source-wordcount: '682'
+ht-degree: 29%
 
 ---
 
@@ -16,13 +15,13 @@ ht-degree: 30%
 >
 >Die Google Ads-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von als Beta gekennzeichneten Quellen finden Sie unter [Quellen – Übersicht](../../../../home.md#terms-and-conditions).
 
-In diesem Tutorial werden die Schritte zum Erstellen eines Quell-Connectors für Google Ads mithilfe der Adobe Experience Platform-Benutzeroberfläche beschrieben.
+In diesem Tutorial werden die Schritte zum Erstellen einer Google Ads-Quellverbindung mithilfe der Adobe Experience Platform-Benutzeroberfläche beschrieben.
 
 ## Erste Schritte
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experience Platform voraus:
 
-* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
+* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
    * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemas vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
    * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
@@ -36,6 +35,7 @@ Um auf Ihre Google Ads-Kontoplattform zugreifen zu können, müssen Sie die folg
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
 | Client-Kunden-ID | Die Client-Kunden-ID ist die Kontonummer, die dem Google Ads-Kundenkonto entspricht, das Sie mit der Google Ads-API verwalten möchten. Diese ID folgt der Vorlage von `123-456-7890`. |
+| Kunden-ID anmelden | Die Anmelde-Kunden-ID ist die Kontonummer, die Ihrem Google Ads Manager-Konto entspricht und zum Abrufen von Berichtsdaten von einem bestimmten Betriebssystemkunden verwendet wird. Weitere Informationen zur Anmelde-Kunden-ID finden Sie im Abschnitt [Dokumentation zur Google Ads API](https://developers.google.com/google-ads/api/docs/migration/login-customer-id). |
 | Entwicklungstoken | Mit dem Entwicklungstoken können Sie auf die Google Ads-API zugreifen. Sie können dasselbe Entwickler-Token verwenden, um Anforderungen für alle Ihre Google Ads-Konten zu stellen. Abrufen Ihres Entwicklungstokens nach [Anmelden bei Ihrem Manager-Konto](https://ads.google.com/home/tools/manager-accounts/) und dann zur Seite &quot;API-Center&quot;navigieren. |
 | Aktualisierungstoken | Das Aktualisierungs-Token ist Teil von [!DNL OAuth2] Authentifizierung. Mit diesem Token können Sie Ihre Zugriffstoken nach ihrem Ablauf neu generieren. |
 | Client-ID | Die Client-ID wird zusammen mit dem Client-Geheimnis als Teil von [!DNL OAuth2] Authentifizierung. Gemeinsam ermöglicht die Client-ID und das Client-Geheimnis Ihrer Anwendung die Ausführung Ihrer Kontoverbindung, indem Sie Ihre Anwendung für Google identifizieren. |
@@ -51,7 +51,7 @@ Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirms
 
 Unter dem **[!UICONTROL Werbung]** category, select **[!UICONTROL Google Ads]** und wählen Sie **[!UICONTROL Daten hinzufügen]**.
 
-![Ein Bild der Google Ads-Quelle im Quellenkatalog der Experience Platform-Benutzeroberfläche](../../../../images/tutorials/create/ads/catalog.png).
+![Der Quellkatalog in der Experience Platform-Benutzeroberfläche.](../../../../images/tutorials/create/ads/catalog.png).
 
 Die **[!UICONTROL Verbindung zu Google Ads herstellen]** angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
@@ -59,13 +59,13 @@ Die **[!UICONTROL Verbindung zu Google Ads herstellen]** angezeigt. Auf dieser S
 
 Um ein vorhandenes Konto zu verbinden, wählen Sie das Google Ads-Konto aus, mit dem Sie eine Verbindung herstellen möchten, und klicken Sie dann auf **[!UICONTROL Nächste]** um fortzufahren.
 
-![Ein Bild einer Liste vorhandener Konten, mit denen Sie einen Google Ads-Datenfluss erstellen können.](../../../../images/tutorials/create/ads/existing.png).
+![Die Auswahlseite für vorhandene Konten im Quellen-Workflow.](../../../../images/tutorials/create/ads/existing.png).
 
 ### Neues Konto
 
 Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre Google Ads-Anmeldedaten ein. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
 
-![Ein Bild des Bildschirms für die neue Kontoverbindung in der Experience Platform-Benutzeroberfläche](../../../../images/tutorials/create/ads/connect.png).
+![Die neue Kontoschnittstelle im Ursprungs-Workflow.](../../../../images/tutorials/create/ads/new.png).
 
 ## Nächste Schritte
 

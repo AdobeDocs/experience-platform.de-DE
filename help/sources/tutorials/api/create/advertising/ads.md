@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform; Homepage; beliebte Themen; Google Ads; Google Ads; Google Ads; Anzeigen
 title: Erstellen einer Google Ads-Basisverbindung mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie mit der Flow Service-API eine Verbindung zwischen Adobe Experience Platform und Google Ads herstellen.
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: 56419f41188c9bfdbeda7dde680f269b980a37f0
+source-git-commit: 7c77b0dc658ad45a25f4ead4e14f5826701cf645
 workflow-type: tm+mt
-source-wordcount: '698'
-ht-degree: 23%
+source-wordcount: '747'
+ht-degree: 28%
 
 ---
 
@@ -14,7 +13,7 @@ ht-degree: 23%
 
 >[!NOTE]
 >
->Die Google Ads-Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
+>Die Google Ads-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von als Beta gekennzeichneten Quellen finden Sie unter [Quellen – Übersicht](../../../../home.md#terms-and-conditions).
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -36,11 +35,12 @@ Zur [!DNL Flow Service] Um eine Verbindung mit Google Ads herzustellen, müssen 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
 | `clientCustomerId` | Die Client-Kunden-ID ist die Kontonummer, die dem Google Ads-Kundenkonto entspricht, das Sie mit der Google Ads-API verwalten möchten. Diese ID folgt der Vorlage von `123-456-7890`. |
+| `loginCustomerId` | Die Anmelde-Kunden-ID ist die Kontonummer, die Ihrem Google Ads Manager-Konto entspricht und zum Abrufen von Berichtsdaten von einem bestimmten Betriebssystemkunden verwendet wird. Weitere Informationen zur Anmelde-Kunden-ID finden Sie im Abschnitt [Dokumentation zur Google Ads API](https://developers.google.com/google-ads/api/docs/migration/login-customer-id). |
 | `developerToken` | Mit dem Entwicklungstoken können Sie auf die Google Ads-API zugreifen. Sie können dasselbe Entwickler-Token verwenden, um Anforderungen für alle Ihre Google Ads-Konten zu stellen. Abrufen Ihres Entwicklungstokens nach [Anmelden bei Ihrem Manager-Konto](https://ads.google.com/home/tools/manager-accounts/) und navigieren Sie dann zum [!DNL API Center] Seite. |
 | `refreshToken` | Das Aktualisierungs-Token ist Teil von [!DNL OAuth2] Authentifizierung. Mit diesem Token können Sie Ihre Zugriffstoken nach ihrem Ablauf neu generieren. |
 | `clientId` | Die Client-ID wird zusammen mit dem Client-Geheimnis als Teil von [!DNL OAuth2] Authentifizierung. Gemeinsam ermöglicht die Client-ID und das Client-Geheimnis Ihrer Anwendung die Ausführung Ihrer Kontoverbindung, indem Sie Ihre Anwendung für Google identifizieren. |
 | `clientSecret` | Das Client-Geheimnis wird zusammen mit der Client-ID als Teil von [!DNL OAuth2] Authentifizierung. Gemeinsam ermöglicht die Client-ID und das Client-Geheimnis Ihrer Anwendung die Ausführung Ihrer Kontoverbindung, indem Sie Ihre Anwendung für Google identifizieren. |
-| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für Google Ads lautet: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für Google Ads lautet: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 Lesen Sie das API-Übersichtsdokument für [Weitere Informationen zu den ersten Schritten mit Google Ads](https://developers.google.com/google-ads/api/docs/first-call/overview).
 
@@ -79,6 +79,7 @@ curl -X POST \
           "specName": "Basic Authentication",
           "params": {
               "clientCustomerID": "{CLIENT_CUSTOMER_ID}",
+              "loginCustomerID": "{LOGIN_CUSTOMER_ID}",
               "developerToken": "{DEVELOPER_TOKEN}",
               "authenticationType": "{AUTHENTICATION_TYPE}"
               "clientId": "{CLIENT_ID}",
@@ -96,6 +97,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
 | `auth.params.clientCustomerID` | Die Client-Kunden-ID Ihres Google Ads-Kontos. |
+| `auth.params.loginCustomerID` | Die Anmelde-Kunden-ID, die Ihrem Google Ads Manager-Konto entspricht. |
 | `auth.params.developerToken` | Das Entwicklungstoken Ihres Google Ads-Kontos. |
 | `auth.params.refreshToken` | Das Aktualisierungstoken Ihres Google Ads-Kontos. |
 | `auth.params.clientID` | Die Client-ID Ihres Google Ads-Kontos. |
@@ -115,7 +117,7 @@ Bei einer erfolgreichen Antwort werden Details zu der neu erstellten Basisverbin
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine Google Ads-Basisverbindung mit dem [!DNL Flow Service] API. Sie können diese Basis-Verbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine Google Ads-Basisverbindung mit dem [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
-* [Struktur und Inhalt Ihrer Datentabellen mithilfe des [!DNL Flow Service] API](../../explore/tabular.md)
+* [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um Werbedaten mithilfe der [!DNL Flow Service] API](../../collect/advertising.md)
