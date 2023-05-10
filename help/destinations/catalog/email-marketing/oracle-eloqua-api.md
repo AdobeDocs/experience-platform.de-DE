@@ -6,7 +6,7 @@ exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
 source-git-commit: 3d54b89ab5f956710ad595a0e8d3567e1e773d0a
 workflow-type: tm+mt
 source-wordcount: '2125'
-ht-degree: 29%
+ht-degree: 32%
 
 ---
 
@@ -98,7 +98,7 @@ Suchen Sie in **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** nach [!DNL (API)
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_companyname_username"
 >title="Firmenname\Benutzername"
->abstract="Füllen Sie dieses Feld mit Ihrem Firmennamen und Benutzernamen von Oracle Eloqua aus. `{COMPANY_NAME}\{USERNAME}`"
+>abstract="Füllen Sie dieses Feld mit Ihrem Firmennamen und dem Benutzernamen von Oracle Eloqua aus `{COMPANY_NAME}\{USERNAME}`"
 
 Füllen Sie die erforderlichen Felder aus. Eine Anleitung dazu finden Sie im Abschnitt [ [!DNL Oracle Eloqua] Sammeln von -Anmeldeinformationen](#gather-credentials).
 * **[!UICONTROL Passwort]**: Das Kennwort Ihres [!DNL Oracle Eloqua] -Konto.
@@ -114,8 +114,8 @@ Wenn die angegebenen Details gültig sind, zeigt die Benutzeroberfläche den Sta
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_pod"
 >title="Pod"
->abstract="Um Ihre Podnummer zu finden, melden Sie sich bei Oracle Eloqua an. Notieren Sie die URL in Ihrem Browser, nachdem Sie sich erfolgreich angemeldet haben. "
->additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle-Wissensdatenbank - Erfahren Sie mehr über Ihre Werbeunterbrechungsnummer"
+>abstract="Um Ihre Pod-Nummer zu finden, melden Sie sich bei Oracle Eloqua an. Notieren Sie die URL in Ihrem Browser, nachdem Sie sich erfolgreich angemeldet haben. "
+>additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle-Wissensdatenbank – Erfahren Sie mehr über Ihre Pod-Nummer"
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 ![Screenshot der Platform-Benutzeroberfläche mit den Zieldetails.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
