@@ -2,9 +2,9 @@
 title: Nahtloser SQL-Fluss für abgeleitete Attribute
 description: Query Service SQL wurde erweitert, um eine nahtlose Unterstützung für abgeleitete Attribute bereitzustellen. Erfahren Sie, wie Sie mit dieser SQL-Erweiterung ein abgeleitetes Attribut erstellen, das für das Profil aktiviert ist, und wie Sie das Attribut für das Echtzeit-Kundenprofil und den Segmentierungsdienst verwenden.
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 6202b1a5956da83691eeb5422d3ebe7f3fb7d974
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1238'
 ht-degree: 2%
 
 ---
@@ -41,6 +41,16 @@ Verwenden Sie eine &quot;Tabelle als Auswahl erstellen&quot;(CTAS)-Abfrage, um e
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];
 ```
 
+Folgende Datentypen werden unterstützt: boolean, date, datetime, text, float, bigint, integer, map, array und structure/row.
+
+Der unten stehende SQl-Codeblock bietet Beispiele zum Definieren von Struktur-/Zeilen-, Zuordnungs- und Array-Datentypen. Zeile eins zeigt die Zeilensyntax. Zeile 2 zeigt die Syntax der Zuordnung und Zeile 3 die Syntax des Arrays.
+
+```sql {line-numbers="true"}
+ROW (Column_name <data_type> [, column name <data_type> ]*)
+MAP <data_type, data_type>
+ARRAY <data_type>
+```
+
 Alternativ können Datensätze auch über die Platform-Benutzeroberfläche für das Profil aktiviert werden. Weitere Informationen zum Markieren eines Datensatzes als für ein Profil aktiviert finden Sie in der [Datensatz für die Dokumentation zum Echtzeit-Kundenprofil aktivieren](../../../catalog/datasets/user-guide.md#enable-profile).
 
 In der folgenden Beispielabfrage wird die `decile_table` Datensatz wird mit `id` als primäre Identitätsspalte und hat den Namespace `IDFA`. Es enthält auch ein Feld namens `decile1Month` des Zuordnungs-Datentyps. Die erstellte Tabelle (`decile_table`) für das Profil aktiviert ist.
@@ -49,12 +59,6 @@ In der folgenden Beispielabfrage wird die `decile_table` Datensatz wird mit `id`
 CREATE TABLE decile_table (id text PRIMARY KEY NAMESPACE 'IDFA', 
             decile1Month map<text, integer>) WITH (label='PROFILE');
 ```
-
-<!--        decile3Month map<text, integer>,
-            decile6Month map<text, integer>,
-            decile9month map<text, integer>,
-            decile12month map<text, integer>,
-            decilelifetime map<text, integer> -->
 
 Bei erfolgreicher Ausführung der Abfrage wird die Datensatz-ID an die Konsole zurückgegeben, wie im Beispiel unten dargestellt.
 
