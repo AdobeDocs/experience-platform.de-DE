@@ -6,8 +6,8 @@ description: Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mi
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '984'
-ht-degree: 36%
+source-wordcount: '978'
+ht-degree: 35%
 
 ---
 
@@ -33,7 +33,7 @@ Zu den häufigsten Abfrageparametern für das Paging gehören:
 | `limit` | Bei Verwendung in Verbindung mit einer `orderby` Parameter, `limit` begrenzt die maximale Anzahl von Elementen, die für eine bestimmte Anfrage zurückgegeben werden sollen. Dieser Parameter kann nicht ohne `orderby` Parameter vorhanden.<br><br>Die `limit` -Parameter gibt eine positive Ganzzahl an (zwischen `0` und `500`) als *Hint* , um die maximale Anzahl der zurückzugebenden Elemente anzugeben. Beispiel: `limit=5` gibt nur fünf Ressourcen in der Liste zurück. Dieser Wert wird jedoch nicht genau berücksichtigt. Die tatsächliche Antwortgröße kann kleiner oder größer sein, da die zuverlässige Funktion der `start` -Parameter, wenn einer angegeben wird. |
 | `start` | Bei Verwendung in Verbindung mit einer `orderby` Parameter, `start` gibt an, wo die untergeordnete Liste von Elementen beginnen soll. Dieser Parameter kann nicht ohne `orderby` Parameter vorhanden. Dieser Wert kann aus dem `_page.next` -Attribut einer Listenantwort verwenden, um auf die nächste Ergebnisseite zuzugreifen. Wenn die Variable `_page.next` null ist, ist keine zusätzliche Seite verfügbar.<br><br>Normalerweise wird dieser Parameter weggelassen, um die erste Ergebnisseite zu erhalten. Danach `start` auf den Maximalwert der primären Sortiereigenschaft der `orderby` -Feld, das auf der vorherigen Seite empfangen wurde. Die API-Antwort gibt dann Einträge zurück, die mit jenen beginnen, die über eine primäre Sortiereigenschaft von verfügen `orderby` strikt größer als (für aufsteigende Werte) oder strikt kleiner als (für absteigende Werte) der angegebene Wert.<br><br>Wenn beispielsweise die Variable `orderby` -Parameter auf `orderby=name,firstname`, die `start` -Parameter enthält einen Wert für `name` -Eigenschaft. Wenn Sie in diesem Fall die nächsten 20 Einträge einer Ressource direkt nach dem Namen &quot;Miller&quot;anzeigen möchten, verwenden Sie: `?orderby=name,firstname&start=Miller&limit=20`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Filtern {#filtering}
 
@@ -50,7 +50,7 @@ Sie können die Ergebnisse mithilfe der `property` -Parameter, der verwendet wir
 | `~` | Filtert danach, ob die Eigenschaft mit einem angegebenen regulären Ausdruck übereinstimmt. | `property=title~test$` |
 | (Keine) | Wenn nur der Eigenschaftsname festgelegt wird, werden nur Einträge zurückgegeben, in denen die Eigenschaft vorhanden ist. | `property=title` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!TIP]
 >

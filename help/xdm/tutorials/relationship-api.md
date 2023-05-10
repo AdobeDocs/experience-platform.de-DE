@@ -6,8 +6,8 @@ type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
 source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
-source-wordcount: '1398'
-ht-degree: 27%
+source-wordcount: '1383'
+ht-degree: 30%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 27%
 
 Die Möglichkeit, Beziehungen zwischen Ihren Kunden und deren Interaktionen mit Ihrer Marke kanalübergreifend zu analysieren, ist ein wichtiger Bestandteil von Adobe Experience Platform. Definieren dieser Beziehungen innerhalb der Struktur Ihrer [!DNL Experience Data Model] (XDM)-Schemas ermöglichen es Ihnen, komplexe Einblicke in Ihre Kundendaten zu erhalten.
 
-Während Schemabeziehungen durch die Verwendung des Vereinigungsschemas und [!DNL Real-Time Customer Profile], gilt dies nur für Schemas, die dieselbe Klasse teilen. Um eine Beziehung zwischen zwei Schemas herzustellen, die zu verschiedenen Klassen gehören, muss ein dediziertes Beziehungsfeld zu einem **Quellschema**, der die Identität eines separaten **Referenzschema**.
+Während Schemabeziehungen durch die Verwendung des Vereinigungsschemas und [!DNL Real-Time Customer Profile] abgeleitet werden können, gilt dies nur für Schemata einer gemeinsamen Klasse. Um eine Beziehung zwischen zwei Schemas herzustellen, die zu verschiedenen Klassen gehören, muss ein dediziertes Beziehungsfeld zu einem **Quellschema**, der die Identität eines separaten **Referenzschema**.
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ Dieses Tutorial setzt ein grundlegendes Verständnis von [!DNL Experience Data M
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 * [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die [Entwicklerhandbuch](../api/getting-started.md) für wichtige Informationen, die Sie benötigen, um erfolgreich Aufrufe an die [!DNL Schema Registry] API. Dies umfasst Ihre `{TENANT_ID}`, das Konzept der &quot;Container&quot;und die erforderlichen Kopfzeilen für Anfragen (mit besonderem Augenmerk auf die [!DNL Accept] -Kopfzeile und die möglichen Werte).
+Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die [Entwicklerhandbuch](../api/getting-started.md) für wichtige Informationen, die Sie benötigen, um erfolgreich Aufrufe an die [!DNL Schema Registry] API. Dazu gehören Ihre `{TENANT_ID}`, das Konzept der „Container“ und die erforderlichen Header für Anfragen (mit besonderem Augenmerk auf den [!DNL Accept]-Header und seine möglichen Werte).
 
 ## Quell- und Referenzschema definieren {#define-schemas}
 
@@ -232,7 +232,7 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Feldergruppe zurü
 | --- | --- |
 | `$id` | Die schreibgeschützte, vom System generierte eindeutige Kennung der neuen Feldergruppe. Erhält die Form eines URI. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Notieren Sie die `$id` URI der Feldergruppe, die im nächsten Schritt beim Hinzufügen der Feldergruppe zum Quellschema verwendet wird.
 
@@ -250,7 +250,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | Der URL-kodierte `$id`-URI oder `meta:altId` des Quellschemas. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -281,7 +281,7 @@ curl -X PATCH \
 | `path` | Der Pfad zum Schemafeld, in dem die neue Ressource hinzugefügt wird. Beim Hinzufügen von Feldergruppen zu Schemas muss der Wert &quot;/allOf/-&quot;lauten. |
 | `value.$ref` | Die `$id` der Feldergruppe, die hinzugefügt werden soll. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -385,7 +385,7 @@ curl -X POST \
 | `sourceProperty` | Der Pfad zum Feld im Quellschema, das verwendet wird, um auf die primäre Identität des Referenzschemas zu verweisen. |
 | `xdm:identityNamespace` | Der Identitäts-Namespace des Referenzfelds. Dieser Namespace muss mit der primären Identität des Referenzschemas übereinstimmen. Weiterführende Informationen dazu finden Sie unter [Übersicht zu Identitäts-Namespaces](../../identity-service/home.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -446,7 +446,7 @@ curl -X POST \
 | `xdm:destinationVersion` | Die Versionsnummer des Referenzschemas. |
 | `xdm:destinationProperty` | Der Pfad zum primären Identitätsfeld im Referenzschema. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Antwort
 

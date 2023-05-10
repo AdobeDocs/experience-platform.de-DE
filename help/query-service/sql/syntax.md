@@ -452,7 +452,7 @@ $$;
 ```
 
 
-## Data Asset-Organisation
+## Organisation von Daten-Medienelementen
 
 Es ist wichtig, Ihre Daten-Assets beim Wachstum im Adobe Experience Platform Data Lake logisch zu organisieren. Query Service erweitert SQL-Konstrukte, mit denen Sie Daten-Assets logisch in einer Sandbox gruppieren können. Diese Organisationsmethode ermöglicht die Freigabe von Daten-Assets zwischen Schemas, ohne dass diese physisch verschoben werden müssen.
 

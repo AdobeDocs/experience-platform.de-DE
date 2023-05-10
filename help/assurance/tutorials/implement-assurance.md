@@ -1,13 +1,13 @@
 ---
 title: Implementieren der Adobe Experience Platform Assurance-Erweiterung
 description: In diesem Handbuch wird erläutert, wie Sie die Adobe Experience Platform Assurance-Erweiterung implementieren und installieren.
-source-git-commit: 24f452bdb923179eefe53fdb28d3a92d43e533cd
+exl-id: b7bd1bb1-1606-4d00-97e0-c329c86d8ca4
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '400'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
-
 
 # Implementieren der Adobe Experience Platform Assurance-Erweiterung
 

@@ -1,7 +1,8 @@
 ---
 title: Löschungen in Identity Service
 description: Dieses Dokument bietet einen Überblick über die verschiedenen Mechanismen, mit denen Sie Ihre Identitätsdaten in Experience Platform löschen und Klarheit darüber schaffen können, wie sich dies auf Identitätsdiagramme auswirken kann.
-source-git-commit: da1ce4560d28d43db47318883f9656cebb2eb487
+exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1198'
 ht-degree: 100%

@@ -6,7 +6,7 @@ exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
 source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
 workflow-type: tm+mt
 source-wordcount: '233'
-ht-degree: 57%
+ht-degree: 67%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 57%
 
 >[!NOTE]
 >
->Die [!DNL Google Ads] -Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
+>Die [!DNL Google Ads]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../home.md#terms-and-conditions), um weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren zu erhalten.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
@@ -31,7 +31,7 @@ Die folgende Dokumentation enthält Informationen dazu, wie Sie [!DNL Google Ads
 ### Verwenden von APIs
 
 * [Erstellen einer Google Ads-Basisverbindung mithilfe der Flow Service-API](../../tutorials/api/create/advertising/ads.md)
-* [Datentabellen mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/tabular.md)
+* [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 * [Erstellen eines Datenflusses für eine Werbequelle mithilfe der Flow Service-API](../../tutorials/api/collect/advertising.md)
 
 ### Verwenden der Benutzeroberfläche

@@ -4,8 +4,8 @@ title: OAuth 2-Authentifizierung
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
 source-git-commit: 87fb3ffa65449b61e05d94d2b56daf727ecebdea
 workflow-type: tm+mt
-source-wordcount: '2110'
-ht-degree: 6%
+source-wordcount: '2080'
+ht-degree: 5%
 
 ---
 
@@ -53,10 +53,10 @@ Experience Platform unterstützt die drei OAuth 2-Grant-Typen in der folgenden T
 | OAuth 2 Grant | Eingaben | Ausgaben |
 |---------|----------|---------|
 | Autorisierungscode | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>Scope (Umfang)</li><li><b>authorizationUrl</b></li><li><b>accessTokenUrl</b></li><li>refreshTokenUrl</li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
-| Passwort | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>Scope (Umfang)</li><li><b>accessTokenUrl</b></li><li><b>Benutzername</b></li><li><b>Passwort</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
+| Kennwort | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>Scope (Umfang)</li><li><b>accessTokenUrl</b></li><li><b>Benutzername</b></li><li><b>password</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 | Client Credential | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>Scope (Umfang)</li><li><b>accessTokenUrl</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 In der obigen Tabelle sind die Felder aufgeführt, die in standardmäßigen OAuth 2-Flüssen verwendet werden. Zusätzlich zu diesen Standardfeldern können verschiedene Partnerintegrationen zusätzliche Eingaben und Ausgaben erfordern. Adobe hat ein flexibles OAuth 2-Authentifizierungs-/Autorisierungs-Framework für die Destination SDK entwickelt, das Varianten des obigen Standardfeldmusters handhaben kann und gleichzeitig einen Mechanismus zur automatischen Neuerstellung ungültiger Ausgaben unterstützt, z. B. abgelaufene Zugriffstoken.
 
@@ -75,7 +75,7 @@ Wenn Ihr Ziel einen standardmäßigen OAuth 2.0-Autorisierungscode-Fluss unterst
 |---------|----------|---------|
 | Autorisierungscode | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>Scope (Umfang)</li><li><b>authorizationUrl</b></li><li><b>accessTokenUrl</b></li><li>refreshTokenUrl</li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Um diese Authentifizierungsmethode für Ihr Ziel einzurichten, fügen Sie die folgenden Zeilen zu Ihrer Konfiguration hinzu: `/destinations` [Endpunkt](./destination-configuration.md):
 
@@ -109,7 +109,7 @@ Um diese Authentifizierungsmethode für Ihr Ziel einzurichten, fügen Sie die fo
 | `clientSecret` | Zeichenfolge | Das Client-Geheimnis, das Ihr System Adobe Experience Platform zuweist. |
 | `scope` | Liste von Zeichenfolgen | *Optional*. Legen Sie den Umfang fest, den das Zugriffstoken der Experience Platform für Ihre Ressourcen ermöglicht. Beispiel: &quot;lesen, schreiben&quot;. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## OAuth 2 mit Passwortgewährung
 
@@ -118,9 +118,9 @@ Adobe verwendet die folgenden Standardeingaben, um die Zielkonfiguration zu vere
 
 | OAuth 2 Grant | Eingaben | Ausgaben |
 |---------|----------|---------|
-| Passwort | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>Scope (Umfang)</li><li><b>accessTokenUrl</b></li><li><b>Benutzername</b></li><li><b>Passwort</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
+| Kennwort | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>Scope (Umfang)</li><li><b>accessTokenUrl</b></li><li><b>Benutzername</b></li><li><b>password</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -152,7 +152,7 @@ Um diese Authentifizierungsmethode für Ihr Ziel einzurichten, fügen Sie die fo
 | `clientSecret` | Zeichenfolge | Das Client-Geheimnis, das Ihr System Adobe Experience Platform zuweist. |
 | `scope` | Liste von Zeichenfolgen | *Optional*. Legen Sie den Umfang fest, den das Zugriffstoken der Experience Platform für Ihre Ressourcen ermöglicht. Beispiel: &quot;lesen, schreiben&quot;. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## OAuth 2 mit Client Credentials Grant
 
@@ -162,7 +162,7 @@ Sie können eine OAuth 2 Client-Anmeldedaten konfigurieren (lesen Sie den Abschn
 |---------|----------|---------|
 | Client-Anmeldedaten | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>Scope (Umfang)</li><li><b>accessTokenUrl</b></li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Um diese Authentifizierungsmethode für Ihr Ziel einzurichten, fügen Sie die folgenden Zeilen zu Ihrer Konfiguration hinzu: `/destinations` [Endpunkt](./destination-configuration.md):
 
@@ -194,7 +194,7 @@ Um diese Authentifizierungsmethode für Ihr Ziel einzurichten, fügen Sie die fo
 | `clientSecret` | Zeichenfolge | Das Client-Geheimnis, das Ihr System Adobe Experience Platform zuweist. |
 | `scope` | Liste von Zeichenfolgen | *Optional*. Legen Sie den Umfang fest, den das Zugriffstoken der Experience Platform für Ihre Ressourcen ermöglicht. Beispiel: &quot;lesen, schreiben&quot;. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Anpassen der OAuth 2-Konfiguration {#customize-configuration}
 
@@ -354,7 +354,7 @@ Sie können die folgenden Parameter in `authenticationDataFields` Anpassen der O
 | `authenticationDataFields.value` | Zeichenfolge. Boolesch. Ganzzahl | Der -Wert des benutzerdefinierten Datenfelds. Der Wert entspricht dem ausgewählten Typ aus `authenticationDataFields.type`. |
 | `authenticationDataFields.authenticationResponsePath` | Zeichenfolge | Gibt an, auf welches Feld aus dem API-Antwortpfad verwiesen wird. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Aktualisierung des Zugriffstokens {#access-token-refresh}
 
@@ -450,7 +450,7 @@ Sie können die folgenden Parameter in `accessTokenRequest` , um Ihren Token-Akt
 | `accessTokenRequest.validations.expectedValue.templatingStrategy` | Zeichenfolge | <ul><li>Verwendung `PEBBLE_V1` Wenn Sie Vorlagen für die Werte in `accessTokenRequest.validations.expectedValue.value`.</li><li> Verwendung `NONE` wenn der Wert im Feld `accessTokenRequest.validations.expectedValue.value` ist eine Konstante. </li></li> |
 | `accessTokenRequest.validations.expectedValue.value` | Zeichenfolge | Verwenden Sie die Vorlagensprache für den Zugriff auf Felder in der HTTP-Antwort. Informationen zur Verwendung der Vorlage zum Anpassen von Feldern finden Sie im Abschnitt [Vorlagenkonventionen](./oauth2-authentication.md#templating-conventions) Abschnitt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Vorlagenkonventionen {#templating-conventions}
 
@@ -465,7 +465,7 @@ Abhängig von Ihrer Authentifizierungsanpassung müssen Sie möglicherweise auf 
 | response.headers | HTTP-Antwortheader | ``{{ response.headers.server[0] }}`` |
 | userContext | Auf Informationen zum aktuellen Authentifizierungsversuch zugreifen | <ul><li>`{{ userContext.sandboxName }} `</li><li>`{{ userContext.sandboxId }} `</li><li>`{{ userContext.imsOrgId }} `</li><li>`{{ userContext.client }} // the client executing the authentication attempt `</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Nächste Schritte {#next-steps}
 

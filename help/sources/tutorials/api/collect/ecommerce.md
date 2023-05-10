@@ -8,7 +8,7 @@ exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1284'
-ht-degree: 94%
+ht-degree: 95%
 
 ---
 
@@ -648,5 +648,5 @@ Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen
 
 Mithilfe dieses Tutorials haben Sie einen Quell-Connector erstellt, um E-Commerce-Daten nach einem festgelegten Zeitplan zu erfassen. Eingehende Daten können jetzt von nachgelagerten [!DNL Platform]-Services wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
-* [Übersicht über das Echtzeit-Kundenprofil](../../../../profile/home.md)
+* [Übersicht zum Echtzeit-Kundenprofil](../../../../profile/home.md)
 * [Übersicht über Data Science Workspace](../../../../data-science-workspace/home.md)

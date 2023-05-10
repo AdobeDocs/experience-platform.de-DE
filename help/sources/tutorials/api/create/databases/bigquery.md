@@ -8,7 +8,7 @@ exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
 source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '526'
-ht-degree: 57%
+ht-degree: 60%
 
 ---
 
@@ -96,7 +96,7 @@ curl -X POST \
 | `auth.params.clientId` | Der ID-Wert, der zum Generieren des Aktualisierungstokens verwendet wird. |
 | `auth.params.clientSecret` | Der Client-Wert, der zum Generieren des Aktualisierungstokens verwendet wird. |
 | `auth.params.refreshToken` | Das Aktualisierungstoken, das von [!DNL Google] verwendet, um den Zugriff auf [!DNL Google BigQuery]. |
-| `connectionSpec.id` | Die [!DNL Google BigQuery] Verbindungsspezifikations-ID: `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
+| `connectionSpec.id` | Die [!DNL Google BigQuery]-Verbindungsspezifikations-ID: `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
 
 **Antwort**
 
@@ -111,7 +111,7 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, ei
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Google BigQuery] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL Google BigQuery]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um Datenbankdaten mit der [!DNL Flow Service] API](../../collect/database-nosql.md)

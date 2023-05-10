@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über den Datentyp "Payment
 exl-id: d25a358b-73c1-468b-a9c5-808385689932
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '164'
-ht-degree: 34%
+source-wordcount: '161'
+ht-degree: 32%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 34%
 | `paymentType` | Zeichenfolge | Die Zahlungsmethode für diese Bestellung. Zu den zulässigen Enum-Werten gehören: <li> `cash` </li> <li> `credit_card` </li> <li> `debit_card` </li> <li> `gift_card` </li> <li> `check` </li> <li> `paypal` </li> <li> `wire_transfer` </li> <li> `credit_card_reference` </li> <li> `other` </li> |
 | `transactionID` | Zeichenfolge | Die eindeutige Transaktionskennung für diesen Zahlungsposten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

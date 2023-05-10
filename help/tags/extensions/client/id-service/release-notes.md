@@ -5,7 +5,7 @@ exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '634'
-ht-degree: 77%
+ht-degree: 78%
 
 ---
 
@@ -38,7 +38,7 @@ In diesem Dokument werden die Versionshinweise für die Tag-Erweiterung des Adob
 
 * Diese Version enthält die neueste Version von Visitor 5.3.0, die die folgenden neuen Aktualisierungen aufweist:
 
-   * Aktualisierter Algorithmus zum Generieren einer lokalen ECID
+   * Der Algorithmus wurde aktualisiert, um eine lokale ECID zu generieren
    * Neueste Opt-in-Funktion mit `Secure` und `SameSite` Flags für das Datenschutz-Cookie
    * Korrektur eines Firefox-Browserproblems, das auftrat, wenn eine Seite in einen untergeordneten iFrame geladen wurde
 

@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platform - Versionshinweise Januar 2021
-description: Die Versionshinweise für Adobe Experience Platform vom Januar 2021.
+title: Adobe Experience Platform – Versionshinweise Januar 2021
+description: Versionshinweise Januar 2021 für Adobe Experience Platform.
 doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
@@ -8,7 +8,7 @@ exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '717'
-ht-degree: 90%
+ht-degree: 96%
 
 ---
 
@@ -55,7 +55,7 @@ Weitere Informationen finden Sie in [Ziele – Übersicht](../../destinations/ho
 
 ## Echtzeit-Kundenprofil {#profile}
 
-Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Mit dem Echtzeit-Kundenprofil können Sie eine ganzheitliche Ansicht jedes einzelnen Kunden anzeigen, die Daten aus mehreren Kanälen kombiniert, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. Mit [!DNL Profile] können Sie Ihre unterschiedlichen Kundendaten in einer zentralen Ansicht zusammenführen, die eine aussagekräftige, im Zeitverlauf gezeichnete Darstellung jeder Kundeninteraktion bietet.
+Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Ihre Kundinnen und Kunden, unabhängig davon, wo und wann sie mit Ihrer Marke interagieren. Das Echtzeit-Kundenprofil liefert eine ganzheitliche Sicht auf jede einzelne Kundin und jeden einzelnen Kunden, indem es Daten aus verschiedenen Kanälen, darunter Online-, Offline-, CRM- und Drittanbieter-Datenquellen, miteinander kombiniert. Mit [!DNL Profile] können Sie Ihre unterschiedlichen Kundendaten in einer zentralen Ansicht zusammenführen, die eine aussagekräftige, im Zeitverlauf gezeichnete Darstellung jeder Kundeninteraktion bietet.
 
 **Neue Funktionen**
 

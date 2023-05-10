@@ -1,7 +1,8 @@
 ---
 title: Adobe Experience Platform – Versionshinweise Februar 2023
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2023.
-source-git-commit: 0935a50527800b255901f8047051c47b45ab33b8
+exl-id: 1c30a646-d9f8-4749-ac25-40bc48365a40
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1293'
 ht-degree: 100%
@@ -17,7 +18,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [Datenerfassung](#data-collection)
 - [[!DNL Destinations]](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
-- [Query Service](#query-service)
+- [Abfrage-Service](#query-service)
 - [Real-Time Customer Data Platform B2B Edition](#b2b)
 - [Quellen](#sources)
 

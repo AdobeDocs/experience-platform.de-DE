@@ -4,8 +4,8 @@ description: Dieses Dokument bietet einen Überblick über die Feldergruppe "Sup
 exl-id: 7bd442f0-f85c-491f-91ad-8b14b4b431eb
 source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '94'
-ht-degree: 10%
+source-wordcount: '91'
+ht-degree: 7%
 
 ---
 
@@ -19,6 +19,6 @@ ht-degree: 10%
 | --- | --- | --- |
 | `supportSiteSearch` | [[!UICONTROL Interne Site-Suche]](../../data-types/internal-site-search.md) | Erfasst die Details zum Suchereignis. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-support-site-search.schema.json).

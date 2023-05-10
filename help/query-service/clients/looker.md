@@ -7,11 +7,11 @@ exl-id: 806e9077-533a-4546-b5ca-8124751957f5
 source-git-commit: b059a0191fbf2c3e5d2dfceb9802e2aaa429f7ed
 workflow-type: tm+mt
 source-wordcount: '423'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
-# Verbinden [!DNL Looker] zu Query Service
+# Verbinden von [!DNL Looker] mit dem Abfrage-Service
 
 In diesem Dokument werden die Schritte zum Verbinden von [!DNL Looker] mit Adobe Experience Platform [!DNL Query Service].
 

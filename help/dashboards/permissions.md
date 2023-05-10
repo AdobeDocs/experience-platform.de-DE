@@ -6,7 +6,7 @@ description: Gewähren Sie Benutzern die Möglichkeit, Experience Platform-Dashb
 exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
 source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '642'
 ht-degree: 32%
 
 ---
@@ -59,7 +59,7 @@ Die folgende Zugriffssteuerungsmatrix zeigt, welche Berechtigungen erforderlich 
 | [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] Dashboards.<br/>Die Möglichkeit, Widget-Schemata zu bearbeiten und neue Attribute zur Widget-Anpassung hinzuzufügen | **ERFORDERLICHES Dashboard verwalten** | **ERFORDERLICH (für jedes Dashboard)** | K. A. | K. A. |
 | [!DNL License Usage Dashboard] | K. A. | K. A. | K. A. | AKTIVIERT |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Berechtigungen zu Ihrem Produktprofil hinzufügen
 

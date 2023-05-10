@@ -1,15 +1,15 @@
 ---
 description: Auf dieser Seite wird erläutert, wie Sie mit dem API-Endpunkt /testing/destinationInstance die vollständigen Details Ihrer Testergebnisse anzeigen können. Dieser API-Endpunkt gibt dasselbe Ergebnis zurück, das Sie bei der Verwendung der Flow Service-API zur Überwachung von Datenflüssen erhalten würden.
-title: Detaillierte Aktivierungsergebnisse anzeigen
+title: Anzeigen detaillierter Aktivierungsergebnisse
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
 source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
 source-wordcount: '545'
-ht-degree: 15%
+ht-degree: 16%
 
 ---
 
-# Detaillierte Aktivierungsergebnisse anzeigen {#view-test-results}
+# Anzeigen detaillierter Aktivierungsergebnisse {#view-test-results}
 
 ## Übersicht {#overview}
 

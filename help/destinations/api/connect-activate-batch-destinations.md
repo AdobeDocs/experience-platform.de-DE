@@ -7,7 +7,7 @@ type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
-source-wordcount: '3420'
+source-wordcount: '3402'
 ht-degree: 92%
 
 ---
@@ -130,7 +130,7 @@ Die nachstehende Tabelle enthält die Verbindungsspezifikations-IDs für häufig
 | [!DNL Salesforce Marketing Cloud] | `f599a5b3-60a7-4951-950a-cc4115c7ea27` |
 | SFTP | `64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Verbinden mit Ihren [!DNL Experience Platform]-Daten {#connect-to-your-experience-platform-data}
 
@@ -174,7 +174,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `description` | Optional können Sie eine Beschreibung für die Basisverbindung angeben. |
 | `connectionSpec.id` | Verwenden Sie die Verbindungsspezifikations-ID für den [Profile Store von Experience Platform](/help/profile/home.md#profile-data-store) – `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -227,7 +227,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `baseConnectionId` | Verwenden Sie die Basisverbindungs-ID, die Sie im vorherigen Schritt erhalten haben. |
 | `data.format` | `CSV` ist derzeit das einzige unterstützte Dateiexportformat. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -531,7 +531,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `auth.specname` | Gibt das Authentifizierungsformat für das Ziel an. Um den specName für Ihr Ziel zu ermitteln, führen Sie einen [GET-Aufruf an den Verbindungsspezifikationen-Endpunkt](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec) durch, wobei Sie die Verbindungsspezifikation Ihres gewünschten Ziels angeben. Suchen Sie in der Antwort nach dem Parameter `authSpec.name`. <br> Bei Adobe Campaign-Zielen können Sie beispielsweise eine der folgenden Optionen verwenden: `S3`, `SFTP with Password` oder `SFTP with SSH Key`. |
 | `params` | Je nach Ziel, mit dem Sie eine Verbindung herstellen, müssen Sie unterschiedliche erforderliche Authentifizierungsparameter angeben. Bei Verbindungen des Typs Amazon S3 müssen Sie Ihre Zugriffs-ID und den geheimen Schlüssel für Ihren Speicherort im Amazon S3-Speicher angeben. <br> Um die erforderlichen Parameter für Ihr Ziel zu ermitteln, führen Sie einen [GET-Aufruf an den Verbindungsspezifikationen-Endpunkt](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec) durch, wobei Sie die Verbindungsspezifikation Ihres gewünschten Ziels angeben. Suchen Sie in der Antwort nach dem Parameter `authSpec.spec.required`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -848,7 +848,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `params.path` | Geben Sie bei S3-Verbindungen den Dateipfad in Ihrem Speicherort an, an den Dateien exportiert werden sollen. |
 | `params.format` | `CSV` ist derzeit der einzige unterstützte Dateiexporttyp. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -1041,7 +1041,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `endDate` | Für *Batch-Ziele* nur. Dieses Feld ist nur erforderlich, wenn ein Segment zu einem Datenfluss in Batch-Dateiexport-Zielen wie Amazon S3, SFTP oder Azure Blob hinzugefügt wird. <br> Nicht anwendbar bei der Auswahl von `"exportMode":"DAILY_FULL_EXPORT"` und `"frequency":"ONCE"`. <br> Legt das Datum fest, ab dem Segmentmitglieder nicht mehr in das Ziel exportiert werden. |
 | `startTime` | Für *Batch-Ziele* nur. Dieses Feld ist nur erforderlich, wenn ein Segment zu einem Datenfluss in Batch-Dateiexport-Zielen wie Amazon S3, SFTP oder Azure Blob hinzugefügt wird. <br> Obligatorisch. Wählen Sie den Zeitpunkt aus, zu dem Dateien, die Mitglieder des Segments enthalten, generiert und an Ihr Ziel exportiert werden sollen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!TIP]
 >

@@ -8,7 +8,7 @@ exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '520'
-ht-degree: 56%
+ht-degree: 59%
 
 ---
 
@@ -94,7 +94,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.clientId` | Die mit Ihrer [!DNL Salesforce Marketing Cloud] Anwendung. |
 | `auth.params.clientSecret` | Das Client-Geheimnis, das mit Ihrem [!DNL Salesforce Marketing Cloud] Anwendung. |
-| `connectionSpec.id` | Die [!DNL Salesforce Marketing Cloud] Verbindungsspezifikations-ID: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
+| `connectionSpec.id` | Die [!DNL Salesforce Marketing Cloud]-Verbindungsspezifikations-ID: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
 
 **Antwort**
 
@@ -109,7 +109,7 @@ Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließ
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Salesforce Marketing Cloud] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL Salesforce Marketing Cloud]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen eines Datenflusses, um Daten zur Marketing-Automatisierung mithilfe der  [!DNL Flow Service] -API auf Platform zu übertragen](../../collect/marketing-automation.md)

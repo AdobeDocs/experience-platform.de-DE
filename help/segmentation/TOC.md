@@ -5,14 +5,14 @@ breadcrumb-title: Handbuch zum Segmentierungs-Service
 user-guide-description: Erstellen Sie Segmente und Zielgruppen aus Ihren Echtzeit-Kundenprofildaten.
 feature: Segments
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 100%
 
 ---
 
 
-# Adobe Experience Platform-Segmentierungs-Service {#segmentation}
+# Segmentierungs-Service von Adobe Experience Platform {#segmentation}
 
 - [Übersicht über den Segmentierungs-Service](home.md)
 - [Datentypen für die Segmentierung](data-types.md)

@@ -5,8 +5,8 @@ title: Überblick über Adobe Experience Platform
 description: Mit Adobe Experience Platform können Unternehmen Kundendaten zentral zusammenführen und standardisieren. Zusätzlich können mithilfe von Datenwissenschaft und maschinellem Lernen die Gestaltung und Bereitstellung umfassender, personalisierter Erlebnisse erheblich verbessert werden.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
 source-git-commit: 48e050718b665bc297f97bf1b90a6f4517dd3af5
-workflow-type: ht
-source-wordcount: '0'
+workflow-type: tm+mt
+source-wordcount: '437'
 ht-degree: 100%
 
 ---

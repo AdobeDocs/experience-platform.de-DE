@@ -5,7 +5,7 @@ exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
 source-git-commit: da8b5d9fffdf8a176a4d70be5df5b3021cf0df7b
 workflow-type: tm+mt
 source-wordcount: '469'
-ht-degree: 74%
+ht-degree: 86%
 
 ---
 
@@ -50,7 +50,7 @@ Eine Datensatzgültigkeit ist eine zeitverzögerte Aktion zum Löschen eines Dat
 >Löschanfragen von Datensätzen stehen nur für Unternehmen zur Verfügung, die **Adobe Gesundheitsschild**.
 >
 >
->Löschvorgänge von Datensätzen dienen zur Datenbereinigung, zum Entfernen anonymer Daten oder zur Datenminimierung. Sie sind **not** für Anfragen von Datensubjekten nach Datenschutzbestimmungen wie der Datenschutz-Grundverordnung (DSGVO) verwendet werden. Verwenden Sie für alle Anwendungsfälle der Kompatibilität Folgendes: [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) anstatt.
+>Löschvorgänge von Datensätzen dienen zur Datenbereinigung, zum Entfernen anonymer Daten oder zur Datenminimierung. Sie dürfen **nicht** für Anfragen zu den Rechten der betroffenen Personen (Compliance) verwendet werden, da sie sich auf Datenschutzbestimmungen wie die Datenschutz-Grundverordnung (DSGVO) beziehen. Verwenden Sie stattdessen [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) für alle Compliance-Anwendungsfälle.
 
 Mit der Data Hygiene API können Sie alle mit einer Identität verknüpften Datensätze aus einem oder allen Datensätzen löschen. Sämtliche Datenhygiene-Aufgaben, die Identitäten löschen, werden durch ein so genanntes Konstrukt dargestellt. Siehe [Endpunktleitfaden für Arbeitsaufträge](./workorder.md) für Details zum Arbeiten mit Datensatzlöschungen in der API.
 

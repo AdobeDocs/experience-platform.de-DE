@@ -6,8 +6,8 @@ description: Erfahren Sie, wie Sie ein Array-Feld in der Benutzeroberfläche "Ex
 exl-id: 9ac55554-c29b-40b2-9987-c8c17cc2c00c
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
-source-wordcount: '366'
-ht-degree: 2%
+source-wordcount: '363'
+ht-degree: 1%
 
 ---
 
@@ -31,7 +31,7 @@ Die zusätzlichen Konfigurationssteuerelemente für Arrays lauten wie folgt:
 | [!UICONTROL Maximale Länge] | Die maximale Anzahl von Elementen, die das Array enthalten muss, damit die Aufnahme erfolgreich ist. |
 | [!UICONTROL Nur eindeutige Elemente] | Wenn auf &quot;[!UICONTROL True]&quot;, muss jedes Element im Array eindeutig sein, damit die Aufnahme erfolgreich ist. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Nachdem Sie die Konfiguration des Felds abgeschlossen haben, wählen Sie **[!UICONTROL Anwenden]** , um die Änderung auf das Schema anzuwenden.
 

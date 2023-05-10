@@ -8,7 +8,7 @@ solution: Data Collection
 source-git-commit: 24220c24af89e3eabc3d21854c1f70a418b2da59
 workflow-type: tm+mt
 source-wordcount: '984'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -82,7 +82,7 @@ ht-degree: 98%
          * [Übersicht](./extensions/client/product-string/overview.md)
          * [Versionshinweise](./extensions/client/product-string/release-notes.md)
       * [Adobe Analytics Produktzeichenfolgen-Builder](https://exchange.adobe.com/apps/ec/101461)
-      * [Adobe Analytics über das Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
+      * [Adobe Analytics über das Adobe Experience Platform Web SDK](https://exchange.adobe.com/de/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
       * Adobe Audience Manager {#audience-manager}
          * [Übersicht](./extensions/client/audience-manager/overview.md)
       * Adobe Client-Datenschicht {#client-data-layer}

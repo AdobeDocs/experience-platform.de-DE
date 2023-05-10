@@ -8,7 +8,7 @@ exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 69%
+ht-degree: 73%
 
 ---
 
@@ -91,7 +91,7 @@ curl -X POST \
 | `auth.params.username` | Der Benutzername, der mit Ihrer [!DNL Salesforce Service Cloud] -Konto. |
 | `auth.params.password` | Das Kennwort, das mit Ihrem [!DNL Salesforce Service Cloud] -Konto. |
 | `auth.params.securityToken` | Das Ihrem [!DNL Salesforce Service Cloud] -Konto. |
-| `connectionSpec.id` | Die [!DNL Salesforce Service Cloud] Verbindungsspezifikations-ID: `b66ab34-8619-49cb-96d1-39b37ede86ea` |
+| `connectionSpec.id` | Die [!DNL Salesforce Service Cloud]-Verbindungsspezifikations-ID: `b66ab34-8619-49cb-96d1-39b37ede86ea` |
 
 **Antwort**
 
@@ -106,7 +106,7 @@ Eine erfolgreiche Antwort gibt die neu erstellte Basisverbindung zurück, einsch
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Salesforce Service Cloud] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL Salesforce Service Cloud]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen eines Datenflusses, um Kundenerfolgsdaten mithilfe der  [!DNL Flow Service] -API zu Platform zu übertragen](../../collect/customer-success.md)

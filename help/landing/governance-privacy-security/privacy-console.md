@@ -3,8 +3,8 @@ title: Übersicht über die Datenschutzkonsole
 description: Erfahren Sie, wie Sie Ihre datenschutzbezogenen Workflows in der Benutzeroberfläche von Adobe Experience Platform überwachen.
 source-git-commit: 1fac36a0fd767add92283cd256d8bcea783ecf3b
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 4%
+source-wordcount: '403'
+ht-degree: 3%
 
 ---
 
@@ -38,7 +38,7 @@ Die Funktion der einzelnen Widgets wird nachfolgend beschrieben:
 | Die aktivsten Benutzer | Zeigt die aktivsten Platform-Benutzer in Ihrer Organisation an, die von [Auditprotokolle](./audit-logs/overview.md) für den ausgewählten Zeitraum. Verwenden Sie das Dropdown-Menü, um den Zeitrahmen zwischen den letzten 7 Tagen, 14 Tagen und 30 Tagen zu ändern. |
 | Anfragen von Datensubjekten | Zeigt die Anzahl der von [Privacy Service](../../privacy-service/home.md) für einen bestimmten Tag. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Benutzerhandbücher
 
@@ -51,7 +51,7 @@ Die Konsole enthält mehrere produktinterne Anleitungen, die Sie mit allgemeinen
 Weitere Informationen zu den verschiedenen Platform-Diensten, die mit Datenschutzanwendungsfällen verknüpft sind, finden Sie in der folgenden Dokumentation:
 
 * [Attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md)
-* [Auditprotokolle](./audit-logs/overview.md)
+* [Audit-Protokolle](./audit-logs/overview.md)
 * [Data Governance](../../data-governance/home.md)
 * [Datenhygiene](../../hygiene/home.md)
 * [Privacy Service](../../privacy-service/home.md)

@@ -5,7 +5,7 @@ exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
 source-git-commit: 010818b56154067402a7cd66f489dd2080142e53
 workflow-type: tm+mt
 source-wordcount: '680'
-ht-degree: 90%
+ht-degree: 93%
 
 ---
 
@@ -48,9 +48,9 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus
 * **[!UICONTROL Mandant]**: Die Mandanteninformationen, die Ihre Anwendung enthalten.
 * **[!UICONTROL Service-Prinzipal-ID]**: Die Client-ID der Anwendung.
 * **[!UICONTROL Service-Prinzipal-Schlüssel]**: Der Schlüssel der Anwendung.
-* **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien eine Verschlüsselung hinzuzufügen. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der Abbildung unten.
+* **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien eine Verschlüsselung hinzuzufügen. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung.
 
-   ![Bild, das ein Beispiel eines korrekt formatierten PGP-Schlüssels in der Benutzeroberfläche anzeigt](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![Abbildung eines Beispiels für einen korrekt formatierten PGP-Schlüssel in der Benutzeroberfläche](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Ausfüllen der Zieldetails {#destination-details}
 

@@ -8,7 +8,7 @@ exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '489'
-ht-degree: 60%
+ht-degree: 64%
 
 ---
 
@@ -94,7 +94,7 @@ curl -X POST \
 | `auth.params.clientSecret` | Das Client-Geheimnis, das mit Ihrem [!DNL HubSpot] Anwendung. |
 | `auth.params.accessToken` | Das Zugriffstoken, das beim erstmaligen Authentifizieren Ihrer OAuth-Integration erhalten wurde. |
 | `auth.params.refreshToken` | Das Aktualisierungstoken, das beim erstmaligen Authentifizieren Ihrer OAuth-Integration erhalten wurde. |
-| `connectionSpec.id` | Die [!DNL HubSpot] Verbindungsspezifikations-ID: `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
+| `connectionSpec.id` | Die [!DNL HubSpot]-Verbindungsspezifikations-ID: `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
 
 **Antwort**
 
@@ -109,7 +109,7 @@ Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließ
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL HubSpot] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL HubSpot]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen eines Datenflusses, um Daten zur Marketing-Automatisierung mithilfe der  [!DNL Flow Service] -API auf Platform zu übertragen](../../collect/marketing-automation.md)

@@ -8,7 +8,7 @@ exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '577'
-ht-degree: 18%
+ht-degree: 23%
 
 ---
 
@@ -37,7 +37,7 @@ Der erste Schritt zur Anreicherung [!DNL Real-Time Customer Profile] mit Scoring
 
 Das Erstellen eines Schemas beginnt mit dem Zuweisen einer Klasse. Klassen definieren die Verhaltensaspekte der Daten, die das Schema enthalten soll (Datensatz oder Zeitreihen). Um eigene Schemata zu erstellen, führen Sie die Schritte im Tutorial zu [Erstellen eines Schemas mit dem Schema Editor](../../xdm/tutorials/create-schema-ui.md). Beachten Sie, dass Sie, bevor Sie einen Datensatz für [!DNL Profile], müssen Sie das Schema des Datensatzes so konfigurieren, dass es ein primäres Identitätsfeld enthält, und dann das Schema für [!DNL Profile]. Wenn Daten in eine [!DNL Profile]-aktivierter Datensatz, der dieselben Daten auch als [!DNL Profile] Datensätze.
 
-Wenn Sie lieber ein Schema mit der [!DNL Schema Registry] API stattdessen verwenden, indem Sie die [[!DNL Schema Registry] Entwicklerhandbuch](../../xdm/api/getting-started.md) vor dem Versuch des Tutorials auf [Erstellen eines Schemas mithilfe der API](../../xdm/tutorials/create-schema-api.md).
+Wenn Sie lieber ein Schema mit der [!DNL Schema Registry]-API erstellen möchten, lesen Sie zunächst das [[!DNL Schema Registry] Entwicklerhandbuch](../../xdm/api/getting-started.md), bevor Sie im Rahmen des Tutorials versuchen, [ein Schema mithilfe der API zu erstellen](../../xdm/tutorials/create-schema-api.md).
 
 Sobald Ihr Schema und Ihr Datensatz vorbereitet sind, können Sie Scoring-Daten generieren und in den Datensatz aufnehmen, indem Sie Scoring-Läufe mit einem geeigneten Modell durchführen.
 
@@ -45,7 +45,7 @@ Sobald Ihr Schema und Ihr Datensatz vorbereitet sind, können Sie Scoring-Daten 
 
 Nachdem Sie Ihre Scoring-Dateneinblicke generiert und in Ihre [!DNL Profile]-aktivierter Datensatz, können Sie dynamische Segmente mithilfe der [!DNL Segment Builder].
 
-Die [!DNL Segment Builder] bietet einen umfassenden Arbeitsbereich, in dem Sie mit [!DNL Profile] Datenelemente. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen. Befolgen Sie die [[!DNL Segment Builder] Benutzerhandbuch](../../segmentation/ui/segment-builder.md) Weitere Informationen:
+Die [!DNL Segment Builder] bietet einen umfassenden Arbeitsbereich, in dem Sie mit [!DNL Profile] Datenelemente. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen. Befolgen Sie die [[!DNL Segment Builder] Benutzerhandbuch](../../segmentation/ui/segment-builder.md) Weitere Informationen:
 
 - Erstellen von Segmentdefinitionen mithilfe einer Kombination aus Attributen, Ereignissen und vorhandenen Zielgruppen als Bausteinen.
 - Verwenden der Arbeitsfläche und Container des Regel-Builders, um die Reihenfolge zu steuern, in der Segmentregeln ausgeführt werden.

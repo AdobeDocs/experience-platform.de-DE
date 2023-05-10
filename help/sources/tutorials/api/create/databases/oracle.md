@@ -8,7 +8,7 @@ exl-id: b1cea714-93ff-425f-8e12-6061da97d094
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '428'
-ht-degree: 71%
+ht-degree: 72%
 
 ---
 
@@ -81,7 +81,7 @@ curl -X POST \
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `auth.params.connectionString` | Die Verbindungszeichenfolge, über die die Verbindung zu Ihrem [!DNL Oracle] Datenbank. Die [!DNL Oracle] Verbindungszeichenfolgenmuster ist: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
-| `connectionSpec.id` | Die [!DNL Oracle] Verbindungsspezifikations-ID: `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
+| `connectionSpec.id` | Die [!DNL Oracle]-Verbindungsspezifikations-ID: `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 **Antwort**
 

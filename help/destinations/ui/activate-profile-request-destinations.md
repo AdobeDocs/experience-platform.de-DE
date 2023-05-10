@@ -7,7 +7,7 @@ exl-id: cd7132eb-4047-4faa-a224-47366846cb56
 source-git-commit: f771cf0c9ea692ad02cf987608b3710772712d54
 workflow-type: tm+mt
 source-wordcount: '935'
-ht-degree: 20%
+ht-degree: 24%
 
 ---
 
@@ -110,7 +110,7 @@ Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihr
 
 ### Auswertung der Einverständnisrichtlinie {#consent-policy-evaluation}
 
-Wenn Ihr Unternehmen **Adobe Gesundheitsschild** oder **Adobe Privacy &amp; Security Shield** auswählen **[!UICONTROL Gültige Zustimmungsrichtlinien anzeigen]** , um zu sehen, welche Zustimmungsrichtlinien angewendet werden und wie viele Profile infolge dieser Aktivierung in die Aktivierung einbezogen werden. Informationen [Bewertung der Einwilligungsrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) für weitere Informationen.
+Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL Aktuelle Einverständnisrichtlinien anzeigen]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Informationen [Bewertung der Einwilligungsrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) für weitere Informationen.
 
 ### Prüfungen von Datennutzungsrichtlinien {#data-usage-policy-checks}
 

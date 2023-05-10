@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Flussdienst;
+keywords: Experience Platform;Startseite;beliebte Themen;Flow Service;
 title: (Beta) Erstellen eines Flusslaufs für die On-Demand-Aufnahme mithilfe der Flow Service-API
 description: In diesem Tutorial werden die Schritte zum Erstellen eines Flusslaufs für die On-Demand-Erfassung mithilfe der Flow Service-API beschrieben.
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
 source-git-commit: 795b1af6421c713f580829588f954856e0a88277
 workflow-type: tm+mt
 source-wordcount: '856'
-ht-degree: 13%
+ht-degree: 14%
 
 ---
 

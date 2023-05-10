@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp "Per
 exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 21%
+source-wordcount: '253'
+ht-degree: 20%
 
 ---
 
@@ -28,7 +28,7 @@ Darüber hinaus bietet der Datentyp eine Reihe optionaler Eigenschaften, die in 
 | `middleName` | Zwischen dem Vor- und dem Nachnamen angegebene mittlere, alternative oder zusätzliche Namen. |
 | `suffix` | Eine Gruppe von Briefen, die nach dem Namen einer Person eingereicht werden, um zusätzliche Informationen bereitzustellen (z. B. `Jr.`, `Sr.`, `M.D.`, `PhD`, `I`, `II`, `III`usw.). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp &quot;Personenname&quot;finden Sie im öffentlichen XDM-Repository:
 

@@ -45,7 +45,7 @@ Data Science Workspace nutzt maschinelles Lernen und künstliche Intelligenz, um
 
 | Funktion | Beschreibung |
 | --- | ---|
-| Adobe Experience Platform Intelligence Package-Add-on | Das Adobe Experience Platform Intelligence-Paket-Add-on ist ein Data Science Workspace-Upgrade, das zusätzliche wichtige Funktionen wie Folgendes freischaltet: <li> Experimentieren und Auswerten benutzeroberflächengesteuerter Modelle.</li><li> Möglichkeit zur Bereitstellung und Inbetriebnahme von Modellen mit geplanten Schulungs- und Unterrichtsvorgängen.</li><li> Unterstützung für tiefes Lernen in TensorFlow-Modellen (GPU Compute).</li><li> Spark-basierte verteilte Berechnung, um mit großen Datensätzen (10MM + Zeilen) zu trainieren und zu bewerten.</li><li>Und mehr</li> |
+| Adobe Experience Platform Intelligence Package-Add-on | Das Adobe Experience Platform Intelligence-Paket-Add-on ist ein Data Science Workspace-Upgrade, das zusätzliche wichtige Funktionen wie Folgendes freischaltet: <li> Experimentieren und Auswerten benutzeroberflächengesteuerter Modelle.</li><li> Möglichkeit zur Bereitstellung und Inbetriebnahme von Modellen mit geplanten Schulungs- und Unterrichtsvorgängen.</li><li> Unterstützung für tiefes Lernen in TensorFlow-Modellen (GPU Compute).</li><li> Spark-basierte verteilte Berechnung, um mit großen Datensätzen (10MM + Zeilen) zu trainieren und zu bewerten.</li><li>Und vieles mehr</li> |
 
 Weitere Informationen zum Adobe Experience Platform Intelligence-Package-Add-on finden Sie in der Dokumentation unter [Zugriff auf Data Science Workspace und Funktionen](../../data-science-workspace/access-features-dsw.md).
 

@@ -4,8 +4,8 @@ description: Dieses Dokument bietet einen Überblick über die Feldergruppe "Ein
 exl-id: a40d17b3-cb76-4b63-9328-735fc7c55672
 source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 8%
+source-wordcount: '109'
+ht-degree: 7%
 
 ---
 
@@ -21,6 +21,6 @@ ht-degree: 8%
 | `transaction` | [[!UICONTROL Transaktion]](../../data-types/transaction.md) | Beschreibt die mit der Einlage verbundene Finanztransaktion. |
 | `mobileDeposit` | [!UICONTROL Boolesch] | Gibt an, ob die Anzahlung über eine mobile Plattform erfolgt ist. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-deposit-details.schema.json).

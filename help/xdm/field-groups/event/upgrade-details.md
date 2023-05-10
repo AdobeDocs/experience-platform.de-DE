@@ -4,8 +4,8 @@ description: Dieses Dokument bietet einen Überblick über die Feldergruppe des 
 exl-id: cd3f4cd9-ee0e-4bdf-a630-dd2c3c3cc8c7
 source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
 workflow-type: tm+mt
-source-wordcount: '154'
-ht-degree: 5%
+source-wordcount: '151'
+ht-degree: 3%
 
 ---
 
@@ -22,7 +22,7 @@ Die Feldergruppe stellt ein einzelnes Feld vom Typ Objekt bereit, `upgrades`. Di
 | `upgradeImpressions` | Array von [Impressionen](../../data-types/impressions.md) | Ein Array, das die aufgezeichneten Impressionen (digitale Ansichten oder Interaktionen mit dem Upgrade-Angebot) für den Kunden auflistet. |
 | `upgradeTransaction` | [Transaktion](../../data-types/transaction.md) | Beschreibt die Währungstransaktion für das Upgrade. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 

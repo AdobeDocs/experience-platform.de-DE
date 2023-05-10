@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Zugriffskontrolle; attributbasierte Zugriffskontrolle; ABAC
+keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;attributbasierte Zugriffssteuerung;ABAC
 title: Attributbasierte Zugriffssteuerung Rolle erstellen
 description: Dieses Dokument enthält Informationen zum Verwalten von Rollen über die Benutzeroberfläche "Berechtigungen"in Adobe Experience Cloud
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
 source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
 source-wordcount: '511'
-ht-degree: 1%
+ht-degree: 16%
 
 ---
 
-# Rollen verwalten
+# Verwalten von Rollen
 
-Rollen definieren den Zugriff, den ein Administrator, ein Spezialist oder ein Endbenutzer auf Ressourcen in Ihrem Unternehmen hat. In einer rollenbasierten Zugriffskontrollumgebung erfolgt die Bereitstellung des Benutzerzugriffs über gemeinsame Zuständigkeiten und Anforderungen. Eine Rolle verfügt über bestimmte Berechtigungen und Mitglieder Ihrer Organisation können je nach dem Umfang der Ansicht oder des Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden.
+Rollen definieren den Zugriff, den ein Administrator, ein Spezialist oder ein Endbenutzer auf Ressourcen in Ihrem Unternehmen hat. In einer rollenbasierten Zugriffssteuerungsumgebung erfolgt die Bereitstellung des Benutzerzugriffs über gemeinsame Zuständigkeiten und Anforderungen. Eine Rolle verfügt über bestimmte Berechtigungen, wobei Mitglieder Ihrer Organisation je nach dem Umfang des Lese- oder Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden können.
 
-## Erstellen Sie eine neue Rolle
+## Erstellen einer neuen Rolle
 
 Um eine neue Rolle zu erstellen, wählen Sie die **[!UICONTROL Rollen]** Registerkarte in der Seitenleiste und wählen Sie **[!UICONTROL Rolle erstellen]**.
 
@@ -22,7 +22,7 @@ Um eine neue Rolle zu erstellen, wählen Sie die **[!UICONTROL Rollen]** Registe
 
 Die **[!UICONTROL Neue Rolle erstellen]** angezeigt, in dem Sie aufgefordert werden, einen Namen und eine optionale Beschreibung einzugeben.
 
-Wenn Sie fertig sind, wählen Sie **[!UICONTROL Bestätigen]**.
+Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Bestätigen]**.
 
 ![flac-create-new-role](../../images/flac-ui/flac-create-new-role.png)
 
@@ -38,7 +38,7 @@ Klicken Sie auf die gewünschte Ressource und ziehen Sie sie in den Hauptbereich
 
 ![flac-additional-resources-added](../../images/flac-ui/flac-additional-resources-added.png)
 
-Wählen Sie im Dropdown-Menü die Ressourcenberechtigungen aus, die Sie in die Rolle einbeziehen möchten. Wiederholen Sie diesen Vorgang für alle Ressourcen, die Sie für die Rolle einbeziehen möchten. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Speichern und beenden]**.
+Wählen Sie im Dropdown-Menü die Ressourcenberechtigungen aus, die Sie in die Rolle einbeziehen möchten. Wiederholen Sie diesen Vorgang für alle Ressourcen, die Sie für die Rolle einbeziehen möchten. Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Speichern und beenden]**.
 
 ![flac-save-resources](../../images/flac-ui/flac-save-resources.png)
 
@@ -74,7 +74,7 @@ Die neue Rolle wird in der Liste auf der **[!UICONTROL Rollen]** Seite.
 
 ## Rollen löschen
 
-Wählen Sie die Auslassungszeichen (`…`) neben dem Namen einer Rolle angezeigt. In einer Dropdown-Liste werden Steuerelemente zum Bearbeiten, Löschen oder Duplizieren der Rolle angezeigt. Wählen Sie Löschen aus der Dropdown-Liste aus.
+Wählen Sie die Auslassungszeichen (`…`) neben dem Namen einer Rolle angezeigt. In einer Dropdown-Liste werden Steuerelemente zum Bearbeiten, Löschen oder Duplizieren der Rolle angezeigt. Wählen Sie im Dropdown-Menü die Option „Löschen“ aus.
 
 ![flac-role-delete](../../images/flac-ui/flac-role-delete.png)
 

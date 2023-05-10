@@ -1,15 +1,15 @@
 ---
 description: Erfahren Sie, wie Sie mit Destination SDK ein SFTP-Ziel mit vordefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration konfigurieren.
-title: Konfigurieren Sie ein SFTP-Ziel mit vordefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration.
+title: Konfigurieren eines SFTP-Ziels mit vordefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration.
 exl-id: 6e0fe019-7fbb-48e4-9469-6cc7fc3cb6e4
 source-git-commit: bdeebca9608e7c1ff3ae0cb1aeb444dccb78028f
 workflow-type: tm+mt
 source-wordcount: '740'
-ht-degree: 10%
+ht-degree: 14%
 
 ---
 
-# Konfigurieren eines SFTP-Ziels mit vordefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration
+# Konfigurieren eines SFTP-Ziels mit vordefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration
 
 ## Übersicht {#overview}
 

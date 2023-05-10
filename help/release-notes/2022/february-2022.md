@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platform - Versionshinweise - Februar 2022
+title: Adobe Experience Platform – Versionshinweise Februar 2022
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2022.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
 source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1019'
-ht-degree: 53%
+ht-degree: 61%
 
 ---
 
@@ -33,7 +33,7 @@ Adobe Experience Platform bietet mehrere [!DNL dashboards] durch die Sie wichtig
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Neue Widgets für Standardziele | Mit den folgenden Standard-Widgets können Sie verschiedene Metriken im Zusammenhang mit Ihren Zielen visualisieren.<ul><li>Kürzlich aktivierte Segmente nach Ziel. Dieses Widget zeigt die fünf am häufigsten aktivierten Segmente in absteigender Reihenfolge entsprechend dem ausgewählten Ziel an.</li><li>Trend der Zielgruppengröße. Dieses Widget zeigt die Beziehung der Profilanzahl über einen bestimmten Zeitraum für ein Segment, das diesem Zielkonto zugeordnet wurde.</li><li>Nicht zugeordnete Segmente nach Identität. Dieses Widget listet die fünf am häufigsten nicht zugeordneten Segmente nach absteigender Identitätsanzahl für ein bestimmtes Ziel und eine bestimmte Identität auf.</li><li>Zugeordnete Segmente nach Identität. Dieses Widget listet die fünf am häufigsten zugeordneten Segmente auf. Die Reihenfolge von Segmenten variiert von hoch bis niedrig entsprechend der jeweiligen Anzahl der Quell-IDs, die mit der im Dropdown-Menü des Widgets ausgewählten Ziel-ID übereinstimmen.</li><li>Allgemeine Zielgruppen. Dieses Widget bietet eine Liste der fünf wichtigsten Segmente, die für das am oberen Seitenrand ausgewählte Zielkonto aktiviert wurden, sowie das im Widget-Dropdown-Menü ausgewählte Ziel.</li></ul> Weitere Informationen zu den verfügbaren Standard-Widgets finden Sie im Abschnitt [Dashboard-Dokumentation zu Zielen.](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#standard-widgets). |
+| Neue Widgets für Standardziele | Mit den folgenden Standard-Widgets können Sie verschiedene Metriken im Zusammenhang mit Ihren Zielen visualisieren.<ul><li>Kürzlich aktivierte Segmente nach Ziel. Dieses Widget zeigt die fünf am häufigsten aktivierten Segmente in absteigender Reihenfolge entsprechend dem ausgewählten Ziel an.</li><li>Trend der Audience-Größe. Dieses Widget zeigt die Beziehung der Profilanzahl über einen bestimmten Zeitraum für ein Segment, das diesem Zielkonto zugeordnet wurde.</li><li>Nicht zugeordnete Segmente nach Identität. Dieses Widget listet die fünf häufigsten nicht zugeordneten Segmente auf, die nach absteigender Identitätsanzahl für ein bestimmtes Ziel und eine bestimmte Identität angeordnet werden.</li><li>Zugeordnete Segmente nach Identität. Dieses Widget listet die fünf am häufigsten zugeordneten Segmente auf. Die Reihenfolge von Segmenten variiert von hoch bis niedrig entsprechend der jeweiligen Anzahl der Quell-IDs, die mit der im Dropdown-Menü des Widgets ausgewählten Ziel-ID übereinstimmen.</li><li>Häufige Zielgruppen. Dieses Widget bietet eine Liste der fünf wichtigsten Segmente, die für das am oberen Seitenrand ausgewählte Zielkonto aktiviert wurden, sowie das im Widget-Dropdown-Menü ausgewählte Ziel.</li></ul> Weitere Informationen zu den verfügbaren Standard-Widgets finden Sie im Abschnitt [Dashboard-Dokumentation zu Zielen.](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#standard-widgets). |
 
 Weitere Informationen zu [!DNL Dashboards] finden Sie in der [[!DNL Dashboards] Übersicht](../../dashboards/home.md).
 

@@ -8,7 +8,7 @@ exl-id: 5e6ca7b4-5e2f-4706-a339-ac159e2e0938
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '464'
-ht-degree: 59%
+ht-degree: 63%
 
 ---
 
@@ -91,7 +91,7 @@ curl -X POST \
 | `auth.params.host` | Die URL der [!DNL PayPal] -Instanz. |
 | `auth.params.clientId` | Die mit Ihrer [!DNL PayPal] -Instanz. |
 | `auth.params.clientSecret` | Das Client-Geheimnis, das mit Ihrem [!DNL PayPal] -Instanz. |
-| `connectionSpec.id` | Die [!DNL PayPal] Verbindungsspezifikations-ID: `221c7626-58f6-4eec-8ee2-042b0226f03b`. |
+| `connectionSpec.id` | Die [!DNL PayPal]-Verbindungsspezifikations-ID: `221c7626-58f6-4eec-8ee2-042b0226f03b`. |
 
 **Antwort**
 
@@ -106,7 +106,7 @@ Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließ
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL PayPal] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL PayPal]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um Zahlungsdaten mit der [!DNL Flow Service] API](../../collect/payments.md)

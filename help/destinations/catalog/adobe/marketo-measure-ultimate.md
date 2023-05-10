@@ -2,13 +2,13 @@
 title: Marketo Measure Ultimate-Ziel
 description: Erfahren Sie, wie Sie Daten mit dem Marketo Measure Ultimate-Ziel verbinden und aktivieren.
 last-substantial-update: 2023-03-07T00:00:00Z
-source-git-commit: c2c7a4cd860fed2c8124fe46fe3fd405ba49ecf4
+exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 37%
 
 ---
-
 
 # Marketo Measure Ultimate Ziel {#mmu-destination}
 
@@ -83,5 +83,3 @@ Um einen erfolgreichen Datensatz-Export zu überprüfen, können Sie überprüfe
 ## Datennutzung und -Governance {#data-usage-governance}
 
 Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Ausführliche Informationen darüber, wie [!DNL Adobe Experience Platform] Data Governance erzwingt, finden Sie unter [Data Governance - Übersicht](/help/data-governance/home.md).
-
-

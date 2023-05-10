@@ -5,7 +5,7 @@ exl-id: 92a8b6ad-3c45-4772-8178-60f857ab13e2
 source-git-commit: 9785b252b7c9cb3513858476753b6b4f71277ed7
 workflow-type: tm+mt
 source-wordcount: '526'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -37,8 +37,8 @@ XDM bietet eine Vielzahl von Standardfeldgruppen und Datentypen, um relevante, h
 
 Mit Platform können Sie eigene benutzerdefinierte Feldergruppen und Datentypen definieren, sodass Sie die Struktur Ihrer Daten vollständig steuern können, wenn verfügbare Standardressourcen Ihren Anforderungen nicht entsprechen. Weitere Informationen zum Definieren dieser benutzerdefinierten Ressourcen finden Sie in der folgenden Dokumentation:
 
-* [Benutzerdefinierte Feldergruppe erstellen](../ui/resources/field-groups.md#create)
-* [Benutzerdefinierten Datentyp erstellen](../ui/resources/data-types.md#create)
+* [Erstellen einer benutzerdefinierten Feldgruppe](../ui/resources/field-groups.md#create)
+* [Erstellen eines benutzerdefinierten Datentyps](../ui/resources/data-types.md#create)
 
 <!-- (To include once features are available)
 * Marking fields as sensitive

@@ -8,7 +8,7 @@ exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '568'
-ht-degree: 51%
+ht-degree: 54%
 
 ---
 
@@ -104,7 +104,7 @@ curl -X POST \
 | `auth.params.port` | Der TCP-Port für Ihre [!DNL Phoenix] Verbindung. |
 | `auth.params.httpPath` | Der teilweise HTTP-Pfad für Ihre [!DNL Phoenix] Verbindung. |
 | `auth.params.enableSsl` | Der boolesche Wert, der angibt, ob die Verbindungen zum Server mit SSL verschlüsselt werden. |
-| `connectionSpec.id` | Die [!DNL Phoenix] Verbindungsspezifikations-ID: `102706fb-a5cd-42ee-afe0-bc42f017ff43`. |
+| `connectionSpec.id` | Die [!DNL Phoenix]-Verbindungsspezifikations-ID: `102706fb-a5cd-42ee-afe0-bc42f017ff43`. |
 
 **Antwort**
 
@@ -119,7 +119,7 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, ei
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Phoenix] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL Phoenix]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um Datenbankdaten mit der [!DNL Flow Service] API](../../collect/database-nosql.md)

@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp "E-M
 exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 4%
+source-wordcount: '233'
+ht-degree: 3%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 4%
 | `statusReason` | Eine Beschreibung des aktuellen `status`. |
 | `type` | Die Art und Weise, wie das Konto die Person betrifft (z. B. `work` oder `personal`). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 
 Weitere Informationen zum Datentyp der E-Mail-Adresse finden Sie im öffentlichen XDM-Repository:

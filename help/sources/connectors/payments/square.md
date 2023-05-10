@@ -7,7 +7,7 @@ exl-id: 18d33c5a-2955-4d0b-938c-52b6f72a444d
 source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
 source-wordcount: '218'
-ht-degree: 53%
+ht-degree: 61%
 
 ---
 
@@ -23,13 +23,13 @@ Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von I
 
 Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Square] mit Platform mithilfe von APIs oder der Benutzeroberfläche:
 
-## Verbinden [!DNL Square] zur Plattform mithilfe von APIs
+## Verbinden von [!DNL Square] mit Platform mithilfe von APIs
 
 * [Erstellen einer quadratischen Basisverbindung mit der Flow Service-API](../../tutorials/api/create/payments/square.md)
-* [Datentabellen mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/tabular.md)
+* [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 * [Erstellen eines Datenflusses für eine Zahlungsquelle mithilfe der Flow Service-API](../../tutorials/api/collect/payments.md)
 
-## Verbinden [!DNL Square] zur Plattform mithilfe der Benutzeroberfläche
+## Verbinden von [!DNL Square] mit Platform über die Benutzeroberfläche
 
 * [Erstellen einer Quadratquellenverbindung in der Benutzeroberfläche](../../tutorials/ui/create/payments/square.md)
 * [Erstellen eines Datenflusses für eine Zahlungsquellenverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/payments.md)

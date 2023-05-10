@@ -1,9 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise Januar 2023
 description: Versionshinweise Januar 2023 für Adobe Experience Platform.
-source-git-commit: 6388c72aa0be8f5f91efaaa6a0edd22f3eb99de8
-workflow-type: ht
-source-wordcount: '2432'
+exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+workflow-type: tm+mt
+source-wordcount: '2414'
 ht-degree: 100%
 
 ---
@@ -38,7 +39,7 @@ Attributions-KI wird verwendet, um Credits zu Touchpoints zuzuordnen, die zu Kon
 | HIPAA-Bereitschaft | Wer Healthcare Shield nutzt, kann jetzt geschützte Gesundheitsinformationen in Attributions-KI und bestimmten anderen Experience Platform-basierten Anwendungen empfangen, verwenden, verwalten oder übermitteln. Healthcare Shield richtet sich an Kundinnen und Kunden im Gesundheitswesen, die gemäß HIPAA entweder ein Rechtsträger im Gesundheitswesen (Covered Entity) oder ein Geschäftspartner (Business Associate) sind. Weitere Informationen finden Sie in der Dokumentation zu [HIPAA und Adobe-Produkten und -Services](https://www.adobe.com/trust/compliance/hipaa-ready.html) |
 | Bearbeiten zusätzlicher Bewertungs-Datensatzspalten | Sie können jetzt beim Bearbeiten vorhandener Modelle zusätzliche Bewertungs-Datensatzspalten (Berichtsspalten) hinzufügen oder entfernen. Dies erweitert die Flexibilität der Attributionsbewertungen, um Ihnen Insights in zusätzliche Dimensionen zu bieten, nachdem ein Modell bereits erstellt wurde. Weitere Informationen finden Sie im [Handbuch zur Attributions-Benutzeroberfläche](../../intelligent-services/attribution-ai/user-guide.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen finden Sie im Überblick zu [KI-/ML-Services](../../intelligent-services/attribution-ai/overview.md).
 
@@ -52,7 +53,7 @@ Die Kunden-KI für Real-time Customer Data Platform dient dazu, im gewünschten 
 | ------- | ----------- |
 | HIPAA-Bereitschaft | Wer Healthcare Shield nutzt, kann jetzt geschützte Gesundheitsinformationen in Attributions-KI für Real-time Customer Data Platform und bestimmten anderen Experience Platform-basierten Anwendungen empfangen, verwenden, verwalten oder übermitteln. Healthcare Shield richtet sich an Kundinnen und Kunden im Gesundheitswesen, die gemäß HIPAA entweder ein Rechtsträger im Gesundheitswesen (Covered Entity) oder ein Geschäftspartner (Business Associate) sind. Weitere Informationen finden Sie in der Dokumentation zu [HIPAA und Adobe-Produkten und -Services](https://www.adobe.com/trust/compliance/hipaa-ready.html) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen finden Sie im Überblick zu [KI-/ML-Services](../../intelligent-services/customer-ai/overview.md).
 
@@ -66,7 +67,7 @@ Mit Adobe Assurance können Sie die Datenerfassung und die Bereitstellung von Er
 | ------- | ----------- |
 | Validierungs-Editor | Es wurden neue Verbesserungen zum Validierungs-Editor hinzugefügt. Zu diesen Verbesserungen gehören Validierungsspalten, neue Tools zur Code-Erstellung und optimierte Ansichten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zu Assurance finden Sie in der [Assurance-Dokumentation](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
@@ -81,7 +82,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | Neuer Startbildschirm | Die Startseite der Benutzeroberfläche für die Datenerfassung wurde aktualisiert und enthält jetzt hilfreiche Onboarding-Informationen und Links zur Optimierung der Produktivität. Dazu gehören:<ol><li>Dokumentation und empfohlene Workflows für die ersten Schritte</li><li>Aktuelle Eigenschaften, Regeln und Datenelemente</li><li>Beliebte Erweiterungen</li><li>Neue Erweiterungsaktualisierungen mit Schnellinstallationsfunktion</li></ol> |
 | Senden von Daten an [!DNL Google Ads] mittels Ereignisweiterleitung | Sie können jetzt die [[!DNL Google Ads Enhanced Conversions] API-Erweiterung](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) für die Ereignisweiterleitung in Kombination mit [Google Oauth 2-Geheimnissen](../../tags/ui/event-forwarding/secrets.md#google-oauth2) verwenden, um Server-seitige Daten sicher und in Echtzeit an [!DNL Google Ads] zu senden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Ziele (am 2. Februar aktualisiert) {#destinations}
 
@@ -160,7 +161,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 | Feldergruppe | [[!UICONTROL Wetter-Trigger]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | Die Feld `weatherTriggers` ist jetzt unter einem `weather`-Objekt verschachtelt. |
 | Feldergruppe | [[!UICONTROL XDM-bezogene Geschäftskonten]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account/related-accounts.schema.json) | Die Feldgruppe ist jetzt stabil. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md).
 
@@ -190,7 +191,7 @@ Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und B
 | Ablauf der Zugehörigkeit zu einer externen Zielgruppe | Standardmäßig werden externe Zielgruppenzugehörigkeiten 30 Tage lang aufbewahrt. Um sie länger aufzubewahren, verwenden Sie das `validUntil`-Feld während der Aufnahme von Zielgruppendaten. |
 | Beenden der Segmentzugehörigkeit durch die Plattform | Jede Segmentzugehörigkeit, die sich basierend auf dem `lastQualificationTime`-Feld für mehr als 30 Tage im `Exited`-Status befindet, wird gelöscht. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Übersicht zu Segmentierung](../../segmentation/home.md).
 

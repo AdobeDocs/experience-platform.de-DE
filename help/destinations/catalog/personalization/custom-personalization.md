@@ -6,7 +6,7 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 source-git-commit: 09e81093c2ed2703468693160939b3b6f62bc5b6
 workflow-type: tm+mt
 source-wordcount: '1305'
-ht-degree: 58%
+ht-degree: 59%
 
 ---
 
@@ -57,7 +57,7 @@ Um diese Anwendungsfälle zu aktivieren, benötigen Kunden eine schnelle, optimi
 
 Bei diesen Systemen kann es sich um externe Personalisierungsplattformen, Content Management-Systeme, Adserver und andere Anwendungen handeln, die über die Web- und mobilen Eigenschaften von Kunden hinweg ausgeführt werden.
 
-### Personalisierung auf derselben Seite {#same-page}
+### Personalisierung derselben Seite {#same-page}
 
 Ein Benutzer besucht eine Seite Ihrer Website. Der Kunde kann die aktuelle Seitenbesuchsinformationen (z. B. verweisende URL, Browsersprache, eingebettete Produktinformationen) verwenden, um die nächste Aktion/Entscheidung (z. B. Personalisierung) auszuwählen, indem er die benutzerdefinierte Personalisierungsverbindung für Plattformen ohne Adobe verwendet (z. B. [!DNL Pega], [!DNL Optimizely]usw.).
 

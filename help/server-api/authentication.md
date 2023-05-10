@@ -5,7 +5,7 @@ exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '637'
-ht-degree: 19%
+ht-degree: 21%
 
 ---
 
@@ -67,10 +67,10 @@ Um die Schreibberechtigungen für Datensätze zu konfigurieren, navigieren Sie z
 
 | Fehler-Code | Fehlermeldung | Beschreibung |
 | --- | --- | --- |
-| `EXEG-0500-401` | Ungültiges Autorisierungstoken | Diese Fehlermeldung wird in den folgenden Situationen angezeigt:  <ul><li>Die `authorization` -Kopfzeilenwert fehlt.</li><li>Die `authorization` Der Kopfzeilenwert enthält nicht die erforderliche `Bearer` Token.</li><li>Das angegebene Autorisierungstoken hat ein ungültiges Format.</li><li>Der Datastream erfordert Authentifizierung, aber die Anfrage fehlt an den erforderlichen Kopfzeilen.</li></ul> |
+| `EXEG-0500-401` | Ungültiges Autorisierungs-Token | Diese Fehlermeldung wird in den folgenden Situationen angezeigt:  <ul><li>Die `authorization` -Kopfzeilenwert fehlt.</li><li>Die `authorization` Der Kopfzeilenwert enthält nicht die erforderliche `Bearer` Token.</li><li>Das angegebene Autorisierungstoken hat ein ungültiges Format.</li><li>Der Datastream erfordert Authentifizierung, aber die Anfrage fehlt an den erforderlichen Kopfzeilen.</li></ul> |
 | `EXEG-0501-401` | Ungültiges Benutzerautorisierungstoken | Diese Fehlermeldung wird in den folgenden Situationen angezeigt: <ul><li>Dem API-Aufruf fehlt die erforderliche `x-user-token` -Kopfzeile.</li><li>Das angegebene Benutzer-Token hat ein ungültiges Format.</li></ul> |
-| `EXEG-0502-401` | Ungültiges Autorisierungstoken | Diese Fehlermeldung wird angezeigt, wenn das bereitgestellte Autorisierungstoken ein gültiges Format (JWT) aufweist, die Signatur jedoch ungültig ist. Überprüfen Sie die [Authentifizierungs-Tutorial](../landing/api-authentication.md) , um zu erfahren, wie Sie ein gültiges JWT-Token erhalten. |
-| `EXEG-0503-401` | Ungültiges Autorisierungstoken | Diese Fehlermeldung wird angezeigt, wenn das angegebene Autorisierungstoken abgelaufen ist. Durchsuchen Sie die [Authentifizierungs-Tutorial](../landing/api-authentication.md) , um ein neues Token zu generieren. |
+| `EXEG-0502-401` | Ungültiges Autorisierungs-Token | Diese Fehlermeldung wird angezeigt, wenn das bereitgestellte Autorisierungstoken ein gültiges Format (JWT) aufweist, die Signatur jedoch ungültig ist. Überprüfen Sie die [Authentifizierungs-Tutorial](../landing/api-authentication.md) , um zu erfahren, wie Sie ein gültiges JWT-Token erhalten. |
+| `EXEG-0503-401` | Ungültiges Autorisierungs-Token | Diese Fehlermeldung wird angezeigt, wenn das angegebene Autorisierungstoken abgelaufen ist. Durchsuchen Sie die [Authentifizierungs-Tutorial](../landing/api-authentication.md) , um ein neues Token zu generieren. |
 | `EXEG-0504-401` | Erforderlicher Produktkontext fehlt | Diese Fehlermeldung wird in den folgenden Situationen angezeigt:  <ul><li>Das Entwicklerkonto hat keinen Zugriff auf den Adobe Experience Platform-Produktkontext.</li><li>Das Unternehmenskonto hat noch keinen Anspruch auf Adobe Experience Platform.</li></ul> |
 | `EXEG-0505-401` | Der erforderliche Umfang des Autorisierungstokens fehlt | Dieser Fehler gilt nur für die Authentifizierung von Dienstkonten. Die Fehlermeldung wird angezeigt, wenn das im Aufruf enthaltene Dienstautorisierungstoken zu einem Dienstkonto gehört, das keinen Zugriff auf die `acp.foundation` IMS-Umfang. |
 | `EXEG-0506-401` | Sandbox kann nicht geschrieben werden | Diese Fehlermeldung wird angezeigt, wenn das Entwicklerkonto nicht über `WRITE` Zugriff auf die Experience Platformen-Sandbox, in der der Datastream definiert ist. |

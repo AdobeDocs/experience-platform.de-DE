@@ -1,11 +1,11 @@
 ---
 description: Erfahren Sie, wie Sie mit Destination SDK ein Azure Data Lake Storage-Ziel mit benutzerdefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration konfigurieren.
-title: Konfigurieren Sie ein Azure Data Lake Storage-Ziel mit benutzerdefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration.
+title: Konfigurieren eines Azure Data Lake Storage-Ziels mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration.
 exl-id: cb67b126-cd30-4fb7-b67e-c15dc7daef73
 source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
 source-wordcount: '743'
-ht-degree: 10%
+ht-degree: 12%
 
 ---
 

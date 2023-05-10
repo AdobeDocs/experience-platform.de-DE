@@ -70,7 +70,7 @@ Die folgenden Metriken sind für prädiktive Anreicherungsaufträge für Lead- u
 | **[!UICONTROL Verarbeitungszeit]** | Die Gesamtdauer, die zum Abschluss des Auftrags benötigt wurde. |
 | **[!UICONTROL Score name]** | Der Bewertungsname des Auftrags. |
 | **[!UICONTROL Profiltyp]** | Der Typ der Punktzahl: <ul><li>Person</li><li>Konto</li></ul>. |
-| **[!UICONTROL Auftragstyp]** | Der Auftragstyp:<ul><li>Scoring</li><li>Training</li>. |
+| **[!UICONTROL Auftragstyp]** | Der Auftragstyp:<ul><li>Bewertung</li><li>Training</li>. |
 | **[!UICONTROL Status]** | Gibt den Status (erfolgreich, fehlgeschlagen oder Verarbeitung) des prädiktiven Lead- und Kontobewertungsauftrags an. |
 
 ## UI-Steuerelemente {#ui-controls}

@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp von 
 exl-id: 398f56d9-1802-458d-b565-4096beb5b014
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '188'
-ht-degree: 13%
+source-wordcount: '185'
+ht-degree: 12%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 13%
 | `poiEntries` | Objekt | Beschreibt, wie oft eine Person am POI teilgenommen hat. Enthält zwei Eigenschaften: <ul><li>`id`: Eine eindeutige Kennung für die Kennzahl.</li><li>`value`: Der quantifizierbare Wert der Maßnahme.</li></ul> |
 | `poiExits` | Objekt | Beschreibt, wie oft eine Person den POI verlassen hat. Enthält zwei Eigenschaften: <ul><li>`id`: Eine eindeutige Kennung für die Kennzahl.</li><li>`value`: Der quantifizierbare Wert der Maßnahme.</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

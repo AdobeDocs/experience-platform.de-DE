@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Zugriffskontrolle; attributbasierte Zugriffskontrolle; ABAC
+keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;attributbasierte Zugriffssteuerung;ABAC
 title: Attributbasierte Zugriffskontrolle - Durchsuchen
 description: Dieses Dokument enthält Informationen zur Verwendung der Benutzeroberfläche für Berechtigungen in Adobe Experience Cloud
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '347'
-ht-degree: 21%
+ht-degree: 36%
 
 ---
 
@@ -35,7 +35,7 @@ Der Arbeitsbereich &quot;Attributbasierte Zugriffskontrolle&quot;für Adobe Expe
 
 >[!IMPORTANT]
 >
->Sobald Ihre Organisation für eine attributbasierte Zugriffskontrolle aktiviert wurde, können Sie mit der Verwendung von Berechtigungen für Adobe Experience Cloud anstelle von Produktprofilen in der Adobe Admin Console beginnen, um Berechtigungen für Benutzer, Funktionen, Beschriftungen und andere Ressourcen in Ihrer Organisation zu verwalten.
+>Sobald für Ihre Organisation die attributbasierte Zugriffssteuerung aktiviert wurde, können Sie mit der Verwendung von Berechtigungen für Adobe Experience Cloud anstelle von Produktprofilen in der Adobe Admin Console beginnen, um Berechtigungen für Benutzende, Funktionen, Beschriftungen und andere Ressourcen in Ihrer Organisation zu verwalten.
 
 ![flac-select-roles](../../images/flac-ui/flac-select-roles.png)
 

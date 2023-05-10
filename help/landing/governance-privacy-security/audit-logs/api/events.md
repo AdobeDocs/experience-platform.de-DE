@@ -4,14 +4,14 @@ description: Erfahren Sie, wie Sie mit der Auditabfrage-API Prüfereignisse in E
 exl-id: c365b6d8-0432-41a5-9a07-44a995f69b7d
 source-git-commit: c7887391481def872c40dd6ed1193bf562b9d0cf
 workflow-type: tm+mt
-source-wordcount: '477'
-ht-degree: 21%
+source-wordcount: '474'
+ht-degree: 20%
 
 ---
 
 # Audit events-Endpunkt
 
-Audit-Protokolle werden verwendet, um Details zur Benutzeraktivität für verschiedene Dienste und Funktionen bereitzustellen. Jede in einem Protokoll aufgezeichnete Aktion enthält Metadaten, die den Aktionstyp, das Datum und die Uhrzeit, die E-Mail-ID des/der Benutzenden, der/die die Aktion ausgeführt hat, und zusätzliche Attribute des Aktionstyps angeben. Die `/audit/events` -Endpunkt im [!DNL Audit Query] Mit der API können Sie Ereignisdaten für die Aktivität Ihres Unternehmens in programmgesteuert abrufen. [!DNL Platform].
+Audit-Protokolle werden verwendet, um Details zur Benutzeraktivität für verschiedene Dienste und Funktionen bereitzustellen. Jede in einem Protokoll aufgezeichnete Aktion enthält Metadaten, die den Aktionstyp, das Datum und die Uhrzeit, die E-Mail-ID der oder des Benutzenden, die oder der die Aktion durchgeführt hat, und weitere für den Aktionstyp relevante Attribute angeben. Die `/audit/events` -Endpunkt im [!DNL Audit Query] Mit der API können Sie Ereignisdaten für die Aktivität Ihres Unternehmens in programmgesteuert abrufen. [!DNL Platform].
 
 ## Erste Schritte
 
@@ -156,4 +156,4 @@ Eine erfolgreiche Antwort gibt die resultierenden Datenpunkte für die in der An
 | `action` | Die Art der Aktion, die für das Ereignis aufgezeichnet wurde. Eine Aktion kann eine der folgenden sein: <ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`remove` </li><li>`reset` </li><li>`segment activate` </li><li>`segment remove` </li><li>`update` </li></ul> |
 | `status` | Der Status der Aktion. Ein Status kann einer der folgenden sein: </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

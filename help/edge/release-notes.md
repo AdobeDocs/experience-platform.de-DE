@@ -6,7 +6,7 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 source-git-commit: 952ffa14537058ad03121747846a96c7c978b833
 workflow-type: tm+mt
 source-wordcount: '1517'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 **Neue Funktionen**
 
-* Hinzugefügte Unterstützung für [Überschreibungen der Datastream-Konfiguration](datastreams/overrides.md).
+* Es wurde Unterstützung für [Überschreibungen der Datenstromkonfiguration](datastreams/overrides.md) hinzugefügt.
 
 ## Version 2.15.0 – 30. März 2023
 

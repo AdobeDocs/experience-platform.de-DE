@@ -2,10 +2,11 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Abfragedienst; Query Service; Erlebnisereignisabfragen; Erlebnisereignisabfrage; Erlebnisereignisabfrage;
 title: Erstellen eines Trendberichts zu Ereignissen
 description: Erfahren Sie, wie Sie Abfragen schreiben, die Erlebnisereignisse verwenden, um einen Trendbericht mit Ereignissen über einen bestimmten Datumsbereich zu erstellen, der nach Datum gruppiert ist.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 8f7ed5b5-c265-4a1e-a360-4293d1e86e97
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '379'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 

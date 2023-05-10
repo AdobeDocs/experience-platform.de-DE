@@ -8,7 +8,7 @@ exl-id: 1f7ca86e-32f4-45f7-92c2-f87c5c0c4ea4
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '500'
-ht-degree: 60%
+ht-degree: 63%
 
 ---
 
@@ -96,7 +96,7 @@ curl -X POST \
 | `auth.params.host` | Der Host der [!DNL Spark] Server. |
 | `auth.params.username` | Der Benutzername, der mit Ihrer [!DNL Spark] Verbindung. |
 | `auth.params.password` | Das Kennwort, das mit Ihrem [!DNL Spark] Verbindung. |
-| `connectionSpec.id` | Die [!DNL Spark] Verbindungsspezifikations-ID: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`. |
+| `connectionSpec.id` | Die [!DNL Spark]-Verbindungsspezifikations-ID: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`. |
 
 **Antwort**
 
@@ -111,7 +111,7 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, ei
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Spark] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL Spark]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um Datenbankdaten mit der [!DNL Flow Service] API](../../collect/database-nosql.md)

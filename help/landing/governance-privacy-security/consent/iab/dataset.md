@@ -98,7 +98,7 @@ Nachdem Sie einen Namen und eine Beschreibung angegeben haben, können Sie dem S
 
 Wenn Sie ein vorhandenes Schema bearbeiten, das bereits für die Verwendung in [!DNL Real-Time Customer Profile]auswählen **[!UICONTROL Speichern]** , um Ihre Änderungen zu bestätigen, bevor Sie mit dem Abschnitt zum [Erstellen eines Datensatzes basierend auf Ihrem Einverständnisschema](#dataset). Wenn Sie ein neues Schema erstellen, führen Sie die im folgenden Unterabschnitt beschriebenen Schritte aus.
 
-#### Aktivieren Sie das Schema zur Verwendung in [!DNL Real-Time Customer Profile]
+#### Aktivieren des Schemas für die Verwendung in [!DNL Real-Time Customer Profile]
 
 Damit Platform die eingehenden Zustimmungsdaten bestimmten Kundenprofilen zuordnen kann, muss das Einwilligungsschema für die Verwendung in [!DNL Real-Time Customer Profile].
 

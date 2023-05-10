@@ -1,9 +1,10 @@
 ---
 title: Verwenden Sie die Umfrage zur Selbstidentifizierung, um Ihr persönliches Profil für Experience Platform zu erstellen.
 description: Erfahren Sie, wie Sie die Benutzeroberfläche der Umfrage zur Selbstidentifizierung verwenden, um relevante Inhalte auf Grundlage Ihrer Aufgabenfunktionen und damit verbundener Ziele zu erhalten.
-badge: „Beta“
-source-git-commit: 30fdad7f84a49a8e0db6fdf6571d1742de53ac2d
-workflow-type: ht
+badge: Beta
+exl-id: 80b3f55f-1eab-4a99-be75-49bd091f9739
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+workflow-type: tm+mt
 source-wordcount: '561'
 ht-degree: 100%
 

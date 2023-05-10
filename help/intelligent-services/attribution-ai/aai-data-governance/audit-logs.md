@@ -2,7 +2,8 @@
 keywords: Insights;Attributions-KI;Attributions-KI-Insights;AAI-Query-Service;Attributionsabfragen;Attributionsbewertungen
 title: Audit-Protokolle in Attributions-KI – Übersicht
 description: Erfahren Sie, wie Sie Audit-Protokolle in Attributions-KI anzeigen und verwalten können.
-source-git-commit: a68d4634c6341f27673fdd70d96f7e214032b5a9
+exl-id: 83c55dbc-f03d-4bda-ae07-68b7914483c8
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 100%
@@ -22,4 +23,3 @@ In einem Audit-Protokoll wird festgehalten, wer welche Aktion wann ausgeführt h
 Wenn diese Funktion für Ihr Unternehmen aktiviert ist, werden bei Aktivitäten automatisch Auditprotokolle aufgezeichnet. Sie müssen die Datenerfassung in Audit-Protokollen nicht manuell aktivieren.
 
 Um Audit-Protokolle anzeigen und exportieren zu können, benötigen Sie in der Adobe-Konsole die Zugriffsberechtigung zum Zugriff auf Audit-Protokolle. Informationen zum Verwalten individueller Berechtigungen für Attributions-KI-Funktionen finden Sie in der [Dokumentation zur Zugriffssteuerung](../aai-data-governance/access-controls.md).
-

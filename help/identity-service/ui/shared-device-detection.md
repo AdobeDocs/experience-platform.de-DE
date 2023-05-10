@@ -7,7 +7,7 @@ hidefromtoc: true
 exl-id: 36318163-ba07-4209-b1be-dc193ab7ba41
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '1363'
+source-wordcount: '1360'
 ht-degree: 10%
 
 ---
@@ -16,13 +16,13 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->Die [!DNL Shared Device Detection] -Funktion ist in der Beta-Phase. Die Funktionen und Dokumentation können sich ändern.
+>Die [!DNL Shared Device Detection] -Funktion ist in der Beta-Phase. Ihre Funktionen und Dokumentation können sich ändern.
 
 Adobe Experience Platform [!DNL Identity Service] hilft Ihnen, sich einen besseren Überblick über Ihre Kunden und ihr Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für effektive und persönliche digitale Erlebnisse sorgen.
 
 [!DNL Shared Device] bezeichnet Geräte, die von mehr als einer Person verwendet werden. Beispiele für gemeinsam genutzte Geräte sind Tablets, Bibliothekscomputer und Kiosks. Durch die [!DNL Shared Device Detection] -Funktion kann verhindert werden, dass verschiedene Benutzer desselben Geräts mit einer Identität zusammengeführt werden, wodurch eine genauere Darstellung einer Person ermöglicht wird.
 
-Mit [!DNL Shared Device Detection] Sie können:
+Mit [!DNL Shared Device Detection] können Sie:
 
 * Erstellen Sie separate Identitätsdiagramme für verschiedene Benutzer desselben Geräts.
 * Verhindern der Vermischung von Daten verschiedener Personen mit demselben Gerät;
@@ -36,7 +36,7 @@ Mit [!DNL Shared Device Detection] Sie können:
 
 Arbeiten mit [!DNL Shared Device Detection] erfordert ein Verständnis der verschiedenen beteiligten Platform-Dienste. Vorbereitung [!DNL Shared Device Detection]lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
-* [[!DNL Identity Service]](../home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
+* [[!DNL Identity Service]](../home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kundinnen und Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
    * [Identitätsdiagramm-Viewer](./identity-graph-viewer.md): Visualisieren Sie den Identitätsdiagramm-Viewer und interagieren Sie mit ihm, um besser zu verstehen, wie Kundenidentitäten zusammengeführt werden und auf welche Weise.
    * [Identitäts-Namespaces](../namespaces.md): Sehen Sie sich die Komponenten einer vollständig qualifizierten Identität an und erfahren Sie, wie Sie mithilfe von Identitäts-Namespaces den Kontext und den Typ einer Identität unterscheiden können.
 
@@ -55,7 +55,7 @@ Bei der Arbeit mit
 | Benutzeridentitäts-Namespace | Der User Identity-Namespace stellt den authentifizierten (angemeldeten) Benutzer eines gemeinsam genutzten Geräts dar. |
 | Letzter authentifizierter Benutzer | Der zuletzt authentifizierte Benutzer stellt den Benutzer dar, der zuletzt bei einem Gerät angemeldet war, wenn ein Gerät von mehreren Konten angemeldet wird. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 [!DNL Shared Device Detection] erstellt zwei Namespaces: die **Freigegebener Identitäts-Namespace** und **Benutzeridentitäts-Namespace**.
 

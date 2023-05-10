@@ -8,7 +8,7 @@ exl-id: 8ebd5d77-ed1f-47e1-8212-efb6c5e84ec1
 source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '475'
-ht-degree: 70%
+ht-degree: 71%
 
 ---
 
@@ -89,7 +89,7 @@ curl -X POST \
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `auth.params.connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung zu einem [!DNL Azure Table Storage] -Instanz. Das Verbindungszeichenfolgenmuster für [!DNL Azure Table Storage] ist: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
-| `connectionSpec.id` | Die [!DNL Azure Table Storage] Verbindungsspezifikations-ID: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `connectionSpec.id` | Die [!DNL Azure Table Storage]-Verbindungsspezifikations-ID: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 **Antwort**
 

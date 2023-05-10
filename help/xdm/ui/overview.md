@@ -13,7 +13,7 @@ ht-degree: 9%
 
 # [!UICONTROL Schemas] Übersicht über die Benutzeroberfläche
 
-Die [!UICONTROL Schemas] Mit Workspace in der Adobe Experience Platform-Benutzeroberfläche können Sie Experience-Datenmodell (XDM)-Ressourcen verwalten, einschließlich Schemas, Klassen, Schemafeldgruppen und Datentypen. Sie können die von Adobe bereitgestellten Kernressourcen anzeigen und untersuchen sowie benutzerdefinierte Ressourcen und Schemas für Ihr Unternehmen erstellen.
+Die [!UICONTROL Schemas] Mit Workspace in der Adobe Experience Platform-Benutzeroberfläche können Sie Experience-Datenmodell (XDM)-Ressourcen verwalten, einschließlich Schemas, Klassen, Schemafeldgruppen und Datentypen. Sie können die von Adobe bereitgestellten Kernressourcen anzeigen und untersuchen sowie benutzerdefinierte Ressourcen und Schemata für Ihr Unternehmen erstellen.
 
 Um auf den Arbeitsbereich in der Platform-Benutzeroberfläche zuzugreifen, wählen Sie **[!UICONTROL Schemas]** in der linken Leiste.
 

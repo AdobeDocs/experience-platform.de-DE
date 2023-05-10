@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp für
 exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '213'
-ht-degree: 10%
+source-wordcount: '210'
+ht-degree: 9%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 10%
 | `statusReason` | Eine Beschreibung des aktuellen Status. |
 | `validity` | Ein Grad der technischen Korrektheit der Telefonnummer. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp der Telefonnummer finden Sie im öffentlichen XDM-Repository:
 

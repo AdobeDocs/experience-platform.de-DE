@@ -6,14 +6,14 @@ keywords: Adobe Analytics; Variablen; Analytics; automatische Zuordnung; automat
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
 source-git-commit: dcbe4c1b5a085878562990ed2db8e5cb27b93e28
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '915'
 ht-degree: 35%
 
 ---
 
 # Automatisch zugeordnete Variablen in [!DNL Analytics]
 
-Nachstehend finden Sie eine Liste der Variablen, die das Adobe Experience Platform Edge Network automatisch Adobe Analytics zuordnet. Detaillierte Informationen zu den Adobe Analytics-Datenerfassungs-Abfrageparametern finden Sie im Abschnitt [Implementierungshandbuch für Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/validate/query-parameters.html).
+Nachstehend finden Sie eine Liste der Variablen, die das Adobe Experience Platform Edge Network automatisch Adobe Analytics zuordnet. Detaillierte Informationen zu den Adobe Analytics-Datenerfassungs-Abfrageparametern finden Sie im Abschnitt [Implementierungshandbuch für Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/validate/query-parameters.html?lang=de).
 
 >[!NOTE]
 >Die Informationen auf dieser Seite gelten auch für das Adobe Mobile SDK.
@@ -106,4 +106,4 @@ Nachstehend finden Sie eine Liste der Variablen, die das Adobe Experience Platfo
 | web.webPageDetails.siteSection | ch | AppMeasurement Abfrageparameter, KANALzuordnung. |
 | web.webReferrer.URL | r | AppMeasurement Abfrageparameter, REFERRER-Zuordnung. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

@@ -6,8 +6,8 @@ description: Mit dem /auditlog-Endpunkt in der Schema Registry-API können Sie e
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 15%
+source-wordcount: '401'
+ht-degree: 14%
 
 ---
 
@@ -35,7 +35,7 @@ GET /rpc/auditlog/{RESOURCE_ID}
 | --- | --- |
 | `{RESOURCE_ID}` | Die `meta:altId` oder URL-kodiert `$id` der Ressource, deren Auditprotokoll Sie abrufen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -125,4 +125,4 @@ Eine erfolgreiche Antwort gibt eine chronologische Liste der Änderungen zurück
 | `path` | A [JSON Pointer](../../landing/api-fundamentals.md#json-pointer) Zeichenfolge, die den Pfad zum spezifischen Feld angibt, das geändert oder hinzugefügt wurde. |
 | `value` | Der Wert, der dem neuen oder aktualisierten Feld zugewiesen wurde. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

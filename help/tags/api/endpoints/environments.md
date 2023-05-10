@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie den /environments-Endpunkt in der Reactor-API
 exl-id: 4c22f799-8338-4cf0-980a-3900d725ab5d
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '1002'
 ht-degree: 100%
 
 ---
@@ -26,7 +26,7 @@ Umgebungen weisen drei Typen (oder Phasen) auf, wobei für jeden Typ unterschied
 | Staging | Eins |
 | Produktion | Eins |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Diese Umgebungstypen weisen ein ähnliches Verhalten auf, werden jedoch in verschiedenen Phasen des [Tag-Veröffentlichungs-Workflows](../../ui/publishing/publishing-flow.md) verwendet.
 
@@ -52,7 +52,7 @@ GET /properties/{PROPERTY_ID}/environments
 | --- | --- |
 | `PROPERTY_ID` | Die `id` der Eigenschaft, der die Umgebungen gehören. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -176,7 +176,7 @@ GET /environments/{ENVIRONMENT_ID}
 | --- | --- |
 | `ENVIRONMENT_ID` | Die `id` der Umgebung, die Sie suchen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -285,7 +285,7 @@ POST /properties/{PROPERTY_ID}/environments
 | --- | --- |
 | `PROPERTY_ID` | Die `id` der [Eigenschaft](./properties.md), unter der Sie die Umgebung definieren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -330,7 +330,7 @@ curl -X POST \
 | `id` | Die `id` der Umgebung, die Sie aktualisieren möchten. Diese sollte mit dem `{ENVIRONMENT_ID}`-Wert übereinstimmen, der im Anfragepfad angegeben ist. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `environments` lauten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -427,7 +427,7 @@ PATCH /environments/{ENVIRONMENT_ID}
 | --- | --- |
 | `ENVIRONMENT_ID` | Die `id` der Umgebung, die Sie aktualisieren möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -457,7 +457,7 @@ curl -X PATCH \
 | `id` | Die `id` der Umgebung, die Sie aktualisieren möchten. Diese sollte mit dem `{ENVIRONMENT_ID}`-Wert übereinstimmen, der im Anfragepfad angegeben ist. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `environments` lauten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -554,7 +554,7 @@ DELETE /environments/{ENVIRONMENT_ID}
 | --- | --- |
 | `ENVIRONMENT_ID` | Die `id` der Umgebung, die Sie löschen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -590,7 +590,7 @@ GET  /environments/{ENVIRONMENT_ID}/builds
 | --- | --- |
 | `{ENVIRONMENT_ID}` | Die `id` der Umgebung, deren Builds Sie auflisten möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -707,7 +707,7 @@ GET  /environments/{ENVIRONMENT_ID}/host
 | --- | --- |
 | `{ENVIRONMENT_ID}` | Die `id` der Umgebung, deren Host Sie suchen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -774,7 +774,7 @@ GET  /environments/{ENVIRONMENT_ID}/library
 | --- | --- |
 | `{ENVIRONMENT_ID}` | Die `id` der Umgebung, deren Bibliothek Sie nachschlagen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -889,7 +889,7 @@ GET  /environments/{ENVIRONMENT_ID}/property
 | --- | --- |
 | `{ENVIRONMENT_ID}` | Die `id` der Umgebung, deren Eigenschaft Sie nachschlagen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 

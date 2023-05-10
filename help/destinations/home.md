@@ -4,7 +4,7 @@ title: Ziele – Übersicht
 description: Ziele sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Ziele in Adobe Experience Platform nutzen, um bekannte und unbekannte Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
 source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 100%
 

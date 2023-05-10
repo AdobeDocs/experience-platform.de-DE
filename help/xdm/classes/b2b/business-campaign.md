@@ -4,8 +4,8 @@ description: Dieses Dokument bietet einen Überblick über die XDM Business Camp
 exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 8%
+source-wordcount: '237'
+ht-degree: 7%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 8%
 | `campaignName` | Zeichenfolge | Der Name der Kampagne. |
 | `campaignType` | Zeichenfolge | Kampagnentyp oder Zielgruppe. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Informationen dazu, wie diese Klasse konzeptionell mit den anderen B2B-Klassen verknüpft ist und wie Sie diese Beziehungen in der Benutzeroberfläche von Adobe Experience Platform herstellen können, finden Sie im Handbuch unter [Schemabeziehungen in Real-Time CDP B2B Edition](../../tutorials/relationship-b2b.md)
 

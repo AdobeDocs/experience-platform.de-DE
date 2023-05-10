@@ -5,8 +5,8 @@ description: Dieses Dokument bietet einen Überblick über die Konfigurationen, 
 exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 7%
+source-wordcount: '255'
+ht-degree: 6%
 
 ---
 
@@ -80,7 +80,7 @@ Mithilfe der Spezifikationen werden die Parameter definiert, die zum Erkunden un
 | `responseSpec.schema.properties.columns.items.properties.name` | Zeigt den Namen der Datei an. |
 | `responseSpec.schema.properties.columns.items.properties.name.type` | Definiert den Datentyp des Dateinamens. | `string` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Nächste Schritte
 

@@ -4,7 +4,7 @@ description: Dieses Dokument bietet einen Überblick über die Schemafeldergrupp
 exl-id: 43ba025e-2acf-4cb7-8487-e6c7c7240867
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '655'
 ht-degree: 6%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 6%
 | `personalEmail` | [[!UICONTROL E-Mail-Adresse]](../../data-types/email-address.md) | Die persönliche E-Mail-Adresse der Person. |
 | `shippingAddress` | [[!UICONTROL Postadresse]](../../data-types/postal-address.md) | Die Lieferadresse der Person. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `memberDetails` {#memberDetails}
 
@@ -54,7 +54,7 @@ ht-degree: 6%
 | `preferredAvailability` | Zeichenfolge | Die bevorzugte Tages- und Uhrzeitverfügbarkeit der Person für einen Termin. |
 | `primaryMemberID` | Zeichenfolge | Eine eindeutige Kennung des primären Abonnenten, wenn die Person abhängig ist. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 

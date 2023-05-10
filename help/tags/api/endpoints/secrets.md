@@ -4,7 +4,7 @@ description: Hier erfahren Sie, wie Sie den Endpunkt /secrets in der Reactor-API
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
 source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
 workflow-type: tm+mt
-source-wordcount: '1286'
+source-wordcount: '1247'
 ht-degree: 92%
 
 ---
@@ -33,7 +33,7 @@ GET /properties/{PROPERTY_ID}/secrets
 | --- | --- |
 | `{PROPERTY_ID}` | Die ID der Eigenschaft, deren geheime Daten Sie auflisten möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -129,7 +129,7 @@ GET /environments/{ENVIRONMENT_ID}/secrets
 | --- | --- |
 | `{ENVIRONMENT_ID}` | Die ID der Umgebung, deren geheimen Daten Sie auflisten möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -225,7 +225,7 @@ GET /secrets/{SECRET_ID}
 | --- | --- |
 | `{SECRET_ID}` | Die ID der geheimen Daten, die Sie nachschlagen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -314,7 +314,7 @@ POST /properties/{PROPERTY_ID}/secrets
 | --- | --- |
 | `{PROPERTY_ID}` | Die ID der Eigenschaft, unter der Sie die geheimen Daten definieren möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -357,7 +357,7 @@ curl -X POST \
 | `relationships.environment` | Geheime Daten müssen bei der ersten Erstellung jeweils einer Umgebung zugeordnet werden. Das `data`-Objekt in dieser Eigenschaft muss die `id` der Umgebung, der die geheimen Daten zugewiesen werden, zusammen mit einem `type`-Wert von `environments` enthalten. |
 | `type` | Der Typ der zu erstellenden Ressource. Für diesen Aufruf muss der Wert `secrets` lauten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -435,7 +435,7 @@ PATCH /secrets/{SECRET_ID}
 | --- | --- |
 | `{SECRET_ID}` | Die ID der geheimen Daten vom Typ `oauth2`, die Sie testen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -468,7 +468,7 @@ curl -X PATCH \
 | `id` | Die ID der geheimen Daten, die Sie testen. Diese sollte mit der ID übereinstimmen, der im Anfragepfad angegeben ist. |
 | `type` | Der Typ der Ressource, für die der Vorgang ausgeführt wird. Muss auf `secrets` festgelegt werden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -552,7 +552,7 @@ PATCH /secrets/{SECRET_ID}
 | --- | --- |
 | `{SECRET_ID}` | Die ID der geheimen Daten, die Sie neu testen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -585,7 +585,7 @@ curl -X PATCH \
 | `id` | Die ID der geheimen Daten, die Sie erneut testen. Diese sollte mit der ID übereinstimmen, der im Anfragepfad angegeben ist. |
 | `type` | Der Typ der Ressource, für die der Vorgang ausgeführt wird. Muss auf `secrets` festgelegt werden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -771,7 +771,7 @@ DELETE /secrets/{SECRET_ID}
 | --- | --- |
 | `{SECRET_ID}` | Die ID der geheimen Daten, die Sie löschen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -809,7 +809,7 @@ GET /secrets/{SECRET_ID}/notes
 | --- | --- |
 | `{SECRET_ID}` | Die ID der geheimen Daten, deren Anmerkungen Sie auflisten möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -888,7 +888,7 @@ GET /secrets/{SECRET_ID}/environment
 | --- | --- |
 | `{SECRET_ID}` | Die ID der geheimen Daten, deren Umgebung Sie nachschlagen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -997,7 +997,7 @@ GET /secrets/{SECRET_ID}/property
 | --- | --- |
 | `{SECRET_ID}` | Die ID der geheimen Daten, deren Eigenschaft Sie suchen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 

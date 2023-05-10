@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über die IAB TCF 2.0-Schem
 exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 8%
+source-wordcount: '250'
+ht-degree: 7%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 8%
 | --- | --- | --- |
 | `consentStrings` | Array von [Einverständniszeichenfolgen](../../data-types/consent-string.md) | Ein Array von Zustimmungszeichenfolgenwerten, die mit dem Ereignis verknüpft sind. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Siehe Handbuch unter [IAB TCF 2.0-Unterstützung in Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) für weitere Informationen zum Anwendungsfall dieser Feldergruppe. Weitere Informationen zur Feldgruppe selbst finden Sie im öffentlichen XDM-Repository:
 

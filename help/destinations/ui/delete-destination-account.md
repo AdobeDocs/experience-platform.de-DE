@@ -7,7 +7,7 @@ exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
 source-git-commit: 2ea56957e122140fbc68c727e36666f8f9a71dd8
 workflow-type: tm+mt
 source-wordcount: '306'
-ht-degree: 5%
+ht-degree: 18%
 
 ---
 
@@ -29,11 +29,11 @@ In diesem Tutorial werden die Schritte zum Löschen von Zielkonten beschrieben, 
 
 Gehen Sie wie folgt vor, um vorhandene Zielkonten zu löschen.
 
-1. Melden Sie sich bei der [Experience Platform-Benutzeroberfläche](https://platform.adobe.com/) und wählen Sie **[!UICONTROL Ziele]** über die linke Navigationsleiste. Auswählen **[!UICONTROL Konten]** aus der oberen Kopfzeile, um Ihre vorhandenen Konten anzuzeigen.
+1. Melden Sie sich bei der [Experience Platform-Benutzeroberfläche](https://platform.adobe.com/) an und wählen Sie **[!UICONTROL Ziele]** über die linke Navigationsleiste aus. Auswählen **[!UICONTROL Konten]** aus der oberen Kopfzeile, um Ihre vorhandenen Konten anzuzeigen.
 
    ![Registerkarte „Konten“](../assets/ui/delete-accounts/accounts-tab.png)
 
-2. Filtersymbol auswählen ![Filter-Symbol](../assets/ui/update-accounts/filter.png) oben links, um das Sortierungsfenster zu öffnen. Das Sortierungsfenster bietet eine Liste aller Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Konten anzuzeigen, die mit den ausgewählten Zielen verknüpft sind.
+2. Wählen Sie das Symbol ![Filter](../assets/ui/update-accounts/filter.png) oben links, um das Sortier-Bedienfeld zu öffnen. Das Sortier-Bedienfeld bietet eine Liste aller Ihrer Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Konten anzuzeigen, die mit den ausgewählten Zielen verknüpft sind.
 
    ![Ziele filtern](../assets/ui/delete-accounts/filter-accounts.png)
 

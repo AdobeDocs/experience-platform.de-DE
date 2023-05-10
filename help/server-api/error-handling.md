@@ -5,7 +5,7 @@ exl-id: f6b8435c-b163-4046-b5fb-50a13a897637
 source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
 source-wordcount: '765'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -32,7 +32,7 @@ Server-API-Fehler können auch nach Schweregrad aufgeteilt werden:
 * **Nicht tödliche Fehler** kann eine partielle Verarbeitung signalisieren und gleichzeitig die Weiterverarbeitung der Anforderung ermöglichen.
    * Wenn vorhanden, wird der allgemeine Status-Code der Anfrage in `207 Multi-Status`.
 
-| Fehler | Typ | Bemerkungen          |
+| Fehler | Typ | Bemerkungen |
 | --- | --- | --- |
 | `RequestProcessingError` | Tödlich | Kann jederzeit während der Anforderungsverarbeitung erfolgen. |
 | `InputError` | Tödlich | Tritt auf, wenn die Anfrage akzeptiert wird, bevor sie in einem vorgelagerten Schritt gesendet wird. |

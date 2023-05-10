@@ -4,8 +4,8 @@ description: Dieses Dokument bietet einen Überblick über den Datentyp des B2B-
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
 source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 8%
+source-wordcount: '270'
+ht-degree: 7%
 
 ---
 
@@ -26,7 +26,7 @@ Die [!UICONTROL B2B-Quelle] Datentyp ermöglicht es Ihnen, die ursprüngliche Ze
 | `sourceKey` | Zeichenfolge | Eine eindeutige Kennung, die aus der Variablen `sourceId`, `sourceInstanceId`und `sourceType` im folgenden Format verkettet: `[sourceID]@[sourceInstanceID].[sourceType]`.<br><br>Einige Quell-Connectoren wie Marketo verketten diesen Wert für bestimmte Kennungen automatisch. Andere müssen manuell mithilfe der [Datenvorbereitung `concat` function](../../data-prep/functions.md#string), zum Beispiel: `concat(id,"@${ORG_ID}.Marketo")` |
 | `sourceType` | Zeichenfolge | Der Name der Plattform, die die Quelldaten bereitstellt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

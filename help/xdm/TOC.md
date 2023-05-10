@@ -54,7 +54,7 @@ ht-degree: 100%
       * [Demografische Details](./field-groups/profile/demographic-details.md)
       * [IAB TCF 2.0-Zustimmung](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
-      * [Details zur versicherten Person](./field-groups/profile/healthcare-member-details.md)
+      * [Details zum versicherten Mitglied](./field-groups/profile/healthcare-member-details.md)
       * [Treuedetails](./field-groups/profile/loyalty-details.md)
       * [Persönliche Kontaktdaten](./field-groups/profile/personal-contact-details.md)
       * [Details zur Segmentzugehörigkeit](./field-groups/profile/segmentation.md)
@@ -93,7 +93,7 @@ ht-degree: 100%
    * Medizin {#medication}
       * [Arzneimittel](./field-groups/medication/healthcare-medication.md)
    * Plan {#plan}
-      * [Details zur Gesundheitsvorsorge](./field-groups/plan/healthcare-plan-details.md)
+      * [Details zum Gesundheitsplan](./field-groups/plan/healthcare-plan-details.md)
    * Produkt {#product}
       * [Produktkatalog](./field-groups/product/product-catalog.md)
       * [Produktkategorie](./field-groups/product/product-category.md)

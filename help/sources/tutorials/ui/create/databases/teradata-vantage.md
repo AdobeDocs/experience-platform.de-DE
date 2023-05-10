@@ -6,7 +6,7 @@ exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
 source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
 workflow-type: tm+mt
 source-wordcount: '394'
-ht-degree: 36%
+ht-degree: 42%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 36%
 
 >[!NOTE]
 >
-> Die [!DNL Teradata Vantage] -Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
+> Die [!DNL Teradata Vantage]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von als Beta gekennzeichneten Quellen finden Sie unter [Quellen – Übersicht](../../../../home.md#terms-and-conditions).
 
 In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Teradata Vantage] Quell-Connector über die Adobe Experience Platform-Benutzeroberfläche.
 
@@ -55,7 +55,7 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie die [!DNL Teradata Vantage] K
 
 ### Neues Konto
 
-Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]**. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre [!DNL Teradata Vantage] Anmeldedaten. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Verbinden]** und dann etwas Zeit für die Einrichtung der neuen Verbindung.
+Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre [!DNL Teradata Vantage] Anmeldedaten. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Verbinden]** und dann etwas Zeit für die Einrichtung der neuen Verbindung.
 
 ![](../../../../images/tutorials/create/teradata/new.png)
 

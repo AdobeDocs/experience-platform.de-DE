@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über den Datentyp "Applica
 exl-id: ac7d6761-7b58-4e0d-85e7-6f157fb2eea5
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '442'
-ht-degree: 7%
+source-wordcount: '439'
+ht-degree: 6%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 7%
 | `userPerspective` | Zeichenfolge | Die Perspektive oder physische Beziehung zwischen dem Benutzer und der App oder Marke zum Zeitpunkt des Ereignisses. Das Verständnis der Perspektive des Benutzers in Bezug auf die App hilft beim präzisen Generieren von Sitzungen, da der Großteil der Zeit, die Sie nicht einbeziehen möchten `background` und `detached` -Ereignisse als Teil einer &quot;aktiven&quot;Sitzung bezeichnet. Der Wert dieser Eigenschaft muss mit einem der unten aufgeführten Enum-Werte übereinstimmen. <li> `foreground`: Benutzer und App interagieren direkt miteinander. </li> <li> `background`: Die App und der Benutzer interagieren indirekt. Beispielsweise kann das Programm einen Wert messen und aktualisieren, während der Bildschirm gesperrt ist oder eine andere App im Vordergrund verwendet wird.  </li> <li> `detached`: &quot;Trennen&quot;bedeutet, dass das Ereignis mit der App in Verbindung stand, aber nicht direkt von der App kam, z. B. das Senden einer E-Mail oder einer Push-Benachrichtigung von einem externen System. |
 | `version` | Zeichenfolge | Die Version der Anwendung. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

@@ -4,8 +4,8 @@ description: Dieses Dokument bietet einen Überblick über die XDM Business Acco
 exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 7%
+source-wordcount: '442'
+ht-degree: 6%
 
 ---
 
@@ -39,6 +39,6 @@ ht-degree: 7%
 | `relationStartDate` | DateTime | Das Datum, an dem die Beziehung zwischen dem Konto und der Person begann. |
 | `relationshipSource` | Zeichenfolge | Die Quelle der Konto-Person-Relation. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Siehe Handbuch unter [Schemabeziehungen in Real-Time CDP B2B Edition](../../tutorials/relationship-b2b.md) um zu erfahren, wie diese Klasse konzeptionell mit den anderen B2B-Klassen in Beziehung steht und wie Sie diese Beziehungen in der Adobe Experience Platform-Benutzeroberfläche herstellen können.

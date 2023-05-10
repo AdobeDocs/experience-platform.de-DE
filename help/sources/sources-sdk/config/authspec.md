@@ -5,8 +5,8 @@ description: Dieses Dokument bietet einen Überblick über die Konfigurationen, 
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 5%
+source-wordcount: '519'
+ht-degree: 4%
 
 ---
 
@@ -130,7 +130,7 @@ Ein OAuth 2-Aktualisierungscode ermöglicht einen sicheren Zugriff auf eine Anwe
 | `authSpec.spec.properties.requestParameterOverride` | Ermöglicht die Angabe von Berechtigungsparametern, die bei der Authentifizierung überschrieben werden sollen. |
 | `authSpec.spec.required` | Zeigt die Anmeldeinformationen an, die für die Authentifizierung erforderlich sind. | `accessToken` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 
 ### Einfache Authentifizierung
@@ -177,7 +177,7 @@ Die Standardauthentifizierung ist ein Authentifizierungstyp, mit dem Sie mithilf
 | `authSpec.spec.properties.password` | Das mit Ihrer Anwendung verknüpfte Kontokennwort. |
 | `authSpec.spec.required` | Gibt die Felder an, die als Pflichtwerte für die Eingabe in Platform erforderlich sind. | `username` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Beispielauthentifizierungsspezifikation
 

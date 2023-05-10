@@ -6,8 +6,8 @@ description: Dieses Dokument bietet eine Übersicht über die Schemakonstengrupp
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 15%
+source-wordcount: '223'
+ht-degree: 14%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 15%
 | `phonenumberid` | [Identität](../../data-types/identity.md) | Telefonnummer-IDs. |
 | `tntid` | [Identität](../../data-types/identity.md) | Endbenutzer-IDs für Adobe Target. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 

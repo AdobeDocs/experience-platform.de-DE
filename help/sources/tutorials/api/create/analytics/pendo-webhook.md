@@ -1,8 +1,9 @@
 ---
 title: Erstellen einer Quellverbindung und eines Datenflusses für Pendo mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie mit der Flow Service-API eine Verbindung zwischen Adobe Experience Platform und Pendo herstellen.
-badge: "Beta"
-source-git-commit: c35daa60db315f1ed04ed6424464f1ae7bfb4243
+badge: Beta
+exl-id: 12b0295d-4b26-4eb7-a02a-a01d825d2a1e
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1459'
 ht-degree: 55%

@@ -5,7 +5,7 @@ description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutz
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '794'
 ht-degree: 36%
 
 ---
@@ -82,7 +82,7 @@ Sobald Ihre Quelle authentifiziert ist, wird die Seite in eine interaktive Schem
 
 In diesem Tutorial haben Sie eine Quellverbindung zwischen Ihrem [!DNL Zendesk]-Konto und Platform authentifiziert und hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [Erstellen eines Datenflusses, um Kundenerfolgsdaten in Platform zu bringen](../../dataflow/customer-success.md).
 
-## Weitere Ressourcen
+## Zusätzliche Ressourcen
 
 Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei der Verwendung der Variablen [!DNL Zendesk] -Quelle.
 
@@ -153,7 +153,7 @@ In der folgenden Tabelle sind die unterstützten Zuordnungen aufgeführt, die f�
 | `results.url` | Zeichenfolge |
 | `results.verified` | Boolesch |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Beschränkungen {#limits}
 

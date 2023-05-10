@@ -3,14 +3,15 @@ title: Dokumentieren Ihrer Quelle (Streaming-SDK)
 description: Der letzte Schritt, bevor Ihre neue Quelle in Adobe Experience Platform live geschaltet werden kann, besteht darin, Ihre neue Quelle zu dokumentieren.
 hide: true
 hidefromtoc: true
-source-git-commit: a9879530a8911d77dfc4cde3824834e03fa5e0a9
+exl-id: 65ca7a4d-3e02-4f54-bf07-ea2c92b8dbf1
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '408'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
-# Dokumentieren Ihrer Quelle (Streaming-SDK)
+# Dokumentieren einer Quelle (Streaming-SDK)
 
 Der letzte Schritt, bevor Ihre neue Quelle in Adobe Experience Platform live gesetzt werden kann, besteht darin, Ihre neue Quelle zu dokumentieren.
 

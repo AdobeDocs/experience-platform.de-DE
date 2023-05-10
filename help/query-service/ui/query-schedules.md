@@ -1,7 +1,8 @@
 ---
 title: Abfragezeitpläne
 description: Erfahren Sie, wie Sie geplante Abfrageausführungen automatisieren, einen Abfragezeitplan löschen oder deaktivieren und die verfügbaren Planungsoptionen über die Adobe Experience Platform-Benutzeroberfläche nutzen können.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 76%
@@ -67,5 +68,3 @@ Wählen Sie einen Zeitplan aus den Zeilen der verfügbaren Zeitpläne aus. Sie k
 Wählen Sie **[!UICONTROL Zeitplan löschen]** aus, um den deaktivierten Zeitplan zu löschen.
 
 ![Der Arbeitsbereich „Zeitpläne“ mit den hervorgehobenen Optionen „Zeitplan deaktivieren“ und „Zeitplan löschen“.](../images/ui/query-schedules/delete-schedule.png)
-
-

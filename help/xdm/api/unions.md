@@ -6,7 +6,7 @@ description: Mit dem Endpunkt /Vereinigungen in der Schema Registry-API können 
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '911'
+source-wordcount: '896'
 ht-degree: 47%
 
 ---
@@ -64,7 +64,7 @@ Das Antwortformat hängt von der `Accept` -Kopfzeile, die in der Anfrage gesende
 | `application/vnd.adobe.xed-id+json` | Gibt eine kurze Zusammenfassung jeder Ressource zurück. Dies ist die empfohlene Kopfzeile für die Auflistung von Ressourcen. (Limit: 300) |
 | `application/vnd.adobe.xed+json` | Gibt für jede Ressource die vollständige JSON-Klasse mit der ursprünglichen `$ref` und `allOf` enthalten. (Limit: 300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -108,7 +108,7 @@ GET /tenant/schemas/{UNION_ID}
 | --- | --- |
 | `{UNION_ID}` | Die URL-kodierte `$id` URI der Vereinigung, die Sie nachschlagen möchten. Bei URIs für Vereinigungs-Schemas wird „__Vereinigung“ angehängt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -131,7 +131,7 @@ Die folgenden Accept-Kopfzeilen stehen für das Nachschlagen von Vereinigungs-Sc
 | `application/vnd.adobe.xed+json; version=1` | Roh mit `$ref` und `allOf`. Umfasst Titel und Beschreibungen. |
 | `application/vnd.adobe.xed-full+json; version=1` | `$ref` Attribute und `allOf` gelöst. Umfasst Titel und Beschreibungen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -196,7 +196,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 | --- | --- |
 | `{CLASS_ID}` | Die `$id` der Klasse, deren Vereinigungs-fähige Schemas Sie auflisten möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -219,7 +219,7 @@ Das Antwortformat hängt von der `Accept` -Kopfzeile, die in der Anfrage gesende
 | `application/vnd.adobe.xed-id+json` | Gibt eine kurze Zusammenfassung jeder Ressource zurück. Dies ist die empfohlene Kopfzeile für die Auflistung von Ressourcen. (Limit: 300) |
 | `application/vnd.adobe.xed+json` | Gibt für jede Ressource das vollständige JSON-Schema mit dem ursprünglichen `$ref` und `allOf` enthalten. (Limit: 300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 

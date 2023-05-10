@@ -48,7 +48,7 @@ Zur Verwendung durch [!DNL Analytics], werden XDM-Daten mit Punktnotation reduzi
 
 ## Verarbeitungsregeln
 
-Auf alle vom Edge Network erfassten Daten kann über [Verarbeitungsregeln](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html) zugegriffen werden. In [!DNL Analytics]können Sie Verarbeitungsregeln verwenden, um Kontextdaten in [!DNL Analytics] Variablen.
+Auf alle vom Edge Network erfassten Daten kann über [Verarbeitungsregeln](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html?lang=de) zugegriffen werden. In [!DNL Analytics]können Sie Verarbeitungsregeln verwenden, um Kontextdaten in [!DNL Analytics] Variablen.
 
 In der folgenden Regel wird Adobe Analytics beispielsweise so eingestellt, dass **Interne Suchbegriffe (eVar2)** mit den Daten verknüpft sind, die **a.x._atag.search.term(Kontextdaten)**.
 
@@ -84,4 +84,4 @@ alloy("event",{
 });
 ```
 
-Weitere Informationen zum Verfolgen von Ereignissen mit Adobe Experience Platform [!DNL Web SDK], siehe [Ereignisse verfolgen](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html).
+Weitere Informationen zum Verfolgen von Ereignissen mit Adobe Experience Platform [!DNL Web SDK], siehe [Ereignisse verfolgen](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=de).

@@ -115,7 +115,7 @@ In der folgenden Python-Dokumentation werden die folgenden Konzepte beschrieben:
 
 - [Aus einem Datensatz lesen](#python-read-dataset)
 - [Schreiben in einen Datensatz](#write-python)
-- [Abfragedaten](#query-data-python)
+- [Abfragen von Daten](#query-data-python)
 - [ExperienceEvent-Daten filtern](#python-filter)
 
 ### Aus einem Datensatz in Python lesen {#python-read-dataset}

@@ -5,7 +5,7 @@ breadcrumb-title: Anleitung zum Platform Identity Service
 user-guide-description: Verknüpfen Sie Kundenidentitäten zwischen Geräten und Systemen, um personalisierte digitale Erlebnisse bereitzustellen.
 feature: Identities
 source-git-commit: ed091c95952b731ce1f7567b99a1072a8be2b4a5
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 100%
 
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 - [Identity Service – Übersicht](home.md)
 - [Übersicht über Identitäts-Namespaces](namespaces.md)
-- [Leitlinien für Identitätsdaten](guardrails.md)
+- [Leitplanken für Identitätsdaten](guardrails.md)
 - Identity Service-API {#api}
    - [Erste Schritte](api/getting-started.md)
    - [Kennzeichnen eines Felds als Identität](api/label-identities.md)

@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Das Adobe Experience Platform Web SDK unterstützt Funktionen zur Freigabe von Besucher-IDs, mit denen Kunden personalisierte Erlebnisse präziser zwischen mobilen Apps und mobilen Webinhalten sowie domänenübergreifend bereitstellen können.
 
-## Anwendungsbeispiele {#use-cases}
+## Anwendungsfälle {#use-cases}
 
 ### Einheitliche Personalisierung zwischen mobilen Apps und mobilen Websites
 

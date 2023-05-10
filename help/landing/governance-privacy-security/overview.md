@@ -2,12 +2,12 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Governance, Datenschutz und Sicherheitsübersicht
-description: Adobe Experience Platform bietet verschiedene Dienste und Tools, mit denen Sie Ihre erfassten Erlebnisdaten sicher steuern können, um Ihre Geschäftspraktiken, rechtlichen Verpflichtungen und Ihren Entwicklungsprozess einzuhalten.
+description: Adobe Experience Platform bietet verschiedene Services und Tools, mit denen Sie Ihre erfassten Erlebnisdaten gemäß Ihren Geschäftspraktiken, Ihren rechtlichen Verpflichtungen und Ihrem Entwicklungsprozess sicher steuern können.
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '855'
-ht-degree: 18%
+ht-degree: 24%
 
 ---
 
@@ -27,11 +27,11 @@ Die Dienste können in drei Domänen unterteilt werden:
 
 Data Governance ist ein wesentliches Konzept, das mit allen Funktionen in der Experience Platform verknüpft ist. Data Governance stellt Ihre Fähigkeit dar, Ihre Daten über Platform im gesamten Journey zu steuern und zu verstehen. Dazu gehört die Aufrechterhaltung der Datenqualität, der Datenherkunft, der Datenkatalogisierung und mehr.
 
-### Adobe Experience Platform Data Governance {#data-governance}
+### Data Governance in Adobe Experience Platform {#data-governance}
 
 Als Platform-Dienst können Sie mit Adobe Experience Platform Data Governance Kundendaten verwalten und die Einhaltung von Vorschriften, Einschränkungen und Richtlinien für die Datenverwendung sicherstellen. Sie spielt in der Experience Platform auf verschiedenen Ebenen eine Schlüsselrolle, einschließlich Datennutzungsbeschriftung, Datennutzungsrichtlinien, Richtliniendurchsetzung und Datenherkunft.
 
-Siehe [Data Governance - Übersicht](../../data-governance/home.md) für weitere Informationen.
+Weitere Informationen finden Sie in der [Übersicht zu Data Governance](../../data-governance/home.md).
 
 ### Katalog und Datensätze {#catalog}
 
@@ -71,7 +71,7 @@ Alle Platform-Daten werden im Transit und im Ruhezustand verschlüsselt. Siehe D
 
 ### Zugangssteuerung {#access-control}
 
-Experience Platform verwendet die Adobe Admin Console, um rollenbasierte Zugriffskontrolle für verschiedene Platform-Funktionen bereitzustellen. Diese Funktion nutzt Produktprofile in Admin Console, um Anwender mit Berechtigungen und Sandboxes zu verknüpfen.
+Experience Platform verwendet die Adobe Admin Console, um rollenbasierte Zugriffskontrolle für verschiedene Platform-Funktionen bereitzustellen. Diese Funktion nutzt Produktprofile in Admin Console, um Benutzende mit Berechtigungen und Sandboxes zu verknüpfen.
 
 Weiterführende Informationen dazu finden Sie unter [Zugangssteuerung – Übersicht](../../access-control/home.md).
 

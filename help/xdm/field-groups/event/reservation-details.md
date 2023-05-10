@@ -5,8 +5,8 @@ description: Dieses Dokument bietet einen Überblick über die Feldergruppe "Buc
 exl-id: 06f9ee37-9879-4db2-af68-9336366f7521
 source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
-source-wordcount: '337'
-ht-degree: 8%
+source-wordcount: '334'
+ht-degree: 7%
 
 ---
 
@@ -37,7 +37,7 @@ Die Feldergruppe stellt ein einzelnes Feld vom Typ Objekt bereit, `reservations`
 | `startDate` | DateTime | Das Startdatum für die Reservierung. |
 | `triptype` | Zeichenfolge | Gibt an, ob die Reservierung für eine Einweg-, Hin- und Rückfahrt oder für eine mehrstündige Reise gilt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 

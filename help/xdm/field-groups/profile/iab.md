@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über die IAB TCF 2.0-Felde
 exl-id: 52a4fee8-d7f4-4f27-8e26-0c132985eb84
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 6%
+source-wordcount: '338'
+ht-degree: 5%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 6%
 | --- | --- | --- |
 | `identityPrivacyInfo` | Zuordnung | Ein map -Objekt, das die individuellen Identitätswerte eines Kunden mit verschiedenen TCF-Zustimmungszeichenfolgen verknüpft. Nachfolgend finden Sie ein Beispiel für die Struktur dieses Objekts. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Die folgende JSON-Datei zeigt die Struktur der `identityPrivacyInfo` map.
 

@@ -24,7 +24,7 @@ ht-degree: 26%
 
 ## Datenvorbereitung {#data-prep}
 
-Die Datenvorbereitung ermöglicht es Dateningenieuren, Daten dem Experience-Datenmodell (XDM) zuzuordnen, umzuformen und zu validieren.
+Die Datenvorbereitung ermöglicht es Dateningenieurinnen und -ingenieuren, Daten dem Experience-Datenmodell (XDM) zuzuordnen, umzuformen und zu validieren.
 
 **Wichtigste Funktionen**
 

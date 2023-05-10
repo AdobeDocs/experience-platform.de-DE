@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über den Identitäts-XDM-D
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 16%
+source-wordcount: '284'
+ht-degree: 15%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 16%
 | `primary` | Boolesch | Gibt an, ob dies die primäre Identität der Person ist. Jede Person kann nur eine primäre Identität haben. |
 | `xid` | Zeichenfolge | Falls vorhanden, stellt dieser Wert eine Namespace-übergreifenden Kennung dar, die über alle Kennungen in allen Namespaces eindeutig ist. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

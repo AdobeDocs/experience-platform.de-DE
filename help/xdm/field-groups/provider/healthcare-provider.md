@@ -4,8 +4,8 @@ description: Dieses Dokument bietet einen Überblick über die Schemafeldergrupp
 exl-id: e39b4082-4b66-47b3-a8e2-951d8a96f742
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 10%
+source-wordcount: '267'
+ht-degree: 9%
 
 ---
 
@@ -30,6 +30,6 @@ ht-degree: 10%
 | `practiceType` | Zeichenfolge | Der Praxistyp für den Dienstleister. |
 | `specialties` | Zeichenfolgen-Array | Eine Liste der von diesem Anbieter angebotenen Spezialitäten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json).

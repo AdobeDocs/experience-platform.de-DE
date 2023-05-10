@@ -1,13 +1,13 @@
 ---
 title: Adobe Analytics für Streaming-Medien-Ansicht in Assurance
 description: In diesem Handbuch wird die Verwendung von Adobe Analytics für Streaming-Medien mit Adobe Experience Platform Assurance erläutert.
-source-git-commit: 07dc01c11c79ac2dad05d89309cabb5715c0b63c
+exl-id: 9a9c2c64-e9ed-4d58-b936-d802f1c3b7d3
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '412'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
-
 
 # Adobe Analytics für Streaming-Medien-Ansicht in Assurance
 

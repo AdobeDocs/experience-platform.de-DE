@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über die Schemafeldergrupp
 exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '169'
-ht-degree: 21%
+source-wordcount: '166'
+ht-degree: 20%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 21%
 | `mobilePhone` | [Telefonnummer](../../data-types/phone-number.md) | Beschreibt die Mobiltelefonnummer der Person. |
 | `personalEmail` | [E-Mail-Adresse](../../data-types/email-address.md) | Beschreibt die E-Mail-Adresse der Person. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 

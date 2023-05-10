@@ -5,7 +5,7 @@ exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
 source-git-commit: e8f54f06ad3431227e140219a9960e8e04f83ccc
 workflow-type: tm+mt
 source-wordcount: '521'
-ht-degree: 61%
+ht-degree: 62%
 
 ---
 
@@ -28,7 +28,7 @@ Um eine Verbindung zwischen [!DNL Oracle Eloqua] und Platform herzustellen, müs
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| Endpunkt | Der Endpunkt Ihrer [!DNL Oracle Eloqua] Server. [!DNL Oracle Eloqua] unterstützt mehrere Rechenzentren. Um Ihren Endpunkt zu finden, melden Sie sich bei der [[!DNL Oracle Eloqua] Benutzeroberfläche](https://login.eloqua.com) mit Ihren Anmeldedaten und kopieren Sie dann den Basis-URL-Teil aus der Umleitungs-URL. Das Format für Ihr URL-Muster lautet `xxx.xx.eloqua.com` und ohne `http` oder `https`. |
+| Endpunkt | Der Endpunkt Ihres [!DNL Oracle Eloqua]-Servers. [!DNL Oracle Eloqua] unterstützt mehrere Rechenzentren. Um Ihren Endpunkt zu finden, melden Sie sich bei der [[!DNL Oracle Eloqua] Benutzeroberfläche](https://login.eloqua.com) mit Ihren Anmeldedaten und kopieren Sie dann den Basis-URL-Teil aus der Umleitungs-URL. Das Format für Ihr URL-Muster lautet `xxx.xx.eloqua.com` und ohne `http` oder `https`. |
 | Benutzername | Der Benutzername Ihres [!DNL Oracle Eloqua] Server. Der Benutzername muss als `siteName + \\ + username`, wobei `siteName` ist der Unternehmensname, mit dem Sie sich bei [!DNL Oracle Eloqua] und `username` ist Ihr Benutzername. Der Benutzername für die Anmeldung kann beispielsweise wie folgt lauten: `Eloqua\Andy`. **Hinweis**: Sie müssen einen einzelnen umgekehrten Schrägstrich (`\`) bei der Verwendung der Benutzeroberfläche, da die Experience Platform-Benutzeroberfläche automatisch einen zusätzlichen umgekehrten Schrägstrich (`\`), wenn Sie einen Benutzernamen eingeben. |
 | Kennwort | Das Passwort, das Ihrem [!DNL Oracle Eloqua] Benutzername. |
 

@@ -4,8 +4,8 @@ description: Dieses Dokument bietet einen Überblick über die XDM Business Oppo
 exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '322'
-ht-degree: 8%
+source-wordcount: '319'
+ht-degree: 7%
 
 ---
 
@@ -33,6 +33,6 @@ ht-degree: 8%
 | `opportunityStage` | Zeichenfolge | Die Verkaufsphase der Chance. |
 | `opportunityType` | Zeichenfolge | Die Art von Gelegenheit. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Siehe Handbuch unter [Schemabeziehungen in Real-Time CDP B2B Edition](../../tutorials/relationship-b2b.md) um zu erfahren, wie diese Klasse konzeptionell mit den anderen B2B-Klassen in Beziehung steht und wie Sie diese Beziehungen in der Adobe Experience Platform-Benutzeroberfläche herstellen können.

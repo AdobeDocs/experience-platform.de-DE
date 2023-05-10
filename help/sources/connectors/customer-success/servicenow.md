@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; service; serviceNow
+keywords: Experience Platform;Startseite;beliebte Themen;servicenow;ServiceNow
 solution: Experience Platform
 title: ServiceNow Source Connector - Übersicht
 description: Erfahren Sie, wie Sie ServiceNow über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
@@ -7,7 +7,7 @@ exl-id: f491b367-ec6d-4fb8-8eeb-3178673c0085
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '216'
-ht-degree: 76%
+ht-degree: 80%
 
 ---
 

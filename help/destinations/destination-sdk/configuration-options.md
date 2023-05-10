@@ -4,7 +4,7 @@ title: Konfigurationsoptionen in Destination SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
 source-git-commit: 9b4c7da5aa02ae27608c2841b1d825445ac3015e
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '560'
 ht-degree: 7%
 
 ---
@@ -40,7 +40,7 @@ Auf den folgenden Seiten finden Sie weitere Details zu den in Destination SDK ve
 | [Testwerkzeuge für Streaming-Ziele](./test-destination.md) | [Testwerkzeuge für dateibasierte Ziele](/help/destinations/destination-sdk/file-based-destination-testing-overview.md) | [API-Vorgänge für Zieltests](./destination-testing-api.md) |
 | [Zielveröffentlichung](./configure-destination-instructions.md#publish-destination) | Dasselbe wie für Streaming-Ziele | [API-Vorgänge für die Zielveröffentlichung](./destination-publish-api.md) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Nächste Schritte {#next-steps}
 

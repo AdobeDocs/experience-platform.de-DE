@@ -3,7 +3,7 @@ title: Inkrementelles Laden im Abfrage-Service
 description: Die inkrementelle Ladefunktion verwendet Funktionen sowohl für anonyme Blöcke als auch für Momentaufnahmen, um eine nahezu in Echtzeit entstehende Lösung zum Verschieben von Daten aus dem Data Lake in Ihr Data Warehouse zu bieten, ohne übereinstimmende Daten zu berücksichtigen.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
 source-git-commit: 11a947addce65887385c983ac81d884fb4244291
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 100%
 

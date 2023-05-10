@@ -8,7 +8,7 @@ exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '639'
-ht-degree: 53%
+ht-degree: 56%
 
 ---
 
@@ -95,7 +95,7 @@ curl -X POST \
 | `auth.params.serviceUri` | Der Dienst-URI, der mit Ihrer [!DNL Dynamics] -Instanz. |
 | `auth.params.username` | Der Benutzername, der mit Ihrer [!DNL Dynamics] -Konto. |
 | `auth.params.password` | Das Kennwort, das mit Ihrem [!DNL Dynamics] -Konto. |
-| `connectionSpec.id` | Die [!DNL Dynamics] Verbindungsspezifikations-ID: `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
+| `connectionSpec.id` | Die [!DNL Dynamics]-Verbindungsspezifikations-ID: `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
 
 **Antwort**
 
@@ -151,7 +151,7 @@ curl -X POST \
 | `auth.params.serviceUri` | Der Dienst-URI, der mit Ihrer [!DNL Dynamics] -Instanz. |
 | `auth.params.servicePrincipalId` | Die Client-ID Ihrer [!DNL Dynamics] -Konto. Diese ID ist bei der Verwendung der Service-Prinzipal- und schlüsselbasierten Authentifizierung erforderlich. |
 | `auth.params.servicePrincipalKey` | Der Geheimschlüssel des Dienstprinzips. Diese Berechtigung ist bei der Verwendung von Dienstprinzipal und schlüsselbasierter Authentifizierung erforderlich. |
-| `connectionSpec.id` | Die [!DNL Dynamics] Verbindungsspezifikations-ID: `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
+| `connectionSpec.id` | Die [!DNL Dynamics]-Verbindungsspezifikations-ID: `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
 
 **Antwort**
 
@@ -166,7 +166,7 @@ Eine erfolgreiche Antwort gibt die neu erstellte Basisverbindung zurück, einsch
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Microsoft Dynamics] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL Microsoft Dynamics]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um CRM-Daten mithilfe des [!DNL Flow Service] API](../../collect/crm.md)

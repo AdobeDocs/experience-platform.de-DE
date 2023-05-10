@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über die Feldergruppe "Tel
 exl-id: 00c20081-09d0-425c-9894-0f957558bd43
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 12%
+source-wordcount: '715'
+ht-degree: 10%
 
 ---
 
@@ -33,7 +33,7 @@ Die Feldergruppe stellt ein einzelnes Feld vom Typ Objekt bereit, `telecomSubscr
 | `bundleName` | Zeichenfolge | Erfasst den Namen aller Arten von Abonnement-Bundles, für die der Kunde angemeldet ist, z. B. `Internet + Media`. |
 | `primaryPartyID` | Zeichenfolge | Eine Kennung für die primäre Person, die für das Abonnement verantwortlich ist. Dabei kann es sich in der Regel um ihre Telefonnummer des Geräts handeln. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 
@@ -55,7 +55,7 @@ Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repositor
 | `selfSetup` | Boolesch | Gibt an, ob ein Kunde ohne Besuch eines Technikers für die Interneteinrichtung berechtigt ist. |
 | `uploadSpeed` | Ganzzahl | Die maximale Upload-Geschwindigkeit, die für das Abonnement verfügbar ist, in Megabyte (MB). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `landlineSubscription` {#landlineSubscription}
 
@@ -78,7 +78,7 @@ Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repositor
 | `unlimitedLocalCalling` | Boolesch | Gibt an, ob die Festnetz-Abonnementfunktionen einen unbegrenzten lokalen Aufruf enthalten. |
 | `voicemail` | Boolesch | Gibt an, ob die Festnetz-Abonnementfunktionen Voicemail enthalten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `mediaSubscription` {#mediaSubscription}
 
@@ -92,7 +92,7 @@ Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repositor
 | `subscriptionDetails` | [[!UICONTROL Telekom-Abonnement]](../../data-types/telecom-subscription.md) | Beschreibt allgemeine Details zum Abonnement, einschließlich Abonnementlänge, Gebühren, Status und mehr. |
 | `channels` | Ganzzahl | Die Anzahl der im Medienabonnement enthaltenen Kanäle. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `mobileSubscription` {#mobileSubscription}
 
@@ -108,4 +108,4 @@ Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repositor
 | `planLevel` | Zeichenfolge | Der Name des Mobile-Plans, der diesem Abonnement zugewiesen ist. |
 | `portedNumber` | Boolesch | Gibt an, ob der Kunde seine Nummer von einem anderen Netzbetreiber aus anbietet. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

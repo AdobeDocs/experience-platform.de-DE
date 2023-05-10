@@ -1,15 +1,15 @@
 ---
-title: Wetterdatenfeldzuordnungen
+title: Wetterdaten-Feldzuordnungen
 description: Referenzseite für die verfügbaren Wetterdatenfelder, die im Rahmen der Integration mit dem Wetterkanal verfügbar sind.
-source-git-commit: 3e5ca8fe67e5ad9ce0fe70d0c9f1e2fbc20cee17
+exl-id: bc0f158b-f9d0-424a-aa21-953e8380473f
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '12238'
 ht-degree: 0%
 
 ---
 
-
-# Wetterdatenfeldzuordnungen
+# Wetterdaten-Feldzuordnungen
 
 Adobe hat sich mit [!DNL [The Weather Company]](https://www.ibm.com/weather) , um den zusätzlichen Kontext des Wetters in den Vereinigten Staaten auf die Daten zu übertragen, die über Datenspeicher erfasst wurden. Sie können diese Daten für Analysen, Targeting und Segmenterstellung in Experience Platform verwenden.
 

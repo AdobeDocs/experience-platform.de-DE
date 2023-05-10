@@ -1,13 +1,13 @@
 ---
 title: In-App-Nachrichtenansicht
 description: In diesem Handbuch werden Informationen zur In-App-Messaging-Ansicht in Adobe Experience Platform Assurance beschrieben.
-source-git-commit: 5778d4db27d0f57281821dc8e042a31b69745514
+exl-id: 6131289a-aebb-4b3a-9045-4b2cf23415f8
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 1%
 
 ---
-
 
 # Ansicht &quot;In-App Messaging&quot;in &quot;Assurance&quot;
 

@@ -3,7 +3,7 @@ title: Verwalten der Berechtigungen für den Privacy Service
 description: Erfahren Sie, wie Sie die Benutzerrechte für den Adobe Experience Platform Privacy Service mit der Adobe Admin Console verwenden können.
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
 source-git-commit: 1e164166f58540cbaaa4ad789b10cdfc40fa8a70
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1634'
 ht-degree: 100%
 

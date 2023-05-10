@@ -1,10 +1,11 @@
 ---
 title: Plattformdaten mit Python und SQLAlchemiy verwalten
 description: Erfahren Sie, wie Sie mit SQLAlchemy Ihre Platform-Daten mit Python anstelle von SQL verwalten können.
-source-git-commit: 6b7de4236982181eaac2aa37d525604cba31198e
+exl-id: 9fba942e-9b3d-4efe-ae94-aed685025dea
+source-git-commit: 8644b78c947fd015f6a169c9440b8d1df71e5e17
 workflow-type: tm+mt
 source-wordcount: '567'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
@@ -16,11 +17,11 @@ Erfahren Sie, wie Sie SQLAlchemie für mehr Flexibilität bei der Verwaltung Ihr
 
 ## Erste Schritte
 
-So erwerben Sie die erforderlichen Anmeldeinformationen zum Herstellen einer Verbindung [!DNL SQLAlchemy] zur Experience Platform benötigen Sie Zugriff auf den Arbeitsbereich Abfragen in der Platform-Benutzeroberfläche. Wenden Sie sich an Ihren Organisationsadministrator, wenn Sie derzeit keinen Zugriff auf den Arbeitsbereich &quot;Abfragen&quot;haben.
+Um die erforderlichen Anmeldeinformationen zum Verbinden von [!DNL SQLAlchemy] mit Experience Platform zu erhalten, benötigen Sie Zugriff auf den Arbeitsbereich „Abfragen“ in der Platform-Benutzeroberfläche. Wenden Sie sich an Ihren Organisationsadministrator, wenn Sie derzeit keinen Zugriff auf den Arbeitsbereich &quot;Abfragen&quot;haben.
 
 ## [!DNL Query Service] Anmeldeinformationen {#credentials}
 
-Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei der Platform-Benutzeroberfläche an und wählen Sie **[!UICONTROL Abfragen]** aus der linken Navigation, gefolgt von **[!UICONTROL Anmeldeinformationen]**. Eine vollständige Anleitung zum Auffinden Ihrer Anmeldedaten finden Sie in der [Handbuch zu Anmeldeinformationen](../ui/credentials.md).
+Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei der Platform-Benutzeroberfläche an und wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Abfragen]** und dann **[!UICONTROL Anmeldeinformationen]** aus. Eine vollständige Anleitung zum Auffinden Ihrer Anmeldedaten finden Sie in der [Handbuch zu Anmeldeinformationen](../ui/credentials.md).
 
 ![Die Registerkarte &quot;Berechtigungen&quot;mit ablaufenden Anmeldeinformationen für Query Service wurde hervorgehoben.](../images/use-cases/credentials.png)
 

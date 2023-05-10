@@ -6,7 +6,7 @@ exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '583'
-ht-degree: 28%
+ht-degree: 29%
 
 ---
 
@@ -51,7 +51,7 @@ Alternativ können Sie die **[!UICONTROL Alle Segmente auswählen]** und **[!UIC
 >
 >Die Aufnahme umfangreicher Audience Manager-Segmentpopulationen hat einen direkten Einfluss auf Ihre Gesamtprofilanzahl, wenn Sie zum ersten Mal ein Audience Manager-Segment mithilfe der Audience Manager-Quelle an Platform senden. Das bedeutet, dass die Auswahl aller Segmente eine Profilanzahl ergeben kann, die über Ihrer Lizenznutzungsberechtigung liegt. Bitte lesen Sie [Nutzungsbeschränkung](../../../../../dashboards/guides/license-usage.md) vor dem Fortfahren.
 
-Nachdem Sie fertig sind, wählen Sie **[!UICONTROL Nächste]**
+Wenn Sie fertig sind, wählen Sie **[!UICONTROL Weiter]** aus
 
 ![Alle Segmente](../../../../images/tutorials/create/aam/all-segments.png)
 
@@ -68,5 +68,5 @@ Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Be
 
 Während ein Audience Manager-Datenfluss aktiv ist, werden eingehende Daten automatisch in Echtzeit-Kundenprofile aufgenommen. Sie können diese eingehenden Daten jetzt verwenden und Zielgruppensegmente mithilfe des Segmentierungsdienstes von Platform erstellen. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
-* [Übersicht über das Echtzeit-Kundenprofil](../../../../../profile/home.md)
-* [Übersicht über den Segmentierungsdienst](../../../../../segmentation/home.md)
+* [Übersicht zum Echtzeit-Kundenprofil](../../../../../profile/home.md)
+* [Übersicht über den Segmentierungs-Service](../../../../../segmentation/home.md)

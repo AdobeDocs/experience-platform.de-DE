@@ -5,8 +5,8 @@ last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
 workflow-type: tm+mt
-source-wordcount: '1084'
-ht-degree: 16%
+source-wordcount: '1078'
+ht-degree: 21%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 16%
 >
 >[!DNL The Trade Desk - CRM] Das Ziel in Platform befindet sich derzeit in der Beta-Phase. Dokumentation und Funktionalitäten können sich ändern.
 >
->Mit der Veröffentlichung der EUID (European Unified ID) sehen Sie jetzt zwei [!DNL The Trade Desk - CRM] Ziele im [Zielkatalog](/help/destinations/catalog/overview.md).
->* Wenn Sie Daten in der EU beziehen, verwenden Sie bitte die **[!DNL The Trade Desk - CRM (EU)]** Ziel.
->* Wenn Sie Daten in der APAC- oder NAMER-Region beziehen, verwenden Sie bitte die **[!DNL The Trade Desk - CRM (NAMER & APAC)]** Ziel.
+>Mit Veröffentlichung der EUID (European Unified ID) sehen Sie jetzt zwei [!DNL The Trade Desk - CRM]-Ziele im [Zielkatalog](/help/destinations/catalog/overview.md).
+>* Wenn Sie Daten in der EU beziehen, verwenden Sie bitte das **[!DNL The Trade Desk - CRM (EU)]**-Ziel.
+>* Wenn Sie Daten in der APAC- oder NAMER-Region beziehen, verwenden Sie das **[!DNL The Trade Desk - CRM (NAMER & APAC)]**-Ziel.
 >
 >Beide Ziele in Experience Platform befinden sich derzeit in der Betaphase. Diese Dokumentationsseite wurde von der *[!DNL Trade Desk]* Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte an Ihre [!DNL Trade Desk] -Support-Mitarbeiter, können sich die Dokumentation und Funktionalität ändern.
 
@@ -44,14 +44,14 @@ Je nach der Art der IDs, die Sie in Adobe Experience Platform erfassen, müssen 
 
 [!DNL The Trade Desk] unterstützt die Aktualisierung von Identitäten, die in der folgenden Tabelle beschrieben werden. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md).
 
-Sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen werden von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt Anforderungen für die ID-Zuordnung und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-E-Mail-Adressen.
+Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt Anforderungen für die ID-Zuordnung und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-E-Mail-Adressen.
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
 | E-Mail | E-Mail-Adressen (Klartext) | Eingabe `email` als Zielidentität, wenn Ihre Quellidentität ein E-Mail-Namespace oder -Attribut ist. |
 | Email_LC_SHA256 | E-Mail-Adressen müssen mit SHA256 gehasht und in Kleinbuchstaben geschrieben werden. Achten Sie darauf, [E-Mail-Normalisierung](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) Regeln erforderlich. Sie können diese Einstellung später nicht ändern. | Eingabe `hashed_email` als Zielidentität, wenn Ihre Quellidentität ein Namespace oder ein Attribut von Email_LC_SHA256 ist. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Anforderungen an das E-Mail-Hashing {#hashing-requirements}
 
@@ -76,7 +76,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 | Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (E-Mail oder Hash-E-Mail), die im Trade Desk-Ziel verwendet werden. |
 | Exporthäufigkeit | **[!UICONTROL Täglicher Batch]** | Da ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, wird das Profil (die Identitäten) einmal täglich nachgelagert zur Zielplattform aktualisiert. Mehr dazu [Batch-Exporte](/help/destinations/destination-types.md#file-based). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
@@ -86,7 +86,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 ### Zieldetails ausfüllen {#fill-in-details}
 
-Bevor Sie Zielgruppendaten an ein Ziel senden oder aktivieren können, müssen Sie eine Verbindung zu Ihrer eigenen Zielplattform herstellen. Beim [Einrichten](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) dieses Ziels müssen Sie die folgenden Informationen angeben:
+Bevor Sie Zielgruppendaten an ein Ziel senden oder aktivieren können, müssen Sie eine Verbindung zu Ihrer eigenen Zielplattform herstellen. Beim [Einrichten](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=de) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
 * **[!UICONTROL Kontotyp]**: Bitte wählen Sie die **[!UICONTROL Vorhandenes Konto]** -Option.
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.

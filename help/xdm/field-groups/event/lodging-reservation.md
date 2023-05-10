@@ -5,7 +5,7 @@ description: Dieses Dokument bietet einen Überblick über die Feldergruppe "Res
 exl-id: f0eafc83-21f1-483d-9397-1133e3777699
 source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '679'
 ht-degree: 7%
 
 ---
@@ -68,7 +68,7 @@ Die Struktur der einzelnen Objekte, die unter `lodgingReservations` ist unten an
 | `smoking` | Boolesch | Gibt an, ob das Rauchen in dem Zimmer erlaubt ist. |
 | `tripType` | Zeichenfolge | Gibt an, ob die Reservierung für eine Einweg-, Hin- und Rückfahrt oder für eine mehrstündige Reise gilt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 

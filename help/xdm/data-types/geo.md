@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über den Geo-XDM-Datentyp.
 exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '202'
-ht-degree: 44%
+source-wordcount: '199'
+ht-degree: 43%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 44%
 | `postalCode` | Zeichenfolge | Die Postleitzahl des Ortes. Postleitzahlen sind nicht für alle Länder verfügbar. In einigen Ländern wird dies nur einen Teil der Postleitzahl enthalten. |
 | `stateProvince` | Zeichenfolge | Das Bundesland oder die Provinz der Beobachtung. Das Format entspricht der [ISO-Norm 3166-2 (Land und Unterteilung)](https://www.unece.org/cefact/locode/subdivisions.html). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

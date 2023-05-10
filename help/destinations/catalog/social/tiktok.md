@@ -1,20 +1,20 @@
 ---
 title: TikTok-Verbindung
-description: Erstellen Sie benutzerdefinierte Zielgruppen in TikTok mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. Diese Zielgruppen können von Personen sein, die Ihre Website besucht oder mit Ihrem Inhalt interagiert haben. Schnelles und sicheres Übertragen des gewünschten Segments von Adobe Experience Platform an TikTok mithilfe der Echtzeit-Integration von Adobe in TikTok Ads Manager.
+description: Erstellen Sie auf TikTok benutzerdefinierte Zielgruppen mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. Diese Zielgruppen können von Personen sein, die Ihre Website besucht oder mit Ihrem Inhalt interagiert haben. Schnelles und sicheres Übertragen des gewünschten Segments von Adobe Experience Platform an TikTok mithilfe der Echtzeit-Integration von Adobe in TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
-source-git-commit: 7bfcd0132380f0c847742ff05c1f334542adfba2
+exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '980'
-ht-degree: 37%
+ht-degree: 47%
 
 ---
-
 
 # TikTok-Verbindung
 
 ## Übersicht {#overview}
 
-Erstellen Sie benutzerdefinierte Zielgruppen in TikTok mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. Diese Zielgruppen können von Personen sein, die Ihre Website besucht oder mit Ihrem Inhalt interagiert haben. Schnelles und sicheres Übertragen des gewünschten Segments von Adobe Experience Platform an TikTok mithilfe der Echtzeit-Integration von Adobe in TikTok Ads Manager. Besuch [TikTok Business-Hilfesystem](https://ads.tiktok.com/help/article/audiences?lang=en) für weitere Informationen.
+Erstellen Sie auf TikTok benutzerdefinierte Zielgruppen mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. Diese Zielgruppen können von Personen sein, die Ihre Website besucht oder mit Ihrem Inhalt interagiert haben. Schnelles und sicheres Übertragen des gewünschten Segments von Adobe Experience Platform an TikTok mithilfe der Echtzeit-Integration von Adobe in TikTok Ads Manager. Besuch [TikTok Business-Hilfesystem](https://ads.tiktok.com/help/article/audiences?lang=en) für weitere Informationen.
 
 >[!IMPORTANT]
 >
@@ -40,8 +40,8 @@ TikTok unterstützt die Aktivierung von Identitäten, die in der folgenden Tabel
 |---|---|---|
 | GAID | Google Advertising ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
 | IDFA | Apple ID für Advertiser | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
-| Telefonnummer | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Sowohl einfache als auch SHA256-Hash-Telefonnummern werden von Adobe Experience Platform unterstützt und müssen im E.164-Format vorliegen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die **[!UICONTROL Umwandlung anwenden]** -Option, um [!DNL Platform] die Daten bei Aktivierung automatisch hash. |
-| E-Mail | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen werden von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die **[!UICONTROL Umwandlung anwenden]** -Option, um [!DNL Platform] die Daten bei Aktivierung automatisch hash. |
+| Telefonnummer | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Sowohl einfache als auch SHA256-Hash-Telefonnummern werden von Adobe Experience Platform unterstützt und müssen im E.164-Format vorliegen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
+| E-Mail | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
 
 {style="table-layout:auto"}
 

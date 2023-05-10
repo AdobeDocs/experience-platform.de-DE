@@ -5,7 +5,7 @@ exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1052'
-ht-degree: 7%
+ht-degree: 10%
 
 ---
 
@@ -27,7 +27,7 @@ Die Profildaten im Schnappschuss zeigen die Daten exakt so an, wie sie zu dem Ze
 
 >[!NOTE]
 >
->Änderungen oder Aktualisierungen, die seit der Aufnahme des Schnappschusses an den Daten vorgenommen wurden, werden erst dann im Dashboard angezeigt, wenn der nächste Schnappschuss erstellt wurde.
+>Änderungen oder Aktualisierungen, die seit der Aufnahme der Momentaufnahme an den Daten vorgenommen wurden, werden erst dann im Dashboard angezeigt, wenn die nächste Momentaufnahme erstellt wird.
 
 ## Die [!UICONTROL Kontoprofile] Dashboard
 

@@ -102,7 +102,7 @@ Weitere Informationen zu Zusammenführungsrichtlinien und ihrer Rolle in Platfor
 
 Im **[!UICONTROL Durchsuchen]** -Registerkarte verwenden, können Sie einen Identitäts-Namespace verwenden, um ein bestimmtes Profil nach einem Identitätswert zu suchen. Für das Durchsuchen nach einer Identität müssen Sie eine Zusammenführungsrichtlinie, einen Identitäts-Namespace und einen Identitätswert angeben.
 
-![Die Auswahl der Zusammenführungsrichtlinien ist hervorgehoben.](../images/user-guide/browse-by-merge-policy.png)
+![Die Auswahl für die Zusammenführungsrichtlinie ist hervorgehoben.](../images/user-guide/browse-by-merge-policy.png)
 
 Verwenden Sie bei Bedarf die **[!UICONTROL Zusammenführungsrichtlinie]** Auswahl zum Öffnen **[!UICONTROL Zusammenführungsrichtlinie auswählen]** und wählen Sie die Zusammenführungsrichtlinie aus, die Sie verwenden möchten.
 

@@ -4,7 +4,7 @@ title: Datenschutz in Real-time Customer Data Platform
 description: Mit Adobe Real-time Customer Data Platform können Sie die Einhaltung von Datenschutzbestimmungen bei Ihren Datenvorgängen optimieren.
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 100%
 

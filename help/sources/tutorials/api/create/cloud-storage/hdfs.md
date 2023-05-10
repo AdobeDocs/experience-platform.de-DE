@@ -8,7 +8,7 @@ exl-id: 04fa65db-073c-48e1-b981-425185ae08aa
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '461'
-ht-degree: 56%
+ht-degree: 57%
 
 ---
 
@@ -85,7 +85,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
 | `auth.params.url` | Die URL, die Authentifizierungsparameter definiert, die für die Verbindung mit [!DNL HDFS] anonym |
-| `connectionSpec.id` | Die [!DNL HDFS] Verbindungsspezifikations-ID: `54e221aa-d342-4707-bcff-7a4bceef0001`. |
+| `connectionSpec.id` | Die [!DNL HDFS]-Verbindungsspezifikations-ID: `54e221aa-d342-4707-bcff-7a4bceef0001`. |
 
 **Antwort**
 

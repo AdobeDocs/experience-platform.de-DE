@@ -94,7 +94,7 @@ curl -X POST \
 | `auth.params.secretAccessKey` | Der geheime Zugriffsschlüssel, der mit Ihrem [!DNL Google Cloud Storage] -Konto. |
 | `auth.params.bucketName` | Der Name Ihres [!DNL Google Cloud Storage] Eimer. Sie müssen einen Bucket-Namen angeben, wenn Sie Zugriff auf einen bestimmten Unterordner in Ihrem Cloud-Speicher gewähren möchten. |
 | `auth.params.folderPath` | Der Pfad zu dem Ordner, auf den Sie Zugriff gewähren möchten. |
-| `connectionSpec.id` | Die [!DNL Google Cloud Storage] Verbindungsspezifikations-ID: `32e8f412-cdf7-464c-9885-78184cb113fd` |
+| `connectionSpec.id` | Die [!DNL Google Cloud Storage]-Verbindungsspezifikations-ID: `32e8f412-cdf7-464c-9885-78184cb113fd` |
 
 **Antwort**
 

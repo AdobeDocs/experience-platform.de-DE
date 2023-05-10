@@ -7,7 +7,7 @@ exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
 source-git-commit: 1ef6430b6661a2b8b5aef196b75cfaf3f6220aab
 workflow-type: tm+mt
 source-wordcount: '413'
-ht-degree: 3%
+ht-degree: 33%
 
 ---
 
@@ -28,11 +28,11 @@ Es gibt zwei Möglichkeiten, Ziele aus dem [!DNL Platform] [!DNL UI]. Sie haben 
 
 Gehen Sie wie folgt vor, um ein Ziel aus dem [!UICONTROL Durchsuchen] Registerkarte.
 
-1. Melden Sie sich bei der [Experience Platform-Benutzeroberfläche](https://platform.adobe.com/) und wählen Sie **[!UICONTROL Ziele]** über die linke Navigationsleiste. Um Ihre vorhandenen Ziele anzuzeigen, wählen Sie **[!UICONTROL Durchsuchen]** aus der oberen Kopfzeile.
+1. Melden Sie sich bei der [Experience Platform-Benutzeroberfläche](https://platform.adobe.com/) an und wählen Sie **[!UICONTROL Ziele]** über die linke Navigationsleiste aus. Um Ihre vorhandenen Ziele anzuzeigen, wählen Sie **[!UICONTROL Durchsuchen]** aus der oberen Kopfzeile.
 
    ![Ziele durchsuchen](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Filtersymbol auswählen ![Filter-Symbol](../assets/ui/delete-destinations/filter.png) oben links, um das Sortierungsfenster zu öffnen. Das Sortierungsfenster bietet eine Liste aller Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Datenflüssen anzuzeigen, die mit dem ausgewählten Ziel verknüpft sind.
+2. Wählen Sie das Symbol ![Filter](../assets/ui/delete-destinations/filter.png) oben links, um das Sortier-Bedienfeld zu öffnen. Das Sortier-Bedienfeld bietet eine Liste aller Ihrer Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Datenflüssen anzuzeigen, die mit dem ausgewählten Ziel verknüpft sind.
 
    ![Ziele filtern](../assets/ui/delete-destinations/filter-destinations.png)
 
@@ -47,11 +47,11 @@ Gehen Sie wie folgt vor, um ein Ziel aus dem [!UICONTROL Durchsuchen] Registerka
 
 Gehen Sie wie folgt vor, um ein Ziel auf der Seite mit den Zieldetails zu löschen.
 
-1. Melden Sie sich bei der [Experience Platform-Benutzeroberfläche](https://platform.adobe.com/) und wählen Sie **[!UICONTROL Ziele]** über die linke Navigationsleiste. Um Ihre vorhandenen Ziele anzuzeigen, wählen Sie **[!UICONTROL Durchsuchen]** aus der oberen Kopfzeile.
+1. Melden Sie sich bei der [Experience Platform-Benutzeroberfläche](https://platform.adobe.com/) an und wählen Sie **[!UICONTROL Ziele]** über die linke Navigationsleiste aus. Um Ihre vorhandenen Ziele anzuzeigen, wählen Sie **[!UICONTROL Durchsuchen]** aus der oberen Kopfzeile.
 
    ![Ziele durchsuchen](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Filtersymbol auswählen ![Filter-Symbol](../assets/ui/delete-destinations/filter.png) oben links, um das Sortierungsfenster zu öffnen. Das Sortierungsfenster bietet eine Liste aller Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Datenflüssen anzuzeigen, die mit dem ausgewählten Ziel verknüpft sind.
+2. Wählen Sie das Symbol ![Filter](../assets/ui/delete-destinations/filter.png) oben links, um das Sortier-Bedienfeld zu öffnen. Das Sortier-Bedienfeld bietet eine Liste aller Ihrer Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Datenflüssen anzuzeigen, die mit dem ausgewählten Ziel verknüpft sind.
 
    ![Ziele filtern](../assets/ui/delete-destinations/filter-destinations.png)
 

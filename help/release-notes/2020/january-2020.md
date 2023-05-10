@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platform - Versionshinweise Januar 2020
-description: Die Versionshinweise für Adobe Experience Platform vom Januar 2020.
+title: Adobe Experience Platform – Versionshinweise Januar 2020
+description: Versionshinweise Januar 2020 für Adobe Experience Platform.
 doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
@@ -8,7 +8,7 @@ exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '888'
-ht-degree: 41%
+ht-degree: 49%
 
 ---
 
@@ -50,9 +50,9 @@ Neue gesetzliche und organisatorische Vorschriften geben Benutzern das Recht, au
 
 | Funktion | Beschreibung |
 |--- | ---|
-| [!DNL Privacy Service] Rebranding | Der zuvor als &quot;DSGVO-Dienst&quot;bezeichnete Dienst wurde in [!DNL Privacy Service] da der Dienst zunehmend andere Vorschriften zusätzlich zur DSGVO unterstützt. |
-| Neue API-Endpunkte | Basispfad für [!DNL Privacy Service] Die API wurde aktualisiert von `/data/privacy/gdpr` nach `/data/core/privacy/jobs`. |
-| Neue erforderliche `regulation`-Eigenschaft | Beim Erstellen neuer Aufträge in [!DNL Privacy Service] API, eine `regulation` -Eigenschaft muss in der Anfrage-Payload angegeben werden, unter welcher Verordnung der Auftrag verfolgt werden soll. Die zulässigen Werte sind `gdpr` und `ccpa`. |
+| [!DNL Privacy Service]-Rebranding | Der früher als „GDPR Service“ bezeichnete Service wurde in [!DNL Privacy Service] umbenannt, da der Service erweitert wurde, um neben der DSGVO auch andere Vorschriften zu unterstützen. |
+| Neue API-Endpunkte | Der Basispfad für die [!DNL Privacy Service]-API wurde von `/data/privacy/gdpr` auf `/data/core/privacy/jobs` aktualisiert.. |
+| Neue erforderliche `regulation`-Eigenschaft | Bei der Erstellung neuer Aufträge in der [!DNL Privacy Service]-API muss eine `regulation`-Eigenschaft in der Anfrage-Payload angegeben werden, die angibt, nach welcher Vorschrift der Auftrag verfolgt werden soll. Die zulässigen Werte sind `gdpr` und `ccpa`. |
 | Unterstützung für [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] akzeptiert jetzt Zugriffs-/Löschanfragen von Adobe [!DNL Primetime Authentication]verwendet `primetimeAuthentication` als Produktwert. |
 | Verbesserungen der Benutzeroberfläche von Privacy Service | Separate Auftragsverfolgungsseiten für DSGVO- und CCPA-Vorschriften. Neue Dropdown-Liste **Regelungstyp **Dropdown, um zwischen Tracking-Daten für DSGVO und CCPA zu wechseln. |
 

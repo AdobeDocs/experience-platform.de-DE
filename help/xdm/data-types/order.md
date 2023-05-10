@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über den Datentyp "Order E
 exl-id: abfc6d53-ffe6-4692-ad65-03d556831fa0
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 30%
+source-wordcount: '186'
+ht-degree: 29%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 30%
 | `purchaseID` | Zeichenfolge | Eine eindeutige Kennung, die vom Verkäufer für diesen Kauf oder Vertrag zugewiesen wird. Da dies vom Verkäufer definiert wird, gibt es keine Garantie, dass die ID eindeutig ist. |
 | `purchaseOrderNumber` | Zeichenfolge | Die eindeutige Kennung, die der Käufer diesem Kauf oder Vertrag zugewiesen hat. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

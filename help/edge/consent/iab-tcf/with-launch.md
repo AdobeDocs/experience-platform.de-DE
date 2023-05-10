@@ -81,7 +81,7 @@ Die Zustimmungszeichenfolge sollte im XDM-Erlebnisereignis enthalten sein. Verwe
 1. Erweitern Sie die **[!UICONTROL consentString]** -Überschrift, erweitern Sie das erste Element und geben Sie dann die folgenden Werte ein:
 
 * `consentStandard`: IAB TCF
-* `consentStandardVersion`: 2,0
+* `consentStandardVersion`: 2.0
 * `consentStringValue`: %IAB TCF-Zustimmungszeichenfolge%
 * `gdprApplies`: %IAB TCF Einverständniserklärung DSGVO%
 

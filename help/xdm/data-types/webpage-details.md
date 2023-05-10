@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über die Webseitendetails 
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 14%
+source-wordcount: '408'
+ht-degree: 13%
 
 ---
 
@@ -30,7 +30,7 @@ Der Datentyp ist für vollständige Seitendetails und das erstmalige Laden von E
 | `siteSection` | Zeichenfolge | Der normative Name des Website-Bereichs, in dem sich diese Webseite befindet. Damit können Sie die Interaktion klassifizieren oder kategorisieren. |
 | `viewName` | Zeichenfolge | Der Name der Ansicht innerhalb einer Seite. Diese Eigenschaft wird häufig bei Einzelseitenanwendungen oder Seiten mit Registerkarten oder Steuerelementen verwendet, die einen Großteil des Seitenlayouts ändern. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

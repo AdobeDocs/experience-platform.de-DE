@@ -483,7 +483,7 @@ Die Ergebnisse der angegebenen Beispielabfrage werden im `average_minutes_until_
 
 Mithilfe der hier beschriebenen Funktionen können Sie Abfragen erstellen, um auf Ihre [!DNL Experience Event] Datensätze mit [!DNL Query Service]. Weitere Informationen zu Authoring-Abfragen finden Sie unter [!DNL Query Service], siehe die Dokumentation unter [Abfragen erstellen](../best-practices/writing-queries.md).
 
-## Weitere Ressourcen
+## Zusätzliche Ressourcen
 
 Im folgenden Video erfahren Sie, wie Sie Abfragen in der Adobe Experience Platform-Benutzeroberfläche und in einem PSQL-Client ausführen. Darüber hinaus werden im Video auch Beispiele für einzelne Eigenschaften in einem XDM-Objekt verwendet, Adobe-definierte Funktionen verwendet und CREATE TABLE AS SELECT (CTAS) verwendet.
 

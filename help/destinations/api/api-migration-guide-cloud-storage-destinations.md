@@ -3,10 +3,11 @@ solution: Experience Platform
 title: API-Migrationshandbuch für Cloud-Speicher-Ziele
 description: Erfahren Sie mehr über die Änderungen im Workflow zur Aktivierung von Cloud-Speicher-Zielen im Rahmen der Migration zu den neuen Cloud-Speicher-Zielkarten mit zusätzlichen Funktionen.
 type: Tutorial
-source-git-commit: 6ed78a96f099fb4552716ac4a598c43f4d65cf37
+exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1446'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -434,7 +435,7 @@ Neben der oben aktualisierten Fluss- und Verbindungsspezifikation gibt es Änder
 * Zuvor war für die Basisverbindung für SFTP-Ziele ein `host` Parameter. Dieser Parameter wurde jetzt in `domain`.
 * Für die Authentifizierung mit der SSH-Schlüsseloption benötigten die Authentifizierungsparameter in der Basisverbindung eine `port` -Option. Dieser Parameter ist jetzt veraltet und nicht mehr erforderlich.
 
-Sehen Sie sich die vollständige alte und die neue Basisverbindung sowie die Beispiele für Zielverbindungen für SFTP auf den Registerkarten unten an, wobei die Zeilen, die sich ändern, hervorgehoben werden. Die Parameter, die zum Erstellen von Zielverbindungen für SFTP-Ziele erforderlich sind, ändern sich nicht.
+Sehen Sie sich die vollständige alte und die neue Basisverbindung sowie die Beispiele für Zielverbindungen für SFTP auf den Registerkarten unten an, wobei die Zeilen, die sich ändern, hervorgehoben sind. Die Parameter, die zum Erstellen von Zielverbindungen für SFTP-Ziele erforderlich sind, ändern sich nicht.
 
 >[!BEGINTABS]
 

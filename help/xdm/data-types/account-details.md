@@ -4,8 +4,8 @@ description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp (Acc
 exl-id: 17254393-263e-4000-9bd2-815a9e842533
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 22%
+source-wordcount: '432'
+ht-degree: 21%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 22%
 | `twitterHandleUrl` | Zeichenfolge | Ein Website-Link zum twitter-Handle des Unternehmens. |
 | `website` | Zeichenfolge | Die URL der Website der Organisation. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

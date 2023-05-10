@@ -5,7 +5,7 @@ description: Dieses Dokument bietet einen Überblick über die Feldergruppe Buch
 exl-id: 672b7a77-c433-4502-a1ad-a17c811b253e
 source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '459'
 ht-degree: 6%
 
 ---
@@ -57,7 +57,7 @@ Die Struktur der einzelnen Objekte, die unter `diningReservations` ist unten ang
 | `specialOccasion` | Boolesch | Gibt an, ob die Reservierung für einen besonderen Anlass erfolgt. |
 | `status` | Ganzzahl | Der Status der Speisekarte. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 

@@ -7,7 +7,7 @@ exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '978'
-ht-degree: 9%
+ht-degree: 14%
 
 ---
 
@@ -34,13 +34,13 @@ Wenn die Aufnahme von Datensätzen in den Profilspeicher die Gesamtzahl der Prof
 * **Batch-Erfassung:** Bei der Batch-Erfassung wird innerhalb von 15 Minuten nach erfolgreicher Aufnahme eines Batches in den Profilspeicher ein Auftrag ausgeführt, um die Anzahl zu aktualisieren, wenn der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht ist.
 * **Streaming-Erfassung:** Für Streaming-Daten-Workflows wird stündlich geprüft, ob der Schwellenwert für eine Zu- oder Abnahme um 5 % erreicht wurde. Ist dies der Fall, wird automatisch ein Auftrag ausgelöst, um die Anzahl zu aktualisieren.
 
-Die Stichprobengröße der Prüfung hängt von der Gesamtanzahl der Entitäten in Ihrem Profilspeicher ab. Diese Stichprobengrößen werden in der folgenden Tabelle dargestellt:
+Die Stichprobengröße der Überprüfung hängt von der Gesamtzahl der Entitäten in Ihrem Profilspeicher ab. Diese Stichprobengrößen sind in der folgenden Tabelle dargestellt:
 
 | Entitäten im Profilspeicher | Stichprobengröße |
 | ------------------------- | ----------- |
 | Weniger als 1 Million | Vollständiger Datensatz |
-| 1 bis 20 Mio. | 1 Millionen |
-| Über 20 Millionen | 5 % des Gesamtbetrags |
+| 1 bis 20 Millionen | 1 Million |
+| Über 20 Millionen | 5 % der Gesamtgröße |
 
 >[!NOTE]
 >

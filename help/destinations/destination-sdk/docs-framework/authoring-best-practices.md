@@ -5,7 +5,7 @@ exl-id: b12059f1-6635-41cd-acc5-6ff471111164
 source-git-commit: 0b9b724c2530e43ce681011d12fc1341148ddbf5
 workflow-type: tm+mt
 source-wordcount: '565'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -20,7 +20,7 @@ Auf dieser Seite werden die Regeln beschrieben, die Sie bei [Erstellen der Zield
 * Beim Ausfüllen der [template](./self-service-template.md) Informationen zu Ihrer Zieldokumentation finden Sie im Adobe Contributor Guide , um mehr über [Verknüpfung](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en), [Tabellen](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#tables), die [unterstützte Markdown-Syntax](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en), [Schreibanleitung](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en)und mehr.
 * Fügen Sie in der Produktdokumentation keine Beobachtungen und Schätzungen hinzu.
 * In der Experience Platform-Dokumentation verwenden Adobe-Autoren **Fettformatierung** , um auf Steuerelemente der Benutzeroberfläche zu verweisen, wie in diesem Beispiel:
-   * Navigieren Sie zu **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** und wählen Sie die **[!UICONTROL Katalog]** Registerkarte. Ein Beispiel dafür anzeigen, wie Steuerelemente der Benutzeroberfläche in einer [Tutorial zu Zielen](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#select-destination).
+   * Navigieren Sie zu **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Katalog]** aus. Ein Beispiel dafür anzeigen, wie Steuerelemente der Benutzeroberfläche in einer [Tutorial zu Zielen](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#select-destination).
 
 ## Schreibstil
 

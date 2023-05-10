@@ -5,7 +5,7 @@ breadcrumb-title: Datenhygiene-Handbuch
 user-guide-description: Löschen Sie einzelne Datensätze und planen Sie die Ablauffristen von Datensätzen in Experience Platform für die Datenbereinigung, das Entfernen anonymer Daten und die Datenminimierung.
 feature: Data Hygiene
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '54'
 ht-degree: 100%
 

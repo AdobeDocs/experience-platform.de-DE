@@ -6,8 +6,8 @@ description: Erfahren Sie, wie Sie Adobe Audience Manager-Daten (Echtzeit-, inte
 exl-id: b800ba43-c308-4334-adce-3d554d50cefb
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 73%
+source-wordcount: '169'
+ht-degree: 72%
 
 ---
 
@@ -36,7 +36,7 @@ Typ: Echtzeitdaten
 | `request_user_agent` | `ExperienceEvent.environment.browserDetails` <ul><li>h_user-agent → userAgent</li><li>h_accept-language → acceptLanguage</li></ul> |
 | `client_ip` | `ExperienceEvent.environment` <ul><li>d_os_name → os name </li><li>d_os_version → os_version</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Profildaten
 
@@ -48,4 +48,4 @@ Typ: Profil
 | `smem` | `ExperienceEvent.segmentMemberships["AAMSegments"]` |
 | `tmem` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

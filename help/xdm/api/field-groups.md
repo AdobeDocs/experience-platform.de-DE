@@ -6,7 +6,7 @@ description: Mit dem Endpunkt /fieldgroups in der Schema Registry-API können Si
 exl-id: d26257e4-c7d5-4bff-b555-7a2997c88c74
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1195'
 ht-degree: 13%
 
 ---
@@ -38,7 +38,7 @@ GET /{CONTAINER_ID}/fieldgroups?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | Der Container, aus dem Sie Feldergruppen abrufen möchten: `global` für von der Adobe erstellte Feldergruppen oder `tenant` für Feldergruppen, die Ihrer Organisation gehören. |
 | `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Siehe [Anhang](./appendix.md#query) für eine Liste der verfügbaren Parameter. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -61,7 +61,7 @@ Das Antwortformat hängt von der `Accept` -Kopfzeile, die in der Anfrage gesende
 | `application/vnd.adobe.xed-id+json` | Gibt eine kurze Zusammenfassung jeder Ressource zurück. Dies ist die empfohlene Kopfzeile für die Auflistung von Ressourcen. (Limit: 300) |
 | `application/vnd.adobe.xed+json` | Gibt für jede Ressource die vollständige JSON-Feldergruppe mit der ursprünglichen `$ref` und `allOf` enthalten. (Limit: 300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -124,7 +124,7 @@ GET /{CONTAINER_ID}/fieldgroups/{FIELD_GROUP_ID}
 | `{CONTAINER_ID}` | Der Container, der die Feldergruppe enthält, die Sie abrufen möchten: `global` für eine von der Adobe erstellte Feldergruppe oder `tenant` für eine Feldergruppe, die sich im Besitz Ihrer Organisation befindet. |
 | `{FIELD_GROUP_ID}` | Die `meta:altId` oder URL-kodiert `$id` der Feldergruppe, die Sie nachschlagen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -150,7 +150,7 @@ Das Antwortformat hängt von der `Accept` -Kopfzeile, die in der Anfrage gesende
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` und `allOf` aufgelöst, keine Titel oder Beschreibungen. |
 | `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` und `allOf` aufgelöst, einschließlich Deskriptoren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -215,7 +215,7 @@ Eine erfolgreiche Antwort gibt die Details der Feldergruppe zurück. Die zurück
 }
 ```
 
-## Feldergruppe erstellen {#create}
+## Erstellen Sie eine Feldergruppe {#create}
 
 Sie können eine benutzerdefinierte Feldergruppe unter der `tenant` -Container, indem Sie eine POST-Anfrage ausführen.
 
@@ -386,7 +386,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload m
 
 Durchführen einer GET-Anfrage an [Alle Feldergruppen auflisten](#list) im Mandanten-Container nun die Feldergruppe Eigenschaftendetails enthalten, oder Sie können [Anfrage zum Nachschlagen (GET) ausführen](#lookup) mit der URL-kodierten `$id` URI, um die neue Feldergruppe direkt anzuzeigen.
 
-## Aktualisieren von Feldergruppen {#put}
+## Aktualisieren einer Feldergruppe {#put}
 
 Sie können eine ganze Feldergruppe durch einen PUT-Vorgang ersetzen und die Ressource im Wesentlichen neu schreiben. Beim Aktualisieren einer Feldergruppe über eine PUT-Anfrage muss der Hauptteil alle Felder enthalten, die erforderlich sind, wenn [Erstellen einer neuen Feldergruppe](#create) in einer POST-Anfrage.
 
@@ -404,7 +404,7 @@ PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 | --- | --- |
 | `{FIELD_GROUP_ID}` | Die `meta:altId` oder URL-kodiert `$id` der Feldergruppe, die Sie neu schreiben möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -573,7 +573,7 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Feldergruppe zurü
 
 ## Aktualisieren eines Teils einer Feldergruppe {#patch}
 
-Sie können einen Teil einer Feldergruppe mithilfe einer PATCH-Anfrage aktualisieren. Die [!DNL Schema Registry] unterstützt alle standardmäßigen JSON Patch-Vorgänge, einschließlich `add`, `remove`und `replace`. Weitere Informationen zum JSON Patch finden Sie im Abschnitt [API-Grundlagenhandbuch](../../landing/api-fundamentals.md#json-patch).
+Sie können einen Teil einer Feldergruppe mithilfe einer PATCH-Anfrage aktualisieren. Die [!DNL Schema Registry] unterstützt alle standardmäßigen JSON Patch-Vorgänge, einschließlich `add`, `remove`und `replace`. Weitere Informationen zu JSON-Patch-Vorgängen finden Sie im [API-Grundlagenhandbuch](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
@@ -589,7 +589,7 @@ PATCH /tenant/fieldgroups/{FIELD_GROUP_ID}
 | --- | --- |
 | `{FIELD_GROUP_ID}` | Die URL-kodierte `$id` URI oder `meta:altId` der Feldergruppe, die Sie aktualisieren möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -728,7 +728,7 @@ DELETE /tenant/fieldgroups/{FIELD_GROUP_ID}
 | --- | --- |
 | `{FIELD_GROUP_ID}` | Die URL-kodierte `$id` URI oder `meta:altId` der Feldergruppe, die Sie löschen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 

@@ -3,10 +3,11 @@ title: Erstellen einer neuen Verbindungsspezifikation für das Streaming-SDK mit
 description: Im folgenden Dokument erfahren Sie, wie Sie eine Verbindungsspezifikation mithilfe der Flow Service-API erstellen und eine neue Quelle über Self-Serve-Quellen integrieren.
 hide: true
 hidefromtoc: true
-source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
+exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
-source-wordcount: '751'
-ht-degree: 39%
+source-wordcount: '748'
+ht-degree: 38%
 
 ---
 
@@ -44,7 +45,7 @@ Nach der Bereitstellung müssen Sie Ihr privates Git-Repository wie folgt strukt
 | {your_source}-label.txt | Der Quellname, wie er im Quellkatalog der Experience Platform angezeigt werden soll. | Medallia |
 | {your_source}-connectionSpec.json | Eine JSON-Datei, die die Verbindungsspezifikation Ihrer Quelle enthält. Diese Datei ist zunächst nicht erforderlich, da Sie Ihre Verbindungsspezifikation nach Abschluss dieses Handbuchs füllen werden. | `medallia-connectionSpec.json` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!TIP]
 >

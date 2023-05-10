@@ -6,7 +6,7 @@ description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp für
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '338'
 ht-degree: 24%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 24%
 | `statusReason` | Eine Beschreibung des aktuellen `status`. |
 | `street1` – `street4` | Diese vier Felder sollen Informationen auf der primären Straßenniveau, Wohnungsnummer, Straßennummer und Straßenname enthalten. `street2` nach `street4` sind optional. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp der Postanschrift finden Sie im öffentlichen XDM-Repository:
 

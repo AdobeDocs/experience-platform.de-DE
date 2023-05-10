@@ -5,8 +5,8 @@ description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp "Con
 exl-id: 288ec79e-074a-4d72-9c5f-e9cd8485b804
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 12%
+source-wordcount: '198'
+ht-degree: 11%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 12%
 | `containsPersonalData` | Boolesch | Wenn dieses Feld wahr ist, bedeutet dies, dass diese Zustimmungszeichenfolge für die Durchsetzung der Zustimmung verarbeitet werden muss. |
 | `gdprApplies` | Boolesch | Wenn dieses Feld zutrifft, bedeutet dies, dass die Einwilligung mit personenbezogenen Daten eingeht. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

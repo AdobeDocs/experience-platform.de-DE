@@ -5,7 +5,7 @@ exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
 source-git-commit: 0580816c471400ba17eddcb6b1a9dfbf01797938
 workflow-type: tm+mt
 source-wordcount: '778'
-ht-degree: 45%
+ht-degree: 51%
 
 ---
 
@@ -71,7 +71,7 @@ Mehr dazu [Taxonomie-Metadaten](https://developer.verizonmedia.com/datax/guide/t
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen werden von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die **[!UICONTROL Umwandlung anwenden]** -Option, um [!DNL Platform] die Daten bei Aktivierung automatisch hash. |
+| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
 | GAID | Google Advertising ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
 | IDFA | Apple ID für Advertiser | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
 

@@ -5,7 +5,7 @@ title: Handbuch zur Fehlerbehebung beim XDM-System
 description: Hier finden Sie Antworten auf häufig gestellte Fragen zum Experience-Datenmodell (XDM), einschließlich schrittweiser Anweisungen zur Behebung gängiger API-Fehler.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2073'
 ht-degree: 100%
 

@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie den /rule_components-Endpunkt in der Reactor-
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
 source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1157'
 ht-degree: 95%
 
 ---
@@ -25,7 +25,7 @@ Regelkomponenten haben drei grundlegende Typen:
 | Bedingungen | Eine Bedingung ist eine Bewertung, ob bestimmte Kriterien erfüllt sind, bevor Aktionen ausgeführt werden. Sobald ein Ereignis eintritt, werden die Bedingungen ausgewertet. Die Aktionen der Regel werden nur ausgeführt, wenn alle Bedingungen erfüllt sind. |
 | Aktionen | Dies sind die Aktionen, die die Regel tatsächlich durchführen soll, z. B. das Senden eines Adobe Analytics-Beacons, das Abrufen einer benutzerdefinierten Besucher-ID oder das Auslösen einer bestimmten Mbox. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Eine Regelkomponente gehört zu genau einer Regel. Eine Regel kann (und sollte) viele Regelkomponenten enthalten.
 
@@ -49,7 +49,7 @@ GET /rules/{RULE_ID}/rule_components
 | --- | --- |
 | `RULE_ID` | Die `id` der Regel, deren Komponenten Sie auflisten möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -188,7 +188,7 @@ GET /rule_components/{RULE_COMPONENT_ID}
 | --- | --- |
 | `RULE_COMPONENT_ID` | Die `id` der Regelkomponente, die Sie suchen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -312,7 +312,7 @@ POST /properties/{PROPERTY_ID}/rule_components
 | --- | --- |
 | `PROPERTY_ID` | Die `id` der Eigenschaft, unter der Sie die Regelkomponente definieren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -369,7 +369,7 @@ curl -X POST \
 | `relationships` | Ein Objekt, das die erforderlichen Beziehungen für die Regelkomponente herstellt. Es müssen zwei Beziehungen hergestellt werden: <ol><li>`extension`: Die Erweiterung, die diese Regelkomponente definiert. Dies muss dieselbe Erweiterung sein, deren Erweiterungspaket durch die `delegate_descriptor_id` gekennzeichnet ist.</li><li>`rules`: Die Regel, unter der diese Komponente definiert wird.</li></ol>Allgemeine Informationen zu Beziehungen finden Sie im [Handbuch zu Beziehungen](../guides/relationships.md). |
 | `type` | Der Typ der zu erstellenden Ressource. Für diesen Endpunkt muss der Wert `rule_components` lauten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -485,7 +485,7 @@ PATCH /rule_components/{RULE_COMPONENT_ID}
 | --- | --- |
 | `RULE_COMPONENT_ID` | Die `id` der Regelkomponente, die Sie aktualisieren möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -516,7 +516,7 @@ curl -X PATCH \
 | `id` | Die `id` der Regelkomponente, die Sie aktualisieren möchten. Dies sollte mit dem `{RULE_COMPONENT_ID}`-Wert übereinstimmen, der im Anfragepfad angegeben ist. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `rule_components` lauten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -628,7 +628,7 @@ DELETE /rule_components/{RULE_COMPONENT_ID}
 | --- | --- |
 | `RULE_COMPONENT_ID` | Die `id` der Regelkomponente, die Sie löschen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -668,7 +668,7 @@ GET  /rule_components/{RULE_COMPONENT_ID}/rules
 | --- | --- |
 | `{RULE_COMPONENT_ID}` | Die `id` der Regelkomponente, deren Regeln Sie auflisten möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -772,7 +772,7 @@ GET /rule_components/{RULE_COMPONENT_ID}/extension
 | --- | --- |
 | `{RULE_COMPONENT_ID}` | Die `id` der Regelkomponente, deren Erweiterung Sie suchen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -892,7 +892,7 @@ GET /rule_components/{RULE_COMPONENT_ID}/origin
 | --- | --- |
 | `{RULE_COMPONENT_ID}` | Die `id` der Regelkomponente, deren Ursprung Sie suchen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 

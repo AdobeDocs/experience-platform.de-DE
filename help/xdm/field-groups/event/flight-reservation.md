@@ -5,8 +5,8 @@ description: Dieses Dokument bietet einen Überblick über die Feldergruppe Flug
 exl-id: df4bb525-c2d3-4e1d-921f-903142a570ac
 source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
-source-wordcount: '652'
-ht-degree: 5%
+source-wordcount: '649'
+ht-degree: 4%
 
 ---
 
@@ -61,7 +61,7 @@ Die Struktur der einzelnen Objekte, die unter `flightReservations` ist unten ang
 | `ticketNumber` | Zeichenfolge | Die Reservierungsnummer oder -kennung. |
 | `tripType` | Zeichenfolge | Gibt an, ob die Reservierung für eine Einweg-, Hin- und Rückfahrt oder für eine mehrstündige Reise gilt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 

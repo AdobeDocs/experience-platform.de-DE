@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über die Feldergruppe "Loy
 exl-id: 12c9fef5-4f9e-49b5-894f-f4938bb95c23
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 11%
+source-wordcount: '302'
+ht-degree: 10%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 11%
 | `tier` | Zeichenfolge | Erfasst die Treueprogramm-Ebene, in der die Person angemeldet ist. |
 | `upgradeDate` | Zeichenfolge | Das Datum, an dem das Mitglied des Treueprogramms auf die neueste Ebene aktualisiert wurde. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 

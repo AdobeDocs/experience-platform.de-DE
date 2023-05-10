@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über die Schemakontrolle d
 exl-id: be08b38b-68a0-4a74-9b8f-0344a0637395
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 18%
+source-wordcount: '147'
+ht-degree: 17%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 18%
 | --- | --- | --- |
 | `marketing` | [Marketing](../../data-types/marketing.md) | Ein Objekt, das Informationen zu Marketing-Kampagnen wie Kampagnengruppe, Name und Trackingcode beschreibt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 

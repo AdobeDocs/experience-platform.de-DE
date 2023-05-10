@@ -4,8 +4,8 @@ description: Mit dem Endpunkt /rpc/csv2schema in der Schema Registry-API können
 exl-id: cf08774a-db94-4ea1-a22e-bb06385f8d0e
 source-git-commit: b4c186c8c40d1372fb5011f49979523e1201fb0b
 workflow-type: tm+mt
-source-wordcount: '857'
-ht-degree: 7%
+source-wordcount: '854'
+ht-degree: 6%
 
 ---
 
@@ -49,7 +49,7 @@ Um diesen Endpunkt zu nutzen, müssen Sie zunächst eine CSV-Datei mit entsprech
 | 22 | `$ref` | (Siehe Beschreibung) | Erforderlich, wenn `dataType` auf `object` und `properties` nicht definiert ist. Dadurch wird die `$id` des referenzierten Objekts für den Objekttyp (z. B. `https://ns.adobe.com/xdm/context/person`). |
 | 23 | `comment` | Optional | Wann `isIgnored` auf `true`, wird diese Spalte verwendet, um die Kopfzeileninformationen des Schemas anzugeben. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Siehe Folgendes [CSV-Vorlage](../assets/sample-csv-template.csv) , um zu bestimmen, wie Ihre CSV-Datei formatiert werden soll.
 

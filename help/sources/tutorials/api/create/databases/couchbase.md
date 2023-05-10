@@ -8,7 +8,7 @@ exl-id: 625e3acf-fc27-44cf-b4e6-becf1d107ff2
 source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '454'
-ht-degree: 64%
+ht-degree: 68%
 
 ---
 
@@ -85,7 +85,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
 | `auth.params.connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung zu einem [!DNL Couchbase] -Konto. Das Verbindungszeichenfolgenmuster lautet: `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. |
-| `connectionSpec.id` | Die [!DNL Couchbase] Verbindungsspezifikations-ID: `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
+| `connectionSpec.id` | Die [!DNL Couchbase]-Verbindungsspezifikations-ID: `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
 
 **Antwort**
 
@@ -100,7 +100,7 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Verbindung zurück
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Couchbase] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL Couchbase]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um Datenbankdaten mit der [!DNL Flow Service] API](../../collect/database-nosql.md)

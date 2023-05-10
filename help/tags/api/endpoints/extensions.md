@@ -4,7 +4,7 @@ description: Erfahren Sie, wie den /extensions-Endpunkt in der Reactor-API aufru
 exl-id: cc02b2aa-d107-463a-930c-5a9fcc5b4a5a
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '941'
 ht-degree: 100%
 
 ---
@@ -33,7 +33,7 @@ GET properties/{PROPERTY_ID}/extensions
 | --- | --- |
 | `{PROPERTY_ID}` | Die `id` der Eigenschaft, deren Erweiterungen Sie auflisten möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -172,7 +172,7 @@ GET /extensions/{EXTENSION_ID}
 | --- | --- |
 | `EXTENSION_ID` | Die `id` der Erweiterung, die Sie suchen möchten |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -292,7 +292,7 @@ POST /properties/{PROPERTY_ID}/extensions
 | --- | --- |
 | `PROPERTY_ID` | Die `id` der Eigenschaft, unter der Sie die Erweiterung installieren möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -330,7 +330,7 @@ curl -X POST \
 | `attributes.enabled` | Ein boolescher Wert, der angibt, ob die Erweiterung aktiviert ist. |
 | `attributes.settings` | Ein JSON-Objekt vom Typ „Einstellungen“, das als Zeichenfolge dargestellt wird. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -438,7 +438,7 @@ PATCH /extensions/{EXTENSION_ID}
 | --- | --- |
 | `EXTENSION_ID` | Die `id` der Erweiterung, die Sie überarbeiten möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -470,7 +470,7 @@ curl -X PATCH \
 | `attributes` | Die Attribute, die Sie überarbeiten möchten. Für Erweiterungen können Sie die zugehörigen Attribute `delegate_descriptor_id`, `enabled` und `settings` überarbeiten. |
 | `meta.action` | Muss bei einer Überarbeitung mit dem Wert `revise` enthalten sein. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -578,7 +578,7 @@ DELETE /extensions/{EXTENSION_ID}
 | --- | --- |
 | `EXTENSION_ID` | Die `id` der Erweiterung, die Sie löschen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -618,7 +618,7 @@ GET  /extensions/{EXTENSION_ID}/libraries
 | --- | --- |
 | `{EXTENSION_ID}` | Die `id` der Erweiterung, deren Bibliotheken Sie auflisten möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -740,7 +740,7 @@ GET  /extensions/{EXTENSION_ID}/revisions
 | --- | --- |
 | `{EXTENSION_ID}` | Die `id` der Erweiterung, deren Überarbeitungen Sie auflisten möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -954,7 +954,7 @@ GET  /extensions/{EXTENSION_ID}/extension_package
 | --- | --- |
 | `{EXTENSION_ID}` | Die `id` der Erweiterung, deren Erweiterung Sie nachschlagen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -1189,7 +1189,7 @@ GET  /extensions/{EXTENSION_ID}/origin
 | --- | --- |
 | `{EXTENSION_ID}` | Die `id` der Erweiterung, deren Ursprung Sie suchen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -1309,7 +1309,7 @@ GET  /extensions/{EXTENSION_ID}/property
 | --- | --- |
 | `{EXTENSION_ID}` | Die `id` der Erweiterung, deren Eigenschaft Sie suchen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 

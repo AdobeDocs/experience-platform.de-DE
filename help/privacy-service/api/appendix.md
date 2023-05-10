@@ -6,8 +6,8 @@ description: Dieses Dokument enth채lt zus채tzliche Informationen zum Arbeiten mi
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 9%
+source-wordcount: '476'
+ht-degree: 7%
 
 ---
 
@@ -33,7 +33,7 @@ In der folgenden Tabelle sind mehrere h채ufig verwendete, vordefinierte Identit�
 | [!DNL Google] Anzeigen-ID | `GAID` | `20914` |
 | [!DNL Windows] BEIHILFE | `WAID` | `8` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -55,7 +55,7 @@ Beim Festlegen einer `namespace` Wert in [!DNL Privacy Service] API, eine **Name
 | `analytics` | Ein benutzerdefinierter Namespace, der intern in [!DNL Analytics], nicht im Namespace-Dienst. Dies wird direkt 체bergeben, wie von der urspr체nglichen Anfrage angegeben, ohne Namespace-ID |
 | `target` | Benutzerdefinierter Namespace, der intern von [!DNL Target], nicht im Namespace-Dienst. Dies wird direkt 체bergeben, wie von der urspr체nglichen Anfrage angegeben, ohne Namespace-ID |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Angenommene Produktwerte
 
@@ -75,4 +75,4 @@ In der folgenden Tabelle sind die zul채ssigen Werte f체r die Angabe eines Adobe-
 | Identity Service | `identity` |
 | Marketo Engage | `marketo` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

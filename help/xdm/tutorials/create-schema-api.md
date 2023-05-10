@@ -8,7 +8,7 @@ exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
 source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
 source-wordcount: '2588'
-ht-degree: 38%
+ht-degree: 39%
 
 ---
 
@@ -31,7 +31,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die [Entwicklerhandbuch](../api/getting-started.md) für wichtige Informationen, die Sie benötigen, um erfolgreich Aufrufe an die [!DNL Schema Registry] API. Dies umfasst Ihre `{TENANT_ID}`, das Konzept der &quot;Container&quot;und die erforderlichen Kopfzeilen für Anfragen (mit besonderem Augenmerk auf die `Accept` -Kopfzeile und die möglichen Werte).
+Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die [Entwicklerhandbuch](../api/getting-started.md) für wichtige Informationen, die Sie benötigen, um erfolgreich Aufrufe an die [!DNL Schema Registry] API. Dazu gehören Ihre `{TENANT_ID}`, das Konzept der „Container“ und die erforderlichen Header für Anfragen (mit besonderem Augenmerk auf den `Accept`-Header und seine möglichen Werte).
 
 In diesem Tutorial werden die Schritte zur Erstellung eines „Loyalty Members“-Schemas, also eines Schemas zur Beschreibung von Daten zu Mitgliedern eines Treueprogramms im Einzelhandel, erläutert. Falls gewünscht, können Sie zum Einstieg einen Blick auf das [vollständige „Loyalty Members“-Schema](#complete-schema) im Anhang werfen.
 

@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über die verschiedenen Dat
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
-source-wordcount: '724'
-ht-degree: 1%
+source-wordcount: '721'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +29,7 @@ Durch die Verwendung von [Adobe Experience Platform Privacy Service](../home.md)
 | PDPA (Thailand) | Die [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) wurde eingeführt, um die thailändischen Dateneigner vor der illegalen Sammlung, Verwendung oder Weitergabe ihrer personenbezogenen Daten zu schützen. Inspiriert durch die DSGVO der Europäischen Union gewährt die Verordnung den thailändischen Bürgern das Recht, Zugang zu ihren gespeicherten personenbezogenen Daten oder deren Löschung zu beantragen. |
 | VCDPA (Virginia) | Die [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) bietet neuen Datenschutzrechten für in Virginia ansässige Personen (&quot;Verbraucher&quot;), einschließlich des Rechts, auf personenbezogene Daten zuzugreifen, sie zu löschen und zu korrigieren. Die Verbraucher haben auch das Recht, sich vom Verkauf personenbezogener Daten abzumelden, sich gegen die Profilerstellung auf der Grundlage personenbezogener Daten zu entscheiden und persönliche Werbezwecke zu bearbeiten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Nächste Schritte
 

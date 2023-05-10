@@ -2,10 +2,11 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
 title: Erstellen einer Pinterest Ads-Quellverbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie eine Pinterest Ads-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
-badge: "Beta"
+badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: a16264da68d9e5e9aeac86b1a3083c701407febb
+exl-id: ca7b99c8-f1d9-4120-85d5-720f5b9ad41a
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '823'
 ht-degree: 29%

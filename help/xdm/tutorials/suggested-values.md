@@ -5,7 +5,7 @@ exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
 source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
 source-wordcount: '658'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -221,9 +221,9 @@ So verwalten Sie die `meta:enum` eines benutzerdefinierten Felds können Sie die
 >
 >Im Gegensatz zu Standardfeldern wird beim Aktualisieren der `meta:enum` eines benutzerdefinierten Felds wirkt sich auf alle anderen Schemas aus, die dieses Feld verwenden. Wenn Änderungen nicht über Schemata hinweg propagiert werden sollen, sollten Sie stattdessen eine neue benutzerdefinierte Ressource erstellen:
 >
->* [Benutzerdefinierte Klasse erstellen](../api/classes.md#create)
->* [Benutzerdefinierte Feldergruppe erstellen](../api/field-groups.md#create)
->* [Benutzerdefinierten Datentyp erstellen](../api/data-types.md#create)
+>* [Erstellen einer benutzerdefinierter Klasse](../api/classes.md#create)
+>* [Erstellen einer benutzerdefinierten Feldgruppe](../api/field-groups.md#create)
+>* [Erstellen eines benutzerdefinierten Datentyps](../api/data-types.md#create)
 
 
 Die folgende Anfrage aktualisiert die `meta:enum` eines von einem benutzerdefinierten Datentyp bereitgestellten Felds &quot;Treuestufe&quot;:

@@ -4,8 +4,8 @@ title: Salesforce-Zuordnungsfelder
 description: Die folgenden Tabellen enthalten die Zuordnungen zwischen Salesforce-Quellfeldern und den entsprechenden XDM-Feldern.
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
 source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
-workflow-type: ht
-source-wordcount: '494'
+workflow-type: tm+mt
+source-wordcount: '479'
 ht-degree: 100%
 
 ---
@@ -72,7 +72,7 @@ Weitere Informationen zur XDM-Klasse finden Sie in der [XDM Individual Profile-Ã
 | `Title` | `extendedWorkDetails.jobTitle` |
 | `"Contact"` | `b2b.personType` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Lead {#lead}
 
@@ -123,7 +123,7 @@ Weitere Informationen zur XDM-Klasse finden Sie in der [XDM Individual Profile-Ã
 | `"Lead"` | `b2b.personType` |
 | `iif(ConvertedContactId != null && ConvertedContactId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", ConvertedContactId, "sourceKey", concat(ConvertedContactId,"@${CRM_ORG_ID}.Salesforce")), null)` | `personComponents.sourceConvertedContactKey` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Konto {#account}
 
@@ -179,7 +179,7 @@ Weitere Informationen zur XDM-Klasse finden Sie in der [XDM Business Account-Det
 | `Type` | `accountType` |
 | `Website` | `accountOrganization.website` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Opportunity {#opportunity}
 
@@ -220,7 +220,7 @@ Weitere Informationen zur XDM-Klasse finden Sie in der [XDM Business Opportunity
 | `Type` | `opportunityType` |
 | `CurrencyIsoCode` | `opportunityAmount.currencyCode` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Opportunity-Kontaktrolle {#opportunity-contact-role}
 
@@ -246,7 +246,7 @@ Weitere Informationen zur XDM-Klasse finden Sie in der [XDM Business Opportunity
 | `concat(OpportunityId,"@${CRM_ORG_ID}.Salesforce")` | `opportunityKey.sourceKey` |
 | `Role` | `personRole` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Campaign {#campaign}
 

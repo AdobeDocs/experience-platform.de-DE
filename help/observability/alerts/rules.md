@@ -6,8 +6,8 @@ feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
 source-git-commit: 6650894c145fd1f42731fd5ed8aeb6e38062aa61
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 79%
+source-wordcount: '943'
+ht-degree: 78%
 
 ---
 
@@ -29,7 +29,7 @@ Die folgenden Warnhinweisregeln sind spezifisch für [Datenerfassung](../../inge
 | Verzögerungen, Ausfälle und Fehler bei der Ausführung des Quellflusses | Aufnahmeverzögerung | Dieser Warnhinweis wird ausgelöst, wenn die Verarbeitung eines Batch-Erfassungsablaufs länger als 150 Minuten dauert. |
 | Verzögerungen, Ausfälle und Fehler bei der Ausführung des Quellflusses | Aufnahmefehler | Dieser Warnhinweis wird Trigger, wenn das Verhältnis der fehlgeschlagenen Datensätze zu allen Datensätzen einen Schwellenwert von 0,5 % überschreitet. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Wenn Sie zuvor den folgenden Warnhinweistyp abonniert haben, erhalten Sie keine Warnhinweise mehr, da dieser Warnhinweis veraltet ist:
 
@@ -37,7 +37,7 @@ Wenn Sie zuvor den folgenden Warnhinweistyp abonniert haben, erhalten Sie keine 
 | --- | --- | --- |
 | Verzögerungen, Ausfälle und Fehler bei der Ausführung des Quellflusses | Fehlende Aufnahme | Dieser Warnhinweis sendet Ihnen eine Nachricht, wenn die Aufnahme um mehr als sieben Stunden verzögert ist und keine Daten an Platform erfasst werden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Identity Service
 
@@ -50,7 +50,7 @@ Die folgenden Warnhinweisregeln sind spezifisch für [Identity Service](../../id
 | Verzögerungen, Fehler und Fehler bei der Identitätsaufnahme | Verzögerung bei der Ausführung des Identity Service-Flusses | Dieser Warnhinweis wird ausgelöst, wenn die Ausführung eines Identity Service-Flusses länger als 150 Minuten dauert. |
 | Verzögerungen, Fehler und Fehler bei der Identitätsaufnahme | Fehler beim Ausführen des Identity Service-Flusses | Dieser Warnhinweis wird ausgelöst, wenn bei der Aufnahme von Daten in Identity Service ein Fehler auftritt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Echtzeit-Kundenprofil
 
@@ -63,7 +63,7 @@ Die folgenden Warnhinweisregeln sind spezifisch für [Echtzeit-Kundenprofil](../
 | Verzögerungen, Ausfälle und Fehler bei der Profilaufnahme | Verzögerung bei der Ausführung eines Profilflusses | Dieser Warnhinweis wird ausgelöst, wenn das Laden von Daten aus dem Data Lake in das Profil länger als 150 Minuten dauert. |
 | Verzögerungen, Ausfälle und Fehler bei der Profilaufnahme | Fehler beim Ausführen des Profilflusses | Dieser Warnhinweis wird ausgelöst, wenn bei der Aufnahme von Daten in das Profil ein Fehler auftritt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Segmentierung
 
@@ -77,7 +77,7 @@ Die folgenden Warnhinweisregeln sind spezifisch für den [Segmentierungs-Service
 | Verzögerungen, Fehler und Fehler bei Vorgängen zur Segmentauswertung | Fehler beim Segmentvorgang | Dieser Warnhinweis wird ausgelöst, wenn ein Vorgang zur Segmentauswertung zu einem Fehler führt. |
 | Verzögerungen, Fehler und Fehler bei Vorgängen zur Segmentauswertung | Segmentdefinition deaktiviert | Dieser Warnhinweis wird ausgelöst, wenn eine Segmentdefinition aufgrund eines internen Fehlers deaktiviert ist. Dadurch wird automatisch ein Fehlerbericht für ein Adobe-Entwicklungsteam ausgelöst, um das Problem zu untersuchen. Dieser Warnhinweis dient nur zur Information und erfordert keine Aktion von Ihnen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Ziele
 
@@ -91,9 +91,9 @@ Die folgenden Warnhinweisregeln sind spezifisch für [Ziele](../../destinations/
 | Verzögerungen, Ausfälle und Fehler bei der Ausführung des Zielflusses | Fehler beim Ausführen des Zielflusses | Dieser Warnhinweis wird ausgelöst, wenn beim Aktivieren eines Segments für ein Ziel ein Fehler auftritt. |
 | Verzögerungen, Ausfälle und Fehler bei der Ausführung des Zielflusses | Überspringrate überschreitet Schwellenwert | Dieser Warnhinweis wird Trigger, wenn das Verhältnis zwischen übersprungenen IDs und Gesamt-IDs einen Schwellenwert überschreitet. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Query Service
+## Abfrage-Service
 
 Die folgenden Warnhinweisregeln sind spezifisch für [Query Service](../../query-service/home.md):
 

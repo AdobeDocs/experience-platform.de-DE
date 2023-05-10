@@ -4,8 +4,8 @@ description: Erfahren Sie, wie Sie Prüfereignisse in Experience Platform mithil
 exl-id: 76c5de76-e391-4258-afd8-ddb2c8a9443f
 source-git-commit: c7887391481def872c40dd6ed1193bf562b9d0cf
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '157'
+ht-degree: 6%
 
 ---
 

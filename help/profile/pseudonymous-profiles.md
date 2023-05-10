@@ -5,7 +5,7 @@ title: Ablauf von Daten pseudonymer Profile
 description: Dieses Dokument enthält allgemeine Anleitungen zum Konfigurieren des Ablaufs von Daten pseudonymer Profile in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 source-git-commit: 07ed7eb9644b2e8cc4da02743c48037afc247614
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '912'
 ht-degree: 100%
 

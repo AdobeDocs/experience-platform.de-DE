@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp "Kon
 exl-id: d7cf7366-0136-49ee-84d2-ec663db66eb4
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 14%
+source-wordcount: '183'
+ht-degree: 13%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 14%
 | `localTime` | DateTime | Ein Zeitstempel in [RFC 3339](https://tools.ietf.org/html/rfc3339) Format, das die Ortszeit mit einem angegebenen Zeitzonenversatz angibt. Das Formatierungsmuster lautet `yyyy-MM-dd'T'HH:mm:ssXXX` (z. B. `2001-07-04T12:08:56-07:00`). |
 | `localTimezoneOffset` | Ganzzahl | Der aktuelle lokale Zeitzonenversatz in Minuten von UTC für die `localTime` -Wert. Dies sollte ggf. den aktuellen DST-Versatz enthalten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

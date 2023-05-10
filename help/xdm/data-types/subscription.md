@@ -6,7 +6,7 @@ description: Dieses Dokument bietet einen Überblick über den Datentyp "Abonnem
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '417'
 ht-degree: 28%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 28%
 | `topUp` | Zeichenfolge | Beschreibt die vereinbarten Bedingungen dafür, wie verbrauchbare Aspekte eines Abonnements während eines Abrechnungszeitraums zurückgekauft werden. |
 | `type` | Zeichenfolge | Der Umfang des Anspruchs in Bezug auf die Anzahl der Personen, die vom Abonnement abgedeckt werden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

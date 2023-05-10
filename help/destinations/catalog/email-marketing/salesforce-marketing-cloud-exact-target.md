@@ -6,7 +6,7 @@ exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
 source-git-commit: 877bf4886e563e8a571f067c06107776a0c81d5d
 workflow-type: tm+mt
 source-wordcount: '2911'
-ht-degree: 24%
+ht-degree: 25%
 
 ---
 
@@ -26,9 +26,9 @@ Diese [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt 
 
 [!DNL Salesforce Marketing Cloud] verwendet OAuth 2 mit Client-Anmeldeinformationen als Authentifizierungsmechanismus für die Kommunikation mit dem [!DNL Salesforce Marketing Cloud] API. Anweisungen zur Authentifizierung bei Ihrer [!DNL Salesforce Marketing Cloud]-Instanz sehen Sie weiter unten im Abschnitt [Authentifizieren bei Ziel](#authenticate).
 
-## Anwendungsbeispiele {#use-cases}
+## Anwendungsfälle {#use-cases}
 
-Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie die [!DNL (API) Salesforce Marketing Cloud] Ziel, hier ein Beispielanwendungsfall, den Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
+Damit Sie besser verstehen können, wie und wann Sie das [!DNL (API) Salesforce Marketing Cloud]-Ziel verwenden sollten, finden Sie hier ein Anwendungsbeispiel, das für Kundinnen und Kunden von Adobe Experience Platform mit diesem Ziel geeignet ist.
 
 ### Senden von E-Mails an Kontakte für Marketingkampagnen {#use-case-send-emails}
 

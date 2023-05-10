@@ -6,7 +6,7 @@ exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '497'
-ht-degree: 9%
+ht-degree: 11%
 
 ---
 
@@ -26,11 +26,11 @@ For more information on using this endpoint, please read the [audiences endpoint
 
 ## Exportaufträge
 
-Exportaufträge sind asynchrone Prozesse, die zum Beibehalten von Zielgruppensegmentmitgliedern in Datensätzen verwendet werden. Sie können die `/export/jobs` Endpunkt zum Abrufen aller Exportaufträge, Erstellen eines neuen Exportauftrags, Abrufen von Details zu einem bestimmten Exportauftrag oder Abbrechen eines bestimmten Exportauftrags.
+Exportaufträge sind asynchrone Prozesse, mit denen Zielgruppensegmentmitglieder in Datensätzen beibehalten werden. Sie können die `/export/jobs` Endpunkt zum Abrufen aller Exportaufträge, Erstellen eines neuen Exportauftrags, Abrufen von Details zu einem bestimmten Exportauftrag oder Abbrechen eines bestimmten Exportauftrags.
 
 Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im Abschnitt [Endpunktleitfaden für Exportaufträge](./export-jobs.md).
 
-## Vorschau und Schätzung
+## Vorschau und Schätzungen
 
 Die Vorschau bietet eine paginierte Liste qualifizierter Profile für eine Segmentdefinition, mit der Sie die Ergebnisse mit dem, was Sie erwarten, vergleichen können. Sie können die `/preview` -Endpunkt, um einen neuen Vorschauauftrag zu erstellen oder Ergebnisse eines bestimmten Vorschauauftrags nachzuschlagen.
 

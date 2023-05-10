@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über den Daten-Typ des Per
 exl-id: f28a52be-90c7-4ed0-a460-97165bb58046
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 21%
+source-wordcount: '338'
+ht-degree: 20%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 21%
 | `nationality` | Zeichenfolge | Die Rechtsbeziehung zwischen einer Person und ihrem Staat, der anhand des ISO 3166-1 Alpha-2-Codes dargestellt wird. Das Format dieser Eigenschaft muss diesem regulären Ausdruck entsprechen `^[A-Z]{2}$`. |
 | `taxId` | Zeichenfolge | Die Steuer- oder Steuerkennung der Person, wie z. B. die Identifikationsnummer des Steuerpflichtigen (TIN) in den USA oder das Certificate de Identificación Fiscal (CIF/NIF) in Spanien. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

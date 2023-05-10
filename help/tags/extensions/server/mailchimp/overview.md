@@ -9,7 +9,7 @@ topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
 source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1303'
 ht-degree: 7%
 
 ---
@@ -126,7 +126,7 @@ Die nachstehende Tabelle enthält weitere Details zu den einzelnen Werten.
 | `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> oder<br /> `arc.event.data._tenant.isSyncing` | boolean | Mit `is_syncing` auf `true` **nicht** Automatisierung von Triggern | Nein |  |
 | `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br /> oder `arc.event.data._tenant.occuredAt` | Zeichenfolge | Ein ISO 8601-Zeitstempel zum Zeitpunkt des Ereignisses | Nein |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!IMPORTANT]
 >  

@@ -54,8 +54,7 @@ Wählen Sie danach unter **[!UICONTROL Datensatzdetails]** das Datenbanksymbol (
 ![Bild mit dem ausgewählten Datensatz](../images/ui/ttl/select-dataset.png)
 
 >[!NOTE]
->
->Es werden nur Datensätze angezeigt, die zur aktuellen Sandbox gehören.
+Es werden nur Datensätze angezeigt, die zur aktuellen Sandbox gehören.
 
 ### Senden der Anfrage
 
@@ -68,8 +67,7 @@ Sie werden aufgefordert, das Datum zu bestätigen, an dem der Datensatz gelösch
 Nachdem die Anfrage übermittelt wurde, wird ein Arbeitsauftrag erstellt und auf der Hauptregisterkarte des Arbeitsbereichs [!UICONTROL Datenhygiene] angezeigt. Hier können Sie den Fortschritt des Arbeitsauftrags überwachen.
 
 >[!NOTE]
->
->Der Abschnitt mit der Übersicht über [Timelines und Transparenz](../home.md#dataset-expiration-transparency) enthält Details dazu, wie die Gültigkeit von Datensätzen verarbeitet wird, nachdem sie abgelaufen ist.
+Der Abschnitt mit der Übersicht über [Timelines und Transparenz](../home.md#dataset-expiration-transparency) enthält Details dazu, wie die Gültigkeit von Datensätzen verarbeitet wird, nachdem sie abgelaufen ist.
 
 ## Bearbeiten oder Abbrechen einer Datensatzgültigkeit
 

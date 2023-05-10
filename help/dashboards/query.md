@@ -7,7 +7,7 @@ exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '970'
-ht-degree: 49%
+ht-degree: 50%
 
 ---
 
@@ -88,7 +88,7 @@ Um das vollständige Schema des DIM-Zieldatensatzes zu verstehen, können Sie ei
 
 >[!IMPORTANT]
 >
->Die Funktion &quot;CDP Insights Data Models&quot;befindet sich in der Beta-Phase. Die Funktionen und Dokumentation können sich ändern.
+>Die Funktion &quot;CDP Insights Data Models&quot;befindet sich in der Beta-Phase. Ihre Funktionen und Dokumentation können sich ändern.
 
 Die Funktion CDP Insights Data Models legt die SQL offen, die die Einblicke für verschiedene Profil-, Ziel- und Segmentierungs-Widgets ermöglicht. Sie können diese SQl-Abfragevorlagen anpassen, um CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle zu erstellen.
 

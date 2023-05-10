@@ -3,7 +3,7 @@ title: Schemata in Real-time Customer Data Platform
 description: Eine Übersicht über die Rolle von Experience-Datenmodell(XDM)-Schemata in Adobe Real-time Customer Data Platform.
 exl-id: e56873d2-825d-4c0f-a0fe-1ae6e83438f0
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 100%
 

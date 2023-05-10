@@ -6,7 +6,7 @@ description: Dieses Dokument bietet einen Überblick über die Klasse „XDM Ind
 exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '250'
 ht-degree: 16%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 16%
 | `proximity` | Zeichenfolge | Geschätzte Entfernung vom Beacon. Siehe [Anhang](#proximity) für akzeptierte Werte und Definitionen. |
 | `proximityUUID` | Zeichenfolge | Eine Näherungs-UUID (Universally Unique Identifier) ist ein spezieller Kennungstyp, mit dem Beacons in Ihrem Netzwerk von allen anderen Beacons in Netzwerken außerhalb Ihrer Kontrolle unterschieden werden. Die Näherungs-UUID wird in ein Beacon konfiguriert, das an Mobilgeräte im Bereich der Identifizierung der Beacons eines Unternehmens übertragen wird. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

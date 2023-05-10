@@ -201,7 +201,7 @@ In der rechten Leiste unter **[!UICONTROL Feldeigenschaften]**, geben Sie einen 
 * [[!UICONTROL Feld für allgemeine Marketing-Präferenz mit Abonnements]](../../../../xdm/data-types/marketing-field-subscriptions.md)
 * [[!UICONTROL Feld für allgemeine Personalisierungseinstellungen]](../../../../xdm/data-types/personalization-field.md)
 
-Wenn Sie fertig sind, wählen Sie **[!UICONTROL Anwenden]**.
+Wenn Sie fertig sind, wählen Sie **[!UICONTROL Anwenden]** aus.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-properties.png)
 

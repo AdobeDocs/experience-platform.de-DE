@@ -5,7 +5,7 @@ exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '799'
-ht-degree: 86%
+ht-degree: 89%
 
 ---
 
@@ -33,7 +33,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 Real-Time CDP B2B Edition basiert auf Real-time Customer Data Platform (Real-Time CDP) und wurde speziell für Marketingexpertinnen und -experten mit einem Business-to-Business-Service-Modell entwickelt. Es führt Daten aus verschiedenen Quellen zusammen und kombiniert sie zu einer einzigen Ansicht von Personen und Account-Profilen. Diese vereinheitlichten Daten ermöglichen es Marketing-Experten, bestimmte Zielgruppen präzise anzusprechen und über alle verfügbaren Kanäle anzusprechen.
 
-Es gibt Verbesserungen an einer Vielzahl von Adobe Experience Platform-Funktionen, die Real-Time CDP B2B Edition von seinem B2C-Gegenstück unterscheiden. Dazu gehören Verbesserungen am Experience-Datenmodell (XDM) für B2B-Anwendungsfälle, Upgrades für die Identitätsauflösung und die Profilsegmentierung sowie ein maßgeschneiderter Connector und ein Ziel für Marketo Engage. Mit dem Marketo-Connector können B2B-Marken ihre branchenführenden B2B-Interaktionsdaten mit Verhaltensinformationen verknüpfen, um Leads zu pflegen und Maßnahmen für Account-basiertes Marketing zu verbessern.
+Es gibt Verbesserungen bei einer Reihe von Funktionen von Adobe Experience Platform, die Real-Time CDP B2B Edition vom B2C-Pendant unterscheiden. Dazu gehören Verbesserungen am Experience-Datenmodell (XDM) für B2B-Anwendungsfälle, Upgrades für die Identitätsauflösung und die Profilsegmentierung sowie ein maßgeschneiderter Connector und ein Ziel für Marketo Engage. Mit dem Marketo-Connector können B2B-Marken ihre branchenführenden B2B-Interaktionsdaten mit Verhaltensinformationen verknüpfen, um Leads zu pflegen und Maßnahmen für Account-basiertes Marketing zu verbessern.
 
 -[Neue B2B- und B2P-Editionen](#editions)
 -[Neue Marketo-Connectoren für Datenquelle und Ziel](#marketo)
@@ -70,7 +70,7 @@ Mit der Ad-hoc-Aktivierungs-API können Marketing-Experten Zielgruppensegmente s
 
 ### Attributions-KI {#attribution-ai}
 
-Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Fachleuten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
+Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Fachleuten genutzt werden, um auf diversen Customer Journeys die Auswirkungen jedes einzelnen Marketing-Touchpoints zu quantifizieren.
 
 | Funktion | Beschreibung |
 |-----------|---------------|

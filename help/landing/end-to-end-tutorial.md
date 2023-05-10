@@ -6,7 +6,7 @@ exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1836'
-ht-degree: 11%
+ht-degree: 14%
 
 ---
 
@@ -22,10 +22,10 @@ Basierend auf RESTful-APIs stellt Platform Entwicklern die vollständige Funktio
 
 Dieser durchgängige Workflow verwendet mehrere Adobe Experience Platform-Dienste. Im Folgenden finden Sie eine Liste der in diesem Workflow verwendeten Dienste mit Links zu ihren Übersichten:
 
-- [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Platform] organisiert werden. Um die Segmentierung optimal zu nutzen, stellen Sie bitte sicher, dass Ihre Daten als Profile und Ereignisse gemäß dem [Best Practices für die Datenmodellierung](../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten durch [!DNL Platform] organisiert werden. Um die Segmentierung optimal zu nutzen, stellen Sie sicher, dass Ihre Daten als Profile und Ereignisse gemäß den [Best Practices für die Datenmodellierung](../xdm/schema/best-practices.md) aufgenommen werden.
 - [[!DNL Identity Service]](../identity-service/home.md): Bietet Ihnen einen umfassenden Überblick über Ihre Kunden und ihr Verhalten durch die Überbrückung von Identitäten zwischen Geräten und Systemen.
 - [Quellen](../sources/home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
-- [[!DNL Segmentation Service]](../segmentation/home.md): [!DNL Segmentation Service] ermöglicht die Aufteilung der in [!DNL Experience Platform] die sich auf Einzelanwender (wie Kunden, Interessenten, Benutzer oder Organisationen) in kleinere Gruppen bezieht.
+- [[!DNL Segmentation Service]](../segmentation/home.md): [!DNL Segmentation Service] ermöglicht die Aufteilung der in [!DNL Experience Platform] gespeicherten Daten, die sich auf Einzelanwender (wie Kunden, Interessenten, Benutzer oder Organisationen) beziehen, in kleinere Gruppen.
 - [[!DNL Real-Time Customer Profile]](../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 - [Datensätze](../catalog/datasets/overview.md): Das Speicher- und Verwaltungskonstrukt für Datenpersistenz in [!DNL Experience Platform].
 - [Ziele](../destinations/home.md): Ziele sind vordefinierte Integrationen mit häufig verwendeten Anwendungen, die die nahtlose Aktivierung von Daten aus Platform für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle ermöglichen.
@@ -98,4 +98,4 @@ Sie können Platform-Aktivitäten auch mithilfe statistischer Metriken und Ereig
 
 ## Nächste Schritte
 
-Durch Lesen dieses Tutorials erhalten Sie eine grundlegende Einführung in einen einfachen End-to-End-Fluss für Platform. Weitere Informationen zu Adobe Experience Platform finden Sie unter [Plattformübersicht](./home.md). Weitere Informationen zur Verwendung der Platform-Benutzeroberfläche und der Platform-API finden Sie in der [Handbuch zur Platform-Benutzeroberfläche](./ui-guide.md) und [Handbuch zur Platform-API](./api-guide.md) bzw.
+Durch Lesen dieses Tutorials erhalten Sie eine grundlegende Einführung in einen einfachen End-to-End-Fluss für Platform. Um mehr über Adobe Platform zu erfahren, lesen Sie [Experience Platform – Übersicht](./home.md). Weitere Informationen zur Verwendung der Platform-Benutzeroberfläche und der Platform-API finden Sie in der [Handbuch zur Platform-Benutzeroberfläche](./ui-guide.md) und [Handbuch zur Platform-API](./api-guide.md) bzw.

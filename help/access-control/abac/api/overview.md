@@ -7,7 +7,7 @@ exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '450'
-ht-degree: 23%
+ht-degree: 40%
 
 ---
 
@@ -25,11 +25,11 @@ Diese Endpunkte werden nachfolgend beschrieben. Weitere Informationen zu erforde
 
 ## Rollen
 
-Rollen definieren den Zugriff, den ein Administrator, ein Spezialist oder ein Endbenutzer auf Ressourcen in Ihrem Unternehmen hat. In einer rollenbasierten Zugriffskontrollumgebung erfolgt die Bereitstellung des Benutzerzugriffs über gemeinsame Zuständigkeiten und Anforderungen. Eine Rolle verfügt über bestimmte Berechtigungen und Mitglieder Ihrer Organisation können je nach dem Umfang der Ansicht oder des Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden. Siehe [Benutzerendpunkt-Handbuch](./roles.md) Weitere Informationen zum Arbeiten mit Rollen in der API.
+Rollen definieren den Zugriff, den ein Administrator, ein Spezialist oder ein Endbenutzer auf Ressourcen in Ihrem Unternehmen hat. In einer rollenbasierten Zugriffssteuerungsumgebung erfolgt die Bereitstellung des Benutzerzugriffs über gemeinsame Zuständigkeiten und Anforderungen. Eine Rolle verfügt über bestimmte Berechtigungen, wobei Mitglieder Ihrer Organisation je nach dem Umfang des Lese- oder Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden können. Siehe [Benutzerendpunkt-Handbuch](./roles.md) Weitere Informationen zum Arbeiten mit Rollen in der API.
 
 ## Richtlinien
 
-Richtlinien sind Aussagen, die Attribute zusammenbringen, um zulässige und unzulässige Handlungen festzustellen. Richtlinien können lokal oder global sein und andere Richtlinien überschreiben. Die `/policies` -Endpunkt ermöglicht Ihnen die programmgesteuerte Verwaltung von Richtlinien in Ihrem Unternehmen. Siehe [Richtlinien-Endpunktleitfaden](./policies.md) Weitere Informationen zum Arbeiten mit Richtlinien in der API.
+Richtlinien sind Anweisungen, die Attribute zusammenbringen, um zulässige und unzulässige Handlungen festzustellen. Richtlinien können lokal oder global sein und andere Richtlinien überschreiben. Die `/policies` -Endpunkt ermöglicht Ihnen die programmgesteuerte Verwaltung von Richtlinien in Ihrem Unternehmen. Siehe [Richtlinien-Endpunktleitfaden](./policies.md) Weitere Informationen zum Arbeiten mit Richtlinien in der API.
 
 ## Produkte
 

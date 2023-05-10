@@ -4,8 +4,8 @@ description: Dieses Dokument bietet einen Überblick über die Feldgruppe "Produ
 exl-id: 91971a0c-a93a-4032-a2f2-0a99e4940bac
 source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '87'
-ht-degree: 10%
+source-wordcount: '84'
+ht-degree: 7%
 
 ---
 
@@ -20,6 +20,6 @@ ht-degree: 10%
 | `productCatalogDescription` | Zeichenfolge | Eine Beschreibung für den Produktkatalog. |
 | `productCatalogName` | Zeichenfolge | Der Name des Produktkatalogs. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-catalog.schema.json).

@@ -4,7 +4,7 @@ description: In diesem Handbuch werden die Schritte erläutert, die zur Verwendu
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '1508'
+source-wordcount: '1505'
 ht-degree: 3%
 
 ---
@@ -70,7 +70,7 @@ Die folgende Tabelle zeigt die Beispieldaten im `_profilefoundationreportingstg`
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | AWARD_MILES | FRA-JFK | 5.000 | SILBER |
 | A123487284 | rritson1zn@sciencedaily.com | 2022-01-07 | STATUS_MILES | Neue Kreditkarte | 10000 | FLYER |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Dezimaldatensätze generieren
 

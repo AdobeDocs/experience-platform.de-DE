@@ -2,14 +2,15 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Abfragedienst; Query Service; Erlebnisereignisabfragen; Erlebnisereignisabfrage; Erlebnisereignisabfrage;
 title: Auflisten der Seitenansichten eines Benutzers
 description: Erfahren Sie, wie Sie Abfragen schreiben, die Erlebnisereignisse verwenden, um eine Liste der letzten 100 Seiten zu erstellen, die ein bestimmter Benutzer verwendet hat.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: d831910d-d3a4-4a5a-b897-b09f0546dab0
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '266'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
-# Auflisten der Seitenansichten eines Benutzers
+# Auflisten der Seitenansichten von Benutzenden
 
 Dieses Dokument enthält ein Beispiel für die SQL, die erforderlich ist, um die Seitenansichten eines bestimmten Benutzers aufzulisten. Mit Adobe Experience Platform Query Service können Sie Abfragen schreiben, die [!DNL Experience Events] , um eine Vielzahl von Anwendungsfällen zu erfassen. Erlebnisereignisse werden durch die Experience-Datenmodell (XDM)-ExperienceEvent-Klasse repräsentiert, die einen unveränderlichen und nicht aggregierten Schnappschuss des Systems erfasst, wenn ein Benutzer mit einer Website oder einem Dienst interagiert. Erlebnisereignisse können sogar für die Zeitbereichsanalyse verwendet werden. Siehe [Abschnitt mit den nächsten Schritten](#next-steps) für weitere Anwendungsfälle, bei denen [!DNL Experience Events] , um Besucherberichte zu generieren.
 

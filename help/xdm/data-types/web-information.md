@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über den Webinformationen-
 exl-id: bfb00835-5908-4baf-af2a-6d845710e340
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 15%
+source-wordcount: '187'
+ht-degree: 13%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 15%
 | `webPageDetails` | [[!UICONTROL Web-Seitendetails]](./webpage-details.md) | Beschreibt die Details der Webseite, auf der die Web-Interaktion stattgefunden hat. |
 | `webReferrer` | [!UICONTROL Objekt] | Beschreibt den Referrer einer Web-Interaktion, d. h. die URL, von der ein Besucher unmittelbar vor der Aufzeichnung der aktuellen Web-Interaktion kam. Enthält die folgenden Untereigenschaften: <ul><li>`URL`: Die Referrer-URL.</li><li>`type`: Der Typ der verweisenden Stelle.</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

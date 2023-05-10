@@ -2,8 +2,9 @@
 keywords: Insights;Kunden-KI;Kunden-KI-Insights;AAI-Query-Service;Kunden-KI-Abfragen;Kunden-KI-Bewertungen;kundenseitig verwaltete Schlüssel in CAI
 title: Kundenseitig verwaltete Schlüssel in Kunden-KI.
 description: Erfahren Sie, wie Sie kundenseitig verwaltete Schlüssel für Kunden-KI einrichten.
-source-git-commit: f80cdd553c36ee10cfbf07c5cbbb14e9a4ae6757
-workflow-type: ht
+exl-id: 12746c5c-094a-4d49-8d3a-7641fe0ec02a
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 100%
 

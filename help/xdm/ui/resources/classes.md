@@ -25,7 +25,7 @@ Dieses Handbuch setzt ein Verständnis des XDM-Systems voraus. Siehe Abschnitt [
 
 Für dieses Handbuch ist zwar nicht erforderlich, es wird jedoch empfohlen, auch das Tutorial zu [Erstellen eines Schemas in der Benutzeroberfläche](../../tutorials/create-schema-ui.md) sich mit den verschiedenen Fähigkeiten der [!DNL Schema Editor].
 
-## Neue Klasse erstellen {#create}
+## Erstellen einer neuen Klasse {#create}
 
 Im **[!UICONTROL Schemas]** Arbeitsbereich, wählen Sie **[!UICONTROL Schema erstellen]**, wählen Sie **[!UICONTROL Durchsuchen]** aus dem Dropdown-Menü aus.
 
@@ -89,7 +89,7 @@ Siehe Handbuch unter [Definieren von Feldern in der Benutzeroberfläche](../fiel
 
 Wenn Sie zuvor Schemas erstellt haben, die diese Klasse verwenden, werden die neu hinzugefügten Felder automatisch in diesen Schemata angezeigt.
 
-## Klasse eines Schemas ändern {#schema}
+## Ändern der Klasse eines Schemas {#schema}
 
 Sie können die Klasse des Schemas jederzeit während des anfänglichen Erstellungsprozesses ändern, bevor es gespeichert wurde. Siehe Handbuch unter [Erstellen und Bearbeiten von Schemata](./schemas.md#change-class) für weitere Informationen.
 

@@ -6,8 +6,8 @@ last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
 source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
 workflow-type: tm+mt
-source-wordcount: '1183'
-ht-degree: 46%
+source-wordcount: '1180'
+ht-degree: 47%
 
 ---
 
@@ -21,7 +21,7 @@ Diese [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt 
 
 [!DNL LINE] verwendet Trägertoken als Authentifizierungsmechanismus für die Kommunikation mit dem [!DNL LINE] Messaging-API. Anweisungen zur Authentifizierung bei Ihrem [!DNL LINE] -Instanz befindet sich weiter unten in [An Ziel authentifizieren](#authenticate) Abschnitt.
 
-## Anwendungsbeispiele {#use-cases}
+## Anwendungsfälle {#use-cases}
 
 Marketingexperten können Benutzer in einem mobilen Interaktionsziel mit integrierten Segmenten ansprechen [!DNL Adobe Experience Platform]. Darüber hinaus können Sie ihnen personalisierte Erlebnisse bereitstellen, die auf Attributen ihrer [!DNL Adobe Experience Platform] Profile, sobald Segmente und Profile in [!DNL Adobe Experience Platform].
 
@@ -67,10 +67,10 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer oder andere), die im [!DNL LINE] Ziel. |
+| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer oder sonstiges), die im [!DNL LINE]-Ziel verwendet werden. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 

@@ -50,7 +50,7 @@ Die folgende Tabelle zeigt die Standardgrenzwerte. Wenden Sie sich an Ihren Kund
 
 | Endpunkt | Anforderungen von Einheiten pro Sekunde |
 | --- | --- |
-| `/v2/interact` | 4000 |
+| `/v2/interact` | 4.000 |
 | `/v2/collect` | 6.000 |
 
 

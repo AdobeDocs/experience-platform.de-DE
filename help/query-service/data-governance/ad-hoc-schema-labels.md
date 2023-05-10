@@ -5,11 +5,11 @@ exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
 source-git-commit: 91f318596bf268aa93e8b2df9c13774aab76d13a
 workflow-type: tm+mt
 source-wordcount: '1040'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
-# Unterstützung der attributbasierten Zugriffskontrolle für Ad-hoc-Schemata
+# Unterstützung der attributbasierten Zugriffskontrolle für ungeplante Schemata
 
 Alle Daten, die in Adobe Experience Platform importiert werden, werden von Experience-Datenmodell (XDM)-Schemas gekapselt und können Nutzungsbeschränkungen unterliegen, die von Ihrem Unternehmen oder durch gesetzliche Bestimmungen festgelegt werden.
 
@@ -50,7 +50,7 @@ Wählen Sie den Namen des kürzlich erstellten Ad-hoc-Schemas aus der verfügbar
 
 ![Das Beispieldiagramm zur Struktur von Ad-hoc-Schemas.](../images/data-governance/adhoc-schema-structure-diagram.png)
 
-## Bearbeiten von Governance-Titeln
+## Governance-Kennzeichnungen bearbeiten
 
 Um Datenbezeichnungen für Ihr Ad-hoc-Schema zu bearbeiten, wählen Sie die [!UICONTROL Bezeichnungen] Registerkarte. Im Arbeitsbereich &quot;Beschriftungen&quot;können Sie Beschriftungen auf Ihre Ad-hoc-Schemafelder anwenden, erstellen und bearbeiten und Zugriffsberechtigungen über die Benutzeroberfläche steuern. Alle Felder im Ad-hoc-Schema werden hier dargestellt.
 

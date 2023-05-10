@@ -5,8 +5,8 @@ description: Dieses Dokument bietet einen Überblick über die Konfigurationen, 
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '1690'
-ht-degree: 50%
+source-wordcount: '1687'
+ht-degree: 49%
 
 ---
 
@@ -265,9 +265,9 @@ Ein Beispiel für eine vollständig angegebene Quellspezifikation finden Sie im 
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamFormat` | Definiert das unterstützte Format für `scheduleEndParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
 | `sourceSpec.spec.properties` | Definiert die vom Benutzer bereitgestellten Parameter zum Abrufen von Ressourcenwerten. | Siehe [Zusätzliche Ressourcen](#user-input) für ein Beispiel für vom Benutzer eingegebene Parameter für `spec.properties`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Weitere Ressourcen {#appendix}
+## Zusätzliche Ressourcen {#appendix}
 
 Die folgenden Abschnitte enthalten Informationen zu zusätzlichen Konfigurationen, die Sie für Ihre `sourceSpec`, einschließlich erweiterter Planung und benutzerdefinierter Schemata.
 

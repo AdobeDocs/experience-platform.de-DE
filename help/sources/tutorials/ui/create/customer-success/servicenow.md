@@ -8,7 +8,7 @@ exl-id: 66c12f4d-8b0c-4bb2-910d-9e09fa364c94
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '457'
-ht-degree: 57%
+ht-degree: 65%
 
 ---
 
@@ -33,9 +33,9 @@ Um auf Ihr [!DNL ServiceNow]-Konto in zugreifen zu können, müssen Sie die folg
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `endpoint` | Der Endpunkt der [!DNL ServiceNow] Server. |
-| `username` | Der Benutzername, mit dem die Verbindung zum [!DNL ServiceNow] -Server zur Authentifizierung. |
-| `password` | Das Kennwort, mit dem eine Verbindung hergestellt werden soll [!DNL ServiceNow] -Server zur Authentifizierung. |
+| `endpoint` | Der Endpunkt des [!DNL ServiceNow]-Servers. |
+| `username` | Der Benutzername, mit dem eine Verbindung zum [!DNL ServiceNow]-Server zwecks Authentifizierung hergestellt wird. |
+| `password` | Das Kennwort, mit dem eine Verbindung zum [!DNL ServiceNow]-Server zwecks Authentifizierung hergestellt wird. |
 
 Weitere Informationen zu den ersten Schritten finden Sie unter [this [!DNL ServiceNow] Dokument](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET).
 

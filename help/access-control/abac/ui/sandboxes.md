@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Zugriffskontrolle; attributbasierte Zugriffskontrolle; ABAC
+keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;attributbasierte Zugriffssteuerung;ABAC
 title: Attributbasierte Sandboxes für Zugriffssteuerung
 description: Dieses Dokument enthält Informationen zum Verwalten von Sandboxes über die Benutzeroberfläche "Berechtigungen"in Adobe Experience Cloud
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
 source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
 source-wordcount: '217'
-ht-degree: 23%
+ht-degree: 28%
 
 ---
 

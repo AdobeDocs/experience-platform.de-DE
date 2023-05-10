@@ -1,5 +1,5 @@
 ---
-title: Adobe Experience Platform - Versionshinweise - Februar 2020
+title: Adobe Experience Platform – Versionshinweise Februar 2020
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2020.
 doc-type: release notes
 last-update: February 14, 2019
@@ -8,7 +8,7 @@ exl-id: 96db25ca-d857-489b-9a9d-625e86b1bf3e
 source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
 source-wordcount: '199'
-ht-degree: 63%
+ht-degree: 70%
 
 ---
 

@@ -4,8 +4,8 @@ description: Dieses Dokument bietet einen Überblick über die Feldergruppe "Adv
 exl-id: 25de09bd-eedd-489c-9cd5-8acd0c52ddbe
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '1016'
-ht-degree: 22%
+source-wordcount: '1004'
+ht-degree: 21%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 22%
 | `timePlayed` | [[!UICONTROL Maßnahme]](../../data-types/measure.md) | Die Zeit, die ein Endbenutzer mit einem bestimmten zeitgesteuerten Medien-Asset verbracht hat. |
 | `downloadedPlayback` | Boolesch | Wenn auf `true`gibt an, dass der Treffer aufgrund der Wiedergabe einer heruntergeladenen Anzeigensitzung generiert wird. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `adAssetReference` {#adAssetReference}
 
@@ -52,7 +52,7 @@ Die `adAssetReference` -Objekt erfasst Asset-Informationen über die Anzeige.
 | `placementID` | Zeichenfolge | Die Platzierungs-ID der Anzeige. |
 | `siteID` | Zeichenfolge | Die ID der Anzeigen-Site. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `adAssetViewDetails` {#adAssetViewDetails}
 
@@ -62,11 +62,11 @@ Die `adAssetViewDetails` -Objekt erfasst Ansichtsdetails für die Anzeigenwieder
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `adBreak` | [[!UICONTROL Werbeunterbrechung]](../../data-types/ad-break.md) | Beschreibt, wie eine zeitgesteuerte Anzeige in zeitgesteuerte Medien eingefügt wird. |
+| `adBreak` | [[!UICONTROL Anzeigenunterbrechung]](../../data-types/ad-break.md) | Beschreibt, wie eine zeitgesteuerte Anzeige in zeitgesteuerte Medien eingefügt wird. |
 | `index` | Ganzzahl | Der Index der Anzeige innerhalb der übergeordneten Werbeunterbrechung. Beispielsweise hat die erste Anzeige einen Index `0` und die zweite Anzeige einen Index aufweist `1`. |
 | `playerName` | Zeichenfolge | Der Name des Players, der für das Rendering der Werbeanzeige verantwortlich ist. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `adViewability` {#adViewability}
 
@@ -98,6 +98,6 @@ Die `adViewability` -Objekt erfasst die Anzahl der Impressionen, die von Endbenu
 | `viewportHeight` | Ganzzahl | Die vertikale Größe (in Pixel) des Fensters, in dem das Erlebnis zur Laufzeit angezeigt wurde. Bei einem Webansichtsereignis gibt dieser Wert die Höhe des Browser-Viewports an. |
 | `viewportWidth` | Ganzzahl | Die horizontale Größe (in Pixel) des Fensters, in dem das Erlebnis zur Laufzeit angezeigt wurde. Bei einem Webansichtsereignis gibt dieser Wert die Breite des Browser-Ansichtsfensters an. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-advertising.schema.json).

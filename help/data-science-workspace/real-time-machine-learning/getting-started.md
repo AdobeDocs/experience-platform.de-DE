@@ -5,7 +5,7 @@ title: Erste Schritte beim maschinellem Lernen in Echtzeit
 description: Im folgenden Dokument werden die Schritte beschrieben, die zum Erstellen eines Modells für maschinelles Lernen in Echtzeit in Adobe Experience Platform erforderlich sind.
 exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 100%
 

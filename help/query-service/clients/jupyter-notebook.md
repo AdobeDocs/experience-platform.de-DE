@@ -5,19 +5,19 @@ exl-id: 358eab67-538f-4ada-931f-783b92db4a1c
 source-git-commit: 1af89160cbf5b689396921869fec6c30a5bcfff0
 workflow-type: tm+mt
 source-wordcount: '575'
-ht-degree: 4%
+ht-degree: 10%
 
 ---
 
-# Verbinden [!DNL Jupyter Notebook] zu Query Service
+# Verbinden von [!DNL Jupyter Notebook] mit dem Abfrage-Service
 
 In diesem Dokument werden die zum Verbinden erforderlichen Schritte beschrieben. [!DNL Jupyter Notebook] mit Adobe Experience Platform Query Service.
 
 ## Erste Schritte
 
-Für dieses Handbuch benötigen Sie bereits Zugriff auf [!DNL Jupyter Notebook] und sind mit der Benutzeroberfläche vertraut. Zum Herunterladen [!DNL Jupyter Notebook] Weitere Informationen finden Sie unter [offiziell [!DNL Jupyter Notebook] Dokumentation](https://jupyter.org/).
+Für dieses Handbuch benötigen Sie bereits Zugriff auf [!DNL Jupyter Notebook] und sind mit der Benutzeroberfläche vertraut. Informationen zum Herunterladen von [!DNL Jupyter Notebook] oder weitere Details finden Sie in der [offiziellen [!DNL Jupyter Notebook] -Dokumentation](https://jupyter.org/).
 
-So erwerben Sie die erforderlichen Anmeldeinformationen zum Herstellen einer Verbindung [!DNL Jupyter Notebook] zur Experience Platform benötigen Sie Zugriff auf die [!UICONTROL Abfragen] Arbeitsbereich in der Platform-Benutzeroberfläche. Wenden Sie sich an Ihren Organisationsadministrator, wenn Sie derzeit keinen Zugriff auf die [!UICONTROL Abfragen] Arbeitsbereich.
+Um die erforderlichen Anmeldeinformationen zum Verbinden von [!DNL Jupyter Notebook] mit Experience Platform zu erhalten, benötigen Sie Zugriff auf den Arbeitsbereich „Abfragen“ in der Platform-Benutzeroberfläche.  Wenden Sie sich an Ihren Organisationsadministrator, wenn Sie derzeit keinen Zugriff auf die [!UICONTROL Abfragen] Arbeitsbereich.
 
 >[!TIP]
 >

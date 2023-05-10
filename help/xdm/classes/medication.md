@@ -4,8 +4,8 @@ description: Dieses Dokument bietet einen Überblick über die Mediationsklasse 
 exl-id: e5786241-dd6e-450f-98c8-2de46affb3e2
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 6%
+source-wordcount: '149'
+ht-degree: 4%
 
 ---
 
@@ -17,10 +17,10 @@ Im Experience-Datenmodell (XDM) wird die [!UICONTROL Medizin] Klasse erfasst die
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `_id` | [!UICONTROL Zeichenfolge] | Eine eindeutige, systemgenerierte Zeichenfolgenkennung für den Datensatz. Dieses Feld wird verwendet, um die Eindeutigkeit eines einzelnen Datensatzes zu verfolgen, Datenduplizierung zu verhindern und diesen Datensatz in nachgelagerten Diensten nachzuschlagen.<br><br>Da dieses Feld systemgeneriert wird, wird bei der Datenerfassung kein expliziter Wert angegeben. Sie können jedoch weiterhin Ihre eigenen eindeutigen ID-Werte angeben, wenn Sie möchten. |
-| `medicationId` | [!UICONTROL Zeichenfolge] | Eine eindeutige Kennung für das Medikament. |
-| `medicationName` | [!UICONTROL Zeichenfolge] | Der Name des Arzneimittels. |
+| `_id` | [!UICONTROL String] | Eine eindeutige, systemgenerierte Zeichenfolgenkennung für den Datensatz. Dieses Feld wird verwendet, um die Eindeutigkeit eines einzelnen Datensatzes zu verfolgen, Datenduplizierung zu verhindern und diesen Datensatz in nachgelagerten Diensten nachzuschlagen.<br><br>Da dieses Feld systemgeneriert wird, wird bei der Datenerfassung kein expliziter Wert angegeben. Sie können jedoch weiterhin Ihre eigenen eindeutigen ID-Werte angeben, wenn Sie möchten. |
+| `medicationId` | [!UICONTROL String] | Eine eindeutige Kennung für das Medikament. |
+| `medicationName` | [!UICONTROL String] | Der Name des Arzneimittels. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Die Klasse kann mit der [[!UICONTROL Arzneimittel] Feldergruppe](../field-groups/medication/healthcare-medication.md) zur Beschreibung weiterer Details über das Arzneimittel oder Arzneimittel.

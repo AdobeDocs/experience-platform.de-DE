@@ -48,7 +48,7 @@ Medallia unterstützt die Aktivierung von Identitäten, die in der folgenden Tab
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| email | E-Mail Adresse | Wählen Sie die E-Mail-Zielidentität aus, wenn Sie Umfragen per E-Mail einladen möchten. Wenn ein Profil mit mehreren E-Mail-Adressen verknüpft ist, wird die Einladung nur an die erste E-Mail Trigger. |
+| E-Mail | E-Mail Adresse | Wählen Sie die E-Mail-Zielidentität aus, wenn Sie Umfragen per E-Mail einladen möchten. Wenn ein Profil mit mehreren E-Mail-Adressen verknüpft ist, wird die Einladung nur an die erste E-Mail Trigger. |
 | phone | Telefonnummern im Format E.164 gehasht | Wählen Sie die Telefonzielgruppenkennung aus, wenn Sie SMS-basierte Umfragen senden möchten. Die Telefonnummer muss im E.164-Format vorliegen, das ein Pluszeichen (+), eine internationale Telefonnummer, eine Ortsvorwahl und eine Telefonnummer enthält. Beispiel: (+)(Landesvorwahl)(Ortsvorwahl)(Telefonnummer). Wenn ein Profil mit mehreren Telefonnummern verknüpft ist, Trigger Medallia nur die Einladung zur ersten Telefonnummer. |
 
 {style="table-layout:auto"}

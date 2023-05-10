@@ -20,7 +20,7 @@ In diesem Video erhalten Sie einen Überblick über die auf der Experience Platf
 
 Weitere Informationen finden Sie unter den Links in der Dokumentation zu den einzelnen Anwendungen:
 
-* [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/de-DE/experience-cloud/user-guides/home.translate.html)
+* [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-landing.html?lang=de)
 * [Intelligent Services](https://experienceleague.adobe.com/docs/intelligent-services.html)
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journeys/using/journey-orchestration-home.html?lang=de)
 * [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=de)

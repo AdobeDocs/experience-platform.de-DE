@@ -6,8 +6,8 @@ description: Eine Referenz für Feldtypbegrenzungen im Experience-Datenmodell (X
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 13%
+source-wordcount: '654'
+ht-degree: 12%
 
 ---
 
@@ -135,7 +135,7 @@ In den folgenden Abschnitten wird beschrieben, wie die einzelnen XDM-Typen ander
 
 | XDM-Typ | Parquet | Spark SQL | Java |
 | --- | --- | --- | --- |
-| [!UICONTROL Zeichenfolge] | Typ: `BYTE_ARRAY`<br>Anmerkung: `UTF8` | `StringType` | `java.lang.String` |
+| [!UICONTROL String] | Typ: `BYTE_ARRAY`<br>Anmerkung: `UTF8` | `StringType` | `java.lang.String` |
 | [!UICONTROL Double] | Typ: `DOUBLE` | `LongType` | `java.lang.Double` |
 | [!UICONTROL Lang] | Typ: `INT64` | `LongType` | `java.lang.Long` |
 | [!UICONTROL Ganzzahl] | Typ: `INT32`<br>Anmerkung: `INT_32` | `IntegerType` | `java.lang.Integer` |
@@ -146,13 +146,13 @@ In den folgenden Abschnitten wird beschrieben, wie die einzelnen XDM-Typen ander
 | [!UICONTROL Boolesch] | Typ: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
 | [!UICONTROL Landkarte] | `MAP`-kommentierte Gruppe<br><br>(`<key-type>` muss `STRING`) | `MapType`<br><br>(`keyType` muss `StringType`) | `java.util.Map` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Scala, .NET und CosmosDB {#scala}
 
 | XDM-Typ | Scala | .NET | CosmosDB |
 | --- | --- | --- | --- |
-| [!UICONTROL Zeichenfolge] | `String` | `System.String` | `String` |
+| [!UICONTROL String] | `String` | `System.String` | `String` |
 | [!UICONTROL Double] | `Double` | `System.Double` | `Number` |
 | [!UICONTROL Lang] | `Long` | `System.Int64` | `Number` |
 | [!UICONTROL Ganzzahl] | `Int` | `System.Int32` | `Number` |
@@ -163,13 +163,13 @@ In den folgenden Abschnitten wird beschrieben, wie die einzelnen XDM-Typen ander
 | [!UICONTROL Boolesch] | `Boolean` | `System.Boolean` | `Boolean` |
 | [!UICONTROL Landkarte] | `Map` | (Nicht angegeben) | `object` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### MongoDB, Aerospike und Protobuf 2 {#mongo}
 
 | XDM-Typ | MongoDB | Aerospike | Protobuf 2 |
 | --- | --- | --- | --- |
-| [!UICONTROL Zeichenfolge] | `string` | `String` | `string` |
+| [!UICONTROL String] | `string` | `String` | `string` |
 | [!UICONTROL Double] | `double` | `Double` | `double` |
 | [!UICONTROL Lang] | `long` | `Integer` | `int64` |
 | [!UICONTROL Ganzzahl] | `int` | `Integer` | `int32` |
@@ -180,7 +180,7 @@ In den folgenden Abschnitten wird beschrieben, wie die einzelnen XDM-Typen ander
 | [!UICONTROL Boolesch] | `bool` | `Integer`<br>(0/1 binär) | `bool` |
 | [!UICONTROL Landkarte] | `object` | `map` | `map<key_type, value_type>` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Definieren von XDM-Feldtypen in der API {#define-fields}
 

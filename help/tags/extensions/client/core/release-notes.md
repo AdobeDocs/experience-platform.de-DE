@@ -4,8 +4,8 @@ description: Aktuelle Versionshinweise zur Core-Erweiterung in Adobe Experience 
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 source-git-commit: 0955646164269d868be5161a117c6e12dbd9a4cb
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1654'
+ht-degree: 95%
 
 ---
 

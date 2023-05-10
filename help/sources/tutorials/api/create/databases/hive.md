@@ -8,7 +8,7 @@ exl-id: e1469a29-6f61-47ba-995e-39f06ee4a4a4
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '487'
-ht-degree: 61%
+ht-degree: 62%
 
 ---
 
@@ -91,7 +91,7 @@ curl -X POST \
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `auth.params.connectionString` | Die Verbindungszeichenfolge, die mit Ihrer [!DNL Hive] -Konto. |
-| `connectionSpec.id` | Die [!DNL Hive] Verbindungsspezifikations-ID: `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f`. |
+| `connectionSpec.id` | Die [!DNL Hive]-Verbindungsspezifikations-ID: `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f`. |
 
 **Antwort**
 

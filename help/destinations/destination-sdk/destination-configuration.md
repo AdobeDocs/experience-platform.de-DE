@@ -4,7 +4,7 @@ title: Konfigurationsoptionen für Streaming-Ziele für das Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
 source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1883'
 ht-degree: 88%
 
 ---
@@ -131,7 +131,7 @@ Dies ist eine Beispielkonfiguration des fiktiven Streaming-Ziels Moviestar, das 
 | `description` | Zeichenfolge | Geben Sie im Zielkatalog von Experience Platform eine Beschreibung für Ihre Zielkarte ein. Es sollten nicht mehr als 4–5 Sätze sein. |
 | `status` | Zeichenfolge | Gibt den Lebenszyklusstatus der Zielkarte an. Zulässige Werte sind `TEST`, `PUBLISHED` und `DELETED`. Verwenden Sie `TEST`, wenn Sie Ihr Ziel zum ersten Mal konfigurieren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Konfigurationen der Benutzerauthentifizierung {#customer-authentication-configurations}
 
@@ -154,7 +154,7 @@ Benutzer wählen **[!UICONTROL Mit Ziel verbinden]** aus, um den OAuth 2-Authent
 | `customerAuthenticationConfigurations` | Zeichenfolge | Gibt die Konfiguration an, die zum Authentifizieren von Experience Platform-Kunden auf Ihrem Server verwendet wird. Siehe `authType` unten für gültige Werte. |
 | `authType` | Zeichenfolge | Zulässige Werte für Streaming-Ziele sind:<ul><li>`BASIC`. Wenn Ihr Ziel die grundlegende Authentifizierung unterstützt, legen Sie `"authType":"Basic"` und  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` im [Zielversandabschnitt](./destination-configuration.md).</li><li>`BEARER`. Wenn Ihr Ziel die Bearer-Authentifizierung unterstützt, legen Sie `"authType":"Bearer"` und `"authenticationRule":"CUSTOMER_AUTHENTICATION"` im [Zielbereitstellungs-Abschnitt](./destination-configuration.md) fest.</li><li>`OAUTH2`. Wenn Ihr Ziel die OAuth 2-Authentifizierung unterstützt, legen Sie `"authType":"OAUTH2"` fest und fügen Sie, wie auf der Seite zur [OAuth 2-Authentifizierung mit dem Destination SDK](./oauth2-authentication.md) beschrieben, die erforderlichen Felder für OAuth 2 hinzu. Wählen Sie außerdem `"authenticationRule":"CUSTOMER_AUTHENTICATION"` im [Zielbereitstellungs-Abschnitt](./destination-configuration.md).</li> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Benutzerdefinierte Datenfelder {#customer-data-fields}
 
@@ -174,9 +174,9 @@ Verwenden Sie diesen Abschnitt, um Benutzer aufzufordern, benutzerdefinierte Fel
 | `description` | Zeichenfolge | Geben Sie eine Beschreibung für das benutzerdefinierte Feld ein. |
 | `isRequired` | Boolesch | Gibt an, ob dieses Feld im Ziel-Setup-Workflow erforderlich ist. |
 | `enum` | Zeichenfolge | Rendert das benutzerdefinierte Feld als Dropdown-Menü und listet die für den Benutzer verfügbaren Optionen auf. |
-| `pattern` | Zeichenfolge | Erzwingt bei Bedarf ein Muster für das benutzerdefinierte Feld. Verwenden Sie reguläre Ausdrücke, um ein Muster zu erzwingen. Wenn Ihre Kunden-IDs beispielsweise keine Zahlen oder Unterstriche enthalten, geben Sie `^[A-Za-z]+$` in dieses Feld ein. |
+| `pattern` | Zeichenfolge | Erzwingt bei Bedarf ein Muster für das benutzerdefinierte Feld. Verwenden Sie reguläre Ausdrücke, um ein Muster zu erzwingen. Wenn Ihre Kunden-IDs beispielsweise keine Zahlen oder Unterstriche enthalten, geben Sie in dieses Feld `^[A-Za-z]+$` ein. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Benutzeroberflächenattribute {#ui-attributes}
 
@@ -191,7 +191,7 @@ Dieser Abschnitt bezieht sich auf die Benutzeroberflächenelemente in der obigen
 | `connectionType` | Zeichenfolge | `Server-to-server` ist derzeit die einzige verfügbare Option. |
 | `frequency` | Zeichenfolge | Bezieht sich auf die Art des Datenexports, die vom Ziel unterstützt wird. Unterstützte Werte: <ul><li>`Streaming`</li><li>`Batch`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Schemakonfiguration im Zuordnungsschritt {#schema-configuration}
 
@@ -206,7 +206,7 @@ Verwenden Sie die Parameter in `schemaConfig`, um den Zuordnungsschritt des Ziel
 | `segmentRequired` | Boolesch | Verwenden Sie immer `segmentRequired:true`. |
 | `identityRequired` | Boolesch | Verwenden Sie `true`, wenn Benutzer in der Lage sein sollen, Identitäts-Namespaces von Experience Platform Ihrem gewünschten Schema zuzuordnen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Identitäten und Attribute {#identities-and-attributes}
 
@@ -228,7 +228,7 @@ Weitere Informationen zu Identitäten finden Sie im Abschnitt [Übersicht über 
 | `transformation` | Zeichenfolge | *Wird in der Beispielkonfiguration nicht angezeigt*. Wird beispielsweise verwendet, wenn der [!DNL Platform]-Kunde einfache E-Mail-Adressen als Attribut verwendet und Ihre Plattform nur gehashte E-Mails akzeptiert. In diesem Objekt können Sie die Transformation spezifizieren, die angewendet werden muss (z. B. E-Mail in Kleinbuchstaben umwandeln und dann hashen). Ein Beispiel finden Sie unter `requiredTransformation` in der [API-Referenz zur Zielkonfiguration](./destination-configuration-api.md#update). |
 | `acceptedGlobalNamespaces` | – | Gibt an, [Standard-Identitäts-Namespaces](/help/identity-service/namespaces.md#standard) (z. B. IDFA)-Kunden können der Identität zuordnen, die Sie konfigurieren. <br> Wenn Sie `acceptedGlobalNamespaces` verwenden, können Sie E-Mail-Adressen oder Telefonnummern mithilfe von `"requiredTransformation":"sha256(lower($))"` in Kleinbuchstaben umwandeln und hashen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Zielbereitstellung {#destination-delivery}
 
@@ -237,7 +237,7 @@ Weitere Informationen zu Identitäten finden Sie im Abschnitt [Übersicht über 
 | `authenticationRule` | Zeichenfolge | Gibt an, wie [!DNL Platform]-Kunden eine Verbindung zu Ihrem Ziel herstellen. Akzeptierte Werte sind `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Verwenden Sie `CUSTOMER_AUTHENTICATION`, wenn sich Platform-Kunden über einen Benutzernamen und ein Kennwort, ein Träger-Token oder eine andere Authentifizierungsmethode bei Ihrem System anmelden. Sie würden diese Option beispielsweise auswählen, wenn Sie auch `authType: OAUTH2` oder `authType:BEARER` in `customerAuthenticationConfigurations` ausgewählt haben. </li><li> Verwenden Sie `PLATFORM_AUTHENTICATION`, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel existiert und der [!DNL Platform]-Kunde keine Authentifizierungsdaten bereitstellen muss, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie ein Objekt für die [Anmeldeinformationen](./credentials-configuration-api.md) mithilfe der Konfiguration erstellen. </li><li>Verwenden Sie `NONE`, wenn keine Authentifizierung erforderlich ist, um Daten an Ihre Zielplattform zu senden. </li></ul> |
 | `destinationServerId` | Zeichenfolge | Die `instanceId` der [Ziel-Server-Konfiguration](./destination-server-api.md), die für dieses Ziel verwendet wird. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Konfiguration der Segmentzuordnung {#segment-mapping}
 
@@ -297,7 +297,7 @@ Sie können den Parameter `backfillHistoricalProfileData` in der Zielkonfigurati
 |---------|----------|------|
 | `backfillHistoricalProfileData` | Boolesch | Steuert, ob historische Profildaten exportiert werden, wenn Segmente für das Ziel aktiviert werden. <br> <ul><li> `true`: [!DNL Platform] sendet die historischen Benutzerprofile, die sich für das Segment qualifiziert haben, bevor das Segment aktiviert wird. </li><li> `false`: [!DNL Platform] enthält nur Benutzerprofile, die sich für das Segment qualifizieren, nachdem das Segment aktiviert wurde. </li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Wie diese Konfiguration alle erforderlichen Informationen für Ihr Ziel verbindet  {#connecting-all-configurations}
 

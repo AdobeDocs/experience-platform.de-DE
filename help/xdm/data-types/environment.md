@@ -6,7 +6,7 @@ description: Dieses Dokument bietet einen Überblick über den Umgebungs-XDM-Dat
 exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '465'
 ht-degree: 18%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 18%
 | `viewportHeight` | Ganzzahl | Die vertikale Größe in Pixel des Fensters, in dem das Erlebnis angezeigt wurde. Bei einem Webansichtsereignis ist dies die Höhe des Browser-Ansichtsfensters. |
 | `viewPortWidth` | Ganzzahl | Die horizontale Größe in Pixel des Fensters, in dem das Erlebnis angezeigt wurde. Bei einem Webansichtsereignis ist dies die Breite des Browser-Ansichtsfensters. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 
@@ -57,7 +57,7 @@ In der folgenden Tabelle sind die für `type` und ihre zugehörige Bedeutung:
 | Wert | Beschreibung |
 | --- | --- |
 | `browser` | Browser |
-| `application` | Programm |
+| `application` | Applikation |
 | `iot` | Internet der Dinge |
 | `external` | Externes System |
 | `widget` | Anwendungserweiterung |

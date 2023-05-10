@@ -6,7 +6,7 @@ description: Im folgenden Dokument erfahren Sie, wie Sie eine Verbindungsspezifi
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '797'
 ht-degree: 48%
 
 ---
@@ -45,7 +45,7 @@ Nach der Bereitstellung müssen Sie Ihr privates Git-Repository wie folgt strukt
 | {your_source}-label.txt | Der Quellname, wie er im Quellkatalog der Experience Platform angezeigt werden soll. | Mailchimp-Mitglieder |
 | {your_source}-connectionSpec.json | Eine JSON-Datei, die die Verbindungsspezifikation Ihrer Quelle enthält. Diese Datei ist zunächst nicht erforderlich, da Sie Ihre Verbindungsspezifikation nach Abschluss dieses Handbuchs füllen werden. | `mailchimp-members-connectionSpec.json` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!TIP]
 >

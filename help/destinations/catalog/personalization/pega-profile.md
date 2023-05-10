@@ -2,19 +2,19 @@
 title: Pega Profile Connector
 description: Verwenden Sie den Pega Profile Connector für Amazon S3 in Adobe Experience Platform, um vollständige oder inkrementelle Profildaten oder beides in den Amazon S3-Cloud-Speicher zu exportieren. In Pega Customer Decisioning Hub können Datenaufträge in Customer Profile Designer so geplant werden, dass Profildaten regelmäßig aus dem Amazon S3-Speicher importiert werden.
 last-substantial-update: 2023-01-25T00:00:00Z
-source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
+exl-id: f422f21b-174a-4b93-b05d-084b42623314
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
-source-wordcount: '1086'
-ht-degree: 47%
+source-wordcount: '1080'
+ht-degree: 52%
 
 ---
-
 
 # Pega Profile Connector
 
 ## Übersicht {#overview}
 
-Verwenden Sie die [!DNL Pega Profile Connector] in Adobe Experience Platform , um eine ausgehende Live-Verbindung zu Ihrer [!DNL Amazon Web Services] (AWS) S3-Datenspeicherung , um Profildaten regelmäßig in CSV-Dateien aus Adobe Experience Platform in Ihre eigenen S3-Behälter zu exportieren. In [!DNL Pega Customer Decision Hub]können Sie Datenaufträge planen, um diese Profildaten aus dem S3-Speicher zu importieren, um die [!DNL Pega Customer Decision Hub] Profil.
+Verwenden Sie die [!DNL Pega Profile Connector] in Adobe Experience Platform , um eine ausgehende Live-Verbindung zu Ihrer [!DNL Amazon Web Services] (AWS) S3-Datenspeicherung , um Profildaten regelmäßig in CSV-Dateien aus Adobe Experience Platform in Ihre eigenen S3-Behälter zu exportieren. In [!DNL Pega Customer Decision Hub] können Sie Datenaufträge planen, um diese Profildaten aus dem S3-Speicher zur Aktualisierung des [!DNL Pega Customer Decision Hub]-Profils importieren.
 
 Dieser Connector hilft beim Einrichten des anfänglichen Exports von Profildaten und hilft auch, neue Profile regelmäßig in zu synchronisieren [!DNL Pega Customer Decision Hub].  Die Verwendung aktueller Daten in Customer Decisioning Hub bietet eine bessere und aktualisierte Ansicht Ihrer Kundenbasis für die Entscheidungsfindung für die nächsten Schritte.
 
@@ -22,9 +22,9 @@ Dieser Connector hilft beim Einrichten des anfänglichen Exports von Profildaten
 >
 >Diese Dokumentationsseite wurde von Pegasystems erstellt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an Pega [here](mailto:support@pega.com).
 
-## Anwendungsbeispiele
+## Anwendungsfälle
 
-Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie die [!DNL Pega Profile Connector] Ziel, hier finden Sie Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
+Damit Sie besser verstehen können, wie und wann Sie das [!DNL Pega Profile Connector]-Ziel verwenden sollten, finden Sie hier einige Beispielanwendungsfälle, die Kundinnen und Kunden von Adobe Experience Platform mit diesem Ziel bewältigen können.
 
 ### Anwendungsfall 1
 
@@ -51,7 +51,7 @@ Bevor Sie dieses Ziel verwenden können, um Daten aus Adobe Experience Platform 
 |---|---|
 | *CustomerID* | Allgemeine Benutzer-ID, die ein Profil eindeutig in [!DNL Pega Customer Decision Hub] und Adobe Experience Platform |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
@@ -62,7 +62,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 | Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B. E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm „Auswählen der Profilattribute“ im [Zielaktivierungs-Workflow](../../ui/activate-batch-profile-destinations.md#select-attributes) festgelegt. |
 | Exporthäufigkeit | **[!UICONTROL Batch]** | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Weitere Informationen finden Sie unter [Batch-Datei-basierte Ziele](/help/destinations/destination-types.md#file-based). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
@@ -131,6 +131,3 @@ Siehe [Importieren von Datenaufträgen](https://academy.pega.com/topic/import-da
 ## Datennutzung und -Governance {#data-usage-governance}
 
 Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Ausführliche Informationen darüber, wie [!DNL Adobe Experience Platform] Data Governance erzwingt, finden Sie unter [Data Governance – Übersicht](/help/data-governance/home.md).
-
-
-

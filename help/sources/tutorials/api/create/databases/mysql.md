@@ -8,7 +8,7 @@ exl-id: 273da568-84ed-4a3d-bfea-0f5b33f1551a
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '450'
-ht-degree: 66%
+ht-degree: 70%
 
 ---
 
@@ -85,7 +85,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
 | `auth.params.connectionString` | Die [!DNL MySQL] Verbindungszeichenfolge, die mit Ihrem Konto verknüpft ist. Die [!DNL MySQL] Verbindungszeichenfolgenmuster ist: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | Die [!DNL MySQL] Verbindungsspezifikations-ID: `26d738e0-8963-47ea-aadf-c60de735468a`. |
+| `connectionSpec.id` | Die [!DNL MySQL]-Verbindungsspezifikations-ID: `26d738e0-8963-47ea-aadf-c60de735468a`. |
 
 **Antwort**
 
@@ -100,7 +100,7 @@ Bei einer erfolgreichen Antwort werden Details zu der neu erstellten Basisverbin
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL MySQL]Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL MySQL]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um Datenbankdaten mit der [!DNL Flow Service] API](../../collect/database-nosql.md)

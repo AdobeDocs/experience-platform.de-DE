@@ -4,14 +4,14 @@ description: Erfahren Sie, wie Sie Erstanbieter-Geräte-IDs (FPIDs) für das Ado
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
 source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
 workflow-type: tm+mt
-source-wordcount: '1776'
+source-wordcount: '1773'
 ht-degree: 1%
 
 ---
 
 # Erstanbieter-Geräte-IDs im Platform Web SDK
 
-Das Adobe Experience Platform Web SDK weist [Adobe Experience Cloud IDs (ECIDs)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=en) Website-Besuchern durch die Verwendung von Cookies, um das Benutzerverhalten zu verfolgen. Um Browserbeschränkungen für Cookie-Lebenszyklen zu berücksichtigen, können Sie stattdessen Ihre eigenen Geräte-IDs festlegen und verwalten. Diese werden als Erstanbieter-Geräte-IDs (FPIDs) bezeichnet.
+Das Adobe Experience Platform Web SDK weist [Adobe Experience Cloud IDs (ECIDs)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=en) Website-Besuchern durch die Verwendung von Cookies, um das Benutzerverhalten zu verfolgen. Um Browserbeschränkungen für Cookie-Lebenszyklen zu berücksichtigen, können Sie stattdessen Ihre eigenen Geräte-IDs festlegen und verwalten. Diese werden als First-Party-Geräte-IDs (FPIDs) bezeichnet. 
 
 >[!NOTE]
 >
@@ -219,9 +219,9 @@ Zur Veranschaulichung dieses Vorgangs sollten Sie sich ein Szenario ansehen, an 
 | Vierter Besuch | Zwischen dem dritten und vierten Besuch hat ausreichend Zeit verstrichen, dass die ECID aufgrund der Browserrichtlinie gelöscht wurde. Wie beim vorherigen Besuch bleibt die FPID aufgrund der Art und Weise, wie sie festgelegt wurde. Diesmal wird dieselbe ECID wie beim vorherigen Besuch generiert. Der Benutzer wird in den Experience Platform- und Experience Cloud-Lösungen als derselbe Benutzer wie beim vorherigen Besuch gesehen. |
 | Fünfter Besuch | Zwischen dem vierten und fünften Besuch hat der Endbenutzer alle Cookies in seinem Browser gelöscht. Eine neue FPID wird generiert und zum Testen der Erstellung einer neuen ECID verwendet. Der Benutzer wird nun als neuer Besucher in den Adobe Experience Platform- und Experience Cloud-Lösungen betrachtet. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## FAQs
+## Häufig gestellte Fragen
 
 Im Folgenden finden Sie eine Liste von Antworten auf häufig gestellte Fragen zu Erstanbieter-Geräte-IDs.
 

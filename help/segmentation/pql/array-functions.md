@@ -11,7 +11,7 @@ ht-degree: 95%
 
 ---
 
-# array-, list- und set-Funktionen
+# Funktionen für Arrays, Listen und Sets
 
 [!DNL Profile Query Language] (PQL) bietet Funktionen, die die Interaktion mit Arrays, Listen und Zeichenfolgen erleichtern. Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] Übersicht](./overview.md).
 

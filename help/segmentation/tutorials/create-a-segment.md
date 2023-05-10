@@ -8,7 +8,7 @@ exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '948'
-ht-degree: 21%
+ht-degree: 27%
 
 ---
 
@@ -24,7 +24,7 @@ Dieses Tutorial setzt ein Verständnis der verschiedenen [!DNL Adobe Experience 
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Ermöglicht das Erstellen von Zielgruppensegmenten aus Echtzeit-Kundenprofildaten.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Platform] organisiert werden. Um die Segmentierung optimal zu nutzen, stellen Sie bitte sicher, dass Ihre Daten als Profile und Ereignisse gemäß dem [Best Practices für die Datenmodellierung](../../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten durch [!DNL Platform] organisiert werden. Um die Segmentierung optimal zu nutzen, stellen Sie sicher, dass Ihre Daten als Profile und Ereignisse gemäß den [Best Practices für die Datenmodellierung](../../xdm/schema/best-practices.md) aufgenommen werden.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um erfolgreich Aufrufe an die [!DNL Platform] APIs.
 
@@ -60,7 +60,7 @@ Sie können eine neue Segmentdefinition erstellen, indem Sie eine POST-Anfrage a
 
 Eine ausführliche Erläuterung zur Definition eines Segments finden Sie im Abschnitt [Entwicklerhandbuch zur Segmentdefinition](../api/segment-definitions.md#create).
 
-## Schätzen und Anzeigen einer Vorschau einer Zielgruppe {#estimate-and-preview-an-audience}
+## Schätzen und Anzeigen der Vorschau einer Zielgruppe {#estimate-and-preview-an-audience}
 
 Bei der Entwicklung Ihrer Segmentdefinition können Sie die Tools für die Schätzung und Vorschau in [!DNL Real-Time Customer Profile] um Informationen auf Zusammenfassungsebene anzuzeigen, um sicherzustellen, dass Sie die erwartete Zielgruppe isolieren. Schätzungen liefern statistische Informationen über eine Segmentdefinition, z. B. die prognostizierte Zielgruppengröße und das Konfidenzintervall. Vorschau bietet paginierte Listen mit qualifizierten Profilen für eine Segmentdefinition, sodass Sie die Ergebnisse mit dem, was Sie erwarten, vergleichen können.
 
@@ -75,13 +75,13 @@ Es gibt zwei erforderliche Schritte, um eine Vorschau Ihres Segments anzuzeigen 
 
 Datenbeispiele werden verwendet, um Segmente zu bewerten und die Anzahl der qualifizierten Profile zu schätzen. Jeden Morgen werden neue Daten in den Speicher geladen (zwischen 12:00 und 2:00 Uhr PT, was 7:00 Uhr UTC entspricht) und alle Segmentierungsabfragen werden anhand der Beispieldaten dieses Tages geschätzt. Folglich werden alle neuen hinzugefügten Felder oder erfassten zusätzlichen Daten am folgenden Tag in Schätzungen übernommen.
 
-Die Stichprobengröße hängt von der Gesamtanzahl der Entitäten in Ihrem Profilspeicher ab. Diese Stichprobengrößen werden in der folgenden Tabelle dargestellt:
+Die Stichprobengröße hängt von der Gesamtanzahl der Entitäten in Ihrem Profilspeicher ab. Diese Stichprobengrößen sind in der folgenden Tabelle dargestellt:
 
 | Entitäten im Profilspeicher | Stichprobengröße |
 | ------------------------- | ----------- |
 | Weniger als 1 Million | Vollständiger Datensatz |
-| 1 bis 20 Mio. | 1 Millionen |
-| Über 20 Millionen | 5 % des Gesamtbetrags |
+| 1 bis 20 Millionen | 1 Million |
+| Über 20 Millionen | 5 % der Gesamtgröße |
 
 Schätzungen laufen in der Regel über 10-15 Sekunden, beginnend mit einer groben Schätzung und verfeinern, sobald mehr Datensätze gelesen werden.
 

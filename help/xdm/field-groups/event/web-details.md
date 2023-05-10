@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über die Feldergruppe Webd
 exl-id: eb42606b-ade4-4d72-b601-c560009c98e8
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 20%
+source-wordcount: '141'
+ht-degree: 18%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 20%
 | --- | --- | --- |
 | `web` | [Web-Informationen](../../data-types/web-information.md) | Beschreibt Link-Klicks, Webseitendetails, Referrer-Informationen und Browserdetails. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 

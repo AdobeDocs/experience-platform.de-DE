@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Web SDK Pla
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;Web SDK;SDK;Web SDK;Launch;Launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
 source-git-commit: 00801465435133fce29002c8bd0f2256745ba2c2
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '803'
 ht-degree: 100%
 

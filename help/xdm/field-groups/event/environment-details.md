@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über die Schemakontrollgru
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 14%
+source-wordcount: '212'
+ht-degree: 13%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 14%
 | `environment` | [Umgebung](../../data-types/environment.md) | Beschreibt Informationen zum situationsspezifischen Kontext der Ereignisüberwachung, insbesondere mit detaillierten Informationen zu vorübergehenden Informationen wie Netzwerk- oder Softwareversionen. |
 | `placeContext` | [Ortskontext](../../data-types/place-context.md) | Beschreibt die vorübergehenden Umstände im Zusammenhang mit der Ereignisbeobachtung. Beispiele sind gebietsschemaspezifische Informationen wie Wetter, Ortszeit, Traffic, Wochentag, Werktag vs. Urlaub und Arbeitszeit. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 

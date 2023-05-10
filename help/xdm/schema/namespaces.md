@@ -6,7 +6,7 @@ description: Erfahren Sie, wie Sie mit Namespacing im Experience-Datenmodell (XD
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
 source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '631'
 ht-degree: 1%
 
 ---
@@ -81,7 +81,7 @@ Im Folgenden finden Sie ein Beispielschema für ein Produkt mit standardmäßige
 | `https://ns.adobe.com/vendorA/product/stockNumber` | Felder, die von Ressourcen des Anbieters bereitgestellt werden, verwenden ihre eigenen eindeutigen Namespaces. In diesem Beispiel `https://ns.adobe.com/vendorA/product` ist der Namespace des Anbieters und `stockNumber` ist der Feldname. |
 | `tenantId:internalSku` | Von Ihrem Unternehmen definierte Felder verwenden Ihre eindeutige Mandantenkennung als Namespace. In diesem Beispiel `tenantId` ist der Mandanten-Namespace (`https://ns.adobe.com/tenantId`) und `internalSku` ist der Feldname. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Kompatibilitätsmodus {#compatibility}
 

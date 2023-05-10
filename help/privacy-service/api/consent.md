@@ -6,8 +6,8 @@ description: Erfahren Sie, wie Sie mit der Privacy Service-API Anfragen zur Kund
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 5%
+source-wordcount: '244'
+ht-degree: 4%
 
 ---
 
@@ -65,7 +65,7 @@ curl -X POST \
 | `nameSpace` | Jedes Objekt im `entities` -Array muss einen der [Standard-Identitäts-Namespaces](./appendix.md#standard-namespaces) von der Privacy Service-API erkannt werden. |
 | `values` | Ein Array von Werten für jeden Benutzer, die dem bereitgestellten `nameSpace`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >

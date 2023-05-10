@@ -8,7 +8,7 @@ exl-id: 36086c7f-813e-4fc5-9778-f9d55aba03b2
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '450'
-ht-degree: 57%
+ht-degree: 62%
 
 ---
 
@@ -86,9 +86,9 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
-| `auth.params.host` | Der Endpunkt der [!DNL Shopify] Server. |
+| `auth.params.host` | Der Endpunkt des [!DNL Shopify]-Servers. |
 | `auth.params.accessToken` | Das Zugriffstoken für Ihre [!DNL Shopify] Benutzerkonto. |
-| `connectionSpec.id` | Die [!DNL Shopify] Verbindungsspezifikations-ID: `4f63aa36-bd48-4e33-bb83-49fbcd11c708`. |
+| `connectionSpec.id` | Die [!DNL Shopify]-Verbindungsspezifikations-ID: `4f63aa36-bd48-4e33-bb83-49fbcd11c708`. |
 
 **Antwort**
 
@@ -103,7 +103,7 @@ Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließ
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Shopify] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL Shopify]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um E-Commerce-Daten mithilfe der [!DNL Flow Service] API](../../collect/ecommerce.md)

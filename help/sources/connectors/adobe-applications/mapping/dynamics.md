@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Salesforce; Salesforce; Feldzuordnung; Feldzuordnung; Feldzuordnung; Mapping; Marketo; B2B; b2b
+keywords: Experience Platform;Startseite;beliebte Themen;Salesforce;salesforce;Feldzuordnung; Feld zuordnen;Zuordnung;Marketo;B2B;b2b
 title: Microsoft Dynamics-Zuordnungsfelder
 description: Die folgenden Tabellen enthalten die Zuordnungen zwischen den Microsoft Dynamics-Quellfeldern und den entsprechenden XDM-Feldern.
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
 source-git-commit: a278f27223c9a5d0b97a0aa6b5d943caf5f6b10e
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 14%
+source-wordcount: '541'
+ht-degree: 39%
 
 ---
 
-# [!DNL Microsoft Dynamics] Feldzuordnungen
+# [!DNL Microsoft Dynamics]-Feldzuordnungen
 
-Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynamics] Quellfelder und die zugehörigen Experience-Datenmodell (XDM)-Felder.
+Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynamics]-Quellfeldern und den entsprechenden Feldern des Experience-Datenmodells (XDM).
 
 ## Kontakte {#contacts}
 
@@ -34,9 +34,9 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynami
 | `assistantphone` | `extendedWorkDetails.assistantDetails.phone.number` |
 | `birthdate` | `person.birthDate` |
 | `"Dynamics"` | `b2b.personKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | Der Wert für `"${CRM_ORG_ID}"` automatisch ersetzt. |
+| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
 | `contactid` | `b2b.personKey.sourceID` |
-| `concat(contactid,"@${CRM_ORG_ID}.Dynamics")` | `b2b.personKey.sourceKey` | Primäre Identität. Der Wert für `"${CRM_ORG_ID}"` automatisch ersetzt. |
+| `concat(contactid,"@${CRM_ORG_ID}.Dynamics")` | `b2b.personKey.sourceKey` | Primäre Identität. Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
 | `iif(contactid != null && contactid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", contactid, "sourceKey", concat(contactid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourcePersonKey` |
 | `department` | `extendedWorkDetails.departments` |
 | `fullname` | `person.name.fullName` |
@@ -57,7 +57,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynami
 | `salutation` | `person.name.courtesyTitle` |
 | `telephone1` | `workPhone.number` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Leads {#leads}
 
@@ -87,24 +87,24 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynami
 | `jobtitle` | `extendedWorkDetails.jobTitle` |
 | `lastname` | `person.name.lastName` |
 | `"Dynamics"` | `b2b.personKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | Der Wert für `"${CRM_ORG_ID}"` automatisch ersetzt. |
+| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
 | `leadid` | `b2b.personKey.sourceID` |
-| `concat(leadid,"@${CRM_ORG_ID}.Dynamics")` | `b2b.personKey.sourceKey` | Primäre Identität. Der Wert für `"${CRM_ORG_ID}"` automatisch ersetzt. |
+| `concat(leadid,"@${CRM_ORG_ID}.Dynamics")` | `b2b.personKey.sourceKey` | Primäre Identität. Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
 | `iif(leadid != null && leadid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", leadid, "sourceKey", concat(leadid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personComponents.sourcePersonKey` |
 | `middlename` | `person.name.middleName` |
 | `mobilephone` | `mobilePhone.number` |
 | `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
 | `salutation` | `person.name.courtesyTitle` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Konten {#accounts}
 
 | Quellfeld | Target-XDM-Feld | Anmerkungen |
 | --- | --- | --- |
 | `"Dynamics"` | `accountKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | Der Wert für `"${CRM_ORG_ID}"` automatisch ersetzt. |
-| `accountid` | `accountKey.sourceID` | Primäre Identität. Der Wert für `"${CRM_ORG_ID}"` automatisch ersetzt. |
+| `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
+| `accountid` | `accountKey.sourceID` | Primäre Identität. Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
 | `accountnumber` | `accountNumber` |
 | `accountratingcode` | `accountOrganization.rating` |
 | `address1_addressid` | `accountPhysicalAddress._id` |
@@ -133,15 +133,15 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynami
 | `websiteurl` | `accountOrganization.website` |
 | `concat(accountid,"@${CRM_ORG_ID}.Dynamics")` | `accountKey.sourceKey` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Opportunities {#opportunities}
+## Opportunitys {#opportunities}
 
 | Quellfeld | Target-XDM-Feld | Anmerkungen |
 | --- | --- | --- |
 | `name` | `opportunityName` |
 | `"Dynamics"` | `opportunityKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `opportunityKey.sourceInstanceID` | Der Wert für `"${CRM_ORG_ID}"` automatisch ersetzt. |
+| `"${CRM_ORG_ID}"` | `opportunityKey.sourceInstanceID` | Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
 | `iif(parentaccountid != null && parentaccountid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", parentaccountid, "sourceKey", concat(parentaccountid, "@${CRM_ORG_ID}.Dynamics")), null)` | `accountKey` |
 | `actualclosedate` | `actualCloseDate` |
 | `actualvalue` | `opportunityAmount.amount` |
@@ -153,20 +153,20 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynami
 | `estimatedvalue` | `expectedRevenue.amount` |
 | `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
 | `opportunityid` | `opportunityKey.sourceID` |
-| `concat(opportunityid,"@${CRM_ORG_ID}.Dynamics")` | `opportunityKey.sourceKey` | Primäre Identität. Der Wert für `"${CRM_ORG_ID}"` automatisch ersetzt. |
+| `concat(opportunityid,"@${CRM_ORG_ID}.Dynamics")` | `opportunityKey.sourceKey` | Primäre Identität. Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
 | `salesstage` | `opportunityStage` |
 | `stepname` | `nextStep` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Rollen von Kontakten bei Opportunities {#opportunity-contact-roles}
+## Rollen von Kontakten bei Opportunitys {#opportunity-contact-roles}
 
 | Quellfeld | Target-XDM-Feld | Anmerkungen |
 | --- | --- | --- |
 | `"Dynamics"` | `opportunityPersonKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | Der Wert für `"${CRM_ORG_ID}"` automatisch ersetzt. |
+| `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
 | `connectionid` | `opportunityPersonKey.sourceID` |
-| `concat(connectionid,"@${CRM_ORG_ID}.Dynamics")` | `opportunityPersonKey.sourceKey` | Primäre Identität. Der Wert für `"${CRM_ORG_ID}"` automatisch ersetzt. |
+| `concat(connectionid,"@${CRM_ORG_ID}.Dynamics")` | `opportunityPersonKey.sourceKey` | Primäre Identität. Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
 | `createdon` | `extSourceSystemAudit.createdDate` |
 | `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
 | `iif(record1id != null && record1id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record1id, "sourceKey", concat(record1id,"@${CRM_ORG_ID}.Dynamics")), null)` | `opportunityKey` |
@@ -175,17 +175,17 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynami
 | `record1objecttypecode` | *Eine benutzerdefinierte Feldergruppe muss als Zielschema definiert sein.* Anweisungen finden Sie im Anhang unter [Zuordnen eines Quellfelds vom Typ Picklist zu einem XDM-Zielschema](#picklist-type-fields) für weitere Informationen. | Für eine Liste der möglichen Werte und Beschriftungen für `record1objecttypecode` Quellfeld, siehe dieses [[!DNL Microsoft Dynamics] Referenzdokument zur Verbindungsentität](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
 | `record2objecttypecode` | *Eine benutzerdefinierte Feldergruppe muss als Zielschema definiert sein.* Anweisungen finden Sie im Anhang unter [Zuordnen eines Quellfelds vom Typ Picklist zu einem XDM-Zielschema](#picklist-type-fields) für weitere Informationen. | Für eine Liste der möglichen Werte und Beschriftungen für `record2objecttypecode` Quellfeld, siehe dieses [[!DNL Microsoft Dynamics] Referenzdokument zur Verbindungsentität](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Kampagnen {#campaigns}
 
 | Quellfeld | Target-XDM-Feld | Anmerkungen |
 | --- | --- | --- |
 | `campaignid` | `campaignKey.sourceID` |
-| `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | Der Wert für `"${CRM_ORG_ID}"` automatisch ersetzt. |
-| `concat(campaignid,"@${CRM_ORG_ID}.Dynamics")` | `campaignKey.sourceKey` | Primäre Identität. Der Wert für `"${CRM_ORG_ID}"` automatisch ersetzt. |
+| `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
+| `concat(campaignid,"@${CRM_ORG_ID}.Dynamics")` | `campaignKey.sourceKey` | Primäre Identität. Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
 | `"Dynamics"` | `campaignKey.sourceType` |
-| `iif(campaignid != null && campaignid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", campaignid, "sourceKey", concat(campaignid,"@${CRM_ORG_ID}.Dynamics")), null)` | `extSourceSystemAudit.externalKey` | Die `extSourceSystemAudit.externalKey` ist die sekundäre Identität. Der Wert für `"${CRM_ORG_ID}"` automatisch ersetzt. |
+| `iif(campaignid != null && campaignid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", campaignid, "sourceKey", concat(campaignid,"@${CRM_ORG_ID}.Dynamics")), null)` | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey` ist die sekundäre Identität. Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
 | `createdon` | `extSourceSystemAudit.createdDate` |
 | `modifiedby` | `extSourceSystemAudit.lastUpdatedBy` |
 | `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
@@ -200,36 +200,36 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynami
 | `utcconversiontimezonecode` | `timeZone` |
 | `utcconversiontimezonecode` | `timezoneName` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Marketingliste {#marketing-list}
 
 | Quellfeld | Target-XDM-Feld | Anmerkungen |
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `marketingListKey.sourceInstanceID` | Der Wert für `"${CRM_ORG_ID}"` automatisch ersetzt. |
+| `"${CRM_ORG_ID}"` | `marketingListKey.sourceInstanceID` | Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
 | `description` | `marketingListDescription` |
 | `listname` | `marketingListName` |
 | `listid` | `marketingListKey.sourceID` |
-| `concat(listid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListKey.sourceKey` | Primäre Identität. Der Wert für `"${CRM_ORG_ID}"` automatisch ersetzt. |
+| `concat(listid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListKey.sourceKey` | Primäre Identität. Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
 | `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
 | `createdon` | `extSourceSystemAudit.createdDate` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Mitglieder der Marketing-Liste {#marketing-list-members}
 
 | Quellfeld | Target-XDM-Feld | Anmerkungen |
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListMemberKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `marketingListMemberKey.sourceInstanceID` | Der Wert für `"${CRM_ORG_ID}"` automatisch ersetzt. |
+| `"${CRM_ORG_ID}"` | `marketingListMemberKey.sourceInstanceID` | Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
 | `iif(entityid != null && entityid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", entityid, "sourceKey", concat(entityid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |
 | `listmemberid` | `marketingListMemberKey.sourceID` |
-| `concat(listmemberid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListMemberKey.sourceKey` | Primäre Identität. Der Wert für `"${CRM_ORG_ID}"` automatisch ersetzt. |
+| `concat(listmemberid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListMemberKey.sourceKey` | Primäre Identität. Der Wert für `"${CRM_ORG_ID}"` wird automatisch ersetzt. |
 | `iif(listid != null && listid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", listid, "sourceKey", concat(listid,"@${CRM_ORG_ID}.Dynamics")), null)` | `marketingListKey` |
 | `createdon` | `extSourceSystemAudit.createdDate` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Anhang
 

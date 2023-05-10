@@ -21,7 +21,7 @@ In diesem Handbuch wird die geeignete Formatierung zum Definieren verschiedener 
 
 Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode, der zum Erstellen Ihrer API-Anfrage für bereitgestellt wird. [Erstellen einer Feldergruppe](../api/field-groups.md#create) oder [Erstellen eines Datentyps](../api/data-types.md#create).
 
-## [!UICONTROL Zeichenfolge] {#string}
+## [!UICONTROL String] {#string}
 
 [!UICONTROL Zeichenfolge] -Felder werden durch `type: string`.
 

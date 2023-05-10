@@ -6,7 +6,7 @@ exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
 source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
 workflow-type: tm+mt
 source-wordcount: '472'
-ht-degree: 27%
+ht-degree: 32%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 27%
 
 >[!NOTE]
 >
->Die [!DNL Mixpanel] -Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
+>Die [!DNL Mixpanel]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-gekennzeichneten Quellen.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
@@ -50,13 +50,13 @@ Erstellen Sie abschließend eine Plattform . [schema](../../../xdm/schema/compos
 
 ![Schema erstellen](../../images/tutorials/create/mixpanel-export-events/schema.png)
 
-## Verbinden [!DNL Mixpanel] zur Plattform mithilfe von APIs
+## Verbinden von [!DNL Mixpanel] mit Platform mithilfe von APIs
 
 Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Mixpanel] mit Platform mithilfe von APIs oder der Benutzeroberfläche:
 
 * [Erstellen Sie eine Quellverbindung und einen Datenfluss für [!DNL Mixpanel] Verwenden der Flow Service-API](../../tutorials/api/create/analytics/mixpanel.md)
 
-## Verbinden [!DNL Mixpanel] zur Plattform mithilfe der Benutzeroberfläche
+## Verbinden von [!DNL Mixpanel] mit Platform über die Benutzeroberfläche
 
 * [Erstellen einer  [!DNL Mixpanel] -Quellverbindung über die Benutzeroberfläche](../../tutorials/ui/create/analytics/mixpanel.md)
 * [Erstellen eines Datenflusses für eine Kundenerfolgsquellenverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/analytics.md)

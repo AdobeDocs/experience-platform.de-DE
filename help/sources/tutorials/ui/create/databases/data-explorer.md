@@ -8,7 +8,7 @@ exl-id: 561bf948-fc92-4401-8631-e2a408667507
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '496'
-ht-degree: 46%
+ht-degree: 47%
 
 ---
 
@@ -33,7 +33,7 @@ Um auf Ihr [!DNL Data Explorer]-Konto in zugreifen zu können, müssen Sie die f
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `endpoint` | Der Endpunkt der [!DNL Data Explorer] Server. |
+| `endpoint` | Der Endpunkt des [!DNL Data Explorer]-Servers. |
 | `database` | Der Name der [!DNL Data Explorer] Datenbank. |
 | `tenant` | Die eindeutige Mandantenkennung, die für die Verbindung mit der [!DNL Data Explorer] Datenbank. |
 | `servicePrincipalId` | Die eindeutige Dienstprinzipal-ID, die für die Verbindung mit dem [!DNL Data Explorer] Datenbank. |

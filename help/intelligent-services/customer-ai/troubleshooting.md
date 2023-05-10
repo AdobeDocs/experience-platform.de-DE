@@ -7,7 +7,7 @@ description: Hier finden Sie Antworten auf häufige Fehler in der Kunden-KI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
 source-git-commit: 3bc750b5e1cf47cbca6b037d099936c80c926cf8
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 100%
 

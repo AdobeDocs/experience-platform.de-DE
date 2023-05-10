@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; API
+keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;
 title: Edge Projektions-API-Endpunkte
 type: Documentation
 description: Mit Adobe Experience Platform können Sie koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden in mehreren Kanälen in Echtzeit bereitstellen, indem Sie die richtigen Daten bei Änderungen sofort verfügbar machen und kontinuierlich aktualisieren. Dies geschieht mithilfe von Edges, einem geografisch platzierten Server, der Daten speichert und für Anwendungen leicht zugänglich macht.

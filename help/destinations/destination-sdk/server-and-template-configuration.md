@@ -4,7 +4,7 @@ title: Konfigurationsoptionen für Server- und Vorlagenspezifikationen im Destin
 exl-id: cf493ed5-0bdb-4b90-b84d-73926a566a2a
 source-git-commit: a08201c4bc71b0e37202133836e9347ed4d3cd6b
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '419'
 ht-degree: 100%
 
 ---
@@ -30,7 +30,7 @@ Dieser Prozess stellt Benutzerdaten als eine Reihe von HTTP-Nachrichten an Ihre 
 | `templatingStrategy` | Zeichenfolge | *Erforderlich.* <ul><li>Verwenden Sie `PEBBLE_V1`, wenn Sie im Feld `value` ein Makro anstelle eines festen Werts verwenden. Verwenden Sie diese Option, wenn Sie einen Endpunkt wie `https://api.moviestar.com/data/{{customerData.region}}/items` haben. </li><li> Verwenden Sie `NONE`, wenn auf der Adobe-Seite keine Transformation erforderlich ist, z. B. wenn Sie einen Endpunkt wie `https://api.moviestar.com/data/items` haben. </li></ul> |
 | `value` | Zeichenfolge | *Erforderlich.* Geben Sie die Adresse des API-Endpunkts ein, mit dem sich Experience Platform verbinden soll. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Vorlagenspezifikationen {#template-specs}
 
@@ -75,4 +75,4 @@ Mit der Vorlagenspezifikation können Sie konfigurieren, wie Sie die exportierte
 | `value` | Zeichenfolge | *Erforderlich.* Diese Zeichenfolge ist die von Sonderzeichen bereinigte Version, die die Daten von Platform-Kunden in das Format umwandelt, das Ihr Service erwartet. <br> Informationen zum Schreiben der Vorlage finden Sie im Abschnitt [Verwenden von Vorlagen](./message-format.md#using-templating). <br> Weitere Informationen zur Bereinigung von Zeichen finden Sie im Abschnitt [RFC-JSON-Standard, Abschnitt 7](https://tools.ietf.org/html/rfc8259#section-7). <br> Ein einfaches Beispiel finden Sie unter [Umwandlung von Profilattributen](./message-format.md#attributes). |
 | `contentType` | Zeichenfolge | *Erforderlich.* Der Content-Typ, den Ihr Server akzeptiert. Dieser Wert ist höchstwahrscheinlich `application/json`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

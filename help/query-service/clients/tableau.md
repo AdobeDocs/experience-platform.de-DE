@@ -7,11 +7,11 @@ exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '447'
-ht-degree: 1%
+ht-degree: 12%
 
 ---
 
-# Verbinden [!DNL Tableau] zu Query Service
+# Verbinden von [!DNL Tableau] mit dem Abfrage-Service
 
 Dieses Dokument enthält Informationen zum Verbinden [!DNL Tableau] mit Adobe Experience Platform [!DNL Query Service].
 
@@ -36,7 +36,7 @@ Vergewissern Sie sich, dass Sie die **[!UICONTROL SSL erforderlich]** vor dem Ve
 
 >[!IMPORTANT]
 >
->Verschachtelte Datenstrukturen in BI-Tools von Drittanbietern können reduziert werden, um ihre Benutzerfreundlichkeit zu verbessern und den erforderlichen Arbeitsaufwand zum Abrufen, Analysieren, Transformieren und Berichten von Daten zu reduzieren. Weitere Informationen finden Sie in der Dokumentation unter[`FLATTEN` Funktion](../essential-concepts/flatten-nested-data.md) Anweisungen zum Aktivieren dieser Einstellung beim Herstellen einer Verbindung zu einer Datenbank.
+>Verschachtelte Datenstrukturen in BI-Tools von Drittanbietern können vereinfacht werden, um ihre Benutzerfreundlichkeit zu verbessern und den erforderlichen Arbeitsaufwand beim Abrufen, Analysieren, Transformieren und Berichten von Daten zu reduzieren. Anweisungen zum Aktivieren dieser Einstellung beim Herstellen einer Verbindung zu einer Datenbank finden Sie in der Dokumentation zur Funktion [`FLATTEN`](../essential-concepts/flatten-nested-data.md).
 
 Bestätigen Sie nach dem Ausfüllen aller Anmeldedaten Ihre Einstellungen, um fortzufahren. Sie haben jetzt eine Verbindung mit Adobe Experience Platform hergestellt.
 

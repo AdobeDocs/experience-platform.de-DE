@@ -130,8 +130,8 @@ Die MA-Erweiterung legt die `get-instance` und die freigegebenen `media-heartbea
 
       | Eigenschaft | Beschreibung | Erforderlich |
       | :--- | :--- | :--- |
-      | Online-Videoanbieter | Name der Online-Videoplattform, über die der Inhalt verteilt wird. | Nein. Überschreibt den während der Erweiterungskonfiguration definierten Wert, sofern vorhanden. |
-      | Player-Name | Name des verwendeten Medienplayers, z. B. „AVPlayer“, „HTML5-Player“, „Mein anwenderspezifischer Player“. | Nein. Überschreibt den während der Erweiterungskonfiguration definierten Wert, sofern vorhanden. |
+      | Online Video Provider | Name der Online-Videoplattform, über die der Inhalt verteilt wird. | Nein. Überschreibt den während der Erweiterungskonfiguration definierten Wert, sofern vorhanden. |
+      | Player Name | Name des verwendeten Medienplayers, z. B. „AVPlayer“, „HTML5-Player“, „Mein anwenderspezifischer Player“. | Nein. Überschreibt den während der Erweiterungskonfiguration definierten Wert, sofern vorhanden. |
       | Kanal | Kanalnamen-Eigenschaft | Nein. Überschreibt den während der Erweiterungskonfiguration definierten Wert, sofern vorhanden. |
    **Wert zurückgeben:** Eine Zusage, die entweder mit einer `MediaHeartbeat`-Instanz aufgelöst oder mit einer Fehlermeldung zurückgewiesen wird.
 

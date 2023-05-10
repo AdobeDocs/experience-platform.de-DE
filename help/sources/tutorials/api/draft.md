@@ -3,8 +3,9 @@ keywords: Experience Platform;Startseite;beliebte Themen;Flow Service;
 title: Entwurf von Datenflüssen mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Ihre Datenflüsse mithilfe der Flow Service-API in einen Entwurfsstatus versetzen.
 badge: label="New Feature" type="Positive"
-source-git-commit: d093e34ae4b353d1ed6db922b6da66cf23f25c48
-workflow-type: ht
+exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+workflow-type: tm+mt
 source-wordcount: '591'
 ht-degree: 100%
 

@@ -681,7 +681,7 @@ Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen
 
 In diesem Tutorial haben Sie einen Quell-Connector erstellt, um Daten aus einem CRM-System nach Plan zu erfassen. Eingehende Daten können jetzt von nachgelagerten Platform-Services wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
-* [Übersicht über das Echtzeit-Kundenprofil](../../../../profile/home.md)
+* [Übersicht zum Echtzeit-Kundenprofil](../../../../profile/home.md)
 * [Übersicht über Data Science Workspace](../../../../data-science-workspace/home.md)
 
 ## Anhang

@@ -4,7 +4,7 @@ title: Handbuch zur Fehlerbehebung bei der Datenvorbereitung
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zur Adobe Experience Platform-Datenvorbereitung.
 exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
 source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '342'
 ht-degree: 100%
 

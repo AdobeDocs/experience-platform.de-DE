@@ -6,7 +6,7 @@ exl-id: 88707dca-3c7a-43c7-9d71-473ad9715fc6
 source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
 workflow-type: tm+mt
 source-wordcount: '478'
-ht-degree: 47%
+ht-degree: 59%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 47%
 
 >[!NOTE]
 >
->Die [!DNL Teradata Vantage] -Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
+>Die [!DNL Teradata Vantage]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von als Beta gekennzeichneten Quellen finden Sie unter [Quellen – Übersicht](../../../../home.md#terms-and-conditions).
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -87,7 +87,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `auth.params.connectionString` | Die Verbindungszeichenfolge, über die die Verbindung zu Ihrem [!DNL Teradata Vantage] -Instanz. Das Verbindungszeichenfolgenmuster für [!DNL Teradata Vantage] is `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. |
-| `connectionSpec.id` | Die [!DNL Teradata Vantage] Verbindungsspezifikations-ID: `2fa8af9c-2d1a-43ea-a253-f00a00c74412`. |
+| `connectionSpec.id` | Die [!DNL Teradata Vantage]-Verbindungsspezifikations-ID: `2fa8af9c-2d1a-43ea-a253-f00a00c74412`. |
 
 **Antwort**
 
@@ -100,7 +100,7 @@ Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließ
 }
 ```
 
-In diesem Tutorial haben Sie eine [!DNL Teradata Vantage] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basis-Verbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL Teradata Vantage]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
-* [Struktur und Inhalt Ihrer Datentabellen mithilfe des [!DNL Flow Service] API](../../explore/tabular.md)
+* [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um Datenbankdaten mit der [!DNL Flow Service] API](../../collect/database-nosql.md)

@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über den Marketing-XDM-Dat
 exl-id: b5ac0127-15fe-42b6-b7fc-2fbcda7e7e27
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '140'
-ht-degree: 7%
+source-wordcount: '137'
+ht-degree: 5%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 7%
 | `campaignName` | Zeichenfolge | Der Name der Marketing-Kampagne, z. B. `50%_DISCOUNT_USA` oder `50%_DISCOUNT_ASIA`. |
 | `trackingCode` | Zeichenfolge | Der Trackingcode, mit dem die Marketing-Kampagne identifiziert werden kann, mit der das Ereignis verknüpft ist. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 

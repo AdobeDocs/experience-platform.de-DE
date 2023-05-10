@@ -8,7 +8,7 @@ exl-id: 37f831c1-7c82-462a-8338-a0bcaaf08cd1
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '479'
-ht-degree: 70%
+ht-degree: 71%
 
 ---
 
@@ -90,7 +90,7 @@ curl -X POST \
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `auth.params.connectionString` | Die Verbindungszeichenfolge, die mit Ihrer [!DNL HP Vertica] -Konto. Das Verbindungszeichenfolgenmuster für [!DNL HP Vertica] ist: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | Die [!DNL HP Vertica] Verbindungsspezifikations-ID: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
+| `connectionSpec.id` | Die [!DNL HP Vertica]-Verbindungsspezifikations-ID: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
 
 **Antwort**
 

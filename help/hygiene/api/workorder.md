@@ -6,8 +6,8 @@ hide: true
 hidefromtoc: true
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '1029'
-ht-degree: 70%
+source-wordcount: '1011'
+ht-degree: 74%
 
 ---
 
@@ -20,7 +20,7 @@ Die `/workorder` -Endpunkt in der Data Hygiene-API ermöglicht es Ihnen, Löscha
 >Löschanfragen von Datensätzen stehen nur für Unternehmen zur Verfügung, die **Adobe Gesundheitsschild**.
 >
 >
->Löschvorgänge von Datensätzen dienen zur Datenbereinigung, zum Entfernen anonymer Daten oder zur Datenminimierung. Sie sind **not** für Anfragen von Datensubjekten nach Datenschutzbestimmungen wie der Datenschutz-Grundverordnung (DSGVO) verwendet werden. Verwenden Sie für alle Anwendungsfälle der Kompatibilität Folgendes: [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) anstatt.
+>Löschvorgänge von Datensätzen dienen zur Datenbereinigung, zum Entfernen anonymer Daten oder zur Datenminimierung. Sie dürfen **nicht** für Anfragen zu den Rechten der betroffenen Personen (Compliance) verwendet werden, da sie sich auf Datenschutzbestimmungen wie die Datenschutz-Grundverordnung (DSGVO) beziehen. Verwenden Sie stattdessen [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) für alle Compliance-Anwendungsfälle.
 
 ## Erste Schritte
 
@@ -84,7 +84,7 @@ curl -X POST \
 | `description` | Eine Beschreibung für die Anfrage zum Löschen von Datensätzen. |
 | `identities` | Ein Array mit den Identitäten von mindestens einem Benutzer, dessen Informationen Sie löschen möchten. Jede Identität besteht aus einem [Identity-Namespace](../../identity-service/namespaces.md) und einem Wert:<ul><li>`namespace`: enthält die einzige Zeichenfolgen-Eigenschaft `code`, die den Identity-Namespace darstellt. </li><li>`id`: der Identitätswert.</ul>Wenn `datasetId` einen einzelnen Datensatz spezifiziert, muss jede Entität unter `identities` denselben Identity-Namespace wie die primäre Identität des Schemas verwenden.<br><br>Wenn `datasetId` auf `ALL` festgelegt ist, ist das `identities`-Array nicht auf einen einzigen Namespace beschränkt, da jeder Datensatz anders sein kann. Ihre Anfragen sind aber auf die Namespaces beschränkt, die Ihrer Organisation zur Verfügung stehen, wie von [Identity Service](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces) spezifiziert. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -118,7 +118,7 @@ Eine erfolgreiche Antwort gibt die Details des Löschvorgangs des Datensatzes zu
 | `createdBy` | Der Benutzer, der den Löschauftrag erstellt hat. |
 | `datasetId` | ID des Datensatzes, der Gegenstand der Anfrage ist. Wenn die Anfrage alle Datensätze betrifft, wird der Wert auf `ALL` gesetzt |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Abrufen des Status eines Datensatzlöschens (#lookup)
 
@@ -134,7 +134,7 @@ GET /workorder/{WORK_ORDER_ID}
 | --- | --- |
 | `{WORK_ORDER_ID}` | Die `workorderId` des Datensatzes löschen, den Sie nachschlagen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -211,7 +211,7 @@ PUT /workorder{WORK_ORDER_ID}
 | --- | --- |
 | `{WORK_ORDER_ID}` | Die `workorderId` des Datensatzes löschen, den Sie nachschlagen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -233,7 +233,7 @@ curl -X GET \
 | `displayName` | Ein aktualisierter Anzeigename für die Löschanfrage zum Datensatz. |
 | `description` | Eine aktualisierte Beschreibung für die Anfrage zum Löschen von Datensätzen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -285,4 +285,4 @@ Eine erfolgreiche Antwort gibt die Details des Löschvorgangs des Datensatzes zu
 | `datasetId` | ID des Datensatzes, der Gegenstand der Anfrage ist. Wenn die Anfrage alle Datensätze betrifft, wird der Wert auf `ALL` gesetzt |
 | `productStatusDetails` | Array, das den aktuellen Status der nachgelagerten Prozesse im Zusammenhang mit der Anfrage auflistet. Jedes Array-Objekt enthält die folgenden Eigenschaften:<ul><li>`productName`: Name des nachgelagerten Services.</li><li>`productStatus`: Aktueller Verarbeitungsstatus der Anfrage von dem nachgelagerten Service.</li><li>`createdAt`: Zeitstempel, der angibt, wann der letzte Status von dem Service veröffentlicht wurde.</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

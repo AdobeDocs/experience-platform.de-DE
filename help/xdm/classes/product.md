@@ -4,8 +4,8 @@ description: Dieses Dokument bietet einen Überblick über die Produktklasse im 
 exl-id: 911680ae-b761-4945-9ad3-0233eaea89b0
 source-git-commit: fdd68e5a94d841992a6f8abe10f3cffe0ebb6794
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 21%
+source-wordcount: '212'
+ht-degree: 20%
 
 ---
 
@@ -26,7 +26,7 @@ Im Experience-Datenmodell (XDM) wird die [!UICONTROL Produkt] -Klasse erfasst de
 | `productName` | Zeichenfolge | Der Name des Produkts. |
 | `productRating` | Zeichenfolge | Die Kundenüberprüfungsbewertung des Produkts. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Kompatible Feldergruppen {#field-groups}
 

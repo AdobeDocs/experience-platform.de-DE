@@ -4,8 +4,8 @@ title: API-Vorgänge für Zieltests
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '646'
-ht-degree: 14%
+source-wordcount: '643'
+ht-degree: 15%
 
 ---
 
@@ -25,7 +25,7 @@ Sie können die [API zur Profilerstellung](./sample-profile-generation-api.md) ,
 
 >[!IMPORTANT]
 >
->* Um diese API verwenden zu können, müssen Sie über eine bestehende Verbindung zu Ihrem Ziel in der Experience Platform-Benutzeroberfläche verfügen. Lesen [Verbindung zum Ziel herstellen](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) und [Profile und Segmente für ein Ziel aktivieren](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) für weitere Informationen. Nachdem Sie die Verbindung zu Ihrem Ziel hergestellt haben, rufen Sie die ID der Zielinstanz ab, die Sie in API-Aufrufen an diesen Endpunkt von der URL verwenden sollten, wenn [Durchsuchen einer Verbindung mit Ihrem Ziel](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
+>* Um diese API verwenden zu können, müssen Sie über eine bestehende Verbindung zu Ihrem Ziel in der Experience Platform-Benutzeroberfläche verfügen. Lesen [Verbindung zum Ziel herstellen](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=de) und [Profile und Segmente für ein Ziel aktivieren](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) für weitere Informationen. Nachdem Sie die Verbindung zu Ihrem Ziel hergestellt haben, rufen Sie die ID der Zielinstanz ab, die Sie in API-Aufrufen an diesen Endpunkt von der URL verwenden sollten, wenn [Durchsuchen einer Verbindung mit Ihrem Ziel](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
    >![UI-Bild, wie Sie die Ziel-Instanz-ID abrufen](./assets/get-destination-instance-id.png)
 
 
@@ -161,7 +161,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 zusammen mit der API-Antwort 
 | `results.httpCalls.response` | Enthält die Antwort, die die Adobe von Ihrem Ziel erhalten hat. |
 | `inputProfiles` | Umfasst die Profile, die beim Aufruf an Ihr Ziel exportiert wurden. Die Profile stimmen mit Ihrem Quellschema überein. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Testen Sie Ihre Zielkonfiguration mit Profilen, die zum Aufruf hinzugefügt wurden. {#test-with-added-profiles}
 

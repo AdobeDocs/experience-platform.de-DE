@@ -429,5 +429,5 @@ Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenfluss
 
 In diesem Tutorial haben Sie einen Quell-Connector erstellt, um Parquet-Daten aus Ihrem Drittanbieter-Cloud-Speicher auf geplanter Basis zu erfassen. Eingehende Daten können jetzt von nachgelagerten [!DNL Platform]-Services verwendet werden, wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace]. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
-- [Übersicht über das Echtzeit-Kundenprofil](../../../profile/home.md)
+- [Übersicht zum Echtzeit-Kundenprofil](../../../profile/home.md)
 - [Übersicht über Data Science Workspace](../../../data-science-workspace/home.md)

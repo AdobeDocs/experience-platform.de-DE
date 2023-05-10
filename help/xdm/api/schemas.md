@@ -6,7 +6,7 @@ description: Mit dem Endpunkt /schemas in der Schema Registry-API können Sie XD
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1468'
+source-wordcount: '1441'
 ht-degree: 21%
 
 ---
@@ -38,7 +38,7 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | Der Container, der die Schemas enthält, die Sie abrufen möchten: `global` für von Adoben erstellte Schemata oder `tenant` für Schemas, die Ihrem Unternehmen gehören. |
 | `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Siehe [Anhang](./appendix.md#query) für eine Liste der verfügbaren Parameter. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -61,7 +61,7 @@ Das Antwortformat hängt von der `Accept` -Kopfzeile, die in der Anfrage gesende
 | `application/vnd.adobe.xed-id+json` | Gibt eine kurze Zusammenfassung jeder Ressource zurück. Dies ist die empfohlene Kopfzeile für die Auflistung von Ressourcen. (Limit: 300) |
 | `application/vnd.adobe.xed+json` | Gibt für jede Ressource das vollständige JSON-Schema mit dem ursprünglichen `$ref` und `allOf` enthalten. (Limit: 300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -112,7 +112,7 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 | `{CONTAINER_ID}` | Der Container, der das Schema enthält, das Sie abrufen möchten: `global` für ein von der Adobe erstelltes Schema oder `tenant` für ein Schema, das Ihrer Organisation gehört. |
 | `{SCHEMA_ID}` | Die `meta:altId` oder URL-kodiert `$id` des Schemas, das Sie nachschlagen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -139,7 +139,7 @@ Das Antwortformat hängt von der `Accept` -Kopfzeile, die in der Anfrage gesende
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` und `allOf` aufgelöst, einschließlich Deskriptoren. |
 | `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` und `allOf` aufgelöst, verfügt über Titel und Beschreibungen. Veraltete Felder werden mit einem `meta:status` Attribut `deprecated`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -236,7 +236,7 @@ curl -X POST \
 | --- | --- |
 | `allOf` | Ein Array von Objekten, wobei jedes Objekt auf eine Klasse oder Feldergruppe verweist, deren Felder vom Schema implementiert werden. Jedes Objekt enthält eine einzelne Eigenschaft (`$ref`), deren Wert die `$id` der Klasse oder Feldergruppe, die das neue Schema implementiert. Es muss eine Klasse mit null oder mehr zusätzlichen Feldergruppen bereitgestellt werden. Im obigen Beispiel wird das einzelne Objekt im `allOf` -Array ist die Klasse des Schemas. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -297,7 +297,7 @@ PUT /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | Die `meta:altId` oder URL-kodiert `$id` des Schemas, das Sie neu schreiben möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -362,7 +362,7 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück.
 
 ## Einen Teil eines Schemas aktualisieren {#patch}
 
-Sie können einen Teil eines Schemas mithilfe einer PATCH-Anfrage aktualisieren. Die [!DNL Schema Registry] unterstützt alle standardmäßigen JSON Patch-Vorgänge, einschließlich `add`, `remove`und `replace`. Weitere Informationen zum JSON Patch finden Sie im Abschnitt [API-Grundlagenhandbuch](../../landing/api-fundamentals.md#json-patch).
+Sie können einen Teil eines Schemas mithilfe einer PATCH-Anfrage aktualisieren. Die [!DNL Schema Registry] unterstützt alle standardmäßigen JSON Patch-Vorgänge, einschließlich `add`, `remove`und `replace`. Weitere Informationen zu JSON-Patch-Vorgängen finden Sie im [API-Grundlagenhandbuch](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
@@ -380,7 +380,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | Die URL-kodierte `$id` URI oder `meta:altId` des Schemas, das Sie aktualisieren möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -471,7 +471,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | Die URL-kodierte `$id` URI oder `meta:altId` des Schemas, das Sie aktivieren möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -554,7 +554,7 @@ DELETE /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | Die URL-kodierte `$id` URI oder `meta:altId` des Schemas, das Sie löschen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 

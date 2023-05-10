@@ -1,8 +1,9 @@
 ---
 title: Erstellen einer Customer.io-Quellverbindung und eines Datenflusses in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung von Customer.io erstellen.
-badge: "Beta"
-source-git-commit: 9d6a4b5f60f7895e2c1833493926db147064f3f1
+badge: Beta
+exl-id: 7655a34c-808a-46e3-94e3-022a433755a4
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1233'
 ht-degree: 20%

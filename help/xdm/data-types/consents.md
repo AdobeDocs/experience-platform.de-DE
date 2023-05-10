@@ -5,8 +5,8 @@ description: Der Datentyp Einverständnis für Datenschutz, Personalisierung und
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '2058'
-ht-degree: 3%
+source-wordcount: '2034'
+ht-degree: 2%
 
 ---
 
@@ -20,7 +20,7 @@ In diesem Dokument werden die Struktur und die beabsichtigte Verwendung der Feld
 
 Dieses Dokument erfordert ein Verständnis von XDM und die Verwendung der Schemas in [!DNL Experience Platform]. Lesen Sie die folgende Dokumentation, bevor Sie fortfahren:
 
-* [XDM-System – Übersicht](https://www.adobe.com/go/xdm-home-en)
+* [XDM-System – Übersicht](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=de)
 * [Grundlagen der Schemakomposition](https://www.adobe.com/go/xdm-schema-best-practices-en)
 
 ## Datentypstruktur {#structure}
@@ -141,7 +141,7 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, bei dem die [!UICO
 | --- | --- |
 | `val` | Die vom Kunden bereitgestellte Entscheidung für die Zustimmung für diesen Anwendungsfall. Siehe [Anhang](#choice-values) für akzeptierte Werte und Definitionen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### `adID`
 
@@ -159,7 +159,7 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, bei dem die [!UICO
 | `idType` | Der Anzeigen-ID-Typ, entweder `IDFA` für Apple ID für Advertiser oder `GAID` für die Advertiser-ID von Google, auch Android Advertiser ID (AAID) genannt. |
 | `val` | Die vom Kunden bereitgestellte Entscheidung für die Zustimmung für diesen Anwendungsfall. Siehe [Anhang](#choice-values) für akzeptierte Werte und Definitionen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### `share`
 
@@ -175,7 +175,7 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, bei dem die [!UICO
 | --- | --- |
 | `val` | Die vom Kunden bereitgestellte Entscheidung für die Zustimmung für diesen Anwendungsfall. Siehe [Anhang](#choice-values) für akzeptierte Werte und Definitionen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### `personalize` {#personalize}
 
@@ -200,7 +200,7 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, bei dem die [!UICO
 | `content` | Stellt die Voreinstellungen des Kunden für personalisierte Inhalte auf Ihrer Website oder in Ihrer Anwendung dar. |
 | `val` | Die vom Kunden bereitgestellte Personalisierungseinstellung für den angegebenen Anwendungsfall. In Fällen, in denen der Kunde nicht zur Einwilligung aufgefordert werden muss, sollte der Wert dieses Felds die Grundlage angeben, auf der die Personalisierung erfolgen soll. Siehe [Anhang](#choice-values) für akzeptierte Werte und Definitionen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### `marketing` {#marketing}
 
@@ -236,7 +236,7 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, bei dem die [!UICO
 | `time` | Ein ISO 8601-Zeitstempel, mit dem die Marketing-Voreinstellung geändert wurde (falls zutreffend). Beachten Sie Folgendes: Wenn der Zeitstempel für eine individuelle Voreinstellung mit dem unter `metadata`festgelegt ist, wird dieses Feld nicht für diese Voreinstellung festgelegt. |
 | `reason` | Wenn ein Kunde einen Marketing-Anwendungsfall ablehnt, stellt dieses Zeichenfolgenfeld den Grund dar, warum der Kunde sich abgemeldet hat. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### `metadata`
 
@@ -252,7 +252,7 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, bei dem die [!UICO
 | --- | --- |
 | `time` | Ein ISO 8601-Zeitstempel zum letzten Mal, wenn die Zustimmungen und Voreinstellungen des Kunden aktualisiert wurden. Dieses Feld kann verwendet werden, anstatt Zeitstempel auf individuelle Voreinstellungen anzuwenden, um Belastung und Komplexität zu reduzieren. Bereitstellung einer `time` Wert unter einer individuellen Voreinstellung setzt die `metadata` Zeitstempel für diese bestimmte Voreinstellung. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Daten mithilfe des Datentyps erfassen {#ingest}
 
@@ -292,7 +292,7 @@ In der folgenden Tabelle sind die für `val`:
 | `VI` | Wichtiges Interesse des Einzelnen | Die Erhebung von Daten für den angegebenen Zweck ist erforderlich, um die lebenswichtigen Interessen des Einzelnen zu schützen. |
 | `PI` | Öffentliches Interesse | Die Erhebung von Daten für den festgelegten Zweck ist erforderlich, um eine Aufgabe im öffentlichen Interesse oder in Ausübung öffentlicher Gewalt zu erfüllen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Akzeptierte Werte für `preferred` {#preferred-values}
 
@@ -314,7 +314,7 @@ In der folgenden Tabelle sind die für `preferred`:
 | `none` | Kein bevorzugter Kanal. |
 | `unknown` | Der bevorzugte Kanal ist unbekannt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Voll [!UICONTROL Einverständnis und Voreinstellungen] schema {#full-schema}
 

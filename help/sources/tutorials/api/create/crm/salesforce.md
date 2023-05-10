@@ -8,7 +8,7 @@ exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '472'
-ht-degree: 68%
+ht-degree: 72%
 
 ---
 
@@ -93,7 +93,7 @@ curl -X POST \
 | `auth.params.username` | Der Benutzername, der mit Ihrer [!DNL Salesforce] -Konto. |
 | `auth.params.password` | Das Kennwort, das mit Ihrem [!DNL Salesforce] -Konto. |
 | `auth.params.securityToken` | Das Ihrem [!DNL Salesforce] -Konto. |
-| `connectionSpec.id` | Die [!DNL Salesforce] Verbindungsspezifikations-ID: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
+| `connectionSpec.id` | Die [!DNL Salesforce]-Verbindungsspezifikations-ID: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 **Antwort**
 
@@ -108,7 +108,7 @@ Eine erfolgreiche Antwort gibt die neu erstellte Basisverbindung zurück, einsch
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Salesforce] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL Salesforce]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um CRM-Daten mithilfe des [!DNL Flow Service] API](../../collect/crm.md)

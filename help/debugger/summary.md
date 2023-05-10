@@ -9,11 +9,11 @@ exl-id: 91234125-15c4-4111-9ee4-f3af093a3c4d
 source-git-commit: f94bba7eb4763230dae6794eb70a75f53a853c53
 workflow-type: tm+mt
 source-wordcount: '909'
-ht-degree: 74%
+ht-degree: 77%
 
 ---
 
-# Registerkarte &quot;Zusammenfassung&quot;
+# Registerkarte „Zusammenfassung“
 
 Um Adobe Experience Platform Debugger auszuführen, öffnen Sie die Seite, die Sie im Browser untersuchen möchten, und wählen Sie dann das Symbol (![](images/start-icon.jpg)) in Ihrer Browser-Leiste. Die Erweiterung wird im **Zusammenfassung** Registerkarte.
 
@@ -71,13 +71,13 @@ Experience Platform Debugger zeigt die folgenden Informationen zu den verschiede
  </tbody> 
 </table>
 
-**Adobe Experience Platform Tags**
+**Adobe Experience Platform-Tags**
 
 <table id="table_E9574975444A407887E26514D1BB1601"> 
  <tbody> 
   <tr> 
    <td colname="col1"> <p>Name </p> </td> 
-   <td colname="col2"> <p>Der Name des Tags <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html" format="https" scope="external"> property</a> </p> </td> 
+   <td colname="col2"> <p>Der Name des Tags <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=de" format="https" scope="external"> property</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Version </p> </td> 
@@ -89,7 +89,7 @@ Experience Platform Debugger zeigt die folgenden Informationen zu den verschiede
   </tr> 
   <tr> 
    <td colname="col1"> <p>Umgebung </p> </td> 
-   <td colname="col2"> <p>Die <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" format="https" scope="external"> Umgebung</a> von der Tag-Bibliothek verwendet </p> </td> 
+   <td colname="col2"> <p>Die <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=de" format="https" scope="external"> Umgebung</a> von der Tag-Bibliothek verwendet </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Erweiterungen </p> </td> 
@@ -139,7 +139,7 @@ Experience Platform Debugger zeigt die folgenden Informationen zu den verschiede
   </tr> 
   <tr> 
    <td colname="col1"> <p>Version </p> </td> 
-   <td colname="col2"> <p>Die Version der <a href="https://experienceleague.adobe.com/docs/analytics/import/data-sources/data-types-and-categories/datasrc-visitorid.html" format="html" scope="external">Besucher-ID</a>-Bibliothek. </p> </td> 
+   <td colname="col2"> <p>Die Version der <a href="https://experienceleague.adobe.com/docs/analytics/import/data-sources/data-types-and-categories/datasrc-visitorid.html?lang=de" format="html" scope="external">Besucher-ID</a>-Bibliothek. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -186,7 +186,7 @@ Experience Platform Debugger zeigt die folgenden Informationen zu den verschiede
   </tr> 
   <tr> 
    <td colname="col1"> <p>Angebot Name</p> </td> 
-   <td colname="col2"> <p>Name des Target-<a href="https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html" format="html" scope="external"> Angebots</a>. Ist nur dann ohne Authentifizierung verfügbar, wenn Sie den Debugging-Ereignis-Listener in Ihren Code oder Tag-Manager implementieren und die erforderlichen <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> Antwort-Tokens</a> in der Target-Benutzeroberfläche aktivieren. </p> </td> 
+   <td colname="col2"> <p>Name des Target-<a href="https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=de" format="html" scope="external"> Angebots</a>. Ist nur dann ohne Authentifizierung verfügbar, wenn Sie den Debugging-Ereignis-Listener in Ihren Code oder Tag-Manager implementieren und die erforderlichen <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> Antwort-Tokens</a> in der Target-Benutzeroberfläche aktivieren. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Offer ID </p> </td> 

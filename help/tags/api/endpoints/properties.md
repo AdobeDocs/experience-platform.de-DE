@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie den /properties-Endpunkt in der Reactor-API a
 exl-id: 7830c519-312f-4f73-b3f5-64ab0420d902
 source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1104'
 ht-degree: 100%
 
 ---
@@ -47,7 +47,7 @@ GET /companies/{COMPANY_ID}/properties
 | --- | --- |
 | `COMPANY_ID` | Die `id` des Unternehmens, dem die Eigenschaften gehören, die Sie auflisten möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -271,7 +271,7 @@ GET /properties/{PROPERTY_ID}
 | --- | --- |
 | `PROPERTY_ID` | Die `id` der Eigenschaft, die Sie suchen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -394,7 +394,7 @@ POST /company/{COMPANY_ID}/properties
 | --- | --- |
 | `COMPANY_ID` | Die `id` des Unternehmens, unter dem Sie die Eigenschaft definieren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -437,7 +437,7 @@ curl -X POST \
 | `attributes.undefined_vars_return_empty` | Ein boolescher Wert dafür, ob nicht definierte Variablen für diese Eigenschaft als leer zurückgegeben werden sollen. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `properties` lauten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -548,7 +548,7 @@ PATCH /properties/{PROPERTY_ID}
 | --- | --- |
 | `PROPERTY_ID` | Die `id` der Eigenschaft, die Sie aktualisieren möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -581,7 +581,7 @@ curl -X PATCH \
 | `id` | Die `id` der Eigenschaft, die Sie aktualisieren möchten. Diese sollte mit dem `{PROPERTY_ID}`-Wert übereinstimmen, der im Anfragepfad angegeben ist. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `properties` lauten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -692,7 +692,7 @@ DELETE /properties/{PROPERTY_ID}
 | --- | --- |
 | `PROPERTY_ID` | Die `id` der Eigenschaft, die Sie löschen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -732,7 +732,7 @@ GET  /properties/{PROPERTY_ID}/callbacks
 | --- | --- |
 | `{PROPERTY_ID}` | Die `id` der Eigenschaft, deren Callbacks Sie auflisten möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -807,7 +807,7 @@ GET  /properties/{PROPERTY_ID}/data_elements
 | --- | --- |
 | `{PROPERTY_ID}` | Die `id` der Eigenschaft, deren Datenelemente Sie auflisten möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -948,7 +948,7 @@ GET  /properties/{PROPERTY_ID}/environments
 | --- | --- |
 | `{PROPERTY_ID}` | Die `id` der Eigenschaft, deren Umgebungen Sie auflisten möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -1068,7 +1068,7 @@ GET  /properties/{PROPERTY_ID}/extensions
 | --- | --- |
 | `{PROPERTY_ID}` | Die `id` der Eigenschaft, deren Erweiterungen Sie auflisten möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -1199,7 +1199,7 @@ GET  /properties/{PROPERTY_ID}/hosts
 | --- | --- |
 | `{PROPERTY_ID}` | Die `id` der Eigenschaft, deren Hosts Sie auflisten möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -1277,7 +1277,7 @@ GET  /properties/{PROPERTY_ID}/rules
 | --- | --- |
 | `{PROPERTY_ID}` | Die `id` der Eigenschaft, deren Regeln Sie auflisten möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -1390,7 +1390,7 @@ GET /properties/{PROPERTY_ID}/company
 | --- | --- |
 | `{PROPERTY_ID}` | Die `id` der Eigenschaft, deren Unternehmen Sie suchen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 

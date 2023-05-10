@@ -7,7 +7,7 @@ exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
 source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '328'
-ht-degree: 1%
+ht-degree: 26%
 
 ---
 
@@ -19,11 +19,11 @@ In Adobe Experience Platform können Sie verschiedene Komponenten vorhandener Ak
 
 Gehen Sie wie folgt vor, um vorhandene Aktivierungsdatenflüsse zu bearbeiten:
 
-1. Melden Sie sich bei der [Experience Platform-Benutzeroberfläche](https://platform.adobe.com/) und wählen Sie **[!UICONTROL Ziele]** über die linke Navigationsleiste. Auswählen **[!UICONTROL Durchsuchen]** aus der oberen Kopfzeile, um Ihre vorhandenen Ziel-Datenflüsse anzuzeigen.
+1. Melden Sie sich bei der [Experience Platform-Benutzeroberfläche](https://platform.adobe.com/) an und wählen Sie **[!UICONTROL Ziele]** über die linke Navigationsleiste aus. Wählen Sie **[!UICONTROL Durchsuchen]** in der oberen Kopfzeile aus, um Ihre vorhandenen Ziel-Datenflüsse anzuzeigen.
 
    ![Ziele durchsuchen](../assets/ui/edit-activation/browse-destinations.png)
 
-2. Filtersymbol auswählen ![Filter-Symbol](../assets/ui/edit-activation/filter.png) oben links, um das Sortierungsfenster zu öffnen. Das Sortierungsfenster bietet eine Liste aller Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Datenflüssen anzuzeigen, die mit dem ausgewählten Ziel verknüpft sind.
+2. Wählen Sie das Symbol ![Filter](../assets/ui/edit-activation/filter.png) oben links, um das Sortier-Bedienfeld zu öffnen. Das Sortier-Bedienfeld bietet eine Liste aller Ihrer Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Datenflüssen anzuzeigen, die mit dem ausgewählten Ziel verknüpft sind.
 
    ![Ziele filtern](../assets/ui/edit-activation/filter-destinations.png)
 

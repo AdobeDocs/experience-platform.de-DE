@@ -4,8 +4,8 @@ description: Dieses Dokument bietet einen Überblick über die XDM Business Acco
 exl-id: abe4c919-a680-4aad-918e-6e56cae8bd4d
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '264'
-ht-degree: 6%
+source-wordcount: '261'
+ht-degree: 5%
 
 ---
 
@@ -26,6 +26,6 @@ ht-degree: 6%
 | `_id` | Zeichenfolge | Eine eindeutige Kennung für den Datensatz. Dies ist ein systemgenerierter Wert, der getrennt vom `accountKey` Kennung. |
 | `isDeleted` | Boolesch | Gibt an, ob diese Kontoentität in Marketo Engage gelöscht wurde.<br><br>Bei Verwendung von [Marketo-Quell-Connector](../../../sources/connectors/adobe-applications/marketo/marketo.md), werden alle in Marketo gelöschten Datensätze automatisch in das Echtzeit-Kundenprofil übernommen. Datensätze, die sich auf diese Profile beziehen, können jedoch im Data Lake bestehen bleiben. Durch Festlegen von `isDeleted` nach `true`können Sie mithilfe des Felds herausfiltern, welche Datensätze bei der Abfrage des Data Lake aus Ihren Quellen gelöscht wurden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Siehe Handbuch unter [Schemabeziehungen in Real-Time CDP B2B Edition](../../tutorials/relationship-b2b.md) um zu erfahren, wie diese Klasse konzeptionell mit den anderen B2B-Klassen in Beziehung steht und wie Sie diese Beziehungen in der Adobe Experience Platform-Benutzeroberfläche herstellen können.

@@ -3,7 +3,8 @@ solution: Experience Platform
 title: Aktivieren von Segmenten für dateibasierte Ziele mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie mit der Flow Service-API Dateien mit qualifizierten Profilen in Cloud-Speicher-Ziele exportieren können.
 type: Tutorial
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '4337'
 ht-degree: 11%

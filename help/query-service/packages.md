@@ -4,8 +4,8 @@ description: Im folgenden Dokument werden die für Query Service verfügbaren Fu
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
-source-wordcount: '720'
-ht-degree: 8%
+source-wordcount: '714'
+ht-degree: 7%
 
 ---
 
@@ -41,7 +41,7 @@ In der folgenden Tabelle werden die wichtigsten Query Service-Berechtigungen bas
 | Überwachungskapazität | Ja | Ja |
 | Setup-Funktion für Abfragewarnungen | Nein | Ja |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Zugangssteuerung
 
@@ -58,7 +58,7 @@ In der folgenden Tabelle sind die Auswirkungen der [!DNL Manage Queries] Berecht
 | [!DNL Manage Queries] (ohne Schreibdatenberechtigung) | Ermöglicht Zugriff auf die Ausführung von Ad-hoc-Abfragen |
 | [!DNL Manage Queries] (mit Schreibberechtigung für Daten) | Ermöglicht Zugriff auf die Ausführung von Batch-Abfragen |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Sandbox-Unterstützung
 

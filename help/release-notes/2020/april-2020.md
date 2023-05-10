@@ -15,7 +15,7 @@ ht-degree: 70%
 
 # Adobe Experience Platform – Versionshinweise
 
-**Versionsdatum: 8. April 2020**
+**Veröffentlichungsdatum: 8. April 2020**
 
 Neue Funktionen in Adobe Experience Platform:
 * [[!DNL Intelligent Services]](#intelligent)

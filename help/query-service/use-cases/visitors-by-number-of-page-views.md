@@ -2,7 +2,8 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Abfragedienst; Query Service; Erlebnisereignisabfragen; Erlebnisereignisabfrage; Erlebnisereignisabfrage;
 title: Besucher nach Anzahl Seitenansichten auflisten
 description: Erfahren Sie, wie Sie Abfragen schreiben, die Erlebnisereignisse verwenden, um eine Liste von Besuchern abzurufen, die nach der Anzahl der Seitenansichten organisiert ist.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 6e8eed0c-838e-4cd0-ae8c-453114fbf4ea
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 1%

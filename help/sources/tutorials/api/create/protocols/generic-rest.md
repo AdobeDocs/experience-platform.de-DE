@@ -8,7 +8,7 @@ exl-id: 6b414868-503e-49d5-8f4a-5b2fc003dab0
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '945'
-ht-degree: 59%
+ht-degree: 60%
 
 ---
 
@@ -187,7 +187,7 @@ Eine erfolgreiche Antwort gibt die neu erstellte Basisverbindung zurück, einsch
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Generic REST API] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL Generic REST API]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um Protokolldaten mit der [!DNL Flow Service] API](../../collect/protocols.md)

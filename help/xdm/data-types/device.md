@@ -6,7 +6,7 @@ description: Dieses Dokument bietet einen Überblick über den Geräte-XDM-Daten
 exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '326'
 ht-degree: 18%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 18%
 | `typeID` | Zeichenfolge | Eine Kennung für das Gerät. Dies kann eine Kennung von DeviceAtlas oder einem anderen Dienst sein, der die verwendete Hardware identifiziert. |
 | `typeIDService` | Zeichenfolge | Der Namespace des Diensts, mit dem der Gerätetyp identifiziert wird. Siehe [Anhang](#typeIDService) für Details zu akzeptierten Werten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 

@@ -7,7 +7,7 @@ description: Erfahren Sie, wie Sie Apache Cassandra mithilfe der Flow Service-AP
 source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '620'
-ht-degree: 44%
+ht-degree: 50%
 
 ---
 
@@ -35,8 +35,8 @@ Damit [!DNL Flow Service] eine Verbindung mit [!DNL Cassandra] herstellen kann, 
 | ---------- | ----------- |
 | `host` | Die IP-Adresse oder der Hostname der [!DNL Cassandra] Server. |
 | `port` | Der TCP-Port, der die [!DNL Cassandra] -Server verwendet , um auf Client-Verbindungen zu warten. Der Standard-Port ist `9042`. |
-| `username` | Der Benutzername, mit dem die Verbindung zum [!DNL Cassandra] -Server zur Authentifizierung. |
-| `password` | Das Kennwort, mit dem eine Verbindung hergestellt werden soll [!DNL Cassandra] -Server zur Authentifizierung. |
+| `username` | Der Benutzername, mit dem eine Verbindung zum [!DNL Cassandra]-Server zwecks Authentifizierung hergestellt wird. |
+| `password` | Das Kennwort, mit dem eine Verbindung zum [!DNL Cassandra]-Server zwecks Authentifizierung hergestellt wird. |
 | `connectionSpec.id` | Die eindeutige Kennung, die zum Erstellen einer Verbindung erforderlich ist. Die Verbindungsspezifikations-ID für [!DNL Cassandra] ist `a8f4d393-1a6b-43f3-931f-91a16ed857f4`. |
 
 Weitere Informationen zu den ersten Schritten finden Sie unter [Dieses Cassandra-Dokument](https://cassandra.apache.org/doc/latest/operating/security.html#authentication).
@@ -106,8 +106,8 @@ curl -X POST \
 | --------- | ----------- |
 | `auth.params.host` | Die IP-Adresse oder der Hostname der [!DNL Cassandra] Server. |
 | `auth.params.port` | Der TCP-Port, der die [!DNL Cassandra] -Server verwendet , um auf Client-Verbindungen zu warten. Der Standard-Port ist `9042`. |
-| `auth.params.username` | Der Benutzername, mit dem die Verbindung zum [!DNL Cassandra] -Server zur Authentifizierung. |
-| `auth.params.password` | Das Kennwort, mit dem eine Verbindung hergestellt werden soll [!DNL Cassandra] -Server zur Authentifizierung. |
+| `auth.params.username` | Der Benutzername, mit dem eine Verbindung zum [!DNL Cassandra]-Server zwecks Authentifizierung hergestellt wird. |
+| `auth.params.password` | Das Kennwort, mit dem eine Verbindung zum [!DNL Cassandra]-Server zwecks Authentifizierung hergestellt wird. |
 | `connectionSpec.id` | Die [!DNL Cassandra]-Verbindungsspezifikations-ID: `a8f4d393-1a6b-43f3-931f-91a16ed857f4`. |
 
 **Antwort**

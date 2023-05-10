@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über den Datentyp "Commerc
 exl-id: c9cc569b-1a91-4a6e-8bfd-7f8ec07d01d4
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 17%
+source-wordcount: '338'
+ht-degree: 16%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 17%
 | `purchases` | [[!UICONTROL Maßnahme]](./measure.md) | Wird verwendet, um zu verfolgen, wann eine Bestellung akzeptiert wurde. Das Kaufereignis ist die einzige erforderliche Aktion bei einer Commerce-Konversion. Auf das Kaufereignis muss eine Produktliste verwiesen werden. |
 | `saveForLaters` | [[!UICONTROL Maßnahme]](./measure.md) | Eine Produktliste wird für die zukünftige Verwendung gespeichert, z. B. eine Wunschliste. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

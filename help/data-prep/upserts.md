@@ -6,13 +6,13 @@ exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1169'
-ht-degree: 8%
+ht-degree: 12%
 
 ---
 
 # Teilweise Zeilenaktualisierungen senden an [!DNL Profile Service] using [!DNL Data Prep]
 
-Streaming-Aktualisierungen in [!DNL Data Prep] ermöglicht es Ihnen, Teilzeilenaktualisierungen an zu senden [!DNL Profile Service] -Daten sowie beim Erstellen und Erstellen neuer Identitätslinks mit einer einzelnen API-Anfrage.
+Das Streamen von Upserts in [!DNL Data Prep] ermöglicht es Ihnen, partielle Zeilenaktualisierungen an [!DNL Profile Service]-Daten zu senden und gleichzeitig neue Identitätsverknüpfungen mit einer einzigen API-Anfrage zu erstellen und herzustellen.
 
 Durch Streaming-Uploads können Sie das Format Ihrer Daten beibehalten und diese Daten in [!DNL Profile Service] PATCH-Anfragen während der Aufnahme. Basierend auf den von Ihnen bereitgestellten Eingaben, [!DNL Data Prep] ermöglicht es Ihnen, eine einzige API-Payload zu senden und die Daten in beide zu übersetzen [!DNL Profile Service] PATCH und [!DNL Identity Service] ERSTELLEN SIE -Anfragen.
 
@@ -23,8 +23,8 @@ Dieses Dokument enthält Informationen zum Streamen von Uploads in [!DNL Data Pr
 Diese Übersicht setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [[!DNL Data Prep]](./home.md): [!DNL Data Prep] ermöglicht Dateningenieuren das Zuordnen, Transformieren und Validieren von Daten in und aus dem Experience-Datenmodell (XDM).
-* [[!DNL Identity Service]](../identity-service/home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
-* [Echtzeit-Kundenprofil](../profile/home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [[!DNL Identity Service]](../identity-service/home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kundinnen und Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
+* [Echtzeit-Kundenprofil](../profile/home.md): Das Echtzeit-Kundenprofli bietet ein einheitliches, kundenspezifisches Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 * [Quellen](../sources/home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 
 ## Verwenden von Streaming-Uploads in [!DNL Data Prep] {#streaming-upserts-in-data-prep}

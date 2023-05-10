@@ -8,7 +8,7 @@ exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '477'
-ht-degree: 64%
+ht-degree: 65%
 
 ---
 
@@ -98,7 +98,7 @@ curl -X POST \
 | `auth.params.database` | Die mit Ihrer [!DNL Amazon Redshift] -Konto. |
 | `auth.params.password` | Das Kennwort, das mit Ihrem [!DNL Amazon Redshift] -Konto. |
 | `auth.params.username` | Der Benutzername, der mit Ihrer [!DNL Amazon Redshift] -Konto. |
-| `connectionSpec.id` | Die [!DNL Amazon Redshift] Verbindungsspezifikations-ID: `3416976c-a9ca-4bba-901a-1f08f66978ff` |
+| `connectionSpec.id` | Die [!DNL Amazon Redshift]-Verbindungsspezifikations-ID: `3416976c-a9ca-4bba-901a-1f08f66978ff` |
 
 **Antwort**
 

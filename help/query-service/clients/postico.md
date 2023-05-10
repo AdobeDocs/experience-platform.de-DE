@@ -7,7 +7,7 @@ exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
 source-git-commit: 9fe7e618d251867c90c88f8bee6ef5863ae78f60
 workflow-type: tm+mt
 source-wordcount: '416'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
@@ -31,7 +31,7 @@ Verbindung herstellen [!DNL Postico] zu Query Service, öffnen Sie [!DNL Postico
 | **[!DNL Password]** | Diese alphanumerische Zeichenfolge ist Ihre Experience Platform **[!UICONTROL Passwort]** Berechtigung. Wenn Sie nicht ablaufende Anmeldeinformationen verwenden möchten, ist dieser Wert die verketteten Argumente aus dem `technicalAccountID` und `credential` in die JSON-Konfigurationsdatei heruntergeladen wurde. Der Kennwortwert hat folgende Form: {technicalAccountId}:{credential}. Die JSON-Konfigurationsdatei für nicht ablaufende Anmeldeinformationen ist ein einmaliger Download während der Initialisierung, von dem die Adobe keine Kopie aufbewahrt. |
 | **[!DNL Database]** | Verwenden Ihrer Experience Platform **[!UICONTROL Datenbank]** credential value: `prod:all`. |
 
-Weitere Informationen zum Auffinden Ihres Datenbanknamens, Hosts, Ports und Ihrer Anmeldedaten finden Sie in der [Handbuch zu Anmeldeinformationen](../ui/credentials.md). Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei [!DNL Platform], wählen Sie **[!UICONTROL Abfragen]**, gefolgt von **[!UICONTROL Anmeldeinformationen]**.
+Weiterführende Informationen dazu, wie Sie Datenbanknamen, Hosts, Ports und Anmeldeinformationen finden können, stehen im [Handbuch zu Anmeldeinformationen](../ui/credentials.md). Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei [!DNL Platform], wählen Sie **[!UICONTROL Abfragen]**, gefolgt von **[!UICONTROL Anmeldeinformationen]**.
 
 Nachdem Sie Ihre Anmeldedaten eingefügt haben, wählen Sie **[!DNL Connect]** , um eine Verbindung mit Query Service herzustellen.
 

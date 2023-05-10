@@ -3,8 +3,8 @@ title: Adobe Experience Platform – Versionshinweise März 2022
 description: Versionshinweise März 2022 für Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
-workflow-type: ht
-source-wordcount: '1194'
+workflow-type: tm+mt
+source-wordcount: '1176'
 ht-degree: 100%
 
 ---
@@ -37,7 +37,7 @@ Mit Experience Platform können Sie die Benutzeraktivität in Verbindung mit ver
 | Auditprotokolle für Datensatz, Schema, Klasse, Feldergruppe, Datentyp, Sandbox, Ziel, Segment, Zusammenführungsrichtlinie, berechnetes Attribut, Produktprofil und Konto (Adobe) | Dies sind die Ressourcen, die von Auditprotokollen aufgezeichnet werden. Wenn die Funktion aktiviert ist, werden Daten automatisch in den Auditprotokollen erfasst, sobald eine Aktivität stattfindet. Sie müssen die Datenerfassung in Auditprotokollen nicht manuell aktivieren. |
 | Auditprotokolle exportieren | Auditprotokolle können als `CSV`- oder `JSON`-Datei heruntergeladen werden. Die generierten Dateien werden direkt auf Ihrem Computer gespeichert. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weiterführende Informationen zu Auditprotokollen in Platform finden Sie im Abschnitt [Übersicht über Auditprotokolle](../../landing/governance-privacy-security/audit-logs/overview.md).
 
@@ -67,7 +67,7 @@ Mit Experience Platform können Sie ereignisbasierte Warnhinweise zu Adobe Exper
 | --- | --- |
 | Neue Warnhinweisregeln | Für Quellen im Zusammenhang mit der Datenaufnahme stehen nun zwei neue Warnhinweisregeln zur Verfügung. Die aktualisierte Liste der Warnhinweistypen finden Sie in der Übersicht zu [Warnhinweisregeln](../../observability/alerts/rules.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zu Warnhinweisen in Platform finden Sie im Abschnitt [Warnhinweise – Übersicht](../../observability/alerts/overview.md).
 
@@ -88,7 +88,7 @@ Im Dashboard „Profile“ wird eine Momentaufnahme der Attributdaten (Datensatz
 | Widget „Nicht segmentierte Profile nach Identität“ | Dieses Widget kategorisiert die Gesamtzahl der nicht segmentierten Profile anhand ihrer eindeutigen Kennung. Die Daten werden in einem Balkendiagramm visualisiert. Weitere Informationen dazu finden Sie in der [Dokumentation zu Standard-Widgets für Profile](../../dashboards/guides/profiles.md#standard-widgets). |
 | Widget „Einzelidentitätsprofile“ | Dieses Widget gibt die Anzahl der Profile in Ihrem Unternehmen an, die zur Erstellung ihrer Identität nur über einen einzigen ID-Typ verfügen (entweder eine E-Mail oder eine ECID). Weitere Informationen dazu finden Sie in der [Dokumentation zu Standard-Widgets für Profile](../../dashboards/guides/profiles.md#standard-widgets). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weiterführende Informationen zu Profil-Dashboards finden Sie im Abschnitt [Profil-Dashboards – Übersicht](../../dashboards/guides/profiles.md).
 
@@ -102,7 +102,7 @@ Im Dashboard „Ziele“ finden Sie eine Momentaufnahme der Ziele, die Ihr Unter
 | --- | --- |
 | Zielanzahl-Widget | Dieses Widget gibt die Gesamtzahl der verfügbaren Endpunkte an, an denen eine Zielgruppe im System aktiviert und bereitgestellt werden kann. Diese Zahl umfasst sowohl aktive als auch inaktive Ziele. Weitere Informationen dazu finden Sie in der [Dokumentation zum Standard-Widget für Ziele](../../dashboards/guides/destinations.md#standard-widgets). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weiterführende Informationen zu Ziel-Dashboards in Platform finden Sie im Abschnitt [Ziele-Dashboards – Übersicht](../../dashboards/guides/destinations.md).
 
@@ -129,7 +129,7 @@ Weitere Informationen zur Datenerfassung in Platform finden Sie in der [Übersic
 | --- | --- |
 | `table_exists` | Mit diesem neuen Befehl wird bestätigt, ob im System derzeit eine Tabelle vorhanden ist oder nicht. Der Befehl gibt einen booleschen Wert zurück: `true`, wenn eine Tabelle **vorhanden** ist, und `false`, wenn **keine** Tabelle vorhanden ist. Weitere Informationen finden Sie in der [SQL-Syntax-Dokumentation](../../query-service/sql/syntax.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zu den verfügbaren Funktionen finden Sie im Abschnitt [Query Service – Übersicht](../../query-service/home.md).
 
@@ -147,6 +147,6 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 | Allgemeine Verfügbarkeit der neuen [!DNL Oracle Eloqua]-Quelle | Sie können jetzt die [!DNL Oracle Eloqua]-Quelle verwenden, um Daten aus Ihrer [!DNL Oracle Eloqua]-Instanz (Konto, Kampagne, Kontakte) nahtlos in Platform aufzunehmen. Weitere Informationen finden Sie in der Dokumentation zur [Erstellung einer  [!DNL Oracle Eloqua] -Quellverbindung](../../sources/connectors/marketing-automation/oracle-eloqua.md). |
 | API-Verbesserungen für [!DNL Data Landing Zone] | Die [!DNL Data Landing Zone]-Quelle unterstützt jetzt die automatische Erkennung von Dateieigenschaften bei Verwendung der [!DNL Flow Service]-API. Weitere Informationen finden Sie in der Dokumentation zur [Erstellung einer  [!DNL Data Landing Zone] -Quellverbindung](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zu Quellen finden Sie im Abschnitt [Quellen – Übersicht](../../sources/home.md).

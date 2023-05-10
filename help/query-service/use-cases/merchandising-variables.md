@@ -1,14 +1,15 @@
 ---
 title: Rückgabe und Verwendung von Merchandising-Variablen aus Analysedaten
 description: Erfahren Sie, wie Sie XDM-Felder und Beispielabfragen bereitstellen, um auf die Merchandising-Variablen in Ihren Analytics-Datensätzen zuzugreifen.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 1e2ae095-4152-446f-8b66-dae5512d690e
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1112'
-ht-degree: 14%
+ht-degree: 15%
 
 ---
 
-# Merchandising-Variablen aus Analysedaten zurückgeben und verwenden
+# Zurückgeben und Verwenden von Merchandising-Variablen aus Analysedaten 
 
 Verwenden Sie Query Service , um die Daten zu verwalten, die von Adobe Analytics als Datensätze in Adobe Experience Platform erfasst werden. Die folgenden Abschnitte enthalten Beispielabfragen, mit denen Sie auf die Merchandising-Variablen in Ihren Analytics-Datensätzen zugreifen können. Weitere Informationen finden Sie in der Dokumentation zu [Erfassen und Zuordnen von Adobe Analytics-Daten](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/mapping/analytics.html?lang=de) über die Analytics-Quelle
 

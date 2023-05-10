@@ -5,8 +5,8 @@ description: Dieses Dokument bietet einen Überblick über das Feld "Allgemeine 
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '900'
-ht-degree: 4%
+source-wordcount: '891'
+ht-degree: 3%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 4%
 | `time` | DateTime | Ein ISO 8601-Zeitstempel, mit dem die Marketing-Voreinstellung geändert wurde (falls zutreffend). |
 | `val` | Zeichenfolge | Die vom Kunden bereitgestellte bevorzugte Auswahl für diesen Marketing-Anwendungsfall. Siehe [nächster Abschnitt](#val) für akzeptierte Werte und Definitionen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `val` {#val}
 
@@ -49,7 +49,7 @@ In der folgenden Tabelle sind die für `val`:
 | `VI` | Wichtiges Interesse des Einzelnen | Die Erhebung von Daten für den angegebenen Zweck ist erforderlich, um die lebenswichtigen Interessen des Einzelnen zu schützen. |
 | `PI` | Öffentliches Interesse | Die Erhebung von Daten für den festgelegten Zweck ist erforderlich, um eine Aufgabe im öffentlichen Interesse oder in Ausübung öffentlicher Gewalt zu erfüllen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `subscriptions` {#subscriptions}
 
@@ -99,9 +99,9 @@ Die folgende JSON stellt ein Beispiel für ein Marketing-Feld für einen Marketi
 | `topics` | Ein Array von Zeichenfolgen, die die Interessensgebiete darstellen, die ein Kunde abonniert hat und die zum Senden relevanter Inhalte verwendet werden können. |
 | `subscribers` | Ein optionales Feld vom Typ Zuordnung , das eine Reihe von Kennungen (wie E-Mail-Adressen oder Telefonnummern) darstellt, die ein bestimmtes Abonnement abonniert haben. Jeder Schlüssel in diesem Objekt stellt die betreffende Kennung dar und enthält zwei Untereigenschaften: <ul><li>`time`: Ein ISO 8601-Zeitstempel, der angibt, wann die Identität abonniert hat (falls zutreffend).</li><li>`source`: Die Quelle, aus der der Abonnent stammt. Dabei kann es sich um eine beliebige beschreibende Zeichenfolge handeln, sofern diese 15 Zeichen oder weniger umfasst.</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Weitere Ressourcen
+## Zusätzliche Ressourcen
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

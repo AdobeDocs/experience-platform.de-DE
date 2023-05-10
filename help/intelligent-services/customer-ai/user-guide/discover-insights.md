@@ -227,7 +227,7 @@ Die AUC spiegelt die Stärke der Beziehung zwischen dem Rang nach Bewertung und 
 
 In diesem Dokument wurden die Einblicke einer Customer AI-Dienstinstanz beschrieben. Sie können jetzt mit dem Tutorial zum [Herunterladen von Bewertungen in Customer AI](./download-scores.md) oder die andere [Adobe Intelligent Services](../../home.md) Führer, die angeboten werden.
 
-## Weitere Ressourcen
+## Zusätzliche Ressourcen
 
 Im folgenden Video wird beschrieben, wie Sie mit Customer AI die Ausgabe der Modelle und Einflussfaktoren anzeigen können.
 

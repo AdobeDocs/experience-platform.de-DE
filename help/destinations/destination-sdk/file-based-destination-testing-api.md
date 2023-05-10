@@ -4,8 +4,8 @@ title: Testen Ihres dateibasierten Ziels mit Beispielprofilen
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
 source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
-source-wordcount: '830'
-ht-degree: 10%
+source-wordcount: '827'
+ht-degree: 12%
 
 ---
 
@@ -115,7 +115,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 zusammen mit der Antwort-Payl
 | `results` | Gibt die ID der Zielinstanz und die IDs der Flussausführung zurück, die Sie zum Aufrufen der [Ergebnis-API](file-based-destination-results-api.md), um die Integration weiter zu testen. |
 | `inputProfiles` | Gibt die von der API automatisch generierten Beispielprofile zurück. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Testen Sie Ihre Zielkonfiguration mit Profilen, die zum Aufruf hinzugefügt wurden. {#test-with-added-profiles}
 

@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über den Datentyp des Expe
 exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 12%
+source-wordcount: '187'
+ht-degree: 11%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 12%
 | `name` | Zeichenfolge | Der normative Name, der für diesen Web-Link verwendet wird. Dies wird zu Classification-Zwecken verwendet. |
 | `type` | Zeichenfolge | Der Linktyp. Diese Eigenschaft muss einem der folgenden Enum-Werte entsprechen: <li> `download` </li> <li> `exit` </li> <li> `other` </li> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

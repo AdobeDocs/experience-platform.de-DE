@@ -9,7 +9,7 @@ exl-id: c2ff700a-1e36-4ba2-876c-9f8b56344241
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '167'
-ht-degree: 0%
+ht-degree: 61%
 
 ---
 
@@ -19,12 +19,12 @@ Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Attribution A
 
 ## Zugriff auf Attribution AI in Chrome-Inkognito nicht möglich
 
-Das Laden von Fehlern im Inkognito-Modus von Google Chrome ist auf Aktualisierungen in den Sicherheitseinstellungen des Google Chrome-Inkognito-Modus zurückzuführen. Das Problem wird aktiv mit Chrome bearbeitet, um experience.adobe.com zu einer vertrauenswürdigen Domäne zu machen.
+Ladefehler im Inkognito-Modus von Google Chrome sind auf Aktualisierungen in den Sicherheitseinstellungen des Inkognito-Modus von Google Chrome zurückzuführen. An dem Problem wird aktiv mit Chrome gearbeitet, um experience.adobe.com als vertrauenswürdige Domain einzustufen.
 
 <img src="./images/faq/error.PNG" width="500" /><br />
 
 ### Empfohlene Fehlerbehebung
 
-Um dieses Problem zu umgehen, müssen Sie experience.adobe.com als Site hinzufügen, die immer Cookies verwenden kann. Beginnen Sie, indem Sie zu **chrome://settings/cookies**. Scrollen Sie dann nach unten zum **Benutzerdefinierte Verhaltensweisen** und anschließend die **Hinzufügen** neben &quot;Sites, die immer Cookies verwenden können&quot;. Kopieren Sie in das angezeigte Popover-Element und fügen Sie `[*.]experience.adobe.com` und wählen Sie dann **Einschließen von Drittanbieter-Cookies** auf dieser Site aktivieren. Wählen Sie nach Abschluss **Hinzufügen** und das Attribution AI in Inkognito neu laden.
+Um dieses Problem zu umgehen, müssen Sie experience.adobe.com als Website hinzufügen, die immer Cookies verwenden darf. Navigieren Sie zunächst zu **chrome://settings/cookies**. Scrollen Sie dann nach unten zum Abschnitt **Benutzerdefinierte Einstellungen** und wählen Sie die Schaltfläche **Hinzufügen** neben „Websites, die immer Cookies verwenden dürfen“ aus. Kopieren Sie `[*.]experience.adobe.com` und fügen Sie dies in das angezeigte Popup ein. Aktivieren Sie dann das Kontrollkästchen **Einschließlich Cookies von Drittanbietern auf dieser Website**. Wählen Sie nach Abschluss **Hinzufügen** und das Attribution AI in Inkognito neu laden.
 
-![empfohlene Korrektur](./images/faq/cookies2.gif)
+![Empfohlene Fehlerbehebung](./images/faq/cookies2.gif)

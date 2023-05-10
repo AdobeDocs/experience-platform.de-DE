@@ -8,7 +8,7 @@ exl-id: 83c1dbe6-975f-4e3b-a7bf-166eb5106dd2
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '470'
-ht-degree: 52%
+ht-degree: 53%
 
 ---
 
@@ -92,7 +92,7 @@ curl -X POST \
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `auth.params.connectionString` | Die Verbindungszeichenfolge, die mit Ihrer [!DNL IBM DB2] -Konto. |
-| `connectionSpec.id` | Die [!DNL IBM DB2] Verbindungsspezifikations-ID: `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
+| `connectionSpec.id` | Die [!DNL IBM DB2]-Verbindungsspezifikations-ID: `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
 
 **Antwort**
 

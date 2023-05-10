@@ -5,8 +5,8 @@ description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp "Gen
 exl-id: f1f14eb7-21dd-45ca-8fb4-68f397cfa697
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '612'
-ht-degree: 4%
+source-wordcount: '606'
+ht-degree: 3%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 4%
 | --- | --- | --- |
 | `val` | Zeichenfolge | Die vom Kunden bereitgestellte Entscheidung für die Zustimmung für diesen Anwendungsfall. Die nachstehende Tabelle enthält akzeptierte Werte und Definitionen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 In der folgenden Tabelle sind die für `val`:
 
@@ -42,7 +42,7 @@ In der folgenden Tabelle sind die für `val`:
 | `VI` | Wichtiges Interesse des Einzelnen | Die Erhebung von Daten für den angegebenen Zweck ist erforderlich, um die lebenswichtigen Interessen des Einzelnen zu schützen. |
 | `PI` | Öffentliches Interesse | Die Erhebung von Daten für den festgelegten Zweck ist erforderlich, um eine Aufgabe im öffentlichen Interesse oder in Ausübung öffentlicher Gewalt zu erfüllen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

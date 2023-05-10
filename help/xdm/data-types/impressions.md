@@ -4,8 +4,8 @@ description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp "Imp
 exl-id: 1e758043-a41e-45f7-ae8b-514990d0649e
 source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 7%
+source-wordcount: '138'
+ht-degree: 5%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 7%
 | `selected` | Ganzzahl | Die Häufigkeit, mit der das Impressionselement ausgewählt oder angeklickt wurde. |
 | `type` | Zeichenfolge | Die Art der Impression. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 

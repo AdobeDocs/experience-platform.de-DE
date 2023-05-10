@@ -8,13 +8,13 @@ exl-id: f1c90ccd-48a9-4668-b2ac-eacd5bec0b91
 source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '284'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
 # Protokollierung von Adobe Analytics for Target (A4T) im Platform Web SDK
 
-Bei der Verwendung von Adobe Target zur Personalisierung können Sie auswählen, welches System für die Leistungsmessung verwendet werden soll. Jeder [Target-Aktivität](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) ermöglicht Ihnen die Auswahl zwischen Target-Berichterstellung und Adobe Analytics-Berichterstellung.
+Bei der Verwendung von Adobe Target zur Personalisierung können Sie auswählen, welches System für die Leistungsmessung verwendet werden soll. Jeder [Target-Aktivität](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=de) ermöglicht Ihnen die Auswahl zwischen Target-Berichterstellung und Adobe Analytics-Berichterstellung.
 
 Wenn Sie Analytics-Berichte verwenden, muss Adobe Target Analytics Folgendes mitteilen:
 

@@ -6,7 +6,7 @@ description: Mit dem Endpunkt /classes in der Schema Registry-API können Sie XD
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1508'
 ht-degree: 23%
 
 ---
@@ -47,7 +47,7 @@ GET /{CONTAINER_ID}/classes?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | Der Container, aus dem Sie Klassen abrufen möchten: `global` für von Adoben erstellte Klassen oder `tenant` für Kurse, die Ihrer Organisation gehören. |
 | `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Siehe [Anhang](./appendix.md#query) für eine Liste der verfügbaren Parameter. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -70,7 +70,7 @@ Das Antwortformat hängt von der `Accept` -Kopfzeile, die in der Anfrage gesende
 | `application/vnd.adobe.xed-id+json` | Gibt eine kurze Zusammenfassung jeder Ressource zurück. Dies ist die empfohlene Kopfzeile für die Auflistung von Ressourcen. (Limit: 300) |
 | `application/vnd.adobe.xed+json` | Gibt für jede Ressource die vollständige JSON-Klasse mit der ursprünglichen `$ref` und `allOf` enthalten. (Limit: 300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -127,7 +127,7 @@ GET /{CONTAINER_ID}/classes/{CLASS_ID}
 | `{CONTAINER_ID}` | Der Container, der die Klasse enthält, die Sie abrufen möchten: `global` für eine von der Adobe erstellte Klasse oder `tenant` für eine Klasse, die Ihrem Unternehmen gehört. |
 | `{CLASS_ID}` | Die `meta:altId` oder URL-kodiert `$id` der Klasse, die Sie nachschlagen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -153,7 +153,7 @@ Das Antwortformat hängt von der `Accept` -Kopfzeile, die in der Anfrage gesende
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` und `allOf` aufgelöst, keine Titel oder Beschreibungen. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` und `allOf` aufgelöst, einschließlich Deskriptoren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -320,7 +320,7 @@ curl -X POST \
 | `_{TENANT_ID}` | Der `TENANT_ID`-Namespace für Ihre Organisation. Alle von Ihrem Unternehmen erstellten Ressourcen müssen diese Eigenschaft enthalten, um Kollisionen mit anderen Ressourcen in der [!DNL Schema Registry]. |
 | `allOf` | Eine Liste mit Ressourcen, deren Eigenschaften von der neuen Klasse geerbt werden sollen. Eines der `$ref`-Objekte im Array definiert das Verhalten der Klasse. In diesem Beispiel übernimmt die Klasse das Verhalten „record“. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -390,7 +390,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload m
 
 Durchführen einer GET-Anfrage an [alle Klassen auflisten](#list) im `tenant` -Container würde nun die Property-Klasse enthalten. Sie können auch [Anfrage zum Nachschlagen (GET) ausführen](#lookup) mit der URL-kodierten `$id` , um die neue Klasse direkt anzuzeigen.
 
-## Klasse aktualisieren {#put}
+## Aktualisieren einer Klasse {#put}
 
 Sie können eine ganze Klasse durch einen PUT-Vorgang ersetzen und die Ressource im Wesentlichen neu schreiben. Beim Aktualisieren einer Klasse über eine PUT-Anfrage muss der Text alle Felder enthalten, die erforderlich sind, wenn [Erstellen einer neuen Klasse](#create) in einer POST-Anfrage.
 
@@ -408,7 +408,7 @@ PUT /tenant/classes/{CLASS_ID}
 | --- | --- |
 | `{CLASS_ID}` | Die `meta:altId` oder URL-kodiert `$id` der Klasse, die Sie neu schreiben möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -529,7 +529,7 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Klasse zurück.
 
 ## Aktualisieren eines Teils einer Klasse {#patch}
 
-Sie können einen Teil einer Klasse mithilfe einer PATCH-Anfrage aktualisieren. Die [!DNL Schema Registry] unterstützt alle standardmäßigen JSON Patch-Vorgänge, einschließlich `add`, `remove`und `replace`. Weitere Informationen zum JSON Patch finden Sie im Abschnitt [API-Grundlagenhandbuch](../../landing/api-fundamentals.md#json-patch).
+Sie können einen Teil einer Klasse mithilfe einer PATCH-Anfrage aktualisieren. Die [!DNL Schema Registry] unterstützt alle standardmäßigen JSON Patch-Vorgänge, einschließlich `add`, `remove`und `replace`. Weitere Informationen zu JSON-Patch-Vorgängen finden Sie im [API-Grundlagenhandbuch](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
@@ -545,7 +545,7 @@ PATCH /tenant/class/{CLASS_ID}
 | --- | --- |
 | `{CLASS_ID}` | Die URL-kodierte `$id` URI oder `meta:altId` der Klasse, die Sie aktualisieren möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -647,7 +647,7 @@ DELETE /tenant/classes/{CLASS_ID}
 | --- | --- |
 | `{CLASS_ID}` | Die URL-kodierte `$id` URI oder `meta:altId` der Klasse, die Sie löschen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 

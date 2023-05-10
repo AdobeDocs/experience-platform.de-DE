@@ -1,5 +1,5 @@
 ---
-keywords: Einblicke; Attributionsai; Attributionsai-Einblicke; AAI-Abfragedienst; Attributionsabfragen; Attributionsbewertungen
+keywords: Insights;Attributions-KI;Attributions-KI-Insights;AAI-Query-Service;Attributionsabfragen;Attributionsbewertungen
 feature: Attribution AI
 title: Analyse von Attributionsbewertungen mithilfe von Query Service
 description: Erfahren Sie, wie Sie mit Adobe Experience Platform Query Service Attribution AI-Bewertungen analysieren können.
@@ -7,7 +7,7 @@ exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
 source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
 workflow-type: tm+mt
 source-wordcount: '589'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 

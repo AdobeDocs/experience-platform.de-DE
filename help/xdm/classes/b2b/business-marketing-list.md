@@ -4,8 +4,8 @@ description: Dieses Dokument bietet einen Überblick über die XDM Business Mark
 exl-id: 510c5608-054d-4bed-91eb-22d84b5dc625
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 6%
+source-wordcount: '308'
+ht-degree: 5%
 
 ---
 
@@ -29,6 +29,6 @@ ht-degree: 6%
 | `marketingListID` | Zeichenfolge | Eine eindeutige ID für die Marketing-Listenentität. |
 | `marketingListName` | Zeichenfolge | Der Name der Marketing-Liste. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Siehe Handbuch unter [Schemabeziehungen in Real-Time CDP B2B Edition](../../tutorials/relationship-b2b.md) um zu erfahren, wie diese Klasse konzeptionell mit den anderen B2B-Klassen in Beziehung steht und wie Sie diese Beziehungen in der Adobe Experience Platform-Benutzeroberfläche herstellen können.

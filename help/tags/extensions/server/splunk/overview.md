@@ -4,7 +4,7 @@ description: Erfahren Sie mehr über die Splunk-Erweiterung für die Ereigniswei
 exl-id: 653b5897-493b-44f2-aeea-be492da2b108
 source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1051'
 ht-degree: 100%
 
 ---
@@ -24,7 +24,7 @@ Marketing-Teams können die Erweiterung für die folgenden Anwendungsfälle verw
 | Analyse des Kundenverhaltens | Unternehmen können Kundeninteraktions-Ereignisdaten von ihrer Website erfassen und relevante Ereignisse an Splunk weiterleiten. Marketing- und Analyse-Teams können dann nachfolgende Analysen innerhalb der Splunk-Plattform durchführen, um wichtige Benutzerinteraktionen und -verhaltensweisen zu verstehen. Die Splunk-Plattform kann verwendet werden, um Diagramme, Dashboards oder andere Visualisierungen zu generieren, um geschäftliche Stakeholder zu informieren. |
 | Skalierbare Suche bei großen Datensätzen | Unternehmen können Transaktions- oder Konversationseingaben als Ereignisdaten von der Website erfassen und Ereignisse an Splunk weiterleiten. Analyse-Teams können dann die skalierbaren Indexierungsfunktionen von Splunk nutzen, um große Datensätze zu filtern und zu verarbeiten, damit geschäftliche Einblicke gewonnen und fundierte Entscheidungen getroffen werden können. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Voraussetzungen {#prerequisites}
 

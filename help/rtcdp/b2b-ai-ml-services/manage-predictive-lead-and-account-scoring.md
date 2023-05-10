@@ -6,7 +6,7 @@ exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1018'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -58,7 +58,7 @@ Um den Prognosezeitrahmen zu konfigurieren, wählen Sie den Dropdown-Pfeil aus u
 
 Die ausgewählte Zusammenführungsrichtlinie bestimmt, wie die Feldwerte eines Personenprofils ausgewählt werden. Wählen Sie mithilfe des Dropdown-Pfeils die gewünschte Zusammenführungsrichtlinie aus und klicken Sie auf **[!UICONTROL Beenden]**.
 
-Die **[!UICONTROL Die Einrichtung der Auswertung ist abgeschlossen.]** angezeigt, in dem bestätigt wird, dass die neue Punktzahl erstellt wurde. Klicken Sie auf **[!UICONTROL OK]**.
+Die **[!UICONTROL Die Einrichtung der Auswertung ist abgeschlossen.]** angezeigt, in dem bestätigt wird, dass die neue Punktzahl erstellt wurde. Wählen Sie **[!UICONTROL OK]** aus.
 
 ![plas-score-complete](../assets/../b2b-ai-ml-services/assets/plas-score-complete.png)
 
@@ -156,5 +156,5 @@ Sie kehren zum **[!UICONTROL Dienste]** -Tab, wo die Punktzahl nicht mehr in der
 
 In diesem Tutorial können Sie jetzt erfolgreich Bewertungen erstellen und verwalten. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
-* [Prädiktive Lead- und Kontobewertung](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
+* [Prädiktives Lead- und Konto-Scoring](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
 * [Überwachen von prädiktiven Lead- und Kontobewertungsaufträgen](/help/dataflows/ui/b2b/monitor-profile-enrichment.md)

@@ -8,7 +8,7 @@ exl-id: c4ce452a-b4c5-46ab-83ab-61b296c271d0
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '434'
-ht-degree: 66%
+ht-degree: 70%
 
 ---
 
@@ -81,7 +81,7 @@ curl -X POST \
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `auth.params.connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung zu einem [!DNL GreenPlum] -Konto. Das Verbindungszeichenfolgenmuster lautet: `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | Die [!DNL GreenPlum] Verbindungsspezifikations-ID: `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
+| `connectionSpec.id` | Die [!DNL GreenPlum]-Verbindungsspezifikations-ID: `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
 **Antwort**
 
@@ -96,7 +96,7 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, ei
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL GreenPlum] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL GreenPlum]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um Datenbankdaten mit der [!DNL Flow Service] API](../../collect/database-nosql.md)

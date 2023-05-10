@@ -135,7 +135,7 @@ Der Aufruf dieses Datenelements gibt einen Wert zurück, der von den oben genann
 
 ### `getTimeParting`
 
-Ermöglicht die Einrichtung und Konfiguration der [`getTimeParting` Analytics-Plug-in](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimeparting.html). Die `getTimeParting` -Datenelement erfasst die Details zum Zeitpunkt, zu dem eine beliebige messbare Aktivität auf Ihrer Site stattfindet. Dieses Datenelement ist nützlich, wenn Sie Metriken nach wiederholbarer Zeitteilung über einen bestimmten Datumsbereich aufschlüsseln möchten. Sie können beispielsweise die Konversionsraten zwischen zwei verschiedenen Wochentagen vergleichen, z. B. alle Sonntage im Vergleich zu allen Donnerstagen. Sie können auch Tageszeiträume vergleichen, z. B. alle Morgen im Vergleich zu allen Abenden.
+Ermöglicht die Einrichtung und Konfiguration der [`getTimeParting` Analytics-Plug-in](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimeparting.html?lang=de). Die `getTimeParting` -Datenelement erfasst die Details zum Zeitpunkt, zu dem eine beliebige messbare Aktivität auf Ihrer Site stattfindet. Dieses Datenelement ist nützlich, wenn Sie Metriken nach wiederholbarer Zeitteilung über einen bestimmten Datumsbereich aufschlüsseln möchten. Sie können beispielsweise die Konversionsraten zwischen zwei verschiedenen Wochentagen vergleichen, z. B. alle Sonntage im Vergleich zu allen Donnerstagen. Sie können auch Tageszeiträume vergleichen, z. B. alle Morgen im Vergleich zu allen Abenden.
 
 Die `getTimeParting` -Datenelement verwendet das folgende Argument:
 

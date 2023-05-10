@@ -5,7 +5,7 @@ title: Datenerfassung – Übersicht
 description: Erfahren Sie mehr über die verschiedenen Technologien zur Erfassung von Daten zu Kundenerlebnissen in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 source-git-commit: 13c02dd5930905e3851ff147c0ea4d914e3dc6c7
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 100%
 

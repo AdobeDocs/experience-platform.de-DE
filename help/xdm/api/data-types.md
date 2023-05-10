@@ -6,7 +6,7 @@ description: Mit dem Endpunkt /datatypes in der Schema Registry-API können Sie 
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
 source-git-commit: 342da62b83d0d804b31744a580bcd3e38412ea51
 workflow-type: tm+mt
-source-wordcount: '1236'
+source-wordcount: '1215'
 ht-degree: 15%
 
 ---
@@ -38,7 +38,7 @@ GET /{CONTAINER_ID}/datatypes?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | Der Container, aus dem Sie Datentypen abrufen möchten: `global` für von der Adobe erstellte Datentypen oder `tenant` für Datentypen, die Ihrem Unternehmen gehören. |
 | `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Siehe [Anhang](./appendix.md#query) für eine Liste der verfügbaren Parameter. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -61,7 +61,7 @@ Das Antwortformat hängt von der `Accept` -Kopfzeile, die in der Anfrage gesende
 | `application/vnd.adobe.xed-id+json` | Gibt eine kurze Zusammenfassung jeder Ressource zurück. Dies ist die empfohlene Kopfzeile für die Auflistung von Ressourcen. (Limit: 300) |
 | `application/vnd.adobe.xed+json` | Gibt für jede Ressource den vollständigen JSON-Datentyp mit der ursprünglichen `$ref` und `allOf` enthalten. (Limit: 300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -112,7 +112,7 @@ GET /{CONTAINER_ID}/datatypes/{DATA_TYPE_ID}
 | `{CONTAINER_ID}` | Der Container, der den Datentyp enthält, den Sie abrufen möchten: `global` für einen von der Adobe erstellten Datentyp oder `tenant` für einen Datentyp, der Ihrem Unternehmen gehört. |
 | `{DATA_TYPE_ID}` | Die `meta:altId` oder URL-kodiert `$id` des Datentyps, den Sie nachschlagen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -138,7 +138,7 @@ Das Antwortformat hängt von der `Accept` -Kopfzeile, die in der Anfrage gesende
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` und `allOf` aufgelöst, keine Titel oder Beschreibungen. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` und `allOf` aufgelöst, einschließlich Deskriptoren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -351,7 +351,7 @@ Bei erfolgreicher Antwort wird der HTTP-Status-Code 201 (Erstellung bestätigt)
 
 Durchführen einer GET-Anfrage an [alle Datentypen auflisten](#list) im Mandanten-Container nun den Datentyp Eigenschaftendetails enthalten, oder Sie können [Anfrage zum Nachschlagen (GET) ausführen](#lookup) mit der URL-kodierten `$id` URI, um den neuen Datentyp direkt anzuzeigen.
 
-## Datentyp aktualisieren {#put}
+## Aktualisieren eines Datentyps {#put}
 
 Sie können einen ganzen Datentyp durch einen PUT-Vorgang ersetzen und die Ressource im Wesentlichen neu schreiben. Beim Aktualisieren eines Datentyps über eine PUT-Anfrage muss der Hauptteil alle Felder enthalten, die erforderlich sind, wenn [Erstellen eines neuen Datentyps](#create) in einer POST-Anfrage.
 
@@ -369,7 +369,7 @@ PUT /tenant/datatypes/{DATA_TYPE_ID}
 | --- | --- |
 | `{DATA_TYPE_ID}` | Die `meta:altId` oder URL-kodiert `$id` des Datentyps, den Sie neu schreiben möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -484,7 +484,7 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Datentyps zurück.
 
 ## Einen Teil eines Datentyps aktualisieren {#patch}
 
-Sie können einen Teil eines Datentyps mithilfe einer PATCH-Anfrage aktualisieren. Die [!DNL Schema Registry] unterstützt alle standardmäßigen JSON Patch-Vorgänge, einschließlich `add`, `remove`und `replace`. Weitere Informationen zum JSON Patch finden Sie im Abschnitt [API-Grundlagenhandbuch](../../landing/api-fundamentals.md#json-patch).
+Sie können einen Teil eines Datentyps mithilfe einer PATCH-Anfrage aktualisieren. Die [!DNL Schema Registry] unterstützt alle standardmäßigen JSON Patch-Vorgänge, einschließlich `add`, `remove`und `replace`. Weitere Informationen zu JSON-Patch-Vorgängen finden Sie im [API-Grundlagenhandbuch](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
@@ -500,7 +500,7 @@ PATCH /tenant/data type/{DATA_TYPE_ID}
 | --- | --- |
 | `{DATA_TYPE_ID}` | Die URL-kodierte `$id` URI oder `meta:altId` des Datentyps, den Sie aktualisieren möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -639,7 +639,7 @@ DELETE /tenant/datatypes/{DATA_TYPE_ID}
 | --- | --- |
 | `{DATA_TYPE_ID}` | Die URL-kodierte `$id` URI oder `meta:altId` des Datentyps, den Sie löschen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 

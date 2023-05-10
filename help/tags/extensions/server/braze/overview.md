@@ -3,15 +3,15 @@ keywords: Ereignisweiterleitungs-Erweiterung;Ausblenden;Ausblenden der Ereignisw
 title: Braze Event Forwarding-Erweiterung
 description: Diese Ereignisweiterleitungs-Erweiterung von Adobe Experience Platform sendet Adobe Experience Edge Network-Ereignisse an Braze.
 last-substantial-update: 2023-03-29T00:00:00Z
-source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
+exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1863'
 ht-degree: 6%
 
 ---
 
-
-# [!DNL Braze Track Events API] Ereignisweiterleitungs-Erweiterung
+# [!DNL Braze Track Events API]-Erweiterung zur Ereignisweiterleitung
 
 [[!DNL Braze]](https://www.braze.com) ist eine Kundeninteraktionsplattform, die kundenorientierte Interaktionen zwischen Verbrauchern und Marken in Echtzeit ermöglicht. Verwenden [!DNL Braze]können Sie Folgendes tun:
 

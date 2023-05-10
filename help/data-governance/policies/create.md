@@ -6,7 +6,7 @@ type: Tutorial
 description: Erfahren Sie, wie Sie mit der Richtlinien-Service-API eine Data-Governance-Richtlinie erstellen.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1199'
 ht-degree: 100%
 
@@ -14,7 +14,7 @@ ht-degree: 100%
 
 # Erstellen einer Data-Governance-Richtlinie in der API
 
-Mit der [Richtlinien-Service-API](https://www.adobe.io/experience-platform-apis/references/policy-service/) können Sie Data-Governance-Richtlinien erstellen und verwalten, um festzulegen, welche Marketingmaßnahmen für Daten ergriffen werden können, die bestimmte Datennutzungskennzeichnungen enthalten.
+Mit der [Richtlinien-Service-API](https://www.adobe.io/experience-platform-apis/references/policy-service/) können Sie Data-Governance-Richtlinien erstellen und verwalten, um festzulegen, welche Marketing-Maßnahmen für Daten ergriffen werden können, die bestimmte Datennutzungskennzeichnungen enthalten.
 
 Dieses Dokument enthält eine Schritt-für-Schritt-Anleitung zur Erstellung einer Governance-Richtlinie unter Verwendung der [!DNL Policy Service]-API.
 

@@ -4,13 +4,13 @@ solution: Experience Platform
 feature: Customer AI
 title: Zugriffskontrolle für Kundinnen- und Kunden-KI
 description: Dieses Dokument enthält Informationen zur attributbasierten Zugriffskontrolle für Kundinnen- und Kunden-KI.
-source-git-commit: 6f386d859b8553050ead266fad0e473c7cf7095e
-workflow-type: ht
+exl-id: 02e3b6a4-304a-4ac4-b07c-010531101feb
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 100%
 
 ---
-
 
 # Attributbasierte Zugriffssteuerung
 
@@ -18,7 +18,7 @@ ht-degree: 100%
 >
 >Die attributbasierte Zugriffssteuerung ist derzeit nur in einer eingeschränkten Version verfügbar.
 
-Die [attributbasierte Zugriffssteuerung](../../../access-control/abac/overview.md) ist eine Funktion von Adobe Experience Platform, mit der Admins den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen steuern können. Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. eine Bezeichnung, die einem Schemafeld oder Segment hinzugefügt wird. Administrierende definieren Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten.
+[Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Platform, mit der Administrierende den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen steuern können. ](../../../access-control/abac/overview.md) Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. eine Bezeichnung, die einem Schemafeld oder Segment hinzugefügt wird. Administrierende definieren Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten.
 
 Mit der attributbasierten Zugriffssteuerung können Sie Schemafelder des Experience-Datenmodells (XDM) mit Bezeichnungen versehen, die Organisations- oder Datennutzungsbereiche definieren. Parallel dazu können Admins die Benutzeroberfläche zur Verwaltung von Benutzenden und Rollen verwenden, um Zugriffsrichtlinien zu definieren, die XDM-Schemafelder abdecken, und den Zugriff, der Benutzenden oder Gruppen von Benutzenden (internen, externen oder Dritten) gewährt wird, besser verwalten. Darüber hinaus ermöglicht die attributbasierte Zugriffskontrolle Admins die Verwaltung des Zugriffs auf bestimmte Segmente.
 

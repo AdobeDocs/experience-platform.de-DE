@@ -5,7 +5,7 @@ description: Dieses Dokument enthält Informationen zu Nutzungsbeschränkungen f
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1029'
+source-wordcount: '1020'
 ht-degree: 7%
 
 ---
@@ -54,7 +54,7 @@ Die folgenden Tabellen enthalten die empfohlenen Limits und Beschreibungen für 
 
 **Ad-hoc-Abfragen**
 
-| Beschränkung | Limit | Begrenzungstyp | Beschreibung |
+| Leitplanke | Limit | Begrenzungstyp | Beschreibung |
 |---|---|---|---|
 | Maximale Ausführungsdauer | 10 Minuten | Hard | Dies definiert die maximale Ausgabedauer für eine Ad-hoc-SQL-Abfrage. Wenn Sie die Zeitbeschränkung zum Zurückgeben eines Ergebnisses überschreiten, wird der Fehlercode 53400 ausgegeben. |
 | Gleichzeitige Query Service-Benutzer | <ul><li>Wie in der Produktbeschreibung der Anwendung angegeben.</li><li>+5 (mit jedem zusätzlichen Ad-hoc-Abfrage-Benutzer-Add-On-Paket gekauft)</li></ul> | Hard | Dadurch wird definiert, wie viele Benutzer Sitzungen für eine bestimmte Organisation gleichzeitig erstellen können. Wenn die gleichzeitige Beschränkung überschritten wird, erhält der Benutzer eine `Session Limit Reached` Fehler. |
@@ -62,11 +62,11 @@ Die folgenden Tabellen enthalten die empfohlenen Limits und Beschreibungen für 
 | Client-Connector und Ergebnisausgabegrenze | Client Connector<ul><li>Query UI (100 Zeilen)</li><li>Drittanbieter-Client (50.000)</li><li>[!DNL PostgresSQL] Client (50.000)</li></ul> | Hard | Das Ergebnis einer Abfrage kann auf folgende Weise empfangen werden:<ul><li>Benutzeroberfläche von Query Service</li><li>Drittanbieter-Client</li><li>[!DNL PostgresSQL] client</li></ul>Hinweis: Durch das Hinzufügen einer Begrenzung zur Ausgabenanzahl können Ergebnisse schneller zurückgegeben werden. Beispielsweise `LIMIT 5`, `LIMIT 10` und so weiter. |
 | Über zurückgegebene Ergebnisse | Client-Benutzeroberfläche | K. A. | Dadurch wird definiert, wie die Ergebnisse den Benutzern zur Verfügung gestellt werden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Batch-Abfragen**
 
-| **Beschränkung** | **Limit** | **Begrenzungstyp** | **Beschreibung** |
+| **Leitplanke** | **Limit** | **Begrenzungstyp** | **Beschreibung** |
 |---|---|---|---|
 | Maximale Ausführungsdauer | 24 Stunden | Hard | Dies definiert die maximale Ausführungszeit für eine Batch-SQL-Abfrage.<br>Die Verarbeitungszeit einer Abfrage hängt von der Menge der zu verarbeitenden Daten und der Komplexität der Abfrage ab. |
 | Gleichzeitige Query Service-Benutzer für nicht geplanten Batch | <ul><li>Wie in der Produktbeschreibung der Anwendung angegeben.</li><li>+5 (mit jedem zusätzlichen Ad-hoc-Abfrage-Benutzer-Add-On-Paket gekauft)</li></ul> | Hard | Bei ungeplanten Batch-Abfragen (z. B. CTAS/ITAS-Abfragen im interaktiven Modus) wird dadurch definiert, wie viele Benutzer Sitzungen für eine bestimmte Organisation gleichzeitig erstellen können. Wenn die gleichzeitige Beschränkung überschritten wird, erhält der Benutzer eine `Session Limit Reached` Fehler. |
@@ -76,17 +76,17 @@ Die folgenden Tabellen enthalten die empfohlenen Limits und Beschreibungen für 
 | Client-Connector- und Ergebnisausgabegrenze | Client Connector<ul><li>Abfrage-Benutzeroberfläche (keine Obergrenze für Zeilen)</li><li>Drittanbieter-Client (keine Obergrenze für Zeilen)</li><li>[!DNL PostgresSQL] client (keine Obergrenze für Zeilen)</li><li>REST-APIs (keine Obergrenze für Zeilen)</li></ul> | Hard | Das Ergebnis einer Abfrage kann mithilfe der folgenden Methoden bereitgestellt werden:<ul><li>Kann als abgeleitete Datensätze gespeichert werden</li><li>Kann in die vorhandenen abgeleiteten Datensätze eingefügt werden</li></ul>Hinweis: Die Anzahl der Datensätze aus dem Abfrageergebnis ist nicht begrenzt. |
 | Über zurückgegebene Ergebnisse | Datensatz | K. A. | Dadurch wird definiert, wie die Ergebnisse den Benutzern zur Verfügung gestellt werden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## Abfrage-beschleunigter Speicher {#query-accelerated-store}
+## Abfrage-beschleunigte Speicherung {#query-accelerated-store}
 
 Die folgende Tabelle enthält die empfohlenen Limits und eine Beschreibung für den Abfrage-beschleunigten Speicher.
 
-| Beschränkung | Limit | Begrenzungstyp | Beschreibung |
+| Leitplanke | Limit | Begrenzungstyp | Beschreibung |
 |---|---|---|---|
 | Abfragegleichzeitigkeit | 4 | Hard | Um sicherzustellen, dass Abfragen über aggregierte Daten über die Berichterstellungs-API (einschließlich Abfragen, die Datenmodelle wie die Real-Time CDP-Datenmodelle verbessern) über die Ressourcen verfügen, die für eine effiziente Ausführung benötigt werden, verfolgt die Berichterstellungs-API die Ressourcenauslastung durch Zuweisung von Zeitnischen für gleichzeitige Abfragen. Das System stellt Abfragen in eine Warteschlange und wartet, bis Zeitnischen für gleichzeitige Verwendung verfügbar sind oder sie aus dem Cache bereitgestellt werden können. Es stehen maximal vier gleichzeitige Abfragefenster zur Verfügung.<br>Wenn Sie über ein BI-Tool auf die Reporting-API zugreifen und mehr Parallelität benötigen, ist ein BI-Server erforderlich. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Nächste Schritte
 

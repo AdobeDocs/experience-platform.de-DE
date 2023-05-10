@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über den Experience-Kanal-
 exl-id: 209654f7-0bde-439a-989c-ce2e41599105
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '271'
-ht-degree: 24%
+source-wordcount: '268'
+ht-degree: 23%
 
 ---
 
@@ -31,7 +31,7 @@ Es gibt mehrere Erlebniskanäle mit jeweils unterschiedlichen Einschränkungen h
 | `mode` | Zeichenfolge | Art und Weise, wie Erlebnisse in diesem Kanal bereitgestellt werden. |
 | `typeAtSource` | Zeichenfolge | Ein benutzerdefinierter Name für den Kanal. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

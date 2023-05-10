@@ -5,7 +5,7 @@ title: Handbuch zur Fehlerbehebung bei der Zugriffssteuerung
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zur Zugriffskontrolle in Adobe Experience Platform.
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '407'
 ht-degree: 100%
 

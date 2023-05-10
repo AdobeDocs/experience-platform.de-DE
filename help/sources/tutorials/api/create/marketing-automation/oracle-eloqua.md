@@ -5,7 +5,7 @@ exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
 source-git-commit: e8f54f06ad3431227e140219a9960e8e04f83ccc
 workflow-type: tm+mt
 source-wordcount: '558'
-ht-degree: 82%
+ht-degree: 83%
 
 ---
 
@@ -88,7 +88,7 @@ curl -X POST \
 | `name` | Der Name Ihrer [!DNL Oracle Eloqua]-Basisverbindung. Es wird empfohlen, einen beschreibenden Namen anzugeben, da Sie diesen Wert zum Nachschlagen Ihrer Basisverbindung verwenden können. |
 | `description` | (Optional) Eine Eigenschaft, die Sie einbeziehen können, um ergänzende Informationen zu Ihrer Basisverbindung bereitzustellen. |
 | `auth.specName` | Der Authentifizierungstyp, der für die Verbindung verwendet wird. |
-| `auth.params.endpoint` | Der Endpunkt Ihrer [!DNL Oracle Eloqua] Server. |
+| `auth.params.endpoint` | Der Endpunkt Ihres [!DNL Oracle Eloqua]-Servers. |
 | `auth.params.username` | Die verkettete Berechtigung, die den Site-Namen und Benutzernamen enthält, der Ihrer [!DNL Oracle Eloqua] -Konto. |
 | `auth.params.password` | Das Passwort, das Ihrem [!DNL Oracle Eloqua]-Konto entspricht. |
 | `connectionSpec.id` | Der Wert für die Verbindungsspezifikations-ID der [!DNL Oracle Eloqua]-Quelle ist wie folgt festgelegt: `35d6c4d8-c9a9-11eb-b8bc-0242ac130003`. |

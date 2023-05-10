@@ -4,8 +4,8 @@ description: Dieses Dokument bietet einen Überblick über die Schemafeldergrupp
 exl-id: 472c0a3f-efda-49af-9490-f2de90b348c0
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '198'
-ht-degree: 13%
+source-wordcount: '195'
+ht-degree: 12%
 
 ---
 
@@ -24,6 +24,6 @@ ht-degree: 13%
 | `name` | Zeichenfolge | Der Name des Sitetools, z. B. Chat-Bot, Umfrage usw. |
 | `section` | Zeichenfolge | Der relevante Abschnitt des Sitetools wie Haupt- oder Unterabschnitt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-healthcare-sitetool.schema.json).

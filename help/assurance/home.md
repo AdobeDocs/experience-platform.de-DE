@@ -1,13 +1,13 @@
 ---
 title: Überblick über die Adobe Experience Platform-Assetbildung
-description: Mit Adobe Experience Platform Assurance können Sie die Datenerfassung und die Bereitstellung von Erlebnissen in Ihren Apps überprüfen, testen, simulieren und überprüfen.
-source-git-commit: 07dc01c11c79ac2dad05d89309cabb5715c0b63c
+description: Mit Adobe Experience Platform Assurance können Sie die Datenerfassung und die Bereitstellung von Erlebnissen in Ihren Mobile Apps untersuchen, testen, simulieren und überprüfen.
+exl-id: e887f5f6-3db0-4521-be2d-20ef3d08e7d0
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '824'
-ht-degree: 3%
+ht-degree: 6%
 
 ---
-
 
 # Adobe Experience Platform Assurance
 

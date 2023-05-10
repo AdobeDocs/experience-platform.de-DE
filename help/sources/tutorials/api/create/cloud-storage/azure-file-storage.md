@@ -91,7 +91,7 @@ curl -X POST \
 | `auth.params.host` | Der Endpunkt der [!DNL Azure File Storage] -Instanz, auf die Sie zugreifen. |
 | `auth.params.userId` | Der Benutzer hat ausreichenden Zugriff auf die [!DNL Azure File Storage] -Endpunkt. |
 | `auth.params.password` | Die [!DNL Azure File Storage] Zugriffsschlüssel. |
-| `connectionSpec.id` | Die [!DNL Azure File Storage] Verbindungsspezifikations-ID: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
+| `connectionSpec.id` | Die [!DNL Azure File Storage]-Verbindungsspezifikations-ID: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
 
 **Antwort**
 

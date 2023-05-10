@@ -1,10 +1,11 @@
 ---
 title: Erstellen Sie eine Quellverbindung und einen Datenfluss für SugarCRM-Ereignisse mithilfe der Flow Service-API.
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Adobe Experience Platform mit SugarCRM-Ereignissen verbinden.
-source-git-commit: e3ae650c70b07e8682ea77f94791d5b320d89425
+exl-id: 12d08010-569c-4111-ba95-697c6ce6f637
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '2009'
-ht-degree: 60%
+ht-degree: 61%
 
 ---
 

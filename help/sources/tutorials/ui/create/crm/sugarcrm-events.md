@@ -1,7 +1,8 @@
 ---
 title: Erstellen einer Quellverbindung zu SugarCRM Events in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung mit SugarCRM-Ereignissen erstellen.
-source-git-commit: 17d8a6517686ee2459955f766d75980b41851320
+exl-id: db346ec0-2c57-4b82-8a39-f15d4cd377d4
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 47%
@@ -79,7 +80,7 @@ Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL SugarCRM Even
 
 Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei der Verwendung der [!DNL SugarCRM] -Quelle.
 
-### Leitlinien {#guardrails}
+### Leitplanken {#guardrails}
 
 Die [!DNL SugarCRM] Die API-Drosselraten betragen 90 Aufrufe pro Minute oder 2000 Aufrufe pro Tag, je nachdem, was zuerst eintritt. Diese Einschränkung wurde jedoch umgangen, indem ein Parameter in die Verbindungsspezifikation eingefügt wurde, der die Anfragezeit verzögert, sodass die Ratenbegrenzung nie erreicht wird.
 

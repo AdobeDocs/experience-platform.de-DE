@@ -5,7 +5,7 @@ exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
 source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
 workflow-type: tm+mt
 source-wordcount: '1184'
-ht-degree: 6%
+ht-degree: 9%
 
 ---
 
@@ -111,8 +111,8 @@ Dies hilft Ihnen beim Trigger verschiedener Datenspeicherverhaltensweisen als de
 
 Die Außerkraftsetzung der Datastream-Konfiguration besteht aus zwei Schritten:
 
-1. Zunächst müssen Sie Ihre Überschreibungen der Datastream-Konfiguration im [Datastream-Konfigurationsseite](../datastreams/configure.md).
-2. Anschließend müssen Sie die Überschreibungen entweder über einen Web SDK-Befehl oder mithilfe der Web SDK-Tag-Erweiterung an das Edge-Netzwerk senden.
+1. Zunächst müssen Sie Ihre Überschreibungen der Datenstromkonfiguration auf der Seite [Datenstromkonfiguration](../datastreams/configure.md) definieren.
+2. Anschließend müssen Sie die Überschreibungen entweder über einen Web SDK-Befehl oder mithilfe der Tag-Erweiterung des Web SDK an das Edge-Netzwerk senden.
 
 Anzeigen des Datenspeichers [Dokumentation zu Konfigurationsüberschreibungen](../datastreams/overrides.md) für detaillierte Anweisungen zum Überschreiben von Datenspeicherkonfigurationen.
 

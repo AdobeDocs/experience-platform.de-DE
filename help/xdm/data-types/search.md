@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über den Datentyp "Search 
 exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 25%
+source-wordcount: '181'
+ht-degree: 23%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 25%
 | `searchEngineID` | Zeichenfolge | Die anwendungsspezifische Kennung, die zur Identifizierung der Suchmaschine verwendet wird. |
 | `slot` | Zeichenfolge | Der benannte Abschnitt der Seite, auf der das Suchergebnis angezeigt wurde. Der Wert dieser Eigenschaft muss mit einem der bekannten Enum-Werte übereinstimmen, die Sie definieren, z. B. `top`, `side`oder `bottom`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

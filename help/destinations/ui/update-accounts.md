@@ -7,7 +7,7 @@ exl-id: afb41878-4205-4c64-af4d-e2740f852785
 source-git-commit: f31b54622c63f96fb8fa727f80dda295a926e2c7
 workflow-type: tm+mt
 source-wordcount: '505'
-ht-degree: 3%
+ht-degree: 11%
 
 ---
 
@@ -29,11 +29,11 @@ Bei Batch-Zielen können Sie den Zugriff- oder geheimen Schlüssel aktualisieren
 
 Gehen Sie wie folgt vor, um Verbindungsdetails zu vorhandenen Zielen zu aktualisieren.
 
-1. Melden Sie sich bei der [Experience Platform-Benutzeroberfläche](https://platform.adobe.com/) und wählen Sie **[!UICONTROL Ziele]** über die linke Navigationsleiste. Auswählen **[!UICONTROL Konten]** aus der oberen Kopfzeile, um Ihre vorhandenen Konten anzuzeigen.
+1. Melden Sie sich bei der [Experience Platform-Benutzeroberfläche](https://platform.adobe.com/) an und wählen Sie **[!UICONTROL Ziele]** über die linke Navigationsleiste aus. Auswählen **[!UICONTROL Konten]** aus der oberen Kopfzeile, um Ihre vorhandenen Konten anzuzeigen.
 
    ![Registerkarte „Konten“](../assets/ui/update-accounts/accounts-tab.png)
 
-2. Filtersymbol auswählen ![Filter-Symbol](../assets/ui/update-accounts/filter.png) oben links, um das Sortierungsfenster zu öffnen. Das Sortierungsfenster bietet eine Liste aller Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Konten anzuzeigen, die mit den ausgewählten Zielen verknüpft sind.
+2. Wählen Sie das Symbol ![Filter](../assets/ui/update-accounts/filter.png) oben links, um das Sortier-Bedienfeld zu öffnen. Das Sortier-Bedienfeld bietet eine Liste aller Ihrer Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Konten anzuzeigen, die mit den ausgewählten Zielen verknüpft sind.
 
    ![Zielkonten filtern](../assets/ui/update-accounts/filter-accounts.png)
 

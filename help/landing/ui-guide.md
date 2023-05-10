@@ -7,7 +7,7 @@ exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1797'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 Dieses Handbuch bietet eine Einführung in die Verwendung der Adobe Experience Platform-Benutzeroberfläche, die erklärt, wofür die verschiedenen Komponenten verwendet werden, und Links zu weiteren Dokumentationen mit weiteren Informationen.
 
-Weitere Informationen zu Adobe Experience Platform finden Sie unter [Übersicht über die Experience Platform](home.md).
+Um mehr über Adobe Experience Platform zu erfahren, lesen Sie [Experience Platform – Übersicht](home.md).
 
 ## Startbildschirm
 

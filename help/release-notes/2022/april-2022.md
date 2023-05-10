@@ -177,7 +177,7 @@ KI/ML-Services ermöglichen es Marketing-Analysten und -Praktikern, die Leistung
 
 ### Attributions-KI
 
-Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Fachleuten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
+Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Fachleuten genutzt werden, um auf diversen Customer Journeys die Auswirkungen jedes einzelnen Marketing-Touchpoints zu quantifizieren.
 
 **Aktualisierte Funktionen**
 

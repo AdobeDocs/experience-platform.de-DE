@@ -2,10 +2,11 @@
 title: Kundenkontointeraktion in Salesforce Marketing Cloud
 description: Erfahren Sie, wie Sie mit dem Salesforce Marketing Cloud Account Engagement (ehemals Pardot)-Ziel Ihre Kontodaten exportieren und innerhalb der Salesforce Marketing Cloud Account Engagement für Ihre Geschäftsanforderungen aktivieren können.
 last-substantial-update: 2023-04-14T00:00:00Z
-source-git-commit: 65feb905bfa7d663d1d463d94af428a04dc55b01
+exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
+source-git-commit: 86feee5981aaa81d4c1f97ff8aaf303b2aacd977
 workflow-type: tm+mt
 source-wordcount: '1589'
-ht-degree: 35%
+ht-degree: 37%
 
 ---
 
@@ -19,9 +20,9 @@ Diese [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt 
 
 [!DNL Marketing Cloud Account Engagement] verwendet das OAuth 2-Protokoll mit Autorisierungscode , um sich bei der [!DNL Account Engagement] API. Anweisungen zur Authentifizierung bei Ihrer [!DNL Marketing Cloud Account Engagement]-Instanz sehen Sie weiter unten im Abschnitt [Authentifizieren bei Ziel](#authenticate).
 
-## Anwendungsbeispiele {#use-cases}
+## Anwendungsfälle {#use-cases}
 
-Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie die [!DNL Marketing Cloud Account Engagement] Ziel, hier ein Beispielanwendungsfall, den Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
+Damit Sie besser verstehen können, wie und wann Sie das [!DNL Marketing Cloud Account Engagement]-Ziel verwenden sollten, finden Sie hier ein Anwendungsbeispiel, das für Kundinnen und Kunden von Adobe Experience Platform mit diesem Ziel geeignet ist.
 
 ### Senden von E-Mails an Kontakte für Marketingkampagnen {#use-case-send-emails}
 

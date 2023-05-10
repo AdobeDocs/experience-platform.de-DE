@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über die Feldergruppe Kana
 exl-id: b8ec2f57-6882-466e-9b22-61fb2178fb1e
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 19%
+source-wordcount: '143'
+ht-degree: 18%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 19%
 | --- | --- | --- |
 | `channel` | [Erlebniskanal](../../data-types/experience-channel.md) | Ein Objekt, das die Produktrückgabe, die Registrierung der Garantie und die Warenkorb-/Bestellvorgänge beschreibt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 

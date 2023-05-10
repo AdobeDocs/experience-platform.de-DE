@@ -3,7 +3,7 @@ title: Übersicht über Tags
 description: Tags in Adobe Experience Platform sind die nächste Generation von Funktionen für das Tag-Management von Adobe. Tags bieten Kunden eine einfache Möglichkeit, alle Analyse-, Marketing- und Werbe-Tags bereitzustellen und zu verwalten, die für relevante Kundenerlebnisse notwendig sind.
 exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
 source-git-commit: 13c02dd5930905e3851ff147c0ea4d914e3dc6c7
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 100%
 
@@ -29,7 +29,7 @@ Tags werden [!DNL Adobe Experience Cloud]-Kunden als inbegriffene Mehrwertfunkti
 
 * Schnellere Amortisierungszeit.
 * Vertrauenswürdige Daten durch zentrale Erfassung, Organisation und Bereitstellung mithilfe von Datenelementen.
-* Attraktive Elebnisse durch die Integration von Daten und Marketingtechnologie mithilfe von Regel-Builder.
+* Attraktive Erlebnisse durch die Integration von Daten und Marketing-Technologie mithilfe von Regel-Builder.
 
 ## Wichtigste Funktionen {#key-features}
 

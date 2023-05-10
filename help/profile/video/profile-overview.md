@@ -12,11 +12,11 @@ exl-id: cdc91194-771f-4026-808f-97d70db436d9
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '117'
-ht-degree: 15%
+ht-degree: 18%
 
 ---
 
-# Übersicht über das Echtzeit-Kundenprofil
+# Übersicht zum Echtzeit-Kundenprofil
 
 In diesem Video erhalten Sie ein grundlegendes Verständnis des Echtzeit-Kundenprofils in Adobe Experience Platform und erfahren, wie Daten aus mehreren Quellen zusammengeführt werden, um ein zentralisiertes Profil für jeden Ihrer Kunden zu erstellen. Um mehr über die Funktionen und Funktionen des Echtzeit-Kundenprofils zu erfahren, lesen Sie zunächst das [Übersicht über das Echtzeit-Kundenprofil](../home.md).
 

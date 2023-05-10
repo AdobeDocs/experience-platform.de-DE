@@ -5,7 +5,7 @@ title: Übersicht zu Segment Match
 description: Segment Match ist ein Service zur Segmentfreigabe in Adobe Experience Platform, mit dem zwei oder mehr Platform-Benutzende Segmentdaten auf sichere, geregelte und datenschutzsensible Weise austauschen können.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1997'
 ht-degree: 100%
 

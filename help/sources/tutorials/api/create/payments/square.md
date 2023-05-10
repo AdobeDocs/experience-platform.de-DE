@@ -6,7 +6,7 @@ exl-id: 82c1d513-3b06-4ce9-b637-2c5a268da506
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '542'
-ht-degree: 46%
+ht-degree: 47%
 
 ---
 
@@ -95,7 +95,7 @@ curl -X POST \
 | `auth.params.clientSecret` | Das Client-Geheimnis, das mit Ihrem [!DNL Square] -Konto. |
 | `auth.params.accessToken` | Das Zugriffstoken wird verwendet, um Ihre [!DNL Square] Konto mit OAuth 2.0-Authentifizierung. Das Zugriffstoken kann abgerufen werden über [!DNL Square]. |
 | `auth.params.refreshToken` | Das Aktualisierungstoken wird verwendet, um neue Zugriffstoken zu generieren, sobald Ihr aktuelles Zugriffstoken abläuft. Das Aktualisierungstoken kann abgerufen werden von [!DNL Square]. |
-| `connectionSpec.id` | Die [!DNL Square] Verbindungsspezifikations-ID: `2acf109f-9b66-4d5e-bc18-ebb2adcff8d5`. |
+| `connectionSpec.id` | Die [!DNL Square]-Verbindungsspezifikations-ID: `2acf109f-9b66-4d5e-bc18-ebb2adcff8d5`. |
 
 **Antwort**
 

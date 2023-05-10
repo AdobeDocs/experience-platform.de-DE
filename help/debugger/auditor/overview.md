@@ -6,11 +6,11 @@ exl-id: 409094f8-a7d9-45f7-ba12-b5e6250abc0f
 source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
 workflow-type: tm+mt
 source-wordcount: '363'
-ht-degree: 39%
+ht-degree: 41%
 
 ---
 
-# Registerkarte &quot;Auditor&quot;
+# Registerkarte „Auditor“ 
 
 In Adobe Experience Platform Debugger können Sie die **[!UICONTROL Auditor]** , um eine Reihe von Audittests auf Ihrer Seite auszuführen.
 

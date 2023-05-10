@@ -1,7 +1,8 @@
 ---
 title: Nahtloser SQL-Fluss für abgeleitete Attribute
 description: Query Service SQL wurde erweitert, um eine nahtlose Unterstützung für abgeleitete Attribute bereitzustellen. Erfahren Sie, wie Sie mit dieser SQL-Erweiterung ein abgeleitetes Attribut erstellen, das für das Profil aktiviert ist, und wie Sie das Attribut für das Echtzeit-Kundenprofil und den Segmentierungsdienst verwenden.
-source-git-commit: 1ff66d0ac8e0491a6db518545d122555d9d54c75
+exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 2%

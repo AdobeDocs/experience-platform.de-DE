@@ -3,7 +3,7 @@ title: Übersicht über die Datenhygiene
 description: Mit der Datenhygiene von Adobe Experience Platform können Sie den Lebenszyklus Ihrer Daten verwalten, indem Sie veraltete oder falsche Datensätze aktualisieren oder bereinigen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
 source-git-commit: 2913e9e687843e566db4ebf2031e610d1891d4c9
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '639'
 ht-degree: 100%
 

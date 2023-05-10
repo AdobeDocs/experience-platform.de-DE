@@ -6,7 +6,7 @@ exl-id: 804b876d-6fd5-4a28-b33c-4ecab1ba3333
 source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
 workflow-type: tm+mt
 source-wordcount: '2050'
-ht-degree: 63%
+ht-degree: 64%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 63%
 
 >[!NOTE]
 >
->Die [!DNL Mixpanel] -Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
+>Die [!DNL Mixpanel]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-gekennzeichneten Quellen.
 
 Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer Quellverbindung und eines Datenflusses, um [!DNL Mixpanel] Daten an Adobe Experience Platform mithilfe der [Flussdienst-API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 

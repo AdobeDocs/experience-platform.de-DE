@@ -1,15 +1,15 @@
 ---
-title: Überschreibungen von Datastreams konfigurieren
+title: Konfigurieren von Überschreibungen für Datenströme
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Datastreams Außerkraftsetzungen von Datastreams konfigurieren und über das Web SDK aktivieren.
-source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
+exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
+source-git-commit: d76d596818db67c99aca0606b6b6fb1a9aa977aa
 workflow-type: tm+mt
 source-wordcount: '948'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
-
-# Überschreibungen von Datastreams konfigurieren
+# Konfigurieren von Überschreibungen für Datenströme
 
 Mit Datastream-Überschreibungen können Sie zusätzliche Konfigurationen für Ihre Datenspeicher definieren, die über das Web SDK an das Edge-Netzwerk übergeben werden.
 
@@ -17,8 +17,8 @@ Dies hilft Ihnen beim Trigger verschiedener Datenspeicherverhaltensweisen als de
 
 Die Außerkraftsetzung der Datastream-Konfiguration besteht aus zwei Schritten:
 
-1. Zunächst müssen Sie Ihre Überschreibungen der Datastream-Konfiguration im [Datastream-Konfigurationsseite](configure.md).
-2. Anschließend müssen Sie die Überschreibungen entweder über einen Web SDK-Befehl oder mithilfe des Web SDK an das Edge-Netzwerk senden [Tag-Erweiterung](../extension/web-sdk-extension-configuration.md).
+1. Zunächst müssen Sie Ihre Überschreibungen der Datenstromkonfiguration auf der Seite [Datenstromkonfiguration](configure.md) definieren.
+2. Anschließend müssen Sie die Überschreibungen entweder über einen Web SDK-Befehl oder mithilfe der [Tag-Erweiterung](../extension/web-sdk-extension-configuration.md) des Web SDK an das Edge-Netzwerk senden.
 
 In diesem Artikel wird der Prozess zur Außerkraftsetzung der End-to-End-Datenspeicherung für jede unterstützte Überschreibungstyp erläutert.
 
@@ -233,4 +233,3 @@ Die obigen Beispiele generieren eine [!DNL Edge Network] Nutzlast, die wie folgt
   }
 }
 ```
-

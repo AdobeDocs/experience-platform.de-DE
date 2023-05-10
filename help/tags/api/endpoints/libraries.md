@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie in der Reactor-API Aufrufe an den /libraries-
 exl-id: 0f7bc10f-2e03-43fa-993c-a2635f4d0c64
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1584'
+source-wordcount: '1521'
 ht-degree: 100%
 
 ---
@@ -35,7 +35,7 @@ GET /properties/{PROPERTY_ID}/libraries
 | --- | --- |
 | `PROPERTY_ID` | Die `id` der Eigenschaft, der die Bibliotheken gehören. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -161,7 +161,7 @@ GET /libraries/{LIBRARY_ID}
 | --- | --- |
 | `LIBRARY_ID` | Die `id` der Bibliothek, die Sie suchen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -272,7 +272,7 @@ POST /properties/{PROPERTY_ID}/libraries
 | --- | --- |
 | `PROPERTY_ID` | Die `id` der [Eigenschaft](./properties.md), unter der Sie die Bibliothek definieren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -300,7 +300,7 @@ curl -X POST \
 | `attributes.name` | **(Erforderlich)** Ein für Menschen lesbarer Name für die Bibliothek. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `libraries` lauten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -423,7 +423,7 @@ POST /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 | `{LIBRARY_ID}` | Die ID der Bibliothek, der Sie Ressourcen hinzufügen möchten. |
 | `{RESOURCE_TYPE}` | Der Typ der Ressource, die Sie der Bibliothek hinzufügen. Folgende Werte werden akzeptiert: <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -456,7 +456,7 @@ curl -X POST \
 | `id` | Die ID der Ressource, die Sie der Bibliothek hinzufügen. |
 | `type` | Der Typ der Ressource, die Sie der Bibliothek hinzufügen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -496,7 +496,7 @@ PATCH /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 | `{LIBRARY_ID}` | Die ID der Bibliothek, deren Beziehungen Sie ersetzen möchten. |
 | `{RESOURCE_TYPE}` | Der Typ der Ressource, die Sie ersetzen. Folgende Werte werden akzeptiert: <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -525,7 +525,7 @@ curl -X PATCH \
 | `id` | Die ID der Ressource, die Sie der Bibliothek hinzufügen. |
 | `type` | Der Typ der Ressource, die Sie der Bibliothek hinzufügen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -561,7 +561,7 @@ DELETE /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 | `{LIBRARY_ID}` | Die ID der Bibliothek, deren Ressourcen Sie entfernen möchten. |
 | `{RESOURCE_TYPE}` | Der Typ der Ressource, die Sie entfernen. Folgende Werte werden akzeptiert: <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -590,7 +590,7 @@ curl -X DELETE \
 | `id` | Die ID der Ressource, die Sie aus der Bibliothek entfernen. |
 | `type` | Der Typ der Ressource, die Sie aus der Bibliothek entfernen. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -622,7 +622,7 @@ POST /libraries/{LIBRARY_ID}/relationships/environment
 | --- | --- |
 | `{LIBRARY_ID}` | Die ID der Bibliothek, die Sie zuweisen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -647,7 +647,7 @@ curl -X POST \
 | `id` | Die ID der Umgebung, der Sie die Bibliothek zuweisen. |
 | `type` | Muss auf `environments` festgelegt werden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -680,7 +680,7 @@ PATCH /libraries/{LIBRARY_ID}
 | --- | --- |
 | `LIBRARY_ID` | Die `id` der Bibliothek, die Sie übergeben möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -710,7 +710,7 @@ curl -X PATCH \
 | `id` | Die `id` der Bibliothek, die Sie aktualisieren möchten. Dies sollte mit dem `{LIBRARY_ID}`-Wert übereinstimmen, der im Anfragepfad angegeben ist. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `libraries` lauten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -816,7 +816,7 @@ POST /libraries/{LIBRARY_ID}/builds
 | --- | --- |
 | `LIBRARY_ID` | Die `id` der Bibliothek, die Sie veröffentlichen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -927,7 +927,7 @@ GET  /libraries/{LIBRARY_ID}/data_elements
 | --- | --- |
 | `{LIBRARY_ID}` | Die `id` der Bibliothek, deren Datenelemente Sie auflisten möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -1068,7 +1068,7 @@ GET  /libraries/{LIBRARY_ID}/extensions
 | --- | --- |
 | `{LIBRARY_ID}` | Die `id` der Bibliothek, deren Erweiterungen Sie auflisten möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -1199,7 +1199,7 @@ GET  /libraries/{LIBRARY_ID}/rules
 | --- | --- |
 | `{LIBRARY_ID}` | Die `id` der Bibliothek, deren Regeln Sie auflisten möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -1312,7 +1312,7 @@ GET  /libraries/{LIBRARY_ID}/environment
 | --- | --- |
 | `{LIBRARY_ID}` | Die `id` der Bibliothek, deren Umgebung Sie suchen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -1424,7 +1424,7 @@ GET  /libraries/{LIBRARY_ID}/property
 | --- | --- |
 | `{LIBRARY_ID}` | Die `id` der Bibliothek, deren Eigenschaft Sie suchen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -1547,7 +1547,7 @@ GET  /libraries/{LIBRARY_ID}/upstream_library
 | --- | --- |
 | `{LIBRARY_ID}` | Die `id` der Bibliothek, deren Upstream-Bibliothek Sie suchen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 

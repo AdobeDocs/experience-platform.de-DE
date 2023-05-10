@@ -72,7 +72,7 @@ Jedes Widget zeigt ein Liniendiagramm an, in dem die tatsächlichen Zahlen für 
 
 ## Verfügbare Metriken
 
-Das Dashboard zur Lizenznutzung enthält Berichte zu vier Schlüsselmetriken, wobei weitere Metriken in nachfolgenden Versionen hinzugefügt werden müssen. Die verfügbaren Metriken sind:
+Das Dashboard zur Lizenznutzung enthält Berichte zu vier Schlüsselmetriken, wobei in nachfolgenden Versionen weitere Metriken hinzugefügt werden müssen. Die verfügbaren Metriken sind:
 
 * [!UICONTROL Addressable Audience]
 * [!UICONTROL Durchschnittliche Profiltiefe]

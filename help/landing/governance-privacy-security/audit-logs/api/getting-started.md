@@ -1,7 +1,8 @@
 ---
 title: Erste Schritte mit der Audit Query API
 description: Mit der Auditabfrage-API können Sie Metrikdaten für verschiedene Adobe Experience Platform-Funktionen abrufen. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen müssen, bevor Sie Aufrufe an die Audit-Abfrage-API durchführen.
-source-git-commit: 5b3459711f41430977f9d7b06f8b35801739207c
+exl-id: 20eab0a8-98f7-4fee-8f91-88324e54ab18
+source-git-commit: c2c5778e0a3fff7f488ad7a672123c813cca59f1
 workflow-type: tm+mt
 source-wordcount: '392'
 ht-degree: 54%
@@ -10,7 +11,7 @@ ht-degree: 54%
 
 # Erste Schritte mit der Audit Query API
 
-Mit Adobe Experience Platform können Sie Benutzeraktivitäten auf verschiedene Dienste und Funktionen in Form von Audit-Ereignisprotokollen überprüfen. Jede in einem Protokoll aufgezeichnete Aktion enthält Metadaten, die den Aktionstyp, das Datum und die Uhrzeit, die E-Mail-ID des/der Benutzenden, der/die die Aktion ausgeführt hat, und zusätzliche Attribute des Aktionstyps angeben.
+Mit Adobe Experience Platform können Sie Benutzeraktivitäten auf verschiedene Dienste und Funktionen in Form von Audit-Ereignisprotokollen überprüfen. Jede in einem Protokoll aufgezeichnete Aktion enthält Metadaten, die den Aktionstyp, das Datum und die Uhrzeit, die E-Mail-ID der oder des Benutzenden, die oder der die Aktion durchgeführt hat, und weitere für den Aktionstyp relevante Attribute angeben.
 
 Mit der Auditabfrage-API können Sie die Benutzeraktivität auf verschiedene Dienste und Funktionen in Form von Audit-Ereignisprotokollen überprüfen. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen müssen, bevor Sie Aufrufe an die Audit-Abfrage-API durchführen.
 

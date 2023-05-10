@@ -4,8 +4,8 @@ description: Marketo Engage ist die einzige End-to-End-Lösung für Customer Exp
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
 source-git-commit: e68bbc07f7d2e4e05b725cbef37a1810a5825742
 workflow-type: tm+mt
-source-wordcount: '870'
-ht-degree: 32%
+source-wordcount: '864'
+ht-degree: 35%
 
 ---
 
@@ -43,10 +43,10 @@ Das Marketo-Ziel ermöglicht es Marketing-Experten, in Adobe Experience Platform
 
 | Ziel-Identität | Beschreibung |
 |---|---|
-| ECID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Alias referenziert werden: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Siehe folgendes Dokument unter [ECID](/help/identity-service/ecid.md) für weitere Informationen. |
+| ECID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Siehe folgendes Dokument unter [ECID](/help/identity-service/ecid.md) für weitere Informationen. |
 | E-Mail | Ein Namespace, der eine E-Mail-Adresse darstellt. Dieser Namespace ist häufig mit einer einzelnen Person verknüpft und kann daher zur kanalübergreifenden Identifizierung dieser Person verwendet werden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Unterstützte Attribute {#supported-attributes}
 
@@ -61,7 +61,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 | Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den in der Variablen [!DNL Marketo Engage] Ziel. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Einrichten des Ziels und Aktivieren von Segmenten {#set-up}
 

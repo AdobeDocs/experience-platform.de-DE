@@ -4,7 +4,7 @@ description: Dieses Dokument bietet einen Überblick über die Schemakontrollgru
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '598'
 ht-degree: 16%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 16%
 | `isDeleted` | Boolesch | Gibt an, ob diese Person in Marketo Engage gelöscht wurde.<br><br>Bei Verwendung von [Marketo-Quell-Connector](../../../sources/connectors/adobe-applications/marketo/marketo.md), werden alle in Marketo gelöschten Datensätze automatisch in das Echtzeit-Kundenprofil übernommen. Datensätze, die sich auf diese Profile beziehen, können jedoch im Data Lake bestehen bleiben. Durch Festlegen von `isDeleted` nach `true`können Sie mithilfe des Felds herausfiltern, welche Datensätze bei der Abfrage des Data Lake aus Ihren Quellen gelöscht wurden. |
 | `organizations` | Zeichenfolgen-Array | Eine Liste der Organisationsnamen, in denen die Person arbeitet. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 

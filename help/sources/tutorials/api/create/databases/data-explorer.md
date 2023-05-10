@@ -8,7 +8,7 @@ exl-id: 1b17bbb0-1f7b-4d89-a158-ad269e6edf30
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '522'
-ht-degree: 62%
+ht-degree: 64%
 
 ---
 
@@ -34,7 +34,7 @@ Damit [!DNL Flow Service] eine Verbindung mit [!DNL Azure Data Explorer] herstel
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `endpoint` | Der Endpunkt der [!DNL Azure Data Explorer] Server. |
+| `endpoint` | Der Endpunkt des [!DNL Azure Data Explorer]-Servers. |
 | `database` | Der Name der [!DNL Azure Data Explorer] Datenbank. |
 | `tenant` | Die eindeutige Mandantenkennung, die für die Verbindung mit der [!DNL Azure Data Explorer] Datenbank. |
 | `servicePrincipalId` | Die eindeutige Dienstprinzipal-ID, die für die Verbindung mit dem [!DNL Azure Data Explorer] Datenbank. |
@@ -93,12 +93,12 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `auth.params.endpoint` | Der Endpunkt der [!DNL Azure Data Explorer] Server. |
+| `auth.params.endpoint` | Der Endpunkt des [!DNL Azure Data Explorer]-Servers. |
 | `auth.params.database` | Der Name der [!DNL Azure Data Explorer] Datenbank. |
 | `auth.params.tenant` | Die eindeutige Mandantenkennung, die für die Verbindung mit der [!DNL Azure Data Explorer] Datenbank. |
 | `auth.params.servicePrincipalId` | Die eindeutige Dienstprinzipal-ID, die für die Verbindung mit dem [!DNL Azure Data Explorer] Datenbank. |
 | `auth.params.servicePrincipalKey` | Der Hauptschlüssel des eindeutigen Dienstes, der für die Verbindung mit dem [!DNL Azure Data Explorer] Datenbank. |
-| `connectionSpec.id` | Die [!DNL Azure Data Explorer] Verbindungsspezifikations-ID: `0479cc14-7651-4354-b233-7480606c2ac3`. |
+| `connectionSpec.id` | Die [!DNL Azure Data Explorer]-Verbindungsspezifikations-ID: `0479cc14-7651-4354-b233-7480606c2ac3`. |
 
 **Antwort**
 

@@ -6,8 +6,8 @@ description: Erfahren Sie, wie Sie Adobe Target-Ereignisfelder einem Experience-
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '482'
-ht-degree: 3%
+source-wordcount: '479'
+ht-degree: 2%
 
 ---
 
@@ -87,4 +87,4 @@ In der folgenden Tabelle werden die Felder eines Erlebnisereignis-Schemas (*XDM 
 | `identityMap.TNTID` | `tntId.mboxPC` |
 | `identityMap.ECID` | `marketingCloudVisitorId` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

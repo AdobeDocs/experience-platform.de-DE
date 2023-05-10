@@ -5,7 +5,7 @@ description: Eine Übersicht und weitere Informationen über die zugehörige Kon
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
 source-git-commit: 5d1488b26391d8ac758a2968194a6d070ad5b561
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '430'
 ht-degree: 23%
 
 ---
@@ -24,7 +24,7 @@ B2B-Unternehmen haben häufig ihre Kundeninformationen in mehreren Systemen gesp
 | 4 | Acme Consulting Service | `http://www.acme.com/consulting` | Technologieberatung | NY | (212)471-0904 | x |
 | 5 | Acme IT |  |  | CA |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 mit den entsprechenden Konten, [!DNL Real-Time CDP B2B] zeigt Ihnen jetzt eine Liste von Konten an, die dem Konto, das Sie durchsuchen, ähnlich sind.
 

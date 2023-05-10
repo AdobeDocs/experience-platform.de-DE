@@ -6,8 +6,8 @@ description: Mit dem Endpunkt /mixins in der Schema Registry-API können Sie XDM
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1210'
-ht-degree: 17%
+source-wordcount: '1189'
+ht-degree: 16%
 
 ---
 
@@ -45,7 +45,7 @@ GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | Der Container, aus dem Sie Mixins abrufen möchten: `global` für von Adoben erstellte Mixins oder `tenant` für Mixins, die Ihrem Unternehmen gehören. |
 | `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Siehe [Anhang](./appendix.md#query) für eine Liste der verfügbaren Parameter. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -68,7 +68,7 @@ Das Antwortformat hängt von der `Accept` -Kopfzeile, die in der Anfrage gesende
 | `application/vnd.adobe.xed-id+json` | Gibt eine kurze Zusammenfassung jeder Ressource zurück. Dies ist die empfohlene Kopfzeile für die Auflistung von Ressourcen. (Limit: 300) |
 | `application/vnd.adobe.xed+json` | Gibt für jede Ressource das vollständige JSON-Mixin mit dem Original zurück `$ref` und `allOf` enthalten. (Limit: 300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -131,7 +131,7 @@ GET /{CONTAINER_ID}/mixins/{MIXIN_ID}
 | `{CONTAINER_ID}` | Der Container, der das Mixin enthält, das Sie abrufen möchten: `global` für ein von einer Adobe erstelltes Mixin oder `tenant` für ein Mixin, das Ihrem Unternehmen gehört. |
 | `{MIXIN_ID}` | Die `meta:altId` oder URL-kodiert `$id` des Mixins, das Sie nachschlagen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -157,7 +157,7 @@ Das Antwortformat hängt von der `Accept` -Kopfzeile, die in der Anfrage gesende
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` und `allOf` aufgelöst, keine Titel oder Beschreibungen. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` und `allOf` aufgelöst, einschließlich Deskriptoren. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Antwort**
 
@@ -411,7 +411,7 @@ PUT /tenant/mixins/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | Die `meta:altId` oder URL-kodiert `$id` des Mixins, das Sie neu schreiben möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -580,7 +580,7 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Mixins zurück.
 
 ## Aktualisieren eines Teils eines Mixins {#patch}
 
-Sie können einen Teil eines Mixins mit einer PATCH-Anfrage aktualisieren. Die [!DNL Schema Registry] unterstützt alle standardmäßigen JSON Patch-Vorgänge, einschließlich `add`, `remove`und `replace`. Weitere Informationen zum JSON Patch finden Sie im Abschnitt [API-Grundlagenhandbuch](../../landing/api-fundamentals.md#json-patch).
+Sie können einen Teil eines Mixins mit einer PATCH-Anfrage aktualisieren. Die [!DNL Schema Registry] unterstützt alle standardmäßigen JSON Patch-Vorgänge, einschließlich `add`, `remove`und `replace`. Weitere Informationen zu JSON-Patch-Vorgängen finden Sie im [API-Grundlagenhandbuch](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
@@ -596,7 +596,7 @@ PATCH /tenant/mixin/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | Die URL-kodierte `$id` URI oder `meta:altId` des Mixins, das Sie aktualisieren möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 
@@ -735,7 +735,7 @@ DELETE /tenant/mixins/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | Die URL-kodierte `$id` URI oder `meta:altId` des Mixins, das Sie löschen möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 

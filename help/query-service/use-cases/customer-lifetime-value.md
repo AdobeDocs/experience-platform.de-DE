@@ -1,7 +1,8 @@
 ---
 title: Tracking von Datensignalen zur Generierung Ihres Kundenlebenszeitwerts
 description: Dieses Handbuch bietet eine umfassende Demonstration zur Verwendung von Data Distiller und benutzerdefinierten Dashboards mit Real-time Customer Data Platform zur Messung und Visualisierung des Kundenlebenszeitwerts.
-source-git-commit: 2346f2d9450bc24e10419c09ee3dbcfb35bd5778
+exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 13%

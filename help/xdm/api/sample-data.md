@@ -6,8 +6,8 @@ description: Mit dem Endpunkt /sampledata in der Schema Registry-API können Sie
 exl-id: 424d33ca-0624-4891-bf83-044ac2861579
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 20%
+source-wordcount: '315'
+ht-degree: 19%
 
 ---
 
@@ -37,7 +37,7 @@ GET /rpc/sampledata/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | Die `meta:altId` oder URL-kodiert `$id` des Schemas, für das Sie Beispieldaten generieren möchten. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Anfrage**
 

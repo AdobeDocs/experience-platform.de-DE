@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp "Poi
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 27%
+source-wordcount: '201'
+ht-degree: 26%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 27%
 | `poiID` | Zeichenfolge | Eine eindeutige Kennung des POI. |
 | `type` | Zeichenfolge | Der allgemeine Typ des POI unter Verwendung eines vom Administrator der POI-Definitionen ausgewählten Typisierungsschemas. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 

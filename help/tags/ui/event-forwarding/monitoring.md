@@ -6,7 +6,7 @@ exl-id: 9d8572a3-816e-4b66-afe6-344fe8a15f22
 source-git-commit: 9313ebe6d51d5ef42915d154def9cb0612407439
 workflow-type: tm+mt
 source-wordcount: '548'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Diese Funktion befindet sich derzeit in der Beta-Phase und Ihr Unternehmen hat möglicherweise noch keinen Zugriff darauf. Die Funktionalität und Dokumentation können sich ändern.
+>Diese Feature befindet sich derzeit in der Beta-Phase, und Ihre Organisation hat möglicherweise noch keinen Zugriff darauf. Die Funktionalität und Dokumentation können sich ändern.
 
 Die **[!UICONTROL Überwachung]** in der Datenerfassungs-Benutzeroberfläche können Sie Nutzungsmuster, Fehler und die Berechnungszeit Ihrer Ereignisweiterleitungseigenschaften überwachen. Dieses Handbuch bietet einen allgemeinen Überblick darüber, wie Sie die auf der Registerkarte angezeigten Berichte anzeigen und verstehen können.
 

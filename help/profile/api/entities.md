@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; API
+keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;
 title: API-Endpunkt "Entitäten (Profilzugriff)"
 type: Documentation
 description: Mit Adobe Experience Platform können Sie mithilfe von RESTful-APIs oder der Benutzeroberfläche auf Echtzeit-Kundenprofil-Daten zugreifen. In diesem Handbuch wird beschrieben, wie Sie mithilfe der Profil-API auf Entitäten zugreifen, die häufiger als "Profile"bezeichnet werden.

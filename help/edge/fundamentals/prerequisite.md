@@ -6,7 +6,7 @@ exl-id: 98ae69db-bc87-4ea3-b101-664ac53e7ae0
 source-git-commit: 6a9882224cba08718c81a3aead237107b3e47726
 workflow-type: tm+mt
 source-wordcount: '315'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -21,4 +21,4 @@ Um das Adobe Experience Platform Web SDK zu verwenden, müssen Sie zunächst:
 >
 >**Bitte beachten Sie, dass CNAME-Implementierungen von Erstanbietern ab dem 10.11.20 auf allen Safari-Browsern und mobilen iOS-Geräten eine Gültigkeit von 7 Tagen haben.**
 
-- Wenn Ihre Website bereits die [Experience Cloud-ID-Dienst](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html) auf Ihrer Website - entweder über die Besucher-API oder die Experience Cloud-ID-Dienst-Erweiterung innerhalb von Adobe Experience Platform Launch - und Sie möchten sie bei der Migration zum Adobe Experience Platform Web SDK weiterhin verwenden, müssen Sie die neueste Version der Besucher-API oder die Experience Cloud-ID-Dienst-Erweiterung verwenden. Siehe [ID-Migration](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#identity) für weitere Informationen.
+- Wenn Ihre Website bereits die [Experience Cloud-ID-Dienst](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=de) auf Ihrer Website - entweder über die Besucher-API oder die Experience Cloud-ID-Dienst-Erweiterung innerhalb von Adobe Experience Platform Launch - und Sie möchten sie bei der Migration zum Adobe Experience Platform Web SDK weiterhin verwenden, müssen Sie die neueste Version der Besucher-API oder die Experience Cloud-ID-Dienst-Erweiterung verwenden. Siehe [ID-Migration](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#identity) für weitere Informationen.

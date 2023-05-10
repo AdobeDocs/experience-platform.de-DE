@@ -5,7 +5,7 @@ exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '555'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -25,7 +25,7 @@ Siehe [Handbuch zum Hinzufügen von Diensten zu einem Datastream](../edge/datast
 
 ![UI-Bild, das den Konfigurationsbildschirm des Datastream-Dienstes mit ausgewähltem Offer decisioning anzeigt](assets/aep-od-datastream.png)
 
-## Zielgruppenerstellung {#audience-creation}
+## Erstellung einer Zielgruppe {#audience-creation}
 
 [!DNL Offer Decisioning] bei der Erstellung von Zielgruppen auf den Segmentierungsdienst von Adobe Experience Platform angewiesen ist. Die Dokumentation für [!DNL Segmentation Service] [here](../segmentation/home.md).
 

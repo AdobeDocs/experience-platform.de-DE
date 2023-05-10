@@ -6,8 +6,8 @@ description: Dieses Dokument bietet einen Überblick über den Datentyp "Telecom
 exl-id: d67915b6-daaa-489f-81b4-bd3dbe0ffa44
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '611'
-ht-degree: 20%
+source-wordcount: '605'
+ht-degree: 19%
 
 ---
 
@@ -50,7 +50,7 @@ ht-degree: 20%
 | `topUp` | Zeichenfolge | Beschreibt die vereinbarten Bedingungen dafür, wie verbrauchbare Aspekte eines Abonnements während eines Abrechnungszeitraums zurückgekauft werden. |
 | `type` | Zeichenfolge | Der Umfang des Anspruchs in Bezug auf die Anzahl der Personen, die vom Abonnement abgedeckt werden. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 
@@ -77,4 +77,4 @@ Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 | `storageCapacity` | Zeichenfolge | Die Speicherkapazität des Geräts. |
 | `type` | Zeichenfolge | Der Gerätetyp. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

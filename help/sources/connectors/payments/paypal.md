@@ -7,7 +7,7 @@ exl-id: c70a9b91-b883-4e58-9ec5-6fc9b2163efd
 source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
 source-wordcount: '220'
-ht-degree: 52%
+ht-degree: 61%
 
 ---
 
@@ -23,13 +23,13 @@ Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von I
 
 Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL PayPal] mit Platform mithilfe von APIs oder der Benutzeroberfläche:
 
-## Verbinden [!DNL PayPal] zur Plattform mithilfe von APIs
+## Verbinden von [!DNL PayPal] mit Platform mithilfe von APIs
 
 - [PayPal-Basisverbindung mit der Flow Service-API erstellen](../../tutorials/api/create/payments/paypal.md)
-- [Datentabellen mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/tabular.md)
+- [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine Zahlungsquelle mithilfe der Flow Service-API](../../tutorials/api/collect/payments.md)
 
-## Verbinden [!DNL PayPal] zur Plattform mithilfe der Benutzeroberfläche
+## Verbinden von [!DNL PayPal] mit Platform über die Benutzeroberfläche
 
 - [Erstellen einer PayPal-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/payments/paypal.md)
 - [Erstellen eines Datenflusses für eine Zahlungsquellenverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/payments.md)

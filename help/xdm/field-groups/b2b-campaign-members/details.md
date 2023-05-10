@@ -4,7 +4,7 @@ description: Dieses Dokument bietet einen Überblick über die Schemakonzerne XD
 exl-id: 597629c8-7f41-4c1c-95b6-aed5e16cee72
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '357'
 ht-degree: 6%
 
 ---
@@ -18,23 +18,23 @@ ht-degree: 6%
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
 | `acquiredByCampaignKey` | [[!UICONTROL B2B-Quelle]](../../data-types/b2b-source.md) | Die zusammengesetzte ID der Kampagne, die dieses Kampagnenmitglied erworben hat. |
-| `acquiredByCampaignID` | [!UICONTROL Zeichenfolge] | Eine Zeichenfolgenkennung für die Kampagne, die dieses Kampagnenmitglied erworben hat. |
+| `acquiredByCampaignID` | [!UICONTROL String] | Eine Zeichenfolgenkennung für die Kampagne, die dieses Kampagnenmitglied erworben hat. |
 | `firstRespondedDate` | [!UICONTROL DateTime] | Ein ISO 8601-Zeitstempel, der angibt, wann die Person zum ersten Mal auf die Kampagne reagiert hat. |
 | `hasReachedSuccess` | [!UICONTROL Boolesch] | Gibt an, ob dieses Kampagnenmitglied zu einer erfolgreichen Konvertierung geführt hat. |
 | `hasResponded` | [!UICONTROL Boolesch] | Gibt an, ob dieses Kampagnenmitglied auf die Kampagne reagiert hat. |
 | `isDeleted` | [!UICONTROL Boolesch] | Gibt an, ob dieses Kampagnenmitglied in Marketo Engage gelöscht wurde.<br><br>Bei Verwendung von [Marketo-Quell-Connector](../../../sources/connectors/adobe-applications/marketo/marketo.md), werden alle in Marketo gelöschten Datensätze automatisch in das Echtzeit-Kundenprofil übernommen. Datensätze, die sich auf diese Profile beziehen, können jedoch im Data Lake bestehen bleiben. Durch Festlegen von `isDeleted` nach `true`können Sie mithilfe des Felds herausfiltern, welche Datensätze bei der Abfrage des Data Lake aus Ihren Quellen gelöscht wurden. |
 | `isExhausted` | [!UICONTROL Boolesch] | Gibt an, ob dieses Kampagnenmitglied alle Kampagneninteraktionen ausgeschöpft hat. |
-| `lastStatus` | [!UICONTROL Zeichenfolge] | Der letzte Status für das Kampagnenmitglied. |
-| `memberStatus` | [!UICONTROL Zeichenfolge] | Der aktuelle Status für das Kampagnenmitglied. |
-| `memberStatusReason` | [!UICONTROL Zeichenfolge] | Der Grund für den aktuellen Status des Kampagnenmitglieds. |
+| `lastStatus` | [!UICONTROL String] | Der letzte Status für das Kampagnenmitglied. |
+| `memberStatus` | [!UICONTROL String] | Der aktuelle Status für das Kampagnenmitglied. |
+| `memberStatusReason` | [!UICONTROL String] | Der Grund für den aktuellen Status des Kampagnenmitglieds. |
 | `membershipDate` | [!UICONTROL DateTime] | Der Grund für den aktuellen Status des Kampagnenmitglieds. |
-| `nurtureCadence` | [!UICONTROL Zeichenfolge] | Die Zeitspanne, in der dem Kampagnenmitglied kampagnenbezogene Informationen angezeigt werden. |
-| `nurtureTrackName` | [!UICONTROL Zeichenfolge] | Der Name des Pflegeprogramms, dem dieses Kampagnenmitglied unterliegt. |
+| `nurtureCadence` | [!UICONTROL String] | Die Zeitspanne, in der dem Kampagnenmitglied kampagnenbezogene Informationen angezeigt werden. |
+| `nurtureTrackName` | [!UICONTROL String] | Der Name des Pflegeprogramms, dem dieses Kampagnenmitglied unterliegt. |
 | `reachedSuccessDate` | [!UICONTROL DateTime] | Ein ISO 8601-Zeitstempel für den Zeitpunkt, zu dem eine erfolgreiche Konvertierung für das Kampagnenmitglied durchgeführt wurde. |
-| `webinarConfirmationUrl` | [!UICONTROL Zeichenfolge] | Die Webinar-Bestätigungs-URL für das Kampagnenmitglied. |
-| `webinarRegistrationID` | [!UICONTROL Zeichenfolge] | Die Webinar-Registrierungs-ID für das Kampagnenmitglied. |
+| `webinarConfirmationUrl` | [!UICONTROL String] | Die Webinar-Bestätigungs-URL für das Kampagnenmitglied. |
+| `webinarRegistrationID` | [!UICONTROL String] | Die Webinar-Registrierungs-ID für das Kampagnenmitglied. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 

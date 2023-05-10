@@ -6,7 +6,7 @@ exl-id: d3afbabb-005d-4537-831a-857c88043759
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '858'
-ht-degree: 9%
+ht-degree: 12%
 
 ---
 
@@ -18,7 +18,7 @@ Konten, sind die ultimativen Einheiten, die B2B-Produkte und -Dienstleistungen e
 
 Kontenbasiertes Marketing, insbesondere die strategische Ausrichtung von Konten als Marketingziele. Die Neigung zum Kauf von Konten hilft den B2B-Marketingexperten bei der Priorisierung der Konten, um ihre Rendite zu maximieren.
 
-Der prädiktive Lead- und Kontoauswertungsdienst behebt die oben genannten Herausforderungen, indem er aus den Konversion-Ereignissen der Opportunitätsstufe lernt und diese vorhersagt und Personenaktivitäten auf Kontoebene aggregiert, um die Kontobewertungen zu erhalten. Die Punktzahlen stehen in benutzerdefinierten Feldern zu Personenprofilen und Kontoprofilen zur Verfügung und können einfach als Segmentkriterien eingefügt werden, um Ihre Zielgruppe zu verfeinern. Wichtigste Einflussfaktoren sind sowohl auf der Aggregat- als auch auf der Einheitenebene verfügbar, damit B2B-Marketer besser verstehen können, welche Elemente zu den Werten geführt haben.
+Der prädiktive Lead- und Kontoauswertungsdienst behebt die oben genannten Herausforderungen, indem er aus den Konversion-Ereignissen der Opportunitätsstufe lernt und diese vorhersagt und Personenaktivitäten auf Kontoebene aggregiert, um die Kontobewertungen zu erhalten. Die Punktzahlen stehen in benutzerdefinierten Feldern zu Personenprofilen und Kontoprofilen zur Verfügung und können einfach als Segmentkriterien eingefügt werden, um Ihre Zielgruppe zu verfeinern. Wichtigste Einflussfaktoren sind sowohl auf der Aggregat- als auch auf der Einheitenebene verfügbar, damit B2B-Marketing-Fachleute besser verstehen können, welche Elemente zu den Bewertungen geführt haben.
 
 ## Prädiktive Lead- und Kontobewertung verstehen {#how-it-works}
 

@@ -2,7 +2,8 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Abfragedienst; Query Service; Erlebnisereignisabfragen; Erlebnisereignisabfrage; Erlebnisereignisabfrage;
 title: Anzeigen eines Rollup-Berichts für einen bestimmten Besucher
 description: Das folgende Dokument enthält Beispiele für Abfragen, die Erlebnisereignisse in Adobe Experience Platform Query Service beinhalten.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 1348503f-65c1-41f9-b111-1284a49449a1
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 1%
