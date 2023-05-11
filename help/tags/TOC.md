@@ -48,9 +48,9 @@ ht-degree: 100%
    * [Premium-CDN-Unterstützung (Beta)](./ui/publishing/premium-cdn.md)
 * Client-seitige Informationen {#client-side}
    * [Übersicht](./ui/client-side/overview.md)
-   * [Asynchrone Implementierung](./ui/client-side/asynchronous-deployment.md)
+   * [Asynchrone Bereitstellung](./ui/client-side/asynchronous-deployment.md)
    * [Satellitenobjektreferenz](./ui/client-side/satellite-object.md)
-   * [Implementierung von JavaScript-Tags zur Verwaltung des Einverständnisses von Kunden](./ui/client-side/consent.md)
+   * [Bereitstellung von JavaScript-Tags zur Verwaltung des Einverständnisses von Kunden](./ui/client-side/consent.md)
    * [Unterstützung einer Content Security Policy (CSP)](./ui/client-side/content-security-policy.md)
    * [Unterstützung von Subresource Integrity (SRI)](./ui/client-side/sri.md)
 * Ereignisweiterleitung {#event-forwarding}

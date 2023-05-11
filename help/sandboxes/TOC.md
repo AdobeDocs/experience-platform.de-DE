@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Hilfe zu Sandboxes in Adobe Experience Platform
 breadcrumb-title: Sandboxes-Anleitung
-user-guide-description: Partitionieren einer Platform-Instanz in virtuellen Umgebungen für Entwicklung, Tests und zur Anwendungsimplementierung.
+user-guide-description: Partitionieren einer Platform-Instanz in virtuellen Umgebungen für Entwicklung, Tests und zur Anwendungsbereitstellung.
 feature: Sandboxes
 source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
