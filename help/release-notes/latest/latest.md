@@ -2,14 +2,18 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise April 2023 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: da28de44fc8ab37d530c2f9b3c167e365f00dca6
+source-git-commit: e3fc587d924b2183806918f91e5ae3aa3fee52f3
 workflow-type: tm+mt
-source-wordcount: '1841'
-ht-degree: 82%
+source-wordcount: '2094'
+ht-degree: 77%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
+
+>[!IMPORTANT]
+>
+>Ab dem 15. Mai 2023 wird die `Existing` Der Status wird in der Segmentzugehörigkeitszuordnung nicht mehr unterstützt, um Redundanz im Segmentzugehörigkeitslebenszyklus zu entfernen. Nach dieser Änderung werden Profile, die in einem Segment qualifiziert sind, als `Realized` und Profile, die disqualifiziert sind, weiterhin als `Exited`. Weitere Informationen zu dieser Änderung finden Sie im [Segmentierungsdienstabschnitt](#segmentation).
 
 **Veröffentlichungsdatum: 26. April 2023**
 
@@ -22,6 +26,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [Experience-Datenmodell](#xdm)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [Echtzeit-Kundenprofil](#profile)
+- [Segmentierungs-Service](#segmentation)
 - [Quellen](#sources)
 
 ## Dashboards {#dashboards}
@@ -160,6 +165,20 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 | Ablauf pseudonymer Profildaten | Der Ablauf pseudonymer Profildaten ist jetzt allgemein verfügbar! Mit dieser Version werden veraltete pseudonyme Profile kontinuierlich aus Ihrer Experience Platform-Instanz entfernt, sobald sie aktiviert wurden. Weitere Informationen zu dieser Funktion und pseudonymen Profilen finden Sie im [Handbuch zum Ablauf pseudonymer Profildaten](../../profile/pseudonymous-profiles.md). |
 
 {style="table-layout:auto"}
+
+## Segmentierungs-Service {#segmentation}
+
+[!DNL Segmentation Service] definiert eine bestimmte Untergruppe von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Segmente können auf Datensatzdaten (z. B. demografische Daten) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Segmentzugehörigkeitszuordnung | Als Folgemaßnahme zur vorherigen Ankündigung vom 15. Mai 2023 im Februar wurde die `Existing` Der Status wird in der Segmentzugehörigkeitszuordnung nicht mehr unterstützt, um Redundanz im Segmentzugehörigkeitslebenszyklus zu entfernen. Nach dieser Änderung werden Profile, die in einem Segment qualifiziert sind, als `Realized` und Profile, die disqualifiziert sind, weiterhin als `Exited`.<br/><br/> Diese Änderung könnte sich auf Sie auswirken, wenn Sie [Enterprise-Ziele](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hub, HTTP API) und möglicherweise automatisierte nachgelagerte Prozesse basierend auf der `Existing` Status. Wenn dies für Sie der Fall ist, überprüfen Sie Ihre nachgelagerten Integrationen. Wenn Sie über einen bestimmten Zeitraum hinaus an der Identifizierung neu qualifizierter Profile interessiert sind, sollten Sie eine Kombination des `Realized`-Status und der `lastQualificationTime` bei Ihrer Segmentzugehörigkeitszuordnung erwägen. Weitere Informationen erhalten Sie von Ihren Adobe-Support-Mitarbeitenden. |
+
+{style="table-layout:auto"}
+
+Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Übersicht zu Segmentierung](../../segmentation/home.md).
 
 ## Quellen {#sources}
 
