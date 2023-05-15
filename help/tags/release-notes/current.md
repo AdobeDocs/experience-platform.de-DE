@@ -5,7 +5,7 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
 workflow-type: tm+mt
 source-wordcount: '798'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 86%
 
 ## 26. April 2023
 
-* **OAuth JWT Secret**: Die [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) ermöglicht Kunden die Verwendung von Adobe- und Google Service-Token zur Unterstützung von Server-zu-Server-Interaktionen bei der Ereignisweiterleitung.
+* **OAuth JWT-Geheimnis**: Das [OAuth JWT-Geheimnis](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=de) ermöglicht Kundinnen und Kunden die Verwendung von Adobe- und Google-Service-Token zur Unterstützung von Server-zu-Server-Interaktionen bei der Ereignisweiterleitung.
 
 Die folgende neue Erweiterung wurde veröffentlicht:
 
-* **[!DNL Pinterest Conversions API]Erweiterung**: Die [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) Mit der Ereignisweiterleitungs-Erweiterung können Sie die im Adobe Experience Platform Edge Network erfassten Daten nutzen und an senden. [!DNL Pinterest] in Form von serverseitigen Ereignissen, bei denen die [!DNL Pinterest Conversions API].
+* **[!DNL Pinterest Conversions API]-Erweiterung**: Mit der Ereignisweiterleitungserweiterung [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=de) können die im Adobe Experience Platform Edge Network erfassten Daten genutzt und in Form von Server-seitigen Ereignissen mithilfe der [!DNL Pinterest Conversions API] an [!DNL Pinterest] gesendet werden.
 
 ## 29. März 2023
 
@@ -30,7 +30,7 @@ Greifen Sie über die Startseite der Datenerfassung unter „Erste Schritte“ a
 Es wurden neue Erweiterungen veröffentlicht:
 
 * **[!DNL Braze]-Erweiterung zur Ereignisweiterleitung**: Mit der Ereignisweiterleitungserweiterung [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=de) können Sie die im Adobe Experience Platform Edge Network erfassten Daten nutzen und in Form von Server-seitigen Ereignissen mithilfe der APIs von [!DNL Braze] für die Benutzernachverfolgung an [!DNL Braze] senden.
-* **[Epsilon Events API] Ereignisweiterleitungs-Erweiterung**: Die [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=de) Mit der -Erweiterung können Sie die Ereignisweiterleitung nutzen, um Ereignisinformationen im Adobe Experience Platform Edge Network zu erfassen und an zu senden. [!DNL Epsilon] mithilfe der [!DNL Epsilon] Ereignis-API.
+* Ereignisweiterleitungserweiterung mit der **[Epsilon-Ereignisse-API]**: Mit der Erweiterung [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=de) zur Ereignisweiterleitung können Sie Ereignisinformationen im Adobe Experience Platform Edge Network erfassen und über die Ereignis-API von [!DNL Epsilon] an [!DNL Epsilon] senden.
 * **[!DNL Mixpanel]-Erweiterung zur Ereignisweiterleitung**: Mit der [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=de)[!DNL Mixpanel]-Erweiterung können Sie die Ereignisweiterleitung nutzen, um Ereignisinformationen im Adobe Experience Platform Edge Network zu erfassen und über die API zur Nachverfolgung von Ereignissen an zu senden.
 
 ## 25. Januar 2023

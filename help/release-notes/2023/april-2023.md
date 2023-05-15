@@ -5,7 +5,7 @@ exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
 source-git-commit: c95d2ab1a6f104c18c491d3a533ee2c304a0aa68
 workflow-type: tm+mt
 source-wordcount: '2095'
-ht-degree: 77%
+ht-degree: 92%
 
 ---
 
@@ -68,8 +68,8 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | --- | --- |
 | Verschleierung von IP-Adressen für Datenströme | Sie können jetzt in der [Benutzeroberfläche für die Datenstromkonfiguration](../../edge/datastreams/configure.md) Optionen für die partielle oder vollständige IP-Verschleierung auf der Ebene eines Datenstroms festlegen. <br><br>Die Einstellung für die IP-Verschleierung auf Datenstromebene hat Vorrang vor jeder in Adobe Target und Audience Manager konfigurierten IP-Verschleierung. <br><br>An Adobe Analytics gesendete Daten sind von der Einstellung für [!UICONTROL IP-Verschleierung] auf Datenstromebene nicht betroffen. Adobe Analytics empfängt derzeit nicht-verschleierte IP-Adressen. Damit Analytics verschleierte IP-Adressen empfangen kann, müssen Sie die IP-Verschleierung separat in Adobe Analytics konfigurieren. Dieses Verhalten wird in zukünftigen Versionen aktualisiert.<br><br> Weitere Informationen zur IP-Verschleierung und Anweisungen zur Konfiguration finden Sie in der [Dokumentation zur Datenstromkonfiguration](../../edge/datastreams/configure.md#advanced-options). |
 | [Überschreibungen der Datenstromkonfiguration](../../edge/datastreams/overrides.md) | Sie können jetzt zusätzliche Konfigurationsoptionen für Datenströme festlegen, mit denen Sie bestimmte Einstellungen wie Ereignis-Datensätze, Target-Eigenschafts-Token, ID-Synchronisierungs-Container und Analytics-Report Suites überschreiben können. <br><br>Das Überschreiben von Datenstromkonfigurationen ist ein zweistufiger Prozess: <ol><li>Zunächst müssen Sie Ihre Überschreibungen der Datenstromkonfiguration auf der Seite [Datenstromkonfiguration](../../edge/datastreams/configure.md) definieren.</li><li>Anschließend müssen Sie die Überschreibungen entweder über einen Web SDK-Befehl oder mithilfe der [Tag-Erweiterung](../../edge/extension/web-sdk-extension-configuration.md) des Web SDK an das Edge-Netzwerk senden.</li></ol> |
-| OAuth JWT Secret | Die [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) ermöglicht Kunden die Verwendung von Adobe- und Google Service-Token zur Unterstützung von Server-zu-Server-Interaktionen bei der Ereignisweiterleitung. |
-| [!DNL Pinterest Conversions API]-Erweiterung  | Die [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) Mit der Ereignisweiterleitungs-Erweiterung können Sie die im Adobe Experience Platform Edge Network erfassten Daten nutzen und an senden. [!DNL Pinterest] in Form von serverseitigen Ereignissen, bei denen die [!DNL Pinterest Conversions API]. |
+| OAuth JWT-Geheimnis | Das [OAuth JWT-Geheimnis](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=de) ermöglicht Kundinnen und Kunden die Verwendung von Adobe- und Google-Service-Token zur Unterstützung von Server-zu-Server-Interaktionen bei der Ereignisweiterleitung. |
+| [!DNL Pinterest Conversions API]-Erweiterung  | Mit der Ereignisweiterleitungserweiterung [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=de) können die im Adobe Experience Platform Edge Network erfassten Daten genutzt und in Form von Server-seitigen Ereignissen mithilfe der [!DNL Pinterest Conversions API] an [!DNL Pinterest] gesendet werden. |
 
 {style="table-layout:auto"}
 
@@ -123,7 +123,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
-| Schema | [[!UICONTROL Adobe Target-Klassifizierungsfelder]](https://github.com/adobe/xdm/pull/1719/files) | Ein neues XDM-Schema für Target Classification-Datensätze, das eine Reihe von Metadatenfeldern enthält, um Target-Aktivitäten und -Erlebnisse zu klassifizieren. |
+| Schema | [[!UICONTROL Adobe Target-Klassifizierungsfelder]](https://github.com/adobe/xdm/pull/1719/files) | Ein neues XDM-Schema für Target-Klassifizierungsdatensätze, das eine Reihe von Metadatenfeldern enthält, um Target-Aktivitäten und -Erlebnisse zu klassifizieren. |
 
 {style="table-layout:auto"}
 
@@ -131,10 +131,10 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
-| Feldergruppe | [[!UICONTROL Adobe Unified Profile Service-Kontovereinigung-Erweiterung]](https://github.com/adobe/xdm/pull/1696/files) | Es wurde eine Feldergruppe zur Kontoerweiterung für das Echtzeit-Kundenprofil hinzugefügt, mit der Benutzer eine Segmentmitgliedschaft zur Kontounion hinzufügen können. |
-| Schema | [[!UICONTROL Systemschema für berechnete Attribute]](https://github.com/adobe/xdm/pull/1696/files) | Die Feldergruppe Berechnete Attribute , die vom Echtzeit-Kundenprofil verwendet wird, wurde in ein schreibgeschütztes globales Schema des Systems aktualisiert. |
-| Feldergruppe | Mehrfach | Es wurden mehrere Ereignisse als Felder für [[!UICONTROL Zeitreihenschema]](https://github.com/adobe/xdm/pull/1718/files). |
-| Feldergruppe | Details zur Profilloyalität | [Titel korrigiert](https://github.com/adobe/xdm/pull/1717/files) für `xdm:upgradeDate` von &quot;Programmname&quot;zu &quot;Upgrade-Datum&quot;. |
+| Feldergruppe | [[!UICONTROL Adobe Unified Profile Service-Kontovereinigungserweiterung]](https://github.com/adobe/xdm/pull/1696/files) | Es wurde eine Feldergruppe zur Kontoerweiterung für das Echtzeit-Kundenprofil hinzugefügt, mit der Benutzerinnen und Benutzer eine Segmentmitgliedschaft zur Kontovereinigung hinzufügen können. |
+| Schema | [[!UICONTROL Systemschema für berechnete Attribute]](https://github.com/adobe/xdm/pull/1696/files) | Die Feldergruppe „Berechnete Attribute“, die vom Echtzeit-Kundenprofil verwendet wird, wurde zu einem schreibgeschützten globalen Schema des Systems aktualisiert. |
+| Feldergruppe | Mehrfach | Es wurden mehrere Ereignisse als Felder für das [[!UICONTROL Zeitreihenschema] hinzugefügt](https://github.com/adobe/xdm/pull/1718/files). |
+| Feldergruppe | Details zur Profiltreue | [Titel korrigiert](https://github.com/adobe/xdm/pull/1717/files) für `xdm:upgradeDate` von „Programmname“ zu „Upgrade-Datum“. |
 | Feldergruppe | Mehrfach | Mehrere Felder aus [[!UICONTROL Entscheidungselement]](https://github.com/adobe/xdm/pull/1714/files) wurden aktualisiert, um die doppelte verschachtelte Hierarchie zu entfernen. |
 
 {style="table-layout:auto"}
@@ -143,16 +143,16 @@ Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-S
 
 ## Real-Time Customer Data Platform
 
-Basierend auf Experience Platform, Real-time Customer Data Platform ([!DNL Real-Time CDP]) hilft Unternehmen, bekannte und unbekannte Daten zusammenzuführen, um Kundenprofile durch intelligente Entscheidungen auf der gesamten Journey zu aktivieren. [!DNL Real-Time CDP] kombiniert mehrere Unternehmensdatenquellen, um Kundenprofile in Echtzeit zu erstellen. Segmente, die aus diesen Profilen erstellt wurden, können dann an nachgelagerte Ziele gesendet werden, um eine Eins-zu-Eins-Kundenerfahrung über alle Kanäle und Geräte hinweg bereitzustellen.
+Die auf Experience Platform aufbauende Real-Time Customer Data Platform ([!DNL Real-Time CDP]) hilft Unternehmen dabei, bekannte und unbekannte Daten zusammenzuführen, sodass sich während der gesamten Customer Journey Kundenprofile mit intelligenten Entscheidungen aktivieren lassen. [!DNL Real-Time CDP] kombiniert mehrere Unternehmensdatenquellen, um Kundenprofile in Echtzeit zu erstellen. Segmente, die aus diesen Profilen erstellt wurden, können dann an nachgelagerte Ziele gesendet werden, um eine personalisierte Eins-zu-Eins-Kundenerfahrung über alle Kanäle und Geräte hinweg bereitzustellen.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Erweiterte Real-Time CDP-Startseite | Die [Real-Time CDP-Homepage](https://experience.adobe.com) wurde um einen aktualisierten Look und eine verbesserte Leistung erweitert. Die Startseite ist jetzt berechtigungsorientiert und enthält Widgets, die für die Funktionen relevant sind, auf die Sie Zugriff haben. Weitere Informationen finden Sie im Abschnitt [Übersicht über das Dashboard der Real-Time CDP-Startseite](../../rtcdp/home-page-dashboards.md). |
-| Umfrage zur Selbstidentifizierung | Die Umfrage zur Selbstidentifizierung ist ein kurzer Fragebogen, der auf der Startseite der Adobe Experience Platform-Benutzeroberfläche vorgestellt wird. Verwenden Sie die Umfrage zur Identifizierung Ihrer Experience Platform, um Ihr persönliches Profil zu erstellen und auf Ihre Auswahl abgestimmte Richtlinien zu erhalten. Weitere Informationen finden Sie im Abschnitt [Selbstidentifizierungs-Umfrage - Überblick](../../landing/self-identification.md). |
+| Startseite der erweiterten Real-Time CDP | Die [Startseite der Real-Time CDP](https://experience.adobe.com) hat ein aktualisiertes Design und eine verbesserte Leistung erhalten. Die Startseite ist jetzt berechtigungsorientiert und enthält Widgets, die für die Funktionen relevant sind, auf die Sie Zugriff haben. Weitere Informationen finden Sie im Abschnitt [Übersicht über das Dashboard der Real-Time CDP-Startseite](../../rtcdp/home-page-dashboards.md). |
+| Umfrage zur Selbstidentifizierung | Die Umfrage zur Selbstidentifizierung ist ein kurzer Fragebogen, der auf der Startseite der Adobe Experience Platform-Benutzeroberfläche vorgestellt wird. Verwenden Sie die Umfrage zur Selbstidentifizierung, um Ihr persönliches Profil von Experience Platform zu erstellen, und erhalten Sie auf Ihre Auswahl abgestimmte Richtlinien. Weitere Informationen finden Sie im [Überblick der Umfrage zur Selbstidentifizierung](../../landing/self-identification.md). |
 
-Weitere Informationen finden Sie unter [!DNL Real-Time CDP], siehe [[!DNL Real-Time CDP] Übersicht](../../rtcdp/overview.md).
+Weitere Informationen zu [!DNL Real-Time CDP] finden Sie im [[!DNL Real-Time CDP] Überblick](../../rtcdp/overview.md).
 
 ## Echtzeit-Kundenprofil {#profile}
 
