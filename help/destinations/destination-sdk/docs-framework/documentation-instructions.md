@@ -2,7 +2,7 @@
 title: Dokumentieren des Ziels in Adobe Experience Platform
 description: Schrittweise Anleitungen zum Erstellen einer Dokumentationsseite für Ihr Ziel in Adobe Experience Platform
 exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
-source-git-commit: dd4a150351b5e0c41586cf663324aeb345a896e4
+source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 8%
@@ -51,7 +51,7 @@ Auf einer übergeordneten Ebene müssen Sie zur Erstellung der Dokumentation fü
 
 Um Sie bei der Erstellung Ihrer Dokumentationsseite zu unterstützen, hat Adobe bereits eine [Dokumentationsvorlage](./self-service-template.md) für Sie. Weiter unten finden Sie Anweisungen zum Bearbeiten der Vorlage und Öffnen einer Pull-Anforderung. Das Dokumentationsteam der Adobe prüft und veröffentlicht die Dokumentation für Ihr neues Ziel.
 
-[Laden Sie die Vorlage hier herunter](assets/yourdestination-template.zip) und entpacken Sie die Datei, um die `yourdestination.md` -Datei.
+[Laden Sie die Vorlage hier herunter](../assets/docs-framework/yourdestination-template.zip) und entpacken Sie die Datei, um die `yourdestination.md` -Datei.
 
 Anweisungen zur Verwendung der Vorlage zum Erstellen Ihrer Dokumentationsseite finden Sie weiter unten.
 

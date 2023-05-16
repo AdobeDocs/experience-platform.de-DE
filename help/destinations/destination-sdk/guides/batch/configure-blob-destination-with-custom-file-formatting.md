@@ -2,9 +2,9 @@
 description: Erfahren Sie, wie Sie mit Destination SDK ein Azure Blob Storage-Ziel mit benutzerdefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration konfigurieren.
 title: Konfigurieren eines Azure Blob Storage-Ziels mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration.
 exl-id: effbd218-3a7c-4986-9fba-f5727a21e480
-source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
+source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '708'
 ht-degree: 12%
 
 ---
@@ -13,9 +13,11 @@ ht-degree: 12%
 
 ## Übersicht {#overview}
 
-Auf dieser Seite wird beschrieben, wie Sie mit Destination SDK eine [!DNL Azure Blob Storage] Ziel mit benutzerdefiniertem [Dateiformatierungsoptionen](../../server-and-file-configuration.md#file-configuration) und benutzerspezifische [Dateinamenkonfiguration](../../file-based-destination-configuration.md#file-name-configuration).
+Auf dieser Seite wird beschrieben, wie Sie mit Destination SDK eine [!DNL Azure Blob Storage] Ziel mit benutzerdefiniertem [Dateiformatierungsoptionen](configure-file-formatting-options.md) und benutzerspezifische [Dateinamenkonfiguration](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
 
 Auf dieser Seite werden alle Konfigurationsoptionen angezeigt, die für Azure Blob Storage-Ziele verfügbar sind. Sie können die in den folgenden Schritten angezeigten Konfigurationen bearbeiten oder bestimmte Teile der Konfigurationen nach Bedarf löschen.
+
+Detaillierte Beschreibungen der unten verwendeten Parameter finden Sie unter [Konfigurationsoptionen im Ziel-SDK](../../functionality/configuration-options.md).
 
 ## Voraussetzungen {#prerequisites}
 
@@ -23,7 +25,7 @@ Bevor Sie mit den unten beschriebenen Schritten fortfahren, lesen Sie bitte die 
 
 ## Schritt 1: Erstellen einer Server- und Dateikonfiguration {#create-server-file-configuration}
 
-Verwenden Sie zunächst die `/destination-server` -Endpunkt, um eine Server- und Dateikonfiguration zu erstellen. Eine ausführliche Beschreibung der Parameter in der HTTP-Anforderung finden Sie im Abschnitt [Server- und Dateikonfigurationsspezifikationen für dateibasierte Ziele](../../server-and-file-configuration.md#blob-example) und die zugehörigen [Dateiformatierungskonfigurationen](../../server-and-file-configuration.md#file-configuration).
+Verwenden Sie zunächst die `/destination-server` Endpunkt zu [Erstellen einer Server- und Dateikonfiguration](../../authoring-api/destination-server/create-destination-server.md).
 
 **API-Format**
 
@@ -34,7 +36,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **Anfrage**
 
 Die folgende Anfrage erstellt eine neue Ziel-Server-Konfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird.
-Die folgende Payload enthält eine generische Azure Blob-Konfiguration mit benutzerdefiniertem [CSV-Dateiformatierung](../../server-and-file-configuration.md#file-configuration) Konfigurationsparameter festlegen, die Benutzer in der Experience Platform-Benutzeroberfläche definieren können.
+Die folgende Payload enthält eine generische Azure Blob-Konfiguration mit benutzerdefiniertem [CSV-Dateiformatierung](../../functionality/destination-server/file-formatting.md) Konfigurationsparameter festlegen, die Benutzer in der Experience Platform-Benutzeroberfläche definieren können.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -47,7 +49,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "name":"Azure Blob server with custom file formatting options and custom file name configuration",
    "description":"Azure Blob server with custom file formatting options and custom file name configuration",
-   "releaseNotes":"Azure Blob server with custom file formatting options and custom file name configuration",
    "destinationServerType":"FILE_BASED_AZURE_BLOB",
    "fileBasedAzureBlobDestination":{
       "path":{
@@ -130,12 +131,6 @@ Nachdem Sie die Konfiguration des Zielservers und der Dateiformatierung im vorhe
 
 So verbinden Sie die Serverkonfiguration in [Schritt 1](#create-server-file-configuration) ersetzen Sie die `destinationServerId` -Wert in der API-Anfrage unten mit dem Wert, der beim Erstellen Ihres Zielservers in [Schritt 1](#create-server-file-configuration).
 
-Eine detaillierte Beschreibung der unten verwendeten Parameter finden Sie auf den folgenden Seiten:
-
-* [Authentifizierungskonfiguration](../../authentication-configuration.md#blob)
-* [Batch-Zielkonfiguration](../../file-based-destination-configuration.md#batch-configuration)
-* [API-Vorgänge für die dateibasierte Zielkonfiguration](../../destination-configuration-api.md#create-file-based)
-
 **API-Format**
 
 ```http
@@ -154,7 +149,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
  -d ' {
    "name":"Azure Blob Storage destination with custom file formatting options and custom file name configuration",
    "description":"Azure Blob Storage destination with custom file formatting options and custom file name configuration",
-   "releaseNotes":"Azure Blob Storage destination with custom file formatting options and custom file name configuration",
    "status":"TEST",
    "customerAuthenticationConfigurations":[
       {
@@ -416,7 +410,7 @@ Eine erfolgreiche Antwort gibt die neue Zielkonfiguration zurück, einschließli
 
 Basierend auf den obigen Konfigurationen zeigt der Experience Platform-Katalog jetzt eine neue private Zielkarte an, die Sie verwenden können.
 
-![Bildschirmaufzeichnung mit der Zielkatalogseite mit der ausgewählten Zielkarte.](../../assets/blob-destination-card.gif)
+![Bildschirmaufzeichnung mit der Zielkatalogseite mit der ausgewählten Zielkarte.](../../assets/guides/batch/blob-destination-card.gif)
 
 Beachten Sie in den unten stehenden Bildern und Aufzeichnungen, wie die Optionen in der [Aktivierungs-Workflow für dateibasierte Ziele](/help/destinations/ui/activate-batch-profile-destinations.md) mit den Optionen übereinstimmen, die Sie in der Zielkonfiguration ausgewählt haben.
 
@@ -426,13 +420,13 @@ Beachten Sie beim Ausfüllen von Details zum Ziel, wie die angezeigten Felder di
 >
 >Die Reihenfolge, in der Sie die benutzerdefinierten Datenfelder zur Zielkonfiguration hinzufügen, wird nicht in der Benutzeroberfläche angezeigt. Die benutzerdefinierten Datenfelder werden immer in der Reihenfolge angezeigt, die in der nachfolgenden Bildschirmaufzeichnung angezeigt wird.
 
-![Zieldetails ausfüllen](../../assets/file-configuration-options.gif)
+![Zieldetails ausfüllen](../../assets/guides/batch/file-configuration-options.gif)
 
 Beachten Sie bei der Planung von Exportintervallen, dass die angezeigten Felder die Felder sind, die Sie in der `batchConfig` Konfiguration.
-![Planungsoptionen für Exporte](../../assets/file-export-scheduling.png)
+![Planungsoptionen für Exporte](../../assets/guides/batch/file-export-scheduling.png)
 
 Beachten Sie bei der Anzeige der Konfigurationsoptionen für Dateinamen, wie die angezeigten Felder die `filenameConfig` -Optionen, die Sie in der Konfiguration eingerichtet haben.
-![Konfigurationsoptionen für Dateinamen](../../assets/file-naming-options.gif)
+![Konfigurationsoptionen für Dateinamen](../../assets/guides/batch/file-naming-options.gif)
 
 Wenn Sie eines der oben genannten Felder anpassen möchten, wiederholen Sie [Schritt 1](#create-server-file-configuration) und [two](#create-destination-configuration) um die Konfigurationen nach Bedarf zu ändern.
 
@@ -442,7 +436,7 @@ Wenn Sie eines der oben genannten Felder anpassen möchten, wiederholen Sie [Sch
 >
 >Dieser Schritt ist nicht erforderlich, wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen und es nicht im Zielkatalog veröffentlichen möchten, damit andere Kunden ihn verwenden können.
 
-Nachdem Sie Ihr Ziel konfiguriert haben, verwenden Sie die [Zielpublikations-API](../../destination-publish-api.md) , um Ihre Konfiguration zur Überprüfung an Adobe zu senden.
+Nachdem Sie Ihr Ziel konfiguriert haben, verwenden Sie die [Zielpublikations-API](../../publishing-api/create-publishing-request.md) , um Ihre Konfiguration zur Überprüfung an Adobe zu senden.
 
 ## Schritt 5: (Optional) Dokument Ihres Ziels {#document-destination}
 

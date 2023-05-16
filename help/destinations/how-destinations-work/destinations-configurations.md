@@ -2,7 +2,7 @@
 title: Konfigurierbare und allgemeine Exporteinstellungen in Zielen
 description: Erfahren Sie, welche Exporteinstellungen in Zielen auf Zielebene konfigurierbar sind und welche fest eingestellt sind und nicht bearbeitet werden können.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
 workflow-type: tm+mt
 source-wordcount: '845'
 ht-degree: 100%
@@ -32,7 +32,7 @@ Was in den Zielexporten enthalten ist, variiert geringfügig zwischen den Zielty
 Zielentwicklerinnen und -entwickler können mit [Destination SDK](/help/destinations/destination-sdk/overview.md) benutzer- oder produktdefinierte (private oder öffentliche) Ziele erstellen. Destination SDK bietet Entwickelnden eine große Flexibilität bei der Konfiguration von Zielen basierend auf den Downstream-Funktionen ihrer API-Endpunkte und Dateiempfangssysteme. Auf Grundlage der Downstream-Funktionen stehen Zielentwicklerinnen und -entwickler beim Konfigurieren eines Ziels mit Destination SDK die folgenden Konfigurationsoptionen zur Verfügung:
 
 * Sie können bestimmen, welche Attribute und Identitäten aus Experience Platform für das Ziel exportiert werden können. Sie können auch bestimmen, welche Identitäten von ihren Zielen für einen erfolgreichen Datenexport erforderlich sind.
-* Sie können eine Aggregationsrichtlinie festlegen, die bestimmt, wie lange Experience Platform beim Aggregieren von HTTP-Nachrichten warten soll, die an API-Integrationen gesendet werden. Sie können verschiedene Aggregationstypen konfigurieren, um zu bestimmen, wie viele Profile in ausgehenden HTTP-Nachrichten enthalten sein sollen und wie lange Experience Platform warten soll, bis die HTTP-Nachricht gesendet wird. Weitere Informationen zu den [Konfigurationsoptionen für Aggregationsrichtlinien](/help/destinations/destination-sdk/destination-configuration.md#aggregation) stehen Zielentwicklerinnen und -entwicklern in der Destination SDK-Dokumentation zur Verfügung.
+* Sie können eine Aggregationsrichtlinie festlegen, die bestimmt, wie lange Experience Platform beim Aggregieren von HTTP-Nachrichten warten soll, die an API-Integrationen gesendet werden. Sie können verschiedene Aggregationstypen konfigurieren, um zu bestimmen, wie viele Profile in ausgehenden HTTP-Nachrichten enthalten sein sollen und wie lange Experience Platform warten soll, bis die HTTP-Nachricht gesendet wird. Weitere Informationen zu den [Konfigurationsoptionen für Aggregationsrichtlinien](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) stehen Zielentwicklerinnen und -entwicklern in der Destination SDK-Dokumentation zur Verfügung.
 * Sie können bestimmen, ob HTTP-Nachrichtenexporte Profile enthalten sollen, die sich für Segmente qualifizieren oder aus Segmenten entfernt werden oder beides.
 * Sie können bestimmen, welche Dateinamens- und Dateiformatierungskonfigurationen Benutzenden beim Exportieren von Dateien zur Verfügung stehen sollen.
 

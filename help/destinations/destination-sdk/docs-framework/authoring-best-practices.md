@@ -2,7 +2,7 @@
 title: Best Practices für die Inhaltserstellung
 description: Erfahren Sie, welche Regeln und Tipps Sie beim Verfassen Ihrer Zieldokumentationsseite befolgen sollten, um sicherzustellen, dass sie den Qualitätsstandards der Adobe Experience Platform-Dokumentation entspricht.
 exl-id: b12059f1-6635-41cd-acc5-6ff471111164
-source-git-commit: 0b9b724c2530e43ce681011d12fc1341148ddbf5
+source-git-commit: e239de97a26ea2ff36bb74390e249851a13d2e13
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 3%
@@ -56,5 +56,5 @@ Befolgen Sie die bereitgestellte Dokumentationsvorlage und bearbeiten Sie nicht 
 
 ## Prozess {#process}
 
-* Die [Dokumentationsvorlage](./self-service-template.md) selten aktualisiert wird, basierend auf dem Partner-Feedback. Bevor Sie mit der Erstellung der Dokumentation für Ihr Ziel beginnen, stellen Sie sicher, dass Sie die [aktuelle Version der Vorlage](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
+* Die [Dokumentationsvorlage](./self-service-template.md) selten aktualisiert wird, basierend auf dem Partner-Feedback. Bevor Sie mit der Erstellung der Dokumentation für Ihr Ziel beginnen, stellen Sie sicher, dass Sie die [aktuelle Version der Vorlage](../assets/docs-framework/yourdestination-template.zip).
 * Erstellen Sie die Dokumentation und erstellen Sie die Dokumentation Pull Request (PR) aus einer Verzweigung in Ihrer Abspaltung. *andere als die Hauptzweig*. Lesen Sie beim Bearbeiten im Abschnitt Senden des Ziels für Überprüfung den Abschnitt . [GitHub-Benutzeroberfläche](./use-github-interface-to-create-documentation.md#submit-review) oder [Ihre lokale Umgebung](./work-in-local-environment.md#submit-review).

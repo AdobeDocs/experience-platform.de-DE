@@ -2,9 +2,9 @@
 description: Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele
 title: Erfahren Sie, wie Sie mit Destination SDK Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren.
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '913'
 ht-degree: 3%
 
 ---
@@ -23,18 +23,14 @@ Bevor Sie mit den unten beschriebenen Schritten fortfahren, lesen Sie bitte die 
 
 Adobe empfiehlt Ihnen außerdem, sich mit der folgenden Dokumentation vertraut zu machen, bevor Sie fortfahren:
 
-* Jede verfügbare Dateiformatierungsoption wird ausführlich im Abschnitt [Dateiformatierungskonfiguration](../../server-and-file-configuration.md#file-configuration) Abschnitt.
-* Führen Sie die Schritte zum [ein dateibasiertes Ziel konfigurieren](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md) Destination SDK verwenden.
+* Jede verfügbare Dateiformatierungsoption wird ausführlich im Abschnitt [Dateiformatierungskonfiguration](../../functionality/destination-server/file-formatting.md) Abschnitt.
+* Führen Sie die Schritte zum [ein dateibasiertes Ziel konfigurieren](../../guides/configure-file-based-destination-instructions.md) Destination SDK verwenden.
 
 ## Erstellen einer Server- und Dateikonfiguration {#create-server-file-configuration}
 
 Verwenden Sie zunächst die `/destination-server` -Endpunkt, um zu bestimmen, welche Dateiformatierungskonfigurationsoptionen Sie für die exportierten Dateien einrichten möchten.
 
 Nachfolgend finden Sie ein Beispiel für eine Zielserverkonfiguration für eine [!DNL Amazon S3] Ziel, wobei mehrere Dateiformatierungsoptionen ausgewählt sind.
-
->[!TIP]
->
->Zur Erinnerung: Alle verfügbaren Dateiformatierungsoptionen werden im Abschnitt [Dateiformatierungskonfiguration](../../server-and-file-configuration.md#file-configuration) Abschnitt.
 
 **API-Format**
 
@@ -116,13 +112,13 @@ Nachdem Sie die gewünschten Dateiformatierungsoptionen im vorherigen Schritt zu
 
 In diesem Schritt können Sie die angezeigten Optionen in beliebiger Reihenfolge gruppieren. Sie können benutzerdefinierte Gruppierungen, Dropdown-Felder und bedingte Gruppierungen basierend auf den ausgewählten Dateitypen erstellen. Alle diese Einstellungen werden in der Aufzeichnung und in den weiter unten stehenden Abschnitten angezeigt.
 
-![Bildschirmaufzeichnung mit verschiedenen Dateiformatierungsoptionen für Batch-Dateien.](/help/destinations/destination-sdk/assets/guides/batch/file-formatting-options.gif)
+![Bildschirmaufzeichnung mit verschiedenen Dateiformatierungsoptionen für Batch-Dateien.](../../assets/guides/batch/file-formatting-options.gif)
 
 ### Reihenfolge der Dateiformatierungsoptionen {#ordering}
 
 Die Reihenfolge, in der Sie die Dateiformatierungsoptionen als Kundendatenfelder in der Zielkonfiguration hinzufügen, wird in der Benutzeroberfläche angezeigt. Beispielsweise wird die folgende Konfiguration entsprechend in der Benutzeroberfläche angezeigt, wobei die Optionen in der Reihenfolge angezeigt werden **[!UICONTROL Trennzeichen]**, **[!UICONTROL Anführungszeichen]**, **[!UICONTROL Escape-Zeichen]**, **[!UICONTROL Leerer Wert]**, **[!UICONTROL Nullwert]**.
 
-![Bild, das die Reihenfolge der Dateiformatierungsoptionen in der Benutzeroberfläche &quot;Experience Platform&quot;anzeigt.](/help/destinations/destination-sdk/assets/guides/batch/file-formatting-order.png)
+![Bild, das die Reihenfolge der Dateiformatierungsoptionen in der Benutzeroberfläche &quot;Experience Platform&quot;anzeigt.](../../assets/guides/batch/file-formatting-order.png)
 
 ```json
         {
@@ -247,38 +243,43 @@ Sie können mehrere Dateiformatierungsoptionen in einem Abschnitt gruppieren. Be
 
 Verwenden Sie dazu `"type": "object"` , um die Gruppe zu erstellen und die gewünschten Dateiformatierungsoptionen innerhalb einer `properties` -Parameter, wie im folgenden Beispiel gezeigt, wobei die Gruppierung **[!UICONTROL CSV-Optionen]** hervorgehoben ist.
 
-```json
-        {
-            "name": "csvOptions",
-            "title": "CSV Options",
-            "description": "Select your CSV options",
-            "type": "object",
-            "properties": [
-                {
-                    "name": "delimiter",
-                    "title": "Delimiter",
-                    "description": "Select your Delimiter",
-                    "type": "string",
-                    "isRequired": false,
-                    "default": ",",
-                    "namedEnum": [
-                        {
-                            "name": "Comma (,)",
-                            "value": ","
-                        },
-                        {
-                            "name": "Tab (\\t)",
-                            "value": "\t"
-                        }
-                    ],
-                    "readOnly": false,
-                    "hidden": false
-                },
-
+```json {line-numbers="true" start-number="100" highlight="106-128"}
+"customerDataFields":[
 [...]
+{
+   "name":"csvOptions",
+   "title":"CSV Options",
+   "description":"Select your CSV options",
+   "type":"object",
+   "properties":[
+      {
+         "name":"delimiter",
+         "title":"Delimiter",
+         "description":"Select your Delimiter",
+         "type":"string",
+         "isRequired":false,
+         "default":",",
+         "namedEnum":[
+            {
+               "name":"Comma (,)",
+               "value":","
+            },
+            {
+               "name":"Tab (\\t)",
+               "value":"\t"
+            }
+         ],
+         "readOnly":false,
+         "hidden":false
+      },
+      [...]
+   ]
+}
+[...]
+]
 ```
 
-![Bild mit der Gruppierung der CSV-Optionen in der Benutzeroberfläche.](/help/destinations/destination-sdk/assets/guides/batch/file-formatting-grouping.png)
+![Bild mit der Gruppierung der CSV-Optionen in der Benutzeroberfläche.](../../assets/guides/batch/file-formatting-grouping.png)
 
 ### Erstellen von Dropdown-Selektoren für Dateiformatierungsoptionen {#dropdown-selectors}
 
@@ -286,27 +287,44 @@ In Situationen, in denen Sie Benutzern die Auswahl zwischen verschiedenen Option
 
 Verwenden Sie dazu die `namedEnum` -Objekt wie unten gezeigt und konfigurieren Sie eine `default` für die Optionen, die der Benutzer auswählen kann.
 
-```json
+```json {line-numbers="true" start-number="100" highlight="114-124"}
+[...]
+"customerDataFields":[
+[...]
 {
-   "name": "delimiter",
-   "type": "string",
-   "title": "Delimiter",
-   "description": "Select your Delimiter",
-   "namedEnum": [
-   {
-      "name": "Comma (,)",
-      "value": ","
-   },
-   {
-      "name": "Tab (\\t)",
-      "value": "\t"
-   }
-   ],
-   "default": ","
-},
+   "name":"csvOptions",
+   "title":"CSV Options",
+   "description":"Select your CSV options",
+   "type":"object",
+   "properties":[
+      {
+         "name":"delimiter",
+         "title":"Delimiter",
+         "description":"Select your Delimiter",
+         "type":"string",
+         "isRequired":false,
+         "default":",",
+         "namedEnum":[
+            {
+               "name":"Comma (,)",
+               "value":","
+            },
+            {
+               "name":"Tab (\\t)",
+               "value":"\t"
+            }
+         ],
+         "readOnly":false,
+         "hidden":false
+      },
+      [...]
+   ]
+}
+[...]
+]
 ```
 
-![Bildschirmaufzeichnung mit einem Beispiel für Dropdown-Selektoren, die mit der oben gezeigten Konfiguration erstellt wurden.](/help/destinations/destination-sdk/assets/guides/batch/dropdown-options-file-formatting.gif)
+![Bildschirmaufzeichnung mit einem Beispiel für Dropdown-Selektoren, die mit der oben gezeigten Konfiguration erstellt wurden.](../../assets/guides/batch/dropdown-options-file-formatting.gif)
 
 ### Optionen zum Formatieren bedingter Dateien erstellen {#conditional-options}
 
@@ -467,7 +485,7 @@ In einem größeren Kontext können Sie die `conditional` -Feld, das in der folg
 
 Unten sehen Sie den resultierenden Bildschirm der Benutzeroberfläche, der auf der oben beschriebenen Konfiguration basiert. Wenn der Benutzer den Dateityp CSV auswählt, werden in der Benutzeroberfläche zusätzliche Dateiformatierungsoptionen angezeigt, die auf den CSV-Dateityp verweisen.
 
-![Bildschirmaufzeichnung mit der Option zur Formatierung bedingter Dateien für CSV-Dateien.](/help/destinations/destination-sdk/assets/guides/batch/conditional-file-formatting.gif)
+![Bildschirmaufzeichnung mit der Option zur Formatierung bedingter Dateien für CSV-Dateien.](../../assets/guides/batch/conditional-file-formatting.gif)
 
 ### Vollständige API-Anfrage mit allen oben aufgeführten Optionen
 
@@ -486,7 +504,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
   "name": "My S3 Destination",
   "description": "Test destination",
-  "releaseNotes": "Test destination",
   "status": "TEST",
   "sources": [
     "UNIFIED_PROFILE"

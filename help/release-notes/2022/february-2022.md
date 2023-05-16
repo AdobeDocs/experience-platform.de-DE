@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise Februar 2022
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2022.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: e2342a8a7d03074ac26fbd129a2e7fd520ccb0c3
 workflow-type: tm+mt
 source-wordcount: '1019'
-ht-degree: 61%
+ht-degree: 63%
 
 ---
 
@@ -27,7 +27,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 ## [!DNL Dashboards] {#dashboards}
 
-Adobe Experience Platform bietet mehrere [!DNL dashboards] durch die Sie wichtige Einblicke in die Daten Ihres Unternehmens anzeigen können, wie sie bei täglichen Momentaufnahmen erfasst werden.
+Adobe Experience Platform bietet mehrere [!DNL dashboards], mit denen Sie wichtige Einblicke in die Daten Ihrer Organisation erhalten, die in täglichen Snapshots erfasst werden.
 
 **Aktualisierte Funktionen**
 
@@ -59,7 +59,7 @@ Weitere Informationen zur Datenerfassung in Platform finden Sie in der [Übersic
 
 | Funktion | Beschreibung |
 | ----------- | ----------- |
-| (Beta) Destination SDK-Unterstützung für dateibasierte Ziele | [Destination SDK-Unterstützung für dateibasierte Ziele](../../destinations/destination-sdk/file-based-destination-configuration.md) befindet sich derzeit in der privaten Beta-Phase und steht nur einer ausgewählten Anzahl von Partnern und Kunden zur Verfügung. Die Funktionalität und die zugehörige Dokumentation können sich vor der Veröffentlichung der allgemeinen Verfügbarkeit ändern.<br><br>Wenden Sie sich an Ihren Kundenbetreuer, um zu erfahren, wie Sie auf die Funktion zugreifen können. Adobe-interne Kundenbetreuer sollten sich an die Produkt- und Engineering-Teams der Experience Platform-Ziele wenden, um unterstützte Anwendungsfälle zu besprechen. <br><br> In der Beta-Phase der Destination SDK-Unterstützung für dateibasierte Ziele können Beta-Partner und -Kunden die [Destination SDK der Experience Platform](/help/destinations/destination-sdk/overview.md) um private Ziele zu erstellen, um von der folgenden Funktion zu profitieren: <ul><li>Erstellen Sie ein dateibasiertes (Batch-)Ziel über Amazon S3, SFTP-Server, Azure Blob, Azure Data Lake Storage, Data Landing Zone Storage.</li><li>Konfigurieren und legen Sie die standardmäßigen Zeitplanungs- und Frequenzoptionen für Dateiexporte fest.</li><li>Konfigurieren und legen Sie Optionen zum Formatieren der exportierten CSV-Dateien fest (Trennzeichen, Escape-Zeichen und andere Optionen).</li><li>Möglichkeit zum Festlegen und Bearbeiten benutzerdefinierter Dateikopfzeilen.</li><li>Möglichkeit zum Empfang von Ereignisbenachrichtigungen über den Export von Dateien und Segmenten.</li><li>Möglichkeit, zusätzliche Dateitypen wie CSV, TSV, JSON, Parquet zu exportieren.</li></ul>  <br>Lesen Sie für die ersten Schritte mit der neuen Funktion [(Beta) Verwenden Sie Destination SDK, um ein dateibasiertes Ziel zu konfigurieren.](../../destinations/destination-sdk/file-based-destination-configuration.md). <br><br> Die Funktion zum Erstellen privater oder produktiver *Streaming* Ziele mithilfe von Destination SDK sind bereits für alle Experience Platform-Kunden und -Partner verfügbar. Lesen Sie das Handbuch zum [Verwenden von Destination SDK zum Konfigurieren eines Streaming-Ziels](/help/destinations/destination-sdk/configure-destination-instructions.md) für Details. |
+| (Beta) Destination SDK-Unterstützung für dateibasierte Ziele | [Destination SDK-Unterstützung für dateibasierte Ziele](../../destinations/destination-sdk/functionality/destination-server/server-specs.md) befindet sich derzeit in der privaten Beta-Phase und steht nur einer ausgewählten Anzahl von Partnern und Kunden zur Verfügung. Die Funktionalität und die zugehörige Dokumentation können sich vor der Veröffentlichung der allgemeinen Verfügbarkeit ändern.<br><br>Wenden Sie sich an Ihren Kundenbetreuer, um zu erfahren, wie Sie auf die Funktion zugreifen können. Adobe-interne Kundenbetreuer sollten sich an die Produkt- und Engineering-Teams der Experience Platform-Ziele wenden, um unterstützte Anwendungsfälle zu besprechen. <br><br> In der Beta-Phase der Destination SDK-Unterstützung für dateibasierte Ziele können Beta-Partner und -Kunden die [Destination SDK der Experience Platform](../../destinations/destination-sdk/overview.md) um private Ziele zu erstellen, um von der folgenden Funktion zu profitieren: <ul><li>Erstellen Sie ein dateibasiertes (Batch-)Ziel über Amazon S3, SFTP-Server, Azure Blob, Azure Data Lake Storage, Data Landing Zone Storage.</li><li>Konfigurieren und legen Sie die standardmäßigen Zeitplanungs- und Frequenzoptionen für Dateiexporte fest.</li><li>Konfigurieren und legen Sie Optionen zum Formatieren der exportierten CSV-Dateien fest (Trennzeichen, Escape-Zeichen und andere Optionen).</li><li>Möglichkeit zum Festlegen und Bearbeiten benutzerdefinierter Dateikopfzeilen.</li><li>Möglichkeit zum Empfang von Ereignisbenachrichtigungen über den Export von Dateien und Segmenten.</li><li>Möglichkeit, zusätzliche Dateitypen wie CSV, TSV, JSON, Parquet zu exportieren.</li></ul>  <br>Lesen Sie für die ersten Schritte mit der neuen Funktion [(Beta) Verwenden Sie Destination SDK, um ein dateibasiertes Ziel zu konfigurieren.](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md). <br><br> Die Funktion zum Erstellen privater oder produktiver *Streaming* Ziele mithilfe von Destination SDK sind bereits für alle Experience Platform-Kunden und -Partner verfügbar. Lesen Sie das Handbuch zum [Verwenden von Destination SDK zum Konfigurieren eines Streaming-Ziels](../../destinations/destination-sdk/guides/configure-destination-instructions.md) für Details. |
 
 ## [!DNL Identity Service] {#identity}
 

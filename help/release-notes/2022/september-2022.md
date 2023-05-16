@@ -2,7 +2,7 @@
 title: Adobe Experience Platform – Versionshinweise, September 2022
 description: Versionshinweise September 2022 zu Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 3d829018b527aacb81c16db5e889b2e50f625e28
+source-git-commit: 8904d44cc8d289d103ec6d65116b8385ed615c4d
 workflow-type: tm+mt
 source-wordcount: '2940'
 ht-degree: 100%
@@ -126,7 +126,7 @@ Weitere Informationen zur Datenerfassung in Platform finden Sie in der [Übersic
 
 | Funktion | Beschreibung |
 | ----------- | ----------- |
-| Destination SDK | Destination SDK bietet jetzt vollständige Unterstützung für Partner und Kunden, die Batch- oder dateibasierte produktbezogene oder private Ziele erstellen. Weitere Informationen finden Sie auf den folgenden Dokumentationsseiten: <ul><li>[Übersicht über Destination SDK](/help/destinations/destination-sdk/overview.md)</li><li>[Konfigurieren eines dateibasierten Ziels](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Testen von dateibasierten Zielen](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
+| Destination SDK | Destination SDK bietet jetzt vollständige Unterstützung für Partner und Kunden, die Batch- oder dateibasierte produktbezogene oder private Ziele erstellen. Weitere Informationen finden Sie auf den folgenden Dokumentationsseiten: <ul><li>[Übersicht über Destination SDK](../../destinations/destination-sdk/overview.md)</li><li>[Konfigurieren eines dateibasierten Ziels](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md)</li><li>[Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele](../../destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)</li><li>[Testen von dateibasierten Zielen](../../destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)</li></ul> |
 
 {style="table-layout:auto"}
 

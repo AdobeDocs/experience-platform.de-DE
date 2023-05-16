@@ -2,7 +2,7 @@
 title: Profilexportverhalten
 description: Erfahren Sie, wie sich das Verhalten beim Profilexport zwischen den verschiedenen Integrationsmustern unterscheidet, die in Experience Platform-Zielen unterstützt werden.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
 workflow-type: tm+mt
 source-wordcount: '2933'
 ht-degree: 97%
@@ -27,16 +27,16 @@ Experience Platform-Ziele exportieren Daten an API-basierte Integrationen in For
 
 Der Vorgang, durch den Profile in HTTPS-Nachrichten aggregiert werden, bevor sie an Ziel-API-Endpunkte gesendet werden, wird als *Microbatching* bezeichnet.
 
-Nehmen wir das [Facebook-Ziel](/help/destinations/catalog/social/facebook.md) mit *[konfigurierbarer Aggregationsrichtlinie](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation)* als Beispiel. Daten werden aggregiert gesendet, wobei der Ziel-Service alle eingehenden Daten aus dem Upstream-Profil-Service nach einem der folgenden Kriterien aggregiert, bevor sie an Facebook gesendet werden:
+Nehmen wir das [Facebook-Ziel](/help/destinations/catalog/social/facebook.md) mit *[konfigurierbarer Aggregationsrichtlinie](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* als Beispiel. Daten werden aggregiert gesendet, wobei der Ziel-Service alle eingehenden Daten aus dem Upstream-Profil-Service nach einem der folgenden Kriterien aggregiert, bevor sie an Facebook gesendet werden:
 
 * Anzahl der Datensätze (maximal 10.000) oder
 * Zeitfenster-Intervall (30 Minuten)
 
 Der Schwellenwert, der von den oben genannten zuerst erreicht wird, löst einen Export nach Facebook aus. Im Dashboard [!DNL Facebook Custom Audiences] werden möglicherweise Zielgruppen aus Experience Platform in Schritten von 10.000 Datensätzen angezeigt. Es kann sein, dass alle 10 bis 15 Minuten 10.000 Datensätze angezeigt werden, da die Daten schneller verarbeitet und aggregiert werden als durch das 30-minütige Exportintervall vorgesehen. Außerdem werden sie schneller gesendet, etwa alle 10 bis 15 Minuten, bis alle Datensätze verarbeitet wurden. Wenn für einen Batch von 10.000 Datensätzen nicht genügend Datensätze vorhanden sind, wird die aktuelle Datensatzanzahl gesendet, sobald der Schwellenwert des Zeitfensters erreicht wird. Also werden möglicherweise auch kleinere Batches an Facebook gesendet.
 
-Ein weiteres Beispiel ist das [HTTP-API-Ziel](/help/destinations/catalog/streaming/http-destination.md), das mit `maxUsersPerRequest: 10` über eine Richtlinie zur *[Aggregation nach bestem Bemühen](/help/destinations/destination-sdk/destination-configuration.md#best-effort-aggregation)* verfügt. Das bedeutet, dass maximal zehn Profile aggregiert werden, bevor ein HTTP-Aufruf an dieses Ziel gesendet wird. Experience Platform versucht jedoch, Profile an das Ziel zu senden, sobald der Ziel-Service aktualisierte Neubewertungsinformationen von einem Upstream-Service erhält.
+Ein weiteres Beispiel ist das [HTTP-API-Ziel](/help/destinations/catalog/streaming/http-destination.md), das mit `maxUsersPerRequest: 10` über eine Richtlinie zur *[Aggregation nach bestem Bemühen](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* verfügt. Das bedeutet, dass maximal zehn Profile aggregiert werden, bevor ein HTTP-Aufruf an dieses Ziel gesendet wird. Experience Platform versucht jedoch, Profile an das Ziel zu senden, sobald der Ziel-Service aktualisierte Neubewertungsinformationen von einem Upstream-Service erhält.
 
-Die Aggregationsrichtlinie ist konfigurierbar, und das Zielentwickler-Team kann entscheiden, wie die Aggregationsrichtlinie so konfiguriert werden soll, dass die Ratenbeschränkungen der Downstream-API-Endpunkte am besten eingehalten werden. Weitere Informationen zur [Aggregationsrichtlnie](/help/destinations/destination-sdk/destination-configuration.md#aggregation) finden Sie in der Destination SDK-Dokumentation.
+Die Aggregationsrichtlinie ist konfigurierbar, und das Zielentwickler-Team kann entscheiden, wie die Aggregationsrichtlinie so konfiguriert werden soll, dass die Ratenbeschränkungen der Downstream-API-Endpunkte am besten eingehalten werden. Weitere Informationen zur [Aggregationsrichtlnie](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) finden Sie in der Destination SDK-Dokumentation.
 
 ## Exportziele (Unternehmensziele) für Streaming-Profile {#streaming-profile-destinations}
 

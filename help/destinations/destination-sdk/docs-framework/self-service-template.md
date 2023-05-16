@@ -2,7 +2,7 @@
 title: Vorlage für Dokumentations-Self-Service // Ersetzen Sie durch den Namen Ihres Ziels.
 description: Verwenden Sie diese Vorlage, um eine öffentliche Dokumentation für Ihr Ziel im Adobe Experience Platform-Katalog zu erstellen. // Ersetzen Sie durch den Absatz im Abschnitt "Übersicht".
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: 1773edff56059cf5bc57ebaaa133216423fcfe10
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 38%
@@ -18,7 +18,7 @@ ht-degree: 38%
 >[!IMPORTANT]
 >
 >* Füllen Sie alle Abschnitte in dieser Vorlage in der Reihenfolge aus, in der sie in der Vorlage beschrieben sind.
->* Diese Vorlage wird aufgrund des Partner-Feedbacks gelegentlich aktualisiert. Bevor Sie mit der Erstellung der Dokumentation für Ihr Ziel beginnen, stellen Sie sicher, dass Sie die [aktuelle Version der Vorlage](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
+>* Diese Vorlage wird aufgrund des Partner-Feedbacks gelegentlich aktualisiert. Bevor Sie mit der Erstellung der Dokumentation für Ihr Ziel beginnen, stellen Sie sicher, dass Sie die [aktuelle Version der Vorlage](../assets/docs-framework/yourdestination-template.zip).
 
 
 ## Übersicht {#overview}
@@ -103,7 +103,7 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 
 Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und klicken Sie auf **[!UICONTROL Mit Ziel verbinden]**.
 
-![Beispiel-Screenshot mit der Authentifizierung für das Ziel](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+![Beispiel-Screenshot mit der Authentifizierung für das Ziel](../assets/docs-framework/authenticate-destination.png)
 
 * **[!UICONTROL Bearer-Token]**: Füllen Sie das Bearer-Token aus, um sich beim Ziel zu authentifizieren.
 
@@ -113,7 +113,7 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
-![Beispiel-Screenshot, der zeigt, wie Details für Ihr Ziel ausgefüllt werden](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
+![Beispiel-Screenshot, der zeigt, wie Details für Ihr Ziel ausgefüllt werden](../assets/docs-framework/configure-destination-details.png)
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.

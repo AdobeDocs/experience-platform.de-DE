@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie mit Destination SDK ein Amazon S3-Ziel mit benutzerdefinierten Dateinamen- und Formatierungsoptionen konfigurieren.
 title: Konfigurieren eines Amazon S3-Ziels mit benutzerdefinierten Dateinamen- und Formatierungsoptionen.
 exl-id: eed73572-5050-44fa-ba16-90729c65495e
-source-git-commit: 04e4b0f6b6d84d04d0a24a462383420ebd9a2daf
+source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
 workflow-type: tm+mt
-source-wordcount: '734'
-ht-degree: 13%
+source-wordcount: '700'
+ht-degree: 14%
 
 ---
 
@@ -13,17 +13,19 @@ ht-degree: 13%
 
 ## Übersicht {#overview}
 
-Auf dieser Seite wird beschrieben, wie Sie mit Destination SDK ein Amazon S3-Ziel mit benutzerdefiniertem [Dateiformatierungsoptionen](/help/destinations/destination-sdk/server-and-file-configuration.md#file-configuration) und benutzerspezifische [Dateinamenkonfiguration](/help/destinations/destination-sdk/file-based-destination-configuration.md#file-name-configuration).
+Auf dieser Seite wird beschrieben, wie Sie mit Destination SDK ein Amazon S3-Ziel mit benutzerdefiniertem [Dateiformatierungsoptionen](configure-file-formatting-options.md) und benutzerspezifische [Dateinamenkonfiguration](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
 
 Auf dieser Seite werden alle für Amazon S3-Ziele verfügbaren Konfigurationsoptionen angezeigt. Sie können die in den folgenden Schritten angezeigten Konfigurationen bearbeiten oder bestimmte Teile der Konfigurationen nach Bedarf löschen.
 
+Detaillierte Beschreibungen der unten verwendeten Parameter finden Sie unter [Konfigurationsoptionen im Ziel-SDK](../../functionality/configuration-options.md).
+
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie mit den unten beschriebenen Schritten fortfahren, lesen Sie bitte die [Erste Schritte mit Destination SDK](/help/destinations/destination-sdk/getting-started.md) Seite mit Informationen zum Abrufen der erforderlichen Anmeldeinformationen für die Adobe I/O-Authentifizierung und anderen Voraussetzungen für die Verwendung mit Destination SDK-APIs.
+Bevor Sie mit den unten beschriebenen Schritten fortfahren, lesen Sie bitte die [Erste Schritte mit Destination SDK](../../getting-started.md) Seite mit Informationen zum Abrufen der erforderlichen Anmeldeinformationen für die Adobe I/O-Authentifizierung und anderen Voraussetzungen für die Verwendung mit Destination SDK-APIs.
 
 ## Schritt 1: Erstellen einer Server- und Dateikonfiguration {#create-server-file-configuration}
 
-Verwenden Sie zunächst die `/destination-server` -Endpunkt, um eine Server- und Dateikonfiguration zu erstellen. Eine ausführliche Beschreibung der Parameter in der HTTP-Anforderung finden Sie im Abschnitt [Server- und Dateikonfigurationsspezifikationen für dateibasierte Ziele](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example) und die zugehörigen [Dateiformatierungskonfigurationen](/help/destinations/destination-sdk/server-and-file-configuration.md#file-configuration).
+Verwenden Sie zunächst die `/destination-server` Endpunkt zu [Erstellen einer Server- und Dateikonfiguration](../../authoring-api/destination-server/create-destination-server.md).
 
 **API-Format**
 
@@ -34,7 +36,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **Anfrage**
 
 Die folgende Anfrage erstellt eine neue Ziel-Server-Konfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird.
-Die folgende Payload enthält eine generische Amazon S3-Konfiguration mit benutzerdefinierter [CSV-Dateiformatierung](/help/destinations/destination-sdk/server-and-file-configuration.md#file-configuration) Konfigurationsparameter festlegen, die Benutzer in der Experience Platform-Benutzeroberfläche definieren können.
+Die folgende Payload enthält eine generische Amazon S3-Konfiguration mit benutzerdefinierter [CSV-Dateiformatierung](../../functionality/destination-server/file-formatting.md) Konfigurationsparameter festlegen, die Benutzer in der Experience Platform-Benutzeroberfläche definieren können.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -127,12 +129,6 @@ Nachdem Sie die Konfiguration des Zielservers und der Dateiformatierung im vorhe
 
 So verbinden Sie die Serverkonfiguration in [Schritt 1](#create-server-file-configuration) ersetzen Sie die `destinationServerId` -Wert in der API-Anfrage unten mit dem Wert, der beim Erstellen Ihres Zielservers in [Schritt 1](#create-server-file-configuration).
 
-Eine detaillierte Beschreibung der unten verwendeten Parameter finden Sie auf den folgenden Seiten:
-
-* [Authentifizierungskonfiguration](/help/destinations/destination-sdk/authentication-configuration.md#s3)
-* [Batch-Zielkonfiguration](/help/destinations/destination-sdk/file-based-destination-configuration.md#batch-configuration)
-* [API-Vorgänge für die dateibasierte Zielkonfiguration](/help/destinations/destination-sdk/destination-configuration-api.md#create-file-based)
-
 **API-Format**
 
 ```http
@@ -152,7 +148,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "name":"Amazon S3 destination with custom file formatting options and custom file name configuration",
    "description":"Amazon S3 destination with custom file formatting options and custom file name configuration",
-   "releaseNotes":"Amazon S3 destination with custom file formatting options and custom file name configuration",
    "status":"TEST",
    "customerAuthenticationConfigurations":[
       {
@@ -418,9 +413,9 @@ Eine erfolgreiche Antwort gibt die neue Zielkonfiguration zurück, einschließli
 
 Basierend auf den obigen Konfigurationen zeigt der Experience Platform-Katalog jetzt eine neue private Zielkarte an, die Sie verwenden können.
 
-![Bildschirmaufzeichnung mit der Zielkatalogseite mit der ausgewählten Zielkarte.](../../assets/destination-card.gif)
+![Bildschirmaufzeichnung mit der Zielkatalogseite mit der ausgewählten Zielkarte.](../../assets/guides/batch/destination-card.gif)
 
-Beachten Sie in den unten stehenden Bildern und Aufzeichnungen, wie die Optionen in der [Aktivierungs-Workflow für dateibasierte Ziele](/help/destinations/ui/activate-batch-profile-destinations.md) mit den Optionen übereinstimmen, die Sie in der Zielkonfiguration ausgewählt haben.
+Beachten Sie in den unten stehenden Bildern und Aufzeichnungen, wie die Optionen in der [Aktivierungs-Workflow für dateibasierte Ziele](../../../ui/activate-batch-profile-destinations.md) mit den Optionen übereinstimmen, die Sie in der Zielkonfiguration ausgewählt haben.
 
 Beachten Sie beim Ausfüllen von Details zum Ziel, wie die angezeigten Felder die benutzerdefinierten Datenfelder sind, die Sie in der Konfiguration eingerichtet haben.
 
@@ -428,13 +423,13 @@ Beachten Sie beim Ausfüllen von Details zum Ziel, wie die angezeigten Felder di
 >
 >Die Reihenfolge, in der Sie die benutzerdefinierten Datenfelder zur Zielkonfiguration hinzufügen, wird nicht in der Benutzeroberfläche angezeigt. Die benutzerdefinierten Datenfelder werden immer in der Reihenfolge angezeigt, die in der nachfolgenden Bildschirmaufzeichnung angezeigt wird.
 
-![Zieldetails ausfüllen](../../assets/file-configuration-options.gif)
+![Zieldetails ausfüllen](../../assets/guides/batch/file-configuration-options.gif)
 
 Beachten Sie bei der Planung von Exportintervallen, dass die angezeigten Felder die Felder sind, die Sie in der `batchConfig` Konfiguration.
-![Planungsoptionen für Exporte](../../assets/file-export-scheduling.png)
+![Planungsoptionen für Exporte](../../assets/guides/batch/file-export-scheduling.png)
 
 Beachten Sie bei der Anzeige der Konfigurationsoptionen für Dateinamen, wie die angezeigten Felder die `filenameConfig` -Optionen, die Sie in der Konfiguration eingerichtet haben.
-![Konfigurationsoptionen für Dateinamen](../../assets/file-naming-options.gif)
+![Konfigurationsoptionen für Dateinamen](../../assets/guides/batch/file-naming-options.gif)
 
 Wenn Sie eines der oben genannten Felder anpassen möchten, wiederholen Sie [Schritt 1](#create-server-file-configuration) und [two](#create-destination-configuration) um die Konfigurationen nach Bedarf zu ändern.
 
@@ -444,7 +439,7 @@ Wenn Sie eines der oben genannten Felder anpassen möchten, wiederholen Sie [Sch
 >
 >Dieser Schritt ist nicht erforderlich, wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen und es nicht im Zielkatalog veröffentlichen möchten, damit andere Kunden ihn verwenden können.
 
-Nachdem Sie Ihr Ziel konfiguriert haben, verwenden Sie die [Zielpublikations-API](/help/destinations/destination-sdk/destination-publish-api.md) , um Ihre Konfiguration zur Überprüfung an Adobe zu senden.
+Nachdem Sie Ihr Ziel konfiguriert haben, verwenden Sie die [Zielpublikations-API](../../publishing-api/create-publishing-request.md) , um Ihre Konfiguration zur Überprüfung an Adobe zu senden.
 
 ## Schritt 5: (Optional) Dokument Ihres Ziels {#document-destination}
 
@@ -452,8 +447,8 @@ Nachdem Sie Ihr Ziel konfiguriert haben, verwenden Sie die [Zielpublikations-API
 >
 >Dieser Schritt ist nicht erforderlich, wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen und es nicht im Zielkatalog veröffentlichen möchten, damit andere Kunden ihn verwenden können.
 
-Wenn Sie ein unabhängiger Software-Anbieter (ISV) oder Systemintegrator (SI) sind, der eine [produktbezogene Integration](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) erstellt, verwenden Sie den [Self-Service-Dokumentationsprozess](/help/destinations/destination-sdk/docs-framework/documentation-instructions.md), um eine Produktdokumentationsseite für Ihr Ziel im [Experience Platform-Zielkatalog](/help/destinations/catalog/overview.md) zu erstellen.
+Wenn Sie ein unabhängiger Software-Anbieter (ISV) oder Systemintegrator (SI) sind, der eine [produktbezogene Integration](../../overview.md#productized-custom-integrations) erstellt, verwenden Sie den [Self-Service-Dokumentationsprozess](../../docs-framework/documentation-instructions.md), um eine Produktdokumentationsseite für Ihr Ziel im [Experience Platform-Zielkatalog](../../../catalog/overview.md) zu erstellen.
 
 ## Nächste Schritte {#next-steps}
 
-Durch Lesen dieses Artikels wissen Sie jetzt, wie Sie eine benutzerdefinierte [!DNL Amazon S3] Ziel mithilfe von Destination SDK. Als Nächstes kann Ihr Team die [Aktivierungs-Workflow für dateibasierte Ziele](/help/destinations/ui/activate-batch-profile-destinations.md) , um Daten an das Ziel zu exportieren.
+Durch Lesen dieses Artikels wissen Sie jetzt, wie Sie eine benutzerdefinierte [!DNL Amazon S3] Ziel mithilfe von Destination SDK. Als Nächstes kann Ihr Team die [Aktivierungs-Workflow für dateibasierte Ziele](../../../ui/activate-batch-profile-destinations.md) , um Daten an das Ziel zu exportieren.

@@ -2,9 +2,9 @@
 description: Erfahren Sie, wie Sie mit Destination SDK ein SFTP-Ziel mit vordefinierten Dateiformatierungsoptionen und einer benutzerdefinierten Dateinamenkonfiguration konfigurieren.
 title: Konfigurieren eines SFTP-Ziels mit vordefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration.
 exl-id: 6e0fe019-7fbb-48e4-9469-6cc7fc3cb6e4
-source-git-commit: bdeebca9608e7c1ff3ae0cb1aeb444dccb78028f
+source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '706'
 ht-degree: 14%
 
 ---
@@ -13,9 +13,11 @@ ht-degree: 14%
 
 ## Übersicht {#overview}
 
-Auf dieser Seite wird beschrieben, wie Sie mit Destination SDK ein SFTP-Ziel mit vordefinierten, standardmäßigen [Dateiformatierungsoptionen](../../server-and-file-configuration.md#file-configuration) und benutzerspezifische [Dateinamenkonfiguration](../../file-based-destination-configuration.md#file-name-configuration).
+Auf dieser Seite wird beschrieben, wie Sie mit Destination SDK ein SFTP-Ziel mit vordefinierten, standardmäßigen [Dateiformatierungsoptionen](configure-file-formatting-options.md) und benutzerspezifische [Dateinamenkonfiguration](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
 
 Auf dieser Seite werden alle für SFTP-Ziele verfügbaren Konfigurationsoptionen angezeigt. Sie können die in den folgenden Schritten angezeigten Konfigurationen bearbeiten oder bestimmte Teile der Konfigurationen nach Bedarf löschen.
+
+Detaillierte Beschreibungen der unten verwendeten Parameter finden Sie unter [Konfigurationsoptionen im Ziel-SDK](../../functionality/configuration-options.md).
 
 ## Voraussetzungen {#prerequisites}
 
@@ -23,7 +25,7 @@ Bevor Sie mit den unten beschriebenen Schritten fortfahren, lesen Sie bitte die 
 
 ## Schritt 1: Erstellen einer Server- und Dateikonfiguration {#create-server-file-configuration}
 
-Verwenden Sie zunächst die `/destination-server` -Endpunkt, um eine Server- und Dateikonfiguration zu erstellen. Eine ausführliche Beschreibung der Parameter in der HTTP-Anforderung finden Sie im Abschnitt [Server- und Dateikonfigurationsspezifikationen für dateibasierte Ziele](../../server-and-file-configuration.md#sftp-example) und die zugehörigen [Dateiformatierungskonfigurationen](../../server-and-file-configuration.md#file-configuration).
+Verwenden Sie zunächst die `/destination-server` Endpunkt zu [Erstellen einer Server- und Dateikonfiguration](../../authoring-api/destination-server/create-destination-server.md).
 
 **API-Format**
 
@@ -34,7 +36,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **Anfrage**
 
 Die folgende Anfrage erstellt eine neue Ziel-Server-Konfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird.
-Die nachstehende Payload enthält eine allgemeine SFTP-Konfiguration mit vordefinierter Standardkonfiguration [CSV-Dateiformatierung](../../server-and-file-configuration.md#file-configuration) Konfigurationsparameter festlegen, die Benutzer in der Experience Platform-Benutzeroberfläche definieren können.
+Die nachstehende Payload enthält eine allgemeine SFTP-Konfiguration mit vordefinierter Standardkonfiguration [CSV-Dateiformatierung](../../functionality/destination-server/file-formatting.md) Konfigurationsparameter festlegen, die Benutzer in der Experience Platform-Benutzeroberfläche definieren können.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -129,12 +131,6 @@ Nachdem Sie die Konfiguration des Zielservers und der Dateiformatierung im vorhe
 
 So verbinden Sie die Serverkonfiguration in [Schritt 1](#create-server-file-configuration) ersetzen Sie die `destinationServerId` -Wert in der API-Anfrage unten mit dem Wert, der beim Erstellen Ihres Zielservers in [Schritt 1](#create-server-file-configuration).
 
-Eine detaillierte Beschreibung der unten verwendeten Parameter finden Sie auf den folgenden Seiten:
-
-* [Authentifizierungskonfiguration](../../authentication-configuration.md#sftp)
-* [Batch-Zielkonfiguration](../../file-based-destination-configuration.md#batch-configuration)
-* [API-Vorgänge für die dateibasierte Zielkonfiguration](../../destination-configuration-api.md#create-file-based)
-
 **API-Format**
 
 ```http
@@ -154,7 +150,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "name":"SFTP destination with predefined CSV formatting options",
    "description":"SFTP destination with predefined CSV formatting options",
-   "releaseNotes":"",
    "status":"TEST",
    "customerAuthenticationConfigurations":[
       {
@@ -258,7 +253,7 @@ Eine erfolgreiche Antwort gibt die neue Zielkonfiguration zurück, einschließli
 
 Basierend auf den obigen Konfigurationen zeigt der Experience Platform-Katalog jetzt eine neue private Zielkarte an, die Sie verwenden können.
 
-![Bildschirmaufzeichnung mit der Zielkatalogseite mit der ausgewählten Zielkarte.](../../assets/destination-card.gif)
+![Bildschirmaufzeichnung mit der Zielkatalogseite mit der ausgewählten Zielkarte.](../../assets/guides/batch/destination-card.gif)
 
 Beachten Sie in den unten stehenden Bildern und Aufzeichnungen, wie die Optionen in der [Aktivierungs-Workflow für dateibasierte Ziele](/help/destinations/ui/activate-batch-profile-destinations.md) mit den Optionen übereinstimmen, die Sie in der Zielkonfiguration ausgewählt haben.
 
@@ -268,13 +263,13 @@ Beachten Sie beim Ausfüllen von Details zum Ziel, wie die angezeigten Felder di
 >
 >Die Reihenfolge, in der Sie die benutzerdefinierten Datenfelder zur Zielkonfiguration hinzufügen, wird nicht in der Benutzeroberfläche angezeigt. Die benutzerdefinierten Datenfelder werden immer in der Reihenfolge angezeigt, die in der nachfolgenden Bildschirmaufzeichnung angezeigt wird.
 
-![Zieldetails ausfüllen](../../assets/file-configuration-options.gif)
+![Zieldetails ausfüllen](../../assets/guides/batch/file-configuration-options.gif)
 
 Beachten Sie bei der Planung von Exportintervallen, dass die angezeigten Felder die Felder sind, die Sie in der `batchConfig` Konfiguration.
-![Planungsoptionen für Exporte](../../assets/file-export-scheduling.png)
+![Planungsoptionen für Exporte](../../assets/guides/batch/file-export-scheduling.png)
 
 Beachten Sie bei der Anzeige der Konfigurationsoptionen für Dateinamen, wie die angezeigten Felder die `filenameConfig` -Optionen, die Sie in der Konfiguration eingerichtet haben.
-![Konfigurationsoptionen für Dateinamen](../../assets/file-naming-options.gif)
+![Konfigurationsoptionen für Dateinamen](../../assets/guides/batch/file-naming-options.gif)
 
 Wenn Sie eines der oben genannten Felder anpassen möchten, wiederholen Sie [Schritt 1](#create-server-file-configuration) und [two](#create-destination-configuration) um die Konfigurationen nach Bedarf zu ändern.
 
@@ -284,7 +279,7 @@ Wenn Sie eines der oben genannten Felder anpassen möchten, wiederholen Sie [Sch
 >
 >Dieser Schritt ist nicht erforderlich, wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen und es nicht im Zielkatalog veröffentlichen möchten, damit andere Kunden ihn verwenden können.
 
-Nachdem Sie Ihr Ziel konfiguriert haben, verwenden Sie die [Zielpublikations-API](../../destination-publish-api.md) , um Ihre Konfiguration zur Überprüfung an Adobe zu senden.
+Nachdem Sie Ihr Ziel konfiguriert haben, verwenden Sie die [Zielpublikations-API](../../publishing-api/create-publishing-request.md) , um Ihre Konfiguration zur Überprüfung an Adobe zu senden.
 
 ## Schritt 5: (Optional) Dokument Ihres Ziels {#document-destination}
 

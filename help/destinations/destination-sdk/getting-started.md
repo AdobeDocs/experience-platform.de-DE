@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird beschrieben, wie Sie sich authentifizieren und Adobe Experience Platform Destination SDK verwenden. Sie enthält Anweisungen zum Abrufen der Anmeldeinformationen für die Adobe I/O-Authentifizierung, eines Sandbox-Namens und der Zugriffskontrolle für die Zielerstellung.
 title: Erste Schritte mit dem Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
 workflow-type: tm+mt
-source-wordcount: '610'
-ht-degree: 95%
+source-wordcount: '627'
+ht-degree: 89%
 
 ---
 
@@ -56,7 +56,7 @@ Das Adobe Exchange-Team stellt Ihnen Ihren Sandbox-Namen zur Verfügung, den Sie
 
 ## Rollenbasierte Zugriffskontrolle (RBAC) {#rbac}
 
-Um Destination SDK-API-Endpunkte, die im Abschnitt [Referenzdokumentation](./configuration-options.md) beschrieben werden, zu nutzen, benötigen Sie die Zugriffskontrollberechtigung für die **[!UICONTROL Zielerstellung]**. Arbeiten Sie mit dem Adobe Exchange-Team zusammen, um diese Berechtigung in der [Adobe Admin Console](https://adminconsole.adobe.com/) zugewiesen zu bekommen.
+Um Destination SDK-API-Endpunkte, die im Abschnitt [Referenzdokumentation](functionality/configuration-options.md) beschrieben werden, zu nutzen, benötigen Sie die Zugriffskontrollberechtigung für die **[!UICONTROL Zielerstellung]**. Arbeiten Sie mit dem Adobe Exchange-Team zusammen, um diese Berechtigung in der [Adobe Admin Console](https://adminconsole.adobe.com/) zugewiesen zu bekommen.
 
 ![Berechtigung zur Zielerstellung](./assets/destination-authoring-permission.png)
 
@@ -68,7 +68,7 @@ Weitere Informationen finden Sie in den folgenden Dokumenten zur Zugriffskontrol
 
 ## Weitere Überlegungen {#additional-considerations}
 
-* Alle Änderungen, die Sie an Zielkonfigurationen vornehmen, unabhängig davon, ob Sie eine Zielkonfiguration erstellen oder bearbeiten, müssen von Adobe überprüft und genehmigt werden. Ihre Änderungen werden erst nach Abschluss der Überprüfung in Ihren Zielen angezeigt.
+* Für produktionierte/öffentliche Ziele müssen alle Änderungen, die Sie an Zielkonfigurationen vornehmen, unabhängig davon, ob Sie eine Zielkonfiguration erstellen oder bearbeiten, von Adobe überprüft und genehmigt werden. Ihre Änderungen werden erst nach Abschluss der Überprüfung in Ihren Zielen angezeigt. Dies gilt nicht für private Ziele, die nur für Sie verfügbar sind.
 * Nur Benutzer, die derselben Organisation angehören und Zugriff auf die Sandbox haben, können die Zielkonfiguration bearbeiten.
 
 ## Nächste Schritte {#next-steps}
@@ -77,8 +77,8 @@ Wenn Sie die Schritte in diesem Artikel befolgt haben, haben Sie Authentifizieru
 
 * Lesen Sie je nach Zieltyp die folgenden Konfigurationshandbücher:
 
-   * [Verwenden des Destination SDK zum Konfigurieren eines Streaming-Ziels](./configure-destination-instructions.md)
-   * [Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels](./configure-file-based-destination-instructions.md)
+   * [Verwenden des Destination SDK zum Konfigurieren eines Streaming-Ziels](guides/configure-destination-instructions.md)
+   * [Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels](guides/configure-file-based-destination-instructions.md)
 
 * Informationen zu allen Vorgängen finden Sie im Abschnitt [Dokumentation zur Zielerstellungs-API](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
 * Verwenden Sie die [Postman-Sammlung der Zielerstellungs-API](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json), um Ihr Ziel mithilfe der Destination SDK-API-Endpunkte zu konfigurieren. Informationen zu den ersten Schritten mit Postman finden Sie unter [Schritte zum Importieren von Umgebungen und Sammlungen](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) und im [Videoleitfaden zum Erstellen der Postman-Umgebung](https://video.tv.adobe.com/v/28832).

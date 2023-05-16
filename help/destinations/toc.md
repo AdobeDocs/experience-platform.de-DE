@@ -4,10 +4,10 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: eb261675ffbd131a00aaa5d526d03e966b94c7c7
+source-git-commit: 36d4908fc19916c5e107eb4883d741ba1904b5a4
 workflow-type: tm+mt
-source-wordcount: '1074'
-ht-degree: 100%
+source-wordcount: '1178'
+ht-degree: 87%
 
 ---
 
@@ -196,44 +196,34 @@ ht-degree: 100%
 * Destination SDK {#destination-sdk}
    * [Übersicht](./destination-sdk/overview.md)
    * [Voraussetzungen für die Integration](./destination-sdk/integration-prerequisites.md)
-   * [Erste Schritte](./destination-sdk/getting-started.md)
-   * Funktionen des Destination SDK {#functionality}
-      * [Konfigurationsoptionen](./destination-sdk/configuration-options.md)
-      * [Konfiguration des Streaming-Ziels](./destination-sdk/destination-configuration.md)
-      * [Konfiguration dateibasierter Ziele](./destination-sdk/file-based-destination-configuration.md)
-      * [Server- und Vorlagenspezifikationen für Streaming-Ziele](./destination-sdk/server-and-template-configuration.md)
-      * [Dateibasierte Ziel-Server- und Dateispezifikationen](./destination-sdk/server-and-file-configuration.md)
-      * [Nachrichtenformat](./destination-sdk/message-format.md)
-      * [Verwaltung von Zielgruppen-Metadaten](./destination-sdk/audience-metadata-management.md)
-      * Authentifizierung {#authentication}
-         * [Authentifizierungskonfiguration](./destination-sdk/authentication-configuration.md)
-         * [OAuth 2-Authentifizierung](./destination-sdk/oauth2-authentication.md)
-      * Entwickler-Tools {#developer-tools}
-         * [Erstellen und Testen einer Nachrichten-Umwandlungsvorlage](./destination-sdk/create-template.md)
-         * [Testen einer Zielkonfiguration](./destination-sdk/test-destination.md)
-   * API-Vorgänge {#api}
-      * [API-Referenz zum Destination SDK (Destination Authoring)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
-      * [API-Vorgänge für Ziel-Endpunkte](./destination-sdk/destination-configuration-api.md)
-      * [API-Vorgänge für Ziel-Server-Endpunkte](./destination-sdk/destination-server-api.md)
-      * [API-Vorgänge für Zielgruppen-Metadaten-Endpunkte](./destination-sdk/audience-metadata-api.md)
-      * [API-Vorgänge für Zugriffsdaten-Endpunkte](./destination-sdk/credentials-configuration-api.md)
-      * [Veröffentlichen von Endpunkt-API-Vorgänge](./destination-sdk/destination-publish-api.md)
-      * Referenz zu Entwickler-Tools {#developer-tools-reference}
-         * Streaming-Zieltest-API {#streaming-destination-testing-api}
-            * [Abrufen von Beispielvorlagen-API-Vorgängen](./destination-sdk/sample-template-api.md)
-            * [API-Vorgänge für Rendervorlagen](./destination-sdk/render-template-api.md)
-            * [API-Vorgänge für Zieltests](./destination-sdk/destination-testing-api.md)
-            * [Beispiele für API-Vorgänge zur Profilerstellung](./destination-sdk/sample-profile-generation-api.md)
-         * Dateibasierte Zieltest-API {#file-based-destination-testing-api}
-            * [Übersicht über die dateibasierte Zieltest-API](./destination-sdk/file-based-destination-testing-overview.md)
-            * [Generieren von Beispielprofilen basierend auf einem Quellschema](./destination-sdk/file-based-sample-profile-generation-api.md)
-            * [Testen Ihres dateibasierten Ziels mit Beispielprofilen](./destination-sdk/file-based-destination-testing-api.md)
-            * [Anzeigen detaillierter Aktivierungsergebnisse](./destination-sdk/file-based-destination-results-api.md)
-            * [Überprüfen von vorlagenbasierten Kundenfeldern](./destination-sdk/file-based-render-template-api.md)
+   * [Erste Schritte mit Destination SDK](./destination-sdk/getting-started.md)
+   * Funktionalität {#functionality}
+      * [Konfigurationsoptionen](./destination-sdk/functionality/configuration-options.md)
+      * Zielserverkomponenten {#destination-server}
+         * [Server-Spezifikationen](./destination-sdk/functionality/destination-server/server-specs.md)
+         * [Festlegen von Spezifikationen](./destination-sdk/functionality/destination-server/templating-specs.md)
+         * [Nachrichtenformat](./destination-sdk/functionality/destination-server/message-format.md)
+         * [Unterstützte Transformationsfunktionen](./destination-sdk/functionality/destination-server/supported-functions.md)
+         * [Konfiguration der Dateiformatierung](./destination-sdk/functionality/destination-server/file-formatting.md)
+      * Zielkonfigurationskomponenten {#destination-configuration}
+         * [Konfiguration der Kundenauthentifizierung](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
+         * [OAuth 2-Authentifizierung](./destination-sdk/functionality/destination-configuration/oauth2-authentication.md)
+         * [Benutzerdefinierte Datenfelder](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
+         * [Benutzeroberflächenattribute](./destination-sdk/functionality/destination-configuration/ui-attributes.md)
+         * [Konfiguration des Partnerschemas](./destination-sdk/functionality/destination-configuration/schema-configuration.md)
+         * [Identitäts-Namespace-Konfiguration](./destination-sdk/functionality/destination-configuration/identity-namespace-configuration.md)
+         * [Unterstützte Zuordnungskonfigurationen](./destination-sdk/functionality/destination-configuration/supported-mapping-configurations.md)
+         * [Zielbereitstellung](./destination-sdk/functionality/destination-configuration/destination-delivery.md)
+         * [Konfiguration von Zielgruppen-Metadaten](./destination-sdk/functionality/destination-configuration/audience-metadata-configuration.md)
+         * [Aggregationsrichtlinie](./destination-sdk/functionality/destination-configuration/aggregation-policy.md)
+         * [Batch-Konfiguration](./destination-sdk/functionality/destination-configuration/batch-configuration.md)
+         * [Historische Profilqualifikationen](./destination-sdk/functionality/destination-configuration/historical-profile-qualifications.md)
+      * [Ratenbegrenzungs- und Wiederholungsrichtlinie für Streaming-Ziele](./destination-sdk/functionality/rate-limiting-retry-policy.md)
+      * [Verwaltung von Zielgruppen-Metadaten](./destination-sdk/functionality/audience-metadata-management.md)
    * Handbücher {#guides}
-      * [Verwenden des Destination SDK zum Konfigurieren eines Streaming-Ziels](./destination-sdk/configure-destination-instructions.md)
-      * [Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels](./destination-sdk/configure-file-based-destination-instructions.md)
-      * [Übermitteln eines im Destination SDK erstellten Ziels zur Überprüfung](./destination-sdk/submit-destination.md)
+      * [Verwenden des Destination SDK zum Konfigurieren eines Streaming-Ziels](./destination-sdk/guides/configure-destination-instructions.md)
+      * [Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels](./destination-sdk/guides/configure-file-based-destination-instructions.md)
+      * [Übermitteln eines im Destination SDK erstellten Ziels zur Überprüfung](./destination-sdk/guides/submit-destination.md)
       * Konfigurieren von dateibasierten Zielen {#configure-file-based-destinations}
          * [Konfigurieren von Dateiformatierungsoptionen](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
          * [Konfigurieren eines Amazon S3-Ziels mit vordefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
@@ -242,9 +232,45 @@ ht-degree: 100%
          * [Konfigurieren eines Azure Data Lake Storage-Ziels mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
          * [Konfigurieren eines Data Landing Zone-Ziels (DLZ) mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
          * [Konfigurieren eines SFTP-Ziels mit vordefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
-   * Referenz {#reference}
-      * [Ratenbegrenzungs- und Wiederholungsrichtlinie für Streaming-Ziele](./destination-sdk/rate-limiting-retry-policy.md)
-      * [Unterstützte Transformationsfunktionen](./destination-sdk/supported-functions.md)
+   * API-Referenz zur Zielerstellung {#authoring-api}
+      * [API-Referenz zum Destination SDK (Destination Authoring)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * Vorgänge des Zielservers {#server-operations}
+         * [Erstellen einer Zielserverkonfiguration](./destination-sdk/authoring-api/destination-server/create-destination-server.md)
+         * [Abrufen einer Zielserverkonfiguration](./destination-sdk/authoring-api/destination-server/retrieve-destination-server.md)
+         * [Aktualisieren der Zielserverkonfiguration](./destination-sdk/authoring-api/destination-server/update-destination-server.md)
+         * [Löschen einer Zielserverkonfiguration](./destination-sdk/authoring-api/destination-server/delete-destination-server.md)
+      * Zielkonfigurationsvorgänge {#destination-operations}
+         * [Erstellen einer Zielkonfiguration](./destination-sdk/authoring-api/destination-configuration/create-destination-configuration.md)
+         * [Abrufen einer Zielkonfiguration](./destination-sdk/authoring-api/destination-configuration/retrieve-destination-configuration.md)
+         * [Zielkonfiguration aktualisieren](./destination-sdk/authoring-api/destination-configuration/update-destination-configuration.md)
+         * [Zielkonfiguration löschen](./destination-sdk/authoring-api/destination-configuration/delete-destination-configuration.md)
+   * API-Referenz für Zielgruppen-Metadaten {#audience-template-api}
+      * [Erstellen einer Zielgruppenvorlage](./destination-sdk/metadata-api/create-audience-template.md)
+      * [Abrufen einer Zielgruppenvorlage](./destination-sdk/metadata-api/retrieve-audience-template.md)
+      * [Aktualisieren einer Zielgruppenvorlage](./destination-sdk/metadata-api/update-audience-template.md)
+      * [Löschen von Zielgruppenvorlagen](./destination-sdk/metadata-api/delete-audience-template.md)
+   * Referenz zur API für die Konfiguration von Berechtigungen {#credentials-api}
+      * [Erstellen einer Berechtigungskonfiguration](./destination-sdk/credentials-api/create-credential-configuration.md)
+      * [Abrufen einer Berechtigungskonfiguration](./destination-sdk/credentials-api/retrieve-credential-configuration.md)
+      * [Aktualisieren der Konfiguration von Anmeldedaten](./destination-sdk/credentials-api/update-credential-configuration.md)
+      * [Berechtigungskonfiguration löschen](./destination-sdk/credentials-api/delete-credential-configuration.md)
+   * API-Referenz für Zieltests {#testing-api}
+      * Streaming-Zieltest-API {#streaming-destinations}
+         * [Übersicht über die Streaming-Ziel-Test-API](./destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md)
+         * [Generieren von Beispielprofilen basierend auf einem Quellschema](./destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md)
+         * [Erstellen einer Vorlage zur Konvertierung von Beispielnachrichten ](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
+         * [Validieren der exportierten Profilstruktur](./destination-sdk/testing-api/streaming-destinations/render-template-api.md)
+         * [Testen Ihres Streaming-Ziels mit Beispielprofilen](./destination-sdk/testing-api/streaming-destinations/destination-testing-api.md)
+         * [Erstellen und Testen einer Nachrichten-Umwandlungsvorlage](./destination-sdk/testing-api/streaming-destinations/create-template.md)
+      * Dateibasierte Zieltest-API {#batch-destinations}
+         * [Übersicht über die dateibasierte Zieltest-API](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)
+         * [Generieren von Beispielprofilen basierend auf einem Quellschema](./destination-sdk/testing-api/batch-destinations/file-based-sample-profile-generation-api.md)
+         * [Testen Ihres dateibasierten Ziels mit Beispielprofilen](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-api.md)
+         * [Anzeigen detaillierter Aktivierungsergebnisse](./destination-sdk/testing-api/batch-destinations/file-based-destination-results-api.md)
+         * [Überprüfen von vorlagenbasierten Kundenfeldern](./destination-sdk/testing-api/batch-destinations/file-based-render-template-api.md)
+   * API-Referenz zur Zielveröffentlichung {#publishing-api}
+      * [Erstellen einer Zielveröffentlichungsanforderung](./destination-sdk/publishing-api/create-publishing-request.md)
+      * [Abrufen einer Zielveröffentlichungsanforderung](./destination-sdk/publishing-api/retrieve-publishing-request.md)
    * Dokumentieren des Ziels {#document-destination}
       * [Dokumentieren des Ziels in Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
       * [Verwenden der GitHub-Web-Oberfläche, um eine Zieldokumentationsseite zu erstellen](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
