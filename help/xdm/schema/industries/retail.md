@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Datenmodell der Einzelhandelsbranche
 description: Sehen Sie sich ein standardisiertes Datenmodell für den Einzelhandel an, das mit dem Experience-Datenmodell (XDM) kompatibel ist und in Adobe Experience Platform verwendet werden kann.
 exl-id: 40cbb243-668b-4280-815f-1f94a06b6b87
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 5ceb261dbf1cac58d0cfe620875b8fa7c761abf2
 workflow-type: tm+mt
-source-wordcount: '519'
-ht-degree: 17%
+source-wordcount: '458'
+ht-degree: 20%
 
 ---
 
@@ -46,5 +46,3 @@ In der folgenden Tabelle sind die empfohlenen Klassen und Schemafeldgruppen für
 | Retargeting von Warenkorbabbrüchen durch automatisierte und personalisierte E-Mails. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Handelsdetails](../../field-groups/event/commerce-details.md)</li><li>[Web-Details](../../field-groups/event/web-details.md)</li></ul></li><li>**[Produkt](../../classes/product.md)**:<ul><li>[Produktkatalog](../../field-groups/product/product-catalog.md)</li><li>[Produktkategorie](../../field-groups/product/product-category.md)</li></ul></li></ul> |
 
 {style="table-layout:auto"}
-
-*\*Während eine standardmäßige Produktklasse für eine zukünftige Version geplant ist, müssen Produktschemata derzeit stattdessen mit einer benutzerdefinierten Klasse erstellt werden. Daher müssen Sie die Struktur der Klasse des Schemas sowie die aller Feldergruppen, die Sie hinzufügen, manuell erstellen. Siehe Abschnitt zu [Erstellen einer benutzerdefinierten Klasse](../../ui/resources/classes.md#create) Weitere Informationen finden Sie im Handbuch zur XDM-Benutzeroberfläche .*

@@ -3,9 +3,9 @@ keywords: Experience Platform; Abfrage; Query Service; Fehlerbehebung; Limits; R
 title: Limits für Query Service
 description: Dieses Dokument enthält Informationen zu Nutzungsbeschränkungen für Query Service-Daten, die Ihnen bei der Optimierung Ihrer Abfrageverwendung helfen.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5ceb261dbf1cac58d0cfe620875b8fa7c761abf2
 workflow-type: tm+mt
-source-wordcount: '1020'
+source-wordcount: '1004'
 ht-degree: 7%
 
 ---
@@ -33,8 +33,6 @@ Bevor Sie mit diesem Dokument fortfahren, sollten Sie die wichtigsten Definition
 * **Reporting-API**: Eine API zum Ausführen von Datenabruf-Aufrufen (intern oder extern). Erweiterte Berichtsdatenmodelle werden aus den nativen Berichtsdatenmodellen in Adobe Experience Platform abgeleitet, z. B. dem Real-Time CDP Dashboards-Datenmodell.
 
 Die folgende Abbildung fasst zusammen, wie Query Service-Funktionen derzeit zusammengefasst und lizenziert sind:
-
-![Ein Diagramm zur Erläuterung der Verteilung und Verpackung von Query Service-Funktionen im Zusammenhang mit der Lizenzierung.](./images/guardrails/query-capabilities.png)
 
 ## Arten von Beschränkungen
 
