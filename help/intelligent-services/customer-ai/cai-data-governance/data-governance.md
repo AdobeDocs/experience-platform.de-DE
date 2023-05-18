@@ -5,10 +5,10 @@ feature: Customer AI
 title: Data Governance in Kunden-KI
 description: Adobe Experience Platform bietet verschiedene Services und Tools, mit denen Sie Ihre erfassten Erlebnisdaten gemäß Ihren Geschäftspraktiken, Ihren rechtlichen Verpflichtungen und Ihrem Entwicklungsprozess sicher steuern können.
 exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
-source-git-commit: f0bd35d8fb592900c61ed4a1a74d05901bc32810
+source-git-commit: 0fcdb358882fba7f7923e5d6fc1a947699276e18
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 74%
+source-wordcount: '302'
+ht-degree: 76%
 
 ---
 
@@ -26,7 +26,7 @@ Diese Integration ermöglicht ein effizienteres Compliance-Management. Datenvera
 
 ## Einverständnisrichtlinie {#consent-policy}
 
-Customer AI berücksichtigt Ihre Zustimmungseinstellungen. Sobald Sie Ihre Einwilligungsrichtlinie eingerichtet und wie hier dokumentiert aktiviert haben, berücksichtigt Customer AI die von Ihnen erfassten Einwilligungsdaten. Nur einwilligte Daten werden zum Scoring des Modells in nachfolgenden Ausführungen des Modells verwendet. Die neuen Werte ersetzen die alten Werte und können bei der Segmentierung verwendet werden. Diese Funktion ist nur für Kunden von HealthCare Shield und Kunden von Datenschutz und Sicherheitsschild verfügbar.
+Customer AI berücksichtigt Ihre Zustimmungseinstellungen. Sobald du [Einverständnisrichtlinie einrichten und aktivieren](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=de#consent-policy), berücksichtigt Customer AI die von Ihnen erfassten Einwilligungsdaten. Nur einwilligte Daten werden zum Scoring des Modells in nachfolgenden Ausführungen des Modells verwendet. Die neuen Werte ersetzen die alten Werte und können bei der Segmentierung verwendet werden. Diese Funktion ist derzeit nur für Kunden von HealthCare Shield und Kunden von Datenschutz und Sicherheitsschutz verfügbar.
 
 Weitere Informationen zu dieser Funktion finden Sie hier:
 
