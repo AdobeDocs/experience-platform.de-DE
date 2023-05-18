@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise April 2023
 description: Versionshinweise April 2023 für Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: c95d2ab1a6f104c18c491d3a533ee2c304a0aa68
+source-git-commit: 963fc5e31e1728a8a1a7e94bc0cc47d010347325
 workflow-type: tm+mt
-source-wordcount: '2095'
-ht-degree: 100%
+source-wordcount: '2084'
+ht-degree: 98%
 
 ---
 
@@ -190,7 +190,7 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| API-Unterstützung zum Filtern von Daten auf Zeilenebene für Microsoft Dynamics, Salesforce CRM und Salesforce Marketing Cloud | Verwenden Sie logische Operatoren und Vergleichsoperatoren, um Daten auf Zeilenebene für die Quellen Microsoft Dynamics, Salesforce CRM und Salesforce Marketing Cloud zu filtern. Weitere Informationen finden Sie im Handbuch zum [Filtern von Daten für eine Quelle mithilfe der API](../../sources/tutorials/api/filter.md). |
+| API-Unterstützung zum Filtern von Daten auf Zeilenebene für die Salesforce CRM-Quelle. | Verwenden Sie logische und Vergleichsoperatoren, um Daten auf Zeilenebene für die Salesforce CRM-Quelle zu filtern. Weitere Informationen finden Sie im Handbuch zum [Filtern von Daten für eine Quelle mithilfe der API](../../sources/tutorials/api/filter.md). |
 | Beta-Verfügbarkeit von Shopify Streaming | Die [Quelle Shopify Streaming](../../sources/connectors/ecommerce/shopify-streaming.md) ist jetzt in der Beta-Version verfügbar. Verwenden Sie die Quelle Shopify Streaming, um Daten von Ihrem Shopify-Partnerkonto zu Experience Platform zu streamen. |
 | Allgemeine Verfügbarkeit von OneTrust Integration | Die [Quelle OneTrust Integration](../../sources/connectors/consent-and-preferences/onetrust.md) ist jetzt allgemein verfügbar. Verwenden Sie die Quelle OneTrust Integration, um Einverständnis- und Voreinstellungsdaten aus Ihrem OneTrust Integration-Konto zu Experience Platform zu übertragen. |
 | Allgemeine Verfügbarkeit von Oracle Service Cloud | Die [Quelle Oracle Service Cloud](../../sources/connectors/customer-success/oracle-service-cloud.md) ist jetzt allgemein verfügbar. Verwenden Sie die Quelle Oracle Service Cloud, um Daten aus Ihrem Oracle Service Cloud-Konto in Experience Platform aufzunehmen. |
