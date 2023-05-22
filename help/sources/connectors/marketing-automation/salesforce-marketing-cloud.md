@@ -1,25 +1,20 @@
 ---
-keywords: Experience Platform; Homepage; beliebte Themen; Salesforce Marketing Cloud; Salesforce-Marketing Cloud; Marketing-Automatisierung
 solution: Experience Platform
 title: Salesforce Marketing Cloud Source - Überblick
 description: Erfahren Sie, wie Sie Salesforce Marketing Cloud über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 997a9dc70145a8cfd5d6da20ba788a4610e5c257
 workflow-type: tm+mt
-source-wordcount: '351'
-ht-degree: 45%
+source-wordcount: '334'
+ht-degree: 42%
 
 ---
 
-# (Beta) [!DNL Salesforce Marketing Cloud]
-
->[!NOTE]
->
->Die [!DNL Salesforce Marketing Cloud]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-gekennzeichneten Quellen.
+# [!DNL Salesforce Marketing Cloud]
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-[!DNL Experience Platform] unterstützt die Erfassung von Daten aus Marketingautomatisierungssystemen von Drittanbietern. Unterstützung für Anbieter von Marketing-Automatisierungslösungen: [!DNL Salesforce Marketing Cloud].
+Experience Platform unterstützt die Erfassung von Daten aus Marketingautomatisierungssystemen von Drittanbietern. Unterstützung für Anbieter von Marketing-Automatisierungslösungen: [!DNL Salesforce Marketing Cloud].
 
 ## Voraussetzungen
 
@@ -28,9 +23,13 @@ Bevor Sie Ihre [!DNL Salesforce Marketing Cloud] -Quelle an Platform übermittel
 * `campaign_read`
 * `list_and_subscribers_read`
 
-Sie können Scopes anfordern, indem Sie einen Aufruf an die `v2/userinfo` Ressource [!DNL Salesforce Marketing Cloud] API. Siehe [[!DNL Salesforce Marketing Cloud] Dokument zu Berechtigungsbereichen für API-Integration](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html) für Anleitungen zum Anfordern und Vergleichen von Bereichen.
+Sie können Scopes anfordern, indem Sie einen Aufruf an die `v2/userinfo` Ressource [!DNL Salesforce Marketing Cloud] API. Siehe [[!DNL Salesforce Marketing Cloud] Dokument zu Berechtigungsbereichen für API-Integration](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>) für Anleitungen zum Anfordern und Vergleichen von Bereichen.
 
-Weitere Informationen zu Bereichen, einschließlich einer Liste der zugehörigen Berechtigungen und Verhaltensweisen, finden Sie in diesem [[!DNL Salesforce Marketing Cloud] REST-API-Dokument](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html).
+Weitere Informationen zu Bereichen, einschließlich einer Liste der zugehörigen Berechtigungen und Verhaltensweisen, finden Sie in diesem [[!DNL Salesforce Marketing Cloud] REST-API-Dokument](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html>).
+
+>[!IMPORTANT]
+>
+>Die Erfassung benutzerdefinierter Objekte wird derzeit nicht von der [!DNL Salesforce Marketing Cloud] Quellintegration.
 
 ## IP-Adressen-Zulassungsliste
 
