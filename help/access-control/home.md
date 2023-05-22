@@ -4,78 +4,78 @@ solution: Experience Platform
 title: Zugangssteuerung – Übersicht
 description: Die Zugangssteuerung für Adobe Experience Platform wird über Adobe Admin Console geboten. Diese Funktion nutzt Produktprofile in Admin Console, um Benutzende mit Berechtigungen und Sandboxes zu verknüpfen.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 88bfcdef65b4a938d573b1beb1952c7e030ebc13
 workflow-type: tm+mt
-source-wordcount: '1540'
-ht-degree: 100%
+source-wordcount: '1567'
+ht-degree: 65%
 
 ---
 
 # Zugangssteuerung – Übersicht
 
-Die Zugangssteuerung für [!DNL Experience Platform] wird über [Adobe Admin Console](https://adminconsole.adobe.com) geboten. Diese Funktion nutzt Produktprofile in [!DNL Admin Console], um Anwender mit Berechtigungen und Sandboxes zu verknüpfen.
+Die Zugriffskontrolle für Adobe Experience Platform wird über das **[!UICONTROL Berechtigungen]** in [Adobe Experience Cloud](https://experience.adobe.com/). Diese Funktion nutzt Rollen und Richtlinien, die Benutzer mit Berechtigungen und Sandboxes verknüpfen.
 
 ## Zugangssteuerung zu Hierarchie und Workflow
 
-Zum Konfigurieren der Zugangssteuerung für [!DNL Experience Platform] müssen Sie Administratorrechte für ein Unternehmen haben, das über eine [!DNL Experience Platform]-Produktintegration verfügt. Die Mindestrolle, die Berechtigungen erteilt oder entzieht, ist ein Produktprofil-Administrator. Andere Administratorrollen, die Berechtigungen verwalten können, sind Produktadministratoren (kann alle Profile innerhalb eines Produkts verwalten) und Systemadministratoren (keine Einschränkungen). Weitere Informationen zu [Administratorrollen](https://helpx.adobe.com/de/enterprise/using/admin-roles.html) finden Sie im Adobe Help Center-Artikel.
+Um die Zugriffskontrolle für Experience Platform zu konfigurieren, müssen Sie über System- oder Produktadministratorberechtigungen für ein Unternehmen verfügen, das über ein Experience Platform-Produkt verfügt. Die Mindestrolle, die Berechtigungen erteilen oder entziehen kann, ist ein Produktadministrator. Andere Administratorrollen, die Berechtigungen verwalten können, sind Systemadministratoren (keine Einschränkungen). Weitere Informationen zu [Administratorrollen](https://helpx.adobe.com/de/enterprise/using/admin-roles.html) finden Sie im Adobe Help Center-Artikel.
 
 >[!NOTE]
 >
->Ab diesem Zeitpunkt beziehen sich alle Erwähnungen von „Administrator“ in diesem Dokument auf einen Produktadministrator oder höher (wie oben beschrieben).
+>Ab diesem Zeitpunkt beziehen sich alle Erwähnungen von &quot;Administrator&quot;in diesem Dokument auf einen Produktadministrator oder höher (wie oben beschrieben).
 
 Ein Workflow auf hoher Ebene zum Abrufen und Zuweisen von Zugriffsberechtigungen kann wie folgt zusammengefasst werden:
 
 - Nach der Lizenzierung von Adobe Experience Platform oder einem Programm-Service, der Experience Platform verwendet, wird eine E-Mail an den Administrator gesendet, der während der Lizenzierung angegeben wurde.
 - Der Administrator meldet sich bei der [Adobe Admin Console](#adobe-admin-console) an und wählt **Adobe Experience Platform** aus der Liste der Produkte auf der Übersichtsseite aus.
-- Der Administrator kann die standardmäßigen [Produktprofile](#product-profiles) anzeigen oder bei Bedarf neue Kundenproduktprofile erstellen.
-- Der Administrator kann die Berechtigungen und Benutzer für alle vorhandenen Profile bearbeiten.
-- Beim Erstellen oder Bearbeiten eines Profils fügt der Administrator dem Profil über den Tab **[!UICONTROL Benutzer]** Benutzer hinzu und gewährt diesen Benutzern Berechtigungen (wie z. B. [!UICONTROL Datensätze lesen] oder [!UICONTROL Schemas verwalten]), indem er auf den Tab **[!UICONTROL Berechtigungen]** zugreift. Ebenso kann der Administrator über die gleiche Registerkarte „Berechtigungen“ Zugriff auf Sandboxes zuweisen.
-- Wenn sich Benutzer bei der Benutzeroberfläche von [!DNL Experience Platform] anmelden, wird ihr Zugriff auf [!DNL Platform]-Funktionen durch die Berechtigungen gesteuert, die ihnen in Schritt 2 erteilt wurden. Wenn ein Benutzer beispielsweise nicht über die Zugriffsberechtigung [!UICONTROL Datensätze anzeigen] verfügt, ist der Tab **[!UICONTROL Datensätze]** im Seitenmenü für diesen Benutzer nicht sichtbar.
+- Um Zugriff auf Experience Platform zu gewähren, muss der Administrator dem standardmäßigen Produktprofil Benutzer hinzufügen: `AEP-Default-All-Users`.
+- Unter Benutzerberechtigungen kann der Administrator neue Experience Platformen erstellen oder die Berechtigungen und Benutzer für bestehende Rollen bearbeiten.
+- Beim Erstellen oder Bearbeiten einer Rolle fügt der Administrator Benutzer mithilfe der **[!UICONTROL Benutzer]** und gewährt diesen Benutzern Berechtigungen (z. B.[!UICONTROL Datensätze lesen]&quot; oder &quot;[!UICONTROL Verwalten von Schemas]&quot;) durch Bearbeiten der Rollenberechtigungen. Ebenso kann der Administrator Sandboxes Zugriff über dieselbe Bearbeitungsoption zuweisen.
+- Wenn sich Benutzer bei der Experience Platform-Benutzeroberfläche anmelden, wird ihr Zugriff auf die Experience Platform-Funktionen von den Berechtigungen bestimmt, die ihnen aus dem vorherigen Schritt erteilt wurden. Wenn ein Benutzer beispielsweise nicht über die [!UICONTROL Anzeigen von Datensätzen] Berechtigung, die **[!UICONTROL Datensätze]** -Registerkarte im Seitenmenü für diesen Benutzer nicht sichtbar sein.
 
-Detailliertere Anweisungen zum Verwalten der Zugangssteuerung in [!DNL Experience Platform] finden Sie im [Benutzerhandbuch für die Zugriffssteuerung](./ui/overview.md).
+Detailliertere Anweisungen zum Verwalten der Zugriffskontrolle in Experience Platform finden Sie im [Benutzerhandbuch für die Zugriffskontrolle](./ui/overview.md).
 
-Alle Aufrufe von [!DNL Experience Platform]-APIs werden auf Berechtigungen überprüft und geben Fehler zurück, wenn die entsprechenden Berechtigungen im aktuellen Benutzerkontext nicht gefunden wurden. In der Benutzeroberfläche werden Elemente je nach den dem aktuellen Benutzer zugewiesenen Berechtigungen ausgeblendet oder geändert.
+Alle Aufrufe von Experience Platform-APIs werden auf Berechtigungen überprüft und geben Fehler zurück, wenn die entsprechenden Berechtigungen im aktuellen Benutzerkontext nicht gefunden wurden. In der Benutzeroberfläche werden Elemente je nach den dem aktuellen Benutzer zugewiesenen Berechtigungen ausgeblendet oder geändert.
 
-## Adobe Admin Console
+## Berechtigungen {#platform-permissions}
 
-Die Adobe Admin Console bietet einen zentralen Speicherort für die Verwaltung der Adobe-Produktberechtigungen und den Zugriff für Ihr Unternehmen. Über die Konsole können Sie Benutzergruppen Zugriffsberechtigungen für verschiedene [!DNL Platform]-Funktionen erteilen, wie z. B. [!UICONTROL Datensätze verwalten], [!UICONTROL Datensätze anzeigen] oder [!UICONTROL Profile verwalten].
+[!UICONTROL Berechtigungen] bietet einen zentralen Speicherort für die Verwaltung des Unternehmenszugriffs auf Experience Platformen. bis [!UICONTROL Berechtigungen]können Sie Benutzergruppen Zugriffsberechtigungen für verschiedene Experience Platform-Funktionen erteilen, z. B. [!UICONTROL Datensätze verwalten], [!UICONTROL Anzeigen von Datensätzen]oder [!UICONTROL Profile verwalten].
 
-### Produktprofile
+### Rollen
 
-In [!DNL Admin Console] werden Benutzern anhand der Verwendung von Produktprofilen Berechtigungen zugewiesen. Mit den Produktprofilen können Sie einem oder mehreren Benutzern Berechtigungen erteilen und auch deren Zugriff auf den Umfang der Sandboxes einschließen, die ihnen über Produktprofile zugewiesen werden. Benutzer können einem oder mehreren Produktprofilen Ihres Unternehmens zugewiesen werden.
+Im [!UICONTROL Rollen] -Abschnitt, werden Benutzern Berechtigungen über die Verwendung von Rollen zugewiesen. Rollen ermöglichen es Ihnen, einem oder mehreren Benutzern Berechtigungen zu gewähren und enthalten auch deren Zugriff auf den Umfang der Sandboxes, die ihnen über Rollen zugewiesen werden. Benutzer können einer oder mehreren Rollen Ihres Unternehmens zugewiesen werden.
 
-### Standard-Produktprofile
+### Standardrollen
 
-[!DNL Experience Platform] verfügt über zwei vorkonfigurierte standardmäßige Produktprofile. Die folgende Tabelle zeigt, was in den einzelnen Standardprofilen bereitgestellt wird, einschließlich der Sandbox, auf die sie Zugriff gewähren, sowie der Berechtigungen, die sie im Rahmen dieser Sandbox gewähren.
+Experience Platform verfügt über zwei vorkonfigurierte Standardrollen. Die folgende Tabelle zeigt, was in den einzelnen Standardprofilen bereitgestellt wird, einschließlich der Sandbox, auf die sie Zugriff gewähren, sowie der Berechtigungen, die sie im Rahmen dieser Sandbox gewähren.
 
-| Produktprofile | Sandbox-Zugriff | Berechtigungen |
+| Rolle | Sandbox-Zugriff | Berechtigungen |
 | --- | --- | --- |
-| Standardproduktion – Zugriff auf alles | Produktion | Alle für [!DNL Experience Platform] geltenden Berechtigungen mit Ausnahme der Sandbox-Administrationsberechtigungen. |
+| Standardproduktion – Zugriff auf alles | Produktion | Alle für Experience Platform geltenden Berechtigungen mit Ausnahme der Sandbox-Administratorberechtigungen. |
 | Sandbox-Administratoren | K. A. | Bietet nur Zugriff auf Sandbox-Administratorberechtigungen. |
 
 ## Sandboxes und Berechtigungen
 
-Nicht-Produktion-Sandboxes sind eine Form der Datenvirtualisierung, mit der Sie Daten von anderen Sandboxes isolieren können und die üblicherweise für Entwicklungsexperimente, Tests oder Versuche verwendet werden. Die Berechtigungen eines Produktprofils geben den Benutzern des Profils Zugriff auf [!DNL Platform]-Funktionen innerhalb der Sandbox-Umgebungen, auf die ihnen Zugriff gewährt wurde. Mit einer Standardlizenz für Experience Platform erhalten Sie fünf Sandboxes (eine zur Produktion und vier zur Nicht-Produktion). Sie können Pakete von jeweils zehn Nicht-Produktions-Sandboxes bis zu insgesamt maximal 75 Sandboxes hinzufügen. Wenden Sie sich an die Admins Ihrer Organisation oder das Adobe-Vertriebspersonal, um weitere Informationen zu erhalten.
+Nicht-Produktion-Sandboxes sind eine Form der Datenvirtualisierung, mit der Sie Daten von anderen Sandboxes isolieren können und die üblicherweise für Entwicklungsexperimente, Tests oder Versuche verwendet werden. Mit den Berechtigungen einer Rolle erhalten die Benutzer der Rolle Zugriff auf Experience Platform-Funktionen in den Sandbox-Umgebungen, auf die ihnen Zugriff gewährt wurde. Mit einer Standardlizenz für Experience Platform erhalten Sie fünf Sandboxes (eine zur Produktion und vier zur Nicht-Produktion). Sie können Pakete von jeweils zehn Nicht-Produktions-Sandboxes bis zu insgesamt maximal 75 Sandboxes hinzufügen. Wenden Sie sich an die Admins Ihrer Organisation oder das Adobe-Vertriebspersonal, um weitere Informationen zu erhalten.
 
-Weitere Informationen zu Sandboxes in [!DNL Experience Platform] finden Sie in der [Sandbox-Übersicht](../sandboxes/home.md).
+Weitere Informationen zu Sandboxes in Experience Platform finden Sie in der [Sandbox-Übersicht](../sandboxes/home.md).
 
 ### Zugriff auf Sandboxes
 
-Der Zugriff auf Sandboxes wird über Produktprofile verwaltet. Ausführliche Anweisungen zum Aktivieren des Zugriffs auf eine Sandbox für ein Produktprofil finden Sie im [Benutzerhandbuch für die Zugangssteuerung](./ui/overview.md).
+Der Zugriff auf Sandboxes wird über Rollen verwaltet. Ausführliche Anweisungen zum Aktivieren des Zugriffs auf eine Sandbox für eine Rolle finden Sie unter [Rollenanleitung zur attributbasierten Zugriffskontrolle](./abac/ui/roles.md).
 
-Benutzern kann Zugriff auf eine oder mehrere Sandboxes innerhalb eines Profils gewährt werden. Wenn ein Benutzer in zwei oder mehr Produktprofilen enthalten ist, hat er Zugriff auf alle in diesen Profilen enthaltenen Sandboxes.
+Benutzern kann Zugriff auf eine oder mehrere Sandboxes innerhalb einer Rolle gewährt werden. Wenn ein Benutzer in zwei oder mehr Rollen enthalten ist, hat er Zugriff auf alle Sandboxes, die in diesen Rollen enthalten sind.
 
 Die Berechtigung „Sandbox-Verwaltung“ ermöglicht Benutzern das Verwalten, Anzeigen oder Zurücksetzen von Sandboxes.
 
-### Berechtigungen {#permissions}
+### Ressourcenberechtigungen {#permissions}
 
-Auf der Registerkarte Berechtigungen in einem Produktprofil werden die Sandboxes und Berechtigungen angezeigt, die für dieses Profil aktiv sind:
+Die Ressource [!UICONTROL Berechtigungen] -Registerkarte in einer Rolle zeigt die Sandboxes und Berechtigungen an, die für diese Rolle aktiv sind:
 
 ![permissions-overview](./images/permissions.png)
 
-Berechtigungen, die über die [!DNL Admin Console] gewährt werden, werden nach Kategorie sortiert. Einige dieser Berechtigungen gewähren Zugriff auf verschiedene Funktionen auf niedriger Ebene.
+Berechtigungen, die über die Ressourcenberechtigungen gewährt werden, werden nach Kategorie sortiert, wobei einige Berechtigungen Zugriff auf verschiedene Funktionen auf niedriger Ebene gewähren.
 
-In der folgenden Tabelle sind die für [!DNL Experience Platform] in der [!DNL Admin Console] verfügbaren Berechtigungen mit Beschreibungen der spezifischen [!DNL Platform]-Funktionen aufgeführt, auf die sie Zugriff gewähren. Detaillierte Anweisungen zum Hinzufügen von Berechtigungen zu einem Produktprofil finden Sie im [Benutzerhandbuch für die Zugangssteuerung](./ui/overview.md).
+In der folgenden Tabelle sind die für die Experience Platform in der Rolle verfügbaren Berechtigungen mit Beschreibungen der spezifischen Experience Platform-Funktionen, auf die sie Zugriff gewähren, aufgeführt. Ausführliche Anweisungen zum Hinzufügen von Berechtigungen zu einer Rolle finden Sie unter [Rollenanleitung zur attributbasierten Zugriffskontrolle](./abac/ui/roles.md).
 
 | Kategorie | Berechtigung | Beschreibung |
 | --- | --- | --- |
@@ -128,4 +128,4 @@ In der folgenden Tabelle sind die für [!DNL Experience Platform] in der [!DNL A
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Handbuchs haben Sie sich mit den Hauptgrundsätzen der Zugangssteuerung in [!DNL Experience Platform] vertraut gemacht. Nun können Sie im [Benutzerhandbuch für die Zugangssteuerung](./ui/overview.md) ausführliche Schritte nachlesen, wie Sie die [!DNL Admin Console] zur Erstellung von Produktprofilen und zur Erteilung von Berechtigungen für [!DNL Platform] nutzen.
+Durch Lesen dieses Handbuchs wurden Sie mit den Hauptgrundsätzen der Zugriffskontrolle in Experience Platform vertraut gemacht. Sie können jetzt mit dem [Benutzerhandbuch zur attributbasierten Zugriffskontrolle](./abac/overview.md) für detaillierte Anweisungen zur Verwendung von Experience Cloud zum Erstellen von Rollen und zum Zuweisen von Berechtigungen für die Experience Platform.
