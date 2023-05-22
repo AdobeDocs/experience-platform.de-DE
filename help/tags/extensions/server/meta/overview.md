@@ -2,9 +2,9 @@
 title: Übersicht über die API-Erweiterung für Meta Conversions
 description: Erfahren Sie mehr über die Meta Conversions API-Erweiterung für die Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: 6538599e10d4980c3890a8fba65c8ef51c24496a
+source-git-commit: f5a9e8cb5cdbff485bc7d50e9567b0236ae5872e
 workflow-type: tm+mt
-source-wordcount: '2256'
+source-wordcount: '2368'
 ht-degree: 1%
 
 ---
@@ -24,6 +24,10 @@ Es wird dringend empfohlen, [!DNL Meta Pixel] und [!DNL Conversions API] , um di
 >Der Abschnitt zu [Ereignisdeduplizierung](#deduplication) weiter unten in diesem Dokument die Schritte beschrieben, um sicherzustellen, dass dasselbe Ereignis nicht zweimal verwendet wird, da es sowohl vom Browser als auch vom Server empfangen werden kann.
 
 Um die [!DNL Conversions API] -Erweiterung, müssen Sie Zugriff auf die Ereignisweiterleitung haben und über eine gültige [!DNL Meta] Konto mit Zugriff auf [!DNL Ad Manager] und [!DNL Event Manager]. Insbesondere müssen Sie die Kennung eines vorhandenen [[!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755?id=1205376682832142) (oder [eine neue [!DNL Pixel]](https://www.facebook.com/business/help/952192354843755) ), damit die Erweiterung für Ihr Konto konfiguriert werden kann.
+
+>[!INFO]
+>
+>Wenn Sie diese Erweiterung mit App-Daten verwenden möchten oder wenn Sie auch mit Offline-Ereignisdaten in Ihrer [!DNL Meta] Kampagnen erstellen, müssen Sie Ihren Datensatz über eine vorhandene App erstellen und **Aus einer Pixel-ID erstellen** angezeigt. Siehe Artikel [Entscheiden Sie, welche Datensatzerstellungsoption für Ihr Unternehmen geeignet ist.](https://www.facebook.com/business/help/5270377362999582?id=490360542427371) für Details. Siehe Abschnitt [Konversions-API für App-Ereignisse](https://developers.facebook.com/docs/marketing-api/conversions-api/app-events) für alle erforderlichen und optionalen App-Tracking-Parameter.
 
 ## Installieren der Erweiterung
 
@@ -45,7 +49,7 @@ Die Erweiterung ist installiert und Sie können jetzt ihre Funktionen in Ihren E
 
 ## Konfigurieren einer Ereignisweiterleitungsregel {#rule}
 
-In diesem Abschnitt wird die Verwendung der [!DNL Conversions API] -Erweiterung in einer generischen Ereignisweiterleitungsregel. In der Praxis sollten Sie mehrere Regeln konfigurieren, um alle akzeptierten zu senden [Standardereignisse](https://developers.facebook.com/docs/meta-pixel/reference) via [!DNL Meta Pixel] und [!DNL Conversions API].
+In diesem Abschnitt wird die Verwendung der [!DNL Conversions API] -Erweiterung in einer generischen Ereignisweiterleitungsregel. In der Praxis sollten Sie mehrere Regeln konfigurieren, um alle akzeptierten zu senden [Standardereignisse](https://developers.facebook.com/docs/meta-pixel/reference) via [!DNL Meta Pixel] und [!DNL Conversions API]. Informationen zu Mobile-App-Daten finden Sie in den erforderlichen Feldern, Feldern für App-Daten, Parametern für Kundeninformationen und benutzerdefinierten Datendetails. [here](https://developers.facebook.com/docs/marketing-api/conversions-api/app-events).
 
 >[!NOTE]
 >
