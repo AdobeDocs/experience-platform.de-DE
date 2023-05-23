@@ -1,18 +1,16 @@
 ---
-description: Adobe Experience Platform stellt vorkonfigurierte Vorlagen bereit, mit denen Sie den Datenerfassungsprozess beschleunigen können. Zu Vorlagen gehören automatisch generierte Assets wie Schemas, Datensätze, Zuordnungsregeln, Identitäten, Identitäts-Namespaces und Datenflüsse, die Sie beim Einbringen von Daten aus einer Quelle in Experience Platform verwenden können.
-title: (Beta) Erstellen eines Datenflusses für Quellen mithilfe von Vorlagen in der Benutzeroberfläche
+description: Erfahren Sie, wie Sie Vorlagen in der Adobe Experience Platform-Benutzeroberfläche verwenden können, um den Datenerfassungsprozess für B2B-Daten zu beschleunigen.
+title: Erstellen eines Quellen-Datenflusses mithilfe von Vorlagen in der Benutzeroberfläche
 badge1: "Beta"
-hide: true
-hidefromtoc: true
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: c4cb3783cbbab6f9bf25ffaa5b27a200c555b181
+source-git-commit: 91d6832231d75c9dd23e91a5f1152eac61558fc5
 workflow-type: tm+mt
-source-wordcount: '1337'
-ht-degree: 76%
+source-wordcount: '1554'
+ht-degree: 59%
 
 ---
 
-# (Beta) Erstellen eines Datenflusses für Quellen mithilfe von Vorlagen in der Benutzeroberfläche
+# Erstellen eines Quellen-Datenflusses mithilfe von Vorlagen in der Benutzeroberfläche
 
 >[!IMPORTANT]
 >
@@ -132,7 +130,7 @@ Nachdem Sie die Konfiguration Ihres Aufnahmezeitplans abgeschlossen haben, wähl
 
 Die Seite [!UICONTROL Vorlagen-Assets überprüfen] zeigt die Assets an, die automatisch als Teil Ihrer Vorlage generiert wurden. Auf dieser Seite können Sie die automatisch generierten Schemata, Datensätze, Identitäts-Namespaces und Datenflüsse anzeigen, die mit Ihrer Quellverbindung verknüpft sind. Die Generierung aller Assets kann bis zu fünf Minuten dauern. Wenn Sie die Seite verlassen möchten, erhalten Sie die Benachrichtigung zum Zurückkehren, wenn die Assets abgeschlossen sind. Sie können die Assets überprüfen, sobald sie generiert wurden, und jederzeit zusätzliche Konfigurationen an Ihrem Datenfluss vornehmen.
 
-Automatisch generierte Datenflüsse sind standardmäßig aktiviert. Klicken Sie auf die Auslassungszeichen (`...`) neben dem Namen des Datenflusses und wählen Sie **[!UICONTROL Zuordnungen in Vorschau anzeigen]**, um die für Ihren Datenfluss erstellten Zuordnungssätze anzuzeigen.
+Standardmäßig werden automatisch generierte Datenflüsse auf den Entwurfsstatus gesetzt, um eine weitere Anpassung von Konfigurationen zu ermöglichen, z. B. Zuordnungsregeln oder geplante Frequenzen. Wählen Sie die Auslassungszeichen (`...`) neben dem Namen des Datenflusses und wählen Sie dann **[!UICONTROL Zuordnungen in der Vorschau anzeigen]** , um die für Ihren Datenfluss erstellten Zuordnungssätze anzuzeigen.
 
 ![Ein Dropdown-Fenster mit ausgewählter Option für die Zuordnungsvorschau.](../../images/tutorials/templates/preview.png)
 
@@ -146,18 +144,44 @@ Sie können die Ansicht des Schema-Editors verwenden, um am automatisch erstellt
 
 ![Ein Dropdown-Fenster mit aktivierter Option „Datenflüsse aktualisieren“.](../../images/tutorials/templates/update.png)
 
+>[!TIP]
+>
+>Sie können auf Ihren Datenfluss zu Entwürfen über die [!UICONTROL Datenflüsse] Katalogseite im Arbeitsbereich &quot;Quellen&quot;. Auswählen **[!UICONTROL Datenflüsse]** aus der oberen Kopfzeile und wählen Sie dann den Datenfluss aus, den Sie in der Liste aktualisieren möchten.
+>
+>![Eine Liste der vorhandenen Datenflüsse im Datenflusskatalog des Arbeitsbereichs &quot;Quellen&quot;.](../../images/tutorials/templates/dataflows.png)
+
+### Datenfluss veröffentlichen
+
+Starten Sie den Veröffentlichungsprozess, indem Sie den Quellen-Workflow durchlaufen. Nachdem Sie [!UICONTROL Aktualisieren des Datenflusses], werden Sie zum *[!UICONTROL Daten hinzufügen]* Schritt des Workflows. Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
+
+![Schritt zum Hinzufügen von Daten für einen Entwurfs-Datenfluss](../../images/tutorials/templates/continue-draft.png)
+
+Bestätigen Sie anschließend Ihre Datenflussdetails und konfigurieren Sie die Einstellungen für Fehlerdiagnosen, partielle Erfassung und Warnhinweise. Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
+
+![Der Schritt zum Datenfluss-Detail für einen Datenfluss zum Entwurf.](../../images/tutorials/templates/dataflow-detail.png)
+
+>[!NOTE]
+>
+>Sie können **[!UICONTROL Als Entwurf speichern]** jederzeit beenden und speichern Sie die Änderungen, die Sie an Ihrem Datenfluss vorgenommen haben.
+
+Der Zuordnungsschritt wird angezeigt. In diesem Schritt können Sie die Zuordnungskonfigurationen Ihres Datenflusses neu konfigurieren. Eine umfassende Anleitung zu den für die Zuordnung verwendeten Datenvorbereitungsfunktionen finden Sie im [Benutzerhandbuch zur Datenvorbereitung](../../../data-prep/ui/mapping.md).
+
+![Der Zuordnungsschritt für einen Datenfluss im Entwurf.](../../images/tutorials/templates/mapping.png)
+
+Überprüfen Sie abschließend die Details Ihres Datenflusses und wählen Sie **[!UICONTROL Speichern und aufnehmen]** , um Ihren Entwurf zu veröffentlichen.
+
+![Der Überprüfungsschritt für einen Datenfluss-Entwurf.](../../images/tutorials/templates/review.png)
+
 ## Nächste Schritte
 
 In diesem Tutorial haben Sie jetzt Datenflüsse sowie Assets wie Schemata, Datensätze und Identitäts-Namespaces mithilfe von Vorlagen erstellt. Allgemeine Informationen zu Quellen finden Sie unter [Quellen – Übersicht](../../home.md).
 
-## Anhang
+## Warnhinweise und Benachrichtigungen {#alerts-and-notifications}
 
-Im folgenden Abschnitt erhalten Sie weitere Informationen zu Vorlagen.
-
-### Verwenden Sie den Benachrichtigungsbereich, um zur Überprüfungsseite zurückzukehren.
-
-Vorlagen werden von Adobe Experience Platform-Warnhinweisen unterstützt. Sie können im Benachrichtigungsbereich Aktualisierungen zum Status Ihrer Assets erhalten und zur Überprüfungsseite zurückkehren.
+Vorlagen werden von Adobe Experience Platform-Warnhinweisen unterstützt. Sie können im Benachrichtigungsfenster Aktualisierungen zum Status Ihrer Assets erhalten und zur Überprüfungsseite zurückkehren.
 
 Klicken Sie auf das Benachrichtigungssymbol in der oberen Kopfzeile der Platform-Benutzeroberfläche und wählen Sie die Statuswarnung aus, um die Assets anzuzeigen, die Sie überprüfen möchten.
 
 ![Der Benachrichtigungsbereich in der Platform-Benutzeroberfläche mit einer hervorgehobenen Benachrichtigung, die einen fehlgeschlagenen Datenfluss meldet.](../../images/tutorials/templates/notifications.png)
+
+Sie können die Warnhinweiseinstellungen Ihrer Vorlagen aktualisieren, um sowohl E-Mail- als auch In-Platform-Benachrichtigungen zum Status Ihrer Datenflüsse zu erhalten. Weitere Informationen zum Konfigurieren von Warnhinweisen finden Sie im Handbuch unter [Abonnieren von Warnhinweisen für Datenflüsse zu Quellen](../ui/alerts.md).
