@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Que
 title: Quellspezifikationen für Self-Serve-Quellen konfigurieren (Batch-SDK)
 description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung von Self-Serve-Quellen (Batch SDK) vorbereiten müssen.
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b1173adb0e0c3a6460b2cb15cba9218ddad7abcb
 workflow-type: tm+mt
-source-wordcount: '1687'
-ht-degree: 49%
+source-wordcount: '1847'
+ht-degree: 45%
 
 ---
 
@@ -439,9 +439,11 @@ Die `PAGE` Mit dem Seitentyp können Sie durch die Rückkehrdaten nach der Anzah
 ```json
 "paginationParams": {
   "type": "PAGE",
-  "limitName": "records",
-  "limitValue": "100",
-  "pageParamName": "pageIndex",
+  "limitName": "pageSize",
+  "limitValue": 100,
+  "initialPageIndex": 1,
+  "endPageIndex": "headers.x-pagecount",
+  "pageParamName": "pageNumber",
   "maximumRequest": 10000
 }
 ```
@@ -451,8 +453,13 @@ Die `PAGE` Mit dem Seitentyp können Sie durch die Rückkehrdaten nach der Anzah
 | `type` | Die Art der Paginierung, die zum Zurückgeben von Daten verwendet wird. |
 | `limitName` | Name des Limits, mit dem die API die Anzahl der Datensätze angeben kann, die auf einer Seite abgerufen werden sollen. |
 | `limitValue` | Anzahl der Datensätze, die auf einer Seite abgerufen werden sollen. |
+| `initialPageIndex` | (Optional) Der anfängliche Seitenindex definiert die Seitenzahl, von der aus die Paginierung beginnt. Dieses Feld kann für Quellen verwendet werden, bei denen die Paginierung nicht von 0 beginnt. Wenn nicht angegeben, wird der anfängliche Seitenindex standardmäßig auf 0 gesetzt. Dieses Feld erwartet eine Ganzzahl. |
+| `endPageIndex` | (Optional) Mit dem Endseitenindex können Sie eine Endbedingung erstellen und die Paginierung stoppen. Dieses Feld kann verwendet werden, wenn keine standardmäßigen Endbedingungen zum Anhalten der Paginierung verfügbar sind. Dieses Feld kann auch verwendet werden, wenn die Anzahl der aufzunehmenden Seiten oder die letzte Seitenzahl über die Antwortheader angegeben wird, was bei Verwendung von `PAGE` Typ der Paginierung. Der Wert für den Endseitenindex kann entweder die letzte Seitennummer oder ein Ausdruckswert vom Typ Zeichenfolge aus dem Antwortheader sein. Sie können beispielsweise `headers.x-pagecount` , um den Endseitenindex dem `x-pagecount` -Wert aus den Antwortheadern. **Hinweis**: `x-pagecount` ist ein obligatorischer Antwortheader für einige Quellen und enthält die Wertanzahl der aufzunehmenden Seiten. |
 | `pageParamName` | Der Name des Parameters, der an Abfrageparameter angehängt werden muss, um durch verschiedene Seiten der Rückgabedaten zu navigieren. Beispiel: `https://abc.com?pageIndex=1` gibt die zweite Seite der Rückgabe-Payload einer API zurück. |
 | `maximumRequest` | Die maximale Anzahl von Anforderungen, die eine Quelle für eine bestimmte inkrementelle Ausführung stellen kann. Der aktuelle Standardwert ist 10000. |
+
+{style="table-layout:auto"}
+
 
 #### `NONE`
 
