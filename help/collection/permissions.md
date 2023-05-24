@@ -2,10 +2,10 @@
 title: Berechtigungsverwaltung für die Datenerfassung in Experience Platform
 description: Eine allgemeine Übersicht darüber, wie Sie Berechtigungen verwalten und den Zugriff auf Datenerfassungsfunktionen in Adobe Experience Platform steuern können.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 876339019b324d4483152ed6f24bd6ad749ea7ba
+source-git-commit: e24cb8ad6b714a60363bcbec26e453f6445af1ac
 workflow-type: tm+mt
-source-wordcount: '1318'
-ht-degree: 29%
+source-wordcount: '1274'
+ht-degree: 30%
 
 ---
 
@@ -41,11 +41,6 @@ Zu den Berechtigungen unter Adobe Experience Platform gehört der Zugriff auf Da
 
 {style="table-layout:auto"}
 
-<!-- (Feature not yet available?)
-| Dashboards | Manage Custom Dashboards | |
-| Dashboards | View Custom Dashboards | |
--->
-
 ### Adobe Experience Platform-Datenerfassungsberechtigungen
 
 Berechtigungen unter der Datenerfassung von Adobe Experience Platform steuern den Zugriff auf Tags und Funktionen zur Ereignisweiterleitung, einschließlich Eigenschaften, Erweiterungen und Umgebungen. Anweisungen zum Konfigurieren von Adobe Experience Platform-Datenerfassungsberechtigungen finden Sie in der [Abschnitt unten](#manage).
@@ -73,16 +68,16 @@ Berechtigungen unter der Datenerfassung von Adobe Experience Platform steuern de
 
 ## Verwalten von Berechtigungen {#manage}
 
-Wie im vorherigen Abschnitt beschrieben, werden die Berechtigungen für die Datenerfassung über zwei Produktbezeichnungen in Admin Console verwaltet: **Adobe Experience Platform** und **Adobe Experience Platform-Datenerfassung**.
+Berechtigungen für die Datenerfassung werden über zwei Produktbezeichnungen verwaltet: **Adobe Experience Platform** und **Adobe Experience Platform-Datenerfassung**.
 
-Um diese Berechtigungen zu verwalten, melden Sie sich bei [Admin Console](https://adminconsole.adobe.com/) und wählen Sie **[!UICONTROL Produkte]** aus der oberen Navigation. Wählen Sie hier die Produktkarte für die Berechtigungen aus, die Sie konfigurieren möchten. In den folgenden Unterabschnitten erfahren Sie, wie Sie die entsprechenden Berechtigungen für die einzelnen Produkte in Admin Console verwalten:
+In den folgenden Unterabschnitten erfahren Sie, wie Sie die entsprechenden Berechtigungen für die einzelnen Produkte in Admin Console verwalten:
 
 * [Adobe Experience Platform-Berechtigungen](#manage-platform)
 * [Adobe Experience Platform-Datenerfassungsberechtigungen](#manage-collection)
 
 ### Verwalten von Berechtigungen unter Adobe Experience Platform {#manage-platform}
 
-Aus dem **[!UICONTROL Produkte]** Ansicht in Admin Console, wählen Sie **[!UICONTROL Adobe Experience Platform-Datenerfassung]**. Wählen Sie das Produktprofil aus, für das Sie Berechtigungen bearbeiten möchten, und navigieren Sie dann zum **[!UICONTROL Berechtigungen]** Registerkarte.
+Aus dem **[!UICONTROL Berechtigungen]** Wählen Sie in Adobe Experience Platform die Rolle aus, die Sie bearbeiten möchten.
 
 Um auf Datenerfassungsfunktionen zugreifen zu können, müssen Sie alle Berechtigungen in der **[!UICONTROL Sandboxes]**, **[!UICONTROL Datenmodellierung]**, **[!UICONTROL Identity Management]** und **[!UICONTROL Datenerfassung]** Kategorien.
 
@@ -96,7 +91,7 @@ Siehe [UI-Handbuch zur Zugriffskontrolle](../access-control/ui/overview.md) für
 
 ### Verwalten von Berechtigungen unter Adobe Experience Platform-Datenerfassung {#manage-collection}
 
-Aus dem **[!UICONTROL Produkte]** Ansicht in Admin Console, wählen Sie **[!UICONTROL Adobe Experience Platform-Datenerfassung]**.
+Um diese Berechtigungen zu verwalten, melden Sie sich bei Admin Console an und wählen Sie **[!UICONTROL Produkte]** Wählen Sie in der oberen Navigation und dann **[!UICONTROL Adobe Experience Platform-Datenerfassung]**.
 
 ![Bild mit der Datenerfassungs-Produktkarte in Admin Console](./images/permissions/data-collection-card.png)
 
