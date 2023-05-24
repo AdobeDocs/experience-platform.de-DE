@@ -2,7 +2,7 @@
 title: Datensatzbeispiele
 description: Mit den Beispieldatensätzen des Abfrage-Service können Sie explorative Abfragen zu Big Data durchführen. Dies verkürzt die Verarbeitungszeit, verringert jedoch die Abfragegenauigkeit. In diesem Handbuch erfahren Sie, wie Sie Ihre Beispiele für die annähernde Abfrageverarbeitung verwalten können
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: 13779e619345c228ff2a1981efabf5b1917c4fdb
+source-git-commit: ef71371b04746bbf12ac58e91c9ecb5806f7e771
 workflow-type: tm+mt
 source-wordcount: '639'
 ht-degree: 100%
@@ -63,9 +63,9 @@ ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition_1> A
 Praktische Beispiele für diesen Typ von gefiltertem Beispieldatensatz sind:
 
 ```sql
-Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9')) SAMPLERATE 10;
-Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND product.name = "product1") SAMPLERATE 10;
-Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND (product.name = "product1" OR product.name = "product2")) SAMPLERATE 10;
+ANALYZE TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9')) SAMPLERATE 10;
+ANALYZE TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND product.name = "product1") SAMPLERATE 10;
+ANALYZE TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND (product.name = "product1" OR product.name = "product2")) SAMPLERATE 10;
 ```
 
 In den bereitgestellten Beispielen lautet der Tabellenname `large_table`, die Filterbedingung für die ursprüngliche Tabelle lautet `month(to_timestamp(timestamp)) in ('8', '9')`, und die Stichprobenrate (X % der gefilterten Daten) ist in diesem Fall `10`.

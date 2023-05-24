@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-Syntax in Query Service
 description: Dieses Dokument zeigt die von Adobe Experience Platform Query Service unterstützte SQL-Syntax.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 3907efa2e8c20671e283c1e5834fc7224ee12f9e
+source-git-commit: 2a5dd20d99f996652de5ba84246c78a1f7978693
 workflow-type: tm+mt
-source-wordcount: '3406'
+source-wordcount: '3706'
 ht-degree: 9%
 
 ---
@@ -568,7 +568,7 @@ Um den Wert für eine Einstellung zurückzugeben, verwenden Sie `SET [property k
 
 Die folgenden Unterabschnitte decken die [!DNL PostgreSQL] von Query Service unterstützte Befehle.
 
-### ANALYSETABELLE
+### ANALYSETABELLE {#analyze-table}
 
 Die `ANALYZE TABLE` berechnet Statistiken für eine Tabelle im beschleunigten Speicher. Die Statistiken werden anhand der ausgeführten CTAS- oder ITAS-Abfragen für eine bestimmte Tabelle im beschleunigten Speicher berechnet.
 
@@ -591,6 +591,61 @@ Im Folgenden finden Sie eine Liste statistischer Berechnungen, die nach Verwendu
 | `min` | Der Mindestwert aus der analysierten Tabelle. |
 | `mean` | Der Durchschnittswert der analysierten Tabelle. |
 | `stdev` | Die Standardabweichung der analysierten Tabelle. |
+
+#### BERECHNETE STATISTIKEN {#compute-statistics}
+
+Sie können nun Statistiken auf Spaltenebene berechnen unter [!DNL Azure Data Lake Storage] (ADLS)-Datensätzen mit der `COMPUTE STATISTICS` und `SHOW STATISTICS` SQL-Befehle. Berechnen Sie Spaltenstatistiken für den gesamten Datensatz, eine Untergruppe eines Datensatzes, alle Spalten oder eine Untergruppe von Spalten.
+
+`COMPUTE STATISTICS` erweitert die `ANALYZE TABLE` Befehl. Die Variable `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`und `SHOW STATISTICS` -Befehle werden in Data Warehouse-Tabellen nicht unterstützt. Diese Erweiterungen für `ANALYZE TABLE` -Befehl werden derzeit nur für ADLS-Tabellen unterstützt.
+
+**Beispiel**
+
+```sql
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS  FOR COLUMNS (commerce, id, timestamp);
+```
+
+>[!NOTE]
+>
+>`FILTER CONTEXT` berechnet Statistiken über eine Teilmenge des Datensatzes anhand der bereitgestellten Filterbedingung und `FOR COLUMNS` gibt spezifische Spalten für die Analyse an.
+
+Die Konsolenausgabe wird wie unten dargestellt angezeigt.
+
+```console
+  Statistics ID 
+------------------
+ ULKQiqgUlGbTJWhO
+(1 row)
+```
+
+Sie können dann die zurückgegebene Statistiken-ID verwenden, um die berechneten Statistiken mit der `SHOW STATISTICS` Befehl.
+
+```sql
+SHOW STATISTICS FOR <statistics_ID>
+```
+
+>[!NOTE]
+>
+>`COMPUTE STATISTICS` unterstützt keine Array- oder Zuordnungs-Datentypen. Sie können eine `skip_stats_for_complex_datatypes` Markierung, die benachrichtigt werden soll, oder Fehler-out, wenn der Eingabedataframe Spalten mit Arrays und Zuordnungs-Datentypen enthält. Standardmäßig ist das Flag auf &quot;true&quot;gesetzt. Verwenden Sie den folgenden Befehl, um Benachrichtigungen oder Fehler zu aktivieren: `SET skip_stats_for_complex_datatypes = false`.
+
+Siehe [Dokumentation zu Datensatzstatistiken](../essential-concepts/dataset-statistics.md) für weitere Informationen.
+
+#### TABLESAMPEL {#tablesample}
+
+Der Abfrage-Service von Adobe Experience Platform bietet Beispieldatensätze als Teil der Funktionen zur annähernden Abfrageverarbeitung.
+Beispiele für Datensätze werden am besten verwendet, wenn Sie keine genaue Antwort für einen Aggregat-Vorgang über einen Datensatz benötigen. Mit dieser Funktion können Sie effizientere Explorationsabfragen zu großen Datensätzen durchführen, indem Sie eine ungefähre Abfrage senden, um eine ungefähre Antwort zurückzugeben.
+
+Beispieldatensätze werden mit einheitlichen Zufallsproben aus vorhandenen [!DNL Azure Data Lake Storage] (ADLS)-Datensätze, bei denen nur ein Prozentsatz der Datensätze aus dem Original verwendet wird. Die Datensatzbeispielfunktion erweitert die `ANALYZE TABLE` mit dem Befehl `TABLESAMPLE` und `SAMPLERATE` SQL-Befehle.
+
+In den Beispielen unten zeigt Zeile eins, wie eine 5 %-Probe der Tabelle berechnet wird. Zeile zwei zeigt, wie ein 5 %-Sample aus einer gefilterten Ansicht der Daten in der Tabelle berechnet wird.
+
+**Beispiel**
+
+```sql {line-numbers="true"}
+ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
+```
+
+Siehe [Dokumentation zu Datensatzbeispielen](../essential-concepts/dataset-samples.md) für weitere Informationen.
 
 ### BEGIN
 

@@ -4,10 +4,10 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
 breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
-source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
+source-git-commit: a2b4ddae00ecdf33a12119810eca1ed19ace0c2f
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 100%
+source-wordcount: '273'
+ht-degree: 98%
 
 ---
 
@@ -89,6 +89,7 @@ ht-degree: 100%
    - [Inkrementelles Laden](essential-concepts/incremental-load.md)
    - [Deduplizierung von Daten](essential-concepts/deduplication.md)
    - [Datensatzbeispiele](essential-concepts/dataset-samples.md)
+   - [Berechnung der Datensatzstatistiken](essential-concepts/dataset-statistics.md)
 - SQL-Referenz {#sql}
    - [SQL – Übersicht](sql/overview.md)
    - [SQL-Syntax](sql/syntax.md)
