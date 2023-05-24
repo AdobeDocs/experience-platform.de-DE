@@ -2,10 +2,10 @@
 title: Benutzerzugriff für Adobe Experience Platform Assurance
 description: In diesem Handbuch wird erläutert, wie Sie den Benutzerzugriff auf Adobe Experience Platform Assurance durch die Verwaltung über die Admin Console aufrechterhalten können.
 exl-id: b26ff857-5486-4391-b5a0-1e5cb05a1f11
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 95e5dad03741d06ee33a10c48b481b792140f7f1
 workflow-type: tm+mt
-source-wordcount: '245'
-ht-degree: 5%
+source-wordcount: '203'
+ht-degree: 16%
 
 ---
 
@@ -19,32 +19,14 @@ ht-degree: 5%
 
 Um unterbrechungsfreien Zugriff auf die Zuverlässigkeitserklärung zu erhalten oder zu erhalten, stellen Sie sicher, dass die folgenden Schritte in der Admin Console ausgeführt werden:
 
-## Erstellen eines Produktprofils
+## Hinzufügen von Benutzenden zur Experience Platform über ein Produktprofil
 
->[!NOTE]
->
->Wenn Sie ein vorhandenes Profil verwenden, können Sie zum nächsten Abschnitt überspringen.
+Um einen Benutzer zu einem Produktprofil hinzuzufügen, melden Sie sich bei der Admin Console an und wählen Sie **Benutzer hinzufügen** aus..
 
-Melden Sie sich bei der [Admin Console](https://adminconsole.adobe.com/) und erstellen Sie ein neues Adobe Experience Platform-Produktprofil.
+![Die Schaltfläche Benutzer hinzufügen ist hervorgehoben.](./images/get-access/product-profile-add-users.png)
 
-Wählen Sie die **Produkte** , gefolgt von der Adobe Experience Platform-Produktkarte.
+Die **Benutzer zu Ihrem Team hinzufügen** angezeigt. In diesem Dialogfeld können Sie die Details des Benutzers eingeben, den Sie hinzufügen möchten. Geben Sie die E-Mail-Adresse des Benutzers, den Vornamen (optional) und den Nachnamen (optional) ein.
 
-![Ansicht der Adobe Experience Platform Assurance-Analyse](./images/get-access/analytics-view.png)
+Wählen Sie das Stiftsymbol aus, um die Produkte und Benutzergruppen auszuwählen. Wählen Sie von hier aus **Adobe Experience Platform**, dann **AEP-Default-All-Users**, gefolgt von **Speichern**.
 
-## Benutzer zum Produktprofil hinzufügen
-
-Geben Sie nach dem Zugriff auf die Produktkarte einen Namen ein und wählen Sie **Speichern**.
-
->[!NOTE]
->
->Das Produktprofil, das Sie für den Assurance-Zugriff verwenden möchten, **not** erfordert zusätzliche Berechtigungen.
-
-![Adobe Experience Platform-Produktprofil](./images/get-access/product-profile.png)
-
-Nachdem Sie die Produktkarte erstellt haben, können Sie dem Adobe Experience Platform-Produktprofil Benutzer zuweisen. Wählen Sie die **Produkte** Registerkarte, gefolgt von **Benutzer zuweisen** auf der Adobe Experience Platform-Karte.
-
-![Zuweisen von Benutzern zum Produktprofil](./images/get-access/assign-users.png)
-
-Fügen Sie einen oder mehrere Benutzer zum Produktprofil hinzu und speichern Sie.
-
-![Hinzufügen von Benutzern zum Produktprofil](./images/get-access/add-users.png)
+![Das Dialogfeld, das zeigt, wie das Produktprofil hinzugefügt werden kann, wird angezeigt.](./images/get-access/product-profile-add-profile.png)
