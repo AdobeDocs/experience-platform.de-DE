@@ -2,10 +2,10 @@
 title: Verwalten von Datennutzungsbezeichnungen für ein Schema
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche Schemafeldern des Experience-Datenmodell (XDM) Datennutzungsbezeichnungen hinzufügen.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: c35c270afca57cb96228cea29fd5a39ec6615332
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 10%
+source-wordcount: '795'
+ht-degree: 9%
 
 ---
 
@@ -19,7 +19,7 @@ Alle Daten, die in Adobe Experience Platform importiert werden, sind durch Exper
 
 Eine auf ein Schemafeld angewendete Beschriftung zeigt die Nutzungsrichtlinien an, die für die in diesem spezifischen Feld enthaltenen Daten gelten.
 
-Während Bezeichnungen auf einzelne Datensätze (und Felder in diesen Datensätzen) angewendet werden können, können Sie auch Bezeichnungen auf Schemaebene anwenden. Wenn Beschriftungen direkt auf ein Schema angewendet werden, werden diese Beschriftungen auf alle vorhandenen und zukünftigen Datensätze übertragen, die auf diesem Schema basieren.
+Beschriftungen können auf einzelne Schemata und Felder innerhalb dieser Schemas angewendet werden. Wenn Beschriftungen direkt auf ein Schema angewendet werden, werden diese Beschriftungen auf alle vorhandenen und zukünftigen Datensätze übertragen, die auf diesem Schema basieren.
 
 Darüber hinaus werden alle Feldbeschriftungen, die Sie in einem Schema hinzufügen, zu allen anderen Schemas weitergeleitet, die dasselbe Feld aus einer freigegebenen Klasse oder Feldergruppe verwenden. So können Sie sicherstellen, dass die Nutzungsregeln für ähnliche Felder im gesamten Datenmodell einheitlich sind.
 
@@ -46,11 +46,11 @@ Um die Beschriftungen für ein einzelnes Feld zu bearbeiten, können Sie das Fel
 
 ![Wählen Sie ein Feld aus der Arbeitsfläche des Schema-Editors aus](../images/tutorials/labels/manage-access.png)
 
-Sie können auch die **[!UICONTROL Bezeichnungen]** , wählen Sie das gewünschte Feld aus der Liste aus und klicken Sie auf **[!UICONTROL Bearbeiten von Governance-Titeln]** in der rechten Leiste.
+Sie können auch die **[!UICONTROL Bezeichnungen]** , wählen Sie das gewünschte Feld aus der Liste aus und klicken Sie auf **[!UICONTROL Anwenden von Zugriffs- und Data Governance-Beschriftungen]** in der rechten Leiste.
 
 ![Wählen Sie ein Feld aus dem [!UICONTROL Bezeichnungen] tab](../images/tutorials/labels/select-field-on-labels-tab.png)
 
-Um die Beschriftungen für das gesamte Schema zu bearbeiten, wählen Sie das Stiftsymbol (![](../images/tutorials/labels/pencil-icon.png)) neben dem Namen des Schemas unter dem **[!UICONTROL Bezeichnungen]** Registerkarte.
+Um die Beschriftungen für das gesamte Schema zu bearbeiten, wählen Sie im **[!UICONTROL Bezeichnungen]** aktivieren, aktivieren Sie das Kontrollkästchen unter dem Filtersymbol. Dadurch werden alle verfügbaren Felder im Schema ausgewählt. Wählen Sie als Nächstes **[!UICONTROL Anwenden von Zugriffs- und Data Governance-Beschriftungen]** in der rechten Leiste.
 
 ![Wählen Sie den Schemanamen aus der [!UICONTROL Bezeichnungen] tab](../images/tutorials/labels/select-schema-on-labels-tab.png)
 
@@ -60,11 +60,11 @@ Um die Beschriftungen für das gesamte Schema zu bearbeiten, wählen Sie das Sti
 >
 >![Haftungsausschluss für Beschriftung](../images/tutorials/labels/disclaimer.png)
 
-## Bearbeiten der Beschriftungen für das Schema oder Feld
+## Bearbeiten der Beschriftungen für das Schema oder Feld {#edit-labels}
 
 Es wird ein Dialogfeld angezeigt, in dem Sie die Beschriftungen für das ausgewählte Feld bearbeiten können. Wenn Sie ein einzelnes Feld vom Typ Objekt ausgewählt haben, werden in der rechten Leiste die Unterfelder aufgelistet, in die die angewendeten Beschriftungen propagiert werden.
 
-![Angezeigte ausgewählte Felder](../images/tutorials/labels/edit-labels.png)
+![Die ausgewählten Felder werden im Dialogfeld Zugriff anwenden und Data Governance-Beschriftungen hervorgehoben.](../images/tutorials/labels/edit-labels.png)
 
 >[!NOTE]
 >
@@ -72,19 +72,19 @@ Es wird ein Dialogfeld angezeigt, in dem Sie die Beschriftungen für das ausgew�
 
 Verwenden Sie die angezeigte Liste, um die Titel auszuwählen, die Sie dem Schema oder Feld hinzufügen möchten. Wenn Beschriftungen ausgewählt werden, wird die **[!UICONTROL Angewandte Beschriftungen]** -Abschnitt aktualisiert, um die bisher ausgewählten Bezeichnungen anzuzeigen.
 
-![Angewendete Beschriftungen angezeigt](../images/tutorials/labels/applied-labels.png)
+![Das Dialogfeld Zugriff anwenden und Beschriftungen für Data Governance mit hervorgehobenen angewendeten Beschriftungen.](../images/tutorials/labels/applied-labels.png)
 
 Um die angezeigten Beschriftungen nach Typ zu filtern, wählen Sie in der linken Leiste die gewünschte Kategorie aus. Um eine neue benutzerdefinierte Bezeichnung zu erstellen, wählen Sie **[!UICONTROL Titel erstellen]**.
 
-![Filtern angezeigter Bezeichnungen oder Erstellen einer neuen Bezeichnung](../images/tutorials/labels/filter-and-create-custom.png)
+![Das Dialogfeld Zugriff auf Data Governance-Beschriftungen anwenden mit angewendetem Filter für Beschriftungstypen und hervorgehobener Beschriftung Erstellen .](../images/tutorials/labels/filter-and-create-custom.png)
 
 Wenn Sie mit den ausgewählten Bezeichnungen zufrieden sind, wählen Sie **[!UICONTROL Speichern]** , um sie auf das Feld oder Schema anzuwenden.
 
-![Die ausgewählten Beschriftungen speichern](../images/tutorials/labels/save-labels.png)
+![Das Dialogfeld Zugriff anwenden und Beschriftungen für Data Governance mit hervorgehobener Option Speichern .](../images/tutorials/labels/save-labels.png)
 
 Die **[!UICONTROL Bezeichnungen]** wird erneut angezeigt und zeigt die angewendeten Bezeichnungen für das Schema an.
 
-![Feldbezeichnungen angewendet](../images/tutorials/labels/field-labels-added.png)
+![Die Registerkarte &quot;Bezeichnungen&quot;im Arbeitsbereich &quot;Schemas&quot;mit hervorgehobenen Feldbezeichnungen.](../images/tutorials/labels/field-labels-added.png)
 
 ## Nächste Schritte
 

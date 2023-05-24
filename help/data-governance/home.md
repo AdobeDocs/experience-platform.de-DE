@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Data Governance – Übersicht
 description: Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. Die Funktion spielt in Experience Platform auf verschiedenen Ebenen eine wichtige Rolle, wie z.B. bei Katalogisierung, Ermittlung der Datenherkunft, Datennutzungsbezeichnung, Datennutzungsrichtlinien und Steuerung der Nutzung von Daten für Marketing-Aktionen
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
 workflow-type: tm+mt
-source-wordcount: '1479'
-ht-degree: 100%
+source-wordcount: '1495'
+ht-degree: 90%
 
 ---
 
@@ -57,7 +57,7 @@ Das Data Governance-Framework beinhaltet drei Kernelemente: Kennzeichnungen, Ric
 
 ## Datennutzungskennzeichnungen
 
-Data Governance ermöglicht es Data Stewards, Nutzungsbezeichnungen auf der Datensatz- und Feldebene anzuwenden, um Daten anhand der gültigen Richtlinien zu kategorisieren.
+Data Governance ermöglicht es Data Stewards, Nutzungsbezeichnungen auf Schema- und Datensatzebene anzuwenden, um Daten entsprechend dem anzuwendenden Richtlinientyp zu kategorisieren.
 
 Das Data Governance-Framework beinhaltet vordefinierte Datennutzungskennzeichnungen, mit denen Daten auf vier Arten kategorisiert werden können:
 
@@ -75,11 +75,11 @@ Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung
 
 Weitere Informationen finden Sie in der Übersicht zu [Datennutzungskennzeichnungen](./labels/overview.md).
 
-## Datennutzungsrichtlinien
+## Datennutzungsrichtlinien {#data-usage-policies}
 
 Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in [!DNL Experience Platform] ausführen bzw. nicht ausführen dürfen.
 
-Ein Beispiel für eine Marketing-Aktion könnte der Wunsch sein, einen Datensatz an den Service eines Drittanbieters zu exportieren. Wenn gemäß einer Richtlinie personenbezogene Daten (PII) nicht exportiert werden können und der Datensatz mit einem „I“-Label (Identitätsdaten) gekennzeichnet wurde, verhindert [!DNL Policy Service] jede Aktion, die diesen Datensatz an ein Drittanbieterziel exportieren würde. Wenn Sie versuchen, eine dieser Aktionen durchzuführen, sendet der Richtlinien-Service eine Meldung, die Sie darüber informiert, dass eine Datennutzungsrichtlinie verletzt wurde.
+Ein Beispiel für eine Marketing-Aktion könnte der Wunsch sein, einen Datensatz an den Service eines Drittanbieters zu exportieren. Gibt es eine Richtlinie, die erklärt, dass personenbezogene Daten (PII) nicht exportiert werden können, und wurde eine &quot;I&quot;-Bezeichnung (Identitätsdaten) auf den Datensatz angewendet, [!DNL Policy Service] verhindert jede Aktion, die diesen Datensatz an ein Drittanbieterziel exportiert. Wenn Sie versuchen, eine dieser Aktionen durchzuführen, sendet der Richtlinien-Service eine Meldung, die Sie darüber informiert, dass eine Datennutzungsrichtlinie verletzt wurde.
 
 Es sind zwei Richtlinientypen verfügbar:
 
@@ -100,7 +100,7 @@ Dieses Dokument liefert eine Einführung in die Data Governance und das Data Gov
 
 Im folgenden Abschnitt finden Sie weitere Informationen zu Data Governance.
 
-### Begriffe in Data Governance
+### Begriffe in Data Governance {#data-governance-terminology}
 
 In der folgenden Tabelle sind Schlüsselbegriffe im Zusammenhang mit der Data Governance und dem Data Governance-Framework aufgeführt.
 
@@ -111,13 +111,14 @@ In der folgenden Tabelle sind Schlüsselbegriffe im Zusammenhang mit der Data Go
 | **Data Governance** | Data Governance umfasst die Strategien und Technologien, die sicherstellen, dass Daten mit Vorschriften und Unternehmensrichtlinien zur Datennutzung in Einklang stehen. |
 | **Data Steward** | Der Data Steward ist eine Person, die für die Verwaltung, Überwachung und Durchsetzung von Daten-Assets in einer Organisation verantwortlich ist. Außerdem stellt ein Data Steward sicher, dass Data Governance-Richtlinien so geschützt und gepflegt werden, dass staatliche Vorschriften und Unternehmensrichtlinien erfüllt werden. |
 | **Datennutzungsbezeichnungen** | Mit Datennutzungsbezeichnungen können Benutzer Daten kategorisieren, die datenschutzbezogene Aspekte und vertragliche Bedingungen beinhalten, um Vorschriften und Unternehmensrichtlinien einzuhalten. |
-| **Datensatzbezeichnungen** | Einem Datensatz können Bezeichnungen hinzugefügt werden. Alle Felder in einem Datensatz übernehmen die Bezeichnungen des Datensatzes. |
-| **Feldtitel** | Feldtitel sind Data Governance-Bezeichnungen, die entweder von einem Datensatz übernommen oder direkt auf ein Feld angewendet werden.  Auf ein Feld angewendete Data Governance-Beschriftungen werden nicht bis zu einem Datensatz vererbt. |
+| **Datensatzbezeichnungen** | Beschriftungen können einem Schema hinzugefügt werden. Alle Felder in einem Datensatz übernehmen die Titel des Schemas. |
+| **Feldtitel** | Feldbeschriftungen sind Data Governance-Beschriftungen, die entweder von einem Schema übernommen oder direkt auf ein Feld angewendet werden. Auf ein Feld angewendete Data Governance-Beschriftungen werden nicht bis zur Schemaebene vererbt. |
 | **Geofence** | Eine „Geofence“ ist eine virtuelle geografische Grenze, die durch GPS- oder RFID-Technologie definiert wird und Software in die Lage versetzt, eine Antwort auszulösen, wenn ein Mobilgerät ein bestimmtes Gebiet erreicht oder verlässt. |
 | **Identitätsbezeichnungen** | Identitätsbezogene „I“-Bezeichnungen dienen der Kategorisierung von Daten, mit denen sich eine bestimmte Person identifizieren oder kontaktieren lässt. |
 | **Interessenbasiertes Targeting** | Interessenbasiertes Targeting, auch Personalisierung genannt, findet statt, wenn die auf einer Website erhobenen Daten für folgende drei Zwecke verwendet werden: zum Ziehen von Rückschlüssen über das Interesse eines Benutzers; zur Nutzung in einem anderen Kontext (z. B. auf einer anderen Website oder in einer App, also „offsite“); zum Festlegen, welche Inhalte oder Anzeigen auf Grundlage der Rückschlüsse bereitgestellt werden. |
 | **Marketing-Aktion** | Eine Marketing-Aktion ist im Kontext von Data Governance eine Aktion, die ein Datennutzer von [!DNL Experience Platform] ergreift und bei der geprüft werden muss, ob gegen Datennutzungsrichtlinien verstoßen wurde. |
 | **Richtlinie** | Im Data Governance-Framework ist eine Richtlinie eine Regel, die beschreibt, welche Marketing-Aktionen für bestimmte Daten zulässig oder nicht. |
+| **Schemabeschriftungen** | Verwalten Sie die Beschriftungen für Data Governance, Einwilligung und Zugriffskontrolle auf Schemaebene. Dadurch werden die Bezeichnungen zu jedem Datensatz weitergegeben, der dieses Schema verwendet. |
 | **Bezeichnungen für vertrauliche Daten** | Sensible „S“-Kennzeichnungen dienen dazu, Daten zu kategorisieren, die Sie und Ihre Organisation als sensibel betrachten. |
 
 ## Zusätzliche Ressourcen
@@ -126,6 +127,8 @@ Im folgenden Video werden die Komponenten des Data Governance-Frameworks erklär
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
-Im folgenden Video werden verschiedene Data Governance-Funktionen in Experience Platform vorgestellt.
+<!-- A key section of the video is now outdated due to the deprecation of the dataset field level labelling feature.
 
->[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on)
+The following video provides an introduction to various Data Governance features in Experience Platform.
+
+>[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on) -->

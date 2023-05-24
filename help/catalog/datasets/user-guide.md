@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Benutzerhandbuch zu Datensätzen
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform allgemeine Aktionen beim Arbeiten mit Datensätzen durchführen.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: f0cd059683531993398f0a81d6eda486276853e2
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 39%
+source-wordcount: '1485'
+ht-degree: 36%
 
 ---
 
@@ -122,9 +122,9 @@ Um einen Datensatz für Profil zu aktivieren, greifen Sie auf dessen **[!UICONTR
 
 ![Der Umschalter Profil wird auf der Seite mit den Datensatzdetails hervorgehoben.](../images/datasets/user-guide/enable-dataset-profiles.png)
 
-## Data Governance in einem Datensatz verwalten und durchsetzen
+## Data Governance in einem Datensatz verwalten und durchsetzen {#manage-and-enforce-data-governance}
 
-Mit Datennutzungsbeschriftungen können Sie Datensätze anhand der für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Weiterführende Informationen zu Bezeichnungen finden Sie in der [Übersicht zu Data Governance](../../data-governance/home.md) oder im [Benutzerhandbuch zu Datennutzungsbezeichnungen](../../data-governance/labels/overview.md), wo beschrieben wird, wie Sie Bezeichnungen auf Datensätze anwenden können.
+Mit Datennutzungsbezeichnungen, die auf Schemaebene angewendet werden, können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Siehe [Data Governance - Übersicht](../../data-governance/home.md) Weitere Informationen zu Bezeichnungen finden Sie im Abschnitt [Benutzerhandbuch zu Datennutzungsbezeichnungen](../../data-governance/labels/overview.md) für Anweisungen zum Anwenden von Bezeichnungen auf Schemas zur Weitergabe an Datensätze.
 
 ## Datensatz löschen {#delete}
 
