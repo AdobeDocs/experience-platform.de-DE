@@ -71,7 +71,7 @@ Informationen zum Verwalten von Bibliotheken in der API finden Sie im [Handbuch 
 
 ## Builds
 
-Eine Tag-Bibliothek wird in einen Build kompiliert, damit sie einer Umgebung zum Testen und zur Implementierung zugewiesen werden kann. Der Inhalt eines Builds variiert je nach den in der Bibliothek enthaltenen Ressourcen, der Konfiguration der Umgebung, der der Build zugewiesen ist, und der Plattform der Eigenschaft, zu der der Build gehört.
+Eine Tag-Bibliothek wird in einen Build kompiliert, damit sie einer Umgebung zum Testen und zur Bereitstellung zugewiesen werden kann. Der Inhalt eines Builds variiert je nach den in der Bibliothek enthaltenen Ressourcen, der Konfiguration der Umgebung, der der Build zugewiesen ist, und der Plattform der Eigenschaft, zu der der Build gehört.
 
 Informationen zum Verwalten von Builds in der API finden Sie im [Handbuch zum builds-Endpunkt](./endpoints/builds.md).
 

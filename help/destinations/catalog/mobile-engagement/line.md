@@ -59,7 +59,7 @@ Siehe Abschnitt [[!DNL LINE] Dokumentation](https://developers.line.biz/en/docs/
 | Ziel-Identität | Beschreibung |
 |---|---|
 | ID für Advertiser (IFAs) | Wählen Sie die Zielidentität der ID für Advertisers (IFAs) aus, wenn die Quellidentitäten IFA sind. *(Apple ID für Advertiser)* oder GAID * (Google Advertising ID)-Namespaces. |
-| LINE-Benutzer-IDs | Wählen Sie die UserID-Zielidentität aus, wenn die Quellidentitäten LINE-Benutzer-IDs sind. |
+| LINE-Benutzer-IDs | Wählen Sie die BenutzerID-Zielidentität aus, wenn die Quellidentitäten LINE-Benutzer-IDs sind. |
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 

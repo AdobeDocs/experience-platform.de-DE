@@ -18,7 +18,7 @@ ht-degree: 5%
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
 | `autoCompleteClicked` | [!UICONTROL Boolesch] | Gibt an, ob ein Besucher einen vorgeschlagenen oder automatisch ausgefüllten Suchwert verwendet hat, um die Suche auszuführen. |
-| `autoCompleteTypedValue` | [!UICONTROL String] | In Fällen, in denen die Suche automatisch abgeschlossen wird, verlassen Benutzer manchmal die Suche und wählen einen bestimmten Begriff aus der Dropdown-Liste aus. Mit diesem Wert wird verfolgt, was der Benutzer eingegeben hat, um den spezifischen Satz der vorgeschlagenen Suchbegriffe zu generieren. |
+| `autoCompleteTypedValue` | [!UICONTROL String] | In Szenarien mit automatischem Vervollständigen verlassen Benutzer manchmal die Suche und wählen einen bestimmten Begriff aus der Dropdown-Liste aus. Mit diesem Wert wird verfolgt, was der Benutzer eingegeben hat, um den spezifischen Satz der vorgeschlagenen Suchbegriffe zu generieren. |
 | `autoCompleteValue` | [!UICONTROL String] | In Fällen, in denen die Suche automatisch abgeschlossen wird, verlassen Benutzer manchmal die Suche und wählen einen bestimmten Begriff aus dem Dropdown-Menü aus. Dieser Wert wird verwendet, um die ausgewählten Begriffe zu verfolgen. |
 | `instances` | [!UICONTROL Ganzzahl] | Die Häufigkeit, mit der die interne Site-Suche stattgefunden hat. |
 | `locationInPage` | [!UICONTROL String] | Wenn mehrere Suchfelder auf der Seite vorhanden sind, sollte dieser Wert verwendet werden, um die spezifische Position zu identifizieren, die der Benutzer für die Suche verwendet hat. |

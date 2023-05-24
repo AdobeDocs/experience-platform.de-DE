@@ -1,5 +1,5 @@
 ---
-title: Implementierung von JavaScript-Tags zur Verwaltung des Einverständnisses von Kunden
+title: Bereitstellung von JavaScript-Tags zur Verwaltung des Einverständnisses von Kunden
 description: Erfahren Sie, wie Sie die Opt-in- und Opt-out-Signale von Kunden für verschiedene Adobe-Lösungen in Adobe Experience Platform verwalten.
 exl-id: 7762c42f-71c8-4f29-a96b-c6c04b838a91
 source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
@@ -9,7 +9,7 @@ ht-degree: 96%
 
 ---
 
-# Implementierung von JavaScript-Tags zur Verwaltung des Einverständnisses von Kunden
+# Bereitstellung von JavaScript-Tags zur Verwaltung des Einverständnisses von Kunden
 
 >[!NOTE]
 >

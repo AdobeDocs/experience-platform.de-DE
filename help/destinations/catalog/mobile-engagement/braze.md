@@ -142,7 +142,7 @@ Angenommen, Ihr XDM-Profilschema und Ihr [!DNL Braze] -Instanz enthält die folg
 
 |  | XDM-Profilschema | [!DNL Braze] Instanz |
 |---|---|---|
-| Attribute | <ul><li>person.name.firstName</code></li><li>person.name.lastName</code></li><li>mobilePhone.number</code></li></ul> | <ul><li>FirstName</code></li><li>LastName</code></li><li>PhoneNumber</code></li></ul> |
+| Attribute | <ul><li>person.name.firstName</code></li><li>person.name.lastName</code></li><li>mobilePhone.number</code></li></ul> | <ul><li>Vorname</code></li><li>Nachname</code></li><li>PhoneNumber</code></li></ul> |
 | Identitäten | <ul><li>E-Mail</code></li><li>Google Ad ID (GAID)</code></li><li>Apple ID für Advertiser (IDFA)</code></li></ul> | <ul><li>external_id</code></li></ul> |
 
 Die korrekte Zuordnung würde wie folgt aussehen:

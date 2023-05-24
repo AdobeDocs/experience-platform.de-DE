@@ -90,7 +90,7 @@ Bei dieser Methode wird eine kryptografische Nonce erzeugt und zu Ihrem CSP und 
 
 >[!IMPORTANT]
 >
->Um diese Methode verwenden zu können, müssen Sie den Build asynchron laden. Dies funktioniert nicht, wenn der Build synchron geladen wird, was zu Konsolenfehlern und nicht ordnungsgemäß ausgeführten Regeln führt. Weitere Informationen finden Sie im Handbuch zur [asynchronen Implementierung](./asynchronous-deployment.md).
+>Um diese Methode verwenden zu können, müssen Sie den Build asynchron laden. Dies funktioniert nicht, wenn der Build synchron geladen wird, was zu Konsolenfehlern und nicht ordnungsgemäß ausgeführten Regeln führt. Weitere Informationen finden Sie im Handbuch zur [asynchronen Bereitstellung](./asynchronous-deployment.md).
 
 Die folgenden Beispiele zeigen, wie Sie Ihre Nonce zur CSP-Konfiguration für einen von Adobe verwalteten Host hinzufügen können. Wenn Sie Self-Hosting verwenden, können Sie `assets.adobedtm.com` ausschließen.
 

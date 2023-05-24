@@ -2,10 +2,10 @@
 title: Referenz zu Ereignisweiterleitungserweiterungen
 description: Dokumentation für Erweiterungen für die Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 2fdaa1921110b38c7e97ed4889a238d655ef88a1
+source-git-commit: 24220c24af89e3eabc3d21854c1f70a418b2da59
 workflow-type: tm+mt
-source-wordcount: '158'
-ht-degree: 51%
+source-wordcount: '165'
+ht-degree: 52%
 
 ---
 
@@ -33,6 +33,7 @@ Im Folgenden finden Sie eine Liste der Dokumentation für Erweiterungen für die
 * [[!DNL Braze]](./braze/overview.md)
 * [Core](./core/overview.md)
 * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)*
+* [Facebook Conversions API](https://exchange.adobe.com/apps/ec/105509)
 * [Erweiterte Konvertierungen von Google Ads](./google-ads-enhanced-conversions/overview.md)
 * [[!DNL Mailchimp] Edge](./mailchimp/overview.md)
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)
@@ -41,5 +42,4 @@ Im Folgenden finden Sie eine Liste der Dokumentation für Erweiterungen für die
 * [[!DNL Pinterest]](./pinterest/overview.md)
 * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)*
 * [[!DNL Splunk]](./splunk/overview.md)
-* [[!DNL Twitter]](./twitter/overview.md)
 * [[!DNL Zendesk] Ereignis-API](./zendesk/overview.md)

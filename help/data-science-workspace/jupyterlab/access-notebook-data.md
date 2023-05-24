@@ -31,7 +31,7 @@ Für [!DNL Python] und R, ein mit 40 GB RAM konfigurierter Notebook-Server, wurd
 
 Die verwendeten ExperienceEvent-Schemadaten variierten in ihrer Größe von 1.000 Zeilen (1.000) bis zu einer Milliarde (1.000) Zeilen. Beachten Sie Folgendes für den PySpark und [!DNL Spark] Metriken wurde für die XDM-Daten ein Datumsbereich von 10 Tagen verwendet.
 
-Die Ad-hoc-Schemadaten wurden mithilfe von [!DNL Query Service] Erstellen Sie eine Tabelle als &quot;Select&quot;(CTAS). Diese Daten variierten auch von 100 (1.000) Zeilen bis zu einer Milliarde (1.000) Zeilen.
+Die Ad-hoc-Schemadaten wurden mit [!DNL Query Service] Erstellen Sie eine Tabelle als &quot;Select&quot;(CTAS). Diese Daten variierten auch von 100 (1.000) Zeilen bis zu einer Milliarde (1.000) Zeilen.
 
 ### Verwendung des Batch-Modus im Vergleich zum interaktiven Modus {#mode}
 

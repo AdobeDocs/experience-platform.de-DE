@@ -435,7 +435,7 @@ Neben der oben aktualisierten Fluss- und Verbindungsspezifikation gibt es Änder
 * Zuvor war für die Basisverbindung für SFTP-Ziele ein `host` Parameter. Dieser Parameter wurde jetzt in `domain`.
 * Für die Authentifizierung mit der SSH-Schlüsseloption benötigten die Authentifizierungsparameter in der Basisverbindung eine `port` -Option. Dieser Parameter ist jetzt veraltet und nicht mehr erforderlich.
 
-Sehen Sie sich die vollständige alte und die neue Basisverbindung sowie die Beispiele für Zielverbindungen für SFTP auf den Registerkarten unten an, wobei die Zeilen, die sich ändern, hervorgehoben werden. Die Parameter, die zum Erstellen von Zielverbindungen für SFTP-Ziele erforderlich sind, ändern sich nicht.
+Sehen Sie sich die vollständige alte und die neue Basisverbindung sowie die Beispiele für Zielverbindungen für SFTP auf den Registerkarten unten an, wobei die Zeilen, die sich ändern, hervorgehoben sind. Die Parameter, die zum Erstellen von Zielverbindungen für SFTP-Ziele erforderlich sind, ändern sich nicht.
 
 >[!BEGINTABS]
 

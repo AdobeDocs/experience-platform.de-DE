@@ -109,9 +109,9 @@ Die Aktion „Auslösen einer Ansicht“ kann immer aufgerufen werden, wenn eine
 
 Weitere Informationen zum Auslösen einer Ansicht finden Sie in der [`triggerView()` Hilfedokumentation](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/functions-overview/adobe-target-triggerview-atjs-2.html?lang=de).
 
-## Grundlegende Adobe Target-Implementierung
+## Grundlegende Adobe Target-Bereitstellung
 
-Nachdem die Target-Erweiterung installiert wurde, erstellen Sie mindestens eine Regel, um sie ordnungsgemäß zu implementieren. Sie müssen zuerst die Target-Bibliothek (at.js) laden, die Parameter angeben, die Sie mit der Seitenladeanfrage verwenden möchten, und die Seitenladeanfrage auslösen.
+Nachdem die Target-Erweiterung installiert wurde, erstellen Sie mindestens eine Regel, um sie ordnungsgemäß bereitzustellen. Sie müssen zuerst die Target-Bibliothek (at.js) laden, die Parameter angeben, die Sie mit der Seitenladeanfrage verwenden möchten, und die Seitenladeanfrage auslösen.
 
 Eine Target-Regel mit dieser grundlegenden Implementierung sieht folgendermaßen aus:
 
@@ -119,11 +119,11 @@ Eine Target-Regel mit dieser grundlegenden Implementierung sieht folgendermaßen
 
 Nach dem Speichern dieser Regel müssen Sie sie einer Bibliothek hinzufügen und erstellen/bereitstellen, damit Sie das Verhalten testen können.
 
-## Adobe Target-Erweiterung mit einer asynchronen Implementierung
+## Adobe Target-Erweiterung mit einer asynchronen Bereitstellung
 
 Tags können asynchron bereitgestellt werden. Wenn Sie die Tag-Bibliothek asynchron laden, in der sich Target befindet, wird Target ebenfalls asynchron geladen. Dieses Szenario wird vollständig unterstützt. Es muss jedoch eine weitere Tatsache beachtet werden.
 
-In asynchronen Implementierungen ist es möglich, dass die Seite das Rendern der Standardinhalte fertig stellt, bevor die Target-Bibliothek vollständig geladen wurde und den Tausch des Inhalts durchgeführt hat. Dies kann zum so genannten „Flimmern“ führen. Dabei wird der Standardinhalt kurz angezeigt, bevor er durch den von Target angegebenen personalisierten Inhalt ersetzt wird. Wenn Sie dieses Flimmern verhindern möchten, empfehlen wir, ein spezielles Code-Fragment zu verwenden, das den Seiteninhalt vorab ausblendet, und das Tag-Bundle asynchron zu laden.
+In asynchronen Bereitstellungen ist es möglich, dass die Seite das Rendern der Standardinhalte fertig stellt, bevor die Target-Bibliothek vollständig geladen wurde und den Tausch des Inhalts durchgeführt hat. Dies kann zum so genannten „Flimmern“ führen. Dabei wird der Standardinhalt kurz angezeigt, bevor er durch den von Target angegebenen personalisierten Inhalt ersetzt wird. Wenn Sie dieses Flimmern verhindern möchten, empfehlen wir, ein spezielles Code-Fragment zu verwenden, das den Seiteninhalt vorab ausblendet, und das Tag-Bundle asynchron zu laden.
 
 Nachfolgend werden einige Aspekte aufgeführt, die Sie bei Verwendung des vorab ausgeblendeten Ausschnitts beachten sollten:
 

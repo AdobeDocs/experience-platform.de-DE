@@ -108,7 +108,7 @@ Der Pfad kann entweder eine vollständige URL oder ein relativer Pfad sein, der 
 Wenn Sie die Archivierungsoption verwenden, werden alle Build-Dateien stattdessen als ZIP-Dateien übermittelt. Dies kann in folgenden Situationen hilfreich sein:
 
 1. Sie hosten die Bibliothek selbst, möchten jedoch keinen SFTP-Host für die Bereitstellung einrichten.
-1. Sie müssen die Code-Analyse zum Build vor der Implementierung ausführen.
+1. Sie müssen die Code-Analyse zum Build vor der Bereitstellung ausführen.
 1. Sie möchten nur den Build-Inhalt anzeigen, um zu sehen, was darin enthalten ist.
 
 ### Einbettungs-Code {#embed-code}
@@ -119,17 +119,17 @@ Bei der Ansicht der Installationsanweisungen können Sie festlegen, ob das Skrip
 
 >[!WARNING]
 >
->Je nach Inhalt der Tag-Bibliothek kann sich das Verhalten der Regeln und anderer Elemente zwischen der synchronen und der asynchronen Implementierung ändern. Es ist daher wichtig, alle Änderungen, die Sie vornehmen, gründlich zu testen.
+>Je nach Inhalt der Tag-Bibliothek kann sich das Verhalten der Regeln und anderer Elemente zwischen der synchronen und der asynchronen Bereitstellung ändern. Es ist daher wichtig, alle Änderungen, die Sie vornehmen, gründlich zu testen.
 
-#### Asynchrone Implementierung
+#### Asynchrone Bereitstellung
 
-Durch die asynchrone Implementierung kann der Browser den Rest der Seite weiterhin laden, während die Bibliothek abgerufen wird. Bei Verwendung dieser Einstellung gibt es nur einen Einbettungs-Code, der im Dokument-`<head>` platziert werden muss.
+Durch die asynchrone Bereitstellung kann der Browser den Rest der Seite weiterhin laden, während die Bibliothek abgerufen wird. Bei Verwendung dieser Einstellung gibt es nur einen Einbettungs-Code, der im Dokument-`<head>` platziert werden muss.
 
-Weitere Informationen zu dieser Einstellung finden Sie im Handbuch zur [asynchronen Implementierung](../client-side/asynchronous-deployment.md).
+Weitere Informationen zu dieser Einstellung finden Sie im Handbuch zur [asynchronen Bereitstellung](../client-side/asynchronous-deployment.md).
 
-#### Synchrone Implementierung
+#### Synchrone Bereitstellung
 
-Wenn der Browser einen Einbettungs-Code mithilfe der synchronen Implementierung liest, ruft er die Tag-Bibliothek ab und führt sie aus, bevor er die Seite weiter lädt.
+Wenn der Browser einen Einbettungs-Code mithilfe der synchronen Bereitstellung liest, ruft er die Tag-Bibliothek ab und führt sie aus, bevor er die Seite weiter lädt.
 
 Synchrone Einbettungs-Codes bestehen aus zwei `<script>`-Tags, die in den HTML-Code Ihrer Website eingefügt werden müssen. Ein `<script>`-Tag muss im Dokument-`<head>` platziert werden, das andere muss direkt vor dem schließenden `</body>`-Tag platziert werden.
 

@@ -23,7 +23,7 @@ Um die Ereignisweiterleitung in Adobe Experience Platform zu verwenden, müssen 
 * [Server-zu-Server-API](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=de)
 
 >[!NOTE]
->Das Platform Web SDK und das Platform Mobile SDK erfordern keine Implementierung über Tags in Adobe Experience Platform. Es wird jedoch empfohlen, Tags zur Bereitstellung dieser SDKs zu verwenden.
+>Das Platform Web SDK und das Platform Mobile SDK erfordern keine Bereitstellung über Tags in Adobe Experience Platform. Es wird jedoch empfohlen, Tags zur Bereitstellung dieser SDKs zu verwenden.
 
 Nachdem Sie Daten an das Edge-Netzwerk gesendet haben, können Sie die Adobe-Lösungen einschalten, um Daten dorthin zu senden. Um Daten an eine Drittanbieter-Lösung zu senden, richten Sie diese in der Ereignisweiterleitung ein.
 

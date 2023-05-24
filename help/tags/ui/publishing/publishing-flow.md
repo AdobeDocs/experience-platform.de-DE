@@ -75,7 +75,7 @@ In der folgenden Tabelle sind die Aktionen aufgeführt, die für eine Bibliothek
 | Aktion | Beschreibung |
 | --- | --- |
 | [!UICONTROL Öffnen] | Zeigen Sie die Inhalte der Bibliothek an. Änderungen sind an Bibliotheken außerhalb der Spalte [!UICONTROL Entwicklung] nicht zulässig. Wenn Änderungen nötig sind, sollte die Bibliothek abgelehnt werden, sodass Änderungen in [!UICONTROL Entwicklung] vorgenommen werden können. |
-| [!UICONTROL Build für das Staging] | Erstellen Sie die Bibliothek in der Staging-Umgebung für die Implementierung. |
+| [!UICONTROL Build für das Staging] | Erstellen Sie die Bibliothek in der Staging-Umgebung für die Bereitstellung. |
 | [!UICONTROL Zur Veröffentlichung genehmigen] | Verschieben Sie die Bibliothek in die Spalte [!UICONTROL Genehmigt], damit sie ein Anwender mit Veröffentlichungsberechtigungen bearbeiten kann. |
 | [!UICONTROL Genehmigen und in Produktion veröffentlichen] | Dies kann nur von einem Anwender mit den Berechtigungen „Genehmigen“ und „Veröffentlichen“ durchgeführt werden. Durch diese Aktion wird die Zuweisung der Bibliothek aus der Staging-Umgebung aufgehoben, sie in den Status [!UICONTROL Genehmigt] verschoben und in der Produktion veröffentlicht. Nach Abschluss des Produktions-Builds wechselt die Bibliothek in den Status [!UICONTROL Veröffentlicht]. Dies kann mit oder ohne erfolgreichen Build in der Staging-Umgebung durchgeführt werden. |
 | [!UICONTROL Ablehnen] | Heben Sie die Zuweisung der Bibliothek zur Staging-Umgebung auf und verschieben Sie sie zwecks weiterer Änderungen zurück in die Spalte [!UICONTROL Entwicklung]. |

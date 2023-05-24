@@ -117,9 +117,9 @@ Die folgenden Optionen sind verfügbar:
 
 Weitere Informationen finden Sie in der [Onlinehilfe zu Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html?lang=de).
 
-## Grundlegende Adobe Target-Implementierung
+## Grundlegende Adobe Target-Bereitstellung
 
-Nachdem die Target-Erweiterung installiert wurde, müssen Sie mindestens eine Regel erstellen, um sie ordnungsgemäß zu implementieren. Sie müssen zuerst die Target-Bibliothek (at.js) laden, die Parameter angeben, die Sie mit der globalen Mbox verwenden möchten, und die globale Mbox auslösen.
+Nachdem die Target-Erweiterung installiert wurde, müssen Sie mindestens eine Regel erstellen, um sie ordnungsgemäß bereitzustellen. Sie müssen zuerst die Target-Bibliothek (at.js) laden, die Parameter angeben, die Sie mit der globalen Mbox verwenden möchten, und die globale Mbox auslösen.
 
 Eine Target-Regel mit dieser grundlegenden Implementierung sieht folgendermaßen aus:
 
@@ -127,11 +127,11 @@ Eine Target-Regel mit dieser grundlegenden Implementierung sieht folgendermaßen
 
 Nach dem Speichern dieser Regel müssen Sie sie einer Bibliothek hinzufügen und erstellen/bereitstellen, sodass Sie das Verhalten testen können.
 
-## Adobe Target-Erweiterung mit einer asynchronen Implementierung
+## Adobe Target-Erweiterung mit einer asynchronen Bereitstellung
 
 Tags können asynchron bereitgestellt werden. Wenn Sie die Tag-Bibliothek asynchron laden, in der sich Target befindet, wird Target ebenfalls asynchron geladen. Dieses Szenario wird vollständig unterstützt. Es muss jedoch eine weitere Tatsache beachtet werden.
 
-In asynchronen Implementierungen ist es möglich, dass die Seite das Rendern der Standardinhalte beendet, bevor die Target-Bibliothek vollständig geladen wurde und den Austausch des Inhalts durchgeführt hat. Dies kann zum so genannten „Flimmern“ führen. Dabei wird der Standardinhalt kurz angezeigt, bevor er durch den von Target angegebenen personalisierten Inhalt ersetzt wird. Wenn Sie dieses Flimmern verhindern möchten, empfehlen wir, ein spezielles Code-Fragment zu verwenden, das den Seiteninhalt vorab ausblendet, und das Tag-Bundle asynchron zu laden.
+In asynchronen Bereitstellungen ist es möglich, dass die Seite das Rendern der Standardinhalte beendet, bevor die Target-Bibliothek vollständig geladen wurde und den Austausch des Inhalts durchgeführt hat. Dies kann zum so genannten „Flimmern“ führen. Dabei wird der Standardinhalt kurz angezeigt, bevor er durch den von Target angegebenen personalisierten Inhalt ersetzt wird. Wenn Sie dieses Flimmern verhindern möchten, empfehlen wir, ein spezielles Code-Fragment zu verwenden, das den Seiteninhalt vorab ausblendet, und das Tag-Bundle asynchron zu laden.
 
 Nachfolgend werden einige Aspekte aufgeführt, die Sie bei Verwendung des vorab ausgeblendeten Ausschnitts beachten sollten:
 

@@ -30,7 +30,7 @@ Weitere Informationen zur Zugriffskontrolle finden Sie unter [Zugriffskontrolle 
 
 ## Sandboxes
 
-Adobe Experience Platform (und somit auch die Echtzeit-Kundendatenplattform) wurde entwickelt, um Programme für digitale Erlebnisse global zu erweitern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und implementieren, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss.
+Adobe Experience Platform (und somit auch die Echtzeit-Kundendatenplattform) wurde entwickelt, um Programme für digitale Erlebnisse global zu erweitern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und bereitstellen, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss.
 
 Um dies zu erreichen, stellt Adobe Experience Platform &quot;Sandboxes&quot;bereit, mit denen Sie eine einzelne [!DNL Platform] in separate virtuelle Umgebungen, die zur Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse verwendet werden können.
 

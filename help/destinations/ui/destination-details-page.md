@@ -112,7 +112,7 @@ Die Registerkarte [!UICONTROL Aktivierungsdaten] zeigt eine Liste der Segmente a
 >
 >Um Details zu den Attributen und Identitäten anzuzeigen und zu bearbeiten, die einem Ziel zugeordnet sind, wählen Sie **[!UICONTROL Segmente aktivieren]** im [rechte Leiste](#right-rail).
 
-![Batch-Ziel für die Aktivierungsdatenansicht](../assets/ui/details-page/activation-data-batch.png)
+![Batch-Ziel der Aktivierungsdatenansicht](../assets/ui/details-page/activation-data-batch.png)
 
 ![Streaming-Ziel für Aktivierungsdaten-Ansicht](../assets/ui/details-page/activation-data-streaming.png)
 

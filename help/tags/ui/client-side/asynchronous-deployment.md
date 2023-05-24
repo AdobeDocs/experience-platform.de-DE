@@ -1,5 +1,5 @@
 ---
-title: Asynchrone Implementierung
+title: Asynchrone Bereitstellung
 description: Erfahren Sie, wie Sie Tag-Bibliotheken von Adobe Experience Platform asynchron auf Ihrer Website bereitstellen.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
@@ -9,22 +9,22 @@ ht-degree: 100%
 
 ---
 
-# Asynchrone Implementierung {#asynchronous-deployment}
+# Asynchrone Bereitstellung {#asynchronous-deployment}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_asynchronous_deployment"
->title="Asynchrone Implementierung"
+>title="Asynchrone Bereitstellung"
 >abstract="Wenn diese Option aktiviert ist, beginnt der Browser beim Parsen dieses Skript-Tags mit dem Laden der JavaScript-Datei, aber anstatt darauf zu warten, dass die Bibliothek geladen und ausgeführt wird, fährt er mit dem Parsen und Rendern des restlichen Dokuments fort. Dies kann die Leistung der Web-Seite verbessern, hat jedoch wichtige Auswirkungen auf die Ausführung bestimmter Regeln. Einzelheiten finden Sie in der Dokumentation."
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-Performance und blockierungsfreie Implementierung der von unseren Produkten benötigten JavaScript-Bibliotheken sind für Adobe Experience Cloud-Anwender zunehmend wichtig. Tools wie [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) empfehlen, dass die Benutzer die Art und Weise der Bereitstellung der Adobe Bibliotheken auf ihrer Site ändern. Dieser Artikel erklärt, wie Sie die Adobe-JavaScript-Bibliotheken asynchron verwenden können.
+Performance und blockierungsfreie Bereitstellung der von unseren Produkten benötigten JavaScript-Bibliotheken sind für Adobe Experience Cloud-Benutzende zunehmend wichtig. Tools wie [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) empfehlen, dass die Benutzer die Art und Weise der Bereitstellung der Adobe Bibliotheken auf ihrer Site ändern. Dieser Artikel erklärt, wie Sie die Adobe-JavaScript-Bibliotheken asynchron verwenden können.
 
 ## Synchron und asynchron im Vergleich
 
-### Synchrone Implementierung
+### Synchrone Bereitstellung
 
 Häufig werden Bibliotheken synchron im `<head>`-Tag einer Seite geladen. Beispiel:
 
@@ -38,7 +38,7 @@ Wenn der Parser vor dem Rendern sichtbarer Inhalte zum `<script>`-Tag gelangt, w
 
 Tag-Management-Bibliotheken können schnell unübersichtlich werden, wenn viele Tags zu verwalten sind.
 
-### Asynchrone Implementierung
+### Asynchrone Bereitstellung
 
 Sie können jede Bibliothek asynchron laden, indem Sie dem `<script>`-Tag ein `async`-Attribut hinzufügen. Beispiel:
 
@@ -48,9 +48,9 @@ Sie können jede Bibliothek asynchron laden, indem Sie dem `<script>`-Tag ein `a
 
 Dies zeigt dem Browser an, dass er beim Analysieren dieses Skript-Tags mit dem Laden der JavaScript-Datei beginnen muss. Statt darauf zu warten, dass die Bibliothek geladen und ausgeführt wird, sollte der Browser den Rest des Dokuments analysieren und rendern.
 
-## Überlegungen zur asynchronen Implementierung
+## Überlegungen zur asynchronen Bereitstellung
 
-Wie oben beschrieben, hält der Browser bei synchronen Implementierungen Analyse und Rendern der Seite an, während die Tag-Bibliothek von Adobe Experience Platform geladen und ausgeführt wird. In asynchronen Implementierungen hingegen fährt der Browser mit dem Analysieren und Rendern der Seite fort, während die Bibliothek geladen wird. Diese Varianz zwischen dem Zeitpunkt, zu dem die Tag-Bibliothek fertig geladen wurde, und dem Analysieren und Rendern der Seite muss berücksichtigt werden.
+Wie oben beschrieben, hält der Browser bei synchronen Bereitstellungen Analyse und Rendern der Seite an, während die Tag-Bibliothek von Adobe Experience Platform geladen und ausgeführt wird. In asynchronen Bereitstellungen hingegen fährt der Browser mit dem Analysieren und Rendern der Seite fort, während die Bibliothek geladen wird. Diese Varianz zwischen dem Zeitpunkt, zu dem die Tag-Bibliothek fertig geladen wurde, und dem Analysieren und Rendern der Seite muss berücksichtigt werden.
 
 Da die Tag-Bibliothek vor oder nach Analyse des Seitenendes vollständig geladen und ausgeführt werden kann, sollten Sie `_satellite.pageBottom()` nicht mehr aus Ihrem Seiten-Code aufrufen (`_satellite` ist erst nach dem Laden der Bibliothek verfügbar). Dies wird unter [Asynchrones Laden des Tag-Einbettungs-Codes](#loading-the-tags-embed-code-asynchronously) näher erläutert.
 

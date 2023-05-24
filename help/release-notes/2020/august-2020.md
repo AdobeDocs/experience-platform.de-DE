@@ -8,7 +8,7 @@ exl-id: 9347147f-e830-4487-aa12-f56723abb3c8
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '572'
-ht-degree: 31%
+ht-degree: 44%
 
 ---
 
@@ -56,7 +56,7 @@ Es stehen neue Ziele zur Verfügung, für die Sie Ihre Adobe Experience Platform
 
 ## [!DNL Real-Time Customer Data Platform] {#rtcdp}
 
-Basierend auf Experience Platform, Real-time Customer Data Platform ([!DNL Real-Time CDP]) hilft Unternehmen, bekannte und unbekannte Daten zusammenzuführen, um Kundenprofile durch intelligente Entscheidungen auf der gesamten Journey zu aktivieren. [!DNL Real-Time CDP] kombiniert mehrere Unternehmensdatenquellen, um Kundenprofile in Echtzeit zu erstellen. Segmente, die aus diesen Profilen erstellt wurden, können dann an nachgelagerte Ziele gesendet werden, um eine Eins-zu-Eins-Kundenerfahrung über alle Kanäle und Geräte hinweg bereitzustellen.
+Die auf Experience Platform aufbauende Real-Time Customer Data Platform ([!DNL Real-Time CDP]) hilft Unternehmen dabei, bekannte und unbekannte Daten zusammenzuführen, sodass sich während der gesamten Customer Journey Kundenprofile mit intelligenten Entscheidungen aktivieren lassen. [!DNL Real-Time CDP] kombiniert mehrere Unternehmensdatenquellen, um Kundenprofile in Echtzeit zu erstellen. Segmente, die aus diesen Profilen erstellt wurden, können dann an nachgelagerte Ziele gesendet werden, um eine personalisierte Eins-zu-Eins-Kundenerfahrung über alle Kanäle und Geräte hinweg bereitzustellen.
 
 **Neue Funktionen**
 
@@ -64,7 +64,7 @@ Basierend auf Experience Platform, Real-time Customer Data Platform ([!DNL Real-
 | ------- | ----------- |
 | IAB TCF 2.0-Unterstützung | [!DNL Real-Time CDP] ist jetzt ein registrierter Anbieter für die Version 2.0 der [!DNL Transparency & Consent Framework] (TCF), wie in der [!DNL Interactive Advertising Bureau] (IAB). Sie können Ihre Datenvorgänge und Profilschemata so konfigurieren, dass von einer CMP generierte Kundenzustimmungsdaten akzeptiert und die Zustimmungseinstellungen Ihrer Kunden bei der Aktivierung von Segmenten für nachgelagerte Ziele durchgesetzt werden. |
 
-Weitere Informationen finden Sie unter [!DNL Real-Time CDP], siehe [[!DNL Real-Time CDP] Übersicht](../../rtcdp/overview.md).
+Weitere Informationen zu [!DNL Real-Time CDP] finden Sie im [[!DNL Real-Time CDP] Überblick](../../rtcdp/overview.md).
 
 ## Quellen {#sources}
 

@@ -6,7 +6,7 @@ exl-id: c3097030-0242-404f-9e4c-72a7fa574011
 source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
 source-wordcount: '201'
-ht-degree: 67%
+ht-degree: 70%
 
 ---
 
@@ -24,4 +24,4 @@ Anweisungen zur Beschriftung von Identitätsfeldern in der Benutzeroberfläche f
 
 ## Nächste Schritte
 
-Weitere Informationen finden Sie unter [!DNL Identity Service], siehe [[!DNL Identity Service] Übersicht](../home.md).
+Weitere Informationen zu [!DNL Identity Service] finden Sie im [[!DNL Identity Service] Überblick](../home.md).

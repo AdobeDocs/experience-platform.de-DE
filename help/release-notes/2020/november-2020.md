@@ -66,7 +66,7 @@ Weitere Informationen finden Sie im [[!DNL Offer Decisioning]](https://experienc
 
 ## [!DNL Sandboxes] {#sandboxes}
 
-[!DNL Experience Platform] wurde entwickelt, um Anwendungen für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und implementieren, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. Um dieser Notwendigkeit Rechnung zu tragen, [!DNL Experience Platform] bietet Sandboxes, die eine einzelne [!DNL Platform] in separate virtuelle Umgebungen zu integrieren, um die Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse zu unterstützen.
+[!DNL Experience Platform] wurde entwickelt, um Anwendungen für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und bereitstellen, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. Um dieser Notwendigkeit Rechnung zu tragen, [!DNL Experience Platform] bietet Sandboxes, die eine einzelne [!DNL Platform] in separate virtuelle Umgebungen zu integrieren, um die Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse zu unterstützen.
 
 **Wichtigste Funktionen**
 

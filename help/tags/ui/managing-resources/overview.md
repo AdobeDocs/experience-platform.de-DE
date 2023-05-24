@@ -19,6 +19,6 @@ Im Kontext von Tags in Experience Platform bezieht sich das Wort „Ressourcen�
 
 * [Erweiterungen](extensions/overview.md): Erweiterungen bieten Datenelementtypen und Regeln, mit denen Sie arbeiten können.
 * [Datenelemente](data-elements.md): Datenelemente stellen eine einfache Möglichkeit dar, auf Daten zu verweisen, die an anderer Stelle vorhanden sind. Sie erstellen Tastaturbefehle, die in Regeln und Erweiterungskonfigurationen verwendet werden können. Wenn sich der Speicherort der zugrunde liegenden Daten ändert, können sie aktualisiert werden, um auf den neuen Speicherort zu verweisen, ohne dass einzelne Regeln oder Erweiterungen angepasst werden müssen.
-* [Regeln](rules.md): Regeln sind Sammlungen von Regelkomponenten (Ereignisse, Bedingungen und Aktionen), die das Verhalten der implementierten Tags steuern.
+* [Regeln](rules.md): Regeln sind Sammlungen von Regelkomponenten (Ereignisse, Bedingungen und Aktionen), die das Verhalten der bereitgestellten Tags steuern.
 
 Weitere Informationen zu den einzelnen Ressourcentypen erhalten Sie über die oben stehenden Links.

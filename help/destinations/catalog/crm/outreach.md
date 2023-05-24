@@ -106,7 +106,7 @@ Um sich beim Ziel zu authentifizieren, wählen Sie **[!UICONTROL Mit Ziel verbin
 
 Sie werden die [!DNL Outreach] Anmeldeseite. Geben Sie Ihre E-Mail an.
 
-![Screenshot der Benutzeroberfläche für die Ausgabe, in dem das Feld angezeigt wird, um E-Mails zur Authentifizierung bei Outreach einzugeben.](../../assets/catalog/crm/outreach/authenticate-destination-login-email.png)
+![Screenshot der Benutzeroberfläche von Outreach , in dem das Feld angezeigt wird, um E-Mails zur Authentifizierung bei Outreach einzugeben.](../../assets/catalog/crm/outreach/authenticate-destination-login-email.png)
 
 Geben Sie als Nächstes Ihr Kennwort ein.
 

@@ -77,7 +77,7 @@ Weiterführende Informationen dazu finden Sie unter [Zugangssteuerung – Übers
 
 ### Sandboxes {#sandboxes}
 
-Experience Platform wurde entwickelt, um Anwendungen für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und implementieren, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss.
+Experience Platform wurde entwickelt, um Anwendungen für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und bereitstellen, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss.
 
 Um Entwicklungsflexibilität zu gewährleisten, bietet Experience Platform Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen aufteilen, damit Sie Ihre Digital Experience Apps basierend auf Ihrem eigenen Entwicklungslebenszyklus entwickeln können.
 

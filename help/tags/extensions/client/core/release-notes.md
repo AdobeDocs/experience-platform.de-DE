@@ -223,7 +223,7 @@ v1.4.2
 
 ## 20. März 2018
 
-* **Fehlerbehebung** – Benutzerdefinierte Codefenster wiesen `document.write`-Fehler auf und wurden in asynchronen Implementierungen nicht ausgeführt
+* **Fehlerbehebung** – Benutzerdefinierte Code-Fenster wiesen `document.write`-Fehler auf und wurden in asynchronen Bereitstellungen nicht ausgeführt
 * **Fehlerbehebung** – Hauptmodule wurden nicht in einer Bibliothek eingeschlossen
 * **Fehlerbehebung** – Probleme mit Mindest- und Höchstwerten im Datenelement „Zufällige Nummer“
 

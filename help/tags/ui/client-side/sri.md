@@ -40,7 +40,7 @@ Wenn sich der Skriptinhalt ändert, ändert sich aber auch der kryptografische H
 
 Die nächstbeste Sicherheitsoption für Tags ist die Implementierung einer Content Security Policy. Weitere Informationen finden Sie im Handbuch zu [CSPs und Tags](./content-security-policy.md).
 
-## Integration von SRI in die Build-Implementierung
+## Integration von SRI in die Build-Bereitstellung
 
 Wenn Sie weiterhin SRI für Ihre Bibliotheks-Builds verwenden möchten, müssen Sie Self-Hosting nutzen. Wenn Sie Adobe-verwaltetes Hosting nutzen, ist es nicht möglich, SRI zu verwenden, da ansonsten der Inhalt des neuen Builds über einen gewissen Zeitraum nicht mit dem `integrity`-Attribut des Einbettungscodes übereinstimmt.
 
@@ -48,7 +48,7 @@ Die Automatisierung des Aktualisierungsprozesses Ihres Einbettungs-Codes hängt 
 
 1. Rufen Sie den Produktionsbibliotheks-Build entweder über die SFTP-Bereitstellung ab oder laden Sie das Archiv über die Benutzeroberfläche herunter.
 1. Generieren Sie den kryptografischen Hash des Haupt-Builds.
-1. Stellen Sie sicher, dass das `integrity`-Attribut des Einbettungs-Codes auf den neuen Hash aktualisiert wird und dass der referenzierte Build im Rahmen derselben Implementierung aktualisiert wird.
+1. Stellen Sie sicher, dass das `integrity`-Attribut des Einbettungs-Codes auf den neuen Hash aktualisiert wird und dass der referenzierte Build im Rahmen derselben Bereitstellung aktualisiert wird.
 
 >[!IMPORTANT]
 >
@@ -56,4 +56,4 @@ Die Automatisierung des Aktualisierungsprozesses Ihres Einbettungs-Codes hängt 
 
 ## Nächste Schritte
 
-Dieses Dokument behandelt die Einschränkungen bei der Verwendung von SRI mit Tags und die Schritte, die erforderlich sind, um es trotz dieser Einschränkungen in Ihre Bibliotheks-Build-Implementierungen zu integrieren. Wenn Sie dies noch nicht getan haben, wird dringend empfohlen, das Handbuch zu [CSPs und Tags](./content-security-policy.md) für eine alternative Sicherheitsoption zu lesen.
+Dieses Dokument behandelt die Einschränkungen bei der Verwendung von SRI mit Tags und die Schritte, die erforderlich sind, um es trotz dieser Einschränkungen in Ihre Bibliotheks-Build-Bereitstellungen zu integrieren. Wenn Sie dies noch nicht getan haben, wird dringend empfohlen, das Handbuch zu [CSPs und Tags](./content-security-policy.md) für eine alternative Sicherheitsoption zu lesen.

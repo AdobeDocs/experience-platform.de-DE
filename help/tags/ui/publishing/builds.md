@@ -42,7 +42,7 @@ Die kleineren Dateien enthalten den Code und die Konfiguration für einzelne Akt
 
 Das Standarddateiformat für Builds ist ein Paket von Dateien, die den gesamten Code enthalten, damit Ihre Erweiterungen, Datenelemente und Regeln auf die gewünschte Weise ausgeführt werden können.
 
-In bestimmten Fällen empfiehlt sich jedoch ein ZIP-Archiv der Dateien anstelle der ausführbaren Client-seitigen Codedatei. Beispiel: Ein Archiv ist sinnvoll, wenn Sie Ihren Build selbst hosten und den Build in einer anderen Implementierung verwenden möchten. Wenn Sie im Feld für den selbst gehosteten Pfad zur Bibliothek einen Wert angeben, können Sie Ihre Umgebung speichern. Neben Ihrem neuen Code wird ein Link zum archivierten Download verfügbar. Nachdem die Bibliothek erstellt wurde, haben Sie die Möglichkeit, eine ZIP-Datei auf Akamai bereitzustellen und sie von `assets.adobedtm.com/...` herunterzuladen.
+In bestimmten Fällen empfiehlt sich jedoch ein ZIP-Archiv der Dateien anstelle der ausführbaren Client-seitigen Codedatei. Beispiel: Ein Archiv ist sinnvoll, wenn Sie Ihren Build selbst hosten und den Build in einer anderen Bereitstellung verwenden möchten. Wenn Sie im Feld für den selbst gehosteten Pfad zur Bibliothek einen Wert angeben, können Sie Ihre Umgebung speichern. Neben Ihrem neuen Code wird ein Link zum archivierten Download verfügbar. Nachdem die Bibliothek erstellt wurde, haben Sie die Möglichkeit, eine ZIP-Datei auf Akamai bereitzustellen und sie von `assets.adobedtm.com/...` herunterzuladen.
 
 >[!NOTE]
 >

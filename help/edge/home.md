@@ -24,9 +24,9 @@ Eine schrittweise Anleitung zum Einrichten von Web SDK mit Tags und zum Senden v
 
 [!DNL Adobe Experience Platform Web SDK] ist Teil der Sammlung, aus der [!DNL Adobe Experience Edge] besteht. [!DNL Experience Edge] umfasst die folgenden Technologien:
 
-* **[[!DNL Adobe Experience Platform Web SDK]](#overview):** Ein JavaScript-SDK und eine Tag-Erweiterung, mit der die Implementierung von [!DNL Adobe]-Technologien erheblich vereinfacht wird.
-* **[[!DNL Adobe Experience Platform Mobile SDK]](https://aep-sdks.gitbook.io/docs/getting-started/overview):** Eine Erweiterung von Mobile SDK v5, um Kunden die Verwendung der neuen Implementierungsmethode zu ermöglichen.
-* **[[!DNL Adobe Experience Platform Edge Network]](../server-api/overview.md):** Ein globales verteiltes Netzwerk von Servern, das eine neue Methode zur Implementierung von [!DNL Adobe]-Produkten ermöglicht
+* **[[!DNL Adobe Experience Platform Web SDK]](#overview):** Ein JavaScript-SDK und eine Tag-Erweiterung, mit der die Bereitstellung von [!DNL Adobe]-Technologien erheblich vereinfacht wird.
+* **[[!DNL Adobe Experience Platform Mobile SDK]](https://aep-sdks.gitbook.io/docs/getting-started/overview):** Eine Erweiterung von Mobile SDK v5, um Kunden die Verwendung der neuen Bereitstellungsmethode zu ermöglichen.
+* **[[!DNL Adobe Experience Platform Edge Network]](../server-api/overview.md):** Ein globales verteiltes Netzwerk von Servern, das eine neue Methode zur Bereitstellung von [!DNL Adobe]-Produkten ermöglicht
 
 [!DNL Adobe Experience Edge] ist ein Framework zur Erfassung von Daten mit niedriger Latenz sowie zum Pluggable Computing und zur schnellen Aktivierung von Daten auf allen adressierbaren Kanälen.
 
