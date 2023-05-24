@@ -2,9 +2,9 @@
 title: Berechtigungsverwaltung für die Datenerfassung in Experience Platform
 description: Eine allgemeine Übersicht darüber, wie Sie Berechtigungen verwalten und den Zugriff auf Datenerfassungsfunktionen in Adobe Experience Platform steuern können.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 876339019b324d4483152ed6f24bd6ad749ea7ba
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1318'
 ht-degree: 29%
 
 ---
@@ -54,6 +54,7 @@ Berechtigungen unter der Datenerfassung von Adobe Experience Platform steuern de
 | --- | --- | --- |
 | Plattformen | Web | Gewährt Zugriff auf [Webeigenschaften](../tags/ui/administration/companies-and-properties.md) in Kombination mit anderen Eigentumsrechten. |
 | Plattformen | Mobile | Gewährt Zugriff auf [mobile Eigenschaften](../tags/ui/administration/companies-and-properties.md) in Kombination mit anderen Eigentumsrechten. |
+| Plattformen | Edge | Gewährt Zugriff auf [Edge-Eigenschaften für die Ereignisweiterleitung](../tags/ui/event-forwarding/getting-started.md) in Kombination mit anderen Eigentumsrechten. |
 | Properties | (Nicht angegeben) | Je nach den Eigenschaften, die unter Ihrer Organisation erstellt wurden, können Sie den Zugriff auf jede dieser Eigenschaften über diese Berechtigungskategorie in Admin Console steuern.<br><br>Die zugewiesenen Eigenschaftsrechte eines Benutzers gelten nur für die Eigenschaften, auf die ihm über diese Berechtigungskategorie Zugriff gewährt wurde. |
 | Eigenschaftsrechte | Genehmigen | Ermöglicht die Genehmigung eines Bibliotheks-Builds als Teil der [Veröffentlichungsfluss](../tags/ui/publishing/publishing-flow.md). |
 | Eigenschaftsrechte | Entwickeln | Ermöglicht die Entwicklung eines Bibliotheks-Builds als Teil der [Veröffentlichungsfluss](../tags/ui/publishing/publishing-flow.md). |
