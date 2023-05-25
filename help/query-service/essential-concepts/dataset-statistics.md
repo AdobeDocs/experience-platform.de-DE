@@ -1,16 +1,16 @@
 ---
 title: Berechnung der Datensatzstatistiken
 description: In diesem Dokument wird beschrieben, wie Sie Statistiken auf Spaltenebene in Azure Data Lake Storage (ADLS)-Datensätzen mit SQL-Befehlen berechnen.
-source-git-commit: b063bcf7b3d2079715ac18fde55f47cea078b609
+source-git-commit: c42a7cd46f79bb144176450eafb00c2f81409380
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '785'
 ht-degree: 0%
 
 ---
 
 # Berechnung der Datensatzstatistiken
 
-Sie können nun Statistiken auf Spaltenebene über [!DNL Azure Data Lake Storage] (ADLS)-Datensätzen mit der `COMPUTE STATISTICS` und `SHOW STATISTICS` SQL-Befehle. Die SQL-Befehle, die Datensatzstatistiken berechnen, sind eine Erweiterung der `ANALYZE TABLE` Befehl. Vollständige Informationen zu `ANALYZE TABLE` -Befehl finden Sie im [SQL-Referenzdokumentation](../sql/syntax.md#analyze-table).
+Sie können nun Statistiken auf Spaltenebene berechnen über [!DNL Azure Data Lake Storage] (ADLS)-Datensätzen mit der `COMPUTE STATISTICS` und `SHOW STATISTICS` SQL-Befehle. Die SQL-Befehle, die Datensatzstatistiken berechnen, sind eine Erweiterung der `ANALYZE TABLE` Befehl. Vollständige Informationen zu `ANALYZE TABLE` -Befehl finden Sie im [SQL-Referenzdokumentation](../sql/syntax.md#analyze-table).
 
 >[!NOTE]
 >
@@ -87,7 +87,7 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 Sie können die Spaltenbegrenzung und den Filter kombinieren, um sehr spezifische Rechenabfragen für Ihre Datensatzspalten zu erstellen. Beispielsweise berechnet die folgende Abfrage Statistiken über die Spalten `commerce`, `id`und `timestamp` für den Datensatz `tableName`, wobei der Spaltenzeitstempel Werte zwischen dem angegebenen Bereich aufweist `2023-04-01 00:00:00` und `2023-04-05 00:00:00`.
 
 ```sql
-ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR (columns commerce, id, timestamp);
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
 ```
 
 <!-- ## Create an alias name {#alias-name}
@@ -125,7 +125,6 @@ Eine Ausgabe kann dem unten stehenden Beispiel ähneln.
                          columnName                         |      mean      |      max       |      min       | standardDeviation | approxDistinctCount | nullCount | dataType  
 ------------------------------------------------------------+----------------+----------------+----------------+-------------------+---------------------+-----------+-----------
  marketing.trackingcode                                     |            0.0 |            0.0 |            0.0 |               0.0 |              1213.0 |         0 | String
- _experience.analytics.session.timestamp                    |            450 |          -2313 |          21903 |               7.0 |                 0.0 |         0 | Long
  _experience.analytics.customdimensions.evars.evar13        |            0.0 |            0.0 |            0.0 |               0.0 |              8765.0 |        20 | String
  _experience.analytics.customdimensions.evars.evar74        |            0.0 |            0.0 |            0.0 |               0.0 |                11.0 |         0 | String
  web.webpagedetails.name                                    |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | String
@@ -137,9 +136,9 @@ Eine Ausgabe kann dem unten stehenden Beispiel ähneln.
  _experience.analytics.customdimensions.props.prop45        |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | String
  environment.browserdetails.javaenabled                     |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | Boolean
  timestamp                                                  |            0.0 |            0.0 |            0.0 |               0.0 |                98.0 |         3 | Timestamp
-(13 rows)
+(12 rows)
 ```
 
 ## Nächste Schritte {#next-steps}
 
-Durch Lesen dieses Dokuments können Sie jetzt besser verstehen, wie Sie mit einer SQL-Abfrage aus einem ADLS-Datensatz Statistiken auf Spaltenebene erstellen. Es wird empfohlen, die [SQl-Syntaxhandbuch](../sql/syntax.md) , um weitere Funktionen des Adobe Experience Platform Query Service zu erfahren.
+Durch Lesen dieses Dokuments erhalten Sie jetzt ein besseres Verständnis davon, wie Sie mit einer SQL-Abfrage Statistiken auf Spaltenebene aus einem ADLS-Datensatz generieren. Es wird empfohlen, die [SQl-Syntaxhandbuch](../sql/syntax.md) , um weitere Funktionen des Adobe Experience Platform Query Service zu erfahren.

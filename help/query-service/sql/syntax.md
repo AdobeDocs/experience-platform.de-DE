@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-Syntax in Query Service
 description: Dieses Dokument zeigt die von Adobe Experience Platform Query Service unterstützte SQL-Syntax.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 2a5dd20d99f996652de5ba84246c78a1f7978693
+source-git-commit: c42a7cd46f79bb144176450eafb00c2f81409380
 workflow-type: tm+mt
-source-wordcount: '3706'
+source-wordcount: '3761'
 ht-degree: 9%
 
 ---
@@ -570,6 +570,10 @@ Die folgenden Unterabschnitte decken die [!DNL PostgreSQL] von Query Service unt
 
 ### ANALYSETABELLE {#analyze-table}
 
+Die `ANALYZE TABLE` -Befehl führt eine Verteilungsanalyse und statistische Berechnungen für die benannte(n) Tabelle(n) durch. Die Verwendung von `ANALYZE TABLE` variiert, je nachdem, ob die Datensätze auf der [beschleunigter Speicher](#compute-statistics-accelerated-store) oder [Datensee](#compute-statistics-data-lake). Weitere Informationen zur Verwendung finden Sie in den entsprechenden Abschnitten.
+
+#### COMPUTE STATISTICS on the Accelerated Store {#compute-statistics-accelerated-store}
+
 Die `ANALYZE TABLE` berechnet Statistiken für eine Tabelle im beschleunigten Speicher. Die Statistiken werden anhand der ausgeführten CTAS- oder ITAS-Abfragen für eine bestimmte Tabelle im beschleunigten Speicher berechnet.
 
 **Beispiel**
@@ -592,9 +596,9 @@ Im Folgenden finden Sie eine Liste statistischer Berechnungen, die nach Verwendu
 | `mean` | Der Durchschnittswert der analysierten Tabelle. |
 | `stdev` | Die Standardabweichung der analysierten Tabelle. |
 
-#### BERECHNETE STATISTIKEN {#compute-statistics}
+#### COMPUTE STATISTIKEN auf dem Data Lake {#compute-statistics-data-lake}
 
-Sie können nun Statistiken auf Spaltenebene berechnen unter [!DNL Azure Data Lake Storage] (ADLS)-Datensätzen mit der `COMPUTE STATISTICS` und `SHOW STATISTICS` SQL-Befehle. Berechnen Sie Spaltenstatistiken für den gesamten Datensatz, eine Untergruppe eines Datensatzes, alle Spalten oder eine Untergruppe von Spalten.
+Sie können nun Statistiken auf Spaltenebene berechnen über [!DNL Azure Data Lake Storage] (ADLS)-Datensätzen mit der `COMPUTE STATISTICS` und `SHOW STATISTICS` SQL-Befehle. Berechnen Sie Spaltenstatistiken für den gesamten Datensatz, eine Untergruppe eines Datensatzes, alle Spalten oder eine Untergruppe von Spalten.
 
 `COMPUTE STATISTICS` erweitert die `ANALYZE TABLE` Befehl. Die Variable `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`und `SHOW STATISTICS` -Befehle werden in Data Warehouse-Tabellen nicht unterstützt. Diese Erweiterungen für `ANALYZE TABLE` -Befehl werden derzeit nur für ADLS-Tabellen unterstützt.
 
