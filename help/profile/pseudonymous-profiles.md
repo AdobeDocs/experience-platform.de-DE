@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Ablauf von Daten pseudonymer Profile
 description: Dieses Dokument enthält allgemeine Anleitungen zum Konfigurieren des Ablaufs von Daten pseudonymer Profile in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 07ed7eb9644b2e8cc4da02743c48037afc247614
+source-git-commit: 207cddae6b632866d564729de49d28fc5c29ef7f
 workflow-type: tm+mt
-source-wordcount: '912'
-ht-degree: 100%
+source-wordcount: '923'
+ht-degree: 97%
 
 ---
 
@@ -75,9 +75,8 @@ Für einen typischen Anwendungsfall können Sie den Ablauf von Erlebnisereignisd
 
 ### Welche Einschränkungen sollten Sie beachten, bevor Sie Ablauf von Daten pseudonymer Profile verwenden?
 
-- Ablauf von Daten pseudonymer Profile läuft auf der **Produktions**-Sandbox.
+- Der Ablauf der pseudonymen Profildaten wird in einer **Sandbox** Ebene. Sie können unterschiedliche Konfigurationen für Produktions- und Entwicklungs-Sandboxes auswählen.
 - Wenn Sie diese Funktion aktiviert haben, wird das Löschen von Profilen **dauerhaft**. Es gibt **keine** Möglichkeit, die gelöschten Profile zurückzusetzen oder wiederherzustellen.
 - Dies ist **kein** einmaliger Bereinigungsvorgang. Ablauf von Daten pseudonymer Profile wird täglich einmal ausgeführt und es werden dabei Profile gelöscht, die mit der Eingabe der Kundin bzw. des Kunden übereinstimmen.
 - **Alle** Profile, die als pseudonyme Profile definiert sind, sind von Ablauf von Daten pseudonymer Profile betroffen. Es kommt dabei **nicht** darauf an, ob das Profil nur ein Erlebnisereignis ist oder nur Profilattribute enthält.
 - Diese Bereinigung findet **nur** im Profil statt. Identity Service kann die gelöschten Identitäten innerhalb des Diagramms nach der Bereinigung weiterhin anzeigen, wenn das Profil zwei oder mehr pseudonyme Identitäten aufweist (z. B. `AAID` und `ECID`). Diese Diskrepanz wird in naher Zukunft angegangen.
-
