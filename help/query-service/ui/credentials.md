@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Anleitung zu Query Service-Anmeldedaten
 description: Adobe Experience Platform Query Service bietet eine Benutzeroberfläche, mit der Sie Abfragen schreiben und ausführen, zuvor ausgeführte Abfragen anzeigen und auf Abfragen zugreifen können, die von Benutzern in Ihrer Organisation gespeichert wurden.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: aed521bf50c301148c10b98021f1a3df0ed45278
 workflow-type: tm+mt
-source-wordcount: '1337'
-ht-degree: 5%
+source-wordcount: '1462'
+ht-degree: 4%
 
 ---
 
@@ -48,6 +48,10 @@ Die **[!UICONTROL Ablaufberechtigungen]** enthält die folgenden Informationen:
 
 Sie können nicht ablaufende Anmeldedaten verwenden, um eine permanentere Verbindung zu einem externen Client einzurichten.
 
+>[!NOTE]
+>
+>Für nicht ablaufende Anmeldedaten gelten die folgenden Einschränkungen:<br><ul><li>Benutzer müssen sich mit ihrem Benutzernamen und Kennwort anmelden, das aus `{technicalAccountId}:{credential}`. Weitere Informationen finden Sie im [Anmeldeinformationen generieren](#generate-credentials) Abschnitt.</li><li>Nach der Erstellung ablaufender Anmeldeinformationen wird eine neue Rolle mit grundlegenden Berechtigungen erstellt, die es Benutzern ermöglicht, Schemas und Datensätze anzuzeigen. Diese Rolle erhält auch die Berechtigung &quot;Abfragen verwalten&quot;zur Verwendung mit Query Service.</li><li>Bei der Auflistung von Abfrageobjekten kann es vorkommen, dass Clients von Drittanbietern eine andere Leistung als erwartet ausführen. Einige Drittanbieter-Clients wie [!DNL DB Visualizer] zeigt den Ansichtsnamen nicht im linken Bereich an. Der Ansichtsname ist jedoch verfügbar, wenn er in einer SELECT-Abfrage aufgerufen wird. Ebenso [!DNL PowerUI] Möglicherweise werden die temporären Ansichten, die über die SQL erstellt wurden, nicht aufgelistet, um für die Dashboard-Erstellung ausgewählt zu werden.</li></ul>
+
 ### Voraussetzungen
 
 Bevor Sie nicht ablaufende Anmeldeinformationen generieren können, müssen Sie die folgenden Schritte in Adobe Admin Console ausführen:
@@ -63,7 +67,7 @@ Weitere Informationen zum Zuweisen von Berechtigungen finden Sie in der Dokument
 
 Alle erforderlichen Berechtigungen werden jetzt in der Adobe Developer Console konfiguriert, damit der Benutzer die Funktion für ablaufende Anmeldedaten verwenden kann.
 
-### Anmeldeinformationen generieren
+### Anmeldeinformationen generieren {#generate-credentials}
 
 Um einen Satz nicht ablaufender Anmeldedaten zu erstellen, kehren Sie zur Platform-Benutzeroberfläche zurück und wählen Sie **[!UICONTROL Abfragen]** über die linke Navigationsleiste auf [!UICONTROL Abfragen] Arbeitsbereich. Wählen Sie als Nächstes die **[!UICONTROL Anmeldeinformationen]** Tab gefolgt von **[!UICONTROL Anmeldeinformationen generieren]**.
 
