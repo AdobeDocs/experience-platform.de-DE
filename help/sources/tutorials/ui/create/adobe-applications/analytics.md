@@ -2,10 +2,10 @@
 title: Erstellen einer Adobe Analytics-Quellverbindung über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie eine Quellverbindung für Adobe Analytics über die Benutzeroberfläche erstellen, um Kundendaten in Adobe Experience Platform zu importieren.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 1839e67d86a04762d93a5c35050e261fb1d1cf50
+source-git-commit: b8764b4b39aba43687c7ac0540d392a3aa808df4
 workflow-type: tm+mt
-source-wordcount: '2406'
-ht-degree: 63%
+source-wordcount: '2299'
+ht-degree: 58%
 
 ---
 
@@ -120,49 +120,54 @@ Platform erkennt Ihre Zuordnungssätze automatisch für Konflikte mit benutzerfr
 
 ![Zuordnung](../../../../images/tutorials/create/analytics/mapping.png)
 
-Wenn es Konflikte mit benutzerfreundlichen Namen zwischen Ihrer Quell-Report Suite und dem ausgewählten Schema gibt, können Sie trotzdem mit Ihrem [!DNL Analytics]-Datenfluss fortfahren, allerdings unter Berücksichtigung der Tatsache, dass die Felddeskriptoren nicht geändert werden. Alternativ können Sie auch ein neues Schema mit einem leeren Satz von Deskriptoren erstellen.
-
-Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
-
-![Vorsicht](../../../../images/tutorials/create/analytics/caution.png)
+>[!TIP]
+>
+>Wenn es Konflikte mit benutzerfreundlichen Namen zwischen Ihrer Quell-Report Suite und dem ausgewählten Schema gibt, können Sie trotzdem mit Ihrem [!DNL Analytics]-Datenfluss fortfahren, allerdings unter Berücksichtigung der Tatsache, dass die Felddeskriptoren nicht geändert werden. Alternativ können Sie auch ein neues Schema mit einem leeren Satz von Deskriptoren erstellen.
 
 #### Benutzerdefinierte Zuordnungen
 
-Um Datenvorbereitungs-Funktionen zu verwenden und neue Zuordnungsfelder oder berechnete Felder für benutzerdefinierte Attribute hinzuzufügen, wählen Sie **[!UICONTROL Benutzerdefinierte Zuordnungen anzeigen]**.
+Sie können Datenvorgangsfunktionen verwenden, um neue benutzerdefinierte Mapping- oder berechnete Felder für benutzerdefinierte Attribute hinzuzufügen. Um benutzerdefinierte Zuordnungen hinzuzufügen, wählen Sie **[!UICONTROL Benutzerdefiniert]**.
 
-![view-custom-mapping](../../../../images/tutorials/create/analytics/view-custom-mapping.png)
+![custom](../../../../images/tutorials/create/analytics/custom.png)
 
-Wählen Sie als Nächstes **[!UICONTROL Neue Zuordnung hinzufügen]**.
-
-Je nach Bedarf können Sie aus den angezeigten Optionen entweder **[!UICONTROL Neue Zuordnung hinzufügen]** oder **[!UICONTROL Berechnetes Feld hinzufügen]** wählen.
-
-![add-new-mapping](../../../../images/tutorials/create/analytics/add-new-mapping.png)
-
-Ein leerer Zuordnungssatz wird angezeigt. Wählen Sie das Zuordnungssymbol aus, um ein Quellfeld hinzuzufügen.
-
-![select-source-field](../../../../images/tutorials/create/analytics/select-source-field.png)
-
-Sie können die Benutzeroberfläche verwenden, um durch die Struktur des Quellschemas zu navigieren und das neue Quellfeld zu identifizieren, das Sie verwenden möchten. Nachdem Sie das Quellfeld ausgewählt haben, das Sie zuordnen möchten, klicken Sie auf **[!UICONTROL Auswählen]**.
-
-![select-mapping](../../../../images/tutorials/create/analytics/select-mapping.png)
-
-Wählen Sie als Nächstes das Zuordnungssymbol unter [!UICONTROL Zielfeld] aus, um das ausgewählte Quellfeld seinem entsprechenden Zielfeld zuzuordnen.
-
-![select-target-field](../../../../images/tutorials/create/analytics/select-target-field.png)
-
-Ähnlich wie beim Quellschema können Sie über die Benutzeroberfläche durch die Zielschemastruktur navigieren und das Zielfeld auswählen, dem Sie zuordnen möchten. Nachdem Sie das entsprechende Zielfeld ausgewählt haben, klicken Sie auf **[!UICONTROL Auswählen]**.
-
-![select-target-mapping](../../../../images/tutorials/create/analytics/select-target-mapping.png)
-
-Nachdem Sie den benutzerdefinierten Zuordnungssatz abgeschlossen haben, klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
-
-![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png)
+Je nach Bedarf können Sie entweder **[!UICONTROL Neues Mapping hinzufügen]** oder **[!UICONTROL Berechnetes Feld hinzufügen]** und fahren Sie mit dem Erstellen benutzerdefinierter Zuordnungen für Ihre benutzerdefinierten Attribute fort. Umfassende Schritte zur Verwendung der Datenvorgangsfunktionen finden Sie in der [Handbuch zur Datenvorbereitung-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
 
 Die folgende Dokumentation enthält weitere Ressourcen zum Verständnis von Datenvorbereitung, berechneten Feldern und Zuordnungsfunktionen:
 
 * [Datenvorbereitung – Übersicht](../../../../../data-prep/home.md)
 * [Funktionen zur Datenvorbereitung](../../../../../data-prep/functions.md)
 * [Hinzufügen von berechneten Feldern](../../../../../data-prep/ui/mapping.md#calculated-fields)
+
+<!-- 
+To use Data Prep functions and add new mapping or calculated fields for custom attributes, select **[!UICONTROL View custom mappings]**.
+
+![view-custom-mapping](../../../../images/tutorials/create/analytics/view-custom-mapping.png)
+
+Next, select **[!UICONTROL Add new mapping]**.
+
+Depending on your needs, you can select either **[!UICONTROL Add new mapping]** or **[!UICONTROL Add calculated field]** from the options that appear. 
+
+![add-new-mapping](../../../../images/tutorials/create/analytics/add-new-mapping.png)
+
+An empty mapping set appears. Select the mapping icon to add a source field.
+
+![select-source-field](../../../../images/tutorials/create/analytics/select-source-field.png)
+
+You can use the interface to navigate through the source schema structure and identify the new source field that you want to use. Once you have selected the source field that you want to map, select **[!UICONTROL Select]**.
+
+![select-mapping](../../../../images/tutorials/create/analytics/select-mapping.png)
+
+Next, select the mapping icon under [!UICONTROL Target Field] to map your selected source field to its appropriate target field.
+
+![select-target-field](../../../../images/tutorials/create/analytics/select-target-field.png)
+
+Similar to the source schema, you can use the interface to navigate through the target schema structure and select the target field you want to map to. Once you have selected the appropriate target field, select **[!UICONTROL Select]**.
+
+![select-target-mapping](../../../../images/tutorials/create/analytics/select-target-mapping.png)
+
+With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
+
+![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) -->
 
 ### Filtern nach Echtzeit-Kundenprofil {#filtering-for-profile}
 
