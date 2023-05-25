@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise Mai 2023 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 85401e3abfd7d5d1d84e082d20a1a064760c4e19
+source-git-commit: fea5fdf4b4982b59fb1c4954b8f81e131af9955b
 workflow-type: tm+mt
-source-wordcount: '1071'
-ht-degree: 29%
+source-wordcount: '1224'
+ht-degree: 30%
 
 ---
 
@@ -32,6 +32,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [Datenerfassung](#data-collection)
 - [Data Governance](#data-governance)
 - [Datenaufnahme](#data-ingestion)
+- [Ziele](#destinations)
 - [Query Service](#query-service)
 - [Quellen](#sources)
 
@@ -75,6 +76,37 @@ Adobe Experience Platform bietet eine Vielzahl von Funktionen zur Aufnahme von D
 | Beta-Verfügbarkeit von Datenaufnahme-Vorlagen | Datenaufnahme-Vorlagen bieten Datenarchitekten und -ingenieuren Standardvorlagen und Automatisierungstools, um den Datenerfassungsprozess zu beschleunigen, einschließlich der Konfiguration von Schemas und Datensätzen und Zuordnungsregeln. Datenaufnahme-Vorlagen sind derzeit für die [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md), [[!DNL Salesforce]](../../sources/connectors/crm/salesforce.md) und [[!DNL Microsoft Dynamics]](../../sources/connectors/crm/ms-dynamics.md) Quellen. Weitere Informationen finden Sie im Handbuch unter [Verwenden von Vorlagen in der Benutzeroberfläche](../../sources/tutorials/ui/templates.md). |
 
 Weitere Informationen zur Datenerfassung finden Sie im Abschnitt [Datenerfassung - Übersicht](../../ingestion/home.md).
+
+## Ziele {#destinations}
+
+[!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+
+**Neue Ziele** {#new-destinations}
+
+| Ziel | Beschreibung |
+| ----------- | ----------- |
+| **[[!UICONTROL Mailchimp-Interessenkategorien]](../../destinations/catalog/email-marketing/mailchimp-interest-categories.md)** | **[!UICONTROL Mailchimp]** ist eine beliebte Marketing-Automatisierungsplattform und ein E-Mail-Marketing-Service, der von Unternehmen verwendet wird, um Kontakte (Kunden, Kunden oder sonstige interessierte Parteien) mithilfe von Mailinglisten und E-Mail-Marketing-Kampagnen zu verwalten und mit ihnen zu kommunizieren. Verwenden Sie diesen Connector, um Ihre Kontakte nach ihren Interessen und Vorlieben zu sortieren. |
+
+{style="table-layout:auto"}
+
+<!--
+
+**New or updated functionality** {#destinations-new-updated-functionality}
+
+| Functionality | Description |
+| ----------- | ----------- |
+| General availability of attribute-based personalization through the [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) and [Custom personalization](../../destinations/catalog/personalization/custom-personalization.md) destinations. | Leverage profile attributes in real-time to deliver one-to-one web and mobile personalization, via Adobe Target or other custom personalization destinations in Experience Platform. See the [dedicated documentation](../../destinations/ui/activate-edge-personalization-destinations.md) for more details. |
+| Destination SDK support for grouping exported audiences based on merge policy. | When building a file-based destination with Destination SDK, you can now configure the grouping of exported audiences into one or multiple files, based on merge policy. <br><br> Additionally, you can now include the merge policy ID and merge policy name in the exported file names, by using the dedicated template macros. <br><br>See the [batch configuration documentation](../../destinations/destination-sdk/functionality/destination-configuration/batch-configuration.md) for more details on how to use the `segmentGroupingEnabled` parameter and the new file name template macros.|
+
+{style="table-layout:auto"}
+
+-->
+
+**Korrekturen und Verbesserungen** {#destinations-fixes-and-enhancements}
+
+- Es wurde eine Einschränkung im SFTP-Cloud-Speicher-Ziel (Beta) behoben, durch die Benutzer den Wert des Port-Parameters nicht anpassen konnten. Der Wert kann jetzt bearbeitet werden, wenn eine (Beta-)SFTP-Zielverbindung über die [API](/help/destinations/api/activate-segments-file-based-destinations.md) oder [Benutzeroberfläche](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information).
+
+Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
 ## Query Service {#query-service}
 
