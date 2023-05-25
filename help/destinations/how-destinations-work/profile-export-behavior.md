@@ -2,10 +2,10 @@
 title: Profilexportverhalten
 description: Erfahren Sie, wie sich das Verhalten beim Profilexport zwischen den verschiedenen Integrationsmustern unterscheidet, die in Experience Platform-Zielen unterstützt werden.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
+source-git-commit: c54fa206b673868ca3d0ccfa5b0936b83cfd3ed4
 workflow-type: tm+mt
 source-wordcount: '2933'
-ht-degree: 97%
+ht-degree: 93%
 
 ---
 
@@ -29,10 +29,10 @@ Der Vorgang, durch den Profile in HTTPS-Nachrichten aggregiert werden, bevor sie
 
 Nehmen wir das [Facebook-Ziel](/help/destinations/catalog/social/facebook.md) mit *[konfigurierbarer Aggregationsrichtlinie](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* als Beispiel. Daten werden aggregiert gesendet, wobei der Ziel-Service alle eingehenden Daten aus dem Upstream-Profil-Service nach einem der folgenden Kriterien aggregiert, bevor sie an Facebook gesendet werden:
 
-* Anzahl der Datensätze (maximal 10.000) oder
+* Anzahl der Datensätze (höchstens 10.000) oder
 * Zeitfenster-Intervall (30 Minuten)
 
-Der Schwellenwert, der von den oben genannten zuerst erreicht wird, löst einen Export nach Facebook aus. Im Dashboard [!DNL Facebook Custom Audiences] werden möglicherweise Zielgruppen aus Experience Platform in Schritten von 10.000 Datensätzen angezeigt. Es kann sein, dass alle 10 bis 15 Minuten 10.000 Datensätze angezeigt werden, da die Daten schneller verarbeitet und aggregiert werden als durch das 30-minütige Exportintervall vorgesehen. Außerdem werden sie schneller gesendet, etwa alle 10 bis 15 Minuten, bis alle Datensätze verarbeitet wurden. Wenn für einen Batch von 10.000 Datensätzen nicht genügend Datensätze vorhanden sind, wird die aktuelle Datensatzanzahl gesendet, sobald der Schwellenwert des Zeitfensters erreicht wird. Also werden möglicherweise auch kleinere Batches an Facebook gesendet.
+Der Schwellenwert, der von den oben genannten zuerst erreicht wird, löst einen Export nach Facebook aus. In der [!DNL Facebook Custom Audiences] Dashboard können Sie sehen, dass Zielgruppen aus der Experience Platform in 10.000 Schritten eingehen. Es kann vorkommen, dass alle 10-15 Minuten 10.000 Datensätze angezeigt werden, da die Daten schneller verarbeitet und aggregiert werden als das 30-minütige Exportintervall, und schneller gesendet werden. Etwa alle 10-15 Minuten, bis alle Datensätze verarbeitet wurden. Wenn die Datensätze für einen 10.000-Batch nicht ausreichen, wird die aktuelle Datensatzanzahl so gesendet, wie es der Zeitfensterschwellenwert erreicht. So werden möglicherweise auch kleinere Batches an Facebook gesendet.
 
 Ein weiteres Beispiel ist das [HTTP-API-Ziel](/help/destinations/catalog/streaming/http-destination.md), das mit `maxUsersPerRequest: 10` über eine Richtlinie zur *[Aggregation nach bestem Bemühen](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* verfügt. Das bedeutet, dass maximal zehn Profile aggregiert werden, bevor ein HTTP-Aufruf an dieses Ziel gesendet wird. Experience Platform versucht jedoch, Profile an das Ziel zu senden, sobald der Ziel-Service aktualisierte Neubewertungsinformationen von einem Upstream-Service erhält.
 
