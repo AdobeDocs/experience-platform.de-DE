@@ -3,8 +3,9 @@ keywords: Experience Platform; Startseite; beliebte Themen; OneTrust; onetrust; 
 solution: Experience Platform
 title: Übersicht über den Connector für OneTrust-Integrationsquellen
 description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche eine OneTrust-Integration mit Adobe Experience Platform verbinden.
+last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: f2229d4d-8aa6-483a-9156-403309f80007
-source-git-commit: 9846dc24321d7b32a110cfda9df3511b1e3a82ed
+source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
 workflow-type: tm+mt
 source-wordcount: '174'
 ht-degree: 55%
