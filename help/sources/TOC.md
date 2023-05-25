@@ -4,9 +4,9 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
-source-git-commit: 1a6282104af60d66c54bfb20c3c4e8eb74427461
+source-git-commit: f93ee2bc10135fee0c2d77629ee10901010b744b
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '979'
 ht-degree: 99%
 
 ---
@@ -87,6 +87,7 @@ ht-degree: 99%
       - [Oracle-Connector](connectors/databases/oracle.md)
       - [Phoenix-Connector](connectors/databases/phoenix.md)
       - [PostgreSQL-Connector](connectors/databases/postgres.md)
+      - [Snowflake Streaming-Connector](connectors/databases/snowflake-streaming.md)
       - [Snowflake-Connector](connectors/databases/snowflake.md)
       - [Teradata Vantage-Connector](connectors/databases/teradata-vantage.md)
    - E-Commerce {#ecommerce}
@@ -163,6 +164,7 @@ ht-degree: 99%
          - [Oracle](tutorials/api/create/databases/oracle.md)
          - [Phoenix](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
+         - [Snowflake Streaming](tutorials/api/create/databases/snowflake-streaming.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
