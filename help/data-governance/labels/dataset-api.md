@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Verwalten von Datennutzungskennzeichnungen für Datensätze mithilfe von APIs
 description: Mit der Datensatz-Service-API können Sie Nutzungsbezeichnungen für Datensätze anwenden und bearbeiten. Sie gehört zu den Datenkatalogfunktionen von Adobe Experience Platform, ist jedoch von der Katalog-Service-API getrennt, die Datensatz-Metadaten verwaltet.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 1f7a1bcf5aaf694ca2d3416c9c98f37b66adc69f
+source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
 workflow-type: tm+mt
-source-wordcount: '1153'
-ht-degree: 52%
+source-wordcount: '1151'
+ht-degree: 50%
 
 ---
 
@@ -103,7 +103,7 @@ Die nachstehende Beispielanfrage zur POST aktualisiert den gesamten Datensatz mi
 
 >[!NOTE]
 >
->Wenn derzeit Beschriftungen für den betreffenden Datensatz vorhanden sind, können neue Beschriftungen nur über eine PUT-Anfrage hinzugefügt werden. Dazu ist ein `If-Match` -Kopfzeile. Nachdem Kennzeichnungen zu einem Datensatz hinzugefügt wurden, wird ihm ein `etag`-Wert zugewiesen, mit dem die Kennzeichnungen zu einem späteren Zeitpunkt aktualisiert oder entfernt werden können.
+>Wenn derzeit Beschriftungen für den betreffenden Datensatz vorhanden sind, können neue Beschriftungen nur über eine PUT-Anfrage hinzugefügt werden. Dazu ist ein `If-Match` -Kopfzeile. Nachdem einem Datensatz Beschriftungen hinzugefügt wurden, wird die neueste `etag` -Wert erforderlich, um die Beschriftungen zu einem späteren Zeitpunkt zu aktualisieren oder zu entfernen.
 
 Um die neueste Version der Datensatzkennzeichnungsentität abzurufen, stellen Sie eine [GET-Anfrage](#look-up) an den `/datasets/{DATASET_ID}/labels`-Endpunkt. Der aktuelle Wert wird in der Antwort unter einer `etag`-Kopfzeile zurückgegeben. Beim Aktualisieren vorhandener Datensatzkennzeichnungen sollten Sie zunächst eine Suchanfrage für den Datensatz durchführen, um den neuesten `etag`-Wert abzurufen, bevor Sie diesen Wert in der `If-Match`-Kopfzeile Ihrer nachfolgenden PUT-Anfrage verwenden.
 

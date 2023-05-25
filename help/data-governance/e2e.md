@@ -2,7 +2,7 @@
 title: Data Governance – End-to-End-Handbuch
 description: Befolgen Sie den vollständigen Prozess zur Durchsetzung von Datennutzungsbeschränkungen für Felder und Datensätze in Adobe Experience Platform.
 exl-id: f18ae032-027a-4c97-868b-e04753237c81
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
 workflow-type: tm+mt
 source-wordcount: '1881'
 ht-degree: 71%
