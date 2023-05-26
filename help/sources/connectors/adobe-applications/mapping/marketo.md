@@ -4,19 +4,14 @@ solution: Experience Platform
 title: Zuordnen von Feldern für die Marketo Engage-Quelle
 description: Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den Marketo-Datensätzen und den zugehörigen XDM-Feldern.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '889'
 ht-degree: 100%
 
 ---
 
 # [!DNL Marketo Engage]-Feldzuordnungen {#marketo-engage-field-mappings}
-
->[!CONTEXTUALHELP]
->id="platform_sources_marketo_mapping"
->title="Feldzuordnungen der Marketo Engage-Quelle"
->abstract="Um eine Quellverbindung zwischen Marketo und Platform herzustellen, müssen die Marketo-Quelldatenfelder ihren entsprechenden Ziel-XDM-Feldern zugeordnet werden, damit sie in Platform aufgenommen werden können."
 
 Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern der neun [!DNL Marketo]-Datensätze und den zugehörigen Experience-Datenmodell (XDM)-Feldern.
 

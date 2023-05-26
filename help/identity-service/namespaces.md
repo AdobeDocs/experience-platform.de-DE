@@ -2,9 +2,9 @@
 title: Identity Namespace - Überblick
 description: Identity-Namespaces sind Komponenten des Identity Service, die als Indikatoren für den Kontext dienen, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert "name@email.com"als E-Mail-Adresse oder "443522"als numerische CRM-ID.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 58fefcc0a590341922f0769a416e27cd1f13a617
+source-git-commit: fc886dc0d7abb1df76c12edc423bc788b443a788
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1719'
 ht-degree: 31%
 
 ---
@@ -48,7 +48,7 @@ Die folgenden Identitätstypen sind in [!DNL Platform]:
 | Geräte-ID | Geräte-IDs identifizieren Hardwaregeräte wie IDFA (iPhone und iPad), GAID (Android) und RIDA (Roku) und können von mehreren Personen in Haushalten gemeinsam genutzt werden. |
 | E-Mail Adresse | E-Mail-Adressen sind oft mit einer einzelnen Person verknüpft und können daher zur kanalübergreifenden Identifizierung dieser Person verwendet werden. Identitäten dieser Art beinhalten personenbezogene Daten (PII). Dies deutet darauf hin, dass [!DNL Identity Service] um den Wert sensibel zu behandeln. |
 | Nichtpersonenkennung | Nicht-Personen-IDs werden zum Speichern von Kennungen verwendet, die Namespaces erfordern, aber nicht mit einem Personen-Cluster verbunden sind. Beispielsweise eine Produkt-SKU, Daten, die sich auf Produkte, Organisationen oder Geschäfte beziehen. |
-| Partner-ID | Partner-IDs sind IDs, die von Datenpartnern zur Darstellung von Personen verwendet werden. Partner-IDs sind häufig pseudonym, sodass die wahre Identität einer Person nicht erkennbar ist und probabilistisch sein kann. In Real-time Customer Data Platform werden Partner-IDs primär für die erweiterte Zielgruppenaktivierung und Datenanreicherung und nicht für die Erstellung deterministischer Identitätsdiagrammverknüpfungen verwendet. |
+| Partner-ID [!BADGE Beta]{type=Informative} | Partner-IDs sind IDs, die von Datenpartnern zur Darstellung von Personen verwendet werden. Partner-IDs sind häufig pseudonym, sodass die wahre Identität einer Person nicht erkennbar ist und probabilistisch sein kann. In Real-time Customer Data Platform werden Partner-IDs primär für die erweiterte Zielgruppenaktivierung und Datenanreicherung und nicht für die Erstellung deterministischer Identitätsdiagrammverknüpfungen verwendet. |
 | Telefonnummer | Telefonnummern sind häufig mit einer einzelnen Person verknüpft und können daher zur kanalübergreifenden Identifizierung dieser Person verwendet werden. Identitäten dieser Art umfassen PII. Dies deutet darauf hin, dass [!DNL Identity Service] um den Wert sensibel zu behandeln. |
 
 ### Standard-Namespaces {#standard}

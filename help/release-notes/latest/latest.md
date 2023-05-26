@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise Mai 2023 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e705d6c38bc1a81ee5d2c31a3097e1dba8f5cf7f
+source-git-commit: fc886dc0d7abb1df76c12edc423bc788b443a788
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1361'
 ht-degree: 31%
 
 ---
@@ -117,7 +117,7 @@ Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren 
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Unterstützung für Partner-IDs in Adobe Experience Cloud-Anwendungen | Partner-IDs sind jetzt im Identity Service verfügbar. Partner-IDs sind IDs, die von Datenpartnern zur Darstellung von Personen verwendet werden. In Real-time Customer Data Platform werden Partner-IDs hauptsächlich für die erweiterte Zielgruppenaktivierung und Datenanreicherung verwendet. Partner-IDs werden nicht im Identitätsdiagramm gespeichert. Weitere Informationen finden Sie in der Dokumentation unter [Identitätstypen](../../identity-service/namespaces.md#identity-types). |
+| Unterstützung für Partner-IDs in Adobe Experience Cloud-Anwendungen [!BADGE Beta]{type=Informative} | Partner-IDs sind jetzt im Identity Service verfügbar. Partner-IDs sind IDs, die von Datenpartnern zur Darstellung von Personen verwendet werden. In Real-time Customer Data Platform werden Partner-IDs hauptsächlich für die erweiterte Zielgruppenaktivierung und Datenanreicherung verwendet. Partner-IDs werden nicht im Identitätsdiagramm gespeichert. Weitere Informationen finden Sie in der Dokumentation unter [Identitätstypen](../../identity-service/namespaces.md#identity-types). |
 
 Weitere Informationen zu Identity Service finden Sie im Abschnitt [Identity Service – Übersicht](../../identity-service/home.md)
 

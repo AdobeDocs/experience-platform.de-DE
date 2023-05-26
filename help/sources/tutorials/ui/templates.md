@@ -3,14 +3,19 @@ description: Erfahren Sie, wie Sie Vorlagen in der Adobe Experience Platform-Ben
 title: Erstellen eines Quellen-Datenflusses mithilfe von Vorlagen in der Benutzeroberfläche
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 91d6832231d75c9dd23e91a5f1152eac61558fc5
+source-git-commit: 41694a96272819652c7176793f94a2de620d1d7a
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1601'
 ht-degree: 59%
 
 ---
 
-# Erstellen eines Quellen-Datenflusses mithilfe von Vorlagen in der Benutzeroberfläche
+# Erstellen eines Quellen-Datenflusses mithilfe von Vorlagen in der Benutzeroberfläche {#create-a-sources-dataflow-using-templates-in-the-ui}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_marketo_mapping"
+>title="Vorlagen für Quellen in der Platform-Benutzeroberfläche"
+>abstract="Zu Vorlagen gehören automatisch generierte Assets wie Schemas, Datensätze, Identitäten, Zuordnungsregeln, Identitäts-Namespaces und Datenflüsse, die Sie beim Einbringen von Daten aus einer Quelle in Experience Platform verwenden können. Sie können automatisch generierte Assets zur Anpassung an Ihre Anwendungsfälle aktualisieren."
 
 >[!IMPORTANT]
 >
