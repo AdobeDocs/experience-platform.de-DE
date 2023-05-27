@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Tags
 solution: Data Collection
-source-git-commit: 24220c24af89e3eabc3d21854c1f70a418b2da59
+source-git-commit: c5cc36d9530ff6fbb52a1995844f495b38e938b3
 workflow-type: tm+mt
-source-wordcount: '984'
+source-wordcount: '985'
 ht-degree: 100%
 
 ---
@@ -234,6 +234,8 @@ ht-degree: 100%
       * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)
       * [!DNL Splunk] {#splunk}
          * [Übersicht](./extensions/server/splunk/overview.md)
+      * [!DNL Twitter] {#twitter}
+         * [Übersicht](./extensions/server/twitter/overview.md)
       * [!DNL Zendesk] Ereignis-API {#zendesk}
          * [Übersicht](./extensions/server/zendesk/overview.md)
 * Entwickeln von Erweiterungen {#extension-dev}

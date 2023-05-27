@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Data Governance – Übersicht
 description: Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. Die Funktion spielt in Experience Platform auf verschiedenen Ebenen eine wichtige Rolle, wie z.B. bei Katalogisierung, Ermittlung der Datenherkunft, Datennutzungsbezeichnung, Datennutzungsrichtlinien und Steuerung der Nutzung von Daten für Marketing-Aktionen
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: d45c813cf660d9bf738d09101536f1dfb41a1505
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1498'
 ht-degree: 90%
 
 ---
@@ -79,7 +79,7 @@ Weitere Informationen finden Sie in der Übersicht zu [Datennutzungskennzeichnun
 
 Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in [!DNL Experience Platform] ausführen bzw. nicht ausführen dürfen.
 
-Ein Beispiel für eine Marketing-Aktion könnte der Wunsch sein, einen Datensatz an den Service eines Drittanbieters zu exportieren. Gibt es eine Richtlinie, die erklärt, dass personenbezogene Daten (PII) nicht exportiert werden können, und wurde eine &quot;I&quot;-Bezeichnung (Identitätsdaten) auf den Datensatz angewendet, [!DNL Policy Service] verhindert jede Aktion, die diesen Datensatz an ein Drittanbieterziel exportiert. Wenn Sie versuchen, eine dieser Aktionen durchzuführen, sendet der Richtlinien-Service eine Meldung, die Sie darüber informiert, dass eine Datennutzungsrichtlinie verletzt wurde.
+Ein Beispiel für eine Marketing-Aktion könnte der Wunsch sein, einen Datensatz an den Service eines Drittanbieters zu exportieren. Gibt es eine Richtlinie, die erklärt, dass personenbezogene Daten (PII) nicht exportiert werden können, und wurde eine &quot;I&quot;-Bezeichnung (Identitätsdaten) auf die Feldebene oder den Datensatz angewendet, [!DNL Policy Service] verhindert jede Aktion, die diesen Datensatz an ein Drittanbieterziel exportiert. Wenn Sie versuchen, eine dieser Aktionen durchzuführen, sendet der Richtlinien-Service eine Meldung, die Sie darüber informiert, dass eine Datennutzungsrichtlinie verletzt wurde.
 
 Es sind zwei Richtlinientypen verfügbar:
 
