@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;
 title: (Beta) Mixpanel Source Connector - Übersicht
 description: Erfahren Sie, wie Sie Mixpanel über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
-source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '472'
-ht-degree: 32%
+ht-degree: 30%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 32%
 
 >[!NOTE]
 >
->Die [!DNL Mixpanel]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-gekennzeichneten Quellen.
+>Die [!DNL Mixpanel]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 

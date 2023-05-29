@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Apache Hive auf Azure HDInsights Source Connector - Übersicht
 description: Erfahren Sie, wie Sie Apache Hive auf Azure HDInsights mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
 exl-id: f55f9e9a-779e-426a-bca6-7567ea843698
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '275'
-ht-degree: 45%
+ht-degree: 41%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 45%
 
 >[!NOTE]
 >
->Der Apache Hive auf Azure HDInsights-Connector befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../home.md#terms-and-conditions), um weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren zu erhalten.
+>Der Apache Hive auf Azure HDInsights-Connector befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 

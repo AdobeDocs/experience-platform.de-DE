@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Que
 title: (Beta) Erstellen einer Mixpanel-Quellverbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie eine Quellverbindung für Mixpanel mithilfe der Adobe Experience Platform-Benutzeroberfläche erstellen.
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
-source-git-commit: 6b9e5da9e552d93ff174d1d65dabb0ffd3128c1a
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '874'
-ht-degree: 43%
+ht-degree: 41%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 43%
 
 >[!NOTE]
 >
->Die [!DNL Mixpanel]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-gekennzeichneten Quellen.
+>Die [!DNL Mixpanel]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
 
 In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Mixpanel] Quellverbindung über die Benutzeroberfläche von Adobe Experience Platform Platform.
 

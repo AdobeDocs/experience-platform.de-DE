@@ -5,10 +5,10 @@ title: Erstellen einer HP Vertica-Quellverbindung in der Benutzeroberfläche
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine HP Vertica-Quellverbindung erstellen.
 exl-id: d7315ad4-9250-4e66-be33-016efabb512e
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '495'
-ht-degree: 37%
+ht-degree: 35%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 37%
 
 >[!NOTE]
 >
-> Die HP [!DNL Vertica] -Connector befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions), um weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren zu erhalten.
+> Die HP [!DNL Vertica] -Connector befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
 
 Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, extern bezogene Daten auf geplanter Basis zu erfassen. In diesem Tutorial werden Schritte zum Erstellen einer HP beschrieben. [!DNL Vertica] Quell-Connector mit [!DNL Platform] -Benutzeroberfläche.
 

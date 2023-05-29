@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie SugarCRM über APIs oder die Benutzeroberflä
 badge: Beta
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 03fbc4e9-974d-494e-8463-756c96665fd5
-source-git-commit: 0cc4eab97dcd56d2b1d679cf5f35932976d22634
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '403'
-ht-degree: 43%
+ht-degree: 40%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 43%
 
 >[!NOTE]
 >
->Die [!DNL SugarCRM]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-gekennzeichneten Quellen.
+>Die [!DNL SugarCRM]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 

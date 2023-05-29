@@ -3,10 +3,10 @@ keywords: Experience Platform;Zendesk;Quellen;Connectoren;Quell-Connectoren;Sour
 title: Erstellen einer Zendesk-Quellverbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Zendesk-Quellverbindung erstellen.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '794'
-ht-degree: 36%
+ht-degree: 35%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 36%
 
 >[!NOTE]
 >
->Die [!DNL Zendesk]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-gekennzeichneten Quellen.
+>Die [!DNL Zendesk]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
 
 In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Zendesk] Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche.
 

@@ -2,10 +2,10 @@
 title: Erstellen einer Quellverbindung zu SugarCRM-Konten und -Kontakten über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung zu SugarCRM-Konten und -Kontakten erstellen.
 exl-id: 45840d7e-4c19-4720-8629-be446347862d
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '779'
-ht-degree: 41%
+ht-degree: 39%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 41%
 
 >[!NOTE]
 >
->Die [!DNL SugarCRM Accounts & Contacts]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-gekennzeichneten Quellen.
+>Die [!DNL SugarCRM Accounts & Contacts]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
 
 In diesem Tutorial werden Schritte zum Erstellen eines [!DNL SugarCRM Accounts & Contacts] Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche.
 

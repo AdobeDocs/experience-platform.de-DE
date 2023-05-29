@@ -5,10 +5,10 @@ title: Erstellen einer Apache HDFS-Quellverbindung in der Benutzeroberfläche
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung des Apache Hadoop Distributed File System erstellen.
 exl-id: 3b8bf210-13b6-44e6-9090-152998f67452
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '492'
-ht-degree: 37%
+ht-degree: 35%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 37%
 
 >[!NOTE]
 >
->Die [!DNL Apache] Der HDFS-Connector befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions), um weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren zu erhalten.
+>Die [!DNL Apache] Der HDFS-Connector befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
 
 Quell-Connectoren in [!DNL Adobe Experience Platform] ermöglichen die Erfassung von extern bezogenen Daten auf geplanter Basis. In diesem Tutorial werden Schritte zum Authentifizieren eines [!DNL Apache Hadoop Distributed File System] (nachstehend &quot;HDFS&quot; genannt) Quell-Connector, der den [!DNL Platform] -Benutzeroberfläche.
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: HP Vertica Source Connector - Überblick
 description: Erfahren Sie, wie Sie HP Vertica über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 5785d8bb-ccda-4d53-a79b-030923e3ae81
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '215'
-ht-degree: 44%
+ht-degree: 39%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 44%
 
 >[!NOTE]
 >
->Die [!DNL HP Vertica] -Connector befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../home.md#terms-and-conditions), um weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren zu erhalten.
+>Die [!DNL HP Vertica] -Connector befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
 
 Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie [!DNL Microsoft], MySQL und [!DNL Azure]. Sie können Ihre Daten aus diesen Systemen in [!DNL Platform].
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über den Quell-Connector für IBM DB2
 description: Erfahren Sie, wie Sie IBM DB2 mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
 exl-id: 939e0151-fc07-4963-8ea2-0432dee713eb
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '229'
-ht-degree: 31%
+ht-degree: 26%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 31%
 
 >[!NOTE]
 >
->Der IBM DB2-Connector befindet sich in der Betaphase. Siehe [Quellen – Übersicht](../../home.md#terms-and-conditions), um weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren zu erhalten.
+>Der IBM DB2-Connector befindet sich in der Betaphase. Siehe [Quellen - Übersicht](../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
 
 Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie [!DNL Microsoft], MySQL und [!DNL Azure]. Sie können Ihre Daten aus diesen Systemen in [!DNL Platform].
 

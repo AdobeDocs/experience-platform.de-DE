@@ -5,10 +5,10 @@ title: Erstellen eines Apache Hive auf Azure HDInsights Source Connection in der
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung mit Apache Hive auf Azure HDInsights erstellen.
 exl-id: 3eb3cb02-9867-451a-b847-ab895310eedf
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '486'
-ht-degree: 52%
+ht-degree: 50%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 52%
 
 >[!NOTE]
 >
-> Die [!DNL Apache Hive] on [!DNL Azure HDInsights] -Connector befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions), um weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren zu erhalten.
+> Die [!DNL Apache Hive] on [!DNL Azure HDInsights] -Connector befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
 
 Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, extern bezogene Daten auf geplanter Basis zu erfassen. In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Apache Hive] on [!DNL Azure HDInsights] Quell-Connector mit [!DNL Platform] -Benutzeroberfläche.
 

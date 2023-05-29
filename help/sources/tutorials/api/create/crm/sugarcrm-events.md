@@ -2,10 +2,10 @@
 title: Erstellen Sie eine Quellverbindung und einen Datenfluss für SugarCRM-Ereignisse mithilfe der Flow Service-API.
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Adobe Experience Platform mit SugarCRM-Ereignissen verbinden.
 exl-id: 12d08010-569c-4111-ba95-697c6ce6f637
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '2009'
-ht-degree: 61%
+ht-degree: 60%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 61%
 
 >[!NOTE]
 >
->Die [!DNL SugarCRM Events]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-gekennzeichneten Quellen.
+>Die [!DNL SugarCRM Events]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
 
 Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer [!DNL SugarCRM Events] Quellverbindung und Erstellen eines Datenflusses zum [[!DNL SugarCRM]](https://www.sugarcrm.com/) Ereignisdaten an Adobe Experience Platform mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

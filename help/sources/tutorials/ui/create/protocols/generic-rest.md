@@ -3,10 +3,10 @@ keywords: Experience Platform; Startseite; beliebte Themen; generische REST-API
 title: Erstellen einer generischen REST API-Quellverbindung in der Benutzeroberfläche
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine generische REST-API-Quellverbindung erstellen.
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '637'
-ht-degree: 38%
+ht-degree: 36%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 38%
 
 >[!NOTE]
 >
-> Die [!DNL Generic REST API]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions), um weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren zu erhalten.
+> Die [!DNL Generic REST API]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
 
 In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Generic REST API] Quell-Connector über die Adobe Experience Platform-Benutzeroberfläche.
 

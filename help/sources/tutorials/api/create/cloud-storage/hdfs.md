@@ -5,10 +5,10 @@ title: Erstellen einer Apache HDFS-Basisverbindung mithilfe der Flow Service-API
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API ein Apache Hadoop Distributed File System mit Adobe Experience Platform verbinden.
 exl-id: 04fa65db-073c-48e1-b981-425185ae08aa
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '461'
-ht-degree: 57%
+ht-degree: 55%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 57%
 
 >[!NOTE]
 >
->Der Apache HDFS-Connector befindet sich in der Betaphase. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions), um weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren zu erhalten.
+>Der Apache HDFS-Connector befindet sich in der Betaphase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 

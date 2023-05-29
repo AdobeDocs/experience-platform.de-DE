@@ -5,10 +5,10 @@ title: Erstellen einer IBM DB2-Quellverbindung in der Benutzeroberfläche
 type: Tutorial
 description: Erfahren Sie, wie Sie eine IBM DB2-Quellverbindung mithilfe der Adobe Experience Platform-Benutzeroberfläche erstellen.
 exl-id: 69c99f94-9cb9-43ff-9315-ce166ab35a60
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '536'
-ht-degree: 34%
+ht-degree: 32%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 34%
 
 >[!NOTE]
 >
-> Der IBM DB2-Connector befindet sich in der Betaphase. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions), um weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren zu erhalten.
+> Der IBM DB2-Connector befindet sich in der Betaphase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
 
 Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, extern bezogene Daten auf geplanter Basis zu erfassen. In diesem Tutorial werden die Schritte zum Erstellen eines Quell-Connectors für IBM DB2 (im Folgenden &quot;DB2&quot; genannt) mithilfe des [!DNL Platform] -Benutzeroberfläche.
 

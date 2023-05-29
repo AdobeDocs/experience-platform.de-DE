@@ -2,10 +2,10 @@
 title: Erstellen einer Quellverbindung zu SugarCRM Events in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung mit SugarCRM-Ereignissen erstellen.
 exl-id: db346ec0-2c57-4b82-8a39-f15d4cd377d4
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '663'
-ht-degree: 47%
+ht-degree: 45%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 47%
 
 >[!NOTE]
 >
->Die [!DNL SugarCRM Events]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen – Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-gekennzeichneten Quellen.
+>Die [!DNL SugarCRM Events]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
 
 In diesem Tutorial werden Schritte zum Erstellen eines [!DNL SugarCRM Events] Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche.
 
