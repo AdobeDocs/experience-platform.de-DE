@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise Mai 2023 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fc886dc0d7abb1df76c12edc423bc788b443a788
+source-git-commit: 43f505c6d3871e6ebc7d644aef6ec3b71f9fc2bc
 workflow-type: tm+mt
-source-wordcount: '1361'
-ht-degree: 31%
+source-wordcount: '1559'
+ht-degree: 36%
 
 ---
 
@@ -33,9 +33,11 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [Data Governance](#data-governance)
 - [Datenaufnahme](#data-ingestion)
 - [Ziele](#destinations)
+- [Experience-Datenmodell (XDM)](#xdm)
 - [Identity Service](#identity-service)
 - [Query Service](#query-service)
 - [Quellen](#sources)
+
 
 ## Datenerfassung {#data-collection}
 
@@ -108,6 +110,24 @@ Weitere Informationen zur Datenerfassung finden Sie im Abschnitt [Datenerfassung
 - Es wurde eine Einschränkung im SFTP-Cloud-Speicher-Ziel (Beta) behoben, durch die Benutzer den Wert des Port-Parameters nicht anpassen konnten. Der Wert kann jetzt bearbeitet werden, wenn eine (Beta-)SFTP-Zielverbindung über die [API](/help/destinations/api/activate-segments-file-based-destinations.md) oder [Benutzeroberfläche](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information).
 
 Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
+
+## Experience-Datenmodell (XDM) {#xdm}
+
+XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definitionen (Schemas) für Daten bereitstellt, die in Adobe Experience Platform importiert werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
+
+**Aktualisierte XDM-Komponenten**
+
+| Typ der Komponente | Name | Beschreibung |
+| --- | --- | --- |
+| Feldergruppe | (Mehrfach) | Mehrere Felder für [Angebotselement](https://github.com/adobe/xdm/pull/1720/files) wurden aktualisiert, um eine doppelte Hierarchie aus dem Schema zu entfernen. |
+| Feldergruppe | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1721/files) | Die `partnerProspect` -Option für Metadaten-Tags wurde zum [!UICONTROL XDM Individual Prospect Profile] -Klasse. |
+| Datentyp | (Mehrfach) | Es wurden mehrere Felder für die [!UICONTROL Informationen zu Mediendetails] Datentyp. |
+| Datentyp | [[!UICONTROL Informationen zu Sitzungsdetails]](https://github.com/adobe/xdm/pull/1716/files) | Es wurde ein neues Feld hinzugefügt, das angibt, ob eine Umleitung stattgefunden hat. |
+| Feldergruppe | [[!UICONTROL Details zur MediaAnalytics-Interaktion]](https://github.com/adobe/xdm/pull/1716/files) | Ein neues Feld für Medienberichte wurde hinzugefügt - |
+
+{style="table-layout:auto"}
+
+Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md).
 
 ## Identity Service {#identity-service}
 
