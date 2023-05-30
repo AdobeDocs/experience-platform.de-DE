@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise Mai 2023 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 43f505c6d3871e6ebc7d644aef6ec3b71f9fc2bc
+source-git-commit: c2b9f01453ecbc3348675e59b75c81280eded5f8
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1565'
 ht-degree: 36%
 
 ---
@@ -121,7 +121,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 | --- | --- | --- |
 | Feldergruppe | (Mehrfach) | Mehrere Felder für [Angebotselement](https://github.com/adobe/xdm/pull/1720/files) wurden aktualisiert, um eine doppelte Hierarchie aus dem Schema zu entfernen. |
 | Feldergruppe | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1721/files) | Die `partnerProspect` -Option für Metadaten-Tags wurde zum [!UICONTROL XDM Individual Prospect Profile] -Klasse. |
-| Datentyp | (Mehrfach) | Es wurden mehrere Felder für die [!UICONTROL Informationen zu Mediendetails] Datentyp. |
+| Datentyp | (Mehrfach) | Es wurden mehrere Felder für die [[!UICONTROL Informationen zu Mediendetails]](https://github.com/adobe/xdm/pull/1716/files) Datentyp. |
 | Datentyp | [[!UICONTROL Informationen zu Sitzungsdetails]](https://github.com/adobe/xdm/pull/1716/files) | Es wurde ein neues Feld hinzugefügt, das angibt, ob eine Umleitung stattgefunden hat. |
 | Feldergruppe | [[!UICONTROL Details zur MediaAnalytics-Interaktion]](https://github.com/adobe/xdm/pull/1716/files) | Ein neues Feld für Medienberichte wurde hinzugefügt - |
 
