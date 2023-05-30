@@ -1,14 +1,11 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Streaming-Verbindung; Streaming-Verbindung erstellen; Handbuch; Tutorial; Erstellen einer Streaming-Verbindung; Streaming-Erfassung; Erfassung;
-solution: Experience Platform
 title: Erstellen einer HTTP-API-Streaming-Verbindung über die Benutzeroberfläche
-type: Tutorial
 description: Diese Anleitung für die Benutzeroberfläche hilft Ihnen beim Erstellen einer Streaming-Verbindung für Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: de721d204cda8e55c72ac5f530b89b2275d94306
 workflow-type: tm+mt
-source-wordcount: '1058'
-ht-degree: 27%
+source-wordcount: '1000'
+ht-degree: 28%
 
 ---
 
@@ -71,7 +68,7 @@ Nach dem Hochladen Ihrer Daten können Sie die rechte Seite der Benutzeroberflä
 
 Die [!UICONTROL Zuordnung] -Schritt angezeigt und stellt eine Schnittstelle zum Zuordnen der Quelldaten zu einem Platform-Datensatz bereit.
 
-Parquet-Dateien müssen XDM-konform sein und erfordern keine manuelle Konfiguration der Zuordnung. Bei CSV-Dateien ist es erforderlich, die Zuordnung explizit zu konfigurieren. Sie können jedoch festlegen, welche Quelldatenfelder zugeordnet werden sollen. JSON-Dateien, die als XDM-Beschwerde gekennzeichnet sind, erfordern keine manuelle Konfiguration. Wenn es jedoch nicht als XDM-kompatibel markiert ist, müssen Sie die Zuordnung explizit konfigurieren.
+Die [!DNL HTTP API] -Quelle unterstützt die Erfassung von JSON-Dateien. JSON-Dateien erfordern keine manuelle Konfiguration, wenn sie als XDM-Beschwerde gekennzeichnet sind. Ist dies nicht der Fall, müssen Sie die Zuordnung explizit konfigurieren.
 
 Wählen Sie einen Datensatz aus, in den eingehende Daten aufgenommen werden sollen. Sie können entweder einen vorhandenen Datensatz verwenden oder einen neuen erstellen.
 
@@ -88,7 +85,6 @@ Um einen vorhandenen Datensatz zu verwenden, wählen Sie **[!UICONTROL Vorhanden
 ![existing-dataset](../../../../images/tutorials/create/http/existing-dataset.png)
 
 ### Standardfelder zuordnen
-
 
 Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Umfassende Schritte zur Verwendung der Mapper-Oberfläche und der berechneten Felder finden Sie im Abschnitt [Handbuch zur Datenvorbereitung-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
 
