@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definieren von XDM-Feldern in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie XDM-Felder in der Experience Platform-Benutzeroberfläche definieren.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
+source-git-commit: 765079f084dce316d321fbac5aee9e387373ba00
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1505'
 ht-degree: 4%
 
 ---
@@ -86,7 +86,7 @@ Bei der Definition eines neuen Felds werden in der rechten Leiste je nach **[!UI
 
 | Feldeigenschaft | Kompatible Typen | Beschreibung |
 | --- | --- | --- |
-| [!UICONTROL Standardwert] | [!UICONTROL Zeichenfolge], [!UICONTROL Double], [!UICONTROL Lang], [!UICONTROL Ganzzahl], [!UICONTROL Short], [!UICONTROL Byte], [!UICONTROL Boolesch] | Ein Standardwert, der diesem Feld zugewiesen wird, wenn während der Aufnahme kein anderer Wert angegeben wird. Dieser Wert muss dem ausgewählten Feldtyp entsprechen. |
+| [!UICONTROL Standardwert] | [!UICONTROL Zeichenfolge], [!UICONTROL Double], [!UICONTROL Lang], [!UICONTROL Ganzzahl], [!UICONTROL Short], [!UICONTROL Byte], [!UICONTROL Boolesch] | Ein Standardwert, der diesem Feld zugewiesen wird, wenn während der Erfassung kein anderer Wert angegeben wird. Dieser Wert muss dem ausgewählten Feldtyp entsprechen.<br><br>Die Standardwerte werden zum Zeitpunkt der Aufnahme nicht im Datensatz gespeichert, da sie sich im Laufe der Zeit ändern können. Die im Schema festgelegten Standardwerte werden von nachgelagerten Platform-Diensten und -Anwendungen abgeleitet, wenn sie die Daten aus dem Datensatz lesen. Wenn das Attribut beispielsweise bei der Abfrage der Daten mit Query Service einen NULL-Wert hat, der Standardwert jedoch auf `5` auf Schemaebene wird erwartet, dass Query Service `5` anstelle von NULL. Beachten Sie, dass dieses Verhalten derzeit nicht für alle AEP-Dienste einheitlich ist. |
 | [!UICONTROL Muster] | [!UICONTROL String] | A [regulärer Ausdruck](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) dass der Wert für dieses Feld übereinstimmen muss, damit er während der Aufnahme akzeptiert werden kann. |
 | [!UICONTROL Format] | [!UICONTROL String] | Wählen Sie aus einer Liste vordefinierter Formate für Zeichenfolgen aus, denen der Wert entsprechen muss. Zu den verfügbaren Formaten gehören: <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL URI-Referenz]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL Mindestlänge] | [!UICONTROL String] | Die Mindestanzahl von Zeichen, die die Zeichenfolge enthalten muss, damit der Wert während der Aufnahme akzeptiert wird. |
