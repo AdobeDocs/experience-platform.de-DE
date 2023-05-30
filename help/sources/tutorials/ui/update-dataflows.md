@@ -5,10 +5,10 @@ solution: Experience Platform
 title: Aktualisieren eines Datenflusses für die Quellverbindung in der Benutzeroberfläche
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: cef5c203acf3318445399669336166e6627ebe66
 workflow-type: tm+mt
-source-wordcount: '724'
-ht-degree: 14%
+source-wordcount: '782'
+ht-degree: 13%
 
 ---
 
@@ -23,7 +23,12 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 * [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-## Aktualisieren von Datenflüssen
+## Aktualisieren von Datenflüssen {#update-dataflows}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_dataflows_daysRemaining"
+>title="Datensatzablauf"
+>abstract="Diese Spalte gibt die Anzahl der Tage an, die der Zieldatensatz vor seinem automatischen Ablauf vergangen ist.<br>Ein Datenfluss schlägt fehl, wenn der Zieldatensatz abgelaufen ist. Um zu verhindern, dass ein Datenfluss fehlschlägt, stellen Sie sicher, dass ein Zieldatensatz am richtigen Datum abläuft. Informationen zum Aktualisieren der Ablaufdaten finden Sie in der Dokumentation ."
 
 Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Auswählen **[!UICONTROL Datenflüsse]** aus der oberen Kopfzeile, um eine Liste der vorhandenen Datenflüsse anzuzeigen.
 
