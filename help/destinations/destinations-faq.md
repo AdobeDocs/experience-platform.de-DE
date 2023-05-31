@@ -3,10 +3,10 @@ keywords: Bestimmungsländer; Fragen; häufig gestellte Fragen; faq; Ziele-FAQ
 title: Häufig gestellte Fragen
 description: Antworten auf die am häufigsten gestellten Fragen zu Adobe Experience Platform-Zielen
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: abb6b598a2ec1f7589cb99204b6ccc2d4b55b5ec
 workflow-type: tm+mt
-source-wordcount: '864'
-ht-degree: 9%
+source-wordcount: '1364'
+ht-degree: 6%
 
 ---
 
@@ -104,3 +104,53 @@ Detaillierte Erläuterungen zu den Anforderungen an die ID-Zuordnung finden Sie 
 **Welche Identitäten kann ich aktivieren? [!DNL LinkedIn]?**
 
 [!DNL LinkedIn Matched Audiences] unterstützt die Aktivierung der folgenden Identitäten: gehashte E-Mails, [!DNL GAID]und [!DNL IDFA].
+
+## Personalisierung auf derselben Seite und auf der nächsten Seite über die Adobe Target- und benutzerdefinierten Personalisierungsziele {#same-next-page-personalization}
+
+**Muss ich das Experience Platform Web SDK verwenden, um Zielgruppen und Attribute an Adobe Target zu senden?**
+
+Nein, [Web SDK](../edge/home.md) ist nicht erforderlich, um Zielgruppen für [Adobe Target](catalog/personalization/adobe-target-connection.md).
+
+Wenn [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=en) anstelle des Web SDK verwendet wird, wird nur die Personalisierung der nächsten Sitzung unterstützt.
+
+Für [Personalisierung auf derselben Seite und auf der nächsten Seite](ui/activate-edge-personalization-destinations.md) Anwendungsbeispiele verwenden, müssen Sie entweder [Web SDK](../edge/home.md) oder [Edge Network Server-API](../server-api/overview.md). Weitere Informationen finden Sie in der Dokumentation unter [Aktivieren von Zielgruppen für Edge-Ziele](ui/activate-edge-personalization-destinations.md) für weitere Implementierungsdetails.
+
+**Gibt es eine Begrenzung für die Anzahl der Attribute, die ich von Real-time Customer Data Platform an Adobe Target oder ein benutzerspezifisches Personalisierungsziel senden kann?**
+
+Ja, Personalisierungsfälle für die gleiche Seite und die nächste Seite unterstützen maximal 30 Attribute pro Sandbox, wenn Zielgruppen für Adobe Target- oder benutzerdefinierte Personalisierungsziele aktiviert werden. Weitere Informationen zu AktivierungsLimits finden Sie in der [Limits-Dokumentation](guardrails.md#edge-destinations-activation).
+
+**Welche Attributtypen werden für die Aktivierung unterstützt (z. B. Arrays, Maps usw.)?**
+
+Derzeit werden für die Aktivierung nur Attribute der Leaf-Ebene unterstützt.
+
+<!-- **Is there a limit on the number of audiences that can be activated to Adobe Target and Custom Personalization destinations?**
+
+Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more information on activation guardrails, see the [default guardrails for activation](guardrails.md#edge-destinations-activation). -->
+
+**Wie lange dauert es, bis diese Zielgruppe für Anwendungsfälle der Kantensegmentierung verfügbar ist, nachdem ich in Experience Platform eine Zielgruppe erstellt habe?**
+
+Zielgruppendefinitionen werden an die [Edge Network](../edge/home.md) in bis zu einer Stunde. Wenn jedoch innerhalb dieser ersten Stunde eine Zielgruppe aktiviert wird, können einige Besucher verpasst werden, die sich für die Zielgruppe qualifiziert hätten.
+
+**Wo kann ich die aktivierten Attribute in Adobe Target sehen?**
+
+Attribute stehen in Target zur Verwendung zur Verfügung [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) und [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=de) Angebote.
+
+**Kann ich ein Ziel ohne Datastream erstellen und dann zu einem späteren Zeitpunkt demselben Ziel einen Datastream hinzufügen?**
+
+Dies wird derzeit nicht über die Benutzeroberfläche &quot;Ziele&quot;unterstützt. Wenn Sie in diesem Fall Hilfe benötigen, wenden Sie sich bitte an Ihren Kundenbetreuer bei der Adobe.
+
+**Was passiert, wenn ich ein Adobe Target-Ziel lösche?**
+
+Wenn Sie ein Ziel löschen, werden alle Zielgruppen und Attribute, die unter dem Ziel zugeordnet sind, aus Adobe Target gelöscht und auch aus dem Edge-Netzwerk entfernt.
+
+**Funktioniert die Integration mit der Edge Network Server-API?**
+
+Ja, die Edge Network Server-API funktioniert mit dem benutzerdefinierten Personalisierungsziel. Da Profilattribute möglicherweise vertrauliche Daten enthalten, müssen Sie zum Schutz dieser Daten für das benutzerdefinierte Personalisierungsziel die Edge Network Server-API für die Datenerfassung verwenden. Darüber hinaus müssen alle API-Aufrufe in einer [authentifizierter Kontext](../server-api/authentication.md).
+
+**Ich kann nur eine Zusammenführungsrichtlinie haben, die aktiv ist. Kann ich Zielgruppen erstellen, die eine andere Zusammenführungsrichtlinie verwenden und diese dennoch als Streaming-Segmente an Adobe Target senden?**
+
+Nein. Alle Zielgruppen, die Sie für Adobe Target aktivieren möchten, müssen eine aktive On-Edge-Funktion verwenden [Zusammenführungsrichtlinie](../profile/merge-policies/ui-guide.md).
+
+**Werden DULE (Data Usage Labeling and Enforcement) und Einverständnisrichtlinien durchgesetzt?**
+
+Ja. Die [Data Governance und Einverständnisrichtlinien](../data-governance/home.md) Die Aktivierung der ausgewählten Attribute wird durch die erstellten und mit den ausgewählten Marketing-Aktionen verknüpften bestimmt.
