@@ -3,7 +3,7 @@ title: Rendern von personalisierten Inhalten mit dem Adobe Experience Platform W
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Adobe Experience Platform Web SDK rendern.
 keywords: personalization;renderDecisions;sendEvent;DecisionScopes;propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: c75a8bdeaba67259b5f4b4ce025d5e128d763040
+source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
 workflow-type: tm+mt
 source-wordcount: '962'
 ht-degree: 4%
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 Das Adobe Experience Platform Web SDK unterstützt das Abrufen personalisierter Inhalte aus Personalisierungslösungen von Adoben, darunter [Adobe Target](https://business.adobe.com/de/products/target/adobe-target.html), [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=de) und [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=de).
 
-Darüber hinaus ermöglicht das Web SDK Personalisierungsfunktionen für die gleiche Seite und die nächste Seite über Adobe Experience Platform-Personalisierungsziele, z. B. [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) und [Benutzerdefinierte Personalisierungsverbindung](../../destinations/catalog/personalization/custom-personalization.md). Informationen zum Konfigurieren der Experience Platform für die Personalisierung der gleichen Seite und der nächsten Seite finden Sie unter [dediziertes Handbuch](../../destinations/ui/configure-personalization-destinations.md).
+Darüber hinaus ermöglicht das Web SDK Personalisierungsfunktionen für die gleiche Seite und die nächste Seite über Adobe Experience Platform-Personalisierungsziele, z. B. [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) und [Benutzerdefinierte Personalisierungsverbindung](../../destinations/catalog/personalization/custom-personalization.md). Informationen zum Konfigurieren der Experience Platform für die Personalisierung der gleichen Seite und der nächsten Seite finden Sie unter [dediziertes Handbuch](../../destinations/ui/activate-edge-personalization-destinations.md).
 
 In Adobe Target erstellte Inhalte [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) und Adobe Journey Optimizer [Web-Campaign-Benutzeroberfläche](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) kann automatisch vom SDK abgerufen und gerendert werden. In Adobe Target erstellte Inhalte [Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=de) oder Offer decisioning kann nicht automatisch vom SDK gerendert werden. Stattdessen müssen Sie diesen Inhalt mit dem SDK anfordern und dann den Inhalt manuell selbst rendern.
 

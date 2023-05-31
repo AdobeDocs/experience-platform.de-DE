@@ -4,9 +4,9 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: 152786e5e994a88b19ca7af8815b33be5a732852
+source-git-commit: 991cd22bc28a72593512a36636806e6a8a4b2820
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1173'
 ht-degree: 86%
 
 ---
@@ -40,8 +40,7 @@ ht-degree: 86%
       * [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](./ui/activate-segment-streaming-destinations.md)
       * [Aktivieren von Zielgruppendaten für Exportziele von Streaming-Profilen](./ui/activate-streaming-profile-destinations.md)
       * [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](./ui/activate-batch-profile-destinations.md)
-      * [Aktivieren von Zielgruppendaten für Profilanforderungsziele](./ui/activate-profile-request-destinations.md)
-      * [Konfigurieren von Personalisierungszielen für die Personalisierung auf derselben Seite und auf der nächsten Seite](./ui/configure-personalization-destinations.md)
+      * [Aktivieren von Zielgruppendaten für Edge-Personalisierungsziele](./ui/activate-edge-personalization-destinations.md)
       * [(Beta) Exportieren von Dateien nach Bedarf in Batch-Ziele mithilfe der Experience Platform-Benutzeroberfläche](./ui/export-file-now.md)
       * [(Beta) Exportieren von Datensätzen mithilfe der Experience Platform-Benutzeroberfläche](./ui/export-datasets.md)
       * [(Beta) Verwenden Sie das XDM-Attribut der letzten Qualifikationszeit in den neuen Beta-Cloud-Speicherzielen](./ui/activate-last-qualification-time.md)

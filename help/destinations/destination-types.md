@@ -3,7 +3,7 @@ keywords: Ziele;Ziel;Zieltypen
 title: Zieltypen und Kategorien
 description: Erfahren Sie mehr über die verschiedenen Zieltypen und -kategorien in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
+source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
 workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 85%
@@ -61,7 +61,7 @@ Ziele von Segmentexporten erhalten Daten zu Segmenten von Experience Platform. D
 
 Zu den Edge-Personalisierungszielen in Experience Platform gehören [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) und das [benutzerdefinierte Personalisierungsziel](/help/destinations/catalog/personalization/custom-personalization.md). Mithilfe dieser Ziele können Sie Anwendungsfälle für die Personalisierung von der gleichen Seite und der nächsten Seite für Ihre Kunden aktivieren.
 
-Erfahren Sie mehr darüber, wie Sie [Personalisierungsziele für die Personalisierung der gleichen Seite und der nächsten Seite konfigurieren](/help/destinations/ui/configure-personalization-destinations.md).
+Erfahren Sie mehr darüber, wie Sie [Personalisierungsziele für die Personalisierung der gleichen Seite und der nächsten Seite konfigurieren](/help/destinations/ui/activate-edge-personalization-destinations.md).
 
 ## Ziele für Profil- und Segmentexport – Videoübersicht {#video}
 

@@ -3,33 +3,31 @@ keywords: benutzerdefinierte Personalisierung; Ziel; benutzerdefiniertes Ziel vo
 title: Benutzerdefinierte Personalisierungsverbindung
 description: Dieses Ziel bietet externen Personalisierungs-, Content-Management-Systemen, Anzeigen-Servern und anderen Programmen, die auf Ihrer Site ausgeführt werden, die Möglichkeit, Segmentinformationen von Adobe Experience Platform abzurufen. Dieses Ziel bietet Echtzeit-Personalisierung auf der Grundlage auf der Zugehörigkeit zu einem Benutzerprofilsegment.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 09e81093c2ed2703468693160939b3b6f62bc5b6
+source-git-commit: 1ffcbabe29994fb881ff622394d669c4340c94f1
 workflow-type: tm+mt
-source-wordcount: '1305'
-ht-degree: 59%
+source-wordcount: '879'
+ht-degree: 77%
 
 ---
+
 
 # Benutzerdefinierte Personalisierungsverbindung {#custom-personalization-connection}
 
 ## Ziel-Änderungsprotokoll {#changelog}
 
-Mit der Beta-Version der erweiterten **[!UICONTROL Benutzerdefinierte Personalisierung]** Ziel-Connector angezeigt werden, werden möglicherweise zwei **[!UICONTROL Benutzerdefinierte Personalisierung]** Karten im Zielkatalog.
+| Veröffentlichungsmonat | Aktualisierungstyp | Beschreibung |
+|---|---|---|
+| Mai 2023 | Aktualisierung der Funktionen und Dokumentation | Ab Mai 2023 wird die **[!UICONTROL Benutzerdefinierte Personalisierung]** Verbindungsunterstützung [attributbasierte Personalisierung](../../ui/activate-edge-personalization-destinations.md#map-attributes) und ist allgemein für alle Kunden verfügbar. |
 
-Die **[!UICONTROL Benutzerdefinierte Personalisierung mit Attributen]** -Connector befindet sich derzeit in der Beta-Phase und steht nur einer bestimmten Anzahl von Kunden zur Verfügung. Zusätzlich zu den Funktionen der **[!UICONTROL benutzerdefinierten Personalisierung]** fügt der Connector **[!UICONTROL Benutzerdefinierte Personalisierung mit Attributen]** dem Aktivierungs-Workflow einen optionalen [Zuordnungsschritt](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) hinzu, mit dem Sie Profilattribute Ihrem benutzerdefinierten Personalisierungsziel zuordnen können, was eine Attribut-basierte Personalisierung auf derselben Seite und auf der nächsten Seite ermöglicht.
+{style="table-layout:auto"}
 
 >[!IMPORTANT]
 >
->Profilattribute können vertrauliche Daten enthalten. Um diese Daten zu schützen, erfordert das Ziel **[!UICONTROL Benutzerdefinierte Personalisierung mit Attributen]**, dass für die Datenerfassung die [Edge Network Server-API](/help/server-api/overview.md) verwendet wird. Außerdem müssen alle Aufrufe der Server-API in einem [authentifizierten Kontext](../../../server-api/authentication.md) erfolgen.
+>Profilattribute können vertrauliche Daten enthalten. Um diese Daten zu schützen, muss die Variable **[!UICONTROL Benutzerdefinierte Personalisierung]** Für das Ziel müssen Sie die [Edge Network Server-API](/help/server-api/overview.md) beim Konfigurieren des Ziels für eine attributbasierte Personalisierung. Alle Server-API-Aufrufe müssen in einem [authentifizierter Kontext](../../../server-api/authentication.md).
 >
->Wenn Sie bereits Web SDK oder Mobile SDK für Ihre Integration verwenden, können Sie Attribute über die Server-API auf zwei Arten abrufen:
+><br>Wenn Sie bereits Web SDK oder Mobile SDK für Ihre Integration verwenden, können Sie Attribute über die Server-API abrufen, indem Sie eine serverseitige Integration hinzufügen.
 >
-> * Fügen Sie eine serverseitige Integration hinzu, die Attribute über die Server-API abruft.
-> * Aktualisieren Sie Ihre Client-seitige Konfiguration mit einem benutzerdefinierten JavaScript-Code, um Attribute über die Server-API abzurufen.
->
-> Wenn Sie die obigen Anforderungen nicht erfüllen, basiert die Personalisierung nur auf der Segmentzugehörigkeit, die mit dem Erlebnis der **[!UICONTROL Benutzerdefinierte Personalisierung]** Connector.
-
-![Bild der beiden Zielkarten für die benutzerdefinierte Personalisierung in einer Seitenansicht.](../../assets/catalog/personalization/custom-personalization/custom-personalization-side-by-side-view.png)
+><br>Wenn Sie die oben genannten Anforderungen nicht erfüllen, basiert die Personalisierung nur auf der Segmentzugehörigkeit.
 
 ## Übersicht {#overview}
 
@@ -41,35 +39,14 @@ Diese Integration basiert auf dem [Adobe Experience Platform Web SDK](../../../e
 
 >[!IMPORTANT]
 >
->Lesen Sie vor der Erstellung einer benutzerdefinierten Personalisierungsverbindung die Anleitung zum [Konfigurieren von Personalisierungszielen für die Personalisierung derselben Seite und der nächsten Seite](../../ui/configure-personalization-destinations.md). In dieser Anleitung werden die erforderlichen Konfigurationsschritte für die Anwendungsfälle der Personalisierung derselben Seite und der nächsten Seite für mehrere Experience Platform-Komponenten erläutert.
+>Lesen Sie vor der Erstellung einer benutzerdefinierten Personalisierungsverbindung das Handbuch zum [Aktivieren von Zielgruppendaten für Edge-Personalisierungsziele](../../ui/activate-edge-personalization-destinations.md). In dieser Anleitung werden die erforderlichen Konfigurationsschritte für die Anwendungsfälle der Personalisierung derselben Seite und der nächsten Seite für mehrere Experience Platform-Komponenten erläutert.
 
 ## Exporttyp und Häufigkeit {#export-type-frequency}
 
-**Profilanfrage**: Sie fordern alle Segmente an, die im benutzerdefinierten Personalisierungsziel für ein einzelnes Profil zugeordnet sind. Für verschiedene [Adobe-Datenerfassungsdatenströme](../../../edge/datastreams/overview.md) können verschiedene benutzerdefinierte Personalisierungsziele eingerichtet werden.
-
-## Anwendungsfälle {#use-cases}
-
-Die [!DNL Custom Personalization Connection] ermöglicht Ihnen die Verwendung eigener Plattformen für Personalisierungspartner (z. B. [!DNL Optimizely], [!DNL Pega]) sowie proprietären Systemen (z. B. internem CMS) zur Verfügung, während gleichzeitig die Datenerfassungs- und Segmentierungsfunktionen des Edge-Netzwerks der Experience Platform genutzt werden, um ein tieferes Kundenpersonalisierungs-Erlebnis zu erzielen.
-
-Die unten beschriebenen Anwendungsfälle umfassen sowohl die Personalisierung der Site als auch zielgruppengerechte On-site-Werbung.
-
-Um diese Anwendungsfälle zu aktivieren, benötigen Kunden eine schnelle, optimierte Methode zum Abrufen von Segmentinformationen aus der Experience Platform und zum Senden dieser Informationen an ihre vorgesehenen Systeme, die sie in der Experience Platform-Benutzeroberfläche als benutzerdefinierte Personalisierungsverbindungen konfiguriert haben.
-
-Bei diesen Systemen kann es sich um externe Personalisierungsplattformen, Content Management-Systeme, Adserver und andere Anwendungen handeln, die über die Web- und mobilen Eigenschaften von Kunden hinweg ausgeführt werden.
-
-### Personalisierung derselben Seite {#same-page}
-
-Ein Benutzer besucht eine Seite Ihrer Website. Der Kunde kann die aktuelle Seitenbesuchsinformationen (z. B. verweisende URL, Browsersprache, eingebettete Produktinformationen) verwenden, um die nächste Aktion/Entscheidung (z. B. Personalisierung) auszuwählen, indem er die benutzerdefinierte Personalisierungsverbindung für Plattformen ohne Adobe verwendet (z. B. [!DNL Pega], [!DNL Optimizely]usw.).
-
-### Personalisierung der nächsten Seite {#next-page}
-
-Ein Benutzer besucht Seite A auf Ihrer Website. Auf der Grundlage dieser Interaktion hat sich der Benutzer für eine Reihe von Segmenten qualifiziert. Der Benutzer klickt dann auf einen Link, der ihn von Seite A zu Seite B bringt. Die Segmente, für die sich der Benutzer während der vorherigen Interaktion auf Seite A qualifiziert hat, werden zusammen mit den durch den aktuellen Website-Besuch festgelegten Profilaktualisierungen verwendet, um die nächste Aktion/Entscheidung zu ermöglichen (z. B. welches Werbebanner dem Besucher angezeigt werden soll oder, im Fall von A/B-Tests, welche Version der Seite angezeigt werden soll).
-
-### Personalisierung der nächsten Sitzung {#next-session}
-
-Ein Benutzer besucht mehrere Seiten auf Ihrer Website. Auf der Grundlage dieser Interaktionen hat sich der Benutzer für eine Reihe von Segmenten qualifiziert. Der Benutzer beendet dann die aktuelle Browser-Sitzung.
-
-Am folgenden Tag kehrt der Benutzer zur gleichen Kundenwebsite zurück. Die Segmente, für die sie sich während der vorherigen Interaktion mit allen besuchten Webseiten qualifiziert hatten, sowie die durch den aktuellen Website-Besuch bestimmten Profilattribute werden zur Auswahl der nächsten Aktion/Entscheidung verwendet (z. B. welches Werbebanner dem Besucher angezeigt werden soll oder, im Fall von A/B-Tests, welche Version der Seite angezeigt werden soll).
+| Element | Typ | Anmerkungen |
+---------|----------|---------|
+| Exporttyp | **[!DNL Profile request]** | Sie fordern alle Segmente an, die im benutzerdefinierten Personalisierungsziel für ein einzelnes Profil zugeordnet sind. Für verschiedene [Adobe-Datenerfassungsdatenströme](../../../edge/datastreams/overview.md) können verschiedene benutzerdefinierte Personalisierungsziele eingerichtet werden. |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 ## Herstellen einer Verbindung mit der Datenbank {#connect}
 
@@ -106,7 +83,7 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klic
 > 
 >Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Profilen und Segmenten für Profilanfrageziele](../../ui/activate-profile-request-destinations.md).
+Lesen [Profile und Segmente aktivieren Edge-Personalisierungsziele](../../ui/activate-edge-personalization-destinations.md) für Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel.
 
 ## Exportierte Daten {#exported-data}
 
