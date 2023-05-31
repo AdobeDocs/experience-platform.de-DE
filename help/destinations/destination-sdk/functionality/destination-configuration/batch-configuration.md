@@ -1,10 +1,10 @@
 ---
 description: Erfahren Sie, wie Sie die Dateiexporteinstellungen für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Batch-Konfiguration
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: f2e04d6f96132aa5cee3602190375e0f3eb96c97
 workflow-type: tm+mt
-source-wordcount: '937'
-ht-degree: 18%
+source-wordcount: '1073'
+ht-degree: 16%
 
 ---
 
@@ -82,6 +82,7 @@ Die Werte, die Sie hier einrichten, werden im [Segmentexport planen](../../../ui
          ],
          "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
       },
+   "segmentGroupingEnabled": true
    }
 ```
 
@@ -97,6 +98,7 @@ Die Werte, die Sie hier einrichten, werden im [Segmentexport planen](../../../ui
 | `filenameConfig.allowedFilenameAppendOptions` | Zeichenfolge | *Erforderlich*. Liste der verfügbaren Dateinamenmakros, aus denen Benutzer auswählen können. Dadurch wird bestimmt, welche Elemente an exportierte Dateinamen angehängt werden (Segment-ID, Organisationsname, Datum und Uhrzeit des Exports usw.). Wenn `defaultFilename`sollten Sie darauf achten, dass Makros nicht dupliziert werden. <br><br>Unterstützte Werte: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Unabhängig von der Reihenfolge, in der Sie die Makros definieren, zeigt die Experience Platform-Benutzeroberfläche sie immer in der hier dargestellten Reihenfolge an. <br><br> Wenn `defaultFilename` leer ist, ist die `allowedFilenameAppendOptions` -Liste muss mindestens ein Makro enthalten. |
 | `filenameConfig.defaultFilenameAppendOptions` | Zeichenfolge | *Erforderlich*. Vorausgewählte Standardmakros für Dateinamen, die von Benutzern deaktiviert werden können.<br><br> Die Makros in dieser Liste sind eine Teilmenge der in `allowedFilenameAppendOptions`. |
 | `filenameConfig.defaultFilename` | Zeichenfolge | *Optional*. Definiert die standardmäßigen Dateinamenmakros für die exportierten Dateien. Diese können von Benutzern nicht überschrieben werden. <br><br>Jedes von `allowedFilenameAppendOptions` wird angehängt, nachdem die `defaultFilename` Makros. <br><br>Wenn `defaultFilename` leer ist, müssen Sie mindestens ein Makro in `allowedFilenameAppendOptions`. |
+| `segmentGroupingEnabled` | Boolesch | Definiert, ob die aktivierten Zielgruppen in einer oder mehreren Dateien je nach Zielgruppe exportiert werden sollen [Zusammenführungsrichtlinie](../../../../profile/merge-policies/overview.md). Unterstützte Werte: <ul><li>`true`: exportiert eine Datei pro Zusammenführungsrichtlinie.</li><li>`false`: exportiert eine Datei pro Zielgruppe, unabhängig von der Zusammenführungsrichtlinie. Dies ist das Standardverhalten. Sie können dasselbe Ergebnis erzielen, indem Sie diesen Parameter vollständig ausschließen.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -120,6 +122,8 @@ Verwenden Sie Dateinamenkonfigurationsmakros, um zu definieren, welche Namen der
 | `DATETIME` / `TIMESTAMP` | [!UICONTROL Datum und Uhrzeit] | `DATETIME` und `TIMESTAMP` beide definieren den Zeitpunkt der Erstellung der Datei, jedoch in verschiedenen Formaten. <br><br><ul><li>`DATETIME` verwendet das folgende Format: JJJJMMTT_HMMSS.</li><li>`TIMESTAMP` verwendet das 10-stellige Unix-Format. </li></ul> `DATETIME` und `TIMESTAMP` sich gegenseitig ausschließen und nicht gleichzeitig verwendet werden können. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
 | `CUSTOM_TEXT` | [!UICONTROL Benutzerdefinierter Text] | Benutzerdefinierter benutzerdefinierter Text, der in den Dateinamen eingefügt werden soll. Kann nicht in verwendet werden `defaultFilename`. | My_custom_text |
 | `TIMESTAMP` | [!UICONTROL Datum und Uhrzeit] | 10-stelliger Zeitstempel der Zeit, zu der die Datei generiert wurde, im Unix-Format. | 1652131584 |
+| `MERGE_POLICY_ID` | [!UICONTROL Zusammenführungsrichtlinien-ID] | Die ID der [Zusammenführungsrichtlinie](../../../../profile/merge-policies/overview.md) wird zum Generieren der exportierten Audience verwendet. Verwenden Sie dieses Makro, wenn Sie exportierte Segmente basierend auf einer Zusammenführungsrichtlinie in Dateien gruppieren. Verwenden Sie dieses Makro zusammen mit `segmentGroupingEnabled:true`. | e8591fdb-2873-4b12-b63e-15275b1c1439 |
+| `MERGE_POLICY_NAME` | [!UICONTROL Name der Zusammenführungsrichtlinie] | Der Name der [Zusammenführungsrichtlinie](../../../../profile/merge-policies/overview.md) wird zum Generieren der exportierten Audience verwendet. Verwenden Sie dieses Makro, wenn Sie exportierte Segmente basierend auf einer Zusammenführungsrichtlinie in Dateien gruppieren. Verwenden Sie dieses Makro zusammen mit `segmentGroupingEnabled:true`. | Meine benutzerspezifische Zusammenführungsrichtlinie |
 
 {style="table-layout:auto"}
 
