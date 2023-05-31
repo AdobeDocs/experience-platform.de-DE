@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie beim Aktivieren von Daten für dateibasierte Ziele Dateiformatierungsoptionen konfigurieren
 title: (Beta) Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: b1e9b781f3b78a22b8b977fe08712d2926254e8c
+source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
 workflow-type: tm+mt
-source-wordcount: '1214'
-ht-degree: 54%
+source-wordcount: '1226'
+ht-degree: 53%
 
 ---
 
@@ -111,8 +111,8 @@ Zeigen Sie die folgenden Beispiele des Inhalts aus exportierten CSV-Dateien mit 
 
 Verwenden Sie dieses Steuerelement, um die Zeichenfolgendarstellung eines leeren Werts festzulegen. Diese Option bestimmt, wie leere Werte in Ihren exportierten CSV-Dateien dargestellt werden. Verfügbare Optionen sind:
 
-* **[!UICONTROL null]**
-* **&quot;&quot;**
+* **[!UICONTROL Null (null)]**
+* **Leere Zeichenfolge in doppelten Anführungszeichen (&quot;&quot;)**
 * **[!UICONTROL Leere Zeichenfolge]**
 
 #### Beispiele
@@ -136,8 +136,8 @@ Zeigen Sie die folgenden Beispiele des Inhalts aus exportierten CSV-Dateien mit 
 
 Verwenden Sie dieses Steuerelement, um die Zeichenfolgendarstellung eines Nullwerts in den exportierten Dateien festzulegen. Diese Option bestimmt, wie Nullwerte in Ihren exportierten CSV-Dateien dargestellt werden. Verfügbare Optionen sind:
 
-* **[!UICONTROL null]**
-* **&quot;&quot;**
+* **[!UICONTROL Null (null)]**
+* **Leere Zeichenfolge in doppelten Anführungszeichen (&quot;&quot;)**
 * **[!UICONTROL Leere Zeichenfolge]**
 
 #### Beispiele

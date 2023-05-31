@@ -4,9 +4,9 @@ title: API-Migrationshandbuch für Cloud-Speicher-Ziele
 description: Erfahren Sie mehr über die Änderungen im Workflow zur Aktivierung von Cloud-Speicher-Zielen im Rahmen der Migration zu den neuen Cloud-Speicher-Zielkarten mit zusätzlichen Funktionen.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 8ca63586855f2c62231662906646eb8abcfdcc0e
+source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
 workflow-type: tm+mt
-source-wordcount: '1444'
+source-wordcount: '1418'
 ht-degree: 4%
 
 ---
@@ -433,7 +433,6 @@ Die rückwärtsinkompatiblen Änderungen für die API-Benutzer sind eine aktuali
 Neben der oben aktualisierten Fluss- und Verbindungsspezifikation gibt es Änderungen an den Parametern, die beim Erstellen von SFTP-Basisverbindungen erforderlich sind.
 
 * Zuvor war für die Basisverbindung für SFTP-Ziele ein `host` Parameter. Dieser Parameter wurde jetzt in `domain`.
-* Für die Authentifizierung mit der SSH-Schlüsseloption benötigten die Authentifizierungsparameter in der Basisverbindung eine `port` -Option. Dieser Parameter ist jetzt veraltet und nicht mehr erforderlich.
 
 Sehen Sie sich die vollständige alte und die neue Basisverbindung sowie die Beispiele für Zielverbindungen für SFTP auf den Registerkarten unten an, wobei die Zeilen, die sich ändern, hervorgehoben sind. Die Parameter, die zum Erstellen von Zielverbindungen für SFTP-Ziele erforderlich sind, ändern sich nicht.
 
@@ -567,7 +566,8 @@ Sehen Sie sich die vollständige alte und die neue Basisverbindung sowie die Bei
       "authorizedDate": "2022-06-02",
       "domain": "ftp-out.demdex.com",
       "username": "DPID12345",
-      "password": "<your-password>"
+      "password": "<your-password>",
+      "port": 22      
     }
   },
   "encryption": {
