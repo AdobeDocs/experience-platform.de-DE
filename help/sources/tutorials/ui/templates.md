@@ -3,10 +3,10 @@ description: Erfahren Sie, wie Sie Vorlagen in der Adobe Experience Platform-Ben
 title: Erstellen eines Quellen-Datenflusses mithilfe von Vorlagen in der Benutzeroberfläche
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 41694a96272819652c7176793f94a2de620d1d7a
+source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
 workflow-type: tm+mt
-source-wordcount: '1601'
-ht-degree: 59%
+source-wordcount: '2258'
+ht-degree: 43%
 
 ---
 
@@ -91,6 +91,83 @@ Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** aus un
 >[!ENDTABS]
 
 ### Vorlagen auswählen
+
+Nachdem Ihr Konto authentifiziert wurde, können Sie jetzt die Vorlage auswählen, die Sie für Ihren Datenfluss verwenden möchten.
+
++++[!DNL Marketo Engage] Vorlagen In der folgenden Tabelle sind die für die [!DNL Marketo Engage] -Quelle.
+
+| [!DNL Marketo Engage] templates | Beschreibung |
+| --- | --- |
+| Aktivitäten | Die Aktivitätsvorlage erfasst ereignisbasierte Momentaufnahmen von Aktivitäten wie E-Mail-Interaktionen, Website-Interaktionen und Verkaufsaufrufen. |
+| Firmen | Die Unternehmensvorlage erfasst Geschäftskontodetails wie firmografische Informationen, Standort und Rechnungsinformationen des Unternehmens. |
+| Benannte Konten | Die Vorlage Spezifische Konten erfasst Details zu Konten, die als Zielkonten für die Verfolgung bestimmt wurden. |
+| Opportunitys | Die Angebotsvorlage erfasst Details zu Geschäftschancen wie Typ, Verkaufsstufe und zugehörige Konten. |
+| Kontaktrollen für Opportunity | Die Vorlage Kontaktrollen für Chancen erfasst Details zu den Rollen für Leads, die mit einer bestimmten Gelegenheit verknüpft sind. |
+| Personen | Die Personenvorlage erfasst Attribute für einzelne Personen, wie demografische Details, Kontaktinformationen und Zustimmungseinstellungen. |
+| Programmmitgliedschaften | Die Vorlage Programmmitgliedschaften erfasst Details zu Kontakten, die mit einer Unternehmenskampagne verbunden sind, einschließlich Pflegekadenzen und Kontaktantworten. |
+| Programme | Die Programmvorlage erfasst Details zu Geschäftskampagnen wie Status, Kanäle, Zeitpläne und Kosten. |
+| Statische Listenzugehörigkeiten | Die Vorlage Statische Listenmitgliedschaften erfasst die Beziehungen zwischen Personen und deren Mitgliedschaft in statischen Listen. |
+| Statische Listen | Die Vorlage Statische Liste erfasst instanziierte Listen von Personen für bestimmte Anwendungsfälle. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Salesforce] B2B-Vorlagen In der folgenden Tabelle sind die für die Variablen [!DNL Salesforce] -Quelle.
+
+| [!DNL Salesforce] B2B-Vorlagen | Beschreibung |
+| --- | --- |
+| Kontokontaktrelation | Die Vorlage für die Kontokontaktbeziehung erfasst die Beziehung zwischen einem Kontakt und einem oder mehreren Konten. |
+| Konten | Die Kontovorlage erfasst Geschäftskontodetails wie firmografische Informationen, Ort und Rechnungsinformationen des Unternehmens. |
+| Campaign-Mitglieder | Die Vorlage &quot;Campaign Members&quot;erfasst die Beziehung zwischen einem einzelnen Lead oder Kontakt und einem bestimmten [!DNL Salesforce] Kampagne. |
+| Kampagnen | Die Kampagnenvorlage erfasst Geschäftskontodetails wie firmografische Informationen, Ort und Rechnungsinformationen des Unternehmens. |
+| Kontakte | Die Kontaktvorlage erfasst Attribute für Kontakte wie demografische Details, Kontaktinformationen und verwandte Geschäftseinheiten. |
+| Leads | Die Leads-Vorlage erfasst Attribute für Leads wie demografische Details, Kontaktinformationen und verwandte Geschäftseinheiten. |
+| Opportunitys | Die Angebotsvorlage erfasst Details zu Geschäftschancen wie Typ, Verkaufsstufe und zugehöriges Konto. |
+| Kontaktrollen für Opportunity | Die Vorlage Kontaktrollen für Chancen erfasst Details zu den Rollen für Leads, die mit einer bestimmten Gelegenheit verknüpft sind. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Salesforce] B2C-Vorlagen In der folgenden Tabelle sind die für die [!DNL Salesforce] -Quelle.
+
+| [!DNL Salesforce] B2C-Vorlagen | Beschreibung |
+| --- | --- |
+| Kontakt | Die Kontaktvorlage erfasst Attribute für Kontakte wie demografische Details, Kontaktinformationen und verwandte Geschäftseinheiten. |
+| Lead | Die Lead-Vorlage erfasst Attribute für Leads wie demografische Details, Kontaktinformationen und verwandte Geschäftseinheiten. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Microsoft Dynamics] B2B-Vorlagen In der folgenden Tabelle sind die für die Variablen [!DNL Microsoft Dynamics] -Quelle.
+
+| [!DNL Microsoft Dynamics] B2B-Vorlagen | Beschreibung |
+| --- | --- |
+| Konten | Die Kontovorlage erfasst Geschäftskontodetails wie firmografische Informationen, Ort und Rechnungsinformationen des Unternehmens. |
+| Kampagnen | Die Kampagnenvorlage erfasst Geschäftskontodetails wie firmografische Informationen, Ort und Rechnungsinformationen des Unternehmens. |
+| Kontakte | Die Kontaktvorlage erfasst Attribute für Kontakte wie demografische Details, Kontaktinformationen und verwandte Geschäftseinheiten. |
+| Leads | Die Leads-Vorlage erfasst Attribute für Leads wie demografische Details, Kontaktinformationen und verwandte Geschäftseinheiten. |
+| Marketingliste | Die Vorlage Marketingliste erfasst eine Gruppe bestehender oder potenzieller Kunden, die für eine Marketing-Kampagne oder andere Vertriebszwecke erstellt wurden. |
+| Marketing-Listenmitglieder | Die Mitglieder der Marketing-Liste erfassen die Details eines beliebigen Kundendatensatzes, wie z. B. Leads, Konten oder Kontakte, in einer Marketing-Liste. |
+| Opportunitys | Die Angebotsvorlage erfasst Details zu Geschäftschancen wie Typ, Verkaufsstufe und zugehöriges Konto. |
+| Kontaktrollen für Opportunity | Die Vorlage Kontaktrollen für Chancen erfasst Details zu den Rollen für Leads, die mit einer bestimmten Gelegenheit verknüpft sind. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Microsoft Dynamics] B2C-Vorlagen In der folgenden Tabelle sind die für die [!DNL Microsoft Dynamics] -Quelle.
+
+| [!DNL Microsoft Dynamics] B2C-Vorlagen | Beschreibung |
+| --- | --- |
+| Kontakt | Die Kontaktvorlage erfasst Attribute für Kontakte wie demografische Details, Kontaktinformationen und verwandte Geschäftseinheiten. |
+| Lead | Die Lead-Vorlage erfasst Attribute für Leads wie demografische Details, Kontaktinformationen und verwandte Geschäftseinheiten. |
+
+{style="table-layout:auto"}
+
++++
 
 Je nach ausgewähltem Geschäftstyp wird eine Liste mit Vorlagen angezeigt. Vorschausymbol auswählen ![Vorschausymbol](../../images/tutorials/templates/preview-icon.png) neben einem Vorlagennamen, um eine Vorschau der Beispieldaten aus der Vorlage anzuzeigen.
 
