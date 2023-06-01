@@ -1,17 +1,16 @@
 ---
-keywords: IP-Adresse, IP-Bereich, Zulassungsliste-Ziele, Zulassungsliste
-title: IP-Adressen-Zulassungsliste für Cloud-Speicher-Ziele
+title: SFTP-Ziele für die IP-Adressen-Zulassungsliste
 type: Documentation
-description: Diese Seite enthält IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um Daten sicher von Experience Platform auf Ihren SFTP-Server, Amazon S3 oder Azure Blob-Speicher zu exportieren.
+description: Diese Seite enthält IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um Daten sicher von Experience Platform auf Ihren SFTP-Server zu exportieren.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
+source-git-commit: 3d870975593313062d796601f0e19a0a3aec7854
 workflow-type: tm+mt
-source-wordcount: '202'
-ht-degree: 8%
+source-wordcount: '185'
+ht-degree: 5%
 
 ---
 
-# Zulassungsliste von IP-Adressen für Cloud-Speicherziele {#ip-address-allow-list}
+# IP-Adressen-Zulassungsliste für SFTP-Ziele {#ip-address-allow-list-sftp}
 
 >[!IMPORTANT]
 >
