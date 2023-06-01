@@ -2,10 +2,10 @@
 title: (Beta) Google Cloud Storage-Verbindung
 description: Erfahren Sie, wie Sie eine Verbindung zu Google Cloud Storage herstellen und Segmente aktivieren oder Datensätze exportieren.
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
+source-git-commit: 55f72e4f229e18648e0e745a2a60e9add50455b0
 workflow-type: tm+mt
-source-wordcount: '905'
-ht-degree: 95%
+source-wordcount: '934'
+ht-degree: 92%
 
 ---
 
@@ -76,6 +76,8 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 * **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad zum Zielordner ein, in dem die exportierten Dateien gespeichert werden.
 * **[!UICONTROL Dateityp]**: Wählen Sie die Format-Experience Platform aus, die für die exportierten Dateien verwendet werden soll. Bei der Auswahl der [!UICONTROL CSV] können Sie auch [Dateiformatierungsoptionen konfigurieren](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Komprimierungsformat]**: Wählen Sie den Komprimierungstyp aus, den die Experience Platform für die exportierten Dateien verwenden soll.
+* 
+   * **[!UICONTROL Manifestdatei einschließen]**: Aktivieren Sie diese Option, wenn Sie möchten, dass die Exporte eine JSON-Manifestdatei mit Informationen zum Exportspeicherort, zur Exportgröße und mehr enthalten.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 

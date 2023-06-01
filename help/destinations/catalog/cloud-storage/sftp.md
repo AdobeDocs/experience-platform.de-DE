@@ -3,10 +3,10 @@ keywords: SFTP;sftp
 title: SFTP-Verbindung
 description: Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durch Trennzeichen getrennte Datendateien regelmäßig von Adobe Experience Platform zu exportieren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: cb0b80f79a849d81216c5500c54b62ac5d85e2f6
+source-git-commit: 55f72e4f229e18648e0e745a2a60e9add50455b0
 workflow-type: tm+mt
-source-wordcount: '870'
-ht-degree: 92%
+source-wordcount: '909'
+ht-degree: 88%
 
 ---
 
@@ -106,6 +106,8 @@ Geben Sie nach Herstellung der Authentifizierungsverbindung zum SFTP-Speicherort
 * **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad zum Ordner in Ihrem SFTP-Speicherort ein, in den die Dateien exportiert werden sollen.
 * **[!UICONTROL Dateityp]**: Wählen Sie die Format-Experience Platform aus, die für die exportierten Dateien verwendet werden soll. Diese Option steht nur für die **[!UICONTROL SFTP-Beta]** Ziel. Bei der Auswahl der [!UICONTROL CSV] können Sie auch [Dateiformatierungsoptionen konfigurieren](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Komprimierungsformat]**: Wählen Sie den Komprimierungstyp aus, den die Experience Platform für die exportierten Dateien verwenden soll. Diese Option steht nur für die **[!UICONTROL SFTP-Beta]** Ziel.
+* 
+   * **[!UICONTROL Manifestdatei einschließen]**: Aktivieren Sie diese Option, wenn Sie möchten, dass die Exporte eine JSON-Manifestdatei mit Informationen zum Exportspeicherort, zur Exportgröße und mehr enthalten. Diese Option steht nur für die **[!UICONTROL SFTP-Beta]** Ziel.
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
 
