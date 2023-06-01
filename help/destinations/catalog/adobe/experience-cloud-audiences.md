@@ -3,10 +3,10 @@ title: (Beta) Experience Cloud Audiences
 description: Erfahren Sie, wie Sie Segmente von Experience Platform für verschiedene Experience Platform-Lösungen freigeben können.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 017c8bbc19845c0f60040ba2995b5dd2b0299a8b
 workflow-type: tm+mt
-source-wordcount: '1509'
-ht-degree: 24%
+source-wordcount: '1576'
+ht-degree: 23%
 
 ---
 
@@ -83,7 +83,14 @@ Beachten Sie die folgenden bekannten Einschränkungen und wichtigen Hinweisen in
 * Beim Herstellen einer Verbindung zum Ziel sehen Sie eine Option zum [Datenflusswarnungen aktivieren](#enable-alerts). Die Benutzeroberfläche ist zwar sichtbar, die **Option für Warnhinweise wird nicht unterstützt** in der Beta-Version.
 * **Aufstockungen werden nicht unterstützt**. Der erste Export in Audience Manager oder andere Segmentlösungen umfasst keine historische Segmentpopulation.
 * In der Beta-Version können Sie **eine einzige Zielverbindung zum Ziel &quot;Experience Cloud-Zielgruppen&quot;**, in allen Sandboxes Ihrer Experience Platform-Organisation.
-* Es gibt eine **vierstündige Latenz** zwischen dem Zeitpunkt, zu dem die Daten in der Experience Platform aktiviert werden, und dem Zeitpunkt, zu dem die Daten zur Verwendung in Audience Manager- und anderen Experience Cloud-Lösungen bereit sind.
+
+### Latenz beim Aktivieren von Zielgruppen {#audience-activation-latency}
+
+Es gibt eine vierstündige Latenz zwischen dem Zeitpunkt, zu dem Zielgruppen in der Experience Platform zum ersten Mal aktiviert werden, und dem Zeitpunkt, zu dem sie zur Verwendung in Audience Manager- und anderen Experience Cloud-Lösungen für bestimmte Anwendungsfälle bereit sind.
+
+Es kann bis zu 24 Stunden dauern, bis Zielgruppen im Audience Manager für alle Anwendungsfälle vollständig verfügbar sind, und bis zu 48 Stunden, bis Zielgruppen aus den Experience Cloud-Zielgruppen in den Audience Manager-Berichten angezeigt werden.
+
+Metadaten wie Segmentnamen sind innerhalb von Minuten nach der Einrichtung des Exports für das Experience Cloud-Zielgruppen-Ziel in Audience Manager verfügbar.
 
 ## Unterstützte Identitäten {#supported-identities}
 
