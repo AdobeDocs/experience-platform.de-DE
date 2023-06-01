@@ -3,9 +3,9 @@ keywords: E-Mail; E-Mail; E-Mail; E-Mail-Ziele; oracle eloqua; oracle
 title: (Dateien) Oracle Eloqua-Verbindung
 description: Oracle Eloqua ist eine Software-as-a-Service (SaaS)-Plattform für Marketing-Automatisierung von Oracle, die B2B-Marketer und -Teams bei der Verwaltung von Marketing-Kampagnen und Lead-Generierung für den Vertrieb unterstützt.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: e986fd9479ca2258fc9aab752e2d0376c608554b
+source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '659'
 ht-degree: 62%
 
 ---
@@ -31,7 +31,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 Beim Einrichten von E-Mail-Marketing-Zielen mit SFTP-Speicher empfiehlt Adobe, bestimmte IP-Bereiche zu Ihrer Zulassungsliste hinzuzufügen.
 
-Siehe [IP-Adressen-Zulassungsliste für Cloud-Speicher-Ziele](../cloud-storage/ip-address-allow-list.md) , wenn Sie Ihrer Zulassungsliste Adobe-IPs hinzufügen müssen.
+Siehe [IP-Adressen-Zulassungsliste für SFTP-Ziele](../cloud-storage/ip-address-allow-list.md) , wenn Sie Ihrer Zulassungsliste Adobe-IPs hinzufügen müssen.
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 

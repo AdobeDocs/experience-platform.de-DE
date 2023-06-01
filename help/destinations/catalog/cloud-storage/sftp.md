@@ -3,10 +3,10 @@ keywords: SFTP;sftp
 title: SFTP-Verbindung
 description: Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durch Trennzeichen getrennte Datendateien regelmäßig von Adobe Experience Platform zu exportieren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 55f72e4f229e18648e0e745a2a60e9add50455b0
+source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
 workflow-type: tm+mt
-source-wordcount: '909'
-ht-degree: 88%
+source-wordcount: '908'
+ht-degree: 86%
 
 ---
 
@@ -127,4 +127,4 @@ Für [!DNL SFTP]-Ziele erstellt Platform eine `.csv`-Datei an dem von Ihnen ange
 
 ## IP-Adressen-Zulassungsliste
 
-Siehe [IP-Adressen-Zulassungsliste für Cloud-Speicher-Ziele](ip-address-allow-list.md), wenn Sie Adobe-IPs zu einer Zulassungsliste hinzufügen müssen.
+Siehe [IP-Adressen-Zulassungsliste für SFTP-Ziele](ip-address-allow-list.md) , wenn Sie einer Zulassungsliste Adobe-IPs hinzufügen müssen.

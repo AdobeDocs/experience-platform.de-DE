@@ -3,9 +3,9 @@ keywords: E-Mail; E-Mail; E-Mail; E-Mail-Ziele; Adobe Campaign; Kampagne
 title: Adobe Campaign-Verbindung
 description: Adobe Campaign umfasst verschiedene Lösungen, mit denen Sie Kampagnen über alle Ihre Online- und Offline-Kanäle hinweg personalisieren und bereitstellen können.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '884'
 ht-degree: 47%
 
 ---
@@ -33,7 +33,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 Beim Einrichten von E-Mail-Marketing-Zielen mit SFTP-Speicher empfiehlt Adobe, bestimmte IP-Bereiche zu Ihrer Zulassungsliste hinzuzufügen.
 
-Siehe [IP-Adressen-Zulassungsliste für Cloud-Speicher-Ziele](../cloud-storage/ip-address-allow-list.md) , wenn Sie Ihrer Zulassungsliste Adobe-IPs hinzufügen müssen.
+Siehe [IP-Adressen-Zulassungsliste für SFTP-Ziele](../cloud-storage/ip-address-allow-list.md) , wenn Sie Ihrer Zulassungsliste Adobe-IPs hinzufügen müssen.
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 

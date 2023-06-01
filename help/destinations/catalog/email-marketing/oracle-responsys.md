@@ -3,10 +3,10 @@ keywords: E-Mail; E-Mail; E-Mail; E-Mail-Ziele; oracle responsys-Ziel
 title: Oracle Responsys-Verbindung
 description: Responsys ist ein Enterprise-E-Mail-Marketing-Tool für kanalübergreifende Marketing-Kampagnen, das von Oracle angeboten wird und der Personalisierung von Interaktionen über E-Mail, Mobile, Display und Social Media hinweg dient.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
 workflow-type: tm+mt
-source-wordcount: '643'
-ht-degree: 60%
+source-wordcount: '642'
+ht-degree: 61%
 
 ---
 
@@ -33,7 +33,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 Beim Einrichten von E-Mail-Marketing-Zielen mit SFTP-Speicher empfiehlt Adobe, bestimmte IP-Bereiche zu Ihrer Zulassungsliste hinzuzufügen.
 
-Siehe [IP-Adressen-Zulassungsliste für Cloud-Speicher-Ziele](../cloud-storage/ip-address-allow-list.md) , wenn Sie Ihrer Zulassungsliste Adobe-IPs hinzufügen müssen.
+Siehe [IP-Adressen-Zulassungsliste für SFTP-Ziele](../cloud-storage/ip-address-allow-list.md) , wenn Sie Ihrer Zulassungsliste Adobe-IPs hinzufügen müssen.
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 

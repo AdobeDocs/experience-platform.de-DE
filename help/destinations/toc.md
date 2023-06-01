@@ -4,10 +4,10 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: 991cd22bc28a72593512a36636806e6a8a4b2820
+source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
 workflow-type: tm+mt
-source-wordcount: '1173'
-ht-degree: 86%
+source-wordcount: '1172'
+ht-degree: 85%
 
 ---
 
@@ -121,7 +121,7 @@ ht-degree: 86%
       * [(Beta) Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
       * [(Beta) Google Cloud-Speicher](./catalog/cloud-storage/google-cloud-storage.md)
       * [SFTP-Verbindung](./catalog/cloud-storage/sftp.md)
-      * [Zulassungsliste von IP-Adressen für Cloud-Speicherziele](./catalog/cloud-storage/ip-address-allow-list.md)
+      * [IP-Adressen-Zulassungsliste für SFTP-Ziele](./catalog/cloud-storage/ip-address-allow-list.md)
    * CRM-Ziele (Customer Relationship Management) {#crm}
       * [Salesforce-CRM-Verbindung](./catalog/crm/salesforce.md)
       * [Verbindung mit Microsoft Dynamics 365](./catalog/crm/microsoft-dynamics-365.md)

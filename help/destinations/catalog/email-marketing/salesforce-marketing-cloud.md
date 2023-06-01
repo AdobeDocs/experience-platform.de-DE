@@ -3,9 +3,9 @@ keywords: E-Mail; E-Mail; E-Mail; E-Mail-Ziele; Salesforce; Salesforce-Ziel
 title: Salesforce Marketing Cloud-Verbindung
 description: Salesforce Marketing Cloud ist eine Digital-Marketing-Suite, die früher als ExactTarget bekannt war und mit der Sie Journeys für Besucher und Kunden erstellen und anpassen können, um deren Erlebnis zu personalisieren.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: ba4090d95a4a476e76d946e36f8370202f26d23e
+source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '747'
 ht-degree: 64%
 
 ---
@@ -33,7 +33,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 Beim Einrichten von E-Mail-Marketing-Zielen mit SFTP-Speicher empfiehlt Adobe, bestimmte IP-Bereiche zu Ihrer Zulassungsliste hinzuzufügen.
 
-Siehe [IP-Adressen-Zulassungsliste für Cloud-Speicher-Ziele](../cloud-storage/ip-address-allow-list.md) , wenn Sie Ihrer Zulassungsliste Adobe-IPs hinzufügen müssen.
+Siehe [IP-Adressen-Zulassungsliste für SFTP-Ziele](../cloud-storage/ip-address-allow-list.md) , wenn Sie Ihrer Zulassungsliste Adobe-IPs hinzufügen müssen.
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
