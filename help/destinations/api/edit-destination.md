@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Bearbeiten von Zielverbindungen mit der Flow Service-API
 type: Tutorial
 description: Erfahren Sie, wie Sie verschiedene Komponenten einer Zielverbindung mit der Flow Service-API bearbeiten.
-source-git-commit: 956ac5d210d54526e886e57b8ea37ab4b3fbab8a
+source-git-commit: 2afe330176c2b7734c38cf47be79960175060824
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1580'
 ht-degree: 33%
 
 ---
@@ -329,11 +329,11 @@ Bei einer erfolgreichen Antwort werden Ihre Ziel-Verbindungs-ID und ein aktualis
 
 ## Bearbeiten von Basisverbindungskomponenten (Authentifizierungsparameter und andere Komponenten) {#patch-base-connection}
 
-Die Komponenten einer Basisverbindung unterscheiden sich je nach Ziel. Beispiel: für [!DNL Amazon S3] Ziele, können Sie den Zugriffsschlüssel und den geheimen Schlüssel für Ihre [!DNL Amazon S3] Standort.
+Bearbeiten Sie die Basisverbindung, wenn Sie die Anmeldeinformationen eines Ziels aktualisieren möchten. Die Komponenten einer Basisverbindung unterscheiden sich je nach Ziel. Beispiel: für [!DNL Amazon S3] Ziele, können Sie den Zugriffsschlüssel und den geheimen Schlüssel für Ihre [!DNL Amazon S3] Standort.
 
 Um Komponenten einer Basisverbindung zu aktualisieren, führen Sie eine PATCH-Anfrage an die `/connections` -Endpunkt unter Angabe Ihrer Basis-Verbindungs-ID, -Version und der neuen Werte, die Sie verwenden möchten.
 
-Denken Sie daran, dass Sie Ihre Basis-Verbindungs-ID in einem vorherigen Schritt erhalten haben, als Sie einen vorhandenen Datenfluss zu Ihrem gewünschten Ziel überprüft haben.
+Beachten Sie, dass Sie Ihre Basis-Verbindungs-ID in einer [vorheriger Schritt](#look-up-dataflow-details), wenn Sie einen vorhandenen Datenfluss zum gewünschten Ziel für den Parameter inspiziert haben `baseConnection`.
 
 >[!IMPORTANT]
 >
