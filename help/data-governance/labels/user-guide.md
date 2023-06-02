@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Verwalten von Datennutzungsbeschriftungen in der Benutzeroberfläche
 description: Dieses Handbuch beschreibt die Schritte zum Arbeiten mit Datennutzungsbeschriftungen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: 1690a73cf709594b82469e95aba64231cf216d96
 workflow-type: tm+mt
-source-wordcount: '1380'
-ht-degree: 44%
+source-wordcount: '1462'
+ht-degree: 40%
 
 ---
 
@@ -20,7 +20,15 @@ ht-degree: 44%
 
 Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Datennutzungskennzeichnungen in der Benutzeroberfläche von [!DNL Experience Platform]. 
 
+## Verwalten von Bezeichnungen {#manage-labels}
+
+Um Beschriftungen auf Ihre Daten anzuwenden, benötigen Sie die **[!UICONTROL Nutzungsbezeichnungen verwalten]** -Berechtigung zur Verwendung in der Produktions-Sandbox. Um eine benutzerdefinierte Bezeichnung zu erstellen, müssen Sie auch über Administratorrechte für das Produktprofil verfügen. Jede Organisation verfügt nur über eine Liste der entsprechenden Beschriftungen. Das Löschen von Beschriftungen wird derzeit nicht unterstützt.
+
+Informationen finden Sie im Handbuch [Berechtigungen konfigurieren](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) oder [Zugriffskontrolle - Übersicht](../../access-control/home.md) für weitere Informationen zum Zuweisen einer Berechtigung. Wenn Sie keinen Zugriff auf die Admin Console für Ihr Unternehmen haben, wenden Sie sich an Ihren Organisationsadministrator.
+
 ## Verwalten von Kennzeichnungen auf Schemaebene
+
+Sie können Kennzeichnungen direkt zu einem Schema oder zu Feldern innerhalb dieses Schemas hinzufügen. Alle Felder, die auf der Schemaebene angewendet werden, werden auf alle Datensätze übertragen, die auf diesem Schema basieren.
 
 Um Datennutzungsbezeichnungen auf Schemaebene zu verwalten, müssen Sie ein vorhandenes Schema auswählen oder ein neues erstellen. Wählen Sie nach der Anmeldung bei Adobe Experience Platform die Option **[!UICONTROL Schemas]** im linken Navigationsbereich, um die **[!UICONTROL Schemas]** Arbeitsbereich. Auf dieser Seite werden alle erstellten Schemas, die zu Ihrer Organisation gehören, sowie nützliche Details zu den einzelnen Schemata aufgelistet.
 
@@ -32,7 +40,7 @@ Im nächsten Abschnitt werden die Schritte zum Erstellen eines neuen Schemas bes
 
 Um ein neues Schema zu erstellen, wählen Sie **[!UICONTROL Schema erstellen]** in der oberen rechten Ecke der **[!UICONTROL Schemas]** Arbeitsbereich. Siehe Handbuch unter [Erstellen eines Schemas mit dem Schema Editor](../../xdm/tutorials/create-schema-ui.md#create) für vollständige Anweisungen. Alternativ können Sie [Erstellen eines Schemas mithilfe der Schema Registry-API](../../xdm/tutorials/create-schema-api.md) falls erforderlich.
 
-### Hinzufügen von Datennutzungsbezeichnungen zum Schema {#add-labels-to-schema}
+### Hinzufügen von Datennutzungsbezeichnungen zu einem Schema {#add-labels-to-schema}
 
 Nach dem Erstellen eines neuen Schemas oder Auswählen eines vorhandenen Schemas aus der Liste in der [!UICONTROL Durchsuchen] des [!UICONTROL Schemas] Arbeitsbereich ein Feld aus Ihrem Schema im Schema-Editor auswählen. Im [!UICONTROL Feldeigenschaften] Seitenleiste auswählen **[!UICONTROL Anwenden von Zugriffs- und Data Governance-Beschriftungen]**.
 
@@ -98,12 +106,6 @@ Die **[!UICONTROL Vererbte Beschriftungen anzeigen]** -Umschalter ist standardm�
 >Beschriftungen, die angewendet wurden, bevor die Funktion zur Kennzeichnung von Datensätzen eingestellt wurde, können aus dem Datensatz entfernt werden, indem Sie den relevanten Datensatz suchen und das Abbrechen-Symbol auf der Beschriftung auswählen.
 >![Die Registerkarte &quot;Data Governance&quot;im Arbeitsbereich &quot;Datensätze&quot;mit einer Beschriftung, die gelöscht werden kann.](../images/labels/remove-governance-labels.png)
 >Anweisungen finden Sie in der Dokumentation zu [Migrieren von zuvor angewendeten Bezeichnungen aus dem Datensatz auf Schemaebene](../e2e.md#migrate-labels).
-
-## Verwalten von Kennzeichnungen auf Schemaebene
-
-Sie können Kennzeichnungen direkt zu einem Schema oder zu Feldern innerhalb dieses Schemas hinzufügen. Alle Felder, die auf der Schemaebene angewendet werden, werden auf alle Datensätze übertragen, die auf diesem Schema basieren.
-
-Weitere Informationen finden Sie in der Anleitung zur [Verwaltung von Kennzeichnungen auf Schemaebene](../../xdm/tutorials/labels.md).
 
 ## Verwalten von benutzerdefinierten Kennzeichnungen {#manage-custom-labels}
 
