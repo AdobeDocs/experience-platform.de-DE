@@ -2,7 +2,7 @@
 title: (Beta) Verbindung zu Azure Data Lake Storage Gen2
 description: Erfahren Sie, wie Sie eine Verbindung zu Azure Data Lake Storage Gen2 herstellen, um Segmente zu aktivieren und Datensätze zu exportieren.
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: 55f72e4f229e18648e0e745a2a60e9add50455b0
+source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
 workflow-type: tm+mt
 source-wordcount: '709'
 ht-degree: 90%
@@ -61,8 +61,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 * **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad zum Zielordner ein, in dem die exportierten Dateien gespeichert werden.
 * **[!UICONTROL Dateityp]**: Wählen Sie die Format-Experience Platform aus, die für die exportierten Dateien verwendet werden soll. Bei der Auswahl der [!UICONTROL CSV] können Sie auch [Dateiformatierungsoptionen konfigurieren](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Komprimierungsformat]**: Wählen Sie den Komprimierungstyp aus, den die Experience Platform für die exportierten Dateien verwenden soll.
-* 
-   * **[!UICONTROL Manifestdatei einschließen]**: Aktivieren Sie diese Option, wenn Sie möchten, dass die Exporte eine JSON-Manifestdatei mit Informationen zum Exportspeicherort, zur Exportgröße und mehr enthalten.
+* **[!UICONTROL Manifestdatei einschließen]**: Aktivieren Sie diese Option, wenn Sie möchten, dass die Exporte eine JSON-Manifestdatei mit Informationen zum Exportspeicherort, zur Exportgröße und mehr enthalten.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
