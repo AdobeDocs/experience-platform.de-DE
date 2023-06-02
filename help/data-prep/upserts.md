@@ -3,9 +3,9 @@ keywords: Experience Platform; Startseite; beliebte Themen; Datenvorbereitung; D
 title: Teilweise Zeilenaktualisierungen an den Profildienst mithilfe der Datenvorbereitung senden
 description: In diesem Dokument erfahren Sie, wie Sie mithilfe der Datenvorbereitung Teilzeilenaktualisierungen an den Profildienst senden.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: d167975c9c7a267f2888153a05c5857748367822
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1177'
 ht-degree: 12%
 
 ---
@@ -37,11 +37,11 @@ Diese Übersicht setzt ein Verständnis der folgenden Komponenten von Adobe Expe
 
 Streaming-Aktualisierungen in [!DNL Data Prep] funktioniert wie folgt:
 
-* Sie müssen zunächst einen Datensatz für [!DNL Profile] Verbrauch. Siehe Handbuch unter [Aktivieren eines Datensatzes für [!DNL Profile]](../catalog/datasets/enable-for-profile.md) für weitere Informationen;
-* Wenn neue Identitäten verknüpft werden müssen, müssen Sie auch einen zusätzlichen Datensatz erstellen **mit demselben Schema** als [!DNL Profile] Datensatz;
+* Sie müssen zunächst einen Datensatz für [!DNL Profile] Verbrauch. Siehe Handbuch unter [Aktivieren eines Datensatzes für [!DNL Profile]](../catalog/datasets/enable-for-profile.md) für weitere Informationen.
+* Wenn neue Identitäten verknüpft werden müssen, müssen Sie auch einen zusätzlichen Datensatz erstellen **mit demselben Schema** als [!DNL Profile] Datensatz.
 * Nachdem Ihre Datensätze vorbereitet wurden, müssen Sie einen Datenfluss erstellen, um Ihre eingehende Anfrage der [!DNL Profile] Datensatz;
 * Als Nächstes müssen Sie die eingehende Anfrage aktualisieren, um die erforderlichen Kopfzeilen einzuschließen. Diese Header definieren:
-   * Der Datenvorgang, der mit [!DNL Profile]: `create`, `merge`und `delete`;
+   * Der Datenvorgang, der mit [!DNL Profile]: `create`, `merge`und `delete`.
    * Der optionale Identitätsvorgang, der mit [!DNL Identity Service]: `create`.
 
 ### Identitätsdatensatz konfigurieren
@@ -50,7 +50,7 @@ Wenn neue Identitäten verknüpft werden müssen, müssen Sie einen zusätzliche
 
 * Der Identitätsdatensatz muss sein zugewiesenes Schema als [!DNL Profile] Datensatz. Eine Inkongruenz von Schemas kann zu inkonsistentem Systemverhalten führen.
 * Sie müssen jedoch sicherstellen, dass sich der Identitätsdatensatz von der [!DNL Profile] Datensatz. Wenn die Datensätze identisch sind, werden die Daten überschrieben und nicht aktualisiert.
-* Während der ursprüngliche Datensatz für [!DNL Profile], den Identitätsdatensatz **nicht** aktiviert sein für [!DNL Profile]. Andernfalls werden auch Daten überschrieben und nicht aktualisiert.
+* Während der ursprüngliche Datensatz für [!DNL Profile], den Identitätsdatensatz **sollte nicht aktiviert sein** für [!DNL Profile]. Andernfalls werden auch Daten überschrieben und nicht aktualisiert. Der Identitätsdatensatz **sollte aktiviert sein** für [!DNL Identity Service].
 
 #### Erforderliche Felder in den Schemas, die mit dem Identitätsdatensatz verknüpft sind {#identity-dataset-required-fileds}
 
@@ -64,9 +64,17 @@ curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257be
   -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-    "tags":{
-        "acp_validationContext": ["disabled"]
-        }
+    "tags": {
+        "acp_validationContext": [
+            "disabled"
+        ],
+        "unifiedProfile": [
+            "enabled:false"
+        ],
+        "unifiedIdentity": [
+            "enabled:true"
+        ]
+    }
 }'
 ```
 
