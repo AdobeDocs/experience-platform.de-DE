@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;attri
 title: Attributbasierte Zugriffskontrolle - Bezeichnungen verwalten
 description: Dieses Dokument enthält Informationen zum Verwalten von Bezeichnungen über die Benutzeroberfläche "Berechtigungen"in Adobe Experience Cloud
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 4069924b4c4000192dff1f89e5cf9a9412bcd95c
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 42%
+source-wordcount: '190'
+ht-degree: 38%
 
 ---
 
@@ -23,7 +23,7 @@ Mit Beschriftungen können Sie Datensätze und Felder entsprechend den für dies
 
 >[!NOTE]
 >
->Sie müssen über Administratorrechte verfügen, um eine benutzerdefinierte Bezeichnung zu erstellen. Derzeit wird das Löschen von Bezeichnungen nicht unterstützt.
+>Es gibt eine einzige Liste von Bezeichnungen für eine ganze Organisation. Um eine benutzerdefinierte Bezeichnung zu erstellen, benötigen Sie **[!UICONTROL Nutzungsbezeichnungen verwalten]** -Berechtigungen für die Produktions-Sandbox. Beschriftungslöschungen werden derzeit nicht unterstützt.
 
 Um eine neue Bezeichnung zu erstellen, wählen Sie die **[!UICONTROL Bezeichnungen]** Registerkarte in der Seitenleiste und wählen Sie **[!UICONTROL Titel erstellen]**.
 
