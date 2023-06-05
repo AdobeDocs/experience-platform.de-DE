@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verwalten von Datennutzungsbeschriftungen in der Benutzeroberfläche
 description: Dieses Handbuch beschreibt die Schritte zum Arbeiten mit Datennutzungsbeschriftungen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 1690a73cf709594b82469e95aba64231cf216d96
+source-git-commit: 663d1e20a7b8a56b1395047124fdf4b6fc3c214b
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1465'
 ht-degree: 40%
 
 ---
@@ -22,7 +22,7 @@ Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Datennutzungske
 
 ## Verwalten von Bezeichnungen {#manage-labels}
 
-Um Beschriftungen auf Ihre Daten anzuwenden, benötigen Sie die **[!UICONTROL Nutzungsbezeichnungen verwalten]** -Berechtigung zur Verwendung in der Produktions-Sandbox. Um eine benutzerdefinierte Bezeichnung zu erstellen, müssen Sie auch über Administratorrechte für das Produktprofil verfügen. Jede Organisation verfügt nur über eine Liste der entsprechenden Beschriftungen. Das Löschen von Beschriftungen wird derzeit nicht unterstützt.
+Um Beschriftungen auf Ihre Daten anzuwenden, benötigen Sie die **[!UICONTROL Nutzungsbezeichnungen verwalten]** -Berechtigung für die Verwendung in der standardmäßigen Produktions-Sandbox &quot;prod&quot;. Um eine benutzerdefinierte Bezeichnung zu erstellen, müssen Sie auch über Administratorrechte für das Produktprofil verfügen. Jede Organisation verfügt nur über eine Liste der entsprechenden Beschriftungen. Das Löschen von Beschriftungen wird derzeit nicht unterstützt.
 
 Informationen finden Sie im Handbuch [Berechtigungen konfigurieren](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) oder [Zugriffskontrolle - Übersicht](../../access-control/home.md) für weitere Informationen zum Zuweisen einer Berechtigung. Wenn Sie keinen Zugriff auf die Admin Console für Ihr Unternehmen haben, wenden Sie sich an Ihren Organisationsadministrator.
 
