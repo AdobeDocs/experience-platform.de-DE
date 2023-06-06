@@ -2,10 +2,10 @@
 title: Übersicht über Auditprotokolle
 description: Erfahren Sie, wie Sie mithilfe von Audit-Protokollen sehen können, wer welche Aktionen in Adobe Experience Platform durchgeführt hat.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: 7bb81a103c6b2a7d0baec22c927f575764bc3730
 workflow-type: tm+mt
-source-wordcount: '1156'
-ht-degree: 57%
+source-wordcount: '1294'
+ht-degree: 51%
 
 ---
 
@@ -79,13 +79,13 @@ Um Prüfprotokolle anzeigen und exportieren zu können, benötigen Sie die **[!U
 
 Sie können Prüfprotokolle für verschiedene Funktionen der Experience Platform im **[!UICONTROL Prüfungen]** Arbeitsbereich in der Platform-Benutzeroberfläche. Der Arbeitsbereich „“ zeigt eine Liste der aufgezeichneten Protokolle an, die standardmäßig absteigend nach ihrer Aktualität sortiert sind.
 
-![Dashboard &quot;Audit logs&quot;](../../images/audit-logs/audits.png)
+![Das Dashboard Audits , das im linken Menü Audits hervorhebt.](../../images/audit-logs/audits.png)
 
 Prüfprotokolle werden 365 Tage lang aufbewahrt, danach werden sie aus dem System gelöscht. Daher können Sie nur für einen Zeitraum von maximal 365 Tagen zurückgehen. Wenn Sie Daten von mehr als 365 Tagen benötigen, sollten Sie Protokolle regelmäßig exportieren, um Ihre internen Richtlinienanforderungen zu erfüllen.
 
 Wählen Sie ein Ereignis aus der Liste aus, um seine Details in der rechten Leiste anzuzeigen.
 
-![Ereignisdetails](../../images/audit-logs/select-event.png)
+![Registerkarte &quot;Audits-Dashboard-Aktivitätsprotokoll&quot;mit hervorgehobenem Bereich für Ereignisdetails.](../../images/audit-logs/select-event.png)
 
 ### Filtern von Auditprotokollen
 
@@ -95,31 +95,43 @@ Da es sich hierbei um eine neue Funktion handelt, gehen die angezeigten Daten nu
 
 Wählen Sie das Trichtersymbol (![Filtersymbol](../../images/audit-logs/icon.png)) aus, um eine Liste von Filterfeldern anzuzeigen, mit denen die Ergebnisse eingegrenzt werden können. Unabhängig von den ausgewählten Filtern werden nur die letzten 1000 Datensätze angezeigt.
 
-![Filter](../../images/audit-logs/filters.png)
+![Das Dashboard &quot;Prüfungen&quot;mit dem gefilterten Aktivitätsprotokoll wird hervorgehoben.](../../images/audit-logs/filters.png)
 
 Die Benutzeroberfläche verfügt für Protokolle über folgende Filter:
 
 | Filter | Beschreibung |
 | --- | --- |
 | [!UICONTROL Kategorie] | Verwenden Sie das Dropdown-Menü, um die angezeigten Ergebnisse nach [category](#category). |
-| [!UICONTROL Aktion] | Nach Aktion filtern. Derzeit nur [!UICONTROL Erstellen] und [!UICONTROL Löschen] -Aktionen gefiltert werden. |
+| [!UICONTROL Aktion] | Nach Aktion filtern. Die für jeden Dienst verfügbaren Aktionen finden Sie in der obigen Ressourcentabelle. |
 | [!UICONTROL Benutzer] | Geben Sie die vollständige Benutzer-ID ein (z. B. `johndoe@acme.com`), um nach Benutzer zu filtern. |
 | [!UICONTROL Status] | Filtern Sie nach, ob die Aktion zulässig (abgeschlossen) oder verweigert wurde, weil [Zugriffskontrolle](../../../access-control/home.md) Berechtigungen. |
 | [!UICONTROL Datum] | Wählen Sie ein Startdatum und/oder ein Enddatum aus, um einen Datumsbereich zu definieren, nach dem die Ergebnisse gefiltert werden sollen. Daten können mit einem Lookback-Zeitraum von 90 Tagen exportiert werden (z. B. 2021-12-15-2022-03-15). Dies kann je nach Ereignistyp unterschiedlich sein. |
 
 Um einen Filter zu entfernen, klicken Sie auf das „X“ auf dem Symbol für den betreffenden Filter, oder wählen Sie **[!UICONTROL Alle löschen]** aus, um alle Filter zu entfernen.
 
-![Filter löschen](../../images/audit-logs/clear-filters.png)
+![Das Dashboard &quot;Prüfungen&quot;mit hervorgehobenem klaren Filter.](../../images/audit-logs/clear-filters.png)
+
+Die zurückgegebenen Auditprotokolldaten enthalten die folgenden Informationen zu allen Abfragen, die Ihre ausgewählten Filterkriterien erfüllen.
+
+| Spaltenname | Beschreibung |
+|---|---|
+| [!UICONTROL Zeitstempel] | Datum und Uhrzeit der in einem `month/day/year hour:minute AM/PM` Format. |
+| [!UICONTROL Asset-Name] | Der Wert für [!UICONTROL Asset-Name] -Feld hängt von der als Filter ausgewählten Kategorie ab. |
+| [!UICONTROL Kategorie] | Dieses Feld entspricht der im Dropdown-Menü Filter ausgewählten Kategorie. |
+| [!UICONTROL Aktion] | Die verfügbaren Aktionen hängen von der als Filter ausgewählten Kategorie ab. |
+| [!UICONTROL Benutzer] | Dieses Feld enthält die Benutzer-ID, die die Abfrage ausgeführt hat. |
+
+![Das Dashboard &quot;Prüfungen&quot;mit dem gefilterten Aktivitätsprotokoll wird hervorgehoben.](../../images/audit-logs/filtered.png)
 
 ### Auditprotokolle exportieren
 
 Um die aktuelle Liste der Audit-Prüfprotokolle zu exportieren, wählen Sie **[!UICONTROL Protokoll herunterladen]** aus.
 
-![Protokoll herunterladen](../../images/audit-logs/download.png)
+![Das Dashboard &quot;Prüfungen&quot;mit dem [!UICONTROL Protokoll herunterladen] hervorgehoben.](../../images/audit-logs/download.png)
 
 Wählen Sie im angezeigten Dialogfeld Ihr bevorzugtes Format aus (entweder **[!UICONTROL CSV]** oder **[!UICONTROL JSON]**), wählen Sie **[!UICONTROL Download]**. Der Browser lädt die generierte Datei herunter und speichert sie auf Ihrem Computer.
 
-![Download-Format auswählen](../../images/audit-logs/select-download-format.png)
+![Das Dialogfeld zur Dateiformatauswahl mit [!UICONTROL Download] hervorgehoben.](../../images/audit-logs/select-download-format.png)
 
 ## Verwalten von Auditprotokollen in der API
 
