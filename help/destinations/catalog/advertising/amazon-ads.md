@@ -3,7 +3,7 @@ title: Amazon Ads
 description: Amazon Ads bietet eine Reihe von Optionen, die Ihnen beim Erreichen Ihrer Werbeziele für Agenturen und/oder registrierte Verkäuferschaft, Anbieterschaft, Buchhändlerinnen und -händler, Entwickelnde von Apps oder Autorinnen bzw. Autoren von Kindle Direct Publishing (KDP) hilft. Die Amazon Ads-Integration mit Adobe Experience Platform bietet eine schlüsselfertige Integration in Amazon Ads-Produkte, einschließlich Amazon DSP (ADSP). Mit dem Amazon Ads-Ziel in Adobe Experience Platform können Benutzerinnen und Benutzer Advertiser-Zielgruppen für Targeting und Aktivierung im Amazon DSP definieren.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 9c1f3d5d5fc14941cb40adf02fd3d9acce5cf648
+source-git-commit: 147499e0b736fac7aa27942790661236be68b0a4
 workflow-type: tm+mt
 source-wordcount: '1401'
 ht-degree: 78%
@@ -81,9 +81,11 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
 * **[!UICONTROL Amazon Ads Advertiser-ID]**: Wählen Sie die ID für das Amazon Ads-Zielkonto aus, das für das Ziel verwendet wird.
+
 >[!NOTE]
 >
 >Nach dem Speichern der Zielkonfiguration können Sie die Amazon Ads Advertiser-ID nicht ändern, selbst wenn Sie sich über Ihr Amazon-Konto erneut authentifizieren. Um eine andere Amazon Ads Advertiser-ID zu verwenden, müssen Sie eine neue Zielverbindung erstellen.
+
 * **[!UICONTROL Advertiser Region]**: Wählen Sie die gewünschte Region aus, in der Ihr Advertiser gehostet wird. Weitere Informationen zu den von den einzelnen Regionen unterstützten Marktplätzen finden Sie im [Dokumentation zu Amazon Ads](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
 
@@ -136,7 +138,7 @@ Weitere Hilfedokumentation finden Sie in den folgenden Amazon Ads-Hilferessource
 
 * [Hilfezentrum von Amazon DSP](https://www.amazon.com/ap/signin?openid.pape.max_auth_age=28800&amp;openid.return_to=https%3A%2F%2Fadvertising.amazon.com%2Fdsp%2Fhelp%2Fss%2Fen%2Faudiences&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.assoc_handle=amzn_bt_desktop_us&amp;openid.mode=checkid_setup&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0)
 
-### Änderungsprotokoll {#changelog}
+## Änderungsprotokoll {#changelog}
 
 In diesem Abschnitt werden die Funktionen und wesentlichen Aktualisierungen der Dokumentation an diesem Ziel-Connector erfasst.
 
@@ -144,7 +146,7 @@ In diesem Abschnitt werden die Funktionen und wesentlichen Aktualisierungen der 
 
 | Veröffentlichungsmonat | Aktualisierungstyp | Beschreibung |
 |---|---|---|
-| Mai 2023 | Aktualisierung der Funktionen und Dokumentation | <ul><li>Unterstützung für die Auswahl der Advertiser-Region im Zielverbindungs-Workflow hinzugefügt.</li><li>Die Dokumentation wurde aktualisiert, um die Hinzufügung der Auswahl der Advertiser-Region widerzuspiegeln. Weitere Informationen zur Auswahl der richtigen Advertiser-Region finden Sie unter [Amazon-Dokumentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
+| Mai 2023 | Aktualisierung der Funktionen und Dokumentation | <ul><li>Unterstützung für die Auswahl der Advertiser-Region im [Zielverbindungs-Workflow](#destination-details).</li><li>Die Dokumentation wurde aktualisiert, um die Hinzufügung der Auswahl der Advertiser-Region widerzuspiegeln. Weitere Informationen zur Auswahl der richtigen Advertiser-Region finden Sie unter [Amazon-Dokumentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
 | März 2023 | Erstmalige Veröffentlichung | Ursprüngliche Zielversion und veröffentlichte Dokumentation. |
 
 {style="table-layout:auto"}
