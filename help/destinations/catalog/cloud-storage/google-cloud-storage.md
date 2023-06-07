@@ -2,10 +2,10 @@
 title: (Beta) Google Cloud Storage-Verbindung
 description: Erfahren Sie, wie Sie eine Verbindung zu Google Cloud Storage herstellen und Segmente aktivieren oder Datensätze exportieren.
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '934'
-ht-degree: 92%
+source-wordcount: '1005'
+ht-degree: 84%
 
 ---
 
@@ -18,6 +18,11 @@ ht-degree: 92%
 ## Übersicht {#overview}
 
 Erstellen Sie eine ausgehende Live-Verbindung zu [!DNL Google Cloud Storage], um Datendateien aus Adobe Experience Platform regelmäßig in Ihre eigenen Behälter zu exportieren.
+
+## Verbinden Sie Ihre [!DNL Google Cloud Storage] Speicher über API oder Benutzeroberfläche {#connect-api-or-ui}
+
+* So stellen Sie eine Verbindung zu Ihrer [!DNL Google Cloud Storage] Speicherort mithilfe der Platform-Benutzeroberfläche, lesen Sie die Abschnitte . [Mit Ziel verbinden](#connect) und [Aktivieren von Segmenten für dieses Ziel](#activate) unten.
+* So stellen Sie eine Verbindung zu Ihrer [!DNL Google Cloud Storage] Speicherort programmgesteuert, lesen Sie die [Aktivieren von Segmenten für dateibasierte Ziele mithilfe des Tutorials zur Flow Service-API](../../api/activate-segments-file-based-destinations.md).
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
@@ -102,7 +107,10 @@ Im Schritt **[!UICONTROL Zuordnung]** können Sie festlegen, welche Attribute un
 
 ## (Beta) Exportieren von Datensätzen {#export-datasets}
 
-Dieses Ziel unterstützt Datensatzexporte. Umfassende Informationen zum Einrichten von Datensatzexporten finden Sie im [Tutorial zum Exportieren von Datensätzen](/help/destinations/ui/export-datasets.md).
+Dieses Ziel unterstützt Datensatzexporte. Vollständige Informationen zum Einrichten von Datensatzexporten finden Sie in den Tutorials:
+
+* Anleitung [Datensätze mithilfe der Benutzeroberfläche von Platform exportieren](/help/destinations/ui/export-datasets.md).
+* Anleitung [Datensätze programmgesteuert mit der Flow Service-API exportieren](/help/destinations/api/export-datasets.md).
 
 ## Überprüfen auf einen erfolgreichen Datenexport {#exported-data}
 

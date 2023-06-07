@@ -2,10 +2,10 @@
 title: (Beta) Verbindung zu Azure Data Lake Storage Gen2
 description: Erfahren Sie, wie Sie eine Verbindung zu Azure Data Lake Storage Gen2 herstellen, um Segmente zu aktivieren und Datensätze zu exportieren.
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 90%
+source-wordcount: '780'
+ht-degree: 80%
 
 ---
 
@@ -18,6 +18,11 @@ ht-degree: 90%
 ## Übersicht {#overview}
 
 Auf dieser Seite erfahren Sie, wie Sie eine ausgehende Live-Verbindung zu Ihrem [[!DNL Azure Data Lake Storage Gen2]](https://learn.microsoft.com/de-de/azure/storage/blobs/data-lake-storage-introduction) ([!DNL ADLS Gen2]) Data Lake herstellen, um regelmäßig Datendateien aus Experience Platform zu exportieren.
+
+## Verbinden Sie Ihre [!DNL ADLS Gen2] Speicher über API oder Benutzeroberfläche {#connect-api-or-ui}
+
+* So stellen Sie eine Verbindung zu Ihrer [!DNL ADLS Gen2] Speicherort mithilfe der Platform-Benutzeroberfläche, lesen Sie die Abschnitte . [Mit Ziel verbinden](#connect) und [Aktivieren von Segmenten für dieses Ziel](#activate) unten.
+* So stellen Sie eine Verbindung zu Ihrer [!DNL ADLS Gen2] Speicherort programmgesteuert, lesen Sie die [Aktivieren von Segmenten für dateibasierte Ziele mithilfe des Tutorials zur Flow Service-API](../../api/activate-segments-file-based-destinations.md).
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
@@ -87,7 +92,10 @@ Im Schritt **[!UICONTROL Zuordnung]** können Sie festlegen, welche Attribute un
 
 ## (Beta) Exportieren von Datensätzen {#export-datasets}
 
-Dieses Ziel unterstützt Datensatzexporte. Umfassende Informationen zum Einrichten von Datensatzexporten finden Sie im [Tutorial zum Exportieren von Datensätzen](/help/destinations/ui/export-datasets.md).
+Dieses Ziel unterstützt Datensatzexporte. Vollständige Informationen zum Einrichten von Datensatzexporten finden Sie in den Tutorials:
+
+* Anleitung [Datensätze mithilfe der Benutzeroberfläche von Platform exportieren](/help/destinations/ui/export-datasets.md).
+* Anleitung [Datensätze programmgesteuert mit der Flow Service-API exportieren](/help/destinations/api/export-datasets.md).
 
 ## Überprüfen auf einen erfolgreichen Datenexport {#exported-data}
 

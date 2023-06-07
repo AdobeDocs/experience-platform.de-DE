@@ -2,10 +2,10 @@
 title: SFTP-Verbindung
 description: Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durch Trennzeichen getrennte Datendateien regelmäßig von Adobe Experience Platform zu exportieren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 5af201858e00f5ccdee4d68f04d37bc5f69caf9c
 workflow-type: tm+mt
-source-wordcount: '906'
-ht-degree: 86%
+source-wordcount: '987'
+ht-degree: 72%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 86%
 >
 >Mit der Beta-Version der Funktion zum Exportieren von Datensätzen und der verbesserten Dateiexportfunktion werden Ihnen jetzt möglicherweise zwei [!DNL SFTP]-Karten im Zielkatalog angezeigt.
 >* Falls Sie bereits Dateien zum **[!UICONTROL SFTP]**-Ziel exportieren, erstellen Sie bitte neue Datenflüsse zum neuen **[!UICONTROL SFTP-Beta]**-Ziel.
->* Wenn Sie noch keinen Datenfluss zum **[!UICONTROL SFTP]**-Ziel erstellt haben, verwenden Sie bitte die neue **[!UICONTROL SFTP-Beta]**-Karte zum Exportieren von Dateien in **[!UICONTROL SFTP]**.
+>* Wenn Sie noch keinen Datenfluss zum **[!UICONTROL SFTP]** Ziel, verwenden Sie die neue **[!UICONTROL SFTP-Beta]** Karte zum Exportieren von Dateien in **[!UICONTROL SFTP]**.
 
 
 ![Abbildung der beiden SFTP-Zielkarten, die diese nebeneinander in einer Ansicht zeigt.](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
@@ -36,6 +36,11 @@ Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durc
 >[!IMPORTANT]
 >
 > Experience Platform unterstützt zwar Datenexporte an SFTP-Server, die empfohlenen Cloud-Speicherorte zum Exportieren von Daten sind jedoch [!DNL Amazon S3] und [!DNL SFTP].
+
+## Verbindung zu SFTP über API oder Benutzeroberfläche herstellen {#connect-api-or-ui}
+
+* Lesen Sie die Abschnitte, um über die Benutzeroberfläche von Platform eine Verbindung zu Ihrem SFTP-Speicherort herzustellen [Mit Ziel verbinden](#connect) und [Aktivieren von Segmenten für dieses Ziel](#activate) unten.
+* Um eine programmgesteuerte Verbindung zu Ihrem SFTP-Speicherort herzustellen, lesen Sie den Abschnitt [Aktivieren von Segmenten für dateibasierte Ziele mithilfe des Tutorials zur Flow Service-API](../../api/activate-segments-file-based-destinations.md).
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
@@ -70,12 +75,13 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 >title="Privater SSH-Schlüssel"
 >abstract="Der private SSH-Schlüssel muss als eine mit Base64 verschlüsselte Zeichenfolge formatiert sein und darf nicht kennwortgeschützt sein."
 
-Wenn Sie den Typ **[!UICONTROL Einfache Authentifizierung]** wählen, um eine Verbindung zu Ihrem SFTP-Speicherort herzustellen:
+Wenn Sie die **[!UICONTROL SFTP mit Kennwort]** Authentifizierungstyp für die Verbindung mit Ihrem SFTP-Speicherort:
 
 ![Einfache Authentifizierung für SFTP-Ziel](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
-* **[!UICONTROL Host]**: Die Adresse Ihres SFTP-Speicherorts.
+* **[!UICONTROL Domäne]**: Die Adresse Ihres SFTP-Speicherorts;
 * **[!UICONTROL Benutzername]**: Der Benutzername, mit dem Sie sich bei Ihrem SFTP-Speicherort anmelden.
+* **[!UICONTROL Port]**: Der von Ihrem SFTP-Speicherort verwendete Port.
 * **[!UICONTROL Passwort]**: Das Passwort, mit dem Sie sich bei Ihrem SFTP-Speicherort anmelden.
 * **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien eine Verschlüsselung hinzuzufügen. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung.
 
@@ -100,7 +106,7 @@ Geben Sie nach Herstellung der Authentifizierungsverbindung zum SFTP-Speicherort
 
 ![Verfügbare Zieldetails für SFTP-Ziel](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
-* **[!UICONTROL Name]**: Geben Sie einen Namen ein, der Ihnen bei der Identifizierung dieses Ziels in der Benutzeroberfläche von Experience Platform hilft.
+* **[!UICONTROL Name]**: Geben Sie einen Namen ein, der Ihnen bei der Identifizierung dieses Ziels in der Experience Platform-Benutzeroberfläche hilft;
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung für das Ziel ein.
 * **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad zum Ordner in Ihrem SFTP-Speicherort ein, in den die Dateien exportiert werden sollen.
 * **[!UICONTROL Dateityp]**: Wählen Sie die Format-Experience Platform aus, die für die exportierten Dateien verwendet werden soll. Diese Option steht nur für die **[!UICONTROL SFTP-Beta]** Ziel. Bei der Auswahl der [!UICONTROL CSV] können Sie auch [Dateiformatierungsoptionen konfigurieren](../../ui/batch-destinations-file-formatting-options.md).
@@ -117,12 +123,15 @@ Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie 
 
 ## (Beta) Exportieren von Datensätzen {#export-datasets}
 
-Dieses Ziel unterstützt Datensatzexporte. Umfassende Informationen zum Einrichten von Datensatzexporten finden Sie im [Tutorial zum Exportieren von Datensätzen](/help/destinations/ui/export-datasets.md).
+Dieses Ziel unterstützt Datensatzexporte. Vollständige Informationen zum Einrichten von Datensatzexporten finden Sie in den Tutorials:
+
+* Anleitung [Datensätze mithilfe der Benutzeroberfläche von Platform exportieren](/help/destinations/ui/export-datasets.md).
+* Anleitung [Datensätze programmgesteuert mit der Flow Service-API exportieren](/help/destinations/api/export-datasets.md).
 
 ## Exportierte Daten {#exported-data}
 
 Für [!DNL SFTP]-Ziele erstellt Platform eine `.csv`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](../../ui/activate-batch-profile-destinations.md) im Tutorial zur Segmentaktivierung.
 
-## IP-Adressen-Zulassungsliste
+## IP-Adressen-Zulassungsliste {#ip-address-allow-list}
 
 Siehe [IP-Adressen-Zulassungsliste für SFTP-Ziele](ip-address-allow-list.md) , wenn Sie einer Zulassungsliste Adobe-IPs hinzufügen müssen.
