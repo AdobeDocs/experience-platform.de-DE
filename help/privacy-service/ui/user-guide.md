@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verwalten von Datenschutzaufträgen in der Privacy Service-Benutzeroberfläche
 description: Erfahren Sie, wie Sie mit der Privacy Service-Benutzeroberfläche Datenschutzanfragen in verschiedenen Experience Cloud-Anwendungen koordinieren und überwachen können.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 96434c83b3d8757872439b58b5c450955c0ed652
+source-git-commit: e5a1b57bc81b27d0e61c3c1ecc10156c10dd3f6e
 workflow-type: tm+mt
-source-wordcount: '1467'
+source-wordcount: '1473'
 ht-degree: 23%
 
 ---
@@ -58,7 +58,7 @@ Das Dashboard für die [!DNL Privacy Service] Die Benutzeroberfläche bietet zwe
 
 Aufträge für jeden Regulierungstyp werden separat verfolgt. Um zwischen Regeltypen zu wechseln, wählen Sie die **[!UICONTROL Regelungstyp]** und wählen Sie die gewünschte Regel aus der Liste aus.
 
-![Dropdown-Liste für Regelungstypen](../images/user-guide/regulation.png)
+![Die Privacy Service-Konsole mit dem Dropdown-Menü &quot;Regulierungstyp&quot;.](../images/user-guide/regulation.png)
 
 Nach Änderung des Regulierungstyps wird das Dashboard aktualisiert, um alle Vorgänge, Filter, Widgets und Dialogfelder zur Schaffung von Arbeitsplätzen anzuzeigen, die für die ausgewählte Verordnung gelten.
 

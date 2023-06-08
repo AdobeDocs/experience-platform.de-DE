@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Verwalten von Datennutzungsrichtlinien in der Benutzeroberfläche
 description: Adobe Experience Platform Data Governance bietet eine Benutzeroberfläche, über die Sie Datennutzungsrichtlinien erstellen und verwalten können. Dieses Dokument bietet einen Überblick über die Aktionen, die Sie im Arbeitsbereich „Richtlinien“ der Experience Platform-Benutzeroberfläche durchführen können.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+source-git-commit: ed9ab1f2a4b4466841b3bedef48a6e0a07ec3d10
 workflow-type: tm+mt
-source-wordcount: '1618'
-ht-degree: 100%
+source-wordcount: '1788'
+ht-degree: 91%
 
 ---
 
@@ -59,7 +59,19 @@ Je nachdem, ob Sie am Betatest für Einverständnisrichtlinien teilnehmen oder n
 
 * Wenn Sie nicht am Betatest teilnehmen, werden Sie sofort zum Workflow zum [Erstellen einer Data Governance-Richtlinie](#create-governance-policy) weitergeleitet.
 * Wenn Sie am Betatest teilnehmen, bietet ein Dialogfeld eine zusätzliche Option zum [Erstellen einer Einverständnisrichtlinie](#consent-policy).
-   ![](../images/policies/choose-policy-type.png)
+  ![](../images/policies/choose-policy-type.png)
+
+### Verwenden von Data Governance- und Zustimmungsrichtlinien gemeinsam {#combine-policies}
+
+>[!NOTE]
+>
+>Einverständnisrichtlinien sind derzeit nur für Organisationen verfügbar, die Adobe Healthcare Shield oder Adobe Privacy &amp; Security Shield erworben haben.
+
+Governance- und Einverständnisrichtlinien können gemeinsam verwendet werden, um robuste Regeln für die Verwaltung von Zielgruppen zu erstellen, die einem Ziel zugeordnet sind. Einverständnisrichtlinien sind integrativer Art, d. h. sie bestimmen, welche Profile in die einzelnen Marketing-Erlebnisse eingeschlossen werden können. Im Gegensatz dazu schließen Governance-Richtlinien die Verwendung bestimmter gekennzeichneter Attribute von der Konfiguration für die Aktivierung aus.
+
+Mithilfe dieses Verhaltens können Sie eine Kombination aus Richtlinien und Einverständnisregeln einrichten, die die richtigen Profile enthalten, Sie jedoch daran hindern, Daten einzuschließen, die Ihren festgelegten Organisationsregeln zuwiderlaufen. Ein Beispiel wäre, wenn Sie sensible Daten von der Einbeziehung ausschließen möchten, aber dennoch einwilligte Benutzer für das Marketing über soziale Medien ansprechen können. Die erforderlichen Schritte für dieses Szenario sind in der unten stehenden Infografik beschrieben.
+
+![Eine Infografik, in der die Schritte zur gemeinsamen Nutzung von Governance- und Zustimmungsrichtlinien erläutert werden, um robuste Regeln für Zielgruppen zu erstellen.](../images/policies/governance-and-consent-policies-infographic.png)
 
 ### Erstellen einer Data Governance-Richtlinie {#create-governance-policy}
 
