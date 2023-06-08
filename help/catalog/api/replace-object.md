@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Katalogobjekt ersetzen
 description: Sie können den Inhalt eines Catalog-Objekts mithilfe einer PUT-Anfrage überschreiben, wobei die gesamte Ressource durch die Anfrage-Payload ersetzt wird.
 exl-id: cd98d13c-5261-4bff-b5db-af5f06d093c9
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 10%
@@ -27,7 +27,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt zu ersetzen. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt zu ersetzen. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie aktualisieren möchten. |
 
 **Anfrage**
@@ -45,7 +45,6 @@ curl -X PUT \
   -d '{
         "name": "New Dataset Name",
         "description": "New description for dataset",
-        "state": "DRAFT",
         "tags": {
             "adobe/pqs/table": [
                 "sample_dataset"

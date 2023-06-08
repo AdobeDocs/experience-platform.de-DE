@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Anhang zum Catalog Service API-Handbuch
 description: Dieses Dokument enthält zusätzliche Informationen, die Sie bei der Arbeit mit der Catalog-API in Adobe Experience Platform unterstützen.
 exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 24db94b959d1bad925af1e8e9cbd49f20d9a46dc
 workflow-type: tm+mt
-source-wordcount: '920'
-ht-degree: 79%
+source-wordcount: '458'
+ht-degree: 80%
 
 ---
 
@@ -19,7 +19,7 @@ Dieses Dokument enthält zusätzliche Informationen, die Sie bei der Arbeit mit 
 
 Einige [!DNL Catalog] Objekte können mit anderen verknüpft werden [!DNL Catalog] Objekte. Alle Felder, die in Antwort-Payloads das Präfix `@` aufweisen, bezeichnen verwandte Objekte. Die Werte für diese Felder haben die Form eines URI, der in einer separaten GET-Anfrage zum Abrufen der zugehörigen Objekte, die sie darstellen, genutzt werden kann.
 
-Der Beispieldatensatz, der im Dokument zum [Nachschlagen eines bestimmten Datensatzes](look-up-object.md) zurückgegeben wird, enthält ein `files`-Feld mit dem folgenden URI-Wert: `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`. Der Inhalt des `files`-Felds kann durch Verwendung des URI als Pfad für eine neue GET-Anfrage angezeigt werden.
+Der Beispieldatensatz, der im Dokument zum [Nachschlagen eines bestimmten Datensatzes](look-up-object.md) zurückgegeben wird, enthält ein `files`-Feld mit dem folgenden URI-Wert: `"@/datasetFiles?datasetId={DATASET_ID}"`. Der Inhalt des `files`-Felds kann durch Verwendung des URI als Pfad für eine neue GET-Anfrage angezeigt werden.
 
 **API-Format**
 
@@ -37,7 +37,7 @@ Folgende Anfrage nutzt den URI, der in der `files`-Eigenschaft des Beispieldaten
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files' \
+  'https://platform.adobe.io/data/foundation/catalog/dataSets/datasetFiles?datasetId={DATASET_ID}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -88,90 +88,6 @@ Eine erfolgreiche Antwort gibt eine Liste verwandter Objekte zurück. In diesem 
     }
 }
 ```
-
-## Mehrere Anfragen in einem einzelnen Aufruf stellen
-
-Der Stamm-Endpunkt der [!DNL Catalog] API ermöglicht es, mehrere Anfragen innerhalb eines einzelnen Aufrufs zu stellen. Die Anfrage-Payload enthält eine Gruppe von Objekten, die normalerweise einzelne Anfragen darstellen würden, die dann der Reihenfolge nach ausgeführt werden.
-
-Wenn es sich bei diesen Anforderungen um Änderungen oder Ergänzungen von [!DNL Catalog] und eine der Änderungen fehlschlägt, werden alle Änderungen rückgängig gemacht.
-
-**API-Format**
-
-```http
-POST /
-```
-
-**Anfrage**
-
-Die folgende Anfrage erstellt einen neuen Datensatz und erzeugt dann verwandte Ansichten für diesen Datensatz. Dieses Beispiel veranschaulicht den Einsatz von Vorlagensprache für den Zugriff auf Werte, die in vorherigen Aufrufen zur Verwendung in nachfolgenden Aufrufen zurückgegeben wurden.
-
-Wenn Sie beispielsweise auf einen Wert verweisen möchten, der von einer vorherigen Unteranfrage zurückgegeben wurde, können Sie im folgenden Format einen Verweis erstellen: `<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>` (dabei ist `{REQUEST_ID}` die vom Anwender angegebene Kennung für die Unteranfrage, wie unten dargestellt). Mithilfe dieser Vorlagen können Sie auf jedes Attribut verweisen, das im Text des Antwortobjekts einer vorherigen Unteranfrage verfügbar ist.
-
->[!NOTE]
->
-> Wenn eine ausgeführte Unteranfrage nur den Verweis auf ein Objekt zurückgibt (wie es bei den meisten POST- und PUT-Anfragen in der Catalog-API Standard ist), wird dieser Verweis als Alias für den Wert `id` verwendet und kann als `<<{OBJECT_ID}.id>>` genutzt werden.
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/foundation/catalog \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '[
-    {
-      "id": "firstObjectId",
-      "resource": "/dataSets",
-      "method": "post",
-      "body": {
-        "type": "raw",
-        "name": "First Dataset"
-      }
-    }, 
-    {
-      "id": "secondObjectId",
-      "resource": "/datasetViews",
-      "method": "post",
-      "body": {
-        "status": "enabled",
-        "dataSetId": "<<firstObjectId.id>>"
-      }
-    }
-  ]'
-```
-
-| Eigenschaft | Beschreibung |
-| --- | --- |
-| `id` | Vom Anwender angegebene Kennung, die an das Antwortobjekt angehängt wird, damit Sie Anfragen Antworten zuordnen können. [!DNL Catalog] speichert diesen Wert nicht und gibt ihn in der Antwort lediglich zu Referenzzwecken zurück. |
-| `resource` | Der Ressourcenpfad relativ zum Stammverzeichnis der [!DNL Catalog] API. Das Protokoll und die Domain sollten nicht Teil dieses Werts sein und sollten mit dem Präfix „/“ versehen werden. <br/><br/> Wenn Sie PATCH oder DELETE als Unteranfrage verwenden`method`, fügen Sie die Objektkennung in den Ressourcenpfad ein. Nicht zu verwechseln mit dem vom Benutzer bereitgestellten `id`verwendet der Ressourcenpfad die Kennung der [!DNL Catalog] Objekt selbst (z. B. `resource: "/dataSets/1234567890"`). |
-| `method` | Der Name der Methode (GET, PUT, POST, PATCH oder DELETE), die mit der in der Anfrage ausgeführten Aktion verknüpft ist. |
-| `body` | Das JSON-Dokument, das in einer POST-, PUT- oder PATCH-Anfrage normalerweise als Payload übergeben wird. Diese Eigenschaft ist bei GET- oder DELETE-Anfragen nicht erforderlich. |
-
-**Antwort**
-
-Eine erfolgreiche Antwort gibt eine Gruppe von Objekten, die die einzelnen Anfragen zugewiesene `id` enthalten, den HTTP-Status-Code für die jeweilige Anfrage und den `body` (Text) der Antwort zurück. Da alle drei Beispielanfragen neue Objekte erstellen sollten, wird die `body` von jedem Objekt ist ein Array, das nur die ID des neu erstellten Objekts enthält, ebenso wie der Standard mit den erfolgreichsten POST-Antworten in [!DNL Catalog].
-
-```json
-[
-    {
-        "id": "firstObjectId",
-        "code": 200,
-        "body": [
-            "@/dataSets/5be230aef5b02914cd52dbfa"
-        ]
-    },
-    {
-        "id": "secondObjectId",
-        "code": 200,
-        "body": [
-            "@/dataSetViews/5be230aef5b02914cd52dbfb"
-        ]
-    }
-]
-```
-
-Gehen Sie beim Prüfen der Antwort auf eine Mehrfachanfrage sorgfältig vor, da Sie den Code jeder einzelnen Unteranfrage prüfen und sich nicht allein auf den HTTP-Status-Code für die übergeordnete POST-Anfrage verlassen müssen.  Es ist möglich, dass eine einzelne Unteranfrage einen 404-Fehler zurückgibt (z. B. GET-Anfrage für eine ungültige Ressource), während die übergeordnete Anfrage 200 zurückgibt.
 
 ## Zusätzliche Anfragekopfzeilen
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Katalog-Service – Übersicht
 description: Catalog Service ist ein Aufzeichnungssystem für Speicherort und Herkunft von Daten in Adobe Experience Platform. Alle Daten, die in Experience Platform aufgenommen werden, werden als Dateien und Ordner im Data Lake gespeichert. Der Katalog wiederum speichert die Metadaten und Beschreibungen dieser Dateien und Ordner für Such- und Überwachungszwecke.
 exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 0ebe9eadb1bce6252b43a50af009ce1b0f6e5d6e
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '694'
 ht-degree: 100%
 
 ---
@@ -53,10 +53,7 @@ In der folgenden Tabelle sind die verschiedenen von [!DNL Catalog] unterstützte
 
 | Objekt | API-Endpunkt | Definition |
 |---|---|---|
-| Konto | `/accounts` | Beim Erstellen von Quellverbindungen müssen Authentifizierungsberechtigungen angegeben werden. Ein Konto ist eine Sammlung von Anmeldeinformationen, die zur Authentifizierung für das Herstellen einer Verbindung bestimmten Typs verwendet wurden. Jede Verbindung verfügt über einen Satz eindeutiger Parameter, die von [!DNL Catalog] festgehalten und in einem [!DNL Azure Key Vault] gesichert werden. |
 | Batch | `/batches` | Batches sind Dateneinheiten aus einer oder mehreren Dateien, die als Ganzes aufgenommen werden. Ein Batch-Objekt in [!DNL Catalog] erfasst Metriken zur Batch-Aufnahme (beispielsweise die Anzahl der verarbeiteten Datensätze oder ihre Größe auf der Festplatte) und kann außerdem Links zu Datensätzen, Ansichten und andere Ressourcen enthalten, die von der Batch-Operation betroffen waren. |
-| Verbindung | `/connections` | Eine Verbindung ist eine einzelne Instanz eines Quell-Connectors, die für Ihr Unternehmen eindeutig ist und unter Verwendung der entsprechenden Anmeldeinformationen zur Authentifizierung für den Connector-Typ konfiguriert wurde. |
-| Connector | `/connectors` | Connectoren definieren, wie Quellverbindungen Daten aus anderen Adobe-Programmen (beispielsweise Adobe Analytics und Adobe Audience Manager), Cloud-Speichern von Drittanbietern (beispielsweise [!DNL Azure Blob], [!DNL Amazon S3], FTP-Server und SFTP-Server) und Drittanbieter-CRM-Systemen (beispielsweise [!DNL Microsoft Dynamics] und [!DNL Salesforce]) erfassen sollen. |
 | Datensatz | `/dataSets` | Ein Datensatz ist ein Konstrukt zur Datenspeicherung und -verwaltung, in dem Daten (in der Regel) in einer Tabelle erfasst werden, die ein Schema (Spalten) und Felder (Zeilen) beinhaltet. Weiterführende Informationen dazu finden Sie in der [Übersicht zu Datensätzen](./datasets/overview.md). |
 | Datensatzdatei | `/datasetFiles` | Datensatzdateien repräsentieren Datenblöcke, die auf [!DNL Platform] gespeichert wurden. Sie stellen Aufzeichnungen von Literaldateien und liefern als solches Informationen zur Dateigröße, zur Anzahl der darin enthaltenen Datensätze und einen Verweis auf den Batch, in dem die Datei aufgenommen wurde. |
 

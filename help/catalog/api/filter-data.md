@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Filtern von Katalogdaten mithilfe von Abfrageparametern
 description: Die Catalog Service-API ermöglicht ein Filtern von Antwortdaten mithilfe von Abfrageparametern für Anfragen. Zu den Best Practices bei Catalog gehört die Verwendung von Filtern in allen API-Aufrufen, da sie die Last der API reduzieren und die Gesamtleistung verbessern.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 24db94b959d1bad925af1e8e9cbd49f20d9a46dc
 workflow-type: tm+mt
-source-wordcount: '2120'
-ht-degree: 88%
+source-wordcount: '2099'
+ht-degree: 86%
 
 ---
 
@@ -35,7 +35,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt, das abgerufen werden soll. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt, das abgerufen werden soll. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{LIMIT}` | Eine Ganzzahl, die die Zahl der zurückzugebenden Objekte angibt (im Bereich von 1 bis 100). |
 
 **Anfrage**
@@ -79,7 +79,7 @@ Trotz Filterns der Zahl der zurückgegebenen Objekte mithilfe des `limit`-Parame
 
 Der `properties`-Parameter filtert Antwortobjekte so, dass nur bestimmte angegebene Eigenschaften zurückgeben werden. Der Parameter kann so eingerichtet werden, dass eine oder mehrere Eigenschaften zurückgegeben werden.
 
-Der `properties`-Parameter akzeptiert nur Objekteigenschaften der obersten Ebene. Für das folgende Beispielobjekt können Sie Filter also auf `name`, `description` und `subItem`, NICHT aber auf `sampleKey` anwenden.
+Die `properties` -Parameter können beliebige Ebenenobjekteigenschaften akzeptieren. `sampleKey` kann mithilfe von `?properties=subItem.sampleKey`.
 
 ```json
 {
@@ -103,7 +103,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt, das abgerufen werden soll. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt, das abgerufen werden soll. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY}` | Der Name eines Attributs, das im Antworttext enthalten sein soll. |
 | `{OBJECT_ID}` | Die eindeutige Kennung eines bestimmten [!DNL Catalog] -Objekt abgerufen werden. |
 
@@ -172,7 +172,7 @@ GET /{OBJECT_TYPE}?start={OFFSET}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des abzurufenden Catalog-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ des abzurufenden Catalog-Objekts. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OFFSET}` | Eine Ganzzahl, die die Zahl der Objekte angibt, um die die Antwort versetzt werden soll. |
 
 **Anfrage**
@@ -228,17 +228,6 @@ Nachfolgend finden Sie ein Beispiel für einen Datensatz, der eine `tags`-Eigens
         },
         "name": "Sample Dataset",
         "description": "Same dataset containing sample data.",
-        "dule": {
-            "identity": [
-                "I1"
-            ]
-        },
-        "statsCache": {},
-        "state": "DRAFT",
-        "lastBatchId": "ca12b29612bf4052872edad59573703c",
-        "lastBatchStatus": "success",
-        "lastSuccessfulBatch": "ca12b29612bf4052872edad59573703c",
-        "namespace": "{NAMESPACE}",
         "createdUser": "{CREATED_USER}",
         "createdClient": "{CREATED_CLIENT}",
         "updatedUser": "{UPDATED_USER}",
@@ -264,7 +253,7 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt, das abgerufen werden soll. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt, das abgerufen werden soll. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li></ul> |
 | `{TAG_NAME}` | Der Name des Tags, nach dem gefiltert werden soll. |
 | `{TAG_VALUE}` | Der Wert des Tags, nach dem gefiltert werden soll. Unterstützt Platzhalterzeichen (`*`). |
 
@@ -304,8 +293,6 @@ Eine erfolgreiche Antwort gibt eine Liste mit Datensätzen zurück, die `sampleT
                     "Example tag value"
                 ]
             },
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.0",
@@ -327,8 +314,6 @@ Eine erfolgreiche Antwort gibt eine Liste mit Datensätzen zurück, die `sampleT
                     "2.0"
                 ]
             },
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
@@ -375,8 +360,6 @@ Eine erfolgreiche Antwort enthält eine Liste von [!DNL Catalog] Objekte, die in
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.0",
@@ -387,8 +370,6 @@ Eine erfolgreiche Antwort enthält eine Liste von [!DNL Catalog] Objekte, die in
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
@@ -412,7 +393,7 @@ GET /{OBJECT_TYPE}?orderBy={PROPERTY_NAME_1},desc:{PROPERTY_NAME_2}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des abzurufenden Catalog-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ des abzurufenden Catalog-Objekts. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY_NAME}` | Der Name einer Eigenschaft, anhand der die Ergebnisse sortiert werden sollen. |
 
 **Anfrage**
@@ -443,8 +424,6 @@ Eine erfolgreiche Antwort enthält eine Liste von [!DNL Catalog] Objekte, die na
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.3",
@@ -455,8 +434,6 @@ Eine erfolgreiche Antwort enthält eine Liste von [!DNL Catalog] Objekte, die na
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5cd3a129ec106214b722a939": {
             "version": "1.0.2",
@@ -467,8 +444,6 @@ Eine erfolgreiche Antwort enthält eine Liste von [!DNL Catalog] Objekte, die na
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
@@ -499,7 +474,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt, das abgerufen werden soll. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt, das abgerufen werden soll. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY_NAME}` | Der Name der Eigenschaft, nach deren Wert Sie filtern möchten. |
 | `{VALUE}` | Ein Eigenschaftswert, der bestimmt, welche Ergebnisse ein- oder ausgeschlossen werden (je nach Abfrage). |
 
@@ -531,8 +506,6 @@ Eine erfolgreiche Antwort enthält eine Liste von Datensätzen, wobei alle Daten
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.3",
@@ -543,8 +516,6 @@ Eine erfolgreiche Antwort enthält eine Liste von Datensätzen, wobei alle Daten
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
@@ -553,7 +524,7 @@ Eine erfolgreiche Antwort enthält eine Liste von Datensätzen, wobei alle Daten
 
 Der Abfrageparameter `property` bietet bei eigenschaftsbasierter Filterung mehr Flexibilität als einfache Filter. Neben einer Filterung danach, ob eine Eigenschaft einen bestimmten Wert aufweist oder nicht, kann der `property`-Parameter auch andere Vergleichsoperatoren wie „größer als“ (`>`) und „kleiner als“ (`<`) sowie reguläre Ausdrücke verwenden, um anhand von Eigenschaftswerten zu filtern. Es kann auch nach dem Vorhandensein oder Nichtvorhandensein einer Eigenschaft gefiltert werden, unabhängig von ihrem Wert.
 
-Der `property`-Parameter akzeptiert nur Objekteigenschaften der obersten Ebene. Das bedeutet, dass Sie beim folgenden Beispielobjekt anhand der Eigenschaft für `name`, `description` und `subItem`, NICHT aber für `sampleKey` filtern können.
+Die `property` -Parameter können beliebige Ebenenobjekteigenschaften akzeptieren. `sampleKey` kann zum Filtern mit `?properties=subItem.sampleKey`.
 
 ```json
 {
@@ -575,7 +546,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt, das abgerufen werden soll. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt, das abgerufen werden soll. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{CONDITION}` | Ein bedingter Ausdruck, der angibt, welche Eigenschaft abgefragt und wie ihr Wert ausgewertet werden soll. Nachfolgend finden Sie verschiedene Beispiele. |
 
 Der Wert des `property`-Parameters unterstützt unterschiedliche Typen von bedingten Ausdrücken. Folgende Tabelle enthält die grundlegende Syntax für unterstützte Ausdrücke:
@@ -624,8 +595,6 @@ Eine erfolgreiche Antwort enthält eine Liste von Datensätzen, deren Versionsnu
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.6",
@@ -636,8 +605,6 @@ Eine erfolgreiche Antwort enthält eine Liste von Datensätzen, deren Versionsnu
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5cd3a129ec106214b722a939": {
             "version": "1.0.4",
@@ -648,8 +615,6 @@ Eine erfolgreiche Antwort enthält eine Liste von Datensätzen, deren Versionsnu
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```

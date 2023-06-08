@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Datensatz mit APIs erstellen
 description: In diesem Dokument werden die grundlegenden Schritte für die Erstellung eines Datensatzes mithilfe der Adobe Experience Platform-APIs erläutert und aufgezeigt, wie der Datensatz anhand einer Datei befüllt wird.
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: e2f16f532b98e6948ffd7f331e630137b3972f0f
 workflow-type: tm+mt
-source-wordcount: '1304'
-ht-degree: 87%
+source-wordcount: '1303'
+ht-degree: 82%
 
 ---
 
@@ -45,9 +45,7 @@ Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandb
 >
 >Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
-Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Kopfzeile erforderlich:
-
-* Content-Type: application/json
+Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche `Content-Type: application/json`-Kopfzeile erforderlich. Bei JSON+PATCH-Anforderungen wird die `Content-Type` sollte `application/json-patch+json`.
 
 ## Tutorial
 
@@ -254,7 +252,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **Antwort**
 
-Bei erfolgreicher Antwort wird der HTTP-Status-Code 201 (Erstellung bestätigt) mit einem Antwortobjekt zurückgegeben, das den neu erstellten Batch einschließlich seiner `id`, einer schreibgeschützten, vom System generierten Zeichenfolge, beinhaltet.
+Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und ein Antwortobjekt zurück. Das Antwortobjekt besteht aus einem Array, das die Kennung des neu erstellten Batches im Format enthält `"@/batches/{BATCH_ID}"`. Die Batch-Kennung ist eine schreibgeschützte, systemgenerierte Zeichenfolge, die in API-Aufrufen zum Verweisen auf den Batch verwendet wird.
 
 ```JSON
 {
@@ -355,12 +353,12 @@ Bei erfolgreicher Fertigstellung eines Batches wird für diesen ein leerer Antwo
 
 ## Überwachen der Datenaufnahme
 
-Abhängig vom jeweiligen Datenvolumen beansprucht die Batch-Aufnahme unterschiedlich viel Zeit. Sie können den Status eines Batches überwachen, indem Sie den Anfrageparameter `batch` unter Angabe der Batch-ID an eine `GET /batches`-Anfrage anfügen. Die API ruft den Status des im Datensatz aufzunehmenden Batches so lange ab, bis in der Antwort der `status` der Fertigstellung als erfolgreich („success“) bzw. fehlgeschlagen („failure“) angegeben wird.
+Abhängig vom jeweiligen Datenvolumen beansprucht die Batch-Aufnahme unterschiedlich viel Zeit. Sie können den Status eines Batches überwachen, indem Sie die Kennung eines Batches an eine `GET /batches` -Anfrage.
 
 **API-Format**
 
 ```HTTP
-GET /batches?batch={BATCH_ID}
+GET /batches/{BATCH_ID}
 ```
 
 | Parameter | Beschreibung |

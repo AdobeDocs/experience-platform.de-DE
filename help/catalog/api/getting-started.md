@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handbuch zur Catalog Service API
 description: Mit der Catalog Service-API können Entwickler Datensatzmetadaten in Adobe Experience Platform verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 07451b8ab4bcb7ca43ad0c8a821478b2c9682894
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '595'
 ht-degree: 64%
 
 ---
@@ -63,6 +63,6 @@ Da einige Abfragen die API stark belasten können, wurden globale Beschränkunge
 
 In diesem Dokument wurden die erforderlichen Kenntnisse zum Aufrufen der [!DNL Catalog] API. Sie können nun mit den Beispielaufrufen in diesem Entwicklerhandbuch fortfahren und den entsprechenden Anweisungen folgen.
 
-Die meisten Beispiele in diesem Handbuch verwenden `/dataSets` -Endpunkt, die Prinzipien können jedoch auf andere Endpunkte in [!DNL Catalog] (z. B. `/batches` und `/accounts`). Eine vollständige Liste aller bei einzelnen Endpunkten verfügbaren Aufrufe und Vorgänge finden Sie in der [Referenz zur Catalog Service-API](https://www.adobe.io/experience-platform-apis/references/catalog/).
+Die meisten Beispiele in diesem Handbuch verwenden `/dataSets` -Endpunkt, die Prinzipien können jedoch auf andere Endpunkte in [!DNL Catalog] (z. B. `/batches`). Eine vollständige Liste aller bei einzelnen Endpunkten verfügbaren Aufrufe und Vorgänge finden Sie in der [Referenz zur Catalog Service-API](https://www.adobe.io/experience-platform-apis/references/catalog/).
 
 Für einen schrittweisen Workflow, der zeigt, wie die [!DNL Catalog] Die API ist an der Datenerfassung beteiligt. Weitere Informationen finden Sie im Tutorial zu [Erstellen eines Datensatzes](../datasets/create.md).
