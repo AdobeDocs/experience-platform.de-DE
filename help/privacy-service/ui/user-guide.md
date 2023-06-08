@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verwalten von Datenschutzaufträgen in der Privacy Service-Benutzeroberfläche
 description: Erfahren Sie, wie Sie mit der Privacy Service-Benutzeroberfläche Datenschutzanfragen in verschiedenen Experience Cloud-Anwendungen koordinieren und überwachen können.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+source-git-commit: 96434c83b3d8757872439b58b5c450955c0ed652
 workflow-type: tm+mt
-source-wordcount: '1463'
+source-wordcount: '1467'
 ht-degree: 23%
 
 ---
@@ -38,7 +38,9 @@ Das Dashboard für die [!DNL Privacy Service] Die Benutzeroberfläche bietet zwe
 
 | UI-Bezeichnung | Verordnung |
 | --- | --- |
+| [!UICONTROL CPA] | Die Menüauswahlmöglichkeiten für die [!DNL Colorado Privacy Act] |
 | [!UICONTROL CCPA] | Die Menüauswahlmöglichkeiten für die [!DNL California Consumer Privacy Act] |
+| [!UICONTROL CTDPA] | Die Menüauswahlmöglichkeiten für die [!DNL Connecticut Data Privacy Act] |
 | [!UICONTROL DSGVO] | Die Europäische Union [!DNL General Data Protection Regulation] |
 | [!UICONTROL PDPA_THA] | Thailands [!DNL Personal Data Protection Act] |
 | [!UICONTROL LGPD_BRA] | Brasiliens [!DNL Lei Geral de Proteção de Dados] |
