@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Datenquelle der Einstiegszone
 description: Erfahren Sie, wie Sie die Einstiegszone für Daten mit Adobe Experience Platform verbinden.
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: d57060ddeed64d3863f71ac1ea34ccc5c97265ea
+source-git-commit: c2cc734d4a5c86fecbd0dabdfe63c896f0fe0f54
 workflow-type: tm+mt
-source-wordcount: '842'
-ht-degree: 47%
+source-wordcount: '869'
+ht-degree: 45%
 
 ---
 
@@ -32,7 +32,7 @@ Im Folgenden finden Sie eine Liste von Einschränkungen, die Sie bei der Benennu
 - Unzulässige URL-Pfadzeichen sind nicht zulässig. Code-Punkte wie `\uE000` sind zwar in NTFS-Dateinamen gültig, aber keine gültigen Unicode-Zeichen. Darüber hinaus werden einige ASCII- oder Unicode-Zeichen, wie Steuerzeichen (wie `0x00` nach `0x1F`, `\u0081`usw.), sind ebenfalls nicht zulässig. Regeln für Unicode-Zeichenfolgen in HTTP/1.1 finden Sie unter [RFC 2616, Abschnitt 2.2: Grundregeln](https://www.ietf.org/rfc/rfc2616.txt) und [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - Die folgenden Dateinamen sind nicht zulässig: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, Punktzeichen (.) und zwei Punktzeichen (..).
 
-## Verwalten des Inhalts Ihrer [!DNL Data Landing Zone]
+## Verwalten des Inhalts Ihrer Data Landing Zone{#manage-the-contents-of-your-data-landing-zone}
 
 Sie können [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/de-de/features/storage-explorer/) verwenden, um die Inhalte Ihres [!DNL Data Landing Zone]-Containers zu verwalten.
 
@@ -162,3 +162,8 @@ Die nachstehende Dokumentation enthält Informationen zum Datenimport von [!DNL 
 
 - [Verbinden von  [!DNL Data Landing Zone]  mit Platform über die Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [Erstellen eines Datenflusses für eine Cloud-Speicherverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+
+>[!IMPORTANT]
+>
+>Private Links werden derzeit nicht unterstützt, wenn eine Verbindung mit Experience Platform über die [!DNL Data Landing Zone]. Die einzigen unterstützten Zugriffsmethoden sind die aufgelisteten Methoden [here](#manage-the-contents-of-your-data-landing-zone).
+
