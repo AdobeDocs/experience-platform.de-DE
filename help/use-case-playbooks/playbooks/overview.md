@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
-title: Übersicht über Playbooks
+title: Anwendungsbeispiele - Übersicht
 description: Erfahren Sie, wie Sie in Experience Platform mit der Funktion "Use Case Playbooks"beginnen, um mit verschiedenen Marketing-Anwendungsfällen zu beginnen.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 63ea852ca9f9a45d1c071fd1033cbd44cbb427c6
+source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '398'
 ht-degree: 3%
 
 ---
@@ -18,8 +18,8 @@ ht-degree: 3%
 Weiterführende Informationen finden Sie in diesem Handbuch:
 
 * **[Übersicht über Anwendungsfallbücher](#overview)**
-* [Anzeigen eines Playbooks und Generieren von Assets](ui-guide.md#view-playbook-generate-assets)
-* [Aktivieren, Verwenden und Wiederverwenden einer Instanz eines Playbooks ](ui-guide.md#enable-playbook)
+* [Entdecken Sie das richtige Playbook](/help/use-case-playbooks/playbooks/discover.md)
+* [Erstellen, Freigeben und Wiederverwenden von Playbook-Instanzen](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [Fehlerbehebung und bekannte Einschränkungen](troubleshooting.md)
 
 >[!ENDSHADEBOX]
@@ -46,9 +46,9 @@ Erstellen Sie eine Instanz eines Playbooks, um bestimmte Assets wie Schemata, Se
 
 Einige [!UICONTROL Anwendungsbeispiele für Playbooks] sind auf Anwendungsfälle der Echtzeit-Kundendatenplattform zugeschnitten, während andere am besten für Kunden geeignet sind, die Journey Optimizer verwenden. Durchsuchen Sie den Katalog, um die Bücher zu finden, die am besten zu Ihrem Produkt und Anwendungsfall passen.
 
-## Handbuch für die -Benutzeroberfläche
+## UI-Handbücher
 
-Nachdem Sie sich für das Playbook entschieden haben, das Sie verwenden möchten, wählen Sie es in der Benutzeroberfläche aus und beginnen Sie damit. Benutzerhandbuch lesen unter [Aktivieren und Wiederverwenden von Playbooks](/help/use-case-playbooks/playbooks/ui-guide.md) für vollständige Informationen zum Erstellen von Instanzen und zum Optimum aus einem Playbook.
+Nachdem Sie sich für das Playbook entschieden haben, das Sie verwenden möchten, wählen Sie es in der Benutzeroberfläche aus und beginnen Sie damit. Benutzerhandbücher lesen unter [Entdecken Sie das richtige Playbook](/help/use-case-playbooks/playbooks/discover.md) für Sie und [Erstellen, Freigeben und Wiederverwenden von Playbook-Instanzen](/help/use-case-playbooks/playbooks/create-share-reuse.md) für vollständige Informationen zum Erstellen von Instanzen und zum Optimum aus einem Playbook.
 
 ## Fehlerbehebung und bekannte Einschränkungen
 
