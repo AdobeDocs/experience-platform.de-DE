@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erste Schritte mit Media Edge-APIs
 description: Erste Schritte mit Media Edge-APIs
 exl-id: null
-source-git-commit: f040ba6d1403da4212fe279e32316bac995905b2
+source-git-commit: 8592bcc7a6d6700ec9b689b98d07a15f0b9301b2
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '937'
 ht-degree: 8%
 
 ---
@@ -206,6 +206,8 @@ In der obigen Beispielanfrage gilt für `sessionId` wird als der erforderliche P
 
 Weitere Informationen zu den Endpunktparametern für den Pufferstart und Beispiele finden Sie in der Datei Media Edge Swagger .
 
+Die erfolgreiche Antwort gibt den Status 200 an und enthält keinen Inhalt.
+
 ## Ereignisanforderung abspielen
 
 Das Abspielereignis wird gesendet, wenn der Medienplayer seinen Status von einem anderen Status wie &quot;Puffern&quot;, &quot;Ausgesetzt&quot;oder &quot;Fehler&quot;zu &quot;Wiedergabe&quot;ändert. Verwenden Sie Ihre `sessionId` in der Payload eines Aufrufs an den folgenden Endpunkt:
@@ -236,6 +238,8 @@ curl -X 'POST' \
   ]
 }'
 ```
+
+Die erfolgreiche Antwort gibt den Status 200 an und enthält keinen Inhalt.
 
 Weitere Informationen zu Play-Endpunktparametern und Beispiele finden Sie in der Datei Media Edge Swagger .
 
@@ -270,7 +274,7 @@ curl -X 'POST' \
 }'
 ```
 
-Weitere Informationen zu den Endpunktparametern für Session Complete und Beispiele finden Sie in der Datei Media Edge Swagger .
+Die erfolgreiche Antwort gibt den Status 200 an und enthält keinen Inhalt.
 
 ## Antwort-Codes
 
