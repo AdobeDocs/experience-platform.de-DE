@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Media Edge-APIs
 description: Übersicht über Media Edge-APIs.
 exl-id: null
-source-git-commit: f040ba6d1403da4212fe279e32316bac995905b2
+source-git-commit: 696ddd93d87601f9f6dedfd651ee12573dc4990a
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 5%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +25,7 @@ Media Edge-APIs basieren auf Adobe Experience Platform (AEP), um Medienereignis-
 
 ## Optimieren von Medien-Tracking-Datenflüssen
 
-Beide [Mediensammlung](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en&amp;media-tracking-data-flows) APIs und Media Edge-APIs stellen Medien-Tracking-Daten als RESTful-Dienste bereit. Die Verwendung des Media Edge-Dienstes hat jedoch die folgenden Vorteile:
+Beide [Mediensammlungs-APIs](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en&amp;media-tracking-data-flows) und Media Edge-APIs stellen Medien-Tracking-Daten als RESTful-Dienste bereit. Die Verwendung des Media Edge-Dienstes hat jedoch die folgenden Vorteile:
 
 * Dies ist die einfachste Möglichkeit, XDM-Schemas in Ihren Datenfluss zu integrieren.
 
@@ -33,14 +33,14 @@ Beide [Mediensammlung](https://experienceleague.adobe.com/docs/media-analytics/u
 
 * Medienereignisse werden am effizientesten verfolgt.
 
-In der folgenden Tabelle finden Sie den besten Adobe-API-Dienst für verschiedene Medienanalysefälle:
+Die folgende Tabelle zeigt einen möglichen Adobe-API-Dienst für verschiedene Medienanalysefälle:
 
-| Anwendungsfall | Plattform | API-Dienst |
-| -------- | ------ | ---------- |
-| CJA | AEP | Medien-Edge |
-| CDP + CJA | AEP | Medien-Edge |
-| Analytics + CJA | AEP | Medien-Edge |
-| Legacy Analytics | K. A. | Mediensammlung |
+| Anwendungsfall | API-Dienst |
+| -------- | ------ |
+| AEP-Lösung (CJA, RTDCP, AJO usw.) | Medien-Edge |
+| CDP + CJA | Medien-Edge |
+| Adobe Analytics- und AEP-Lösung | Medien-Edge |
+| Nur Adobe Analytics (bereits Tracking) | Mediensammlung |
 
 >[!NOTE]
 >

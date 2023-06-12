@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Erste Schritte mit Media Edge-APIs
 description: Erste Schritte mit Media Edge-APIs
 exl-id: null
-source-git-commit: 8592bcc7a6d6700ec9b689b98d07a15f0b9301b2
+source-git-commit: 696ddd93d87601f9f6dedfd651ee12573dc4990a
 workflow-type: tm+mt
-source-wordcount: '937'
-ht-degree: 8%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -101,18 +101,18 @@ curl -i --request POST '{uri}/ee/va/v1/sessionStart?configId={dataStreamId}' \
 
 In der obigen Beispielanfrage wird die `eventType` Wert enthält das Präfix `media` gemäß [Experience-Datenmodell (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=de) zum Angeben von Domänen.
 
-Außerdem die Zuordnung von Datentypen für `eventType` Im obigen Beispiel sehen Sie wie folgt aus (in der Payload sollten keine Berichtsfelder vorhanden sein):
+Außerdem die Zuordnung von Datentypen für `eventType` Im obigen Beispiel sehen Sie Folgendes:
 
-| eventType | Datentypen | Nur-Berichte-Felder (ignoriert) |
-| -------- | ------ | ---------- |
-| mediaSessionStart | sessionDetails | ID, adCount, averageMinuteAudience, chapterCount, estimatedStreams, hasPauseImpactStreams, hasProgress10, hasProgress25, hasProgress50, hasProgress75, hasProgress95, hasSegmentView, isCompleted, isDownloaded, isFederated, isPlayed, is Viewed, pauseCount, pauseTime, secondsSinceLastCall, segment, timePlayed, totalTimePlayed, uniqueTimePlayed, pev3, pccr |
-| media.chapterStart | chapterDetails | ID, isCompleted, isStarted, timePlayed |
-| media.adBreakStart | advertisingPodDetails | ID |
-| media.adStart | advertisingDetails | ID, isCompleted, isStarted, timePlayed |
-| media.error | errorDetails | – |
-| media.statesUpdate | statesStart: Array[playerStateData], statesEnd: Array[playerStateData] | playerStateData.isSet, playerStateData.count, playerStateData.time |
-| media.sessionStart, media.chapterStart, media.adStart | customMetadata | – |
-| all | qoeDataDetails | bitrateAverage, bitrateAverageBucket, bitrateChangeCount, bufferCount, bufferTime, errorCount, externalErrors, hasBitrateChangeImpactStreams, hasBufferImpactStreams, hasDroppedFrameImpactStreams, hasErrorImpactStreams, hasStallImpactStreams, is BeforeStart, mediaSdkErrors, playerSdkErrors, stallCount, stallTime |
+| eventType | Datentypen |
+| -------- | ------ |
+| mediaSessionStart | [sessionDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/sessiondetails.schema.md) |
+| media.chapterStart | [chapterDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/chapterdetails.schema.md) |
+| media.adBreakStart | [advertisingPodDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingpoddetails.schema.md) |
+| media.adStart | [advertisingDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingdetails.schema.md) |
+| media.error | [errorDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/errordetails.schema.md) |
+| media.statesUpdate | [statesStart](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmstatesstart): Array[playerStateData], [statesEnd](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmstatesend): Array[playerStateData] |
+| media.sessionStart, media.chapterStart, media.adStart | [customMetadata](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmcustommetadata) |
+| all | [qoeDataDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/qoedatadetails.schema.md) |
 
 ### Beispielantwort
 
