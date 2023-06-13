@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie Erstanbieterprofile mit Attributen vertrauens
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: c4f34afb7a05707ed9f62f09685ff50a1de2ef93
+source-git-commit: 500475af5e7c80e670324a5c70ed18cc813199be
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1066'
 ht-degree: 0%
 
 ---
@@ -66,14 +66,20 @@ Weitere Informationen finden Sie auf den folgenden Dokumentationsseiten:
 * [Übersicht über die [!UICONTROL XDM Individual Profile] class](/help/xdm/classes/individual-profile.md)
 * [Erstellen und Bearbeiten von Schemata in der Benutzeroberfläche](/help/xdm/ui/resources/schemas.md)
 * [Erstellen und Bearbeiten von Schemafeldgruppen in der Benutzeroberfläche](/help/xdm/ui/resources/field-groups.md)
-* [Erstellen und Bearbeiten von Schemata mithilfe der API](/help/xdm/api/schemas.md#create)
-* [Aktualisieren eines vorhandenen Schemas, um Feldergruppen mithilfe der API hinzuzufügen](/help/xdm/api/schemas.md#patch)
-* Link zur neuen Dokumentationsseite für Feldergruppen, sofern vorhanden
+
+<!--
+
+Commenting out links for now
+* [Create and edit schemas using the API](/help/xdm/api/schemas.md#create)
+* [Update an existing schema to add field groups using the API](/help/xdm/api/schemas.md#patch)
+* Link to new field group documentation page when it exists
+
+-->
 
 Überlegen Sie in diesem Schritt außerdem, wie sich Ihr Data Governance-Modell ändert, wenn Sie Ihre Data-Management-Strategie erweitern und Daten von Drittanbietern einschließen, die vom Partner bereitgestellt werden. Beachten Sie die Überlegungen in den folgenden Links zur Dokumentation:
 
-* (**In Kürze verfügbar**) Speichern von Drittanbieterdaten in einem separaten Datensatz, sodass das Löschen und Rückgängigmachen von Integrationen einfach ist
-* (**In Kürze verfügbar**) Verwenden Sie TTL im Datensatz für Clients mit dem Data Hygiene-Add-on
+* (**In Kürze verfügbar**) Halten Sie Drittanbieterdaten in einem separaten Datensatz, damit das Löschen und Rückgängigmachen von Integrationen einfach ist.
+* (**In Kürze verfügbar**) Verwenden Sie Time-to-Live (TTL) für den Datensatz für Kunden, die das Data Hygiene-Add-on erworben haben.
 * (**In Kürze verfügbar**) Gehen Sie beim Erstellen abgeleiteter Datensätze, die Daten von Drittanbietern abrufen, vorsichtig vor, da die einzige Lösung zum Entfernen der Daten von Drittanbietern darin besteht, den gesamten abgeleiteten Datensatz zu löschen.
 
 >[!TIP]
@@ -111,7 +117,7 @@ Zu diesem Zweck werden u. U. einige Quell-Connectoren empfohlen:
 
 Beachten Sie die folgenden Einschränkungen, wenn Sie den auf dieser Seite beschriebenen Anwendungsfall untersuchen:
 
-Wenn Sie sich für die Verwendung von Partner-IDs entscheiden, beachten Sie, dass diese in nicht zum Erstellen Ihrer [Identitätsdiagramm](/help/identity-service/ui/identity-graph-viewer.md).
+Wenn Sie sich für die Verwendung von Partner-IDs entscheiden, beachten Sie, dass diese IDs beim Erstellen Ihrer [Identitätsdiagramm](/help/identity-service/ui/identity-graph-viewer.md).
 
 ## Andere Anwendungsfälle, die durch die Partnerdatenunterstützung erreicht werden {#other-use-cases}
 
