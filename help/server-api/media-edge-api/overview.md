@@ -3,11 +3,10 @@ keywords: Experience Platform; Medien-Edge; beliebte Themen; Datumsbereich
 solution: Experience Platform
 title: Media Edge-APIs
 description: Übersicht über Media Edge-APIs.
-exl-id: null
-source-git-commit: 696ddd93d87601f9f6dedfd651ee12573dc4990a
+source-git-commit: 9d535c8d6524d61612581fbf82986bc5c5cf52de
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '391'
+ht-degree: 4%
 
 ---
 
