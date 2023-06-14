@@ -5,7 +5,7 @@ title: Daten in Experience Platform aufnehmen
 type: Tutorial
 description: Mit Adobe Experience Platform können Sie Daten einfach als Batch-Dateien in Form von Parquet-Dateien oder Daten importieren, die einem bekannten Experience-Datenmodell (XDM)-Schema entsprechen.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8351f6907a0dc4a4bba01c7f6e9dec7c376c8575
 workflow-type: tm+mt
 source-wordcount: '1320'
 ht-degree: 51%
@@ -110,7 +110,7 @@ Um Daten zum Datensatz hinzuzufügen, klicken Sie auf die Registerkarte **[!UICO
 
 ![Registerkarte „Daten hinzufügen“](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 
-## Datei hochladen
+## Datei hochladen {#upload-file}
 
 Nachdem Sie eine Parquet- oder JSON-Datei, die Sie hochladen möchten, per Drag-and-Drop (oder durch Durchsuchen und Auswählen) eingefügt haben, [!DNL Platform] beginnt sofort mit der Verarbeitung der Datei und ein **[!UICONTROL Hochladen]** wird in der **[!UICONTROL Daten hinzufügen]** den Fortschritt des Datei-Uploads anzeigen.
 
