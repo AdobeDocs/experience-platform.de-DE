@@ -3,9 +3,9 @@ keywords: Experience Platform; Medien-Edge; beliebte Themen; Datumsbereich
 solution: Experience Platform
 title: Erste Schritte mit Media Edge-APIs
 description: Handbuch zur Fehlerbehebung bei Media Edge-APIs
-source-git-commit: b4687fa7f1a2eb8f206ad41eae0af759b0801b83
+source-git-commit: f723114eebc9eb6bfa2512b927c5055daf97188b
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '678'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Dieses Handbuch enthält Anweisungen zur Fehlerbehebung und zum Erhalten erfolgr
 
 ## Verwenden von Fehlerreaktionshilfen
 
-Um bei der Fehlerbehebung bei fehlerhaften Antworten zu helfen, werden Fehler von einem Antworttext mit einem Fehlerobjekt begleitet. In diesem Fall enthält der Antworttext Problemdetails, wie definiert durch [RFC 7807 - Problemdetails für HTTP-APIs](https://datatracker.ietf.org/doc/html/rfc7807). Um das Benutzererlebnis der API zu verbessern, sind die Problemdetails beschreibend (die Details der Array-Schlüssel werden mit JsonPath zum fehlenden oder ungültigen Feld angezeigt). Sie sind auch kumulativ (alle ungültigen Felder werden in derselben Anfrage gemeldet).
+Um die Fehlerbehebung bei fehlerhaften Antworten zu unterstützen, wird den Fehlern ein Antworttext mit einem Fehlerobjekt hinzugefügt. In diesem Fall enthält der Antworttext Problemdetails, wie definiert durch [RFC 7807 - Problemdetails für HTTP-APIs](https://datatracker.ietf.org/doc/html/rfc7807). Um das Benutzererlebnis der API zu verbessern, sind die Problemdetails beschreibend (die Details der Array-Schlüssel werden mit JsonPath zum fehlenden oder ungültigen Feld angezeigt). Sie sind auch kumulativ (alle ungültigen Felder werden in derselben Anfrage gemeldet).
 
 
 ## Validieren von Sitzungsstarts
@@ -110,17 +110,17 @@ In der folgenden Tabelle finden Sie Anweisungen zum Umgang mit Statusreaktionsfe
 
 | Fehler-Code | Beschreibung |
 | ---------- | --------- |
-| 4xx Bad request | Die meisten 4xx-Fehler (z. B. 400, 403, 404) sollten vom Benutzer nicht erneut versucht werden. Eine erneute Ausführung der Anfrage führt nicht zu einer erfolgreichen Antwort. Der Benutzer sollte den Fehler beheben, bevor er die Anfrage erneut versucht. Ereignisse, die zu 4xx-Status-Codes führen, werden nicht verfolgt. Dies könnte sich auf die Genauigkeit von Daten in Sitzungen auswirken, die 4xx-Antworten erhalten haben. |
-| 410 Stück | Gibt an, dass die für die Verfolgung bestimmte Sitzung nicht mehr serverseitig berechnet wird. Der häufigste Grund dafür ist, dass die Sitzung länger als 24 Stunden dauert. Versuchen Sie nach Erhalt von 410, eine neue Sitzung zu starten und sie zu verfolgen. |
+| 4xx Bad request | Die meisten 4xx-Fehler (z. B. `400`, `403`, `404`) sollte vom Benutzer nicht erneut versucht werden. Eine erneute Ausführung der Anfrage führt nicht zu einer erfolgreichen Antwort. Der Benutzer sollte den Fehler beheben, bevor er die Anfrage erneut versucht. Ereignisse, die zu 4xx-Status-Codes führen, werden nicht verfolgt. Dies könnte sich auf die Genauigkeit von Daten in Sitzungen auswirken, die 4xx-Antworten erhalten haben. |
+| 410 Stück | Gibt an, dass die für die Verfolgung bestimmte Sitzung nicht mehr serverseitig berechnet wird. Der häufigste Grund dafür ist, dass die Sitzung länger als 24 Stunden dauert. Nach Erhalt einer `410`, versuchen Sie, eine neue Sitzung zu starten und sie zu verfolgen. |
 | 429 Zu viele Anfragen | Dieser Antwort-Code gibt an, dass der Server die Anforderungen durch Ratenbegrenzung begrenzt. Befolgen Sie die **Wiederholen nach** Anweisungen im Antwortheader sorgfältig beschrieben. Jede Antwort, die zurückfließt, muss den HTTP-Antwort-Code mit einem domänenspezifischen Fehlercode enthalten. |
-| 500 Interner Server-Fehler | 500 Fehler sind allgemeine, alle. 500 Fehler sollten nicht wiederholt werden, mit Ausnahme von 502, 503 und 504. |
-| 502 Schlechtes Gateway | Dieser Fehlercode Gibt an, dass der Server als Gateway eine ungültige Antwort von Upstream-Servern erhalten hat. Dies kann aufgrund von Netzwerkproblemen zwischen Servern geschehen. Das temporäre Netzwerkproblem kann sich selbst lösen, sodass ein erneuter Versuch mit der Anfrage das Problem lösen kann. |
-| Dienst nicht verfügbar | Dieser Fehlercode zeigt an, dass der Dienst vorübergehend nicht verfügbar ist. Dies kann während der Wartungszeiträume geschehen. Empfänger mit 503 Fehlern können die Anfrage zwar wiederholen, sollten aber auch der **Wiederholen nach** Kopfzeilenanweisungen. |
+| 500 Interner Server-Fehler | `500` Fehler sind allgemeine, allgemeingültige Fehler. `500` -Fehler sollten nicht wiederholt werden, mit Ausnahme von `502`, `503` und `504`. |
+| 502 Schlechtes Gateway | Dieser Fehlercode Gibt an, dass der Server als Gateway eine ungültige Antwort von Upstream-Servern erhalten hat. Dies kann aufgrund von Netzwerkproblemen zwischen Servern geschehen. Das temporäre Netzwerkproblem kann sich selbst lösen, sodass ein erneuter Versuch mit der Anfrage das Problem möglicherweise beheben kann. |
+| 503 Dienst nicht verfügbar | Dieser Fehlercode zeigt an, dass der Dienst vorübergehend nicht verfügbar ist. Dies kann während der Wartungszeiträume geschehen. Empfänger `503` Fehler können die Anfrage erneut versuchen, sollten aber auch dem **Wiederholen nach** Kopfzeilenanweisungen. |
 
 
-Einreihen von Ereignissen in die Warteschlange bei langsamen Sitzungsantworten
+## Einreihen von Ereignissen in die Warteschlange bei langsamen Sitzungsantworten
 
-Nach dem Starten einer Medien-Tracking-Sitzung wird der Medienplayer möglicherweise ausgelöst, bevor die Antwort &quot;Sitzungsstart&quot;aus dem Backend (mit dem Parameter Sitzungs-ID ) zurückgegeben wird. In diesem Fall muss Ihre App alle Tracking-Ereignisse in die Warteschlange stellen, die zwischen der Sitzungsanforderung und ihrer Antwort eintreffen. Wenn die Sitzungsantwort eingeht, sollten Sie zunächst alle Ereignisse in der Warteschlange verarbeiten und dann mit der Verarbeitung von Live-Ereignissen beginnen.
+Nach dem Starten einer Medien-Tracking-Sitzung wird der Medienplayer möglicherweise ausgelöst, bevor die Antwort &quot;Sitzungsstart&quot;aus dem Backend (mit dem Parameter Sitzungs-ID ) zurückgegeben wird. In diesem Fall muss Ihre App alle Tracking-Ereignisse in die Warteschlange stellen, die zwischen der Sitzungsanforderung und der zugehörigen Antwort eintreffen. Wenn die Sitzungsantwort eingeht, sollten Sie zunächst alle Ereignisse in der Warteschlange verarbeiten und dann mit der Verarbeitung von Live-Ereignissen beginnen.
 
 Die besten Ergebnisse erzielen Sie, wenn Sie im Referenz-Player in Ihrer Distribution Anweisungen zur Verarbeitung von Ereignissen vor dem Erhalt einer Sitzungs-ID finden.
 
