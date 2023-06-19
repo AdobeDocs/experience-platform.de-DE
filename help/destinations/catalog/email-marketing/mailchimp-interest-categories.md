@@ -2,9 +2,9 @@
 title: Mailchimp-Interessenkategorien
 description: Mailchimp (auch Intuit Mailchimp genannt) ist eine beliebte Marketing-Automatisierungsplattform und ein E-Mail-Marketing-Service, die von Unternehmen verwendet werden, um Kontakte (Kunden, Kunden oder andere interessierte Parteien) mithilfe von Mailinglisten und E-Mail-Marketing-Kampagnen zu verwalten und mit ihnen zu kommunizieren. Verwenden Sie diesen Connector, um Ihre Kontakte nach ihren Interessen und Vorlieben zu sortieren.
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: cdbbd7fa3e8c0a2128823db7279dcb606f3c74db
+source-git-commit: f8ccf9303fbcb010225881942de5e672b4111072
 workflow-type: tm+mt
-source-wordcount: '2371'
+source-wordcount: '2357'
 ht-degree: 22%
 
 ---
@@ -110,9 +110,9 @@ Within **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**, suchen Sie nach [!DNL 
 
 Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder unten aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]**.
 
-| [!DNL Mailchimp] Ziel | [!DNL Mailchimp] |
+| Feld | Beschreibung |
 | --- | --- |
-| **[!UICONTROL Benutzername]** | Ihre [!DNL Salesforce Marketing Cloud] Domänen-Präfix. <br>Wenn Ihre Domäne beispielsweise<br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.executeTarget.com*,<br> Sie müssen `mcq4jrssqdlyc4lph19nnqgzzs84` als Benutzernamen-Wert. |
+| **[!UICONTROL Benutzername]** | Ihre [!DNL Mailchimp Interest Categories] Benutzername. |
 | **[!UICONTROL Passwort]** | Ihre [!DNL Mailchimp] **API-Schlüssel**, die Sie im Abschnitt [Gather [!DNL Mailchimp] Anmeldeinformationen](#gather-credentials) Abschnitt.<br> Ihr API-Schlüssel hat die Form `{KEY}-{DC}`, wobei `{KEY}` Der Teil bezieht sich auf den Wert, der im [[!DNL Mailchimp] API-Schlüssel](#gather-credentials) und `{DC}` -Teil auf [[!DNL Mailchimp] Rechenzentrum](#identify-data-center). <br>Sie können entweder `{KEY}` oder das gesamte Formular.<br> Wenn Ihr API-Schlüssel beispielsweise <br>*`0123456789abcdef0123456789abcde-us14`*,<br> Sie können *`0123456789abcdef0123456789abcde`*oder *`0123456789abcdef0123456789abcde-us14`*als Wert. |
 
 {style="table-layout:auto"}
