@@ -4,10 +4,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
-source-git-commit: f93ee2bc10135fee0c2d77629ee10901010b744b
+source-git-commit: 9866833bbc5fab789ec3ccb90422a3176aec84da
 workflow-type: tm+mt
-source-wordcount: '979'
-ht-degree: 99%
+source-wordcount: '981'
+ht-degree: 98%
 
 ---
 
@@ -41,6 +41,7 @@ ht-degree: 99%
    - Analytics {#analytics}
       - [Mixpanel-Connector](connectors/analytics/mixpanel.md)
       - [Pendo](connectors/analytics/pendo-webhook.md)
+      - [RainFocus](connectors/analytics/rainfocus.md)
    - Cloud-Speicherplatz {#cloud-storage}
       - [Amazon Kinesis-Connector](connectors/cloud-storage/kinesis.md)
       - [Amazon S3-Connector](connectors/cloud-storage/s3.md)
@@ -237,6 +238,7 @@ ht-degree: 99%
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
          - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
+         - [RainFocus](tutorials/ui/create/analytics/rainfocus.md)
       - Cloud-Speicherplatz {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
