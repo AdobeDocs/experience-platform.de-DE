@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie Erstanbieterprofile mit Attributen vertrauens
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 2a072ce9351a84263a50597967b994162de18d81
+source-git-commit: 019ebe0c1cf11a7fb30dced1e10b511bab9b5100
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1082'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Commenting out links for now
 Überlegen Sie in diesem Schritt außerdem, wie sich Ihr Data Governance-Modell ändert, wenn Sie Ihre Data-Management-Strategie erweitern und Daten von Drittanbietern einschließen, die vom Partner bereitgestellt werden. Beachten Sie die Überlegungen in den folgenden Links zur Dokumentation:
 
 * (**In Kürze verfügbar**) Halten Sie Drittanbieterdaten in einem separaten Datensatz, damit das Löschen und Rückgängigmachen von Integrationen einfach ist.
-* (**In Kürze verfügbar**) Verwenden Sie [Time-to-Live (TTL)](/help/hygiene/ui/dataset-expiration.md) im Datensatz für Kunden, die das Datenhygiene-Add-on erworben haben.
+* (**In Kürze verfügbar**) Verwenden Sie die [Datensatzablauf](/help/hygiene/ui/dataset-expiration.md) für Kunden, die das Data Hygiene-Add-on erworben haben.
 * (**In Kürze verfügbar**) Gehen Sie beim Erstellen abgeleiteter Datensätze, die Daten von Drittanbietern abrufen, vorsichtig vor, da die einzige Lösung zum Entfernen der Daten von Drittanbietern darin besteht, den gesamten abgeleiteten Datensatz zu löschen.
 
 >[!TIP]
