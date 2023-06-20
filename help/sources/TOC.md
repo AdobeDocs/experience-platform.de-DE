@@ -4,9 +4,9 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
-source-git-commit: 9866833bbc5fab789ec3ccb90422a3176aec84da
+source-git-commit: b5a6853c13b151a8754245cd4316a0de75e23e82
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '988'
 ht-degree: 98%
 
 ---
@@ -61,6 +61,7 @@ ht-degree: 98%
       - [OneTrust-Integration](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Microsoft Dynamics-Connector](connectors/crm/ms-dynamics.md)
+      - [SAP Hybrid-Connector](connectors/crm/sap-hybris.md)
       - [Salesforce-Connector](connectors/crm/salesforce.md)
       - [SugarCRM-Connector](connectors/crm/sugarcrm.md)
       - [Veva CRM-Connector](connectors/crm/veeva.md)
@@ -138,6 +139,7 @@ ht-degree: 98%
          - [OneTrust-Integration](tutorials/api/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
+         - [SAP Hybris](tutorials/api/create/crm/sap-hybris.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
          - [SugarCRM-Konten und -Kontakte](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
          - [SugarCRM-Ereignisse](tutorials/api/create/crm/sugarcrm-events.md)
@@ -258,6 +260,7 @@ ht-degree: 98%
          - [OneTrust-Integration](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
+         - [SAP Hybris](tutorials/ui/create/crm/sap-hybris.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
          - [SugarCRM-Konten und -Kontakte](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
          - [SugarCRM-Ereignisse](tutorials/ui/create/crm/sugarcrm-events.md)
