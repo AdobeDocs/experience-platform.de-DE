@@ -4,10 +4,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
-source-git-commit: b5a6853c13b151a8754245cd4316a0de75e23e82
+source-git-commit: 68c6d579d43b4137e3107d3ab102300dc8304c90
 workflow-type: tm+mt
-source-wordcount: '988'
-ht-degree: 98%
+source-wordcount: '991'
+ht-degree: 97%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 98%
       - [Analytics-Quelle](connectors/adobe-applications/analytics.md)
       - [Audience Manager-Quelle](connectors/adobe-applications/audience-manager.md)
       - [Adobe Campaign Managed Cloud Services-Quelle](connectors/adobe-applications/campaign.md)
+      - [Adobe Commerce-Quelle](connectors/adobe-applications/commerce.md)
       - [Quelle für Kundenattribute](connectors/adobe-applications/customer-attributes.md)
       - [Datenerfassungsquelle](connectors/adobe-applications/data-collection.md)
       - [Workfront-Quelle](connectors/adobe-applications/workfront.md)
