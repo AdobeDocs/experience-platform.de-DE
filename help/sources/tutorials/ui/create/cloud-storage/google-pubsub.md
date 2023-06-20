@@ -1,15 +1,20 @@
 ---
 title: Erstellen eines Quell-Connectors für Google PubSub in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie einen Google PubSub-Quell-Connector in der Platform-Benutzeroberfläche erstellen.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: 79149274c28507041ad89be9d7afdefaedb6aaa0
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '1010'
+source-wordcount: '1028'
 ht-degree: 43%
 
 ---
 
 # Erstellen eines Quell-Connectors für [!DNL Google PubSub] in der Benutzeroberfläche
+
+>[!IMPORTANT]
+>
+>Die [!DNL Google PubSub] -Quelle ist im Quellkatalog für Benutzer verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
 
 In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Google PubSub] (nachstehend „[!DNL PubSub]“ genannt) in der Benutzeroberfläche von Platform beschrieben.
 

@@ -1,18 +1,20 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Google Big Query; Google Big Query; GBQ; gbq
-solution: Experience Platform
 title: Erstellen einer Google Big Query Source-Verbindung in der Benutzeroberfläche
-type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Google Big Query-Quellverbindung erstellen.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 55%
+source-wordcount: '455'
+ht-degree: 54%
 
 ---
 
 # Erstellen eines Quell-Connectors für [!DNL Google Big Query] in der Benutzeroberfläche
+
+>[!IMPORTANT]
+>
+>Die [!DNL Google BigQuery] -Quelle ist im Quellkatalog für Benutzer verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
 
 Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, extern bezogene Daten auf geplanter Basis zu erfassen. In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Google Big Query] Quellverbindung über die Platform-Benutzeroberfläche.
 

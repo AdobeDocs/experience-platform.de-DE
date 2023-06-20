@@ -1,20 +1,22 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Azure synapse Analytics; Synapse; Synapse; azure synapse-Analyse
-solution: Experience Platform
 title: Erstellen einer Azure synapse Analytics-Quellverbindung in der Benutzeroberfläche
-type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung von Azure synapse Analytics (nachfolgend als "Synapse"bezeichnet) erstellen.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 1f1ce317-eaaf-4ad2-a5fb-236983220bd7
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '449'
 ht-degree: 54%
 
 ---
 
-# Erstellen eines Quell-Connectors für [!DNL Azure Synapse Analytics] in der Benutzeroberfläche
+# Erstellen Sie eine [!DNL Azure Synapse Analytics] Quellverbindung in der Benutzeroberfläche
 
-Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, extern bezogene Daten auf geplanter Basis zu erfassen. In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Azure Synapse Analytics] (nachstehend &quot;genannt)[!DNL Synapse]&quot;) Quell-Connector mit dem [!DNL Platform] -Benutzeroberfläche.
+>[!IMPORTANT]
+>
+>Die [!DNL Azure Synapse Analytics] -Quelle ist im Quellkatalog für Benutzer verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
+
+In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Azure Synapse Analytics] (nachstehend &quot;genannt)[!DNL Synapse]&quot;) Quell-Connector mit dem [!DNL Platform] -Benutzeroberfläche.
 
 ## Erste Schritte
 

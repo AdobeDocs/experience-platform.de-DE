@@ -1,19 +1,22 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Azure synapse Analytics; azure synapse-Analyse; Synapse; Synapse
-solution: Experience Platform
 title: azure synapse Analytics Source Connector - Überblick
 description: Erfahren Sie, wie Sie Azure synapse Analytics mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 5b94ae74-e5a7-40e9-a952-41eddf06dcde
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 58%
+source-wordcount: '245'
+ht-degree: 57%
 
 ---
 
-# [!DNL Azure Synapse Analytics]-Connector
+# [!DNL Azure Synapse Analytics] source
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
+>[!IMPORTANT]
+>
+>Die [!DNL Azure Synapse Analytics] -Quelle ist im Quellkatalog für Benutzer verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
+
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
 [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus Datenbanken von Drittanbietern. [!DNL Platform] kann eine Verbindung zu verschiedenen Arten von Datenbanken wie z. B. relationalen, NoSQL- oder Data Warehouse-Datenbanken herstellen. Unterstützung für Datenbankanbieter umfasst [!DNL Azure Synapse Analytics].
 

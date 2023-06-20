@@ -1,15 +1,20 @@
 ---
 title: Erstellen einer Google PubSub-Quellverbindung mit der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit einem Google PubSub-Konto verbinden.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: 371947cff518c16816692210054680367fd6504c
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 68%
+source-wordcount: '979'
+ht-degree: 67%
 
 ---
 
 # Erstellen einer [!DNL Google PubSub]-Quellverbindung mithilfe der Flow Service-API
+
+>[!IMPORTANT]
+>
+>Die [!DNL Google PubSub] -Quelle ist im Quellkatalog für Benutzer verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
 
 Dieses Tutorial führt Sie durch die Schritte zum Verbinden [!DNL Google PubSub] (nachstehend „[!DNL PubSub]“ genannt) mit Experience Platform mithilfe der [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 

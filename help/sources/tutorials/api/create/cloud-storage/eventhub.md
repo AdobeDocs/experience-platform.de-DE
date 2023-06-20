@@ -1,19 +1,20 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Ereignis-Hub; Azure-Ereignis-Hub; Event-Hub
-solution: Experience Platform
 title: Erstellen einer Azure Event Hub-Quellverbindung mithilfe der Flow Service-API
-type: Tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit einem Azure Event Hub-Konto verbinden.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '742'
 ht-degree: 58%
 
 ---
 
-
 # Erstellen Sie eine [!DNL Azure Event Hubs] Quellverbindung mithilfe der [!DNL Flow Service] API
+
+>[!IMPORTANT]
+>
+>Die [!DNL Azure Event Hubs] -Quelle ist im Quellkatalog für Benutzer verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
 
 Dieses Tutorial führt Sie durch die Schritte zum Verbinden [!DNL Azure Event Hubs] (nachstehend „[!DNL Event Hubs]“ genannt) mit Experience Platform mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

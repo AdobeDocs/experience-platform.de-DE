@@ -1,19 +1,20 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Azure Event-Hub; Event-Hub; azer-Event-Hubs
-solution: Experience Platform
 title: Erstellen einer Azure Event Hub-Quellverbindung in der Benutzeroberfläche
-type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung für Azure Event Hub erstellen.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '503'
 ht-degree: 35%
 
 ---
 
-
 # Erstellen Sie eine [!DNL Azure Event Hubs] Quellverbindung in der Benutzeroberfläche
+
+>[!IMPORTANT]
+>
+>Die [!DNL Azure Event Hubs] -Quelle ist im Quellkatalog für Benutzer verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
 
 Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, extern bezogene Daten auf geplanter Basis zu erfassen. In diesem Tutorial werden Schritte zum Authentifizieren eines [!DNL Azure Event Hubs] (nachstehend &quot;genannt)[!DNL Event Hubs]&quot;) Quell-Connector mit dem [!DNL Platform] -Benutzeroberfläche.
 

@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie eine Quellverbindung und einen Datenfluss ers
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '686'
 ht-degree: 12%
 
 ---
@@ -16,8 +16,7 @@ ht-degree: 12%
 >[!IMPORTANT]
 >
 >* Die [!DNL Snowflake] Streaming-Quelle befindet sich in der Beta-Phase. Bitte lesen Sie die [Quellen - Übersicht](../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
->* Die [!DNL Snowflake] Streaming-Quelle ist in der API für Kunden verfügbar, die Real-Time CDP Ultimate erworben haben.
-
+>* Die [!DNL Snowflake] Streaming-Quelle ist in der API für Benutzer verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 

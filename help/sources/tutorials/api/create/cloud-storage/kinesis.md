@@ -1,18 +1,20 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Kinesis; Kinese; Amazon Kinesis; Amazon-Kinesis
-solution: Experience Platform
 title: Erstellen einer Amazon Kinesis-Quellverbindung mithilfe der Flow Service-API
-type: Tutorial
 description: Erfahren Sie, wie Sie mit der Flow Service-API eine Verbindung zwischen Adobe Experience Platform und einer Amazon Kinesis-Quelle herstellen.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 67%
+source-wordcount: '736'
+ht-degree: 66%
 
 ---
 
 # Erstellen Sie eine [!DNL Amazon Kinesis] Quellverbindung mit der Flow Service-API
+
+>[!IMPORTANT]
+>
+>Die [!DNL Amazon Kinesis] -Quelle ist im Quellkatalog für Benutzer verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
 
 Dieses Tutorial führt Sie durch die Schritte zum Verbinden [!DNL Amazon Kinesis] (nachstehend „[!DNL Kinesis]“ genannt) mit Experience Platform mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
