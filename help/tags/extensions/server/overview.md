@@ -2,9 +2,9 @@
 title: Referenz zu Ereignisweiterleitungserweiterungen
 description: Dokumentation für Erweiterungen für die Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 3c2ada6e5dec7cc95fbcca7e19d944ca06097edc
+source-git-commit: 9470be59f8c84cb2b41e09010998de1ff8e5e7d9
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '180'
 ht-degree: 53%
 
 ---
@@ -32,6 +32,7 @@ Im Folgenden finden Sie eine Liste der Dokumentation für Erweiterungen für die
 * [[!DNL AWS]](./aws/overview.md)
 * [[!DNL Braze]](./braze/overview.md)
 * [Cloud-Connector für Google Analytics](https://exchange.adobe.com/apps/ec/106542)*
+* [Cloud Connector für Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)*
 * [Core](./core/overview.md)
 * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)*
 * [Erweiterte Konvertierungen von Google Ads](./google-ads-enhanced-conversions/overview.md)

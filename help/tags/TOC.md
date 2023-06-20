@@ -5,10 +5,10 @@ breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Tags
 solution: Data Collection
-source-git-commit: c5cc36d9530ff6fbb52a1995844f495b38e938b3
+source-git-commit: 852e0a87b93e640298c38aef7b3f1c255bf18896
 workflow-type: tm+mt
-source-wordcount: '985'
-ht-degree: 100%
+source-wordcount: '996'
+ht-degree: 99%
 
 ---
 
@@ -215,6 +215,7 @@ ht-degree: 100%
       * [!DNL Braze] {#braze}
          * [Übersicht](./extensions/server/braze/overview.md)
       * [Cloud-Connector für Google Analytics](https://exchange.adobe.com/apps/ec/106542)
+      * [Cloud Connector für Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)
       * Core {#core}
          * [Übersicht](./extensions/server/core/overview.md)
       * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)
