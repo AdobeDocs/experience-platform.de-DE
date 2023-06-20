@@ -1,17 +1,21 @@
 ---
-keywords: Experience Platform; Homepage; beliebte Themen; Snowflake
 title: Erstellen einer Snowflake-Quellverbindung in der Benutzeroberfläche
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Snowflake-Quellverbindung erstellen.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 669b47753a9c9400f22aa81d08a4d25bb5e414c5
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 41%
+source-wordcount: '504'
+ht-degree: 36%
 
 ---
 
 # Erstellen eines Quell-Connectors für [!DNL Snowflake] in der Benutzeroberfläche
+
+>[!IMPORTANT]
+>
+>Die [!DNL Snowflake] -Quelle ist im Quellkatalog für Benutzer verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
 
 In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Snowflake] Quell-Connector über die Adobe Experience Platform-Benutzeroberfläche.
 
@@ -33,9 +37,14 @@ Um auf Ihr Snowflake-Konto zuzugreifen, klicken Sie auf [!DNL Platform]müssen S
 | Datenbank | Die [!DNL Snowflake] -Datenbank enthält die Daten, die Sie an Platform übermitteln möchten. |
 | Benutzername | Der Benutzername für die [!DNL Snowflake] -Konto. |
 | Kennwort | Das Kennwort für die [!DNL Snowflake] Benutzerkonto. |
+| Rolle | Die standardmäßige Zugriffssteuerungsrolle, die in der [!DNL Snowflake] Sitzung. Die Rolle sollte eine bestehende sein, die dem angegebenen Benutzer bereits zugewiesen wurde. Die Standardrolle lautet `PUBLIC`. |
 | Verbindungszeichenfolge | Die Verbindungszeichenfolge, über die die Verbindung zu Ihrem [!DNL Snowflake] -Instanz. Das Verbindungszeichenfolgenmuster für [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
 Weitere Informationen zu diesen Werten finden Sie unter [Dieses Snowflake-Dokument](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+
+>[!NOTE]
+>
+>Sie müssen die `PREVENT_UNLOAD_TO_INLINE_URL` Markierung auf `FALSE` , um das Entladen von Daten aus Ihrem [!DNL Snowflake] Datenbank zu Experience Platform.
 
 ## Snowflake-Konto verbinden
 

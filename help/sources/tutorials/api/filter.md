@@ -3,10 +3,10 @@ keywords: Experience Platform; Startseite; beliebte Themen; Flussdienst; Flow Se
 title: Filtern von Daten auf Zeilenebene für eine Quelle mithilfe der Flow Service-API
 description: In diesem Tutorial werden die Schritte zum Filtern von Daten auf Quellebene mithilfe der Flow Service-API beschrieben.
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 963fc5e31e1728a8a1a7e94bc0cc47d010347325
+source-git-commit: b0e2fc4767fb6fbc90bcdd3350b3add965988f8f
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 16%
+source-wordcount: '782'
+ht-degree: 17%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 16%
 >Die Unterstützung für das Filtern von Daten auf Zeilenebene ist derzeit nur für die folgenden Quellen verfügbar:
 >
 >* [Google BigQuery](../../connectors/databases/bigquery.md)
+>* [Microsoft Dynamics](../../connectors/crm/ms-dynamics.md)
 >* [Salesforce](../../connectors/crm/salesforce.md)
 >* [Snowflake](../../connectors/databases/snowflake.md)
-
 
 Dieses Tutorial enthält Schritte zum Filtern von Daten auf Zeilenebene für eine Quelle mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

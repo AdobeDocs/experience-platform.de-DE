@@ -1,22 +1,24 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Snowflake; snowflake
-solution: Experience Platform
 title: Erstellen einer Snowflake-Basisverbindung mit der Flow Service-API
-type: Tutorial
 description: Erfahren Sie, wie Sie mit der Flow Service-API eine Verbindung zwischen Adobe Experience Platform und Snowflake herstellen.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: 6b9e5da9e552d93ff174d1d65dabb0ffd3128c1a
+source-git-commit: 669b47753a9c9400f22aa81d08a4d25bb5e414c5
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 51%
+source-wordcount: '589'
+ht-degree: 46%
 
 ---
 
 # Erstellen einer [!DNL Snowflake]-Basisverbindung mithilfe der [!DNL Flow Service]-API
 
+>[!IMPORTANT]
+>
+>Die [!DNL Snowflake] -Quelle ist im Quellkatalog für Benutzer verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
+
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
-Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL Snowflake] mithilfe der [[!DNL Flow Service] -API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL Snowflake] mithilfe der [[!DNL Flow Service] -API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## Erste Schritte
 
@@ -42,10 +44,15 @@ Zur [!DNL Flow Service] zur Verbindung mit [!DNL Snowflake]müssen Sie die folge
 | `database` | Die [!DNL Snowflake] -Datenbank enthält die Daten, die Sie an Platform übermitteln möchten. |
 | `username` | Der Benutzername für die [!DNL Snowflake] -Konto. |
 | `password` | Das Kennwort für die [!DNL Snowflake] Benutzerkonto. |
+| `role` | Die standardmäßige Zugriffssteuerungsrolle, die in der [!DNL Snowflake] Sitzung. Die Rolle sollte eine bestehende sein, die dem angegebenen Benutzer bereits zugewiesen wurde. Die Standardrolle lautet `PUBLIC`. |
 | `connectionString` | Die Verbindungszeichenfolge, über die die Verbindung zu Ihrem [!DNL Snowflake] -Instanz. Das Verbindungszeichenfolgenmuster für [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Snowflake] ist `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
 Weiterführende Informationen zu den ersten Schritten finden Sie in diesem Abschnitt [[!DNL Snowflake] Dokument](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+
+>[!NOTE]
+>
+>Sie müssen die `PREVENT_UNLOAD_TO_INLINE_URL` Markierung auf `FALSE` , um das Entladen von Daten aus Ihrem [!DNL Snowflake] Datenbank zu Experience Platform.
 
 ## Erstellen einer Basisverbindung
 
