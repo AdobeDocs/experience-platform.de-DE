@@ -1,21 +1,16 @@
 ---
-keywords: Experience Platform;home;popular topics;Zendesk;zendesk
-solution: Experience Platform
 title: Zendesk Source Connector - Überblick
 description: Erfahren Sie, wie Sie Zendesk über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
+last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 43%
+source-wordcount: '367'
+ht-degree: 44%
 
 ---
 
-# (Beta) [!DNL Zendesk]
-
->[!NOTE]
->
->Die [!DNL Zendesk]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
+# [!DNL Zendesk]
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
@@ -40,7 +35,7 @@ In diesem Abschnitt werden die erforderlichen Schritte beschrieben, die zum Auth
 
 ![Zendesk-API-Token](../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
-Siehe [[!DNL Zendesk documentation on subdomains]](https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain-) für Informationen zum Abrufen Ihrer Subdomain. Informationen zum Generieren Ihres API-Tokens finden Sie in der [[!DNL Zendesk] Handbuch zum Generieren eines neuen API-Tokens](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token).
+Siehe [[!DNL Zendesk documentation on subdomains]](<https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain->) für Informationen zum Abrufen Ihrer Subdomain. Informationen zum Generieren Ihres API-Tokens finden Sie in der [[!DNL Zendesk] Handbuch zum Generieren eines neuen API-Tokens](<https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token>).
 
 Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Zendesk] mit Platform mithilfe von APIs oder der Benutzeroberfläche:
 
