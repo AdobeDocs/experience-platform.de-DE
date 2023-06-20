@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform; Medien-Edge; beliebte Themen; Datumsbereich
 solution: Experience Platform
 title: Erste Schritte mit Media Edge-APIs
 description: Handbuch zur Fehlerbehebung bei Media Edge-APIs
-source-git-commit: f723114eebc9eb6bfa2512b927c5055daf97188b
+source-git-commit: ff4bc64843e3d05277f56ab67b60400fb9e65c4f
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '669'
 ht-degree: 1%
 
 ---
@@ -22,10 +21,10 @@ Um die Fehlerbehebung bei fehlerhaften Antworten zu unterstützen, wird den Fehl
 
 ## Validieren von Sitzungsstarts
 
-Die meisten Probleme beim Erstellen von Sitzungsstartanfragen führen zu einer Antwort mit 207 Mehrfachstatus.
+Die meisten Probleme mit Sitzungsstartanfragen führen zu einer Antwort mit 207 Mehrfachstatus.
 Die Payload ähnelt den nicht schwerwiegenden Fehlern der Experience Edge Network Server-API. Alle Media Analytics-Fehler haben den folgenden Typ:  `https://ns.adobe.com/aep/errors/va-edge-0XXX-XXX`. Die in der Antwort angezeigten Zahlen entsprechen dem Fehlerstatus.
 
-Das folgende Beispiel zeigt einen Antworttext für eine Sitzungsstartanforderung, bei der beide kein Pflichtfeld und kein ungültiges Feld vorhanden sind.
+Das folgende Beispiel zeigt einen Antworttext für eine Sitzungsstartanforderung, der sowohl ein Pflichtfeld als auch ein ungültiges enthält.
 
 ```
 {

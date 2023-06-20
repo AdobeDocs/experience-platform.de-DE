@@ -1,61 +1,60 @@
 ---
-keywords: Experience Platform; Medien-Edge; beliebte Themen; Datumsbereich
 solution: Experience Platform
 title: Erste Schritte mit Media Edge-APIs
 description: Erste Schritte mit Media Edge-APIs
-source-git-commit: 4f60b00026a226aa6465b2c21b3c2198962a1e3b
+source-git-commit: 6570149298defe1aeb0c3e35cb71e166aeb7a3f7
 workflow-type: tm+mt
-source-wordcount: '979'
-ht-degree: 7%
+source-wordcount: '960'
+ht-degree: 6%
 
 ---
 
 
 # Erste Schritte mit der Media Edge API
 
-Dieses Handbuch enthält Anweisungen für erfolgreiche erste Interaktionen mit dem Media Edge API-Dienst. Dazu gehört das Starten einer Mediensitzung und das anschließende Tracking von Ereignissen, die an eine Adobe Experience Platform (AEP)-Lösung wie Customer Journey Analytics (CJA) gesendet werden. Der Media Edge-API-Dienst wird mit dem Sitzungsstart-Endpunkt initiiert. Nachdem die Sitzung gestartet wurde, können eines oder mehrere der folgenden Ereignisse verfolgt werden:
+Dieses Handbuch enthält Anweisungen für erfolgreiche erste Interaktionen mit dem Media Edge API-Dienst. Dazu gehört das Starten einer Mediensitzung und das anschließende Tracking von Ereignissen, die an eine Adobe Experience Platform-Lösung wie Customer Journey Analytics (CJA) gesendet werden. Der Media Edge-API-Dienst wird mit dem Sitzungsstart-Endpunkt initiiert. Nachdem die Sitzung gestartet wurde, können eines oder mehrere der folgenden Ereignisse verfolgt werden:
 
-* play
-* ping
-* bitrateChange
-* bufferStart
-* pauseStart
-* adBreakStart
-* adStart
-* adComplete
-* adSkip
-* adBreakComplete
-* chapterStart
-* chapterComplete
-* chapterSkip
-* error
-* sessionEnd
-* sessionComplete
-* statesUpdate
+* `play`
+* `ping`
+* `bitrateChange`
+* `bufferStart`
+* `pauseStart`
+* `adBreakStart`
+* `adStart`
+* `adComplete`
+* `adSkip`
+* `adBreakComplete`
+* `chapterStart`
+* `chapterComplete`
+* `chapterSkip`
+* `error`
+* `sessionEnd`
+* `sessionComplete`
+* `statesUpdate`
 
 Jedes Ereignis hat seinen eigenen Endpunkt. Alle Media Edge-API-Endpunkte sind POST-Methoden mit JSON-Anfrageinstanzen für Ereignisdaten. Weitere Informationen zu Media Edge-API-Endpunkten, -Parametern und -Beispielen finden Sie in der [Media Edge Swagger-Datei](swagger.md).
 
 In diesem Handbuch wird gezeigt, wie die folgenden Ereignisse nach dem Start der Sitzung verfolgt werden:
 
-* Pufferstart
-* Play
-* Sitzungsbeendigung
+* [Pufferstart](#buffer-start-event-request)
+* [Play](#play-event-request)
+* [Sitzungsbeendigung](#session-complete-event-request)
 
-## Implementieren der API
+## Implementieren der API {#implement-api}
 
-Abgesehen von geringfügigen Unterschieden im Modell und den Pfaden, die aufgerufen werden, verfügt die Media Edge-API über dieselbe Implementierung wie die Media Collection API. Die Implementierungsdetails der Mediensammlung bleiben für die Media Edge-API gültig, wie in der folgenden Dokumentation beschrieben:
+Abgesehen von geringfügigen Unterschieden im Modell und den Pfaden, die aufgerufen werden, verfügt die Media Edge-API über die gleiche Implementierung wie die [Mediensammlungs-API](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en). Die Implementierungsdetails der Mediensammlung bleiben für die Media Edge-API gültig, wie in der folgenden Dokumentation beschrieben:
 
 * [Einstellen des HTTP-Anfragetyps in Ihrem Player](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
 * [Senden von Ping-Ereignissen](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
 * [Timeout-Bedingungen](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-timeout.html?lang=en)
 * [Steuern der Ereignisreihenfolge](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-ctrl-order.html?lang=en)
 
-## Authorization
+## Authorization {#authorization}
 
 Derzeit erfordern Media Edge-APIs in ihren Anfragen keine Autorisierungskopfzeilen.
 
 
-## Starten der Sitzung
+## Starten der Sitzung {#start-session}
 
 Um die Mediensitzung auf dem Server zu starten, verwenden Sie den Sitzungsstart-Endpunkt. Eine erfolgreiche Antwort enthält `sessionId`, der ein erforderlicher Parameter für nachfolgende Ereignisanfragen ist.
 
@@ -104,7 +103,7 @@ Außerdem die Zuordnung von Datentypen für `eventType` Im obigen Beispiel sehen
 
 | eventType | Datentypen |
 | -------- | ------ |
-| mediaSessionStart | [sessionDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/sessiondetails.schema.md) |
+| media.SessionStart | [sessionDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/sessiondetails.schema.md) |
 | media.chapterStart | [chapterDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/chapterdetails.schema.md) |
 | media.adBreakStart | [advertisingPodDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingpoddetails.schema.md) |
 | media.adStart | [advertisingDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingdetails.schema.md) |
@@ -170,7 +169,7 @@ Weitere Informationen zu den Endpunktparametern für den Sitzungsstart und Beisp
 Weitere Informationen zu XDM-Mediendatenparametern finden Sie unter [Informationsschema für Mediendetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmplayhead).
 
 
-## Ereignisanforderung für Pufferstart
+## Ereignisanforderung für Pufferstart {#buffer-start}
 
 Das Ereignis &quot;Pufferstart&quot;signalisiert beim Start der Pufferung im Medienplayer. Die Wiederaufnahme der Pufferung ist kein Ereignis im API-Dienst. wird stattdessen erkannt, wenn nach dem Start der Pufferung ein Wiedergabeereignis gesendet wird. Verwenden Sie Ihre `sessionId` in der Payload eines Aufrufs an den folgenden Endpunkt:
 
@@ -208,7 +207,7 @@ Die erfolgreiche Antwort gibt den Status 200 an und enthält keinen Inhalt.
 Weitere Informationen zu den Parametern und Beispielen für den Pufferstartpunkt finden Sie in der [Medien-Edge-Swagger](swagger.md) -Datei.
 
 
-## Ereignisanforderung abspielen
+## Ereignisanforderung abspielen {#play-event}
 
 Das Abspielereignis wird gesendet, wenn der Medienplayer seinen Status von einem anderen Status wie &quot;Puffern&quot;, &quot;Ausgesetzt&quot;oder &quot;Fehler&quot;zu &quot;Wiedergabe&quot;ändert. Verwenden Sie Ihre `sessionId` in der Payload eines Aufrufs an den folgenden Endpunkt:
 
@@ -243,7 +242,7 @@ Die erfolgreiche Antwort gibt den Status 200 an und enthält keinen Inhalt.
 
 Weitere Informationen zu Play-Endpunktparametern und -beispielen finden Sie in der [Medien-Edge-Swagger](swagger.md) -Datei.
 
-## Anfrage zum Sitzungsbeendigungsereignis
+## Anfrage zum Sitzungsbeendigungsereignis {#session-complete}
 
 Das Ereignis Sitzungsbeendigung wird gesendet, wenn das Ende des Hauptinhalts erreicht ist. Verwenden Sie Ihre `sessionId` in der Payload eines Aufrufs an den folgenden Endpunkt:
 
@@ -289,6 +288,9 @@ Die folgende Tabelle zeigt die möglichen Antwort-Codes, die aus Media Edge-API-
 | 400-Grad | Ungültige Anfrage |
 | 500-Grad | Server-Fehler |
 
-Weitere Informationen zum Umgang mit Fehlern und fehlgeschlagenen Antwort-Codes finden Sie in der [Handbuch zur Fehlerbehebung bei Media Edge](troubleshooting.md).
+## Weitere Informationen zu dieser Funktion
+
+* [Handbuch zur Fehlerbehebung bei Media Edge](troubleshooting.md)
+* [Übersicht über die Media Edge API](overview.md)
 
 
