@@ -1,13 +1,13 @@
 ---
 title: Verschlüsselte Datenaufnahme
-description: Mit Adobe Experience Platform können Sie verschlüsselte Dateien über Cloud-Speicher-Batch-Quellen aufnehmen.
+description: Erfahren Sie, wie Sie verschlüsselte Dateien über Cloud-Speicher-Batch-Quellen mithilfe der API erfassen.
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: 8531459da97be648d0a63ffc2af77ce41124585d
+source-git-commit: f0e518459eca72d615b380d11cabee6c1593dd9a
 workflow-type: tm+mt
-source-wordcount: '967'
-ht-degree: 100%
+source-wordcount: '1017'
+ht-degree: 93%
 
 ---
 
@@ -40,6 +40,29 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 ### Verwenden von Platform-APIs
 
 Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../landing/api-guide.md).
+
+### Unterstützte Dateierweiterungen für verschlüsselte Dateien
+
+Die Liste der unterstützten Dateierweiterungen für verschlüsselte Dateien lautet wie folgt:
+
+* .csv 
+* .tsv
+* .json
+* .parquet
+* .csv.gpg
+* .tsv.gpg
+* .json.gpg
+* .parquet.gpg
+* .csv.pgp
+* .tsv.pgp
+* .json.pgp
+* .parquet.pgp
+* .gpg
+* .pgp
+
+>[!NOTE]
+>
+>Die verschlüsselte Dateiaufnahme in Adobe Experience Platform Sources unterstützt openPGP und keine bestimmte proprietäre Version von PGP.
 
 ## Erstellen eines Verschlüsselungsschlüsselpaars {#create-encryption-key-pair}
 
@@ -112,11 +135,11 @@ Nachdem Sie eine Basisverbindung erstellt haben, müssen Sie die Schritte im Tut
 >[!NOTE]
 >
 >Sie müssen über Folgendes verfügen, um einen Datenfluss für die verschlüsselte Datenaufnahme zu erstellen:
+>
 >* [ID des öffentlichen Schlüssels](#create-encryption-key-pair)
 >* [Quellverbindungs-ID](../api/collect/cloud-storage.md#source)
 >* [Zielverbindungs-ID](../api/collect/cloud-storage.md#target)
 >* [Zuordnungs-ID](../api/collect/cloud-storage.md#mapping)
-
 
 Um einen Datenfluss zu erstellen, stellen Sie eine POST-Anfrage an den `/flows`-Endpunkt der [!DNL Flow Service]-API. Zum Aufnehmen verschlüsselter Daten müssen Sie einen Abschnitt `encryption` zur `transformations`-Eigenschaft hinzufügen und die in einem früheren Schritt erstellte `publicKeyId` einschließen.
 
