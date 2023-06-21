@@ -2,10 +2,10 @@
 title: Abfragezeitpläne
 description: Erfahren Sie, wie Sie geplante Abfrageausführungen automatisieren, einen Abfragezeitplan löschen oder deaktivieren und die verfügbaren Planungsoptionen über die Adobe Experience Platform-Benutzeroberfläche nutzen können.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 75ef9c58aa7c5f1cc628d1f13b6c5f56b362458a
 workflow-type: tm+mt
-source-wordcount: '748'
-ht-degree: 76%
+source-wordcount: '886'
+ht-degree: 53%
 
 ---
 
@@ -15,7 +15,7 @@ Sie können die Ausführung von Abfragen automatisieren, indem Sie Abfragepläne
 
 >[!IMPORTANT]
 >
->Im Folgenden finden Sie eine Liste der Einschränkungen für geplante Abfragen bei Verwendung des Abfrage-Editors. Sie gelten nicht für die [!DNL Query Service]-API:<br/>Sie können einen Zeitplan nur zu einer Abfrage hinzufügen, die bereits erstellt, gespeichert und ausgeführt wurde.<br/>Sie können **keinen** Zeitplan zu einer parametrisierten Abfrage hinzufügen.<br/>Geplante Abfragen können **keinen** anonymen Block enthalten.
+>Sie können einen Zeitplan nur zu einer Abfrage hinzufügen, die bereits erstellt, gespeichert und ausgeführt wurde.
 
 Alle geplanten Abfragen werden der Liste im [!UICONTROL Geplante Abfragen] Registerkarte. Von diesem Arbeitsbereich aus können Sie den Status aller geplanten Abfrageaufträge über die Benutzeroberfläche überwachen. Im [!UICONTROL Geplante Abfragen] finden Sie wichtige Informationen zu Ihren Abfrageausführungen und abonnieren Warnungen. Zu den verfügbaren Informationen gehören Status, Planungsdetails und Fehlermeldungen/Codes für den Fall, dass eine Ausführung fehlschlägt. Siehe [Dokument zur Überwachung geplanter Abfragen](./monitor-queries.md) für weitere Informationen.
 
@@ -51,13 +51,27 @@ Für den Ausgabedatensatz können Sie entweder einen vorhandenen Datensatz verwe
 >
 > Da Sie entweder einen vorhandenen Datensatz verwenden oder einen neuen Datensatz erstellen, müssen Sie **weder** `INSERT INTO` noch `CREATE TABLE AS SELECT` als Teil die Abfrage einbeziehen, da die Datensätze bereits festgelegt sind. Das Einbeziehen von `INSERT INTO` oder `CREATE TABLE AS SELECT` als Teil Ihrer geplanten Abfragen führt zu einem Fehler.
 
+Wenn Sie keinen Zugriff auf parametrierte Abfragen haben, fahren Sie mit dem [Löschen oder Deaktivieren eines Zeitplans](#delete-schedule) Abschnitt.
+
+### Festlegen von Parametern für eine geplante parametrisierte Abfrage {#set-parameters}
+
+>[!IMPORTANT]
+>
+>Die Funktion der parametrisierten Abfragebenutzeroberfläche ist derzeit in einer **Nur begrenzte Version** und ist nicht für alle Kunden verfügbar.
+
+Wenn Sie eine geplante Abfrage für eine parametrisierte Abfrage erstellen, müssen Sie jetzt die Parameterwerte für diese Abfrageausführungen festlegen.
+
+![Der Abschnitt Planungsdetails des Workflows zur Planerstellung mit dem Abschnitt Abfrageparameter wurde hervorgehoben.](../images/ui/query-schedules/scheduled-query-parameter.png)
+
 Nachdem Sie alle diese Details geprüft haben, wählen Sie **[!UICONTROL Speichern]** aus, um einen Zeitplan zu erstellen. Sie werden zum Arbeitsbereich für Zeitpläne zurückgeleitet, der Details zum neu erstellten Zeitplan anzeigt, darunter die Zeitplan-ID, den Zeitplan selbst und den Ausgabedatensatz des Zeitplans. Sie können die Zeitplan-ID verwenden, um weitere Informationen zu den Ausführungen der geplanten Abfrage selbst zu erhalten. Weitere Informationen finden Sie im [Handbuch zu Endpunkten für die Ausführung geplanter Abfragen](../api/runs-scheduled-queries.md).
 
 ![Der Arbeitsbereich für Zeitpläne mit dem hervorgehobenen neu erstellten Zeitplan.](../images/ui/query-schedules/schedules-workspace.png)
 
 ## Löschen oder Deaktivieren eines Zeitplans {#delete-schedule}
 
-Sie können einen Zeitplan im Arbeitsbereich für Zeitpläne löschen oder deaktivieren. Wählen Sie eine Abfragevorlage auf der Registerkarte [!UICONTROL Vorlagen] oder der Registerkarte [!UICONTROL Geplante Abfragen] aus, um zum Abfrage-Editor zu navigieren. Wählen Sie dann **[!UICONTROL Zeitplan]** aus, um auf den Arbeitsbereich für Zeitpläne zuzugreifen.
+Sie können einen Zeitplan im Arbeitsbereich Zeitpläne einer bestimmten Abfrage oder im [!UICONTROL Geplante Abfragen] Arbeitsbereich, der alle geplanten Abfragen auflistet.
+
+So greifen Sie auf die [!UICONTROL Zeitpläne] im Tab der von Ihnen ausgewählten Abfrage den Namen einer Abfragevorlage aus dem [!UICONTROL Vorlagen] oder [!UICONTROL Geplante Abfragen] Registerkarte. Dadurch wird zum Abfrage-Editor für diese Abfrage navigiert. Wählen Sie im Abfrage-Editor die Option **[!UICONTROL Zeitpläne]** , um auf den Arbeitsbereich Zeitpläne zuzugreifen.
 
 Wählen Sie einen Zeitplan aus den Zeilen der verfügbaren Zeitpläne aus. Sie können den Umschalter verwenden, um die geplante Abfrage zu deaktivieren oder zu aktivieren.
 
@@ -68,3 +82,5 @@ Wählen Sie einen Zeitplan aus den Zeilen der verfügbaren Zeitpläne aus. Sie k
 Wählen Sie **[!UICONTROL Zeitplan löschen]** aus, um den deaktivierten Zeitplan zu löschen.
 
 ![Der Arbeitsbereich „Zeitpläne“ mit den hervorgehobenen Optionen „Zeitplan deaktivieren“ und „Zeitplan löschen“.](../images/ui/query-schedules/delete-schedule.png)
+
+Alternativ kann die [!UICONTROL Geplante Abfragen] bietet eine Sammlung von Inline-Aktionen für jede geplante Abfrage. Zu den verfügbaren Inline-Aktionen gehören [!UICONTROL Zeitplan deaktivieren] oder [!UICONTROL Zeitplan aktivieren], [!UICONTROL Zeitplan löschen]und [!UICONTROL Abonnieren] auf Warnhinweise für die geplante Abfrage. Vollständige Anweisungen zum Löschen oder Deaktivieren einer geplanten Abfrage über die Registerkarte &quot;Geplante Abfragen&quot;finden Sie in der [Handbuch zur Überwachung geplanter Abfragen](./monitor-queries.md#inline-actions).

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Abfrage-Editors
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 90829713e85e930e4fd6a32b0dbd38aeb837b84e
+source-git-commit: ff4b528a0456f46d8c99e5921cfc99b197956ba6
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '1670'
 ht-degree: 88%
 
 ---
@@ -113,11 +113,7 @@ In diesem Bedienfeld werden außerdem nützliche Metadaten angezeigt, z. B. wann
 
 Abfragen, die als Vorlage gespeichert wurden, können im Abfrage-Editor geplant werden. Auf diese Weise können Sie die Ausführung von Abfragen in einem benutzerdefinierten Cadence automatisieren. Sie können Abfragen basierend auf Häufigkeit, Datum und Uhrzeit planen und bei Bedarf auch einen Ausgabedatensatz für Ihre Ergebnisse auswählen. Abfragezeitpläne können auch über die Benutzeroberfläche deaktiviert oder gelöscht werden.
 
-Zeitpläne werden im Abfrage-Editor festgelegt. Im Folgenden finden Sie eine Liste der Einschränkungen für geplante Abfragen bei Verwendung des Abfrage-Editors. Sie gelten nicht für die [!DNL Query Service] API:
-
-- Sie können einen Zeitplan nur zu einer Abfrage hinzufügen, die bereits erstellt, gespeichert und ausgeführt wurde.
-- Sie können **keinen** Zeitplan zu einer parametrisierten Abfrage hinzufügen.
-- Geplante Abfragen können **keinen** anonymen Block enthalten.
+Zeitpläne werden im Abfrage-Editor festgelegt. Bei Verwendung des Abfrage-Editors können Sie einer bereits erstellten, gespeicherten und ausgeführten Abfrage nur einen Zeitplan hinzufügen. Dies gilt nicht für die [!DNL Query Service] API:
 
 Weitere Informationen finden Sie in der Dokumentation zu Abfragezeitplänen . [Erstellen von Abfrageplänen in der Benutzeroberfläche](./query-schedules.md). Informationen zum Hinzufügen von Zeitplänen mithilfe der API finden Sie auch in der [Endpunktleitfaden für geplante Abfragen](../api/scheduled-queries.md).
 
