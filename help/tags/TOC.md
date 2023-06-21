@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Tags
 solution: Data Collection
-source-git-commit: 0d931c90b6321d93eec9da16f360a3ecd2fd8f14
+source-git-commit: 6e569ca3f83b374f88ca46fd8f2c40bbed203527
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '1001'
 ht-degree: 99%
 
 ---
@@ -235,7 +235,7 @@ ht-degree: 99%
       * [!DNL Pinterest] {#pinterest}
          * [Übersicht](./extensions/server/pinterest/overview.md)
       * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)
-      * [Snowflake] {#snowflake}
+      * [!DNL Snowflake] {#snowflake}
          * [Übersicht](./extensions/server/snowflake/overview.md)
       * [!DNL Splunk] {#splunk}
          * [Übersicht](./extensions/server/splunk/overview.md)
