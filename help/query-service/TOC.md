@@ -4,10 +4,10 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
 breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
-source-git-commit: a2b4ddae00ecdf33a12119810eca1ed19ace0c2f
+source-git-commit: 9fe547e6270b4ede3151158e3b474f8c3dfd2297
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 98%
+source-wordcount: '278'
+ht-degree: 97%
 
 ---
 
@@ -60,6 +60,7 @@ ht-degree: 98%
    - [Benutzeroberfläche – Übersicht](ui/overview.md)
    - [Benutzerhandbuch zum Abfrage-Editor](ui/user-guide.md)
    - [Abfragevorlagen](ui/query-templates.md)
+   - [Parametrisierte Abfragen (begrenzt)](ui/parameterized-queries.md)
    - [Abfragepläne](ui/query-schedules.md)
    - [Abfrageprotokolle](ui/query-logs.md)
    - [Überwachen von geplanten Abfragen ](ui/monitor-queries.md)
@@ -86,6 +87,7 @@ ht-degree: 98%
    - [Arbeiten mit verschachtelten Datenstrukturen](essential-concepts/nested-data-structures.md)
    - [Reduzieren von verschachtelten Datenstrukturen](essential-concepts/flatten-nested-data.md)
    - [Anonymer Block](essential-concepts/anonymous-block.md)
+   - [Inline-Vorlage](essential-concepts/inline-templates.md)
    - [Inkrementelles Laden](essential-concepts/incremental-load.md)
    - [Deduplizierung von Daten](essential-concepts/deduplication.md)
    - [Datensatzbeispiele](essential-concepts/dataset-samples.md)
