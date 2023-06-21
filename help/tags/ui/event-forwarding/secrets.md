@@ -2,10 +2,10 @@
 title: Konfigurieren von Geheimnissen bei der Ereignisweiterleitung
 description: Erfahren Sie, wie Sie Geheimnisse in der Benutzeroberfläche konfigurieren, um sich bei Endpunkten zu authentifizieren, die in den Eigenschaften der Ereignisweiterleitung verwendet werden.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
+source-git-commit: a863d65c3e6e330254a58aa822383c0847b0e5f5
 workflow-type: tm+mt
-source-wordcount: '1763'
-ht-degree: 100%
+source-wordcount: '2182'
+ht-degree: 85%
 
 ---
 
@@ -13,14 +13,15 @@ ht-degree: 100%
 
 Bei der Ereignisweiterleitung sind geheime Daten eine Ressource, die eine Authentifizierungsberechtigung für ein anderes System darstellt und den sicheren Datenaustausch ermöglicht. Geheime Daten können nur in den Eigenschaften der Ereignisweiterleitung erstellt werden.
 
-Derzeit werden drei Typen von geheimen Daten unterstützt:
+Die folgenden geheimen Typen werden derzeit unterstützt:
 
 | Typ von geheimen Daten | Beschreibung |
 | --- | --- |
-| [!UICONTROL Token] | Eine einzelne Zeichenfolge, die den Wert eines Authentifizierungs-Tokens darstellt, der von beiden Systemen verstanden wird. |
+| [!UICONTROL Google OAuth 2] | Enthält mehrere Attribute, um die [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749)-Authentifizierungsspezifikation zur Verwendung in der [Google Ads-API](https://developers.google.com/google-ads/api/docs/oauth/overview) und [Pub/Sub-API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview) zu unterstützen. Das System fordert von Ihnen die erforderlichen Informationen an. Anschließend übernimmt es die Verlängerung dieser Token für Sie in einem bestimmten Intervall. |
 | [!UICONTROL HTTP] | Enthält zwei Zeichenfolgen-Attribute für einen Benutzernamen und ein Kennwort. |
 | [!UICONTROL OAuth 2] | Enthält mehrere Attribute zur Unterstützung des [Grant-Typs der Client-Anmeldeinformationen](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) für die Authentifizierungsspezifikation [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749). Das System fordert von Ihnen die erforderlichen Informationen an. Anschließend übernimmt es die Verlängerung dieser Token für Sie in einem bestimmten Intervall. |
-| [!UICONTROL Google OAuth 2] | Enthält mehrere Attribute, um die [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749)-Authentifizierungsspezifikation zur Verwendung in der [Google Ads-API](https://developers.google.com/google-ads/api/docs/oauth/overview) und [Pub/Sub-API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview) zu unterstützen. Das System fordert von Ihnen die erforderlichen Informationen an. Anschließend übernimmt es die Verlängerung dieser Token für Sie in einem bestimmten Intervall. |
+| [!UICONTROL OAuth 2 JWT] | Enthält mehrere Attribute zur Unterstützung des JSON Web Token (JWT)-Profils für [OAuth 2.0 Authorization](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) Finanzhilfen. Das System fordert von Ihnen die erforderlichen Informationen an. Anschließend übernimmt es die Verlängerung dieser Token für Sie in einem bestimmten Intervall. |
+| [!UICONTROL Token] | Eine einzelne Zeichenfolge, die den Wert eines Authentifizierungs-Tokens darstellt, der von beiden Systemen verstanden wird. |
 
 {style="table-layout:auto"}
 
@@ -73,6 +74,7 @@ Von hier aus unterscheiden sich die Schritte zum Erstellen der geheimen Daten je
 * [[!UICONTROL Token]](#token)
 * [[!UICONTROL HTTP]](#http)
 * [[!UICONTROL OAuth 2]](#oauth2)
+* [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
 
 ### [!UICONTROL Token] {#token}
@@ -116,6 +118,40 @@ Wenn beispielsweise der Zeitversatz zur Aktualisierung auf den Standardwert von 
 Wenn Sie fertig sind, wählen Sie die Option **[!UICONTROL Geheime Daten erstellen]** aus, um die geheimen Daten zu speichern.
 
 ![OAuth 2-Versatz speichern](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
+
+### [!UICONTROL OAuth 2 JWT] {#oauth2jwt}
+
+Um ein OAuth 2 JWT-Geheimnis zu erstellen, wählen Sie **[!UICONTROL OAuth 2 JWT]** von **[!UICONTROL Typ]** Dropdown-Liste.
+
+![Die [!UICONTROL Geheimnis erstellen] Registerkarte mit dem OAuth 2 JWT-Geheimnis hervorgehoben im [!UICONTROL Typ] Dropdown-Liste.](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
+
+>[!NOTE]
+>
+>Die einzige [!UICONTROL Algorithmus] wird derzeit für das Signieren des JWT unterstützt RS256.
+
+Geben Sie in den unten angezeigten Feldern Ihre [!UICONTROL Aussteller], [!UICONTROL Betreff], [!UICONTROL Zielgruppe], [!UICONTROL Benutzerspezifische Ansprüche], [!UICONTROL TTL]und wählen Sie dann die [!UICONTROL Algorithmus] aus dem Dropdown-Menü aus. Geben Sie als Nächstes die [!UICONTROL Private Key Id]sowie [[!UICONTROL Token-URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) für Ihre OAuth-Integration. Die [!UICONTROL Token-URL] -Feld ist kein Pflichtfeld. Wenn ein Wert angegeben wird, wird das JWT durch ein Zugriffstoken ausgetauscht. Das Geheimnis wird entsprechend der `expires_in` -Attribut aus der Antwort und dem [!UICONTROL Versatz aktualisieren] -Wert. Wenn kein Wert angegeben wird, ist das an den Rand gepushte Geheimnis das JWT. Die JWT wird entsprechend der [!UICONTROL TTL] und [!UICONTROL Versatz aktualisieren] -Werte.
+
+![Die [!UICONTROL Geheimnis erstellen] mit einer Auswahl von Eingabefeldern markiert.](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
+
+under **[!UICONTROL Berechtigungsoptionen]** können Sie weitere Berechtigungsoptionen bereitstellen, z. B. `jwt_param` in Form von Schlüssel-Wert-Paaren. Um weitere Schlüssel-Wert-Paare hinzuzufügen, wählen Sie **[!UICONTROL Weitere hinzufügen]** aus.
+
+![Die [!UICONTROL Geheimnis erstellen] Registerkarte, die die [!UICONTROL Berechtigungsoptionen] -Felder.](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
+
+Schließlich können Sie den Wert **[!UICONTROL Versatz aktualisieren]** für die jeweiligen geheimen Daten konfigurieren. Dies stellt die Anzahl der Sekunden vor Ablauf des Tokens dar, nach denen das System eine automatische Aktualisierung durchführt. Die entsprechende Uhrzeit in Stunden und Minuten wird rechts neben dem Feld angezeigt und bei der Eingabe automatisch aktualisiert.
+
+![Die [!UICONTROL Geheimnis erstellen] Registerkarte, die die [!UICONTROL Versatz aktualisieren] -Feld.](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
+
+Wenn beispielsweise der Aktualisierungs-Offset auf den Standardwert von `1800` (30 Minuten) und das Zugriffstoken verfügt über eine `expires_in` Wert von `3600` (eine Stunde), aktualisiert das System das Geheimnis automatisch in einer Stunde.
+
+>[!IMPORTANT]
+>
+>Ein OAuth 2 JWT-Geheimnis benötigt zwischen Aktualisierungen mindestens 30 Minuten und muss auch mindestens eine Stunde gültig sein. Durch diese Einschränkung erhalten Sie mindestens 30 Minuten, um bei Problemen mit dem generierten Token einzugreifen.
+>
+>Wenn der Offset beispielsweise auf `1800` (30 Minuten) und das Zugriffstoken verfügt über eine `expires_in` von `2700` (45 Minuten), würde der Austausch fehlschlagen, da der daraus resultierende Unterschied weniger als 30 Minuten betragen würde.
+
+Wenn Sie fertig sind, wählen Sie die Option **[!UICONTROL Geheime Daten erstellen]** aus, um die geheimen Daten zu speichern.
+
+![Die [!UICONTROL Geheimnis erstellen] Tabulatorhervorhebung [!UICONTROL Geheimnis erstellen]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
 
 ### [!UICONTROL Google OAuth 2] {#google-oauth2}
 
