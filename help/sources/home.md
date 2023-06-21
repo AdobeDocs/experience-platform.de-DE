@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über Quell-Connectoren
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 6e663e428eebcea92f94111708686d80cf63a988
+source-git-commit: f3d70e986148d39429f394a60d12686617e3fd3d
 workflow-type: tm+mt
 source-wordcount: '1324'
 ht-degree: 84%
@@ -63,6 +63,7 @@ Experience Platform bietet Unterstützung für die Aufnahme von Daten aus einer 
 
 - [[!DNL Mixpanel]](connectors/analytics/mixpanel.md)
 - [[!DNL Pendo]](connectors/analytics/pendo-webhook.md)
+- [[!DNL RainFocus]](connectors/analytics/rainfocus.md)
 
 ### Cloud-Speicherplatz {#cloud-storage}
 
@@ -128,7 +129,7 @@ Experience Platform ermöglicht die Aufnahme von Daten aus Datenbanken von Dritt
 - [[!DNL Oracle]](connectors/databases/oracle.md)
 - [[!DNL Phoenix]](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL]](connectors/databases/postgres.md)
-- [[!DNL Snowflake Streaming]](connectors/databases//snowflake-streaming.md)
+- [[!DNL Snowflake (Streaming)]](connectors/databases//snowflake-streaming.md)
 - [[!DNL Snowflake]](connectors/databases/snowflake.md)
 - [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md)
 
@@ -137,7 +138,7 @@ Experience Platform ermöglicht die Aufnahme von Daten aus Datenbanken von Dritt
 Experience Platform ermöglicht die Aufnahme von Daten aus E-Commerce-Systemen von Drittanbietern. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
-- [[!DNL Shopify Streaming]](connectors/ecommerce/shopify-streaming.md)
+- [[!DNL Shopify (Streaming)]](connectors/ecommerce/shopify-streaming.md)
 
 ### Lokales System {#local-system}
 

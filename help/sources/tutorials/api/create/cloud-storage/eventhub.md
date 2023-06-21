@@ -3,10 +3,10 @@ title: Erstellen einer Azure Event Hub-Quellverbindung mithilfe der Flow Service
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit einem Azure Event Hub-Konto verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b76bc6ddb0d49bbd089627c8df8b31703d0e50b1
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 58%
+source-wordcount: '773'
+ht-degree: 56%
 
 ---
 
@@ -104,6 +104,10 @@ Bei einer erfolgreichen Antwort werden Details zu der neu erstellten Basisverbin
 
 ## Erstellen einer Quellverbindung
 
+>[!TIP]
+>
+>Ein [!DNL Event Hubs] Die Benutzergruppe kann nur für einen einzelnen Fluss gleichzeitig verwendet werden.
+
 Eine Quellverbindung erstellt und verwaltet die Verbindung zu der externen Quelle, aus der Daten erfasst werden. Eine Quellverbindung besteht aus Informationen wie Datenquelle, Datenformat und einer Quell-Verbindungs-ID, die zum Erzeugen eines Datenflusses erforderlich sind. Eine Quellverbindungsinstanz ist für einen Mandanten und eine Organisation spezifisch.
 
 Um eine Quellverbindung zu erstellen, stellen Sie eine POST-Anfrage an den `/sourceConnections`-Endpunkt der [!DNL Flow Service]-API.
@@ -154,7 +158,7 @@ curl -X POST \
 | `params.eventHubName` | Der Name für Ihre [!DNL Event Hubs] -Quelle. |
 | `params.dataType` | Dieser Parameter definiert den Typ der aufgenommenen Daten. Zu den unterstützten Datentypen gehören: `raw` und `xdm`. |
 | `params.reset` | Dieser Parameter definiert, wie die Daten gelesen werden. Verwendung `latest` , um mit dem Lesen der neuesten Daten zu beginnen, und verwenden Sie `earliest` , um mit dem Lesen der ersten verfügbaren Daten im Stream zu beginnen. Dieser Parameter ist optional und standardmäßig `earliest` wenn nicht angegeben. |
-| `params.consumerGroup` | Der Veröffentlichungs- oder Abonnementmechanismus, der für [!DNL Event Hubs]. Dieser Parameter ist optional und standardmäßig `$Default` wenn nicht angegeben. Siehe hierzu [[!DNL Event Hubs] Handbuch für Ereignisnutzer](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) für weitere Informationen. |
+| `params.consumerGroup` | Der Veröffentlichungs- oder Abonnementmechanismus, der für [!DNL Event Hubs]. Dieser Parameter ist optional und standardmäßig `$Default` wenn nicht angegeben. Siehe hierzu [[!DNL Event Hubs] Handbuch für Ereignisnutzer](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) für weitere Informationen. **Hinweis**: Ein [!DNL Event Hubs] Die Benutzergruppe kann nur für einen einzelnen Fluss gleichzeitig verwendet werden. |
 
 ## Nächste Schritte
 
