@@ -5,10 +5,10 @@ solution: Experience Platform
 title: Erstellen einer Adobe Analytics-Quellverbindung für Classification-Daten in der Benutzeroberfläche
 type: Tutorial
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: fcebef97ba9cc667f80afd55980c5460912a56fb
 workflow-type: tm+mt
-source-wordcount: '659'
-ht-degree: 26%
+source-wordcount: '628'
+ht-degree: 20%
 
 ---
 
@@ -72,12 +72,7 @@ Wählen Sie die **[!UICONTROL Target-Datensatz]** die Sie aufrufen möchten.
 
 Die **[!UICONTROL Datensatzaktivität]** -Seite enthält Informationen zum ausgewählten Zieldatensatz, einschließlich Details zum Batch-Status, zur Datensatz-ID und zum Schema.
 
->[!IMPORTANT]
->
->Das Löschen von Datensätzen ist zwar für andere Quell-Connectoren möglich, wird aber derzeit für den Analytics Classifications Data-Connector nicht unterstützt. Wenn Sie einen Datensatz versehentlich löschen, wenden Sie sich an die Kundenunterstützung von Adobe.
-
 ![](../../../../images/tutorials/create/classifications/dataset.png)
-
 
 ## Nächste Schritte
 
