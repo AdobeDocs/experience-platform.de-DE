@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Anwendungsbeispiele - Übersicht
 description: Erfahren Sie, wie Sie in Experience Platform mit der Funktion "Use Case Playbooks"beginnen, um mit verschiedenen Marketing-Anwendungsfällen zu beginnen.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
+source-git-commit: 896ca002b34e79bd464467011875a54acd5c187c
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '400'
 ht-degree: 3%
 
 ---
@@ -18,6 +18,7 @@ ht-degree: 3%
 Weiterführende Informationen finden Sie in diesem Handbuch:
 
 * **[Übersicht über Anwendungsfallbücher](#overview)**
+* [Erste Schritte](/help/use-case-playbooks/playbooks/get-started.md)
 * [Entdecken Sie das richtige Playbook](/help/use-case-playbooks/playbooks/discover.md)
 * [Erstellen, Freigeben und Wiederverwenden von Playbook-Instanzen](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [Fehlerbehebung und bekannte Einschränkungen](troubleshooting.md)

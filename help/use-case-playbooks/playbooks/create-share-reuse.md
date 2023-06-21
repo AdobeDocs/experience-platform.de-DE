@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Erstellen, Freigeben und Wiederverwenden von Playbook-Instanzen
 description: Erfahren Sie, wie Sie Playbook-Instanzen erstellen, freigeben und wiederverwenden können, um Ihren Marketing-Anwendungsfall zu erreichen.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
+source-git-commit: e61e200b148e4d17041b3711bd63c796a44b05c8
 workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 1%
@@ -64,11 +64,11 @@ Das oben beschriebene Verhalten gilt für alle Assets, die erstellt werden, mit 
 >
 >Nachdem Objekte generiert wurden, können Sie sie in den Entwicklungs-Sandboxes weiter testen, indem Sie Daten hinzufügen. Sie können die Assets so lange testen, wie Sie es in der Entwicklungs-Sandbox wünschen, und Sie können die Asset-Logik (Segmentdefinitionen, Journey, Schemas usw.) in der Produktions-Sandbox replizieren, wenn Sie bereit sind.
 
-### Spielbücher wiederverwenden {#reuse-playbooks}
+## Spielbücher wiederverwenden {#reuse-playbooks}
 
 Wenn Sie mehrere Instanzen desselben Playbooks erstellen, können Sie denselben Anwendungsfall später implementieren, ohne die Details Ihrer vorherigen Implementierung des Anwendungsfalls zu ändern.
 
-### Geben Sie das Playbook und die generierten Assets für andere Team-Mitglieder frei. {#share-playbook}
+## Geben Sie das Playbook und die generierten Assets für andere Team-Mitglieder frei. {#share-playbook}
 
 Sie können die generierte Instanz und die Assets für andere Team-Mitglieder freigeben. Kopieren Sie dazu den URL-Link aus dem Browser und geben Sie ihn für Ihr Team frei, damit Sie einen Überblick über die generierten Assets erhalten.
 
