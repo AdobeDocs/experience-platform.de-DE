@@ -5,7 +5,7 @@ description: Mit dem Zielgruppen-Endpunkt in der Adobe Experience Platform Segme
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
 hide: true
 hidefromtoc: true
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: f75c2c7ff07974cd0f2a5a8cc3e990c7f3eaa0a3
 workflow-type: tm+mt
 source-wordcount: '1515'
 ht-degree: 9%
@@ -62,7 +62,7 @@ Das folgende Anfrage-/Antwortpaar wird verwendet, wenn die `withMetrics` -Abfrag
 Mit der folgenden Anfrage werden die letzten fünf Zielgruppen abgerufen, die in Ihrer Organisation erstellt wurden.
 
 ```shell
-curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=5 \
+curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=5 \
  -H 'Authorization:  Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id:  {IMS_ORG}' \
  -H 'x-api-key:  {API_KEY}' \
@@ -684,7 +684,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | -------- | ----------- | 
 | `audienceId` | Die Kennung der Audience. Dies wird von externen Zielgruppen verwendet |
 | `name` | Der Name der Zielgruppe. |
-| `namespace` |  |
+| `namespace` | |
 | `description` | Eine Beschreibung der Zielgruppe. |
 | `type` | Ein systemgeneriertes Feld, das anzeigt, ob die Zielgruppe Platform-generiert ist oder eine extern generierte Zielgruppe ist. Mögliche Werte sind `SegmentDefinition` und `ExternalAudience`. A `SegmentDefinition` bezieht sich auf eine Zielgruppe, die in Platform generiert wurde, während eine `ExternalAudience` bezieht sich auf eine Zielgruppe, die nicht in Platform generiert wurde. |
 | `lifecycle` | Der Status der Zielgruppe. Mögliche Werte sind `draft`, `published`, `inactive`und `archived`. `draft` steht für den Zeitpunkt der Erstellung der Audience; `published` wann die Audience veröffentlicht wird, `inactive` wenn die Zielgruppe nicht mehr aktiv ist, und `archived` wenn die Zielgruppe gelöscht wird. |
