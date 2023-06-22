@@ -1,55 +1,55 @@
 ---
-description: Erfahren Sie, wie Sie mit der Ziel-Test-API Ihre Streaming-Zielkonfiguration testen können, bevor Sie sie veröffentlichen.
-title: Übersicht über die Streaming-Ziel-Test-API
+description: Erfahren Sie, wie Sie mit der Zieltest-API Ihre Streaming-Zielkonfiguration testen können, bevor Sie sie veröffentlichen.
+title: Streaming-Zieltest-API – Überblick
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
 source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '508'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
-# Übersicht über die Streaming-Ziel-Test-API
+# Streaming-Zieltest-API – Überblick
 
-Als Teil der Destination SDK bietet Adobe Entwicklertools, mit denen Sie Ihr Ziel konfigurieren und testen können. Auf dieser Seite wird beschrieben, wie Sie Ihre Zielkonfiguration testen. Informationen zum Erstellen einer Nachrichtenumwandlungsvorlage finden Sie unter [Erstellen und Testen einer Nachrichtenumwandlungsvorlage](../../testing-api/streaming-destinations/create-template.md).
+Als Teil des Destination SDK bietet Adobe Entwickler-Tools, mit denen Sie Ihr Ziel konfigurieren und testen können. Auf dieser Seite wird beschrieben, wie Sie Ihre Zielkonfiguration testen. Informationen zum Erstellen einer Nachrichtenumwandlungsvorlage finden Sie unter [Erstellen und Testen einer Nachrichtenumwandlungsvorlage](../../testing-api/streaming-destinations/create-template.md).
 
-nach **Testen Sie, ob Ihr Ziel richtig konfiguriert ist, und überprüfen Sie die Integrität der Datenflüsse zu Ihrem konfigurierten Ziel.**, verwenden Sie die *Destination Test Tool*. Mit diesem Tool können Sie Ihre Zielkonfiguration testen, indem Sie Nachrichten an Ihren REST-API-Endpunkt senden.
+Um zu **testen, ob Ihr Ziel richtig konfiguriert ist, und die Integrität der Datenflüsse zu Ihrem konfigurierten Ziel zu überprüfen**, verwenden Sie das *Test-Tool für Ziele*. Mit diesem Tool können Sie Ihre Zielkonfiguration testen, indem Sie Nachrichten an Ihren REST-API-Endpunkt senden.
 
-Nachstehend wird gezeigt, wie das Testen Ihres Ziels in den [Zielkonfigurations-Workflow](../../guides/configure-destination-instructions.md) in Destination SDK:
+Nachstehend wird gezeigt, wie das Testen Ihres Ziels in den [Zielkonfigurations-Workflow](../../guides/configure-destination-instructions.md) in Destination SDK passt:
 
 ![Abbildung, wo der Zieltestschritt in den Zielkonfigurations-Workflow passt](../../assets/testing-api/test-destination-step.png)
 
-## Zieltesttool - Zweck und Voraussetzungen {#destination-testing-tool}
+## Test-Tool für Ziele – Zweck und Voraussetzungen {#destination-testing-tool}
 
-Verwenden Sie das Ziel-Testtool, um Ihre Zielkonfiguration zu testen, indem Sie Nachrichten an den Partnerendpunkt senden, den Sie im Abschnitt [Serverkonfiguration](../../authoring-api/destination-server/create-destination-server.md).
+Verwenden Sie das Test-Tool für Ziele, um Ihre Zielkonfiguration zu testen, indem Sie Nachrichten an den Partnerendpunkt senden, den Sie im Abschnitt [Server-Konfiguration](../../authoring-api/destination-server/create-destination-server.md) bereitgestellt haben.
 
 Bevor Sie das Tool verwenden, stellen Sie Folgendes sicher:
-* Konfigurieren Sie Ihr Ziel, indem Sie die im Abschnitt [Zielkonfigurations-Workflow](../../authoring-api/destination-configuration/create-destination-configuration.md) und
-* Erstellen Sie eine Verbindung zu Ihrem Ziel, wie im Abschnitt [Abrufen der Ziel-Instanz-ID](../../testing-api/streaming-destinations/destination-testing-api.md#get-destination-instance-id).
+* Konfigurieren Sie Ihr Ziel, indem Sie die im [Zielkonfigurations-Workflow](../../authoring-api/destination-configuration/create-destination-configuration.md)beschriebenen Schritte ausführen, und
+* Erstellen Sie eine Verbindung zu Ihrem Ziel, wie im Abschnitt [Abrufen der Ziel-Instanz-ID](../../testing-api/streaming-destinations/destination-testing-api.md#get-destination-instance-id) beschrieben.
 
 Mit diesem Tool haben Sie nach der Konfiguration Ihres Ziels folgende Möglichkeiten:
-* Testen Sie, ob Ihr Ziel richtig konfiguriert ist.
-* Überprüfen Sie die Integrität der Datenflüsse zu Ihrem konfigurierten Ziel.
+* Testen, ob Ihr Ziel richtig konfiguriert ist.
+* Überprüfen der Integrität der Datenflüsse zu Ihrem konfigurierten Ziel.
 
 ### Informationen zur Verwendung {#how-to-use}
 
 >[!NOTE]
 >
->Eine vollständige API-Referenzdokumentation finden Sie unter [API-Vorgänge für Zieltests](../../testing-api/streaming-destinations/destination-testing-api.md).
+>Eine vollständige API-Referenzdokumentation finden Sie unter [Vorgänge der Zieltest-API](../../testing-api/streaming-destinations/destination-testing-api.md).
 
-Sie können den Ziel-Test-API-Endpunkt mit oder ohne Hinzufügen von Profilen zur Anfrage aufrufen.
+Sie können den Zieltest-API-Endpunkt mit oder ohne Hinzufügen von Profilen zur Anfrage aufrufen.
 
-Wenn Sie der Anforderung keine Profile hinzufügen, generiert Adobe diese intern und fügt sie der Anforderung hinzu. Informationen zum Generieren von Profilen für die Verwendung in dieser Anfrage finden Sie im Abschnitt [API-Referenz zur Profilgenerierung](../../testing-api/streaming-destinations/sample-profile-generation-api.md). Sie müssen Profile basierend auf dem Quell-XDM-Schema generieren, wie in der [API-Referenz](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema). Beachten Sie, dass das Quellschema die [Vereinigungsschema](../../../../profile/ui/union-schema.md) der von Ihnen verwendeten Sandbox.
+Wenn Sie der Anfrage keine Profile hinzufügen, generiert Adobe diese intern und fügt sie der Anfrage hinzu. Informationen zum Generieren von Profilen für die Verwendung in dieser Anfrage finden Sie in der [API-Referenz zur Profilgenerierung](../../testing-api/streaming-destinations/sample-profile-generation-api.md). Sie müssen Profile basierend auf dem Quell-XDM-Schema generieren, wie in der [API-Referenz](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema) beschrieben. Beachten Sie, dass das Quellschema das [Vereinigungsschema](../../../../profile/ui/union-schema.md) der von Ihnen verwendeten Sandbox ist.
 
 Die Antwort enthält das Ergebnis der Verarbeitung der Zielanfrage. Die Anfrage umfasst drei Hauptabschnitte:
 * Die von Adobe für das Ziel generierte Anfrage.
 * Die von Ihrem Ziel erhaltene Antwort.
-* Liste der in der Anfrage gesendeten Profile, unabhängig davon, ob es sich um Profile handelt [, die Sie in der Anfrage hinzugefügt haben](../../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles)oder von Adobe generiert, wenn [der Hauptteil der Zieltestanfrage war leer](../../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles).
+* Die Liste der in der Anfrage gesendeten Profile, unabhängig davon, ob es sich um Profile handelt, [die Sie in der Anfrage hinzugefügt haben](../../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles) oder ob sie von Adobe generiert wurden, falls [der Hauptteil der Zieltestanfrage leer war](../../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles).
 
 >[!NOTE]
 >
->Adobe kann mehrere Anfrage- und Antwortpaare generieren. Wenn Sie beispielsweise 10 Profile an ein Ziel senden, das über eine `maxUsersPerRequest` 7, gibt es eine Anfrage mit 7 Profilen und eine weitere Anfrage mit 3 Profilen.
+>Adobe kann mehrere Anfrage- und Antwortpaare generieren. Wenn Sie beispielsweise 10 Profile an ein Ziel senden, für das `maxUsersPerRequest` den Wert 7 hat, gibt es eine Anfrage mit 7 Profilen und eine weitere Anfrage mit 3 Profilen.
 
 **Beispielanfrage mit Profilparametern im Hauptteil**
 
@@ -124,7 +124,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 **Beispielantwort**
 
-Beachten Sie, dass der Inhalt der `results.httpCalls` -Parameter ist spezifisch für Ihre REST-API.
+Beachten Sie, dass der Inhalt des Parameters `results.httpCalls` spezifisch für Ihre REST-API ist.
 
 ```json
 {
@@ -228,8 +228,8 @@ Beachten Sie, dass der Inhalt der `results.httpCalls` -Parameter ist spezifisch 
 }
 ```
 
-Beschreibungen der Anforderungs- und Antwortparameter finden Sie unter [API-Vorgänge für Zieltests](../../testing-api/streaming-destinations/destination-testing-api.md).
+Beschreibungen der Anfrage- und Antwortparameter finden Sie unter [Vorgänge der Zieltest-API](../../testing-api/streaming-destinations/destination-testing-api.md).
 
 ## Nächste Schritte
 
-Nachdem Sie Ihr Ziel getestet und bestätigt haben, dass es korrekt konfiguriert ist, verwenden Sie die [Zielpublikations-API](../../publishing-api/create-publishing-request.md) , um Ihre Konfiguration zur Überprüfung an Adobe zu senden.
+Nachdem Sie Ihr Ziel getestet und bestätigt haben, dass es korrekt konfiguriert ist, verwenden Sie die [Zielpublikations-API](../../publishing-api/create-publishing-request.md), um Ihre Konfiguration zur Überprüfung an Adobe zu senden.
