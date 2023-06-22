@@ -3,9 +3,9 @@ description: Auf dieser Seite wird erläutert, wie Sie mit dem Endpunkt /authori
 title: Überprüfen von vorlagenbasierten Kundenfeldern
 exl-id: 8ed93f0c-3439-4d11-bb2f-d417a1e0b6a8
 source-git-commit: 6bd169075cd3826ae2a0907e6e624fd901076a4a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '386'
-ht-degree: 22%
+ht-degree: 100%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 22%
 
 ## Übersicht {#overview}
 
-Die `/authoring/testing/template/render` Endpunkt hilft Ihnen bei der Visualisierung der Vorlagenerstellung [Kundendatenfelder](../../functionality/destination-configuration/customer-data-fields.md) in Ihrer Zielkonfiguration definiert wurde, würde so aussehen.
+Der Endpunkt `/authoring/testing/template/render` hilft Ihnen dabei, sich ein Bild davon zu machen, wie die in Ihrer Zielkonfiguration definierten vorlagenbasierten [Kundendatenfelder](../../functionality/destination-configuration/customer-data-fields.md) aussehen würden..
 
 Der Endpunkt generiert zufällige Werte für Ihre Kundendatenfelder und gibt sie in der Antwort zurück. Auf diese Weise können Sie die semantische Struktur von Kundendatenfeldern, wie z. B. Behälternamen oder Ordnerpfaden, überprüfen.
 
@@ -24,12 +24,12 @@ Bevor Sie fortfahren, lesen Sie [Erste Schritte](../../getting-started.md). Dort
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie die `/template/render` -Endpunkt verwenden, stellen Sie sicher, dass Sie die folgenden Bedingungen erfüllen:
+Bevor Sie den Endpunkt `/template/render` verwenden, stellen Sie sicher, dass Sie die folgenden Bedingungen erfüllen:
 
-* Sie haben ein vorhandenes dateibasiertes Ziel, das über die Destination SDK erstellt wurde, und Sie können es in Ihrem [Zielkatalog](../../../ui/destinations-workspace.md).
+* Sie haben ein vorhandenes dateibasiertes Ziel, das über das Destination SDK erstellt wurde, und Sie können es in Ihrem [Zielkatalog](../../../ui/destinations-workspace.md) sehen.
 * Für eine erfolgreiche API-Anfrage benötigen Sie die Ziel-Instanz-ID, die der zu testenden Zielinstanz entspricht. Rufen Sie die Ziel-Instanz-ID ab, die Sie beim Durchsuchen einer Verbindung mit Ihrem Ziel in der Platform-Benutzeroberfläche im API-Aufruf über die URL verwenden sollten.
 
-   ![UI-Bild, das zeigt, wie die Ziel-Instanz-ID von der URL abgerufen wird.](../../assets/testing-api/get-destination-instance-id.png)
+  ![UI-Bild, das zeigt, wie die Ziel-Instanz-ID von der URL abgerufen wird.](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Rendern von vorlagenbasierten Kundenfeldern {#render-customer-fields}
 
@@ -56,7 +56,7 @@ Um das Verhalten dieses API-Endpunkts zu veranschaulichen, betrachten wir ein da
 
 **Anfrage**
 
-Die nachstehende Anfrage ruft die `/authoring/testing/template/render` -Endpunkt, der eine Antwort mit zufällig generierten Werten für die beiden oben genannten Kundendatenfelder zurückgibt.
+Die nachstehende Anfrage ruft den Endpunkt `/authoring/testing/template/render` auf, der eine Antwort mit zufällig generierten Werten für die beiden oben genannten Kundendatenfelder zurückgibt.
 
 ```shell
 curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render/destination' \
@@ -77,12 +77,12 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 
 | Parameter | Beschreibung |
 | -------- | ----------- |
-| `destinationId` | Die ID der [Zielkonfiguration](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) die Sie testen. |
-| `templates` | Die in Ihrer [Zielserverkonfiguration](../../authoring-api/destination-server/create-destination-server.md). |
+| `destinationId` | Die ID der [Zielkonfiguration](../../authoring-api/destination-configuration/retrieve-destination-configuration.md), die Sie testen. |
+| `templates` | Die vorlagenbasierten Feldnamen, die in Ihrer [Ziel-Server-Konfiguration](../../authoring-api/destination-server/create-destination-server.md) definiert sind. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine `HTTP 200 OK` und der Hauptteil zufällig generierte Werte für Ihre Vorlagenfelder enthält.
+Bei einer erfolgreichen Antwort wird ein Status `HTTP 200 OK` zurückgegeben, und der Textkörper enthält zufällig generierte Werte für Ihre vorlagenbasierten Felder.
 
 Diese Antwort kann Ihnen dabei helfen, die richtige Struktur Ihrer Kundendatenfelder zu überprüfen, z. B. Behälternamen oder Ordnerpfade.
 
@@ -102,4 +102,4 @@ Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience
 
 ## Nächste Schritte {#next-steps}
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie die in Ihrem [Zielserver](../../authoring-api/destination-server/create-destination-server.md).
+Nach dem Lesen dieses Dokuments wissen Sie nun, wie Sie die in Ihrem [Ziel-Server](../../authoring-api/destination-server/create-destination-server.md) definierte Konfiguration der Kundendatenfelder validieren können.
