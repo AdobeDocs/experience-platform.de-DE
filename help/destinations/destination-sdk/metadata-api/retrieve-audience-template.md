@@ -2,9 +2,9 @@
 description: Auf dieser Seite wird der API-Aufruf zum Abrufen einer Zielgruppenvorlage über Adobe Experience Platform Destination SDK veranschaulicht.
 title: Abrufen einer Zielgruppenvorlage
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '418'
-ht-degree: 25%
+ht-degree: 100%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 25%
 >
 >**API-Endpunkt**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-Auf dieser Seite werden die API-Anfrage und die Payload erläutert, die Sie zum Abrufen einer Zielgruppen-Metadatenvorlage verwenden können, indem Sie die `/authoring/audience-templates` API-Endpunkt.
+Auf dieser Seite werden die API-Anfrage und die Payload erläutert, die Sie zum Abrufen einer Zielgruppen-Metadatenvorlage verwenden können, indem Sie den API-Endpunkt `/authoring/audience-templates` verwenden.
 
-Eine ausführliche Beschreibung der Funktionen, die Sie über diesen Endpunkt konfigurieren können, finden Sie unter [Zielgruppen-Metadatenverwaltung](../functionality/audience-metadata-management.md).
+Eine ausführliche Beschreibung der Funktionen, die Sie über diesen Endpunkt konfigurieren können, finden Sie unter [Verwaltung von Zielgruppen-Metadaten](../functionality/audience-metadata-management.md).
 
 >[!IMPORTANT]
 >
->Alle von Destination SDK unterstützten Parameternamen und Werte sind **Groß-/Kleinschreibung**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
+>Bei allen von Destination SDK unterstützten Parameternamen und Werten wird **nach Groß-/Kleinschreibung unterschieden**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
 
 ## Erste Schritte mit API-Vorgängen für Zielgruppenvorlagen {#get-started}
 
@@ -29,7 +29,7 @@ Bevor Sie fortfahren, lesen Sie [Erste Schritte](../getting-started.md). Dort fi
 
 ## Abrufen einer Zielgruppenvorlage {#retrieve}
 
-Sie können eine vorhandene Zielgruppenvorlage abrufen, indem Sie eine `GET` Anfrage an `/authoring/audience-templates` -Endpunkt.
+Sie können eine vorhandene Zielgruppenvorlage abrufen, indem Sie eine `GET`-Anfrage an den Endpunkt `/authoring/audience-templates` stellen.
 
 **API-Format**
 
@@ -39,13 +39,13 @@ Verwenden Sie das folgende API-Format, um alle Zielgruppenvorlagen für Ihr Kont
 GET /authoring/audience-templates
 ```
 
-Verwenden Sie das folgende API-Format, um eine bestimmte Zielgruppenvorlage abzurufen, die durch die `{INSTANCE_ID}` Parameter.
+Verwenden Sie das folgende API-Format, um eine bestimmte Zielgruppenvorlage abzurufen, die durch den Parameter `{INSTANCE_ID}` bestimmt wird.
 
 ```http
 GET /authoring/audience-templates/{INSTANCE_ID}
 ```
 
-Die folgenden beiden Anfragen rufen alle Zielgruppenvorlagen für Ihre IMS-Organisation oder eine bestimmte Zielgruppenvorlage ab, je nachdem, ob Sie die `INSTANCE_ID` -Parameter in der -Anfrage.
+Die folgenden beiden Anfragen rufen alle Zielgruppenvorlagen für Ihre IMS-Organisation oder eine bestimmte Zielgruppenvorlage ab, je nachdem, ob Sie den Parameter `INSTANCE_ID` in der Anfrage übergeben.
 
 Wählen Sie die einzelnen Registerkarten unten aus, um die entsprechende Payload anzuzeigen.
 
@@ -53,7 +53,7 @@ Wählen Sie die einzelnen Registerkarten unten aus, um die entsprechende Payload
 
 >[!TAB Alle Zielgruppenvorlagen abrufen]
 
-Mit der folgenden Anfrage wird die Liste der Zielgruppenvorlagen abgerufen, auf die Sie Zugriff haben, basierend auf [!DNL IMS Org ID] und Sandbox-Konfiguration.
+Mit der folgenden Anfrage wird die Liste der Zielgruppenvorlagen abgerufen, auf die Sie Zugriff haben, basierend auf der [!DNL IMS Org ID] und der Sandbox-Konfiguration.
 
 +++Anfrage
 
@@ -69,7 +69,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 +++Antwort
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Zielgruppenvorlagen zurück, auf die Sie Zugriff haben, basierend auf der [!DNL IMS Org ID] und des von Ihnen verwendeten Sandbox-Namens. One `instanceId` entspricht einer Zielgruppenvorlage.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit einer Liste von Zielgruppen-Metadatenvorlagen zurückgegeben, auf die Sie Zugriff haben, basierend auf der von Ihnen verwendeten. [!DNL IMS Org ID] und dem Sandbox-Namen. Eine `instanceId` entspricht einer Zielgruppenvorlage.
 
 ```json
 {
@@ -182,7 +182,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Zielgrupp
 
 >[!TAB Abrufen einer bestimmten Zielgruppenvorlage]
 
-Mit der folgenden Anfrage wird die Liste der Zielgruppenvorlagen abgerufen, auf die Sie Zugriff haben, basierend auf [!DNL IMS Org ID] und Sandbox-Konfiguration.
+Mit der folgenden Anfrage wird die Liste der Zielgruppenvorlagen abgerufen, auf die Sie Zugriff haben, basierend auf der [!DNL IMS Org ID] und der Sandbox-Konfiguration.
 
 +++Anfrage
 
@@ -196,13 +196,13 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 | Parameter | Beschreibung |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | Die Kennung der Zielgruppenvorlage, die Sie abrufen möchten. |
+| `{INSTANCE_ID}` | Die ID der Zielgruppenvorlage, die Sie abrufen möchten. |
 
 +++
 
 +++Antwort
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit den Details der Zielgruppenvorlage zurück, die der `{INSTANCE_ID}` bereitgestellt werden.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit den Details der Zielgruppenvorlage zurückgegeben, die der beim Aufruf angegebenen `{INSTANCE_ID}` entspricht.
 
 ```json
 {
@@ -321,4 +321,4 @@ Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience
 
 ## Nächste Schritte {#next-steps}
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie Details zu Ihrer Zielserverkonfiguration mit der `/authoring/destination-servers` API-Endpunkt. Lesen Sie [Verwenden des Destination SDK zum Konfigurieren Ihres Ziels](../guides/configure-destination-instructions.md), um zu verstehen, wo dieser Schritt in den Prozess der Konfiguration Ihres Ziels passt.
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie mithilfe des API-Endpunkts `/authoring/destination-servers` Details zu Ihrer Ziel-Server-Konfiguration abrufen können. Lesen Sie [Verwenden des Destination SDK zum Konfigurieren Ihres Ziels](../guides/configure-destination-instructions.md), um zu verstehen, wo dieser Schritt in den Prozess der Konfiguration Ihres Ziels passt.
