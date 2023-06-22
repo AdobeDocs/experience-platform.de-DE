@@ -3,9 +3,9 @@ description: Auf dieser Seite wird erläutert, wie Sie mit dem API-Endpunkt /tes
 title: Anzeigen detaillierter Aktivierungsergebnisse
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
 source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '545'
-ht-degree: 16%
+ht-degree: 100%
 
 ---
 
@@ -13,15 +13,15 @@ ht-degree: 16%
 
 ## Übersicht {#overview}
 
-Auf dieser Seite wird erläutert, wie Sie die `/testing/destinationInstance` API-Endpunkt zum Anzeigen der vollständigen Details Ihrer dateibasierten Zieltestergebnisse.
+Auf dieser Seite wird erläutert, wie Sie den API-Endpunkt `/testing/destinationInstance` zum Anzeigen der vollständigen Details Ihrer dateibasierten Zieltestergebnisse verwenden.
 
-Wenn Sie bereits [Ziel getestet haben](file-based-destination-testing-api.md) und eine gültige API-Antwort erhalten haben, funktioniert Ihr Ziel ordnungsgemäß.
+Wenn Sie bereits [Ihr Ziel getestet haben](file-based-destination-testing-api.md) und eine gültige API-Antwort erhalten haben, funktioniert Ihr Ziel ordnungsgemäß.
 
-Wenn Sie genauere Informationen über Ihren Aktivierungsfluss erhalten möchten, können Sie die `results` -Eigenschaft aus [Zieltests](file-based-destination-testing-api.md) Endpunktantwort, wie weiter unten beschrieben.
+Wenn Sie genauere Informationen über Ihren Aktivierungsfluss erhalten möchten, können Sie die Eigenschaft `results` aus der [Zieltest](file-based-destination-testing-api.md)-Endpunktantwort verwenden, wie weiter unten beschrieben.
 
 >[!NOTE]
 >
->Dieser API-Endpunkt gibt dasselbe Ergebnis zurück, das Sie bei Verwendung von [Flussdienst-API](../../../api/update-destination-dataflows.md) zur Überwachung von Datenflüssen.
+>Dieser API-Endpunkt gibt dasselbe Ergebnis zurück, das Sie bei Verwendung der [Flow Service-API](../../../api/update-destination-dataflows.md) zur Überwachung von Datenflüssen erhalten würden.
 
 ## Erste Schritte {#getting-started}
 
@@ -29,20 +29,20 @@ Bevor Sie fortfahren, lesen Sie [Erste Schritte](../../getting-started.md). Dort
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie die `/testing/destinationInstance` -Endpunkt verwenden, stellen Sie sicher, dass Sie die folgenden Bedingungen erfüllen:
+Bevor Sie den Endpunkt `/testing/destinationInstance` verwenden, stellen Sie sicher, dass Sie die folgenden Bedingungen erfüllen:
 
-* Sie haben ein vorhandenes dateibasiertes Ziel, das über die Destination SDK erstellt wurde, und Sie können es in Ihrem [Zielkatalog](../../../ui/destinations-workspace.md).
+* Sie haben ein vorhandenes dateibasiertes Ziel, das über das Destination SDK erstellt wurde, und Sie können es in Ihrem [Zielkatalog](../../../ui/destinations-workspace.md) sehen.
 * Sie haben in der Experience Platform-Benutzeroberfläche mindestens einen Aktivierungsfluss für Ihr Ziel erstellt.
 * Für eine erfolgreiche API-Anfrage benötigen Sie die Ziel-Instanz-ID, die der zu testenden Zielinstanz entspricht. Rufen Sie die Ziel-Instanz-ID ab, die Sie beim Durchsuchen einer Verbindung mit Ihrem Ziel in der Platform-Benutzeroberfläche im API-Aufruf über die URL verwenden sollten.
 
-   ![UI-Bild, das zeigt, wie die Ziel-Instanz-ID von der URL abgerufen wird.](../../assets/testing-api/get-destination-instance-id.png)
-* Sie haben zuvor [Zielkonfiguration getestet haben](file-based-destination-testing-api.md)und eine gültige API-Antwort erhalten haben, die eine `results` -Eigenschaft. Sie werden dies `results` -Wert, um Ihr Ziel weiter zu testen.
+  ![UI-Bild, das zeigt, wie die Ziel-Instanz-ID von der URL abgerufen wird.](../../assets/testing-api/get-destination-instance-id.png)
+* Sie haben zuvor die [Zielkonfiguration getestet](file-based-destination-testing-api.md)und eine gültige API-Antwort erhalten, die eine `results`-Eigenschaft enthält. Sie werden diesen `results`-Wert verwenden, um Ihr Ziel weiter zu testen.
 
-## Detaillierte Zieltestergebnisse anzeigen {#test-activation-results}
+## Anzeigen detaillierter Zieltestergebnisse {#test-activation-results}
 
-Einmal [Zielkonfiguration validieren](file-based-destination-testing-api.md)können Sie detaillierte Aktivierungsergebnisse anzeigen, indem Sie eine GET-Anfrage an die `authoring/testing/destinationInstance/` -Endpunkt und geben die Ziel-Instanz-ID des Ziels an, das Sie testen, sowie die Flusslaufs-IDs der aktivierten Segmente.
+Sobald Sie die [Zielkonfiguration validiert haben](file-based-destination-testing-api.md), können Sie detaillierte Aktivierungsergebnisse anzeigen, indem Sie eine GET-Anfrage an den Endpunkt `authoring/testing/destinationInstance/` stellen und die Ziel-Instanz-ID des Ziels, das Sie testen, sowie die Flussausführungs-IDs der aktivierten Segmente angeben.
 
-Sie finden die vollständige API-URL, die Sie in der `results` -Eigenschaft, die in der [Antwort des Zieltestaufrufs](file-based-destination-testing-api.md).
+Die vollständige API-URL, die Sie verwenden müssen, finden Sie in der `results`-Eigenschaft, die in der [Antwort des Zieltestaufrufs](file-based-destination-testing-api.md) zurückgegeben wird.
 
 **API-Format**
 
@@ -52,11 +52,11 @@ GET /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flo
 
 | Pfadparameter | Beschreibung |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | Die ID der Zielinstanz, für die Sie Beispielprofile generieren. Siehe [Voraussetzungen](#prerequisites) für weitere Informationen zum Abrufen dieser ID. |
+| `{DESTINATION_INSTANCE_ID}` | Die ID der Zielinstanz, für die Sie Beispielprofile generieren. Im Abschnitt [Voraussetzungen](#prerequisites) finden Sie weitere Informationen zum Abrufen dieser ID. |
 
 | Abfragezeichenfolge-Parameter | Beschreibung |
 | -------- | ----------- |
-| `flowRunIds` | Die Kennungen für die Flussausführung, die den aktivierten Segmenten entsprechen. Die Kennungen für die Flusslaufführung finden Sie im Abschnitt `results` -Eigenschaft, die in der [Antwort des Zieltestaufrufs](file-based-destination-testing-api.md). |
+| `flowRunIds` | Die IDs der Flussausführungen, die den aktivierten Segmenten entsprechen. Die IDs der Flussausführungen finden Sie in der Eigenschaft `results`, die in der [Antwort des Zieltestaufrufs](file-based-destination-testing-api.md) zurückgegeben wird. |
 
 **Anfrage**
 
@@ -71,7 +71,7 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/testing/de
 
 **Antwort**
 
-Die Antwort enthält die vollständigen Details des Aktivierungsflusses. Sie können dieselbe Antwort erhalten, indem Sie die [Flussdienst-API](../../../api/update-destination-dataflows.md) zur Überwachung von Datenflüssen.
+Die Antwort enthält die vollständigen Details des Aktivierungsflusses. Sie können dieselbe Antwort erhalten, indem Sie die [Flow Service-API](../../../api/update-destination-dataflows.md) zur Überwachung von Datenflüssen verwenden.
 
 ```json
 {
@@ -219,4 +219,4 @@ Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience
 
 Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie Ihre dateibasierte Zielkonfiguration testen und die vollständigen Details Ihrer Aktivierungsergebnisse anzeigen können.
 
-Wenn Sie ein öffentliches Ziel erstellen, können Sie jetzt [Senden der Zielkonfiguration](../../guides/submit-destination.md) zur Adobe zur Überprüfung.
+Wenn Sie ein öffentliches Ziel erstellen, können Sie jetzt [Ihre Zielkonfiguration zur Überprüfung an Adobe senden](../../guides/submit-destination.md).
