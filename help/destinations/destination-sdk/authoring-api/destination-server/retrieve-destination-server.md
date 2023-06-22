@@ -1,36 +1,36 @@
 ---
-description: Auf dieser Seite wird der API-Aufruf zum Abrufen einer Zielserverkonfiguration über Adobe Experience Platform Destination SDK veranschaulicht.
-title: Abrufen einer Zielserverkonfiguration
+description: Auf dieser Seite wird der API-Aufruf zum Abrufen einer Ziel-Server-Konfiguration über Adobe Experience Platform Destination SDK veranschaulicht.
+title: Abrufen einer Ziel-Server-Konfiguration
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '464'
-ht-degree: 23%
+ht-degree: 100%
 
 ---
 
 
-# Abrufen einer Zielserverkonfiguration
+# Abrufen einer Ziel-Server-Konfiguration
 
-Auf dieser Seite werden die API-Anfrage und -Payload erläutert, mit deren Hilfe Sie Informationen über eine vorhandene Zielserverkonfiguration abrufen können, indem Sie die `/authoring/destination-servers` API-Endpunkt.
+Auf dieser Seite werden die API-Anfrage und -Payload erläutert, mit deren Hilfe Sie Informationen über eine vorhandene Ziel-Server-Konfiguration abrufen können, indem Sie den API-Endpunkt `/authoring/destination-servers` verwenden.
 
-Eine ausführliche Beschreibung der Funktionen, die von Zielservern verwendet werden, finden Sie in den folgenden Artikeln:
+Eine ausführliche Beschreibung der Funktionen, die von Ziel-Servern verwendet werden, finden Sie in den folgenden Artikeln:
 
-* [Serverspezifikationen für Ziele, die mit Destination SDK erstellt wurden](../../../destination-sdk/functionality/destination-server/server-specs.md)
+* [Server-Spezifikationen für Ziele, die mit Destination SDK erstellt wurden](../../../destination-sdk/functionality/destination-server/server-specs.md)
 * [Vorlagenspezifikationen für Ziele, die mit Destination SDK erstellt wurden](../../../destination-sdk/functionality/destination-server/templating-specs.md)
 * [Nachrichtenformat](../../../destination-sdk/functionality/destination-server/message-format.md)
 * [Konfiguration der Dateiformatierung](../../../destination-sdk/functionality/destination-server/file-formatting.md)
 
 >[!IMPORTANT]
 >
->Alle von Destination SDK unterstützten Parameternamen und Werte sind **Groß-/Kleinschreibung**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
+>Bei allen von Destination SDK unterstützten Parameternamen und Werten wird **nach Groß-/Kleinschreibung unterschieden**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
 
 ## Erste Schritte mit API-Vorgängen für Ziel-Server {#get-started}
 
 Bevor Sie fortfahren, lesen Sie [Erste Schritte](../../getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich Informationen zum Abrufen der erforderlichen Authoring-Berechtigung für Ziele und der erforderlichen Kopfzeilen.
 
-## Abrufen einer Zielserverkonfiguration {#retrieve}
+## Abrufen einer Ziel-Server-Konfiguration {#retrieve}
 
-Sie können eine vorhandene Zielserverkonfiguration abrufen, indem Sie eine `GET` Anfrage an `/authoring/destination-servers` -Endpunkt.
+Sie können eine vorhandene Ziel-Server-Konfiguration abrufen, indem Sie eine `GET`-Anfrage an den Endpunkt `/authoring/destination-servers` stellen.
 
 >[!TIP]
 >
@@ -38,27 +38,27 @@ Sie können eine vorhandene Zielserverkonfiguration abrufen, indem Sie eine `GET
 
 **API-Format**
 
-Verwenden Sie das folgende API-Format, um alle Zielserverkonfigurationen für Ihr Konto abzurufen.
+Verwenden Sie das folgende API-Format, um alle Ziel-Server-Konfigurationen für Ihr Konto abzurufen.
 
 ```http
 GET /authoring/destination-servers
 ```
 
-Verwenden Sie das folgende API-Format, um eine bestimmte Ziel-Server-Konfiguration abzurufen, die von der `{INSTANCE_ID}` Parameter.
+Verwenden Sie das folgende API-Format, um eine bestimmte Ziel-Server-Konfiguration abzurufen, die durch den Parameter `{INSTANCE_ID}` bestimmt wird.
 
 ```http
 GET /authoring/destination-servers/{INSTANCE_ID}
 ```
 
-Die folgenden beiden Anfragen rufen alle Zielserverkonfigurationen für Ihre IMS-Organisation oder eine bestimmte Zielserverkonfiguration ab, je nachdem, ob Sie die Variable `INSTANCE_ID` -Parameter in der -Anfrage.
+Die folgenden beiden Anfragen rufen alle Ziel-Server-Konfigurationen für Ihre IMS-Organisation oder eine bestimmte Ziel-Server-Konfiguration ab, je nachdem, ob Sie den Parameter `INSTANCE_ID` in der Anfrage übergeben.
 
 Wählen Sie die einzelnen Registerkarten unten aus, um die entsprechende Payload und ihre Antworten anzuzeigen.
 
 >[!BEGINTABS]
 
->[!TAB Abrufen aller Zielserverkonfigurationen]
+>[!TAB Abrufen aller Ziel-Server-Konfigurationen]
 
-Mit der folgenden Anfrage wird die Liste der Zielserverkonfigurationen abgerufen, auf die Sie Zugriff haben, basierend auf [!DNL IMS Org ID] und Sandbox-Konfiguration.
+Mit der folgenden Anfrage wird die Liste der Ziel-Server-Konfigurationen abgerufen, auf die Sie Zugriff haben, basierend auf der [!DNL IMS Org ID] und der Sandbox-Konfiguration.
 
 +++Anfrage
 
@@ -74,7 +74,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Antwort
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Ziel-Server-Konfigurationen zurück, auf die Sie basierend auf der [!DNL IMS Org ID] und des von Ihnen verwendeten Sandbox-Namens. One `instanceId` entspricht einem Zielserver. Die folgende Beispielantwort enthält zwei Zielserverkonfigurationen.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit einer Liste der Ziel-Server-Konfigurationen zurückgegeben, auf die Sie Zugriff haben, basierend auf der von Ihnen verwendeten [!DNL IMS Org ID] und dem Sandbox-Namen. Eine `instanceId` entspricht einem Ziel-Server. Die folgende Beispielantwort enthält zwei Ziel-Server-Konfigurationen.
 
 ```json
 {
@@ -153,7 +153,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Ziel-Serv
 
 >[!TAB Abrufen einer bestimmten Ziel-Server-Konfiguration]
 
-Die folgende Anfrage ruft bestimmte Zielserverkonfigurationen ab, die durch die Variable `{INSTANCE_ID}` Parameter.
+Die folgende Anfrage ruft eine bestimmte Ziel-Server-Konfiguration ab, die durch den Parameter `{INSTANCE_ID}` bestimmt wird.
 
 +++Anfrage
 
@@ -173,7 +173,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Antwort
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 zurück, wobei die Konfiguration des Zielservers der `{INSTANCE_ID}` angegeben haben.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 zurückgegeben, wobei die Konfiguration des Ziel-Servers der `{INSTANCE_ID}` entspricht, die Sie angegeben haben.
 
 ```json
 {
@@ -225,10 +225,10 @@ Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience
 
 ## Nächste Schritte {#next-steps}
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie eine Zielserverkonfiguration über die Destination SDK abrufen können `/authoring/destination-servers` API-Endpunkt.
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie eine Ziel-Server-Konfiguration über den API-Endpunkt `/authoring/destination-servers` von Destination SDK abrufen können.
 
 Weitere Informationen dazu, was Sie mit diesem Endpunkt tun können, finden Sie in den folgenden Artikeln:
 
-* [Erstellen einer Zielserverkonfiguration](create-destination-server.md)
-* [Aktualisieren der Zielserverkonfiguration](update-destination-server.md)
-* [Löschen einer Zielserverkonfiguration](delete-destination-server.md)
+* [Erstellen einer Ziel-Server-Konfiguration](create-destination-server.md)
+* [Aktualisieren einer Ziel-Server-Konfiguration](update-destination-server.md)
+* [Löschen einer Ziel-Server-Konfiguration](delete-destination-server.md)
