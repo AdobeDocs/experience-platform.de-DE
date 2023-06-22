@@ -1,21 +1,21 @@
 ---
 description: Auf dieser Seite wird der API-Aufruf veranschaulicht, mit dem eine bestehende Zielkonfiguration über Adobe Experience Platform Destination SDK aktualisiert wird.
-title: Zielkonfiguration aktualisieren
+title: Aktualisieren einer Zielkonfiguration
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '369'
-ht-degree: 28%
+ht-degree: 100%
 
 ---
 
 
-# Zielkonfiguration aktualisieren
+# Aktualisieren einer Zielkonfiguration
 
-Auf dieser Seite werden die API-Anfrage und die Payload erläutert, die Sie verwenden können, um eine vorhandene Zielkonfiguration mithilfe der `/authoring/destinations` API-Endpunkt.
+Auf dieser Seite werden die API-Anfrage und die Payload erläutert, die Sie verwenden können, um eine vorhandene Zielkonfiguration mithilfe des API-Endpunkts `/authoring/destinations` zu aktualisieren.
 
 >[!TIP]
 >
->Jeder Aktualisierungsvorgang für produktive/öffentliche Ziele ist erst sichtbar, nachdem Sie die [Publishing-API](../../publishing-api/create-publishing-request.md) und senden Sie die Aktualisierung zur Überprüfung der Adobe.
+>Jeder Aktualisierungsvorgang für produktbezogene/öffentliche Ziele ist erst sichtbar, nachdem Sie die [Publishing-API](../../publishing-api/create-publishing-request.md) verwendet und die Aktualisierung zur Überprüfung durch Adobe eingereicht haben.
 
 Eine ausführliche Beschreibung der Funktionen einer Zielkonfiguration finden Sie in den folgenden Artikeln:
 
@@ -24,7 +24,7 @@ Eine ausführliche Beschreibung der Funktionen einer Zielkonfiguration finden Si
 * [Benutzerdefinierte Datenfelder](../../functionality/destination-configuration/customer-data-fields.md)
 * [Benutzeroberflächenattribute](../../functionality/destination-configuration/ui-attributes.md)
 * [Schemakonfiguration](../../functionality/destination-configuration/schema-configuration.md)
-* [Identitäts-Namespace-Konfiguration](../../functionality/destination-configuration/identity-namespace-configuration.md)
+* [Konfiguration von Identity-Namespaces](../../functionality/destination-configuration/identity-namespace-configuration.md)
 * [Zielbereitstellung](../../functionality/destination-configuration/destination-delivery.md)
 * [Konfiguration von Zielgruppen-Metadaten](../../functionality/destination-configuration/audience-metadata-configuration.md)
 * [Konfiguration von Zielgruppen-Metadaten](../../functionality/destination-configuration/audience-metadata-configuration.md)
@@ -34,21 +34,21 @@ Eine ausführliche Beschreibung der Funktionen einer Zielkonfiguration finden Si
 
 >[!IMPORTANT]
 >
->Alle von Destination SDK unterstützten Parameternamen und Werte sind **Groß-/Kleinschreibung**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
+>Bei allen von Destination SDK unterstützten Parameternamen und Werten wird **nach Groß-/Kleinschreibung unterschieden**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
 
-## Erste Schritte mit API-Vorgängen zur Zielkonfiguration {#get-started}
+## Erste Schritte mit API-Vorgängen für die Zielkonfiguration {#get-started}
 
 Bevor Sie fortfahren, lesen Sie [Erste Schritte](../../getting-started.md). Dort finden Sie die nötigen Informationen für den erfolgreichen Aufruf der API, einschließlich Details für den Abruf der erforderlichen Authoring-Berechtigung für Ziele und zu den erforderlichen Kopfzeilen.
 
-## Zielkonfiguration aktualisieren {#update}
+## Aktualisieren einer Zielkonfiguration {#update}
 
-Sie können eine [vorhandene](create-destination-configuration.md) Zielkonfiguration durch `PUT` Anfrage an `/authoring/destinations` -Endpunkt mit der aktualisierten Payload.
+Sie können eine [vorhandene](create-destination-configuration.md) Zielkonfiguration aktualisieren, indem Sie eine `PUT`-Anfrage an den Endpunkt `/authoring/destinations` mit der aktualisierten Payload stellen.
 
 >[!TIP]
 >
 >API-Endpunkt: `platform.adobe.io/data/core/activation/authoring/destinations`
 
-So rufen Sie eine vorhandene Zielkonfiguration und die zugehörigen `{INSTANCE_ID}`, siehe Artikel zu [Abrufen einer Zielkonfiguration](retrieve-destination-configuration.md).
+Wie Sie eine vorhandene Zielkonfiguration und die dazugehörige `{INSTANCE_ID}` abrufen, erfahren Sie im Artikel zum [Abrufen einer Zielkonfiguration](retrieve-destination-configuration.md).
 
 **API-Format**
 
@@ -58,11 +58,11 @@ PUT /authoring/destinations/{INSTANCE_ID}
 
 | Parameter | Beschreibung |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | Die ID der Zielkonfiguration, die Sie aktualisieren möchten. So rufen Sie eine vorhandene Zielkonfiguration und die zugehörigen `{INSTANCE_ID}`, siehe [Abrufen einer Zielkonfiguration](retrieve-destination-configuration.md). |
+| `{INSTANCE_ID}` | Die ID der Zielkonfiguration, die Sie aktualisieren möchten. Wie Sie eine vorhandene Zielkonfiguration und die dazugehörige `{INSTANCE_ID}` abrufen, erfahren Sie unter [Abrufen einer Zielkonfiguration](retrieve-destination-configuration.md). |
 
 +++Anfrage
 
-Die folgende Anfrage aktualisiert das Ziel, das wir in erstellt haben [Dieses Beispiel](create-destination-configuration.md#create) mit verschiedenen `filenameConfig` Optionen.
+Die folgende Anfrage aktualisiert das Ziel, das wir in [diesem Beispiel](create-destination-configuration.md#create) erstellt haben, mit verschiedenen `filenameConfig`-Optionen.
 
 ```shell {line-numbers="true" highlight="115-128"}
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations/{INSTANCE_ID} \
@@ -201,7 +201,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 +++Antwort
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit den Details Ihrer aktualisierten Zielkonfiguration zurück.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit den Details der neu erstellten Zielkonfiguration zurückgegeben.
 
 +++
 
@@ -211,10 +211,10 @@ Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie eine Zielkonfiguration über die Destination SDK aktualisieren können `/authoring/destinations` API-Endpunkt.
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie eine Zielkonfiguration über den API-Endpunkt `/authoring/destinations` von Destination SDK aktualisieren können.
 
 Weitere Informationen dazu, was Sie mit diesem Endpunkt tun können, finden Sie in den folgenden Artikeln:
 
 * [Erstellen einer Zielkonfiguration](create-destination-configuration.md)
 * [Abrufen einer Zielkonfiguration](retrieve-destination-configuration.md)
-* [Zielkonfiguration löschen](delete-destination-configuration.md)
+* [Löschen einer Zielkonfiguration](delete-destination-configuration.md)
