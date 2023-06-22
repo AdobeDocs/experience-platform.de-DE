@@ -1,35 +1,35 @@
 ---
 description: Auf dieser Seite wird der API-Aufruf zum Löschen einer vorhandenen Zielkonfiguration über Adobe Experience Platform Destination SDK erläutert.
-title: Zielkonfiguration löschen
+title: Löschen einer Zielkonfiguration
 source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '278'
-ht-degree: 35%
+ht-degree: 100%
 
 ---
 
 
-# Zielkonfiguration löschen
+# Löschen einer Zielkonfiguration
 
-Auf dieser Seite werden die API-Anfrage und die Payload erläutert, die Sie verwenden können, um eine vorhandene Zielkonfiguration mithilfe der `/authoring/destinations` API-Endpunkt.
+Auf dieser Seite werden die API-Anfrage und die Payload erläutert, die Sie verwenden können, um eine vorhandene Zielkonfiguration mithilfe des API-Endpunkts `/authoring/destinations` zu löschen.
 
 >[!IMPORTANT]
 >
->Alle von Destination SDK unterstützten Parameternamen und Werte sind **Groß-/Kleinschreibung**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
+>Bei allen von Destination SDK unterstützten Parameternamen und Werten wird **nach Groß-/Kleinschreibung unterschieden**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
 
-## Erste Schritte mit API-Vorgängen zur Zielkonfiguration {#get-started}
+## Erste Schritte mit API-Vorgängen für die Zielkonfiguration {#get-started}
 
 Bevor Sie fortfahren, lesen Sie [Erste Schritte](../../getting-started.md). Dort finden Sie die nötigen Informationen für den erfolgreichen Aufruf der API, einschließlich Details für den Abruf der erforderlichen Authoring-Berechtigung für Ziele und zu den erforderlichen Kopfzeilen.
 
-## Zielkonfiguration löschen {#delete}
+## Löschen einer Zielkonfiguration {#delete}
 
-Sie können eine [vorhandene](create-destination-configuration.md) Konfiguration des Zielservers durch `DELETE` Anfrage an `/authoring/destinations` Endpunkt mit der `{INSTANCE_ID}`der Zielkonfiguration, die Sie löschen möchten.
+Sie können eine [vorhandene](create-destination-configuration.md) Konfiguration des Ziel-Servers löschen, indem Sie eine `DELETE`-Anfrage an den Endpunkt `/authoring/destinations` mit der `{INSTANCE_ID}` der Zielkonfiguration stellen, die Sie löschen möchten.
 
 >[!TIP]
 >
 >**API-Endpunkt**: `platform.adobe.io/data/core/activation/authoring/destinations`
 
-So rufen Sie eine vorhandene Zielkonfiguration und die zugehörigen `{INSTANCE_ID}`, siehe Artikel zu [Abrufen einer Zielkonfiguration](retrieve-destination-configuration.md).
+Wie Sie eine vorhandene Zielkonfiguration und die dazugehörige `{INSTANCE_ID}` abrufen, erfahren Sie im Artikel zum [Abrufen einer Zielkonfiguration](retrieve-destination-configuration.md).
 
 **API-Format**
 
@@ -53,7 +53,7 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
 
 +++Antwort
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 zusammen mit einer leeren HTTP-Antwort zurück.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 zusammen mit einer leeren HTTP-Antwort zurückgegeben.
 
 
 ## Umgang mit API-Fehlern {#error-handling}
@@ -62,11 +62,11 @@ Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie eine vorhandene Zielkonfiguration über die Destination SDK löschen können `/authoring/destinations` API-Endpunkt.
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie eine vorhandene Zielkonfiguration über den API-Endpunkt `/authoring/destinations` von Destination SDK löschen können.
 
 Weitere Informationen dazu, was Sie mit diesem Endpunkt tun können, finden Sie in den folgenden Artikeln:
 
 * [Erstellen einer Zielkonfiguration](create-destination-configuration.md)
 * [Abrufen einer Zielkonfiguration](retrieve-destination-configuration.md)
-* [Zielkonfiguration aktualisieren](update-destination-configuration.md)
+* [Aktualisieren einer Zielkonfiguration](update-destination-configuration.md)
 
