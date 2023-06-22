@@ -1,32 +1,32 @@
 ---
-description: Erfahren Sie, wie Sie die an Ihren -Endpunkt gesendeten HTTP-Anfragen formatieren. Verwenden Sie den Endpunkt /authoring/destination-servers , um die Vorlagenspezifikationen des Zielservers in Adobe Experience Platform Destination SDK zu konfigurieren.
+description: Erfahren Sie, wie Sie die an Ihren Endpunkt gesendeten HTTP-Anfragen formatieren. Verwenden Sie den Endpunkt /authoring/destination-servers, um die Vorlagenspezifikationen des Ziel-Servers im Adobe Experience Platform Destination SDK zu konfigurieren.
 title: Vorlagenspezifikationen für Ziele, die mit Destination SDK erstellt wurden
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '524'
-ht-degree: 24%
+ht-degree: 100%
 
 ---
 
 
 # Vorlagenspezifikationen für Ziele, die mit Destination SDK erstellt wurden
 
-Verwenden Sie den Vorlagenspezifikteil der Zielserverkonfiguration, um zu konfigurieren, wie die an Ihr Ziel gesendeten HTTP-Anforderungen formatiert werden.
+Verwenden Sie den Vorlagenspezifikationsteil der Ziel-Server-Konfiguration, um zu konfigurieren, wie die an Ihr Ziel gesendeten HTTP-Anfragen formatiert werden.
 
 In einer Vorlagenspezifikation können Sie definieren, wie Sie Profilattributfelder zwischen dem XDM-Schema und dem Format transformieren können, das Ihre Plattform unterstützt.
 
-Vorlagenspezifikationen sind Teil der Zielserverkonfiguration für Echtzeit-Ziele (Streaming).
+Vorlagenspezifikationen sind Teil der Ziel-Server-Konfiguration für Echtzeit-Ziele (Streaming).
 
-Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm im [Konfigurationsoptionen](../configuration-options.md) Dokumentation oder lesen Sie das Handbuch zu [Verwenden von Destination SDK zum Konfigurieren eines Streaming-Ziels](../../guides/configure-destination-instructions.md#create-server-template-configuration).
+Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation zu [Konfigurationsoptionen](../configuration-options.md) oder im Handbuch zum [Verwenden von Destination SDK zum Konfigurieren eines Streaming-Ziels](../../guides/configure-destination-instructions.md#create-server-template-configuration).
 
-Sie können die Vorlagenspezifikationen für Ihr Ziel über die `/authoring/destination-servers` -Endpunkt. Detaillierte Beispiele für API-Aufrufe, in denen Sie die auf dieser Seite angezeigten Komponenten konfigurieren können, finden Sie auf den folgenden API-Referenzseiten.
+Sie können die Vorlagenspezifikationen für Ihr Ziel über den `/authoring/destination-servers`-Endpunkt konfigurieren. Detaillierte Beispiele für API-Aufrufe, in denen Sie die auf dieser Seite angezeigten Komponenten konfigurieren können, finden Sie auf den folgenden API-Referenzseiten.
 
-* [Erstellen einer Zielserverkonfiguration](../../authoring-api/destination-server/create-destination-server.md)
-* [Aktualisieren der Zielserverkonfiguration](../../authoring-api/destination-server/update-destination-server.md)
+* [Erstellen einer Ziel-Server-Konfiguration](../../authoring-api/destination-server/create-destination-server.md)
+* [Aktualisieren einer Ziel-Server-Konfiguration](../../authoring-api/destination-server/update-destination-server.md)
 
 >[!IMPORTANT]
 >
->Alle von Destination SDK unterstützten Parameternamen und Werte sind **Groß-/Kleinschreibung**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
+>Bei allen von Destination SDK unterstützten Parameternamen und Werten wird **nach Groß-/Kleinschreibung unterschieden**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
 
 ## Unterstützte Integrationstypen {#supported-integration-types}
 
@@ -37,7 +37,7 @@ Die nachstehende Tabelle beschreibt ausführlich, welche Integrationstypen die a
 | Echtzeit-Integrationen (Streaming) | Ja |
 | Dateibasierte (Batch-)Integrationen | Nein |
 
-## Vorlagenspezifikation konfigurieren {#configure-template-spec}
+## Konfigurieren einer Vorlagenspezifikation {#configure-template-spec}
 
 Adobe verwendet eine Vorlagensprache, die [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) ähnelt, um die Felder aus dem XDM-Schema in ein von Ihrem Ziel unterstütztes Format umzuwandeln.
 
@@ -46,13 +46,13 @@ Adobe verwendet eine Vorlagensprache, die [Jinja](https://jinja.palletsprojects.
 Weitere Informationen zur Transformation finden Sie unter den folgenden Links:
 
 * [Nachrichtenformat](message-format.md)
-* [Verwenden einer Vorlagensprache für die Transformationen von Identitäten, Attributen und Segmentzugehörigkeiten ](message-format.md#using-templating)
+* [Verwenden einer Vorlagensprache für die Transformationen von Identitäten, Attributen und Segmentzugehörigkeiten](message-format.md#using-templating)
 
 >[!TIP]
 >
 >Adobe bietet ein [Entwickler-Tool](../../testing-api/streaming-destinations/create-template.md), das Ihnen beim Erstellen und Testen einer Nachrichtenumwandlungsvorlage hilft.
 
-Unten finden Sie ein Beispiel einer HTTP-Anforderungsvorlage mit Beschreibungen der einzelnen Parameter.
+Unten finden Sie ein Beispiel einer HTTP-Anfragenvorlage mit Beschreibungen der einzelnen Parameter.
 
 ```json
 {
@@ -71,8 +71,8 @@ Unten finden Sie ein Beispiel einer HTTP-Anforderungsvorlage mit Beschreibungen 
 |---|---|---|
 | `httpMethod` | Zeichenfolge | *Erforderlich.* Die Methode, die Adobe bei Aufrufen an Ihren Server verwendet. Unterstützte Methoden: `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 | `templatingStrategy` | Zeichenfolge | *Erforderlich.* Verwenden Sie `PEBBLE_V1`. |
-| `value` | Zeichenfolge | *Erforderlich.* Diese Zeichenfolge ist die mit Zeichen versehene Version der Vorlage, die die von Platform gesendeten HTTP-Anforderungen in das von Ihrem Ziel erwartete Format formatiert. <br> Informationen zum Schreiben der Vorlage finden Sie im Abschnitt unter [mit Vorlage](message-format.md#using-templating). <br> Weitere Informationen zur Bereinigung von Zeichen finden Sie im Abschnitt [RFC-JSON-Standard, Abschnitt 7](https://tools.ietf.org/html/rfc8259#section-7). <br> Ein Beispiel für eine einfache Umwandlung finden Sie im Abschnitt [Profilattribute](message-format.md#attributes) Umwandlung. |
-| `contentType` | Zeichenfolge | *Erforderlich.* Der Content-Typ, den Ihr Server akzeptiert. Je nachdem, welcher Typ von Ausgabe Ihre Umwandlungsvorlage erzeugt, kann dies eine der unterstützten sein [Content-Typen von HTTP-Anwendungen](https://www.iana.org/assignments/media-types/media-types.xhtml#application). In den meisten Fällen sollte dieser Wert auf `application/json`. |
+| `value` | Zeichenfolge | *Erforderlich.* Diese Zeichenfolge ist die mit Escape-Zeichen versehene Version der Vorlage, die die von Platform gesendeten HTTP-Anfragen in das von Ihrem Ziel erwartete Format formatiert. <br> Informationen zum Schreiben der Vorlage finden Sie im Abschnitt [Verwenden von Vorlagen](message-format.md#using-templating). <br> Weitere Informationen zur Bereinigung von Zeichen finden Sie im Abschnitt [RFC-JSON-Standard, Abschnitt 7](https://tools.ietf.org/html/rfc8259#section-7). <br> Ein Beispiel für eine einfache Umwandlung finden Sie im unter [Umwandlung von Profilattributen](message-format.md#attributes). |
+| `contentType` | Zeichenfolge | *Erforderlich.* Der Content-Typ, den Ihr Server akzeptiert. Je nachdem, welchen Typ von Ausgabe Ihre Umwandlungsvorlage erzeugt, kann dies einer der unterstützten [Content-Typen von HTTP-Anwendungen](https://www.iana.org/assignments/media-types/media-types.xhtml#application) sein. In den meisten Fällen sollte dieser Wert auf `application/json` gesetzt werden.  |
 
 {style="table-layout:auto"}
 
@@ -82,6 +82,6 @@ Nach dem Lesen dieses Artikels sollten Sie besser verstehen, was eine Vorlagensp
 
 Weitere Informationen zu den anderen Ziel-Server-Komponenten finden Sie in den folgenden Artikeln:
 
-* [Serverspezifikationen für Ziele, die mit Destination SDK erstellt wurden](server-specs.md)
+* [Server-Spezifikationen für Ziele, die mit Destination SDK erstellt wurden](server-specs.md)
 * [Nachrichtenformat](message-format.md)
 * [Konfiguration der Dateiformatierung](file-formatting.md)
