@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Häufig gestellte Fragen
 description: Dieses Dokument enthält häufig gestellte Fragen und Antworten zum Abfrage-Service. Zu den Themen gehören der Datenexport, Tools von Drittanbietern und PSQL-Fehler.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
 workflow-type: tm+mt
-source-wordcount: '4383'
-ht-degree: 100%
+source-wordcount: '4309'
+ht-degree: 99%
 
 ---
 
@@ -303,7 +303,7 @@ Zunächst überprüfen Sie die Protokolle, um die Details des Fehlers zu ermitte
 
 Sie sollten auch in der Dokumentation nachlesen, wie Sie [geplante Abfragen in der Benutzeroberfläche](./ui/user-guide.md#scheduled-queries) und über [die API](./api/scheduled-queries.md) durchführen können.
 
-Im Folgenden finden Sie eine Liste der Einschränkungen für geplante Abfragen bei Verwendung des [!DNL Query Editor]. Sie gelten nicht für die [!DNL Query Service]-API:<br/>Sie können einen Zeitplan nur zu einer Abfrage hinzufügen, die bereits erstellt, gespeichert und ausgeführt wurde.<br/>Sie können **keinen** Zeitplan zu einer parametrisierten Abfrage hinzufügen.<br/>Geplante Abfragen können **keinen** anonymen Block enthalten.<br/>Sie können nur **eine** Abfragevorlage über die Benutzeroberfläche planen. Wenn Sie einer Abfragevorlage zusätzliche Zeitpläne hinzufügen möchten, müssen Sie die API verwenden. Wenn Sie bereits einen Zeitplan über die API hinzugefügt haben, können Sie keine weiteren Zeitpläne über die Benutzeroberfläche hinzufügen.
+Beachten Sie bei der Verwendung von [!DNL Query Editor] Sie können einen Zeitplan nur zu einer Abfrage hinzufügen, die bereits erstellt, gespeichert und ausgeführt wurde. Dies gilt nicht für die [!DNL Query Service] API.
 +++
 
 ### Was bedeutet die Fehlermeldung „Sitzungs-Limit erreicht“?

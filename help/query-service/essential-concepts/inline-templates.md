@@ -1,9 +1,9 @@
 ---
 title: Inline-Vorlagen
 description: Erfahren Sie, wie Sie mehrere Bedingungen in zahlreichen Abfragen mit Inline-Vorlagen wiederverwenden können.
-source-git-commit: f8ec94b4c93e3b36667bdb179ce12c10d20fa30f
+source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '485'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ Sie können Vorlagen verwenden, um eine oder mehrere Bedingungen zu speichern. S
 
 >
 >
->In der Adobe Experience Platform-Benutzeroberfläche werden Inline-Vorlagen in Form parametrisierter Abfragen nur auf der übergeordneten Ebene unterstützt. Dies bedeutet, dass parametrisierte Abfragen nur bei Verwendung in der ursprünglichen Vorlage funktionieren. Die untergeordnete Vorlage muss eine statische Vorlage sein und darf keine dynamischen Parameter aufweisen.
+>In der Adobe Experience Platform-Benutzeroberfläche werden Inline-Vorlagen in Form parametrisierter Abfragen nur auf der übergeordneten Ebene unterstützt. Dies bedeutet, dass parametrisierte Abfragen nur bei Verwendung in der ursprünglichen Vorlage funktionieren. Die untergeordnete Vorlage muss eine statische Vorlage sein und darf keine dynamischen Parameter aufweisen. Siehe [Dokumentation zu parametrisierten Abfragen](../ui/parameterized-queries.md) , um mehr zu erfahren.
 
 ## Nächste Schritte
 

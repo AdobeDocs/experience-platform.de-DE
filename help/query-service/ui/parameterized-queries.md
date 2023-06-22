@@ -1,9 +1,9 @@
 ---
 title: Parameterisierte Abfragen
 description: Erfahren Sie, wie Sie parametrisierte Abfragen in der Adobe Experience Platform-Benutzeroberfläche verwenden.
-source-git-commit: a0f826a2e5fcdfc2f9e08221f30ba01470c9b3be
+source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '659'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ Query Service unterstützt die Verwendung parametrisierter Abfragen im Abfrage-E
 
 Lesen Sie vor dem Fortfahren mit diesem Handbuch die [Anleitung zur Benutzeroberfläche des Abfrage-Editors](./user-guide.md). Das Handbuch zum Abfrage-Editor enthält detaillierte Informationen zum Schreiben, Validieren und Ausführen von Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche.
 
+>[!NOTE]
 >
->
->Parametrisierte Abfragen werden in Inline-Vorlagen nicht über ihre übergeordnete Ebene hinaus unterstützt. Parametrisierte Abfragen funktionieren nur, wenn sie in der ursprünglichen Vorlage oder in einer direkt untergeordneten Inline-Vorlage verwendet werden.
+>In der Adobe Experience Platform-Benutzeroberfläche werden parametrisierte Abfragen nur auf der übergeordneten Ebene von Inline-Vorlagen unterstützt. Dies bedeutet, dass parametrisierte Abfragen nur bei Verwendung in der ursprünglichen Vorlage funktionieren. Untergeordnete Vorlagen müssen eine statische Vorlage sein und dürfen keine dynamischen Parameter aufweisen. Siehe [Dokumentation zu Inline-Vorlagen](../essential-concepts/inline-templates.md) , um mehr zu erfahren.
 
 ## Parametrisierte Abfragesyntax {#syntax}
 
