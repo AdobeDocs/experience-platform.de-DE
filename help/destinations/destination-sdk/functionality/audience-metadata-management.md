@@ -2,9 +2,9 @@
 description: Verwenden Sie Vorlagen für Zielgruppen-Metadaten, um Zielgruppen in Ihrem Ziel programmgesteuert zu erstellen, zu aktualisieren oder zu löschen. Adobe bietet eine erweiterungsfähige Vorlage für Zielgruppen-Metadaten, die Sie anhand der Spezifikationen Ihrer Marketing-API konfigurieren können. Nachdem Sie die Vorlage definiert, getestet und gesendet haben, wird sie von Adobe zur Strukturierung der API-Aufrufe an Ihr Ziel verwendet.
 title: Verwaltung von Zielgruppen-Metadaten
 source-git-commit: e69bd819fb8ef6c2384a2b843542d1ddcea0661f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1038'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -13,33 +13,33 @@ ht-degree: 94%
 
 Verwenden Sie Vorlagen für Zielgruppen-Metadaten, um Zielgruppen in Ihrem Ziel programmgesteuert zu erstellen, zu aktualisieren oder zu löschen. Adobe bietet eine erweiterungsfähige Vorlage für Zielgruppen-Metadaten, die Sie anhand der Spezifikationen Ihrer Marketing-API konfigurieren können. Nachdem Sie die Konfiguration definiert, getestet und gesendet haben, wird sie von Adobe zur Strukturierung der API-Aufrufe an Ihr Ziel verwendet.
 
-Sie können die in diesem Dokument beschriebenen Funktionen mithilfe des API-Endpunkts `/authoring/audience-templates` konfigurieren. Lesen [Erstellen einer Metadatenvorlage](../metadata-api/create-audience-template.md) für eine vollständige Liste der Vorgänge, die Sie am -Endpunkt ausführen können.
+Sie können die in diesem Dokument beschriebenen Funktionen mithilfe des API-Endpunkts `/authoring/audience-templates` konfigurieren. Eine vollständige Liste der Vorgänge, die Sie mit dem Endpunkt durchführen können, finden Sie unter [Erstellen einer Metadatenvorlage](../metadata-api/create-audience-template.md).
 
-## Verwendung des Endpunkts für die Verwaltung von Zielgruppen-Metadaten {#when-to-use}
+## Wann Sie den Endpunkt für die Verwaltung von Zielgruppen-Metadaten verwenden sollten {#when-to-use}
 
-Abhängig von Ihrer API-Konfiguration müssen Sie möglicherweise den Endpunkt für die Verwaltung von Zielgruppen-Metadaten verwenden, während Sie Ihr Ziel in Experience Platform konfigurieren. Der unten stehende Entscheidungsbaum verdeutlicht, wann der Endpunkt für Zielgruppen-Metadaten verwendet wird und wie eine Vorlage für Zielgruppen-Metadaten für Ihr Ziel konfiguriert werden soll.
+Abhängig von Ihrer API-Konfiguration müssen Sie möglicherweise den Endpunkt für die Verwaltung von Zielgruppen-Metadaten verwenden, während Sie Ihr Ziel in Experience Platform konfigurieren. Der unten stehende Entscheidungsbaum verdeutlicht, wann der Endpunkt für Zielgruppen-Metadaten verwendet werden muss und wie Sie eine Vorlage für Zielgruppen-Metadaten für Ihr Ziel konfiguren.
 
 ![Entscheidungsbaum](../assets/functionality/audience-metadata-decision-tree.png)
 
-## Anwendungsfälle, die von der Verwaltung von Zielgruppen-Metadaten unterstützt werden {#use-cases}
+## Anwendungsfälle, die durch die Verwaltung von Zielgruppen-Metadaten unterstützt werden {#use-cases}
 
-Dank der Unterstützung von Zielgruppen-Metadaten im Destination SDK können Sie bei der Konfiguration Ihres Experience Platform-Ziels den Benutzern von Platform eine von mehreren Optionen bieten, wenn sie Segmente Ihrem Ziel zuordnen und aktivieren. Sie können die dem Benutzer zur Verfügung stehenden Optionen über die Parameter im [Konfiguration von Zielgruppen-Metadaten](../functionality/destination-configuration/audience-metadata-configuration.md) -Abschnitt der Zielkonfiguration.
+Dank der Unterstützung von Zielgruppen-Metadaten in Destination SDK können Sie bei der Konfiguration Ihres Experience Platform-Ziels den Benutzerinnen und Benutzern von Platform eine von mehreren Optionen bieten, wenn sie Segmente Ihrem Ziel zuordnen und aktivieren. Sie können die Optionen, die den Benutzerinnen und Benutzern zur Verfügung stehen, über die Parameter im Abschnitt [Zielgruppen-Metadatenkonfiguration](../functionality/destination-configuration/audience-metadata-configuration.md) der Zielkonfiguration steuern.
 
-### Anwendungsfall 1 - Sie verfügen über eine Drittanbieter-API und Benutzer müssen keine Zuordnungs-IDs angeben
+### Anwendungsfall 1: Sie verfügen über eine Drittanbieter-API, und Benutzerinnen und Benutzer müssen keine Zuordnungs-IDs angeben
 
-Wenn Sie über einen API-Endpunkt zum Erstellen, Aktualisieren und Löschen von Segmenten oder Zielgruppen verfügen, können Sie mithilfe von Vorlagen für Zielgruppen-Metadaten das Destination SDK so konfigurieren, dass es den Spezifikationen Ihres Segmentendpunkts zum Erstellen/Aktualisieren/Löschen entspricht. Experience Platform kann Segmente programmgesteuert erstellen, aktualisieren und löschen sowie Metadaten erneut synchronisieren.
+Wenn Sie über einen API-Endpunkt zum Erstellen, Aktualisieren und Löschen von Segmenten oder Zielgruppen verfügen, können Sie Destination SDK mithilfe von Vorlagen für Zielgruppen-Metadaten so konfigurieren, dass es den Spezifikationen Ihres Segmentendpunkts zum Erstellen/Aktualisieren/Löschen entspricht. Experience Platform kann Segmente programmgesteuert erstellen, aktualisieren und löschen sowie Metadaten erneut synchronisieren.
 
-Beim Aktivieren von Segmenten für Ihr Ziel in der Benutzeroberfläche von Experience Platform müssen Benutzer im Aktivierungs-Workflow das Feld für die Segmentzuordnungs-ID nicht manuell ausfüllen.
+Beim Aktivieren von Segmenten für Ihr Ziel in der Benutzeroberfläche von Experience Platform müssen Benutzerinnen und Benutzer im Aktivierungs-Workflow das Feld für die Segmentzuordnungs-ID nicht manuell ausfüllen.
 
-### Anwendungsfall 2 - Benutzer müssen zuerst ein Segment in Ihrem Ziel erstellen und die Zuordnungs-ID manuell eingeben
+### Anwendungsfall 2: Benutzerinnen und Benutzer müssen zuerst ein Segment in Ihrem Ziel erstellen und die Zuordnungs-ID manuell eingeben
 
-Wenn Segmente und andere Metadaten von Partnern oder Benutzern manuell in Ihrem Ziel erstellt werden müssen, müssen die Benutzer das Feld für die Segmentzuordnungs-ID im Aktivierungs-Workflow manuell ausfüllen, um die Segmentmetadaten zwischen Ihrem Ziel und Experience Platform zu synchronisieren.
+Wenn Segmente und andere Metadaten von Partnern oder Benutzerinnen bzw. Benutzern manuell in Ihrem Ziel erstellt werden müssen, müssen die Benutzerinnen und Benutzer das Feld für die Segmentzuordnungs-ID im Aktivierungs-Workflow manuell ausfüllen, um die Segmentmetadaten zwischen Ihrem Ziel und Experience Platform zu synchronisieren.
 
 ![Eingabe Zuordnungs-ID](../assets/functionality/input-mapping-id.png)
 
-### Anwendungsfall 3 - Ihr Ziel akzeptiert die Segmentkennung von Experience Platform, Benutzer müssen die Zuordnungs-ID nicht manuell eingeben
+### Anwendungsfall 3: Ihr Ziel akzeptiert die Segment-ID von Experience Platform, und Benutzerinnen und Benutzer müssen die Zuordnungs-ID nicht manuell eingeben
 
-Wenn Ihr Zielsystem die Segmentkennung von Experience Platform akzeptiert, können Sie diese in der Vorlage Ihrer Zielgruppen-Metadaten konfigurieren. Benutzer müssen beim Aktivieren eines Segments keine Segmentzuordnungs-ID ausfüllen.
+Wenn Ihr Zielsystem die Segment-ID von Experience Platform akzeptiert, können Sie diese in der Vorlage Ihrer Zielgruppen-Metadaten konfigurieren. Benutzerinnen und Benutzer müssen beim Aktivieren eines Segments keine Segmentzuordnungs-ID ausfüllen.
 
 ## Generische und erweiterbare Zielgruppenvorlage {#generic-and-extensible}
 
@@ -521,11 +521,11 @@ Beachten Sie, dass in einigen Beispielen Makro-Felder wie `{{authData.accessToke
 }
 ```
 
-Beschreibungen aller Parameter in der Vorlage finden Sie im [Erstellen einer Zielgruppenvorlage](../metadata-api/create-audience-template.md) API-Referenz.
+Beschreibungen aller Parameter in der Vorlage finden Sie in der API-Referenz zum [Erstellen einer Zielgruppenvorlage](../metadata-api/create-audience-template.md).
 
 ## Verwendete Makros in Vorlagen für Zielgruppen-Metadaten
 
-Um Informationen wie Segment-IDs, Zugriffs-Token, Fehlermeldungen und mehr zwischen Experience Platform und Ihrer API zu übermitteln, enthalten die Vorlagen für Zielgruppen Makros. Im Folgenden finden Sie eine Beschreibung der Makros, die in den drei Konfigurationsbeispielen auf dieser Seite verwendet werden:
+Um Informationen wie Segment-IDs, Zugriffstoken, Fehlermeldungen und mehr zwischen Experience Platform und Ihrer API zu übermitteln, enthalten die Zielgruppenvorlagen Makros. Im Folgenden finden Sie eine Beschreibung der Makros, die in den drei Konfigurationsbeispielen auf dieser Seite verwendet werden:
 
 | Makro | Beschreibung |
 |--- |--- |
@@ -536,6 +536,6 @@ Um Informationen wie Segment-IDs, Zugriffs-Token, Fehlermeldungen und mehr zwisc
 | `{{oauth2ServiceAccessToken}}` | Ermöglicht Ihnen die dynamische Generierung eines Zugriffs-Tokens basierend auf Ihrer OAuth 2-Konfiguration. |
 | `{{authData.accessToken}}` | Ermöglicht die Weitergabe des Zugriffs-Tokens an den API-Endpunkt. Verwenden Sie `{{authData.accessToken}}`, wenn Experience Platform nicht ablaufende Token verwenden soll, um eine Verbindung zu Ihrem Ziel herzustellen. Andernfalls verwenden Sie `{{oauth2ServiceAccessToken}}`, um ein Zugriffs-Token zu generieren. |
 | `{{body.segments[0].segment.id}}` | Gibt die eindeutige Kennung der erstellten Zielgruppe als Wert des Schlüssels `externalAudienceId` zurück. |
-| `{{error.message}}` | Gibt eine Fehlermeldung zurück, die Benutzern in der Benutzeroberfläche von Experience Platform angezeigt wird. |
+| `{{error.message}}` | Gibt eine Fehlermeldung zurück, die Benutzerinnen und Benutzern in der Benutzeroberfläche von Experience Platform angezeigt wird. |
 
 {style="table-layout:auto"}
