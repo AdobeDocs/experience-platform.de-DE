@@ -2,9 +2,9 @@
 description: Auf dieser Seite wird der API-Aufruf zum Abrufen einer Berechtigungskonfiguration über Adobe Experience Platform Destination SDK veranschaulicht.
 title: Abrufen einer Berechtigungskonfiguration
 source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '475'
-ht-degree: 28%
+ht-degree: 100%
 
 ---
 
@@ -15,31 +15,31 @@ ht-degree: 28%
 >
 >**API-Endpunkt**: `platform.adobe.io/data/core/activation/authoring/credentials`
 
-Auf dieser Seite werden die API-Anfrage und die Payload erläutert, die Sie verwenden können, um eine Berechtigungskonfiguration mithilfe der `/authoring/credentials` API-Endpunkt.
+Auf dieser Seite werden die API-Anfrage und die Payload erläutert, die Sie verwenden können, um eine Berechtigungskonfiguration mithilfe des API-Endpunkts `/authoring/credentials` abzurufen.
 
 ## Verwendung des API-Endpunkts `/credentials` {#when-to-use}
 
 >[!IMPORTANT]
 >
->In den meisten Fällen ist es ***nicht*** erforderlich, den API-Endpunkt `/credentials` zu verwenden. Stattdessen können Sie die Authentifizierungsinformationen für Ihr Ziel über den `customerAuthenticationConfigurations`-Parameter des `/destinations`-Endpunkts konfigurieren.
+>In den meisten Fällen ist es ***nicht*** erforderlich, den API-Endpunkt `/credentials` zu verwenden. Stattdessen können Sie die Authentifizierungsinformationen für Ihr Ziel über den Parameter `customerAuthenticationConfigurations` des Endpunkts `/destinations` konfigurieren.
 > 
->Lesen [Konfiguration der Kundenauthentifizierung](../functionality/destination-configuration/customer-authentication.md) für detaillierte Informationen zu den unterstützten Authentifizierungstypen.
+>Lesen Sie [Konfiguration der Kundenauthentifizierung](../functionality/destination-configuration/customer-authentication.md) für detaillierte Informationen zu den unterstützten Authentifizierungstypen.
 
-Verwenden Sie diesen API-Endpunkt, um eine Berechtigungskonfiguration nur dann zu erstellen, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrer Zielplattform vorhanden ist und die [!DNL Platform] Der Kunde muss keine Authentifizierungsberechtigungen bereitstellen, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie mithilfe der `/credentials` API-Endpunkt.
+Verwenden Sie diesen API-Endpunkt nur dann zum Erstellen einer Berechtigungskonfiguration, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrer Zielplattform besteht und die [!DNL Platform]-Kundinnen und -Kunden keine Authentifizierungsdaten bereitstellen müssen, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie mithilfe des API-Endpunkts `/credentials` eine Berechtigungskonfiguration erstellen.
 
-Bei der Verwendung eines globalen Authentifizierungssystems müssen Sie `"authenticationRule":"PLATFORM_AUTHENTICATION"` im [Zielversand](../functionality/destination-configuration/destination-delivery.md) Konfiguration, wenn [Erstellen einer neuen Zielkonfiguration](../authoring-api/destination-configuration/create-destination-configuration.md).
+Bei der Verwendung eines globalen Authentifizierungssystems müssen Sie `"authenticationRule":"PLATFORM_AUTHENTICATION"` in der Konfiguration des [Zielversands](../functionality/destination-configuration/destination-delivery.md) festlegen, wenn Sie [eine neue Zielkonfiguration erstellen](../authoring-api/destination-configuration/create-destination-configuration.md).
 
 >[!IMPORTANT]
 >
->Alle von Destination SDK unterstützten Parameternamen und Werte sind **Groß-/Kleinschreibung**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
+>Bei allen von Destination SDK unterstützten Parameternamen und Werten wird **nach Groß-/Kleinschreibung unterschieden**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
 
-## Erste Schritte mit API-Vorgängen für Anmeldedaten {#get-started}
+## Erste Schritte mit Berechtigungs-API-Vorgängen {#get-started}
 
 Bevor Sie fortfahren, lesen Sie [Erste Schritte](../getting-started.md). Dort finden Sie die nötigen Informationen für den erfolgreichen Aufruf der API, einschließlich Details für den Abruf der erforderlichen Authoring-Berechtigung für Ziele und zu den erforderlichen Kopfzeilen.
 
 ## Abrufen einer Berechtigungskonfiguration {#retrieve}
 
-Sie können eine [vorhandene](create-credential-configuration.md) Berechtigungskonfiguration durch `GET` Anfrage an `/authoring/credentials` -Endpunkt.
+Sie können eine [vorhandene](create-credential-configuration.md) Berechtigungskonfiguration abrufen, indem Sie eine `GET`-Anfrage an den Endpunkt `/authoring/credentials` stellen.
 
 **API-Format**
 
@@ -49,13 +49,13 @@ Verwenden Sie das folgende API-Format, um alle Berechtigungskonfigurationen für
 GET /authoring/credentials
 ```
 
-Verwenden Sie das folgende API-Format, um eine bestimmte Berechtigungskonfiguration abzurufen, die von der `{INSTANCE_ID}` Parameter.
+Verwenden Sie das folgende API-Format, um eine bestimmte Berechtigungskonfiguration abzurufen, die durch den Parameter `{INSTANCE_ID}` bestimmt wird.
 
 ```http
 GET /authoring/credentials/{INSTANCE_ID}
 ```
 
-Die folgenden beiden Anfragen rufen alle Anmeldekonfigurationen für Ihre IMS-Organisation oder eine bestimmte Berechtigungskonfiguration ab, je nachdem, ob Sie die `INSTANCE_ID` -Parameter in der -Anfrage.
+Die folgenden beiden Anfragen rufen alle Berechtigungskonfigurationen für Ihre IMS-Organisation oder eine bestimmte Berechtigungskonfiguration ab, je nachdem, ob Sie den Parameter `INSTANCE_ID` in der Anfrage übergeben.
 
 Wählen Sie die einzelnen Registerkarten unten aus, um die entsprechende Payload anzuzeigen.
 
@@ -77,7 +77,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 +++Antwort
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Berechtigungskonfigurationen zurück, auf die Sie basierend auf der [!DNL IMS Org ID] und des von Ihnen verwendeten Sandbox-Namens. One `instanceId` entspricht einer Berechtigungskonfiguration.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit einer Liste der Berechtigungskonfigurationen zurückgegeben, auf die Sie Zugriff haben, basierend auf der von Ihnen verwendeten [!DNL IMS Org ID] und dem Sandbox-Namen. Eine `instanceId` entspricht einer Berechtigungskonfiguration.
 
 ```json
 {
@@ -127,7 +127,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 +++Antwort
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit den Details der Konfiguration der Anmeldedaten zurück, die der `instanceId` auf der Anfrage bereitgestellt werden.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit den Details der Berechtigungskonfiguration zurückgegeben, die der `instanceId` in der Anfrage entspricht.
 
 ```json
 {
@@ -153,4 +153,4 @@ Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience
 
 ## Nächste Schritte {#next-steps}
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie Details zu Ihren Berechtigungskonfigurationen mithilfe der `/authoring/credentials` API-Endpunkt. Lesen Sie [Verwenden des Destination SDK zum Konfigurieren Ihres Ziels](../guides/configure-destination-instructions.md), um zu verstehen, wo dieser Schritt in den Prozess der Konfiguration Ihres Ziels passt.
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie Details zu Ihren Berechtigungskonfigurationen mithilfe des API-Endpunkts `/authoring/credentials` abrufen. Lesen Sie [Verwenden des Destination SDK zum Konfigurieren Ihres Ziels](../guides/configure-destination-instructions.md), um zu verstehen, wo dieser Schritt in den Prozess der Konfiguration Ihres Ziels passt.
