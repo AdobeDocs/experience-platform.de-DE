@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise vom Juni 2023 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a03d0eeab5ca42225705fdeab692020b1641395d
+source-git-commit: e56a6c2bac46778afcc24db8d51e77ec3700dd96
 workflow-type: tm+mt
-source-wordcount: '1055'
-ht-degree: 28%
+source-wordcount: '1606'
+ht-degree: 35%
 
 ---
 
@@ -18,6 +18,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [Authentifizierung für Experience Platform-APIs](#authentication-platform-apis)
 - [Datenerfassung](#data-collection)
 - [Ziele](#destinations)
+- [Experience-Datenmodell (XDM)](#xdm)
 - [Query Service](#query-service)
 - [Quellen](#sources)
 
@@ -75,6 +76,45 @@ Weitere Informationen zur Datenerfassung finden Sie im Abschnitt [Datenerfassung
 -->
 
 Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
+
+## Experience-Datenmodell (XDM) {#xdm}
+
+XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definitionen (Schemas) für Daten bereitstellt, die in Adobe Experience Platform importiert werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
+
+**Neue XDM-Komponenten**
+
+| Typ der Komponente | Name | Beschreibung |
+| --- | --- | --- |
+| Erweiterung (Prospect-Profile) | [[!UICONTROL Adobe Unified Profile Service Prospect-Profile-Vereinigung-Erweiterung]](https://github.com/adobe/xdm/pull/1735/files) | Es wurden erforderliche Felder für das Vereinigungsschema &quot;Prospect-Profile&quot;hinzugefügt. |
+| Erweiterung | [[!UICONTROL Entscheidungsasset]](https://github.com/adobe/xdm/pull/1732/files) | Fügen Sie einen Datentyp hinzu, um Assets darzustellen, die bei der Entscheidungsfindung verwendet werden. [!UICONTROL Entscheidungsasset] bietet einen Verweis auf Assets, die zum Rendern der `decisionItems`. |
+| Datentyp | [[!UICONTROL Commerce]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL Handel] speichert Aufzeichnungen im Zusammenhang mit der Kauf- und Verkaufsaktivität. |
+| Feldergruppe | [[!UICONTROL Profilpartner-Anreicherung (Beispiel)]](https://github.com/adobe/xdm/pull/1747/files) | Für die Anreicherung von Profilpartnern wurde ein Beispielschema hinzugefügt. |
+| Feldergruppe | [[!UICONTROL Details zur Partnervorschau (Beispiel)]](https://github.com/adobe/xdm/pull/1747/files) | Es wurde ein Beispielschema für Profilerweiterungen von Datenanbietern hinzugefügt. |
+| Datentyp | [[!UICONTROL Commerce-Umfang]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL Commerce-Umfang] gibt an, wo ein Ereignis aufgetreten ist. Beispielsweise in der Store-Ansicht, im Store oder auf der Website usw. |
+| Datentyp | [[!UICONTROL Rechnungsstellung]](https://github.com/adobe/xdm/pull/1734/files) | Die Rechnungsinformationen für eine oder mehrere Zahlungen wurden zum [!UICONTROL Handel] Schema. |
+
+{style="table-layout:auto"}
+
+**Aktualisierte XDM-Komponenten**
+
+| Typ der Komponente | Name | Beschreibung der Aktualisierung |
+| --- | --- | --- |
+| Feldergruppe | [[!UICONTROL Details zur MediaAnalytics-Interaktion]](https://github.com/adobe/xdm/pull/1736/files) | Geändert `bitrateAverageBucket` von 100 bis &quot;800-899&quot;. |
+| Datentyp | [[!UICONTROL Informationen zu QoE-Daten]](https://github.com/adobe/xdm/pull/1736/files) | Geändert `bitrateAverageBucket` Datentyp in Zeichenfolge. |
+| Feldergruppe | [[!UICONTROL Details zur Segmentzugehörigkeit]](https://github.com/adobe/xdm/pull/1735/files) | Der Prospect Profile-Klasse wurde hinzugefügt. |
+| Schema | [[!UICONTROL Systemschema für berechnete Attribute]](https://github.com/adobe/xdm/pull/1735/files) | Identitätszuordnung hinzugefügt [!UICONTROL Systemschema für berechnete Attribute]. |
+| Datentyp | [[!UICONTROL Netzwerk zur Inhaltsbereitstellung]](https://github.com/adobe/xdm/pull/1733/files) | Feld hinzugefügt zu [!UICONTROL Informationen zu Sitzungsdetails] um das verwendete Netzwerk für die Inhaltsbereitstellung zu beschreiben. |
+| Erweiterung | [[!UICONTROL Adobe Unified Profile Service-Kontovereinigungserweiterung]](https://github.com/adobe/xdm/pull/1731/files) | Identitätszuordnung hinzugefügt [!UICONTROL Adobe Unified Profile Service-Kontovereinigung-Erweiterung]. |
+| Datentyp | [[!UICONTROL Auftrag]](https://github.com/adobe/xdm/pull/1730/files) | `discountAmount` wurde hinzugefügt [!UICONTROL Bestellung]. Hieraus ergibt sich die Differenz zwischen dem regulären Bestellpreis und dem Sonderpreis. Sie wird auf die gesamte Bestellung angewendet und nicht auf einzelne Produkte. |
+| Schema | [[!UICONTROL AEP-Hygieneanfrage]](https://github.com/adobe/xdm/pull/1728/files) | Die `targetServices` wurde hinzugefügt, um die Namen der Dienste anzugeben, die die Datenhygienevorgänge verarbeiten. |
+| Datentyp | [[!UICONTROL Lieferung]](https://github.com/adobe/xdm/pull/1727/files) | `currencyCode` wurde zu den Versandinformationen für ein oder mehrere Produkte hinzugefügt. Es handelt sich um einen alphabetischen ISO 4217-Währungscode, der zur Preisbildung für das Produkt verwendet wird. |
+| Datentyp | [[!UICONTROL Programm]](https://github.com/adobe/xdm/pull/1726/files) | Die `language` wurde hinzugefügt, um die sprachlichen, geografischen oder kulturellen Voreinstellungen des Benutzers für die Anwendung bereitzustellen. |
+| Erweiterung | [[!UICONTROL AJO-Entitätsfelder]](https://github.com/adobe/xdm/pull/1746/files) | [!UICONTROL AJO-Zeitstempelentität] wurde hinzugefügt, um den Zeitpunkt der letzten Änderung der Nachricht anzugeben. |
+| Datentyp | (Mehrfach) | [Mehrere Mediendetails entfernt](https://github.com/adobe/xdm/pull/1739/files) für Konsistenz über verschiedene Datentypen hinweg. |
+
+{style="table-layout:auto"}
+
+Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md)
 
 ## Abfrage-Service {#query-service}
 
