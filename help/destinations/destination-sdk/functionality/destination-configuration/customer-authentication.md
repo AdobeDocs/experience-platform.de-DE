@@ -1,49 +1,49 @@
 ---
-description: Erfahren Sie, wie Sie einen Authentifizierungsmechanismus für Ihr Ziel einrichten und Einblicke darüber erhalten, welche Benutzer je nach ausgewählter Authentifizierungsmethode auf der Benutzeroberfläche angezeigt werden.
+description: Erfahren Sie, wie Sie einen Authentifizierungsmechanismus für Ihr Ziel einrichten und erhalten Sie einen Einblick darüber, was in der Benutzeroberfläche je nach gewählter Authentifizierungsmethode zu sehen sein wird.
 title: Konfiguration der Kundenauthentifizierung
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1094'
-ht-degree: 35%
+ht-degree: 100%
 
 ---
 
 
 # Konfiguration der Kundenauthentifizierung
 
-Experience Platform bietet eine große Flexibilität bei den Authentifizierungsprotokollen, die Partnern und Kunden zur Verfügung stehen. Sie können Ihr Ziel so konfigurieren, dass es alle Authentifizierungsmethoden unterstützt, die dem Branchenstandard entsprechen, z. B. [!DNL OAuth2], Authentifizierung von Trägertoken, Kennwortauthentifizierung und vieles mehr.
+Experience Platform bietet eine große Flexibilität bei den Authentifizierungsprotokollen, die Partnern sowie Kundinnen und Kunden zur Verfügung stehen. Sie können Ihr Ziel so konfigurieren, dass es alle Authentifizierungsmethoden unterstützt, die dem Branchenstandard entsprechen, z. B. [!DNL OAuth2], Authentifizierung von Bearer-Token, Kennwortauthentifizierung und viele mehr.
 
-Auf dieser Seite wird beschrieben, wie Sie Ihr Ziel mithilfe Ihrer bevorzugten Authentifizierungsmethode einrichten. Basierend auf der Authentifizierungskonfiguration, die Sie beim Erstellen Ihres Ziels verwenden, werden Kunden beim Herstellen einer Verbindung zum Ziel in der Experience Platform-Benutzeroberfläche unterschiedliche Arten von Authentifizierungsseiten angezeigt.
+Auf dieser Seite wird beschrieben, wie Sie Ihr Ziel mithilfe Ihrer bevorzugten Authentifizierungsmethode einrichten. Basierend auf der Authentifizierungskonfiguration, die Sie beim Erstellen Ihres Ziels verwenden, werden den Kundinnen und Kunden beim Herstellen einer Verbindung zum Ziel in der Experience Platform-Benutzeroberfläche unterschiedliche Arten von Authentifizierungsseiten angezeigt.
 
-Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm im [Konfigurationsoptionen](../configuration-options.md) Dokumentation oder sehen Sie die folgenden Übersichtsseiten zur Zielkonfiguration:
+Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation zu [Konfigurationsoptionen](../configuration-options.md) oder auf den folgenden Übersichtsseiten zur Zielkonfiguration:
 
 * [Verwenden des Destination SDK zum Konfigurieren eines Streaming-Ziels](../../guides/configure-destination-instructions.md#create-destination-configuration)
 * [Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
-Bevor Kunden Daten aus Platform in Ihr Ziel exportieren können, müssen sie eine neue Verbindung zwischen Experience Platform und Ihrem Ziel herstellen, indem sie die im Abschnitt [Zielverbindung](../../../ui/connect-destination.md) Tutorial.
+Bevor Kundinnen und Kunden Daten aus Platform in Ihr Ziel exportieren können, müssen sie eine neue Verbindung zwischen Experience Platform und Ihrem Ziel herstellen, indem sie die Schritte im Tutorial [Zielverbindung](../../../ui/connect-destination.md) befolgen.
 
-Wann [Erstellen eines Ziels](../../authoring-api/destination-configuration/create-destination-configuration.md) durch Destination SDK, `customerAuthenticationConfigurations` definiert, was Kunden sehen im [Authentifizierungsbildschirm](../../../ui/connect-destination.md#authenticate). Abhängig vom Zielauthentifizierungstyp müssen Kunden verschiedene Authentifizierungsdetails angeben, z. B.:
+Wenn Sie durch Destination SDK [ein Ziel erstellen](../../authoring-api/destination-configuration/create-destination-configuration.md), wird im Abschnitt `customerAuthenticationConfigurations` definiert, was Kundinnen und Kunden im [Authentifizierungsbildschirm](../../../ui/connect-destination.md#authenticate) sehen. Abhängig vom Zielauthentifizierungstyp müssen Kundinnen und Kunden verschiedene Authentifizierungsdetails angeben, z. B.:
 
-* Für Ziele, die [einfache Authentifizierung](#basic)müssen Benutzer einen Benutzernamen und ein Kennwort direkt auf der Authentifizierungsseite der Experience Platform-Benutzeroberfläche angeben.
-* Für Ziele, die [Bearer-Authentifizierung](#bearer), müssen Benutzer ein Bearer-Token bereitstellen.
-* Für Ziele, die [OAuth2-Authentifizierung](#oauth2), werden Benutzer zur Anmeldeseite Ihres Ziels weitergeleitet, wo sie sich mit ihren Anmeldeinformationen anmelden können.
-* Für [Amazon S3](#s3) Ziele, müssen Benutzer ihre [!DNL Amazon S3] Zugriffsschlüssel und geheimer Schlüssel.
-* Für [Azure Blob](#blob) Ziele, müssen Benutzer ihre [!DNL Azure Blob] Verbindungszeichenfolge.
+* Für Ziele, die eine [einfache Authentifizierung](#basic) verwenden, müssen Benutzerinnen und Benutzer einen Benutzernamen und ein Kennwort direkt auf der Authentifizierungsseite der Experience Platform-Benutzeroberfläche angeben.
+* Für Ziele, die eine [Bearer-Authentifizierung](#bearer) verwenden, müssen Benutzerinnen und Benutzer ein Bearer-Token bereitstellen.
+* Für Ziele, die eine [OAuth2-Authentifizierung](#oauth2) verwenden, werden Benutzerinnen und Benutzer zur Anmeldeseite Ihres Ziels weitergeleitet, wo sie sich mit ihren Anmeldeinformationen anmelden können.
+* Für [Amazon S3](#s3)-Ziele müssen Benutzerinnen und Benutzer ihren [!DNL Amazon S3]-Zugriffsschlüssel und geheimen Schlüssel angeben.
+* Für [Azure Blob](#blob)-Ziele müssen Benutzerinnen und Benutzer ihre [!DNL Azure Blob]-Verbindungszeichenfolge angeben.
 
-Sie können Details zur Kundenauthentifizierung über die `/authoring/destinations` -Endpunkt. Detaillierte Beispiele für API-Aufrufe, in denen Sie die auf dieser Seite angezeigten Komponenten konfigurieren können, finden Sie auf den folgenden API-Referenzseiten.
+Sie können Details zur Kundenauthentifizierung über den Endpunkt `/authoring/destinations` konfigurieren. Detaillierte Beispiele für API-Aufrufe, in denen Sie die auf dieser Seite angezeigten Komponenten konfigurieren können, finden Sie auf den folgenden API-Referenzseiten.
 
 * [Erstellen einer Zielkonfiguration](../../authoring-api/destination-configuration/create-destination-configuration.md)
-* [Zielkonfiguration aktualisieren](../../authoring-api/destination-configuration/update-destination-configuration.md)
+* [Aktualisieren einer Zielkonfiguration](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-In diesem Artikel werden alle unterstützten Konfigurationen für die Kundenauthentifizierung beschrieben, die Sie für Ihr Ziel verwenden können, und es wird gezeigt, welche Experience Platformen in der Benutzeroberfläche angezeigt werden, basierend auf der Authentifizierungsmethode, die Sie für Ihr Ziel eingerichtet haben.
-
->[!IMPORTANT]
->
->Für die Konfiguration der Kundenauthentifizierung müssen Sie keine Parameter konfigurieren. Sie können die auf dieser Seite angezeigten Snippets kopieren und in Ihre API-Aufrufe einfügen, wenn Sie [erstellen](../../authoring-api/destination-configuration/create-destination-configuration.md) oder [Aktualisieren](../../authoring-api/destination-configuration/update-destination-configuration.md) eine Zielkonfiguration erstellen und Ihren Benutzern wird der entsprechende Authentifizierungsbildschirm in der Platform-Benutzeroberfläche angezeigt.
+In diesem Artikel werden alle unterstützten Konfigurationen für die Kundenauthentifizierung beschrieben, die Sie für Ihr Ziel verwenden können, und es wird gezeigt, was in der Experience Platform-Benutzeroberfläche zu sehen sein wird, basierend auf der Authentifizierungsmethode, die Sie für Ihr Ziel eingerichtet haben.
 
 >[!IMPORTANT]
 >
->Alle von Destination SDK unterstützten Parameternamen und Werte sind **Groß-/Kleinschreibung**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
+>Für die Konfiguration der Kundenauthentifizierung müssen Sie keine Parameter konfigurieren. Sie können die auf dieser Seite angezeigten Snippets kopieren und in Ihre API-Aufrufe einfügen, wenn Sie eine Zielkonfiguration [erstellen](../../authoring-api/destination-configuration/create-destination-configuration.md) oder [aktualisieren](../../authoring-api/destination-configuration/update-destination-configuration.md), und Ihren Benutzerinnen und Benutzern wird der entsprechende Authentifizierungsbildschirm in der Platform-Benutzeroberfläche angezeigt.
+
+>[!IMPORTANT]
+>
+>Bei allen von Destination SDK unterstützten Parameternamen und Werten wird **nach Groß-/Kleinschreibung unterschieden**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
 
 ## Unterstützte Integrationstypen {#supported-integration-types}
 
@@ -54,9 +54,9 @@ Die nachstehende Tabelle beschreibt ausführlich, welche Integrationstypen die a
 | Echtzeit-Integrationen (Streaming) | Ja |
 | Dateibasierte (Batch-)Integrationen | Ja |
 
-## Konfiguration der Authentifizierungsregel {#authentication-rule}
+## Konfiguration der Authentifizierungsregeln {#authentication-rule}
 
-Wenn Sie eine der auf dieser Seite beschriebenen Kundenauthentifizierungskonfigurationen verwenden, legen Sie immer die `authenticationRule` Parameter in [Zielversand](destination-delivery.md) nach `"CUSTOMER_AUTHENTICATION"`, wie unten dargestellt.
+Wenn Sie eine der auf dieser Seite beschriebenen Kundenauthentifizierungskonfigurationen verwenden, legen Sie den Parameter `authenticationRule` im [Zielversand](destination-delivery.md) immer auf `"CUSTOMER_AUTHENTICATION"` fest, wie unten dargestellt.
 
 ```json {line-numbers="true" highlight="4"
 {
@@ -71,13 +71,13 @@ Wenn Sie eine der auf dieser Seite beschriebenen Kundenauthentifizierungskonfigu
 
 ## Einfache Authentifizierung {#basic}
 
-Die grundlegende Authentifizierung wird bei Echtzeit-Integrationen (Streaming) in Experience Platform unterstützt.
+Die einfache Authentifizierung wird bei Echtzeit-Integrationen (Streaming) in Experience Platform unterstützt.
 
-Wenn Sie den grundlegenden Authentifizierungstyp konfigurieren, müssen Benutzer einen Benutzernamen und ein Kennwort eingeben, um eine Verbindung zu Ihrem Ziel herzustellen.
+Wenn Sie den einfachen Authentifizierungstyp konfigurieren, müssen Benutzerinnen und Benutzer einen Benutzernamen und ein Kennwort eingeben, um eine Verbindung zu Ihrem Ziel herzustellen.
 
-![UI-Rendering mit einfacher Authentifizierung](../../assets/functionality/destination-configuration/basic-authentication-ui.png)
+![Darstellung der Benutzeroberfläche mit einfacher Authentifizierung](../../assets/functionality/destination-configuration/basic-authentication-ui.png)
 
-Um eine einfache Authentifizierung für Ihr Ziel einzurichten, konfigurieren Sie die `customerAuthenticationConfigurations` über die `/destinations` Endpunkt wie unten gezeigt:
+Um die einfache Authentifizierung für Ihr Ziel einzurichten, konfigurieren Sie den Parameter`customerAuthenticationConfigurations` über den Endpunkt `/destinations` wie unten angezeigt:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -89,11 +89,11 @@ Um eine einfache Authentifizierung für Ihr Ziel einzurichten, konfigurieren Sie
 
 ## Bearer-Authentifizierung {#bearer}
 
-Wenn Sie den Bearer-Authentifizierungstyp konfigurieren, müssen Benutzer das Bearer-Token eingeben, das sie von Ihrem Ziel erhalten.
+Wenn Sie den Bearer-Authentifizierungstyp konfigurieren, müssen Benutzerinnen und Benutzer das Bearer-Token eingeben, das sie von Ihrem Ziel erhalten.
 
-![UI-Rendering mit Bearer-Authentifizierung](../../assets/functionality/destination-configuration/bearer-authentication-ui.png)
+![Darstellung der Benutzeroberfläche mit Bearer-Authentifizierung](../../assets/functionality/destination-configuration/bearer-authentication-ui.png)
 
-Um die Authentifizierung des Trägertyps für Ihr Ziel einzurichten, konfigurieren Sie die `customerAuthenticationConfigurations` über die `/destinations` Endpunkt wie unten gezeigt:
+Um die Authentifizierung des Bearer-Typs für Ihr Ziel einzurichten, konfigurieren Sie den Parameter`customerAuthenticationConfigurations` über den Endpunkt `/destinations`, wie unten angezeigt:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -105,11 +105,11 @@ Um die Authentifizierung des Trägertyps für Ihr Ziel einzurichten, konfigurier
 
 ## OAuth 2-Authentifizierung {#oauth2}
 
-Benutzer wählen **[!UICONTROL Mit Ziel verbinden]** aus, um den OAuth 2-Authentifizierungsfluss für Ihr Ziel auszulösen (siehe folgendes Beispiel für das Ziel „Twitter Custom Audiences“). Detaillierte Informationen zum Konfigurieren der OAuth 2-Authentifizierung für Ihren Ziel-Endpunkt finden Sie in der entsprechenden [Authentifizierungsseite für Destination SDK OAuth 2](oauth2-authentication.md).
+Benutzerinnen und Benutzer wählen **[!UICONTROL Mit Ziel verbinden]** aus, um den OAuth 2-Authentifizierungsfluss für Ihr Ziel auszulösen (siehe folgendes Beispiel für das Ziel „Twitter Custom Audiences“). Detaillierte Informationen zum Konfigurieren der OAuth 2-Authentifizierung für Ihren Ziel-Endpunkt finden Sie in der entsprechenden [Authentifizierungsseite für Destination SDK OAuth 2](oauth2-authentication.md).
 
-![UI-Rendering mit OAuth 2-Authentifizierung](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
+![Darstellung der Benutzeroberfläche mit OAuth 2-Authentifizierung](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 
-So richten Sie [!DNL OAuth2] Authentifizierung für Ihr Ziel konfigurieren Sie die `customerAuthenticationConfigurations` über die `/destinations` Endpunkt wie unten gezeigt:
+Um die [!DNL OAuth2]-Authentifizierung für Ihr Ziel einzurichten, konfigurieren Sie den Parameter`customerAuthenticationConfigurations` über den Endpunkt `/destinations`, wie unten angezeigt:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -123,11 +123,11 @@ So richten Sie [!DNL OAuth2] Authentifizierung für Ihr Ziel konfigurieren Sie d
 
 Die [!DNL Amazon S3]-Authentifizierung wird für dateibasierte Ziele in Experience Platform unterstützt.
 
-Wenn Sie den Authentifizierungstyp Amazon S3 konfigurieren, müssen Benutzer ihre S3-Anmeldeinformationen eingeben.
+Wenn Sie den Authentifizierungstyp Amazon S3 konfigurieren, müssen Benutzerinnen und Benutzer die S3-Anmeldeinformationen eingeben.
 
 ![Darstellung der Benutzeroberfläche mit S3-Authentifizierung](../../assets/functionality/destination-configuration/s3-authentication-ui.png)
 
-So richten Sie [!DNL Amazon S3] Authentifizierung für Ihr Ziel konfigurieren Sie die `customerAuthenticationConfigurations` über die `/destinations` Endpunkt wie unten gezeigt:
+Um die [!DNL Amazon S3]-Authentifizierung für Ihr Ziel einzurichten, konfigurieren Sie den Parameter`customerAuthenticationConfigurations` über den Endpunkt `/destinations`, wie unten angezeigt:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -141,11 +141,11 @@ So richten Sie [!DNL Amazon S3] Authentifizierung für Ihr Ziel konfigurieren Si
 
 Die [!DNL Azure Blob Storage]-Authentifizierung wird für dateibasierte Ziele in Experience Platform unterstützt.
 
-Wenn Sie den Authentifizierungstyp Azure Blob konfigurieren, müssen Benutzer die Verbindungszeichenfolge eingeben.
+Wenn Sie den Authentifizierungstyp Azure Blob konfigurieren, müssen Benutzerinnen und Benutzer die Verbindungszeichenfolge eingeben.
 
 ![Darstellung der Benutzeroberfläche mit Blob-Authentifizierung](../../assets/functionality/destination-configuration/blob-authentication-ui.png)
 
-Um die [!DNL Azure Blob]-Authentifizierung für Ihr Ziel einzurichten, konfigurieren Sie den `customerAuthenticationConfigurations`-Parameter im `/destinations`-Endpunkt wie unten angezeigt:
+Um die [!DNL Azure Blob]-Authentifizierung für Ihr Ziel einzurichten, konfigurieren Sie den Parameter `customerAuthenticationConfigurations` im Endpunkt `/destinations` wie unten angezeigt:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -159,9 +159,9 @@ Um die [!DNL Azure Blob]-Authentifizierung für Ihr Ziel einzurichten, konfiguri
 
 Die [!DNL Azure Data Lake Storage]-Authentifizierung wird für dateibasierte Ziele in Experience Platform unterstützt.
 
-Wenn Sie die [!DNL Azure Data Lake Storage] Authentifizierungstyp, müssen Benutzer die Prinzipalanmeldeinformationen von Azure Service und ihre Mandanteninformationen eingeben.
+Wenn Sie den Authentifizierungstyp [!DNL Azure Data Lake Storage] konfigurieren, müssen Benutzerinnen und Benutzer die Azure-Service-Prinzipalanmeldeinformationen und ihre Mandanteninformationen eingeben.
 
-![Benutzeroberflächen-Rendering mit [!DNL Azure Data Lake Storage] Authentifizierung](../../assets/functionality/destination-configuration/adls-authentication-ui.png)
+![UI-Rendering mit [!DNL Azure Data Lake Storage]-Authentifizierung](../../assets/functionality/destination-configuration/adls-authentication-ui.png)
 
 Um die [!DNL Azure Data Lake Storage] (ADLS)-Authentifizierung für Ihr Ziel einzurichten, konfigurieren Sie den `customerAuthenticationConfigurations`-Parameter im `/destinations`-Endpunkt, wie unten angezeigt:
 
@@ -237,7 +237,7 @@ Weitere Informationen zu den anderen Zielkomponenten finden Sie in den folgenden
 * [Benutzerdefinierte Datenfelder](customer-data-fields.md)
 * [Benutzeroberflächenattribute](ui-attributes.md)
 * [Schemakonfiguration](schema-configuration.md)
-* [Identitäts-Namespace-Konfiguration](identity-namespace-configuration.md)
+* [Konfiguration von Identity-Namespaces](identity-namespace-configuration.md)
 * [Unterstützte Zuordnungskonfigurationen](supported-mapping-configurations.md)
 * [Zielbereitstellung](destination-delivery.md)
 * [Konfiguration von Zielgruppen-Metadaten](audience-metadata-configuration.md)
