@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise vom Juni 2023 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 77c7fbfba2a1ccc6df31abc2f6b926ed90942c4c
+source-git-commit: a03d0eeab5ca42225705fdeab692020b1641395d
 workflow-type: tm+mt
-source-wordcount: '988'
-ht-degree: 29%
+source-wordcount: '1055'
+ht-degree: 28%
 
 ---
 
@@ -58,17 +58,13 @@ Weitere Informationen zur Datenerfassung finden Sie im Abschnitt [Datenerfassung
 
 {style="table-layout:auto"}
 
-<!-- 
+**Neue oder aktualisierte Funktionen** {#destinations-new-updated-functionality}
 
-**New or updated functionality** {#destinations-new-updated-functionality}
-
-| Functionality | Description |
+| Funktionalität | Beschreibung |
 | ----------- | ----------- |
-| Workspace support for [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) destinations. | You can now select the Adobe Target workspace that you want to share audiences to, when configuring a new Adobe Target destination connection. See the [connection parameters](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) section for more information. Additionally, see the tutorial on [configuring workspaces](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) in Adobe Target for more information about workspaces. |
+| Workspace-Unterstützung für [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) Ziele. | Sie können jetzt beim Konfigurieren einer neuen Adobe Target-Zielverbindung den Adobe Target-Arbeitsbereich auswählen, für den Sie Zielgruppen freigeben möchten. Siehe [Verbindungsparameter](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) für weitere Informationen. Weitere Informationen finden Sie im Tutorial unter [Konfigurieren von Arbeitsbereichen](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) in Adobe Target finden Sie weitere Informationen zu Arbeitsbereichen. |
 
 {style="table-layout:auto"}
-
--->
 
 <!--
 

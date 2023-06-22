@@ -3,10 +3,10 @@ keywords: Zielpersonalisierung;Ziel;Ziel von Experience Platform;Adobe Target-Zi
 title: Adobe Target-Verbindung
 description: Adobe Target ist ein Programm, das bei allen eingehenden Kundeninteraktionen über Websites, Mobile Apps usw. KI-gestützte Echtzeit-Personalisierung und Experimente ermöglicht.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 6ac48762dc9ea1cb77b04651275a3846411449ea
+source-git-commit: 3b2fedf4f7b17c4fb32afb5978bfac6f618f5bc3
 workflow-type: tm+mt
-source-wordcount: '908'
-ht-degree: 57%
+source-wordcount: '1079'
+ht-degree: 48%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 57%
 
 | Veröffentlichungsmonat | Aktualisierungstyp | Beschreibung |
 |---|---|---|
+| Juni 2023 | Aktualisierung der Funktionen und Dokumentation | Ab Juni 2023 können Sie beim Konfigurieren einer neuen Adobe Target-Zielverbindung den Adobe Target-Arbeitsbereich auswählen, für den Sie Zielgruppen freigeben möchten. Siehe [Verbindungsparameter](#parameters) für weitere Informationen. Weitere Informationen finden Sie im Tutorial unter [Konfigurieren von Arbeitsbereichen](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) in Adobe Target finden Sie weitere Informationen zu Arbeitsbereichen. |
 | Mai 2023 | Aktualisierung der Funktionen und Dokumentation | Ab Mai 2023 wird die **[!UICONTROL Adobe Target]** Verbindungsunterstützung [attributbasierte Personalisierung](../../ui/activate-edge-personalization-destinations.md#map-attributes) und ist allgemein für alle Kunden verfügbar. |
 
 {style="table-layout:auto"}
@@ -80,12 +81,19 @@ Adobe Experience Platform stellt automatisch eine Verbindung zur Adobe Target-In
 
 ### Verbindungsparameter {#parameters}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_target_workspace"
+>title="Informationen zu Adobe Target-Arbeitsbereichen"
+>abstract="Wählen Sie den Adobe Target-Arbeitsbereich aus, für den Zielgruppen freigegeben werden sollen. Sie können für jede Adobe Target-Verbindung einen einzigen Arbeitsbereich auswählen. Nach der Aktivierung werden die Zielgruppen zum ausgewählten Arbeitsbereich weitergeleitet, während die entsprechenden Datennutzungsbezeichnungen der Experience Platform befolgt werden."
+>additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en" text="Weitere Informationen zu Adobe Target-Arbeitsbereichen"
+
 Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
 * **Name**: Geben Sie den gewünschten Namen für das Ziel ein.
 * **Beschreibung**: Geben Sie eine Beschreibung für das Ziel ein. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden. Dieses Feld ist optional.
 * **Datenspeicher-ID**: Dadurch wird bestimmt, in welchen Datenerfassungsdatenstrom die Segmente einbezogen werden. Das Dropdown-Menü zeigt nur Datensätze an, für die die Target- und Adobe Experience Platform-Dienste aktiviert sind. Siehe [Konfigurieren eines Datenspeichers](../../../edge/datastreams/configure.md#aep) für detaillierte Informationen zum Konfigurieren eines Datastreams für Adobe Experience Platform und Adobe Target.
    * **[!UICONTROL Keines]**: Wählen Sie diese Option aus, wenn Sie die Adobe Target-Personalisierung konfigurieren möchten, die Implementierung der [Experience Platform Web SDK](../../../edge/home.md). Bei Verwendung dieser Option unterstützen Segmente, die von Experience Platform nach Target exportiert werden, nur die Personalisierung der nächsten Sitzung und die Kantensegmentierung ist deaktiviert. Weiterführende Informationen finden Sie in der folgenden Tabelle.
+* **Arbeitsbereich**: Adobe Target auswählen [Arbeitsbereich](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) für die Zielgruppen freigegeben werden. Sie können für jede Adobe Target-Verbindung einen einzigen Arbeitsbereich auswählen. Bei Aktivierung werden die Zielgruppen zum ausgewählten Arbeitsbereich weitergeleitet, während die entsprechenden [Datennutzungsbezeichnungen für Experience Platformen](../../../data-governance/labels/overview.md).
 
 | Kein Datenspeicher ausgewählt | Datenspeicher ausgewählt |
 |---|---|
