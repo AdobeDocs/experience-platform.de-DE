@@ -1,46 +1,46 @@
 ---
-description: Auf dieser Seite wird der API-Aufruf veranschaulicht, mit dem eine vorhandene Zielserverkonfiguration über Adobe Experience Platform Destination SDK aktualisiert wird.
-title: Aktualisieren der Zielserverkonfiguration
+description: Auf dieser Seite wird der API-Aufruf veranschaulicht, mit dem eine vorhandene Ziel-Server-Konfiguration über Adobe Experience Platform Destination SDK aktualisiert wird.
+title: Aktualisieren einer Ziel-Server-Konfiguration
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1098'
-ht-degree: 56%
+ht-degree: 100%
 
 ---
 
 
-# Aktualisieren der Zielserverkonfiguration
+# Aktualisieren einer Ziel-Server-Konfiguration
 
-Auf dieser Seite werden die API-Anfrage und die Payload erläutert, die Sie verwenden können, um eine vorhandene Zielserverkonfiguration mithilfe der `/authoring/destination-servers` API-Endpunkt.
+Auf dieser Seite werden die API-Anfrage und die Payload erläutert, die Sie verwenden können, um eine vorhandene Ziel-Server-Konfiguration mithilfe des API-Endpunkts `/authoring/destination-servers` aktualisieren können.
 
 >[!TIP]
 >
->Jeder Aktualisierungsvorgang für produktive/öffentliche Ziele ist erst sichtbar, nachdem Sie die [Publishing-API](../../publishing-api/create-publishing-request.md) und senden Sie die Aktualisierung zur Überprüfung der Adobe.
+>Jeder Aktualisierungsvorgang für produktbezogene/öffentliche Ziele ist erst sichtbar, nachdem Sie die [Publishing-API](../../publishing-api/create-publishing-request.md) verwendet und die Aktualisierung zur Überprüfung durch Adobe eingereicht haben.
 
 Eine ausführliche Beschreibung der Funktionen, die Sie über diesen Endpunkt konfigurieren können, finden Sie in den folgenden Artikeln:
 
-* [Serverspezifikationen für Ziele, die mit Destination SDK erstellt wurden](../../../destination-sdk/functionality/destination-server/server-specs.md)
+* [Server-Spezifikationen für Ziele, die mit Destination SDK erstellt wurden](../../../destination-sdk/functionality/destination-server/server-specs.md)
 * [Vorlagenspezifikationen für Ziele, die mit Destination SDK erstellt wurden](../../../destination-sdk/functionality/destination-server/templating-specs.md)
 * [Nachrichtenformat](../../../destination-sdk/functionality/destination-server/message-format.md)
 * [Konfiguration der Dateiformatierung](../../../destination-sdk/functionality/destination-server/file-formatting.md)
 
 >[!IMPORTANT]
 >
->Alle von Destination SDK unterstützten Parameternamen und Werte sind **Groß-/Kleinschreibung**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
+>Bei allen von Destination SDK unterstützten Parameternamen und Werten wird **nach Groß-/Kleinschreibung unterschieden**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
 
 ## Erste Schritte mit API-Vorgängen für Ziel-Server {#get-started}
 
 Bevor Sie fortfahren, lesen Sie [Erste Schritte](../../getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich Informationen zum Abrufen der erforderlichen Authoring-Berechtigung für Ziele und der erforderlichen Kopfzeilen.
 
-## Aktualisieren der Zielserverkonfiguration {#update}
+## Aktualisieren einer Ziel-Server-Konfiguration {#update}
 
-Sie können eine [vorhandene](create-destination-server.md) Konfiguration des Zielservers durch `PUT` Anfrage an `/authoring/destination-servers` -Endpunkt mit der aktualisierten Payload.
+Sie können eine [vorhandene](create-destination-server.md) Ziel-Server-Konfiguration aktualisieren, indem Sie eine `PUT`-Anfrage an den Endpunkt `/authoring/destination-servers` mit der aktualisierten Payload stellen.
 
 >[!TIP]
 >
 >**API-Endpunkt**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
 
-Abrufen einer vorhandenen Zielserverkonfiguration und der zugehörigen `{INSTANCE_ID}`, siehe Artikel zu [Abrufen einer Zielserverkonfiguration](retrieve-destination-server.md).
+Um eine vorhandene Ziel-Server-Konfiguration und die zugehörige `{INSTANCE_ID}` abzurufen, lesen Sie den Artikel über das [Abrufen einer Ziel-Server-Konfiguration](retrieve-destination-server.md).
 
 **API-Format**
 
@@ -50,9 +50,9 @@ PUT /authoring/destination-servers/{INSTANCE_ID}
 
 | Parameter | Beschreibung |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | Die ID des Ziel-Servers, den Sie aktualisieren möchten. Abrufen einer vorhandenen Zielserverkonfiguration und der zugehörigen `{INSTANCE_ID}`, siehe [Abrufen einer Zielserverkonfiguration](retrieve-destination-server.md). |
+| `{INSTANCE_ID}` | Die ID des Ziel-Servers, den Sie aktualisieren möchten. Um eine vorhandene Ziel-Server-Konfiguration und die zugehörige `{INSTANCE_ID}` abzurufen, lesen Sie den Artikel über das [Abrufen einer Ziel-Server-Konfiguration](retrieve-destination-server.md). |
 
-Mit den folgenden Anfragen wird eine vorhandene Zielserverkonfiguration aktualisiert, die durch die in der Payload bereitgestellten Parameter konfiguriert wird.
+Die folgenden Anfragen aktualisieren eine vorhandene Ziel-Server-Konfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird.
 
 Wählen Sie die einzelnen Registerkarten unten aus, um die entsprechende Payload anzuzeigen.
 
@@ -92,13 +92,13 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 | Parameter | Typ | Beschreibung |
 | -------- | ----------- | ----------- |
-| `name` | Zeichenfolge | *Erforderlich.* Stellt einen Anzeigenamen Ihres Servers dar, der nur für Adobe sichtbar ist. Dieser Name ist für Partner oder Kunden nicht sichtbar. Beispiel `Moviestar destination server`. |
-| `destinationServerType` | Zeichenfolge | *Erforderlich.* Legen Sie fest auf `URL_BASED` für Echtzeit-Ziele (Streaming). |
+| `name` | Zeichenfolge | *Erforderlich.* Stellt einen Anzeigenamen Ihres Servers dar, der nur für Adobe sichtbar ist. Dieser Name ist weder für Partner noch für Kundinnen und Kunden sichtbar. Beispiel `Moviestar destination server`. |
+| `destinationServerType` | Zeichenfolge | *Erforderlich.* Legen Sie dies für Echtzeit-Ziele (Streaming) auf `URL_BASED` fest. |
 | `urlBasedDestination.url.templatingStrategy` | Zeichenfolge | *Erforderlich.* <ul><li>Verwenden Sie `PEBBLE_V1`, wenn Adobe die URL im nachstehenden Feld `value` umwandeln muss. Verwenden Sie diese Option, wenn Sie folgenden Endpunkt haben: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Verwenden Sie `NONE`, wenn von Adobe keine Umwandlung erforderlich ist, z. B. wenn Sie folgenden Endpunkt haben: `https://api.moviestar.com/data/items`.</li></ul> |
 | `urlBasedDestination.url.value` | Zeichenfolge | *Erforderlich.* Geben Sie die Adresse des API-Endpunkts ein, mit dem sich Experience Platform verbinden soll. |
 | `httpTemplate.httpMethod` | Zeichenfolge | *Erforderlich.* Die Methode, die Adobe bei Aufrufen an Ihren Server verwendet. Es gibt die Optionen `GET`, `PUT`, `PUT`, `DELETE`, `PATCH`. |
 | `httpTemplate.requestBody.templatingStrategy` | Zeichenfolge | *Erforderlich.* Verwenden Sie `PEBBLE_V1`. |
-| `httpTemplate.requestBody.value` | Zeichenfolge | *Erforderlich.* Diese Zeichenfolge ist die Version mit Escape-Zeichen, die die Daten von Platform-Kunden in das Format umwandelt, das Ihr Service erwartet. <br> <ul><li> Informationen zum Schreiben der Vorlage finden Sie im Abschnitt [Verwenden von Vorlagen](../../functionality/destination-server/message-format.md#using-templating). </li><li> Weitere Informationen zu Escape-Zeichen finden Sie unter [RFC JSON-Standard, Abschnitt 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Ein Beispiel für eine einfache Umwandlung finden Sie im unter [Umwandlung von Profilattributen](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
+| `httpTemplate.requestBody.value` | Zeichenfolge | *Erforderlich.* Diese Zeichenfolge ist die Version mit Escape-Zeichen, die die Daten von Platform-Kundinnen und -Kunden in das Format umwandelt, das Ihr Service erwartet. <br> <ul><li> Informationen zum Schreiben der Vorlage finden Sie im Abschnitt [Verwenden von Vorlagen](../../functionality/destination-server/message-format.md#using-templating). </li><li> Weitere Informationen zu Escape-Zeichen finden Sie unter [RFC JSON-Standard, Abschnitt 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Ein Beispiel für eine einfache Umwandlung finden Sie im unter [Umwandlung von Profilattributen](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
 | `httpTemplate.contentType` | Zeichenfolge | *Erforderlich.* Der Content-Typ, den Ihr Server akzeptiert. Dieser Wert ist höchstwahrscheinlich `application/json`. |
 
 {style="table-layout:auto"}
@@ -107,7 +107,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Antwort
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit den Details Ihrer aktualisierten Zielserverkonfiguration zurück.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit den Details der neu erstellten Ziel-Server-Konfiguration zurückgegeben.
 
 +++
 
@@ -215,7 +215,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Antwort
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit den Details Ihrer aktualisierten Zielserverkonfiguration zurück.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit den Details der neu erstellten Ziel-Server-Konfiguration zurückgegeben.
 
 +++
 
@@ -323,7 +323,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Antwort
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit den Details Ihrer aktualisierten Zielserverkonfiguration zurück.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit den Details der neu erstellten Ziel-Server-Konfiguration zurückgegeben.
 
 +++
 
@@ -425,7 +425,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Antwort
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit den Details Ihrer aktualisierten Zielserverkonfiguration zurück.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit den Details der neu erstellten Ziel-Server-Konfiguration zurückgegeben.
 
 +++
 
@@ -533,7 +533,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Antwort
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit den Details Ihrer aktualisierten Zielserverkonfiguration zurück.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit den Details der neu erstellten Ziel-Server-Konfiguration zurückgegeben.
 
 +++
 
@@ -636,7 +636,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Antwort
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit den Details Ihrer aktualisierten Zielserverkonfiguration zurück.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit den Details der neu erstellten Ziel-Server-Konfiguration zurückgegeben.
 
 +++
 
@@ -744,7 +744,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Antwort
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit den Details Ihrer aktualisierten Zielserverkonfiguration zurück.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit den Details der neu erstellten Ziel-Server-Konfiguration zurückgegeben.
 
 +++
 
@@ -756,10 +756,10 @@ Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience
 
 ## Nächste Schritte {#next-steps}
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie eine Zielserverkonfiguration über die Destination SDK aktualisieren können `/authoring/destination-servers` API-Endpunkt.
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie eine Ziel-Server-Konfiguration über den API-Endpunkt `/authoring/destination-servers` von Destination SDK aktualisieren können.
 
 Weitere Informationen dazu, was Sie mit diesem Endpunkt tun können, finden Sie in den folgenden Artikeln:
 
-* [Erstellen einer Zielserverkonfiguration](create-destination-server.md)
-* [Abrufen einer Zielserverkonfiguration](retrieve-destination-server.md)
-* [Aktualisieren der Zielserverkonfiguration](update-destination-server.md)
+* [Erstellen einer Ziel-Server-Konfiguration](create-destination-server.md)
+* [Abrufen einer Ziel-Server-Konfiguration](retrieve-destination-server.md)
+* [Aktualisieren einer Ziel-Server-Konfiguration](update-destination-server.md)
