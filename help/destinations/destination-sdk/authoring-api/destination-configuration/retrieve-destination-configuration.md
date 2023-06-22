@@ -2,28 +2,28 @@
 description: Auf dieser Seite wird der API-Aufruf zum Abrufen einer Zielkonfiguration über Adobe Experience Platform Destination SDK veranschaulicht.
 title: Abrufen einer Zielkonfiguration
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '365'
-ht-degree: 25%
+ht-degree: 100%
 
 ---
 
 
 # Abrufen einer Zielkonfiguration
 
-Auf dieser Seite werden die API-Anfrage und -Payload erläutert, mit deren Hilfe Sie Informationen über eine vorhandene Zielkonfiguration abrufen können, indem Sie die `/authoring/destination` API-Endpunkt.
+Auf dieser Seite werden die API-Anfrage und -Payload erläutert, mit deren Hilfe Sie Informationen über eine vorhandene Zielkonfiguration abrufen können, indem Sie den API-Endpunkt `/authoring/destination` verwenden.
 
 >[!IMPORTANT]
 >
->Alle von Destination SDK unterstützten Parameternamen und Werte sind **Groß-/Kleinschreibung**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
+>Bei allen von Destination SDK unterstützten Parameternamen und Werten wird **nach Groß-/Kleinschreibung unterschieden**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
 
-## Erste Schritte mit API-Vorgängen zur Zielkonfiguration {#get-started}
+## Erste Schritte mit API-Vorgängen für die Zielkonfiguration {#get-started}
 
 Bevor Sie fortfahren, lesen Sie [Erste Schritte](../../getting-started.md). Dort finden Sie die nötigen Informationen für den erfolgreichen Aufruf der API, einschließlich Details für den Abruf der erforderlichen Authoring-Berechtigung für Ziele und zu den erforderlichen Kopfzeilen.
 
 ## Abrufen einer Zielkonfiguration {#retrieve}
 
-Sie können eine [vorhandene](create-destination-configuration.md) Zielkonfiguration durch `GET` Anfrage an `/authoring/destination` -Endpunkt.
+Sie können eine [vorhandene](create-destination-configuration.md) Zielkonfiguration abrufen, indem Sie eine `GET`-Anfrage an den Endpunkt `/authoring/destination` stellen.
 
 >[!TIP]
 >
@@ -38,13 +38,13 @@ Verwenden Sie das folgende API-Format, um alle Zielkonfigurationen für Ihr Kont
 GET /authoring/destinations
 ```
 
-Verwenden Sie das folgende API-Format, um eine bestimmte Zielkonfiguration abzurufen, die durch die `{INSTANCE_ID}` Parameter.
+Verwenden Sie das folgende API-Format, um eine bestimmte Zielkonfiguration abzurufen, die durch den Parameter `{INSTANCE_ID}` bestimmt wird.
 
 ```http
 GET /authoring/destinations/{INSTANCE_ID}
 ```
 
-Die folgenden beiden Anfragen rufen alle Zielkonfigurationen für Ihre IMS-Organisation oder eine bestimmte Zielkonfiguration ab, je nachdem, ob Sie die `INSTANCE_ID` -Parameter in der -Anfrage.
+Die folgenden beiden Anfragen rufen alle Zielkonfigurationen für Ihre IMS-Organisation oder eine bestimmte Zielkonfiguration ab, je nachdem, ob Sie den Parameter `INSTANCE_ID` in der Anfrage übergeben.
 
 Wählen Sie die einzelnen Registerkarten unten aus, um die entsprechende Payload anzuzeigen.
 
@@ -66,7 +66,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Antwort
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Zielkonfigurationen zurück, auf die Sie basierend auf der [!DNL IMS Org ID] und des von Ihnen verwendeten Sandbox-Namens. One `instanceId` entspricht einer Zielkonfiguration.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit einer Liste der Zielkonfigurationen zurückgegeben, auf die Sie Zugriff haben, basierend auf der von Ihnen verwendeten [!DNL IMS Org ID] und dem Sandbox-Namen. Eine `instanceId` entspricht einer Zielkonfiguration.
 
 ```json
 {
@@ -194,7 +194,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Antwort
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit den Details der Zielkonfiguration zurück, die der `{INSTANCE_ID}` im -Aufruf angegeben.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit den Details der Zielkonfiguration zurückgegeben, die der im Aufruf angegebenen `{INSTANCE_ID}` entspricht.
 
 ```json
 {
@@ -310,10 +310,10 @@ Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie eine Zielkonfiguration über die Destination SDK abrufen können `/authoring/destinations` API-Endpunkt.
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie eine Zielkonfiguration über den API-Endpunkt `/authoring/destinations` von Destination SDK abrufen können.
 
 Weitere Informationen dazu, was Sie mit diesem Endpunkt tun können, finden Sie in den folgenden Artikeln:
 
 * [Erstellen einer Zielkonfiguration](create-destination-configuration.md)
-* [Zielkonfiguration aktualisieren](update-destination-configuration.md)
-* [Zielkonfiguration löschen](delete-destination-configuration.md)
+* [Aktualisieren einer Zielkonfiguration](update-destination-configuration.md)
+* [Löschen einer Zielkonfiguration](delete-destination-configuration.md)
