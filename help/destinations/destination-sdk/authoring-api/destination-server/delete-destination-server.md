@@ -1,42 +1,42 @@
 ---
-description: Auf dieser Seite wird der API-Aufruf zum Löschen einer vorhandenen Zielserverkonfiguration über Adobe Experience Platform Destination SDK erläutert.
-title: Löschen einer Zielserverkonfiguration
+description: Auf dieser Seite wird der API-Aufruf zum Löschen einer vorhandenen Ziel-Server-Konfiguration über Adobe Experience Platform Destination SDK erläutert.
+title: Löschen einer Ziel-Server-Konfiguration
 source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '329'
-ht-degree: 33%
+ht-degree: 100%
 
 ---
 
 
-# Löschen einer Zielserverkonfiguration
+# Löschen einer Ziel-Server-Konfiguration
 
-Auf dieser Seite werden die API-Anfrage und die Payload erläutert, die Sie verwenden können, um eine vorhandene Zielserverkonfiguration mithilfe der `/authoring/destination-servers` API-Endpunkt.
+Auf dieser Seite werden die API-Anfrage und die Payload erläutert, die Sie verwenden können, um eine vorhandene Ziel-Server-Konfiguration mithilfe des API-Endpunkts `/authoring/destination-servers` zu löschen.
 
 Eine ausführliche Beschreibung der Funktionen, die Sie über diesen Endpunkt löschen können, finden Sie in den folgenden Artikeln:
 
-* [Serverspezifikationen für Ziele, die mit Destination SDK erstellt wurden](../../../destination-sdk/functionality/destination-server/server-specs.md)
+* [Server-Spezifikationen für Ziele, die mit Destination SDK erstellt wurden](../../../destination-sdk/functionality/destination-server/server-specs.md)
 * [Vorlagenspezifikationen für Ziele, die mit Destination SDK erstellt wurden](../../../destination-sdk/functionality/destination-server/templating-specs.md)
 * [Nachrichtenformat](../../../destination-sdk/functionality/destination-server/message-format.md)
 * [Konfiguration der Dateiformatierung](../../../destination-sdk/functionality/destination-server/file-formatting.md)
 
 >[!IMPORTANT]
 >
->Alle von Destination SDK unterstützten Parameternamen und Werte sind **Groß-/Kleinschreibung**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
+>Bei allen von Destination SDK unterstützten Parameternamen und Werten wird **nach Groß-/Kleinschreibung unterschieden**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
 
 ## Erste Schritte mit API-Vorgängen für Ziel-Server {#get-started}
 
 Bevor Sie fortfahren, lesen Sie [Erste Schritte](../../getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich Informationen zum Abrufen der erforderlichen Authoring-Berechtigung für Ziele und der erforderlichen Kopfzeilen.
 
-## Löschen einer Zielserverkonfiguration {#delete}
+## Löschen einer Ziel-Server-Konfiguration {#delete}
 
-Sie können eine [vorhandene](create-destination-server.md) Konfiguration des Zielservers durch `DELETE` Anfrage an `/authoring/destination-servers` Endpunkt mit der `{INSTANCE_ID}`der Zielserverkonfiguration, die Sie löschen möchten.
+Sie können eine [vorhandene](create-destination-server.md) Konfiguration des Ziel-Servers löschen, indem Sie eine `DELETE`-Anfrage an den Endpunkt `/authoring/destination-servers` mit der `{INSTANCE_ID}` der Ziel-Server-Konfiguration stellen, die Sie löschen möchten.
 
 >[!TIP]
 >
 >**API-Endpunkt**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
 
-Abrufen einer vorhandenen Zielserverkonfiguration und der zugehörigen `{INSTANCE_ID}`, siehe Artikel zu [Abrufen einer Zielserverkonfiguration](retrieve-destination-server.md).
+Um eine vorhandene Ziel-Server-Konfiguration und die zugehörige `{INSTANCE_ID}` abzurufen, lesen Sie den Artikel über das [Abrufen einer Ziel-Server-Konfiguration](retrieve-destination-server.md).
 
 **API-Format**
 
@@ -60,7 +60,7 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
 
 +++Antwort
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 zusammen mit einer leeren HTTP-Antwort zurück.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 zusammen mit einer leeren HTTP-Antwort zurückgegeben.
 
 ## Umgang mit API-Fehlern {#error-handling}
 
@@ -68,11 +68,11 @@ Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience
 
 ## Nächste Schritte {#next-steps}
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie einen vorhandenen Zielserver über die Destination SDK löschen können `/authoring/destination-servers` API-Endpunkt.
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie einen vorhandenen Ziel-Server über den API-Endpunkt `/authoring/destination-servers` von Destination SDK löschen können.
 
 Weitere Informationen dazu, was Sie mit diesem Endpunkt tun können, finden Sie in den folgenden Artikeln:
 
-* [Erstellen einer Zielserverkonfiguration](create-destination-server.md)
-* [Abrufen einer Zielserverkonfiguration](retrieve-destination-server.md)
-* [Aktualisieren der Zielserverkonfiguration](update-destination-server.md)
+* [Erstellen einer Ziel-Server-Konfiguration](create-destination-server.md)
+* [Abrufen einer Ziel-Server-Konfiguration](retrieve-destination-server.md)
+* [Aktualisieren einer Ziel-Server-Konfiguration](update-destination-server.md)
 
