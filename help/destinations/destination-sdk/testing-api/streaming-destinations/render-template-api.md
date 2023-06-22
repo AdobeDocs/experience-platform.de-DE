@@ -1,11 +1,11 @@
 ---
-description: Erfahren Sie, wie Sie mit der Ziel-Test-API die Ausgabe basierend auf Ihrer Nachrichtenumwandlungsvorlage an Ihr Streaming-Ziel validieren.
+description: Erfahren Sie, wie Sie mit der Zieltest-API die Ausgabe basierend auf Ihrer Nachrichtenumwandlungsvorlage an Ihr Streaming-Ziel validieren.
 title: Validieren der exportierten Profilstruktur
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
 source-git-commit: adf75720f3e13c066b5c244d6749dd0939865a6f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '789'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie 
 
 Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](../../getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich Informationen zum Abrufen der erforderlichen Berechtigung zur Zielerstellung und der erforderlichen Kopfzeilen.
 
-## Rendern exportierter Profile basierend auf der Vorlage für die Nachrichtenumwandlung {#render-exported-data}
+## Rendern exportierter Profile basierend auf der Nachrichtenumwandlungsvorlage {#render-exported-data}
 
 Sie können exportierte Profile rendern, indem Sie eine POST-Anfrage an den Endpunkt `authoring/testing/template/render` stellen und dabei die Ziel-ID der Zielkonfiguration und die Vorlage angeben, die Sie mit dem [Beispiel-Vorlagen-API-Endpunkt](sample-template-api.md) erstellt haben.
 
@@ -30,8 +30,7 @@ Sie können eine einfache Vorlage verwenden, die Ihre Rohprofile exportiert, ohn
 
 >[!TIP]
 >
->* Die Ziel-ID, die Sie hier verwenden sollten, ist die `instanceId`, die einer mithilfe des `/destinations`-Endpunkts erstellten Zielkonfiguration entspricht. Siehe [Zielkonfiguration abrufen](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) für weitere Details.
-
+>* Die Ziel-ID, die Sie hier verwenden sollten, ist die `instanceId`, die einer mithilfe des `/destinations`-Endpunkts erstellten Zielkonfiguration entspricht. Siehe [Abrufen einer Zielkonfiguration](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) für weitere Details.
 
 **API-Format**
 
@@ -48,7 +47,7 @@ POST authoring/testing/template/render
 
 {style="table-layout:auto"}
 
-Beachten Sie, dass die vom API-Endpunkt für Render-Vorlagen zurückgegebene Antwort je nach Ziel-Aggregationsrichtlinie unterschiedlich ist. Wenn Ihr Ziel über eine konfigurierbare Aggregationsrichtlinie verfügt, wird der Aggregationsschlüssel, der bestimmt, wie Profile aggregiert werden, auch in der Antwort zurückgegeben. Informationen [Aggregationsrichtlinien](../../functionality/destination-configuration/aggregation-policy.md) für weitere Details.
+Beachten Sie, dass die vom API-Endpunkt für Render-Vorlagen zurückgegebene Antwort je nach Ziel-Aggregationsrichtlinie unterschiedlich ist. Wenn Ihr Ziel über eine konfigurierbare Aggregationsrichtlinie verfügt, wird der Aggregationsschlüssel, der bestimmt, wie Profile aggregiert werden, auch in der Antwort zurückgegeben. Unter [Aggregationsrichtlinien](../../functionality/destination-configuration/aggregation-policy.md) finden Sie weitere Details.
 
 | Antwortparameter | Beschreibung |
 | -------- | ----------- |
@@ -1071,4 +1070,4 @@ Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience
 
 ## Nächste Schritte {#next-steps}
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie mit der Umwandlungsvorlage der Nachricht exportierte Profile generieren können, die dem erwarteten Datenformat Ihres Ziels entsprechen. Lesen Sie [Verwendung des Destination SDK zum Konfigurieren Ihres Ziels](../../guides/configure-destination-instructions.md), um zu verstehen, wo dieser Schritt in den Prozess der Konfiguration Ihres Ziels passt.
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie mit der Nachrichtenumwandlungsvorlage exportierte Profile generieren können, die dem erwarteten Datenformat Ihres Ziels entsprechen. Lesen Sie [Verwendung des Destination SDK zum Konfigurieren Ihres Ziels](../../guides/configure-destination-instructions.md), um zu verstehen, wo dieser Schritt in den Prozess der Konfiguration Ihres Ziels passt.
