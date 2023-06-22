@@ -3,9 +3,9 @@ description: Auf dieser Seite wird erläutert, wie Sie mit dem API-Endpunkt /tes
 title: Testen Ihres dateibasierten Ziels mit Beispielprofilen
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
 source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '827'
-ht-degree: 12%
+ht-degree: 100%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 12%
 
 ## Übersicht {#overview}
 
-Auf dieser Seite wird erläutert, wie Sie die `/testing/destinationInstance` API-Endpunkt, um zu testen, ob Ihr dateibasiertes Ziel richtig konfiguriert ist, und um die Integrität der Datenflüsse zu Ihrem konfigurierten Ziel zu überprüfen.
+Auf dieser Seite wird erläutert, wie Sie den API-Endpunkt `/testing/destinationInstance` verwenden, um zu testen, ob Ihr dateibasiertes Ziel richtig konfiguriert ist, und um die Integrität der Datenflüsse zu Ihrem konfigurierten Ziel zu überprüfen.
 
-Sie können Anforderungen an den Test-Endpunkt mit oder ohne Hinzufügen von [Beispielprofile](file-based-sample-profile-generation-api.md) an den -Aufruf. Wenn Sie bei der Anfrage keine Profile senden, generiert die API automatisch ein Beispielprofil und fügt es der Anfrage hinzu.
+Sie können Anfragen an den Test-Endpunkt mit oder ohne Hinzufügen von [Beispielprofilen](file-based-sample-profile-generation-api.md) an den Aufruf stellen. Wenn Sie bei der Anfrage keine Profile senden, generiert die API automatisch ein Beispielprofil und fügt es der Anfrage hinzu.
 
-Die automatisch generierten Beispielprofile enthalten allgemeine Daten. Wenn Sie Ihr Ziel mit benutzerdefinierten, intuitiveren Profildaten testen möchten, verwenden Sie die [Beispielprofilgenerierungs-API](file-based-sample-profile-generation-api.md) , um ein Beispielprofil zu generieren, dann seine Antwort anzupassen und es in die Anfrage an die `/testing/destinationInstance` -Endpunkt.
+Die automatisch generierten Beispielprofile enthalten allgemeine Daten. Wenn Sie Ihr Ziel mit benutzerdefinierten, intuitiveren Profildaten testen möchten, verwenden Sie die [Beispielprofilgenerierungs-API](file-based-sample-profile-generation-api.md) , um ein Beispielprofil zu generieren, dann die Antwort anzupassen und sie in die Anfrage an den Endpunkt `/testing/destinationInstance` aufzunehmen.
 
 ## Erste Schritte {#getting-started}
 
@@ -25,16 +25,16 @@ Bevor Sie fortfahren, lesen Sie [Erste Schritte](../../getting-started.md). Dort
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie die `/testing/destinationInstance` -Endpunkt verwenden, stellen Sie sicher, dass Sie die folgenden Bedingungen erfüllen:
+Bevor Sie den Endpunkt `/testing/destinationInstance` verwenden, stellen Sie sicher, dass Sie die folgenden Bedingungen erfüllen:
 
-* Sie haben ein vorhandenes dateibasiertes Ziel, das über die Destination SDK erstellt wurde, und Sie können es in Ihrem [Zielkatalog](../../../ui/destinations-workspace.md).
+* Sie haben ein vorhandenes dateibasiertes Ziel, das über das Destination SDK erstellt wurde, und Sie können es in Ihrem [Zielkatalog](../../../ui/destinations-workspace.md) sehen.
 * Sie haben in der Experience Platform-Benutzeroberfläche mindestens einen Aktivierungsfluss für Ihr Ziel erstellt.
 * Für eine erfolgreiche API-Anfrage benötigen Sie die Ziel-Instanz-ID, die der zu testenden Zielinstanz entspricht. Rufen Sie die Ziel-Instanz-ID ab, die Sie beim Durchsuchen einer Verbindung mit Ihrem Ziel in der Platform-Benutzeroberfläche im API-Aufruf über die URL verwenden sollten.
 
-   ![UI-Bild, das zeigt, wie die Ziel-Instanz-ID von der URL abgerufen wird.](../../assets/testing-api/get-destination-instance-id.png)
-* *Optional*: Wenn Sie Ihre Zielkonfiguration mit einem Beispielprofil testen möchten, das zum API-Aufruf hinzugefügt wurde, verwenden Sie die [/sample-profiles](file-based-sample-profile-generation-api.md) -Endpunkt, um ein Beispielprofil zu generieren, das auf Ihrem vorhandenen Quellschema basiert. Wenn Sie kein Beispielprofil angeben, generiert die API ein Profil und gibt es in der Antwort zurück.
+  ![Bild der Benutzeroberfläche, das zeigt, wie die Ziel-Instanz-ID von der URL abgerufen wird.](../../assets/testing-api/get-destination-instance-id.png)
+* *Optional*: Wenn Sie Ihre Zielkonfiguration mit einem Beispielprofil testen möchten, das zum API-Aufruf hinzugefügt wurde, verwenden Sie den Endpunkt [/sample-profiles](file-based-sample-profile-generation-api.md), um ein Beispielprofil zu generieren, das auf Ihrem vorhandenen Quellschema basiert. Wenn Sie kein Beispielprofil angeben, generiert die API ein Profil und gibt es in der Antwort zurück.
 
-## Testen Sie Ihre Zielkonfiguration, ohne Profile zum -Aufruf hinzuzufügen. {#test-without-adding-profiles}
+## Testen Sie Ihre Zielkonfiguration, ohne Profile zum Aufruf hinzuzufügen {#test-without-adding-profiles}
 
 **API-Format**
 
@@ -55,11 +55,11 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
 
 | Pfadparameter | Beschreibung |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | Die ID der Zielinstanz, für die Sie Beispielprofile generieren. Siehe [Voraussetzungen](#prerequisites) für weitere Informationen zum Abrufen dieser ID. |
+| `{DESTINATION_INSTANCE_ID}` | Die ID der Zielinstanz, für die Sie Beispielprofile generieren. Im Abschnitt [Voraussetzungen](#prerequisites) finden Sie weitere Informationen zum Abrufen dieser ID. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 zusammen mit der Antwort-Payload zurück.
+Bei einer erfolgreiche Antwort wird der HTTP-Status 200 zusammen mit der Antwort-Payload zurückgegeben.
 
 ```json
 {
@@ -111,15 +111,15 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 zusammen mit der Antwort-Payl
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `activations` | Gibt die Segment-ID und die Flusslaufs-ID für jedes aktivierte Segment zurück. Die Anzahl der Aktivierungseinträge (und der zugehörigen generierten Dateien) entspricht der Anzahl der Segmente, die auf der Zielinstanz zugeordnet sind. <br><br> Beispiel: Wenn Sie der Zielinstanz zwei Segmente zugeordnet haben, wird die `activations` -Array enthält zwei Einträge. Jedes aktivierte Segment entspricht einer exportierten Datei. |
-| `results` | Gibt die ID der Zielinstanz und die IDs der Flussausführung zurück, die Sie zum Aufrufen der [Ergebnis-API](file-based-destination-results-api.md), um die Integration weiter zu testen. |
+| `activations` | Gibt die Segment-ID und die Flussausführungs-ID für jedes aktivierte Segment zurück. Die Anzahl der Aktivierungseinträge (und der zugehörigen generierten Dateien) entspricht der Anzahl der Segmente, die auf der Zielinstanz zugeordnet sind. <br><br> Beispiel: Wenn Sie der Zielinstanz zwei Segmente zugeordnet haben, enthält das `activations`-Array zwei Einträge. Jedes aktivierte Segment entspricht einer exportierten Datei. |
+| `results` | Gibt die ID der Zielinstanz und die IDs der Flussausführung zurück, die Sie zum Aufrufen der [Ergebnis-API](file-based-destination-results-api.md) verwenden können, um die Integration weiter zu testen. |
 | `inputProfiles` | Gibt die von der API automatisch generierten Beispielprofile zurück. |
 
 {style="table-layout:auto"}
 
-## Testen Sie Ihre Zielkonfiguration mit Profilen, die zum Aufruf hinzugefügt wurden. {#test-with-added-profiles}
+## Testen Sie Ihre Zielkonfiguration mit Profilen, die zum Aufruf hinzugefügt wurden {#test-with-added-profiles}
 
-Um Ihr Ziel mit benutzerdefinierten, intuitiveren Profildaten zu testen, können Sie die Antwort anpassen, die Sie von der [/sample-profiles](file-based-sample-profile-generation-api.md) -Endpunkt mit Werten Ihrer Wahl verwenden und das benutzerdefinierte Profil in die Anfrage an die `/testing/destinationInstance` -Endpunkt.
+Um Ihr Ziel mit benutzerdefinierten, intuitiveren Profildaten zu testen, können Sie die vom Endpunkt [/sample-profiles](file-based-sample-profile-generation-api.md) erhaltene Antwort mit Werten Ihrer Wahl anpassen und das benutzerdefinierte Profil in die Anfrage an den Endpunkt `/testing/destinationInstance` einschließen.
 
 **API-Format**
 
@@ -175,12 +175,12 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
 
 | Parameter | Beschreibung |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | Die Ziel-Instanz-ID des Ziels, das Sie testen.  Die ID der Zielinstanz, für die Sie Beispielprofile generieren. Siehe [Voraussetzungen](#prerequisites) für weitere Informationen zum Abrufen dieser ID. |
-| `profiles` | Array, das ein oder mehrere Profile enthalten kann. Verwenden Sie die [Beispielprofil-API-Endpunkt](file-based-sample-profile-generation-api.md) , um Profile zu generieren, die in diesem API-Aufruf verwendet werden. |
+| `{DESTINATION_INSTANCE_ID}` | Die Ziel-Instanz-ID des Ziels, das Sie testen.  Die ID der Zielinstanz, für die Sie Beispielprofile generieren. Im Abschnitt [Voraussetzungen](#prerequisites) finden Sie weitere Informationen zum Abrufen dieser ID. |
+| `profiles` | Array, das ein oder mehrere Profile enthalten kann. Verwenden Sie den [Beispielprofil-API-Endpunkt](file-based-sample-profile-generation-api.md), um Profile zu generieren, die in diesem API-Aufruf verwendet werden. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 zusammen mit der Antwort-Payload zurück.
+Bei einer erfolgreiche Antwort wird der HTTP-Status 200 zusammen mit der Antwort-Payload zurückgegeben.
 
 ```json
 {
@@ -232,8 +232,8 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 zusammen mit der Antwort-Payl
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `activations` | Gibt die Segment-ID und die Flusslaufs-ID für jedes aktivierte Segment zurück. Die Anzahl der Aktivierungseinträge (und der zugehörigen generierten Dateien) entspricht der Anzahl der Segmente, die auf der Zielinstanz zugeordnet sind. <br><br> Beispiel: Wenn Sie der Zielinstanz zwei Segmente zugeordnet haben, wird die `activations` -Array enthält zwei Einträge. Jedes aktivierte Segment entspricht einer exportierten Datei. |
-| `results` | Gibt die ID der Zielinstanz und die IDs der Flussausführung zurück, die Sie zum Aufrufen der [Ergebnis-API](file-based-destination-results-api.md), um die Integration weiter zu testen. |
+| `activations` | Gibt die Segment-ID und die Flussausführungs-ID für jedes aktivierte Segment zurück. Die Anzahl der Aktivierungseinträge (und der zugehörigen generierten Dateien) entspricht der Anzahl der Segmente, die auf der Zielinstanz zugeordnet sind. <br><br> Beispiel: Wenn Sie der Zielinstanz zwei Segmente zugeordnet haben, enthält das `activations`-Array zwei Einträge. Jedes aktivierte Segment entspricht einer exportierten Datei. |
+| `results` | Gibt die ID der Zielinstanz und die IDs der Flussausführung zurück, die Sie zum Aufrufen der [Ergebnis-API](file-based-destination-results-api.md) verwenden können, um die Integration weiter zu testen. |
 | `inputProfiles` | Gibt die benutzerdefinierten Beispielprofile zurück, die Sie in der API-Anfrage übergeben haben. |
 
 ## Umgang mit API-Fehlern {#api-error-handling}
@@ -244,6 +244,6 @@ Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience
 
 Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie Ihre dateibasierte Zielkonfiguration testen können.
 
-Wenn Sie eine gültige API-Antwort erhalten haben, funktioniert Ihr Ziel ordnungsgemäß. Wenn Sie genauere Informationen über Ihren Aktivierungsfluss erhalten möchten, können Sie die `results` -Eigenschaft aus der Antwort auf [detaillierte Aktivierungsergebnisse anzeigen](file-based-destination-results-api.md).
+Wenn Sie eine gültige API-Antwort erhalten haben, funktioniert Ihr Ziel ordnungsgemäß. Wenn Sie genauere Informationen über Ihren Aktivierungsfluss erhalten möchten, können Sie die Eigenschaft `results` aus der Antwort verwenden, um [detaillierte Aktivierungsergebnisse anzuzeigen](file-based-destination-results-api.md).
 
-Wenn Sie ein öffentliches Ziel erstellen, können Sie jetzt [Senden der Zielkonfiguration](../../guides/submit-destination.md) zur Adobe zur Überprüfung.
+Wenn Sie ein öffentliches Ziel erstellen, können Sie jetzt [Ihre Zielkonfiguration zur Überprüfung an Adobe senden](../../guides/submit-destination.md).
