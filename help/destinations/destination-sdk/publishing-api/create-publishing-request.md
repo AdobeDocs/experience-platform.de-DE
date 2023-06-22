@@ -1,34 +1,34 @@
 ---
 description: Erfahren Sie, wie Sie einen API-Aufruf formatieren, um eine Anfrage zur Veröffentlichung über Adobe Experience Platform Destination SDK zu senden.
-title: Erstellen einer Zielveröffentlichungsanforderung
+title: Erstellen einer Zielveröffentlichungsanfrage
 source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '447'
-ht-degree: 56%
+ht-degree: 100%
 
 ---
 
 
-# Erstellen einer Zielveröffentlichungsanforderung
+# Erstellen einer Zielveröffentlichungsanfrage
 
 >[!IMPORTANT]
 >
->Sie müssen diesen API-Endpunkt nur verwenden, wenn Sie ein produktives (öffentliches) Ziel senden, das von anderen Experience Platform-Kunden verwendet werden soll. Wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen, müssen Sie das Ziel nicht formell mit der Publishing-API übermitteln.
+>Sie müssen diesen API-Endpunkt nur verwenden, wenn Sie ein produktbezogenes (öffentliches) Ziel einreichen, das von anderen Experience Platform-Kundinnen und -Kunden verwendet werden soll. Wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen, müssen Sie das Ziel nicht formell mit der Publishing-API übermitteln.
 
 >[!IMPORTANT]
 >
 >**API-Endpunkt**: `platform.adobe.io/data/core/activation/authoring/destinations/publish`
 
-Nachdem Sie Ihr Ziel konfiguriert und getestet haben, können Sie es zur Überprüfung und Veröffentlichung an Adobe senden. Lesen [Zur Überprüfung eines in Destination SDK erstellten Ziels übermitteln](../guides/submit-destination.md) für alle anderen Schritte, die Sie im Rahmen des Zielübermittlungsprozesses ausführen müssen.
+Nachdem Sie Ihr Ziel konfiguriert und getestet haben, können Sie es zur Überprüfung und Veröffentlichung an Adobe senden. Lesen Sie [Einreichen eines in Destination SDK erstellten Ziels zur Überprüfung](../guides/submit-destination.md), um alle weiteren Schritte zu erfahren, die Sie im Rahmen des Einreichungsprozesses für ein Ziel durchführen müssen.
 
-Verwenden Sie den API-Endpunkt für Veröffentlichungsziele, um eine Veröffentlichungsanfrage zu senden, wenn:
+Verwenden Sie den API-Endpunkt für Veröffentlichungsziele, um eine Veröffentlichungsanfrage zu senden, wenn Sie:
 
-* Als Destination SDK-Partner möchten Sie Ihr produktbezogenes Ziel über alle Experience Platform-Unternehmen für alle Experience Platform-Kunden verfügbar machen.
-* Sie machen *alle Aktualisierungen* zu Ihren Konfigurationen hinzufügen. Konfigurationsaktualisierungen werden erst dann im Ziel angezeigt, wenn Sie eine neue Veröffentlichungsanforderung senden, die vom Experience Platform-Team genehmigt wurde.
+* als Destination SDK-Partner Ihr produktbezogenes Ziel über alle Experience Platform-Organisationen für alle Experience Platform-Kundinnen und -Kunden verfügbar machen möchten.
+* *Aktualisierungen jeglicher Art* an Ihren Konfigurationen vornehmen. Konfigurationsaktualisierungen werden erst dann im Ziel angezeigt, wenn Sie eine neue Veröffentlichungsanfrage senden, die vom Experience Platform-Team genehmigt wurde.
 
 >[!IMPORTANT]
 >
->Alle von Destination SDK unterstützten Parameternamen und Werte sind **Groß-/Kleinschreibung**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
+>Bei allen von Destination SDK unterstützten Parameternamen und Werten wird **nach Groß-/Kleinschreibung unterschieden**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
 
 ## Erste Schritte mit API-Vorgängen zur Zielveröffentlichung {#get-started}
 
@@ -64,8 +64,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
-| `destinationId` | Zeichenfolge | Die Ziel-ID der Zielkonfiguration, die Sie für eine Veröffentlichung übermitteln. Rufen Sie die Ziel-ID einer Zielkonfiguration ab, indem Sie die [Zielkonfiguration abrufen](../authoring-api/destination-configuration/retrieve-destination-configuration.md) API-Aufruf. |
-| `destinationAccess` | Zeichenfolge | Verwendung `ALL` damit Ihr Ziel im Katalog für alle Experience Platform-Kunden angezeigt wird. |
+| `destinationId` | Zeichenfolge | Die Ziel-ID der Zielkonfiguration, die Sie für eine Veröffentlichung übermitteln. Rufen Sie die Ziel-ID einer Zielkonfiguration ab, indem Sie den API-Aufruf zum [Abrufen einer Zielkonfiguration](../authoring-api/destination-configuration/retrieve-destination-configuration.md) verwenden. |
+| `destinationAccess` | Zeichenfolge | Verwenden Sie `ALL`, damit Ihr Ziel im Katalog für alle Experience Platform-Kundinnen und -Kunden angezeigt wird. |
 
 {style="table-layout:auto"}
 
