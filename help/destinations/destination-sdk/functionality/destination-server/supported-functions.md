@@ -1,64 +1,63 @@
 ---
-description: Die Destination SDK der Experience Platform verwendet Blasen-Vorlagen, mit denen Sie die aus der Experience Platform exportierten Daten in das für Ihr Ziel erforderliche Format umwandeln können.
+description: Das Destination SDK von Experience Platform verwendet Pebble-Vorlagen, mit denen Sie die aus Experience Platform exportierten Daten in das für Ihr Ziel erforderliche Format umwandeln können.
 title: Unterstützte Umwandlungsfunktionen in Destination SDK
 source-git-commit: ab87a2b7190a0365729ba7bad472fde7a489ec02
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '579'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
 
 # Unterstützte Umwandlungsfunktionen in Destination SDK
 
-Verwendung von Experience Platform Destination SDK [[!DNL Pebble] templates](https://pebbletemplates.io/), sodass Sie die aus Experience Platform exportierten Daten in das für Ihr Ziel erforderliche Format umwandeln können.
+Das Destination SDK von Experience Platform verwendet [[!DNL Pebble] -Vorlagen](https://pebbletemplates.io/), womit Sie die aus Experience Platform exportierten Daten in das für Ihr Ziel erforderliche Format umwandeln können.
 
-Die Experience Platform [!DNL Pebble] Die Implementierung hat einige Änderungen gegenüber der nativen Version, die von [!DNL Pebble]. Zusätzlich zu den vordefinierten Funktionen von [!DNL Pebble], hat Adobe einige zusätzliche Funktionen erstellt, die Sie mit Destination SDK verwenden können.
+Die [!DNL Pebble] -Implementierung in Experience Platform hat einige Änderungen gegenüber der nativen Version, die von [!DNL Pebble] bereitgestellt wird. Zusätzlich zu den vordefinierten Funktionen von [!DNL Pebble] hat Adobe einige zusätzliche Funktionen erstellt, die Sie mit Destination SDK verwenden können.
 
 >[!IMPORTANT]
 >
->Alle von Destination SDK unterstützten Parameternamen und Werte sind **Groß-/Kleinschreibung**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
+>Bei allen von Destination SDK unterstützten Parameternamen und Werten wird **nach Groß-/Kleinschreibung unterschieden**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
 
 ## Verwendungsbereiche {#where-to-use}
 
-Verwenden Sie die unten aufgeführten unterstützten Funktionen auf dieser Seite, wenn Sie [Erstellen einer Nachrichtenumwandlungsvorlage](../../testing-api/streaming-destinations/create-template.md) für die Daten, die aus der Experience Platform an Ihr Ziel exportiert wurden.
+Verwenden Sie die unten aufgeführten unterstützten Funktionen auf dieser Seite, wenn Sie für die Daten, die aus Experience Platform an Ihr Ziel exportiert wurden, [eine Nachrichtenumwandlungsvorlage erstellen ](../../testing-api/streaming-destinations/create-template.md).
 
-Die Umwandlungsvorlage der Nachricht wird im [Zielserverkonfiguration](templating-specs.md) für Streaming-Ziele.
+Die Nachrichtenumwandlungsvorlage wird in der [Ziel-Server-Konfiguration](templating-specs.md) für Streaming-Ziele verwendet.
 
 ## Voraussetzungen {#prerequisites}
 
-Die Konzepte und Funktionen dieser Referenzseite werden im Abschnitt [Nachrichtenformat](message-format.md) Dokument zuerst. Sie müssen die [Profilstruktur](message-format.md#profile-structure) in der Experience Platform, bevor Sie [!DNL Pebble] Vorlagen, die umgewandelt und exportiert werden sollen.
+Um die Konzepte und Funktionen auf dieser Referenzseite zu verstehen, lesen Sie zunächst das Dokument zum [Nachrichtenformat](message-format.md). Sie müssen die [Profilstruktur](message-format.md#profile-structure) in Experience Platform verstehen, bevor Sie [!DNL Pebble]-Vorlagen zur Transformation der exportierten Daten verwenden können.
 
-Bevor Sie zu den unten dokumentierten Funktionen übergehen, lesen Sie die Beispielvorlagen im Abschnitt . [Verwenden einer Vorlagensprache für die Transformationen von Identitäten, Attributen und Segmentzugehörigkeiten](message-format.md#using-templating). Die Beispiele dort beginnen sehr einfach und erhöhen die Komplexität.
+Bevor Sie zu den unten dokumentierten Funktionen übergehen, sehen Sie sich die Beispielvorlagen im Abschnitt [Verwenden einer Vorlagensprache für die Transformationen von Identitäten, Attributen und Segmentzugehörigkeiten](message-format.md#using-templating) an. Die Beispiele dort beginnen sehr einfach und werden immer komplexer.
 
-## Unterstützt [!DNL Pebble] Funktionen {#supported-functions}
+## Unterstützte [!DNL Pebble]-Funktionen {#supported-functions}
 
-Aus dem [!DNL Pebble] Tags-Abschnitt, Destination SDK unterstützt nur:
+Aus dem [!DNL Pebble]-Tags-Abschnitt unterstützt Destination SDK nur:
 
-* [Filter](https://pebbletemplates.io/wiki/tag/filter/)
+* [filter](https://pebbletemplates.io/wiki/tag/filter/)
 * [for](https://pebbletemplates.io/wiki/tag/for/)
 * [if](https://pebbletemplates.io/wiki/tag/if/)
-* [festgelegt](https://pebbletemplates.io/wiki/tag/set/)
+* [set](https://pebbletemplates.io/wiki/tag/set/)
 
 >[!TIP]
 >
->Verwenden `for` unterscheidet sich bei der Iteration durch *array* oder *map* Elemente in einer Vorlage. Wenn Sie durch ein Array navigieren, können Sie das Element direkt abrufen. Wenn Sie durch eine Karte navigieren, erhalten Sie jeden Map-Eintrag, der über ein Schlüssel-Wert-Paar verfügt.
+>Die Verwendung von `for` unterscheidet sich bei der Iteration durch *Array*- oder *Zuordnungs*-Elemente in einer Vorlage. Wenn Sie durch ein Array navigieren, können Sie das Element direkt abrufen. Wenn Sie durch eine Zuordnung (Map) navigieren, erhalten Sie jeden Map-Eintrag, der über ein Schlüssel-Wert-Paar verfügt.
 >
-> * Betrachten Sie zum Beispiel die Identitäten in einem Array-Element [identityMap](message-format.md#identities) Namespace, in dem Sie Elemente wie `identityMap.gaid`, `identityMap.email`oder Ähnliches.
-> * Beispiel für ein Zuordnungselement: [segmentMembership](message-format.md#segment-membership).
+> * Betrachten Sie zum Beispiel für ein Array-Element die Identitäten in einem [identityMap](message-format.md#identities)-Namespace, in dem Sie durch Elemente wie `identityMap.gaid`, `identityMap.email` oder Ähnliches iterieren können.
+> * Nehmen Sie als Beispiel für ein Zuordnungselement [segmentMembership](message-format.md#segment-membership).
 
+Aus dem Abschnitt der [!DNL Pebble]-Filter unterstützt Destination SDK alle Funktionen. Ein Beispiel weiter unten zeigt, wie die Funktion `date` in Destination SDK verwendet werden kann.
 
-Aus dem [!DNL Pebble] Filterabschnitt, unterstützt Destination SDK alle Funktionen. Ein Beispiel weiter unten zeigt, wie die `date` -Funktion in Destination SDK verwendet werden.
+Aus dem [!DNL Pebble]-Funktionsabschnitt unterstützt Adobe *nicht* die Funktion [ range](https://pebbletemplates.io/wiki/function/range/).
 
-Aus dem [!DNL Pebble] Funktionsabschnitt, die Adobe *not* unterstützen [Bereich](https://pebbletemplates.io/wiki/function/range/) -Funktion.
+## Beispiel für die Verwendung der Funktion `date` {#date-function}
 
-## Beispiel für die `date` -Funktion verwendet wird {#date-function}
-
-So veranschaulichen Sie die [!DNL Pebble] -Funktionen in Destination SDK verwendet werden, sehen Sie unten, wie die Datumsfunktion ([Link in der Dokumentation zu Pebble](https://pebbletemplates.io/wiki/filter/date/)) wird verwendet, um das Format eines Zeitstempels zu transformieren.
+Um zu veranschaulichen, wie die [!DNL Pebble]-Funktionen in Destination SDK verwendet werden, sehen Sie unten, wie die Datumsfunktion ([Link in der Pebble-Dokumentation](https://pebbletemplates.io/wiki/filter/date/)) verwendet wird, um das Format eines Zeitstempels zu transformieren.
 
 ### Anwendungsfall
 
-Sie möchten die `lastQualificationTime` Zeitstempel vom Standard [ISO 8601](https://de.wikipedia.org/wiki/ISO_8601) -Wert, den die Experience Platform in einen anderen von Ihrem Ziel bevorzugten Wert exportiert.
+Sie möchten den `lastQualificationTime` Zeitstempel vom Standard-[ISO 8601](https://de.wikipedia.org/wiki/ISO_8601)-Wert, den Experience Platform exportiert, in einen anderen von Ihrem Ziel bevorzugten Wert ändern.
 
 ### Beispiel
 
@@ -84,11 +83,11 @@ Sie möchten die `lastQualificationTime` Zeitstempel vom Standard [ISO 8601](htt
 }
 ```
 
-## Von der Adobe hinzugefügte Funktionen {#functions-added-by-adobe}
+## Von Adobe hinzugefügte Funktionen {#functions-added-by-adobe}
 
-Zusätzlich zu den vordefinierten Funktionen von [!DNL Pebble], sehen Sie unten die zusätzlichen Funktionen, die von Adobe erstellt wurden und die Sie für Ihre Datenexporte verwenden können.
+Zusätzlich zu den vordefinierten Funktionen von [!DNL Pebble] sehen Sie unten die zusätzlichen Funktionen, die von Adobe erstellt wurden und die Sie für Ihre Datenexporte verwenden können.
 
-### `addedSegments` und `removedSegments` Funktionen {#addedsegments-removedsegments-functions}
+### Funktionen `addedSegments` und `removedSegments` {#addedsegments-removedsegments-functions}
 
 #### Anwendungsfall
 
@@ -200,7 +199,7 @@ added: <111111><333333>;|removed: <222222>;
 
 ## Nächste Schritte {#next-steps}
 
-Sie wissen jetzt, [!DNL Pebble] -Funktionen werden in Destination SDK unterstützt und es wird beschrieben, wie Sie sie verwenden, um das Format der exportierten Daten an Ihre Anforderungen anzupassen. Als Nächstes sollten Sie die folgenden Seiten lesen:
+Sie wissen jetzt, welche [!DNL Pebble] -Funktionen in Destination SDK unterstützt werden und wie Sie sie verwenden können, um das Format der exportierten Daten an Ihre Anforderungen anzupassen. Als Nächstes sollten Sie die folgenden Seiten lesen:
 
-* [Erstellen und Testen einer Nachrichten-Umwandlungsvorlage](../../testing-api/streaming-destinations/create-template.md)
+* [Erstellen und Testen einer Nachrichtenumwandlungsvorlage](../../testing-api/streaming-destinations/create-template.md)
 * [API-Vorgänge für Rendervorlagen](../../testing-api/streaming-destinations/render-template-api.md)
