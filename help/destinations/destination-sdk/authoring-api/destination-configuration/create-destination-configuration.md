@@ -2,16 +2,16 @@
 description: Erfahren Sie, wie Sie einen API-Aufruf strukturieren, um eine Zielkonfiguration über Adobe Experience Platform Destination SDK zu erstellen.
 title: Erstellen einer Zielkonfiguration
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1209'
-ht-degree: 57%
+ht-degree: 100%
 
 ---
 
 
 # Erstellen einer Zielkonfiguration
 
-Auf dieser Seite werden die API-Anfrage und die Payload erläutert, mit denen Sie mithilfe der `/authoring/destinations` API-Endpunkt.
+Diese Seite veranschaulicht die API-Anfrage und die Payload, die Sie verwenden können, um Ihre eigene Zielkonfiguration unter Verwendung des API-Endpunkts `/authoring/destinations` zu erstellen.
 
 Eine ausführliche Beschreibung der Funktionen, die Sie über diesen Endpunkt konfigurieren können, finden Sie in den folgenden Artikeln:
 
@@ -20,7 +20,7 @@ Eine ausführliche Beschreibung der Funktionen, die Sie über diesen Endpunkt ko
 * [Benutzerdefinierte Datenfelder](../../functionality/destination-configuration/customer-data-fields.md)
 * [Benutzeroberflächenattribute](../../functionality/destination-configuration/ui-attributes.md)
 * [Schemakonfiguration](../../functionality/destination-configuration/schema-configuration.md)
-* [Identitäts-Namespace-Konfiguration](../../functionality/destination-configuration/identity-namespace-configuration.md)
+* [Konfiguration von Identity-Namespaces](../../functionality/destination-configuration/identity-namespace-configuration.md)
 * [Zielbereitstellung](../../functionality/destination-configuration/destination-delivery.md)
 * [Konfiguration von Zielgruppen-Metadaten](../../functionality/destination-configuration/audience-metadata-configuration.md)
 * [Konfiguration von Zielgruppen-Metadaten](../../functionality/destination-configuration/audience-metadata-configuration.md)
@@ -30,9 +30,9 @@ Eine ausführliche Beschreibung der Funktionen, die Sie über diesen Endpunkt ko
 
 >[!IMPORTANT]
 >
->Alle von Destination SDK unterstützten Parameternamen und Werte sind **Groß-/Kleinschreibung**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
+>Bei allen von Destination SDK unterstützten Parameternamen und Werten wird **nach Groß-/Kleinschreibung unterschieden**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
 
-## Erste Schritte mit API-Vorgängen zur Zielkonfiguration {#get-started}
+## Erste Schritte mit API-Vorgängen für die Zielkonfiguration {#get-started}
 
 Bevor Sie fortfahren, lesen Sie [Erste Schritte](../../getting-started.md). Dort finden Sie die nötigen Informationen für den erfolgreichen Aufruf der API, einschließlich Details für den Abruf der erforderlichen Authoring-Berechtigung für Ziele und zu den erforderlichen Kopfzeilen.
 
@@ -50,9 +50,9 @@ Sie können eine neue Zielkonfiguration erstellen, indem Sie eine POST-Anfrage a
 POST /authoring/destinations
 ```
 
-Die folgende Anfrage erstellt eine neue [!DNL Amazon S3] Zielkonfiguration, konfiguriert durch die in der Payload bereitgestellten Parameter. Die nachstehende Payload enthält alle Parameter für dateibasierte Ziele, die vom Endpunkt `/authoring/destinations` akzeptiert werden.
+Die folgende Anfrage erstellt eine neue [!DNL Amazon S3]-Zielkonfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird. Die nachstehende Payload enthält alle Parameter für dateibasierte Ziele, die vom Endpunkt `/authoring/destinations` akzeptiert werden.
 
-Beachten Sie, dass Sie nicht alle Parameter zu Ihrem API-Aufruf hinzufügen müssen und dass die Payload gemäß Ihren API-Anforderungen angepasst werden kann.
+Beachten Sie, dass Sie nicht alle Parameter für den API-Aufruf hinzufügen müssen und dass die Payload entsprechend Ihren API-Anforderungen angepasst werden kann.
 
 +++Anfrage
 
@@ -194,34 +194,34 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `name` | Zeichenfolge | Gibt den Titel Ihres Ziels im Experience Platform-Katalog an. |
 | `description` | Zeichenfolge | Geben Sie eine Beschreibung ein, die Adobe im Zielkatalog von Experience Platform für Ihre Zielkarte verwenden soll. Es sollten nicht mehr als 4–5 Sätze sein. ![Platform-UI-Bild, das die Zielbeschreibung anzeigt.](../../assets/authoring-api/destination-configuration/destination-description.png "Zielbeschreibung"){width="100" zoomable="yes"} |
 | `status` | Zeichenfolge | Gibt den Lebenszyklusstatus der Zielkarte an. Zulässige Werte sind `TEST`, `PUBLISHED` und `DELETED`. Verwenden Sie `TEST`, wenn Sie Ihr Ziel zum ersten Mal konfigurieren. |
-| `customerAuthenticationConfigurations.authType` | Zeichenfolge | Gibt die Konfiguration an, die zum Authentifizieren von Experience Platform-Kunden auf Ihrem Zielserver verwendet wird. Siehe [Konfiguration der Kundenauthentifizierung](../../functionality/destination-configuration/customer-authentication.md) für detaillierte Informationen zu den unterstützten Authentifizierungstypen. |
-| `customerDataFields.name` | Zeichenfolge | Geben Sie einen Namen für das benutzerdefinierte Feld ein, das Sie einführen. <br/><br/> Siehe [Kundendatenfelder](../../functionality/destination-configuration/customer-data-fields.md) für detaillierte Informationen zu diesen Einstellungen. ![Abbildung der Platform-Benutzeroberfläche mit Feldern zu Kundendaten.](../../assets/authoring-api/destination-configuration/customer-data-fields.png "Kundendatenfeld"){width="100" zoomable="yes"} |
+| `customerAuthenticationConfigurations.authType` | Zeichenfolge | Gibt die Konfiguration an, die zum Authentifizieren von Experience Platform-Kundinnen und -Kunden auf Ihrem Ziel-Server verwendet wird. Siehe [Konfiguration der Kundenauthentifizierung](../../functionality/destination-configuration/customer-authentication.md) für detaillierte Informationen zu den unterstützten Authentifizierungstypen. |
+| `customerDataFields.name` | Zeichenfolge | Geben Sie einen Namen für das benutzerdefinierte Feld ein, das Sie einführen. <br/><br/> Siehe [Kundendatenfelder](../../functionality/destination-configuration/customer-data-fields.md) für detaillierte Informationen zu diesen Einstellungen. ![Platform-UI-Bild mit Feldern zu Kundendaten.](../../assets/authoring-api/destination-configuration/customer-data-fields.png "Kundendatenfeld"){width="100" zoomable="yes"} |
 | `customerDataFields.type` | Zeichenfolge | Gibt an, welchen Typ von benutzerdefiniertem Feld Sie einführen. Akzeptierte Werte sind `string`, `object` und `integer`. <br/><br/> Siehe [Kundendatenfelder](../../functionality/destination-configuration/customer-data-fields.md) für detaillierte Informationen zu diesen Einstellungen. |
-| `customerDataFields.title` | Zeichenfolge | Gibt den Feldnamen an, wie er von den Kunden in der Benutzeroberfläche von Experience Platform angezeigt wird. <br/><br/> Siehe [Kundendatenfelder](../../functionality/destination-configuration/customer-data-fields.md) für detaillierte Informationen zu diesen Einstellungen. |
+| `customerDataFields.title` | Zeichenfolge | Gibt den Feldnamen an, wie er den Kundinnen und Kunden in der Benutzeroberfläche von Experience Platform angezeigt wird. <br/><br/> Siehe [Kundendatenfelder](../../functionality/destination-configuration/customer-data-fields.md) für detaillierte Informationen zu diesen Einstellungen. |
 | `customerDataFields.description` | Zeichenfolge | Geben Sie eine Beschreibung für das benutzerdefinierte Feld ein. Siehe [Kundendatenfelder](../../functionality/destination-configuration/customer-data-fields.md) für detaillierte Informationen zu diesen Einstellungen. |
 | `customerDataFields.isRequired` | Boolesch | Gibt an, ob dieses Feld im Ziel-Setup-Workflow erforderlich ist. <br/><br/> Siehe [Kundendatenfelder](../../functionality/destination-configuration/customer-data-fields.md) für detaillierte Informationen zu diesen Einstellungen. |
-| `customerDataFields.enum` | Zeichenfolge | Rendert das benutzerdefinierte Feld als Dropdown-Menü und listet die für den Benutzer verfügbaren Optionen auf. <br/><br/> Siehe [Kundendatenfelder](../../functionality/destination-configuration/customer-data-fields.md) für detaillierte Informationen zu diesen Einstellungen. |
+| `customerDataFields.enum` | Zeichenfolge | Rendert das benutzerdefinierte Feld als Dropdown-Menü und listet die für Benutzende verfügbaren Optionen auf. <br/><br/> Siehe [Kundendatenfelder](../../functionality/destination-configuration/customer-data-fields.md) für detaillierte Informationen zu diesen Einstellungen. |
 | `customerDataFields.default` | Zeichenfolge | Definiert den Standardwert aus einer `enum`-Liste. |
 | `customerDataFields.pattern` | Zeichenfolge | Erzwingt bei Bedarf ein Muster für das benutzerdefinierte Feld. Verwenden Sie reguläre Ausdrücke, um ein Muster zu erzwingen. Wenn Ihre Kunden-IDs beispielsweise keine Zahlen oder Unterstriche enthalten, geben Sie in dieses Feld `^[A-Za-z]+$` ein. <br/><br/> Siehe [Kundendatenfelder](../../functionality/destination-configuration/customer-data-fields.md) für detaillierte Informationen zu diesen Einstellungen. |
-| `uiAttributes.documentationLink` | Zeichenfolge | Weitere Informationen finden Sie auf der Dokumentationsseite im [Zielkatalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=de#catalog) für Ihr Ziel. Verwenden Sie `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, wobei `YOURDESTINATION` für den Namen Ihres Ziels steht. Für ein Ziel mit dem Namen „Moviestar“ würden Sie `https://www.adobe.com/go/destinations-moviestar-en` verwenden. Beachten Sie, dass dieser Link nur funktioniert, wenn Adobe Ihr Ziel live festlegt und die Dokumentation veröffentlicht wird. <br/><br/> Siehe [Benutzeroberflächenattribute](../../functionality/destination-configuration/ui-attributes.md) für detaillierte Informationen zu diesen Einstellungen. ![Platform-UI-Bild, das den Dokumentations-Link anzeigt.](../../assets/authoring-api/destination-configuration/documentation-url.png "Dokumentations-URL"){width="100" zoomable="yes"} |
+| `uiAttributes.documentationLink` | Zeichenfolge | Weitere Informationen finden Sie auf der Dokumentationsseite im [Zielkatalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=de#catalog) für Ihr Ziel. Verwenden Sie `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, wobei `YOURDESTINATION` für den Namen Ihres Ziels steht. Für ein Ziel mit dem Namen „Moviestar“ würden Sie `https://www.adobe.com/go/destinations-moviestar-en` verwenden. Beachten Sie, dass dieser Link nur funktioniert, wenn Adobe Ihr Ziel live stellt und die Dokumentation veröffentlicht wird. <br/><br/> Siehe [Benutzeroberflächenattribute](../../functionality/destination-configuration/ui-attributes.md) für detaillierte Informationen zu diesen Einstellungen. ![Platform-UI-Bild, das den Dokumentations-Link anzeigt.](../../assets/authoring-api/destination-configuration/documentation-url.png "Dokumentations-URL"){width="100" zoomable="yes"} |
 | `uiAttributes.category` | Zeichenfolge | Bezieht sich auf die Ihrem Ziel in Adobe Experience Platform zugewiesene Kategorie. Weitere Informationen finden Sie unter [Zielkategorien](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=de#destination-categories). Verwenden Sie einen der folgenden Werte: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. <br/><br/> Siehe [Benutzeroberflächenattribute](../../functionality/destination-configuration/ui-attributes.md) für detaillierte Informationen zu diesen Einstellungen. |
 | `uiAttributes.connectionType` | Zeichenfolge | Der Verbindungstyp, je nach Ziel. Unterstützte Werte: <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul> |
-| `uiAttributes.frequency` | Zeichenfolge | Bezieht sich auf die Art des Datenexports, die vom Ziel unterstützt wird. Legen Sie fest auf `Streaming` für API-basierte Integrationen oder `Batch` wenn Sie Dateien in Ihre Ziele exportieren. |
-| `identityNamespaces.externalId.acceptsAttributes` | Boolesch | Gibt an, ob Kunden der Identität, die Sie konfigurieren, standardmäßige Profilattribute zuordnen können. |
-| `identityNamespaces.externalId.acceptsCustomNamespaces` | Boolesch | Gibt an, ob Kunden Identitäten zuordnen können, die zu [benutzerdefinierte Namespaces](/help/identity-service/namespaces.md#manage-namespaces) der Identität, die Sie konfigurieren. |
+| `uiAttributes.frequency` | Zeichenfolge | Bezieht sich auf die Art des Datenexports, die vom Ziel unterstützt wird. Setzen Sie diesen auf `Streaming` für API-basierte Integrationen oder auf `Batch`, wenn Sie Dateien in Ihre Ziele exportieren. |
+| `identityNamespaces.externalId.acceptsAttributes` | Boolesch | Gibt an, ob Kundinnen und Kunden der Identität, die Sie konfigurieren, standardmäßige Profilattribute zuordnen können. |
+| `identityNamespaces.externalId.acceptsCustomNamespaces` | Boolesch | Gibt an, ob Kundinnen und Kunden Identitäten, die zu [benutzerdefinierten Namespaces](/help/identity-service/namespaces.md#manage-namespaces) gehören, der Identität zuordnen können, die Sie konfigurieren. |
 | `identityNamespaces.externalId.transformation` | Zeichenfolge | _Wird in der Beispielkonfiguration nicht angezeigt_. Wird zum Beispiel verwendet, wenn der [!DNL Platform]-Kunde einfache E-Mail-Adressen als Attribut verwendet und Ihre Plattform nur E-Mails mit Hash akzeptiert. Hier geben Sie die Umwandlung an, die angewendet werden soll (z. B. Umwandlung der E-Mail in Kleinbuchstaben, dann Hash). |
-| `identityNamespaces.externalId.acceptedGlobalNamespaces` | – | Gibt an, [Standard-Identitäts-Namespaces](/help/identity-service/namespaces.md#standard) (z. B. IDFA)-Kunden können der Identität zuordnen, die Sie konfigurieren. <br> Wenn Sie `acceptedGlobalNamespaces` verwenden, können Sie E-Mail-Adressen oder Telefonnummern mithilfe von `"requiredTransformation":"sha256(lower($))"` in Kleinbuchstaben umwandeln und hashen. |
-| `destinationDelivery.authenticationRule` | Zeichenfolge | Gibt an, wie [!DNL Platform]-Kunden eine Verbindung zu Ihrem Ziel herstellen. Akzeptierte Werte sind `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Verwenden Sie `CUSTOMER_AUTHENTICATION`, wenn sich Platform-Kunden über einen Benutzernamen und ein Kennwort, ein Träger-Token oder eine andere Authentifizierungsmethode bei Ihrem System anmelden. Sie würden diese Option beispielsweise auswählen, wenn Sie auch `authType: OAUTH2` oder `authType:BEARER` in `customerAuthenticationConfigurations` ausgewählt haben. </li><li> Verwenden Sie `PLATFORM_AUTHENTICATION`, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel existiert und der [!DNL Platform]-Kunde keine Authentifizierungsdaten bereitstellen muss, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie mithilfe der [API-Anmeldeinformationen](../../credentials-api/create-credential-configuration.md) Konfiguration. </li><li>Verwenden Sie `NONE`, wenn keine Authentifizierung erforderlich ist, um Daten an Ihre Zielplattform zu senden. </li></ul> |
+| `identityNamespaces.externalId.acceptedGlobalNamespaces` | – | Gibt an, welche [Standard-Identity-Namespaces](/help/identity-service/namespaces.md#standard) (z. B. IDFA) Kundinnen und Kunden der Identität zuordnen können, die Sie konfigurieren. <br> Wenn Sie `acceptedGlobalNamespaces` verwenden, können Sie E-Mail-Adressen oder Telefonnummern mithilfe von `"requiredTransformation":"sha256(lower($))"` in Kleinbuchstaben umwandeln und hashen. |
+| `destinationDelivery.authenticationRule` | Zeichenfolge | Gibt an, wie [!DNL Platform]-Kundinnen und -Kunden eine Verbindung zu Ihrem Ziel herstellen. Akzeptierte Werte sind `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Verwenden Sie `CUSTOMER_AUTHENTICATION`, wenn sich Platform-Kundinnen und -Kunden über einen Benutzernamen und ein Kennwort, ein Bearer-Token oder eine andere Authentifizierungsmethode bei Ihrem System anmelden. Sie würden diese Option beispielsweise auswählen, wenn Sie auch `authType: OAUTH2` oder `authType:BEARER` in `customerAuthenticationConfigurations` ausgewählt haben. </li><li> Verwenden Sie `PLATFORM_AUTHENTICATION`, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel existiert und der [!DNL Platform]-Kunde keine Authentifizierungsdaten bereitstellen muss, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie ein Anmeldeinformationen-Objekt mithilfe der Konfiguration der [Anmeldeinformationen-API](../../credentials-api/create-credential-configuration.md) erstellen. </li><li>Verwenden Sie `NONE`, wenn keine Authentifizierung erforderlich ist, um Daten an Ihre Zielplattform zu senden. </li></ul> |
 | `destinationDelivery.destinationServerId` | Zeichenfolge | Die `instanceId` der [Ziel-Server-Vorlage](../destination-server/create-destination-server.md), die für dieses Ziel verwendet wird. |
-| `backfillHistoricalProfileData` | Boolesch | Steuert, ob historische Profildaten exportiert werden, wenn Segmente für das Ziel aktiviert werden. Legen Sie dafür immer fest `true`. |
-| `segmentMappingConfig.mapUserInput` | Boolesch | Steuert, ob die Segmentzuordnungs-ID im Zielaktivierungs-Workflow vom Benutzer eingegeben wird. |
-| `segmentMappingConfig.mapExperiencePlatformSegmentId` | Boolesch | Steuert, ob die Segmentzuordnungs-ID im Zielaktivierungs-Workflow die Experience Platform-Segment-ID ist. |
-| `segmentMappingConfig.mapExperiencePlatformSegmentName` | Boolesch | Steuert, ob die Segmentzuordnungs-ID im Zielaktivierungs-Workflow der Segmentname der Experience Platform ist. |
+| `backfillHistoricalProfileData` | Boolesch | Steuert, ob historische Profildaten exportiert werden, wenn Segmente für das Ziel aktiviert werden. Setzen Sie diesen Parameter immer auf `true`. |
+| `segmentMappingConfig.mapUserInput` | Boolesch | Steuert, ob die Segmentzuordnungs-ID im Zielaktivierungs-Workflow von der Benutzerin bzw. dem Benutzer eingegeben wird. |
+| `segmentMappingConfig.mapExperiencePlatformSegmentId` | Boolesch | Steuert, ob die Segmentzuordnungs-ID im Zielaktivierungs-Workflow die Experience Platform-Segment- ID ist. |
+| `segmentMappingConfig.mapExperiencePlatformSegmentName` | Boolesch | Steuert, ob die Segmentzuordnungs- ID im Zielaktivierungs-Workflow der Experience Platform-Segmentname ist. |
 | `segmentMappingConfig.audienceTemplateId` | Boolesch | Die `instanceId` der [Zielgruppen-Metadatenvorlage](../../metadata-api/create-audience-template.md), die für dieses Ziel verwendet wird. |
-| `schemaConfig.profileFields` | Array | Beim Hinzufügen vordefinierter `profileFields` wie in der obigen Konfiguration können Benutzer die Attribute von Experience Platform den vordefinierten Attributen des Ziels zuordnen. |
-| `schemaConfig.profileRequired` | Boolesch | Verwenden Sie `true`, wenn Benutzer die Zuordnung von Profilattributen aus Experience Platform zu benutzerdefinierten Attributen des Ziels vornehmen dürfen, wie in der obigen Beispielkonfiguration dargestellt. |
+| `schemaConfig.profileFields` | Array | Beim Hinzufügen vordefinierter `profileFields` wie in der obigen Konfiguration können Benutzerinnen und Benutzer die Attribute von Experience Platform den vordefinierten Attributen Ihres Ziels zuordnen. |
+| `schemaConfig.profileRequired` | Boolesch | Verwenden Sie `true`, wenn Benutzerinnen und Benutzer die Zuordnung von Profilattributen aus Experience Platform zu benutzerdefinierten Attributen des Ziels vornehmen dürfen, wie in der obigen Beispielkonfiguration dargestellt. |
 | `schemaConfig.segmentRequired` | Boolesch | Verwenden Sie immer `segmentRequired:true`. |
-| `schemaConfig.identityRequired` | Boolesch | Verwenden Sie `true`, wenn Benutzer die Zuordnung von Identitäts-Namespaces von Experience Platform zu Ihrem gewünschten Schema vornehmen dürfen. |
+| `schemaConfig.identityRequired` | Boolesch | Verwenden Sie `true`, wenn Benutzerinnen und Benutzer die Zuordnung von Identity-Namespaces von Experience Platform zu Ihrem gewünschten Schema vornehmen dürfen. |
 
 {style="table-layout:auto"}
 
@@ -239,13 +239,13 @@ Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie mit der Destination SDK eine neue Zielkonfiguration erstellen `/authoring/destinations` API-Endpunkt.
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie über den API-Endpunkt `/authoring/destinations` von Destination SDK eine neue Zielkonfiguration erstellen.
 
 Weitere Informationen dazu, was Sie mit diesem Endpunkt tun können, finden Sie in den folgenden Artikeln:
 
 * [Abrufen einer Zielkonfiguration](retrieve-destination-configuration.md)
-* [Zielkonfiguration aktualisieren](update-destination-configuration.md)
-* [Zielkonfiguration löschen](delete-destination-configuration.md)
+* [Aktualisieren einer Zielkonfiguration](update-destination-configuration.md)
+* [Löschen einer Zielkonfiguration](delete-destination-configuration.md)
 
 Informationen dazu, wo dieser Endpunkt in den Prozess zur Zielbearbeitung passt, finden Sie in den folgenden Artikeln:
 
