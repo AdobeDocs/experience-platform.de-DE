@@ -2,9 +2,9 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 8d612c826164bab48a78d04649c5cca27e5797b0
+source-git-commit: d145aa43274c9406e1ff8d96513667edaa7d07bf
 workflow-type: tm+mt
-source-wordcount: '1674'
+source-wordcount: '1688'
 ht-degree: 99%
 
 ---
@@ -13,6 +13,10 @@ ht-degree: 99%
 # Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zum SDK finden Sie in den [Versionshinweisen zum Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=de).
+
+## Version 2.19.0 - 21. Juni 2023
+
+* Die **[!UICONTROL Variable]** Datenelement und **[!UICONTROL Variable aktualisieren]** -Aktionen sind jetzt allgemein verfügbar.
 
 ## Version 2.18.0 - 18. Mai 2023
 
