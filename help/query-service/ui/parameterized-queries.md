@@ -1,9 +1,9 @@
 ---
 title: Parameterisierte Abfragen
 description: Erfahren Sie, wie Sie parametrisierte Abfragen in der Adobe Experience Platform-Benutzeroberfläche verwenden.
-source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
+source-git-commit: d927f1f98c1f3a42907501921fcd2367241fa625
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '694'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,10 @@ Verwenden Sie die `'$'` -Präfix verwenden, um einen Abfrageparameter in Ihre Ab
 
 Wenn Sie einen Parameter entfernen und versuchen, die Abfrage erneut auszuführen, nachdem sie bereits ausgeführt wurde, wird eine Fehlermeldung im [!UICONTROL Abfrageparameter] -Bereich, um Sie zu warnen.
 
+>[!NOTE]
+>
+>Wenn Ihre Abfrage keine Parameter akzeptiert, können Sie im Abfrage-Editor weiterhin unnötige Parameter eingeben. Der Abfrage-Editor ignoriert alle unnötigen Schlüssel-Wert-Paare und hat keine Auswirkungen auf die Ausführung oder die Ergebnisse der Abfrage.
+
 ![Der Abfrage-Editor mit einem leeren Wertefeld und der Abfrageparameter-Fehler hervorgehoben.](../images/ui/parameterized-queries/query-parameter-error.png)
 
 ## Verwenden Sie die Details der Abfrageprotokolle, um Parameterwerte zu überprüfen. {#check-parameter-values}
@@ -77,4 +81,4 @@ Die Parameterwerte werden gespeichert, wenn Sie eine parametrisierte Abfrage pla
 
 Durch Lesen dieses Dokuments haben Sie gelernt, wie Sie Abfragen in der Adobe Experience Platform-Benutzeroberfläche parametrisieren und in geplanten Abfragemöglichkeiten verwenden können. In dem Dokument wurde auch hervorgehoben, wie die Protokolle auf die in Abfrageausführungen verwendeten Parameterwerte überprüft werden können.
 
-Wenn Sie dies noch nicht getan haben, sollten Sie das Handbuch lesen unter [Überwachung geplanter Abfragen](./monitor-queries.md) , um über die Platform-Benutzeroberfläche ein besseres Verständnis des Status aller Abfrageaufträge zu erhalten.
+Als Nächstes sollten Sie das Handbuch lesen unter [Überwachung geplanter Abfragen](./monitor-queries.md) , um über die Platform-Benutzeroberfläche ein besseres Verständnis des Status aller Abfrageaufträge zu erhalten.
