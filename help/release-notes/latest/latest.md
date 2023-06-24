@@ -2,7 +2,7 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise vom Juni 2023 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e56a6c2bac46778afcc24db8d51e77ec3700dd96
+source-git-commit: 5ee919390d759cc2a9418f636a46a516560fd5f0
 workflow-type: tm+mt
 source-wordcount: '1606'
 ht-degree: 35%
@@ -125,9 +125,10 @@ Mit Query Service können Sie SQL-Standarddaten in Adobe Experience Platform Dat
 | Funktion | Beschreibung |
 | --- | --- |
 | Inline-Vorlagen | Query Service unterstützt jetzt die Verwendung von Vorlagen, die auf andere Vorlagen in Ihrer SQL verweisen. Reduzieren Sie den Arbeitsaufwand und vermeiden Sie Fehler, indem Sie Inline-Vorlagen in Ihren Abfragen verwenden. Sie können Anweisungen oder Bedingungen wiederverwenden und verschachtelte Vorlagen referenzieren, um die Flexibilität in Ihrer SQL zu erhöhen. Die Größe von Abfragen, die als Vorlagen gespeichert werden können, oder die Anzahl der Vorlagen, auf die über Ihre ursprüngliche Abfrage verwiesen werden kann, ist unbegrenzt. Weitere Informationen finden Sie im Abschnitt [Inline-Vorlagenhandbuch](../../query-service/essential-concepts/inline-templates.md). |
-| Aktualisierungen der Benutzeroberfläche für geplante Abfragen | Verwalten Sie alle geplanten Abfragen von einem Ort in der Benutzeroberfläche mit der [[!UICONTROL Registerkarte &quot;Geplante Abfragen&quot;]](../../query-service/ui/monitor-queries.md#inline-actions). Die [!UICONTROL Geplante Abfragen] Die Benutzeroberfläche wurde durch das Hinzufügen von Inline-Abfrageaktionen und der neuen Spalte mit dem Abfragestatus verbessert. Die kürzlich hinzugefügten Funktionen umfassen die Möglichkeit, einen Zeitplan zu aktivieren, zu deaktivieren und zu löschen oder Warnhinweise für kommende Abfragen zu abonnieren, die direkt über die [!UICONTROL Geplante Abfragen] anzeigen. <p>![Inline-Aktionen, die im [!UICONTROL Geplante Abfragen] anzeigen.](../../query-service/images/ui/monitor-queries/disable-inline.png "Inline-Aktionen, die im [!UICONTROL Geplante Abfragen] anzeigen."){width="100" zoomable="yes"}</p> |
+| Aktualisierungen der Benutzeroberfläche für geplante Abfragen | Verwalten Sie alle geplanten Abfragen von einem Ort in der Benutzeroberfläche mit dem [[!UICONTROL Registerkarte &quot;Geplante Abfragen&quot;]](../../query-service/ui/monitor-queries.md#inline-actions). Die [!UICONTROL Geplante Abfragen] Die Benutzeroberfläche wurde durch das Hinzufügen von Inline-Abfrageaktionen und der neuen Spalte mit dem Abfragestatus verbessert. Die kürzlich hinzugefügten Funktionen umfassen die Möglichkeit, einen Zeitplan zu aktivieren, zu deaktivieren und zu löschen oder Warnhinweise für kommende Abfragen zu abonnieren, die direkt über die [!UICONTROL Geplante Abfragen] anzeigen. <p>![Inline-Aktionen, die im [!UICONTROL Geplante Abfragen] anzeigen.](../../query-service/images/ui/monitor-queries/disable-inline.png "Inline-Aktionen, die im [!UICONTROL Geplante Abfragen] anzeigen."){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
+
 Weitere Informationen zu Query Service finden Sie im Abschnitt [Query Service - Übersicht](../../query-service/home.md).
 
 ## Quellen {#sources}
