@@ -2,10 +2,10 @@
 title: Konfigurieren von Überschreibungen für Datenströme
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Datastreams Außerkraftsetzungen von Datastreams konfigurieren und über das Web SDK aktivieren.
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: d76d596818db67c99aca0606b6b6fb1a9aa977aa
+source-git-commit: 621dd1dbf99720604f797b97a5e31e090456cdf3
 workflow-type: tm+mt
-source-wordcount: '948'
-ht-degree: 4%
+source-wordcount: '971'
+ht-degree: 5%
 
 ---
 
@@ -121,6 +121,7 @@ alloy("sendEvent", {
     /* ... */
   },
   edgeConfigOverrides: {
+    datastreamId: "{DATASTREAM_ID}"
     com_adobe_experience_platform: {
       datasets: {
         event: {
@@ -148,6 +149,10 @@ alloy("sendEvent", {
 });
 ```
 
+| Parameter | Beschreibung |
+|---|---|
+| `edgeConfigOverrides.datastreamId` | Verwenden Sie diesen Parameter, um zuzulassen, dass eine einzelne Anfrage an einen anderen als den von der `configure` Befehl. |
+
 ### Überschreibungen der Versandkonfiguration über die `configure` command {#send-configure}
 
 Das folgende Beispiel zeigt, wie eine Konfigurationsüberschreibung auf einem `configure` Befehl.
@@ -157,7 +162,7 @@ alloy("configure", {
   defaultConsent: "in",
   edgeDomain: "etc",
   edgeBasePath: "ee",
-  edgeConfigId: "etc",
+  datastreamId: "{DATASTREAM_ID}",
   orgId: "org",
   debugEnabled: true,
   edgeConfigOverrides: {
