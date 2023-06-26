@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise vom Juni 2023 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 5ee919390d759cc2a9418f636a46a516560fd5f0
+source-git-commit: a3faca5e0a711f0d4f6bafb22bf3c4770f58db8e
 workflow-type: tm+mt
-source-wordcount: '1606'
-ht-degree: 35%
+source-wordcount: '1538'
+ht-degree: 37%
 
 ---
 
@@ -41,7 +41,6 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | Erweiterung | [!DNL Google Cloud Platform]-Erweiterung zur Ereignisweiterleitung | Die [[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md) Mit der Ereignisweiterleitungs-Erweiterung können Sie Ereignisdaten zur Aktivierung an Google weiterleiten über [!DNL Google Pub/Sub]. |
 | Erweiterung | [!DNL Cloud connector for Google Analytics 4 (ga4)]-Erweiterung  | Die [[!DNL Cloud connector for Google Analytics 4 (ga4)]](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html) Mit der Ereignisweiterleitungs-Erweiterung können Sie Analysen über die neue [!DNL Google Analytics 4 (ga4)] Standard. |
 | Geheimnis | OAuth 2 JWT Secret | Die [OAuth 2 JWT Secret](../../tags/ui/event-forwarding/secrets.md) ermöglicht Ihnen die Verwendung von Adobe und [!DNL Google] Dienst-Token zur Unterstützung von Server-Server-Interaktionen bei der Ereignisweiterleitung. |
-| Tags und Ereignisweiterleitung | Benutzerzuordnung | Die Benutzerzuordnung liefert wichtige Aktivitätsdaten über die [Tags](../../tags/home.md) und [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) Benutzeroberfläche.<br><br>Die Daten enthalten, wer welche Änderungen vorgenommen hat und zu welchem Zeitpunkt. Diese Daten sind in den folgenden Bildschirmen in der Benutzeroberfläche für Tags und Ereignisweiterleitung sichtbar:<br><ul><li> Eigenschaftenübersicht</li><li> Installierte Erweiterungen</li><li>Vergleich und Überprüfung von Regeln</li><li>Datenelemente - Vergleich</li><li>Übersicht über Erweiterungsvergleiche</li><li>Änderungen an Bibliotheksressourcen</li><li>Bibliothek zuletzt erstellt und veröffentlicht</li></ul> |
 
 {style="table-layout:auto"}
 
