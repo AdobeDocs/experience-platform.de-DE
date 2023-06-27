@@ -3,7 +3,7 @@ title: Adobe Experience Platform – Versionshinweise Januar 2023
 description: Versionshinweise Januar 2023 für Adobe Experience Platform.
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
 source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2414'
 ht-degree: 100%
 
