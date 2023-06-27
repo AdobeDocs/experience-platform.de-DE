@@ -3,10 +3,10 @@ title: (Beta) Exportieren von Datensätzen an Cloud-Speicher-Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Datensätze aus Adobe Experience Platform in Ihren bevorzugten Cloud-Speicher exportieren.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: d0de642eb6118e6597925c12c76917ffa98c3a5a
+source-git-commit: d9b59b8a331511e87171f3b9d1163d452ba469be
 workflow-type: tm+mt
-source-wordcount: '1359'
-ht-degree: 94%
+source-wordcount: '1425'
+ht-degree: 88%
 
 ---
 
@@ -16,8 +16,7 @@ ht-degree: 94%
 >
 >* Die Funktion zum Export von Datensätzen befindet sich derzeit in der Beta-Phase und steht nicht allen Nutzern zur Verfügung. Dokumentation und Funktionalitäten können sich ändern.
 >* Diese Beta-Funktion unterstützt den Export von Daten der ersten Generation, wie er in der [Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) der Real-time Customer Data Platform definiert ist.
->* Diese Funktion steht Kunden zur Verfügung, die das Prime- oder das Ultimate-Paket von Real-Time CDP erworben haben. Bitte wenden Sie sich an den Adobe-Support-Mitarbeiter, um weitere Informationen zu erhalten.
-
+>* Diese Funktion steht Kunden zur Verfügung, die das Prime- oder das Ultimate-Paket von Real-Time CDP erworben haben. Wenden Sie sich für weitere Informationen an Ihren Kundenbetreuer.
 
 In diesem Artikel wird der Workflow erläutert, der zum Exportieren erforderlich ist [Datensätze](/help/catalog/datasets/overview.md) von Adobe Experience Platform zu Ihrem bevorzugten Cloud-Speicher, z. B. [!DNL Amazon S3], SFTP-Speicherorten oder [!DNL Google Cloud Storage] durch Verwendung der Experience Platform-Benutzeroberfläche.
 
@@ -90,7 +89,7 @@ Aktivieren Sie die Kontrollkästchen links neben den Datensatznamen, um die Date
 >title="Dateiexportoptionen für Datensätze"
 >abstract="Wählen Sie **Inkrementelle Dateien exportieren** aus, um nur die Daten zu exportieren, die dem Datensatz seit dem letzten Export hinzugefügt wurden. <br> Der erste inkrementelle Dateiexport umfasst alle Daten im Datensatz, sodass eine Aufstockung durchgeführt wird. Weitere inkrementelle Dateien enthalten nur die Daten, die dem Datensatz seit dem ersten Export hinzugefügt wurden."
 
-Im Schritt **[!UICONTROL Planung]** können Sie ein Startdatum sowie eine Exportkadenz für Ihre Datensatzexporte festlegen.
+Im **[!UICONTROL Planung]** Schritt, können Sie ein Startdatum und eine Exportkadenz für Ihre Datensatzexporte festlegen.
 
 Die Option **[!UICONTROL Inkrementelle Dateien exportieren]** ist automatisch ausgewählt. Dies löst einen Export aus, bei dem die erste Datei eine vollständige Momentaufnahme des Datensatzes ist und nachfolgende Dateien inkrementelle Ergänzungen zum Datensatz seit dem vorherigen Export darstellen.
 
@@ -135,11 +134,22 @@ Der standardmäßige Dateiname wird nach dem Zufallsprinzip generiert, was siche
 
 Das Vorhandensein dieser Dateien an Ihrem Speicherort bestätigt einen erfolgreichen Export. Um zu verstehen, wie die exportierten Dateien strukturiert sind, können Sie eine [Parquet](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet)- oder [JSON](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json)-Beispieldatei herunterladen.
 
+#### Komprimierte Datensatzdateien {#compressed-dataset-files}
+
+Im [Zielgruppen-Workflow verbinden](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options)können Sie die zu komprimierenden exportierten Datensatzdateien auswählen, wie unten dargestellt:
+
+![Dateityp und Auswahl der Komprimierung beim Herstellen einer Verbindung zu einem Ziel zum Exportieren von Datensätzen.](/help/destinations/assets/ui/export-datasets/compression-format-datasets.gif)
+
+Beachten Sie bei der Komprimierung den Unterschied im Dateiformat zwischen den beiden Dateitypen:
+
+* Beim Exportieren komprimierter JSON-Dateien ist das exportierte Dateiformat `json.gz`
+* Beim Exportieren komprimierter Parquet-Dateien ist das exportierte Dateiformat `gz.parquet`
+
 ## Entfernen eines Datensatzes aus dem Ziel {#remove-dataset}
 
 Gehen Sie wie folgt vor, um einen Datensatz aus einem vorhandenen Datenfluss zu entfernen:
 
-1. Melden Sie sich bei der [Experience Platform-Benutzeroberfläche](https://platform.adobe.com/) an und wählen Sie **[!UICONTROL Ziele]** über die linke Navigationsleiste aus. Wählen Sie **[!UICONTROL Durchsuchen]** in der oberen Kopfzeile aus, um Ihre vorhandenen Ziel-Datenflüsse anzuzeigen.
+1. Melden Sie sich bei der [Experience Platform-Benutzeroberfläche](https://experience.adobe.com/platform/) an und wählen Sie **[!UICONTROL Ziele]** über die linke Navigationsleiste aus. Wählen Sie **[!UICONTROL Durchsuchen]** in der oberen Kopfzeile aus, um Ihre vorhandenen Ziel-Datenflüsse anzuzeigen.
 
    ![Die Ansicht „Ziel durchsuchen“, wobei eine Zielverbindung angezeigt wird und der Rest unscharf gemacht wurde.](../assets/ui/export-datasets/browse-dataset-connections.png)
 

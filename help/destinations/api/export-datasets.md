@@ -4,10 +4,10 @@ title: (Beta) Exportieren von Datensätzen mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie mit der Flow Service-API Datensätze für ausgewählte Ziele exportieren können.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4873af44f623082375fe4b2caa82475e2ba5b808
 workflow-type: tm+mt
-source-wordcount: '3347'
-ht-degree: 17%
+source-wordcount: '3524'
+ht-degree: 19%
 
 ---
 
@@ -17,8 +17,7 @@ ht-degree: 17%
 >
 >* Die Funktion zum Export von Datensätzen befindet sich derzeit in der Beta-Phase und steht nicht allen Nutzern zur Verfügung. Dokumentation und Funktionalitäten können sich ändern.
 >* Diese Beta-Funktion unterstützt den Export von Daten der ersten Generation, wie er in der [Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) der Real-time Customer Data Platform definiert ist.
->* Diese Funktion steht Kunden zur Verfügung, die das Real-Time CDP Prime- oder Ultimate-Package erworben haben. Bitte wenden Sie sich an den Adobe-Support-Mitarbeiter, um weitere Informationen zu erhalten.
-
+>* Diese Funktion steht Kunden zur Verfügung, die das Real-Time CDP Prime- oder Ultimate-Package erworben haben. Wenden Sie sich für weitere Informationen an Ihren Kundenbetreuer.
 
 In diesem Artikel wird der Workflow erläutert, der zur Verwendung der [!DNL Flow Service API] zum Export [Datensätze](/help/catalog/datasets/overview.md) von Adobe Experience Platform zu Ihrem bevorzugten Cloud-Speicher, z. B. [!DNL Amazon S3], SFTP-Speicherorten oder [!DNL Google Cloud Storage].
 
@@ -48,7 +47,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): Alle Daten, die erfolgreich in Adobe Experience Platform aufgenommen wurden, bleiben im [!DNL Data Lake] als Datensätze. Ein Datensatz ist ein Konstrukt zur Datenspeicherung und -verwaltung, in dem Daten (in der Regel) in einer Tabelle erfasst werden, die ein Schema (Spalten) und Felder (Zeilen) beinhaltet. Datensätze enthalten auch Metadaten, die verschiedene Aspekte der in ihnen gespeicherten Daten beschreiben.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Datensätze in Cloud-Speicher-Ziele in Platform zu exportieren.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen müssen, um Datensätze in Cloud-Speicher-Ziele in Platform zu exportieren.
 
 ### Erforderliche Berechtigungen {#permissions}
 
@@ -2315,6 +2314,29 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 >[!ENDSHADEBOX]
 
 Informationen zu [Verschiedene Parameter, die von der DataFlow-Ausführungs-API zurückgegeben werden](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) in der API-Referenzdokumentation.
+
+## Überprüfen eines erfolgreichen Datensatzexports {#verify}
+
+Beim Exportieren von Datensätzen erstellt Experience Platform eine `.json`- oder `.parquet`-Datei an dem von Ihnen angegebenen Speicherort. Erwarten Sie, dass eine neue Datei entsprechend dem Exportplan, den Sie beim Speichern angegeben haben, in Ihrem Speicherort abgelegt wird. [Erstellen eines Datenflusses](#create-dataflow).
+
+Experience Platform erstellt eine Ordnerstruktur am angegebenen Speicherort, in der die exportierten Datensatzdateien abgelegt werden. Für jeden Exportzeitpunkt wird ein neuer Ordner erstellt, wobei das folgende Muster befolgt wird:
+
+`folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
+
+Der standardmäßige Dateiname wird nach dem Zufallsprinzip generiert, was sicherstellt, dass die Namen von exportierten Dateien eindeutig sind.
+
+### Beispiele für Datensatzdateien {#sample-files}
+
+Das Vorhandensein dieser Dateien an Ihrem Speicherort bestätigt einen erfolgreichen Export. Um zu verstehen, wie die exportierten Dateien strukturiert sind, können Sie eine [Parquet](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet)- oder [JSON](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json)-Beispieldatei herunterladen.
+
+#### Komprimierte Datensatzdateien {#compressed-dataset-files}
+
+Im Schritt zum [Erstellen einer Zielverbindung](#create-target-connection)können Sie die exportierten Datensatzdateien auswählen, die komprimiert werden sollen.
+
+Beachten Sie bei der Komprimierung den Unterschied im Dateiformat zwischen den beiden Dateitypen:
+
+* Beim Exportieren komprimierter JSON-Dateien ist das exportierte Dateiformat `json.gz`
+* Beim Exportieren komprimierter Parquet-Dateien ist das exportierte Dateiformat `gz.parquet`
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
