@@ -5,30 +5,30 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: a3faca5e0a711f0d4f6bafb22bf3c4770f58db8e
 workflow-type: tm+mt
 source-wordcount: '1538'
-ht-degree: 37%
+ht-degree: 78%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
 
-**Releasedatum: 21. Juni 2023**
+**Veröffentlichungsdatum: 21. Juni 2023**
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
-- [Authentifizierung für Experience Platform-APIs](#authentication-platform-apis)
+- [Authentifizierung bei Experience Platform-APIs](#authentication-platform-apis)
 - [Datenerfassung](#data-collection)
 - [Ziele](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Query Service](#query-service)
 - [Quellen](#sources)
 
-## Authentifizierung für Experience Platform-APIs {#authentication-platform-apis}
+## Authentifizierung bei Experience Platform-APIs {#authentication-platform-apis}
 
-Für Experience Platform-API-Benutzer ist die Methode zum Abrufen erforderlicher Zugriffstoken zur Authentifizierung und zum Aufrufen von API-Endpunkten jetzt vereinfacht. Die JWT-Methode zum Abrufen von Zugriffstoken wird nicht mehr unterstützt und durch eine einfachere OAuth-Server-zu-Server-Authentifizierungsmethode ersetzt.<p>![Neue OAuth-Authentifizierungsmethode, um Zugriffstoken hervorgehoben zu bekommen.](/help/landing/images/api-authentication/oauth-authentication-method.png "Neue OAuth-Authentifizierungsmethode, um Zugriffstoken hervorgehoben zu bekommen."){width="100" zoomable="yes"}</p>
+Für Benutzerinnen und Benutzer von Experience Platform-APIs ist die Methode zum Abrufen erforderlicher Zugriffs-Token zur Authentifizierung und zum Aufrufen von API-Endpunkten jetzt vereinfacht. Die JWT-Methode zum Abrufen von Zugriffs-Token wird nicht mehr unterstützt und wurde durch eine einfachere OAuth-Server-zu-Server-Authentifizierungsmethode ersetzt.<p>![Neue OAuth-Authentifizierungsmethode, um Zugriffs-Token hervorheben zu lassen.](/help/landing/images/api-authentication/oauth-authentication-method.png "Neue OAuth-Authentifizierungsmethode, um Zugriffs-Token hervorheben zu lassen."){width="100" zoomable="yes"}</p>
 
-Während bestehende API-Integrationen, die die JWT-Authentifizierungsmethode verwenden, bis zum 1. Januar 2025 weiterhin funktionieren, empfiehlt Adobe dringend, vorhandene Integrationen vor diesem Datum auf die neue OAuth Server-zu-Server-Methode zu migrieren. Lesen Sie das Handbuch unter [Migration von JWT-Anmeldedaten (Service Account) zu OAuth-Server-zu-Server-Anmeldedaten](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
+Während bestehende API-Integrationen, die die JWT-Authentifizierungsmethode verwenden, bis zum 1. Januar 2025 weiterhin funktionieren, empfiehlt Adobe dringend, vorhandene Integrationen vor diesem Datum zu dieser neuen OAuth-Server-zu-Server-Methode zu migrieren. Lesen Sie das Handbuch unter [Migration von JWT-Anmeldedaten (Service Account) zu OAuth-Server-zu-Server-Anmeldedaten](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
 
-Aktualisieren lesen [Tutorial zur Experience Platform-Authentifizierung](/help/landing/api-authentication.md) für weitere Informationen.
+Lesen Sie das aktualisierte [Tutorial zur Experience Platform-Authentifizierung](/help/landing/api-authentication.md), um weitere Informationen zu erhalten.
 
 ## Datenerfassung {#data-collection}
 
@@ -38,13 +38,13 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 | Typ | Funktion | Beschreibung |
 | --- | --- | --- |
-| Erweiterung | [!DNL Google Cloud Platform]-Erweiterung zur Ereignisweiterleitung | Die [[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md) Mit der Ereignisweiterleitungs-Erweiterung können Sie Ereignisdaten zur Aktivierung an Google weiterleiten über [!DNL Google Pub/Sub]. |
-| Erweiterung | [!DNL Cloud connector for Google Analytics 4 (ga4)]-Erweiterung  | Die [[!DNL Cloud connector for Google Analytics 4 (ga4)]](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html) Mit der Ereignisweiterleitungs-Erweiterung können Sie Analysen über die neue [!DNL Google Analytics 4 (ga4)] Standard. |
-| Geheimnis | OAuth 2 JWT Secret | Die [OAuth 2 JWT Secret](../../tags/ui/event-forwarding/secrets.md) ermöglicht Ihnen die Verwendung von Adobe und [!DNL Google] Dienst-Token zur Unterstützung von Server-Server-Interaktionen bei der Ereignisweiterleitung. |
+| Erweiterung | [!DNL Google Cloud Platform]-Erweiterung zur Ereignisweiterleitung | Mit der Erweiterung für die Ereignisweiterleitung von [[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md) können Sie Ereignisdaten zur Aktivierung an Google über [!DNL Google Pub/Sub] weiterleiten. |
+| Erweiterung | [!DNL Cloud connector for Google Analytics 4 (ga4)]-Erweiterung | Mit der Erweiterung für die Ereignisweiterleitung von [[!DNL Cloud connector for Google Analytics 4 (ga4)]](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html) können Sie Analysen über den neuen [!DNL Google Analytics 4 (ga4)]-Standard verfolgen. |
+| Geheimnis | OAuth 2 JWT-Geheimnis | Das [OAuth JWT-Geheimnis](../../tags/ui/event-forwarding/secrets.md) ermöglicht Kundinnen und Kunden die Verwendung von Adobe- und [!DNL Google]-Service-Token zur Unterstützung von Server-zu-Server-Interaktionen bei der Ereignisweiterleitung. |
 
 {style="table-layout:auto"}
 
-Weitere Informationen zur Datenerfassung finden Sie im Abschnitt [Datenerfassung - Übersicht](../../tags/home.md).
+Weitere Informationen zur Datenerfassung finden Sie im Abschnitt [Datenerfassung – Übersicht](../../tags/home.md).
 
 ## Ziele {#destinations}
 
@@ -54,7 +54,7 @@ Weitere Informationen zur Datenerfassung finden Sie im Abschnitt [Datenerfassung
 
 | Ziel | Beschreibung |
 | ----------- | ----------- |
-| [[!BADGE Beta]{type=Informative} [!DNL Amazon Ads] connection](../../destinations/catalog/advertising/amazon-ads.md) | Die [!DNL Amazon Ads] Integration mit Adobe Experience Platform unterstützt jetzt die regionale Weiterleitung zu den verschiedenen [!DNL Amazon Ads] Marktplätze. Mehr dazu im [Zielchangelog](../../destinations/catalog/advertising/amazon-ads.md#changelog). |
+| [[!BADGE Beta]{type=Informative} [!DNL Amazon Ads] Verbindung](../../destinations/catalog/advertising/amazon-ads.md) | Die [!DNL Amazon Ads]-Integration mit Adobe Experience Platform unterstützt jetzt die regionale Weiterleitung zu den verschiedenen [!DNL Amazon Ads]-Marketplaces. Mehr dazu im [Ziel-Änderungsprotokoll](../../destinations/catalog/advertising/amazon-ads.md#changelog). |
 
 {style="table-layout:auto"}
 
@@ -62,7 +62,7 @@ Weitere Informationen zur Datenerfassung finden Sie im Abschnitt [Datenerfassung
 
 | Funktionalität | Beschreibung |
 | ----------- | ----------- |
-| Workspace-Unterstützung für [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) Ziele. | Sie können jetzt beim Konfigurieren einer neuen Adobe Target-Zielverbindung den Adobe Target-Arbeitsbereich auswählen, für den Sie Zielgruppen freigeben möchten. Siehe [Verbindungsparameter](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) für weitere Informationen. Weitere Informationen finden Sie im Tutorial unter [Konfigurieren von Arbeitsbereichen](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) in Adobe Target finden Sie weitere Informationen zu Arbeitsbereichen. |
+| Workspace-Unterstützung für [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md)-Ziele. | Sie können jetzt beim Konfigurieren einer neuen Adobe Target-Zielverbindung den Adobe Target-Arbeitsbereich auswählen, für den Sie Zielgruppen freigeben möchten. Weitere Informationen finden Sie im Abschnitt [Verbindungsparameter](../../destinations/catalog/personalization/adobe-target-connection.md#parameters). Weitere Informationen über Arbeitsbereiche finden Sie im Tutorial zum [Konfigurieren von Arbeitsbereichen](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=de) in Adobe Target. |
 
 {style="table-layout:auto"}
 
@@ -117,14 +117,14 @@ Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-S
 
 ## Abfrage-Service {#query-service}
 
-Mit Query Service können Sie SQL-Standarddaten in Adobe Experience Platform Data Lake abfragen. Sie können beliebige Datensätze aus dem Data Lake verbinden und die Abfrageergebnisse als neuen Datensatz für die Verwendung in Berichten, im Datenwissenschafts-Arbeitsbereich oder für die Aufnahme in das Echtzeit-Kundenprofil verwenden.
+Der Abfrage-Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von Daten in Adobe Experience Platform. Sie können beliebige Datensätze aus dem Data Lake verbinden und die Abfrageergebnisse als neuen Datensatz für die Verwendung in Berichten, im Datenwissenschafts-Arbeitsbereich oder für die Aufnahme in das Echtzeit-Kundenprofil verwenden.
 
 **Aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Inline-Vorlagen | Query Service unterstützt jetzt die Verwendung von Vorlagen, die auf andere Vorlagen in Ihrer SQL verweisen. Reduzieren Sie den Arbeitsaufwand und vermeiden Sie Fehler, indem Sie Inline-Vorlagen in Ihren Abfragen verwenden. Sie können Anweisungen oder Bedingungen wiederverwenden und verschachtelte Vorlagen referenzieren, um die Flexibilität in Ihrer SQL zu erhöhen. Die Größe von Abfragen, die als Vorlagen gespeichert werden können, oder die Anzahl der Vorlagen, auf die über Ihre ursprüngliche Abfrage verwiesen werden kann, ist unbegrenzt. Weitere Informationen finden Sie im Abschnitt [Inline-Vorlagenhandbuch](../../query-service/essential-concepts/inline-templates.md). |
-| Aktualisierungen der Benutzeroberfläche für geplante Abfragen | Verwalten Sie alle geplanten Abfragen von einem Ort in der Benutzeroberfläche mit dem [[!UICONTROL Registerkarte &quot;Geplante Abfragen&quot;]](../../query-service/ui/monitor-queries.md#inline-actions). Die [!UICONTROL Geplante Abfragen] Die Benutzeroberfläche wurde durch das Hinzufügen von Inline-Abfrageaktionen und der neuen Spalte mit dem Abfragestatus verbessert. Die kürzlich hinzugefügten Funktionen umfassen die Möglichkeit, einen Zeitplan zu aktivieren, zu deaktivieren und zu löschen oder Warnhinweise für kommende Abfragen zu abonnieren, die direkt über die [!UICONTROL Geplante Abfragen] anzeigen. <p>![Inline-Aktionen, die im [!UICONTROL Geplante Abfragen] anzeigen.](../../query-service/images/ui/monitor-queries/disable-inline.png "Inline-Aktionen, die im [!UICONTROL Geplante Abfragen] anzeigen."){width="100" zoomable="yes"}</p> |
+| Inline-Vorlagen | Query Service unterstützt jetzt die Verwendung von Vorlagen, die auf andere Vorlagen in Ihrer SQL verweisen. Reduzieren Sie den Arbeitsaufwand und vermeiden Sie Fehler, indem Sie Inline-Vorlagen in Ihren Abfragen verwenden. Sie können Anweisungen oder Bedingungen wiederverwenden und verschachtelte Vorlagen referenzieren, um die Flexibilität in Ihrer SQL zu erhöhen. Die Größe von Abfragen, die als Vorlagen gespeichert werden können, oder die Anzahl der Vorlagen, auf die über Ihre ursprüngliche Abfrage verwiesen werden kann, ist unbegrenzt. Weiterführende Informationen finden Sie im [Benutzerhandbuch zu Inline-Vorlagen](../../query-service/essential-concepts/inline-templates.md). |
+| Aktualisierungen der Benutzeroberfläche für geplante Abfragen | Verwalten Sie alle geplanten Abfragen von einem Ort in der Benutzeroberfläche mit dem [[!UICONTROL Registerkarte &quot;Geplante Abfragen&quot;]](../../query-service/ui/monitor-queries.md#inline-actions). Die Benutzeroberfläche [!UICONTROL Geplante Abfragen] wurde durch das Hinzufügen von Inline-Abfrageaktionen und der neuen Spalte mit dem Abfragestatus verbessert. Die kürzlich hinzugefügten Funktionen umfassen die Möglichkeit, einen Zeitplan zu aktivieren, zu deaktivieren und zu löschen oder Warnhinweise für kommende Abfragen zu abonnieren, direkt von der Ansicht [!UICONTROL Geplante Abfragen] aus. <p>![Inline-Aktionen, die in der Ansicht [!UICONTROL Geplante Abfragen] hervorgehoben sind.](../../query-service/images/ui/monitor-queries/disable-inline.png "Inline-Aktionen, die in der Ansicht [!UICONTROL Geplante Abfragen] hervorgehoben sind."){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
 
@@ -132,7 +132,7 @@ Weitere Informationen zu Query Service finden Sie im Abschnitt [Query Service - 
 
 ## Quellen {#sources}
 
-Mit Adobe Experience Platform können Sie Daten aus externen Quellen aufnehmen und mithilfe von Platform-Services strukturieren, kennzeichnen und verbessern. Sie können Daten aus verschiedenen Quellen erfassen, z. B. aus Adobe Apps, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Mit Adobe Experience Platform können Sie Daten aus externen Quellen aufnehmen und mithilfe von Platform-Services strukturieren, kennzeichnen und verbessern. Sie können Daten aus verschiedenen Quellen aufnehmen, z. B. aus Adobe-Programmen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 
@@ -140,12 +140,12 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Adobe Analytics Classification-Quell-Datenflüsse unterstützen das Löschen | Sie können jetzt Quelldatensätze löschen, die Adobe Analytics-Klassifizierungen als Quelle verwenden. under **[!UICONTROL Quellen]** > **[!UICONTROL Datenflüsse]**, wählen Sie den gewünschten Datenfluss aus und klicken Sie dann auf Löschen. Weitere Informationen finden Sie im Handbuch unter [Erstellen einer Quellverbindung für Adobe Analytics-Klassifizierungsdaten](../../sources/tutorials/ui/create/adobe-applications/classifications.md). |
-| Filterunterstützung für [!DNL Microsoft Dynamics] Verwendung der API | Verwenden Sie logische und Vergleichsoperatoren, um Daten auf Zeilenebene für die [[!DNL Microsoft Dynamics]](../../sources/connectors/crm/ms-dynamics.md) -Quelle. Weitere Informationen finden Sie im Handbuch unter [Filtern von Daten für eine Quelle mithilfe der API](../../sources/tutorials/api/filter.md). |
-| [!BADGE Beta]{type=Informative}[!DNL RainFocus] | Sie können jetzt die [!DNL RainFocus] Integration von Quellen , um Ereignismanagement- und Analysedaten aus Ihren [!DNL RainFocus] -Konto auf Experience Platform. Weitere Informationen finden Sie im Abschnitt [[!DNL RainFocus] Quellübersicht](../../sources/connectors/analytics/rainfocus.md). |
-| Unterstützung für Adobe Commerce | Sie können jetzt die Adobe Commerce-Quellenintegration verwenden, um Daten aus Ihrem Adobe Commerce-Konto in die Experience Platform zu übertragen. Weitere Informationen finden Sie im Abschnitt [Adobe Commerce-Quellübersicht](../../sources/connectors/adobe-applications/commerce.md). |
-| Unterstützung für [!DNL Mixpanel] | Sie können jetzt die [!DNL Mixpanel] Integration von Quellen , um Analysedaten aus Ihrer [!DNL Mixpanel] -Konto zur Experience Platform mithilfe von APIs oder der -Benutzeroberfläche. Weitere Informationen finden Sie im Abschnitt [[!DNL Mixpanel] Quellübersicht](../../sources/connectors/analytics/mixpanel.md). |
-| Unterstützung für [!DNL Zendesk] | Sie können jetzt die [!DNL Zendesk] Quellenintegration zur Einbindung von Kundenerfolgsdaten aus Ihrer [!DNL Zendesk] -Konto zur Experience Platform mithilfe von APIs oder der -Benutzeroberfläche. Weitere Informationen finden Sie im Abschnitt [[!DNL Zendesk] Quellübersicht](../../sources/connectors/customer-success/zendesk.md). |
+| Unterstützung der Löschung von Datenflüssen, die die Adobe Analytics-Klassifizierung als Quelle verwenden | Sie können jetzt Quelldatenflüsse löschen, die Adobe Analytics-Klassifizierungen als Quelle verwenden. Wählen Sie unter **[!UICONTROL Quellen]** > **[!UICONTROL Datenflüsse]** den gewünschten Datenfluss aus und klicken Sie dann auf „Löschen“. Weitere Informationen finden Sie im Benutzerhandbuch unter [Erstellen einer Quellverbindung für Adobe Analytics-Klassifizierungsdaten](../../sources/tutorials/ui/create/adobe-applications/classifications.md). |
+| Filterunterstützung für [!DNL Microsoft Dynamics] unter Verwendung der API | Verwenden Sie zum Filtern von Daten auf Zeilenebene, die aus der [[!DNL Microsoft Dynamics]](../../sources/connectors/crm/ms-dynamics.md)-Quelle stammen, logische Operatoren und Vergleichsoperatoren. Weitere Informationen finden Sie im Benutzerhandbuch zu [Filtern von Daten für eine Quelle mithilfe der API](../../sources/tutorials/api/filter.md). |
+| [!BADGE Beta]{type=Informative}[!DNL RainFocus] | Sie können jetzt die Integration von [!DNL RainFocus]-Quellen verwenden, um Ereignis-Management- und Analysedaten aus Ihren [!DNL RainFocus]-Konto zu Experience Platform zu bringen. Weitere Informationen finden Sie unter [[!DNL RainFocus] Quelle – Übersicht](../../sources/connectors/analytics/rainfocus.md). |
+| Unterstützung für Adobe Commerce | Sie können jetzt die Adobe Commerce-Quellenintegration verwenden, um Daten aus Ihrem Adobe Commerce-Konto in Experience Platform zu übertragen. Weitere Informationen finden Sie in der [Adobe Commerce-Quelle – Übersicht](../../sources/connectors/adobe-applications/commerce.md). |
+| Unterstützung für [!DNL Mixpanel] | Sie können jetzt die Integration von [!DNL Mixpanel]-Quellen verwenden, um Analysedaten aus Ihrem [!DNL Mixpanel]-Konto mithilfe von APIs oder der Benutzeroberfläche in Experience Platform zu übertragen. Weitere Informationen finden Sie in unter [[!DNL Mixpanel] Quelle – Übersicht](../../sources/connectors/analytics/mixpanel.md). |
+| Unterstützung für [!DNL Zendesk] | Sie können jetzt die Integration von [!DNL Zendesk]-Quellen verwenden, um Kundenerfolgsdaten aus Ihrem [!DNL Zendesk]-Konto mithilfe von APIs oder der Benutzeroberfläche in Experience Platform zu übertragen. Weitere Informationen finden Sie unter [[!DNL Zendesk] Quelle – Übersicht](../../sources/connectors/customer-success/zendesk.md). |
 
 {style="table-layout:auto"}
 
