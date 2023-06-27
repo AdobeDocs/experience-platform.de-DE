@@ -5,10 +5,10 @@ breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Tags
 solution: Data Collection
-source-git-commit: 6e569ca3f83b374f88ca46fd8f2c40bbed203527
+source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
-source-wordcount: '1001'
-ht-degree: 99%
+source-wordcount: '1005'
+ht-degree: 98%
 
 ---
 
@@ -279,7 +279,7 @@ ht-degree: 99%
    * [Abwärtskompatibilitätsstandard](./extension-dev/backwards-compatibility.md)
 * Reactor-API {#api}
    * [Übersicht](./api/overview.md)
-   * [Erste Schritte](./api/getting-started.md)
+   * [Authentifizierung und Zugriff auf die Reactor-API](./api/getting-started.md)
    * Endpunkte {#endpoints}
       * [Firmen](./api/endpoints/companies.md)
       * [Eigenschaften](./api/endpoints/properties.md)

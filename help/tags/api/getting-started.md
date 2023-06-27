@@ -1,17 +1,17 @@
 ---
-title: Erste Schritte mit der Reactor-API
+title: Authentifizierung und Zugriff auf die Reactor-API
 description: Hier erfahren Sie, wie Sie mit der Reactor-API beginnen, einschließlich der Schritte zum Generieren erforderlicher Zugriffsberechtigungen.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
-source-wordcount: '1049'
-ht-degree: 95%
+source-wordcount: '921'
+ht-degree: 53%
 
 ---
 
-# Erste Schritte mit der Reactor-API
+# Authentifizierung und Zugriff auf die Reactor-API
 
-Um die [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/) verwenden zu können, muss jede Anfrage die folgenden Authentifizierungs-Header enthalten:
+Um die [Reactor-API](https://developer.adobe.com/experience-platform-apis/references/reactor/) zum Erstellen und Verwalten von Tags-Erweiterungen muss jede Anfrage die folgenden Authentifizierungskopfzeilen enthalten:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -19,11 +19,11 @@ Um die [Reactor-API](https://www.adobe.io/experience-platform-apis/references/re
 
 In diesem Handbuch wird beschrieben, wie Sie die Adobe-Entwicklerkonsole verwenden, um die Werte für die einzelnen Header zu erfassen, damit Sie Aufrufe an die Reactor-API durchführen können.
 
-## Erhalten von Entwicklerzugriff auf Adobe Experience Platform
+## Erhalten von Entwicklerzugriff auf Adobe Experience Platform {#gain-developer-access}
 
-Bevor Sie Authentifizierungswerte für die Reactor-API generieren können, müssen Sie über Entwicklerzugriff auf Experience Platform verfügen. Um Entwicklerzugriff zu erhalten, führen Sie die ersten Schritte im [Authentifizierungs-Tutorial für Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) aus. Kehren Sie nach Abschluss des Schritts &quot;Zugriff auf Benutzer erhalten&quot;zu diesem Tutorial zurück, um die spezifischen Anmeldeinformationen für die Reactor-API zu generieren.
+Bevor Sie Authentifizierungswerte für die Reactor-API generieren können, müssen Sie über Entwicklerzugriff auf Experience Platform verfügen. Um Entwicklerzugriff zu erhalten, führen Sie die ersten Schritte im [Authentifizierungs-Tutorial für Experience Platform](/help/landing/api-authentication.md) aus. Nachdem Sie die [Benutzerzugriff erlangen](/help/landing/api-authentication.md#gain-user-access) Schritt, kehren Sie zu diesem Tutorial zurück, um die spezifischen Anmeldeinformationen für die Reactor-API zu generieren.
 
-## Generieren von Zugriffsberechtigungen
+## Generieren von Zugriffsberechtigungen {#generate-access-credentials}
 
 Mithilfe der Adobe-Entwicklerkonsole müssen Sie die folgenden drei Zugriffsberechtigungen generieren:
 
@@ -35,7 +35,7 @@ Die Kennung Ihres Unternehmens (`{ORG_ID}`) und API-Schlüssel (`{API_KEY}`) kö
 
 Die Schritte zum Generieren dieser Werte werden im Folgenden detailliert beschrieben.
 
-### Einmalige Einrichtung
+### Einmalige Einrichtung {#one-time-setup}
 
 Wechseln Sie zur [Adobe-Entwicklerkonsole](https://www.adobe.com/go/devs_console_ui) und melden Sie sich mit Ihrer Adobe ID an. Führen Sie anschließend die im Tutorial [Erstellen eines leeren Projekts](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) in der Dokumentation zur Entwicklerkonsole beschriebenen Schritte aus.
 
@@ -43,128 +43,83 @@ Nachdem Sie ein Projekt erstellt haben, wählen Sie **API hinzufügen** im Bilds
 
 ![](../images/api/getting-started/add-api-button.png)
 
-Der Bildschirm **API hinzufügen** wird angezeigt. Wählen Sie **Experience Platform Reactor-API** aus der Liste der verfügbaren APIs, bevor Sie auf **Weiter** klicken.
+Der Bildschirm **API hinzufügen** wird angezeigt. Auswählen **Experience Platform Launch-API** aus der Liste der verfügbaren APIs, bevor Sie **Nächste**.
 
 ![](../images/api/getting-started/add-launch-api.png)
 
-Im nächsten Bildschirm werden Sie aufgefordert, eine Berechtigung für ein JSON Web Token (JWT) zu erstellen, die entweder ein neues Schlüsselpaar generiert oder Ihren eigenen öffentlichen Schlüssel hochlädt. Wählen Sie für dieses Tutorial die Option **Schlüsselpaar generieren** und dann **Schlüsselpaar generieren** in der rechten unteren Ecke.
+Wählen Sie anschließend den Authentifizierungstyp aus, um Zugriffstoken zu generieren und auf die Experience Platform-API zuzugreifen.
 
-![](../images/api/getting-started/create-jwt.png)
-
-Im nächsten Bildschirm wird bestätigt, dass das Schlüsselpaar erfolgreich generiert wurde und ein komprimierter Ordner mit einem öffentlichen Zertifikat und einem privaten Schlüssel automatisch auf den Computer heruntergeladen wird. Dieser private Schlüssel ist in einem späteren Schritt erforderlich, um ein Zugriffs-Token zu generieren.
+>[!IMPORTANT]
+>
+>Wählen Sie die **[!UICONTROL OAuth Server-zu-Server]** -Methode, da dies künftig die einzige unterstützte Methode sein wird. Die **[!UICONTROL Dienstkonto (JWT)]** -Methode veraltet ist. Während Integrationen, die die JWT-Authentifizierungsmethode verwenden, bis zum 1. Januar 2025 weiterhin funktionieren, empfiehlt Adobe dringend, vorhandene Integrationen vor diesem Datum auf die neue OAuth Server-zu-Server-Methode zu migrieren. Weitere Informationen finden Sie im Abschnitt . [!BADGE Veraltet]{type=negative}[JSON-Web-Token (JWT) generieren](/help/landing/api-authentication.md#jwt) im Tutorial zur Platform-API-Authentifizierung.
 
 Klicken Sie auf **Weiter**, um fortzufahren.
 
-![](../images/api/getting-started/keypair-generated.png)
+![Wählen Sie die OAuth Server-zu-Server-Authentifizierungsmethode aus.](/help/tags/images/api/getting-started/oauth-authentication-method.png)
 
 Im nächsten Bildschirm werden Sie aufgefordert, ein oder mehrere Produktprofile auszuwählen, die mit der API-Integration verknüpft werden sollen.
 
 >[!NOTE]
 >
->Produktprofile werden von Ihrem Unternehmen über die Adobe Admin Console verwaltet und enthalten bestimmte Berechtigungssätze für granulare Funktionen. Produktprofile und ihre Berechtigungen können nur von Benutzern mit Administratorrechten innerhalb Ihres Unternehmens verwaltet werden. Wenn Sie sich nicht sicher sind, welche Produktprofile für die API ausgewählt werden sollen, wenden Sie sich an Ihren Administrator.
+Produktprofile werden von Ihrem Unternehmen über die Adobe Admin Console verwaltet und enthalten bestimmte Berechtigungssätze für granulare Funktionen. Produktprofile und ihre Berechtigungen können nur von Benutzern mit Administratorrechten innerhalb Ihres Unternehmens verwaltet werden. Wenn Sie sich nicht sicher sind, welche Produktprofile für die API ausgewählt werden sollen, wenden Sie sich an Ihren Administrator.
 
 Wählen Sie die gewünschten Produktprofile aus der Liste aus und klicken Sie dann auf **Konfigurierte API speichern**, um die API-Registrierung abzuschließen.
 
 ![](../images/api/getting-started/select-product-profile.png)
 
-Nachdem die API zum Projekt hinzugefügt wurde, wird die Projektseite erneut auf der Seite der Experience Platform Reactor-API angezeigt. Scrollen Sie von hier nach unten zum Abschnitt **Service-Konto (JWT)**, der die folgenden Zugriffsberechtigungen bereitstellt, die für alle Aufrufe der Reactor-API erforderlich sind:
+### Sammeln von -Anmeldeinformationen {#gather-credentials}
 
-* **CLIENT-ID**: Die Client-ID ist der erforderliche `{API_KEY}`, der im `x-api-key`-Header angegeben werden muss.
-* **ORGANISATIONS-ID**: Die Organisations-ID ist der `{ORG_ID}`-Wert, der im `x-gw-ims-org-id`-Header verwendet werden muss.
+Nachdem die API zum Projekt hinzugefügt wurde, wird die **[!UICONTROL Experience Platform-API]** -Seite für das Projekt werden die folgenden Anmeldeinformationen angezeigt, die für alle Aufrufe von Experience Platform-APIs erforderlich sind:
 
-![](../images/api/getting-started/access-creds.png)
+* `{API_KEY}` ([!UICONTROL Client-ID])
+* `{ORG_ID}` ([!UICONTROL Organisations-ID])
 
-### Authentifizierung für jede Sitzung
+![Integrationsinformationen nach dem Hinzufügen einer API in der Developer Console.](/help/tags/images/api/getting-started/api-integration-information.png)
 
-Nachdem Sie nun über die Werte `{API_KEY}` und `{ORG_ID}` verfügen, generiert der letzte Schritt einen `{ACCESS_TOKEN}`-Wert.
+### Zugriffstoken generieren {#generate-access-token}
 
->[!NOTE]
+Der nächste Schritt besteht darin, eine `{ACCESS_TOKEN}` Berechtigung zur Verwendung in Platform-API-Aufrufen. Im Gegensatz zu den Werten für `{API_KEY}` und `{ORG_ID}`muss ein neues Token alle 24 Stunden generiert werden, damit Sie weiterhin Platform-APIs verwenden können.
+
+>[!TIP]
 >
->Diese Token laufen nach 24 Stunden ab. Wenn Sie diese Integration für ein Programm verwenden, empfiehlt es sich, Ihr Träger-Token programmgesteuert aus Ihrem Programm abzurufen.
+Diese Token laufen nach 24 Stunden ab. Wenn Sie diese Integration für ein Programm verwenden, empfiehlt es sich, Ihr Träger-Token programmgesteuert aus Ihrem Programm abzurufen.
 
 Je nach Anwendungsfall haben Sie zwei Möglichkeiten, Ihre Zugriffs-Token zu generieren:
 
 * [Manuelles Generieren von Token](#manual)
-* [Programmgesteuertes Generieren von Token](#program)
+* [Token-Generierung automatisieren](#auto-token)
 
 #### Manuelles Generieren von Zugriffs-Token {#manual}
 
-Öffnen Sie den zuvor heruntergeladenen privaten Schlüssel in einem Texteditor oder Browser und kopieren Sie den Inhalt. Navigieren Sie dann zurück zur Entwicklerkonsole und fügen Sie den privaten Schlüssel in den Abschnitt **Zugriffs-Token generieren** auf der Reactor-API-Seite für Ihr Projekt ein, bevor Sie **Token generieren** auswählen.
+So generieren Sie manuell eine neue `{ACCESS_TOKEN}`, navigieren Sie zu **[!UICONTROL Anmeldeinformationen]** > **[!UICONTROL OAuth Server-zu-Server]** und wählen Sie **[!UICONTROL Zugriffstoken generieren]**, wie unten dargestellt.
 
-![](../images/api/getting-started/paste-private-key.png)
+![Bildschirmaufzeichnung, wie und wie das Zugriffstoken in der Benutzeroberfläche der Developer Console generiert wird.](/help/tags/images/api/getting-started/generate-access-token.gif)
 
-Es wird ein neues Zugriffs-Token generiert und eine Schaltfläche zum Kopieren des Tokens in die Zwischenablage bereitgestellt. Dieser Wert wird für den erforderlichen `Authorization`-Header verwendet und muss im Format `Bearer {ACCESS_TOKEN}` angegeben werden.
+Es wird ein neues Zugriffs-Token generiert und eine Schaltfläche zum Kopieren des Tokens in die Zwischenablage bereitgestellt. Dieser Wert wird für die erforderliche Autorisierungskopfzeile verwendet und muss im Format angegeben werden `Bearer {ACCESS_TOKEN}`.
 
-![](../images/api/getting-started/token-generated.png)
+#### Token-Generierung automatisieren {#auto-token}
 
-#### Programmgesteuertes Generieren von Zugriffs-Token {#program}
+Sie können auch eine Postman-Umgebung und -Sammlung verwenden, um Zugriffstoken zu generieren. Weitere Informationen finden Sie im Abschnitt zu [Verwenden von Postman zum Authentifizieren und Testen von API-Aufrufen](/help/landing/api-authentication.md#use-postman) im Authentifizierungshandbuch für die Experience Platform-API.
 
-Wenn Sie Ihre Integration für ein Programm verwenden, können Sie über API-Anfragen programmgesteuert Zugriffs-Token generieren. Um dies zu erreichen, müssen Sie die folgenden Werte abrufen:
+## API-Anmeldeinformationen testen {#test-api-credentials}
 
-* Client-ID (`{API_KEY}`)
-* Client-Geheimnis (`{SECRET}`)
-* Ein JSON-Web-Token (`{JWT}`)
-
-Ihre Client-ID und Ihr Client-Geheimnis können Sie auf der Hauptseite für Ihr Projekt abrufen, wie im [vorherigen Schritt](#one-time-setup) dargestellt.
-
-![](../images/api/getting-started/auto-access-creds.png)
-
-Um Ihre JWT-Berechtigung zu erhalten, navigieren Sie im linken Navigationsbereich zu **Service-Konto (JWT)** und wählen Sie dann die Registerkarte **JWT generieren** aus. Fügen Sie auf dieser Seite unter **Benutzerdefiniertes JWT generieren** den Inhalt Ihres privaten Schlüssels in das bereitgestellte Textfeld ein und wählen Sie dann **Token generieren** aus.
-
-![](../images/api/getting-started/generate-jwt.png)
-
-Das generierte JWT wird unten angezeigt, sobald die Verarbeitung abgeschlossen ist, zusammen mit einem cURL-Beispielbefehl, mit dem Sie das Token bei Bedarf testen können. Verwenden Sie die Schaltfläche **Kopieren**, um das Token in die Zwischenablage zu kopieren.
-
-![](../images/api/getting-started/jwt-generated.png)
-
-Nachdem Sie Ihre Anmeldedaten gesammelt haben, können Sie den untenstehenden API-Aufruf in Ihr Programm integrieren, um Zugriffs-Token programmgesteuert zu generieren.
-
-**Anfrage**
-
-Die Anfrage muss eine `multipart/form-data`-Payload senden und Ihre Authentifizierungsberechtigungen angeben, wie unten gezeigt:
-
-```shell
-curl -X POST \
-  https://ims-na1.adobelogin.com/ims/exchange/jwt/ \
-  -H 'Content-Type: multipart/form-data' \
-  -F 'client_id={API_KEY}' \
-  -F 'client_secret={SECRET}' \
-  -F 'jwt_token={JWT}'
-```
-
-**Antwort**
-
-Eine erfolgreiche Antwort gibt ein neues Zugriffs-Token sowie die Anzahl der Sekunden zurück, die bis zu seinem Ablauf verbleiben.
-
-```json
-{
-  "token_type": "bearer",
-  "access_token": "{ACCESS_TOKEN}",
-  "expires_in": 86399999
-}
-```
-
-| Eigenschaft | Beschreibung |
-| :-- | :-- |
-| `access_token` | Der neu generierte Wert des Zugriffs-Tokens. Dieser Wert wird für den erforderlichen `Authorization`-Header verwendet und muss im Format `Bearer {ACCESS_TOKEN}` angegeben werden. |
-| `expires_in` | Die verbleibende Zeit bis zum Ablauf des Tokens in Millisekunden. Sobald ein Token abläuft, muss ein neues generiert werden. |
-
-{style="table-layout:auto"}
-
-## Nächste Schritte
-
-Durch Befolgen der Schritte in diesem Tutorial sollten Sie über gültige Werte für `{ORG_ID}`, `{API_KEY}` und `{ACCESS_TOKEN}` verfügen. Sie können diese Werte jetzt testen, indem Sie sie in einer einfachen cURL-Anfrage an die Reactor-API verwenden.
+Durch Befolgen der Schritte in diesem Tutorial sollten Sie über gültige Werte für `{ORG_ID}`, `{API_KEY}`und `{ACCESS_TOKEN}`. Sie können diese Werte jetzt testen, indem Sie sie in einer einfachen cURL-Anfrage an die Reactor-API verwenden.
 
 Beginnen Sie mit dem Versuch, einen API-Aufruf durchzuführen, um [alle Unternehmen aufzulisten](./endpoints/companies.md#list).
 
 >[!NOTE]
 >
->Möglicherweise haben Sie in Ihrer Organisation keine Unternehmen. In diesem Fall lautet die Antwort HTTP-Status 404 (Nicht gefunden). Solange kein 403-Fehler (Verboten) ausgegeben wird, sind Ihre Zugangsdaten gültig und funktionieren.
+Möglicherweise haben Sie in Ihrer Organisation keine Unternehmen. In diesem Fall lautet die Antwort HTTP-Status 404 (Nicht gefunden). Solange kein 403-Fehler (Verboten) ausgegeben wird, sind Ihre Zugangsdaten gültig und funktionieren.
 
 Sobald Sie sich vergewissert haben, dass Ihre Zugriffsberechtigungen funktionieren, lesen Sie die weitere API-Referenzdokumentation, um mehr über die vielen Funktionen der API zu erfahren.
 
-## Zusätzliche Ressourcen
+## Lesen von Beispiel-API-Aufrufen {#read-sample-api-calls}
 
-JWT-Bibliotheken und SDKs: [https://jwt.io/](https://jwt.io/)
+Jedes Endpunkthandbuch enthält Beispiel-API-Aufrufe, die zeigen, wie Sie Ihre Anfragen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/api-guide.md#sample-api) in den Ersten Schritten für Platform-APIs.
 
-Postman-API-Entwicklung: [https://www.postman.com/](https://www.postman.com/)
+## Nächste Schritte {#next-steps}
+
+Nachdem Sie nun wissen, welche Header verwendet werden sollen, können Sie mit Aufrufen an die Reactor-API beginnen. Wählen Sie eine der Endpunktleitfäden für die ersten Schritte aus:
+
+* [Referenzdokumentation zur Reactor-API](https://developer.adobe.com/experience-platform-apis/references/reactor/)
+* [Übersicht über die Reactor-API](/help/tags/api/overview.md)
