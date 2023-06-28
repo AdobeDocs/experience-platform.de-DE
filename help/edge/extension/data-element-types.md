@@ -2,10 +2,10 @@
 title: Datenelementtypen in der Adobe Experience Platform Web SDK-Erweiterung
 description: Erfahren Sie mehr über die verschiedenen Datenelementtypen, die von der Adobe Experience Platform Web SDK-Tag-Erweiterung bereitgestellt werden.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 19430906e5e97732f88bfe13501c4a75f9338a07
+source-git-commit: 13912d8f5488aaa9ffa79021b67607fe5eec0732
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 8%
+source-wordcount: '585'
+ht-degree: 6%
 
 ---
 
@@ -13,10 +13,6 @@ ht-degree: 8%
 # Datenelementtypen
 
 Nachdem Sie die [Aktionstypen](action-types.md) im [Adobe Experience Platform Web SDK-Tag-Erweiterung](web-sdk-extension-configuration.md)müssen Sie Ihre Datenelementtypen konfigurieren. Auf dieser Seite werden die verfügbaren Datenelementtypen beschrieben.
-
-## Ereigniszusammenführungs-ID {#event-merge-id}
-
-Dieses Datenelement stellt die Zusammenführungs-ID eines Ereignisses bereit, falls verwendet. Für dieses Datenelement ist keine Konfiguration erforderlich. Das bereitgestellte Datenelement bleibt unverändert, bis der Besucher die Seite verlässt oder bis die Variable **[!UICONTROL Zusammenführungs-ID des Ereignisses zurücksetzen]** Aktionstyp verwendet wird.
 
 ## Identitätszuordnung {#identity-map}
 
