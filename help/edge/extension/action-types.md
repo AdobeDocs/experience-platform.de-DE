@@ -3,9 +3,9 @@ title: Aktionstypen in der Adobe Experience Platform Web SDK-Erweiterung
 description: Erfahren Sie mehr über die verschiedenen Aktionstypen, die von der Adobe Experience Platform Web SDK-Tag-Erweiterung bereitgestellt werden.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: db7700d5c504e484f9571bbb82ff096497d0c96e
+source-git-commit: 19430906e5e97732f88bfe13501c4a75f9338a07
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '820'
 ht-degree: 4%
 
 ---
@@ -39,7 +39,7 @@ Bei dieser Aktion erhalten Sie auch ein optionales Feld, um eine Identity Map ei
 
 Wenn Sie Ihre Ereigniszusammenführungs-ID auf Ihrer Seite zurücksetzen möchten, können Sie dies mit dieser Aktion tun. Um Ihre ID zurückzusetzen, wählen Sie die Zusammenführungs-ID aus, die Sie zurücksetzen möchten, und lösen Sie die Aktion nach Bedarf aus.
 
-## (Beta) Variable aktualisieren {#update-variable}
+## Variable aktualisieren {#update-variable}
 
 >[!IMPORTANT]
 >

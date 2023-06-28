@@ -2,9 +2,9 @@
 title: Datenelementtypen in der Adobe Experience Platform Web SDK-Erweiterung
 description: Erfahren Sie mehr über die verschiedenen Datenelementtypen, die von der Adobe Experience Platform Web SDK-Tag-Erweiterung bereitgestellt werden.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: db7700d5c504e484f9571bbb82ff096497d0c96e
+source-git-commit: 19430906e5e97732f88bfe13501c4a75f9338a07
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '632'
 ht-degree: 8%
 
 ---
@@ -48,7 +48,7 @@ Beachten Sie Folgendes, wenn Sie bestimmte Felder Ihres Schemas öffnen, z. B. `
 >
 >Füllen Sie nur die Informationen aus, die Sie sammeln möchten. Alles, was nicht ausgefüllt wird, wird beim Senden der Daten an die Lösungen weggelassen.
 
-## (Beta)-Variable {#variable}
+## Variable {#variable}
 
 >[!IMPORTANT]
 >
