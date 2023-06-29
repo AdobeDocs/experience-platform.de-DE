@@ -2,9 +2,9 @@
 title: Datenelementtypen in der Adobe Experience Platform Web SDK-Erweiterung
 description: Erfahren Sie mehr über die verschiedenen Datenelementtypen, die von der Adobe Experience Platform Web SDK-Tag-Erweiterung bereitgestellt werden.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 13912d8f5488aaa9ffa79021b67607fe5eec0732
+source-git-commit: eef0b50b12b0e3be34ad519f2d106392c23b7d69
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '568'
 ht-degree: 6%
 
 ---
@@ -45,10 +45,6 @@ Beachten Sie Folgendes, wenn Sie bestimmte Felder Ihres Schemas öffnen, z. B. `
 >Füllen Sie nur die Informationen aus, die Sie sammeln möchten. Alles, was nicht ausgefüllt wird, wird beim Senden der Daten an die Lösungen weggelassen.
 
 ## Variable {#variable}
-
->[!IMPORTANT]
->
->Dies ist derzeit eine Betafunktion und kann geändert werden. Zukünftige Versionen können brechende Änderungen enthalten.
 
 Eine andere Möglichkeit, XDM-Objekte zu erstellen, ist die Verwendung der **[!UICONTROL Variable]** Datenelement. Während das XDM-Objektdatenelement erstellt wird, wenn darauf verwiesen wird, z. B. in einem `sendEvent` -Befehl, die **[!UICONTROL Variable]** Datenelement kann aktualisiert werden über [!UICONTROL Variable aktualisieren] Aktionen. Um das Datenelement zu verwenden, wählen Sie die richtige Adobe Experience Platform-Sandbox und das richtige Schema aus.
 
