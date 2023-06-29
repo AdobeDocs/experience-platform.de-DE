@@ -5,10 +5,10 @@ breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Tags
 solution: Data Collection
-source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
+source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
 workflow-type: tm+mt
-source-wordcount: '1005'
-ht-degree: 98%
+source-wordcount: '1027'
+ht-degree: 97%
 
 ---
 
@@ -96,8 +96,16 @@ ht-degree: 98%
          * [Versionshinweise](./extensions/client/id-service/release-notes.md)
       * Adobe Experience Platform Demo {#platform-demo}
          * [Übersicht](./extensions/client/platform-demo/overview.md)
-      * Adobe Experience Platform Web SDK {#sdk}
-         * [Übersicht](./extensions/client/sdk/overview.md)
+      * Adobe Experience Platform Web SDK {#web-sdk}
+         * [Übersicht](./extensions/client/web-sdk/overview.md)
+         * [Web SDK-Tag-Erweiterung konfigurieren](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
+         * [Ereignistypen](./extensions/client/web-sdk/event-types.md)
+         * [Aktionstypen](./extensions/client/web-sdk/action-types.md)
+         * [Datenelementtypen](./extensions/client/web-sdk/data-element-types.md)
+         * [Zugreifen auf die ECID](./extensions/client/web-sdk/accessing-the-ecid.md)
+         * [Web SDK-Plug-ins](./extensions/client/web-sdk/web-sdk-plugins.md)
+         * [Versionshinweise zur Web SDK-Erweiterung](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
+         * [Versionshinweise zu Web SDK-Plug-ins](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
       * Adobe Experience Manager Asset Insights {#asset-insights}
          * [Übersicht](./extensions/client/asset-insights/overview.md)
          * [Versionshinweise](./extensions/client/asset-insights/release-notes.md)
@@ -138,9 +146,6 @@ ht-degree: 98%
       * Common Analytics Plugins {#plugins}
          * [Übersicht](./extensions/client/plugins/overview.md)
          * [Versionshinweise](./extensions/client/plugins/release-notes.md)
-      * Allgemeine Web SDK-Plug-ins {#web-sdk-plugins}
-         * [Übersicht](./extensions/client/web-sdk-plugins/overview.md)
-         * [Versionshinweise](./extensions/client/web-sdk-plugins/release-notes.md)
       * [Verknüpfen](https://exchange.adobe.com/apps/ec/104690)
       * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
       * [Cookie-Einverständnisverwaltung durch Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/107037)

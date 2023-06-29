@@ -2,7 +2,7 @@
 title: Adobe Experience Platform Demo-Erweiterung – Übersicht
 description: Machen Sie sich mit der Erweiterung „Adobe Experience Platform Demo“ in Adobe Experience Platform vertraut.
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '1069'
 ht-degree: 100%
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Diese Erweiterung wird eingestellt und durch das [Adobe Experience Platform Web SDK](../sdk/overview.md) ersetzt.
+>Diese Erweiterung wird eingestellt und durch das [Adobe Experience Platform Web SDK](../web-sdk/overview.md) ersetzt.
 
 Die Funktionen dieser Erweiterung werden auf die neue Erweiterung portiert. Nachfolgend ein kurzer Vergleich der aktuellen Funktionen:
 
@@ -26,11 +26,11 @@ Die Funktionen dieser Erweiterung werden auf die neue Erweiterung portiert. Nach
 | Unterstützung für benutzerdefinierte Kunden-IDs | Unterstützung für benutzerdefinierte Kunden-IDs |
 | Client-seitige Mapping-Benutzeroberfläche für XDM | Build in ECID (visitor.js nicht benötigt) |
 | Möglichkeit zur Erstellung einer Streaming-Verbindung | Opt-in-Unterstützung |
-|  | Unterstützung von XDM als Datenelement |
-|  | Unterstützung für Erstanbieter-Domain |
-|  | Debugging-Tools integriert |
-|  | Automatische Erfassung des Browserkontexts |
-|  | Vollständig quelloffen (Open Source) |
+| | Unterstützung von XDM als Datenelement |
+| | Unterstützung für Erstanbieter-Domain |
+| | Debugging-Tools integriert |
+| | Automatische Erfassung des Browserkontexts |
+| | Vollständig quelloffen (Open Source) |
 
 
 ## Konfigurieren der Adobe Experience Platform-Erweiterung

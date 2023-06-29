@@ -3,7 +3,7 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 97ae7002d4bacb224f7cd57cca4a0c1ede11dd26
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '1549'
 ht-degree: 98%
@@ -14,7 +14,7 @@ ht-degree: 98%
 # Versionshinweise
 
 In diesem Dokument werden die Versionshinweise für das Adobe Experience Platform Web SDK behandelt.
-Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Versionshinweisen zur Tag-Erweiterung für Web SDK](extension/web-sdk-ext-release-notes.md).
+Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Versionshinweisen zur Tag-Erweiterung für Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
 ## Version 2.16.0 - 17. Mai 2023
 

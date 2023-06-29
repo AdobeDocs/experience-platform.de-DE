@@ -2,7 +2,7 @@
 title: Konfigurieren von Überschreibungen für Datenströme
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Datastreams Außerkraftsetzungen von Datastreams konfigurieren und über das Web SDK aktivieren.
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: 621dd1dbf99720604f797b97a5e31e090456cdf3
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '971'
 ht-degree: 5%
@@ -18,7 +18,7 @@ Dies hilft Ihnen beim Trigger verschiedener Datenspeicherverhaltensweisen als de
 Die Außerkraftsetzung der Datastream-Konfiguration besteht aus zwei Schritten:
 
 1. Zunächst müssen Sie Ihre Überschreibungen der Datenstromkonfiguration auf der Seite [Datenstromkonfiguration](configure.md) definieren.
-2. Anschließend müssen Sie die Überschreibungen entweder über einen Web SDK-Befehl oder mithilfe der [Tag-Erweiterung](../extension/web-sdk-extension-configuration.md) des Web SDK an das Edge-Netzwerk senden.
+2. Anschließend müssen Sie die Überschreibungen entweder über einen Web SDK-Befehl oder mithilfe der [Tag-Erweiterung](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) des Web SDK an das Edge-Netzwerk senden.
 
 In diesem Artikel wird der Prozess zur Außerkraftsetzung der End-to-End-Datenspeicherung für jede unterstützte Überschreibungstyp erläutert.
 
@@ -91,7 +91,7 @@ Sie sollten jetzt die Außerkraftsetzungen des ID-Synchronisierungs-Containers k
 
 >[!NOTE]
 >
->Alternativ zum Senden der Konfigurationsüberschreibungen über Web SDK-Befehle können Sie die Konfigurationsüberschreibungen zum Web SDK hinzufügen [Tag-Erweiterung](../extension/web-sdk-extension-configuration.md).
+>Alternativ zum Senden der Konfigurationsüberschreibungen über Web SDK-Befehle können Sie die Konfigurationsüberschreibungen zum Web SDK hinzufügen [Tag-Erweiterung](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 Nachher [Konfigurieren der Überschreibungen des Datastreams](#configure-overrides) In der Datenerfassungs-Benutzeroberfläche können Sie die Überschreibungen jetzt über das Web SDK an das Edge-Netzwerk senden.
 

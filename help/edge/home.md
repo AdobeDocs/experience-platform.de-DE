@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK – Überblick
 description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Web SDK Platform-Funktionen in Ihre Website integrieren können.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;Web SDK;SDK;Web SDK;Launch;Launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 00801465435133fce29002c8bd0f2256745ba2c2
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '803'
 ht-degree: 100%
@@ -12,7 +12,7 @@ ht-degree: 100%
 
 # Adobe Experience Platform Web SDK – Überblick {#overview}
 
-Adobe Experience Platform Web SDK ist eine Client-seitige JavaScript-Bibliothek, mit der Kunden von Adobe Experience Cloud mit den verschiedenen Services in [!DNL Experience Cloud] interagieren können. Zusätzlich zur JavaScript-Bibliothek steht eine [Tag-Erweiterung](./extension/web-sdk-extension-configuration.md) als Hilfe bei Ihren Web SDK-Konfigurationen zur Verfügung.
+Adobe Experience Platform Web SDK ist eine Client-seitige JavaScript-Bibliothek, mit der Kunden von Adobe Experience Cloud mit den verschiedenen Services in [!DNL Experience Cloud] interagieren können. Zusätzlich zur JavaScript-Bibliothek steht eine [Tag-Erweiterung](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) als Hilfe bei Ihren Web SDK-Konfigurationen zur Verfügung.
 
 Eine schrittweise Anleitung zum Einrichten von Web SDK mit Tags und zum Senden von Daten an die Lösungen finden Sie in unserem [Tutorial zur Implementierung von Adobe Experience Cloud mit Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=de).
 
@@ -74,7 +74,7 @@ Dies bedeutet, dass Sie Web SDK auf einer Seite verwenden und die vorhandenen Bi
 
 ### Überlegungen zur Migration von at.js zu Web SDK {#considerations}
 
-Bevor Sie Seiten, die [!DNL at.js] verwenden, zu Web SDK migrieren, müssen Sie die folgenden Web SDK-Konfigurationsoptionen aktivieren. Dadurch wird sichergestellt, dass das Besucherprofil beim Navigieren von Seiten mit [!DNL at.js ] auf Seiten, die Web SDK verwenden, beibehalten wird.
+Bevor Sie Seiten, die [!DNL at.js] verwenden, zu Web SDK migrieren, müssen Sie die folgenden Web SDK-Konfigurationsoptionen aktivieren. Dadurch wird sichergestellt, dass das Besucherprofil beim Navigieren von Seiten mit [!DNL at.js] auf Seiten, die Web SDK verwenden, beibehalten wird.
 
 * [`idMigrationEnabled`](fundamentals/configuring-the-sdk.md#id-migration-enabled)
 * [`targetMigrationEnabled`](fundamentals/configuring-the-sdk.md#targetMigrationEnabled)
@@ -85,7 +85,6 @@ Bevor Sie Seiten, die [!DNL at.js] verwenden, zu Web SDK migrieren, müssen Sie 
 >Die folgenden Target-Funktionen werden bei der Migration von at.js zum Web SDK nicht unterstützt:
 > * [Weiterleitungsangebote](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=de)
 > * [CNAME- und domänenübergreifende Unterstützung](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/?lang=de)
-
 
 Nach der Migration von at.js zum Web SDK sollten Sie die Option `targetMigrationEnabled` aus Ihrer Konfiguration entfernen.
 

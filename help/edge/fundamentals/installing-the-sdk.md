@@ -3,7 +3,7 @@ title: Installieren des Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie das Experience Platform Web SDK installieren.
 keywords: Web SDK-Installation;Web SDK installieren;Internet Explorer;Zusage;npm-Paket
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: e0fc9708edec3b36bed9925f12fca9db8b477262
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 30%
@@ -20,7 +20,7 @@ Es werden drei Möglichkeiten zur Verwendung des Adobe Experience Platform Web S
 
 ## Option 1: Installieren der Tag-Erweiterung
 
-Die Dokumentation zur Tag-Erweiterung finden Sie unter [Dokumentation zu Tags](../../tags/extensions/client/sdk/overview.md)
+Die Dokumentation zur Tag-Erweiterung finden Sie unter [Dokumentation zu Tags](../../tags/extensions/client/web-sdk/overview.md)
 
 ## Option 2: Installieren der vordefinierten eigenständigen Version
 
