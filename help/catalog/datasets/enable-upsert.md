@@ -4,10 +4,10 @@ title: Aktivieren eines Datensatzes für Profilaktualisierungen mithilfe von API
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mit Adobe Experience Platform-APIs einen Datensatz mit "upsert"-Funktionen aktivieren können, um Aktualisierungen an den Echtzeit-Kundenprofildaten vorzunehmen.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
+source-git-commit: 6985ebf8705130636abdc50b5c3f50299a60f2aa
 workflow-type: tm+mt
-source-wordcount: '1050'
-ht-degree: 95%
+source-wordcount: '1069'
+ht-degree: 92%
 
 ---
 
@@ -17,7 +17,7 @@ In diesem Tutorial wird die Aktivierung eines Datensatzes mit &quot;upsert&quot;
 
 >[!NOTE]
 >
->Der Upsert-Workflow funktioniert nur für die Batch-Aufnahme. Die Streaming-Aufnahme wird **nicht** unterstützt.
+>Der in diesem Tutorial beschriebene Workflow funktioniert nur bei der Batch-Erfassung. Informationen zur Aktualisierung der Streaming-Erfassung finden Sie im Handbuch zu [Senden partieller Zeilenaktualisierungen an das Echtzeit-Kundenprofil mithilfe der Datenvorbereitung](../../data-prep/upserts.md).
 
 ## Erste Schritte
 
