@@ -4,7 +4,7 @@ title: API-Migrationshandbuch für Cloud-Speicher-Ziele
 description: Erfahren Sie mehr über die Änderungen im Workflow zur Aktivierung von Cloud-Speicher-Zielen im Rahmen der Migration zu den neuen Cloud-Speicher-Zielkarten mit zusätzlichen Funktionen.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
+source-git-commit: b651d15260adbcd37fa396fa0b325a9674a92133
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 4%
@@ -16,7 +16,6 @@ ht-degree: 4%
 >[!IMPORTANT]
 >
 >* Die auf dieser Seite beschriebene Funktion steht Kunden zur Verfügung, die die Real-Time CDP Prime- und Ultimate-Pakete erworben haben. Bitte wenden Sie sich an den Adobe-Support-Mitarbeiter, um weitere Informationen zu erhalten.
-
 
 ## Migrationskontext {#migration-context}
 
@@ -783,7 +782,7 @@ Beachten Sie im folgenden Konfigurationsbeispiel wie `profileSelectors` -Felder 
 
 ## Migrationszeitleiste und Aktionselemente {#timeline-and-action-items}
 
-Die Migration von alten Datenflüssen zu den neuen Zielkarten für [!DNL Amazon S3], [!DNL Azure Blob]und SFTP-Ziele eintreten, sobald Ihr Unternehmen für die Migration bereit ist, spätestens jedoch **30. Juni 2023**.
+Die Migration von alten Datenflüssen zu den neuen Zielkarten für [!DNL Amazon S3], [!DNL Azure Blob]und SFTP-Ziele eintreten, sobald Ihr Unternehmen für die Migration bereit ist, spätestens jedoch **26. Juli 2023**.
 
 Sie erhalten Erinnerungsnachrichten von Adobe, wenn das Migrationsdatum näher rückt. Lesen Sie in der Vorbereitung den Abschnitt Aktionselemente unten, um sich für die Migration vorzubereiten.
 
@@ -791,11 +790,11 @@ Sie erhalten Erinnerungsnachrichten von Adobe, wenn das Migrationsdatum näher r
 
 Zur Vorbereitung der Migration der [!DNL Amazon S3], [!DNL Azure Blob]und SFTP-Cloud-Speicher-Ziele auf den neuen Karten verwenden, bereiten Sie sich auf die Aktualisierung Ihrer Skripte und automatisierten API-Aufrufe vor, wie unten vorgeschlagen.
 
-1. Aktualisieren von Skripten oder automatisierten API-Aufrufen für vorhandene [!DNL Amazon S3], [!DNL Azure Blob], oder bis zum 30. Juni 2023 SFTP-Cloud-Speicher-Ziele. Alle automatisierten API-Aufrufe oder Skripte, die die veralteten Verbindungs- oder Flussspezifikationen nutzen, müssen auf die neuen Verbindungs- oder Flussspezifikationen aktualisiert werden.
-2. Wenden Sie sich an Ihren Adobe-Kundenbetreuer, wenn Ihre Skripte vor dem 30. Juni aktualisiert wurden.
+1. Aktualisieren von Skripten oder automatisierten API-Aufrufen für vorhandene [!DNL Amazon S3], [!DNL Azure Blob], oder bis zum 26. Juli 2023 SFTP-Cloud-Speicher-Ziele. Alle automatisierten API-Aufrufe oder Skripte, die die veralteten Verbindungs- oder Flussspezifikationen nutzen, müssen auf die neuen Verbindungs- oder Flussspezifikationen aktualisiert werden.
+2. Wenden Sie sich an Ihren Adobe-Kundenbetreuer, wenn Ihre Skripte vor dem 26. Juli aktualisiert wurden.
 3. Beispiel: die `targetConnectionSpecId` kann als Flag verwendet werden, um zu bestimmen, ob der Datenfluss auf die neue Zielkarte migriert wurde. Sie können Ihre Skripte mit einer `if` -Bedingung, um sich die veralteten und aktualisierten Zielverbindungsspezifikationen in `flow.inheritedAttributes.targetConnections[0].connectionSpec.id` und bestimmen, ob Ihr Datenfluss migriert wurde. Sie können die alten und neuen Verbindungsspezifikations-IDs in den spezifischen Abschnitten auf dieser Seite für jedes Ziel sehen.
 4. Ihr Adobe-Kontoteam wird sich mit weiteren Informationen darüber in Verbindung setzen, wann Ihre Datenflüsse migriert werden.
-5. Nach dem 30. Juni werden alle Datenflüsse migriert. Alle vorhandenen Datenflüsse verfügen jetzt über neue Flussentitäten (Verbindungs-, Fluss-, Basis- und Zielverbindungen). Skripte oder API-Aufrufe auf Ihrer Seite, die die Legacy-Fluss-Entitäten verwenden, funktionieren nicht mehr.
+5. Nach dem 26. Juli werden alle Datenflüsse migriert. Alle vorhandenen Datenflüsse verfügen jetzt über neue Flussentitäten (Verbindungs-, Fluss-, Basis- und Zielverbindungen). Skripte oder API-Aufrufe auf Ihrer Seite, die die Legacy-Fluss-Entitäten verwenden, funktionieren nicht mehr.
 
 ## Andere Migrationsaspekte {#other-considerations}
 
