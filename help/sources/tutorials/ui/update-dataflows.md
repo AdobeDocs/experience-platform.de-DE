@@ -8,7 +8,7 @@ exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 source-git-commit: cef5c203acf3318445399669336166e6627ebe66
 workflow-type: tm+mt
 source-wordcount: '782'
-ht-degree: 13%
+ht-degree: 20%
 
 ---
 
@@ -27,8 +27,8 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflows_daysRemaining"
->title="Datensatzablauf"
->abstract="Diese Spalte gibt die Anzahl der Tage an, die der Zieldatensatz vor seinem automatischen Ablauf vergangen ist.<br>Ein Datenfluss schlägt fehl, wenn der Zieldatensatz abgelaufen ist. Um zu verhindern, dass ein Datenfluss fehlschlägt, stellen Sie sicher, dass ein Zieldatensatz am richtigen Datum abläuft. Informationen zum Aktualisieren der Ablaufdaten finden Sie in der Dokumentation ."
+>title="Ablaufdatum des Datensatzes"
+>abstract="Diese Spalte gibt die Anzahl der Tage an, die verbleiben, bis der Zieldatensatz automatisch abläuft.<br>Ein Datenfluss schlägt fehl, wenn der Zieldatensatz abgelaufen ist. Um zu verhindern, dass ein Datenfluss fehlschlägt, muss sichergestellt werden, dass der Zieldatensatz am richtigen Datum abläuft. Informationen zum Aktualisieren der Ablaufdaten finden Sie in der Dokumentation."
 
 Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Auswählen **[!UICONTROL Datenflüsse]** aus der oberen Kopfzeile, um eine Liste der vorhandenen Datenflüsse anzuzeigen.
 

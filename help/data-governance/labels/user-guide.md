@@ -7,7 +7,7 @@ exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: 663d1e20a7b8a56b1395047124fdf4b6fc3c214b
 workflow-type: tm+mt
 source-wordcount: '1465'
-ht-degree: 40%
+ht-degree: 42%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 40%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
 >title="Steuern der Datennutzung in Platform"
->abstract="<h2>Beschreibung</h2><p>Mit dem Data Governance-Framework in Experience Platform können Sie Attribute und Schemas anhand von Datennutzungsbeschränkungen beschriften und Richtlinien einrichten, die diese Einschränkungen für bestimmte Marketing-Aktionen identifizieren und berücksichtigen.</p>"
+>abstract="<h2>Beschreibung</h2><p>Mit dem Data Governance-Framework in Experience Platform können Sie Attribute und Schemata anhand von Datennutzungsbeschränkungen beschriften und Richtlinien einrichten, die diese Einschränkungen für bestimmte Marketing-Aktionen identifizieren und berücksichtigen.</p>"
 
 Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Datennutzungskennzeichnungen in der Benutzeroberfläche von [!DNL Experience Platform]. 
 

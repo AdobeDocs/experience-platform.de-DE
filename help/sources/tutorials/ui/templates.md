@@ -6,7 +6,7 @@ exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
 workflow-type: tm+mt
 source-wordcount: '2258'
-ht-degree: 43%
+ht-degree: 44%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 43%
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
 >title="Vorlagen für Quellen in der Platform-Benutzeroberfläche"
->abstract="Zu Vorlagen gehören automatisch generierte Assets wie Schemas, Datensätze, Identitäten, Zuordnungsregeln, Identitäts-Namespaces und Datenflüsse, die Sie beim Einbringen von Daten aus einer Quelle in Experience Platform verwenden können. Sie können automatisch generierte Assets zur Anpassung an Ihre Anwendungsfälle aktualisieren."
+>abstract="Zu Vorlagen gehören automatisch generierte Assets wie Schemas, Datensätze, Identitäten, Zuordnungsregeln, Identitäts-Namespaces und Datenflüsse, die Sie beim Einbringen von Daten aus einer Quelle in Experience Platform verwenden können. Sie können automatisch generierte Assets aktualisieren, um sie an Anwendungsfälle anzupassen."
 
 >[!IMPORTANT]
 >

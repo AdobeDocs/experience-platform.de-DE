@@ -7,7 +7,7 @@ exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 source-git-commit: 11d6cf09dede8c7c14bbbcd3c109e703a5d053de
 workflow-type: tm+mt
 source-wordcount: '1504'
-ht-degree: 35%
+ht-degree: 36%
 
 ---
 
@@ -36,8 +36,8 @@ Das Benutzerhandbuch setzt ein grundlegendes Verständnis der folgenden Komponen
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_browse_daysRemaining"
->title="Datensatzablauf"
->abstract="Diese Spalte gibt die Anzahl der Tage an, die der Zieldatensatz vor seinem automatischen Ablauf vergangen ist."
+>title="Ablaufdatum des Datensatzes"
+>abstract="Diese Spalte gibt die Anzahl der Tage an, die verbleiben, bis der Zieldatensatz automatisch abläuft."
 
 Im [!DNL Experience Platform] Benutzeroberfläche, auswählen **[!UICONTROL Datensätze]** im linken Navigationsbereich, um die **[!UICONTROL Datensätze]** Dashboard. Das Dashboard listet alle verfügbaren Datensätze für Ihre Organisation auf. Zu jedem aufgelisteten Datensatz werden Details angezeigt, einschließlich seines Namens, des Schemas, dem der Datensatz entspricht, und des Status des letzten Erfassungslaufs.
 
