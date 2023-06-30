@@ -2,7 +2,7 @@
 title: Ziel der Data Landing Zone
 description: Erfahren Sie, wie Sie eine Verbindung zur Data Landing Zone herstellen, um Segmente zu aktivieren und Datensätze zu exportieren.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: cf89f40625bedda633ad26cf3e882983600f0d52
+source-git-commit: 5daa92b2f488b4acb825215f4da92af51bcf7c61
 workflow-type: tm+mt
 source-wordcount: '1378'
 ht-degree: 60%
@@ -61,7 +61,7 @@ Nachdem Sie Ihre Verbindungsmethode ausgewählt haben, müssen Sie einen **Anzei
 
 >[!BEGINSHADEBOX]
 
-### Rufen Sie die Anmeldeinformationen für Ihre [!DNL Data Landing Zone]
+### Rufen Sie die Anmeldeinformationen für Ihre [!DNL Data Landing Zone] {#retrieve-dlz-credentials}
 
 Sie müssen die Platform-APIs verwenden, um Ihre [!DNL Data Landing Zone] Anmeldedaten. Der API-Aufruf zum Abrufen Ihrer Anmeldedaten wird unten beschrieben. Informationen zum Abrufen der erforderlichen Werte für Ihre Kopfzeilen finden Sie unter [Erste Schritte mit Adobe Experience Platform-APIs](/help/landing/api-guide.md) Handbuch.
 
@@ -112,7 +112,7 @@ Die folgende Antwort gibt die Anmeldeinformationen für Ihre Landingzone zurück
 
 {style="table-layout:auto"}
 
-## Aktualisieren [!DNL Data Landing Zone] Anmeldeinformationen
+### Aktualisieren [!DNL Data Landing Zone] Anmeldeinformationen {#update-dlz-credentials}
 
 Sie können Ihre Anmeldedaten bei Bedarf auch aktualisieren. Sie können Ihre `SASToken` , indem Sie eine POST an die `/credentials` Endpunkt der [!DNL Connectors] API.
 
