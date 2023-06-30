@@ -2,10 +2,10 @@
 title: Ziel der Data Landing Zone
 description: Erfahren Sie, wie Sie eine Verbindung zur Data Landing Zone herstellen, um Segmente zu aktivieren und Datensätze zu exportieren.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
+source-git-commit: cf89f40625bedda633ad26cf3e882983600f0d52
 workflow-type: tm+mt
-source-wordcount: '1265'
-ht-degree: 64%
+source-wordcount: '1378'
+ht-degree: 60%
 
 ---
 
@@ -15,7 +15,6 @@ ht-degree: 64%
 >
 >* Diese Funktion befindet sich derzeit in der Beta-Phase und steht nur einer bestimmten Anzahl von Kunden zur Verfügung. Um Zugang zur [!DNL Data Landing Zone]-Verbindung zu erhalten, wenden Sie sich an Ihre Kontaktperson beim Adobe-Support-Mitarbeiter und geben Sie Ihre [!DNL Organization ID] an.
 >* Diese Dokumentationsseite bezieht sich auf die [!DNL Data Landing Zone] *Ziel*. Es gibt auch eine [!DNL Data Landing Zone] *source* im Quellkatalog. Weitere Informationen finden Sie im Abschnitt [[!DNL Data Landing Zone] source](/help/sources/connectors/cloud-storage/data-landing-zone.md) Dokumentation.
-
 
 
 ## Übersicht {#overview}
@@ -72,6 +71,12 @@ Sie müssen die Platform-APIs verwenden, um Ihre [!DNL Data Landing Zone] Anmeld
 GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
 ```
 
+| Abfrageparameter | Beschreibung |
+| --- | --- |
+| `dlz_destination` | Die `dlz_destination` Mit type kann die API einen Zielcontainer für die Einstiegszone von den anderen Behältertypen unterscheiden, die Ihnen zur Verfügung stehen. |
+
+{style="table-layout:auto"}
+
 **Anfrage**
 
 Im folgenden Anfragebeispiel werden Anmeldeinformationen für eine vorhandene Landingzone abgerufen.
@@ -104,6 +109,52 @@ Die folgende Antwort gibt die Anmeldeinformationen für Ihre Landingzone zurück
 | `containerName` | Der Name Ihrer Landingzone. |
 | `SASToken` | Das Token für die gemeinsame Zugriffssignatur für Ihre Landingzone. Diese Zeichenfolge enthält alle Informationen, die zum Autorisieren einer Anfrage erforderlich sind. |
 | `SASUri` | Der URI der Freigegebenen Zugriffssignatur für Ihre Landingzone. Diese Zeichenfolge ist eine Kombination aus dem URI für die Landingzone, für die Sie authentifiziert werden, und dem zugehörigen SAS-Token. |
+
+{style="table-layout:auto"}
+
+## Aktualisieren [!DNL Data Landing Zone] Anmeldeinformationen
+
+Sie können Ihre Anmeldedaten bei Bedarf auch aktualisieren. Sie können Ihre `SASToken` , indem Sie eine POST an die `/credentials` Endpunkt der [!DNL Connectors] API.
+
+**API-Format**
+
+```http
+POST /data/foundation/connectors/landingzone/credentials?type=dlz_destination&action=refresh
+```
+
+| Abfrageparameter | Beschreibung |
+| --- | --- |
+| `dlz_destination` | Die `dlz_destination` Mit type kann die API einen Zielcontainer für die Einstiegszone von den anderen Behältertypen unterscheiden, die Ihnen zur Verfügung stehen. |
+| `refresh` | Die `refresh` Mit dieser Aktion können Sie Ihre Landingzone-Anmeldedaten zurücksetzen und automatisch eine neue `SASToken`. |
+
+{style="table-layout:auto"}
+
+**Anfrage**
+
+Mit der folgenden Anfrage werden Ihre Landingzone-Anmeldedaten aktualisiert.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_destination&action=refresh' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
+**Antwort**
+
+Die folgende Antwort gibt aktualisierte Werte für Ihre `SASToken` und `SASUri`.
+
+```json
+{
+    "containerName": "dlz-user-container",
+    "SASToken": "sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
+    "storageAccountName": "dlblobstore99hh25i3dflek",
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D"
+}
+```
 
 >[!ENDSHADEBOX]
 
