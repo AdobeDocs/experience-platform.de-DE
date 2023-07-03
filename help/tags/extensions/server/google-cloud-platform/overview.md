@@ -2,10 +2,10 @@
 title: Google Cloud Platform-Erweiterung zur Ereignisweiterleitung
 description: Diese Ereignisweiterleitungs-Erweiterung von Adobe Experience Platform sendet Adobe Experience Edge Network-Ereignisse an Google Cloud Platform.
 last-substantial-update: 2023-06-21T00:00:00Z
-source-git-commit: d1a34a98efd24a20dc53544eeb0d79490aaf31e7
+source-git-commit: 7e26ebe6d40796174ca48367f826c7c6f1512abf
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 3%
+source-wordcount: '570'
+ht-degree: 4%
 
 ---
 
@@ -17,7 +17,7 @@ Die [!DNL Google Cloud Platform] [Ereignisweiterleitung](../../../ui/event-forwa
 
 ## Voraussetzungen
 
-Um diese Erweiterung verwenden zu können, müssen Sie über eine [!DNL Google Cloud Platform] -Konto [!DNL Cloud Pub/Sub] Thema. Wenn Sie keinen bereits vorhandenen Datenstrom haben, finden Sie weitere Informationen unter [!DNL AWS] Dokumentation zu [Erstellen eines neuen Datenstreams mit der [!DNL AWS] Verwaltungskonsole](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-create-a-stream.html).
+Um diese Erweiterung verwenden zu können, müssen Sie über eine [!DNL Google Cloud Platform] -Konto [!DNL Cloud Pub/Sub] Thema. Wenn Sie kein bereits vorhandenes Thema haben, finden Sie weitere Informationen unter [[!DNL Google Cloud Platform]](https://cloud.google.com/pubsub/docs/create-topic) Dokumentation zum Erstellen und Verwalten von Themen.
 
 ### Erstellen eines Geheimnisses und eines Datenelements
 
