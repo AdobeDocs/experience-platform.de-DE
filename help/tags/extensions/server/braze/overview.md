@@ -4,7 +4,7 @@ title: Braze Event Forwarding-Erweiterung
 description: Diese Ereignisweiterleitungs-Erweiterung von Adobe Experience Platform sendet Adobe Experience Edge Network-Ereignisse an Braze.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
 source-wordcount: '1863'
 ht-degree: 6%
@@ -59,7 +59,7 @@ Um das Edge-Netzwerk mit [!DNL Braze], sind folgende Eingaben erforderlich:
 
 | Schlüsseltyp | Beschreibung | Beispiel |
 | --- | --- | --- |
-| [!DNL Braze] Instanz | Der REST-Endpunkt, der mit dem [!DNL Braze] -Konto. Siehe Abschnitt [!DNL Braze] Dokumentation zu [Instanzen](https://www.braze.com/docs/user_guide/administrative/access_braze/braze_instances) für Leitlinien. | `https://rest.iad-03.braze.com` |
+| [!DNL Braze] Instanz | Der REST-Endpunkt, der mit dem [!DNL Braze] -Konto. Siehe Abschnitt [!DNL Braze] Dokumentation zu [Instanzen](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) für Leitlinien. | `https://rest.iad-03.braze.com` |
 | API-Schlüssel | Die [!DNL Braze] API-Schlüssel, der mit dem [!DNL Braze] -Konto. <br/>Siehe Abschnitt [!DNL Braze] Dokumentation zu [REST-API-Schlüssel](https://www.braze.com/docs/api/basics/#rest-api-key) für Leitlinien. | `YOUR-BRAZE-REST-API-KEY` |
 
 ### Erstellen geheimer Daten
@@ -108,8 +108,8 @@ Erstellen Sie nach der Installation der Erweiterung eine neue Ereignisweiterleit
 | Eingabe | Beschreibung | Erforderlich |
 | --- | --- | --- |
 | [!UICONTROL Ereignisname &#x200B;] | Name des Ereignisses. | Ja |
-| [!UICONTROL Ereigniszeit ] | Datum/Uhrzeit als Zeichenfolge in ISO 8601 oder in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` Format. | Ja |
-| [!UICONTROL App-Kennung] | App-ID oder <strong>app_id</strong> ist ein Parameter, der die Aktivität mit einer bestimmten App in Ihrer App-Gruppe verknüpft. Sie gibt an, mit welcher App innerhalb der App-Gruppe Sie interagieren. Weitere Informationen zum [API-Kennungstypen](https://www.braze.com/docs/api/identifier_types/). |  |
+| [!UICONTROL Ereigniszeit] | Datum/Uhrzeit als Zeichenfolge in ISO 8601 oder in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` Format. | Ja |
+| [!UICONTROL App-Kennung] | App-ID oder <strong>app_id</strong> ist ein Parameter, der die Aktivität mit einer bestimmten App in Ihrer App-Gruppe verknüpft. Sie gibt an, mit welcher App innerhalb der App-Gruppe Sie interagieren. Weitere Informationen zum [API-Kennungstypen](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL Ereigniseigenschaften &#x200B;] | Ein JSON-Objekt, das benutzerdefinierte Eigenschaften des Ereignisses enthält. |  |
 
 {style="table-layout:auto"}
@@ -124,12 +124,12 @@ Benutzerattribute können ein JSON-Objekt sein, das Felder enthält, die ein Att
 
 | Benutzerattribut | Beschreibung |
 | --- | --- |
-| [!UICONTROL Vorname] |  |
-| [!UICONTROL Nachname] |  |
-| [!UICONTROL Telefon] |  |
-| [!UICONTROL E-Mail] |  |
+| [!UICONTROL Vorname] | |
+| [!UICONTROL Nachname] | |
+| [!UICONTROL Telefon] | |
+| [!UICONTROL E-Mail] | |
 | [!UICONTROL Geschlecht] | Eine der folgenden Zeichenfolgen: &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (sonstiges), &quot;N&quot; (nicht zutreffend), &quot;P&quot; (es vorziehen, nicht zu sagen). |
-| [!UICONTROL Stadt] |  |
+| [!UICONTROL Stadt] | |
 | [!UICONTROL Country] | Land als Zeichenfolge in [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) Format. |
 | [!UICONTROL Sprache] | Sprache als Zeichenfolge in [ISO-639-1](https://de.wikipedia.org/wiki/Liste_der_ISO-639-1-Codes) Format. |
 | [!UICONTROL Geburtsdatum] | Zeichenfolge im Format &quot;JJJ-MM-TT&quot;(z. B. 1980-12-21). |
@@ -164,11 +164,11 @@ Erstellen Sie nach der Installation der Erweiterung eine neue Ereignisweiterleit
 | Eingabe | Beschreibung | Erforderlich |
 | --- | --- | --- |
 | [!UICONTROL Produkt-ID &#x200B;] | Kennung für den Kauf. (z. B. Produktname oder Produktkategorie) | Ja |
-| [!UICONTROL Kaufzeit ] | Datum/Uhrzeit als Zeichenfolge in ISO 8601 oder in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` Format. | Ja |
+| [!UICONTROL Kaufzeit] | Datum/Uhrzeit als Zeichenfolge in ISO 8601 oder in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` Format. | Ja |
 | [!UICONTROL Währung &#x200B;] | Währung als Zeichenfolge in [ISO 4217](https://de.wikipedia.org/wiki/ISO_4217) Alphabetisches Währungscode-Format. | Ja |
 | [!UICONTROL Preis &#x200B;] | Preis. | Ja |
-| [!UICONTROL Menge &#x200B;] | Wenn kein Wert angegeben wird, ist der Standardwert 1. Der Höchstwert muss unter 100 liegen. |  |
-| [!UICONTROL App-Kennung] | App-ID oder <strong>app_id</strong> ist ein Parameter, der die Aktivität mit einer bestimmten App in Ihrer App-Gruppe verknüpft. Sie gibt an, mit welcher App innerhalb der App-Gruppe Sie interagieren. Weitere Informationen zum [API-Kennungstypen](https://www.braze.com/docs/api/identifier_types/). |  |
+| [!UICONTROL Menge &#x200B;] | Wenn kein Wert angegeben wird, ist der Standardwert 1. Der Höchstwert muss unter 100 liegen. | |
+| [!UICONTROL App-Kennung] | App-ID oder <strong>app_id</strong> ist ein Parameter, der die Aktivität mit einer bestimmten App in Ihrer App-Gruppe verknüpft. Sie gibt an, mit welcher App innerhalb der App-Gruppe Sie interagieren. Weitere Informationen zum [API-Kennungstypen](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL &#x200B;] | Ein JSON-Objekt, das benutzerdefinierte Eigenschaften des Kaufs enthält. |  |
 
 {style="table-layout:auto"}
@@ -183,12 +183,12 @@ Benutzerattribute können ein JSON-Objekt sein, das Felder enthält, die ein Att
 
 | Benutzerattribut | Beschreibung |
 | --- | --- |
-| [!UICONTROL Vorname] |  |
-| [!UICONTROL Nachname] |  |
-| [!UICONTROL Telefon] |  |
-| [!UICONTROL E-Mail] |  |
+| [!UICONTROL Vorname] | |
+| [!UICONTROL Nachname] | |
+| [!UICONTROL Telefon] | |
+| [!UICONTROL E-Mail] | |
 | [!UICONTROL Geschlecht] | Eine der folgenden Zeichenfolgen: &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (sonstiges), &quot;N&quot; (nicht zutreffend), &quot;P&quot; (es vorziehen, nicht zu sagen). |
-| [!UICONTROL Stadt] |  |
+| [!UICONTROL Stadt] | |
 | [!UICONTROL Country] | Land als Zeichenfolge in [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) Format. |
 | [!UICONTROL Sprache] | Sprache als Zeichenfolge in [ISO-639-1](https://de.wikipedia.org/wiki/Liste_der_ISO-639-1-Codes) Format. |
 | [!UICONTROL Geburtsdatum] | Zeichenfolge im Format &quot;JJJ-MM-TT&quot;(z. B. 1980-12-21). |

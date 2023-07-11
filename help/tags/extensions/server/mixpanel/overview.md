@@ -4,9 +4,9 @@ title: Ereignisweiterleitungserweiterung für die Mixpanel Track Events API
 description: Diese Ereignisweiterleitungs-Erweiterung von Adobe Experience Platform sendet Adobe Experience Edge Network-Ereignisse an Mixpanel.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '950'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Die Analyseteams können dann [!DNL Mixpanel's] Funktionen zur Verarbeitung der 
 
 Weitere Informationen zu spezifischen Anwendungsfällen für [!DNL Mixpanel], siehe folgende Dokumentation:
 
-* [Neu in [!DNL Mixpanel]](https://help.mixpanel.com/hc/en-us/sections/360008533532-New-to-Mixpanel)
+* [Neu in [!DNL Mixpanel]](https://docs.mixpanel.com/docs)
 * [Was ist [!DNL Mixpanel]?](https://developer.mixpanel.com/docs)
 * [12 &quot;must-try&quot; [!DNL Mixpanel] Funktionen](https://mixpanel.com/blog/12-things-you-probably-didnt-know-you-could-do-with-mixpanel/)
 
@@ -80,10 +80,10 @@ Beginnen Sie mit der Erstellung einer neuen Regel in Ihrer Ereignisweiterleitung
 | --- | --- | --- |
 | [!UICONTROL Projekt-Token] | Dieses Feld sollte dem Projekt-Token zugeordnet sein, das mit Ihrem [!DNL Mixpanel] -Konto. | Ja |
 | [!UICONTROL Ereignistyp] | Der Ereignisname. | Ja |
-| [!UICONTROL Ereigniszeit] | Die Ereigniszeit. |  |
-| [!UICONTROL Mixpanel-Unique ID] | Die eindeutige Kennung des Benutzers, der das Ereignis ausgeführt hat. |  |
-| [!UICONTROL ID einfügen] | Eine eindeutige Kennung für das Ereignis, die zur Deduplizierung verwendet wird. |  |
-| [!UICONTROL Ereigniseigenschaften] | Ein JSON-Objekt, das benutzerdefinierte Eigenschaften des Ereignisses enthält. Wählen Sie aus der Bereitstellung von rohen JSON-Dateien oder der Verwendung eines vereinfachten Satzes von Schlüsselwerteingaben. |  |
+| [!UICONTROL Ereigniszeit] | Die Ereigniszeit. | |
+| [!UICONTROL Mixpanel-Unique ID] | Die eindeutige Kennung des Benutzers, der das Ereignis ausgeführt hat. | |
+| [!UICONTROL ID einfügen] | Eine eindeutige Kennung für das Ereignis, die zur Deduplizierung verwendet wird. | |
+| [!UICONTROL Ereigniseigenschaften] | Ein JSON-Objekt, das benutzerdefinierte Eigenschaften des Ereignisses enthält. Wählen Sie aus der Bereitstellung von rohen JSON-Dateien oder der Verwendung eines vereinfachten Satzes von Schlüsselwerteingaben. | |
 
 >[!NOTE]
 >
