@@ -1,21 +1,18 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Zielgruppen-Mapping; Zielgruppen-Mapping
 solution: Experience Platform
 title: Zuordnen von Adobe Target-Ereignisdaten zu XDM
 description: Erfahren Sie, wie Sie Adobe Target-Ereignisfelder einem Experience-Datenmodell (XDM)-Schema zur Verwendung in Adobe Experience Platform zuordnen.
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 81412493b096264ce7a89e3ca2348edb2dcd1798
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 2%
+source-wordcount: '430'
+ht-degree: 3%
 
 ---
 
 # Zielgruppen-Mapping-Feldzuordnungen
 
-Mit Adobe Experience Platform können Sie Adobe Target-Daten über den Target-Quell-Connector erfassen. Bei Verwendung des Connectors müssen alle Daten aus Target-Feldern dem [Experience-Datenmodell (XDM)](../../../../xdm/home.md) Felder, die mit der XDM ExperienceEvent-Klasse verknüpft sind.
-
-In der folgenden Tabelle werden die Felder eines Erlebnisereignis-Schemas (*XDM ExperienceEvent-Feld*) und den entsprechenden Zielfeldern, denen sie zugeordnet werden sollen (*Feld für Target-Anforderung*). Zusätzliche Hinweise für einige Zuordnungen werden ebenfalls bereitgestellt.
+In der folgenden Tabelle sind die Felder eines Experience-Datenmodell (XDM)-Erlebnisereignisschemas und die entsprechenden Felder aus Adobe Target, denen sie zugeordnet werden sollen, aufgeführt. Zusätzliche Hinweise für einige Zuordnungen werden ebenfalls bereitgestellt.
 
 >[!NOTE]
 >
@@ -24,7 +21,7 @@ In der folgenden Tabelle werden die Felder eines Erlebnisereignis-Schemas (*XDM 
 | XDM ExperienceEvent-Feld | Feld für Target-Anforderung | Anmerkungen |
 | ------------------------- | -------------------- | ----- |
 | **`id`** | Eine eindeutige Anforderungskennung |
-| **`dataSource`** |  | Für alle Clients auf &quot;1&quot;konfiguriert. |
+| **`dataSource`** | | Für alle Clients auf &quot;1&quot;konfiguriert. |
 | `dataSource._id` | Ein systemgenerierter Wert, der nicht mit der Anfrage übergeben werden kann. | Die eindeutige ID dieser Datenquelle. Dies würde von der Person oder dem System bereitgestellt, die bzw. das die Datenquelle erstellt hat. |
 | `dataSource.code` | Ein systemgenerierter Wert, der nicht mit der Anfrage übergeben werden kann. | Eine Verknüpfung zur vollständigen @id. Es kann mindestens ein Code oder @id verwendet werden. Manchmal wird dieser Code als Integrationscode der Datenquelle bezeichnet. |
 | `dataSource.tags` | Ein systemgenerierter Wert, der nicht mit der Anfrage übergeben werden kann. | Tags werden verwendet, um anzugeben, wie die Aliase einer bestimmten Datenquelle von Anwendungen mithilfe dieser Aliase interpretiert werden sollen.<br><br>Beispiele:<br><ul><li>`isAVID`: Datenquellen, die Analytics-Besucher-IDs darstellen.</li><li>`isCRSKey`: Datenquellen, die Aliase darstellen, die als Schlüssel in CRS verwendet werden sollen.</li></ul>Tags werden festgelegt, wenn die Datenquelle erstellt wird, aber auch in Pipeline-Nachrichten eingeschlossen, wenn auf eine bestimmte Datenquelle verwiesen wird. |
@@ -76,7 +73,7 @@ In der folgenden Tabelle werden die Felder eines Erlebnisereignis-Schemas (*XDM 
 | `placeContext.geo.postalCode` | Postleitzahl basierend auf der IP-Adresse der Anfrage aufgelöst. |
 | `placeContext.geo.stateProvince` | Bundesland oder Bundesland basierend auf der IP-Adresse der Anfrage aufgelöst. |
 | `placeContext.localTime` | `mboxRequest.offsetTime` + `mboxRequest.currentServerTime` |
-| **`commerce`** |  | Wird nur eingestellt, wenn Bestelldetails in der Anfrage vorhanden sind. |
+| **`commerce`** | | Wird nur eingestellt, wenn Bestelldetails in der Anfrage vorhanden sind. |
 | `commerce.order.priceTotal` | `mboxRequest.orderTotal` |
 | `commerce.order.purchaseOrderNumber` | `mboxRequest.orderId` |
 | `commerce.order.purchaseID` | `mboxRequest.orderId` |
