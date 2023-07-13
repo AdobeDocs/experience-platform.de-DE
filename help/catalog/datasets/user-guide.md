@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Benutzerhandbuch zu Datensätzen
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform allgemeine Aktionen beim Arbeiten mit Datensätzen durchführen.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 11d6cf09dede8c7c14bbbcd3c109e703a5d053de
+source-git-commit: 127cc88735fdffa9227bdb0919ae086dbe76184d
 workflow-type: tm+mt
-source-wordcount: '1504'
-ht-degree: 36%
+source-wordcount: '2548'
+ht-degree: 19%
 
 ---
 
@@ -43,24 +43,90 @@ Im [!DNL Experience Platform] Benutzeroberfläche, auswählen **[!UICONTROL Date
 
 ![Ein Bild, das das Element Datensätze in der linken Navigationsleiste hervorhebt.](../images/datasets/user-guide/browse-datasets.png)
 
-Standardmäßig werden nur die Datensätze angezeigt, die Sie aufgenommen haben. Wenn Sie die systemgenerierten Datensätze anzeigen möchten, aktivieren Sie die **[!UICONTROL Anzeigen von Systemdatensätzen]** umschalten. Systemgenerierte Datensätze werden nur zur Verarbeitung anderer Komponenten verwendet. Beispielsweise wird der systemgenerierte Profilexport-Datensatz zur Verarbeitung des Profil-Dashboards verwendet.
-
-![Der Umschalter, mit dem Sie auswählen können, ob Systemdatensätze angezeigt werden sollen oder nicht, wird hervorgehoben.](../images/datasets/user-guide/system-datasets.png)
-
-Wählen Sie den Namen eines Datensatzes aus, um auf seinen **[!UICONTROL Datensatzaktivität]** angezeigt und sehen Sie Details zum ausgewählten Datensatz. Die Registerkarte „Aktivität“ enthält ein Diagramm, das die Rate der konsumierten Nachrichten sowie eine Liste erfolgreicher und fehlgeschlagener Batches visuell darstellt.
+Wählen Sie den Namen eines Datensatzes aus der [!UICONTROL Durchsuchen] Registerkarte für den Zugriff auf **[!UICONTROL Datensatzaktivität]** angezeigt und sehen Sie Details zum ausgewählten Datensatz. Die Registerkarte „Aktivität“ enthält ein Diagramm, das die Rate der konsumierten Nachrichten sowie eine Liste erfolgreicher und fehlgeschlagener Batches visuell darstellt.
 
 ![Details Ihres ausgewählten Datensatzes werden hervorgehoben.](../images/datasets/user-guide/dataset-activity-1.png)
 ![Beispiele für Batches, die zu Ihrem ausgewählten Datensatz gehören, werden hervorgehoben.](../images/datasets/user-guide/dataset-activity-2.png)
 
-## Vorschau für Datensatz anzeigen
+## Inline-Datensatzaktionen {#inline-actions}
 
-Aus dem **[!UICONTROL Datensatzaktivität]** Bildschirm, wählen Sie **[!UICONTROL Vorschau des Datensatzes anzeigen]** in der oberen rechten Ecke des Bildschirms, um eine Vorschau von bis zu 100 Datenzeilen anzuzeigen. Wenn der Datensatz leer ist, wird der Vorschau-Link deaktiviert und stattdessen darauf hingewiesen, dass die Vorschau nicht verfügbar ist.
+Die Benutzeroberfläche für Datensätze bietet jetzt eine Sammlung von Inline-Aktionen für jeden verfügbaren Datensatz. Wählen Sie die Auslassungspunkte eines Datensatzes aus, den Sie verwalten möchten, um die verfügbaren Optionen in einem Popup-Menü anzuzeigen. Zu den verfügbaren Maßnahmen gehören: [[!UICONTROL Vorschau des Datensatzes anzeigen]](#preview), [[!UICONTROL Daten verwalten und Zugriffsbeschriftungen]](#manage-and-enforce-data-governance), [[!UICONTROL Einheitliches Profil aktivieren]](#enable-profile), [[!UICONTROL Tags verwalten]](#add-tags)und [[!UICONTROL Löschen]](#delete). Weitere Informationen zu diesen verfügbaren Aktionen finden Sie in den jeweiligen Abschnitten.
+
+### Hinzufügen von Datensatz-Tags {#add-tags}
+
+Fügen Sie benutzerdefinierte erstellte Tags hinzu, um Datensätze zu organisieren und die Such-, Filter- und Sortierfunktionen zu verbessern. Aus dem [!UICONTROL Durchsuchen] des [!UICONTROL Datensätze] Arbeitsbereich die Auslassungspunkte eines zu verwaltenden Datensatzes auswählen, gefolgt von **[!UICONTROL Tags verwalten]** aus dem Dropdown-Menü aus.
+
+![Die Registerkarte Durchsuchen des Arbeitsbereichs Datensätze mit den Auslassungszeichen und der Option Tags verwalten , die für den ausgewählten Datensatz hervorgehoben sind.](../images/datasets/user-guide/manage-tags.png)
+
+Die [!UICONTROL Tags verwalten] angezeigt. Geben Sie eine kurze Beschreibung ein, um ein benutzerdefiniertes Tag zu erstellen, oder wählen Sie aus einem bereits vorhandenen Tag aus, um Ihren Datensatz zu beschriften. Klicken Sie auf **[!UICONTROL Speichern]**, um Ihre Einstellungen zu bestätigen.
+
+![Das Dialogfeld Tags verwalten mit hervorgehobenen benutzerdefinierten Tags.](../images/datasets/user-guide/manage-tags-dialog.png)
+
+Die [!UICONTROL Tags verwalten] -Dialogfeld kann auch vorhandene Tags aus einem Datensatz entfernen. Wählen Sie einfach das &quot;x&quot;neben dem Tag aus, das Sie entfernen möchten, und wählen Sie **[!UICONTROL Speichern]**.
+
+Nachdem einem Datensatz ein Tag hinzugefügt wurde, können die Datensätze anhand des entsprechenden Tags gefiltert werden. Siehe den Abschnitt zum [Filtern von Datensätzen nach Tags](#enable-profile) für weitere Informationen.
+
+Weitere Informationen zum Klassifizieren von Geschäftsobjekten für eine einfachere Erkennung und Kategorisierung finden Sie im Handbuch unter [Verwalten von Metadaten-Taxonomien](../../administrative-tags/ui/managing-tags.md). In diesem Handbuch wird beschrieben, wie Benutzer mit entsprechenden Berechtigungen vordefinierte Tags erstellen, Tags Kategorien zuweisen und alle zugehörigen CRUD-Vorgänge für Tags und Tag-Kategorien in der Platform-Benutzeroberfläche durchführen können.
+
+## Datensätze suchen und filtern {#search-and-filter}
+
+Um die Liste der verfügbaren Datensätze zu durchsuchen oder zu filtern, wählen Sie das Filtersymbol (![Das Filtersymbol.](../images/datasets/user-guide/icon.png)) oben links im Arbeitsbereich. Eine Reihe von Filteroptionen wird in der linken Leiste angezeigt. Es gibt verschiedene Methoden zum Filtern der verfügbaren Datensätze. Dazu gehören: [[!UICONTROL Systemdatensätze anzeigen]](#show-system-datasets), [[!UICONTROL Im Profil enthalten]](#filter-profile-enabled-datasets), [[!UICONTROL Tags]](#filter-by-tag), [[!UICONTROL Erstellungsdatum]](#filter-by-creation-date), [[!UICONTROL Änderungsdatum], [!UICONTROL Erstellt von]](#filter-by-creation-date)und [[!UICONTROL Schema]](#filter-by-schema).
+
+Die Liste der angewendeten Filter wird oberhalb der gefilterten Ergebnisse angezeigt.
+
+![Auf der Registerkarte Durchsuchen des Arbeitsbereichs Datensätze wird die Liste der angewendeten Filter hervorgehoben.](../images/datasets/user-guide/applied-filters.png)
+
+### Anzeigen von Systemdatensätzen {#show-system-datasets}
+
+Standardmäßig werden nur Datensätze angezeigt, in die Sie Daten aufgenommen haben. Wenn Sie die systemgenerierten Datensätze anzeigen möchten, wählen Sie die **[!UICONTROL Ja]** im [!UICONTROL Anzeigen von Systemdatensätzen] Abschnitt. Systemgenerierte Datensätze werden nur zur Verarbeitung anderer Komponenten verwendet. Beispielsweise wird der systemgenerierte Profilexport-Datensatz zur Verarbeitung des Profil-Dashboards verwendet.
+
+![Die Filteroptionen des Arbeitsbereichs &quot;Datensätze&quot;mit dem [!UICONTROL Anzeigen von Systemdatensätzen] hervorgehoben.](../images/datasets/user-guide/show-system-datasets.png)
+
+### Profilaktivierte Datensätze filtern {#filter-profile-enabled-datasets}
+
+Die für Profildaten aktivierten Datensätze werden zum Ausfüllen von Kundenprofilen verwendet, nachdem die Daten erfasst wurden. Siehe Abschnitt zu [Aktivieren von Datensätzen für Profile](#enable-profile) , um mehr zu erfahren.
+
+Um Ihren Datensatz nach der Aktivierung für Profil zu filtern, wählen Sie die [!UICONTROL Ja] aus den Filteroptionen.
+
+![Die Filteroptionen des Arbeitsbereichs &quot;Datensätze&quot;mit dem [!UICONTROL Im Profil enthalten] hervorgehoben.](../images/datasets/user-guide/included-in-profile.png)
+
+### Filtern von Datensätzen nach Tag {#filter-by-tag}
+
+Geben Sie Ihren benutzerdefinierten Tag-Namen in die [!UICONTROL Tags] eingeben und wählen Sie dann Ihr Tag aus der Liste der verfügbaren Optionen aus, um Datensätze zu suchen und zu filtern, die diesem Tag entsprechen.
+
+![Die Filteroptionen des Arbeitsbereichs &quot;Datensätze&quot;mit dem [!UICONTROL Tags] Eingabe- und Filtersymbol hervorgehoben.](../images/datasets/user-guide/filter-tags.png)
+
+### Filtern von Datensätzen nach Erstellungsdatum {#filter-by-creation-date}
+
+Datensätze können nach Erstellungsdatum über einen benutzerdefinierten Zeitraum gefiltert werden. Dies kann zum Ausschließen von Verlaufsdaten oder zum Generieren spezifischer chronologischer Dateneinblicke und Berichte verwendet werden. Wählen Sie eine [!UICONTROL Startdatum] und [!UICONTROL Enddatum] durch Auswahl des Kalendersymbols für jedes Feld. Danach werden auf der Registerkarte Durchsuchen nur Datensätze angezeigt, die diesen Kriterien entsprechen.
+
+### Filtern von Datensätzen nach Änderungsdatum {#filter-by-modified-date}
+
+Ähnlich wie der Filter für das Erstellungsdatum können Sie Ihre Datensätze nach dem Datum der letzten Änderung filtern. Im [!UICONTROL Änderungsdatum] Abschnitt auswählen [!UICONTROL Startdatum] und [!UICONTROL Enddatum] durch Auswahl des Kalendersymbols für jedes Feld. Danach werden auf der Registerkarte Durchsuchen nur Datensätze angezeigt, die während dieses Zeitraums geändert wurden.
+
+### Nach Schema filtern {#filter-by-schema}
+
+Sie können Datensätze nach dem Schema filtern, das ihre Struktur definiert. Wählen Sie entweder das Dropdown-Symbol aus oder geben Sie den Schemanamen in das Textfeld ein. Eine Liste der potenziellen Übereinstimmungen wird angezeigt. Wählen Sie das entsprechende Schema aus der Liste aus.
+
+## Sortieren von Datensätzen nach dem erstellten Datum {#sort}
+
+Datensätze in der [!UICONTROL Durchsuchen] kann nach auf- oder absteigenden Datumsangaben sortiert werden. Wählen Sie die [!UICONTROL Erstellt] oder [!UICONTROL Letzte Aktualisierung] Spaltenüberschriften, die zwischen auf- und absteigender Reihenfolge zu wechseln sind. Nach der Auswahl zeigt die Spalte dies entweder mit einem Nach-oben- oder Nach-unten-Pfeil neben der Spaltenüberschrift an.
+
+![Auf der Registerkarte Durchsuchen des Arbeitsbereichs Datensätze wird die Spalte Erstellt und Letzte Aktualisierung hervorgehoben.](../images/datasets/user-guide/ascending-descending-columns.png)
+
+## Vorschau für Datensatz anzeigen {#preview}
+
+Sie können eine Vorschau der Datensatzstichprobe aus beiden Inline-Optionen der [!UICONTROL Durchsuchen] und auch [!UICONTROL Datensatzaktivität] anzeigen. Aus dem [!UICONTROL Durchsuchen] die Auslassungszeichen neben dem Datensatznamen, den Sie in der Vorschau anzeigen möchten. Eine Menüliste mit Optionen wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL Vorschau des Datensatzes anzeigen]** aus der Liste der verfügbaren Optionen. Wenn der Datensatz leer ist, wird der Vorschau-Link deaktiviert und stattdessen darauf hingewiesen, dass die Vorschau nicht verfügbar ist.
+
+![Die Registerkarte Durchsuchen des Arbeitsbereichs Datensätze mit den Auslassungszeichen und der Option Datensatz-Vorschau für den ausgewählten Datensatz hervorgehoben.](../images/datasets/user-guide/preview-dataset-option.png)
+
+Dadurch wird das Vorschaufenster geöffnet, in dem rechts die hierarchische Ansicht des Schemas für den Datensatz angezeigt wird.
+
+![Das Dialogfeld für die Datensatzvorschau mit Informationen zur Struktur sowie Beispielwerten für den Datensatz werden angezeigt.](../images/datasets/user-guide/preview-dataset.png)
+
+Alternativ können Sie über die **[!UICONTROL Datensatzaktivität]** Bildschirm, wählen Sie **[!UICONTROL Vorschau des Datensatzes anzeigen]** in der oberen rechten Ecke des Bildschirms, um eine Vorschau von bis zu 100 Datenzeilen anzuzeigen.
 
 ![Die Schaltfläche Datensatz-Vorschau ist hervorgehoben.](../images/datasets/user-guide/select-preview.png)
-
-Im Vorschaufenster wird rechts für den Datensatz die hierarchische Ansicht des Schemas angezeigt.
-
-![Eine Vorschau des Datensatzes wird angezeigt. Informationen zur Struktur sowie Beispielwerte werden angezeigt.](../images/datasets/user-guide/preview-dataset.png)
 
 Für zuverlässigere Methoden zum Zugriff auf Ihre Daten: [!DNL Experience Platform] bietet nachgelagerte Dienste wie [!DNL Query Service] und [!DNL JupyterLab] , um Daten zu untersuchen und zu analysieren. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
@@ -92,6 +158,8 @@ Der Schritt **[!UICONTROL Datensatz konfigurieren]** wird angezeigt. Geben Sie d
 
 ![Konfigurationsdetails des Datensatzes werden eingefügt. Dazu gehören Details wie der Datensatzname und die Beschreibung.](../images/datasets/user-guide/configure-dataset-schema.png)
 
+Datensätze können mit dem Schemafilter aus der Liste der verfügbaren Datensätze in der Benutzeroberfläche gefiltert werden. Siehe den Abschnitt zum [Datensätze nach Schema filtern](#filter-by-schema) für weitere Informationen.
+
 ### Datensatz mit einer CSV-Datei erstellen {#csv}
 
 Wenn Sie einen Datensatz mit einer CSV-Datei erstellen, wird ein Ad-hoc-Schema erstellt, um dem Datensatz eine Struktur zu geben, die mit der bereitgestellten CSV-Datei übereinstimmt. Im **[!UICONTROL Datensatz erstellen]** Bildschirm, wählen Sie **[!UICONTROL Datensatz aus CSV-Datei erstellen]**.
@@ -119,7 +187,11 @@ Jeder Datensatz bietet die Möglichkeit, Kundenprofile mit den erfassten Daten a
 
 Weitere Informationen zum Aktivieren eines Schemas für [!DNL Profile], siehe [Benutzerhandbuch zum Schema Editor](../../xdm/tutorials/create-schema-ui.md).
 
-Um einen Datensatz für Profil zu aktivieren, greifen Sie auf dessen **[!UICONTROL Datensatzaktivität]** und wählen Sie **[!UICONTROL Profil]** innerhalb der **[!UICONTROL Eigenschaften]** Spalte. Nach der Aktivierung werden Daten, die in den Datensatz aufgenommen werden, auch zum Ausfüllen von Kundenprofilen verwendet.
+Sie können einen Datensatz für Profil über beide Inline-Optionen der [!UICONTROL Durchsuchen] und auch [!UICONTROL Datensatzaktivität] anzeigen. Aus dem [!UICONTROL Durchsuchen] des [!UICONTROL Datensätze] Arbeitsbereich die Auslassungspunkte eines Datensatzes auswählen, den Sie für Profil aktivieren möchten. Eine Menüliste mit Optionen wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL Einheitliches Profil aktivieren]** aus der Liste der verfügbaren Optionen.
+
+![Auf der Registerkarte Durchsuchen des Arbeitsbereichs Datensätze werden die Auslassungspunkte und Einheitliches Profil aktivieren hervorgehoben.](../images/datasets/user-guide/enable-for-profile.png)
+
+Alternativ dazu kann die **[!UICONTROL Datensatzaktivität]** Bildschirm, wählen Sie die **[!UICONTROL Profil]** innerhalb der **[!UICONTROL Eigenschaften]** Spalte. Nach der Aktivierung werden Daten, die in den Datensatz aufgenommen werden, auch zum Ausfüllen von Kundenprofilen verwendet.
 
 >[!NOTE]
 >
@@ -127,13 +199,23 @@ Um einen Datensatz für Profil zu aktivieren, greifen Sie auf dessen **[!UICONTR
 
 ![Der Umschalter Profil wird auf der Seite mit den Datensatzdetails hervorgehoben.](../images/datasets/user-guide/enable-dataset-profiles.png)
 
+Datensätze, die für Profile aktiviert wurden, können ebenfalls anhand dieser Kriterien gefiltert werden. Siehe den Abschnitt zum [Für das Profil aktivierte Datensätze filtern](#filter-profile-enabled-datasets) für weitere Informationen.
+
 ## Data Governance in einem Datensatz verwalten und durchsetzen {#manage-and-enforce-data-governance}
+
+Sie können die Data Governance-Beschriftungen für einen Datensatz verwalten, indem Sie die Inline-Optionen des [!UICONTROL Durchsuchen] Registerkarte. Wählen Sie die Auslassungspunkte neben dem Datensatz-Namen aus, den Sie verwalten möchten, gefolgt von **[!UICONTROL Daten verwalten und Zugriffsbeschriftungen]** aus dem Dropdown-Menü aus.
 
 Mit Datennutzungsbezeichnungen, die auf Schemaebene angewendet werden, können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Siehe [Data Governance - Übersicht](../../data-governance/home.md) Weitere Informationen zu Bezeichnungen finden Sie im Abschnitt [Benutzerhandbuch zu Datennutzungsbezeichnungen](../../data-governance/labels/overview.md) für Anweisungen zum Anwenden von Bezeichnungen auf Schemas zur Weitergabe an Datensätze.
 
 ## Datensatz löschen {#delete}
 
-Sie können einen Datensatz löschen, indem Sie zunächst auf den Bildschirm **[!UICONTROL Datensatzaktivität]** zugreifen. Wählen Sie anschließend **[!UICONTROL Datensatz löschen]** , um sie zu löschen.
+Sie können einen Datensatz aus den Inline-Aktionen des Datensatzes löschen. [!UICONTROL Durchsuchen] oder oben rechts im [!UICONTROL Datensatzaktivität] anzeigen. Aus dem [!UICONTROL Durchsuchen] -Ansicht die Auslassungszeichen neben dem Datensatz, den Sie löschen möchten. Eine Menüliste mit Optionen wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL Löschen]** aus dem Dropdown-Menü aus.
+
+![Die Registerkarte Durchsuchen des Arbeitsbereichs Datensätze , wobei die Auslassungszeichen und die Löschoption für den ausgewählten Datensatz hervorgehoben sind.](../images/datasets/user-guide/inline-delete-dataset.png)
+
+Ein Bestätigungsdialogfeld wird angezeigt. Klicken Sie zur Bestätigung auf **[!UICONTROL Löschen]**.
+
+Wählen Sie alternativ **[!UICONTROL Datensatz löschen]** von **[!UICONTROL Datensatzaktivität]** angezeigt.
 
 >[!NOTE]
 >
@@ -161,7 +243,7 @@ Sie können einzelne **[!UICONTROL Batch-Kennung]** , um auf die **[!UICONTROL B
 
 ![Details zum ausgewählten Batch werden angezeigt. Dazu gehören die Anzahl der aufgenommenen Datensätze, die Anzahl der fehlgeschlagenen Datensätze, der Batch-Status, die Dateigröße, die Start- und Endzeiten der Aufnahme, die Datensatz- und Batch-IDs, die Organisations-ID, der Name des Datensatzes und die Zugriffsinformationen.](../images/datasets/user-guide/batch-overview.png)
 
-Wenn Sie den Batch löschen möchten, wählen Sie dazu **[!UICONTROL Batch löschen]** befindet sich oben rechts im Dashboard. Dadurch werden seine Einträge auch aus dem Datensatz entfernt, in dem der Batch ursprünglich erfasst wurde.
+Wenn Sie den Batch löschen möchten, wählen Sie **[!UICONTROL Batch löschen]** oben rechts im Dashboard. Durch das Löschen eines Batches werden auch seine Datensätze aus dem Datensatz entfernt, in den der Batch ursprünglich aufgenommen wurde.
 
 ![Die Schaltfläche Batch löschen wird auf der Seite mit den Datensatzdetails hervorgehoben.](../images/datasets/user-guide/delete-batch.png)
 
