@@ -3,10 +3,10 @@ keywords: Zielpersonalisierung;Ziel;Ziel von Experience Platform;Adobe Target-Zi
 title: Adobe Target-Verbindung
 description: Adobe Target ist ein Programm, das bei allen eingehenden Kundeninteraktionen über Websites, Mobile Apps usw. KI-gestützte Echtzeit-Personalisierung und Experimente ermöglicht.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 3b2fedf4f7b17c4fb32afb5978bfac6f618f5bc3
+source-git-commit: 2c3a70df57af2045f03c8d4a22cdc33f3c449fb3
 workflow-type: tm+mt
-source-wordcount: '1079'
-ht-degree: 58%
+source-wordcount: '1121'
+ht-degree: 56%
 
 ---
 
@@ -93,11 +93,18 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 * **Beschreibung**: Geben Sie eine Beschreibung für das Ziel ein. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden. Dieses Feld ist optional.
 * **Datenspeicher-ID**: Dadurch wird bestimmt, in welchen Datenerfassungsdatenstrom die Segmente einbezogen werden. Das Dropdown-Menü zeigt nur Datensätze an, für die die Target- und Adobe Experience Platform-Dienste aktiviert sind. Siehe [Konfigurieren eines Datenspeichers](../../../edge/datastreams/configure.md#aep) für detaillierte Informationen zum Konfigurieren eines Datastreams für Adobe Experience Platform und Adobe Target.
    * **[!UICONTROL Keines]**: Wählen Sie diese Option aus, wenn Sie die Adobe Target-Personalisierung konfigurieren möchten, die Implementierung der [Experience Platform Web SDK](../../../edge/home.md). Bei Verwendung dieser Option unterstützen Segmente, die von Experience Platform nach Target exportiert werden, nur die Personalisierung der nächsten Sitzung und die Kantensegmentierung ist deaktiviert. Weiterführende Informationen finden Sie in der folgenden Tabelle.
+
+  | Kein Datenspeicher ausgewählt | Datenspeicher ausgewählt |
+  |---|---|
+  | <ul><li>[Edge-Segmentierung](../../../segmentation/ui/edge-segmentation.md) wird nicht unterstützt.</li><li>[Personalisierung auf derselben Seite und auf der nächsten Seite](../../ui/activate-edge-personalization-destinations.md) werden nicht unterstützt.</li><li>Sie können Segmente nur für die Adobe Target-Verbindung freigeben. *Standard-Produktions-Sandbox*.</li><li>Verwenden Sie zum Konfigurieren der Personalisierung der nächsten Sitzung ohne Verwendung einer Datastraam-ID die [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>Die Edge-Segmentierung funktioniert wie erwartet.</li><li>[Personalisierung auf derselben Seite und auf der nächsten Seite](../../ui/activate-edge-personalization-destinations.md) werden unterstützt.</li><li>Die Segmentfreigabe wird für andere Sandboxes unterstützt.</li></ul> |
+
 * **Arbeitsbereich**: Adobe Target auswählen [Arbeitsbereich](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=de) für die Zielgruppen freigegeben werden. Für jede Adobe Target-Verbindung kann ein Arbeitsbereich ausgewählt werden. Bei Aktivierung werden die Zielgruppen zum ausgewählten Arbeitsbereich weitergeleitet, während die entsprechenden [Datennutzungsbezeichnungen für Experience Platformen](../../../data-governance/labels/overview.md).
 
-| Kein Datenspeicher ausgewählt | Datenspeicher ausgewählt |
-|---|---|
-| <ul><li>[Edge-Segmentierung](../../../segmentation/ui/edge-segmentation.md) wird nicht unterstützt.</li><li>[Personalisierung auf derselben Seite und auf der nächsten Seite](../../ui/activate-edge-personalization-destinations.md) werden nicht unterstützt.</li><li>Sie können Segmente nur für die Adobe Target-Verbindung freigeben. *Standard-Produktions-Sandbox*.</li><li>Verwenden Sie zum Konfigurieren der Personalisierung der nächsten Sitzung ohne Verwendung einer Datastraam-ID die [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>Die Edge-Segmentierung funktioniert wie erwartet.</li><li>[Personalisierung auf derselben Seite und auf der nächsten Seite](../../ui/activate-edge-personalization-destinations.md) werden unterstützt.</li><li>Die Segmentfreigabe wird für andere Sandboxes unterstützt.</li></ul> |
+>[!NOTE]
+>
+>Bei Verwendung eines benutzerdefinierten Target-Arbeitsbereichs für [Personalisierung von derselben Seite und nächster Seite mit Attributen](../../ui/activate-edge-personalization-destinations.md), wobei nur die [ausgewählte Zielgruppen](../../ui/activate-edge-personalization-destinations.md#select-audiences) werden an den ausgewählten Target-Arbeitsbereich gesendet. Die [Zugeordnete Attribute](../../ui/activate-edge-personalization-destinations.md#mapping) werden an den standardmäßigen Target-Arbeitsbereich gesendet.
+><br>
+>Dieses Verhalten wird sich in einer zukünftigen Aktualisierung ändern.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
