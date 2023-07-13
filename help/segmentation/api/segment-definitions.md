@@ -1,19 +1,18 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Segmentierung; Segmentierung; Segmentierungsdienst; Segmentdefinition; Segmentdefinitionen; API; API;
 solution: Experience Platform
 title: API-Endpunkt für Segmentdefinitionen
 description: Der Endpunkt "Segmentdefinitionen"in der Adobe Experience Platform Segmentation Service-API ermöglicht Ihnen die programmgesteuerte Verwaltung von Segmentdefinitionen für Ihr Unternehmen.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1216'
-ht-degree: 24%
+source-wordcount: '1209'
+ht-degree: 21%
 
 ---
 
 # Endpunkt der Segmentdefinitionen
 
-Mit Adobe Experience Platform können Sie Segmente erstellen, die eine Gruppe spezifischer Attribute oder Verhaltensweisen aus einer Gruppe von Profilen definieren. Eine Segmentdefinition ist ein Objekt, das eine Abfrage enthält, die in [!DNL Profile Query Language] (PQL). Dieses Objekt wird auch als PQL-Prädikat bezeichnet. PQL-Prädikate definieren die Regeln für das Segment basierend auf Bedingungen, die sich auf Datensatz- oder Zeitreihendaten beziehen, die Sie für [!DNL Real-Time Customer Profile]. Siehe [PQL-Handbuch](../pql/overview.md) für weitere Informationen zum Schreiben von PQL-Abfragen.
+Mit Adobe Experience Platform können Sie Segmentdefinitionen erstellen, die eine Gruppe spezifischer Attribute oder Verhaltensweisen aus einer Gruppe von Profilen definieren. Eine Segmentdefinition ist ein Objekt, das eine Abfrage enthält, die in [!DNL Profile Query Language] (PQL). Segmentdefinitionen werden auf Profile angewendet, um Zielgruppen zu erstellen. Dieses Objekt (Segmentdefinition) wird auch als PQL-Prädikat bezeichnet. PQL-Prädikate definieren die Regeln für die Segmentdefinition basierend auf Bedingungen, die sich auf Datensatz- oder Zeitreihendaten beziehen, die Sie für [!DNL Real-Time Customer Profile]. Siehe [PQL-Handbuch](../pql/overview.md) für weitere Informationen zum Schreiben von PQL-Abfragen.
 
 Dieses Handbuch enthält Informationen zum besseren Verständnis von Segmentdefinitionen und enthält Beispiel-API-Aufrufe zum Ausführen grundlegender Aktionen mit der API.
 
@@ -199,15 +198,14 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `name` | **Erforderlich.** Ein eindeutiger Name, mit dem auf das Segment verwiesen wird. |
-| `description` | Eine Beschreibung der Segmentdefinition, die Sie erstellen. |
-| `evaluationInfo` | Der Typ des Segments, das Sie erstellen. Wenn Sie ein Batch-Segment erstellen möchten, legen Sie `evaluationInfo.batch.enabled` auf wahr zu sein. Wenn Sie ein Streaming-Segment erstellen möchten, legen Sie `evaluationInfo.continuous.enabled` auf wahr zu sein. Wenn Sie ein Kantensegment erstellen möchten, legen Sie `evaluationInfo.synchronous.enabled` auf wahr zu sein. Wenn das Segment leer gelassen wird, wird es als **Batch** Segment. |
-| `schema` | **Erforderlich.** Das mit den Entitäten im Segment verknüpfte Schema. Besteht aus einer der beiden `id` oder `name` -Feld. |
-| `expression` | **Erforderlich.** Eine Entität, die Feldinformationen zur Segmentdefinition enthält. |
+| `name` | Ein eindeutiger Name, mit dem auf die Segmentdefinition verwiesen wird. |
+| `description` | (Optional.) Eine Beschreibung der Segmentdefinition, die Sie erstellen. |
+| `evaluationInfo` | (Optional.) Der Typ der Segmentdefinition, die Sie erstellen. Wenn Sie ein Batch-Segment erstellen möchten, legen Sie `evaluationInfo.batch.enabled` auf wahr zu sein. Wenn Sie ein Streaming-Segment erstellen möchten, legen Sie `evaluationInfo.continuous.enabled` auf wahr zu sein. Wenn Sie ein Kantensegment erstellen möchten, legen Sie `evaluationInfo.synchronous.enabled` auf wahr zu sein. Wenn dies leer gelassen wird, wird die Segmentdefinition als **Batch** Segment. |
+| `schema` | Das mit den Entitäten im Segment verknüpfte Schema. Besteht aus einer der beiden `id` oder `name` -Feld. |
+| `expression` | Eine Entität, die Feldinformationen zur Segmentdefinition enthält. |
 | `expression.type` | Gibt den Ausdruckstyp an. Derzeit wird nur &quot;PQL&quot;unterstützt. |
 | `expression.format` | Gibt die Struktur des Ausdrucks in Wert an. Derzeit wird das folgende Format unterstützt: <ul><li>`pql/text`: Eine Textdarstellung einer Segmentdefinition gemäß der veröffentlichten PQL-Grammatik.  Beispiel: `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | Ein Ausdruck, der dem in `expression.format`. |
-| `description` | Eine für Menschen lesbare Beschreibung der Definition. |
 
 <!-- >[!NOTE]
 >
@@ -339,7 +337,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Information
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `id` | Eine vom System generierte schreibgeschützte ID der Segmentdefinition. |
-| `name` | Ein eindeutiger Name, mit dem auf das Segment verwiesen wird. |
+| `name` | Ein eindeutiger Name, mit dem auf die Segmentdefinition verwiesen wird. |
 | `schema` | Das mit den Entitäten im Segment verknüpfte Schema. Besteht aus einer der beiden `id` oder `name` -Feld. |
 | `expression` | Eine Entität, die Feldinformationen zur Segmentdefinition enthält. |
 | `expression.type` | Gibt den Ausdruckstyp an. Derzeit wird nur &quot;PQL&quot;unterstützt. |
@@ -472,7 +470,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 207 mit den angeforderten Segment
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `id` | Eine vom System generierte schreibgeschützte ID der Segmentdefinition. |
-| `name` | Ein eindeutiger Name, mit dem auf das Segment verwiesen wird. |
+| `name` | Ein eindeutiger Name, mit dem auf die Segmentdefinition verwiesen wird. |
 | `schema` | Das mit den Entitäten im Segment verknüpfte Schema. Besteht aus einer der beiden `id` oder `name` -Feld. |
 | `expression` | Eine Entität, die Feldinformationen zur Segmentdefinition enthält. |
 | `expression.type` | Gibt den Ausdruckstyp an. Derzeit wird nur &quot;PQL&quot;unterstützt. |
@@ -487,7 +485,7 @@ Sie können das Löschen einer bestimmten Segmentdefinition anfordern, indem Sie
 
 >[!NOTE]
 >
-> Sie können ein Segment, das in einer Zielaktivierung verwendet wird, **nicht** löschen.
+> Eine Segmentdefinition, die in einer Zielaktivierung verwendet wird **cannot** gelöscht werden.
 
 **API-Format**
 

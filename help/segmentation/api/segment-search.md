@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;Segmentierung;Segmentierungsdienst;Fehlerbehebung;API;Suche;Segment;Segment;Suche;Segmentsuche
 title: Segment Search API Endpoint
 description: In der Adobe Experience Platform Segmentation Service-API wird die Segmentsuche verwendet, um Felder aus verschiedenen Datenquellen zu durchsuchen und nahezu in Echtzeit zurückzugeben. Dieses Handbuch enthält Informationen zum besseren Verständnis der Segmentsuche sowie Beispiel-API-Aufrufe zum Ausführen grundlegender Aktionen mithilfe der API.
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1196'
 ht-degree: 6%
 
 ---
@@ -37,8 +36,8 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 
 | Parameter | Beschreibung |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(Erforderlich)** Wobei {SCHEMA} den Schemaklasse-Wert darstellt, der den Suchobjekten zugeordnet ist. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
-| `s={SEARCH_TERM}` | *(Optional)* Dabei stellt {SEARCH_TERM} eine Abfrage dar, die der Implementierung von Microsoft entspricht. [Suchsyntax von Lucene](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax). Wenn kein Suchbegriff angegeben ist, werden alle Datensätze, die mit `schema.name` zurückgegeben. Eine ausführlichere Erläuterung finden Sie im Abschnitt [Anhang](#appendix) dieses Dokuments. |
+| `schema.name={SCHEMA}` | **(Erforderlich)** Wo {SCHEMA} stellt den Schemaklasse-Wert dar, der mit den Suchobjekten verknüpft ist. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
+| `s={SEARCH_TERM}` | *(Optional)* Wo {SEARCH_TERM} stellt eine Abfrage dar, die der Implementierung von Microsoft entspricht [Suchsyntax von Lucene](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax). Wenn kein Suchbegriff angegeben ist, werden alle Datensätze, die mit `schema.name` zurückgegeben. Eine ausführlichere Erläuterung finden Sie im Abschnitt [Anhang](#appendix) dieses Dokuments. |
 
 **Anfrage**
 
@@ -97,12 +96,12 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parameter | Beschreibung |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(Erforderlich)** Wobei {SCHEMA} den Schemaklasse-Wert enthält, der den Suchobjekten zugeordnet ist. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
-| `namespace={NAMESPACE}` | **(Erforderlich)** Dabei enthält {NAMESPACE} den Namespace, in dem Sie suchen möchten. |
-| `s={SEARCH_TERM}` | *(Optional)* Dabei enthält {SEARCH_TERM} eine Abfrage, die der Implementierung von Microsoft entspricht. [Suchsyntax von Lucene](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax). Wenn kein Suchbegriff angegeben ist, werden alle Datensätze, die mit `schema.name` zurückgegeben. Eine ausführlichere Erläuterung finden Sie im Abschnitt [Anhang](#appendix) dieses Dokuments. |
-| `entityId={ENTITY_ID}` | *(Optional)* Beschränkt Ihre Suche auf den angegebenen Ordner, der mit {ENTITY_ID} angegeben wird. |
-| `limit={LIMIT}` | *(Optional)* Wobei {LIMIT} die Anzahl der zurückzugebenden Suchergebnisse darstellt. Der Standardwert lautet 50. |
-| `page={PAGE}` | *(Optional)* Dabei steht {PAGE} für die Seitennummer, die zum Paginieren der Ergebnisse der gesuchten Abfrage verwendet wird. Beachten Sie, dass die Seitenzahl bei **0**. |
+| `schema.name={SCHEMA}` | **(Erforderlich)** Wo {SCHEMA} enthält den Wert der Schemaklasse, der mit den Suchobjekten verknüpft ist. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
+| `namespace={NAMESPACE}` | **(Erforderlich)** Wo {NAMESPACE} enthält den Namespace, in dem Sie suchen möchten. |
+| `s={SEARCH_TERM}` | *(Optional)* Wo {SEARCH_TERM} enthält eine Abfrage, die mit der Microsoft-Implementierung von [Suchsyntax von Lucene](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax). Wenn kein Suchbegriff angegeben ist, werden alle Datensätze, die mit `schema.name` zurückgegeben. Eine ausführlichere Erläuterung finden Sie im Abschnitt [Anhang](#appendix) dieses Dokuments. |
+| `entityId={ENTITY_ID}` | *(Optional)* Schränkt Ihre Suche in den angegebenen Ordner ein, mit {ENTITY_ID}. |
+| `limit={LIMIT}` | *(Optional)* Wo {LIMIT} stellt die Anzahl der zurückzugebenden Suchergebnisse dar. Der Standardwert lautet 50. |
+| `page={PAGE}` | *(Optional)* Wo {PAGE} stellt die Seitenzahl dar, die für die Paginierung der Ergebnisse der gesuchten Abfrage verwendet wird. Beachten Sie, dass die Seitenzahl bei **0**. |
 
 
 **Anfrage**
@@ -168,9 +167,9 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parameter | Beschreibung |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(Erforderlich)** Wobei {SCHEMA} den Schemaklasse-Wert enthält, der den Suchobjekten zugeordnet ist. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
-| `namespace={NAMESPACE}` | **(Erforderlich)** Dabei enthält {NAMESPACE} den Namespace, in dem Sie suchen möchten. |
-| `entityId={ENTITY_ID}` | **(Erforderlich)** Die ID des Suchobjekts, für das Sie die Strukturinformationen abrufen möchten, angegeben mit {ENTITY_ID}. |
+| `schema.name={SCHEMA}` | **(Erforderlich)** Wo {SCHEMA} enthält den Wert der Schemaklasse, der mit den Suchobjekten verknüpft ist. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
+| `namespace={NAMESPACE}` | **(Erforderlich)** Wo {NAMESPACE} enthält den Namespace, in dem Sie suchen möchten. |
+| `entityId={ENTITY_ID}` | **(Erforderlich)** Die ID des Suchobjekts, zu dem Sie die Strukturinformationen abrufen möchten, angegeben mit {ENTITY_ID}. |
 
 **Anfrage**
 
@@ -223,9 +222,9 @@ Nach dem Lesen dieses Handbuchs haben Sie jetzt ein besseres Verständnis davon,
 
 ## Anhang {#appendix}
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen zur Funktionsweise von Suchbegriffen. Suchabfragen werden wie folgt geschrieben: `s={FieldName}:{SearchExpression}`. Um beispielsweise nach einem Segment mit dem Namen AAM oder [!DNL Platform]verwenden, würden Sie die folgende Suchabfrage verwenden: `s=segmentName:AAM%20OR%20Platform`.
+Die folgenden Abschnitte enthalten zusätzliche Informationen zur Funktionsweise von Suchbegriffen. Suchabfragen werden wie folgt geschrieben: `s={FieldName}:{SearchExpression}`. Um beispielsweise nach einer Segmentdefinition mit dem Namen AAM oder zu suchen, [!DNL Platform]verwenden, würden Sie die folgende Suchabfrage verwenden: `s=segmentName:AAM%20OR%20Platform`.
 
-> !![NOTE] Für Best Practices sollte der Suchausdruck wie im oben gezeigten Beispiel HTML-kodiert sein.
+>  Für Best Practices sollte der Suchausdruck wie im oben gezeigten Beispiel HTML-kodiert sein.
 
 ### Suchfelder {#search-fields}
 
@@ -235,16 +234,16 @@ In der folgenden Tabelle sind die Felder aufgeführt, die im Suchabfrageparamete
 | ---------- | ----------- |
 | folderId | Der Ordner oder die Ordner mit der Ordner-ID der angegebenen Suche. |
 | folderLocation | Der Speicherort bzw. die Speicherorte mit dem Ordnerspeicherort der angegebenen Suche. |
-| parentFolderId | Das Segment oder den Ordner mit der übergeordneten Ordner-ID der angegebenen Suche. |
-| segmentId | Das Segment stimmt mit der Segment-ID Ihrer angegebenen Suche überein. |
-| segmentName | Das Segment stimmt mit dem Segmentnamen der angegebenen Suche überein. |
-| segmentDescription | Das Segment stimmt mit der Segmentbeschreibung der angegebenen Suche überein. |
+| parentFolderId | Die Segmentdefinition oder der Ordner mit der übergeordneten Ordner-ID der angegebenen Suche. |
+| segmentId | Die Segmentdefinition, die mit der Segment-ID Ihrer angegebenen Suche übereinstimmt. |
+| segmentName | Die Segmentdefinition, die mit dem Segmentnamen der angegebenen Suche übereinstimmt. |
+| segmentDescription | Die Segmentdefinition, die mit der Segmentbeschreibung der angegebenen Suche übereinstimmt. |
 
 ### Suchausdruck {#search-expression}
 
 In der folgenden Tabelle finden Sie die Details zur Funktionsweise von Suchabfragen bei der Verwendung der Segmentsuche-API.
 
->!![NOTE] Die folgenden Beispiele werden in einem nicht-HTML-kodierten Format angezeigt, um eine bessere Übersichtlichkeit zu erzielen. Best Practices finden Sie unter HTML-Kodierung Ihres Suchausdrucks.
+>  Die folgenden Beispiele werden in einem nicht-HTML-kodierten Format angezeigt, um eine bessere Übersichtlichkeit zu erzielen. Best Practices finden Sie unter HTML-Kodierung Ihres Suchausdrucks.
 
 | Beispielsuchausdruck | Beschreibung |
 | ------------------------- | ----------- |

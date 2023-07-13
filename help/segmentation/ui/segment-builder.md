@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Segmentierungsservice;Segmentierung;Segmentierungs-Service;Benutzerhandbuch;UI-Handbuch;Handbuch zur Segmentierungs-Benutzeroberfläche;segment builder;Segment Builder;
 solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 description: Segment Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 28b9458d29ce69bcbfdff53c0cb6bd7f427e4a2e
+source-git-commit: 6d33c1bd3921a754edfab227fad236caf60ac960
 workflow-type: tm+mt
-source-wordcount: '3258'
-ht-degree: 100%
+source-wordcount: '3308'
+ht-degree: 85%
 
 ---
 
@@ -15,14 +14,14 @@ ht-degree: 100%
 
 [!DNL Segment Builder] bietet einen umfangreichen Arbeitsbereich, in dem Sie mit [!DNL Profile]-Datenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 
-![Die Segment Builder-Benutzeroberfläche wird angezeigt.](../images/ui/segment-builder/segment-builder.png)
+![Die Benutzeroberfläche von Segment Builder wird angezeigt.](../images/ui/segment-builder/segment-builder.png)
 
 ## Bausteine einer Segmentdefinition {#building-blocks}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="Felder"
->abstract="Ein Segment besteht aus drei Feldtypen: Attributen, Ereignissen und Zielgruppen. Mit Attributen können Sie Profilattribute verwenden, die zur Klasse „XDM-Kontaktprofil“ gehören. Mit Ereignissen können Sie mithilfe von XDM ExperienceEvent-Datenelementen eine Zielgruppe basierend auf Aktionen oder stattfindenden Ereignissen erstellen, und mit Zielgruppen können Sie importierte Zielgruppen aus externen Quellen verwenden."
+>abstract="Die drei Feldtypen, aus denen eine Segmentdefinition besteht, sind Attribute, Ereignisse und Zielgruppen. Mit Attributen können Sie Profilattribute verwenden, die zur Klasse „XDM-Kontaktprofil“ gehören. Mit Ereignissen können Sie mithilfe von XDM ExperienceEvent-Datenelementen eine Zielgruppe basierend auf Aktionen oder stattfindenden Ereignissen erstellen, und mit Zielgruppen können Sie importierte Zielgruppen aus externen Quellen verwenden."
 
 Die grundlegenden Bausteine von Segmentdefinitionen sind Attribute und Ereignisse. Darüber hinaus können die in bestehenden Zielgruppen enthaltenen Attribute und Ereignisse als Komponenten für neue Definitionen verwendet werden.
 
@@ -38,7 +37,7 @@ Auf der Registerkarte **[!UICONTROL Attribute]** können Sie [!DNL Profile]-Attr
 
 ### Ereignisse
 
-Auf der Registerkarte **[!UICONTROL Ereignisse]** können Sie mit [!DNL XDM ExperienceEvent]-Datenelementen eine Zielgruppe erstellen, die auf stattgefundenen Ereignissen oder Aktionen basiert. Sie finden Ereignistypen auch auf dem Tab **[!UICONTROL Ereignisse]**; dabei handelt es sich um eine Kollektion häufig verwendeter Ereignisse, mit der Sie Segmente schneller erstellen können.
+Auf der Registerkarte **[!UICONTROL Ereignisse]** können Sie mit [!DNL XDM ExperienceEvent]-Datenelementen eine Zielgruppe erstellen, die auf stattgefundenen Ereignissen oder Aktionen basiert. Ereignistypen finden Sie auch auf der **[!UICONTROL Veranstaltungen]** -Tab, bei dem es sich um eine Sammlung häufig verwendeter Ereignisse handelt, mit denen Sie Ihre Segmentdefinitionen schneller erstellen können.
 
 Sie können nicht nur nach [!DNL ExperienceEvent]-Elementen suchen, sondern auch nach Ereignistypen. Ereignistypen verwenden dieselbe Codierungs-Logik wie [!DNL ExperienceEvents], ohne dass Sie die [!DNL XDM ExperienceEvent]-Klasse nach dem richtigen Ereignis durchsuchen müssen. Wenn Sie z. B. über die Suchleiste nach „cart“ suchen, werden die Ereignistypen „[!UICONTROL AddCart]“ und „[!UICONTROL RemoveCart]“ zurückgegben. Dabei handelt es sich um zwei sehr häufig genutzte Warenkorbaktionen beim Erstellen von Segmentdefinitionen.
 
@@ -116,7 +115,7 @@ Um Ihrer Segmentdefinition eine neue Regel hinzuzufügen, ziehen Sie eine Kachel
 
 >[!IMPORTANT]
 >
->Die neuesten Änderungen an Adobe Experience Platform haben sich auch auf die Verwendung der logischen Operatoren `OR` und `AND` zwischen Ereignissen ausgewirkt. Diese Aktualisierungen haben keinen Einfluss auf bestehende Segmente. Die Änderungen wirken sich jedoch auf alle nachfolgenden Aktualisierungen vorhandener Segmente und die Erstellung neuer Segmente aus. Weitere Informationen finden Sie im [Update zu Zeitkonstanten](./segment-refactoring.md).
+>Die neuesten Änderungen an Adobe Experience Platform haben sich auch auf die Verwendung der logischen Operatoren `OR` und `AND` zwischen Ereignissen ausgewirkt. Diese Aktualisierungen wirken sich nicht auf bestehende Segmentdefinitionen aus. Diese Änderungen wirken sich jedoch auf alle nachfolgenden Aktualisierungen vorhandener Segmentdefinitionen und neu erstellten Segmentdefinitionen aus. Weitere Informationen finden Sie im [Update zu Zeitkonstanten](./segment-refactoring.md).
 
 Bei der Auswahl eines Werts für das Attribut wird eine Liste möglicher Aufzählungswerte für das Attribut angezeigt.
 
@@ -144,7 +143,7 @@ Beachten Sie, dass maximal 250 Werte zulässig sind. Wenn Sie diese Grenze über
 
 ### Hinzufügen von Zielgruppen
 
-Sie können eine Zielgruppe per Drag-and-Drop vom Tab **[!UICONTROL Zielgruppe]** auf die Arbeitsfläche des Regel-Builders ziehen, um auf die Zielgruppenzugehörigkeit in der neuen Segmentdefinition zu verweisen. Auf diese Weise können Sie Zielgruppenzugehörigkeit als Attribut in der neuen Segmentregel ein- oder ausschließen.
+Sie können eine Zielgruppe per Drag-and-Drop vom Tab **[!UICONTROL Zielgruppe]** auf die Arbeitsfläche des Regel-Builders ziehen, um auf die Zielgruppenzugehörigkeit in der neuen Segmentdefinition zu verweisen. Auf diese Weise können Sie die Zielgruppenzugehörigkeit als Attribut in die neuen Segmentdefinitionsregeln einbeziehen oder ausschließen.
 
 Bei [!DNL Platform]-Zielgruppen, die mit [!DNL Segment Builder] erstellt werden, haben Sie die Möglichkeit, die Zielgruppe in den Regelsatz zu konvertieren, der in der Segmentdefinition für diese Zielgruppe verwendet wurde. Diese Konversion erstellt eine Kopie der Regellogik, die dann ohne Beeinträchtigung der ursprünglichen Segmentdefinition verändert werden kann. Vergewissern Sie sich, dass Sie die letzten Änderungen an Ihrer Segmentdefinition gespeichert haben, bevor Sie sie in eine Regellogik konvertieren.
 
@@ -158,11 +157,11 @@ Wenn beim Konvertieren von Zielgruppen in Regeln Konflikte auftreten, versucht [
 
 ### Code-Ansicht
 
-Alts Alternative können Sie eine Code-basierte Version einer in [!DNL Segment Builder] erstellten Regel anzeigen. Nachdem Sie Ihre Regel auf der Arbeitsfläche des Regel-Builders erstellt haben, können Sie **[!UICONTROL Code-Ansicht]** auswählen, um Ihr Segment als PQL anzuzeigen.
+Alts Alternative können Sie eine Code-basierte Version einer in [!DNL Segment Builder] erstellten Regel anzeigen. Nachdem Sie Ihre Regel auf der Arbeitsfläche des Regel-Builders erstellt haben, können Sie **[!UICONTROL Codeansicht]** , um Ihre Segmentdefinition als PQL anzuzeigen.
 
-![Die Schaltfläche für die Code-Ansicht ist hervorgehoben, sodass Sie das Segment als PQL anzeigen können.](../images/ui/segment-builder/code-view.png)
+![Die Schaltfläche für die Codeansicht ist hervorgehoben, sodass Sie die Segmentdefinition als PQL anzeigen können.](../images/ui/segment-builder/code-view.png)
 
-Die Code-Ansicht bietet eine Schaltfläche, mit der Sie den Wert des Segments kopieren können, der in API-Aufrufen verwendet werden soll. Um die neueste Version des Segments zu erhalten, stellen Sie sicher, dass Sie die letzten Änderungen am Segment gespeichert haben.
+Die Codeansicht bietet eine Schaltfläche, mit der Sie den Wert der Segmentdefinition kopieren können, die in API-Aufrufen verwendet werden soll. Um die neueste Version der Segmentdefinition zu erhalten, stellen Sie sicher, dass Sie Ihre neuesten Änderungen an der Segmentdefinition gespeichert haben.
 
 ![Die Schaltfläche zum Kopieren des Codes ist hervorgehoben.](../images/ui/segment-builder/copy-code.png)
 
@@ -178,7 +177,7 @@ Nachdem Sie das Ereignis im Ereignis-Container platziert haben, wählen Sie das 
 
 ![Der Aggregationstext ist hervorgehoben. Mit dieser Option können Sie Aggregationsfunktionen auswählen.](../images/ui/segment-builder/add-aggregation.png)
 
-Die Aggregation wird jetzt hinzugefügt. Nun können Sie die Aggregationsfunktion, das zu aggregierende Attribut, die Gleichheitsfunktion sowie den Wert auswählen. Im folgenden Beispiel würde dieses Segment alle Profile mit einem Gesamtkaufwert von über 100$ qualifizieren, selbst wenn jeder einzelne Kauf unter 100$ liegt.
+Die Aggregation wird jetzt hinzugefügt. Nun können Sie die Aggregationsfunktion, das zu aggregierende Attribut, die Gleichheitsfunktion sowie den Wert auswählen. Im folgenden Beispiel würde diese Segmentdefinition jedes Profil qualifizieren, das eine Summe der erworbenen Werte über 100 USD aufweist, selbst wenn jeder einzelne Kauf unter 100 USD liegt.
 
 ![Die Ereignisregeln, die eine Aggregationsfunktion anzeigen](../images/ui/segment-builder/filled-aggregation.png)
 
@@ -222,6 +221,11 @@ Wenn Sie **[!UICONTROL Container entpacken]** auswählen, wird der untergeordnet
 
 ## Zusammenführungsrichtlinien
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
+>title="Zusammenführungsrichtlinien"
+>abstract="Eine Zusammenführungsrichtlinie ermöglicht das Zusammenführen verschiedener Datensätze, um Ihr Profil zu bilden. Platform hat eine standardmäßige Zusammenführungsrichtlinie bereitgestellt, oder Sie können eine neue standardmäßige Zusammenführungsrichtlinie in Profile erstellen. Wählen Sie eine Zusammenführungsrichtlinie aus, die Ihrem Marketing-Zweck für diese Zielgruppe entspricht."
+
 Mit [!DNL Experience Platform] können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich einen kompletten Überblick über einzelne Kundinnen und Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen [!DNL Platform] bestimmt, wie Daten priorisiert und welche Daten kombiniert werden sollen, um ein Profil zu erstellen.
 
 Sie können eine Zusammenführungsrichtlinie auswählen, die Ihrem Marketing-Zweck für diese Zielgruppe entspricht, oder die standardmäßige Zusammenführungsrichtlinie von [!DNL Platform] nutzen. Sie können verschiedene, für Ihre Organisation eindeutige Zusammenführungsrichtlinien erstellen, einschließlich einer eigenen standardmäßigen Zusammenführungsrichtlinie. Schrittweise Anweisungen zum Erstellen von Zusammenführungsrichtlinien für Ihre Organisation finden Sie in der [Übersicht zu Zusammenführungsrichtlinien](../../profile/merge-policies/overview.md).
@@ -230,40 +234,40 @@ Um eine Zusammenführungsrichtlinie für Ihre Segmentdefinition auszuwählen, w�
 
 ![Die Auswahl für die Zusammenführungsrichtlinie ist hervorgehoben. Darüber können Sie festlegen, welche Zusammenführungsrichtlinie für Ihre Segmentdefinition ausgewählt werden soll.](../images/ui/segment-builder/merge-policy-selector.png)
 
-## Segmenteigenschaften {#segment-properties}
+## Eigenschaften der Segmentdefinition {#segment-properties}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
->title="Segmenteigenschaften"
->abstract="Im Abschnitt „Segmenteigenschaften“ wird eine Schätzung der Größe des resultierenden Segments angezeigt. Darin wird die Anzahl der qualifizierten Profile im Vergleich zur Gesamtzahl der Profile angezeigt. Auf diese Weise können Sie Ihre Segmentdefinition nach Bedarf anpassen, bevor Sie die Zielgruppe selbst erstellen."
+>title="Eigenschaften der Segmentdefinition"
+>abstract="Im Abschnitt Eigenschaften der Segmentdefinition wird eine Schätzung der Größe der resultierenden Segmentdefinition angezeigt, die die Anzahl der qualifizierten Profile im Vergleich zur Gesamtanzahl der Profile anzeigt. Auf diese Weise können Sie Ihre Segmentdefinition nach Bedarf anpassen, bevor Sie die Zielgruppe selbst erstellen."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Aktualieren von Schätzungen"
->abstract="Sie können die Schätzungen Ihres Segments aktualisieren, um sofort eine Vorschau anzuzeigen, wie viele Profile sich für das vorgeschlagene Segment qualifizieren würden. Zielgruppenschätzungen werden anhand einer Stichprobengröße der Beispieldaten dieses Tages erstellt."
+>abstract="Sie können die Schätzungen Ihrer Segmentdefinition aktualisieren, um sofort eine Vorschau der Anzahl der Profile anzuzeigen, die für die vorgeschlagene Segmentdefinition qualifiziert sind. Zielgruppenschätzungen werden anhand einer Stichprobengröße der Beispieldaten dieses Tages erstellt."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=de#estimate-and-preview-an-audience" text="Schätzen und Anzeigen der Vorschau einer Zielgruppe"
 
-Beim Erstellen einer Segmentdefinition zeigt der Abschnitt **[!UICONTROL Segmenteigenschaften]** auf der rechten Seite des Arbeitsbereichs eine geschätzte Größe des resultierenden Segments an, sodass Sie die Segmentdefinition nach Bedarf anpassen können, bevor Sie die eigentliche Zielgruppe erstellen.
+Beim Erstellen einer Segmentdefinition wird die **[!UICONTROL Segmenteigenschaften]** auf der rechten Seite des Arbeitsbereichs wird eine Schätzung der Größe der resultierenden Segmentdefinition angezeigt, sodass Sie Ihre Segmentdefinition nach Bedarf anpassen können, bevor Sie die Zielgruppe selbst erstellen.
 
-Im Abschnitt **[!UICONTROL Segmenteigenschaften]** können Sie außerdem wichtige Informationen zur Segmentdefinition angeben, einschließlich des Namens, der Beschreibung und des Auswertungstyps. Namen von Segmentdefinitionen dienen dazu, Ihr Segment unter den von Ihrer Organisation definierten Segmenten zu identifizieren. Sie sollten daher beschreibend, knapp und eindeutig sein.
+Im Abschnitt **[!UICONTROL Segmenteigenschaften]** können Sie außerdem wichtige Informationen zur Segmentdefinition angeben, einschließlich des Namens, der Beschreibung und des Auswertungstyps. Segmentdefinitionsnamen dienen dazu, Ihre Segmentdefinition unter den von Ihrer Organisation definierten Segmentdefinitionen zu identifizieren. Sie sollten daher beschreibend, kurz und eindeutig sein.
 
 Wenn Sie mit der Erstellung Ihrer Segmentdefinition fortfahren, können Sie durch Auswahl von **[!UICONTROL Profile anzeigen]** eine paginierte Vorschau der Zielgruppe anzeigen.
 
-![Der Eigenschaftenabschnitt der Segmentdefinition ist hervorgehoben. Zu den Segmenteigenschaften gehören u. a. der Segmentname, die Beschreibung und die Auswertungsmethode.](../images/ui/segment-builder/segment-properties.png)
+![Der Eigenschaftenabschnitt der Segmentdefinition ist hervorgehoben. Zu den Segmentdefinitionseigenschaften gehören u. a. der Name, die Beschreibung und die Auswertungsmethode der Segmentdefinition.](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
->Zielgruppenschätzungen werden anhand einer Stichprobengröße der Beispieldaten dieses Tages erstellt. Wenn sich in Ihrem Profilspeicher weniger als 1 Million Entitäten befinden, wird der vollständige Datensatz verwendet. Bei zwischen 1 und 20 Millionen Entitäten werden 1 Million Entitäten verwendet; bei mehr als 20 Millionen Entitäten werden 5 % der Gesamtentitäten genutzt. Weiterführende Informationen zum Generieren von Segmentschätzungen finden Sie in der Anleitung zur Segmenterstellung im Abschnitt zum [Generieren von Schätzungen](../tutorials/create-a-segment.md#estimate-and-preview-an-audience).
+>Zielgruppenschätzungen werden anhand einer Stichprobengröße der Beispieldaten dieses Tages erstellt. Wenn sich in Ihrem Profilspeicher weniger als 1 Million Entitäten befinden, wird der vollständige Datensatz verwendet. Bei zwischen 1 und 20 Millionen Entitäten werden 1 Million Entitäten verwendet; bei mehr als 20 Millionen Entitäten werden 5 % der Gesamtentitäten genutzt. Weitere Informationen zum Generieren von Schätzungen für Segmentdefinitionen finden Sie im Abschnitt [Schätzung des Generierungsabschnitts](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) des Tutorials zur Segmenterstellung.
 
-Sie können auch Ihre Auswertungsmethode auswählen. Wenn Sie wissen, welche Auswertungsmethode Sie verwenden möchten, können Sie die gewünschte Auswertungsmethode über die Dropdown-Liste auswählen. Wenn Sie wissen möchten, für welche Auswertungstypen dieses Segment qualifiziert ist, können Sie das Durchsuchen-Symbol ![Ordnersymbol mit Lupe](../images/ui/segment-builder/segment-evaluation-select-icon.png) auswählen, um eine Liste der verfügbaren Auswertungsmethoden für das Segment anzuzeigen.
+Sie können auch Ihre Auswertungsmethode auswählen. Wenn Sie wissen, welche Auswertungsmethode Sie verwenden möchten, können Sie die gewünschte Auswertungsmethode über die Dropdown-Liste auswählen. Wenn Sie wissen möchten, für welche Auswertungstypen diese Segmentdefinition geeignet ist, können Sie das Symbol &quot;Durchsuchen&quot;auswählen ![Ordnersymbol mit Lupe](../images/ui/segment-builder/segment-evaluation-select-icon.png) um eine Liste der verfügbaren Auswertungsmethoden für die Segmentdefinition anzuzeigen.
 
 Das Popup-Fenster [!UICONTROL Berechtigung der Auswertungsmethode] angezeigt. In diesem Popup-Fenster werden die verfügbaren Auswertungsmethoden angezeigt, und zwar Batch, Streaming und Edge. Das Popup-Fenster gibt darüber Aufschluss, welche Auswertungsmethoden geeignet und welche nicht geeignet sind. Abhängig von den Parametern, die Sie in Ihrer Segmentdefinition verwendet haben, ist es möglicherweise nicht für bestimmte Auswertungsmethoden qualifiziert. Weitere Informationen zu den Anforderungen der einzelnen Auswertungsmethoden finden Sie in der Übersicht zur [Streaming-Segmentierung](./streaming-segmentation.md#query-types) bzw. [Edge-Segmentierung](./edge-segmentation.md#query-types).
 
-![Das Popup-Fenster „Berechtigung der Auswertungsmethode“ wird angezeigt. Dieses gibt Aufschluss darüber, welche Methoden zur Segmentbewertung für das Segment geeignet und welche nicht geeignet sind.](../images/ui/segment-builder/select-evaluation-method.png)
+![Das Popup-Fenster „Berechtigung der Auswertungsmethode“ wird angezeigt. Dadurch wird angezeigt, welche Auswertungsmethoden für die Segmentdefinition infrage kommen und nicht geeignet sind.](../images/ui/segment-builder/select-evaluation-method.png)
 
 Wenn Sie eine ungültige Auswertungsmethode auswählen, werden Sie aufgefordert, entweder Ihre Segmentdefinitionsregeln oder die Auswertungsmethode zu ändern.
 
-![Das Popup-Fenster für die Auswertungsmethode. Wenn eine nicht auswählbare Segmentauswertungsmethode ausgewählt ist, wird im Popup-Fenster erläutert, warum sie nicht geeignet ist.](../images/ui/segment-builder/ineligible-evaluation-method.png)
+![Das Popup-Fenster für die Auswertungsmethode. Wenn eine nicht infrage kommende Auswertungsmethode ausgewählt ist, wird im Popup-Fenster erläutert, warum sie nicht zugelassen ist.](../images/ui/segment-builder/ineligible-evaluation-method.png)
 
 Weitere Informationen zu den verschiedenen Auswertungsmethoden für Segmentdefinitionen finden Sie in der [Übersicht zur Segmentierung](../home.md#evaluate-segments).
 

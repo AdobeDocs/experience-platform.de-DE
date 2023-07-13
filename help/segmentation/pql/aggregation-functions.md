@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Segmentierung; Segmentierung; Segmentierungsdienst; pql; PQL; Profile Query Language; Aggregationsfunktionen; Aggregation;
 solution: Experience Platform
 title: PQL-Aggregationsfunktionen
 description: Aggregationsfunktionen dienen dazu, mehrere Werte innerhalb von PQL-Arrays (Profile Query Language) zu gruppieren, um einen einzigen Zusammenfassungswert zu bilden.
 exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 71%
+source-wordcount: '227'
+ht-degree: 77%
 
 ---
 

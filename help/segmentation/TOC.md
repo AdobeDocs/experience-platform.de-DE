@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Segmentierungs-Service von Adobe Experience Platform
 breadcrumb-title: Handbuch zum Segmentierungs-Service
-user-guide-description: Erstellen Sie Segmente und Zielgruppen aus Ihren Echtzeit-Kundenprofildaten.
+user-guide-description: Erstellen Sie Zielgruppen aus Ihren Echtzeit-Kundenprofildaten mithilfe von Adobe Experience Platform-generierten Segmentdefinitionen oder externen Quellen.
 feature: Segments
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0a3dbb49948278f4fd12737938ad00f2f7abb681
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 100%
+source-wordcount: '176'
+ht-degree: 88%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 100%
    - [Streaming-Segmentierung ](api/streaming-segmentation.md)
 - Segmentierungsbenutzeroberfläche {#ui}
    - [Übersicht](ui/overview.md)
-   - [Audience Builder](ui/audience-builder.md)
+   - [Zielgruppenkomposition](ui/audience-composition.md)
    - [Segment-Dashboard](ui/segment-dashboard.md)
    - [Segment Builder](ui/segment-builder.md)
    - [Edge-Segmentierung](ui/edge-segmentation.md)
@@ -65,5 +65,6 @@ ht-degree: 100%
    - [Importieren und Verwenden externer Zielgruppen](tutorials/using-external-audiences.md)
    - [Erstellen eines Datensatzes zum Exportieren von Daten](tutorials/create-dataset-export-segment.md)
    - [Erzwingen der Datennutzungs-Compliance für Segmente](tutorials/governance.md)
+- [Häufig gestellte Fragen](./faq.md)
 - [API-Referenz](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 - [Platform – Versionshinweise](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=de)

@@ -1,28 +1,27 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Segmentierungsdienst; Segmentierung; Segmentierung; Datensatz erstellen; Zielgruppensegment exportieren; Segment exportieren
 solution: Experience Platform
-title: Erstellen eines Datensatzes zum Exportieren eines Zielgruppensegments
+title: Erstellen eines Datensatzes zum Exportieren einer Zielgruppe
 type: Tutorial
-description: Dieses Tutorial führt Sie durch die Schritte, die zum Erstellen eines Datensatzes erforderlich sind, der zum Exportieren eines Zielgruppensegments mithilfe der Experience Platform-Benutzeroberfläche verwendet werden kann.
+description: Erfahren Sie, wie Sie einen Datensatz erstellen, der zum Exportieren einer Zielgruppe mithilfe der Experience Platform-Benutzeroberfläche verwendet werden kann.
 exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 13%
+source-wordcount: '732'
+ht-degree: 9%
 
 ---
 
-# Datensatz zum Exportieren eines Zielgruppensegments erstellen
+# Erstellen eines Datensatzes zum Exportieren einer Zielgruppe
 
-[!DNL Adobe Experience Platform] ermöglicht die Segmentierung von Kundenprofilen in Zielgruppen basierend auf bestimmten Attributen. Nachdem ein Segment erstellt wurde, können Sie diese Zielgruppe in einen Datensatz exportieren, in dem darauf zugegriffen und darauf reagiert werden kann. Damit der Export erfolgreich ist, muss der Datensatz ordnungsgemäß konfiguriert werden.
+[!DNL Adobe Experience Platform] ermöglicht die Segmentierung von Kundenprofilen in Zielgruppen basierend auf bestimmten Attributen. Nachdem eine Segmentdefinition erstellt wurde, können Sie die resultierende Zielgruppe in einen Datensatz exportieren, in dem sie aufgerufen und bearbeitet werden kann. Damit der Export erfolgreich ist, muss der Datensatz ordnungsgemäß konfiguriert werden.
 
-In diesem Tutorial werden die Schritte erläutert, die zum Erstellen eines Datensatzes erforderlich sind, der zum Exportieren eines Zielgruppensegments mit dem [!DNL Experience Platform] Benutzeroberfläche.
+In diesem Tutorial werden die Schritte erläutert, die zum Erstellen eines Datensatzes erforderlich sind, der zum Exportieren einer Zielgruppe mit dem [!DNL Experience Platform] Benutzeroberfläche.
 
-Dieses Tutorial steht in direktem Zusammenhang zu den Schritten, die im Tutorial zu [Segmentergebnisse bewerten und aufrufen](./evaluate-a-segment.md). Das Tutorial zur Segmentbewertung enthält Schritte zum Erstellen eines Datensatzes mithilfe der [!DNL Catalog Service] API. In diesem Tutorial werden die Schritte zum Erstellen eines Datensatzes mithilfe der [!DNL Experience Platform] Benutzeroberfläche.
+Dieses Tutorial steht in direktem Zusammenhang zu den Schritten, die im Tutorial zu [Segmentierungsergebnisse bewerten und aufrufen](./evaluate-a-segment.md). Das Tutorial zur Segmentdefinitionsbewertung enthält Schritte zum Erstellen eines Datensatzes mithilfe der [!DNL Catalog Service] API. In diesem Tutorial werden die Schritte zum Erstellen eines Datensatzes mithilfe der [!DNL Experience Platform] Benutzeroberfläche.
 
 ## Erste Schritte
 
-Um ein Segment zu exportieren, muss der Datensatz auf der [!DNL XDM Individual Profile Union Schema]. Ein Vereinigungsschema ist ein systemgeneriertes, schreibgeschütztes Schema, das die Felder aller Schemas aggregiert, die dieselbe Klasse aufweisen. Weiterführende Informationen zu Vereinigungsschemata finden Sie im Handbuch für [Grundlagen der Schemakomposition](../../xdm/schema/composition.md#union).
+Um eine Zielgruppe zu exportieren, muss der Datensatz auf der [!DNL XDM Individual Profile Union Schema]. Ein Vereinigungsschema ist ein systemgeneriertes, schreibgeschütztes Schema, das die Felder aller Schemas aggregiert, die dieselbe Klasse aufweisen. Weiterführende Informationen zu Vereinigungsschemata finden Sie im Handbuch für [Grundlagen der Schemakomposition](../../xdm/schema/composition.md#union).
 
 Um Vereinigungsschemas in der Benutzeroberfläche anzuzeigen, wählen Sie **[!UICONTROL Profile]** Wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Vereinigungsschema]** wie unten dargestellt.
 
@@ -70,7 +69,7 @@ Im nächsten Bildschirm müssen Sie Ihrem Datensatz einen Namen geben. Sie könn
 
 * Datensatznamen sollten kurz und beschreibend sein, damit sich der Datensatz in der Bibliothek später leicht finden lässt.
 * Datensatznamen müssen eindeutig sein, d. h. sie sollten so spezifisch sein, dass sie in Zukunft nicht wiederverwendet werden.
-* Es empfiehlt sich, mithilfe des Beschreibungsfelds zusätzliche Informationen zum Datensatz anzugeben, um anderen Benutzern in Zukunft dabei zu helfen, zwischen Datensätzen zu unterscheiden.
+* Sie sollten mithilfe des Beschreibungsfelds zusätzliche Informationen über den Datensatz bereitstellen, da dies anderen Benutzern helfen kann, in Zukunft zwischen Datensätzen zu unterscheiden.
 
 Sobald der Datensatz einen Namen und eine Beschreibung aufweist, wählen Sie **[!UICONTROL Beenden]**.
 
@@ -80,12 +79,12 @@ Sobald der Datensatz einen Namen und eine Beschreibung aufweist, wählen Sie **[
 
 Nachdem der Datensatz erstellt wurde, erhalten Sie die Aktivitätsseite für diesen Datensatz. Sie sollten oben links im Arbeitsbereich den Namen des Datensatzes sowie eine Benachrichtigung sehen, die Ihnen mitteilt, dass keine Batches hinzugefügt wurden. Das ist zu erwarten, da Sie dem Datensatz noch keine Batches hinzugefügt haben.
 
-Die rechte Leiste enthält Informationen zu Ihrem neuen Datensatz, wie z. B. Datensatz-ID, Name, Beschreibung, Schema und mehr. Beachten Sie bitte die **[!UICONTROL Datensatz-ID]**, da dieser Wert erforderlich ist, um den Export-Workflow für Zielgruppensegmente abzuschließen.
+Die rechte Leiste enthält Informationen zu Ihrem neuen Datensatz, wie z. B. Datensatz-ID, Name, Beschreibung, Schema und mehr. Beachten Sie bitte die **[!UICONTROL Datensatz-ID]**, da dieser Wert erforderlich ist, um den Workflow für den Zielgruppenexport abzuschließen.
 
 ![Die Seite mit der Datensatzaktivität wird angezeigt. Die Datensatz-ID wird hervorgehoben, da dieser Wert für künftige Schritte beachtet werden muss.](../images/tutorials/segment-export-dataset/activity.png)
 
 ## Nächste Schritte
 
-Nachdem Sie nun einen Datensatz erstellt haben, der auf der [!DNL XDM Individual Profile Union Schema]können Sie die Datensatz-ID verwenden, um mit der [Segmentergebnisse bewerten und aufrufen](./evaluate-a-segment.md) Tutorial.
+Nachdem Sie nun einen Datensatz erstellt haben, der auf der [!DNL XDM Individual Profile Union Schema]können Sie die Datensatz-ID verwenden, um mit der [Bewerten und Aufrufen von Segmentdefinitionsergebnissen](./evaluate-a-segment.md) Tutorial.
 
-Kehren Sie zu diesem Zeitpunkt zum Tutorial mit den ausgewerteten Segmentergebnissen zurück und wählen Sie aus der [Generieren von Profilen für Zielgruppenmitglieder](./evaluate-a-segment.md#generate-profiles) Schritt des Exportierens eines Segment-Workflows.
+Kehren Sie zu diesem Zeitpunkt zum Tutorial mit den Ergebnissen der Segmentdefinition zurück und wählen Sie aus der [Generieren von Profilen für Zielgruppenmitglieder](./evaluate-a-segment.md#generate-profiles) Schritt des Export-Audience-Workflows.

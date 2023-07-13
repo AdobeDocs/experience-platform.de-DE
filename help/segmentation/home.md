@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;segmentierung;Segmentierung;Segmentierungs-Service;Segmentdienst; Segmentierungsdienst;Segment;Segmente;segmente
 solution: Experience Platform
 title: Segmentierungs-Service – Übersicht
 description: Erfahren Sie mehr über den Segmentierungs-Service von Adobe Experience Platform und die Rolle, die dieser im Platform-Ökosystem spielt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1635'
-ht-degree: 100%
+source-wordcount: '1629'
+ht-degree: 93%
 
 ---
 
 # [!DNL Segmentation Service] – Übersicht
 
-Adobe Experience Platform [!DNL Segmentation Service] bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Segmente generieren und aus Ihren [!DNL Real-Time Customer Profile]-Daten Zielgruppen erstellen können. Diese Segmente werden zentral auf [!DNL Platform] konfiguriert und verwaltet und stehen jeder Adobe-Lösung zur Verfügung.
+Adobe Experience Platform [!DNL Segmentation Service] bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Zielgruppen über Segmentdefinitionen oder andere Quellen aus Ihrer [!DNL Real-Time Customer Profile] Daten. Diese Zielgruppen werden zentral konfiguriert und verwaltet in [!DNL Platform]und für jede Adobe leicht zugänglich sind.
 
 Dieses Dokument bietet einen Überblick über [!DNL Segmentation Service] und die Rolle, die er in Adobe Experience Platform spielt.
 
 ## Erste Schritte mit [!DNL Segmentation Service]
 
-Im Folgenden werden zentrale Begriffe erläutert, die in diesem Dokument verwendet werden:
+Sie sollten die folgenden Schlüsselbegriffe verstehen, die in diesem Dokument verwendet werden:
 
 - **Segmentierung**: Die Unterteilung einer großen Personengruppe (z. B. Kunden, Interessenten, Benutzer oder Unternehmen) in kleinere Gruppen, die ähnliche Eigenschaften aufweisen und ähnlich auf Marketing-Strategien reagieren.
-- **Segmentdefinition**: Ein Regelsatz zur Beschreibung wichtiger Merkmale oder Verhaltensweisen einer Zielgruppe. Nach der Erstellung einer Segmentdefinition werden die darin beschriebenen Regeln zur Bestimmung qualifizierter Zielgruppenmitglieder für ein Segment verwendet.
-- **Zielgruppe**: Der resultierende Satz von Profilen, die den Kriterien einer Segmentdefinition entsprechen.
+- **Zielgruppe**: Eine Sammlung von Personen, die ähnliche Verhaltensweisen und/oder Merkmale aufweisen. Diese Personensammlung kann entweder von Adobe Experience Platform mithilfe von Segmentdefinitionen (plattformgenerierte Zielgruppe) oder aus externen Quellen (extern generierte Zielgruppe) erstellt werden.
+- **Segmentdefinition**: Der Regelsatz, den Adobe Experience Platform verwendet, um die Hauptmerkmale oder das Verhalten einer Zielgruppe zu beschreiben.
 
 ## Funktionsweise der Segmentierung
 

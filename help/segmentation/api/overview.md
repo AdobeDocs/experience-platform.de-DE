@@ -1,28 +1,27 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Segmentierung; Segmentierung; Segmentierungsdienst; API; API;
 title: Handbuch zur Segmentierungsdienst-API
 description: Mit der Segmentation Service-API können Entwickler Segmentierungsvorgänge in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 11%
+source-wordcount: '560'
+ht-degree: 5%
 
 ---
 
 # Handbuch zur Segmentierungsdienst-API
 
-[!DNL Adobe Experience Platform Segmentation Service] ermöglicht Ihnen das Erstellen von Segmenten und das Generieren von Zielgruppen in [!DNL Adobe Experience Platform] mit Ihren [!DNL Real-Time Customer Profile]-Daten.
+Adobe Experience Platform [!DNL Segmentation Service] ermöglicht Ihnen das Erstellen von Zielgruppen über Segmentdefinitionen oder andere Quellen in Adobe Experience Platform aus Ihrer [!DNL Real-Time Customer Profile] Daten.
 
 Die [!DNL Segmentation Service] Die API bietet mehrere Endpunkte, mit denen Sie Ihre Segmentierungsvorgänge in programmgesteuert verwalten können. [!DNL Experience Platform]. Dieses Übersichtsdokument enthält allgemeine Einführungsoptionen für jeden dieser Endpunkte und Links zu den zugehörigen Endpunkthandbüchern für Details. Lesen Sie vor dem Lesen der einzelnen Endpunkthandbücher die Informationen unter [Erste Schritte](./getting-started.md) für wichtige Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel-API-Aufrufen und mehr.
 
 Informationen zum Anzeigen aller verfügbaren Endpunkte und CRUD-Vorgänge finden Sie im Abschnitt [Referenz zur Segmentierungsdienst-API](https://www.adobe.io/experience-platform-apis/references/segmentation/).
 
-<!-- ## Audiences
+## Zielgruppen
 
-Audiences are a collection of people who share similar behaviors and/or characteristics. These can be generated either by using Platform or from external sources. You can use the `/audiences` endpoint to retrieve all audiences, create a new audience, retrieve details of a specific audience, update a specific audience, or delete a specific audience.
+Zielgruppen sind eine Sammlung von Personen, die ähnliche Verhaltensweisen und/oder Merkmale aufweisen. Diese können entweder mithilfe von Platform oder aus externen Quellen generiert werden. Sie können die `/audiences` Endpunkt zum Abrufen aller Zielgruppen, Erstellen einer neuen Zielgruppe, Abrufen von Details einer bestimmten Zielgruppe, Aktualisieren einer bestimmten Zielgruppe oder Löschen einer bestimmten Zielgruppe.
 
-For more information on using this endpoint, please read the [audiences endpoint guide](./audiences.md). -->
+Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im Abschnitt [Handbuch zum Zielgruppen-Endpunkt](./audiences.md).
 
 ## Exportaufträge
 
@@ -46,13 +45,13 @@ Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im Abschnitt [E
 
 ## Segmentdefinitionen
 
-Segmentdefinitionen definieren, welche Profile zu welchen Zielgruppensegmenten gehören. Sie können die `/segment/definitions` -Endpunkt zum Verwalten von Segmentdefinitionen.
+Segmentdefinitionen definieren, welche Profile Teil welcher Zielgruppe sein sollen. Sie können die `/segment/definitions` -Endpunkt zum Verwalten von Segmentdefinitionen.
 
 Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im Abschnitt [Endleitfaden für Segmentdefinitionen](./segment-definitions.md).
 
 ## Segmentaufträge
 
-Segmentaufträge verarbeiten zuvor festgelegte Segmentdefinitionen, um ein Zielgruppensegment zu erstellen. Sie können die `/segment/jobs` -Endpunkt zum Verwalten von Segmentaufträgen.
+Segmentaufträge verarbeiten zuvor eingerichtete Segmentdefinitionen zum Generieren einer Zielgruppe. Sie können die `/segment/jobs` -Endpunkt zum Verwalten von Segmentaufträgen.
 
 Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im Abschnitt [Endpunktleitfaden für Segmentaufträge](./segment-jobs.md).
 

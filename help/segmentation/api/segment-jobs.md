@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Segmentierung; Segmentierung; Segmentierungsdienst; Segmentaufträge; Segmentauftrag; API; API;
 solution: Experience Platform
 title: API-Endpunkt für Segmentaufträge
 description: Der Endpunkt für Segmentaufträge in der Segmentation Service-API von Adobe Experience Platform ermöglicht Ihnen die programmgesteuerte Verwaltung von Segmentaufträgen für Ihr Unternehmen.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1505'
 ht-degree: 23%
 
 ---
@@ -40,7 +39,7 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | --------- | ----------- | ------- |
 | `start` | Gibt den Startversatz für die zurückgegebenen Segmentaufträge an. | `start=1` |
 | `limit` | Gibt die Anzahl der pro Seite zurückgegebenen Segmentaufträge an. | `limit=20` |
-| `status` | Filtert die Ergebnisse anhand ihres Status. Unterstützte Werte sind „NEW“ (neu), „QUEUED“ (in Warteschlange), „PROCESSING“ (in Bearbeitung), „SUCCEEDED“ (erfolgreich abgeschlossen), „FAILED“ (fehlgeschlagen), „CANCELLING“ (wird abgebrochen) und „CANCELLED“ (abgebrochen). | `status=NEW` |
+| `status` | Filtert die Ergebnisse anhand ihres Status. Unterstützte Werte sind „NEW“ (neu), „QUEUED“ (in Warteschlange), „PROCESSING“ (Verarbeitung läuft), „SUCCEEDED“ (erfolgreich abgeschlossen), „FAILED“ (fehlgeschlagen), „CANCELLING“ (wird abgebrochen) und „CANCELLED“ (abgebrochen). | `status=NEW` |
 | `sort` | Ordnet die zurückgegebenen Segmentaufträge. Ist im Format `[attributeName]:[desc|asc]` geschrieben. | `sort=creationTime:desc` |
 | `property` | Filtert Segmentaufträge und erhält genaue Übereinstimmungen für den angegebenen Filter. Das kann in einem der folgenden Formate geschrieben sein: <ul><li>`[jsonObjectPath]==[value]` – Filtern nach dem Objektschlüssel</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` – Filtern innerhalb des Arrays</li></ul> | `property=segments~segmentId==workInUS` |
 
@@ -56,11 +55,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Segmentaufträgen für die angegebene Organisation als JSON zurück. Die Antwort unterscheidet sich jedoch je nach der Anzahl der Segmente innerhalb des Segmentauftrags.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Segmentaufträgen für die angegebene Organisation als JSON zurück. Die Antwort unterscheidet sich jedoch je nach der Anzahl der Segmentdefinitionen im Segmentauftrag.
 
-**Weniger als oder gleich 1500 Segmenten in Ihrem Segmentauftrag**
+**Weniger als oder gleich 1500 Segmentdefinitionen in Ihrem Segmentauftrag**
 
-Wenn weniger als 1500 Segmente in Ihrem Segmentauftrag ausgeführt werden, wird eine vollständige Liste aller Segmente im `children.segments` -Attribut.
+Wenn in Ihrem Segmentauftrag weniger als 1500 Segmentdefinitionen ausgeführt werden, wird eine vollständige Liste aller Segmentdefinitionen innerhalb der `children.segments` -Attribut.
 
 >[!NOTE]
 >
@@ -166,9 +165,9 @@ Wenn weniger als 1500 Segmente in Ihrem Segmentauftrag ausgeführt werden, wird 
 }
 ```
 
-**Mehr als 1500 Segmente**
+**Mehr als 1500 Segmentdefinitionen**
 
-Wenn mehr als 1500 Segmente in Ihrem Segmentauftrag ausgeführt werden, wird die `children.segments` -Attribut wird angezeigt `*`, der angibt, dass alle Segmente ausgewertet werden.
+Wenn mehr als 1500 Segmentdefinitionen in Ihrem Segmentauftrag ausgeführt werden, wird die `children.segments` -Attribut wird angezeigt `*`, der angibt, dass alle Segmentdefinitionen ausgewertet werden.
 
 >[!NOTE]
 >
@@ -272,8 +271,8 @@ Wenn mehr als 1500 Segmente in Ihrem Segmentauftrag ausgeführt werden, wird die
 | `metrics.totalTime` | Ein Objekt, das Informationen zum Start und zum Ende des Segmentierungsauftrags sowie zur insgesamt benötigten Zeit enthält. |
 | `metrics.profileSegmentationTime` | Ein Objekt, das Informationen zum Beginn und zum Ende der Segmentierungsauswertung sowie zur insgesamt benötigten Zeit enthält. |
 | `metrics.segmentProfileCounter` | Die Anzahl der pro Segment qualifizierten Profile. |
-| `metrics.segmentedProfileByNamespaceCounter` | Die Anzahl der für jeden Identitäts-Namespace qualifizierten Profile pro Segment. |
-| `metrics.segmentProfileByStatusCounter` | Die Anzahl der Profile für jeden Status. Die folgenden drei Status werden unterstützt: <ul><li>&quot;realisiert&quot;- Die Anzahl der Profile, die für das Segment qualifiziert sind.</li><li>&quot;Exited&quot;- Die Anzahl der Profilsegmente, die im Segment nicht mehr vorhanden sind.</li></ul> |
+| `metrics.segmentedProfileByNamespaceCounter` | Die Anzahl der für jeden Identitäts-Namespace qualifizierten Profile je Segmentdefinition. |
+| `metrics.segmentProfileByStatusCounter` | Die Anzahl der Profile für jeden Status. Die folgenden drei Status werden unterstützt: <ul><li>&quot;realisiert&quot;- Die Anzahl der Profile, die für die Segmentdefinition qualifiziert sind.</li><li>&quot;Exited&quot;- Die Anzahl der Profile, die in der Segmentdefinition nicht mehr vorhanden sind.</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | Die Gesamtzahl der zusammengeführten Profile je Zusammenführungsrichtlinie. |
 
 ## Neuen Segmentauftrag erstellen {#create}
@@ -286,9 +285,9 @@ Sie können einen neuen Segmentauftrag erstellen, indem Sie eine POST-Anfrage an
 POST /segment/jobs
 ```
 
-Beim Erstellen eines neuen Segmentauftrags unterscheiden sich die Anforderung und die Antwort je nach der Anzahl der Segmente innerhalb des Segmentauftrags.
+Beim Erstellen eines neuen Segmentauftrags unterscheiden sich Anforderung und Antwort je nach der Anzahl der Segmentdefinitionen im Segmentauftrag.
 
-**Weniger als oder gleich 1500 Segmenten in Ihrem Segmentauftrag**
+**Weniger als oder gleich 1500 Segmentdefinitionen in Ihrem Segmentauftrag**
 
 **Anfrage**
 
@@ -411,13 +410,13 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrem ne
 | `segments.segment.id` | Die ID der von Ihnen bereitgestellten Segmentdefinition. |
 | `segments.segment.expression` | Ein Objekt, das Informationen zum Ausdruck der Segmentdefinition enthält, geschrieben in PQL. |
 
-**Mehr als 1500 Segmente**
+**Mehr als 1500 Segmentdefinitionen**
 
 **Anfrage**
 
 >[!NOTE]
 >
->Sie können zwar einen Segmentauftrag mit mehr als 1500 Segmenten erstellen, aber dies ist **dringend empfohlen**.
+>Sie können zwar einen Segmentauftrag mit mehr als 1500 Segmentdefinitionen erstellen, aber dies ist **dringend empfohlen**.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -440,7 +439,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `schema.name` | Der Name des Schemas für die Segmente. |
+| `schema.name` | Der Name des Schemas für die Segmentdefinitionen. |
 | `segments.segmentId` | Wenn Sie einen Segmentauftrag mit mehr als 1500 Segmenten ausführen, müssen Sie `*` als Segment-ID, um anzugeben, dass Sie einen Segmentierungsauftrag mit allen Segmenten ausführen möchten. |
 
 **Antwort**
@@ -528,7 +527,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrem neu erst
 | `id` | Eine systemgenerierte schreibgeschützte Kennung für den neu erstellten Segmentauftrag. |
 | `status` | Der aktuelle Status für den Segmentauftrag. Da der Segmentauftrag neu erstellt wurde, wird der Status immer `NEW`. |
 | `segments` | Ein Objekt, das Informationen zu den Segmentdefinitionen enthält, für die dieser Segmentauftrag ausgeführt wird. |
-| `segments.segment.id` | Die `*` bedeutet, dass dieser Segmentauftrag für alle Segmente in Ihrer Organisation ausgeführt wird. |
+| `segments.segment.id` | Die `*` bedeutet, dass dieser Segmentauftrag für alle Segmentdefinitionen in Ihrer Organisation ausgeführt wird. |
 
 ## Bestimmten Segmentauftrag abrufen {#get}
 
@@ -556,11 +555,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit genauen Informationen zum angegebenen Segmentauftrag zurück.  Die Antwort unterscheidet sich jedoch je nach der Anzahl der Segmente innerhalb des Segmentauftrags.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit genauen Informationen zum angegebenen Segmentauftrag zurück.  Die Antwort unterscheidet sich jedoch je nach der Anzahl der Segmentdefinitionen im Segmentauftrag.
 
-**Weniger als oder gleich 1500 Segmenten in Ihrem Segmentauftrag**
+**Weniger als oder gleich 1500 Segmentdefinitionen in Ihrem Segmentauftrag**
 
-Wenn weniger als 1500 Segmente in Ihrem Segmentauftrag ausgeführt werden, wird eine vollständige Liste aller Segmente im `children.segments` -Attribut.
+Wenn in Ihrem Segmentauftrag weniger als 1500 Segmentdefinitionen ausgeführt werden, wird eine vollständige Liste aller Segmentdefinitionen innerhalb der `children.segments` -Attribut.
 
 ```json
 {
@@ -622,9 +621,9 @@ Wenn weniger als 1500 Segmente in Ihrem Segmentauftrag ausgeführt werden, wird 
 }
 ```
 
-**Mehr als 1500 Segmente**
+**Mehr als 1500 Segmentdefinitionen**
 
-Wenn mehr als 1500 Segmente in Ihrem Segmentauftrag ausgeführt werden, wird die `children.segments` -Attribut wird angezeigt `*`, der angibt, dass alle Segmente ausgewertet werden.
+Wenn mehr als 1500 Segmentdefinitionen in Ihrem Segmentauftrag ausgeführt werden, wird die `children.segments` -Attribut wird angezeigt `*`, der angibt, dass alle Segmentdefinitionen ausgewertet werden.
 
 ```json
 {
@@ -744,7 +743,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 207 mit den angeforderten Segmentaufträgen zurück. Der Wert der Variablen `children.segments` -Attribut unterscheidet sich, wenn der Segmentauftrag für mehr als 1500 Segmente ausgeführt wird.
+Eine erfolgreiche Antwort gibt den HTTP-Status 207 mit den angeforderten Segmentaufträgen zurück. Der Wert der Variablen `children.segments` -Attribut unterscheidet sich, wenn der Segmentauftrag für mehr als 1500 Segmentdefinitionen ausgeführt wird.
 
 >[!NOTE]
 >

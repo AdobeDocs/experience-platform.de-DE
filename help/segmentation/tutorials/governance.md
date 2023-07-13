@@ -1,20 +1,19 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Datennutzungskonformität; erzwingen; Einhaltung von Datennutzungsregeln durchsetzen; Segmentierungsdienst; Segmentierung; Segmentierung;
 solution: Experience Platform
 title: Durchsetzen der Datennutzungskonformität für ein Zielgruppensegment mithilfe von APIs
 type: Tutorial
-description: In diesem Tutorial werden die Schritte zum Durchsetzen der Datennutzungskonformität für Zielgruppensegmente des Echtzeit-Kundenprofils mithilfe von APIs beschrieben.
+description: In diesem Tutorial werden die Schritte zum Durchsetzen von Segmentdefinitionen zur Datennutzungskonformität mithilfe von APIs beschrieben.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1368'
-ht-degree: 51%
+source-wordcount: '1355'
+ht-degree: 43%
 
 ---
 
-# Durchsetzen der Datennutzungskonformität für Zielgruppensegmente mithilfe von APIs
+# Durchsetzen der Datennutzungskonformität für eine Segmentdefinition mithilfe von APIs
 
-In diesem Tutorial werden die Schritte zum Durchsetzen der Datennutzungskonformität für [!DNL Real-Time Customer Profile] Zielgruppensegmente mithilfe von APIs verwenden.
+In diesem Tutorial werden die Schritte zum Durchsetzen der Datennutzungskonformität für Segmentdefinitionen mithilfe von APIs beschrieben.
 
 ## Erste Schritte
 
@@ -57,7 +56,7 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 ## Suchen nach einer Zusammenführungsrichtlinie für eine Segmentdefinition {#merge-policy}
 
-Dieser Workflow beginnt mit dem Zugriff auf ein bekanntes Zielgruppensegment. Segmente, die für die Verwendung in [!DNL Real-Time Customer Profile] enthalten eine Zusammenführungsrichtlinien-ID in ihrer Segmentdefinition. Diese Zusammenführungsrichtlinie enthält Informationen darüber, welche Datensätze in das Segment eingeschlossen werden sollen, die wiederum alle entsprechenden Beschriftungen zur Datennutzung enthalten.
+Dieser Workflow beginnt mit dem Zugriff auf eine bekannte Segmentdefinition. Segmentdefinitionen, die für die Verwendung in [!DNL Real-Time Customer Profile] enthalten eine Zusammenführungsrichtlinien-ID in ihrer Segmentdefinition. Diese Zusammenführungsrichtlinie enthält Informationen darüber, welche Datensätze in die Segmentdefinition aufgenommen werden sollen, die wiederum alle zutreffenden Datennutzungsbezeichnungen enthalten.
 
 Verwenden der [!DNL Segmentation] API können Sie eine Segmentdefinition anhand ihrer Kennung nachschlagen, um die zugehörige Zusammenführungsrichtlinie zu finden.
 
@@ -367,20 +366,20 @@ Mithilfe der in der API-Antwort zurückgegebenen Daten können Sie Protokolle in
 
 ## Filtern von Datenfeldern
 
-Wenn Ihr Zielgruppensegment die Auswertung nicht besteht, können Sie die im Segment enthaltenen Daten mithilfe einer der beiden unten beschriebenen Methoden anpassen.
+Wenn Ihre Segmentdefinition die Auswertung nicht besteht, können Sie die in der Segmentdefinition enthaltenen Daten mithilfe einer der beiden unten beschriebenen Methoden anpassen.
 
 ### Aktualisieren der Zusammenführungsrichtlinie der Segmentdefinition
 
 Durch Aktualisieren der Zusammenführungsrichtlinie einer Segmentdefinition werden die Datensätze und Felder angepasst, die beim Ausführen des Segmentauftrags einbezogen sind. Siehe Abschnitt zu [Aktualisieren vorhandener Zusammenführungsrichtlinien](../../profile/api/merge-policies.md#update) im Tutorial zu API-Zusammenführungsrichtlinien für weitere Informationen.
 
-### Einschränken bestimmter Datenfelder beim Exportieren des Segments
+### Eingrenzen bestimmter Datenfelder beim Exportieren der Segmentdefinition
 
-Beim Exportieren eines Segments in einen Datensatz mit der [!DNL Segmentation] API: Sie können die im Export enthaltenen Daten mithilfe der `fields` Parameter. Alle diesem Parameter hinzugefügten Datenfelder werden in den Export einbezogen, während alle anderen Datenfelder ausgeschlossen werden.
+Beim Exportieren einer Segmentdefinition in einen Datensatz mithilfe der [!DNL Segmentation] API: Sie können die im Export enthaltenen Daten mithilfe der `fields` Parameter. Alle diesem Parameter hinzugefügten Datenfelder werden in den Export einbezogen, während alle anderen Datenfelder ausgeschlossen werden.
 
-Stellen Sie sich ein Segment mit Datenfeldern mit den Namen „A“, „B“ und „C“ vor. Wenn Sie nur das Feld „C“ exportieren möchten, enthält der `fields`-Parameter nur das Feld „C“. Auf diese Weise werden die Felder „A“ und „B“ beim Exportieren des Segments ausgeschlossen.
+Betrachten Sie eine Segmentdefinition mit Datenfeldern namens &quot;A&quot;, &quot;B&quot;und &quot;C&quot;. Wenn Sie nur das Feld „C“ exportieren möchten, enthält der `fields`-Parameter nur das Feld „C“. Dadurch werden die Felder &quot;A&quot;und &quot;B&quot;beim Exportieren der Segmentdefinition ausgeschlossen.
 
-Weitere Informationen finden Sie im Abschnitt [Exportieren eines Segments](./evaluate-a-segment.md#export) im Tutorial zur Segmentierung.
+Siehe Abschnitt zu [Segmentdefinition exportieren](./evaluate-a-segment.md#export) im Tutorial zur Segmentierung für weitere Informationen.
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie nach den mit einem Zielgruppensegment verknüpften Datennutzungsbezeichnungen gesucht und diese auf Richtlinienverstöße bei bestimmten Marketing-Aktionen getestet. Weitere Informationen zu Data Governance in [!DNL Experience Platform], lesen Sie bitte die Übersicht für [Data Governance](../../data-governance/home.md).
+In diesem Tutorial haben Sie nach den mit einer Segmentdefinition verknüpften Datennutzungsbezeichnungen gesucht und diese auf Richtlinienverletzungen gegenüber bestimmten Marketing-Aktionen getestet. Weitere Informationen zu Data Governance in [!DNL Experience Platform], lesen Sie bitte die Übersicht für [Data Governance](../../data-governance/home.md).

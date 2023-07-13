@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Segment; Segment erstellen; Segment erstellen; Segmentierung; Segment erstellen; Segmentierungsdienst
 solution: Experience Platform
-title: Erstellen eines Segments mithilfe der Segmentation Service-API
+title: Erstellen einer Segmentdefinition mithilfe der Segmentation Service-API
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie eine Segmentdefinition mithilfe der Adobe Experience Platform Segmentation Service-API entwickeln, testen, in der Vorschau anzeigen und speichern.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '940'
 ht-degree: 27%
 
 ---
 
-# Erstellen eines Segments mithilfe der Segmentation Service-API
+# Erstellen einer Segmentdefinition mithilfe der Segmentation Service-API
 
 Dieses Dokument bietet eine Anleitung zum Entwickeln, Testen, Anzeigen einer Vorschau und Speichern einer Segmentdefinition mithilfe der [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
 
-Informationen zum Erstellen von Segmenten mithilfe der Benutzeroberfläche finden Sie in der [Segment Builder-Handbuch](../ui/overview.md).
+Informationen zum Erstellen von Segmentdefinitionen mithilfe der Benutzeroberfläche finden Sie in der [Segment Builder-Handbuch](../ui/overview.md).
 
 ## Erste Schritte
 
-Dieses Tutorial setzt ein Verständnis der verschiedenen [!DNL Adobe Experience Platform] Dienste, die an der Erstellung von Zielgruppensegmenten beteiligt sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Services:
+Dieses Tutorial setzt ein Verständnis der verschiedenen [!DNL Adobe Experience Platform] Dienste, die an der Erstellung von Segmentdefinitionen beteiligt sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Services:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Ermöglicht das Erstellen von Zielgruppensegmenten aus Echtzeit-Kundenprofildaten.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Ermöglicht Ihnen das Erstellen von Zielgruppen mithilfe von Segmentdefinitionen oder anderen externen Quellen aus Echtzeit-Kundenprofildaten.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten durch [!DNL Platform] organisiert werden. Um die Segmentierung optimal zu nutzen, stellen Sie sicher, dass Ihre Daten als Profile und Ereignisse gemäß den [Best Practices für die Datenmodellierung](../../xdm/schema/best-practices.md) aufgenommen werden.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um erfolgreich Aufrufe an die [!DNL Platform] APIs.
@@ -54,11 +53,11 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 ## Entwickeln einer Segmentdefinition
 
-Der erste Schritt bei der Segmentierung besteht darin, ein Segment zu definieren, das in einem Konstrukt dargestellt wird, das als Segmentdefinition bezeichnet wird. Eine Segmentdefinition ist ein Objekt, das eine Abfrage enthält, die in [!DNL Profile Query Language] (PQL). Dieses Objekt wird auch als PQL-Prädikat bezeichnet. PQL-Eigenschaften definieren die Regeln für das Segment basierend auf Bedingungen, die sich auf Datensatz- oder Zeitreihendaten beziehen, die Sie für [!DNL Real-Time Customer Profile]. Siehe [PQL-Handbuch](../pql/overview.md) für weitere Informationen zum Schreiben von PQL-Abfragen.
+Der erste Schritt bei der Segmentierung besteht darin, eine Segmentdefinition zu definieren. Eine Segmentdefinition ist ein Objekt, das eine Abfrage enthält, die in [!DNL Profile Query Language] (PQL). Dieses Objekt wird auch als PQL-Prädikat bezeichnet. PQL-Eigenschaften definieren die Regeln für die Segmentdefinition basierend auf Bedingungen, die sich auf Datensatz- oder Zeitreihendaten beziehen, die Sie für [!DNL Real-Time Customer Profile]. Siehe [PQL-Handbuch](../pql/overview.md) für weitere Informationen zum Schreiben von PQL-Abfragen.
 
-Sie können eine neue Segmentdefinition erstellen, indem Sie eine POST-Anfrage an die `/segment/definitions` -Endpunkt im [!DNL Segmentation] API. Im folgenden Beispiel wird beschrieben, wie Sie eine Definitionsanfrage formatieren, einschließlich der Informationen, die erforderlich sind, damit ein Segment erfolgreich definiert werden kann.
+Sie können eine neue Segmentdefinition erstellen, indem Sie eine POST-Anfrage an die `/segment/definitions` -Endpunkt im [!DNL Segmentation] API. Im folgenden Beispiel wird beschrieben, wie Sie eine Definitionsanfrage formatieren, einschließlich der Informationen, die erforderlich sind, damit eine Segmentdefinition erfolgreich definiert werden kann.
 
-Eine ausführliche Erläuterung zur Definition eines Segments finden Sie im Abschnitt [Entwicklerhandbuch zur Segmentdefinition](../api/segment-definitions.md#create).
+Eine ausführliche Erläuterung zur Definition einer Segmentdefinition finden Sie im Abschnitt [Entwicklerhandbuch zur Segmentdefinition](../api/segment-definitions.md#create).
 
 ## Schätzen und Anzeigen der Vorschau einer Zielgruppe {#estimate-and-preview-an-audience}
 
@@ -66,14 +65,14 @@ Bei der Entwicklung Ihrer Segmentdefinition können Sie die Tools für die Schä
 
 Durch Schätzung und Vorschau Ihrer Zielgruppe können Sie Ihre PQL-Eigenschaften testen und optimieren, bis sie ein gewünschtes Ergebnis liefern, in dem sie dann in einer aktualisierten Segmentdefinition verwendet werden können.
 
-Es gibt zwei erforderliche Schritte, um eine Vorschau Ihres Segments anzuzeigen oder eine Schätzung davon zu erhalten:
+Es gibt zwei erforderliche Schritte, um eine Vorschau Ihrer Segmentdefinition anzuzeigen oder eine Schätzung davon zu erhalten:
 
 1. [Erstellen eines Vorschauauftrags](#create-a-preview-job)
 2. [Anzeigen von Schätzungen oder Vorschau](#view-an-estimate-or-preview) Verwendung der ID des Vorschauauftrags
 
 ### Erstellung von Schätzungen
 
-Datenbeispiele werden verwendet, um Segmente zu bewerten und die Anzahl der qualifizierten Profile zu schätzen. Jeden Morgen werden neue Daten in den Speicher geladen (zwischen 12:00 und 2:00 Uhr PT, was 7:00 Uhr UTC entspricht) und alle Segmentierungsabfragen werden anhand der Beispieldaten dieses Tages geschätzt. Folglich werden alle neuen hinzugefügten Felder oder erfassten zusätzlichen Daten am folgenden Tag in Schätzungen übernommen.
+Datenbeispiele werden verwendet, um Segmentdefinitionen zu bewerten und die Anzahl der qualifizierten Profile zu schätzen. Jeden Morgen werden neue Daten in den Speicher geladen (zwischen 12:00 und 2:00 Uhr PT, was 7:00 Uhr UTC entspricht) und alle Segmentierungsabfragen werden anhand der Beispieldaten dieses Tages geschätzt. Folglich werden alle neuen hinzugefügten Felder oder erfassten zusätzlichen Daten am folgenden Tag in Schätzungen übernommen.
 
 Die Stichprobengröße hängt von der Gesamtanzahl der Entitäten in Ihrem Profilspeicher ab. Diese Stichprobengrößen sind in der folgenden Tabelle dargestellt:
 

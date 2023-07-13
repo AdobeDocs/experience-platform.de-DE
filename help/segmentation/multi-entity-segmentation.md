@@ -1,19 +1,18 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Segmentierung; Segmentierung; Segmentdienst; Segmente; Segmente; mehrere Entitäten; Segmentierung mit mehreren Entitäten; Segmentierung mit mehreren Entitäten; Segmente mit mehreren Entitäten;
 solution: Experience Platform
 title: Segmentierung mit mehreren Entitäten - Überblick
 description: Bei der Segmentierung mit mehreren Entitäten können Sie Profildaten um zusätzliche Daten erweitern, die auf Produkten, Geschäften oder anderen nicht-profilbasierten Klassen beruhen. Sobald eine Verbindung besteht, stehen Daten aus zusätzlichen Klassen zur Verfügung, so als wären sie im Profilschema nativ vorhanden.
 exl-id: 01a37fdc-2abe-4a84-b7da-fcbd141ff51f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '689'
 ht-degree: 13%
 
 ---
 
 # Segmentierung mit mehreren Entitäten - Übersicht
 
-Die Segmentierung mehrerer Entitäten ist eine erweiterte Funktion, die als Teil von Adobe Experience Platform verfügbar ist. [!DNL Segmentation Service]. Mit dieser Funktion können Sie die [!DNL Real-Time Customer Profile] Daten mit zusätzlichen &quot;Nicht-Personen&quot;-Daten (auch als &quot;Dimensionsentitäten&quot;bezeichnet), die Ihr Unternehmen definieren kann, z. B. Daten zu Produkten oder Stores. Die Segmentierung mit mehreren Entitäten bietet Flexibilität bei der Definition von Zielgruppensegmenten basierend auf Daten, die für Ihre individuellen Geschäftsanforderungen relevant sind. Sie kann ohne Expertise auf dem Gebiet der Abfrage von Datenbanken durchgeführt werden. Mit der Segmentierung mit mehreren Entitäten können Sie Ihren Segmenten wichtige Daten hinzufügen, ohne teure Änderungen an Datenströmen vornehmen zu müssen oder auf eine Back-End-Datenzusammenführung zu warten.
+Die Segmentierung mehrerer Entitäten ist eine erweiterte Funktion, die als Teil von Adobe Experience Platform verfügbar ist. [!DNL Segmentation Service]. Mit dieser Funktion können Sie die [!DNL Real-Time Customer Profile] Daten mit zusätzlichen &quot;Nicht-Personen&quot;-Daten (auch als &quot;Dimensionsentitäten&quot;bezeichnet), die Ihr Unternehmen definieren kann, z. B. Daten zu Produkten oder Stores. Die Segmentierung mit mehreren Entitäten bietet Flexibilität bei der Definition von Segmentdefinitionen basierend auf Daten, die für Ihre individuellen Geschäftsanforderungen relevant sind. Sie kann ohne Erfahrung in der Abfrage von Datenbanken durchgeführt werden. Bei der Segmentierung mit mehreren Entitäten können Sie Ihren Segmentdefinitionen wichtige Daten hinzufügen, ohne dass Sie kostspielige Änderungen an Datenströmen vornehmen müssen oder auf eine Back-End-Datenzusammenführung warten müssen.
 
 ## Erste Schritte
 
@@ -21,7 +20,7 @@ Die Segmentierung mehrerer Entitäten erfordert ein Verständnis der verschieden
 
 * [[!DNL Real-Time Customer Profile]](../profile/home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus verschiedenen Quellen beruht.
    * [ProfilLimits](../profile/guardrails.md): Best Practices zum Erstellen von Datenmodellen, die von [!DNL Profile].
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Ermöglicht Ihnen das Erstellen von Segmenten aus [!DNL Real-Time Customer Profile] Daten.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Ermöglicht das Erstellen von Zielgruppen aus [!DNL Real-Time Customer Profile] Daten.
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten ordnet.
    * [Grundlagen der Schemakomposition](../xdm/schema/composition.md#union): Erfahren Sie mehr über Best Practices zum Erstellen von Schemas, die in Experience Platform verwendet werden sollen. Um die Segmentierung optimal zu nutzen, stellen Sie sicher, dass Ihre Daten als Profile und Ereignisse gemäß den [Best Practices für die Datenmodellierung](../xdm/schema/best-practices.md) aufgenommen werden.
 
@@ -31,15 +30,15 @@ Um den Wert der Segmentierung mit mehreren Entitäten zu veranschaulichen, sollt
 
 ### Kombination von Online- und Offline-Kaufdaten
 
-Marketing-Experten, die eine E-Mail-Kampagne erstellen, haben möglicherweise versucht, ein Segment für eine Zielgruppe zu erstellen, indem sie in den letzten drei Monaten die letzten Käufe im Kundenspeicher verwendet haben. Idealerweise würde dieses Segment sowohl den Artikelnamen als auch den Namen des Stores erfordern, in dem der Kauf getätigt wurde. Zuvor bestand die Herausforderung darin, die Store-Kennung aus dem Kaufereignis zu erfassen und sie einem individuellen Kundenprofil zuzuweisen.
+Ein Marketing-Experte, der eine E-Mail-Kampagne erstellt hat, hat möglicherweise versucht, eine Zielgruppe zu erstellen, indem er in den letzten drei Monaten kürzlich getätigte Käufe im Kundenspeicher verwendet hat. Idealerweise würde diese Zielgruppe sowohl den Artikelnamen als auch den Namen des Stores benötigen, in dem der Kauf getätigt wurde. Zuvor bestand die Herausforderung darin, die Store-Kennung aus dem Kaufereignis zu erfassen und sie einem individuellen Kundenprofil zuzuweisen.
 
 ### E-Mail-Retargeting für Warenkorbabbruch
 
-Oft ist es komplex, Benutzer zu erstellen und in Segmente zu qualifizieren, die auf den Abbruch des Warenkorbs abzielen. Um zu wissen, welche Produkte in eine personalisierte Retargeting-Kampagne aufgenommen werden sollen, müssen Daten darüber gesammelt werden, welche Produkte von den einzelnen Personen abgebrochen wurden. Diese Daten sind an Commerce-Ereignisse gebunden, bei denen es zuvor schwierig war, Daten zu überwachen und zu extrahieren.
+Das Erstellen und Qualifizieren von Benutzern in Segmentdefinitionen, die auf den Abbruch des Warenkorbs abzielen, ist komplex. Um zu wissen, welche Produkte in eine personalisierte Retargeting-Kampagne aufgenommen werden sollen, müssen Daten darüber gesammelt werden, welche Produkte von den einzelnen Personen abgebrochen wurden. Diese Daten sind an Commerce-Ereignisse gebunden, bei denen es zuvor schwierig war, Daten zu überwachen und zu extrahieren.
 
-## Erstellen von Segmenten mit mehreren Entitäten
+## Erstellen von Segmentdefinitionen mit mehreren Entitäten
 
-Das Erstellen eines Segments mit mehreren Entitäten erfordert zunächst das Definieren von Beziehungen zwischen Schemas, bevor die [!DNL Segmentation] API oder Segment Builder-Benutzeroberfläche , um die Segmentdefinition zu erstellen.
+Zum Erstellen einer Segmentdefinition mit mehreren Entitäten müssen zunächst Beziehungen zwischen Schemas definiert werden, bevor die [!DNL Segmentation] API oder Segment Builder-Benutzeroberfläche , um die Segmentdefinition zu erstellen.
 
 ### Beziehungen definieren
 
@@ -50,13 +49,13 @@ Die Definition von Beziehungen kann entweder mit der Schema Registry-API oder de
 * [Definieren einer Beziehung zwischen zwei Schemas mithilfe der API](../xdm/tutorials/relationship-api.md)
 * [Definieren einer Beziehung zwischen zwei Schemas mithilfe der Schema Editor-Benutzeroberfläche](../xdm/tutorials/relationship-ui.md)
 
-### Erstellen eines Segments mit mehreren Entitäten
+### Erstellen einer Segmentdefinition mit mehreren Entitäten
 
-Nachdem Sie die erforderlichen XDM-Beziehungen definiert haben, können Sie mit der Erstellung eines Segments mit mehreren Entitäten beginnen. Dies kann entweder über die Segmentation-API oder die Segment Builder-Benutzeroberfläche erfolgen. Weitere Informationen finden Sie in den folgenden Handbüchern:
+Nachdem Sie die erforderlichen XDM-Beziehungen definiert haben, können Sie mit der Erstellung einer Segmentdefinition mit mehreren Entitäten beginnen. Dies kann entweder über die Segmentation-API oder die Segment Builder-Benutzeroberfläche erfolgen. Weitere Informationen finden Sie in den folgenden Handbüchern:
 
-* [Erstellen eines Segments mithilfe der Segmentation-API](./tutorials/create-a-segment.md)
-* [Erstellen eines Segments mithilfe der Benutzeroberfläche von Segment Builder](./ui/overview.md)
+* [Erstellen einer Segmentdefinition mithilfe der Segmentation-API](./tutorials/create-a-segment.md)
+* [Erstellen einer Segmentdefinition mithilfe der Benutzeroberfläche von Segment Builder](./ui/overview.md)
 
-## Auswerten und Zugreifen auf Segmente mit mehreren Entitäten
+## Segmentdefinitionen mit mehreren Entitäten auswerten und aufrufen
 
-Nachdem Sie ein Segment erstellt haben, können Sie die Segmentergebnisse mithilfe der Segmentation-API auswerten und darauf zugreifen. Die Auswertung eines Segments mit mehreren Entitäten ähnelt der Auswertung eines Standardsegments sehr. Dieser Vorgang kann nur mit der Segmentation-API durchgeführt werden. Eine ausführliche Anleitung zur Verwendung der API für die Auswertung und den Zugriff auf Segmente finden Sie im Abschnitt [Segmenten bewerten und aufrufen](./tutorials/evaluate-a-segment.md) Tutorial.
+Nach der Erstellung einer Segmentdefinition können Sie die Ergebnisse mithilfe der Segmentation-API auswerten und aufrufen. Die Auswertung einer Segmentdefinition mit mehreren Entitäten ähnelt der Auswertung einer Standardsegmentdefinition. Dieser Vorgang kann nur mit der Segmentation-API durchgeführt werden. Eine ausführliche Anleitung zur Verwendung der API zum Auswerten und Aufrufen von Segmentdefinitionen finden Sie im Abschnitt [Segmentdefinitionen bewerten und aufrufen](./tutorials/evaluate-a-segment.md) Tutorial.

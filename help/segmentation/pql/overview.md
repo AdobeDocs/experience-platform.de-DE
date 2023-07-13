@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;PQL;pql;Profile Query Language
 solution: Experience Platform
 title: Übersicht zu Profile Query Language (PQL)
 description: Dieses Handbuch bietet einen allgemeinen Überblick über PQL, einschließlich Formatierungsrichtlinien und PQL-Beispielausdrücken.
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '715'
-ht-degree: 100%
+source-wordcount: '706'
+ht-degree: 97%
 
 ---
 
@@ -67,7 +66,6 @@ PQL unterstützt die folgenden Literaltypen:
 | Array | Ein Datentyp, der aus einer Gruppe anderer Literalwerte besteht. Zur Gruppierung werden eckige Klammern und Kommas verwendet, um zwischen verschiedenen Werten zu trennen. <br> **Hinweis:** Sie können nicht direkt auf die Eigenschaften von Elementen in einem Array zugreifen. Wenn Sie also auf eine Eigenschaft in einem Array zugreifen müssen, wird `select X from array where X.item = ...` als Methode unterstützt. <br> PQL reserviert das Wort `xEvent`, um auf ein Array von Erlebnisereignissen zu verweisen, die mit einem Profil verknüpft sind. | `[1, 4, 7]`, `["US", "CA"]` |
 | Relative Zeitverweise | Reservierte Wörter, die verwendet werden können, um Zeitstempel und Zeitintervallverweise zu bilden. <ul><li>now, today, yesterday, tomorrow</li><li>this, last, next</li><li>before, after, from</li><li>millisecond(s), second(s), minute(s), hour(s), day(s), week(s), month(s), year(s), decade(s), century/centuries, millennium/millennia</li></ul> | `X.timestamp occurs before today`, `X.timestamp occurs last month`, `X.timestamp occurs <= 3 days before now` |
 
-
 ## PQL-Funktionen
 
 In der folgenden Tabelle sind die verschiedenen Kategorien unterstützter PQL-Funktionen aufgeführt, einschließlich Links zu weiterer Dokumentation mit zusätzlichen Informationen.
@@ -89,4 +87,4 @@ In der folgenden Tabelle sind die verschiedenen Kategorien unterstützter PQL-Fu
 
 ## Nächste Schritte
 
-Da Sie nun wissen, wie Sie [!DNL Profile Query Language] (PQL) verwenden, können Sie damit Segmente erstellen und ändern. Weiterführende Informationen zur Segmentierung finden Sie in der [Segmentierungsübersicht](../home.md).
+Jetzt, da Sie gelernt haben, [!DNL Profile Query Language]können Sie PQL beim Erstellen und Ändern von Segmentdefinitionen verwenden. Weiterführende Informationen zur Segmentierung finden Sie in der [Segmentierungsübersicht](../home.md).

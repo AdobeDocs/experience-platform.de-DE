@@ -1,45 +1,50 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Importieren und Verwenden externer Zielgruppen
 description: In diesem Tutorial erfahren Sie, wie Sie externe Zielgruppen mit Adobe Experience Platform verwenden.
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 57586104f1119f5cda926faf286c1663fbb0b240
+hide: true
+hidefromtoc: true
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1664'
-ht-degree: 6%
+source-wordcount: '1720'
+ht-degree: 5%
 
 ---
 
 # Importieren und Verwenden externer Zielgruppen
 
-Adobe Experience Platform unterstützt die Möglichkeit, externe Zielgruppen zu importieren, die anschließend als Komponenten für eine neue Segmentdefinition verwendet werden können. Dieses Dokument enthält ein Tutorial zum Einrichten der Experience Platform zum Importieren und Verwenden externer Zielgruppen.
+>[!IMPORTANT]
+>
+>Diese Dokumentation enthält Informationen aus einer früheren Version der Dokumentation zu Zielgruppen und ist daher veraltet.
+
+Adobe Experience Platform unterstützt die Möglichkeit, externe Zielgruppen zu importieren, die anschließend als Komponenten für eine neue Zielgruppe verwendet werden können. Dieses Dokument enthält ein Tutorial zum Einrichten der Experience Platform zum Importieren und Verwenden externer Zielgruppen.
 
 ## Erste Schritte
 
-Dieses Tutorial setzt ein Verständnis der verschiedenen [!DNL Adobe Experience Platform] Dienste, die an der Erstellung von Zielgruppensegmenten beteiligt sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Services:
+Dieses Tutorial setzt ein Verständnis der verschiedenen [!DNL Adobe Experience Platform] Dienste, die an der Erstellung von Zielgruppen beteiligt sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Services:
 
-- [Segmentierungsdienst](../home.md): Ermöglicht das Erstellen von Zielgruppensegmenten aus Echtzeit-Kundenprofildaten.
+- [Segmentierungsdienst](../home.md): Ermöglicht das Erstellen von Zielgruppen aus Echtzeit-Kundenprofildaten.
 - [Echtzeit-Kundenprofil](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 - [Experience-Datenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert. Um die Segmentierung optimal zu nutzen, stellen Sie sicher, dass Ihre Daten als Profile und Ereignisse gemäß den [Best Practices für die Datenmodellierung](../../xdm/schema/best-practices.md) aufgenommen werden.
 - [Datensätze](../../catalog/datasets/overview.md): Das Speicher- und Verwaltungskonstrukt für Datenpersistenz in Experience Platform.
 - [Streaming-Erfassung](../../ingestion/streaming-ingestion/overview.md): So erfasst und speichert Experience Platform Daten von Client- und Server-seitigen Geräten in Echtzeit.
 
-### Segmentdaten vs. Segmentmetadaten
+### Zielgruppen vs. Segmentdefinitionen
 
-Bevor Sie mit dem Importieren und Verwenden externer Zielgruppen beginnen, müssen Sie den Unterschied zwischen Segmentdaten und Segmentmetadaten verstehen.
+Bevor Sie mit dem Import und der Verwendung externer Zielgruppen beginnen, müssen Sie sich mit dem Unterschied zwischen Zielgruppen und Segmentdefinitionen vertraut machen.
 
-Segmentdaten beziehen sich auf die Profile, die die Segmentqualifikationskriterien erfüllen und daher Teil der Zielgruppe sind.
+Zielgruppen beziehen sich auf die Gruppe von Profilen, nach denen Sie filtern möchten. Bei Verwendung von Segmentdefinitionen können Sie eine Zielgruppe erstellen, indem Sie eine Segmentdefinition erstellen, die Ihre Profile in die Teilmenge filtert, die die Segmentqualifikationskriterien erfüllt.
 
-Segmentmetadaten sind Informationen zum Segment selbst, einschließlich Name, Beschreibung, Ausdruck (falls zutreffend), Erstellungsdatum, Datum der letzten Änderung und Kennung. Die ID verknüpft die Segmentmetadaten mit den einzelnen Profilen, die die Segmentqualifikation erfüllen und Teil der resultierenden Zielgruppe sind.
+Segmentdefinitionen umfassen Informationen wie den Namen, die Beschreibung, den Ausdruck (falls zutreffend), das Erstellungsdatum, das Datum der letzten Änderung und eine ID. Die ID verknüpft die Segmentmetadaten mit den einzelnen Profilen, die die Segmentqualifikation erfüllen und Teil der resultierenden Zielgruppe sind.
 
-| Segmentieren von Daten | Segmentmetadaten |
-| ------------ | ---------------- |
-| Profile, die die Segmentqualifikation erfüllen | Informationen zum Segment selbst |
+| Zielgruppen | Segmentdefinition |
+| --------- | ---------------- |
+| Die Gruppe von Profilen, die Sie suchen. Bei der Verwendung von Segmentdefinitionen bedeutet dies, dass die Gruppe von Profilen die Segmentqualifizierung erfüllt. | Die Gruppe von Regeln, die zum Segmentieren der gesuchten Zielgruppe verwendet werden. |
 
 ## Erstellen eines Identitäts-Namespace für die externe Zielgruppe
 
-Der erste Schritt zur Verwendung externer Zielgruppen besteht in der Erstellung eines Identitäts-Namespace. Identitäts-Namespaces ermöglichen es Platform, zu verknüpfen, woher ein Segment stammt.
+Der erste Schritt zur Verwendung externer Zielgruppen besteht in der Erstellung eines Identitäts-Namespace. Identitäts-Namespaces ermöglichen es Platform, zu verknüpfen, woher eine Zielgruppe stammt.
 
 Um einen Identitäts-Namespace zu erstellen, befolgen Sie die Anweisungen im Abschnitt [Identitäts-Namespace-Handbuch](../../identity-service/namespaces.md#manage-namespaces). Fügen Sie beim Erstellen Ihres Identitäts-Namespace die Quelldetails zum Identitäts-Namespace hinzu und markieren Sie dessen [!UICONTROL Typ] as a **[!UICONTROL Personenidentifizierung]**.
 
