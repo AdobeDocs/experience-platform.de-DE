@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Unions-API-Endpunkt
 description: Mit dem Endpunkt /Vereinigungen in der Schema Registry-API können Sie XDM-Vereinigungsschemas in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 3da2e8f66f08a7bb9533795f7854ad583734911c
 workflow-type: tm+mt
-source-wordcount: '896'
-ht-degree: 47%
+source-wordcount: '897'
+ht-degree: 42%
 
 ---
 
@@ -31,7 +31,7 @@ Das `timeSeriesEvents`-Array ist eine Liste von Ereignissen aus Zeitreihen, die 
 
 ### Segmentzugehörigkeitszuordnung
 
-Die `segmentMembership`-Zuordnung speichert die Ergebnisse der Segmentauswertungen. Wenn Segmentaufträge mit der [Segmentation-API](https://www.adobe.io/experience-platform-apis/references/segmentation/) erfolgreich ausgeführt werden, wird die Zuordnung aktualisiert. `segmentMembership` speichert auch alle vorab ausgewerteten Zielgruppensegmente, die in Platform integriert werden, sodass sie mit anderen Lösungen wie Adobe Audience Manager integriert werden können. Weitere Informationen finden Sie im Tutorial zum [Erstellen von Segmenten mit APIs](../../segmentation/tutorials/create-a-segment.md).
+Die `segmentMembership` -Zuordnung speichert die Ergebnisse der Auswertung einer Segmentdefinition. Wenn Segmentaufträge mit der [Segmentation-API](https://www.adobe.io/experience-platform-apis/references/segmentation/) erfolgreich ausgeführt werden, wird die Zuordnung aktualisiert. `segmentMembership` speichert auch alle vorab ausgewerteten Zielgruppen, die in Platform erfasst werden, sodass sie mit anderen Lösungen wie Adobe Audience Manager integriert werden können. Siehe Tutorial zu [Erstellen von Zielgruppen mithilfe von APIs](../../segmentation/tutorials/create-a-segment.md) für weitere Informationen.
 
 ## Abrufen einer Vereinigungsliste {#list}
 

@@ -3,9 +3,9 @@ keywords: Experience Platform; Query Service; Query Service; Query
 title: Anwendungsbeispiel für Adobe Experience Platform Query Service
 description: Ein durchgängiges Beispiel, um die Vielseitigkeit und Vorteile von Adobe Experience Platform Query Service zu demonstrieren.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 79966442f5333363216da17342092a71335a14f0
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '707'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,7 @@ Dieses Dokument und die zugehörige Videopräsentation bieten einen umfassenden 
 * Methoden zum Erstellen der Abfrage basierend auf Ihrer vorhandenen Datenarchitektur.
 * Stellen Sie die Datenqualität sicher, die Ihren Anforderungen entspricht, und sorgen Sie für Methoden zur Reduzierung von Fehlern.
 * Der Prozess zum Planen einer Abfrage für die nachfolgende Verwendung in der Segmentierung und in Personalisierungszielen.
-* Die einfache Möglichkeit für Marketing-Experten, abgeleitete Attribute in ihre Segmente einzuschließen, indem die Vorteile von [!DNL Query Service].
+* Die einfache Möglichkeit für Marketing-Experten, abgeleitete Attribute in ihre Zielgruppen einzubinden, indem die [!DNL Query Service].
 
 ## Ziele {#objectives}
 
@@ -63,9 +63,9 @@ Die folgende Videopräsentation bietet einen ganzheitlichen, realen Anwendungsfa
 
 ## Vorteile von [!DNL Query Service] {#benefits}
 
-Die durch [!DNL Query Service] dient vielen Zwecken. Sie können sie verwenden, um komplexe Logik für die Segmentierung, die Berechnung verschiedener personalisierter Attribute zur nachgelagerten Verwendung oder die Erstellung Ihrer Segmente erheblich zu vereinfachen.
+Die durch [!DNL Query Service] dient vielen Zwecken. Sie können sie verwenden, um komplexe Logik für die Segmentierung, die Berechnung verschiedener personalisierter Attribute zur nachgelagerten Verwendung oder die Erstellung Ihrer Zielgruppen erheblich zu vereinfachen.
 
-[!DNL Query Service] ermöglicht Ihnen, Einschränkungen in Ihre Abfragen einzubeziehen, um den Prozess der Segmenterstellung zu vereinfachen. Dies verbessert die Datenqualität, indem sichergestellt wird, dass die richtigen Daten für Ihre Segmente qualifiziert sind, und präzisere Zielgruppen erstellt werden. Die Aufrechterhaltung der Qualität Ihrer Abfrageergebnisse in einer präzisen Zielgruppe und hilft bei der Datenzuverlässigkeit. Sie können Ihre Audience auch speichern, indem Sie Schemas und benutzerdefinierte Tabellen basierend auf Attributen erstellen, die aus Ihrer Abfrage abgeleitet wurden. Eine benutzerdefinierte Tabelle kann für Profil aktiviert werden und Sie können diese Datenpunkte für die Segmentierung und Personalisierung verwenden. Diese Funktion unterstützt Marketingexperten, die eine klare Zielgruppe erstellen möchten.
+[!DNL Query Service] ermöglicht Ihnen, Einschränkungen in Ihre Abfragen einzubeziehen, um den Prozess der Erstellung von Zielgruppen zu vereinfachen. Dies verbessert die Datenqualität, indem sichergestellt wird, dass die richtigen Daten für Ihre Zielgruppen geeignet sind. Die Aufrechterhaltung der Qualität Ihrer Abfrageergebnisse in einer präzisen Zielgruppe und hilft bei der Datenzuverlässigkeit. Sie können Ihre Audience auch speichern, indem Sie Schemas und benutzerdefinierte Tabellen basierend auf Attributen erstellen, die aus Ihrer Abfrage abgeleitet wurden. Eine benutzerdefinierte Tabelle kann für Profil aktiviert werden und Sie können diese Datenpunkte für die Segmentierung und Personalisierung verwenden. Diese Funktion unterstützt Marketingexperten, die eine klare Zielgruppe erstellen möchten.
 
 Indem Sie auch eine Logik in Ihre Abfrage einfügen, die wiederkehrende oder statische Bedingungen erfüllt, [!DNL Query Service] extrahiert die Last einer detaillierten Segmentierung.
 

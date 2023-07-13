@@ -2,8 +2,8 @@
 title: Adobe Experience Platform – Versionshinweise Januar 2022
 description: Versionshinweise Januar 2022 für Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
-workflow-type: ht
+source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
+workflow-type: tm+mt
 source-wordcount: '1342'
 ht-degree: 100%
 
@@ -43,7 +43,7 @@ Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Insi
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Intelligente Beschriftungen | Ein maschineller Lernalgorithmus bietet automatisch Einblicke zu Ihren Profil- und Zielgruppendaten und veranschaulicht Muster und Trends über einen Zeitraum von 30 bis 90 Tagen oder 12 Monaten. Die Beschriftungen enthalten Informationen zu <ul><li>Gesamtform und Statistiken</li><li>Trends und plötzlichen Veränderungen</li><li>Saisonalen Mustern</li><li>Unerwarteten Anomalien</li></ul> Weitere Informationen finden sich in der Dokumentation zu [Profil-Dashboards](../../dashboards/guides/profiles.md#profiles-count-trend) und [Segment-Dashboards](../../dashboards/guides/segments.md#audience-size-trend). |
+| Intelligente Beschriftungen | Ein maschineller Lernalgorithmus bietet automatisch Einblicke zu Ihren Profil- und Zielgruppendaten und veranschaulicht Muster und Trends über einen Zeitraum von 30 bis 90 Tagen oder 12 Monaten. Die Beschriftungen enthalten Informationen zu <ul><li>Gesamtform und Statistiken</li><li>Trends und plötzlichen Veränderungen</li><li>Saisonalen Mustern</li><li>Unerwarteten Anomalien</li></ul> Weitere Informationen finden sich in der Dokumentation zu [Profil-Dashboards](../../dashboards/guides/profiles.md#profiles-count-trend) und [Segment-Dashboards](../../dashboards/guides/audiences.md#audience-size-trend). |
 | Dashboards-Inventar | Greifen Sie von einem zentralen Ort aus auf die vorkonfigurierten Berichte der Profil-, Segment- und Ziel-Dashboards zu, einschließlich aller installierten Integrationen wie Power BI. Weitere Informationen finden Sie in der [[!DNL Dashboards] Inventar-Dokumentation](../../dashboards/inventory.md). |
 | Power BI-Berichtsvorlagen | Mit den neuen Power BI-Diagrammen können Sie Metriken aus den Profil-, Segment- und Ziel-Datenmodellen erstellen, anpassen oder erweitern. Der automatisierte Installations-Workflow ermöglicht es Ihnen, innerhalb der Power BI-Umgebung Ihre Marketing-Einblicke in Ihrem Unternehmen zu teilen. Weitere Informationen finden Sie in der [Dokumentation zu Power BI-Berichtsvorlagen](../../dashboards/integrations/power-bi.md). |
 

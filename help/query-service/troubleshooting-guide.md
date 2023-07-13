@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Häufig gestellte Fragen
 description: Dieses Dokument enthält häufig gestellte Fragen und Antworten zum Abfrage-Service. Zu den Themen gehören der Datenexport, Tools von Drittanbietern und PSQL-Fehler.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '4309'
-ht-degree: 99%
+ht-degree: 98%
 
 ---
 
@@ -122,7 +122,7 @@ Die vollständige Anleitung finden Sie in der Dokumentation zum [Arbeiten mit ve
 ### Wie beschleunige ich eine Abfrage für einen Datensatz, der Arrays enthält?
 
 +++Antwort
-Um die Leistung von Abfragen von Datensätzen mit Arrays zu verbessern, sollten Sie das Array zunächst während der Laufzeit als [CTAS-Abfrage](./sql/syntax.md#create-table-as-select) [auflösen](https://spark.apache.org/docs/latest/api/sql/index.html#explode). Danach können Sie es weiter auf Möglichkeiten zur Verbesserung der Verarbeitungszeit untersuchen.
+Um die Leistung von Abfragen von Datensätzen mit Arrays zu verbessern, sollten Sie das Array zunächst während der Laufzeit als [CTAS-Abfrage](./sql/syntax.md#create-table-as-select)[auflösen](https://spark.apache.org/docs/latest/api/sql/index.html#explode). Danach können Sie es weiter auf Möglichkeiten zur Verbesserung der Verarbeitungszeit untersuchen.
 +++
 
 ### Warum wird meine CTAS-Abfrage für eine geringe Anzahl von Zeilen nach vielen Stunden immer noch bearbeitet?
@@ -251,7 +251,7 @@ Die [`SNAPSHOT`](./sql/syntax.md#snapshot-clause)-Klausel kann verwendet werden,
 ### Warum unterscheiden sich die in der Profil-Benutzeroberfläche angezeigten Zahlen von den aus dem Profil-Exportdatensatz berechneten Zahlen?
 
 +++Antwort
-Die im Profil-Dashboard angezeigten Zahlen entsprechen dem Stand des letzten Schnappschusses. Die in der Tabelle für den Profilexport generierten Zahlen hängen vollständig von der Exportabfrage ab. Daher ist die Abfrage der Anzahl der Profile, die für ein bestimmtes Segment qualifiziert sind, häufig eine Ursache für diese Diskrepanz.
+Die im Profil-Dashboard angezeigten Zahlen entsprechen dem Stand des letzten Schnappschusses. Die in der Tabelle für den Profilexport generierten Zahlen hängen vollständig von der Exportabfrage ab. Daher ist die Abfrage der Anzahl der Profile, die sich für eine bestimmte Zielgruppe qualifizieren, häufig eine Ursache für diese Diskrepanz.
 
 >[!NOTE]
 >

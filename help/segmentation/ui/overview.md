@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Segmentierungs-Service
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche Zielgruppen und Segmentdefinitionen erstellen und verwalten.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 5950713c33bfb2893f24f35136acf2707ad35f1f
+source-git-commit: 04c0b19bf4ffbc0719a89f710570cc667ca5e482
 workflow-type: tm+mt
 source-wordcount: '3606'
 ht-degree: 28%
@@ -41,7 +41,7 @@ Wählen Sie in der Benutzeroberfläche &quot;Experience Platform&quot;die Option
 
 Die **[!UICONTROL Zielgruppen]** Im Dashboard werden Schlüsselmetriken im Zusammenhang mit den Zielgruppendaten Ihres Unternehmens beschrieben.
 
-Weitere Informationen finden Sie unter [Dashboard-Handbuch für Zielgruppen](../../dashboards/guides/segments.md).
+Weitere Informationen finden Sie unter [Dashboard-Handbuch für Zielgruppen](../../dashboards/guides/audiences.md).
 
 ![Das Zielgruppen-Dashboard wird angezeigt. Es werden verschiedene Widgets angezeigt, darunter die Zielgruppengröße, Profile nach Identität, Identitätsüberschneidungen und der Trend zur Änderung der Zielgruppengröße.](../../dashboards/images/segments/dashboard-overview.png)
 

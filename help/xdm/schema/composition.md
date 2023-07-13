@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Grundlagen der Schemakomposition
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemata und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemata, die in Adobe Experience Platform verwendet werden können.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: a3f38a18693e0ef4bc93765c090eafd56dcd15d3
+source-git-commit: 4ff003b8f4e98fa7af7f12271aa990c8e5f49f14
 workflow-type: tm+mt
 source-wordcount: '4140'
 ht-degree: 30%
@@ -285,12 +285,12 @@ Weitere Informationen zum Arbeiten mit [!DNL Profile], siehe [Übersicht über d
 
 Alle Datendateien, die in [!DNL Experience Platform] muss der Struktur eines XDM-Schemas entsprechen. Weitere Informationen zum Formatieren von Datendateien mit XDM-Hierarchien (einschließlich Beispieldateien) finden Sie im Dokument zu [Beispiel-ETL-Transformationen](../../etl/transformations.md). Allgemeine Informationen zur Aufnahme von Datendateien in [!DNL Experience Platform], siehe [Batch-Erfassung - Übersicht](../../ingestion/batch-ingestion/overview.md).
 
-## Schemata für externe Segmente
+## Schemata für externe Zielgruppen
 
-Wenn Sie Segmente aus externen Systemen in Platform integrieren, müssen Sie diese mit den folgenden Komponenten in Ihren Schemata erfassen:
+Wenn Sie Zielgruppen aus externen Systemen in Platform integrieren, müssen Sie die folgenden Komponenten verwenden, um sie in Ihren Schemas zu erfassen:
 
 * [[!UICONTROL Segmentdefinition] class](../classes/segment-definition.md): Verwenden Sie diese Standardklasse, um Schlüsselattribute einer externen Segmentdefinition zu erfassen.
-* [[!UICONTROL Details zur Segmentzugehörigkeit] Feldergruppe](../field-groups/profile/segmentation.md): Fügen Sie diese Feldergruppe zu Ihrer [!UICONTROL XDM Individual Profile] -Schema verwenden, um Kundenprofile bestimmten Segmenten zuzuordnen.
+* [[!UICONTROL Details zur Segmentzugehörigkeit] Feldergruppe](../field-groups/profile/segmentation.md): Fügen Sie diese Feldergruppe zu Ihrer [!UICONTROL XDM Individual Profile] -Schema verwenden, um Kundenprofile bestimmten Zielgruppen zuzuordnen.
 
 ## Nächste Schritte
 

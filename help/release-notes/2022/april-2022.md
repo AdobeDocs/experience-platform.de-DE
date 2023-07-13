@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise April 2022
 description: Versionshinweise April 2022 für Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
 workflow-type: tm+mt
 source-wordcount: '2904'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -26,9 +26,9 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 ## [!DNL Dashboards] {#dashboards}
 
-Platform bietet mehrere Dashboards, in denen Sie wichtige, bei täglichen Snapshots erfasste Informationen zu den Daten Ihres Unternehmens einsehen können.
+Platform bietet mehrere Dashboards, mit denen Sie wichtige Informationen über die Daten Ihrer Organisation sehen können, die bei täglichen Schnappschüssen erfasst werden.
 
-Dashboards bieten vordefinierte Berichtsoptionen zu den Daten Ihres Unternehmens und sind direkt in den Marketing-Workflow von Platform integriert. Diese Dashboards sind ohne zusätzliche IT-Unterstützung und ohne den Zeit- und Arbeitsaufwand verfügbar, der sonst für den Export und die Verarbeitung von Daten mit zusätzlicher Data-Warehousing-Konzeption und Implementierung erforderlich wäre.
+Dashboards bieten vorkonfigurierte Berichtsoptionen für die Daten Ihres Unternehmens und sind direkt in den Marketing-Workflow in Platform integriert. Diese Dashboards sind ohne zusätzliche IT-Unterstützung und ohne den Zeit- und Arbeitsaufwand verfügbar, der sonst für den Export und die Verarbeitung von Daten mit zusätzlicher Data-Warehousing-Konzeption und Implementierung erforderlich wäre.
 
 Die folgenden Widgets sind über die Widget-Bibliothek in den jeweiligen Dashboards verfügbar. Weitere Informationen finden Sie in der Dokumentation zum [Hinzufügen von Widgets über die Widget-Bibliothek](../../dashboards/customize/widget-library.md).
 
@@ -57,7 +57,7 @@ Die folgenden Widgets sind über die Widget-Bibliothek in den jeweiligen Dashboa
 
 {style="table-layout:auto"}
 
-Weitere Informationen finden Sie in der Dokumentation zu [[!DNL Profiles]](../../dashboards/guides/profiles.md)-, [[!DNL Destinations]](../../dashboards/guides/destinations.md)- und [[!DNL Segments]](../../dashboards/guides/segments.md)-Dashboards.
+Weitere Informationen finden Sie in der Dokumentation zu [[!DNL Profiles]](../../dashboards/guides/profiles.md)-, [[!DNL Destinations]](../../dashboards/guides/destinations.md)- und [[!DNL Segments]](../../dashboards/guides/audiences.md)-Dashboards.
 
 ## Datenflüsse {#dataflows}
 
@@ -173,7 +173,7 @@ Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-S
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-KI/ML-Services ermöglichen es Marketing-Analysten und -Praktikern, die Leistungsfähigkeit von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen zu nutzen. So können Marketing-Analysten mithilfe von Konfigurationen auf Unternehmensebene spezifische Prognosen für die Anforderungen der Firma erstellen, ohne dass hierfür Kenntnisse aus der Datenwissenschaft erforderlich wären.
+KI/ML-Services ermöglichen es Marketing-Analysten und -Praktikern, die Leistungsfähigkeit von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen zu nutzen. So können Marketing-Analysten mithilfe von Konfigurationen auf Unternehmensebene spezifische Prognosen für die Anforderungen der Firma erstellen, ohne dass hierfür Kenntnisse aus der Datenwissenschaft erforderlich sind.
 
 ### Attributions-KI
 

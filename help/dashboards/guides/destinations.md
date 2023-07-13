@@ -4,10 +4,10 @@ title: Handbuch zum Ziele-Dashboard
 description: Adobe Experience Platform verfügt über ein Dashboard, in dem Sie wichtige Informationen über die aktiven Ziele Ihrer Organisation anzeigen können.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: d9e10271db52f61cdc3e4adc546fe05adadb5a46
+source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
 source-wordcount: '3031'
-ht-degree: 93%
+ht-degree: 53%
 
 ---
 
@@ -49,31 +49,31 @@ Wählen Sie **[!UICONTROL Widget hinzufügen]** aus, um zur Widget-Bibliothek zu
 
 ![Die Übersicht über das Dashboard „Ziele“ mit der hervorgehobenen Option „Widget hinzufügen“.](../images/destinations/destinations-overview-add-widget.png)
 
-In der Widget-Bibliothek können Sie die standardmäßigen und benutzerdefinierten Segment-Widgets durchsuchen. Informationen zum Hinzufügen von Widgets finden Sie in der Widget-Bibliothek-Dokumentation zum [Hinzufügen eines Widget](../customize/widget-library.md#add-widgets).
+In der Widget-Bibliothek können Sie die Auswahl von Standard- und benutzerdefinierten Zielgruppen-Widgets durchsuchen. Informationen zum Hinzufügen von Widgets finden Sie in der Widget-Bibliothek-Dokumentation zum [Hinzufügen eines Widget](../customize/widget-library.md#add-widgets).
 
 ## Standard-Widgets {#standard-widgets}
 
-Adobe bietet mehrere Standard-Widgets, mit denen Sie verschiedene Ziel-Metriken visualisieren und die Vollständigkeit der für Ihre Datenanalyse verfügbaren Segmente bewerten können. In der [!UICONTROL Widget-Bibliothek] können Sie auch benutzerdefinierte Widgets erstellen und für Ihre gesamte Organisation freigeben. Um mehr über das Erstellen benutzerdefinierter Widgets zu erfahren, lesen Sie zunächst den Abschnitt [Widget-Bibliothek – Übersicht](../customize/widget-library.md).
+Adobe bietet mehrere Standard-Widgets, mit denen Sie verschiedene Metriken in Bezug auf Ihre Ziele visualisieren und die Vollständigkeit der für Ihre Datenanalyse verfügbaren Zielgruppen bewerten können. In der [!UICONTROL Widget-Bibliothek] können Sie auch benutzerdefinierte Widgets erstellen und für Ihre gesamte Organisation freigeben. Um mehr über das Erstellen benutzerdefinierter Widgets zu erfahren, lesen Sie zunächst den Abschnitt [Widget-Bibliothek – Übersicht](../customize/widget-library.md).
 
 ### Voraussetzungen {#prerequisites}
 
 Bevor Sie mit den Beschreibungen der Standard-Widgets fortfahren, sollten Sie mit den Definitionen der folgenden Schlüsselbegriffe vertraut sein, die in der Dokumentation verwendet werden:
 
-* **Segment:** Ein Segment ist **Regelsätze** , die Attribute und Ereignisdaten enthalten, die eine Reihe von Profilen als Zielgruppe qualifizieren.
-* **Zielgruppe**: Eine Zielgruppe ist **Profilgruppe** die die Kriterien einer Segmentdefinition erfüllen.
+* **Segmentdefinition:** Eine Segmentdefinition ist eine **Regelsatz** zur Beschreibung der Hauptmerkmale oder des Verhaltens einer Zielgruppe verwendet werden. Diese Regeln enthalten Attribut- und Ereignisdaten, die die Profile als Teil einer Zielgruppe qualifizieren.
+* **Zielgruppe**: Eine Gruppe von Personen, Konten, Haushalten oder anderen Entitäten, die gemeinsame Merkmale und Verhaltensweisen aufweisen.
 * **Zugeordnet/Zuordnung**: Beim Daten-Mapping werden Quelldatenfelder den zugehörigen Zielfeldern in einem Ziel zugeordnet.
 * **Identität**: Eine Identität ist eine Kennung, die einen einzelnen Kunden eindeutig darstellt, z. B. eine Cookie-ID, Geräte-ID oder E-Mail-ID.
-* **Aktivieren**: Activate ist die Aktion, die ein Benutzer durchführt, um ein Segment oder Profile einem Ziel wie Oracle Eloqua, Google oder Salesforce-Marketing Cloud zuzuordnen.
+* **Aktivieren**: Activate ist die Aktion, die ein Benutzer durchführt, um eine oder mehrere Zielgruppen einem Ziel wie Oracle Eloqua, Google oder Salesforce-Marketing Cloud zuzuordnen.
 
 Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen Sie den Namen eines Widgets aus der folgenden Liste aus:
 
 * [[!UICONTROL Am häufigsten verwendete Ziele]](#most-used-destinations)
 * [[!UICONTROL Kürzlich erstellte Ziele]](#recently-created-destinations)
-* [[!UICONTROL Kürzlich aktivierte Segmente]](#recently-activated-segments)
-* [[!UICONTROL Kürzlich aktivierte Segmente nach Ziel]](#recently-activated-segments-by-destination)
+* [[!UICONTROL Kürzlich aktivierte Zielgruppen]](#recently-activated-audiences)
+* [[!UICONTROL Kürzlich aktivierte Zielgruppen nach Ziel]](#recently-activated-audiences-by-destination)
 * [[!UICONTROL Trend der Audience-Größe]](#audience-size-trend)
-* [[!UICONTROL Nicht zugeordnete Segmente nach Identität]](#unmapped-segments-by-identity)
-* [[!UICONTROL Zugeordnete Segmente nach Identität]](#mapped-segments-by-identity)
+* [[!UICONTROL Nicht zugeordnete Zielgruppen nach Identität]](#unmapped-audiences-by-identity)
+* [[!UICONTROL Zugeordnete Zielgruppen nach Identität]](#mapped-audiences-by-identity)
 * [[!UICONTROL Häufige Zielgruppen]](#common-audiences)
 * [[!UICONTROL Zugeordnete Zielgruppen]](#mapped-audiences)
 * [[!UICONTROL Zustand der zugeordneten Zielgruppe]](#mapped-audience-health)
@@ -88,15 +88,15 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mostuseddestinations"
 >title="Am häufigsten verwendete Ziele"
->abstract="Dieses Widget zeigt die aktivsten Ziele Ihres Unternehmens gemessen an der Anzahl der zugeordneten Segmente an. Diese Zahlen sind zum Zeitpunkt des letzten Schnappschusses korrekt. Diese Rangfolge bietet Einblicke, welche Ziele derzeit am häufigsten verwendet werden, und hebt jene hervor, die möglicherweise nicht ausreichend genutzt werden."
+>abstract="Dieses Widget zeigt die aktivsten Ziele Ihres Unternehmens anhand der Anzahl der zugeordneten Zielgruppen an. Diese Zahlen sind zum Zeitpunkt des letzten Schnappschusses korrekt. Diese Rangfolge bietet Einblicke, welche Ziele derzeit am häufigsten verwendet werden, und hebt jene hervor, die möglicherweise nicht ausreichend genutzt werden."
 
-Das Widget **[!UICONTROL Am häufigsten verwendete Ziele]** zeigt die wichtigsten Ziele Ihres Unternehmens nach der Anzahl der zugeordneten Segmente ab dem letzten Schnappschuss an. Diese Rangfolge bietet Einblicke, welche Ziele verwendet werden, und zeigt gleichzeitig, welche möglicherweise nicht genügend genutzt werden.
+Die **[!UICONTROL Am häufigsten verwendete Ziele]** -Widget zeigt die wichtigsten Ziele Ihres Unternehmens nach der Anzahl der zugeordneten Zielgruppen ab dem letzten Schnappschuss an. Diese Rangfolge bietet Einblicke, welche Ziele verwendet werden, und zeigt gleichzeitig, welche möglicherweise nicht genügend genutzt werden.
 
-Wenn Sie beispielsweise gestern ein Ziel konfiguriert haben, ihm jedoch keine Segmente zugeordnet haben, können Sie sehen, dass das Ziel derzeit nicht genutzt wird.
+Wenn Sie beispielsweise gestern ein Ziel konfiguriert haben, ihm aber keine Zielgruppen zugeordnet haben, können Sie sehen, dass das Ziel derzeit nicht genutzt wird.
 
-Die Anzahl der zugeordneten Segmente, die in der Spalte mit der Segmentanzahl angezeigt wird, ist zum Zeitpunkt des letzten täglichen Schnappschusses korrekt. Wenn Sie dem Ziel ein neues Segment zuordnen, wird die Anzahl erst aktualisiert, wenn der nächste Schnappschuss erstellt wird.
+Die Anzahl der zugeordneten Zielgruppen, die in der [!UICONTROL Zielgruppenanzahl] -Spalte ist zum letzten täglichen Schnappschuss korrekt. Wenn Sie dem Ziel eine neue Zielgruppe zuordnen, wird die Anzahl erst aktualisiert, wenn der nächste Schnappschuss erstellt wurde.
 
-Wenn Sie den Namen eines Ziels aus der im Widget angezeigten Liste auswählen, gelangen Sie zu denselben Zieldetails, die Sie auch über die Registerkarte **[!UICONTROL Durchsuchen]** aufrufen können. Sie können auch **[!UICONTROL Alle anzeigen]** auswählen, um zur Registerkarte **[!UICONTROL Durchsuchen]** zu navigieren, und dann den Namen eines Ziels auswählen, um dessen Details anzuzeigen.
+Wählen Sie den Namen eines Ziels aus der Liste im Widget aus, um zu den Zieldetails für dieses Ziel zu navigieren. Sie können auch **[!UICONTROL Alle anzeigen]** auswählen, um zur Registerkarte **[!UICONTROL Durchsuchen]** zu navigieren, und dann den Namen eines Ziels auswählen, um dessen Details anzuzeigen.
 
 ![Auf der Registerkarte „Übersicht“ im Dashboard „Ziele“ ist das Widget „Am häufigsten verwendete Ziele“ hervorgehoben.](../images/destinations/most-used-destinations.png)
 
@@ -117,37 +117,37 @@ Weitere Informationen zum Konfigurieren bestimmter Zieltypen finden Sie in der [
 
 ![Die Registerkarte „Übersicht“ im Dashboard „Ziele“ mit dem hervorgehobenen Widget „Kürzlich erstellte Ziele“.](../images/destinations/recently-created-destinations.png)
 
-### [!UICONTROL Kürzlich aktivierte Segmente] {#recently-activated-segments}
+### [!UICONTROL Kürzlich aktivierte Zielgruppen] {#recently-activated-audiences}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_recentlyactivatedsegments"
->title="Kürzlich aktivierte Segmente"
->abstract="Dieses Widget bietet eine Liste der Segmente, die einem Ziel zuletzt zugeordnet wurden. Diese Liste enthält eine Momentaufnahme der Segmente und Ziele, die aktiv im System verwendet werden, und kann bei der Fehlerbehebung bei fehlerhaften Zuordnungen hilfreich sein."
+>title="Kürzlich aktivierte Zielgruppen"
+>abstract="Dieses Widget bietet eine Liste der Zielgruppen, die zuletzt einem Ziel zugeordnet wurden. Diese Liste enthält eine Momentaufnahme der Zielgruppen und Ziele, die aktiv im System verwendet werden, und kann bei der Fehlerbehebung bei fehlerhaften Zuordnungen helfen."
 
-Das Widget **[!UICONTROL Kürzlich aktivierte Segmente]** stellt eine Liste der Segmente bereit, die einem Ziel zuletzt zugeordnet wurden. Diese Liste enthält eine Momentaufnahme der Segmente und Ziele, die aktiv im System verwendet werden, und kann bei der Fehlerbehebung bei fehlerhaften Zuordnungen hilfreich sein.
+Die **[!UICONTROL Kürzlich aktivierte Zielgruppen]** -Widget stellt eine Liste der Zielgruppen bereit, die zuletzt einem Ziel zugeordnet wurden. Diese Liste enthält eine Momentaufnahme der Zielgruppen und Ziele, die aktiv im System verwendet werden, und kann bei der Fehlerbehebung bei fehlerhaften Zuordnungen helfen.
 
-Das angezeigte aktualisierte Datum zeigt an, wann das Segment zuletzt für das Ziel aktiviert wurde, und ist für die letzte tägliche Momentaufnahme korrekt. Wenn Sie also ein Segment für das Ziel aktivieren, ändert sich das aktualisierte Datum erst, nachdem die nächste Momentaufnahme erstellt wurde.
+Die [!UICONTROL Aktualisiert] Das angezeigte Datum zeigt an, wann die Zielgruppe zuletzt für das Ziel aktiviert wurde, und ist auf den letzten täglichen Schnappschuss genau. Wenn Sie also eine Zielgruppe für das Ziel aktivieren, ändert sich das aktualisierte Datum erst, nachdem der nächste Schnappschuss erstellt wurde.
 
-Wenn Sie den Namen eines Segments in der im Widget angezeigten Liste auswählen, gelangen Sie zu den Segmentdetails. Sie können auch auf **[!UICONTROL Alle anzeigen]** klicken, um zur Registerkarte zum Durchsuchen von Segmenten zu navigieren und dann den Namen eines Segments auszuwählen, um dessen Details anzuzeigen.
+Wenn Sie den Namen einer Audience aus der im Widget angezeigten Liste auswählen, gelangen Sie zu den Details der Audience. Sie können auch **[!UICONTROL Alle anzeigen]** , um zur [!UICONTROL Zielgruppen] [!UICONTROL Durchsuchen] und wählen Sie dann den Namen einer Audience aus, um deren Details anzuzeigen.
 
-Weitere Informationen zum Arbeiten mit Segmenten in Experience Platform finden Sie in der [Übersicht über den Segmentierungs-Service](../../segmentation/home.md).
+Weiterführende Informationen zum Arbeiten mit Zielgruppen in Experience Platform finden Sie im Abschnitt [Übersicht über den Segmentierungsdienst](../../segmentation/home.md).
 
-![Die Registerkarte „Übersicht“ im Dashboard „Ziele“ mit dem hervorgehobenem Widget „Kürzlich aktivierte Segmente“.](../images/destinations/recently-activated-segments.png)
+![Die Registerkarte Übersicht im Dashboard Ziele mit dem Widget Zuletzt aktivierte Zielgruppen wurde hervorgehoben.](../images/destinations/recently-activated-audiences.png)
 
-### [!UICONTROL Kürzlich aktivierte Segmente nach Ziel] {#recently-activated-segments-by-destination}
+### [!UICONTROL Kürzlich aktivierte Zielgruppen nach Ziel] {#recently-activated-audiences-by-destination}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_recentlyactivatedsegmentsbydestination"
->title="Kürzlich aktivierte Segmente nach Ziel"
->abstract="Dieses Widget zeigt die fünf am häufigsten aktivierten Segmente in absteigender Reihenfolge für das im Dropdown-Menü „Übersicht“ ausgewählte Ziel an."
+>title="Kürzlich aktivierte Zielgruppen nach Ziel"
+>abstract="Dieses Widget zeigt die fünf zuletzt aktivierten Zielgruppen in absteigender Reihenfolge an, je nach dem im Dropdown-Menü &quot;Übersicht&quot;ausgewählten Ziel."
 
-Das Widget **[!UICONTROL Kürzlich aktivierte Segmente nach Ziel]** zeigt die fünf am häufigsten aktivierten Segmente in absteigender Reihenfolge für das im Dropdown-Menü „Übersicht“ ausgewählte Ziel an. Es ähnelt dem Widget [!UICONTROL Kürzlich aktivierte Segmente], doch gelten die angezeigten Daten **nur** für das ausgewählte Ziel.
+Die **[!UICONTROL Kürzlich aktivierte Zielgruppen nach Ziel]** -Widget zeigt die fünf zuletzt aktivierten Zielgruppen in absteigender Reihenfolge an, je nach dem im Dropdown-Menü &quot;Übersicht&quot;ausgewählten Ziel. Sie ähnelt dem [!UICONTROL Kürzlich aktivierte Zielgruppen] Widget, aber die angezeigten Daten **only** gilt für das ausgewählte Ziel.
 
-Dieses Widget enthält zwei Metriken: den Segmentnamen und das Datum, an dem das Segment zuletzt für das Ziel aktiviert wurde. Die angezeigten Daten sind zum Zeitpunkt der letzten täglichen Momentaufnahme korrekt.
+Dieses Widget enthält zwei Metriken: den Namen der Zielgruppen und das Datum, an dem die Zielgruppen zuletzt für das Ziel aktiviert wurden. Die angezeigten Daten sind zum Zeitpunkt der letzten täglichen Momentaufnahme korrekt.
 
-Sie können die Details eines Segments anzeigen, indem Sie den Namen eines Segments in der angezeigten Liste auswählen.
+Sie können die Details einer Audience anzeigen, indem Sie den Namen der Audience aus der gezeigten Liste auswählen.
 
-![Das Widget „Kürzlich aktivierte Segmente nach Ziel“.](../images/destinations/recently-activated-segments-by-destination.png)
+![Das Widget Kürzlich aktivierte Zielgruppen nach Ziel .](../images/destinations/recently-activated-audiences-by-destination.png)
 
 Weitere Informationen finden Sie im Abschnitt Voraussetzungen für das [verwendete Begriffsdefinitionen](#prerequisites) in dieser Beschreibung.
 
@@ -156,60 +156,60 @@ Weitere Informationen finden Sie im Abschnitt Voraussetzungen für das [verwende
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_audiencesizetrend"
 >title="Trend der Audience-Größe"
->abstract="Dieses Widget veranschaulicht die Anzahl der im Segment enthaltenen Profile, die täglich an das Zielkonto gesendet werden. Mit dem ersten Dropdown-Menü wird der Zeitraum für die Entwicklung der Zielgruppe angepasst. Im zweiten Dropdown-Menü des Widgets wird das Segment für die Analyse ausgewählt. Das Ziel wird im Dropdown-Menü „Übersicht“ ausgewählt."
+>abstract="Dieses Widget zeigt die Anzahl der Profile in der Audience, die täglich an das Zielkonto gesendet werden. Mit dem ersten Dropdown-Menü wird der Zeitraum für die Entwicklung der Zielgruppe angepasst. Im zweiten Widget-Dropdown-Menü wird die Zielgruppe für die Analyse ausgewählt. Das Ziel wird im Dropdown-Menü „Übersicht“ ausgewählt."
 
-Das Widget **[!UICONTROL Entwicklung der Zielgruppengröße]** zeigt die Beziehung der Profilanzahl über einen bestimmten Zeitraum für ein Segment an, das diesem Zielkonto zugeordnet wurde. Im Widget wird mit einem Liniendiagramm die Anzahl der im Segment enthaltenen Profile, die täglich an das Zielkonto gesendet werden, veranschaulicht.
+Die **[!UICONTROL Zielgruppengrößentrend]** Widget zeigt die Beziehung der Profilanzahl über einen bestimmten Zeitraum für eine Zielgruppe an, die diesem Zielkonto zugeordnet wurde. Das Widget verwendet ein Liniendiagramm, um die Anzahl der in der Zielgruppe enthaltenen Profile zu veranschaulichen, die täglich an das Zielkonto gesendet werden.
 
 Ein Zeitraum für die Entwicklung der Zielgruppe in den letzten 30 Tagen, 90 Tagen oder 12 Monaten kann über das erste Dropdown-Menü angepasst werden.
 
-Im zweiten Dropdown-Menü werden alle verfügbaren Segmente aufgelistet, die an das im oberen Bereich des Dashboards ausgewählte Zielkonto gesendet werden können.
+Im zweiten Dropdown-Menü werden alle verfügbaren Zielgruppen aufgelistet, die an das im oberen Bereich des Dashboards ausgewählte Zielkonto gesendet werden können.
 
 ![Das Widget „Entwicklung der Zielgruppengröße“.](../images/destinations/audience-size-trend.png)
 
-Das Widget **[!UICONTROL Entwicklung der Zielgruppengröße]** enthält oben rechts eine Schaltfläche [!UICONTROL Beschriftungen]. Wählen Sie **[!UICONTROL Beschriftungen]** aus, um den Dialog „Automatische Beschriftungen“ zu öffnen. Ein Modell für maschinelles Lernen generiert automatisch Beschriftungen zur Beschreibung der wichtigsten Trends und Ereignisse, indem Diagramm- und Segmentdaten analysiert werden.
+Das Widget **[!UICONTROL Entwicklung der Zielgruppengröße]** enthält oben rechts eine Schaltfläche [!UICONTROL Beschriftungen]. Wählen Sie **[!UICONTROL Beschriftungen]** aus, um den Dialog „Automatische Beschriftungen“ zu öffnen. Ein Modell für maschinelles Lernen generiert automatisch Untertitel, um die wichtigsten Trends und Ereignisse zu beschreiben, indem es die Diagramme und Zielgruppendaten analysiert.
 
 ![Das Dialogfeld für automatische Beschriftungen für das Widget „Entwicklung der Zielgruppengröße“.](../images/destinations/audience-size-trend-captions.png)
 
-### [!UICONTROL Nicht zugeordnete Segmente nach Identität] {#unmapped-segments-by-identity}
+### [!UICONTROL Nicht zugeordnete Zielgruppen nach Identität] {#unmapped-audiences-by-identity}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_unmappedsegmentsbyidentity"
->title="Nicht zugeordnete Segmente nach Identität"
->abstract="Dieses Widget listet die fünf häufigsten **nicht zugeordneten** Segmente auf, die nach absteigender Identitätsanzahl für ein bestimmtes Ziel und eine bestimmte Identität angeordnet werden. Die Filter-IDs, die im Dropdown-Menü des Widgets aufgeführt sind, ändern sich je nach dem Zielkonto, das oben auf der Übersichtsseite ausgewählt wurde."
+>title="Nicht zugeordnete Zielgruppen nach Identität"
+>abstract="Dieses Widget listet die fünf häufigsten **nicht zugeordnet** Zielgruppen, die nach absteigender Identitätsanzahl für ein bestimmtes Ziel und eine bestimmte Identität geordnet sind. Die Filter-IDs, die im Dropdown-Menü des Widgets aufgeführt sind, ändern sich je nach dem Zielkonto, das oben auf der Übersichtsseite ausgewählt wurde."
 
-Das Widget **[!UICONTROL Nicht zugeordnete Segmente nach Identität]** listet die fünf häufigsten **nicht zugeordneten** Segmente auf, die nach absteigender Identitätsanzahl für ein bestimmtes Ziel und eine bestimmte Identität angeordnet sind. Es werden Segmente hervorgehoben, die basierend auf der ausgewählten ID dem ausgewählten Zielkonto am besten zugeordnet werden können.
+Die **[!UICONTROL Nicht zugeordnete Zielgruppen nach Identität]** Widget listet die fünf obersten **nicht zugeordnet** Zielgruppen, die nach absteigender Identitätsanzahl für ein bestimmtes Ziel und eine bestimmte Identität geordnet sind. Es werden Zielgruppen hervorgehoben, die basierend auf der ausgewählten ID dem ausgewählten Zielkonto am besten zugeordnet werden.
 
-Das Dropdown-Menü „Ziel-ID“ filtert Ihre verfügbaren Segmente. Die im Dropdown-Menü aufgelisteten Filter-IDs ändern sich je nach dem Zielkonto, das oben auf der Übersichtsseite ausgewählt wurde.
+Das Dropdown-Menü Ziel-ID filtert Ihre verfügbaren Zielgruppen. Die im Dropdown-Menü aufgelisteten Filter-IDs ändern sich je nach dem Zielkonto, das oben auf der Übersichtsseite ausgewählt wurde.
 
-Die Spalte „Identitäten“ zählt die Anzahl der im Segment vorhandenen Quell-IDs, die der in der Dropdown-Liste „Widget-ID“ ausgewählten ID zugeordnet werden könnten.
+In der Spalte &quot;Identitäten&quot;wird die Anzahl der Quell-IDs innerhalb der Zielgruppe gezählt, die der im Dropdown-Menü &quot;Widget-ID&quot;ausgewählten ID zugeordnet werden können.
 
-![Das Widget „Nicht zugeordnete Segmente nach Identität“.](../images/destinations/unmapped-segments-by-identity.png)
+![Das Widget Nicht zugeordnete Zielgruppen nach Identität .](../images/destinations/unmapped-audiences-by-identity.png)
 
 Weitere Informationen finden Sie im Abschnitt Voraussetzungen für das [verwendete Begriffsdefinitionen](#prerequisites) in dieser Beschreibung.
 
-### [!UICONTROL Zugeordnete Segmente nach Identität] {#mapped-segments-by-identity}
+### [!UICONTROL Zugeordnete Zielgruppen nach Identität] {#mapped-audiences-by-identity}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mappedsegmentsbyidentity"
->title="Zugeordnete Segmente nach Identität"
->abstract="Dieses Widget listet die fünf häufigsten **zugeordneten** Segmente auf. Die Liste wird in absteigender Reihenfolge nach der Anzahl der in den Segmenten enthaltenen Quell-IDs sortiert. Die zu zählende Ziel-ID wird aus dem Dropdown-Menü unter dem Widget-Titel ausgewählt. Die in der Widget-Dropdown-Liste verfügbaren Ziel-IDs hängen vom oben im Dashboard „Übersicht“ ausgewählten Ziel ab."
+>title="Zugeordnete Zielgruppen nach Identität"
+>abstract="Dieses Widget bietet die fünf wichtigsten Listen von **zugeordnet** Zielgruppen. Die Liste wird von oben nach unten entsprechend der Anzahl der Quell-IDs in den Zielgruppen sortiert. Die zu zählende Ziel-ID wird aus dem Dropdown-Menü unter dem Widget-Titel ausgewählt. Die in der Widget-Dropdown-Liste verfügbaren Ziel-IDs hängen vom oben im Dashboard „Übersicht“ ausgewählten Ziel ab."
 
-Dieses Widget listet die fünf häufigsten **zugeordneten** Segmente auf. Die Liste wird in absteigender Reihenfolge nach der Anzahl der in den Segmenten enthaltenen Quell-IDs sortiert. Die zu zählende Ziel-ID wird aus dem Dropdown-Menü unter dem Widget-Titel ausgewählt. Die Ziel-IDs, die über die Dropdown-Liste im Widget verfügbar sind, ändern sich entsprechend dem Zielkontofilter, der oben im Dashboard „Übersicht“ ausgewählt wird.
+Dieses Widget bietet die fünf wichtigsten Listen von **zugeordnet** Zielgruppen. Die Liste wird von oben nach unten entsprechend der Anzahl der Quell-IDs in den Zielgruppen sortiert. Die zu zählende Ziel-ID wird aus dem Dropdown-Menü unter dem Widget-Titel ausgewählt. Die Ziel-IDs, die über die Dropdown-Liste im Widget verfügbar sind, ändern sich entsprechend dem Zielkontofilter, der oben im Dashboard „Übersicht“ ausgewählt wird.
 
-![Widget „Zugeordnete Segmente nach Identität“.](../images/destinations/mapped-segments-by-identity.png)
+![Zugeordnete Zielgruppen nach Identitäts-Widget.](../images/destinations/mapped-audiences-by-identity.png)
 
-Das Widget **[!UICONTROL Zugeordnete Segmente nach Identität]** zeigt auf einen Blick, wie hoch die Wahrscheinlichkeit der erfolgreichen Zielgruppenbestimmung anhand von Profilen für eine Kampagne im gewählten Ziel ist. Eine effiziente zielgerichtete Kampagne hängt nicht von der Anzahl der an das Ziel gesendeten Profile ab, sondern von der Anzahl der Quell-IDs, die mit großer Wahrscheinlichkeit den Ziel-IDs zugeordnet werden können, um nützliche und verwertbare Daten bereitzustellen.
+Die **[!UICONTROL Zugeordnete Zielgruppen nach Identität]** Widget hebt auf einen Blick die Wahrscheinlichkeit eines erfolgreichen Targetings von Profilmöglichkeiten für eine Kampagne innerhalb des ausgewählten Ziels hervor. Eine effiziente zielgerichtete Kampagne hängt nicht von der Anzahl der an das Ziel gesendeten Profile ab, sondern von der Anzahl der Quell-IDs, die mit großer Wahrscheinlichkeit den Ziel-IDs zugeordnet werden können, um nützliche und verwertbare Daten bereitzustellen.
 
 ### Häufige Zielgruppen {#common-audiences}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_commonaudiences"
 >title="Häufige Zielgruppen"
->abstract="Dieses Widget bietet eine Liste der fünf wichtigsten Segmente, die für das am oberen Seitenrand ausgewählte Zielkonto aktiviert wurden, sowie das im Widget-Dropdown-Menü ausgewählte Ziel. Die Liste der Segmente wird nach dem Zeitpunkt ihrer Aktivierung geordnet. Das zuletzt aktivierte Segment wird oben angezeigt."
+>abstract="Dieses Widget bietet eine Liste der fünf wichtigsten Zielgruppen, die für das am oberen Seitenrand ausgewählte Zielkonto aktiviert werden, sowie das im Widget-Dropdown-Menü ausgewählte Ziel. Die Liste der Zielgruppen wird nach der kürzlich erfolgten Aktivierung geordnet. Oben wird die zuletzt aktivierte Audience angezeigt."
 
-Das Widget **[!UICONTROL Häufige Zielgruppen]** enthält eine Liste der fünf häufigsten Segmente, die für das am oberen Seitenrand ausgewählte Zielkonto aktiviert wurden, sowie das im Dropdown-Menü des Widgets ausgewählte Ziel. Die Liste der Segmente wird nach dem Zeitpunkt ihrer Aktivierung geordnet. Das zuletzt aktivierte Segment wird oben angezeigt.
+Die **[!UICONTROL Häufige Zielgruppen]** Widget bietet eine Liste der fünf wichtigsten Zielgruppen, die für das am oberen Seitenrand ausgewählte Zielkonto aktiviert werden, sowie das im Widget-Dropdown-Menü ausgewählte Ziel. Die Liste der Zielgruppen wird nach der kürzlich erfolgten Aktivierung geordnet. Oben wird die zuletzt aktivierte Audience angezeigt.
 
-Die Spalte [!UICONTROL ZIELGRUPPENGRÖSSE] gibt die Gesamtanzahl der Profile eines jeden aufgelisteten Segments an.
+Die [!UICONTROL ZIELGRUPPENGRÖSSE] gibt die Gesamtzahl der Profile jeder aufgelisteten Zielgruppe an.
 
 ![Das Widget „Allgemeine Zielgruppen“.](../images/destinations/common-audiences.png)
 
@@ -217,7 +217,7 @@ Die Spalte [!UICONTROL ZIELGRUPPENGRÖSSE] gibt die Gesamtanzahl der Profile ein
 
 Das Widget [!UICONTROL Zugeordnete Zielgruppen] zeigt die Gesamtanzahl der zugeordneten Zielgruppen an, die für das am oberen Seitenrand ausgewählte Ziel aktiviert werden können.
 
-Wählen Sie **[!UICONTROL Segmente]** aus, um zur Registerkarte [!UICONTROL Durchsuchen] im Dashboard „Segmente“ zu navigieren. Dieser Arbeitsbereich enthält eine Liste aller Segmentdefinitionen für Ihre Organisation.
+Auswählen **[!UICONTROL Zielgruppen]** Navigieren zum Zielgruppen-Dashboard [!UICONTROL Durchsuchen] Registerkarte. Dieser Arbeitsbereich enthält eine Liste aller Segmentdefinitionen für Ihre Organisation.
 
 ![Das Widget „Zugeordnete Zielgruppen“.](../images/destinations/mapped-audiences.png)
 
@@ -226,21 +226,21 @@ Wählen Sie **[!UICONTROL Segmente]** aus, um zur Registerkarte [!UICONTROL Durc
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mappedaudiencehealth"
 >title="Zustand der zugeordneten Zielgruppe"
->abstract="Dieses Widget bietet eine Liste von bis zu 20 zugeordneten Segmenten, deren Gesamtprofilanzahl um einen Faktor von mindestens einer Standardabweichung vom 30-Tage-Mittelwert der Zielgruppengröße, die diesem Ziel zugeordnet ist, abweicht. Es bietet eine berechnete Metrik für die Streuung der Zielgruppengrößen vom Mittelwert der letzten 30 Tage. Die Zielgruppengrößen werden absteigend sortiert."
+>abstract="Dieses Widget bietet eine Liste von bis zu 20 zugeordneten Zielgruppen, deren Gesamtprofilzahlen um einen Faktor von mindestens einer Standardabweichung von der 30-Tage-Mittelwert der Zielgruppengröße abweichen, die diesem Ziel zugeordnet ist. Es bietet eine berechnete Metrik für die Streuung der Zielgruppengrößen vom Mittelwert der letzten 30 Tage. Die Zielgruppengrößen werden absteigend sortiert."
 
-Das Widget bietet eine Liste von bis zu 20 zugeordneten Segmenten, deren Gesamtprofilanzahl ab der letzten täglichen Momentaufnahme um einen Faktor von mindestens einer Standardabweichung vom 30-Tage-Mittelwert der Zielgruppengröße, die diesem Ziel zugeordnet ist, abweicht.
+Das Widget bietet eine Liste von bis zu 20 zugeordneten Zielgruppen, deren Gesamtzahl der Profile ab der letzten täglichen Momentaufnahme um einen Faktor von mindestens einer Standardabweichung von der 30 Tage mittleren Zielgruppengröße, die diesem Ziel zugeordnet ist, abweicht.
 
 Kurz gesagt, es bietet eine berechnete Metrik für die Streuung der Zielgruppengrößen vom Mittelwert der letzten 30 Tage. Dabei wird verglichen, ob die heutige Zielgruppengröße außerhalb der historischen Standardabweichung liegt, die in den Daten der letzten 30 Tage zu beobachten war.
 
 Alle Zielgruppengrößen im System werden von der größten zur kleinsten Zielgruppengröße sortiert, wie in der Spalte [!UICONTROL NEUESTE GRÖSSE] angegeben.
 
-Wenn die Anzahl der einem Segment zugeordneten Profile außerhalb der Standardabweichung von der durchschnittlichen zugeordneten Profilgröße der letzten 30 Tagen liegt, deutet dies auf eine Anomalie im System hin und sollte untersucht werden.
+Wenn die Anzahl Ihrer zugeordneten Zielgruppenprofile außerhalb einer Standardabweichung von der durchschnittlichen zugeordneten Profilgröße in den letzten 30 Tagen liegt, deutet dies auf eine Anomalie im System hin und sollte untersucht werden.
 
-Wenn ein Segment im Widget [!UICONTROL Zustand der zugeordneten Zielgruppe] stark abweicht, sollten Sie das Diagramm zur Entwicklung der Zielgruppengröße heranziehen und das anomale Segment lokalisieren. Der Trend kann weitere Einblicke in die Konsistenz Ihres Segments bieten.
+Wenn eine Zielgruppe innerhalb der [!UICONTROL Zugewiesene Zielgruppen-Konsistenz] um einen breiten Rand abweichen, sollten Sie sich auf das Trend-Diagramm zur Zielgruppengröße beziehen und die anormale Zielgruppe finden. Der Trend kann weitere Einblicke in die Gesundheit Ihrer Zielgruppe bieten.
 
 >[!NOTE]
 >
->Die Standardgröße des Widgets „Zustand der zugeordneten Zielgruppen“ kann die Tabelleninformationen überdecken. Ändern Sie die Größe des Widgets, damit die zugeordneten Segmentnamen und Spaltentitel besser lesbar sind. Anleitungen dazu finden Sie in der Dokumentation zum Ändern von Dashboards unter [Größe eines Widgets ändern](../customize/modify.md).
+>Die Standardgröße des Widgets „Zustand der zugeordneten Zielgruppen“ kann die Tabelleninformationen überdecken. Ändern Sie die Größe des Widgets, um die Lesbarkeit Ihrer zugeordneten Zielgruppennamen und Spaltentitel zu verbessern. Anleitungen dazu finden Sie in der Dokumentation zum Ändern von Dashboards unter [Größe eines Widgets ändern](../customize/modify.md).
 
 ![Das Widget „Zustand der zugeordneten Zielgruppe“.](../images/destinations/mapped-audience-health.png)
 
@@ -273,13 +273,7 @@ Das Widget bietet eine zweispaltige Tabelle, um eine Liste der aktiven Zielplatt
 
 ### [!UICONTROL Aktivierte Audiences für alle Ziele] {#activated-audiences-across-all-destinations}
 
-Das Widget [!UICONTROL Aktivierte Zielgruppen für alle Ziele] stellt die Gesamtzahl der Zielgruppen bereit, die für alle Ziele in einer einzelnen Metrik aktiviert sind.
-
->[!NOTE]
->
->Dieses Widget zeigt die Anzahl der Zielgruppen und nicht die Anzahl der Segmente an.
-
-Diese Zahl entspricht der Anzahl beim aktuellen Schnappschuss.
+Das Widget [!UICONTROL Aktivierte Zielgruppen für alle Ziele] stellt die Gesamtzahl der Zielgruppen bereit, die für alle Ziele in einer einzelnen Metrik aktiviert sind. Diese Zahl entspricht der Anzahl beim aktuellen Schnappschuss.
 
 ![Das Widget „Aktivierte Zielgruppen für alle Ziele“.](../images/destinations/activated-audiences-across-all-destinations.png)
 
@@ -293,7 +287,7 @@ Dieses Widget bietet eine einzelne Metrik für die Gesamtzahl der für ein Ziel 
 
 ![Das Widget „Aktivierte Zielgruppen“.](../images/destinations/activated-audiences.png)
 
-Wählen Sie **[!UICONTROL Zielgruppen]** aus, um zur Detailseite des Ziel-Dashboards zu navigieren. Die Registerkarte [!UICONTROL Aktivierungsdaten] zeigt eine Liste der Segmente an, die dem Ziel zugeordnet wurden, einschließlich des Anfangs- und Enddatums (falls zutreffend) sowie weiterer relevanter Informationen für den Datenexport, wie Exporttyp, -zeitplan und -frequenz. Um Details zu einem bestimmten Segment anzuzeigen, wählen Sie dessen Namen aus der Liste aus.
+Wählen Sie **[!UICONTROL Zielgruppen]** aus, um zur Detailseite des Ziel-Dashboards zu navigieren. Die [!UICONTROL Aktivierungsdaten] zeigt eine Liste der Zielgruppen an, die dem Ziel zugeordnet wurden, einschließlich des Anfangs- und Enddatums (falls zutreffend) sowie anderer relevanter Informationen für den Datenexport, wie Exporttyp, -zeitplan und -frequenz. Um Details zu einer bestimmten Zielgruppe anzuzeigen, wählen Sie deren Namen aus dem [!UICONTROL Zielgruppenname] Spalte.
 
 ![Die Detailseite des Ziel-Dashboards mit der hervorgehobenen Registerkarte „Aktivierungsdaten“.](../images/destinations/activation-data-tab.png)
 

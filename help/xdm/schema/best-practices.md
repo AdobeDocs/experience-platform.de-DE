@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Best Practices für die Datenmodellierung
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemata und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemata, die in Adobe Experience Platform verwendet werden können.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
+source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
 workflow-type: tm+mt
-source-wordcount: '2713'
-ht-degree: 100%
+source-wordcount: '2709'
+ht-degree: 91%
 
 ---
 
 # Best Practices für die Datenmodellierung
 
-[!DNL Experience Data Model] (XDM) ist das zentrale Framework, das Kundenerlebnisdaten standardisiert, indem gemeinsame Strukturen und Definitionen für nachgelagerte Adobe Experience Platform-Services bereitgestellt werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, mit der Sie wertvolle Einblicke aus Kundenaktionen gewinnen, Kundenzielgruppen über Segmente definieren und Kundenattribute für Personalisierungszwecke ausdrücken können.
+[!DNL Experience Data Model] (XDM) ist das zentrale Framework, das Kundenerlebnisdaten standardisiert, indem gemeinsame Strukturen und Definitionen für nachgelagerte Adobe Experience Platform-Services bereitgestellt werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, mit der Sie wertvolle Einblicke aus Kundenaktionen gewinnen, Kundenzielgruppen definieren und Kundenattribute für Personalisierungszwecke ausdrücken können.
 
 Da XDM vom Design her äußerst vielseitig und anpassbar ist, ist es daher wichtig, bei der Erstellung Ihrer Schemata Best Practices für die Datenmodellierung einzuhalten. In diesem Dokument werden die wichtigsten Entscheidungen und Überlegungen behandelt, die Sie beim Zuordnen Ihrer Kundenerlebnisdaten zu XDM treffen müssen.
 
@@ -92,24 +92,24 @@ Wenn Sie analysieren möchten, wie sich bestimmte Attribute innerhalb einer Enti
 
 #### Anwendungsfälle für die Segmentierung
 
-Bei der Kategorisierung Ihrer Entitäten ist es wichtig, über die Zielgruppensegmente nachzudenken, die Sie für Ihre speziellen geschäftlichen Anwendungsfälle erstellen möchten.
+Bei der Kategorisierung Ihrer Entitäten ist es wichtig, über die Zielgruppen nachzudenken, die Sie erstellen möchten, um Ihre speziellen geschäftlichen Anwendungsfälle zu behandeln.
 
-Ein Unternehmen möchte beispielsweise alle „Gold“- oder „Platin“-Mitglieder seines Treueprogramms kennen, die im letzten Jahr mehr als fünf Käufe getätigt haben. Basierend auf dieser Segmentlogik können die folgenden Schlussfolgerungen zur Darstellung relevanter Entitäten gezogen werden:
+Ein Unternehmen möchte beispielsweise alle „Gold“- oder „Platin“-Mitglieder seines Treueprogramms kennen, die im letzten Jahr mehr als fünf Käufe getätigt haben. Basierend auf dieser Segmentierungslogik können die folgenden Schlussfolgerungen zur Darstellung relevanter Entitäten gezogen werden:
 
-* „Gold“ und „Platin“ stellen den Treuestatus einer Kundin oder eines Kunden dar. Da sich die Segmentlogik nur auf den aktuellen Treuestatus von Kundinnen und Kunden bezieht, können diese Daten als Teil eines Profilschemas modelliert werden. Wenn Sie jedoch Änderungen des Treuestatus im Laufe der Zeit verfolgen möchten, können Sie auch ein zusätzliches Ereignisschema für Änderungen des Treuestatus erstellen.
-* Käufe sind Ereignisse, die zu einem bestimmten Zeitpunkt auftreten. Die Segmentlogik bezieht sich auf Kaufereignisse innerhalb eines bestimmten Zeitfensters. Diese Daten sollten daher als Ereignisschema modelliert werden.
+* „Gold“ und „Platin“ stellen den Treuestatus einer Kundin oder eines Kunden dar. Da sich die Segmentierungslogik nur auf den aktuellen Treuestatus von Kunden bezieht, können diese Daten als Teil eines Profilschemas modelliert werden. Wenn Sie jedoch Änderungen des Treuestatus im Laufe der Zeit verfolgen möchten, können Sie auch ein zusätzliches Ereignisschema für Änderungen des Treuestatus erstellen.
+* Käufe sind Ereignisse, die zu einem bestimmten Zeitpunkt auftreten. Die Segmentierungslogik bezieht sich auf Kaufereignisse innerhalb eines bestimmten Zeitfensters. Diese Daten sollten daher als Ereignisschema modelliert werden.
 
 #### Anwendungsfälle für die Aktivierung
 
-Zusätzlich zu Überlegungen zu Anwendungsfällen für die Segmentierung sollten Sie für diese Segmente auch die Anwendungsfälle für die Aktivierung überprüfen, um zusätzliche relevante Attribute zu identifizieren.
+Zusätzlich zu Überlegungen zu Segmentierungsanwendungsfällen sollten Sie auch die Aktivierungsanwendungsfälle für diese Zielgruppen überprüfen, um zusätzliche relevante Attribute zu identifizieren.
 
-Beispielsweise hat ein Unternehmen ein Zielgruppensegment basierend auf folgender Regel erstellt: `country = US`. Wenn dieses Segment dann für bestimmte nachgelagerte Ziele aktiviert wird, möchte das Unternehmen alle exportierten Profile nach dem Heimatstaat filtern. Daher sollte ein `state`-Attribut auch in der entsprechenden Profilentität erfasst werden.
+Ein Unternehmen hat beispielsweise eine Zielgruppe basierend auf der Regel erstellt, dass `country = US`. Wenn Sie diese Zielgruppe dann für bestimmte nachgelagerte Ziele aktivieren, möchte das Unternehmen alle exportierten Profile nach dem Herkunftsstatus filtern. Daher sollte ein `state`-Attribut auch in der entsprechenden Profilentität erfasst werden.
 
 #### Aggregierte Werte
 
 Basierend auf dem Anwendungsfall und der Granularität Ihrer Daten sollten Sie entscheiden, ob bestimmte Werte vorab aggregiert werden müssen, bevor sie in eine Profil- oder Ereignisentität aufgenommen werden.
 
-Beispielsweise möchte ein Unternehmen ein Segment basierend auf der Anzahl der Warenkorbkäufe erstellen. Sie können festlegen, dass diese Daten mit der niedrigsten Granularität integriert werden, indem Sie jedes Kaufereignis mit Zeitstempel als eigene Entität hinzufügen. Dadurch kann sich jedoch manchmal die Anzahl der aufgezeichneten Ereignisse exponentiell erhöhen. Um die Anzahl der aufgenommenen Ereignisse zu reduzieren, können Sie einen Aggregatwert `numberOfPurchases` über einen Wochen- oder Monatszeitraum erstellen. Andere Aggregatfunktionen wie MIN und MAX können ebenfalls auf diese Situationen angewendet werden.
+Ein Unternehmen möchte beispielsweise eine Zielgruppe basierend auf der Anzahl der Warenkorbkäufe erstellen. Sie können festlegen, dass diese Daten mit der niedrigsten Granularität integriert werden, indem Sie jedes Kaufereignis mit Zeitstempel als eigene Entität hinzufügen. Dadurch kann sich jedoch manchmal die Anzahl der aufgezeichneten Ereignisse exponentiell erhöhen. Um die Anzahl der aufgenommenen Ereignisse zu reduzieren, können Sie einen Aggregatwert `numberOfPurchases` über einen Wochen- oder Monatszeitraum erstellen. Andere Aggregatfunktionen wie MIN und MAX können ebenfalls auf diese Situationen angewendet werden.
 
 >[!CAUTION]
 >
@@ -173,7 +173,7 @@ Der zweite Ansatz besteht darin, Ereignisschemata zur Darstellung von Abonnement
 
 **Nachteile**
 
-* Die Segmentierung wird für den ursprünglich vorgesehenen Anwendungsfall komplexer (Identifizierung des Status der neuesten Abonnements von Kundinnen und Kunden). Das Segment benötigt jetzt zusätzliche Logik, um das letzte Abonnementereignis für eine Kundin oder einen Kunden hervorzuheben, um den Status zu überprüfen.
+* Die Segmentierung wird für den ursprünglich vorgesehenen Anwendungsfall komplexer (Identifizierung des Status der neuesten Abonnements von Kundinnen und Kunden). Die Zielgruppe benötigt jetzt zusätzliche Logik, um das letzte Abonnementereignis für einen Kunden zu kennzeichnen und seinen Status zu überprüfen.
 * Bei Ereignissen besteht ein höheres Risiko, dass sie automatisch ablaufen und aus dem Profilspeicher gelöscht werden. Weitere Informationen finden Sie im Handbuch zum [Ablaufen von Erlebnisereignissen](../../profile/event-expirations.md).
 
 ## Erstellen von Schemas basierend auf kategorisierten Entitäten

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Glossar der Datennutzungskennzeichnungen
 description: In diesem Dokument werden alle derzeit von Adobe Experience Platform unterstützten Datennutzungskennzeichnungen beschrieben.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
-source-wordcount: '2108'
-ht-degree: 100%
+source-wordcount: '2109'
+ht-degree: 98%
 
 ---
 
@@ -134,11 +134,11 @@ Einige Verträge beinhalten ein explizites Verbot der Datennutzung für datenwis
 
 #### C10 {#c10}
 
-Einige Data-Governance-Richtlinien beschränken die Verwendung von Daten aus zusammengefügten Identitäten für die Personalisierung. Die Kennzeichnung C10 wird automatisch auf Segmente angewendet, wenn deren Zusammenführungsrichtlinien die Option „Privates Diagramm“ verwenden.
+Einige Data-Governance-Richtlinien beschränken die Verwendung von Daten aus zusammengefügten Identitäten für die Personalisierung. Die Bezeichnung C10 wird automatisch auf Zielgruppen angewendet, wenn deren Zusammenführungsrichtlinien die Option &quot;Privates Diagramm&quot;verwenden.
 
 #### C11 {#c11}
 
-Adobe Experience Platform Segment Match ermöglicht es Ihnen, Erstanbietersegmente mit Datenschutz- und Zustimmungsvoreinstellungen abzugleichen und so eine erweiterte Profilerstellung und nachgelagerte Einblicke zu ermöglichen. Die Bezeichnung „C11“ bezeichnet Daten, die nicht in [!DNL Segment Match]-Prozessen verwendet werden sollten. Nachdem Sie ermittelt haben, welche Datensätze und/oder Felder Sie aus Segment Match ausschließen möchten, und die C11-Bezeichnung entsprechend hinzugefügt haben, wird die Bezeichnung automatisch vom Segment Match-Arbeitsablauf erzwungen.
+Adobe Experience Platform-Segmentübereinstimmung ermöglicht es Ihnen, Platform-generierte Zielgruppen mit Datenschutz- und Zustimmungsvoreinstellungen abzustimmen, was eine erweiterte Profilerstellung und nachgelagerte Einblicke erleichtert. Die Bezeichnung „C11“ bezeichnet Daten, die nicht in [!DNL Segment Match]-Prozessen verwendet werden sollten. Nachdem Sie ermittelt haben, welche Datensätze und/oder Felder Sie aus Segment Match ausschließen möchten, und die C11-Bezeichnung entsprechend hinzugefügt haben, wird die Bezeichnung automatisch vom Segment Match-Arbeitsablauf erzwungen.
 
 #### C12 {#c12}
 

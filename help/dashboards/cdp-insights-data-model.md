@@ -2,16 +2,16 @@
 title: Real-time Customer Data Platform Insights-Datenmodell
 description: Erfahren Sie, wie Sie SQL-Abfragen mit den Real-time Customer Data Platform Insights-Datenmodellen verwenden können, um Ihre eigenen Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle anzupassen.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: e55bbba92b0e3b9c86a9962ffa0131dfb7c15e77
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 7%
+ht-degree: 4%
 
 ---
 
 # Real-time Customer Data Platform Insights-Datenmodell
 
-Die Real-time Customer Data Platform Insights-Datenmodell-Funktion stellt die Datenmodelle und SQL bereit, die die Einblicke für verschiedene Profil-, Ziel- und Segmentierungs-Widgets nutzen. Sie können diese SQL-Abfragevorlagen anpassen, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle (Key Performance Indicators) zu erstellen. Diese Insights können dann als benutzerdefinierte Widgets für benutzerdefinierte Dashboards verwendet werden. Weitere Informationen finden Sie in der Dokumentation zu den abfragebeschleunigten Store-Berichtseinblicken . [Erstellen eines Berichtseinblicke-Datenmodells über Query Service zur Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
+Die Real-time Customer Data Platform Insights-Datenmodell-Funktion stellt die Datenmodelle und SQL bereit, die die Einblicke für verschiedene Profil-, Ziel- und Segmentierungs-Widgets nutzen. Sie können diese SQL-Abfragevorlagen anpassen, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle (Key Performance Indicators) zu erstellen. Diese Insights können dann als benutzerdefinierte Widgets für benutzerdefinierte Dashboards verwendet werden. Weitere Informationen finden Sie in der Dokumentation zu Query Accelerated Store Reporting Insights . [Erstellen eines Berichtseinblicke-Datenmodells über Query Service zur Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
 
 ## Voraussetzungen
 
@@ -19,7 +19,7 @@ Dieses Handbuch setzt ein Verständnis der [Benutzerdefinierte Dashboards-Funkti
 
 ## Real-Time CDP Insight-Berichte und Anwendungsfälle
 
-Real-Time CDP Reporting bietet Einblicke in Ihre Profildaten und ihre Beziehung zu Segmenten und Zielen. Verschiedene Sternschema-Modelle wurden entwickelt, um eine Vielzahl gängiger Marketing-Anwendungsfälle zu beantworten. Jedes Datenmodell kann mehrere Anwendungsfälle unterstützen.
+Real-Time CDP Reporting bietet Einblicke in Ihre Profildaten und ihre Beziehung zu Zielgruppen und Zielen. Verschiedene Sternschema-Modelle wurden entwickelt, um eine Vielzahl gängiger Marketing-Anwendungsfälle zu beantworten. Jedes Datenmodell kann mehrere Anwendungsfälle unterstützen.
 
 >[!IMPORTANT]
 >
@@ -144,9 +144,9 @@ GROUP BY
 
 +++
 
-### Segmentmodell {#segment-model}
+### Zielgruppenmodell {#audience-model}
 
-Das Segmentmodell besteht aus den folgenden Datensätzen:
+Das Zielgruppenmodell besteht aus den folgenden Datensätzen:
 
 - `adwh_dim_date`
 - `adwh_fact_profile_by_segment`
@@ -158,11 +158,11 @@ Das Segmentmodell besteht aus den folgenden Datensätzen:
 
 Die folgende Abbildung enthält die relevanten Datenfelder in jedem Datensatz.
 
-![Eine ERD des Segmentmodells.](./images/cdp-insights/segment-model.png)
+![Eine ERD des Zielgruppenmodells.](./images/cdp-insights/audience-model.png)
 
 #### Anwendungsfall: Zielgruppengröße
 
-Die für die [!UICONTROL Zielgruppengröße] Widget gibt die Gesamtzahl der zusammengeführten Profile innerhalb des ausgewählten Segments zum Zeitpunkt der letzten Momentaufnahme zurück. Siehe [[!UICONTROL Zielgruppengröße] Widget-Dokumentation](./guides/segments.md#audience-size) für weitere Informationen.
+Die für die [!UICONTROL Zielgruppengröße] Widget gibt die Gesamtzahl der zusammengeführten Profile innerhalb der ausgewählten Zielgruppe zum Zeitpunkt der letzten Momentaufnahme zurück. Siehe [[!UICONTROL Zielgruppengröße] Widget-Dokumentation](./guides/audiences.md#audience-size) für weitere Informationen.
 
 Die SQL, die die [!UICONTROL Zielgruppengröße] Widget wird im ausblendbaren Abschnitt unten angezeigt.
 
@@ -191,7 +191,7 @@ LIMIT 20;
 
 #### Anwendungsfall zur Änderung der Zielgruppengröße
 
-Die für die [!UICONTROL Trend zur Änderung der Zielgruppengröße] -Widget bietet eine Kantengraph-Darstellung der Differenz in der Gesamtanzahl der Profile, die sich für ein bestimmtes Segment zwischen den letzten täglichen Momentaufnahmen qualifiziert haben. Siehe [[!UICONTROL Trend zur Änderung der Zielgruppengröße] Widget-Dokumentation](./guides/segments.md#audience-size-change-trend) für weitere Informationen.
+Die für die [!UICONTROL Trend zur Änderung der Zielgruppengröße] -Widget bietet eine Kantengraph-Darstellung der Differenz in der Gesamtzahl der Profile, die sich für eine bestimmte Zielgruppe qualifiziert haben, zwischen den letzten täglichen Momentaufnahmen. Siehe [[!UICONTROL Trend zur Änderung der Zielgruppengröße] Widget-Dokumentation](./guides/audiences.md#audience-size-change-trend) für weitere Informationen.
 
 Die SQL, die die [!UICONTROL Trend zur Änderung der Zielgruppengröße] Widget wird im ausblendbaren Abschnitt unten angezeigt.
 
@@ -212,7 +212,7 @@ GROUP BY cast(adwh_dim_segments.create_date AS date), adwh_dim_merge_policies.me
 
 #### Anwendungsfall für die am häufigsten verwendeten Ziele
 
-Die in der [!UICONTROL Am häufigsten verwendete Ziele] -Widget listet die am häufigsten verwendeten Ziele Ihrer Organisation entsprechend der Anzahl der ihnen zugeordneten Segmente auf. Diese Rangfolge bietet Einblicke, welche Ziele verwendet werden, und zeigt gleichzeitig, welche möglicherweise nicht genügend genutzt werden. Weitere Informationen finden Sie in der Dokumentation unter [[!UICONTROL Am häufigsten verwendete Ziele] Widget](./guides/destinations.md#most-used-destinations) für weitere Informationen.
+Die in der [!UICONTROL Am häufigsten verwendete Ziele] -Widget listet die am häufigsten verwendeten Ziele Ihrer Organisation entsprechend der Anzahl der ihnen zugeordneten Zielgruppen auf. Diese Rangfolge bietet Einblicke, welche Ziele verwendet werden, und zeigt gleichzeitig, welche möglicherweise nicht genügend genutzt werden. Weitere Informationen finden Sie in der Dokumentation unter [[!UICONTROL Am häufigsten verwendete Ziele] Widget](./guides/destinations.md#most-used-destinations) für weitere Informationen.
 
 Die SQL, die die [!UICONTROL Am häufigsten verwendete Ziele] Widget wird im ausblendbaren Abschnitt unten angezeigt.
 
@@ -237,11 +237,11 @@ FROM
 
 +++
 
-#### Anwendungsfall für kürzlich aktivierte Segmente
+#### Anwendungsfall für kürzlich aktivierte Zielgruppen
 
-Die Logik für die [!UICONTROL Kürzlich aktivierte Segmente] -Widget stellt eine Liste der Segmente bereit, die einem Ziel zuletzt zugeordnet wurden. Diese Liste enthält eine Momentaufnahme der Segmente und Ziele, die aktiv im System verwendet werden, und kann bei der Fehlerbehebung bei fehlerhaften Zuordnungen hilfreich sein. Siehe [[!UICONTROL Kürzlich aktivierte Segmente] Widget-Dokumentation](./guides/destinations.md#recently-activated-segments) für weitere Informationen.
+Die Logik für die [!UICONTROL Kürzlich aktivierte Zielgruppen] -Widget stellt eine Liste der Zielgruppen bereit, die zuletzt einem Ziel zugeordnet wurden. Diese Liste enthält eine Momentaufnahme der Zielgruppen und Ziele, die aktiv im System verwendet werden, und kann bei der Fehlerbehebung bei fehlerhaften Zuordnungen helfen. Siehe [[!UICONTROL Kürzlich aktivierte Zielgruppen] Widget-Dokumentation](./guides/destinations.md#recently-activated-audiences) für weitere Informationen.
 
-Die SQL, die die [!UICONTROL Kürzlich aktivierte Segmente] Widget wird im ausblendbaren Abschnitt unten angezeigt.
+Die SQL, die die [!UICONTROL Kürzlich aktivierte Zielgruppen] Widget wird im ausblendbaren Abschnitt unten angezeigt.
 
 +++SQL-Abfrage
 
@@ -255,9 +255,9 @@ ORDER BY create_time desc, segment LIMIT 5;
 
 +++
 
-### Namespace-Segment-Modell
+### Namespace-Audience-Modell
 
-Das Namespace-Segment-Modell besteht aus den folgenden Datensätzen:
+Das Modell namespace-audience besteht aus den folgenden Datensätzen:
 
 - `adwh_dim_date`
 - `adwh_dim_namespaces`
@@ -270,11 +270,11 @@ Das Namespace-Segment-Modell besteht aus den folgenden Datensätzen:
 
 Die folgende Abbildung enthält die relevanten Datenfelder in jedem Datensatz.
 
-![Eine ERD des Namespace-Segment-Modells.](./images/cdp-insights/namespace-segment-model.png)
+![Eine ERD des Namespace-Zielgruppenmodells.](./images/cdp-insights/namespace-audience-model.png)
 
-#### Profile nach Identität für einen Segmentanwendungsfall
+#### Profile nach Identität für einen Zielgruppen-Anwendungsfall
 
-Die in der [!UICONTROL Profile nach Identität] -Widget bietet eine Aufschlüsselung der Identitäten über alle zusammengeführten Profile im Profilspeicher für ein bestimmtes Segment hinweg. Siehe [[!UICONTROL Profile nach Identität] Widget-Dokumentation](./guides/segments.md#profiles-by-identity) für weitere Informationen.
+Die in der [!UICONTROL Profile nach Identität] -Widget bietet eine Aufschlüsselung der Identitäten über alle zusammengeführten Profile in Ihrem Profilspeicher für eine bestimmte Zielgruppe. Siehe [[!UICONTROL Profile nach Identität] Widget-Dokumentation](./guides/audiences.md#profiles-by-identity) für weitere Informationen.
 
 Die SQL, die die [!UICONTROL Profile nach Identität] Widget wird im ausblendbaren Abschnitt unten angezeigt.
 
@@ -359,9 +359,9 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-### Namespace nach Segmentmodell überlagern
+### Namespace nach Zielgruppenmodell überlagern
 
-Der Überschneidungs-Namespace nach Segmentmodell besteht aus den folgenden Datensätzen:
+Der Überschneidungs-Namespace nach Zielgruppenmodell besteht aus den folgenden Datensätzen:
 
 - `adwh_dim_date`
 - `adwh_dim_overlap_namespaces`
@@ -374,11 +374,11 @@ Der Überschneidungs-Namespace nach Segmentmodell besteht aus den folgenden Date
 
 Die folgende Abbildung enthält die relevanten Datenfelder in jedem Datensatz.
 
-![Eine ERD des Überlappungs-Namespace nach Segmentmodell.](./images/cdp-insights/overlap-namespace-by-segment-model.png)
+![Eine ERD des Überlappungs-Namespace nach Zielgruppenmodell.](./images/cdp-insights/overlap-namespace-by-audience-model.png)
 
-#### Anwendungsfall: Identitätsüberschneidung (Segmente)
+#### Anwendungsfall: Identitätsüberschneidung (Zielgruppen)
 
-Die in der [!UICONTROL Segmente] Dashboard [!UICONTROL Identitätsüberschneidung] -Widget veranschaulicht die Überschneidung von Profilen, die die beiden ausgewählten Identitäten für ein bestimmtes Segment enthalten. Weitere Informationen finden Sie unter [[!UICONTROL Identitätsüberschneidung] Widget-Abschnitt des [!UICONTROL Segmentierung] Dashboard-Dokumentation](./guides/segments.md#identity-overlap).
+Die in der [!UICONTROL Zielgruppen] Dashboard [!UICONTROL Identitätsüberschneidung] -Widget veranschaulicht die Überschneidung von Profilen, die die beiden ausgewählten Identitäten für eine bestimmte Zielgruppe enthalten. Weitere Informationen finden Sie unter [[!UICONTROL Identitätsüberschneidung] Widget-Abschnitt des [!UICONTROL Zielgruppen] Dashboard-Dokumentation](./guides/audiences.md#identity-overlap).
 
 Die SQL, die die [!UICONTROL Identitätsüberschneidung] Widget wird im ausblendbaren Abschnitt unten angezeigt.
 

@@ -2,10 +2,10 @@
 title: Anleitung zu Query Accelerated Store Reporting Insights
 description: Erfahren Sie, wie Sie mit dem Abfrage-Service ein Reporting-Insights-Datenmodell zur Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards erstellen.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: aa209dce9268a15a91db6e3afa7b6066683d76ea
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '1033'
-ht-degree: 95%
+ht-degree: 82%
 
 ---
 
@@ -15,7 +15,7 @@ Mit dem abfragebeschleunigten Speicher können Sie die Zeit und die Verarbeitung
 
 Mit dem Abfrage-beschleunigten Speicher können Sie ein benutzerdefiniertes Datenmodell erstellen und/oder ein vorhandenes Adobe Real-time Customer Data Platform-Datenmodell erweitern. Die gewonnenen Reporting-Insights können Sie dann in ein Reporting-/Visualisierungs-Framework Ihrer Wahl einbetten. Siehe die Dokumentation zum Real-time Customer Data Platform Insights-Datenmodell, um zu erfahren, wie Sie [Ihre SQL-Abfragevorlagen anpassen können, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle zu erstellen.](../../../dashboards/cdp-insights-data-model.md).
 
-Das Real-Time CDP-Datenmodell von Adobe Experience Platform bietet Einblicke in Profile, Segmente und Ziele und aktiviert die Real-Time CDP-Insight-Dashboards. Dieses Dokument führt Sie durch den Prozess der Erstellung Ihres Reporting-Insights-Datenmodells und zeigt Ihnen, wie Sie Real-Time CDP-Datenmodelle bei Bedarf erweitern können.
+Das Real-Time CDP-Datenmodell von Adobe Experience Platform bietet Einblicke in Profile, Zielgruppen und Ziele und ermöglicht die Real-Time CDP-Insight-Dashboards. Dieses Dokument führt Sie durch den Prozess der Erstellung Ihres Reporting-Insights-Datenmodells und zeigt Ihnen, wie Sie Real-Time CDP-Datenmodelle bei Bedarf erweitern können.
 
 ## Voraussetzungen
 
@@ -37,7 +37,7 @@ Zu Beginn verfügen Sie über ein erstes Datenmodell aus Ihren Quellen (möglich
 
 ![Ein Entitäts-Relations-Diagramm (ERD) des Audience-Insight-Benutzermodells.](../../images/query-accelerated-store/audience-insight-user-model.png)
 
-In diesem Beispiel basiert die Tabelle/der Datensatz `externalaudiencereach` auf einer ID und verfolgt die unteren und oberen Grenzen für die Anzahl der Treffer. Die Dimensionstabelle/der Datensatz `externalaudiencemapping` ordnet die externe ID einem Ziel und einem Segment auf Platform zu.
+In diesem Beispiel basiert die Tabelle/der Datensatz `externalaudiencereach` auf einer ID und verfolgt die unteren und oberen Grenzen für die Anzahl der Treffer. Die `externalaudiencemapping` -Dimensionstabelle/-datensatz ordnet die externe ID einem Ziel und einer Zielgruppe in Platform zu.
 
 ## Erstellen eines Modells für Reporting-Insights mit Data Distiller
 
@@ -74,7 +74,7 @@ WITH ( DISTRIBUTION = REPLICATE ) AS
  
 CREATE TABLE IF NOT exists audienceinsight.audiencemodel.externalaudiencemapping
 WITH ( DISTRIBUTION = REPLICATE ) AS
-SELECT cast(null as int) segment_id,
+SELECT cast(null as int) audience_id,
        cast(null as int) destination_id,
        cast(null as int) ext_custom_audience_id
  WHERE false;
@@ -133,7 +133,7 @@ ext_custom_audience_id | approximate_count_upper_bound
 
 ## Erweitern Ihres Datenmodells mit dem Real-Time CDP Insights-Datenmodell
 
-Sie können Ihr Zielgruppenmodell mit zusätzlichen Details erweitern, um eine umfangreichere Dimensionstabelle zu erstellen. So können Sie beispielsweise den Segmentnamen und den Zielnamen dem externen Identifikator der Audience zuordnen. Verwenden Sie dazu den Abfrage-Service, um ein neuen Datensatz zu erstellen oder zu aktualisieren, und fügen Sie ihn dem Audience-Modell hinzu, das Segmente und Ziele mit einer externen Identität kombiniert. Das folgende Diagramm veranschaulicht das Konzept dieser Datenmodellerweiterung.
+Sie können Ihr Zielgruppenmodell mit zusätzlichen Details erweitern, um eine umfangreichere Dimensionstabelle zu erstellen. Sie können beispielsweise den Zielgruppennamen und Zielnamen der externen Zielgruppenkennung zuordnen. Verwenden Sie dazu Query Service , um einen neuen Datensatz zu erstellen oder zu aktualisieren und ihn zum Zielgruppenmodell hinzuzufügen, das Zielgruppen und Ziele mit einer externen Identität kombiniert. Das folgende Diagramm veranschaulicht das Konzept dieser Datenmodellerweiterung.
 
 ![Ein ERD-Diagramm, das das Real-Time CDP-Insight-Datenmodell und das abfragebeschleunigte Speichermodell verbindet.](../../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
 
@@ -145,13 +145,13 @@ Verwenden Sie den Abfrage-Service, um wichtige beschreibende Attribute aus den a
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS
   SELECT ext_custom_audience_id,
          destination_name,
-         segment_name,
+         audience_name,
          destination_status,
          a.destination_id,
-         a.segment_id
+         a.audience_id
   FROM   externalaudiencemapping AS a
-         LEFT OUTER JOIN adwh_dim_segments AS b
-                      ON ( ( a.segment_id ) = ( b.segment_id ) )
+         LEFT OUTER JOIN adwh_dim_audiences AS b
+                      ON ( ( a.audience_id ) = ( b.audience_id ) )
          LEFT OUTER JOIN adwh_dim_destination AS c
                       ON ( ( a.destination_id ) = ( c.destination_id ) );
  
@@ -170,15 +170,15 @@ Verwenden Sie den Befehl `SHOW datagroups;`, um die Erstellung der zusätzlichen
 
 ## Abfragen Ihres erweiterten Reporting-Insights-Datenmodells mit beschleunigtem Speicher
 
-Nachdem das `audienceinsight`-Datenmodell erweitert wurde, kann es nun abgefragt werden. Die folgende SQL-Abfrage zeigt die Liste der zugeordneten Ziele und Segmente.
+Nachdem das `audienceinsight`-Datenmodell erweitert wurde, kann es nun abgefragt werden. Die folgende SQL-Tabelle zeigt die Liste der zugeordneten Ziele und Zielgruppen.
 
 ```sql
 SELECT a.ext_custom_audience_id,
        b.destination_name,
-       b.segment_name,
+       b.audience_name,
        b.destination_status,
        b.destination_id,
-       b.segment_id
+       b.audience_id
 FROM   audiencemodel.externalaudiencereach1 AS a
        LEFT OUTER JOIN audiencemodel.external_seg_dest_map AS b
                     ON ( ( a.ext_custom_audience_id ) = (
@@ -189,7 +189,7 @@ LIMIT  25;
 Die Abfrage gibt alle Datensätze des abfragebeschleunigten Speichers zurück:
 
 ```console
-ext_custom_audience_id | destination_name |       segment_name        | destination_status | destination_id | segment_id 
+ext_custom_audience_id | destination_name |       audience_name        | destination_status | destination_id | audience_id 
 ------------------------+------------------+---------------------------+--------------------+----------------+-------------
  23850808595110554      | FCA_Test2        | United States             | enabled            |     -605911558 | -1357046572
  23850799115800554      | FCA_Test2        | Born in 1980s             | enabled            |     -605911558 | -1224554872
@@ -211,25 +211,25 @@ ext_custom_audience_id | destination_name |       segment_name        | destinat
 
 Nachdem Sie Ihr benutzerdefiniertes Datenmodell erstellt haben, können Sie Ihre Daten mit benutzerdefinierten Abfragen und benutzerdefinierten Dashboards visualisieren.
 
-Die folgende SQL-Abfrage liefert eine Aufschlüsselung der Anzahl der Übereinstimmungen nach Audiences in einem Ziel und eine Aufschlüsselung jedes Ziels von Audiences nach Segment.
+Die folgende SQL-Tabelle enthält eine Aufschlüsselung der Übereinstimmungsanzahl nach Zielgruppen in einem Ziel und eine Aufschlüsselung der einzelnen Zielgruppen nach Zielgruppen.
 
 ```sql
 SELECT b.destination_name,
        a.approximate_count_upper_bound,
-       b.segment_name
+       b.audience_name
 FROM   audiencemodel.externalaudiencereach AS a
        LEFT OUTER JOIN audiencemodel.external_seg_dest_map AS b
                     ON ( ( a.ext_custom_audience_id ) = (
                          b.ext_custom_audience_id ) )
 GROUP  BY b.destination_name,
           a.approximate_count_upper_bound,
-          b.segment_name
+          b.audience_name
 ORDER BY b.destination_name
 LIMIT  5000
 ```
 
 Die folgende Abbildung zeigt ein Beispiel für die möglichen benutzerdefinierten Visualisierungen unter Verwendung Ihres Reporting-Insights-Datenmodells.
 
-![Ein Widget für die Anzahl der Übereinstimmungen nach Ziel und Segment, das aus dem neuen Reporting-Insights-Datenmodell erstellt wurde.](../../images/query-accelerated-store/user-defined-dashboard-widget.png)
+![Eine Übereinstimmungszählung nach Ziel und Zielgruppen-Widget, das aus dem neuen Datenmodell der Berichtseinblicke erstellt wurde.](../../images/query-accelerated-store/user-defined-dashboard-widget.png)
 
 Ihr benutzerdefiniertes Datenmodell ist in der Liste der verfügbaren Datenmodelle im benutzerdefinierten Dashboard-Arbeitsbereich zu finden. Eine Anleitung zur Verwendung Ihres benutzerdefinierten Datenmodells finden Sie im [Handbuch zum benutzerdefinierten Dashboard](../../../dashboards/user-defined-dashboards.md).

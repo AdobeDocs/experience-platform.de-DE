@@ -2,18 +2,18 @@
 solution: Experience Platform
 title: Dashboard-Datensätze mithilfe von Query Service durchsuchen, überprüfen und verarbeiten
 type: Documentation
-description: Erfahren Sie, wie Sie mit Query Service Rohdatensätze untersuchen und verarbeiten können, die Profil-, Segment- und Ziel-Dashboards in Experience Platform unterstützen.
+description: Erfahren Sie, wie Sie mit Query Service Rohdatensätze untersuchen und verarbeiten können, die Profil-, Zielgruppen- und Ziel-Dashboards in Experience Platform unterstützen.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 79966442f5333363216da17342092a71335a14f0
 workflow-type: tm+mt
-source-wordcount: '970'
-ht-degree: 50%
+source-wordcount: '964'
+ht-degree: 38%
 
 ---
 
 # Dashboard-Datensätze mithilfe von analysieren, überprüfen und verarbeiten [!DNL Query Service]
 
-Adobe Experience Platform bietet wichtige Informationen zu den Profil-, Segment- und Zieldaten Ihres Unternehmens über Dashboards, die in der Experience Platform-Benutzeroberfläche verfügbar sind. Sie können dann Adobe Experience Platform verwenden [!DNL Query Service] die Rohdatensätze zu untersuchen, zu überprüfen und zu verarbeiten, die diese Dashboards im Data Lake unterstützen.
+Adobe Experience Platform bietet über Dashboards, die in der Experience Platform-Benutzeroberfläche verfügbar sind, wichtige Informationen zu Profil-, Zielgruppen- und Zielgruppendaten Ihres Unternehmens. Sie können dann Adobe Experience Platform verwenden [!DNL Query Service] die Rohdatensätze zu untersuchen, zu überprüfen und zu verarbeiten, die diese Dashboards im Data Lake unterstützen.
 
 ## Erste Schritte mit [!DNL Query Service]
 
@@ -23,7 +23,7 @@ Weitere Informationen finden Sie unter [!DNL Query Service] und seiner Rolle inn
 
 ## Zugreifen auf verfügbare Datensätze
 
-Sie können [!DNL Query Service] zum Abfragen von Rohdatensätzen für Profil-, Segment- und Ziel-Dashboards. Um Ihre verfügbaren Datensätze anzuzeigen, wählen Sie in der Experience Platform-Benutzeroberfläche die Option **Datensätze** im linken Navigationsbereich, um das Dashboard &quot;Datensätze&quot;zu öffnen. Das Dashboard listet alle verfügbaren Datensätze für Ihre Organisation auf. Details werden für jeden aufgelisteten Datensatz angezeigt, einschließlich seines Namens, des Schemas, dem der Datensatz entspricht, und des Status des letzten Erfassungslaufs.
+Sie können [!DNL Query Service] zum Abfragen von Rohdatensätzen für Profil-, Zielgruppen- und Ziel-Dashboards. Um Ihre verfügbaren Datensätze anzuzeigen, wählen Sie in der Experience Platform-Benutzeroberfläche die Option **Datensätze** im linken Navigationsbereich, um das Dashboard &quot;Datensätze&quot;zu öffnen. Das Dashboard listet alle verfügbaren Datensätze für Ihre Organisation auf. Details werden für jeden aufgelisteten Datensatz angezeigt, einschließlich seines Namens, des Schemas, dem der Datensatz entspricht, und des Status des letzten Erfassungslaufs.
 
 ![Das Dashboard zum Durchsuchen von Datensätzen , wobei die Registerkarte Datensätze im linken Navigationsbereich hervorgehoben ist.](./images/query/browse-datasets.png)
 
@@ -64,15 +64,13 @@ Der Datensatz `adwh_dim_merge_policies` enthält die folgenden Felder:
 
 Dieser Datensatz kann mithilfe der Benutzeroberfläche des Abfrage-Editors in Experience Platform untersucht werden. Weitere Informationen zur Verwendung des Abfrage-Editors finden Sie im [Handbuch zur Benutzeroberfläche des Abfrage-Editors](../query-service/ui/user-guide.md).
 
-### Datensatz für Segmentmetadaten
+### Zielgruppen-Metadaten-Datensatz
 
-Im Data Lake ist ein Segment-Metadaten-Datensatz verfügbar, der Metadaten für die einzelnen Segmente Ihres Unternehmens enthält.
+Im Data Lake steht ein Zielgruppen-Metadaten-Datensatz zur Verfügung, der Metadaten für die einzelnen Zielgruppen Ihres Unternehmens enthält.
 
 Die Namenskonvention für diesen Datensatz lautet **Segmentdefinition-Schnappschuss-Export**, gefolgt von einem alphanumerischen Wert. Beispiel: `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
 Um das vollständige Schema jedes Segmentdefinitions-Schnappschuss-Exportdatensatzes zu verstehen, können Sie eine Vorschau anzeigen und die Datensätze [unter Verwendung des Datensatz-Viewers](../catalog/datasets/user-guide.md) in der Experience Platform-Benutzeroberfläche erkunden.
-
-![Eine Vorschau des Datensatzes &quot;Segmentdefinition-Snapshot-Export&quot;.](images/query/segment-metadata.png)
 
 ### Ziel-Metadaten-Datensatz
 
@@ -92,7 +90,7 @@ Um das vollständige Schema des DIM-Zieldatensatzes zu verstehen, können Sie ei
 
 Die Funktion CDP Insights Data Models legt die SQL offen, die die Einblicke für verschiedene Profil-, Ziel- und Segmentierungs-Widgets ermöglicht. Sie können diese SQl-Abfragevorlagen anpassen, um CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle zu erstellen.
 
-Die CDP-Berichterstellung bietet Einblicke in Ihre Profildaten und deren Beziehung zu Segmenten und Zielen. Detaillierte Informationen dazu finden Sie in der Dokumentation zum CDP Insights-Datenmodell . [die CDP Insights-Datenmodelle auf Ihre jeweiligen KPI-Anwendungsfälle anwenden](./cdp-insights-data-model.md).
+Die CDP-Berichterstellung bietet Einblicke in Ihre Profildaten und ihre Beziehung zu Zielgruppen und Zielen. Detaillierte Informationen dazu finden Sie in der Dokumentation zum CDP Insights-Datenmodell . [die CDP Insights-Datenmodelle auf Ihre jeweiligen KPI-Anwendungsfälle anwenden](./cdp-insights-data-model.md).
 
 ## Beispielabfragen
 
@@ -123,13 +121,13 @@ Select
         namespace;
 ```
 
-### Anzahl der Profile nach Segment
+### Anzahl der Profile nach Zielgruppe
 
-Dieser Zielgruppeneinblick liefert die Gesamtanzahl der zusammengeführten Profile innerhalb jedes Segments im Datensatz. Diese Zahl ist das Ergebnis der Anwendung der Segmentzusammenführungsrichtlinie auf Ihre Profildaten, um Profilfragmente zu einem einzigen Profil für jede Person im Segment zusammenzuführen.
+Dieser Zielgruppeneinblick liefert die Gesamtanzahl der zusammengeführten Profile innerhalb der einzelnen Zielgruppen im Datensatz. Diese Zahl ist das Ergebnis der Anwendung der Zielgruppen-Zusammenführungsrichtlinie auf Ihre Profildaten, um Profilfragmente zusammenzuführen und so für jede Einzelperson in der Zielgruppe ein Profil zu erstellen.
 
 ```sql
 Select          
-        concat_ws('-', key, source_namespace) segment_id,
+        concat_ws('-', key, source_namespace) audience_id,
         count(1) count_of_profiles
       from
         (
@@ -139,17 +137,17 @@ Select
             from
               (
                   Select
-                    explode(Segmentmembership)
+                    explode(Audiencemembership)
                   from
                     Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f
               )
         )
       group by
-      segment_id
+      audience_id
 ```
 
 ## Nächste Schritte
 
-Durch Lesen dieses Handbuchs können Sie jetzt [!DNL Query Service] , um mehrere Abfragen durchzuführen, um die Rohdatensätze zu untersuchen und zu verarbeiten, mit denen Ihre Profil-, Segment- und Ziel-Dashboards bereitgestellt werden.
+Durch Lesen dieses Handbuchs können Sie jetzt [!DNL Query Service] , um mehrere Abfragen durchzuführen, um die Rohdatensätze zu untersuchen und zu verarbeiten, mit denen Sie Ihre Profil-, Zielgruppen- und Ziel-Dashboards versorgen können.
 
 Um mehr über diese Dashboards und die darin verfügbaren Metriken zu erfahren, treffen Sie bitte eine entsprechende Auswahl aus der Liste der verfügbaren Dashboards in der Dokumentationsnavigation.

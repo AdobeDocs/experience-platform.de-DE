@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Query Service – Übersicht
 description: Dieses Dokument gibt einen Überblick über die Rolle von Query Service in Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '721'
-ht-degree: 100%
+ht-degree: 89%
 
 ---
 
@@ -33,7 +33,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] nutzt maschinelles Lerne
 
 ### [!DNL Segmentation Service]
 
-Mit in Adobe Experience Platform [!DNL Segmentation Service] können Benutzer ihre Kunden in kleinere Gruppen mit ähnlichen Eigenschaften unterteilen. Diese Segmente können anschließend ausgewertet werden, um eine bessere Analyse der Daten des [!DNL Real-Time Customer Profile] zu erhalten. Mit [!DNL Query Service] können Sie diese Analyse bereitstellen, indem Sie Abfragen zu diesen Segmentdaten im [!DNL Data Lake] ausführen. Weitere Informationen zur Segmentierung finden Sie im Überblick über [!DNL Segmentation Service] und Informationen zur Analyse von Segmenten finden Sie im Handbuch zu [!DNL Profile Query Language] (PQL).
+Mit in Adobe Experience Platform [!DNL Segmentation Service] können Benutzer ihre Kunden in kleinere Gruppen mit ähnlichen Eigenschaften unterteilen. Diese Zielgruppen können anschließend ausgewertet werden, um eine bessere Analyse Ihrer [!DNL Real-Time Customer Profile] Daten. [!DNL Query Service] kann verwendet werden, um diese Analyse bereitzustellen, indem Abfragen zu diesen Zielgruppendaten im [!DNL Data Lake]. Bitte lesen Sie die [!DNL Segmentation Service] Übersicht für weitere Informationen zur Segmentierung und der [!DNL Profile Query Language] (PQL)-Handbuch für weitere Informationen zur Analyse von Zielgruppen.
 
 ## Anwendungsfälle
 
@@ -41,7 +41,7 @@ Mit in Adobe Experience Platform [!DNL Segmentation Service] können Benutzer ih
 
 ### Abbruch von Durchsuchen-Vorgängen in Adobe Analytics
 
-Dieses [Beispiel für den Abbruch von Durchsuchen-Vorgängen konzentriert sich auf die Verwendung von Adobe-Daten [!DNL Analytics]](./use-cases/abandoned-browse.md), um eine bestimmte nachvollziehbare Zielgruppe zu erstellen. [!DNL Query Service] berücksichtigt komplexe Logik für die Segmentierung, um verschiedene personalisierte Attribute zur nachgelagerten Verwendung zu berechnen oder die Erstellung Ihrer Segmente erheblich zu vereinfachen.
+Dieses [Beispiel für den Abbruch von Durchsuchen-Vorgängen konzentriert sich auf die Verwendung von Adobe-Daten [!DNL Analytics]](./use-cases/abandoned-browse.md), um eine bestimmte nachvollziehbare Zielgruppe zu erstellen. [!DNL Query Service] berücksichtigt komplexe Logik für die Segmentierung, um verschiedene personalisierte Attribute zur nachgelagerten Verwendung zu berechnen oder die Erstellung Ihrer Zielgruppen erheblich zu vereinfachen.
 
 ### Looker BI-Dashboards
 

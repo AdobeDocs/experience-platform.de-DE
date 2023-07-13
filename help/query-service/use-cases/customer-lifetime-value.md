@@ -2,10 +2,10 @@
 title: Tracking von Datensignalen zur Generierung Ihres Kundenlebenszeitwerts
 description: Dieses Handbuch bietet eine umfassende Demonstration zur Verwendung von Data Distiller und benutzerdefinierten Dashboards mit Real-time Customer Data Platform zur Messung und Visualisierung des Kundenlebenszeitwerts.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
 workflow-type: tm+mt
-source-wordcount: '1296'
-ht-degree: 13%
+source-wordcount: '1269'
+ht-degree: 12%
 
 ---
 
@@ -17,7 +17,7 @@ Die folgende Infografik zeigt den Zyklus der Datenerfassung, -bearbeitung, -anal
 
 ![Die Rundreise informiert über Daten von Beobachtung über Analyse bis zum Handeln.](../images/use-cases/infographic-use-case-cycle.png)
 
-Dieser durchgängige Anwendungsfall zeigt, wie Datensignale erfasst und geändert werden können, um das abgeleitete Attribut für den Kundenlebenszeitwert zu berechnen. Diese abgeleiteten Attribute können dann auf Ihre Real-Time CDP-Profildaten angewendet werden und können mit benutzerdefinierten Dashboards verwendet werden, um ein Dashboard für die Insight-Analyse zu erstellen. Über Data Distiller können Sie das Real-Time CDP Insight-Datenmodell erweitern und mithilfe des von CLV abgeleiteten Attributs und der Dashboard-Einblicke ein neues Segment erstellen und es für ein gewünschtes Ziel aktivieren. Diese Segmente können dann verwendet werden, um leistungsstarke Zielgruppen zu erstellen und so Ihre nächste Marketing-Kampagne zu unterstützen.
+Dieser durchgängige Anwendungsfall zeigt, wie Datensignale erfasst und geändert werden können, um das abgeleitete Attribut für den Kundenlebenszeitwert zu berechnen. Diese abgeleiteten Attribute können dann auf Ihre Real-Time CDP-Profildaten angewendet werden und können mit benutzerdefinierten Dashboards verwendet werden, um ein Dashboard für die Insight-Analyse zu erstellen. Über Data Distiller können Sie das Real-Time CDP Insight-Datenmodell erweitern und mithilfe des CLV-abgeleiteten Attributs und der Dashboard-Einblicke eine neue Zielgruppe erstellen und für ein gewünschtes Ziel aktivieren. Diese leistungsstarken Zielgruppen können dann zur Unterstützung Ihrer nächsten Marketing-Kampagne verwendet werden.
 
 Dieses Handbuch soll Ihnen dabei helfen, Ihr Kundenerlebnis besser zu verstehen, indem Sie Datensignale über wichtige Touchpoints hinweg messen, die CLV steuern und einen ähnlichen Anwendungsfall in Ihrer Umgebung implementieren. Der gesamte Prozess wird in der Abbildung unten zusammengefasst.
 
@@ -28,7 +28,7 @@ Dieses Handbuch soll Ihnen dabei helfen, Ihr Kundenerlebnis besser zu verstehen,
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [Query Service](../home.md): Bietet eine Benutzeroberfläche und eine RESTful-API, mit der Sie SQL-Abfragen zur Analyse und Anreicherung Ihrer Daten verwenden können.
-* [Segmentierungsdienst](../../segmentation/home.md): Ermöglicht Ihnen das Erstellen von Segmenten und Generieren von Zielgruppen aus Ihren Echtzeit-Kundenprofildaten.
+* [Segmentierungsdienst](../../segmentation/home.md): Ermöglicht die Erstellung von Zielgruppen aus Ihren Echtzeit-Kundenprofildaten.
 
 ## Voraussetzungen
 
@@ -71,23 +71,23 @@ Nachfolgend finden Sie Beispiele für benutzerdefinierte CLV-Widgets, die Dezima
 
 ![Eine Sammlung von benutzerdefinierten dezimalbasierten CLTV-Widgets.](../images/use-cases/deciles-user-defined-dashboard.png)
 
-## Erstellen und Aktivieren von Segmenten zum Erstellen von Hochleistungszielgruppen {#create-and-activate-segments}
+## Hochleistungszielgruppen erstellen und aktivieren {#create-and-activate-audiences}
 
-Der nächste Schritt besteht darin, Segmente zu erstellen und Zielgruppen aus Ihren Echtzeit-Kundenprofildaten zu generieren. Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche von Segment Builder . [Segmente in Platform erstellen und aktivieren](../../segmentation/ui/segment-builder.md). Das Handbuch enthält Abschnitte zu folgenden Themen:
+Der nächste Schritt besteht darin, eine Segmentdefinition zu erstellen und Zielgruppen aus Ihren Echtzeit-Kundenprofildaten zu generieren. Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche von Segment Builder . [Erstellen und Aktivieren von Zielgruppen in Platform](../../segmentation/ui/segment-builder.md). Das Handbuch enthält Abschnitte zu folgenden Themen:
 
 * Segmentdefinitionen mit einer Kombination aus Attributen, Ereignissen und vorhandenen Zielgruppen als Bausteinen erstellen.
-* Die Arbeitsfläche des Regel-Builders und Container verwenden, um die Reihenfolge zu steuern, in der Segmentregeln ausgeführt werden.
+* Verwenden Sie die Arbeitsfläche des Regel-Builders und Container, um die Reihenfolge zu steuern, in der die Segmentierungsregeln ausgeführt werden.
 * Schätzungen der voraussichtlichen Zielgruppe anzeigen, sodass Sie Ihre Segmentdefinitionen nach Bedarf anpassen können.
 * Alle Segmentdefinitionen für geplante Segmentierung aktivieren.
 * Spezifische Segmentdefinitionen für Streaming-Segmentierung aktivieren.
 
-Alternativ kann auch eine [Video-Tutorial zum Segment Builder](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) für weitere Informationen.
+Alternativ kann auch eine [Video-Tutorial zum Segment Builder](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) für weitere Informationen.
 
-## Aktivieren Ihres Segments für eine E-Mail-Kampagne {#activate-segment-for-campaign}
+## Aktivieren der Audience für eine E-Mail-Kampagne {#activate-audience-for-campaign}
 
-Sobald Sie Ihr Segment erstellt haben, können Sie es für ein Ziel aktivieren. Platform unterstützt eine Vielzahl von E-Mail-Dienstanbietern (ESPs), mit denen Sie Ihre E-Mail-Marketing-Aktivitäten verwalten können, z. B. das Senden von Werbe-E-Mail-Kampagnen.
+Sobald Sie Ihre Audience erstellt haben, können Sie sie für ein Ziel aktivieren. Platform unterstützt eine Vielzahl von E-Mail-Dienstanbietern (ESPs), mit denen Sie Ihre E-Mail-Marketing-Aktivitäten verwalten können, z. B. das Senden von Werbe-E-Mail-Kampagnen.
 
-Überprüfen Sie die [Übersicht über E-Mail-Marketing-Ziele](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/overview.html?lang=en#connect-destination) für eine Liste der unterstützten Ziele, in die Sie Daten exportieren möchten (z. B. die [Oracle Eloqua](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/oracle-eloqua-api.html?lang=en) Seite).
+Überprüfen Sie die [Übersicht über E-Mail-Marketing-Ziele](../../destinations/catalog/email-marketing/overview.md#connect-destination) für eine Liste der unterstützten Ziele, in die Sie Daten exportieren möchten (z. B. die [Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) Seite).
 
 ## Anzeigen der zurückgegebenen Analysedaten aus Ihrer Kampagne {#post-campaign-data-analysis}
 
@@ -95,7 +95,7 @@ Die Daten aus Quellen können jetzt [schrittweise verarbeitet](../essential-conc
 
 Sobald Ihr Datenmodell aktualisiert wurde, stellen Ihre benutzerdefinierten Dashboard-Widgets aussagekräftige Signale bereit, mit denen Sie den Lebenszeitwert von Kunden messen und visualisieren können.
 
-![Ein benutzerdefiniertes Widget, das die Anzahl der geöffneten E-Mails entsprechend ihrem Segment und ihrer E-Mail-Kampagne anzeigt.](../images/use-cases/post-activation-and-email-response-kpis.png)
+![Ein benutzerdefiniertes Widget, das die Anzahl der geöffneten E-Mails entsprechend ihrer Zielgruppe und E-Mail-Kampagne anzeigt.](../images/use-cases/post-activation-and-email-response-kpis.png)
 
 Für Ihre benutzerdefinierte Analyse stehen verschiedene Visualisierungsoptionen zur Verfügung.
 
