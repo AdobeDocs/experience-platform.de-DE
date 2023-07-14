@@ -1,10 +1,10 @@
 ---
 description: Erfahren Sie, wie Sie das Partnerschema für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Konfiguration des Partnerschemas
-source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
-workflow-type: ht
-source-wordcount: '1715'
-ht-degree: 100%
+source-git-commit: 20dc7b31f75e88badac17faa542e046598632690
+workflow-type: tm+mt
+source-wordcount: '1892'
+ht-degree: 90%
 
 ---
 
@@ -91,7 +91,10 @@ Um ein statisches Schema mit Profilattributen zu erstellen, definieren Sie die Z
       "useCustomerSchemaForAttributeMapping":false,
       "profileRequired":true,
       "segmentRequired":true,
-      "identityRequired":true
+      "identityRequired":true,
+      "segmentNamespaceAllowList": ["someNamespace"],
+      "segmentNamespaceDenyList": ["someOtherNamespace"]
+
 }
 ```
 
@@ -102,6 +105,8 @@ Um ein statisches Schema mit Profilattributen zu erstellen, definieren Sie die Z
 | `profileRequired` | Boolesch | Optional | Verwenden Sie `true`, wenn Benutzerinnen und Benutzer in der Lage sein sollen, Profilattribute von Experience Platform benutzerdefinierten Attributen auf Ihrer Zielplattform zuzuordnen. |
 | `segmentRequired` | Boolesch | Erforderlich | Dieser Parameter ist für Destination SDK erforderlich und sollte immer auf `true` festgelegt werden. |
 | `identityRequired` | Boolesch | Erforderlich | Legen Sie ihn auf `true` fest, wenn Benutzerinnen und Benutzer in der Lage sein sollen, [Identitätstypen](identity-namespace-configuration.md) von Experience Platform den Attributen zuzuordnen, die Sie im Array `profileFields` definiert haben. |
+| `segmentNamespaceAllowList` | Array | Optional | Definiert spezifische Zielgruppen-Namespaces, aus denen Benutzer Zielgruppen dem Ziel zuordnen können. Verwenden Sie diesen Parameter, um Platform-Benutzer darauf zu beschränken, Zielgruppen nur aus den Zielgruppen-Namespaces zu exportieren, die Sie im -Array definieren. Dieser Parameter kann nicht zusammen mit `segmentNamespaceDenyList`.<br> <br> Beispiel: `"segmentNamespaceAllowList": ["AudienceManager"]` ermöglicht es Benutzern, nur Zielgruppen aus der `AudienceManager` -Namespace an dieses Ziel. <br> <br> Damit Benutzer Zielgruppen in Ihr Ziel exportieren können, können Sie diesen Parameter ignorieren. <br> <br> Wenn `segmentNamespaceAllowList` und `segmentNamespaceDenyList` fehlen, können Benutzer nur Zielgruppen exportieren, die aus der [Segmentierungsdienst](../../../../segmentation/home.md). |
+| `segmentNamespaceDenyList` | Array | Optional | Beschränkt Benutzer von der Zuordnung von Zielgruppen zum Ziel aus den im Array definierten Zielgruppen-Namespaces. Darf nicht zusammen mit `segmentNamespaceAllowed`. <br> <br> Beispiel: `"segmentNamespaceDenyList": ["AudienceManager"]` verhindert, dass Benutzer Zielgruppen aus der `AudienceManager` -Namespace an dieses Ziel. <br> <br> Damit Benutzer Zielgruppen in Ihr Ziel exportieren können, können Sie diesen Parameter ignorieren. <br> <br> Wenn `segmentNamespaceAllowed` und `segmentNamespaceDenyList` fehlen, können Benutzer nur Zielgruppen exportieren, die aus der [Segmentierungsdienst](../../../../segmentation/home.md). <br> <br> Um den Export aller Zielgruppen unabhängig von der Herkunft zu ermöglichen, legen Sie `"segmentNamespaceDenyList":[]`. |
 
 {style="table-layout:auto"}
 
