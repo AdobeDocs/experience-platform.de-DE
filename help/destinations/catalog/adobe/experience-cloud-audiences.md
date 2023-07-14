@@ -3,7 +3,7 @@ title: (Beta) Experience Cloud Audiences
 description: Hier erfahren Sie, wie Sie Audiences von Experience Platform für verschiedene Experience Platformen freigeben können.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 1288652ca3b18b4adb357b2d8884f408725cb0a2
 workflow-type: tm+mt
 source-wordcount: '1631'
 ht-degree: 19%
@@ -65,7 +65,7 @@ Note: briefly talk about when to share audiences to these destinations using the
 
 ### Für Kunden, die die alte Zielgruppen-Sharing-Lösung verwenden
 
-Wenn Sie bereits Zielgruppen von Experience Platform für Audience Manager und andere Experience Cloud-Lösungen freigeben, verwenden Sie die [Integration älterer Zielgruppenfreigabe](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam)müssen Sie sich entweder an die Kundenunterstützung oder das Kundenbetreuungsteam Ihrer Adobe wenden, um die veraltete Integration zu deaktivieren. Die Kundenbetreuungs- und Adobe-Kontoteams müssen ein Jira-Ticket (siehe Vorlagenticket AAM-52354) einreichen, um die Integration zu deaktivieren.
+Wenn Sie bereits Zielgruppen von Experience Platform für Audience Manager und andere Experience Cloud-Lösungen freigeben, verwenden Sie die [Integration älterer Zielgruppenfreigabe](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam)müssen Sie sich entweder an die Kundenunterstützung oder das Kundenbetreuungsteam Ihrer Adobe wenden, um die veraltete Integration zu deaktivieren. Die Kundenbetreuungs- und Adobe-Kontoteams müssen ein Jira-Ticket (siehe Vorlagenticket PLAT-160986) einreichen, um die Integration zu deaktivieren.
 
 Die Bearbeitungszeit zur Lösung des Deprovisioning-Tickets für Beta-Kunden beträgt sechs Geschäftstage oder weniger. Nachdem die vorhandene Legacy-Integration deaktiviert wurde, können Sie mit dem [Erstellen einer Verbindung](#connect) über die Zielkarte des Self-Service.
 
