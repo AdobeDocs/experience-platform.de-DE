@@ -3,10 +3,10 @@ keywords: LinkedIn-Verbindung; LinkedIn-Verbindung; LinkedIn-Ziele; LinkedIn;
 title: Verbindung von LinkedIn mit übereinstimmenden Zielgruppen
 description: Aktivieren Sie Profile für Ihre LinkedIn-Kampagnen für Zielgruppen-Targeting, Personalisierung und Unterdrückung basierend auf Hash-E-Mails.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '1035'
-ht-degree: 44%
+source-wordcount: '1087'
+ht-degree: 35%
 
 ---
 
@@ -22,7 +22,7 @@ Profile für Ihre [!DNL LinkedIn] Kampagnen für Zielgruppen-Targeting, Personal
 
 So können Sie besser verstehen, wie und wann die Variable [!DNL LinkedIn Matched Audiences] Ziel, hier ein Anwendungsfall, den Adobe Experience Platform-Kunden mit dieser Funktion lösen können.
 
-Ein Softwareunternehmen organisiert eine Konferenz und möchte mit den Teilnehmern in Kontakt bleiben und ihnen personalisierte Angebote basierend auf ihrem Konferenzstatus zeigen. Das Unternehmen kann E-Mail-Adressen oder Mobilgeräte-IDs von eigenen erfassen [!DNL CRM] nach Adobe Experience Platform. Anschließend können sie Segmente aus ihren eigenen Offline-Daten erstellen und diese Segmente an die [!DNL LinkedIn] Social-Plattform zur Optimierung ihrer Werbeausgaben.
+Ein Softwareunternehmen organisiert eine Konferenz und möchte mit den Teilnehmern in Kontakt bleiben und ihnen personalisierte Angebote basierend auf ihrem Konferenzstatus zeigen. Das Unternehmen kann E-Mail-Adressen oder Mobilgeräte-IDs von eigenen erfassen [!DNL CRM] nach Adobe Experience Platform. Anschließend können sie Zielgruppen aus ihren eigenen Offline-Daten erstellen und diese Zielgruppen an die [!DNL LinkedIn] Social-Plattform zur Optimierung ihrer Werbeausgaben.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -36,14 +36,28 @@ Ein Softwareunternehmen organisiert eine Konferenz und möchte mit den Teilnehme
 
 {style="table-layout:auto"}
 
+## Unterstützte Zielgruppen {#supported-audiences}
+
+In diesem Abschnitt werden alle Zielgruppen beschrieben, die Sie an dieses Ziel exportieren können.
+
+Alle Ziele unterstützen die Aktivierung von Zielgruppen, die durch die Experience Platform generiert wurden [Segmentierungsdienst](../../../segmentation/home.md).
+
+Darüber hinaus unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
+
+| Zielgruppentyp | Beschreibung |
+---------|----------|
+| Benutzerdefinierte Uploads | Zielgruppen, die aus CSV-Dateien in Experience Platform aufgenommen werden. |
+
+{style="table-layout:auto"}
+
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer und andere), die im [!DNL LinkedIn Matched Audiences] Ziel. |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer und andere), die im [!DNL LinkedIn Matched Audiences] Ziel. |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform basierend auf der Zielgruppenbewertung aktualisiert wird, sendet der Connector das Update an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -93,7 +107,7 @@ Wenn Sie die E-Mail-Adressen selbst hash möchten, stellen Sie sicher, dass Sie 
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
-Das folgende Video zeigt auch die Schritte zum Konfigurieren eines [!DNL LinkedIn Matched Audiences] Zielgruppen und Aktivieren von Segmenten.
+Das folgende Video zeigt auch die Schritte zum Konfigurieren eines [!DNL LinkedIn Matched Audiences] Zielgruppen bestimmen und aktivieren.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
@@ -125,20 +139,20 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
 
-## Aktivieren von Segmenten für dieses Ziel {#activate}
+## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md).
+Siehe [Aktivieren von Zielgruppendaten für Streaming-Zielgruppenexport-Ziele](../../ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
 
 ## Exportierte Daten {#exported-data}
 
-Eine erfolgreiche Aktivierung bedeutet, dass eine [!DNL LinkedIn] eine benutzerdefinierte Zielgruppe wird programmgesteuert in [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). Segmentmitgliedschaft in der Zielgruppe wird hinzugefügt und entfernt, wenn Anwender für die aktivierten Segmente qualifiziert oder disqualifiziert werden.
+Eine erfolgreiche Aktivierung bedeutet, dass eine [!DNL LinkedIn] eine benutzerdefinierte Zielgruppe wird programmgesteuert in [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). Die Zielgruppenmitgliedschaft wird hinzugefügt und entfernt, da Benutzer für die aktivierten Zielgruppen qualifiziert oder disqualifiziert sind.
 
 >[!TIP]
 >
->Die Integration zwischen Adobe Experience Platform und [!DNL LinkedIn Matched Audiences] unterstützt historische Zielgruppen-Backups. Alle historischen Segmentqualifikationen werden an gesendet. [!DNL LinkedIn] wenn Sie die Segmente für das Ziel aktivieren.
+>Die Integration zwischen Adobe Experience Platform und [!DNL LinkedIn Matched Audiences] unterstützt historische Zielgruppen-Backups. Alle historischen Zielgruppenqualifikationen werden an gesendet. [!DNL LinkedIn] wenn Sie die Zielgruppen für das Ziel aktivieren.

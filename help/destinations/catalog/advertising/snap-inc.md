@@ -1,11 +1,11 @@
 ---
 title: Verbindung Snap Inc
-description: Erfahren Sie, wie Sie eine Verbindung zur Snapchat Ads-Plattform herstellen und Ihre Zielgruppensegmente aus Experience Platform exportieren.
+description: Erfahren Sie, wie Sie eine Verbindung zur Snapchat Ads-Plattform herstellen und Ihre Zielgruppen aus Experience Platform exportieren.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 988ecbed3084ef162453c9f1124998c6e9ae2e45
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '993'
-ht-degree: 32%
+source-wordcount: '989'
+ht-degree: 25%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 32%
 
 ## Anwendungsfälle {#use-cases}
 
-Mit diesem Ziel können Marketing-Fachleute in Experience Platform erstellte Benutzersegmente in Snapchat Ads importieren und für das Targeting ihrer Anzeigen verwenden.
+Mit diesem Ziel können Marketing-Experten in Experience Platform erstellte Benutzerzielgruppen in Momentaufnahmen-Anzeigen importieren und für das Targeting ihrer Anzeigen verwenden.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -33,7 +33,7 @@ Um dieses Ziel zu verwenden, müssen Sie über ein Snapchat Ads-Konto verfügen.
 
 * Snap Inc unterstützt nicht mehrere Identitäten für ein bestimmtes Zielgruppensegment. Bitte beim Aktivieren eines Segments nur eine Identität zuordnen.
 * Snap Inc unterstützt keine Umbenennung von Segmenten. Um ein Segment umzubenennen, müssen Sie es deaktivieren, umbenennen und dann aktivieren.
-* Es ist nicht möglich, einen Aufbewahrungszeitraum für die Mitglieder eines Zielgruppensegments zu definieren. Alle Mitglieder verfügen über eine lebenslange Beibehaltung und werden im Segment verbleiben, bis sie entfernt werden.
+* Es ist nicht möglich, einen Aufbewahrungszeitraum für die Mitglieder eines Zielgruppensegments zu definieren. Alle Mitglieder haben eine lebenslange Beibehaltung und befinden sich in der Zielgruppe, bis sie entfernt werden.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -65,8 +65,8 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer oder andere), die im *YOURDESTINATION* Ziel. |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder andere), die im *YOURDESTINATION* Ziel. |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform basierend auf der Zielgruppenbewertung aktualisiert wird, sendet der Connector das Update an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -98,36 +98,36 @@ Füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Nächste
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Konto-ID]**: Die ID des Anzeigenkontos, die mit dem Anzeigenkonto verknüpft ist, in das Sie Ihre Segmente importieren möchten. Weitere Informationen hierzu finden Sie unter [Diese Dokumentation zum Snapchat Business Help Center](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
+* **[!UICONTROL Konto-ID]**: Die ID des Anzeigenkontos, die mit dem Anzeigenkonto verknüpft ist, in das Sie Ihre Zielgruppen importieren möchten. Weitere Informationen hierzu finden Sie unter [Diese Dokumentation zum Snapchat Business Help Center](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
 
 >[!IMPORTANT]
 > 
->Wenn Sie eine falsche oder ungültige Snapchat-Konto-ID eingeben, schlägt die Segmentaktivierung fehl. Vergewissern Sie sich bitte, dass Sie die richtige Anzeigenkonto-ID eingegeben haben.
+>Wenn Sie eine falsche oder ungültige Snapchat-Konto-ID eingeben, schlägt die Aktivierung der Zielgruppe fehl. Vergewissern Sie sich bitte, dass Sie die richtige Anzeigenkonto-ID eingegeben haben.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
 
-## Aktivieren von Segmenten für dieses Ziel {#activate}
+## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Zugriffssteuerung – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
+Lesen [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppenexport-Ziele](/help/destinations/ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
 
 ## Überprüfen des Datenexports {#exported-data}
 
-Nachdem Sie Segmente für die *Snap Inc* Ziel, können Sie die Segmente im Snap Ads Manager der [**Zielgruppen** Abschnitt](https://businesshelp.snapchat.com/s/article/audience-sharing). Gehen Sie wie folgt vor, um zu diesem Abschnitt zu navigieren:
+Nach der Aktivierung von Zielgruppen für die *Snap Inc* Ziel, können Sie die Zielgruppen im Anzeigenmanager der [**Zielgruppen** Abschnitt](https://businesshelp.snapchat.com/s/article/audience-sharing). Gehen Sie wie folgt vor, um zu diesem Abschnitt zu navigieren:
 
 1. Melden Sie sich bei der [Anzeigen-Manager ausrichten](https://ads.snapchat.com/)
-2. Auswählen **Zielgruppen** aus dem Pulldown-Menü in der oberen linken Ecke des Bildschirms. Sie sehen die Segmente, die Sie in Adobe Experience Platform in der Zielgruppenbibliothek aktiviert haben:
+2. Auswählen **Zielgruppen** aus dem Pulldown-Menü in der oberen linken Ecke des Bildschirms. Sie sehen die Zielgruppen, die Sie in Adobe Experience Platform in der Zielgruppenbibliothek aktiviert haben:
 
-![Audiences](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
+![Zielgruppen](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Beachten Sie bitte, dass ein Adobe-Segment, das zum ersten Mal für Snap Inc aktiviert wird, zunächst als leere Zielgruppe betrachtet wird. Dies liegt daran, dass Adobe Experience Platform keine Mitgliedsdaten an Snap Inc exportiert, bis das Segment ausgewertet wird. Weiterführende Informationen zur Auswertung von Segmenten in Experience Platform finden Sie im Abschnitt [Übersicht über den Segmentierungsdienst](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
+Beachten Sie bitte, dass eine Adobe-Audience, die zum ersten Mal für Snap Inc aktiviert wird, zunächst als leere Audience betrachtet wird. Dies liegt daran, dass Adobe Experience Platform keine Mitgliedsdaten an Snap Inc exportiert, bis die Audience ausgewertet wird. Weiterführende Informationen zur Auswertung von Zielgruppen in Experience Platform finden Sie im Abschnitt [Übersicht über den Segmentierungsdienst](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

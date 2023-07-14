@@ -2,10 +2,10 @@
 title: SFTP-Verbindung
 description: Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durch Trennzeichen getrennte Datendateien regelmäßig von Adobe Experience Platform zu exportieren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 5af201858e00f5ccdee4d68f04d37bc5f69caf9c
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 72%
+source-wordcount: '1043'
+ht-degree: 64%
 
 ---
 
@@ -18,7 +18,6 @@ ht-degree: 72%
 >Mit der Beta-Version der Funktion zum Exportieren von Datensätzen und der verbesserten Dateiexportfunktion werden Ihnen jetzt möglicherweise zwei [!DNL SFTP]-Karten im Zielkatalog angezeigt.
 >* Falls Sie bereits Dateien zum **[!UICONTROL SFTP]**-Ziel exportieren, erstellen Sie bitte neue Datenflüsse zum neuen **[!UICONTROL SFTP-Beta]**-Ziel.
 >* Wenn Sie noch keinen Datenfluss zum **[!UICONTROL SFTP]** Ziel, verwenden Sie die neue **[!UICONTROL SFTP-Beta]** Karte zum Exportieren von Dateien in **[!UICONTROL SFTP]**.
-
 
 ![Abbildung der beiden SFTP-Zielkarten, die diese nebeneinander in einer Ansicht zeigt.](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
 
@@ -39,8 +38,22 @@ Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durc
 
 ## Verbindung zu SFTP über API oder Benutzeroberfläche herstellen {#connect-api-or-ui}
 
-* Lesen Sie die Abschnitte, um über die Benutzeroberfläche von Platform eine Verbindung zu Ihrem SFTP-Speicherort herzustellen [Mit Ziel verbinden](#connect) und [Aktivieren von Segmenten für dieses Ziel](#activate) unten.
-* Um eine programmgesteuerte Verbindung zu Ihrem SFTP-Speicherort herzustellen, lesen Sie den Abschnitt [Aktivieren von Segmenten für dateibasierte Ziele mithilfe des Tutorials zur Flow Service-API](../../api/activate-segments-file-based-destinations.md).
+* Lesen Sie die Abschnitte, um über die Benutzeroberfläche von Platform eine Verbindung zu Ihrem SFTP-Speicherort herzustellen [Mit Ziel verbinden](#connect) und [Aktivieren von Zielgruppen für dieses Ziel](#activate) unten.
+* Um eine programmgesteuerte Verbindung zu Ihrem SFTP-Speicherort herzustellen, lesen Sie den Abschnitt [Aktivieren von Zielgruppen für dateibasierte Ziele mithilfe des Tutorials zur Flow Service-API](../../api/activate-segments-file-based-destinations.md).
+
+## Unterstützte Zielgruppen {#supported-audiences}
+
+In diesem Abschnitt werden alle Zielgruppen beschrieben, die Sie an dieses Ziel exportieren können.
+
+Alle Ziele unterstützen die Aktivierung von Zielgruppen, die durch die Experience Platform generiert wurden [Segmentierungsdienst](../../../segmentation/home.md).
+
+Darüber hinaus unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
+
+| Zielgruppentyp | Beschreibung |
+---------|----------|
+| Benutzerdefinierte Uploads | Zielgruppen, die aus CSV-Dateien in Experience Platform aufgenommen werden. |
+
+{style="table-layout:auto"}
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
@@ -85,7 +98,7 @@ Wenn Sie die **[!UICONTROL SFTP mit Kennwort]** Authentifizierungstyp für die V
 * **[!UICONTROL Passwort]**: Das Passwort, mit dem Sie sich bei Ihrem SFTP-Speicherort anmelden.
 * **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien eine Verschlüsselung hinzuzufügen. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung.
 
-   ![Abbildung eines Beispiels für einen korrekt formatierten PGP-Schlüssel in der Benutzeroberfläche](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![Abbildung eines Beispiels für einen korrekt formatierten PGP-Schlüssel in der Benutzeroberfläche](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
 Wenn Sie den Authentifizierungstyp **[!UICONTROL SFTP mit SSH-Schlüssel]** für die Verbindung mit Ihrem SFTP-Speicherort auswählen:
@@ -98,7 +111,7 @@ Wenn Sie den Authentifizierungstyp **[!UICONTROL SFTP mit SSH-Schlüssel]** für
 * **[!UICONTROL SSH-Schlüssel]**: Der private SSH-Schlüssel, der zum Anmelden bei Ihrem SFTP-Speicherort verwendet wird. Der private Schlüssel muss als eine mit Base64 verschlüsselte Zeichenfolge formatiert sein und darf nicht kennwortgeschützt sein.
 * **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien eine Verschlüsselung hinzuzufügen. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung.
 
-   ![Abbildung eines Beispiels für einen korrekt formatierten PGP-Schlüssel in der Benutzeroberfläche](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![Abbildung eines Beispiels für einen korrekt formatierten PGP-Schlüssel in der Benutzeroberfläche](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Zieldetails {#destination-details}
 
@@ -113,13 +126,13 @@ Geben Sie nach Herstellung der Authentifizierungsverbindung zum SFTP-Speicherort
 * **[!UICONTROL Komprimierungsformat]**: Wählen Sie den Komprimierungstyp aus, den die Experience Platform für die exportierten Dateien verwenden soll. Diese Option steht nur für die **[!UICONTROL SFTP-Beta]** Ziel.
 * **[!UICONTROL Manifestdatei einschließen]**: Aktivieren Sie diese Option, wenn Sie möchten, dass die Exporte eine JSON-Manifestdatei mit Informationen zum Exportspeicherort, zur Exportgröße und mehr enthalten. Diese Option steht nur für die **[!UICONTROL SFTP-Beta]** Ziel.
 
-## Aktivieren von Segmenten für dieses Ziel {#activate}
+## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](../../ui/activate-batch-profile-destinations.md).
+Siehe [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](../../ui/activate-batch-profile-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
 
 ## (Beta) Exportieren von Datensätzen {#export-datasets}
 
@@ -130,7 +143,7 @@ Dieses Ziel unterstützt Datensatzexporte. Vollständige Informationen zum Einri
 
 ## Exportierte Daten {#exported-data}
 
-Für [!DNL SFTP]-Ziele erstellt Platform eine `.csv`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](../../ui/activate-batch-profile-destinations.md) im Tutorial zur Segmentaktivierung.
+Für [!DNL SFTP]-Ziele erstellt Platform eine `.csv`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](../../ui/activate-batch-profile-destinations.md) im Tutorial zur Aktivierung der Zielgruppe.
 
 ## IP-Adressen-Zulassungsliste {#ip-address-allow-list}
 

@@ -4,7 +4,7 @@ title: Löschen von Zielkonten
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Löschen von Zielkonten in der Adobe Experience Platform-Benutzeroberfläche aufgeführt
 exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
-source-git-commit: 2ea56957e122140fbc68c727e36666f8f9a71dd8
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 18%
@@ -37,7 +37,7 @@ Gehen Sie wie folgt vor, um vorhandene Zielkonten zu löschen.
 
    ![Ziele filtern](../assets/ui/delete-accounts/filter-accounts.png)
 
-3. Wählen Sie die Auslassungszeichen (`...`) neben dem Namen des Kontos, das Sie löschen möchten. Ein Popup-Bedienfeld wird angezeigt, das Optionen für **[!UICONTROL Segmente aktivieren]**, **[!UICONTROL Details bearbeiten]** und **[!UICONTROL Löschen]** das Konto. Wählen Sie die ![Schaltfläche &quot;Löschen&quot;](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Löschen]** zum Löschen des gewünschten Kontos.
+3. Wählen Sie die Auslassungszeichen (`...`) neben dem Namen des Kontos, das Sie löschen möchten. Ein Popup-Bedienfeld wird angezeigt, das Optionen für **[!UICONTROL Aktivieren von Zielgruppen]**, **[!UICONTROL Details bearbeiten]** und **[!UICONTROL Löschen]** das Konto. Wählen Sie die ![Schaltfläche &quot;Löschen&quot;](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Löschen]** zum Löschen des gewünschten Kontos.
 
    ![Zielkonto löschen](../assets/ui/delete-accounts/delete-accounts.png)
 

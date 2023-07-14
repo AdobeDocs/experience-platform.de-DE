@@ -1,10 +1,10 @@
 ---
 description: Der Ziel-Service in Adobe Experience Platform verwendet Konfigurationsendpunkte für verschiedene Komponenten, die die Zielfunktion aufbauen. Erfahren Sie, wie diese Komponenten zusammen es Experience Platform ermöglichen, eine Verbindung zu Zielpartnern herzustellen, benutzerdefinierte Nachrichten zu senden und Profildaten im gesamten digitalen Ökosystem zu aktivieren.
 title: Konfigurationsoptionen in Destination SDK
-source-git-commit: 65a658208b48a50184e55a6d64cdf7ad6de0f04f
-workflow-type: ht
-source-wordcount: '829'
-ht-degree: 100%
+source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+workflow-type: tm+mt
+source-wordcount: '828'
+ht-degree: 95%
 
 ---
 
@@ -45,14 +45,14 @@ Weitere Informationen zu den einzelnen Zielkonfigurationskomponenten finden Sie 
 * [Schemakonfiguration](destination-configuration/schema-configuration.md): Erfahren Sie, wie Sie das Zielschema Ihres Ziels definieren, dem Benutzerinnen und Benutzer Profilattribute und Identitäten zuordnen können.
 * [Konfiguration von Identity-Namespaces](destination-configuration/identity-namespace-configuration.md): Erfahren Sie, wie Sie die von Ihrem Ziel unterstützten Identitäten konfigurieren. Durch diese Konfiguration werden auch die Zielidentitäten im [Zuordnungsschritt](../../ui/activate-segment-streaming-destinations.md#mapping) der Experience Platform-Benutzeroberfläche ausgefüllt, in dem Benutzerinnen und Benutzer Identitäten und Attribute aus ihren XDM-Schemata dem Schema in Ihrem Ziel zuordnen.
 * [Zielversand](destination-configuration/destination-delivery.md): Erfahren Sie, wie Sie konfigurieren können, wohin genau die exportierten Daten gehen und welche Authentifizierungsregel an dem Ort verwendet wird, an dem die Daten landen.
-* [Konfiguration von Zielgruppen-Metadaten](destination-configuration/audience-metadata-configuration.md): Erfahren Sie, wie Segmentmetadaten, etwa Segmentnamen oder IDs, zwischen Experience Platform und Ihrem Ziel freigegeben werden sollten.
+* [Konfiguration von Zielgruppen-Metadaten](destination-configuration/audience-metadata-configuration.md): Erfahren Sie, wie Zielgruppen-Metadaten wie Zielgruppennamen oder IDs von Experience Platform und Ihrem Ziel gemeinsam genutzt werden sollten.
 * [Aggregationsrichtlinie](destination-configuration/aggregation-policy.md): Erfahren Sie, wie Sie eine Aggregationsrichtlinie einrichten, um zu bestimmen, wie HTTP-Anfragen an Ihr Ziel gruppiert und in Batches eingesetzt werden sollen.
 * [Batch-Konfiguration](destination-configuration/batch-configuration.md): Richten Sie verschiedene Einstellungen für die Dateibenennung und Exportplanung ein, die Benutzerinnen und Benutzern beim Herstellen einer Verbindung zu Ihrem Ziel in der Benutzeroberfläche von Experience Platform zur Verfügung stehen.
 * [Historische Profilqualifikationen](destination-configuration/historical-profile-qualifications.md): Erfahren Sie mehr über die historischen Profilqualifikationen, die von mit Destination SDK erstellten Zielen unterstützt werden.
 
 ## Konfiguration von Zielgruppen-Metadaten {#audience-metadata-configuration}
 
-Mit dieser Komponente können Sie konfigurieren, wie Zielgruppen/Segmente programmgesteuert in Ihrem Ziel erstellt, aktualisiert oder gelöscht werden. Bei dateibasierten Zielen können Sie eine Benachrichtigung einrichten, sobald Dateien erfolgreich an Ihr Ziel gesendet wurden. Sie können diese Funktion über den [Endpunkt „audience-templates“](../metadata-api/create-audience-template.md) konfigurieren.
+Mit dieser Komponente können Sie konfigurieren, wie Zielgruppen programmgesteuert in Ihrem Ziel erstellt, aktualisiert oder gelöscht werden. Bei dateibasierten Zielen können Sie eine Benachrichtigung einrichten, sobald Dateien erfolgreich an Ihr Ziel gesendet wurden. Sie können diese Funktion über den [Endpunkt „audience-templates“](../metadata-api/create-audience-template.md) konfigurieren.
 
 ## Nächste Schritte {#next-steps}
 

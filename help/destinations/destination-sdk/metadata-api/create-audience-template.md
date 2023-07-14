@@ -1,10 +1,10 @@
 ---
 description: Auf dieser Seite wird der API-Aufruf veranschaulicht, der zum Erstellen einer Zielgruppenvorlage über Adobe Experience Platform Destination SDK verwendet wird.
 title: Erstellen einer Zielgruppenvorlage
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
-workflow-type: ht
-source-wordcount: '626'
-ht-degree: 100%
+source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+workflow-type: tm+mt
+source-wordcount: '624'
+ht-degree: 89%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 100%
 >
 >**API-Endpunkt**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-Für einige Ziele, die mit Destination SDK erstellt wurden, müssen Sie eine Zielgruppen-Metadatenkonfiguration erstellen, um Segmentmetadaten im Ziel programmgesteuert zu erstellen, zu aktualisieren oder zu löschen. Auf dieser Seite erfahren Sie, wie Sie den API-Endpunkt `/authoring/audience-templates` zum Erstellen der Konfiguration verwenden.
+Für einige Ziele, die mit Destination SDK erstellt wurden, müssen Sie eine Zielgruppen-Metadatenkonfiguration erstellen, um Zielgruppen-Metadaten im Ziel programmgesteuert zu erstellen, zu aktualisieren oder zu löschen. Auf dieser Seite erfahren Sie, wie Sie den API-Endpunkt `/authoring/audience-templates` zum Erstellen der Konfiguration verwenden.
 
 Eine ausführliche Beschreibung der Funktionen, die Sie über diesen Endpunkt konfigurieren können, finden Sie unter [Verwaltung von Zielgruppen-Metadaten](../functionality/audience-metadata-management.md).
 
@@ -190,8 +190,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | Eigenschaft | Typ | Beschreibung |
 | -------- | ----------- | ----------- |
 | `name` | Zeichenfolge | Der Name der Zielgruppen-Metadatenvorlage für Ihr Ziel. Dieser Name wird in jeder partnerspezifischen Fehlermeldung in der Benutzeroberfläche von Experience Platform angezeigt, gefolgt von der aus `metadataTemplate.create.errorSchemaMap` ausgewerteten Fehlermeldung. |
-| `url` | Zeichenfolge | Die URL und der Endpunkt Ihrer API, die zum Erstellen, Aktualisieren, Löschen oder Überprüfen von Zielgruppen/Segmenten in Ihrer Plattform verwendet wird. Zwei branchenübliche Beispiele sind `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` und `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. |
-| `httpMethod` | Zeichenfolge | Die Methode, die für Ihren Endpunkt verwendet wird, um das Segment/die Zielgruppe in Ihrem Ziel programmgesteuert zu erstellen, zu aktualisieren, zu löschen oder zu validieren. Beispiel: `POST`, `PUT`, `DELETE` |
+| `url` | Zeichenfolge | URL und Endpunkt Ihrer API, die zum Erstellen, Aktualisieren, Löschen oder Überprüfen von Zielgruppen in Ihrer Plattform verwendet wird. Zwei branchenübliche Beispiele sind `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` und `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. |
+| `httpMethod` | Zeichenfolge | Die Methode, die für Ihren Endpunkt verwendet wird, um die Zielgruppe in Ihrem Ziel programmgesteuert zu erstellen, zu aktualisieren, zu löschen oder zu validieren. Beispiel: `POST`, `PUT`, `DELETE` |
 | `headers.header` | Zeichenfolge | Gibt alle HTTP-Header an, die zum Aufruf Ihrer API hinzugefügt werden sollen. Beispiel: `"Content-Type"` |
 | `headers.value` | Zeichenfolge | Gibt den Wert von HTTP-Headern an, die zum Aufruf Ihrer API hinzugefügt werden sollen. Beispiel: `"application/x-www-form-urlencoded"` |
 | `requestBody` | Zeichenfolge | Gibt den Inhalt des Nachrichtentextes an, der an Ihre API gesendet werden soll. Welche Parameter zum Objekt `requestBody` hinzugefügt werden sollten, hängt davon ab, welche Felder Ihre API akzeptiert. Ein Beispiel finden Sie im [Beispiel einer ersten Vorlage](../functionality/audience-metadata-management.md#example-1) im Dokument über die Funktionalität von Zielgruppen-Metadaten. |

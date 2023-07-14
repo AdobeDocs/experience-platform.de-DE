@@ -3,10 +3,10 @@ title: (Beta) Exportieren von Dateien nach Bedarf in Batch-Ziele mithilfe der Ex
 type: Tutorial
 description: Erfahren Sie, wie Sie Dateien bei Bedarf mithilfe der Experience Platform-Benutzeroberfläche in Batch-Ziele exportieren.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
-source-wordcount: '743'
-ht-degree: 24%
+source-wordcount: '741'
+ht-degree: 22%
 
 ---
 
@@ -30,9 +30,9 @@ ht-degree: 24%
 
 In diesem Artikel wird erläutert, wie Sie die Experience Platform-Benutzeroberfläche verwenden können, um Dateien bei Bedarf an Batch-Zielen wie [Cloud-Speicher](/help/destinations/catalog/cloud-storage/overview.md) und [E-Mail-Marketing](/help/destinations/catalog/email-marketing/overview.md) Ziele.
 
-Die **[!UICONTROL Datei jetzt exportieren]** Mit dieser Kontrolle können Sie eine vollständige Datei exportieren, ohne die aktuelle Exportplanung eines zuvor geplanten Segments zu unterbrechen. Dieser Export erfolgt zusätzlich zu den zuvor geplanten Exporten und ändert nichts an der Exportfrequenz des Segments. Der Dateiexport wird sofort ausgelöst, und es werden die neuesten Ergebnisse der Segmentierungsläufe von Experience Platform abgerufen.
+Die **[!UICONTROL Datei jetzt exportieren]** Mit dieser Kontrolle können Sie eine vollständige Datei exportieren, ohne den aktuellen Exportplan einer zuvor geplanten Audience zu unterbrechen. Dieser Export erfolgt zusätzlich zu den zuvor geplanten Exporten und ändert nicht die Exportfrequenz der Audience. Der Dateiexport wird sofort ausgelöst, und es werden die neuesten Ergebnisse der Segmentierungsläufe von Experience Platform abgerufen.
 
-Zu diesem Zweck können Sie auch die Experience Platform-APIs verwenden. Lesen der Anleitung [Aktivieren von Zielgruppensegmenten bei Bedarf für Batch-Ziele über die Ad-hoc-Aktivierungs-API](/help/destinations/api/ad-hoc-activation-api.md).
+Zu diesem Zweck können Sie auch die Experience Platform-APIs verwenden. Lesen der Anleitung [Aktivieren von Zielgruppen bei Bedarf für Batch-Ziele über die Ad-hoc-Aktivierungs-API](/help/destinations/api/ad-hoc-activation-api.md).
 
 ## Voraussetzungen {#prerequisites}
 
@@ -48,11 +48,11 @@ Um Dateien On-Demand an Batch-Ziele zu exportieren, müssen Sie erfolgreich [mit
 
    ![Bild, das einen gefilterten Datenfluss markiert.](../assets/ui/activate-on-demand/filtered-dataflow.png)
 
-3. Wählen Sie die **[!UICONTROL Aktivierungsdaten]** und wählen Sie das Segment aus, für das Sie eine Datei bei Bedarf exportieren möchten, und wählen Sie die **[!UICONTROL Datei jetzt exportieren]** -Steuerelement, um einen einmaligen Export Trigger, der eine Datei an Ihr Batch-Ziel sendet.
+3. Wählen Sie die **[!UICONTROL Aktivierungsdaten]** und wählen Sie die Audience aus, für die Sie eine Datei bei Bedarf exportieren möchten, und wählen Sie die **[!UICONTROL Datei jetzt exportieren]** -Steuerelement, um einen einmaligen Export Trigger, der eine Datei an Ihr Batch-Ziel sendet.
 
    >[!IMPORTANT]
    >
-   >Die Auswahl mehrerer Segmente für den Massenexport von Dateien bei Bedarf wird in der Benutzeroberfläche derzeit nicht unterstützt. Verwenden Sie die [Ad-hoc-Aktivierungs-API](/help/destinations/api/ad-hoc-activation-api.md) zu diesem Zweck.
+   >Die Auswahl mehrerer Zielgruppen für den Massenexport von Dateien bei Bedarf wird in der Benutzeroberfläche derzeit nicht unterstützt. Verwenden Sie die [Ad-hoc-Aktivierungs-API](/help/destinations/api/ad-hoc-activation-api.md) zu diesem Zweck.
 
    ![Bild, das die Schaltfläche Datei jetzt exportieren markiert.](../assets/ui/activate-on-demand/activate-segment-on-demand.png)
 
@@ -70,9 +70,9 @@ Um Dateien On-Demand an Batch-Ziele zu exportieren, müssen Sie erfolgreich [mit
 
 Beachten Sie bei der Verwendung der **[!UICONTROL Datei jetzt exportieren]** Kontrolle:
 
-* **[!UICONTROL Datei jetzt exportieren]** funktioniert nur für Segmente, deren Zeitplan im Batch-Aktivierungsdataflow sich mit dem aktuellen Datum überschneidet. Dies umfasst Segmente mit Zeitplänen, die kein Enddatum haben (Exporthäufigkeit von **[!UICONTROL Einmal]**) oder wenn das Enddatum noch nicht überschritten wurde.
-* Warten Sie beim Hinzufügen eines Segments zu einem vorhandenen Datenfluss mindestens 15 Minuten, bis Sie die Variable **[!UICONTROL Datei jetzt exportieren]** Kontrolle.
-* Wenn Sie die Zusammenführungsrichtlinie eines Segments ändern oder ein Segment erstellen, das eine neue Zusammenführungsrichtlinie verwendet, warten Sie 24 Stunden, bis Sie die **[!UICONTROL Datei jetzt exportieren]** Kontrolle.
+* **[!UICONTROL Datei jetzt exportieren]** funktioniert nur für Zielgruppen, deren Zeitplan im Batch-Aktivierungsdataflow sich mit dem aktuellen Datum überschneidet. Dies umfasst Zielgruppen mit Zeitplänen, die kein Enddatum haben (Exportfrequenz von **[!UICONTROL Einmal]**) oder wenn das Enddatum noch nicht überschritten wurde.
+* Warten Sie beim Hinzufügen einer Zielgruppe zu einem vorhandenen Datenfluss mindestens 15 Minuten, bis Sie die Variable **[!UICONTROL Datei jetzt exportieren]** Kontrolle.
+* Wenn Sie die Zusammenführungsrichtlinie einer Zielgruppe ändern oder eine Zielgruppe erstellen, die eine neue Zusammenführungsrichtlinie verwendet, warten Sie 24 Stunden, bis Sie die **[!UICONTROL Datei jetzt exportieren]** Kontrolle.
 
 ## Benutzeroberflächenfehlermeldungen {#ui-error-messages}
 
@@ -80,10 +80,10 @@ Bei Verwendung von **[!UICONTROL Datei jetzt exportieren]** -Kontrolle verwenden
 
 | Fehlermeldung | Auflösung |
 |---------|----------|
-| Bereits für ein Segment ausführen `segment ID` für die Bestellung `dataflow ID` mit Run-ID `flow run ID` | Diese Fehlermeldung weist darauf hin, dass derzeit ein Ad-hoc-Aktivierungsfluss für ein Segment ausgeführt wird. Warten Sie, bis der Auftrag abgeschlossen ist, bevor Sie den Aktivierungsauftrag erneut auslösen. |
-| Segmente `<segment name>` sind nicht Teil dieses Datenflusses oder außerhalb des Zeitplanbereichs! | Diese Fehlermeldung weist darauf hin, dass die von Ihnen ausgewählten Segmente nicht dem Datenfluss zugeordnet sind oder dass der für die Segmente eingerichtete Aktivierungsplan entweder abgelaufen ist oder noch nicht gestartet wurde. Überprüfen Sie, ob das Segment tatsächlich dem Datenfluss zugeordnet ist, und stellen Sie sicher, dass sich der Zeitplan für die Segmentaktivierung mit dem aktuellen Datum überschneidet. |
+| Bereits für die Zielgruppe ausgeführt `segment ID` für die Bestellung `dataflow ID` mit Run-ID `flow run ID` | Diese Fehlermeldung weist darauf hin, dass derzeit ein Ad-hoc-Aktivierungsfluss für eine Zielgruppe ausgeführt wird. Warten Sie, bis der Auftrag abgeschlossen ist, bevor Sie den Aktivierungsauftrag erneut auslösen. |
+| Zielgruppen `<segment name>` sind nicht Teil dieses Datenflusses oder außerhalb des Zeitplanbereichs! | Diese Fehlermeldung weist darauf hin, dass die von Ihnen ausgewählten Zielgruppen nicht dem Datenfluss zugeordnet sind oder dass der für die Zielgruppen eingerichtete Aktivierungsplan entweder abgelaufen ist oder noch nicht gestartet wurde. Überprüfen Sie, ob die Audience tatsächlich dem Datenfluss zugeordnet ist, und stellen Sie sicher, dass sich der Aktivierungszeitplan für die Zielgruppe mit dem aktuellen Datum überschneidet. |
 
 ## Verwandte Informationen {#related-information}
 
-* [Aktivieren von Zielgruppensegmenten für Batch-Ziele On-Demand mithilfe der Experience Platform-APIs](/help/destinations/api/ad-hoc-activation-api.md)
+* [Aktivieren von Zielgruppen für Batch-Ziele On-Demand mithilfe der Experience Platform-APIs](/help/destinations/api/ad-hoc-activation-api.md)
 * [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md)

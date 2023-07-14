@@ -3,10 +3,10 @@ keywords: Werbung; criteo;
 title: Crito-Verbindung
 description: Criteo ermöglicht vertrauenswürdige und wirkungsvolle Werbung, um jedem Verbraucher im offenen Internet reichhaltigere Erlebnisse zu bieten. Mit dem weltweit größten Commerce-Datensatz und einer erstklassigen KI stellt Criteo sicher, dass jeder Touchpoint über die Einkaufs-Journey personalisiert ist, um Kunden zur richtigen Zeit mit der richtigen Anzeige zu erreichen.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 8211ca28462548e1c17675e504e6de6f5cc55e73
+source-git-commit: 9ccfbeb6ef36b10b8ecbfc25797c26980e7d1dcd
 workflow-type: tm+mt
-source-wordcount: '1007'
-ht-degree: 31%
+source-wordcount: '1005'
+ht-degree: 24%
 
 ---
 
@@ -48,8 +48,8 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 | --- | --- | --- |
-| Exporttyp | Segmentexport | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer oder sonstiges), die im [!DNL Criteo]-Ziel verwendet werden. |
-| Exporthäufigkeit | Streaming | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](../../destination-types.md#streaming-destinations). |
+| Exporttyp | Zielgruppenexport | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder andere), die im [!DNL Criteo] Ziel. |
+| Exporthäufigkeit | Streaming | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform basierend auf der Zielgruppenbewertung aktualisiert wird, sendet der Connector das Update an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](../../destination-types.md#streaming-destinations). |
 
 ## Anwendungsfälle {#use-cases}
 
@@ -61,7 +61,7 @@ Präsentieren Sie Ihr Unternehmen mit relevanten Produktangeboten und flexiblen 
 
 ### Anwendungsfall 2: Website-Konversionen erhöhen
 
-Wenn Besucher Ihre Website verlassen, erinnern Sie sie daran, was ihnen bei Retargeting-Anzeigen fehlt, die Konversionen steigern, indem sie spezielle Angebote und hyperrelevante Angebote anzeigen, egal wohin sie als Nächstes gehen. Verbinden Sie Ihr Adobe-CDP-Segment, um Bestandskunden oder Kunden ähnlich Ihren treuesten Käufern erneut anzusprechen.
+Wenn Besucher Ihre Website verlassen, erinnern Sie sie daran, was ihnen bei Retargeting-Anzeigen fehlt, die Konversionen steigern, indem sie spezielle Angebote und hyperrelevante Angebote anzeigen, egal wohin sie als Nächstes gehen. Verbinden Sie Ihre Adobe-CDP-Zielgruppe, um Bestandskunden oder Kunden ähnlich Ihren treuesten Käufern anzusprechen.
 
 ## Verbinden mit Criteo {#connect}
 
@@ -105,19 +105,19 @@ Geben Sie nach der Authentifizierung beim Ziel die folgenden Verbindungsparamete
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
 
-## Aktivieren von Segmenten für dieses Ziel {#activate-segments}
+## Aktivieren von Zielgruppen für dieses Ziel {#activate-segments}
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Zugriffssteuerung – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md).
+Lesen [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppenexport-Ziele](../../ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
 
 ## Exportierte Daten {#exported-data}
 
-Sie können die exportierten Segmente im [Zentrum für die Verwaltung von Kriterien](https://marketing.criteo.com/audience-manager/dashboard).
+Die exportierten Zielgruppen werden im [Zentrum für die Verwaltung von Kriterien](https://marketing.criteo.com/audience-manager/dashboard).
 
 Der Anfragetext zum Hinzufügen eines Benutzerprofils, das von der [!DNL Criteo] -Verbindung sieht in etwa wie folgt aus:
 

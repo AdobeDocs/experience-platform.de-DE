@@ -1,12 +1,12 @@
 ---
 keywords: Personalisierung;Personalisierung
 title: Personalisierungsziele – Übersicht
-description: Personalisierungsplattformen erfassen Daten und Insights aus individuellen Verhaltensweisen. Diese Plattformen können Marketern dabei helfen, anonyme Daten richtig zu nutzen und Angebote oder Anzeigen für potenzielle Neukunden bereitzustellen, die auf vorherigen Aktivitäten oder auf Zielgruppensegmenten mit ähnlichen Gewohnheiten basieren.
+description: Personalisierungsplattformen erfassen Daten und Insights aus individuellen Verhaltensweisen. Diese Plattformen können Marketing-Experten dabei unterstützen, anonyme Daten zu navigieren, Angebote oder Anzeigen für potenzielle Kunden bereitzustellen, die auf früheren Aktivitäten oder im Rahmen von Zielgruppen mit ähnlichen Gewohnheiten basieren.
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-source-git-commit: 0dbd050a9057f491537777ab539bfc687f8c89cb
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '153'
-ht-degree: 100%
+source-wordcount: '151'
+ht-degree: 62%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 100%
 
 ## Übersicht {#overview}
 
-Personalisierungsplattformen erfassen Daten und Insights aus individuellen Verhaltensweisen. Diese Plattformen können Marketern dabei helfen, anonyme Daten richtig zu nutzen und Angebote oder Anzeigen für potenzielle Neukunden bereitzustellen, die auf vorherigen Aktivitäten oder auf Zielgruppensegmenten mit ähnlichen Gewohnheiten basieren.
+Personalisierungsplattformen erfassen Daten und Insights aus individuellen Verhaltensweisen. Diese Plattformen können Marketing-Experten dabei unterstützen, anonyme Daten zu navigieren, Angebote oder Anzeigen für potenzielle Kunden bereitzustellen, die auf früheren Aktivitäten oder im Rahmen von Zielgruppen mit ähnlichen Gewohnheiten basieren.
 
 ## Unterstützte Personalisierungsziele {#supported-destinations}
 

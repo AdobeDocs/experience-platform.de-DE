@@ -2,10 +2,10 @@
 title: Vorlage für Dokumentations-Self-Service // Ersetzen Sie durch den Namen Ihres Ziels.
 description: Verwenden Sie diese Vorlage, um eine öffentliche Dokumentation für Ihr Ziel im Adobe Experience Platform-Katalog zu erstellen. // Ersetzen Sie durch den Absatz im Abschnitt "Übersicht".
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 1773edff56059cf5bc57ebaaa133216423fcfe10
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1528'
-ht-degree: 38%
+source-wordcount: '1525'
+ht-degree: 35%
 
 ---
 
@@ -18,8 +18,7 @@ ht-degree: 38%
 >[!IMPORTANT]
 >
 >* Füllen Sie alle Abschnitte in dieser Vorlage in der Reihenfolge aus, in der sie in der Vorlage beschrieben sind.
->* Diese Vorlage wird aufgrund des Partner-Feedbacks gelegentlich aktualisiert. Bevor Sie mit der Erstellung der Dokumentation für Ihr Ziel beginnen, stellen Sie sicher, dass Sie die [aktuelle Version der Vorlage](../assets/docs-framework/yourdestination-template.zip).
-
+>* Diese Vorlage wird aufgrund des Partner-Feedbacks gelegentlich aktualisiert. Bevor Sie mit der Erstellung der Dokumentation für Ihr Ziel beginnen, stellen Sie sicher, dass Sie die [aktuelle Version der Vorlage](../assets/docs-framework/yourdestination-template.zip) heruntergeladen haben.
 
 ## Übersicht {#overview}
 
@@ -43,7 +42,7 @@ Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie die *YourDestination* 
 
 *Für soziale Netzwerkplattformen:*
 
-*Eine Marke für Sportbekleidung möchte bestehende Kunden über ihre Social-Media-Konten erreichen. Die Bekleidungsmarke kann E-Mail-Adressen aus ihrem eigenen CRM-System in Adobe Experience Platform erfassen, Segmente aus ihren eigenen Offline-Daten erstellen und diese Segmente an YourDestination senden, um Anzeigen in den Social-Media-Feeds ihrer Kunden anzuzeigen.*
+*Eine Marke für Sportbekleidung möchte bestehende Kunden über ihre Social-Media-Konten erreichen. Die Bekleidungsmarke kann E-Mail-Adressen aus ihrem eigenen CRM-System in Adobe Experience Platform erfassen, Zielgruppen aus ihren eigenen Offline-Daten erstellen und diese Zielgruppen an YourDestination senden, um Anzeigen in den Social-Media-Feeds ihrer Kunden anzuzeigen.*
 
 ## Voraussetzungen {#prerequisites}
 
@@ -81,10 +80,10 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer oder andere), die im *YourDestination* Ziel. |
+| Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder andere), die im *YourDestination* Ziel. |
 | Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B. E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm „Auswählen der Profilattribute“ im [Zielaktivierungs-Workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) festgelegt. |
 | Exporttyp | **[!UICONTROL Datensatzexport]** | Sie exportieren Rohdatensätze, die nicht nach Zielgruppeninteressen oder Qualifikationen gruppiert oder strukturiert sind. |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform basierend auf der Zielgruppenbewertung aktualisiert wird, sendet der Connector das Update an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 | Exporthäufigkeit | **[!UICONTROL Batch]** | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Weitere Informationen finden Sie unter [Batch-Datei-basierte Ziele](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -123,19 +122,19 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Warnhinweisen zu Zielen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
 
-## Aktivieren von Segmenten für dieses Ziel {#activate}
+## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 *Entf, falls zutreffend - Wenn Sie ein neues Streaming-Ziel dokumentieren, behalten Sie den ersten Absatz unten bei. Wenn Sie ein neues dateibasiertes Ziel dokumentieren, behalten Sie den zweiten Absatz bei. Wenn Sie ein Ziel dokumentieren, das Datensätze exportiert, behalten Sie den dritten Absatz bei.*
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
+Lesen [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppenexport-Ziele](/help/destinations/ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md).
+Lesen [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](/help/destinations/ui/activate-batch-profile-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
 
 Lesen [(Beta) Exportieren von Datensätzen](/help/destinations/ui/export-datasets.md) ausführliche Anweisungen zum Exportieren von Datensätzen an dieses Ziel.
 
@@ -148,7 +147,7 @@ Lesen [(Beta) Exportieren von Datensätzen](/help/destinations/ui/export-dataset
 
 ## Exportierte Daten/Datenexport validieren {#exported-data}
 
-*Fügen Sie einen Absatz hinzu, in dem beschrieben wird, wie Daten an Ihr Ziel exportiert werden. Dadurch kann der Kunde sicherstellen, dass er korrekt in Ihr Ziel integriert ist. Sie können beispielsweise eine JSON-Beispieldatei wie die unten stehende bereitstellen. Sie können auch Screenshots und Informationen aus der Benutzeroberfläche Ihres Ziels bereitstellen, die zeigen, wie Kunden erwarten sollten, dass Segmente in die Zielplattform gefüllt werden.*
+*Fügen Sie einen Absatz hinzu, in dem beschrieben wird, wie Daten an Ihr Ziel exportiert werden. Dadurch kann der Kunde sicherstellen, dass er korrekt in Ihr Ziel integriert ist. Sie können beispielsweise eine JSON-Beispieldatei wie die unten stehende bereitstellen. Alternativ können Sie Screenshots und Informationen aus der Benutzeroberfläche Ihres Ziels bereitstellen, die zeigen, wie Kunden erwarten sollten, dass Zielgruppen in die Zielplattform gelangen.*
 
 ```
 {

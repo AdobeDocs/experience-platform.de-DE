@@ -3,10 +3,10 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager-Verbindung
 description: Google Ad Manager, früher als DoubleClick für Herausgeber oder DoubleClick AdX bekannt, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '938'
-ht-degree: 84%
+source-wordcount: '992'
+ht-degree: 66%
 
 ---
 
@@ -22,8 +22,8 @@ Beachten Sie folgende Details, die speziell für [!DNL Google Ad Manager]-Ziele 
 
 * Aktivierte Zielgruppen werden in der [!DNL Google]-Plattform programmgesteuert erstellt.
 * [!DNL Platform] umfasst derzeit keine Messmetrik zur Validierung erfolgreicher Aktivierungen. Konsultieren Sie die Audience-Zahlen in Google, um die Integration zu validieren und die Audience-Größe zu verstehen.
-* Nachdem Sie ein Segment einem [!DNL Google Ad Manager]-Ziel zugeordnet haben, wird der Segmentname sofort in der [!DNL Google Ad Manager]-Benutzeroberfläche angezeigt.
-* Es dauert 24-48 Stunden, bis die Segmentpopulation in [!DNL Google Ad Manager] angezeigt wird. Darüber hinaus müssen Segmente über eine Zielgruppengröße von mindestens 50 Profilen verfügen, damit sie in [!DNL Google Ad Manager] angezeigt werden. Segmente mit Zielgruppengrößen von weniger als 50 Profilen werden nicht in [!DNL Google Ad Manager] aufgeführt.
+* Nach dem Zuordnen einer Zielgruppe zu einem [!DNL Google Ad Manager] Ziel, wird der Zielgruppenname sofort im [!DNL Google Ad Manager] -Benutzeroberfläche.
+* Es dauert 24-48 Stunden, bis die Segmentpopulation in [!DNL Google Ad Manager] angezeigt wird. Darüber hinaus müssen Zielgruppen eine Zielgruppengröße von mindestens 50 Profilen aufweisen, damit sie in [!DNL Google Ad Manager]. Zielgruppen mit einer Größe von weniger als 50 Profilen werden nicht in [!DNL Google Ad Manager].
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -41,14 +41,28 @@ Beachten Sie folgende Details, die speziell für [!DNL Google Ad Manager]-Ziele 
 
 {style="table-layout:auto"}
 
+## Unterstützte Zielgruppen {#supported-audiences}
+
+In diesem Abschnitt werden alle Zielgruppen beschrieben, die Sie an dieses Ziel exportieren können.
+
+Alle Ziele unterstützen die Aktivierung von Zielgruppen, die durch die Experience Platform generiert wurden [Segmentierungsdienst](../../../segmentation/home.md).
+
+Darüber hinaus unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
+
+| Zielgruppentyp | Beschreibung |
+---------|----------|
+| Benutzerdefinierte Uploads | Zielgruppen, die aus CSV-Dateien in Experience Platform aufgenommen werden. |
+
+{style="table-layout:auto"}
+
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) in das Google-Ziel. |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe in das Google-Ziel. |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform basierend auf der Zielgruppenbewertung aktualisiert wird, sendet der Connector das Update an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -75,8 +89,8 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tut
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam_appendSegmentID"
->title="Segment-ID an Segmentname anfügen"
->abstract="Wählen Sie diese Option, damit der Segmentname in Google Ad Manager die Segment-ID aus Experience Platform wie folgt enthält: `Segment Name (Segment ID)`"
+>title="Zielgruppen-ID an Zielgruppennamen anhängen"
+>abstract="Wählen Sie diese Option aus, damit der Zielgruppenname in Google Ad Manager die Zielgruppen-ID aus Experience Platform wie folgt enthält: `Audience Name (Audience ID)`"
 
 Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
@@ -86,7 +100,7 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 * **[!UICONTROL Kontotyp]**: Wählen Sie je nach Konto bei Google eine Option aus:
    * Verwenden von `DFP by Google` für [!DNL DoubleClick] for Publishers
    * Verwenden von `AdX buyer` für [!DNL Google AdX]
-* **[!UICONTROL Segment-ID an Segmentname anhängen]**: Wählen Sie diese Option, damit der Segmentname in Google Ad Manager die Segment-ID aus Experience Platform wie folgt enthält: `Segment Name (Segment ID)`.
+* **[!UICONTROL Zielgruppen-ID an Zielgruppennamen anhängen]**: Wählen Sie diese Option aus, damit der Zielgruppenname in Google Ad Manager die Zielgruppen-ID aus Experience Platform wie folgt enthält: `Audience Name (Audience ID)`.
 
 >[!NOTE]
 >
@@ -96,15 +110,15 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
 
-## Aktivieren von Segmenten für dieses Ziel {#activate}
+## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md).
+Siehe [Aktivieren von Zielgruppendaten für Streaming-Zielgruppenexport-Ziele](../../ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
 
 ## Exportierte Daten {#exported-data}
 

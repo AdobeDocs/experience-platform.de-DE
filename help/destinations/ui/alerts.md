@@ -3,7 +3,7 @@ keywords: Experience Platform; Homepage; beliebte Themen Warnhinweise; Ziele
 description: Sie können Warnhinweise abonnieren, wenn Sie einen Datenfluss erstellen, um Warnhinweise zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten.
 title: Abonnieren von kontextbezogenen Zielwarnhinweisen
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: 3bb9858c236c91e1567fd8e78988f4049537ffe3
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 21%
@@ -51,10 +51,10 @@ Die für Ziel-Datenflüsse verfügbaren Warnhinweise sind in der folgenden Tabel
 
 | Warnhinweise | Beschreibung |
 | --- | --- |
-| Verzögerung bei der Ausführung des Zielflusses | Dieser Warnhinweis benachrichtigt Sie, wenn die Aktivierung eines Segments länger als 150 Minuten dauert, bis ein Zielfluss ausgeführt wird. |
-| Fehler beim Ausführen des Zielflusses | Dieser Warnhinweis benachrichtigt Sie, wenn beim Aktivieren eines Segments für ein Ziel ein Fehler auftritt. |
-| Erfolgreiche Ausführung des Zielflusses | Dieser Warnhinweis benachrichtigt Sie, wenn ein Segment erfolgreich für ein Ziel aktiviert wurde. |
-| Start der Ausführung des Zielflusses | Dieser Warnhinweis benachrichtigt Sie, wenn ein Zielflussablauf mit der Aktivierung eines Segments beginnt. |
+| Verzögerung bei der Ausführung des Zielflusses | Dieser Warnhinweis benachrichtigt Sie, wenn die Aktivierung einer Audience länger als 150 Minuten dauert, bis ein Zielfluss ausgeführt wird. |
+| Fehler beim Ausführen des Zielflusses | Dieser Warnhinweis benachrichtigt Sie, wenn beim Aktivieren einer Zielgruppe ein Fehler auftritt. |
+| Erfolgreiche Ausführung des Zielflusses | Dieser Warnhinweis benachrichtigt Sie, wenn eine Zielgruppe erfolgreich für ein Ziel aktiviert wurde. |
+| Start der Ausführung des Zielflusses | Dieser Warnhinweis benachrichtigt Sie, wenn ein Zielflussablauf mit der Aktivierung einer Zielgruppe beginnt. |
 | Aktivierungsübersprungene Rate überschritten | Dieser Warnhinweis benachrichtigt Sie, wenn die Übersprungrate der Aktivierung 1 % der gesamten Aktivierungen überschritten hat. Identitäten werden während der Aktivierung übersprungen, wenn sie fehlende Attribute oder Zustimmungsverletzungen aufweisen. |
 
 ## Warnungen erhalten {#receiving-alerts}

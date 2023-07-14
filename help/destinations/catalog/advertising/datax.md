@@ -2,10 +2,10 @@
 title: Verbindung mit Verizon MediaYahoo DataX
 description: DataX ist eine aggregierte Infrastruktur von Verizon Media/Yahoo, die verschiedene Komponenten hostet, mit denen Verizon Media/Yahoo Daten mit externen Partnern auf sichere, automatisierte und skalierbare Weise austauschen kann.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: 0580816c471400ba17eddcb6b1a9dfbf01797938
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '778'
-ht-degree: 51%
+source-wordcount: '776'
+ht-degree: 47%
 
 ---
 
@@ -54,7 +54,7 @@ Mehr dazu [Taxonomie-Metadaten](https://developer.verizonmedia.com/datax/guide/t
 
 >[!IMPORTANT]
 >
->Beim Aktivieren von mehr als 100 Segmenten für [!DNL Verizon Media/Yahoo DataX]können Sie Ratenbegrenzungsfehler vom Ziel erhalten. Versuchen Sie beim Aktivieren von Segmenten für dieses Ziel, weniger als 100 Segmente in einem Aktivierungsdatenfluss zu aktivieren. Wenn Sie weitere Segmente aktivieren müssen, erstellen Sie ein neues Ziel für dasselbe Konto.
+>Beim Aktivieren von mehr als 100 Zielgruppen für [!DNL Verizon Media/Yahoo DataX]können Sie Ratenbegrenzungsfehler vom Ziel erhalten. Versuchen Sie beim Aktivieren von Zielgruppen für dieses Ziel, weniger als 100 Zielgruppen in einem Aktivierungsdatenfluss zu aktivieren. Wenn Sie weitere Segmente aktivieren müssen, erstellen Sie ein neues Ziel für dasselbe Konto.
 
 [!DNL DataX] ist durch die im Abschnitt [DataX-Dokumentation](https://developer.verizonmedia.com/datax/guide/rate-limits/).
 
@@ -83,14 +83,14 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (E-Mail, GAID, IDFA), die im Verizon Media-Ziel verwendet werden. |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (E-Mail, GAID, IDFA), die im Verizon Media-Ziel verwendet werden. |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform basierend auf der Zielgruppenbewertung aktualisiert wird, sendet der Connector das Update an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Anwendungsfälle {#use-cases}
 
-[!DNL DataX] APIs stehen für Advertiser zur Verfügung, die eine bestimmte Zielgruppe ansprechen möchten, die von E-Mail-Adressen in eingegeben wurde. [!DNL Verizon Media] (VMG) können schnell ein neues Segment erstellen und die gewünschte Zielgruppe mithilfe der nahezu Echtzeit-API von VMG übertragen.
+[!DNL DataX] APIs stehen für Advertiser zur Verfügung, die eine bestimmte Zielgruppe ansprechen möchten, die von E-Mail-Adressen in eingegeben wurde. [!DNL Verizon Media] (VMG) können schnell eine neue Zielgruppe erstellen und die gewünschte Zielgruppe mithilfe der nahezu Echtzeit-API von VMG übertragen.
 
 ## Mit Ziel verbinden {#connect}
 
@@ -114,15 +114,15 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
 
-## Aktivieren von Segmenten für dieses Ziel {#activate}
+## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Lesen [Profile und Segmente für ein Ziel aktivieren](../../ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppensegmenten für Ziele.
+Lesen [Profile und Zielgruppen für ein Ziel aktivieren](../../ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für Ziele.
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

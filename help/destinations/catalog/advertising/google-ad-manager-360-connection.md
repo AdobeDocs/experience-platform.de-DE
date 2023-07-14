@@ -2,10 +2,10 @@
 title: (Beta)  [!DNL Google Ad Manager 360] -Verbindung
 description: Google Ad Manager 360 ist eine Adserving-Plattform von Google, die Publishern die Möglichkeit gibt, das Anzeigen von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '974'
-ht-degree: 83%
+source-wordcount: '1030'
+ht-degree: 73%
 
 ---
 
@@ -36,6 +36,20 @@ Beachten Sie folgende Details, die speziell für [!DNL Google Ad Manager 360]-Zi
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
 | PPID | [!DNL Publisher provided ID] | Wählen Sie diese Zielidentität aus, um Zielgruppen an [!DNL Google Ad Manager 360] zu senden. |
+
+{style="table-layout:auto"}
+
+## Unterstützte Zielgruppen {#supported-audiences}
+
+In diesem Abschnitt werden alle Zielgruppen beschrieben, die Sie an dieses Ziel exportieren können.
+
+Alle Ziele unterstützen die Aktivierung von Zielgruppen, die durch die Experience Platform generiert wurden [Segmentierungsdienst](../../../segmentation/home.md).
+
+Darüber hinaus unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
+
+| Zielgruppentyp | Beschreibung |
+---------|----------|
+| Benutzerdefinierte Uploads | Zielgruppen, die aus CSV-Dateien in Experience Platform aufgenommen werden. |
 
 {style="table-layout:auto"}
 
@@ -85,8 +99,8 @@ Weitere Informationen zu diesen Werten finden Sie im Handbuch [HMAC-Schlüssel f
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="Segment-ID an Segmentname anfügen"
->abstract="Wählen Sie diese Option aus, damit der Segmentname in Google Ad Manager 360 die Segment-ID aus Experience Platform wie folgt enthält: `Segment Name (Segment ID)`"
+>title="Zielgruppen-ID an Zielgruppennamen anhängen"
+>abstract="Wählen Sie diese Option aus, damit der Zielgruppenname in Google Ad Manager 360 die Zielgruppen-ID aus Experience Platform wie folgt enthält: `Audience Name (Audience ID)`"
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
@@ -98,28 +112,28 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 * **[!UICONTROL Kontotyp]**: Wählen Sie je nach [!DNL Google] Konto:
    * Verwenden von `AdX buyer` für [!DNL Google AdX]
    * Verwenden von `DFP by Google` für [!DNL DoubleClick] for Publishers
-* **[!UICONTROL Segment-ID an Segmentname anhängen]**: Wählen Sie diese Option aus, damit der Segmentname in Google Ad Manager 360 die Segment-ID aus Experience Platform wie folgt enthält: `Segment Name (Segment ID)`.
+* **[!UICONTROL Zielgruppen-ID an Zielgruppennamen anhängen]**: Wählen Sie diese Option aus, damit der Zielgruppenname in Google Ad Manager 360 die Zielgruppen-ID aus Experience Platform wie folgt enthält: `Audience Name (Audience ID)`.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
 
-## Aktivieren von Segmenten für dieses Ziel {#activate}
+## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Anweisungen zum Aktivieren von Audience-Segmenten für dieses Ziel finden Sie unter [Aktivieren von Audience-Daten für Batch-Profil-Exportziele](../../ui/activate-batch-profile-destinations.md).
+Siehe [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](../../ui/activate-batch-profile-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
 
 Im Schritt zur Identitätszuordnung sehen Sie die folgenden vorausgefüllten Zuordnungen:
 
 | Vorausgefüllte Zuordnung | Beschreibung |
 |---------|----------|
 | `ECID` -> `ppid` | Dies ist die einzige vorausgefüllte Zuordnung, die von Benutzenden bearbeitet werden kann. Sie können beliebige Attribute oder Identitäts-Namespaces aus Platform auswählen und sie `ppid` zuordnen. |
-| `metadata.segment.alias` -> `list_id` | Ordnet Segmentnamen von Experience Platform Segment-IDs in der Google-Plattform zu. |
+| `metadata.segment.alias` -> `list_id` | Ordnet den Zielgruppennamen der Experience Platform den Zielgruppen-IDs in der Google-Plattform zu. |
 | `iif(${segmentMembership.ups.seg_id.status}=="exited", "1","0")` -> `delete` | Teilt der Google-Plattform mit, wann disqualifizierte Benutzende aus Segmenten entfernt werden sollen. |
 
 Diese Zuordnungen sind erforderlich für [!DNL Google Ad Manager 360] und werden von Adobe Experience Platform automatisch für alle [!DNL Google Ad Manager 360]-Verbindungen erstellt.

@@ -2,10 +2,10 @@
 title: Mailchimp-Interessenkategorien
 description: Mailchimp (auch Intuit Mailchimp genannt) ist eine beliebte Marketing-Automatisierungsplattform und ein E-Mail-Marketing-Service, die von Unternehmen verwendet werden, um Kontakte (Kunden, Kunden oder andere interessierte Parteien) mithilfe von Mailinglisten und E-Mail-Marketing-Kampagnen zu verwalten und mit ihnen zu kommunizieren. Verwenden Sie diesen Connector, um Ihre Kontakte nach ihren Interessen und Vorlieben zu sortieren.
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: f8ccf9303fbcb010225881942de5e672b4111072
+source-git-commit: a293df660a9b959d12bdc170d1cb69f3543a30f1
 workflow-type: tm+mt
-source-wordcount: '2357'
-ht-degree: 22%
+source-wordcount: '2356'
+ht-degree: 21%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 22%
 
 [[!DNL Mailchimp]](https://mailchimp.com) ist eine beliebte Marketing-Automatisierungsplattform und ein E-Mail-Marketing-Service, der von Unternehmen zur Verwaltung und Kommunikation von Kontakten verwendet wird. *(Kunden, Kunden oder sonstige interessierte Parteien)* Verwendung von Mailinglisten und E-Mail-Marketing-Kampagnen. Verwenden Sie diesen Connector, um Ihre Kontakte nach ihren Interessen und Vorlieben zu sortieren.
 
-[!DNL Mailchimp Interest Categories] uses [Zielgruppen](https://mailchimp.com/help/getting-started-audience/), [Gruppen](https://mailchimp.com/help/getting-started-with-groups/), Interessenkategorien *(auch als Gruppennamen oder Gruppentitel bezeichnet)*. Jeder [!DNL Mailchimp] -Gruppe ist eine Liste von Interessenkategorien. Kontakte werden einer Interessenkategorie zugeordnet, wenn sie über ein Anmeldeformular auf Ihrer Website eine oder mehrere Interessenskategorien abonnieren. Innerhalb einer Zielgruppe können Sie die Kontakte auch in Gruppen organisieren und sie Interessenkategorien zuordnen. Diese können dann zur Erstellung von Segmenten verwendet werden. Sie können diese Segmente verwenden, um zielgerichtete Kampagnen-E-Mails an die angemeldeten Kontakte zu senden.
+[!DNL Mailchimp Interest Categories] uses [Zielgruppen](https://mailchimp.com/help/getting-started-audience/), [Gruppen](https://mailchimp.com/help/getting-started-with-groups/), Interessenkategorien *(auch als Gruppennamen oder Gruppentitel bezeichnet)*. Jeder [!DNL Mailchimp] -Gruppe ist eine Liste von Interessenkategorien. Kontakte werden einer Interessenkategorie zugeordnet, wenn sie über ein Anmeldeformular auf Ihrer Website eine oder mehrere Interessenskategorien abonnieren. Innerhalb einer Zielgruppe können Sie die Kontakte auch in Gruppen organisieren und sie Interessenkategorien zuordnen. Diese können dann zur Erstellung von Segmenten verwendet werden. Sie können diese Zielgruppen verwenden, um zielgerichtete Kampagnen-E-Mails an die angemeldeten Kontakte zu senden.
 
 <!--
 Compared to [!DNL Mailchimp Tags] which you would use for internal classification, [!DNL Mailchimp Interest Categories] is meant to manage subscriptions to topics of interest that your contacts might be interested in. *Note, Experience Platform also has a connection for [!DNL Mailchimp Tags], you can check it out on the [[!DNL Mailchimp Tags]](/help/destinations/catalog/email-marketing/mailchimp-tags.md) page.*
 -->
 
-Diese [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) verwendet die [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) API zum Erstellen [Interessenkategorien](https://mailchimp.com/developer/marketing/api/interest-categories/) und fügen dann Kontakte aus den ausgewählten Platform-Segmenten zu einer entsprechenden Interessenkategorie hinzu. Sie können **neue Kontakte hinzufügen** oder **Aktualisierung vorhandener Informationen [!DNL Mailchimp] contact**, dann **sie zu den gewünschten Gruppen hinzufügen oder daraus entfernen** innerhalb eines vorhandenen [!DNL Mailchimp] Zielgruppe, nachdem sie in einem neuen Segment aktiviert wurden. [!DNL Mailchimp Interest Groups] verwendet die ausgewählten Segmentnamen aus Platform als Interessenkategorien in [!DNL Mailchimp].
+Diese [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) verwendet die [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) API zum Erstellen [Interessenkategorien](https://mailchimp.com/developer/marketing/api/interest-categories/) und fügen dann Kontakte aus den ausgewählten Platform-Audiences in eine entsprechende Interessenkategorie ein. Sie können **neue Kontakte hinzufügen** oder **Aktualisierung vorhandener Informationen [!DNL Mailchimp] contact**, dann **sie zu den gewünschten Gruppen hinzufügen oder daraus entfernen** innerhalb eines vorhandenen [!DNL Mailchimp] Zielgruppe, nachdem sie in einem neuen Segment aktiviert wurden. [!DNL Mailchimp Interest Groups] verwendet die ausgewählten Zielgruppennamen aus Platform als Interessenkategorien in [!DNL Mailchimp].
 
 ## Anwendungsfälle {#use-cases}
 
@@ -27,7 +27,7 @@ Damit Sie besser verstehen können, wie und wann Sie das [!DNL Mailchimp Interes
 
 ### Senden von E-Mails an Kontakte für Marketingkampagnen {#use-case-send-emails}
 
-Die Verkaufsabteilung einer Sportartikelwebsite möchte eine E-Mail-basierte Marketing-Kampagne an eine Liste von Kontakten senden, die sich selbst als an Fußball interessiert identifiziert haben. Die Kontaktlisten werden als Batches im Datenexport getrennt, die vom Entwicklungsteam der Website empfangen wurden, und müssen daher verfolgt werden. Das Team identifiziert ein vorhandenes [!DNL Mailchimp] und beginnt mit der Erstellung der Experience Platform-Segmente, denen die Kontakte aus den einzelnen Listen hinzugefügt werden. Nach dem Senden dieser Segmente an [!DNL Mailchimp Interest Categories], wenn in der ausgewählten Option keine Kontakte vorhanden sind [!DNL Mailchimp] Zielgruppe hinzugefügt werden, wird sie zu einer Gruppe mit dem Segmentnamen hinzugefügt, zu dem der Kontakt gehört. Wenn bereits Kontakte im [!DNL Mailchimp] Zielgruppe oder Gruppe erstellen, werden deren Informationen aktualisiert. Sobald die Daten an [!DNL Mailchimp Interest Categories]kann das Sales-Team die Marketing-Kampagnen-E-Mail auswählen und an die Fußball-Interessengruppe innerhalb der [!DNL Mailchimp] Zielgruppe.
+Die Verkaufsabteilung einer Sportartikelwebsite möchte eine E-Mail-basierte Marketing-Kampagne an eine Liste von Kontakten senden, die sich selbst als an Fußball interessiert identifiziert haben. Die Kontaktlisten werden als Batches im Datenexport getrennt, die vom Entwicklungsteam der Website empfangen wurden, und müssen daher verfolgt werden. Das Team identifiziert ein vorhandenes [!DNL Mailchimp] und beginnt damit, die Zielgruppen der Experience Platform zu erstellen, in die die Kontakte aus den einzelnen Listen aufgenommen werden. Nach dem Senden dieser Zielgruppen an [!DNL Mailchimp Interest Categories], wenn in der ausgewählten Option keine Kontakte vorhanden sind [!DNL Mailchimp] Zielgruppe hinzugefügt werden, wird sie einer Gruppe mit dem Zielgruppennamen hinzugefügt, zu dem der Kontakt gehört. Wenn bereits Kontakte im [!DNL Mailchimp] Zielgruppe oder Gruppe erstellen, werden deren Informationen aktualisiert. Sobald die Daten an [!DNL Mailchimp Interest Categories]kann das Sales-Team die Marketing-Kampagnen-E-Mail auswählen und an die Fußball-Interessengruppe innerhalb der [!DNL Mailchimp] Zielgruppe.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -91,8 +91,8 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | <ul><li>Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern *(z. B.: E-Mail-Adresse, Telefonnummer, Nachname)*, entsprechend Ihrer Feldzuordnung.</li><li> Für jedes ausgewählte Segment in Platform muss die entsprechende [!DNL Mailchimp Interest Categories] Segmentstatus mit dem Segmentstatus von Platform aktualisiert.</li></ul> |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Wenn ein Profil in Experience Platform basierend auf der Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttyp | **[!UICONTROL Profilbasiert]** | <ul><li>Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern *(z. B.: E-Mail-Adresse, Telefonnummer, Nachname)*, entsprechend Ihrer Feldzuordnung.</li><li> Für jede ausgewählte Zielgruppe in Platform wird die entsprechende [!DNL Mailchimp Interest Categories] Der Segmentstatus wird mit dem Zielgruppenstatus von Platform aktualisiert.</li></ul> |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Wenn ein Profil in Experience Platform basierend auf der Zielgruppenbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -145,15 +145,15 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
 
-## Aktivieren von Segmenten für dieses Ziel {#activate}
+## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 >
->Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Zugriffssteuerung – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
+Lesen [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppenexport-Ziele](/help/destinations/ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
 
 ### Zuordnungsüberlegungen und Beispiel {#mapping-considerations-example}
 
@@ -195,8 +195,8 @@ Gehen Sie wie folgt vor, um zu überprüfen, ob Sie das Ziel korrekt eingerichte
 
 ![Screenshot der Benutzeroberfläche von Mailchimp mit der Seite &quot;Zielgruppe&quot;.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 
-* Wählen Sie die Gruppe aus und überprüfen Sie, ob die ausgewählten Segmente als Kategorien mit dem Segmentnamen aus Platform erstellt werden. Dem kann ein automatisch generiertes Suffix folgen.
-   * Dieses Ziel verwendet die Namen der ausgewählten Segmente, um mithilfe der [[!DNL Mailchimp] Interessenkategorie-API hinzufügen](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/). Wenn Sie ein neues Ziel erstellen und dieselben Segmente erneut aktivieren, [!DNL Mailchimp] fügt ein Suffix hinzu, um zwischen den vorhandenen und den neuen Segmenten zu unterscheiden.
+* Wählen Sie die Gruppe aus und prüfen Sie, ob die ausgewählten Zielgruppen als Kategorien mit dem Zielgruppennamen aus Platform erstellt wurden. Dem können automatisch generierte Suffix folgen.
+   * Dieses Ziel verwendet die Namen der ausgewählten Segmente, um mithilfe der [[!DNL Mailchimp] Interessenkategorie-API hinzufügen](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/). Wenn Sie ein neues Ziel erstellen und dieselben Zielgruppen erneut aktivieren, [!DNL Mailchimp] fügt ein Suffix hinzu, um zwischen den vorhandenen und den neuen Segmenten zu unterscheiden.
 * Kontakte, deren E-Mails nicht in der Gruppe vorhanden waren, werden der neu erstellten Kategorie hinzugefügt.
 * Für Kontakte, die bereits in der Gruppe vorhanden sind, werden die Attributfelddaten aktualisiert und der Kontakt zur neu erstellten Kategorie hinzugefügt.
 

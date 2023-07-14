@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Bearbeiten von Zielverbindungen mit der Flow Service-API
 type: Tutorial
 description: Erfahren Sie, wie Sie verschiedene Komponenten einer Zielverbindung mit der Flow Service-API bearbeiten.
-source-git-commit: 2afe330176c2b7734c38cf47be79960175060824
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1580'
 ht-degree: 33%
@@ -245,7 +245,7 @@ Bei einer erfolgreichen Antwort werden Ihre Ziel-Verbindungs-ID und ein aktualis
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert die Parameter einer [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) oder [[!DNL Google Ad Manager 360] Ziel](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) Verbindung zum Hinzufügen der neuen [**[!UICONTROL Segment-ID an Segmentname anhängen]**](/help/release-notes/2023/april-2023.md#destinations) -Feld.
+Die folgende Anfrage aktualisiert die Parameter einer [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) oder [[!DNL Google Ad Manager 360] Ziel](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) Verbindung zum Hinzufügen der neuen [**[!UICONTROL Zielgruppen-ID an Zielgruppennamen anhängen]**](/help/release-notes/2023/april-2023.md#destinations) -Feld.
 
 ```shell
 curl -X PATCH \

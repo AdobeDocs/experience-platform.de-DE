@@ -3,10 +3,10 @@ keywords: Ziele;Ziel;Zieltypen
 title: Zieltypen und Kategorien
 description: Erfahren Sie mehr über die verschiedenen Zieltypen und -kategorien in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '718'
-ht-degree: 85%
+ht-degree: 72%
 
 ---
 
@@ -24,7 +24,7 @@ Schließlich lassen sich Verbindungen auch zwischen öffentlichen Zielen untersc
 
 ## Verbindungen {#connections}
 
-**[!UICONTROL Profilexport]**, **[!UICONTROL Export von Streaming-Segmenten]** und **[!DNL Edge Personalization]** Ziele in Adobe Experience Platform erfassen Ereignisdaten, kombinieren sie mit anderen Datenquellen, um die [Echtzeit-Kundenprofil](../profile/home.md), wenden Sie die Segmentierung an und exportieren Sie Segmente und qualifizierte Profile in Ziele.
+**[!UICONTROL Profilexport]**, **[!UICONTROL Export von Streaming-Zielgruppen]** und **[!DNL Edge Personalization]** Ziele in Adobe Experience Platform erfassen Ereignisdaten, kombinieren sie mit anderen Datenquellen, um die [Echtzeit-Kundenprofil](../profile/home.md), wenden Sie die Segmentierung an und exportieren Sie Zielgruppen und qualifizierte Profile in Ziele.
 
 ## Profilexportziele {#profile-export}
 
@@ -41,7 +41,7 @@ Ziele von Profilexporten erhalten Rohdaten, wobei die E-Mail-Adresse oft als Pri
 
 Verwenden Sie Data Connectors für Unternehmensziele, um Profile von Adobe Real-time Customer Data Platform nahezu in Echtzeit für interne Systeme oder andere Drittanbietersysteme zur Datensynchronisierung, Analyse und weiteren Anwendungsfällen der Profilanreicherung bereitzustellen.
 
-Diese Ziele erhalten Segment- und Profildaten als Datenströme von Experience Platform.
+Diese Ziele erhalten Zielgruppen- und Profildaten als Experience Platform-Datenströme.
 
 Zu den Unternehmenszielen gehören:
 
@@ -53,9 +53,9 @@ Zu den Unternehmenszielen gehören:
 
 Dateibasierte Ziele empfangen `.csv`-Dateien, die Profile und/oder Attribute enthalten. [Amazon S3](catalog/cloud-storage/amazon-s3.md) ist ein Beispiel für ein Ziel, zu dem Sie Dateien mit Profilexporten exportieren können.
 
-## Exportziele für Streaming-Segmente {#streaming-destinations}
+## Zielgruppenexport-Ziele streamen {#streaming-destinations}
 
-Ziele von Segmentexporten erhalten Daten zu Segmenten von Experience Platform. Diese Ziele nutzen Segment-IDs oder Anwender-IDs. Werbung und Social-Media-Ziele wie [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) oder [Facebook](catalog/social/facebook.md) sind Beispiele für solche Ziele.
+Zielgruppenexport-Ziele erhalten Zielgruppendaten der Experience Platform. Diese Ziele verwenden Zielgruppen-IDs oder Benutzer-IDs. Werbung und Social-Media-Ziele wie [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) oder [Facebook](catalog/social/facebook.md) sind Beispiele für solche Ziele.
 
 ## Edge-Personalisierungsziele {#edge-personalization-destinations}
 
@@ -63,7 +63,7 @@ Zu den Edge-Personalisierungszielen in Experience Platform gehören [Adobe Targe
 
 Erfahren Sie mehr darüber, wie Sie [Personalisierungsziele für die Personalisierung der gleichen Seite und der nächsten Seite konfigurieren](/help/destinations/ui/activate-edge-personalization-destinations.md).
 
-## Ziele für Profil- und Segmentexport – Videoübersicht {#video}
+## Profilexport- und Zielgruppenexport-Ziele - Videoübersicht {#video}
 
 Im folgenden Video werden Sie durch die Besonderheiten der beiden Zieltypen geführt:
 
@@ -91,7 +91,7 @@ Tag-Erweiterungen leiten Rohdaten von Ereignissen an verschiedene Typen von Ziel
 
 Als Marketing-Experte können Sie eine Kombination aus Verbindungen und Erweiterungen verwenden, um Ihre Anwendungsfälle zu bearbeiten.
 
-Verbindungen sind nützlich, wenn es erforderlich ist, ein vollständiges zentralisiertes Kundenprofil oder ein Kundensegment zur Aktivierung zu nutzen. Verwenden Sie beispielsweise Verbindungen, wenn Sie Verhaltensdaten aus einem Analysesystem mit hochgeladenen CRM-Daten verbinden, um einen Benutzer für ein bestimmtes Segment zu qualifizieren, bevor Sie ihm eine personalisierte Nachricht senden.
+Verbindungen sind nützlich, wenn es erforderlich ist, ein vollständiges zentralisiertes Kundenprofil oder eine Kundenzielgruppe zur Aktivierung zu nutzen. Verwenden Sie beispielsweise Verbindungen, wenn Sie Verhaltensdaten aus einem Analysesystem mit hochgeladenen CRM-Daten verbinden, um einen Benutzer für eine bestimmte Zielgruppe zu qualifizieren, bevor Sie ihm eine personalisierte Nachricht senden.
 
 Erweiterungen sind hilfreich, wenn Ereignisdaten zum Auslösen einer Aktion oder zur Segmentierung in einer externen Umgebung verwendet werden. Wenn beispielsweise Verhaltensdaten an ein externes System weitergeleitet werden müssen, ohne dass sie für einen bestimmten Benutzer an andere Datenquellen in der Datei angebunden werden.
 

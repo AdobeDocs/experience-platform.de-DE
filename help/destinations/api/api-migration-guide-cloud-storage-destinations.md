@@ -4,7 +4,7 @@ title: API-Migrationshandbuch für Cloud-Speicher-Ziele
 description: Erfahren Sie mehr über die Änderungen im Workflow zur Aktivierung von Cloud-Speicher-Zielen im Rahmen der Migration zu den neuen Cloud-Speicher-Zielkarten mit zusätzlichen Funktionen.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: b651d15260adbcd37fa396fa0b325a9674a92133
+source-git-commit: 4b9e7c22282a5531f2f25f3d225249e4eb0e178e
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 4%
@@ -67,7 +67,7 @@ TBD if we keep this link but will likely remove it
 [Legacy API tutorial to export data to cloud storage destinations](/help/destinations/api/connect-activate-batch-destinations.md) (outdated, do not use anymore)
 
 -->
-* [API-Tutorial zum Exportieren von Segmenten in Cloud-Speicher-Ziele](/help/destinations/api/activate-segments-file-based-destinations.md)
+* [API-Tutorial zum Exportieren von Zielgruppen in Cloud-Speicher-Ziele](/help/destinations/api/activate-segments-file-based-destinations.md)
 * [Referenzdokumentation zur Ziel Flow Service-API](https://developer.adobe.com/experience-platform-apis/references/destinations/)
 
 ## Zusammenfassung abwärtsinkompatibler Änderungen {#summary-backwards-incompatible-changes}
@@ -684,7 +684,7 @@ Vollständige Informationen zum Einrichten der `profileMapping` -Objekt im [API-
 
 ```json{line-numbers="true" start-line="1" highlight="4-40, 45-53"}
 {
-  "segmentSelectors": { // shortened for brevity since nothing changes in the segment selectors
+  "segmentSelectors": { // shortened for brevity since nothing changes in the audience selectors
   },  
   "profileSelectors": {
     "selectors": [
@@ -752,7 +752,7 @@ Beachten Sie im folgenden Konfigurationsbeispiel wie `profileSelectors` -Felder 
 
 ```json {line-numbers="true" start-line="1" highlight="4-12, 18-20"}
 {
-  "segmentSelectors": { // shortened for brevity since nothing changes in the segment selectors
+  "segmentSelectors": { // shortened for brevity since nothing changes in the audience selectors
   },  
   "mandatoryFields": [
     "CORE",

@@ -1,12 +1,12 @@
 ---
 keywords: Cloud-Speicherziel;Cloud-Speicher
 title: Übersicht über die Cloud-Speicher-Ziele
-description: Adobe Experience Platform kann Ihre Segmente als Datendateien an Ihre Amazon S3-, AWS Kinesis-, Azure Event Hubs- oder SFTP-Cloud-Speicherorte senden.
+description: Adobe Experience Platform kann Ihre Zielgruppen als Datendateien an Ihre Amazon S3-, AWS Kinesis-, Azure Event Hubs- oder SFTP-Cloud-Speicherorte senden.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 4a4c82cc4528fe07bbdb75ae9f795bdbab48c089
+source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
 source-wordcount: '309'
-ht-degree: 100%
+ht-degree: 66%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 100%
 
 ## Übersicht {#overview}
 
-Adobe Experience Platform kann Ihre Segmente als Datendateien an Ihre Cloud-Speicherorte senden. Auf diese Weise können Sie Zielgruppen und deren Profilattribute über CSV-Dateien für [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage] und SFTP an Ihre internen Systeme senden. Für [!DNL Amazon Kinesis]- und [!DNL Azure Event Hubs]-Ziele werden Daten aus Experience Platform im [!DNL JSON]-Format gestreamt.
+Adobe Experience Platform kann Ihre Zielgruppen als Datendateien an Ihre Cloud-Speicherorte übermitteln. Auf diese Weise können Sie Zielgruppen und deren Profilattribute über CSV-Dateien für [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage] und SFTP an Ihre internen Systeme senden. Für [!DNL Amazon Kinesis]- und [!DNL Azure Event Hubs]-Ziele werden Daten aus Experience Platform im [!DNL JSON]-Format gestreamt.
 
 ![Adobe-Cloud-Speicherzele](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
@@ -33,7 +33,7 @@ Adobe Experience Platform unterstützt die folgenden Cloud-Speicherziele:
 
 ## Verbinden mit einem neuen Cloud-Speicherziel {#connect-destination}
 
-Damit Segmente an Cloud-Speicherziele für Ihre Kampagnen gesendet werden können, muss Platform zunächst eine Verbindung mit dem Ziel herstellen. Siehe das [Tutorial zur Zielerstellung](../../ui/connect-destination.md) für detaillierte Informationen zur Einrichtung eines neuen Ziels.
+Um Zielgruppen an Cloud-Speicher-Ziele für Ihre Kampagnen zu senden, muss Platform zunächst eine Verbindung zum Ziel herstellen. Siehe das [Tutorial zur Zielerstellung](../../ui/connect-destination.md) für detaillierte Informationen zur Einrichtung eines neuen Ziels.
 
 
 ## Verwenden von Makros zum Erstellen eines Ordners an Ihrem Speicherort {#use-macros}
@@ -42,11 +42,11 @@ Damit Segmente an Cloud-Speicherziele für Ihre Kampagnen gesendet werden könne
 >
 > Die in diesem Abschnitt beschriebene Funktion ist derzeit nur für [Amazon S3](amazon-s3.md)-Ziele verfügbar.
 
-Sie können Makros im Eingabefeld für den Ordnerpfad verwenden, um einen benutzerdefinierten Ordner pro Segmentdatei an Ihrem Speicherort zu erstellen. Fügen Sie die Makros am Ende des Eingabefelds ein, wie unten dargestellt.
+Um einen benutzerdefinierten Ordner pro Zielgruppendatei in Ihrem Speicherort zu erstellen, können Sie Makros im Eingabefeld Ordnerpfad verwenden. Fügen Sie die Makros am Ende des Eingabefelds ein, wie unten dargestellt.
 
 ![Verwenden von Makros zum Erstellen eines Ordners in Ihrem Speicher](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
 
-Die folgenden Beispiele verweisen auf ein Beispielsegment `Luxury Audience` mit der ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
+Die folgenden Beispiele verweisen auf eine Beispielzielgruppe `Luxury Audience` mit ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
 
 **Makro 1:`%SEGMENT_NAME%`**
 
@@ -65,4 +65,4 @@ Ordnerpfad an Ihrem Speicherort: `acme/campaigns/2021/Luxury Audience/25768be6-e
 
 ## Datenexporttyp {#export-type}
 
-Cloud-Speicherziele unterstützen den **profilbasierten Export**. Das bedeutet, dass Sie Details zu den Einzelpersonen in der Zielgruppe exportieren. Diese Details sind für die Personalisierung erforderlich und können Attribute, Ereignisse, Segmentmitgliedschaften und mehr umfassen.
+Cloud-Speicherziele unterstützen den **profilbasierten Export**. Das bedeutet, dass Sie Details zu den Einzelpersonen in der Zielgruppe exportieren. Diese Details sind für die Personalisierung erforderlich und können Attribute, Ereignisse, Zielgruppenmitgliedschaften und mehr umfassen.

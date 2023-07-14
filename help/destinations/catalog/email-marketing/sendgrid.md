@@ -3,10 +3,10 @@ keywords: E-Mail; E-Mail; E-Mail; E-Mail-Ziele; sendgrid; sendgrid; sendgrid-Zie
 title: SendGrid-Verbindung
 description: Mit dem SendGrid-Ziel können Sie Ihre Erstanbieterdaten exportieren und in SendGrid für Ihre geschäftlichen Anforderungen aktivieren.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1542'
-ht-degree: 28%
+source-wordcount: '1541'
+ht-degree: 24%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 28%
 
 [SendGrid](https://www.sendgrid.com) ist eine beliebte Kundenkommunikationsplattform für Transaktions- und Marketing-E-Mails.
 
-Diese [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt die [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts), mit dem Sie Ihre Erstanbieter-E-Mail-Profile exportieren und in einem neuen SendGrid-Segment für Ihre geschäftlichen Anforderungen aktivieren können.
+Diese [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt die [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts), mit dem Sie Ihre Erstanbieter-E-Mail-Profile exportieren und in einer neuen SendGrid-Zielgruppe für Ihre geschäftlichen Anforderungen aktivieren können.
 
 SendGrid verwendet API-Träger-Token als Authentifizierungsmechanismus für die Kommunikation mit der SendGrid-API.
 
@@ -40,8 +40,7 @@ Bevor Sie Daten für das SendGrid-Ziel aktivieren, müssen Sie über eine [schem
 >
 >* Für die SendGrid-API, die zum Erstellen der Mailing-Liste aus E-Mail-Profilen verwendet wird, müssen innerhalb jedes Profils eindeutige E-Mail-Adressen angegeben werden. Dies ist unabhängig davon, ob es als Wert für *email* oder *alternative email*. Da die SendGrid-Verbindung Zuordnungen für E-Mail- und alternative E-Mail-Werte unterstützt, müssen Sie sicherstellen, dass alle verwendeten E-Mail-Adressen innerhalb jedes Profils der *Datensatz*. Andernfalls tritt beim Senden der E-Mail-Profile an SendGrid ein Fehler auf, und dieses E-Mail-Profil ist im Datenexport nicht vorhanden.
 >
->* Derzeit gibt es keine Funktion zum Entfernen von Profilen aus SendGrid, wenn sie aus Segmenten in Experience Platform entfernt werden.
-
+>* Derzeit gibt es keine Funktion zum Entfernen von Profilen aus SendGrid, wenn sie aus Zielgruppen in Experience Platform entfernt werden.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -60,7 +59,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
 | Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B. E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm „Auswählen der Profilattribute“ im [Zielaktivierungs-Workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) festgelegt. |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform basierend auf der Zielgruppenbewertung aktualisiert wird, sendet der Connector das Update an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -110,31 +109,29 @@ Beim [Einrichten](https://experienceleague.adobe.com/docs/experience-platform/de
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
 
-## Aktivieren von Segmenten für dieses Ziel {#activate}
+## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Zugriffssteuerung – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
+Lesen [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppenexport-Ziele](/help/destinations/ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
 
 Weitere Informationen zu diesem Ziel finden Sie in den folgenden Bildern.
 
-1. Wählen Sie ein oder mehrere Segmente aus, die in SendGrid exportiert werden sollen.
+1. Wählen Sie eine oder mehrere Zielgruppen aus, die in SendGrid exportiert werden sollen.
    ![](../../assets/catalog/email-marketing/sendgrid/11.jpg)
 
 1. Im **[!UICONTROL Zuordnung]** Schritt nach Auswahl **[!UICONTROL Neues Mapping hinzufügen]** angezeigt, wird Ihnen die Zuordnungsseite angezeigt, um die Quell-XDM-Felder den SendGrid-API-Zielfeldern zuzuordnen. Die folgenden Abbildungen zeigen, wie Identitäts-Namespaces zwischen Experience Platform und SendGrid zugeordnet werden. Stellen Sie sicher, dass **[!UICONTROL Quellfeld]** *Email* sollte der **[!UICONTROL Zielfeld]** *external_id* wie unten dargestellt.
    ![](../../assets/catalog/email-marketing/sendgrid/13.jpg)
-
    ![](../../assets/catalog/email-marketing/sendgrid/14.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/15.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/16.jpg)
 
 1. Ordnen Sie die gewünschte [!DNL Adobe Experience Platform] -Attribute, die Sie an das SendGrid-Ziel exportieren möchten.
    ![](../../assets/catalog/email-marketing/sendgrid/17.jpg)
-
    ![](../../assets/catalog/email-marketing/sendgrid/18.jpg)
 
 1. Nachdem Sie die Zuordnungen abgeschlossen haben, wählen Sie **[!UICONTROL Nächste]** , um zum Überprüfungsbildschirm zu gelangen.
@@ -155,7 +152,7 @@ Die umfassende Liste der unterstützten Attributzuordnungen, die für die [Marke
 | identityMap:<br/> Email | Identität:<br/> external_id | Zeichenfolge | Die primäre E-Mail des Kontakts. Dies muss eine gültige E-Mail sein. | Max. Länge:<br/> 254 Zeichen |
 | xdm:<br/> person.name.firstName | xdm:<br/> first_name | Zeichenfolge | Name des Kontakts | Max. Länge:<br/> 50 Zeichen |
 | xdm:<br/> person.name.lastName | xdm:<br/> last_name | Zeichenfolge | Familienname des Kontakts | Max. Länge:<br/> 50 Zeichen |
-| xdm:<br/> homeAddress.postalCode | xdm:<br/> postal_code | Zeichenfolge | Postleitzahl des Kontakts oder andere Postleitzahlen. |  |
+| xdm:<br/> homeAddress.postalCode | xdm:<br/> postal_code | Zeichenfolge | Postleitzahl des Kontakts oder andere Postleitzahlen. | |
 | xdm:<br/> homeAddress.stateProvince | xdm:<br/> state_provin_region | Zeichenfolge | Das Bundesland, die Provinz oder die Region des Kontakts. | Max. Länge:<br/> 50 Zeichen |
 
 ## Validieren des Datenexports in SendGrid {#validate}
@@ -168,22 +165,20 @@ Gehen Sie wie folgt vor, um zu überprüfen, ob Sie das Ziel korrekt eingerichte
 1. Wählen Sie das Ziel aus und überprüfen Sie, ob der Status **[!UICONTROL aktiviert]** ist.
    ![](../../assets/catalog/email-marketing/sendgrid/26.jpg)
 
-1. Wechseln Sie zur Registerkarte **[!DNL Activation data]** und wählen Sie einen Segmentnamen aus.
+1. Wechseln Sie zu **[!DNL Activation data]** und wählen Sie einen Zielgruppennamen aus.
    ![](../../assets/catalog/email-marketing/sendgrid/27.jpg)
 
-1. Überwachen Sie die Segmentzusammenfassung und überprüfen Sie, ob die Anzahl der Profile der im Datensatz erstellten Anzahl entspricht.
+1. Überwachen Sie die Zielgruppenzusammenfassung und überprüfen Sie, ob die Anzahl der Profile der im Datensatz erstellten Anzahl entspricht.
    ![](../../assets/catalog/email-marketing/sendgrid/28.jpg)
 
 1. Die [SendGrid-Marketinglisten > Listen-API erstellen](https://docs.sendgrid.com/api-reference/lists/create-list) wird verwendet, um innerhalb von SendGrid eindeutige Kontaktlisten zu erstellen, indem der Wert der *list_name* und dem Zeitstempel des Datenexports. Navigieren Sie zur SendGrid-Site und überprüfen Sie, ob die neue Kontaktliste erstellt wurde, die dem Namensmuster entspricht.
    ![](../../assets/catalog/email-marketing/sendgrid/29.jpg)
-
    ![](../../assets/catalog/email-marketing/sendgrid/30.jpg)
 
 1. Wählen Sie die neu erstellte Kontaktliste aus und überprüfen Sie, ob der neue E-Mail-Datensatz aus dem von Ihnen erstellten Datensatz in der neuen Kontaktliste eingetragen wird.
 
 1. Überprüfen Sie außerdem einige E-Mails, um zu überprüfen, ob die Feldzuordnung korrekt ist.
    ![](../../assets/catalog/email-marketing/sendgrid/31.jpg)
-
    ![](../../assets/catalog/email-marketing/sendgrid/32.jpg)
 
 ## Datennutzung und -Governance {#data-usage-governance}

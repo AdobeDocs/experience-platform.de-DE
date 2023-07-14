@@ -3,10 +3,10 @@ keywords: mobil; einatmen; Messaging;
 title: Braze-Verbindung
 description: Braze ist eine umfassende Kundeninteraktionsplattform, die relevante und unvergessliche Erlebnisse zwischen Kunden und den Marken, die sie lieben, ermöglicht.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
-source-wordcount: '995'
-ht-degree: 37%
+source-wordcount: '1041'
+ht-degree: 31%
 
 ---
 
@@ -24,7 +24,7 @@ So senden Sie Profildaten an [!DNL Braze], müssen Sie zunächst eine Verbindung
 
 Beachten Sie die folgenden Details, die spezifisch für die [!DNL Braze] Ziel:
 
-* [!DNL Adobe Experience Platform] Segmente werden nach [!DNL Braze] unter `AdobeExperiencePlatformSegments` -Attribut.
+* [!DNL Adobe Experience Platform] Zielgruppen werden nach [!DNL Braze] unter `AdobeExperiencePlatformSegments` -Attribut.
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ Beachten Sie die folgenden Details, die spezifisch für die [!DNL Braze] Ziel:
 
 ## Anwendungsfälle {#use-cases}
 
-Als Marketing-Experte möchte ich Benutzer in einem Ziel für mobile Interaktionen ansprechen, wobei Segmente in [!DNL Adobe Experience Platform]. Darüber hinaus möchte ich ihnen personalisierte Erlebnisse basierend auf Attributen aus ihren [!DNL Adobe Experience Platform] Profile, sobald Segmente und Profile in [!DNL Adobe Experience Platform].
+Marketingexperten möchten mit integrierten Zielgruppen Benutzer in einem mobilen Interaktionsziel ansprechen [!DNL Adobe Experience Platform]. Darüber hinaus möchte ich ihnen personalisierte Erlebnisse basierend auf Attributen aus ihren [!DNL Adobe Experience Platform] Profile, sobald Audiences und Profile in [!DNL Adobe Experience Platform].
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -44,14 +44,26 @@ Als Marketing-Experte möchte ich Benutzer in einem Ziel für mobile Interaktion
 
 {style="table-layout:auto"}
 
+## Unterstützung externer Zielgruppen {#external-audiences-support}
+
+Alle Ziele unterstützen die Aktivierung von Zielgruppen, die durch die Experience Platform generiert wurden [Segmentierungsdienst](../../../segmentation/home.md).
+
+Darüber hinaus unterstützt dieses Ziel auch die Aktivierung der externen Zielgruppen, die in der folgenden Tabelle beschrieben sind.
+
+| Externer Zielgruppentyp | Beschreibung |
+---------|----------|
+| Benutzerdefinierte Uploads | Zielgruppen, die aus CSV-Dateien in Experience Platform aufgenommen werden. |
+
+{style="table-layout:auto"}
+
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname) und/oder Identitäten, entsprechend Ihrer Feldzuordnung.[!DNL Adobe Experience Platform] Segmente werden nach [!DNL Braze] unter `AdobeExperiencePlatformSegments` -Attribut. |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname) und/oder Identitäten, entsprechend Ihrer Feldzuordnung.[!DNL Adobe Experience Platform] Zielgruppen werden nach [!DNL Braze] unter `AdobeExperiencePlatformSegments` -Attribut. |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform basierend auf der Zielgruppenbewertung aktualisiert wird, sendet der Connector das Update an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -81,15 +93,15 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
 
-## Aktivieren von Segmenten für dieses Ziel {#activate}
+## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md).
+Siehe [Aktivieren von Zielgruppendaten für Streaming-Zielgruppenexport-Ziele](../../ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
 
 ## Zuordnungsüberlegungen {#mapping-considerations}
 
@@ -142,8 +154,8 @@ Angenommen, Ihr XDM-Profilschema und Ihr [!DNL Braze] -Instanz enthält die folg
 
 |  | XDM-Profilschema | [!DNL Braze] Instanz |
 |---|---|---|
-| Attribute | <ul><li>person.name.firstName</code></li><li>person.name.lastName</code></li><li>mobilePhone.number</code></li></ul> | <ul><li>Vorname</code></li><li>Nachname</code></li><li>PhoneNumber</code></li></ul> |
-| Identitäten | <ul><li>E-Mail</code></li><li>Google Ad ID (GAID)</code></li><li>Apple ID für Advertiser (IDFA)</code></li></ul> | <ul><li>external_id</code></li></ul> |
+| Attribute | <ul><li><code>person.name.firstName</code></li><li><code>person.name.lastName</code></li><li><code>mobilePhone.number</code></li></ul> | <ul><li><code>Vorname</code></li><li><code>Nachname</code></li><li><code>PhoneNumber</code></li></ul> |
+| Identitäten | <ul><li><code>E-Mail</code></li><li><code>Google Ad ID (GAID)</code></li><li><code>Apple ID für Advertiser (IDFA)</code></li></ul> | <ul><li><code>external_id</code></li></ul> |
 
 Die korrekte Zuordnung würde wie folgt aussehen:
 
@@ -151,7 +163,7 @@ Die korrekte Zuordnung würde wie folgt aussehen:
 
 ## Exportierte Daten {#exported-data}
 
-Um sich zu vergewissern, dass die Daten erfolgreich in das [!DNL Braze]-Ziel exportiert wurden, überprüfen Sie Ihr [!DNL Braze]-Konto. [!DNL Adobe Experience Platform] Segmente werden nach [!DNL Braze] unter `AdobeExperiencePlatformSegments` -Attribut.
+Um sich zu vergewissern, dass die Daten erfolgreich in das [!DNL Braze]-Ziel exportiert wurden, überprüfen Sie Ihr [!DNL Braze]-Konto. [!DNL Adobe Experience Platform] Zielgruppen werden nach [!DNL Braze] unter `AdobeExperiencePlatformSegments` -Attribut.
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

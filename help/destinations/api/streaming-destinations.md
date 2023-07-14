@@ -5,10 +5,10 @@ title: Mit Streaming-Zielen verbinden und Daten mithilfe der Flow Service-API in
 description: In diesem Dokument wird die Erstellung von Streaming-Zielen mithilfe der Adobe Experience Platform-API beschrieben.
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '2241'
-ht-degree: 60%
+ht-degree: 48%
 
 ---
 
@@ -26,9 +26,9 @@ In diesem Tutorial erfahren Sie, wie Sie mithilfe von API-Aufrufen eine Verbindu
 
 In diesem Tutorial wird die [!DNL Amazon Kinesis] Ziel in allen Beispielen, aber die Schritte sind für [!DNL Azure Event Hubs].
 
-![Übersicht - Schritte zum Erstellen eines Streaming-Ziels und Aktivieren von Segmenten](../assets/api/streaming-destination/overview.png)
+![Übersicht - Schritte zum Erstellen eines Streaming-Ziels und Aktivieren von Zielgruppen](../assets/api/streaming-destination/overview.png)
 
-Wenn Sie es vorziehen, die Benutzeroberfläche in Platform zu verwenden, um eine Verbindung zu einem Ziel herzustellen und Daten zu aktivieren, lesen Sie den Abschnitt [Ziel verbinden](../ui/connect-destination.md) und [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../ui/activate-segment-streaming-destinations.md) Tutorials.
+Wenn Sie es vorziehen, die Benutzeroberfläche in Platform zu verwenden, um eine Verbindung zu einem Ziel herzustellen und Daten zu aktivieren, lesen Sie den Abschnitt [Ziel verbinden](../ui/connect-destination.md) und [Aktivieren von Zielgruppendaten für Streaming-Zielgruppenexport-Ziele](../ui/activate-segment-streaming-destinations.md) Tutorials.
 
 ## Erste Schritte
 
@@ -40,9 +40,9 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Daten für Streaming-Ziele in Platform aktivieren zu können.
 
-### Erforderliche Anmeldedaten sammeln
+### Sammeln erforderlicher Anmeldeinformationen
 
-Um die Schritte in dieser Anleitung abzuschließen, benötigen Sie die folgenden Anmeldedaten, je nach Art der Ziele, mit denen Sie Segmente verbinden und aktivieren möchten.
+Um die Schritte in diesem Tutorial abzuschließen, sollten Sie je nach dem Typ der Ziele, mit denen Sie Zielgruppen verbinden und aktivieren, über die folgenden Anmeldeinformationen verfügen.
 
 * Für [!DNL Amazon Kinesis] Verbindungen: `accessKeyId`, `secretKey`, `region` oder `connectionUrl`
 * Für [!DNL Azure Event Hubs]-Verbindungen: `sasKeyName`, `sasKey`, `namespace`
@@ -79,7 +79,7 @@ Eine zugehörige Referenzdokumentation für alle API-Aufrufe finden Sie in diese
 
 ![Übersicht über die Zielschritte – Schritt 1](../assets/api/streaming-destination/step1.png)
 
-Als ersten Schritt sollten Sie entscheiden, für welches Streaming-Ziel Daten aktiviert werden sollen. Führen Sie also zunächst einen Aufruf durch, um eine Liste der verfügbaren Ziele anzufordern, mit denen Sie eine Verbindung herstellen und Segmente aktivieren können. Führen Sie die folgende GET-Anfrage an den `connectionSpecs`-Endpunkt aus, um eine Liste der verfügbaren Ziele zu erhalten:
+Als ersten Schritt sollten Sie entscheiden, für welches Streaming-Ziel Daten aktiviert werden sollen. Führen Sie zunächst einen Aufruf durch, um eine Liste der verfügbaren Ziele anzufordern, mit denen Sie eine Verbindung herstellen und Zielgruppen aktivieren können. Führen Sie die folgende GET-Anfrage an den `connectionSpecs`-Endpunkt aus, um eine Liste der verfügbaren Ziele zu erhalten:
 
 **API-Format**
 
@@ -101,7 +101,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Antwort**
 
-Eine erfolgreiche Antwort enthält eine Liste der verfügbaren Ziele und ihre eindeutigen Kennungen (`id`). Notieren Sie sich den Wert des Ziels, das Sie verwenden möchten, da Sie ihn in weiteren Schritten benötigen werden. Wenn Sie beispielsweise eine Verbindung herstellen und Segmente für bereitstellen möchten [!DNL Amazon Kinesis] oder [!DNL Azure Event Hubs], suchen Sie in der Antwort nach dem folgenden Snippet:
+Eine erfolgreiche Antwort enthält eine Liste der verfügbaren Ziele und ihre eindeutigen Kennungen (`id`). Notieren Sie sich den Wert des Ziels, das Sie verwenden möchten, da Sie ihn in weiteren Schritten benötigen werden. Wenn Sie beispielsweise Zielgruppen verbinden und bereitstellen möchten, um [!DNL Amazon Kinesis] oder [!DNL Azure Event Hubs], suchen Sie in der Antwort nach dem folgenden Snippet:
 
 ```json
 {
@@ -409,7 +409,7 @@ curl -X POST \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die Kennung (`id`) des neu erstellten Datenflusses und ein `etag` zurückgegeben. Notieren Sie sich beide Werte. Sie werden sie im nächsten Schritt benötigen, um Segmente zu aktivieren.
+Bei einer erfolgreichen Antwort werden die Kennung (`id`) des neu erstellten Datenflusses und ein `etag` zurückgegeben. Notieren Sie sich beide Werte. wie im nächsten Schritt beschrieben, um Zielgruppen zu aktivieren.
 
 ```json
 {
@@ -423,9 +423,9 @@ Bei einer erfolgreichen Antwort werden die Kennung (`id`) des neu erstellten Dat
 
 ![Übersicht über die Zielschritte – Schritt 5](../assets/api/streaming-destination/step5.png)
 
-Nachdem Sie alle Verbindungen und den Datenfluss erstellt haben, können Sie jetzt Ihre Profildaten für die Streaming-Plattform aktivieren. In diesem Schritt wählen Sie aus, welche Segmente und Profilattribute Sie an das Ziel senden möchten. Außerdem können Sie Daten planen und an das Ziel senden.
+Nachdem Sie alle Verbindungen und den Datenfluss erstellt haben, können Sie jetzt Ihre Profildaten für die Streaming-Plattform aktivieren. In diesem Schritt wählen Sie aus, welche Zielgruppen und Profilattribute Sie an das Ziel senden, und Sie können Daten planen und an das Ziel senden.
 
-Um Segmente für Ihr neues Ziel zu aktivieren, müssen Sie einen JSON-PATCH-Vorgang ausführen, ähnlich dem Beispiel unten. Sie können mehrere Profil- und Segmentattribute in einem Aufruf aktivieren. Weiterführende Informationen zu JSON PATCH finden Sie in der [RFC-Spezifikation](https://tools.ietf.org/html/rfc6902).
+Um Zielgruppen für Ihr neues Ziel zu aktivieren, müssen Sie einen JSON-PATCH-Vorgang ausführen, der dem unten stehenden Beispiel ähnelt. Sie können mehrere Zielgruppen und Profilattribute in einem Aufruf aktivieren. Weiterführende Informationen zu JSON PATCH finden Sie in der [RFC-Spezifikation](https://tools.ietf.org/html/rfc6902).
 
 **API-Format**
 
@@ -450,8 +450,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
     "value": {
       "type": "PLATFORM_SEGMENT",
       "value": {
-        "name": "Name of the segment that you are activating",
-        "description": "Description of the segment that you are activating",
+        "name": "Name of the audience that you are activating",
+        "description": "Description of the audience that you are activating",
         "id": "{SEGMENT_ID}"
       }
     }
@@ -474,13 +474,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | Verwenden Sie in der URL die ID des Datenflusses, den Sie im vorherigen Schritt erstellt haben. |
 | `{ETAG}` | Rufen Sie die `{ETAG}` aus der Antwort im vorherigen Schritt, [Erstellen eines Datenflusses](#create-dataflow). Das Antwortformat im vorherigen Schritt hat Escape-Anführungszeichen. Sie müssen die nicht maskierten Werte in der Kopfzeile der Anfrage verwenden. Siehe Beispiel unten: <br> <ul><li>Reaktionsbeispiel: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Wert, der in Ihrer Anfrage verwendet werden soll: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung eines Datenflusses aktualisiert. |
-| `{SEGMENT_ID}` | Geben Sie ID des Segments an, das Sie an dieses Ziel exportieren möchten. Informationen zum Abrufen von Segment-IDs für die Segmente, die Sie aktivieren möchten, finden Sie unter [Abrufen einer Segmentdefinition](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in der Experience Platform-API-Referenz. |
+| `{SEGMENT_ID}` | Geben Sie die Zielgruppen-ID an, die Sie an dieses Ziel exportieren möchten. Informationen zum Abrufen der Zielgruppen-IDs für die Zielgruppen, die Sie aktivieren möchten, finden Sie unter [Abrufen einer Zielgruppendefinition](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in der Experience Platform-API-Referenz. |
 | `{PROFILE_ATTRIBUTE}` | Beispiel: `"person.lastName"` |
-| `op` | Der Operationsaufruf, der verwendet wird, um die Aktion zu definieren, die zur Aktualisierung des Datenflusses erforderlich ist. Operationen umfassen: `add`, `replace` und `remove`. Um ein Segment zu einem Datenfluss hinzuzufügen, verwenden Sie die Operation `add`. |
-| `path` | Definiert den Teil des Flusses, der aktualisiert werden soll. Verwenden Sie beim Hinzufügen eines Segments zu einem Datenfluss den im Beispiel angegebenen Pfad. |
+| `op` | Der Operationsaufruf, der verwendet wird, um die Aktion zu definieren, die zur Aktualisierung des Datenflusses erforderlich ist. Operationen umfassen: `add`, `replace` und `remove`. Um einem Datenfluss eine Zielgruppe hinzuzufügen, verwenden Sie die `add` Vorgang. |
+| `path` | Definiert den Teil des Flusses, der aktualisiert werden soll. Verwenden Sie beim Hinzufügen einer Zielgruppe zu einem Datenfluss den im Beispiel angegebenen Pfad. |
 | `value` | Der neue Wert, mit dem Sie Ihren Parameter aktualisieren möchten. |
-| `id` | Geben Sie die ID des Segments an, das Sie dem Ziel-Datenfluss hinzufügen. |
-| `name` | *Optional*. Geben Sie den Namen des Segments an, das Sie dem Ziel-Datenfluss hinzufügen möchten. Beachten Sie, dass dieses Feld nicht obligatorisch ist und Sie ein Segment erfolgreich zum Ziel-Datenfluss hinzufügen können, ohne dessen Namen anzugeben. |
+| `id` | Geben Sie die ID der Audience an, die Sie dem Ziel-Datenfluss hinzufügen möchten. |
+| `name` | *Optional*. Geben Sie den Namen der Audience an, die Sie dem Ziel-Datenfluss hinzufügen möchten. Beachten Sie, dass dieses Feld nicht erforderlich ist und Sie dem Ziel-Datenfluss erfolgreich eine Zielgruppe hinzufügen können, ohne dessen Namen anzugeben. |
 
 **Antwort**
 
@@ -490,7 +490,7 @@ Suchen Sie nach einer „202 OK“-Antwort. Es wird kein Antworttext zurückgege
 
 ![Übersicht über die Zielschritte – Schritt 6](../assets/api/streaming-destination/step6.png)
 
-Als letzten Schritt in der Anleitung sollten Sie überprüfen, ob die Segmente und Profilattribute dem Datenfluss korrekt zugeordnet wurden.
+Als letzten Schritt im Tutorial sollten Sie überprüfen, ob die Zielgruppen und Profilattribute dem Datenfluss korrekt zugeordnet wurden.
 
 Führen Sie zur Validierung die folgende GET-Anfrage aus:
 
@@ -517,7 +517,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **Antwort**
 
-Die zurückgegebene Antwort sollte im `transformations`-Parameter die Segmente und Profilattribute enthalten, die Sie im vorherigen Schritt gesendet haben. Ein Beispielparameter `transformations` in der Antwort könnte wie folgt aussehen:
+Die zurückgegebene Antwort sollte im `transformations` Parameter: die Zielgruppen und Profilattribute, die Sie im vorherigen Schritt gesendet haben. Ein Beispielparameter `transformations` in der Antwort könnte wie folgt aussehen:
 
 ```json
 "transformations": [
@@ -563,7 +563,7 @@ Die zurückgegebene Antwort sollte im `transformations`-Parameter die Segmente u
 
 >[!IMPORTANT]
 >
-> Zusätzlich zu den Profilattributen und den Segmenten im Schritt [Daten für Ihr neues Ziel aktivieren](#activate-data)die exportierten Daten in [!DNL AWS Kinesis] und [!DNL Azure Event Hubs] enthält auch Informationen zur Identitätszuordnung. Dies stellt die Identitäten der exportierten Profile dar (z. B. [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), mobile ID, Google ID, E-Mail-Adresse usw.). Sehen Sie sich das Beispiel unten an.
+> Zusätzlich zu den Profilattributen und den Zielgruppen im Schritt [Daten für Ihr neues Ziel aktivieren](#activate-data)die exportierten Daten in [!DNL AWS Kinesis] und [!DNL Azure Event Hubs] enthält auch Informationen zur Identitätszuordnung. Dies stellt die Identitäten der exportierten Profile dar (z. B. [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), mobile ID, Google ID, E-Mail-Adresse usw.). Sehen Sie sich das Beispiel unten an.
 
 ```json
 {

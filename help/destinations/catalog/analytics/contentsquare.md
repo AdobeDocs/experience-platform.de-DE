@@ -3,18 +3,18 @@ keywords: contentsquare-Erweiterung; contentsquare-Ziel; contentsquare
 title: Contentsquare-Erweiterung
 description: Die Contentsquare-Erweiterung ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: bf836a15-b87c-4a4b-a3fc-92d3cf9bc90e
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 81%
 
 ---
 
-# [!DNL Contentsquare]-Erweiterung  {#contentsquare-extension}
+# [!DNL Contentsquare]-Erweiterung {#contentsquare-extension}
 
 ## Übersicht {#overview}
 
-Sehen Sie sich die Verhaltensweisen von Seiten an, siehe WARUM Kunden abbrechen und Wie Sie diese verbessern können. Ordnen Sie den Umsatz UX- und Inhaltselementen für jedes Analytics-Segment und jeden Target-Test zu. Installieren Sie die [!DNL Contentsquare] Tags, benutzerdefinierte Variablen und Ereignisse einrichten. Erfassen Sie Daten für Ihre UX-Analyse mit wenigen Klicks.
+Sehen Sie sich die Verhaltensweisen von Seiten an, siehe WARUM Kunden abbrechen und Wie Sie diese verbessern können. Ordnen Sie den Umsatz UX- und Inhaltselementen für jede Analytics-Zielgruppe und jeden Target-Test zu. Installieren Sie die [!DNL Contentsquare] Tags, benutzerdefinierte Variablen und Ereignisse einrichten. Erfassen Sie Daten für Ihre UX-Analyse mit wenigen Klicks.
 
 [!DNL Contentsquare] ist eine Analyseerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100364.html).
 

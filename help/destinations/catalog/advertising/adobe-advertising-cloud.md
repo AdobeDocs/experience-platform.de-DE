@@ -3,7 +3,7 @@ keywords: Advertising Cloud; Advertising Cloud-Erweiterung; Advertising Cloud-Zi
 title: Adobe Advertising Cloud-Erweiterung
 description: Die Adobe Advertising Cloud-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 50%
@@ -14,7 +14,7 @@ ht-degree: 50%
 
 ## Übersicht {#overview}
 
-Dies ist die [!DNL Advertising Cloud] Erweiterung für die Implementierung [!DNL Advertising Cloud] Konversions- und Segment-Tags für DSP und Suche (DCO wird derzeit nicht unterstützt).
+Dies ist die [!DNL Advertising Cloud] Erweiterung für die Implementierung [!DNL Advertising Cloud] Konversions- und Zielgruppen-Tags für DSP und Suche (DCO wird derzeit nicht unterstützt).
 
 Adobe Advertising Cloud ist eine Werbeerweiterung in Adobe Experience Platform.
 

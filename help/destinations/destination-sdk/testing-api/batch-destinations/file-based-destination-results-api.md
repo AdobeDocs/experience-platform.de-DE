@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird erläutert, wie Sie mit dem API-Endpunkt /testing/destinationInstance die vollständigen Details Ihrer Testergebnisse anzeigen können. Dieser API-Endpunkt gibt dasselbe Ergebnis zurück, das Sie bei der Verwendung der Flow Service-API zur Überwachung von Datenflüssen erhalten würden.
 title: Anzeigen detaillierter Aktivierungsergebnisse
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
-source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
-workflow-type: ht
+source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
+workflow-type: tm+mt
 source-wordcount: '545'
-ht-degree: 100%
+ht-degree: 90%
 
 ---
 
@@ -40,7 +40,7 @@ Bevor Sie den Endpunkt `/testing/destinationInstance` verwenden, stellen Sie sic
 
 ## Anzeigen detaillierter Zieltestergebnisse {#test-activation-results}
 
-Sobald Sie die [Zielkonfiguration validiert haben](file-based-destination-testing-api.md), können Sie detaillierte Aktivierungsergebnisse anzeigen, indem Sie eine GET-Anfrage an den Endpunkt `authoring/testing/destinationInstance/` stellen und die Ziel-Instanz-ID des Ziels, das Sie testen, sowie die Flussausführungs-IDs der aktivierten Segmente angeben.
+Einmal [Zielkonfiguration validieren](file-based-destination-testing-api.md)können Sie detaillierte Aktivierungsergebnisse anzeigen, indem Sie eine GET-Anfrage an die `authoring/testing/destinationInstance/` -Endpunkt und geben die Ziel-Instanz-ID des Ziels an, das Sie testen, sowie die Flusslaufs-IDs der aktivierten Zielgruppen.
 
 Die vollständige API-URL, die Sie verwenden müssen, finden Sie in der `results`-Eigenschaft, die in der [Antwort des Zieltestaufrufs](file-based-destination-testing-api.md) zurückgegeben wird.
 
@@ -56,7 +56,7 @@ GET /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flo
 
 | Abfragezeichenfolge-Parameter | Beschreibung |
 | -------- | ----------- |
-| `flowRunIds` | Die IDs der Flussausführungen, die den aktivierten Segmenten entsprechen. Die IDs der Flussausführungen finden Sie in der Eigenschaft `results`, die in der [Antwort des Zieltestaufrufs](file-based-destination-testing-api.md) zurückgegeben wird. |
+| `flowRunIds` | Die Kennungen für die Flussausführung, die den aktivierten Zielgruppen entsprechen. Die IDs der Flussausführungen finden Sie in der Eigenschaft `results`, die in der [Antwort des Zieltestaufrufs](file-based-destination-testing-api.md) zurückgegeben wird. |
 
 **Anfrage**
 

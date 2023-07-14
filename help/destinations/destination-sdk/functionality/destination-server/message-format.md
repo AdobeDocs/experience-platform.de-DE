@@ -1,10 +1,10 @@
 ---
 description: Auf dieser Seite werden das Nachrichtenformat und die Profilumwandlung von aus Adobe Experience Platform in Ziele exportierten Daten behandelt.
 title: Nachrichtenformat
-source-git-commit: ab87a2b7190a0365729ba7bad472fde7a489ec02
-workflow-type: ht
+source-git-commit: e500d05858a3242295c6e5aac8284ad301d0cd17
+workflow-type: tm+mt
 source-wordcount: '2237'
-ht-degree: 100%
+ht-degree: 78%
 
 ---
 
@@ -18,11 +18,11 @@ Um das Nachrichtenformat sowie den Profilkonfigurations- und -konvertierungsproz
 * **Experience-Datenmodell (XDM)**. [XDM-Übersicht](../../../../xdm/home.md) und [Erstellen eines XDM-Schemas in Adobe Experience Platform](../../../../xdm/tutorials/create-schema-ui.md).
 * **Klasse**. [Erstellen und Bearbeiten von Klassen in der Benutzeroberfläche](../../../../xdm/ui/resources/classes.md).
 * **IdentityMap**. Die Identitätszuordnung stellt eine Zuordnung aller Endbenutzeridentitäten in Adobe Experience Platform dar. Siehe `xdm:identityMap` im [Wörterbuch der XDM-Felder](../../../../xdm/schema/field-dictionary.md).
-* **SegmentMembership**. Das XDM-Attribut [segmentMembership](../../../../xdm/schema/field-dictionary.md) informiert darüber, zu welchen Segmenten ein Profil gehört. Für die drei verschiedenen Werte im Feld `status` lesen Sie die Dokumentation zur [Schemafeldgruppe der Segmentzugehörigkeitsdetails](../../../../xdm/field-groups/profile/segmentation.md).
+* **SegmentMembership**. Die [segmentMembership](../../../../xdm/schema/field-dictionary.md) Das XDM-Attribut informiert, zu welchen Zielgruppen ein Profil gehört. Für die drei verschiedenen Werte im `status` -Feld, lesen Sie die Dokumentation unter [Feldergruppe Zielgruppenzugehörigkeitsdetails](../../../../xdm/field-groups/profile/segmentation.md).
 
 >[!IMPORTANT]
 >
->Bei allen von Destination SDK unterstützten Parameternamen und Werte wird **nach Groß-/Kleinschreibung unterschrieben**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
+>Bei allen von Destination SDK unterstützten Parameternamen und Werten wird **nach Groß-/Kleinschreibung unterschieden**. Um Fehler bei der Groß-/Kleinschreibung zu vermeiden, verwenden Sie bitte die Parameternamen und -werte genau wie in der Dokumentation dargestellt.
 
 ## Unterstützte Integrationstypen {#supported-integration-types}
 
@@ -107,7 +107,7 @@ Um die unten aufgeführten Beispiele auf der Seite zu verstehen, müssen Sie die
 Profile haben drei Bereiche:
 
 * `segmentMembership` (immer in einem Profil vorhanden)
-   * Dieser Abschnitt enthält alle Segmente, die im Profil vorhanden sind. Die Segmente können einen von zwei Status aufweisen: `realized` oder `exited`.
+   * Dieser Abschnitt enthält alle Zielgruppen, die im Profil vorhanden sind. Die Zielgruppen können einen von zwei Status aufweisen: `realized` oder `exited`.
 * `identityMap` (immer in einem Profil vorhanden)
    * Dieser Abschnitt enthält alle Identitäten, die im Profil vorhanden sind (E-Mail, Google GAID, Apple IDFA usw.) und die von der Benutzerin bzw. dem Benutzer im Aktivierungs-Workflow für den Export zugeordnet wurden.
 * Attribute (je nach Zielkonfiguration können diese im Profil vorhanden sein). Es gibt auch einen geringfügigen Unterschied zwischen vordefinierten Attributen und Freiformattributen:
@@ -170,15 +170,15 @@ Unten sehen Sie zwei Beispiele für Profile in Experience Platform:
 }
 ```
 
-## Verwenden einer Vorlagensprache für die Transformationen von Identitäten, Attributen und Segmentzugehörigkeiten {#using-templating}
+## Verwenden einer Vorlagensprache für die Transformationen von Identität, Attributen und Zielgruppen-Mitgliedschaft {#using-templating}
 
 Adobe verwendet [Pebble-Vorlagen](https://pebbletemplates.io/), eine Vorlagensprache, die [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) ähnelt, um die Felder aus dem XDM-Schema in ein von Ihrem Ziel unterstütztes Format umzuwandeln.
 
 In diesem Abschnitt finden Sie mehrere Beispiele dafür, wie diese Transformationen vorgenommen werden – vom Eingabe-XDM-Schema über die Vorlage und die Ausgabe in Payload-Formaten, die von Ihrem Ziel akzeptiert werden. Die folgenden Beispiele werden mit zunehmender Komplexität wie folgt dargestellt:
 
-1. Einfache Transformationsbeispiele. Erfahren Sie, wie die Vorlage mit einfachen Transformationen für die Felder [Profilattribute](#attributes), [Segmentmitgliedschaft](#segment-membership) und [Identität](#identities) arbeitet.
-2. Beispiele für komplexere Vorlagen, die die oben genannten Felder kombinieren: [Erstellen einer Vorlage zum Senden von Segmenten und Identitäten](./message-format.md#segments-and-identities) und [Erstellen einer Vorlage zum Senden von Segmenten, Identitäten und Profilattributen](#segments-identities-attributes).
-3. Vorlagen, die den Aggregationsschlüssel enthalten. Wenn Sie [konfigurierbare Aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in der Zielkonfiguration verwenden, gruppiert Experience Platform die in Ihr Ziel exportierten Profile anhand von Kriterien wie Segment-ID, Segmentstatus oder Identity-Namespaces.
+1. Einfache Transformationsbeispiele. Erfahren Sie, wie die Vorlage mit einfachen Umwandlungen für [Profilattribute](#attributes), [Zielgruppenmitgliedschaft](#segment-membership)und [Identität](#identities) -Felder.
+2. Beispiele für komplexere Vorlagen, die die oben genannten Felder kombinieren: [Erstellen einer Vorlage zum Senden von Zielgruppen und Identitäten](./message-format.md#segments-and-identities) und [Erstellen einer Vorlage zum Senden von Segmenten, Identitäten und Profilattributen](#segments-identities-attributes).
+3. Vorlagen, die den Aggregationsschlüssel enthalten. Wenn Sie [konfigurierbare Aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in der Zielkonfiguration gruppiert Experience Platform die in Ihr Ziel exportierten Profile anhand von Kriterien wie Zielgruppen-ID, Zielgruppenstatus oder Identitäts-Namespaces.
 
 ### Profilattribute {#attributes}
 
@@ -263,10 +263,10 @@ Profil 2:
 }
 ```
 
-### Segmentzugehörigkeit {#segment-membership}
+### Zielgruppenmitgliedschaft {#audience-membership}
 
-Das XDM-Attribut [segmentMembership](../../../../xdm/schema/field-dictionary.md) informiert darüber, zu welchen Segmenten ein Profil gehört.
-Für die drei verschiedenen Werte im Feld `status` lesen Sie die Dokumentation zur [Schemafeldgruppe der Segmentzugehörigkeitsdetails](../../../../xdm/field-groups/profile/segmentation.md).
+Die [segmentMembership](../../../../xdm/schema/field-dictionary.md) Das XDM-Attribut informiert, zu welchen Zielgruppen ein Profil gehört.
+Für die drei verschiedenen Werte im `status` -Feld, lesen Sie die Dokumentation unter [Feldergruppe Zielgruppenzugehörigkeitsdetails](../../../../xdm/field-groups/profile/segmentation.md).
 
 **Eingabe**
 
@@ -335,7 +335,7 @@ Profil 2:
                 {% endfor %}
                 ],
                 "remove": [
-                {# Alternative syntax for filtering segments by status: #}
+                {# Alternative syntax for filtering audiences by status: #}
                 {% for segment in removedSegments(profile.segmentMembership.ups) %}
                 "{{ segment.key }}"{% if not loop.last %},{% endif %}
                 {% endfor %}
@@ -490,10 +490,10 @@ Profil 2:
 }
 ```
 
-### Erstellen einer Vorlage, die Segmente und Identitäten sendet {#segments-and-identities}
+### Erstellen einer Vorlage zum Senden von Zielgruppen und Identitäten {#segments-and-identities}
 
 In diesem Abschnitt finden Sie ein Beispiel für eine häufig verwendete Transformation zwischen dem Adobe-XDM-Schema und dem Partnerzielschema.
-Im folgenden Beispiel erfahren Sie, wie Sie die Segmentzugehörigkeit und das Identitätsformat transformieren und an Ihr Ziel ausgeben.
+Im folgenden Beispiel erfahren Sie, wie Sie die Zielgruppenzugehörigkeit und das Identitätsformat transformieren und an Ihr Ziel ausgeben.
 
 **Eingabe**
 
@@ -595,7 +595,7 @@ Profil 2:
                     {% endfor %}
                 ],
                 "remove": [
-                    {# Alternative syntax for filtering segments by status: #}
+                    {# Alternative syntax for filtering audiences by status: #}
                     {% for segment in removedSegments(profile.segmentMembership.ups) %}
                     "{{ segment.key }}"{% if not loop.last %},{% endif %}
                     {% endfor %}
@@ -661,7 +661,7 @@ Die `json` unten zeigt die aus Adobe Experience Platform exportierten Daten.
 
 In diesem Abschnitt finden Sie ein Beispiel für eine häufig verwendete Transformation zwischen dem Adobe-XDM-Schema und dem Partnerzielschema.
 
-Ein weiteres gängiges Anwendungsbeispiel ist der Export von Daten, die Segmentzugehörigkeiten, Identitäten (z. B.: E-Mail-Adresse, Telefonnummer, Werbe-ID) und Profilattribute enthalten. Um Daten auf diese Weise zu exportieren, sehen Sie sich das folgende Beispiel an:
+Ein weiteres gängiges Anwendungsbeispiel ist der Export von Daten, die Zielgruppenzugehörigkeit und Identitäten enthalten (z. B.: E-Mail-Adresse, Telefonnummer, Werbe-ID) und Profilattribute. Um Daten auf diese Weise zu exportieren, sehen Sie sich das folgende Beispiel an:
 
 **Eingabe**
 
@@ -788,7 +788,7 @@ Profil 2:
                 {% endfor %}
                 ],
                 "remove": [
-                {# Alternative syntax for filtering segments by status: #}
+                {# Alternative syntax for filtering audiences by status: #}
                 {% for segment in removedSegments(profile.segmentMembership.ups) %}
                     "{{ segment.key }}"{% if not loop.last %},{% endif %}
                 {% endfor %}
@@ -859,21 +859,21 @@ Die `json` unten zeigt die aus Adobe Experience Platform exportierten Daten.
 
 ### Nehmen Sie Aggregationsschlüssel in Ihre Vorlage auf, um auf exportierte Profile zuzugreifen, die nach verschiedenen Kriterien gruppiert sind {#template-aggregation-key}
 
-Wenn Sie die [konfigurierbare Aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in der Zielkonfiguration verwenden, können Sie die in Ihr Ziel exportierten Profile anhand von Kriterien wie Segment-ID, Segmentalias, Segmentzugehörigkeit oder Identity-Namespaces gruppieren.
+Wenn Sie [konfigurierbare Aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) in der Zielkonfiguration können Sie die in Ihr Ziel exportierten Profile anhand von Kriterien wie Zielgruppen-ID, Zielgruppenalias, Zielgruppenzugehörigkeit oder Identitäts-Namespaces gruppieren.
 
 In der Nachrichtenumwandlungsvorlage können Sie auf die oben erwähnten Aggregationsschlüssel zugreifen, wie in den Beispielen in den folgenden Abschnitten dargestellt. Verwenden Sie Aggregationsschlüssel, um die aus Experience Platform exportierte HTTP-Nachricht so zu strukturieren, dass sie den von Ihrem Ziel erwarteten Format- und Ratenbeschränkungen entspricht.
 
-#### Verwenden des Segment-ID-Aggregationsschlüssels in der Vorlage {#aggregation-key-segment-id}
+#### Verwenden des Aggregat-Schlüssels für die Zielgruppen-ID in der Vorlage {#aggregation-key-segment-id}
 
-Wenn Sie die [konfigurierbare Aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) verwenden und `includeSegmentId` auf „true“ gesetzt ist, werden die Profile in den an Ihr Ziel exportierten HTTP-Nachrichten nach Segment-ID gruppiert. Unten sehen Sie, wie Sie auf die Segment-ID in der Vorlage zugreifen können.
+Wenn Sie [konfigurierbare Aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) und `includeSegmentId` auf &quot;true&quot;gesetzt ist, werden die Profile in den an Ihr Ziel exportierten HTTP-Nachrichten nach Zielgruppen-ID gruppiert. Unten erfahren Sie, wie Sie auf die Zielgruppen-ID in der Vorlage zugreifen können.
 
 **Eingabe**
 
 Betrachten Sie die folgenden vier Profile, bei denen:
 
-* die ersten beiden Teil des Segments mit der Segment-ID `788d8874-8007-4253-92b7-ee6b6c20c6f3` sind
-* das dritte Profil Teil des Segments mit der Segment-ID `8f812592-3f06-416b-bd50-e7831848a31a` ist
-* Das vierte Profil Teil beider oben genannten Segmente ist.
+* die ersten beiden sind Teil der Zielgruppe mit der Zielgruppen-ID `788d8874-8007-4253-92b7-ee6b6c20c6f3`
+* das dritte Profil Teil der Zielgruppe mit der Zielgruppen-ID ist `8f812592-3f06-416b-bd50-e7831848a31a`
+* Das vierte Profil ist Teil beider oben genannten Zielgruppen.
 
 Profil 1:
 
@@ -965,7 +965,7 @@ Profil 4:
 >
 >Bei allen Vorlagen, die Sie verwenden, müssen Sie die unzulässigen Zeichen, z. B. doppelte Anführungszeichen `""`, mit Escape-Zeichen versehen, bevor Sie die [Vorlage](../../functionality/destination-server/templating-specs.md) in die [Ziel-Server-Konfiguration](../../authoring-api/destination-server/create-destination-server.md) einfügen. Weitere Informationen zum Maskieren von doppelten Anführungszeichen mit Escape-Zeichen finden Sie in Kapitel 9 im [JSON-Standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-Beachten Sie, wie `audienceId` in der Vorlage verwendet wird, um auf Segment-IDs zuzugreifen. In diesem Beispiel wird davon ausgegangen, dass Sie `audienceId` für die Segmentzugehörigkeit in Ihrer Zieltaxonomie verwenden. Je nach Ihrer eigenen Taxonomie können Sie stattdessen einen beliebigen anderen Feldnamen verwenden.
+Beachten Sie Folgendes: `audienceId` wird in der Vorlage verwendet, um auf Zielgruppen-IDs zuzugreifen. In diesem Beispiel wird davon ausgegangen, dass Sie `audienceId` für die Zielgruppenzugehörigkeit in Ihrer Zieltaxonomie. Je nach Ihrer eigenen Taxonomie können Sie stattdessen einen beliebigen anderen Feldnamen verwenden.
 
 ```python
 {
@@ -982,7 +982,7 @@ Beachten Sie, wie `audienceId` in der Vorlage verwendet wird, um auf Segment-IDs
 
 **Ergebnis**
 
-Beim Export in Ihr Ziel werden die Profile basierend auf ihrer Segment-ID in zwei Gruppen aufgeteilt.
+Beim Export in Ihr Ziel werden die Profile basierend auf ihrer Zielgruppen-ID in zwei Gruppen unterteilt.
 
 ```json
 {
@@ -1015,19 +1015,19 @@ Beim Export in Ihr Ziel werden die Profile basierend auf ihrer Segment-ID in zwe
 }
 ```
 
-#### Verwenden eines Segmentalias-Aggregationsschlüssels in der Vorlage {#aggregation-key-segment-alias}
+#### Verwenden Sie den Aggregat-Schlüssel des Zielgruppenalias in der Vorlage. {#aggregation-key-segment-alias}
 
-Wenn Sie die [konfigurierbare Aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) verwenden und `includeSegmentId` auf „true“ gesetzt ist, können Sie auch auf den Segmentalias in der Vorlage zugreifen.
+Wenn Sie [konfigurierbare Aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) und `includeSegmentId` auf &quot;true&quot;gesetzt ist, können Sie auch auf den Zielgruppenalias in der Vorlage zugreifen.
 
-Fügen Sie der Vorlage die folgende Zeile hinzu, um auf die exportierten Profile zuzugreifen, die nach Segmentalias gruppiert sind.
+Fügen Sie der Vorlage die folgende Zeile hinzu, um auf die exportierten Profile zuzugreifen, die nach Zielgruppenalias gruppiert sind.
 
 ```python
 customerList={{input.aggregationKey.segmentAlias}}
 ```
 
-#### Verwenden eines Segmentstatus-Aggregationsschlüssels in der Vorlage {#aggregation-key-segment-status}
+#### Verwenden des Aggregat-Schlüssels für den Zielgruppenstatus in der Vorlage {#aggregation-key-segment-status}
 
-Wenn Sie die [konfigurierbare Aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) verwenden und `includeSegmentId` und `includeSegmentStatus` auf „true“ gesetzt ist, können Sie auf den Segmentstatus in der Vorlage zugreifen. Auf diese Weise können Sie Profile in den an Ihr Ziel exportierten HTTP-Nachrichten gruppieren, je nachdem, ob die Profile hinzugefügt oder aus Segmenten entfernt werden sollen.
+Wenn Sie [konfigurierbare Aggregation](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) und `includeSegmentId` und `includeSegmentStatus` auf &quot;true&quot;gesetzt ist, können Sie auf den Zielgruppenstatus in der Vorlage zugreifen. Auf diese Weise können Sie Profile in den an Ihr Ziel exportierten HTTP-Nachrichten gruppieren, je nachdem, ob die Profile hinzugefügt oder aus Segmenten entfernt werden sollen.
 
 Mögliche Werte sind:
 
@@ -1206,10 +1206,10 @@ Die nachstehende Tabelle enthält Beschreibungen der Funktionen in den obigen Be
 | Funktion | Beschreibung |
 |---------|----------|
 | `input.profile` | Das Profil, dargestellt als ein [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Folgt dem weiter oben erwähnten Partner-XDM-Schema auf dieser Seite. |
-| `destination.segmentAliases` | Zuordnung von Segmentkennungen im Adobe Experience Platform-Namespace zu Segmentaliasen im System des Partners. |
-| `destination.segmentNames` | Zuordnung von Segmentnamen im Adobe Experience Platform-Namespace zu Segmentnamen im System des Partners. |
-| `addedSegments(listOfSegments)` | Gibt nur Segmente mit Status `realized` zurück. |
-| `removedSegments(listOfSegments)` | Gibt nur Segmente mit Status `exited` zurück. |
+| `destination.segmentAliases` | Ordnen Sie den Zielgruppen-IDs im Adobe Experience Platform-Namespace Zielgruppen-Alias im System des Partners zu. |
+| `destination.segmentNames` | Ordnen Sie den Zielgruppennamen im Adobe Experience Platform-Namespace den Zielgruppennamen im System des Partners zu. |
+| `addedSegments(listOfSegments)` | Gibt nur die Zielgruppen mit Status zurück `realized`. |
+| `removedSegments(listOfSegments)` | Gibt nur die Zielgruppen mit Status zurück `exited`. |
 
 {style="table-layout:auto"}
 

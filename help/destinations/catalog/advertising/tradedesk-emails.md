@@ -3,10 +3,10 @@ title: (Beta) Verbindung zwischen Trade Desk und CRM
 description: Aktivieren Sie Profile in Ihrem Trade Desk-Konto für Zielgruppen-Targeting und -Unterdrückung basierend auf CRM-Daten.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1078'
-ht-degree: 21%
+source-wordcount: '1076'
+ht-degree: 19%
 
 ---
 
@@ -34,7 +34,7 @@ Dieses Dokument soll Ihnen helfen, Profile für Ihre [!DNL Trade Desk] Zielgrupp
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie Segmente aktivieren können, um [!DNL The Trade Desk]müssen Sie Ihre [!DNL The Trade Desk] Kundenbetreuer zur Unterzeichnung des CRM-Onboarding-Vertrags. [!DNL The Trade Desk] gibt dann die Erlaubnis und gibt Ihre Advertiser-ID frei, um Ihr Ziel zu konfigurieren.
+Vor der Aktivierung von Zielgruppen in [!DNL The Trade Desk]müssen Sie Ihre [!DNL The Trade Desk] Kundenbetreuer zur Unterzeichnung des CRM-Onboarding-Vertrags. [!DNL The Trade Desk] gibt dann die Erlaubnis und gibt Ihre Advertiser-ID frei, um Ihr Ziel zu konfigurieren.
 
 ## Anforderungen an die ID-Übereinstimmung {#id-matching-requirements}
 
@@ -73,8 +73,8 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (E-Mail oder Hash-E-Mail), die im Trade Desk-Ziel verwendet werden. |
-| Exporthäufigkeit | **[!UICONTROL Täglicher Batch]** | Da ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, wird das Profil (die Identitäten) einmal täglich nachgelagert zur Zielplattform aktualisiert. Mehr dazu [Batch-Exporte](/help/destinations/destination-types.md#file-based). |
+| Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (E-Mail oder Hash-E-Mail), die im Trade Desk-Ziel verwendet werden. |
+| Exporthäufigkeit | **[!UICONTROL Täglicher Batch]** | Da ein Profil in Experience Platform auf der Grundlage einer Zielgruppenbewertung aktualisiert wird, wird das Profil (die Identitäten) einmal täglich nachgelagert zur Zielplattform aktualisiert. Mehr dazu [Batch-Exporte](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -97,25 +97,25 @@ Bevor Sie Zielgruppendaten an ein Ziel senden oder aktivieren können, müssen S
 
 Beim Herstellen einer Verbindung zum Ziel ist das Festlegen einer Data Governance-Richtlinie vollständig optional. Lesen Sie die Experience Platform [Data Governance - Übersicht](/help/data-governance/policies/overview.md) für weitere Details.
 
-## Aktivieren von Segmenten für dieses Ziel {#activate}
+## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
-Lesen [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md) für Anweisungen zum Aktivieren von Zielgruppensegmenten für ein Ziel.
+Lesen [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für ein Ziel.
 
-Auf der Seite **[!UICONTROL Planung]** können Sie den Zeitplan und die Dateinamen für jedes Segment konfigurieren, das Sie exportieren. Die Konfiguration des Zeitplans ist obligatorisch, die Konfiguration des Dateinamens ist jedoch optional.
+Im **[!UICONTROL Planung]** können Sie den Zeitplan und die Dateinamen für jede Zielgruppe konfigurieren, die Sie exportieren. Die Konfiguration des Zeitplans ist obligatorisch, die Konfiguration des Dateinamens ist jedoch optional.
 
-![Screenshot der Platform-Benutzeroberfläche zur Planung der Segmentaktivierung.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
+![Screenshot der Platform-Benutzeroberfläche zur Planung der Aktivierung der Zielgruppe.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
 >[!NOTE]
 >
->Alle Segmente, die für aktiviert sind [!DNL The Trade Desk] Das CRM-Ziel wird automatisch auf eine tägliche Häufigkeit und einen vollständigen Dateiexport eingestellt.
+>Alle für aktivierten Zielgruppen [!DNL The Trade Desk] Das CRM-Ziel wird automatisch auf eine tägliche Häufigkeit und einen vollständigen Dateiexport eingestellt.
 
-![Screenshot der Platform-Benutzeroberfläche zur Planung der Segmentaktivierung.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
+![Screenshot der Platform-Benutzeroberfläche zur Planung der Aktivierung der Zielgruppe.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
 Im **[!UICONTROL Zuordnung]** -Seite, müssen Sie Attribute oder Identitäts-Namespaces aus der Quellspalte auswählen und der Zielspalte zuordnen.
 
-![Screenshot der Platform-Benutzeroberfläche zur Zuordnung der Segmentaktivierung.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
+![Screenshot der Platform-Benutzeroberfläche zur Zuordnung der Zielgruppenaktivierung.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
-Nachstehend finden Sie ein Beispiel für die korrekte Identitätszuordnung bei der Aktivierung von Segmenten für [!DNL The Trade Desk] CRM-Ziel.
+Nachstehend finden Sie ein Beispiel für die korrekte Identitätszuordnung bei der Aktivierung von Zielgruppen zu [!DNL The Trade Desk] CRM-Ziel.
 
 >[!IMPORTANT]
 >
@@ -133,11 +133,11 @@ Zielgruppenfelder auswählen:
 
 ## Datenexport überprüfen {#validate}
 
-Überprüfen, ob die Daten ordnungsgemäß aus der Experience Platform in [!DNL The Trade Desk]finden Sie die Segmente unter der Datenkachel Adobe 1PD in [!DNL The Trade Desk] Data Management Platform (DMP). Im Folgenden finden Sie die Schritte zum Auffinden der entsprechenden ID im [!DNL Trade Desk] Benutzeroberfläche:
+Überprüfen, ob die Daten ordnungsgemäß aus der Experience Platform in [!DNL The Trade Desk]finden Sie die Zielgruppen in der Kachel Adobe 1PD-Daten in [!DNL The Trade Desk] Data Management Platform (DMP). Im Folgenden finden Sie die Schritte zum Auffinden der entsprechenden ID im [!DNL Trade Desk] Benutzeroberfläche:
 
 1. Klicken Sie zunächst auf die **[!UICONTROL Daten]** Registerkarte und Überprüfung **[!UICONTROL Erstanbieter]**.
 2. Scrollen Sie nach unten, unter **[!UICONTROL Importierte Daten]** finden Sie **[!UICONTROL Adobe 1PD-Kachel]**.
-3. Klicken Sie auf die Schaltfläche **[!UICONTROL Adobe 1PD]** -Kachel und listet alle Segmente auf, die für die [!DNL Trade Desk] Ziel für Ihren Advertiser. Sie können auch die Suchfunktion verwenden.
+3. Klicken Sie auf die Schaltfläche **[!UICONTROL Adobe 1PD]Die Kachel ** enthält alle Zielgruppen, die für die [!DNL Trade Desk] Ziel für Ihren Advertiser. Sie können auch die Suchfunktion verwenden.
 4. Die Segment-ID-Nummer aus der Experience Platform wird als Segmentname in der [!DNL Trade Desk] Benutzeroberfläche.
 
 ## Datennutzung und -Governance {#data-usage-governance}

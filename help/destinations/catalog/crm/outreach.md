@@ -3,10 +3,10 @@ keywords: crm;CRM;CRM-Ziele;Outreach;CRM-Ziel erreichen
 title: Outreach-Verbindung
 description: Mit dem Ziel Outreach können Sie Ihre Kontodaten exportieren und für Ihre geschäftlichen Anforderungen in Outreach aktivieren.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: 4ef83c152c4649721c6a424f3ba47b7c6bbfef3f
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '1711'
-ht-degree: 53%
+source-wordcount: '1710'
+ht-degree: 43%
 
 ---
 
@@ -16,13 +16,13 @@ ht-degree: 53%
 
 [[!DNL Outreach]](https://www.outreach.io/) ist eine Sales Execution-Plattform mit den weltweit meisten Daten zu B2B-Käufer-Verkäufer-Interaktionen und erheblichen Investitionen in proprietäre KI-Technologien zur Umwandlung von Verkaufsdaten in Intelligenz. [!DNL Outreach] unterstützt Unternehmen bei der Automatisierung des Vertriebsengagements und der Nutzung von Umsatzdaten, um ihre Effizienz, Vorhersagbarkeit und ihr Wachstum zu verbessern.
 
-Diese [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt die [Outreach Update Resource API](https://api.outreach.io/api/v2/docs#update-an-existing-resource), mit dem Sie Identitäten innerhalb eines Segments aktualisieren können, die potenziellen Kunden in [!DNL Outreach].
+Diese [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt die [Outreach Update Resource API](https://api.outreach.io/api/v2/docs#update-an-existing-resource), mit dem Sie Identitäten innerhalb einer Audience aktualisieren können, die potenziellen Kunden in [!DNL Outreach].
 
 [!DNL Outreach] verwendet OAuth 2 mit Autorisierungs-Grant als Authentifizierungsmechanismus für die Kommunikation mit der [!DNL Outreach] [!DNL Update Resource API]. Anweisungen zur Authentifizierung bei Ihrem [!DNL Outreach] -Instanz befindet sich weiter unten in [An Ziel authentifizieren](#authenticate) Abschnitt.
 
 ## Anwendungsfälle {#use-cases}
 
-Als Marketer können Sie Ihren potenziellen Kunden personalisierte Erlebnisse auf der Grundlage von Attributen aus ihren Adobe Experience Platform-Profilen bereitstellen. Sie können Segmente aus Ihren Offline-Daten erstellen und diese Segmente an senden [!DNL Outreach], um in den Feeds der potenziellen Kunden anzuzeigen, sobald Segmente und Profile in Adobe Experience Platform aktualisiert wurden.
+Als Marketer können Sie Ihren potenziellen Kunden personalisierte Erlebnisse auf der Grundlage von Attributen aus ihren Adobe Experience Platform-Profilen bereitstellen. Sie können Zielgruppen aus Ihren Offline-Daten erstellen und diese Zielgruppen an senden [!DNL Outreach], um in den Feeds der Interessenten anzuzeigen, sobald Audiences und Profile in Adobe Experience Platform aktualisiert wurden.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -30,7 +30,7 @@ Als Marketer können Sie Ihren potenziellen Kunden personalisierte Erlebnisse au
 
 Vor der Aktivierung der Daten für das [!DNL Outreach]-Ziel müssen Sie über ein [Schema](/help/xdm/schema/composition.md), einen [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=de) und [Segmente](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=de) verfügen, die in [!DNL Experience Platform] erstellt wurden.
 
-Weitere Informationen finden Sie in der Dokumentation von Adobe zu den [Details zur Segmentzugehörigkeit der Schemafeldgruppe](/help/xdm/field-groups/profile/segmentation.md), wenn Sie Anleitung zu Segmentstatus benötigen.
+Weitere Informationen finden Sie in der Dokumentation von Adobe für [Feldergruppe Zielgruppenzugehörigkeitsdetails](/help/xdm/field-groups/profile/segmentation.md) wenn Sie Anleitungen zum Zielgruppenstatus benötigen.
 
 ### Voraussetzungen für die Auslieferung {#prerequisites-destination}
 
@@ -49,12 +49,12 @@ Beachten Sie die folgenden Punkte, bevor Sie sich beim [!DNL Outreach]-CRM-Ziel 
 
 #### Benutzerdefinierte Feldbeschriftungen einrichten {#prerequisites-custom-fields}
 
-[!DNL Outreach] unterstützt benutzerdefinierte Felder für [Perspektiven](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview). Siehe [Hinzufügen eines benutzerdefinierten Felds in Outreach](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach) für zusätzliche Leitlinien. Zur einfachen Identifizierung wird empfohlen, die Bezeichnungen manuell auf die entsprechenden Segmentnamen zu aktualisieren, anstatt die Standardwerte beizubehalten. Beispiel:
+[!DNL Outreach] unterstützt benutzerdefinierte Felder für [Perspektiven](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview). Siehe [Hinzufügen eines benutzerdefinierten Felds in Outreach](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach) für zusätzliche Leitlinien. Zur einfachen Identifizierung wird empfohlen, die Titel manuell auf die entsprechenden Zielgruppennamen zu aktualisieren, anstatt die Standardwerte beizubehalten. Beispiel:
 
 [!DNL Outreach] Einstellungsseite für Interessenten, die benutzerdefinierte Felder anzeigen.
 ![Screenshot der Benutzeroberfläche von Outreach mit den benutzerdefinierten Feldern auf der Einstellungsseite.](../../assets/catalog/crm/outreach/outreach-custom-fields.png)
 
-[!DNL Outreach] Einstellungsseite für Interessenten, die benutzerdefinierte Felder mit *benutzerfreundlich* Bezeichnungen, die mit den Segmentnamen übereinstimmen. Sie können den Segmentstatus auf der Interessensseite anhand dieser Beschriftungen anzeigen.
+[!DNL Outreach] Einstellungsseite für Interessenten, die benutzerdefinierte Felder mit *benutzerfreundlich* Titel, die mit den Zielgruppennamen übereinstimmen. Sie können den Zielgruppenstatus auf der Interessensseite anhand dieser Bezeichnungen anzeigen.
 ![Screenshot der Benutzeroberfläche &quot;Outreach&quot;, der benutzerdefinierte Felder mit zugehörigen Beschriftungen auf der Einstellungsseite anzeigt.](../../assets/catalog/crm/outreach/outreach-custom-field-labels.png)
 
 >[!NOTE]
@@ -65,7 +65,7 @@ Beachten Sie die folgenden Punkte, bevor Sie sich beim [!DNL Outreach]-CRM-Ziel 
 
 Die [!DNL Outreach] Die API hat eine Ratenbegrenzung von 10.000 Anfragen pro Stunde und Benutzer. Wenn Sie dieses Limit erreichen, erhalten Sie eine `429` Antwort mit der folgenden Meldung: `You have exceeded your permitted rate limit of 10,000; please try again at 2017-01-01T00:00:00.`.
 
-Wenn Sie diese Nachricht erhalten haben, müssen Sie Ihren Zeitplan für den Segmentexport entsprechend dem Schwellenwert für die Segmentexportrate aktualisieren.
+Wenn Sie diese Nachricht erhalten haben, müssen Sie Ihren Zielgruppenexport-Zeitplan entsprechend dem Schwellenwert für die Rate aktualisieren.
 
 Siehe Abschnitt [[!DNL Outreach] Dokumentation](https://api.outreach.io/api/v2/docs#rate-limiting) für weitere Details.
 
@@ -83,8 +83,8 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | <ul><li> Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern *(z. B.: E-Mail-Adresse, Telefonnummer, Nachname)*, entsprechend Ihrer Feldzuordnung.</li><li> Jeder Segmentstatus in [!DNL Outreach] wird mit dem entsprechenden Segmentstatus von Platform aktualisiert, basierend auf dem Wert der [!UICONTROL Zuordnungs-ID], der im Schritt [Segmentplanung](#schedule-segment-export-example) angegeben wurde.</li></ul> |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | <ul><li> Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Exporttyp | **[!UICONTROL Profilbasiert]** | <ul><li> Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern *(z. B.: E-Mail-Adresse, Telefonnummer, Nachname)*, entsprechend Ihrer Feldzuordnung.</li><li> Jeder Segmentstatus in [!DNL Outreach] wird mit dem entsprechenden Zielgruppenstatus von Platform aktualisiert, basierend auf dem [!UICONTROL Zuordnungs-ID] Wert, der während der [Zielgruppenplanung](#schedule-segment-export-example) Schritt.</li></ul> |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | <ul><li> Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform basierend auf der Zielgruppenbewertung aktualisiert wird, sendet der Connector das Update an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -129,15 +129,15 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
 
-## Aktivieren von Segmenten für dieses Ziel {#activate}
+## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
-> Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Zugriffssteuerung – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+> Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md).
+Lesen [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppenexport-Ziele](../../ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
 
 ### Zuordnungsüberlegungen und Beispiel {#mapping-considerations-example}
 
@@ -151,7 +151,7 @@ Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!
 
 1. Wählen Sie im Fenster [!UICONTROL Zielfeld auswählen] den Typ des Zielfelds aus, dem Sie Ihr Quellfeld zuordnen möchten.
    * **[!UICONTROL Identity-Namespace auswählen]**: Wählen Sie diese Option aus, um Ihr Quellfeld einem Identity-Namespace aus der Liste zuzuordnen.
-      ![Screenshot der Platform-Benutzeroberfläche mit Target-Zuordnung unter Verwendung von OutreachId.](../../assets/catalog/crm/outreach/target-mapping.png)
+     ![Screenshot der Platform-Benutzeroberfläche mit Target-Zuordnung unter Verwendung von OutreachId.](../../assets/catalog/crm/outreach/target-mapping.png)
 
    * Fügen Sie die folgende Zuordnung zwischen Ihrem XDM-Profilschema und Ihrer [!DNL Outreach]-Instanz hinzu:
 |XDM-Profilschema|[!DNL Outreach] Instanz| Obligatorisch|
@@ -159,34 +159,33 @@ Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!
 |`Oid`|`OutreachId`| Ja |
 
    * **[!UICONTROL Benutzerdefinierte Attribute auswählen]**: Wählen Sie diese Option aus, um Ihr Quellfeld einem benutzerdefinierten Attribut zuzuordnen, das Sie im Feld [!UICONTROL Attributname] definieren. Siehe [[!DNL Outreach] Interessentendokumentation](https://api.outreach.io/api/v2/docs#prospect) für eine umfassende Liste der unterstützten Attribute.
-      ![Screenshot der Platform-Benutzeroberfläche mit Target-Zuordnung unter Verwendung von LastName.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
+     ![Screenshot der Platform-Benutzeroberfläche mit Target-Zuordnung unter Verwendung von LastName.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
    * Fügen Sie je nach den Werten, die Sie aktualisieren möchten, beispielsweise die folgende Zuordnung zwischen Ihrem XDM-Profilschema und Ihrem [!DNL Outreach] instance: |XDM-Profilschema|[!DNL Outreach] Instanz| |—|—| |`person.name.firstName`|`firstName`| |`person.name.lastName`|`lastName`|
 
    * Nachfolgend finden Sie ein Beispiel für die Verwendung dieser Zuordnungen:
-      ![Beispiel-Screenshot der Platform-Benutzeroberfläche mit Ziel-Zuordnungen.](../../assets/catalog/crm/outreach/mappings.png)
+     ![Beispiel-Screenshot der Platform-Benutzeroberfläche mit Ziel-Zuordnungen.](../../assets/catalog/crm/outreach/mappings.png)
 
-### Planen des Segmentexports und Beispiel {#schedule-segment-export-example}
+### Zielgruppenexport und Beispiel planen {#schedule-segment-export-example}
 
-* Bei der Durchführung der [Segmentexport planen](../../ui/activate-segment-streaming-destinations.md) Schritt: Sie müssen Platform-Segmente manuell dem benutzerdefinierten Feldattribut in [!DNL Outreach].
+* Bei der Durchführung der [Zielgruppenexport planen](../../ui/activate-segment-streaming-destinations.md) Schritt müssen Sie Platform-Zielgruppen manuell dem benutzerdefinierten Feldattribut in [!DNL Outreach].
 
 * Wählen Sie dazu jedes Segment aus und geben Sie dann den entsprechenden numerischen Wert ein, der dem *Benutzerdefiniertes Feld `N` Titel* -Feld aus [!DNL Outreach] im **[!UICONTROL Zuordnungs-ID]** -Feld.
 
-   >[!IMPORTANT]
-   >
-   > * Numerischer Wert *(`N`)* verwendet innerhalb der [!UICONTROL Zuordnungs-ID] sollte mit dem benutzerdefinierten Attributschlüssel übereinstimmen, der dem numerischen Wert in [!DNL Outreach]. Beispiel: *Benutzerdefiniertes Feld `N` Titel*.
-   > * Sie müssen nur den numerischen Wert angeben, nicht die gesamte benutzerdefinierte Feldbezeichnung.
-   > * [!DNL Outreach] unterstützt maximal 150 benutzerdefinierte Beschriftungsfelder.
-   > * Siehe [[!DNL Outreach] Interessentendokumentation](https://api.outreach.io/api/v2/docs#prospect) für Details.
-
+  >[!IMPORTANT]
+  >
+  > * Numerischer Wert *(`N`)* verwendet innerhalb der [!UICONTROL Zuordnungs-ID] sollte mit dem benutzerdefinierten Attributschlüssel übereinstimmen, der dem numerischen Wert in [!DNL Outreach]. Beispiel: *Benutzerdefiniertes Feld `N` Titel*.
+  > * Sie müssen nur den numerischen Wert angeben, nicht die gesamte benutzerdefinierte Feldbezeichnung.
+  > * [!DNL Outreach] unterstützt maximal 150 benutzerdefinierte Beschriftungsfelder.
+  > * Siehe [[!DNL Outreach] Interessentendokumentation](https://api.outreach.io/api/v2/docs#prospect) für Details.
 
    * Beispiel:
 
-      | [!DNL Outreach] Feld | Plattformzuordnungs-ID |
-      |---|---|
-      | Benutzerdefiniertes Feld `4` Titel | `4` |
+     | [!DNL Outreach] Feld | Plattformzuordnungs-ID |
+     |---|---|
+     | Benutzerdefiniertes Feld `4` Titel | `4` |
 
-      ![Screenshot der Platform-Benutzeroberfläche mit einer Beispielzuordnungs-ID während des Segmentexports planen .](../../assets/catalog/crm/outreach/schedule-segment-export.png)
+     ![Screenshot der Platform-Benutzeroberfläche mit einer Beispielzuordnungs-ID während des Zielgruppenexports planen .](../../assets/catalog/crm/outreach/schedule-segment-export.png)
 
 ## Überprüfen des Datenexports {#exported-data}
 
@@ -198,15 +197,15 @@ Gehen Sie wie folgt vor, um zu überprüfen, ob Sie das Ziel korrekt eingerichte
 1. Wählen Sie das Ziel aus und überprüfen Sie, ob der Status **[!UICONTROL aktiviert]** ist.
    ![Screenshot der Platform-Benutzeroberfläche mit dem Ziel-Datenfluss für das ausgewählte Ziel.](../../assets/catalog/crm/outreach/destination-dataflow-run.png)
 
-1. Wechseln Sie zur Registerkarte **[!DNL Activation data]** und wählen Sie einen Segmentnamen aus.
+1. Wechseln Sie zu **[!DNL Activation data]** und wählen Sie einen Zielgruppennamen aus.
    ![Screenshot der Platform-Benutzeroberfläche mit Zielen-Aktivierungsdaten.](../../assets/catalog/crm/outreach/destinations-activation-data.png)
 
-1. Überwachen Sie die Segmentzusammenfassung und stellen Sie sicher, dass die Anzahl der Profile der im Segment erstellten Anzahl entspricht.
+1. Überwachen Sie die Zielgruppenzusammenfassung und stellen Sie sicher, dass die Anzahl der Profile der im Segment erstellten Anzahl entspricht.
    ![Screenshot der Platform-Benutzeroberfläche mit Segmentzusammenfassung.](../../assets/catalog/crm/outreach/segment.png)
 
-1. Melden Sie sich bei der [!DNL Outreach]-Website an und navigieren Sie dann zur Seite [!DNL Apps] > [!DNL Contacts], um zu überprüfen, ob die Profile aus dem Segment hinzugefügt wurden. Sie können sehen, dass jeder Segmentstatus in [!DNL Outreach] mit dem entsprechenden Segmentstatus von Platform aktualisiert wurde, basierend auf dem Wert der [!UICONTROL Zuordnungs-ID], der im Schritt [Segmentplanung](#schedule-segment-export-example) angegeben wurde.
+1. Melden Sie sich bei der [!DNL Outreach] Website und navigieren Sie dann zur [!DNL Apps] > [!DNL Contacts] und überprüfen Sie, ob die Profile aus der Audience hinzugefügt wurden. Sie können sehen, dass jeder Zielgruppenstatus in [!DNL Outreach] mit dem entsprechenden Zielgruppenstatus von Platform aktualisiert wurde, basierend auf dem [!UICONTROL Zuordnungs-ID] Wert, der während der [Zielgruppenplanung](#schedule-segment-export-example) Schritt.
 
-![Screenshot der Benutzeroberfläche von Outreach , der die Seite &quot;Outreach Prospects&quot;mit dem aktualisierten Segmentstatus anzeigt.](../../assets/catalog/crm/outreach/outreach-prospect.png)
+![Screenshot der Benutzeroberfläche von Outreach , der die Seite &quot;Outreach-Perspektiven&quot;mit dem aktualisierten Zielgruppenstatus anzeigt.](../../assets/catalog/crm/outreach/outreach-prospect.png)
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
@@ -218,7 +217,7 @@ Beim Überprüfen eines Datenfluss-Ablaufs wird möglicherweise die folgende Feh
 
 ![Screenshot der Platform-Benutzeroberfläche mit dem Fehler bei fehlerhaften Anfragen.](../../assets/catalog/crm/outreach/error.png)
 
-Um diesen Fehler zu beheben, überprüfen Sie, ob die Variable [!UICONTROL Zuordnungs-ID] Sie in Platform für Ihre [!DNL Outreach] Segment gültig ist und in vorhanden ist [!DNL Outreach].
+Um diesen Fehler zu beheben, überprüfen Sie, ob die Variable [!UICONTROL Zuordnungs-ID] Sie in Platform für Ihre [!DNL Outreach] -Zielgruppe gültig ist und in vorhanden ist [!DNL Outreach].
 
 ## Zusätzliche Ressourcen {#additional-resources}
 

@@ -3,10 +3,10 @@ keywords: Werbung; Schläuche;
 title: Microsoft Bing-Verbindung
 description: Mit dem Microsoft Bing-Verbindungsziel können Sie digitale Kampagnen für Retargeting und Zielgruppen-Targeting in Microsoft Display Advertising durchführen.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: aec9708680c2a4cb3c70af12f95c67ec37b2e129
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 64%
+source-wordcount: '670'
+ht-degree: 45%
 
 ---
 
@@ -20,7 +20,7 @@ So senden Sie Profildaten an [!DNL Microsoft Bing], müssen Sie zunächst eine V
 
 ## Anwendungsfälle {#use-cases}
 
-Als Marketer möchte ich Segmente verwenden können, die aus [!DNL Microsoft Advertising IDs] , um Benutzer über Display-Werbung anzusprechen. [!DNL Microsoft Advertising] Kanäle.
+Als Marketer möchte ich in der Lage sein, aus [!DNL Microsoft Advertising IDs] , um Benutzer über Display-Werbung anzusprechen. [!DNL Microsoft Advertising] Kanäle.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -32,16 +32,30 @@ Als Marketer möchte ich Segmente verwenden können, die aus [!DNL Microsoft Adv
 
 {style="table-layout:auto"}
 
+## Unterstützte Zielgruppen {#supported-audiences}
+
+In diesem Abschnitt werden alle Zielgruppen beschrieben, die Sie an dieses Ziel exportieren können.
+
+Alle Ziele unterstützen die Aktivierung von Zielgruppen, die durch die Experience Platform generiert wurden [Segmentierungsdienst](../../../segmentation/home.md).
+
+Darüber hinaus unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
+
+| Zielgruppentyp | Beschreibung |
+---------|----------|
+| Benutzerdefinierte Uploads | Zielgruppen, die aus CSV-Dateien in Experience Platform aufgenommen werden. |
+
+{style="table-layout:auto"}
+
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
-**[!DNL Segment Export]** - Sie exportieren alle Mitglieder eines Segments (Zielgruppe) in die [!DNL Microsoft Bing] Ziel.
+**[!DNL Audience Export]** - Sie exportieren alle Mitglieder einer Audience in die [!DNL Microsoft Bing] Ziel.
 
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) in die [!DNL Microsoft Bing] Ziel. |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe in die [!DNL Microsoft Bing] Ziel. |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform basierend auf der Zielgruppenbewertung aktualisiert wird, sendet der Connector das Update an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -75,24 +89,24 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
 
-## Aktivieren von Segmenten für dieses Ziel {#activate}
+## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
 >title="Zuordnungs-ID"
->abstract="Geben Sie die numerische Bing-Segment-ID ein, der Sie das ausgewählte Segment zuordnen möchten. Wenn die angegebene [!UICONTROL Zuordnungs-ID] mit keiner Segment-ID im Bing-Ziel übereinstimmt, werden die erwarteten Zielgruppendaten in Ihrem Bing-Konto nicht angezeigt."
+>abstract="Geben Sie die numerische Bing-Zielgruppen-ID ein, der Sie das ausgewählte Segment zuordnen möchten. Wenn die Variable [!UICONTROL Zuordnungs-ID] entspricht keiner Zielgruppen-ID im Bing-Ziel, werden Ihnen die erwarteten Zielgruppendaten in Ihrem Bing-Konto nicht angezeigt."
 
 >[!IMPORTANT]
 > 
 >Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md).
+Siehe [Aktivieren von Zielgruppendaten für Streaming-Zielgruppenexport-Ziele](../../ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
 
-Im [Segmentplan](../../ui/activate-segment-streaming-destinations.md#scheduling) Schritt: Sie müssen den Segmentnamen manuell im [!UICONTROL Zuordnungs-ID] -Feld. Dadurch wird sichergestellt, dass Segmentmetadaten ordnungsgemäß an weitergegeben werden. [!DNL Bing].
+Im [Zielgruppenplanung](../../ui/activate-segment-streaming-destinations.md#scheduling) Schritt, müssen Sie den Zielgruppennamen manuell im [!UICONTROL Zuordnungs-ID] -Feld. Dadurch wird sichergestellt, dass Zielgruppen-Metadaten korrekt an [!DNL Bing].
 
-![UI-Bild, das den Bildschirm für den Segmentzeitplan mit einem Beispiel für die Zuordnung des Segmentnamens zur Bing Mapping-ID anzeigt.](../../assets/catalog/advertising/bing/mapping-id.png)
+![UI-Bild, das den Bildschirm &quot;Zielgruppenplanung&quot;mit einem Beispiel für die Zuordnung des Zielgruppennamen zur Bing-Mapping-ID anzeigt.](../../assets/catalog/advertising/bing/mapping-id.png)
 
 ## Exportierte Daten {#exported-data}
 

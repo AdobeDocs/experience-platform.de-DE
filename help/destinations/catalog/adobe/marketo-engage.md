@@ -2,10 +2,10 @@
 title: Marketo Engage-Ziel
 description: Marketo Engage ist die einzige End-to-End-Lösung für Customer Experience Management (CXM) für Marketing, Werbung, Analyse und Handel. Damit können Sie Aktivitäten von der CRM-Lead-Verwaltung über die Kundeninteraktion bis hin zur kontobasierten Marketing- und Umsatzzuordnung automatisieren und verwalten.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: e68bbc07f7d2e4e05b725cbef37a1810a5825742
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '864'
-ht-degree: 35%
+source-wordcount: '910'
+ht-degree: 25%
 
 ---
 
@@ -19,7 +19,6 @@ ht-degree: 35%
 >* Wenn Sie bereits Daten für die **[!UICONTROL Marketo V1]** Ziel: Erstellen Sie neue Datenflüsse an die **[!UICONTROL Marketo V2]** Ziel und Löschen vorhandener Datenflüsse an die **[!UICONTROL Marketo V1]** Ziel bis Februar 2023. Ab diesem Datum wird die **[!UICONTROL Marketo V1]** Die Zielkarte wird entfernt.
 >* Wenn Sie noch keinen Datenfluss zum **[!UICONTROL Marketo V1]** Ziel, verwenden Sie bitte die neue **[!UICONTROL Marketo V2]** -Karte, um eine Verbindung mit Marketo herzustellen und Daten nach zu exportieren.
 
-
 ![Bild der beiden Marketo-Zielkarten in einer Seitenansicht.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
 Zu den Verbesserungen am Marketo V2-Ziel gehören:
@@ -31,7 +30,7 @@ Zu den Verbesserungen am Marketo V2-Ziel gehören:
 
 [!DNL Marketo Engage] ist die einzige End-to-End-Lösung für Customer Experience Management (CXM) für Marketing, Werbung, Analyse und Handel. Damit können Sie Aktivitäten von der CRM-Lead-Verwaltung über die Kundeninteraktion bis hin zur kontobasierten Marketing- und Umsatzzuordnung automatisieren und verwalten.
 
-Das Marketo-Ziel ermöglicht es Marketing-Experten, in Adobe Experience Platform erstellte Segmente per Push an zu übertragen, wo sie als statische Listen angezeigt werden.
+Mit dem Ziel können Marketingexperten in Adobe Experience Platform erstellte Zielgruppen an Marketo senden, wo sie als statische Listen angezeigt werden.
 
 ## Unterstützte Identitäten und Attribute {#supported-identities-attributes}
 
@@ -52,28 +51,39 @@ Das Marketo-Ziel ermöglicht es Marketing-Experten, in Adobe Experience Platform
 
 Sie können Attribute von Experience Platform zu allen Attributen zuordnen, auf die Ihr Unternehmen in Marketo Zugriff hat. In Marketo können Sie die [API-Anfrage beschreiben](https://developers.marketo.com/rest-api/lead-database/leads/#describe) , um die Attributfelder abzurufen, auf die Ihr Unternehmen Zugriff hat.
 
+## Unterstützung externer Zielgruppen {#external-audiences-support}
+
+Alle Ziele unterstützen die Aktivierung von Zielgruppen, die durch die Experience Platform generiert wurden [Segmentierungsdienst](../../../segmentation/home.md).
+
+Darüber hinaus unterstützt dieses Ziel auch die Aktivierung der externen Zielgruppen, die in der folgenden Tabelle beschrieben sind.
+
+| Externer Zielgruppentyp | Beschreibung |
+---------|----------|
+| Benutzerdefinierte Uploads | Zielgruppen, die aus CSV-Dateien in Experience Platform aufgenommen werden. |
+
+{style="table-layout:auto"}
+
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den in der Variablen [!DNL Marketo Engage] Ziel. |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (E-Mail, ECID), die im [!DNL Marketo Engage] Ziel. |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform basierend auf der Zielgruppenbewertung aktualisiert wird, sendet der Connector das Update an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
-## Einrichten des Ziels und Aktivieren von Segmenten {#set-up}
+## Einrichten des Ziels und Aktivieren von Zielgruppen {#set-up}
 
 >[!IMPORTANT]
 > 
 >* Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Zugriffsberechtigung]** [Ziele verwalten](/help/access-control/home.md#permissions).
 >* Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
+Detaillierte Anweisungen zum Einrichten des Ziels und Aktivieren von Zielgruppen finden Sie unter [Adobe Experience Platform-Zielgruppe in eine statische Marketo-Liste pushen](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) in der Marketo-Dokumentation.
 
-Detaillierte Anweisungen zum Einrichten des Ziels und Aktivieren von Segmenten finden Sie unter [Adobe Experience Platform-Segment in eine statische Marketo-Liste pushen](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) in der Marketo-Dokumentation.
-
-Das folgende Video zeigt auch die Schritte zum Konfigurieren eines Marketo-Ziels und zum Aktivieren von Segmenten.
+Das folgende Video zeigt auch die Schritte zum Konfigurieren eines Marketo-Ziels und zum Aktivieren von Zielgruppen.
 
 >[!IMPORTANT]
 >
@@ -81,9 +91,8 @@ Das folgende Video zeigt auch die Schritte zum Konfigurieren eines Marketo-Ziels
 > 
 >* Die Zielkarte, die Sie in der Experience Platform-Benutzeroberfläche verwenden sollten, lautet **[!UICONTROL Marketo V2]**.
 >* Das Video zeigt das neue **[!UICONTROL Personenerstellung]** Selektorfeld im Workflow Verbindung mit Ziel herstellen.
->* Die beiden im Video genannten Einschränkungen gelten nicht mehr. Sie können jetzt neben den Segmentzugehörigkeitsinformationen, die zum Zeitpunkt der Videoverfolgung unterstützt wurden, viele weitere Profilattributfelder zuordnen. Sie können auch Segmentmitglieder nach Marketo exportieren, die noch nicht in Ihren statischen Marketo-Listen vorhanden sind. Diese werden dann zu den Listen hinzugefügt.
->* In Marketo V1 mussten Sie im Schritt **** Segment planen des Aktivierungs-Workflows manuell eine **[!UICONTROL Zuordnungs-ID]** hinzufügen, um Daten erfolgreich in Marketo zu exportieren. Dieser manuelle Schritt ist in Marketo V2 nicht mehr erforderlich.
-
+>* Die beiden im Video genannten Einschränkungen gelten nicht mehr. Sie können jetzt neben den zum Zeitpunkt der Aufzeichnung des Videos unterstützten Informationen zur Zielgruppenmitgliedschaft viele weitere Profilattributfelder zuordnen. Sie können Zielgruppenmitglieder auch nach Marketo exportieren, die noch nicht in Ihren statischen Marketo-Listen vorhanden sind. Diese werden dann zu den Listen hinzugefügt.
+>* Im **[!UICONTROL Schritt zum Planen des Zielgruppenschritts]** des Aktivierungs-Workflows müssen Sie in Marketo V1 manuell einen **[!UICONTROL Zuordnungs-ID]** , um Daten erfolgreich nach Marketo zu exportieren. Dieser manuelle Schritt ist in Marketo V2 nicht mehr erforderlich.
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
@@ -101,8 +110,8 @@ Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Date
 
 <!--
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
-See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 -->

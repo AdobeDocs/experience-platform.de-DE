@@ -3,18 +3,18 @@ keywords: Experience Platform; Startseite; beliebte Themen; Flussdienst; Aktuali
 solution: Experience Platform
 title: Aktualisieren von Zieldatenflüssen mithilfe der Flow Service-API
 type: Tutorial
-description: In diesem Tutorial werden die Schritte zum Aktualisieren eines Ziel-Datenflusses beschrieben. Erfahren Sie, wie Sie den Datenfluss aktivieren oder deaktivieren, seine grundlegenden Informationen aktualisieren oder mithilfe der Flow Service-API Segmente und Attribute hinzufügen und entfernen.
+description: In diesem Tutorial werden die Schritte zum Aktualisieren eines Ziel-Datenflusses beschrieben. Erfahren Sie, wie Sie den Datenfluss aktivieren oder deaktivieren, seine grundlegenden Informationen aktualisieren oder Zielgruppen und Attribute mithilfe der Flow Service-API hinzufügen und entfernen.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
 workflow-type: tm+mt
 source-wordcount: '2408'
-ht-degree: 40%
+ht-degree: 35%
 
 ---
 
 # Aktualisieren von Zieldatenflüssen mithilfe der Flow Service-API
 
-In diesem Tutorial werden die Schritte zum Aktualisieren eines Ziel-Datenflusses beschrieben. Erfahren Sie, wie Sie den Datenfluss aktivieren oder deaktivieren, seine grundlegenden Informationen aktualisieren oder Segmente und Attribute mithilfe des [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Informationen zum Bearbeiten von Ziel-Datenflüssen mithilfe der Experience Platform-Benutzeroberfläche finden Sie unter [Bearbeiten von Aktivierungsflüssen](/help/destinations/ui/edit-activation.md).
+In diesem Tutorial werden die Schritte zum Aktualisieren eines Ziel-Datenflusses beschrieben. Erfahren Sie, wie Sie den Datenfluss aktivieren oder deaktivieren, seine grundlegenden Informationen aktualisieren oder Zielgruppen und Attribute mithilfe des [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Informationen zum Bearbeiten von Ziel-Datenflüssen mithilfe der Experience Platform-Benutzeroberfläche finden Sie unter [Bearbeiten von Aktivierungsflüssen](/help/destinations/ui/edit-activation.md).
 
 ## Erste Schritte {#get-started}
 
@@ -447,9 +447,9 @@ Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und ein aktualisiertes eTag
 }
 ```
 
-## Hinzufügen eines Segments zu einem Datenfluss {#add-segment}
+## Hinzufügen einer Zielgruppe zu einem Datenfluss {#add-segment}
 
-Um ein Segment zum Ziel-Datenfluss hinzuzufügen, führen Sie eine PATCH-Anfrage an die [!DNL Flow Service] API bei der Angabe Ihrer Fluss-ID, -Version und des Segments, das Sie hinzufügen möchten.
+Um eine Zielgruppe zum Ziel-Datenfluss hinzuzufügen, führen Sie eine PATCH-Anfrage an die [!DNL Flow Service] API bei der Angabe Ihrer Fluss-ID, Version und Zielgruppe, die Sie hinzufügen möchten.
 
 **API-Format**
 
@@ -459,7 +459,7 @@ PATCH /flows/{FLOW_ID}
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird einem vorhandenen Ziel-Datenfluss ein neues Segment hinzugefügt.
+Mit der folgenden Anfrage wird einem vorhandenen Ziel-Datenfluss eine neue Zielgruppe hinzugefügt.
 
 ```shell
 curl -X PATCH \
@@ -494,18 +494,18 @@ curl -X PATCH \
 
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
-| `op` | Der Operationsaufruf, der verwendet wird, um die Aktion zu definieren, die zur Aktualisierung des Datenflusses erforderlich ist. Operationen umfassen: `add`, `replace` und `remove`. Um ein Segment zu einem Datenfluss hinzuzufügen, verwenden Sie die Operation `add`. |
-| `path` | Definiert den Teil des Flusses, der aktualisiert werden soll. Verwenden Sie beim Hinzufügen eines Segments zu einem Datenfluss den im Beispiel angegebenen Pfad. |
+| `op` | Der Operationsaufruf, der verwendet wird, um die Aktion zu definieren, die zur Aktualisierung des Datenflusses erforderlich ist. Operationen umfassen: `add`, `replace` und `remove`. Um einem Datenfluss eine Zielgruppe hinzuzufügen, verwenden Sie die `add` Vorgang. |
+| `path` | Definiert den Teil des Flusses, der aktualisiert werden soll. Verwenden Sie beim Hinzufügen einer Zielgruppe zu einem Datenfluss den im Beispiel angegebenen Pfad. |
 | `value` | Der neue Wert, mit dem Sie Ihren Parameter aktualisieren möchten. |
-| `id` | Geben Sie die ID des Segments an, das Sie dem Ziel-Datenfluss hinzufügen. |
-| `name` | **(Optional)**. Geben Sie den Namen des Segments an, das Sie dem Ziel-Datenfluss hinzufügen möchten. Beachten Sie, dass dieses Feld nicht obligatorisch ist und Sie ein Segment erfolgreich zum Ziel-Datenfluss hinzufügen können, ohne dessen Namen anzugeben. |
-| `filenameTemplate` | Für *Batch-Ziele* nur. Dieses Feld ist nur erforderlich, wenn ein Segment zu einem Datenfluss in Batch-Dateiexport-Zielen wie Amazon S3, SFTP oder Azure Blob hinzugefügt wird. <br> Dieses Feld bestimmt das Dateinamenformat der Dateien, die an Ihr Ziel exportiert werden. <br> Die folgenden Optionen sind verfügbar: <br> <ul><li>`%DESTINATION_NAME%`: Obligatorisch. Die exportierten Dateien enthalten den Zielnamen.</li><li>`%SEGMENT_ID%`: Obligatorisch. Die exportierten Dateien enthalten die ID des exportierten Segments.</li><li>`%SEGMENT_NAME%`: **(Optional)**. Die exportierten Dateien enthalten den Namen des exportierten Segments.</li><li>`DATETIME(YYYYMMdd_HHmmss)` oder `%TIMESTAMP%`: **(Optional)**. Wählen Sie eine dieser beiden Optionen für Ihre Dateien aus, um den Zeitpunkt einzuschließen, zu dem sie von Experience Platform generiert werden.</li><li>`custom-text`: **(Optional)**. Ersetzen Sie diesen Platzhalter durch einen beliebigen benutzerdefinierten Text, den Sie am Ende Ihrer Dateinamen anhängen möchten.</li></ul> <br> Weitere Informationen zur Konfiguration von Dateinamen finden Sie im Abschnitt [Konfigurieren von Dateinamen](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) im Tutorial zur Aktivierung von Batch-Zielen. |
-| `exportMode` | Für *Batch-Ziele* nur. Dieses Feld ist nur erforderlich, wenn ein Segment zu einem Datenfluss in Batch-Dateiexport-Zielen wie Amazon S3, SFTP oder Azure Blob hinzugefügt wird. <br> Obligatorisch. Wählen Sie `"DAILY_FULL_EXPORT"` oder `"FIRST_FULL_THEN_INCREMENTAL"` aus. Weitere Informationen zu den beiden Optionen finden Sie unter [Exportieren von vollständigen Dateien](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) und [Exportieren von inkrementellen Dateien](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) im Tutorial zur Aktivierung von Batch-Zielen. |
-| `startDate` | Wählen Sie das Datum aus, an dem das Segment Profile in Ihr Ziel exportieren soll. |
-| `frequency` | Für *Batch-Ziele* nur. Dieses Feld ist nur erforderlich, wenn ein Segment zu einem Datenfluss in Batch-Dateiexport-Zielen wie Amazon S3, SFTP oder Azure Blob hinzugefügt wird. <br> Obligatorisch. <br> <ul><li>Für den Exportmodus `"DAILY_FULL_EXPORT"` können Sie `ONCE` oder `DAILY` wählen.</li><li>Für den Exportmodus `"FIRST_FULL_THEN_INCREMENTAL"` können Sie `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"` wählen.</li></ul> |
+| `id` | Geben Sie die ID der Audience an, die Sie dem Ziel-Datenfluss hinzufügen möchten. |
+| `name` | **(Optional)**. Geben Sie den Namen der Audience an, die Sie dem Ziel-Datenfluss hinzufügen möchten. Beachten Sie, dass dieses Feld nicht erforderlich ist und Sie dem Ziel-Datenfluss erfolgreich eine Zielgruppe hinzufügen können, ohne dessen Namen anzugeben. |
+| `filenameTemplate` | Für *Batch-Ziele* nur. Dieses Feld ist nur erforderlich, wenn einem Datenfluss in Batch-Dateiexport-Zielen wie Amazon S3, SFTP oder Azure Blob eine Zielgruppe hinzugefügt wird. <br> Dieses Feld bestimmt das Dateinamenformat der Dateien, die an Ihr Ziel exportiert werden. <br> Die folgenden Optionen sind verfügbar: <br> <ul><li>`%DESTINATION_NAME%`: Obligatorisch. Die exportierten Dateien enthalten den Zielnamen.</li><li>`%SEGMENT_ID%`: Obligatorisch. Die exportierten Dateien enthalten die Kennung der exportierten Audience.</li><li>`%SEGMENT_NAME%`: **(Optional)**. Die exportierten Dateien enthalten den Namen der exportierten Audience.</li><li>`DATETIME(YYYYMMdd_HHmmss)` oder `%TIMESTAMP%`: **(Optional)**. Wählen Sie eine dieser beiden Optionen für Ihre Dateien aus, um den Zeitpunkt einzuschließen, zu dem sie von Experience Platform generiert werden.</li><li>`custom-text`: **(Optional)**. Ersetzen Sie diesen Platzhalter durch einen beliebigen benutzerdefinierten Text, den Sie am Ende Ihrer Dateinamen anhängen möchten.</li></ul> <br> Weitere Informationen zur Konfiguration von Dateinamen finden Sie im Abschnitt [Konfigurieren von Dateinamen](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) im Tutorial zur Aktivierung von Batch-Zielen. |
+| `exportMode` | Für *Batch-Ziele* nur. Dieses Feld ist nur erforderlich, wenn einem Datenfluss in Batch-Dateiexport-Zielen wie Amazon S3, SFTP oder Azure Blob eine Zielgruppe hinzugefügt wird. <br> Obligatorisch. Wählen Sie `"DAILY_FULL_EXPORT"` oder `"FIRST_FULL_THEN_INCREMENTAL"` aus. Weitere Informationen zu den beiden Optionen finden Sie unter [Exportieren von vollständigen Dateien](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) und [Exportieren von inkrementellen Dateien](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) im Tutorial zur Aktivierung von Batch-Zielen. |
+| `startDate` | Wählen Sie das Datum aus, an dem die Audience mit dem Export von Profilen in Ihr Ziel beginnen soll. |
+| `frequency` | Für *Batch-Ziele* nur. Dieses Feld ist nur erforderlich, wenn einem Datenfluss in Batch-Dateiexport-Zielen wie Amazon S3, SFTP oder Azure Blob eine Zielgruppe hinzugefügt wird. <br> Obligatorisch. <br> <ul><li>Für den Exportmodus `"DAILY_FULL_EXPORT"` können Sie `ONCE` oder `DAILY` wählen.</li><li>Für den Exportmodus `"FIRST_FULL_THEN_INCREMENTAL"` können Sie `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"` wählen.</li></ul> |
 | `triggerType` | Für *Batch-Ziele* nur. Dieses Feld ist nur erforderlich, wenn Sie die `"DAILY_FULL_EXPORT"` -Modus im `frequency` auswählen. <br> Obligatorisch. <br> <ul><li>Auswählen `"AFTER_SEGMENT_EVAL"` , damit der Aktivierungsauftrag unmittelbar nach Abschluss des täglichen Platform-Batch-Segmentierungsauftrags ausgeführt wird. Dadurch wird sichergestellt, dass bei der Ausführung des Aktivierungsvorgangs die aktuellen Profile nach Ihrem Ziel exportiert werden.</li><li>Auswählen `"SCHEDULED"` , damit der Aktivierungsauftrag zu einem festen Zeitpunkt ausgeführt wird. Dadurch wird sichergestellt, dass Experience Platform-Profildaten jeden Tag gleichzeitig exportiert werden. Je nachdem, ob der Batch-Segmentierungsauftrag vor dem Beginn des Aktivierungsvorgangs abgeschlossen wurde, sind die zu exportierenden  jedoch möglicherweise nicht die aktuellsten. Bei Auswahl dieser Option müssen Sie auch eine `startTime` um anzugeben, zu welchem Zeitpunkt in UTC die täglichen Exporte stattfinden sollen.</li></ul> |
-| `endDate` | Für *Batch-Ziele* nur. Dieses Feld ist nur erforderlich, wenn ein Segment zu einem Datenfluss in Batch-Dateiexport-Zielen wie Amazon S3, SFTP oder Azure Blob hinzugefügt wird. <br> Nicht anwendbar bei der Auswahl von `"exportMode":"DAILY_FULL_EXPORT"` und `"frequency":"ONCE"`. <br> Legt das Datum fest, ab dem Segmentmitglieder nicht mehr in das Ziel exportiert werden. |
-| `startTime` | Für *Batch-Ziele* nur. Dieses Feld ist nur erforderlich, wenn ein Segment zu einem Datenfluss in Batch-Dateiexport-Zielen wie Amazon S3, SFTP oder Azure Blob hinzugefügt wird. <br> Obligatorisch. Wählen Sie den Zeitpunkt aus, zu dem Dateien, die Mitglieder des Segments enthalten, generiert und an Ihr Ziel exportiert werden sollen. |
+| `endDate` | Für *Batch-Ziele* nur. Dieses Feld ist nur erforderlich, wenn einem Datenfluss in Batch-Dateiexport-Zielen wie Amazon S3, SFTP oder Azure Blob eine Zielgruppe hinzugefügt wird. <br> Nicht anwendbar bei der Auswahl von `"exportMode":"DAILY_FULL_EXPORT"` und `"frequency":"ONCE"`. <br> Legt das Datum fest, an dem Audience-Mitglieder nicht mehr in das Ziel exportiert werden. |
+| `startTime` | Für *Batch-Ziele* nur. Dieses Feld ist nur erforderlich, wenn einem Datenfluss in Batch-Dateiexport-Zielen wie Amazon S3, SFTP oder Azure Blob eine Zielgruppe hinzugefügt wird. <br> Obligatorisch. Wählen Sie den Zeitpunkt aus, zu dem Dateien mit Mitgliedern der Audience generiert und an Ihr Ziel exportiert werden sollen. |
 
 **Antwort**
 
@@ -518,9 +518,9 @@ Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und ein aktualisiertes eTag
 }
 ```
 
-## Entfernen eines Segments aus einem Datenfluss {#remove-segment}
+## Entfernen einer Zielgruppe aus einem Datenfluss {#remove-segment}
 
-Um ein Segment aus einem vorhandenen Ziel-Datenfluss zu entfernen, führen Sie eine PATCH-Anfrage an die [!DNL Flow Service] API bei der Bereitstellung Ihrer Fluss-ID, -Version und der Indexauswahl des Segments, das Sie entfernen möchten. Indizierung beginnt bei `0`. Beispielsweise entfernt die unten stehende Beispielanfrage das erste und zweite Segment aus dem Datenfluss.
+Um eine Zielgruppe aus einem vorhandenen Ziel-Datenfluss zu entfernen, führen Sie eine PATCH-Anfrage an die [!DNL Flow Service] API bei der Angabe Ihrer Fluss-ID, Version und Indexauswahl der Zielgruppe, die Sie entfernen möchten. Indizierung beginnt bei `0`. Beispielsweise entfernt die unten stehende Beispielanfrage die erste und zweite Zielgruppe aus dem Datenfluss.
 
 **API-Format**
 
@@ -530,7 +530,7 @@ PATCH /flows/{FLOW_ID}
 
 **Anfrage**
 
-Mit der folgenden Anfrage werden zwei Segmente aus einem vorhandenen Ziel-Datenfluss entfernt.
+Mit der folgenden Anfrage werden zwei Zielgruppen aus einem vorhandenen Ziel-Datenfluss entfernt.
 
 ```shell
 curl -X PATCH \
@@ -564,8 +564,8 @@ curl -X PATCH \
 
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
-| `op` | Der Operationsaufruf, der verwendet wird, um die Aktion zu definieren, die zur Aktualisierung des Datenflusses erforderlich ist. Operationen umfassen: `add`, `replace` und `remove`. Um ein Segment aus einem Datenfluss zu entfernen, verwenden Sie die `remove` Vorgang. |
-| `path` | Gibt an, welches vorhandene Segment basierend auf dem Index der Segmentauswahl aus dem Ziel-Datenfluss entfernt werden soll. Um die Segmentreihenfolge in einem Datenfluss abzurufen, führen Sie einen GET-Aufruf an die `/flows` Endpunkt und überprüfen Sie die `transformations.segmentSelectors` -Eigenschaft. Um das erste Segment im Datenfluss zu löschen, verwenden Sie `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
+| `op` | Der Operationsaufruf, der verwendet wird, um die Aktion zu definieren, die zur Aktualisierung des Datenflusses erforderlich ist. Operationen umfassen: `add`, `replace` und `remove`. Um eine Zielgruppe aus einem Datenfluss zu entfernen, verwenden Sie die `remove` Vorgang. |
+| `path` | Gibt an, welche bestehende Zielgruppe basierend auf dem Index der Zielgruppenauswahl aus dem Ziel-Datenfluss entfernt werden soll. Um die Reihenfolge der Zielgruppen in einem Datenfluss abzurufen, führen Sie einen GET-Aufruf an die `/flows` Endpunkt und überprüfen Sie die `transformations.segmentSelectors` -Eigenschaft. Um die erste Zielgruppe im Datenfluss zu löschen, verwenden Sie `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
 
 **Antwort**
@@ -579,9 +579,9 @@ Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und ein aktualisiertes eTag
 }
 ```
 
-## Komponenten eines Segments in einem Datenfluss aktualisieren {#update-segment}
+## Komponenten einer Zielgruppe in einem Datenfluss aktualisieren {#update-segment}
 
-Sie können Komponenten eines Segments in einem vorhandenen Ziel-Datenfluss aktualisieren. Sie können beispielsweise die Exportfrequenz ändern oder die Dateinamenvorlage bearbeiten. Führen Sie dazu eine PATCH-Anfrage an die [!DNL Flow Service] API bei der Angabe Ihrer Fluss-ID, Version und Indexauswahl des Segments, das Sie aktualisieren möchten. Indizierung beginnt bei `0`. Beispielsweise aktualisiert die nachstehende Anfrage das neunte Segment in einem Datenfluss.
+Sie können Komponenten einer Zielgruppe in einem vorhandenen Ziel-Datenfluss aktualisieren. Sie können beispielsweise die Exportfrequenz ändern oder die Dateinamenvorlage bearbeiten. Führen Sie dazu eine PATCH-Anfrage an die [!DNL Flow Service] API bei der Angabe Ihrer Fluss-ID, Version und Indexauswahl der Zielgruppe, die Sie aktualisieren möchten. Indizierung beginnt bei `0`. Beispielsweise aktualisiert die nachstehende Anfrage die neunte Zielgruppe in einem Datenfluss.
 
 **API-Format**
 
@@ -591,7 +591,7 @@ PATCH /flows/{FLOW_ID}
 
 **Anfrage**
 
-Beim Aktualisieren eines Segments in einem vorhandenen Ziel-Datenfluss sollten Sie zunächst einen GET-Vorgang ausführen, um die Details des Segments abzurufen, das Sie aktualisieren möchten. Geben Sie dann alle Segmentinformationen in der Payload an, nicht nur die Felder, die Sie aktualisieren möchten. Im folgenden Beispiel wird benutzerdefinierter Text am Ende der Dateinamenvorlage hinzugefügt und die Häufigkeit des Exports wird von 6 Stunden auf 12 Stunden aktualisiert.
+Beim Aktualisieren einer Zielgruppe in einem vorhandenen Ziel-Datenfluss sollten Sie zunächst einen GET-Vorgang ausführen, um die Details der Zielgruppe abzurufen, die Sie aktualisieren möchten. Geben Sie dann alle Zielgruppendaten in der Payload an, nicht nur die Felder, die Sie aktualisieren möchten. Im folgenden Beispiel wird benutzerdefinierter Text am Ende der Dateinamenvorlage hinzugefügt und die Häufigkeit des Exports wird von 6 Stunden auf 12 Stunden aktualisiert.
 
 ```shell
 curl -X PATCH \
@@ -626,7 +626,7 @@ curl -X PATCH \
 ]'
 ```
 
-Beschreibungen der Eigenschaften in der Payload finden Sie im Abschnitt . [Hinzufügen eines Segments zu einem Datenfluss](#add-segment).
+Beschreibungen der Eigenschaften in der Payload finden Sie im Abschnitt . [Hinzufügen einer Zielgruppe zu einem Datenfluss](#add-segment).
 
 
 **Antwort**
@@ -640,13 +640,13 @@ Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und ein aktualisiertes eTag
 }
 ```
 
-In den Beispielen unten finden Sie weitere Beispiele für Segmentkomponenten, die Sie in einem Datenfluss aktualisieren können.
+In den Beispielen unten finden Sie weitere Beispiele für Zielgruppenkomponenten, die Sie in einem Datenfluss aktualisieren können.
 
-## Aktualisieren Sie den Exportmodus eines Segments von geplant auf nach der Segmentauswertung {#update-export-mode}
+## Aktualisieren des Exportmodus einer Zielgruppe von geplant auf nach der Zielgruppenbewertung {#update-export-mode}
 
-+++ Klicken Sie auf ein Beispiel, bei dem ein Segmentexport aktualisiert wird, indem er täglich zu einem bestimmten Zeitpunkt aktiviert wird und täglich nach Abschluss des Batch-Segmentierungsauftrags von Platform aktiviert wird.
++++ Klicken Sie auf ein Beispiel, in dem ein Zielgruppenexport aktualisiert wird, indem er täglich zu einem bestimmten Zeitpunkt aktiviert wird und täglich nach Abschluss des Batch-Segmentierungsauftrags von Platform aktiviert wird.
 
-Das Segment wird täglich um 16:00 UTC exportiert.
+Die Zielgruppe wird täglich um 16:00 UTC exportiert.
 
 ```json
 {
@@ -669,7 +669,7 @@ Das Segment wird täglich um 16:00 UTC exportiert.
 }
 ```
 
-Das Segment wird jeden Tag nach Abschluss des täglichen Batch-Segmentierungsauftrags exportiert.
+Die Zielgruppe wird jeden Tag exportiert, nachdem der tägliche Batch-Segmentierungsauftrag abgeschlossen ist.
 
 ```json
 {
@@ -697,7 +697,7 @@ Das Segment wird jeden Tag nach Abschluss des täglichen Batch-Segmentierungsauf
 
 +++ Klicken Sie auf ein Beispiel, in dem die Dateinamenvorlage aktualisiert wird, um zusätzliche Felder in den Dateinamen einzuschließen.
 
-Die exportierten Dateien enthalten den Zielnamen und die Segmentkennung der Experience Platform
+Die exportierten Dateien enthalten den Zielnamen und die Zielgruppen-ID der Experience Platform
 
 ```json
 {
@@ -720,7 +720,7 @@ Die exportierten Dateien enthalten den Zielnamen und die Segmentkennung der Expe
 }
 ```
 
-Die exportierten Dateien enthalten den Zielnamen, die Segmentkennung der Experience Platform, das Datum und die Uhrzeit der Dateigenerierung durch die Experience Platform sowie benutzerdefinierten Text, der am Dateiende angehängt wird.
+Die exportierten Dateien enthalten den Zielnamen, die Zielgruppen-ID der Experience Platform, das Datum und die Uhrzeit der Dateigenerierung durch die Experience Platform sowie benutzerdefinierten Text, der am Dateiende angehängt wird.
 
 
 ```json
@@ -838,8 +838,8 @@ curl -X PATCH \
 
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
-| `op` | Der Operationsaufruf, der verwendet wird, um die Aktion zu definieren, die zur Aktualisierung des Datenflusses erforderlich ist. Operationen umfassen: `add`, `replace` und `remove`. Um ein Segment aus einem Datenfluss zu entfernen, verwenden Sie die `remove` Vorgang. |
-| `path` | Gibt an, welches vorhandene Profilattribut basierend auf dem Index der Segmentauswahl aus dem Ziel-Datenfluss entfernt werden soll. Um die Reihenfolge der Profilattribute in einem Datenfluss abzurufen, führen Sie einen GET-Aufruf an die `/flows` Endpunkt und überprüfen Sie die `transformations.profileSelectors` -Eigenschaft. Um das erste Segment im Datenfluss zu löschen, verwenden Sie `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
+| `op` | Der Operationsaufruf, der verwendet wird, um die Aktion zu definieren, die zur Aktualisierung des Datenflusses erforderlich ist. Operationen umfassen: `add`, `replace` und `remove`. Um eine Zielgruppe aus einem Datenfluss zu entfernen, verwenden Sie die `remove` Vorgang. |
+| `path` | Gibt an, welches vorhandene Profilattribut basierend auf dem Index der Zielgruppenauswahl aus dem Ziel-Datenfluss entfernt werden soll. Um die Reihenfolge der Profilattribute in einem Datenfluss abzurufen, führen Sie einen GET-Aufruf an die `/flows` Endpunkt und überprüfen Sie die `transformations.profileSelectors` -Eigenschaft. Um die erste Zielgruppe im Datenfluss zu löschen, verwenden Sie `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
 
 **Antwort**
@@ -859,4 +859,4 @@ Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen für di
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial haben Sie erfahren, wie Sie verschiedene Komponenten eines Ziel-Datenflusses aktualisieren, z. B. Segmente oder Profilattribute mit [!DNL Flow Service] API. Weitere Informationen zu Zielen finden Sie im Abschnitt [Ziele - Übersicht](../home.md).
+In diesem Tutorial haben Sie erfahren, wie Sie verschiedene Komponenten eines Ziel-Datenflusses aktualisieren, z. B. Zielgruppen oder Profilattribute mit [!DNL Flow Service] API. Weitere Informationen zu Zielen finden Sie im Abschnitt [Ziele - Übersicht](../home.md).

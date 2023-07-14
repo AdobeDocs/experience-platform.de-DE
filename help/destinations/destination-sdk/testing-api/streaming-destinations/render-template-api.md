@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie mit der Zieltest-API die Ausgabe basierend auf Ihrer Nachrichtenumwandlungsvorlage an Ihr Streaming-Ziel validieren.
 title: Validieren der exportierten Profilstruktur
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: adf75720f3e13c066b5c244d6749dd0939865a6f
-workflow-type: ht
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+workflow-type: tm+mt
 source-wordcount: '789'
-ht-degree: 100%
+ht-degree: 95%
 
 ---
 
@@ -77,7 +77,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --data-raw '
 {
     "destinationId": "947c1c46-008d-40b0-92ec-3af86eaf41c1",
-    "template": "{#- THIS is an example template for a single profile -#}\r\n{#- A '\''-'\'' at the beginning or end of a tag removes all whitespace on that side of the tag. -#}\r\n{\r\n    \"identities\": [\r\n    {%- for idMapEntry in input.profile.identityMap -%}\r\n    {%- set namespace = idMapEntry.key -%}\r\n        {%- for identity in idMapEntry.value %}\r\n        {\r\n            \"type\": \"{{ namespace }}\",\r\n            \"id\": \"{{ identity.id }}\"\r\n        }{%- if not loop.last -%},{%- endif -%}\r\n        {%- endfor -%}{%- if not loop.last -%},{%- endif -%}\r\n    {% endfor %}\r\n    ],\r\n    \"AdobeExperiencePlatformSegments\": {\r\n        \"add\": [\r\n        {%- for segment in input.profile.segmentMembership.ups | added %}\r\n            \"{{ segment.key }}\"{%- if not loop.last -%},{%- endif -%}\r\n        {% endfor %}\r\n        ],\r\n        \"remove\": [\r\n        {#- Alternative syntax for filtering segments by status: -#}\r\n        {% for segment in removedSegments(input.profile.segmentMembership.ups) %}\r\n            \"{{ segment.key }}\"{%- if not loop.last -%},{%- endif -%}\r\n        {% endfor %}\r\n        ]\r\n    }\r\n}",
+    "template": "{#- THIS is an example template for a single profile -#}\r\n{#- A '\''-'\'' at the beginning or end of a tag removes all whitespace on that side of the tag. -#}\r\n{\r\n    \"identities\": [\r\n    {%- for idMapEntry in input.profile.identityMap -%}\r\n    {%- set namespace = idMapEntry.key -%}\r\n        {%- for identity in idMapEntry.value %}\r\n        {\r\n            \"type\": \"{{ namespace }}\",\r\n            \"id\": \"{{ identity.id }}\"\r\n        }{%- if not loop.last -%},{%- endif -%}\r\n        {%- endfor -%}{%- if not loop.last -%},{%- endif -%}\r\n    {% endfor %}\r\n    ],\r\n    \"AdobeExperiencePlatformSegments\": {\r\n        \"add\": [\r\n        {%- for segment in input.profile.segmentMembership.ups | added %}\r\n            \"{{ segment.key }}\"{%- if not loop.last -%},{%- endif -%}\r\n        {% endfor %}\r\n        ],\r\n        \"remove\": [\r\n        {#- Alternative syntax for filtering audiences by status: -#}\r\n        {% for segment in removedSegments(input.profile.segmentMembership.ups) %}\r\n            \"{{ segment.key }}\"{%- if not loop.last -%},{%- endif -%}\r\n        {% endfor %}\r\n        ]\r\n    }\r\n}",
     "profiles": [
         {
             "segmentMembership": {
@@ -186,7 +186,7 @@ Bei einer fehlerhaften Antwort wird der HTTP-Status 400 zusammen mit Beschreibun
 **Anfrage**
 
 
-Die folgende Anfrage rendert mehrere exportierte Profile, die dem von Ihrem Ziel erwarteten Format entsprechen. In diesem Beispiel entspricht die Ziel-ID einer Zielkonfiguration mit konfigurierbarer Aggregation. Im Text der Anfrage sind zwei Profile enthalten, von denen jedes drei Segmentqualifikationen und fünf Identitäten aufweist. Sie können Profile generieren, die bei dem Aufruf gesendet werden, indem Sie die [API zur Erzeugung von Musterprofilen](sample-profile-generation-api.md) verwenden.
+Die folgende Anfrage rendert mehrere exportierte Profile, die dem von Ihrem Ziel erwarteten Format entsprechen. In diesem Beispiel entspricht die Ziel-ID einer Zielkonfiguration mit konfigurierbarer Aggregation. Im Text der Anfrage sind zwei Profile enthalten, von denen jede drei Zielgruppenqualifikationen und fünf Identitäten aufweist. Sie können Profile generieren, die bei dem Aufruf gesendet werden, indem Sie die [API zur Erzeugung von Musterprofilen](sample-profile-generation-api.md) verwenden.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \
@@ -198,7 +198,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --data-raw '{
     "destinationId": "c2bc84c5-589c-43a1-96ea-becfa941f5be",
-    "template": "{#- THIS is an example template for multiple profiles -#}\r\n{#- A '\''-'\'' at the beginning or end of a tag removes all whitespace on that side of the tag. -#}\r\n{\r\n    \"profiles\": [\r\n    {%- for profile in input.profiles %}\r\n        {\r\n            \"identities\": [\r\n            {%- for idMapEntry in profile.identityMap -%}\r\n            {%- set namespace = idMapEntry.key -%}\r\n                {%- for identity in idMapEntry.value %}\r\n                {\r\n                    \"type\": \"{{ namespace }}\",\r\n                    \"id\": \"{{ customerData }}\"\r\n                }{%- if not loop.last -%},{%- endif -%}\r\n                {%- endfor -%}{%- if not loop.last -%},{%- endif -%}\r\n            {% endfor %}\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                {%- for segment in profile.segmentMembership.ups | added %}\r\n                    \"{{ segment.key }}\"{%- if not loop.last -%},{%- endif -%}\r\n                {% endfor %}\r\n                ],\r\n                \"remove\": [\r\n                {#- Alternative syntax for filtering segments by status: -#}\r\n                {% for segment in removedSegments(profile.segmentMembership.ups) %}\r\n                    \"{{ segment.key }}\"{%- if not loop.last -%},{%- endif -%}\r\n                {% endfor %}\r\n                ]\r\n            }\r\n        }{%- if not loop.last -%},{%- endif -%}\r\n    {% endfor %}\r\n    ]\r\n}",
+    "template": "{#- THIS is an example template for multiple profiles -#}\r\n{#- A '\''-'\'' at the beginning or end of a tag removes all whitespace on that side of the tag. -#}\r\n{\r\n    \"profiles\": [\r\n    {%- for profile in input.profiles %}\r\n        {\r\n            \"identities\": [\r\n            {%- for idMapEntry in profile.identityMap -%}\r\n            {%- set namespace = idMapEntry.key -%}\r\n                {%- for identity in idMapEntry.value %}\r\n                {\r\n                    \"type\": \"{{ namespace }}\",\r\n                    \"id\": \"{{ customerData }}\"\r\n                }{%- if not loop.last -%},{%- endif -%}\r\n                {%- endfor -%}{%- if not loop.last -%},{%- endif -%}\r\n            {% endfor %}\r\n            ],\r\n            \"AdobeExperiencePlatformSegments\": {\r\n                \"add\": [\r\n                {%- for segment in profile.segmentMembership.ups | added %}\r\n                    \"{{ segment.key }}\"{%- if not loop.last -%},{%- endif -%}\r\n                {% endfor %}\r\n                ],\r\n                \"remove\": [\r\n                {#- Alternative syntax for filtering audiences by status: -#}\r\n                {% for segment in removedSegments(profile.segmentMembership.ups) %}\r\n                    \"{{ segment.key }}\"{%- if not loop.last -%},{%- endif -%}\r\n                {% endfor %}\r\n                ]\r\n            }\r\n        }{%- if not loop.last -%},{%- endif -%}\r\n    {% endfor %}\r\n    ]\r\n}",
     "profiles": [
         {
             "segmentMembership": {
@@ -307,7 +307,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 **Antwort**
 
 Die Antwort gibt das Ergebnis des Renderns der Vorlage oder etwaige Fehler zurück.
-Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zu den exportierten Daten zurückgegeben. Beachten Sie in der Antwort, wie die Profile basierend auf der Segmentzugehörigkeit und den Identitäten aggregiert werden. Die exportierten Profile finden Sie im Parameter `output` in Form einer Escape-Zeichenfolge.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zu den exportierten Daten zurückgegeben. Beachten Sie in der Antwort, wie die Profile basierend auf der Zielgruppenzugehörigkeit und den Identitäten aggregiert werden. Die exportierten Profile finden Sie im Parameter `output` in Form einer Escape-Zeichenfolge.
 Bei einer fehlerhaften Antwort wird der HTTP-Status 400 zusammen mit Beschreibungen der aufgetretenen Fehler zurückgegeben.
 
 ```json

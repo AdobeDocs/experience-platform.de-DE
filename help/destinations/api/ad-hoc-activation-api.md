@@ -1,32 +1,32 @@
 ---
-keywords: Experience Platform; Ziel-API; Ad-hoc-Aktivierung; Ad-hoc-Aktivierung von Segmenten aktivieren
+keywords: Experience Platform; Ziel-API; Ad-hoc-Aktivierung; Ad-hoc-Aktivierung von Zielgruppen aktivieren
 solution: Experience Platform
-title: Aktivieren von Zielgruppensegmenten für Batch-Ziele über die Ad-hoc-Aktivierungs-API
-description: Dieser Artikel veranschaulicht den End-to-End-Workflow zum Aktivieren von Zielgruppensegmenten über die Ad-hoc-Aktivierungs-API, einschließlich der Segmentierungsaufträge, die vor der Aktivierung ausgeführt werden.
+title: Aktivieren von Zielgruppen für Batch-Ziele über die Ad-hoc-Aktivierungs-API
+description: Dieser Artikel veranschaulicht den durchgängigen Arbeitsablauf zum Aktivieren von Zielgruppen über die Ad-hoc-Aktivierungs-API, einschließlich der Segmentierungsaufträge, die vor der Aktivierung ausgeführt werden.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 6304dabb6125b7eddcac16bcbf8abcc36a4c9dc2
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 18%
+source-wordcount: '1550'
+ht-degree: 13%
 
 ---
 
-# Aktivieren von Zielgruppensegmenten bei Bedarf für Batch-Ziele über die Ad-hoc-Aktivierungs-API
+# Aktivieren von Zielgruppen bei Bedarf für Batch-Ziele über die Ad-hoc-Aktivierungs-API
 
 >[!IMPORTANT]
 >
->Nach Abschluss der Beta-Phase wird die [!DNL ad-hoc activation API] ist jetzt allgemein für alle Experience Platform-Kunden verfügbar (GA). In der GA-Version wurde die API auf Version 2 aktualisiert. Schritt 4 ([Abrufen der neuesten Segmentexportauftrag-ID](#segment-export-id)) ist nicht mehr erforderlich, da die API die Export-ID nicht mehr benötigt.
+>Nach Abschluss der Beta-Phase wird die [!DNL ad-hoc activation API] ist jetzt allgemein für alle Experience Platform-Kunden verfügbar (GA). In der GA-Version wurde die API auf Version 2 aktualisiert. Schritt 4 ([Abrufen der neuesten ID des Zielgruppenexportauftrags](#segment-export-id)) ist nicht mehr erforderlich, da die API die Export-ID nicht mehr benötigt.
 >
 >Siehe [Ausführen des Ad-hoc-Aktivierungsauftrags](#activation-job) Weitere Informationen finden Sie weiter unten in diesem Tutorial .
 
 ## Übersicht {#overview}
 
-Mit der Ad-hoc-Aktivierungs-API können Marketing-Experten Zielgruppensegmente schnell und effizient für Situationen aktivieren, in denen eine sofortige Aktivierung erforderlich ist.
+Mit der Ad-hoc-Aktivierungs-API können Marketing-Experten Zielgruppen für Ziele programmgesteuert schnell und effizient für Situationen aktivieren, in denen eine sofortige Aktivierung erforderlich ist.
 
 Verwenden Sie die Ad-hoc-Aktivierungs-API, um vollständige Dateien in Ihr gewünschtes Dateiempfangssystem zu exportieren. Die Ad-hoc-Zielgruppenaktivierung wird nur von [Batch-dateibasierte Ziele](../destination-types.md#file-based).
 
-Das folgende Diagramm zeigt den End-to-End-Workflow zum Aktivieren von Segmenten über die Ad-hoc-Aktivierungs-API, einschließlich der Segmentierungsaufträge, die alle 24 Stunden in Platform stattfinden.
+Das folgende Diagramm zeigt den durchgängigen Arbeitsablauf zum Aktivieren von Zielgruppen über die Ad-hoc-Aktivierungs-API, einschließlich der Segmentierungsaufträge, die alle 24 Stunden in Platform stattfinden.
 
 ![Ad-hoc-Aktivierung](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
@@ -36,23 +36,23 @@ Das folgende Diagramm zeigt den End-to-End-Workflow zum Aktivieren von Segmenten
 
 ### Flash-Verkäufe oder -Promotions
 
-Ein Online-Händler bereitet einen begrenzten Flash-Verkauf vor und möchte Kunden kurzfristig benachrichtigen. Über die Ad-hoc-Aktivierungs-API der Experience Platform kann das Marketing-Team bei Bedarf Segmente exportieren und Werbe-E-Mails schnell an den Kundenstamm senden.
+Ein Online-Händler bereitet einen begrenzten Flash-Verkauf vor und möchte Kunden kurzfristig benachrichtigen. Über die Ad-hoc-Aktivierungs-API der Experience Platform kann das Marketing-Team Zielgruppen bei Bedarf exportieren und Werbe-E-Mails schnell an die Kundenbasis senden.
 
 ### Aktuelle Veranstaltungen oder aktuelle Nachrichten
 
-Ein Hotel erwartet ein schlechtes Wetter an den folgenden Tagen, und das Team möchte die ankommenden Gäste schnell informieren, damit sie entsprechend planen können. Das Marketing-Team kann die Ad-hoc-Aktivierungs-API der Experience Platform verwenden, um Segmente bei Bedarf zu exportieren und die Gäste zu benachrichtigen.
+Ein Hotel erwartet ein schlechtes Wetter an den folgenden Tagen, und das Team möchte die ankommenden Gäste schnell informieren, damit sie entsprechend planen können. Das Marketing-Team kann die Ad-hoc-Aktivierungs-API der Experience Platform verwenden, um Zielgruppen bei Bedarf zu exportieren und die Gäste zu benachrichtigen.
 
 ### Integrationstests
 
-IT-Manager können die Ad-hoc-Aktivierungs-API der Experience Platform verwenden, um Segmente bei Bedarf zu exportieren, sodass sie ihre benutzerdefinierte Integration mit Adobe Experience Platform testen und sicherstellen können, dass alles ordnungsgemäß funktioniert.
+IT-Manager können die Ad-hoc-Aktivierungs-API der Experience Platform verwenden, um Zielgruppen bei Bedarf zu exportieren, sodass sie ihre benutzerdefinierte Integration mit Adobe Experience Platform testen und sicherstellen können, dass alles ordnungsgemäß funktioniert.
 
 ## Leitplanken {#guardrails}
 
 Beachten Sie bei der Verwendung der Ad-hoc-Aktivierungs-API die folgenden Limits.
 
-* Derzeit kann jeder Ad-hoc-Aktivierungsauftrag bis zu 80 Segmente aktivieren. Der Versuch, mehr als 80 Segmente pro Auftrag zu aktivieren, führt zum Fehlschlagen des Auftrags. Dieses Verhalten kann sich in zukünftigen Versionen ändern.
-* Ad-hoc-Aktivierungsvorgänge können nicht parallel zu geplanten Aktivitäten ausgeführt werden [Segmentexportaufträge](../../segmentation/api/export-jobs.md). Bevor Sie einen Ad-hoc-Aktivierungsauftrag ausführen, stellen Sie sicher, dass der geplante Segmentexportauftrag abgeschlossen ist. Siehe [Ziel-Datenfluss-Überwachung](../../dataflows/ui/monitor-destinations.md) Informationen zur Überwachung des Status der Aktivierungsflüsse. Wenn Ihr Aktivierungsdataflow beispielsweise eine **[!UICONTROL Verarbeitung]** -Status, warten Sie, bis sie abgeschlossen ist, bevor Sie den Ad-hoc-Aktivierungsauftrag ausführen.
-* Führen Sie nicht mehr als einen gleichzeitigen Ad-hoc-Aktivierungsauftrag pro Segment aus.
+* Derzeit kann jeder Ad-hoc-Aktivierungsauftrag bis zu 80 Zielgruppen aktivieren. Der Versuch, mehr als 80 Zielgruppen pro Auftrag zu aktivieren, führt dazu, dass der Auftrag fehlschlägt. Dieses Verhalten kann sich in zukünftigen Versionen ändern.
+* Ad-hoc-Aktivierungsvorgänge können nicht parallel zu geplanten Aktivitäten ausgeführt werden [Zielgruppenexport-Aufträge](../../segmentation/api/export-jobs.md). Bevor Sie einen Ad-hoc-Aktivierungsauftrag ausführen, stellen Sie sicher, dass der geplante Zielgruppenexport-Auftrag abgeschlossen ist. Siehe [Ziel-Datenfluss-Überwachung](../../dataflows/ui/monitor-destinations.md) Informationen zur Überwachung des Status der Aktivierungsflüsse. Wenn Ihr Aktivierungsdataflow beispielsweise eine **[!UICONTROL Verarbeitung]** -Status, warten Sie, bis sie abgeschlossen ist, bevor Sie den Ad-hoc-Aktivierungsauftrag ausführen.
+* Führen Sie nicht mehr als einen gleichzeitigen Ad-hoc-Aktivierungsauftrag pro Zielgruppe aus.
 
 ## Überlegungen zur Segmentierung {#segmentation-considerations}
 
@@ -88,24 +88,24 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 ## Schritt 3: Erstellen eines Aktivierungsflusses in der Platform-Benutzeroberfläche {#activation-flow}
 
-Bevor Sie Segmente über die Ad-hoc-Aktivierungs-API aktivieren können, muss zunächst ein Aktivierungsfluss in der Platform-Benutzeroberfläche für das ausgewählte Ziel konfiguriert werden.
+Bevor Sie Zielgruppen über die Ad-hoc-Aktivierungs-API aktivieren können, muss zunächst ein Aktivierungsfluss in der Platform-Benutzeroberfläche für das ausgewählte Ziel konfiguriert werden.
 
-Dazu gehören der Einstieg in den Aktivierungs-Workflow, die Auswahl Ihrer Segmente, die Konfiguration eines Zeitplans und die Aktivierung dieser Segmente. Sie können die Benutzeroberfläche oder API verwenden, um einen Aktivierungsfluss zu erstellen:
+Dazu gehören der Einstieg in den Aktivierungs-Workflow, die Auswahl Ihrer Zielgruppen, die Konfiguration eines Zeitplans und die Aktivierung dieser Zielgruppen. Sie können die Benutzeroberfläche oder API verwenden, um einen Aktivierungsfluss zu erstellen:
 
 * [Verwenden Sie die Platform-Benutzeroberfläche, um einen Aktivierungsfluss zu Batch-Profil-Exportzielen zu erstellen](../ui/activate-batch-profile-destinations.md)
 * [Verwenden Sie die Flow Service-API, um eine Verbindung zu Batch-Profil-Exportzielen herzustellen und Daten zu aktivieren.](../api/connect-activate-batch-destinations.md)
 
-## Schritt 4: Abrufen der neuesten Segmentexportauftrag-ID (in v2 nicht erforderlich) {#segment-export-id}
+## Schritt 4: Abrufen der neuesten Auftrags-ID für den Zielgruppenexport (in v2 nicht erforderlich) {#segment-export-id}
 
 >[!IMPORTANT]
 >
->In v2 der Ad-hoc-Aktivierungs-API müssen Sie nicht die neueste Segmentexportauftrag-ID abrufen. Sie können diesen Schritt überspringen und mit dem nächsten fortfahren.
+>In v2 der Ad-hoc-Aktivierungs-API müssen Sie nicht die neueste ID des Zielgruppenexportauftrags abrufen. Sie können diesen Schritt überspringen und mit dem nächsten fortfahren.
 
 Nachdem Sie einen Aktivierungsfluss für Ihr Batch-Ziel konfiguriert haben, werden geplante Segmentierungsaufträge automatisch alle 24 Stunden ausgeführt.
 
-Bevor Sie den Ad-hoc-Aktivierungsauftrag ausführen können, müssen Sie die ID des aktuellen Segmentexportauftrags abrufen. Sie müssen diese ID in der Ad-hoc-Aktivierungsanfrage übergeben.
+Bevor Sie den Ad-hoc-Aktivierungsauftrag ausführen können, müssen Sie die Kennung des aktuellen Zielgruppenexportauftrags abrufen. Sie müssen diese ID in der Ad-hoc-Aktivierungsanfrage übergeben.
 
-Befolgen Sie die beschriebenen Anweisungen. [here](../../segmentation/api/export-jobs.md#retrieve-list) , um eine Liste aller Segmentexportaufträge abzurufen.
+Befolgen Sie die beschriebenen Anweisungen. [here](../../segmentation/api/export-jobs.md#retrieve-list) um eine Liste aller Zielgruppenexport-Aufträge abzurufen.
 
 Suchen Sie in der Antwort nach dem ersten Datensatz, der die unten stehende Schemaeigenschaft enthält.
 
@@ -115,9 +115,9 @@ Suchen Sie in der Antwort nach dem ersten Datensatz, der die unten stehende Sche
 }
 ```
 
-Die Segmentexportauftrag-ID befindet sich im `id` -Eigenschaft, wie unten dargestellt.
+Die ID des Zielgruppenexportauftrags befindet sich im `id` -Eigenschaft, wie unten dargestellt.
 
-![Segmentexportauftrag-ID](../assets/api/ad-hoc-activation/segment-export-job-id.png)
+![Auftrags-ID des Zielgruppenexports](../assets/api/ad-hoc-activation/segment-export-job-id.png)
 
 
 ## Schritt 5: Ausführen des Ad-hoc-Aktivierungsauftrags {#activation-job}
@@ -126,15 +126,15 @@ Adobe Experience Platform führt geplante Segmentierungsaufträge einmal alle 24
 
 >[!IMPORTANT]
 >
->Beachten Sie die folgende einmalige Einschränkung: Bevor Sie einen Ad-hoc-Aktivierungsauftrag ausführen, stellen Sie sicher, dass mindestens 20 Minuten nach dem Zeitpunkt vergangen sind, zu dem das Segment erstmals gemäß dem in [Schritt 3: Erstellen eines Aktivierungsflusses in der Platform-Benutzeroberfläche](#activation-flow).
+>Beachten Sie die folgende einmalige Einschränkung: Bevor Sie einen Ad-hoc-Aktivierungsauftrag ausführen, stellen Sie sicher, dass mindestens 20 Minuten nach dem Zeitpunkt vergangen sind, zu dem die Zielgruppe erstmals gemäß dem von Ihnen unter [Schritt 3: Erstellen eines Aktivierungsflusses in der Platform-Benutzeroberfläche](#activation-flow).
 
-Bevor Sie einen Ad-hoc-Aktivierungsauftrag ausführen, stellen Sie sicher, dass der geplante Segmentexportauftrag für Ihre Segmente abgeschlossen ist. Siehe [Ziel-Datenfluss-Überwachung](../../dataflows/ui/monitor-destinations.md) Informationen zur Überwachung des Status der Aktivierungsflüsse. Wenn Ihr Aktivierungsdataflow beispielsweise eine **[!UICONTROL Verarbeitung]** -Status, warten Sie, bis sie abgeschlossen ist, bevor Sie den Ad-hoc-Aktivierungsauftrag ausführen, um eine vollständige Datei zu exportieren.
+Bevor Sie einen Ad-hoc-Aktivierungsauftrag ausführen, stellen Sie sicher, dass der geplante Zielgruppenexport-Auftrag für Ihre Zielgruppen abgeschlossen ist. Siehe [Ziel-Datenfluss-Überwachung](../../dataflows/ui/monitor-destinations.md) Informationen zur Überwachung des Status der Aktivierungsflüsse. Wenn Ihr Aktivierungsdataflow beispielsweise eine **[!UICONTROL Verarbeitung]** -Status, warten Sie, bis sie abgeschlossen ist, bevor Sie den Ad-hoc-Aktivierungsauftrag ausführen, um eine vollständige Datei zu exportieren.
 
-Nach Abschluss des Segmentexportauftrags können Sie die Aktivierung Trigger haben.
+Nach Abschluss des Zielgruppenexportvorgangs kann die Aktivierung Trigger werden.
 
 >[!NOTE]
 >
->Derzeit kann jeder Ad-hoc-Aktivierungsauftrag bis zu 80 Segmente aktivieren. Der Versuch, mehr als 80 Segmente pro Auftrag zu aktivieren, führt zum Fehlschlagen des Auftrags. Dieses Verhalten kann sich in zukünftigen Versionen ändern.
+>Derzeit kann jeder Ad-hoc-Aktivierungsauftrag bis zu 80 Zielgruppen aktivieren. Der Versuch, mehr als 80 Zielgruppen pro Auftrag zu aktivieren, führt dazu, dass der Auftrag fehlschlägt. Dieses Verhalten kann sich in zukünftigen Versionen ändern.
 
 ### Anfrage {#request}
 
@@ -166,8 +166,8 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Die IDs der Zielinstanzen, für die Sie Segmente aktivieren möchten. Sie können diese IDs über die Platform-Benutzeroberfläche abrufen, indem Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]** und auf die gewünschte Zielzeile klicken, um die Ziel-ID in der rechten Leiste anzuzeigen. Weitere Informationen finden Sie im Abschnitt [Dokumentation zum Zielarbeitsbereich](/help/destinations/ui/destinations-workspace.md#browse). |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Die IDs der Segmente, die Sie für das ausgewählte Ziel aktivieren möchten. |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Die IDs der Zielinstanzen, für die Sie Zielgruppen aktivieren möchten. Sie können diese IDs über die Platform-Benutzeroberfläche abrufen, indem Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]** und auf die gewünschte Zielzeile klicken, um die Ziel-ID in der rechten Leiste anzuzeigen. Weitere Informationen finden Sie im Abschnitt [Dokumentation zum Zielarbeitsbereich](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Die IDs der Zielgruppen, die Sie für das ausgewählte Ziel aktivieren möchten. |
 
 {style="table-layout:auto"}
 
@@ -175,7 +175,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 
 >[!IMPORTANT]
 >
->**Veralteter Anforderungstyp**. Dieser Beispieltyp beschreibt den Anfragetyp für die API-Version 1. In v2 der Ad-hoc-Aktivierungs-API müssen Sie nicht die neueste ID des Segmentexportauftrags angeben.
+>**Veralteter Anforderungstyp**. Dieser Beispieltyp beschreibt den Anfragetyp für die API-Version 1. In v2 der Ad-hoc-Aktivierungs-API müssen Sie nicht die neueste ID des Zielgruppenexportauftrags angeben.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun \
@@ -203,9 +203,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Die IDs der Zielinstanzen, für die Sie Segmente aktivieren möchten. Sie können diese IDs über die Platform-Benutzeroberfläche abrufen, indem Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]** und auf die gewünschte Zielzeile klicken, um die Ziel-ID in der rechten Leiste anzuzeigen. Weitere Informationen finden Sie im Abschnitt [Dokumentation zum Zielarbeitsbereich](/help/destinations/ui/destinations-workspace.md#browse). |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Die IDs der Segmente, die Sie für das ausgewählte Ziel aktivieren möchten. |
-| <ul><li>`exportId1`</li></ul> | Die in der Antwort der [Segmentexport](../../segmentation/api/export-jobs.md#retrieve-list) Auftrag. Siehe [Schritt 4: Abrufen der neuesten Segmentexportauftrag-ID](#segment-export-id) für Anweisungen zum Auffinden dieser ID. |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Die IDs der Zielinstanzen, für die Sie Zielgruppen aktivieren möchten. Sie können diese IDs über die Platform-Benutzeroberfläche abrufen, indem Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]** und auf die gewünschte Zielzeile klicken, um die Ziel-ID in der rechten Leiste anzuzeigen. Weitere Informationen finden Sie im Abschnitt [Dokumentation zum Zielarbeitsbereich](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Die IDs der Zielgruppen, die Sie für das ausgewählte Ziel aktivieren möchten. |
+| <ul><li>`exportId1`</li></ul> | Die in der Antwort der [Zielgruppenexport](../../segmentation/api/export-jobs.md#retrieve-list) Auftrag. Siehe [Schritt 4: Abrufen der neuesten ID des Zielgruppenexportauftrags](#segment-export-id) für Anweisungen zum Auffinden dieser ID. |
 
 {style="table-layout:auto"}
 
@@ -227,8 +227,8 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 zurück.
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `segment` | Die ID des aktivierten Segments. |
-| `order` | Die ID des Ziels, für das das Segment aktiviert wurde. |
+| `segment` | Die ID der aktivierten Audience. |
+| `order` | Die ID des Ziels, für das die Zielgruppe aktiviert wurde. |
 | `statusURL` | Die Status-URL des Aktivierungsflusses. Sie können den Flussfortschritt mithilfe der [Flussdienst-API](../../sources/tutorials/api/monitor.md). |
 
 {style="table-layout:auto"}
@@ -243,8 +243,8 @@ Bei Verwendung der Ad-hoc-Aktivierungs-API können Fehlermeldungen auftreten, di
 
 | Fehlermeldung | Auflösung |
 |---------|----------|
-| Bereits für ein Segment ausführen `segment ID` für die Bestellung `dataflow ID` mit Run-ID `flow run ID` | Diese Fehlermeldung weist darauf hin, dass derzeit ein Ad-hoc-Aktivierungsfluss für ein Segment ausgeführt wird. Warten Sie, bis der Auftrag abgeschlossen ist, bevor Sie den Aktivierungsauftrag erneut auslösen. |
-| Segmente `<segment name>` sind nicht Teil dieses Datenflusses oder außerhalb des Zeitplanbereichs! | Diese Fehlermeldung weist darauf hin, dass die von Ihnen ausgewählten Segmente nicht dem Datenfluss zugeordnet sind oder dass der für die Segmente eingerichtete Aktivierungsplan entweder abgelaufen ist oder noch nicht gestartet wurde. Überprüfen Sie, ob das Segment tatsächlich dem Datenfluss zugeordnet ist, und stellen Sie sicher, dass sich der Zeitplan für die Segmentaktivierung mit dem aktuellen Datum überschneidet. |
+| Bereits für die Zielgruppe ausgeführt `segment ID` für die Bestellung `dataflow ID` mit Run-ID `flow run ID` | Diese Fehlermeldung weist darauf hin, dass derzeit ein Ad-hoc-Aktivierungsfluss für eine Zielgruppe ausgeführt wird. Warten Sie, bis der Auftrag abgeschlossen ist, bevor Sie den Aktivierungsauftrag erneut auslösen. |
+| Segmente `<segment name>` sind nicht Teil dieses Datenflusses oder außerhalb des Zeitplanbereichs! | Diese Fehlermeldung weist darauf hin, dass die von Ihnen ausgewählten Zielgruppen nicht dem Datenfluss zugeordnet sind oder dass der für die Zielgruppen eingerichtete Aktivierungsplan entweder abgelaufen ist oder noch nicht gestartet wurde. Überprüfen Sie, ob die Audience tatsächlich dem Datenfluss zugeordnet ist, und stellen Sie sicher, dass sich der Aktivierungszeitplan für die Zielgruppe mit dem aktuellen Datum überschneidet. |
 
 ## Verwandte Informationen {#related-information}
 

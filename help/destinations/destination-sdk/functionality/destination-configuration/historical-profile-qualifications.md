@@ -1,17 +1,17 @@
 ---
 description: Erfahren Sie mehr über die historischen Profilqualifikationen, die von mit Destination SDK erstellten Zielen unterstützt werden.
 title: Historische Profilqualifikationen
-source-git-commit: 65a658208b48a50184e55a6d64cdf7ad6de0f04f
-workflow-type: ht
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+workflow-type: tm+mt
 source-wordcount: '214'
-ht-degree: 100%
+ht-degree: 69%
 
 ---
 
 
 # Historische Profilqualifikationen
 
-Alle Ziele, die über Destination SDK erstellt wurden, unterstützen standardmäßig historische Profilqualifikationen. Das bedeutet, dass, wenn Benutzerinnen oder Benutzer einen Aktivierungsdatenfluss zu Ihren Zielen einrichten, der erste Export alle Mitglieder des Segments enthält, die sich für dieses Segment qualifiziert haben.
+Alle Ziele, die über Destination SDK erstellt wurden, unterstützen standardmäßig historische Profilqualifikationen. Das bedeutet, dass der erste Export, wenn Benutzer einen Aktivierungsdatenfluss für Ihre Ziele einrichten, alle Mitglieder der Zielgruppe enthält, die sich für dieses Segment qualifiziert haben.
 
 Dieses Verhalten wird durch die Variable `"backfillHistoricalProfileData":true` in der Zielkonfiguration bestimmt.
 
@@ -33,14 +33,14 @@ Die nachstehende Tabelle beschreibt ausführlich, welche Integrationstypen die a
 <!-- 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when segments are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the segment before the segment is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the segment after the segment is activated. </li></ul> |
+|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when audiences are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the audience before the audience is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the audience after the audience is activated. </li></ul> |
 
 {style="table-layout:auto"} -->
 
 
 ## Nächste Schritte {#next-steps}
 
-Nach dem Lesen dieses Artikels sollten Sie wissen, dass Experience Platform automatisch eine historische Population aller Profile exportiert, die sich je für ein aktiviertes Segment qualifiziert haben, wenn das Segment zum ersten Mal an das Ziel exportiert wird. Diese Option kann weder in Destination SDK noch in der Experience Platform-Benutzeroberfläche konfiguriert werden.
+Nach dem Lesen dieses Artikels sollten Sie wissen, dass die Experience Platform automatisch eine historische Population aller Profile exportiert, die sich je für eine aktivierte Zielgruppe qualifiziert haben, wenn die Zielgruppe zum ersten Mal an das Ziel exportiert wird. Diese Option kann weder in Destination SDK noch in der Experience Platform-Benutzeroberfläche konfiguriert werden.
 
 Weitere Informationen zu den anderen Zielkomponenten finden Sie in den folgenden Artikeln:
 

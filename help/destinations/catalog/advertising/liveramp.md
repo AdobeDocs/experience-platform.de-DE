@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie mit dem LiveRamp-Connector Zielgruppen von Ad
 hidefromtoc: true
 hide: true
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: d7625018b7b36d8e9516f7884fc00b726d391103
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '1738'
-ht-degree: 100%
+source-wordcount: '1736'
+ht-degree: 81%
 
 ---
 
@@ -19,7 +19,6 @@ Verwenden Sie die LiveRamp-Verbindung, um Zielgruppen von Adobe Real-time Custom
 >
 ><p>Diese Zielverbindung befindet sich derzeit in der Alpha-Phase und steht nur einer begrenzten Auswahl von Kundinnen und Kunden zur Verfügung. Die Funktionalität und Dokumentation können sich ändern.</p>
 &gt;<p>Für die endgültige Version dieser Zielverbindung ist gegebenenfalls eine Kundenmigration erforderlich.</p>
-
 
 ## Anwendungsfälle {#use-cases}
 
@@ -45,8 +44,8 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer oder sonstiges), die im [!DNL LiveRamp SFTP]-Ziel verwendet werden. |
-| Exporthäufigkeit | **[!UICONTROL Täglicher Batch]** | Da Profile in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert werden, werden die Profile (Identitäten) einmal täglich nachgelagert auf der Zielplattform aktualisiert. Weitere Informationen finden Sie unter [Batch-Datei-basierte Ziele](/help/destinations/destination-types.md#file-based). |
+| Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder andere), die im [!DNL LiveRamp SFTP] Ziel. |
+| Exporthäufigkeit | **[!UICONTROL Täglicher Batch]** | Da Profile in Experience Platform auf der Grundlage einer Zielgruppenbewertung aktualisiert werden, werden die Profile (Identitäten) einmal täglich nachgelagert zur Zielplattform aktualisiert. Weitere Informationen finden Sie unter [Batch-Datei-basierte Ziele](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -70,7 +69,7 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus
 * **[!UICONTROL Passwort]**: Das Passwort für Ihren [!DNL LiveRamp SFTP]-Speicherort.
 * **[!UICONTROL PGP/GPG-Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihre exportierten Dateien zu verschlüsseln. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung. Wenn Sie einen Verschlüsselungsschlüssel bereitstellen, müssen Sie auch eine **[!UICONTROL Verschlüsselungs-Unterschlüssel-ID]** im Abschnitt mit den [Zieldetails](#destination-details) angeben.
 
-   ![Abbildung eines Beispiels für einen korrekt formatierten PGP-Schlüssel in der Benutzeroberfläche](../../assets/catalog/advertising/liveramp/pgp-key.png)
+  ![Abbildung eines Beispiels für einen korrekt formatierten PGP-Schlüssel in der Benutzeroberfläche](../../assets/catalog/advertising/liveramp/pgp-key.png)
 
 **SFTP mit SSH-Schlüsselauthentifizierung** {#sftp-ssh}
 
@@ -83,7 +82,7 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus
 
 * **[!UICONTROL PGP/GPG-Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihre exportierten Dateien zu verschlüsseln. Wenn Sie einen Verschlüsselungsschlüssel bereitstellen, müssen Sie auch eine **[!UICONTROL Verschlüsselungs-Unterschlüssel-ID]** im Abschnitt mit den [Zieldetails](#destination-details) angeben. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung.
 
-   ![Abbildung eines Beispiels für einen korrekt formatierten PGP-Schlüssel in der Benutzeroberfläche](../../assets/catalog/advertising/liveramp/pgp-key.png)
+  ![Abbildung eines Beispiels für einen korrekt formatierten PGP-Schlüssel in der Benutzeroberfläche](../../assets/catalog/advertising/liveramp/pgp-key.png)
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
@@ -108,30 +107,30 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Warnhinweisen zu Zielen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
 
-## Aktivieren von Segmenten für dieses Ziel {#activate}
+## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md).
+Lesen [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](/help/destinations/ui/activate-batch-profile-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
 
 ### Planung {#scheduling}
 
-Erstellen Sie im [!UICONTROL Planungsschritt] für jedes Segment einen Exportzeitplan mit den unten aufgeführten Einstellungen.
+Im [!UICONTROL Planung] erstellen Sie für jede Audience einen Exportzeitplan mit den unten aufgeführten Einstellungen.
 
 >[!IMPORTANT]
 >
->Alle für dieses Ziel aktivierten Segmente müssen mit identischem Zeitplan konfiguriert werden, wie unten dargestellt.
+>Alle für dieses Ziel aktivierten Zielgruppen müssen mit dem exakt gleichen Zeitplan konfiguriert werden, wie unten dargestellt.
 
 * **[!UICONTROL Dateiexportoptionen]**: [!UICONTROL Exportieren Sie vollständige Dateien]. [Inkrementelle Dateiexporte](../../ui/activate-batch-profile-destinations.md#export-incremental-files) werden derzeit nicht für das [!DNL LiveRamp]-Ziel unterstützt.
 * **[!UICONTROL Häufigkeit]**: [!UICONTROL Täglich]
-* Stellen Sie die Exportzeit auf **[!UICONTROL Nach Segmentbewertung]** ein. Geplante Segmentexporte und [On-Demand-Dateiexporte](../../ui/export-file-now.md) werden derzeit nicht für das [!DNL LiveRamp]-Ziel unterstützt.
+* Stellen Sie die Exportzeit auf **[!UICONTROL Nach Segmentbewertung]** ein. Exporte geplanter Zielgruppen und [On-Demand-Dateiexporte](../../ui/export-file-now.md) werden derzeit nicht unterstützt für [!DNL LiveRamp] Ziel.
 * **[!UICONTROL Datum]**: Wählen Sie die Start- und Endzeiten für den Export wie gewünscht aus.
 
-![Screenshot der Platform-Benutzeroberfläche mit dem Schritt zur Segmentplanung.](../../assets/catalog/advertising/liveramp/liveramp-segment-scheduling.png)
+![Screenshot der Platform-Benutzeroberfläche mit dem Schritt zur Zielgruppenplanung.](../../assets/catalog/advertising/liveramp/liveramp-segment-scheduling.png)
 
 Der Name der exportierten Datei kann derzeit nicht benutzerseitig konfiguriert werden. Alle an das [!DNL LiveRamp SFTP]-Ziel exportierten Dateien werden automatisch anhand der folgenden Vorlage benannt:
 
@@ -179,28 +178,28 @@ Ihre Daten werden an den von Ihnen konfigurierten [!DNL LiveRamp SFTP]-Speichero
 
 Beim Exportieren von Dateien an das [!DNL LiveRamp SFTP]-Ziel generiert Platform eine CSV-Datei für jede [Zusammenführungsrichtlinien-ID](../../../profile/merge-policies/overview.md).
 
-Nehmen wir beispielsweise folgende Segmente an:
+Betrachten wir beispielsweise die folgenden Zielgruppen:
 
-* Segment A (Zusammenführungsrichtlinie 1)
-* Segment B (Zusammenführungsrichtlinie 2)
-* Segment C (Zusammenführungsrichtlinie 1)
-* Segment D (Zusammenführungsrichtlinie 1)
+* Zielgruppe A (Zusammenführungsrichtlinie 1)
+* Zielgruppe B (Zusammenführungsrichtlinie 2)
+* Zielgruppe C (Zusammenführungsrichtlinie 1)
+* Zielgruppe D (Zusammenführungsrichtlinie 1)
 
 Platform exportiert zwei CSV-Dateien nach [!DNL LiveRamp SFTP]:
 
-* eine CSV-Datei mit den Segmenten A, C und D;
-* eine CSV-Datei, die Segment B enthält.
+* Eine CSV-Datei mit den Zielgruppen A, C und D;
+* Eine CSV-Datei, die Audience B enthält.
 
-Exportierte CSV-Dateien enthalten Profile mit den ausgewählten Attributen und dem entsprechenden Segmentstatus in separaten Spalten, wobei der Attributname und die Segment-IDs als Spaltenüberschriften dienen.
+Exportierte CSV-Dateien enthalten Profile mit den ausgewählten Attributen und dem entsprechenden Zielgruppenstatus in separaten Spalten mit dem Attributnamen und den Zielgruppen-IDs als Spaltenüberschriften.
 
-Die in den exportierten Dateien enthaltenen Profile können mit einem der folgenden Segmentqualifikationsstatus übereinstimmen:
+Die in den exportierten Dateien enthaltenen Profile können mit einem der folgenden Status der Zielgruppenqualifizierung übereinstimmen:
 
-* `Active`: Das Profil ist derzeit für das Segment qualifiziert.
-* `Expired`: Das Profil ist nicht mehr für das Segment qualifiziert, war jedoch in der Vergangenheit qualifiziert.
-* `""`(leere Zeichenfolge): Das Profil war nie für das Segment qualifiziert.
+* `Active`: Das Profil ist derzeit für die Zielgruppe qualifiziert.
+* `Expired`: Das Profil ist nicht mehr für die Zielgruppe qualifiziert, hat sich aber in der Vergangenheit qualifiziert.
+* `""`(leere Zeichenfolge): Das Profil hat sich nie für die Zielgruppe qualifiziert.
 
 
-Eine exportierte CSV-Datei mit einem `email`-Attribut und drei Segmenten könnte beispielsweise wie folgt aussehen:
+Beispiel: eine exportierte CSV-Datei mit einer `email` -Attribut und drei Zielgruppen könnten wie folgt aussehen:
 
 ```csv
 email,aa2e3d98-974b-4f8b-9507-59f65b6442df,45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -214,9 +213,9 @@ abc101@testemailabc.com,active,active,
 
 Da Platform eine CSV-Datei für jede [Zusammenführungsrichtlinien-ID](../../../profile/merge-policies/overview.md) generiert, wird auch eine separate Datenflussausführung für jede Zusammenführungsrichtlinien-ID erzeugt.
 
-Das bedeutet, dass die Metriken **[!UICONTROL Aktivierte Identitäten]** und **[!UICONTROL Empfangene Profile]** auf der Seite mit den [Datenflussausführungen](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) für jede Gruppe von Segmenten aggregiert werden, die dieselbe Zusammenführungsrichtlinie verwenden, und nicht für jedes Segment angezeigt werden.
+Das bedeutet, dass die Variable **[!UICONTROL Aktivierte Identitäten]** und **[!UICONTROL Vorgenommene Profile]** Metriken in [Datenfluss-Ausführung](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) -Seite werden für jede Gruppe von Zielgruppen aggregiert, die dieselbe Zusammenführungsrichtlinie verwenden, anstatt für jede Zielgruppe angezeigt zu werden.
 
-Infolge der generierten Datenflussausführungen für eine Gruppe von Segmenten, die dieselbe Zusammenführungsrichtlinie verwenden, werden die Segmentnamen nicht im [Monitoring-Dashboard](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) angezeigt.
+Da Datenflüsse für eine Gruppe von Zielgruppen generiert werden, die dieselbe Zusammenführungsrichtlinie verwenden, werden die Zielgruppennamen nicht im [Monitoring-Dashboard](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
 
 ![Screenshot der Experience Platform-Benutzeroberfläche mit der Metrik „Aktivierte Identitäten“.](../../assets/catalog/advertising/liveramp/liveramp-metrics.png)
 

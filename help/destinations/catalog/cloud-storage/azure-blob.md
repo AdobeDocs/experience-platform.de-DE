@@ -2,10 +2,10 @@
 title: Azure Blob-Verbindung
 description: Stellen Sie eine aktive ausgehende Verbindung mit Ihrem Azure Blob-Speicher her, um regelmäßig CSV-Datendateien aus Adobe Experience Platform zu exportieren.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1029'
-ht-degree: 80%
+source-wordcount: '1085'
+ht-degree: 69%
 
 ---
 
@@ -18,7 +18,6 @@ ht-degree: 80%
 >Mit der Beta-Version der Funktionalität zum Exportieren von Datensätzen und der verbesserten Dateiexportfunktion werden jetzt möglicherweise zwei [!DNL Azure Blob]-Karten im Zielkatalog angezeigt.
 >* Falls Sie bereits Dateien in das **[!UICONTROL Azure Blob]**-Ziel exportieren, erstellen Sie bitte neue Datenflüsse zum neuen **[!UICONTROL Azure Blob Beta]**-Ziel.
 >* Falls Sie noch keinen Datenfluss zum **[!UICONTROL Azure Blob]**-Ziel erstellt haben, verwenden Sie bitte die neue Karte **[!UICONTROL Azure Blob-Beta]** zum Exportieren von Dateien in **[!UICONTROL Azure Blob]**.
-
 
 ![Abbildung der beiden Azure Blob-Zielkarten, die diese nebeneinander in einer Ansicht zeigt.](../../assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
 
@@ -35,8 +34,8 @@ Zu den Verbesserungen bei der neuen [!DNL Azure Blob]-Zielkarte gehören:
 
 ## Verbinden Sie Ihre [!UICONTROL Azure Blob] Speicher über API oder Benutzeroberfläche {#connect-api-or-ui}
 
-* So stellen Sie eine Verbindung zu Ihrer [!UICONTROL Azure Blob] Speicherort mithilfe der Platform-Benutzeroberfläche, lesen Sie die Abschnitte . [Mit Ziel verbinden](#connect) und [Aktivieren von Segmenten für dieses Ziel](#activate) unten.
-* So stellen Sie eine Verbindung zu Ihrer [!UICONTROL Azure Blob] Speicherort programmgesteuert, lesen Sie die [Aktivieren von Segmenten für dateibasierte Ziele mithilfe des Tutorials zur Flow Service-API](../../api/activate-segments-file-based-destinations.md).
+* So stellen Sie eine Verbindung zu Ihrer [!UICONTROL Azure Blob] Speicherort mithilfe der Platform-Benutzeroberfläche, lesen Sie die Abschnitte . [Mit Ziel verbinden](#connect) und [Aktivieren von Zielgruppen für dieses Ziel](#activate) unten.
+* So stellen Sie eine Verbindung zu Ihrer [!UICONTROL Azure Blob] Speicherort programmgesteuert, lesen Sie die [Aktivieren von Zielgruppen für dateibasierte Ziele mithilfe des Tutorials zur Flow Service-API](../../api/activate-segments-file-based-destinations.md).
 
 ## Erste Schritte
 
@@ -47,7 +46,21 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
    * [Tutorial zum Schema-Editor](../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [[!DNL Real-Time Customer Profile]](../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
-Wenn Sie bereits über ein gültiges [!DNL Blob]-Ziel verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Aktivieren von Segmenten für Ihr Ziel](../../ui/activate-batch-profile-destinations.md) fortfahren.
+Wenn Sie bereits über eine gültige [!DNL Blob] Ziel, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Aktivieren von Zielgruppen für Ihr Ziel](../../ui/activate-batch-profile-destinations.md).
+
+## Unterstützte Zielgruppen {#supported-audiences}
+
+In diesem Abschnitt werden alle Zielgruppen beschrieben, die Sie an dieses Ziel exportieren können.
+
+Alle Ziele unterstützen die Aktivierung von Zielgruppen, die durch die Experience Platform generiert wurden [Segmentierungsdienst](../../../segmentation/home.md).
+
+Darüber hinaus unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
+
+| Zielgruppentyp | Beschreibung |
+---------|----------|
+| Benutzerdefinierte Uploads | Zielgruppen, die aus CSV-Dateien in Experience Platform aufgenommen werden. |
+
+{style="table-layout:auto"}
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
@@ -87,7 +100,7 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus
    * Weitere Informationen zur Konfiguration der [!DNL Blob]-Verbindungszeichenfolge finden Sie unter [Konfigurieren der Verbindungszeichenfolge für ein Azure-Speicherkonto](https://learn.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) in der Microsoft-Dokumentation.
 * **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien eine Verschlüsselung hinzuzufügen. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung.
 
-   ![Abbildung eines Beispiels für einen korrekt formatierten PGP-Schlüssel in der Benutzeroberfläche](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![Abbildung eines Beispiels für einen korrekt formatierten PGP-Schlüssel in der Benutzeroberfläche](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
@@ -105,15 +118,15 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
 
-## Aktivieren von Segmenten für dieses Ziel {#activate}
+## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](../../ui/activate-batch-profile-destinations.md).
+Siehe [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](../../ui/activate-batch-profile-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
 
 ## (Beta) Exportieren von Datensätzen {#export-datasets}
 
@@ -124,4 +137,4 @@ Dieses Ziel unterstützt Datensatzexporte. Vollständige Informationen zum Einri
 
 ## Exportierte Daten {#exported-data}
 
-Für [!DNL Azure Blob Storage]-Ziele erstellt [!DNL Platform] eine `.csv`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](../../ui/activate-batch-profile-destinations.md) im Tutorial zur Segmentaktivierung.
+Für [!DNL Azure Blob Storage]-Ziele erstellt [!DNL Platform] eine `.csv`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](../../ui/activate-batch-profile-destinations.md) im Tutorial zur Aktivierung der Zielgruppe.

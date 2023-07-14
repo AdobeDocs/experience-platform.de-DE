@@ -1,12 +1,12 @@
 ---
 keywords: Ziele; Ziel; Zieldetailseite; Zieldetailseite; Zieldetailseite
 title: Anzeigen von Zieldetails
-description: Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails. Zu den Zieldetails gehören der Zielname, die ID, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung und zum Aktivieren und Deaktivieren des Datenflusses.
+description: Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails. Zu den Zieldetails gehören der Zielname, die ID, die dem Ziel zugeordneten Zielgruppen und die Steuerelemente zum Bearbeiten der Aktivierung und zum Aktivieren und Deaktivieren des Datenflusses.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: dcbc0c3ef87be0bc296992819c9b1bc3ba6317e4
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '926'
-ht-degree: 18%
+ht-degree: 12%
 
 ---
 
@@ -50,8 +50,8 @@ Die folgende Tabelle enthält die von der rechten Leiste bereitgestellten Steuer
 
 | Element in der rechten Leiste | Beschreibung |
 | --- | --- |
-| [!UICONTROL Aktivieren von Segmenten] | Wählen Sie dieses Steuerelement aus, um zu bearbeiten, welche Segmente dem Ziel zugeordnet sind, Exportpläne zu aktualisieren oder zugeordnete Attribute und Identitäten hinzuzufügen und zu entfernen. Weitere Informationen finden Sie in den Handbüchern unter [Aktivieren von Zielgruppendaten für Segmentstreaming-Ziele](./activate-segment-streaming-destinations.md), [Aktivieren von Zielgruppendaten für profilbasierte Batch-Ziele](./activate-batch-profile-destinations.md)und [Aktivieren von Zielgruppendaten für Streaming profilbasierter Ziele](./activate-streaming-profile-destinations.md) für weitere Informationen. |
-| [!UICONTROL Löschen] | Ermöglicht das Löschen dieses Datenflusses und die Aufhebung der Zuordnung der zuvor aktivierten Segmente, falls vorhanden. |
+| [!UICONTROL Aktivieren von Zielgruppen] | Wählen Sie dieses Steuerelement aus, um zu bearbeiten, welche Zielgruppen dem Ziel zugeordnet sind, Exportpläne zu aktualisieren oder zugeordnete Attribute und Identitäten hinzuzufügen und zu entfernen. Weitere Informationen finden Sie in den Handbüchern unter [Aktivieren von Zielgruppendaten für Zielgruppen-Streaming-Ziele](./activate-segment-streaming-destinations.md), [Aktivieren von Zielgruppendaten für profilbasierte Batch-Ziele](./activate-batch-profile-destinations.md)und [Aktivieren von Zielgruppendaten für Streaming profilbasierter Ziele](./activate-streaming-profile-destinations.md) für weitere Informationen. |
+| [!UICONTROL Löschen] | Ermöglicht das Löschen dieses Datenflusses und die Aufhebung der Zuordnung der zuvor aktivierten Zielgruppen, falls vorhanden. |
 | [!UICONTROL Zielname] | Dieses Feld kann bearbeitet werden, um den Zielnamen zu aktualisieren. |
 | [!UICONTROL Beschreibung] | Dieses Feld kann bearbeitet werden, um eine optionale Beschreibung zum Ziel zu aktualisieren oder hinzuzufügen. |
 | [!UICONTROL Ziel] | Die Zielplattform, an die Zielgruppen gesendet werden. Siehe [Zielkatalog](../catalog/overview.md) für weitere Informationen. |
@@ -81,7 +81,6 @@ Die [!UICONTROL Datenfluss-Abläufe] -Tab enthält Metrikdaten zu Ihren Datenfl�
 >* Die Funktion zur Zielüberwachung wird derzeit für alle Ziele in Experience Platform unterstützt *Ausnahme* die [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Benutzerdefinierte Personalisierung](/help/destinations/catalog/personalization/custom-personalization.md) und [Experience Cloud Audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md) Ziele.
 >* Für [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)und [HTTP-API](/help/destinations/catalog/streaming/http-destination.md) Ziele, werden die Metriken geschätzt, die sich auf ausgeschlossene, fehlgeschlagene und aktivierte Identitäten beziehen. Höhere Volumina von Aktivierungsdaten führen zu einer höheren Genauigkeit der Metriken.
 
-
 ![Datenfluss-Ausführungsansicht](../assets/ui/details-page/dataflow-runs.png)
 
 ### Dauer der Datenflüsse {#dataflow-runs-duration}
@@ -98,7 +97,7 @@ Weitere Informationen finden Sie unter [Datenfluss läuft zu Streaming-Zielen](/
 
 ### Dateibasierte Ziele {#file-based}
 
-Für Datenflüsse, die an dateibasierte Ziele ausgeführt werden, muss die Variable **[!UICONTROL Verarbeitungsdauer]** hängt von der Größe der zu exportierenden Daten und der Systemlast ab. Beachten Sie außerdem, dass der Datenfluss zu dateibasierten Zielen nach Segment aufgeschlüsselt wird.
+Für Datenflüsse, die an dateibasierte Ziele ausgeführt werden, muss die Variable **[!UICONTROL Verarbeitungsdauer]** hängt von der Größe der zu exportierenden Daten und der Systemlast ab. Beachten Sie außerdem, dass der Datenfluss zu dateibasierten Zielen nach Zielgruppen aufgeschlüsselt wird.
 
 ![Bild der Seite Datenfluss wird ausgeführt, wobei die Spalte Verarbeitungszeit für ein dateibasiertes Ziel hervorgehoben ist.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
 
@@ -106,11 +105,11 @@ Weitere Informationen finden Sie unter [Datenfluss wird an Batch-(dateibasierte)
 
 ## [!UICONTROL Aktivierungsdaten] {#activation-data}
 
-Die Registerkarte [!UICONTROL Aktivierungsdaten] zeigt eine Liste der Segmente an, die dem Ziel zugeordnet wurden, einschließlich des Anfangs- und Enddatums (falls zutreffend) sowie weiterer relevanter Informationen für den Datenexport, wie Exporttyp, -zeitplan und -frequenz. Um Details zu einem bestimmten Segment anzuzeigen, wählen Sie dessen Namen aus der Liste aus.
+Die [!UICONTROL Aktivierungsdaten] zeigt eine Liste der Zielgruppen an, die dem Ziel zugeordnet wurden, einschließlich des Anfangs- und Enddatums (falls zutreffend) sowie anderer relevanter Informationen für den Datenexport, wie Exporttyp, -zeitplan und -frequenz. Um Details zu einer bestimmten Zielgruppe anzuzeigen, wählen Sie deren Namen aus der Liste aus.
 
 >[!TIP]
 >
->Um Details zu den Attributen und Identitäten anzuzeigen und zu bearbeiten, die einem Ziel zugeordnet sind, wählen Sie **[!UICONTROL Segmente aktivieren]** im [rechte Leiste](#right-rail).
+>Um Details zu den Attributen und Identitäten anzuzeigen und zu bearbeiten, die einem Ziel zugeordnet sind, wählen Sie **[!UICONTROL Aktivieren von Zielgruppen]** im [rechte Leiste](#right-rail).
 
 ![Batch-Ziel der Aktivierungsdatenansicht](../assets/ui/details-page/activation-data-batch.png)
 
@@ -118,4 +117,4 @@ Die Registerkarte [!UICONTROL Aktivierungsdaten] zeigt eine Liste der Segmente a
 
 >[!NOTE]
 >
->Weitere Informationen zum Erkunden der Detailseite eines Segments finden Sie im Abschnitt [Übersicht über die Segmentierungsbenutzeroberfläche](../../segmentation/ui/overview.md#segment-details).
+>Weitere Informationen zum Erkunden der Detailseite einer Audience finden Sie im Abschnitt [Übersicht über die Segmentierungsbenutzeroberfläche](../../segmentation/ui/overview.md#segment-details).

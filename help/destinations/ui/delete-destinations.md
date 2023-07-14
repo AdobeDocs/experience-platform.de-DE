@@ -4,7 +4,7 @@ title: Löschen von Zielen
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Löschen eines vorhandenen Ziels in der Adobe Experience Platform-Benutzeroberfläche aufgeführt
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: 1ef6430b6661a2b8b5aef196b75cfaf3f6220aab
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 33%
@@ -17,7 +17,7 @@ ht-degree: 33%
 
 In der Adobe Experience Platform-Benutzeroberfläche können Sie vorhandene Verbindungen zu Zielen löschen.
 
-Durch das Löschen eines Ziels werden alle vorhandenen Datenflüsse zu diesem Ziel entfernt. Alle Segmente, die für die Ziele aktiviert sind, die Sie löschen, werden vor dem Löschen des Datenflusses nicht zugeordnet.
+Durch das Löschen eines Ziels werden alle vorhandenen Datenflüsse zu diesem Ziel entfernt. Alle Zielgruppen, die für die Ziele aktiviert sind, die Sie löschen, werden vor dem Löschen des Datenflusses nicht zugeordnet.
 
 Es gibt zwei Möglichkeiten, Ziele aus dem [!DNL Platform] [!DNL UI]. Sie haben folgende Möglichkeiten:
 
@@ -61,11 +61,11 @@ Gehen Sie wie folgt vor, um ein Ziel auf der Seite mit den Zieldetails zu lösch
 
    * Wenn das Ziel über einen vorhandenen Datenfluss verfügt, werden Sie zum [!UICONTROL Datenfluss-Abläufe] Registerkarte.
 
-      ![Registerkarte &quot;Datenfluss&quot;](../assets/ui/delete-destinations/destination-details-dataflows.png)
+     ![Registerkarte &quot;Datenfluss&quot;](../assets/ui/delete-destinations/destination-details-dataflows.png)
 
    * Wenn das Ziel keine vorhandenen Datenflüsse aufweist, gelangen Sie zu einer leeren Seite, auf der Sie Zielgruppen aktivieren können.
 
-      ![Zieldetails](../assets/ui/delete-destinations/destination-details-empty.png)
+     ![Zieldetails](../assets/ui/delete-destinations/destination-details-empty.png)
 
 4. Auswählen **[!UICONTROL Löschen]** in der rechten Leiste.
 

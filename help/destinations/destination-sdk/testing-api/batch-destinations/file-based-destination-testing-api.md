@@ -2,10 +2,10 @@
 description: Auf dieser Seite wird erläutert, wie Sie mit dem API-Endpunkt /testing/destinationInstance testen können, ob Ihr dateibasiertes Ziel richtig konfiguriert ist, und die Integrität der Datenflüsse zu Ihrem konfigurierten Ziel überprüfen.
 title: Testen Ihres dateibasierten Ziels mit Beispielprofilen
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
-source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
-workflow-type: ht
+source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
+workflow-type: tm+mt
 source-wordcount: '827'
-ht-degree: 100%
+ht-degree: 85%
 
 ---
 
@@ -111,7 +111,7 @@ Bei einer erfolgreiche Antwort wird der HTTP-Status 200 zusammen mit der Antwort
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `activations` | Gibt die Segment-ID und die Flussausführungs-ID für jedes aktivierte Segment zurück. Die Anzahl der Aktivierungseinträge (und der zugehörigen generierten Dateien) entspricht der Anzahl der Segmente, die auf der Zielinstanz zugeordnet sind. <br><br> Beispiel: Wenn Sie der Zielinstanz zwei Segmente zugeordnet haben, enthält das `activations`-Array zwei Einträge. Jedes aktivierte Segment entspricht einer exportierten Datei. |
+| `activations` | Gibt die Zielgruppen-ID und die Flusslaufs-ID für jede aktivierte Zielgruppe zurück. Die Anzahl der Aktivierungseinträge (und der zugehörigen generierten Dateien) entspricht der Anzahl der Zielgruppen, die auf der Zielinstanz zugeordnet sind. <br><br> Beispiel: Wenn Sie der Zielinstanz zwei Zielgruppen zugeordnet haben, wird die `activations` -Array enthält zwei Einträge. Jede aktivierte Audience entspricht einer exportierten Datei. |
 | `results` | Gibt die ID der Zielinstanz und die IDs der Flussausführung zurück, die Sie zum Aufrufen der [Ergebnis-API](file-based-destination-results-api.md) verwenden können, um die Integration weiter zu testen. |
 | `inputProfiles` | Gibt die von der API automatisch generierten Beispielprofile zurück. |
 
@@ -232,7 +232,7 @@ Bei einer erfolgreiche Antwort wird der HTTP-Status 200 zusammen mit der Antwort
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `activations` | Gibt die Segment-ID und die Flussausführungs-ID für jedes aktivierte Segment zurück. Die Anzahl der Aktivierungseinträge (und der zugehörigen generierten Dateien) entspricht der Anzahl der Segmente, die auf der Zielinstanz zugeordnet sind. <br><br> Beispiel: Wenn Sie der Zielinstanz zwei Segmente zugeordnet haben, enthält das `activations`-Array zwei Einträge. Jedes aktivierte Segment entspricht einer exportierten Datei. |
+| `activations` | Gibt die Zielgruppen-ID und die Flusslaufs-ID für jede aktivierte Zielgruppe zurück. Die Anzahl der Aktivierungseinträge (und der zugehörigen generierten Dateien) entspricht der Anzahl der Zielgruppen, die auf der Zielinstanz zugeordnet sind. <br><br> Beispiel: Wenn Sie der Zielinstanz zwei Zielgruppen zugeordnet haben, wird die `activations` -Array enthält zwei Einträge. Jede aktivierte Audience entspricht einer exportierten Datei. |
 | `results` | Gibt die ID der Zielinstanz und die IDs der Flussausführung zurück, die Sie zum Aufrufen der [Ergebnis-API](file-based-destination-results-api.md) verwenden können, um die Integration weiter zu testen. |
 | `inputProfiles` | Gibt die benutzerdefinierten Beispielprofile zurück, die Sie in der API-Anfrage übergeben haben. |
 

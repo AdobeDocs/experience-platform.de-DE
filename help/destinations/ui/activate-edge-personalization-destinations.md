@@ -3,10 +3,10 @@ title: Aktivieren von Zielgruppen für Edge-Personalisierungsziele
 description: Erfahren Sie, wie Sie Zielgruppen von Adobe Experience Platform aus für Edge-Personalisierungsziele aktivieren können, um Anwendungsfälle für die Personalisierung von derselben Seite und nächsten Seiten zu nutzen.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: c96a156c6c9c63d9ae875ee3808168d94ee7aeca
+source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
-source-wordcount: '1738'
-ht-degree: 21%
+source-wordcount: '1833'
+ht-degree: 19%
 
 ---
 
@@ -130,6 +130,14 @@ Nachdem Sie die Voraussetzungen erfüllt haben, können Sie jetzt das Edge-Perso
 ## Audiences auswählen {#select-audiences}
 
 Aktivieren Sie die Kontrollkästchen links neben den Zielgruppennamen, um die Zielgruppen auszuwählen, die Sie für das Ziel aktivieren möchten, und wählen Sie dann **[!UICONTROL Nächste]**.
+
+Um die Zielgruppen auszuwählen, die Sie für das Ziel aktivieren möchten, aktivieren Sie die Kontrollkästchen links neben den Zielgruppennamen und wählen Sie **[!UICONTROL Nächste]**.
+
+Je nach Herkunft können Sie aus mehreren Zielgruppentypen auswählen:
+
+* **[!UICONTROL Segmentierungsdienst]**: Zielgruppen, die in der Experience Platform vom Segmentierungsdienst generiert wurden. Siehe [Segmentierungsdokumentation](../../segmentation/ui/overview.md) für weitere Details.
+* **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Platform hochgeladen wurden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Audience importieren](../../segmentation/ui/overview.md#import-audience).
+* Andere Zielgruppentypen, die aus anderen Adobe-Lösungen stammen, z. B. [!DNL Audience Manager].
 
 ![Auswählen von Zielgruppen](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 

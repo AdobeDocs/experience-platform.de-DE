@@ -3,9 +3,9 @@ keywords: Bestimmungsländer; Fragen; häufig gestellte Fragen; faq; Ziele-FAQ
 title: Häufig gestellte Fragen
 description: Antworten auf die am häufigsten gestellten Fragen zu Adobe Experience Platform-Zielen
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 784c529691f2f550176080474f5091bfb1b84279
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
-source-wordcount: '1396'
+source-wordcount: '1395'
 ht-degree: 6%
 
 ---
@@ -22,9 +22,9 @@ Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Adobe Experie
 
 +++Antwort Dies ist ein normales Verhalten aufgrund der Art und Weise, wie Experience Platform die Segmentierung durchführt.
 
-Streaming-Segmentierung aktualisiert die Profilanzahl für Streaming-Segmente über den ganzen Tag, während die Batch-Segmentierung die Profilanzahl für Batch-Segmente einmal alle 24 Stunden aktualisiert.
+Streaming-Segmentierung aktualisiert die Profilanzahl für Streaming-Zielgruppen über den ganzen Tag, während die Batch-Segmentierung die Profilanzahl für Batch-Zielgruppen einmal alle 24 Stunden aktualisiert.
 
-Wenn der Segmentexportzeitplan vom Segmentierungsplan abweicht, zählt das Profil zwischen der Benutzeroberfläche und dem exportierten [!DNL CSV] -Datei anders aussehen, insbesondere wenn es um Streaming-Segmente geht.
+Wenn sich der Zeitplan für den Zielgruppenexport vom Segmentierungsplan unterscheidet, zählt das Profil zwischen der Benutzeroberfläche und dem exportierten [!DNL CSV] -Datei wird anders aussehen, insbesondere wenn es um Streaming-Zielgruppen geht.
 
 Siehe [Dokumentation zum Segmentierungsdienst](../segmentation/home.md) für weitere Details.
 +++
@@ -33,7 +33,7 @@ Siehe [Dokumentation zum Segmentierungsdienst](../segmentation/home.md) für wei
 
 ### Was muss ich tun, bevor ich Zielgruppen in aktivieren kann? [!DNL Facebook Custom Audiences]?
 
-+++Antwort Bevor Sie Ihre Zielgruppensegmente an senden können [!DNL Facebook]müssen Sie sicherstellen, dass Sie die folgenden Anforderungen erfüllen:
++++Antwort Bevor Sie Ihre Zielgruppen an senden können [!DNL Facebook]müssen Sie sicherstellen, dass Sie die folgenden Anforderungen erfüllen:
 
 * Ihre [!DNL Facebook] Das Benutzerkonto muss über Folgendes verfügen: **[!DNL Manage campaigns]** -Berechtigung für das Werbekonto aktiviert wurde, das Sie verwenden möchten.
 * Die **Adobe Experience Cloud** Geschäftskonto muss als Werbepartner in Ihrem [!DNL Facebook Ad Account]. Verwenden Sie `business ID=206617933627973`. Siehe [Partner zu Ihrem Business Manager hinzufügen](https://www.facebook.com/business/help/1717412048538897) in der Dokumentation zu Facebook .
@@ -93,9 +93,9 @@ Ja. Ein Facebook-Ziel in Experience Platform ist 1:1 für ein Anzeigenkonto in F
 
 ## Google-Kundenabgleich {#google-customer-match}
 
-### Warum werden beim Exportieren von Segmenten in Google-Kundenabgleich am Ende der Segmentnamen in der Google-Benutzeroberfläche zusätzliche Zahlen angehängt?
+### Warum werden beim Exportieren von Zielgruppen in Google-Kundenabgleich am Ende der Zielgruppennamen in der Google-Benutzeroberfläche zusätzliche Zahlen angehängt?
 
-+++Antwort Google erfordert, dass Segmentnamen eindeutig sind. Die Zahlen, die Sie sehen, sind [UNIX-Zeitstempel](https://www.unixtimestamp.com/) und sie werden angehängt, um die Segmentnamen eindeutig zu halten, wenn Sie dasselbe Segment mehreren Google-Zielen zugeordnet haben.
++++Antwort Google erfordert, dass Zielgruppennamen eindeutig sind. Die Zahlen, die Sie sehen, sind [UNIX-Zeitstempel](https://www.unixtimestamp.com/) und sie werden angehängt, um die Zielgruppennamen eindeutig zu halten, wenn Sie dieselbe Zielgruppe mehreren Google-Zielen zugeordnet haben.
 +++
 
 ## linkedIn Matched Audiences {#linkedin}
@@ -133,7 +133,7 @@ Detaillierte Erläuterungen zu den Anforderungen an die ID-Zuordnung finden Sie 
 
 +++Antwort Nein, [Web SDK](../edge/home.md) ist nicht erforderlich, um Zielgruppen für [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
-Wenn [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=en) anstelle des Web SDK verwendet wird, wird nur die Personalisierung der nächsten Sitzung unterstützt.
+Wenn [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=de) anstelle des Web SDK verwendet wird, wird nur die Personalisierung der nächsten Sitzung unterstützt.
 
 Für [Personalisierung auf derselben Seite und auf der nächsten Seite](ui/activate-edge-personalization-destinations.md) Anwendungsbeispiele verwenden, müssen Sie entweder [Web SDK](../edge/home.md) oder [Edge Network Server-API](../server-api/overview.md). Weitere Informationen finden Sie in der Dokumentation unter [Aktivieren von Zielgruppen für Edge-Ziele](ui/activate-edge-personalization-destinations.md) für weitere Implementierungsdetails.
 +++
@@ -177,7 +177,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ++ + Antwort Ja, die Edge Network Server-API funktioniert mit dem benutzerdefinierten Personalisierungsziel. Da Profilattribute möglicherweise vertrauliche Daten enthalten, müssen Sie zum Schutz dieser Daten für das benutzerdefinierte Personalisierungsziel die Edge Network Server-API für die Datenerfassung verwenden. Darüber hinaus müssen alle API-Aufrufe in einer [authentifizierter Kontext](../server-api/authentication.md).
 +++
 
-### Ich kann nur eine Zusammenführungsrichtlinie haben, die aktiv ist. Kann ich Zielgruppen erstellen, die eine andere Zusammenführungsrichtlinie verwenden und diese dennoch als Streaming-Segmente an Adobe Target senden?
+### Ich kann nur eine Zusammenführungsrichtlinie haben, die aktiv ist. Kann ich Zielgruppen erstellen, die eine andere Zusammenführungsrichtlinie verwenden und diese dennoch als Streaming-Zielgruppen an Adobe Target senden?
 
 +++Antwort 
 Nr. Alle Zielgruppen, die Sie für Adobe Target aktivieren möchten, müssen eine aktive On-Edge-Funktion verwenden [Zusammenführungsrichtlinie](../profile/merge-policies/ui-guide.md).

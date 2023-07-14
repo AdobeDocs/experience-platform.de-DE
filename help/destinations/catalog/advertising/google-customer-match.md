@@ -3,10 +3,10 @@ keywords: Google-Kundenabgleich;Google-Kundenabgleich;Google-Kundenabgleich
 title: Google Customer Match-Verbindung
 description: Mit Google-Kundenabgleich können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften von Google wie Suche, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: d6b34f3bd3a432e1cf7d3dcce242934391b65d78
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '1763'
-ht-degree: 23%
+source-wordcount: '1818'
+ht-degree: 19%
 
 ---
 
@@ -24,13 +24,13 @@ So können Sie besser verstehen, wie und wann die Variable [!DNL Google Customer
 
 ### Anwendungsfall 1
 
-Eine Sportbekleidungsmarke möchte bestehende Kunden über erreichen [!DNL Google Search] und [!DNL Google Shopping] , um Angebote und Artikel basierend auf ihren bisherigen Käufen und dem Browser-Verlauf zu personalisieren. Die Bekleidungsmarke kann E-Mail-Adressen aus ihrem eigenen CRM-System in die Experience Platform aufnehmen und aus ihren eigenen Offline-Daten Segmente erstellen. Anschließend können sie diese Segmente an senden [!DNL Google Customer Match] verwendet werden [!DNL Search] und [!DNL Shopping], wodurch ihre Werbeausgaben optimiert werden.
+Eine Sportbekleidungsmarke möchte bestehende Kunden über erreichen [!DNL Google Search] und [!DNL Google Shopping] , um Angebote und Artikel basierend auf ihren bisherigen Käufen und dem Browser-Verlauf zu personalisieren. Die Bekleidungsmarke kann E-Mail-Adressen aus ihrem eigenen CRM-System in die Experience Platform aufnehmen und Zielgruppen aus eigenen Offline-Daten erstellen. Anschließend können sie diese Zielgruppen an senden [!DNL Google Customer Match] verwendet werden [!DNL Search] und [!DNL Shopping], wodurch ihre Werbeausgaben optimiert werden.
 
 ### Anwendungsfall 2
 
 Ein renommiertes Technologieunternehmen startete ein neues Telefon. Um dieses neue Telefonmodell zu bewerben, möchten sie Kunden, die Inhaber früherer Modelle ihrer Telefone sind, für die neuen Funktionen des Telefons sensibilisieren.
 
-Um die Veröffentlichung zu bewerben, laden sie E-Mail-Adressen aus ihrer CRM-Datenbank in Experience Platform hoch und verwenden dabei die E-Mail-Adressen als Kennungen. Segmente werden basierend auf Kunden erstellt, die ältere Telefonmodelle besitzen. Anschließend werden Segmente an gesendet [!DNL Google Customer Match], damit das Unternehmen aktuelle Kunden, Kunden, die Inhaber älterer Telefonmodelle sind, und ähnliche Kunden in ansprechen kann [!DNL YouTube].
+Um die Veröffentlichung zu bewerben, laden sie E-Mail-Adressen aus ihrer CRM-Datenbank in Experience Platform hoch und verwenden dabei die E-Mail-Adressen als Kennungen. Zielgruppen werden basierend auf Kunden erstellt, die Inhaber älterer Telefonmodelle sind. Anschließend werden Zielgruppen an gesendet [!DNL Google Customer Match], damit das Unternehmen aktuelle Kunden, Kunden, die Inhaber älterer Telefonmodelle sind, und ähnliche Kunden in ansprechen kann [!DNL YouTube].
 
 ## Data Governance für [!DNL Google Customer Match] Ziele {#data-governance}
 
@@ -50,14 +50,28 @@ Für einige Ziele in der Experience Platform gelten bestimmte Regeln und Pflicht
 
 {style="table-layout:auto"}
 
+## Unterstützte Zielgruppen {#supported-audiences}
+
+In diesem Abschnitt werden alle Zielgruppen beschrieben, die Sie an dieses Ziel exportieren können.
+
+Alle Ziele unterstützen die Aktivierung von Zielgruppen, die durch die Experience Platform generiert wurden [Segmentierungsdienst](../../../segmentation/home.md).
+
+Darüber hinaus unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
+
+| Zielgruppentyp | Beschreibung |
+---------|----------|
+| Benutzerdefinierte Uploads | Zielgruppen, die aus CSV-Dateien in Experience Platform aufgenommen werden. |
+
+{style="table-layout:auto"}
+
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer und andere), die im [!DNL Google Customer Match] Ziel. |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer und andere), die im [!DNL Google Customer Match] Ziel. |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform basierend auf der Zielgruppenbewertung aktualisiert wird, sendet der Connector das Update an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -117,7 +131,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 <!-- ## Configure destination - video walkthrough {#video}
 
-The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate segments. The steps are also laid out sequentially in the next sections.
+The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
@@ -141,22 +155,21 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 >
 > * Die **[!UICONTROL Kombinieren mit PII]** Marketing-Aktion ist standardmäßig für die [!DNL Google Customer Match] Ziel und kann nicht entfernt werden.
 
-
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
 
-## Aktivieren von Segmenten für dieses Ziel {#activate}
+## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md).
+Siehe [Aktivieren von Zielgruppendaten für Streaming-Zielgruppenexport-Ziele](../../ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
 
-Im **[!UICONTROL Segmentplan]** Schritt, müssen Sie die [!UICONTROL App-ID] beim Senden [!DNL IDFA] oder [!DNL GAID] Segmente in [!DNL Google Customer Match].
+Im **[!UICONTROL Segmentplan]** Schritt, müssen Sie die [!UICONTROL App-ID] beim Senden [!DNL IDFA] oder [!DNL GAID] Zielgruppen zu [!DNL Google Customer Match].
 
 ![Google-Kunden-Match-App-ID](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
@@ -191,11 +204,11 @@ Attributquellendaten werden nicht automatisch gehasht. Wenn Ihr Quellfeld ungeha
 
 ![Identity Mapping Transformation](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
-## Überprüfen, ob die Segmentaktivierung erfolgreich war {#verify-activation}
+## Überprüfen, ob die Zielgruppenaktivierung erfolgreich war {#verify-activation}
 
-Wechseln Sie nach Abschluss des Aktivierungsvorgangs zu Ihrer **[!UICONTROL Google Ads]** -Konto. Die aktivierten Segmente werden in Ihrem Google-Konto als Kundenlisten angezeigt. Beachten Sie, dass je nach Segmentgröße einige Zielgruppen nur dann gefüllt werden, wenn mehr als 100 aktive Benutzer zur Verfügung stehen.
+Wechseln Sie nach Abschluss des Aktivierungsvorgangs zu Ihrer **[!UICONTROL Google Ads]** -Konto. Die aktivierten Zielgruppen werden in Ihrem Google-Konto als Kundenlisten angezeigt. Beachten Sie, dass je nach Größe Ihrer Zielgruppe einige Zielgruppen nur gefüllt werden, wenn mehr als 100 aktive Benutzer zur Verfügung stehen.
 
-Beim Zuordnen eines Segments zu [!DNL IDFA] und [!DNL GAID] mobile IDs, [!DNL Google Customer Match] erstellt für jede ID-Zuordnung ein eigenes Segment. Ihre [!DNL Google Ads] zeigt zwei verschiedene Segmente an: eines für die [!DNL IDFA]und einer für die [!DNL GAID] Zuordnung.
+Beim Zuordnen einer Zielgruppe zu [!DNL IDFA] und [!DNL GAID] mobile IDs, [!DNL Google Customer Match] erstellt für jede ID-Zuordnung eine separate Zielgruppe. Ihre [!DNL Google Ads] zeigt zwei verschiedene Segmente an: eines für die [!DNL IDFA]und einer für die [!DNL GAID] Zuordnung.
 
 ## Fehlerbehebung {#troubleshooting}
 

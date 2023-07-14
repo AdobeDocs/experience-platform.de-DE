@@ -3,10 +3,10 @@ keywords: Katalog; Katalog
 title: Zielkatalog – Übersicht
 description: Der Zielkatalog enthält eine Liste der verfügbaren Ziele, die zum Empfang von Daten bereit sind. Zu diesen Zielen gehören Adobe-Lösungen, Werbeplattformen, Umfrageplattformen, E-Mail-Marketing-Plattformen und mehr.
 exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
-source-git-commit: 944f307ecb4cf174c9f9818ded17546057f445e4
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '171'
-ht-degree: 36%
+ht-degree: 21%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 36%
 
 Der Zielkatalog enthält eine Liste der verfügbaren Zielplattformen, die zum Empfang von Daten bereit sind. Zu diesen Zielplattformen gehören Adobe-Lösungen, Werbeplattformen, Umfrageplattformen, E-Mail-Marketing-Plattformen, Experience Platform-Erweiterungen und mehr.
 
-Durchsuchen Sie den Katalog, um zu ermitteln, welche Zielplattformen für Ihre Werbe- und Personalisierungsfälle am besten geeignet sind, und richten Sie dann Flüsse ein, um Ihre Segmente für Ziele zu aktivieren.
+Durchsuchen Sie den Katalog, um festzustellen, welche Zielplattformen für Ihre Werbe- und Personalisierungsfälle am besten geeignet sind, und richten Sie dann Flüsse ein, um Ihre Zielgruppen für Ziele zu aktivieren.
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>

@@ -1,10 +1,10 @@
 ---
 description: Erfahren Sie, wie Sie einen API-Aufruf strukturieren, um eine Zielkonfiguration über Adobe Experience Platform Destination SDK zu erstellen.
 title: Erstellen einer Zielkonfiguration
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
-workflow-type: ht
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+workflow-type: tm+mt
 source-wordcount: '1209'
-ht-degree: 100%
+ht-degree: 94%
 
 ---
 
@@ -213,10 +213,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `identityNamespaces.externalId.acceptedGlobalNamespaces` | – | Gibt an, welche [Standard-Identity-Namespaces](/help/identity-service/namespaces.md#standard) (z. B. IDFA) Kundinnen und Kunden der Identität zuordnen können, die Sie konfigurieren. <br> Wenn Sie `acceptedGlobalNamespaces` verwenden, können Sie E-Mail-Adressen oder Telefonnummern mithilfe von `"requiredTransformation":"sha256(lower($))"` in Kleinbuchstaben umwandeln und hashen. |
 | `destinationDelivery.authenticationRule` | Zeichenfolge | Gibt an, wie [!DNL Platform]-Kundinnen und -Kunden eine Verbindung zu Ihrem Ziel herstellen. Akzeptierte Werte sind `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Verwenden Sie `CUSTOMER_AUTHENTICATION`, wenn sich Platform-Kundinnen und -Kunden über einen Benutzernamen und ein Kennwort, ein Bearer-Token oder eine andere Authentifizierungsmethode bei Ihrem System anmelden. Sie würden diese Option beispielsweise auswählen, wenn Sie auch `authType: OAUTH2` oder `authType:BEARER` in `customerAuthenticationConfigurations` ausgewählt haben. </li><li> Verwenden Sie `PLATFORM_AUTHENTICATION`, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel existiert und der [!DNL Platform]-Kunde keine Authentifizierungsdaten bereitstellen muss, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie ein Anmeldeinformationen-Objekt mithilfe der Konfiguration der [Anmeldeinformationen-API](../../credentials-api/create-credential-configuration.md) erstellen. </li><li>Verwenden Sie `NONE`, wenn keine Authentifizierung erforderlich ist, um Daten an Ihre Zielplattform zu senden. </li></ul> |
 | `destinationDelivery.destinationServerId` | Zeichenfolge | Die `instanceId` der [Ziel-Server-Vorlage](../destination-server/create-destination-server.md), die für dieses Ziel verwendet wird. |
-| `backfillHistoricalProfileData` | Boolesch | Steuert, ob historische Profildaten exportiert werden, wenn Segmente für das Ziel aktiviert werden. Setzen Sie diesen Parameter immer auf `true`. |
-| `segmentMappingConfig.mapUserInput` | Boolesch | Steuert, ob die Segmentzuordnungs-ID im Zielaktivierungs-Workflow von der Benutzerin bzw. dem Benutzer eingegeben wird. |
-| `segmentMappingConfig.mapExperiencePlatformSegmentId` | Boolesch | Steuert, ob die Segmentzuordnungs-ID im Zielaktivierungs-Workflow die Experience Platform-Segment- ID ist. |
-| `segmentMappingConfig.mapExperiencePlatformSegmentName` | Boolesch | Steuert, ob die Segmentzuordnungs- ID im Zielaktivierungs-Workflow der Experience Platform-Segmentname ist. |
+| `backfillHistoricalProfileData` | Boolesch | Steuert, ob historische Profildaten exportiert werden, wenn Zielgruppen für das Ziel aktiviert werden. Setzen Sie diesen Parameter immer auf `true`. |
+| `segmentMappingConfig.mapUserInput` | Boolesch | Steuert, ob die Zielgruppen-Mapping-ID im Zielaktivierungs-Workflow vom Benutzer eingegeben wird. |
+| `segmentMappingConfig.mapExperiencePlatformSegmentId` | Boolesch | Steuert, ob die Zielgruppen-Mapping-ID im Zielgruppen-Aktivierungsworkflow die Experience Platform-Zielgruppen-ID ist. |
+| `segmentMappingConfig.mapExperiencePlatformSegmentName` | Boolesch | Steuert, ob die Zielgruppen-Mapping-ID im Zielgruppen-Aktivierungsarbeitsablauf der Zielgruppenname der Experience Platform ist. |
 | `segmentMappingConfig.audienceTemplateId` | Boolesch | Die `instanceId` der [Zielgruppen-Metadatenvorlage](../../metadata-api/create-audience-template.md), die für dieses Ziel verwendet wird. |
 | `schemaConfig.profileFields` | Array | Beim Hinzufügen vordefinierter `profileFields` wie in der obigen Konfiguration können Benutzerinnen und Benutzer die Attribute von Experience Platform den vordefinierten Attributen Ihres Ziels zuordnen. |
 | `schemaConfig.profileRequired` | Boolesch | Verwenden Sie `true`, wenn Benutzerinnen und Benutzer die Zuordnung von Profilattributen aus Experience Platform zu benutzerdefinierten Attributen des Ziels vornehmen dürfen, wie in der obigen Beispielkonfiguration dargestellt. |

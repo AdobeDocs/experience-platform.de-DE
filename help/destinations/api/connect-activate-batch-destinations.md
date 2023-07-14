@@ -5,10 +5,10 @@ title: Verbinden mit Batch-Zielen und Aktivieren von Daten mit der Flow Service-
 description: Schrittweise Anleitungen zur Verwendung der Flow Service-API zum Erstellen eines Batch-Cloud-Speichers oder E-Mail-Marketing-Ziels in Experience Platform und zum Aktivieren von Daten
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '3402'
-ht-degree: 92%
+source-wordcount: '3399'
+ht-degree: 80%
 
 ---
 
@@ -26,7 +26,7 @@ In diesem Tutorial erfahren Sie, wie Sie die Flow Service-API verwenden, um per 
 
 In diesem Tutorial wird für alle Beispiele das Ziel [!DNL Adobe Campaign] verwendet, die Schritte sind aber für alle Batch-Cloud-Speicher-Ziele und E-Mail-Marketing-Ziele identisch.
 
-![Übersicht – Schritte zum Erstellen eines Ziels und Aktivieren von Segmenten](../assets/api/email-marketing/overview.png)
+![Übersicht - Schritte zum Erstellen eines Ziels und Aktivieren von Zielgruppen](../assets/api/email-marketing/overview.png)
 
 Wenn Sie die Platform-Benutzeroberfläche bevorzugen, um eine Verbindung zu einem Ziel herzustellen und Daten zu aktivieren, finden Sie weitere Informationen in den Tutorials [Verbinden eines Ziels](../ui/connect-destination.md) und [Aktivieren von Zielgruppendaten für Batch-Profilexportziele](../ui/activate-batch-profile-destinations.md).
 
@@ -35,14 +35,14 @@ Wenn Sie die Platform-Benutzeroberfläche bevorzugen, um eine Verbindung zu eine
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] ermöglicht Ihnen das Erstellen von Segmenten und das Generieren von Zielgruppen in [!DNL Adobe Experience Platform] mit Ihren [!DNL Real-Time Customer Profile]-Daten.
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] ermöglicht Ihnen das Erstellen von Zielgruppen in [!DNL Adobe Experience Platform] von [!DNL Real-Time Customer Profile] Daten.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen sollten, um Daten für Batch-Ziele in Platform zu aktivieren.
 
 ### Sammeln erforderlicher Anmeldeinformationen {#gather-required-credentials}
 
-Um die Schritte in diesem Tutorial abzuschließen, benötigen Sie die folgenden Anmeldeinformationen, je nach Art der Ziele, mit denen Sie Segmente verbinden und aktivieren möchten.
+Um die Schritte in diesem Tutorial abzuschließen, sollten Sie die folgenden Anmeldeinformationen haben, je nach Zieltyp, mit dem Sie Zielgruppen verbinden und aktivieren.
 
 * Für [!DNL Amazon S3]-Verbindungen: `accessId`, `secretKey`
 * Für [!DNL Amazon S3]-Verbindungen zu [!DNL Adobe Campaign]: `accessId`, `secretKey`
@@ -85,7 +85,7 @@ Eine zugehörige Referenzdokumentation für alle API-Vorgänge finden Sie in die
 
 ![Übersicht über die Zielschritte – Schritt 1](../assets/api/batch-destination/step1.png)
 
-Als ersten Schritt sollten Sie entscheiden, für welches Ziel Daten aktiviert werden sollen. Führen Sie also zunächst einen Aufruf durch, um eine Liste der verfügbaren Ziele anzufordern, mit denen Sie eine Verbindung herstellen und Segmente aktivieren können. Führen Sie die folgende GET-Anfrage an den `connectionSpecs`-Endpunkt aus, um eine Liste der verfügbaren Ziele zu erhalten:
+Als ersten Schritt sollten Sie entscheiden, für welches Ziel Daten aktiviert werden sollen. Führen Sie zunächst einen Aufruf durch, um eine Liste der verfügbaren Ziele anzufordern, mit denen Sie eine Verbindung herstellen und Zielgruppen aktivieren können. Führen Sie die folgende GET-Anfrage an den `connectionSpecs`-Endpunkt aus, um eine Liste der verfügbaren Ziele zu erhalten:
 
 **API-Format**
 
@@ -107,7 +107,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Antwort**
 
-Eine erfolgreiche Antwort enthält eine Liste der verfügbaren Ziele und ihre eindeutigen Kennungen (`id`). Notieren Sie sich den Wert des Ziels, das Sie verwenden möchten, da Sie ihn in weiteren Schritten benötigen werden. Wenn Sie z. B. Segmente mit [!DNL Adobe Campaign] verbinden und bereitstellen möchten, suchen Sie in der Antwort nach folgendem Code-Ausschnitt:
+Eine erfolgreiche Antwort enthält eine Liste der verfügbaren Ziele und ihre eindeutigen Kennungen (`id`). Notieren Sie sich den Wert des Ziels, das Sie verwenden möchten, da Sie ihn in weiteren Schritten benötigen werden. Wenn Sie beispielsweise Zielgruppen verbinden und bereitstellen möchten, um [!DNL Adobe Campaign], suchen Sie in der Antwort nach dem folgenden Snippet:
 
 ```json
 {
@@ -886,8 +886,8 @@ curl -X POST \
 -H 'Content-Type: application/json' \
 -d  '{
    
-        "name": "Activate segments to Adobe Campaign",
-        "description": "This operation creates a dataflow which we will later use to activate segments to Adobe Campaign",
+        "name": "activate audiences to Adobe Campaign",
+        "description": "This operation creates a dataflow which we will later use to activate audiences to Adobe Campaign",
         "flowSpec": {
             "id": "{FLOW_SPEC_ID}",
             "version": "1.0"
@@ -921,7 +921,7 @@ curl -X POST \
 | `flowSpec.Id` | Verwenden Sie die Flussspezifikations-ID für das Batch-Ziel, mit dem Sie eine Verbindung herstellen möchten. Um die Flussspezifikations-ID abzurufen, führen Sie einen GET-Vorgang für den Endpunkt `flowspecs` durch, wie in der [API-Referenzdokumentation für Flussspezifikationen](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec) beschrieben. Suchen Sie in der Antwort nach `upsTo` und kopieren Sie die entsprechende ID des Batch-Ziels, mit dem Sie eine Verbindung herstellen möchten. Suchen Sie zum Beispiel für Adobe Campaign nach `upsToCampaign` und kopieren Sie den `id`-Parameter. |
 | `sourceConnectionIds` | Verwenden Sie die Quellverbindungs-ID, die Sie im Schritt [Verbinden mit Ihren Experience Platform-Daten](#connect-to-your-experience-platform-data) erhalten haben. |
 | `targetConnectionIds` | Verwenden Sie die Zielverbindungs-ID, die Sie im Schritt [Verbinden mit dem Batch-Ziel](#connect-to-batch-destination) erhalten haben. |
-| `transformations` | Im nächsten Schritt werden Sie diesen Abschnitt mit den zu aktivierenden Segmenten und Profilattributen füllen. |
+| `transformations` | Im nächsten Schritt werden Sie diesen Abschnitt mit den Zielgruppen und Profilattributen füllen, die aktiviert werden sollen. |
 
 Die nachstehende Tabelle enthält die Flussspezifikations-IDs für häufig verwendete Batch-Ziele:
 
@@ -933,7 +933,7 @@ Die nachstehende Tabelle enthält die Flussspezifikations-IDs für häufig verwe
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die Kennung (`id`) des neu erstellten Datenflusses und ein `etag` zurückgegeben. Notieren Sie sich beide Werte, da Sie sie im nächsten Schritt benötigen werden, um Segmente zu aktivieren und Datendateien zu exportieren.
+Bei einer erfolgreichen Antwort werden die Kennung (`id`) des neu erstellten Datenflusses und ein `etag` zurückgegeben. Notieren Sie sich beide Werte, da Sie sie im nächsten Schritt benötigen werden, um Zielgruppen zu aktivieren und Datendateien zu exportieren.
 
 ```json
 {
@@ -947,11 +947,11 @@ Bei einer erfolgreichen Antwort werden die Kennung (`id`) des neu erstellten Dat
 
 ![Übersicht über die Zielschritte – Schritt 5](../assets/api/batch-destination/step5.png)
 
-Nachdem Sie alle Verbindungen sowie den Datenfluss erstellt haben, können Sie jetzt Ihre Profildaten für die Zielplattform aktivieren. In diesem Schritt wählen Sie aus, welche Segmente und Profilattribute an das Ziel exportiert werden sollen.
+Nachdem Sie alle Verbindungen sowie den Datenfluss erstellt haben, können Sie jetzt Ihre Profildaten für die Zielplattform aktivieren. In diesem Schritt wählen Sie aus, welche Zielgruppen und Profilattribute an das Ziel exportiert werden sollen.
 
 Sie können auch das Dateibenennungsformat der exportierten Dateien bestimmen und festlegen, welche Attribute als [Deduplizierungsschlüssel](../ui/activate-batch-profile-destinations.md#mandatory-keys) oder [obligatorische Attribute](../ui/activate-batch-profile-destinations.md#mandatory-attributes) verwendet werden sollen. In diesem Schritt können Sie auch den Zeitplan für das Senden von Daten an das Ziel festlegen.
 
-Um Segmente für Ihr neues Ziel zu aktivieren, müssen Sie einen JSON-PATCH-Vorgang ausführen, ähnlich dem Beispiel unten. Sie können mehrere Profil- und Segmentattribute in einem Aufruf aktivieren. Weiterführende Informationen zu JSON PATCH finden Sie in der [RFC-Spezifikation](https://tools.ietf.org/html/rfc6902).
+Um Zielgruppen für Ihr neues Ziel zu aktivieren, müssen Sie einen JSON-PATCH-Vorgang ausführen, der dem unten stehenden Beispiel ähnelt. Sie können mehrere Zielgruppen und Profilattribute in einem Aufruf aktivieren. Weiterführende Informationen zu JSON PATCH finden Sie in der [RFC-Spezifikation](https://tools.ietf.org/html/rfc6902).
 
 **API-Format**
 
@@ -976,8 +976,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
         "value": {
             "type": "PLATFORM_SEGMENT",
             "value": {
-                "name": "Name of the segment that you are activating",
-                "description": "Description of the segment that you are activating",
+                "name": "Name of the audience that you are activating",
+                "description": "Description of the audience that you are activating",
                 "id": "{SEGMENT_ID}",
                 "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
                 "exportMode": "DAILY_FULL_EXPORT",
@@ -995,8 +995,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
         "value": {
             "type": "PLATFORM_SEGMENT",
             "value": {
-                "name": "Name of the segment that you are activating",
-                "description": "Description of the segment that you are activating",
+                "name": "Name of the audience that you are activating",
+                "description": "Description of the audience that you are activating",
                 "id": "{SEGMENT_ID}",
                 "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
                 "exportMode": "DAILY_FULL_EXPORT",
@@ -1026,26 +1026,26 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | Verwenden Sie in der URL die ID des Datenflusses, den Sie im vorherigen Schritt erstellt haben. |
 | `{ETAG}` | Rufen Sie die `{ETAG}` aus der Antwort im vorherigen Schritt, [Erstellen eines Datenflusses](#create-dataflow). Das Antwortformat im vorherigen Schritt hat Escape-Anführungszeichen. Sie müssen die nicht maskierten Werte in der Kopfzeile der Anfrage verwenden. Siehe Beispiel unten: <br> <ul><li>Reaktionsbeispiel: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Wert, der in Ihrer Anfrage verwendet werden soll: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung eines Datenflusses aktualisiert. |
-| `{SEGMENT_ID}` | Geben Sie ID des Segments an, das Sie an dieses Ziel exportieren möchten. Informationen zum Abrufen von Segment-IDs für die Segmente, die Sie aktivieren möchten, finden Sie unter [Abrufen einer Segmentdefinition](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in der Experience Platform-API-Referenz. |
+| `{SEGMENT_ID}` | Geben Sie die Zielgruppen-ID an, die Sie an dieses Ziel exportieren möchten. Informationen zum Abrufen der Zielgruppen-IDs für die Zielgruppen, die Sie aktivieren möchten, finden Sie unter [Abrufen einer Zielgruppendefinition](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in der Experience Platform-API-Referenz. |
 | `{PROFILE_ATTRIBUTE}` | Beispiel: `"person.lastName"` |
-| `op` | Der Operationsaufruf, der verwendet wird, um die Aktion zu definieren, die zur Aktualisierung des Datenflusses erforderlich ist. Operationen umfassen: `add`, `replace` und `remove`. Um ein Segment zu einem Datenfluss hinzuzufügen, verwenden Sie die Operation `add`. |
-| `path` | Definiert den Teil des Flusses, der aktualisiert werden soll. Verwenden Sie beim Hinzufügen eines Segments zu einem Datenfluss den im Beispiel angegebenen Pfad. |
+| `op` | Der Operationsaufruf, der verwendet wird, um die Aktion zu definieren, die zur Aktualisierung des Datenflusses erforderlich ist. Operationen umfassen: `add`, `replace` und `remove`. Um einem Datenfluss eine Zielgruppe hinzuzufügen, verwenden Sie die `add` Vorgang. |
+| `path` | Definiert den Teil des Flusses, der aktualisiert werden soll. Verwenden Sie beim Hinzufügen einer Zielgruppe zu einem Datenfluss den im Beispiel angegebenen Pfad. |
 | `value` | Der neue Wert, mit dem Sie Ihren Parameter aktualisieren möchten. |
-| `id` | Geben Sie die ID des Segments an, das Sie dem Ziel-Datenfluss hinzufügen. |
-| `name` | *Optional*. Geben Sie den Namen des Segments an, das Sie dem Ziel-Datenfluss hinzufügen möchten. Beachten Sie, dass dieses Feld nicht obligatorisch ist und Sie ein Segment erfolgreich zum Ziel-Datenfluss hinzufügen können, ohne dessen Namen anzugeben. |
-| `filenameTemplate` | Dieses Feld bestimmt das Dateinamenformat der Dateien, die an Ihr Ziel exportiert werden. <br> Die folgenden Optionen sind verfügbar: <br> <ul><li>`%DESTINATION_NAME%`: Obligatorisch. Die exportierten Dateien enthalten den Zielnamen.</li><li>`%SEGMENT_ID%`: Obligatorisch. Die exportierten Dateien enthalten die ID des exportierten Segments.</li><li>`%SEGMENT_NAME%`: Optional. Die exportierten Dateien enthalten den Namen des exportierten Segments.</li><li>`DATETIME(YYYYMMdd_HHmmss)` oder `%TIMESTAMP%`: Optional. Wählen Sie eine dieser beiden Optionen für Ihre Dateien aus, um den Zeitpunkt einzuschließen, zu dem sie von Experience Platform generiert werden.</li><li>`custom-text`: Optional. Ersetzen Sie diesen Platzhalter durch einen beliebigen benutzerdefinierten Text, den Sie am Ende Ihrer Dateinamen anhängen möchten.</li></ul> <br> Weitere Informationen zur Konfiguration von Dateinamen finden Sie im Abschnitt [Konfigurieren von Dateinamen](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) im Tutorial zur Aktivierung von Batch-Zielen. |
+| `id` | Geben Sie die ID der Audience an, die Sie dem Ziel-Datenfluss hinzufügen möchten. |
+| `name` | *Optional*. Geben Sie den Namen der Audience an, die Sie dem Ziel-Datenfluss hinzufügen möchten. Beachten Sie, dass dieses Feld nicht erforderlich ist und Sie dem Ziel-Datenfluss erfolgreich eine Zielgruppe hinzufügen können, ohne dessen Namen anzugeben. |
+| `filenameTemplate` | Dieses Feld bestimmt das Dateinamenformat der Dateien, die an Ihr Ziel exportiert werden. <br> Die folgenden Optionen sind verfügbar: <br> <ul><li>`%DESTINATION_NAME%`: Obligatorisch. Die exportierten Dateien enthalten den Zielnamen.</li><li>`%SEGMENT_ID%`: Obligatorisch. Die exportierten Dateien enthalten die Kennung der exportierten Audience.</li><li>`%SEGMENT_NAME%`: Optional. Die exportierten Dateien enthalten den Namen der exportierten Audience.</li><li>`DATETIME(YYYYMMdd_HHmmss)` oder `%TIMESTAMP%`: Optional. Wählen Sie eine dieser beiden Optionen für Ihre Dateien aus, um den Zeitpunkt einzuschließen, zu dem sie von Experience Platform generiert werden.</li><li>`custom-text`: Optional. Ersetzen Sie diesen Platzhalter durch einen beliebigen benutzerdefinierten Text, den Sie am Ende Ihrer Dateinamen anhängen möchten.</li></ul> <br> Weitere Informationen zur Konfiguration von Dateinamen finden Sie im Abschnitt [Konfigurieren von Dateinamen](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) im Tutorial zur Aktivierung von Batch-Zielen. |
 | `exportMode` | Obligatorisch. Wählen Sie `"DAILY_FULL_EXPORT"` oder `"FIRST_FULL_THEN_INCREMENTAL"` aus. Weitere Informationen zu den beiden Optionen finden Sie unter [Exportieren von vollständigen Dateien](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) und [Exportieren von inkrementellen Dateien](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) im Tutorial zur Aktivierung von Batch-Zielen. |
-| `startDate` | Wählen Sie das Datum aus, an dem das Segment Profile in Ihr Ziel exportieren soll. |
+| `startDate` | Wählen Sie das Datum aus, an dem die Audience mit dem Export von Profilen in Ihr Ziel beginnen soll. |
 | `frequency` | Obligatorisch. <br> <ul><li>Für den Exportmodus `"DAILY_FULL_EXPORT"` können Sie `ONCE` oder `DAILY` wählen.</li><li>Für den Exportmodus `"FIRST_FULL_THEN_INCREMENTAL"` können Sie `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"` wählen.</li></ul> |
 | `triggerType` | Für *Batch-Ziele* nur. Dieses Feld ist nur erforderlich, wenn Sie die `"DAILY_FULL_EXPORT"` -Modus im `frequency` auswählen. <br> Obligatorisch. <br> <ul><li>Auswählen `"AFTER_SEGMENT_EVAL"` , damit der Aktivierungsauftrag unmittelbar nach Abschluss des täglichen Platform-Batch-Segmentierungsauftrags ausgeführt wird. Dadurch wird sichergestellt, dass bei der Ausführung des Aktivierungsvorgangs die aktuellen Profile nach Ihrem Ziel exportiert werden.</li><li>Auswählen `"SCHEDULED"` , damit der Aktivierungsauftrag zu einem festen Zeitpunkt ausgeführt wird. Dadurch wird sichergestellt, dass Experience Platform-Profildaten jeden Tag gleichzeitig exportiert werden. Je nachdem, ob der Batch-Segmentierungsauftrag vor dem Beginn des Aktivierungsvorgangs abgeschlossen wurde, sind die zu exportierenden  jedoch möglicherweise nicht die aktuellsten. Bei Auswahl dieser Option müssen Sie auch eine `startTime` um anzugeben, zu welchem Zeitpunkt in UTC die täglichen Exporte stattfinden sollen.</li></ul> |
-| `endDate` | Für *Batch-Ziele* nur. Dieses Feld ist nur erforderlich, wenn ein Segment zu einem Datenfluss in Batch-Dateiexport-Zielen wie Amazon S3, SFTP oder Azure Blob hinzugefügt wird. <br> Nicht anwendbar bei der Auswahl von `"exportMode":"DAILY_FULL_EXPORT"` und `"frequency":"ONCE"`. <br> Legt das Datum fest, ab dem Segmentmitglieder nicht mehr in das Ziel exportiert werden. |
-| `startTime` | Für *Batch-Ziele* nur. Dieses Feld ist nur erforderlich, wenn ein Segment zu einem Datenfluss in Batch-Dateiexport-Zielen wie Amazon S3, SFTP oder Azure Blob hinzugefügt wird. <br> Obligatorisch. Wählen Sie den Zeitpunkt aus, zu dem Dateien, die Mitglieder des Segments enthalten, generiert und an Ihr Ziel exportiert werden sollen. |
+| `endDate` | Für *Batch-Ziele* nur. Dieses Feld ist nur erforderlich, wenn einem Datenfluss in Batch-Dateiexport-Zielen wie Amazon S3, SFTP oder Azure Blob eine Zielgruppe hinzugefügt wird. <br> Nicht anwendbar bei der Auswahl von `"exportMode":"DAILY_FULL_EXPORT"` und `"frequency":"ONCE"`. <br> Legt das Datum fest, an dem Audience-Mitglieder nicht mehr in das Ziel exportiert werden. |
+| `startTime` | Für *Batch-Ziele* nur. Dieses Feld ist nur erforderlich, wenn einem Datenfluss in Batch-Dateiexport-Zielen wie Amazon S3, SFTP oder Azure Blob eine Zielgruppe hinzugefügt wird. <br> Obligatorisch. Wählen Sie den Zeitpunkt aus, zu dem Dateien mit Mitgliedern der Audience generiert und an Ihr Ziel exportiert werden sollen. |
 
 {style="table-layout:auto"}
 
 >[!TIP]
 >
-> Siehe [Komponenten eines Segments in einem Datenfluss aktualisieren](/help/destinations/api/update-destination-dataflows.md#update-segment) um zu erfahren, wie Sie verschiedene Komponenten (Dateinamenvorlage, Exportzeit usw.) exportierter Segmente aktualisieren.
+> Siehe [Komponenten einer Zielgruppe in einem Datenfluss aktualisieren](/help/destinations/api/update-destination-dataflows.md#update-segment) um zu erfahren, wie Sie verschiedene Komponenten (Dateinamenvorlage, Exportzeit usw.) exportierter Zielgruppen aktualisieren.
 
 **Antwort**
 
@@ -1055,7 +1055,7 @@ Suchen Sie nach einer „202 Accepted“-Antwort. Es wird kein Antworttext zurü
 
 ![Übersicht über die Zielschritte – Schritt 6](../assets/api/batch-destination/step6.png)
 
-Als letzten Schritt im Tutorial sollten Sie überprüfen, ob die Segmente und Profilattribute dem Datenfluss korrekt zugeordnet wurden.
+Als letzten Schritt im Tutorial sollten Sie überprüfen, ob die Zielgruppen und Profilattribute dem Datenfluss korrekt zugeordnet wurden.
 
 Führen Sie zur Validierung die folgende GET-Anfrage aus:
 
@@ -1082,7 +1082,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **Antwort**
 
-Die zurückgegebene Antwort sollte im `transformations`-Parameter die Segmente und Profilattribute enthalten, die Sie im vorherigen Schritt gesendet haben. Ein Beispielparameter `transformations` in der Antwort könnte wie folgt aussehen:
+Die zurückgegebene Antwort sollte im `transformations` Parameter: die Zielgruppen und Profilattribute, die Sie im vorherigen Schritt gesendet haben. Ein Beispielparameter `transformations` in der Antwort könnte wie folgt aussehen:
 
 ```json
 "transformations":[

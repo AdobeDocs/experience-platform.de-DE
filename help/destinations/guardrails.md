@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: Erfahren Sie mehr über die Standardnutzung und die Ratenbeschränkungen für die Datenaktivierung.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '1177'
-ht-degree: 98%
+ht-degree: 83%
 
 ---
 
@@ -22,7 +22,6 @@ Auf dieser Seite finden Sie standardmäßige Nutzungs- und Ratenbeschränkungen 
 >* Die meisten Kunden überschreiten diese Standardbeschränkungen nicht. Wenden Sie sich an Ihren Kundenbetreuer, wenn Sie mehr über benutzerdefinierte Beschränkungen erfahren möchten.
 >* Die in diesem Dokument dargelegten Beschränkungen werden ständig verbessert. Achten Sie regelmäßig auf Updates.
 >* Je nach den individuellen Downstream-Beschränkungen können einige Ziele engere Leitplanken als die auf dieser Seite dokumentierten haben. Stellen Sie sicher, dass Sie auch die Seite [Katalog](/help/destinations/catalog/overview.md) des Ziels, zu dem Sie Daten verbinden und aktivieren, überprüfen.
-
 
 ## Arten von Beschränkungen {#limit-types}
 
@@ -42,7 +41,7 @@ Die folgenden Leitplanken gelten generell für die Aktivierung durch [alle Zielt
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
-| Maximale Anzahl von Segmenten zu einem einzelnen Ziel | 250 | Soft | Es wird empfohlen, maximal 250 Segmente einem einzelnen Ziel in einem Datenfluss zuzuordnen. <br><br> Wenn Sie mehr als 250 Segmente für ein Ziel aktivieren müssen, haben Sie folgende Möglichkeiten: <ul><li> Heben Sie die Zuordnung der Segmente auf, die Sie nicht mehr aktivieren wollen, oder</li><li>erstellen Sie einen neuen Datenfluss zum gewünschten Ziel und ordnen Sie Segmente diesem neuen Datenfluss zu.</li></ul> <br> Beachten Sie, dass Sie bei einigen Zielen auf weniger als 250 dem Ziel zugeordnete Segmente beschränkt sein können. Diese Ziele werden weiter unten auf der Seite in den jeweiligen Abschnitten aufgeführt. |
+| Maximale Anzahl an Zielgruppen zu einem einzelnen Ziel | 250 | Soft | Es wird empfohlen, maximal 250 Zielgruppen einem einzelnen Ziel in einem Datenfluss zuzuordnen. <br><br> Wenn Sie mehr als 250 Zielgruppen für ein Ziel aktivieren müssen, haben Sie folgende Möglichkeiten: <ul><li> die Zuordnung von Zielgruppen aufheben, die Sie nicht mehr aktivieren möchten, oder</li><li>Erstellen Sie einen neuen Datenfluss zum gewünschten Ziel und ordnen Sie Zielgruppen diesem neuen Datenfluss zu.</li></ul> <br> Beachten Sie, dass Sie bei einigen Zielen auf weniger als 250 Zielgruppen beschränkt sein können, die dem Ziel zugeordnet sind. Diese Ziele werden weiter unten auf der Seite in den jeweiligen Abschnitten aufgeführt. |
 | Maximale Anzahl von Zielen | 100 | Soft | Es wird empfohlen, maximal 100 Ziele zu erstellen, mit denen Sie *pro Sandbox* Daten verbinden und aktivieren können. [Edge-Personalisierungsziele (benutzerdefinierte Personalisierung)](#edge-destinations-activation) können maximal 10 der 100 empfohlenen Ziele ausmachen. |
 | Maximale Anzahl von Attributen, die einem Ziel zugeordnet sind | 50 | Soft | Bei mehreren Zielen und Zieltypen können Sie Profilattribute und Identitäten auswählen, die dem Export zugeordnet werden sollen. Für eine optimale Leistung sollten maximal 50 Attribute in einem Datenfluss einem Ziel zugeordnet werden. |
 | Art der für Ziele aktivierten Daten | Profildaten, einschließlich Identitäten und Identitätszuordnung | Hard | Derzeit ist es nur möglich, *Profilsatzattribute* zu Zielen zu exportieren. XDM-Attribute, die Ereignisdaten beschreiben, werden derzeit nicht für den Export unterstützt. |
@@ -67,7 +66,7 @@ Die folgenden Leitplanken gelten für die Aktivierung über [Batch-Ziele (dateib
 | Leitplanke | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
 | Aktivierungshäufigkeit | Ein vollständiger Export pro Tag oder häufigere inkrementelle Exporte alle 3, 6, 8 oder 12 Stunden. | Hard | Lesen Sie die Dokumentationsabschnitte [Vollständige Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) und [Inkrementelle Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) für weitere Informationen über die Häufigkeitsabstufungen für Batch-Exporte. |
-| Maximale Anzahl von Segmenten, die zu einer bestimmten Stunde exportiert werden können | 100 | Soft | Es wird empfohlen, maximal 100 Segmente zu Batch-Zieldatenströmen hinzuzufügen. |
+| Maximale Anzahl an Zielgruppen, die zu einer bestimmten Stunde exportiert werden können | 100 | Soft | Es wird empfohlen, den Batch-Ziel-Datenflüssen maximal 100 Zielgruppen hinzuzufügen. |
 | Maximale Anzahl der zu aktivierenden Zeilen (Datensätze) pro Datei | 5 Millionen | Hard | Adobe Experience Platform teilt die exportierten Dateien automatisch mit 5 Millionen Datensätzen (Zeilen) pro Datei auf. Jede Zeile stellt ein Profil dar. Bei aufgeteilten Dateien wird eine Nummer an den Namen angehängt, die anzeigt, dass die Datei Teil eines größeren Exports ist, z. B. `filename.csv`, `filename_2.csv`, `filename_3.csv`. Weitere Informationen finden Sie im [Planungsabschnitt](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) des Tutorials zum Aktivieren von Batch-Zielen. |
 
 {style="table-layout:auto"}
@@ -78,8 +77,8 @@ Die folgenden Leitplanken gelten für die Methode der [Ad-hoc-Aktivierung](/help
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
-| Aktivierte Segmente pro Ad-hoc-Aktivierungsauftrag | 80 | Hard | Derzeit kann jeder Ad-hoc-Aktivierungsauftrag bis zu 80 Segmente aktivieren. Der Versuch, mehr als 80 Segmente pro Auftrag zu aktivieren, führt zum Fehlschlagen des Auftrags. Dieses Verhalten kann sich in zukünftigen Versionen ändern. |
-| Gleichzeitige Ad-hoc-Aktivierungsaufträge pro Segment | 1 | Hard | Führen Sie nicht mehr als einen gleichzeitigen Ad-hoc-Aktivierungsauftrag pro Segment aus. |
+| Zielgruppen, die pro Ad-hoc-Aktivierungsauftrag aktiviert werden | 80 | Hard | Derzeit kann jeder Ad-hoc-Aktivierungsauftrag bis zu 80 Zielgruppen aktivieren. Der Versuch, mehr als 80 Zielgruppen pro Auftrag zu aktivieren, führt dazu, dass der Auftrag fehlschlägt. Dieses Verhalten kann sich in zukünftigen Versionen ändern. |
+| Gleichzeitige Ad-hoc-Aktivierungsaufträge pro Zielgruppe | 1 | Hard | Führen Sie nicht mehr als einen gleichzeitigen Ad-hoc-Aktivierungsauftrag pro Zielgruppe aus. |
 
 {style="table-layout:auto"}
 
@@ -91,7 +90,7 @@ Die folgenden Leitplanken gelten für die Aktivierung durch [Edge-Personalisieru
 | --- | --- | --- | --- |
 | Maximale Anzahl an Zielen der [benutzerdefinierten Personalisierung](/help/destinations/catalog/personalization/custom-personalization.md) | 10 | Soft | Sie können Datenflüsse zu 10 benutzerdefinierten Personalisierungszielen pro Sandbox einrichten. |
 | Maximale Anzahl von Attributen, die einem Personalisierungsziel pro Sandbox zugeordnet sind | 30 | Hard | Pro Sandbox können maximal 30 Attribute in einem Datenfluss einem Personalisierungsziel zugeordnet werden. |
-| Maximale Anzahl von Segmenten, die einem einzelnen [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)-Ziel zugeordnet sind | 50 | Soft | Sie können maximal 50 Segmente in einem Aktivierungsfluss für ein einzelnes Adobe Target-Ziel aktivieren. |
+| Maximale Anzahl von Zielgruppen, die einer einzelnen [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) Ziel | 50 | Soft | Sie können maximal 50 Zielgruppen in einem Aktivierungsfluss zu einem einzelnen Adobe Target-Ziel aktivieren. |
 
 {style="table-layout:auto"}
 

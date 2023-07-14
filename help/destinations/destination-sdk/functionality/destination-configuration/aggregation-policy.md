@@ -1,10 +1,10 @@
 ---
 description: Erfahren Sie, wie Sie eine Aggregationsrichtlinie einrichten, um zu bestimmen, wie HTTP-Anfragen an Ihr Ziel gruppiert und in Batches eingesetzt werden sollen.
 title: Aggregationsrichtlinie
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
-workflow-type: ht
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+workflow-type: tm+mt
 source-wordcount: '996'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -112,8 +112,8 @@ Die folgende Beispielkonfiguration zeigt eine konfigurierbare Aggregationskonfig
 | `configurableAggregation.maxBatchAgeInSecs` | Ganzzahl | Zusammen mit `maxNumEventsInBatch` bestimmt dieser Parameter, wie lange Experience Platform warten soll, bis ein API-Aufruf an Ihren Endpunkt gesendet wird. <ul><li>Mindestwert (Sekunden): 1800</li><li>Höchstwert (Sekunden): 3600</li></ul> Wenn Sie beispielsweise den Maximalwert für beide Parameter verwenden, wartet Experience Platform entweder 3.600 Sekunden ODER, bis 10000 qualifizierte Profile vorhanden sind, bevor der API-Aufruf erfolgt (je nachdem, was früher eintritt). |
 | `configurableAggregation.maxNumEventsInBatch` | Ganzzahl | Zusammen mit `maxBatchAgeInSecs` bestimmt dieser Parameter, wie viele qualifizierte Profile in einem API-Aufruf aggregiert werden sollen. <ul><li>Mindestwert: 1000</li><li>Höchstwert: 10.000</li></ul> Wenn Sie beispielsweise den Maximalwert für beide Parameter verwenden, wartet Experience Platform entweder 3.600 Sekunden ODER, bis 10000 qualifizierte Profile vorhanden sind, bevor der API-Aufruf erfolgt (je nachdem, was früher eintritt). |
 | `configurableAggregation.aggregationKey` | – | Ermöglicht die Aggregation der dem Ziel zugeordneten exportierten Profile anhand der folgenden Parameter. |
-| `configurableAggregation.aggregationKey.includeSegmentId` | Boolesch | Legen Sie diesen Parameter auf `true` fest, wenn Sie Profile gruppieren möchten, die nach Segment-ID in Ihr Ziel exportiert wurden. |
-| `configurableAggregation.aggregationKey.includeSegmentStatus` | Boolesch | Sie müssen sowohl diesen Parameter als auch den Parameter `includeSegmentId` auf `true` festlegen, wenn Sie die an Ihr Ziel exportierten Profile nach Segment-ID und Segmentstatus gruppieren möchten. |
+| `configurableAggregation.aggregationKey.includeSegmentId` | Boolesch | Legen Sie diesen Parameter auf `true` , wenn Sie Profile gruppieren möchten, die nach Zielgruppen-ID in Ihr Ziel exportiert wurden. |
+| `configurableAggregation.aggregationKey.includeSegmentStatus` | Boolesch | Legen Sie sowohl diesen Parameter als auch fest. `includeSegmentId` nach `true`, wenn Sie Profile gruppieren möchten, die nach Zielgruppen-ID und Zielgruppenstatus in Ihr Ziel exportiert wurden. |
 | `configurableAggregation.aggregationKey.includeIdentity` | Boolesch | Legen Sie diesen Parameter auf `true` fest, wenn Sie Profile gruppieren möchten, die nach Identity-Namespace zu Ihrem Ziel exportiert wurden. |
 | `configurableAggregation.aggregationKey.oneIdentityPerGroup` | Boolesch | Legen Sie diesen Parameter auf `true` fest, um anzugeben, ob die exportierten Profile in Gruppen einer einzigen Identität zusammengefasst werden sollen (GAID, IDFA, Telefonnummern, E-Mail usw.). |
 | `configurableAggregation.aggregationKey.groups` | Array | Erstellen Sie Listen mit Identitätsgruppen, wenn Sie Profile gruppieren möchten, die nach Gruppen von Identity-Namespaces in Ihr Ziel exportiert wurden. Beispielsweise können Sie Profile, die die Kennungen IDFA und GAID für Mobilgeräte enthalten, mithilfe der im obigen Beispiel beschriebenen Konfiguration zu einem Aufruf an Ihr Ziel und E-Mails an ein anderes kombinieren. |

@@ -3,10 +3,10 @@ title: (API) Oracle Eloqua-Verbindung
 description: Mit dem (API) Oracle Eloqua-Ziel können Sie Ihre Kontodaten exportieren und innerhalb von Oracle Eloqua für Ihre Geschäftsanforderungen aktivieren.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: 3d54b89ab5f956710ad595a0e8d3567e1e773d0a
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '2125'
-ht-degree: 32%
+source-wordcount: '2124'
+ht-degree: 29%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 32%
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) ermöglicht es Marketing-Experten, Kampagnen zu planen und auszuführen und gleichzeitig ein personalisiertes Kundenerlebnis für ihre potenziellen Kunden bereitzustellen. Dank integrierter Lead-Verwaltung und einfacher Kampagnenerstellung können Marketingexperten die richtige Zielgruppe zum richtigen Zeitpunkt auf der Journey ansprechen und elegant skalieren, um Zielgruppen kanalübergreifend zu erreichen, einschließlich E-Mail, Display-Suche, Video und Mobil. Vertriebsteams können mehr Angebote schneller schließen und so den Marketing-ROI durch Echtzeiteinblicke steigern.
 
-Diese [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt die [Kontakt aktualisieren](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) Vorgang von [!DNL Oracle Eloqua] REST-API, mit der Sie **Identitäten aktualisieren** innerhalb eines Segments in [!DNL Oracle Eloqua].
+Diese [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt die [Kontakt aktualisieren](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) Vorgang von [!DNL Oracle Eloqua] REST-API, mit der Sie **Identitäten aktualisieren** innerhalb einer Zielgruppe in [!DNL Oracle Eloqua].
 
 [!DNL Oracle Eloqua] uses [Grundlegende Authentifizierung](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) zur Kommunikation mit dem [!DNL Oracle Eloqua] REST-API. Anweisungen zur Authentifizierung bei Ihrer [!DNL Oracle Eloqua]-Instanz sehen Sie weiter unten im Abschnitt [Authentifizieren bei Ziel](#authenticate).
 
 ## Anwendungsbeispiele {#use-cases}
 
-Die Marketingabteilung einer Online-Plattform möchte eine E-Mail-basierte Marketing-Kampagne an eine kuratierte Zielgruppe von Leads senden. Das Marketing-Team der Plattform kann vorhandene Lead-Informationen über Adobe Experience Platform aktualisieren, Segmente aus eigenen Offline-Daten erstellen und diese Segmente an senden [!DNL Oracle Eloqua], die dann zum Versand der E-Mail-Adresse der Marketing-Kampagne verwendet werden kann.
+Die Marketingabteilung einer Online-Plattform möchte eine E-Mail-basierte Marketing-Kampagne an eine kuratierte Zielgruppe von Leads senden. Das Marketing-Team der Plattform kann vorhandene Lead-Informationen über Adobe Experience Platform aktualisieren, Zielgruppen aus eigenen Offline-Daten erstellen und diese Zielgruppen an senden [!DNL Oracle Eloqua], die dann zum Versand der E-Mail-Adresse der Marketing-Kampagne verwendet werden kann.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -29,7 +29,7 @@ Die Marketingabteilung einer Online-Plattform möchte eine E-Mail-basierte Marke
 
 Vor der Aktivierung der Daten für das [!DNL Oracle Eloqua]-Ziel müssen Sie über ein [Schema](/help/xdm/schema/composition.md), einen [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=de) und [Segmente](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=de) verfügen, die in [!DNL Experience Platform] erstellt wurden.
 
-Weitere Informationen finden Sie in der Dokumentation zur Experience Platform für [Feldergruppe Segmentzugehörigkeitsdetails](/help/xdm/field-groups/profile/segmentation.md) , wenn Sie Anleitungen zum Segmentstatus benötigen.
+Weitere Informationen finden Sie in der Dokumentation zur Experience Platform für [Feldergruppe Zielgruppenzugehörigkeitsdetails](/help/xdm/field-groups/profile/segmentation.md) wenn Sie Anleitungen zum Zielgruppenstatus benötigen.
 
 ### Voraussetzungen für [!DNL Oracle Eloqua] {#prerequisites-destination}
 
@@ -54,11 +54,10 @@ Siehe Abschnitt [Anmelden bei [!DNL Oracle Eloqua]](https://docs.oracle.com/en/c
 
 >[!NOTE]
 >
->* [!DNL Oracle Eloqua] Benutzerdefinierte Kontaktfelder werden automatisch unter Verwendung der Namen der Segmente erstellt, die während der **[!UICONTROL Segmente auswählen]** Schritt.
-
+>* [!DNL Oracle Eloqua] Benutzerdefinierte Kontaktfelder werden automatisch unter Verwendung der Namen der Zielgruppen erstellt, die während der **[!UICONTROL Segmente auswählen]** Schritt.
 
 * [!DNL Oracle Eloqua] hat eine maximale Anzahl von 250 benutzerdefinierten Kontaktfeldern.
-* Stellen Sie vor dem Export neuer Segmente sicher, dass die Anzahl der Platform-Segmente und die Anzahl der vorhandenen Segmente in [!DNL Oracle Eloqua] diese Grenze nicht überschreiten.
+* Stellen Sie vor dem Export neuer Zielgruppen sicher, dass die Anzahl der Platform-Zielgruppen und die Anzahl der vorhandenen Zielgruppen in [!DNL Oracle Eloqua] diese Grenze nicht überschreiten.
 * Wenn diese Grenze überschritten wird, tritt bei der Experience Platform ein Fehler auf. Dies liegt daran, dass die Variable [!DNL Oracle Eloqua] Die API kann die Anfrage nicht validieren und antwortet mit einem - *400: Überprüfungsfehler* - Fehlermeldung, die das Problem beschreibt.
 * Wenn Sie die oben angegebene Grenze erreicht haben, müssen Sie vorhandene Zuordnungen aus Ihrem Ziel entfernen und die entsprechenden benutzerdefinierten Kontaktfelder in Ihrem [!DNL Oracle Eloqua] , bevor Sie weitere Segmente exportieren können.
 
@@ -78,8 +77,8 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | <ul><li>Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern *(z. B.: E-Mail-Adresse, Telefonnummer, Nachname)*, entsprechend Ihrer Feldzuordnung.</li><li> Für jedes ausgewählte Segment in Platform muss die entsprechende [!DNL Oracle Eloqua] Segmentstatus mit dem Segmentstatus von Platform aktualisiert.</li></ul> |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | <ul><li>Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Exporttyp | **[!UICONTROL Profilbasiert]** | <ul><li>Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern *(z. B.: E-Mail-Adresse, Telefonnummer, Nachname)*, entsprechend Ihrer Feldzuordnung.</li><li> Für jede ausgewählte Zielgruppe in Platform wird die entsprechende [!DNL Oracle Eloqua] Der Segmentstatus wird mit dem Zielgruppenstatus von Platform aktualisiert.</li></ul> |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | <ul><li>Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform basierend auf der Zielgruppenbewertung aktualisiert wird, sendet der Connector das Update an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -128,15 +127,15 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
 
-## Aktivieren von Segmenten für dieses Ziel {#activate}
+## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 >
->Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Zugriffssteuerung – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
+Lesen [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppenexport-Ziele](/help/destinations/ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
 
 ### Zuordnungsüberlegungen und Beispiel {#mapping-considerations-example}
 
@@ -150,7 +149,7 @@ So ordnen Sie Ihre XDM-Felder dem [!DNL Oracle Eloqua] Führen Sie die folgenden
    * Wiederholen Sie diese Schritte, um sowohl die erforderlichen als auch alle gewünschten Attributzuordnungen zwischen Ihrem XDM-Profilschema und [!DNL Oracle Eloqua]: | Quellfeld | Zielfeld | Obligatorisch | |—|—|—| |`IdentityMap: Eid`|`Identity: EloquaId`| Ja | |`xdm: personalEmail.address`|`Attribute: emailAddress`| Ja | |`xdm: personName.firstName`|`Attribute: firstName`| | |`xdm: personName.lastName`|`Attribute: lastName`| | |`xdm: workAddress.street1`|`Attribute: address1`| | |`xdm: workAddress.street2`|`Attribute: address2`| | |`xdm: workAddress.street3`|`Attribute: address3`| | |`xdm: workAddress.postalCode`|`Attribute: postalCode`| | |`xdm: workAddress.country`|`Attribute: country`| | |`xdm: workAddress.city`|`Attribute: city`| |
 
    * Nachfolgend finden Sie ein Beispiel mit den oben aufgeführten Zuordnungen:
-      ![Screenshot der Platform-Benutzeroberfläche mit Attributzuordnungen.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
+     ![Screenshot der Platform-Benutzeroberfläche mit Attributzuordnungen.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
 
 >[!IMPORTANT]
 >
@@ -178,22 +177,22 @@ Wenn Sie mit der Bereitstellung der Zuordnungen für Ihre Zielverbindung fertig 
 
 >[!NOTE]
 >
->Bei jeder Ausführung fügt das Ziel den ausgewählten Segmentnamen automatisch eine eindeutige Kennung hinzu, wenn die Kontaktinformationen an [!DNL Oracle Eloqua]. Dadurch wird sichergestellt, dass sich die Kontaktfeldnamen, die Ihren Segmentnamen entsprechen, nicht überschneiden. Siehe Abschnitt [Datenexport überprüfen](#exported-data) Screenshot-Beispiel eines Abschnitts [!DNL Oracle Eloqua] Kontaktinformationen-Seite mit benutzerdefiniertem Kontaktfeld, das mithilfe der Segmentnamen erstellt wurde.
+>Bei jeder Ausführung fügt das Ziel den ausgewählten Zielgruppennamen automatisch eine eindeutige Kennung hinzu, wenn die Kontaktinformationen an [!DNL Oracle Eloqua]. Dadurch wird sichergestellt, dass sich die Kontaktfeldnamen, die Ihren Zielgruppennamen entsprechen, nicht überschneiden. Siehe Abschnitt [Datenexport überprüfen](#exported-data) Screenshot-Beispiel eines Abschnitts [!DNL Oracle Eloqua] Kontaktinformationen-Seite mit benutzerdefiniertem Kontaktfeld, das mithilfe der Zielgruppennamen erstellt wurde.
 
 ## Überprüfen des Datenexports {#exported-data}
 
 Gehen Sie wie folgt vor, um zu überprüfen, ob Sie das Ziel korrekt eingerichtet haben:
 
 1. Auswählen **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]** und navigieren Sie zur Liste der Ziele.
-1. Wählen Sie als Nächstes das Ziel aus und wechseln Sie zur **[!UICONTROL Aktivierungsdaten]** und wählen Sie einen Segmentnamen aus.
+1. Wählen Sie als Nächstes das Ziel aus und wechseln Sie zur **[!UICONTROL Aktivierungsdaten]** und wählen Sie einen Zielgruppennamen aus.
    ![Beispiel-Screenshot der Platform-Benutzeroberfläche mit Daten zur Aktivierung von Zielen.](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png)
 
-1. Überwachen Sie die Segmentzusammenfassung und stellen Sie sicher, dass die Anzahl der Profile der Anzahl innerhalb des Segments entspricht.
+1. Überwachen Sie die Zielgruppenzusammenfassung und stellen Sie sicher, dass die Anzahl der Profile der Anzahl innerhalb des Segments entspricht.
    ![Beispiel-Screenshot der Platform-Benutzeroberfläche mit Segment.](../../assets/catalog/email-marketing/oracle-eloqua-api/segment.png)
 
-1. Melden Sie sich bei der [!DNL Oracle Eloqua] Website und navigieren Sie dann zur **[!UICONTROL Kontaktübersicht]** -Seite, um zu überprüfen, ob die Profile aus dem Segment hinzugefügt wurden. Um den Segmentstatus anzuzeigen, führen Sie einen Drilldown in eine **[!UICONTROL Kontaktdetails]** und überprüfen Sie, ob das Kontaktfeld mit dem ausgewählten Segmentnamen als Präfix erstellt wurde.
+1. Melden Sie sich bei der [!DNL Oracle Eloqua] Website und navigieren Sie dann zur **[!UICONTROL Kontaktübersicht]** -Seite, um zu überprüfen, ob die Profile aus der Audience hinzugefügt wurden. Um den Zielgruppenstatus anzuzeigen, führen Sie einen Drilldown in eine **[!UICONTROL Kontaktdetails]** und überprüfen Sie, ob das Kontaktfeld mit dem ausgewählten Zielgruppennamen als Präfix erstellt wurde.
 
-![Oracle Eloqua UI-Screenshot mit der Seite &quot;Kontaktdetails&quot;mit dem benutzerdefinierten Kontaktfeld, das mit dem Segmentnamen erstellt wurde.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
+![Oracle Eloqua UI-Screenshot mit der Seite &quot;Kontaktdetails&quot;mit dem benutzerdefinierten Kontaktfeld, das mit dem Zielgruppennamen erstellt wurde.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

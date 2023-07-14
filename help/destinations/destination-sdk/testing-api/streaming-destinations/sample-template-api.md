@@ -2,8 +2,8 @@
 description: Erfahren Sie, wie Sie mit der Zieltest-API eine Test-Nachrichtenumwandlungsvorlage für Ihr Ziel generieren.
 title: Erstellen einer Beispiel-Nachrichtenumwandlungsvorlage
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
-source-git-commit: adf75720f3e13c066b5c244d6749dd0939865a6f
-workflow-type: ht
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+workflow-type: tm+mt
 source-wordcount: '375'
 ht-degree: 100%
 
@@ -82,7 +82,7 @@ Wenn die von Ihnen angegebene Ziel-ID einer Zielkonfiguration mit [Aggregation n
         {% endfor %}
         ],
         "remove": [
-        {#- Alternative syntax for filtering segments by status: -#}
+        {#- Alternative syntax for filtering audiences by status: -#}
         {% for segment in removedSegments(input.profile.segmentMembership.ups) %}
             "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
         {% endfor %}
@@ -118,7 +118,7 @@ Wenn die von Ihnen angegebene Ziel-ID einer Ziel-Server-Vorlage mit [konfigurier
                 {% endfor %}
                 ],
                 "remove": [
-                {#- Alternative syntax for filtering segments by status: -#}
+                {#- Alternative syntax for filtering audiences by status: -#}
                 {% for segment in removedSegments(profile.segmentMembership.ups) %}
                     "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
                 {% endfor %}

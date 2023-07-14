@@ -3,10 +3,10 @@ title: (Beta) Exportieren von Datensätzen an Cloud-Speicher-Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Datensätze aus Adobe Experience Platform in Ihren bevorzugten Cloud-Speicher exportieren.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: d9b59b8a331511e87171f3b9d1163d452ba469be
+source-git-commit: 6627953aba4f1cd665c3d5c4bc8711c48064374f
 workflow-type: tm+mt
 source-wordcount: '1425'
-ht-degree: 88%
+ht-degree: 84%
 
 ---
 
@@ -35,14 +35,14 @@ Derzeit können Sie Datensätze zu den im Screenshot hervorgehobenen und unten a
 * [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-## Wann Segmente zu aktivieren und wann Datensätze zu exportieren sind {#when-to-activate-segments-or-activate-datasets}
+## Wann Zielgruppen aktiviert oder Datensätze exportiert werden {#when-to-activate-audiences-or-activate-datasets}
 
-Einige dateibasierte Ziele im Experience Platform-Katalog unterstützen sowohl die Segmentaktivierung als auch den Datensatzexport.
+Einige dateibasierte Ziele im Experience Platform-Katalog unterstützen sowohl die Aktivierung der Zielgruppe als auch den Export von Datensätzen.
 
-* Erwägen Sie die Aktivierung von Segmenten, wenn Sie Ihre Daten in Profilen gruppiert nach Zielgruppeninteressen oder Qualifikationen strukturieren möchten.
+* Ziehen Sie die Aktivierung von Zielgruppen in Erwägung, wenn Ihre Daten in Profile strukturiert sein sollen, die nach Zielgruppeninteressen oder Qualifikationen gruppiert sind.
 * Alternativ können Sie Datensatzexporte in Betracht ziehen, wenn Sie Rohdatensätze exportieren möchten, die nicht nach Zielgruppeninteressen oder Qualifikationen gruppiert oder strukturiert sind. Sie können diese Daten für Berichte, Datenwissenschaft-Workflows, Compliance-Anforderungen und viele andere Anwendungsfälle verwenden.
 
-Dieses Dokument enthält alle Informationen, die zum Exportieren von Datensätzen erforderlich sind. Wenn Sie Segmente für Cloud-Speicher- oder E-Mail-Marketing-Ziele aktivieren möchten, lesen Sie [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md).
+Dieses Dokument enthält alle Informationen, die zum Exportieren von Datensätzen erforderlich sind. Wenn Sie Zielgruppen für Cloud-Speicher- oder E-Mail-Marketing-Ziele aktivieren möchten, lesen Sie [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ## Voraussetzungen {#prerequisites}
 
