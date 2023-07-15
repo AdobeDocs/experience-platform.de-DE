@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Erstellen eines Datenflusses mit einer Analytics-Quelle in der Benutzeroberfläche
 description: In diesem Tutorial erfahren Sie, wie Sie einen Datenfluss für eine Analytics-Quelle mithilfe der Platform-Benutzeroberfläche erstellen.
 exl-id: 108a69e5-d7d9-4ca1-a364-38ea54aa74ff
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
 workflow-type: tm+mt
-source-wordcount: '1277'
-ht-degree: 54%
+source-wordcount: '1321'
+ht-degree: 51%
 
 ---
 
@@ -115,7 +115,7 @@ Weitere Informationen zu Planungskonfigurationen finden Sie in der Tabelle unten
 | Intervall | Eine Ganzzahl, die das Intervall für die ausgewählte Häufigkeit festlegt. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein und auf größer oder gleich 15 gesetzt werden. |
 | Startzeit | Ein UTC-Zeitstempel, der angibt, wann die erste Aufnahme erfolgen soll. Die Startzeit muss größer oder gleich der aktuellen UTC-Zeit sein. |
 | Aufstockung | Ein boolean -Wert, der bestimmt, welche Daten ursprünglich erfasst werden. Wenn die Aufstockung aktiviert ist, werden alle aktuellen Dateien im angegebenen Pfad während der ersten geplanten Erfassung erfasst. Wenn die Aufstockung deaktiviert ist, werden nur die Dateien erfasst, die zwischen der ersten Ausführung der Aufnahme und der Startzeit geladen werden. Dateien, die vor der Startzeit geladen wurden, werden nicht erfasst. |
-| Inkrementelle Daten laden nach | Eine Option mit einem gefilterten Satz von Quellschemafeldern vom Typ, Datum oder Uhrzeit. Dieses Feld wird verwendet, um zwischen neuen und vorhandenen Daten zu unterscheiden. Inkrementelle Daten werden basierend auf dem Zeitstempel der ausgewählten Spalte aufgenommen. |
+| Inkrementelle Daten laden nach | Eine Option mit einem gefilterten Satz von Quellschemafeldern vom Typ, Datum oder Uhrzeit. Das Feld, für das Sie **[!UICONTROL Inkrementelle Daten laden nach]** muss über Datums-/Uhrzeitwerte in UTC-Zeitzone verfügen, um inkrementelle Daten ordnungsgemäß laden zu können. Alle tabellenbasierten Batch-Quellen wählen inkrementelle Daten aus, indem sie einen Zeitstempelwert für Delta-Spalten mit der entsprechenden UTC-Zeit des Flusslauffensters vergleichen und dann die Daten aus der Quelle kopieren, wenn im UTC-Zeitfenster neue Daten gefunden werden. |
 
 ![Aufstockung](../../../images/tutorials/dataflow/table-based/backfill.png)
 
