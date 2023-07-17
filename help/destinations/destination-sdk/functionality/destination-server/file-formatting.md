@@ -1,10 +1,10 @@
 ---
 description: Erfahren Sie, wie Sie über den Endpunkt „/destination-servers“ Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren, die mit Adobe Experience Platform Destination SDK erstellt wurden.
 title: Konfiguration der Dateiformatierung
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
-workflow-type: ht
-source-wordcount: '987'
-ht-degree: 100%
+source-git-commit: 5a6359e5731b36763e86eba8c79e60d74fb3b4c8
+workflow-type: tm+mt
+source-wordcount: '1001'
+ht-degree: 98%
 
 ---
 
@@ -159,7 +159,8 @@ Im folgenden Konfigurationsbeispiel ist keine der CSV-Optionen vordefiniert. Der
             "templatingStrategy":"PEBBLE_V1",
             "value":"{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'emptyValue' %}{{customerData.csvOptions.emptyValue}}{% else %}{% endif %}"
          }
-      }
+      },
+      "maxFileRowCount":5000000
    }
 }
 ```
@@ -190,6 +191,7 @@ Nachstehend finden Sie eine vollständige Referenz aller verfügbaren Dateiforma
 | `csvOptions.timestampFormat.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt die Zeichenfolge für ein Zeitstempelformat fest. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` | – | – |
 | `csvOptions.charToEscapeQuoteEscaping.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt ein einzelnes Zeichen fest, das zum Maskieren des Escape-Zeichens für das Anführungszeichen verwendet wird. | `\` wenn Escape- und Anführungszeichen unterschiedlich sind. `\0` wenn Escape- und Anführungszeichen identisch sind. | – | – |
 | `csvOptions.emptyValue.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt die Zeichenfolgendarstellung eines leeren Werts fest. | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
+| `maxFileRowCount` | Optional | Gibt die maximale Anzahl von Zeilen pro exportierter Datei zwischen 1.000.000 und 10.000.000 Zeilen an. | 5.000.000 |
 
 {style="table-layout:auto"}
 
