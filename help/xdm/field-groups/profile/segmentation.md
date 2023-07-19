@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; individuelles Profil; Felder; Schemas; Schemas; Segment; Segmentzugehörigkeit; Segmentmitgliedschaft; Schemadesign; Karte; Map;
 solution: Experience Platform
 title: Schemafeldgruppe "Segmentzugehörigkeitsdetails"
 description: Dieses Dokument bietet einen Überblick über die Schemakonzerne "Segmentzugehörigkeitsdetails".
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '440'
-ht-degree: 7%
+source-wordcount: '419'
+ht-degree: 19%
 
 ---
 
@@ -28,7 +27,7 @@ ht-degree: 7%
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `segmentMembership` | Zuordnung | Ein map -Objekt, das die Segmentmitgliedschaften des Kontakts beschreibt. Die Struktur dieses Objekts wird im Folgenden detailliert beschrieben. |
+| `segmentMembership` | Zuordnung | Ein Zuordnungs-Objekt, das die Segmentzugehörigkeiten des Kontakts beschreibt. Die Struktur dieses Objekts wird im Folgenden detailliert beschrieben. |
 
 {style="table-layout:auto"}
 
@@ -76,7 +75,7 @@ Im Folgenden finden Sie ein Beispiel `segmentMembership` zuordnen, dass das Syst
 | `xdm:version` | Die Version des Segments, für das dieses Profil qualifiziert ist. |
 | `xdm:lastQualificationTime` | Ein Zeitstempel, der angibt, wann sich dieses Profil zuletzt für das Segment qualifiziert hat. |
 | `xdm:validUntil` | Ein Zeitstempel, der angibt, wann die Segmentzugehörigkeit nicht mehr als gültig betrachtet werden soll. Wenn dieses Feld für externe Zielgruppen nicht festgelegt ist, wird die Segmentzugehörigkeit nur 30 Tage lang von der `lastQualificationTime`. |
-| `xdm:status` | Ein Zeichenfolgenfeld, das anzeigt, ob die Segmentzugehörigkeit im Rahmen der aktuellen Anforderung realisiert wurde. Folgende Werte werden akzeptiert: <ul><li>`realized`: Das Profil qualifiziert sich für das Segment.</li><li>`exited`: Das Profil beendet das Segment als Teil der aktuellen Anforderung.</li></ul> |
+| `xdm:status` | Ein Zeichenfolgenfeld, das anzeigt, ob die Segmentzugehörigkeit im Rahmen der aktuellen Anfrage realisiert wurde. Folgende Werte werden akzeptiert: <ul><li>`realized`: Das Profil qualifiziert sich für das Segment.</li><li>`exited`: Das Profil verlässt das Segment als Teil der aktuellen Anfrage.</li></ul> |
 | `xdm:payload` | Einige Segmentmitgliedschaften enthalten eine Payload, die zusätzliche Werte beschreibt, die direkt mit der Mitgliedschaft in Verbindung stehen. Für jede Mitgliedschaft kann nur eine Payload eines bestimmten Typs angegeben werden. `xdm:payloadType` gibt den Payload-Typ an (`boolean`, `number`, `propensity`oder `string`), während seine gleichrangige Eigenschaft den Wert für den Payload-Typ bereitstellt. |
 
 {style="table-layout:auto"}

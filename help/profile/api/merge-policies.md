@@ -4,10 +4,10 @@ title: API-Endpunkt "Zusammenführungsrichtlinien"
 type: Documentation
 description: Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich eine vollständige Ansicht über jeden einzelnen Ihrer Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden, um eine einheitliche Ansicht zu schaffen.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '2468'
-ht-degree: 68%
+source-wordcount: '2467'
+ht-degree: 65%
 
 ---
 
@@ -35,7 +35,7 @@ Während jede Organisation potenziell über mehrere Zusammenführungsrichtlinien
 >
 >Wenn Sie eine neue Zusammenführungsrichtlinie als Standard festlegen, werden alle vorhandenen Zusammenführungsrichtlinien, die zuvor als Standard festgelegt wurden, automatisch aktualisiert und nicht mehr als Standard verwendet.
 
-Um sicherzustellen, dass alle Profilnutzer in den Randbereichen mit derselben Ansicht arbeiten, können Zusammenführungsrichtlinien als am Rand aktiv markiert werden. Damit ein Segment im Randbereich aktiviert (bzw. als Randsegment markiert) werden kann, muss es mit einer Zusammenführungsrichtlinie verknüpft sein, die als im Randbereich aktiv markiert ist. Wenn ein Segment **nicht** mit einer Zusammenführungsrichtlinie verknüpft ist, die als im Randbereich aktiv markiert ist, wird das Segment nicht als im Randbereich aktiv, sondern als Streaming-Segment markiert.
+Um sicherzustellen, dass alle Profilnutzer in den Randbereichen mit derselben Ansicht arbeiten, können Zusammenführungsrichtlinien als am Rand aktiv markiert werden. Damit eine Zielgruppe an der Kante aktiviert werden kann (als Edge-Zielgruppe markiert), muss sie an eine Zusammenführungsrichtlinie gebunden sein, die an der Kante als aktiv markiert ist. Wenn eine Zielgruppe **not** an eine Zusammenführungsrichtlinie gebunden ist, die als aktiv am Rand markiert ist, wird die Zielgruppe nicht als aktiv am Rand markiert und als Streaming-Zielgruppe markiert.
 
 Darüber hinaus kann jede Organisation **one** Zusammenführungsrichtlinie, die an der Kante aktiv ist. Wenn eine Zusammenführungsrichtlinie am Edge aktiv ist, kann sie für andere Systeme am Edge-Rand wie Edge Profile, Edge Segmentation und Ziele an Edge verwendet werden.
 
@@ -760,6 +760,6 @@ Bei erfolgreicher Löschanfrage werden der HTTP-Status 200 (OK) und ein leerer A
 
 ## Nächste Schritte
 
-Nachdem Sie nun wissen, wie Sie Zusammenführungsrichtlinien für Ihr Unternehmen erstellen und konfigurieren, können Sie sie verwenden, um die Ansicht von Kundenprofilen in Platform anzupassen und Zielgruppensegmente aus Ihren [!DNL Real-Time Customer Profile] Daten.
+Nachdem Sie wissen, wie Sie Zusammenführungsrichtlinien für Ihr Unternehmen erstellen und konfigurieren, können Sie diese verwenden, um die Ansicht von Kundenprofilen innerhalb von Platform anzupassen und Zielgruppen aus Ihrem Unternehmen zu erstellen [!DNL Real-Time Customer Profile] Daten.
 
-Informationen zum Definieren und Verwenden von Segmenten finden Sie in der Dokumentation zu [Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
+Siehe [Dokumentation zu Adobe Experience Platform Segmentation Service](../../segmentation/home.md) , um mit der Definition und Verwendung von Zielgruppen zu beginnen.

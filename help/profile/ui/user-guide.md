@@ -3,7 +3,7 @@ keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; AP
 title: Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Ansicht Ihrer einzelnen Kunden und kombiniert Daten aus verschiedenen Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. Dieses Dokument dient als Leitfaden für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 98854811e57c621a1c8de9146231f54c96e37a5d
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '2008'
 ht-degree: 7%
@@ -134,7 +134,7 @@ Die angezeigten Standardfelder können auch auf Organisationsebene geändert wer
 
 ![Die Registerkarte Details wird hervorgehoben. Die Profildetails werden angezeigt.](../images/user-guide/profile-detail.png)
 
-Sie können zusätzliche Informationen zum individuellen Kundenprofil anzeigen, indem Sie auf eine andere der verfügbaren Registerkarten klicken. Diese Registerkarten umfassen Attribute, Ereignisse und die Registerkarte Segmentmitgliedschaft , auf der die Segmente angezeigt werden, für die das Profil derzeit qualifiziert ist.
+Sie können zusätzliche Informationen zum individuellen Kundenprofil anzeigen, indem Sie auf eine andere der verfügbaren Registerkarten klicken. Diese Registerkarten umfassen Attribute, Ereignisse und die Registerkarte &quot;Zielgruppenmitgliedschaft&quot;, auf der die Zielgruppen angezeigt werden, für die das Profil derzeit qualifiziert ist.
 
 ### Registerkarte „Attribute“
 
@@ -152,13 +152,13 @@ Ereignisse können auch als JSON-Objekt angezeigt werden, indem Sie **[!UICONTRO
 
 ![Die Registerkarte Ereignisse wird hervorgehoben. Die Profilereignisse werden angezeigt.](../images/user-guide/events.png)
 
-### Registerkarte Segmentmitgliedschaft
+### Registerkarte &quot;Zielgruppenmitgliedschaft&quot;
 
-Die **[!UICONTROL Segmentmitgliedschaft]** zeigt eine Liste mit dem Namen und der Beschreibung der Segmente an, zu denen das individuelle Kundenprofil derzeit gehört. Diese Liste wird automatisch aktualisiert, wenn das Profil für Segmente qualifiziert ist oder aus diesen abläuft. Die Gesamtanzahl der Segmente, für die das Profil derzeit qualifiziert ist, wird auf der rechten Seite des Tabs angezeigt.
+Die **[!UICONTROL Zielgruppenmitgliedschaft]** zeigt eine Liste mit dem Namen und der Beschreibung der Zielgruppen an, zu denen das individuelle Kundenprofil derzeit gehört. Diese Liste wird automatisch aktualisiert, wenn das Profil für Zielgruppen qualifiziert ist oder von diesen abläuft. Die Gesamtzahl der Zielgruppen, für die das Profil derzeit qualifiziert ist, wird auf der rechten Seite des Tabs angezeigt.
 
 Weitere Informationen zur Segmentierung in Experience Platform finden Sie im Abschnitt [Dokumentation zu Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
 
-![Die Registerkarte Segmentmitgliedschaft wird hervorgehoben. Die Details zur Mitgliedschaft in Profilsegmenten werden angezeigt.](../images/user-guide/segment-membership.png)
+![Die Registerkarte Zielgruppenmitgliedschaft wird hervorgehoben. Die Details zur Zielgruppenmitgliedschaft des Profils werden angezeigt.](../images/user-guide/segment-membership.png)
 
 ## Zusammenführungsrichtlinien
 

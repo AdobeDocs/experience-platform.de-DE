@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Zielgruppen-Benutzeroberfläche
 description: Die Zielgruppenkomposition in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Zielgruppen für Ihre Organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 13492b90552d16334030792323956ea18ca928dc
+source-git-commit: b7da6f00426f8cd8e219bf6f8c8275ab3f6942ef
 workflow-type: tm+mt
-source-wordcount: '1289'
-ht-degree: 74%
+source-wordcount: '1737'
+ht-degree: 55%
 
 ---
 
@@ -108,6 +108,64 @@ Eine Liste der Profilattribute wird angezeigt. Wählen Sie den Attributtyp aus, 
 
 ![Eine Liste mit Attributen wird angezeigt.](../images/ui/audience-composition/select-attribute-exclude.png)
 
+## [!UICONTROL Anreichern] {#enrich-block}
+
+>[!IMPORTANT]
+>
+>Zu diesem Zeitpunkt können Anreicherungsattribute **only** in nachgelagerten Adobe Journey Optimizer-Szenarien verwendet werden.
+
+Die **[!UICONTROL Anreichern]** Mit dem Blocktyp können Sie Ihre Zielgruppe mit zusätzlichen Attributen aus einem Datensatz anreichern. Sie können diese Attribute in Anwendungsfällen der Personalisierung verwenden.
+
+So fügen Sie eine **[!UICONTROL Anreichern]** Block, wählen Sie die **+** Symbol, gefolgt von **[!UICONTROL Anreichern]**.
+
+![Die [!UICONTROL Anreichern] ausgewählt ist.](../images/ui/audience-composition/add-enrich-block.png)
+
+Die **[!UICONTROL Anreichern]** hinzugefügt. Wenn dieser Block ausgewählt ist, werden Details zur Anreicherung in der rechten Leiste angezeigt. Dazu gehören der Titel des Blocks und der Anreicherungsdatensatz.
+
+Um den Datensatz zur Anreicherung der Audience auszuwählen, wählen Sie die ![filter](../images/ui/audience-composition/filter-attribute.png) Symbol.
+
+![Die Filterschaltfläche ist hervorgehoben. Wenn Sie dies auswählen, gelangen Sie zum [!UICONTROL Datensatz auswählen] Popover.](../images/ui/audience-composition/enrich-select-dataset.png)
+
+Die **[!UICONTROL Datensatz auswählen]** Popup angezeigt. Wählen Sie den Datensatz aus, den Sie zur Anreicherung hinzufügen möchten, gefolgt von **[!UICONTROL Auswählen]** , um den Datensatz zur Anreicherung hinzuzufügen.
+
+![Der ausgewählte Datensatz wird ausgewählt.](../images/ui/audience-composition/enrich-dataset-selected.png)
+
+>[!IMPORTANT]
+>
+>Der ausgewählte Datensatz **must** die folgenden Kriterien erfüllen:
+>
+>- Der Datensatz **must** von Datensatztyp sein.
+>   - Der Datensatz **cannot** vom Ereignistyp sein, systemgeneriert oder für Profil markiert sein.
+>- Der Datensatz **must** 1 GB oder kleiner sein.
+
+Die **[!UICONTROL Anreicherungskriterien]** wird nun in der rechten Leiste angezeigt. In diesem Abschnitt können Sie die **[!UICONTROL Quell-Join-Schlüssel]** und **[!UICONTROL Join-Schlüssel für Anreicherungsdatensatz]**, mit dem Sie den Anreicherungsdatensatz mit der Zielgruppe verknüpfen können, die Sie erstellen möchten.
+
+![Die [!UICONTROL Anreicherungskriterien] -Bereich markiert ist.](../images/ui/audience-composition/enrichment-criteria.png)
+
+So wählen Sie die **[!UICONTROL Quell-Join-Schlüssel]**, wählen Sie die ![filter](../images/ui/audience-composition/filter-attribute.png) Symbol.
+
+![Das Filtersymbol für [!UICONTROL Quell-Join-Schlüssel] hervorgehoben ist.](../images/ui/audience-composition/enrich-select-source-join-key.png)
+
+Die **[!UICONTROL Profilattribut auswählen]** Popup angezeigt. Wählen Sie das Profilattribut aus, das Sie als Quell-Join-Schlüssel verwenden möchten, gefolgt von **[!UICONTROL Auswählen]** um dieses Attribut als Quell-Join-Schlüssel auszuwählen.
+
+![Das Attribut, das Sie als Quell-Join-Schlüssel verwenden möchten, wird hervorgehoben.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
+
+So wählen Sie die **[!UICONTROL Join-Schlüssel für Anreicherungsdatensatz]**, wählen Sie die ![filter](../images/ui/audience-composition/filter-attribute.png) Symbol.
+
+![Das Filtersymbol für [!UICONTROL Join-Schlüssel für Anreicherungsdatensatz] hervorgehoben ist.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
+
+Die **[!UICONTROL Anreicherungsattribute]** Popup angezeigt. Wählen Sie das Attribut aus, das Sie als Join-Schlüssel für den Anreicherungsdatensatz verwenden möchten, gefolgt von **[!UICONTROL Auswählen]** , um dieses Attribut als Join-Schlüssel für Ihren Anreicherungsdatensatz auszuwählen.
+
+![Das Attribut, das Sie als Join-Schlüssel für den Anreicherungsdatensatz verwenden möchten, wird hervorgehoben.](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
+
+Nachdem Sie nun beide Join-Schlüssel hinzugefügt haben, wird die **[!UICONTROL Anreicherungsattribute]** angezeigt. Jetzt können Sie das Attribut hinzufügen, mit dem Sie Ihre Zielgruppe erweitern möchten. Um diese Attribute hinzuzufügen, wählen Sie **[!UICONTROL Attribut hinzufügen]**.
+
+![Die [!UICONTROL Attribut hinzufügen] -Schaltfläche markiert ist.](../images/ui/audience-composition/enrich-select-add-attribute.png)
+
+Die **[!UICONTROL Anreicherungsattribute]** Popup angezeigt. Sie können die Attribute aus dem Datensatz auswählen, um Ihre Zielgruppe mit **[!UICONTROL Auswählen]** , um die Attribute Ihrer Audience hinzuzufügen.
+
+![Die Anreicherungsattribute, die Sie hinzufügen möchten, werden hervorgehoben.](../images/ui/audience-composition/enrich-add-enrichment-attributes.png)
+
 <!-- ## [!UICONTROL Join] {#join-block}
 
 The **[!UICONTROL Join]** block type allows you to add in external audiences from datasets that have not yet been processed by Adobe Experience Platform.
@@ -161,6 +219,8 @@ Mit dem Blocktyp **[!UICONTROL Aufspaltung]** können Sie Ihre neue Zielgruppe i
 Um einen Block **[!UICONTROL Aufspaltung]** hinzuzufügen, wählen Sie das Symbol **+** und dann **[!UICONTROL Aufspaltung]** aus.
 
 ![Die Option „Aufspaltung“ ist ausgewählt.](../images/ui/audience-composition/add-split-block.png)
+
+Bei der Aufspaltung der Audience können Sie sie entweder nach Prozentsatz aufteilen oder nach Attribut aufteilen.
 
 ### Aufspaltung nach Prozentsatz {#split-percentage}
 

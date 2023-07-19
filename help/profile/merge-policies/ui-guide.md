@@ -4,10 +4,10 @@ title: Benutzerhandbuch für Benutzeroberfläche zu Zusammenführungsrichtlinien
 type: Documentation
 description: Beim Zusammenführen von Daten aus mehreren Quellen in Experience Platform stellen Zusammenführungsrichtlinien die Regeln dar, die Platform verwendet, um festzulegen, wie Daten priorisiert werden und welche Daten bei der Erstellung einzelner Kundenprofile kombiniert werden. Dieses Handbuch enthält schrittweise Anleitungen zum Verwenden von Zusammenführungsrichtlinien mit der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '2321'
-ht-degree: 98%
+source-wordcount: '2320'
+ht-degree: 91%
 
 ---
 
@@ -58,8 +58,8 @@ Im ersten Schritt des Workflows können Sie Ihre Zusammenführungsrichtlinie kon
    * **[!UICONTROL Keine]**: Keine Identitätszusammenfügung durchführen.
    * **[!UICONTROL Privates Diagramm]**: Identitätszusammenfügung basierend auf Ihrem privaten Identitätsdiagramm durchführen.
 * **[!UICONTROL Standardmäßige Zusammenführungsrichtlinie]**: Eine Umschalter-Schaltfläche, mit der Sie festlegen können, ob diese Zusammenführungsrichtlinie der Standard für Ihre Organisation sein soll oder nicht. Wenn die Auswahl aktiviert ist, werden Sie in einer Warnung aufgefordert zu bestätigen, dass Sie die standardmäßige Zusammenführungsrichtlinie Ihrer Organisation ändern möchten. Weitere Informationen zu standardmäßigen Zusammenführungsrichtlinien finden Sie unter [Übersicht über Zusammenführungsrichtlinien](overview.md).
-   ![](../images/merge-policies/create-make-default.png)
-* **[!UICONTROL Zusammenführungsrichtlinie „Active-On-Edge“]**: Ein Umschalt-Button, mit dem Sie festlegen können, ob diese Zusammenführungsrichtlinie in den Randbereichen aktiv sein soll oder nicht. Um sicherzustellen, dass alle Profilnutzer in den Randbereichen mit derselben Ansicht arbeiten, können Zusammenführungsrichtlinien als am Rand aktiv markiert werden. Damit ein Segment im Randbereich aktiviert (bzw. als Randsegment markiert) werden kann, muss es mit einer Zusammenführungsrichtlinie verknüpft sein, die als im Randbereich aktiv markiert ist. Wenn ein Segment **nicht** mit einer Zusammenführungsrichtlinie verknüpft ist, die als im Randbereich aktiv markiert ist, wird das Segment nicht als im Randbereich aktiv, sondern als Streaming-Segment markiert. Darüber hinaus kann jede Sandbox in einer Organisation nur über **one** Zusammenführungsrichtlinie, die an der Kante aktiv ist.
+  ![](../images/merge-policies/create-make-default.png)
+* **[!UICONTROL Zusammenführungsrichtlinie „Active-On-Edge“]**: Ein Umschalt-Button, mit dem Sie festlegen können, ob diese Zusammenführungsrichtlinie in den Randbereichen aktiv sein soll oder nicht. Um sicherzustellen, dass alle Profilnutzer in den Randbereichen mit derselben Ansicht arbeiten, können Zusammenführungsrichtlinien als am Rand aktiv markiert werden. Damit eine Zielgruppe an der Kante aktiviert werden kann (als Edge-Zielgruppe markiert), muss sie an eine Zusammenführungsrichtlinie gebunden sein, die an der Kante als aktiv markiert ist. Wenn eine Zielgruppe **not** an eine Zusammenführungsrichtlinie gebunden ist, die als aktiv am Rand markiert ist, wird die Zielgruppe nicht als aktiv am Rand markiert und als Streaming-Zielgruppe markiert. Darüber hinaus kann jede Sandbox in einer Organisation nur über **one** Zusammenführungsrichtlinie, die an der Kante aktiv ist.
 
 Nachdem die erforderlichen Felder ausgefüllt wurden, können Sie **[!UICONTROL Weiter]** auswählen, um mit dem Workflow fortzufahren.
 
@@ -193,7 +193,7 @@ Nachdem Sie die erforderlichen Änderungen vorgenommen haben, überprüfen Sie I
 
 ## Verstöße gegen Data Governance-Richtlinien
 
-Beim Erstellen oder Aktualisieren einer Zusammenführungsrichtlinie wird geprüft, ob die Zusammenführungsrichtlinie eine der von Ihrer Organisation definierten Datennutzungsrichtlinien verletzt. Datennutzungsrichtlinien sind Teil von Adobe Experience Platform Data Governance und stellen Regeln dar, die die Arten von Marketing-Aktionen beschreiben, die Sie für bestimmte [!DNL Platform]-Daten ausführen dürfen oder nicht. Wenn zum Beispiel eine Zusammenführungsrichtlinie zum Erstellen eines Segments verwendet wurde, das für ein Drittanbieterziel aktiviert wurde, und Ihre Organisation eine Datennutzungsrichtlinie aufwiese, die den Export bestimmter Daten an Dritte verhinderte, würden Sie beim Versuch, Ihre Zusammenführungsrichtlinie zu speichern, eine Benachrichtigung erhalten, dass eine **[!UICONTROL „Verletzung der Data Governance-Richtlinie entdeckt“ wurde.]**.
+Beim Erstellen oder Aktualisieren einer Zusammenführungsrichtlinie wird geprüft, ob die Zusammenführungsrichtlinie eine der von Ihrer Organisation definierten Datennutzungsrichtlinien verletzt. Datennutzungsrichtlinien sind Teil von Adobe Experience Platform Data Governance und stellen Regeln dar, die die Arten von Marketing-Aktionen beschreiben, die Sie für bestimmte [!DNL Platform]-Daten ausführen dürfen oder nicht. Wenn beispielsweise eine Zusammenführungsrichtlinie verwendet wurde, um eine Zielgruppe zu erstellen, die für ein Drittanbieterziel aktiviert wurde, und Ihre Organisation über eine Datennutzungsrichtlinie verfügte, die den Export bestimmter Daten an Dritte verhinderte, erhalten Sie eine **[!UICONTROL Verstöße gegen Data Governance-Richtlinien erkannt]** Benachrichtigung beim Versuch, Ihre Zusammenführungsrichtlinie zu speichern.
 
 Diese Benachrichtigung enthält eine Liste der Datennutzungsrichtlinien, die verletzt wurden, und ermöglicht Ihnen das Anzeigen von Details zur Verletzung, indem Sie eine Richtlinie aus der Liste auswählen. Bei Auswahl einer verletzten Richtlinie liefert der Tab **[!UICONTROL Datenverlaufskontrolle]** den Grund für die Verletzung und die betroffenen Aktivierungen. So erhalten Sie genauere Details zur Verletzung der jeweiligen Datennutzungsrichtlinie.
 
@@ -203,4 +203,4 @@ Um mehr über Data Governance in Adobe Experience Platform zu erfahren, lesen Si
 
 ## Nächste Schritte
 
-Nachdem Sie Zusammenführungsrichtlinien für Ihre Organisation erstellt und konfiguriert haben, können Sie sie verwenden, um die Ansicht von Kundenprofilen in Platform anzupassen und aus Ihren Profildaten Zielgruppensegmente zu erstellen. Weiterführende Informationen zum Erstellen und Verwenden von Segmenten mit Experience Platform finden Sie in der [Segmentierungsübersicht](../../segmentation/home.md) [!DNL Experience Platform].
+Nachdem Sie Zusammenführungsrichtlinien für Ihre Organisation erstellt und konfiguriert haben, können Sie diese verwenden, um die Ansicht von Kundenprofilen in Platform anzupassen und Zielgruppen aus Ihren Profildaten zu erstellen. Siehe [Segmentierungsübersicht](../../segmentation/home.md) Weitere Informationen zum Erstellen und Verwenden von Zielgruppen mithilfe der [!DNL Experience Platform] Benutzeroberfläche und APIs.

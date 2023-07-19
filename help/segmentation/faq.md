@@ -1,9 +1,9 @@
 ---
 title: Häufig gestellte Fragen zu Zielgruppen
 description: Hier finden Sie Antworten auf häufig gestellte Fragen zu Audiences.
-source-git-commit: 562af647e21e8f9b9af495849f085e10f258952a
+source-git-commit: 4dbd20dd3ac596052a3390eb6d3731fac7095c0d
 workflow-type: tm+mt
-source-wordcount: '984'
+source-wordcount: '996'
 ht-degree: 0%
 
 ---
@@ -74,8 +74,9 @@ Die Platzierung der Kompositionskomponente folgt einer starren Struktur wie folg
 
 1. You **always** beginnt mit der [!UICONTROL Zielgruppe] -Block, um Ihre Startaktivität auszuwählen. Sie können maximal **one** [!UICONTROL Zielgruppe] blockieren.
 2. Sie können optional eine [!UICONTROL Ausschließen] -Block, der auf [!UICONTROL Zielgruppe] blockieren.
-3. Sie können optional eine [!UICONTROL Rang] oder [!UICONTROL Aufspaltung] blockieren. Sie können **only** einen dieser Blöcke pro Komposition haben.
-4. You **always** mit [!UICONTROL Speichern] blockieren, um Ihre Audience zu speichern.
+3. Sie können optional eine [!UICONTROL Anreichern] -Block, der auf [!UICONTROL Ausschließen] blockieren.
+4. Sie können optional eine [!UICONTROL Rang] oder [!UICONTROL Aufspaltung] blockieren. Sie können **only** einen dieser Blöcke pro Komposition haben.
+5. You **always** mit [!UICONTROL Speichern] blockieren, um Ihre Audience zu speichern.
 
 Weitere Informationen zur Verwendung der Zielgruppenkomposition finden Sie im Abschnitt [Handbuch zur Benutzeroberfläche für Zielgruppenkomposition](./ui/audience-composition.md).
 
@@ -91,7 +92,7 @@ Weiterführende Informationen zum Baustein &quot;Aufspaltung&quot;finden Sie im 
 
 ## Kann ich alle Segmentierungstypen im Workflow Zielgruppenkomposition verwenden?
 
-Ja, alle Segmentierungstypen (Batch-Segmentierung, Streaming-Segmentierung und Kantensegmentierung) werden im Workflow Zielgruppenkomposition unterstützt. Da Kompositionen jedoch derzeit nur einmal pro Tag ausgeführt werden, basiert das Ergebnis auf der Zielgruppenzugehörigkeit zum Zeitpunkt der Komposition, selbst wenn Streaming- oder Edge-bewertete Zielgruppen enthalten sind.
+Ja, alle Segmentierungstypen ([Batch-Segmentierung, Streaming-Segmentierung und Kantensegmentierung](./home.md#evaluate-segments)) werden im Workflow Zielgruppenkomposition unterstützt. Da Kompositionen jedoch derzeit nur einmal pro Tag ausgeführt werden, basiert das Ergebnis auf der Zielgruppenzugehörigkeit zum Zeitpunkt der Komposition, selbst wenn Streaming- oder Edge-bewertete Zielgruppen enthalten sind.
 
 ## Wie kann ich die Mitgliedschaft eines Profils in einer Zielgruppe bestätigen?
 

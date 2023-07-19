@@ -4,10 +4,10 @@ title: Zusammenführungsrichtlinien – Übersicht
 type: Documentation
 description: Mit Adobe Experience Platform können Sie Datenfragmente aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich eine vollständige Ansicht über Ihre einzelnen Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine einheitliche Ansicht zu schaffen.
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '1265'
-ht-degree: 95%
+ht-degree: 81%
 
 ---
 
@@ -60,14 +60,14 @@ Bei der Aufnahme von Profildatensätzen in Experience Platform wird ein Systemze
 
 Identitätszuordnung ([!UICONTROL ID-Zuordnung]) ist der Prozess der Identifikation von Datenfragmenten und ihrer Kombination zu einem vollständigen Profildatensatz. Zur Veranschaulichung der unterschiedlichen Zuordnungsverhaltensweisen sollten Sie einen einzelnen Kunden berücksichtigen, der mit einer Marke über zwei verschiedene E-Mail-Adressen interagiert.
 
-* **[!UICONTROL Keine]:** Wenn diese Option ausgewählt ist, werden IDs nicht zugeordnet. Wenn die Segmentierung erfolgt, werden Identitäten, die zu derselben Person gehören können, nicht zugeordnet. Bei der Segmentierung werden nur die mit jeder einzelnen ID verknüpften Attribute berücksichtigt, wenn festgestellt wird, ob ein Kunde für die Segmentzugehörigkeit qualifiziert ist. Dies könnte dazu führen, dass ein einzelner Kunde über mehrere Profile verfügt und jedes Profil für verschiedene Segmente qualifiziert ist, sodass mehrere Marketing-Nachrichten an denselben Kunden gesendet werden.
-* **[!UICONTROL Privates Diagramm]:** Wenn das private Diagramm ausgewählt ist, werden mehrere Identitäten, die sich auf dieselbe Person beziehen, zugeordnet. Dies führt dazu, dass der Kunde über ein einzelnes Profil verfügt, und ermöglicht der Segmentierung, bei der Bestimmung der Segmentqualifizierung mehrere Attribute aus mehreren verwandten Identitäten zu berücksichtigen. In diesem Szenario weist der Kunde wahrscheinlich ein einzelnes Profil auf, qualifiziert sich für ein Segment basierend auf der Kombination von Attributen über Identitäten hinweg und erhält nur eine Marketing-Nachricht.
+* **[!UICONTROL Keine]:** Wenn diese Option ausgewählt ist, werden IDs nicht zugeordnet. Wenn die Segmentierung erfolgt, werden Identitäten, die zu derselben Person gehören können, nicht zugeordnet. Bei der Segmentierung werden nur die mit jeder einzelnen ID verknüpften Attribute berücksichtigt, wenn festgestellt wird, ob ein Kunde für die Zielgruppenzugehörigkeit qualifiziert ist. Dies könnte dazu führen, dass ein einzelner Kunde über mehrere Profile verfügt und jedes Profil für verschiedene Zielgruppen qualifiziert ist, sodass mehrere Marketing-Nachrichten an denselben Kunden gesendet werden.
+* **[!UICONTROL Privates Diagramm]:** Wenn das private Diagramm ausgewählt ist, werden mehrere Identitäten, die sich auf dieselbe Person beziehen, zugeordnet. Dies führt dazu, dass der Kunde über ein einzelnes Profil verfügt, und ermöglicht der Segmentierung, bei der Bestimmung der Segmentqualifizierung mehrere Attribute aus mehreren verwandten Identitäten zu berücksichtigen. In diesem Szenario weist der Kunde wahrscheinlich ein einzelnes Profil auf, qualifiziert sich für eine Zielgruppe, basierend auf der Kombination von Attributen über Identitäten hinweg, und erhält nur eine Marketing-Nachricht.
 
-Um mehr über Identitäten und ihre Rolle beim Generieren von Profilen und Segmenten zu erfahren, lesen Sie zunächst die [Übersicht über den Identity Service](../../identity-service/home.md).
+Um mehr über Identitäten und ihre Rolle beim Generieren von Profilen und Zielgruppen zu erfahren, lesen Sie zunächst das [Identity Service - Übersicht](../../identity-service/home.md).
 
 ## Standardmäßige Zusammenführungsrichtlinie {#default-merge-policy}
 
-Eine Organisation kann eine standardmäßige Zusammenführungsrichtlinie für ihre Organisation erstellen, die beim Zusammenführen von Profilfragmenten verwendet wird. Auf diese Weise können Benutzer bei Aktionen in Experience Platformen wie der Anzeige von Kundenprofilen oder der Erstellung von Segmenten einfach die Standardrichtlinie auswählen. In den meisten Fällen wird die standardmäßige Zusammenführungsrichtlinie verwendet, sofern keine andere Zusammenführungsrichtlinie angegeben ist.
+Eine Organisation kann eine standardmäßige Zusammenführungsrichtlinie für ihre Organisation erstellen, die beim Zusammenführen von Profilfragmenten verwendet wird. Auf diese Weise können Benutzer bei Aktionen in der Experience Platform einfach die Standardrichtlinie auswählen, z. B. beim Anzeigen von Kundenprofilen oder Erstellen von Zielgruppen. In den meisten Fällen wird die standardmäßige Zusammenführungsrichtlinie verwendet, sofern keine andere Zusammenführungsrichtlinie angegeben ist.
 
 Jede Organisation kann mehrere Zusammenführungsrichtlinien erstellen, die sich auf eine einzelne XDM-Schemaklasse beziehen, jedoch kann für jede Klasse nur eine standardmäßige Zusammenführungsrichtlinie deklariert werden. Ihre Organisation könnte beispielsweise über eine standardmäßige Zusammenführungsrichtlinie für die [!DNL XDM Individual Profile]-Klasse und eine andere standardmäßige Zusammenführungsrichtlinie für eine benutzerdefinierte Produktinventarklasse verfügen.
 
@@ -75,7 +75,7 @@ Wenn Sie eine neue Zusammenführungsrichtlinie erstellen und sie als Standard fe
 
 >[!WARNING]
 >
->Profilzählungen und Segmente mit einer vorhandenen standardmäßigen Zusammenführungsrichtlinie können betroffen sein. Jedes Segment, für das eine standardmäßige Zusammenführungsrichtlinie angewendet wurde, wird auf die neue standardmäßige Zusammenführungsrichtlinie aktualisiert.
+>Profilzählungen und Zielgruppen mit einer vorhandenen, zugehörigen standardmäßigen Zusammenführungsrichtlinie können betroffen sein. Alle Zielgruppen, für die eine standardmäßige Zusammenführungsrichtlinie angewendet wurde, werden auf die neue standardmäßige Zusammenführungsrichtlinie aktualisiert.
 
 ## Nächste Schritte
 

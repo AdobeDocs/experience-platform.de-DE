@@ -3,10 +3,10 @@ keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;Ei
 title: Übersicht zum Echtzeit-Kundenprofil
 description: Das Echtzeit-Kundenprofil führt Daten aus verschiedenen Quellen zusammen und bietet Zugriff auf diese Daten in Form von individuellen Kundenprofilen und zugehörigen Zeitreihenereignissen. die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '1991'
-ht-degree: 100%
+source-wordcount: '1990'
+ht-degree: 95%
 
 ---
 
@@ -26,7 +26,7 @@ Das nachfolgende Diagramm zeigt die Zusammenhänge zwischen dem Echtzeit-Kundenp
 
 ### Entitätskomposition des Profils
 
-Ein Echtzeit-Kundenprofil besteht aus einer Hauptentität, der sogenannten **primären Entität**, und verschiedenen unterstützenden Entitäten. Im Kontext von Experience Platform ist die primäre Entität normalerweise eine **Profilentität**, die aus Eigenschaften, Verhaltensweisen und Segmentzugehörigkeiten einer einzelnen Person besteht. Andere Entitäten ermöglichen es der Segmentierungs-Engine, Daten außerhalb der primären Entität des Profils zu verwenden, und umfassen Folgendes:
+Ein Echtzeit-Kundenprofil besteht aus einer Hauptentität, der sogenannten **primären Entität**, und verschiedenen unterstützenden Entitäten. Im Kontext der Experience Platform ist die primäre Entität normalerweise ein **Profilentität**, das aus Eigenschaften, Verhaltensweisen und Zielgruppenmitgliedschaften einer einzelnen Person besteht. Andere Entitäten ermöglichen es der Segmentierungs-Engine, Daten außerhalb der primären Entität des Profils zu verwenden, und umfassen Folgendes:
 
 - **Dimensionsentität**: Die Entität, die zur Vereinfachung des Datenmodellierungsprozesses für Informationen verwendet wird, die über Ereignisse oder Profildatensätze hinweg freigegeben werden. Dies wird auch als Lookup-Entität oder Klassifizierungsentität bezeichnet.
 - **B2B-Entität**: Entitäten, die die Beziehung des Profils zu B2B-Konten und Opportunities beschreiben.
@@ -98,13 +98,13 @@ Weitere Informationen zu Vereinigungsschemas, einschließlich dem Zugriff auf Ve
 
 Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
 
-## Profile und Segmente
+## Profile und Audiences
 
-Der [!DNL Segmentation Service] von Adobe Experience Platform liefert die Zielgruppen, die für die Bereitstellung von Erlebnissen für Ihre individuellen Kunden benötigt werden. Wird ein solches Zielgruppensegment erstellt, wird dessen Segment-ID zur Liste der Segmentmitglieder für alle qualifizierten Profile hinzugefügt. Segmentregeln werden mithilfe von RESTful-APIs und der Benutzeroberfläche von Segment Builder erstellt und auf die Daten des [!DNL Real-Time Customer Profile] angewendet. Um mehr über die Segmentierung zu erfahren, lesen Sie zunächst die [Segmentation Service – Übersicht](../segmentation/home.md).
+Der [!DNL Segmentation Service] von Adobe Experience Platform liefert die Zielgruppen, die für die Bereitstellung von Erlebnissen für Ihre individuellen Kunden benötigt werden. Bei der Erstellung einer Audience wird die Kennung dieser Audience zur Liste der Zielgruppenmitgliedschaften für alle qualifizierten Profile hinzugefügt. Segmentregeln werden mithilfe von RESTful-APIs und der Benutzeroberfläche von Segment Builder erstellt und auf die Daten des [!DNL Real-Time Customer Profile] angewendet. Um mehr über die Segmentierung zu erfahren, lesen Sie zunächst die [Segmentation Service – Übersicht](../segmentation/home.md).
 
 ### Streaming-Erfassung und Streaming-Segmentierung
 
-Der Prozess, Daten in Echtzeit zu erfassen, wird als Streaming-Erfassung bezeichnet. Bevor aufgenommene Profil- und Zeitreihendaten mit bestehenden Daten zusammengeführt werden und die Vereinigungsansicht aktualisiert wird, bestimmt das [!DNL Real-Time Customer Profile] anhand der sogenannten Streaming-Segmentierung durchgehend automatisch, ob die neuen Daten in den Segmenten eingeschlossen oder von ihnen ausgeschlossen werden. Das Ergebnis: Berechnungen und Entscheidungen dazu, wie Sie Ihren Kunden herausragende, individuell auf sie abgestimmte Erlebnisse liefern, lassen sich direkt während ihrer Interaktion mit Ihrer Marke anstellen bzw. treffen. Im Verlauf der Datenaufnahme wird außerdem validiert, ob die Daten ordnungsgemäß erfasst werden und dem Schema entsprechen, auf dem der Datensatz basiert. Weitere Informationen dazu, welche Validierungen bei der Datenaufnahme vorgenommen werden, finden Sie in der Übersicht über die Datenaufnahme unter [Datenqualität](../ingestion/quality/overview.md).
+Der Prozess, Daten in Echtzeit zu erfassen, wird als Streaming-Erfassung bezeichnet. Bei Erfassung von Profil- und Zeitreihendaten [!DNL Real-Time Customer Profile] entscheidet automatisch, diese Daten über einen laufenden Prozess, die Streaming-Segmentierung genannt, in Zielgruppen einzuschließen oder auszuschließen, bevor sie mit vorhandenen Daten zusammengeführt und die Vereinigungsansicht aktualisiert wird. Das Ergebnis: Berechnungen und Entscheidungen dazu, wie Sie Ihren Kunden herausragende, individuell auf sie abgestimmte Erlebnisse liefern, lassen sich direkt während ihrer Interaktion mit Ihrer Marke anstellen bzw. treffen. Im Verlauf der Datenaufnahme wird außerdem validiert, ob die Daten ordnungsgemäß erfasst werden und dem Schema entsprechen, auf dem der Datensatz basiert. Weitere Informationen dazu, welche Validierungen bei der Datenaufnahme vorgenommen werden, finden Sie in der Übersicht über die Datenaufnahme unter [Datenqualität](../ingestion/quality/overview.md).
 
 ## Edge-Projektionen
 

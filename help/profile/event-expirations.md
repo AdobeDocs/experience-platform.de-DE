@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gültigkeitsdauern von Erlebnisereignissen
 description: Dieses Dokument enthält allgemeine Anleitungen zum Konfigurieren der Gültigkeitsdauern für einzelne Erlebnisereignisse in einem Adobe Experience Platform-Datensatz.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: bb2d0075b234ec750046e1f28cac07a58a9d7e72
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '849'
-ht-degree: 90%
+ht-degree: 83%
 
 ---
 
@@ -40,7 +40,7 @@ Wenn Sie beispielsweise am 15. Mai einen Gültigkeitswert von 30 Tagen angewende
 
 ## Auswirkungen auf die Segmentierung
 
-Sie müssen sicherstellen, dass die Lookback-Fenster für Ihre Segmente innerhalb der Gültigkeitsgrenzen ihrer abhängigen Datensätze liegen, um die Ergebnisse genau zu halten. Wenn Sie beispielsweise einen Gültigkeitswert von 30 Tagen anwenden und ein Segment verwenden, das versucht, Daten von bis zu 45 Tagen anzuzeigen, ist die resultierende Audience wahrscheinlich ungenau.
+Sie müssen sicherstellen, dass die Lookback-Fenster für Ihre Zielgruppen innerhalb der Ablaufgrenzen ihrer abhängigen Datensätze liegen, um die Ergebnisse genau zu halten. Wenn Sie beispielsweise einen Ablaufwert von 30 Tagen anwenden und eine Zielgruppe verwenden, die versucht, Daten aus bis zu 45 Tagen anzuzeigen, ist die resultierende Zielgruppe wahrscheinlich ungenau.
 
 Daher sollten Sie nach Möglichkeit für alle Datensätze denselben Gültigkeitswert für Erlebnisereignisse beibehalten, um die Auswirkungen verschiedener Gültigkeitswerte auf verschiedene Datensätze in Ihrer Segmentierungslogik zu vermeiden.
 

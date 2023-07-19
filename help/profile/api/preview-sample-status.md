@@ -3,9 +3,9 @@ keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; AP
 title: API-Endpunkt "Vorschaustatus"(Profilvorschau)
 description: Mit dem Beispielstatusendpunkt "Vorschau"der Echtzeit-Kundenprofil-API können Sie eine Vorschau des neuesten erfolgreichen Beispiels Ihrer Profildaten anzeigen, die Profilverteilung nach Datensatz und Identität auflisten und Berichte mit Datensatzüberschneidungen, Identitätsüberschneidungen und nicht zugewiesenen Profilen erstellen.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '2873'
+source-wordcount: '2868'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,7 @@ Die Ergebnisse dieses Beispielauftrags können mit dem `/previewsamplestatus` -E
 
 >[!NOTE]
 >
->Es gibt Schätzungs- und Vorschau-Endpunkte, die als Teil der Adobe Experience Platform Segmentation Service-API verfügbar sind und mit denen Sie Informationen auf Zusammenfassungsebene zu Segmentdefinitionen anzeigen können, um sicherzustellen, dass Sie die erwartete Zielgruppe isolieren. Detaillierte Schritte zum Arbeiten mit Segmentvorschau- und Schätzendpunkten finden Sie im Abschnitt [Handbuch zu Vorschau- und Schätzendpunkten](../../segmentation/api/previews-and-estimates.md), Teil der [!DNL Segmentation] API-Entwicklerhandbuch.
+>Es gibt Schätzungs- und Vorschau-Endpunkte, die als Teil der Adobe Experience Platform Segmentation Service-API verfügbar sind und mit denen Sie Informationen auf Zusammenfassungsebene zu Segmentdefinitionen anzeigen können, um sicherzustellen, dass Sie die erwartete Zielgruppe isolieren. Detaillierte Schritte zum Arbeiten mit Vorschau- und Schätzendpunkten finden Sie im Abschnitt [Handbuch zu Vorschau- und Schätzendpunkten](../../segmentation/api/previews-and-estimates.md), Teil der [!DNL Segmentation] API-Entwicklerhandbuch.
 
 ## Erste Schritte
 
@@ -592,5 +592,5 @@ Dieser Bericht enthält die folgenden Informationen:
 
 ## Nächste Schritte
 
-Nachdem Sie nun wissen, wie Sie Beispieldaten im Profilspeicher in der Vorschau anzeigen und mehrere Berichte zu den Daten ausführen, können Sie auch die Schätzungs- und Vorschau-Endpunkte der Segmentation Service-API verwenden, um Informationen auf Zusammenfassungsebene zu Ihren Segmentdefinitionen anzuzeigen. Diese Informationen helfen Ihnen dabei sicherzustellen, dass Sie die erwartete Zielgruppe in Ihrem Segment isolieren. Weitere Informationen zum Arbeiten mit Segmentvorschauen und -schätzungen mithilfe der Segmentierungs-API finden Sie unter [Handbuch zur Vorschau und Schätzung von Endpunkten](../../segmentation/api/previews-and-estimates.md).
+Nachdem Sie nun wissen, wie Sie Beispieldaten im Profilspeicher in der Vorschau anzeigen und mehrere Berichte zu den Daten ausführen, können Sie auch die Schätzungs- und Vorschau-Endpunkte der Segmentation Service-API verwenden, um Informationen auf Zusammenfassungsebene zu Ihren Segmentdefinitionen anzuzeigen. Diese Informationen helfen Ihnen dabei sicherzustellen, dass Sie Ihre erwartete Zielgruppe isolieren. Weitere Informationen zum Arbeiten mit Vorschau und Schätzungen mithilfe der Segmentation-API finden Sie unter [Handbuch zur Vorschau und Schätzung von Endpunkten](../../segmentation/api/previews-and-estimates.md).
 

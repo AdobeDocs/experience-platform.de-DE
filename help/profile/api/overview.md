@@ -3,9 +3,9 @@ keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; AP
 title: Handbuch zur Echtzeit-Kundenprofil-API
 description: Die Echtzeit-Kundenprofil-API ermöglicht es Entwicklern, Profildaten zu untersuchen und mit ihnen zu arbeiten, einschließlich Anzeigen von Profilen, Erstellen und Aktualisieren von Zusammenführungsrichtlinien, Exportieren oder Beispielprofildaten und Löschen von Profildaten, die nicht mehr benötigt werden oder fehlerhaft hinzugefügt wurden. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '961'
 ht-degree: 27%
 
 ---
@@ -28,7 +28,7 @@ Eine Anleitung zum Arbeiten mit [!DNL Real-Time Customer Profile] Daten in der [
 
 Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignisebene in Attribute auf Profilebene aggregiert werden. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können.
 
-Jedes berechnete Attribut enthält einen Ausdruck oder eine &quot;Regel&quot;, der/die eingehende Daten auswertet und den resultierenden Wert in einem Profilattribut speichert. Mit diesen Berechnungen können Sie Fragen im Zusammenhang mit dem Kaufwert über die gesamte Lebensdauer, der Zeit zwischen Käufen oder der Anzahl der Anwendungsöffnungen leicht beantworten, ohne für jede benötigte Information manuell komplexe Berechnungen ausführen zu müssen. Diese berechneten Attributwerte können dann in einem Profil angezeigt, zum Erstellen eines Segments verwendet oder über verschiedene Zugriffsmuster aufgerufen werden.
+Jedes berechnete Attribut enthält einen Ausdruck oder eine &quot;Regel&quot;, der/die eingehende Daten auswertet und den resultierenden Wert in einem Profilattribut speichert. Mit diesen Berechnungen können Sie Fragen im Zusammenhang mit dem Kaufwert über die gesamte Lebensdauer, der Zeit zwischen Käufen oder der Anzahl der Anwendungsöffnungen leicht beantworten, ohne für jede benötigte Information manuell komplexe Berechnungen ausführen zu müssen. Diese berechneten Attributwerte können dann in einem Profil angezeigt, zum Erstellen einer Zielgruppe verwendet oder über verschiedene Zugriffsmuster aufgerufen werden.
 
 Sie können berechnete Attribute mithilfe der Variablen `ca/attributes/` -Endpunkt. Informationen zur Verwendung berechneter Attribute finden Sie im Abschnitt [Übersicht über berechnete Attribute](../computed-attributes/overview.md). Besuchen Sie für API-Vorgänge den Abschnitt [Handbuch zum API-Endpunkt für berechnete Attribute](../computed-attributes/api.md).
 
@@ -42,7 +42,7 @@ Die Adobe Experience Platform ermöglicht eine Personalisierung von Kundenerlebn
 
 ## Exportaufträge ([!DNL Profile]-Export) {#profile-export}
 
-[!DNL Real-Time Customer Profile] -Daten können zur weiteren Verarbeitung in einen Datensatz exportiert werden, z. B. zum Exportieren von Zielgruppensegmenten zur Aktivierung oder zum Reporting von Profilattributen. Exportaufträge für Zielgruppensegmente sind Teil der [!DNL Adobe Experience Platform Segmentation Service] API, lesen Sie bitte die [Endpunktleitfaden für Segmentierungs-Exportaufträge](../../profile/api/export-jobs.md) , um mehr zu erfahren. Eine schrittweise Anleitung zum Erstellen und Verwalten von Exportaufträgen für Profilattribute finden Sie unter [Endpunktleitfaden für Exportaufträge](export-jobs.md).
+[!DNL Real-Time Customer Profile] -Daten können zur weiteren Verarbeitung in einen Datensatz exportiert werden, z. B. zum Exportieren von Zielgruppen zur Aktivierung oder zum Reporting von Profilattributen. Exportaufträge für Zielgruppen sind Teil der [!DNL Adobe Experience Platform Segmentation Service] API, lesen Sie bitte die [Endpunktleitfaden für Segmentierungs-Exportaufträge](../../profile/api/export-jobs.md) , um mehr zu erfahren. Eine schrittweise Anleitung zum Erstellen und Verwalten von Exportaufträgen für Profilattribute finden Sie unter [Endpunktleitfaden für Exportaufträge](export-jobs.md).
 
 ## Zusammenführungsrichtlinien {#merge-policies}
 

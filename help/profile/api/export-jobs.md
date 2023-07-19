@@ -4,16 +4,16 @@ title: Profil-Export-Auftrags-API-Endpunkt
 type: Documentation
 description: Das Echtzeit-Kundenprofil ermöglicht es Ihnen, innerhalb von Adobe Experience Platform eine zentrale Ansicht einzelner Kunden zu erstellen, indem es Daten aus verschiedenen Quellen zusammenführt, einschließlich Attributdaten und Verhaltensdaten. Profildaten können dann zur weiteren Verarbeitung in einen Datensatz exportiert werden.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1518'
 ht-degree: 11%
 
 ---
 
 # Endpunkt der Profilexport-Aufträge
 
-[!DNL Real-Time Customer Profile] ermöglicht Ihnen, eine zentrale Ansicht einzelner Kunden zu erstellen, indem Sie Daten aus verschiedenen Quellen zusammenführen, einschließlich Attributdaten und Verhaltensdaten. Profildaten können dann zur weiteren Verarbeitung in einen Datensatz exportiert werden. Beispielsweise Zielgruppensegmente aus [!DNL Profile] -Daten können zur Aktivierung exportiert und Profilattribute zur Berichterstellung exportiert werden.
+[!DNL Real-Time Customer Profile] ermöglicht Ihnen, eine zentrale Ansicht einzelner Kunden zu erstellen, indem Sie Daten aus verschiedenen Quellen zusammenführen, einschließlich Attributdaten und Verhaltensdaten. Profildaten können dann zur weiteren Verarbeitung in einen Datensatz exportiert werden. Beispiel: [!DNL Profile] -Daten können zur Aktivierung exportiert werden, indem Zielgruppen erstellt werden, und Profilattribute können zur Berichterstellung exportiert werden.
 
 Dieses Dokument enthält eine schrittweise Anleitung zum Erstellen und Verwalten von Exportvorgängen mit dem [Profil-API](https://www.adobe.com/go/profile-apis-en).
 
@@ -37,7 +37,7 @@ Beim Exportieren [!DNL Profile] -Daten, muss zunächst ein Zieldatensatz erstell
 
 Eine der wichtigsten Überlegungen ist das Schema, auf dem der Datensatz basiert (`schemaRef.id` in der API-Beispielanfrage unten). Um Profildaten zu exportieren, muss der Datensatz auf der [!DNL XDM Individual Profile] Vereinigungsschema (`https://ns.adobe.com/xdm/context/profile__union`). Ein Vereinigungsschema ist ein systemgeneriertes, schreibgeschütztes Schema, das die Felder von Schemas aggregiert, die dieselbe Klasse aufweisen. In diesem Fall ist dies die [!DNL XDM Individual Profile] -Klasse. Weitere Informationen zu Vereinigungsansichtsschemas finden Sie im [Vereinigungsabschnitt im Handbuch zu den Grundlagen der Schemakomposition](../../xdm/schema/composition.md#union).
 
-In den in diesem Tutorial beschriebenen Schritten wird beschrieben, wie Sie einen Datensatz erstellen, der auf die [!DNL XDM Individual Profile] Vereinigungsschema mit [!DNL Catalog] API. Sie können auch die [!DNL Platform] -Benutzeroberfläche zum Erstellen eines Datensatzes, der auf das Vereinigungsschema verweist. Die Schritte zur Verwendung der Benutzeroberfläche werden im Abschnitt [Dieses UI-Tutorial zum Exportieren von Segmenten](../../segmentation/tutorials/create-dataset-export-segment.md) aber auch hier anwendbar sind. Nach Abschluss können Sie zu diesem Tutorial zurückkehren, um mit den Schritten für [Starten eines neuen Exportvorgangs](#initiate).
+In den in diesem Tutorial beschriebenen Schritten wird beschrieben, wie Sie einen Datensatz erstellen, der auf die [!DNL XDM Individual Profile] Vereinigungsschema mit [!DNL Catalog] API. Sie können auch die [!DNL Platform] -Benutzeroberfläche zum Erstellen eines Datensatzes, der auf das Vereinigungsschema verweist. Die Schritte zur Verwendung der Benutzeroberfläche werden im Abschnitt [Dieses UI-Tutorial zum Exportieren von Zielgruppen](../../segmentation/tutorials/create-dataset-export-segment.md) aber auch hier anwendbar sind. Nach Abschluss können Sie zu diesem Tutorial zurückkehren, um mit den Schritten für [Starten eines neuen Exportvorgangs](#initiate).
 
 Wenn Sie bereits über einen kompatiblen Datensatz verfügen und dessen Kennung kennen, können Sie direkt mit dem Schritt für [Starten eines neuen Exportvorgangs](#initiate).
 
@@ -132,11 +132,11 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `fields` | *(Optional)* Beschränkt die im Export einzuschließenden Datenfelder auf die in diesem Parameter angegebenen Felder. Wird dieser Wert nicht angegeben, werden alle Felder in die exportierten Daten aufgenommen. |
-| `mergePolicy` | *(Optional)* Gibt die Zusammenführungsrichtlinie an, die für die exportierten Daten gelten soll. Schließen Sie diesen Parameter ein, wenn mehrere Segmente exportiert werden. |
+| `mergePolicy` | *(Optional)* Gibt die Zusammenführungsrichtlinie an, die für die exportierten Daten gelten soll. Schließen Sie diesen Parameter ein, wenn mehrere Zielgruppen exportiert werden. |
 | `mergePolicy.id` | Die Kennung der Zusammenführungsrichtlinie. |
 | `mergePolicy.version` | Die spezifische Version der zu verwendenden Zusammenführungsrichtlinie. Wird dieser Wert nicht angegeben, wird standardmäßig die neueste Version verwendet. |
 | `additionalFields.eventList` | *(Optional)* Steuert die Zeitreihen-Ereignisfelder, die für untergeordnete oder verknüpfte Objekte exportiert werden, indem eine oder mehrere der folgenden Einstellungen bereitgestellt werden:<ul><li>`eventList.fields`: Kontrollieren Sie die zu exportierenden Felder.</li><li>`eventList.filter`: Gibt Kriterien an, die die Ergebnisse aus verknüpften Objekten einschränken. Erwartet einen für den Export erforderlichen Mindestwert, normalerweise ein Datum.</li><li>`eventList.filter.fromIngestTimestamp`: Filtert Zeitreihenereignisse nach denjenigen, die nach dem angegebenen Zeitstempel erfasst wurden. Dies ist nicht die Ereigniszeit selbst, sondern die Erfassungszeit für die Ereignisse.</li></ul> |
-| `destination` | **(Erforderlich)** Zielinformationen für die exportierten Daten:<ul><li>`destination.datasetId`: **(Erforderlich)** Die ID des Datensatzes, in den Daten exportiert werden sollen.</li><li>`destination.segmentPerBatch`: *(Optional)* Ein boolescher Wert, der standardmäßig auf `false`. Ein Wert von `false` exportiert alle Segment-IDs in eine Batch-Kennung. Ein Wert von `true` exportiert eine Segment-ID in eine Batch-Kennung. Beachten Sie, dass die Einstellung von `true` kann sich auf die Batch-Exportleistung auswirken.</li></ul> |
+| `destination` | **(Erforderlich)** Zielinformationen für die exportierten Daten:<ul><li>`destination.datasetId`: **(Erforderlich)** Die ID des Datensatzes, in den Daten exportiert werden sollen.</li><li>`destination.segmentPerBatch`: *(Optional)* Ein boolescher Wert, der standardmäßig auf `false`. Ein Wert von `false` exportiert alle Segmentdefinitions-IDs in eine Batch-Kennung. Ein Wert von `true` exportiert eine Segmentdefinitions-ID in eine Batch-Kennung. Beachten Sie, dass die Einstellung von `true` kann sich auf die Batch-Exportleistung auswirken.</li></ul> |
 | `schema.name` | **(Erforderlich)** Der Name des Schemas, das mit dem Datensatz verknüpft ist, in den Daten exportiert werden sollen. |
 
 >[!NOTE]
@@ -494,6 +494,6 @@ Um einen Exportauftrag zu erstellen, der nur Ereignisdaten (keine Profilattribut
   }
 ```
 
-### Segmente exportieren
+### Audiences exportieren
 
-Sie können auch den Endpunkt &quot;Exportaufträge&quot;verwenden, um Zielgruppensegmente anstelle von [!DNL Profile] Daten. Siehe Handbuch unter [Exportaufträge in der Segmentation-API](../../segmentation/api/export-jobs.md) für weitere Informationen.
+Sie können auch den Endpunkt &quot;Exportaufträge&quot;verwenden, um Zielgruppen anstelle von zu exportieren [!DNL Profile] Daten. Siehe Handbuch unter [Exportaufträge in der Segmentation-API](../../segmentation/api/export-jobs.md) für weitere Informationen.

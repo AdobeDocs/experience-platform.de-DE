@@ -4,10 +4,10 @@ user-guide-title: Segmentierungs-Service von Adobe Experience Platform
 breadcrumb-title: Handbuch zum Segmentierungs-Service
 user-guide-description: Erstellen Sie Zielgruppen aus Ihren Echtzeit-Kundenprofildaten mithilfe von Adobe Experience Platform-generierten Segmentdefinitionen oder externen Quellen.
 feature: Segments
-source-git-commit: 0a3dbb49948278f4fd12737938ad00f2f7abb681
+source-git-commit: 4dbd20dd3ac596052a3390eb6d3731fac7095c0d
 workflow-type: tm+mt
 source-wordcount: '176'
-ht-degree: 88%
+ht-degree: 87%
 
 ---
 
@@ -30,8 +30,8 @@ ht-degree: 88%
    - [Streaming-Segmentierung ](api/streaming-segmentation.md)
 - Segmentierungsbenutzeroberfläche {#ui}
    - [Übersicht](ui/overview.md)
+   - [Zielgruppen-Dashboard](ui/audience-dashboard.md)
    - [Zielgruppenkomposition](ui/audience-composition.md)
-   - [Segment-Dashboard](ui/segment-dashboard.md)
    - [Segment Builder](ui/segment-builder.md)
    - [Edge-Segmentierung](ui/edge-segmentation.md)
    - [Streaming-Segmentierung](ui/streaming-segmentation.md)
@@ -61,7 +61,7 @@ ht-degree: 88%
    - [Erstellen eines Segments (Video)](video/create-segment.md)
    - [Erstellen eines dynamischen Segments (Video)](video/create-a-dynamic-segment.md)
    - [Erstellen eines Segments mit mehreren Entitäten (Video)](video/create-multi-entity-segments.md)
-   - [Bewerten eines Segments](tutorials/evaluate-a-segment.md)
+   - [Auswerten eines Segments](tutorials/evaluate-a-segment.md)
    - [Importieren und Verwenden externer Zielgruppen](tutorials/using-external-audiences.md)
    - [Erstellen eines Datensatzes zum Exportieren von Daten](tutorials/create-dataset-export-segment.md)
    - [Erzwingen der Datennutzungs-Compliance für Segmente](tutorials/governance.md)
