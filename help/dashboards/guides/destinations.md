@@ -7,7 +7,7 @@ exl-id: 6a34a796-24a1-450a-af39-60113928873e
 source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
 source-wordcount: '3031'
-ht-degree: 53%
+ht-degree: 65%
 
 ---
 
@@ -69,8 +69,8 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 
 * [[!UICONTROL Am häufigsten verwendete Ziele]](#most-used-destinations)
 * [[!UICONTROL Kürzlich erstellte Ziele]](#recently-created-destinations)
-* [[!UICONTROL Kürzlich aktivierte Zielgruppen]](#recently-activated-audiences)
-* [[!UICONTROL Kürzlich aktivierte Zielgruppen nach Ziel]](#recently-activated-audiences-by-destination)
+* [[!UICONTROL Zuletzt aktivierte Zielgruppen]](#recently-activated-audiences)
+* [[!UICONTROL Zuletzt aktivierte Zielgruppen nach Ziel]](#recently-activated-audiences-by-destination)
 * [[!UICONTROL Trend der Audience-Größe]](#audience-size-trend)
 * [[!UICONTROL Nicht zugeordnete Zielgruppen nach Identität]](#unmapped-audiences-by-identity)
 * [[!UICONTROL Zugeordnete Zielgruppen nach Identität]](#mapped-audiences-by-identity)
@@ -88,7 +88,7 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mostuseddestinations"
 >title="Am häufigsten verwendete Ziele"
->abstract="Dieses Widget zeigt die aktivsten Ziele Ihres Unternehmens anhand der Anzahl der zugeordneten Zielgruppen an. Diese Zahlen sind zum Zeitpunkt des letzten Schnappschusses korrekt. Diese Rangfolge bietet Einblicke, welche Ziele derzeit am häufigsten verwendet werden, und hebt jene hervor, die möglicherweise nicht ausreichend genutzt werden."
+>abstract="Dieses Widget zeigt die aktivsten Ziele Ihres Unternehmens gemessen an der Anzahl der zugeordneten Zielgruppen an. Diese Zahlen sind zum Zeitpunkt des letzten Schnappschusses korrekt. Diese Rangfolge bietet Einblicke, welche Ziele derzeit am häufigsten verwendet werden, und hebt jene hervor, die möglicherweise nicht ausreichend genutzt werden."
 
 Die **[!UICONTROL Am häufigsten verwendete Ziele]** -Widget zeigt die wichtigsten Ziele Ihres Unternehmens nach der Anzahl der zugeordneten Zielgruppen ab dem letzten Schnappschuss an. Diese Rangfolge bietet Einblicke, welche Ziele verwendet werden, und zeigt gleichzeitig, welche möglicherweise nicht genügend genutzt werden.
 
@@ -117,14 +117,14 @@ Weitere Informationen zum Konfigurieren bestimmter Zieltypen finden Sie in der [
 
 ![Die Registerkarte „Übersicht“ im Dashboard „Ziele“ mit dem hervorgehobenen Widget „Kürzlich erstellte Ziele“.](../images/destinations/recently-created-destinations.png)
 
-### [!UICONTROL Kürzlich aktivierte Zielgruppen] {#recently-activated-audiences}
+### [!UICONTROL Zuletzt aktivierte Zielgruppen] {#recently-activated-audiences}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_recentlyactivatedsegments"
->title="Kürzlich aktivierte Zielgruppen"
->abstract="Dieses Widget bietet eine Liste der Zielgruppen, die zuletzt einem Ziel zugeordnet wurden. Diese Liste enthält eine Momentaufnahme der Zielgruppen und Ziele, die aktiv im System verwendet werden, und kann bei der Fehlerbehebung bei fehlerhaften Zuordnungen helfen."
+>title="Zuletzt aktivierte Zielgruppen"
+>abstract="Dieses Widget bietet eine Liste der Zielgruppen, die zuletzt einem Ziel zugeordnet wurden. Diese Liste enthält eine Momentaufnahme der Zielgruppen und Ziele, die aktiv im System verwendet werden, und kann bei der Fehlerbehebung bei fehlerhaften Zuordnungen hilfreich sein."
 
-Die **[!UICONTROL Kürzlich aktivierte Zielgruppen]** -Widget stellt eine Liste der Zielgruppen bereit, die zuletzt einem Ziel zugeordnet wurden. Diese Liste enthält eine Momentaufnahme der Zielgruppen und Ziele, die aktiv im System verwendet werden, und kann bei der Fehlerbehebung bei fehlerhaften Zuordnungen helfen.
+Die **[!UICONTROL Kürzlich aktivierte Zielgruppen]** -Widget stellt eine Liste der Zielgruppen bereit, die zuletzt einem Ziel zugeordnet wurden. Diese Liste enthält eine Momentaufnahme der Zielgruppen und Ziele, die aktiv im System verwendet werden, und kann bei der Fehlerbehebung bei fehlerhaften Zuordnungen hilfreich sein.
 
 Die [!UICONTROL Aktualisiert] Das angezeigte Datum zeigt an, wann die Zielgruppe zuletzt für das Ziel aktiviert wurde, und ist auf den letzten täglichen Schnappschuss genau. Wenn Sie also eine Zielgruppe für das Ziel aktivieren, ändert sich das aktualisierte Datum erst, nachdem der nächste Schnappschuss erstellt wurde.
 
@@ -134,12 +134,12 @@ Weiterführende Informationen zum Arbeiten mit Zielgruppen in Experience Platfor
 
 ![Die Registerkarte Übersicht im Dashboard Ziele mit dem Widget Zuletzt aktivierte Zielgruppen wurde hervorgehoben.](../images/destinations/recently-activated-audiences.png)
 
-### [!UICONTROL Kürzlich aktivierte Zielgruppen nach Ziel] {#recently-activated-audiences-by-destination}
+### [!UICONTROL Zuletzt aktivierte Zielgruppen nach Ziel] {#recently-activated-audiences-by-destination}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_recentlyactivatedsegmentsbydestination"
->title="Kürzlich aktivierte Zielgruppen nach Ziel"
->abstract="Dieses Widget zeigt die fünf zuletzt aktivierten Zielgruppen in absteigender Reihenfolge an, je nach dem im Dropdown-Menü &quot;Übersicht&quot;ausgewählten Ziel."
+>title="Zuletzt aktivierte Zielgruppen nach Ziel"
+>abstract="Dieses Widget zeigt in absteigender Reihenfolge die fünf am häufigsten aktivierten Zielgruppen für das Ziel an, das im Dropdown-Menü „Übersicht“ ausgewählt wurde."
 
 Die **[!UICONTROL Kürzlich aktivierte Zielgruppen nach Ziel]** -Widget zeigt die fünf zuletzt aktivierten Zielgruppen in absteigender Reihenfolge an, je nach dem im Dropdown-Menü &quot;Übersicht&quot;ausgewählten Ziel. Sie ähnelt dem [!UICONTROL Kürzlich aktivierte Zielgruppen] Widget, aber die angezeigten Daten **only** gilt für das ausgewählte Ziel.
 
@@ -156,7 +156,7 @@ Weitere Informationen finden Sie im Abschnitt Voraussetzungen für das [verwende
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_audiencesizetrend"
 >title="Trend der Audience-Größe"
->abstract="Dieses Widget zeigt die Anzahl der Profile in der Audience, die täglich an das Zielkonto gesendet werden. Mit dem ersten Dropdown-Menü wird der Zeitraum für die Entwicklung der Zielgruppe angepasst. Im zweiten Widget-Dropdown-Menü wird die Zielgruppe für die Analyse ausgewählt. Das Ziel wird im Dropdown-Menü „Übersicht“ ausgewählt."
+>abstract="Dieses Widget veranschaulicht die Anzahl der in der Zielgruppe enthaltenen Profile, die täglich an das Zielkonto gesendet werden. Mit dem ersten Dropdown-Menü wird der Zeitraum für die Entwicklung der Zielgruppe angepasst. Im zweiten Dropdown-Menü des Widgets wird die Zielgruppe für die Analyse ausgewählt. Das Ziel wird im Dropdown-Menü „Übersicht“ ausgewählt."
 
 Die **[!UICONTROL Zielgruppengrößentrend]** Widget zeigt die Beziehung der Profilanzahl über einen bestimmten Zeitraum für eine Zielgruppe an, die diesem Zielkonto zugeordnet wurde. Das Widget verwendet ein Liniendiagramm, um die Anzahl der in der Zielgruppe enthaltenen Profile zu veranschaulichen, die täglich an das Zielkonto gesendet werden.
 
@@ -175,7 +175,7 @@ Das Widget **[!UICONTROL Entwicklung der Zielgruppengröße]** enthält oben rec
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_unmappedsegmentsbyidentity"
 >title="Nicht zugeordnete Zielgruppen nach Identität"
->abstract="Dieses Widget listet die fünf häufigsten **nicht zugeordnet** Zielgruppen, die nach absteigender Identitätsanzahl für ein bestimmtes Ziel und eine bestimmte Identität geordnet sind. Die Filter-IDs, die im Dropdown-Menü des Widgets aufgeführt sind, ändern sich je nach dem Zielkonto, das oben auf der Übersichtsseite ausgewählt wurde."
+>abstract="Dieses Widget listet die fünf häufigsten **nicht zugeordneten** Zielgruppen auf, die nach absteigender Identitätsanzahl für ein bestimmtes Ziel und eine bestimmte Identität angeordnet werden. Die Filter-IDs, die im Dropdown-Menü des Widgets aufgeführt sind, ändern sich je nach dem Zielkonto, das oben auf der Übersichtsseite ausgewählt wurde."
 
 Die **[!UICONTROL Nicht zugeordnete Zielgruppen nach Identität]** Widget listet die fünf obersten **nicht zugeordnet** Zielgruppen, die nach absteigender Identitätsanzahl für ein bestimmtes Ziel und eine bestimmte Identität geordnet sind. Es werden Zielgruppen hervorgehoben, die basierend auf der ausgewählten ID dem ausgewählten Zielkonto am besten zugeordnet werden.
 
@@ -192,9 +192,9 @@ Weitere Informationen finden Sie im Abschnitt Voraussetzungen für das [verwende
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mappedsegmentsbyidentity"
 >title="Zugeordnete Zielgruppen nach Identität"
->abstract="Dieses Widget bietet die fünf wichtigsten Listen von **zugeordnet** Zielgruppen. Die Liste wird von oben nach unten entsprechend der Anzahl der Quell-IDs in den Zielgruppen sortiert. Die zu zählende Ziel-ID wird aus dem Dropdown-Menü unter dem Widget-Titel ausgewählt. Die in der Widget-Dropdown-Liste verfügbaren Ziel-IDs hängen vom oben im Dashboard „Übersicht“ ausgewählten Ziel ab."
+>abstract="Dieses Widget listet die fünf am häufigsten **zugeordneten** Zielgruppen auf. Die Liste wird in absteigender Reihenfolge nach der Anzahl der in den Zielgruppen enthaltenen Quell-IDs sortiert. Die zu zählende Ziel-ID wird aus dem Dropdown-Menü unter dem Widget-Titel ausgewählt. Die in der Widget-Dropdown-Liste verfügbaren Ziel-IDs hängen vom oben im Dashboard „Übersicht“ ausgewählten Ziel ab."
 
-Dieses Widget bietet die fünf wichtigsten Listen von **zugeordnet** Zielgruppen. Die Liste wird von oben nach unten entsprechend der Anzahl der Quell-IDs in den Zielgruppen sortiert. Die zu zählende Ziel-ID wird aus dem Dropdown-Menü unter dem Widget-Titel ausgewählt. Die Ziel-IDs, die über die Dropdown-Liste im Widget verfügbar sind, ändern sich entsprechend dem Zielkontofilter, der oben im Dashboard „Übersicht“ ausgewählt wird.
+Dieses Widget listet die fünf am häufigsten **zugeordneten** Zielgruppen auf. Die Liste wird in absteigender Reihenfolge nach der Anzahl der in den Zielgruppen enthaltenen Quell-IDs sortiert. Die zu zählende Ziel-ID wird aus dem Dropdown-Menü unter dem Widget-Titel ausgewählt. Die Ziel-IDs, die über die Dropdown-Liste im Widget verfügbar sind, ändern sich entsprechend dem Zielkontofilter, der oben im Dashboard „Übersicht“ ausgewählt wird.
 
 ![Zugeordnete Zielgruppen nach Identitäts-Widget.](../images/destinations/mapped-audiences-by-identity.png)
 
@@ -205,9 +205,9 @@ Die **[!UICONTROL Zugeordnete Zielgruppen nach Identität]** Widget hebt auf ein
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_commonaudiences"
 >title="Häufige Zielgruppen"
->abstract="Dieses Widget bietet eine Liste der fünf wichtigsten Zielgruppen, die für das am oberen Seitenrand ausgewählte Zielkonto aktiviert werden, sowie das im Widget-Dropdown-Menü ausgewählte Ziel. Die Liste der Zielgruppen wird nach der kürzlich erfolgten Aktivierung geordnet. Oben wird die zuletzt aktivierte Audience angezeigt."
+>abstract="Dieses Widget bietet eine Liste der fünf wichtigsten Zielgruppen, die für das am oberen Seitenrand ausgewählte Zielkonto aktiviert wurden, sowie das im Widget-Dropdown-Menü ausgewählte Ziel. Die Liste der Zielgruppen wird nach dem Zeitpunkt ihrer Aktivierung geordnet. Die zuletzt aktivierte Zielgruppe wird oben angezeigt."
 
-Die **[!UICONTROL Häufige Zielgruppen]** Widget bietet eine Liste der fünf wichtigsten Zielgruppen, die für das am oberen Seitenrand ausgewählte Zielkonto aktiviert werden, sowie das im Widget-Dropdown-Menü ausgewählte Ziel. Die Liste der Zielgruppen wird nach der kürzlich erfolgten Aktivierung geordnet. Oben wird die zuletzt aktivierte Audience angezeigt.
+Die **[!UICONTROL Häufige Zielgruppen]** Widget bietet eine Liste der fünf wichtigsten Zielgruppen, die für das am oberen Seitenrand ausgewählte Zielkonto aktiviert werden, sowie das im Widget-Dropdown-Menü ausgewählte Ziel. Die Liste der Zielgruppen wird nach dem Zeitpunkt ihrer Aktivierung geordnet. Die zuletzt aktivierte Zielgruppe wird oben angezeigt.
 
 Die [!UICONTROL ZIELGRUPPENGRÖSSE] gibt die Gesamtzahl der Profile jeder aufgelisteten Zielgruppe an.
 
@@ -226,7 +226,7 @@ Auswählen **[!UICONTROL Zielgruppen]** Navigieren zum Zielgruppen-Dashboard [!U
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mappedaudiencehealth"
 >title="Zustand der zugeordneten Zielgruppe"
->abstract="Dieses Widget bietet eine Liste von bis zu 20 zugeordneten Zielgruppen, deren Gesamtprofilzahlen um einen Faktor von mindestens einer Standardabweichung von der 30-Tage-Mittelwert der Zielgruppengröße abweichen, die diesem Ziel zugeordnet ist. Es bietet eine berechnete Metrik für die Streuung der Zielgruppengrößen vom Mittelwert der letzten 30 Tage. Die Zielgruppengrößen werden absteigend sortiert."
+>abstract="Dieses Widget bietet eine Liste von bis zu 20 zugeordneten Zielgruppen, deren Gesamtprofilanzahl um einen Faktor von mindestens einer Standardabweichung vom 30-Tage-Mittelwert der Zielgruppengröße abweicht, die diesem Ziel zugeordnet ist. Es bietet eine berechnete Metrik für die Streuung der Zielgruppengrößen vom Mittelwert der letzten 30 Tage. Die Zielgruppengrößen werden absteigend sortiert."
 
 Das Widget bietet eine Liste von bis zu 20 zugeordneten Zielgruppen, deren Gesamtzahl der Profile ab der letzten täglichen Momentaufnahme um einen Faktor von mindestens einer Standardabweichung von der 30 Tage mittleren Zielgruppengröße, die diesem Ziel zugeordnet ist, abweicht.
 

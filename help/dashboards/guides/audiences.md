@@ -7,7 +7,7 @@ exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
 source-wordcount: '2098'
-ht-degree: 48%
+ht-degree: 50%
 
 ---
 
@@ -181,7 +181,7 @@ Auswählen **[!UICONTROL Schließen]** , um zur [!UICONTROL Zielgruppen] Dashboa
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_identityoverlap"
 >title="Identitätsüberschneidung"
->abstract="Dieses Widget zeigt die Überschneidung von Profilen in Ihrer Zielgruppe, die beide ausgewählte Identitäten enthalten. Die Kreise zeigen die relative Größe jeder Identität an. Die Anzahl der Profile, die beide Namespaces enthalten, wird durch den Überschneidungsbereich der Kreise dargestellt."
+>abstract="Dieses Widget zeigt die Überschneidung von Profilen in der Zielgruppe an, die beide ausgewählten Identitäten enthalten. Die Kreise zeigen die relative Größe jeder Identität an. Die Anzahl der Profile, die beide Namespaces enthalten, wird durch den Überschneidungsbereich der Kreise dargestellt."
 
 Die **[!UICONTROL Identitätsüberschneidung]** -Widget zeigt ein Venn-Diagramm oder ein Set-Diagramm an, das die Überschneidung von Profilen in Ihrer Zielgruppe mit mehreren Identitäten anzeigt.
 
@@ -198,7 +198,7 @@ Weitere Informationen zu Identitäten finden Sie unter [Dokumentation zu Identit
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_profilesbyidentity"
 >title="Profile nach Identität"
->abstract="Dieses Widget zeigt die Aufschlüsselung der Identitäten für jedes zusammengeführte Profil in Ihrer ausgewählten Zielgruppe an."
+>abstract="Dieses Widget zeigt die Aufschlüsselung der Identitäten für jedes zusammengeführte Profil in der ausgewählten Zielgruppe an."
 
 Die **[!UICONTROL Profile nach Identität]** -Widget zeigt die Aufschlüsselung der Identitäten für jedes zusammengeführte Profil in Ihrer ausgewählten Zielgruppe an. Die Gesamtzahl der Profile nach Identität kann höher sein als die Gesamtzahl der Profile in der Zielgruppe, da einem Profil mehrere Identitäten zugeordnet sein können. Das heißt, dass die Summe der für jede Identität angezeigten Werte die Gesamtgröße der Zielgruppe übersteigen kann. Dies liegt daran, dass bei der Interaktion eines Kunden mit Ihrer Marke auf mehr als einem Kanal mehrere Identitäten mit diesem einzelnen Kunden verknüpft werden können.
 

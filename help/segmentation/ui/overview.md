@@ -6,7 +6,7 @@ exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 source-git-commit: 04c0b19bf4ffbc0719a89f710570cc667ca5e482
 workflow-type: tm+mt
 source-wordcount: '3606'
-ht-degree: 28%
+ht-degree: 30%
 
 ---
 
@@ -50,7 +50,7 @@ Weitere Informationen finden Sie unter [Dashboard-Handbuch für Zielgruppen](../
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
 >title="Abwanderung"
->abstract="Die Abwanderung stellt den Prozentsatz der Profile dar, die sich in einer Zielgruppe im Vergleich zum letzten Ausführen des Segmentauftrags ändern."
+>abstract="Die Fluktuation stellt den Prozentsatz der Profile dar, die sich innerhalb einer Zielgruppendefinition ändern, verglichen mit der letzten Ausführung des Zielgruppenvorgangs."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_evaluationmethodcolumnname"
@@ -59,8 +59,8 @@ Weitere Informationen finden Sie unter [Dashboard-Handbuch für Zielgruppen](../
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
->title="Alle Zielgruppen zur Planung hinzufügen"
->abstract="Aktivieren Sie diese Option, um alle Zielgruppen einzubeziehen, die mit der Batch-Segmentierung in der täglich geplanten Aktualisierung ausgewertet wurden. Deaktivieren Sie alle Zielgruppen aus der geplanten Aktualisierung."
+>title="Alle Zielgruppen zum Zeitplan hinzufügen"
+>abstract="Aktivieren Sie diese Option, um alle Zielgruppen einzubeziehen, die mit der Batch-Segmentierung in der täglich geplanten Aktualisierung ausgewertet wurden. Deaktivieren Sie sie, um alle Zielgruppen aus der geplanten Aktualisierung zu entfernen."
 
 Wählen Sie die **[!UICONTROL Durchsuchen]** um eine Liste aller Zielgruppen für Ihre Organisation anzuzeigen.
 

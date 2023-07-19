@@ -44,20 +44,20 @@ Informationen zum Erstellen von Segmentdefinitionen mithilfe der API finden Sie 
 >
 >Wenn für den Datensatz ein Wert der Gültigkeitsdauer von Erlebnisereignissen aktiviert ist, könnte sich dies auf die Zugehörigkeit des erstellten Segments auswirken. Weiterführende Informationen dazu, wie sich diese Funktion auf die Segmentierung auswirken kann, finden Sie im Handbuch zur [Gültigkeitsdauer von Erlebnisereignissen](../profile/event-expirations.md).
 
-## Bewerten von Segmenten {#evaluate-segments}
+## Auswerten von Segmenten {#evaluate-segments}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
->title="Evaluierungsmethoden"
->abstract="Platform unterstützt derzeit drei Methoden zum Evaluieren von Segmenten: Streaming-Segmentierung, Batch-Segmentierung und Edge-Segmentierung."
+>title="Auswertungsmethoden"
+>abstract="Platform unterstützt derzeit drei Methoden zum Auswerten von Segmenten: Streaming-Segmentierung, Batch-Segmentierung und Edge-Segmentierung."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
->title="Streaming-Evaluierung"
+>title="Streaming-Auswertung"
 >abstract="Die Streaming-Segmentierung ist ein fortlaufender Datenauswahlprozess, der Ihre Segmente infolge von Benutzeraktivitäten aktualisiert."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=de" text="Auswerten von Ereignissen mit Streaming-Segmentierung nahezu in Echtzeit"
 
-Platform unterstützt derzeit drei Methoden zum Evaluieren von Segmenten: Streaming-Segmentierung, Batch-Segmentierung und Edge-Segmentierung.
+Platform unterstützt derzeit drei Methoden zum Auswerten von Segmenten: Streaming-Segmentierung, Batch-Segmentierung und Edge-Segmentierung.
 
 ### Streaming-Segmentierung  {#streaming}
 
@@ -69,28 +69,28 @@ Weitere Informationen zur Streaming-Segmentierung finden Sie in der [Dokumentati
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_batch"
->title="Batch-Evaluierung"
+>title="Batch-Auswertung"
 >abstract="Als Alternative zum kontinuierlichen Datenauswahlprozess werden bei der Batch-Segmentierung alle Profildaten gleichzeitig mit Segmentdefinitionen verglichen, um entsprechende Zielgruppen zu erstellen. Nach der Erstellung eines Segments wird es gespeichert, sodass Sie es exportieren und weiterverwenden können."
 
 Als Alternative zum kontinuierlichen Datenauswahlprozess werden bei der Batch-Segmentierung alle Profildaten gleichzeitig mit Segmentdefinitionen verglichen, um entsprechende Zielgruppen zu erstellen. Nach der Erstellung eines Segments wird es gespeichert, sodass Sie es exportieren und weiterverwenden können.
 
-Batch-Segmente werden automatisch alle 24 Stunden evaluiert. Wenn Sie ein Batch-Segment on demand evaluieren möchten, können Sie einen Segmentierungsvorgang verwenden. Weitere Informationen zu Segmentierungsvorgängen finden Sie in der [Dokumentation zu Segmentierungsvorgängen](./api/segment-jobs.md).
+Batch-Segmente werden automatisch alle 24 Stunden ausgewertet. Wenn Sie ein Batch-Segment on demand auswerten möchten, können Sie einen Segmentierungsvorgang verwenden. Weitere Informationen zu Segmentierungsvorgängen finden Sie in der [Dokumentation zu Segmentierungsvorgängen](./api/segment-jobs.md).
 
 ### Edge-Segmentierung {#edge}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
->title="Edge-Evaluierung"
->abstract="Bei der Edge-Segmentierung werden Segmente in Platform sofort in Experience Edge evaluiert, was Anwendungsfälle mit Personalisierung auf derselben Seite und auf der nächsten Seite ermöglicht."
+>title="Edge-Auswertung"
+>abstract="Bei der Edge-Segmentierung werden Segmente in Platform sofort in Experience Edge ausgewertet, was Anwendungsfälle mit Personalisierung auf derselben Seite und auf der nächsten Seite ermöglicht."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=de" text="Handbuch zur Benutzeroberfläche für Edge-Segmentierung"
 
-Bei der Edge-Segmentierung werden Segmente in Platform sofort [in Experience Edge](../edge/home.md) evaluiert, was Anwendungsfälle mit Personalisierung auf derselben Seite und auf der nächsten Seite ermöglicht.
+Bei der Edge-Segmentierung werden Segmente in Platform sofort [in Experience Edge](../edge/home.md) ausgewertet, was Anwendungsfälle mit Personalisierung auf derselben Seite und auf der nächsten Seite ermöglicht.
 
 Weitere Informationen zur Edge-Segmentierung finden Sie in der [API-Dokumentation](./api/edge-segmentation.md) oder [Benutzeroberflächendokumentation](./ui/edge-segmentation.md).
 
 ## Zugriff auf Segmentierungsergebnisse
 
-Informationen darüber, wie Sie auf ein exportiertes Segment zugreifen können, finden Sie im [Tutorial zur Segmentevaluierung](./tutorials/evaluate-a-segment.md).
+Informationen darüber, wie Sie auf ein exportiertes Segment zugreifen können, finden Sie im [Tutorial zur Segmentauswertung](./tutorials/evaluate-a-segment.md).
 
 ## Segmentmetadaten
 
@@ -171,6 +171,6 @@ Mit der erweiterten Segmentierungsfunktion für mehrere Entitäten können Sie d
 - [!DNL Segmentation] ist der Prozess der Definition einer Untergruppe von Profilen aus Ihrem Profilspeicher, sodass Sie das Verhalten oder die Attribute Ihrer gewünschten marktfähigen Gruppe charakterisieren können. [!DNL Segmentation Service] ermöglicht diesen Prozess.
 - Beachten Sie bei der Planung eines Segments, dass es von einem beliebigen anderen Segment referenziert und mit diesem kombiniert werden kann.
 - Ein Segment kann mithilfe von Regeln basierend auf Profildaten, damit verbundenen Zeitreihendaten oder beidem erstellt werden.
-- Segmente können entweder bei Bedarf oder kontinuierlich evaluiert werden. Bei der On-demand-Evaluierung werden alle Profildaten gleichzeitig entsprechend den Segmentdefinitionen evaluiert. Wenn Daten kontinuierlich evaluiert werden, werden Sie unmittelbar mit den Segmentdefinitionen verglichen, wenn sie nach [!DNL Platform] übermittelt werden.
+- Segmente können entweder bei Bedarf oder kontinuierlich ausgewertet werden. Bei der On-demand-Auswertung werden alle Profildaten gleichzeitig entsprechend den Segmentdefinitionen evaluiert. Wenn Daten kontinuierlich ausgewertet werden, werden Sie unmittelbar mit den Segmentdefinitionen verglichen, wenn sie nach [!DNL Platform] übermittelt werden.
 
 Informationen zum Definieren von Segmenten in der Benutzeroberfläche finden Sie im [Segment Builder-Handbuch](./ui/overview.md). Informationen zum Erstellen von Segmentdefinitionen mithilfe der API finden Sie im Tutorial zum [Erstellen von Segmenten mithilfe der API](./tutorials/create-a-segment.md).

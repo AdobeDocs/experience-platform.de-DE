@@ -7,7 +7,7 @@ exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
 source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
 source-wordcount: '3393'
-ht-degree: 81%
+ht-degree: 83%
 
 ---
 
@@ -256,7 +256,7 @@ Bewegen Sie den Mauszeiger über die einzelnen Balken, um ein Dialogfeld mit der
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="Nicht segmentierte Profile"
->abstract="Dieses Widget stellt die Gesamtanzahl aller Profile bereit, die keiner Zielgruppe zugeordnet sind, und bietet die Möglichkeit zur Profilaktivierung in Ihrer Organisation."
+>abstract="Dieses Widget stellt die Gesamtanzahl aller Profile bereit, die keiner Zielgruppe zugeordnet sind, und bietet die Möglichkeit zur Profilaktivierung in Ihrer gesamten Organisation."
 
 Die [!UICONTROL Nicht segmentierte Profile] -Widget stellt die Gesamtanzahl aller Profile bereit, die keiner Zielgruppe zugeordnet sind. Der generierte Wert gibt die zum Zeitpunkt der letzten Momentaufnahme korrekte Anzahl an und zeigt, wie viele Profile in Ihrer gesamten Organisation aktiviert werden können. Es zeigt auch die Möglichkeit an, Profile auszuschließen, die keinen angemessenen ROI liefern.
 
@@ -267,7 +267,7 @@ Die [!UICONTROL Nicht segmentierte Profile] -Widget stellt die Gesamtanzahl alle
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="Trend von nicht segmentierten Profilen"
->abstract="Dieses Widget bietet eine grafische Darstellung der Anzahl der Profile, die über einen bestimmten Zeitraum an keine Zielgruppe angehängt sind. Der Trend von Profilen, die keiner Zielgruppe zugeordnet sind, kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden."
+>abstract="Dieses Widget bietet eine grafische Darstellung der Anzahl der Profile, die in einem bestimmten Zeitraum nicht mit einer Zielgruppe verbunden sind. Der Trend der Profile, die keiner Zielgruppe zugeordnet sind, kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden."
 
 Die [!UICONTROL Trendänderung von nicht segmentierten Profilen] Widget verwendet ein Liniendiagramm, um die Anzahl der Profile zu veranschaulichen, die seit dem letzten täglichen Schnappschuss hinzugefügt wurden und an keine Zielgruppe angehängt sind. Der Änderungstrend von Profilen, die keiner Zielgruppe zugeordnet sind, kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt. Die Anzahl der Profile wird auf der Y-Achse und die Zeit auf der X-Achse dargestellt.
 
