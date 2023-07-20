@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie Erstanbieterprofile mit Attributen vertrauens
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 019ebe0c1cf11a7fb30dced1e10b511bab9b5100
+source-git-commit: 486e1390dfa0602bef15d196d4a1a5befdc9ff23
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1083'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Ergänzung von Erstanbieterprofilen mit Attributen von vertrauenswürdigen Datenpartnern, um Ihre Datenbasis zu verbessern, neue Einblicke in Ihre Kundenbasis zu erhalten und eine bessere Zielgruppenoptimierung zu erzielen.
 
-![Anreichern von Profilen mit von Partnern bereitgestellten Attributen - Überblick über die Anwendungsfälle auf hoher Ebene.](/help/rtcdp/assets/partner-data/enrichment-use-case-overview.png)
+![Anreichern von Profilen mit von Partnern bereitgestellten Attributen - Überblick über die Anwendungsfälle auf hoher Ebene.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
 
 ## Voraussetzungen und Planung {#prerequisites-and-planning}
 
@@ -36,7 +36,7 @@ Wenn Sie erwägen, Ihre eigenen Erstanbieterprofile mit Attributen von Datenpart
 
 ## So erreichen Sie den Anwendungsfall: Übersicht auf hoher Ebene {#achieve-the-use-case-high-level}
 
-![Anreichern von Profilen mit von Partnern bereitgestellten Attributen - Überblick über die Anwendungsfälle auf hoher Ebene.](/help/rtcdp/assets/partner-data/enrichment-use-case-steps.png)
+![Anreichern von Profilen mit von Partnern bereitgestellten Attributen - Überblick über die Anwendungsfälle auf hoher Ebene.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-steps.png)
 
 1. Als **customer**, lizenzieren Sie Attribute aus dem **Datenpartner**.
 2. Als **customer**, erweitern Sie Ihre Profildaten und Ihr Governance-Modell um **Partner**-bereitgestellte Attribute.
