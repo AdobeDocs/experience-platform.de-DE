@@ -2,18 +2,14 @@
 title: Übersicht über Tags
 description: Tags in Adobe Experience Platform sind die nächste Generation von Funktionen für das Tag-Management von Adobe. Tags bieten Kunden eine einfache Möglichkeit, alle Analyse-, Marketing- und Werbe-Tags bereitzustellen und zu verwalten, die für relevante Kundenerlebnisse notwendig sind.
 exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
-source-git-commit: 13c02dd5930905e3851ff147c0ea4d914e3dc6c7
+source-git-commit: 81f25e74931354003d89a57adedb578ddfe00704
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '562'
 ht-degree: 100%
 
 ---
 
 # Übersicht über Tags
-
->[!NOTE]
->
->Die Ereignisweiterleitung ist eine gebührenpflichtige Funktion, die im Rahmen von Adobe Real-time Customer Data Platform Connections, Prime und Ultimate angeboten wird.
 
 >[!NOTE]
 >

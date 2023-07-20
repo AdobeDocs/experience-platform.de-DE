@@ -3,14 +3,18 @@ title: Übersicht über die Ereignisweiterleitung
 description: Hier erfahren Sie mehr über Adobe Experience Platform, mit dessen Hilfe Sie über das Platform Edge-Netzwerk Aufgaben ausführen können, ohne dabei Ihre Tag-Implementierung zu ändern.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 81f25e74931354003d89a57adedb578ddfe00704
 workflow-type: tm+mt
-source-wordcount: '1047'
-ht-degree: 87%
+source-wordcount: '1070'
+ht-degree: 88%
 
 ---
 
 # Übersicht über die Ereignisweiterleitung
+
+>[!NOTE]
+>
+>Die Ereignisweiterleitung ist eine gebührenpflichtige Funktion, die im Rahmen von Adobe Real-time Customer Data Platform Connections, Prime und Ultimate angeboten wird.
 
 >[!NOTE]
 >
