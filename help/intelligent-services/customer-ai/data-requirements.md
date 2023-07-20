@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;Erste Schritte;Kunden-KI;beliebte Themen;Kunden-KI-Eingabe;Kunden-KI-Ausgabe;Datenanforderungen
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Datenanforderungen in Kunden-KI
 topic-legacy: Getting started
 description: Erfahren Sie mehr über die erforderlichen Ereignisse, Eingaben und Ausgaben, die von Kunden-KI verwendet werden.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 5f7b602b68f5cbf4b1f4b08603757b0956e36408
+source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '2484'
 ht-degree: 100%
