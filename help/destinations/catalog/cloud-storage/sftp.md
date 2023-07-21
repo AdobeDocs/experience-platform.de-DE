@@ -2,10 +2,10 @@
 title: SFTP-Verbindung
 description: Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durch Trennzeichen getrennte Datendateien regelmäßig von Adobe Experience Platform zu exportieren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f05f8cb47a1f65e8931500d7064fdce48aa53347
 workflow-type: tm+mt
-source-wordcount: '1043'
-ht-degree: 64%
+source-wordcount: '1041'
+ht-degree: 61%
 
 ---
 
@@ -86,7 +86,7 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
 >title="Privater SSH-Schlüssel"
->abstract="Der private SSH-Schlüssel muss als eine mit Base64 verschlüsselte Zeichenfolge formatiert sein und darf nicht kennwortgeschützt sein."
+>abstract="Der private SSH-Schlüssel muss eine RSA-formatierte, Base64-kodierte Zeichenfolge sein und darf nicht kennwortgeschützt sein."
 
 Wenn Sie die **[!UICONTROL SFTP mit Kennwort]** Authentifizierungstyp für die Verbindung mit Ihrem SFTP-Speicherort:
 
@@ -108,7 +108,7 @@ Wenn Sie den Authentifizierungstyp **[!UICONTROL SFTP mit SSH-Schlüssel]** für
 * **[!UICONTROL Domain]**: Geben Sie die IP-Adresse oder den Domain-Namen Ihres SFTP-Kontos ein.
 * **[!UICONTROL Port]**: Der von Ihrem SFTP-Speicherort verwendete Port.
 * **[!UICONTROL Benutzername]**: Der Benutzername, mit dem Sie sich bei Ihrem SFTP-Speicherort anmelden.
-* **[!UICONTROL SSH-Schlüssel]**: Der private SSH-Schlüssel, der zum Anmelden bei Ihrem SFTP-Speicherort verwendet wird. Der private Schlüssel muss als eine mit Base64 verschlüsselte Zeichenfolge formatiert sein und darf nicht kennwortgeschützt sein.
+* **[!UICONTROL SSH-Schlüssel]**: Der private SSH-Schlüssel, der zum Anmelden bei Ihrem SFTP-Speicherort verwendet wird. Der private Schlüssel muss eine im RSA-Format formatierte Base64-kodierte Zeichenfolge sein und darf nicht kennwortgeschützt sein.
 * **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien eine Verschlüsselung hinzuzufügen. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung.
 
   ![Abbildung eines Beispiels für einen korrekt formatierten PGP-Schlüssel in der Benutzeroberfläche](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
