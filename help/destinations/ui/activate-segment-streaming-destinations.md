@@ -7,7 +7,7 @@ exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
 source-wordcount: '1029'
-ht-degree: 24%
+ht-degree: 25%
 
 ---
 
@@ -103,7 +103,7 @@ Wenn Sie ungehashte Quellattribute Zielattributen zuordnen, von denen das Ziel e
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
 >title="Enddatum"
->abstract="Das Hinzufügen eines Enddatums für den Zielgruppenzeitplan ist nicht verfügbar."
+>abstract="Dem Zielgruppenzeitplan kann kein Enddatum hinzugefügt werden."
 
 Standardmäßig wird die **[!UICONTROL Zielgruppenplanung]** zeigt nur die neu ausgewählten Zielgruppen an, die Sie im aktuellen Aktivierungsablauf ausgewählt haben.
 

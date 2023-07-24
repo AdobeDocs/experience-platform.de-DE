@@ -6,7 +6,7 @@ exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
 source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
 source-wordcount: '2000'
-ht-degree: 42%
+ht-degree: 44%
 
 ---
 
@@ -126,12 +126,12 @@ Geben Sie die Felder unten ein und wählen Sie **[!UICONTROL Mit Ziel verbinden]
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmentnames"
 >title="Segmentnamen einschließen"
->abstract="Schalten Sie ein, wenn der Datenexport die Namen der Zielgruppen enthalten soll, die exportiert werden sollen. In der Dokumentation finden Sie ein Beispiel für einen Datenexport mit dieser Option."
+>abstract="Schalten Sie diese Option ein, wenn der Datenexport die Namen der zu exportierenden Zielgruppen enthalten soll. In der Dokumentation finden Sie ein Beispiel für einen Datenexport mit dieser Option."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmenttimestamps"
 >title="Zeitstempel für Segmente einschließen"
->abstract="Schalten Sie ein, wenn der Datenexport zum Zeitpunkt der Erstellung und Aktualisierung der Zielgruppen den UNIX-Zeitstempel sowie den UNIX-Zeitstempel enthalten soll, zu dem die Zielgruppen zur Aktivierung dem Ziel zugeordnet wurden. In der Dokumentation finden Sie ein Beispiel für einen Datenexport mit dieser Option."
+>abstract="Schalten Sie diese Option ein, wenn der Datenexport den UNIX-Zeitstempel enthalten soll, an dem die Zielgruppen erstellt und aktualisiert wurden, sowie den UNIX-Zeitstempel, an dem die Zielgruppen dem Ziel für die Aktivierung zugeordnet wurden. In der Dokumentation finden Sie ein Beispiel für einen Datenexport mit dieser Option."
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 

@@ -6,7 +6,7 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '935'
-ht-degree: 56%
+ht-degree: 58%
 
 ---
 
@@ -67,7 +67,7 @@ Darüber hinaus unterstützt dieses Ziel auch die Aktivierung der in der folgend
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
 >title="Informationen zu Datenstrom-IDs"
->abstract="Diese Option bestimmt, in welchem Datenerfassungsdatenstrom die Zielgruppen in die Antwort auf die Seite aufgenommen werden. Das Dropdown-Menü enthält nur Datenströme, für die die Zielkonfiguration aktiviert ist. Sie müssen einen Datenstrom konfigurieren, bevor Sie Ihr Ziel konfigurieren können."
+>abstract="Diese Option bestimmt, in welchen Datenerfassungsdatenstrom die Zielgruppen in der Antwort auf die Seite aufgenommen werden. Das Dropdown-Menü enthält nur Datenströme, für die die Zielkonfiguration aktiviert ist. Sie müssen einen Datenstrom konfigurieren, bevor Sie Ihr Ziel konfigurieren können."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=de" text="Erfahren Sie, wie Sie einen Datenstrom konfigurieren"
 
 >[!IMPORTANT]

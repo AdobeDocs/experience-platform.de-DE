@@ -6,7 +6,7 @@ exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
 source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
 source-wordcount: '670'
-ht-degree: 45%
+ht-degree: 52%
 
 ---
 
@@ -96,7 +96,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
 >title="Zuordnungs-ID"
->abstract="Geben Sie die numerische Bing-Zielgruppen-ID ein, der Sie das ausgewählte Segment zuordnen möchten. Wenn die Variable [!UICONTROL Zuordnungs-ID] entspricht keiner Zielgruppen-ID im Bing-Ziel, werden Ihnen die erwarteten Zielgruppendaten in Ihrem Bing-Konto nicht angezeigt."
+>abstract="Geben Sie die numerische Bing-Zielgruppen-ID ein, der Sie das ausgewählte Segment zuordnen möchten. Wenn die angegebene [!UICONTROL Zuordnungs-ID] mit keiner Zielgruppen-ID im Bing-Ziel übereinstimmt, werden die erwarteten Zielgruppendaten in Ihrem Bing-Konto nicht angezeigt."
 
 >[!IMPORTANT]
 > 

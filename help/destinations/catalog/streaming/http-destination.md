@@ -6,7 +6,7 @@ exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '2486'
-ht-degree: 72%
+ht-degree: 74%
 
 ---
 
@@ -167,12 +167,12 @@ Wenn Sie den Authentifizierungstyp **[!UICONTROL Client-Anmeldeinformationen fü
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
 >title="Segmentnamen einschließen"
->abstract="Schalten Sie ein, wenn der Datenexport die Namen der Zielgruppen enthalten soll, die exportiert werden sollen. In der Dokumentation finden Sie ein Beispiel für einen Datenexport mit dieser Option."
+>abstract="Schalten Sie diese Option ein, wenn der Datenexport die Namen der zu exportierenden Zielgruppen enthalten soll. In der Dokumentation finden Sie ein Beispiel für einen Datenexport mit dieser Option."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="Zeitstempel für Segmente einschließen"
->abstract="Schalten Sie ein, wenn der Datenexport zum Zeitpunkt der Erstellung und Aktualisierung der Zielgruppen den UNIX-Zeitstempel sowie den UNIX-Zeitstempel enthalten soll, zu dem die Zielgruppen zur Aktivierung dem Ziel zugeordnet wurden. In der Dokumentation finden Sie ein Beispiel für einen Datenexport mit dieser Option."
+>abstract="Schalten Sie diese Option ein, wenn der Datenexport den UNIX-Zeitstempel enthalten soll, an dem die Zielgruppen erstellt und aktualisiert wurden, sowie den UNIX-Zeitstempel, an dem die Zielgruppen dem Ziel für die Aktivierung zugeordnet wurden. In der Dokumentation finden Sie ein Beispiel für einen Datenexport mit dieser Option."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"

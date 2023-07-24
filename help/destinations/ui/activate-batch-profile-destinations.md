@@ -7,7 +7,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
 source-wordcount: '3961'
-ht-degree: 65%
+ht-degree: 68%
 
 ---
 
@@ -87,12 +87,12 @@ Wählen Sie die **[!UICONTROL Zeitplan erstellen]** -Schaltfläche, die der Ziel
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="Dateiexportoptionen"
->abstract="Auswählen **Exportieren von vollständigen Dateien** um eine vollständige Momentaufnahme aller Profile zu exportieren, die für die Zielgruppe qualifiziert sind. Auswählen **Inkrementelle Dateien exportieren** um nur die Profile zu exportieren, die sich seit dem letzten Export für die Audience qualifiziert haben. <br> Der erste inkrementelle Dateiexport umfasst alle Profile, die sich für die Zielgruppe qualifizieren und als Aufstockung fungieren. Zukünftige inkrementelle Dateien enthalten nur die Profile, die sich seit dem ersten inkrementellen Dateiexport für die Zielgruppe qualifiziert haben."
+>abstract="Wählen Sie **Vollständige Dateien exportieren**, um einen vollständigen Schnappschuss aller Profile zu exportieren, die für die Zielgruppe qualifiziert sind. Wählen Sie **Inkrementelle Dateien exportieren**, um nur die Profile zu exportieren, die sich seit dem letzten Export für die Zielgruppe qualifiziert haben. <br> Der erste inkrementelle Dateiexport umfasst alle Profile, die für die Zielgruppe qualifiziert sind und als Aufstockung fungieren. Die folgenden inkrementellen Dateien enthalten nur die Profile, die sich seit dem ersten inkrementellen Dateiexport für die Zielgruppe qualifiziert haben."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=de#export-incremental-files" text="Exportieren von inkrementellen Dateien"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
->title="Aktivieren nach Zielgruppenbewertung"
+>title="Aktivieren nach der Zielgruppenauswertung"
 >abstract="Die Aktivierung erfolgt unmittelbar nach Abschluss des täglichen Segmentierungsvorgangs. Dadurch wird sichergestellt, dass die aktuellen Profile exportiert werden."
 
 >[!CONTEXTUALHELP]
@@ -115,11 +115,11 @@ Auswählen **[!UICONTROL Exportieren von vollständigen Dateien]** , um den Date
    >
    >Die **[!UICONTROL Nach Segmentbewertung]** Die unten beschriebene Option steht nur zur Auswahl von Beta-Kunden zur Verfügung.
 
-   Verwenden Sie die Option **[!UICONTROL Nach der Segmentevaluierung]**, damit der Aktivierungsvorgang unmittelbar nach Abschluss des täglichen Platform-Batch-Segmentierungsvorgangs ausgeführt wird. Mit dieser Option wird sichergestellt, dass bei Ausführung des Aktivierungsauftrags die aktuellsten Profile nach Ihrem Ziel exportiert werden.
+   Verwenden Sie die Option **[!UICONTROL Nach der Segmentauswertung]**, damit der Aktivierungsvorgang unmittelbar nach Abschluss des täglichen Platform-Batch-Segmentierungsvorgangs ausgeführt wird. Mit dieser Option wird sichergestellt, dass bei Ausführung des Aktivierungsauftrags die aktuellsten Profile nach Ihrem Ziel exportiert werden.
 
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
-   ![Abbildung mit hervorgehobener Option „Nach der Segmentevaluierung“ im Aktivierungsfluss für Batch-Ziele](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
+   ![Abbildung mit hervorgehobener Option „Nach der Segmentauswertung“ im Aktivierungsfluss für Batch-Ziele](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
 Verwenden Sie die Option **[!UICONTROL Geplant]**, damit der Aktivierungsvorgang zu einem festen Zeitpunkt ausgeführt wird. Mit dieser Option wird sichergestellt, dass Experience Platform-Profildaten täglich zur gleichen Zeit exportiert werden. Je nachdem, ob der Batch-Segmentierungsauftrag vor dem Start des Aktivierungsauftrags abgeschlossen wurde, sind die exportierten Profile jedoch möglicherweise nicht die aktuellsten.
 
    ![Abbildung mit hervorgehobener Option „Geplant“ im Aktivierungsfluss für Batch-Ziele und Anzeige der Zeitauswahl](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
@@ -478,7 +478,7 @@ Wenn Sie zu Ihren exportierten Dateien während der Beta-Phase Identitäts-Names
 >id="platform_destinations_activate_exclude_enrichment_attributes"
 >title="Ausschließen von Anreicherungsattributen"
 >abstract="Aktivieren Sie diese Option, um die Profile aus den ausgewählten benutzerdefinierten, hochgeladenen Zielgruppen zu exportieren und dabei alle zugehörigen Attribute auszuschließen."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="Weitere Informationen finden Sie in der Dokumentation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=de#select-enrichment-attributes" text="Weitere Informationen finden Sie in der Dokumentation"
 
 >[!IMPORTANT]
 >

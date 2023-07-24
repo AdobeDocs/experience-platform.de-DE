@@ -6,7 +6,7 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 source-git-commit: 2005238d2e06ed91fd4b0835be38a4b7b8ecf3b4
 workflow-type: tm+mt
 source-wordcount: '1186'
-ht-degree: 49%
+ht-degree: 50%
 
 ---
 
@@ -68,7 +68,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
 >title="Informationen zu Datenstrom-IDs"
->abstract="Diese Option bestimmt, in welchen Datenerfassungsdatastream die Zielgruppen eingeschlossen werden. Das Dropdown-Menü enthält nur Datenströme, für die die Zielkonfiguration aktiviert ist. Um die Edge-Segmentierung zu verwenden, müssen Sie eine Datenstrom-ID auswählen. Wenn Sie „Keine“ auswählen, werden alle Anwendungsfälle deaktiviert, die die Edge-Segmentierung verwenden."
+>abstract="Mit dieser Option wird festgelegt, in welchen Datenerfassungs-Datenstrom die Zielgruppen einbezogen werden. Das Dropdown-Menü enthält nur Datenströme, für die die Zielkonfiguration aktiviert ist. Um die Edge-Segmentierung zu verwenden, müssen Sie eine Datenstrom-ID auswählen. Wenn Sie „Keine“ auswählen, werden alle Anwendungsfälle deaktiviert, die die Edge-Segmentierung verwenden."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html?lang=de#parameters" text="Weitere Informationen zur Auswahl von Datenströmen"
 
 >[!IMPORTANT]
