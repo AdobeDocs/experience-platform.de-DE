@@ -3,10 +3,10 @@ title: Echtzeit-Profilsynchronisierung für mbox3rdPartyId
 description: Erfahren Sie, wie Sie mbox3rdPartyId mit dem Adobe Experience Platform Web SDK verwenden.
 keywords: Personalisierung;Target;adobe target;renderDecisions;sendEvent;mbox3rdPartyId;
 exl-id: 677d1054-0769-4ec6-811e-e02d4b247c2a
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '161'
-ht-degree: 9%
+ht-degree: 30%
 
 ---
 
@@ -14,14 +14,14 @@ ht-degree: 9%
 
 Die mbox3rdPartyId in Adobe Target ist die Besucher-ID Ihres Unternehmens, z. B. die Mitgliedschafts-ID für das Treueprogramm Ihres Unternehmens.
 
-Wenn sich ein Besucher bei der Site eines Unternehmens anmeldet, erstellt das Unternehmen in der Regel eine ID, die mit dem Konto, der Treuekarte, der Mitgliedsnummer oder anderen für dieses Unternehmen geltenden Kennungen des Besuchers verknüpft ist. [Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=en#)
+Wenn sich ein Besucher bei einer Unternehmenswebsite anmeldet, erstellt das Unternehmen in der Regel eine ID, die seinem Konto, seiner Treuekarte, seiner Mitgliedsnummer oder anderen für das Unternehmen relevanten Identifikatoren zugeordnet wird. [Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=en#)
 
 
 ## Verwendung `mbox3rdPartyId` mit dem Web SDK
 
 ### Schritt 1: Konfigurieren Sie die `Target Third Party ID Namespace`
 
-Konfigurieren Sie die `Target Third Party ID Namespace` in [Datastream](../../datastreams/overview.md), unter Verwendung des ID-Namespace, den Sie als Mbox-Drittanbieter-ID verwenden möchten.
+Konfigurieren Sie die `Target Third Party ID Namespace` in [Datastream](../../../datastreams/overview.md), unter Verwendung des ID-Namespace, den Sie als Mbox-Drittanbieter-ID verwenden möchten.
 [Weitere Informationen zu ID-Namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=de)
 
 ![](assets/mbox3rdpartyid.png)

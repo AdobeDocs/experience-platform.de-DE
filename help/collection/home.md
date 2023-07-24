@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Datenerfassung – Übersicht
 description: Erfahren Sie mehr über die verschiedenen Technologien zur Erfassung von Daten zu Kundenerlebnissen in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 13c02dd5930905e3851ff147c0ea4d914e3dc6c7
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 100%
@@ -25,7 +25,7 @@ Die Datenerfassung konzentriert sich auf die Auffindbarkeit und Zugänglichkeit 
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html?lang=de)
 * [Tags](../tags/home.md)
-* [Datenströme](../edge/datastreams/overview.md)
+* [Datenströme](../datastreams/overview.md)
 * [Ereignisweiterleitung](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
 * [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/)
@@ -45,9 +45,9 @@ Durch Komprimieren dieser Bibliotheken wird die Datenerfassung beschleunigt und 
 
 ## Platform Edge Network und Datenströme {#edge}
 
-Platform Edge Network ist ein global verteiltes, schnelles und zuverlässiges Netzwerk von Servern, die Daten in einem enormen Umfang empfangen und verarbeiten können. Mit Tags können Sie [Datenströme](../edge/datastreams/overview.md) für Produkte wie Adobe Target, Adobe Audience Manager und Adobe Analytics einrichten. Dadurch können Sie diese Produkte Server-seitig aktivieren, ohne den Client-seitigen Code zu ändern.
+Platform Edge Network ist ein global verteiltes, schnelles und zuverlässiges Netzwerk von Servern, die Daten in einem enormen Umfang empfangen und verarbeiten können. Mit Tags können Sie [Datenströme](../datastreams/overview.md) für Produkte wie Adobe Target, Adobe Audience Manager und Adobe Analytics einrichten. Dadurch können Sie diese Produkte Server-seitig aktivieren, ohne den Client-seitigen Code zu ändern.
 
-Darüber hinaus sind Datenströme in verschiedene Platform-Funktionen integriert, mit denen sichergestellt wird, dass sensible Daten, die Sie senden, im Hinblick auf Unternehmensrichtlinien und rechtliche Vorschriften angemessen verarbeitet werden. Weiterführende Informationen finden Sie im Abschnitt zum [Umgang mit sensiblen Daten](../edge/datastreams/overview.md#sensitive) in der Dokumentation zu Datenströmen.
+Darüber hinaus sind Datenströme in verschiedene Platform-Funktionen integriert, mit denen sichergestellt wird, dass sensible Daten, die Sie senden, im Hinblick auf Unternehmensrichtlinien und rechtliche Vorschriften angemessen verarbeitet werden. Weiterführende Informationen finden Sie im Abschnitt zum [Umgang mit sensiblen Daten](../datastreams/overview.md#sensitive) in der Dokumentation zu Datenströmen.
 
 ![Datenströme und Adobe-Lösungen](./images/home/adobe-solutions.png)
 

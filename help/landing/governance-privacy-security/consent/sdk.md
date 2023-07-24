@@ -2,7 +2,7 @@
 title: Verarbeiten von Kundeneinwilligungsdaten mit dem Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie das Adobe Experience Platform Web SDK integrieren, um Kundeneinwilligungsdaten in Adobe Experience Platform zu verarbeiten.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: dc269f952d0970cb5be1b28ab91c6006de975df3
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1349'
 ht-degree: 3%
@@ -24,7 +24,7 @@ In diesem Tutorial wird davon ausgegangen, dass Sie bereits ermittelt haben, wie
 
 Dieses Handbuch folgt dem Workflow zum Einrichten des SDK mithilfe der Tag-Erweiterung in der Benutzeroberfläche. Wenn Sie die -Erweiterung nicht verwenden möchten und die eigenständige Version des SDK lieber direkt auf Ihrer Site einbetten möchten, lesen Sie die folgenden Dokumente anstelle dieses Handbuchs:
 
-* [Konfigurieren eines Datenstroms](../../../edge/datastreams/overview.md)
+* [Konfigurieren eines Datenstroms](../../../datastreams/overview.md)
 * [Installieren des SDK](../../../edge/fundamentals/installing-the-sdk.md)
 * [Konfigurieren des SDK für Zustimmungsbefehle](../../../edge/consent/supporting-consent.md)
 

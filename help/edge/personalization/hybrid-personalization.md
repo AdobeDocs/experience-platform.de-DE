@@ -3,7 +3,7 @@ title: Hybride Personalisierung mit Web SDK und Edge Network Server API
 description: In diesem Artikel wird gezeigt, wie Sie das Web SDK in Verbindung mit der Server-API verwenden können, um hybride Personalisierung in Ihren Web-Eigenschaften bereitzustellen.
 keywords: Personalisierung;hybride;Server-API;Server-seitig;Hybridimplementierung;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 100%
@@ -65,7 +65,7 @@ Server-API-Anfragen sind erforderlich, um Vorschläge zu erhalten und eine Anzei
 
 Bei der Implementierung der hybriden Personalisierung müssen Sie besonders darauf achten, dass Seitentreffer in Analytics nicht mehrmals gezählt werden.
 
-Wenn Sie für Analytics [einen Datenstrom konfigurieren](../datastreams/overview.md), werden Ereignisse automatisch weitergeleitet, sodass Seitentreffer erfasst werden.
+Wenn Sie für Analytics [einen Datenstrom konfigurieren](../../datastreams/overview.md), werden Ereignisse automatisch weitergeleitet, sodass Seitentreffer erfasst werden.
 
 Das Beispiel aus dieser Implementierung verwendet zwei verschiedene Datenströme:
 
@@ -162,7 +162,7 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
 
 | Parameter | Typ | Erforderlich | Beschreibung |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | Ja. | Die ID des Datenstroms, mit dem Sie die Interaktionen an das Edge-Netzwerk weitergeben. Siehe [Datenströme – Übersicht](../datastreams/overview.md), um zu erfahren, wie Sie einen Datenstrom konfigurieren. |
+| `dataStreamId` | `String` | Ja. | Die ID des Datenstroms, mit dem Sie die Interaktionen an das Edge-Netzwerk weitergeben. Siehe [Datenströme – Übersicht](../../datastreams/overview.md), um zu erfahren, wie Sie einen Datenstrom konfigurieren. |
 | `requestId` | `String` | Nein | Eine zufällige ID zum Korrelieren interner Server-Anfragen. Wenn keine angegeben ist, generiert das Edge-Netzwerk eine und gibt sie in der Antwort zurück. |
 
 ### Server-seitige Antwort {#server-response}

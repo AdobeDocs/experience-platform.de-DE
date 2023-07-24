@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Konfigurieren eines Datensatzes zur Erfassung von Einwilligungs- und Präferenzdaten
 description: Erfahren Sie, wie Sie ein Experience-Datenmodell (XDM)-Schema und einen -Datensatz konfigurieren, um Einwilligungs- und Präferenzdaten in Adobe Experience Platform zu erfassen.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 5%
@@ -26,7 +26,6 @@ In diesem Dokument werden Schritte zum Konfigurieren eines Datensatzes zur Verar
 >* Die standardisierte Einwilligungsfeldgruppe
 >* Eine benutzerdefinierte Einwilligungsfeldgruppe, die von Ihrer Organisation erstellt wurde
 >* Eine Kombination aus der standardisierten Einwilligungsfeldgruppe und zusätzlichen Feldern, die von einer benutzerdefinierten Einwilligungsfeldgruppe bereitgestellt werden
-
 
 ## Voraussetzungen
 
@@ -160,7 +159,7 @@ Wählen Sie abschließend **[!UICONTROL Aktivieren]** im Bestätigungs-Popup, um
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-Der Datensatz wird jetzt gespeichert und für die Verwendung in [!DNL Profile]. Wenn Sie planen, das Platform Web SDK zum Senden von Zustimmungsdaten an Profile zu verwenden, müssen Sie diesen Datensatz als [!UICONTROL Profildatensatz] bei der Einrichtung der [datastream](../../../../edge/datastreams/overview.md).
+Der Datensatz wird jetzt gespeichert und für die Verwendung in [!DNL Profile]. Wenn Sie planen, das Platform Web SDK zum Senden von Zustimmungsdaten an Profile zu verwenden, müssen Sie diesen Datensatz als [!UICONTROL Profildatensatz] bei der Einrichtung der [datastream](../../../../datastreams/overview.md).
 
 ## Nächste Schritte
 

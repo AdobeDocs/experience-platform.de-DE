@@ -2,9 +2,9 @@
 solution: Experience Platform
 title: Erste Schritte mit Media Edge-APIs
 description: Erste Schritte mit Media Edge-APIs
-source-git-commit: 6570149298defe1aeb0c3e35cb71e166aeb7a3f7
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
-source-wordcount: '960'
+source-wordcount: '959'
 ht-degree: 6%
 
 ---
@@ -60,7 +60,7 @@ Um die Mediensitzung auf dem Server zu starten, verwenden Sie den Sitzungsstart-
 
 Bevor Sie die Sitzungsanforderung erstellen, benötigen Sie Folgendes:
 
-* Die `datastreamId`- ein erforderlicher Parameter für die POST Session Start-Anfrage. So rufen Sie eine `datastreamId`, siehe [Konfigurieren eines Datenspeichers](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=de).
+* Die `datastreamId`- ein erforderlicher Parameter für die POST Session Start-Anfrage. So rufen Sie eine `datastreamId`, siehe [Konfigurieren eines Datenspeichers](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=de).
 
 * Ein JSON-Objekt für die Anfrage-Payload, das die erforderlichen Mindestdaten enthält (wie in der Beispielanfrage unten dargestellt).
 

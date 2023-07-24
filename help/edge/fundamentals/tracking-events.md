@@ -3,7 +3,7 @@ title: Verfolgen von Ereignissen mit dem Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie Adobe Experience Platform Web SDK-Ereignisse verfolgen.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;Send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: a6948e3744aa754eda22831a7e68b847eb904e76
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 31%
@@ -140,7 +140,7 @@ alloy("sendEvent", {
 
 >[!IMPORTANT]
 >
->Die `datasetId` von der `sendEvent` nicht mehr unterstützt. Um eine Datensatz-ID zu überschreiben, verwenden Sie [Konfigurationsüberschreibungen](../datastreams/overrides.md) anstatt.
+>Die `datasetId` von der `sendEvent` nicht mehr unterstützt. Um eine Datensatz-ID zu überschreiben, verwenden Sie [Konfigurationsüberschreibungen](../../datastreams/overrides.md) anstatt.
 
 In einigen Anwendungsfällen möchten Sie möglicherweise ein Ereignis an einen anderen Datensatz als den in der Konfigurationsoberfläche konfigurierten senden. Dazu müssen Sie die `datasetId` -Option auf `sendEvent` command:
 
@@ -254,20 +254,20 @@ Einige Hinweise zu `onBeforeEventSend` callback:
 
 * Ereignis-XDM kann während des Rückrufs geändert werden. Nachdem der Rückruf zurückgegeben wurde, werden alle geänderten Felder und Werte der Objekte content.xdm und content.data mit dem Ereignis gesendet.
 
-   ```javascript
-   onBeforeEventSend: function(content){
-     //sets a query parameter in XDM
-     const queryString = window.location.search;
-     const urlParams = new URLSearchParams(queryString);
-     content.xdm.marketing.trackingCode = urlParams.get('cid')
-   }
-   ```
+  ```javascript
+  onBeforeEventSend: function(content){
+    //sets a query parameter in XDM
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    content.xdm.marketing.trackingCode = urlParams.get('cid')
+  }
+  ```
 
 * Wenn der Rückruf eine Ausnahme auslöst, wird die Verarbeitung für das Ereignis beendet und das Ereignis wird nicht gesendet.
 * Wenn der Rückruf den booleschen Wert von `false`, wird die Ereignisverarbeitung ohne Fehler beendet und das Ereignis wird nicht gesendet. Dieser Mechanismus ermöglicht es, bestimmte Ereignisse einfach zu ignorieren, indem die Ereignisdaten geprüft und `false` , wenn das Ereignis nicht gesendet werden soll.
 
-   >[!NOTE]
-   >Es sollte darauf geachtet werden, dass beim ersten Ereignis auf einer Seite nicht &quot;false&quot;zurückgegeben wird. Die Rückgabe von &quot;false&quot;beim ersten Ereignis kann sich negativ auf die Personalisierung auswirken.
+  >[!NOTE]
+  >Es sollte darauf geachtet werden, dass beim ersten Ereignis auf einer Seite nicht &quot;false&quot;zurückgegeben wird. Die Rückgabe von &quot;false&quot;beim ersten Ereignis kann sich negativ auf die Personalisierung auswirken.
 
 ```javascript
    onBeforeEventSend: function(content) {

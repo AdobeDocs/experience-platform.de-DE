@@ -2,8 +2,8 @@
 title: Adobe Experience Platform – Versionshinweise Februar 2022
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2022.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: e2342a8a7d03074ac26fbd129a2e7fd520ccb0c3
-workflow-type: ht
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+workflow-type: tm+mt
 source-wordcount: '1019'
 ht-degree: 100%
 
@@ -45,8 +45,8 @@ Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kunden
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Verbesserter UI-Workflow für die Konfiguration von Datenströmen | Der Workflow zum Erstellen eines neuen Datenstroms in der Datenerfassungs-UI wurde aktualisiert. Beim Hinzufügen von Services zu einem Datenstrom werden nur die Services, auf die Sie Zugriff haben, in die Optionsliste aufgenommen. Weitere Informationen finden Sie in der Anleitung zum [Konfigurieren eines Datenstroms](../../edge/datastreams/overview.md). |
-| Datenvorbereitung für die Datenerfassung | Wenn Sie das Adobe Experience Platform Web SDK verwenden, können Sie jetzt Datenvorlagenfunktionen verwenden, um Ihre Daten Server-seitig dem Experience-Datenmodell (XDM) zuzuordnen. Weitere Informationen finden Sie im Abschnitt [Datenvorbereitung für die Datenerfassung](../../edge/datastreams/data-prep.md) im Leitfaden zu den Datenströmen. |
+| Verbesserter UI-Workflow für die Konfiguration von Datenströmen | Der Workflow zum Erstellen eines neuen Datenstroms in der Datenerfassungs-UI wurde aktualisiert. Beim Hinzufügen von Services zu einem Datenstrom werden nur die Services, auf die Sie Zugriff haben, in die Optionsliste aufgenommen. Weitere Informationen finden Sie in der Anleitung zum [Konfigurieren eines Datenstroms](../../datastreams/overview.md). |
+| Datenvorbereitung für die Datenerfassung | Wenn Sie das Adobe Experience Platform Web SDK verwenden, können Sie jetzt Datenvorlagenfunktionen verwenden, um Ihre Daten Server-seitig dem Experience-Datenmodell (XDM) zuzuordnen. Weitere Informationen finden Sie im Abschnitt [Datenvorbereitung für die Datenerfassung](../../datastreams/data-prep.md) im Leitfaden zu den Datenströmen. |
 | IDs von Erstanbieter-Geräten | Sie können jetzt Ihre eigenen Geräte-IDs beim Erfassen von Kundendaten mit dem Platform Web SDK an das Adobe Experience Platform Edge Network senden, um eine Problemumgehung für aktuelle Browser-Beschränkungen bei Cookie-Lebenszyklen von Drittanbietern zu bieten. Weitere Informationen finden Sie im Leitfaden zu [IDs von Erstanbieter-Geräten](../../edge/identity/first-party-device-ids.md). |
 
 Weitere Informationen zur Datenerfassung in Platform finden Sie in der [Übersicht zur Datenerfassung](../../collection/home.md).

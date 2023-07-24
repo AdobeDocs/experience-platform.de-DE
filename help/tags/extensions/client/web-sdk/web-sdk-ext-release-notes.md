@@ -2,7 +2,7 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1688'
 ht-degree: 99%
@@ -27,7 +27,7 @@ In diesem Dokument werden die Versionshinweise für die Adobe Experience Platfor
 **Neue Funktionen**
 
 * Enthält Version 2.16.0 des Adobe Experience Platform Web SDK.
-* Es wurde Unterstützung für [Überschreibungen der Datenstromkonfiguration](../../../../edge/datastreams/overrides.md) hinzugefügt.
+* Es wurde Unterstützung für [Überschreibungen der Datenstromkonfiguration](../../../../datastreams/overrides.md) hinzugefügt.
 * Der Option `datasetId` des Befehls `sendEvent` wurde ein Hinweis hinzugefügt, dass sie veraltet ist.
 
 

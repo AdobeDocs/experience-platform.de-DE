@@ -2,7 +2,7 @@
 title: Versionshinweise für Tags und Ereignisweiterleitung
 description: Die neuesten Versionshinweise für Tags und Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 626330395c2d6b813d5d2157e92ada77ab4f96b1
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 94%
@@ -54,7 +54,7 @@ Es wurden neue Erweiterungen veröffentlicht:
 
 ## 26. Oktober 2022
 
-* **Behandlung sensibler Daten für Datenströme**: Datenströme nutzen jetzt mehrere Platform-Technologien, um sensible Daten entsprechend den Vorschriften wie dem Health Insurance Portability and Accountability Act (HIPAA) zu behandeln. Weitere Informationen finden Sie im Abschnitt [Umgang mit sensiblen Daten in Datenströmen](../../edge/datastreams/overview.md#sensitive).
+* **Behandlung sensibler Daten für Datenströme**: Datenströme nutzen jetzt mehrere Platform-Technologien, um sensible Daten entsprechend den Vorschriften wie dem Health Insurance Portability and Accountability Act (HIPAA) zu behandeln. Weitere Informationen finden Sie im Abschnitt [Umgang mit sensiblen Daten in Datenströmen](../../datastreams/overview.md#sensitive).
 * **[!DNL Splunk]-Erweiterung für die Ereignisweiterleitung**: Sie können jetzt Daten an [!DNL Splunk] senden, indem Sie eine Erweiterung für die [Ereignisweiterleitung](../ui/event-forwarding/overview.md) verwenden. Weiterführende Informationen dazu finden Sie in der [[!DNL Splunk] Übersicht der Erweiterungen](../extensions/server/splunk/overview.md).
 * **[!DNL Zendesk]-Erweiterung für die Ereignisweiterleitung**: Sie können jetzt Daten an [!DNL Zendesk] senden, indem Sie eine Erweiterung für die [Ereignisweiterleitung](../ui/event-forwarding/overview.md) verwenden. Weiterführende Informationen dazu finden Sie in der [[!DNL Zendesk] Übersicht der Erweiterungen](../extensions/server/zendesk/overview.md).
 

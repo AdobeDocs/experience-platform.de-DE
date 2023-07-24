@@ -3,7 +3,7 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '1549'
 ht-degree: 98%
@@ -26,7 +26,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 **Neue Funktionen**
 
-* Es wurde Unterstützung für [Überschreibungen der Datenstromkonfiguration](datastreams/overrides.md) hinzugefügt.
+* Es wurde Unterstützung für [Überschreibungen der Datenstromkonfiguration](../datastreams/overrides.md) hinzugefügt.
 
 ## Version 2.15.0 – 30. März 2023
 

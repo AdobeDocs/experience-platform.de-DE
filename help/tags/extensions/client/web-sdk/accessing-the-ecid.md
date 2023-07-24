@@ -2,7 +2,7 @@
 title: Zugreifen auf die ECID
 description: Erfahren Sie, wie Sie über die Datenvorbereitung oder Tags auf die Experience Cloud-ID zugreifen.
 exl-id: 8e63a873-d7b5-4c6c-b14d-3c3fbc82b62f
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 6%
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 Die [!DNL Experience Cloud Identity (ECID)] ist eine persistente Kennung, die einem Benutzer beim Besuch Ihrer Website zugewiesen wird. Unter bestimmten Umständen bevorzugen Sie möglicherweise den Zugriff auf die [!DNL ECID] (um sie beispielsweise an einen Dritten zu senden). Ein weiterer Anwendungsfall ist das Festlegen der [!DNL ECID] in ein benutzerdefiniertes XDM-Feld ein, zusätzlich zu dessen Verwendung in der Identitätszuordnung.
 
-Der Zugriff auf die ECID erfolgt über [Datenvorbereitung für die Datenerfassung](../../../../edge/datastreams/data-prep.md) (empfohlen) oder über Tags.
+Der Zugriff auf die ECID erfolgt über [Datenvorbereitung für die Datenerfassung](../../../../datastreams/data-prep.md) (empfohlen) oder über Tags.
 
 ## Zugriff auf die ECID über Data Prep (bevorzugte Methode) {#accessing-ecid-data-prep}
 

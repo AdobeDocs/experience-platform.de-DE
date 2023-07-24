@@ -3,7 +3,7 @@ title: Übersicht über die Ereignisweiterleitung
 description: Hier erfahren Sie mehr über Adobe Experience Platform, mit dessen Hilfe Sie über das Platform Edge-Netzwerk Aufgaben ausführen können, ohne dabei Ihre Tag-Implementierung zu ändern.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 81f25e74931354003d89a57adedb578ddfe00704
+source-git-commit: 2005238d2e06ed91fd4b0835be38a4b7b8ecf3b4
 workflow-type: tm+mt
 source-wordcount: '1070'
 ht-degree: 88%
@@ -81,7 +81,7 @@ Der Wert **[!UICONTROL Pfad]** für das Datenelement muss dem Muster `arc.event.
 
 ### Regeln {#rules}
 
-Das Erstellen von Regeln in den Properties der Ereignisweiterleitung funktioniert ähnlich wie Tags, wobei der wesentliche Unterschied darin besteht, dass Sie Ereignisse nicht als Regelkomponenten auswählen können. Stattdessen verarbeitet eine Ereignisweiterleitungsregel alle Ereignisse, die sie vom [Datenstrom](../../../edge/datastreams/overview.md) erhält, und leitet diese Ereignisse an Ziele weiter, wenn bestimmte Bedingungen erfüllt sind.
+Das Erstellen von Regeln in den Properties der Ereignisweiterleitung funktioniert ähnlich wie Tags, wobei der wesentliche Unterschied darin besteht, dass Sie Ereignisse nicht als Regelkomponenten auswählen können. Stattdessen verarbeitet eine Ereignisweiterleitungsregel alle Ereignisse, die sie vom [Datenstrom](../../../datastreams/overview.md) erhält, und leitet diese Ereignisse an Ziele weiter, wenn bestimmte Bedingungen erfüllt sind.
 
 Darüber hinaus gilt ein 30-Sekunden-Timeout für ein einzelnes Ereignis, da es über alle Regeln (und damit alle Aktionen) innerhalb einer Ereignisweiterleitungseigenschaft verarbeitet wird. Das bedeutet, dass alle Regeln und Aktionen für ein einzelnes Ereignis in diesem Zeitraum abgeschlossen sein müssen.
 

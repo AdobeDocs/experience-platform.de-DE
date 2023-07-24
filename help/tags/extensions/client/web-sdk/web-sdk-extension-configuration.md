@@ -2,7 +2,7 @@
 title: Konfigurieren der Adobe Experience Platform Web SDK-Erweiterung
 description: So konfigurieren Sie die Adobe Experience Platform Web SDK-Tag-Erweiterung in der Benutzeroberfläche.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1185'
 ht-degree: 9%
@@ -52,7 +52,7 @@ Die [!UICONTROL Edge-Domäne] ist die Domäne, von der die Adobe Experience Plat
 
 Wenn eine Anforderung an das Adobe Experience Platform Edge Network gesendet wird, wird eine Datastraam-ID verwendet, um auf die serverseitige Konfiguration zu verweisen. Sie können die Konfiguration aktualisieren, ohne Codeänderungen auf Ihrer Website vornehmen zu müssen.
 
-Siehe Handbuch unter [datastreams](../../../../edge/datastreams/overview.md) für weitere Informationen.
+Siehe Handbuch unter [datastreams](../../../../datastreams/overview.md) für weitere Informationen.
 
 
 ## [!UICONTROL Datenschutz]
@@ -112,10 +112,10 @@ Dies hilft Ihnen beim Trigger verschiedener Datenspeicherverhaltensweisen als de
 
 Die Außerkraftsetzung der Datastream-Konfiguration besteht aus zwei Schritten:
 
-1. Zunächst müssen Sie Ihre Überschreibungen der Datenstromkonfiguration auf der Seite [Datenstromkonfiguration](../../../../edge/datastreams/configure.md) definieren.
+1. Zunächst müssen Sie Ihre Überschreibungen der Datenstromkonfiguration auf der Seite [Datenstromkonfiguration](../../../../datastreams/configure.md) definieren.
 2. Anschließend müssen Sie die Überschreibungen entweder über einen Web SDK-Befehl oder mithilfe der Tag-Erweiterung des Web SDK an das Edge-Netzwerk senden.
 
-Anzeigen des Datenspeichers [Dokumentation zu Konfigurationsüberschreibungen](../../../../edge/datastreams/overrides.md) für detaillierte Anweisungen zum Überschreiben von Datenspeicherkonfigurationen.
+Anzeigen des Datenspeichers [Dokumentation zu Konfigurationsüberschreibungen](../../../../datastreams/overrides.md) für detaillierte Anweisungen zum Überschreiben von Datenspeicherkonfigurationen.
 
 Als Alternative zum Übergeben der Überschreibungen über einen Web SDK-Befehl können Sie die Überschreibungen im Bildschirm für die Tag-Erweiterung konfigurieren, der unten dargestellt wird.
 

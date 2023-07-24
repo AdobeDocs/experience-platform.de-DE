@@ -2,7 +2,7 @@
 title: Übersicht über Auditprotokolle
 description: Erfahren Sie, wie Sie mithilfe von Audit-Protokollen sehen können, wer welche Aktionen in Adobe Experience Platform durchgeführt hat.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 7bb81a103c6b2a7d0baec22c927f575764bc3730
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1294'
 ht-degree: 51%
@@ -46,7 +46,7 @@ In der folgenden Tabelle sind die Aktionen aufgeführt, für die Ressourcen in A
 | Berechnetes Attribut | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
 | [Kunden-KI-Instanz](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li></ul> |
 | [Datensatz](../../../catalog/datasets/overview.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li><li>Aktivieren für [Echtzeit-Kundenprofil](../../../profile/home.md)</li><li>Profil deaktivieren</li><li>Daten hinzufügen</li><li>Batch löschen</li></ul> |
-| [Datenstrom](../../../edge/datastreams/overview.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>[Zuordnung bearbeiten](../../../edge/datastreams/data-prep.md)</li></ul> |
+| [Datenstrom](../../../datastreams/overview.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>[Zuordnung bearbeiten](../../../datastreams/data-prep.md)</li></ul> |
 | [Datentypen](../../../xdm/schema/composition.md#data-type) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
 | [Ziel](../../../destinations/home.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>Datensatz aktivieren</li><li>Datensatz entfernen</li><li>Profil aktivieren</li><li>Profil löschen</li></ul> |
 | [Feldergruppe](../../../xdm/schema/composition.md#field-group) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
@@ -90,6 +90,7 @@ Wählen Sie ein Ereignis aus der Liste aus, um seine Details in der rechten Leis
 ### Filtern von Auditprotokollen
 
 >[!NOTE]
+>
 Da es sich hierbei um eine neue Funktion handelt, gehen die angezeigten Daten nur bis März 2022 zurück. Je nach ausgewählter Ressource stehen möglicherweise frühere Daten ab Januar 2022 zur Verfügung.
 
 

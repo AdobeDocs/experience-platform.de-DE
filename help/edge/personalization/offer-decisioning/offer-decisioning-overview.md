@@ -3,10 +3,10 @@ title: Verwenden von Offer decisioning mit dem Platform Web SDK
 description: Das Adobe Experience Platform Web SDK kann personalisierte Angebote bereitstellen und rendern, die unter Offer decisioning verwaltet werden. Sie können Ihre Angebote und andere verwandte Objekte mithilfe der Offer decisioning-Benutzeroberfläche oder -API erstellen.
 keywords: offer decisioning; Entscheidungsfindung; Web SDK; Platform Web SDK; personalisierte Angebote; Angebote bereitstellen; Bereitstellung von Angeboten; Personalisierung von Angeboten;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '863'
-ht-degree: 20%
+ht-degree: 21%
 
 ---
 
@@ -32,28 +32,28 @@ Bei der Arbeit mit Offer decisioning ist es wichtig, die folgende Terminologie z
 
 * **Entscheidungsbereiche:** Für Offer decisioning sind Entscheidungsbereiche die Base64-kodierten Zeichenfolgen von JSON, die die Aktivitäts- und Platzierungs-IDs enthalten, die der offer decisioning-Dienst verwenden soll, um Angebote vorzuschlagen.
 
-   *Entscheidungsbereich JSON:*
+  *Entscheidungsbereich JSON:*
 
-   ```json
-   {
-     "activityId":"xcore:offer-activity:11cfb1fa93381aca",
-     "placementId":"xcore:offer-placement:1175009612b0100c"
-   }
-   ```
+  ```json
+  {
+    "activityId":"xcore:offer-activity:11cfb1fa93381aca",
+    "placementId":"xcore:offer-placement:1175009612b0100c"
+  }
+  ```
 
-   *Entscheidungsbereich Base64-kodierte Zeichenfolge:*
+  *Entscheidungsbereich Base64-kodierte Zeichenfolge:*
 
-   ```json
-   "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
-   ```
+  ```json
+  "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
+  ```
 
-   >[!TIP]
-   >
-   >Sie können den Entscheidungsbereichswert aus dem **Aktivitätsübersicht** in der Benutzeroberfläche.
+  >[!TIP]
+  >
+  >Sie können den Entscheidungsbereichswert aus dem **Aktivitätsübersicht** in der Benutzeroberfläche.
 
-   ![](assets/decision-scope-copy.png)
+  ![](assets/decision-scope-copy.png)
 
-* **Datenspeicher:** Weitere Informationen finden Sie im [datastreams](../../datastreams/overview.md) Dokumentation.
+* **Datenspeicher:** Weitere Informationen finden Sie im [datastreams](../../../datastreams/overview.md) Dokumentation.
 
 * **Identität**: Weitere Informationen finden Sie in dieser Dokumentation . [Platform Web SDK verwendet Identity Service](../../identity/overview.md).
 
@@ -61,7 +61,7 @@ Bei der Arbeit mit Offer decisioning ist es wichtig, die folgende Terminologie z
 
 Führen Sie die folgenden Schritte aus, um Offer decisioning zu aktivieren:
 
-1. Aktivierte Adobe Experience Platform in Ihrem [datastream](../../datastreams/overview.md) und aktivieren Sie die Option &quot;Offer decisioning&quot;
+1. Aktivierte Adobe Experience Platform in Ihrem [datastream](../../../datastreams/overview.md) und aktivieren Sie die Option &quot;Offer decisioning&quot;
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
@@ -81,10 +81,11 @@ Führen Sie die folgenden Schritte aus, um Offer decisioning zu aktivieren:
              ]
           })
          ```
+
    * SDK über Tags installieren
 
       1. [Erstellen Sie eine Tag-Eigenschaft](../../../tags/ui/administration/companies-and-properties.md)
-      1. [Fügen Sie den Einbettungs-Code hinzu](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      1. [Fügen Sie den Einbettungs-Code hinzu](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html?lang=de)
       1. Installieren und konfigurieren Sie die Platform Web SDK-Erweiterung mit dem von Ihnen erstellten Datastream, indem Sie die Konfiguration aus der Dropdown-Liste &quot;Datastream&quot;auswählen. Weitere Informationen zu Datensätzen finden Sie in der Dokumentation zu [Erweiterungen](../../../tags/ui/managing-resources/extensions/overview.md).
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
@@ -101,10 +102,9 @@ Führen Sie die folgenden Schritte aus, um Offer decisioning zu aktivieren:
 
          * Fügen Sie die Aktion &quot;Ereignis senden&quot;für das Platform Web SDK hinzu und fügen Sie die entsprechende hinzu `decisionScopes` zur Konfiguration dieser Aktion
 
-            ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
+           ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
+
       1. [](../../../tags/ui/publishing/libraries.md)Erstellen und veröffentlichen Sie eine Bibliothek mit allen relevanten Regeln, Datenelementen und Erweiterungen, die Sie konfiguriert haben
-
-
 
 ## Beispielanfragen und -antworten
 

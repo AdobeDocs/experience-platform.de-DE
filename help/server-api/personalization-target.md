@@ -2,7 +2,7 @@
 title: Personalisierung über Adobe Target
 description: Erfahren Sie, wie Sie mit der Server-API personalisierte Erlebnisse bereitstellen und rendern können, die in Adobe Target erstellt wurden.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 47cd73e45ac618a8a84aa3c47b91d5e2a107e7f4
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 3%
@@ -23,7 +23,7 @@ Die Edge Network Server-API kann mithilfe des [Form-Based Experience Composer](h
 
 Bevor Sie die Server-API in Verbindung mit Adobe Target verwenden können, müssen Sie die Adobe Target-Personalisierung für Ihre Datastream-Konfiguration aktivieren.
 
-Siehe [Handbuch zum Hinzufügen von Diensten zu einem Datastream](../edge/datastreams/overview.md#adobe-target-settings), um detaillierte Informationen zur Aktivierung von Adobe Target zu erhalten.
+Siehe [Handbuch zum Hinzufügen von Diensten zu einem Datastream](../datastreams/overview.md#adobe-target-settings), um detaillierte Informationen zur Aktivierung von Adobe Target zu erhalten.
 
 Beim Konfigurieren Ihres Datastreams können Sie (optional) Werte für [!DNL Property Token], [!DNL Target Environment ID]und [!DNL Target Third Party ID Namespace].
 

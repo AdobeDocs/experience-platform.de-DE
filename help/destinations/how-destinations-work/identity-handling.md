@@ -2,7 +2,7 @@
 title: Umgang mit Identitäten im Aktivierungs-Workflow für Ziele
 description: Erfahren Sie, wie der Identitätsexport im Aktivierungs-Workflow je nach Zieltyp verarbeitet wird.
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1186'
 ht-degree: 100%
@@ -82,7 +82,7 @@ Werbeziele, die auf Drittanbieterfirmen-Cookies angewiesen sind (z. B.: [!DNL Go
 
 Für diese Ziele ist eine ID-Synchronisierung entweder über den [!UICONTROL Experience Cloud-ID-Service] oder das [!UICONTROL Experience Platform Web SDK] erforderlich.
 
-Wenn Sie das [!UICONTROL Experience Platform Web SDK] verwenden und der ältere [!UICONTROL Experience Cloud-ID-Service] nicht auf der Seite implementiert ist, müssen Sie sicherstellen, dass der Datenstrom für die betroffene Website aktiviert ist, um die Synchronisierung von Drittanbieterfirmen-IDs zu ermöglichen, wie in der [Dokumentation zum Konfigurieren eines Datenstroms](/help/edge/datastreams/configure.md#create) beschrieben.
+Wenn Sie das [!UICONTROL Experience Platform Web SDK] verwenden und der ältere [!UICONTROL Experience Cloud-ID-Service] nicht auf der Seite implementiert ist, müssen Sie sicherstellen, dass der Datenstrom für die betroffene Website aktiviert ist, um die Synchronisierung von Drittanbieterfirmen-IDs zu ermöglichen, wie in der [Dokumentation zum Konfigurieren eines Datenstroms](/help/datastreams/configure.md#create) beschrieben.
 
 Beim Konfigurieren eines Datenstroms, wie in der oben verlinkten Dokumentation beschrieben, müssen Sie sicherstellen, dass der Regler **[!UICONTROL Synchronisierung der Drittanbieter-ID]** aktiviert ist. Die meisten Kundinnen und Kunden lassen das `container_id`-Feld leer (es enthält standardmäßig 0). Sie müssen diesen Wert nur ändern, wenn Ihre ältere Audience Manager-Implementierung eine bestimmte Container-ID verwendete (beachten Sie jedoch, dass dies nur die wenigsten Kundinnen und Kunden betrifft).
 

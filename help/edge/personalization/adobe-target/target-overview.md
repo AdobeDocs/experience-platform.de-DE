@@ -3,7 +3,7 @@ title: Verwenden von Adobe Target mit dem Platform Web SDK
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK mit Adobe Target rendern
 keywords: Target; adobe target; activity.id; experience.id; renderDecisions; DecisionScopes; Vorabausblenden von Snippet; VEC; Form-Based Experience Composer; xdm; Zielgruppen; Entscheidungen; Umfang; Schema; Systemdiagramm; Diagramm
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 5a048505be139b58dbb3bf85120df5e3cc46881e
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '1318'
 ht-degree: 7%
@@ -52,7 +52,7 @@ Das folgende Diagramm hilft Ihnen, den Workflow von [!DNL Target] und [!DNL Plat
 
 Aktivieren [!DNL Target]führen Sie folgende Schritte aus:
 
-1. Aktivieren [!DNL Target] in [datastream](../../datastreams/overview.md) mit dem entsprechenden Clientcode.
+1. Aktivieren [!DNL Target] in [datastream](../../../datastreams/overview.md) mit dem entsprechenden Clientcode.
 1. Fügen Sie die `renderDecisions` -Option zu Ihren Ereignissen hinzufügen.
 
 Anschließend können Sie optional auch die folgenden Optionen hinzufügen:

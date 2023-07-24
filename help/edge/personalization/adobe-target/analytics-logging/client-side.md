@@ -5,7 +5,7 @@ seo-title: Client-side logging for A4T data in the Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: Target; a4t; Protokollierung; Web SDK; Erlebnis; Plattform;
 exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
-source-git-commit: de420d3bbf35968fdff59b403a0f2b18110f3c17
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 5%
@@ -40,7 +40,7 @@ In den folgenden Unterabschnitten wird beschrieben, wie Sie die clientseitige Pr
 
 ### Aktivieren der clientseitigen Analytics-Protokollierung {#enable-analytics-client-side-logging}
 
-Um die clientseitige Protokollierung in Analytics für Ihre Implementierung zu berücksichtigen, müssen Sie die Adobe Analytics-Konfiguration in Ihrer [datastream](../../../datastreams/overview.md).
+Um die clientseitige Protokollierung in Analytics für Ihre Implementierung zu berücksichtigen, müssen Sie die Adobe Analytics-Konfiguration in Ihrer [datastream](../../../../datastreams/overview.md).
 
 ![Analytics-Datenspeicherkonfiguration deaktiviert](../assets/disable-analytics-datastream.png)
 
@@ -212,8 +212,7 @@ Alle Werte aus `scopeDetails.characteristics.analyticsToken`sowie `scopeDetails.
 >
 >In den Implementierungsbeispielen, die im nächsten Abschnitt bereitgestellt werden, werden mehrere Analytics-Token iterativ erfasst. Verwenden Sie eine ähnliche Funktion, um ein Array von Analytics-Token zu verketten:
 >
->
-```javascript
+>```javascript
 >var concatenateAnalyticsPayloads = function concatenateAnalyticsPayloads(analyticsPayloads) {
 >   if (analyticsPayloads.size > 1) {
 >       return [].concat(analyticsPayloads).join(',');
