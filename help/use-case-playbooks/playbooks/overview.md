@@ -1,25 +1,25 @@
 ---
 solution: Experience Platform
-title: Anwendungsbeispiele - Übersicht
-description: Erfahren Sie, wie Sie in Experience Platform mit der Funktion "Use Case Playbooks"beginnen, um mit verschiedenen Marketing-Anwendungsfällen zu beginnen.
+title: Playbooks für Anwendungsfälle – Übersicht
+description: Erfahren Sie, wie Sie in Experience Platform mit der Funktion „Playbooks für Anwendungsfälle – Übersicht“ erste Schritte mit verschiedenen Marketing-Anwendungsfällen ausführen können
 badgeBeta: label="Beta" type="Informative"
 source-git-commit: 896ca002b34e79bd464467011875a54acd5c187c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '400'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 
-# (Beta) Übersicht über Fallbücher
+# (Beta) Playbooks für Anwendungsfälle – Übersicht
 
 >[!BEGINSHADEBOX]
 
-Weiterführende Informationen finden Sie in diesem Handbuch:
+Inhalt dieses Dokumentationshandbuchs:
 
-* **[Übersicht über Anwendungsfallbücher](#overview)**
+* **[Übersicht über die Funktion „Playbooks für Anwendungsfälle“](#overview)**
 * [Erste Schritte](/help/use-case-playbooks/playbooks/get-started.md)
-* [Entdecken Sie das richtige Playbook](/help/use-case-playbooks/playbooks/discover.md)
+* [Finden des richtigen Playbooks](/help/use-case-playbooks/playbooks/discover.md)
 * [Erstellen, Freigeben und Wiederverwenden von Playbook-Instanzen](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [Fehlerbehebung und bekannte Einschränkungen](troubleshooting.md)
 
@@ -27,30 +27,30 @@ Weiterführende Informationen finden Sie in diesem Handbuch:
 
 >[!AVAILABILITY]
 >
->Diese Funktion ist derzeit als Betaversion verfügbar und steht nicht allen Benutzern zur Verfügung. Dokumentation und Funktionalität können sich ändern.
+>Diese Funktion befinden sich derzeit in der Betaphase und steht nicht allen Benutzenden zur Verfügung. Dokumentation und Funktionalität können sich ändern.
 
 ## Übersicht {#overview}
 
-Mit [!UICONTROL Anwendungsbeispiele für Playbooks]nutzen Sie automatisierte Workflows, damit Ihr Data Engineering-Team einen Anwendungsfall schneller implementieren kann. Durchsuchen Sie die verfügbaren Bücher im **[!UICONTROL Anwendungsbeispiele für Playbooks]** -Abschnitt, um mit verschiedenen Anwendungsfällen zu beginnen, die die Übernahme von Experience Platform beschleunigen können.
+Mit der Funktion [!UICONTROL Playbooks für Anwendungsfälle] profitieren Sie von automatisierten Workflows, durch die Ihr Data-Engineering-Team Anwendungsfälle schneller implementieren kann. Durchsuchen Sie die verfügbaren Playbooks im Abschnitt **[!UICONTROL Playbooks für Anwendungsfälle]**, um erste Schritte mit verschiedenen Anwendungsfällen auszuführen und so die Einführung von Experience Platform zu beschleunigen.
 
-![Ansicht aller Bücher](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
+![Ansicht aller Playbooks](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
 
-Jedes Playbook enthält Informationen zum jeweiligen Anwendungsfall, den es löst.
+Jedes Playbook enthält Informationen zum jeweiligen Anwendungsfall, der damit gelöst wird.
 
-Wenn Sie ein Real-Time CDP-Playbook auswählen, können Sie Zielgruppen erstellen, die Sie dann einem Ziel zuordnen können, um eine Marketing-Kampagne auszuführen.
+Wenn Sie ein Real-Time CDP-Playbook auswählen, möchten Sie vielleicht Zielgruppen erstellen, die Sie dann einem Ziel zuordnen können, um eine Marketing-Kampagne auszuführen.
 
-Wenn Sie ein Adobe Journey Optimizer-Playbook auswählen, besteht Ihr Ziel möglicherweise darin, eine Kunden-Journey innerhalb Ihres Produkts zu erstellen und relevante Nachrichten an Ihre Kunden zu senden.
+Wenn Sie ein Adobe Journey Optimizer-Playbook auswählen, möchten Sie vielleicht eine Customer Journey innerhalb Ihres Produkts erstellen und relevante Messaging-Inhalte an Ihre Kundinnen und Kunden senden.
 
-Erstellen Sie eine Instanz eines Playbooks, um bestimmte Assets wie Schemata, Segmente oder Journey zu generieren, die auf Ihren Anwendungsfall zugeschnitten sind und in Experience Platform wiederverwendet werden können. Diese Objekte sollen Ihnen dabei helfen, alle Ressourcen zu verstehen, die zur Implementierung Ihres spezifischen Anwendungsfalls erforderlich sind. Sie enthalten keine Daten und werden in Entwicklungs-Sandboxes erstellt. Beginnen Sie mit der Verwendung dieser Assets oder bearbeiten Sie sie, bevor Sie sie verwenden, und teilen Sie sie in der Echtzeit-Kundendatenplattform oder in Journey Optimizer für Ihr Team.
+Erstellen Sie eine Playbook-Instanz, um bestimmte Assets wie Schemata, Segmente oder Journey zu generieren, die auf Ihren Anwendungsfall zugeschnitten sind und in Experience Platform wiederverwendet werden können. Diese Objekte sollen Ihnen dabei helfen, alle Ressourcen zu verstehen, die zur Implementierung Ihres spezifischen Anwendungsfalls erforderlich sind. Sie enthalten keine Daten und werden in Entwicklungs-Sandboxes erstellt. Nutzen Sie diese Assets oder bearbeiten Sie sie, bevor Sie sie verwenden und für Ihr Team in Real-Time CDP oder in Journey Optimizer freigeben.
 
 ## Verfügbarkeit
 
-Einige [!UICONTROL Anwendungsbeispiele für Playbooks] sind auf Anwendungsfälle der Echtzeit-Kundendatenplattform zugeschnitten, während andere am besten für Kunden geeignet sind, die Journey Optimizer verwenden. Durchsuchen Sie den Katalog, um die Bücher zu finden, die am besten zu Ihrem Produkt und Anwendungsfall passen.
+Einige [!UICONTROL Playbooks für Anwendungsfälle] sind auf Real-Time CDP-Anwendungsfälle zugeschnitten, während andere am besten für Journey Optimizer-Kundinnen und -Kunden geeignet sind. Durchsuchen Sie den Katalog, um die Playbooks zu finden, die am besten zu Ihrem Produkt und Anwendungsfall passen.
 
-## UI-Handbücher
+## Handbücher zur Benutzeroberfläche
 
-Nachdem Sie sich für das Playbook entschieden haben, das Sie verwenden möchten, wählen Sie es in der Benutzeroberfläche aus und beginnen Sie damit. Benutzerhandbücher lesen unter [Entdecken Sie das richtige Playbook](/help/use-case-playbooks/playbooks/discover.md) für Sie und [Erstellen, Freigeben und Wiederverwenden von Playbook-Instanzen](/help/use-case-playbooks/playbooks/create-share-reuse.md) für vollständige Informationen zum Erstellen von Instanzen und zum Optimum aus einem Playbook.
+Nachdem Sie sich für das gewünschte Playbook entschieden haben, wählen Sie es in der Benutzeroberfläche aus und führen Sie die ersten Schritte durch. Vollständige Informationen zum Erstellen von Instanzen und zur optimalen Playbook-Nutzung finden Sie in den UI-Handbüchern zum [Finden des richtigen Playbooks](/help/use-case-playbooks/playbooks/discover.md) und zum [Erstellen, Freigeben und Wiederverwenden von Playbook-Instanzen](/help/use-case-playbooks/playbooks/create-share-reuse.md).
 
 ## Fehlerbehebung und bekannte Einschränkungen
 
-Informationen zu Problemen, die bei der Verwendung der Bücher auftreten können, finden Sie im Abschnitt [Fehlerbehebung und bekannte Einschränkungen](/help/use-case-playbooks/playbooks/troubleshooting.md) Seite.
+Informationen zu Problemen, die bei der Verwendung der Playbooks auftreten können, finden Sie auf der Seite [Fehlerbehebung und bekannte Einschränkungen](/help/use-case-playbooks/playbooks/troubleshooting.md).
