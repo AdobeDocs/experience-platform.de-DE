@@ -3,10 +3,10 @@ keywords: benutzerdefinierte Personalisierung; Ziel; benutzerdefiniertes Ziel vo
 title: Benutzerdefinierte Personalisierungsverbindung
 description: Dieses Ziel bietet eine externe Personalisierung, Content Management-Systeme, Anzeigen-Server und andere Anwendungen, die auf Ihrer Site ausgeführt werden, um Zielgruppendaten aus Adobe Experience Platform abzurufen. Dieses Ziel bietet eine Echtzeit-Personalisierung basierend auf der Zielgruppenmitgliedschaft des Benutzerprofils.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: d8c1e41b90b5b81dd8475bd697f31ba27551e7fa
+source-git-commit: c12a48686997ff69aea24f41bf5cbd9b89fcc57a
 workflow-type: tm+mt
-source-wordcount: '933'
-ht-degree: 57%
+source-wordcount: '934'
+ht-degree: 58%
 
 ---
 
@@ -68,7 +68,7 @@ Darüber hinaus unterstützt dieses Ziel auch die Aktivierung der in der folgend
 >id="platform_destinations_custom_personalization_datastream"
 >title="Informationen zu Datenstrom-IDs"
 >abstract="Diese Option bestimmt, in welchen Datenerfassungsdatenstrom die Zielgruppen in der Antwort auf die Seite aufgenommen werden. Das Dropdown-Menü enthält nur Datenströme, für die die Zielkonfiguration aktiviert ist. Sie müssen einen Datenstrom konfigurieren, bevor Sie Ihr Ziel konfigurieren können."
->additional-url="https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/initial-configuration/create-datastream.html" text="Erfahren Sie, wie Sie einen Datenstrom konfigurieren"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=de" text="Erfahren Sie, wie Sie einen Datenstrom konfigurieren"
 
 >[!IMPORTANT]
 > 
