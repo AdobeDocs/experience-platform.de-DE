@@ -5,9 +5,9 @@ breadcrumb-title: Privacy Service-Anleitung
 user-guide-description: Verwalten Sie Kundendatenanfragen, um die gesetzlichen Datenschutzbestimmungen wie DSGVO und CCPA einzuhalten.
 feature: Privacy
 source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '93'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
