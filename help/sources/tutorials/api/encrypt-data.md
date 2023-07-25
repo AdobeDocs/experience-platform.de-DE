@@ -1,13 +1,13 @@
 ---
 title: Verschlüsselte Datenaufnahme
-description: Erfahren Sie, wie Sie verschlüsselte Dateien über Cloud-Speicher-Batch-Quellen mithilfe der API erfassen.
+description: Erfahren Sie, wie Sie verschlüsselte Dateien über Cloud-Speicher-Batch-Quellen mithilfe der API aufnehmen.
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
 source-git-commit: f0e518459eca72d615b380d11cabee6c1593dd9a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1017'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -43,7 +43,7 @@ Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, find
 
 ### Unterstützte Dateierweiterungen für verschlüsselte Dateien
 
-Die Liste der unterstützten Dateierweiterungen für verschlüsselte Dateien lautet wie folgt:
+Folgende Dateierweiterungen werden für verschlüsselte Dateien unterstützt:
 
 * .csv 
 * .tsv
@@ -62,7 +62,7 @@ Die Liste der unterstützten Dateierweiterungen für verschlüsselte Dateien lau
 
 >[!NOTE]
 >
->Die verschlüsselte Dateiaufnahme in Adobe Experience Platform Sources unterstützt openPGP und keine bestimmte proprietäre Version von PGP.
+>Die Aufnahme verschlüsselter Dateien in Adobe Experience Platform-Quellen unterstützt openPGP und keine bestimmte proprietäre PGP-Version.
 
 ## Erstellen eines Verschlüsselungsschlüsselpaars {#create-encryption-key-pair}
 
