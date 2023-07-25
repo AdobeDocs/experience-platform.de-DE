@@ -3,28 +3,29 @@ solution: Experience Platform
 title: Erste Schritte mit Media Edge-APIs
 description: Handbuch zur Fehlerbehebung bei Media Edge-APIs
 source-git-commit: ff4bc64843e3d05277f56ab67b60400fb9e65c4f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '669'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
-# Handbuch zur Fehlerbehebung bei Media Edge API
+# Handbuch zur Fehlerbehebung bei Media Edge-APIs
 
-Dieses Handbuch enthält Anweisungen zur Fehlerbehebung und zum Erhalten erfolgreicher Antworten.
+Dieses Handbuch enthält Anweisungen zur Fehlerbehebung und zum Erhalt erfolgreicher Antworten.
 
-## Verwenden von Fehlerreaktionshilfen
+## Verwenden von Fehlerantworthilfen
 
-Um die Fehlerbehebung bei fehlerhaften Antworten zu unterstützen, wird den Fehlern ein Antworttext mit einem Fehlerobjekt hinzugefügt. In diesem Fall enthält der Antworttext Problemdetails, wie definiert durch [RFC 7807 - Problemdetails für HTTP-APIs](https://datatracker.ietf.org/doc/html/rfc7807). Um das Benutzererlebnis der API zu verbessern, sind die Problemdetails beschreibend (die Details der Array-Schlüssel werden mit JsonPath zum fehlenden oder ungültigen Feld angezeigt). Sie sind auch kumulativ (alle ungültigen Felder werden in derselben Anfrage gemeldet).
+Um die Fehlerbehebung bei fehlgeschlagenen Antworten zu unterstützen, wird den Fehlern ein Antworttext mit einem Fehlerobjekt hinzugefügt. In diesem Fall enthält der Antworttext Problemdetails, wie im Dokument [RFC 7807 – Problemdetails für HTTP-APIs](https://datatracker.ietf.org/doc/html/rfc7807) definiert. Um das API-Anwendererlebnis zu verbessern, sind die Problemdetails zum einen beschreibend (Details der Array-Schlüssel werden mit JsonPath zum fehlenden oder ungültigen Feld angezeigt), zum anderen kumulativ (alle ungültigen Felder werden in derselben Anfrage gemeldet).
 
 
 ## Validieren von Sitzungsstarts
 
-Die meisten Probleme mit Sitzungsstartanfragen führen zu einer Antwort mit 207 Mehrfachstatus.
-Die Payload ähnelt den nicht schwerwiegenden Fehlern der Experience Edge Network Server-API. Alle Media Analytics-Fehler haben den folgenden Typ:  `https://ns.adobe.com/aep/errors/va-edge-0XXX-XXX`. Die in der Antwort angezeigten Zahlen entsprechen dem Fehlerstatus.
+Die meisten Probleme bei Sitzungsstart-Anfragen führen zu einer 207-Mehrfachstatus-Antwort.
+Die Payload ähnelt nicht schwerwiegenden Fehlern der Experience Edge Network-Server-API. Alle
+Media Analytics-Fehler weisen den folgenden Typ auf:  `https://ns.adobe.com/aep/errors/va-edge-0XXX-XXX`. Die in der Antwort angezeigten Zahlen entsprechen dem Fehlerstatus.
 
-Das folgende Beispiel zeigt einen Antworttext für eine Sitzungsstartanforderung, der sowohl ein Pflichtfeld als auch ein ungültiges enthält.
+Das folgende Beispiel zeigt einen Antworttext für eine Sitzungsstart-Anfrage, bei der ein Pflichtfeld fehlt und zudem ein ungültiges Feld enthalten ist.
 
 ```
 {
@@ -55,21 +56,21 @@ Das folgende Beispiel zeigt einen Antworttext für eine Sitzungsstartanforderung
 }
 ```
 
-Im obigen Beispiel werden beide Probleme durch `name` und `reason` under `details`: Der erste Grund wird angezeigt `missing required field` und der zweite Abschnitt beschreibt die Nichteinhaltung der ISO 8601-Norm.
+Im obigen Beispiel sind beide Probleme durch `name` und `reason` unter `details` vermerkt: Als erster Grund wird `missing required field` angezeigt, als zweiter wird die Nichteinhaltung des ISO 8601-Standards genannt.
 
 
 >[!NOTE]
 >
-> Adobe empfiehlt, die generierte Mediensitzung auch weiterhin zu verarbeiten, wenn Fehler auftreten, die zuvor in Media Analytics verursacht wurden.
+> Adobe empfiehlt, die Verarbeitung der generierten Mediensitzung fortzusetzen, wenn Fehler auftreten, die zuvor in Media Analytics verursacht wurden.
 
 ## Validieren von Ereignissen
 
-Die meisten ungültigen Ereignisanfragen führen zu einer Antwort &quot;400 Ungültige Anfrage&quot;. In diesen Fällen ähnelt die Payload den schwerwiegenden Fehlern der Experience Edge Network Server-API.
+Die meisten ungültigen Ereignisanfragen führen zu einer Antwort vom Typ „400 Ungültige Anfrage“. In diesen Fällen ähnelt die Payload schwerwiegenden Fehlern der Experience Edge Network-Server-API.
 
-Für Ereignisanfragen umfasst der Media Edge-API-Dienst zusätzliche Prüfungen, die nicht im XDM-Modell selbst erfasst werden. Dazu gehört auch die Prüfung, ob der Pfad `eventType` entspricht der Anfrage-Payload `eventType`.
+Bei Ereignisanfragen umfasst der Media Edge-API-Service zusätzliche Prüfungen, die nicht im XDM-Modell selbst erfasst werden. Dazu gehört auch die Prüfung, ob der Pfad `eventType` der Anfrage-Payload `eventType` entspricht.
 
 
-Das folgende Beispiel zeigt eine `eventType` nicht übereinstimmen mit einer `adBreakStart` Nutzlast gesendet an `ee/va/v1/chapterStart`:
+Das folgende Beispiel zeigt einen `eventType`-Konflikt mit einer an `ee/va/v1/chapterStart` gesendeten `adBreakStart`-Payload:
 
 ```
 {
@@ -83,7 +84,7 @@ Das folgende Beispiel zeigt eine `eventType` nicht übereinstimmen mit einer `ad
 }
 ```
 
-Das folgende Beispiel zeigt eine zusätzliche Media Edge-API-Prüfung, anhand derer eine `chapterStart` Aufruf fehlt `chapterDetails` info:
+Das folgende Beispiel zeigt eine zusätzliche Media Edge-API-Prüfung, durch die ein `chapterStart`-Aufruf mit fehlenden `chapterDetails`-Informationen gefunden wurde:
 
 ```
 {
@@ -102,26 +103,26 @@ Das folgende Beispiel zeigt eine zusätzliche Media Edge-API-Prüfung, anhand de
 }
 ```
 
-## Umgang mit Fehlern der Stufe 400 und der Stufe 500
+## Umgang mit Fehlern der 400er- und 500er-Reihe
 
-In der folgenden Tabelle finden Sie Anweisungen zum Umgang mit Statusreaktionsfehlern:
+In der folgenden Tabelle finden Sie Anweisungen zum Umgang mit Statusantwortfehlern:
 
 
 | Fehler-Code | Beschreibung |
 | ---------- | --------- |
-| 4xx Bad request | Die meisten 4xx-Fehler (z. B. `400`, `403`, `404`) sollte vom Benutzer nicht erneut versucht werden. Eine erneute Ausführung der Anfrage führt nicht zu einer erfolgreichen Antwort. Der Benutzer sollte den Fehler beheben, bevor er die Anfrage erneut versucht. Ereignisse, die zu 4xx-Status-Codes führen, werden nicht verfolgt. Dies könnte sich auf die Genauigkeit von Daten in Sitzungen auswirken, die 4xx-Antworten erhalten haben. |
-| 410 Stück | Gibt an, dass die für die Verfolgung bestimmte Sitzung nicht mehr serverseitig berechnet wird. Der häufigste Grund dafür ist, dass die Sitzung länger als 24 Stunden dauert. Nach Erhalt einer `410`, versuchen Sie, eine neue Sitzung zu starten und sie zu verfolgen. |
-| 429 Zu viele Anfragen | Dieser Antwort-Code gibt an, dass der Server die Anforderungen durch Ratenbegrenzung begrenzt. Befolgen Sie die **Wiederholen nach** Anweisungen im Antwortheader sorgfältig beschrieben. Jede Antwort, die zurückfließt, muss den HTTP-Antwort-Code mit einem domänenspezifischen Fehlercode enthalten. |
-| 500 Interner Server-Fehler | `500` Fehler sind allgemeine, allgemeingültige Fehler. `500` -Fehler sollten nicht wiederholt werden, mit Ausnahme von `502`, `503` und `504`. |
-| 502 Schlechtes Gateway | Dieser Fehlercode Gibt an, dass der Server als Gateway eine ungültige Antwort von Upstream-Servern erhalten hat. Dies kann aufgrund von Netzwerkproblemen zwischen Servern geschehen. Das temporäre Netzwerkproblem kann sich selbst lösen, sodass ein erneuter Versuch mit der Anfrage das Problem möglicherweise beheben kann. |
-| 503 Dienst nicht verfügbar | Dieser Fehlercode zeigt an, dass der Dienst vorübergehend nicht verfügbar ist. Dies kann während der Wartungszeiträume geschehen. Empfänger `503` Fehler können die Anfrage erneut versuchen, sollten aber auch dem **Wiederholen nach** Kopfzeilenanweisungen. |
+| 4xx Ungültige Anfrage | Bei den meisten 4xx-Fehlern (z. B. `400`, `403`, `404`) sollten Benutzende die Anfrage nicht wiederholen. Eine erneute Ausführung der Anfrage führt nicht zu einer erfolgreichen Antwort. Benutzende sollten den Fehler beheben, bevor sie die Anfrage wiederholen. Ereignisse, die zu 4xx-Status-Codes führen, werden nicht nachverfolgt. Dies könnte sich auf die Genauigkeit von Daten in Sitzungen auswirken, die 4xx-Antworten erhalten haben. |
+| 410 Nicht mehr auffindbar | Dieser Antwort-Code gibt an, dass die zum Tracking bestimmte Sitzung Server-seitig nicht mehr berechnet wird. Der häufigste Grund dafür ist, dass die Sitzung länger als 24 Stunden dauert. Versuchen Sie nach Erhalt eines `410`-Fehlers, eine neue Sitzung zu starten und sie nachzuverfolgen. |
+| 429 Zu viele Anfragen | Dieser Antwort-Code gibt an, dass der Server Anfragen durch Ratenbegrenzung einschränkt. Halten Sie sich genau an den Anweisungen in der **Retry-After**-Antwortkopfziele. Jede Antwort, die zurückgegeben wird, muss den HTTP-Antwort-Code mit einem Domain-spezifischen Fehler-Code enthalten. |
+| 500 Interner Server-Fehler | `500`-Fehler sind generische, allgemeingültige Fehler. `500`-Fehler sollten nicht wiederholt werden, mit Ausnahme von `502`, `503` und `504`. |
+| 502 Ungültiges Gateway | Dieser Fehler-Code gibt an, dass der Server als Gateway eine ungültige Antwort von Upstream-Servern erhalten hat. Hierzu kann es aufgrund von Netzwerkproblemen zwischen Servern kommen. Das temporäre Netzwerkproblem kann sich von selbst lösen, sodass das Problem durch einen erneuten Anfrageversuch möglicherweise behoben wird. |
+| 503 Service nicht verfügbar | Dieser Fehler-Code gibt an, dass der Service vorübergehend nicht verfügbar ist. Hierzu kann es während Wartungszeiträumen kommen. Empfänger von `503`-Fehlern können die Anfrage wiederholen, sollten aber ebenfalls den Anweisungen im **Retry-After**-Header folgen. |
 
 
 ## Einreihen von Ereignissen in die Warteschlange bei langsamen Sitzungsantworten
 
-Nach dem Starten einer Medien-Tracking-Sitzung wird der Medienplayer möglicherweise ausgelöst, bevor die Antwort &quot;Sitzungsstart&quot;aus dem Backend (mit dem Parameter Sitzungs-ID ) zurückgegeben wird. In diesem Fall muss Ihre App alle Tracking-Ereignisse in die Warteschlange stellen, die zwischen der Sitzungsanforderung und der zugehörigen Antwort eintreffen. Wenn die Sitzungsantwort eingeht, sollten Sie zunächst alle Ereignisse in der Warteschlange verarbeiten und dann mit der Verarbeitung von Live-Ereignissen beginnen.
+Nach Start einer Medien-Tracking-Sitzung wird der Medien-Player möglicherweise ausgelöst, bevor vom Backend die Sitzungsstart-Antwort (mit dem Sitzungs-ID-Parameter) zurückgegeben wird. In diesem Fall muss Ihre Applikation sämtliche Tracking-Ereignisse in die Warteschlange einreihen, die zwischen der Sitzungsstart-Anfrage und ihrer Antwort eingehen. Wenn die Sitzungsantwort eingeht, sollten Sie zunächst alle Ereignisse in der Warteschlange verarbeiten. Anschließend können Sie mit der Verarbeitung von Live-Ereignissen beginnen.
 
-Die besten Ergebnisse erzielen Sie, wenn Sie im Referenz-Player in Ihrer Distribution Anweisungen zur Verarbeitung von Ereignissen vor dem Erhalt einer Sitzungs-ID finden.
+Um optimale Ergebnisse zu erzielen, folgen Sie im Referenz-Player Ihrer Distribution den Anweisungen zur Verarbeitung von Ereignissen vor dem Erhalt einer Sitzungs-ID.
 
 Das folgende Beispiel zeigt eine Methode zur Verarbeitung von Ereignissen vor dem Erhalt einer Sitzungs-ID:
 
