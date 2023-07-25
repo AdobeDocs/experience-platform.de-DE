@@ -5,9 +5,9 @@ title: Datennutzungskennzeichnungen – Übersicht
 description: Erfahren Sie, wie Datennutzungskennzeichnungen verwendet werden, um die Einhaltung von Data-Governance-Richtlinien in Adobe Experience Platform durchzusetzen.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 source-git-commit: 5d34781e06c0fa8bfd2e52f73e336d92d16192f6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '802'
-ht-degree: 83%
+ht-degree: 100%
 
 ---
 
@@ -57,11 +57,11 @@ Sie können Datennutzungsbeschriftungen mit [!DNL Experience Platform]-APIs oder
 
 ### Verwenden der Benutzeroberfläche
 
-Der Arbeitsbereich **[!UICONTROL Richtlinien]** in der Benutzeroberfläche von [!DNL Experience Platform] ermöglicht die Ansicht und Verwaltung von Kern- und benutzerdefinierten Beschriftungen für Ihr Unternehmen. Sie können die **[!UICONTROL Schemas]** Arbeitsbereich zu [Anwenden von Bezeichnungen auf Ihre Experience-Datenmodell (XDM)-Schemas](../../xdm/tutorials/labels.md)oder lernen Sie, wie [Erstellen und Verwalten benutzerdefinierter Bezeichnungen in **[!UICONTROL Richtlinien] Benutzeroberfläche](./user-guide.md) durch Lesen des Benutzerhandbuchs zu Datennutzungsbezeichnungen.
+Der Arbeitsbereich **[!UICONTROL Richtlinien]** in der Benutzeroberfläche von [!DNL Experience Platform] ermöglicht die Ansicht und Verwaltung von Kern- und benutzerdefinierten Beschriftungen für Ihr Unternehmen. Sie können den Arbeitsbereich **[!UICONTROL Schemata]** verwenden, um [Kennzeichnungen auf Ihre Experience-Datenmodell(XDM)-Schemata anzuwenden](../../xdm/tutorials/labels.md), oder stattdessen über das Benutzerhandbuch zu Datennutzungskennzeichnungen erfahren, wie Sie [benutzerdefinierte Kennzeichnungen in der Benutzeroberfläche für **[!UICONTROL Richtlinien] erstellen und verwalten](./user-guide.md).
 
 >[!IMPORTANT]
 >
->Beschriftungen können nicht mehr auf Felder auf Datensatzebene angewendet werden. Dieser Workflow wird nicht mehr für die Anwendung von Bezeichnungen auf Schemaebene unterstützt. Alle Bezeichnungen, die zuvor auf Datensatzobjektebene angewendet wurden, werden bis zum 31. Mai 2024 weiterhin über die Platform-Benutzeroberfläche unterstützt. Um sicherzustellen, dass Ihre Bezeichnungen über alle Schemas hinweg konsistent sind, müssen alle Bezeichnungen, die zuvor auf Datensatzebene an Felder angehängt wurden, von Ihnen im Laufe des kommenden Jahres auf Schemaebene migriert werden. Siehe Abschnitt zu [Migration zuvor angewendeter Bezeichnungen](../e2e.md#migrate-labels) für Anweisungen dazu.
+>Kennzeichnungen können auf Datensatzebene nicht mehr auf Felder angewendet werden. Dieser Workflow wurde zugunsten von Kennzeichnungen auf Schemaebene aufgegeben. Alle Kennzeichnungen, die zuvor auf Datensatzobjektebene angewendet wurden, werden bis zum 31. Mai 2024 weiterhin über die Platform-Benutzeroberfläche unterstützt. Damit Ihre Kennzeichnungen schemaübergreifend konsistent sind, müssen alle Kennzeichnungen, die zuvor auf Felder auf Datensatzebene angewendet wurden, von Ihnen im Laufe des kommenden Jahres auf Schemaebene migriert werden. Anweisungen hierzu finden Sie im Abschnitt zum [Migrieren zuvor angewendeter Kennzeichnungen](../e2e.md#migrate-labels).
 
 ### Verwenden von APIs
 
