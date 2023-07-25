@@ -4,10 +4,10 @@ title: Handbuch zum Profile-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: c558ee6cc1c7ae36f87aaff5d40be57cfb21b2e4
 workflow-type: tm+mt
 source-wordcount: '3393'
-ht-degree: 83%
+ht-degree: 82%
 
 ---
 
@@ -226,7 +226,7 @@ Das Widget **[!UICONTROL Identitätsüberschneidung]** verwendet ein Venn-Diagra
 
 Verwenden Sie die Widget-Dropdown-Menüs, um die Identitäten auszuwählen, die Sie vergleichen möchten. Kreise zeigen die relative Gesamtzahl der Profile an, in denen jede Identität enthalten ist. Die Anzahl der Profile, in denen beide Identitäten enthalten sind, wird durch die Größe der Überschneidung zwischen den Kreisen dargestellt. Wenn ein Kunde mit Ihrer Marke über mehr als einen Kanal interagiert, werden diesem einzelnen Kunden mehrere Identitäten zugeordnet. Daher ist es wahrscheinlich, dass Ihre Organisation über mehrere Profile verfügt, die Fragmente aus mehr als einer Identität enthalten.
 
-Weiterführende Informationen zu Profilfragmenten finden Sie im Abschnitt zu [Profilfragmente im Vergleich zu zusammengeführten Profilen](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=de#profile-fragments-vs-merged-profiles) in der Übersicht über das Echtzeit-Kundenprofil .
+Weiterführende Informationen zu Profilfragmenten finden Sie im Abschnitt zu [Profilfragmente und zusammengeführte Profile](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=de#profile-fragments-vs-merged-profiles) in der Übersicht über das Echtzeit-Kundenprofil .
 
 Weitere Informationen zu Identitäten finden Sie in der [Dokumentation zu Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
@@ -339,7 +339,7 @@ Wählen Sie **[!UICONTROL Schließen]** aus, um zum [!UICONTROL Profile]-Dashboa
 
 ### [!UICONTROL Audiences, die einem Zielstatus zugeordnet sind] {#audiences-mapped-to-destination-status}
 
-Das Widget [!UICONTROL Zielgruppen, die dem Zielstatus zugeordnet sind] stellt in einer gemeinsamen Metrik die Gesamtzahl der zugeordneten und nicht zugeordneten Zielgruppen dar und veranschaulicht in einem Ringdiagramm den proportionalen Unterschied zwischen den beiden Zahlen. Die berechneten Zahlen hängen von der gewählten Zusammenführungsrichtlinie ab.
+Die [!UICONTROL Zielgruppen, die dem Zielstatus zugeordnet sind] -Widget zeigt die Gesamtanzahl der zugeordneten und nicht zugeordneten Zielgruppen in einer einzelnen Metrik an und verwendet ein Ringdiagramm, um den proportionalen Unterschied zwischen den Summen zu veranschaulichen. Die berechneten Zahlen hängen von der gewählten Zusammenführungsrichtlinie ab.
 
 Wenn der Mauszeiger über den entsprechenden Abschnitt des Ringdiagramms bewegt wird, werden die separaten Zählungen für zugeordnete oder nicht zugeordnete Zielgruppen in einem Dialogfeld angezeigt.
 
