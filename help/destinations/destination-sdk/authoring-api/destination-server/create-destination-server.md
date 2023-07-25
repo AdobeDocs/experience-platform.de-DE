@@ -1,10 +1,10 @@
 ---
 description: Auf dieser Seite wird der API-Aufruf zum Erstellen eines Ziel-Servers über Adobe Experience Platform Destination SDK erläutert.
 title: Erstellen einer Ziel-Server-Konfiguration
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
-workflow-type: ht
-source-wordcount: '1623'
-ht-degree: 100%
+source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
+workflow-type: tm+mt
+source-wordcount: '1696'
+ht-degree: 94%
 
 ---
 
@@ -44,7 +44,11 @@ Sie können eine neue Ziel-Server-Konfiguration erstellen, indem Sie eine `POST`
 POST /authoring/destination-servers
 ```
 
-Je nach dem von Ihnen erstellten Zieltyp müssen Sie einen etwas anderen Ziel-Server-Typ konfigurieren. Auf den folgenden Registerkarten finden Sie Beispiele für Ziel-Server für jeden in Destination SDK unterstützten Zieltyp.
+Je nach dem von Ihnen erstellten Zieltyp müssen Sie einen etwas anderen Ziel-Server-Typ konfigurieren.
+
+### Erstellen von Zielservern für statische Schemata {#static-destination-servers}
+
+In den folgenden Registerkarten finden Sie Beispiele für Zielserver für Ziele, die [statische Schemata](../../functionality/destination-configuration/schema-configuration.md#attributes-schema).
 
 Die folgenden Beispiel-Payloads enthalten alle Parameter, die von den einzelnen Ziel-Server-Typen unterstützt werden. Sie müssen nicht alle Parameter in Ihre Anfrage einbeziehen. Die Payload kann entsprechend Ihren Anforderungen angepasst werden.
 
@@ -770,6 +774,18 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrer neu erst
 
 +++
 
+>[!ENDTABS]
+
+### Dynamische Schema-Zielserver erstellen {#dynamic-schema-servers}
+
+Mit dynamischen Schemata können Sie die unterstützten Zielattribute dynamisch abrufen und Schemas basierend auf Ihrer eigenen API generieren. Sie müssen einen Zielserver für dynamische Schemata konfigurieren, bevor Sie das Schema konfigurieren können.
+
+Auf der Registerkarte unten finden Sie ein Beispiel für einen Zielserver für Ziele, die [dynamische Schemata](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration).
+
+Die nachstehende Beispiel-Payload enthält alle Parameter, die für einen dynamischen Schema-Server erforderlich sind.
+
+>[!BEGINTABS]
+
 >[!TAB Dynamischer Schema-Server]
 
 **Erstellen eines dynamischen Schema-Servers**
@@ -827,6 +843,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrer neu erstellten Ziel-Server-Konfiguration zurück.
 
 +++
+
 
 >[!ENDTABS]
 

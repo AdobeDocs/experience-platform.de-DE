@@ -1,10 +1,10 @@
 ---
 description: Erfahren Sie, wie Sie das Partnerschema für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Konfiguration des Partnerschemas
-source-git-commit: 20dc7b31f75e88badac17faa542e046598632690
+source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
 workflow-type: tm+mt
-source-wordcount: '1892'
-ht-degree: 90%
+source-wordcount: '1898'
+ht-degree: 89%
 
 ---
 
@@ -48,7 +48,7 @@ Die nachstehende Tabelle beschreibt ausführlich, welche Integrationstypen die a
 Destination SDK unterstützt mehrere Schemakonfigurationen:
 
 * Statische Schemata werden durch das Array `profileFields` im Abschnitt `schemaConfig` definiert. In einem statischen Schema definieren Sie jedes Zielattribut, das in der Experience Platform-Benutzeroberfläche angezeigt werden sollte, im Array `profileFields`. Wenn Sie Ihr Schema aktualisieren müssen, müssen Sie [die Zielkonfiguration aktualisieren](../../authoring-api/destination-configuration/update-destination-configuration.md).
-* Dynamische Schemata verwenden einen zusätzlichen Typ von Ziel-Server, den so genannten [dynamischen Schema-Server](../../authoring-api/destination-server/create-destination-server.md), um Schemata dynamisch basierend auf Ihrer eigenen API zu erstellen. Dynamische Schemata verwenden nicht das Array `profileFields`. Wenn Sie Ihr Schema aktualisieren müssen, müssen Sie [die Zielkonfiguration aktualisieren](../../authoring-api/destination-configuration/update-destination-configuration.md). Stattdessen ruft der dynamische Schema-Server das aktualisierte Schema von Ihrer API ab.
+* Dynamische Schemata verwenden einen zusätzlichen Zielservertyp, den so genannten [dynamischer Schemaserver](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers), um die unterstützten Zielattribute dynamisch abzurufen und Schemas basierend auf Ihrer eigenen API zu generieren. Dynamische Schemata verwenden nicht das Array `profileFields`. Wenn Sie Ihr Schema aktualisieren müssen, müssen Sie [die Zielkonfiguration aktualisieren](../../authoring-api/destination-configuration/update-destination-configuration.md). Stattdessen ruft der dynamische Schema-Server das aktualisierte Schema von Ihrer API ab.
 * Innerhalb der Schemakonfiguration haben Sie die Möglichkeit, erforderliche (oder vordefinierte) Zuordnungen hinzuzufügen. Hierbei handelt es sich um Zuordnungen, die Benutzerinnen und Benutzer in der Platform-Benutzeroberfläche anzeigen können. Sie können sie jedoch beim Einrichten einer Verbindung zu Ihrem Ziel nicht ändern. Beispielsweise können Sie erzwingen, dass das Feld für die E-Mail-Adresse immer an das Ziel gesendet wird.
 
 Der Abschnitt `schemaConfig` verwendet mehrere Konfigurationsparameter, je nach dem benötigten Schematyp, wie in den folgenden Abschnitten dargestellt.
@@ -126,7 +126,7 @@ Destination SDK unterstützt die Erstellung von dynamischen Partnerschemata. Im 
 
 >[!IMPORTANT]
 >
->Bevor Sie ein dynamisches Schema erstellen, müssen Sie [einen dynamischen Schema-Server erstellen](../../authoring-api/destination-server/create-destination-server.md).
+>Bevor Sie ein dynamisches Schema erstellen, müssen Sie [einen dynamischen Schema-Server erstellen](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers).
 
 In einer dynamischen Schemakonfiguration wird das Array `profileFields` durch den Abschnitt `dynamicSchemaConfig` ersetzt, wie unten dargestellt.
 
