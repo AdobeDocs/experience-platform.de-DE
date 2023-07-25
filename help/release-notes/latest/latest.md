@@ -3,9 +3,9 @@ title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise vom Juni 2023 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: a3faca5e0a711f0d4f6bafb22bf3c4770f58db8e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1538'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
@@ -84,13 +84,13 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
-| Erweiterung (Prospect-Profile) | [[!UICONTROL Adobe Unified Profile Service Prospect-Profile-Vereinigung-Erweiterung]](https://github.com/adobe/xdm/pull/1735/files) | Es wurden erforderliche Felder für das Vereinigungsschema &quot;Prospect-Profile&quot;hinzugefügt. |
-| Erweiterung | [[!UICONTROL Entscheidungsasset]](https://github.com/adobe/xdm/pull/1732/files) | Fügen Sie einen Datentyp hinzu, um Assets darzustellen, die bei der Entscheidungsfindung verwendet werden. [!UICONTROL Entscheidungsasset] bietet einen Verweis auf Assets, die zum Rendern der `decisionItems`. |
-| Datentyp | [[!UICONTROL Commerce]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL Handel] speichert Aufzeichnungen im Zusammenhang mit der Kauf- und Verkaufsaktivität. |
-| Feldergruppe | [[!UICONTROL Profilpartner-Anreicherung (Beispiel)]](https://github.com/adobe/xdm/pull/1747/files) | Für die Anreicherung von Profilpartnern wurde ein Beispielschema hinzugefügt. |
-| Feldergruppe | [[!UICONTROL Details zur Partnervorschau (Beispiel)]](https://github.com/adobe/xdm/pull/1747/files) | Es wurde ein Beispielschema für Profilerweiterungen von Datenanbietern hinzugefügt. |
-| Datentyp | [[!UICONTROL Commerce-Umfang]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL Commerce-Umfang] gibt an, wo ein Ereignis aufgetreten ist. Beispielsweise in der Store-Ansicht, im Store oder auf der Website usw. |
-| Datentyp | [[!UICONTROL Rechnungsstellung]](https://github.com/adobe/xdm/pull/1734/files) | Die Rechnungsinformationen für eine oder mehrere Zahlungen wurden zum [!UICONTROL Handel] Schema. |
+| Erweiterung (Prospect-Profile) | [[!UICONTROL Adobe Unified Profile Service Prospect-Profile Union Extension]](https://github.com/adobe/xdm/pull/1735/files) | Es wurden erforderliche Felder für das Vereinigungsschema für das Profil potenzieller Kundinnen und Kunden (Prospect-Profile) hinzugefügt. |
+| Erweiterung | [[!UICONTROL Decisioning Asset]](https://github.com/adobe/xdm/pull/1732/files) | Es wurde ein Datentyp hinzugefügt, um bei der Entscheidungsfindung verwendete Assets darzustellen. Das [!UICONTROL Entscheidungs-Asset] verweist auf Assets, die zum Rendern von `decisionItems` verwendet werden. |
+| Datentyp | [[!UICONTROL Commerce]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL Commerce] speichert Datensätze im Zusammenhang mit der Kauf- und Verkaufsaktivität. |
+| Feldgruppe | [[!UICONTROL Profile Partner Enrichment (Beispiel)]](https://github.com/adobe/xdm/pull/1747/files) | Für die Anreicherung von Profilpartnern wurde ein Beispielschema hinzugefügt. |
+| Feldgruppe | [[!UICONTROL Partner Prospect Details(Beispiel)]](https://github.com/adobe/xdm/pull/1747/files) | Für Profilerweiterungen von potenziellen Datenanbietern wurde ein Beispielschema hinzugefügt. |
+| Datentyp | [[!UICONTROL Commerce Scope]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL Commerce Scope] gibt an, wo ein Ereignis aufgetreten ist, etwa in der Store-Ansicht, im Store oder auf der Website, um nur einige Beispiele zu nennen. |
+| Datentyp | [[!UICONTROL Billing]](https://github.com/adobe/xdm/pull/1734/files) | Für eine oder mehrere Zahlungen wurden Rechnungsinformationen zum Schema [!UICONTROL Commerce] hinzugefügt. |
 
 {style="table-layout:auto"}
 
@@ -98,18 +98,18 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Typ der Komponente | Name | Beschreibung der Aktualisierung |
 | --- | --- | --- |
-| Feldergruppe | [[!UICONTROL Details zur MediaAnalytics-Interaktion]](https://github.com/adobe/xdm/pull/1736/files) | Geändert `bitrateAverageBucket` von 100 bis &quot;800-899&quot;. |
-| Datentyp | [[!UICONTROL Informationen zu QoE-Daten]](https://github.com/adobe/xdm/pull/1736/files) | Geändert `bitrateAverageBucket` Datentyp in Zeichenfolge. |
-| Feldergruppe | [[!UICONTROL Details zur Segmentzugehörigkeit]](https://github.com/adobe/xdm/pull/1735/files) | Der Prospect Profile-Klasse wurde hinzugefügt. |
-| Schema | [[!UICONTROL Systemschema für berechnete Attribute]](https://github.com/adobe/xdm/pull/1735/files) | Identitätszuordnung hinzugefügt [!UICONTROL Systemschema für berechnete Attribute]. |
-| Datentyp | [[!UICONTROL Netzwerk zur Inhaltsbereitstellung]](https://github.com/adobe/xdm/pull/1733/files) | Feld hinzugefügt zu [!UICONTROL Informationen zu Sitzungsdetails] um das verwendete Netzwerk für die Inhaltsbereitstellung zu beschreiben. |
-| Erweiterung | [[!UICONTROL Adobe Unified Profile Service-Kontovereinigungserweiterung]](https://github.com/adobe/xdm/pull/1731/files) | Identitätszuordnung hinzugefügt [!UICONTROL Adobe Unified Profile Service-Kontovereinigung-Erweiterung]. |
-| Datentyp | [[!UICONTROL Auftrag]](https://github.com/adobe/xdm/pull/1730/files) | `discountAmount` wurde hinzugefügt [!UICONTROL Bestellung]. Hieraus ergibt sich die Differenz zwischen dem regulären Bestellpreis und dem Sonderpreis. Sie wird auf die gesamte Bestellung angewendet und nicht auf einzelne Produkte. |
-| Schema | [[!UICONTROL AEP-Hygieneanfrage]](https://github.com/adobe/xdm/pull/1728/files) | Die `targetServices` wurde hinzugefügt, um die Namen der Dienste anzugeben, die die Datenhygienevorgänge verarbeiten. |
-| Datentyp | [[!UICONTROL Lieferung]](https://github.com/adobe/xdm/pull/1727/files) | `currencyCode` wurde zu den Versandinformationen für ein oder mehrere Produkte hinzugefügt. Es handelt sich um einen alphabetischen ISO 4217-Währungscode, der zur Preisbildung für das Produkt verwendet wird. |
-| Datentyp | [[!UICONTROL Programm]](https://github.com/adobe/xdm/pull/1726/files) | Die `language` wurde hinzugefügt, um die sprachlichen, geografischen oder kulturellen Voreinstellungen des Benutzers für die Anwendung bereitzustellen. |
-| Erweiterung | [[!UICONTROL AJO-Entitätsfelder]](https://github.com/adobe/xdm/pull/1746/files) | [!UICONTROL AJO-Zeitstempelentität] wurde hinzugefügt, um den Zeitpunkt der letzten Änderung der Nachricht anzugeben. |
-| Datentyp | (Mehrfach) | [Mehrere Mediendetails entfernt](https://github.com/adobe/xdm/pull/1739/files) für Konsistenz über verschiedene Datentypen hinweg. |
+| Feldgruppe | [[!UICONTROL Details zur MediaAnalytics-Interaktion]](https://github.com/adobe/xdm/pull/1736/files) | `bitrateAverageBucket` wurde von 100 bis zu „800-899“ geändert. |
+| Datentyp | [[!UICONTROL Informationen zu QoE-Daten]](https://github.com/adobe/xdm/pull/1736/files) | Der Datentyp `bitrateAverageBucket` wurde zu „string“ geändert. |
+| Feldgruppe | [[!UICONTROL Segment Membership Details]](https://github.com/adobe/xdm/pull/1735/files) | Die Klasse für Profile potenzieller Kundinnen und Kunden wurde hierum erweitert. |
+| Schema | [[!UICONTROL Systemschema für berechnete Attribute]](https://github.com/adobe/xdm/pull/1735/files) | Eine Identitätszuordnung zum [!UICONTROL Systemschema für berechnete Attribute] hinzugefügt. |
+| Datentyp | [[!UICONTROL Content Delivery Network]](https://github.com/adobe/xdm/pull/1733/files) | Den [!UICONTROL Informationen mit den Sitzungsdetails] wurde ein Feld hinzugefügt, um das verwendete Content Delivery Network zu beschreiben. |
+| Erweiterung | [[!UICONTROL Adobe Unified Profile Service Account Union Extension]](https://github.com/adobe/xdm/pull/1731/files) | Eine Identitätszuordnung wurde zur [!UICONTROL Adobe Unified Profile Service Account Union Extension] hinzugefügt. |
+| Datentyp | [[!UICONTROL Order]](https://github.com/adobe/xdm/pull/1730/files) | `discountAmount` wurde zu [!UICONTROL Bestellung] hinzugefügt. Hieraus ergibt sich die Differenz zwischen dem regulären Bestellpreis und dem Sonderpreis. Dies wird auf die gesamte Bestellung angewendet und nicht auf einzelne Produkte. |
+| Schema | [[!UICONTROL AEP Hygiene Operation Request]](https://github.com/adobe/xdm/pull/1728/files) | Das Feld `targetServices` wurde hinzugefügt, um die Namen der Services anzugeben, die die Datenhygienevorgänge verarbeiten. |
+| Datentyp | [[!UICONTROL Lieferung]](https://github.com/adobe/xdm/pull/1727/files) | `currencyCode` wurde zu den Lieferinformationen für ein oder mehrere Produkte hinzugefügt. Es handelt sich um einen alphabetischen ISO 4217-Währungscode, der zur Preisangabe für das Produkt eingesetzt wird. |
+| Datentyp | [[!UICONTROL Application]](https://github.com/adobe/xdm/pull/1726/files) | Das Feld `language` wurde hinzugefügt, um die sprachlichen, geografischen oder kulturbezogenen Voreinstellungen der Benutzerin oder des Benutzers für die Anwendung bereitzustellen. |
+| Erweiterung | [[!UICONTROL AJO Entity Fields]](https://github.com/adobe/xdm/pull/1746/files) | Eine [!UICONTROL AJO-Zeitstempelentität] wurde hinzugefügt, um den Zeitpunkt der letzten Nachrichtenänderung anzugeben. |
+| Datentyp | (Mehrfach) | [Mehrere Mediendetails](https://github.com/adobe/xdm/pull/1739/files) wurden aus Konsistenzgründen in verschiedenen Datentypen entfernt. |
 
 {style="table-layout:auto"}
 
@@ -123,12 +123,12 @@ Der Abfrage-Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrag
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Inline-Vorlagen | Query Service unterstützt jetzt die Verwendung von Vorlagen, die auf andere Vorlagen in Ihrer SQL verweisen. Reduzieren Sie den Arbeitsaufwand und vermeiden Sie Fehler, indem Sie Inline-Vorlagen in Ihren Abfragen verwenden. Sie können Anweisungen oder Bedingungen wiederverwenden und verschachtelte Vorlagen referenzieren, um die Flexibilität in Ihrer SQL zu erhöhen. Die Größe von Abfragen, die als Vorlagen gespeichert werden können, oder die Anzahl der Vorlagen, auf die über Ihre ursprüngliche Abfrage verwiesen werden kann, ist unbegrenzt. Weiterführende Informationen finden Sie im [Benutzerhandbuch zu Inline-Vorlagen](../../query-service/essential-concepts/inline-templates.md). |
-| Aktualisierungen der Benutzeroberfläche für geplante Abfragen | Verwalten Sie alle geplanten Abfragen von einem Ort in der Benutzeroberfläche mit dem [[!UICONTROL Registerkarte &quot;Geplante Abfragen&quot;]](../../query-service/ui/monitor-queries.md#inline-actions). Die Benutzeroberfläche [!UICONTROL Geplante Abfragen] wurde durch das Hinzufügen von Inline-Abfrageaktionen und der neuen Spalte mit dem Abfragestatus verbessert. Die kürzlich hinzugefügten Funktionen umfassen die Möglichkeit, einen Zeitplan zu aktivieren, zu deaktivieren und zu löschen oder Warnhinweise für kommende Abfragen zu abonnieren, direkt von der Ansicht [!UICONTROL Geplante Abfragen] aus. <p>![Inline-Aktionen, die in der Ansicht [!UICONTROL Geplante Abfragen] hervorgehoben sind.](../../query-service/images/ui/monitor-queries/disable-inline.png "Inline-Aktionen, die in der Ansicht [!UICONTROL Geplante Abfragen] hervorgehoben sind."){width="100" zoomable="yes"}</p> |
+| Inline-Vorlagen | Query Service unterstützt nun die Verwendung von Vorlagen, die auf andere Vorlagen innerhalb Ihrer SQL verweisen. Reduzieren Sie den Arbeitsaufwand und vermeiden Sie Fehler, indem Sie Inline-Vorlagen in Ihren Abfragen verwenden. Sie können Anweisungen oder Bedingungen wiederverwenden und verschachtelte Vorlagen referenzieren, um die Flexibilität in Ihrer SQL zu erhöhen. Die Größe von Abfragen, die als Vorlagen gespeichert werden können, oder die Anzahl der Vorlagen, auf die über Ihre ursprüngliche Abfrage verwiesen werden kann, ist unbegrenzt. Weiterführende Informationen finden Sie im [Benutzerhandbuch zu Inline-Vorlagen](../../query-service/essential-concepts/inline-templates.md). |
+| Aktualisierungen der Benutzeroberfläche für geplante Abfragen | Verwalten Sie alle geplanten Abfragen von einem Ort in der Benutzeroberfläche mit der [[!UICONTROL Registerkarte „Geplante Abfragen“]](../../query-service/ui/monitor-queries.md#inline-actions). Die Benutzeroberfläche [!UICONTROL Geplante Abfragen] wurde durch das Hinzufügen von Inline-Abfrageaktionen und der neuen Spalte mit dem Abfragestatus verbessert. Die kürzlich hinzugefügten Funktionen umfassen die Möglichkeit, einen Zeitplan zu aktivieren, zu deaktivieren und zu löschen oder Warnhinweise für kommende Abfragen zu abonnieren, direkt von der Ansicht [!UICONTROL Geplante Abfragen] aus. <p>![Inline-Aktionen, die in der Ansicht [!UICONTROL Geplante Abfragen] hervorgehoben sind.](../../query-service/images/ui/monitor-queries/disable-inline.png "Inline-Aktionen, die in der Ansicht [!UICONTROL Geplante Abfragen] hervorgehoben sind."){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
 
-Weitere Informationen zu Query Service finden Sie im Abschnitt [Query Service - Übersicht](../../query-service/home.md).
+Weitere Informationen über Query Service finden Sie im Abschnitt [Query Service – Übersicht](../../query-service/home.md).
 
 ## Quellen {#sources}
 
