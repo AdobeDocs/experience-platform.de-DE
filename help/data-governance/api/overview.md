@@ -5,9 +5,9 @@ title: Handbuch zur Richtlinien-Service-API
 description: Die Richtlinien-Service-API ermöglicht es Entwicklern, Datennutzungskennzeichnungen und -richtlinien in Experience Platform zu verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
 source-git-commit: 0c09db51d97bc0cf321c5d2fd57c42d194b25d5f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '547'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ Um alle verfügbaren Endpunkte und CRUD-Vorgänge zu sehen, besuchen Sie den [[!
 
 ## Beschriftungen
 
-Wenden Sie Datennutzungsbezeichnungen auf Schemas an, um Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien zu kategorisieren. Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practices legen nahe, Daten direkt bei ihrer Aufnahme in [!DNL Experience Platform] oder ab dem Zeitpunkt ihrer Nutzbarkeit in [!DNL Platform] mit einer Kennzeichnung zu versehen. Sie können Kennzeichnungen mit dem Endpunkt `/labels` erstellen, ansehen, bearbeiten und löschen. Informationen zur Verwendung dieses Endpunkts finden Sie im [Kennzeichnungsendpunkt-Handbuch](./labels.md).
+Wenden Sie Datennutzungskennzeichnungen auf Schemata an, um Datensätze und Felder anhand der für diese Daten geltenden Nutzungsrichtlinien zu kategorisieren. Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practices legen nahe, Daten direkt bei ihrer Aufnahme in [!DNL Experience Platform] oder ab dem Zeitpunkt ihrer Nutzbarkeit in [!DNL Platform] mit einer Kennzeichnung zu versehen. Sie können Kennzeichnungen mit dem Endpunkt `/labels` erstellen, ansehen, bearbeiten und löschen. Informationen zur Verwendung dieses Endpunkts finden Sie im [Kennzeichnungsendpunkt-Handbuch](./labels.md).
 
 ## Marketing-Aktionen
 
@@ -44,7 +44,7 @@ Informationen zum Verwalten von Richtlinien in der API finden Sie im [Handbuch z
 
 ## Auswertung
 
-Sobald Datennutzungsbezeichnungen auf Platform-Schemas angewendet und Datennutzungsrichtlinien für Marketing-Aktionen für diese Bezeichnungen definiert wurden, können Sie mit Data Governance-Funktionen diese Richtlinien durchsetzen und Datenvorgänge verhindern, die Richtlinienverletzungen darstellen.
+Sobald Datennutzungskennzeichnungen auf Platform-Schemata angewendet und Datennutzungsrichtlinien entsprechend für Marketing-Aktionen definiert wurden, können Sie diese Richtlinien mithilfe von Data-Governance-Funktionen durchsetzen und Datenvorgänge verhindern, bei denen die Richtlinien verletzt werden.
 
 Die [!DNL Policy Service]-API stellt Endpunkte bereit, mit denen Sie Marketing-Aktionen für Datensätze oder beliebige Kombinationen von Datennutzungskennzeichnungen testen können, um festzustellen, ob Richtlinien verletzt werden. Je nach API-Antwort können Sie dann Protokolle in Ihrer Erlebnisanwendung einrichten, um die Einhaltung von Datennutzungsrichtlinien richtig durchzusetzen. Weiterführende Informationen dazu finden Sie im [Handbuch zu Bewertungsendpunkten](./evaluation.md).
 
