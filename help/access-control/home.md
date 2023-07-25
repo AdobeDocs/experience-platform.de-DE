@@ -5,32 +5,32 @@ title: Zugangssteuerung – Übersicht
 description: Die Zugangssteuerung für Adobe Experience Platform wird über Adobe Admin Console geboten. Diese Funktion nutzt Produktprofile in Admin Console, um Benutzende mit Berechtigungen und Sandboxes zu verknüpfen.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
 source-git-commit: 88bfcdef65b4a938d573b1beb1952c7e030ebc13
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1567'
-ht-degree: 65%
+ht-degree: 100%
 
 ---
 
 # Zugangssteuerung – Übersicht
 
-Die Zugriffskontrolle für Adobe Experience Platform wird über das **[!UICONTROL Berechtigungen]** in [Adobe Experience Cloud](https://experience.adobe.com/). Diese Funktion nutzt Rollen und Richtlinien, die Benutzer mit Berechtigungen und Sandboxes verknüpfen.
+Die Zugriffssteuerung für Adobe Experience Platform erfolgt über die **[!UICONTROL Berechtigungen]** in [Adobe Experience Cloud](https://experience.adobe.com/). Diese Funktion nutzt Produktprofile und Richtlinien, um Benutzende mit Berechtigungen und Sandboxes zu verknüpfen.
 
 ## Zugangssteuerung zu Hierarchie und Workflow
 
-Um die Zugriffskontrolle für Experience Platform zu konfigurieren, müssen Sie über System- oder Produktadministratorberechtigungen für ein Unternehmen verfügen, das über ein Experience Platform-Produkt verfügt. Die Mindestrolle, die Berechtigungen erteilen oder entziehen kann, ist ein Produktadministrator. Andere Administratorrollen, die Berechtigungen verwalten können, sind Systemadministratoren (keine Einschränkungen). Weitere Informationen zu [Administratorrollen](https://helpx.adobe.com/de/enterprise/using/admin-roles.html) finden Sie im Adobe Help Center-Artikel.
+Zum Konfigurieren der Zugriffssteuerung für Experience Platform müssen Sie system- oder produkbezogene Administratorrechte für ein Unternehmen besitzen, das über ein Experience Platform-Produkt verfügt. Zum Erteilen oder Entziehen von Berechtigungen ist mindestens eine Produktadmin-Rolle erforderlich. Zu einer anderen Administratorrolle, die Berechtigungen verwalten können, gehören die Systemadmins (keine Einschränkungen). Weitere Informationen zu [Administratorrollen](https://helpx.adobe.com/de/enterprise/using/admin-roles.html) finden Sie im Adobe Help Center-Artikel.
 
 >[!NOTE]
 >
->Ab diesem Zeitpunkt beziehen sich alle Erwähnungen von &quot;Administrator&quot;in diesem Dokument auf einen Produktadministrator oder höher (wie oben beschrieben).
+>Von hier an beziehen sich alle Erwähnungen von Administrierenden in diesem Dokument auf Produktadmins oder höhere Rollen (wie oben beschrieben).
 
 Ein Workflow auf hoher Ebene zum Abrufen und Zuweisen von Zugriffsberechtigungen kann wie folgt zusammengefasst werden:
 
 - Nach der Lizenzierung von Adobe Experience Platform oder einem Programm-Service, der Experience Platform verwendet, wird eine E-Mail an den Administrator gesendet, der während der Lizenzierung angegeben wurde.
-- Der Administrator meldet sich bei der [Adobe Admin Console](#adobe-admin-console) an und wählt **Adobe Experience Platform** aus der Liste der Produkte auf der Übersichtsseite aus.
-- Um Zugriff auf Experience Platform zu gewähren, muss der Administrator dem standardmäßigen Produktprofil Benutzer hinzufügen: `AEP-Default-All-Users`.
-- Unter Benutzerberechtigungen kann der Administrator neue Experience Platformen erstellen oder die Berechtigungen und Benutzer für bestehende Rollen bearbeiten.
-- Beim Erstellen oder Bearbeiten einer Rolle fügt der Administrator Benutzer mithilfe der **[!UICONTROL Benutzer]** und gewährt diesen Benutzern Berechtigungen (z. B.[!UICONTROL Datensätze lesen]&quot; oder &quot;[!UICONTROL Verwalten von Schemas]&quot;) durch Bearbeiten der Rollenberechtigungen. Ebenso kann der Administrator Sandboxes Zugriff über dieselbe Bearbeitungsoption zuweisen.
-- Wenn sich Benutzer bei der Experience Platform-Benutzeroberfläche anmelden, wird ihr Zugriff auf die Experience Platform-Funktionen von den Berechtigungen bestimmt, die ihnen aus dem vorherigen Schritt erteilt wurden. Wenn ein Benutzer beispielsweise nicht über die [!UICONTROL Anzeigen von Datensätzen] Berechtigung, die **[!UICONTROL Datensätze]** -Registerkarte im Seitenmenü für diesen Benutzer nicht sichtbar sein.
+- Administrierende melden sich bei der [Adobe Admin Console](#adobe-admin-console) an und wählen **Adobe Experience Platform** aus der Liste der Produkte auf der Übersichtsseite aus.
+- Um Zugriff auf Experience Platform zu gewähren, müssen Administrierende dem standardmäßigen Produktprofil `AEP-Default-All-Users` Benutzende hinzufügen.
+- Über Experience Platform-Berechtigungen können Administrierende neue Rollen erstellen oder die Berechtigungen und Benutzenden für vorhandene Rollen bearbeiten.
+- Beim Erstellen oder Bearbeiten einer Rolle fügen Administrierende der Rolle über die Registerkarte **[!UICONTROL Benutzende]** Benutzende hinzu und gewähren durch Bearbeiten der Rollenberechtigungen diesen Benutzenden Berechtigungen (z. B. [!UICONTROL Datensätze lesen] oder [!UICONTROL Schemata verwalten]). Ebenso können Administrierende mithilfe derselben Bearbeitungsoption Zugriff auf Sandboxes zuweisen.
+- Wenn sich Benutzende bei der Benutzeroberfläche von Experience Platform anmelden, wird ihr Zugriff auf Experience Platform-Funktionen durch die Berechtigungen gesteuert, die ihnen im vorherigen Schritt erteilt wurden. Wenn eine Benutzerin oder ein Benutzer beispielsweise nicht über die Berechtigung [!UICONTROL Datensätze anzeigen] verfügt, ist im Seitenmenü die Registerkarte **[!UICONTROL Datensätze]** für diese Benutzerin oder diesen Benutzer nicht sichtbar.
 
 Detailliertere Anweisungen zum Verwalten der Zugriffskontrolle in Experience Platform finden Sie im [Benutzerhandbuch für die Zugriffskontrolle](./ui/overview.md).
 
@@ -38,11 +38,11 @@ Alle Aufrufe von Experience Platform-APIs werden auf Berechtigungen überprüft 
 
 ## Berechtigungen {#platform-permissions}
 
-[!UICONTROL Berechtigungen] bietet einen zentralen Speicherort für die Verwaltung des Unternehmenszugriffs auf Experience Platformen. bis [!UICONTROL Berechtigungen]können Sie Benutzergruppen Zugriffsberechtigungen für verschiedene Experience Platform-Funktionen erteilen, z. B. [!UICONTROL Datensätze verwalten], [!UICONTROL Anzeigen von Datensätzen]oder [!UICONTROL Profile verwalten].
+Der Bereich [!UICONTROL Berechtigungen] bietet einen zentralen Ort für die Verwaltung des Experience Platform-Zugriffs für Ihr Unternehmen. Über [!UICONTROL Berechtigungen] können Sie Benutzergruppen Zugriffsberechtigungen für verschiedene Experience Platform-Funktionen erteilen, wie z. B. [!UICONTROL Datensätze verwalten], [!UICONTROL Datensätze anzeigen] oder [!UICONTROL Profile verwalten].
 
 ### Rollen
 
-Im [!UICONTROL Rollen] -Abschnitt, werden Benutzern Berechtigungen über die Verwendung von Rollen zugewiesen. Rollen ermöglichen es Ihnen, einem oder mehreren Benutzern Berechtigungen zu gewähren und enthalten auch deren Zugriff auf den Umfang der Sandboxes, die ihnen über Rollen zugewiesen werden. Benutzer können einer oder mehreren Rollen Ihres Unternehmens zugewiesen werden.
+Im Abschnitt [!UICONTROL Rollen] werden Benutzenden durch die Verwendung von Rollen Berechtigungen zugewiesen. Mithilfe von Rollen können Sie einer Benutzerin oder einem Benutzer bzw. mehreren Benutzenden Berechtigungen erteilen und zudem deren Zugriff auf die Sandboxes beschränken, die ihnen über Rollen zugewiesen sind. Benutzende können einer oder mehreren Rollen Ihres Unternehmens zugewiesen werden.
 
 ### Standardrollen
 
@@ -55,27 +55,27 @@ Experience Platform verfügt über zwei vorkonfigurierte Standardrollen. Die fol
 
 ## Sandboxes und Berechtigungen
 
-Nicht-Produktion-Sandboxes sind eine Form der Datenvirtualisierung, mit der Sie Daten von anderen Sandboxes isolieren können und die üblicherweise für Entwicklungsexperimente, Tests oder Versuche verwendet werden. Mit den Berechtigungen einer Rolle erhalten die Benutzer der Rolle Zugriff auf Experience Platform-Funktionen in den Sandbox-Umgebungen, auf die ihnen Zugriff gewährt wurde. Mit einer Standardlizenz für Experience Platform erhalten Sie fünf Sandboxes (eine zur Produktion und vier zur Nicht-Produktion). Sie können Pakete von jeweils zehn Nicht-Produktions-Sandboxes bis zu insgesamt maximal 75 Sandboxes hinzufügen. Wenden Sie sich an die Admins Ihrer Organisation oder das Adobe-Vertriebspersonal, um weitere Informationen zu erhalten.
+Nicht-Produktion-Sandboxes sind eine Form der Datenvirtualisierung, mit der Sie Daten von anderen Sandboxes isolieren können und die üblicherweise für Entwicklungsexperimente, Tests oder Versuche verwendet werden. Die Berechtigungen einer Rolle geben den Benutzenden der Rolle Zugriff auf Experience Platform-Funktionen innerhalb der Sandbox-Umgebungen, auf die ihnen Zugriff gewährt wurde. Mit einer Standardlizenz für Experience Platform erhalten Sie fünf Sandboxes (eine zur Produktion und vier zur Nicht-Produktion). Sie können Pakete von jeweils zehn Nicht-Produktions-Sandboxes bis zu insgesamt maximal 75 Sandboxes hinzufügen. Wenden Sie sich an die Admins Ihrer Organisation oder das Adobe-Vertriebspersonal, um weitere Informationen zu erhalten.
 
 Weitere Informationen zu Sandboxes in Experience Platform finden Sie in der [Sandbox-Übersicht](../sandboxes/home.md).
 
 ### Zugriff auf Sandboxes
 
-Der Zugriff auf Sandboxes wird über Rollen verwaltet. Ausführliche Anweisungen zum Aktivieren des Zugriffs auf eine Sandbox für eine Rolle finden Sie unter [Rollenanleitung zur attributbasierten Zugriffskontrolle](./abac/ui/roles.md).
+Der Zugriff auf Sandboxes wird über Rollen verwaltet. Ausführliche Anweisungen zum Aktivieren des Zugriffs auf eine Sandbox für eine Rolle finden Sie unter [„Rollen“ im Handbuch zur attributbasierten Zugriffssteuerung](./abac/ui/roles.md).
 
-Benutzern kann Zugriff auf eine oder mehrere Sandboxes innerhalb einer Rolle gewährt werden. Wenn ein Benutzer in zwei oder mehr Rollen enthalten ist, hat er Zugriff auf alle Sandboxes, die in diesen Rollen enthalten sind.
+Benutzenden kann Zugriff auf eine oder mehrere Sandboxes innerhalb einer Rolle gewährt werden. Wenn eine Benutzerin oder ein Benutzer in zwei oder mehr Rollen enthalten ist, hat diese Person Zugriff auf alle in diesen Rollen enthaltenen Sandboxes.
 
-Die Berechtigung „Sandbox-Verwaltung“ ermöglicht Benutzern das Verwalten, Anzeigen oder Zurücksetzen von Sandboxes.
+Die Berechtigung „Sandbox-Verwaltung“ ermöglicht Benutzenden das Verwalten, Anzeigen oder Zurücksetzen von Sandboxes.
 
 ### Ressourcenberechtigungen {#permissions}
 
-Die Ressource [!UICONTROL Berechtigungen] -Registerkarte in einer Rolle zeigt die Sandboxes und Berechtigungen an, die für diese Rolle aktiv sind:
+Auf der Registerkarte für [!UICONTROL Ressourcenberechtigungen] innerhalb einer Rolle werden die Sandboxes und Berechtigungen angezeigt, die für diese Rolle aktiv sind:
 
 ![permissions-overview](./images/permissions.png)
 
-Berechtigungen, die über die Ressourcenberechtigungen gewährt werden, werden nach Kategorie sortiert, wobei einige Berechtigungen Zugriff auf verschiedene Funktionen auf niedriger Ebene gewähren.
+Berechtigungen, die über die Ressourcenberechtigungen gewährt werden, werden nach Kategorie sortiert. Einige dieser Berechtigungen gewähren Zugriff auf verschiedene Funktionen niedriger Ebene.
 
-In der folgenden Tabelle sind die für die Experience Platform in der Rolle verfügbaren Berechtigungen mit Beschreibungen der spezifischen Experience Platform-Funktionen, auf die sie Zugriff gewähren, aufgeführt. Ausführliche Anweisungen zum Hinzufügen von Berechtigungen zu einer Rolle finden Sie unter [Rollenanleitung zur attributbasierten Zugriffskontrolle](./abac/ui/roles.md).
+In der folgenden Tabelle stehen die verfügbaren Berechtigungen für Experience Platform in der Rolle, einschließlich Beschreibungen der spezifischen Experience Platform-Funktionen, auf die sie Zugriff gewähren. Ausführliche Anweisungen zum Hinzufügen von Berechtigungen zu einer Rolle finden Sie unter [„Rollen“ im Handbuch zur attributbasierten Zugangssteuerung](./abac/ui/roles.md).
 
 | Kategorie | Berechtigung | Beschreibung |
 | --- | --- | --- |
@@ -128,4 +128,4 @@ In der folgenden Tabelle sind die für die Experience Platform in der Rolle verf
 
 ## Nächste Schritte
 
-Durch Lesen dieses Handbuchs wurden Sie mit den Hauptgrundsätzen der Zugriffskontrolle in Experience Platform vertraut gemacht. Sie können jetzt mit dem [Benutzerhandbuch zur attributbasierten Zugriffskontrolle](./abac/overview.md) für detaillierte Anweisungen zur Verwendung von Experience Cloud zum Erstellen von Rollen und zum Zuweisen von Berechtigungen für die Experience Platform.
+Durch Lesen dieses Handbuchs wurden Sie mit den Hauptgrundsätzen der Zugriffskontrolle in Experience Platform vertraut gemacht. Sie können jetzt mit dem [Benutzerhandbuch zur attributbasierten Zugriffssteuerung](./abac/overview.md) fortfahren. Darin finden Sie ausführliche Anweisungen dazu, wie Sie mit Experience Cloud Rollen erstellen und Berechtigungen für Experience Platform zuweisen können.
