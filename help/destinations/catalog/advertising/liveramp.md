@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie mit dem LiveRamp-Connector Zielgruppen von Ad
 hidefromtoc: true
 hide: true
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 8c9d736c8d2c45909a2915f0f1d845a7ba4d876d
 workflow-type: tm+mt
-source-wordcount: '1736'
-ht-degree: 81%
+source-wordcount: '1834'
+ht-degree: 77%
 
 ---
 
@@ -37,6 +37,20 @@ Um Daten von Experience Platform an [!DNL LiveRamp SFTP] senden zu können, ben�
 LiveRamp SFTP unterstützt die Aktivierung von Identitäten wie PII-basierten Kennungen, bekannten Kennungen und benutzerdefinierten IDs, die in der offiziellen [LiveRamp-Dokumentation](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers) beschrieben werden.
 
 Im [Zuordnungsschritt](#map) des Aktivierungs-Workflows müssen Sie die Zielzuordnungen als benutzerdefinierte Attribute definieren.
+
+## Unterstützte Zielgruppen {#supported-audiences}
+
+In diesem Abschnitt werden alle Zielgruppen beschrieben, die Sie an dieses Ziel exportieren können.
+
+Alle Ziele unterstützen die Aktivierung von Zielgruppen, die durch die Experience Platform generiert wurden [Segmentierungsdienst](../../../segmentation/home.md).
+
+Darüber hinaus unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
+
+| Zielgruppentyp | Beschreibung |
+---------|----------|
+| Benutzerdefinierte Uploads | Zielgruppen [importiert](../../../segmentation/ui/overview.md#importing-an-audience) in die Experience Platform aus CSV-Dateien. |
+
+{style="table-layout:auto"}
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
@@ -127,7 +141,7 @@ Im [!UICONTROL Planung] erstellen Sie für jede Audience einen Exportzeitplan mi
 
 * **[!UICONTROL Dateiexportoptionen]**: [!UICONTROL Exportieren Sie vollständige Dateien]. [Inkrementelle Dateiexporte](../../ui/activate-batch-profile-destinations.md#export-incremental-files) werden derzeit nicht für das [!DNL LiveRamp]-Ziel unterstützt.
 * **[!UICONTROL Häufigkeit]**: [!UICONTROL Täglich]
-* Stellen Sie die Exportzeit auf **[!UICONTROL Nach Segmentbewertung]** ein. Exporte geplanter Zielgruppen und [On-Demand-Dateiexporte](../../ui/export-file-now.md) werden derzeit nicht unterstützt für [!DNL LiveRamp] Ziel.
+* Stellen Sie die Exportzeit auf **[!UICONTROL Nach Segmentauswertung]** ein. Exporte geplanter Zielgruppen und [On-Demand-Dateiexporte](../../ui/export-file-now.md) werden derzeit nicht unterstützt für [!DNL LiveRamp] Ziel.
 * **[!UICONTROL Datum]**: Wählen Sie die Start- und Endzeiten für den Export wie gewünscht aus.
 
 ![Screenshot der Platform-Benutzeroberfläche mit dem Schritt zur Zielgruppenplanung.](../../assets/catalog/advertising/liveramp/liveramp-segment-scheduling.png)
@@ -190,7 +204,9 @@ Platform exportiert zwei CSV-Dateien nach [!DNL LiveRamp SFTP]:
 * Eine CSV-Datei mit den Zielgruppen A, C und D;
 * Eine CSV-Datei, die Audience B enthält.
 
-Exportierte CSV-Dateien enthalten Profile mit den ausgewählten Attributen und dem entsprechenden Zielgruppenstatus in separaten Spalten mit dem Attributnamen und den Zielgruppen-IDs als Spaltenüberschriften.
+Exportierte CSV-Dateien enthalten Profile mit den ausgewählten Attributen und dem entsprechenden Zielgruppenstatus in separaten Spalten mit dem Attributnamen und `audience_namespace:audience_ID` -Paare als Spaltenüberschriften verwenden, wie im folgenden Beispiel gezeigt:
+
+`ATTRIBUTE_NAME, AUDIENCE_NAMESPACE_1:AUDIENCE_ID_1, AUDIENCE_NAMESPACE_2:AUDIENCE_ID_2,..., AUDIENCE_NAMESPACE_X:AUDIENCE_ID_X`
 
 Die in den exportierten Dateien enthaltenen Profile können mit einem der folgenden Status der Zielgruppenqualifizierung übereinstimmen:
 
@@ -198,11 +214,10 @@ Die in den exportierten Dateien enthaltenen Profile können mit einem der folgen
 * `Expired`: Das Profil ist nicht mehr für die Zielgruppe qualifiziert, hat sich aber in der Vergangenheit qualifiziert.
 * `""`(leere Zeichenfolge): Das Profil hat sich nie für die Zielgruppe qualifiziert.
 
-
-Beispiel: eine exportierte CSV-Datei mit einer `email` -Attribut und drei Zielgruppen könnten wie folgt aussehen:
+Beispiel: eine exportierte CSV-Datei mit einer `email` -Attribut zwei aus der Experience Platform stammende Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md)und einem [importiert](../../../segmentation/ui/overview.md#importing-an-audience) eine externe Zielgruppe wie folgt aussehen könnte:
 
 ```csv
-email,aa2e3d98-974b-4f8b-9507-59f65b6442df,45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,7729e537-4e42-418e-be3b-dce5e47aaa1e
+email,ups:aa2e3d98-974b-4f8b-9507-59f65b6442df,ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e
 abc117@testemailabc.com,active,,
 abc111@testemailabc.com,,,active
 abc102@testemailabc.com,,,active
@@ -210,6 +225,8 @@ abc116@testemailabc.com,active,,
 abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
+
+Im obigen Beispiel wird die Variable `ups:aa2e3d98-974b-4f8b-9507-59f65b6442df` und `ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` -Abschnitte beschreiben Zielgruppen, die aus dem Segmentierungsdienst stammen, während `CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e` beschreibt eine in Platform als [benutzerdefinierter Upload](../../../segmentation/ui/overview.md#importing-an-audience).
 
 Da Platform eine CSV-Datei für jede [Zusammenführungsrichtlinien-ID](../../../profile/merge-policies/overview.md) generiert, wird auch eine separate Datenflussausführung für jede Zusammenführungsrichtlinien-ID erzeugt.
 
