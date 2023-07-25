@@ -3,7 +3,7 @@ title: Adobe Experience Platform – Versionshinweise August 2022
 description: Versionshinweise August 2022 für Adobe Experience Platform.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
 source-git-commit: 7f5a1d8e50ff030b2abe04b5155f28b8c8b6fbf9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2082'
 ht-degree: 100%
 
@@ -117,7 +117,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
 | Klasse | [[!UICONTROL AJO-Entitätsklasse]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | Eine auf Datensätzen basierende Klasse zum Erstellen von Lookup-Schemata für Adobe Journey Optimizer. |
-| Feldergruppe | [[!UICONTROL Workfront-Arbeitsobjekte]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Eine Wrapper-Feldergruppe, die auf alle objektspezifischen Feldgruppen der unteren Ebene für Adobe Workfront verweist. |
+| Feldgruppe | [[!UICONTROL Workfront-Arbeitsobjekte]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Eine Wrapper-Feldergruppe, die auf alle objektspezifischen Feldgruppen der unteren Ebene für Adobe Workfront verweist. |
 
 {style="table-layout:auto"}
 
@@ -125,10 +125,10 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
-| Feldergruppe | [[!UICONTROL Gemeinsame Felder für Journey Orchestration-Step-Ereignisse]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Es wurden zwei neue Eigenschaften hinzugefügt: `origTimeStamp` und `experienceID`. |
-| Feldergruppe | [[!UICONTROL Details zur Segmentzugehörigkeit]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | Zusätzlich zum [!UICONTROL XDM-Individualprofil] kann diese Feldergruppe nun auch in Schemata verwendet werden, die auf der Klasse XDM Business Account basieren. |
-| Feldergruppe | (Mehrfach) | Mehrere Feldergruppen, die sich auf Marketo B2B-Aktivitäten beziehen, wurden auf einen stabilen Status aktualisiert. Siehe die folgende [Pull-Anfrage](https://github.com/adobe/xdm/pull/1593/files) für weitere Details. |
-| Feldergruppe | (Mehrfach) | Mehrere wetterbezogene Feldergruppen wurden aktualisiert, um Fehler zu beheben, die bei `uvIndex` und `sunsetTime` auftraten. Siehe die folgende [Pull-Anfrage](https://github.com/adobe/xdm/pull/1602/files) für weitere Details. |
+| Feldgruppe | [[!UICONTROL Gemeinsame Felder für Journey Orchestration-Step-Ereignisse]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Es wurden zwei neue Eigenschaften hinzugefügt: `origTimeStamp` und `experienceID`. |
+| Feldgruppe | [[!UICONTROL Segment Membership Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | Zusätzlich zum [!UICONTROL XDM-Individualprofil] kann diese Feldergruppe nun auch in Schemata verwendet werden, die auf der Klasse XDM Business Account basieren. |
+| Feldgruppe | (Mehrfach) | Mehrere Feldergruppen, die sich auf Marketo B2B-Aktivitäten beziehen, wurden auf einen stabilen Status aktualisiert. Siehe die folgende [Pull-Anfrage](https://github.com/adobe/xdm/pull/1593/files) für weitere Details. |
+| Feldgruppe | (Mehrfach) | Mehrere wetterbezogene Feldergruppen wurden aktualisiert, um Fehler zu beheben, die bei `uvIndex` und `sunsetTime` auftraten. Siehe die folgende [Pull-Anfrage](https://github.com/adobe/xdm/pull/1602/files) für weitere Details. |
 | Datentyp | [[!UICONTROL Produktlistenelement]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Eine neue Eigenschaft `productImageUrl` wurde hinzugefügt. |
 | Datentyp | [[!UICONTROL Informationen zu QoE-Daten]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Eine neue Eigenschaft `framesPerSecond` wurde hinzugefügt. |
 | Datentyp | [[!UICONTROL Informationen zu Sitzungsdetails]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion` wurde in `appVersion` umbenannt. Die Felder `meta:enum` und `description` wurden ebenfalls aktualisiert. |
