@@ -1,8 +1,8 @@
 ---
 description: Erfahren Sie, wie Sie einen API-Aufruf formatieren, um eine Anfrage zur Veröffentlichung über Adobe Experience Platform Destination SDK zu senden.
 title: Erstellen einer Zielveröffentlichungsanfrage
-source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
-workflow-type: ht
+source-git-commit: 8ec5d450d2856b9a12457e1b1b0b46baf930253a
+workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 100%
 
@@ -69,9 +69,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 {style="table-layout:auto"}
 
++++
+
 +++Antwort
 
 Bei einer erfolgreichen Antwort wird der HTTP-Status 201 mit Details zu Ihrer Zielveröffentlichungsanfrage zurückgegeben.
+
++++
 
 ## Umgang mit API-Fehlern
 
