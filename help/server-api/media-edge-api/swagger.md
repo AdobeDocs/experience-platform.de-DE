@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
 title: Erste Schritte mit Media Edge-APIs
-description: Mit Media Edge-APIs können Entwickler Daten für Media Edge Analytics und Customer Journey Analytics erfassen.
+description: Mit Media Edge-APIs können Entwicklerinnen und Entwickler Daten für Media Edge Analytics und Customer Journey Analytics erfassen.
 source-git-commit: 6570149298defe1aeb0c3e35cb71e166aeb7a3f7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '82'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
 # Verwenden der Open API Specification-Datei für Media Edge-APIs
 
-Dieses Dokument enthält eine JSON Open API Specification (OAS) oder eine Referenz zu &quot;Swagger&quot;. Sie können diese Spezifikation kopieren und in ein Rendering-Tool einfügen, z. B. editor.swagger.io, um die Media Edge-API-Informationen anzuzeigen. Diese Spezifikation enthält Parameter, Beispiele und Schema für jeden Endpunkt.
+Dieses Dokument umfasst eine Open API Specification(OAS)-JSON- oder „Swagger“-Referenz. Sie können diese Spezifikation kopieren und in ein Rendering-Tool wie editor.swagger.io einfügen, um Media Edge-API-Informationen anzuzeigen. Diese Spezifikation enthält Parameter, Beispiele und Schemata für jeden Endpunkt.
 
 +++ Zum Anzeigen und Kopieren der Open API Specification auswählen
 
