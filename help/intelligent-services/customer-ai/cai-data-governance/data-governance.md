@@ -6,9 +6,9 @@ title: Data Governance in Kunden-KI
 description: Adobe Experience Platform bietet verschiedene Services und Tools, mit denen Sie Ihre erfassten Erlebnisdaten gemäß Ihren Geschäftspraktiken, Ihren rechtlichen Verpflichtungen und Ihrem Entwicklungsprozess sicher steuern können.
 exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
 source-git-commit: 0fcdb358882fba7f7923e5d6fc1a947699276e18
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '302'
-ht-degree: 76%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,7 @@ Diese Integration ermöglicht ein effizienteres Compliance-Management. Datenvera
 
 ## Einverständnisrichtlinie {#consent-policy}
 
-Customer AI berücksichtigt Ihre Zustimmungseinstellungen. Sobald du [Einverständnisrichtlinie einrichten und aktivieren](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=de#consent-policy), berücksichtigt Customer AI die von Ihnen erfassten Einwilligungsdaten. Nur einwilligte Daten werden zum Scoring des Modells in nachfolgenden Ausführungen des Modells verwendet. Die neuen Werte ersetzen die alten Werte und können bei der Segmentierung verwendet werden. Diese Funktion ist derzeit nur für Kunden von HealthCare Shield und Kunden von Datenschutz und Sicherheitsschutz verfügbar.
+Kunden-KI respektiert die von Ihnen festgelegten Einverständniseinstellungen. Sobald Sie Ihre [Einverständnisrichtlinie eingerichtet und aktiviert](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=de#consent-policy) haben, hält sich Kunden-KI an die zu Ihnen erfassten einverständisbezogenen Daten. Zum Scoring des Modells in nachfolgenden Ausführungen des Modells werden nur die Daten verwendet, die mit Ihrem Einverständis erfasst wurden. Die neuen Werte ersetzen die alten Werte und können bei der Segmentierung verwendet werden. Diese Funktion ist derzeit nur für Kundinnen und Kunden von HealthCare Shield sowie Privacy und Security Shield verfügbar.
 
 Weitere Informationen zu dieser Funktion finden Sie hier:
 
