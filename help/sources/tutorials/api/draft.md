@@ -1,21 +1,21 @@
 ---
-title: Erstellen von Entwürfen Ihrer Flow Service-Entitäten-API
-description: Erfahren Sie, wie Sie Entwürfe Ihrer Basisverbindung, Quellverbindung, Zielverbindung und Datenfluss mithilfe der Flow Service-API erstellen.
+title: Erstellen von Entwürfen Ihrer Flow Service-Entitäten mithilfe der API
+description: Erfahren Sie, wie Sie Entwürfe Ihrer Basisverbindungen, Quellverbindungen, Zielverbindungen und Datenflüsse mithilfe der Flow Service-API erstellen
 exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
 source-git-commit: ebd650355a5a4c2a949739384bfd5c8df9577075
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1192'
-ht-degree: 23%
+ht-degree: 100%
 
 ---
 
-# Erstellen Sie Entwürfe Ihrer [!DNL Flow Service] Entitäten, die die API verwenden
+# Erstellen von Entwürfen Ihrer [!DNL Flow Service]-Entitäten mithilfe der API
 
-Sie können die `mode=draft` Abfrageparameter im [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) , um [!DNL Flow Service] -Entitäten, wie z. B. Ihre Basisverbindungen, Quellverbindungen, Zielverbindungen und Datenflüsse zu einem Entwurfsstatus.
+Sie können den Abfrageparameter `mode=draft` in der [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) verwenden, um [!DNL Flow Service]-Entitäten wie Ihre Basisverbindungen, Quellverbindungen, Zielverbindungen und Datenflüsse auf einen Entwurfsstatus festzulegen.
 
-Entwürfe können später mit neuen Informationen aktualisiert und dann veröffentlicht werden, sobald sie fertig sind, indem Sie die `op=publish` Abfrageparameter.
+Die Entwürfe können später über den Abfrageparameter `op=publish` mit neuen Informationen aktualisiert und veröffentlicht werden, sobald sie bereit sind. 
 
-In diesem Tutorial erfahren Sie, wie Sie Ihre [!DNL Flow Service] -Entitäten in den Entwurfsstatus versetzt werden, damit Sie Ihre Workflows anhalten und speichern können, um sie zu einem späteren Zeitpunkt abzuschließen.
+In diesem Tutorial erfahren Sie, wie Sie Ihre [!DNL Flow Service]-Entitäten in den Entwurfsstatus versetzen können, damit Sie Ihre Workflows anhalten und speichern können, um sie zu einem späteren Zeitpunkt abzuschließen.
 
 ## Erste Schritte
 
@@ -28,15 +28,16 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../landing/api-guide.md).
 
-### Unterstützung für Entwurfsmodus prüfen
+### Prüfen auf Unterstützung des Entwurfsmodus
 
-Sie müssen außerdem überprüfen, ob die Verbindungsspezifikations-ID und die entsprechende Flussspezifikations-ID der verwendeten Quelle für den Entwurfsmodus aktiviert sind.
+Sie müssen außerdem prüfen, ob die Verbindungsspezifikations-ID und die entsprechende Flussspezifikations-ID der verwendeten Quelle für den Entwurfsmodus aktiviert sind.
 
 >[!BEGINTABS]
 
->[!TAB Details zur Verbindungsspezifikation nachschlagen]
+>[!TAB Nachschlagen der Verbindungsspezifikationsdetails]
 
-+++Anfrage Die folgende Anfrage ruft die Informationen zur Verbindungsspezifikation für ab [!DNL Azure File Storage]:
++++Anfrage
+Mit der folgenden Anfrage werden Informationen zu den Verbindungsspezifikationen für [!DNL Azure File Storage] abgerufen:
 
 ```shell
 curl -X GET \
@@ -52,7 +53,7 @@ curl -X GET \
 
 +++Antwort
 
-Eine erfolgreiche Antwort gibt die Informationen zur Verbindungsspezifikation für Ihre Quelle zurück. Um zu überprüfen, ob der Entwurfsmodus für Ihre Quelle unterstützt wird, überprüfen Sie, ob die `items[0].attributes.isDraftModeSupported` hat den Wert `true`.
+Be einer erfolgreichen Antwort werden die Informationen zu den Verbindungsspezifikationen für Ihre Quelle zurückgegeben. Um sicherzustellen, dass der Entwurfsmodus für Ihre Quelle unterstützt wird, überprüfen Sie, ob für `items[0].attributes.isDraftModeSupported` der Wert `true` festgelegt ist.
 
 ```json {line-numbers="true" start-line="1" highlight="252"}
 {
@@ -340,9 +341,10 @@ Eine erfolgreiche Antwort gibt die Informationen zur Verbindungsspezifikation f�
 
 +++
 
->[!TAB Details zur Flussspezifikation nachschlagen]
+>[!TAB Nachschlagen von Flussspezifikationsdetails]
 
-+++ Anfrage Die folgende Anfrage ruft die Details der Flussspezifikationen für eine Cloud-Speicherquelle ab:
++++Anfrage
+Mit der folgenden Anfrage werden Details zu den Flussspezifikationen für eine Cloud-Speicherquelle abgerufen:
 
 ```shell
 curl -X GET \
@@ -358,7 +360,7 @@ curl -X GET \
 
 +++Antwort
 
-Bei einer erfolgreichen Antwort werden die Informationen zur Flussspezifikation für Ihre Quelle zurückgegeben. Um zu überprüfen, ob der Entwurfsmodus für Ihre Quelle unterstützt wird, überprüfen Sie, ob die `items[0].attributes.isDraftModeSupported` hat den Wert `true`.
+Bei einer erfolgreichen Antwort werden die Informationen zu den Flussspezifikationen für Ihre Quelle zurückgegeben. Um sicherzustellen, dass der Entwurfsmodus für Ihre Quelle unterstützt wird, überprüfen Sie, ob für `items[0].attributes.isDraftModeSupported` der Wert `true` festgelegt ist.
 
 ```json {line-numbers="true" start-line="1" highlight="167"}
 {
@@ -567,9 +569,9 @@ Bei einer erfolgreichen Antwort werden die Informationen zur Flussspezifikation 
 
 
 
-## Erstellen einer Basisverbindung für Entwurf {#create-a-draft-base-connection}
+## Erstellen einer Entwurfsbasisverbindung {#create-a-draft-base-connection}
 
-Um eine Basisverbindung für Entwurf zu erstellen, stellen Sie eine POST-Anfrage an die `/connections` Endpunkt der [!DNL Flow Service] API und Bereitstellung `mode=draft` als Abfrageparameter.
+Um eine Entwurfsbasisverbindung zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt der [!DNL Flow Service]-API und geben Sie `mode=draft` als Abfrageparameter an.
 
 **API-Format**
 
@@ -579,11 +581,11 @@ POST /connections?mode=draft
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `mode` | Ein vom Benutzer bereitgestellter Abfrageparameter, der den Status der Basisverbindung bestimmt. Um eine Basisverbindung als Entwurf festzulegen, legen Sie `mode` nach `draft`. |
+| `mode` | Ein von der Benutzerin bzw. dem Benutzer eingegebener Abfrageparameter, der den Status der Basisverbindung bestimmt. Um eine Basisverbindung als Entwurf festzulegen, stellen Sie `mode` auf `draft` ein. |
 
 **Anfrage**
 
-Die folgende Anfrage erstellt den Entwurf der Basisverbindung für die [!DNL Azure File Storage] source:
+Mit der folgenden Anfrage wird die Entwurfsbasisverbindung für die [!DNL Azure File Storage]-Quelle erstellt:
 
 ```shell
 curl -X POST \
@@ -613,7 +615,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Basis-Verbindungs-ID und das entsprechende eTag für Ihre Entwurfsbasisverbindung zurück. Sie können diese ID später verwenden, um Ihre Basisverbindung zu aktualisieren und zu veröffentlichen.
+Bei einer erfolgreichen Antwort werden die Basisverbindungs-ID und das entsprechende eTag für Ihre Entwurfsbasisverbindung zurückgegeben. Sie können diese ID später verwenden, um Ihre Basisverbindung zu aktualisieren und zu veröffentlichen.
 
 ```json
 {
@@ -622,9 +624,9 @@ Eine erfolgreiche Antwort gibt die Basis-Verbindungs-ID und das entsprechende eT
 }
 ```
 
-## Veröffentlichen der Basisverbindung für Entwurf {#publish-your-draft-base-connection}
+## Veröffentlichen der Entwurfsbasisverbindung {#publish-your-draft-base-connection}
 
-Sobald Ihr Entwurf zur Veröffentlichung bereit ist, stellen Sie eine POST-Anfrage an die `/connections` -Endpunkt und geben Sie die ID der Basisverbindung für den Entwurf an, die Sie veröffentlichen möchten, sowie einen Aktionsvorgang für die Veröffentlichung.
+Sobald Ihr Entwurf zur Veröffentlichung bereit ist, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie die ID der Entwurfsbasisverbindung an, die Sie veröffentlichen möchten, sowie einen Aktionsvorgang für die Veröffentlichung.
 
 **API-Format**
 
@@ -634,11 +636,11 @@ POST /connections/{BASE_CONNECTION_ID}/action?op=publish
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `op` | Ein Aktionsvorgang, der den Status der abgefragten Basisverbindung aktualisiert. Um eine Entwurfsbasisverbindung zu veröffentlichen, legen Sie `op` nach `publish`. |
+| `op` | Ein Aktionsvorgang, mit dem der Status der abgefragten Basisverbindung aktualisiert wird. Um eine Entwurfsbasisverbindung zu veröffentlichen, legen Sie für `op` den Wert `publish` fest. |
 
 **Anfrage**
 
-Die folgende Anfrage veröffentlicht die Entwurfsbasisverbindung für [!DNL Azure File Storage] , die in einem früheren Schritt erstellt wurde.
+Mit der folgenden Anfrage wird die Entwurfsbasisverbindung für [!DNL Azure File Storage] veröffentlicht, die in einem früheren Schritt erstellt wurde.
 
 ```shell
 curl -X POST \
@@ -661,9 +663,9 @@ Bei einer erfolgreichen Antwort werden die ID und das entsprechende eTag für Ih
 }
 ```
 
-## Erstellen einer Quellverbindung für Entwurf {#create-a-draft-source-connection}
+## Erstellen einer Entwurfsquellverbindung {#create-a-draft-source-connection}
 
-Um eine Quellverbindung für Entwurf zu erstellen, stellen Sie eine POST-Anfrage an die `/sourceConnections` Endpunkt der [!DNL Flow Service] API und Bereitstellung `mode=draft` als Abfrageparameter.
+Um eine Entwurfsquellverbindung zu erstellen, stellen Sie eine POST-Anfrage an den `/sourceConnections`-Endpunkt der [!DNL Flow Service]-API und geben Sie `mode=draft` als Abfrageparameter an.
 
 **API-Format**
 
@@ -673,7 +675,7 @@ POST /sourceConnections?mode=draft
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `mode` | Ein vom Benutzer bereitgestellter Abfrageparameter, der den Status der Quellverbindung bestimmt. Um eine Quellverbindung als Entwurf festzulegen, legen Sie `mode` nach `draft`. |
+| `mode` | Ein von der Benutzerin bzw. dem Benutzer eingegebener Abfrageparameter, der den Status der Quellverbindung bestimmt. Um eine Quellverbindung als Entwurf festzulegen, stellen Sie `mode` auf `draft` ein. |
 
 **Anfrage**
 
@@ -705,7 +707,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Kennung der Quellverbindung und das entsprechende eTag für Ihre Entwurfsquellenverbindung zurück. Sie können diese ID später verwenden, um Ihre Quellverbindung zu aktualisieren und zu veröffentlichen.
+Bei einer erfolgreichen Antwort werden die Quellverbindungs-ID und das entsprechende eTag für Ihre Entwurfsquellverbindung zurückgegeben. Sie können diese ID später verwenden, um Ihre Quellverbindung zu aktualisieren und zu veröffentlichen.
 
 ```json
 {
@@ -714,13 +716,13 @@ Eine erfolgreiche Antwort gibt die Kennung der Quellverbindung und das entsprech
 }
 ```
 
-## Veröffentlichen der Quellverbindung des Entwurfs {#publish-your-draft-source-connection}
+## Veröffentlichen der Entwurfsquellverbindung {#publish-your-draft-source-connection}
 
 >[!NOTE]
 >
->Sie können eine Quellverbindung nicht veröffentlichen, wenn die zugehörige Basisverbindung noch im Entwurfszustand ist. Stellen Sie sicher, dass Ihre Basisverbindung zuerst veröffentlicht wird, bevor Sie Ihre Quellverbindung veröffentlichen.
+>Sie können eine Quellverbindung nicht veröffentlichen, wenn die zugehörige Basisverbindung noch einen Entwurfsstatus aufweist. Stellen Sie sicher, dass zuerst die Basisverbindung veröffentlicht wird, bevor Sie die Quellverbindung veröffentlichen.
 
-Sobald Ihr Entwurf zur Veröffentlichung bereit ist, stellen Sie eine POST-Anfrage an die `/sourceConnections` -Endpunkt und geben Sie die ID der Quellverbindung des Entwurfs an, die Sie veröffentlichen möchten, sowie einen Aktionsvorgang für die Veröffentlichung.
+Sobald Ihr Entwurf zur Veröffentlichung bereit ist, stellen Sie eine POST-Anfrage an den `/sourceConnections`-Endpunkt und geben Sie die ID der Entwurfsquellverbindung an, die Sie veröffentlichen möchten, sowie einen Aktionsvorgang für die Veröffentlichung.
 
 **API-Format**
 
@@ -730,11 +732,11 @@ POST /sourceConnections/{SOURCE_CONNECTION_ID}/action?op=publish
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `op` | Ein Aktionsvorgang, der den Status der abgefragten Quellverbindung aktualisiert. Um eine Quellverbindung für Entwurf zu veröffentlichen, legen Sie `op` nach `publish`. |
+| `op` | Ein Aktionsvorgang, mit dem der Status der abgefragten Quellverbindung aktualisiert wird. Um eine Entwurfsquellverbindung zu veröffentlichen, legen Sie für `op` den Wert `publish` fest. |
 
 **Anfrage**
 
-Die folgende Anfrage veröffentlicht den Entwurf der Quellverbindung für [!DNL Azure File Storage] , die in einem früheren Schritt erstellt wurde.
+Mit der folgenden Anfrage wird die Entwurfsquellverbindung für [!DNL Azure File Storage] veröffentlicht, die in einem früheren Schritt erstellt wurde.
 
 ```shell
 curl -X POST \
@@ -757,9 +759,9 @@ Bei einer erfolgreichen Antwort werden die ID und das entsprechende eTag für Ih
 }
 ```
 
-## Erstellen einer Entwurfs-Zielverbindung {#create-a-draft-target-connection}
+## Erstellen einer Entwurfszielverbindung {#create-a-draft-target-connection}
 
-Um eine Entwurfs-Zielverbindung zu erstellen, stellen Sie eine POST-Anfrage an die `/targetConnections` Endpunkt der [!DNL Flow Service] API und Bereitstellung `mode=draft` als Abfrageparameter.
+Um eine Entwurfszielverbindung zu erstellen, stellen Sie eine POST-Anfrage an den `/targetConnections`-Endpunkt der [!DNL Flow Service]-API und geben Sie `mode=draft` als Abfrageparameter an.
 
 **API-Format**
 
@@ -769,7 +771,7 @@ POST /targetConnections?mode=draft
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `mode` | Ein vom Benutzer bereitgestellter Abfrageparameter, der den Status der Zielverbindung bestimmt. Um eine Zielverbindung als Entwurf festzulegen, legen Sie `mode` nach `draft`. |
+| `mode` | Ein von der Benutzerin bzw. dem Benutzer eingegebener Abfrageparameter, der den Status der Zielverbindung bestimmt. Um eine Zielverbindung als Entwurf festzulegen, stellen Sie `mode` auf `draft` ein. |
 
 **Anfrage**
 
@@ -802,7 +804,7 @@ curl -X POST \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die Ziel-Verbindungs-ID und das entsprechende eTag für Ihre Entwurfs-Zielverbindung zurückgegeben. Sie können diese ID später verwenden, um Ihre Zielverbindung zu aktualisieren und zu veröffentlichen.
+Bei einer erfolgreichen Antwort werden die Zielverbindungs-ID und das entsprechende eTag für Ihre Entwurfszielverbindung zurückgegeben. Sie können diese ID später verwenden, um Ihre Zielverbindung zu aktualisieren und zu veröffentlichen.
 
 ```json
 {
@@ -811,13 +813,13 @@ Bei einer erfolgreichen Antwort werden die Ziel-Verbindungs-ID und das entsprech
 }
 ```
 
-## Veröffentlichen der Entwurfs-Zielverbindung {#publish-your-draft-target-connection}
+## Veröffentlichen der Entwurfszielverbindung {#publish-your-draft-target-connection}
 
 >[!NOTE]
 >
->Sie können eine Zielverbindung nicht veröffentlichen, wenn die zugehörige Basisverbindung noch im Entwurfszustand ist. Stellen Sie sicher, dass Ihre Basisverbindung zuerst veröffentlicht wird, bevor Sie Ihre Zielverbindung veröffentlichen.
+>Sie können eine Zielverbindung nicht veröffentlichen, wenn die zugehörige Basisverbindung noch einen Entwurfsstatus aufweist. Stellen Sie sicher, dass zuerst die Basisverbindung veröffentlicht wird, bevor Sie die Zielverbindung veröffentlichen.
 
-Sobald Ihr Entwurf zur Veröffentlichung bereit ist, stellen Sie eine POST-Anfrage an die `/targetConnections` -Endpunkt und geben Sie die ID der Entwurfs-Zielverbindung an, die Sie veröffentlichen möchten, sowie einen Aktionsvorgang für die Veröffentlichung.
+Sobald Ihr Entwurf zur Veröffentlichung bereit ist, stellen Sie eine POST-Anfrage an den `/targetConnections`-Endpunkt und geben Sie die ID der Entwurfszielverbindung an, die Sie veröffentlichen möchten, sowie einen Aktionsvorgang für die Veröffentlichung.
 
 **API-Format**
 
@@ -827,11 +829,11 @@ POST /targetConnections/{TARGET_CONNECTION_ID}/action?op=publish
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `op` | Ein Aktionsvorgang, der den Status der abgefragten Zielverbindung aktualisiert. Um eine Entwurfs-Zielverbindung zu veröffentlichen, legen Sie `op` nach `publish`. |
+| `op` | Ein Aktionsvorgang, mit dem der Status der abgefragten Zielverbindung aktualisiert wird. Um eine Entwurfszielverbindung zu veröffentlichen, legen Sie für `op` den Wert `publish` fest. |
 
 **Anfrage**
 
-Die folgende Anfrage veröffentlicht den Entwurf der Zielverbindung für [!DNL Azure File Storage] , die in einem früheren Schritt erstellt wurde.
+Mit der folgenden Anfrage wird die Entwurfszielverbindung für [!DNL Azure File Storage] veröffentlicht, die in einem früheren Schritt erstellt wurde.
 
 ```shell
 curl -X POST \
@@ -854,7 +856,7 @@ Bei einer erfolgreichen Antwort werden die ID und das entsprechende eTag für Ih
 }
 ```
 
-## Erstellen eines Entwurfs-Datenflusses {#create-a-draft-dataflow}
+## Erstellen eines Entwurfsdatenflusses {#create-a-draft-dataflow}
 
 Um einen Datenfluss als Entwurf festzulegen, stellen Sie eine POST-Anfrage an den `/flows`-Endpunkt und fügen `mode=draft` als Abfrageparameter hinzu. Auf diese Weise können Sie einen Datenfluss erstellen und als Entwurf speichern.
 
@@ -897,7 +899,7 @@ Mit der folgenden Anfrage wird ein Datenflussentwurf erstellt.
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die Fluss-ID und das entsprechende eTag für Ihren Datenfluss im Entwurf zurückgegeben. Sie können diese ID später verwenden, um Ihren Datenfluss zu aktualisieren und zu veröffentlichen.
+Bei einer erfolgreichen Antwort werden die Fluss-ID und das entsprechende eTag für Ihren Entwurfsdatenfluss zurückgegeben. Sie können diese ID später verwenden, um Ihren Datenfluss zu aktualisieren und zu veröffentlichen.
 
 ```json
 {
@@ -906,11 +908,11 @@ Bei einer erfolgreichen Antwort werden die Fluss-ID und das entsprechende eTag f
 }
 ```
 
-## Veröffentlichen des Entwurfs eines Datenflusses {#publish-your-draft-dataflow}
+## Veröffentlichen des Datenflussentwurfs {#publish-your-draft-dataflow}
 
 >[!NOTE]
 >
->Sie können einen Datenfluss nicht veröffentlichen, wenn die zugehörigen Quell- und Zielverbindungen sich noch im Entwurfsstatus befinden. Stellen Sie sicher, dass Ihre Quell- und Zielverbindungen zuerst veröffentlicht werden, bevor Sie Ihren Datenfluss veröffentlichen.
+>Sie können einen Datenfluss nicht veröffentlichen, wenn die zugehörigen Quell- und Zielverbindungen noch einen Entwurfsstatus aufweisen. Stellen Sie sicher, dass zuerst die Quell- und Zielverbindungen veröffentlicht werden, bevor Sie den Datenfluss veröffentlichen.
 
 Sobald Ihr Entwurf zur Veröffentlichung bereit ist, stellen Sie eine POST-Anfrage an den `/flows`-Endpunkt und geben Sie die ID des Datenflussentwurfs an, den Sie veröffentlichen möchten, sowie einen Aktionsvorgang für die Veröffentlichung.
 
@@ -951,4 +953,4 @@ Bei einer erfolgreichen Antwort werden die ID und das entsprechende `etag` Ihres
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie gelernt, wie Sie Entwürfe Ihrer [!DNL Flow Service] -Entitäten und veröffentlichen Sie diese Entwürfe. Weitere Informationen zu Quellen finden Sie im [Quellen - Übersicht](../../home.md).
+In diesem Tutorial haben Sie gelernt, wie Sie Entwürfe Ihrer [!DNL Flow Service]-Entitäten erstellen und diese Entwürfe veröffentlichen. Weitere Informationen zu Quellen finden Sie im Abschnitt [Quellen – Übersicht](../../home.md).
