@@ -1,68 +1,72 @@
 ---
-keywords: Experience Platform; Homepage; beliebte Themen; Salesforce; Salesforce
-solution: Experience Platform
-title: Erstellen einer Salesforce-Quellverbindung in der Benutzeroberfläche
-type: Tutorial
-description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Salesforce-Quellverbindung erstellen.
+title: Salesforce-Konto über die Experience Platform-Benutzeroberfläche verbinden
+description: Erfahren Sie, wie Sie Ihr Salesforce-Konto verbinden und Ihre CRM-Daten mithilfe der Benutzeroberfläche in die Experience Platform bringen.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 57cdcbd5018e7f57261f09c6bddf5e2a8dcfd0d5
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 60%
+source-wordcount: '524'
+ht-degree: 31%
 
 ---
 
-# Erstellen eines Quell-Connectors für [!DNL Salesforce] in der Benutzeroberfläche
+# Verbinden Sie [!DNL Salesforce] Konto für die Experience Platform über die Benutzeroberfläche
 
-Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, CRM-Daten aus externen Quellen nach einem bestimmten Zeitplan aufzunehmen. In diesem Tutorial finden Sie die Schritte zum Erstellen eines [!DNL Salesforce]-Quell-Connectors mithilfe der [!DNL Platform]-Benutzeroberfläche.
+In diesem Tutorial erfahren Sie, wie Sie Ihre [!DNL Salesforce] und bringen Sie Ihre CRM-Daten über die Experience Platform-Benutzeroberfläche in Adobe Experience Platform mit.
 
 ## Erste Schritte
 
-Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
+Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experience Platform voraus:
 
-* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
+* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
    * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemas vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
    * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
-Wenn Sie bereits über ein gültiges [!DNL Salesforce]-Konto verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Konfigurieren eines Datenflusses](../../dataflow/crm.md) fortfahren.
+Wenn Sie bereits über eine authentifizierte [!DNL Salesforce] -Konto verwenden, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Datenfluss für CRM-Daten konfigurieren](../../dataflow/crm.md).
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldeinformationen {#gather-required-credentials}
+
+Um Ihre [!DNL Salesforce] -Konto und -Experience Platform vergleichen, müssen Sie Werte angeben, die den folgenden [!DNL Salesforce] Anmeldeinformationen:
 
 | Anmeldedaten | Beschreibung |
-| ---------- | ----------- |
+| --- | --- |
 | `environmentUrl` | Die URL der [!DNL Salesforce] Quellinstanz. |
 | `username` | Der Benutzername für die [!DNL Salesforce] Benutzerkonto. |
 | `password` | Das Kennwort für die [!DNL Salesforce] Benutzerkonto. |
 | `securityToken` | Das Sicherheits-Token für [!DNL Salesforce] Benutzerkonto. |
+| `apiVersion` | (Optional) Die REST-API-Version der [!DNL Salesforce] -Instanz, die Sie verwenden. Wenn dieses Feld leer gelassen wird, verwendet Experience Platform automatisch die neueste verfügbare Version. |
 
-Weitere Informationen zu den ersten Schritten finden Sie unter [Dieses Salesforce-Dokument](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
+Weitere Informationen zur Authentifizierung finden Sie unter [this [!DNL Salesforce] Authentifizierungshandbuch](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
+
+Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihre [!DNL Salesforce] -Konto in die Experience Platform.
 
 ## Verbinden Ihres [!DNL Salesforce]-Kontos
 
-Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Salesforce]-Konto mit [!DNL Platform] zu verknüpfen.
+Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** über das linke Navigationsmenü aus, um auf den Arbeitsbereich &quot;Quellen&quot;zuzugreifen. Die *[!UICONTROL Katalog]* -Bildschirm zeigt eine Vielzahl von Quellen an, die im Experience Platform-Quellkatalog verfügbar sind.
 
-Anmelden bei [Adobe Experience Platform](https://platform.adobe.com) und wählen Sie **[!UICONTROL Quellen]** über die linke Navigationsleiste, um auf die **[!UICONTROL Quellen]** Arbeitsbereich. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie eine bestimmte Quelle mithilfe der Suchoption finden.
 
-Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
+Auswählen **[!UICONTROL CRM]** aus der Liste der Quellkategorien und wählen Sie **[!UICONTROL Daten hinzufügen]** aus dem [!DNL Salesforce] Karte.
 
-Unter dem **[!UICONTROL Datenbanken]** category, select **[!UICONTROL Salesforce]**. Wenn Sie diesen Connector zum ersten Mal verwenden, wählen Sie **[!UICONTROL Konfigurieren]**. Andernfalls wählen Sie **[!UICONTROL Daten hinzufügen]** , um einen neuen Salesforce-Connector zu erstellen.
-
-![Katalog](../../../../images/tutorials/create/salesforce/catalog.png)
+![Der Quellkatalog auf der Experience Platform-Benutzeroberfläche mit der ausgewählten Salesforce-Quellkarte.](../../../../images/tutorials/create/salesforce/catalog.png)
 
 Die **[!UICONTROL Mit Salesforce verbinden]** angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
-### Neues Konto
+>[!BEGINTABS]
 
-Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre [!DNL Salesforce] Anmeldedaten. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Verbinden]** und dann etwas Zeit für die Einrichtung der neuen Verbindung.
+>[!TAB Vorhandenes Salesforce-Konto verwenden]
 
-![connect](../../../../images/tutorials/create/salesforce/new.png)
+Um ein vorhandenes Konto zu verwenden, wählen Sie **[!UICONTROL Vorhandenes Konto]** und dann das Konto, das Sie verwenden möchten, aus der angezeigten Liste aus. Wählen Sie zum Abschluss **[!UICONTROL Nächste]** um fortzufahren.
 
-### Vorhandenes Konto
+![Eine Liste authentifizierter Salesforce-Konten, die bereits in Ihrem Unternehmen vorhanden sind.](../../../../images/tutorials/create/salesforce/existing.png)
 
-Um ein vorhandenes Konto zu verbinden, wählen Sie die [!DNL Salesforce] Konto, mit dem Sie eine Verbindung herstellen möchten, wählen Sie **[!UICONTROL Nächste]** in der oberen rechten Ecke, um fortzufahren.
+>[!TAB Neues Salesforce-Konto erstellen]
 
-![vorhanden](../../../../images/tutorials/create/salesforce/existing.png)
+Um ein neues Konto zu verwenden, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie einen Namen, eine Beschreibung und Ihre [!DNL Salesforce] Authentifizierungsberechtigungen. Wählen Sie zum Abschluss **[!UICONTROL Verbindung mit Quelle herstellen]** und lassen einige Sekunden zu, bis die neue Verbindung hergestellt ist.
+
+![Die Oberfläche, in der Sie ein neues Salesforce-Konto erstellen können, indem Sie die entsprechenden Authentifizierungsberechtigungen angeben.](../../../../images/tutorials/create/salesforce/new.png)
+
+>[!ENDTABS]
 
 ## Nächste Schritte
 

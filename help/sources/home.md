@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über Quell-Connectoren
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f3d70e986148d39429f394a60d12686617e3fd3d
+source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
 workflow-type: tm+mt
 source-wordcount: '1324'
 ht-degree: 84%
@@ -137,6 +137,7 @@ Experience Platform ermöglicht die Aufnahme von Daten aus Datenbanken von Dritt
 
 Experience Platform ermöglicht die Aufnahme von Daten aus E-Commerce-Systemen von Drittanbietern. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
+- [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md)
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 - [[!DNL Shopify (Streaming)]](connectors/ecommerce/shopify-streaming.md)
 
@@ -204,7 +205,7 @@ Mit der attributbasierten Zugriffssteuerung können Sie Zuordnungskonfiguratione
 
 >[!TIP]
 >
->Die attributbasierte Zugriffssteuerung funktioniert wie folgt: **Rollen** werden erstellt, um die Arten von Benutzern zu kategorisieren, die mit Ihrer Platform-Instanz interagieren. **Bezeichnungen** angewendet werden auf **Rollen** , um den Zugriff auf diese Rolle zu bestimmen. **Bezeichnungen** werden auch auf Ressourcen wie Schemafelder und Segmente angewendet. Damit ein Benutzer Zugriff auf bestimmte Schemafelder und Segmente haben kann, müssen diese *Rolle mit der gleichen Beschriftung, die der abgefragten Ressource zugewiesen ist*. Weitere Informationen finden Sie im Abschnitt [Handbuch zur attributbasierten Zugriffskontrolle - End-to-End](../access-control/abac/end-to-end-guide.md).
+>Die attributbasierte Zugriffssteuerung funktioniert wie folgt: **Rollen** werden erstellt, um die Arten von Benutzern zu kategorisieren, die mit Ihrer Platform-Instanz interagieren. **Bezeichnungen** angewendet werden auf **Rollen** , um den Zugriff auf diese bestimmte Rolle zu bestimmen. **Bezeichnungen** werden auch auf Ressourcen wie Schemafelder und Segmente angewendet. Damit ein Benutzer Zugriff auf bestimmte Schemafelder und Segmente haben kann, müssen diese *Rolle mit der gleichen Beschriftung, die der abgefragten Ressource zugewiesen ist*. Weitere Informationen finden Sie im Abschnitt [Handbuch zur attributbasierten Zugriffskontrolle - End-to-End](../access-control/abac/end-to-end-guide.md).
 
 - Wenden Sie Beschriftungen auf Schemafelder an, um den Zugriff auf bestimmte Schemafelder in Ihrer Organisation zu definieren. Sobald der Zugriff auf bestimmte Schemafelder hergestellt wurde, können Benutzer nur Zuordnungen für die Felder erstellen, auf die sie Zugriff haben.
 - Benutzer ohne die entsprechenden Rollen können keine Datenflüsse mit Zuordnungen erstellen oder aktualisieren, die nicht zugängliche Schemafelder beinhalten. Darüber hinaus können nicht autorisierte Benutzer vorhandene Datenflüsse mit nicht zugänglichen Schemafeldern nicht aktualisieren, löschen, aktivieren oder deaktivieren.

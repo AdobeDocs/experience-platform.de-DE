@@ -1,10 +1,8 @@
 ---
 title: Erstellen einer Quellverbindung aus SAP Commerce über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung zu SAP Commerce erstellen.
-hide: true
-hidefromtoc: true
 badge: Beta
-source-git-commit: 99edb8b2bcd4225235038e966a367d91375c961a
+source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
 workflow-type: tm+mt
 source-wordcount: '1010'
 ht-degree: 33%
@@ -39,7 +37,7 @@ Um eine Verbindung herzustellen [!DNL SAP Commerce] zur Experience Platform hinz
 | Client-ID | Der Wert von `clientId` aus dem Dienstschlüssel. |
 | Client-Geheimnis | Der Wert von `clientSecret` aus dem Dienstschlüssel. |
 | Token-Endpunkt | Der Wert von `url` aus dem Dienstschlüssel, wird er dem `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
-| Region | Ihr Standort im Rechenzentrum. Die Region ist in der Region `url` und weist einen Wert auf, der `eu10` oder `us10`. Beispiel: `url` is `https://eu10.revenue.cloud.sap/api` benötigen `eu10`. |
+| Region | Ihr Rechenzentrumsstandort. Die Region ist in der Region `url` und weist einen Wert auf, der `eu10` oder `us10`. Beispiel: `url` is `https://eu10.revenue.cloud.sap/api` benötigen Sie `eu10`. |
 
 Weitere Informationen finden Sie im Abschnitt [[!DNL SAP Commerce] Dokumentation](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
 
@@ -172,7 +170,7 @@ Schließlich müssen Sie den Objekttyp auswählen, den Sie für Platform erfasse
 
 | Objekttyp | Beschreibung |
 | --- | --- |
-| `Customers` | Die Entitäten, die Abonnements haben. |
+| `Customers` | Die Entitäten mit Abonnements. |
 | `Contacts` | Die Kontaktdaten für Kunden. |
 
 >[!BEGINTABS]
@@ -197,11 +195,11 @@ Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL SAP Commerce]
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei der Verwendung der [!DNL SAP Commerce] -Quelle.
+Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei der Verwendung der Variablen [!DNL SAP Commerce] -Quelle.
 
 ### Zuordnung {#mapping}
 
-Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Umfassende Schritte zur Verwendung der Mapper-Oberfläche und der berechneten Felder finden Sie im Abschnitt [Handbuch zur Datenvorbereitung-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
+Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Umfassende Schritte zur Verwendung der Mapper-Oberfläche und der berechneten Felder finden Sie im Abschnitt [Handbuch zur Datenvorbereitung-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
 
 Die Zuordnungskonfigurationen für Ihren Datenfluss unterscheiden sich je nach Schema und Objekttyp, den Sie erfassen möchten.
 
@@ -209,7 +207,7 @@ Die Zuordnungskonfigurationen für Ihren Datenfluss unterscheiden sich je nach S
 
 >[!TAB Kunden]
 
-Für Kundendaten: [!DNL SAP Commerce] verwendet die [Kunden](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers) und [Kundenkontaktbeziehungen](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) Endpunkte der [!DNL SAP Business Partners] API zum Abrufen der Daten
+Für Kundendaten: [!DNL SAP Commerce] verwendet die [Kunden](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers) und [Kundenkontaktbeziehungen](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) -Endpunkte der [!DNL SAP Business Partners] API zum Abrufen der Daten
 
 Im Folgenden finden Sie ein Beispiel für Zuordnungskonfigurationen für [!DNL SAP Commerce] Datenfluss für Kundendaten:
 

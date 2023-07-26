@@ -5,10 +5,10 @@ title: Erstellen einer Salesforce Service Cloud-Quellverbindung mithilfe der Flo
 type: Tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Salesforce Service Cloud verbinden.
 exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 5d28db34edd377269e8710b1741098a08616ae5f
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 73%
+source-wordcount: '501'
+ht-degree: 69%
 
 ---
 
@@ -35,7 +35,8 @@ Damit [!DNL Flow Service] eine Verbindung mit [!DNL Salesforce Service Cloud] he
 | ---------- | ----------- |
 | `username` | Der Benutzername für Ihre [!DNL Salesforce Service Cloud] Benutzerkonto. |
 | `password` | Das Kennwort für Ihre [!DNL Salesforce Service Cloud] -Konto. |
-| `securityToken` | Das Sicherheits-Token für Ihre [!DNL Salesforce Service Cloud] -Konto. |
+| `securityToken` | Das Sicherheitstoken für Ihre [!DNL Salesforce Service Cloud] -Konto. |
+| `apiVersion` | (Optional) Die REST-API-Version der [!DNL Salesforce Service Cloud] -Instanz, die Sie verwenden. Wenn dieses Feld leer gelassen wird, verwendet Experience Platform automatisch die neueste verfügbare Version. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Salesforce Service Cloud] ist: `b66ab34-8619-49cb-96d1-39b37ede86ea`. |
 
 Weitere Informationen zu den ersten Schritten finden Sie unter [Dieses Salesforce Service Cloud-Dokument](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm).
@@ -62,34 +63,34 @@ Die folgende Anfrage erstellt eine Basisverbindung für [!DNL Salesforce Service
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Base connection for salesforce service cloud",
-        "description": "Base connection for salesforce service cloud",
-        "auth": {
-            "specName": "Basic Authentication",
-            "params": {
-                "username": "{USERNAME}",
-                "password": "{PASSWORD}",
-                "securityToken": "{SECURITY_TOKEN}"
-            }
-        },
-        "connectionSpec": {
-            "id": "b66ab34-8619-49cb-96d1-39b37ede86ea",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Base connection for salesforce service cloud",
+      "description": "Base connection for salesforce service cloud",
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {
+              "username": "{USERNAME}",
+              "password": "{PASSWORD}",
+              "securityToken": "{SECURITY_TOKEN}"
+          }
+      },
+      "connectionSpec": {
+          "id": "b66ab34-8619-49cb-96d1-39b37ede86ea",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `auth.params.username` | Der Benutzername, der mit Ihrer [!DNL Salesforce Service Cloud] -Konto. |
-| `auth.params.password` | Das Kennwort, das mit Ihrem [!DNL Salesforce Service Cloud] -Konto. |
+| `auth.params.username` | Der mit Ihrer [!DNL Salesforce Service Cloud] -Konto. |
+| `auth.params.password` | Das Kennwort für Ihre [!DNL Salesforce Service Cloud] -Konto. |
 | `auth.params.securityToken` | Das Ihrem [!DNL Salesforce Service Cloud] -Konto. |
 | `connectionSpec.id` | Die [!DNL Salesforce Service Cloud]-Verbindungsspezifikations-ID: `b66ab34-8619-49cb-96d1-39b37ede86ea` |
 

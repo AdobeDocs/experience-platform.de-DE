@@ -1,10 +1,8 @@
 ---
 title: Erstellen einer Quellverbindung und eines Datenflusses für SAP Commerce mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie eine Quellverbindung und einen Datenfluss erstellen, um SAP Commerce-Daten mithilfe der Flow Service-API in die Experience Platform zu bringen.
-hide: true
-hidefromtoc: true
 badge: Beta
-source-git-commit: 99edb8b2bcd4225235038e966a367d91375c961a
+source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
 workflow-type: tm+mt
 source-wordcount: '2358'
 ht-degree: 55%
@@ -37,7 +35,7 @@ Um eine Verbindung herzustellen [!DNL SAP Commerce] zur Experience Platform hinz
 | `clientId` | Der Wert von `clientId` aus dem Dienstschlüssel. |
 | `clientSecret` | Der Wert von `clientSecret` aus dem Dienstschlüssel. |
 | `tokenEndpoint` | Der Wert von `url` aus dem Dienstschlüssel, wird er dem `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
-| `region` | Ihr Standort im Rechenzentrum. Die Region ist in der Region `url` und weist einen Wert auf, der `eu10` oder `us10`. Beispiel: `url` is `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`, benötigen Sie `eu10`. |
+| `region` | Ihr Rechenzentrumsstandort. Die Region ist in der Region `url` und weist einen Wert auf, der `eu10` oder `us10`. Beispiel: `url` is `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`, benötigen Sie `eu10`. |
 
 Weitere Informationen zu diesen Anmeldedaten finden Sie im Abschnitt [[!DNL SAP Commerce] Dokumentation](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
 
@@ -94,7 +92,7 @@ curl -X POST \
 | `description` | Ein optionaler Wert, den Sie angeben können, um weitere Informationen zu Ihrer Basisverbindung bereitzustellen. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID Ihrer Quelle. Diese ID kann abgerufen werden, nachdem Ihre Quelle registriert und über die [!DNL Flow Service]-API genehmigt wurde. |
 | `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für Platform authentifizieren. |
-| `auth.params.region` | Ihr Standort im Rechenzentrum. Die Region ist in der Region `url` und weist einen Wert auf, der `eu10` oder `us10`. Wenn beispielsweise die Variable `url` is `https://subscriptionbilling.authentication.eu10.hana.ondemand.com` benötigen `eu10`. |
+| `auth.params.region` | Ihr Rechenzentrumsstandort. Die Region ist in der Region `url` und weist einen Wert auf, der `eu10` oder `us10`. Wenn beispielsweise die Variable `url` is `https://subscriptionbilling.authentication.eu10.hana.ondemand.com` benötigen Sie `eu10`. |
 | `auth.params.clientId` | Der Wert von `clientId` aus dem Dienstschlüssel. |
 | `auth.params.clientSecret` | Der Wert von `clientSecret` aus dem Dienstschlüssel. |
 | `auth.params.tokenEndpoint` | Der Wert von `url` aus dem Dienstschlüssel, wird er dem `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
@@ -1080,7 +1078,7 @@ Aktualisieren Sie die Details Ihres Datenflusses, z. B. seinen Namen und seine B
 
 ### Konto aktualisieren
 
-Aktualisieren Sie den Namen, die Beschreibung und die Anmeldeinformationen Ihres Quellkontos, indem Sie eine PATCH-Anfrage an die [!DNL Flow Service] API bei der Bereitstellung Ihrer Basis-Verbindungs-ID als Abfrageparameter. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` im `If-Match` -Kopfzeile. Die vollständigen API-Beispiele finden Sie im Handbuch unter [Quellkonto mithilfe der API aktualisieren](../../update.md).
+Aktualisieren Sie den Namen, die Beschreibung und die Anmeldeinformationen Ihres Quellkontos, indem Sie eine PATCH-Anfrage an die [!DNL Flow Service] API bei der Bereitstellung Ihrer Basis-Verbindungs-ID als Abfrageparameter. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` im `If-Match` -Kopfzeile. Die vollständigen API-Beispiele finden Sie im Handbuch unter [Aktualisieren Ihres Quellkontos mithilfe der API](../../update.md).
 
 ### Löschen des Datenflusses
 
