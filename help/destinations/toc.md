@@ -4,10 +4,10 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1167'
-ht-degree: 95%
+source-wordcount: '1164'
+ht-degree: 96%
 
 ---
 
@@ -116,10 +116,10 @@ ht-degree: 95%
       * [Amazon Kinesis-Verbindung](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3-Verbindung](./catalog/cloud-storage/amazon-s3.md)
       * [Azure Blob-Verbindung](./catalog/cloud-storage/azure-blob.md)
-      * [(Beta) Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
+      * [Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
       * [Azure Event Hubs-Verbindung](./catalog/cloud-storage/azure-event-hubs.md)
-      * [(Beta) Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
-      * [(Beta) Google Cloud-Speicher](./catalog/cloud-storage/google-cloud-storage.md)
+      * [Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
+      * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [SFTP-Verbindung](./catalog/cloud-storage/sftp.md)
       * [IP-Adressen-Zulassungsliste für SFTP-Ziele](./catalog/cloud-storage/ip-address-allow-list.md)
    * CRM-Ziele (Customer Relationship Management) {#crm}
@@ -232,7 +232,7 @@ ht-degree: 95%
          * [Konfigurieren eines Azure Data Lake Storage-Ziels mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
          * [Konfigurieren eines Data Landing Zone-Ziels (DLZ) mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
          * [Konfigurieren eines SFTP-Ziels mit vordefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
-   * API-Referenz zum Ziel-Authoring{#authoring-api}
+   * API-Referenz zum Ziel-Authoring {#authoring-api}
       * [API-Referenz zum Destination SDK (Destination Authoring)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * Vorgänge des Ziel-Servers {#server-operations}
          * [Erstellen einer Ziel-Server-Konfiguration](./destination-sdk/authoring-api/destination-server/create-destination-server.md)

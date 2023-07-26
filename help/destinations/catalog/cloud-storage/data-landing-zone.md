@@ -2,19 +2,18 @@
 title: Ziel der Data Landing Zone
 description: Erfahren Sie, wie Sie eine Verbindung zur Data Landing Zone herstellen, um Zielgruppen zu aktivieren und Datensätze zu exportieren.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 4b9e7c22282a5531f2f25f3d225249e4eb0e178e
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1434'
-ht-degree: 55%
+source-wordcount: '1404'
+ht-degree: 54%
 
 ---
 
-# (Beta) Ziel der Data Landing Zone
+# Ziel der Data Landing Zone
 
 >[!IMPORTANT]
 >
->* Diese Funktion befindet sich derzeit in der Beta-Phase und steht nur einer bestimmten Anzahl von Kunden zur Verfügung. Um Zugang zur [!DNL Data Landing Zone]-Verbindung zu erhalten, wenden Sie sich an Ihre Kontaktperson beim Adobe-Support-Mitarbeiter und geben Sie Ihre [!DNL Organization ID] an.
->* Diese Dokumentationsseite bezieht sich auf die [!DNL Data Landing Zone] *Ziel*. Es gibt auch eine [!DNL Data Landing Zone] *source* im Quellkatalog. Weitere Informationen finden Sie im Abschnitt [[!DNL Data Landing Zone] source](/help/sources/connectors/cloud-storage/data-landing-zone.md) Dokumentation.
+>Diese Dokumentationsseite bezieht sich auf die [!DNL Data Landing Zone] *Ziel*. Es gibt auch eine [!DNL Data Landing Zone] *source* im Quellkatalog. Weitere Informationen finden Sie im Abschnitt [[!DNL Data Landing Zone] source](/help/sources/connectors/cloud-storage/data-landing-zone.md) Dokumentation.
 
 
 ## Übersicht {#overview}
@@ -59,7 +58,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 Beachten Sie die folgenden Voraussetzungen, die erfüllt sein müssen, bevor Sie die [!DNL Data Landing Zone] Ziel.
 
-### Verbinden Sie Ihre [!DNL Data Landing Zone] Container zu [!DNL Azure Storage Explorer]
+### Verbinden Sie [!DNL Data Landing Zone] Container zu [!DNL Azure Storage Explorer]
 
 Sie können [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) verwenden, um die Inhalte Ihres [!DNL Data Landing Zone]-Containers zu verwalten. Zu Beginn der Verwendung von [!DNL Data Landing Zone], müssen Sie zunächst Ihre Anmeldedaten abrufen und sie in [!DNL Azure Storage Explorer]und verbinden Sie Ihre [!DNL Data Landing Zone] Container zu [!DNL Azure Storage Explorer].
 
@@ -77,7 +76,7 @@ Nachdem Sie Ihre Verbindungsmethode ausgewählt haben, müssen Sie einen **Anzei
 
 ### Rufen Sie die Anmeldeinformationen für Ihre [!DNL Data Landing Zone] {#retrieve-dlz-credentials}
 
-Sie müssen die Platform-APIs verwenden, um Ihre [!DNL Data Landing Zone] Anmeldedaten. Der API-Aufruf zum Abrufen Ihrer Anmeldedaten wird unten beschrieben. Informationen zum Abrufen der erforderlichen Werte für Ihre Kopfzeilen finden Sie unter [Erste Schritte mit Adobe Experience Platform-APIs](/help/landing/api-guide.md) Handbuch.
+Sie müssen die Platform-APIs zum Abrufen Ihrer [!DNL Data Landing Zone] Anmeldedaten. Der API-Aufruf zum Abrufen Ihrer Anmeldedaten wird unten beschrieben. Informationen zum Abrufen der erforderlichen Werte für Ihre Kopfzeilen finden Sie im Abschnitt [Erste Schritte mit Adobe Experience Platform-APIs](/help/landing/api-guide.md) Handbuch.
 
 **API-Format**
 
@@ -205,9 +204,9 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 * **[!UICONTROL Name]**: Geben Sie einen bevorzugten Namen für das Ziel ein.
 * **[!UICONTROL Beschreibung]**: Optional. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden.
 * **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad zum Zielordner ein, in dem die exportierten Dateien gespeichert werden.
-* **[!UICONTROL Dateityp]**: Wählen Sie die Format-Experience Platform aus, die für die exportierten Dateien verwendet werden soll. Bei der Auswahl der [!UICONTROL CSV] können Sie auch [Dateiformatierungsoptionen konfigurieren](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Dateityp]**: Wählen Sie das Format aus, das die Experience Platform für die exportierten Dateien verwenden soll. Wenn Sie [!UICONTROL CSV] können Sie auch [Dateiformatierungsoptionen konfigurieren](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Komprimierungsformat]**: Wählen Sie den Komprimierungstyp aus, den die Experience Platform für die exportierten Dateien verwenden soll.
-* **[!UICONTROL Manifestdatei einschließen]**: Aktivieren Sie diese Option, wenn Sie möchten, dass die Exporte eine JSON-Manifestdatei mit Informationen zum Exportspeicherort, zur Exportgröße und mehr enthalten.
+* **[!UICONTROL Manifestdatei einschließen]**: Schalten Sie diese Option ein, wenn Sie möchten, dass die Exporte eine JSON-Manifestdatei mit Informationen zum Exportspeicherort, zur Exportgröße und mehr enthalten.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 

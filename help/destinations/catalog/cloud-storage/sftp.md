@@ -2,9 +2,9 @@
 title: SFTP-Verbindung
 description: Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durch Trennzeichen getrennte Datendateien regelmäßig von Adobe Experience Platform zu exportieren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: f05f8cb47a1f65e8931500d7064fdce48aa53347
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '940'
 ht-degree: 61%
 
 ---
@@ -13,17 +13,9 @@ ht-degree: 61%
 
 ## Ziel-Änderungsprotokoll {#changelog}
 
->[!IMPORTANT]
->
->Mit der Beta-Version der Funktion zum Exportieren von Datensätzen und der verbesserten Dateiexportfunktion werden Ihnen jetzt möglicherweise zwei [!DNL SFTP]-Karten im Zielkatalog angezeigt.
->* Falls Sie bereits Dateien zum **[!UICONTROL SFTP]**-Ziel exportieren, erstellen Sie bitte neue Datenflüsse zum neuen **[!UICONTROL SFTP-Beta]**-Ziel.
->* Wenn Sie noch keinen Datenfluss zum **[!UICONTROL SFTP]** Ziel, verwenden Sie die neue **[!UICONTROL SFTP-Beta]** Karte zum Exportieren von Dateien in **[!UICONTROL SFTP]**.
+Mit der Experience Platform-Version vom Juli 2023 bietet das SFTP-Ziel neue Funktionen, wie unten aufgeführt:
 
-![Abbildung der beiden SFTP-Zielkarten, die diese nebeneinander in einer Ansicht zeigt.](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
-
-Zu den Verbesserungen bei den neuen [!DNL SFTP]-Zielkarte gehören:
-
-* [Unterstützung für den Datensatzexport](/help/destinations/ui/export-datasets.md).
+* [!BADGE Beta]{type=Informative}[Unterstützung für den Datensatzexport](/help/destinations/ui/export-datasets.md).
 * Zusätzliche [Dateibenennungsoptionen](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 * Möglichkeit zum Festlegen benutzerdefinierter Datei-Kopfzeilen in exportierten Dateien durch den [verbesserten Zuordnungsschritt](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [Möglichkeit zum Anpassen der Formatierung exportierter CSV-Datendateien](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -119,12 +111,12 @@ Geben Sie nach Herstellung der Authentifizierungsverbindung zum SFTP-Speicherort
 
 ![Verfügbare Zieldetails für SFTP-Ziel](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
-* **[!UICONTROL Name]**: Geben Sie einen Namen ein, der Ihnen bei der Identifizierung dieses Ziels in der Experience Platform-Benutzeroberfläche hilft;
+* **[!UICONTROL Name]**: Geben Sie einen Namen ein, der Ihnen bei der Identifizierung dieses Ziels in der Benutzeroberfläche von Experience Platform hilft.
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung für das Ziel ein.
 * **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad zum Ordner in Ihrem SFTP-Speicherort ein, in den die Dateien exportiert werden sollen.
-* **[!UICONTROL Dateityp]**: Wählen Sie die Format-Experience Platform aus, die für die exportierten Dateien verwendet werden soll. Diese Option steht nur für die **[!UICONTROL SFTP-Beta]** Ziel. Bei der Auswahl der [!UICONTROL CSV] können Sie auch [Dateiformatierungsoptionen konfigurieren](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Komprimierungsformat]**: Wählen Sie den Komprimierungstyp aus, den die Experience Platform für die exportierten Dateien verwenden soll. Diese Option steht nur für die **[!UICONTROL SFTP-Beta]** Ziel.
-* **[!UICONTROL Manifestdatei einschließen]**: Aktivieren Sie diese Option, wenn Sie möchten, dass die Exporte eine JSON-Manifestdatei mit Informationen zum Exportspeicherort, zur Exportgröße und mehr enthalten. Diese Option steht nur für die **[!UICONTROL SFTP-Beta]** Ziel.
+* **[!UICONTROL Dateityp]**: Wählen Sie das Format aus, das die Experience Platform für die exportierten Dateien verwenden soll. Wenn Sie [!UICONTROL CSV] können Sie auch [Dateiformatierungsoptionen konfigurieren](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Komprimierungsformat]**: Wählen Sie den Komprimierungstyp aus, den die Experience Platform für die exportierten Dateien verwenden soll.
+* **[!UICONTROL Manifestdatei einschließen]**: Schalten Sie diese Option ein, wenn Sie möchten, dass die Exporte eine JSON-Manifestdatei mit Informationen zum Exportspeicherort, zur Exportgröße und mehr enthalten.
 
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
@@ -147,4 +139,4 @@ Für [!DNL SFTP]-Ziele erstellt Platform eine `.csv`-Datei an dem von Ihnen ange
 
 ## IP-Adressen-Zulassungsliste {#ip-address-allow-list}
 
-Siehe [IP-Adressen-Zulassungsliste für SFTP-Ziele](ip-address-allow-list.md) , wenn Sie einer Zulassungsliste Adobe-IPs hinzufügen müssen.
+Siehe Abschnitt [IP-Adressen-Zulassungsliste für SFTP-Ziele](ip-address-allow-list.md) , wenn Sie einer Zulassungsliste Adobe-IPs hinzufügen müssen.
