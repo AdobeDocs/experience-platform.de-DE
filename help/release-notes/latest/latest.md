@@ -1,24 +1,34 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
-description: Versionshinweise Juli 2023 für Adobe Experience Platform.
+description: Versionshinweise vom Juni 2023 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 134c18822350a0032bb9957e6e0d1ab888c6b289
+source-git-commit: 61247a5cac0f00a4163007fd693d3a0b0efc23ab
 workflow-type: tm+mt
-source-wordcount: '659'
-ht-degree: 36%
+source-wordcount: '1538'
+ht-degree: 100%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
 
-**Versionsdatum: 26. Juli 2023**
+**Veröffentlichungsdatum: 21. Juni 2023**
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
+- [Authentifizierung bei Experience Platform-APIs](#authentication-platform-apis)
 - [Datenerfassung](#data-collection)
-- [Datenvorbereitung](#data-prep)
-- [Segmentierungs-Service](#segmentation)
+- [Ziele](#destinations)
+- [Experience-Datenmodell (XDM)](#xdm)
+- [Query Service](#query-service)
 - [Quellen](#sources)
+
+## Authentifizierung bei Experience Platform-APIs {#authentication-platform-apis}
+
+Für Benutzerinnen und Benutzer von Experience Platform-APIs ist die Methode zum Abrufen erforderlicher Zugriffs-Token zur Authentifizierung und zum Aufrufen von API-Endpunkten jetzt vereinfacht. Die JWT-Methode zum Abrufen von Zugriffs-Token wird nicht mehr unterstützt und wurde durch eine einfachere OAuth-Server-zu-Server-Authentifizierungsmethode ersetzt.<p>![Neue OAuth-Authentifizierungsmethode, um Zugriffs-Token hervorheben zu lassen.](/help/landing/images/api-authentication/oauth-authentication-method.png "Neue OAuth-Authentifizierungsmethode, um Zugriffs-Token hervorheben zu lassen."){width="100" zoomable="yes"}</p>
+
+Während bestehende API-Integrationen, die die JWT-Authentifizierungsmethode verwenden, bis zum 1. Januar 2025 weiterhin funktionieren, empfiehlt Adobe dringend, vorhandene Integrationen vor diesem Datum zu dieser neuen OAuth-Server-zu-Server-Methode zu migrieren. Lesen Sie das Handbuch unter [Migration von JWT-Anmeldedaten (Service Account) zu OAuth-Server-zu-Server-Anmeldedaten](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
+
+Lesen Sie das aktualisierte [Tutorial zur Experience Platform-Authentifizierung](/help/landing/api-authentication.md), um weitere Informationen zu erhalten.
 
 ## Datenerfassung {#data-collection}
 
@@ -28,52 +38,115 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 | Typ | Funktion | Beschreibung |
 | --- | --- | --- |
-| Tags und Ereignisweiterleitung | Auditprotokolle zur Datenerfassung | Sie können jetzt sehen, wann eine Aktion ausgeführt wurde und wer diese Aktion über Tags und Ereignisweiterleitung hinweg durchgeführt hat. Dies erleichtert die Fehlerbehebung bei Produkten, eine ordnungsgemäße Verwaltung und interne Auditaktivitäten. Diese Prüfdaten werden über kontextbezogene Slide-out-Menüs angezeigt, die auch Schnellaktionen und Aktualisierungen des Ressourcenstatus enthalten. Diese Daten sind in den folgenden Bildschirmen in der Benutzeroberfläche für Tags und Ereignisweiterleitung sichtbar:<br><ul><li>[Eigenschaftenübersicht](../../tags/ui/event-forwarding/overview.md#properties)</li><li>[Regeln](../../tags/ui/event-forwarding/overview.md#rules)</li><li>[Datenelemente](../../tags/ui/event-forwarding/overview.md#data-elements)</li><li>[Erweiterungen](../../tags/ui/event-forwarding/overview.md#extensions)</li><li>[Bibliotheksüberprüfung](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-and-publish-a-library.html)</li><li>[Zuletzt erstellte und veröffentlichte Bibliothek](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-and-publish-a-library.html)</li></ul> |
-| Datenströme | [Geo-Suche](../../datastreams/configure.md#advanced-options) | Sie können jetzt die Geolocation und die Netzwerksuche für Datastreams konfigurieren, um Informationen wie folgende einzuschließen: <ul><li>Country</li><li>Postleitzahl</li><li>Bundesland/Provinz</li><li>DMA</li><li>Stadt</li><li>Breitengrad </li><li>Längengrad</li><li>Netzbetreiber</li><li>Domain</li><li>ISP</li></ul> Sie sind dafür verantwortlich, sicherzustellen, dass Sie alle erforderlichen Berechtigungen, Einverständnisse, Genehmigungen und Autorisierungen erhalten haben, die nach den geltenden Gesetzen und Vorschriften erforderlich sind, um personenbezogene Daten zu erfassen, zu verarbeiten und zu übermitteln, einschließlich präziser Geolocation-Informationen. <br> Ihre Auswahl der Verschleierung von IP-Adressen wirkt sich nicht auf die Ebene der Geolocation-Informationen aus, die von der IP-Adresse abgeleitet und an Ihre konfigurierten Adobe-Lösungen gesendet werden. Die Geolocation-Suche muss begrenzt oder separat deaktiviert sein. <br> Siehe [Dokumentation zu Datenastreams](../../datastreams/configure.md#advanced-options) für weitere Details. |
+| Erweiterung | [!DNL Google Cloud Platform]-Erweiterung zur Ereignisweiterleitung | Mit der Erweiterung für die Ereignisweiterleitung von [[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md) können Sie Ereignisdaten zur Aktivierung an Google über [!DNL Google Pub/Sub] weiterleiten. |
+| Erweiterung | [!DNL Cloud connector for Google Analytics 4 (ga4)]-Erweiterung | Mit der Erweiterung für die Ereignisweiterleitung von [[!DNL Cloud connector for Google Analytics 4 (ga4)]](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html) können Sie Analysen über den neuen [!DNL Google Analytics 4 (ga4)]-Standard verfolgen. |
+| Geheimnis | OAuth 2 JWT-Geheimnis | Das [OAuth JWT-Geheimnis](../../tags/ui/event-forwarding/secrets.md) ermöglicht Kundinnen und Kunden die Verwendung von Adobe- und [!DNL Google]-Service-Token zur Unterstützung von Server-zu-Server-Interaktionen bei der Ereignisweiterleitung. |
 
 {style="table-layout:auto"}
 
-Weitere Informationen zur Datenerfassung finden Sie im [Datenerfassungen - Übersicht](../../tags/home.md).
+Weitere Informationen zur Datenerfassung finden Sie im Abschnitt [Datenerfassung – Übersicht](../../tags/home.md).
 
-## Datenvorbereitung {#data-prep}
+## Ziele {#destinations}
 
-Die Datenvorbereitung ermöglicht es Dateningenieurinnen und -ingenieuren, Daten dem Experience-Datenmodell (XDM) zuzuordnen, umzuformen und zu validieren.
+[!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 
-**Neue oder aktualisierte Funktionen**
+**Neue oder aktualisierte Ziele** {#new-updated-destinations}
+
+| Ziel | Beschreibung |
+| ----------- | ----------- |
+| [[!BADGE Beta]{type=Informative} [!DNL Amazon Ads] Verbindung](../../destinations/catalog/advertising/amazon-ads.md) | Die [!DNL Amazon Ads]-Integration mit Adobe Experience Platform unterstützt jetzt die regionale Weiterleitung zu den verschiedenen [!DNL Amazon Ads]-Marketplaces. Mehr dazu im [Ziel-Änderungsprotokoll](../../destinations/catalog/advertising/amazon-ads.md#changelog). |
+
+{style="table-layout:auto"}
+
+**Neue oder aktualisierte Funktionen** {#destinations-new-updated-functionality}
+
+| Funktionalität | Beschreibung |
+| ----------- | ----------- |
+| Workspace-Unterstützung für [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md)-Ziele. | Sie können jetzt beim Konfigurieren einer neuen Adobe Target-Zielverbindung den Adobe Target-Arbeitsbereich auswählen, für den Sie Zielgruppen freigeben möchten. Weitere Informationen finden Sie im Abschnitt [Verbindungsparameter](../../destinations/catalog/personalization/adobe-target-connection.md#parameters). Weitere Informationen über Arbeitsbereiche finden Sie im Tutorial zum [Konfigurieren von Arbeitsbereichen](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=de) in Adobe Target. |
+
+{style="table-layout:auto"}
+
+<!--
+
+**Fixes and enhancements** {#destinations-fixes-and-enhancements}
+
+- Placeholder for fixes and enhancements
+
+-->
+
+Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
+
+## Experience-Datenmodell (XDM) {#xdm}
+
+XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definitionen (Schemas) für Daten bereitstellt, die in Adobe Experience Platform importiert werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
+
+**Neue XDM-Komponenten**
+
+| Typ der Komponente | Name | Beschreibung |
+| --- | --- | --- |
+| Erweiterung (Prospect-Profile) | [[!UICONTROL Adobe Unified Profile Service Prospect-Profile Union Extension]](https://github.com/adobe/xdm/pull/1735/files) | Es wurden erforderliche Felder für das Vereinigungsschema für das Profil potenzieller Kundinnen und Kunden (Prospect-Profile) hinzugefügt. |
+| Erweiterung | [[!UICONTROL Decisioning Asset]](https://github.com/adobe/xdm/pull/1732/files) | Es wurde ein Datentyp hinzugefügt, um bei der Entscheidungsfindung verwendete Assets darzustellen. Das [!UICONTROL Entscheidungs-Asset] verweist auf Assets, die zum Rendern von `decisionItems` verwendet werden. |
+| Datentyp | [[!UICONTROL Commerce]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL Commerce] speichert Datensätze im Zusammenhang mit der Kauf- und Verkaufsaktivität. |
+| Feldgruppe | [[!UICONTROL Profile Partner Enrichment (Beispiel)]](https://github.com/adobe/xdm/pull/1747/files) | Für die Anreicherung von Profilpartnern wurde ein Beispielschema hinzugefügt. |
+| Feldgruppe | [[!UICONTROL Partner Prospect Details(Beispiel)]](https://github.com/adobe/xdm/pull/1747/files) | Für Profilerweiterungen von potenziellen Datenanbietern wurde ein Beispielschema hinzugefügt. |
+| Datentyp | [[!UICONTROL Commerce Scope]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL Commerce Scope] gibt an, wo ein Ereignis aufgetreten ist, etwa in der Store-Ansicht, im Store oder auf der Website, um nur einige Beispiele zu nennen. |
+| Datentyp | [[!UICONTROL Billing]](https://github.com/adobe/xdm/pull/1734/files) | Für eine oder mehrere Zahlungen wurden Rechnungsinformationen zum Schema [!UICONTROL Commerce] hinzugefügt. |
+
+{style="table-layout:auto"}
+
+**Aktualisierte XDM-Komponenten**
+
+| Typ der Komponente | Name | Beschreibung der Aktualisierung |
+| --- | --- | --- |
+| Feldgruppe | [[!UICONTROL Details zur MediaAnalytics-Interaktion]](https://github.com/adobe/xdm/pull/1736/files) | `bitrateAverageBucket` wurde von 100 bis zu „800-899“ geändert. |
+| Datentyp | [[!UICONTROL Informationen zu QoE-Daten]](https://github.com/adobe/xdm/pull/1736/files) | Der Datentyp `bitrateAverageBucket` wurde zu „string“ geändert. |
+| Feldgruppe | [[!UICONTROL Segment Membership Details]](https://github.com/adobe/xdm/pull/1735/files) | Die Klasse für Profile potenzieller Kundinnen und Kunden wurde hierum erweitert. |
+| Schema | [[!UICONTROL Systemschema für berechnete Attribute]](https://github.com/adobe/xdm/pull/1735/files) | Eine Identitätszuordnung zum [!UICONTROL Systemschema für berechnete Attribute] hinzugefügt. |
+| Datentyp | [[!UICONTROL Content Delivery Network]](https://github.com/adobe/xdm/pull/1733/files) | Den [!UICONTROL Informationen mit den Sitzungsdetails] wurde ein Feld hinzugefügt, um das verwendete Content Delivery Network zu beschreiben. |
+| Erweiterung | [[!UICONTROL Adobe Unified Profile Service Account Union Extension]](https://github.com/adobe/xdm/pull/1731/files) | Eine Identitätszuordnung wurde zur [!UICONTROL Adobe Unified Profile Service Account Union Extension] hinzugefügt. |
+| Datentyp | [[!UICONTROL Order]](https://github.com/adobe/xdm/pull/1730/files) | `discountAmount` wurde zu [!UICONTROL Bestellung] hinzugefügt. Hieraus ergibt sich die Differenz zwischen dem regulären Bestellpreis und dem Sonderpreis. Dies wird auf die gesamte Bestellung angewendet und nicht auf einzelne Produkte. |
+| Schema | [[!UICONTROL AEP Hygiene Operation Request]](https://github.com/adobe/xdm/pull/1728/files) | Das Feld `targetServices` wurde hinzugefügt, um die Namen der Services anzugeben, die die Datenhygienevorgänge verarbeiten. |
+| Datentyp | [[!UICONTROL Lieferung]](https://github.com/adobe/xdm/pull/1727/files) | `currencyCode` wurde zu den Lieferinformationen für ein oder mehrere Produkte hinzugefügt. Es handelt sich um einen alphabetischen ISO 4217-Währungscode, der zur Preisangabe für das Produkt eingesetzt wird. |
+| Datentyp | [[!UICONTROL Application]](https://github.com/adobe/xdm/pull/1726/files) | Das Feld `language` wurde hinzugefügt, um die sprachlichen, geografischen oder kulturbezogenen Voreinstellungen der Benutzerin oder des Benutzers für die Anwendung bereitzustellen. |
+| Erweiterung | [[!UICONTROL AJO Entity Fields]](https://github.com/adobe/xdm/pull/1746/files) | Eine [!UICONTROL AJO-Zeitstempelentität] wurde hinzugefügt, um den Zeitpunkt der letzten Nachrichtenänderung anzugeben. |
+| Datentyp | (Mehrfach) | [Mehrere Mediendetails](https://github.com/adobe/xdm/pull/1739/files) wurden aus Konsistenzgründen in verschiedenen Datentypen entfernt. |
+
+{style="table-layout:auto"}
+
+Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md)
+
+## Abfrage-Service {#query-service}
+
+Der Abfrage-Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von Daten in Adobe Experience Platform. Sie können beliebige Datensätze aus dem Data Lake verbinden und die Abfrageergebnisse als neuen Datensatz für die Verwendung in Berichten, im Datenwissenschafts-Arbeitsbereich oder für die Aufnahme in das Echtzeit-Kundenprofil verwenden.
+
+**Aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Neue Zuordnungsfunktionen | Sie können jetzt die folgenden Funktionen beim Zuordnen von Objekten in der Datenvorbereitung verwenden: <ul><li>`map_get_values`</li><li>`map_has_keys`</li><li>`add_to_map`</li></ul> Weitere Informationen zu diesen Funktionen finden Sie im Abschnitt [Handbuch zu Datenvorbereitung-Funktionen](../../data-prep/functions.md#hierarchies---objects). |
+| Inline-Vorlagen | Query Service unterstützt nun die Verwendung von Vorlagen, die auf andere Vorlagen innerhalb Ihrer SQL verweisen. Reduzieren Sie den Arbeitsaufwand und vermeiden Sie Fehler, indem Sie Inline-Vorlagen in Ihren Abfragen verwenden. Sie können Anweisungen oder Bedingungen wiederverwenden und verschachtelte Vorlagen referenzieren, um die Flexibilität in Ihrer SQL zu erhöhen. Die Größe von Abfragen, die als Vorlagen gespeichert werden können, oder die Anzahl der Vorlagen, auf die über Ihre ursprüngliche Abfrage verwiesen werden kann, ist unbegrenzt. Weiterführende Informationen finden Sie im [Benutzerhandbuch zu Inline-Vorlagen](../../query-service/essential-concepts/inline-templates.md). |
+| Aktualisierungen der Benutzeroberfläche für geplante Abfragen | Verwalten Sie alle geplanten Abfragen von einem Ort in der Benutzeroberfläche mit der [[!UICONTROL Registerkarte „Geplante Abfragen“]](../../query-service/ui/monitor-queries.md#inline-actions). Die Benutzeroberfläche [!UICONTROL Geplante Abfragen] wurde durch das Hinzufügen von Inline-Abfrageaktionen und der neuen Spalte mit dem Abfragestatus verbessert. Die kürzlich hinzugefügten Funktionen umfassen die Möglichkeit, einen Zeitplan zu aktivieren, zu deaktivieren und zu löschen oder Warnhinweise für kommende Abfragen zu abonnieren, direkt von der Ansicht [!UICONTROL Geplante Abfragen] aus. <p>![Inline-Aktionen, die in der Ansicht [!UICONTROL Geplante Abfragen] hervorgehoben sind.](../../query-service/images/ui/monitor-queries/disable-inline.png "Inline-Aktionen, die in der Ansicht [!UICONTROL Geplante Abfragen] hervorgehoben sind."){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
 
-Weitere Informationen zur Datenvorbereitung finden Sie in der [Übersicht zur Datenvorbereitung](../../data-prep/home.md).
-
-## Segmentierungs-Service {#segmentation}
-
-[!DNL Segmentation Service] ermöglicht Ihnen das Segmentieren von Daten, die in gespeichert sind. [!DNL Experience Platform] , die sich auf Einzelanwender (z. B. Kunden, Interessenten, Benutzer oder Organisationen) in Zielgruppen bezieht. Sie können Zielgruppen über Segmentdefinitionen oder andere Quellen aus Ihren [!DNL Real-Time Customer Profile] Daten. Diese Zielgruppen werden zentral konfiguriert und verwaltet in [!DNL Platform]und für jede Adobe leicht zugänglich sind.
-
-**Neue oder aktualisierte Funktionen**
-
-| Funktion | Beschreibung |
-| ------- | ----------- |
-| Zielgruppe  Portal | Audience Portal bietet ein neues Browsing-Erlebnis für den Zugriff auf, die Erstellung und die Verwaltung von Zielgruppen in Adobe Experience Platform. In Audience Portal können Sie Platform-generierte und extern generierte Zielgruppen anzeigen, Ihre Arbeitseffizienz durch Filtern, Ordner und Tags verbessern, Platform-generierte Zielgruppen erstellen und extern generierte Zielgruppen über CSV-Dateien importieren. Weitere Informationen zu Audience Portal finden Sie im [Handbuch zur Benutzeroberfläche des Segmentierungsdienstes](../../segmentation/ui/overview.md). |
-| Zielgruppenkomposition | Die Zielgruppenkomposition bietet einen benutzerfreundlichen Arbeitsbereich zum Erstellen und Bearbeiten von Zielgruppen mithilfe von Bausteinen, die zur Darstellung verschiedener Aktionen verwendet werden. Weitere Informationen zur Zielgruppenkomposition finden Sie im Abschnitt [Handbuch zur Benutzeroberfläche für Zielgruppenkomposition](../../segmentation/ui/audience-composition.md). |
-
-Weitere Informationen unter [!DNL Segmentation Service], lesen Sie bitte die [Segmentierungsübersicht](../../segmentation/home.md).
+Weitere Informationen über Query Service finden Sie im Abschnitt [Query Service – Übersicht](../../query-service/home.md).
 
 ## Quellen {#sources}
 
+Mit Adobe Experience Platform können Sie Daten aus externen Quellen aufnehmen und mithilfe von Platform-Services strukturieren, kennzeichnen und verbessern. Sie können Daten aus verschiedenen Quellen aufnehmen, z. B. aus Adobe-Programmen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+
 Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 
-**Neue oder aktualisierte Funktionen**
+**Aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| [!BADGE Beta]{type=Informative}[!DNL SAP Commerce] | Sie können jetzt die [[!DNL SAP Commerce] source](../../sources/connectors/ecommerce/sap-commerce.md) , um Abrechnungsdaten für Abonnements von Ihrem [!DNL SAP Commerce] -Konto in die Experience Platform. |
-| Unterstützung für [!DNL Phoenix] | Sie können jetzt die [[!DNL Phoenix] source](../../sources/connectors/databases/phoenix.md) Daten von [!DNL Phoenix] Datenbank zu Experience Platform. |
-| Authentifizierungsaktualisierungen für [!DNL Salesforce] und [!DNL Salesforce Service Cloud] | Sie können jetzt die API-Version Ihrer [[!DNL Salesforce]](../../sources/connectors/crm/salesforce.md) und [[!DNL Salesforce Service Cloud]](../../sources/connectors/customer-success/salesforce-service-cloud.md) Quelle bei der Authentifizierung eines neuen Kontos mit der Experience Platform-Benutzeroberfläche oder der [!DNL Flow Service] API. |
+| Unterstützung der Löschung von Datenflüssen, die die Adobe Analytics-Klassifizierung als Quelle verwenden | Sie können jetzt Quelldatenflüsse löschen, die Adobe Analytics-Klassifizierungen als Quelle verwenden. Wählen Sie unter **[!UICONTROL Quellen]** > **[!UICONTROL Datenflüsse]** den gewünschten Datenfluss aus und klicken Sie dann auf „Löschen“. Weitere Informationen finden Sie im Benutzerhandbuch unter [Erstellen einer Quellverbindung für Adobe Analytics-Klassifizierungsdaten](../../sources/tutorials/ui/create/adobe-applications/classifications.md). |
+| Filterunterstützung für [!DNL Microsoft Dynamics] unter Verwendung der API | Verwenden Sie zum Filtern von Daten auf Zeilenebene, die aus der [[!DNL Microsoft Dynamics]](../../sources/connectors/crm/ms-dynamics.md)-Quelle stammen, logische Operatoren und Vergleichsoperatoren. Weitere Informationen finden Sie im Benutzerhandbuch zu [Filtern von Daten für eine Quelle mithilfe der API](../../sources/tutorials/api/filter.md). |
+| [!BADGE Beta]{type=Informative}[!DNL RainFocus] | Sie können jetzt die Integration von [!DNL RainFocus]-Quellen verwenden, um Ereignis-Management- und Analysedaten aus Ihren [!DNL RainFocus]-Konto zu Experience Platform zu bringen. Weitere Informationen finden Sie unter [[!DNL RainFocus] Quelle – Übersicht](../../sources/connectors/analytics/rainfocus.md). |
+| Unterstützung für Adobe Commerce | Sie können jetzt die Adobe Commerce-Quellenintegration verwenden, um Daten aus Ihrem Adobe Commerce-Konto in Experience Platform zu übertragen. Weitere Informationen finden Sie in der [Adobe Commerce-Quelle – Übersicht](../../sources/connectors/adobe-applications/commerce.md). |
+| Unterstützung für [!DNL Mixpanel] | Sie können jetzt die Integration von [!DNL Mixpanel]-Quellen verwenden, um Analysedaten aus Ihrem [!DNL Mixpanel]-Konto mithilfe von APIs oder der Benutzeroberfläche in Experience Platform zu übertragen. Weitere Informationen finden Sie in unter [[!DNL Mixpanel] Quelle – Übersicht](../../sources/connectors/analytics/mixpanel.md). |
+| Unterstützung für [!DNL Zendesk] | Sie können jetzt die Integration von [!DNL Zendesk]-Quellen verwenden, um Kundenerfolgsdaten aus Ihrem [!DNL Zendesk]-Konto mithilfe von APIs oder der Benutzeroberfläche in Experience Platform zu übertragen. Weitere Informationen finden Sie unter [[!DNL Zendesk] Quelle – Übersicht](../../sources/connectors/customer-success/zendesk.md). |
 
 {style="table-layout:auto"}
 
-Weitere Informationen zu Quellen finden Sie im Abschnitt [Quellen – Übersicht](../../sources/home.md).
+Weiterführende Informationen zu Quellen finden Sie in der [Übersicht über Quellen](../../sources/home.md).
