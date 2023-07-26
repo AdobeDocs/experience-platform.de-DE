@@ -4,9 +4,9 @@ title: (Beta) Exportieren von Datensätzen mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie mit der Flow Service-API Datensätze für ausgewählte Ziele exportieren können.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 4873af44f623082375fe4b2caa82475e2ba5b808
+source-git-commit: fadc1f5f3842c9c2e39b6204dd455621ec84ad68
 workflow-type: tm+mt
-source-wordcount: '3524'
+source-wordcount: '3520'
 ht-degree: 19%
 
 ---
@@ -23,7 +23,7 @@ In diesem Artikel wird der Workflow erläutert, der zur Verwendung der [!DNL Flo
 
 >[!TIP]
 >
->Sie können auch die Experience Platform-Benutzeroberfläche verwenden, um Datensätze zu exportieren. Lesen Sie die [Tutorial zur Benutzeroberfläche von Datensätzen exportieren](/help/destinations/ui/export-datasets.md) für weitere Informationen.
+>Sie können Datensätze auch über die Experience Platform-Benutzeroberfläche exportieren. Lesen Sie die [Tutorial zur Benutzeroberfläche von Datensätzen exportieren](/help/destinations/ui/export-datasets.md) für weitere Informationen.
 
 ## Unterstützte Ziele {#supported-destinations}
 
@@ -44,14 +44,14 @@ Derzeit können Sie Datensätze zu den im Screenshot hervorgehobenen und unten a
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): Alle Daten, die erfolgreich in Adobe Experience Platform aufgenommen wurden, bleiben im [!DNL Data Lake] als Datensätze. Ein Datensatz ist ein Konstrukt zur Datenspeicherung und -verwaltung, in dem Daten (in der Regel) in einer Tabelle erfasst werden, die ein Schema (Spalten) und Felder (Zeilen) beinhaltet. Datensätze enthalten auch Metadaten, die verschiedene Aspekte der in ihnen gespeicherten Daten beschreiben.
+* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): Alle Daten, die erfolgreich in Adobe Experience Platform erfasst wurden, bleiben im [!DNL Data Lake] als Datensätze. Ein Datensatz ist ein Konstrukt zur Datenspeicherung und -verwaltung, in dem Daten (in der Regel) in einer Tabelle erfasst werden, die ein Schema (Spalten) und Felder (Zeilen) beinhaltet. Datensätze enthalten auch Metadaten, die verschiedene Aspekte der in ihnen gespeicherten Daten beschreiben.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen müssen, um Datensätze in Cloud-Speicher-Ziele in Platform zu exportieren.
 
 ### Erforderliche Berechtigungen {#permissions}
 
-Zum Exportieren von Datensätzen benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]** und **[!UICONTROL Datensatzziele verwalten und aktivieren]** Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+Zum Exportieren von Datensätzen benötigen Sie die **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Verwalten und Aktivieren von Datensatzzielen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um sicherzustellen, dass Sie über die erforderlichen Berechtigungen zum Exportieren von Datensätzen verfügen und dass das Ziel den Export von Datensätzen unterstützt, durchsuchen Sie den Zielkatalog. Wenn ein Ziel über die Steuerung **[!UICONTROL Aktivieren]** oder **[!UICONTROL Datensätze exportieren]** verfügt, dann haben Sie die entsprechenden Berechtigungen.
 
@@ -423,7 +423,7 @@ Beachten Sie, dass zum Abrufen von geeigneten Datensätzen die [!DNL connection 
 
 Eine erfolgreiche Antwort enthält eine Liste von Datensätzen, die für die Aktivierung infrage kommen. Diese Datensätze können beim Erstellen der Quellverbindung im nächsten Schritt verwendet werden.
 
-Informationen zu den verschiedenen Antwortparametern für jeden zurückgegebenen Datensatz finden Sie im Abschnitt [Entwicklerdokumentation für die Datasets-API](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets).
+Informationen zu den verschiedenen Antwortparametern für jeden zurückgegebenen Datensatz finden Sie im Abschnitt [Entwicklerdokumentation für die Datensatz-API](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets).
 
 ## Erstellen einer Quellverbindung {#create-source-connection}
 
@@ -495,7 +495,7 @@ Beachten Sie auch Folgendes:
 
 ![Abbildung von Schritt 3 im Workflow &quot;Datensätze exportieren&quot;](../assets/api/export-datasets/export-datasets-api-workflow-create-base-connection.png)
 
-Eine Basisverbindung speichert die Anmeldeinformationen sicher in Ihrem Ziel. Je nach Zieltyp können die für die Authentifizierung an diesem Ziel erforderlichen Anmeldeinformationen variieren. Um diese Authentifizierungsparameter zu finden, rufen Sie zunächst die [!DNL connection spec] für Ihr gewünschtes Ziel, wie im Abschnitt beschrieben. [Verbindungsspezifikationen und Flussspezifikationen sammeln](#gather-connection-spec-flow-spec) und dann die `authSpec` der Antwort. Verweisen Sie auf die folgenden Registerkarten für die `authSpec` Eigenschaften aller unterstützten Ziele.
+Eine Basisverbindung speichert die Anmeldeinformationen sicher in Ihrem Ziel. Je nach Zieltyp können die für die Authentifizierung an diesem Ziel erforderlichen Anmeldeinformationen variieren. Um diese Authentifizierungsparameter zu finden, rufen Sie zunächst die [!DNL connection spec] für Ihr gewünschtes Ziel, wie im Abschnitt beschrieben [Verbindungsspezifikationen und Flussspezifikationen sammeln](#gather-connection-spec-flow-spec) und dann die `authSpec` der Antwort. Verweisen Sie auf die folgenden Registerkarten für die `authSpec` Eigenschaften aller unterstützten Ziele.
 
 >[!BEGINTABS]
 
@@ -1595,7 +1595,7 @@ Mithilfe des obigen Spezifikationen können Sie eine zielgerichtete Verbindungsa
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) Abschnitt [!DNL Amazon S3] Zieldokumentationsseite.
+>Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) Abschnitt [!DNL Amazon S3] Zieldokumentationsseite
 >Für andere unterstützte Werte von `datasetFileType`finden Sie in der API-Referenzdokumentation.
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anforderung, wenn Sie die Anforderung kopieren und in Ihr Terminal Ihrer Wahl einfügen.
@@ -1648,7 +1648,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) Abschnitt [!DNL Azure Blob Storage] Zieldokumentationsseite.
+>Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) Abschnitt [!DNL Azure Blob Storage] Zieldokumentationsseite
 >Für andere unterstützte Werte von `datasetFileType`finden Sie in der API-Referenzdokumentation.
 
 
@@ -1702,7 +1702,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) -Abschnitt des Azure [!DNL Data Lake Gen 2(ADLS Gen2)] Zieldokumentationsseite.
+>Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) -Abschnitt des Azure [!DNL Data Lake Gen 2(ADLS Gen2)] Zieldokumentationsseite
 >Für andere unterstützte Werte von `datasetFileType`finden Sie in der API-Referenzdokumentation.
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anforderung, wenn Sie die Anforderung kopieren und in Ihr Terminal Ihrer Wahl einfügen.
@@ -1754,7 +1754,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) Abschnitt [!DNL Data Landing Zone] Zieldokumentationsseite.
+>Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) Abschnitt [!DNL Data Landing Zone] Zieldokumentationsseite
 >Für andere unterstützte Werte von `datasetFileType`finden Sie in der API-Referenzdokumentation.
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anforderung, wenn Sie die Anforderung kopieren und in Ihr Terminal Ihrer Wahl einfügen.
@@ -1806,7 +1806,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) Abschnitt [!DNL Google Cloud Storage] Zieldokumentationsseite.
+>Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) Abschnitt [!DNL Google Cloud Storage] Zieldokumentationsseite
 >Für andere unterstützte Werte von `datasetFileType`finden Sie in der API-Referenzdokumentation.
 
 
@@ -2238,7 +2238,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 Notieren Sie die Datenfluss-ID aus der Antwort. Diese ID ist im nächsten Schritt beim Abrufen der Datenflüsse erforderlich, um die erfolgreichen Datensatzexporte zu validieren.
 
-## Ausführen des Datenflusses abrufen {#get-dataflow-runs}
+## Abrufen von Datenflüssen {#get-dataflow-runs}
 
 ![Abbildung von Schritt 6 im Workflow &quot;Datensätze exportieren&quot;](../assets/api/export-datasets/export-datasets-api-workflow-validate-dataflow.png)
 
@@ -2340,7 +2340,7 @@ Beachten Sie bei der Komprimierung den Unterschied im Dateiformat zwischen den b
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen für die Fehlermeldung bei der Experience Platform-API. Siehe [API-Statuscodes](/help/landing/troubleshooting.md#api-status-codes) und [Fehler in der Anfragekopfzeile](/help/landing/troubleshooting.md#request-header-errors) Weitere Informationen zur Interpretation von Fehlerantworten finden Sie im Handbuch zur Fehlerbehebung bei Platform .
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen für die Fehlermeldung bei der Experience Platform-API. Siehe Abschnitt [API-Statuscodes](/help/landing/troubleshooting.md#api-status-codes) und [Fehler in der Anfragekopfzeile](/help/landing/troubleshooting.md#request-header-errors) Weitere Informationen zur Interpretation von Fehlerantworten finden Sie im Handbuch zur Fehlerbehebung bei Platform .
 
 ## Nächste Schritte {#next-steps}
 
