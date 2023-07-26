@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Segmentierungs-Service
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche Zielgruppen und Segmentdefinitionen erstellen und verwalten.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 04c0b19bf4ffbc0719a89f710570cc667ca5e482
+source-git-commit: 1314b2742af5cd281acb5f9db81eec0ccf885f77
 workflow-type: tm+mt
-source-wordcount: '3606'
-ht-degree: 30%
+source-wordcount: '3607'
+ht-degree: 31%
 
 ---
 
@@ -27,7 +27,7 @@ Sie sollten auch zwei Schlüsselbegriffe verstehen, die in diesem Dokument verwe
 
 - **Zielgruppe**: Eine Gruppe von Personen, die ähnliche Verhaltensweisen und/oder Merkmale aufweisen. Diese Personensammlung kann entweder von Adobe Experience Platform mithilfe von Segmentdefinitionen oder der Zielgruppenzusammensetzung (plattformgenerierte Zielgruppe) oder aus externen Quellen wie benutzerdefinierten Uploads (extern generierte Zielgruppe) erstellt werden.
 - **Segmentdefinition**: Die Regeln, die Adobe Experience Platform verwendet, um die wichtigsten Merkmale oder das Verhalten einer Zielgruppe zu beschreiben.
-- **Segment**: Die Trennung von Profilen in Audiences.
+- **Segmentieren**: Die Trennung von Profilen in Zielgruppen.
 
 ## Übersicht
 
@@ -77,7 +77,7 @@ Sie können dieser Anzeige zusätzliche Felder hinzufügen, indem Sie das ![Filt
 | [!UICONTROL Herkunft] | Die Herkunft der Zielgruppe. Hier wird angegeben, woher die Zielgruppe stammt. Mögliche Werte sind Segmentierungsdienst, benutzerdefinierter Upload, Zielgruppenzusammensetzung und Audience Manager. |
 | [!UICONTROL Erstellt] | Datum und Uhrzeit der Erstellung der Audience in UTC. |
 | [!UICONTROL Zuletzt aktualisiert] | Datum und Uhrzeit der letzten Aktualisierung der Audience in UTC. |
-| [!UICONTROL Tags] | Die benutzerdefinierten Tags, die zur Zielgruppe gehören. Weitere Informationen zu diesen Tags finden Sie im [Abschnitt zu Tags](#tags). |
+| [!UICONTROL Tags] | Die benutzerdefinierten Tags, die zur Zielgruppe gehören. Weitere Informationen zu diesen Tags finden Sie im [-Abschnitt zu Tags](#tags). |
 | [!UICONTROL Aufschlüsselung] | Die Aufschlüsselung des Profilstatus für die Zielgruppe. Eine detailliertere Beschreibung dieser Aufschlüsselung des Profilstatus finden Sie unten. |
 | [!UICONTROL Lebenszyklus-Status] | Der Status der Zielgruppe. Mögliche Werte für dieses Feld sind `Draft`, `Published` und `Archived`. |
 | [!UICONTROL Aktualisierungshäufigkeit] | Ein Wert, der angibt, wie oft die Daten der Zielgruppe aktualisiert werden. Mögliche Werte für dieses Feld sind `On Demand`, `Scheduled` und `Continuous`. |
@@ -90,9 +90,9 @@ Wenn die Aufschlüsselung ausgewählt ist, wird ein Balkendiagramm angezeigt, da
 
 | Status | Beschreibung |
 | ------ | ----------- |
-| [!UICONTROL Realisiert] | Die Anzahl der Profile, die **qualifiziert** für das Segment in den letzten 24 Stunden seit der Ausführung des letzten Batch-Segmentauftrags. |
-| [!UICONTROL Bestehend] | Die Anzahl der Profile, die **verbleiben** in dem Segment in den letzten 24 Stunden seit der Ausführung des letzten Batch-Segmentauftrags. |
-| [!UICONTROL Verlassen] | Die Anzahl der Profile, die **beendet** das Segment in den letzten 24 Stunden seit Ausführung des letzten Batch-Segmentauftrags. |
+| [!UICONTROL Realisiert] | Die Anzahl der Profile, die sich in den letzten 24 Stunden seit Ausführung des letzten Batch-Segmentauftrags für das Segment **qualifiziert** haben. |
+| [!UICONTROL Bestehend] | Die Anzahl der Profile, die in den letzten 24 Stunden seit Ausführung des letzten Batch-Segmentauftrags im Segment **verblieben** sind. |
+| [!UICONTROL Verlassen] | Die Anzahl der Profile, die das Segment in den letzten 24 Stunden seit Ausführung des letzten Batch-Segmentauftrags **verlassen** haben. |
 
 Neben jeder Zielgruppe befindet sich ein Auslassungssymbol. Wenn Sie diese Option auswählen, wird eine Liste der verfügbaren Schnellaktionen für die Zielgruppe angezeigt. Diese Aktionsliste unterscheidet sich je nach Ursprung der Zielgruppe.
 
@@ -117,7 +117,7 @@ Umschalten **[!UICONTROL Alle Zielgruppen planen]** aktiviert die geplante Segme
 
 Auswählen **[!UICONTROL Audience importieren]** können Sie eine extern generierte Zielgruppe importieren. Weiterführende Informationen zum Zielgruppenimport finden Sie im Abschnitt [Importieren einer Zielgruppe im Benutzerhandbuch](#import-audience).
 
-Auswählen **[!UICONTROL Zielgruppe erstellen]** ermöglicht Ihnen die Erstellung einer Audience. Weiterführende Informationen zur Erstellung von Zielgruppen finden Sie im Abschnitt [Erstellen einer Zielgruppe im Benutzerhandbuch](#create-audience).
+Auswählen **[!UICONTROL Erstellen einer Zielgruppe]** ermöglicht Ihnen die Erstellung einer Audience. Weiterführende Informationen zur Erstellung von Zielgruppen finden Sie im Abschnitt [Erstellen einer Zielgruppe im Benutzerhandbuch](#create-audience).
 
 ![Die obere Navigationsleiste auf der Seite zum Durchsuchen von Zielgruppen wird hervorgehoben. Diese Leiste enthält eine Schaltfläche zum Erstellen einer Audience und eine Schaltfläche zum Importieren einer Audience.](../images/ui/overview/browse-audiences-top.png)
 
@@ -125,7 +125,7 @@ Auswählen **[!UICONTROL Zielgruppe erstellen]** ermöglicht Ihnen die Erstellun
 >
 > Sie werden **not** in der Lage sein, eine Zielgruppe zu löschen, die in einer Zielaktivierung verwendet wird.
 
-### Filtern und Taggen {#manage-audiences}
+### Filter, Ordner und Tagging {#manage-audiences}
 
 Um Ihre Arbeitseffizienz zu verbessern, können Sie nach vorhandenen Zielgruppen suchen, benutzerdefinierte Tags zu Zielgruppen hinzufügen, Zielgruppen in Ordner setzen und die angezeigten Zielgruppen filtern.
 
@@ -137,7 +137,7 @@ Verwendung [!DNL Unified Search], fügen Sie den zu suchenden Begriff in der her
 
 ![Die Suchleiste wird hervorgehoben.](../images/ui/overview/browse-audience-search.png)
 
-Weitere Informationen finden Sie unter [!DNL Unified Search], einschließlich der unterstützten Funktionen, lesen Sie bitte den Abschnitt [Dokumentation zur einheitlichen Suche](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html).
+Weitere Informationen finden Sie unter [!DNL Unified Search], einschließlich der unterstützten Funktionen, lesen Sie bitte den Abschnitt [Einheitliche Suchdokumentation](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html).
 
 **Tags** {#tags}
 
@@ -147,7 +147,7 @@ Um ein Tag hinzuzufügen, wählen Sie **[!UICONTROL Tags verwalten]** auf der Zi
 
 ![Die [!UICONTROL Tags verwalten] für eine bestimmte Zielgruppe ausgewählt ist.](../images/ui/overview/browse-manage-tags.png)
 
-Die **[!UICONTROL Tags verwalten]** Popup angezeigt. In diesem Popup können Sie entweder ein kategorisiertes Tag oder ein nicht kategorisiertes Tag auswählen.
+Die **[!UICONTROL Tags verwalten]** Popover angezeigt. In diesem Popup-Fenster können Sie entweder ein kategorisiertes Tag oder ein nicht kategorisiertes Tag auswählen.
 
 | Tag-Typ | Beschreibung |
 | -------- | ----------- |
@@ -170,7 +170,7 @@ Um eine Zielgruppe in einen Ordner zu verschieben, wählen Sie **[!UICONTROL In 
 
 ![Die [!UICONTROL In Ordner verschieben] für eine bestimmte Zielgruppe ausgewählt ist.](../images/ui/overview/browse-move-to-folder.png)
 
-Die **Zielgruppe in Ordner verschieben** Popup angezeigt. Wählen Sie den Ordner aus, in den Sie die Zielgruppe verschieben möchten, und wählen Sie dann **[!UICONTROL Speichern]**.
+Die **Zielgruppe in Ordner verschieben** Popover angezeigt. Wählen Sie den Ordner aus, in den Sie die Zielgruppe verschieben möchten, und wählen Sie dann **[!UICONTROL Speichern]**.
 
 ![Das Popover Zielgruppe in Ordner verschieben wird angezeigt. Der Ordner, in den die Zielgruppe verschoben wird, wird hervorgehoben.](../images/ui/overview/move-to-folder.png)
 
@@ -192,8 +192,8 @@ Die Liste der verfügbaren Filter wird angezeigt.
 | ------ | ----------- |
 | [!UICONTROL Herkunft] | Ermöglicht die Filterung nach der Herkunft der Audience. Zu den verfügbaren Optionen gehören Segmentierungsdienst, benutzerdefinierter Upload, Zielgruppenzusammensetzung und Audience Manager. |
 | [!UICONTROL Hat ein Tag] | Filtert nach Tags. Sie können zwischen **[!UICONTROL Hat ein Tag]** und **[!UICONTROL Enthält alle Tags]**. Wann **[!UICONTROL Hat ein Tag]** ausgewählt ist, enthalten die gefilterten Zielgruppen **any** der Tags, die Sie hinzugefügt haben. Wann **[!UICONTROL Enthält alle Tags]** ausgewählt ist, müssen die gefilterten Zielgruppen **all** der Tags, die Sie hinzugefügt haben. |
-| [!UICONTROL Lebenszyklus-Status] | Ermöglicht die Filterung nach dem Lebenszyklusstatus der Zielgruppe. Verfügbare Optionen umfassen [!UICONTROL Aktiv], [!UICONTROL Archiviert], [!UICONTROL Gelöscht], [!UICONTROL Entwurf], [!UICONTROL Inaktiv]und [!UICONTROL Veröffentlicht]. |
-| [!UICONTROL Aktualisierungshäufigkeit] | Ermöglicht die Filterung nach der Aktualisierungshäufigkeit der Audience. Verfügbare Optionen umfassen [!UICONTROL Geplant], [!UICONTROL Kontinuierlich]und [!UICONTROL On Demand]. |
+| [!UICONTROL Lebenszyklus-Status] | Ermöglicht die Filterung nach dem Lebenszyklusstatus der Zielgruppe. Verfügbare Optionen umfassen [!UICONTROL Aktiv], [!UICONTROL Archiviert], [!UICONTROL Gelöscht], [!UICONTROL Entwurf], [!UICONTROL Inaaktiv], und [!UICONTROL Veröffentlicht]. |
+| [!UICONTROL Aktualisierungshäufigkeit] | Ermöglicht die Filterung nach der Aktualisierungshäufigkeit der Audience. Verfügbare Optionen umfassen [!UICONTROL Geplant], [!UICONTROL Kontinuierlich], und [!UICONTROL On Demand]. |
 | [!UICONTROL Erstellt von] | Ermöglicht die Filterung nach der Person, die die Zielgruppe erstellt hat. |
 | [!UICONTROL Erstellungsdatum] | Ermöglicht die Filterung nach dem Erstellungsdatum der Audience. Sie können einen Datumsbereich auswählen, nach dem der Zeitpunkt der Erstellung der Audience gefiltert werden soll. |
 | [!UICONTROL Änderungsdatum] | Filtert die Daten nach dem Datum der letzten Änderung der Audience. Sie können einen Datumsbereich auswählen, nach dem gefiltert werden soll, wann die Zielgruppe zuletzt geändert wurde. |
@@ -228,7 +228,7 @@ Auswählen **[!UICONTROL Zugriffsbeschriftungen anwenden]** ermöglicht die Verw
 
 ![Die Seite mit den Zielgruppendetails wird mit dem [!UICONTROL Offene Komposition] hervorgehoben.](../images/ui/overview/audience-details-open-composition.png)
 
-Auswählen **[!UICONTROL Offene Komposition]** ermöglicht Ihnen, Ihre Zielgruppe in Zielgruppenkomposition anzuzeigen. Weitere Informationen zur Zielgruppenkomposition finden Sie im [Handbuch zur Benutzeroberfläche für Zielgruppenkomposition](./audience-composition.md).
+Auswählen **[!UICONTROL Offene Komposition]** können Sie Ihre Zielgruppe in Zielgruppenkomposition anzeigen. Weitere Informationen zur Zielgruppenkomposition finden Sie im [Handbuch zur Benutzeroberfläche für Zielgruppenkomposition](./audience-composition.md).
 
 >[!TAB Benutzerdefinierter Upload]
 
@@ -286,7 +286,7 @@ Ausführlichere Informationen zu jedem [!DNL Profile] erhalten Sie, wenn Sie auf
 
 ### Audience erstellen {#create-audience}
 
-Sie können **[!UICONTROL Zielgruppe erstellen]** , um eine Audience zu erstellen.
+Sie können **[!UICONTROL Erstellen einer Zielgruppe]** , um eine Audience zu erstellen.
 
 ![Auf der Seite Zielgruppendurchsuchen wird die Schaltfläche Zielgruppe erstellen hervorgehoben.](../images/ui/overview/browse-create-audience.png)
 
@@ -366,7 +366,7 @@ Standardmäßig enthält diese Ansicht Informationen zu den Zielgruppen, einschl
 
 Sie können das Symbol ![Tabelle anpassen](../images/ui/overview/customize-table.png) auswählen, um zu ändern, welche Felder angezeigt werden.
 
-![Die Schaltfläche „Tabelle anpassen“ ist hervorgehoben. Durch Auswahl dieser Schaltfläche können Sie die auf der Seite Zielgruppen-Kompositionen angezeigten Felder anpassen.](../images/ui/overview/compositions-select-customize-table.png)
+![Die Schaltfläche „Tabelle anpassen“ ist hervorgehoben. Wenn Sie diese Schaltfläche auswählen, können Sie die Felder anpassen, die auf der Seite Zielgruppen-Kompositionen angezeigt werden.](../images/ui/overview/compositions-select-customize-table.png)
 
 Es wird ein Pop-up mit allen Feldern angezeigt, die in der Tabelle angezeigt werden können.
 

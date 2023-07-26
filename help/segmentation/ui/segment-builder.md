@@ -3,14 +3,18 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 description: Segment Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6d33c1bd3921a754edfab227fad236caf60ac960
+source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
 workflow-type: tm+mt
-source-wordcount: '3308'
-ht-degree: 89%
+source-wordcount: '3338'
+ht-degree: 88%
 
 ---
 
 # Handbuch für die [!DNL Segment Builder]-Benutzeroberfläche
+
+>[!NOTE]
+>
+>In diesem Handbuch wird erläutert, wie Sie Zielgruppen erstellen. **Segmentdefinitionen** unter Verwendung von Segment Builder. Informationen zum Erstellen von Zielgruppen mithilfe der Zielgruppenkomposition finden Sie im Abschnitt [Handbuch zur Benutzeroberfläche für Zielgruppenkomposition](./audience-composition.md).
 
 [!DNL Segment Builder] bietet einen umfangreichen Arbeitsbereich, in dem Sie mit [!DNL Profile]-Datenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 
@@ -37,7 +41,7 @@ Auf der Registerkarte **[!UICONTROL Attribute]** können Sie [!DNL Profile]-Attr
 
 ### Ereignisse
 
-Auf der Registerkarte **[!UICONTROL Ereignisse]** können Sie mit [!DNL XDM ExperienceEvent]-Datenelementen eine Zielgruppe erstellen, die auf stattgefundenen Ereignissen oder Aktionen basiert. Ereignistypen finden Sie auch auf der **[!UICONTROL Veranstaltungen]** -Tab, bei dem es sich um eine Sammlung häufig verwendeter Ereignisse handelt, mit denen Sie Ihre Segmentdefinitionen schneller erstellen können.
+Auf der Registerkarte **[!UICONTROL Ereignisse]** können Sie mit [!DNL XDM ExperienceEvent]-Datenelementen eine Zielgruppe erstellen, die auf stattgefundenen Ereignissen oder Aktionen basiert. Ereignistypen finden Sie auch auf der Seite **[!UICONTROL Veranstaltungen]** -Tab, bei dem es sich um eine Sammlung häufig verwendeter Ereignisse handelt, mit denen Sie Ihre Segmentdefinitionen schneller erstellen können.
 
 Sie können nicht nur nach [!DNL ExperienceEvent]-Elementen suchen, sondern auch nach Ereignistypen. Ereignistypen verwenden dieselbe Codierungs-Logik wie [!DNL ExperienceEvents], ohne dass Sie die [!DNL XDM ExperienceEvent]-Klasse nach dem richtigen Ereignis durchsuchen müssen. Wenn Sie z. B. über die Suchleiste nach „cart“ suchen, werden die Ereignistypen „[!UICONTROL AddCart]“ und „[!UICONTROL RemoveCart]“ zurückgegben. Dabei handelt es sich um zwei sehr häufig genutzte Warenkorbaktionen beim Erstellen von Segmentdefinitionen.
 
