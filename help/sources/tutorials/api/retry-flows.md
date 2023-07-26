@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Flow Service;
 title: Wiederholen fehlgeschlagener Datenfluss-Ausführungen
-description: In diesem Tutorial werden die Schritte zum Wiederholen fehlgeschlagener Datenfluss-Ausführungen mithilfe der Flow Service-API beschrieben.
+description: Erfahren Sie, wie Sie fehlgeschlagene Datenfluss-Ausführungen mithilfe der Flow Service-API erneut testen können.
 exl-id: b9abc737-9a57-47e6-98ab-6d6c44f38d17
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: d4dba26a151619a555a69287e182ff8398cca7b4
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 42%
+source-wordcount: '273'
+ht-degree: 38%
 
 ---
 
@@ -22,8 +21,8 @@ In diesem Tutorial werden die Schritte zum Wiederholen fehlgeschlagener Datenflu
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../home.md)[!DNL Platform]: Experience ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../sandboxes/home.md)[!DNL Platform]: Experience bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 ### Verwenden von Platform-APIs
 
@@ -45,6 +44,10 @@ POST /runs/{RUN_ID}/action?op=re-trigger
 | `op` | Ein Vorgang, der die auszuführende Aktion bestimmt. Um einen fehlgeschlagenen Datenfluss erneut auszuführen, müssen Sie `re-trigger` als Ihren Vorgang. |
 
 **Anfrage**
+
+>[!NOTE]
+>
+>Sie können die `re-trigger` -Vorgang, um den erfolgreichen Datenfluss erneut auszuführen, da der erfolgreiche Datenfluss null aufgenommene Datensätze aufweist.
 
 Die folgende Anfrage versucht erneut, den Datenfluss für die Ausführungs-ID auszuführen `4fb0418e-1804-45d6-8d56-dd51f05c0baf`.
 
