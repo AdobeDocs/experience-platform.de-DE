@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise Juli 2023 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4064c4a7f855fa065c711df5d02d6b7982cc7627
+source-git-commit: 261729515ba25f20cd9606d378a3ec39471ee2cb
 workflow-type: tm+mt
-source-wordcount: '659'
-ht-degree: 36%
+source-wordcount: '1061'
+ht-degree: 38%
 
 ---
 
@@ -17,6 +17,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [Datenerfassung](#data-collection)
 - [Datenvorbereitung](#data-prep)
+- [Ziele](#data-prep)
 - [Segmentierungs-Service](#segmentation)
 - [Quellen](#sources)
 
@@ -48,6 +49,49 @@ Die Datenvorbereitung ermöglicht es Dateningenieurinnen und -ingenieuren, Daten
 {style="table-layout:auto"}
 
 Weitere Informationen zur Datenvorbereitung finden Sie in der [Übersicht zur Datenvorbereitung](../../data-prep/home.md).
+
+## Ziele {#destinations}
+
+[!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+
+**Neue oder aktualisierte Ziele** {#new-updated-destinations}
+
+<!--
+
+LiveRamp commented out until it is officially released tomorrow
+
+| [[!DNL LiveRamp - Onboarding]](../../destinations/catalog/advertising/liveramp-onboarding.md) | New | Onboard identities from Adobe Experience Platform into [!DNL LiveRamp Connect] so that you can target users on mobile, open web, social, and [!DNL CTV] platforms, using the [!DNL Ramp ID] identifier. |
+
+-->
+
+| Ziel | Neu oder aktualisiert | Beschreibung |
+| ----------- |----------------|----------- |
+| [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md) | Neu | Stellen Sie eine aktive ausgehende Verbindung zu [!DNL Azure Data Lake Storage Gen2] her, um Datendateien aus Adobe Experience Platform regelmäßig zu dem von Ihnen festgelegten Datenspeicherort zu exportieren. Dieses neue Ziel bietet eine verbesserte Dateiexportfunktion und unterstützt [!BADGE Beta]{type=Informative} |
+| [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | Neu | [!DNL Data Landing Zone] ist eine von Adobe Experience Platform bereitgestellte [!DNL Azure Blob]-Speicherschnittstelle, die Ihnen Zugriff auf eine sichere, Cloud-basierte Dateispeichereinrichtung gewährt, um Dateien aus Platform zu exportieren. Dieses neue Ziel bietet eine verbesserte Dateiexportfunktion und unterstützt [!BADGE Beta]{type=Informative} |
+| [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md) | Neu | Stellen Sie eine aktive ausgehende Verbindung zu [!DNL Google Cloud Storage] her, um Datendateien aus Adobe Experience Platform regelmäßig in Ihre eigenen Behälter zu exportieren. Dieses neue Ziel bietet eine verbesserte Dateiexportfunktion und unterstützt [!BADGE Beta]{type=Informative} |
+| [[!DNL Amazon S3] Aktualisieren](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog) | Aktualisierung von   | Mit dieser Aktualisierung bietet das Ziel erweiterte Dateiexportfunktionen und unterstützt [!BADGE Beta]{type=Informative} |
+| [[!DNL Azure Blob] Aktualisieren](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) | Aktualisierung von   | Mit dieser Aktualisierung bietet das Ziel erweiterte Dateiexportfunktionen und unterstützt [!BADGE Beta]{type=Informative} |
+| [[!DNL SFTP] Aktualisieren](../../destinations/catalog/cloud-storage/sftp.md#changelog) | Aktualisierung von   | Mit dieser Aktualisierung bietet das Ziel erweiterte Dateiexportfunktionen und unterstützt [!BADGE Beta]{type=Informative} |
+| [[!DNL Adobe Campaign Managed Services] -Verbindung](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Aktualisierung von   | Die [!DNL Adobe Campaign Managed Services] Die Integration mit Adobe Experience Platform unterstützt jetzt unterschiedliche Typen der Zielgruppensynchronisierung. Verwenden Sie das Steuerelement Synchronisierungstyp auswählen , um zu bestimmen, ob Sie Zielgruppen in Adobe Campaign oder Zielgruppen und deren Profilattribute exportieren möchten. <br> ![Neu Auswahl des Synchronisierungstypselektors markiert.](/help/release-notes/2023/assets/acms-destination-export-type.png "Neu Auswahl des Synchronisierungstypselektors markiert."){width="100" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+**Neue oder aktualisierte Funktionen** {#destinations-new-updated-functionality}
+
+Das Update und die allgemeine Verfügbarkeit der sechs oben genannten Cloud-Speicher-Ziele bieten die folgenden Funktionen:
+
+- Zusätzliche [Dateibenennungsoptionen](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
+- Möglichkeit zum Festlegen benutzerdefinierter Datei-Kopfzeilen in exportierten Dateien durch den [verbesserten Zuordnungsschritt](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+- Anpassungsfähigkeit der [Formatierung exportierter CSV-Datendateien](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+- [!BADGE Beta]{type=Informative}[Unterstützung für den Datensatzexport](/help/destinations/ui/export-datasets.md).
+
+
+**Korrekturen und Verbesserungen** {#destinations-fixes-and-enhancements}
+
+- Es wurde ein Problem mit dem Salesforce-Marketing Cloud-Ziel (API) behoben, bei dem im Zuordnungsschritt nicht alle verfügbaren Zielattribute von Salesforce zurückgegeben wurden. Es gibt jetzt eine [Obergrenze von 2000 Zielattributen](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md#mapping-considerations-example) aus Salesforce , die angezeigt werden kann.
+- Es wurde ein Problem mit dem Microsoft Dynamics 365-Ziel behoben. Das Ziel unterstützt jetzt das regionale Routing von Daten über die [Regionsauswahl](/help/destinations/catalog/crm/microsoft-dynamics-365.md#authenticate), damit Sie Ihre Datenexporte entsprechend der Region weiterleiten können, in der Ihr Unternehmen im Microsoft-Ökosystem bereitgestellt wird. ![Neuer Regionsselektor hervorgehoben.](/help/release-notes/2023/assets/region-parameter-microsoft-dynamics-365.png "Neuer Regionsselektor hervorgehoben."){width="100" zoomable="yes"}
+
+Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
 ## Segmentierungs-Service {#segmentation}
 
