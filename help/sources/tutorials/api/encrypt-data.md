@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie verschlüsselte Dateien über Cloud-Speicher-
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: f0e518459eca72d615b380d11cabee6c1593dd9a
-workflow-type: ht
-source-wordcount: '1017'
-ht-degree: 100%
+source-git-commit: d05202fc1e64bbb06c886aedbe59e07c45f80686
+workflow-type: tm+mt
+source-wordcount: '1343'
+ht-degree: 76%
 
 ---
 
@@ -76,7 +76,7 @@ POST /data/foundation/connectors/encryption/keys
 
 **Anfrage**
 
-Die folgende Anfrage generiert mithilfe des PGP-Verschlüsselungsalgorithmus ein Verschlüsselungsschlüsselpaar.
+Die folgende Anfrage generiert mithilfe des PGP-Verschlüsselungsalgorithmus ein Verschlüsselungs-Schlüsselpaar.
 
 ```shell
 curl -X POST \
@@ -110,6 +110,65 @@ Bei erfolgreicher Antwort werden Ihr öffentlicher, mit Base64 verschlüsselter 
     ​"expiryTime": "1684843168"
 }
 ```
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `publicKey` | Der öffentliche Schlüssel wird zum Verschlüsseln der Daten in Ihrem Cloud-Speicher verwendet. Dieser Schlüssel entspricht dem privaten Schlüssel, der in diesem Schritt ebenfalls erstellt wurde. Der private Schlüssel wird jedoch sofort an Experience Platform gesendet. |
+| `publicKeyId` | Die öffentliche Schlüssel-ID wird verwendet, um einen Datenfluss zu erstellen und Ihre verschlüsselten Cloud-Speicherdaten in Experience Platform zu erfassen. |
+| `expiryTime` | Die Ablaufzeit definiert das Ablaufdatum Ihres Verschlüsselungsschlüsselpaars. Dieses Datum wird automatisch auf 180 Tage nach dem Datum der Schlüsselgenerierung gesetzt und im Unix-Zeitstempelformat angezeigt. |
+
++++(Optional) Erstellen Sie ein Schlüsselpaar für die Signierüberprüfung für signierte Daten
+
+### Kundenverwaltetes Schlüsselpaar erstellen
+
+Sie können optional ein Schlüsselpaar für die Signaturüberprüfung erstellen, um Ihre verschlüsselten Daten zu signieren und zu erfassen.
+
+In dieser Phase müssen Sie Ihre eigene Kombination aus privatem Schlüssel und öffentlichem Schlüssel generieren und dann Ihren privaten Schlüssel zum Signieren Ihrer verschlüsselten Daten verwenden. Als Nächstes müssen Sie Ihren öffentlichen Schlüssel in Base64 kodieren und ihn dann für Experience Platform freigeben, damit Platform Ihre Signatur überprüfen kann.
+
+### Öffentlichen Schlüssel für Experience Platform freigeben
+
+Um Ihren öffentlichen Schlüssel freizugeben, stellen Sie eine POST-Anfrage an die `/customer-keys` -Endpunkt bei der Bereitstellung Ihres Verschlüsselungsalgorithmus und Ihres Base64-kodierten öffentlichen Schlüssels.
+
+**API-Format**
+
+```http
+POST /data/foundation/connectors/encryption/customer-keys
+```
+
+**Anfrage**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/customer-keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
+  -H 'Content-Type: application/json' 
+  -d '{
+      "encryptionAlgorithm": {{ENCRYPTION_ALGORITHM}},       
+      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}}
+    }'
+```
+
+| Parameter | Beschreibung |
+| --- | --- |
+| `encryptionAlgorithm` | Der Typ des von Ihnen verwendeten Verschlüsselungsalgorithmus. Die unterstützten Verschlüsselungstypen sind `PGP` und `GPG`. |
+| `publicKey` | Der öffentliche Schlüssel, der Ihren kundenverwalteten Schlüsseln entspricht, die zum Signieren Ihrer verschlüsselten Datei verwendet werden. Dieser Schlüssel muss Base64-kodiert sein. |
+
+**Antwort**
+
+```json
+{    
+  "publicKeyId": "e31ae895-7896-469a-8e06-eb9207ddf1c2" 
+} 
+```
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `publicKeyId` | Diese öffentliche Schlüssel-ID wird zurückgegeben, wenn Sie Ihren kundenverwalteten Schlüssel für Experience Platform freigeben. Sie können diese Kennung des öffentlichen Schlüssels als Kennung des Signierüberprüfungsschlüssels angeben, wenn Sie einen Datenfluss für signierte und verschlüsselte Daten erstellen. |
+
++++
 
 ## Verbinden Ihrer Cloud-Speicherquelle mit Experience Platform mithilfe der [!DNL Flow Service]-API
 
@@ -150,6 +209,10 @@ POST /flows
 ```
 
 **Anfrage**
+
+>[!BEGINTABS]
+
+>[!TAB Erstellen eines Datenflusses für die verschlüsselte Datenerfassung]
 
 Die folgende Anfrage erstellt einen Datenfluss zum Aufnehmen verschlüsselter Daten für eine Cloud-Speicherquelle.
 
@@ -206,6 +269,58 @@ curl -X POST \
 | `scheduleParams.startTime` | Die Startzeit für den Datenfluss in Epochenzeit. |
 | `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Zulässige Werte sind: `once`, `minute`, `hour`, `day` oder `week`. |
 | `scheduleParams.interval` | Das Intervall bezeichnet den Zeitraum zwischen zwei aufeinanderfolgenden Datenflussausführungen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Das Intervall ist nicht erforderlich, wenn die Häufigkeit auf `once` festgelegt ist, und sollte größer oder gleich `15` für andere Frequenzwerte sein. |
+
+
+>[!TAB Erstellen eines Datenflusses zur Erfassung verschlüsselter und signierter Daten]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "ACME Customer Data (with Sign Verification)",
+    "description": "ACME Customer Data (with Sign Verification)",
+    "flowSpec": {
+        "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
+        "version": "1.0"
+    },
+    "sourceConnectionIds": [
+        "655f7c1b-1977-49b3-a429-51379ecf0e15"
+    ],
+    "targetConnectionIds": [
+        "de688225-d619-481c-ae3b-40c250fd7c79"
+    ],
+    "transformations": [
+        {
+            "name": "Mapping",
+            "params": {
+                "mappingId": "6b6e24213dbe4f57bd8207d21034ff03",
+                "mappingVersion":"0"
+            }
+        },
+        {
+            "name": "Encryption",
+            "params": {
+                "publicKeyId":"311ef6f8-9bcd-48cf-a9e9-d12c45fb7a17",
+                "signVerificationKeyId":"e31ae895-7896-469a-8e06-eb9207ddf1c2"
+            }
+        }
+    ],
+    "scheduleParams": {
+        "startTime": "1675793392",
+        "frequency": "once"
+    }
+}'
+```
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `params.signVerificationKeyId` | Die ID des Signaturüberprüfungsschlüssels entspricht der Kennung des öffentlichen Schlüssels, die nach der Freigabe Ihres Base64-kodierten öffentlichen Schlüssels für Experience Platform abgerufen wurde. |
+
+>[!ENDTABS]
 
 **Antwort**
 
