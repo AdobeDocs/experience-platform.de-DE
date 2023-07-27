@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Glossar der Datennutzungskennzeichnungen
 description: In diesem Dokument werden alle derzeit von Adobe Experience Platform unterstützten Datennutzungskennzeichnungen beschrieben.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: d1d817646fdc943428ca13f3dd8b52725bce4921
 workflow-type: tm+mt
-source-wordcount: '2109'
-ht-degree: 98%
+source-wordcount: '2207'
+ht-degree: 93%
 
 ---
 
@@ -23,7 +23,7 @@ Mit Datennutzungskennzeichnungen können Sie Datensätze und -felder anhand der 
 
 In diesem Dokument werden die derzeit von Experience Platform bereitgestellten grundlegenden Datennutzungskennzeichnungen erläutert.
 
-## Vertragsbezeichnungen
+## Vertragsbezeichnungen {#contract}
 
 Vertragliche „C“-Bezeichnungen dienen zur Kategorisierung von Daten, die vertragliche Bestimmungen aufweisen oder mit Data Governance-Richtlinien Ihrer Organisation in Zusammenhang stehen.
 
@@ -42,7 +42,7 @@ Vertragliche „C“-Bezeichnungen dienen zur Kategorisierung von Daten, die ver
 | [C11](#c11) | Daten können nicht mit Segment Match-Partnern freigegeben werden. |
 | [C12](#c12) | Daten können in keiner Weise exportiert werden. |
 
-## Identitätsbezeichnungen
+## Identitätsbezeichnungen {#identity}
 
 Identitätsbezogene „I“-Bezeichnungen dienen der Kategorisierung von Daten, mit denen sich eine bestimmte Person identifizieren oder kontaktieren lässt.
 
@@ -63,6 +63,20 @@ Bei Daten, die Sie als sensibel betrachten, kann es sich um verschiedene Arten v
 | **S2** | Daten, die zur Bestimmung eines allgemein definierten Geofence-Bereichs verwendet werden können. |
 | **PSPD** | Zulässige sensible und personenbezogene Daten (Permitted Sensitive Personal Data, PSPD) sind Daten, die von Adobe vertraglich zum Hochladen zugelassen werden und die vom geltenden Recht als „sensibel“, „besondere Datenkategorie“ oder Ähnliches erachtet werden. Hiervon ausgenommen sind insbesondere geschützte Gesundheitsinformationen (PHI) und andere regulierte Gesundheitsdaten. |
 | **RHD** | Daten, die sich auf geschützte Gesundheitsinformationen (PHI) beziehen, oder Patienteninformationen, die von Adobe vertraglich zum Hochladen zugelassen sind. |
+
+## (Beta) Partner Ecosystem-Beschriftungen {#partner}
+
+>[!IMPORTANT]
+>
+>Die Beschriftung für Daten von Drittanbietern befindet sich in der Beta-Phase. Sie steht nicht allen Benutzern zur Verfügung und die Dokumentation kann sich ändern.
+
+Mit Partner Ecosystem-Beschriftungen werden Daten kategorisiert, die aus externen Quellen für Ihr Unternehmen stammen.
+
+Diese Bezeichnung wird verwendet, um die Verwendung von potenziellen Daten zu steuern.
+
+| Kennzeichnung | Definition |
+| --- | --- |
+| **Drittanbieter** | Drittanbieterdaten sind Daten, die Ihnen von einem Drittanbieter bereitgestellt werden. Ein Drittanbieter für Daten ist eine Einheit, die mit Ihrem Unternehmen eine Vereinbarung geschlossen hat, die Ihnen den Zugriff auf, die Verwendung, die Anzeige und die Übermittlung der Daten von Drittanbietern in Verbindung mit Platform gestattet. |
 
 ## Anhang
 
