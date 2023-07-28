@@ -3,7 +3,7 @@ title: Automatisch erfasste Informationen im Adobe Experience Platform Web SDK
 description: Eine Übersicht über die einzelnen Informationen, die das Adobe Experience Platform SDK automatisch erfasst.
 keywords: Informationen erfassen;Kontext;Konfigurieren;Gerät;Bildschirmhöhe;Bildschirmhöhe;Bildschirmausrichtung;Bildschirmausrichtung;Bildschirmbreite;Bildschirmbreite;Umgebung;ViewportHeight;Viewport-Höhe;ViewportWidth;Viewport-Breite;Browserdetails;Browserdetails;Implementierungsdetails;Implementierungsdetails;Name;Version;Ortszeit;localTime;localZoneOffset;local Zeitzonenversatz;Zeitstempel;Web;url;webPageDetails;Web-Seitendetails;webReferrer;Web Referrer;landscape;Hochformat;
 exl-id: 901df786-df36-4986-9c74-a32d29c11b71
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e3f507e010ea2a32042b53d46795d87e82e3fb72
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 59%
@@ -82,7 +82,7 @@ Informationen zum SDK, das zum Erfassen des Ereignisses verwendet wird.
 | ----------------------------------------- | --------------------------------------- |
 | `events[].xdm.implementationDetails.name` | `https://ns.adobe.com/experience/alloy` |
 
-Die Kennung des Software Development Kits (SDK).  Dieses Feld verwendet einen URI, um die Eindeutigkeit der Kennungen zu verbessern, die von verschiedenen Software-Bibliotheken bereitgestellt werden. Wenn die eigenständige Bibliothek verwendet wird, lautet der Wert `https://ns.adobe.com/experience/alloy`. Wenn die Bibliothek als Teil der Tag-Erweiterung verwendet wird, lautet der Wert `https://ns.adobe.com/experience/alloy+reactor`.
+Die Kennung des Software Development Kits (SDK).  Dieses Feld verwendet einen URI, um die Eindeutigkeit der Kennungen zu verbessern, die von verschiedenen Software-Bibliotheken bereitgestellt werden. Bei Verwendung der eigenständigen Bibliothek lautet der Wert `https://ns.adobe.com/experience/alloy`. Wenn die Bibliothek als Teil der Tag-Erweiterung verwendet wird, lautet der Wert `https://ns.adobe.com/experience/alloy+reactor`.
 
 ### Version
 
@@ -92,7 +92,7 @@ Die Kennung des Software Development Kits (SDK).  Dieses Feld verwendet einen UR
 
 Wenn die eigenständige Bibliothek verwendet wird, ist der Wert einfach die Bibliotheksversion. Wenn die Bibliothek als Teil der Tag-Erweiterung verwendet wird, ist dies die Bibliotheksversion und die Tag-Erweiterungsversion mit einem &quot;+&quot;verbunden. Wenn die Bibliotheksversion beispielsweise 2.1.0 wäre und die Tag-Erweiterungsversion 2.1.3 wäre, wäre der Wert `2.1.0+2.1.3`.
 
-### Umgebung
+### Umgebung {#environment}
 
 | **Pfad in Payload:** | **Beispiel:** |
 | ------------------------------------------------ | ------------ |
@@ -100,7 +100,7 @@ Wenn die eigenständige Bibliothek verwendet wird, ist der Wert einfach die Bibl
 
 Die Umgebung, in der die Daten erfasst wurden. Dies ist immer auf `browser`.
 
-## Ortskontext (`placeContext`)
+## Ortskontext (`placeContext`) {#place-context}
 
 Informationen zum Standort des Endnutzers.
 
