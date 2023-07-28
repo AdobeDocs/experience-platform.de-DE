@@ -4,9 +4,9 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
+source-git-commit: 002eea44dd719871d3ff1b4f1548b74efbbc7d3b
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1163'
 ht-degree: 96%
 
 ---
@@ -81,7 +81,7 @@ ht-degree: 96%
       * [Google Display &amp; Video 360-Verbindung](./catalog/advertising/google-dv360.md)
       * [Google gtag-Erweiterung](./catalog/advertising/gtag-advertising.md)
       * [LinkedIn Insight Tag-Erweiterung](./catalog/advertising/linkedin.md)
-      * [(Alpha) LiveRamp – SFTP-Verbindung](./catalog/advertising/liveramp.md)
+      * [LiveRamp - Onboarding-Verbindung](./catalog/advertising/liveramp-onboarding.md)
       * [Microsoft Bing-Verbindung](./catalog/advertising/bing.md)
       * [Pinterest Conversion Tracking-Erweiterung](./catalog/advertising/pinterest-extension.md)
       * [Pinterest Customer List-Verbindung](./catalog/advertising/pinterest.md)
