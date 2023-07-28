@@ -5,7 +5,7 @@ exl-id: 27abfc38-ec19-4321-b743-169370d585a0
 source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
 source-wordcount: '940'
-ht-degree: 61%
+ht-degree: 63%
 
 ---
 
@@ -78,7 +78,7 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
 >title="Privater SSH-Schlüssel"
->abstract="Der private SSH-Schlüssel muss eine RSA-formatierte, Base64-kodierte Zeichenfolge sein und darf nicht kennwortgeschützt sein."
+>abstract="Der private SSH-Schlüssel muss eine RSA-formatierte, Base64-kodierte Zeichenfolge sein und darf nicht Passwort-geschützt sein."
 
 Wenn Sie die **[!UICONTROL SFTP mit Kennwort]** Authentifizierungstyp für die Verbindung mit Ihrem SFTP-Speicherort:
 
