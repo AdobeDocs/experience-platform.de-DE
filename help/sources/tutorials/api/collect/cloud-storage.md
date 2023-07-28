@@ -5,10 +5,10 @@ title: Erstellen eines Datenflusses für Cloud-Speicherquellen mithilfe der Flow
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Cloud-Speicher eines Drittanbieters und zum Importieren dieser Daten in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1736'
-ht-degree: 74%
+source-wordcount: '1765'
+ht-degree: 72%
 
 ---
 
@@ -93,11 +93,11 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `baseConnectionId` | Die Kennung der Basisverbindung Ihrer Cloud-Speicherquelle. |
-| `data.format` | Das Format der Daten, die Sie an Platform übermitteln möchten. Folgende Werte werden unterstützt: `delimited`, `JSON`und `parquet`. |
+| `data.format` | Das Format der Daten, die Sie an Platform übermitteln möchten. Folgende Werte werden unterstützt: `delimited`, `JSON`, und `parquet`. |
 | `data.properties` | (Optional) Eine Reihe von Eigenschaften, die Sie beim Erstellen einer Quellverbindung auf Ihre Daten anwenden können. |
 | `data.properties.columnDelimiter` | (Optional) Ein einstelliges Spaltentrennzeichen, das Sie beim Erfassen flacher Dateien angeben können. Jeder einzelne Zeichenwert ist als Spaltentrennzeichen zulässig. Wenn kein Komma angegeben wurde, wird ein`,`) als Standardwert verwendet. **Hinweis**: Die `columnDelimiter` -Eigenschaft kann nur bei der Aufnahme von durch Trennzeichen getrennten Dateien verwendet werden. |
 | `data.properties.encoding` | (Optional) Eine Eigenschaft, die den Kodierungstyp definiert, der bei der Aufnahme Ihrer Daten in Platform verwendet werden soll. Folgende Kodierungstypen werden unterstützt: `UTF-8` und `ISO-8859-1`. **Hinweis**: Die `encoding` -Parameter ist nur verfügbar, wenn durch Trennzeichen getrennte CSV-Dateien aufgenommen werden. Andere Dateitypen werden mit der Standardkodierung erfasst. `UTF-8`. |
-| `data.properties.compressionType` | (Optional) Eine Eigenschaft, die den komprimierten Dateityp für die Erfassung definiert. Folgende komprimierte Dateitypen werden unterstützt: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`und `tar`. **Hinweis**: Die `compressionType` -Eigenschaft kann nur bei der Aufnahme von getrennten oder JSON-Dateien verwendet werden. |
+| `data.properties.compressionType` | (Optional) Eine Eigenschaft, die den komprimierten Dateityp für die Erfassung definiert. Folgende komprimierte Dateitypen werden unterstützt: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`, und `tar`. **Hinweis**: Die `compressionType` -Eigenschaft kann nur bei der Aufnahme von getrennten oder JSON-Dateien verwendet werden. |
 | `params.path` | Der Pfad der Quelldatei, auf die Sie zugreifen. Dieser Parameter verweist auf eine einzelne Datei oder einen ganzen Ordner.  **Hinweis**: Sie können anstelle des Dateinamens ein Sternchen verwenden, um die Aufnahme eines ganzen Ordners anzugeben. Beispiel: `/acme/summerCampaign/*.csv` wird die gesamte `/acme/summerCampaign/` Ordner. |
 | `params.type` | Der Dateityp der Quelldatendatei, die Sie aufnehmen. Use type `file` , um eine einzelne Datei zu erfassen und den Typ `folder` , um einen ganzen Ordner aufzunehmen. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die Ihrer spezifischen Cloud-Speicherquelle zugeordnet ist. Eine Liste der Verbindungsspezifikations-IDs finden Sie im [Anhang](#appendix). |
@@ -253,8 +253,8 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | Die `$id` des XDM-Zielschemas. |
 | `data.schema.version` | Die Version des Schemas. Dieser Wert muss auf `application/vnd.adobe.xed-full+json;version=1` festgelegt werden, wodurch die neueste Nebenversion des Schemas zurückgegeben wird. |
-| `params.dataSetId` | Die Kennung des Zieldatensatzes. |
-| `connectionSpec.id` | Die feste Verbindungsspezifikations-ID zum Data Lake. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `params.dataSetId` | Die Kennung des im vorherigen Schritt generierten Zieldatensatzes. **Hinweis**: Sie müssen beim Erstellen einer Zielverbindung eine gültige Datensatz-ID angeben. Eine ungültige Datensatz-ID führt zu einem Fehler. |
+| `connectionSpec.id` | Die Verbindungsspezifikations-ID, die für die Verbindung mit dem Data Lake verwendet wird. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Antwort**
 

@@ -5,10 +5,10 @@ title: Erstellen Sie einen Datenfluss für Marketing-Automatisierungsquellen mit
 type: Tutorial
 description: Dieses Tutorial behandelt die Schritte zum Abrufen von Daten aus einem Marketing-Automatisierungssystem und zum Übertragen dieser Daten in Adobe Experience Platform mithilfe von Quell-Connectoren und APIs.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1329'
-ht-degree: 95%
+source-wordcount: '1356'
+ht-degree: 91%
 
 ---
 
@@ -160,7 +160,7 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | Die `$id` des XDM-Zielschemas. |
 | `data.schema.version` | Die Version des Schemas. Dieser Wert muss auf `application/vnd.adobe.xed-full+json;version=1` festgelegt werden, wodurch die neueste Nebenversion des Schemas zurückgegeben wird. |
-| `params.dataSetId` | Die Kennung des Zieldatensatzes. |
+| `params.dataSetId` | Die Kennung des im vorherigen Schritt generierten Zieldatensatzes. **Hinweis**: Sie müssen beim Erstellen einer Zielverbindung eine gültige Datensatz-ID angeben. Eine ungültige Datensatz-ID führt zu einem Fehler. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die für die Verbindung mit dem Data Lake verwendet wird. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 ```json
@@ -651,7 +651,7 @@ Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenfluss
 
 ## Überwachen Ihres Datenflusses
 
-Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen, um Informationen über die Datenflussausführungen, den Abschlussstatus und Fehler anzuzeigen. Weitere Informationen zum Überwachen von Datenflüssen finden Sie im Tutorial [Überwachen von Datenflüssen in der API ](../monitor.md)
+Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen, um Informationen über die Datenflussausführungen, den Abschlussstatus und Fehler anzuzeigen. Weitere Informationen zum Überwachen von Datenflüssen finden Sie im Tutorial [Überwachen von Datenflüssen in der API](../monitor.md)
 
 ## Nächste Schritte
 

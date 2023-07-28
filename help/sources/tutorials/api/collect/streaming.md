@@ -5,10 +5,10 @@ title: Erstellen eines Streaming-Datenflusses für Rohdaten mithilfe der Flow Se
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Streaming-Daten und deren Einbindung in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1098'
-ht-degree: 55%
+source-wordcount: '1124'
+ht-degree: 54%
 
 ---
 
@@ -246,9 +246,9 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `connectionSpec.id` | Die Verbindungsspezifikations-ID, die für die Verbindung mit der [!DNL Data Lake]. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Das angegebene Format der Daten, die Sie an [!DNL Data Lake]. |
-| `params.dataSetId` | Die ID des Zieldatensatzes, der im vorherigen Schritt abgerufen wurde. |
+| `data.format` | Das angegebene Format der Daten, die Sie an Data Lake übermitteln. |
+| `params.dataSetId` | Die Kennung des im vorherigen Schritt generierten Zieldatensatzes. **Hinweis**: Sie müssen beim Erstellen einer Zielverbindung eine gültige Datensatz-ID angeben. Eine ungültige Datensatz-ID führt zu einem Fehler. |
+| `connectionSpec.id` | Die Verbindungsspezifikations-ID, die für die Verbindung mit dem Data Lake verwendet wird. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Antwort**
 
@@ -345,7 +345,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Datenflug-Spezifikationen zurück. Die Datenflug-Spezifikations-ID, die Sie abrufen müssen, um einen Datenfluss mit einem der folgenden Elemente zu erstellen [!DNL Amazon Kinesis], [!DNL Azure Event Hubs]oder  [!DNL Google PubSub], ist `d69717ba-71b4-4313-b654-49f9cf126d7a`.
+Eine erfolgreiche Antwort gibt eine Liste von Datenflug-Spezifikationen zurück. Die Datenflug-Spezifikations-ID, die Sie abrufen müssen, um einen Datenfluss mit einem der folgenden Elemente zu erstellen: [!DNL Amazon Kinesis], [!DNL Azure Event Hubs]oder  [!DNL Google PubSub], ist `d69717ba-71b4-4313-b654-49f9cf126d7a`.
 
 ```json
 {
