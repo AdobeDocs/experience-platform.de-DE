@@ -3,7 +3,7 @@ title: Zielgruppen-Dashboard Kunden-KI-Widgets
 description: Erfahren Sie, wie Customer AI wichtige Einblicke in Abwanderung oder Tendenz zu den Echtzeit-Kundenprofil-Zielgruppen Ihres Unternehmens bietet.
 hide: true
 hidefromtoc: true
-source-git-commit: 162ef470751b9fb252658cff4b43595ddb7fe5d5
+source-git-commit: 74dcb35b389a962a5238c1fd5ef1370a76bdd57e
 workflow-type: tm+mt
 source-wordcount: '838'
 ht-degree: 2%
@@ -23,7 +23,7 @@ THe links when required
 ## [!UICONTROL Customer AI-Verteilung von Bewertungen] {#customer-ai-distribution-of-scores}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_audiences_distributionOfScores"
+>id="platform_dashboards_segments_distributionOfScores"
 >title="Verteilung der Punktzahl"
 >abstract="Dieses Widget visualisiert die Verteilung der Gesamtanzahl der Profile anhand ihrer Tendenzwerte in fünfprozentigen Schritten. Die Verteilung der Profilanzahl wird durch das AI-Modell und die ausgewählte Zusammenführungsrichtlinie bestimmt. Sie können das KI-Modell im Dropdown-Menü unter dem Widget-Titel ändern."
 
@@ -52,7 +52,7 @@ Weitere Informationen zu Customer AI finden Sie im [Leitfaden zur Benutzeroberfl
 ## [!UICONTROL Customer AI-Bewertungszusammenfassung] {#customer-ai-scoring-summary}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_audiences_scoringSummary"
+>id="platform_dashboards_segments_scoringSummary"
 >title="Bewertungszusammenfassung"
 >abstract="Dieses Widget zeigt die Gesamtzahl der bewerteten Profile und kategorisiert sie in Behälter mit hoher, mittlerer und niedriger Neigung. Das Ringdiagramm zeigt die proportionale Zusammensetzung der Gesamtprofile über eine hohe, mittlere und niedrige Tendenz hinweg."
 
