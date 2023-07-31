@@ -1,8 +1,9 @@
 ---
 title: LiveRamp - Onboarding-Verbindung
 description: Erfahren Sie, wie Sie mit dem LiveRamp-Connector Zielgruppen von Adobe Real-time Customer Data Platform in LiveRamp Connect integrieren können.
+last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: b9100d5a0f5901a51b183cda49ac9591d74f2e2a
+source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
 workflow-type: tm+mt
 source-wordcount: '1868'
 ht-degree: 70%

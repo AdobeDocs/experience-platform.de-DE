@@ -2,19 +2,16 @@
 description: Erfahren Sie, wie Sie beim Aktivieren von Daten für dateibasierte Ziele Dateiformatierungsoptionen konfigurieren
 title: (Beta) Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: 3b5f4abd516259402e9b3c4cfbcc17e32f18b6f5
 workflow-type: tm+mt
-source-wordcount: '1226'
-ht-degree: 53%
+source-wordcount: '1190'
+ht-degree: 52%
 
 ---
 
 # (Beta) Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele
 
 >[!IMPORTANT]
->
->Die Funktionalität **[!UICONTROL Dateiformatierungsoptionen]** in Adobe Experience Platform ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalitäten können sich ändern.
->Wenden Sie sich an den Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion zu erhalten.
 > 
 >Die in diesem Dokument beschriebenen Dateiformatierungsoptionen sind derzeit nur für CSV-Dateien verfügbar.
 
@@ -29,13 +26,13 @@ Mithilfe der Experience Platform-Benutzeroberfläche können Sie verschiedene Da
 
 ## Konfiguration der Dateiformatierung für CSV-Dateien {#file-configuration}
 
-Um die Dateiformatierungsoptionen anzuzeigen, starten Sie die [Verbindung zum Ziel herstellen](/help/destinations/ui/connect-destination.md) Arbeitsablauf. Auswählen **Datentyp: Segmente** und **Dateityp: CSV** , um die für die exportierte Datei verfügbaren Dateiformatierungseinstellungen anzuzeigen `CSV` Dateien.
+Starten Sie die [Verbindung zum Ziel](/help/destinations/ui/connect-destination.md) Arbeitsablauf. Auswählen **Datentyp: Segmente** und **Dateityp: CSV** , um die für die exportierte Datei verfügbaren Dateiformatierungseinstellungen anzuzeigen `CSV` -Dateien.
 
 >[!IMPORTANT]
 >
 >Für das Ziel, mit dem Sie eine Verbindung herstellen, stehen möglicherweise nicht alle diese Optionen zur Verfügung. Der Zielentwickler kann bestimmen, welche Dateiformatierungsoptionen am Ziel unterstützt werden sollen. Der Zielentwickler kann bestimmen, welche Optionen beim Herstellen einer Verbindung mit dem Ziel verfügbar sind. Erforderliche Optionen sind in der Experience Platform-Benutzeroberfläche mit einem Sternchen gekennzeichnet.
 > 
->Die neuen Cloud-Speicher-Ziele - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(Beta) Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(Beta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - unterstützt derzeit nur die sechs unten hervorgehobenen CSV-Optionen.
+>Die von der Adobe erstellten Cloud-Speicher-Ziele - [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - unterstützt derzeit nur die sechs unten hervorgehobenen CSV-Optionen.
 
 ![Abbildung mit einigen der verfügbaren Dateiformatierungsoptionen.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
@@ -93,14 +90,14 @@ Zeigen Sie die folgenden Beispiele des Inhalts aus exportierten CSV-Dateien mit 
 Verwenden Sie diese Option, um ein einzelnes Zeichen zum Maskieren von Anführungszeichen in einem bereits zitierten Wert festzulegen. Diese Option ist beispielsweise nützlich, wenn Sie eine Zeichenfolge in doppelten Anführungszeichen setzen, wobei ein Teil der Zeichenfolge bereits in doppelten Anführungszeichen gesetzt ist. Diese Option bestimmt, durch welches Zeichen die inneren doppelten Anführungszeichen ersetzt werden sollen. Verfügbare Optionen sind:
 
 * Abseitiger Schrägstrich `(\)`
-* Einfaches Angebot `(')`
+* Einfaches Anführungszeichen `(')`
 
 #### Beispiele
 
 Zeigen Sie die folgenden Beispiele des Inhalts aus exportierten CSV-Dateien mit jeder Auswahl in der Benutzeroberfläche an.
 
 * Beispielausgabe mit **[!UICONTROL Abseitiger Schrägstrich`(\)`]** selected: `"Test,\"John\",LastName"`
-* Beispielausgabe mit **[!UICONTROL Einfaches Angebot`(')`]** selected: `"Test,'"John'",LastName"`
+* Beispielausgabe mit **[!UICONTROL Einfaches Anführungszeichen`(')`]** selected: `"Test,'"John'",LastName"`
 
 ### Ausgabe leerer Werte {#empty-value-output}
 
@@ -144,7 +141,7 @@ Verwenden Sie dieses Steuerelement, um die Zeichenfolgendarstellung eines Nullwe
 
 Zeigen Sie die folgenden Beispiele des Inhalts aus exportierten CSV-Dateien mit jeder Auswahl in der Benutzeroberfläche an.
 
-* Beispielausgabe mit **[!UICONTROL null]** selected: `male,NULL,TestLastName`. In diesem Fall erfolgt keine Umwandlung und die CSV-Datei enthält den Nullwert.
+* Beispielausgabe mit **[!UICONTROL null]** selected: `male,NULL,TestLastName`. In diesem Fall erfolgt keine Transformation und die CSV-Datei enthält den Nullwert.
 * Beispielausgabe mit **&quot;&quot;** selected: `male,"",TestLastName`. In diesem Fall ersetzt die Experience Platform den Nullwert durch doppelte Anführungszeichen um eine leere Zeichenfolge.
 * Beispielausgabe mit **[!UICONTROL Leere Zeichenfolge]** selected: `male,,TestLastName`. In diesem Fall ersetzt die Experience Platform den Nullwert durch eine leere Zeichenfolge (ohne doppelte Anführungszeichen).
 
