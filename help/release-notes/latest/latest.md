@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise Juli 2023 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: dbd287087d04b10f79c8b6ae441371181d806739
 workflow-type: tm+mt
-source-wordcount: '1297'
-ht-degree: 38%
+source-wordcount: '1365'
+ht-degree: 39%
 
 ---
 
@@ -17,6 +17,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [Katalog-Service](#catalog-service)
 - [Datenerfassung](#data-collection)
+- [Datenvorbereitung](#data-prep)
 - [Ziele](#destinations)
 - [Abfrage-Service](#query-service)
 - [Segmentierungs-Service](#segmentation)
@@ -48,20 +49,20 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 {style="table-layout:auto"}
 
 Weitere Informationen zur Datenerfassung finden Sie im [Datenerfassungen - Übersicht](../../tags/home.md).
-<!-- 
-## Data Prep {#data-prep}
 
-Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
+## Datenvorbereitung {#data-prep}
 
-**New or updated features**
+Die Datenvorbereitung ermöglicht es Dateningenieurinnen und -ingenieuren, Daten dem Experience-Datenmodell (XDM) zuzuordnen, umzuformen und zu validieren.
 
-| Feature | Description |
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
 | --- | --- |
-| New mapper functions | You can now use the following functions when mapping objects in Data Prep: <ul><li>`map_get_values`</li><li>`map_has_keys`</li><li>`add_to_map`</li></ul> For more information on these functions, read the [Data Prep functions guide](../../data-prep/functions.md#hierarchies---objects). |
+| Neue Zuordnungsfunktionen | Sie können jetzt die folgenden Funktionen beim Zuordnen von Objekten in der Datenvorbereitung verwenden: <ul><li>`map_get_values`</li><li>`map_has_keys`</li><li>`add_to_map`</li></ul> Weitere Informationen zu diesen Funktionen finden Sie im Abschnitt [Handbuch zu Datenvorbereitung-Funktionen](../../data-prep/functions.md#hierarchies---objects). |
 
 {style="table-layout:auto"}
 
-For more information on Data Prep, please read the [Data Prep overview](../../data-prep/home.md). -->
+Weitere Informationen zur Datenvorbereitung finden Sie in der [Übersicht zur Datenvorbereitung](../../data-prep/home.md).
 
 ## Ziele {#destinations}
 

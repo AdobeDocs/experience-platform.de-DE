@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Zuordnungsfunktionen für Datenvorbereitung
 description: In diesem Dokument werden die mit der Datenvorbereitung verwendeten Zuordnungsfunktionen vorgestellt.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 33f1265820b4bf60fbdec81283a975fbb1ddd175
+source-git-commit: dbd287087d04b10f79c8b6ae441371181d806739
 workflow-type: tm+mt
-source-wordcount: '4916'
+source-wordcount: '5221'
 ht-degree: 7%
 
 ---
@@ -148,9 +148,9 @@ In den folgenden Tabellen sind alle unterstützten Zuordnungsfunktionen aufgefü
 | nullify | Legt den Wert des Attributs auf `null`. Dies sollte verwendet werden, wenn Sie das Feld nicht in das Zielschema kopieren möchten. | | nullify() | nullify() | `null` |
 | get_keys | Analysiert die Schlüssel/Wert-Paare und gibt alle Schlüssel zurück. | <ul><li>OBJEKT: **Erforderlich** Das Objekt, aus dem die Schlüssel extrahiert werden.</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;: &quot;Pride and Prejustice&quot;, &quot;book2&quot;: &quot;1984&quot;}) | `["book1", "book2"]` |
 | get_values | Analysiert die Schlüssel-Wert-Paare und gibt den Wert der Zeichenfolge basierend auf dem angegebenen Schlüssel zurück. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, die Sie analysieren möchten.</li><li>SCHLÜSSEL: **Erforderlich** Der Schlüssel, für den der Wert extrahiert werden muss.</li><li>VALUE_DELIMITER: **Erforderlich** Das Trennzeichen, das das Feld und den Wert trennt. Wenn eine `null` oder eine leere Zeichenfolge angegeben wird, lautet dieser Wert `:`.</li><li>FIELD_DELIMITER: *Optional* Das Trennzeichen, das Feld- und Wertpaare trennt. Wenn eine `null` oder eine leere Zeichenfolge angegeben wird, lautet dieser Wert `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena , phone - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | John |
-<!-- | map_get_values | Takes a map and a key input. If the input is a single key, then the function returns the value associated with that key. If the input is a string array, then the function returns all values corresponding to the keys provided. If the incoming map has duplicate keys, the return value must de-duplicate the keys and return unique values. | <ul><li>MAP: **Required** The input map data.</li><li>KEY:  **Required** The key can be a single string or a string array. If any other primitive type (data / number) is provided, then it is treated as a string.</li></ul> | get_values(MAP, KEY) | Please see the [appendix](#map_get_values) for a code sample. | |
-| map_has_keys | If one or more input keys are provided, then the function returns true. If a string array is provided as input, then the function returns true on the first key that is found. | <ul><li>MAP:  **Required** The input map data</li><li>KEY:  **Required** The key can be a single string or a string array. If any other primitive type (data / number) is provided, then it is treated as a string.</li></ul> | map_has_keys(MAP, KEY) | Please see the [appendix](#map_has_keys) for a code sample. | |
-| add_to_map | Accepts at least two inputs. Any number of maps can be provided as inputs. Data Prep returns a single map that has all key-value pairs from all the inputs. If one or more keys are repeated (in the same map or across maps), Data Prep de-duplicates the keys so that the first key-value pair persists in the order that they were passed in the input. | MAP: **Required** The input map data. | add_to_map(MAP 1, MAP 2, MAP 3, ...) | Please see the [appendix](#add_to_map) for a code sample. | | -->
+| map_get_values | Nimmt eine Zuordnung und eine Schlüsseleingabe. Wenn die Eingabe ein einzelner Schlüssel ist, gibt die Funktion den mit diesem Schlüssel verknüpften Wert zurück. Wenn die Eingabe ein Zeichenfolgen-Array ist, gibt die Funktion alle Werte zurück, die den bereitgestellten Schlüsseln entsprechen. Wenn die eingehende Zuordnung doppelte Schlüssel enthält, muss der Rückgabewert die Schlüssel deduplizieren und eindeutige Werte zurückgeben. | <ul><li>MAP: **Erforderlich** Die Eingabemaps.</li><li>SCHLÜSSEL:  **Erforderlich** Der Schlüssel kann eine einzelne Zeichenfolge oder ein Zeichenfolgen-Array sein. Wenn ein anderer primitiver Typ (Daten/Zahl) angegeben wird, wird er als Zeichenfolge behandelt.</li></ul> | get_values(MAP, KEY) | Lesen Sie hierzu die [Anhang](#map_get_values) für ein Codebeispiel. | |
+| map_has_keys | Wenn ein oder mehrere Eingabeschlüssel angegeben sind, gibt die Funktion &quot;true&quot;zurück. Wenn ein Zeichenfolgen-Array als Eingabe bereitgestellt wird, gibt die Funktion beim ersten gefundenen Schlüssel &quot;true&quot;zurück. | <ul><li>MAP:  **Erforderlich** Die Eingabemap-Daten</li><li>SCHLÜSSEL:  **Erforderlich** Der Schlüssel kann eine einzelne Zeichenfolge oder ein Zeichenfolgen-Array sein. Wenn ein anderer primitiver Typ (Daten/Zahl) angegeben wird, wird er als Zeichenfolge behandelt.</li></ul> | map_has_keys(MAP, KEY) | Lesen Sie hierzu die [Anhang](#map_has_keys) für ein Codebeispiel. | |
+| add_to_map | akzeptiert mindestens zwei Eingaben. Eine beliebige Anzahl von Karten kann als Eingaben bereitgestellt werden. Data Prep gibt eine einzelne Zuordnung zurück, die alle Schlüssel-Wert-Paare aus allen Eingaben enthält. Wenn ein oder mehrere Schlüssel wiederholt werden (in derselben Zuordnung oder über mehrere Maps hinweg), dedupliziert Data Prep die Schlüssel so, dass das erste Schlüssel-Wert-Paar in der Reihenfolge beibehalten wird, in der sie in der Eingabe übergeben wurden. | MAP: **Erforderlich** Die Eingabemaps. | add_to_map(MAP 1, MAP 2, MAP 3, ...) | Lesen Sie hierzu die [Anhang](#add_to_map) für ein Codebeispiel. | |
 
 {style="table-layout:auto"}
 
@@ -381,12 +381,12 @@ Die nachstehende Tabelle enthält eine Liste der Gerätefeldwerte und der zugeh�
 | Hacker | Dieser Gerätewert wird verwendet, falls Skripterstellung im `useragent` Zeichenfolge. |
 
 {style="table-layout:auto"}
-<!-- 
-### Code samples {#code-samples}
+
+### Code-Beispiele {#code-samples}
 
 #### map_get_values {#map-get-values}
 
-+++Select to view example
++++Auswählen zum Anzeigen des Beispiels
 
 ```json
  example = "map_get_values(book_details,\"author\") where input is : {\n" +
@@ -404,7 +404,7 @@ Die nachstehende Tabelle enthält eine Liste der Gerätefeldwerte und der zugeh�
 
 #### map_has_keys {#map_has_keys}
 
-+++Select to view example
++++Auswählen zum Anzeigen des Beispiels
 
 ```json
  example = "map_has_keys(book_details,\"author\")where input is : {\n" +
@@ -422,7 +422,7 @@ Die nachstehende Tabelle enthält eine Liste der Gerätefeldwerte und der zugeh�
 
 #### add_to_map {#add_to_map}
 
-+++Select to view example
++++Auswählen zum Anzeigen des Beispiels
 
 ```json
 example = "add_to_map(book_details, book_details2) where input is {\n" +
@@ -454,4 +454,4 @@ example = "add_to_map(book_details, book_details2) where input is {\n" +
       returns = "A new map with all elements from map and addends"
 ```
 
-+++ -->
++++
