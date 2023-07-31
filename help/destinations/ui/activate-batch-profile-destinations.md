@@ -4,15 +4,19 @@ title: Aktivieren von Zielgruppen für Batch-Profil-Export-Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppen aktivieren können, indem Sie sie an profilbasierte Batch-Ziele senden.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 1e6cdbaa12c89dc678232245a9544bdfa81aebcf
+source-git-commit: d7264d94a03f0ba19da90559b156ecaace0d8f95
 workflow-type: tm+mt
-source-wordcount: '3759'
-ht-degree: 66%
+source-wordcount: '3673'
+ht-degree: 64%
 
 ---
 
 
 # Aktivieren von Zielgruppen für Batch-Profil-Export-Ziele
+
+>[!IMPORTANT]
+> 
+> Die auf der Seite beschriebene Funktion steht Kunden noch nicht allgemein zur Verfügung. Diese Seite ist derzeit für Adobe-interne Teams gedacht, um vorab über die kommende Funktion zu erfahren. Bitte geben Sie nicht außerhalb von Adobe frei, bis diese Anmerkung entfernt wurde.
 
 >[!IMPORTANT]
 > 
@@ -122,10 +126,6 @@ Verwenden Sie die Option **[!UICONTROL Geplant]**, damit der Aktivierungsvorgang
 
    ![Abbildung mit hervorgehobener Option „Geplant“ im Aktivierungsfluss für Batch-Ziele und Anzeige der Zeitauswahl](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
-   >[!IMPORTANT]
-   >
-   >Aufgrund der Art und Weise, wie interne Experience Platform-Prozesse konfiguriert werden, enthält der erste inkrementelle oder vollständige Dateiexport möglicherweise nicht alle Aufstockungsdaten. <br> <br> Um den vollständigen und aktuellsten Datenexport für die Aufstockung sowohl für vollständige als auch für inkrementelle Dateien sicherzustellen, empfiehlt Adobe, die erste Dateiexportzeit nach 12:00 Uhr GMT des folgenden Tages festzulegen. Diese Einschränkung wird in zukünftigen Versionen behoben.
-
 1. Verwenden Sie den **[!UICONTROL Datumsselektor]**, um den Tag oder das Intervall auszuwählen, an dem der Export stattfinden soll. Für tägliche Exporte empfiehlt es sich, Ihr Start- und Enddatum so festzulegen, dass es der Dauer Ihrer Kampagnen auf Ihren nachgelagerten Plattformen entspricht.
 
    >[!IMPORTANT]
@@ -149,11 +149,7 @@ Auswählen **[!UICONTROL Inkrementelle Dateien exportieren]** um einen Export Tr
    * **[!UICONTROL Täglich]**: plant inkrementelle Dateiexporte einmal täglich zum angegebenen Zeitpunkt.
    * **[!UICONTROL Stündlich]**: plant inkrementelle Dateiexporte alle 3, 6, 8 oder 12 Stunden.
 
-1. Verwenden Sie den **[!UICONTROL Zeitselektor]** zur Auswahl der Tageszeit im [!DNL UTC]-Format, zu der der Export erfolgen soll.
-
-   >[!IMPORTANT]
-   >
-   >Aufgrund der Art und Weise, wie interne Experience Platform-Prozesse konfiguriert werden, enthält der erste inkrementelle oder vollständige Dateiexport möglicherweise nicht alle Aufstockungsdaten. <br> <br> Um den vollständigen und aktuellsten Datenexport für die Aufstockung sowohl für vollständige als auch für inkrementelle Dateien sicherzustellen, empfiehlt Adobe, die erste Dateiexportzeit nach 12:00 Uhr GMT des folgenden Tages festzulegen. Diese Einschränkung wird in zukünftigen Versionen behoben.
+1. Verwenden Sie den **[!UICONTROL Zeitselektor]** zur Auswahl der Tageszeit im Format [!DNL UTC], zu der der Export erfolgen soll.
 
 1. Verwenden Sie den **[!UICONTROL Datumsselektor]**, um das Intervall auszuwählen, in dem der Export stattfinden soll. Es empfiehlt sich, Ihr Start- und Enddatum so festzulegen, dass es der Dauer Ihrer Kampagnen auf Ihren nachgelagerten Plattformen entspricht.
 
