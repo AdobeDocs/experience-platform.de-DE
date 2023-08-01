@@ -4,10 +4,10 @@ title: Dashboard-Anleitung für Zielgruppen
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu Zielgruppen anzeigen können, die Ihre Organisation erstellt hat.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
 workflow-type: tm+mt
-source-wordcount: '2098'
-ht-degree: 50%
+source-wordcount: '2232'
+ht-degree: 48%
 
 ---
 
@@ -69,9 +69,23 @@ Um eine andere Zielgruppe auszuwählen, wählen Sie das Dropdown-Menü neben dem
 
 Die [!UICONTROL Zielgruppen] Das Dashboard besteht aus Widgets, die schreibgeschützte Metriken sind und wichtige Informationen zu Ihrer ausgewählten Zielgruppe enthalten.
 
-Datum und Uhrzeit der letzten Momentaufnahme werden oben im [!UICONTROL Übersicht] neben dem Zielgruppen-Dropdown-Menü. Alle Widget-Daten sind zum Stand dieses Datums und dieser Uhrzeit korrekt. Der Zeitstempel der Momentaufnahme wird im UTC-Format angegeben, nicht in der Zeitzone der jeweiligen Person oder Organisation.
+Datum und Uhrzeit der letzten Momentaufnahme werden oben im [!UICONTROL Übersicht] neben dem Dropdown-Menü &quot;Zielgruppe&quot;ein. Alle Widget-Daten sind zum Stand dieses Datums und dieser Uhrzeit korrekt. Der Zeitstempel der Momentaufnahme wird im UTC-Format angegeben, nicht in der Zeitzone der jeweiligen Person oder Organisation.
 
 ![Die Registerkarte Übersicht über Zielgruppen mit einem markierten Widget-Zeitstempel.](../images/audiences/widget-timestamp.png)
+
+## Standard-Widgets {#default-widgets}
+
+Für alle neuen Instanzen von Adobe Experience Platform wird ein standardmäßiges Widget-Load-out bereitgestellt, in dem die neuesten verfügbaren Einblicke aus Ihren Daten hervorgehoben werden. Die folgenden Widgets werden von Anfang an in Ihrer Segmentansicht vorkonfiguriert. Ausführliche Informationen zum Zweck und zur Funktion der Widgets finden Sie in den jeweiligen Abschnitten.
+
+* [[!UICONTROL Audience-Größe]](#audience-size)
+* [[!UICONTROL Trend bei der Änderung der Audience-Größe]](#audience-size-change-trend)
+* [[!UICONTROL Identitätsüberschneidung]](#identity-overlap)
+* [[!UICONTROL Profile nach Identität]](#profiles-by-identity)
+
+>[!NOTE]
+>
+>Seit dem 26. Juli 2023 [!UICONTROL Profile], [!UICONTROL Zielgruppen], und [!UICONTROL Ziele] Die Übersichts-Dashboards wurden für alle Benutzer, die ihre Ansichten in den letzten sechs Monaten nicht geändert haben, auf ein neues standardmäßiges Widget-Load-out zurückgesetzt.
+>Weitere Informationen finden Sie in der Dokumentation unter [Profile](./profiles.md#default-widgets) und [Ziele](./destinations.md#default-widgets) Standard-Widget-Abschnitte für Details darüber, welche Widgets als Teil der standardmäßigen Widget-Ladevorgänge einbezogen werden. Sie können Ihre Dashboard-Widgets weiterhin wie bisher anpassen.
 
 ## Standard-Widgets {#standard-widgets}
 
@@ -174,7 +188,7 @@ Wählen Sie eine Zeile aus dem Bericht aus, um ein Venn-Diagramm der Überschnei
 
 ![Das Dialogfeld mit dem Bericht zur Zielgruppenüberschneidung mit einem Venn-Diagramm und einer hervorgehobenen Zeile.](../images/audiences/audience-overlap-report-dialog-venn.png)
 
-Auswählen **[!UICONTROL Schließen]** , um zur [!UICONTROL Zielgruppen] Dashboard.
+Auswählen **[!UICONTROL Schließen]** , um zu [!UICONTROL Zielgruppen] Dashboard.
 
 ### [!UICONTROL Identitätsüberschneidung] {#identity-overlap}
 
@@ -220,4 +234,4 @@ Mit diesem Widget können Sie auf einen Blick erkennen, wo und wann die Zielgrup
 
 ## Nächste Schritte
 
-Durch Befolgen dieses Dokuments sollten Sie jetzt in der Lage sein, die [!UICONTROL Zielgruppen] und wählen Sie eine Zielgruppe aus, die angezeigt werden soll. Sie sollten auch die Metriken verstehen, die in den verfügbaren Widgets angezeigt werden. Weitere Informationen zum Arbeiten mit Zielgruppen in der Benutzeroberfläche von Experience Platform finden Sie im Abschnitt [Handbuch zur Benutzeroberfläche des Segmentierungsdienstes](../../segmentation/ui/overview.md).
+Durch Befolgen dieses Dokuments sollten Sie jetzt die [!UICONTROL Zielgruppen] und wählen Sie eine Zielgruppe aus, die angezeigt werden soll. Sie sollten auch die Metriken verstehen, die in den verfügbaren Widgets angezeigt werden. Weiterführende Informationen zum Arbeiten mit Zielgruppen in der Benutzeroberfläche von Experience Platform finden Sie im Abschnitt [Handbuch zur Benutzeroberfläche des Segmentierungsdienstes](../../segmentation/ui/overview.md).

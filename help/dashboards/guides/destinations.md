@@ -4,10 +4,10 @@ title: Handbuch zum Ziele-Dashboard
 description: Adobe Experience Platform verfügt über ein Dashboard, in dem Sie wichtige Informationen über die aktiven Ziele Ihrer Organisation anzeigen können.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
 workflow-type: tm+mt
-source-wordcount: '3031'
-ht-degree: 65%
+source-wordcount: '3171'
+ht-degree: 63%
 
 ---
 
@@ -39,7 +39,7 @@ Datum und Uhrzeit des letzten Schnappschusses werden oben in der [!UICONTROL Üb
 
 ### Das [!UICONTROL Ziele]-Dashboard modifizieren {#modify}
 
-Wählen Sie **[!UICONTROL Dashboard modifzieren]** aus, um das Erscheinungsbild des Ziele-Dashboards zu ändern. Dadurch können Sie Widgets im Dashboard verschieben, hinzufügen und entfernen sowie auf die Widget-Bibliothek zugreifen. In der Widget-Bibliothek können Sie die verfügbaren Widgets durchsuchen und benutzerdefinierte Widgets für Ihre Organisation erstellen.
+Wählen Sie **[!UICONTROL Dashboard modifzieren]** aus, um das Erscheinungsbild des Ziele-Dashboards zu ändern. Änderungen am Dashboard gelten pro Benutzer und nicht für die gesamte Organisation. Sie können Widgets aus dem Dashboard verschieben, hinzufügen, ändern und entfernen und auf die Widget-Bibliothek zugreifen, um Ihr Dashboard anzupassen. In der Widget-Bibliothek können Sie die verfügbaren Widgets durchsuchen und benutzerdefinierte Widgets für Ihre Organisation erstellen.
 
 Weitere Informationen finden Sie in der Dokumentation [Dashboards modifzieren](../customize/modify.md) und [Widget-Bibliothek – Übersicht](../customize/widget-library.md).
 
@@ -51,6 +51,19 @@ Wählen Sie **[!UICONTROL Widget hinzufügen]** aus, um zur Widget-Bibliothek zu
 
 In der Widget-Bibliothek können Sie die Auswahl von Standard- und benutzerdefinierten Zielgruppen-Widgets durchsuchen. Informationen zum Hinzufügen von Widgets finden Sie in der Widget-Bibliothek-Dokumentation zum [Hinzufügen eines Widget](../customize/widget-library.md#add-widgets).
 
+## Standard-Widgets {#default-widgets}
+
+Für alle neuen Instanzen von Adobe Experience Platform wird ein standardmäßiges Widget-Load-out bereitgestellt, in dem die neuesten verfügbaren Einblicke aus Ihren Daten hervorgehoben werden. Die folgenden Widgets werden von Anfang an in Ihrer Segmentansicht vorkonfiguriert. Ausführliche Informationen zum Zweck und zur Funktion der Widgets finden Sie unten.
+
+* [[!UICONTROL Am häufigsten verwendete Ziele]](#most-used-destinations)
+* [[!UICONTROL Kürzlich erstellte Ziele]](#recently-created-destinations)
+* [[!UICONTROL Kürzlich aktivierte Segmente]](#recently-activated-segments)
+
+>[!NOTE]
+>
+>Seit dem 26. Juli 2023 [!UICONTROL Profile], [!UICONTROL Zielgruppen], und [!UICONTROL Ziele] Die Übersichts-Dashboards wurden für alle Benutzer, die ihre Ansichten in den letzten sechs Monaten nicht geändert haben, auf ein neues standardmäßiges Widget-Load-out zurückgesetzt.
+>Weitere Informationen finden Sie in der Dokumentation unter [Profile](./profiles.md#default-widgets) und [Zielgruppen](./audiences.md#default-widgets) Standard-Widget-Abschnitte für Details darüber, welche Widgets als Teil der standardmäßigen Widget-Ladevorgänge einbezogen werden. Sie können Ihre Dashboard-Widgets weiterhin wie bisher anpassen.
+
 ## Standard-Widgets {#standard-widgets}
 
 Adobe bietet mehrere Standard-Widgets, mit denen Sie verschiedene Metriken in Bezug auf Ihre Ziele visualisieren und die Vollständigkeit der für Ihre Datenanalyse verfügbaren Zielgruppen bewerten können. In der [!UICONTROL Widget-Bibliothek] können Sie auch benutzerdefinierte Widgets erstellen und für Ihre gesamte Organisation freigeben. Um mehr über das Erstellen benutzerdefinierter Widgets zu erfahren, lesen Sie zunächst den Abschnitt [Widget-Bibliothek – Übersicht](../customize/widget-library.md).
@@ -59,10 +72,10 @@ Adobe bietet mehrere Standard-Widgets, mit denen Sie verschiedene Metriken in Be
 
 Bevor Sie mit den Beschreibungen der Standard-Widgets fortfahren, sollten Sie mit den Definitionen der folgenden Schlüsselbegriffe vertraut sein, die in der Dokumentation verwendet werden:
 
-* **Segmentdefinition:** Eine Segmentdefinition ist eine **Regelsatz** zur Beschreibung der Hauptmerkmale oder des Verhaltens einer Zielgruppe verwendet werden. Diese Regeln enthalten Attribut- und Ereignisdaten, die die Profile als Teil einer Zielgruppe qualifizieren.
+* **Segmentdefinition:** Eine Segmentdefinition ist **Regelsatz** zur Beschreibung der Hauptmerkmale oder des Verhaltens einer Zielgruppe verwendet werden. Diese Regeln enthalten Attribut- und Ereignisdaten, die die Profile als Teil einer Zielgruppe qualifizieren.
 * **Zielgruppe**: Eine Gruppe von Personen, Konten, Haushalten oder anderen Entitäten, die gemeinsame Merkmale und Verhaltensweisen aufweisen.
-* **Zugeordnet/Zuordnung**: Beim Daten-Mapping werden Quelldatenfelder den zugehörigen Zielfeldern in einem Ziel zugeordnet.
-* **Identität**: Eine Identität ist eine Kennung, die einen einzelnen Kunden eindeutig darstellt, z. B. eine Cookie-ID, Geräte-ID oder E-Mail-ID.
+* **Zugeordnet/Zuordnung**: Bei der Datenzuordnung werden Quelldatenfelder mit verwandten Zielfeldern in einem Ziel verknüpft.
+* **Identität**: Eine Identität ist eine Kennung, die einen einzelnen Kunden eindeutig kennzeichnet, z. B. eine Cookie-ID, Geräte-ID oder E-Mail-ID.
 * **Aktivieren**: Activate ist die Aktion, die ein Benutzer durchführt, um eine oder mehrere Zielgruppen einem Ziel wie Oracle Eloqua, Google oder Salesforce-Marketing Cloud zuzuordnen.
 
 Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen Sie den Namen eines Widgets aus der folgenden Liste aus:
@@ -177,7 +190,7 @@ Das Widget **[!UICONTROL Entwicklung der Zielgruppengröße]** enthält oben rec
 >title="Nicht zugeordnete Zielgruppen nach Identität"
 >abstract="Dieses Widget listet die fünf häufigsten **nicht zugeordneten** Zielgruppen auf, die nach absteigender Identitätsanzahl für ein bestimmtes Ziel und eine bestimmte Identität angeordnet werden. Die Filter-IDs, die im Dropdown-Menü des Widgets aufgeführt sind, ändern sich je nach dem Zielkonto, das oben auf der Übersichtsseite ausgewählt wurde."
 
-Die **[!UICONTROL Nicht zugeordnete Zielgruppen nach Identität]** Widget listet die fünf obersten **nicht zugeordnet** Zielgruppen, die nach absteigender Identitätsanzahl für ein bestimmtes Ziel und eine bestimmte Identität geordnet sind. Es werden Zielgruppen hervorgehoben, die basierend auf der ausgewählten ID dem ausgewählten Zielkonto am besten zugeordnet werden.
+Die **[!UICONTROL Nicht zugeordnete Zielgruppen nach Identität]** Widget listet die fünf obersten **nicht zugeordnet** Zielgruppen, die nach absteigender Identitätsanzahl für ein bestimmtes Ziel und eine bestimmte Identität geordnet sind. Es werden Zielgruppen hervorgehoben, die basierend auf der ausgewählten ID am besten dem ausgewählten Zielkonto zugeordnet werden können.
 
 Das Dropdown-Menü Ziel-ID filtert Ihre verfügbaren Zielgruppen. Die im Dropdown-Menü aufgelisteten Filter-IDs ändern sich je nach dem Zielkonto, das oben auf der Übersichtsseite ausgewählt wurde.
 
@@ -196,7 +209,7 @@ Weitere Informationen finden Sie im Abschnitt Voraussetzungen für das [verwende
 
 Dieses Widget listet die fünf am häufigsten **zugeordneten** Zielgruppen auf. Die Liste wird in absteigender Reihenfolge nach der Anzahl der in den Zielgruppen enthaltenen Quell-IDs sortiert. Die zu zählende Ziel-ID wird aus dem Dropdown-Menü unter dem Widget-Titel ausgewählt. Die Ziel-IDs, die über die Dropdown-Liste im Widget verfügbar sind, ändern sich entsprechend dem Zielkontofilter, der oben im Dashboard „Übersicht“ ausgewählt wird.
 
-![Zugeordnete Zielgruppen nach Identitäts-Widget.](../images/destinations/mapped-audiences-by-identity.png)
+![Zugeordnete Zielgruppen nach Identitäts-Widget](../images/destinations/mapped-audiences-by-identity.png)
 
 Die **[!UICONTROL Zugeordnete Zielgruppen nach Identität]** Widget hebt auf einen Blick die Wahrscheinlichkeit eines erfolgreichen Targetings von Profilmöglichkeiten für eine Kampagne innerhalb des ausgewählten Ziels hervor. Eine effiziente zielgerichtete Kampagne hängt nicht von der Anzahl der an das Ziel gesendeten Profile ab, sondern von der Anzahl der Quell-IDs, die mit großer Wahrscheinlichkeit den Ziel-IDs zugeordnet werden können, um nützliche und verwertbare Daten bereitzustellen.
 
@@ -209,7 +222,7 @@ Die **[!UICONTROL Zugeordnete Zielgruppen nach Identität]** Widget hebt auf ein
 
 Die **[!UICONTROL Häufige Zielgruppen]** Widget bietet eine Liste der fünf wichtigsten Zielgruppen, die für das am oberen Seitenrand ausgewählte Zielkonto aktiviert werden, sowie das im Widget-Dropdown-Menü ausgewählte Ziel. Die Liste der Zielgruppen wird nach dem Zeitpunkt ihrer Aktivierung geordnet. Die zuletzt aktivierte Zielgruppe wird oben angezeigt.
 
-Die [!UICONTROL ZIELGRUPPENGRÖSSE] gibt die Gesamtzahl der Profile jeder aufgelisteten Zielgruppe an.
+Die [!UICONTROL AUDIENCE SIZE] gibt die Gesamtzahl der Profile jeder aufgelisteten Zielgruppe an.
 
 ![Das Widget „Allgemeine Zielgruppen“.](../images/destinations/common-audiences.png)
 
