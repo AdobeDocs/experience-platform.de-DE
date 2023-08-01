@@ -3,9 +3,9 @@ keywords: Luftschiffsattribute;Luftschiffsziel
 title: Airship Attributes-Verbindung
 description: Nahtlose Weitergabe von Adobe-Zielgruppendaten an Airship als Zielgruppenattribute für das Targeting innerhalb von Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1022'
 ht-degree: 32%
 
 ---
@@ -18,11 +18,11 @@ ht-degree: 32%
 
 Diese Integration übergibt Adobe-Profildaten an [!DNL Airship] as [Attribute](https://docs.airship.com/guides/audience/attributes/) für Targeting oder Aktivierung.
 
-Weitere Informationen finden Sie unter [!DNL Airship], siehe [Dokumente für die Luftfahrt](https://docs.airship.com).
+Weitere Informationen zu [!DNL Airship], siehe [Dokumente für die Luftfahrt](https://docs.airship.com).
 
 >[!TIP]
 >
->Diese Dokumentationsseite wurde von der [!DNL Airship] Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an [support.airship.com](https://support.airship.com/).
+>Diese Ziel-Connector- und Dokumentationsseite wird von der [!DNL Airship] Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an [support.airship.com](https://support.airship.com/).
 
 ## Voraussetzungen {#prerequisites}
 
@@ -53,7 +53,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname) und/oder Identitäten, entsprechend Ihrer Feldzuordnung. |
+| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B. E-Mail-Adresse, Telefonnummer, Nachname) und/oder Identitäten entsprechend Ihrer Feldzuordnung. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform basierend auf der Zielgruppenbewertung aktualisiert wird, sendet der Connector das Update an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -66,13 +66,13 @@ Adobe Experience Platform-Profilattribute ähneln [!DNL Airship] -Attribute und 
 
 ## Bearer-Token generieren {#bearer-token}
 
-Navigieren Sie zu **[!UICONTROL Einstellungen]** &quot; **[!UICONTROL APIs und Integrationen]** im [Airship Dashboard](https://go.airship.com) und wählen Sie **[!UICONTROL Token]** im Menü links.
+Navigieren Sie zu **[!UICONTROL Einstellungen]** &quot; **[!UICONTROL APIs und Integrationen]** im [Airship Dashboard](https://go.airship.com) und wählen **[!UICONTROL Token]** im Menü links.
 
-Klicken **[!UICONTROL Token erstellen]**.
+Klicks **[!UICONTROL Token erstellen]**.
 
 Geben Sie einen benutzerfreundlichen Namen für Ihr Token ein, z. B. &quot;Adobe Attributes Destination&quot;und wählen Sie &quot;All Access&quot;für die  aus.
 
-Klicken **[!UICONTROL Token erstellen]** und speichern Sie die Angaben als vertraulich.
+Klicks **[!UICONTROL Token erstellen]** und speichern Sie die Angaben als vertraulich.
 
 ## Anwendungsfälle {#use-cases}
 
@@ -135,7 +135,7 @@ Bei Kennungen, die einem Kanal zugeordnet werden sollen, d. h. einem Gerät, mü
 
 >[!NOTE]
 >
->Verwenden Sie den benutzerfreundlichen Namen, der im [!DNL Airship] Dashboard bei der Auswahl des Zielfelds für Ihr Attribut-Mapping.
+>Verwenden Sie den benutzerfreundlichen Namen, der im [!DNL Airship] Dashboard bei der Auswahl des Zielfelds für Ihre Zuordnung.
 
 **Zuordnungsidentität**
 
@@ -153,7 +153,7 @@ Quellattribut auswählen:
 
 ![Quellfeld auswählen](../../assets/catalog/mobile-engagement/airship/select-source-attributes.png)
 
-Wählen Sie das Zielattribut aus:
+Zielattribut auswählen:
 
 ![Zielgruppenfeld auswählen](../../assets/catalog/mobile-engagement/airship/select-target-attribute.png)
 

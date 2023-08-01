@@ -3,9 +3,9 @@ title: Pega Profile Connector
 description: Verwenden Sie den Pega Profile Connector für Amazon S3 in Adobe Experience Platform, um vollständige oder inkrementelle Profildaten oder beides in den Amazon S3-Cloud-Speicher zu exportieren. In Pega Customer Decisioning Hub können Datenaufträge in Customer Profile Designer so geplant werden, dass Profildaten regelmäßig aus dem Amazon S3-Speicher importiert werden.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1084'
 ht-degree: 46%
 
 ---
@@ -20,7 +20,7 @@ Dieser Connector hilft beim Einrichten des anfänglichen Exports von Profildaten
 
 >[!IMPORTANT]
 >
->Diese Dokumentationsseite wurde von Pegasystems erstellt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an Pega [here](mailto:support@pega.com).
+>Diese Ziel-Connector- und Dokumentationsseite werden von Pegasystemen erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an Pega [here](mailto:support@pega.com).
 
 ## Anwendungsfälle
 
@@ -39,7 +39,7 @@ Ein Marketing-Experte möchte aktuelle Profildaten aus Adobe Experience Platform
 Bevor Sie dieses Ziel verwenden können, um Daten aus Adobe Experience Platform zu exportieren und Profile in [!DNL Pega Customer Decision Hub]müssen Sie die folgenden Voraussetzungen erfüllen:
 
 * Konfigurieren [!DNL Amazon S3] und den Ordnerpfad, der für den Export und Import von Datendateien verwendet werden soll.
-* Konfigurieren Sie die [!DNL Amazon S3] Zugriffsschlüssel und [!DNL Amazon S3] geheimer Schlüssel: In [!DNL Amazon S3], generieren Sie eine `access key - secret access key` , um Platform Zugriff auf Ihre [!DNL Amazon S3] -Konto.
+* Konfigurieren Sie die [!DNL Amazon S3] Zugriffsschlüssel und [!DNL Amazon S3] geheimer Schlüssel: in [!DNL Amazon S3], generieren Sie eine `access key - secret access key` , um Platform Zugriff auf Ihre [!DNL Amazon S3] -Konto.
 * So verbinden Sie Daten erfolgreich mit Ihren [!DNL Amazon S3] Speicherort speichern, erstellen Sie einen Benutzer für Identity and Access Management (IAM) für [!DNL Platform] in [!DNL Amazon S3] und Berechtigungen zuweisen, z. B. `s3:DeleteObject`, `s3:GetBucketLocation`, `s3:GetObject`, `s3:ListBucket`, `s3:PutObject`, `s3:ListMultipartUploadParts`
 * Stellen Sie sicher, dass [!DNL Pega Customer Decision Hub] -Instanz auf Version 8.8 oder höher aktualisiert.
 

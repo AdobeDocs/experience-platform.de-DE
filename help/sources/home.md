@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über Quell-Connectoren
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
+source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
 workflow-type: tm+mt
-source-wordcount: '1324'
-ht-degree: 84%
+source-wordcount: '1449'
+ht-degree: 77%
 
 ---
 
@@ -25,6 +25,12 @@ Mit Experience Platform können Sie Daten aus unterschiedlichen Quellen an zentr
 <div id="recs-overview-body-4"></div>
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
+
+## Von Adoben erstellte und von Partnern erstellte Quellen {#adobe-and-partner-built-sources}
+
+Einige der Connectoren im Experience Platform Sources-Katalog werden von Adobe erstellt und gepflegt, während andere von Partnerunternehmen mithilfe von [Quellen-SDK](/help/sources/sources-sdk/overview.md). Ein Hinweis oben auf der Dokumentationsseite für jeden von Partnern erstellten Connector ruft ab, ob eine Quelle vom Partner erstellt und gepflegt wird. Beispiel: die [Amazon S3-Connector](/help/sources/connectors/cloud-storage/s3.md) wird von Adobe erstellt, während die Variable [RainFocus-Connector](/help/sources/connectors/analytics/rainfocus.md) wird vom RainFocus-Team erstellt und gepflegt.
+
+Bei von Partnern erstellten und gepflegten Connectoren bedeutet dies, dass Probleme mit dem Connector möglicherweise vom Partner-Team behoben werden müssen (Kontaktmethode siehe Hinweis auf der Dokumentationsseite). Wenden Sie sich bei Problemen mit von Adobe erstellten und gepflegten Connectoren an Ihren Adobe-Support-Mitarbeiter oder an die Kundenunterstützung.
 
 ## Arten von Datenquellen
 

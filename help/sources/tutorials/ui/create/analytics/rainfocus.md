@@ -2,14 +2,14 @@
 title: RainFocus-Konto über die Benutzeroberfläche mit der Experience Platform verbinden
 description: Erfahren Sie, wie Sie Ihr RainFocus-Konto über die Benutzeroberfläche mit Experience Platform verbinden.
 badge: Beta
-source-git-commit: 81f157216546d65c00090059c13c85e8ae5878f1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '1007'
 ht-degree: 29%
 
 ---
 
-# Verbinden Sie Ihre [!DNL RainFocus] Konto für die Experience Platform über die Benutzeroberfläche
+# Verbinden Sie [!DNL RainFocus] Konto für die Experience Platform über die Benutzeroberfläche
 
 >[!NOTE]
 >
@@ -19,7 +19,7 @@ In diesem Tutorial erfahren Sie, wie Sie Ihre [!DNL RainFocus] Konto- und Stream
 
 >[!IMPORTANT]
 >
->Diese Dokumentationsseite wurde von der [!DNL RainFocus] Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an den Kundendienst<span>@rainfocus.com oder besuchen Sie die [[!DNL RainFocus] Hilfe-Center](https://help.rainfocus.com/hc/en-us)
+>Diese Quell-Connector- und Dokumentationsseite wird von der [!DNL RainFocus] Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an den Kundendienst<span>@rainfocus.com oder besuchen Sie die [[!DNL RainFocus] Hilfe-Center](https://help.rainfocus.com/hc/en-us)
 
 ## Erste Schritte
 
@@ -38,17 +38,17 @@ Bevor Sie Ihre [!DNL RainFocus] -Konto in Experience Platform verwenden, müssen
 * [Erstellen eines XDM-Schemas und Definieren des Identitätsfelds](../../../../connectors/analytics/rainfocus.md#create-an-xdm-schema-and-define-the-identity-field)
 * [Erstellen eines Integrationsprofils in RainFocus](../../../../connectors/analytics/rainfocus.md#create-an-integration-profile-in-rainfocus)
 
-Nachdem Sie die erforderliche Einrichtung abgeschlossen haben, können Sie mit den unten beschriebenen Schritten fortfahren.
+Nach Abschluss der erforderlichen Einrichtung können Sie mit den unten beschriebenen Schritten fortfahren.
 
 ## RainFocus-Konto mit Experience Platform verbinden
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** in der linken Navigationsleiste, um auf den Arbeitsbereich &quot;Quellen&quot;zuzugreifen. Die *[!UICONTROL Katalog]* zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** über die linke Navigationsleiste auf den Arbeitsbereich &quot;Quellen&quot;zugreifen. Die *[!UICONTROL Katalog]* zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
 Unter dem *[!UICONTROL Analytics]* category, select **[!UICONTROL RainFocus-Erlebnis]** und wählen Sie **[!UICONTROL Daten hinzufügen]**.
 
-![Der Quellkatalog zur Benutzeroberfläche von Experience Platform mit der ausgewählten Quelle RainFocus .](/help/sources/images/tutorials/create/rainfocus/rainfocus_sources-rf.png)
+![Der Quellkatalog zur Benutzeroberfläche der Experience Platform mit der ausgewählten Quelle RainFocus .](/help/sources/images/tutorials/create/rainfocus/rainfocus_sources-rf.png)
 
 ## Daten auswählen
 
@@ -81,7 +81,7 @@ Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 
 Es erfolgt der Schritt der Zuordnung, in dem Ihnen eine Schnittstelle zum Zuordnen der Quellfelder aus Ihrem Quellschema zu den entsprechenden XDM-Zielfeldern im Zielschema bereitgestellt wird.
 
-Experience Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Umfassende Schritte zur Verwendung der Mapper-Oberfläche und der berechneten Felder finden Sie im Abschnitt [Handbuch zur Datenvorbereitung-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
+Experience Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Umfassende Schritte zur Verwendung der Mapper-Oberfläche und der berechneten Felder finden Sie im Abschnitt [Handbuch zur Datenvorbereitung-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
 
 Nachdem die Quelldaten erfolgreich zugeordnet wurden, wählen Sie **[!UICONTROL Nächste]**.
 
@@ -102,7 +102,7 @@ Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **Beenden** und 
 
 Mit dem erstellten Streaming-Datenfluss können Sie jetzt Ihre Streaming-Endpunkt-URL abrufen. Dieser Endpunkt wird zum Abonnieren Ihres Webhooks verwendet, sodass Ihre Streaming-Quelle mit Experience Platform kommunizieren kann.
 
-Um Ihren Streaming-Endpunkt abzurufen, navigieren Sie zum *[!UICONTROL Datenfluss-Aktivität]* Seite des soeben erstellten Datenflusses und kopieren Sie den Endpunkt vom unteren Rand des *[!UICONTROL Eigenschaften]* Bereich.
+Um Ihren Streaming-Endpunkt abzurufen, navigieren Sie zum *[!UICONTROL Datenfluss-Aktivität]* Seite des soeben erstellten Datenflusses und kopieren Sie den Endpunkt vom unteren Rand des *[!UICONTROL Eigenschaften]* Bedienfeld.
 
 ![Die Seite mit der Datenfluss-Aktivität im Arbeitsbereich &quot;Quellen&quot;, wobei die Streaming-Endpunkt-URL hervorgehoben ist.](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-dataflow-api.png)
 
@@ -110,7 +110,7 @@ Um Ihren Streaming-Endpunkt abzurufen, navigieren Sie zum *[!UICONTROL Datenflus
 
 Sobald Ihr Datenfluss abgeschlossen ist und Sie Ihre Streaming-Endpunkt-URL abgerufen haben, können Sie jetzt die [!DNL Integration Profile] in [!DNL RainFocus].
 
-* Melden Sie sich bei der [[!DNL RainFocus] platform](https://app.rainfocus.com). Wählen Sie im primären Navigationsmenü die Option **[!DNL Libraries]** und **[!DNL Integration Profiles]**
+* Anmelden bei der [[!DNL RainFocus] platform](https://app.rainfocus.com). Wählen Sie im primären Navigationsmenü die Option **[!DNL Libraries]** und **[!DNL Integration Profiles]**
 * Öffnen Sie die [!DNL Integration Profile] die Sie zuvor als Teil der [Voraussetzungen](../../../../connectors/analytics/rainfocus.md#create-an-integration-profile-in-rainfocus).
 * Fügen Sie die **Dataflow-ID** und **Streaming-Endpunkt** aus dem Datenfluss in Experience Platform kopiert wurde, und wählen Sie **Speichern**
 

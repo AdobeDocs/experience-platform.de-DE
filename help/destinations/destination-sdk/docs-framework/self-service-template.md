@@ -1,10 +1,10 @@
 ---
-title: Vorlage für Dokumentations-Self-Service // Ersetzen Sie durch den Namen Ihres Ziels.
+title: Vorlage für Dokumentations-Self-Service // Ersetzen durch den Namen Ihres Ziels
 description: Verwenden Sie diese Vorlage, um eine öffentliche Dokumentation für Ihr Ziel im Adobe Experience Platform-Katalog zu erstellen. // Ersetzen Sie durch den Absatz im Abschnitt "Übersicht".
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1525'
+source-wordcount: '1530'
 ht-degree: 35%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 35%
 
 >[!IMPORTANT]
 >
->Diese Dokumentationsseite wurde von der *YourDestination* Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an *Fügen Sie einen Link oder eine E-Mail-Adresse ein, an die Sie zur Aktualisierung gelangen können, z. B. `support@YourDestination.com`.*
+>Diese Ziel-Connector- und Dokumentationsseite wird von der *YourDestination* Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an *Fügen Sie einen Link oder eine E-Mail-Adresse ein, an die Sie zur Aktualisierung gelangen können, beispielsweise `support@YourDestination.com`.*
 
 ## Anwendungsfälle {#use-cases}
 
@@ -116,7 +116,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Konto-ID]**: Ihre *YourDestination* Konto-ID.
+* **[!UICONTROL Konto-ID]**: Ihr *YourDestination* Konto-ID.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -136,7 +136,7 @@ Lesen [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppenexport-
 
 Lesen [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](/help/destinations/ui/activate-batch-profile-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
 
-Lesen [(Beta) Exportieren von Datensätzen](/help/destinations/ui/export-datasets.md) ausführliche Anweisungen zum Exportieren von Datensätzen an dieses Ziel.
+Lesen [(Beta) Datensätze exportieren](/help/destinations/ui/export-datasets.md) für ausführliche Anweisungen zum Exportieren von Datensätzen an dieses Ziel.
 
 ### Zuordnen von Attributen und Identitäten {#map}
 

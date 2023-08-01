@@ -3,9 +3,9 @@ keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Que
 title: Self-Service-Dokumentationsvorlage für die Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung von YOURSOURCE erstellen.
 exl-id: 6471c0a2-22e8-4133-a76f-ee3c5c669ef8
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '727'
 ht-degree: 22%
 
 ---
@@ -24,7 +24,7 @@ In diesem Tutorial werden Schritte zum Erstellen eines *YOURSOURCE* Quell-Connec
 
 >[!IMPORTANT]
 >
->Diese Dokumentationsseite wurde von der *YOURSOURCE* Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an *Link oder E-Mail-Adresse einfügen, an die Sie zur Aktualisierung gelangen können*.
+>Diese Quell-Connector- und Dokumentationsseite wird von der *YourSource* Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an *Link oder E-Mail-Adresse einfügen, an die Sie zur Aktualisierung gelangen können*.
 
 ## Voraussetzungen
 
@@ -47,7 +47,7 @@ Um eine Verbindung herzustellen *YOURSOURCE* in Platform angeben, müssen Sie We
 
 Weitere Informationen zu diesen Anmeldedaten finden Sie im Abschnitt *YOURSOURCE* Authentifizierungsdokumentation. *Fügen Sie hier einen Link zur Authentifizierungsdokumentation Ihrer Plattform hinzu.*.
 
-## Verbinden Sie Ihre *YOURSOURCE* account
+## Verbinden Sie *YOURSOURCE* account
 
 Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** in der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 

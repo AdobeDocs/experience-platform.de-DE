@@ -3,10 +3,10 @@ keywords: Ziele;Adobe Experience Platform;Plattform;Übersicht Ziele;Aktivieren 
 title: Ziele – Übersicht
 description: Ziele sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Ziele in Adobe Experience Platform nutzen, um bekannte und unbekannte Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 54165264364d7d53da2ff822b9ceb32157900b6a
+source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
 workflow-type: tm+mt
-source-wordcount: '801'
-ht-degree: 82%
+source-wordcount: '925'
+ht-degree: 71%
 
 ---
 
@@ -46,6 +46,12 @@ Mit den Steuerelementen im [Arbeitsbereich „Ziele“](./ui/destinations-worksp
 ## Zieltypen und Kategorien {#types-and-categories}
 
 Mit Experience Platform können Sie Daten für verschiedene Zieltypen aktivieren, um Ihren Aktivierungs-Anwendungsfällen gerecht zu werden. Die Ziele reichen von API-basierten Integrationen über Integrationen mit Dateiempfangssystemen bis hin zu Profilsuchzielen und mehr. Detaillierte Informationen zu allen verfügbaren Zielen finden Sie unter [Zieltypen und Kategorien – Übersicht](./destination-types.md).
+
+## Von Adoben erstellte und von Partnern erstellte Ziele {#adobe-and-partner-built-destinations}
+
+Einige der Connectoren im Zielkatalog der Experience Platform werden von Adobe erstellt und gepflegt, während andere von Partnerunternehmen erstellt und gepflegt werden, die [Destination SDK](/help/destinations/destination-sdk/overview.md). Ein Hinweis oben auf der Dokumentationsseite für jeden von Partnern erstellten Connector ruft ab, ob ein Ziel vom Partner erstellt und gepflegt wird. Beispiel: die [Amazon S3-Connector](/help/destinations/catalog/cloud-storage/amazon-s3.md) wird von Adobe erstellt, während die Variable [TikTok-Connector](/help/destinations/catalog/social/tiktok.md) wird vom TikTok-Team erstellt und gepflegt.
+
+Bei von Partnern erstellten und gepflegten Connectoren bedeutet dies, dass Probleme mit dem Connector möglicherweise vom Partner-Team behoben werden müssen (Kontaktmethode siehe Hinweis auf der Dokumentationsseite). Wenden Sie sich bei Problemen mit von Adobe erstellten und gepflegten Connectoren an Ihren Adobe-Support-Mitarbeiter oder an die Kundenunterstützung.
 
 ## Ziele und Zugriffssteuerungen {#access-controls}
 

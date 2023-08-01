@@ -2,9 +2,9 @@
 title: Pega Customer Decision Hub-Verbindung
 description: Verwenden Sie das Pega Customer Decisioning Hub-Ziel in Adobe Experience Platform, um Profilattribute und Zielgruppenmitgliedsdaten an Pega Customer Decisioning Hub zu senden, um die Entscheidungsfindung für nächstbeste Maßnahmen zu treffen.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: 9ccfbeb6ef36b10b8ecbfc25797c26980e7d1dcd
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1011'
 ht-degree: 25%
 
 ---
@@ -19,7 +19,7 @@ Profil-Zielgruppenmitgliedschaft aus Adobe Experience Platform beim Laden in [!D
 
 >[!IMPORTANT]
 >
->Diese Dokumentationsseite wurde von Pegasystems erstellt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an Pega [here](mailto:support@pega.com).
+>Diese Ziel-Connector- und Dokumentationsseite werden von Pegasystemen erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an Pega [here](mailto:support@pega.com).
 
 ## Anwendungsfälle
 
@@ -35,9 +35,9 @@ Ein Marketing-Experte möchte die Angebote für Kunden optimieren, die Newslette
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie mit diesem Ziel Daten aus Adobe Experience Platform exportieren können, müssen Sie die folgenden Voraussetzungen erfüllen in [!DNL Pega Customer Decision Hub]:
+Bevor Sie dieses Ziel zum Exportieren von Daten aus Adobe Experience Platform verwenden können, müssen Sie die folgenden Voraussetzungen erfüllen in [!DNL Pega Customer Decision Hub]:
 
-* Konfigurieren Sie die [Komponente zur Integration von Adobe Experience Platform-Profilen und Zielgruppen](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) in [!DNL Pega Customer Decision Hub] -Instanz.
+* Konfigurieren Sie die [Adobe Experience Platform-Profil- und Zielgruppenmitgliedsintegrationskomponente](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) in [!DNL Pega Customer Decision Hub] -Instanz.
 * Konfigurieren von OAuth 2.0 [Client-Registrierung mithilfe von Client-Anmeldeinformationen](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) Grant-Typ in Ihrer [!DNL Pega Customer Decision Hub] -Instanz.
 * Konfigurieren [Datenfluss bei Echtzeit-Ausführung](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) für die Adobe des Datenflusses zur Zielgruppenzugehörigkeit in Ihrer [!DNL Pega Customer Decision Hub] -Instanz.
 
@@ -75,8 +75,8 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 Füllen Sie die Felder unten aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]**:
 
 * **[!UICONTROL Zugriffstoken-URL]**: Die OAuth 2-Zugriffstoken-URL auf Ihrer [!DNL Pega Customer Decision Hub] -Instanz.
-* **[!UICONTROL Client-ID]**: OAuth 2 [!DNL client ID] die Sie in Ihrer [!DNL Pega Customer Decision Hub] -Instanz.
-* **[!UICONTROL Client Secret]**: OAuth 2 [!DNL client secret] die Sie in Ihrer [!DNL Pega Customer Decision Hub] -Instanz.
+* **[!UICONTROL Client-ID]**: Die OAuth 2 [!DNL client ID] die Sie in Ihrer [!DNL Pega Customer Decision Hub] -Instanz.
+* **[!UICONTROL Client Secret]**: Die OAuth 2 [!DNL client secret] die Sie in Ihrer [!DNL Pega Customer Decision Hub] -Instanz.
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
@@ -102,13 +102,13 @@ Siehe [Aktivieren von Zielgruppendaten für Streaming-Profil-Export-Ziele](../..
 
 Im Schritt [[!UICONTROL Attribute auswählen]](../../ui/activate-streaming-profile-destinations.md#select-attributes) empfiehlt Adobe, eine eindeutige Kennung aus Ihrem [Vereinigungsschema](../../../profile/home.md#profile-fragments-and-union-schemas) auszuwählen. Wählen Sie die eindeutige Kennung und alle anderen XDM-Felder aus, die Sie an das Ziel exportieren möchten.
 
-### Zuordnungsbeispiel: Aktivieren von Profilaktualisierungen in [!DNL Pega Customer Decision Hub] {#mapping-example}
+### Zuordnungsbeispiel: Profilaktualisierungen aktivieren in [!DNL Pega Customer Decision Hub] {#mapping-example}
 
 Nachfolgend finden Sie ein Beispiel für die korrekte Identitätszuordnung beim Export von Profilen in . [!DNL Pega Customer Decision Hub].
 
-Auswählen von Quellfeldern:
+Quellfelder auswählen:
 
-* Wählen Sie eine Kennung aus (z. B.: CustomerID) als Quellidentität, die ein Profil in Adobe Experience Platform eindeutig identifiziert und [!DNL Pega Customer Decision Hub].
+* Wählen Sie eine Kennung (z. B. CustomerID) als Quellidentität aus, die ein Profil in Adobe Experience Platform eindeutig identifiziert, und [!DNL Pega Customer Decision Hub].
 * Wählen Sie XDM-Quellprofilattributänderungen aus, die exportiert und aktualisiert werden müssen in [!DNL Pega Customer Decision Hub].
 
 Zielgruppenfelder auswählen:

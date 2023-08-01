@@ -3,9 +3,9 @@ title: TikTok-Verbindung
 description: Erstellen Sie auf TikTok benutzerdefinierte Zielgruppen mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. Diese Zielgruppen können von Personen sein, die Ihre Website besucht oder mit Ihrem Inhalt interagiert haben. Schnelles und sicheres Übertragen der gewünschten Zielgruppe von Adobe Experience Platform an TikTok mithilfe der Echtzeit-Integration von Adobe in TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '983'
 ht-degree: 42%
 
 ---
@@ -18,7 +18,7 @@ Erstellen Sie auf TikTok benutzerdefinierte Zielgruppen mit Ihren Daten für das
 
 >[!IMPORTANT]
 >
->Diese Dokumentationsseite wurde vom TikTok-Team erstellt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an [https://ads.tiktok.com/help/](https://ads.tiktok.com/help/).
+>Diese Ziel-Connector- und Dokumentationsseite werden vom TikTok-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an [https://ads.tiktok.com/help/](https://ads.tiktok.com/help/).
 
 ## Anwendungsfälle {#use-cases}
 
@@ -78,7 +78,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL TikTok Ads Manager-ID]**: Ihre [!DNL TikTok Ads Manager ID]. Sie können dies in der [!DNL TikTok Ads manager] -Konto.
+* **[!UICONTROL TikTok Ads Manager-ID]**: Ihr [!DNL TikTok Ads Manager ID]. Sie können dies in der [!DNL TikTok Ads manager] -Konto.
 
 ![TikTok Ads Manager-ID](/help/destinations/assets/catalog/social/tiktok/tiktok-ads-manager-ID.png "Bild der TikTok Ads Manager-Benutzeroberfläche, in dem gezeigt wird, wie die TikTok Ads Manager-ID abgerufen wird")
 
@@ -100,7 +100,7 @@ Lesen [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppenexport-
 
 Im Folgenden finden Sie ein Beispiel für die korrekte Identitätszuordnung beim Exportieren von Zielgruppen in TikTok Ads Manager.
 
-Auswählen von Quellfeldern:
+Quellfelder auswählen:
 
 * Wählen Sie eine Kennung aus (z. B.:` Email_LC_SHA256`) als Quellidentität, die ein Profil in Adobe Experience Platform eindeutig identifiziert und [!DNL TikTok Ads Manager].
 

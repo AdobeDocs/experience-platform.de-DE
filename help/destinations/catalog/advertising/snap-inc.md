@@ -2,9 +2,9 @@
 title: Verbindung Snap Inc
 description: Erfahren Sie, wie Sie eine Verbindung zur Snapchat Ads-Plattform herstellen und Ihre Zielgruppen aus Experience Platform exportieren.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '994'
 ht-degree: 25%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 25%
 
 >[!IMPORTANT]
 >
->Diese Dokumentationsseite wurde von der *Snap Inc* Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an *dev-support@snap.com*
+>Diese Ziel-Connector- und Dokumentationsseite wird von der *Snap Inc* Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an *dev-support@snap.com*
 
 ## Anwendungsfälle {#use-cases}
 
@@ -52,7 +52,7 @@ Alle an die *Snap Inc* Das Ziel muss im SHA-256-Format gehasht werden. Um Nur-Te
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| E-Mail-Adresse | SHA-256-Hash-E-Mail-Adresse | E-Mail-Adressen in das Zielidentitätsfeld zuordnen *emailAddress*. |
+| E-Mail-Adresse | SHA-256-Hashemail-Adresse | E-Mail-Adressen in das Zielidentitätsfeld zuordnen *emailAddress*. |
 | Telefonnummer | SHA-256 Hash-Telefonnummer | E-Mail-Adressen in das Zielidentitätsfeld zuordnen *phoneNumber*. |
 | GAID | SHA-256-Hash-Google Advertising ID | Zuordnen von Google Advertising-IDs zum Zielidentitätsfeld *gaid*. |
 | IDFA | SHA-256-Hash-Apple Advertising ID | Zuordnen von Apple Advertising-IDs zum Zielidentitätsfeld *idfa*. |
@@ -80,7 +80,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 Gehen Sie wie folgt vor, um sich beim Ziel zu authentifizieren:
 
-1. Suchen Sie die *Snap Inc* Ziel aus dem Zielkatalog von Adobe Experience Platform und wählen Sie **Einrichten**.
+1. Suchen Sie die *Snap Inc* Ziel aus dem Adobe Experience Platform-Zielkatalog auswählen **Einrichten**.
 2. Auswählen **[!UICONTROL Mit Ziel verbinden]**. Sie werden zum folgenden Bildschirm weitergeleitet:
    ![Authentifizierungsbildschirm 1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
 3. Geben Sie Ihre Snapchat-Anmeldedaten ein und wählen Sie **Anmelden**.
@@ -98,7 +98,7 @@ Füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Nächste
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Konto-ID]**: Die ID des Anzeigenkontos, die mit dem Anzeigenkonto verknüpft ist, in das Sie Ihre Zielgruppen importieren möchten. Weitere Informationen hierzu finden Sie unter [Diese Dokumentation zum Snapchat Business Help Center](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
+* **[!UICONTROL Konto-ID]**: Die ID des Anzeigenkontos, das mit dem Anzeigenkonto verknüpft ist, in das Sie Ihre Zielgruppen importieren möchten. Weitere Informationen hierzu finden Sie unter [Diese Dokumentation zum Snapchat Business Help Center](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
 
 >[!IMPORTANT]
 > 
@@ -122,7 +122,7 @@ Lesen [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppenexport-
 
 Nach der Aktivierung von Zielgruppen für die *Snap Inc* Ziel, können Sie die Zielgruppen im Anzeigenmanager der [**Zielgruppen** Abschnitt](https://businesshelp.snapchat.com/s/article/audience-sharing). Gehen Sie wie folgt vor, um zu diesem Abschnitt zu navigieren:
 
-1. Melden Sie sich bei der [Anzeigen-Manager ausrichten](https://ads.snapchat.com/)
+1. Anmelden bei der [Anzeigen-Manager ausrichten](https://ads.snapchat.com/)
 2. Auswählen **Zielgruppen** aus dem Pulldown-Menü in der oberen linken Ecke des Bildschirms. Sie sehen die Zielgruppen, die Sie in Adobe Experience Platform in der Zielgruppenbibliothek aktiviert haben:
 
 ![Zielgruppen](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)

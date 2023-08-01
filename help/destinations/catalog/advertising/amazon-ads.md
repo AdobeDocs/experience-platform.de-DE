@@ -3,10 +3,10 @@ title: Amazon Ads
 description: Amazon Ads bietet eine Reihe von Optionen, die Ihnen beim Erreichen Ihrer Werbeziele für Agenturen und/oder registrierte Verkäuferschaft, Anbieterschaft, Buchhändlerinnen und -händler, Entwickelnde von Apps oder Autorinnen bzw. Autoren von Kindle Direct Publishing (KDP) hilft. Die Amazon Ads-Integration mit Adobe Experience Platform bietet eine schlüsselfertige Integration in Amazon Ads-Produkte, einschließlich Amazon DSP (ADSP). Mit dem Amazon Ads-Ziel in Adobe Experience Platform können Benutzerinnen und Benutzer Advertiser-Zielgruppen für Targeting und Aktivierung im Amazon DSP definieren.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1399'
-ht-degree: 71%
+source-wordcount: '1404'
+ht-degree: 91%
 
 ---
 
@@ -20,7 +20,7 @@ Die Amazon Ads-Integration mit Adobe Experience Platform bietet eine schlüsself
 
 >[!IMPORTANT]
 >
->Diese Dokumentationsseite wurde vom *Amazon Ads*-Team erstellt. Dies ist derzeit ein Beta-Produkt, und die Funktionalität kann sich ändern. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an *`amc-support@amazon.com`.*
+>Diese Ziel-Connector- und Dokumentationsseite wird von der *Amazon Ads* Team. Dies ist derzeit ein Beta-Produkt, und die Funktionalität kann sich ändern. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an *`amc-support@amazon.com`.*
 
 ## Anwendungsfälle {#use-cases}
 
@@ -32,7 +32,7 @@ Durch diese Integration mit Amazon DSP können Werbetreibende von Amazon Ads Wer
 
 ## Voraussetzungen {#prerequisites}
 
-Um die Amazon Ads-Verbindung mit Adobe Experience Platform zu verwenden, müssen Benutzer zunächst Zugriff auf ein Amazon DSP Advertiser-Konto haben. Um diese Instanzen bereitzustellen, besuchen Sie die folgende Seite auf der Amazon Ads-Website:
+Um die Amazon Ads-Verbindung mit Adobe Experience Platform verwenden zu können, müssen Benutzerinnen und Benutzer zunächst Zugriff auf ein Amazon DSP Advertiser-Konto haben. Um diese Instanzen bereitzustellen, besuchen Sie die folgende Seite auf der Amazon Ads-Website:
 
 * [Erste Schritte mit Amazon DSP](https://advertising.amazon.com/solutions/products/amazon-dsp?ref_=a20m_us_hnav_p_dsp_adtech)
 
@@ -70,7 +70,7 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 
 Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
 
-Sie gelangen zur Amazon Ads-Verbindungsschnittstelle, über die Sie zunächst die Advertiser-Konten auswählen, mit denen Sie eine Verbindung herstellen möchten. Bei der Verbindung werden Sie mit einer neuen Verbindung zurück zu Adobe Experience Platform geleitet, wobei die ID des von Ihnen ausgewählten Advertiser-Kontos angegeben ist. Wählen Sie im Zielkonfigurationsbildschirm das entsprechende Advertiser-Konto aus, um fortzufahren.
+Sie gelangen zur Amazon Ads-Verbindungsschnittstelle, um dort zunächst die Advertiser-Konten auszuwählen, mit denen Sie eine Verbindung herstellen möchten. Bei Verbindungsherstellung werden Sie mit einer neuen Verbindung zurück zu Adobe Experience Platform geleitet, wobei die ID des von Ihnen ausgewählten Advertiser-Kontos angegeben ist. Wählen Sie im Zielkonfigurationsbildschirm das entsprechende Advertiser-Konto aus, um fortzufahren.
 
 * **[!UICONTROL Bearer-Token]**: Füllen Sie das Bearer-Token aus, um sich beim Ziel zu authentifizieren.
 
@@ -84,9 +84,9 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 >[!NOTE]
 >
->Nach dem Speichern der Zielkonfiguration können Sie die Amazon Ads Advertiser-ID nicht ändern, selbst wenn Sie sich über Ihr Amazon-Konto erneut authentifizieren. Um eine andere Amazon Ads Advertiser-ID zu verwenden, müssen Sie eine neue Zielverbindung erstellen.
+>Nach Speichern der Zielkonfiguration können Sie die Amazon Ads Advertiser-ID nicht ändern, selbst wenn Sie sich über Ihr Amazon-Konto erneut authentifizieren. Um eine andere Amazon Ads Advertiser-ID zu verwenden, müssen Sie eine neue Zielverbindung erstellen.
 
-* **[!UICONTROL Advertiser Region]**: Wählen Sie die gewünschte Region aus, in der Ihr Advertiser gehostet wird. Weitere Informationen zu den von den einzelnen Regionen unterstützten Marktplätzen finden Sie im [Dokumentation zu Amazon Ads](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
+* **[!UICONTROL Advertiser-Region]**: Wählen Sie die gewünschte Region aus, in der Ihr Advertiser gehostet wird. Weitere Informationen zu den von den einzelnen Regionen unterstützten Marktplätzen finden Sie in der [Amazon Ads-Dokumentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
 
 
@@ -116,7 +116,7 @@ Die Amazon Ads-Verbindung unterstützt Hash-E-Mail-Adressen und Hash-Telefonnumm
 * Um Hash-Telefonnummern zuzuordnen, wählen Sie den Identity-Namespace von `Phone_SHA256` als ein Quellfeld aus.
 * Um ungehashte E-Mail-Adressen oder Telefonnummern zuzuordnen, wählen Sie die entsprechenden Identity-Namespaces als Quellfelder aus und überprüfen Sie die Option `Apply Transformation`, damit Platform die Identitäten bei der Aktivierung hasht.
 
-Es wird dringend empfohlen, so viele Felder zuzuordnen, wie verfügbar sind. Wenn nur ein Quellattribut verfügbar ist, können Sie ein einzelnes Feld zuordnen. Das Amazon Ads-Ziel nutzt alle zugeordneten Felder zu Zuordnungszwecken, um höhere Übereinstimmungsraten zu erzielen, wenn mehr Felder bereitgestellt werden. Weitere Informationen zu den zulässigen IDs finden Sie auf der [Hilfeseite zu gehashten Zielgruppen von Amazon Ads](https://advertising.amazon.com/dsp/help/ss/de/audiences#GA6BC9BW52YFXBNE).
+Es wird dringend empfohlen, so viele Felder zuzuordnen, wie verfügbar sind. Wenn nur ein Quellattribut verfügbar ist, können Sie ein einzelnes Feld zuordnen. Das Amazon Ads-Ziel nutzt alle zugeordneten Felder für Zuordnungszwecke, sodass höhere Übereinstimmungsraten erzielt werden, wenn mehr Felder bereitgestellt werden. Weitere Informationen zu den zulässigen IDs finden Sie auf der [Hilfeseite zu gehashten Zielgruppen von Amazon Ads](https://advertising.amazon.com/dsp/help/ss/de/audiences#GA6BC9BW52YFXBNE).
 
 ## Exportierte Daten/Datenexport validieren {#exported-data}
 
@@ -124,7 +124,7 @@ Nach dem Hochladen Ihrer Zielgruppe können Sie mithilfe der folgenden Schritte 
 
 **Für Amazon DSP**
 
-Navigieren Sie zu Ihrer Advertiser-ID → „Zielgruppen“ → „Advertiser-Zielgruppen“. Wenn Ihre Zielgruppe erfolgreich erstellt wurde und die Mindestanzahl an Zielgruppenmitgliedern erreicht, wird der Status von `Active` angezeigt.  Weitere Informationen zur Größe und Reichweite Ihrer Zielgruppe finden Sie im Bedienfeld „Prognostizierte Reichweite“ auf der rechten Seite der Benutzeroberfläche von Amazon DSP.
+Navigieren Sie zu Ihrer Advertiser-ID → „Zielgruppen“ → „Advertiser-Zielgruppen“. Wenn Ihre Zielgruppe erfolgreich erstellt wurde und die Mindestanzahl an Zielgruppenmitgliedern erreicht, wird der Status von `Active` angezeigt. Weitere Informationen zur Größe und Reichweite Ihrer Zielgruppe finden Sie im Bedienfeld „Prognostizierte Reichweite“ auf der rechten Seite der Benutzeroberfläche von Amazon DSP.
 
 ![Validierung der Erstellung von Amazon DSP-Zielgruppen](../../assets/catalog/advertising/amazon_ads_image_3.png)
 
@@ -140,14 +140,14 @@ Weitere Hilfedokumentation finden Sie in den folgenden Amazon Ads-Hilferessource
 
 ## Änderungsprotokoll {#changelog}
 
-In diesem Abschnitt werden die Funktionen und wesentlichen Aktualisierungen der Dokumentation an diesem Ziel-Connector erfasst.
+In diesem Abschnitt werden aktualisierte Funktionen und wesentliche Dokumentationsänderungen für diesen Ziel-Connector erfasst.
 
-+++ Anzeigen von changelog
++++ Änderungsprotokoll anzeigen
 
-| Veröffentlichungsmonat | Aktualisierungstyp | Beschreibung |
+| Veröffentlichungsmonat | Art der Aktualisierung | Beschreibung |
 |---|---|---|
-| Mai 2023 | Aktualisierung der Funktionen und Dokumentation | <ul><li>Unterstützung für die Auswahl der Advertiser-Region im [Zielverbindungs-Workflow](#destination-details).</li><li>Die Dokumentation wurde aktualisiert, um die Hinzufügung der Auswahl der Advertiser-Region widerzuspiegeln. Weitere Informationen zur Auswahl der richtigen Advertiser-Region finden Sie unter [Amazon-Dokumentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
-| März 2023 | Erstmalige Veröffentlichung | Ursprüngliche Zielversion und veröffentlichte Dokumentation. |
+| Mai 2023 | Funktions- und Dokumentationsaktualisierung | <ul><li>Unterstützung für die Auswahl der Advertiser-Region im [Zielverbindungs-Workflow](#destination-details) hinzugefügt.</li><li>Dokumentation aktualisiert, um das Hinzufügen der Auswahl der Advertiser-Region widerzuspiegeln. Weitere Informationen zum Auswählen der richtigen Advertiser-Region finden Sie in der [Amazon-Dokumentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
+| März 2023 | Erstmalige Veröffentlichung | Ursprüngliche Zielversion und Dokumentation veröffentlicht. |
 
 {style="table-layout:auto"}
 

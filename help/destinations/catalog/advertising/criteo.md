@@ -1,11 +1,11 @@
 ---
-keywords: Werbung; criteo;
+keywords: Werbung; Kriterien;
 title: Crito-Verbindung
 description: Criteo ermöglicht vertrauenswürdige und wirkungsvolle Werbung, um jedem Verbraucher im offenen Internet reichhaltigere Erlebnisse zu bieten. Mit dem weltweit größten Commerce-Datensatz und einer erstklassigen KI stellt Criteo sicher, dass jeder Touchpoint über die Einkaufs-Journey personalisiert ist, um Kunden zur richtigen Zeit mit der richtigen Anzeige zu erreichen.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 9ccfbeb6ef36b10b8ecbfc25797c26980e7d1dcd
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1010'
 ht-degree: 24%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 24%
 
 >[!IMPORTANT]
 >
->Diese Dokumentationsseite wurde von Criteo erstellt. Dies ist derzeit ein Beta-Produkt, und die Funktionalität kann sich ändern. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an Criteo [here](mailto:criteoTechnicalPartnerships@criteo.com).
+>Diese Ziel-Connector- und Dokumentationsseite werden von Criteo erstellt und gepflegt. Dies ist derzeit ein Beta-Produkt, und die Funktionalität kann sich ändern. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an Criteo. [here](mailto:criteoTechnicalPartnerships@criteo.com).
 
 Criteo ermöglicht vertrauenswürdige und wirkungsvolle Werbung, um jedem Verbraucher im offenen Internet reichhaltigere Erlebnisse zu bieten. Mit dem weltweit größten Commerce-Datensatz und einer erstklassigen KI stellt Criteo sicher, dass jeder Touchpoint über die Einkaufs-Journey personalisiert ist, um Kunden zur richtigen Zeit mit der richtigen Anzeige zu erreichen.
 
@@ -28,8 +28,8 @@ Criteo ermöglicht vertrauenswürdige und wirkungsvolle Werbung, um jedem Verbra
 
 ## Einschränkungen {#limitations}
 
-* Criteo akzeptiert nur [!DNL SHA-256]-Hash- und Text-E-Mails (zu konvertieren in [!DNL SHA-256] vor dem Senden). Bitte senden Sie keine personenbezogenen Daten (personenbezogene Daten, wie z.B. die Namen von Einzelpersonen oder Telefonnummern).
-* Criteo benötigt mindestens eine Kennung, die vom Client bereitgestellt werden muss. Prioritäten [!DNL GUM ID] als Kennung anstelle von Hash-E-Mail, da sie zu einer besseren Übereinstimmungsrate beiträgt.
+* Criteo akzeptiert nur [!DNL SHA-256]-Hash- und Text-E-Mails (zu konvertieren in [!DNL SHA-256] vor dem Versand). Bitte senden Sie keine personenbezogenen Daten (personenbezogene Daten, wie z.B. die Namen von Einzelpersonen oder Telefonnummern).
+* Criteo benötigt mindestens eine Kennung, die vom Client bereitgestellt werden muss. Dabei werden Prioritäten gesetzt [!DNL GUM ID] als Kennung anstelle von Hash-E-Mail, da sie zu einer besseren Übereinstimmungsrate beiträgt.
 
 ![Voraussetzungen](../../assets/catalog/advertising/criteo/prerequisites.png)
 
@@ -40,7 +40,7 @@ Criteo unterstützt die Aktivierung von Identitäten, die in der folgenden Tabel
 | Ziel-Identität | Beschreibung | Zu beachten |
 | --- | --- | --- |
 | `email_sha256` | Mit dem SHA-256-Algorithmus gehashte E-Mail-Adressen | Adobe Experience Platform unterstützt sowohl einfache als auch SHA-256-Hash-E-Mail-Adressen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die [!UICONTROL Umwandlung anwenden] , damit Platform die Daten bei der Aktivierung automatisch hasst. |
-| `gum_id` | Criteo [!DNL GUM] Cookie-Kennung | [!DNL GUM IDs] Kunden die Möglichkeit geben, eine Korrespondenz zwischen ihrem Benutzeridentifizierungssystem und der Benutzeridentifizierung von Criteo zu pflegen ([!DNL UID]). Wenn der Kennungstyp `gum_id`, einen zusätzlichen Parameter, die [!DNL GUM Caller ID], muss ebenfalls einbezogen werden. Wenden Sie sich an Ihr Criteo-Account-Team, um Informationen zu den entsprechenden [!DNL GUM Caller ID] oder weitere Informationen dazu zu erhalten [!DNL GUM ID] bei Bedarf synchronisieren. |
+| `gum_id` | Criteo [!DNL GUM] Cookie-Kennung | [!DNL GUM IDs] Kunden die Möglichkeit geben, eine Korrespondenz zwischen ihrem Benutzeridentifizierungssystem und der Benutzeridentifizierung von Criteo zu pflegen ([!DNL UID]). Wenn der Kennungstyp `gum_id`, einen zusätzlichen Parameter, die [!DNL GUM Caller ID], muss ebenfalls einbezogen werden. Wenden Sie sich an Ihr Criteo-Account-Team, um Informationen zu den entsprechenden [!DNL GUM Caller ID] oder weitere Informationen dazu zu erhalten [!DNL GUM ID] Synchronisieren Sie bei Bedarf. |
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
@@ -97,9 +97,9 @@ Geben Sie nach der Authentifizierung beim Ziel die folgenden Verbindungsparamete
 | Feld | Beschreibung | Erforderlich |
 | --- | --- | --- |
 | Name | Ein Name, der Ihnen dabei hilft, dieses Ziel in der Zukunft zu erkennen. Der Name, den Sie hier auswählen, ist der [!DNL Audience] Name in Criteo Management Center und kann zu einem späteren Zeitpunkt nicht geändert werden. | Ja |
-| Beschreibung | Eine Beschreibung, die Ihnen dabei hilft, dieses Ziel in der Zukunft zu identifizieren. | Nein |
+| Beschreibung | Eine Beschreibung, mit der Sie dieses Ziel in der Zukunft identifizieren können. | Nein |
 | Advertiser-ID | Criteo Advertiser ID Ihres Unternehmens. Wenden Sie sich an Ihren Criteo-Kundenbetreuer, um diese Informationen zu erhalten. | Ja |
-| Criteo [!DNL GUM caller ID] | [!DNL GUM Caller ID] Ihrer Organisation. Wenden Sie sich an Ihr Criteo-Account-Team, um Informationen zu den entsprechenden [!DNL GUM Caller ID] oder weitere Informationen dazu zu erhalten [!DNL GUM] bei Bedarf synchronisieren. | Ja, wann immer [!DNL GUM ID] wird als Kennung bereitgestellt |
+| Criteo [!DNL GUM caller ID] | [!DNL GUM Caller ID] Ihrer Organisation. Wenden Sie sich an Ihr Criteo-Account-Team, um Informationen zu den entsprechenden [!DNL GUM Caller ID] oder weitere Informationen dazu zu erhalten [!DNL GUM] Synchronisieren Sie bei Bedarf. | Ja, wann [!DNL GUM ID] wird als Kennung bereitgestellt |
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 

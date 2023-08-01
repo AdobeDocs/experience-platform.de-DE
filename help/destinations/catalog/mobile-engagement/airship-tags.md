@@ -1,11 +1,11 @@
 ---
 keywords: Luftschiff-Tags; Luftschiff-Ziel
 title: Airship Tags-Verbindung
-description: Nahtlose Weitergabe von Adobe-Zielgruppendaten an Airship als Zielgruppen-Tags für Targeting innerhalb von Airship.
+description: Nahtlose Weitergabe von Zielgruppendaten von Adobe an Airship als Zielgruppen-Tags für Targeting innerhalb von Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '994'
 ht-degree: 31%
 
 ---
@@ -18,12 +18,12 @@ ht-degree: 31%
 
 Diese Integration übergibt Adobe Experience Platform-Zielgruppendaten an [!DNL Airship] as [Tags](https://docs.airship.com/guides/audience/tags/) für Targeting oder Aktivierung.
 
-Weitere Informationen finden Sie unter [!DNL Airship], siehe [Dokumente für die Luftfahrt](https://docs.airship.com).
+Weitere Informationen zu [!DNL Airship], siehe [Dokumente für die Luftfahrt](https://docs.airship.com).
 
 
 >[!TIP]
 >
->Diese Dokumentationsseite wurde von der [!DNL Airship] Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an [support.airship.com](https://support.airship.com/).
+>Diese Ziel-Connector- und Dokumentationsseite wird von der [!DNL Airship] Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an [support.airship.com](https://support.airship.com/).
 
 ## Voraussetzungen
 
@@ -61,7 +61,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 ## Tag-Gruppen
 
-Das Konzept der Zielgruppen in Adobe Experience Platform ähnelt dem [Tags](https://docs.airship.com/guides/audience/tags/) im Luftverkehr mit geringfügigen Abweichungen bei der Durchführung. Diese Integration ordnet den Status eines Benutzers zu [Mitgliedschaft in einem Experience Platform-Segment](../../../xdm/field-groups/profile/segmentation.md) wenn eine [!DNL Airship] -Tag. Beispiel: In einer Platform-Audience, in der die Variable `xdm:status` Änderungen an `realized`, wird das Tag zum [!DNL Airship] Kanal oder benannter Benutzer, dem dieses Profil zugeordnet ist. Wenn die Variable `xdm:status` Änderungen an `exited`, wird das Tag entfernt.
+Das Konzept der Zielgruppen in Adobe Experience Platform ähnelt dem von [Tags](https://docs.airship.com/guides/audience/tags/) im Luftverkehr mit geringfügigen Abweichungen bei der Durchführung. Diese Integration ordnet den Status eines Benutzers zu [Mitgliedschaft in einem Experience Platform-Segment](../../../xdm/field-groups/profile/segmentation.md) das Vorhandensein oder Nichtvorhandensein einer [!DNL Airship] -Tag. Beispiel: In einer Platform-Audience, in der die Variable `xdm:status` Änderungen an `realized`, wird das Tag zum [!DNL Airship] -Kanal oder benannter Benutzer, dem dieses Profil zugeordnet ist. Wenn die Variable `xdm:status` Änderungen an `exited`, wird das Tag entfernt.
 
 Um diese Integration zu aktivieren, erstellen Sie eine *Tag-Gruppe* in [!DNL Airship] benannt `adobe-segments`.
 
@@ -73,13 +73,13 @@ Siehe [Tag-Gruppen verwalten](https://docs.airship.com/tutorials/manage-project/
 
 ## Bearer-Token generieren
 
-Navigieren Sie zu **[!UICONTROL Einstellungen]** &quot; **[!UICONTROL APIs und Integrationen]** im [Airship Dashboard](https://go.airship.com) und wählen Sie **[!UICONTROL Token]** im Menü links.
+Navigieren Sie zu **[!UICONTROL Einstellungen]** &quot; **[!UICONTROL APIs und Integrationen]** im [Airship Dashboard](https://go.airship.com) und wählen **[!UICONTROL Token]** im Menü links.
 
-Klicken **[!UICONTROL Token erstellen]**.
+Klicks **[!UICONTROL Token erstellen]**.
 
 Geben Sie einen benutzerfreundlichen Namen für Ihr Token ein, z. B. &quot;Ziel für Adobe-Tags&quot;und wählen Sie &quot;Zugriff auf alle&quot;für die Rolle.
 
-Klicken **[!UICONTROL Token erstellen]** und speichern Sie die Angaben als vertraulich.
+Klicks **[!UICONTROL Token erstellen]** und speichern Sie die Angaben als vertraulich.
 
 ## Anwendungsfälle
 

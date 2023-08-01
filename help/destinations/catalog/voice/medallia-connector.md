@@ -2,9 +2,9 @@
 title: Medallia-Verbindung
 description: Aktivieren Sie Profile für gezielte Medallia-Umfragen und Feedback-Sammlungen, um die Bedürfnisse und Erwartungen der Kundinnen und Kunden besser zu verstehen.
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1100'
 ht-degree: 33%
 
 ---
@@ -17,7 +17,7 @@ Aktivieren Sie Profile für gezielte Medallia-Umfragen und Feedback-Sammlungen, 
 
 >[!IMPORTANT]
 >
->Diese Dokumentationsseite wurde vom Medallia-Team erstellt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an adobe-integrations@medallia.com.
+>Diese Ziel-Connector- und Dokumentationsseite werden vom Medallia-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an adobe-integrations@medallia.com.
 
 ## Anwendungsfälle {#use-cases}
 
@@ -49,7 +49,7 @@ Medallia unterstützt die Aktivierung von Identitäten, die in der folgenden Tab
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
 | E-Mail | E-Mail Adresse | Wählen Sie die E-Mail-Zielidentität aus, wenn Sie Umfragen per E-Mail einladen möchten. Wenn ein Profil mit mehreren E-Mail-Adressen verknüpft ist, wird die Einladung nur an die erste E-Mail Trigger. |
-| phone | Telefonnummern im Format E.164 gehasht | Wählen Sie die Telefonzielgruppenkennung aus, wenn Sie SMS-basierte Umfragen senden möchten. Die Telefonnummer muss im E.164-Format vorliegen, das ein Pluszeichen (+), eine internationale Telefonnummer, eine Ortsvorwahl und eine Telefonnummer enthält. Beispiel: (+)(Landesvorwahl)(Ortsvorwahl)(Telefonnummer). Wenn ein Profil mit mehreren Telefonnummern verknüpft ist, Trigger Medallia nur die Einladung zur ersten Telefonnummer. |
+| phone | Telefonnummern im Format E.164 gehasht | Wählen Sie die Telefonzielgruppenkennung aus, wenn Sie SMS-basierte Umfragen senden möchten. Die Telefonnummer muss im E.164-Format vorliegen, das ein Pluszeichen (+), eine internationale Telefonnummer, eine Ortsvorwahl und eine Telefonnummer enthält. Beispiel: (+)(Ländercode)(Gebietscode)(Telefonnummer). Wenn ein Profil mit mehreren Telefonnummern verknüpft ist, Trigger Medallia nur die Einladung zur ersten Telefonnummer. |
 
 {style="table-layout:auto"}
 
@@ -59,7 +59,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle neu qualifizierten Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm Profilattribute im [Zielaktivierungs-Workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle neu qualifizierten Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B. E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm Profilattribute auswählen der [Zielaktivierungs-Workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform basierend auf der Zielgruppenbewertung aktualisiert wird, sendet der Connector das Update an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -76,11 +76,11 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 
 Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
 
-* **[!UICONTROL OAuth-Token-Endpunkt-URL]**: In der Regel hat das Format https://instance.medallia.tld/oauth/tenant/token.
-* **[!UICONTROL Client-ID]**: Besorgen Sie sich bei Ihrem Medallia-Versand-Team.
-* **[!UICONTROL Client Secret]**: Besorgen Sie sich bei Ihrem Medallia-Versand-Team.
+* **[!UICONTROL OAuth-Token-Endpunkt-URL]**: In der Regel hat die Form https://instance.medallia.tld/oauth/tenant/token.
+* **[!UICONTROL Client-ID]**: Rufen Sie von Ihrem Medallia-Versandteam ab.
+* **[!UICONTROL Client Secret]**: Rufen Sie von Ihrem Medallia-Versandteam ab.
 
-![Bild, das den Authentifizierungsbildschirm für dieses Ziel anzeigt.](/help/destinations/assets/catalog/voice/medallia-destination-oauth.png)
+![Bild mit dem Authentifizierungsbildschirm für dieses Ziel.](/help/destinations/assets/catalog/voice/medallia-destination-oauth.png)
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
@@ -88,10 +88,10 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL API-Gateway-URL]**: Besorgen Sie sich bei Ihrem Medallia-Versand-Team. In der Regel hat das Format https://instance-tenant.apis.medallia.com.
-* **[!UICONTROL Import API Name]**: Besorgen Sie sich bei Ihrem Medallia-Versand-Team. Name der Media Import-API (auch als Web-Feed bezeichnet), die in dieser Verbindung verwendet werden soll. Sie können verschiedene Zielgruppen für verschiedene Import-APIs aktivieren, um verschiedene Umfrageprogramme Trigger.
+* **[!UICONTROL API-Gateway-URL]**: Rufen Sie von Ihrem Medallia-Versandteam ab. In der Regel hat das Format https://instance-tenant.apis.medallia.com.
+* **[!UICONTROL Import API Name]**: Rufen Sie von Ihrem Medallia-Versandteam ab. Name der Media Import-API (auch als Web-Feed bezeichnet), die in dieser Verbindung verwendet werden soll. Sie können verschiedene Zielgruppen für verschiedene Import-APIs aktivieren, um verschiedene Umfrageprogramme Trigger.
 
-![Bild, das den Bildschirm mit den Zieldetails für dieses Ziel anzeigt.](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
+![Bild mit dem Bildschirm mit den Zieldetails für dieses Ziel.](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -128,9 +128,9 @@ Es wird dringend empfohlen, zusätzliche benutzerdefinierte Zielattribute zuzuor
 
 ## Exportierte Daten {#exported-data}
 
-Nachdem Sie Ihre Segmente für das Ziel aktiviert haben, informieren Sie Ihr Medallia-Versandteam, das die exportierten Daten aus Adobe Experience Platform nach Medallia validieren kann. Beachten Sie, dass Umfragen nur nach erfolgreicher Datenüberprüfung in Medallia aktiviert werden können. zuvor werden Daten nach Medallia exportiert, aber keine Umfragen an Kunden Trigger.
+Nachdem Sie Ihre Segmente für das Ziel aktiviert haben, informieren Sie Ihr Medallia-Versandteam, das die exportierten Daten aus Adobe Experience Platform nach Medallia validieren kann. Beachten Sie, dass Umfragen nur nach erfolgreicher Datenüberprüfung in Medallia aktiviert werden können. Zuvor werden Daten nach Medallia exportiert, aber keine Umfragen an Kunden Trigger.
 
-Nachfolgend finden Sie ein Beispiel für eine JSON-Datei der exportierten Daten, die die Beispielzuordnung aus dem obigen Screenshot im Abschnitt **Zuordnen von Attributen und Identitäten** Abschnitt:
+Nachfolgend finden Sie ein Beispiel für eine JSON-Datei der exportierten Daten, die die Beispielzuordnung aus dem Screenshot oben in der **Zuordnen von Attributen und Identitäten** Abschnitt:
 
 ```json
 [
@@ -140,8 +140,8 @@ Nachfolgend finden Sie ein Beispiel für eine JSON-Datei der exportierten Daten,
         "aep_segments_new": ["c1c3edcc-07cb-4f66-b5dd-aff485148aba"],
         "aep_segments_existing": [],
         "aep_segments_removed": [],
-        "firstname":  “John” ,
-        "lastname":  “Smith”,
+        "firstname":  "John" ,
+        "lastname":  "Smith",
         "contactId": "jsmith120002",
     }
 ]
