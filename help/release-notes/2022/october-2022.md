@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise, Oktober 2022
 description: Versionshinweise von Oktober 2022 für Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e1deeadb98240f885e9dc95ecbc58ae48049a190
 workflow-type: tm+mt
-source-wordcount: '1328'
+source-wordcount: '1159'
 ht-degree: 100%
 
 ---
@@ -18,7 +18,6 @@ ht-degree: 100%
 - [Ziele](#destinations)
 - [Experience-Datenmodell](#xdm)
 - [Abfrage-Service](#query-service)
-- [Quellen](#sources-sources)
 
 ## Kundenverwaltete Schlüssel {#cmk}
 
@@ -109,16 +108,3 @@ Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von 
 Weitere Informationen über Abfrage-Services finden Sie unter [Abfrage-Service – Übersicht](../../query-service/home.md).
 Neue Funktionen in Adobe Experience Platform:
 
-## Quellen {#sources}
-
-Mit Adobe Experience Platform können Sie Daten aus externen Quellen erfassen und diese Daten mithilfe von Platform-Diensten strukturieren, kennzeichnen und verbessern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
-
-Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
-
-**Aktualisierte Funktionen**
-
-| Funktion | Beschreibung |
-| --- | --- | 
-| Beta-Verfügbarkeit der Adobe Workfront-Quelle | Verwenden Sie die [Adobe Workfront-Quelle](../../sources/connectors/adobe-applications/workfront.md), um Ihre Workfront-Daten in die Experience Platform zu bringen und bestimmte Anwendungsfälle auszuführen, z. B. die Kombination Ihrer Arbeitsdatensätze mit Drittanbieterdaten, die Anwendung von Verlaufs- und Zeitreihenanalysen auf Arbeitsdatensätze und das Abfragen von Arbeitsdaten mit standardmäßiger SQL. Weitere Informationen finden Sie im Handbuch zum [Erstellen einer Workfront-Quellverbindung in der Benutzeroberfläche](../../sources/tutorials/ui/create/adobe-applications/workfront.md). |
-
-Weiterführende Informationen zu Quellen finden Sie in der [Übersicht über Quellen](../../sources/home.md).

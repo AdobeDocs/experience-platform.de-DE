@@ -4,10 +4,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
-source-git-commit: cb8fd7a7e3803c356adbdf0c20cde869c1de602c
+source-git-commit: 732693b34bf4425cd3a44fba5647d337588abfa0
 workflow-type: tm+mt
-source-wordcount: '990'
-ht-degree: 97%
+source-wordcount: '987'
+ht-degree: 99%
 
 ---
 
@@ -24,7 +24,6 @@ ht-degree: 97%
       - [Adobe Commerce-Quelle](connectors/adobe-applications/commerce.md)
       - [Quelle für Kundenattribute](connectors/adobe-applications/customer-attributes.md)
       - [Datenerfassungsquelle](connectors/adobe-applications/data-collection.md)
-      - [Workfront-Quelle](connectors/adobe-applications/workfront.md)
       - Feldzuordnungen {#mapping}
          - [Analytics-Feldzuordnungen](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager-Feldzuordnungen](connectors/adobe-applications/mapping/audience-manager.md)
@@ -234,7 +233,6 @@ ht-degree: 97%
          - [Kundenattribute](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Benutzerdefinierte Marketo-Aktivitäten](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-         - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
       - Advertising {#advertising}
          - [Google Ads](tutorials/ui/create/advertising/ads.md)
          - [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)

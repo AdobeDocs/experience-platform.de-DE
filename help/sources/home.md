@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über Quell-Connectoren
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
+source-git-commit: 7c83a946ca30f1bf016cc42245d7d52f2c034f18
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1437'
 ht-degree: 77%
 
 ---
@@ -54,8 +54,6 @@ Experience Platform ermöglicht die Aufnahme von Daten aus anderen Adobe-Program
 - [Übersicht über [!DNL Marketo Engage]-Quellen](connectors/adobe-applications/marketo/marketo.md)
    - [Erstellen einer  [!DNL Marketo Engage] -Quellverbindung über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/marketo.md)
    - [Erstellen Sie eine [!DNL Marketo Engage] Quellverbindung und Datenfluss für benutzerdefinierte Aktivitätsdaten](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-- [Übersicht zu Adobe Workfront-Quellen](connectors/adobe-applications/workfront.md)
-   - [Erstellen einer Workfront-Quellverbindung über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/workfront.md)
 
 ### Werbung {#advertising}
 
