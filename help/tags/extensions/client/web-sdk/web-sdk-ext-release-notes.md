@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 27bff79c38395e2c2366f9bd89101eb03fcd5608
 workflow-type: tm+mt
-source-wordcount: '1688'
-ht-degree: 99%
+source-wordcount: '1723'
+ht-degree: 98%
 
 ---
 
@@ -14,11 +14,22 @@ ht-degree: 99%
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zum SDK finden Sie in den [Versionshinweisen zum Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=de).
 
-## Version 2.19.0 - 21. Juni 2023
+## Version 2.20.0 - 31. Juli 2023
 
-* Die **[!UICONTROL Variable]** Datenelement und **[!UICONTROL Variable aktualisieren]** -Aktionen sind jetzt allgemein verfügbar.
+**Neue Funktionen**
 
-## Version 2.18.0 - 18. Mai 2023
+* Hinzugefügte Unterstützung für [Überschreibungen der Datastream-ID pro Befehl](../../../../datastreams/overrides.md).
+
+**Fehlerbehebungen und Verbesserungen**
+
+* Veraltet `edgeConfigId` zugunsten von `datastreamId` in der SDK-Konfiguration.
+* Die Benutzeroberfläche wird durch mehrere Verbesserungen des Benutzererlebnisses für die Datastream-Konfiguration außer Kraft gesetzt.
+
+## Version 2.19.0 – 21. Juni 2023
+
+* Das Datenelement **[!UICONTROL Variable]** und die Aktionen **[!UICONTROL Variable aktualisieren]** sind jetzt allgemein verfügbar.
+
+## Version 2.18.0 – 18. Mai 2023
 
 * Enthält Version 2.17.0 des Adobe Experience Platform Web SDK.
 

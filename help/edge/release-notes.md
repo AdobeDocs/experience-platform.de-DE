@@ -3,10 +3,10 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: 49624d51d6868fa951fe70b29715142b3cbad55b
 workflow-type: tm+mt
-source-wordcount: '1549'
-ht-degree: 98%
+source-wordcount: '1589'
+ht-degree: 97%
 
 ---
 
@@ -16,11 +16,22 @@ ht-degree: 98%
 In diesem Dokument werden die Versionshinweise für das Adobe Experience Platform Web SDK behandelt.
 Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Versionshinweisen zur Tag-Erweiterung für Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
-## Version 2.16.0 - 17. Mai 2023
+## Version 2.18.0 - 31. Juli 2023
+
+**Neue Funktionen**
+
+* Hinzugefügte Unterstützung für [Überschreibungen der Datastream-ID pro Befehl](../datastreams/overrides.md).
 
 **Fehlerbehebungen und Verbesserungen**
 
-* Das Web-SDK kodiert jetzt die Zielwerte des Audience Manager-Cookies, ähnlich wie bei der [Data Integration Library (DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en).
+* Es wurde ein Problem behoben, bei dem Exitlinks nicht qualifiziert werden konnten, da die Domäne Teil der Abfrage war.
+* Veraltet `edgeConfigId` zugunsten von `datastreamId` in der Web SDK-Konfiguration.
+
+## Version 2.17.0 – 17. Mai 2023
+
+**Fehlerbehebungen und Verbesserungen**
+
+* Das Web SDK kodiert jetzt die Zielwerte der Audience Manager-Cookies, ähnlich wie bei der [Data Integration Library (DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=de).
 
 ## Version 2.16.0 – 25. April 2023
 
