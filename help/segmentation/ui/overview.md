@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Segmentierungs-Service
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche Zielgruppen und Segmentdefinitionen erstellen und verwalten.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 1314b2742af5cd281acb5f9db81eec0ccf885f77
+source-git-commit: 378b51b13547af994bd258a42d1068118d099eb4
 workflow-type: tm+mt
-source-wordcount: '3607'
+source-wordcount: '3610'
 ht-degree: 31%
 
 ---
@@ -80,7 +80,7 @@ Sie können dieser Anzeige zusätzliche Felder hinzufügen, indem Sie das ![Filt
 | [!UICONTROL Tags] | Die benutzerdefinierten Tags, die zur Zielgruppe gehören. Weitere Informationen zu diesen Tags finden Sie im [-Abschnitt zu Tags](#tags). |
 | [!UICONTROL Aufschlüsselung] | Die Aufschlüsselung des Profilstatus für die Zielgruppe. Eine detailliertere Beschreibung dieser Aufschlüsselung des Profilstatus finden Sie unten. |
 | [!UICONTROL Lebenszyklus-Status] | Der Status der Zielgruppe. Mögliche Werte für dieses Feld sind `Draft`, `Published` und `Archived`. |
-| [!UICONTROL Aktualisierungshäufigkeit] | Ein Wert, der angibt, wie oft die Daten der Zielgruppe aktualisiert werden. Mögliche Werte für dieses Feld sind `On Demand`, `Scheduled` und `Continuous`. |
+| [!UICONTROL Aktualisierungshäufigkeit] | Ein Wert, der angibt, wie oft die Daten der Zielgruppe aktualisiert werden. Mögliche Werte für dieses Feld sind `On Demand` (Batch), `Scheduled` (Streaming) und `Continuous` (Edge). |
 | [!UICONTROL Zuletzt aktualisiert von] | Der Name der Person, die die Zielgruppe zuletzt aktualisiert hat. |
 | [!UICONTROL Beschreibung] | Die Beschreibung der Zielgruppe. |
 | [!UICONTROL Erstellt von] | Der Name der Person, die die Zielgruppe erstellt hat. |
@@ -101,7 +101,7 @@ Neben jeder Zielgruppe befindet sich ein Auslassungssymbol. Wenn Sie diese Optio
 | Aktion | Ursprung | Beschreibung |
 | ------ | ------- | ----------- |
 | Bearbeiten | Segmentierungs-Service | Ermöglicht Ihnen das Öffnen von Segment Builder zum Bearbeiten Ihrer Zielgruppe. Weitere Informationen zur Verwendung von Segment Builder finden Sie im Abschnitt [Handbuch zur Benutzeroberfläche von Segment Builder](./segment-builder.md). |
-| Offene Komposition | Zielgruppenzusammensetzung | Ermöglicht Ihnen das Öffnen der Audience-Komposition , um Ihre Zielgruppe anzuzeigen. Weitere Informationen zur Komposition von Zielgruppen finden Sie im [Handbuch zur Benutzeroberfläche der Zielgruppenzusammensetzung](./audience-composition.md). |
+| Offene Komposition | Zielgruppenkomposition | Ermöglicht Ihnen das Öffnen der Audience-Komposition , um Ihre Zielgruppe anzuzeigen. Weitere Informationen zur Komposition von Zielgruppen finden Sie im [Handbuch zur Benutzeroberfläche der Zielgruppenzusammensetzung](./audience-composition.md). |
 | Auf Ziel aktivieren | Segmentierungs-Service | Ermöglicht die Aktivierung der Zielgruppe für ein Ziel. Detaillierte Informationen zum Aktivieren einer Zielgruppe für ein Ziel finden Sie im Abschnitt [Aktivierungsübersicht](../../destinations/ui/activation-overview.md). |
 | Mit Partnern teilen | Zielgruppenzusammensetzung, benutzerdefinierter Upload, Segmentierungsdienst | Ermöglicht die Freigabe Ihrer Zielgruppe für andere Platform-Benutzer. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Übersicht über Segmentübereinstimmungen](./segment-match/overview.md). |
 | Verwalten von Tags | Zielgruppenzusammensetzung, benutzerdefinierter Upload, Segmentierungsdienst | Ermöglicht die Verwaltung der benutzerdefinierten Tags, die zur Zielgruppe gehören. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt unter [Filtern und Tagging](#manage-audiences). |
@@ -224,7 +224,7 @@ Auswählen **[!UICONTROL Zugriffsbeschriftungen anwenden]** ermöglicht die Verw
 
 >[!BEGINTABS]
 
->[!TAB Zielgruppenzusammensetzung]
+>[!TAB Zielgruppenkomposition]
 
 ![Die Seite mit den Zielgruppendetails wird mit dem [!UICONTROL Offene Komposition] hervorgehoben.](../images/ui/overview/audience-details-open-composition.png)
 
