@@ -3,10 +3,10 @@ title: LiveRamp - Onboarding-Verbindung
 description: Erfahren Sie, wie Sie mit dem LiveRamp-Connector Zielgruppen von Adobe Real-time Customer Data Platform in LiveRamp Connect integrieren können.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: 5da570aaa0c6a8972d1c3d2c5b3bec9e733c1851
 workflow-type: tm+mt
-source-wordcount: '1868'
-ht-degree: 70%
+source-wordcount: '1830'
+ht-degree: 71%
 
 ---
 
@@ -36,9 +36,9 @@ Im [Zuordnungsschritt](#map) des Aktivierungs-Workflows müssen Sie die Zielzuor
 
 In diesem Abschnitt werden alle Zielgruppen beschrieben, die Sie an dieses Ziel exportieren können.
 
-Alle Ziele unterstützen die Aktivierung von Zielgruppen, die durch die Experience Platform generiert wurden [Segmentierungsdienst](../../../segmentation/home.md).
+Dieses Ziel unterstützt die Aktivierung von Zielgruppen, die durch die Experience Platform generiert wurden [Segmentierungsdienst](../../../segmentation/home.md).
 
-Darüber hinaus unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
+Darüber hinaus unterstützt dieses Ziel auch die Aktivierung der zusätzlichen Zielgruppen, die in der folgenden Tabelle beschrieben sind.
 
 | Zielgruppentyp | Beschreibung |
 ---------|----------|
@@ -129,13 +129,8 @@ Lesen [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](/help/des
 
 Im [!UICONTROL Planung] erstellen Sie für jede Audience einen Exportzeitplan mit den unten aufgeführten Einstellungen.
 
->[!IMPORTANT]
->
->Alle für dieses Ziel aktivierten Zielgruppen müssen mit dem exakt gleichen Zeitplan konfiguriert werden, wie unten dargestellt.
-
 * **[!UICONTROL Dateiexportoptionen]**: [!UICONTROL Exportieren Sie vollständige Dateien]. [Inkrementelle Dateiexporte](../../ui/activate-batch-profile-destinations.md#export-incremental-files) werden derzeit nicht für das [!DNL LiveRamp]-Ziel unterstützt.
 * **[!UICONTROL Häufigkeit]**: [!UICONTROL Täglich]
-* Stellen Sie die Exportzeit auf **[!UICONTROL Nach Segmentauswertung]** ein. Exporte geplanter Zielgruppen und [Dateiexporte auf Abruf](../../ui/export-file-now.md) werden derzeit nicht unterstützt für [!DNL LiveRamp] Ziel.
 * **[!UICONTROL Datum]**: Wählen Sie die Start- und Endzeiten für den Export wie gewünscht aus.
 
 ![Screenshot der Platform-Benutzeroberfläche mit dem Schritt zur Zielgruppenplanung.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
