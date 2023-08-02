@@ -2,9 +2,9 @@
 title: Marketo Engage-Ziel
 description: Marketo Engage ist die einzige End-to-End-Lösung für Customer Experience Management (CXM) für Marketing, Werbung, Analyse und Handel. Damit können Sie Aktivitäten von der CRM-Lead-Verwaltung über die Kundeninteraktion bis hin zur kontobasierten Marketing- und Umsatzzuordnung automatisieren und verwalten.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: 0507fd3596246bc2ead5c212c228822bf25f94e5
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '909'
 ht-degree: 25%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 25%
 >[!IMPORTANT]
 >
 >Mit der Veröffentlichung der [Verbesserter Zielanschluss für Marketo V2](/help/release-notes/2022/july-2022.md#destinations)angezeigt, werden nun zwei Marketo-Karten im Zielkatalog angezeigt.
->* Wenn Sie bereits Daten für die **[!UICONTROL Marketo V1]** Ziel: Erstellen Sie neue Datenflüsse an die **[!UICONTROL Marketo V2]** Ziel und Löschen vorhandener Datenflüsse an die **[!UICONTROL Marketo V1]** Ziel bis Februar 2023. Ab diesem Datum wird die **[!UICONTROL Marketo V1]** Die Zielkarte wird entfernt.
+>* Wenn Sie bereits Daten für die **[!UICONTROL Marketo V1]** Ziel: Erstellen Sie neue Datenflüsse zum **[!UICONTROL Marketo V2]** Ziel und Löschen vorhandener Datenflüsse an die **[!UICONTROL Marketo V1]** Ziel bis Februar 2023. Ab diesem Datum wird die **[!UICONTROL Marketo V1]** Die Zielkarte wird entfernt.
 >* Wenn Sie noch keinen Datenfluss zum **[!UICONTROL Marketo V1]** Ziel, verwenden Sie bitte die neue **[!UICONTROL Marketo V2]** -Karte, um eine Verbindung mit Marketo herzustellen und Daten nach zu exportieren.
 
 ![Bild der beiden Marketo-Zielkarten in einer Seitenansicht.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
@@ -51,15 +51,15 @@ Mit dem Ziel können Marketingexperten in Adobe Experience Platform erstellte Zi
 
 Sie können Attribute von Experience Platform zu allen Attributen zuordnen, auf die Ihr Unternehmen in Marketo Zugriff hat. In Marketo können Sie die [API-Anfrage beschreiben](https://developers.marketo.com/rest-api/lead-database/leads/#describe) , um die Attributfelder abzurufen, auf die Ihr Unternehmen Zugriff hat.
 
-## Unterstützung externer Zielgruppen {#external-audiences-support}
+## Unterstützte Zielgruppen {#supported-audiences}
 
-Alle Ziele unterstützen die Aktivierung von Zielgruppen, die durch die Experience Platform generiert wurden [Segmentierungsdienst](../../../segmentation/home.md).
+Dieses Ziel unterstützt die Aktivierung aller durch die Experience Platform generierten Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md).
 
-Darüber hinaus unterstützt dieses Ziel auch die Aktivierung der externen Zielgruppen, die in der folgenden Tabelle beschrieben sind.
+Darüber hinaus unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
 
 | Externer Zielgruppentyp | Beschreibung |
 ---------|----------|
-| Benutzerdefinierte Uploads | Zielgruppen, die aus CSV-Dateien in Experience Platform aufgenommen werden. |
+| Benutzerdefinierte Uploads | Zielgruppen [importiert](../../../segmentation/ui/overview.md#import-audience) in die Experience Platform aus CSV-Dateien. |
 
 {style="table-layout:auto"}
 

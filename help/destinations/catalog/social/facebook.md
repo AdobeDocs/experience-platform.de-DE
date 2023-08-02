@@ -3,10 +3,10 @@ keywords: facebook-Verbindung; facebook-Verbindung; facebook-Ziele; facebook; in
 title: Facebook-Verbindung
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen für Zielgruppen-Targeting, Personalisierung und Unterdrückung basierend auf Hash-E-Mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1906'
-ht-degree: 29%
+source-wordcount: '1907'
+ht-degree: 30%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 29%
 
 Profile für Ihre [!DNL Facebook] Kampagnen für Zielgruppen-Targeting, Personalisierung und Unterdrückung basierend auf Hash-E-Mails.
 
-Sie können dieses Ziel für Zielgruppen-Targeting über [!DNL Facebook's] -Familie von Apps, die von [!DNL Custom Audiences], einschließlich [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network]und [!DNL Messenger]. Die Auswahl der App, für die Sie die Kampagne ausführen möchten, wird auf der Platzierungsebene in [!DNL Facebook Ads Manager] angezeigt.
+Sie können dieses Ziel für Zielgruppen-Targeting über [!DNL Facebook's] -Familie von Apps, die von [!DNL Custom Audiences], einschließlich [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], und [!DNL Messenger]. Die Auswahl der App, für die Sie die Kampagne ausführen möchten, wird auf der Platzierungsebene in [!DNL Facebook Ads Manager] angezeigt.
 
 ![Facebook-Ziel in der Adobe Experience Platform-Benutzeroberfläche](../../assets/catalog/social/facebook/catalog.png)
 
@@ -34,7 +34,7 @@ Eine Fluggesellschaft hat verschiedene Kundenstufen (Bronze, Silber und Gold) un
 
 Um sie über soziale Netzwerke hinweg anzusprechen, können sie die Kundendaten aus ihrem CRM-System in Adobe Experience Platform integrieren und dabei die E-Mail-Adressen als Kennungen verwenden.
 
-Anschließend können sie ihre Offline-Daten einschließlich der zugehörigen Mitgliedschafts-IDs und Kundenebenen verwenden, um neue Zielgruppen zu erstellen, die sie über die [!DNL Facebook] Ziel.
+Als Nächstes können sie ihre Offline-Daten einschließlich der zugehörigen Mitgliedschafts-IDs und Kundenebenen verwenden, um neue Zielgruppen zu erstellen, die sie über die [!DNL Facebook] Ziel.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -52,13 +52,13 @@ Anschließend können sie ihre Offline-Daten einschließlich der zugehörigen Mi
 
 In diesem Abschnitt werden alle Zielgruppen beschrieben, die Sie an dieses Ziel exportieren können.
 
-Alle Ziele unterstützen die Aktivierung von Zielgruppen, die durch die Experience Platform generiert wurden [Segmentierungsdienst](../../../segmentation/home.md).
+Dieses Ziel unterstützt die Aktivierung aller durch die Experience Platform generierten Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md).
 
-Darüber hinaus unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
+*Zusätzlich*, unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
 
 | Zielgruppentyp | Beschreibung |
 ---------|----------|
-| Benutzerdefinierte Uploads | Zielgruppen, die aus CSV-Dateien in Experience Platform aufgenommen werden. |
+| Benutzerdefinierte Uploads | Zielgruppen [importiert](../../../segmentation/ui/overview.md#import-audience) in die Experience Platform aus CSV-Dateien. |
 
 {style="table-layout:auto"}
 
@@ -77,7 +77,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 Bevor Sie Ihre Zielgruppen an senden können [!DNL Facebook]müssen Sie sicherstellen, dass Sie die folgenden Anforderungen erfüllen:
 
-* Ihre [!DNL Facebook] Das Benutzerkonto muss über Folgendes verfügen: **[!DNL Manage campaigns]** -Berechtigung für das Werbekonto aktiviert wurde, das Sie verwenden möchten.
+* Ihre [!DNL Facebook] Das Benutzerkonto muss über die **[!DNL Manage campaigns]** -Berechtigung für das Anzeigenkonto aktiviert wurde, das Sie verwenden möchten.
 * Die **Adobe Experience Cloud** Geschäftskonto muss als Werbepartner in Ihrem [!DNL Facebook Ad Account]. Verwenden Sie `business ID=206617933627973`. Siehe [Partner zu Ihrem Business Manager hinzufügen](https://www.facebook.com/business/help/1717412048538897) in der Dokumentation zu Facebook .
   >[!IMPORTANT]
   >
@@ -85,7 +85,7 @@ Bevor Sie Ihre Zielgruppen an senden können [!DNL Facebook]müssen Sie sicherst
 * Lesen und unterschreiben Sie die [!DNL Facebook Custom Audiences]-Nutzungsbedingungen. Gehen Sie dazu zu `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, wobei `accountID` ist [!DNL Facebook Ad Account ID].
   >[!IMPORTANT]
   >
-  >Beim Signieren der [!DNL Facebook Custom Audiences] Achten Sie darauf, dasselbe Benutzerkonto zu verwenden, das Sie für die Authentifizierung in der Facebook-API verwendet haben.
+  >Beim Signieren der [!DNL Facebook Custom Audiences] Stellen Sie sicher, dass Sie dasselbe Benutzerkonto verwenden, das Sie für die Authentifizierung in der Facebook-API verwendet haben.
 
 ## Anforderungen an die ID-Übereinstimmung {#id-matching-requirements}
 
@@ -112,7 +112,7 @@ Informationen zur Aufnahme von E-Mail-Adressen in Experience Platform finden Sie
 
 Wenn Sie die E-Mail-Adressen selbst hash möchten, stellen Sie sicher, dass Sie die folgenden Anforderungen erfüllen:
 
-* Entfernen Sie alle Leerzeichen am Anfang und am Ende der E-Mail-Zeichenfolge. Beispiel: `johndoe@example.com`, nicht `<space>johndoe@example.com<space>`;
+* Entfernen Sie alle führenden und nachfolgenden Leerzeichen aus der E-Mail-Zeichenfolge. Beispiel: `johndoe@example.com`, nicht `<space>johndoe@example.com<space>`;
 * Achten Sie beim Hashing der E-Mail-Zeichenfolgen darauf, die Zeichenfolge in Kleinbuchstaben zu hash;
    * Beispiel: `example@email.com`, nicht `EXAMPLE@EMAIL.COM`;
 * Stellen Sie sicher, dass der Hash-String nur in Kleinbuchstaben geschrieben wird.
@@ -129,7 +129,7 @@ Wenn Sie die E-Mail-Adressen selbst hash möchten, stellen Sie sicher, dass Sie 
 
 ## Verwenden benutzerdefinierter Namespaces {#custom-namespaces}
 
-Bevor Sie die `Extern_ID` Namespace zum Senden von Daten an [!DNL Facebook], stellen Sie sicher, dass Sie Ihre eigenen Kennungen mit [!DNL Facebook Pixel]. Siehe [Offizielle Dokumentation zu facebook](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) für detaillierte Informationen.
+Bevor Sie die `Extern_ID` Namespace zum Senden von Daten an [!DNL Facebook]müssen Sie Ihre eigenen Kennungen mit [!DNL Facebook Pixel]. Siehe [Offizielle Dokumentation zu facebook](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) für detaillierte Informationen.
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
@@ -165,7 +165,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Konto-ID]**: Ihre [!DNL Facebook Ad Account ID]. Diese ID finden Sie in Ihrer [!DNL Facebook Ads Manager] -Konto. Stellen Sie bei der Eingabe dieser ID immer das Präfix `act_` voran.
+* **[!UICONTROL Konto-ID]**: Ihr [!DNL Facebook Ad Account ID]. Diese ID finden Sie in Ihrer [!DNL Facebook Ads Manager] -Konto. Stellen Sie bei der Eingabe dieser ID immer das Präfix `act_` voran.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -201,7 +201,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 Siehe [Aktivieren von Zielgruppendaten für Streaming-Zielgruppenexport-Ziele](../../ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
 
-Im **[!UICONTROL Segmentplan]** Schritt, müssen Sie die [!UICONTROL Ursprung der Zielgruppe] beim Senden von Zielgruppen an [!DNL Facebook Custom Audiences].
+Im **[!UICONTROL Segmentplan]** Schritt, müssen Sie [!UICONTROL Ursprung der Zielgruppe] beim Senden von Zielgruppen an [!DNL Facebook Custom Audiences].
 
 ![Facebook-Ursprung der Zielgruppe](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
@@ -209,12 +209,12 @@ Im **[!UICONTROL Segmentplan]** Schritt, müssen Sie die [!UICONTROL Ursprung de
 
 Nachfolgend finden Sie ein Beispiel für die korrekte Identitätszuordnung bei der Aktivierung von Zielgruppendaten in [!DNL Facebook Custom Audience].
 
-Auswählen von Quellfeldern:
+Quellfelder auswählen:
 
 * Wählen Sie die `Email` Namespace als Quellidentität verwenden, wenn die von Ihnen verwendeten E-Mail-Adressen nicht gehasht sind.
-* Wählen Sie die `Email_LC_SHA256` Namespace als Quellidentität verwenden, wenn Sie bei der Datenerfassung in einen Hash-Wert für E-Mail-Adressen von Kunden [!DNL Platform]gemäß [!DNL Facebook] [Anforderungen an das E-Mail-Hashing](#email-hashing-requirements).
+* Wählen Sie die `Email_LC_SHA256` Namespace als Quellidentität verwenden, wenn Sie bei der Datenerfassung in einen Hash-Wert für E-Mail-Adressen von Kunden [!DNL Platform], gemäß [!DNL Facebook] [Anforderungen an das E-Mail-Hashing](#email-hashing-requirements).
 * Wählen Sie die `PHONE_E.164` Namespace als Quellkennung verwenden, wenn Ihre Daten aus nicht gehashten Telefonnummern bestehen. [!DNL Platform] Hash die Telefonnummern, um die [!DNL Facebook] Anforderungen.
-* Wählen Sie die `Phone_SHA256` Namespace als Quellidentität, wenn Sie bei der Datenerfassung in [!DNL Platform]gemäß [!DNL Facebook] [Hash-Anforderungen für Telefonnummern](#phone-number-hashing-requirements).
+* Wählen Sie die `Phone_SHA256` Namespace als Quellidentität, wenn Sie bei der Datenerfassung in [!DNL Platform], gemäß [!DNL Facebook] [Hash-Anforderungen für Telefonnummern](#phone-number-hashing-requirements).
 * Wählen Sie die `IDFA` Namespace als Quellidentität, wenn Ihre Daten aus [!DNL Apple] Geräte-IDs.
 * Wählen Sie die `GAID` Namespace als Quellidentität, wenn Ihre Daten aus [!DNL Android] Geräte-IDs.
 * Wählen Sie die `Custom` Namespace als Quellidentität verwenden, wenn Ihre Daten aus einem anderen Kennungstyp bestehen.
@@ -224,7 +224,7 @@ Zielgruppenfelder auswählen:
 * Wählen Sie die `Email_LC_SHA256` Namespace als Zielidentität verwenden, wenn Ihre Quell-Namespaces `Email` oder `Email_LC_SHA256`.
 * Wählen Sie die `Phone_SHA256` Namespace als Zielidentität verwenden, wenn Ihre Quell-Namespaces `PHONE_E.164` oder `Phone_SHA256`.
 * Wählen Sie die `IDFA` oder `GAID` Namespaces als Zielidentität verwenden, wenn Ihre Quell-Namespaces `IDFA` oder `GAID`.
-* Wählen Sie die `Extern_ID` Namespace als Zielidentität verwenden, wenn Ihr Quell-Namespace ein benutzerdefinierter ist.
+* Wählen Sie die `Extern_ID` Namespace als Zielidentität verwenden, wenn es sich bei Ihrem Quell-Namespace um einen benutzerdefinierten Namespace handelt.
 
 >[!IMPORTANT]
 >
@@ -252,4 +252,4 @@ Beim Konfigurieren dieses Ziels wird möglicherweise der folgende Fehler angezei
 
 Dieser Fehler tritt auf, wenn Kunden neu erstellte Konten verwenden und die [!DNL Facebook] -Berechtigungen sind noch nicht aktiv.
 
-Wenn Sie die `400 Bad Request` Fehlermeldung nach dem Ausführen der Schritte unter [Voraussetzungen für facebook-Konten](#facebook-account-prerequisites), erlauben Sie bitte einige Tage für die [!DNL Facebook] -Berechtigungen in Kraft treten.
+Wenn Sie die `400 Bad Request` Fehlermeldung nach dem Ausführen der Schritte unter [Voraussetzungen für facebook-Konten](#facebook-account-prerequisites), erlauben Sie bitte ein paar Tage für die [!DNL Facebook] -Berechtigungen in Kraft treten.

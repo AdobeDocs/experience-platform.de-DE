@@ -3,9 +3,9 @@ keywords: Google-Anzeigen; Google-Anzeigen; Google-Adwords; Google AdWords; Goog
 title: Google Ads-Verbindung
 description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der Unternehmen Pay-per-Click-Werbung für textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Anzeigen zu nutzen.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '995'
 ht-degree: 68%
 
 ---
@@ -47,13 +47,13 @@ Beachten Sie folgende Details, die speziell für [!DNL Google Ads]-Ziele gelten:
 
 In diesem Abschnitt werden alle Zielgruppen beschrieben, die Sie an dieses Ziel exportieren können.
 
-Alle Ziele unterstützen die Aktivierung von Zielgruppen, die durch die Experience Platform generiert wurden [Segmentierungsdienst](../../../segmentation/home.md).
+Dieses Ziel unterstützt die Aktivierung aller durch die Experience Platform generierten Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md).
 
-Darüber hinaus unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
+*Zusätzlich*, unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
 
 | Zielgruppentyp | Beschreibung |
 ---------|----------|
-| Benutzerdefinierte Uploads | Zielgruppen, die aus CSV-Dateien in Experience Platform aufgenommen werden. |
+| Benutzerdefinierte Uploads | Zielgruppen [importiert](../../../segmentation/ui/overview.md#import-audience) in die Experience Platform aus CSV-Dateien. |
 
 {style="table-layout:auto"}
 
@@ -74,7 +74,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
-> [!DNL Google] hat veraltete neue [!DNL Google Ads] Cookie-Integrationen mit Drittanbietern. Um die Zulassungslisten im nächsten Abschnitt durchführen zu können, müssen Sie über eine bestehende Integration mit [!DNL Google Ads]. Daher wird der empfohlene Ansatz für die Verwendung von [!DNL Google Ads] richtet eine [!DNL Google Customer Match] Integration. Weitere Informationen zum Erstellen eines [!DNL Google Customer Match] Integration lesen Sie bitte das Tutorial zum Erstellen einer [[!DNL Google Customer Match]](./google-customer-match.md) Verbindung.
+> [!DNL Google] hat veraltete neue [!DNL Google Ads] Cookie-Integrationen mit Drittanbietern. Um die Zulassungslisten im nächsten Abschnitt durchführen zu können, müssen Sie über eine bestehende Integration mit [!DNL Google Ads]. Daher wird der empfohlene Ansatz für die Verwendung von [!DNL Google Ads] richtet eine [!DNL Google Customer Match] Integration. Weitere Informationen zum Erstellen eines [!DNL Google Customer Match] Integration lesen Sie bitte das Tutorial zum Erstellen einer [[!DNL Google Customer Match]](./google-customer-match.md) Verbindung herzustellen.
 
 ### Zulassungsauflistung {#allow-listing}
 
@@ -135,6 +135,6 @@ Beim Konfigurieren dieses Ziels wird möglicherweise der folgende Fehler angezei
 
 Dieser Fehler tritt auf, wenn Kundenkonten die [Voraussetzungen](#prerequisites) oder wenn Kunden versuchen, das Ziel ohne vorhandene [!DNL Google Ads] -Konto.
 
-[!DNL Google] hat veraltete neue [!DNL Google Ads] Cookie-Integrationen mit Drittanbietern. So führen Sie die [allow-list](#allow-listing) Schritte, müssen Sie über eine vorhandene Integration mit [!DNL Google Ads].
+[!DNL Google] hat veraltete neue [!DNL Google Ads] Cookie-Integrationen mit Drittanbietern. Um die [allow-list](#allow-listing) Schritte, müssen Sie über eine vorhandene Integration mit [!DNL Google Ads].
 
 Der empfohlene Ansatz für die Verwendung von [!DNL Google Ads] richtet eine [[!DNL Google Customer Match]](google-customer-match.md) Integration.

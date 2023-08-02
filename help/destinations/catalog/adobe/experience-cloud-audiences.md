@@ -3,9 +3,9 @@ title: (Beta) Experience Cloud Audiences
 description: Hier erfahren Sie, wie Sie Audiences von Experience Platform für verschiedene Experience Platformen freigeben können.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 1288652ca3b18b4adb357b2d8884f408725cb0a2
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1632'
 ht-degree: 19%
 
 ---
@@ -67,7 +67,7 @@ Note: briefly talk about when to share audiences to these destinations using the
 
 Wenn Sie bereits Zielgruppen von Experience Platform für Audience Manager und andere Experience Cloud-Lösungen freigeben, verwenden Sie die [Integration älterer Zielgruppenfreigabe](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam)müssen Sie sich entweder an die Kundenunterstützung oder das Kundenbetreuungsteam Ihrer Adobe wenden, um die veraltete Integration zu deaktivieren. Die Kundenbetreuungs- und Adobe-Kontoteams müssen ein Jira-Ticket (siehe Vorlagenticket PLAT-160986) einreichen, um die Integration zu deaktivieren.
 
-Die Bearbeitungszeit zur Lösung des Deprovisioning-Tickets für Beta-Kunden beträgt sechs Geschäftstage oder weniger. Nachdem die vorhandene Legacy-Integration deaktiviert wurde, können Sie mit dem [Erstellen einer Verbindung](#connect) über die Zielkarte des Self-Service.
+Die Bearbeitungszeit zur Lösung des Deprovisioning-Tickets für Beta-Kunden beträgt sechs Geschäftstage oder weniger. Nachdem die vorhandene Legacy-Integration deaktiviert wurde, können Sie mit [Erstellen einer Verbindung](#connect) über die Zielkarte des Self-Service.
 
 >[!IMPORTANT]
 >
@@ -80,7 +80,7 @@ Beachten Sie die folgenden bekannten Einschränkungen und wichtigen Hinweisen in
 * [Überwachung von Datenflüssen](/help/dataflows/ui/monitor-destinations.md) wird nicht unterstützt.
 * Beim Herstellen einer Verbindung zum Ziel sehen Sie eine Option zum [Datenflusswarnungen aktivieren](#enable-alerts). Die Benutzeroberfläche ist zwar sichtbar, die **Option für Warnhinweise wird nicht unterstützt** in der Beta-Version.
 * **Aufstockungen werden nicht unterstützt**. Der erste Export in Audience Manager oder andere Experience Cloud-Lösungen umfasst keine historische Population der Zielgruppen.
-* In der Beta-Version können Sie **eine einzige Zielverbindung zum Ziel &quot;Experience Cloud-Zielgruppen&quot;**, in allen Sandboxes Ihrer Experience Platform-Organisation.
+* In der Beta-Version können Sie **eine einzige Zielverbindung zum Experience Cloud-Zielziel**, in allen Sandboxes Ihrer Experience Platform-Organisation.
 
 ### Latenz beim Aktivieren von Zielgruppen {#audience-activation-latency}
 
@@ -98,7 +98,7 @@ Die Profile, die in die [!UICONTROL Experience Cloud Audiences] Ziel werden den 
 |---|---|---|
 | ECID | Experience Cloud ID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Siehe folgendes Dokument unter [ECID](/help/identity-service/ecid.md) für weitere Informationen. |
 | GAID | Google Advertising ID | Profile, die in Experience Platform mit der primären Kennung Google Advertising ID (GAID) erfasst werden, können an dieses Ziel exportiert werden. |
-| IDFA | Apple ID für Advertiser | Profile, die in Experience Platform mit der primären ID Apple ID for Advertisers (IDFA) erfasst werden, können an dieses Ziel exportiert werden. |
+| IDFA | Apple ID für Advertiser | In Experience Platform erfasste Profile mit der primären ID Apple ID for Advertisers (IDFA) können an dieses Ziel exportiert werden. |
 | email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Profile, die in Experience Platform mit einer primären Identität von Hash-E-Mail-Adressen erfasst werden, können an dieses Ziel exportiert werden. |
 
 {style="table-layout:auto"}
@@ -107,13 +107,13 @@ Die Profile, die in die [!UICONTROL Experience Cloud Audiences] Ziel werden den 
 
 In diesem Abschnitt werden alle Zielgruppen beschrieben, die Sie an dieses Ziel exportieren können.
 
-Alle Ziele unterstützen die Aktivierung von Zielgruppen, die durch die Experience Platform generiert wurden [Segmentierungsdienst](../../../segmentation/home.md).
+Dieses Ziel unterstützt die Aktivierung aller durch die Experience Platform generierten Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md).
 
-Darüber hinaus unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
+*Zusätzlich*, unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
 
 | Zielgruppentyp | Beschreibung |
 ---------|----------|
-| Benutzerdefinierte Uploads | Zielgruppen, die aus CSV-Dateien in Experience Platform aufgenommen werden. |
+| Benutzerdefinierte Uploads | Zielgruppen [importiert](../../../segmentation/ui/overview.md#import-audience) in die Experience Platform aus CSV-Dateien. |
 
 {style="table-layout:auto"}
 
@@ -181,7 +181,7 @@ Um einen erfolgreichen Datenexport zu überprüfen, können Sie überprüfen, ob
 
 ### Daten in Audience Manager überprüfen
 
-Ihre Experience Platform-Zielgruppen werden in Audience Manager als [Signale](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-signals), [Eigenschaften](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-traits)und [Segmente](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-segments). Sie können in Audience Manager überprüfen, ob die Daten wie in den Dokumentationslinks oben beschrieben angezeigt wurden.
+Ihre Experience Platform-Zielgruppen werden in Audience Manager als [Signale](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-signals), [Eigenschaften](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-traits), und [Segmente](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-segments). Sie können in Audience Manager überprüfen, ob die Daten wie in den Dokumentationslinks oben beschrieben angezeigt wurden.
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

@@ -3,9 +3,9 @@ keywords: Amazon Kinesis; Kinesis-Ziel; Kinesis
 title: Amazon Kinesis-Verbindung
 description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrem Amazon Kinesis-Speicher, um Daten von Adobe Experience Platform zu streamen.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '2000'
+source-wordcount: '2001'
 ht-degree: 44%
 
 ---
@@ -18,13 +18,13 @@ ht-degree: 44%
 >
 > Dieses Ziel ist nur für Kunden von [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) verfügbar.
 
-Die [!DNL Kinesis Data Streams] von [!DNL Amazon Web Services] ermöglicht die Erfassung und Verarbeitung großer Datenströme in Echtzeit.
+Die [!DNL Kinesis Data Streams] Dienst von [!DNL Amazon Web Services] ermöglicht die Erfassung und Verarbeitung großer Datenströme in Echtzeit.
 
 Sie können eine ausgehende Echtzeitverbindung zu Ihrem [!DNL Amazon Kinesis] Speicher zum Streamen von Daten aus Adobe Experience Platform.
 
 * Weitere Informationen finden Sie unter [!DNL Amazon Kinesis], siehe [Amazon-Dokumentation](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
-* Verbindung herstellen zu [!DNL Amazon Kinesis] sehen Sie programmatisch die [Tutorial zur Streaming-Ziele-API](../../api/streaming-destinations.md).
-* Verbindung herstellen zu [!DNL Amazon Kinesis] Informationen zur Verwendung der Benutzeroberfläche von Platform finden Sie in den folgenden Abschnitten.
+* So stellen Sie eine Verbindung her [!DNL Amazon Kinesis] sehen Sie programmatisch die [Tutorial zur Streaming-Ziele-API](../../api/streaming-destinations.md).
+* So stellen Sie eine Verbindung her [!DNL Amazon Kinesis] Informationen zur Verwendung der Benutzeroberfläche von Platform finden Sie in den folgenden Abschnitten.
 
 ![Amazon Kinesis in der Benutzeroberfläche](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
@@ -38,13 +38,13 @@ Beispielsweise hat ein Interessent ein Whitepaper heruntergeladen, das ihn in ei
 
 In diesem Abschnitt werden alle Zielgruppen beschrieben, die Sie an dieses Ziel exportieren können.
 
-Alle Ziele unterstützen die Aktivierung von Zielgruppen, die durch die Experience Platform generiert wurden [Segmentierungsdienst](../../../segmentation/home.md).
+Dieses Ziel unterstützt die Aktivierung aller durch die Experience Platform generierten Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md).
 
-Darüber hinaus unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
+*Zusätzlich*, unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
 
 | Zielgruppentyp | Beschreibung |
 ---------|----------|
-| Benutzerdefinierte Uploads | Zielgruppen, die aus CSV-Dateien in Experience Platform aufgenommen werden. |
+| Benutzerdefinierte Uploads | Zielgruppen [importiert](../../../segmentation/ui/overview.md#import-audience) in die Experience Platform aus CSV-Dateien. |
 
 {style="table-layout:auto"}
 
@@ -114,12 +114,12 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 
 ### Authentifizierungsinformationen {#authentication-information}
 
-Geben Sie die Felder unten ein und wählen Sie **[!UICONTROL Mit Ziel verbinden]**:
+Füllen Sie die Felder unten aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]**:
 
 ![Bild des UI-Bildschirms mit ausgefüllten Feldern für die Authentifizierungsdetails der Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
 
 * **[!DNL Amazon Web Services]-Zugriffsschlüssel und geheimer -Schlüssel**: Generieren Sie in [!DNL Amazon Web Services] ein `access key - secret access key`-Paar, um Platform Zugriff auf Ihr [!DNL Amazon Kinesis]-Konto zu gewähren. Weitere Informationen finden Sie in der [Amazon Web Services-Dokumentation](https://docs.aws.amazon.com/de_de/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **[!UICONTROL Region]**: Geben Sie an, [!DNL Amazon Web Services] Region, an die Daten gestreamt werden sollen.
+* **[!UICONTROL Region]**: Geben Sie an, welche [!DNL Amazon Web Services] region zum Streamen von Daten an.
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
@@ -137,7 +137,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 ![Bild des UI-Bildschirms mit ausgefüllten Feldern für die Zieldetails von Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
 
-* **[!UICONTROL Name]**: Geben Sie einen Namen für Ihre Verbindung an [!DNL Amazon Kinesis]
+* **[!UICONTROL Name]**: Geben Sie einen Namen für Ihre Verbindung zu [!DNL Amazon Kinesis]
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung für Ihre Verbindung zu [!DNL Amazon Kinesis].
 * **[!UICONTROL Stream]**: Geben Sie den Namen eines vorhandenen Datenstreams in Ihrer [!DNL Amazon Kinesis] -Konto. Platform exportiert Daten in diesen Stream.
 * **[!UICONTROL Segmentnamen einschließen]**: Schalten Sie ein, wenn der Datenexport die Namen der Zielgruppen enthalten soll, die exportiert werden sollen. Ein Beispiel für einen Datenexport, bei dem diese Option aktiviert ist, finden Sie im Abschnitt [Exportierte Daten](#exported-data) weiter unten.
@@ -197,7 +197,7 @@ Aus Sicht der Profilattribute bestimmen alle Änderungen an den vier oben zugeor
 
 ## Aufstockung historischer Daten {#historical-data-backfill}
 
-Wenn Sie einem vorhandenen Ziel eine neue Zielgruppe hinzufügen oder wenn Sie ein neues Ziel erstellen und Zielgruppen ihm zuordnen, exportiert Experience Platform historische Zielgruppenqualifizierungsdaten an das Ziel. Profile, die für die Zielgruppe qualifiziert sind *before* die Zielgruppe, die zum Ziel hinzugefügt wurde, innerhalb von etwa einer Stunde an das Ziel exportiert werden.
+Wenn Sie einem vorhandenen Ziel eine neue Zielgruppe hinzufügen oder wenn Sie ein neues Ziel erstellen und Zielgruppen ihm zuordnen, exportiert Experience Platform historische Zielgruppenqualifizierungsdaten an das Ziel. Profile, die sich für die Zielgruppe qualifiziert haben *before* die Zielgruppe, die zum Ziel hinzugefügt wurde, innerhalb von etwa einer Stunde an das Ziel exportiert werden.
 
 ## Exportierte Daten {#exported-data}
 

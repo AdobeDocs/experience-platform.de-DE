@@ -3,9 +3,9 @@ keywords: E-Mail; E-Mail; E-Mail; E-Mail-Ziele; Adobe Campaign; Kampagne
 title: Adobe Campaign-Verbindung
 description: Adobe Campaign umfasst verschiedene Lösungen, mit denen Sie Kampagnen über alle Ihre Online- und Offline-Kanäle hinweg personalisieren und bereitstellen können.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '941'
 ht-degree: 42%
 
 ---
@@ -22,13 +22,13 @@ Um Zielgruppendaten an Adobe Campaign zu senden, müssen Sie zunächst [Ziel ver
 
 In diesem Abschnitt werden alle Zielgruppen beschrieben, die Sie an dieses Ziel exportieren können.
 
-Alle Ziele unterstützen die Aktivierung von Zielgruppen, die durch die Experience Platform generiert wurden [Segmentierungsdienst](../../../segmentation/home.md).
+Dieses Ziel unterstützt die Aktivierung aller durch die Experience Platform generierten Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md).
 
-Darüber hinaus unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
+*Zusätzlich*, unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
 
 | Zielgruppentyp | Beschreibung |
 ---------|----------|
-| Benutzerdefinierte Uploads | Zielgruppen, die aus CSV-Dateien in Experience Platform aufgenommen werden. |
+| Benutzerdefinierte Uploads | Zielgruppen [importiert](../../../segmentation/ui/overview.md#import-audience) in die Experience Platform aus CSV-Dateien. |
 
 {style="table-layout:auto"}
 
@@ -47,7 +47,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 Beim Einrichten von E-Mail-Marketing-Zielen mit SFTP-Speicher empfiehlt Adobe, bestimmte IP-Bereiche zu Ihrer Zulassungsliste hinzuzufügen.
 
-Siehe [IP-Adressen-Zulassungsliste für SFTP-Ziele](../cloud-storage/ip-address-allow-list.md) , wenn Sie Ihrer Zulassungsliste Adobe-IPs hinzufügen müssen.
+Siehe Abschnitt [IP-Adressen-Zulassungsliste für SFTP-Ziele](../cloud-storage/ip-address-allow-list.md) , wenn Sie Ihrer Zulassungsliste Adobe-IPs hinzufügen müssen.
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
@@ -71,14 +71,14 @@ Die bevorzugte Methode zum Senden von Daten an Adobe Campaign besteht darin, [!D
 Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
 * Für **[!UICONTROL Amazon S3]** Verbindungen, müssen Sie Ihre [!UICONTROL Zugriffsschlüssel-ID] und [!UICONTROL Geheimer Zugriffsschlüssel].
-* Für **[!UICONTROL SFTP mit Kennwort]** Verbindungen, müssen Sie [!UICONTROL Domäne], [!UICONTROL Port], [!UICONTROL Benutzername]und [!UICONTROL Passwort].
-* Für **[!UICONTROL SFTP mit SSH-Schlüssel]** Verbindungen, müssen Sie [!UICONTROL Domäne], [!UICONTROL Port], [!UICONTROL Benutzername]und [!UICONTROL SSH-Schlüssel].
+* Für **[!UICONTROL SFTP mit Kennwort]** Verbindungen, müssen Sie [!UICONTROL Domäne], [!UICONTROL Port], [!UICONTROL Benutzername], und [!UICONTROL Passwort].
+* Für **[!UICONTROL SFTP mit SSH-Schlüssel]** Verbindungen, müssen Sie [!UICONTROL Domäne], [!UICONTROL Port], [!UICONTROL Benutzername], und [!UICONTROL SSH-Schlüssel].
 * Für **[!UICONTROL Azure Blob]** -Verbindungen, müssen Sie eine Verbindungszeichenfolge angeben.
 * Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um eine Verschlüsselung mit PGP/GPG zu Ihren exportierten Dateien unter dem **[!UICONTROL Schlüssel]** Abschnitt. Ihr öffentlicher Schlüssel muss als eine mit [!DNL Base64] verschlüsselte Zeichenfolge verfasst sein.
 * **[!UICONTROL Name]**: Wählen Sie einen passenden Namen für Ihr Ziel.
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung für Ihr Ziel ein.
 * **[!UICONTROL Bucket-Name]**: *Bei S3-Verbindungen*. Geben Sie den Speicherort Ihres S3-Buckets ein, in dem [!DNL Platform] Ihre Exportdaten werden als CSV-Dateien hinterlegt.
-* **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad in Ihrem Speicherort an, in dem [!DNL Platform] Ihre Exportdaten werden als CSV-Dateien hinterlegt.
+* **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad Ihres Speicherorts an, unter dem [!DNL Platform] Ihre Exportdaten werden als CSV-Dateien hinterlegt.
 * **[!UICONTROL Container]**: *Für Blob-Verbindungen*. Der Container, der den Blob enthält, in dem sich Ihr Ordnerpfad befindet.
 * **[!UICONTROL Dateiformat]**: Auswählen **CSV** , um CSV-Dateien an Ihren Speicherort zu exportieren.
 
@@ -110,7 +110,7 @@ Für [!DNL Adobe Campaign]-Ziele erstellt [!DNL Platform] eine `.csv`-Datei an d
 >[!IMPORTANT]
 >
 >* Beachten Sie Folgendes [!DNL SFTP] Speicherbeschränkungen, Beschränkungen des Datenbankspeichers und Einschränkungen für aktive Profile gemäß Ihrem Adobe Campaign-Vertrag bei der Durchführung dieser Integration.
->* Sie müssen Ihre exportierten Segmente in Adobe Campaign planen, importieren und zuordnen, indem Sie [!DNL Campaign] Workflows. Siehe [Einrichten eines wiederkehrenden Imports](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html?lang=de) in der Dokumentation zu Adobe Campaign Classic und [Über Datenverwaltungsaktivitäten](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) in der Adobe Campaign Standard-Dokumentation.
+>* Sie müssen Ihre exportierten Segmente in Adobe Campaign planen, importieren und zuordnen, indem Sie [!DNL Campaign] Workflows. Siehe Abschnitt [Einrichten eines wiederkehrenden Imports](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html?lang=de) in der Dokumentation zu Adobe Campaign Classic und [Über Datenverwaltungsaktivitäten](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) in der Adobe Campaign Standard-Dokumentation.
 >* Die bevorzugte Methode zum Senden von Daten an Adobe Campaign besteht darin, [!DNL Amazon S3] oder [!DNL Azure Blob].
 
 Nach Anschluss [!DNL Platform] auf [!DNL Amazon S3] oder [!DNL Azure Blob] speichern, müssen Sie den Datenimport von Ihrem Speicherort zu Adobe Campaign einrichten. Weiterführende Informationen dazu finden Sie auf den folgenden Adobe Campaign-Dokumentationsseiten:

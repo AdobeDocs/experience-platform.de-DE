@@ -1,11 +1,11 @@
 ---
-keywords: Werbung; Schläuche;
+keywords: Werbung; Bierwerbung;
 title: Microsoft Bing-Verbindung
 description: Mit dem Microsoft Bing-Verbindungsziel können Sie digitale Kampagnen für Retargeting und Zielgruppen-Targeting in Microsoft Display Advertising durchführen.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '671'
 ht-degree: 52%
 
 ---
@@ -36,13 +36,13 @@ Als Marketer möchte ich in der Lage sein, aus [!DNL Microsoft Advertising IDs] 
 
 In diesem Abschnitt werden alle Zielgruppen beschrieben, die Sie an dieses Ziel exportieren können.
 
-Alle Ziele unterstützen die Aktivierung von Zielgruppen, die durch die Experience Platform generiert wurden [Segmentierungsdienst](../../../segmentation/home.md).
+Dieses Ziel unterstützt die Aktivierung aller durch die Experience Platform generierten Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md).
 
-Darüber hinaus unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
+*Zusätzlich*, unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
 
 | Zielgruppentyp | Beschreibung |
 ---------|----------|
-| Benutzerdefinierte Uploads | Zielgruppen, die aus CSV-Dateien in Experience Platform aufgenommen werden. |
+| Benutzerdefinierte Uploads | Zielgruppen [importiert](../../../segmentation/ui/overview.md#import-audience) in die Experience Platform aus CSV-Dateien. |
 
 {style="table-layout:auto"}
 
@@ -67,7 +67,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 Beim Konfigurieren des Ziels müssen Sie die folgenden Informationen angeben:
 
-* [!UICONTROL Konto-ID]: ist [!DNL Bing Ads CID], im ganzzahligen Format.
+* [!UICONTROL Konto-ID]: Dies ist Ihr [!DNL Bing Ads CID], im ganzzahligen Format.
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
@@ -83,7 +83,7 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Konto-ID]**: Ihre [!DNL Bing Ads Customer ID] (CID). Ihre CID ist eine Ganzzahl, die bei der Anmeldung in der URL zu finden ist. [!DNL Microsoft Advertising].
+* **[!UICONTROL Konto-ID]**: Ihr [!DNL Bing Ads Customer ID] (CID). Ihre CID ist eine Ganzzahl, die bei der Anmeldung in der URL zu finden ist [!DNL Microsoft Advertising].
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 

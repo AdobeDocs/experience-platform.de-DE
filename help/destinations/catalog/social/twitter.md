@@ -2,9 +2,9 @@
 title: Verbindung von twitter Custom Audiences
 description: Sprechen Sie Ihre bestehenden Follower und Kunden auf Twitter an und erstellen Sie relevante Remarketing-Kampagnen, indem Sie Ihre in Adobe Experience Platform erstellten Zielgruppen aktivieren
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '861'
 ht-degree: 51%
 
 ---
@@ -19,8 +19,8 @@ Sprechen Sie Ihre bestehenden Follower und Kunden auf Twitter an und erstellen S
 
 Vor der Konfiguration [!DNL Twitter Custom Audiences] überprüfen Sie unbedingt die folgenden Twitter-Voraussetzungen, die Sie erfüllen müssen.
 
-1. Ihre [!DNL Twitter Ads] für Werbung zugelassen sein. Neu [!DNL Twitter Ads] -Konten sind in den ersten zwei Wochen nach ihrer Erstellung nicht für Werbung geeignet.
-2. Ihr Twitter-Benutzerkonto, für das Sie den Zugriff in genehmigt haben [!DNL Twitter Audience Manager] muss über *[!DNL Partner Audience Manager]* -Berechtigung aktiviert ist.
+1. Ihre [!DNL Twitter Ads] müssen für Werbung zugelassen sein. Neu [!DNL Twitter Ads] -Konten sind in den ersten zwei Wochen nach ihrer Erstellung nicht für Werbung geeignet.
+2. Ihr Twitter-Benutzerkonto, für das Sie den Zugriff in autorisiert haben [!DNL Twitter Audience Manager] muss über die *[!DNL Partner Audience Manager]* Berechtigung aktiviert.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -29,7 +29,7 @@ Vor der Konfiguration [!DNL Twitter Custom Audiences] überprüfen Sie unbedingt
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
 | device_id | IDFA/AdID/Android-ID | Google Advertising ID (GAID) und Apple ID for Advertisers (IDFA) werden in Adobe Experience Platform unterstützt. Ordnen Sie diese Namespaces und/oder Attribute aus Ihrem Quellschema entsprechend im [Zuordnungsschritt](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) des Zielaktivierungs-Workflows. |
-| E-Mail | E-Mail-Adresse(n) für den Benutzer | Bitte ordnen Sie in diesem Feld Ihre E-Mail-Adressen mit normalem Text und Ihre SHA256-Hash-E-Mail-Adressen zu. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. Wenn Sie Ihre Kunden-E-Mail-Adressen vor dem Hochladen in Adobe Experience Platform hash, beachten Sie bitte, dass diese Identitäten mit SHA256 ohne Salz gehasht werden müssen. |
+| E-Mail | E-Mail-Adresse(n) des Benutzers | Bitte ordnen Sie in diesem Feld Ihre E-Mail-Adressen mit normalem Text und Ihre SHA256-Hash-E-Mail-Adressen zu. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. Wenn Sie Ihre Kunden-E-Mail-Adressen vor dem Hochladen in Adobe Experience Platform hash, beachten Sie bitte, dass diese Identitäten mit SHA256 ohne Salz gehasht werden müssen. |
 
 {style="table-layout:auto"}
 
@@ -37,13 +37,13 @@ Vor der Konfiguration [!DNL Twitter Custom Audiences] überprüfen Sie unbedingt
 
 In diesem Abschnitt werden alle Zielgruppen beschrieben, die Sie an dieses Ziel exportieren können.
 
-Alle Ziele unterstützen die Aktivierung von Zielgruppen, die durch die Experience Platform generiert wurden [Segmentierungsdienst](../../../segmentation/home.md).
+Dieses Ziel unterstützt die Aktivierung aller durch die Experience Platform generierten Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md).
 
-Darüber hinaus unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
+*Zusätzlich*, unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
 
 | Zielgruppentyp | Beschreibung |
 ---------|----------|
-| Benutzerdefinierte Uploads | Zielgruppen, die aus CSV-Dateien in Experience Platform aufgenommen werden. |
+| Benutzerdefinierte Uploads | Zielgruppen [importiert](../../../segmentation/ui/overview.md#import-audience) in die Experience Platform aus CSV-Dateien. |
 
 {style="table-layout:auto"}
 
@@ -92,7 +92,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Konto-ID]**: Ihre [!DNL Twitter Ads] Konto-ID. Diese finden Sie in Ihrer [!DNL Twitter Ads] -Einstellungen.
+* **[!UICONTROL Konto-ID]**: Ihr [!DNL Twitter Ads] Konto-ID. Diese finden Sie in Ihrer [!DNL Twitter Ads] -Einstellungen.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -119,4 +119,4 @@ Stellen Sie beim Zuordnen von Zielgruppen zu Twitter sicher, dass Sie die folgen
 1. Stellen Sie für Menschen lesbare Zielgruppen-Mapping-Namen bereit. Es wird empfohlen, denselben Namen zu verwenden, den Sie für die Experience Platform-Segmente verwendet haben.
 2. Verwenden Sie keine Sonderzeichen (+ &amp; , % : ; @ / = ? $) in Zielgruppen- und Zielgruppen-Mapping-Namen. Wenn der Zielgruppenname Ihrer Experience Platform diese Zeichen enthält, entfernen Sie diese, bevor Sie die Zielgruppe einem Twitter-Ziel zuordnen.
 
-Weitere Informationen [!DNL List Custom Audiences] in Twitter finden Sie im Abschnitt [Twitter-Dokumentation](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).
+Weitere Informationen über [!DNL List Custom Audiences] in Twitter finden Sie im Abschnitt [Twitter-Dokumentation](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).
