@@ -7,7 +7,7 @@ exl-id: d7732244-0372-467d-84e2-5308f42c5d51
 source-git-commit: e30942aec6c66aeed8375d6221b454725f5a958d
 workflow-type: tm+mt
 source-wordcount: '1901'
-ht-degree: 65%
+ht-degree: 68%
 
 ---
 
@@ -46,7 +46,7 @@ Wählen Sie in der Benutzeroberfläche von [!DNL Experience Platform] im linken 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_enhancedEditorToggle"
 >title="Erweiterter Editor-Umschalter"
->abstract="Wechsel zwischen der alten und der erweiterten Version des Abfrage-Editors. Die ältere Version ist standardmäßig aktiviert, obwohl die verbesserte Version bessere Zugänglichkeit und Unterstützung für mehrere Designs bietet. Weitere Informationen zu diesen Änderungen finden Sie in der Dokumentation ."
+>abstract="Wechsel Sie zwischen der alten und der erweiterten Version des Abfrage-Editors. Die ältere Version ist standardmäßig aktiviert, obwohl die verbesserte Version bessere Zugänglichkeit und Unterstützung für mehrere Designs bietet. Weitere Informationen zu diesen Änderungen finden Sie in der Dokumentation."
 
 Mit einem UI-Umschalter können Sie zwischen der alten und der erweiterten Version des Abfrage-Editors wechseln. Die ältere Version ist standardmäßig aktiviert, obwohl die verbesserte Version bessere Zugänglichkeit und Unterstützung für mehrere Designs bietet. Aktivieren Sie die erweiterte Version, um auf die Einstellungen des Abfrage-Editors zuzugreifen.
 

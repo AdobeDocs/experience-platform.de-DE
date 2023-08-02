@@ -1,14 +1,14 @@
 ---
 solution: Data Collection
 audience: user
-user-guide-title: Hilfe zu Adobe Experience Platform-Datenspeichern
-breadcrumb-title: Datastreams-Handbuch
-user-guide-description: Erfahren Sie, wie Sie Datastreams in Adobe Experience Platform konfigurieren.
+user-guide-title: Hilfe zu Adobe Experience Platform-Datenströmen
+breadcrumb-title: Handbuch zu Datenströmen
+user-guide-description: Erfahren Sie, wie Sie Datenströme in Adobe Experience Platform erstellen.
 feature: Datastreams
 source-git-commit: 57867a7c78ae7f8100ead278cf901fed63780caa
 workflow-type: tm+mt
 source-wordcount: '45'
-ht-degree: 55%
+ht-degree: 91%
 
 ---
 
