@@ -2,10 +2,10 @@
 title: Konfigurieren von Überschreibungen für Datenströme
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Datastreams Außerkraftsetzungen von Datastreams konfigurieren und über das Web SDK aktivieren.
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: 32f36d96e3aa6beb72121adcc74f2da0bd2c9473
+source-git-commit: b0b53d9fcf410812eee3abdbbb6960d328fee99f
 workflow-type: tm+mt
-source-wordcount: '997'
-ht-degree: 5%
+source-wordcount: '1231'
+ht-degree: 4%
 
 ---
 
@@ -25,6 +25,26 @@ In diesem Artikel wird der Prozess zur Außerkraftsetzung der End-to-End-Datensp
 >[!IMPORTANT]
 >
 >Datenspeicherüberschreibungen werden nur für [Web SDK](../edge/home.md) Integrationen. [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) und [Server-API](../server-api/overview.md) -Integrationen unterstützen derzeit keine Überschreibungen von Datastream.
+><br><br>
+>Datastream-Überschreibungen sollten verwendet werden, wenn Sie verschiedene Daten an verschiedene Datastreams senden müssen. Sie sollten keine Datastream-Überschreibungen für Personalisierungsanwendungsfälle oder Zustimmungsdaten verwenden.
+
+## Anwendungsfälle {#use-cases}
+
+Um Ihnen zu helfen, besser zu verstehen, wie und wann Datastream-Umgehungen verwendet werden, finden Sie hier einige Anwendungsfälle, die Adobe Experience Platform-Kunden mit dieser Funktion lösen können.
+
+**Multiregion-Datenerfassung**
+
+Ein Unternehmen hat verschiedene Websites oder Subdomänen für verschiedene Länder, in denen es tätig ist. Sie haben [konfiguriert](configure.md) separate Datenspeicher mit entsprechenden analysespezifischen Report Suites, länderspezifischen Adobe Target-Eigenschafts-Token, länderspezifischen Schemata, Datensätzen, Journey Optimizer-Konfigurationen usw. Das Unternehmen verfügt außerdem über einen globalen Satz an Konfigurationen, in denen alle landesspezifischen Daten aggregiert werden.
+
+Durch die Verwendung von Datastream-Überschreibungen kann das Unternehmen den Datenfluss dynamisch in verschiedene Datastraams umstellen, anstatt das Standardverhalten, Daten an einen Datastream zu senden.
+
+Ein gängiger Anwendungsfall könnte darin bestehen, Daten an einen länderspezifischen Datastream zu senden und Daten an einen globalen Datastream zu senden, wo Kunden wichtige Aktionen ausführen, wie z. B. eine Bestellung aufgeben oder ihr Benutzerprofil aktualisieren.
+
+**Unterscheiden von Profilen und Identitäten für verschiedene Geschäftsbereiche**
+
+Ein Unternehmen mit mehreren Geschäftseinheiten möchte mehrere Experience Platformen-Sandboxes verwenden, um Daten zu speichern, die für jede Geschäftseinheit spezifisch sind.
+
+Anstatt Daten an einen standardmäßigen Datastream zu senden, kann das Unternehmen Datenspeicherüberschreibungen verwenden, um sicherzustellen, dass jede Geschäftseinheit über einen eigenen Datenspeicher verfügt, über den Daten empfangen werden können.
 
 ## Konfigurieren von Datastream-Überschreibungen in der Benutzeroberfläche von Datastreams {#configure-overrides}
 
