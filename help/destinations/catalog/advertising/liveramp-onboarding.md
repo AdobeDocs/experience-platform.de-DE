@@ -3,10 +3,10 @@ title: LiveRamp - Onboarding-Verbindung
 description: Erfahren Sie, wie Sie mit dem LiveRamp-Connector Zielgruppen von Adobe Real-time Customer Data Platform in LiveRamp Connect integrieren können.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 5da570aaa0c6a8972d1c3d2c5b3bec9e733c1851
+source-git-commit: 804cc13d9f672e87ad56b328bae73216500e07dd
 workflow-type: tm+mt
-source-wordcount: '1830'
-ht-degree: 71%
+source-wordcount: '1814'
+ht-degree: 69%
 
 ---
 
@@ -75,9 +75,9 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus
 
 * **[!UICONTROL Benutzername]**: Der Benutzername für Ihren [!DNL LiveRamp - Onboarding]-Speicherort.
 * **[!UICONTROL Passwort]**: Das Passwort für Ihren [!DNL LiveRamp - Onboarding]-Speicherort.
-* **[!UICONTROL PGP/GPG-Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihre exportierten Dateien zu verschlüsseln. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung. Wenn Sie einen Verschlüsselungsschlüssel bereitstellen, müssen Sie auch eine **[!UICONTROL Verschlüsselungs-Unterschlüssel-ID]** im Abschnitt mit den [Zieldetails](#destination-details) angeben.
-
+* **[!UICONTROL PGP/GPG-Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihre exportierten Dateien zu verschlüsseln. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung.
   ![Abbildung eines Beispiels für einen korrekt formatierten PGP-Schlüssel in der Benutzeroberfläche](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
+* **[!UICONTROL Subkey-ID]**:Wenn Sie einen Verschlüsselungsschlüssel bereitstellen, müssen Sie auch eine Verschlüsselung bereitstellen **[!UICONTROL Subkey-ID]**. Informationen zum Abrufen der Unterschlüssel-ID finden Sie in der [!DNL LiveRamp] [Verschlüsselungsdokumentation](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key).
 
 **SFTP mit SSH-Schlüsselauthentifizierung** {#sftp-ssh}
 
@@ -88,9 +88,9 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus
 
    * Um Ihren [!DNL SSH]-Schlüssel mit dem [!DNL LiveRamp - Onboarding]-Server zu verbinden, müssen Sie ein Ticket über das [!DNL LiveRamp]-Portal für technischen Support einreichen und Ihren öffentlichen Schlüssel bereitstellen. Weitere Informationen finden Sie in der [LiveRamp-Dokumentation](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html#upload-with-an-sftp-client).
 
-* **[!UICONTROL PGP/GPG-Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihre exportierten Dateien zu verschlüsseln. Wenn Sie einen Verschlüsselungsschlüssel bereitstellen, müssen Sie auch eine **[!UICONTROL Verschlüsselungs-Unterschlüssel-ID]** im Abschnitt mit den [Zieldetails](#destination-details) angeben. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung.
-
+* **[!UICONTROL PGP/GPG-Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihre exportierten Dateien zu verschlüsseln. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung.
   ![Abbildung eines Beispiels für einen korrekt formatierten PGP-Schlüssel in der Benutzeroberfläche](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
+* **[!UICONTROL Subkey-ID]**:Wenn Sie einen Verschlüsselungsschlüssel bereitstellen, müssen Sie auch eine Verschlüsselung bereitstellen **[!UICONTROL Subkey-ID]**. Informationen zum Abrufen der Unterschlüssel-ID finden Sie in der [!DNL LiveRamp] [Verschlüsselungsdokumentation](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key).
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
@@ -109,7 +109,6 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 * **[!UICONTROL Ordnerpfad]**: Der Pfad zum [!DNL LiveRamp] `uploads`-Unterordner, in dem die exportierten Dateien gespeichert werden. Das `uploads`-Präfix wird automatisch zum Ordnerpfad hinzugefügt. [!DNL LiveRamp] empfiehlt die Erstellung eines dedizierten Unterordners für Sendungen aus Adobe Real-Time CDP, um die Dateien von anderen vorhandenen Feeds getrennt zu halten und eine reibungslose Ausführung aller Automatisierungen zu gewährleisten.
    * Wenn Sie beispielsweise Ihre Dateien nach `uploads/my_export_folder` exportieren möchten, geben Sie `my_export_folder` in das Feld **[!UICONTROL Ordnerpfad]** ein.
 * **[!UICONTROL Komprimierungsformat]**: Wählen Sie den Komprimierungstyp aus, den Experience Platform für die exportierten Dateien verwenden soll. Verfügbare Optionen sind **[!UICONTROL GZIP]** oder **[!UICONTROL Keines]**.
-* **[!UICONTROL Verschlüsselungs-Unterschlüssel-ID]**: Der für die Verschlüsselung verwendete Unterschlüssel, basierend auf dem öffentlichen [!DNL LiveRamp]-Verschlüsselungsschlüssel. Dieses Feld ist erforderlich, wenn Sie im [Authentifizierungsschritt](#authenticate) einen Verschlüsselungsschlüssel bereitgestellt haben. Informationen zum Abrufen der Unterschlüssel-ID finden Sie in der [!DNL LiveRamp] [Verschlüsselungsdokumentation](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key).
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
