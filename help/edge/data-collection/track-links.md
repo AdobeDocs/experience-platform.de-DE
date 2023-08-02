@@ -3,7 +3,7 @@ title: Verfolgen von Links mit dem Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie Linkdaten mit Experience Platform Web SDK an Adobe Analytics senden.
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;Web Interaction;Seitenansichten;Linktracking;Links;Link verfolgen;ClickCollection;ClickCollection;Sammlung;
 exl-id: d5a1804c-8f91-4083-a46e-ea8f7edf36b6
-source-git-commit: 04078a53bc6bdc01d8bfe0f2e262a28bbaf542da
+source-git-commit: edf33d0d5991aed5c0535d0e7010aef082bcf48a
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 1%
@@ -12,9 +12,8 @@ ht-degree: 1%
 
 # Verfolgen von Links
 
-Links können manuell festgelegt oder verfolgt werden [automatisch](#automaticLinkTracking). Manuelles Tracking erfolgt durch Hinzufügen der Details unter der `web.webInteraction` Teil des Schemas. Es gibt drei erforderliche Variablen:
+Links können manuell festgelegt oder verfolgt werden [automatisch](#automaticLinkTracking). Manuelles Tracking erfolgt durch Hinzufügen der Details unter der `web.webInteraction` Teil des Schemas. Es gibt zwei erforderliche Variablen:
 
-* `web.webInteraction.name`
 * `web.webInteraction.type`
 * `web.webInteraction.linkClicks.value`
 
@@ -43,7 +42,7 @@ Der Linktyp kann einen von drei Werten sein:
 * **`download`:** Ein Downloadlink
 * **`exit`:** Ein Exitlink
 
-Diese Werte sind [automatisch zugeordnet](adobe-analytics/automatically-mapped-vars.md) in Adobe Analytics [konfiguriert](adobe-analytics/analytics-overview.md) um dies zu tun.
+Diese Werte sind [automatisch zugeordnet](adobe-analytics/automatically-mapped-vars.md) in Adobe Analytics, wenn [konfiguriert](adobe-analytics/analytics-overview.md) um dies zu tun.
 
 ## Automatische Linktracking {#automaticLinkTracking}
 
@@ -59,7 +58,7 @@ clickCollectionEnabled: false
 
 Automatische Linktracking für Anker `A` und `AREA` Tags. Diese Tags werden jedoch nicht für das Linktracking berücksichtigt, wenn sie eine angehängte `onclick` Handler.
 
-### Wie werden Links beschriftet?{#labelingLinks}
+### Wie werden Links gekennzeichnet?{#labelingLinks}
 
 Links werden als Downloadlink bezeichnet, wenn das Anker-Tag ein Download-Attribut enthält oder wenn der Link mit einer beliebten Dateierweiterung endet. Der Downloadlink-Qualifizierer kann [konfiguriert](../fundamentals/configuring-the-sdk.md) mit regulärem Ausdruck:
 
