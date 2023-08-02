@@ -1,11 +1,11 @@
 ---
-keywords: Bestimmungsländer; Fragen; häufig gestellte Fragen; faq; Ziele-FAQ
+keywords: Ziele; Fragen; häufig gestellte Fragen; FAQ; Ziele FAQ
 title: Häufig gestellte Fragen
 description: Antworten auf die am häufigsten gestellten Fragen zu Adobe Experience Platform-Zielen
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: 810bcd011fd6e172c79f4482e047aa6e715c3918
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1531'
 ht-degree: 6%
 
 ---
@@ -29,13 +29,34 @@ Wenn sich der Zeitplan für den Zielgruppenexport vom Segmentierungsplan untersc
 Siehe [Dokumentation zum Segmentierungsdienst](../segmentation/home.md) für weitere Details.
 +++
 
+### Warum werden bei der Deaktivierung und erneuten Aktivierung einer aktualisierten Zielgruppe für dasselbe Ziel niedrige Übereinstimmungsraten angezeigt?
+
++++Antwort
+
+Bei der Deaktivierung und der Aktivierung einer Zielgruppe von einem Streaming-Ziel wird bei der erneuten Aktivierung der Zielgruppe an dasselbe Streaming-Ziel keine Aufstockung Trigger.
+
+**Beispiel**
+
+Sie haben eine Zielgruppe aus 10 Profilen für ein Streaming-Ziel aktiviert.
+
+Nach der Aktivierung der Zielgruppe erkennen Sie, dass Sie die Zielgruppenkonfiguration ändern möchten, sodass Sie die Zielgruppe deaktivieren und ihre Populationskriterien ändern, sodass eine Zielgruppenpopulation von 100 Profilen entsteht.
+
+Sie aktivieren die aktualisierte Zielgruppe erneut für dasselbe Ziel, da jedoch keine Aufstockung ausgelöst wird, erhält Ihr Ziel nicht die zusätzlichen 90 Profile.
+
+**Lösung**
+
+Um sicherzustellen, dass alle Profile an Ihr Ziel gesendet werden, müssen Sie mit der neuen Konfiguration eine neue Zielgruppe erstellen und diese dann für Ihr Ziel aktivieren.
+
++++
+
+
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
 ### Was muss ich tun, bevor ich Zielgruppen in aktivieren kann? [!DNL Facebook Custom Audiences]?
 
 +++Antwort Bevor Sie Ihre Zielgruppen an senden können [!DNL Facebook]müssen Sie sicherstellen, dass Sie die folgenden Anforderungen erfüllen:
 
-* Ihre [!DNL Facebook] Das Benutzerkonto muss über Folgendes verfügen: **[!DNL Manage campaigns]** -Berechtigung für das Werbekonto aktiviert wurde, das Sie verwenden möchten.
+* Ihre [!DNL Facebook] Das Benutzerkonto muss über die **[!DNL Manage campaigns]** -Berechtigung für das Anzeigenkonto aktiviert wurde, das Sie verwenden möchten.
 * Die **Adobe Experience Cloud** Geschäftskonto muss als Werbepartner in Ihrem [!DNL Facebook Ad Account]. Verwenden Sie `business ID=206617933627973`. Siehe [Partner zu Ihrem Business Manager hinzufügen](https://www.facebook.com/business/help/1717412048538897) in der Dokumentation zu Facebook .
   >[!IMPORTANT]
   >
@@ -43,7 +64,7 @@ Siehe [Dokumentation zum Segmentierungsdienst](../segmentation/home.md) für wei
 * Lesen und unterschreiben Sie die [!DNL Facebook Custom Audiences]-Nutzungsbedingungen. Rufen Sie dazu `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]` auf, wobei `accountID` Ihre [!DNL Facebook Ad Account ID] ist.
 +++
 
-### Muss ich irgendwelche Apps oder Pixel zu meiner [!DNL Facebook] Advertiser-Konto?
+### Muss ich irgendwelche Apps oder Pixel zu meiner [!DNL Facebook] Werbekonto?
 
 +++Antwort 
 Nr. Da es sich hierbei nicht um eine pixelbasierte Integration handelt, müssen Sie Ihrem Advertiser-Konto keine Pixel hinzufügen.
@@ -56,14 +77,14 @@ Nr. Da es sich hierbei nicht um eine pixelbasierte Integration handelt, müssen 
 
 ### Kann ich [!DNL Facebook Custom Audiences] für Zielgruppen-Targeting in anderen [!DNL Facebook] Apps, wie [!DNL Instagram]?
 
-++ + Umlauffußbereich Sie können [!DNL Facebook Custom Audiences] Ziel für Zielgruppen-Targeting in der Facebook-Familie von Apps, die von [!DNL Facebook Custom Audiences], einschließlich [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network]und [!DNL Messenger]. Die Auswahl der App, für die Advertiser Kampagnen ausführen möchten, wird auf der Platzierungsebene in [!DNL Facebook Ads Manager].
+++ + Umlauffußbereich Sie können [!DNL Facebook Custom Audiences] Ziel für Zielgruppen-Targeting in der Facebook-Familie von Apps, die von [!DNL Facebook Custom Audiences], einschließlich [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], und [!DNL Messenger]. Die Auswahl der App, für die Advertiser Kampagnen ausführen möchten, wird auf der Platzierungsebene in [!DNL Facebook Ads Manager].
 +++
 
 ### Was ist der Unterschied zwischen dem [!DNL Facebook Custom Audiences] Verbindung und [!DNL Facebook Pixel] Erweiterung?
 
 ++ + Antwort auf die [!DNL Facebook Custom Audiences] Verbindungsnutzungen [!DNL Platform] Identitäten beim Senden von Zielgruppen an [!DNL Facebook], während die [[!DNL Facebook Pixel] connection](../destinations/catalog/advertising/facebook-pixel.md) verwendet die [!DNL Facebook] in eine Website integriert ist.
 
-Diese beiden Integrationen ergänzen sich. Sie können beide verwenden, um eine bessere Zielgruppenabdeckung sicherzustellen. Als Beispiel können Sie die [!DNL Facebook Pixel] Erweiterung für die Suche nach Website-Besuchern, die kein Konto erstellt haben, während [!DNL Facebook Custom Audiences] können Ihnen dabei helfen, bestehende Kunden auf Basis von [!DNL Platform] Identitäten.
+Diese beiden Integrationen ergänzen sich. Sie können beide verwenden, um eine bessere Zielgruppenabdeckung sicherzustellen. Als Beispiel können Sie die [!DNL Facebook Pixel] Erweiterung für die Suche nach Website-Besuchern, die kein Konto erstellt haben, [!DNL Facebook Custom Audiences] können Ihnen dabei helfen, bestehende Kunden auf Basis von [!DNL Platform] Identitäten.
 +++
 
 ### Ist die Adobe Experience Platform-Integration mit [!DNL Facebook Custom Audiences] die Nichtqualifizierung von Benutzern von einer Zielgruppe zu unterstützen, wenn sie sich nicht mehr dafür qualifizieren?**
@@ -88,7 +109,7 @@ Detaillierte Erläuterungen zu den Anforderungen an die ID-Zuordnung finden Sie 
 ### Kann ich mehrere Facebook-Ziele in der Platform-Benutzeroberfläche für separate Facebook-Konten erstellen?
 
 +++Antwort
-Ja. Ein Facebook-Ziel in Experience Platform ist 1:1 für ein Anzeigenkonto in Facebook. Sie können für jedes Facebook-Anzeigenkonto in Ihrem Unternehmen ein eigenes Facebook-Ziel erstellen. Befolgen Sie die [Tutorial zur Zielverbindung](/help/destinations/ui/connect-destination.md) und eine Verbindung zu einem separaten Facebook-Konto für jedes neue Facebook-Ziel in der Platform-Benutzeroberfläche herstellen. Die Anzahl der Facebook-Anzeigenkonten, mit denen Sie eine Verbindung herstellen können, ist unbegrenzt.
+Ja. Ein Facebook-Ziel in Experience Platform ist 1:1 für ein Anzeigenkonto in Facebook. Sie können für jedes Facebook-Anzeigenkonto in Ihrem Unternehmen ein eigenes Facebook-Ziel erstellen. Befolgen Sie die [Tutorial zur Zielverbindung](/help/destinations/ui/connect-destination.md) und stellen Sie für jedes neue Facebook-Ziel in der Platform-Benutzeroberfläche eine Verbindung zu einem separaten Facebook-Konto her. Die Anzahl der Facebook-Anzeigenkonten, mit denen Sie eine Verbindung herstellen können, ist unbegrenzt.
 +++
 
 ## Google-Kundenabgleich {#google-customer-match}
@@ -98,9 +119,9 @@ Ja. Ein Facebook-Ziel in Experience Platform ist 1:1 für ein Anzeigenkonto in F
 +++Antwort Google erfordert, dass Zielgruppennamen eindeutig sind. Die Zahlen, die Sie sehen, sind [UNIX-Zeitstempel](https://www.unixtimestamp.com/) und sie werden angehängt, um die Zielgruppennamen eindeutig zu halten, wenn Sie dieselbe Zielgruppe mehreren Google-Zielen zugeordnet haben.
 +++
 
-## linkedIn Matched Audiences {#linkedin}
+## LinkedIn Matched Audiences {#linkedin}
 
-### Muss ich irgendwelche Apps oder Pixel zu meiner [!DNL LinkedIn] Advertiser-Konto?
+### Muss ich irgendwelche Apps oder Pixel zu meiner [!DNL LinkedIn] Werbekonto?
 
 +++Antwort 
 Nr. Da es sich hierbei nicht um eine pixelbasierte Integration handelt, müssen Sie Ihrem Advertiser-Konto keine Pixel hinzufügen.
@@ -108,7 +129,7 @@ Nr. Da es sich hierbei nicht um eine pixelbasierte Integration handelt, müssen 
 
 ### Was muss ich tun, bevor ich Zielgruppen in aktivieren kann? [!DNL LinkedIn Matched Audiences]?
 
-+++Antwort Bevor Sie die [!UICONTROL linkedIn Match Audience] Ziel, stellen Sie sicher, dass Ihre [!DNL LinkedIn Campaign Manager] -Konto hat [!DNL Creative Manager] Berechtigungsebene oder höher.
++++Antwort Bevor Sie die [!UICONTROL LinkedIn Match Audience] Ziel, stellen Sie sicher, dass Ihre [!DNL LinkedIn Campaign Manager] -Konto hat die [!DNL Creative Manager] Berechtigungsebene oder höher.
 
 Informationen zum Bearbeiten Ihrer [!DNL LinkedIn Campaign Manager] Benutzerberechtigungen, siehe [Hinzufügen, Bearbeiten und Entfernen von Benutzerberechtigungen für Werbekonten](https://www.linkedin.com/help/lms/answer/5753) in der LinkedIn-Dokumentation.
 +++
@@ -124,7 +145,7 @@ Detaillierte Erläuterungen zu den Anforderungen an die ID-Zuordnung finden Sie 
 ### Welche Identitäten kann ich aktivieren? [!DNL LinkedIn]?
 
 +++Antwort
-[!DNL LinkedIn Matched Audiences] unterstützt die Aktivierung der folgenden Identitäten: gehashte E-Mails, [!DNL GAID]und [!DNL IDFA].
+[!DNL LinkedIn Matched Audiences] unterstützt die Aktivierung der folgenden Identitäten: Hash-E-Mails, [!DNL GAID], und [!DNL IDFA].
 +++
 
 ## Personalisierung auf derselben Seite und auf der nächsten Seite über die Adobe Target- und benutzerdefinierten Personalisierungsziele {#same-next-page-personalization}
@@ -133,9 +154,9 @@ Detaillierte Erläuterungen zu den Anforderungen an die ID-Zuordnung finden Sie 
 
 +++Antwort Nein, [Web SDK](../edge/home.md) ist nicht erforderlich, um Zielgruppen für [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
-Wenn [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=de) anstelle des Web SDK verwendet wird, wird nur die Personalisierung der nächsten Sitzung unterstützt.
+Wenn jedoch [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=de) anstelle des Web SDK verwendet wird, wird nur die Personalisierung der nächsten Sitzung unterstützt.
 
-Für [Personalisierung auf derselben Seite und auf der nächsten Seite](ui/activate-edge-personalization-destinations.md) Anwendungsbeispiele verwenden, müssen Sie entweder [Web SDK](../edge/home.md) oder [Edge Network Server-API](../server-api/overview.md). Weitere Informationen finden Sie in der Dokumentation unter [Aktivieren von Zielgruppen für Edge-Ziele](ui/activate-edge-personalization-destinations.md) für weitere Implementierungsdetails.
+Für [Personalisierung auf derselben Seite und auf der nächsten Seite](ui/activate-edge-personalization-destinations.md) Anwendungsbeispiele verwenden, müssen Sie entweder [Web SDK](../edge/home.md) oder [Edge Network Server-API](../server-api/overview.md). Siehe die Dokumentation unter [Aktivieren von Zielgruppen für Edge-Ziele](ui/activate-edge-personalization-destinations.md) für weitere Implementierungsdetails.
 +++
 
 ### Gibt es eine Begrenzung für die Anzahl der Attribute, die ich von Real-time Customer Data Platform an Adobe Target oder ein benutzerspezifisches Personalisierungsziel senden kann?
@@ -169,7 +190,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 
 ### Was passiert, wenn ich ein Adobe Target-Ziel lösche?
 
-+++Antwort Wenn Sie ein Ziel löschen, werden alle unter dem Ziel zugeordneten Zielgruppen und Attribute aus Adobe Target gelöscht und auch aus dem Edge-Netzwerk entfernt.
++++Antwort Wenn Sie ein Ziel löschen, werden alle Zielgruppen und Attribute, die unter dem Ziel zugeordnet sind, aus Adobe Target gelöscht und auch aus dem Edge Network entfernt.
 +++
 
 ### Funktioniert die Integration mit der Edge Network Server-API?
