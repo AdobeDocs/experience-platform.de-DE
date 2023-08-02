@@ -2,9 +2,9 @@
 title: Konfigurieren von Überschreibungen für Datenströme
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Datastreams Außerkraftsetzungen von Datastreams konfigurieren und über das Web SDK aktivieren.
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 32f36d96e3aa6beb72121adcc74f2da0bd2c9473
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '997'
 ht-degree: 5%
 
 ---
@@ -22,6 +22,10 @@ Die Außerkraftsetzung der Datastream-Konfiguration besteht aus zwei Schritten:
 
 In diesem Artikel wird der Prozess zur Außerkraftsetzung der End-to-End-Datenspeicherung für jede unterstützte Überschreibungstyp erläutert.
 
+>[!IMPORTANT]
+>
+>Datenspeicherüberschreibungen werden nur für [Web SDK](../edge/home.md) Integrationen. [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) und [Server-API](../server-api/overview.md) -Integrationen unterstützen derzeit keine Überschreibungen von Datastream.
+
 ## Konfigurieren von Datastream-Überschreibungen in der Benutzeroberfläche von Datastreams {#configure-overrides}
 
 Überschreibungen der Datastream-Konfiguration ermöglichen es Ihnen, die folgenden Datastream-Konfigurationen zu ändern:
@@ -31,9 +35,9 @@ In diesem Artikel wird der Prozess zur Außerkraftsetzung der End-to-End-Datensp
 * Audience Manager-ID-Synchronisierungs-Container
 *  Report Suites in Adobe Analytics
 
-### Datastream-Überschreibungen für Adobe Target {#target-overrides}
+### Datenspeicherüberschreibungen für Adobe Target {#target-overrides}
 
-Um Datastream-Überschreibungen für einen Adobe Target-Datastream zu konfigurieren, müssen Sie zunächst einen Adobe Target-Datenspeicher erstellen lassen. Befolgen Sie die Anweisungen unter [Datensatz konfigurieren](configure.md) mit dem [Adobe Target](configure.md#target) Dienst.
+Um Datastream-Überschreibungen für einen Adobe Target-Datastream zu konfigurieren, müssen Sie zunächst einen Adobe Target-Datenspeicher erstellen lassen. Befolgen Sie die Anweisungen unter [Datensatz konfigurieren](configure.md) mit dem [Adobe Target](configure.md#target) -Dienst.
 
 Nachdem Sie den Datastream erstellt haben, bearbeiten Sie die [Adobe Target](configure.md#target) -Dienst, den Sie hinzugefügt haben, und verwenden Sie **[!UICONTROL Eigenschafts-Token - Überschreibungen]** -Abschnitt, um die gewünschten Datastream-Umgehungen hinzuzufügen, wie in der Abbildung unten dargestellt. Fügen Sie pro Zeile ein Property-Token hinzu.
 
@@ -43,9 +47,9 @@ Nachdem Sie die gewünschten Überschreibungen hinzugefügt haben, speichern Sie
 
 Sie sollten jetzt die Adobe Target-Datastream-Überschreibungen konfiguriert haben. Jetzt können Sie [Senden der Überschreibungen an das Edge-Netzwerk über das Web SDK](#send-overrides).
 
-### Datastream-Überschreibungen für Adobe Analytics {#analytics-overrides}
+### Datenspeicherüberschreibungen für Adobe Analytics {#analytics-overrides}
 
-Um Datastream-Überschreibungen für einen Adobe Analytics-Datastream zu konfigurieren, müssen Sie zunächst über eine [Adobe Analytics](configure.md#analytics) Datenspeicher erstellt. Befolgen Sie die Anweisungen unter [Datensatz konfigurieren](configure.md) mit dem [Adobe Analytics](configure.md#analytics) Dienst.
+Um Datastream-Überschreibungen für einen Adobe Analytics-Datastream zu konfigurieren, müssen Sie zunächst über eine [Adobe Analytics](configure.md#analytics) Datastream erstellt. Befolgen Sie die Anweisungen unter [Datensatz konfigurieren](configure.md) mit dem [Adobe Analytics](configure.md#analytics) -Dienst.
 
 Nachdem Sie den Datastream erstellt haben, bearbeiten Sie die [Adobe Analytics](configure.md#target) -Dienst, den Sie hinzugefügt haben, und verwenden Sie **[!UICONTROL Report Suite - Überschreibungen]** -Abschnitt, um die gewünschten Datastream-Umgehungen hinzuzufügen, wie in der Abbildung unten dargestellt.
 
@@ -59,9 +63,9 @@ Sie sollten jetzt die Adobe Analytics-Datastream-Überschreibungen konfiguriert 
 
 ### Datastream-Überschreibungen für Experience Platform-Ereignis-Datensätze {#event-dataset-overrides}
 
-Um Datastream-Überschreibungen für Experience Platform-Ereignis-Datensätze zu konfigurieren, müssen Sie zunächst über eine [Adobe Experience Platform](configure.md#aep) Datenspeicher erstellt. Befolgen Sie die Anweisungen unter [Datensatz konfigurieren](configure.md) mit dem [Adobe Experience Platform](configure.md#aep) Dienst.
+Um Datastream-Überschreibungen für Experience Platform-Ereignis-Datensätze zu konfigurieren, müssen Sie zunächst über eine [Adobe Experience Platform](configure.md#aep) Datastream erstellt. Befolgen Sie die Anweisungen unter [Datensatz konfigurieren](configure.md) mit dem [Adobe Experience Platform](configure.md#aep) -Dienst.
 
-Nachdem Sie den Datastream erstellt haben, bearbeiten Sie die [Adobe Experience Platform](configure.md#aep) -Dienst, den Sie hinzugefügt haben, und wählen Sie **[!UICONTROL Ereignis-Datensatz hinzufügen]** -Option zum Hinzufügen eines oder mehrerer Ereignis-Datensätze überschreiben, wie in der Abbildung unten dargestellt.
+Nachdem Sie den Datastream erstellt haben, bearbeiten Sie die [Adobe Experience Platform](configure.md#aep) den Sie hinzugefügt haben, und wählen Sie **[!UICONTROL Ereignis-Datensatz hinzufügen]** -Option zum Hinzufügen eines oder mehrerer Ereignis-Datensätze überschreiben, wie in der Abbildung unten dargestellt.
 
 ![Screenshot der Benutzeroberfläche von Datastreams mit den Einstellungen des Adobe Experience Platform-Dienstes, wobei die Außerkraftsetzungen des Ereignisdatensatzes hervorgehoben sind.](assets/overrides/override-aep.png)
 
@@ -79,7 +83,7 @@ Verwenden Sie dann die **[!UICONTROL Überschreibungen der Container-ID]** -Absc
 
 >[!IMPORTANT]
 >
->Container-IDs müssen numerische Werte sein, z. B. `1234567`und nicht Zeichenfolgen wie `"1234567"`. Wenn Sie einen Zeichenfolgenwert über das Web SDK als Container-ID-Überschreibung senden, erhalten Sie einen Fehler.
+>Container-IDs müssen numerische Werte sein, z. B. `1234567`, nicht aber Zeichenfolgen wie `"1234567"`. Wenn Sie einen Zeichenfolgenwert über das Web SDK als Container-ID-Überschreibung senden, erhalten Sie einen Fehler.
 
 ![Screenshot der Benutzeroberfläche von Datastreams mit den Einstellungen des Datastreams, wobei der Container für die ID-Synchronisierung von Drittanbietern hervorgehoben wird.](assets/overrides/override-container.png)
 
