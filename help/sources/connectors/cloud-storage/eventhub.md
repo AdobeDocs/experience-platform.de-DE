@@ -3,9 +3,9 @@ title: Azure Event Hubs Source Connector - Überblick
 description: Erfahren Sie, wie Sie Azure Event Hubs über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 7240f96cb30e79add500a1957d93062eecd79ee2
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '538'
 ht-degree: 19%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 19%
 >
 >Die [!DNL Azure Event Hubs] -Quelle ist im Quellkatalog für Benutzer verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
 
-Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform]und [!DNL Azure]. Sie können Ihre Daten aus diesen Systemen in Platform importieren.
+Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform], und [!DNL Azure]. Sie können Ihre Daten aus diesen Systemen in Platform importieren.
 
 Cloud-Speicher bieten eine Quelle, von der Sie Ihre Daten in Platform übertragen können, ohne diese herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON, XDM Parquet oder mit Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird in den Quell-Workflow integriert. Mit Platform können Sie Daten aus [!DNL Event Hubs] in Echtzeit importieren.
 
@@ -34,12 +34,12 @@ Parallelismus bezieht sich auf die gleichzeitige Ausführung der gleichen Aufgab
 
 Um die Geschwindigkeit der Aufnahme auf Platform-Seite zu erhöhen, muss Platform die Anzahl der Aufgaben im Quell-Connector erhöhen, die von Ihrer [!DNL Event Hubs] Partitionen. Sobald Sie die Parallelität auf der [!DNL Event Hubs] wenden Sie sich bitte an Ihren Adobe-Support-Mitarbeiter, um Plattformaufgaben basierend auf Ihrer neuen Partition zu skalieren. Derzeit ist dieser Prozess nicht automatisiert.
 
-## Verwenden Sie ein virtuelles Netzwerk, um eine Verbindung herzustellen. [!DNL Event Hubs] Platform
+## Verwenden Sie ein virtuelles Netzwerk, um eine Verbindung herzustellen [!DNL Event Hubs] Platform
 
-Sie können ein virtuelles Netzwerk einrichten, um eine Verbindung herzustellen [!DNL Event Hubs] auf Platform zu setzen, während die Firewall-Maßnahmen aktiviert sind. Um ein virtuelles Netzwerk einzurichten, gehen Sie zu diesem [[!DNL Event Hubs] Netzwerkregelsatz-Dokument](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) und führen Sie die folgenden Schritte aus:
+Sie können ein virtuelles Netzwerk für die Verbindung einrichten [!DNL Event Hubs] auf Platform zu setzen, während die Firewall-Maßnahmen aktiviert sind. Um ein virtuelles Netzwerk einzurichten, gehen Sie zu diesem [[!DNL Event Hubs] Netzwerkregelsatz-Dokument](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) und führen Sie die folgenden Schritte aus:
 
 * Auswählen **Testen** über das Bedienfeld REST-API;
-* Authentifizieren Sie Ihre [!DNL Azure] Konto mit Ihren Anmeldedaten im selben Browser;
+* Authentifizieren Ihrer [!DNL Azure] Konto mit Ihren Anmeldedaten im selben Browser;
 * Wählen Sie die [!DNL Event Hubs] Namespace, Ressourcengruppe und Abonnement, die Sie in Platform einbringen möchten, und wählen Sie dann **AUSFÜHREN**;
 * Fügen Sie im angezeigten JSON-Textkörper das folgende Platform-Subnetz unter `virtualNetworkRules` inside `properties`:
 
@@ -88,7 +88,7 @@ Die nachstehende Liste zeigt verschiedene Regionen von Platform-Subnetzen:
     "virtualNetworkRules": [
       {
         "subnet": {
-            "id": "/subscriptions/40bde086-46ad-44c3-afba-c306f54b64ec/resourceGroups/ethos_12_prod_nld2_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_nld2_network_10_20_40_0_23/subnets/ethos_12_prod_nld2_network_10_20_40_0_23"
+            "id": "/subscriptions/40bde086-46ad-44c3-afba-c306f54b64ec/resourceGroups/ethos_12_prod_nld2_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_nld2-vnet/subnets/ethos_12_prod_nld2_network_10_20_40_0_23"
         }, 
         "ignoreMissingVnetServiceEndpoint": true
       },
