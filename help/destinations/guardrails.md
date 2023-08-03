@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: Erfahren Sie mehr über die Standardnutzung und die Ratenbeschränkungen für die Datenaktivierung.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: f360df6273986be35340432c72d8f8620f339b67
+source-git-commit: 51f65799a45229fc810a1d41f8b40b215d3666da
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 77%
@@ -94,7 +94,7 @@ Die folgenden Leitplanken gelten für die Aktivierung durch [Edge-Personalisieru
 
 {style="table-layout:auto"}
 
-## [!BADGE Beta]{type=Informative} Datensatzexporte {#dataset-exports}
+### [!BADGE Beta]{type=Informative} Datensatzexporte {#dataset-exports}
 
 Datensatzexporte werden derzeit in einer **[!UICONTROL Zuerst vollständig und dann inkrementell]** [pattern](/help/destinations/ui/export-datasets.md#scheduling). Die in diesem Abschnitt beschriebenen Limits gelten für den ersten vollständigen Export, der nach der Einrichtung eines Workflows für den Datensatzexport erfolgt.
 
