@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie durch die Unterstützung von Partnerdaten in 
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: d0227dd8dc3d79674d954899e2724d2893e16b73
+source-git-commit: 2e2a473efd247cb235ee7e8f94058baa48fd1b1a
 workflow-type: tm+mt
 source-wordcount: '1953'
 ht-degree: 16%
@@ -76,7 +76,7 @@ Die Identitäts-, Daten- und Governance-Komponenten, die Sie verwenden werden, s
 * **(Dokumentation in Kürze verfügbar)** Auf die Partnerdatenunterstützung zugeschnittene Feldergruppen
 * **(Dokumentation in Kürze verfügbar)** Drittanbieterbeschriftungen, die Sie zu den Attributen hinzufügen, die von Partnern eingehen
 
-#### Erstellen eines Identitäts-Namespace der Partner-ID
+#### Erstellen eines Identitäts-Namespace der Partner-ID {#create-partner-id-namespace}
 
 Erstellen Sie zunächst einen neuen Identitätstyp für die Profile, die Sie vom Partner erhalten. Dazu müssen Sie im Abschnitt Identität einen neuen Identitäts-Namespace des Typs **[!UICONTROL Partner-ID]**.
 

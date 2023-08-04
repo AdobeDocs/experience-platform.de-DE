@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Handbuch zu Real-time Customer Data Platform
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppensegmente aus diesen Profilen zu erstellen und diese Segmente für Drittanbieterziele bereitzustellen.
-source-git-commit: 7dfbf7c1d9d12e8e1fb654cf357d31a91611a18e
+source-git-commit: f63cddc1158e739ce26e0ce1d3d54b491bd80c06
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 89%
+source-wordcount: '242'
+ht-degree: 90%
 
 ---
 
@@ -24,8 +24,8 @@ ht-degree: 89%
       * [Beispielanwendungsfall](./b2b-use-case.md)
       * [Tutorial mit der Beschreibung aller Schritte](./b2b-tutorial.md)
       * [Leitlinien für die Real-time CDP B2B Edition](b2b-guardrails.md)
-* Audience Manager- und Echtzeit-Kundendatenplattform {#evolution}
-   * [Entwicklung aus Audience Manager](aam-to-rtcdp.md)
+* Audience Manager und Real-Time CDP {#evolution}
+   * [Wechsel von Audience Manager](aam-to-rtcdp.md)
 * Account-Profile {#account}
    * [Übersicht über Account-Profile](accounts/account-profile-overview.md)
    * [Handbuch zur Benutzeroberfläche von Account-Profilen](accounts/account-profile-ui-guide.md)
@@ -66,7 +66,8 @@ ht-degree: 89%
    * [Quellen in der Real-time CDP B2B Edition](sources/b2b.md)
 * Anwendungsfälle {#use-cases}
    * Anwendungsfälle für Partnerdaten {#partner-data}
-      * [Hinzufügen von Erstanbieterprofilen](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
       * [Engage und Akquisition neuer Kunden durch Prospektivunterstützung](/help/rtcdp/partner-data/prospecting.md)
+      * [Hinzufügen von Erstanbieterprofilen mit von Partnern bereitgestellten Attributen](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+      * [Verwenden der von Partnern unterstützten Besuchererkennung zur Personalisierung von Onsite-Erlebnissen](/help/rtcdp/partner-data/onsite-personalization.md)
 * [Experience Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
 * [Glossar zu Experience Platform](https://docs.adobe.com/content/help/de-DE/experience-platform/landing/glossary.html)
