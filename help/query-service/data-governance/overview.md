@@ -2,7 +2,7 @@
 title: Data Governance in Query Service
 description: Dieser Überblick behandelt die wichtigsten Elemente der Data Governance in Experience Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 54a6f508818016df1a4ab2a217bc0765b91df9e9
+source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
 workflow-type: tm+mt
 source-wordcount: '2843'
 ht-degree: 3%
@@ -20,7 +20,7 @@ Unternehmen, die routinemäßig Datenverarbeitung durchführen, sollten diese Ri
 Die folgenden Kategorien sind bei der Verwendung von Query Service für die Einhaltung von Vorschriften zur Datenkonformität von entscheidender Bedeutung:
 
 1. Sicherheit
-1. Verfolgung
+1. Audit
 1. Datennutzung
 1. Datenschutz   
 <!-- 1. Data hygiene -->
@@ -34,16 +34,15 @@ Die Datensicherheit ist der Prozess des Schutzes von Daten vor unbefugtem Zugrif
 Die Sicherheit in Bezug auf Query Service ist in folgende Kategorien unterteilt:
 
 * [Zugriffskontrolle](#access-control): Der Zugriff wird über Rollen und Berechtigungen gesteuert, einschließlich Berechtigungen auf Datensatz- und Spaltenebene.
-* Sichern von Daten durch [Konnektivität](#connectivity): Die Daten werden über Platform und externe Clients gesichert, indem eine begrenzte Verbindung mit ablaufenden oder nicht ablaufenden Anmeldedaten hergestellt wird.
+* Sichern von Daten durch [connection](#connectivity): Daten werden durch Platform- und externe Clients gesichert, indem eine begrenzte Verbindung mit ablaufenden oder nicht ablaufenden Anmeldeinformationen hergestellt wird.
 * Sichern von Daten durch [Verschlüsselung und Schlüssel auf Systemebene](#encryption): Die Datensicherheit wird durch Verschlüsselung sichergestellt, wenn die Daten im Ruhezustand sind.
-
 <!-- * Securing data through [encryption and customer-managed keys (CMK)](#encryption-and-customer-managed-keys): Access controlled through encryption when data is at rest. -->
 
 ### Zugangssteuerung {#access-control}
 
 Die Zugriffskontrolle in Adobe Experience Platform ermöglicht die Verwendung von [Adobe Admin Console](https://adminconsole.adobe.com/) , um den Zugriff auf Query Service-Funktionen mithilfe rollenbasierter Berechtigungen zu verwalten. Auf ähnliche Weise können Sie den Zugriff auf bestimmte Datenattribute durch die Beschriftungsverwaltung in Schemata und Datenfeldern steuern.
 
-In diesem Abschnitt werden die erforderlichen Zugriffssteuerungsberechtigungen beschrieben, über die ein Benutzer verfügen muss, um die Funktionen von Query Service vollständig nutzen zu können. Weitere Informationen finden Sie in den Dokumenten unter [Berechtigungen verwalten](../../access-control/ui/permissions.md) und [Benutzer verwalten](../../access-control/ui/users.md) für detaillierte Anweisungen zur Zuweisung des Zugriffs auf ein Produktprofil.
+In diesem Abschnitt werden die erforderlichen Zugriffssteuerungsberechtigungen beschrieben, über die ein Benutzer verfügen muss, um die Funktionen von Query Service vollständig nutzen zu können. Siehe Dokumente unter [Berechtigungen verwalten](../../access-control/ui/permissions.md) und [Benutzer verwalten](../../access-control/ui/users.md) für detaillierte Anweisungen zur Zuweisung des Zugriffs auf ein Produktprofil.
 
 #### Relevante Berechtigungen
 
@@ -97,9 +96,9 @@ Die `CREATE VIEW` -Keyword definiert eine Ansicht einer Abfrage, aber die Ansich
 
 Mit dem [Attributbasierte Zugriffssteuerungsfunktion](../../access-control/abac/overview.md) Sie können Organisations- oder Datennutzungsbereiche für Fakten- und Dimensionsdatensätze in der [beschleunigter Speicher](../data-distiller/query-accelerated-store/send-accelerated-queries.md). Dadurch können Administratoren den Zugriff auf bestimmte Segmente verwalten und den Zugriff für Benutzer oder Benutzergruppen besser verwalten.
 
-Um feldbasierte Zugriffsbeschränkungen für beschleunigte Datensätze zu erstellen, können Sie CTAS-Abfragen von Query Service verwenden, um beschleunigte Datensätze zu erstellen und diese Datensätze basierend auf vorhandenen XDM-Schemas oder Ad-hoc-Schemas zu strukturieren. Administratoren können dann [Hinzufügen und Bearbeiten von Datennutzungsbezeichnungen für das Schema](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) oder [Ad-hoc-Schema](./ad-hoc-schema-labels.md#edit-governance-labels). Sie können Beschriftungen auf Ihre Schemas über die [!UICONTROL Bezeichnungen] Arbeitsbereich im [!UICONTROL Schemas] Benutzeroberfläche.
+Um feldbasierte Zugriffsbeschränkungen für beschleunigte Datensätze zu erstellen, können Sie CTAS-Abfragen von Query Service verwenden, um beschleunigte Datensätze zu erstellen und diese Datensätze basierend auf vorhandenen XDM-Schemas oder Ad-hoc-Schemas zu strukturieren. Administratoren können dann [Hinzufügen und Bearbeiten von Datennutzungsbezeichnungen für das Schema](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) oder [Ad-hoc-Schema](./ad-hoc-schema-labels.md#edit-governance-labels). Sie können Beschriftungen auf Ihre Schemata anwenden, erstellen und bearbeiten über die [!UICONTROL Bezeichnungen] Arbeitsbereich im [!UICONTROL Schemas] Benutzeroberfläche.
 
-Datennutzungsbezeichnungen können auch [direkt auf den Datensatz angewendet oder bearbeitet](../../data-governance/labels/user-guide.md#add-labels) über die Benutzeroberfläche &quot;Datensätze&quot;oder über die Zugriffskontrolle erstellt [!UICONTROL Bezeichnungen] Arbeitsbereich. Informationen finden Sie im Handbuch [eine neue Bezeichnung erstellen](../../access-control/abac/ui/labels.md) für weitere Informationen.
+Datennutzungsbezeichnungen können auch [direkt auf den Datensatz angewendet oder bearbeitet](../../data-governance/labels/user-guide.md#add-labels) über die Benutzeroberfläche &quot;Datensätze&quot;oder über die Zugriffskontrolle erstellt [!UICONTROL Bezeichnungen] Arbeitsbereich. Siehe Handbuch zum [eine neue Bezeichnung erstellen](../../access-control/abac/ui/labels.md) für weitere Informationen.
 
 Der Benutzerzugriff auf einzelne Spalten kann dann über die angehängten Datennutzungsbezeichnungen und die Berechtigungssätze gesteuert werden, die auf die den Benutzern zugewiesenen Rollen angewendet werden.
 
@@ -141,21 +140,21 @@ Siehe Handbuch zu [SSL-Optionen für Client-Verbindungen von Drittanbietern mit 
 
 Verschlüsselung ist die Verwendung eines algorithmischen Prozesses, um Daten in kodierten und unlesbaren Text umzuwandeln, um sicherzustellen, dass die Informationen geschützt sind und ohne Entschlüsselungsschlüssel nicht zugänglich sind.
 
-Die Datenkonformität von Query Service stellt sicher, dass Daten immer verschlüsselt werden. Daten-in-Transit sind immer HTTPS-konform und Daten im Ruhezustand werden in einem Azure Data Lake-Speicher mit Schlüsseln auf Systemebene verschlüsselt. Weitere Informationen finden Sie in der Dokumentation unter [Verschlüsseln von Daten in Adobe Experience Platform](../../landing/governance-privacy-security/encryption.md) für weitere Informationen. Weitere Informationen dazu, wie ruhende Daten in Azure Data Lake Storage verschlüsselt werden, finden Sie in der [offizielle Azure-Dokumentation](https://docs.microsoft.com/de-de/azure/data-lake-store/data-lake-store-encryption).
+Die Datenkonformität von Query Service stellt sicher, dass Daten immer verschlüsselt werden. Daten-in-Transit sind immer HTTPS-konform und Daten im Ruhezustand werden in einem Azure Data Lake-Speicher mit Schlüsseln auf Systemebene verschlüsselt. Siehe die Dokumentation unter [Verschlüsseln von Daten in Adobe Experience Platform](../../landing/governance-privacy-security/encryption.md) für weitere Informationen. Weitere Informationen dazu, wie ruhende Daten in Azure Data Lake Storage verschlüsselt werden, finden Sie in der [offizielle Azure-Dokumentation](https://docs.microsoft.com/de-de/azure/data-lake-store/data-lake-store-encryption).
 
 <!-- Data-in-transit is always HTTPS compliant and similarly when the data is at rest in the data lake, the encryption is done with Customer Management Key (CMK), which is already supported by Data Lake Management. The currently supported version is TLS1.2. -->
 
-## Verfolgung {#audit}
+## Audit {#audit}
 
 Query Service zeichnet die Benutzeraktivität auf und kategorisiert diese Aktivität in verschiedene Protokolltypen. Logs liefern Informationen zu **who** ausgeführt **what** Aktion und **when**. Jede in einem Protokoll aufgezeichnete Aktion enthält Metadaten, die den Aktionstyp, das Datum und die Uhrzeit, die E-Mail-ID der oder des Benutzenden, die oder der die Aktion durchgeführt hat, und weitere für den Aktionstyp relevante Attribute angeben.
 
-Eine beliebige Protokollkategorie kann von einem Platform-Benutzer angefordert werden. In diesem Abschnitt finden Sie Details zum Typ der für Query Service erfassten Informationen und wo auf diese Informationen zugegriffen werden kann.
+Eine beliebige Protokollkategorie kann von einem Platform-Benutzer angefordert werden. In diesem Abschnitt finden Sie Details zum Typ der für Query Service erfassten Informationen und darüber, wo auf diese Informationen zugegriffen werden kann.
 
 ### Abfrageprotokolle {#query-logs}
 
 Über die Benutzeroberfläche der Abfrageprotokolle können Sie Ausführungsdetails für alle Abfragen überwachen und überprüfen, die entweder über den Abfrage-Editor oder die Query Service-API ausgeführt wurden. Dadurch erhalten Sie Transparenz bei Query Service-Aktivitäten, sodass Sie die Metadaten überprüfen können auf **all** die Abfragen, die in Query Service ausgeführt wurden. Sie enthält alle Arten von Abfragen, unabhängig davon, ob es sich um eine explorative, Batch- oder geplante Abfrage handelt.
 
-Der Zugriff auf Abfrageprotokolle erfolgt über die Platform-Benutzeroberfläche im [!UICONTROL Protokolle] des [!UICONTROL Abfragen] Arbeitsbereich.
+Der Zugriff auf Abfrageprotokolle erfolgt entweder über die Platform-Benutzeroberfläche im [!UICONTROL Protokolle] des [!UICONTROL Abfragen] Arbeitsbereich.
 
 ![Die Registerkarte &quot;Abfrage&quot;, auf der das Detailbedienfeld hervorgehoben ist.](../images/data-governance/overview/queries-log.png)
 
@@ -177,7 +176,7 @@ Nachfolgend finden Sie eine Liste mit drei erweiterten Serverprotokollen, die me
 
 1. **Meta-Abfrageprotokolle**: Wenn eine Abfrage ausgeführt wird, werden verschiedene zugehörige Backend-Unterabfragen (z. B. Parsing) ausgeführt. Diese Arten von Abfragen werden als &quot;Metadaten&quot;-Abfragen bezeichnet. Die entsprechenden Details finden Sie in den Prüfprotokollen.
 1. **Sitzungsprotokolle**: Das System erstellt ein Sitzungseintragsprotokoll für einen Benutzer, wenn er sich bei Query Service anmeldet, unabhängig davon, ob er eine Abfrage ausführt.
-1. **Clientverbindungsprotokolle von Drittanbietern**: Ein Konnektivitäts-Auditprotokoll wird generiert, wenn ein Benutzer Query Service erfolgreich mit einem Drittanbieter-Client verbindet.
+1. **Clientverbindungsprotokolle von Drittanbietern**: Ein Konnektivitätsprüfprotokoll wird generiert, wenn ein Benutzer Query Service erfolgreich mit einem Drittanbieter-Client verbindet.
 
 Siehe [Übersicht über Auditprotokolle](../../landing/governance-privacy-security/audit-logs/overview.md) Weitere Informationen dazu, wie Prüfprotokolle bei der Einhaltung von Datenanforderungen durch Ihr Unternehmen helfen können.
 
@@ -199,19 +198,19 @@ Nachdem Sie auf das Schema zugegriffen haben, können Sie [Beschriftungen auf ei
 
 [Privacy Service](../../privacy-service/home.md) hilft Ihnen bei der Verwaltung von Kundenanfragen beim Zugriff auf und beim Löschen ihrer Daten gemäß den gesetzlichen Datenschutzbestimmungen. Dazu durchsucht sie die Daten nach bereits vorhandenen Identifikatoren und greift je nach angefordertem Datenschutzauftrag auf diese Daten zu oder löscht sie. Die Daten müssen ordnungsgemäß gekennzeichnet werden, damit der Service feststellen kann, welche Felder während der Datenschutzaufträge aufgerufen oder gelöscht werden sollen. Daten, die Datenschutzanfragen unterliegen, müssen Kundenidentitätsinformationen enthalten, um die unterschiedlichen Daten mit der Person zu verknüpfen, für die die Datenschutzanfrage gilt. Query Service kann die von ihm verwendeten Daten mit einer eindeutigen Kennung anreichern, um Datenschutzaufträge zu erfüllen.
 
-Datenschutzanfragen können an den Data Lake oder den Profildatenspeicher gesendet werden. Aus dem Data Lake gelöschte Datensätze führen nicht zum Löschen von Profilen, die aus diesen Datensätzen stammen. Außerdem löscht ein Datenschutzauftrag zum Löschen personenbezogener Daten aus dem Data Lake ihr Profil nicht, sodass alle nach Abschluss des Datenschutzauftrags erfassten Informationen (die diese Profil-ID enthalten) dieses Profil normal aktualisieren. Dies bestätigt die Notwendigkeit, die in den Einzelschemata verwendeten Daten ordnungsgemäß zu ermitteln.
+Datenschutzanfragen können an den Data Lake oder den Profildatenspeicher gesendet werden. Aus dem Data Lake gelöschte Datensätze führen nicht zum Löschen von Profilen, die aus diesen Datensätzen stammen. Außerdem löscht ein Datenschutzauftrag zum Löschen personenbezogener Daten aus dem Data Lake ihr Profil nicht, sodass alle nach Abschluss des Datenschutzauftrags erfassten Informationen (die diese Profil-ID enthalten) dieses Profil normal aktualisieren. Dies bestätigt die Notwendigkeit, die in Ad-hoc-Schemata verwendeten Daten ordnungsgemäß zu ermitteln.
 
 Weitere Informationen finden Sie in der Dokumentation zum Privacy Service . [Identitätsdaten für Datenschutzanfragen](../../privacy-service/identity-data.md) und wie Sie Ihre Datenvorgänge konfigurieren und Adobe-Technologien nutzen können, um die entsprechenden Identitätsinformationen für Datenschutzanfragen von Kunden effektiv abzurufen.
 
 Funktionen von Query Service für Data Governance vereinfachen und optimieren die Datenkategorisierung und Einhaltung von Datennutzungsregeln. Sobald die Daten identifiziert wurden, können Sie mit Query Service die primäre Identität für alle Ausgabedatensätze zuweisen. You **must** Fügen Sie dem Datensatz Identitäten hinzu, um Datenschutzanfragen zu erleichtern und die Einhaltung von Datenanforderungen zu erreichen.
 
-Schemadatenfelder können über die Platform-Benutzeroberfläche als Identitätsfeld festgelegt werden. Query Service ermöglicht Ihnen außerdem, [Markieren Sie die primären Identitäten mit dem SQL-Befehl &#39;ALTER TABLE&#39;.](../sql/syntax.md#alter-table). Festlegen einer Identität mithilfe der `ALTER TABLE` -Befehl ist insbesondere dann nützlich, wenn Datensätze mit SQL erstellt werden, anstatt über die Platform-Benutzeroberfläche direkt aus einem Schema zu gelangen. Anweisungen dazu finden Sie in der Dokumentation . [Identitätsfelder in der Benutzeroberfläche definieren](../../xdm/ui/fields/identity.md) bei der Verwendung von Standardschemata.
+Schemadatenfelder können über die Platform-Benutzeroberfläche als Identitätsfeld festgelegt werden. Query Service ermöglicht Ihnen außerdem Folgendes: [Markieren Sie die primären Identitäten mit dem SQL-Befehl &#39;ALTER TABLE&#39;.](../sql/syntax.md#alter-table). Festlegen einer Identität mithilfe der `ALTER TABLE` -Befehl ist insbesondere dann nützlich, wenn Datensätze mit SQL erstellt werden, anstatt über die Platform-Benutzeroberfläche direkt aus einem Schema zu gelangen. Anweisungen dazu finden Sie in der Dokumentation [Identitätsfelder in der Benutzeroberfläche definieren](../../xdm/ui/fields/identity.md) bei der Verwendung von Standardschemata.
 
 <!-- COMMENTING OUT DATA HYGEINE SECTION TEMPORARILY UNTIL IT IS GA. currently it is in Beta only.
 
 ## Data hygiene 
 
-"Data hygiene" refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated, or incomplete. It is important to ensure adequate data hygiene along every step of the data's journey and even from the initial data storage location. In Query Service, this is either the data lake or the data warehouse.
+"Data hygiene" refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated, or incomplete. It is important to ensure adequate data hygiene along every step of the data's journey and even from the initial data storage location. 
 
 It is necessary to assign an identity to a derived dataset to allow their management by the [!DNL Data Hygiene] service. Conversely, when you create aggregated data on an accelerated data store, the aggregated data cannot be used to derive the original data. As a result of this data aggregation, the need to raise data hygiene requests is eliminated. == THIS APPEARS TO BE A PRIVACY USE CASE NAD NOT DATA HYGEINE ++  this is confusing.
 

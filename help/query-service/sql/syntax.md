@@ -4,16 +4,16 @@ solution: Experience Platform
 title: SQL-Syntax in Query Service
 description: Dieses Dokument zeigt die von Adobe Experience Platform Query Service unterstützte SQL-Syntax.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: c42a7cd46f79bb144176450eafb00c2f81409380
+source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
 workflow-type: tm+mt
-source-wordcount: '3761'
+source-wordcount: '3860'
 ht-degree: 9%
 
 ---
 
 # SQL-Syntax in Query Service
 
-Adobe Experience Platform Query Service bietet die Möglichkeit, standardmäßige ANSI-SQL für `SELECT` -Anweisungen und andere eingeschränkte Befehle. In diesem Dokument wird die von [!DNL Query Service].
+Adobe Experience Platform Query Service bietet die Möglichkeit, standardmäßige ANSI-SQL für `SELECT` -Anweisungen und anderen eingeschränkten Befehlen. In diesem Dokument wird die von [!DNL Query Service].
 
 ## Abfragen auswählen {#select-queries}
 
@@ -113,7 +113,7 @@ SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C
 SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
 ```
 
-Bitte beachten Sie, dass eine `SNAPSHOT` -Klausel funktioniert mit einem Tabellen- oder Tabellenalias, jedoch nicht über einer Unter-Abfrage oder Ansicht. A `SNAPSHOT` -Klausel funktioniert überall in `SELECT` -Abfrage auf eine Tabelle angewendet werden.
+Bitte beachten Sie, dass eine `SNAPSHOT` -Klausel funktioniert mit einem Tabellen- oder Tabellenalias, jedoch nicht über einer Unter-Abfrage oder Ansicht. A `SNAPSHOT` -Klausel funktioniert überall in einer `SELECT` -Abfrage auf eine Tabelle angewendet werden.
 
 Darüber hinaus können Sie `HEAD` und `TAIL` als spezielle Offset-Werte für Momentaufnahmen-Klauseln. Verwenden `HEAD` bezieht sich auf einen Offset vor dem ersten Snapshot, während `TAIL` bezieht sich auf einen Versatz nach dem letzten Schnappschuss.
 
@@ -125,10 +125,9 @@ Darüber hinaus können Sie `HEAD` und `TAIL` als spezielle Offset-Werte für Mo
 >
 >- Wenn das optionale Fallback-Verhalten-Flag nicht gesetzt ist, wird ein Fehler zurückgegeben.
 
-
 ### WHERE-Klausel
 
-Standardmäßig werden Übereinstimmungen von einem `WHERE` -Klausel `SELECT` -Abfrage die Groß-/Kleinschreibung beachten. Wenn bei Treffern nicht zwischen Groß- und Kleinschreibung unterschieden werden soll, können Sie den Suchbegriff `ILIKE` anstelle von `LIKE`.
+Standardmäßig werden Übereinstimmungen von einem `WHERE` einer `SELECT` -Abfrage muss zwischen Groß- und Kleinschreibung unterschieden werden. Wenn bei Treffern nicht zwischen Groß- und Kleinschreibung unterschieden werden soll, können Sie den Suchbegriff `ILIKE` anstelle von `LIKE`.
 
 ```sql
     [ WHERE condition { LIKE | ILIKE | NOT LIKE | NOT ILIKE } pattern ]
@@ -165,7 +164,7 @@ ON join condition
 
 ### UNION, INTERSECT und EXCEPT
 
-Die `UNION`, `INTERSECT`und `EXCEPT` -Klauseln werden verwendet, um gleichartige Zeilen aus zwei oder mehr Tabellen zu kombinieren oder auszuschließen:
+Die `UNION`, `INTERSECT`, und `EXCEPT` -Klauseln werden verwendet, um gleichartige Zeilen aus zwei oder mehr Tabellen zu kombinieren oder auszuschließen:
 
 ```sql
 SELECT statement 1
@@ -338,7 +337,7 @@ DROP VIEW IF EXISTS v1
 
 ## Anonymer Block
 
-Ein anonymer Block besteht aus zwei Abschnitten: ausführbare Abschnitte und Abschnitte zur Ausnahmebehandlung. In einem anonymen Block ist der Abschnitt &quot;Ausführbare Datei&quot;obligatorisch. Der Abschnitt zur Ausnahmebehandlung ist jedoch optional.
+Ein anonymer Block besteht aus zwei Abschnitten: ausführbare Dateien und Abschnitte zur Bearbeitung von Ausnahmen. In einem anonymen Baustein ist der Abschnitt &quot;Ausführbare Datei&quot;obligatorisch. Der Abschnitt zur Ausnahmebehandlung ist jedoch optional.
 
 Das folgende Beispiel zeigt, wie ein Block mit einer oder mehreren Anweisungen erstellt wird, die zusammen ausgeführt werden sollen:
 
@@ -373,11 +372,11 @@ EXCEPTION
 $$END;
 ```
 
-### Auto to JSON {#auto-to-json}
+### Automatisch in JSON {#auto-to-json}
 
 Query Service unterstützt eine optionale Einstellung auf Sitzungsebene, um komplexe Felder der obersten Ebene aus interaktiven SELECT-Abfragen als JSON-Zeichenfolgen zurückzugeben. Die `auto_to_json` -Einstellung ermöglicht die Rückgabe von Daten aus komplexen Feldern als JSON und die anschließende Analyse in JSON-Objekten mithilfe von Standardbibliotheken.
 
-Feature Flag setzen `auto_to_json` auf true gesetzt, bevor Sie Ihre SELECT-Abfrage mit komplexen Feldern ausführen.
+Feature Flag setzen `auto_to_json` auf &quot;true&quot;gesetzt, bevor Sie Ihre SELECT-Abfrage mit komplexen Feldern ausführen.
 
 ```sql
 set auto_to_json=true; 
@@ -403,7 +402,7 @@ Die Ergebnisse lauten wie folgt:
 
 #### Nachdem Sie die `auto_to_json` Markierung
 
-Die folgende Tabelle zeigt den Unterschied in den Ergebnissen, die die `auto_to_json` hat auf den resultierenden Datensatz Einfluss. Dieselbe SELECT-Abfrage wurde in beiden Szenarien verwendet.
+Die folgende Tabelle zeigt den Unterschied in den Ergebnissen, die die Variable `auto_to_json` hat auf den resultierenden Datensatz Einfluss. Dieselbe SELECT-Abfrage wurde in beiden Szenarien verwendet.
 
 ```console
                 _id                |   receivedTimestamp   |       timestamp       |                                                                                                                   _experience                                                                                                                   |           application            |             commerce             |    dataSource    |                                                                  device                                                                   |                                                   endUserIDs                                                   |                                                                                                                                                                                           environment                                                                                                                                                                                            |                             identityMap                              |                                                                                            placeContext                                                                                            |      userActivityRegion      |                                                                                     web                                                                                      | _adcstageforpqs
@@ -456,7 +455,7 @@ $$;
 
 Es ist wichtig, Ihre Daten-Assets beim Wachstum im Adobe Experience Platform Data Lake logisch zu organisieren. Query Service erweitert SQL-Konstrukte, mit denen Sie Daten-Assets logisch in einer Sandbox gruppieren können. Diese Organisationsmethode ermöglicht die Freigabe von Daten-Assets zwischen Schemas, ohne dass diese physisch verschoben werden müssen.
 
-Die folgenden SQL-Konstrukte mit SQL-Standardsyntax werden unterstützt, damit Sie Ihre Daten logisch organisieren können.
+Die folgenden SQL-Konstrukte mit SQL-Standardsyntax werden zur logischen Organisation Ihrer Daten unterstützt.
 
 ```SQL
 CREATE DATABASE dg1;
@@ -467,11 +466,11 @@ ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
 ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
 
-Siehe Handbuch unter [Logische Organisation von Daten-Assets](../best-practices/organize-data-assets.md) für eine detaillierte Erläuterung der Best Practices für Query Service.
+Siehe Handbuch unter [Logische Organisation von Datenelementen](../best-practices/organize-data-assets.md) für eine detaillierte Erläuterung der Best Practices für Query Service.
 
 ## Tabelle vorhanden
 
-Die `table_exists` Der SQL-Befehl wird verwendet, um zu überprüfen, ob eine Tabelle im System vorhanden ist. Der Befehl gibt einen booleschen Wert zurück: `true`, wenn eine Tabelle **vorhanden** ist, und `false`, wenn **keine** Tabelle vorhanden ist.
+Die `table_exists` Der SQL-Befehl wird verwendet, um zu überprüfen, ob eine Tabelle im System vorhanden ist oder nicht. Der Befehl gibt einen booleschen Wert zurück: `true`, wenn eine Tabelle **vorhanden** ist, und `false`, wenn **keine** Tabelle vorhanden ist.
 
 Wenn Sie überprüfen, ob eine Tabelle vorhanden ist, bevor Sie die Anweisungen ausführen, wird die `table_exists` -Funktion vereinfacht das Schreiben eines anonymen Blocks, um beide `CREATE` und `INSERT INTO` Anwendungsbeispiele.
 
@@ -541,9 +540,9 @@ Die Werte, die aus dem `source_dataset` werden zum Ausfüllen der Zieltabelle ve
 | SKU | _experience  | quantity | priceTotal |
 |---------------------|-----------------------------------|----------|--------------|
 | product-id-1 | (&quot;(&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;)&quot;)&quot;) | 5 | 10.5 |
-| product-id-5 | (&quot;(&quot;(&quot;(&quot;(A, pass, B, NULL)&quot;)&quot;)&quot;)&quot;) |  |  |
-| product-id-2 | (&quot;(&quot;(&quot;(&quot;(AF, C, D, NULL)&quot;)&quot;)&quot;)&quot;) | 6 | 40 |
-| product-id-4 | (&quot;(&quot;(&quot;(&quot;(BM, pass, NA, NULL)&quot;)&quot;)&quot;)&quot;) | 3 | 12 |
+| product-id-5 | (&quot;(&quot;(&quot;(&quot;(A, pass, B, NULL)&quot;)&quot;)&quot;)&quot;) |          |              |
+| product-id-2 | (&quot;(&quot;(&quot;(AF, C, D, NULL)&quot;)&quot;)&quot;) | 6 | 40 |
+| product-id-4 | (&quot;(&quot;(&quot;(BM, pass, NA, NULL)&quot;)&quot;)&quot;) | 3 | 12 |
 
 ## [!DNL Spark] SQL-Befehle
 
@@ -551,7 +550,7 @@ Der folgende Unterabschnitt behandelt die von Query Service unterstützten Spark
 
 ### SET
 
-Die `SET` -Befehl legt eine Eigenschaft fest und gibt entweder den Wert einer vorhandenen Eigenschaft zurück oder listet alle vorhandenen Eigenschaften auf. Wenn für einen vorhandenen Eigenschaftenschlüssel ein Wert angegeben wird, wird der alte Wert überschrieben.
+Die `SET` gibt eine Eigenschaft ein und gibt entweder den Wert einer vorhandenen Eigenschaft zurück oder listet alle vorhandenen Eigenschaften auf. Wenn für einen vorhandenen Eigenschaftenschlüssel ein Wert angegeben wird, wird der alte Wert überschrieben.
 
 ```sql
 SET property_key = property_value
@@ -600,7 +599,7 @@ Im Folgenden finden Sie eine Liste statistischer Berechnungen, die nach Verwendu
 
 Sie können nun Statistiken auf Spaltenebene berechnen über [!DNL Azure Data Lake Storage] (ADLS)-Datensätzen mit der `COMPUTE STATISTICS` und `SHOW STATISTICS` SQL-Befehle. Berechnen Sie Spaltenstatistiken für den gesamten Datensatz, eine Untergruppe eines Datensatzes, alle Spalten oder eine Untergruppe von Spalten.
 
-`COMPUTE STATISTICS` erweitert die `ANALYZE TABLE` Befehl. Die Variable `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`und `SHOW STATISTICS` -Befehle werden in Data Warehouse-Tabellen nicht unterstützt. Diese Erweiterungen für `ANALYZE TABLE` -Befehl werden derzeit nur für ADLS-Tabellen unterstützt.
+`COMPUTE STATISTICS` erweitert die `ANALYZE TABLE` Befehl. Die Variable `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, und `SHOW STATISTICS` -Befehle werden für beschleunigte Store-Tabellen nicht unterstützt. Diese Erweiterungen für den Befehl `ANALYZE TABLE` werden derzeit nur für ADLS-Tabellen unterstützt.
 
 **Beispiel**
 
@@ -608,28 +607,43 @@ Sie können nun Statistiken auf Spaltenebene berechnen über [!DNL Azure Data La
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS  FOR COLUMNS (commerce, id, timestamp);
 ```
 
+Die `FILTER CONTEXT` berechnet basierend auf der bereitgestellten Filterbedingung Statistiken über eine Teilmenge des Datensatzes. Die `FOR COLUMNS` -Befehl dient zur Bestimmung bestimmter Spalten für die Analyse.
+
 >[!NOTE]
 >
->`FILTER CONTEXT` berechnet Statistiken über eine Teilmenge des Datensatzes anhand der bereitgestellten Filterbedingung und `FOR COLUMNS` gibt spezifische Spalten für die Analyse an.
+>Die `Statistics ID` und die generierten Statistiken gelten nur für jede Sitzung und können nicht über verschiedene PSQL-Sitzungen hinweg aufgerufen werden.<br><br>Einschränkungen:<ul><li>Die Erstellung von Statistiken wird für Array- oder Zuordnungsdatentypen nicht unterstützt</li><li>Berechnete Statistiken werden nicht beibehalten</li></ul><br><br>Optionen:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>Standardmäßig ist diese Markierung auf „true“ eingestellt. Wenn also Statistiken für einen Datentyp angefordert werden, der nicht unterstützt wird, wird kein Fehler ausgegeben, stattdessen schlägt er still fehl.<br>Um Benachrichtigungen zu Fehlern zu aktivieren, wenn Statistiken zu nicht unterstützten Datentypen angefordert werden, verwenden Sie: `SET skip_stats_for_complex_datatypes = false`.
 
 Die Konsolenausgabe wird wie unten dargestellt angezeigt.
 
 ```console
-  Statistics ID 
-------------------
- ULKQiqgUlGbTJWhO
+|     Statistics ID      | 
+| ---------------------- |
+| adc_geometric_stats_1  |
 (1 row)
 ```
 
-Sie können dann die zurückgegebene Statistiken-ID verwenden, um die berechneten Statistiken mit der `SHOW STATISTICS` Befehl.
+Sie können die berechneten Statistiken dann direkt abfragen, indem Sie auf die `Statistics ID`. Die folgende Beispielanweisung ermöglicht es Ihnen, die Ausgabe vollständig anzuzeigen, wenn sie mit der `Statistics ID` oder den Aliasnamen. Weitere Informationen zu dieser Funktion finden Sie unter [Alias-Namensdokumentation](../essential-concepts/dataset-statistics.md#alias-name).
 
 ```sql
-SHOW STATISTICS FOR <statistics_ID>
+-- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
+SELECT * FROM adc_geometric_stats_1;
 ```
 
->[!NOTE]
->
->`COMPUTE STATISTICS` unterstützt keine Array- oder Zuordnungs-Datentypen. Sie können eine `skip_stats_for_complex_datatypes` Markierung, die benachrichtigt werden soll, oder Fehler-out, wenn der Eingabedataframe Spalten mit Arrays und Zuordnungs-Datentypen enthält. Standardmäßig ist das Flag auf &quot;true&quot;gesetzt. Verwenden Sie den folgenden Befehl, um Benachrichtigungen oder Fehler zu aktivieren: `SET skip_stats_for_complex_datatypes = false`.
+Verwenden Sie die `SHOW STATISTICS` -Befehl, um die Metadaten für alle temporären Statistiktabellen anzuzeigen, die in der Sitzung generiert wurden. Mithilfe dieses Befehls können Sie den Umfang Ihrer statistischen Analyse verfeinern.
+
+```sql
+SHOW STATISTICS;
+```
+
+Nachfolgend finden Sie ein Beispiel für die Ausgabe SHOW STATISTICS.
+
+```console
+      statsId         |   tableName   | columnSet |         filterContext       |      timestamp
+----------------------+---------------+-----------+-----------------------------+--------------------
+adc_geometric_stats_1 | adc_geometric |   (age)   |                             | 25/06/2023 09:22:26
+demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          | 25/06/2023 12:50:26
+age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
+```
 
 Siehe [Dokumentation zu Datensatzstatistiken](../essential-concepts/dataset-statistics.md) für weitere Informationen.
 
@@ -700,7 +714,7 @@ DECLARE name CURSOR FOR query
 
 Die `EXECUTE` -Befehl wird zum Ausführen einer zuvor vorbereiteten Anweisung verwendet. Da vorbereitete Anweisungen nur für die Dauer einer Sitzung vorhanden sind, muss die vorbereitete Anweisung von einer `PREPARE` -Anweisung, die zuvor in der aktuellen Sitzung ausgeführt wurde. Weitere Informationen zur Verwendung vorbereiteter Anweisungen finden Sie im [`PREPARE` command](#prepare) Abschnitt.
 
-Wenn die Variable `PREPARE` -Anweisung, die die Anweisung erstellt hat, die einige Parameter angegeben hat, muss ein kompatibler Satz von Parametern an die `EXECUTE` -Anweisung. Wenn diese Parameter nicht übergeben werden, wird ein Fehler erzeugt.
+Wenn die Variable `PREPARE` -Anweisung, die die Anweisung erstellt hat, die einige Parameter angegeben hat, muss ein kompatibler Satz von Parametern an `EXECUTE` -Anweisung. Wenn diese Parameter nicht übergeben werden, wird ein Fehler erzeugt.
 
 ```sql
 EXECUTE name [ ( parameter ) ]
@@ -810,7 +824,7 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     [ FOR { UPDATE | SHARE } [ OF table_name [, ...] ] [ NOWAIT ] [...] ]
 ```
 
-Weitere Informationen zu den standardmäßigen SELECT-Abfrageparametern finden Sie im [SELECT-Abfrageabschnitt](#select-queries). In diesem Abschnitt werden nur Parameter aufgelistet, die ausschließlich für die `SELECT INTO` Befehl.
+Weitere Informationen zu den standardmäßigen SELECT-Abfrageparametern finden Sie im [Abfrageabschnitt auswählen](#select-queries). In diesem Abschnitt werden nur Parameter aufgelistet, die ausschließlich für die `SELECT INTO` Befehl.
 
 | Parameter | Beschreibung |
 | ------ | ------ |
@@ -828,7 +842,7 @@ SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 
 ### SHOW
 
-Die `SHOW` zeigt die aktuelle Einstellung der Laufzeitparameter an. Diese Variablen können mithilfe der Variablen `SET` Anweisung, indem Sie die `postgresql.conf` Konfigurationsdatei über `PGOPTIONS` Umgebungsvariable (bei Verwendung von libpq oder einer libpq-basierten Anwendung) oder durch Befehlszeilenflags beim Starten des Postgres-Servers.
+Die `SHOW` zeigt die aktuelle Einstellung der Laufzeitparameter an. Diese Variablen können mithilfe der Variablen `SET` Anweisung, indem Sie die `postgresql.conf` Konfigurationsdatei über die `PGOPTIONS` Umgebungsvariable (bei Verwendung von libpq oder einer libpq-basierten Anwendung) oder durch Befehlszeilenflags beim Starten des Postgres-Servers.
 
 ```sql
 SHOW name
@@ -872,7 +886,7 @@ COPY query
 
 >[!NOTE]
 >
->Der vollständige Ausgabepfad wird `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
+>Der vollständige Ausgabepfad `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
 
 ### ALTERSTABELLE {#alter-table}
 
@@ -957,8 +971,8 @@ In der folgenden Tabelle sind die zulässigen Datentypen für das Hinzufügen vo
 | 6 | `double` | `float8` | `double precision` | `FLOAT8` und `FLOAT` sind gültige Synonyme für `DOUBLE PRECISION`. `double precision` ist ein Gleitkomma-Datentyp. Gleitkommawerte werden in 8 Byte gespeichert. |
 | 7 | `double precision` | `float8` | `double precision` | `FLOAT8` ist ein gültiges Synonym für `double precision`.`double precision` ist ein Gleitkomma-Datentyp. Gleitkommawerte werden in 8 Byte gespeichert. |
 | 8 | `date` | `date` | `date` | Die `date` -Datentyp sind 4-Byte-gespeicherte Kalenderdatumswerte ohne Zeitstempelinformationen. Der Datumsbereich reicht vom 01-01-0001 bis zum 12-31-999. |
-| 9 | `datetime` | `datetime` | `datetime` | Ein Datentyp, mit dem ein als Kalenderdatum und -uhrzeit ausgedrückter Zeitpunkt gespeichert wird. `datetime` umfasst die Kennzahlen für: Jahr, Monat, Tag, Stunde, Sekunde und Fraktion. A `datetime` Die Deklaration kann eine Teilmenge dieser Zeiteinheiten enthalten, die in dieser Sequenz zusammengefügt sind, oder sogar nur eine Zeiteinheit umfassen. |
-| 10 | `char(len)` | `string` | `char(len)` | Die `char(len)` -Keyword wird verwendet, um anzugeben, dass es sich bei dem Element um ein Zeichen fester Länge handelt. |
+| 9 | `datetime` | `datetime` | `datetime` | Ein Datentyp, mit dem ein als Kalenderdatum und -zeit ausgedrückter Zeitpunkt gespeichert wird. `datetime` umfasst die Zähler für: Jahr, Monat, Tag, Stunde, Sekunde und Fraktion. A `datetime` Die Deklaration kann eine Teilmenge dieser Zeiteinheiten enthalten, die in dieser Sequenz zusammengefügt sind, oder sogar nur eine Zeiteinheit umfassen. |
+| 10 | `char(len)` | `string` | `char(len)` | Die `char(len)` -Keyword wird verwendet, um anzugeben, dass es sich bei dem Element um ein Zeichen mit fester Länge handelt. |
 
 #### SCHEMA HINZUFÜGEN
 
@@ -992,7 +1006,7 @@ ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
 | ------ | ------ |
 | `table_name` | Der Name der Tabelle, die Sie bearbeiten. |
 | `column_name` | Der Name der Spalte, die Sie hinzufügen möchten. |
-| `data_type` | Der Datentyp der Spalte, die Sie hinzufügen möchten. Zu den unterstützten Datentypen zählen: bigint, char, string, date, datetime, double, double Precision, integer, smallint, tinyint, varchar. |
+| `data_type` | Der Datentyp der Spalte, die Sie hinzufügen möchten. Zu den unterstützten Datentypen gehören: bigint, char, string, date, datetime, double, double Precision, integer, smallint, tinyint, varchar. |
 
 ### PRIMÄRE SCHLÜSSEL ANZEIGEN
 
@@ -1011,7 +1025,7 @@ SHOW PRIMARY KEYS
 
 ### AUSLÄNDLICHE SCHLÜSSEL ANZEIGEN
 
-Die `SHOW FOREIGN KEYS` enthält alle Fremdschlüsseleinschränkungen für die jeweilige Datenbank.
+Die `SHOW FOREIGN KEYS` führt alle Fremdschlüsseleinschränkungen für die jeweilige Datenbank auf.
 
 ```sql
 SHOW FOREIGN KEYS
