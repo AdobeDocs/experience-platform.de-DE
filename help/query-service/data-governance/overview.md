@@ -2,9 +2,9 @@
 title: Data Governance in Query Service
 description: Dieser Überblick behandelt die wichtigsten Elemente der Data Governance in Experience Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
+source-git-commit: c3ce6548e18078e604ecd5db276eb162935f6181
 workflow-type: tm+mt
-source-wordcount: '2843'
+source-wordcount: '3132'
 ht-degree: 3%
 
 ---
@@ -23,11 +23,11 @@ Die folgenden Kategorien sind bei der Verwendung von Query Service für die Einh
 1. Audit
 1. Datennutzung
 1. Datenschutz   
-<!-- 1. Data hygiene -->
+1. Datenhygiene
 
 In diesem Dokument werden die verschiedenen Governance-Bereiche untersucht und aufgezeigt, wie die Einhaltung von Datenanforderungen bei der Verwendung von Query Service erleichtert werden kann. Siehe [Governance, Datenschutz und Sicherheitsübersicht](../../landing/governance-privacy-security/overview.md) für umfassendere Informationen darüber, wie Sie mit Experience Platform Kundendaten verwalten und Compliance sicherstellen können.
 
-## Sicherheit
+## Sicherheit {#security}
 
 Die Datensicherheit ist der Prozess des Schutzes von Daten vor unbefugtem Zugriff und der Sicherstellung eines sicheren Zugriffs während des gesamten Lebenszyklus. Der sichere Zugriff wird in der Experience Platform durch die Anwendung von Rollen und Berechtigungen durch Funktionen wie rollenbasierte Zugriffssteuerung und attributbasierte Zugriffssteuerung aufrechterhalten. Berechtigungen, SSL und Datenverschlüsselung werden ebenfalls verwendet, um den Datenschutz in der gesamten Plattform sicherzustellen.
 
@@ -35,8 +35,7 @@ Die Sicherheit in Bezug auf Query Service ist in folgende Kategorien unterteilt:
 
 * [Zugriffskontrolle](#access-control): Der Zugriff wird über Rollen und Berechtigungen gesteuert, einschließlich Berechtigungen auf Datensatz- und Spaltenebene.
 * Sichern von Daten durch [connection](#connectivity): Daten werden durch Platform- und externe Clients gesichert, indem eine begrenzte Verbindung mit ablaufenden oder nicht ablaufenden Anmeldeinformationen hergestellt wird.
-* Sichern von Daten durch [Verschlüsselung und Schlüssel auf Systemebene](#encryption): Die Datensicherheit wird durch Verschlüsselung sichergestellt, wenn die Daten im Ruhezustand sind.
-<!-- * Securing data through [encryption and customer-managed keys (CMK)](#encryption-and-customer-managed-keys): Access controlled through encryption when data is at rest. -->
+* Sichern von Daten durch [Verschlüsselung und kundenverwaltete Schlüssel (CMK)](#encryption-and-customer-managed-keys): Zugriff wird durch Verschlüsselung gesteuert, wenn Daten im Ruhezustand sind.
 
 ### Zugangssteuerung {#access-control}
 
@@ -132,17 +131,14 @@ Für mehr Sicherheit bietet Query Service native Unterstützung für SSL-Verbind
 
 Siehe Handbuch zu [SSL-Optionen für Client-Verbindungen von Drittanbietern mit Query Service](../clients/ssl-modes.md) für weitere Informationen, einschließlich der Verbindung mit dem `verify-full` SSL-Parameterwert.
 
-### Encryption-Dienst {#encryption}
-
-<!-- Commented out lines to be included when customer-managed keys is released. Link out to the new document. -->
-
-<!-- ### Encryption and customer-managed keys (CMK) {#encryption-and-customer-managed-keys} -->
+### Verschlüsselung und kundenverwaltete Schlüssel (CMK) {#encryption-and-customer-managed-keys}
 
 Verschlüsselung ist die Verwendung eines algorithmischen Prozesses, um Daten in kodierten und unlesbaren Text umzuwandeln, um sicherzustellen, dass die Informationen geschützt sind und ohne Entschlüsselungsschlüssel nicht zugänglich sind.
 
 Die Datenkonformität von Query Service stellt sicher, dass Daten immer verschlüsselt werden. Daten-in-Transit sind immer HTTPS-konform und Daten im Ruhezustand werden in einem Azure Data Lake-Speicher mit Schlüsseln auf Systemebene verschlüsselt. Siehe die Dokumentation unter [Verschlüsseln von Daten in Adobe Experience Platform](../../landing/governance-privacy-security/encryption.md) für weitere Informationen. Weitere Informationen dazu, wie ruhende Daten in Azure Data Lake Storage verschlüsselt werden, finden Sie in der [offizielle Azure-Dokumentation](https://docs.microsoft.com/de-de/azure/data-lake-store/data-lake-store-encryption).
 
-<!-- Data-in-transit is always HTTPS compliant and similarly when the data is at rest in the data lake, the encryption is done with Customer Management Key (CMK), which is already supported by Data Lake Management. The currently supported version is TLS1.2. -->
+Daten-in-Transit sind immer HTTPS-konform und auf ähnliche Weise, wenn sich die Daten im Data Lake befinden, erfolgt die Verschlüsselung mit dem Customer Management Key (CMK), der bereits von Data Lake Management unterstützt wird. Die derzeit unterstützte Version ist TLS1.2. Siehe [Dokumentation zu kundenverwalteten Schlüsseln (CMK)](../../landing/governance-privacy-security/customer-managed-keys.md) , um zu erfahren, wie Sie eigene Verschlüsselungsschlüssel für in Adobe Experience Platform gespeicherte Daten einrichten.
+
 
 ## Audit {#audit}
 
@@ -206,14 +202,14 @@ Funktionen von Query Service für Data Governance vereinfachen und optimieren di
 
 Schemadatenfelder können über die Platform-Benutzeroberfläche als Identitätsfeld festgelegt werden. Query Service ermöglicht Ihnen außerdem Folgendes: [Markieren Sie die primären Identitäten mit dem SQL-Befehl &#39;ALTER TABLE&#39;.](../sql/syntax.md#alter-table). Festlegen einer Identität mithilfe der `ALTER TABLE` -Befehl ist insbesondere dann nützlich, wenn Datensätze mit SQL erstellt werden, anstatt über die Platform-Benutzeroberfläche direkt aus einem Schema zu gelangen. Anweisungen dazu finden Sie in der Dokumentation [Identitätsfelder in der Benutzeroberfläche definieren](../../xdm/ui/fields/identity.md) bei der Verwendung von Standardschemata.
 
-<!-- COMMENTING OUT DATA HYGEINE SECTION TEMPORARILY UNTIL IT IS GA. currently it is in Beta only.
+## Datenhygiene {#data-hygiene}
 
-## Data hygiene 
+&quot;Datenhygiene&quot;bezeichnet den Prozess der Reparatur oder Entfernung von Daten, die veraltet, ungenau, falsch formatiert, dupliziert oder unvollständig sein können. Diese Prozesse stellen sicher, dass Datensätze in allen Systemen korrekt und konsistent sind. Es ist wichtig, eine angemessene Datenhygiene während jedes Journey-Schritts der Daten und auch vom ursprünglichen Speicherort der Daten sicherzustellen. In Experience Platform Query Service ist dies entweder der Daten-Pool oder der beschleunigte Speicher.
 
-"Data hygiene" refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated, or incomplete. It is important to ensure adequate data hygiene along every step of the data's journey and even from the initial data storage location. 
+Sie können einem abgeleiteten Datensatz eine Identität zuweisen, um das Daten-Management entsprechend den zentralen Data Hygiene-Diensten von Platform zu ermöglichen.
 
-It is necessary to assign an identity to a derived dataset to allow their management by the [!DNL Data Hygiene] service. Conversely, when you create aggregated data on an accelerated data store, the aggregated data cannot be used to derive the original data. As a result of this data aggregation, the need to raise data hygiene requests is eliminated. == THIS APPEARS TO BE A PRIVACY USE CASE NAD NOT DATA HYGEINE ++  this is confusing.
+Wenn Sie dagegen einen aggregierten Datensatz im beschleunigten Speicher erstellen, können die aggregierten Daten nicht zum Ableiten der Originaldaten verwendet werden. Durch diese Datenaggregation wird die Notwendigkeit, die Anforderungen an die Datenhygiene zu erhöhen, beseitigt.
 
-An exception to this scenario is the case of deletion. If a data hygiene deletion is requested on a dataset and before the deletion is completed, another derived dataset query is executed, then the derived dataset will capture information from the original dataset. In this case, you must be mindful that if a request to delete a dataset has been sent, you must not execute any new derived dataset queries using the same dataset source. 
+Eine Ausnahme bildet der Fall des Löschens. Wenn eine Datenhygiene-Löschung für einen Datensatz angefordert wird und vor Abschluss der Löschung eine weitere abgeleitete Datensatzabfrage ausgeführt wird, erfasst der abgeleitete Datensatz Informationen aus dem ursprünglichen Datensatz. In diesem Fall müssen Sie darauf achten, dass Sie keine neu abgeleiteten Datensatzabfragen mit derselben Datensatzquelle ausführen dürfen, wenn eine Löschanfrage für einen Datensatz gesendet wurde.
 
-See the [data hygiene overview](../../hygiene/home.md) for more information on data hygiene in Adobe Experience Platform. -->
+Siehe [Übersicht über die Datenhygiene](../../hygiene/home.md) Weitere Informationen zur Datenhygiene in Adobe Experience Platform.
