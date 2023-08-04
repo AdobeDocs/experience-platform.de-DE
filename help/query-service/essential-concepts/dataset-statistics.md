@@ -1,16 +1,16 @@
 ---
 title: Berechnung der Datensatzstatistiken
 description: In diesem Dokument wird beschrieben, wie Sie mit SQL-Befehlen Statistiken auf Spaltenebene für Azure Data Lake Storage(ADLS)-Datensätze berechnen.
-source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
+source-git-commit: b94536be6e92354e237b99d36af13adf5a49afa7
 workflow-type: tm+mt
-source-wordcount: '1086'
-ht-degree: 38%
+source-wordcount: '1085'
+ht-degree: 37%
 
 ---
 
 # Berechnung der Datensatzstatistiken
 
-Sie können nun Statistiken auf Spaltenebene für [!DNL Azure Data Lake Storage](ADLS)-Datensätze mit den SQL-Befehlen `COMPUTE STATISTICS` und `SHOW STATISTICS` berechnen. Die SQL-Befehle, die Datensatzstatistiken berechnen, sind eine Erweiterung des Befehls `ANALYZE TABLE`. Vollständige Informationen zum Befehl `ANALYZE TABLE` finden Sie in der [SQL-Referenzdokumentation](../sql/syntax.md#analyze-table).
+Sie können nun Statistiken auf Spaltenebene berechnen über [!DNL Azure Data Lake Storage] (ADLS)-Datensätzen mit der `COMPUTE STATISTICS` SQL-Befehl. Die SQL-Befehle, die Datensatzstatistiken berechnen, sind eine Erweiterung des Befehls `ANALYZE TABLE`. Vollständige Informationen zum Befehl `ANALYZE TABLE` finden Sie in der [SQL-Referenzdokumentation](../sql/syntax.md#analyze-table).
 
 >[!NOTE]
 >
@@ -20,7 +20,7 @@ So zeigen Sie die Statistiken an, die mit der `ANALYZE TABLE COMPUTE STATISTICS`
 
 >[!IMPORTANT]
 >
->Die `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, und `SHOW STATISTICS` -Befehle werden für beschleunigte Store-Tabellen nicht unterstützt. Diese Erweiterungen für den Befehl `ANALYZE TABLE` werden derzeit nur für ADLS-Tabellen unterstützt. Weitere Informationen finden Sie im [ANALYZE TABLE-Abschnitt](../sql/syntax.md#analyze-table) des SQL-Syntaxhandbuchs.
+>Die `COMPUTE STATISTICS`, `FILTERCONTEXT`, und `FOR COLUMNS` -Befehle werden für beschleunigte Store-Tabellen nicht unterstützt. Diese Erweiterungen für den Befehl `ANALYZE TABLE` werden derzeit nur für ADLS-Tabellen unterstützt. Weitere Informationen finden Sie im [ANALYZE TABLE-Abschnitt](../sql/syntax.md#analyze-table) des SQL-Syntaxhandbuchs.
 
 Dieses Handbuch hilft Ihnen bei der Strukturierung Ihrer Abfragen, sodass Sie die Spaltenstatistiken eines ADLS-Datensatzes berechnen können. Mithilfe dieser Befehle können Sie die Statistiken anzeigen, die in Ihrer Sitzung über einen PSQL-Client mithilfe einer SQL-Abfrage generiert wurden.
 

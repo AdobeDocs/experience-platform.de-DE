@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-Syntax in Query Service
 description: Dieses Dokument zeigt die von Adobe Experience Platform Query Service unterstützte SQL-Syntax.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
+source-git-commit: b94536be6e92354e237b99d36af13adf5a49afa7
 workflow-type: tm+mt
-source-wordcount: '3860'
+source-wordcount: '3863'
 ht-degree: 9%
 
 ---
@@ -597,9 +597,9 @@ Im Folgenden finden Sie eine Liste statistischer Berechnungen, die nach Verwendu
 
 #### COMPUTE STATISTIKEN auf dem Data Lake {#compute-statistics-data-lake}
 
-Sie können nun Statistiken auf Spaltenebene berechnen über [!DNL Azure Data Lake Storage] (ADLS)-Datensätzen mit der `COMPUTE STATISTICS` und `SHOW STATISTICS` SQL-Befehle. Berechnen Sie Spaltenstatistiken für den gesamten Datensatz, eine Untergruppe eines Datensatzes, alle Spalten oder eine Untergruppe von Spalten.
+Sie können nun Statistiken auf Spaltenebene berechnen über [!DNL Azure Data Lake Storage] (ADLS)-Datensätzen mit der `COMPUTE STATISTICS` SQL-Befehl. Berechnen Sie Spaltenstatistiken für den gesamten Datensatz, eine Untergruppe eines Datensatzes, alle Spalten oder eine Untergruppe von Spalten.
 
-`COMPUTE STATISTICS` erweitert die `ANALYZE TABLE` Befehl. Die Variable `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, und `SHOW STATISTICS` -Befehle werden für beschleunigte Store-Tabellen nicht unterstützt. Diese Erweiterungen für den Befehl `ANALYZE TABLE` werden derzeit nur für ADLS-Tabellen unterstützt.
+`COMPUTE STATISTICS` erweitert die `ANALYZE TABLE` Befehl. Die Variable `COMPUTE STATISTICS`, `FILTERCONTEXT`, und `FOR COLUMNS` -Befehle werden für beschleunigte Store-Tabellen nicht unterstützt. Diese Erweiterungen für den Befehl `ANALYZE TABLE` werden derzeit nur für ADLS-Tabellen unterstützt.
 
 **Beispiel**
 
@@ -611,7 +611,7 @@ Die `FILTER CONTEXT` berechnet basierend auf der bereitgestellten Filterbedingun
 
 >[!NOTE]
 >
->Die `Statistics ID` und die generierten Statistiken gelten nur für jede Sitzung und können nicht über verschiedene PSQL-Sitzungen hinweg aufgerufen werden.<br><br>Einschränkungen:<ul><li>Die Erstellung von Statistiken wird für Array- oder Zuordnungsdatentypen nicht unterstützt</li><li>Berechnete Statistiken werden nicht beibehalten</li></ul><br><br>Optionen:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>Standardmäßig ist diese Markierung auf „true“ eingestellt. Wenn also Statistiken für einen Datentyp angefordert werden, der nicht unterstützt wird, wird kein Fehler ausgegeben, stattdessen schlägt er still fehl.<br>Um Benachrichtigungen zu Fehlern zu aktivieren, wenn Statistiken zu nicht unterstützten Datentypen angefordert werden, verwenden Sie: `SET skip_stats_for_complex_datatypes = false`.
+>Die `Statistics ID` und die generierten Statistiken gelten nur für jede Sitzung und können nicht über verschiedene PSQL-Sitzungen hinweg aufgerufen werden.<br><br>Einschränkungen:<ul><li>Die Erstellung von Statistiken wird für Array- oder Zuordnungsdatentypen nicht unterstützt</li><li>Berechnete Statistiken sind **not** über mehrere Sitzungen hinweg beibehalten.</li></ul><br><br>Optionen:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>Standardmäßig ist diese Markierung auf „true“ eingestellt. Wenn daher Statistiken für einen Datentyp angefordert werden, der nicht unterstützt wird, wird kein Fehler ausgegeben, es werden jedoch Felder mit den nicht unterstützten Datentypen still übersprungen.<br>Um Benachrichtigungen zu Fehlern zu aktivieren, wenn Statistiken zu nicht unterstützten Datentypen angefordert werden, verwenden Sie: `SET skip_stats_for_complex_datatypes = false`.
 
 Die Konsolenausgabe wird wie unten dargestellt angezeigt.
 
@@ -629,7 +629,7 @@ Sie können die berechneten Statistiken dann direkt abfragen, indem Sie auf die 
 SELECT * FROM adc_geometric_stats_1;
 ```
 
-Verwenden Sie die `SHOW STATISTICS` -Befehl, um die Metadaten für alle temporären Statistiktabellen anzuzeigen, die in der Sitzung generiert wurden. Mithilfe dieses Befehls können Sie den Umfang Ihrer statistischen Analyse verfeinern.
+Verwenden Sie die `SHOW STATISTICS` -Befehl, um die Metadaten für alle temporären Statistiken anzuzeigen, die in der Sitzung generiert wurden. Mithilfe dieses Befehls können Sie den Umfang Ihrer statistischen Analyse verfeinern.
 
 ```sql
 SHOW STATISTICS;
