@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-Syntax in Query Service
 description: Dieses Dokument zeigt die von Adobe Experience Platform Query Service unterstützte SQL-Syntax.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: b94536be6e92354e237b99d36af13adf5a49afa7
+source-git-commit: f729c54e490afb954bb627d150e499c98d51a53d
 workflow-type: tm+mt
-source-wordcount: '3863'
+source-wordcount: '3923'
 ht-degree: 9%
 
 ---
@@ -892,23 +892,44 @@ COPY query
 
 Die `ALTER TABLE` -Befehl können Sie Primär- oder Fremdschlüsseleinschränkungen hinzufügen oder ablegen sowie Spalten zur Tabelle hinzufügen.
 
-
 #### EINSCHRÄNKUNG HINZUFÜGEN ODER ABLEGEN
 
-Die folgenden SQL-Abfragen zeigen Beispiele für das Hinzufügen oder Ablegen von Begrenzungen zu einer Tabelle.
+Die folgenden SQL-Abfragen zeigen Beispiele für das Hinzufügen oder Ablegen von Begrenzungen zu einer Tabelle. Primäre Schlüssel- und Fremdschlüsseleinschränkungen können mehreren Spalten mit kommagetrennten Werten hinzugefügt werden. Sie können zusammengesetzte Schlüssel erstellen, indem Sie zwei oder mehr Spaltennamenwerte übergeben, wie in den Beispielen unten dargestellt.
+
+**Primäre oder zusammengesetzte Schlüssel definieren**
 
 ```sql
 ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name ) NAMESPACE namespace
 
+ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name1, column_name2 ) NAMESPACE namespace
+```
+
+**Definieren einer Beziehung zwischen Tabellen anhand eines oder mehrerer Schlüssel**
+
+```sql
 ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
 
+ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name1, column_name2 ) REFERENCES referenced_table_name ( primary_column_name1, primary_column_name2 )
+```
+
+**Identitätsspalte definieren**
+
+```sql
 ALTER TABLE table_name ADD CONSTRAINT PRIMARY IDENTITY ( column_name ) NAMESPACE namespace
 
 ALTER TABLE table_name ADD CONSTRAINT IDENTITY ( column_name ) NAMESPACE namespace
+```
 
+**Beschränkung/Beziehung/Identität ablegen**
+
+```sql
 ALTER TABLE table_name DROP CONSTRAINT PRIMARY KEY ( column_name )
 
+ALTER TABLE table_name DROP CONSTRAINT PRIMARY KEY ( column_name1, column_name2 )
+
 ALTER TABLE table_name DROP CONSTRAINT FOREIGN KEY ( column_name )
+
+ALTER TABLE table_name DROP CONSTRAINT FOREIGN KEY ( column_name1, column_name2 )
 
 ALTER TABLE table_name DROP CONSTRAINT PRIMARY IDENTITY ( column_name )
 
