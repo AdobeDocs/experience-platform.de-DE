@@ -2,10 +2,10 @@
 title: Vom Kunden verwaltete Schlüssel in Adobe Experience Platform
 description: Erfahren Sie, wie Sie eigene Verschlüsselungsschlüssel für in Adobe Experience Platform gespeicherte Daten einrichten.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 04ed092d4514d1668068ed73a1be4400c6cd4d8e
 workflow-type: tm+mt
-source-wordcount: '1617'
-ht-degree: 92%
+source-wordcount: '1774'
+ht-degree: 79%
 
 ---
 
@@ -15,7 +15,7 @@ In Adobe Experience Platform gespeicherte Daten werden im Ruhezustand mithilfe v
 
 >[!NOTE]
 >
->Daten in Adobe Experience Platform Data Lake und Profile Store (CosmosDB) werden mit CMK verschlüsselt.
+>Daten in Adobe Experience Platform Data Lake und Profil Store werden mit CMK verschlüsselt. Diese werden als Ihre primären Datenspeicher betrachtet.
 
 In diesem Dokument wird der Prozess zum Aktivieren der Funktion für kundenverwaltete Schlüssel (CMK) in Platform beschrieben.
 
@@ -282,12 +282,21 @@ Das `status`-Attribut kann einen von vier Werten mit folgenden Bedeutungen haben
 1. `COMPLETED`: Der Schlüsseltresor und der Schlüsselname wurden den Datenspeichern hinzugefügt.
 1. `FAILED`: Es ist ein Problem aufgetreten, das in erster Linie mit dem Schlüssel, dem Schlüsseltresor oder der Einrichtung der Multi-Mandanten-App-zusammenhängt.
 
-## Nächste Schritte
+## Zugriff sperren {#revoke-access}
 
-Durch Ausführung der oben genannten Schritte haben Sie CMK für Ihre Organisation erfolgreich aktiviert. Daten, die in Platform aufgenommen werden, werden jetzt mit dem oder den Schlüssel(n) in Ihrem [!DNL Azure]-Schlüsseltresor ver- und entschlüsselt. Wenn Sie den Platform-Zugriff auf Ihre Daten sperren möchten, können Sie die mit dem Programm verknüpfte Benutzerrolle aus dem Schlüsseltresor in [!DNL Azure] entfernen.
-
-Nachdem Sie den Zugriff auf das Programm deaktiviert haben, kann es einige Minuten bis 24 Stunden dauern, bis die Daten nicht mehr in Platform verfügbar sind. Die gleiche Zeitverzögerung gilt für Daten, die erneut verfügbar werden, wenn der Zugriff auf das Programm erneut aktiviert wird.
+Wenn Sie den Platform-Zugriff auf Ihre Daten sperren möchten, können Sie die mit dem Programm verknüpfte Benutzerrolle aus dem Schlüsseltresor in [!DNL Azure] entfernen.
 
 >[!WARNING]
 >
->Sobald die Schlüsseltresor-, Schlüssel- oder CMK-App deaktiviert ist und Daten in Platform nicht mehr verfügbar sind, sind alle nachgelagerten Vorgänge im Zusammenhang mit diesen Daten nicht mehr möglich. Stellen Sie sicher, dass Sie die nachgelagerten Auswirkungen einer Sperrung des Platform-Zugriffs auf Ihre Daten verstehen, bevor Sie Änderungen an Ihrer Konfiguration vornehmen.
+>Das Deaktivieren der Schlüssel-Vault-, Schlüssel- oder CMK-App kann zu einer brechenden Änderung führen. Sobald die Schlüssel-Vault-, Schlüssel- oder CMK-App deaktiviert ist und die Daten in Platform nicht mehr verfügbar sind, sind alle nachgelagerten Vorgänge im Zusammenhang mit diesen Daten nicht mehr möglich. Stellen Sie sicher, dass Sie die nachgelagerten Auswirkungen der Sperrung des Platform-Zugriffs auf Ihren Schlüssel verstehen, bevor Sie Änderungen an Ihrer Konfiguration vornehmen.
+
+Nachdem Sie den Schlüsselzugriff entfernt oder den Schlüssel deaktiviert/gelöscht haben [!DNL Azure] -Schlüsselwertgewölbe kann es zwischen einigen Minuten und 24 Stunden dauern, bis diese Konfiguration in die primären Datenspeicher übertragen wird. Platform-Workflows umfassen auch zwischengespeicherte und vorübergehende Datenspeicher, die für die Leistung und die Kernfunktionen der Anwendung erforderlich sind. Die Übertragung der CMK-Sperrung durch diese zwischengespeicherten und vorübergehenden Speicher kann bis zu sieben Tage dauern, wie von ihren Datenverarbeitungs-Workflows bestimmt. Dies bedeutet beispielsweise, dass das Profil-Dashboard Daten aus seinem Cache-Datenspeicher aufbewahrt und anzeigt und es sieben Tage dauert, bis die im Cache-Datenspeicher gespeicherten Daten im Rahmen des Aktualisierungszyklus ablaufen. Die gleiche Zeitverzögerung gilt für Daten, die erneut verfügbar werden, wenn der Zugriff auf das Programm erneut aktiviert wird.
+
+>[!NOTE]
+>
+>Es gibt zwei anwendungsspezifische Ausnahmen für den Ablauf von Datensätzen mit sieben Tagen, die nicht primäre (zwischengespeicherte/transiente) Daten betreffen. Weitere Informationen zu diesen Funktionen finden Sie in der entsprechenden Dokumentation .<ul><li>[Adobe Journey Optimizer URL Shortener](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=de#message-preset-sms)</li><li>[Edge-Projektionen](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
+
+## Nächste Schritte
+
+Durch Ausführung der oben genannten Schritte haben Sie CMK für Ihre Organisation erfolgreich aktiviert. Daten, die in Primärdatenspeicher erfasst werden, werden jetzt mit den Schlüsseln in Ihrer [!DNL Azure] Key Vault.
+
