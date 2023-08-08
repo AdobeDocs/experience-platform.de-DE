@@ -3,7 +3,7 @@ title: Datenvorbereitung für die Datenerfassung
 description: Erfahren Sie, wie Sie beim Konfigurieren eines Datenstroms für die Adobe Experience Platform Web- und Mobile-SDKs Ihre Daten einem XDM-Ereignisschema (Experience-Datenmodell) zuordnen können.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
 source-git-commit: 4c9abcefb279c6e8a90744b692d86746a4896d0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '914'
 ht-degree: 100%
 
