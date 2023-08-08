@@ -6,7 +6,7 @@ exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 44c92e2163e2b6c0c140c64bba41dfbcc15d5d7f
 workflow-type: tm+mt
 source-wordcount: '1633'
-ht-degree: 48%
+ht-degree: 50%
 
 ---
 
@@ -57,7 +57,7 @@ Informationen zum Erstellen von Segmentdefinitionen mithilfe der API finden Sie 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="Auswertungsmethoden"
->abstract="Platform unterstützt derzeit drei Methoden zur Auswertung von Zielgruppen: Streaming-Segmentierung, Batch-Segmentierung und Kantensegmentierung."
+>abstract="Platform unterstützt derzeit drei Methoden zum Auswerten von Zielgruppen: Streaming-Segmentierung, Batch-Segmentierung und Edge-Segmentierung."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
@@ -65,7 +65,7 @@ Informationen zum Erstellen von Segmentdefinitionen mithilfe der API finden Sie 
 >abstract="Die Streaming-Segmentierung ist ein fortlaufender Datenauswahlprozess, der Ihre Zielgruppen infolge von Benutzeraktivität aktualisiert."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=de" text="Auswerten von Ereignissen mit Streaming-Segmentierung nahezu in Echtzeit"
 
-Platform unterstützt derzeit drei Methoden zur Auswertung von Zielgruppen: Streaming-Segmentierung, Batch-Segmentierung und Kantensegmentierung.
+Platform unterstützt derzeit drei Methoden zum Auswerten von Zielgruppen: Streaming-Segmentierung, Batch-Segmentierung und Edge-Segmentierung.
 
 ### Streaming-Segmentierung  {#streaming}
 
@@ -78,7 +78,7 @@ Weitere Informationen zur Streaming-Segmentierung finden Sie in der [Dokumentati
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_batch"
 >title="Batch-Auswertung"
->abstract="Als Alternative zum kontinuierlichen Datenauswahlprozess werden bei der Batch-Segmentierung alle Profildaten gleichzeitig mit Segmentdefinitionen verglichen, um entsprechende Zielgruppen zu erstellen. Nach der Erstellung wird die Audience gespeichert und zur Verwendung exportiert."
+>abstract="Als Alternative zum kontinuierlichen Datenauswahlprozess werden bei der Batch-Segmentierung alle Profildaten gleichzeitig mit Segmentdefinitionen verglichen, um entsprechende Zielgruppen zu erstellen. Nach der Erstellung einer Zielgruppe wird sie gespeichert, sodass Sie sie exportieren und weiterverwenden können."
 
 Als Alternative zum kontinuierlichen Datenauswahlprozess werden bei der Batch-Segmentierung alle Profildaten gleichzeitig mit Segmentdefinitionen verglichen, um entsprechende Zielgruppen zu erstellen. Nach der Erstellung wird die resultierende Audience gespeichert und zur Verwendung exportiert.
 
