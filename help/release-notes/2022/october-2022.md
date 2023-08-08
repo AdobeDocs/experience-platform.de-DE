@@ -3,7 +3,7 @@ title: Adobe Experience Platform – Versionshinweise, Oktober 2022
 description: Versionshinweise von Oktober 2022 für Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
 source-git-commit: e1deeadb98240f885e9dc95ecbc58ae48049a190
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1159'
 ht-degree: 100%
 
