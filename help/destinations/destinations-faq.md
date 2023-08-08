@@ -3,10 +3,10 @@ keywords: Ziele; Fragen; häufig gestellte Fragen; FAQ; Ziele FAQ
 title: Häufig gestellte Fragen
 description: Antworten auf die am häufigsten gestellten Fragen zu Adobe Experience Platform-Zielen
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 810bcd011fd6e172c79f4482e047aa6e715c3918
+source-git-commit: 75b9cc3e2c9a18ec8c08c9c3ca774accae31eb7e
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 6%
+source-wordcount: '1638'
+ht-degree: 5%
 
 ---
 
@@ -146,6 +146,7 @@ Detaillierte Erläuterungen zu den Anforderungen an die ID-Zuordnung finden Sie 
 
 +++Antwort
 [!DNL LinkedIn Matched Audiences] unterstützt die Aktivierung der folgenden Identitäten: Hash-E-Mails, [!DNL GAID], und [!DNL IDFA].
+
 +++
 
 ## Personalisierung auf derselben Seite und auf der nächsten Seite über die Adobe Target- und benutzerdefinierten Personalisierungsziele {#same-next-page-personalization}
@@ -209,3 +210,20 @@ Nr. Alle Zielgruppen, die Sie für Adobe Target aktivieren möchten, müssen ein
 +++Antwort
 Ja. Die [Data Governance und Einverständnisrichtlinien](../data-governance/home.md) Die Aktivierung der ausgewählten Attribute wird durch die erstellten und mit den ausgewählten Marketing-Aktionen verknüpften bestimmt.
 +++
+
+### Sind die [!DNL Adobe Target] und [!DNL Custom Personalization] Ziele [!DNL HIPAA]-kompatibel?
+
++++Antwort
+[!DNL Adobe Target] ist nicht [!DNL HIPPA]-kompatibel mit [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/solutions/industries/healthcare.html). Kunden sollten sich an ihre eigenen Rechtsabteilungen wenden, um [!DNL HIPPA]-Bereitschaft für benutzerdefinierte Optimierungskanäle vor Verwendung der Edge-Personalisierung über [!DNL Adobe Target] oder [!DNL Custom Personalization] Ziele.
+
+Für Anwendungsfälle, in denen die Verwaltung von Zustimmungsrichtlinien skaliert angewendet werden muss, müssen Kunden [!DNL Adobe Privacy & Security Shield]. [!DNL Adobe Privacy & Security Shield] -Funktionen werden als erweiterte Suite von Funktionen verkauft und möglicherweise nicht separat erworben.
+
+Dieser Dienst umfasst kundenverwaltete Schlüssel und erhöhte Schwellenwerte zur Verwaltung des Lebenszyklus von Kundendaten.
+
+Die [!DNL Adobe Target] und [!DNL Custom Personalization] -Ziele in die [Beschriftungen für die Datennutzung der Experience Platform](../data-governance/labels/overview.md) und [Dienst zur Durchsetzung von Einwilligungsrichtlinien](../data-governance/enforcement/overview.md). Diese Funktionen stehen allen Kunden zur Verfügung.
+
+
+
+
++++
+
