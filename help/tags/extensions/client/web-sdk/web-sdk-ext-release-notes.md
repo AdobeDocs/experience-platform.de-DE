@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 1de2776fbdfc7b32a1660a01ca6df21eb0cb9104
+source-git-commit: ba75669eeaef9fc023e7c33265ec1e5dbada9534
 workflow-type: tm+mt
-source-wordcount: '1736'
-ht-degree: 97%
+source-wordcount: '1757'
+ht-degree: 96%
 
 ---
 
@@ -13,6 +13,12 @@ ht-degree: 97%
 # Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zum SDK finden Sie in den [Versionshinweisen zum Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=de).
+
+## Version 2.20.3 - 8. August 2023
+
+**Fehlerbehebungen und Verbesserungen**
+
+* Es wurde ein Problem behoben, bei dem Datenelemente nicht im Feld ID-Synchronisierungs-Container-ID-Überschreibung gespeichert werden konnten.
 
 ## Version 2.20.1 - 3. August 2023
 
