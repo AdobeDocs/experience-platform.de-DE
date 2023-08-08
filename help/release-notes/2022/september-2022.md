@@ -3,7 +3,7 @@ title: Adobe Experience Platform – Versionshinweise, September 2022
 description: Versionshinweise September 2022 zu Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2940'
 ht-degree: 100%
 
@@ -161,7 +161,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
-| Feldergruppe | [[!UICONTROL AJO-Klassifizierungsfelder]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | Eigenschaften eines bestimmten Elements, mit dem interagiert wurde, wodurch das Vorschlagsereignis ausgelöst wurde. |
+| Feldgruppe | [[!UICONTROL AJO-Klassifizierungsfelder]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | Eigenschaften eines bestimmten Elements, mit dem interagiert wurde, wodurch das Vorschlagsereignis ausgelöst wurde. |
 | Feldergruppe | [[!UICONTROL Details zur MediaAnalytics-Interaktion]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-analytics.schema.json) | Verfolgt Medieninteraktionen im Zeitverlauf. |
 | Feldergruppe | [[!UICONTROL Informationen zu Mediendetails]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | Verfolgt Informationen zu Mediendetails. |
 | Feldergruppe | [[!UICONTROL Adobe CJM ExperienceEvent – Oberflächen]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/surfaces.schema.json) | Beschreibt Oberflächen für Erlebnisereignisse in Adobe Journey Optimizer. |
@@ -173,8 +173,8 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
 | Verhalten | [[!UICONTROL Zeitreihe]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | <ul><li>Hinzugefügte Werte für `eventType`:<ul><li>`decisioning.propositionSend`</li><li>`decisioning.propositionDismiss`</li><li>`decisioning.propositionTrigger`</li><li>`media.downloaded`</li><li>`location.entry`</li><li>`location.exit`</li></ul></li><li>Entfernte Werte für `eventType`:<ul><li>`decisioning.propositionDeliver`</li><li>`media.stateStart`</li><li>`media.stateEnd`</li></ul></li></ul> |
-| Feldergruppe | (Mehrfach) | [Mehrere Feldbeschreibungen](https://github.com/adobe/xdm/pull/1628/files) wurden in Journey-Orchestration-Komponenten aktualisiert. |
-| Feldergruppe | (Mehrfach) | [Titel mehrerer Komponenten von Adobe Workfront](https://github.com/adobe/xdm/pull/1634/files) wurden aus Konsistenzgründen aktualisiert. |
+| Feldgruppe | (Mehrfach) | [Mehrere Feldbeschreibungen](https://github.com/adobe/xdm/pull/1628/files) wurden in Journey-Orchestration-Komponenten aktualisiert. |
+| Feldgruppe | (Mehrfach) | [Titel mehrerer Komponenten von Adobe Workfront](https://github.com/adobe/xdm/pull/1634/files) wurden aus Konsistenzgründen aktualisiert. |
 | Feldergruppe | [[!UICONTROL AJO-Klassifizierungsfelder]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | Die Namespaces mehrerer Felder wurden auf `xdm` aktualisiert. |
 | Feldergruppe | [[!UICONTROL Gemeinsame Felder für Journey Orchestration-Step-Ereignisse]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Neues Feld `isReadSegmentTriggerStartEvent` hinzugefügt. |
 | Feldergruppe | [[!UICONTROL Prognostiziertes Wetter]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | Das Feld `xdm:uvIndex` wurde in einen ganzzahligen Typ geändert und der Namespace `xdm` wurde zu mehreren Feldern hinzugefügt, in denen er gefehlt hat. |
