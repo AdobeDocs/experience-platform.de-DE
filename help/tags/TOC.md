@@ -8,7 +8,7 @@ solution: Data Collection
 source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
 workflow-type: tm+mt
 source-wordcount: '1027'
-ht-degree: 97%
+ht-degree: 98%
 
 ---
 
@@ -220,7 +220,7 @@ ht-degree: 97%
       * [!DNL Braze] {#braze}
          * [Übersicht](./extensions/server/braze/overview.md)
       * [Cloud-Connector für Google Analytics](https://exchange.adobe.com/apps/ec/106542)
-      * [Cloud Connector für Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)
+      * [Cloud-Connector für Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)
       * Core {#core}
          * [Übersicht](./extensions/server/core/overview.md)
       * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)
@@ -284,7 +284,7 @@ ht-degree: 97%
    * [Abwärtskompatibilitätsstandard](./extension-dev/backwards-compatibility.md)
 * Reactor-API {#api}
    * [Übersicht](./api/overview.md)
-   * [Authentifizierung und Zugriff auf die Reactor-API](./api/getting-started.md)
+   * [Authentifizieren von und Zugreifen auf die Reactor-API](./api/getting-started.md)
    * Endpunkte {#endpoints}
       * [Firmen](./api/endpoints/companies.md)
       * [Eigenschaften](./api/endpoints/properties.md)

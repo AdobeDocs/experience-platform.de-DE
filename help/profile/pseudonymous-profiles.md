@@ -7,7 +7,7 @@ exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '923'
-ht-degree: 96%
+ht-degree: 98%
 
 ---
 
@@ -75,7 +75,7 @@ Für einen typischen Anwendungsfall können Sie den Ablauf von Erlebnisereignisd
 
 ### Welche Einschränkungen sollten Sie beachten, bevor Sie Ablauf von Daten pseudonymer Profile verwenden?
 
-- Der Ablauf der pseudonymen Profildaten wird in einer **Sandbox** Ebene. Sie können unterschiedliche Konfigurationen für Produktions- und Entwicklungs-Sandboxes auswählen.
+- Der Ablauf von Daten pseudonymer Profile erfolgt auf **Sandbox**-Ebene. Sie können unterschiedliche Konfigurationen für Produktions- und Entwicklungs-Sandboxes auswählen.
 - Wenn Sie diese Funktion aktiviert haben, wird das Löschen von Profilen **dauerhaft**. Es gibt **keine** Möglichkeit, die gelöschten Profile zurückzusetzen oder wiederherzustellen.
 - Dies ist **kein** einmaliger Bereinigungsvorgang. Ablauf von Daten pseudonymer Profile wird täglich einmal ausgeführt und es werden dabei Profile gelöscht, die mit der Eingabe der Kundin bzw. des Kunden übereinstimmen.
 - **Alle** Profile, die als pseudonyme Profile definiert sind, sind von Ablauf von Daten pseudonymer Profile betroffen. Es kommt dabei **nicht** darauf an, ob das Profil nur ein Erlebnisereignis ist oder nur Profilattribute enthält.

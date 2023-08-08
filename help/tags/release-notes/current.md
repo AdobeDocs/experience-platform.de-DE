@@ -5,7 +5,7 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '841'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 94%
 
 >[!IMPORTANT]
 >
->Die Versionshinweise für Tags und Ereignisweiterleitung werden künftig nicht mehr auf dieser Seite bereitgestellt. Bitte beziehen Sie sich auf die neueste Version [Versionshinweise zu Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=en#data-collection) für detaillierte Tags und Aktualisierungen der Ereignisweiterleitung.
+>Die Versionshinweise für Tags und Ereignisweiterleitung werden künftig nicht mehr auf dieser Seite bereitgestellt. Die neuesten ausführlichen Informationen zu Tags und zur Ereignisweiterleitung finden Sie in den aktuellen [Versionshinweisen zu Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=de#data-collection).
 
 ## 26. April 2023
 

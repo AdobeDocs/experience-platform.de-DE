@@ -7,7 +7,7 @@ exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
 source-wordcount: '1899'
-ht-degree: 62%
+ht-degree: 65%
 
 ---
 
@@ -29,7 +29,7 @@ Dieses Handbuch setzt Kenntnisse der verschiedenen Platform-Services voraus, die
 
 * [Adobe Experience Platform Data Governance](../home.md): Das Framework, mit dem Platform die Einhaltung der Datennutzungskonformität durch die Verwendung von Beschriftungen und Richtlinien erzwingt.
 * [Echtzeit-Kundenprofil](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-* [Adobe Experience Platform-Segmentierungsdienst](../../segmentation/home.md): Die Segmentierungsmaschine in [!DNL Platform] verwendet, um Zielgruppen aus Ihren Kundenprofilen basierend auf dem Kundenverhalten und den Kundenattributen zu erstellen.
+* [Adobe Experience Platform-Segmentierungsdienst](../../segmentation/home.md): Die Segmentierungsmaschine in [!DNL Platform] verwendet, um Zielgruppen aus Ihren Kundenprofilen basierend auf dem Kundenverhalten und den Attributen zu erstellen.
 * [Ziele](../../destinations/home.md): Ziele sind vorgefertigte Integrationen mit häufig verwendeten Programmen, die die nahtlose Aktivierung von Daten von Platform aus für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und mehr ermöglichen.
 
 ## Durchsetzungsfluss {#flow}
@@ -55,7 +55,7 @@ Wenn eine Zielgruppe zum ersten Mal aktiviert wird, [!DNL Policy Service] Prüfu
 
 Die Datenherkunft spielt eine zentrale Rolle bei der Durchsetzung von Richtlinien in Platform. Generell bezieht sich die Datenherkunft auf die Herkunft eines Datensatzes und darauf, was mit einem Datensatz mit der Zeit passiert (oder wo er sich bewegt).
 
-Im Kontext von Data Governance ermöglicht die Herkunft, dass Datennutzungsbezeichnungen von Schemas zu nachgelagerten Diensten propagiert werden, die ihre Daten nutzen, z. B. Echtzeit-Kundenprofil und Ziele. Dies ermöglicht die Bewertung und Durchsetzung von Richtlinien an verschiedenen wichtigen Punkten auf dem Weg der Daten in Platform und bietet den Datennutzern einen Kontext darüber, warum eine Richtlinienverletzung aufgetreten ist.
+Im Rahmen von Data Governance ermöglicht die Datenherkunft die Übertragung von Datennutzungskennzeichnungen von Schemata auf nachgeordnete Services, die diese Daten verwenden, beispielsweise auf Echtzeit-Kundenprofile und Ziele. Dies ermöglicht die Auswertung und Durchsetzung von Richtlinien an verschiedenen wichtigen Punkten auf dem Weg der Daten in Platform und bietet den Datennutzern einen Kontext darüber, warum eine Richtlinienverletzung aufgetreten ist.
 
 In Experience Platform geht es bei der Durchsetzung der Richtlinien um folgende Herkunft:
 
@@ -68,9 +68,9 @@ Jeder Schritt in der oben genannten Timeline stellt eine Entität dar, die wie i
 
 | Datenherkunftsphase | Rolle bei der Richtliniendurchsetzung |
 | --- | --- |
-| Datensatz | Datensätze enthalten Datennutzungsbezeichnungen (auf Schemafeldebene oder auf gesamte Datensatzebene angewendet), die definieren, für welche Anwendungsfälle der gesamte Datensatz oder bestimmte Felder verwendet werden können. Richtlinienverletzungen treten auf, wenn ein Datensatz oder ein Feld mit bestimmten Beschriftungen für einen Zweck verwendet wird, den eine Richtlinie einschränkt.<br><br>Alle von Ihren Kunden erfassten Einverständnisattribute werden ebenfalls in Datensätzen gespeichert. Wenn Sie Zugriff auf Zustimmungsrichtlinien haben, werden alle Profile, die nicht den Zustimmungsattributanforderungen Ihrer Richtlinien entsprechen, von Zielgruppen ausgeschlossen, die für ein Ziel aktiviert sind. |
+| Datensatz | Datensätze enthalten Datennutzungskennzeichnungen (angewendet auf Schemafeld- oder Datensatzebene), mit denen festgelegt wird, für welche Anwendungsfälle der komplette Datensatz oder bestimmte Felder verwendet werden können. Richtlinienverletzungen treten auf, wenn ein Datensatz oder ein Feld mit bestimmten Beschriftungen für einen Zweck verwendet wird, den eine Richtlinie einschränkt.<br><br>Alle von Ihren Kunden erfassten Einverständnisattribute werden ebenfalls in Datensätzen gespeichert. Wenn Sie Zugriff auf Zustimmungsrichtlinien haben, werden alle Profile, die nicht den Zustimmungsattributanforderungen Ihrer Richtlinien entsprechen, von Zielgruppen ausgeschlossen, die für ein Ziel aktiviert sind. |
 | Zusammenführungsrichtlinie | Zusammenführungsrichtlinien sind die Regeln, die Platform verwendet, um festzulegen, wie Daten beim Zusammenführen von Fragmenten aus mehreren Datensätzen priorisiert werden. Richtlinienverletzungen treten auf, wenn Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass Datensätze mit eingeschränkten Beschriftungen für ein Ziel aktiviert werden. Weitere Informationen dazu finden Sie in der [merge policies overview](../../profile/merge-policies/overview.md). |
-| Zielgruppe  | Segmentierungsregeln definieren, welche Attribute aus Kundenprofilen einbezogen werden sollen. Je nachdem, welche Felder eine Segmentdefinition enthält, übernimmt die Zielgruppe alle angewendeten Nutzungsbezeichnungen für diese Felder. Richtlinienverletzungen treten auf, wenn Sie eine Zielgruppe aktivieren, deren vererbte Bezeichnungen anhand der für das Ziel geltenden Richtlinien je nach Marketing-Anwendungsfall eingeschränkt sind. |
+| Zielgruppe | Segmentierungsregeln definieren, welche Attribute aus Kundenprofilen einbezogen werden sollen. Je nachdem, welche Felder eine Segmentdefinition enthält, übernimmt die Zielgruppe alle angewendeten Nutzungsbezeichnungen für diese Felder. Richtlinienverletzungen treten auf, wenn Sie eine Zielgruppe aktivieren, deren vererbte Bezeichnungen anhand der für das Ziel geltenden Richtlinien je nach Marketing-Anwendungsfall eingeschränkt sind. |
 | Ziel | Beim Einrichten eines Ziels kann eine Marketing-Aktion (manchmal auch als Marketing-Anwendungsfall bezeichnet) definiert werden. Dieser Anwendungsfall hängt von der in einer Richtlinie definierten Marketing-Aktion ab. Mit anderen Worten: Die Marketing-Aktion, die Sie für ein Ziel definieren, bestimmt, welche Datennutzungsrichtlinien und Einverständnisrichtlinien für dieses Ziel gelten.<br><br>Verstöße gegen Datennutzungsrichtlinien treten auf, wenn Sie eine Zielgruppe aktivieren, deren Nutzungsbezeichnungen für die Marketing-Aktion des Zielziels eingeschränkt sind.<br><br>(Beta) Wenn eine Zielgruppe aktiviert wird, werden alle Profile, die nicht die erforderlichen Zustimmungsattribute für die Marketing-Aktion enthalten (wie durch Ihre Zustimmungsrichtlinien definiert), aus der aktivierten Zielgruppe ausgeschlossen. |
 
 >[!IMPORTANT]
@@ -146,7 +146,7 @@ Verwenden Sie die linke Leiste, um zwischen den entsprechenden Zustimmungsrichtl
 
 Das Diagramm zeigt die Überschneidung zwischen drei Profilgruppen:
 
-1. Profile, die für die ausgewählte Zielgruppe qualifiziert sind
+1. Für die ausgewählte Zielgruppe geeignete Profile
 1. Profile, die für die ausgewählte Einverständnisrichtlinie qualifiziert sind
 1. Profile, die für die anderen anwendbaren Zustimmungsrichtlinien für die Zielgruppe qualifiziert sind (bezeichnet als[!UICONTROL Sonstige Politikbereiche]&quot; in der Grafik)
 

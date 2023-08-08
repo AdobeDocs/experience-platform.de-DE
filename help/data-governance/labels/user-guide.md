@@ -7,7 +7,7 @@ exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: 663d1e20a7b8a56b1395047124fdf4b6fc3c214b
 workflow-type: tm+mt
 source-wordcount: '1465'
-ht-degree: 42%
+ht-degree: 100%
 
 ---
 
@@ -16,68 +16,68 @@ ht-degree: 42%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
 >title="Steuern der Datennutzung in Platform"
->abstract="<h2>Beschreibung</h2><p>Mit dem Data Governance-Framework in Experience Platform können Sie Attribute und Schemata anhand von Datennutzungsbeschränkungen beschriften und Richtlinien einrichten, die diese Einschränkungen für bestimmte Marketing-Aktionen identifizieren und berücksichtigen.</p>"
+>abstract="<h2>Beschreibung</h2><p>Mit dem Data-Governance-Framework in Experience Platform können Sie Attribute und Schemata anhand von Datennutzungsbeschränkungen kennzeichnen und Richtlinien einrichten, die diese Einschränkungen für bestimmte Marketing-Aktionen identifizieren und berücksichtigen.</p>"
 
-Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Datennutzungskennzeichnungen in der Benutzeroberfläche von [!DNL Experience Platform]. 
+Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Datennutzungskennzeichnungen in der Benutzeroberfläche von [!DNL Experience Platform].
 
-## Verwalten von Bezeichnungen {#manage-labels}
+## Verwalten von Kennzeichnungen {#manage-labels}
 
-Um Beschriftungen auf Ihre Daten anzuwenden, benötigen Sie die **[!UICONTROL Nutzungsbezeichnungen verwalten]** -Berechtigung für die Verwendung in der standardmäßigen Produktions-Sandbox &quot;prod&quot;. Um eine benutzerdefinierte Bezeichnung zu erstellen, müssen Sie auch über Administratorrechte für das Produktprofil verfügen. Jede Organisation verfügt nur über eine Liste der entsprechenden Beschriftungen. Das Löschen von Beschriftungen wird derzeit nicht unterstützt.
+Um Kennzeichnungen auf Ihre Daten anzuwenden, benötigen Sie die Berechtigung **[!UICONTROL Nutzungskennzeichnungen verwalten]** für die Verwendung in der standardmäßigen Produktions-Sandbox „prod“. Um eine benutzerdefinierte Kennzeichnung zu erstellen, müssen Sie ebenfalls über Administratorrechte für das Produktprofil verfügen. Jedes Unternehmen verfügt nur über eine Liste gültiger Kennzeichnungen. Das Löschen von Kennzeichnungen wird derzeit nicht unterstützt.
 
-Informationen finden Sie im Handbuch [Berechtigungen konfigurieren](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) oder [Zugriffskontrolle - Übersicht](../../access-control/home.md) für weitere Informationen zum Zuweisen einer Berechtigung. Wenn Sie keinen Zugriff auf die Admin Console für Ihr Unternehmen haben, wenden Sie sich an Ihren Organisationsadministrator.
+Weitere Informationen zum Zuweisen einer Berechtigung finden Sie im Handbuch zum [Konfigurieren von Berechtigungen](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=de) oder im Abschnitt [Zugriffssteuerung – Übersicht](../../access-control/home.md). Wenn Sie keinen Zugriff auf Admin Console für Ihr Unternehmen haben, wenden Sie sich an das Admin-Team Ihres Unternehmens.
 
 ## Verwalten von Kennzeichnungen auf Schemaebene
 
 Sie können Kennzeichnungen direkt zu einem Schema oder zu Feldern innerhalb dieses Schemas hinzufügen. Alle Felder, die auf der Schemaebene angewendet werden, werden auf alle Datensätze übertragen, die auf diesem Schema basieren.
 
-Um Datennutzungsbezeichnungen auf Schemaebene zu verwalten, müssen Sie ein vorhandenes Schema auswählen oder ein neues erstellen. Wählen Sie nach der Anmeldung bei Adobe Experience Platform die Option **[!UICONTROL Schemas]** im linken Navigationsbereich, um die **[!UICONTROL Schemas]** Arbeitsbereich. Auf dieser Seite werden alle erstellten Schemas, die zu Ihrer Organisation gehören, sowie nützliche Details zu den einzelnen Schemata aufgelistet.
+Zum Verwalten der Datennutzungskennzeichnungen auf Schemaebene müssen Sie ein vorhandenes Schema auswählen oder ein neues erstellen. Wählen Sie nach der Anmeldung bei Adobe Experience Platform im linken Navigationsbereich die Option **[!UICONTROL Schemata]** aus, um den Arbeitsbereich **[!UICONTROL Schemata]** zu öffnen. Auf dieser Seite werden alle erstellten Schemata, die zu Ihrem Unternehmen gehören, sowie nützliche Details zu jedem Schema angezeigt.
 
-![Die Adobe Experience Platform-Benutzeroberfläche mit hervorgehobener Registerkarte &quot;Schema&quot;.](../images/labels/schema-tab.png)
+![Die Adobe Experience Platform-Benutzeroberfläche mit hervorgehobener Schema-Registerkarte.](../images/labels/schema-tab.png)
 
-Im nächsten Abschnitt werden die Schritte zum Erstellen eines neuen Schemas beschrieben, auf das Bezeichnungen angewendet werden sollen. Wenn Sie Beschriftungen für ein vorhandenes Schema bearbeiten möchten, wählen Sie das Schema aus der Liste aus und überspringen Sie voran zu [Hinzufügen von Datennutzungsbezeichnungen zum Schema](#add-labels).
+Im nächsten Abschnitt finden Sie Schritte zum Erstellen eines neuen Schemas, auf das Kennzeichnungen angewendet werden sollen. Wenn Sie Kennzeichnungen für ein vorhandenes Schema bearbeiten möchten, wählen Sie das Schema aus der Liste aus und fahren Sie mit dem Punkt [Hinzufügen von Datennutzungskennzeichnungen zum Schema](#add-labels) fort.
 
 ### Erstellen eines neuen Schemas
 
-Um ein neues Schema zu erstellen, wählen Sie **[!UICONTROL Schema erstellen]** in der oberen rechten Ecke der **[!UICONTROL Schemas]** Arbeitsbereich. Siehe Handbuch unter [Erstellen eines Schemas mit dem Schema Editor](../../xdm/tutorials/create-schema-ui.md#create) für vollständige Anweisungen. Alternativ können Sie [Erstellen eines Schemas mithilfe der Schema Registry-API](../../xdm/tutorials/create-schema-api.md) falls erforderlich.
+Um ein neues Schema zu erstellen, wählen Sie oben rechts im Arbeitsbereich **[!UICONTROL Schemata]** die Option **[!UICONTROL Schema erstellen]** aus. Vollständige Anweisungen finden Sie im Handbuch zum [Erstellen eines Schemas mit dem Schema-Editor](../../xdm/tutorials/create-schema-ui.md#create). Sie können auch ein [Schema mithilfe der Schema Registry-API erstellen](../../xdm/tutorials/create-schema-api.md), falls erforderlich.
 
-### Hinzufügen von Datennutzungsbezeichnungen zu einem Schema {#add-labels-to-schema}
+### Hinzufügen von Datennutzungskennzeichnungen zu einem Schema {#add-labels-to-schema}
 
-Nach dem Erstellen eines neuen Schemas oder Auswählen eines vorhandenen Schemas aus der Liste in der [!UICONTROL Durchsuchen] des [!UICONTROL Schemas] Arbeitsbereich ein Feld aus Ihrem Schema im Schema-Editor auswählen. Im [!UICONTROL Feldeigenschaften] Seitenleiste auswählen **[!UICONTROL Anwenden von Zugriffs- und Data Governance-Beschriftungen]**.
+Wählen Sie nach Erstellen eines neuen Schemas oder Auswählen eines vorhandenen Schemas aus der Liste auf der Registerkarte [!UICONTROL Durchsuchen] des Arbeitsbereichs [!UICONTROL Schemata] ein Feld aus Ihrem Schema im Schema-Editor aus. Wählen Sie in der Seitenleiste [!UICONTROL Feldeigenschaften] die Option **[!UICONTROL Zugriffs- und Data-Governance-Kennzeichnungen anwenden]** aus.
 
-![Auf der Registerkarte Struktur des Arbeitsbereichs &quot;Schemas&quot;wird die Visualisierung Ihres Schemas mit hervorgehobenen Beschriftungen &quot;Zugriff anwenden&quot;und &quot;Data Governance&quot;angezeigt.](../images/labels/schema-label-governance.png)
+![Die Registerkarte „Struktur“ des Arbeitsbereichs „Schemata“ mit Visualisierung Ihres Schemas bei hervorgehobener Option „Zugriffs- und Data-Governance-Kennzeichnungen anwenden“.](../images/labels/schema-label-governance.png)
 
-Es wird ein Dialogfeld angezeigt, in dem Sie Datennutzungsbezeichnungen auf Schema- und Feldebene anwenden und verwalten können. Vollständige Anweisungen zu finden Sie im XDM-Tutorial . [Hinzufügen oder Bearbeiten von Datennutzungsbezeichnungen für XDM-Schemas](../../xdm/tutorials/labels.md#select-schema-field).
+Es wird ein Dialogfeld angezeigt, in dem Sie Datennutzungskennzeichnungen auf Schema- und Feldebene anwenden und verwalten können. Im XDM-Tutorial finden Sie vollständige Anweisungen zum [Hinzufügen oder Bearbeiten von Datennutzungskennzeichnungen für XDM-Schemata](../../xdm/tutorials/labels.md#select-schema-field).
 
-### Hinzufügen von Datennutzungsbezeichnungen zu einem bestimmten Datensatz {#add-labels-to-dataset}
+### Hinzufügen von Datennutzungskennzeichnungen zu einem bestimmten Datensatz {#add-labels-to-dataset}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"
->title="Anleitung"
+>title="Anweisungen"
 >abstract="<ol><li>Wählen Sie im linken Navigationsbereich die Option <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=de">Datensätze</a> und dann den Datensatz aus, den Sie beschränken möchten.</li><li>Wählen Sie in der Ansicht „Datensatzdetails“ die Registerkarte <b>Data Governance</b> aus.</li><li>Wählen Sie die Datensatzfelder aus, die Sie beschränken möchten, und wählen Sie dann <b>Governance-Kennzeichnungen bearbeiten</b> aus, um die Daten anhand von Nutzungsbeschränkungen zu kennzeichnen.</li><li>Wählen Sie nach der Kennzeichnung Ihrer Daten im linken Navigationsbereich die Option <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=de">Richtlinien</a> und dann die Option <b>Richtlinie erstellen</b> aus.</li><li>Erstellen Sie eine <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=de#create-governance-policy">Data Governance-Richtlinie</a> und wählen Sie dann die Datennutzungskennzeichnungen aus, auf die die Richtlinie angewendet werden soll.</li><li>Wählen Sie die Marketing-Aktion(en) aus, die die Richtlinie für alle Daten mit diesen Kennzeichnungen verweigern soll. Nachdem die Richtlinie erstellt wurde, wählen Sie sie aus der Liste aus und aktivieren Sie sie mithilfe des Umschalters in der rechten Leiste.</li><li>Für jede aktivierte Richtlinie verhindert Platform, dass Daten mit den angegebenen Kennzeichnungen für die definierten Marketing-Aktionen verwendet werden. Diese Durchsetzung erfolgt automatisch, wenn Sie versuchen, gekennzeichnete Daten für ein Ziel mit zugehörigen Marketing-Aktionen zu aktivieren (Anwendungsfälle).</li></ol>"
 
 >[!IMPORTANT]
 >
->Beschriftungen können nicht mehr auf Felder auf Datensatzebene angewendet werden. Dieser Workflow wird nicht mehr für die Anwendung von Bezeichnungen auf Schemaebene unterstützt. Alle Bezeichnungen, die zuvor auf Datensatzobjektebene angewendet wurden, werden bis zum 31. Mai 2024 weiterhin über die Platform-Benutzeroberfläche unterstützt. Um sicherzustellen, dass Ihre Bezeichnungen über alle Schemas hinweg konsistent sind, müssen alle Bezeichnungen, die zuvor auf Datensatzebene an Felder angehängt wurden, von Ihnen im Laufe des kommenden Jahres auf Schemaebene migriert werden. Anweisungen finden Sie in der Dokumentation zu [Migrieren von zuvor angewendeten Bezeichnungen aus dem Datensatz auf Schemaebene](../e2e.md#migrate-labels).
+>Kennzeichnungen können auf Datensatzebene nicht mehr auf Felder angewendet werden. Dieser Workflow wurde zugunsten von Kennzeichnungen auf Schemaebene aufgegeben. Alle Kennzeichnungen, die zuvor auf Datensatzobjektebene angewendet wurden, werden bis zum 31. Mai 2024 weiterhin über die Platform-Benutzeroberfläche unterstützt. Damit Ihre Kennzeichnungen schemaübergreifend konsistent sind, müssen alle Kennzeichnungen, die zuvor auf Felder auf Datensatzebene angewendet wurden, von Ihnen im Laufe des kommenden Jahres auf Schemaebene migriert werden. In der Dokumentation finden Sie Anweisungen zum [Migrieren von zuvor angewendeten Kennzeichnungen von der Datensatz- auf die Schemaebene](../e2e.md#migrate-labels).
 
-Beschriftungen können auf den gesamten Datensatz aus der **[!UICONTROL Data Governance]** des **[!UICONTROL Datensätze]** Arbeitsbereich. Der Arbeitsbereich ermöglicht die Verwaltung von Datennutzungsbezeichnungen auf Datensatzebene.
+Kennzeichnungen können über die Registerkarte **[!UICONTROL Data Governance]** des Arbeitsbereichs **[!UICONTROL Datensätze]** auf den kompletten Datensatz angewendet werden. Der Arbeitsbereich ermöglicht Ihnen das Verwalten von Datennutzungskennzeichnungen auf Datensatzebene.
 
-![Die [!UICONTROL Data Governance] des [!UICONTROL Datensätze] Arbeitsbereich mit Data Governance hervorgehoben.](../images/labels/dataset-governance.png)
+![Die Registerkarte[!UICONTROL Data Governance] des Arbeitsbereichs [!UICONTROL Datensätze] mit hervorgehobener Registerkarte „Data Governance“.](../images/labels/dataset-governance.png)
 
-Um Datennutzungsbezeichnungen auf Datensatzebene zu bearbeiten, wählen Sie zunächst das Stiftsymbol (![Ein Bleistiftsymbol.](../images/labels/edit-icon.png)) in der Zeile des Datensatznamens.
+Um Datennutzungskennzeichnungen auf Datensatzebene zu bearbeiten, wählen Sie zunächst das Stiftsymbol (![Stiftsymbol.](../images/labels/edit-icon.png)) in der Zeile des Datensatznamens aus.
 
-![Die [!UICONTROL Data Governance] des [!UICONTROL Datensätze] Arbeitsbereich mit hervorgehobenem Stiftsymbol zum Bearbeiten.](../images/labels/dataset-level-edit.png)
+![Die Registerkarte [!UICONTROL Data Governance] des Arbeitsbereichs [!UICONTROL Datensätze] mit hervorgehobenem Stiftsymbol zum Bearbeiten.](../images/labels/dataset-level-edit.png)
 
 Der Dialog **[!UICONTROL Governance-Beschriftungen bearbeiten]** wird geöffnet. Aktivieren Sie im Dialogfeld die Kontrollkästchen neben den Beschriftungen, die Sie auf den Datensatz anwenden möchten. Denken Sie daran, dass diese Beschriftungen von allen Feldern im Datensatz übernommen werden. Während Sie die einzelnen Kontrollkästchen auswählen, wird die Kopfzeile **[!UICONTROL Angewandte Beschriftungen]** aktualisiert, sodass sie die ausgewählten Beschriftungen anzeigt. Nachdem Sie die gewünschten Beschriftungen ausgewählt haben, wählen Sie **[!UICONTROL Änderungen speichern]**.
 
-![Das Dialogfeld &quot;Governance-Beschriftungen bearbeiten&quot;mit den Kontrollkästchen &quot;Beschriftung&quot;und &quot;Änderungen speichern&quot;wurden hervorgehoben.](../images/labels/apply-labels-dataset.png)
+![Das Dialogfeld „Governance-Beschriftungen bearbeiten“ mit hervorgehobenen Kontrollkästchen für Kennzeichnungen und markierter Schaltfläche „Änderungen speichern“.](../images/labels/apply-labels-dataset.png)
 
-Die **[!UICONTROL Data Governance]** Der Arbeitsbereich wird wieder angezeigt und zeigt die Bezeichnungen an, die Sie auf Datensatzebene in der ersten Zeile der Tabelle angewendet haben. Sie können auch die durch einzelne Karten angezeigten Bezeichnungen sehen, die bis zu jedem Feld im Datensatz vererbt werden.
+Der Arbeitsbereich **[!UICONTROL Data Governance]** wird wieder angezeigt und zeigt die Kennzeichnungen an, die Sie auf Datensatzebene in der ersten Zeile der Tabelle angewendet haben. Es sind auch die durch einzelne Karten angezeigten Kennzeichnungen zu sehen, die von jedem Feld im Datensatz übernommen werden.
 
-![Die [!UICONTROL Data Governance] des [!UICONTROL Datensätze] Arbeitsbereich mit angewendeten Bezeichnungen auf Datensatzebene und vererbten Bezeichnungen für Datensatzfelder.](../images/labels/applied-dataset-labels.png)
+![Die Registerkarte [!UICONTROL Data Governance] des Arbeitsbereichs [!UICONTROL Datensätze] mit hervorgehobenen angewendeten Kennzeichnungen auf Datensatzebene und übernommenen Kennzeichnungen für Datensatzfelder.](../images/labels/applied-dataset-labels.png)
 
 ### Entfernen von Kennzeichnungen aus einem Datensatz {#remove-labels-from-a-dataset}
 
-Auf Datensatzebene hinzugefügte Beschriftungen weisen neben ihrer Karte ein &quot;x&quot;auf. Dadurch können Sie die Bezeichnungen aus dem gesamten Datensatz entfernen. Vererbte Beschriftungen neben jedem Feld haben kein &quot;x&quot;neben ihnen und erscheinen &quot;grau ausgeblendet&quot;. Diese **Vererbte Beschriftungen sind schreibgeschützt**, d. h. sie können nicht auf Feldebene entfernt oder bearbeitet werden.
+Auf Datensatzebene hinzugefügte Kennzeichnungen weisen neben ihrer Karte ein „x“ auf. Dadurch können Sie die Kennzeichnungen aus dem kompletten Datensatz entfernen. Bei übernommenen Kennzeichnungen wird nicht neben jedem Feld ein „x“ angezeigt. Sie werden abgeblendet, also ausgegraut dargestellt. Diese **übernommenen Kennzeichnungen sind schreibgeschützt**, d. h., sie können nicht auf Feldebene entfernt oder bearbeitet werden.
 
 <!-- ## View labels at the dataset field level {#view-labels-at-dataset-field-level} -->
 
@@ -93,9 +93,9 @@ The inherited labels beside each field do not have an "x" next to them and appea
 
 <!--Beleive can cut above here  -->
 
-Die **[!UICONTROL Vererbte Beschriftungen anzeigen]** -Umschalter ist standardmäßig aktiviert, sodass Sie alle vom Schema bis zu seinen Feldern übernommenen Bezeichnungen sehen können. Wenn Sie den Umschalter deaktivieren, werden alle übernommenen Beschriftungen im Datensatz ausgeblendet.
+Der Umschalter **[!UICONTROL Übernommene Kennzeichnung anzeigen]** ist standardmäßig aktiviert. Dadurch können Sie alle Kennzeichnungen sehen, die die zugehörigen Felder vom Schema übernommen haben. Wenn Sie den Umschalter deaktivieren, werden alle übernommenen Beschriftungen im Datensatz ausgeblendet.
 
-![Die Registerkarte &quot;Data Governance&quot;im Arbeitsbereich &quot;Datensätze&quot;mit dem Umschalter Vererbte Bezeichnungen anzeigen .](../images/labels/inherited-labels.png)
+![Die Registerkarte „Data Governance“ des Arbeitsbereichs „Datensätze“ mit hervorgehobenem Umschalter „Übernommene Kennzeichnung anzeigen“.](../images/labels/inherited-labels.png)
 
 <!-- Labels applied to the dataset appear in read-only form within the **[!UICONTROL Data Governance]** view for that dataset. 
 
@@ -103,9 +103,9 @@ Die **[!UICONTROL Vererbte Beschriftungen anzeigen]** -Umschalter ist standardm�
 
 >[!NOTE]
 >
->Beschriftungen, die angewendet wurden, bevor die Funktion zur Kennzeichnung von Datensätzen eingestellt wurde, können aus dem Datensatz entfernt werden, indem Sie den relevanten Datensatz suchen und das Abbrechen-Symbol auf der Beschriftung auswählen.
->![Die Registerkarte &quot;Data Governance&quot;im Arbeitsbereich &quot;Datensätze&quot;mit einer Beschriftung, die gelöscht werden kann.](../images/labels/remove-governance-labels.png)
->Anweisungen finden Sie in der Dokumentation zu [Migrieren von zuvor angewendeten Bezeichnungen aus dem Datensatz auf Schemaebene](../e2e.md#migrate-labels).
+>Kennzeichnungen, die angewendet wurden, bevor die Funktion zur Kennzeichnung von Datensätzen eingestellt wurde, können aus dem Datensatz entfernt werden, indem Sie den relevanten Datensatz suchen und das Symbol „Abbrechen“ auf der Kennzeichnung auswählen.
+>![Die Registerkarte „Data Governance“ im Arbeitsbereich „Datensätze“ mit hervorgehobener löschbarer Kennzeichnung.](../images/labels/remove-governance-labels.png)
+>In der Dokumentation finden Sie Anweisungen zum [Migrieren von zuvor angewendeten Kennzeichnungen von der Datensatz- auf die Schemaebene](../e2e.md#migrate-labels).
 
 ## Verwalten von benutzerdefinierten Kennzeichnungen {#manage-custom-labels}
 
@@ -116,25 +116,25 @@ Die **[!UICONTROL Vererbte Beschriftungen anzeigen]** -Umschalter ist standardm�
 
 Sie können Ihre eigenen benutzerspezifischen Nutzungskennzeichnungen im Arbeitsbereich **[!UICONTROL Richtlinien]** in der Benutzeroberfläche von [!DNL Experience Platform] erstellen. Wählen Sie **[!UICONTROL Richtlinien]** in der linken Navigation und anschließend **[!UICONTROL Kennzeichnungen]**, um eine Liste der vorhandenen Kennzeichnungen zu sehen. Wählen Sie dort **[!UICONTROL Kennzeichnung erstellen]**.
 
-![Der Arbeitsbereich Richtlinien mit hervorgehobener Erstellungsrichtlinie.](../images/labels/create-label-btn.png)
+![Der Arbeitsbereich „Richtlinien“ mit hervorgehobener Option „Kennzeichnung erstellen“.](../images/labels/create-label-btn.png)
 
 Das Dialogfeld **[!UICONTROL Kennzeichnung erstellen]** wird angezeigt. Geben Sie nun die folgenden Informationen für die neue Kennzeichnung ein:
 
-* **[!UICONTROL Name]**: Eine eindeutige Kennung für die Bezeichnung. Dieser Wert wird für Suchen verwendet und sollte daher kurz und knapp sein.
-* **[!UICONTROL Anzeigename]**: Ein Anzeigename für die Bezeichnung.
+* **[!UICONTROL Name]**: Eine eindeutige Kennung für die Kennzeichnung. Dieser Wert wird für Suchen verwendet und sollte daher kurz und knapp sein.
+* **[!UICONTROL Benutzerfreundlicher Name]**: Ein benutzerfreundlicher Anzeigename für die Kennzeichnung.
 * **[!UICONTROL Beschreibung]**: (Optional) Eine Beschreibung für die Kennzeichnung, um mehr Kontext bereitzustellen.
 
 Klicken Sie abschließend auf **[!UICONTROL Erstellen]**.
 
-![Der Arbeitsbereich &quot;Richtlinien&quot;Dialogfeld &quot;Beschriftung erstellen&quot;mit hervorgehobener Option &quot;Erstellen&quot;.](../images/labels/create-label-dialog.png)
+![Das Dialogfeld „Kennzeichnung erstellen“ des Arbeitsbereichs „Richtlinien“ mit hervorgehobener Schaltfläche „Erstellen“.](../images/labels/create-label-dialog.png)
 
 Das Dialogfeld wird geschlossen und die neu erstellte benutzerdefinierte Kennzeichnung wird in der Liste unter der Registerkarte **[!UICONTROL Kennzeichnungen]** angezeigt.
 
-![Die Registerkarte &quot;Bezeichnungen&quot;im Arbeitsbereich &quot;Richtlinien&quot;mit dem neuen benutzerdefinierten Titel wird hervorgehoben.](../images/labels/label-created.png)
+![Die Registerkarte „Kennzeichnungen“ des Arbeitsbereichs „Richtlinien“ mit der hervorgehobenen neuen benutzerdefinierten Kennzeichnung.](../images/labels/label-created.png)
 
 Die Kennzeichnung kann jetzt unter **[!UICONTROL Benutzerdefinierte Kennzeichnungen]** ausgewählt werden, wenn Kennzeichnungen für Datensätze und Felder bearbeitet oder Datennutzungsrichtlinien erstellt werden.
 
-![Das Dialogfeld Zugriff anwenden und Data Governance-Beschriftungen mit hervorgehobenen benutzerdefinierten Beschriftungen.](../images/labels/add-custom-label.png)
+![Das Dialogfeld „Zugriffs- und Data-Governance-Kennzeichnungen anwenden“ mit hervorgehobenen benutzerdefinierten Kennzeichnungen.](../images/labels/add-custom-label.png)
 
 ## Nächste Schritte
 

@@ -7,7 +7,7 @@ exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '4309'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -303,7 +303,7 @@ Zunächst überprüfen Sie die Protokolle, um die Details des Fehlers zu ermitte
 
 Sie sollten auch in der Dokumentation nachlesen, wie Sie [geplante Abfragen in der Benutzeroberfläche](./ui/user-guide.md#scheduled-queries) und über [die API](./api/scheduled-queries.md) durchführen können.
 
-Beachten Sie bei der Verwendung von [!DNL Query Editor] Sie können einen Zeitplan nur zu einer Abfrage hinzufügen, die bereits erstellt, gespeichert und ausgeführt wurde. Dies gilt nicht für die [!DNL Query Service] API.
+Wenn Sie den [!DNL Query Editor] verwenden, können Sie einen Zeitplan nur zu einer Abfrage hinzufügen, die bereits erstellt, gespeichert und ausgeführt wurde. Dies gilt nicht für die [!DNL Query Service]-API.
 +++
 
 ### Was bedeutet die Fehlermeldung „Sitzungs-Limit erreicht“?

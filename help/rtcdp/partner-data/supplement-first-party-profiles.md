@@ -1,69 +1,69 @@
 ---
-title: (Beta) Ergänzung von Erstanbieterprofilen mit von Partnern bereitgestellten Attributen
-description: Erfahren Sie, wie Sie Erstanbieterprofile mit Attributen vertrauenswürdiger Datenpartner ergänzen, um Ihre Datenbasis zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und die Zielgruppenoptimierung zu verbessern.
+title: (Beta) Ergänzen von Erstanbieterprofilen mit von Partnern bereitgestellten Attributen
+description: Erfahren Sie, wie Sie Erstanbieterprofile mit Attributen vertrauenswürdiger Datenpartner ergänzen, um Ihre Datengrundlage zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
 source-git-commit: 486e1390dfa0602bef15d196d4a1a5befdc9ff23
 workflow-type: tm+mt
 source-wordcount: '1083'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Ergänzung von Erstanbieterprofilen mit von Partnern bereitgestellten Attributen
+# Ergänzen von Erstanbieterprofilen mit von Partnern bereitgestellten Attributen
 
 >[!AVAILABILITY]
 >
->* Diese Betafunktion steht Kunden zur Verfügung, die Real-Time CDP (App Service), Adobe Experience Platform Activation, Echtzeit-Kundendatenplattform, Real-Time CDP Prime und Real-Time CDP Ultimate lizenziert haben. Weitere Informationen zu diesen Paketen finden Sie im Abschnitt [Produktbeschreibungen](https://helpx.adobe.com/legal/product-descriptions.html) und wenden Sie sich für weitere Informationen an Ihren Kundenbetreuer.
+>* Diese Betafunktion steht Kundinnen und Kunden zur Verfügung, die Real-Time CDP (App-Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime und Real-Time CDP Ultimate lizenziert haben. Weitere Informationen zu diesen Paketen finden Sie in den [Produktbeschreibungen](https://helpx.adobe.com/de/legal/product-descriptions.html) und erhalten Sie von Ihrem Adobe-Support-Team.
 
-Ergänzung von Erstanbieterprofilen mit Attributen von vertrauenswürdigen Datenpartnern, um Ihre Datenbasis zu verbessern, neue Einblicke in Ihre Kundenbasis zu erhalten und eine bessere Zielgruppenoptimierung zu erzielen.
+Ergänzen Sie Erstanbieterprofile mit Attributen von vertrauenswürdigen Datenpartnern, um Ihre Datengrundlage zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.
 
-![Anreichern von Profilen mit von Partnern bereitgestellten Attributen - Überblick über die Anwendungsfälle auf hoher Ebene.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
+![Anreichern von Profilen mit von Partnern bereitgestellten Attributen – allgemeine Übersicht über Anwendungsfälle.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
 
 ## Voraussetzungen und Planung {#prerequisites-and-planning}
 
-Wenn Sie erwägen, Ihre eigenen Erstanbieterprofile mit Attributen von Datenpartnern zu ergänzen, sollten Sie die folgenden Details zur Dateneranreicherungsschleife mit dem Datenpartner besprechen und ansprechen:
+Wenn Sie Ihre eigenen Erstanbieterprofile mit Attributen von Datenpartnern ergänzen möchten, sollten Sie die folgenden Details zur Dateneranreicherungsschleife mit dem Datenpartner erörtern und besprechen:
 
-* Denken Sie an den Ort, an dem die Zielgruppenliste aus Real-Time CDP exportiert und für den Datenanbieter freigegeben wird. Dieser Speicherort muss den Dateiexport unterstützen.
-* Welche Kennungen werden vom Datenanbieter erwartet, damit sie sich auf zusätzliche Attribute beziehen können?
-* Wie wird die Datei mit von Partnern bereitgestellten Attributen wieder in die Echtzeit-Kundendatenplattform aufgenommen? Beispielsweise können die Dateien über Cloud-Speicher-Quell-Connectoren wie [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) oder [SFTP](/help/sources/connectors/cloud-storage/sftp.md).
-* Wie häufig erwarten Sie, dass von Partnern bereitgestellte Attribute wieder in Real-Time CDP integriert und aktualisiert werden?
+* Denken Sie über den Speicherort nach, an dem die Zielgruppenliste aus Real-Time CDP exportiert und für den Datenanbieter freigegeben wird. Dieser Speicherort muss Dateiexporte unterstützen.
+* Welche Kennungen erwartet der Datenanbieter, damit Bezug auf zusätzliche Attribute genommen werden kann?
+* Wie wird die Datei mit von Partnern bereitgestellten Attributen wieder in Real-Time CDP aufgenommen? Beispielsweise können die Dateien über Cloud-Speicher-Quell-Connectoren wie [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) oder [SFTP](/help/sources/connectors/cloud-storage/sftp.md) aufgenommen werden.
+* Wie häufig werden von Partnern bereitgestellte Attribute voraussichtlich wieder nach Real-Time CDP zurückgeholt und aktualisiert?
 
 >[!WARNING]
 >
->Die zusätzlichen von den Partnern bereitgestellten Attribute, die in Real-Time CDP erfasst werden, wirken sich auf Ihre *Durchschnittliche Profilreichweite*. Lesen Sie die [Real-time Customer Data Platform-Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) für weitere Informationen über den Reichtum der Profile.
+>Die zusätzlichen von den Partnern bereitgestellten Attribute, die in Real-Time CDP aufgenommen werden, wirken sich auf Ihren *durchschnittlichen Profilumfang* aus. Weitere Informationen zum Profilumfang finden Sie in der [Real-time Customer Data Platform-Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html).
 
-## So erreichen Sie den Anwendungsfall: Übersicht auf hoher Ebene {#achieve-the-use-case-high-level}
+## Erreichen des Anwendungsfalls: Allgemeine Übersicht {#achieve-the-use-case-high-level}
 
-![Anreichern von Profilen mit von Partnern bereitgestellten Attributen - Überblick über die Anwendungsfälle auf hoher Ebene.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-steps.png)
+![Anreichern von Profilen mit von Partnern bereitgestellten Attributen – allgemeine Übersicht über Anwendungsfälle.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-steps.png)
 
-1. Als **customer**, lizenzieren Sie Attribute aus dem **Datenpartner**.
-2. Als **customer**, erweitern Sie Ihre Profildaten und Ihr Governance-Modell um **Partner**-bereitgestellte Attribute.
-3. Als **customer**, integrieren Sie die Zielgruppen, die mit dem Datenpartner angereichert werden sollen. Im Allgemeinen werden diese Zielgruppen von Eingabe-IDs wie PII-Elementen (Personally Identifiable Information, PII) wie E-Mail, Name, Adresse usw. abgeleitet.
-4. Die **Partner** hängt lizenzierte Attribute für die Profile an, mit denen sie übereinstimmen können. Optional kann ein [Partner-ID](/help/identity-service/namespaces.md) kann in den Partner-Scoped-ID-Namespace eingeschlossen und darin aufgenommen werden.
-5. Als **customer**, laden Sie Attribute vom Datenpartner in Kundenprofile in Real-Time CDP.
+1. Als **Kundin oder Kunde** lizenzieren Sie Attribute vom **Datenpartner**.
+2. Als **Kundin oder Kunde** erweitern Sie Ihre Profildaten und Ihr Governance-Modell für vom **Partner** bereitgestellte Attribute.
+3. Als **Kundin oder Kunde** integrieren Sie die Zielgruppen, die mithilfe des Datenpartners angereichert werden sollen. Im Allgemeinen handelt es sich bei diesen Zielgruppen um verschlüsselte Eingabekennungen wie Elemente personenbezogener Daten (Personally Identifiable Information, PII). Beispiele hierfür sind die E-Mail-Adresse, der Name oder die Adresse.
+4. Der **Partner** hängt lizenzierte Attribute für die Profile an, bei denen ein Abgleich möglich ist. Optional kann eine [Partner-ID](/help/identity-service/namespaces.md) in den partnerbezogenen ID-Namespace eingeschlossen und darin aufgenommen werden.
+5. Als **Kundin oder Kunde** laden Sie Attribute vom Datenpartner in Kundenprofile in Real-Time CDP.
 
-## So erreichen Sie den Anwendungsfall: Schrittweise Anleitungen {#step-by-step-instructions}
+## Erreichen des Anwendungsfalls: Schrittweise Anweisungen {#step-by-step-instructions}
 
-Lesen Sie die folgenden Abschnitte durch, die Links zur weiteren Dokumentation enthalten, um die einzelnen Schritte in der oben stehenden allgemeinen Übersicht auszuführen.
+Lesen Sie die folgenden Abschnitte, die Links zu weiterführender Dokumentation enthalten, um die einzelnen Schritte in der oben stehenden allgemeinen Übersicht auszuführen.
 
-### Lizenzattribute des Partners {#license-attributes-from-partner}
+### Lizenzattribute vom Partner {#license-attributes-from-partner}
 
-Dieser Schritt wird im Abschnitt [Voraussetzungen](#prerequisites-and-planning) und Adobe setzt voraus, dass Sie über die richtigen vertraglichen Vereinbarungen mit vertrauenswürdigen Datenanbietern verfügen, um Ihre Erstanbieterprofile zu ergänzen.
+Dieser Schritt wird im Abschnitt [Voraussetzungen](#prerequisites-and-planning) beschrieben. Adobe geht dabei davon aus, dass Sie über die richtigen vertraglichen Vereinbarungen mit vertrauenswürdigen Datenanbietern verfügen, um Ihre Erstanbieterprofile zu ergänzen.
 
-### Erweitern Sie Ihre Profildaten und Ihr Governance-Modell, um von Partnern bereitgestellte Attribute aufzunehmen. {#extend-governance-model}
+### Erweitern Sie Ihre Profildaten und Ihr Governance-Modell für von Partnern bereitgestellte Attribute. {#extend-governance-model}
 
-An dieser Stelle erweitern Sie Ihr Data-Management-Framework in Real-Time CDP, um von Partnern bereitgestellte Attribute aufzunehmen.
+An diesem Punkt erweitern Sie Ihr Daten-Management-Framework in Real-Time CDP für von Partnern bereitgestellte Attribute.
 
-Sie haben die Möglichkeit, ein neues Schema der **[!UICONTROL XDM Individual Profile]** -Klasse oder erweitern Sie ein vorhandenes Schema desselben Typs, um von Partnern bereitgestellte Attribute einzuschließen. Adobe empfiehlt dringend, ein neues Schema mit einem neuen Satz von Feldergruppen zu erstellen, die die zusätzlichen Attribute des Datenanbieters am besten darstellen. Dadurch wird sichergestellt, dass Ihre Datenschemata sauber sind und unabhängig voneinander entwickelt werden können.
+Sie haben die Möglichkeit, ein neues Schema der Klasse **[!UICONTROL XDM Individual Profile – XDM-Profil für Einzelpersonen]** zu erstellen oder ein vorhandenes Schema desselben Typs um von Partnern bereitgestellte Attribute zu erweitern. Adobe empfiehlt ausdrücklich, ein neues Schema mit neuen Feldgruppen zu erstellen, die die zusätzlichen Attribute des Datenanbieters am besten darstellen. Dadurch wird sichergestellt, dass Ihre Datenschemata einwandfrei sind und sich unabhängig voneinander entwickeln können.
 
-Um von Partnern bereitgestellte Attribute in ein Schema einzuschließen, können Sie entweder eine neue Feldergruppe mit den erwarteten Attributen erstellen oder eine der von Adobe bereitgestellten vorkonfigurierten Feldergruppen verwenden.
+Um von Partnern bereitgestellte Attribute in ein Schema einzuschließen, können Sie entweder eine neue Feldgruppe mit den erwarteten Attributen erstellen oder eine der von Adobe bereitgestellten vorkonfigurierten Feldgruppen verwenden.
 
 Weitere Informationen finden Sie auf den folgenden Dokumentationsseiten:
 
 * [Grundlagen der Schemakomposition](/help/xdm/schema/composition.md)
-* [Übersicht über die [!UICONTROL XDM Individual Profile] class](/help/xdm/classes/individual-profile.md)
+* [Klasse [!UICONTROL XDM Individual Profile – XDM-Profil für Einzelpersonen] – Übersicht](/help/xdm/classes/individual-profile.md)
 * [Erstellen und Bearbeiten von Schemata in der Benutzeroberfläche](/help/xdm/ui/resources/schemas.md)
 * [Erstellen und Bearbeiten von Schemafeldgruppen in der Benutzeroberfläche](/help/xdm/ui/resources/field-groups.md)
 
@@ -76,50 +76,50 @@ Commenting out links for now
 
 -->
 
-Überlegen Sie in diesem Schritt außerdem, wie sich Ihr Data Governance-Modell ändert, wenn Sie Ihre Data-Management-Strategie erweitern und Daten von Drittanbietern einschließen, die vom Partner bereitgestellt werden. Beachten Sie die Überlegungen in den folgenden Links zur Dokumentation:
+Überlegen Sie in diesem Schritt außerdem, wie sich Ihr Data-Governance-Modell ändert, wenn Sie Ihre Daten-Management-Strategie erweitern und vom Partner bereitgestellte Drittanbieterdaten einschließen. Machen Sie sich mit den Hinweisen in den folgenden Links zur Dokumentation vertraut:
 
-* (**In Kürze verfügbar**) Halten Sie Drittanbieterdaten in einem separaten Datensatz, damit das Löschen und Rückgängigmachen von Integrationen einfach ist.
-* (**In Kürze verfügbar**) Verwenden Sie die [Datensatzablauf](/help/hygiene/ui/dataset-expiration.md) für Kunden, die das Data Hygiene-Add-on erworben haben.
-* (**In Kürze verfügbar**) Gehen Sie beim Erstellen abgeleiteter Datensätze, die Daten von Drittanbietern abrufen, vorsichtig vor, da die einzige Lösung zum Entfernen der Daten von Drittanbietern darin besteht, den gesamten abgeleiteten Datensatz zu löschen.
+* (**In Kürze verfügbar**) Halten Sie Drittanbieterdaten in einem separaten Datensatz, damit Integrationen auf einfache Weise gelöscht und rückgängig gemacht werden können.
+* (**In Kürze verfügbar**) Verwenden Sie die Funktion [Datensatzgültigkeit](/help/hygiene/ui/dataset-expiration.md) für den Datensatz bei Kundinnen und Kunden, die das Datenhygiene-Add-on erworben haben.
+* (**In Kürze verfügbar**) Gehen Sie beim Erstellen abgeleiteter Datensätze, die Daten von Drittanbietern abrufen, vorsichtig vor. Denn einmal vermischt, besteht die einzige Lösung zum Entfernen der Daten von Drittanbietern darin, den gesamten abgeleiteten Datensatz zu löschen.
 
 >[!TIP]
 >
->Wenn Sie Ihre Kundenprofile durch eine personenbasierte Kennung des Datenanbieters ergänzen möchten, können Sie einen neuen Identitätstyp des Typs **[[!UICONTROL Partner-ID]](/help/identity-service/namespaces.md)**.
+>Wenn Sie Ihre Kundenprofile mit einer personenbasierten Kennung des Datenanbieters ergänzen möchten, können Sie einen neuen Identitätstyp vom Typ **[[!UICONTROL Partner-ID]](/help/identity-service/namespaces.md)** erstellen.
 >
->Weitere Informationen zur Partner-ID finden Sie im Abschnitt [Identitätstypen-Abschnitt](/help/identity-service/namespaces.md).
->Informationen [Identitätsfelder definieren](/help/xdm/ui/fields/identity.md) in der Experience Platform-Benutzeroberfläche.
+>Weitere Informationen zur Partner-ID finden Sie im Abschnitt [Identitätstypen](/help/identity-service/namespaces.md).
+>Lesen Sie die Anweisungen zum [Definieren von Identitätsfeldern](/help/xdm/ui/fields/identity.md) in der Experience Platform-Benutzeroberfläche.
 
-### Zielgruppen exportieren, die bei der Eingabe von personenbezogenen Daten (PII) oder Hash-PII angereichert werden sollen {#export-audiences}
+### Exportieren von anzureichernden Zielgruppen bei verschlüsselten oder gehashten personenbezogenen Daten (PII) {#export-audiences}
 
-Exportieren Sie die Zielgruppen, die der Partner anreichern soll. Verwenden Sie die von der Echtzeit-Kundendatenplattform bereitgestellten Cloud-Speicher-Ziele, z. B. Amazon S3 oder SFTP. Lesen Sie die folgenden Dokumentationsseiten, um diesen Schritt abzuschließen:
+Exportieren Sie die Zielgruppen, die vom Partner angereichert werden sollen. Verwenden Sie die von Real-Time CDP bereitgestellten Cloud-Speicher-Ziele, z. B. Amazon S3 oder SFTP. Weitere Informationen zum Abschließen dieses Schrittes finden Sie auf den folgenden Dokumentationsseiten:
 
-* [Amazon S3-Ziel](/help/destinations/catalog/cloud-storage/amazon-s3.md) Dokumentationsseite
-* [SFTP-Ziel](/help/destinations/catalog/cloud-storage/sftp.md) Dokumentationsseite
-* Anleitung [Verbindung zu einem Ziel herstellen](/help/destinations/ui/connect-destination.md)
-* Anleitung [Exportieren von Daten in ein Cloud-Speicher-Ziel](/help/destinations/ui/activate-batch-profile-destinations.md)
+* Dokumentationsseite für [Amazon S3-Ziele](/help/destinations/catalog/cloud-storage/amazon-s3.md)
+* Dokumentationsseite für [SFTP-Ziele](/help/destinations/catalog/cloud-storage/sftp.md)
+* [Verbinden mit einem Ziel](/help/destinations/ui/connect-destination.md)
+* [Exportieren von Daten in ein Cloud-Speicher-Ziel](/help/destinations/ui/activate-batch-profile-destinations.md)
 
-### Ihr Datenpartner hängt lizenzierte Attribute für die Profile an, mit denen er übereinstimmen kann {#partner-appends-attributes}
+### Ihr Datenpartner hängt lizenzierte Attribute für die Profile an, bei denen ein Abgleich möglich ist {#partner-appends-attributes}
 
-In diesem Schritt hängt Ihr Datenpartner lizenzierte Attribute für die exportierte Zielgruppe an. Die Ausgabe ist im Allgemeinen als flache Datei verfügbar, die wieder in Real-Time CDP aufgenommen werden kann. Mehr dazu [Erfassen von Dateien in Real-Time CDP](/help/ingestion/tutorials/ingest-batch-data.md#upload-file).
+In diesem Schritt hängt Ihr Datenpartner lizenzierte Attribute für die exportierte Zielgruppe an. Die Ausgabe ist im Allgemeinen als Flatfile verfügbar, die wieder in Real-Time CDP aufgenommen werden kann. Weitere Informationen finden Sie unter [Aufnehmen von Dateien in Real-Time CDP](/help/ingestion/tutorials/ingest-batch-data.md#upload-file).
 
 ### Real-Time CDP hängt angereicherte Attribute an das Kundenprofil an {#ingest-data}
 
-Jetzt müssen Sie Daten vom Partner über einen Quell-Connector erfassen, um die angereicherten Daten wieder in Real-Time CDP zu bringen und Ihre Profile mit von Partnern bereitgestellten Daten zu ergänzen.
+Nun müssen Sie Daten vom Partner über einen Quell-Connector aufnehmen, um die angereicherten Daten wieder nach Real-Time CDP zurückzuholen und Ihre Profile mit den vom Partner bereitgestellten Daten zu ergänzen.
 
-Zu diesem Zweck werden u. U. einige Quell-Connectoren empfohlen:
+Zu diesem Zweck werden etwa diese Quell-Connectoren empfohlen:
 
 * [Amazon S3](/help/sources/connectors/cloud-storage/s3.md)
 * [SFTP](/help/sources/connectors/cloud-storage/sftp.md)
 
 ## Einschränkungen und Fehlerbehebung {#limitations-and-troubleshooting}
 
-Beachten Sie die folgenden Einschränkungen, wenn Sie den auf dieser Seite beschriebenen Anwendungsfall untersuchen:
+Beachten Sie die folgenden Einschränkungen, wenn Sie sich den auf dieser Seite beschriebenen Anwendungsfall ansehen:
 
-* Wenn Sie sich für die Verwendung von Partner-IDs entscheiden, beachten Sie, dass diese IDs beim Erstellen Ihrer [Identitätsdiagramm](/help/identity-service/ui/identity-graph-viewer.md).
+* Wenn Sie sich für die Verwendung von Partner-IDs entscheiden, beachten Sie, dass diese IDs beim Erstellen Ihres [Identitätsdiagramms](/help/identity-service/ui/identity-graph-viewer.md) nicht verwendet werden.
 
-## Andere Anwendungsfälle, die durch die Partnerdatenunterstützung erreicht werden {#other-use-cases}
+## Andere durch Partnerdatenunterstützung ermöglichte Anwendungsfälle {#other-use-cases}
 
-Erkunden Sie weitere Anwendungsfälle, die über die Unterstützung von Partnerdaten in Real-Time CDP aktiviert wurden:
+Erkunden Sie weitere Anwendungsfälle, die durch die Unterstützung von Partnerdaten in Real-Time CDP ermöglicht werden:
 
-* (**In Kürze verfügbar**) [!BADGE Beta]{type=Informative}**Partnerbezogene Anerkennung** für die Personalisierung von Erlebnissen vor Ort während des Besuchs und für die Offsite-Retargeting nach dem Besuch, ohne dass der Benutzer sich authentifiziert oder über einen früheren Verlauf mit Ihrer Marke verfügt.
-* (**In Kürze verfügbar**) [!BADGE Beta]{type=Informative}**Erweiterte Aktivierung** Verwendung von Partner-IDs zum Veröffentlichen von Ökosystemen, die keine PII oder Hash-PII akzeptieren.
+* (**In Kürze verfügbar**) [!BADGE Beta]{type=Informative}**Partnergestützte Erkennung** für die Personalisierung von Onsite-Erlebnissen während des Besuchs und für das Offsite-Retargeting nach dem Besuch, ohne dass sich die Benutzerin oder der Benutzer authentifiziert oder bereits Erfahrung mit Ihrer Marke hat.
+* (**In Kürze verfügbar**) [!BADGE Beta]{type=Informative}**Erweiterte Aktivierung** unter Verwendung von Partner-IDs zum Veröffentlichen von Ökosystemen, die keine PII oder gehashten PII akzeptieren.

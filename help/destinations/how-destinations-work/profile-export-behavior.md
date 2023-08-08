@@ -5,7 +5,7 @@ exl-id: 2be62843-0644-41fa-a860-ccd65472562e
 source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
 source-wordcount: '2932'
-ht-degree: 59%
+ht-degree: 62%
 
 ---
 
@@ -29,12 +29,12 @@ Der Vorgang, durch den Profile in HTTPS-Nachrichten aggregiert werden, bevor sie
 
 Nehmen wir das [Facebook-Ziel](/help/destinations/catalog/social/facebook.md) mit *[konfigurierbarer Aggregationsrichtlinie](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* als Beispiel. Daten werden aggregiert gesendet, wobei der Ziel-Service alle eingehenden Daten aus dem Upstream-Profil-Service nach einem der folgenden Kriterien aggregiert, bevor sie an Facebook gesendet werden:
 
-* Anzahl der Datensätze (höchstens 10.000) oder
+* Anzahl der Datensätze (maximal 10.000) oder
 * Zeitfenster-Intervall (30 Minuten)
 
-Der Schwellenwert, der von den oben genannten zuerst erreicht wird, löst einen Export nach Facebook aus. In der [!DNL Facebook Custom Audiences] Dashboard können Sie sehen, dass Zielgruppen aus der Experience Platform in 10.000 Schritten eingehen. Es kann vorkommen, dass alle 10-15 Minuten 10.000 Datensätze angezeigt werden, da die Daten schneller verarbeitet und aggregiert werden als das 30-minütige Exportintervall, und schneller gesendet werden. Etwa alle 10-15 Minuten, bis alle Datensätze verarbeitet wurden. Wenn die Datensätze für einen 10.000-Batch nicht ausreichen, wird die aktuelle Datensatzanzahl so gesendet, wie es der Zeitfensterschwellenwert erreicht. So werden möglicherweise auch kleinere Batches an Facebook gesendet.
+Der Schwellenwert, der von den oben genannten zuerst erreicht wird, löst einen Export nach Facebook aus. Im Dashboard [!DNL Facebook Custom Audiences] werden möglicherweise Zielgruppen aus Experience Platform in Schritten von 10.000 Datensätzen angezeigt. Es kann sein, dass alle 10 bis 15 Minuten 10.000 Datensätze angezeigt werden, da die Daten schneller verarbeitet und aggregiert werden als durch das 30-minütige Exportintervall vorgesehen. Außerdem werden sie schneller gesendet, etwa alle 10 bis 15 Minuten, bis alle Datensätze verarbeitet wurden. Wenn für einen Batch von 10.000 Datensätzen nicht genügend Datensätze vorhanden sind, wird die aktuelle Datensatzanzahl gesendet, sobald der Schwellenwert des Zeitfensters erreicht wird. Also werden möglicherweise auch kleinere Batches an Facebook gesendet.
 
-Ein weiteres Beispiel ist das [HTTP-API-Ziel](/help/destinations/catalog/streaming/http-destination.md), das mit `maxUsersPerRequest: 10` über eine Richtlinie zur *[Aggregation nach bestem Bemühen](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* verfügt. Das bedeutet, dass maximal zehn Profile aggregiert werden, bevor ein HTTP-Aufruf an dieses Ziel gesendet wird. Experience Platform versucht jedoch, Profile an das Ziel zu senden, sobald der Ziel-Service aktualisierte Neubewertungsinformationen von einem Upstream-Service erhält.
+Ein weiteres Beispiel ist das [HTTP-API-Ziel](/help/destinations/catalog/streaming/http-destination.md), das mit `maxUsersPerRequest: 10` über eine Richtlinie zur *[Aggregation nach bestem Bemühen](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* verfügt. Das bedeutet, dass maximal zehn Profile aggregiert werden, bevor ein HTTP-Aufruf an dieses Ziel gesendet wird. Experience Platform versucht jedoch, Profile an das Ziel zu senden, sobald der Ziel-Service aktualisierte Neuauswertungsinformationen von einem Upstream-Service erhält.
 
 Die Aggregationsrichtlinie ist konfigurierbar, und das Zielentwickler-Team kann entscheiden, wie die Aggregationsrichtlinie so konfiguriert werden soll, dass die Ratenbeschränkungen der Downstream-API-Endpunkte am besten eingehalten werden. Weitere Informationen zur [Aggregationsrichtlnie](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) finden Sie in der Destination SDK-Dokumentation.
 
@@ -134,8 +134,8 @@ Was die Profilattribute angeht, bestimmt jede Änderung an den drei oben zugeord
 Beim Export von Profilen an [dateibasierte Ziele](/help/destinations/destination-types.md#file-based) in Experience Platform gibt es drei Arten von Zeitplänen (siehe unten) und zwei Dateiexportoptionen (vollständige oder inkrementelle Dateien), die Sie verwenden können. Alle diese Einstellungen werden auf Zielgruppenebene festgelegt, auch wenn mehrere Zielgruppen einem einzelnen Ziel-Datenfluss zugeordnet sind.
 
 * Geplante Exporte: Konfigurieren Sie ein Ziel, fügen Sie ein oder mehrere Segmente hinzu, wählen Sie aus, ob Sie vollständige oder inkrementelle Dateien exportieren möchten, und bestimmen Sie eine bestimmte Zeit pro Tag oder mehrere Zeitpunkte pro Tag für den Dateiexport. Beispielsweise bedeutet eine Exportzeit von 17 Uhr, dass jedes Profil, das für die Zielgruppe qualifiziert ist, um 17 Uhr exportiert wird.
-* Nach der Segmentbewertung: Der Export wird sofort nach Ausführung des täglichen Audience-Evaluierungsauftrags ausgelöst. Das bedeutet, dass die Anzahl der exportierten Profile in der Datei so nah wie möglich an der zuletzt bewerteten Population des Segments liegt.
-* On-Demand-Ausfuhren ([Export-Datei jetzt](/help/destinations/ui/export-file-now.md)): Auf der Grundlage des neuesten Zielgruppenbewertungsauftrags wird eine vollständige Datei einmal zusätzlich zu den regelmäßig geplanten Exporten exportiert.
+* Nach der Segmentbewertung: Der Export wird sofort nach Ausführung des täglichen Zielgruppen-Evaluierungsauftrags ausgelöst. Das bedeutet, dass die Anzahl der exportierten Profile in der Datei so nah wie möglich an der zuletzt ausgewerteten Population des Segments liegt.
+* On-Demand-Ausfuhren ([Export-Datei jetzt](/help/destinations/ui/export-file-now.md)): Basierend auf dem neuesten Zielgruppenbewertungsauftrag wird eine vollständige Datei einmal zusätzlich zu den regelmäßig geplanten Exporten exportiert.
 
 In allen oben genannten Exportsituationen enthalten die exportierten Dateien die Profile, die für den Export qualifiziert sind, sowie die Spalten, die Sie als XDM-Attribute für den Export ausgewählt haben.
 
@@ -160,7 +160,7 @@ Beachten Sie beispielsweise in der unten dargestellten Exporteinstellung, in der
 * Ein Profil wird in einen inkrementellen Dateiexport eingeschlossen, wenn es für das Segment qualifiziert oder nicht qualifiziert ist.
 * Ein Profil wird *nicht* in einen inkrementellen Dateiexport eingeschlossen, wenn dem Identitätsdiagramm eine neue Telefonnummer hinzugefügt wird.
 * Ein Profil wird *nicht* in einen inkrementellen Dateiexport eingeschlossen, wenn der Wert eines zugeordneten XDM-Felds wie `xdm: loyalty.points`, `xdm: loyalty.tier`, `xdm: personalEmail.address` in einem Profil aktualisiert wird.
-* Immer `segmentMembership.status` Das XDM-Feld wird im Zielaktivierungs-Workflow zugeordnet. Profile, die die Zielgruppe verlassen, werden ebenfalls in exportierte inkrementelle Dateien mit einem `exited` Status.
+* Immer `segmentMembership.status` Das XDM-Feld wird im Zielaktivierungs-Workflow zugeordnet. Profile, die die Zielgruppe verlassen, werden ebenfalls in exportierte inkrementelle Dateien mit einem `exited` -Status.
 
 >[!ENDSHADEBOX]
 

@@ -5,7 +5,7 @@ exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '2084'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -131,11 +131,11 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
-| Feldergruppe | [[!UICONTROL Adobe Unified Profile Service-Kontovereinigungserweiterung]](https://github.com/adobe/xdm/pull/1696/files) | Es wurde eine Feldergruppe zur Kontoerweiterung für das Echtzeit-Kundenprofil hinzugefügt, mit der Benutzerinnen und Benutzer eine Segmentmitgliedschaft zur Kontovereinigung hinzufügen können. |
+| Feldgruppe | [[!UICONTROL Adobe Unified Profile Service Account Union Extension]](https://github.com/adobe/xdm/pull/1696/files) | Es wurde eine Feldergruppe zur Kontoerweiterung für das Echtzeit-Kundenprofil hinzugefügt, mit der Benutzerinnen und Benutzer eine Segmentmitgliedschaft zur Kontovereinigung hinzufügen können. |
 | Schema | [[!UICONTROL Systemschema für berechnete Attribute]](https://github.com/adobe/xdm/pull/1696/files) | Die Feldergruppe „Berechnete Attribute“, die vom Echtzeit-Kundenprofil verwendet wird, wurde zu einem schreibgeschützten globalen Schema des Systems aktualisiert. |
-| Feldergruppe | Mehrfach | Es wurden mehrere Ereignisse als Felder für das [[!UICONTROL Zeitreihenschema] hinzugefügt](https://github.com/adobe/xdm/pull/1718/files). |
-| Feldergruppe | Details zur Profiltreue | [Titel korrigiert](https://github.com/adobe/xdm/pull/1717/files) für `xdm:upgradeDate` von „Programmname“ zu „Upgrade-Datum“. |
-| Feldergruppe | Mehrfach | Mehrere Felder aus [[!UICONTROL Entscheidungselement]](https://github.com/adobe/xdm/pull/1714/files) wurden aktualisiert, um die doppelte verschachtelte Hierarchie zu entfernen. |
+| Feldgruppe | Mehrfach | Es wurden mehrere Ereignisse als Felder für das [[!UICONTROL Zeitreihenschema] hinzugefügt](https://github.com/adobe/xdm/pull/1718/files). |
+| Feldgruppe | Details zur Profiltreue | [Titel korrigiert](https://github.com/adobe/xdm/pull/1717/files) für `xdm:upgradeDate` von „Programmname“ zu „Upgrade-Datum“. |
+| Feldgruppe | Mehrfach | Mehrere Felder aus [[!UICONTROL Entscheidungselement]](https://github.com/adobe/xdm/pull/1714/files) wurden aktualisiert, um die doppelte verschachtelte Hierarchie zu entfernen. |
 
 {style="table-layout:auto"}
 
@@ -190,7 +190,7 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| API-Unterstützung zum Filtern von Daten auf Zeilenebene für die Salesforce CRM-Quelle. | Verwenden Sie logische und Vergleichsoperatoren, um Daten auf Zeilenebene für die Salesforce CRM-Quelle zu filtern. Weitere Informationen finden Sie im Handbuch zum [Filtern von Daten für eine Quelle mithilfe der API](../../sources/tutorials/api/filter.md). |
+| API-Unterstützung zum Filtern von Daten auf Zeilenebene für die Salesforce CRM-Quelle. | Verwenden Sie zum Filtern von Daten auf Zeilenebene, die aus der Salesforce CRM-Quelle stammen, logische Operatoren und Vergleichsoperatoren. Weitere Informationen finden Sie im Handbuch zum [Filtern von Daten für eine Quelle mithilfe der API](../../sources/tutorials/api/filter.md). |
 | Beta-Verfügbarkeit von Shopify Streaming | Die [Quelle Shopify Streaming](../../sources/connectors/ecommerce/shopify-streaming.md) ist jetzt in der Beta-Version verfügbar. Verwenden Sie die Quelle Shopify Streaming, um Daten von Ihrem Shopify-Partnerkonto zu Experience Platform zu streamen. |
 | Allgemeine Verfügbarkeit von OneTrust Integration | Die [Quelle OneTrust Integration](../../sources/connectors/consent-and-preferences/onetrust.md) ist jetzt allgemein verfügbar. Verwenden Sie die Quelle OneTrust Integration, um Einverständnis- und Voreinstellungsdaten aus Ihrem OneTrust Integration-Konto zu Experience Platform zu übertragen. |
 | Allgemeine Verfügbarkeit von Oracle Service Cloud | Die [Quelle Oracle Service Cloud](../../sources/connectors/customer-success/oracle-service-cloud.md) ist jetzt allgemein verfügbar. Verwenden Sie die Quelle Oracle Service Cloud, um Daten aus Ihrem Oracle Service Cloud-Konto in Experience Platform aufzunehmen. |
