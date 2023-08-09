@@ -3,9 +3,9 @@ title: Intelligente Erneute Interaktion
 description: Stellen Sie während der wichtigsten Konversionsmomente überzeugende und vernetzte Erlebnisse bereit, um unregelmäßige Kunden intelligent erneut anzusprechen.
 hide: true
 hidefromtoc: true
-source-git-commit: 4f0902b874d5e8179c009ad3b603e008b9a22bb4
+source-git-commit: 290c914216c1af070e065a38f726e2028c2cea8c
 workflow-type: tm+mt
-source-wordcount: '3496'
+source-wordcount: '3482'
 ht-degree: 9%
 
 ---
@@ -110,9 +110,7 @@ Um ein Schema zu erstellen, führen Sie die folgenden Schritte aus:
 
 Weitere Informationen zum Erstellen von Schemas finden Sie im Abschnitt [Tutorial zum Erstellen von Schemas.](/help/xdm/tutorials/create-schema-ui.md)
 
-Es gibt 4 Schemaentwürfe, die für die Journey zur erneuten Interaktion verwendet werden.
-
-Für jedes Schema müssen bestimmte Felder sowie einige dringend empfohlene Felder eingerichtet werden.
+Es gibt 4 Schemaentwürfe, die für die Journey zur erneuten Interaktion verwendet werden. Für jedes Schema müssen bestimmte Felder sowie einige dringend empfohlene Felder eingerichtet werden.
 
 #### Feldergruppenanforderungen für das Kundenattributschema
 
@@ -315,8 +313,6 @@ Externe Quell-System-Audit-Attribute sind ein standardmäßiger Experience-Daten
 
 Das Web-Connector-Schema der Adobe ist ein [!UICONTROL XDM ExperienceEvent] Schema, das die folgenden Feldergruppen enthält:
 
-Die für das Experience Event-Schema für den Adobe Analytics Data Feed erforderlichen Feldergruppen sind:
-
 + + + Adobe Analytics ExperienceEvent-Vorlage (Feldergruppe)
 
 | Felder | Anforderung | Beschreibung |
@@ -382,8 +378,6 @@ Externe Quell-System-Audit-Attribute sind ein standardmäßiger Experience-Daten
 +++
 
 ![Adobe-Web-Connector-Schema zur Hervorhebung der Feldgruppenliste.](../intelligent-re-engagement/images/adobe-web-connector.png)
-
->[!ENDTABS]
 
 ### Datensatz aus einem Schema erstellen
 
