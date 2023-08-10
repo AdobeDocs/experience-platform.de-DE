@@ -3,16 +3,16 @@ title: Intelligente Erneute Interaktion
 description: Stellen Sie während der wichtigsten Konversionsmomente überzeugende und vernetzte Erlebnisse bereit, um unregelmäßige Kunden intelligent erneut anzusprechen.
 hide: true
 hidefromtoc: true
-source-git-commit: 290c914216c1af070e065a38f726e2028c2cea8c
+source-git-commit: 7ff623626b557cbf67ad6164157d1a5ef4820cb1
 workflow-type: tm+mt
-source-wordcount: '3482'
-ht-degree: 9%
+source-wordcount: '3259'
+ht-degree: 8%
 
 ---
 
 # Intelligentes erneutes Ansprechen Ihrer Kunden zur Rückkehr
 
-Mit einer intelligenten Rückgewinnungsaktivität können Sie eine maßgeschneiderte, kanalübergreifende Drip-Kampagne einrichten, um Kunden zur Durchführung einer bestimmten Aktion zu bewegen. Die Abspielkampagne soll für eine begrenzte Zeit durchgeführt werden. Dazu gehört der Versand von E-Mails, SMS und bezahlten Anzeigen an Abonnenten. Sobald der Kunde die entsprechenden Maßnahmen getroffen hat, endet die Kampagne mit der Anschubkampagne sofort.
+Mit einer intelligenten Rückgewinnungsaktivität können Sie eine maßgeschneiderte, kanalübergreifende Drip-Kampagne einrichten, um Kunden zur Durchführung einer bestimmten Aktion zu bewegen. Die Abspielkampagne soll zeitlich begrenzt durchgeführt werden. Dazu gehören der Versand von Abonnenten, die beabsichtigte E-Mails, SMS und bezahlte Anzeigen anzeigten. Sobald der Kunde die entsprechenden Maßnahmen getroffen hat, endet die Kampagne mit der Anschubkampagne sofort.
 
 ![Schrittweise intelligente Wiederaufnahme der Interaktion - Überblick auf hoher Ebene.](../intelligent-re-engagement/images/step-by-step.png)
 
@@ -20,56 +20,58 @@ Mit einer intelligenten Rückgewinnungsaktivität können Sie eine maßgeschneid
 
 Wenn Sie die Schritte zur Implementierung des Anwendungsfalls ausführen, nutzen Sie die folgenden Real-Time CDP-Funktionen und Benutzeroberflächenelemente (aufgelistet in der Reihenfolge, in der Sie sie verwenden werden). Vergewissern Sie sich, dass Sie über die erforderlichen attributbasierten Zugriffssteuerungsberechtigungen für alle diese Bereiche verfügen, oder bitten Sie Ihren Systemadministrator, Ihnen die erforderlichen Berechtigungen zu erteilen.
 
-* [Adobe Real-time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - Aggregiert Daten aus verschiedenen Datenquellen, um die Kampagne anzukurbeln. Diese Daten werden dann verwendet, um die Kampagnenzielgruppen zu erstellen und personalisierte Datenelemente zu unterteilen, die in der E-Mail und in den Kacheln der Web-Promo verwendet werden (z. B. Name oder kontobezogene Informationen). Die CDP wird auch verwendet, um die Zielgruppen per E-Mail und Web (über Adobe Target) zu aktivieren.
+* [Adobe Real-time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - Aggregiert Daten aus verschiedenen Datenquellen, um die Kampagne anzukurbeln. Diese Daten werden dann verwendet, um die Kampagnenzielgruppen zu erstellen und personalisierte Datenelemente zu unterteilen, die in der E-Mail und in den Kacheln der Web-Promo verwendet werden (z. B. Name oder kontobezogene Informationen). Die CDP wird auch verwendet, um Zielgruppen über E-Mail und Web (über Adobe Target) zu aktivieren.
    * [Schemata](/help/xdm/home.md)
    * [Profile](/help/profile/home.md)
+   * [Datensätze](/help/catalog/datasets/overview.md)
    * [Zielgruppen](/help/segmentation/home.md)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=de)
+   * [Ziele](/help/destinations/home.md)
    * [Ereignis- oder Audience Trigger](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
    * [Zielgruppen/Ereignisse](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
    * [Journey-Aktionen](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=de)
 
 ### Erreichen des Anwendungsfalls: Allgemeine Übersicht {#achieve-the-use-case-high-level}
 
-Es wurden drei Journey zur Rückgewinnung erstellt.
+Es gibt derzeit drei verschiedene Journey zur Rückgewinnung, die entwickelt wurden.
 
 >[!BEGINTABS]
 
 >[!TAB Journey zur erneuten Interaktion]
 
-Die Rückgewinnungs-Journey ermöglicht sowohl auf der Website als auch in der App das Abbrechen des Produktdurchsuchs. Diese Journey wird ausgelöst, wenn ein Produkt angezeigt wurde, ohne dass es gekauft oder zum Warenkorb hinzugefügt wurde. Die Markeninteraktion wird nach drei Tagen ausgelöst, wenn innerhalb der letzten 24 Stunden keine Liste hinzugefügt wird.
+Die Journey zur erneuten Interaktion ermöglicht das nicht mehr verwendete Durchsuchen von Produkten auf der Website und in der App. Diese Journey wird ausgelöst, wenn ein Produkt angesehen, aber nicht gekauft oder zum Warenkorb hinzugefügt wurde. Die Markeninteraktion wird nach drei Tagen ausgelöst, wenn innerhalb der letzten 24 Stunden keine Listen hinzugefügt wurden.
 
 ![Kundenintelligente Journey-Rückgewinnung - Überblick über die allgemeine visuelle Darstellung.](../intelligent-re-engagement/images/re-engagement-journey.png)
 
-1. Die Daten werden in die Erfassung der Web SDK/Mobile SDK/Edge Network API über Edge Network (bevorzugte Methode) aggregiert.
+1. Die Daten werden über das Edge Network (die bevorzugte Methode) in die Aufnahme des Web SDK, des Mobile SDK oder der Edge Network API (Edge Network API) aggregiert.
 2. Als **customer**, erstellen Sie Datensätze, die für [!UICONTROL Profil].
 3. Als **customer**, laden Sie Profile in Real-Time CDP und erstellen Sie Governance-Richtlinien, um eine verantwortungsvolle Nutzung sicherzustellen.
 4. Als **customer**, erstellen Sie zielgerichtete Zielgruppen aus der Profilliste, um zu überprüfen, ob eine **Benutzer** hat in den letzten drei Tagen eine Markeninteraktion durchgeführt.
 5. Als **customer**, erstellen Sie eine Journey zur erneuten Interaktion in Adobe Journey Optimizer.
-6. Arbeiten Sie bei Bedarf mit dem **Datenpartner** zur Aktivierung von Zielgruppen für gewünschte Paid-Media-Ziele.
+6. Arbeiten Sie bei Bedarf mit dem **Datenpartner** für die Aktivierung von Zielgruppen zu gewünschten Paid-Media-Zielen.
 7. Adobe Journey Optimizer prüft die Zustimmung und sendet die verschiedenen konfigurierten Aktionen aus.
 
 >[!TAB Journey zum abgesetzten Warenkorb]
 
-Diese aufgegebene Journey zum Warenkorb richtet sich an Produkte, die im Warenkorb platziert, aber nicht auf der Website und in der App gekauft wurden. Wird zum Starten und Beenden von Paid Media-Kampagnen verwendet
+Die Journey mit dem abgebrochenen Warenkorb ist auf Produkte ausgerichtet, die im Warenkorb platziert, aber noch nicht auf der Website und in der App gekauft wurden. Darüber hinaus werden Paid Media-Kampagnen mit dieser Methode gestartet und beendet.
 
 ![Der Kunde hat die Journey des Warenkorbs abgebrochen und eine allgemeine visuelle Übersicht erstellt.](../intelligent-re-engagement/images/abandoned-cart-journey.png)
 
-1. Die Daten werden in die Erfassung der Web SDK/Mobile SDK/Edge Network API über Edge Network (bevorzugte Methode) aggregiert.
+1. Die Daten werden über das Edge Network (die bevorzugte Methode) in die Aufnahme des Web SDK, des Mobile SDK oder der Edge Network API (Edge Network API) aggregiert.
 2. Als **customer**, erstellen Sie Datensätze, die für [!UICONTROL Profil].
 3. Als **customer**, laden Sie Profile in Real-Time CDP und erstellen Sie Governance-Richtlinien, um eine verantwortungsvolle Nutzung sicherzustellen.
-4. Als **customer**, erstellen Sie zielgerichtete Zielgruppen aus der Profilliste, um zu überprüfen, ob eine **Benutzer** hat einen Artikel in den Warenkorb gelegt, aber den Kauf nicht abgeschlossen. Die **[!UICONTROL Zum Warenkorb hinzufügen]** -Ereignis startet einen Timer, der 30 Minuten wartet, und sucht dann nach dem Kauf. Wenn kein Kauf getätigt wurde, wird die Variable **Benutzer** wird zum **[!UICONTROL Warenkorb verlassen]** Zielgruppen.
+4. Als **customer**, erstellen Sie zielgerichtete Zielgruppen aus der Profilliste, um zu überprüfen, ob eine **Benutzer** hat einen Artikel in den Warenkorb gelegt, aber den Kauf nicht abgeschlossen. Die **[!UICONTROL Zum Warenkorb hinzufügen]** -Ereignis startet einen Timer, der 30 Minuten lang wartet, und sucht dann nach dem Kauf. Wenn kein Kauf getätigt wurde, wird die **Benutzer** wird zum **[!UICONTROL Warenkorb verlassen]** Zielgruppen.
 5. Als **customer**, erstellen Sie in Adobe Journey Optimizer eine Journey zum abgebrochenen Warenkorb.
-6. Arbeiten Sie bei Bedarf mit dem **Datenpartner** zur Aktivierung von Zielgruppen für gewünschte Paid-Media-Ziele.
+6. Arbeiten Sie bei Bedarf mit dem **Datenpartner** für die Aktivierung von Zielgruppen zu gewünschten Paid-Media-Zielen.
 7. Adobe Journey Optimizer prüft die Zustimmung und sendet die verschiedenen konfigurierten Aktionen aus.
 
 >[!TAB Journey zur Bestellbestätigung]
 
-Diese Journey zur Bestellbestätigung ermöglicht Produktkäufe sowohl auf der Website als auch in der App.
+Die Journey zur Bestellbestätigung konzentriert sich auf Produktkäufe, die über die Website und die mobile App getätigt werden.
 
 ![Kundenauftragsbestätigung Journey - Allgemeine visuelle Übersicht.](../intelligent-re-engagement/images/order-confirmation-journey.png)
 
-1. Die Daten werden in die Erfassung der Web SDK/Mobile SDK/Edge Network API über Edge Network (bevorzugte Methode) aggregiert.
+1. Die Daten werden über das Edge Network (die bevorzugte Methode) in die Aufnahme des Web SDK, des Mobile SDK oder der Edge Network API (Edge Network API) aggregiert.
 2. Als **customer**, erstellen Sie Datensätze, die für [!UICONTROL Profil].
 3. Als **customer**, laden Sie Profile in Real-Time CDP und erstellen Sie Governance-Richtlinien, um eine verantwortungsvolle Nutzung sicherzustellen.
 4. Als **customer**, erstellen Sie zielgerichtete Zielgruppen aus der Profilliste, um zu überprüfen, ob eine **Benutzer** hat einen Kauf getätigt.
@@ -80,41 +82,36 @@ Diese Journey zur Bestellbestätigung ermöglicht Produktkäufe sowohl auf der W
 
 ## Erreichen des Anwendungsfalls: Schrittweise Anweisungen {#step-by-step-instructions}
 
-Lesen Sie die folgenden Abschnitte durch, die Links zur weiteren Dokumentation enthalten, um die einzelnen Schritte in den obigen Übersichten auf hoher Ebene durchzuführen.
+Um die einzelnen Schritte in den obigen Übersichten auf hoher Ebene abzuschließen, lesen Sie die folgenden Abschnitte durch, die Links zu weiteren Informationen und detaillierteren Anweisungen enthalten.
 
 ### Benutzeroberflächenfunktionen und -elemente, die Sie verwenden {#ui-functionality-and-elements}
 
-Wenn Sie die Schritte zur Implementierung des Anwendungsfalls ausführen, nutzen Sie die folgenden Real-Time CDP-Funktionen und Benutzeroberflächenelemente (aufgelistet in der Reihenfolge, in der Sie sie verwenden werden). Vergewissern Sie sich, dass Sie über die erforderlichen attributbasierten Zugriffssteuerungsberechtigungen für alle diese Bereiche verfügen, oder bitten Sie Ihren Systemadministrator, Ihnen die erforderlichen Berechtigungen zu erteilen.
-
-* [Schemata](/help/xdm/home.md)
-* [Profile](/help/profile/home.md)
-* [Datensätze](/help/catalog/datasets/overview.md)
-* [Zielgruppen](/help/segmentation/home.md)
-* [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=de)
-* [Ziele](/help/destinations/home.md)
+Wenn Sie die Schritte zur Implementierung des Anwendungsfalls ausführen, verwenden Sie die am Anfang dieses Dokuments aufgelisteten Real-Time CDP-Funktionen und Benutzeroberflächenelemente. Vergewissern Sie sich, dass Sie über die erforderlichen attributbasierten Zugriffssteuerungsberechtigungen für alle diese Bereiche verfügen, oder bitten Sie Ihren Systemadministrator, Ihnen die erforderlichen Berechtigungen zu erteilen.
 
 ### Erstellen eines Schemaentwurfs und Angeben von Feldergruppen
 
-Ressourcen des Experience-Datenmodells (XDM) werden im [!UICONTROL Schemas] Arbeitsbereich in Adobe Experience Platform. Sie können die von Adobe bereitgestellten Kernressourcen anzeigen und untersuchen sowie benutzerdefinierte Ressourcen und Schemata für Ihr Unternehmen erstellen.
+Ressourcen des Experience-Datenmodells (XDM) werden im [!UICONTROL Schemas] Arbeitsbereich in Adobe Experience Platform. Sie können die von Adobe bereitgestellten Kernressourcen anzeigen und untersuchen und benutzerdefinierte Ressourcen und Schemata für Ihr Unternehmen erstellen.
 
-Um ein Schema zu erstellen, führen Sie die folgenden Schritte aus:
+<!--
+To create a schema, complete the steps below:
 
-1. Navigieren Sie zu **[!UICONTROL Data Management]** > **[!UICONTROL Schemas]** und wählen **[!UICONTROL Schema erstellen]**.
-2. Auswählen **[!UICONTROL Individuelles XDM-Profil]/[!UICONTROL XDM ExperienceEvent]**.
-3. Navigieren Sie zu **[!UICONTROL Feldergruppen]** und wählen **[!UICONTROL Hinzufügen]**.
-4. Verwenden Sie das Suchfeld, um die Feldergruppe zu suchen und auszuwählen, und wählen Sie dann **[!UICONTROL Feldergruppen hinzufügen]**.
-5. Geben Sie Ihrem Schema einen Namen und optional eine Beschreibung.
-6. Wählen Sie **[!UICONTROL Speichern]** aus.
+1. Navigate to **[!UICONTROL Data Management]** > **[!UICONTROL Schemas]** and select **[!UICONTROL Create schema]**.
+2. Select **[!UICONTROL XDM Individual Profile]/[!UICONTROL XDM ExperienceEvent]**.
+3. Navigate to **[!UICONTROL Field groups]** and select **[!UICONTROL Add]**.
+4. Use the search box to find and select the field group, then select **[!UICONTROL Add field groups]**.
+5. Give your schema a name and optionally a description.
+6. Select **[!UICONTROL Save]**.
 
-![Eine Aufzeichnung der Schritte zum Erstellen eines Schemas.](../intelligent-re-engagement/images/create-a-schema.gif)
+![A recording of the steps to create a schema.](../intelligent-re-engagement/images/create-a-schema.gif) 
+-->
 
 Weitere Informationen zum Erstellen von Schemas finden Sie im Abschnitt [Tutorial zum Erstellen von Schemas.](/help/xdm/tutorials/create-schema-ui.md)
 
-Es gibt 4 Schemaentwürfe, die für die Journey zur erneuten Interaktion verwendet werden. Für jedes Schema müssen bestimmte Felder sowie einige dringend empfohlene Felder eingerichtet werden.
+Es gibt vier Schemaentwürfe, die für die Journey zur erneuten Interaktion verwendet werden. Für jedes Schema müssen bestimmte Felder sowie einige dringend empfohlene Felder eingerichtet werden.
 
-#### Feldergruppenanforderungen für das Kundenattributschema
+#### Schema für Kundenattribute
 
-Das Kundenattributschema ist ein [!UICONTROL Individuelles XDM-Profil] Schema, das die folgenden Feldergruppen enthält:
+Das Kundenattributschema wird durch eine [!UICONTROL Individuelles XDM-Profil] -Klasse, die die folgenden Feldergruppen enthält:
 
 +++Persönliche Kontaktdetails (Feldergruppe)
 
@@ -165,11 +162,13 @@ Diese Feldergruppe wird für Best Practices verwendet.
 
 +++
 
-![Schema für Kundenattribute, das die Liste der Feldergruppen hervorhebt.](../intelligent-re-engagement/images/customer-attributes.png)
+<!--
+![Customer attributes schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-attributes.png) 
+-->
 
-#### Feldergruppenanforderungen für das Schema für digitale Transaktionen von Kunden
+#### Schema für digitale Transaktionen des Kunden
 
-Das Schema für digitale Transaktionen des Kunden ist ein [!UICONTROL XDM ExperienceEvent] Schema, das die folgenden Feldergruppen enthält:
+Das Schema für digitale Transaktionen des Kunden wird durch eine [!UICONTROL XDM ExperienceEvent] -Klasse, die die folgenden Feldergruppen enthält:
 
 + + + Adobe Experience Platform Web SDK ExperienceEvent (Feldergruppe)
 
@@ -260,11 +259,13 @@ Externe Quell-System-Audit-Attribute sind ein standardmäßiger Experience-Daten
 
 +++
 
-![Schema für digitale Transaktionen des Kunden, das die Liste der Feldergruppen hervorhebt.](../intelligent-re-engagement/images/customer-digital-transactions.png)
+<!--
+![Customer digital transactions schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-digital-transactions.png) 
+-->
 
-#### Feldergruppenanforderungen für das Schema der Offline-Transaktionen von Kunden
+#### Schema für Offline-Transaktionen des Kunden
 
-Das Offline-Transaktionsschema des Kunden ist ein [!UICONTROL XDM ExperienceEvent] Schema, das die folgenden Feldergruppen enthält:
+Das Schema der Offline-Transaktionen des Kunden wird durch eine [!UICONTROL XDM ExperienceEvent] -Klasse, die die folgenden Feldergruppen enthält:
 
 +++Commerce-Details (Feldergruppe)
 
@@ -307,11 +308,13 @@ Externe Quell-System-Audit-Attribute sind ein standardmäßiger Experience-Daten
 
 +++
 
-![Schema für Offline-Transaktionen des Kunden, das die Liste der Feldergruppen hervorhebt.](../intelligent-re-engagement/images/customer-offline-transactions.png)
+<!--
+![Customer offline transactions schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-offline-transactions.png) 
+-->
 
-#### Feldergruppenanforderungen für das Adobe Web Connector-Schema
+#### Adobe-Web-Connector-Schema
 
-Das Web-Connector-Schema der Adobe ist ein [!UICONTROL XDM ExperienceEvent] Schema, das die folgenden Feldergruppen enthält:
+Das Web-Connector-Schema der Adobe wird durch eine [!UICONTROL XDM ExperienceEvent] -Klasse, die die folgenden Feldergruppen enthält:
 
 + + + Adobe Analytics ExperienceEvent-Vorlage (Feldergruppe)
 
@@ -377,25 +380,34 @@ Externe Quell-System-Audit-Attribute sind ein standardmäßiger Experience-Daten
 
 +++
 
-![Adobe-Web-Connector-Schema zur Hervorhebung der Feldgruppenliste.](../intelligent-re-engagement/images/adobe-web-connector.png)
+<!--
+![Adobe web connector schema highlighting the list of field groups.](../intelligent-re-engagement/images/adobe-web-connector.png) 
+-->
 
 ### Datensatz aus einem Schema erstellen
 
-Ein Datensatz ist ein Konstrukt zur Datenspeicherung und -verwaltung, in dem Daten (in der Regel) in einer Tabelle erfasst werden, die ein Schema (Spalten) und Felder (Zeilen) beinhaltet. Für intelligente Journey zur erneuten Interaktion verfügt jedes Schema über einen Datensatz.
+Ein Datensatz ist eine Speicher- und Verwaltungsstruktur für eine Datengruppe, häufig eine Tabelle mit Feldern (Zeilen) und einem Schema (Spalten). Jedes Schema für intelligente Journey zur erneuten Interaktion verfügt über einen einzigen Datensatz.
 
-Um einen Datensatz aus einem Schema zu erstellen, führen Sie die folgenden Schritte aus:
+Weitere Informationen zum Erstellen eines Datensatzes aus einem Schema finden Sie unter [Handbuch zur Benutzeroberfläche von Datensätzen](/help/catalog/datasets/user-guide.md).
+<!-- 
+To create a dataset from a schema, complete the steps below:
 
-1. Navigieren Sie zu **[!UICONTROL Data Management]** > **[!UICONTROL Datensätze]** und wählen **[!UICONTROL Datensatz erstellen]**.
-2. Wählen Sie **[!UICONTROL Datensatz aus Schema erstellen]** aus.
-3. Wählen Sie das von Ihnen erstellte relevante Rückgewinnungsschema aus.
-4. Geben Sie Ihrem Datensatz einen Namen und optional eine Beschreibung.
-5. Wählen Sie **[!UICONTROL Beenden]** aus.
+1. Navigate to **[!UICONTROL Data Management]** > **[!UICONTROL Datasets]** and select **[!UICONTROL Create dataset]**.
+2. Select **[!UICONTROL Create dataset from schema]**.
+3. Select the relevant re-engagement schema you created.
+4. Give your dataset a name and optionally a description.
+5. Select **[!UICONTROL Finish]**.
 
-![Eine Aufzeichnung der Schritte zum Erstellen eines Datensatzes aus einem Schema.](../intelligent-re-engagement/images/dataset-from-schema.gif)
+![A recording of the steps to create a dataset from a schema.](../intelligent-re-engagement/images/dataset-from-schema.gif)
+-->
 
-Beachten Sie, dass Sie ähnlich wie beim Schritt zum Erstellen eines Schemas die Aufnahme des Datensatzes in das Echtzeit-Kundenprofil aktivieren müssen. Weitere Informationen zum Aktivieren des Datensatzes für die Verwendung im Echtzeit-Kundenprofil finden Sie in der [Tutorial zum Erstellen von Schemas.](/help/xdm/tutorials/create-schema-ui.md#profile)
+>Hinweis
+>
+>Ähnlich wie beim Schritt zum Erstellen eines Schemas müssen Sie die Aufnahme des Datensatzes in das Echtzeit-Kundenprofil aktivieren. Weitere Informationen zum Aktivieren des Datensatzes für die Verwendung im Echtzeit-Kundenprofil finden Sie in der [Tutorial zum Erstellen von Schemas.](/help/xdm/tutorials/create-schema-ui.md#profile).
 
-![Datensatz für Profil aktivieren.](../intelligent-re-engagement/images/enable-dataset-for-profile.png)
+<!-- 
+![Enable dataset for profile.](../intelligent-re-engagement/images/enable-dataset-for-profile.png)
+-->
 
 ### Datenschutz, Einverständnis und Data Governance
 
@@ -405,7 +417,7 @@ Beachten Sie, dass Sie ähnlich wie beim Schritt zum Erstellen eines Schemas die
 >
 >Es ist gesetzlich vorgeschrieben, Kunden die Möglichkeit zu geben, sich vom Erhalt von Nachrichten einer Marke abzumelden, und sicherzustellen, dass diese Entscheidung respektiert wird. Weitere Informationen zu den geltenden Rechtsvorschriften finden Sie in der Dokumentation zu [Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
-Die folgenden Zustimmungsrichtlinien müssen bei der Einrichtung einer Rückgewinnungs-Journey berücksichtigt und verwendet werden:
+Beim Erstellen eines Rückgewinnungspfads müssen die folgenden Zustimmungsrichtlinien berücksichtigt und verwendet werden:
 
 * Wenn williges.marketing.email.val = &quot;Y&quot;, dann kann E-Mail gesendet werden
 * Wenn williges.marketing.sms.val = &quot;Y&quot;, dann Can SMS
@@ -415,15 +427,14 @@ Die folgenden Zustimmungsrichtlinien müssen bei der Einrichtung einer Rückgewi
 
 #### DULE-Bezeichnung und -Durchsetzung
 
-Die persönliche E-Mail-Adresse wird als direkt identifizierbare Daten verwendet, die anstelle eines Geräts zur Identifizierung oder zum Kontakt einer bestimmten Person verwendet werden können.
+Persönliche E-Mail-Adressen werden als direkt identifizierbare Daten verwendet, die zur Identifizierung oder zum Kontakt mit einer bestimmten Person und nicht mit einem Gerät verwendet werden.
 
 * personalEmail.address = I1
 
 #### Marketing-Richtlinien
 
-Es gibt keine zusätzlichen Marketing-Richtlinien für die Rückgewinnungs-Journey, jedoch sollte Folgendes als gewünscht betrachtet werden:
+Es sind keine zusätzlichen Marketing-Richtlinien erforderlich, um die Journey zur erneuten Interaktion zu unterstützen. Bei Bedarf sollten jedoch die folgenden Punkte berücksichtigt werden:
 
-* Berücksichtigen Sie bei Bedarf
 * Einschränken vertraulicher Daten
 * Einschränken der Onsite-Werbung
 * E-Mail-Targeting einschränken
@@ -432,22 +443,26 @@ Es gibt keine zusätzlichen Marketing-Richtlinien für die Rückgewinnungs-Journ
 
 ### Erstellen einer Zielgruppe
 
-Gehen Sie wie folgt vor, um eine Audience zu erstellen:
+<!--
+To create an audience, complete the steps below:
 
-1. Navigieren Sie zu **[!UICONTROL Kunde]** > **[!UICONTROL Zielgruppen]** und wählen **[!UICONTROL Erstellen einer Zielgruppe]**.
-2. Auswählen **[!UICONTROL Regel erstellen]** und wählen **[!UICONTROL Erstellen]**.
-3. Navigieren Sie zu **[!UICONTROL Feld]** und wählen **[!UICONTROL Veranstaltungen]** Registerkarte.
-4. Navigieren Sie zum Ereignistyp über das Suchfeld oder ziehen Sie ihn in den Builder. Fügen Sie abschließend Ereignisregeln hinzu, indem Sie Ereignistypen ziehen.
-5. Geben Sie Ihrem Schema einen Namen und optional eine Beschreibung.
-6. Wählen Sie **[!UICONTROL Speichern]** aus.
+1. Navigate to **[!UICONTROL Customer]** > **[!UICONTROL Audiences]** and select **[!UICONTROL Create audience]**.
+2. Select **[!UICONTROL Build rule]** and select **[!UICONTROL Create]**.
+3. Navigate to **[!UICONTROL Field]** and select **[!UICONTROL Events]** tab.
+4. Navigate or use the search box to find the event type, then drag this to the builder. Finally add event rules by dragging event types.
+5. Give your schema a name and optionally a description.
+6. Select **[!UICONTROL Save]**.
 
-![Eine Aufzeichnung der Schritte zum Erstellen einer Audience.](../intelligent-re-engagement/images/create-an-audience.gif)
-
-Weitere Informationen zum Erstellen von Zielgruppen finden Sie im Abschnitt [Handbuch zur Benutzeroberfläche von Audience Builder](/help/segmentation/ui/segment-builder.md).
+![A recording of the steps to create an audience.](../intelligent-re-engagement/images/create-an-audience.gif)
+-->
 
 #### Zielgruppenerstellung für Journey zur Wiederaufnahme der Markeninteraktion
 
-Zielgruppen für jede Journey zur erneuten Interaktion müssen mit bestimmten Ereignissen für die Segmentqualifizierung eingerichtet werden. Diese Details finden Sie unten auf den entsprechenden Registerkarten für jede Journey.
+Die Journey der Rückgewinnung verwenden Zielgruppen, um bestimmte Attribute oder Verhaltensweisen zu definieren, die von einer Untergruppe von Profilen aus Ihrem Profilspeicher gemeinsam genutzt werden, um eine vermarktbare Personengruppe aus Ihrem Kundenstamm zu unterscheiden. Zielgruppen können auf zwei verschiedene Arten in Adobe Experience Platform erstellt werden - entweder direkt als Zielgruppen oder über Platform-abgeleitete Segmentdefinitionen.
+
+Weitere Informationen zum direkten Erstellen von Zielgruppen finden Sie in der [Handbuch zur Benutzeroberfläche für Zielgruppenkomposition](/help/segmentation/ui/audience-composition.md).
+
+Weitere Informationen zum Erstellen von Zielgruppen mithilfe von Platform-abgeleiteten Segmentdefinitionen finden Sie in der [Handbuch zur Benutzeroberfläche von Audience Builder](/help/segmentation/ui/segment-builder.md).
 
 >[!BEGINTABS]
 
@@ -457,20 +472,22 @@ Die folgenden Ereignisse werden für die Journey zur erneuten Interaktion verwen
 
 Schließen Sie Zielgruppe ein, die mindestens 1 EventType = ProductViews -Ereignis THEN mindestens 1 Beliebiges Ereignis hat, bei dem (EventType ist nicht gleich commerce.productListAdds) und in den letzten 24 Stunden stattfindet und nach 3 Tagen kein Beliebiges Ereignis aufweist, bei dem (EventType = application.launch oder web.webpagedetails.pageViews oder commerce.purchase) und in den letzten 2 Tagen auftritt.
 
-![Screenshot der Rückgewinnungs-Audience mit dem Regelsatz.](../intelligent-re-engagement/images/re-engagement-audience.png)
+<!--
+![A screenshot of the re-engagement audience showing the set of rules.](../intelligent-re-engagement/images/re-engagement-audience.png) 
+-->
 
 >[!TAB Journey zum abgesetzten Warenkorb]
 
 Die folgenden Ereignisse werden für Profile verwendet, die ein Produkt zum Warenkorb hinzugefügt, den Kauf jedoch nicht abgeschlossen oder den Warenkorb in den letzten 24 Stunden gelöscht haben.
 
-include EventType = commerce.productListFügt zwischen 30 und 1440 Minuten vor jetzt hinzu.
+Include EventType = commerce.productListFügt zwischen 30 und 1440 Minuten zuvor hinzu.
 exclude EventType = commerce.purchases 30 Minuten vor jetzt ODER EventType = commerce.productListRemovals UND Warenkorb-ID gleich Produktlisten-IDs1 Warenkorb-ID (das Aufnahmeereignis).
 
-![Screenshot der Rückgewinnungs-Audience mit dem Regelsatz.](../intelligent-re-engagement/images/abandoned-cart-audience.png)
+<!--
+![A screenshot of the re-engagement audience showing the set of rules.](../intelligent-re-engagement/images/abandoned-cart-audience.png) 
+-->
 
 >[!ENDTABS]
-
-Weitere Informationen zum Erstellen von Zielgruppen finden Sie im Abschnitt [Handbuch zur Benutzeroberfläche von Audience Builder](/help/segmentation/ui/segment-builder.md).
 
 ### Journey-Setup in Adobe Journey Optimizer
 
@@ -478,13 +495,15 @@ Weitere Informationen zum Erstellen von Zielgruppen finden Sie im Abschnitt [Han
 >
 >Adobe Journey Optimizer umfasst nicht alle Elemente, die in den Diagrammen oben auf dieser Seite angezeigt werden. Alle Anzeigen für gebührenpflichtige Medien werden in erstellt [!UICONTROL Ziele].
 
-Spezifische Informationen sind für die verschiedenen Journey erforderlich, die jeder Anwendungsfall haben kann. Die für jede Journey-Verzweigung erforderlichen Daten finden Sie unten auf den entsprechenden Registerkarten.
+Mit Adobe Journey Optimizer können Sie Ihren Kunden verknüpfte, kontextbezogene und personalisierte Erlebnisse bereitstellen. Die Journey ist der gesamte Vorgang der Interaktion eines Kunden mit der Marke. Jeder Anwendungsfall kann eine Vielzahl verschiedener Journey enthalten, von denen jeder spezifische Informationen erfordert. Im Folgenden finden Sie die genauen Daten, die für jede Journey-Verzweigung benötigt werden.
 
 >[!BEGINTABS]
 
 >[!TAB Journey zur erneuten Interaktion]
 
-![Customer Re-Interaction-Journey in Adobe Journey Optimizer - Übersicht](../intelligent-re-engagement/images/re-engagement-ajo.png)
+<!--
+![Customer re-engagemnt journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/re-engagement-ajo.png) 
+-->
 
 +++Events
 
@@ -612,7 +631,9 @@ Spezifische Informationen sind für die verschiedenen Journey erforderlich, die 
 
 >[!TAB Journey zum abgesetzten Warenkorb]
 
-![Journey zum abgebrochenen Warenkorb in Adobe Journey Optimizer - Übersicht](../intelligent-re-engagement/images/abandoned-cart-ajo.png)
+<!--
+![Customer abandoned cart journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/abandoned-cart-ajo.png) 
+-->
 
 +++Events
 
@@ -741,7 +762,9 @@ Spezifische Informationen sind für die verschiedenen Journey erforderlich, die 
 
 >[!TAB Journey zur Bestellbestätigung]
 
-![Journey zur Bestellbestätigung in Adobe Journey Optimizer - Übersicht](../intelligent-re-engagement/images/order-confirmation-ajo.png)
+<!--
+![Customer order confirmation journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/order-confirmation-ajo.png) 
+-->
 
 +++Events
 
