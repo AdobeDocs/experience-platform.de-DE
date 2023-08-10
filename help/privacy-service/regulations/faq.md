@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Häufig gestellte Fragen zu Datenschutzbestimmungen
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu unterstützten gesetzlichen Datenschutzbestimmungen und deren Implementierung in Adobe Experience Cloud.
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
-source-git-commit: 7e86721f6dd6fd280ae7e7e67aca21b4258ffb66
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1619'
-ht-degree: 35%
+source-wordcount: '1618'
+ht-degree: 33%
 
 ---
 
@@ -53,13 +53,13 @@ Obwohl die Datenschutzbestimmungen eine breite Palette personenbezogener Daten a
 
 Ein **Datenverantwortlicher** ist die Stelle, die die Ziele, Bedingungen und Wege der Verarbeitung personenbezogener Daten bestimmt, während der **Datenverarbeiter** eine Stelle ist, die personenbezogene Daten im Auftrag des Datenverantwortlichen verarbeitet.
 
-A **Datenverantwortlicher** ist die Person oder Organisation, die befugt und dafür verantwortlich ist, Entscheidungen über die Erhebung, Verwendung oder Weitergabe personenbezogener Daten zu treffen. A **Datenprozessor** ist die Person oder Organisation, die im Zusammenhang mit der Erhebung, Verwendung oder Weitergabe der personenbezogenen Daten und der Leitung des Datenverantwortlichen tätig ist.
+A **Datenverantwortlicher** ist die Person oder Organisation, die befugt und dafür verantwortlich ist, Entscheidungen über die Erhebung, Verwendung oder Weitergabe personenbezogener Daten zu treffen. A **Datenprozessor** ist die Person oder Organisation, die im Zusammenhang mit der Erhebung, Verwendung oder Offenlegung der personenbezogenen Daten und der Leitung des Datenverantwortlichen tätig ist.
 
 ### Was ist der Unterschied zwischen der ausdrücklichen und eindeutigen Zustimmung der betroffenen Person?
 
 **Explizite Zustimmung** bezieht sich auf einen Standard der Einwilligung, der eine spezifische, informierte und eindeutige Angabe der Wünsche der betroffenen Person in mündlicher oder schriftlicher Form umfasst. Einfach ausgedrückt muss die betroffene Person buchstäblich und explizit &quot;Ich stimme zu&quot;oder &quot;Ich stimme zu&quot;, damit die Einwilligung als explizit betrachtet wird. Darüber hinaus muss es so einfach sein, die Zustimmung zurückzuziehen, wie sie sein muss.
 
-**Eindeutige (implizite) Zustimmung** bezieht sich auf die Einwilligung, die nicht explizit vom Datensubjekt erteilt wurde, jedoch eindeutig ist. Während des Anmeldeprozesses für eine Unternehmens-Website wird beispielsweise darauf hingewiesen, dass das Datensubjekt durch Angabe einer E-Mail-Adresse dem Empfang von E-Mails zu Sonderangeboten zustimmt. Wenn das Datensubjekt den Hinweis liest, reicht die positive Aktion der Eingabe seiner E-Mail aus, um als eindeutige Einwilligung betrachtet zu werden.
+**Eindeutige (implizite) Zustimmung** bezieht sich auf die Einwilligung, die nicht explizit vom Datensubjekt erteilt wurde, jedoch eindeutig ist. Während des Anmeldeprozesses für eine Unternehmens-Website wird beispielsweise darauf hingewiesen, dass die betroffene Person durch Angabe einer E-Mail-Adresse dem Empfang von E-Mails zu Sonderangeboten zustimmt. Wenn das Datensubjekt den Hinweis liest, reicht die positive Aktion der Eingabe seiner E-Mail aus, um als eindeutige Einwilligung betrachtet zu werden.
 
 Bei vielen Vorschriften wie der DSGVO ist eine ausdrückliche Zustimmung für die Verarbeitung sensibler personenbezogener Daten erforderlich, wobei nur eine &quot;Opt-in&quot;-Klausel ausreicht. Für nicht vertrauliche Daten ist jedoch eine eindeutige (implizite) Zustimmung zulässig.
 
@@ -67,7 +67,7 @@ Bei vielen Vorschriften wie der DSGVO ist eine ausdrückliche Zustimmung für di
 
 In vielen Datenschutzbestimmungen ist festgelegt, dass betroffene Personen, die ein bestimmtes Alter nicht erreicht haben, keine Einwilligung zur Erhebung ihrer personenbezogenen Daten einholen können. Einige Verordnungen sehen vor, dass der Inhaber der elterlichen Verantwortung für die betroffene Person in diesen Fällen die Einwilligung erteilt, aber nicht in allen Fällen. In der folgenden Tabelle ist das Mindestalter für die Einwilligung von Datensubjekten in die einzelnen Verordnungen aufgeführt, wobei Hinweise für weitere Informationen beigefügt werden:
 
-| Verordnung | Alter der Zustimmung | Anmerkungen |
+| Verordnung | Alter der Einwilligung | Anmerkungen |
 | --- | --- | --- |
 | CCPA (Kalifornien) | 16 | <ul><li>Die elterliche Zustimmung kann nur für Datensubjekte ab 13 Jahren erteilt werden.</li><li>Die Erhebung personenbezogener Daten von Personen unter 13 Jahren ist streng verboten.</li></ul> |
 | DSGVO (Europäische Union) | 16 | <ul><li>Einige EU-Mitgliedstaaten können zu diesem Zweck ein Gesetz für ein niedrigeres Alter vorsehen, jedoch nicht weniger als 13.</li><li>Die elterliche Zustimmung muss für alle Datensubjekte unter der Altersgrenze erteilt werden.</li></ul> |
@@ -86,9 +86,9 @@ Wenn das Unternehmen personenbezogene Daten gesammelt hat und die Identität ein
 
 | Verordnung | Zeitrahmen für die Antwort | Anmerkungen |
 | --- | --- | --- |
-| CCPA (Kalifornien) | 45 Tage |  |
+| CCPA (Kalifornien) | 45 Tage | |
 | DSGVO (Europäische Union) | 30 Tage | Wenn die Anfrage komplex ist oder zahlreiche Anfragen von demselben Datensubjekt gestellt wurden, kann die Anfrage auf 60 Tage verlängert werden. |
-| LGPD (Brasilien) | 15 Tage |  |
+| LGPD (Brasilien) | 15 Tage | |
 | PDPA (Thailand) | 30 Tage | Falls ein Unternehmen nicht innerhalb des Compliance-Fensters auf die Anfrage einer betroffenen Person antworten kann, hat das Unternehmen zusätzlich 30 Tage nach dem Datum, an dem es nicht in der Lage war, die Anfrage schriftlich an die betroffene Person zu beantworten. |
 
 <!-- | New Zealand [!DNL Privacy Act] | 20 working days | | -->
@@ -128,7 +128,7 @@ Als Dienstleister sammelt und verarbeitet Adobe personenbezogene Daten im Auftra
 
 Angesichts dieser Beziehung und der Vertragssprache der Adobe würden Offenlegungen an die Adobe wahrscheinlich nicht als &quot;Verkauf&quot;betrachtet, für den die Unternehmen eine Bekanntmachung vorlegen und eine Zustimmung beantragen müssten.
 
-Adobe-Dienste können jedoch verwendet werden, um bestimmte Daten auszutauschen und Übertragungen an Dritte zu ermöglichen. Diese Übertragungen Dritter könnten als &quot;Verkauf&quot;betrachtet werden und erfordern rechtlich die Offenlegung und Zustimmung. Kunden sollten mit ihrem Rechtsbeistand zusammenarbeiten, um einzelne Anwendungsfälle hinsichtlich der geltenden Anforderungen zu evaluieren.
+Adobe-Dienste können jedoch verwendet werden, um bestimmte Daten auszutauschen und Übertragungen an Dritte zu ermöglichen. Diese Übertragungen Dritter könnten als &quot;Verkauf&quot;betrachtet werden und erfordern rechtlich die Offenlegung und Zustimmung. Kunden sollten mit ihrem Rechtsbeistand zusammenarbeiten, um einzelne Anwendungsfälle hinsichtlich der geltenden Anforderungen auszuwerten.
 
 ### Bietet Adobe weitere Tools, die bei der Erfüllung von CCPA-Anforderungen hilfreich sein können?
 
@@ -144,7 +144,7 @@ Die folgenden Fragen beziehen sich speziell auf die DSGVO.
 
 Eine **Verordnung** ist ein bindender legislativer Rechtsakt, der in der gesamten EU durchgesetzt wird. Eine **Richtlinie** ist ein Rechtsakt, der ein Ziel festlegt, das alle EU-Länder erreichen müssen. Es ist jedoch Sache der einzelnen Länder, darüber zu entscheiden, wie dies erfolgt.
 
-Es ist wichtig festzustellen, dass es sich bei der DSGVO um eine Verordnung handelt, während es sich bei den früheren Rechtsvorschriften (Datenschutzrichtlinie) um eine Richtlinie handelte.
+Es ist wichtig festzustellen, dass es sich bei der DSGVO um eine Verordnung handelt, während es sich bei der früheren Gesetzgebung (der Datenschutzrichtlinie) um eine Richtlinie handelt.
 
 ### Wie wirkt sich die DSGVO auf die Richtlinie zu Datenverletzungen aus?
 
@@ -154,6 +154,6 @@ Vorgeschlagene Vorschriften zu Datenverstößen beziehen sich in erster Linie au
 
 Die folgenden Fragen beziehen sich speziell auf die PDPA.
 
-### Was sind sensible personenbezogene Daten?
+### Was sind vertrauliche personenbezogene Daten?
 
-Die PDPA enthält strenge Anforderungen an die Erfassung und Speicherung sensibler personenbezogener Daten, die personenbezogene Daten zu folgenden Themen umfassen: rassischer oder ethnischer Herkunft, politische Meinungen, religiöse oder philosophische Überzeugungen, Strafregister, Gewerkschaftsmitgliedschaften, genetische Daten, biometrische Daten, Gesundheitsakten sowie sexuelle Orientierung oder Präferenzen.
+Das PDPA enthält strenge Anforderungen an die Erhebung und Speicherung sensibler personenbezogener Daten, die personenbezogene Daten in Bezug auf Rasse oder ethnische Herkunft, politische Meinungen, religiöse oder philosophische Überzeugungen, Strafregister, Gewerkschaftsmitgliedschaften, genetische Daten, biometrische Daten, Gesundheitsakten sowie sexuelle Orientierung oder Vorlieben enthalten.

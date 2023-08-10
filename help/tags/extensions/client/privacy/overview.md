@@ -2,10 +2,10 @@
 title: Adobe-Datenschutzerweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Privacy“ in Adobe Experience Platform vertraut.
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 92%
+source-wordcount: '900'
+ht-degree: 89%
 
 ---
 
@@ -21,7 +21,7 @@ In diesem Handbuch wird beschrieben, wie Sie die Adobe Privacy-Erweiterung in de
 
 >[!NOTE]
 >
->Wenn Sie diese Funktionen lieber ohne Tags installieren möchten, finden Sie im Abschnitt [Übersicht über die Privacy-JavaScript-Bibliothek](../../../../privacy-service/js-library.md) Schritte zur Implementierung mit Rohcode.
+>Wenn Sie diese Funktionen lieber ohne Tags installieren möchten, lesen Sie den Abschnitt [Übersicht über die Privacy JavaScript Library](../../../../privacy-service/js-library.md) für Schritte zur Implementierung mit Rohcode.
 
 ## Installieren und Konfigurieren der Erweiterung
 

@@ -2,10 +2,10 @@
 title: Hosts-Endpunkt
 description: Erfahren Sie, wie Sie den /hosts-Endpunkt in der Reactor-API aufrufen.
 exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
-source-git-commit: 905384b3190cd55e7caa9c4560d6b2774280eee7
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 92%
+source-wordcount: '796'
+ht-degree: 91%
 
 ---
 
@@ -430,7 +430,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der Eigenschaft des angegebenen Hosts zurück.
+Eine erfolgreiche Antwort gibt die Details der angegebenen Hosteigenschaft zurück.
 
 ```json
 {

@@ -3,16 +3,16 @@ solution: Experience Platform
 title: Einverständnis und Voreinstellungsfeldgruppe
 description: Dieses Dokument bietet einen Überblick über die Schemafeldergruppe "Einwilligungen und Voreinstellungen".
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
 
 # [!UICONTROL Einverständnis und Voreinstellungen] Feldergruppe
 
-[!UICONTROL Einverständnis und Voreinstellungen] ist eine Standardfeldgruppe für [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) , das Einverständnis und Präferenzinformationen für einen einzelnen Kunden erfasst.
+[!UICONTROL Einverständnis und Voreinstellungen] ist eine Standardfeldgruppe für die [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) , das Einverständnis und Präferenzinformationen für einen einzelnen Kunden erfasst.
 
 >[!NOTE]
 >
@@ -95,7 +95,6 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, bei dem die [!UICO
 >* [Generieren von Beispieldaten in der Benutzeroberfläche](../../ui/sample.md)
 >* [Beispieldaten in der API generieren](../../api/sample-data.md)
 
-
 ### `idSpecific`
 
 `idSpecific` kann verwendet werden, wenn eine bestimmte Zustimmung oder Voreinstellung nicht allgemein für einen Kunden gilt, sondern auf ein einzelnes Gerät oder eine einzelne ID beschränkt ist. Beispielsweise kann ein Kunde den Erhalt von E-Mails an eine Adresse deaktivieren und gleichzeitig E-Mails an eine andere Adresse zulassen.
@@ -106,7 +105,6 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, bei dem die [!UICO
 >
 >* Wenn der Kunde sich auf Kanalebene abgemeldet hat, werden alle entsprechenden Zustimmungen oder Voreinstellungen unter `idSpecific` werden ignoriert.
 >* Wenn die Zustimmung oder Voreinstellung auf Kanalebene nicht festgelegt ist oder der Kunde sich angemeldet hat, werden die entsprechenden Zustimmungen oder Voreinstellungen unter `idSpecific` werden geehrt.
-
 
 Jeder Schlüssel im `idSpecific` -Objekt stellt einen bestimmten Identitäts-Namespace dar, der vom Adobe Experience Platform Identity Service erkannt wird. Sie können Ihre eigenen benutzerdefinierten Namespaces definieren, um verschiedene IDs zu kategorisieren. Es wird jedoch empfohlen, einen der Standard-Namespaces zu verwenden, die von Identity Service bereitgestellt werden, um die Speichergrößen für das Echtzeit-Kundenprofil zu reduzieren. Weitere Informationen zu Identitäts-Namespaces finden Sie unter [Übersicht über Identitäts-Namespace](../../../identity-service/namespaces.md) in der Dokumentation zu Identity Service .
 
@@ -141,7 +139,7 @@ Die Schlüssel für jedes Namespace-Objekt stellen die eindeutigen Identitätswe
 }
 ```
 
-Within `marketing` Objekte, die in der `idSpecific` -Abschnitt `any` und `preferred` -Felder werden nicht unterstützt. Diese Felder können nur auf Benutzerebene konfiguriert werden. Darüber hinaus wird die `idSpecific` Marketing-Voreinstellungen für `email`, `sms`und `push` nicht unterstützen `subscriptions` -Felder.
+Within `marketing` Objekte, die in der `idSpecific` -Abschnitt `any` und `preferred` -Felder werden nicht unterstützt. Diese Felder können nur auf Benutzerebene konfiguriert werden. Darüber hinaus wird die `idSpecific` Marketing-Voreinstellungen für `email`, `sms`, und `push` nicht unterstützen `subscriptions` -Felder.
 
 Es gibt auch eine Zustimmung, die nur im `idSpecific` Abschnitt: `adID`. Dieses Feld wird im folgenden Unterabschnitt behandelt.
 
@@ -177,11 +175,11 @@ Die `adID` Das Einverständnis stellt die Zustimmung des Kunden dar, ob eine Adv
 
 Um die [!UICONTROL Einverständnis und Voreinstellungen] -Feldergruppe verwenden, um Einwilligungsdaten von Ihren Kunden zu erfassen, müssen Sie einen Datensatz erstellen, der auf einem Schema basiert, das diese Feldergruppe enthält.
 
-Siehe Tutorial zu [Erstellen eines Schemas in der Benutzeroberfläche](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) für Schritte zum Zuweisen von Feldergruppen zu Feldern. Nachdem Sie ein Schema erstellt haben, das ein Feld mit der [!UICONTROL Einverständnis und Voreinstellungen] Feldergruppe, siehe Abschnitt [Erstellen eines Datensatzes](../../../catalog/datasets/user-guide.md#create) Führen Sie im Benutzerhandbuch zu Datensätzen die Schritte zum Erstellen eines Datensatzes mit einem vorhandenen Schema aus.
+Siehe Tutorial zu [Erstellen eines Schemas in der Benutzeroberfläche](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) für Schritte zum Zuweisen von Feldergruppen zu Feldern. Nachdem Sie ein Schema erstellt haben, das ein Feld mit der [!UICONTROL Einverständnis und Voreinstellungen] Feldergruppe, siehe Abschnitt [Datensatz erstellen](../../../catalog/datasets/user-guide.md#create) Führen Sie im Benutzerhandbuch zu Datensätzen die Schritte zum Erstellen eines Datensatzes mit einem vorhandenen Schema aus.
 
 >[!IMPORTANT]
 >
->Wenn Sie Einwilligungsdaten an senden möchten [!DNL Real-Time Customer Profile]müssen Sie eine [!DNL Profile]-aktiviertes Schema basierend auf dem [!DNL XDM Individual Profile] -Klasse, die die [!UICONTROL Einverständnis und Voreinstellungen] Feldergruppe. Der Datensatz, den Sie auf Grundlage dieses Schemas erstellen, muss auch für [!DNL Profile]. Spezifische Schritte zu [!DNL Real-Time Customer Profile] Anforderungen für Schemas und Datensätze.
+>Wenn Sie Einwilligungsdaten an senden möchten [!DNL Real-Time Customer Profile]müssen Sie eine [!DNL Profile]-aktiviertes Schema basierend auf dem [!DNL XDM Individual Profile] -Klasse, die die [!UICONTROL Einverständnis und Voreinstellungen] Feldergruppe. Der Datensatz, den Sie auf Grundlage dieses Schemas erstellen, muss auch für [!DNL Profile]. Spezifische Schritte zum Thema [!DNL Real-Time Customer Profile] Anforderungen für Schemas und Datensätze.
 >
 >Darüber hinaus müssen Sie sicherstellen, dass Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass sie die Datensätze priorisieren, die die neuesten Zustimmungs- und Voreinstellungsdaten enthalten, damit Kundenprofile korrekt aktualisiert werden. Siehe Übersicht unter [Zusammenführungsrichtlinien](../../../rtcdp/profile/merge-policies.md) für weitere Informationen.
 
@@ -191,4 +189,4 @@ Wenn ein Kunde seine Zustimmung oder Voreinstellungen auf Ihrer Website ändert,
 
 ## Nächste Schritte
 
-In diesem Dokument wurden Struktur und Verwendung der [!UICONTROL Einverständnis und Voreinstellungen] Feldergruppe. Weitere Informationen zu den anderen Feldern, die von der Feldergruppe bereitgestellt werden, finden Sie im Dokument im [[!UICONTROL Einverständnis für Datenschutz-, Personalisierungs- und Marketing-Voreinstellungen] Datentyp](../../data-types/consents.md).
+In diesem Dokument ging es um die Struktur und Verwendung der [!UICONTROL Einverständnis und Voreinstellungen] Feldergruppe. Weitere Informationen zu den anderen von der Feldergruppe bereitgestellten Feldern finden Sie im Dokument auf der [[!UICONTROL Einverständnis für Datenschutz-, Personalisierungs- und Marketing-Voreinstellungen] Datentyp](../../data-types/consents.md).

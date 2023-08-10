@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Identitätsfelder in der Benutzeroberfläche definieren
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Experience Platform ein Identitätsfeld definieren.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: 857c1d4f74b6352e90f9c97ef22d686a883e3563
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '609'
 ht-degree: 15%
 
 ---
@@ -21,7 +21,7 @@ Identitätsfelder sind eine entscheidende Komponente bei der Erstellung von Iden
 
 * [Adobe Experience Platform Identity Service](../../../identity-service/home.md): Führt Identitäten zwischen Geräten und Systemen zusammen und verknüpft Datensätze anhand der Identitätsfelder, die von den entsprechenden XDM-Schemas definiert werden.
    * [Identity-Namespaces](../../../identity-service/namespaces.md): In Identity-Namespaces werden die verschiedenen Arten von Identitätsinformationen definiert, die sich auf eine einzelne Person beziehen können. Sie sind eine erforderliche Komponente für jedes Identitätsfeld.
-* [Echtzeit-Kundenprofil](../../../profile/home.md): Nutzen von Identitätsdiagrammen für Kunden, um ein einheitliches Verbraucherprofil basierend auf aggregierten Daten aus mehreren Quellen bereitzustellen, die nahezu in Echtzeit aktualisiert werden.
+* [Echtzeit-Kundenprofil](../../../profile/home.md): Nutzen von Diagrammen zur Kundenidentität, um ein einheitliches Verbraucherprofil basierend auf aggregierten Daten aus mehreren Quellen bereitzustellen, die nahezu in Echtzeit aktualisiert werden.
 
 ## Identitätsfeld definieren {#define-a-identity-field}
 
@@ -42,11 +42,11 @@ Zusätzliche Steuerelemente werden angezeigt, nachdem Sie das Kontrollkästchen 
 
 under **[!UICONTROL Identitäts-Namespace]** verwenden, wählen Sie im Dropdown-Menü den entsprechenden Namespace für das Identitätsfeld aus. Von Adobe bereitgestellte Standard-Namespaces sowie alle benutzerdefinierten Namespaces, die von Ihrem Unternehmen definiert wurden, werden aufgelistet.
 
-Wenn Sie fertig sind, wählen Sie **[!UICONTROL Anwenden]** , um die Änderung auf das Schema anzuwenden.
+Wählen Sie zum Abschluss **[!UICONTROL Anwenden]** , um die Änderung auf das Schema anzuwenden.
 
 ![](../../images/ui/fields/special/identity-config.png)
 
-Die Arbeitsfläche wird aktualisiert, um die Änderungen widerzuspiegeln, wobei das ausgewählte Feld ein Fingerabdrucksymbol (![](../../images/ui/fields/special/identity-symbol.png)), um sie als Identität zu kennzeichnen. In der linken Leiste wird das Identitätsfeld jetzt unter dem Namen der Klasse oder Schemafeldgruppe aufgeführt, die das Feld für das Schema bereitstellt.
+Die Arbeitsfläche wird entsprechend den Änderungen aktualisiert, wobei das ausgewählte Feld ein Fingerabdrucksymbol (![](../../images/ui/fields/special/identity-symbol.png)), um sie als Identität zu kennzeichnen. In der linken Leiste wird das Identitätsfeld jetzt unter dem Namen der Klasse oder Schemafeldgruppe aufgeführt, die das Feld für das Schema bereitstellt.
 
 Wenn das Feld auch als primäre Identität festgelegt wurde, wird es auch unter **[!UICONTROL Erforderliche Felder]** in der linken Leiste. Wenn das Identitätsfeld innerhalb der Schemastruktur verschachtelt ist, werden auch alle übergeordneten Felder nach Bedarf aufgelistet.
 
@@ -56,6 +56,6 @@ Wenn Sie eine primäre Identität für das Schema definiert haben, können Sie j
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie ein Identitätsfeld in der Benutzeroberfläche definieren. Da Daten mit diesem Schema erfasst werden, werden Ihre Identitätsdiagramme aktualisiert, um die Identitätsfelder des Schemas widerzuspiegeln. Siehe Handbuch im [Identitätsdiagramm-Viewer](../../../identity-service/ui/identity-graph-viewer.md) , um zu erfahren, wie Sie das private Diagramm Ihres Unternehmens in der Benutzeroberfläche untersuchen.
+In diesem Handbuch wurde beschrieben, wie Sie ein Identitätsfeld in der Benutzeroberfläche definieren. Da Daten mit diesem Schema erfasst werden, werden Ihre Identitätsdiagramme aktualisiert, um die Identitätsfelder des Schemas widerzuspiegeln. Siehe Handbuch im Abschnitt [Identitätsdiagramm-Viewer](../../../identity-service/ui/identity-graph-viewer.md) , um zu erfahren, wie Sie das private Diagramm Ihres Unternehmens in der Benutzeroberfläche untersuchen.
 
-Siehe Übersicht unter [Definieren von Feldern in der Benutzeroberfläche](./overview.md#special) , um zu erfahren, wie Sie andere XDM-Feldtypen im [!DNL Schema Editor].
+Siehe Übersicht unter [Definieren von Feldern in der Benutzeroberfläche](./overview.md#special) Informationen zum Definieren anderer XDM-Feldtypen im [!DNL Schema Editor].

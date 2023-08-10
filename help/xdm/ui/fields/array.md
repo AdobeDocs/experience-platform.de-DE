@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definieren von Array-Feldern in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie ein Array-Feld in der Benutzeroberfläche "Experience Platform"definieren.
 exl-id: 9ac55554-c29b-40b2-9987-c8c17cc2c00c
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '362'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ Die zusätzlichen Konfigurationssteuerelemente für Arrays lauten wie folgt:
 
 {style="table-layout:auto"}
 
-Nachdem Sie die Konfiguration des Felds abgeschlossen haben, wählen Sie **[!UICONTROL Anwenden]** , um die Änderung auf das Schema anzuwenden.
+Wählen Sie nach der Konfiguration des Felds **[!UICONTROL Anwenden]** , um die Änderung auf das Schema anzuwenden.
 
 ![](../../images/ui/fields/special/array-config.png)
 
@@ -43,4 +43,4 @@ Die Arbeitsfläche wird aktualisiert, um die am Feld vorgenommenen Änderungen w
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie ein Array-Feld in der Benutzeroberfläche definieren. Siehe Übersicht unter [Definieren von Feldern in der Benutzeroberfläche](./overview.md#special) , um zu erfahren, wie Sie andere XDM-Feldtypen im [!DNL Schema Editor].
+In diesem Handbuch wurde beschrieben, wie Sie ein Array-Feld in der Benutzeroberfläche definieren. Siehe Übersicht unter [Definieren von Feldern in der Benutzeroberfläche](./overview.md#special) Informationen zum Definieren anderer XDM-Feldtypen im [!DNL Schema Editor].

@@ -2,10 +2,10 @@
 title: Best Practices für die Verwaltung von Daten im Rahmen von Lizenzberechtigungen
 description: Erfahren Sie mehr über Best Practices und Werkzeuge, die Sie zur besseren Verwaltung Ihrer Lizenzberechtigungen mit Adobe Experience Platform einsetzen können.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 225fee7e2addf5067cb13da11615f6acff62ed72
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2203'
-ht-degree: 78%
+source-wordcount: '2202'
+ht-degree: 77%
 
 ---
 
@@ -19,7 +19,7 @@ In diesem Dokument werden Best Practices und Tools beschrieben, mit denen Sie Ih
 
 ## Grundlagen zur Datenspeicherung in Adobe Experience Platform
 
-Experience Platform besteht hauptsächlich aus zwei Datenrepository: die [!DNL data lake] und den Profilspeicher.
+Die Experience Platform besteht hauptsächlich aus zwei Daten-Repositorys: der [!DNL data lake] und den Profilspeicher.
 
 Der **[!DNL data lake]** dient hauptsächlich folgenden Zwecken:
 
@@ -126,7 +126,7 @@ Der Profilspeicher besteht aus den folgenden Komponenten:
 
 Es stehen verschiedene Berichte zur Verfügung, die Ihnen helfen, die Zusammensetzung des Profilspeichers zu verstehen. Diese Berichte helfen Ihnen dabei, fundierte Entscheidungen darüber zu treffen, wie und wo Sie Ihre Erlebnisereignis-Abläufe festlegen können, um Ihre Lizenznutzung besser zu optimieren:
 
-* **Dataset Overlap Report API**: Zeigt die Datensätze, die am meisten zu Ihrer Addressable Audience beitragen. Mit diesem Bericht können Sie ermitteln, welche [!DNL ExperienceEvent] Datensätze, für die ein Ablaufdatum festgelegt wird. Weitere Informationen dazu finden Sie im Tutorial zum [Erstellen des Dataset Overlap Reports](../../profile/tutorials/dataset-overlap-report.md).
+* **Dataset Overlap Report API**: Zeigt die Datensätze, die am meisten zu Ihrer Addressable Audience beitragen. Mit diesem Bericht können Sie ermitteln, welche [!DNL ExperienceEvent] -Datensätze, für die ein Ablaufdatum festgelegt wird. Weitere Informationen dazu finden Sie im Tutorial zum [Erstellen des Dataset Overlap Reports](../../profile/tutorials/dataset-overlap-report.md).
 * **Identity Overlap Report API**: Zeigt die Identity-Namespaces, die am meisten zu Ihrer Addressable Audience beitragen. Weitere Informationen dazu finden Sie im Tutorial zum [Erstellen des Identity Overlap Reports](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report).
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
@@ -147,11 +147,11 @@ Im Folgenden finden Sie eine Liste empfohlener Best Practices, die Sie befolgen 
 * Konfigurieren Sie [Aufnahmefilter](#ingestion-filters), indem Sie die Ereignisse bestimmen, die für Ihre Segmentierungs- und Personalisierungs-Anwendungsfälle erforderlich sind. Dies ermöglicht Ihnen, nur wichtige Ereignisse zu senden, die für Ihre Anwendungsfälle nötig sind.
 * Stellen Sie sicher, dass Sie nur [Datensätze für Profile aktiviert haben](#ingestion-filters), die für Ihre Segmentierungs- und Personalisierungs-Anwendungsfälle erforderlich sind.
 * Konfigurieren [Ablauf von Erlebnisereignissen](#event-expirations) und [Pseudonyme Profildatenabläufe](#pseudonymous-profile-expirations) für hochfrequente Daten wie Webdaten.
-* Prüfen Sie regelmäßig die [Berichte zur Profilgruppierung](#profile-store-composition-reports) , um Ihre Profilspeicherkomposition zu verstehen. Auf diese Weise können Sie die Datenquellen ermitteln, die im Rahmen Ihrer Lizenzberechtigung die meisten Daten nutzen.
+* Prüfen Sie regelmäßig die [Berichte zur Profilgruppierung](#profile-store-composition-reports) , um die Komposition im Profilspeicher zu verstehen. Auf diese Weise können Sie die Datenquellen ermitteln, die im Rahmen Ihrer Lizenzberechtigung die meisten Daten nutzen.
 
 ## Funktionsüberblick und -verfügbarkeit {#feature-summary}
 
-Die in diesem Dokument beschriebenen Best Practices und Tools sollen Ihnen bei der besseren Nutzung Ihrer Lizenzberechtigungen in Adobe Experience Platform helfen. Dieses Dokument wird aktualisiert, sobald zusätzliche Funktionen veröffentlicht werden, um allen Experience Platform-Kunden Transparenz und Kontrolle zu bieten.
+Die in diesem Dokument beschriebenen Best Practices und Tools helfen Ihnen bei der besseren Verwaltung der Nutzung Ihrer Lizenzberechtigungen in Adobe Experience Platform. Dieses Dokument wird aktualisiert, sobald zusätzliche Funktionen veröffentlicht werden, um allen Experience Platform-Kunden Transparenz und Kontrolle zu bieten.
 
 In der folgenden Tabelle finden Sie eine Liste der derzeit verfügbaren Funktionen, mit denen Sie Ihre Lizenznutzungsberechtigung besser verwalten können.
 

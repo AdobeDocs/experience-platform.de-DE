@@ -5,9 +5,9 @@ feature: Customer AI
 title: Konfigurieren einer Customer AI-Instanz
 description: AI-/ML-Dienste bieten Customer AI als einfach zu verwendenden Adobe Sensei-Dienst, der für verschiedene Anwendungsfälle konfiguriert werden kann. Die folgenden Abschnitte enthalten Schritte zum Konfigurieren einer Instanz von Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2828'
+source-wordcount: '2827'
 ht-degree: 8%
 
 ---
@@ -37,7 +37,7 @@ Dienstinstanzen können mithilfe der Steuerelemente auf der rechten Seite der Be
 - **[!UICONTROL Klonen]**: Auswählen **[!UICONTROL Klonen]** kopiert die derzeit ausgewählte Dienstinstanz-Einrichtung. Anschließend können Sie den Workflow ändern, um kleinere Änderungen vorzunehmen, und ihn in eine neue Instanz umbenennen.
 - **[!UICONTROL Löschen]**: Sie können eine Dienstinstanz einschließlich aller historischen Ausführungen löschen. Der entsprechende Ausgabedatensatz wird aus Platform gelöscht. Bewertungen, die mit dem Echtzeit-Kundenprofil synchronisiert wurden, werden jedoch nicht gelöscht.
 - **[!UICONTROL Datenquelle]**: Ein Link zum Datensatz, der von dieser Instanz verwendet wird. Wenn mehrere Datensätze verwendet werden, wird durch Auswahl des Hyperlink-Texts das Popup-Fenster für die Datensatzvorschau geöffnet.
-- **[!UICONTROL Letzte Ausführungsdetails]**: Dies wird nur angezeigt, wenn eine Ausführung fehlschlägt. Informationen dazu, warum die Ausführung fehlgeschlagen ist, wie z. B. Fehlercodes, werden hier angezeigt.
+- **[!UICONTROL Letzte Ausführungsdetails]**: Dies wird nur angezeigt, wenn ein Lauf fehlschlägt. Informationen dazu, warum die Ausführung fehlgeschlagen ist, wie z. B. Fehlercodes, werden hier angezeigt.
 - **[!UICONTROL Definition des Punkts]**: Ein kurzer Überblick über das Ziel, das Sie für diese Instanz konfiguriert haben.
 
 ![](../images/user-guide/service-instance-panel.png)
@@ -48,7 +48,7 @@ Um eine neue Instanz zu erstellen, wählen Sie **[!UICONTROL Instanz erstellen]*
 
 ## Einrichten
 
-Der Workflow zur Instanzerstellung wird angezeigt, beginnend mit dem **[!UICONTROL Einrichten]** Schritt.
+Der Workflow für die Instanzerstellung wird angezeigt, beginnend mit dem **[!UICONTROL Einrichten]** Schritt.
 
 Im Folgenden finden Sie wichtige Informationen zu Werten, die Sie für die Instanz angeben müssen:
 
@@ -68,7 +68,7 @@ Standardmäßig verwendet Customer AI Adobe Analytics-, Adobe Audience Manager-,
 
 ![Datensatz auswählen und suchen](../images/user-guide/configure-dataset-page-save-and-exit-cai.png)
 
-Wählen Sie nach Auswahl der Datensätze, die Sie verwenden möchten, die **[!UICONTROL Hinzufügen]** -Schaltfläche, um die Datensätze zum Vorschaufenster für den Datensatz hinzuzufügen.
+Wählen Sie nach Auswahl der Datensätze, die Sie verwenden möchten, die **[!UICONTROL Hinzufügen]** -Schaltfläche, um die Datensätze zum Vorschaufenster für Datensätze hinzuzufügen.
 
 ![Auswählen von Datensätzen](../images/user-guide/select-datasets.png)
 
@@ -130,22 +130,22 @@ Um ein Ziel zu erstellen, wählen Sie **[!UICONTROL Feldname eingeben]** gefolgt
 
 Beim Definieren Ihres Ziels können Sie Folgendes auswählen: **[!UICONTROL Vorkommen]** oder **[!UICONTROL Wird nicht ausgeführt]**. Auswählen **[!UICONTROL Vorkommen]** bedeutet, dass die von Ihnen definierten Ereignisbedingungen erfüllt sein müssen, damit die Ereignisdaten eines Kunden in die Insight-Benutzeroberfläche aufgenommen werden.
 
-Wenn Sie beispielsweise eine App einrichten möchten, um vorherzusagen, ob ein Kunde einen Kauf tätigt, können Sie **[!UICONTROL Vorkommen]** gefolgt von **[!UICONTROL Alle]** und geben Sie **commerce.purchases.id** (oder ein ähnliches Feld) und **[!UICONTROL exists]** als Operator.
+Wenn Sie beispielsweise eine App einrichten möchten, um vorherzusagen, ob ein Kunde einen Kauf tätigt, können Sie **[!UICONTROL Vorkommen]** gefolgt von **[!UICONTROL Alle von]** und geben Sie **commerce.purchases.id** (oder ein ähnliches Feld) und **[!UICONTROL exists]** als Operator.
 
 <!-- ![will occur](../images/user-guide/occur.png) -->
 ![wird](../images/user-guide/cai-will-occur.png)
 
 Es kann jedoch vorkommen, dass Sie vorhersagen möchten, ob ein Ereignis innerhalb eines bestimmten Zeitraums nicht eintritt. Um ein Ziel mit dieser Option zu konfigurieren, wählen Sie **[!UICONTROL Wird nicht ausgeführt]** aus der Dropdown-Liste der obersten Ebene.
 
-Wenn Sie beispielsweise vorhersagen möchten, welche Kunden weniger engagiert sind und Ihre Kontoanmeldeseite im nächsten Monat nicht besuchen. Auswählen **[!UICONTROL Wird nicht ausgeführt]** gefolgt von **[!UICONTROL Alle]** und geben Sie **web.webInteraction.URL** (oder ein ähnliches Feld) und **[!UICONTROL gleich]** als Operator mit **account-login** als Wert.
+Wenn Sie beispielsweise vorhersagen möchten, welche Kunden weniger engagiert sind und Ihre Kontoanmeldeseite im nächsten Monat nicht besuchen. Auswählen **[!UICONTROL Wird nicht ausgeführt]** gefolgt von **[!UICONTROL Alle von]** und geben Sie **web.webInteraction.URL** (oder ein ähnliches Feld) und **[!UICONTROL gleich]** als Operator mit **account-login** als Wert.
 
 ![wird nicht ausgeführt](../images/user-guide/not-occur.png)
 
 ### Alle und beliebige von
 
-In einigen Fällen können Sie vorhersagen, ob eine Kombination von Ereignissen eintritt, in anderen Fällen können Sie das Auftreten eines Ereignisses aus einem vordefinierten Satz vorhersagen. Um vorherzusagen, ob ein Kunde eine Kombination von Ereignissen aufweist, wählen Sie die **[!UICONTROL Alle]** -Option aus der Dropdown-Liste der zweiten Ebene auf der **[!UICONTROL Ziel definieren]** Seite.
+In einigen Fällen können Sie vorhersagen, ob eine Kombination von Ereignissen eintritt, in anderen Fällen können Sie das Auftreten eines Ereignisses aus einem vordefinierten Satz vorhersagen. Um vorherzusagen, ob ein Kunde eine Kombination von Ereignissen aufweist, wählen Sie die **[!UICONTROL Alle von]** -Option aus der Dropdown-Liste der zweiten Ebene auf der **[!UICONTROL Ziel definieren]** Seite.
 
-Sie können beispielsweise vorhersagen, ob ein Kunde ein bestimmtes Produkt kauft. Dieses Prognoseziel wird durch zwei Bedingungen definiert: a `commerce.order.purchaseID` **exists** und `productListItems.SKU` **gleich** einen bestimmten Wert.
+Sie können beispielsweise vorhersagen, ob ein Kunde ein bestimmtes Produkt kauft. Dieses Prognoseziel wird durch zwei Bedingungen definiert: eine `commerce.order.purchaseID` **exists** und `productListItems.SKU` **gleich** einen bestimmten Wert.
 
 ![Alles Beispiel](../images/user-guide/all-of.png)
 
@@ -159,7 +159,7 @@ Sie können beispielsweise vorhersagen, ob ein Kunde eine bestimmte URL oder ein
 
 Standardmäßig werden Tendenzwerte für alle Profile generiert, es sei denn, es wurde eine qualifizierte Zielgruppe angegeben. Sie können eine qualifizierte Zielgruppe angeben, indem Sie Bedingungen festlegen, um Profile auf Grundlage von Ereignissen ein- oder auszuschließen.
 
-![förderfähige Bevölkerung](../images/user-guide/eligible-population.png)
+![förderfähige Population](../images/user-guide/eligible-population.png)
 
 ### Benutzerspezifische Ereignisse (*optional*) {#custom-events}
 
@@ -167,7 +167,7 @@ Wenn Sie zusätzlich zur [Standardereignisfelder](../data-requirements.md#standa
 
 >[!NOTE]
 >
-> Eine ausführliche Erklärung dazu, wie sich benutzerdefinierte Ereignisse auf die Ergebnisse der Customer AI-Bewertung auswirken, finden Sie im [Beispiel für benutzerspezifisches Ereignis](#custom-event) Abschnitt.
+> Eine ausführliche Erklärung dazu, wie sich benutzerdefinierte Ereignisse auf die Scoring-Ergebnisse von Customer AI auswirken, finden Sie unter [Beispiel für benutzerspezifisches Ereignis](#custom-event) Abschnitt.
 
 ![Ereignisfunktion](../images/user-guide/event-feature.png)
 
@@ -181,13 +181,13 @@ Wählen Sie anschließend den zu verwendenden Benutzer aus der Dropdown-Liste de
 
 Geben Sie abschließend die Feldwerte an, wenn der ausgewählte Benutzer einen Wert benötigt. In diesem Beispiel müssen wir nur sehen, ob eine Hotel- oder Restaurantreservierung vorhanden ist. Wenn wir jedoch genauer sein wollten, könnten wir den Operator gleich verwenden und einen genauen Wert in die Werteaufforderung eingeben.
 
-![Feldwert für benutzerspezifisches Ereignis](../images/user-guide/custom-value.png)
+![Wert des Felds &quot;Benutzerspezifisches Ereignis&quot;](../images/user-guide/custom-value.png)
 
 Wählen Sie nach Abschluss **[!UICONTROL Nächste]** oben rechts, um fortzufahren.
 
 ### Benutzerdefinierte Profilattribute (*optional*)
 
-Sie können in Ihren Daten neben dem [Standardereignisfelder](../data-requirements.md#standard-events) wird von Customer AI verwendet, um Tendenzwerte zu generieren. Mit dieser Option können Sie zusätzliche Profilattribute hinzufügen, die Sie als einflussreich erachten, was die Qualität Ihres Modells verbessern und genauere Ergebnisse liefern kann. Durch das Hinzufügen benutzerdefinierter Profilattribute kann Customer AI außerdem besser zeigen, wie bestimmte Profile zu einem Tendenzbehälter gelangten.
+Zusätzlich zu den [Standardereignisfelder](../data-requirements.md#standard-events) wird von Customer AI verwendet, um Tendenzwerte zu generieren. Mit dieser Option können Sie zusätzliche Profilattribute hinzufügen, die Sie als einflussreich erachten, was die Qualität Ihres Modells verbessern und genauere Ergebnisse liefern kann. Durch das Hinzufügen benutzerdefinierter Profilattribute kann Customer AI außerdem besser zeigen, wie bestimmte Profile zu einem Tendenzbehälter gelangten.
 
 >[!NOTE]
 >
@@ -237,7 +237,7 @@ Um ein Ereignis auszuschließen, wählen Sie **[!UICONTROL Ausschluss hinzufüge
 
 Mit dem Profil -Umschalter kann Customer AI die Scoring-Ergebnisse in das Echtzeit-Kundenprofil exportieren. Durch Deaktivieren dieses Umschalters wird verhindert, dass die Ergebnisse der Modellbewertung zum Profil hinzugefügt werden. Die Ergebnisse der Customer AI-Bewertung sind weiterhin verfügbar, wenn diese Funktion deaktiviert ist.
 
-Wenn Sie Customer AI zum ersten Mal verwenden, können Sie diese Funktion deaktivieren, bis Sie mit den Modellausgabeergebnissen zufrieden sind. Dadurch wird verhindert, dass Sie mehrere Scoring-Datensätze in Ihre Kundenprofile hochladen und gleichzeitig Ihr Modell optimieren. Nachdem Sie die Kalibrierung Ihres Modells abgeschlossen haben, können Sie das Modell mit der [Klonoption](#set-up-your-instance) von **Dienstinstanzen** Seite. Auf diese Weise können Sie eine Kopie Ihres Modells erstellen und das Profil aktivieren.
+Wenn Sie Customer AI zum ersten Mal verwenden, können Sie diese Funktion deaktivieren, bis Sie mit den Modellausgabeergebnissen zufrieden sind. Dadurch wird verhindert, dass Sie mehrere Scoring-Datensätze in Ihre Kundenprofile hochladen und gleichzeitig Ihr Modell optimieren. Nachdem Sie die Kalibrierung Ihres Modells abgeschlossen haben, können Sie das Modell mit der [Klonoption](#set-up-your-instance) aus dem **Dienstinstanzen** Seite. Auf diese Weise können Sie eine Kopie Ihres Modells erstellen und das Profil aktivieren.
 
 ![Profil-Umschalter](../images/user-guide/advanced-workflow-save.png)
 

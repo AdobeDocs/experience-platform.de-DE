@@ -3,9 +3,9 @@ title: Erstellen einer Customer.io-Quellverbindung und eines Datenflusses in der
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung von Customer.io erstellen.
 badge: Beta
 exl-id: 7655a34c-808a-46e3-94e3-022a433755a4
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1232'
 ht-degree: 20%
 
 ---
@@ -33,7 +33,7 @@ Im folgenden Abschnitt finden Sie Informationen zu Voraussetzungen, die erfüllt
 
 ### JSON-Beispieldatei zum Definieren des Quellschemas für [!DNL Customer.io] {#prerequisites-json-schema}
 
-Vor der Erstellung [!DNL Customer.io] Quellverbindung verwenden, müssen Sie ein Quellschema angeben. Sie können die folgende JSON verwenden.
+Vor der Erstellung [!DNL Customer.io] Quellverbindung verwenden, müssen Sie ein Quellschema angeben. Sie können die folgende JSON-Datei verwenden.
 
 ```
 {
@@ -65,7 +65,7 @@ Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen
 
 Verwenden Sie die *[!UICONTROL Kategorien]* Menü zum Filtern von Quellen nach Kategorie. Geben Sie alternativ einen Quellnamen in die Suchleiste ein, um eine bestimmte Quelle aus dem Katalog zu finden.
 
-Navigieren Sie zu [!UICONTROL Marketing-Automatisierung] -Kategorie, die angezeigt werden soll [!DNL Customer.io] Quellkarte. Wählen Sie zunächst **[!UICONTROL Daten hinzufügen]**.
+Navigieren Sie zu [!UICONTROL Marketing-Automatisierung] -Kategorie, um die [!DNL Customer.io] Quellkarte. Wählen Sie zunächst **[!UICONTROL Daten hinzufügen]**.
 
 ![Screenshot der Platform-Benutzeroberfläche für Katalog mit Customer.io-Karte](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
 
@@ -76,7 +76,7 @@ Die **[!UICONTROL Daten auswählen]** angezeigt, um eine Oberfläche zur Auswahl
 * Der linke Teil der Benutzeroberfläche ist ein Browser, mit dem Sie die verfügbaren Datenströme in Ihrem Konto anzeigen können.
 * Im rechten Bereich der Benutzeroberfläche können Sie eine Vorschau von bis zu 100 Zeilen mit Daten aus einer JSON-Datei anzeigen.
 
-Auswählen **[!UICONTROL Dateien hochladen]** , um eine JSON-Datei von Ihrem lokalen System hochzuladen. Alternativ können Sie die JSON-Datei, die Sie hochladen möchten, per Drag-and-Drop in die [!UICONTROL Dateien per Drag &amp; Drop verschieben] Bereich.
+Auswählen **[!UICONTROL Dateien hochladen]** , um eine JSON-Datei von Ihrem lokalen System hochzuladen. Alternativ können Sie die hochzuladende JSON-Datei per Drag-and-Drop in die [!UICONTROL Dateien per Drag &amp; Drop verschieben] Bedienfeld.
 
 ![Der Schritt Daten hinzufügen des Ursprungs-Workflows.](../../../../images/tutorials/create/marketing-automation/customerio-webhook//add-data.png)
 
@@ -98,13 +98,13 @@ Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 
 Es erfolgt der Schritt der [!UICONTROL Zuordnung], in dem Ihnen eine Schnittstelle zum Zuordnen der Quellfelder aus Ihrem Quellschema zu den entsprechenden XDM-Zielfeldern im Zielschema bereitgestellt wird.
 
-Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Umfassende Schritte zur Verwendung der Mapper-Oberfläche und der berechneten Felder finden Sie im Abschnitt [Handbuch zur Datenvorbereitung-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
+Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Umfassende Schritte zur Verwendung der Mapper-Oberfläche und der berechneten Felder finden Sie im Abschnitt [Handbuch zur Datenvorbereitung-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
 
 Alle unten aufgeführten Zuordnungen sind obligatorisch und sollten eingerichtet werden, bevor Sie mit dem [!UICONTROL Überprüfen] Bühne.
 
 | Zielfeld | Beschreibung |
 | --- | --- |
-| `object_type` | Objekttyp, siehe [!DNL Customer.io] [events](https://customer.io/docs/webhooks/#events) Dokumentation für die unterstützten Typen. |
+| `object_type` | Der Objekttyp, siehe [!DNL Customer.io] [events](https://customer.io/docs/webhooks/#events) Dokumentation für die unterstützten Typen. |
 | `id` | Die Kennung des Objekts. |
 | `email` | Die mit dem Objekt verknüpfte E-Mail-Adresse. |
 | `event_id` | Die eindeutige Kennung des Ereignisses. |
@@ -140,7 +140,7 @@ Um die URL zu erstellen, mit der der Webhook konfiguriert wird [!DNL Customer.io
 * **[!UICONTROL Dataflow-ID]**
 * **[!UICONTROL Streaming-Endpunkt]**
 
-So rufen Sie Ihre **[!UICONTROL Dataflow-ID]** und **[!UICONTROL Streaming-Endpunkt]**, navigieren Sie zu [!UICONTROL Datenfluss-Aktivität] Seite des soeben erstellten Datenflusses und kopieren Sie die Details vom unteren Rand des [!UICONTROL Eigenschaften] Bereich.
+So rufen Sie Ihre **[!UICONTROL Dataflow-ID]** und **[!UICONTROL Streaming-Endpunkt]**, navigieren Sie zu [!UICONTROL Datenfluss-Aktivität] Seite des soeben erstellten Datenflusses und kopieren Sie die Details vom unteren Rand des [!UICONTROL Eigenschaften] Bedienfeld.
 
 ![Der Streaming-Endpunkt in der Datenfluss-Aktivität.](../../../../images/tutorials/create/marketing-automation/customerio-webhook/endpoint-test.png)
 
@@ -164,7 +164,7 @@ In diesem Tutorial haben Sie erfolgreich einen Streaming-Datenfluss konfiguriert
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei der Verwendung der [!DNL Customer.io] -Quelle.
+Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei der Verwendung der Variablen [!DNL Customer.io] -Quelle.
 
 ### Leitplanken {#guardrails}
 
@@ -178,6 +178,6 @@ Informationen zu Limits finden Sie im Abschnitt [[!DNL Customer.io] Seite mit Ze
 
 ![Screenshot der Benutzeroberfläche von Customer.io mit Aktivitätsprotokollen](../../../../images/tutorials/create/marketing-automation/customerio-webhook/activity-logs.png)
 
-* Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Datenflüsse anzeigen]** neben dem [!DNL Customer.io] Kartenmenü im Quellkatalog. Wählen Sie als Nächstes **[!UICONTROL Vorschau des Datensatzes anzeigen]** , um die Daten zu überprüfen, die für die Ereignisse erfasst wurden, die Sie in [!DNL Customer.io].
+* Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Datenflüsse anzeigen]** neben dem [!DNL Customer.io] Kartenmenü im Quellkatalog. Wählen Sie als Nächstes **[!UICONTROL Datensatz-Vorschau]** , um die Daten zu überprüfen, die für die Ereignisse erfasst wurden, die Sie in [!DNL Customer.io].
 
 ![Screenshot der Platform-Benutzeroberfläche mit aufgenommenen Ereignissen](../../../../images/tutorials/create/marketing-automation/customerio-webhook/platform-dataset.png)

@@ -4,26 +4,26 @@ title: Dashboard-Datensätze mithilfe von Query Service durchsuchen, überprüfe
 type: Documentation
 description: Erfahren Sie, wie Sie mit Query Service Rohdatensätze untersuchen und verarbeiten können, die Profil-, Zielgruppen- und Ziel-Dashboards in Experience Platform unterstützen.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: 79966442f5333363216da17342092a71335a14f0
+source-git-commit: c431973100cc65d99d9466553fe6624ac2653d4b
 workflow-type: tm+mt
-source-wordcount: '964'
-ht-degree: 38%
+source-wordcount: '946'
+ht-degree: 37%
 
 ---
 
 # Dashboard-Datensätze mithilfe von analysieren, überprüfen und verarbeiten [!DNL Query Service]
 
-Adobe Experience Platform bietet über Dashboards, die in der Experience Platform-Benutzeroberfläche verfügbar sind, wichtige Informationen zu Profil-, Zielgruppen- und Zielgruppendaten Ihres Unternehmens. Sie können dann Adobe Experience Platform verwenden [!DNL Query Service] die Rohdatensätze zu untersuchen, zu überprüfen und zu verarbeiten, die diese Dashboards im Data Lake unterstützen.
+Adobe Experience Platform bietet über Dashboards, die in der Experience Platform-Benutzeroberfläche verfügbar sind, wichtige Informationen zu Profil-, Zielgruppen- und Zielgruppendaten Ihres Unternehmens. Sie können dann Adobe Experience Platform verwenden [!DNL Query Service] , um die Rohdatensätze zu untersuchen, zu überprüfen und zu verarbeiten, mit denen diese Dashboards im Data Lake bereitgestellt werden.
 
 ## Erste Schritte mit [!DNL Query Service]
 
 Adobe Experience Platform [!DNL Query Service] unterstützt Marketingexperten dabei, Einblicke aus ihren Daten zu gewinnen, indem die Verwendung von Standard-SQL zur Abfrage von Daten im Data Lake ermöglicht wird. [!DNL Query Service] bietet eine Benutzeroberfläche und eine API, die verwendet werden können, um einen beliebigen Datensatz in den Data Lake einzubinden und die Abfrageergebnisse als neue Datensätze zu erfassen, die für die Berichterstellung, das maschinelle Lernen oder die Aufnahme in das Echtzeit-Kundenprofil verwendet werden können.
 
-Weitere Informationen finden Sie unter [!DNL Query Service] und seiner Rolle innerhalb der Experience Platform, lesen Sie bitte zunächst die [[!DNL Query Service] Übersicht](../query-service/home.md).
+Weitere Informationen zu [!DNL Query Service] und seiner Rolle innerhalb der Experience Platform, lesen Sie bitte zunächst die [[!DNL Query Service] Übersicht](../query-service/home.md).
 
 ## Zugreifen auf verfügbare Datensätze
 
-Sie können [!DNL Query Service] zum Abfragen von Rohdatensätzen für Profil-, Zielgruppen- und Ziel-Dashboards. Um Ihre verfügbaren Datensätze anzuzeigen, wählen Sie in der Experience Platform-Benutzeroberfläche die Option **Datensätze** im linken Navigationsbereich, um das Dashboard &quot;Datensätze&quot;zu öffnen. Das Dashboard listet alle verfügbaren Datensätze für Ihre Organisation auf. Details werden für jeden aufgelisteten Datensatz angezeigt, einschließlich seines Namens, des Schemas, dem der Datensatz entspricht, und des Status des letzten Erfassungslaufs.
+Sie können [!DNL Query Service] zum Abfragen von Rohdatensätzen für Profil-, Zielgruppen- und Ziel-Dashboards. Um Ihre verfügbaren Datensätze anzuzeigen, wählen Sie in der Experience Platform-Benutzeroberfläche die Option **Datensätze** im linken Navigationsbereich, um das Dashboard Datensätze zu öffnen. Das Dashboard listet alle verfügbaren Datensätze für Ihre Organisation auf. Details werden für jeden aufgelisteten Datensatz angezeigt, einschließlich seines Namens, des Schemas, dem der Datensatz entspricht, und des Status des letzten Erfassungslaufs.
 
 ![Das Dashboard zum Durchsuchen von Datensätzen , wobei die Registerkarte Datensätze im linken Navigationsbereich hervorgehoben ist.](./images/query/browse-datasets.png)
 
@@ -31,13 +31,13 @@ Sie können [!DNL Query Service] zum Abfragen von Rohdatensätzen für Profil-, 
 
 >[!IMPORTANT]
 >
->Systemgenerierte Datensätze werden standardmäßig ausgeblendet. Standardmäßig wird die [!UICONTROL Durchsuchen] zeigt nur Datensätze an, in die Sie Daten aufgenommen haben.
+>Systemgenerierte Datensätze werden standardmäßig ausgeblendet. Standardmäßig wird die Variable [!UICONTROL Durchsuchen] zeigt nur Datensätze an, in die Sie Daten aufgenommen haben.
 
 Um systemgenerierte Datensätze anzuzeigen, wählen Sie das Filtersymbol (![Ein Filtersymbol.](./images/query/filter.png)) links neben der Suchleiste.
 
 ![Auf der Registerkarte &quot;Durchsuchen von Datensätzen&quot;ist das Filtersymbol hervorgehoben.](./images/query/filter-datasets.png)
 
-Es wird eine Seitenleiste mit zwei Umschaltern angezeigt: [!UICONTROL Im Profil enthalten] und [!UICONTROL Anzeigen von Systemdatensätzen]. Umschalten zwischen [!UICONTROL Anzeigen von Systemdatensätzen] , um systemgenerierte Datensätze in die Browser-Liste der Datensätze aufzunehmen.
+Es wird eine Seitenleiste mit zwei Umschaltern angezeigt, [!UICONTROL Im Profil enthalten] und [!UICONTROL Anzeigen von Systemdatensätzen]. Umschalten zwischen [!UICONTROL Anzeigen von Systemdatensätzen] , um systemgenerierte Datensätze in die Browser-Liste der Datensätze aufzunehmen.
 
 ![Auf der Registerkarte zum Durchsuchen von Datensätzen wird die Option Systemdatensätze anzeigen aktiviert.](./images/query/show-system-datasets.png)
 
@@ -82,11 +82,7 @@ Um das vollständige Schema des DIM-Zieldatensatzes zu verstehen, können Sie ei
 
 ![Eine Vorschau des DIM_Destination -Datensatzes.](images/query/destinations-metadata.png)
 
-## (Beta) Insight-Berichte für die Kundendatenplattform (CDP)
-
->[!IMPORTANT]
->
->Die Funktion &quot;CDP Insights Data Models&quot;befindet sich in der Beta-Phase. Ihre Funktionen und Dokumentation können sich ändern.
+## Insight-Berichte für Customer Data Platform (CDP)
 
 Die Funktion CDP Insights Data Models legt die SQL offen, die die Einblicke für verschiedene Profil-, Ziel- und Segmentierungs-Widgets ermöglicht. Sie können diese SQl-Abfragevorlagen anpassen, um CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle zu erstellen.
 
@@ -148,6 +144,6 @@ Select
 
 ## Nächste Schritte
 
-Durch Lesen dieses Handbuchs können Sie jetzt [!DNL Query Service] , um mehrere Abfragen durchzuführen, um die Rohdatensätze zu untersuchen und zu verarbeiten, mit denen Sie Ihre Profil-, Zielgruppen- und Ziel-Dashboards versorgen können.
+Durch Lesen dieses Handbuchs können Sie jetzt [!DNL Query Service] , um mehrere Abfragen durchzuführen, um die Rohdatensätze zu untersuchen und zu verarbeiten, mit denen Ihre Profil-, Zielgruppen- und Ziel-Dashboards bereitgestellt werden.
 
 Um mehr über diese Dashboards und die darin verfügbaren Metriken zu erfahren, treffen Sie bitte eine entsprechende Auswahl aus der Liste der verfügbaren Dashboards in der Dokumentationsnavigation.

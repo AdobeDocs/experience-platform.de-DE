@@ -3,9 +3,9 @@ keywords: Experience Platform; Startseite; beliebte Themen; API; XDM; XDM; XDM-S
 title: Definieren erforderlicher Felder in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Experience Platform-Benutzeroberfläche ein erforderliches XDM-Feld definieren.
 exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
-source-git-commit: fe3d9a3fc473e7ca13f0e0c2f222bcc1b1a991c4
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '361'
 ht-degree: 0%
 
 ---
@@ -38,4 +38,4 @@ Wenn ein verschachteltes Feld in einem Schema immer erforderlich sein soll, müs
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie ein erforderliches Feld in der Benutzeroberfläche definieren. Siehe Übersicht unter [Definieren von Feldern in der Benutzeroberfläche](./overview.md#special) , um zu erfahren, wie Sie andere XDM-Feldtypen im [!DNL Schema Editor].
+In diesem Handbuch wurde beschrieben, wie Sie ein erforderliches Feld in der Benutzeroberfläche definieren. Siehe Übersicht unter [Definieren von Feldern in der Benutzeroberfläche](./overview.md#special) Informationen zum Definieren anderer XDM-Feldtypen im [!DNL Schema Editor].

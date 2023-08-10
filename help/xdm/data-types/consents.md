@@ -3,16 +3,16 @@ keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; AP
 title: Datentyp "Einwilligungen und Voreinstellungen"
 description: Der Datentyp Einverständnis für Datenschutz, Personalisierung und Marketing-Voreinstellungen soll die Erfassung von Kundenberechtigungen und -präferenzen unterstützen, die von CMPs (Consent Management Platform) und anderen Quellen aus Ihren Datenvorgängen generiert werden.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2034'
+source-wordcount: '2033'
 ht-degree: 2%
 
 ---
 
 # [!UICONTROL Einverständnis und Voreinstellungen] Datentyp
 
-Die [!UICONTROL Einverständnis für Datenschutz-, Personalisierungs- und Marketing-Voreinstellungen] Datentyp (nachstehend &quot;Datentyp&quot; genannt)[!UICONTROL Einverständnis und Voreinstellungen] Datentyp&quot;) ist ein [!DNL Experience Data Model] (XDM)-Datentyp, der die Erfassung von Kundenberechtigungen und -voreinstellungen unterstützt, die von Consent Management Platform (CMPs) und anderen Quellen aus Ihren Datenvorgängen generiert werden.
+Die [!UICONTROL Einverständnis für Datenschutz-, Personalisierungs- und Marketing-Voreinstellungen] Datentyp (nachstehend &quot;Datentyp&quot; genannt)[!UICONTROL Einverständnis und Voreinstellungen] Datentyp&quot;) ist ein [!DNL Experience Data Model] (XDM)-Datentyp, der die Erfassung von Kundenberechtigungen und -voreinstellungen unterstützen soll, die von Consent Management Platform (CMPs) und anderen Quellen aus Ihren Datenvorgängen generiert werden.
 
 In diesem Dokument werden die Struktur und die beabsichtigte Verwendung der Felder beschrieben, die von der [!UICONTROL Einverständnis und Voreinstellungen] Datentyp.
 
@@ -35,8 +35,8 @@ Eine Einwilligung ist eine Option, mit der ein Kunde festlegen kann, wie seine D
 
 Eine Präferenz ist eine Option, mit der der Kunde festlegen kann, wie verschiedene Aspekte seines Erlebnisses mit einer Marke behandelt werden sollen. Diese Kategorien fallen in zwei Kategorien:
 
-* **Personalisierungseinstellungen**: Voreinstellungen bezüglich der Personalisierung von Erlebnissen, die für einen Kunden bereitgestellt werden.
-* **Marketing-Voreinstellungen**: Einstellungen, die angeben, ob eine Marke einen Kunden über verschiedene Kanäle kontaktieren darf.
+* **Personalisierungseinstellungen**: Voreinstellungen bezüglich der Personalisierung von Erlebnissen, die von der Marke für einen Kunden bereitgestellt werden.
+* **Marketing-Voreinstellungen**: Voreinstellungen, die angeben, ob eine Marke über verschiedene Kanäle mit einem Kunden in Kontakt treten darf.
 
 Der folgende Screenshot zeigt, wie die Struktur des Datentyps in der Platform-Benutzeroberfläche dargestellt wird:
 
@@ -90,7 +90,6 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, bei dem die [!UICO
 >
 >* [Generieren von Beispieldaten in der Benutzeroberfläche](../ui/sample.md)
 >* [Beispieldaten in der API generieren](../api/sample-data.md)
-
 
 ## `consents` {#choices}
 
@@ -179,7 +178,7 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, bei dem die [!UICO
 
 ### `personalize` {#personalize}
 
-`personalize` erfasst Kundenpräferenzen darüber, auf welche Weise ihre Daten für die Personalisierung verwendet werden können. Kunden können bestimmte Anwendungsfälle der Personalisierung deaktivieren oder die Personalisierung vollständig deaktivieren.
+`personalize` erfasst Kundenpräferenzen darüber, wie ihre Daten für die Personalisierung verwendet werden können. Kunden können bestimmte Anwendungsfälle der Personalisierung deaktivieren oder die Personalisierung vollständig deaktivieren.
 
 >[!IMPORTANT]
 >
@@ -197,7 +196,7 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, bei dem die [!UICO
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `content` | Stellt die Voreinstellungen des Kunden für personalisierte Inhalte auf Ihrer Website oder in Ihrer Anwendung dar. |
+| `content` | Stellt die Voreinstellungen des Kunden für personalisierte Inhalte auf Ihrer Website oder Anwendung dar. |
 | `val` | Die vom Kunden bereitgestellte Personalisierungseinstellung für den angegebenen Anwendungsfall. In Fällen, in denen der Kunde nicht zur Einwilligung aufgefordert werden muss, sollte der Wert dieses Felds die Grundlage angeben, auf der die Personalisierung erfolgen soll. Siehe [Anhang](#choice-values) für akzeptierte Werte und Definitionen. |
 
 {style="table-layout:auto"}
@@ -227,7 +226,7 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, bei dem die [!UICO
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `preferred` | Gibt den bevorzugten Kanal des Kunden für den Empfang von Nachrichten an. Siehe [Anhang](#preferred-values) für gültige Werte. |
+| `preferred` | Gibt den bevorzugten Kanal des Kunden für den Empfang von Nachrichten an. Siehe [Anhang](#preferred-values) für akzeptierte Werte. |
 | `any` | Stellt die Voreinstellungen des Kunden für Direktmarketing als Ganzes dar. Die in diesem Feld bereitgestellte Zustimmungsvoreinstellung gilt als &quot;Standardeinstellung&quot;für jeden Marketing-Kanal, es sei denn, sie wird durch zusätzliche Unterfelder überschrieben, die unter `marketing`. Wenn Sie planen, detailliertere Zustimmungsoptionen zu verwenden, wird empfohlen, dieses Feld auszuschließen.<br><br>Wenn der Wert auf `n`festgelegt ist, sollten alle spezifischeren Personalisierungseinstellungen ignoriert werden. Wenn der Wert auf `y`festgelegt ist, sollten alle genaueren Personalisierungsoptionen ebenfalls wie folgt behandelt werden: `y`, es sei denn, explizit auf `n`. Wenn der Wert nicht festgelegt ist, sollten die Werte für jede Personalisierungsoption wie angegeben berücksichtigt werden. |
 | `email` | Gibt an, ob der Kunde dem Empfang von E-Mail-Nachrichten zustimmt. |
 | `push` | Gibt an, ob der Kunde den Empfang von Push-Benachrichtigungen gestattet. |
@@ -258,11 +257,11 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, bei dem die [!UICO
 
 Um die [!UICONTROL Einverständnis und Voreinstellungen] -Datentyp verwenden, um Einwilligungsdaten von Ihren Kunden zu erfassen, müssen Sie einen Datensatz erstellen, der auf einem Schema basiert, das diesen Datentyp enthält.
 
-Siehe Tutorial zu [Erstellen eines Schemas in der Benutzeroberfläche](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) für Schritte zum Zuweisen von Datentypen zu Feldern. Nachdem Sie ein Schema erstellt haben, das ein Feld mit der [!UICONTROL Einverständnis und Voreinstellungen] Datentyp, siehe Abschnitt . [Erstellen eines Datensatzes](../../catalog/datasets/user-guide.md#create) Führen Sie im Benutzerhandbuch zu Datensätzen die Schritte zum Erstellen eines Datensatzes mit einem vorhandenen Schema aus.
+Siehe Tutorial zu [Erstellen eines Schemas in der Benutzeroberfläche](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) für Schritte zum Zuweisen von Datentypen zu Feldern. Nachdem Sie ein Schema erstellt haben, das ein Feld mit der [!UICONTROL Einverständnis und Voreinstellungen] Datentyp, siehe Abschnitt [Datensatz erstellen](../../catalog/datasets/user-guide.md#create) Führen Sie im Benutzerhandbuch zu Datensätzen die Schritte zum Erstellen eines Datensatzes mit einem vorhandenen Schema aus.
 
 >[!IMPORTANT]
 >
->Wenn Sie Einwilligungsdaten an senden möchten [!DNL Real-Time Customer Profile]müssen Sie eine [!DNL Profile]-aktiviertes Schema basierend auf dem [!DNL XDM Individual Profile] -Klasse, die die [!UICONTROL Einverständnis und Voreinstellungen] Datentyp. Der Datensatz, den Sie auf Grundlage dieses Schemas erstellen, muss auch für [!DNL Profile]. Spezifische Schritte zu [!DNL Real-Time Customer Profile] Anforderungen für Schemas und Datensätze.
+>Wenn Sie Einwilligungsdaten an senden möchten [!DNL Real-Time Customer Profile]müssen Sie eine [!DNL Profile]-aktiviertes Schema basierend auf dem [!DNL XDM Individual Profile] -Klasse, die die [!UICONTROL Einverständnis und Voreinstellungen] Datentyp. Der Datensatz, den Sie auf Grundlage dieses Schemas erstellen, muss auch für [!DNL Profile]. Spezifische Schritte zum Thema [!DNL Real-Time Customer Profile] Anforderungen für Schemas und Datensätze.
 >
 >Darüber hinaus müssen Sie sicherstellen, dass Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass sie die Datensätze priorisieren, die die neuesten Zustimmungs- und Voreinstellungsdaten enthalten, damit Kundenprofile korrekt aktualisiert werden. Siehe Übersicht unter [Zusammenführungsrichtlinien](../../rtcdp/profile/merge-policies.md) für weitere Informationen.
 

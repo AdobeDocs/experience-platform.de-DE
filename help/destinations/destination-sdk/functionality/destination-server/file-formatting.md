@@ -1,10 +1,10 @@
 ---
 description: Erfahren Sie, wie Sie über den Endpunkt „/destination-servers“ Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren, die mit Adobe Experience Platform Destination SDK erstellt wurden.
 title: Konfiguration der Dateiformatierung
-source-git-commit: 5a6359e5731b36763e86eba8c79e60d74fb3b4c8
+source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
 workflow-type: tm+mt
-source-wordcount: '1001'
-ht-degree: 98%
+source-wordcount: '999'
+ht-degree: 95%
 
 ---
 
@@ -24,7 +24,7 @@ Je nach Zielkonfiguration sehen Benutzerinnen und Benutzer bestimmte Optionen in
 
 Dateiformatierungseinstellungen sind Teil der Ziel-Server-Konfiguration für dateibasierte Ziele.
 
-Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation zu [Konfigurationsoptionen](../configuration-options.md) oder im Handbuch zur [Verwendung von Destination SDK zum Konfigurieren eines dateibasierten Ziels](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm im [Konfigurationsoptionen](../configuration-options.md) Dokumentation oder lesen Sie das Handbuch zu [Destination SDK zum Konfigurieren eines dateibasierten Ziels verwenden](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 Die Dateiformatierungsoptionen können über den Endpunkt `/authoring/destination-servers` konfiguriert werden. Detaillierte Beispiele für API-Aufrufe, in denen Sie die auf dieser Seite angezeigten Komponenten konfigurieren können, finden Sie auf den folgenden API-Referenzseiten.
 

@@ -1,10 +1,10 @@
 ---
 description: Erfahren Sie, wie Sie eine Aggregationsrichtlinie einrichten, um zu bestimmen, wie HTTP-Anfragen an Ihr Ziel gruppiert und in Batches eingesetzt werden sollen.
 title: Aggregationsrichtlinie
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '996'
-ht-degree: 96%
+source-wordcount: '995'
+ht-degree: 92%
 
 ---
 
@@ -17,7 +17,7 @@ Verwenden Sie eine konfigurierbare Aggregation, um sich einen tiefen Einblick in
 
 Beim Erstellen eines Echtzeit-Ziels (Streaming) mit Destination SDK können Sie konfigurieren, wie die exportierten Profile in den resultierenden Exporten kombiniert werden sollen. Dieses Verhalten wird durch die Einstellungen der Aggregationsrichtlinie bestimmt.
 
-Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation zu [Konfigurationsoptionen](../configuration-options.md) oder im Handbuch zum [Verwenden von Destination SDK zum Konfigurieren eines Streaming-Ziels](../../guides/configure-destination-instructions.md#create-destination-configuration).
+Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm im [Konfigurationsoptionen](../configuration-options.md) Dokumentation oder lesen Sie das Handbuch zu [Verwenden von Destination SDK zum Konfigurieren eines Streaming-Ziels](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
 Sie können die Einstellungen der Aggregationsrichtlinie über den Endpunkt `/authoring/destinations` konfigurieren. Detaillierte Beispiele für API-Aufrufe, in denen Sie die auf dieser Seite angezeigten Komponenten konfigurieren können, finden Sie auf den folgenden API-Referenzseiten.
 
@@ -113,7 +113,7 @@ Die folgende Beispielkonfiguration zeigt eine konfigurierbare Aggregationskonfig
 | `configurableAggregation.maxNumEventsInBatch` | Ganzzahl | Zusammen mit `maxBatchAgeInSecs` bestimmt dieser Parameter, wie viele qualifizierte Profile in einem API-Aufruf aggregiert werden sollen. <ul><li>Mindestwert: 1000</li><li>Höchstwert: 10.000</li></ul> Wenn Sie beispielsweise den Maximalwert für beide Parameter verwenden, wartet Experience Platform entweder 3.600 Sekunden ODER, bis 10000 qualifizierte Profile vorhanden sind, bevor der API-Aufruf erfolgt (je nachdem, was früher eintritt). |
 | `configurableAggregation.aggregationKey` | – | Ermöglicht die Aggregation der dem Ziel zugeordneten exportierten Profile anhand der folgenden Parameter. |
 | `configurableAggregation.aggregationKey.includeSegmentId` | Boolesch | Legen Sie diesen Parameter auf `true` , wenn Sie Profile gruppieren möchten, die nach Zielgruppen-ID in Ihr Ziel exportiert wurden. |
-| `configurableAggregation.aggregationKey.includeSegmentStatus` | Boolesch | Legen Sie sowohl diesen Parameter als auch fest. `includeSegmentId` nach `true`, wenn Sie Profile gruppieren möchten, die nach Zielgruppen-ID und Zielgruppenstatus in Ihr Ziel exportiert wurden. |
+| `configurableAggregation.aggregationKey.includeSegmentStatus` | Boolesch | Legen Sie sowohl diesen Parameter als auch `includeSegmentId` nach `true`, wenn Sie Profile gruppieren möchten, die nach Zielgruppen-ID und Zielgruppenstatus in Ihr Ziel exportiert wurden. |
 | `configurableAggregation.aggregationKey.includeIdentity` | Boolesch | Legen Sie diesen Parameter auf `true` fest, wenn Sie Profile gruppieren möchten, die nach Identity-Namespace zu Ihrem Ziel exportiert wurden. |
 | `configurableAggregation.aggregationKey.oneIdentityPerGroup` | Boolesch | Legen Sie diesen Parameter auf `true` fest, um anzugeben, ob die exportierten Profile in Gruppen einer einzigen Identität zusammengefasst werden sollen (GAID, IDFA, Telefonnummern, E-Mail usw.). |
 | `configurableAggregation.aggregationKey.groups` | Array | Erstellen Sie Listen mit Identitätsgruppen, wenn Sie Profile gruppieren möchten, die nach Gruppen von Identity-Namespaces in Ihr Ziel exportiert wurden. Beispielsweise können Sie Profile, die die Kennungen IDFA und GAID für Mobilgeräte enthalten, mithilfe der im obigen Beispiel beschriebenen Konfiguration zu einem Aufruf an Ihr Ziel und E-Mails an ein anderes kombinieren. |

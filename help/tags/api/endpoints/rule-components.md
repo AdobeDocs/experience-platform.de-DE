@@ -2,10 +2,10 @@
 title: Rule components-Endpunkt
 description: Erfahren Sie, wie Sie den /rule_components-Endpunkt in der Reactor-API aufrufen.
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
-source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1157'
-ht-degree: 95%
+source-wordcount: '1155'
+ht-degree: 93%
 
 ---
 
@@ -22,7 +22,7 @@ Regelkomponenten haben drei grundlegende Typen:
 | Komponententyp „Regel“ | Beschreibung |
 | --- | --- |
 | Ereignisse | Ein Ereignis ist der Auslöser für eine Regel. Die Regel beginnt, wenn das Ereignis zur Laufzeit auf dem Client-Gerät auftritt. Beispiele für Ereignisse sind [!UICONTROL Bibliothek laden], [!UICONTROL Seitenanfang] und [!UICONTROL Klick]. |
-| Bedingungen | Eine Bedingung ist eine Bewertung, ob bestimmte Kriterien erfüllt sind, bevor Aktionen ausgeführt werden. Sobald ein Ereignis eintritt, werden die Bedingungen ausgewertet. Die Aktionen der Regel werden nur ausgeführt, wenn alle Bedingungen erfüllt sind. |
+| Bedingungen | Eine Bedingung ist eine Auswertung, ob bestimmte Kriterien erfüllt sind, bevor Aktionen ausgeführt werden. Sobald ein Ereignis eintritt, werden die Bedingungen ausgewertet. Die Aktionen der Regel werden nur ausgeführt, wenn alle Bedingungen erfüllt sind. |
 | Aktionen | Dies sind die Aktionen, die die Regel tatsächlich durchführen soll, z. B. das Senden eines Adobe Analytics-Beacons, das Abrufen einer benutzerdefinierten Besucher-ID oder das Auslösen einer bestimmten Mbox. |
 
 {style="table-layout:auto"}

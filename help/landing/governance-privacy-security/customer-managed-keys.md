@@ -2,10 +2,10 @@
 title: Vom Kunden verwaltete Schlüssel in Adobe Experience Platform
 description: Erfahren Sie, wie Sie eigene Verschlüsselungsschlüssel für in Adobe Experience Platform gespeicherte Daten einrichten.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: 04ed092d4514d1668068ed73a1be4400c6cd4d8e
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1774'
-ht-degree: 79%
+source-wordcount: '1773'
+ht-degree: 78%
 
 ---
 
@@ -92,7 +92,7 @@ Nachdem Sie einen Schlüsseltresor erstellt haben, können Sie einen neuen Schl�
 
 ![Generieren eines Schlüssels](../images/governance-privacy-security/customer-managed-keys/view-keys.png)
 
-Verwenden Sie das bereitgestellte Formular, um einen Namen für den Schlüssel anzugeben, und wählen Sie **RSA** für den Schlüsseltyp aus. Die Variable **[!DNL RSA key size]** darf nicht kleiner sein als **3072** Bit, wie von [!DNL Cosmos DB] vorgeschrieben. [!DNL Azure Data Lake Storage] ist auch mit RSA 3027 kompatibel.
+Verwenden Sie das bereitgestellte Formular, um einen Namen für den Schlüssel anzugeben, und wählen Sie **RSA** für den Schlüsseltyp aus. Mindestens die Variable **[!DNL RSA key size]** darf nicht kleiner sein als **3072** Bits nach Bedarf von [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] ist auch mit RSA 3027 kompatibel.
 
 >[!NOTE]
 >

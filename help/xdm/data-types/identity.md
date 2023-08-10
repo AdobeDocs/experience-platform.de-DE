@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Identitätsdatentyp
 description: Dieses Dokument bietet einen Überblick über den Identitäts-XDM-Datentyp.
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '283'
 ht-degree: 15%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 15%
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `namespace` | Objekt | Ein Objekt, das ein einzelnes Zeichenfolgenfeld enthält (`code`), der den Namespace angibt, der mit der angegebenen verknüpft ist `id` -Attribut. |
+| `namespace` | Objekt | Ein Objekt, das ein einzelnes Zeichenfolgenfeld enthält (`code`), der den Namespace angibt, der mit dem bereitgestellten `id` -Attribut. |
 | `authenticatedState` | Zeichenfolge | Der authentifizierte Status für diese Identität zum Zeitpunkt des beobachteten Erlebnisereignisses. Siehe [Anhang](#authenticatedState) für akzeptierte Werte und Definitionen. |
 | `id` | Zeichenfolge | Die Identität des Verbrauchers im zugehörigen Namespace. |
 | `primary` | Boolesch | Gibt an, ob dies die primäre Identität der Person ist. Jede Person kann nur eine primäre Identität haben. |

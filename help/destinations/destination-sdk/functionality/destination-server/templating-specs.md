@@ -1,10 +1,10 @@
 ---
 description: Erfahren Sie, wie Sie die an Ihren Endpunkt gesendeten HTTP-Anfragen formatieren. Verwenden Sie den Endpunkt /authoring/destination-servers, um die Vorlagenspezifikationen des Ziel-Servers im Adobe Experience Platform Destination SDK zu konfigurieren.
 title: Vorlagenspezifikationen für Ziele, die mit Destination SDK erstellt wurden
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 97%
+source-wordcount: '523'
+ht-degree: 90%
 
 ---
 
@@ -17,7 +17,7 @@ In einer Vorlagenspezifikation können Sie definieren, wie Sie Profilattributfel
 
 Vorlagenspezifikationen sind Teil der Ziel-Server-Konfiguration für Echtzeit-Ziele (Streaming).
 
-Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation zu [Konfigurationsoptionen](../configuration-options.md) oder im Handbuch zum [Verwenden von Destination SDK zum Konfigurieren eines Streaming-Ziels](../../guides/configure-destination-instructions.md#create-server-template-configuration).
+Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm im [Konfigurationsoptionen](../configuration-options.md) Dokumentation oder lesen Sie das Handbuch zu [Verwenden von Destination SDK zum Konfigurieren eines Streaming-Ziels](../../guides/configure-destination-instructions.md#create-server-template-configuration).
 
 Sie können die Vorlagenspezifikationen für Ihr Ziel über den `/authoring/destination-servers`-Endpunkt konfigurieren. Detaillierte Beispiele für API-Aufrufe, in denen Sie die auf dieser Seite angezeigten Komponenten konfigurieren können, finden Sie auf den folgenden API-Referenzseiten.
 

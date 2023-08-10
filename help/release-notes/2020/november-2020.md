@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2182'
+source-wordcount: '2181'
 ht-degree: 26%
 
 ---
@@ -46,7 +46,7 @@ Weitere Informationen finden Sie im [Data Lake-Migrationshandbuch](../../landing
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Berechtigungen | Im [!DNL Admin Console], die Registerkarte in einer [!DNL Platform] Das Produktprofil ermöglicht es Ihnen anzupassen, [!DNL Platform] -Funktionen sind für die an dieses Profil angehängten Benutzer verfügbar. Zu den verfügbaren Berechtigungskategorien gehören: **[!UICONTROL Datenmodellierung]**, **[!UICONTROL Data Management]**, **[!UICONTROL Profilverwaltung]**, **[!UICONTROL Identity Management]**, **[!UICONTROL Datenüberwachung]**, **[!UICONTROL Sandbox-Administration]**, **[!UICONTROL Ziele]**, **[!UICONTROL Datenerfassung]**, **[!UICONTROL Data Science Workspace]**, **[!UICONTROL Query Service]** und **[!UICONTROL Data Governance]**. |
+| Berechtigungen | Im [!DNL Admin Console], die Registerkarte in einer [!DNL Platform] Das Produktprofil ermöglicht es Ihnen anzupassen, welche [!DNL Platform] -Funktionen sind für die an dieses Profil angehängten Benutzer verfügbar. Zu den verfügbaren Berechtigungskategorien gehören: **[!UICONTROL Datenmodellierung]**, **[!UICONTROL Data Management]**, **[!UICONTROL Profilverwaltung]**, **[!UICONTROL Identity Management]**, **[!UICONTROL Datenüberwachung]**, **[!UICONTROL Sandbox-Administration]**, **[!UICONTROL Ziele]**, **[!UICONTROL Datenerfassung]**, **[!UICONTROL Data Science Workspace]**, **[!UICONTROL Query Service]**, und **[!UICONTROL Data Governance]**. |
 | Zugriff auf Sandboxes | Die **[!UICONTROL Berechtigungen]** innerhalb eines [!DNL Platform] Produktprofil kann Benutzern Zugriff auf bestimmte Sandboxes gewähren. Zusätzliche Informationen finden Sie im Abschnitt zu [Sandboxes](#sandboxes) unten. |
 
 Weiterführende Informationen finden Sie unter [Zugriffskontrolle – Übersicht](../../access-control/home.md).
@@ -60,7 +60,7 @@ Weiterführende Informationen finden Sie unter [Zugriffskontrolle – Übersicht
 | Funktion | Beschreibung |
 | ------- | ----------- |
 | Zentralisierte Angebotsbibliothek | Die Oberfläche, auf der Sie die verschiedenen Elemente erstellen und verwalten, aus denen Ihre Angebote bestehen, und deren Regeln und Begrenzungen definieren. |
-| Offer Decisioning-Engine | Die Offer Decisioning-Engine nutzt [!DNL Platform] Daten und [!DNL Real-Time Customer Profiles]zusammen mit der Angebotsbibliothek verwenden, um die richtigen Zeiten, Kunden und Kanäle für die Bereitstellung der Angebote auszuwählen. |
+| Angebotsentscheidungen-Engine | Die Angebotsentscheidungen-Engine nutzt [!DNL Platform] Daten und [!DNL Real-Time Customer Profiles]zusammen mit der Angebotsbibliothek verwenden, um die richtigen Zeiten, Kunden und Kanäle für die Bereitstellung der Angebote auszuwählen. |
 
 Weitere Informationen finden Sie im [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=de) Dokumentation.
 
@@ -73,7 +73,7 @@ Weitere Informationen finden Sie im [[!DNL Offer Decisioning]](https://experienc
 | Funktion | Beschreibung |
 | ------- | ----------- |
 | Produktions-Sandbox | [!DNL Experience Platform] stellt eine einzelne Produktions-Sandbox bereit, die weder gelöscht noch zurückgesetzt werden kann. Die Gesamtzahl der verfügbaren Sandboxes, Produktion und Nicht-Produktion wird durch die erworbene Lizenz bestimmt. |
-| Nicht-Produktions-Sandboxes | Es können mehrere Nicht-Produktions-Sandboxes für eine einzelne [!DNL Platform] -Instanz können Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen, ohne die Produktions-Sandbox zu beeinträchtigen. |
+| Nicht-Produktions-Sandboxes | Es können mehrere Nicht-Produktions-Sandboxes für eine einzelne erstellt werden [!DNL Platform] -Instanz können Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen, ohne die Produktions-Sandbox zu beeinträchtigen. |
 | Sandbox-Wechsler | Im [!DNL Experience Platform] In der -Benutzeroberfläche können Sie über den Sandbox-Umschalter oben links im Bildschirm über ein Dropdown-Menü zwischen verfügbaren Sandboxes wechseln. Der Sandbox-Umschalter bietet außerdem eine Suchfunktion, mit der Sie nach verfügbaren Sandboxes filtern können. |
 | `x-sandbox-name`-Kopfzeile | Alle Aufrufe an [!DNL Experience Platform] APIs müssen jetzt die neuen `x-sandbox-name` -Kopfzeile, deren Wert auf die `name` -Attribut der Sandbox, in der der Vorgang ausgeführt werden soll. |
 
@@ -194,7 +194,7 @@ Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und B
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform kann Daten aus externen Quellen erfassen und gleichzeitig diese Daten strukturieren, beschriften und erweitern, indem es [!DNL Platform] Dienste. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen erfassen und gleichzeitig diese Daten strukturieren, beschriften und erweitern. [!DNL Platform] Dienste. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 [!DNL Experience Platform]Im Rahmen von stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 
@@ -202,7 +202,7 @@ Adobe Experience Platform kann Daten aus externen Quellen erfassen und gleichzei
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| [!DNL Shopify] | Sie können [!DNL Shopify] jetzt mit [!DNL Experience Platform] über die [!DNL Flow Service]-API oder die Benutzeroberfläche verbinden. Siehe [Übersicht über den Shopid-Connector](../../sources/connectors/ecommerce/shopify.md) für weitere Informationen. |
+| [!DNL Shopify] | Sie können [!DNL Shopify] jetzt mit [!DNL Experience Platform] über die [!DNL Flow Service]-API oder die Benutzeroberfläche verbinden. Siehe [Übersicht über den Shopconnector](../../sources/connectors/ecommerce/shopify.md) für weitere Informationen. |
 
 **Wichtigste Funktionen**
 
@@ -210,7 +210,7 @@ Adobe Experience Platform kann Daten aus externen Quellen erfassen und gleichzei
 | ------- | ----------- |
 | Verbindungsinformationen aktualisieren | Sie können jetzt die Namen, Beschreibungen und Anmeldeinformationen der vorhandenen Batch-Verbindungen mit der [!DNL Flow Service] API und Benutzeroberfläche. Weitere Informationen finden Sie im Tutorial zu [Aktualisieren von Verbindungen mithilfe der Flow Service-API](../../sources/tutorials/api/update.md) und [Bearbeiten von Kontodetails über die Benutzeroberfläche](../../sources/tutorials/ui/monitor.md). |
 | Verbindungen löschen | Batch-Verbindungen, die Fehler enthalten oder unnötig geworden sind, können jetzt mit der [!DNL Flow Service] API und Benutzeroberfläche. Weitere Informationen finden Sie im Tutorial zu [Löschen von Verbindungen mithilfe der Flow Service-API](../../sources/tutorials/api/delete.md) und [Löschen von Konten über die Benutzeroberfläche](../../sources/tutorials/ui/delete-accounts.md). |
-| Hierarchische Zuordnung | Sie können während der Datenerfassung eine Vorschau einer hierarchischen Quelldatei wie JSON oder Parquet anzeigen. Weitere Informationen finden Sie im Tutorial unter [Konfigurieren eines Datenflusses für Cloud-Speicher-Connectoren in der Benutzeroberfläche](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) für weitere Informationen. |
+| Hierarchische Zuordnung | Sie können während der Datenerfassung eine Vorschau einer hierarchischen Quelldatei wie JSON oder Parquet anzeigen. Siehe Tutorial zu [Konfigurieren eines Datenflusses für Cloud-Speicher-Connectoren in der Benutzeroberfläche](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) für weitere Informationen. |
 | API-Unterstützung für die Zuordnung in Streaming-Quellen | Sie können jetzt APIs verwenden, um Zuordnungsfunktionen mit Streaming-Quellen auszuführen. |
 | API-Unterstützung für benutzerdefinierte Trennzeichen für Cloud-Speicher-Quellen | Sie können jetzt nicht CSV-getrennte Dateien mithilfe von Cloud-Speicher-Quellen erfassen. Sie können ein beliebiges Trennzeichen für einzelne Spalten wie Tabulatoren, Kommas, senkrechte Striche, Semikolons oder Hash verwenden, um flache Dateien in jedem beliebigen Format zu erfassen. |
 | Sandbox-Unterstützung für Adobe Audience Manager-Connector | Der Audience Manager-Connector ist jetzt Sandbox-unterstützt. Benutzer können den Connector aktivieren, um Audience Manager-Datensätze an die Sandbox ihrer Wahl zu leiten (einschließlich Nicht-Produktions-Sandboxes). Die Konfiguration ist auf eine Sandbox pro Organisation beschränkt. |

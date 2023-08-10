@@ -2,9 +2,9 @@
 title: Identity Namespace - Überblick
 description: Identity-Namespaces sind Komponenten des Identity Service, die als Indikatoren für den Kontext dienen, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert "name@email.com"als E-Mail-Adresse oder "443522"als numerische CRM-ID.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: c456d02e746c160c1d133d0b4358415edffaa6f8
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1766'
+source-wordcount: '1765'
 ht-degree: 31%
 
 ---
@@ -48,8 +48,8 @@ Die folgenden Identitätstypen sind in [!DNL Platform]:
 | Geräte-ID | Geräte-IDs identifizieren Hardwaregeräte wie IDFA (iPhone und iPad), GAID (Android) und RIDA (Roku) und können von mehreren Personen in Haushalten gemeinsam genutzt werden. |
 | E-Mail Adresse | E-Mail-Adressen sind oft mit einer einzelnen Person verknüpft und können daher zur kanalübergreifenden Identifizierung dieser Person verwendet werden. Identitäten dieser Art beinhalten personenbezogene Daten (PII). Dies deutet darauf hin, dass [!DNL Identity Service] um den Wert sensibel zu behandeln. |
 | Nichtpersonenkennung | Nicht-Personen-IDs werden zum Speichern von Kennungen verwendet, die Namespaces erfordern, aber nicht mit einem Personen-Cluster verbunden sind. Beispielsweise eine Produkt-SKU, Daten, die sich auf Produkte, Organisationen oder Geschäfte beziehen. |
-| Partner-ID [!BADGE Beta]{type=Informative} | <ul><li>Partner-IDs sind IDs, die von Datenpartnern zur Darstellung von Personen verwendet werden. Partner-IDs sind häufig pseudonym, sodass die wahre Identität einer Person nicht erkennbar ist und probabilistisch sein kann. In Real-time Customer Data Platform werden Partner-IDs primär für die erweiterte Zielgruppenaktivierung und Datenanreicherung und nicht zum Erstellen von Identitätsdiagrammverknüpfungen verwendet.</li><li>Identitätsdiagramme werden nicht bei der Erfassung einer Identität generiert, die einen Identitäts-Namespace enthält, der als Partner-ID-Typ angegeben wurde.</li><li>Wenn Partnerdaten nicht mit dem Identitätstyp Partner-ID erfasst werden, können für Identity Service Systemdiagrammbeschränkungen sowie unerwünschte Zusammenführungen von Profilen erreicht werden.</li><ul> |
-| Telefonnummer | Telefonnummern sind häufig mit einer einzelnen Person verknüpft und können daher zur kanalübergreifenden Identifizierung dieser Person verwendet werden. Identitäten dieser Art umfassen PII. Dies deutet darauf hin, dass [!DNL Identity Service] um den Wert sensibel zu behandeln. |
+| Partner-ID [!BADGE Beta]{type=Informative} | <ul><li>Partner-IDs sind Kennungen, die von Datenpartnern zur Darstellung von Personen verwendet werden. Partner-IDs sind häufig pseudonym, sodass die wahre Identität einer Person nicht erkennbar ist und probabilistisch sein kann. In Real-time Customer Data Platform werden Partner-IDs primär für die erweiterte Zielgruppenaktivierung und Datenanreicherung und nicht zum Erstellen von Identitätsdiagrammverknüpfungen verwendet.</li><li>Identitätsdiagramme werden nicht bei der Erfassung einer Identität generiert, die einen Identitäts-Namespace enthält, der als Partner-ID-Typ angegeben wurde.</li><li>Wenn Partnerdaten nicht mit dem Identitätstyp Partner-ID erfasst werden, können für Identity Service Systemdiagrammbeschränkungen sowie unerwünschte Profilzusammenführungen auftreten.</li><ul> |
+| Telefonnummer | Telefonnummern sind häufig mit einer einzelnen Person verknüpft und können daher zur kanalübergreifenden Identifizierung dieser Person verwendet werden. Identitäten dieser Art umfassen PII. Dies deutet auf [!DNL Identity Service] um den Wert sensibel zu behandeln. |
 
 {style="table-layout:auto"}
 
@@ -65,7 +65,7 @@ Folgende Standard-Namespaces stehen allen Organisationen in Platform zur Verfüg
 | Adobe Analytics (Legacy-ID) | Ein Namespace, der Adobe Analytics darstellt. Siehe folgendes Dokument unter [Adobe Analytics-Namespaces](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=en#namespaces) für weitere Informationen. |
 | Apple IDFA (ID für Advertiser) | Ein Namespace, der die Apple ID für Advertiser darstellt. Weiteführende Informationen finden Sie im folgenden Dokument zu [Interessensbasierten Anzeigen](https://support.apple.com/de-de/HT202074). |
 | Apple Push Notification Service | Ein Namespace, der Identitäten darstellt, die mit dem Apple Push Notification Service erfasst wurden. Siehe folgendes Dokument unter [Apple Push Notification Service](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) für weitere Informationen. |
-| CORE | Ein Namespace, der Adobe Audience Manager darstellt. Dieser Namespace kann auch durch seinen alten Namen referenziert werden: &quot;Adobe AudienceManager&quot;. Siehe folgendes Dokument unter [Audience Manager-IDs](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids) für weitere Informationen. |
+| CORE | Ein Namespace, der Adobe Audience Manager darstellt. Auf diesen Namespace kann auch der ältere Name &quot;Adobe AudienceManager&quot;verweisen. Siehe folgendes Dokument unter [Audience Manager-IDs](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids) für weitere Informationen. |
 | ECID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Siehe folgendes Dokument unter [ECID](./ecid.md) für weitere Informationen. |
 | E-Mail | Ein Namespace, der eine E-Mail-Adresse darstellt. Dieser Namespace ist häufig mit einer einzelnen Person verknüpft und kann daher zur kanalübergreifenden Identifizierung dieser Person verwendet werden. |
 | E-Mails (SHA256, in Kleinbuchstaben) | Ein Namespace für vorab gehashte E-Mail-Adressen. In diesem Namespace angegebene Werte werden vor dem Hashing mit SHA256 in Kleinbuchstaben umgewandelt. Vor der Normalisierung einer E-Mail-Adresse müssen vorangestellte und nachfolgende Leerzeichen abgeschnitten werden. Diese Einstellung kann nachträglich nicht mehr geändert werden. Siehe folgendes Dokument unter [SHA-256-Hashing-Unterstützung](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=de#hashing-support) für weitere Informationen. |
@@ -90,7 +90,7 @@ Um Identitäts-Namespaces in der Benutzeroberfläche anzuzeigen, wählen Sie **[
 
 ![Browsen](./images/browse.png)
 
-Auf der Hautoberfläche der Seite wird eine Liste von Identitäts-Namespaces angezeigt, die Informationen zu ihren Namen, Identitätssymbolen, dem letzten aktualisierten Datum und dazu enthalten, ob es sich um einen Standard- oder einen benutzerdefinierten Namespace handelt. Die rechte Leiste enthält Informationen zu [!UICONTROL Stärke des Identitätsdiagramms].
+Auf der Hautoberfläche der Seite wird eine Liste von Identitäts-Namespaces angezeigt, die Informationen zu ihren Namen, Identitätssymbolen, dem letzten aktualisierten Datum und dazu enthalten, ob es sich um einen Standard- oder einen benutzerdefinierten Namespace handelt. Die rechte Leiste enthält Informationen zu [!UICONTROL Stärke des Identity Graph].
 
 ![identities](./images/identities.png)
 
@@ -106,7 +106,7 @@ Wählen Sie einen Identitäts-Namespace aus der Liste aus, um Informationen zu e
 
 Je nach den Daten und Anwendungsfällen in Ihrer Organisation benötigen Sie möglicherweise benutzerdefinierte Namespaces. Benutzerdefinierte Namespaces können mit der [[!DNL Identity Service]](./api/create-custom-namespace.md) API oder über die Benutzeroberfläche.
 
-Um mithilfe der Benutzeroberfläche einen benutzerdefinierten Namespace zu erstellen, navigieren Sie zum **[!UICONTROL Identitäten]** Arbeitsbereich, wählen Sie **[!UICONTROL Durchsuchen]** und wählen Sie **[!UICONTROL Identitäts-Namespace erstellen]**.
+Um mithilfe der Benutzeroberfläche einen benutzerdefinierten Namespace zu erstellen, navigieren Sie zum **[!UICONTROL Identitäten]** Arbeitsbereich auswählen **[!UICONTROL Durchsuchen]** und wählen Sie **[!UICONTROL Identitäts-Namespace erstellen]**.
 
 ![select-create](./images/select-create.png)
 

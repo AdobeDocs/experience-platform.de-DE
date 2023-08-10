@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über die Benutzeroberfläche von Schemas
 description: Dieser Überblick behandelt die wichtigsten Funktionen des Arbeitsbereichs "Schemas"in Experience Platform.
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '295'
 ht-degree: 9%
 
 ---
@@ -36,7 +36,7 @@ Die [!UICONTROL Schemas] Workspace bietet leistungsstarke Tools zum Erstellen un
 
 ## Definieren von XDM-Feldern
 
-Klassen, Feldergruppen und Datentypen tragen alle Felder zu einem Schema bei. Beim Hinzufügen von Feldern zu diesen Ressourcen können Sie aus einer Liste von Standardfeldtypen wählen und für bestimmte Anwendungsfälle auch spezielle Felder definieren. Weitere Informationen finden Sie im Handbuch unter [Definieren von XDM-Feldern in der Benutzeroberfläche](./fields/overview.md) für weitere Informationen.
+Klassen, Feldergruppen und Datentypen tragen alle Felder zu einem Schema bei. Beim Hinzufügen von Feldern zu diesen Ressourcen können Sie aus einer Liste von Standardfeldtypen wählen und für bestimmte Anwendungsfälle auch spezialisierte Felder definieren. Weitere Informationen finden Sie im Handbuch unter [Definieren von XDM-Feldern in der Benutzeroberfläche](./fields/overview.md) für weitere Informationen.
 
 ## Nächste Schritte
 

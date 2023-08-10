@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffskontrolle;attri
 title: Attributbasierte Zugriffssteuerung – Übersicht
 description: Dieses Dokument enthält Informationen zur attributbasierten Zugriffssteuerung in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1826'
-ht-degree: 97%
+source-wordcount: '1825'
+ht-degree: 95%
 
 ---
 
@@ -32,7 +32,7 @@ Die attributbasierte Zugriffssteuerung umfasst die folgenden Komponenten:
 | Beschriftungen | Mit Beschriftungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practices legen nahe, Daten direkt bei ihrer Aufnahme in Platform oder ab dem Zeitpunkt ihrer Nutzbarkeit in Platform mit einer Beschriftung zu versehen. |
 | Berechtigungen | Zu den Berechtigungen gehört die Möglichkeit, Adobe Campaign-Funktionen anzuzeigen und/oder zu verwenden, z. B. das Erstellen von Sandboxes, das Definieren von Schemata und die Verwaltung von Datensätzen. |
 | Berechtigungssätze | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Admin auf eine Rolle anwenden kann. Ein Admin kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
-| Richtlinien | Richtlinien sind Anweisungen, die Attribute zusammenbringen, um zulässige und unzulässige Handlungen festzustellen. Richtlinien können lokal oder global sein und andere Richtlinien überschreiben. |
+| Richtlinien | Richtlinien sind Anweisungen, die Attribute zusammenbringen, um zulässige und unzulässige Aktionen festzustellen. Richtlinien können lokal oder global sein und andere Richtlinien überschreiben. |
 | Ressource | Eine Ressource ist das Asset oder Objekt, auf das ein Subjekt zugreifen kann oder nicht. Ressourcen können Segmente oder Schemafelder sein. |
 | Rollen | Rollen sind Möglichkeiten, die Typen von Benutzenden zu kategorisieren, die mit Ihrer Platform-Instanz interagieren, und stellen Bausteine von Richtlinien zur Zugriffssteuerung dar. In einer rollenbasierten Zugriffssteuerungsumgebung erfolgt die Bereitstellung des Benutzerzugriffs über gemeinsame Zuständigkeiten und Anforderungen. Eine Rolle verfügt über bestimmte Berechtigungen, wobei Mitglieder Ihrer Organisation je nach dem Umfang des Lese- oder Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden können. |
 | Betreff | Ein Subjekt ist der Benutzer, der Zugriff auf eine Ressource anfordert, um eine Aktion durchzuführen. |
@@ -93,7 +93,6 @@ Als Admin können Sie attributbasierte Zugriffssteuerungsfunktionen für Folgend
 >* Im [Zuordnungsschritt des Aktivierungs-Workflows](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) können Sie nur die Felder anzeigen und zur Aktivierung auswählen, für die Sie über Zugriffsberechtigungen verfügen.
 >* Wenn Sie zusätzliche Segmente für ein vorhandenes Ziel aktivieren möchten, bei dem Sie nicht auf alle Felder zugreifen können, die für den Export zugeordnet sind, wird der Aktivierungs-Workflow für Sie blockiert.
 
-
 Weitere Informationen zu [!DNL Destinations] finden Sie in der [[!DNL Destinations] Übersicht](../../destinations/home.md).
 
 ### Identity Service
@@ -134,7 +133,7 @@ Das Experience-Datenmodell (XDM) ist eine Open-Source-Spezifikation, die dazu di
 
 Mit der attributbasierten Zugriffssteuerung können Sie Folgendes durchführen:
 
-* [Wenden Sie Datennutzungskennzeichnungen auf Feldergruppen und -klassen an](../../xdm/tutorials/labels.md). Dadurch wird es ermöglicht, dass mehrere Schemata mit den gleichen Feldergruppen oder -klassen Felder aufweisen können, die mit den gleichen Attributen versehen sind, je nach den Konfigurationen auf Ebene der Feldergruppe oder -klasse.
+* [Wenden Sie Datennutzungskennzeichnungen auf Feldergruppen und -klassen an](../../xdm/tutorials/labels.md). Dies ermöglicht es mehreren Schemas mit denselben Feldergruppen oder -klassen, Felder mit denselben Attributen zu versehen, je nach den Konfigurationen auf Feldergruppen- oder Klassenebene.
 * Konfigurieren Sie den Benutzerzugriff auf bestimmte XDM-Schemafelder abhängig von den Berechtigungssätzen, die auf die Rollen der Benutzenden angewendet werden.
 
 Weitere Informationen zu XDM finden Sie in der [XDM-Übersicht](../../xdm/home.md).

@@ -2,9 +2,9 @@
 description: Auf dieser Seite finden Sie alle Informationen, die Sie zum Überprüfen eines mit Destination SDK erstellten produktiven Ziels übermitteln müssen.
 title: Zur Überprüfung eines in der Destination SDK erstellten produktisierten Ziels übermitteln
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '1013'
 ht-degree: 36%
 
 ---
@@ -35,7 +35,7 @@ Auf dieser Seite sind alle Informationen aufgeführt, die Sie angeben müssen, w
    * Fügen Sie eine Beispieldatei an, die von Ihrem Ziel generiert und an Ihren Speicherort exportiert wurde.
    * Senden Sie eine Form des Nachweises, dass Sie die exportierte Datei erfolgreich vom Speicherort in Ihr System aufgenommen haben.
 * Nachweis, dass Sie eine Anfrage zur Veröffentlichung eines Ziels für Ihr Ziel mithilfe der [Zielveröffentlichungs-API](../publishing-api/create-publishing-request.md) übermittelt haben.
-* Eine Dokumentation-PR (Pull-Anforderung) entsprechend den Anweisungen im Abschnitt [Self-Service-Dokumentationsprozess](../docs-framework/documentation-instructions.md).
+* Eine Dokumentation-PR (Pull-Anfrage) entsprechend den Anweisungen im Abschnitt [Self-Service-Dokumentationsprozess](../docs-framework/documentation-instructions.md).
 * Eine Grafikdatei, die als Logo für Ihre Zielkarte im Zielkatalog von Experience Platform angezeigt werden soll.
 
 Detaillierte Informationen zu den einzelnen Elementen finden Sie in den folgenden Abschnitten:
@@ -45,7 +45,7 @@ Detaillierte Informationen zu den einzelnen Elementen finden Sie in den folgende
 Geben Sie eine Beschreibung der Anwendungsfälle an, die Ihr Ziel für Experience Platform-Kunden löst. Ihre Beschreibungen können Anwendungsfällen von vorhandenen Partnern ähneln:
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Erstellen Sie Zielgruppen aus Ihren Kundenlisten, Personen, die Ihre Site besucht haben, oder Personen, die bereits mit Ihren Inhalten in Pinterest interagiert haben.
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX-APIs sind für Advertiser verfügbar, die eine bestimmte Zielgruppe ansprechen möchten, die von E-Mail-Adressen in Verizon Media (VMG) abgeleitet wurde. Sie können schnell eine neue Zielgruppe erstellen und die gewünschte Zielgruppe mithilfe der nahezu Echtzeit-API von VMG übertragen.
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX-APIs sind für Advertiser verfügbar, die eine bestimmte Zielgruppe mit E-Mail-Adressen in Verizon Media (VMG) ansprechen möchten, die über die E-Mail-Adresse eingegeben wurde. Dadurch kann schnell eine neue Zielgruppe erstellt und die gewünschte Zielgruppe mithilfe der API nahezu in Echtzeit gepusht werden.
 
 ## Grund für die Aktualisierung {#reason-for-update}
 
@@ -235,7 +235,7 @@ Schließen Sie eine Anfrage und ein Antwort-Beispiel ein, nachdem Sie die Test-A
 
 ### Exportierte Datei anhängen {#attach-exported-file}
 
-In [Einsendenummer](#download-sample-email), fügen Sie eine CSV-Datei an, die von dem von Ihnen eingerichteten Ziel in Ihren Speicherort exportiert wurde.
+In der [Einsendenummer](#download-sample-email), fügen Sie eine CSV-Datei an, die von dem von Ihnen eingerichteten Ziel in Ihren Speicherort exportiert wurde.
 
 ### Nachweis der erfolgreichen Aufnahme {#proof-of-successful-ingestion}
 

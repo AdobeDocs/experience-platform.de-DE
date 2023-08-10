@@ -4,10 +4,10 @@ title: Warnhinweise – Übersicht
 description: Erfahren Sie mehr über Warnhinweise in Adobe Experience Platform, einschließlich der Struktur der Definition von Warnhinweisregeln.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: 37700c3b3b728b59083fd51cabf1d8e4b8213580
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '774'
-ht-degree: 94%
+source-wordcount: '773'
+ht-degree: 91%
 
 ---
 
@@ -83,7 +83,7 @@ Um mit Warnhinweisen in der Platform-Benutzeroberfläche zu arbeiten, müssen Si
 >
 >Weitere Informationen zum Verwalten von Berechtigungen in Platform finden Sie in der [Dokumentation zur Zugangssteuerung](../../access-control/ui/overview.md).
 
-Mit der Berechtigung „Warnhinweise anzeigen“ können Sie erhaltene Warnhinweise anzeigen, indem Sie oben rechts das Glockensymbol (![Glockensymbol](../images/alerts/overview/icon.png)) auswählen.
+Mit der Berechtigung Warnhinweise anzeigen können Sie erhaltene Warnhinweise anzeigen, indem Sie das Glockensymbol (![Glockensymbol](../images/alerts/overview/icon.png)) oben rechts.
 
 ![](../images/alerts/overview/ui.png)
 

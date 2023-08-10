@@ -2,10 +2,10 @@
 title: Secrets-Endpunkt
 description: Hier erfahren Sie, wie Sie den Endpunkt /secrets in der Reactor-API aufrufen.
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
-source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1247'
-ht-degree: 92%
+source-wordcount: '1246'
+ht-degree: 89%
 
 ---
 
@@ -302,7 +302,7 @@ Sie können neue geheime Daten erstellen, indem Sie eine POST-Anfrage ausführen
 
 >[!NOTE]
 >
->Wenn Sie neue geheime Daten erstellen, gibt die API eine sofortige Antwort zurück, die Informationen zu dieser Ressource enthält. Gleichzeitig wird eine Aufgabe für den Austausch geheimer Daten ausgelöst, um zu testen, ob der Austausch von Anmeldedaten funktioniert. Diese Aufgabe wird asynchron verarbeitet und aktualisiert das Statusattribut der geheimen Daten je nach Ergebnis auf `succeeded` oder `failed`.
+>Wenn Sie neue geheime Daten erstellen, gibt die API eine sofortige Antwort zurück, die Informationen zu dieser Ressource enthält. Gleichzeitig wird eine Aufgabe für den Austausch geheimer Daten ausgelöst, um zu testen, ob der Austausch von Anmeldedaten funktioniert. Diese Aufgabe wird asynchron verarbeitet und aktualisiert das Statusattribut des Geheimnisses auf `succeeded` oder `failed` je nach Ergebnis.
 
 **API-Format**
 
@@ -472,7 +472,7 @@ curl -X PATCH \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der geheimen Daten zurück, wobei die Antwort des Autorisierungsdienstes unter `meta.test_exchange` enthalten ist.
+Eine erfolgreiche Antwort gibt die Details des Geheimnisses zurück, wobei die Antwort des Autorisierungsdienstes unter `meta.test_exchange`.
 
 ```json
 { 
@@ -644,9 +644,9 @@ Eine erfolgreiche Antwort gibt die Details der geheimen Daten zurück, wobei der
 }
 ```
 
-## Erneutes Autorisieren eines `oauth2-google` secret {#reauthorize}
+## Erneutes Zulassen einer `oauth2-google` secret {#reauthorize}
 
-Jeder `oauth2-google` secret contains `meta.authorization_url_expires_at` -Eigenschaft, die angibt, wann die Autorisierungs-URL abläuft. Danach muss das Geheimnis erneut autorisiert werden, damit es den Authentifizierungsprozess verlängern kann.
+Jeder `oauth2-google` secret enthält eine `meta.authorization_url_expires_at` -Eigenschaft, die angibt, wann die Autorisierungs-URL abläuft. Danach muss das Geheimnis erneut autorisiert werden, damit es den Authentifizierungsprozess verlängern kann.
 
 So autorisieren Sie eine `oauth2-google` geheim, stellen Sie eine PATCH-Anfrage für das betreffende Geheimnis.
 
@@ -662,7 +662,7 @@ PATCH /secrets/{SECRET_ID}
 
 **Anfrage**
 
-Die `data` -Objekt in der Anfrage-Payload muss eine `meta.action` Eigenschaft auf `reauthorize`.
+Die `data` -Objekt in der Anfrage-Payload muss eine `meta.action` Eigenschaft festgelegt auf `reauthorize`.
 
 ```shell
 curl -X PATCH \

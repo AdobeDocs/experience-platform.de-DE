@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie verschlüsselte Dateien über Cloud-Speicher-
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: d05202fc1e64bbb06c886aedbe59e07c45f80686
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1343'
-ht-degree: 76%
+source-wordcount: '1342'
+ht-degree: 75%
 
 ---
 
@@ -335,4 +335,4 @@ Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenfluss
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie ein Verschlüsselungsschlüsselpaar für Ihre Cloud-Speicherdaten und einen Datenfluss erstellt, um Ihre verschlüsselten Daten mithilfe der [!DNL Flow Service API] aufzunehmen. Statusaktualisierungen zur Vollständigkeit, zu Fehlern und Metriken Ihres Datenflusses finden Sie im Handbuch zum [Überwachen Ihres Datenflusses mithilfe der  [!DNL Flow Service] API](./monitor.md).
+In diesem Tutorial haben Sie ein Verschlüsselungsschlüsselpaar für Ihre Cloud-Speicherdaten und einen Datenfluss erstellt, um Ihre verschlüsselten Daten mithilfe der [!DNL Flow Service API] aufzunehmen. Statusaktualisierungen zur Vollständigkeit, zu Fehlern und Metriken Ihres Datenflusses finden Sie im Handbuch unter [Überwachen Ihres Datenflusses mithilfe des [!DNL Flow Service] API](./monitor.md).

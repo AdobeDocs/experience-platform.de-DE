@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Erste Schritte mit der Richtlinien-Service-API
 description: Mit der Policy Service-API können Sie verschiedene Ressourcen im Zusammenhang mit der Data Governance von Adobe Experience Platform erstellen und verwalten. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen sollten, bevor Sie Aufrufe an die Policy Service-API durchführen.
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '443'
-ht-degree: 100%
+source-wordcount: '442'
+ht-degree: 95%
 
 ---
 
@@ -17,7 +17,7 @@ Mit der [!DNL Policy Service]-API können Sie verschiedene Ressourcen im Zusamme
 
 ## Voraussetzungen
 
-Die Verwendung des Entwicklerhandbuchs erfordert ein grundlegendes Verständnis der verschiedenen [!DNL Experience Platform]-Services, die bei der Arbeit mit Data Governance-Funktionen zum Einsatz kommen. Bevor Sie [!DNL Policy Service API] nutzen, lesen Sie die Dokumentation für folgende Services:
+Die Verwendung des Entwicklerhandbuchs setzt ein Verständnis der verschiedenen [!DNL Experience Platform] Dienste, die mit Data Governance-Funktionen arbeiten. Bevor Sie [!DNL Policy Service API] nutzen, lesen Sie die Dokumentation für folgende Services:
 
 * [Data Governance](../home.md): Das Framework, mit dem [!DNL Experience Platform] die Einhaltung der Datennutzungsrichtlinien umsetzt.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.

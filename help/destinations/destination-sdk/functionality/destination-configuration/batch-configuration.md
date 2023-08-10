@@ -1,10 +1,10 @@
 ---
 description: Erfahren Sie, wie Sie die Dateiexporteinstellungen für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Batch-Konfiguration
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1073'
-ht-degree: 91%
+source-wordcount: '1072'
+ht-degree: 87%
 
 ---
 
@@ -22,7 +22,7 @@ Wenn Sie dateibasierte Ziele über Destination SDK erstellen, können Sie Standa
 
 Batch-Konfigurationseinstellungen sind Teil der Zielkonfiguration für dateibasierte Ziele.
 
-Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation zu [Konfigurationsoptionen](../configuration-options.md) oder im Handbuch zur [Verwendung von Destination SDK zum Konfigurieren eines dateibasierten Ziels](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm im [Konfigurationsoptionen](../configuration-options.md) Dokumentation oder lesen Sie das Handbuch zu [Destination SDK zum Konfigurieren eines dateibasierten Ziels verwenden](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 Sie können die Dateibenennungs- und Exportzeitplaneinstellungen über den Endpunkt `/authoring/destinations` konfigurieren. Detaillierte Beispiele für API-Aufrufe, in denen Sie die auf dieser Seite angezeigten Komponenten konfigurieren können, finden Sie auf den folgenden API-Referenzseiten.
 

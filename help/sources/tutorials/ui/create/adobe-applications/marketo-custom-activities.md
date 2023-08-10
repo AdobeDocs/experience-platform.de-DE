@@ -2,9 +2,9 @@
 title: Erstellen einer Marketo Engage-Quellverbindung und eines Datenflusses für benutzerdefinierte Aktivitätsdaten in der Benutzeroberfläche
 description: In diesem Tutorial erfahren Sie, wie Sie in der Benutzeroberfläche eine Marketo Engage-Quellverbindung und einen Datenfluss erstellen, um benutzerdefinierte Aktivitätsdaten in Adobe Experience Platform zu importieren.
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1480'
 ht-degree: 22%
 
 ---
@@ -39,7 +39,7 @@ Die Benutzeroberfläche aktualisiert eine Anzeige Ihrer benutzerdefinierten Akti
 
 ![Die Benutzeroberfläche &quot;Benutzerdefinierte Aktivitäten&quot;in der Adobe Marketo Engage-Benutzeroberfläche.](../../../../images/tutorials/create/marketo-custom-activities/marketo-custom-activity.png)
 
-Auswählen **Felder** aus der oberen Kopfzeile, um die mit Ihrer benutzerdefinierten Aktivität verknüpften Felder anzuzeigen. Auf dieser Seite können Sie die Namen, API-Namen, Beschreibungen und Datentypen der Felder in Ihrer benutzerdefinierten Aktivität anzeigen. Details zu einzelnen Feldern werden in einem späteren Schritt beim Erstellen eines Schemas verwendet.
+Auswählen **Felder** aus der oberen Kopfzeile, um die mit Ihrer benutzerdefinierten Aktivität verknüpften Felder anzuzeigen. Auf dieser Seite können Sie die Namen, API-Namen, Beschreibungen und Datentypen der Felder in Ihrer benutzerdefinierten Aktivität anzeigen. Details zu einzelnen Feldern werden in einem späteren Schritt bei der Erstellung eines Schemas verwendet.
 
 ![Die Seite mit den Details zu benutzerdefinierten Marketo-Aktivitätsfeldern in der Marketo Engage-Benutzeroberfläche.](../../../../images/tutorials/create/marketo-custom-activities/marketo-custom-activity-fields.png)
 
@@ -61,7 +61,7 @@ Um eine neue Feldergruppe hinzuzufügen, wählen Sie **[!UICONTROL + Hinzufügen
 
 ![Die Schemastruktur.](../../../../images/tutorials/create/marketo-custom-activities/add-new-field-group.png)
 
-Die *[!UICONTROL Feldergruppen hinzufügen]* angezeigt. Auswählen **[!UICONTROL Neue Feldergruppe erstellen]** Geben Sie dann denselben Anzeigenamen für die benutzerdefinierte Aktivität an, den Sie in einem früheren Schritt abgerufen haben, und geben Sie eine optionale Beschreibung für die neue Feldergruppe an. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Feldergruppen hinzufügen]**.
+Die *[!UICONTROL Feldergruppen hinzufügen]* angezeigt. Auswählen **[!UICONTROL Neue Feldergruppe erstellen]** Geben Sie dann denselben Anzeigenamen für die benutzerdefinierte Aktivität an, den Sie in einem früheren Schritt abgerufen haben, und geben Sie eine optionale Beschreibung für die neue Feldergruppe an. Wählen Sie zum Abschluss **[!UICONTROL Feldergruppen hinzufügen]**.
 
 ![Das Fenster zur Beschriftung und Erstellung einer neuen Feldergruppe.](../../../../images/tutorials/create/marketo-custom-activities/create-new-field-group.png)
 
@@ -73,7 +73,7 @@ Nach der Erstellung erscheint Ihre neue Feldergruppe für die benutzerdefinierte
 
 Fügen Sie Ihrem Schema als Nächstes ein neues Feld hinzu. Dieses neue Feld muss auf `type: object` und enthält die einzelnen Felder der benutzerdefinierten Aktivität.
 
-Um ein neues Feld hinzuzufügen, wählen Sie das Pluszeichen (`+`) neben dem Schemanamen. Ein Eintrag für *[!UICONTROL Unbenanntes Feld | Typ]* angezeigt. Konfigurieren Sie anschließend die Eigenschaften Ihres Felds mithilfe des *[!UICONTROL Feldeigenschaften]* Bereich. Legen Sie den Feldnamen als API-Namen Ihrer benutzerdefinierten Aktivität fest und legen Sie den Anzeigenamen als Anzeigenamen für Ihre benutzerdefinierte Aktivität fest. Legen Sie anschließend den Typ auf `object` und weisen Sie die Feldergruppe der benutzerdefinierten Feldergruppe zu, die Sie im vorherigen Schritt erstellt haben. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Anwenden]** aus.
+Um ein neues Feld hinzuzufügen, wählen Sie das Pluszeichen (`+`) neben dem Schemanamen. Ein Eintrag für *[!UICONTROL Unbenanntes Feld | Typ]* angezeigt. Konfigurieren Sie anschließend die Eigenschaften Ihres Felds mithilfe des *[!UICONTROL Feldeigenschaften]* Bedienfeld. Legen Sie den Feldnamen als API-Namen Ihrer benutzerdefinierten Aktivität fest und legen Sie den Anzeigenamen als Anzeigenamen für Ihre benutzerdefinierte Aktivität fest. Legen Sie anschließend den Typ auf `object` und weisen Sie die Feldergruppe der benutzerdefinierten Feldergruppe zu, die Sie im vorherigen Schritt erstellt haben. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Anwenden]** aus.
 
 ![Die Schemastruktur mit dem Pluszeichen (`+`) ausgewählt, damit ein neues Feld hinzugefügt werden kann.](../../../../images/tutorials/create/marketo-custom-activities/add-new-object.png)
 
@@ -119,7 +119,7 @@ Um mit der Zuordnung Ihrer benutzerdefinierten Aktivitätsfelder zu beginnen, w�
 
 ![Der Zuordnungsschritt mit dem Dropdown-Menü, um ein neues Feld hinzuzufügen.](../../../../images/tutorials/create/marketo-custom-activities/add-new-mapping-field.png)
 
-Navigieren Sie durch die Quelldatenstruktur und suchen Sie das benutzerdefinierte Aktivitätsfeld, das Sie erfassen möchten. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Auswählen]**.
+Navigieren Sie durch die Quelldatenstruktur und suchen Sie das benutzerdefinierte Aktivitätsfeld, das Sie erfassen möchten. Wählen Sie zum Abschluss **[!UICONTROL Auswählen]**.
 
 >[!TIP]
 >
@@ -169,7 +169,7 @@ SELECT * FROM $datasetName WHERE eventType IN ('aepCustomActivityDemo1', 'aepCus
 
 Die folgende Abbildung zeigt eine Beispiel-SQL-Anweisung im [Abfrage-Editor](../../../../../query-service/ui/user-guide.md) , das nach benutzerdefinierten Aktivitätsdaten filtert.
 
-![Platform-Benutzeroberfläche, die ein Abfragebeispiel für benutzerdefinierte Aktivitäten anzeigt.](../../../../images/tutorials/create/marketo-custom-activities/queries.png)
+![Platform-Benutzeroberfläche mit einem Abfragebeispiel für benutzerdefinierte Aktivitäten.](../../../../images/tutorials/create/marketo-custom-activities/queries.png)
 
 ## Nächste Schritte
 

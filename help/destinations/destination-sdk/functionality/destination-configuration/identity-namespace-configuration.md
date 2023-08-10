@@ -1,10 +1,10 @@
 ---
 description: Erfahren Sie, wie Sie die unterstützten Zielidentitäten für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Konfiguration von Identity-Namespaces
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
-workflow-type: ht
-source-wordcount: '842'
-ht-degree: 100%
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+workflow-type: tm+mt
+source-wordcount: '841'
+ht-degree: 95%
 
 ---
 
@@ -25,7 +25,7 @@ Beim Konfigurieren von Identity-Namespaces für Ihr Ziel können Sie die von Ihr
 * Benutzerinnen und Benutzern ermöglichen, [Standard-Identity-Namespaces](../../../../identity-service/namespaces.md#standard) Ihren eigenen Identity-Namespaces zuzuordnen.
 * Benutzerinnen und Benutzern ermöglichen, [benutzerdefinierte Identity-Namespaces](../../../../identity-service/namespaces.md#manage-namespaces) Ihren eigenen Identity-Namespaces zuzuordnen.
 
-Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation zu [Konfigurationsoptionen](../configuration-options.md) oder im Handbuch zur [Verwendung von Destination SDK zum Konfigurieren eines dateibasierten Ziels](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm im [Konfigurationsoptionen](../configuration-options.md) Dokumentation oder lesen Sie das Handbuch zu [Destination SDK zum Konfigurieren eines dateibasierten Ziels verwenden](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 Sie können Ihre unterstützten Identity-Namespaces über den `/authoring/destinations`-Endpunkt konfigurieren. Detaillierte Beispiele für API-Aufrufe, in denen Sie die auf dieser Seite angezeigten Komponenten konfigurieren können, finden Sie auf den folgenden API-Referenzseiten.
 

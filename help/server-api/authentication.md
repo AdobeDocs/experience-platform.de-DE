@@ -2,9 +2,9 @@
 title: Authentifizierung
 description: Erfahren Sie, wie Sie die Authentifizierung für die Adobe Experience Platform Edge Network Server-API konfigurieren.
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '636'
 ht-degree: 21%
 
 ---
@@ -19,7 +19,7 @@ Für jede Anfrage wird die Variable [!DNL Server API] überprüft den Datastream
 
 Weitere Informationen zum Konfigurieren des Zugriffstyps auf den Datastream finden Sie in der Dokumentation zum [Erstellen und Konfigurieren eines Datenspeichers](../datastreams/overview.md#create).
 
-Nachstehend finden Sie eine Zusammenfassung des Verhaltens basierend auf dem Datastream [!DNL Access Type] Konfiguration und dem Endpunkt, an den die Anfrage empfangen wird.
+Nachstehend finden Sie eine Zusammenfassung des Verhaltens, basierend auf dem Datastream [!DNL Access Type] Konfiguration und dem Endpunkt, an den die Anfrage empfangen wird.
 
 | [!DNL Access Type] | edge.adobedc.net | server.adobedc.net |
 |-----------------|-------------------------------|-----------------------|
@@ -61,7 +61,7 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 Um die Schreibberechtigungen für Datensätze zu konfigurieren, navigieren Sie zum [Admin Console](https://adminconsole.adobe.com), suchen Sie das Produktprofil, das an Ihren API-Schlüssel angehängt ist, und legen Sie die folgenden Berechtigungen fest:
 
 * Im [!UICONTROL Sandboxes] auswählen, wählen Sie die Sandbox des Datenspeichers aus.
-* Im [!UICONTROL Data Management] auswählen, wählen Sie die **[!UICONTROL Datensätze verwalten]** Berechtigung.
+* Im [!UICONTROL Data Management] auswählen, wählen Sie die **[!UICONTROL Datensätze verwalten]** -Berechtigung.
 
 ## Fehlerbehebung bei Autorisierungsfehlern {#troubleshooting-authorization}
 

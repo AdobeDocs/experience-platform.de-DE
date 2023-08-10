@@ -3,9 +3,9 @@ title: Lead zur Kontoübereinstimmung in Real-Time CDP B2B
 type: Documentation
 description: Eine Übersicht und weitere Informationen zum Interessenten für die Kontoabgleichfunktion in der Experience Platform CDP B2B.
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '615'
 ht-degree: 6%
 
 ---
@@ -19,7 +19,7 @@ Account-basiertes Marketing ist eine zunehmend wichtige Strategie für B2B-Marke
 - ROI löschen
 - Ausrichtung von Vertrieb und Marketing
 - Ein personalisierter Ansatz
-- Weniger verschwendete Ressourcen
+- Weniger Ressourcen
 - Ein kürzerer Verkaufszyklus
 
 Kontobasiertes Marketing bietet die Möglichkeit, bekannte Personen und anonyme Webbesucher mit Verkaufskonten zu verknüpfen. Dadurch können Marketing-Teams frühzeitig auf der Journey mit potenziellen Leads aus den Zielkonten interagieren, um ihre Konversionschancen zu erhöhen. Ein bekannter Personendatensatz enthält in der Regel die folgenden Informationen teilweise oder vollständig:
@@ -34,7 +34,7 @@ Kontobasiertes Marketing bietet die Möglichkeit, bekannte Personen und anonyme 
 
 Mithilfe der Lead-Konto-Zuordnung können Sie bekannte Personenprofile mit Kontoprofilen verbinden. Anschließend können Sie Daten in einem B2B-Kontext segmentieren und ansprechen, z. B. in Konten, Opportunities usw. Die Personenprofile können in die folgenden drei Kategorien eingeteilt werden:
 
-- **Kundenprofil:** Das Personenprofil ist durch die Beziehung aus einer Datenquelle bereits mit mindestens einem Kontoprofil verknüpft. Dies bedeutet, dass es mindestens ein Kontaktfragment gibt.
+- **Profil der Kontoperson:** Das Personenprofil ist durch die Beziehung aus einer Datenquelle bereits mit mindestens einem Kontoprofil verknüpft. Dies bedeutet, dass es mindestens ein Kontaktfragment gibt.
 
 >[!NOTE]
 >
@@ -78,13 +78,13 @@ Das Attribut workEmail kann als Feldergruppe der obersten Ebene im B2B-Personens
 
 Profile werden am besten abgeglichen, wenn der Übereinstimmungswert über einem internen Konfidenzschwellenwert liegt. Die Ergebnisse werden in einem neuen Systemdatensatz des vorhandenen Konto-Personen-Verhältnisses XDM gespeichert.
 
-Der Lead für den Kontoabgleichdienst wird ausgeführt, wenn ein neuer Personenprofil-Schnappschuss verfügbar wird, der alle 24 Stunden verfügbar ist. Weitere Informationen zum [Konfiguration des Interessenten-Kontoabgleichs](/help/rtcdp/accounts/account-profile-ui-guide.md).
+Der Lead für den Kontoabgleichdienst wird ausgeführt, wenn ein neuer Personenprofil-Schnappschuss verfügbar wird, der alle 24 Stunden verfügbar ist. Weitere Informationen zu den [Konfiguration des Interessenten-Kontoabgleichs](/help/rtcdp/accounts/account-profile-ui-guide.md).
 
 ## Anleitung zum Anzeigen der Ausgabe des Kontoabgleichs {#how-to-view}
 
 Nach Ausführung des Auftrags werden die Ergebnisse in einem neuen Datensatz des vorhandenen Konto-Personen-Verhältnisses XDM gespeichert.
 
-Um eine Vorschau des Datensatzes anzuzeigen, wählen Sie **[!UICONTROL Vorschau des Datensatzes anzeigen]** oben rechts.
+Um eine Vorschau des Datensatzes anzuzeigen, wählen Sie **[!UICONTROL Datensatz-Vorschau]** oben rechts.
 
 ![Neuer Datensatz](/help/rtcdp/accounts/images/b2b-dataset-output.png)
 
@@ -92,8 +92,8 @@ Der Datensatz enthält die übereinstimmenden Kontoinformationen sowie den Über
 
 ![Vorschau der Konfidenzwerte und Ausgabe des Datensatzes anzeigen](/help/rtcdp/accounts/images/b2b-dataset-preview.png)
 
-## Überwachung führt zu übereinstimmenden Aufträgen von Konten {#monitoring-jobs}
+## Überwachung führt zu übereinstimmenden Aufträgen {#monitoring-jobs}
 
 Über das Dashboard können Sie den Auftragsstatus und die zugehörigen Metriken auf jeden Lead überwachen, der zu den entsprechenden Aufträgen führt.
 
-Weitere Informationen zu [Überwachen von Aufträgen für die Kontozuordnung als Lead](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
+Weitere Informationen zu den [Überwachen von Aufträgen für die Kontozuordnung als Lead](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).

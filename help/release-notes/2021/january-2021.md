@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '717'
-ht-degree: 96%
+source-wordcount: '716'
+ht-degree: 93%
 
 ---
 
@@ -80,6 +80,6 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 | Verbesserungen am [!DNL Google BigQuery]-Quell-Connector | Mit dem [!DNL BigQuery]-Quell-Connector können Sie jetzt Dateien mit mehr als 10 GB in einem Durchgang aufnehmen. Informationen dazu finden Sie in der [[!DNL BigQuery] Übersicht zum Quell-Connector](../../sources/connectors/databases/bigquery.md). |
 | Unterstützung komplexer Datentypen für die Cloud-Datenspeicherung | Sie können jetzt komplexe Datentypen, wie z. B. Arrays in JSON-Dateien, aufnehmen, wenn Sie einen Cloud-Quell-Connector verwenden. Weitere Informationen finden Sie in den Tutorials zum Erstellen eines Cloud-Datenspeicherungs-Datenflusses [in der Benutzeroberfläche](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) oder [mit der  [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md). |
 | Unterstützung der Authentifizierung über einen Schlüssel für die [!DNL Microsoft Dynamics]-Quelle | Alternativ zur kennwortbasierten Authentifizierung können Sie sich jetzt mit einem Schlüssel bei Ihrem [!DNL Dynamics]-Konto authentifizieren. Weitere Informationen dazu finden Sie in der [[!DNL Dynamics] Übersicht zum Quell-Connector](../../sources/connectors/crm/ms-dynamics.md). |
-| Benutzeroberflächenunterstützung für benutzerdefinierte Trennzeichen in Cloud-Datenspeicherungsquellen | Sie können jetzt ein benutzerdefiniertes Spaltentrennzeichen wie Komma (`,`), Tabulator (`\t`) oder Pipe (`|`) festlegen, um durch Trennzeichen getrennte Dateien in der Benutzeroberfläche zu erfassen. Weitere Informationen finden Sie im Tutorial zum [Erstellen eines Datenflusses mit einem Quell-Connector für die Cloud-Datenspeicherung](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
+| Benutzeroberflächenunterstützung für benutzerdefinierte Trennzeichen in Cloud-Datenspeicherungsquellen | Sie können jetzt ein benutzerdefiniertes Spaltentrennzeichen wie ein Komma (`,`), Registerkarte (`\t`) oder einem senkrechten Strich (`|`), um durch Trennzeichen getrennte Dateien in der Benutzeroberfläche zu erfassen. Weitere Informationen finden Sie im Tutorial zum [Erstellen eines Datenflusses mit einem Quell-Connector für die Cloud-Datenspeicherung](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).

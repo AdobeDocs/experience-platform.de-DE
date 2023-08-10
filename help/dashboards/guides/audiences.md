@@ -4,10 +4,10 @@ title: Dashboard-Anleitung für Zielgruppen
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu Zielgruppen anzeigen können, die Ihre Organisation erstellt hat.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2232'
-ht-degree: 48%
+source-wordcount: '2231'
+ht-degree: 47%
 
 ---
 

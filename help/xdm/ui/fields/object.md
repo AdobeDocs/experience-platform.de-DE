@@ -2,11 +2,11 @@
 keywords: Experience Platform; Startseite; beliebte Themen; API; XDM; XDM; XDM-System; Experience-Datenmodell; Datenmodell; ui; Workspace; Objekt; Feld;
 solution: Experience Platform
 title: Definieren von Objektfeldern in der Benutzeroberfläche
-description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Experience Platform ein Objekt definieren.
+description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Experience Platform ein Feld vom Typ Objekt definieren.
 exl-id: 5b7b3cf0-7f11-4e15-af87-09127f4423a5
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
@@ -33,4 +33,4 @@ Nachdem Sie die Erstellung des Objekts abgeschlossen haben, sollten Sie dessen S
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie ein Objektfeld in der Benutzeroberfläche definiert wird. Siehe Übersicht unter [Definieren von Feldern in der Benutzeroberfläche](./overview.md#special) , um zu erfahren, wie Sie andere XDM-Feldtypen im [!DNL Schema Editor].
+In diesem Handbuch wurde beschrieben, wie ein Objektfeld in der Benutzeroberfläche definiert wird. Siehe Übersicht unter [Definieren von Feldern in der Benutzeroberfläche](./overview.md#special) Informationen zum Definieren anderer XDM-Feldtypen im [!DNL Schema Editor].

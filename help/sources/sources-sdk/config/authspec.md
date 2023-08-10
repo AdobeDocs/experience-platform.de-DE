@@ -3,9 +3,9 @@ keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Que
 title: Authentifizierungsspezifikationen für Self-Serve-Quellen konfigurieren (Batch SDK)
 description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung von Self-Serve-Quellen (Batch SDK) vorbereiten müssen.
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '518'
 ht-degree: 4%
 
 ---
@@ -113,7 +113,7 @@ Ein OAuth 2-Aktualisierungscode ermöglicht einen sicheren Zugriff auf eine Anwe
 | Eigenschaft | Beschreibung | Beispiel |
 | --- | --- | --- |
 | `authSpec.name` | Zeigt den Namen des unterstützten Authentifizierungstyps an. | `oAuth2-refresh-code` |
-| `authSpec.type` | Definiert den Authentifizierungstyp, der von der Quelle unterstützt wird. | `oAuth2-refresh-code` |
+| `authSpec.type` | Definiert den Typ der von der Quelle unterstützten Authentifizierung. | `oAuth2-refresh-code` |
 | `authSpec.spec` | Enthält Informationen zum Schema, Datentyp und Eigenschaften der Authentifizierung. |
 | `authSpec.spec.$schema` | Definiert das für die Authentifizierung verwendete Schema. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | Definiert den Datentyp des Schemas. | `object` |
@@ -167,7 +167,7 @@ Die Standardauthentifizierung ist ein Authentifizierungstyp, mit dem Sie mithilf
 | Eigenschaft | Beschreibung | Beispiel |
 | --- | --- | --- |
 | `authSpec.name` | Zeigt den Namen des unterstützten Authentifizierungstyps an. | `Basic Authentication` |
-| `authSpec.type` | Definiert den Authentifizierungstyp, der von der Quelle unterstützt wird. | `BasicAuthentication` |
+| `authSpec.type` | Definiert den Typ der von der Quelle unterstützten Authentifizierung. | `BasicAuthentication` |
 | `authSpec.spec` | Enthält Informationen zum Schema, Datentyp und Eigenschaften der Authentifizierung. |
 | `authSpec.spec.$schema` | Definiert das für die Authentifizierung verwendete Schema. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | Definiert den Datentyp des Schemas. | `object` |
@@ -237,4 +237,4 @@ Im Folgenden finden Sie ein Beispiel für eine abgeschlossene Authentifizierungs
 
 ## Nächste Schritte
 
-Wenn Ihre Authentifizierungsspezifikationen ausgefüllt sind, können Sie mit der Konfiguration der Quellspezifikationen für die Quelle fortfahren, die Sie in Platform integrieren möchten. Siehe das Dokument unter [Quellspezifikationen konfigurieren](./sourcespec.md) für weitere Informationen.
+Wenn Ihre Authentifizierungsspezifikationen ausgefüllt sind, können Sie mit der Konfiguration der Quellspezifikationen für die Quelle fortfahren, die Sie in Platform integrieren möchten. Siehe Dokument unter [Quellspezifikationen konfigurieren](./sourcespec.md) für weitere Informationen.

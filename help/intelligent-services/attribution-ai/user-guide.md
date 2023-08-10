@@ -4,9 +4,9 @@ feature: Attribution AI
 title: Benutzerhandbuch zu Attribution AI
 description: Dieses Dokument dient als Leitfaden für die Interaktion mit Attribution AI in der Benutzeroberfläche von Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2443'
+source-wordcount: '2442'
 ht-degree: 2%
 
 ---
@@ -35,12 +35,12 @@ Dienstmodelle können mithilfe der Steuerelemente auf der rechten Seite der Benu
 - **[!UICONTROL Klonen]**: Auswählen **[!UICONTROL Klonen]** kopiert das ausgewählte Dienstmodell. Anschließend können Sie den Workflow ändern, um kleinere Änderungen vorzunehmen, und ihn als neues Modell umbenennen.
 - **[!UICONTROL Löschen]**: Sie können ein Dienstmodell einschließlich aller historischen Ausführungen löschen. Der entsprechende Ausgabedatensatz wird aus Platform gelöscht. Bewertungen, die mit dem Echtzeit-Kundenprofil synchronisiert wurden, werden jedoch nicht gelöscht.
 - **[!UICONTROL Datenquelle]**: Ein Link zum verwendeten Datensatz. Wenn mehr als ein Datensatz von Attribution AI verwendet wird, wird &quot;Mehrere&quot;gefolgt von der Anzahl der Datensätze angezeigt. Bei Auswahl des Hyperlinks wird das Popup-Fenster für die Datensatzvorschau angezeigt.
-- **[!UICONTROL Letzte Ausführungsdetails]**: Dies wird nur angezeigt, wenn eine Ausführung fehlschlägt. Informationen dazu, warum die Ausführung fehlgeschlagen ist, wie Fehlercodes, werden hier angezeigt.
+- **[!UICONTROL Letzte Ausführungsdetails]**: Dies wird nur angezeigt, wenn ein Lauf fehlschlägt. Informationen dazu, warum die Ausführung fehlgeschlagen ist, wie Fehlercodes, werden hier angezeigt.
 
 ![Seitenbereich](./images/user-guide/multiple-datasets-pane.png)
 
 - **[!UICONTROL Konversionsereignisse]**: Ein kurzer Überblick über die für dieses Modell konfigurierten Konversionsereignisse.
-- **[!UICONTROL Lookback-Fenster]**: Der von Ihnen definierte Zeitrahmen, der angibt, wie viele Tage vor den Touchpoints des Konversionsereignisses vergangen sind.
+- **[!UICONTROL Lookback]**: Der von Ihnen definierte Zeitrahmen, der angibt, wie viele Tage vor den Touchpoints des Konversionsereignisses eingeschlossen sind.
 - **[!UICONTROL Touchpoints]**: Eine Liste aller Touchpoints, die Sie beim Erstellen dieses Modells definiert haben.
 
 ![](./images/user-guide/side_panel_2.png)
@@ -59,7 +59,7 @@ Als Nächstes wird die Seite zum Einrichten von Attribution AI angezeigt, auf de
 
 Standardmäßig kann Attribution AI die Attributionsergebnisse anhand von Adobe Analytics-, Erlebnisereignis- und Kundenerlebnisereignisdaten berechnen. Bei der Auswahl eines Datensatzes werden nur Datensätze aufgelistet, die mit Attribution AI kompatibel sind. Um einen Datensatz auszuwählen, wählen Sie die **+**) neben dem Datensatznamen oder aktivieren Sie das Kontrollkästchen, um mehrere Datensätze gleichzeitig hinzuzufügen. Sie können auch die Suchoption verwenden, um schnell die Datensätze zu finden, an denen Sie interessiert sind.
 
-Wählen Sie nach Auswahl der Datensätze, die Sie verwenden möchten, die **[!UICONTROL Hinzufügen]** -Schaltfläche, um die Datensätze zum Vorschaufenster für den Datensatz hinzuzufügen.
+Wählen Sie nach Auswahl der Datensätze, die Sie verwenden möchten, die **[!UICONTROL Hinzufügen]** -Schaltfläche, um die Datensätze zum Vorschaufenster für Datensätze hinzuzufügen.
 
 ![Auswählen von Datensätzen](./images/user-guide/select-datasets.png)
 
@@ -120,7 +120,7 @@ Nachdem Sie die Auswahl und das Hinzufügen von Datensätzen abgeschlossen haben
 Es gibt drei verschiedene Arten von Eingabedaten, die zur Definition von Ereignissen verwendet werden:
 
 - **Konversionsereignisse:** Geschäftsziele, die die Auswirkungen von Marketingaktivitäten identifizieren, wie z. B. E-Commerce-Bestellungen, In-Store-Käufen und Website-Besuchen.
-- **Lookback-Fenster:** Stellt einen Zeitraum bereit, der angibt, wie viele Tage vor den Touchpoints des Konversionsereignisses eingeschlossen werden sollen.
+- **Lookback-Fenster** Stellt einen Zeitraum bereit, der angibt, wie viele Tage vor den Touchpoints des Konversionsereignisses eingeschlossen werden sollen.
 - **Touchpoints:** Marketing-Ereignisse auf Empfänger-, Einzel- oder Cookie-Ebene, die zur Bewertung der numerischen oder umsatzbasierten Auswirkungen von Konversionen verwendet werden.
 
 ### Konversionsereignisse definieren {#define-conversion-events}
@@ -171,7 +171,7 @@ Wählen Sie für diesen Touchpoint die Option **gleich**.
 
 ![Schritt 1](./images/user-guide/touchpoint_step1.png)
 
-Sobald ein Operator für einen Touchpoint ausgewählt wurde, *Feldwert eingeben* bereitgestellt werden. Die Dropdown-Werte für *Feldwert eingeben* Füllen Sie basierend auf dem zuvor ausgewählten Operator- und Touchpoint-Wert. Wenn ein Wert nicht in der Dropdown-Liste ausgefüllt wird, können Sie diesen Wert manuell eingeben. Wählen Sie das Dropdown-Menü aus und wählen Sie **KLICKEN**.
+Sobald ein Operator für einen Touchpoint ausgewählt wurde, *Feldwert eingeben* bereitgestellt werden. Die Dropdownwerte für *Feldwert eingeben* Füllen Sie basierend auf dem zuvor ausgewählten Operator- und Touchpoint-Wert. Wenn ein Wert nicht in der Dropdown-Liste ausgefüllt wird, können Sie diesen Wert manuell eingeben. Wählen Sie das Dropdown-Menü aus und wählen Sie **KLICKEN**.
 
 >[!NOTE]
 >
@@ -181,7 +181,7 @@ Sobald ein Operator für einen Touchpoint ausgewählt wurde, *Feldwert eingeben*
 
 Die **Ereignis hinzufügen** und **Gruppe hinzufügen** -Schaltflächen werden verwendet, um Ihren Touchpoint weiter zu definieren. Aufgrund der komplexen Natur rund um Touchpoints ist es nicht ungewöhnlich, mehrere Ereignisse und Gruppen für einen einzelnen Touchpoint zu haben.
 
-Wenn ausgewählt, **Ereignis hinzufügen** ermöglicht das Hinzufügen zusätzlicher Felder. wählen Sie die **x** , um ein hinzugefügtes Ereignis zu entfernen.
+Wenn ausgewählt, **Ereignis hinzufügen** ermöglicht das Hinzufügen zusätzlicher Felder. wählen Sie **x** , um ein hinzugefügtes Ereignis zu entfernen.
 
 ![Ereignis hinzufügen](./images/user-guide/touchpoint_add_event.png)
 
@@ -235,7 +235,7 @@ Standardmäßig wird für jedes Dienstmodell in einem Standardschema ein Bewertu
 
 Das Verhalten Ihrer Kunden kann sich je nach Land und Region erheblich unterscheiden. Für globale Unternehmen kann die Verwendung länderbasierter oder regionenbasierter Modelle die Attributionsgenauigkeit erhöhen. Jede hinzugefügte Region erstellt ein neues Modell mit den Daten dieser Region.
 
-Um einen neuen Bereich zu definieren, wählen Sie zunächst **[!UICONTROL Region hinzufügen]**. Geben Sie im angezeigten Container einen Namen für die Region ein. Nur ein Wert (&quot;placeContext.geo.countryCode&quot;) wird aus dem **[!UICONTROL Feldname eingeben]** Dropdown-Liste. Wählen Sie diesen Wert aus.
+Um einen neuen Bereich zu definieren, wählen Sie zunächst **[!UICONTROL Region hinzufügen]**. Geben Sie im angezeigten Container einen Namen für die Region ein. Nur ein Wert (&quot;placeContext.geo.countryCode&quot;) wird aus dem **[!UICONTROL Feldname eingeben]** Dropdown. Wählen Sie diesen Wert aus.
 
 ![Region auswählen unter](./images/user-guide/select_region_att.png)
 
@@ -243,7 +243,7 @@ Wählen Sie anschließend einen Operator aus.
 
 ![Regionsoperator](./images/user-guide/region_operators.png)
 
-Geben Sie abschließend den Ländercode in das Feld **[!UICONTROL Feldwert eingeben]** Dropdown-Liste.
+Geben Sie abschließend den Ländercode in das Feld **[!UICONTROL Feldwert eingeben]** Dropdown.
 
 >[!NOTE]
 >

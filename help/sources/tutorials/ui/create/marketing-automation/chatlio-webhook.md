@@ -3,9 +3,9 @@ title: Erstellen einer Chatlio-Quellverbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Chatlio-Quellverbindung erstellen.
 badge: Beta
 exl-id: 55c10bcb-0332-45ff-970b-272d375b591d
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1167'
 ht-degree: 22%
 
 ---
@@ -60,7 +60,7 @@ Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen
 
 Verwenden Sie die *[!UICONTROL Kategorien]* Menü zum Filtern von Quellen nach Kategorie. Geben Sie alternativ einen Quellnamen in die Suchleiste ein, um eine bestimmte Quelle aus dem Katalog zu finden.
 
-Navigieren Sie zu [!UICONTROL Marketing-Automatisierung] -Kategorie, die angezeigt werden soll [!DNL Chatlio] Quellkarte. Wählen Sie zunächst **[!UICONTROL Daten hinzufügen]**.
+Navigieren Sie zu [!UICONTROL Marketing-Automatisierung] -Kategorie, um die [!DNL Chatlio] Quellkarte. Wählen Sie zunächst **[!UICONTROL Daten hinzufügen]**.
 
 ![Der Platform-UI-Katalog mit der Chatlio-Karte](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/catalog.png)
 
@@ -71,7 +71,7 @@ Die **[!UICONTROL Daten auswählen]** angezeigt, um eine Oberfläche zur Auswahl
 * Der linke Teil der Benutzeroberfläche ist ein Browser, mit dem Sie die verfügbaren Datenströme in Ihrem Konto anzeigen können.
 * Im rechten Bereich der Benutzeroberfläche können Sie eine Vorschau von bis zu 100 Zeilen mit Daten aus einer JSON-Datei anzeigen.
 
-Auswählen **[!UICONTROL Dateien hochladen]** , um eine JSON-Datei von Ihrem lokalen System hochzuladen. Alternativ können Sie die JSON-Datei, die Sie hochladen möchten, per Drag-and-Drop in die [!UICONTROL Dateien per Drag &amp; Drop verschieben] Bereich.
+Auswählen **[!UICONTROL Dateien hochladen]** , um eine JSON-Datei von Ihrem lokalen System hochzuladen. Alternativ können Sie die hochzuladende JSON-Datei per Drag-and-Drop in die [!UICONTROL Dateien per Drag &amp; Drop verschieben] Bedienfeld.
 
 ![Der Schritt Daten hinzufügen des Ursprungs-Workflows.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/add-data.png)
 
@@ -93,7 +93,7 @@ Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 
 Es erfolgt der Schritt der [!UICONTROL Zuordnung], in dem Ihnen eine Schnittstelle zum Zuordnen der Quellfelder aus Ihrem Quellschema zu den entsprechenden XDM-Zielfeldern im Zielschema bereitgestellt wird.
 
-Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Umfassende Schritte zur Verwendung der Mapper-Oberfläche und der berechneten Felder finden Sie im Abschnitt [Handbuch zur Datenvorbereitung-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
+Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Umfassende Schritte zur Verwendung der Mapper-Oberfläche und der berechneten Felder finden Sie im Abschnitt [Handbuch zur Datenvorbereitung-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
 
 Die unten aufgeführten Zuordnungen sind obligatorisch und sollten eingerichtet werden, bevor Sie mit dem [!UICONTROL Überprüfen] Bühne.
 
@@ -125,7 +125,7 @@ Um die URL zu erstellen, mit der der Webhook konfiguriert wird [!DNL Chatlio] Si
 * **[!UICONTROL Dataflow-ID]**
 * **[!UICONTROL Streaming-Endpunkt]**
 
-So rufen Sie Ihre **[!UICONTROL Dataflow-ID]** und **[!UICONTROL Streaming-Endpunkt]**, navigieren Sie zu [!UICONTROL Datenfluss-Aktivität] Seite des soeben erstellten Datenflusses und kopieren Sie die Details vom unteren Rand des [!UICONTROL Eigenschaften] Bereich.
+So rufen Sie Ihre **[!UICONTROL Dataflow-ID]** und **[!UICONTROL Streaming-Endpunkt]**, navigieren Sie zu [!UICONTROL Datenfluss-Aktivität] Seite des soeben erstellten Datenflusses und kopieren Sie die Details vom unteren Rand des [!UICONTROL Eigenschaften] Bedienfeld.
 
 ![Der Streaming-Endpunkt in der Datenfluss-Aktivität.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/endpoint-test.png)
 
@@ -135,7 +135,7 @@ Nachdem Sie Ihren Streaming-Endpunkt und Ihre Datenfluss-ID abgerufen haben, ers
 
 Nachdem Sie Ihre Webhook-URL erstellt haben, können Sie jetzt Ihren Webhook mithilfe der [!DNL Chatlio] -Benutzeroberfläche.
 
-Bei Ihrer [[!DNL Chatlio]](https://chatlio.com/) -Konto und -folgen [Handbuch zur Einrichtung und Installation](https://chatlio.com/docs/setup/) , um ein Widget zu erstellen.
+Melden Sie sich bei Ihrem [[!DNL Chatlio]](https://chatlio.com/) -Konto und -folgen [Handbuch zur Einrichtung und Installation](https://chatlio.com/docs/setup/) , um ein Widget zu erstellen.
 
 Nachdem ein Widget erstellt wurde, navigieren Sie zur Einstellungsseite des Widgets, um Ihre Webhook-URL zu diesem Widget hinzuzufügen.
 
@@ -155,7 +155,7 @@ In diesem Tutorial haben Sie erfolgreich einen Streaming-Datenfluss konfiguriert
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei der Verwendung der [!DNL Chatlio] -Quelle.
+Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei der Verwendung der Variablen [!DNL Chatlio] -Quelle.
 
 ### Validierung {#validation}
 
@@ -165,7 +165,7 @@ Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei der 
 
 ![Screenshot der Chatlio-Benutzeroberfläche mit dem Chat-Verlauf](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/chatlio-chat-history.png)
 
-* Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Datenflüsse anzeigen]** neben dem [!DNL Chatlio] Kartenmenü im Quellkatalog. Wählen Sie als Nächstes **[!UICONTROL Vorschau des Datensatzes anzeigen]** , um die Daten zu überprüfen, die für die Webhooks erfasst wurden, die Sie in [!DNL Chatlio].
+* Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Datenflüsse anzeigen]** neben dem [!DNL Chatlio] Kartenmenü im Quellkatalog. Wählen Sie als Nächstes **[!UICONTROL Datensatz-Vorschau]** , um die Daten zu überprüfen, die für die Webhooks erfasst wurden, die Sie in [!DNL Chatlio].
 
 ![Screenshot der Platform-Benutzeroberfläche mit aufgenommenen Ereignissen](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/platform-dataset.png)
 
