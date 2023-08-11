@@ -5,9 +5,9 @@ description: Erfahren Sie, wie Sie mit Look-alike-Audiences neue hochwertige Zie
 badgeLimitedAvailability: label="Eingeschränkte Verfügbarkeit" type=Caution
 hide: true
 hidefromtoc: true
-source-git-commit: d0b839dfc35ff9f8b4db34c61d2cdd820bfd448b
+source-git-commit: c4a888768015542e37290cb3c919cb60fca4e548
 workflow-type: tm+mt
-source-wordcount: '1937'
+source-wordcount: '2123'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ In Adobe Experience Platform verbraucht das Look-alike-Modell drei verschiedene 
 
 Alle diese Datenpunkte werden in Schlüsselwertpaare umgewandelt, die in das Look-alike-Modell eingespeist werden. Nur die Schlüsselwertpaare mit einem signifikanten Prozentsatz an Profilübereinstimmungen werden beibehalten.
 
-Das Look-alike-Modell wird häufig ausgeführt, wobei die Einflussfaktoren und Ähnlichkeitsdiagramme für die Basiszielgruppen erstellt und neu erstellt werden. Die Auswertung für die Look-alike-Zielgruppen wird ebenfalls häufig ausgeführt.
+Derzeit wird das Look-alike-Modell alle 24 Stunden ausgeführt, wobei die Einflussfaktoren und Ähnlichkeitsdiagramme für die Basiszielgruppen erstellt und neu erstellt werden. Die Auswertung für die Look-alike-Zielgruppen wird ebenfalls häufig ausgeführt.
 
 ## Berechtigungen {#entitlements}
 
@@ -52,11 +52,26 @@ Die folgenden Berechtigungen gelten für die Verwendung von Look-alike-Zielgrupp
 - Real-Time CDP Ultimate-Kunden sind berechtigt, **20** Aktive Look-alike-Zielgruppen in Produktions-Sandboxes
 - Entwicklungs-Sandboxes sind auf **5** Look-alike-Zielgruppen für alle Real-Time CDP-Kunden
 
-Es sind Add-On-Pakete verfügbar, die die Berechtigungen für Produktions-Sandboxes um 20 Look-alike-Zielgruppen pro Paket erhöhen.
+Add-On-Pakete, die zu einem späteren Zeitpunkt verfügbar sein werden, erhöhen die Berechtigungen für Produktions-Sandboxes um 20 Look-alike-Zielgruppen pro Paket.
 
 Wenden Sie sich an Ihren Kundenbetreuer, um zu bestätigen, ob Sie Zugriff auf Look-alike-Zielgruppen haben.
 
 ## Look-alike-Einblicke anzeigen {#view}
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_notEligible"
+>title="Nicht förderfähig"
+>abstract="Diese Zielgruppe ist derzeit nicht für Look-alike-Einblicke qualifiziert, da sie möglicherweise weniger als die Mindestanzahl von Profilen enthält, die für die Schulung erforderlich sind, oder der Profilexport noch nicht ausgelöst wurde."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_processing"
+>title="Verarbeitung läuft"
+>abstract="Diese Zielgruppe wird derzeit verarbeitet. Die Verarbeitung des Modells kann bis zu 24 Stunden dauern. Bitte überprüfen Sie es später noch einmal."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_error"
+>title="Fehler"
+>abstract="Bei der Verarbeitung dieses Modells ist ein Fehler aufgetreten. Bitte löschen und erstellen Sie dieses Modell neu oder versuchen Sie es später erneut."
 
 Look-alike-Einblicke sind in die Seite mit den Zielgruppendetails integriert. Um die Look-alike-Einblicke einer Zielgruppe anzuzeigen, wählen Sie **[!UICONTROL Zielgruppen]** in der linken Navigationsleiste, gefolgt von **[!UICONTROL Durchsuchen]** und der Zielgruppe, für die Sie die Einblicke anzeigen möchten.
 
@@ -68,10 +83,10 @@ Die Seite mit den Details zur Zielgruppe wird angezeigt. Auswählen **[!UICONTRO
 
 ### Ähnlichkeit und Reichweite {#similarity-and-reach}
 
-<!-- >[!CONTEXTUALHELP]
+>[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_similarityAndReach"
->title="Similarity and reach"
->abstract="" -->
+>title="Ähnlichkeit und Reichweite"
+>abstract="Die Ähnlichkeit und das Reichweitendiagramm zeichnen die erwartete Reichweite einer Look-alike-Zielgruppe aus Profilen über einem bestimmten Ähnlichkeitswert auf. Sie können den Mauszeiger über einen bestimmten Punkt im Diagramm bewegen, um den Prozentsatz der Ähnlichkeit und die erwartete Profilanzahl für den aktuell hervorgehobenen Punkt anzuzeigen."
 
 Der Abschnitt &quot;Ähnlichkeit und Reichweite&quot;zeigt ein Diagramm an, das die erwartete Reichweite einer Look-alike-Zielgruppe abbildet, die aus Profilen über einem bestimmten Ähnlichkeitswert besteht. Der Ähnlichkeitswert stellt die **Distanz** Ähnlichkeit zwischen dem Profil der Basiszielgruppe und dem Profil des Look-alike-Insight.
 
@@ -93,11 +108,11 @@ Im Abschnitt Look-alike-Zielgruppen wird eine Liste aller Look-alike-Zielgruppen
 
 ### Einflussfaktoren {#influential-factors}
 
-<!-- >[!CONTEXTUALHELP]
+>[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_influentialFactors"
->title="Influential factors"
->abstract="Influential factors are attributes, events and audience memberships that are important in explaining similarity of a profile to members of the base audience. Data usage labels and policies can be used to exclude certain data from being considered as influential factors in look-alike models."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="Exclude data" -->
+>title="Einflussfaktoren"
+>abstract="Einflussfaktoren sind Attribute, Ereignisse und Zielgruppenmitgliedschaften, die für die Erklärung der Ähnlichkeit eines Profils mit Mitgliedern der Basiszielgruppe wichtig sind. Datennutzungsbezeichnungen und -richtlinien können verwendet werden, um bestimmte Daten davon auszuschließen, in Look-alike-Modellen als Einflussfaktoren betrachtet zu werden."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="Ausschließen von Daten"
 
 Im Abschnitt Einflussfaktoren werden die 100 wichtigsten Faktoren angezeigt, die das Look-alike-Modell für die ausgewählte Basiszielgruppe beeinflussen. Diese Einflussfaktoren sind die Profilattribute, die Erlebnisereignisse und die Zielgruppenmitgliedschaften, die bei der Erläuterung der Ähnlichkeiten in der Basiszielgruppe am wichtigsten sind. Wenn Sie die wichtigsten Einflussfaktoren verstehen, können Sie Ihre Marketing-Inhalte für diese Zielgruppe und alle daraus erstellten Look-alike-Zielgruppen besser personalisieren. Beachten Sie, dass nicht alle Einflussfaktoren angezeigt werden, die sich auf das Look-alike-Modell auswirken.
 
