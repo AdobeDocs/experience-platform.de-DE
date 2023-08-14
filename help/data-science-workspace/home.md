@@ -4,14 +4,19 @@ solution: Experience Platform
 title: Data Science Workspace – Übersicht
 description: Dieser Leitfaden bietet eine Übersicht über die wichtigsten Konzepte im Zusammenhang mit Data Science Workspace in Adobe Experience Platform.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: fa52aa668d21f71c0da6b35c933713f068e36b28
 workflow-type: tm+mt
-source-wordcount: '2388'
-ht-degree: 100%
+source-wordcount: '2448'
+ht-degree: 97%
 
 ---
 
 # Data Science Workspace – Übersicht
+
+>[!NOTE]
+>
+>Bitte beachten Sie, dass das Vorhandensein von Dokumentationen über eine Funktion auf der Experience League nicht garantiert, dass sie jedem Kunden zur Verfügung steht. Diese Funktion steht nur Bestandskunden zur Verfügung, die eine Adobe Experience Platform- oder Adobe Experience Platform Intelligence-Lizenz erworben haben. In der offiziellen Produktbeschreibung erfahren Sie mehr zu den Funktionen und anderen Details Ihrer erworbenen SKUs/Produkte.
+
 
 Adobe Experience Platform [!DNL Data Science Workspace] nutzt maschinelles Lernen und künstliche Intelligenz, um Erkenntnisse aus Ihren Daten zu gewinnen. [!DNL Data Science Workspace] ist in Adobe Experience Platform integriert und hilft Ihnen bei der Erstellung von Prognosen auf der Basis Ihrer Inhalts- und Datenelemente in allen Adobe-Lösungen.
 
@@ -112,7 +117,7 @@ Wenn Sie mit Ihrem Rezept zufrieden sind, brauchen Sie nur ein paar Klicks, um e
 
 ### Kontinuierliche Verbesserung
 
-[!DNL Data Science Workspace] verfolgt, wo intelligente Services aufgerufen werden und wie sie funktionieren. Wenn Daten eingehen, können Sie die Genauigkeit intelligenter Services bewerten, um den Kreis zu schließen, und die Rezepte bei Bedarf neu trainieren, um die Leistung zu verbessern. Das Ergebnis ist eine kontinuierliche Verfeinerung der Präzision der Kundenpersonalisierung.
+[!DNL Data Science Workspace] verfolgt, wo intelligente Services aufgerufen werden und wie sie funktionieren. Wenn Daten eingehen, können Sie die Genauigkeit intelligenter Services auswerten, um den Kreis zu schließen, und die Rezepte bei Bedarf neu trainieren, um die Leistung zu verbessern. Das Ergebnis ist eine kontinuierliche Verfeinerung der Präzision der Kundenpersonalisierung.
 
 ### Zugriff auf neue Funktionen und Datensätze
 
@@ -167,7 +172,7 @@ Mit einem Rezept, das Ihre wichtigsten Algorithmen für maschinelles Lernen enth
 
 ![](./images/home/recipe_hiearchy_ui.png)
 
-Während Sie Ihre Modelle trainieren, werden Trainings-Läufe und Auswertungen generiert. [!DNL Data Science Workspace] erfasst die Evaluierungsmetriken für jedes einzelne Modell und dessen Trainings-Läufe. Mithilfe von Testmetriken, die durch Experimente generiert wurden, können Sie den Trainings-Lauf ermitteln, der am effektivsten ist.
+Während Sie Ihre Modelle trainieren, werden Trainings-Läufe und Auswertungen generiert. [!DNL Data Science Workspace] erfasst die Auswertungsmetriken für jedes einzelne Modell und dessen Trainings-Läufe. Mithilfe von Auswertungsmetriken, die durch Experimente generiert wurden, können Sie den Trainings-Lauf ermitteln, der am effektivsten ist.
 
 ![](./images/home/evaluation_metrics.png)
 
