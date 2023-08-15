@@ -19,7 +19,7 @@ In diesem Dokument werden Best Practices und Tools beschrieben, mit denen Sie Ih
 
 ## Grundlagen zur Datenspeicherung in Adobe Experience Platform
 
-Die Experience Platform besteht hauptsächlich aus zwei Daten-Repositorys: der [!DNL data lake] und den Profilspeicher.
+Experience Platform besteht hauptsächlich aus zwei Datenspeichern: dem [!DNL data lake] und den Profilspeicher.
 
 Der **[!DNL data lake]** dient hauptsächlich folgenden Zwecken:
 
@@ -105,7 +105,7 @@ Aufnahmefilter ermöglichen Ihnen, nur die für Ihre Anwendungsfälle erforderli
 | Unterstützung für das Aktivieren/Deaktivieren von Datensätzen für ein Profil | Um Daten in das Echtzeit-Kundenprofil zu erfassen, müssen Sie einen Datensatz für die Verwendung im Profilspeicher aktivieren. Dadurch wird ein höherer Anteil Ihrer [!DNL Addressable Audience]- und [!DNL Profile Richness]-Berechtigungen verbraucht. Sobald ein Datensatz für Anwendungsfälle von Kundenprofilen nicht mehr erforderlich ist, können Sie die Integration dieses Datensatzes in das Profil deaktivieren, um sicherzustellen, dass Ihre Daten weiterhin lizenzkonform sind. Weitere Informationen dazu finden Sie in der Anleitung zum [Aktivieren und Deaktivieren von Datensätzen für ein Profil](../../catalog/datasets/enable-for-profile.md). |
 | Ausschließen von Web SDK- und Mobile SDK-Daten | Es gibt zwei Arten von Daten, die vom Web- und Mobile-SDK erfasst werden: automatisch erfasste Daten und explizit von Ihrem Entwickler erfasste Daten. Um die Einhaltung Ihrer Lizenz zu gewährleisten, können Sie die automatische Datenerfassung in der SDK-Konfiguration über die Kontexteinstellung deaktivieren. Benutzerdefinierte Daten können auch von Ihrem Entwickler entfernt oder nicht eingerichtet werden. Weitere Informationen finden Sie in der Anleitung zu den [Grundlagen der SDK-Konfiguration](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=de#fundamentals). |
 | Datenausschluss bei Server-seitiger Weiterleitung | Wenn Sie Daten mithilfe der Server-seitigen Weiterleitung an Platform senden, können Sie festlegen, welche Daten beim Versand ausgeschlossen werden, indem Sie entweder in einer Regel das Mapping entfernen und es für alle Ereignisse ausschließen oder Bedingungen zur Regel hinzufügen, sodass Daten nur für bestimmte Ereignisse ausgelöst werden. Weitere Informationen finden Sie in der Dokumentation unter [Ereignisse und Bedingungen](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html?lang=de#events-and-conditions-(if)). |
-| Filtern von Daten auf Quellebene | Sie können logische Operatoren und Vergleichsoperatoren verwenden, um Daten auf Zeilenebene aus Ihren Quellen zu filtern, bevor Sie eine Verbindung herstellen und Daten in Experience Platform erfassen. Weitere Informationen finden Sie im Handbuch unter [Filtern von Daten auf Zeilenebene für eine Quelle mithilfe der [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
+| Filtern von Daten auf Quellebene | Sie können logische Operatoren und Vergleichsoperatoren verwenden, um Daten auf Zeilenebene aus Ihren Quellen zu filtern, bevor Sie eine Verbindung herstellen und Daten auf Experience Platform erfassen. Weitere Informationen finden Sie im Handbuch unter [Filtern von Daten auf Zeilenebene für eine Quelle mithilfe der [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}
 
@@ -158,7 +158,7 @@ In der folgenden Tabelle finden Sie eine Liste der derzeit verfügbaren Funktion
 | Funktion | Beschreibung |
 | --- | --- |
 | [Datensätze für ein Profil aktivieren/deaktivieren](../../catalog/datasets/user-guide.md) | Aktivieren oder deaktivieren Sie die Erfassung von Datensätzen in Echtzeit-Kundenprofil. |
-| [Gültigkeitsdauern von Erlebnisereignissen](../../profile/event-expirations.md) | Wenden Sie eine Ablaufzeit für alle Ereignisse an, die in einen Profil-aktivierten Datensatz aufgenommen werden. Wenden Sie sich an Ihr Kundenbetreuungsteam oder die Kundenunterstützung, um diese Funktion zu aktivieren. |
+| [Gültigkeitsdauern von Erlebnisereignissen](../../profile/event-expirations.md) | Wenden Sie eine Ablaufzeit für alle Ereignisse an, die in einen Profil-aktivierten Datensatz aufgenommen werden. Wenden Sie sich an Ihr Adobe-Account-Team oder an die Kundenunterstützung, um diese Funktion zu aktivieren. |
 | [Adobe Analytics-Datenvorbereitungsfilter](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Anwenden von [!DNL Kafka]-Filtern zum Ausschließen unnötiger Daten von der Aufnahme |
 | [Quell-Connector-Filter von Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Anwenden von Audience Manager-Quellverbindungsfiltern, um unnötige Daten von der Aufnahme auszuschließen |
 | [Alloy-SDK-Datenfilter](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=de#fundamentals) | Anwenden von Alloy-Filtern, um unnötige Daten von der Aufnahme auszuschließen |
