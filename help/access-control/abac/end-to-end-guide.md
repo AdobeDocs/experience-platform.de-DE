@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Zugriffskontrolle;attributbasierte Zugriffskontrolle;
 title: Anleitung zur attributbasierten Zugriffssteuerung (End-to-End)
-description: Dieses Dokument bietet eine durchgängige Anleitung zur attributbasierten Zugriffskontrolle in Adobe Experience Platform
+description: Dieses Dokument enthält eine umfassende Anleitung zur attributbasierten Zugriffskontrolle in Adobe Experience Platform.
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 004f6183f597132629481e3792b5523317b7fb2f
+source-git-commit: cf10eb11773320d10ece53f192beacc8da83e980
 workflow-type: tm+mt
-source-wordcount: '1726'
-ht-degree: 27%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# Handbuch zur attributbasierten Zugriffskontrolle von Ende zu Ende
+# Leitfaden zur attributbasierten Zugriffskontrolle von Ende zu Ende
 
 Die attributbasierte Zugriffskontrolle ist eine Funktion von Adobe Experience Platform, die es Kunden mit mehreren Marken und datenschutzbewussten Kunden ermöglicht, den Benutzerzugriff flexibler zu verwalten. Der Zugriff auf einzelne Objekte wie Schemafelder und Segmente kann mit Richtlinien gewährt/verweigert werden, die auf den Attributen und der Rolle des Objekts basieren. Mit dieser Funktion können Sie bestimmten Platform-Benutzenden in Ihrer Organisation den Zugriff auf einzelne Objekte gewähren oder sperren.
 
@@ -36,16 +36,16 @@ Im Folgenden wird ein Beispiel für einen attribut-basierten Zugriffssteuerungs-
 Sie sind Gesundheitsdienstleister und möchten den Zugriff auf Ressourcen in Ihrem Unternehmen konfigurieren.
 
 * Ihr internes Marketing-Team sollte auf **[!UICONTROL PHI/Reguläre Gesundheitsdaten]** Daten.
-* Ihre externe Agentur sollte nicht in der Lage sein, auf **[!UICONTROL PHI/Reguläre Gesundheitsdaten]** Daten.
+* Ihre externe Agentur sollte keinen Zugriff haben **[!UICONTROL PHI/Reguläre Gesundheitsdaten]** Daten.
 
 Dazu müssen Sie Rollen, Ressourcen und Richtlinien konfigurieren.
 
 Sie werden:
 
 * [Rollen für Ihre Benutzer beschriften](#label-roles): Verwenden Sie das Beispiel eines Gesundheitsdienstleisters (ACME Business Group), dessen Marketinggruppe mit externen Agenturen zusammenarbeitet.
-* [Ressourcen beschriften (Schemafelder und Segmente)](#label-resources): Zuweisen der **[!UICONTROL PHI/Reguläre Gesundheitsdaten]** -Beschriftung für Schemaressourcen und -segmente.
+* [Ressourcen beschriften (Schemafelder und Segmente)](#label-resources): Weisen Sie die **[!UICONTROL PHI/Reguläre Gesundheitsdaten]** -Beschriftung für Schemaressourcen und -segmente.
 * 
-   * [Aktivieren Sie die Richtlinie, die sie miteinander verknüpft: ](#policy): Aktivieren Sie die Standardrichtlinie, um den Zugriff auf Schemafelder und Segmente zu verhindern, indem Sie die Beschriftungen in Ihren Ressourcen mit den Beschriftungen in Ihrer Rolle verbinden. Benutzer mit übereinstimmenden Bezeichnungen erhalten dann Zugriff auf das Schemafeld und das Segment für alle Sandboxes.
+   * [Aktivieren Sie die Richtlinie, die sie miteinander verknüpft:](#policy): Aktivieren Sie die Standardrichtlinie, um den Zugriff auf Schemafelder und Segmente zu verhindern, indem Sie die Beschriftungen in Ihren Ressourcen mit den Beschriftungen in Ihrer Rolle verbinden. Benutzer mit übereinstimmenden Bezeichnungen erhalten dann Zugriff auf das Schemafeld und das Segment für alle Sandboxes.
 
 ## Berechtigungen
 
@@ -190,7 +190,7 @@ Die Aktivierung der Richtlinie wird bestätigt und Sie werden zum [!UICONTROL Ri
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Configure permissible and impermissible actions for a policy"
->abstract="A <b>deny access to</b> policy will deny users access when the criteria is met. Combined with <b>The following being false</b> - all users will be denied access unless they meet the matching criteria set. This type of policy allows you to protect a sensitive resource and only allow access to users with matching labels. <br>A <b>permit access to</b> policy will permit users access when the criteria are met. When combined with <b>The following being true</b> - users will be given access if they meet the matching criteria set. This does not explicitly deny access to users, but adds a permit access. This type of policy allows you to give additional access to resource and in addition to those users who might already have access through role permissions."</br>
+>abstract="A <b>deny access to</b> policy will deny users access when the criteria is met. Combined with <b>The following being false</b> - all users will be denied access unless they meet the matching criteria set. This type of policy allows you to protect a sensitive resource and only allow access to users with matching labels. <br>A <b>permit access to</b> policy will permit users access when the criteria are met. When combined with <b>The following being true</b> - users will be given access if they meet the matching criteria set. This does not explicitly deny access to users, but adds a permit access. This type of policy allows you to give additional access to resource and in addition to those users who might already have access through role permissions."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Edit a policy"
 
 >[!CONTEXTUALHELP]
@@ -252,6 +252,6 @@ Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears wh
 
 ## Nächste Schritte
 
-Sie haben die Anwendung von Bezeichnungen auf eine Rolle, Schemafelder und Segmente abgeschlossen. Die externe Agentur, die diesen Rollen zugewiesen ist, kann diese Beschriftungen und ihre Werte in der Schema-, Datensatz- und Profilansicht anzeigen. Diese Felder können bei Verwendung von Segment Builder auch nicht in der Segmentdefinition verwendet werden.
+Sie haben die Anwendung von Bezeichnungen auf eine Rolle, Schemafelder und Segmente abgeschlossen. Die externe Agentur, die diesen Rollen zugewiesen ist, kann diese Bezeichnungen und ihre Werte in der Schema-, Datensatz- und Profilansicht nicht anzeigen. Diese Felder können bei Verwendung von Segment Builder auch nicht in der Segmentdefinition verwendet werden.
 
 Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter [Attributbasierte Zugriffssteuerung – Übersicht](./overview.md).
