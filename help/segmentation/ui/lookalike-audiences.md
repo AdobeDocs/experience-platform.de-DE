@@ -3,9 +3,7 @@ solution: Experience Platform
 title: Look-alike-Zielgruppen
 description: Erfahren Sie, wie Sie mit Look-alike-Audiences neue hochwertige Zielgruppen in Adobe Experience Platform ansprechen können.
 badgeLimitedAvailability: label="Eingeschränkte Verfügbarkeit" type=Caution
-hide: true
-hidefromtoc: true
-source-git-commit: c4a888768015542e37290cb3c919cb60fca4e548
+source-git-commit: 4bd26857d2c714cd629fc46dbb9b6da6a29358c8
 workflow-type: tm+mt
 source-wordcount: '2123'
 ht-degree: 1%
@@ -54,7 +52,7 @@ Die folgenden Berechtigungen gelten für die Verwendung von Look-alike-Zielgrupp
 
 Add-On-Pakete, die zu einem späteren Zeitpunkt verfügbar sein werden, erhöhen die Berechtigungen für Produktions-Sandboxes um 20 Look-alike-Zielgruppen pro Paket.
 
-Wenden Sie sich an Ihren Kundenbetreuer, um zu bestätigen, ob Sie Zugriff auf Look-alike-Zielgruppen haben.
+Um zu bestätigen, ob Sie Zugriff auf Look-alike-Audiences haben, wenden Sie sich an Ihren Adobe-Kundenbetreuer.
 
 ## Look-alike-Einblicke anzeigen {#view}
 
