@@ -1,12 +1,12 @@
 ---
 title: TikTok-Verbindung
-description: Erstellen Sie auf TikTok benutzerdefinierte Zielgruppen mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. Diese Zielgruppen können von Personen sein, die Ihre Website besucht oder mit Ihrem Inhalt interagiert haben. Schnelles und sicheres Übertragen der gewünschten Zielgruppe von Adobe Experience Platform an TikTok mithilfe der Echtzeit-Integration von Adobe in TikTok Ads Manager.
+description: Erstellen Sie auf TikTok benutzerdefinierte Zielgruppen mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. Diese Zielgruppen können von Personen sein, die Ihre Website besucht oder mit Ihrem Inhalt interagiert haben. Durch die Echtzeit-Integration von Adobe mit TikTok Ads Manager können Sie die gewünschte Zielgruppe schnell und sicher von Adobe Experience Platform an TikTok übertragen.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: d9d31013d93e0e9e4e291a63840869e73d30ef01
 workflow-type: tm+mt
-source-wordcount: '983'
-ht-degree: 42%
+source-wordcount: '1010'
+ht-degree: 40%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 42%
 
 ## Übersicht {#overview}
 
-Erstellen Sie auf TikTok benutzerdefinierte Zielgruppen mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. Diese Zielgruppen können von Personen sein, die Ihre Website besucht oder mit Ihrem Inhalt interagiert haben. Schnelles und sicheres Übertragen der gewünschten Zielgruppe von Adobe Experience Platform an TikTok mithilfe der Echtzeit-Integration von Adobe in TikTok Ads Manager. Besuch [TikTok Business-Hilfesystem](https://ads.tiktok.com/help/article/audiences?lang=en) für weitere Informationen.
+Erstellen Sie auf TikTok benutzerdefinierte Zielgruppen mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. Diese Zielgruppen können von Personen sein, die Ihre Website besucht oder mit Ihrem Inhalt interagiert haben. Durch die Echtzeit-Integration von Adobe mit TikTok Ads Manager können Sie die gewünschte Zielgruppe schnell und sicher von Adobe Experience Platform an TikTok übertragen. Besuch [TikTok Business-Hilfesystem](https://ads.tiktok.com/help/article/audiences?lang=en) für weitere Informationen.
 
 >[!IMPORTANT]
 >
@@ -30,7 +30,9 @@ Eine Marke für Sportbekleidung möchte bestehende Kunden über ihre Social-Medi
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie Daten an Ihre [!DNL TikTok Ads Manager] müssen Sie Adobe Experience Platform die Berechtigung erteilen, auf Ihr Anzeigenkonto zuzugreifen für `Audience Management`. Diese Berechtigung kann erteilt werden, indem Sie Ihre Advertiser-ID in Experience Platform eingeben und der Umleitung folgen, um die Berechtigung zu erteilen. Weitere Anweisungen finden Sie im [Dokumentation zur TikTok API](https://ads.tiktok.com/marketing_api/docs?id=1738373141733378).
+Sie müssen [!DNL Admin] oder [!DNL Operator] Zugriff auf das TikTok Ads Manager-Konto, an das Sie Zielgruppen senden möchten. Weitere Informationen finden Sie unter [TikTok Help Center](https://ads.tiktok.com/help/article/add-users-tiktok-business-center?lang=en).
+
+Bevor Sie Daten an Ihr TikTok Ads Manager-Konto senden, müssen Sie Adobe Experience Platform die Berechtigung erteilen, auf Ihr Anzeigenkonto zuzugreifen für `Audience Management`. Diese Berechtigung kann bereitgestellt werden durch [Eingabe Ihrer Anzeigen-Manager-ID](#authenticate) in der Experience Platform-Benutzeroberfläche und Erteilung der Berechtigung, nachdem Sie zu Ihrem TikTok Ads Manager-Konto weitergeleitet wurden.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -52,7 +54,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
 | Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder andere), die im TikTok-Ziel verwendet werden. |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform basierend auf der Zielgruppenbewertung aktualisiert wird, sendet der Connector das Update an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil auf der Basis der Zielgruppenbewertung im Experience Platform aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -66,7 +68,7 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-Um sich beim Ziel zu authentifizieren, werden Sie zum Anmelden bei Ihrem [!DNL TikTok Ads Manager] Adobe zur Verwaltung von Zielgruppen in Ihrem Namen autorisieren.
+Um sich beim Ziel zu authentifizieren, werden Sie zum Anmelden bei Ihrem [!DNL TikTok Ads Manager] -Konto zu erstellen und Adobe zu autorisieren, Zielgruppen in Ihrem Namen zu verwalten.
 
 ![TikTok-Berechtigungsauswahl](/help/destinations/assets/catalog/social/tiktok/tiktok-authenticate-destination.png "Bild der TikTok-Benutzeroberfläche zum Auswählen von Berechtigungen")
 
