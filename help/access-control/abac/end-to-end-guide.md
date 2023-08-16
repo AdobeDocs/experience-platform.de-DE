@@ -5,8 +5,8 @@ description: Dieses Dokument enthält eine umfassende Anleitung zur attributbasi
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 source-git-commit: cf10eb11773320d10ece53f192beacc8da83e980
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1726'
+ht-degree: 27%
 
 ---
 
