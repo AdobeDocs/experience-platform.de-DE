@@ -5,7 +5,7 @@ breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Tags
 solution: Data Collection
-source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
+source-git-commit: 1ca080f6dd62c49c1f1672ec36ce446af591b6b6
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 98%
@@ -45,7 +45,7 @@ ht-degree: 98%
    * [Bibliotheken](./ui/publishing/libraries.md)
    * [Self-Hosting von Bibliotheken](./ui/publishing/hosts/self-hosting-libraries.md)
    * [Bibliothek erneut veröffentlichen](./ui/publishing/republish.md)
-   * [Premium-CDN-Unterstützung (Beta)](./ui/publishing/premium-cdn.md)
+   * [Experience Platform-Tags (China)](./ui/publishing/premium-cdn.md)
 * Client-seitige Informationen {#client-side}
    * [Übersicht](./ui/client-side/overview.md)
    * [Asynchrone Bereitstellung](./ui/client-side/asynchronous-deployment.md)
