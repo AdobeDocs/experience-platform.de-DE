@@ -3,18 +3,28 @@ title: Intelligente Erneute Interaktion
 description: Stellen Sie während der wichtigsten Konversionsmomente überzeugende und vernetzte Erlebnisse bereit, um unregelmäßige Kunden intelligent erneut anzusprechen.
 hide: true
 hidefromtoc: true
-source-git-commit: 8b38114e600986979728e1c4e36245ff0aa3be65
+source-git-commit: 43e365e20a2fd91a0e822eb6f66bb7db6fc218f5
 workflow-type: tm+mt
-source-wordcount: '3258'
-ht-degree: 8%
+source-wordcount: '2934'
+ht-degree: 5%
 
 ---
 
 # Intelligentes erneutes Ansprechen Ihrer Kunden zur Rückkehr
 
-Mit einer intelligenten Rückgewinnungsaktivität können Sie eine maßgeschneiderte, kanalübergreifende Drip-Kampagne einrichten, um Kunden zur Durchführung einer bestimmten Aktion zu bewegen. Die Abspielkampagne soll zeitlich begrenzt durchgeführt werden. Dazu gehören der Versand von Abonnenten, die beabsichtigte E-Mails, SMS und bezahlte Anzeigen anzeigten. Sobald der Kunde die entsprechenden Maßnahmen getroffen hat, endet die Kampagne mit der Anschubkampagne sofort.
+Kontaktieren Sie Kunden, die eine Konversion abgebrochen haben, bevor Sie sie auf intelligente und verantwortungsvolle Weise abschließen. Engagieren Sie Kunden durch Erlebnisse anstelle von Erinnerungen, um die Konversion zu verbessern und das Wachstum des Kundenlebenszeitwerts zu fördern.
+
+Berücksichtigen Sie dabei Echtzeit-Überlegungen, berücksichtigen Sie alle Eigenschaften und Verhaltensweisen von Verbrauchern und bieten Sie eine schnelle Umqualifizierung basierend auf Online- und Offline-Ereignissen.
 
 ![Schrittweise intelligente Wiederaufnahme der Interaktion - Überblick auf hoher Ebene.](../intelligent-re-engagement/images/step-by-step.png)
+
+## Anwendungsfallübersicht
+
+Sie erstellen Schemas, Datensätze und Zielgruppen, während Sie anhand von Beispielen für die Rückgewinnung von Journey arbeiten. Außerdem erfahren Sie, welche Funktionen zum Einrichten der Beispiel-Journey in [!DNL Adobe Journey Optimizer] und diejenigen, die für die Erstellung von Paid-Media-Anzeigen in Zielen erforderlich sind. In diesem Handbuch werden Beispiele dafür verwendet, wie Kunden in den unten beschriebenen Anwendungsfällen erneut angesprochen werden:
+
+* **Journey zur erneuten Interaktion** - Zielgruppe von Kunden, die das Durchsuchen von Produkten auf der Website und in der App abgebrochen haben.
+* **Journey zum Warenkorb abgebrochen** - Kunden, die Produkte in den Warenkorb gelegt, aber noch nicht sowohl auf der Website als auch in der App gekauft haben.
+* **Journey zur Bestellbestätigung** - Konzentriert sich auf Produktkäufe, die über die Website und die mobile App getätigt werden.
 
 ## Voraussetzungen und Planung {#prerequisites-and-planning}
 
@@ -33,50 +43,44 @@ Wenn Sie die Schritte zur Implementierung des Anwendungsfalls ausführen, nutzen
 
 ### Erreichen des Anwendungsfalls: Allgemeine Übersicht {#achieve-the-use-case-high-level}
 
-Es gibt derzeit drei verschiedene Journey zur Rückgewinnung, die entwickelt wurden.
+Nachstehend finden Sie einen Überblick über die drei beispielhaften Journey zur erneuten Interaktion.
 
 >[!BEGINTABS]
 
 >[!TAB Journey zur erneuten Interaktion]
 
-Die Journey zur erneuten Interaktion ermöglicht das nicht mehr verwendete Durchsuchen von Produkten auf der Website und in der App. Diese Journey wird ausgelöst, wenn ein Produkt angesehen, aber nicht gekauft oder zum Warenkorb hinzugefügt wurde. Die Markeninteraktion wird nach drei Tagen ausgelöst, wenn innerhalb der letzten 24 Stunden keine Listen hinzugefügt wurden.
+Die Rückgewinnungs-Journey ermöglicht sowohl das Website- als auch das App-Browsen auf abgegebene Produkte. Diese Journey wird ausgelöst, wenn ein Produkt angesehen, aber nicht gekauft oder zum Warenkorb hinzugefügt wurde. Die Markeninteraktion wird nach drei Tagen ausgelöst, wenn innerhalb der letzten 24 Stunden keine Listen hinzugefügt wurden.<p>![Kundenintelligente Journey-Rückgewinnung - Überblick über die allgemeine visuelle Darstellung.](../intelligent-re-engagement/images/re-engagement-journey.png "Kundenintelligente Journey-Rückgewinnung - Überblick über die allgemeine visuelle Darstellung."){width="1920" zoomable="yes"}</p>
 
-![Kundenintelligente Journey-Rückgewinnung - Überblick über die allgemeine visuelle Darstellung.](../intelligent-re-engagement/images/re-engagement-journey.png)
-
-1. Die Daten werden über das Edge Network (die bevorzugte Methode) in die Aufnahme des Web SDK, des Mobile SDK oder der Edge Network API (Edge Network API) aggregiert.
-2. Als **customer**, erstellen Sie Datensätze, die für [!UICONTROL Profil].
-3. Als **customer**, laden Sie Profile in Real-Time CDP und erstellen Sie Governance-Richtlinien, um eine verantwortungsvolle Nutzung sicherzustellen.
-4. Als **customer**, erstellen Sie zielgerichtete Zielgruppen aus der Profilliste, um zu überprüfen, ob eine **Benutzer** hat in den letzten drei Tagen eine Markeninteraktion durchgeführt.
-5. Als **customer**, erstellen Sie eine Journey zur erneuten Interaktion in Adobe Journey Optimizer.
+1. Sie erstellen Schemata und Datensätze, die für [!UICONTROL Profil].
+2. Die Daten werden über das Web SDK, das Mobile Edge SDK oder die API in Experience Platform aggregiert. Analytics Data Connector kann ebenfalls verwendet werden, kann jedoch zu einer Journey-Latenz führen.
+3. Sie laden Profile in Real-Time CDP und erstellen Governance-Richtlinien, um eine verantwortungsvolle Nutzung sicherzustellen.
+4. Sie erstellen zielgerichtete Zielgruppen aus der Profilliste, um zu überprüfen, ob eine **customer** hat in den letzten drei Tagen eine Interaktion durchgeführt.
+5. Sie erstellen eine Journey zur erneuten Interaktion in [!DNL Adobe Journey Optimizer].
 6. Arbeiten Sie bei Bedarf mit dem **Datenpartner** für die Aktivierung von Zielgruppen zu gewünschten Paid-Media-Zielen.
-7. Adobe Journey Optimizer prüft die Zustimmung und sendet die verschiedenen konfigurierten Aktionen aus.
+7. [!DNL Adobe Journey Optimizer] prüft die Zustimmung und sendet die verschiedenen konfigurierten Aktionen.
 
 >[!TAB Journey zum abgesetzten Warenkorb]
 
-Die Journey mit dem abgebrochenen Warenkorb ist auf Produkte ausgerichtet, die im Warenkorb platziert, aber noch nicht auf der Website und in der App gekauft wurden. Darüber hinaus werden Paid Media-Kampagnen mit dieser Methode gestartet und beendet.
+Die Journey mit dem abgebrochenen Warenkorb ist auf Produkte ausgerichtet, die im Warenkorb platziert, aber noch nicht auf der Website und in der App erworben wurden. Darüber hinaus werden Paid Media-Kampagnen mit dieser Methode gestartet und beendet.<p>![Der Kunde hat die Journey des Warenkorbs abgebrochen und eine allgemeine visuelle Übersicht erstellt.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Der Kunde hat die Journey des Warenkorbs abgebrochen und eine allgemeine visuelle Übersicht erstellt."){width="1920" zoomable="yes"}</p>
 
-![Der Kunde hat die Journey des Warenkorbs abgebrochen und eine allgemeine visuelle Übersicht erstellt.](../intelligent-re-engagement/images/abandoned-cart-journey.png)
-
-1. Die Daten werden über das Edge Network (die bevorzugte Methode) in die Aufnahme des Web SDK, des Mobile SDK oder der Edge Network API (Edge Network API) aggregiert.
-2. Als **customer**, erstellen Sie Datensätze, die für [!UICONTROL Profil].
-3. Als **customer**, laden Sie Profile in Real-Time CDP und erstellen Sie Governance-Richtlinien, um eine verantwortungsvolle Nutzung sicherzustellen.
-4. Als **customer**, erstellen Sie zielgerichtete Zielgruppen aus der Profilliste, um zu überprüfen, ob eine **Benutzer** hat einen Artikel in den Warenkorb gelegt, aber den Kauf nicht abgeschlossen. Die **[!UICONTROL Zum Warenkorb hinzufügen]** -Ereignis startet einen Timer, der 30 Minuten lang wartet, und sucht dann nach dem Kauf. Wenn kein Kauf getätigt wurde, wird die **Benutzer** wird zum **[!UICONTROL Warenkorb verlassen]** Zielgruppen.
-5. Als **customer**, erstellen Sie in Adobe Journey Optimizer eine Journey zum abgebrochenen Warenkorb.
+1. Sie erstellen Schemata und Datensätze, die für [!UICONTROL Profil].
+2. Die Daten werden über das Web SDK, das Mobile Edge SDK oder die API in Experience Platform aggregiert. Analytics Data Connector kann ebenfalls verwendet werden, kann jedoch zu einer Journey-Latenz führen.
+3. Sie laden Profile in Real-Time CDP und erstellen Governance-Richtlinien, um eine verantwortungsvolle Nutzung sicherzustellen.
+4. Sie erstellen zielgerichtete Zielgruppen aus der Profilliste, um zu überprüfen, ob eine **customer** hat einen Artikel in den Warenkorb gelegt, aber den Kauf nicht abgeschlossen. Die **[!UICONTROL Zum Warenkorb hinzufügen]** -Ereignis startet einen Timer, der 30 Minuten lang wartet, und sucht dann nach dem Kauf. Wenn kein Kauf getätigt wurde, wird die **customer** wird zum **[!UICONTROL Warenkorb verlassen]** Zielgruppen.
+5. Sie erstellen eine Journey zum abgebrochenen Warenkorb in Adobe Journey Optimizer
 6. Arbeiten Sie bei Bedarf mit dem **Datenpartner** für die Aktivierung von Zielgruppen zu gewünschten Paid-Media-Zielen.
-7. Adobe Journey Optimizer prüft die Zustimmung und sendet die verschiedenen konfigurierten Aktionen aus.
+7. [!DNL Adobe Journey Optimizer] prüft die Zustimmung und sendet die verschiedenen konfigurierten Aktionen.
 
 >[!TAB Journey zur Bestellbestätigung]
 
-Die Journey zur Bestellbestätigung konzentriert sich auf Produktkäufe, die über die Website und die mobile App getätigt werden.
+Die Journey zur Bestellbestätigung konzentriert sich auf Produktkäufe, die über die Website und die mobile App getätigt werden.<p>![Kundenauftragsbestätigung Journey - Allgemeine visuelle Übersicht.](../intelligent-re-engagement/images/order-confirmation-journey.png "Kundenauftragsbestätigung Journey - Allgemeine visuelle Übersicht."){width="1920" zoomable="yes"}</p>
 
-![Kundenauftragsbestätigung Journey - Allgemeine visuelle Übersicht.](../intelligent-re-engagement/images/order-confirmation-journey.png)
-
-1. Die Daten werden über das Edge Network (die bevorzugte Methode) in die Aufnahme des Web SDK, des Mobile SDK oder der Edge Network API (Edge Network API) aggregiert.
-2. Als **customer**, erstellen Sie Datensätze, die für [!UICONTROL Profil].
-3. Als **customer**, laden Sie Profile in Real-Time CDP und erstellen Sie Governance-Richtlinien, um eine verantwortungsvolle Nutzung sicherzustellen.
-4. Als **customer**, erstellen Sie zielgerichtete Zielgruppen aus der Profilliste, um zu überprüfen, ob eine **Benutzer** hat einen Kauf getätigt.
-5. Als **customer**, erstellen Sie eine Bestätigungs-Journey in Adobe Journey Optimizer.
-6. Adobe Journey Optimizer sendet eine Auftragsbestätigungsnachricht über den bevorzugten Kanal.
+1. Sie erstellen Schemata und Datensätze, die für [!UICONTROL Profil].
+2. Die Daten werden über das Web SDK, das Mobile Edge SDK oder die API in Experience Platform aggregiert. Analytics Data Connector kann ebenfalls verwendet werden, kann jedoch zu einer Journey-Latenz führen.
+3. Sie laden Profile in Real-Time CDP und erstellen Governance-Richtlinien, um eine verantwortungsvolle Nutzung sicherzustellen.
+4. Sie erstellen zielgerichtete Zielgruppen aus der Profilliste, um zu überprüfen, ob eine **customer** hat einen Kauf getätigt.
+5. Sie erstellen eine Bestätigungs-Journey in Adobe Journey Optimizer.
+6. [!DNL Adobe Journey Optimizer] sendet eine Auftragsbestätigungsnachricht über den bevorzugten Kanal.
 
 >[!ENDTABS]
 
@@ -92,26 +96,13 @@ Wenn Sie die Schritte zur Implementierung des Anwendungsfalls ausführen, verwen
 
 Ressourcen des Experience-Datenmodells (XDM) werden im [!UICONTROL Schemas] Arbeitsbereich in Adobe Experience Platform. Sie können die von Adobe bereitgestellten Kernressourcen anzeigen und untersuchen und benutzerdefinierte Ressourcen und Schemata für Ihr Unternehmen erstellen.
 
-<!--
-To create a schema, complete the steps below:
-
-1. Navigate to **[!UICONTROL Data Management]** > **[!UICONTROL Schemas]** and select **[!UICONTROL Create schema]**.
-2. Select **[!UICONTROL XDM Individual Profile]/[!UICONTROL XDM ExperienceEvent]**.
-3. Navigate to **[!UICONTROL Field groups]** and select **[!UICONTROL Add]**.
-4. Use the search box to find and select the field group, then select **[!UICONTROL Add field groups]**.
-5. Give your schema a name and optionally a description.
-6. Select **[!UICONTROL Save]**.
-
-![A recording of the steps to create a schema.](../intelligent-re-engagement/images/create-a-schema.gif) 
--->
-
 Weitere Informationen zum Erstellen von Schemas finden Sie im Abschnitt [Tutorial zum Erstellen von Schemas.](/help/xdm/tutorials/create-schema-ui.md)
 
-Es gibt vier Schemaentwürfe, die für die Journey zur erneuten Interaktion verwendet werden. Für jedes Schema müssen bestimmte Felder sowie einige dringend empfohlene Felder eingerichtet werden.
+Es gibt vier Schemaentwürfe, die für die Journey zur erneuten Interaktion verwendet werden. Für jedes Schema müssen spezifische Felder und einige dringend empfohlene Felder eingerichtet werden.
 
 #### Schema für Kundenattribute
 
-Das Kundenattributschema wird durch eine [!UICONTROL Individuelles XDM-Profil] -Klasse, die die folgenden Feldergruppen enthält:
+Das Kundenattribut-Schema wird durch eine [!UICONTROL Individuelles XDM-Profil] -Klasse, die die folgenden Feldergruppen enthält:
 
 +++Persönliche Kontaktdetails (Feldergruppe)
 
@@ -119,8 +110,8 @@ Das Kundenattributschema wird durch eine [!UICONTROL Individuelles XDM-Profil] -
 
 | Felder | Anforderung | Beschreibung |
 | --- | --- | --- |
-| mobilePhone.number | Erforderlich | Die Mobiltelefonnummer der Person, die für SMS verwendet wird. |
-| personalEmail.address | Erforderlich | Die E-Mail-Adresse der Person. |
+| `mobilePhone.number` | Erforderlich | Die Mobiltelefonnummer der Person, die für SMS verwendet wird. |
+| `personalEmail.address` | Erforderlich | Die E-Mail-Adresse der Person. |
 
 +++
 
@@ -130,8 +121,8 @@ Das Kundenattributschema wird durch eine [!UICONTROL Individuelles XDM-Profil] -
 
 | Felder | Anforderung |
 | --- | --- |
-| person.name.firstName | Vorgeschlagen |
-| person.name.lastName | Vorgeschlagen |
+| `person.name.firstName` | Vorgeschlagen |
+| `person.name.lastName` | Vorgeschlagen |
 
 +++
 
@@ -147,12 +138,12 @@ Das Kundenattributschema wird durch eine [!UICONTROL Individuelles XDM-Profil] -
 
 | Felder | Anforderung |
 | --- | --- |
-| consents.marketing.email.val | Erforderlich |
-| consents.marketing.preferred | Erforderlich |
-| consents.marketing.push.val | Erforderlich |
-| consents.marketing.sms.val | Erforderlich |
-| consents.personalize.content.val | Erforderlich |
-| consents.share.val | Erforderlich |
+| `consents.marketing.email.val` | Erforderlich |
+| `consents.marketing.preferred` | Erforderlich |
+| `consents.marketing.push.val` | Erforderlich |
+| `consents.marketing.sms.val` | Erforderlich |
+| `consents.personalize.content.val` | Erforderlich |
+| `consents.share.val` | Erforderlich |
 
 +++
 
@@ -162,10 +153,6 @@ Diese Feldergruppe wird für Best Practices verwendet.
 
 +++
 
-<!--
-![Customer attributes schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-attributes.png) 
--->
-
 #### Schema für digitale Transaktionen des Kunden
 
 Das Schema für digitale Transaktionen des Kunden wird durch eine [!UICONTROL XDM ExperienceEvent] -Klasse, die die folgenden Feldergruppen enthält:
@@ -174,8 +161,8 @@ Das Schema für digitale Transaktionen des Kunden wird durch eine [!UICONTROL XD
 
 | Felder | Anforderung |
 | --- | --- |
-| device.model | Vorgeschlagen |
-| environment.browserDetails.userAgent | Vorgeschlagen |
+| `device.model` | Vorgeschlagen |
+| `environment.browserDetails.userAgent` | Vorgeschlagen |
 
 +++
 
@@ -185,13 +172,13 @@ Web Details ist eine Standardschemafeldgruppe für die XDM ExperienceEvent-Klass
 
 | Felder | Anforderung | Beschreibung |
 | --- | --- | --- |
-| web.webInteraction.linkClicks.id | Vorgeschlagen | Die ID für den Web-Link oder die URL, die der Interaktion entspricht. |
-| web.webInteraction.linkClicks.value | Vorgeschlagen | Die Anzahl der Klicks für den Weblink oder die URL, die der Interaktion entspricht. |
-| web.webInteraction.name | Vorgeschlagen | Der Name der Webseite. |
-| web.webInteraction.URL | Vorgeschlagen | Die URL für die Webseite. |
-| web.webPageDetails.name | Vorgeschlagen | Der Name der Webseite, auf der die Web-Interaktion stattgefunden hat. |
-| web.webPageDetails.URL | Vorgeschlagen | Die URL der Webseite, auf der die Web-Interaktion stattgefunden hat. |
-| web.webReferrer.URL | Vorgeschlagen | Beschreibt den Referrer einer Web-Interaktion, d. h. die URL, von der ein Besucher unmittelbar vor der Aufzeichnung der aktuellen Web-Interaktion kam. |
+| `web.webInteraction.linkClicks.id` | Vorgeschlagen | Die ID für den Web-Link oder die URL, die der Interaktion entspricht. |
+| `web.webInteraction.linkClicks.value` | Vorgeschlagen | Die Anzahl der Klicks für den Weblink oder die URL, die der Interaktion entspricht. |
+| `web.webInteraction.name` | Vorgeschlagen | Der Name der Webseite. |
+| `web.webInteraction.URL` | Vorgeschlagen | Die URL für die Webseite. |
+| `web.webPageDetails.name` | Vorgeschlagen | Der Name der Webseite, auf der die Web-Interaktion stattgefunden hat. |
+| `web.webPageDetails.URL` | Vorgeschlagen | Die URL der Webseite, auf der die Web-Interaktion stattgefunden hat. |
+| `web.webReferrer.URL` | Vorgeschlagen | Beschreibt den Referrer einer Web-Interaktion, d. h. die URL, von der ein Besucher unmittelbar vor der Aufzeichnung der aktuellen Web-Interaktion kam. |
 
 +++
 
@@ -199,35 +186,35 @@ Web Details ist eine Standardschemafeldgruppe für die XDM ExperienceEvent-Klass
 
 | Felder | Anforderung |
 | --- | --- |
-| commerce.cart.cartID | Vorgeschlagen |
-| commerce.cart.cartSource | Vorgeschlagen |
-| commerce.cartAbandons.id | Vorgeschlagen |
-| commerce.cartAbandons.value | Vorgeschlagen |
-| commerce.order.orderType | Vorgeschlagen |
-| commerce.order.payments.paymentAmount | Vorgeschlagen |
-| commerce.order.payments.paymentType | Vorgeschlagen |
-| commerce.order.payments.transactionID | Vorgeschlagen |
-| commerce.order.priceTotal | Vorgeschlagen |
-| commerce.order.purchaseID | Vorgeschlagen |
-| commerce.productListAdds.id | Vorgeschlagen |
-| commerce.productListAdds.value | Vorgeschlagen |
-| commerce.productListOpens.id | Vorgeschlagen |
-| commerce.productListOpens.value | Vorgeschlagen |
-| commerce.productListRemoval.id | Vorgeschlagen |
-| commerce.productListRemoval.value | Vorgeschlagen |
-| commerce.productListViews.id | Vorgeschlagen |
-| commerce.productListViews.value | Vorgeschlagen |
-| commerce.productViews.id | Vorgeschlagen |
-| commerce.productViews.value | Vorgeschlagen |
-| commerce.purchases.id | Vorgeschlagen |
-| commerce.purchases.value | Vorgeschlagen |
-| marketing.campaignGroup | Vorgeschlagen |
-| marketing.campaignName | Vorgeschlagen |
-| marketing.trackingCode | Vorgeschlagen |
-| productListItems.name | Vorgeschlagen |
-| productListItems.priceTotal | Vorgeschlagen |
-| productListItems.product | Vorgeschlagen |
-| productListItems.quantity | Vorgeschlagen |
+| `commerce.cart.cartID` | Vorgeschlagen |
+| `commerce.cart.cartSource` | Vorgeschlagen |
+| `commerce.cartAbandons.id` | Vorgeschlagen |
+| `commerce.cartAbandons.value` | Vorgeschlagen |
+| `commerce.order.orderType` | Vorgeschlagen |
+| `commerce.order.payments.paymentAmount` | Vorgeschlagen |
+| `commerce.order.payments.paymentType` | Vorgeschlagen |
+| `commerce.order.payments.transactionID` | Vorgeschlagen |
+| `commerce.order.priceTotal` | Vorgeschlagen |
+| `commerce.order.purchaseID` | Vorgeschlagen |
+| `commerce.productListAdds.id` | Vorgeschlagen |
+| `commerce.productListAdds.value` | Vorgeschlagen |
+| `commerce.productListOpens.id` | Vorgeschlagen |
+| `commerce.productListOpens.value` | Vorgeschlagen |
+| `commerce.productListRemoval.id` | Vorgeschlagen |
+| `commerce.productListRemoval.value` | Vorgeschlagen |
+| `commerce.productListViews.id` | Vorgeschlagen |
+| `commerce.productListViews.value` | Vorgeschlagen |
+| `commerce.productViews.id` | Vorgeschlagen |
+| `commerce.productViews.value` | Vorgeschlagen |
+| `commerce.purchases.id` | Vorgeschlagen |
+| `commerce.purchases.value` | Vorgeschlagen |
+| `marketing.campaignGroup` | Vorgeschlagen |
+| `marketing.campaignName` | Vorgeschlagen |
+| `marketing.trackingCode` | Vorgeschlagen |
+| `productListItems.name` | Vorgeschlagen |
+| `productListItems.priceTotal` | Vorgeschlagen |
+| `productListItems.product` | Vorgeschlagen |
+| `productListItems.quantity` | Vorgeschlagen |
 
 +++
 
@@ -235,12 +222,12 @@ Web Details ist eine Standardschemafeldgruppe für die XDM ExperienceEvent-Klass
 
 | Felder | Anforderung | Beschreibung |
 | --- | --- | --- |
-| endUserIDs._experience.emailid.authenticatedState | Erforderlich | Authentifizierter Status der E-Mail-Adresse des Endbenutzers. |
-| endUserIDs._experience.emailid.id | Erforderlich | E-Mail-Adresse des Endbenutzers. |
-| endUserIDs._experience.emailid.namespace.code | Erforderlich | Namespace-Code der E-Mail-Adresse des Endbenutzers. |
-| endUserIDs._experience.mcid.authenticatedState | Erforderlich | Authentifizierter Status der Adobe Marketing Cloud ID (MCID). Die MCID wird jetzt als Experience Cloud-ID (ECID) bezeichnet. |
-| endUserIDs._experience.mcid.id | Erforderlich | Adobe Marketing Cloud ID (MCID). Die MCID wird jetzt als Experience Cloud-ID (ECID) bezeichnet. |
-| endUserIDs._experience.mcid.namespace.code | Erforderlich | Namespace-Code für die Adobe Marketing Cloud ID (MCID). |
+| `endUserIDs._experience.emailid.authenticatedState` | Erforderlich | Authentifizierter Status der E-Mail-Adresse des Endbenutzers. |
+| `endUserIDs._experience.emailid.id` | Erforderlich | E-Mail-Adresse des Endbenutzers. |
+| `endUserIDs._experience.emailid.namespace.code` | Erforderlich | Namespace-Code der E-Mail-Adresse des Endbenutzers. |
+| `endUserIDs._experience.mcid.authenticatedState` | Erforderlich | Authentifizierter Status der Adobe Marketing Cloud ID (MCID). Die MCID wird jetzt als Experience Cloud-ID (ECID) bezeichnet. |
+| `endUserIDs._experience.mcid.id` | Erforderlich | Adobe Marketing Cloud ID (MCID). Die MCID wird jetzt als Experience Cloud-ID (ECID) bezeichnet. |
+| `endUserIDs._experience.mcid.namespace.code` | Erforderlich | Namespace-Code für die Adobe Marketing Cloud ID (MCID). |
 
 +++
 
@@ -248,8 +235,8 @@ Web Details ist eine Standardschemafeldgruppe für die XDM ExperienceEvent-Klass
 
 | Felder | Anforderung |
 | --- | --- |
-| eventType | Erforderlich |
-| Zeitstempel | Erforderlich |
+| `eventType` | Erforderlich |
+| `timestamp` | Erforderlich |
 
 +++
 
@@ -258,10 +245,6 @@ Web Details ist eine Standardschemafeldgruppe für die XDM ExperienceEvent-Klass
 Externe Quell-System-Audit-Attribute sind ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Prüfdetails zu einem externen Quellsystem erfasst.
 
 +++
-
-<!--
-![Customer digital transactions schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-digital-transactions.png) 
--->
 
 #### Schema für Offline-Transaktionen des Kunden
 
@@ -271,16 +254,16 @@ Das Schema der Offline-Transaktionen des Kunden wird durch eine [!UICONTROL XDM 
 
 | Felder | Anforderung | Beschreibung |
 | --- | --- | --- |
-| commerce.cart.cartID | Erforderlich | Eine ID für den Warenkorb. |
-| commerce.order.orderType | Erforderlich | Ein Objekt, das den Produktanordnungstyp beschreibt. |
-| commerce.order.payments.paymentAmount | Erforderlich | Ein Objekt, das den Zahlungsbetrag der Produktbestellung beschreibt. |
-| commerce.order.payments.paymentType | Erforderlich | Ein Objekt, das den Produktzahlungstyp beschreibt. |
-| commerce.order.payments.transactionID | Erforderlich | Eine Transaktions-ID der Objektproduktbestellung. |
-| commerce.order.purchaseID | Erforderlich | Eine Kauf-ID für Objektprodukte. |
-| productListItems.name | Erforderlich | Eine Liste von Artikelnamen, die die von einem Kunden ausgewählten Produkte darstellen. |
-| productListItems.priceTotal | Erforderlich | Der Gesamtpreis der Artikelliste, die die von einem Kunden ausgewählten Produkte darstellt. |
-| productListItems.product | Erforderlich | Die ausgewählten Produkte. |
-| productListItems.quantity | Erforderlich | Die Anzahl der Elemente, die für die von einem Kunden ausgewählten Produkte stehen. |
+| `commerce.cart.cartID` | Erforderlich | Eine ID für den Warenkorb. |
+| `commerce.order.orderType` | Erforderlich | Ein Objekt, das den Produktanordnungstyp beschreibt. |
+| `commerce.order.payments.paymentAmount` | Erforderlich | Ein Objekt, das den Zahlungsbetrag der Produktbestellung beschreibt. |
+| `commerce.order.payments.paymentType` | Erforderlich | Ein Objekt, das den Produktzahlungstyp beschreibt. |
+| `commerce.order.payments.transactionID` | Erforderlich | Eine Transaktions-ID der Objektproduktbestellung. |
+| `commerce.order.purchaseID` | Erforderlich | Eine Kauf-ID für Objektprodukte. |
+| `productListItems.name` | Erforderlich | Eine Liste von Artikelnamen, die die von einem Kunden ausgewählten Produkte darstellen. |
+| `productListItems.priceTotal` | Erforderlich | Der Gesamtpreis der Artikelliste, die die von einem Kunden ausgewählten Produkte darstellt. |
+| `productListItems.product` | Erforderlich | Die ausgewählten Produkte. |
+| `productListItems.quantity` | Erforderlich | Die Anzahl der Elemente, die für die von einem Kunden ausgewählten Produkte stehen. |
 
 +++
 
@@ -288,8 +271,8 @@ Das Schema der Offline-Transaktionen des Kunden wird durch eine [!UICONTROL XDM 
 
 | Felder | Anforderung | Beschreibung |
 | --- | --- | --- |
-| mobilePhone.number | Erforderlich | Die Mobiltelefonnummer der Person, die für SMS verwendet wird. |
-| personalEmail.address | Erforderlich | Die E-Mail-Adresse der Person. |
+| `mobilePhone.number` | Erforderlich | Die Mobiltelefonnummer der Person, die für SMS verwendet wird. |
+| `personalEmail.address` | Erforderlich | Die E-Mail-Adresse der Person. |
 
 +++
 
@@ -297,8 +280,8 @@ Das Schema der Offline-Transaktionen des Kunden wird durch eine [!UICONTROL XDM 
 
 | Felder | Anforderung |
 | --- | --- |
-| eventType | Erforderlich |
-| Zeitstempel | Erforderlich |
+| `eventType` | Erforderlich |
+| `timestamp` | Erforderlich |
 
 +++
 
@@ -308,60 +291,56 @@ Externe Quell-System-Audit-Attribute sind ein standardmäßiger Experience-Daten
 
 +++
 
-<!--
-![Customer offline transactions schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-offline-transactions.png) 
--->
-
 #### Adobe-Web-Connector-Schema
 
-Das Web-Connector-Schema der Adobe wird durch eine [!UICONTROL XDM ExperienceEvent] -Klasse, die die folgenden Feldergruppen enthält:
+Das Adobe-Web-Connector-Schema wird durch eine [!UICONTROL XDM ExperienceEvent] -Klasse, die die folgenden Feldergruppen enthält:
 
 + + + Adobe Analytics ExperienceEvent-Vorlage (Feldergruppe)
 
 | Felder | Anforderung | Beschreibung |
 | --- | --- | --- |
-| web.webInteraction.linkClicks.id | Vorgeschlagen | Die ID für den Web-Link oder die URL, die der Interaktion entspricht. |
-| web.webInteraction.linkClicks.value | Vorgeschlagen | Die Anzahl der Klicks für den Weblink oder die URL, die der Interaktion entspricht. |
-| web.webInteraction.name | Vorgeschlagen | Der Name der Webseite. |
-| web.webInteraction.URL | Vorgeschlagen | Die URL für die Webseite. |
-| web.webPageDetails.name | Vorgeschlagen | Der Name der Webseite, auf der die Web-Interaktion stattgefunden hat. |
-| web.webPageDetails.URL | Vorgeschlagen | Die URL der Webseite, auf der die Web-Interaktion stattgefunden hat. |
-| web.webReferrer.URL | Vorgeschlagen | Beschreibt den Referrer einer Web-Interaktion, d. h. die URL, von der ein Besucher unmittelbar vor der Aufzeichnung der aktuellen Web-Interaktion kam. |
-| commerce.cart.cartID | Vorgeschlagen | |
-| commerce.cart.cartSource | Vorgeschlagen | |
-| commerce.cartAbandons.id | Vorgeschlagen | |
-| commerce.cartAbandons.value | Vorgeschlagen | |
-| commerce.order.orderType | Vorgeschlagen | |
-| commerce.order.payments.paymentAmount | Vorgeschlagen | |
-| commerce.order.payments.paymentType | Vorgeschlagen | |
-| commerce.order.payments.transactionID | Vorgeschlagen | |
-| commerce.order.priceTotal | Vorgeschlagen | |
-| commerce.order.purchaseID | Vorgeschlagen | |
-| commerce.productListAdds.id | Vorgeschlagen | |
-| commerce.productListAdds.value | Vorgeschlagen | |
-| commerce.productListOpens.id | Vorgeschlagen | |
-| commerce.productListOpens.value | Vorgeschlagen | |
-| commerce.productListRemoval.id | Vorgeschlagen | |
-| commerce.productListRemoval.value | Vorgeschlagen | |
-| commerce.productListViews.id | Vorgeschlagen | |
-| commerce.productListViews.value | Vorgeschlagen | |
-| commerce.productViews.id | Vorgeschlagen | |
-| commerce.productViews.value | Vorgeschlagen | |
-| commerce.purchases.id | Vorgeschlagen | |
-| commerce.purchases.value | Vorgeschlagen | |
-| marketing.campaignGroup | Vorgeschlagen | |
-| marketing.campaignName | Vorgeschlagen | |
-| marketing.trackingCode | Vorgeschlagen | |
-| productListItems.name | Vorgeschlagen | |
-| productListItems.priceTotal | Vorgeschlagen | |
-| productListItems.product | Vorgeschlagen | |
-| productListItems.quantity | Vorgeschlagen | |
-| endUserIDs._experience.emailid.authenticatedState | Erforderlich | Authentifizierter Status der E-Mail-Adresse des Endbenutzers. |
-| endUserIDs._experience.emailid.id | Erforderlich | E-Mail-Adresse des Endbenutzers. |
-| endUserIDs._experience.emailid.namespace.code | Erforderlich | Namespace-Code der E-Mail-Adresse des Endbenutzers. |
-| endUserIDs._experience.mcid.authenticatedState | Erforderlich | Authentifizierter Status der Adobe Marketing Cloud ID (MCID). Die MCID wird jetzt als Experience Cloud-ID (ECID) bezeichnet. |
-| endUserIDs._experience.mcid.id | Erforderlich | Adobe Marketing Cloud ID (MCID). Die MCID wird jetzt als Experience Cloud-ID (ECID) bezeichnet. |
-| endUserIDs._experience.mcid.namespace.code | Erforderlich | Namespace-Code für die Adobe Marketing Cloud ID (MCID). |
+| `web.webInteraction.linkClicks.id` | Vorgeschlagen | Die ID für den Web-Link oder die URL, die der Interaktion entspricht. |
+| `web.webInteraction.linkClicks.value` | Vorgeschlagen | Die Anzahl der Klicks für den Weblink oder die URL, die der Interaktion entspricht. |
+| `web.webInteraction.name` | Vorgeschlagen | Der Name der Webseite. |
+| `web.webInteraction.URL` | Vorgeschlagen | Die URL für die Webseite. |
+| `web.webPageDetails.name` | Vorgeschlagen | Der Name der Webseite, auf der die Web-Interaktion stattgefunden hat. |
+| `web.webPageDetails.URL` | Vorgeschlagen | Die URL der Webseite, auf der die Web-Interaktion stattgefunden hat. |
+| `web.webReferrer.URL` | Vorgeschlagen | Beschreibt den Referrer einer Web-Interaktion, d. h. die URL, von der ein Besucher unmittelbar vor der Aufzeichnung der aktuellen Web-Interaktion kam. |
+| `commerce.cart.cartID` | Vorgeschlagen | |
+| `commerce.cart.cartSource` | Vorgeschlagen | |
+| `commerce.cartAbandons.id` | Vorgeschlagen | |
+| `commerce.cartAbandons.value` | Vorgeschlagen | |
+| `commerce.order.orderType` | Vorgeschlagen | |
+| `commerce.order.payments.paymentAmount` | Vorgeschlagen | |
+| `commerce.order.payments.paymentType` | Vorgeschlagen | |
+| `commerce.order.payments.transactionID` | Vorgeschlagen | |
+| `commerce.order.priceTotal` | Vorgeschlagen | |
+| `commerce.order.purchaseID` | Vorgeschlagen | |
+| `commerce.productListAdds.id` | Vorgeschlagen | |
+| `commerce.productListAdds.value` | Vorgeschlagen | |
+| `commerce.productListOpens.id` | Vorgeschlagen | |
+| `commerce.productListOpens.value` | Vorgeschlagen | |
+| `commerce.productListRemoval.id` | Vorgeschlagen | |
+| `commerce.productListRemoval.value` | Vorgeschlagen | |
+| `commerce.productListViews.id` | Vorgeschlagen | |
+| `commerce.productListViews.value` | Vorgeschlagen | |
+| `commerce.productViews.id` | Vorgeschlagen | |
+| `commerce.productViews.value` | Vorgeschlagen | |
+| `commerce.purchases.id` | Vorgeschlagen | |
+| `commerce.purchases.value` | Vorgeschlagen | |
+| `marketing.campaignGroup` | Vorgeschlagen | |
+| `marketing.campaignName` | Vorgeschlagen | |
+| `marketing.trackingCode` | Vorgeschlagen | |
+| `productListItems.name` | Vorgeschlagen | |
+| `productListItems.priceTotal` | Vorgeschlagen | |
+| `productListItems.product` | Vorgeschlagen | |
+| `productListItems.quantity` | Vorgeschlagen | |
+| `endUserIDs._experience.emailid.authenticatedState` | Erforderlich | Authentifizierter Status der E-Mail-Adresse des Endbenutzers. |
+| `endUserIDs._experience.emailid.id` | Erforderlich | E-Mail-Adresse des Endbenutzers. |
+| `endUserIDs._experience.emailid.namespace.code` | Erforderlich | Namespace-Code der E-Mail-Adresse des Endbenutzers. |
+| `endUserIDs._experience.mcid.authenticatedState` | Erforderlich | Authentifizierter Status der Adobe Marketing Cloud ID (MCID). Die MCID wird jetzt als Experience Cloud-ID (ECID) bezeichnet. |
+| `endUserIDs._experience.mcid.id` | Erforderlich | Adobe Marketing Cloud ID (MCID). Die MCID wird jetzt als Experience Cloud-ID (ECID) bezeichnet. |
+| `endUserIDs._experience.mcid.namespace.code` | Erforderlich | Namespace-Code für die Adobe Marketing Cloud ID (MCID). |
 
 +++
 
@@ -369,8 +348,8 @@ Das Web-Connector-Schema der Adobe wird durch eine [!UICONTROL XDM ExperienceEve
 
 | Felder | Anforderung |
 | --- | --- |
-| eventType | Erforderlich |
-| Zeitstempel | Erforderlich |
+| `eventType` | Erforderlich |
+| `timestamp` | Erforderlich |
 
 +++
 
@@ -379,35 +358,16 @@ Das Web-Connector-Schema der Adobe wird durch eine [!UICONTROL XDM ExperienceEve
 Externe Quell-System-Audit-Attribute sind ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Prüfdetails zu einem externen Quellsystem erfasst.
 
 +++
-
-<!--
-![Adobe web connector schema highlighting the list of field groups.](../intelligent-re-engagement/images/adobe-web-connector.png) 
--->
 
 ### Datensatz aus einem Schema erstellen
 
 Ein Datensatz ist eine Speicher- und Verwaltungsstruktur für eine Datengruppe, häufig eine Tabelle mit Feldern (Zeilen) und einem Schema (Spalten). Jedes Schema für intelligente Journey zur erneuten Interaktion verfügt über einen einzigen Datensatz.
 
 Weitere Informationen zum Erstellen eines Datensatzes aus einem Schema finden Sie unter [Handbuch zur Benutzeroberfläche von Datensätzen](/help/catalog/datasets/user-guide.md).
-<!-- 
-To create a dataset from a schema, complete the steps below:
-
-1. Navigate to **[!UICONTROL Data Management]** > **[!UICONTROL Datasets]** and select **[!UICONTROL Create dataset]**.
-2. Select **[!UICONTROL Create dataset from schema]**.
-3. Select the relevant re-engagement schema you created.
-4. Give your dataset a name and optionally a description.
-5. Select **[!UICONTROL Finish]**.
-
-![A recording of the steps to create a dataset from a schema.](../intelligent-re-engagement/images/dataset-from-schema.gif)
--->
 
 >[!NOTE]
 >
 >Ähnlich wie beim Schritt zum Erstellen eines Schemas müssen Sie die Aufnahme des Datensatzes in das Echtzeit-Kundenprofil aktivieren. Weitere Informationen zum Aktivieren des Datensatzes für die Verwendung im Echtzeit-Kundenprofil finden Sie in der [Tutorial zum Erstellen von Schemas.](/help/xdm/tutorials/create-schema-ui.md#profile).
-
-<!-- 
-![Enable dataset for profile.](../intelligent-re-engagement/images/enable-dataset-for-profile.png)
--->
 
 ### Datenschutz, Einverständnis und Data Governance
 
@@ -419,17 +379,17 @@ To create a dataset from a schema, complete the steps below:
 
 Beim Erstellen eines Rückgewinnungspfads müssen die folgenden Zustimmungsrichtlinien berücksichtigt und verwendet werden:
 
-* Wenn williges.marketing.email.val = &quot;Y&quot;, dann kann E-Mail gesendet werden
-* Wenn williges.marketing.sms.val = &quot;Y&quot;, dann Can SMS
-* Wenn die Datei &quot;Consents.marketing.push.val = &quot;Y&quot;ist, kann Push
-* Wenn williges.share.val = &quot;Y&quot;ist, kann Werbung
+* Wenn `consents.marketing.email.val = "Y"` then Can Email
+* Wenn `consents.marketing.sms.val = "Y"` then Can SMS
+* Wenn `consents.marketing.push.val = "Y"` then Can Push
+* Wenn `consents.share.val = "Y"` dann kann Werbung
 * Von der Kundenimplementierung definiert
 
 #### DULE-Bezeichnung und -Durchsetzung
 
 Persönliche E-Mail-Adressen werden als direkt identifizierbare Daten verwendet, die zur Identifizierung oder zum Kontakt mit einer bestimmten Person und nicht mit einem Gerät verwendet werden.
 
-* personalEmail.address = I1
+* `personalEmail.address = I1`
 
 #### Marketing-Richtlinien
 
@@ -442,19 +402,6 @@ Es sind keine zusätzlichen Marketing-Richtlinien erforderlich, um die Journey z
 * Beschränkung der Kombination direkt identifizierbarer Daten mit anonymen Daten
 
 ### Erstellen einer Zielgruppe
-
-<!--
-To create an audience, complete the steps below:
-
-1. Navigate to **[!UICONTROL Customer]** > **[!UICONTROL Audiences]** and select **[!UICONTROL Create audience]**.
-2. Select **[!UICONTROL Build rule]** and select **[!UICONTROL Create]**.
-3. Navigate to **[!UICONTROL Field]** and select **[!UICONTROL Events]** tab.
-4. Navigate or use the search box to find the event type, then drag this to the builder. Finally add event rules by dragging event types.
-5. Give your schema a name and optionally a description.
-6. Select **[!UICONTROL Save]**.
-
-![A recording of the steps to create an audience.](../intelligent-re-engagement/images/create-an-audience.gif)
--->
 
 #### Zielgruppenerstellung für Journey zur Wiederaufnahme der Markeninteraktion
 
@@ -470,22 +417,35 @@ Weitere Informationen zum Erstellen von Zielgruppen mithilfe von Platform-abgele
 
 Die folgenden Ereignisse werden für die Journey zur erneuten Interaktion verwendet, bei der Benutzer Produkte online angesehen und in den nächsten 24 Stunden nicht zum Warenkorb hinzugefügt haben, gefolgt von keiner Markeninteraktion in den folgenden 3 Tagen.
 
-Schließen Sie Zielgruppe ein, die mindestens 1 EventType = ProductViews -Ereignis THEN mindestens 1 Beliebiges Ereignis hat, bei dem (EventType ist nicht gleich commerce.productListAdds) und in den letzten 24 Stunden stattfindet und nach 3 Tagen kein Beliebiges Ereignis aufweist, bei dem (EventType = application.launch oder web.webpagedetails.pageViews oder commerce.purchase) und in den letzten 2 Tagen auftritt.
+Die folgenden Felder und Bedingungen sind beim Einrichten dieser Audience erforderlich:
 
-<!--
-![A screenshot of the re-engagement audience showing the set of rules.](../intelligent-re-engagement/images/re-engagement-audience.png) 
--->
+* `EventType: commerce.productViews`
+   * `Timestamp: <= 24 hours before now`
+* `EventType is not: commerce.productListAdds`
+   * `Timestamp: <= 24 hours before now, GAP(>= 3 days)`
+* `EventType: application.launch or web.webpagedetails.pageViews or commerce.purchases`
+   * `Timestamp: <= 2 days before now`
+
+Der Deskriptor für die Journey zur erneuten Interaktion wird wie folgt angezeigt:
+
+`Include audience who have at least 1 EventType = ProductViews event THEN have at least 1 Any event where (EventType does not equal commerce.productListAdds) and occurs in last 24 hour(s) then after 3 days do not have any Any event where (EventType = application.launch or web.webpagedetails.pageViews or commerce.purchases) and occurs in last 2 day(s).`
 
 >[!TAB Journey zum abgesetzten Warenkorb]
 
-Die folgenden Ereignisse werden für Profile verwendet, die ein Produkt zum Warenkorb hinzugefügt, den Kauf jedoch nicht abgeschlossen oder den Warenkorb in den letzten 24 Stunden gelöscht haben.
+Die folgenden Ereignisse werden für die Journey im Warenkorb verworfen, bei der Benutzer ein Produkt zum Warenkorb hinzugefügt, den Kauf jedoch nicht abgeschlossen oder den Warenkorb in den letzten 24 Stunden gelöscht haben.
 
-Include EventType = commerce.productListFügt zwischen 30 und 1440 Minuten zuvor hinzu.
-exclude EventType = commerce.purchases 30 Minuten vor jetzt ODER EventType = commerce.productListRemovals UND Warenkorb-ID gleich Produktlisten-IDs1 Warenkorb-ID (das Aufnahmeereignis).
+Die folgenden Felder und Bedingungen sind beim Einrichten dieser Audience erforderlich:
 
-<!--
-![A screenshot of the re-engagement audience showing the set of rules.](../intelligent-re-engagement/images/abandoned-cart-audience.png) 
--->
+* `EventType: commerce.productListAdds`
+   * `Timestamp: >= 30 minutes before now and <= 1440 minutes before now`
+* `EventType: commerce.purchases`
+   * `Timestamp: <= 30 minutes before now`
+* `EventType: commerce.productListRemovals`
+   * `Timestamp: <= 30 minutes before now`
+
+Der Deskriptor für die Journey zum abgebrochenen Warenkorb wird wie folgt angezeigt:
+
+`Include EventType = commerce.productListAdds between 30 min and 1440 minutes before now. exclude EventType = commerce.purchases 30 minutes before now OR EventType = commerce.productListRemovals AND Cart ID equals Product List Adds1 Cart ID (the inclusion event).`
 
 >[!ENDTABS]
 
@@ -495,108 +455,104 @@ exclude EventType = commerce.purchases 30 Minuten vor jetzt ODER EventType = com
 >
 >Adobe Journey Optimizer umfasst nicht alle Elemente, die in den Diagrammen oben auf dieser Seite angezeigt werden. Alle Anzeigen für gebührenpflichtige Medien werden in erstellt [!UICONTROL Ziele].
 
-Mit Adobe Journey Optimizer können Sie Ihren Kunden verknüpfte, kontextbezogene und personalisierte Erlebnisse bereitstellen. Die Journey ist der gesamte Vorgang der Interaktion eines Kunden mit der Marke. Jeder Anwendungsfall kann eine Vielzahl verschiedener Journey enthalten, von denen jeder spezifische Informationen erfordert. Im Folgenden finden Sie die genauen Daten, die für jede Journey-Verzweigung benötigt werden.
+Mit Adobe Journey Optimizer können Sie Ihren Kunden verknüpfte, kontextbezogene und personalisierte Erlebnisse bereitstellen. Die Journey ist der gesamte Vorgang der Interaktion eines Kunden mit der Marke. Für jede Journey von Anwendungsfällen sind spezifische Informationen erforderlich. Im Folgenden finden Sie die genauen Daten, die für jede Journey-Verzweigung benötigt werden.
 
 >[!BEGINTABS]
 
 >[!TAB Journey zur erneuten Interaktion]
-
-<!--
-![Customer re-engagemnt journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/re-engagement-ajo.png) 
--->
 
 +++Events
 
 * Produktansichten
    * Schema: Customer Digital Transactions
    * Felder:
-      * EventType
+      * `EventType`
    * Bedingung:
-      * EventType = commerce.productViews
+      * `EventType = commerce.productViews`
       * Felder:
-         * Commerce.productViews.id
-         * Commerce.productViews.value
-         * eventType
-         * identityMap.authenticatedState
-         * identityMap.id
-         * identityMap.primary
-         * productListItems.SKU
-         * productListItems.currencyCode
-         * productListItems.name
-         * productListItems.priceTotal
-         * productListItems.product
-         * productListItems.productImageUrl
-         * productListItems.quantity
-         * Zeitstempel
-         * endUserIDs._experience.emailid.authenticatedState
-         * endUserIDs._experience.emailid.id
-         * endUserIDs._experience.emailid.namespace.code
-         * _id
+         * `Commerce.productViews.id`
+         * `Commerce.productViews.value`
+         * `eventType`
+         * `identityMap.authenticatedState`
+         * `identityMap.id`
+         * `identityMap.primary`
+         * `productListItems.SKU`
+         * `productListItems.currencyCode`
+         * `productListItems.name`
+         * `productListItems.priceTotal`
+         * `productListItems.product`
+         * `productListItems.productImageUrl`
+         * `productListItems.quantity`
+         * `timestamp`
+         * `endUserIDs._experience.emailid.authenticatedState`
+         * `endUserIDs._experience.emailid.id`
+         * `endUserIDs._experience.emailid.namespace.code`
+         * `_id`
 
 * Zum Warenkorb hinzufügen
    * Schema: Customer Digital Transactions
    * Felder:
-      * Ereignistyp
+      * `EventType`
    * Bedingung:
-      * Ereignistyp = commerce.productListAdds
+      * `EventType = commerce.productListAdds`
       * Felder:
-         * Commerce.productListAdds.id
-         * Commerce.productListAdds.value
-         * eventType
-         * identityMap.authenticatedState
-         * identityMap.id
-         * identityMap.primary
-         * productListItems.SKU
-         * productListItems.currencyCode
-         * productListItems.name
-         * productListItems.priceTotal
-         * productListItems.product
-         * productListItems.productImageUrl
-         * productListItems.quantity
-         * Zeitstempel
-         * commerce.cart.cartID
-         * endUserIDs._experience.emailid.authenticatedState
-         * endUserIDs._experience.emailid.id
-         * endUserIDs._experience.emailid.namespace.code
-         * _id
+         * `Commerce.productListAdds.id`
+         * `Commerce.productListAdds.value`
+         * `eventType`
+         * `identityMap.authenticatedState`
+         * `identityMap.id`
+         * `identityMap.primary`
+         * `productListItems.SKU`
+         * `productListItems.currencyCode`
+         * `productListItems.name`
+         * `productListItems.priceTotal`
+         * `productListItems.product`
+         * `productListItems.productImageUrl`
+         * `productListItems.quantity`
+         * `timestamp`
+         * `commerce.cart.cartID`
+         * `endUserIDs._experience.emailid.authenticatedState`
+         * `endUserIDs._experience.emailid.id`
+         * `endUserIDs._experience.emailid.namespace.code`
+         * `_id`
 
 * Markeninteraktion
    * Schema: Customer Digital Transactions
    * Felder:
-      * EventType
+      * `EventType`
    * Bedingung:
-      * EventType in application.launch, commerce.purchases, web.webpageDetails.pageViews
+      * `EventType in application.launch, commerce.purchases, web.webpagedetails.pageViews`
       * Felder:
-         * eventType
-         * identityMap.authenticatedState
-         * identityMap.id
-         * identityMap.primary
-         * productListItems.SKU
-         * productListItems.currencyCode
-         * productListItems.name
-         * productListItems.priceTotal
-         * productListItems.product
-         * productListItems.productImageUrl
-         * productListItems.quantity
-         * Zeitstempel
-         * web.webpagedetails.URL
-         * web.webpagedetails.isHomePage
-         * web.webpagedetails.name
-         * endUserIDs._experience.emailid.authenticatedState
-         * endUserIDs._experience.emailid.id
-         * endUserIDs._experience.emailid.namespace.code
-         * _id
-         * Commerce.purchases.id
-         * Commerce.purchases.value
-         * shipping.address.city
-         * shipping.address.countryCode
-         * shipping.address.postalCode
-         * shipping.address.state
-         * shipping.address.street1
-         * shipping.address.street2
-         * shipping.shipDate
-         * shipping.trackingNumber
-         * shipping.trackingURL
+         * `eventType`
+         * `identityMap.authenticatedState`
+         * `identityMap.id`
+         * `identityMap.primary`
+         * `productListItems.SKU`
+         * `productListItems.currencyCode`
+         * `productListItems.name`
+         * `productListItems.priceTotal`
+         * `productListItems.product`
+         * `productListItems.productImageUrl`
+         * `productListItems.quantity`
+         * `timestamp`
+         * `web.webpagedetails.URL`
+         * `web.webpagedetails.isHomePage`
+         * `web.webpagedetails.name`
+         * `endUserIDs._experience.emailid.authenticatedState`
+         * `endUserIDs._experience.emailid.id`
+         * `endUserIDs._experience.emailid.namespace.code`
+         * `_id`
+         * `Commerce.purchases.id`
+         * `Commerce.purchases.value`
+         * `shipping.address.city`
+         * `shipping.address.countryCode`
+         * `shipping.address.postalCode`
+         * `shipping.address.state`
+         * `shipping.address.street1`
+         * `shipping.address.street2`
+         * `shipping.shipDate`
+         * `shipping.trackingNumber`
+         * `shipping.trackingURL`
 
 +++
 
@@ -608,21 +564,21 @@ Mit Adobe Journey Optimizer können Sie Ihren Kunden verknüpfte, kontextbezogen
 * Bedingungen
    * Suchen Sie nach mindestens einem Online- oder Offline-Kaufereignis seit der letzten Ansicht des Produkts.
       * Schema: Customer Digital Transactions
-      * eventType = commerce.purchases
-      * Zeitstempel > Zeitstempel des zuletzt angezeigten Produkts
+      * `eventType = commerce.purchases`
+      * `timestamp > timestamp of product last viewed`
 
    * Suchen Sie nach mindestens einem Offline-Kauf seit der letzten Ansicht des Produkts:
       * Schema: Offline-Kundentransaktionen v.1
-      * eventType = commerce.purchases
-      * Zeitstempel > Zeitstempel des zuletzt angezeigten Produkts
+      * `eventType = commerce.purchases`
+      * `timestamp > timestamp of product last viewed`
 
    * Bedingungen - Auswählen des Target-Kanals
       * E-Mail
-         * consent.marketing.email.val = y
+         * `consents.marketing.email.val = y`
       * Push-Benachrichtigung
-         * consents.marketing.push.val=y
+         * `consents.marketing.push.val=y`
       * SMS
-         * consent.marketing.sms.val = y
+         * `consents.marketing.sms.val = y`
 
    * Kanalpersonalisierung
       * Personalisierte Kanalinhalte basierend auf der Produktansicht.
@@ -631,130 +587,126 @@ Mit Adobe Journey Optimizer können Sie Ihren Kunden verknüpfte, kontextbezogen
 
 >[!TAB Journey zum abgesetzten Warenkorb]
 
-<!--
-![Customer abandoned cart journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/abandoned-cart-ajo.png) 
--->
-
 +++Events
 
 * Zum Warenkorb hinzufügen
    * Schema: Customer Digital Transactions
    * Felder:
-      * Ereignistyp
+      * `EventType`
    * Bedingung:
-      * Ereignistyp = commerce.productListAdds
+      * `EventType = commerce.productListAdds`
       * Felder:
-         * Commerce.productListAdds.id
-         * Commerce.productListAdds.value
-         * eventType
-         * identityMap.authenticatedState
-         * identityMap.id
-         * identityMap.primary
-         * productListItems.SKU
-         * productListItems.currencyCode
-         * productListItems.name
-         * productListItems.priceTotal
-         * productListItems.product
-         * productListItems.productImageUrl
-         * productListItems.quantity
-         * Zeitstempel
-         * commerce.cart.cartID
-         * endUserIDs._experience.emailid.authenticatedState
-         * endUserIDs._experience.emailid.id
-         * endUserIDs._experience.emailid.namespace.code
-         * _id
+         * `Commerce.productListAdds.id`
+         * `Commerce.productListAdds.value`
+         * `eventType`
+         * `identityMap.authenticatedState`
+         * `identityMap.id`
+         * `identityMap.primary`
+         * `productListItems.SKU`
+         * `productListItems.currencyCode`
+         * `productListItems.name`
+         * `productListItems.priceTotal`
+         * `productListItems.product`
+         * `productListItems.productImageUrl`
+         * `productListItems.quantity`
+         * `timestamp`
+         * `commerce.cart.cartID`
+         * `endUserIDs._experience.emailid.authenticatedState`
+         * `endUserIDs._experience.emailid.id`
+         * `endUserIDs._experience.emailid.namespace.code`
+         * `_id`
 
 * Online-Käufe
    * Schema: Customer Digital Transactions
    * Felder:
-      * Ereignistyp
+      * `EventType`
    * Bedingung:
-      * Ereignistyp = commerce.purchases
+      * `EventType = commerce.purchases`
       * Felder:
-         * Commerce.purchases.id
-         * Commerce.purchases.value
-         * eventType
-         * identityMap.authenticatedState
-         * identityMap.id
-         * identityMap.primary
-         * productListItems.SKU
-         * productListItems.currencyCode
-         * productListItems.name
-         * productListItems.priceTotal
-         * productListItems.product
-         * productListItems.productImageUrl
-         * productListItems.quantity
-         * Zeitstempel
-         * endUserIDs._experience.emailid.authenticatedState
-         * endUserIDs._experience.emailid.id
-         * endUserIDs._experience.emailid.namespace.code
-         * _id
+         * `Commerce.purchases.id`
+         * `Commerce.purchases.value`
+         * `eventType`
+         * `identityMap.authenticatedState`
+         * `identityMap.id`
+         * `identityMap.primary`
+         * `productListItems.SKU`
+         * `productListItems.currencyCode`
+         * `productListItems.name`
+         * `productListItems.priceTotal`
+         * `productListItems.product`
+         * `productListItems.productImageUrl`
+         * `productListItems.quantity`
+         * `timestamp`
+         * `endUserIDs._experience.emailid.authenticatedState`
+         * `endUserIDs._experience.emailid.id`
+         * `endUserIDs._experience.emailid.namespace.code`
+         * `_id`
 
 * Markeninteraktion
    * Schema: Customer Digital Transactions
    * Felder:
-      * EventType
+      * `EventType`
    * Bedingung:
-      * EventType in application.launch, commerce.purchases, web.webpageDetails.pageViews
+      * `EventType in application.launch, commerce.purchases, web.webpagedetails.pageViews`
       * Felder:
-         * eventType
-         * identityMap.authenticatedState
-         * identityMap.id
-         * identityMap.primary
-         * productListItems.SKU
-         * productListItems.currencyCode
-         * productListItems.name
-         * productListItems.priceTotal
-         * productListItems.product
-         * productListItems.productImageUrl
-         * productListItems.quantity
-         * Zeitstempel
-         * web.webpagedetails.URL
-         * web.webpagedetails.isHomePage
-         * web.webpagedetails.name
-         * endUserIDs._experience.emailid.authenticatedState
-         * endUserIDs._experience.emailid.id
-         * endUserIDs._experience.emailid.namespace.code
-         * _id
-         * Commerce.purchases.id
-         * Commerce.purchases.value
-         * shipping.address.city
-         * shipping.address.countryCode
-         * shipping.address.postalCode
-         * shipping.address.state
-         * shipping.address.street1
-         * shipping.address.street2
-         * shipping.shipDate
-         * shipping.trackingNumber
-         * shipping.trackingURL
+         * `eventType`
+         * `identityMap.authenticatedState`
+         * `identityMap.id`
+         * `identityMap.primary`
+         * `productListItems.SKU`
+         * `productListItems.currencyCode`
+         * `productListItems.name`
+         * `productListItems.priceTotal`
+         * `productListItems.product`
+         * `productListItems.productImageUrl`
+         * `productListItems.quantity`
+         * `timestamp`
+         * `web.webpagedetails.URL`
+         * `web.webpagedetails.isHomePage`
+         * `web.webpagedetails.name`
+         * `endUserIDs._experience.emailid.authenticatedState`
+         * `endUserIDs._experience.emailid.id`
+         * `endUserIDs._experience.emailid.namespace.code`
+         * `_id`
+         * `Commerce.purchases.id`
+         * `Commerce.purchases.value`
+         * `shipping.address.city`
+         * `shipping.address.countryCode`
+         * `shipping.address.postalCode`
+         * `shipping.address.state`
+         * `shipping.address.street1`
+         * `shipping.address.street2`
+         * `shipping.shipDate`
+         * `shipping.trackingNumber`
+         * `shipping.trackingURL`
 
 +++
 
 +++Key Journey Logic
 
 * Journey-Einstiegslogik
-   * AddToCart-Ereignis
+   * `AddToCart` Ereignis
 
 * AuthenticatedState in authenticated
 
 * Bedingung: Offline-Käufe seit dem letzten Abbruch des Warenkorbs:
    * Schema: Offline-Kundentransaktionen v.1
-   * eventType = commerce.purchases
-   * timestamp > timestamp of cart was last abandoned
+   * `eventType = commerce.purchases`
+   * `timestamp > timestamp of cart was last abandoned`
 
 * Bedingung: Der Warenkorb wurde gelöscht, da der Warenkorb zuletzt abgebrochen wurde:
    * Schema: Customer Digital Transactions v.1
-   * eventType = commerce.cartCleared
-   * cartID (ID des Warenkorbs)
-   * timestamp > timestamp of cart was last abandoned
+   * `eventType = commerce.cartCleared`
+   * `cartID` (Kennung des Warenkorbs)
+   * `timestamp > timestamp of cart was last abandoned`
 
 * Target-Kanal auswählen (einen oder mehrere Kanäle für eine größere Reichweite auswählen)
    * E-Mail
-      * consent.marketing.email.val = y
+      * `consents.marketing.email.val = y`
    * Push-Benachrichtigung
-      * consents.marketing.push.val = y
+      * `consents.marketing.push.val = y`
    * SMS
-      * consent.marketing.sms.val = y
+      * `consents.marketing.sms.val = y`
    * Kanalpersonalisierung
       * Zeigen Sie Informationen zu Warenkorbdetails an und können mehrere Produkte in einem Tabellenformat anzeigen.
 
@@ -762,37 +714,33 @@ Mit Adobe Journey Optimizer können Sie Ihren Kunden verknüpfte, kontextbezogen
 
 >[!TAB Journey zur Bestellbestätigung]
 
-<!--
-![Customer order confirmation journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/order-confirmation-ajo.png) 
--->
-
 +++Events
 
 * Online-Käufe
    * Schema: Customer Digital Transactions
    * Felder:
-      * EventType
+      * `EventType`
    * Bedingung:
-      * Ereignistyp = commerce.purchases
+      * `EventType = commerce.purchases`
       * Felder:
-         * Commerce.purchases.id
-         * Commerce.purchases.value
-         * eventType
-         * identityMap.authenticatedState
-         * identityMap.id
-         * identityMap.primary
-         * productListItems.SKU
-         * productListItems.currencyCode
-         * productListItems.name
-         * productListItems.priceTotal
-         * productListItems.product
-         * productListItems.productImageUrl
-         * productListItems.quantity
-         * Zeitstempel
-         * endUserIDs._experience.emailid.authenticatedState
-         * endUserIDs._experience.emailid.id
-         * endUserIDs._experience.emailid.namespace.code
-         * _id
+         * `Commerce.purchases.id`
+         * `Commerce.purchases.value`
+         * `eventType`
+         * `identityMap.authenticatedState`
+         * `identityMap.id`
+         * `identityMap.primary`
+         * `productListItems.SKU`
+         * `productListItems.currencyCode`
+         * `productListItems.name`
+         * `productListItems.priceTotal`
+         * `productListItems.product`
+         * `productListItems.productImageUrl`
+         * `productListItems.quantity`
+         * `timestamp`
+         * `endUserIDs._experience.emailid.authenticatedState`
+         * `endUserIDs._experience.emailid.id`
+         * `endUserIDs._experience.emailid.namespace.code`
+         * `_id`
 
 +++
 
@@ -819,7 +767,7 @@ Weitere Informationen zum Erstellen von Journey finden Sie unter [Adobe Journey 
 
 ### Einrichten von Paid-Media-Anzeigen in Zielen
 
-Das Ziel-Framework wird für Paid-Media-Anzeigen verwendet. Sobald die Einwilligung überprüft wurde, wird sie an die verschiedenen konfigurierten Ziele gesendet. Zum Beispiel Briefpost, E-Mail usw.
+Das Ziel-Framework wird für Paid-Media-Anzeigen verwendet. Nachdem die Einwilligung überprüft wurde, wird sie an die verschiedenen konfigurierten Ziele gesendet. Zum Beispiel Briefpost, E-Mail, Push und SMS.
 
 #### Für Ziele erforderliche Daten
 
