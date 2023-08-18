@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche für die Streaming-Segmentierung
 description: Mit der Streaming-Segmentierung in Adobe Experience Platform können Sie die Segmentierung nahezu in Echtzeit durchführen und sich dabei auf die Relevanz der Daten konzentrieren. Im Rahmen der Streaming-Segmentierung erfolgt jetzt eine Segmentqualifizierung, wenn Daten in Platform aufgenommen werden. So wird die Notwendigkeit verringert, Segmentierungsaufträge zu planen und auszuführen. Mit dieser Funktion können die meisten Segmentregeln jetzt ausgewertet werden, während Daten an Platform übermittelt werden. Das bedeutet, dass die Segmentzugehörigkeit auch ohne Ausführung geplanter Segmentierungsaufträge auf dem neuesten Stand gehalten wird.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 23504dd0909488e2ee63bf356fba4c7f0f7320dc
 workflow-type: tm+mt
-source-wordcount: '1490'
-ht-degree: 83%
+source-wordcount: '1442'
+ht-degree: 80%
 
 ---
 
@@ -38,8 +38,7 @@ Eine Abfrage wird automatisch mithilfe der Streaming-Segmentierung ausgewertet, 
 | Einzelnes Ereignis innerhalb eines relativen Zeitfensters | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis verweist. | ![Ein Beispiel für ein einzelnes Ereignis innerhalb eines relativen Zeitfensters wird angezeigt.](../images/ui/streaming-segmentation/relative-hit-success.png) |
 | Einzelnes Ereignis mit einem Zeitfenster | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis mit einem Zeitfenster verweist. | ![Ein Beispiel für ein einzelnes Ereignis mit einem Zeitfenster wird angezeigt.](../images/ui/streaming-segmentation/historic-time-window.png) |
 | Nur Profil | Jede Segmentdefinition, die nur auf ein Profilattribut verweist. | |
-| Einzelnes Ereignis mit einem Profilattribut | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung und ein oder mehrere Profilattribute verweist. **Hinweis:** Die Abfrage wird sofort ausgewertet, wenn das Ereignis eintritt. Die Integration eines Profilereignisses erfolgt jedoch erst nach 24 Stunden. | ![Ein Beispiel für ein einzelnes Ereignis mit einem Profilattribut wird angezeigt.](../images/ui/streaming-segmentation/profile-hit.png) |
-| Einzelnes Ereignis mit einem Profilattribut innerhalb eines relativen Zeitfensters | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis und ein oder mehrere Profilattribute verweist. | ![Ein Beispiel für ein einzelnes Ereignis mit einem Profilattribut in einem relativen Zeitfenster wird angezeigt.](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| Einzelnes Ereignis mit einem Profilattribut innerhalb eines relativen Zeitfensters von weniger als 24 Stunden | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis mit einem oder mehreren Profilattributen verweist und innerhalb eines relativen Zeitfensters von weniger als 24 Stunden erfolgt. | ![Ein Beispiel für ein einzelnes Ereignis mit einem Profilattribut in einem relativen Zeitfenster wird angezeigt.](../images/ui/streaming-segmentation/profile-relative-success.png) |
 | Segment von Segmenten | Jede Segmentdefinition, die ein oder mehrere Batch- oder Streaming-Segmente enthält. **Hinweis**: Wenn ein Segment von Segmenten verwendet wird, erfolgt **alle 24 Stunden** eine Profildisqualifizierung. | ![Ein Beispiel für ein Segment von Segmenten wird angezeigt.](../images/ui/streaming-segmentation/two-batches.png) |
 | Mehrere Ereignisse mit einem Profilattribut | Jede Segmentdefinition, die **innerhalb der letzten 24 Stunden** auf mehrere Ereignisse verweist und (optional) ein oder mehrere Profilattribute hat. | ![Ein Beispiel für mehrere Ereignisse mit einem Profilattribut wird angezeigt.](../images/ui/streaming-segmentation/event-history-success.png) |
 
@@ -61,7 +60,7 @@ Wenn eine Segmentdefinition geändert wird, sodass sie die Kriterien für die St
 
 Darüber hinaus erfolgt die Aufhebung der Segmentqualifikation, ähnlich wie die Segmentqualifikation selbst, in Echtzeit. Wenn sich eine Zielgruppe nicht mehr für ein Segment qualifiziert, wird deren Qualifikation daher sofort aufgehoben. Wenn in der Segmentdefinition beispielsweise nach „Alle Benutzenden, die in den letzten drei Stunden rote Schuhe gekauft haben“ gefragt wird, wird die Qualifikation nach drei Stunden für alle Profile, die sich ursprünglich für die Segmentdefinition qualifiziert haben, aufgehoben.
 
-## Details zur Segmentdefinition für Streaming-Segmentierung
+## Definitionsdetails des Streaming-Segments
 
 Nachdem Sie ein für Streaming aktiviertes Segment erstellt haben, können Sie Details zu diesem Segment anzeigen.
 
@@ -69,7 +68,7 @@ Nachdem Sie ein für Streaming aktiviertes Segment erstellt haben, können Sie D
 
 Insbesondere wird die Metrik **[!UICONTROL Gesamtzahl an Qualifizierten]** angezeigt, die die Gesamtzahl qualifizierter Zielgruppen basierend auf Batch- und Streaming-Auswertungen für dieses Segment umfasst.
 
-Darunter befindet sich ein Liniendiagramm, das die Anzahl der neuen Zielgruppen anzeigt, die in den letzten 24 Stunden mit der Streaming-Auswertungsmethode aktualisiert wurden. Die Dropdown-Liste kann angepasst werden, um die letzten 24 Stunden, die letzte Woche oder die letzten 30 Tage anzuzeigen. Die Metrik **[!UICONTROL Aktualisierte neue Zielgruppe]** basiert auf der Änderung der Größe der Zielgruppe während des ausgewählten Zeitraums, gemäß der Bewertung durch die Streaming-Segmentierung. Diese Metrik umfasst nicht die gesamte qualifizierte Zielgruppe aus der täglichen Batch-Segmentauswertung.
+Darunter befindet sich ein Liniendiagramm, das die Anzahl der neuen Zielgruppen anzeigt, die in den letzten 24 Stunden mit der Streaming-Auswertungsmethode aktualisiert wurden. Die Dropdown-Liste kann angepasst werden, um die letzten 24 Stunden, die letzte Woche oder die letzten 30 Tage anzuzeigen. Die Metrik **[!UICONTROL Aktualisierte neue Zielgruppe]** basiert auf der Änderung der Größe der Zielgruppe während des ausgewählten Zeitraums, gemäß der Auswertung durch die Streaming-Segmentierung. Diese Metrik umfasst nicht die gesamte qualifizierte Zielgruppe aus der täglichen Batch-Segmentauswertung.
 
 >[!NOTE]
 >
