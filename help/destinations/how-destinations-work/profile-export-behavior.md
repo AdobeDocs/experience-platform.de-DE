@@ -2,10 +2,10 @@
 title: Profilexportverhalten
 description: Erfahren Sie, wie sich das Verhalten beim Profilexport zwischen den verschiedenen Integrationsmustern unterscheidet, die in Experience Platform-Zielen unterstützt werden.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: e6545dfaf5c43ac854986cfdc4f5cb153a07405b
 workflow-type: tm+mt
-source-wordcount: '2932'
-ht-degree: 62%
+source-wordcount: '2924'
+ht-degree: 60%
 
 ---
 
@@ -19,20 +19,20 @@ Es gibt mehrere Zieltypen in Experience Platform, wie in der Abbildung unten dar
 
 ![Abbildung mit den Zieltypen](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)
 
-## Microbatching und Aggregationsrichtlinie
+## Nachrichtenaggregation in Streaming-Zielen
 
-Bevor Sie sich mit bestimmten Informationen nach Zieltyp befassen, müssen Sie die Konzepte des Microbatching und der Aggregationsrichtlinie für *Streaming-Ziele* verstehen.
+Bevor Sie sich mit bestimmten Informationen nach Zieltyp befassen, sollten Sie sich mit dem Konzept der Nachrichtenaggregation für *Streaming-Ziele*.
 
 Experience Platform-Ziele exportieren Daten an API-basierte Integrationen in Form von HTTPS-Aufrufen. Sobald der Ziel-Service von anderen Upstream-Services darüber informiert wird, dass Profile infolge der Batch-Aufnahme, Streaming-Aufnahme, Batch-Segmentierung, Streaming-Segmentierung oder Identitätsdiagramm-Änderungen aktualisiert wurden, werden die Daten exportiert und an Streaming-Ziele gesendet.
 
-Der Vorgang, durch den Profile in HTTPS-Nachrichten aggregiert werden, bevor sie an Ziel-API-Endpunkte gesendet werden, wird als *Microbatching* bezeichnet.
+Profile werden in HTTPS-Nachrichten aggregiert, bevor sie an Ziel-API-Endpunkte gesendet werden.
 
 Nehmen wir das [Facebook-Ziel](/help/destinations/catalog/social/facebook.md) mit *[konfigurierbarer Aggregationsrichtlinie](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* als Beispiel. Daten werden aggregiert gesendet, wobei der Ziel-Service alle eingehenden Daten aus dem Upstream-Profil-Service nach einem der folgenden Kriterien aggregiert, bevor sie an Facebook gesendet werden:
 
 * Anzahl der Datensätze (maximal 10.000) oder
-* Zeitfenster-Intervall (30 Minuten)
+* Zeitfenster-Intervall (300 Sekunden)
 
-Der Schwellenwert, der von den oben genannten zuerst erreicht wird, löst einen Export nach Facebook aus. Im Dashboard [!DNL Facebook Custom Audiences] werden möglicherweise Zielgruppen aus Experience Platform in Schritten von 10.000 Datensätzen angezeigt. Es kann sein, dass alle 10 bis 15 Minuten 10.000 Datensätze angezeigt werden, da die Daten schneller verarbeitet und aggregiert werden als durch das 30-minütige Exportintervall vorgesehen. Außerdem werden sie schneller gesendet, etwa alle 10 bis 15 Minuten, bis alle Datensätze verarbeitet wurden. Wenn für einen Batch von 10.000 Datensätzen nicht genügend Datensätze vorhanden sind, wird die aktuelle Datensatzanzahl gesendet, sobald der Schwellenwert des Zeitfensters erreicht wird. Also werden möglicherweise auch kleinere Batches an Facebook gesendet.
+Der Schwellenwert, der von den oben genannten zuerst erreicht wird, löst einen Export nach Facebook aus. Im Dashboard [!DNL Facebook Custom Audiences] werden möglicherweise Zielgruppen aus Experience Platform in Schritten von 10.000 Datensätzen angezeigt. Möglicherweise werden alle 2-3 Minuten 10.000 Datensätze angezeigt, da die Daten schneller verarbeitet und aggregiert werden als das Exportintervall von 300 Sekunden. Außerdem werden sie schneller gesendet. Etwa alle 2-3 Minuten, bis alle Datensätze verarbeitet wurden. Wenn für einen Batch von 10.000 Datensätzen nicht genügend Datensätze vorhanden sind, wird die aktuelle Datensatzanzahl gesendet, sobald der Schwellenwert des Zeitfensters erreicht wird. Also werden möglicherweise auch kleinere Batches an Facebook gesendet.
 
 Ein weiteres Beispiel ist das [HTTP-API-Ziel](/help/destinations/catalog/streaming/http-destination.md), das mit `maxUsersPerRequest: 10` über eine Richtlinie zur *[Aggregation nach bestem Bemühen](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* verfügt. Das bedeutet, dass maximal zehn Profile aggregiert werden, bevor ein HTTP-Aufruf an dieses Ziel gesendet wird. Experience Platform versucht jedoch, Profile an das Ziel zu senden, sobald der Ziel-Service aktualisierte Neuauswertungsinformationen von einem Upstream-Service erhält.
 
@@ -46,7 +46,7 @@ Die Aggregationsrichtlinie ist konfigurierbar, und das Zielentwickler-Team kann 
 
 Die [Unternehmensziele](/help/destinations/destination-types.md#streaming-profile-export) in Experience Platform sind Amazon Kinesis, Azure Event Hubs und HTTP-API.
 
-Experience Platform optimiert das Profil-Exportverhalten für Ihr Unternehmensziel, sodass nur Daten an Ihren API-Endpunkt exportiert werden, wenn relevante Profilaktualisierungen infolge einer Zielgruppenqualifizierung oder anderer bedeutender Ereignisse erfolgt sind. Profile werden in den folgenden Situationen an Ihr Ziel exportiert:
+Experience Platform optimiert das Profil-Exportverhalten für Ihr Unternehmensziel, sodass nur Daten an Ihren API-Endpunkt exportiert werden, wenn relevante Profilaktualisierungen aufgrund einer Zielgruppenqualifikation oder anderer bedeutender Ereignisse vorgenommen wurden. Profile werden in den folgenden Situationen an Ihr Ziel exportiert:
 
 * Die Aktualisierung des Profils wurde durch eine Änderung in [Zielgruppenmitgliedschaft](/help/xdm/field-groups/profile/segmentation.md) für mindestens eine der Zielgruppen, die dem Ziel zugeordnet sind. Beispielsweise hat sich das Profil für eine der Zielgruppen qualifiziert oder eine der Zielgruppen verlassen, die dem Ziel zugeordnet sind.
 * Die Aktualisierung des Profils wurde durch eine Änderung der [Identitätszuordnung](/help/xdm/field-groups/profile/identitymap.md) bestimmt. Beispielsweise wurde einem Profil, das sich bereits für eine der Zielgruppen qualifiziert hatte, eine neue Identität im Identitätszuordnungsattribut hinzugefügt.
@@ -92,7 +92,7 @@ Das Verhalten beim Profilexport für Streaming-Ziele wie Facebook, Trade Desk un
 
 Beispiele für Streaming-Ziele sind die Ziele, die zu den [Social-Media- und Werbekategorien](/help/destinations/destination-types.md#categories) im Katalog gehören.
 
-Experience Platform optimiert das Verhalten beim Profilexport an Ihr Streaming-Ziel, sodass nur Daten an Streaming-API-basierte Ziele exportiert werden, wenn nach der Zielgruppenqualifizierung oder anderen wichtigen Ereignissen relevante Profilaktualisierungen durchgeführt wurden. Profile werden in den folgenden Situationen an Ihr Ziel exportiert:
+Experience Platform optimiert das Verhalten des Profilexports an Ihr Streaming-Ziel, sodass nur Daten an Streaming-API-basierte Ziele exportiert werden, wenn nach der Zielgruppenqualifizierung oder anderen wichtigen Ereignissen relevante Aktualisierungen an einem Profil stattgefunden haben. Profile werden in den folgenden Situationen an Ihr Ziel exportiert:
 
 * Die Aktualisierung des Profils wurde durch eine Änderung in [Zielgruppenmitgliedschaft](/help/xdm/field-groups/profile/segmentation.md) für mindestens eine der Zielgruppen, die dem Ziel zugeordnet sind. Beispielsweise hat sich das Profil für eine der Zielgruppen qualifiziert oder eine der Zielgruppen verlassen, die dem Ziel zugeordnet sind.
 * Die Aktualisierung des Profils wurde durch eine Änderung der [Identitätszuordnung](/help/xdm/field-groups/profile/identitymap.md) für einen Identity-Namespace bestimmt, der für diese Zielinstanz für den Export markiert ist. Beispielsweise wurde einem Profil, das sich bereits für eine der Zielgruppen qualifiziert hatte, eine neue Identität im Identitätszuordnungsattribut hinzugefügt.
