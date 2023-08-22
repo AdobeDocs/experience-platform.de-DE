@@ -1,14 +1,19 @@
 ---
 title: Parameterisierte Abfragen
 description: Erfahren Sie, wie Sie parametrisierte Abfragen in der Adobe Experience Platform-Benutzeroberfläche verwenden.
-source-git-commit: d8845e080489af12e98badc892bb60cb9749bd47
+source-git-commit: 4fc94fc39fa09756a440b5e532330cd310dd96d2
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '755'
 ht-degree: 2%
 
 ---
 
-# Parametrisierte Abfragen (begrenzte Version)
+# Parametrisierte Abfragen (begrenzte Version) {#parameterized-queries}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryService_queryEditor_parameterizedQueries"
+>title="Parametrisierte Abfragen"
+>abstract="Verwenden Sie parametrierte Abfragen, um zum Zeitpunkt der Ausführung Parameterwerte hinzuzufügen. Auf diese Weise können Sie mit dynamischen Daten arbeiten und Abfragen für verschiedene Anwendungsfälle wiederverwenden. Verwenden Sie die `'$'` -Präfix verwenden, um einen Abfrageparameter in Ihre Abfrage im Texteditor einzugeben. Fügen Sie anschließend im Abschnitt Abfrageparameter unter dem Editor einen Wert für den Schlüssel hinzu."
 
 >[!IMPORTANT]
 >
@@ -18,7 +23,7 @@ Query Service unterstützt die Verwendung parametrisierter Abfragen im Abfrage-E
 
 ## Voraussetzungen
 
-Lesen Sie vor dem Fortfahren mit diesem Handbuch die [Anleitung zur Benutzeroberfläche des Abfrage-Editors](./user-guide.md). Das Handbuch zum Abfrage-Editor enthält detaillierte Informationen zum Schreiben, Validieren und Ausführen von Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche.
+Lesen Sie vor dem Fortfahren mit diesem Handbuch die [Anleitung zur Benutzeroberfläche des Abfrage-Editors](./user-guide.md). Das Handbuch zum Abfrage-Editor enthält detaillierte Informationen zum Schreiben, Überprüfen und Ausführen von Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche.
 
 >[!NOTE]
 >
