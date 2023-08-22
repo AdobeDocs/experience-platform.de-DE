@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie mit dem AI-Assistenten zu Experience Platform
 badge: Alpha
 hide: true
 hidefromtoc: true
-source-git-commit: 65abbb4dde5b83f597a3a5bfd96ce7c081c88275
+source-git-commit: ca606e4e29f4ba1df281f47a86b4e3cfa850ae35
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2627'
+ht-degree: 1%
 
 ---
 
@@ -72,7 +72,7 @@ Hier können Sie Ihre Frage in das Textfeld eingeben und den KI-Assistenten nach
 
 Betrachten Sie einen Anwendungsfall, in dem Sie eine **Gerätehandel im Ereignisschema**. Während der Erstellung des ExperienceEvent-Schemas treffen Sie auf die `eventType` -Feld. An dieser Stelle können Sie Ihren Workflow verlassen und in der Dokumentation unter [Grundlagen der Schemakomposition](../xdm/schema/composition.md)oder Sie können den KI-Assistenten verwenden, um sofort Antworten auf Ihre Fragen abzurufen.
 
-Geben Sie zunächst Ihre Frage in das bereitgestellte Textfeld ein. Im folgenden Beispiel erhält der KI-Assistent die Frage: &quot;Was ist das Feld eventType in einem Erlebnisereignis-Schema?&quot;
+Geben Sie zunächst Ihre Frage in das bereitgestellte Textfeld ein. Im folgenden Beispiel wird der KI-Assistent mit der Frage konfrontiert: &quot;**Was ist das Feld eventType in einem Erlebnisereignis-Schema?**&quot;
 
 ![Der KI-Assistent für das Experience Platform mit der folgenden Frage, der zur Abfrage vorbereitet wurde: &quot;Was ist das Feld eventType in einem ExperienceEvent-Schema?](./images/ai-assistant/question.png)
 
@@ -82,7 +82,7 @@ Der KI-Assistent fragt dann seine Wissensdatenbank ab und berechnet eine Antwort
 
 Sie können mehr über ein bestimmtes Thema erfahren, indem Sie eine Frage stellen. Im nächsten Beispiel wird der KI-Assistent gefragt, wie der eventType in der Segmentierung verwendet werden kann.
 
-![Eine Folgenachricht und eine Antwort wurden im KI-Assistenten für Experience Platform angezeigt.](./images/ai-assistant/follow-up-question.png)
+![Eine Folgenachricht und eine Antwort wurden im KI-Assistenten für Experience Platform angezeigt.](./images/ai-assistant/follow-up-answer.png)
 
 Sie können auch Fragen zu Ihrer Datennutzung an den KI-Assistenten stellen. Wenn Sie sich nach der Datennutzung erkundigen, müssen Sie sich in einer aktiven Sandbox befinden, damit der KI-Assistent Ihre Abfrage beantworten kann.
 
@@ -100,15 +100,13 @@ Um Feedback zu geben, wählen Sie entweder Daumen nach oben oder Daumen nach dem
 
 >[!ENDSHADEBOX]
 
-![Der KI-Assistent für das Experience Platform mit Optionen, die Sie nach einer Abfrage auswählen können.](./images/ai-assistant/options.png)
-
 >[!BEGINTABS]
 
 >[!TAB Quelle ansehen]
 
 Auswählen **[!UICONTROL Quelle anzeigen]** für eine Liste von Links zur Dokumentation, auf die der AI-Assistent verweist, um seine Antwort zu berechnen.
 
-![Die Links zu den im KI-Assistenten angezeigten Zitaten.](./images/ai-assistant/citations.png)
+![Die Links zur im KI-Assistenten angezeigten Quelle.](./images/ai-assistant/show-sources.png)
 
 >[!TAB Wirbel nach oben]
 
@@ -134,7 +132,7 @@ Wählen Sie das Flag-Symbol aus, um weitere Berichte zu Ihrem Erlebnis mit dem K
 
 Sie können auch die vom AI-Assistenten bereitgestellten voreingestellten Eingabeaufforderungen für die ersten Schritte verwenden.
 
-![Die angegebenen Eingabeaufforderungen finden Sie im Bedienfeld &quot;KI-Assistent&quot;.](./images/ai-assistant/ideas-to-get-started.png)
+![Die angegebenen Eingabeaufforderungen finden Sie im Bedienfeld &quot;KI-Assistent&quot;.](./images/ai-assistant/ideas.png)
 
 ## Weitere Informationen
 
