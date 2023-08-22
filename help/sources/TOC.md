@@ -4,9 +4,9 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
-source-git-commit: 732693b34bf4425cd3a44fba5647d337588abfa0
+source-git-commit: 7f9a0965419a85894bd2cab4e78dd336874a5933
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '989'
 ht-degree: 99%
 
 ---
@@ -325,6 +325,7 @@ ht-degree: 99%
       - [Datenfluss der Zahlungsverbindung](tutorials/ui/dataflow/payments.md)
       - [Datenfluss der Protokollverbindung](tutorials/ui/dataflow/protocols.md)
    - [Erstellen eines Quellen-Datenflusses mithilfe von Vorlagen in der Benutzeroberfläche](tutorials/ui/templates.md)
+   - [On-Demand-Aufnahme](tutorials/ui/on-demand-ingestion.md)
    - [Überwachen von Batch-Datenflüssen](tutorials/ui/monitor.md)
    - [Überwachen von Streaming-Datenflüssen](tutorials/ui/monitor-streaming.md)
    - [Aktualisieren von Konten](tutorials/ui/update.md)
