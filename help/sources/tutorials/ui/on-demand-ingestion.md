@@ -1,9 +1,7 @@
 ---
 title: On-Demand-Aufnahme für Datenflüsse zu Quellen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Experience Platform-Benutzeroberfläche Datenflüsse bei Bedarf für Ihre Quellverbindungen erstellen.
-hide: true
-hidefromtoc: true
-source-git-commit: 812aa0bb0ec9199ef575ac972038115afc2fa647
+source-git-commit: ce1e6c08d1e53346c11f9746cea524689f402031
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 11%
