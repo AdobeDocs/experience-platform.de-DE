@@ -3,10 +3,10 @@ keywords: Experience Platform; Identität; Identitätsdienst; Fehlerbehebung; Li
 title: Limits für Identity Service
 description: Dieses Dokument enthält Informationen zu Verwendung und Quotenbegrenzungen für Identity Service-Daten, die Sie bei der Optimierung Ihrer Verwendung des Identitätsdiagramms unterstützen.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 60bab17d2ecb2e68bf500aea2d68587a125b35bb
+source-git-commit: 2f226ae1356733b89b10e73ef1a371c42da05295
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 14%
+source-wordcount: '999'
+ht-degree: 8%
 
 ---
 
@@ -31,10 +31,10 @@ In der folgenden Tabelle sind statische Beschränkungen für Identitätsdaten au
 
 | Leitplanke | Limit | Anmerkungen |
 | --- | --- | --- |
-| Anzahl der Identitäten in einem Diagramm | 150 | Die Begrenzung wird auf Sandbox-Ebene angewendet. Sobald die Anzahl der Identitäten 150 oder mehr erreicht hat, werden keine neuen Identitäten hinzugefügt und das Identitätsdiagramm wird nicht aktualisiert. Diagramme können Identitäten größer als 150 anzeigen, wenn sie eine oder mehrere Diagramme mit weniger als 150 Identitäten verbinden. **Hinweis**: Die maximale Anzahl von Identitäten in einem Identitätsdiagramm **für ein einzelnes zusammengeführtes Profil** as 50. Zusammengeführte Profile, die auf Identitätsdiagrammen mit mehr als 50 Identitäten basieren, werden aus dem Echtzeit-Kundenprofil ausgeschlossen. Weitere Informationen finden Sie im Handbuch unter [Limits für Profildaten](../profile/guardrails.md). |
+| (Aktuelles Verhalten) Anzahl der Identitäten in einem Diagramm | 150 | Die Begrenzung wird auf Sandbox-Ebene angewendet. Sobald die Anzahl der Identitäten 150 oder mehr erreicht hat, werden keine neuen Identitäten hinzugefügt und das Identitätsdiagramm wird nicht aktualisiert. Diagramme können Identitäten größer als 150 anzeigen, wenn sie eine oder mehrere Diagramme mit weniger als 150 Identitäten verbinden. **Hinweis**: Die maximale Anzahl von Identitäten in einem Identitätsdiagramm **für jedes einzelne zusammengeführte Profil** as 50. Zusammengeführte Profile, die auf Identitätsdiagrammen mit mehr als 50 Identitäten basieren, werden aus dem Echtzeit-Kundenprofil ausgeschlossen. Weitere Informationen finden Sie im Handbuch unter [Limits für Profildaten](../profile/guardrails.md). |
+| (Bevorstehendes Verhalten) Anzahl der Identitäten in einem Diagramm [!BADGE Beta]{type=Informative} | 50 | Wenn ein Diagramm mit 50 verknüpften Identitäten aktualisiert wird, wendet Identity Service einen &quot;First-in-First-out&quot;-Mechanismus an und löscht die älteste Identität, um Platz für die neueste Identität zu schaffen. Das Löschen basiert auf Identitätstyp und Zeitstempel. Die Begrenzung wird auf Sandbox-Ebene angewendet. Lesen Sie die [Anhang](#appendix) für weitere Informationen dazu, wie Identity Service Identitäten löscht, sobald die Grenze erreicht ist. |
 | Anzahl der Identitäten in einem XDM-Datensatz | 20 | Die erforderliche Mindestanzahl von XDM-Datensätzen beträgt zwei. |
 | Anzahl der benutzerdefinierten Namespaces | Keine | Die Anzahl der benutzerdefinierten Namespaces, die Sie erstellen können, ist unbegrenzt. |
-| Anzahl der Diagramme | Keine | Die Anzahl der Identitätsdiagramme, die Sie erstellen können, ist unbegrenzt. |
 | Anzahl der Zeichen für einen Namespace-Anzeigenamen oder ein Identitätssymbol | Keine | Die Anzahl der Zeichen eines Namespace-Anzeigenamens oder Identitätssymbols ist unbegrenzt. |
 
 ### Überprüfung des Identitätswerts
@@ -48,7 +48,7 @@ In der folgenden Tabelle sind die vorhandenen Regeln aufgeführt, die Sie befolg
 
 ### Erfassung von Identitäts-Namespaces
 
-Ab dem 31. März 2023 blockiert Identity Service die Erfassung von Adobe Analytics ID (AAID) für neue Kunden. Diese Identität wird normalerweise über die [Adobe Analytics-Quelle](../sources/connectors/adobe-applications/analytics.md) und [Adobe Audience Manager-Quelle](../sources//connectors/adobe-applications/audience-manager.md) und ist redundant, da die ECID denselben Webbrowser darstellt. Wenn Sie diese Standardkonfiguration ändern möchten, wenden Sie sich an Ihr Adobe-Account-Team.
+Ab dem 31. März 2023 blockiert Identity Service die Erfassung von Adobe Analytics ID (AAID) für neue Kunden. Diese Identität wird normalerweise über die [Adobe Analytics-Quelle](../sources/connectors/adobe-applications/analytics.md) und [Adobe Audience Manager-Quelle](../sources//connectors/adobe-applications/audience-manager.md) und ist redundant, da die ECID denselben Webbrowser darstellt. Wenden Sie sich an Ihr Adobe-Account-Team, wenn Sie diese Standardkonfiguration ändern möchten.
 
 ## Nächste Schritte
 
@@ -56,3 +56,55 @@ Weitere Informationen zu [!DNL Identity Service]:
 
 * [[!DNL Identity Service] – Übersicht](home.md)
 * [Identitätsdiagramm-Viewer](ui/identity-graph-viewer.md)
+
+
+## Anhang {#appendix}
+
+Der folgende Abschnitt enthält zusätzliche Informationen zu Limits für Identity Service.
+
+### [!BADGE Beta]{type=Informative} Die Löschlogik bei der Aktualisierung eines Identitätsdiagramms bei Kapazität {#deletion-logic}
+
+>[!IMPORTANT]
+>
+>Die folgende Löschlogik ist ein bevorstehendes Verhalten von Identity Service. Wenden Sie sich an Ihren Kundenbetreuer, wenn Ihre Produktions-Sandbox eine Änderung des Identitätstyps anfordern soll:
+>
+> * Ein benutzerdefinierter Namespace, bei dem die Personen-IDs (z. B. CRM-IDs) als Cookie-/Geräte-Identitätstyp konfiguriert sind.
+> * Ein benutzerdefinierter Namespace, bei dem Cookie-/Geräte-IDs als geräteübergreifender Identitätstyp konfiguriert sind.
+
+
+Wenn ein vollständiges Identitätsdiagramm aktualisiert wird, löscht Identity Service die älteste Identität im Diagramm, bevor die neueste Identität hinzugefügt wird. Dies dient der Gewährleistung der Genauigkeit und Relevanz von Identitätsdaten. Dieser Löschvorgang folgt zwei Hauptregeln:
+
+#### Regel 1 Löschung wird basierend auf dem Identitätstyp eines Namespace priorisiert
+
+Die Löschpriorität lautet wie folgt:
+
+1. Cookie-ID
+2. Geräte-ID
+3. Geräteübergreifende ID, E-Mail und Telefon
+
+#### Regel 2 Löschung basiert auf dem Zeitstempel, der in der Identität gespeichert ist.
+
+Jede in einem Diagramm verknüpfte Identität hat einen eigenen Zeitstempel. Wenn ein vollständiges Diagramm aktualisiert wird, löscht Identity Service die Identität mit dem ältesten Zeitstempel.
+
+Wenn ein vollständiges Diagramm mit einer neuen Identität aktualisiert wird, bestimmen diese beiden Regeln gemeinsam, welche ältere Identität gelöscht wird. Identity Service löscht zunächst die älteste Cookie-ID, dann die älteste Geräte-ID und schließlich die älteste geräteübergreifende ID/E-Mail/Telefon.
+
+>[!NOTE]
+>
+>Wenn die zu löschende Identität mit mehreren anderen Identitäten im Diagramm verknüpft ist, werden auch die Links, die diese Identität verbinden, gelöscht.
+
+>[!BEGINSHADEBOX]
+
+**Eine visuelle Darstellung der Löschlogik**
+
+![Ein Beispiel für die älteste Identität, die gelöscht wird, um die neueste Identität aufzunehmen](./images/graph-limits-v3.png)
+
+*Diagrammnotizen:*
+
+* `t` = Zeitstempel.
+* Der Wert eines Zeitstempels entspricht der Neuigkeit einer bestimmten Identität. Beispiel: `t1` stellt die erste verknüpfte Identität (älteste) dar und `t51` würde die neueste verknüpfte Identität darstellen.
+
+In diesem Beispiel löscht Identity Service zuerst die vorhandene Identität mit dem ältesten Zeitstempel, bevor das Diagramm auf der linken Seite mit einer neuen Identität aktualisiert werden kann. Da die älteste Identität jedoch eine Geräte-ID ist, überspringt Identity Service diese Identität, bis sie zum Namespace mit einem Typ gelangt, der höher in der Liste mit Löschprioritäten ist, was in diesem Fall der Fall ist `ecid-3`. Sobald die älteste Identität mit einem höheren Löschprioritätstyp entfernt wurde, wird das Diagramm mit einem neuen Link aktualisiert. `ecid-51`.
+
+* In dem seltenen Fall, dass es zwei Identitäten mit demselben Zeitstempel und Identitätstyp gibt, sortiert Identity Service die IDs basierend auf [XID](./api/list-native-id.md) und führen Löschung durch.
+
+>[!ENDSHADEBOX]

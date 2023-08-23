@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Identity Service
 breadcrumb-title: Anleitung zum Platform Identity Service
 user-guide-description: Verknüpfen Sie Kundenidentitäten zwischen Geräten und Systemen, um personalisierte digitale Erlebnisse bereitzustellen.
 feature: Identities
-source-git-commit: b5214301f48418a0d00575143caa2937b8beed62
+source-git-commit: 2617d913d73dcd7dd877fe877a7b2b4d79396a5f
 workflow-type: tm+mt
-source-wordcount: '119'
-ht-degree: 94%
+source-wordcount: '112'
+ht-degree: 100%
 
 ---
 
@@ -17,7 +17,6 @@ ht-degree: 94%
 - [Identity Service – Übersicht](home.md)
 - [Übersicht über Identitäts-Namespaces](namespaces.md)
 - [Leitplanken für Identitätsdaten](guardrails.md)
-- [Limits für Identitätsdaten mit Löschlogik](guardrails-beta.md)
 - Identity Service-API {#api}
    - [Erste Schritte](api/getting-started.md)
    - [Kennzeichnen eines Felds als Identität](api/label-identities.md)
