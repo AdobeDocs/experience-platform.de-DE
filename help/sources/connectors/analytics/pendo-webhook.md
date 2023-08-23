@@ -1,24 +1,19 @@
 ---
 title: Pendo Source Overview
 description: Erfahren Sie, wie Sie Pendo über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden können, indem Sie Webhooks nutzen.
-badge: Beta
 exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 20%
+source-wordcount: '352'
+ht-degree: 19%
 
 ---
 
 # [!DNL Pendo]
 
->[!NOTE]
->
->Die [!DNL Pendo]-Quelle befindet sich in der Beta-Phase. Bitte lesen Sie die [Quellen - Übersicht](../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
-
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-Experience Platform unterstützt die Aufnahme von Daten aus einer Analytics-Anwendung von Drittanbietern. Unterstützung für Analytics-Anbieter: [!DNL Pendo].
+Experience Platform unterstützt die Aufnahme von Daten aus Analytics-Anwendungen von Drittanbietern. Unterstützung für Analytics-Anbieter: [!DNL Pendo].
 
 [[!DNL Pendo]](https://pendo.io/) ist eine Produktanalyseanwendung, die Software-Unternehmen bei der Entwicklung von Produkten unterstützt, die bei Kunden ankommen. Die App ermöglicht es Softwareherstellern, ihre Produkte mit einer breiten Palette von Tools einzubetten, die sowohl zu einer besseren Produkterfahrung für Benutzer als auch zu neuen Einblicken für das Produktteam führen können.
 
@@ -50,4 +45,4 @@ Die folgende Dokumentation enthält Informationen zum Erstellen einer [!DNL Pend
 
 ### Verbinden von [!DNL Pendo] mit Platform über die Benutzeroberfläche {#connect-to-platform-using-ui}
 
-* [Erstellen Sie eine Quellverbindung, um sie zu bringen. [!DNL Pendo] Daten an Platform mithilfe der Benutzeroberfläche](../../tutorials/ui/create/analytics/pendo-webhook.md)
+* [Erstellen Sie eine Quellverbindung, um sie zu bringen [!DNL Pendo] Daten an Platform mithilfe der Benutzeroberfläche](../../tutorials/ui/create/analytics/pendo-webhook.md)

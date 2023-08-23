@@ -1,20 +1,15 @@
 ---
 title: Übersicht über die Chatlio-Quelle
 description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche Chatlio mit Adobe Experience Platform verbinden können, indem Sie Webhooks nutzen.
-badge: Beta
 exl-id: 4a71d1dc-e0eb-443e-a956-8caa0e82fa18
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 21%
+source-wordcount: '346'
+ht-degree: 20%
 
 ---
 
 # [!DNL Chatlio]
-
->[!NOTE]
->
->Die [!DNL Chatlio]-Quelle befindet sich in der Beta-Phase. Bitte lesen Sie die [Quellen - Übersicht](../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
@@ -55,4 +50,4 @@ Die folgende Dokumentation enthält Informationen zum Erstellen einer [!DNL Chat
 
 ### Verbinden von [!DNL Chatlio] mit Platform über die Benutzeroberfläche {#connect-to-platform-using-ui}
 
-* [Erstellen Sie eine Quellverbindung, um sie zu bringen. [!DNL Chatlio] Daten an Platform mithilfe der Benutzeroberfläche](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md)
+* [Erstellen Sie eine Quellverbindung, um sie zu bringen [!DNL Chatlio] Daten an Platform mithilfe der Benutzeroberfläche](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md)

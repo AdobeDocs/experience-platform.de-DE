@@ -2,18 +2,14 @@
 title: Erstellen Sie eine Quellverbindung und einen Datenfluss für SugarCRM-Konten und -Kontakte mithilfe der Flow Service-API.
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit SugarCRM-Konten und -Kontakten verbinden.
 exl-id: 2b422b39-5b86-4313-a214-725044d9812c
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '2181'
+source-wordcount: '2164'
 ht-degree: 55%
 
 ---
 
-# (Beta) Erstellen Sie eine Quellverbindung und einen Datenfluss für [!DNL SugarCRM Accounts & Contacts] Verwenden der Flow Service-API
-
->[!NOTE]
->
->Die [!DNL SugarCRM Accounts & Contacts]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
+# Erstellen Sie eine Quellverbindung und einen Datenfluss für [!DNL SugarCRM Accounts & Contacts] Verwenden der Flow Service-API
 
 Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer [!DNL SugarCRM Accounts & Contacts] Quellverbindung und Erstellen eines Datenflusses zum [[!DNL SugarCRM]](https://www.sugarcrm.com/) Daten zu Konten und Kontakten mit Adobe Experience Platform mithilfe des [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -38,7 +34,7 @@ Um eine Verbindung zwischen [!DNL SugarCRM Accounts & Contacts] und Platform her
 
 ## Verbinden [!DNL SugarCRM Accounts & Contacts] zur Plattform mithilfe der [!DNL Flow Service] API
 
-Im Folgenden werden die Schritte beschrieben, die Sie zur Authentifizierung Ihrer [!DNL SugarCRM] -Quelle, erstellen Sie eine Quellverbindung und erstellen Sie einen Datenfluss, um Ihre Konto- und Kontaktdaten in die Experience Platform zu übertragen.
+Im Folgenden werden die Schritte beschrieben, die Sie zur Authentifizierung Ihrer [!DNL SugarCRM] -Quelle, erstellen Sie eine Quellverbindung und erstellen Sie einen Datenfluss, um Ihre Konto- und Kontaktdaten an Experience Platform zu übertragen.
 
 ### Erstellen einer Basisverbindung {#base-connection}
 
@@ -124,7 +120,7 @@ Bei der Durchführung von GET-Anfragen zur Analyse der Dateistruktur und des Inh
 | `{OBJECT}` | Dieser Parameter ist nur beim Anzeigen eines bestimmten Ordners erforderlich. Der Wert stellt den Pfad des Ordners dar, den Sie untersuchen möchten. Für diese Quelle würde der Wert `json`. |
 | `fileType=json` | Der Dateityp der Datei, die Sie in Platform laden möchten. Zurzeit `json` ist der einzige unterstützte Dateityp. |
 | `{PREVIEW}` | Ein boolescher Wert, der definiert, ob der Inhalt der Verbindung die Vorschau unterstützt. |
-| `{SOURCE_PARAMS}` | Definiert Parameter für die Quelldatei, die Sie in Platform laden möchten. Um den akzeptierten Formattyp für `{SOURCE_PARAMS}` abzurufen, müssen Sie die gesamte Zeichenfolge  in base64 kodieren. <br> [!DNL SugarCRM Accounts & Contacts] unterstützt mehrere APIs. Übergeben Sie je nach dem von Ihnen verwendeten Objekttyp einen der folgenden Schritte: <ul><li>`accounts` : Unternehmen, zu denen Ihre Organisation eine Beziehung hat.</li><li>`contacts` : Einzelpersonen, zu denen Ihre Organisation eine feste Beziehung hat.</li></ul> |
+| `{SOURCE_PARAMS}` | Definiert Parameter für die Quelldatei, die Sie in Platform laden möchten. Um den akzeptierten Formattyp für `{SOURCE_PARAMS}` abzurufen, müssen Sie die gesamte Zeichenfolge  in base64 kodieren. <br> [!DNL SugarCRM Accounts & Contacts] unterstützt mehrere APIs. Übergeben Sie je nach dem von Ihnen verwendeten Objekttyp einen der folgenden Schritte: <ul><li>`accounts` : Unternehmen, mit denen Ihre Organisation eine Beziehung unterhält.</li><li>`contacts` : Individuelle Personen, zu denen Ihre Organisation eine feste Beziehung unterhält.</li></ul> |
 
 Die [!DNL SugarCRM Accounts & Contacts] unterstützt mehrere APIs. Je nachdem, welcher Objekttyp Sie verwenden, lautet die zu sendende Anforderung wie folgt:
 
@@ -655,7 +651,7 @@ curl -X POST \
 | `baseConnectionId` | Die Basisverbindungs-ID von [!DNL SugarCRM Accounts & Contacts]. Diese ID wurde in einem früheren Schritt generiert. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die Ihrer Quelle entspricht. |
 | `data.format` | Das Format der [!DNL SugarCRM Accounts & Contacts]-Daten, die Sie aufnehmen möchten. Derzeit wird nur das Datenformat `json` unterstützt. |
-| `object_type` | [!DNL SugarCRM Accounts & Contacts] unterstützt mehrere APIs. Übergeben Sie je nach dem von Ihnen verwendeten Objekttyp einen der folgenden Schritte: <ul><li>`accounts` : Unternehmen, zu denen Ihre Organisation eine Beziehung hat.</li><li>`contacts` : Einzelpersonen, zu denen Ihre Organisation eine feste Beziehung hat.</li></ul> |
+| `object_type` | [!DNL SugarCRM Accounts & Contacts] unterstützt mehrere APIs. Übergeben Sie je nach dem von Ihnen verwendeten Objekttyp einen der folgenden Schritte: <ul><li>`accounts` : Unternehmen, mit denen Ihre Organisation eine Beziehung unterhält.</li><li>`contacts` : Individuelle Personen, zu denen Ihre Organisation eine feste Beziehung unterhält.</li></ul> |
 | `path` | Dieser Wert hat denselben Wert, den Sie für *`object_type`*. |
 
 **Antwort**
@@ -983,7 +979,7 @@ Aktualisieren Sie die Details Ihres Datenflusses, z. B. seinen Namen und seine B
 
 ### Konto aktualisieren
 
-Aktualisieren Sie den Namen, die Beschreibung und die Anmeldeinformationen Ihres Quellkontos, indem Sie eine PATCH-Anfrage an die [!DNL Flow Service] API bei der Bereitstellung Ihrer Basis-Verbindungs-ID als Abfrageparameter. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` im `If-Match` -Kopfzeile. Die vollständigen API-Beispiele finden Sie im Handbuch unter [Quellkonto mithilfe der API aktualisieren](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+Aktualisieren Sie den Namen, die Beschreibung und die Anmeldeinformationen Ihres Quellkontos, indem Sie eine PATCH-Anfrage an die [!DNL Flow Service] API bei der Bereitstellung Ihrer Basis-Verbindungs-ID als Abfrageparameter. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` im `If-Match` -Kopfzeile. Die vollständigen API-Beispiele finden Sie im Handbuch unter [Aktualisieren Ihres Quellkontos mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
 
 ### Löschen des Datenflusses
 

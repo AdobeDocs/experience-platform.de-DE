@@ -2,18 +2,14 @@
 title: Erstellen einer Quellverbindung zu SugarCRM-Konten und -Kontakten über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung zu SugarCRM-Konten und -Kontakten erstellen.
 exl-id: 45840d7e-4c19-4720-8629-be446347862d
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 0de4b32ac2ddc90dabefd469b6658388a4532e0d
 workflow-type: tm+mt
-source-wordcount: '779'
-ht-degree: 39%
+source-wordcount: '762'
+ht-degree: 41%
 
 ---
 
-# (Beta) Erstellen Sie eine [!DNL SugarCRM Accounts & Contacts] Quellverbindung in der Benutzeroberfläche
-
->[!NOTE]
->
->Die [!DNL SugarCRM Accounts & Contacts]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
+# Erstellen eines Quell-Connectors für [!DNL SugarCRM Accounts & Contacts] in der Benutzeroberfläche
 
 In diesem Tutorial werden Schritte zum Erstellen eines [!DNL SugarCRM Accounts & Contacts] Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche.
 
@@ -107,7 +103,7 @@ Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL SugarCRM Acco
 
 ## Zusätzliche Ressourcen
 
-Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei der Verwendung der [!DNL SugarCRM] -Quelle.
+Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei der Verwendung der Variablen [!DNL SugarCRM] -Quelle.
 
 ### Leitplanken {#guardrails}
 
@@ -117,7 +113,7 @@ Die [!DNL SugarCRM] Die API-Drosselraten betragen 90 Aufrufe pro Minute oder 200
 
 Überprüfen, ob Sie die Quelle richtig eingerichtet haben und [!DNL SugarCRM Accounts & Contacts] Daten werden erfasst, führen Sie die folgenden Schritte aus:
 
-* Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Datenflüsse anzeigen]** neben dem [!DNL SugarCRM Accounts & Contacts] Kartenmenü im Quellkatalog. Wählen Sie als Nächstes **[!UICONTROL Vorschau des Datensatzes anzeigen]** , um die erfassten Daten zu überprüfen.
+* Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Datenflüsse anzeigen]** neben dem [!DNL SugarCRM Accounts & Contacts] Kartenmenü im Quellkatalog. Wählen Sie als Nächstes **[!UICONTROL Datensatz-Vorschau]** , um die erfassten Daten zu überprüfen.
 
 * Je nach dem Objekttyp, mit dem Sie arbeiten, können Sie die aggregierten Daten anhand der in der Variablen [!DNL SugarMarket] Seiten zu Konten oder Kontakten unten:
 
