@@ -3,16 +3,16 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;attri
 title: Richtlinien zur Zugriffssteuerung verwalten
 description: Dieses Dokument enthält Informationen zum Verwalten von Zugriffskontrollrichtlinien über die Benutzeroberfläche "Berechtigungen"in Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 504c73fc73ce41f2c1b3159478fc7fe9b4d20a9d
+source-git-commit: 7cafe1f7e9dd6789db4199631cb605be666ce48a
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 31%
+source-wordcount: '613'
+ht-degree: 13%
 
 ---
 
 # Richtlinien zur Zugriffskontrolle verwalten
 
-Zugriffskontrollrichtlinien sind Anweisungen, die Attribute zusammenführen, um zulässige und unzulässige Maßnahmen festzulegen. Zugriffsrichtlinien können entweder lokal oder global sein und andere Richtlinien überschreiben. Adobe bietet eine Standardrichtlinie, die sofort oder sobald Ihr Unternehmen bereit ist, den Zugriff auf bestimmte Objekte anhand von Bezeichnungen zu steuern, aktiviert werden kann. Die Standardrichtlinie nutzt Beschriftungen, die auf Ressourcen angewendet werden, um den Zugriff zu verweigern, es sei denn, die Benutzer haben eine Rolle mit einer übereinstimmenden Beschriftung.
+Zugriffskontrollrichtlinien sind Anweisungen, die Attribute zusammenführen, um zulässige und unzulässige Maßnahmen festzulegen. Zugriffsrichtlinien können entweder lokal oder global sein und andere Richtlinien überschreiben. Adobe bietet eine Standardrichtlinie, die sofort aktiviert werden kann oder wann immer Ihr Unternehmen bereit ist, den Zugriff auf bestimmte Objekte anhand von Bezeichnungen zu steuern. Die Standardrichtlinie nutzt Beschriftungen, die auf Ressourcen angewendet werden, um den Zugriff zu verweigern, es sei denn, die Benutzer haben eine Rolle mit einer übereinstimmenden Beschriftung.
 
 >[!IMPORTANT]
 >
@@ -116,6 +116,74 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 ![flac-policy-delete-confirmation](../../images/flac-ui/flac-policy-delete-confirmation.png) -->
 
+## Richtlinien für Sandboxes konfigurieren
+
+>[!IMPORTANT]
+>
+>Standardmäßig wird die Variable [!UICONTROL Automatisch einschließen] ist für alle Kunden aktiviert, d. h., alle Sandboxes werden der Richtlinie hinzugefügt.
+
+>[!NOTE]
+>
+>Die **[!UICONTROL DefaultLabel-based-Access-Control-Policy]** -Richtlinie ist derzeit die einzige zur Konfiguration verfügbare Richtlinie.
+
+Um Sandboxes anzuzeigen, die mit einer Richtlinie verknüpft sind, wählen Sie die Richtlinie aus dem **[!UICONTROL Richtlinien]** Registerkarte.
+
+![Die Seite &quot;Richtlinien&quot;mit einer Liste der verfügbaren Richtlinien.](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
+
+Wählen Sie als Nächstes die Richtlinie aus und klicken Sie auf **[!UICONTROL Sandboxes]** Registerkarte. Eine Liste der mit der Richtlinie verknüpften Sandboxes wird angezeigt.
+
+![Die Seite &quot;Richtlinien&quot;mit einer Liste der verfügbaren Richtlinien.](../../images/flac-ui/abac-policies-sandboxes-tab.png)
+
+### Richtlinie zu allen Sandboxes hinzufügen
+
+Verwenden Sie die **[!UICONTROL Automatisch einschließen]** aktivieren **[!UICONTROL Sandboxes]** -Registerkarte, um die Richtlinie für alle Sandboxes zu aktivieren.
+
+![Die [!UICONTROL Sandboxes] Registerkarte mit der [!UICONTROL Automatisch einschließen] umschalten.](../../images/flac-ui/abac-policies-auto-include.png)
+
+Die **[!UICONTROL Automatisches Einschließen aktivieren]** angezeigt, in dem Sie aufgefordert werden, Ihre Auswahl zu bestätigen. Auswählen **[!UICONTROL Aktivieren]** , um die Konfigurationseinstellung abzuschließen.
+
+![Die [!UICONTROL Automatisches Einschließen aktivieren] Dialog-Hervorhebung [!UICONTROL Aktivieren].](../../images/flac-ui/abac-policies-auto-include-enable.png)
+
+>[!SUCCESS]
+>
+>Die Richtlinie wird für alle vorhandenen Sandboxes aktiviert und automatisch zu allen neuen Sandboxes hinzugefügt, sobald sie verfügbar werden.
+
+### Richtlinie zur Auswahl von Sandboxes hinzufügen
+
+>[!IMPORTANT]
+>
+>Zukünftige Sandboxes werden standardmäßig nicht in die Richtlinie aufgenommen, wenn die Variable [!UICONTROL Automatisch einschließen] -Umschalter ist ausgeschaltet. Sie müssen Sandboxes manuell verwalten und der Richtlinie hinzufügen.
+
+Verwenden Sie die **[!UICONTROL Automatisch einschließen]** aktivieren **[!UICONTROL Sandboxes]** -Registerkarte, um die Richtlinie für alle Sandboxes zu deaktivieren.
+
+![Die [!UICONTROL Sandboxes] Registerkarte mit der [!UICONTROL Automatisch einschließen] umschalten.](../../images/flac-ui/abac-policies-auto-include.png)
+
+Aus dem **[!UICONTROL Sandboxes]** Registerkarte auswählen **[!UICONTROL Sandboxes hinzufügen]** , um Sandboxes auszuwählen, für die diese Richtlinie gelten soll.
+
+![Die [!UICONTROL Sandboxes] Registerkarte mit einer Liste der zur Richtlinie hinzugefügten Sandboxes.](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
+
+Eine Liste von Sandboxes wird angezeigt. Wählen Sie die Sandbox aus, die Sie der Liste hinzufügen möchten. Alternativ können Sie die Suchleiste verwenden, um nach der Sandbox zu suchen. Wählen Sie **[!UICONTROL Speichern]** aus.
+
+![Die [!UICONTROL Sandboxes hinzufügen] Seite mit einer Liste vorhandener Sandboxes, die zur Richtlinie hinzugefügt werden können.](../../images/flac-ui/abac-policies-sandboxes-list.png)
+
+>[!SUCCESS]
+>
+>Die ausgewählten Sandboxes wurden der Richtlinie erfolgreich hinzugefügt.
+
+### Entfernen von Sandboxes aus einer Richtlinie
+
+Um eine Sandbox zu entfernen, wählen Sie die **X** neben dem Sandbox-Namen.
+
+![Die [!UICONTROL Sandboxes] Registerkarte mit einer Liste von Sandboxes, die die [!UICONTROL X] zu löschen.](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
+
+Die **[!UICONTROL Entfernen]** angezeigt, in dem Sie aufgefordert werden, Ihre Auswahl zu bestätigen. Auswählen **[!UICONTROL Bestätigen]** , um die Entfernung abzuschließen.
+
+![Die [!UICONTROL Entfernen] Dialog-Hervorhebung [!UICONTROL Bestätigen].](../../images/flac-ui/abac-policies-remove-sandbox.png)
+
+>[!SUCCESS]
+>
+>Die ausgewählte Sandbox wurde erfolgreich aus der Richtlinie entfernt.
+
 ## Aktivieren von Richtlinien
 
 Um eine vorhandene Richtlinie zu aktivieren, wählen Sie die Richtlinie auf der Registerkarte **[!UICONTROL Richtlinien]** aus.
@@ -137,4 +205,4 @@ Sie kehren zur Registerkarte **[!UICONTROL Richtlinien]** zurück, und ein Popup
 
 ## Nächste Schritte
 
-Wenn eine Richtlinie aktiviert ist, können Sie mit dem nächsten Schritt fortfahren, um [Berechtigungen für eine Rolle verwalten](permissions.md).
+Wenn eine Richtlinie aktiviert ist, können Sie mit dem nächsten Schritt fortfahren, [Berechtigungen für eine Rolle verwalten](permissions.md).
