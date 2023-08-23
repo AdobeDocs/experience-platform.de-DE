@@ -3,10 +3,10 @@ title: Intelligente Erneute Interaktion
 description: Stellen Sie während der wichtigsten Konversionsmomente überzeugende und vernetzte Erlebnisse bereit, um unregelmäßige Kunden intelligent erneut anzusprechen.
 hide: true
 hidefromtoc: true
-source-git-commit: 69d83e0ca7530f09042e0740e3f25ba92ecb24e4
+source-git-commit: 7de5fe7808a22137c417a4ca865d764b0814b90e
 workflow-type: tm+mt
-source-wordcount: '3395'
-ht-degree: 5%
+source-wordcount: '3424'
+ht-degree: 4%
 
 ---
 
@@ -83,7 +83,7 @@ Die Journey zur Bestellbestätigung konzentriert sich auf Produktkäufe, die üb
 
 >[!ENDTABS]
 
-## Erreichen des Anwendungsfalls: Schrittweise Anweisungen {#step-by-step-instructions}
+## Anwendungsfall {#achieve-use-case-instruction}
 
 Um die einzelnen Schritte in den obigen Übersichten auf hoher Ebene abzuschließen, lesen Sie die folgenden Abschnitte durch, die Links zu weiteren Informationen und detaillierteren Anweisungen enthalten.
 
@@ -91,7 +91,7 @@ Um die einzelnen Schritte in den obigen Übersichten auf hoher Ebene abzuschlie�
 
 Wenn Sie die Schritte zur Implementierung des Anwendungsfalls ausführen, verwenden Sie die am Anfang dieses Dokuments aufgelisteten Real-Time CDP-Funktionen und Benutzeroberflächenelemente. Vergewissern Sie sich, dass Sie über die erforderlichen attributbasierten Zugriffssteuerungsberechtigungen für alle diese Bereiche verfügen, oder bitten Sie Ihren Systemadministrator, Ihnen die erforderlichen Berechtigungen zu erteilen.
 
-### Erstellen eines Schemaentwurfs und Angeben von Feldergruppen
+### Erstellen eines Schemaentwurfs und Angeben von Feldergruppen {#schema-design}
 
 Ressourcen des Experience-Datenmodells (XDM) werden im [!UICONTROL Schemas] Arbeitsbereich in [!DNL Adobe Experience Platform]. Sie können die wichtigsten Ressourcen, die von bereitgestellt werden, anzeigen und untersuchen. [!DNL Adobe] (zum Beispiel: [!UICONTROL Feldergruppen]) und erstellen Sie benutzerdefinierte Ressourcen und Schemata für Ihre Organisation.
 
@@ -337,22 +337,13 @@ Die [!DNL Adobe] Web-Connector-Schema durch eine [!UICONTROL XDM ExperienceEvent
 
 +++
 
-+++Klassenwert (Feldergruppe)
-
-| Felder | Anforderung |
-| --- | --- |
-| `eventType` | Erforderlich |
-| `timestamp` | Erforderlich |
-
-+++
-
 + + + externe Details zur Überprüfung des Quellsystems (Feldergruppe)
 
 Externe Quell-System-Audit-Attribute sind ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Prüfdetails zu einem externen Quellsystem erfasst.
 
 +++
 
-### Datensatz aus einem Schema erstellen
+### Datensatz aus einem Schema erstellen {#dataset-from-schema}
 
 Ein Datensatz ist eine Speicher- und Verwaltungsstruktur für eine Datengruppe. Jedes Schema für intelligente Journey zur erneuten Interaktion verfügt über einen einzigen Datensatz.
 
@@ -362,31 +353,31 @@ Weitere Informationen zum Erstellen einer [Datensatz](/help/catalog/datasets/ove
 >
 >Ähnlich wie beim Schritt zum Erstellen eines Schemas müssen Sie die Aufnahme des Datensatzes in das Echtzeit-Kundenprofil aktivieren. Weitere Informationen zum Aktivieren des Datensatzes für die Verwendung im Echtzeit-Kundenprofil finden Sie in der [Tutorial zum Erstellen von Schemas.](/help/xdm/tutorials/create-schema-ui.md#profile).
 
-### Datenschutz, Einverständnis und Data Governance
+### Datenschutz, Einverständnis und Data Governance {#privacy-consent}
 
 #### Einverständnisrichtlinien
 
 >[!IMPORTANT]
 >
->Es ist gesetzlich vorgeschrieben, Kunden die Möglichkeit zu geben, sich vom Erhalt von Nachrichten einer Marke abzumelden, und sicherzustellen, dass diese Entscheidung respektiert wird. Weitere Informationen zu den geltenden Rechtsvorschriften finden Sie in der Dokumentation zu [Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
+>Es ist gesetzlich vorgeschrieben, Kunden die Möglichkeit zu geben, sich vom Erhalt von Nachrichten einer Marke abzumelden, und sicherzustellen, dass diese Entscheidung respektiert wird. Weitere Informationen zu den geltenden Rechtsvorschriften finden Sie im Abschnitt [Übersicht über Datenschutzbestimmungen](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
-Beim Erstellen eines Rückgewinnungspfads sollten die folgenden Zustimmungsrichtlinien berücksichtigt werden:
+Beim Erstellen eines Rückgewinnungspfads ist Folgendes zu beachten: [Einverständnisrichtlinien](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) sollten berücksichtigt werden:
 
 * Wenn `consents.marketing.email.val = "Y"` then Can Email
 * Wenn `consents.marketing.sms.val = "Y"` then Can SMS
 * Wenn `consents.marketing.push.val = "Y"` then Can Push
 * Wenn `consents.share.val = "Y"` dann kann Werbung
 
-#### DULE-Bezeichnung und -Durchsetzung
+#### Bezeichnung und Durchsetzung von Data Governance
 
-Beim Erstellen eines Rückgewinnungspfads sollten die folgenden DULE-Bezeichnungen berücksichtigt werden:
+Beim Erstellen eines Rückgewinnungspfads ist Folgendes zu beachten: [Data Governance-Beschriftungen](/help/data-governance/labels/overview.md) sollten berücksichtigt werden:
 
 * Persönliche E-Mail-Adressen werden als direkt identifizierbare Daten verwendet, die zur Identifizierung oder zum Kontakt mit einer bestimmten Person und nicht mit einem Gerät verwendet werden.
    * `personalEmail.address = I1`
 
 #### Marketing-Richtlinien
 
-Für die Journey zur erneuten Interaktion sind jedoch keine Marketingrichtlinien erforderlich. Folgendes sollte bei Bedarf berücksichtigt werden:
+Es gibt keine [Marketing-Richtlinien](/help/data-governance/policies/overview.md) Für die Journey zur Rückgewinnung erforderlich, sollte jedoch Folgendes als gewünscht betrachtet werden:
 
 * Einschränken vertraulicher Daten
 * Einschränken der Onsite-Werbung
@@ -394,11 +385,13 @@ Für die Journey zur erneuten Interaktion sind jedoch keine Marketingrichtlinien
 * Site-übergreifendes Targeting einschränken
 * Beschränkung der Kombination direkt identifizierbarer Daten mit anonymen Daten
 
-### Erstellen einer Zielgruppe
+### Erstellen einer Zielgruppe {#create-audience}
 
 #### Zielgruppenerstellung für Journey zur Wiederaufnahme der Markeninteraktion
 
 Die Journey der Rückgewinnung verwenden Zielgruppen, um bestimmte Attribute oder Verhaltensweisen zu definieren, die von einer Untergruppe von Profilen aus Ihrem Profilspeicher gemeinsam genutzt werden, um eine vermarktbare Personengruppe aus Ihrem Kundenstamm zu unterscheiden. Zielgruppen können auf mehrere Arten erstellt werden in [!DNL Adobe Experience Platform].
+
+Weitere Informationen zum Erstellen einer Zielgruppe finden Sie im Abschnitt [Handbuch zur Benutzeroberfläche von Audience Service](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 
 Weitere Informationen zum direkten Erstellen von [Zielgruppen](/help/segmentation/home.md), lesen Sie die [Handbuch zur Benutzeroberfläche für Zielgruppenkomposition](/help/segmentation/ui/audience-composition.md).
 
@@ -444,13 +437,17 @@ Der Deskriptor für die Journey zum abgebrochenen Warenkorb wird wie folgt angez
 
 `Include EventType = commerce.productListAdds between 30 min and 1440 minutes before now. exclude EventType = commerce.purchases 30 minutes before now OR EventType = commerce.productListRemovals AND Cart ID equals Product List Adds1 Cart ID (the inclusion event).`
 
+>[!TAB Journey zur Bestellbestätigung]
+
+Für diese Journey müssen keine Zielgruppen erstellt werden.
+
 >[!ENDTABS]
 
-### Journey-Setup in Adobe Journey Optimizer
+### Journey-Setup in Adobe Journey Optimizer {#journey-setup}
 
 >[!NOTE]
 >
->[!DNL Adobe Journey Optimizer] umfasst nicht alles, was in den Diagrammen angezeigt wird. Alle Anzeigen für gebührenpflichtige Medien werden in erstellt [!UICONTROL Ziele].
+>[!DNL Adobe Journey Optimizer] umfasst nicht alles, was in den Diagrammen angezeigt wird. Alle [Paid Media-Anzeigen](/help/destinations/catalog/social/overview.md) werden in [!UICONTROL Ziele].
 
 [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=de) hilft Ihnen, Ihren Kunden verknüpfte, kontextbezogene und personalisierte Erlebnisse bereitzustellen. Die Journey ist der gesamte Vorgang der Interaktion eines Kunden mit der Marke. Für jede Journey von Anwendungsfällen sind spezifische Informationen erforderlich. Im Folgenden finden Sie die genauen Daten, die für jede Journey-Verzweigung benötigt werden.
 
@@ -768,7 +765,7 @@ Die Journey zur Bestellbestätigung konzentriert sich auf Produktkäufe, die üb
 
 Weitere Informationen zum Erstellen von Journey finden Sie unter [!DNL Adobe Journey Optimizer], lesen Sie die [Erste Schritte mit Journey-Handbuch](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=de).
 
-### Einrichten von Paid-Media-Anzeigen in Zielen
+### Einrichten von Paid-Media-Anzeigen in Zielen {#paid-media-ads}
 
 Das Ziel-Framework wird für Paid-Media-Anzeigen verwendet. Nachdem die Einwilligung überprüft wurde, wird sie an die verschiedenen konfigurierten Ziele gesendet. Weitere Informationen zu Zielen finden Sie im Abschnitt [Ziele - Übersicht](/help/destinations/home.md) Dokument.
 
@@ -787,6 +784,3 @@ Das Segment &quot;Warenkorb abbrechen&quot;ist Streaming und kann daher vom Ziel
    * [Mobile](/help/destinations/catalog/mobile-engagement/overview.md)
    * [Streaming-Ziel](/help/destinations/catalog/streaming/http-destination.md)
    * [Benutzerdefinierte Destination SDK](/help/destinations/destination-sdk/overview.md)
-
-* Datei/Geplant alle drei Stunden
-   * [E-Mail-Marketing](/help/destinations/catalog/email-marketing/overview.md)
