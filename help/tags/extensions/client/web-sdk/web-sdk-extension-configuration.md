@@ -2,9 +2,9 @@
 title: Konfigurieren der Adobe Experience Platform Web SDK-Erweiterung
 description: So konfigurieren Sie die Adobe Experience Platform Web SDK-Tag-Erweiterung in der Benutzeroberfläche.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 97b435b9bcaf20be0e41150b6a7a408e083fbd61
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1220'
 ht-degree: 9%
 
 ---
@@ -32,7 +32,7 @@ In beiden Fällen gelangen Sie zur Konfigurationsseite für das Platform Web SDK
 
 ## Allgemeine Konfigurationsoptionen
 
-Die Konfigurationsoptionen oben auf der Seite geben Adobe Experience Platform an, wohin die Daten weitergeleitet werden sollen und welche Konfigurationen auf dem Server verwendet werden sollen.
+Die Konfigurationsoptionen oben auf der Seite geben Adobe Experience Platform an, wo die Daten weitergeleitet werden und welche Konfigurationen auf dem Server verwendet werden sollen.
 
 ### [!UICONTROL Name]
 
@@ -42,7 +42,7 @@ Der Name der Erweiterung wird standardmäßig auf &quot;[!DNL alloy]&quot;. Sie 
 
 ### **[!UICONTROL IMS-Organisations-ID]**
 
-Die [!UICONTROL Kennung der IMS-Organisation] ist die Organisation, an die die Daten zur Adobe gesendet werden sollen. Meistens verwenden Sie den Standardwert, der automatisch ausgefüllt wird. Wenn sich auf der Seite mehrere Instanzen befinden, geben Sie in dieses Feld den Wert der zweiten Organisation ein, an die Sie Daten senden möchten.
+Die [!UICONTROL Kennung der IMS-Organisation] ist die Organisation, an die die Daten bei der Adobe gesendet werden sollen. Meistens verwenden Sie den Standardwert, der automatisch ausgefüllt wird. Wenn sich auf der Seite mehrere Instanzen befinden, geben Sie in dieses Feld den Wert der zweiten Organisation ein, an die Sie Daten senden möchten.
 
 ### **[!UICONTROL Edge-Domäne]**
 
@@ -59,14 +59,14 @@ Siehe Handbuch unter [datastreams](../../../../datastreams/overview.md) für wei
 
 ![](assets/privacy.png)
 
-Die [!UICONTROL Datenschutz] können Sie konfigurieren, wie das SDK mit Zustimmungssignalen von Benutzern von Ihrer Website umgeht. Insbesondere können Sie damit das standardmäßige Zustimmungsniveau auswählen, das von einem Benutzer angenommen wird, wenn keine andere explizite Zustimmungsvoreinstellung angegeben wurde. Die standardmäßige Zustimmungsstufe wird nicht im Profil des Benutzers gespeichert. In der folgenden Tabelle wird aufgeschlüsselt, was jede Option beinhaltet:
+Die [!UICONTROL Datenschutz] können Sie konfigurieren, wie das SDK mit Zustimmungssignalen von Benutzern von Ihrer Website umgeht. Insbesondere können Sie damit das standardmäßige Zustimmungsniveau auswählen, das von einem Benutzer angenommen wird, wenn keine andere explizite Zustimmungsvoreinstellung angegeben wurde. Die standardmäßige Zustimmungsstufe wird nicht im Profil des Benutzers gespeichert. In der folgenden Tabelle wird aufgeschlüsselt, was die einzelnen Optionen beinhalten:
 
 | [!UICONTROL Standardmäßige Zustimmungsstufe] | Beschreibung |
 | --- | --- |
 | [!UICONTROL Enthalten] | Erfassen Sie Ereignisse, die auftreten, bevor der Benutzer Zustimmungsvoreinstellungen bereitstellt. |
 | [!UICONTROL Out] | Verwerfen Sie Ereignisse, die auftreten, bevor der Benutzer Zustimmungsvoreinstellungen bereitstellt. |
 | [!UICONTROL Ausstehend] | Einreihen von Ereignissen in die Warteschlange, die auftreten, bevor der Benutzer Zustimmungsvoreinstellungen bereitstellt. Wenn Zustimmungsvoreinstellungen angegeben werden, werden die Ereignisse abhängig von den bereitgestellten Voreinstellungen erfasst oder verworfen. |
-| [!UICONTROL Wird vom Datenelement bereitgestellt] | Die standardmäßige Zustimmungsstufe wird durch ein eigenes Datenelement bestimmt, das Sie definieren. Bei Verwendung dieser Option müssen Sie das Datenelement über das bereitgestellte Dropdown-Menü angeben. |
+| [!UICONTROL Wird vom Datenelement bereitgestellt] | Die standardmäßige Zustimmungsstufe wird durch ein separates Datenelement bestimmt, das Sie definieren. Bei Verwendung dieser Option müssen Sie das Datenelement über das bereitgestellte Dropdown-Menü angeben. |
 
 Verwenden Sie &quot;Out&quot;oder &quot;Ausstehend&quot;, wenn Sie eine ausdrückliche Benutzerzustimmung für Ihre Geschäftsvorgänge benötigen.
 
@@ -102,7 +102,7 @@ Das SDK kann automatisch Link-Klickinformationen für Sie erfassen. Standardmä�
 
 ### [!UICONTROL Automatisch erfasste Kontextdaten]
 
-Standardmäßig erfasst das SDK bestimmte Kontextdaten in Bezug auf Gerät, Web, Umgebung und Ortskontext. Wenn Sie eine Liste der von der Adobe erfassten Informationen sehen möchten, finden Sie sie [here](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). Wenn Sie diese Daten nicht erfassen möchten oder nur bestimmte Datenkategorien erfassen möchten, können Sie diese Optionen ändern.
+Standardmäßig erfasst das SDK bestimmte Kontextdaten in Bezug auf Gerät, Web, Umgebung und Ortskontext. Wenn Sie eine Liste der von Adobe erfassten Informationen sehen möchten, können Sie sie finden [here](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). Wenn Sie diese Daten nicht erfassen möchten oder nur bestimmte Datenkategorien erfassen möchten, können Sie diese Optionen ändern.
 
 ## [!UICONTROL Überschreibungen der Datastream-Konfiguration]
 
@@ -119,6 +119,10 @@ Anzeigen des Datenspeichers [Dokumentation zu Konfigurationsüberschreibungen](.
 
 Als Alternative zum Übergeben der Überschreibungen über einen Web SDK-Befehl können Sie die Überschreibungen im Bildschirm für die Tag-Erweiterung konfigurieren, der unten dargestellt wird.
 
+>[!IMPORTANT]
+>
+> Datastream-Überschreibungen müssen pro Umgebung konfiguriert werden. Die Entwicklungs-, Staging- und Produktionsumgebungen haben alle separate Außerkraftsetzungen. Sie können die Einstellungen zwischen ihnen mithilfe der entsprechenden Optionen kopieren, die im folgenden Bildschirm angezeigt werden.
+
 ![Bild, das die Konfiguration des Datenspeichers anzeigt, überschreibt die Seite Web SDK-Tag-Erweiterung.](assets/datastream-overrides.png)
 
 ## [!UICONTROL Erweiterte Einstellungen]
@@ -127,4 +131,4 @@ Als Alternative zum Übergeben der Überschreibungen über einen Web SDK-Befehl 
 
 ### [!UICONTROL Edge-Basispfad]
 
-Verwenden Sie dieses Feld, wenn Sie den Basispfad für die Interaktion mit dem Adobe Edge-Netzwerk ändern müssen. Dies sollte keine Aktualisierung erfordern, aber falls Sie an einer Beta- oder Alpha-Phase teilnehmen, kann die Adobe Sie bitten, dieses Feld zu ändern.
+Verwenden Sie dieses Feld, wenn Sie den Basispfad für die Interaktion mit dem Adobe Edge-Netzwerk ändern müssen. Dies sollte keine Aktualisierung erfordern, aber falls Sie an einer Beta- oder Alpha-Phase teilnehmen, kann Adobe Sie bitten, dieses Feld zu ändern.
