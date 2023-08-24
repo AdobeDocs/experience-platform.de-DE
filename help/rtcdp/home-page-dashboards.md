@@ -24,8 +24,8 @@ Dieses Dokument bietet einen Überblick über die Real-Time CDP-Startseite und d
 
 Die [!UICONTROL Erste Schritte mit dem Echtzeit-Kundenprofil] Widget ist in vier Abschnitte unterteilt:
 
-* **Daten in Platform erfassen**: Dieses Widget leitet Sie zum Quellkatalog. Verwenden Sie den Quellkatalog, um eine Quelle auszuwählen und Ihre Daten in die Experience Platform aufzunehmen. Weitere Informationen finden Sie im Abschnitt [Quellen - Übersicht](../sources/home.md)
-* **Modelldatenstrukturen**: Dieses Widget leitet Sie zur Übersicht über Schemas weiter. Verwenden Sie die Übersicht über Schemata , um nach vorhandenen Schemata zu suchen oder Bausteine zu erstellen, die die Struktur Ihrer Daten beschreiben. Weitere Informationen finden Sie im Abschnitt [Übersicht über Schemas](../xdm/home.md).
+* **Daten in Platform erfassen**: Dieses Widget leitet Sie zum Quellkatalog. Wählen Sie im Quellkatalog eine Quelle aus und erfassen Sie Ihre Daten auf Experience Platform. Weitere Informationen finden Sie im Abschnitt [Quellen - Übersicht](../sources/home.md)
+* **Modelldatenstrukturen**: Dieses Widget leitet Sie zur Übersicht über Schemata weiter. Verwenden Sie die Übersicht über Schemata , um nach vorhandenen Schemata zu suchen oder Bausteine zu erstellen, die die Struktur Ihrer Daten beschreiben. Weitere Informationen finden Sie im Abschnitt [Übersicht über Schemas](../xdm/home.md).
 * **Segmentzielgruppen**: Dieses Widget leitet Sie zum [!DNL Segment Builder] in der Benutzeroberfläche. Verwenden Sie die [!DNL Segment Builder] , um mit Profildatenelementen zu interagieren und Regeln für Ihre Segmente zu definieren. Weitere Informationen finden Sie im Abschnitt [Übersicht über den Segmentierungsdienst](../segmentation/home.md).
 * **Senden von Daten an Ziele**: Dieses Widget leitet Sie zum Zielkatalog. Verwenden Sie den Zielkatalog, um ein Ziel auszuwählen, mit dem Sie dann eine Verbindung herstellen und Segmente senden können. Weitere Informationen finden Sie im Abschnitt [Ziele - Übersicht](../destinations/home.md)
 
@@ -33,7 +33,7 @@ Die [!UICONTROL Erste Schritte mit dem Echtzeit-Kundenprofil] Widget ist in vier
 
 ## Dashboard &quot;Metriken&quot;
 
-Das Metriken-Dashboard zeigt aktuelle Informationen zu Ihren Experience Platformen an. Das Dashboard ist in zwei Bereiche unterteilt:
+Das Metriken-Dashboard zeigt aktuelle Informationen zu Ihren Experience Platform-Daten an. Das Dashboard ist in zwei Bereiche unterteilt:
 
 ### Die Leaderboard
 
