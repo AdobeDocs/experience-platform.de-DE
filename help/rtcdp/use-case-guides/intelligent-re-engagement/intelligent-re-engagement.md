@@ -1,9 +1,7 @@
 ---
 title: Intelligente Erneute Interaktion
 description: Stellen Sie während der wichtigsten Konversionsmomente überzeugende und vernetzte Erlebnisse bereit, um unregelmäßige Kunden intelligent erneut anzusprechen.
-hide: true
-hidefromtoc: true
-source-git-commit: 7de5fe7808a22137c417a4ca865d764b0814b90e
+source-git-commit: 79ba0e350d64f43558af9bc3c2ecd4ac13d11499
 workflow-type: tm+mt
 source-wordcount: '3424'
 ht-degree: 4%
