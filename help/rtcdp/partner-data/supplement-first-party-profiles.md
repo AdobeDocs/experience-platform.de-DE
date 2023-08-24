@@ -1,13 +1,10 @@
 ---
-title: (Beta) Ergänzen von Erstanbieterprofilen mit von Partnern bereitgestellten Attributen
+title: Ergänzen von Erstanbieterprofilen mit von Partnern bereitgestellten Attributen
 description: Erfahren Sie, wie Sie Erstanbieterprofile mit Attributen vertrauenswürdiger Datenpartner ergänzen, um Ihre Datengrundlage zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.
-hide: true
-hidefromtoc: true
-badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 486e1390dfa0602bef15d196d4a1a5befdc9ff23
+source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
-source-wordcount: '1083'
-ht-degree: 100%
+source-wordcount: '1091'
+ht-degree: 92%
 
 ---
 
@@ -15,7 +12,7 @@ ht-degree: 100%
 
 >[!AVAILABILITY]
 >
->* Diese Betafunktion steht Kundinnen und Kunden zur Verfügung, die Real-Time CDP (App-Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime und Real-Time CDP Ultimate lizenziert haben. Weitere Informationen zu diesen Paketen finden Sie in den [Produktbeschreibungen](https://helpx.adobe.com/de/legal/product-descriptions.html) und erhalten Sie von Ihrem Adobe-Support-Team.
+>* Diese Funktion steht Kunden zur Verfügung, die Real-Time CDP (App Service), Adobe Experience Platform Activation, Echtzeit-Kundendatenplattform, Real-Time CDP Prime und Real-Time CDP Ultimate lizenziert haben. Weitere Informationen zu diesen Paketen finden Sie in den [Produktbeschreibungen](https://helpx.adobe.com/de/legal/product-descriptions.html) und erhalten Sie von Ihrem Adobe-Support-Team.
 
 Ergänzen Sie Erstanbieterprofile mit Attributen von vertrauenswürdigen Datenpartnern, um Ihre Datengrundlage zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.
 
@@ -121,5 +118,6 @@ Beachten Sie die folgenden Einschränkungen, wenn Sie sich den auf dieser Seite 
 
 Erkunden Sie weitere Anwendungsfälle, die durch die Unterstützung von Partnerdaten in Real-Time CDP ermöglicht werden:
 
-* (**In Kürze verfügbar**) [!BADGE Beta]{type=Informative}**Partnergestützte Erkennung** für die Personalisierung von Onsite-Erlebnissen während des Besuchs und für das Offsite-Retargeting nach dem Besuch, ohne dass sich die Benutzerin oder der Benutzer authentifiziert oder bereits Erfahrung mit Ihrer Marke hat.
-* (**In Kürze verfügbar**) [!BADGE Beta]{type=Informative}**Erweiterte Aktivierung** unter Verwendung von Partner-IDs zum Veröffentlichen von Ökosystemen, die keine PII oder gehashten PII akzeptieren.
+* Verwenden Sie die Datenunterstützung von Drittanbietern in Real-Time CDP, um [Erweitern Sie Ihre Profilbasis mit potenziellen Profilen von Datenpartnern und interagieren Sie mit ihnen, um neue Kunden zu gewinnen oder zu erreichen.](/help/rtcdp/partner-data/prospecting.md).
+* [Nutzen Sie die von Partnern unterstützte Erkennung für die Personalisierung von On-site-Erlebnissen](/help/rtcdp/partner-data/onsite-personalization.md) während des Besuchs, ohne dass sich der Benutzer authentifiziert oder über einen früheren Verlauf mit Ihrer Marke verfügt.
+* [Erweiterte Aktivierung von Interessenten- und Interessenten-Zielgruppen](/help/destinations/ui/activate-prospect-audiences.md) , um Ziele auszuwählen.

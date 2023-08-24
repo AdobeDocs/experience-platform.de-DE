@@ -1,13 +1,11 @@
 ---
 title: Aktivieren von potenziellen Zielgruppen für Ziele
 type: Tutorial
-hide: true
-hidefromtoc: true
 description: Erfahren Sie, wie Sie potenzielle Zielgruppen für Ziele aktivieren
-source-git-commit: e04d7a3cd75f4e61329a2de8ca5ddcc4d9518a57
+source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 18%
+source-wordcount: '619'
+ht-degree: 23%
 
 ---
 
@@ -16,7 +14,7 @@ ht-degree: 18%
 
 >[!AVAILABILITY]
 >
->Diese Funktion steht Kunden zur Verfügung, die das Prime- oder das Ultimate-Paket von Real-Time CDP erworben haben. Wenden Sie sich für weitere Informationen an Ihren Kundenbetreuer.
+>Diese Funktion steht Kunden zur Verfügung, die das Prime- oder das Ultimate-Paket von Real-Time CDP erworben haben. Wenden Sie sich für weitere Informationen an Ihren Adobe-Support-Mitarbeiter.
 
 In diesem Artikel wird der Workflow erläutert, der zum Exportieren erforderlich ist [Interessenten-Zielgruppen](/help/segmentation/ui/prospect-audience.md) von Adobe Experience Platform zu Ihrem bevorzugten Ziel.
 
@@ -82,3 +80,11 @@ Den Rest des Aktivierungs-Workflows zum Exportieren von Interessenten-Zielgruppe
 Note that we will need to add links to other destination types here as more destinations become supported 
 
 -->
+
+## Andere durch Partnerdatenunterstützung ermöglichte Anwendungsfälle {#other-use-cases}
+
+Erkunden Sie weitere Anwendungsfälle, die durch die Unterstützung von Partnerdaten in Real-Time CDP ermöglicht werden:
+
+* [Ergänzen Sie Erstanbieterprofile mit Attributen von vertrauenswürdigen Datenpartnern, um Ihre Datengrundlage zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+* Verwenden Sie die Datenunterstützung von Drittanbietern in Real-Time CDP, um [Erweitern Sie Ihre Profilbasis mit potenziellen Profilen von Datenpartnern und interagieren Sie mit ihnen, um neue Kunden zu gewinnen oder zu erreichen.](/help/rtcdp/partner-data/prospecting.md).
+* [Nutzen Sie die von Partnern unterstützte Erkennung für die Personalisierung von On-site-Erlebnissen](/help/rtcdp/partner-data/onsite-personalization.md) während des Besuchs, ohne dass sich der Benutzer authentifiziert oder über einen früheren Verlauf mit Ihrer Marke verfügt.

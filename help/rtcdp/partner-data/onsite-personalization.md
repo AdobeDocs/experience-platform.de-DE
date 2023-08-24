@@ -1,18 +1,20 @@
 ---
 title: Verwenden der Partner-unterstützten Besuchererkennung zur Personalisierung von Onsite-Erlebnissen
 description: Erfahren Sie, wie Sie mit der von Partnern unterstützten Besuchererkennung personalisierte On-site-Erlebnisse für Ihre Besucher bereitstellen können.
-hide: true
-hidefromtoc: true
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 9d7e8ef99a42e804896f5c9befcf98bb1c010606
 workflow-type: tm+mt
-source-wordcount: '2492'
+source-wordcount: '2530'
 ht-degree: 7%
 
 ---
 
 # Verwenden der von Partnern unterstützten Besuchererkennung zur Personalisierung von Onsite-Erlebnissen
 
-Erfahren Sie, wie Sie mit der von Partnern unterstützten Erkennung personalisierte Erlebnisse für Ihre Webeigenschaftsbesucher bereitstellen können. Verwenden Sie dieses Tutorial, um die Implementierungssequenz verschiedener Elemente in Experience Platform und anderen Experience Cloud-Lösungen zu verstehen, um authentifizierten und nicht authentifizierten Besuchern ein personalisiertes Erlebnis anzuzeigen.
+>[!AVAILABILITY]
+>
+>Diese Funktion steht Kunden zur Verfügung, die Real-Time CDP (App Service), Adobe Experience Platform Activation, Echtzeit-Kundendatenplattform, Real-Time CDP Prime und Real-Time CDP Ultimate lizenziert haben. Weitere Informationen zu diesen Paketen finden Sie in den [Produktbeschreibungen](https://helpx.adobe.com/de/legal/product-descriptions.html) und erhalten Sie von Ihrem Adobe-Support-Team.
+
+Erfahren Sie, wie Sie mit der von Partnern unterstützten Erkennung personalisierte Erlebnisse für Ihre Webeigenschaftsbesucher bereitstellen können. Verwenden Sie dieses Tutorial, um die Implementierungssequenz verschiedener Elemente in Experience Platform- und anderen Experience Cloud-Lösungen zu verstehen und authentifizierten und nicht authentifizierten Besuchern ein personalisiertes Erlebnis anzuzeigen.
 
 ![Eine Infografik, die beschreibt, wie Sie mit von Partnern bereitgestellten Attributen personalisierte Erlebnisse für Ihre Besucher bereitstellen können.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-steps.png)
 
@@ -30,7 +32,7 @@ Beachten Sie bei der Planung der Verwendung von durch Partner bereitgestellten A
 * Inwieweit können Sie Personalisierungen in verschiedenen Kanälen und für verschiedene Anwendungsfälle basierend auf probabilistisch abgeleiteten Attributen bereitstellen, im Vergleich zu deterministisch bestätigten Attributen?
 * Wie sollte sich das Erlebnis für einen vorauthentifizierten, aber erkannten Besucher bei der Authentifizierung ändern?
 
-### Benutzeroberflächenfunktionen, Platform-Komponenten und Experience Cloud-Produkte, die Sie verwenden werden {#ui-functionality-and-elements}
+### Benutzeroberflächenfunktionen, Plattformkomponenten und Experience Cloud-Produkte, die Sie verwenden werden {#ui-functionality-and-elements}
 
 Um dieses Anwendungsbeispiel erfolgreich zu implementieren, müssen Sie mehrere Bereiche von Real-time Customer Data Platform und anderen Experience Cloud-Lösungen verwenden. Vergewissern Sie sich, dass Sie über die erforderlichen [Attributbasierte Zugriffssteuerungsberechtigungen](/help/access-control/abac/overview.md) für alle diese Bereiche oder bitten Sie Ihren Systemadministrator, Ihnen die erforderlichen Berechtigungen zu erteilen.
 
@@ -97,7 +99,7 @@ Tutorial lesen unter [Erstellen eines Datensatzes](/help/catalog/datasets/user-g
 
 ### Implementieren der Ereignisdatenerfassung in Ihre Webeigenschaft {#implement-data-collection}
 
-Nach der Einrichtung Ihrer Datenverwaltungskonfiguration müssen Sie jetzt Echtzeit-Ereignisse implementieren [Datenerfassung](/help/collection/home.md) in Ihrer Webeigenschaft. Sie müssen Ihre Eigenschaft mit der Datenerfassungsbibliothek der Adobe instrumentieren - [!UICONTROL Web SDK] - zum Erfassen von Echtzeit-Ereignisaufrufen und zum Zurücksenden an Real-Time CDP. Dieses Element besteht aus einigen separaten Aufgaben für einige Datenerfassungskomponenten.
+Nach der Einrichtung Ihrer Datenverwaltungskonfiguration müssen Sie jetzt Echtzeit-Ereignisse implementieren [Datenerfassung](/help/collection/home.md) in Ihrer Webeigenschaft. Sie müssen Ihre Eigenschaft mit der Adobe-Datenerfassungsbibliothek instrumentieren - [!UICONTROL Web SDK] - zum Erfassen von Echtzeit-Ereignisaufrufen und zum Zurücksenden an Real-Time CDP. Dieses Element besteht aus einigen separaten Aufgaben für einige Datenerfassungskomponenten.
 
 >[!IMPORTANT]
 >
@@ -117,7 +119,7 @@ Die **[!UICONTROL Datenerfassung]** -Abschnitt der Benutzeroberfläche ähnelt d
 
 #### Erstellen von Datenspeichern
 
-Als ersten Schritt im Abschnitt zur Datenerfassung gilt Folgendes: [Erstellen eines neuen Datastreams](/help/datastreams/configure.md). Der Datastream bildet die Grundlage dafür, wie Daten erfasst und korrekt an die richtige Adobe App weitergeleitet werden, in diesem Fall Experience Platform.
+Als ersten Schritt im Abschnitt zur Datenerfassung gilt Folgendes: [Erstellen eines neuen Datastreams](/help/datastreams/configure.md). Der Datastream bildet die Grundlage dafür, wie Daten erfasst und korrekt an die richtige Adobe-App, in diesem Fall Experience Platform, weitergeleitet werden.
 
 Wenn Sie den Datastream erstellen, finden Sie im **[!UICONTROL Ereignisschema]** auswählen, wählen Sie das zuvor erstellte Schema aus.
 
@@ -155,7 +157,7 @@ Beachten Sie, dass dieses Tutorial anzeigt, wie Sie Ihre Website mit Web SDK ins
 
 ![Ansicht der Web SDK-Erweiterung im Erweiterungskatalog.](/help/rtcdp/assets/partner-data/onsite-personalization/web-sdk-extension.png)
 
-Navigieren Sie im Bildschirm zur Konfiguration des Web SDK nach unten zum **[!UICONTROL Datenspeicher]** und geben Sie Informationen zur verwendeten Experience Platformen-Sandbox an. Wählen Sie die entsprechende Sandbox und den in den vorherigen Schritten aus der nächsten Dropdown-Liste erstellten Datastream aus. Sie können dieselben Sandbox- und Datastream-Werte für alle anderen Umgebungen auswählen. Belassen Sie die anderen Einstellungen und wählen Sie **[!UICONTROL Speichern]**.
+Navigieren Sie im Bildschirm zur Konfiguration des Web SDK nach unten zum **[!UICONTROL Datenspeicher]** und geben Sie Informationen zur verwendeten Experience Platform-Sandbox an. Wählen Sie die entsprechende Sandbox und den in den vorherigen Schritten aus der nächsten Dropdown-Liste erstellten Datastream aus. Sie können dieselben Sandbox- und Datastream-Werte für alle anderen Umgebungen auswählen. Belassen Sie die anderen Einstellungen und wählen Sie **[!UICONTROL Speichern]**.
 
 Vollständige Informationen zu erhalten [Installieren des Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html).
 
@@ -197,7 +199,7 @@ Wählen Sie im Schema die Attribute von Drittanbietern aus, die den vom Datenpar
 
 #### Einrichten von Regeln
 
-Im **[!UICONTROL Regeln]** können Sie Ihre Website so konfigurieren, dass eine Personalisierungsanfrage an die Adobe mit den Attributen gesendet wird, die in die soeben erstellten Datenelemente geladen werden. Mehr dazu [Erstellen von Regeln](/help/tags/ui/managing-resources/rules.md).
+Im **[!UICONTROL Regeln]** -Bereich können Sie Ihre Website so konfigurieren, dass eine Personalisierungsanfrage an die Adobe gesendet wird, wobei die Attribute in die soeben erstellten Datenelemente geladen werden. Mehr dazu [Erstellen von Regeln](/help/tags/ui/managing-resources/rules.md).
 
 Auswählen **[!UICONTROL Neue Regel erstellen]**. Diese Regel benennen **[!UICONTROL Personalisieren]** und wählen Sie das Pluszeichen neben **[!UICONTROL Veranstaltungen]**. Auswählen **[!UICONTROL Seitenende]** als Ereignis und speichern Sie.
 
@@ -265,4 +267,4 @@ Erkunden Sie weitere Anwendungsfälle, die durch die Unterstützung von Partnerd
 
 * [Ergänzen Sie Erstanbieterprofile mit Attributen von vertrauenswürdigen Datenpartnern, um Ihre Datengrundlage zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
 * Verwenden Sie die Datenunterstützung von Drittanbietern in Real-Time CDP, um [Erweitern Sie Ihre Profilbasis mit potenziellen Profilen von Datenpartnern und interagieren Sie mit ihnen, um neue Kunden zu gewinnen oder zu erreichen.](/help/rtcdp/partner-data/prospecting.md).
-* (**In Kürze verfügbar**) [!BADGE Beta]{type=Informative}**Erweiterte Aktivierung** unter Verwendung von Partner-IDs zum Veröffentlichen von Ökosystemen, die keine PII oder gehashten PII akzeptieren.
+* [Erweiterte Aktivierung von Interessenten- und Interessenten-Zielgruppen](/help/destinations/ui/activate-prospect-audiences.md) , um Ziele auszuwählen.

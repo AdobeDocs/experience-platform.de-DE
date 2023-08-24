@@ -1,13 +1,10 @@
 ---
-title: (Beta) Engage und Akquisition neuer Kunden durch Nutzungsszenarien für die Prospektion
+title: Engagieren und Akquirieren neuer Kunden durch Nutzungsszenarien für die Prospektion
 description: Erfahren Sie, wie Sie durch die Unterstützung von Partnerdaten in Real-Time CDP neue Kunden durch Nutzungsszenarios gewinnen und gewinnen können.
-hide: true
-hidefromtoc: true
-badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 2e2a473efd247cb235ee7e8f94058baa48fd1b1a
+source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
-source-wordcount: '1953'
-ht-degree: 16%
+source-wordcount: '1941'
+ht-degree: 13%
 
 ---
 
@@ -15,7 +12,7 @@ ht-degree: 16%
 
 >[!AVAILABILITY]
 >
->* Diese Betafunktion steht Kundinnen und Kunden zur Verfügung, die Real-Time CDP (App-Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime und Real-Time CDP Ultimate lizenziert haben. Weitere Informationen zu diesen Paketen finden Sie in den [Produktbeschreibungen](https://helpx.adobe.com/de/legal/product-descriptions.html) und erhalten Sie von Ihrem Adobe-Support-Team.
+>* Diese Funktion steht Kunden zur Verfügung, die Real-Time CDP (App Service), Adobe Experience Platform Activation, Echtzeit-Kundendatenplattform, Real-Time CDP Prime und Real-Time CDP Ultimate lizenziert haben. Weitere Informationen zu diesen Paketen finden Sie in den [Produktbeschreibungen](https://helpx.adobe.com/de/legal/product-descriptions.html) und erhalten Sie von Ihrem Adobe-Support-Team.
 
 Nutzen Sie die Unterstützung von Drittanbieterdaten in Real-Time CDP, um Ihre Profilbasis mit potenziellen Profilen von Datenpartnern zu erweitern und mit ihnen Kontakt aufzunehmen, um neue Kunden zu gewinnen oder zu erreichen.
 
@@ -57,13 +54,13 @@ Wenn Sie die Schritte zur Implementierung des Anwendungsfalls ausführen, nutzen
 * [Datennutzungskennzeichnungen](/help/data-governance/labels/overview.md)
 * [Datensätze](/help/catalog/datasets/overview.md)
 * [Quellen](/help/sources/home.md)
-* Profile (Link zu potenziellen Profilen)
-* Zielgruppen (Link zum Anzeigen von Zielgruppen)
+* [Profile in der Zukunft](/help/profile/ui/prospect-profile.md)
+* [Interessensgruppen](/help/segmentation/ui/prospect-audience.md)
 * [Ziele](/help/destinations/home.md)
 
 ### Lizenzieren von Profildetails von Drittanbietern vom Partner {#license-profiles-from-partner}
 
-Dieser Schritt wird im Abschnitt [Voraussetzungen](#prerequisites-and-planning) und Adobe setzt voraus, dass Sie über die richtigen vertraglichen Vereinbarungen mit vertrauenswürdigen Datenanbietern verfügen, um vom Datenpartner bereitgestellte Prospektprofile zu erfassen.
+Dieser Schritt wird im Abschnitt [Voraussetzungen](#prerequisites-and-planning) und Adobe setzt voraus, dass Sie über die richtigen vertraglichen Vereinbarungen mit vertrauenswürdigen Datenanbietern verfügen, um vom Datenpartner bereitgestellte Profile zu erfassen.
 
 ### Erweitern Sie Ihre Profildaten und Ihr Governance-Modell, um von Partnern bereitgestellte Profile aufzunehmen. {#extend-governance-model}
 
@@ -184,7 +181,7 @@ Sie können auch ein beliebiges Profil für eine weitere Überprüfung auswähle
 
 ![Überprüfen von potenziellen Profilen](/help/rtcdp/assets/partner-data/prospecting/inspect-prospect-profile.gif)
 
-(**In Kürze verfügbar**) Weitere Informationen zu potenziellen Profilen.
+Mehr dazu [Interessenten-Profile](/help/profile/ui/prospect-profile.md).
 
 ### Erstellen potenzieller Zielgruppen {#create-prospect-audiences}
 
@@ -200,7 +197,7 @@ Beachten Sie, dass sich das Erlebnis beim Erstellen von Zielgruppen für potenzi
 * Nur Batch-Profilauswertung.
 * Das Erstellen von Zielgruppen basierend auf Zeitreihenereignissen wird nicht unterstützt.
 
-(**In Kürze verfügbar**) Erfahren Sie mehr über potenzielle Zielgruppen.
+Mehr dazu [Interessenten-Zielgruppen](/help/segmentation/ui/prospect-audience.md).
 
 ### Profile für Interessenten für Ziele aktivieren {#activate-to-destinations}
 
@@ -210,5 +207,6 @@ Nutzen Sie die potenziellen Zielgruppen, indem Sie sie an Ziele exportieren. Der
 
 Erkunden Sie weitere Anwendungsfälle, die durch die Unterstützung von Partnerdaten in Real-Time CDP ermöglicht werden:
 
-* [!BADGE Beta]{type=Informative}[Ergänzen Sie Erstanbieterprofile mit Attributen von vertrauenswürdigen Datenpartnern, um Ihre Datengrundlage zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* (**In Kürze verfügbar**) [!BADGE Beta]{type=Informative}**Partnergestützte Erkennung** für die Personalisierung von Onsite-Erlebnissen während des Besuchs und für das Offsite-Retargeting nach dem Besuch, ohne dass sich die Benutzerin oder der Benutzer authentifiziert oder bereits Erfahrung mit Ihrer Marke hat.
+* [Ergänzen Sie Erstanbieterprofile mit Attributen von vertrauenswürdigen Datenpartnern, um Ihre Datengrundlage zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+* [Nutzen Sie die von Partnern unterstützte Erkennung für die Personalisierung von On-site-Erlebnissen](/help/rtcdp/partner-data/onsite-personalization.md) während des Besuchs, ohne dass sich der Benutzer authentifiziert oder über einen früheren Verlauf mit Ihrer Marke verfügt.
+* [Erweiterte Aktivierung von Interessenten- und Interessenten-Zielgruppen](/help/destinations/ui/activate-prospect-audiences.md) , um Ziele auszuwählen.
