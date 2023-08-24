@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise August 2023 für Adobe Experience Platform.
-source-git-commit: c7cd33c5d3d18095fc525b7a8b36a06cad681200
+source-git-commit: a699f66fd48f463cc69ea0f214f487cce360615e
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 41%
@@ -63,11 +63,14 @@ Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter [
 Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Einblicke zu den Daten Ihres Unternehmens erhalten, die in täglichen Schnappschüssen erfasst werden.
 
 **Neue oder aktualisierte Funktionen**
-&#x200B; | Funktion | Beschreibung | | — | — | |Anwendungsfall für Einverständnisanalyse und Tracking | Erfahren Sie, wie Sie mit dem Dashboard für Einwilligungen für verschiedene Marketing-Anwendungsfälle für Real-Time CDP-Daten erstellen. [Dokument zur Einverständnisanalyse und -verfolgung](../../dashboards/insights-use-cases/consent-analysis.md). Es wird beschrieben, wie Sie eine Zielgruppe mit den entsprechenden Attributen für Ihre geschäftlichen Anforderungen erstellen und die Einblicke anschließend mithilfe von vorkonfigurierten Widgets in der Adobe Experience Platform-Benutzeroberfläche nutzen. Es enthält außerdem Anweisungen zum Erstellen Ihres eigenen benutzerdefinierten Widgets mit der benutzerdefinierten Dashboards-Funktion. Das Dokument behandelt die Zustimmungstrends und Einverständnisüberschneidungen bei Nutzungsszenarios. |
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Anwendungsfall für Einverständnisanalyse und Tracking | Erfahren Sie, wie Sie mit der Funktion [Dokument zur Einverständnisanalyse und -verfolgung](../../dashboards/insights-use-cases/consent-analysis.md). Es wird beschrieben, wie Sie eine Zielgruppe mit den entsprechenden Attributen für Ihre geschäftlichen Anforderungen erstellen und die Einblicke anschließend mithilfe von vorkonfigurierten Widgets in der Adobe Experience Platform-Benutzeroberfläche nutzen. Es enthält außerdem Anweisungen zum Erstellen Ihres eigenen benutzerdefinierten Widgets mit der benutzerdefinierten Dashboards-Funktion. Das Dokument behandelt die Zustimmungstrends und Einverständnisüberschneidungen bei Nutzungsszenarios. |
 
 {style="table-layout:auto"}
-&#x200B;
-Weitere Informationen zu Dashboards, einschließlich der Gewährung von Zugriffsberechtigungen und der Erstellung benutzerdefinierter Widgets, finden Sie in der [Übersicht über Dashboards](../../dashboards/home.md).
+
+Weitere Informationen zu Dashboards, einschließlich der Gewährung von Zugriffsberechtigungen und der Erstellung benutzerdefinierter Widgets, erhalten Sie in der [Übersicht über Dashboards](../../dashboards/home.md).
 
 ## Datenerfassung {#data-collection}
 
