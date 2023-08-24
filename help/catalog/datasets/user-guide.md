@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Datensatz aktivieren; Datensatz; Datensatz; Datensatz
+keywords: Experience Platform; home; beliebte Themen; Datensatz aktivieren; Datensatz; Datensatz; Datensatz
 solution: Experience Platform
 title: Benutzerhandbuch zu Datensätzen
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform allgemeine Aktionen beim Arbeiten mit Datensätzen durchführen.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 141037fd844c78e98785ea2246026ac120961dd5
+source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
 workflow-type: tm+mt
 source-wordcount: '2745'
 ht-degree: 18%
@@ -207,7 +207,7 @@ Sie können die Data Governance-Beschriftungen für einen Datensatz verwalten, i
 
 Mit Datennutzungsbezeichnungen, die auf Schemaebene angewendet werden, können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Siehe [Data Governance - Übersicht](../../data-governance/home.md) Weitere Informationen zu Bezeichnungen finden Sie im Abschnitt [Benutzerhandbuch zu Datennutzungsbezeichnungen](../../data-governance/labels/overview.md) für Anweisungen zum Anwenden von Bezeichnungen auf Schemas zur Weitergabe an Datensätze.
 
-### In Ordner verschieben {#move-to-folders}
+## In Ordner verschieben {#move-to-folders}
 
 Sie können Datensätze in Ordnern platzieren, um die Datensatzverwaltung zu verbessern. Um einen Datensatz in einen Ordner zu verschieben, wählen Sie die Auslassungszeichen (..) neben dem Datensatz-Namen aus, den Sie verwalten möchten, gefolgt von **[!UICONTROL In Ordner verschieben]** aus dem Dropdown-Menü aus.
 
@@ -217,7 +217,7 @@ Die [!UICONTROL Verschieben] Das Dialogfeld Datensatz in Ordner wird angezeigt. 
 
 ![Die [!UICONTROL Verschieben] Datensatz-Dialogfeld mit [!UICONTROL Verschieben] hervorgehoben.](../images/datasets/user-guide/move-dialog.png)
 
->
+>[!TIP]
 >
 >Sie können Ordner auch direkt im Dialogfeld Datensatz verschieben erstellen. Um einen Ordner zu erstellen, wählen Sie das Symbol Ordner erstellen (![Das Symbol Ordner erstellen .](../images/datasets/user-guide/create-folder-icon.png)) oben rechts im Dialogfeld.
 >

@@ -5,7 +5,7 @@ description: Adobe Experience Platform bietet ein Dashboard, über das Sie wicht
 type: Documentation
 hide: true
 hidefromtoc: true
-source-git-commit: c1ad20def39ef58253e8486ca4dcfcce2501510b
+source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
 workflow-type: tm+mt
 source-wordcount: '1495'
 ht-degree: 7%
@@ -68,7 +68,7 @@ Die Tabelle zeigt die primäre Metrik für jedes Produkt an, da jedes Produkt za
 
 Alle verfügbaren Metriken werden auf der Seite [!UICONTROL Zusammenfassung] Registerkarte. Die verfügbaren Metriken hängen vom lizenzierten Produkt ab. Diese Ansicht bietet **eine konsolidierte Ansicht aller Metriken in allen Produktions- oder Entwicklungs-Sandboxes**. Die gleiche Analyseebene wird sowohl für Produktions- als auch für Entwicklungs-Sandboxes bereitgestellt.
 
-![Die Zusammenfassungsansicht eines Platform-Produkts, in der alle für dieses Produkt verfügbaren Metriken angezeigt werden.]()
+![Die Zusammenfassungsansicht eines Platform-Produkts, in der alle für dieses Produkt verfügbaren Metriken angezeigt werden.](../images/license-usage/summary-tab.png)
 
 Im Tab Zusammenfassung enthält die Tabelle die [!UICONTROL Metrik] Spalte. Diese für Menschen lesbaren Beschreibungen zeigen alle Metriken an, die für diesen Sandbox-Typ verwendet werden.
 
@@ -78,7 +78,7 @@ Um die Ansicht zwischen Produktions- und Entwicklungs-Sandbox-Typen zu ändern, 
 
 Die Verbrauchsberichte für Sandboxes sind kumulativ für alle Sandboxes desselben Typs. Anders ausgedrückt: durch Auswahl von [!UICONTROL Produktion] oder [!UICONTROL Entwicklung] stellt Verbrauchsberichte für alle Produktions- bzw. Entwicklungs-Sandboxes bereit.
 
-![Die Zusammenfassungsansicht eines Platform-Produkts mit Produktions-Sandboxes und Entwicklungs-Sandboxes hervorgehoben.](../images/license-usage/summary-tab.png)
+![Die Zusammenfassungsansicht eines Platform-Produkts mit Produktions-Sandboxes und Entwicklungs-Sandboxes hervorgehoben.](../images/license-usage/summary-tab-sandboxes.png)
 
 >[!WARNING]
 >

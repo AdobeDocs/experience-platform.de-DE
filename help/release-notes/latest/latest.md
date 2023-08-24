@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise August 2023 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8a313587a339ea775adc5422519841b1e679be7a
+source-git-commit: b7812acf7c250621d40b152b391142050ac70e18
 workflow-type: tm+mt
-source-wordcount: '1592'
+source-wordcount: '1649'
 ht-degree: 41%
 
 ---
@@ -123,6 +123,17 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
 | Klasse | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1758/files) | Verwenden Sie diese Klasse, um Interessenten-Profile einzubringen, die aus den wichtigsten Anwendungsfällen für die Kundenakquise von Datenanbietern stammen. |
+
+{style="table-layout:auto"}
+
+**Aktualisierte XDM-Komponenten**
+
+| Typ der Komponente | Name | Beschreibung der Aktualisierung |
+| --- | --- | --- |
+| Erweiterung ([!UICONTROL Adobe Analytics ExperienceEvent Full Extension]) | [[!UICONTROL Kontextdaten]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL Kontextdaten] Zuordnungsobjekt hinzugefügt [!UICONTROL Adobe Analytics ExperienceEvent Full Extension] um Kontextdaten für Adobe Analytics bereitzustellen. |
+| Feldgruppe | Mehrfach | Mehrere Felder wurden hinzugefügt [[!UICONTROL Angereicherte Segmentdetails für Ereignisse]](https://github.com/adobe/xdm/pull/1760/files). |
+
+{style="table-layout:auto"}
 
 Weitere Informationen finden Sie im [XDM-System - Übersicht](../../xdm/home.md).
 
