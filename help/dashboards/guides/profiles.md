@@ -4,10 +4,10 @@ title: Handbuch zum Profile-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: cd57ca50537d928025a5164b6a7d0ead490162ba
 workflow-type: tm+mt
-source-wordcount: '3519'
-ht-degree: 64%
+source-wordcount: '4331'
+ht-degree: 54%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 64%
 
 Die Benutzeroberfläche von Adobe Experience Platform verfügt über ein Dashboard, über das Sie wichtige Informationen über Ihre [!DNL Real-Time Customer Profile]-Daten anzeigen können, die während eines täglichen Schnappschusses erfasst wurden. In diesem Handbuch wird beschrieben, wie Sie auf das Profile-Dashboard in der Benutzeroberfläche zugreifen und mit ihm arbeiten können. Außerdem erhalten Sie Informationen zu den im Dashboard angezeigten Metriken.
 
-Siehe Abschnitt [Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils](../../profile/ui/user-guide.md) für einen Überblick über die Profilfunktionen in der Benutzeroberfläche von Experience Platform.
+Siehe Abschnitt [Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils](../../profile/ui/user-guide.md) für einen Überblick über die Profilfunktionen in der Experience Platform-Benutzeroberfläche.
 
 ## Daten des Profile-Dashboards
 
@@ -35,7 +35,7 @@ Um in der Platform-Benutzeroberfläche zum Profile-Dashboard zu navigieren, wäh
 >
 >Wenn Platform neu für Ihr Unternehmen ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt hat, ist das Profile-Dashboard nicht zu sehen. Stattdessen wird die [!UICONTROL Übersicht] enthält Links und Dokumentation, die Ihnen bei den ersten Schritten mit dem Echtzeit-Kundenprofil helfen.
 
-![Das Dashboard Experience Platform Profile mit hervorgehobenen Profilen und Übersicht.](../images/profiles/dashboard-overview.png)
+![Das Dashboard Experience Platform-Profile mit hervorgehobenen Profilen und Überblick.](../images/profiles/dashboard-overview.png)
 
 ### Das Profile-Dashboard modifizieren
 
@@ -115,6 +115,65 @@ Für alle neuen Instanzen von Adobe Experience Platform wird ein standardmäßig
 >
 >Ab dem 26. Juli 2023 wird die [!UICONTROL Profile], [!UICONTROL Zielgruppen], und [!UICONTROL Ziele] Die Übersichts-Dashboards wurden für alle Benutzer, die ihre Ansichten in den letzten sechs Monaten nicht geändert haben, auf ein neues standardmäßiges Widget-Load-out zurückgesetzt. Weitere Informationen finden Sie in der Dokumentation unter [Ziele](./destinations.md#default-widgets) und [Zielgruppen](./audiences.md#default-widgets) Standard-Widget-Abschnitte für Details darüber, welche Widgets als Teil der standardmäßigen Widget-Ladevorgänge einbezogen werden. Sie können Ihre Dashboard-Widgets weiterhin wie bisher anpassen.
 
+## Kunden-KI-Widgets {#customer-ai-profiles-widgets}
+
+Customer AI wird verwendet, um für einzelne Profile skaliert benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion zu berechnen. Customer AI analysiert dazu vorhandene Erlebnisereignisdaten von Verbrauchern, um sie vorherzusagen **Tendenzwerte für Abwanderung oder Konversion**. Diese hochpräzisen kundenspezifischen Tendenzmodelle ermöglichen eine präzisere Segmentierung und Targeting. Die [Verteilung der Punktzahl](#customer-ai-distribution-of-scores) und [Bewertungszusammenfassung](#customer-ai-scoring-summary) Einblicke zeigen die Aufteilung in Ihrer Zielgruppe. Sie heben hervor, welche Profile die hohe/niedrige/mittlere Tendenz aufweisen und wie sie über Ihre Profilzahlen verteilt sind.
+
+* [[!UICONTROL Customer AI-Bewertungszusammenfassung]](#customer-ai-scoring-summary)
+* [[!UICONTROL Customer AI-Verteilung von Bewertungen]](#customer-ai-distribution-of-scores)
+
+### [!UICONTROL Customer AI-Verteilung von Bewertungen] {#customer-ai-distribution-of-scores}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_distributionOfScores"
+>title="Verteilung der Scores"
+>abstract="Dieses Widget visualisiert die Verteilung der Gesamtanzahl der Profile anhand ihrer Tendenzwerte in Schritten von fünf Prozent. Die Verteilung der Profilanzahl wird durch das KI-Modell und die ausgewählte Zusammenführungsrichtlinie bestimmt. Sie können das KI-Modell im Dropdown-Menü unter dem Widget-Titel ändern."
+
+Die [!UICONTROL Customer AI-Verteilung von Bewertungen] Widget kategorisiert die Gesamtanzahl der Profile nach ihren Tendenzwerten. Die Verteilung der Profilanzahl wird durch das AI-Modell und die ausgewählte Zusammenführungsrichtlinie bestimmt und dann in fünfprozentigen Schritten visualisiert, die ihre Neigung angeben. Die Anzahl der Profile wird entlang der Y-Achse angegeben und die Tendenzwerte werden entlang der X-Achse angegeben.
+
+>[!NOTE]
+>
+>Wenn es sich bei der Visualisierung um eine Konversion-Tendenzbewertung handelt, werden die hohen Werte grün und die niedrigen Punkte rot angezeigt. Wenn Sie die Abwanderungsneigung vorhersagen, wird diese gespiegelt, die hohen Werte sind rot und die niedrigen Werte grün. Der mittlere Eimer bleibt gelb, unabhängig vom gewählten Tendenztyp.
+
+Das AI-Modell, das die Tendenzwerte bestimmt, wird aus der Dropdown-Auswahl unter dem Widget-Titel ausgewählt. Das Dropdown-Menü enthält eine Liste aller konfigurierten Customer AI-Modelle. Wählen Sie aus der Liste der verfügbaren Modelle das passende KI-Modell für Ihre Analyse aus. Wenn kein Customer AI-Modell verfügbar ist, werden Sie durch eine Meldung im Widget angewiesen, mindestens ein Customer AI-Modell zu konfigurieren. Außerdem wird ein Hyperlink zur Konfigurationsseite des Customer AI-Modells bereitgestellt. Anweisungen finden Sie in der Dokumentation zu [Konfigurieren einer Customer AI-Instanz](../../intelligent-services/customer-ai/user-guide/configure.md).
+
+>[!NOTE]
+>
+>Wählen Sie das Dropdown-Menü direkt unter dem Tab Übersicht aus, um die Zusammenführungsrichtlinie zu ändern, die bestimmt, welche Profile in die Analyse aufgenommen werden. Siehe Abschnitt zu [Zusammenführungsrichtlinien](#merge-policies) für eine kurze Beschreibung oder [Zusammenführungsrichtlinienübersicht](../../profile/merge-policies/overview.md) für weitere Details.
+
+Um zur detaillierten Insight-Seite für das ausgewählte Customer AI-Modell zu navigieren, wählen Sie **[!UICONTROL Modelldetails anzeigen]**.
+
+![Das Dashboard &quot;Experience Platform-Zielgruppen&quot;mit dem [!UICONTROL Customer AI-Verteilung von Bewertungen] Widget und [!UICONTROL Modelldetails anzeigen] hervorgehoben.](../images/segments/customer-ai-distribution-of-scores.png)
+
+Die Seite mit detaillierten Modelleinblicken wird angezeigt.
+
+![Die Einblicke-Seite für die Customer AI.](../images/profiles/customer-ai-insights-page.png)
+
+Weitere Informationen zu Customer AI finden Sie im [Leitfaden zur Benutzeroberfläche für Einblicke](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
+
+### [!UICONTROL Customer AI-Bewertungszusammenfassung] {#customer-ai-scoring-summary}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_scoringSummary"
+>title="Bewertungszusammenfassung"
+>abstract="Dieses Widget zeigt die Gesamtzahl der bewerteten Profile und kategorisiert sie in hohe, mittlere und niedrige Tendenz. Das Ringdiagramm zeigt die proportionale Zusammensetzung der Gesamtprofile über eine hohe, mittlere und niedrige Tendenz hinweg."
+
+Dieses Widget zeigt die Gesamtzahl der bewerteten Profile und kategorisiert sie in Behälter mit hoher, mittlerer und niedriger Neigung als grün, gelb und rot. Ein Ringdiagramm veranschaulicht die proportionale Zusammensetzung von Profilen zwischen hohen, mittleren und niedrigen Tendenzen. Ein Profil ist qualifiziert für eine hohe Tendenz bei über 75, eine mittlere Neigung zwischen 25 und 74 und eine niedrige Tendenz unter 24. Eine Legende zeigt den Farbcode und die Schwellen der Eigenschaften an. Profilzahlen für die Eigenschaften &quot;Hoch&quot;, &quot;Mittel&quot;und &quot;Niedrig&quot;werden in einem Dialogfeld angezeigt, wenn der Cursor den Mauszeiger über den entsprechenden Abschnitt des Ringdiagramms bewegt.
+
+>[!NOTE]
+>
+>Wenn es sich bei der Visualisierung um eine Konversion-Tendenzbewertung handelt, werden die hohen Werte grün und die niedrigen Punkte rot angezeigt. Wenn Sie die Abwanderungsneigung vorhersagen, wird diese gespiegelt, die hohen Werte sind rot und die niedrigen Werte grün. Der mittlere Eimer bleibt gelb, unabhängig vom gewählten Tendenztyp.
+
+Das Dropdown-Menü unter dem Widget-Titel enthält eine Liste aller konfigurierten Customer AI-Modelle. Wählen Sie aus der Liste der verfügbaren Modelle das passende KI-Modell für Ihre Analyse aus. Wenn kein Customer AI-Modell verfügbar ist, werden Sie durch eine Meldung im Widget angewiesen, mindestens ein Customer AI-Modell zu konfigurieren. Außerdem wird ein Hyperlink zur Konfigurationsseite des Customer AI-Modells bereitgestellt. Siehe die Dokumentation unter [Konfigurieren einer Customer AI-Instanz](../../intelligent-services/customer-ai/user-guide/configure.md) für detaillierte Anweisungen.
+
+>[!NOTE]
+>
+>Die Gesamtzahl der berechneten Profile hängt von der gewählten Zusammenführungsrichtlinie ab. Um die verwendete Zusammenführungsrichtlinie zu ändern, wählen Sie das Dropdown-Menü direkt unter der Registerkarte Übersicht aus. Siehe Abschnitt zu [Zusammenführungsrichtlinien](#merge-policies) für eine kurze Beschreibung oder [Zusammenführungsrichtlinienübersicht](../../profile/merge-policies/overview.md) für weitere Details.
+
+![Das Dashboard Experience Platform-Zielgruppen mit dem Widget Customer AI-Bewertungszusammenfassung wurde hervorgehoben.](../images/segments/customer-ai-scoring-summary.png)
+
+Um zur detaillierten Insight-Seite für das ausgewählte Customer AI-Modell zu navigieren, wählen Sie **[!UICONTROL Modelldetails anzeigen]**. Weitere Informationen zu Customer AI finden Sie im [Leitfaden zur Benutzeroberfläche für Einblicke](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
+
 ## Standard-Widgets {#standard-widgets}
 
 Adobe bietet mehrere Standard-Widgets, mit denen Sie verschiedene Metriken im Zusammenhang mit Ihren Profildaten visualisieren können. Über die [!UICONTROL Widget-Bibliothek] können Sie auch benutzerdefinierte Widgets erstellen und für Ihre Organisation freigeben. Um mehr über das Erstellen benutzerdefinierter Widgets zu erfahren, lesen Sie zunächst den Abschnitt [Übersicht über die Widget-Bibliothek](../customize/widget-library.md).
@@ -156,7 +215,7 @@ Weitere Informationen finden Sie im [Abschnitt über Zusammenführungsrichtlinie
 >
 >Ein weiterer häufiger Grund besteht darin, dass der Dashboard-Schnappschuss und der Beispielvorgang für die Registerkarte [!UICONTROL Durchsuchen] zu unterschiedlichen Zeiten ausgeführt wird. Sie können sehen, wann das Widget [!UICONTROL Profilanzahl] zuletzt aktualisiert wurde, indem Sie den Zeitstempel im Widget überprüfen. Weitere Informationen dazu, wie der Beispielauftrag im [!UICONTROL Durchsuchen] Registerkarte, siehe [Abschnitt zur Profilanzahl im Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=de#profile-count).
 
-![Das Dashboard Experience Platform Profile mit hervorgehobenem Widget Profilanzahl.](../images/profiles/profile-count.png)
+![Das Dashboard Experience Platform-Profile mit dem Widget Profilanzahl wird hervorgehoben.](../images/profiles/profile-count.png)
 
 ### [!UICONTROL Trend der Profilanzahl] {#profile-count-trend}
 

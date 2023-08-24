@@ -1,23 +1,23 @@
 ---
 solution: Experience Platform
 title: Look-alike-Zielgruppen
-description: Erfahren Sie, wie Sie mit Look-alike-Audiences neue hochwertige Zielgruppen in Adobe Experience Platform ansprechen können.
+description: Erfahren Sie, wie Sie neue hochwertige Zielgruppen in Adobe Experience Platform mit Look-alike-Zielgruppen ansprechen.
 badgeLimitedAvailability: label="Eingeschränkte Verfügbarkeit" type=Caution
-source-git-commit: 4bd26857d2c714cd629fc46dbb9b6da6a29358c8
+source-git-commit: a44b1a1f6028e54ca23149249697dea9407bf60a
 workflow-type: tm+mt
 source-wordcount: '2123'
-ht-degree: 10%
+ht-degree: 9%
 
 ---
 
 
-# Handbuch zu Look-alike-Zielgruppen
+# Handbuch für Look-alike-Zielgruppen
 
 >[!IMPORTANT]
 >
 >Beachten Sie, dass Look-alike-Einblicke und Look-alike-Zielgruppen in **begrenzte Verfügbarkeit**.
 
-In Adobe Experience Platform bieten Look-alike-Zielgruppen intelligente Einblicke in jede Ihrer Zielgruppen und nutzen auf maschinellem Lernen basierende Einblicke, um hochwertige Kunden mit Ihren Marketingkampagnen zu identifizieren und anzusprechen.
+In Adobe Experience Platform bieten Look-alike-Zielgruppen intelligente Einblicke in jede Ihrer Zielgruppen, indem sie auf maschinellem Lernen basierende Einblicke nutzen, um hochwertige Kunden mit Ihren Marketingkampagnen zu identifizieren und anzusprechen.
 
 Mit Look-alike-Zielgruppen können Sie erweiterte Zielgruppen erstellen, die Kunden ähnlich Ihren leistungsstarken Zielgruppen ansprechen oder Kunden ähnlich wie zuvor konvertierten Zielgruppen ansprechen.
 
@@ -31,6 +31,21 @@ Bevor Sie mit Look-alike-Zielgruppen beginnen, sollten Sie sich mit den folgende
 - **Gesamte adressierbare Zielgruppengröße**: Die gesamte adressierbare Zielgruppengröße ist die Gesamtanzahl der Profile in den letzten 30 Tagen abzüglich der Basiszielgruppe in den letzten 30 Tagen. Wenn beispielsweise ein Kunde in den letzten 30 Tagen 10 Millionen Profile hat und die Basiszielgruppe in den letzten 30 Tagen 1 Million Profile hat, beträgt die gesamte adressierbare Zielgruppengröße 9 Millionen Profile.
 
 ## Look-alike-Modelldetails {#details}
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_notEligible"
+>title="Nicht berechtigt"
+>abstract="Diese Zielgruppe ist derzeit nicht für Look-alike-Einblicke qualifiziert, da sie möglicherweise weniger als die Mindestanzahl von Profilen enthält, die für das Training erforderlich sind, oder der Profilexport noch nicht ausgelöst wurde."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_processing"
+>title="Verarbeitung läuft"
+>abstract="Diese Zielgruppe wird derzeit verarbeitet. Die Verarbeitung des Modells kann bis zu 24 Stunden dauern. Bitte versuchen Sie es später erneut."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_error"
+>title="Fehler"
+>abstract="Bei der Verarbeitung dieses Modells ist ein Fehler aufgetreten. Bitte löschen Sie dieses Modell und erstellen es neu oder versuchen Sie es später erneut."
 
 In Adobe Experience Platform verbraucht das Look-alike-Modell drei verschiedene Arten von Datenpunkten:
 
@@ -52,24 +67,9 @@ Die folgenden Berechtigungen gelten für die Verwendung von Look-alike-Zielgrupp
 
 Add-On-Pakete, die zu einem späteren Zeitpunkt verfügbar sein werden, erhöhen die Berechtigungen für Produktions-Sandboxes um 20 Look-alike-Zielgruppen pro Paket.
 
-Um zu bestätigen, ob Sie Zugriff auf Look-alike-Audiences haben, wenden Sie sich an Ihren Adobe-Kundenbetreuer.
+Wenden Sie sich an Ihren Adobe-Kundenbetreuer, um zu bestätigen, ob Sie Zugriff auf Look-alike-Zielgruppen haben.
 
 ## Look-alike-Einblicke anzeigen {#view}
-
->[!CONTEXTUALHELP]
->id="platform_audiences_lookAlike_notEligible"
->title="Nicht berechtigt"
->abstract="Diese Zielgruppe ist derzeit nicht für Look-alike-Einblicke qualifiziert, da sie möglicherweise weniger als die Mindestanzahl von Profilen enthält, die für das Training erforderlich sind, oder der Profilexport noch nicht ausgelöst wurde."
-
->[!CONTEXTUALHELP]
->id="platform_audiences_lookAlike_processing"
->title="Verarbeitung läuft"
->abstract="Diese Zielgruppe wird derzeit verarbeitet. Die Verarbeitung des Modells kann bis zu 24 Stunden dauern. Bitte versuchen Sie es später erneut."
-
->[!CONTEXTUALHELP]
->id="platform_audiences_lookAlike_error"
->title="Fehler"
->abstract="Bei der Verarbeitung dieses Modells ist ein Fehler aufgetreten. Bitte löschen Sie dieses Modell und erstellen es neu oder versuchen Sie es später erneut."
 
 Look-alike-Einblicke sind in die Seite mit den Zielgruppendetails integriert. Um die Look-alike-Einblicke einer Zielgruppe anzuzeigen, wählen Sie **[!UICONTROL Zielgruppen]** in der linken Navigationsleiste, gefolgt von **[!UICONTROL Durchsuchen]** und der Zielgruppe, für die Sie die Einblicke anzeigen möchten.
 
@@ -84,7 +84,7 @@ Die Seite mit den Details zur Zielgruppe wird angezeigt. Auswählen **[!UICONTRO
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_similarityAndReach"
 >title="Ähnlichkeit und Reichweite"
->abstract="Das Ähnlichkeits- und Reichweitendiagramm zeichnet die erwartete Reichweite einer Look-alike-Zielgruppe aus Profilen über einem bestimmten Ähnlichkeitswert auf. Sie können den Mauszeiger über einen bestimmten Punkt im Diagramm bewegen, um den Prozentsatz der Ähnlichkeit und die erwartete Profilanzahl für den aktuell hervorgehobenen Punkt anzuzeigen."
+>abstract="Die Ähnlichkeits- und Reichweitendiagramme zeichnen die erwartete Reichweite einer Look-alike-Zielgruppe aus Profilen über einem bestimmten Ähnlichkeitswert auf. Sie können den Mauszeiger über einen bestimmten Punkt im Diagramm bewegen, um den Prozentsatz der Ähnlichkeit und die erwartete Profilanzahl für den aktuell hervorgehobenen Punkt anzuzeigen."
 
 Der Abschnitt &quot;Ähnlichkeit und Reichweite&quot;zeigt ein Diagramm an, das die erwartete Reichweite einer Look-alike-Zielgruppe abbildet, die aus Profilen über einem bestimmten Ähnlichkeitswert besteht. Der Ähnlichkeitswert stellt die **Distanz** Ähnlichkeit zwischen dem Profil der Basiszielgruppe und dem Profil des Look-alike-Insight.
 
@@ -102,7 +102,7 @@ Sie können den Mauszeiger über einen bestimmten Punkt im Diagramm bewegen, um 
 
 Im Abschnitt Look-alike-Zielgruppen wird eine Liste aller Look-alike-Zielgruppen angezeigt, die zuvor für die ausgewählte Basiszielgruppe erstellt wurden.
 
-![Der Abschnitt &quot;Look-alike-Zielgruppen&quot;wurde hervorgehoben.](../images/ui/lookalike-audiences/select-laa.png)
+![Der Abschnitt &quot;Look-alike-Zielgruppen&quot;wird hervorgehoben.](../images/ui/lookalike-audiences/select-laa.png)
 
 ### Einflussfaktoren {#influential-factors}
 
@@ -112,7 +112,7 @@ Im Abschnitt Look-alike-Zielgruppen wird eine Liste aller Look-alike-Zielgruppen
 >abstract="Einflussfaktoren sind Attribute, Ereignisse und Zielgruppenmitgliedschaften, die wichtig sind, um die Ähnlichkeit eines Profils mit Mitgliedern der Basiszielgruppe zu erklären. Datennutzungskennzeichnungen und -richtlinien können verwendet werden, um bestimmte Daten davon auszuschließen, in Look-alike-Modellen als Einflussfaktoren betrachtet zu werden."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=de#exclude" text="Daten ausschließen"
 
-Im Abschnitt Einflussfaktoren werden die 100 wichtigsten Faktoren angezeigt, die das Look-alike-Modell für die ausgewählte Basiszielgruppe beeinflussen. Diese Einflussfaktoren sind die Profilattribute, die Erlebnisereignisse und die Zielgruppenmitgliedschaften, die bei der Erläuterung der Ähnlichkeiten in der Basiszielgruppe am wichtigsten sind. Wenn Sie die wichtigsten Einflussfaktoren verstehen, können Sie Ihre Marketing-Inhalte für diese Zielgruppe und alle daraus erstellten Look-alike-Zielgruppen besser personalisieren. Beachten Sie, dass nicht alle Einflussfaktoren angezeigt werden, die sich auf das Look-alike-Modell auswirken.
+Im Abschnitt Einflussfaktoren werden die 100 wichtigsten Faktoren angezeigt, die das Look-alike-Modell für die ausgewählte Basiszielgruppe beeinflussen. Diese Einflussfaktoren sind die Profilattribute, die Erlebnisereignisse und die Zielgruppenmitgliedschaften, die bei der Erläuterung der Ähnlichkeiten in der Basiszielgruppe am wichtigsten sind. Wenn Sie die wichtigsten Einflussfaktoren verstehen, können Sie Ihren Marketing-Inhalt für diese Zielgruppe und alle daraus erstellten Look-alike-Zielgruppen besser personalisieren. Beachten Sie, dass nicht alle Einflussfaktoren angezeigt werden, die sich auf das Look-alike-Modell auswirken.
 
 Bei numerischen Einflussfaktoren können die Schlüsselwertpaare je nach der Anzahl der verschiedenen Werte, die dieser Schlüssel hat, in Behälter zusammengefasst werden. Wenn Sie beispielsweise einen Schlüssel von `income`, wären höchstwahrscheinlich viele eindeutige Werte vorhanden. Daher werden die Schlüssel-Wert-Paare in Buckets platziert, die wie folgt aussehen könnten: `income=[0 -> 30000]`, `income=[30000 -> 50000]`, und `income=[50000 -> 100000]`.
 
@@ -135,7 +135,7 @@ Diese Behälter werden regelmäßig neu berechnet, um sicherzustellen, dass die 
 
 >[!IMPORTANT]
 >
->You **cannot** Verwenden Sie eine Look-alike-Zielgruppe als Basiszielgruppe für eine andere Look-alike-Zielgruppe. Das heißt, Sie **cannot** verkettete Look-alike-Zielgruppen erstellen.
+>You **cannot** eine Look-alike-Zielgruppe als Basiszielgruppe für eine andere Look-alike-Zielgruppe verwenden. Das heißt, Sie **cannot** Erstellen verketteter Look-alike-Zielgruppen.
 
 Um eine Look-alike-Zielgruppe zu erstellen, müssen Sie die Zielgruppe auswählen, auf der die Look-alike-Zielgruppe basieren soll. Um auf Ihre Liste der verfügbaren Zielgruppen zuzugreifen, wählen Sie **[!UICONTROL Zielgruppen]** in der linken Navigationsleiste, gefolgt von **[!UICONTROL Durchsuchen]**. Die Liste der Zielgruppen wird angezeigt. Auf dieser Seite können Sie die Zielgruppe auswählen, die Sie als Basiszielgruppe verwenden möchten.
 
@@ -165,11 +165,11 @@ Auswählen **[!UICONTROL Erstellen]** , um die Erstellung Ihrer Look-alike-Zielg
 
 Auf die neu erstellte Look-alike-Zielgruppe kann im **[!UICONTROL Look-alike-Zielgruppen]** auf der Seite mit den Zielgruppendetails und ist auch im Zielgruppenportal und für andere nachgelagerte Verwendungen verfügbar. Bitte beachten Sie, dass es einige Zeit dauern wird, bis die Look-alike-Zielgruppe bewertet wird. Bis die Profilanzahl erreicht ist, scheint sie 0 zu sein.
 
-## Look-alike-Zielgruppendetails anzeigen {#view-details}
+## Anzeigen von Look-alike-Zielgruppendetails {#view-details}
 
 Um Details einer Look-alike-Zielgruppe anzuzeigen, wählen Sie die Look-alike-Zielgruppe im **[!UICONTROL Look-alike-Zielgruppen]** der Basiszielgruppe.
 
-![Der Abschnitt &quot;Look-alike-Zielgruppen&quot;wurde hervorgehoben.](../images/ui/lookalike-audiences/select-laa.png)
+![Der Abschnitt &quot;Look-alike-Zielgruppen&quot;wird hervorgehoben.](../images/ui/lookalike-audiences/select-laa.png)
 
 Die Seite mit den Details zur Zielgruppe wird angezeigt. Weitere Informationen auf dieser Seite finden Sie im [Abschnitt mit Zielgruppendetails des UI-Handbuchs für den Segmentation Service](./overview.md#audience-details).
 
@@ -181,10 +181,10 @@ Look-alike-Zielgruppen können so konfiguriert werden, dass Datenfelder ausgesch
 
 Die standardmäßige Bezeichnung &quot;C9&quot;kann verwendet werden, um Daten zu beschriften, die nicht für die Datenwissenschaft verwendet werden sollten, und kann durch Aktivierung der standardmäßigen Richtlinie &quot;Datenwissenschaft beschränken&quot;durchgesetzt werden. Sie können auch zusätzliche Richtlinien erstellen, um Daten mit anderen Bezeichnungen, einschließlich sensibler Bezeichnungen, aus der Nutzung für die Datenwissenschaft zu beschränken. Weitere Informationen zur Verwaltung von Datennutzungsrichtlinien finden Sie im Abschnitt [Benutzeroberflächenleitfaden für Datennutzungsrichtlinien](../../data-governance/policies/user-guide.md). Weitere Informationen zur Verwaltung von Datennutzungsbezeichnungen finden Sie im Abschnitt [Benutzerhandbuch zu den Datennutzungsbezeichnungen](../../data-governance/labels/user-guide.md).
 
-Standardmäßig wird der Modellierungsprozess für Look-alike-Audiences ausgeschlossen **any** -Feld, Datensatz oder Zielgruppe basierend auf der aktivierten Datenschutzrichtlinie für Ihr Unternehmen. Wenn die Basiszielgruppe keine Vertragsbezeichnungen hat, wird der Modellierungsprozess **any** -Feld, Datensatz oder Zielgruppe basierend auf der aktivierten Datenschutzrichtlinie für Ihr Unternehmen.
+Standardmäßig wird der Modellierungsprozess für Look-alike-Zielgruppen ausgeschlossen **any** -Feld, Datensatz oder Zielgruppe basierend auf der aktivierten Datenschutzrichtlinie für Ihr Unternehmen. Wenn die Basiszielgruppe keine Vertragsbezeichnungen hat, wird der Modellierungsprozess **any** -Feld, Datensatz oder Zielgruppe basierend auf der aktivierten Datenschutzrichtlinie für Ihr Unternehmen.
 
 Bitte beachten Sie, dass **you** sind dafür verantwortlich sicherzustellen, dass Daten, einschließlich sensibler Daten, angemessen gekennzeichnet werden und dass Datennutzungsrichtlinien definiert wurden und es ermöglicht wird, die rechtlichen und regulatorischen Verpflichtungen einzuhalten, unter denen Sie tätig sind. Sie sollten auch wissen, dass Datenfelder oder Segmentmitgliedschaften, die **not** die direkte Korrelation mit Datenfeldern, die normalerweise mit sensiblen oder geschützten Datentypen verknüpft sind, kann eine potenzielle Verzerrung darstellen. **You** sind für die Analyse Ihrer Daten verantwortlich, um die entsprechenden Datennutzungsrichtlinien zu identifizieren, zu beschriften und auf Ihre Daten anzuwenden, einschließlich aller Datenfelder, die für vertrauliche oder geschützte Datentypen geeignet sind und von der Modellierung ausgeschlossen werden sollten.
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Handbuchs haben Sie gelernt, wie Sie Look-alike-Einblicke anzeigen und Look-alike-Zielgruppen erstellen können, die auf diesen Einblicken basieren. Weitere Informationen zu Zielgruppen in der Benutzeroberfläche von Adobe Experience Platform finden Sie im Abschnitt [Handbuch zur Benutzeroberfläche des Segmentierungsdienstes](./overview.md).
+Nach dem Lesen dieses Handbuchs haben Sie gelernt, wie Sie Look-alike-Einblicke anzeigen und auf Grundlage dieser Einblicke Look-alike-Zielgruppen erstellen können. Weitere Informationen zu Zielgruppen in der Benutzeroberfläche von Adobe Experience Platform finden Sie im Abschnitt [Handbuch zur Benutzeroberfläche des Segmentierungsdienstes](./overview.md).

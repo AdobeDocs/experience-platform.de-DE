@@ -4,10 +4,10 @@ title: Dashboard-Anleitung für Zielgruppen
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu Zielgruppen anzeigen können, die Ihre Organisation erstellt hat.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: cd57ca50537d928025a5164b6a7d0ead490162ba
 workflow-type: tm+mt
-source-wordcount: '2231'
-ht-degree: 47%
+source-wordcount: '3053'
+ht-degree: 38%
 
 ---
 
@@ -19,7 +19,7 @@ Einen Überblick über alle Funktionen des Segmentierungs-Services von Adobe Exp
 
 ## [!UICONTROL Zielgruppen] Dashboard-Daten
 
-Die [!UICONTROL Zielgruppen] Das Dashboard zeigt eine Momentaufnahme der Attributdaten (Datensatzdaten) an, die Ihr Unternehmen im Profilspeicher in Experience Platform hat. Die Momentaufnahme enthält keine Ereignisdaten (Zeitreihendaten).
+Die [!UICONTROL Zielgruppen] Dashboard zeigt eine Momentaufnahme der Attributdaten (Datensatzdaten) an, die Ihr Unternehmen im Profilspeicher unter Experience Platform hat. Die Momentaufnahme enthält keine Ereignisdaten (Zeitreihendaten).
 
 Die Attributdaten in der Momentaufnahme zeigen die Daten exakt so an, wie sie zum Zeitpunkt der Momentaufnahme vorgefunden werden. Mit anderen Worten, der Schnappschuss ist keine Annäherung oder Stichprobe der Daten, und die [!UICONTROL Zielgruppen] Das Dashboard wird nicht in Echtzeit aktualisiert.
 
@@ -87,9 +87,68 @@ Für alle neuen Instanzen von Adobe Experience Platform wird ein standardmäßig
 >Seit dem 26. Juli 2023 [!UICONTROL Profile], [!UICONTROL Zielgruppen], und [!UICONTROL Ziele] Die Übersichts-Dashboards wurden für alle Benutzer, die ihre Ansichten in den letzten sechs Monaten nicht geändert haben, auf ein neues standardmäßiges Widget-Load-out zurückgesetzt.
 >Weitere Informationen finden Sie in der Dokumentation unter [Profile](./profiles.md#default-widgets) und [Ziele](./destinations.md#default-widgets) Standard-Widget-Abschnitte für Details darüber, welche Widgets als Teil der standardmäßigen Widget-Ladevorgänge einbezogen werden. Sie können Ihre Dashboard-Widgets weiterhin wie bisher anpassen.
 
+## Kunden-KI-Widgets {#customer-ai-audiences-widgets}
+
+Customer AI wird verwendet, um für einzelne Profile skaliert benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion zu berechnen. Customer AI analysiert dazu vorhandene Erlebnisereignisdaten von Verbrauchern, um sie vorherzusagen **Tendenzwerte für Abwanderung oder Konversion**. Diese hochpräzisen kundenspezifischen Tendenzmodelle ermöglichen eine präzisere Segmentierung und Targeting. Die [Verteilung der Punktzahl](#customer-ai-distribution-of-scores) und [Bewertungszusammenfassung](#customer-ai-scoring-summary) Einblicke zeigen die Aufteilung in Ihrer Zielgruppe. Sie heben hervor, welche Profile die hohe/niedrige/mittlere Tendenz aufweisen und wie sie über Ihre Profilzahlen verteilt sind.
+
+* [[!UICONTROL Customer AI-Bewertungszusammenfassung]](#customer-ai-scoring-summary)
+* [[!UICONTROL Customer AI-Verteilung von Bewertungen]](#customer-ai-distribution-of-scores)
+
+### [!UICONTROL Customer AI-Verteilung von Bewertungen] {#customer-ai-distribution-of-scores}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_distributionOfScores"
+>title="Verteilung der Scores"
+>abstract="Dieses Widget visualisiert die Verteilung der Gesamtanzahl der Profile anhand ihrer Tendenzwerte in Schritten von fünf Prozent. Die Verteilung der Profilanzahl wird durch das KI-Modell und die ausgewählte Zusammenführungsrichtlinie bestimmt. Sie können das KI-Modell im Dropdown-Menü unter dem Widget-Titel ändern."
+
+Die [!UICONTROL Customer AI-Verteilung von Bewertungen] Widget kategorisiert die Gesamtanzahl der Profile nach ihren Tendenzwerten. Die Verteilung der Profilanzahl wird durch das AI-Modell und die ausgewählte Zusammenführungsrichtlinie bestimmt und dann in fünfprozentigen Schritten visualisiert, die ihre Neigung angeben. Die Anzahl der Profile wird entlang der Y-Achse angegeben und die Tendenzwerte werden entlang der X-Achse angegeben.
+
+>[!NOTE]
+>
+>Wenn es sich bei der Visualisierung um eine Konversion-Tendenzbewertung handelt, werden die hohen Werte grün und die niedrigen Punkte rot angezeigt. Wenn Sie die Abwanderungsneigung vorhersagen, wird diese gespiegelt, die hohen Werte sind rot und die niedrigen Werte grün. Der mittlere Eimer bleibt gelb, unabhängig vom gewählten Tendenztyp.
+
+Das AI-Modell, das die Tendenzwerte bestimmt, wird aus der Dropdown-Auswahl unter dem Widget-Titel ausgewählt. Das Dropdown-Menü enthält eine Liste aller konfigurierten Customer AI-Modelle. Wählen Sie aus der Liste der verfügbaren Modelle das passende KI-Modell für Ihre Analyse aus. Wenn kein Customer AI-Modell verfügbar ist, werden Sie durch eine Meldung im Widget angewiesen, mindestens ein Customer AI-Modell zu konfigurieren. Außerdem wird ein Hyperlink zur Konfigurationsseite des Customer AI-Modells bereitgestellt. Anweisungen finden Sie in der Dokumentation zu [Konfigurieren einer Customer AI-Instanz](../../intelligent-services/customer-ai/user-guide/configure.md).
+
+>[!NOTE]
+>
+>Wählen Sie das Dropdown-Menü direkt unter dem Tab Übersicht aus, um die Zusammenführungsrichtlinie zu ändern, die bestimmt, welche Profile in die Analyse aufgenommen werden. Siehe Abschnitt zu [Zusammenführungsrichtlinien](#merge-policies) für eine kurze Beschreibung oder [Zusammenführungsrichtlinienübersicht](../../profile/merge-policies/overview.md) für weitere Details.
+
+Um zur detaillierten Insight-Seite für das ausgewählte Customer AI-Modell zu navigieren, wählen Sie **[!UICONTROL Modelldetails anzeigen]**.
+
+![Das Dashboard &quot;Experience Platform-Zielgruppen&quot;mit dem [!UICONTROL Customer AI-Verteilung von Bewertungen] Widget und [!UICONTROL Modelldetails anzeigen] hervorgehoben.](../images/segments/customer-ai-distribution-of-scores.png)
+
+Die Seite mit detaillierten Modelleinblicken wird angezeigt.
+
+![Die Einblicke-Seite für die Customer AI.](../images/profiles/customer-ai-insights-page.png)
+
+Weitere Informationen zu Customer AI finden Sie im [Leitfaden zur Benutzeroberfläche für Einblicke](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
+
+### [!UICONTROL Customer AI-Bewertungszusammenfassung] {#customer-ai-scoring-summary}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_scoringSummary"
+>title="Bewertungszusammenfassung"
+>abstract="Dieses Widget zeigt die Gesamtzahl der bewerteten Profile und kategorisiert sie in hohe, mittlere und niedrige Tendenz. Das Ringdiagramm zeigt die proportionale Zusammensetzung der Gesamtprofile über eine hohe, mittlere und niedrige Tendenz hinweg."
+
+Dieses Widget zeigt die Gesamtzahl der bewerteten Profile und kategorisiert sie in Behälter mit hoher, mittlerer und niedriger Neigung als grün, gelb und rot. Ein Ringdiagramm veranschaulicht die proportionale Zusammensetzung der Gesamtprofile zwischen hohen, mittleren und niedrigen Eigenschaften (grün, gelb und rot). Ein Profil ist qualifiziert für eine hohe Tendenz bei über 75, eine mittlere Neigung zwischen 25 und 74 und eine niedrige Tendenz unter 24. Eine Legende zeigt den Farbcode und die Schwellen der Eigenschaften an. Profilzahlen für die Eigenschaften &quot;Hoch&quot;, &quot;Mittel&quot;und &quot;Niedrig&quot;werden in einem Dialogfeld angezeigt, wenn der Cursor den Mauszeiger über den entsprechenden Abschnitt des Ringdiagramms bewegt.
+
+>[!NOTE]
+>
+>Wenn es sich bei der Visualisierung um eine Konversion-Tendenzbewertung handelt, werden die hohen Werte grün und die niedrigen Punkte rot angezeigt. Wenn Sie die Abwanderungsneigung vorhersagen, wird diese gespiegelt, die hohen Werte sind rot und die niedrigen Werte grün. Der mittlere Eimer bleibt gelb, unabhängig vom gewählten Tendenztyp.
+
+Das Dropdown-Menü unter dem Widget-Titel enthält eine Liste aller konfigurierten Customer AI-Modelle. Wählen Sie aus der Liste der verfügbaren Modelle das passende KI-Modell für Ihre Analyse aus. Wenn kein Customer AI-Modell verfügbar ist, werden Sie durch eine Meldung im Widget angewiesen, mindestens ein Customer AI-Modell zu konfigurieren. Außerdem wird ein Hyperlink zur Konfigurationsseite des Customer AI-Modells bereitgestellt. Siehe die Dokumentation unter [Konfigurieren einer Customer AI-Instanz](../../intelligent-services/customer-ai/user-guide/configure.md) für detaillierte Anweisungen.
+
+>[!NOTE]
+>
+>Die Gesamtzahl der berechneten Profile hängt von der gewählten Zusammenführungsrichtlinie ab. Um die verwendete Zusammenführungsrichtlinie zu ändern, wählen Sie das Dropdown-Menü direkt unter der Registerkarte Übersicht aus. Siehe Abschnitt zu [Zusammenführungsrichtlinien](#merge-policies) für eine kurze Beschreibung oder [Zusammenführungsrichtlinienübersicht](../../profile/merge-policies/overview.md) für weitere Details.
+
+![Das Dashboard Experience Platform-Zielgruppen mit dem Widget Customer AI-Bewertungszusammenfassung wurde hervorgehoben.](../images/segments/customer-ai-scoring-summary.png)
+
+Auswählen **[!UICONTROL Modelldetails anzeigen]** , um zur detaillierten Insights-Seite für das ausgewählte Customer AI-Modell zu navigieren. Weitere Informationen zu Customer AI finden Sie im [Leitfaden zur Benutzeroberfläche für Einblicke](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
+
 ## Standard-Widgets {#standard-widgets}
 
-Adobe bietet mehrere Standard-Widgets, mit denen Sie verschiedene Metriken für Ihre Zielgruppen visualisieren können. In der [!UICONTROL Widget-Bibliothek] können Sie auch benutzerdefinierte Widgets erstellen und für Ihre gesamte Organisation freigeben. Um mehr über das Erstellen benutzerdefinierter Widgets zu erfahren, lesen Sie zunächst den Abschnitt [Widget-Bibliothek – Übersicht](../customize/widget-library.md).
+Adobe bietet mehrere standardmäßige Widgets, mit denen Sie verschiedene Metriken für Ihre Zielgruppen visualisieren können. In der [!UICONTROL Widget-Bibliothek] können Sie auch benutzerdefinierte Widgets erstellen und für Ihre gesamte Organisation freigeben. Um mehr über das Erstellen benutzerdefinierter Widgets zu erfahren, lesen Sie zunächst den Abschnitt [Widget-Bibliothek – Übersicht](../customize/widget-library.md).
 
 Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen Sie den Namen eines Widgets aus der folgenden Liste aus:
 
@@ -234,4 +293,4 @@ Mit diesem Widget können Sie auf einen Blick erkennen, wo und wann die Zielgrup
 
 ## Nächste Schritte
 
-Durch Befolgen dieses Dokuments sollten Sie jetzt die [!UICONTROL Zielgruppen] und wählen Sie eine Zielgruppe aus, die angezeigt werden soll. Sie sollten auch die Metriken verstehen, die in den verfügbaren Widgets angezeigt werden. Weiterführende Informationen zum Arbeiten mit Zielgruppen in der Benutzeroberfläche von Experience Platform finden Sie im Abschnitt [Handbuch zur Benutzeroberfläche des Segmentierungsdienstes](../../segmentation/ui/overview.md).
+Durch Befolgen dieses Dokuments sollten Sie jetzt die [!UICONTROL Zielgruppen] und wählen Sie eine Zielgruppe aus, die angezeigt werden soll. Sie sollten auch die Metriken verstehen, die in den verfügbaren Widgets angezeigt werden. Weitere Informationen zum Arbeiten mit Zielgruppen in der Experience Platform-Benutzeroberfläche finden Sie im Abschnitt [Handbuch zur Benutzeroberfläche des Segmentierungsdienstes](../../segmentation/ui/overview.md).
