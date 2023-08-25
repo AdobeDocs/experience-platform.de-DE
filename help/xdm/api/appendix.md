@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; API; XDM; XDM; XDM-System; Experience-Datenmodell; Experience-Datenmodell; Experience-Datenmodell; Datenmodell; Datenmodell; Schemaregistrierung; Schemaregistrierung; Kompatibilität; Kompatibilitätsmodus; Kompatibilitätsmodus; Feldtyp; Feldtypen;
+keywords: Experience Platform; home; beliebte Themen; API; XDM; XDM; XDM-System; Experience-Datenmodell; Experience-Datenmodell; Experience-Datenmodell; Datenmodell; Datenmodell; Schemaregistrierung; Schema Registry; Kompatibilität; Kompatibilitätsmodus; Kompatibilitätsmodus; Feldtyp; Feldtypen
 solution: Experience Platform
 title: Handbuch zur Schema Registry-API
 description: Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mit der Schema Registry-API.
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 28891cf37dc9ffcc548f4c0565a77f62432c0b44
 workflow-type: tm+mt
-source-wordcount: '978'
-ht-degree: 35%
+source-wordcount: '968'
+ht-degree: 36%
 
 ---
 
@@ -30,8 +30,8 @@ Zu den häufigsten Abfrageparametern für das Paging gehören:
 | Parameter | Beschreibung |
 | --- | --- |
 | `orderby` | Sortieren Sie die Ergebnisse nach einer bestimmten Eigenschaft. Beispiel: `orderby=title` sortiert die Ergebnisse in aufsteigender Reihenfolge (A-Z) nach Titel. Hinzufügen einer `-` vor dem Parameterwert (`orderby=-title`) sortiert Elemente nach Titel in absteigender Reihenfolge (Z-A). |
-| `limit` | Bei Verwendung in Verbindung mit einer `orderby` Parameter, `limit` begrenzt die maximale Anzahl von Elementen, die für eine bestimmte Anfrage zurückgegeben werden sollen. Dieser Parameter kann nicht ohne `orderby` Parameter vorhanden.<br><br>Die `limit` -Parameter gibt eine positive Ganzzahl an (zwischen `0` und `500`) als *Hint* , um die maximale Anzahl der zurückzugebenden Elemente anzugeben. Beispiel: `limit=5` gibt nur fünf Ressourcen in der Liste zurück. Dieser Wert wird jedoch nicht genau berücksichtigt. Die tatsächliche Antwortgröße kann kleiner oder größer sein, da die zuverlässige Funktion der `start` -Parameter, wenn einer angegeben wird. |
-| `start` | Bei Verwendung in Verbindung mit einer `orderby` Parameter, `start` gibt an, wo die untergeordnete Liste von Elementen beginnen soll. Dieser Parameter kann nicht ohne `orderby` Parameter vorhanden. Dieser Wert kann aus dem `_page.next` -Attribut einer Listenantwort verwenden, um auf die nächste Ergebnisseite zuzugreifen. Wenn die Variable `_page.next` null ist, ist keine zusätzliche Seite verfügbar.<br><br>Normalerweise wird dieser Parameter weggelassen, um die erste Ergebnisseite zu erhalten. Danach `start` auf den Maximalwert der primären Sortiereigenschaft der `orderby` -Feld, das auf der vorherigen Seite empfangen wurde. Die API-Antwort gibt dann Einträge zurück, die mit jenen beginnen, die über eine primäre Sortiereigenschaft von verfügen `orderby` strikt größer als (für aufsteigende Werte) oder strikt kleiner als (für absteigende Werte) der angegebene Wert.<br><br>Wenn beispielsweise die Variable `orderby` -Parameter auf `orderby=name,firstname`, die `start` -Parameter enthält einen Wert für `name` -Eigenschaft. Wenn Sie in diesem Fall die nächsten 20 Einträge einer Ressource direkt nach dem Namen &quot;Miller&quot;anzeigen möchten, verwenden Sie: `?orderby=name,firstname&start=Miller&limit=20`. |
+| `limit` | Bei Verwendung in Verbindung mit einer `orderby` Parameter, `limit` begrenzt die maximale Anzahl von Elementen, die für eine bestimmte Anfrage zurückgegeben werden sollen. Dieser Parameter kann nicht ohne `orderby` Parameter vorhanden.<br><br>Die `limit` -Parameter gibt eine positive Ganzzahl an (zwischen `0` und `500`) als *Hint* , um die maximale Anzahl der Elemente anzugeben, die zurückgegeben werden sollen. Beispiel: `limit=5` gibt nur fünf Ressourcen in der Liste zurück. Dieser Wert wird jedoch nicht genau berücksichtigt. Die tatsächliche Antwortgröße kann kleiner oder größer sein, da die zuverlässige Funktion der `start` -Parameter, wenn einer angegeben wird. |
+| `start` | Bei Verwendung in Verbindung mit einer `orderby` Parameter, `start` gibt an, wo die untergeordnete Liste von Elementen beginnen soll. Dieser Parameter kann nicht ohne `orderby` Parameter vorhanden. Dieser Wert kann aus dem `_page.next` -Attribut einer Listenantwort verwenden, um auf die nächste Ergebnisseite zuzugreifen. Wenn die Variable `_page.next` null ist, ist keine zusätzliche Seite verfügbar.<br><br>Normalerweise wird dieser Parameter weggelassen, um die erste Ergebnisseite zu erhalten. Danach `start` auf den Maximalwert der primären Sortiereigenschaft der `orderby` -Feld, das auf der vorherigen Seite empfangen wurde. Die API-Antwort gibt dann Einträge zurück, die mit jenen beginnen, die über eine primäre Sortiereigenschaft von verfügen `orderby` strikt größer als (für aufsteigende Werte) oder strikt kleiner als (für absteigende Werte) der angegebene Wert.<br><br>Wenn beispielsweise die Variable `orderby` -Parameter auf `orderby=name,firstname`, die `start` enthält einen Wert für `name` -Eigenschaft. Wenn Sie in diesem Fall die nächsten 20 Einträge einer Ressource direkt nach dem Namen &quot;Miller&quot;anzeigen möchten, verwenden Sie: `?orderby=name,firstname&start=Miller&limit=20`. |
 
 {style="table-layout:auto"}
 
@@ -42,12 +42,11 @@ Sie können die Ergebnisse mithilfe der `property` -Parameter, der verwendet wir
 | Operator | Beschreibung | Beispiel |
 | --- | --- | --- |
 | `==` | Filtert danach, ob die Eigenschaft dem bereitgestellten Wert entspricht. | `property=title==test` |
-| `!=` | Filtert danach, ob die Eigenschaft nicht mit dem bereitgestellten Wert übereinstimmt. | `property=title!=test` |
+| `!=` | Filtert danach, ob die Eigenschaft nicht dem bereitgestellten Wert entspricht. | `property=title!=test` |
 | `<` | Filtert danach, ob die Eigenschaft kleiner als der angegebene Wert ist. | `property=version<5` |
 | `>` | Filtert danach, ob die Eigenschaft größer als der angegebene Wert ist. | `property=version>5` |
 | `<=` | Filtert danach, ob die Eigenschaft kleiner oder gleich dem angegebenen Wert ist. | `property=version<=5` |
 | `>=` | Filtert danach, ob die Eigenschaft größer oder gleich dem angegebenen Wert ist. | `property=version>=5` |
-| `~` | Filtert danach, ob die Eigenschaft mit einem angegebenen regulären Ausdruck übereinstimmt. | `property=title~test$` |
 | (Keine) | Wenn nur der Eigenschaftsname festgelegt wird, werden nur Einträge zurückgegeben, in denen die Eigenschaft vorhanden ist. | `property=title` |
 
 {style="table-layout:auto"}
@@ -76,7 +75,7 @@ Im Folgenden finden Sie einen Vergleich, der sowohl im Standard-XDM als auch im 
   <tr>
   <td>
   <pre class=" language-json">
-{ "xdm:birthDate": { "title": "Geburtsdatum", "Typ": "string", "format": "date" }, "xdm:birthDayAndMonth": { "title": "Geburtsdatum", "Typ": "string", "pattern": "[0-1][0-9]-[0-9][0-9]" }, "xdm:birthYear": { "title": "Geburtsjahr", "Typ": "integer", "minimum": 1, "Maximum": 32767 } }
+{ "xdm:birthDate": { "title": "Birth Date", "type": "string", "format": "date" }, "xdm:birthDayAndMonth": { "title": "Birth Date", "type": "string", "pattern": "[0-1][0-9]-[0-9][0-9]" }, "xdm:birthYear": { "title": "Birth year", "type": "integer", "minimum": 1, "maximum": 32767 } }
   </pre>
   </td>
   <td>
@@ -114,8 +113,8 @@ Im Folgenden finden Sie einen Vergleich, der sowohl im Standard-XDM als auch im 
 
 Adobe Experience Platform ist für die Verwendung mit mehreren Lösungen und Diensten konzipiert, die jeweils eigene technische Herausforderungen und Einschränkungen aufweisen (z. B. wie bestimmte Technologien Sonderzeichen handhaben). Um diese Einschränkungen zu überwinden, wurde der Kompatibilitätsmodus entwickelt.
 
-Am meisten [!DNL Experience Platform] Dienste, einschließlich [!DNL Catalog], [!DNL Data Lake]und [!DNL Real-Time Customer Profile] use [!DNL Compatibility Mode] anstelle von Standard-XDM. Die [!DNL Schema Registry] API verwendet auch [!DNL Compatibility Mode]und die Beispiele in diesem Dokument werden alle mit [!DNL Compatibility Mode].
+Am meisten [!DNL Experience Platform] Dienste, einschließlich [!DNL Catalog], [!DNL Data Lake], und [!DNL Real-Time Customer Profile] use [!DNL Compatibility Mode] anstelle von Standard-XDM. Die [!DNL Schema Registry] API verwendet auch [!DNL Compatibility Mode]und die Beispiele in diesem Dokument werden alle mit [!DNL Compatibility Mode].
 
-Es lohnt sich zu wissen, dass eine Zuordnung zwischen Standard-XDM und der Art und Weise erfolgt, wie es in [!DNL Experience Platform], sollte jedoch Ihre Verwendung von [!DNL Platform] Dienste.
+Es lohnt sich zu wissen, dass eine Zuordnung zwischen Standard-XDM und der Art und Weise erfolgt, wie es in [!DNL Experience Platform], jedoch sollte dies Ihre Verwendung von [!DNL Platform] Dienste.
 
 Das Open-Source-Projekt steht Ihnen zur Verfügung, aber wenn es darum geht, mit Ressourcen über die [!DNL Schema Registry]enthalten die API-Beispiele in diesem Dokument die Best Practices, die Sie kennen und befolgen sollten.
