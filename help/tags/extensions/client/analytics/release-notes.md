@@ -2,10 +2,10 @@
 title: Versionshinweise für die Adobe Analytics-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Analytics“ in Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 80c46748d809fe0b0367cf779f41d7851e8e62db
 workflow-type: tm+mt
-source-wordcount: '1333'
-ht-degree: 92%
+source-wordcount: '1394'
+ht-degree: 89%
 
 ---
 
@@ -15,7 +15,20 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 >[!NOTE]
 >
->Die Analytics-Tag-Erweiterung , wenn sie häufig als Reaktion auf Aktualisierungen des [AppMeasurement-JavaScript-Bibliothek](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=de). Siehe Abschnitt [Versionshinweise zu AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de) für Details zu den unten genannten spezifischen Versionen.
+>Die Analytics-Tag-Erweiterung , wenn sie häufig als Reaktion auf Aktualisierungen des [AppMeasurement JavaScript-Bibliothek](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=de). Siehe Abschnitt [AppMeasurement-Versionshinweise](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de) für Details zu den spezifischen Versionen, die unten erwähnt werden.
+
+## 19. Juli 2023
+
+**Adobe Analytics-Erweiterung 1.9.2**
+
+**Funktionen**:
+
+* Auf AppMeasurement v2.24.0 aktualisiert.
+* Eine optionale Konfiguration wurde hinzugefügt (`decodeLinkParameters` default `false`), die Link-URLs dekodieren, die doppelt byte-kodierte Zeichen enthalten.
+
+**Fehlerkorrekturen**:
+* Zusätzliche Fehlerbehebung für Browser mit defekter hochentropischer Auflösung [Benutzeragenten-Clienthinweise](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html?lang=de) APIs.
+* Geändert [POST](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) Zu verwendender Content-Type-Header `x-www-form-urlencoded` Standardmäßig.
 
 ## 23. September 2022
 
@@ -32,7 +45,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Fehlerkorrekturen**:
 
-* Es wurden einige Debug-Anweisungen in AppMeasurement entfernt.
+* Es wurden einige Debug-Anweisungen im AppMeasurement entfernt.
 
 ## 29. November 2021
 
@@ -172,7 +185,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 * Aktualisierung der Adobe Analytics-Erweiterung für die Unterstützung von DIL 9.2 für Audience Manager
 
 * Aktualisierung der Erweiterung zur Unterstützung von [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de#version-2.15.0)
-* Das folgende Kontrollkästchen wurde entfernt, da es nicht mehr unterstützt wird: &quot;Verbinden Sie den Ziel-Publishing-IFRAME nicht mit dem DOM oder den Löschzielen&quot;
+* Das folgende Kontrollkästchen wurde entfernt, da es nicht mehr unterstützt wird: &quot;Do not attach the destination publishing IFRAME to the DOM or fire destinations&quot;
 
 ## 4. Juni 2019
 
