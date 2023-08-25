@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise August 2023 für Adobe Experience Platform.
-source-git-commit: 5c1566bac20f7fb83a0ce48c4fe7a22e15dbeb37
+source-git-commit: bf4c4186ed9196e547620a91826f86aa09d683fd
 workflow-type: tm+mt
 source-wordcount: '1650'
 ht-degree: 41%
@@ -107,7 +107,6 @@ Die Datenvorbereitung ermöglicht es Dateningenieurinnen und -ingenieuren, Daten
 | Funktion | Beschreibung |
 | --- | --- |
 | Unterstützung für das Filtern von sekundären Identitäten | Sie können jetzt Data Prep verwenden, um Identitäten aus Adobe Analytics herauszufiltern, z. B. AAID und AACUSTOMID. Wenn diese Identitäten herausgefiltert werden, werden sie nicht in das Echtzeit-Kundenprofil aufgenommen. Ungefilterte Daten werden weiterhin in den Daten-Pool aufgenommen. |
-| Unterstützung für neue `correlationID` -Feld für Adobe Analytics | Die `_experience.decisioning.propositions.scopeDetails.correlationID` ist jetzt im Adobe Analytics-Quell-Connector-Schema verfügbar. Dieses Feld wird zur Unterstützung von A4T-Klassifizierungen verwendet und ab September 2023 ausgefüllt. |
 
 {style="table-layout:auto"}
 
@@ -172,6 +171,7 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 | --- | --- |
 | Allgemeine Verfügbarkeit [!DNL SugarCRM] | [!DNL SugarCRM] -Quellen sind jetzt verfügbar. Verwenden Sie die Quellen [!DNL SugarCRM Accounts & Contacts] und [!DNL SugarCRM Events] zum Übermitteln von Daten aus Ihrem [!DNL SugarCRM]-Konto an Experience Platform. Weitere Informationen finden Sie im [[!DNL SugarCRM] Überblick](../../sources/connectors/crm/sugarcrm.md). |
 | Unterstützung der On-Demand-Erfassung für Datenflüsse zu Quellen in der Benutzeroberfläche | Sie können jetzt für einen vorhandenen Datenfluss in der Benutzeroberfläche Flüsse nach Bedarf erstellen. Weitere Informationen finden Sie im Handbuch unter [Erstellen eines On-Demand-Flusslaufs für Quellen über die Benutzeroberfläche](../../sources/tutorials/ui/on-demand-ingestion.md). |
+| Unterstützung für neue `correlationID` -Feld für Adobe Analytics | Die `_experience.decisioning.propositions.scopeDetails.correlationID` ist jetzt im Adobe Analytics-Quell-Connector-Schema verfügbar. Dieses Feld wird zur Unterstützung von A4T-Klassifizierungen verwendet und ab September 2023 ausgefüllt. |
 
 {style="table-layout:auto"}
 
