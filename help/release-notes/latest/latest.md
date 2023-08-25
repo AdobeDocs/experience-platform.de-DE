@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise August 2023 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: bf4c4186ed9196e547620a91826f86aa09d683fd
+source-git-commit: 4211a19bfd511c495d9efac898467230678aeb96
 workflow-type: tm+mt
-source-wordcount: '1650'
+source-wordcount: '1664'
 ht-degree: 41%
 
 ---
@@ -121,7 +121,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
-| Klasse | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1758/files) | Verwenden Sie diese Klasse, um Interessenten-Profile einzubringen, die aus den wichtigsten Anwendungsfällen für die Kundenakquise von Datenanbietern stammen. |
+| Klasse | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1758/files) | Verwenden Sie diese Klasse, um Interessenten-Profile einzubringen, die aus den wichtigsten Anwendungsfällen für die Kundenakquise von Datenanbietern stammen. Siehe Abschnitt [[!UICONTROL XDM Individual Prospect Profile]](../../xdm/classes/prospect.md) Dokumentation , um Beispiele anzuzeigen und mehr zu erfahren. |
 
 {style="table-layout:auto"}
 

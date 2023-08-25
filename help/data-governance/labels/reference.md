@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Glossar der Datennutzungskennzeichnungen
 description: In diesem Dokument werden alle derzeit von Adobe Experience Platform unterstützten Datennutzungskennzeichnungen beschrieben.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: d1d817646fdc943428ca13f3dd8b52725bce4921
+source-git-commit: 538c5e2c7ff3c684edf6db12087fdf0a58e40199
 workflow-type: tm+mt
-source-wordcount: '2207'
-ht-degree: 93%
+source-wordcount: '2185'
+ht-degree: 94%
 
 ---
 
@@ -64,11 +64,7 @@ Bei Daten, die Sie als sensibel betrachten, kann es sich um verschiedene Arten v
 | **PSPD** | Zulässige sensible und personenbezogene Daten (Permitted Sensitive Personal Data, PSPD) sind Daten, die von Adobe vertraglich zum Hochladen zugelassen werden und die vom geltenden Recht als „sensibel“, „besondere Datenkategorie“ oder Ähnliches erachtet werden. Hiervon ausgenommen sind insbesondere geschützte Gesundheitsinformationen (PHI) und andere regulierte Gesundheitsdaten. |
 | **RHD** | Daten, die sich auf geschützte Gesundheitsinformationen (PHI) beziehen, oder Patienteninformationen, die von Adobe vertraglich zum Hochladen zugelassen sind. |
 
-## (Beta) Partner Ecosystem-Beschriftungen {#partner}
-
->[!IMPORTANT]
->
->Die Beschriftung für Daten von Drittanbietern befindet sich in der Beta-Phase. Sie steht nicht allen Benutzern zur Verfügung und die Dokumentation kann sich ändern.
+## Kennzeichnungen für Partner-Ökosysteme {#partner}
 
 Mit Partner Ecosystem-Beschriftungen werden Daten kategorisiert, die aus externen Quellen für Ihr Unternehmen stammen.
 
