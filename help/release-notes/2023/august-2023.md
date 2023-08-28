@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise August 2023 für Adobe Experience Platform.
-source-git-commit: 4211a19bfd511c495d9efac898467230678aeb96
+source-git-commit: 5181d39e92fbf957f154c3b1dcf4f9af90cfeae9
 workflow-type: tm+mt
-source-wordcount: '1664'
-ht-degree: 41%
+source-wordcount: '1749'
+ht-degree: 42%
 
 ---
 
@@ -20,6 +20,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [Datenerfassung](#data-collection)
 - [Datenaufnahme](#data-ingestion)
 - [Datenvorbereitung](#data-prep)
+- [Ziele](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Identity Service](#identity-service)
 - [Segmentierungs-Service](#segmentation)
@@ -111,6 +112,17 @@ Die Datenvorbereitung ermöglicht es Dateningenieurinnen und -ingenieuren, Daten
 {style="table-layout:auto"}
 
 Weitere Informationen finden Sie im [Datenvorbereitung - Übersicht](../../data-prep/home.md).
+
+## Ziele {#destinations}
+
+[!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+
+**Neue oder aktualisierte Funktionen** {#destinations-new-updated-functionality}
+
+- Sie können jetzt [Zielgruppen aktivieren](../../destinations/ui/activate-prospect-audiences.md) in dateibasierte Ziele.
+- Die allgemeine [Aktivierungsgarantie](../../destinations/guardrails.md#general-activation-guardrails) von maximal 100 Zielen pro Sandbox wurde aktualisiert, um _Hardbounce_.
+
+Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
 ## Experience-Datenmodell (XDM) {#xdm}
 
