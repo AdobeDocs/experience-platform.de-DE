@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie parametrisierte Abfragen in der Adobe Experie
 source-git-commit: 4fc94fc39fa09756a440b5e532330cd310dd96d2
 workflow-type: tm+mt
 source-wordcount: '755'
-ht-degree: 2%
+ht-degree: 11%
 
 ---
 
@@ -12,8 +12,8 @@ ht-degree: 2%
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_parameterizedQueries"
->title="Parametrisierte Abfragen"
->abstract="Verwenden Sie parametrierte Abfragen, um zum Zeitpunkt der Ausführung Parameterwerte hinzuzufügen. Auf diese Weise können Sie mit dynamischen Daten arbeiten und Abfragen für verschiedene Anwendungsfälle wiederverwenden. Verwenden Sie die `'$'` -Präfix verwenden, um einen Abfrageparameter in Ihre Abfrage im Texteditor einzugeben. Fügen Sie anschließend im Abschnitt Abfrageparameter unter dem Editor einen Wert für den Schlüssel hinzu."
+>title="Parametrierte Abfragen"
+>abstract="Verwenden Sie parametrierte Abfragen, um zum Zeitpunkt der Ausführung Parameterwerte hinzuzufügen. Auf diese Weise können Sie mit dynamischen Daten arbeiten und Abfragen für unterschiedliche Anwendungsfälle wiederverwenden. Verwenden Sie den `'$'`-Vorspann, um einen Abfrageparameter in Ihre Abfrage im Texteditor einzugeben. Fügen Sie anschließend im Abschnitt „Abfrageparameter“ unter dem Editor einen Wert für den Schlüssel hinzu."
 
 >[!IMPORTANT]
 >
@@ -50,7 +50,7 @@ SELECT
 
 Um Ihre parametrisierte Abfrage in der Benutzeroberfläche zu erstellen, navigieren Sie zum Abfrage-Editor. Siehe Abschnitt zu [Zugriff auf den Abfrage-Editor](./user-guide.md#accessing-query-editor) für weitere Anweisungen.
 
-Verwenden Sie die `'$'` -Präfix verwenden, um einen Abfrageparameter in Ihre Abfrage im Texteditor einzugeben. Fügen Sie als Nächstes den fehlenden Wert für den Schlüssel im [!UICONTROL Abfrageparameter] Abschnitt unterhalb des Editors. Die Abfrage kann nicht ausgeführt werden, wenn Sie keinem der erforderlichen Schlüssel einen Wert hinzufügen. Ein Warnsymbol (![Ein Warnsymbol.](../images/ui/parameterized-queries/alert-icon.png)) im Abschnitt &quot;Abfrageparameter&quot;neben allen leeren [!UICONTROL Wert] Eingabefelder.
+Verwenden Sie den `'$'`-Vorspann, um einen Abfrageparameter in Ihre Abfrage im Texteditor einzugeben. Fügen Sie als Nächstes den fehlenden Wert für den Schlüssel im [!UICONTROL Abfrageparameter] Abschnitt unterhalb des Editors. Die Abfrage kann nicht ausgeführt werden, wenn Sie keinem der erforderlichen Schlüssel einen Wert hinzufügen. Ein Warnsymbol (![Ein Warnsymbol.](../images/ui/parameterized-queries/alert-icon.png)) im Abschnitt &quot;Abfrageparameter&quot;neben allen leeren [!UICONTROL Wert] Eingabefelder.
 
 ![Der Abfrage-Editor mit einer parametrisierten Abfrage und der Abschnitt Abfrageparameter wurden hervorgehoben.](../images/ui/parameterized-queries/parameterized-query.png)
 
