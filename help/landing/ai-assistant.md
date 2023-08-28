@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie mit dem AI-Assistenten zu Experience Platform
 badge: Alpha
 hide: true
 hidefromtoc: true
-source-git-commit: ca606e4e29f4ba1df281f47a86b4e3cfa850ae35
+source-git-commit: e84f5aff6885535b58874a4fe02db2944e1d9b7f
 workflow-type: tm+mt
-source-wordcount: '2627'
+source-wordcount: '2629'
 ht-degree: 1%
 
 ---
@@ -342,4 +342,4 @@ Beispiele finden Sie in der folgenden Tabelle:
 | --- | --- | --- |
 | Was ist mein größtes Segment? | Was ist mein größtes Segment? Verwendung von Daten. | Teilen Sie dem KI-Assistenten explizit mit, dass die Antwort auf Daten basieren soll. |
 | Was ist mein größtes Segment? | Geben Sie mein größtes Segment an. | Es gibt Fälle, in denen eine &quot;Was...&quot;-Frage mit einer dokumentationsbasierten Frage verwechselt werden kann. Die Verwendung eines Befehls wie &quot;list&quot;ist ein stärkerer Indikator dafür, dass Sie eine Frage mit Daten im Kontext stellen. |
-| Wie viele Datensätze habe ich? | Zählen Sie meine Datensätze. | Die ursprünglichen Fragesegmente funktionieren zwar nicht mit Datensätzen. |
+| Wie viele Datensätze habe ich? | Zählen Sie meine Datensätze. | Die ursprüngliche Frage funktioniert für Segmente, funktioniert jedoch möglicherweise nicht mit Datensätzen. |
