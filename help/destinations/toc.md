@@ -4,9 +4,9 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: d16a4cf7db12c92ab6ead498846f17d76f6ac641
+source-git-commit: 0eb17d4d7ad9db3737a14f383bdafe40d59eb12c
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1167'
 ht-degree: 95%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 95%
    * [Bearbeiten von Aktivierungsdatenflüssen](./ui/edit-activation.md)
    * [Löschen von Zielen](./ui/delete-destinations.md)
    * [Überwachen von Datenflüssen](./ui/monitor-dataflows.md)
-   * [(Beta) Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele](./ui/batch-destinations-file-formatting-options.md)
+   * [Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele](./ui/batch-destinations-file-formatting-options.md)
    * [Abonnieren von kontextbezogenen Zielwarnhinweisen](ui/alerts.md)
 * Zielkatalog {#catalog}
    * [Zielkatalog – Übersicht](./catalog/overview.md)
@@ -60,7 +60,7 @@ ht-degree: 95%
       * [(Beta) Experience Cloud-Zielgruppen](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Marketo Engage-Verbindung](./catalog/adobe/marketo-engage.md)
       * [Marketo Measure Ultimate-Verbindung](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Freigabe von Experience Platform-Zielgruppen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de)
+      * [Experience Platform-Zielgruppenfreigabe](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de)
    * Werbeziele {#advertising}
       * [Werbeziele – Übersicht](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud-Verbindung](./catalog/advertising/adobe-advertising-cloud-connection.md)
