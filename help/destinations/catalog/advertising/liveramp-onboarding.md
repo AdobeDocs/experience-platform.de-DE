@@ -3,7 +3,7 @@ title: LiveRamp - Onboarding-Verbindung
 description: Erfahren Sie, wie Sie mit dem LiveRamp-Connector Zielgruppen von Adobe Real-time Customer Data Platform in LiveRamp Connect integrieren können.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 804cc13d9f672e87ad56b328bae73216500e07dd
+source-git-commit: 7ea411c9543230f254f2a0565c04f277fed2b17b
 workflow-type: tm+mt
 source-wordcount: '1814'
 ht-degree: 69%
@@ -36,13 +36,13 @@ Im [Zuordnungsschritt](#map) des Aktivierungs-Workflows müssen Sie die Zielzuor
 
 In diesem Abschnitt werden alle Zielgruppen beschrieben, die Sie an dieses Ziel exportieren können.
 
-Dieses Ziel unterstützt die Aktivierung von Zielgruppen, die durch die Experience Platform generiert wurden [Segmentierungsdienst](../../../segmentation/home.md).
+Dieses Ziel unterstützt die Aktivierung von Zielgruppen, die durch die Experience Platform generiert werden [Segmentierungsdienst](../../../segmentation/home.md).
 
 Darüber hinaus unterstützt dieses Ziel auch die Aktivierung der zusätzlichen Zielgruppen, die in der folgenden Tabelle beschrieben sind.
 
 | Zielgruppentyp | Beschreibung |
 ---------|----------|
-| Benutzerdefinierte Uploads | Zielgruppen [importiert](../../../segmentation/ui/overview.md#importing-an-audience) in die Experience Platform aus CSV-Dateien. |
+| Benutzerdefinierte Uploads | Zielgruppen [importiert](../../../segmentation/ui/overview.md#importing-an-audience) in Experience Platform aus CSV-Dateien. |
 
 {style="table-layout:auto"}
 
@@ -53,7 +53,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
 | Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder andere), die im [!DNL LiveRamp - Onboarding] Ziel. |
-| Exporthäufigkeit | **[!UICONTROL Täglicher Batch]** | Da Profile in Experience Platform auf der Grundlage einer Zielgruppenbewertung aktualisiert werden, werden die Profile (Identitäten) einmal täglich nachgelagert zur Zielplattform aktualisiert. Weitere Informationen finden Sie unter [Batch-Datei-basierte Ziele](/help/destinations/destination-types.md#file-based). |
+| Exporthäufigkeit | **[!UICONTROL Täglicher Batch]** | Da Profile auf der Basis einer Zielgruppenbewertung im Experience Platform aktualisiert werden, werden die Profile (Identitäten) einmal täglich nachgelagert zur Zielplattform aktualisiert. Weitere Informationen finden Sie unter [Batch-Datei-basierte Ziele](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -206,10 +206,10 @@ Die in den exportierten Dateien enthaltenen Profile können mit einem der folgen
 * `Expired`: Das Profil ist nicht mehr für die Zielgruppe qualifiziert, hat sich aber in der Vergangenheit qualifiziert.
 * `""`(leere Zeichenfolge): Das Profil, das für die Zielgruppe nie qualifiziert wurde.
 
-Beispiel: eine exportierte CSV-Datei mit einer `email` -Attribut zwei aus der Experience Platform stammende Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md), und einem [importiert](../../../segmentation/ui/overview.md#importing-an-audience) eine externe Zielgruppe wie folgt aussehen könnte:
+Beispiel: eine exportierte CSV-Datei mit einer `email` -Attribut, zwei vom Experience Platform stammende Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md), und einem [importiert](../../../segmentation/ui/overview.md#importing-an-audience) eine externe Zielgruppe wie folgt aussehen könnte:
 
 ```csv
-email,ups:aa2e3d98-974b-4f8b-9507-59f65b6442df,ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e
+email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
 abc117@testemailabc.com,active,,
 abc111@testemailabc.com,,,active
 abc102@testemailabc.com,,,active
@@ -218,7 +218,7 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-Im obigen Beispiel wird die Variable `ups:aa2e3d98-974b-4f8b-9507-59f65b6442df` und `ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` -Abschnitte beschreiben Zielgruppen, die aus dem Segmentierungsdienst stammen, während `CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e` beschreibt eine in Platform als [benutzerdefinierter Upload](../../../segmentation/ui/overview.md#importing-an-audience).
+Im obigen Beispiel wird die Variable `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` und `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` -Abschnitte beschreiben Zielgruppen, die aus dem Segmentierungsdienst stammen, während `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` beschreibt eine in Platform als [benutzerdefinierter Upload](../../../segmentation/ui/overview.md#importing-an-audience).
 
 Da Platform eine CSV-Datei für jede [Zusammenführungsrichtlinien-ID](../../../profile/merge-policies/overview.md) generiert, wird auch eine separate Datenflussausführung für jede Zusammenführungsrichtlinien-ID erzeugt.
 
