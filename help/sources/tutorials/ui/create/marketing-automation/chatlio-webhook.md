@@ -1,15 +1,20 @@
 ---
 title: Erstellen einer Chatlio-Quellverbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Chatlio-Quellverbindung erstellen.
+badge: Beta
 exl-id: 55c10bcb-0332-45ff-970b-272d375b591d
-source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
+source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '1149'
+source-wordcount: '1167'
 ht-degree: 22%
 
 ---
 
 # Erstellen eines Quell-Connectors für [!DNL Chatlio] in der Benutzeroberfläche
+
+>[!NOTE]
+>
+>Die [!DNL Chatlio]-Quelle befindet sich in der Beta-Phase. Bitte lesen Sie die [Quellen - Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
 
 In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Chatlio] Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche.
 

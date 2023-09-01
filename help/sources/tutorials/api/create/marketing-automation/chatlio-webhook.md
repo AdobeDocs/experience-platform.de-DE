@@ -1,15 +1,20 @@
 ---
 title: Erstellen einer Quellverbindung und eines Datenflusses für Analytics mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Chatlio verbinden.
+badge: Beta
 exl-id: 867b8096-0841-4462-9888-e60c97c2115e
-source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
+source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '1440'
-ht-degree: 56%
+source-wordcount: '1458'
+ht-degree: 55%
 
 ---
 
 # Erstellen Sie eine Quellverbindung und einen Datenfluss für [!DNL Chatlio] Verwenden der Flow Service-API
+
+>[!NOTE]
+>
+>Die [!DNL Chatlio]-Quelle befindet sich in der Beta-Phase. Bitte lesen Sie die [Quellen - Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
 
 Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer Quellverbindung und eines Datenflusses, um [[!DNL Chatlio]](https://chatlio.com/) Ereignisdaten an Adobe Experience Platform mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

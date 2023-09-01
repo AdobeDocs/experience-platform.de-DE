@@ -1,16 +1,20 @@
 ---
 title: Pendo Source Overview
 description: Erfahren Sie, wie Sie Pendo über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden können, indem Sie Webhooks nutzen.
-last-substantial-update: 2023-08-23T00:00:00Z
+badge: Beta
 exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
-source-git-commit: ce1e6c08d1e53346c11f9746cea524689f402031
+source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '352'
-ht-degree: 19%
+source-wordcount: '370'
+ht-degree: 20%
 
 ---
 
 # [!DNL Pendo]
+
+>[!NOTE]
+>
+>Die [!DNL Pendo]-Quelle befindet sich in der Beta-Phase. Bitte lesen Sie die [Quellen - Übersicht](../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 

@@ -1,16 +1,20 @@
 ---
 title: Übersicht über die Chatlio-Quelle
 description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche Chatlio mit Adobe Experience Platform verbinden können, indem Sie Webhooks nutzen.
-last-substantial-update: 2023-08-23T00:00:00Z
+badge: Beta
 exl-id: 4a71d1dc-e0eb-443e-a956-8caa0e82fa18
-source-git-commit: ce1e6c08d1e53346c11f9746cea524689f402031
+source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '346'
-ht-degree: 20%
+source-wordcount: '364'
+ht-degree: 21%
 
 ---
 
 # [!DNL Chatlio]
+
+>[!NOTE]
+>
+>Die [!DNL Chatlio]-Quelle befindet sich in der Beta-Phase. Bitte lesen Sie die [Quellen - Übersicht](../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
