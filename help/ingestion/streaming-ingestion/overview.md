@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Datenerfassung; erfasste Daten; Streaming; Übersicht; Streaming-Erfassung; Latenz; Streaming-Latenz; Streaming-Latenz;
+keywords: Experience Platform; home; beliebte Themen; Datenerfassung; erfasste Daten; Streaming; Übersicht; Streaming-Erfassung; Latenz; Streaming-Latenz; Streaming-Latenz;
 solution: Experience Platform
-title: Streaming-Erfassung - Übersicht
-description: Die Streaming-Erfassung für Adobe Experience Platform bietet Benutzern eine Methode, Daten von Client- und Server-seitigen Geräten in Echtzeit an die Experience Platform zu senden.
+title: Streaming-Erfassung - Überblick
+description: Streaming-Erfassung für Adobe Experience Platform bietet Benutzern eine Methode, Daten von Client- und Server-seitigen Geräten in Echtzeit an Experience Platform zu senden.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 008537dffff4cc428de9070964446f4e7ebf039f
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 18%
@@ -17,7 +17,7 @@ Die Streaming-Erfassung für Adobe Experience Platform bietet Benutzern eine Met
 
 ## Was können Sie mit Streaming-Erfassung tun?
 
-Mit Adobe Experience Platform können Sie koordinierte, konsistente und relevante Erlebnisse durch Generieren einer [!DNL Real-Time Customer Profile] für jeden Ihrer Kunden. Die Streaming-Erfassung spielt bei der Erstellung dieser Profile eine wichtige Rolle, da Sie die Bereitstellung von [!DNL Profile] Daten in die [!DNL Data Lake] mit so wenig Latenz wie möglich.
+Mit Adobe Experience Platform können Sie koordinierte, konsistente und relevante Erlebnisse durch Generieren einer [!DNL Real-Time Customer Profile] für jeden Ihrer Kunden. Die Streaming-Erfassung spielt bei der Erstellung dieser Profile eine wichtige Rolle, da Sie die Bereitstellung von [!DNL Profile] Daten in die [!DNL Data Lake] mit möglichst wenig Latenz.
 
 Das folgende Video soll Ihnen dabei helfen, die Streaming-Erfassung zu verstehen, und beschreibt die oben genannten Konzepte.
 
@@ -42,7 +42,7 @@ Weitere Informationen zum Aktivieren eines Datensatzes für [!DNL Profile] und [
 | Echtzeit-Kundenprofil | &lt; 1 Minute |
 | Data Lake | &lt; 60 Minuten |
 
-## Anleitung für Anfragen pro Sekunden (RPS) zur Streaming-Erfassung
+## Anleitung für Anfragen pro Sekunden (RPS) bei der Streaming-Erfassung
 
 In der folgenden Tabelle finden Sie Anleitungen zur Anforderung pro Sekunden für die Streaming-Erfassung.
 
