@@ -2,9 +2,9 @@
 description: Auf dieser Seite wird der API-Aufruf zum Erstellen eines Ziel-Servers über Adobe Experience Platform Destination SDK erläutert.
 title: Erstellen einer Ziel-Server-Konfiguration
 source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1696'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -46,9 +46,9 @@ POST /authoring/destination-servers
 
 Je nach dem von Ihnen erstellten Zieltyp müssen Sie einen etwas anderen Ziel-Server-Typ konfigurieren.
 
-### Erstellen von Zielservern für statische Schemata {#static-destination-servers}
+### Erstellen von Ziel-Servern für statische Schemata {#static-destination-servers}
 
-In den folgenden Registerkarten finden Sie Beispiele für Zielserver für Ziele, die [statische Schemata](../../functionality/destination-configuration/schema-configuration.md#attributes-schema).
+In den folgenden Registerkarten finden Sie Beispiele von Ziel-Servern für Ziele, die [statische Schemata](../../functionality/destination-configuration/schema-configuration.md#attributes-schema) verwenden.
 
 Die folgenden Beispiel-Payloads enthalten alle Parameter, die von den einzelnen Ziel-Server-Typen unterstützt werden. Sie müssen nicht alle Parameter in Ihre Anfrage einbeziehen. Die Payload kann entsprechend Ihren Anforderungen angepasst werden.
 
@@ -776,11 +776,11 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrer neu erst
 
 >[!ENDTABS]
 
-### Dynamische Schema-Zielserver erstellen {#dynamic-schema-servers}
+### Erstellen von dynamischen Schema-Ziel-Servern {#dynamic-schema-servers}
 
-Mit dynamischen Schemata können Sie die unterstützten Zielattribute dynamisch abrufen und Schemas basierend auf Ihrer eigenen API generieren. Sie müssen einen Zielserver für dynamische Schemata konfigurieren, bevor Sie das Schema konfigurieren können.
+Mit dynamischen Schemata können Sie die unterstützten Zielattribute dynamisch abrufen und Schemata basierend auf Ihrer eigenen API generieren. Sie müssen einen Ziel-Server für dynamische Schemata konfigurieren, bevor Sie das Schema konfigurieren können.
 
-Auf der Registerkarte unten finden Sie ein Beispiel für einen Zielserver für Ziele, die [dynamische Schemata](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration).
+Auf der Registerkarte unten finden Sie ein Beispiel für einen Ziel-Server für Ziele, die [dynamische Schemata](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration) verwenden.
 
 Die nachstehende Beispiel-Payload enthält alle Parameter, die für einen dynamischen Schema-Server erforderlich sind.
 
