@@ -5,9 +5,9 @@ type: Documentation
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Echtzeit-Kundenprofil sowie eine Anleitung zur Behebung gängiger Fehler beim Arbeiten mit Profildaten mit Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
 source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1007'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -47,13 +47,13 @@ Je nachdem, ob Sie die API oder die Benutzeroberfläche verwenden, gibt es mehre
 
 Wenn Sie die IDs der Profilentitäten kennen, auf die Sie zugreifen möchten, können Sie den `/entities`-Endpunkt (Profilzugriff) in der Profil-API zum Suchen dieser Entitäten verwenden. Weiterführende Informationen finden Sie im Abschnitt zu [Entitäten](./api/entities.md) im Entwicklerhandbuch.
 
-Sie können auch die Adobe Experience Platform Segmentation Service-API verwenden, um auf die einzelnen Profile von Kunden zuzugreifen, die sich für eine Zielgruppenmitgliedschaft qualifiziert haben. Weiterführende Informationen finden Sie in der [Übersicht zum Segmentierungs-Service](../segmentation/home.md).
+Sie können auch die Segmentierungs-Service-API von Adobe Experience Platform verwenden, um auf die individuellen Profile von Kundinnen und Kunden zuzugreifen, die sich für eine Zielgruppenzugehörigkeit qualifiziert haben. Weiterführende Informationen finden Sie in der [Übersicht zum Segmentierungs-Service](../segmentation/home.md).
 
 #### Verwenden der Benutzeroberfläche
 
 In der Experience Platform-Benutzeroberfläche können Sie auf der Registerkarte **[!UICONTROL Durchsuchen]** im Arbeitsbereich **[!UICONTROL Profile]** die Gesamtzahl der Profile anzeigen und nach einzelnen Profilen anhand ihres Identitätswerts suchen. Weiterführende Informationen finden Sie im [Benutzerhandbuch für Profile](./ui/user-guide.md).
 
-Sie können auch eine Liste Ihrer Zielgruppen im **[!UICONTROL Durchsuchen]** im **[!UICONTROL Zielgruppen]** Arbeitsbereich. Nach Auswahl einer Audience wird ein Beispiel von Profilen angezeigt, die für diese Audience qualifiziert sind. Sie können dann eines dieser aufgelisteten Profile auswählen, um dessen Details anzuzeigen. Weiterführende Informationen finden Sie in der [Übersicht zur Segmentierungsbenutzeroberfläche](../segmentation/ui/overview.md).
+Sie können auch eine Liste Ihrer Zielgruppen auf der Registerkarte **[!UICONTROL Durchsuchen]** im Arbeitsbereich **[!UICONTROL Zielgruppen]** anzeigen. Nach Auswahl einer Zielgruppe wird ein Beispiel mit Profilen angezeigt, die für diese Zielgruppe qualifiziert sind. Sie können dann eines dieser aufgelisteten Profile auswählen, um dessen Details anzuzeigen. Weiterführende Informationen finden Sie in der [Übersicht zur Segmentierungsbenutzeroberfläche](../segmentation/ui/overview.md).
 
 ## Fehler-Codes
 
