@@ -3,9 +3,9 @@ description: Auf dieser Seite wird erläutert, wie Sie mit dem API-Endpunkt /tes
 title: Anzeigen detaillierter Aktivierungsergebnisse
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
 source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '545'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -40,7 +40,7 @@ Bevor Sie den Endpunkt `/testing/destinationInstance` verwenden, stellen Sie sic
 
 ## Anzeigen detaillierter Zieltestergebnisse {#test-activation-results}
 
-Einmal [Zielkonfiguration validieren](file-based-destination-testing-api.md)können Sie detaillierte Aktivierungsergebnisse anzeigen, indem Sie eine GET-Anfrage an die `authoring/testing/destinationInstance/` -Endpunkt und geben die Ziel-Instanz-ID des Ziels an, das Sie testen, sowie die Flusslaufs-IDs der aktivierten Zielgruppen.
+Sobald die [Zielkonfiguration validiert wurde](file-based-destination-testing-api.md), können detaillierte Aktivierungsergebnisse angezeigt werden, indem eine GET-Anfrage an den Endpunkt `authoring/testing/destinationInstance/` gestellt wird und die Ziel-Instanz-ID des Ziels, das getestet wird, sowie die Flussausführungs-IDs der aktivierten Zielgruppen angegeben wird.
 
 Die vollständige API-URL, die Sie verwenden müssen, finden Sie in der `results`-Eigenschaft, die in der [Antwort des Zieltestaufrufs](file-based-destination-testing-api.md) zurückgegeben wird.
 
@@ -56,7 +56,7 @@ GET /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flo
 
 | Abfragezeichenfolge-Parameter | Beschreibung |
 | -------- | ----------- |
-| `flowRunIds` | Die Kennungen für die Flussausführung, die den aktivierten Zielgruppen entsprechen. Die IDs der Flussausführungen finden Sie in der Eigenschaft `results`, die in der [Antwort des Zieltestaufrufs](file-based-destination-testing-api.md) zurückgegeben wird. |
+| `flowRunIds` | Die IDs der Flussausführungen, die den aktivierten Zielgruppen entsprechen. Die IDs der Flussausführungen finden Sie in der Eigenschaft `results`, die in der [Antwort des Zieltestaufrufs](file-based-destination-testing-api.md) zurückgegeben wird. |
 
 **Anfrage**
 
