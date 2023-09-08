@@ -5,9 +5,9 @@ breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Verwenden Sie Klassen und Schemafeldgruppen im Experience-Datenmodell (XDM), um Erlebnisdaten zu standardisieren.
 feature: Schemas
 source-git-commit: b181a6af8cb3f6ae6db28f0475b8999de2e9d8b5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '519'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 99%
    * [Plan](./classes/plan.md)
    * [Richtlinie](./classes/policy.md)
    * [Produkt](./classes/product.md)
-   * [Perspektive](./classes/prospect.md)
+   * [Interessierte Person](./classes/prospect.md)
    * [Anbieter](./classes/provider.md)
    * [Segmentdefinition](./classes/segment-definition.md)
    * B2B-Klassen {#b2b}
