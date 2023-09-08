@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche für Edge-Segmentierung
-description: Erfahren Sie, wie Sie mit der Kantensegmentierung Segmentdefinitionen in Platform sofort am Rand auswerten und so gleiche Anwendungsfälle für die Seitenpersonalisierung und die Personalisierung der nächsten Seite aktivieren können.
+description: Erfahren Sie, wie Sie die Edge-Segmentierung nutzen können, um Segmentdefinitionen in Platform direkt auszuwerten und so Anwendungsfälle für die Personalisierung auf derselben und der nächsten Seite zu ermöglichen.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '932'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
@@ -51,14 +51,14 @@ Eine Abfrage kann mithilfe der Edge-Segmentierung ausgewertet werden, wenn sie e
 | Segment von Segmenten | Jede Segmentdefinition, die ein oder mehrere Batch- oder Streaming-Segmente enthält. | Personen, die in den USA leben und sich im Segment „vorhandenes Segment“ befinden. | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
 | Abfrage, die auf eine Zuordnung verweist | Jede Segmentdefinition, die auf eine Zuordnung von Eigenschaften verweist. | Personen, die ihrem Warenkorb auf der Grundlage externer Segmentdaten Elemente hinzugefügt haben. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
-Eine Segmentdefinition **not** für die Kantensegmentierung im folgenden Szenario aktiviert sein:
+Im folgenden Szenario wird eine Segmentdefinition **nicht** für die Edge-Segmentierung aktiviert:
 
 - Die Segmentdefinition umfasst eine Kombination aus einem einzelnen Ereignis und einem `inSegment`-Ereignis.
-   - Wenn die Segmentdefinition jedoch in der `inSegment` Ereignis nur Profil ist, wird die Segmentdefinition **will** für die Kantensegmentierung aktiviert sein.
+   - Wenn die im Ereignis `inSegment` enthaltene Segmentdefinition jedoch nur ein Profil ist, **wird** die Segmentdefinition für die Edge-Segmentierung aktiviert.
 
 ## Nächste Schritte
 
-In diesem Handbuch wird erläutert, wie Segmentdefinitionen mit der Kantensegmentierung in Adobe Experience Platform ausgewertet werden. Weitere Informationen zur Verwendung der Experience Platform-Benutzeroberfläche finden Sie im [Benutzerhandbuch zur Segmentierung](./overview.md). Weitere Informationen zum Ausführen ähnlicher Aktionen und zum Arbeiten mit Segmentdefinitionen mithilfe von Experience Platform-APIs finden Sie unter [Handbuch zur Edge-Segmentierungs-API](../api/edge-segmentation.md).
+In diesem Handbuch wird erläutert, wie Segmentdefinitionen mithilfe der Edge-Segmentierung in Adobe Experience Platform ausgewertet werden. Weitere Informationen zur Verwendung der Experience Platform-Benutzeroberfläche finden Sie im [Benutzerhandbuch zur Segmentierung](./overview.md). Weitere Informationen zum Ausführen ähnlicher Aktionen und zum Arbeiten mit Segmentdefinitionen mithilfe von Experience Platform-APIs finden Sie im [Handbuch zur API für die Edge-Segmentierung](../api/edge-segmentation.md).
 
 ## Anhang
 
@@ -66,4 +66,4 @@ Im folgenden Abschnitt finden Sie häufig gestellte Fragen zur Edge-Segmentierun
 
 ### Wie lange dauert es, bis eine Segmentdefinition im Edge Network verfügbar ist?
 
-Es dauert bis zu eine Stunde, bis eine Segmentdefinition im Edge Network verfügbar ist.
+Es dauert bis zu einer Stunde, bis eine Segmentdefinition im Edge Network verfügbar ist.
