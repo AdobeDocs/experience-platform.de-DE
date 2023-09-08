@@ -5,9 +5,9 @@ title: Datennutzungsrichtlinien – Übersicht
 description: Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in Adobe Experience Platform ausführen bzw. nicht ausführen dürfen.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 source-git-commit: e5d90b24dad7faa9aa31c3b0670f8efa69cf0334
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1215'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 93%
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_restrictusage"
 >title="Beschränken der Datennutzung"
->abstract="Der Datennutzungsrichtlinientyp bewertet spezifische Marketing-Aktionen, die auf Data Governance-Beschriftungen angewendet werden, um die Datennutzung für Marketing-Aktivitäten zu beschränken."
+>abstract="Der Datennutzungsrichtlinientyp wertet spezifische Marketing-Aktionen aus, die auf Data Governance-Beschriftungen angewendet werden, um die Datennutzung für Marketing-Aktivitäten zu beschränken."
 
 Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in [!DNL Experience Platform] ausführen bzw. nicht ausführen dürfen.
 
@@ -42,7 +42,7 @@ Ein Beispiel für eine Marketing-Aktion könnte der Wunsch sein, einen Datensatz
 
 >[!NOTE]
 >
->Marketing-Aktionen allein schränken die Datennutzung nicht ein. Sie müssen in aktivierten Datennutzungsrichtlinien eingeschlossen sein, damit diese Aktionen auf Richtlinienverletzungen hin bewertet werden können.
+>Marketing-Aktionen allein schränken die Datennutzung nicht ein. Sie müssen in aktivierten Datennutzungsrichtlinien eingeschlossen sein, damit diese Aktionen auf Richtlinienverletzungen hin ausgewertet werden können.
 
 Wenn die Nutzung von Daten im Service Ihres Unternehmens stattfindet, sollten relevante Marketing-Aktionen angezeigt werden, damit etwaige Richtlinienverletzungen festgestellt werden können. Anschließend können Sie die [Policy Service-API](https://www.adobe.io/experience-platform-apis/references/policy-service/) verwenden, um Richtlinienverletzungen in Ihrer Integration zu prüfen.
 
@@ -62,7 +62,7 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 ## Datennutzungsrichtlinien verwalten {#manage}
 
-Sobald die Datennutzungsbeschriftungen angewendet wurden, können Datenverwalter die [!DNL Policy Service]-API oder die [!DNL Experience Platform]-Benutzeroberfläche verwenden, um Richtlinien zu verwalten und auszuwerten, die mit Marketing-Aktionen in Verbindung stehen, welche Daten mit Datennutzungsbeschriftungen betreffen. Sie können Richtlinien erstellen und aktualisieren, den Status einer Richtlinie bestimmen und mit Marketing-Aktionen arbeiten, um zu bewerten, ob eine bestimmte Aktion eine Datennutzungsrichtlinie verletzt.
+Sobald die Datennutzungsbeschriftungen angewendet wurden, können Datenverwalter die [!DNL Policy Service]-API oder die [!DNL Experience Platform]-Benutzeroberfläche verwenden, um Richtlinien zu verwalten und auszuwerten, die mit Marketing-Aktionen in Verbindung stehen, welche Daten mit Datennutzungsbeschriftungen betreffen. Sie können Richtlinien erstellen und aktualisieren, den Status einer Richtlinie bestimmen und mit Marketing-Aktionen arbeiten, um auszuwerten, ob eine bestimmte Aktion eine Datennutzungsrichtlinie verletzt.
 
 >[!IMPORTANT]
 >
@@ -94,10 +94,10 @@ Die folgende Tabelle beschreibt die wichtigsten Marketing-Aktionen, die von Adob
 | Kombinieren mit direkt identifizierbaren Daten | Eine Aktion, die alle persönlichen identifizierbaren Informationen (PII) mit anonymen Daten kombiniert. Verträge über Daten, die aus Werbenetzwerken, Werbe-Servern und Drittanbietern von Daten bezogen werden, beinhalten häufig spezifische vertragliche Verbote der Verwendung solcher Daten mit direkt identifizierbaren Daten. |
 | Site-übergreifendes Targeting | Eine Aktion, die Daten für Site-übergreifendes Targeting von Anzeigen verwendet. Die Kombination von Daten aus verschiedenen Sites, einschließlich einer Kombination aus Daten in einer Site und Offsite-Daten oder einer Kombination von Daten aus verschiedenen Offsite-Quellen, wird als „Site-übergreifende Daten“ bezeichnet. Site-übergreifende Daten werden in der Regel gesammelt und verarbeitet, um Rückschlüsse auf die Interessen der Benutzenden zu ziehen. |
 | Data Science | Eine Aktion, die Daten für datenwissenschaftliche Workflows verwendet. Einige Verträge beinhalten ein explizites Verbot der Datennutzung für datenwissenschaftliche Zwecke. Manchmal wird dies so ausgedrückt, dass die Verwendung von Daten für künstliche Intelligenz (KI), maschinelles Lernen (ML) oder Modellierung verboten ist. |
-| Datenexport | Eine Aktion, die Daten an einen Ort oder ein Ziel außerhalb von Adobe-Produkten und -Diensten exportiert. Beispielsweise das Herunterladen von Daten auf Ihren lokalen Computer, das Kopieren von Daten vom Bildschirm, die Planung der Bereitstellung von Daten an einen Ort außerhalb der Adobe, das Herunterladen von Berichten, die Berichterstellungs-API usw. |
+| Datenexport | Eine Aktion, die Daten an einen Ort oder ein Ziel außerhalb von Adobe-Produkten und -Diensten exportiert. Beispielsweise das Herunterladen von Daten auf Ihren lokalen Computer, das Kopieren von Daten vom Bildschirm, die Planung der Bereitstellung von Daten an einen Ort außerhalb von Adobe, geplante Projekte für Customer Journey Analytics, das Herunterladen von Berichten, die Reporting-API usw. |
 | E-Mail-Targeting | Eine Aktion, die Daten in E-Mail-Targeting-Kampagnen verwendet. |
 | Exportieren an Dritte | Eine Aktion, die Daten an Prozessoren und Entitäten exportiert, die keine direkten Beziehungen zu Kunden haben. Viele Datenanbieter haben Vertragsbedingungen, die den Export von Daten von dort, wo sie ursprünglich erfasst wurden, verbieten. So wird beispielsweise die Übertragung von Daten, die Sie von Social Media erhalten, oft durch deren Verträge eingeschränkt. |
 | Onsite-Werbung | Eine Aktion, die Daten für Anzeigen auf Websites verwendet, einschließlich der Auswahl und des Versands von Anzeigen auf den Websites oder in Programmen Ihres Unternehmens, oder zur Messung des Versands und der Effektivität solcher Anzeigen dient. |
 | Onsite-Personalisierung | Eine Aktion, die Daten zur Personalisierung von Inhalten in einer Website verwendet. Bei der Onsite-Personalisierung geht es um alle Daten, die verwendet werden, um Rückschlüsse auf die Interessen der Benutzer zu ziehen, und darum, auszuwählen, welche Inhalte oder Anzeigen auf der Grundlage dieser Rückschlüsse bereitgestellt werden. |
-| Segmentübereinstimmung | Eine Aktion, bei der Daten für die Adobe Experience Platform-Segmentübereinstimmung verwendet werden, mit der zwei oder mehr Platform-Benutzer Zielgruppendaten austauschen können. Durch Aktivierung von Richtlinien, die auf diese Aktion verweisen, können Sie einschränken, welche Daten für die Segmentübereinstimmung verwendet werden. Wenn beispielsweise die Kernrichtlinie „Datenfreigabe beschränken“ aktiviert ist, können keine Daten mit der Beschriftung [C11](../labels/reference.md#c11) für die Segmentübereinstimmung verwendet werden. |
+| Segmentübereinstimmung | Eine Aktion, bei der Daten für die Adobe Experience Platform-Segmentübereinstimmung verwendet werden, wodurch zwei oder mehr Platform-Benutzende Zielgruppendaten austauschen können. Durch Aktivierung von Richtlinien, die auf diese Aktion verweisen, können Sie einschränken, welche Daten für die Segmentübereinstimmung verwendet werden. Wenn beispielsweise die Kernrichtlinie „Datenfreigabe beschränken“ aktiviert ist, können keine Daten mit der Beschriftung [C11](../labels/reference.md#c11) für die Segmentübereinstimmung verwendet werden. |
 | Personalisierung für eine einzelne Identität | Eine Aktion, bei der eine einzelne Identität zu Personalisierungszwecken verwendet werden muss, anstatt Identitäten aus mehreren Quellen identische Inhalte zu bieten. |
