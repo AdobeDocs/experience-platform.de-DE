@@ -4,9 +4,9 @@ title: Übersicht zu Profile Query Language (PQL)
 description: Dieses Handbuch bietet einen allgemeinen Überblick über PQL, einschließlich Formatierungsrichtlinien und PQL-Beispielausdrücken.
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '706'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -87,4 +87,4 @@ In der folgenden Tabelle sind die verschiedenen Kategorien unterstützter PQL-Fu
 
 ## Nächste Schritte
 
-Jetzt, da Sie gelernt haben, [!DNL Profile Query Language]können Sie PQL beim Erstellen und Ändern von Segmentdefinitionen verwenden. Weiterführende Informationen zur Segmentierung finden Sie in der [Segmentierungsübersicht](../home.md).
+Da Sie nun wissen, wie Sie [!DNL Profile Query Language] (PQL) verwenden, können Sie damit Segment-Definitionen erstellen und ändern. Weiterführende Informationen zur Segmentierung finden Sie in der [Segmentierungsübersicht](../home.md).
