@@ -5,9 +5,9 @@ title: Ablauf von Daten pseudonymer Profile
 description: Dieses Dokument enthält allgemeine Anleitungen zum Konfigurieren des Ablaufs von Daten pseudonymer Profile in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '923'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ Ein Profil kommt für den Ablauf von pseudonymen Daten infrage, wenn es die folg
 - Die Identity-Namespaces des zugeordneten Profils stimmen mit denen überein, die der Kunde als pseudonymen oder unbekannten Identity-Namespace angegeben hat.
    - Wenn beispielsweise der Identity-Namespace des Profils `ECID`, `GAID` oder `AAID` ist. Das zusammengefügte Profil hat keine IDs aus einem anderen Identity-Namespace. In diesem Beispiel hat ein zusammengefügtes Profil **keine** E-Mail- oder CRM-Identität.
 - In einem benutzerdefinierten Zeitraum hat keine Aktivität stattgefunden. Aktivität wird entweder durch alle erfassten Erlebnisereignisse oder durch von Kunden initiierte Aktualisierungen der Profilattribute definiert.
-   - Beispielsweise wird ein neues Seitenansichtsereignis oder eine Aktualisierung des Seitenattributs als Aktivität angesehen. Eine nicht vom Benutzer initiierte Aktualisierung der Zielgruppenzugehörigkeit ist jedoch **not** als Aktivität betrachtet werden. Zur Berechnung des Datenablaufs basiert das Tracking auf Profilebene derzeit für Erlebnisereignisse auf dem Zeitpunkt des Ereignisses und für Profilattribute auf dem Zeitpunkt der Aufnahme.
+   - Beispielsweise wird ein neues Seitenansichtsereignis oder eine Aktualisierung des Seitenattributs als Aktivität angesehen. Eine nicht von Benutzenden initiierte Aktualisierung der Zielgruppenzugehörigkeit wird jedoch **nicht** als Aktivität angesehen. Zur Berechnung des Datenablaufs basiert das Tracking auf Profilebene derzeit für Erlebnisereignisse auf dem Zeitpunkt des Ereignisses und für Profilattribute auf dem Zeitpunkt der Aufnahme.
 
 ## Zugriff auf {#access}
 
