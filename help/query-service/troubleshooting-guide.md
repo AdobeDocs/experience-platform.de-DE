@@ -5,9 +5,9 @@ title: Häufig gestellte Fragen
 description: Dieses Dokument enthält häufig gestellte Fragen und Antworten zum Abfrage-Service. Zu den Themen gehören der Datenexport, Tools von Drittanbietern und PSQL-Fehler.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4309'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -251,7 +251,7 @@ Die [`SNAPSHOT`](./sql/syntax.md#snapshot-clause)-Klausel kann verwendet werden,
 ### Warum unterscheiden sich die in der Profil-Benutzeroberfläche angezeigten Zahlen von den aus dem Profil-Exportdatensatz berechneten Zahlen?
 
 +++Antwort
-Die im Profil-Dashboard angezeigten Zahlen entsprechen dem Stand des letzten Schnappschusses. Die in der Tabelle für den Profilexport generierten Zahlen hängen vollständig von der Exportabfrage ab. Daher ist die Abfrage der Anzahl der Profile, die sich für eine bestimmte Zielgruppe qualifizieren, häufig eine Ursache für diese Diskrepanz.
+Die im Profil-Dashboard angezeigten Zahlen entsprechen dem Stand des letzten Schnappschusses. Die in der Tabelle für den Profilexport generierten Zahlen hängen vollständig von der Exportabfrage ab. Daher ist die Abfrage der Anzahl der Profile, die für eine bestimmte Zielgruppe qualifiziert sind, häufig eine Ursache für diese Diskrepanz.
 
 >[!NOTE]
 >
