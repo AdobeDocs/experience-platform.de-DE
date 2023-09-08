@@ -4,9 +4,9 @@ description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SD
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 source-git-commit: 49624d51d6868fa951fe70b29715142b3cbad55b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1589'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -16,16 +16,16 @@ ht-degree: 97%
 In diesem Dokument werden die Versionshinweise für das Adobe Experience Platform Web SDK behandelt.
 Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Versionshinweisen zur Tag-Erweiterung für Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
-## Version 2.18.0 - 31. Juli 2023
+## Version 2.18.0 – 31. Juli 2023
 
 **Neue Funktionen**
 
-* Hinzugefügte Unterstützung für [Überschreibungen der Datastream-ID pro Befehl](../datastreams/overrides.md).
+* Unterstützung für [Überschreibungen der Datenstrom-ID pro Befehl](../datastreams/overrides.md) hinzugefügt.
 
 **Fehlerbehebungen und Verbesserungen**
 
-* Es wurde ein Problem behoben, bei dem Exitlinks nicht qualifiziert werden konnten, da die Domäne Teil der Abfrage war.
-* Veraltet `edgeConfigId` zugunsten von `datastreamId` in der Web SDK-Konfiguration.
+* Es wurde ein Problem behoben, durch das Beenden-Links nicht qualifiziert werden konnten, da die Domain Teil der Abfrage war.
+* Statt `edgeConfigId` wird jetzt `datastreamId` in der Web SDK-Konfiguration unterstützt.
 
 ## Version 2.17.0 – 17. Mai 2023
 
