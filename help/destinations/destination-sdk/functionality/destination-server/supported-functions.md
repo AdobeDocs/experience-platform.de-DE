@@ -2,9 +2,9 @@
 description: Das Destination SDK von Experience Platform verwendet Pebble-Vorlagen, mit denen Sie die aus Experience Platform exportierten Daten in das für Ihr Ziel erforderliche Format umwandeln können.
 title: Unterstützte Umwandlungsfunktionen in Destination SDK
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '579'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ Die Nachrichtenumwandlungsvorlage wird in der [Ziel-Server-Konfiguration](templa
 
 Um die Konzepte und Funktionen auf dieser Referenzseite zu verstehen, lesen Sie zunächst das Dokument zum [Nachrichtenformat](message-format.md). Sie müssen die [Profilstruktur](message-format.md#profile-structure) in Experience Platform verstehen, bevor Sie [!DNL Pebble]-Vorlagen zur Transformation der exportierten Daten verwenden können.
 
-Bevor Sie zu den unten dokumentierten Funktionen übergehen, lesen Sie die Beispielvorlagen im Abschnitt . [Verwenden einer Vorlagensprache für die Transformationen von Identität, Attributen und Zielgruppen-Mitgliedschaft](message-format.md#using-templating). Die Beispiele dort beginnen sehr einfach und werden immer komplexer.
+Bevor Sie zu den unten dokumentierten Funktionen übergehen, sehen Sie sich die Beispielvorlagen im Abschnitt [Verwenden einer Vorlagensprache für die Transformationen von Identitäten, Attributen und Zielgruppenzugehörigkeiten](message-format.md#using-templating) an. Die Beispiele dort beginnen sehr einfach und werden immer komplexer.
 
 ## Unterstützte [!DNL Pebble]-Funktionen {#supported-functions}
 
