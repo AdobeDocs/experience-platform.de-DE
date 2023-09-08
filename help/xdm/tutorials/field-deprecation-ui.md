@@ -3,9 +3,9 @@ title: Verwerfen eines XDM-Felds in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie Experience-Datenmodell (XDM)-Felder mit dem Schema-Editor in Experience Platform verwerfen können.
 exl-id: f4c5f58a-5190-47d7-8bfc-b33ed238bf25
 source-git-commit: 4fa98df9dcc296ba7cb141cb22df116524a0eb0c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '699'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 84%
 
 Das Experience-Datenmodell (XDM) bietet Ihnen die Flexibilität, Ihr Datenmodell zu verwalten, wenn sich Ihre geschäftlichen Anforderungen ändern, indem Sie Schemafelder nach der Aufnahme von Daten verwerfen können. Unerwünschte Felder können verworfen werden, um sie aus der Ansicht der Benutzeroberfläche zu entfernen und sie auch in den nachgelagerten Benutzeroberflächen auszublenden. Praktischerweise können Sie mit einem Kontrollkästchen im Schema-Editor verworfene Felder anzeigen lassen und die Verwerfung bei Bedarf auch wieder aufheben.
 
-Da veraltete Felder standardmäßig in der Benutzeroberfläche ausgeblendet werden, wird Ihr Schema im Schema-Editor optimiert und verhindert, dass unerwünschte Felder zu nachgelagerten Abhängigkeiten wie Segment Builder, Journey Designer usw. hinzugefügt werden. Das Verwerfen von Feldern ist außerdem abwärtskompatibel. Andere Systeme, die veraltete Felder wie Audiences und Abfragen verwenden, werden diese weiterhin wie gewünscht auswerten. Wenn ein veraltetes Feld in einer vorhandenen Zielgruppe verwendet wird, wird es normal behandelt. Das bedeutet, dass das Feld wie erwartet auf der Arbeitsfläche von Segment Builder angezeigt wird oder anhand von Daten ausgewertet wird, die in den veralteten Feldern verfügbar sind. Dies ist keine grundlegende Änderung und hat keine negativen Auswirkungen auf bestehende Datenflüsse.
+Da verworfene Felder in der Benutzeroberfläche standardmäßig ausgeblendet werden, wird Ihr Schema im Schema-Editor optimiert und es wird verhindert, dass unerwünschte Felder zu nachgelagerten Abhängigkeiten wie Segment Builder, Journey Designer usw. hinzugefügt werden. Das Verwerfen von Feldern ist außerdem abwärtskompatibel. Andere Systeme, die verworfene Felder verwenden, wie etwa Zielgruppen und Abfragen, werten diese weiterhin wie vorgesehen aus. Wenn ein verworfenes Feld in einer vorhandenen Zielgruppe verwendet wird, wird es wie normal behandelt. Das bedeutet, dass das Feld wie erwartet auf der Arbeitsfläche von Segment Builder angezeigt oder basierend auf Daten ausgewertet wird, die in den verworfenen Feldern vorhanden sind. Dies ist keine grundlegende Änderung und hat keine negativen Auswirkungen auf bestehende Datenflüsse.
 
 >[!NOTE]
 >
@@ -37,7 +37,7 @@ Das Feld wird jetzt aus der Ansicht der Benutzeroberfläche entfernt.
 
 >[!NOTE]
 >
->Nach dem Verwerfen werden verworfene Felder in nachgelagerten Benutzeroberflächen wie Segmentierungs-Dashboards, Customer Journey Analytics und Adobe Journey Optimizer nicht mehr als Teil des Workflows angezeigt. Für nachgelagerten Benutzeroberflächen besteht jedoch die Möglichkeit, verworfene Felder bei Bedarf anzuzeigen und weiterhin wie normal zu behandeln. Weitere Informationen finden Sie in der entsprechenden Dokumentation. Abfragen und Zielgruppen, die das veraltete Feld verwenden, werden wie erwartet ausgeführt.
+>Nach dem Verwerfen werden verworfene Felder in nachgelagerten Benutzeroberflächen wie Segmentierungs-Dashboards, Customer Journey Analytics und Adobe Journey Optimizer nicht mehr als Teil des Workflows angezeigt. Für nachgelagerten Benutzeroberflächen besteht jedoch die Möglichkeit, verworfene Felder bei Bedarf anzuzeigen und weiterhin wie normal zu behandeln. Weitere Informationen finden Sie in der entsprechenden Dokumentation. Abfragen und Zielgruppen, die das verworfene Feld verwenden, werden wie erwartet ausgeführt.
 
 ## Anzeigen verworfener Felder {#show-deprecated}
 
