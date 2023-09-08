@@ -3,9 +3,9 @@ description: Erfahren Sie, wie Sie mit der Zieltest-API Ihre Umwandlungsvorlage 
 title: Erstellen und Testen einer Nachrichtenumwandlungsvorlage
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '950'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ Die folgende Abbildung zeigt, wie das Erstellen und Testen einer Nachrichtenumwa
 
 ## Gründe für das Erstellen und Testen einer Nachrichtenumwandlungsvorlage {#why-create-message-transformation-template}
 
-Einer der ersten Schritte bei der Erstellung Ihres Ziels in Destination SDK besteht darin, darüber nachzudenken, wie das Datenformat für Zielgruppenzugehörigkeit, Identitäten und Profilattribute transformiert wird, wenn es von Adobe Experience Platform in Ihr Ziel exportiert wird. Informationen zur Transformation zwischen dem Adobe-XDM-Schema und Ihrem Zielschema finden Sie in [Dokument zu Nachrichtenformaten](../../functionality/destination-server/message-format.md#using-templating).
+Einer der ersten Schritte bei der Erstellung Ihres Ziels in Destination SDK besteht darin, darüber nachzudenken, wie das Datenformat für Zielgruppenzugehörigkeit, Identitäten und Profilattribute transformiert wird, wenn die Daten von Adobe Experience Plattform in Ihr Ziel exportiert werden. Informationen zur Transformation zwischen dem Adobe-XDM-Schema und Ihrem Zielschema finden Sie in [Dokument zu Nachrichtenformaten](../../functionality/destination-server/message-format.md#using-templating).
 
 Damit die Transformation erfolgreich ist, müssen Sie eine Umwandlungsvorlage wie im folgenden Beispiel angeben: [Erstellen einer Vorlage zum Senden von Segmenten, Identitäten und Profilattributen](../../functionality/destination-server/message-format.md#segments-identities-attributes).
 
@@ -38,8 +38,8 @@ Adobe bietet ein Vorlagenwerkzeug, mit dem Sie die Nachrichtenvorlage erstellen 
 Bevor Sie bereit sind, die Vorlage zu erstellen, führen Sie die folgenden Schritte aus:
 
 1. [Erstellen Sie eine Ziel-Server-Konfiguration](../../authoring-api/destination-server/create-destination-server.md). Die Vorlage, die Sie generieren, unterscheidet sich je nach dem Wert, den Sie für den Parameter `maxUsersPerRequest` angeben.
-   * Verwendung `maxUsersPerRequest=1` , wenn Sie möchten, dass ein API-Aufruf an Ihr Ziel ein einzelnes Profil sowie die zugehörigen Zielgruppenqualifikationen, Identitäten und Profilattribute enthält.
-   * Verwendung `maxUsersPerRequest` einen Wert größer als 1 haben, wenn Sie möchten, dass ein API-Aufruf an Ihr Ziel mehrere Profile sowie deren Zielgruppenqualifikationen, Identitäten und Profilattribute enthält.
+   * Wenn ein API-Aufruf an das Ziel ein einzelnes Profil sowie die zugehörigen Segmentqualifikationen, Identitäten und Profilattribute enthalten soll, muss `maxUsersPerRequest=1` verwendet werden.
+   * Wenn ein API-Aufruf an das Ziel mehrere Profile sowie deren Segmentqualifikationen, Identitäten und Profilattribute enthalten soll, muss `maxUsersPerRequest` mit einem Wert größer als 1 verwendet werden.
 2. [Erstellen Sie eine Zielkonfiguration](../../authoring-api/destination-configuration/create-destination-configuration.md) und fügen Sie die ID der Ziel-Server-Konfiguration in `destinationDelivery.destinationServerId` hinzu.
 3. [Rufen Sie die ID der Zielkonfiguration ab](../../authoring-api/destination-configuration/retrieve-destination-configuration.md), die Sie gerade erstellt haben, sodass Sie sie im Tool zur Vorlagenerstellung verwenden können.
 4. Sie müssen verstehen, [welche Funktionen und Filter Sie in der Nachrichtenumwandlungsvorlage verwenden können](../../functionality/destination-server/supported-functions.md).
