@@ -4,9 +4,9 @@ title: Ziele – Übersicht
 description: Ziele sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Ziele in Adobe Experience Platform nutzen, um bekannte und unbekannte Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
 source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '925'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
@@ -30,7 +30,7 @@ Eine der Kernfunktionen von Platform besteht darin, Ihre Daten von Erstparteien 
 ## Ziele – Schritte {#steps}
 
 * Wählen Sie in einem [Selbstbedienungs-Katalog](./catalog/overview.md) unter allen in Platform verfügbaren Zielen.
-* Verwenden Sie Ziele, um Profile oder Zielgruppen an Plattformen zur Marketing-Automatisierung, digitale Werbung und mehr zu senden.
+* Verwenden Sie Ziele, um Profile oder Zielgruppen an Plattformen für Marketing-Automatisierung, digitale Werbung usw. zu senden.
 * Planen Sie Datenexporte an Ihre bevorzugten Ziele zu regelmäßigen Zeiten.
 
 ## Steuerelemente {#controls}
@@ -40,18 +40,18 @@ Mit den Steuerelementen im [Arbeitsbereich „Ziele“](./ui/destinations-worksp
 * Katalog der Zielplattformen durchsuchen, wo Sie Ihre Daten aktivieren können;
 * Datenflüsse zu den Zielen im Katalog erstellen, bearbeiten, aktivieren und deaktivieren;
 * ein Konto an einem Speicherort erstellen oder Platform mit dem Konto auf der Zielplattform verknüpfen;
-* Wählen Sie aus, welche Zielgruppen für Ziele aktiviert werden sollen.
-* Auswählen [Experience-Datenmodell (XDM)-Felder](../xdm/home.md) , um beim Aktivieren von Zielgruppen für E-Mail-Marketing-Ziele zu exportieren.
+* auswählen, welche Zielgruppen für Ziele aktiviert werden sollen;
+* auswählen, welche [Experience-Datenmodell(XDM)-Felder](../xdm/home.md) exportiert werden sollen, wenn Zielgruppen für E-Mail-Marketing-Ziele aktiviert werden.
 
 ## Zieltypen und Kategorien {#types-and-categories}
 
 Mit Experience Platform können Sie Daten für verschiedene Zieltypen aktivieren, um Ihren Aktivierungs-Anwendungsfällen gerecht zu werden. Die Ziele reichen von API-basierten Integrationen über Integrationen mit Dateiempfangssystemen bis hin zu Profilsuchzielen und mehr. Detaillierte Informationen zu allen verfügbaren Zielen finden Sie unter [Zieltypen und Kategorien – Übersicht](./destination-types.md).
 
-## Von Adoben erstellte und von Partnern erstellte Ziele {#adobe-and-partner-built-destinations}
+## Von Adobe und von Partnern erstellte Ziele {#adobe-and-partner-built-destinations}
 
-Einige der Connectoren im Zielkatalog der Experience Platform werden von Adobe erstellt und gepflegt, während andere von Partnerunternehmen erstellt und gepflegt werden, die [Destination SDK](/help/destinations/destination-sdk/overview.md). Ein Hinweis oben auf der Dokumentationsseite für jeden von Partnern erstellten Connector ruft ab, ob ein Ziel vom Partner erstellt und gepflegt wird. Beispiel: die [Amazon S3-Connector](/help/destinations/catalog/cloud-storage/amazon-s3.md) wird von Adobe erstellt, während die Variable [TikTok-Connector](/help/destinations/catalog/social/tiktok.md) wird vom TikTok-Team erstellt und gepflegt.
+Einige der Connectoren im Zielkatalog von Experience Platform werden von Adobe erstellt und gepflegt, während andere von Partnerunternehmen erstellt und gepflegt werden, die das [Destination SDK](/help/destinations/destination-sdk/overview.md) verwenden. Ein Hinweis oben auf der Dokumentationsseite für jeden von Partnern erstellten Connector gibt ab, ob ein Ziel vom Partner erstellt und gepflegt wird. Beispiel: Der [Amazon S3-Connector](/help/destinations/catalog/cloud-storage/amazon-s3.md) wird von Adobe erstellt, während der [TikTok-Connector](/help/destinations/catalog/social/tiktok.md) vom TikTok-Team erstellt und gepflegt wird.
 
-Bei von Partnern erstellten und gepflegten Connectoren bedeutet dies, dass Probleme mit dem Connector möglicherweise vom Partner-Team behoben werden müssen (Kontaktmethode siehe Hinweis auf der Dokumentationsseite). Wenden Sie sich bei Problemen mit von Adobe erstellten und gepflegten Connectoren an Ihren Adobe-Support-Mitarbeiter oder an die Kundenunterstützung.
+Bei von Partnern erstellten und gepflegten Connectoren bedeutet dies, dass Probleme mit dem Connector möglicherweise vom Partner-Team behoben werden müssen (die Kontaktmethode ist jeweils im Hinweis auf der Dokumentationsseite angegeben). Wenden Sie sich bei Problemen mit von Adobe erstellten und gepflegten Connectoren an den Support oder den Kundendienst von Adobe.
 
 ## Ziele und Zugriffssteuerungen {#access-controls}
 
@@ -62,8 +62,8 @@ In der folgenden Tabelle sind die Berechtigungen und Berechtigungskombinationen 
 | Berechtigungsebene | Beschreibung |
 | ---- | ---- |
 | **[!UICONTROL Verwalten von Zielen]** | Um eine Verbindung zu Zielen herzustellen, benötigen Sie die [Zugriffssteuerungsberechtigung](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**. |
-| **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** | So aktivieren Sie Zielgruppen für Ziele und aktivieren die [Zuordnungsschritt](ui/activate-batch-profile-destinations.md#mapping) des Workflows benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Aktivieren von Segmenten ohne Zuordnung]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** | So aktivieren Sie Zielgruppen für Ziele und blenden die [Zuordnungsschritt](ui/activate-batch-profile-destinations.md#mapping) des Workflows benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Aktivieren von Segmenten ohne Zuordnung]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** | Zum Aktivieren von Zielgruppen für Ziele und Aktivieren des [Zuordnungsschritts](ui/activate-batch-profile-destinations.md#mapping) des Workflows sind die **[!UICONTROL Zugriffssteuerungsberechtigungen]** **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und [Segmente anzeigen](/help/access-control/home.md#permissions) erforderlich. |
+| **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Segmente ohne Zuordnung aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** | Zum Aktivieren von Segmenten für Ziele und Ausblenden des [Zuordnungsschritts](ui/activate-batch-profile-destinations.md#mapping) des Workflows sind die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Segmente ohne Zuordnung aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** erforderlich. |
 
 {style="table-layout:auto"}
 
@@ -99,10 +99,10 @@ Weitere Informationen zur Auswahl von Marketing-Aktionen im Workflow zum Erstell
 * [Werbeziele – Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
 * [Cloud-Speicher-Ziele](./catalog/cloud-storage/overview.md)
 * [E-Mail-Marketing-Ziele ](./catalog/email-marketing/overview.md)
-* [Social-Media-Ziele ](./catalog/social/overview.md)
+* [Social-Media-Ziele](./catalog/social/overview.md)
 
-Weitere Informationen zu Verstößen gegen Datenrichtlinien im Workflow für die Zielgruppenaktivierung finden Sie im Abschnitt **[!UICONTROL Überprüfen]** in die folgenden Handbücher zu übernehmen:
+Weitere Informationen zu Verstößen gegen Datenrichtlinien im Workflow für die Zielgruppenaktivierung finden Sie im Schritt **[!UICONTROL Überprüfen]** der folgenden Handbücher:
 
-* [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Export-Ziele](./ui/activate-segment-streaming-destinations.md#review)
+* [Aktivieren von Zielgruppendaten für Exportziele von Streaming-Zielgruppen](./ui/activate-segment-streaming-destinations.md#review)
 * [Aktivieren von Zielgruppendaten für Exportziele von Streaming-Profilen](./ui/activate-streaming-profile-destinations.md#review)
 * [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](./ui/activate-batch-profile-destinations.md#review)
