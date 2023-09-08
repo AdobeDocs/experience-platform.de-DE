@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Erste Schritte mit Media Edge-APIs
 description: Erste Schritte mit Media Edge-APIs
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '959'
 ht-degree: 100%
 
