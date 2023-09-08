@@ -1,56 +1,56 @@
 ---
 solution: Experience Platform
 title: Handbuch zur Zielgruppen-Benutzeroberfläche
-description: Die Zielgruppenkomposition in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Zielgruppen für Ihre Organisation.
+description: Die Zielgruppen-Komposition in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Zielgruppen für Ihre Organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
 source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1767'
-ht-degree: 54%
+ht-degree: 100%
 
 ---
 
-# Handbuch zur Benutzeroberfläche für Zielgruppenkomposition
+# Handbuch zur Benutzeroberfläche der Zielgruppenkomposition
 
 >[!NOTE]
 >
->In diesem Handbuch wird beschrieben, wie Sie Zielgruppen mithilfe der Zielgruppenkomposition erstellen. Informationen zum Erstellen von Zielgruppen mithilfe von Segmentdefinitionen mithilfe von Segment Builder finden Sie im Abschnitt [Handbuch zur Benutzeroberfläche von Segment Builder](./segment-builder.md).
+>In diesem Handbuch wird beschrieben, wie Sie Zielgruppen mithilfe der Zielgruppenkomposition erstellen. Informationen zum Erstellen von Zielgruppen durch Segmentdefinitionen mithilfe von Segment Builder finden Sie im [Handbuch zur Benutzeroberfläche von Segment Builder](./segment-builder.md).
 
-Zielgruppenkomposition bietet einen Arbeitsbereich zum Erstellen und Bearbeiten von Zielgruppen mithilfe von Bausteinen, die zur Darstellung verschiedener Aktionen verwendet werden.
+Die Zielgruppenkomposition bietet einen Arbeitsbereich zum Erstellen und Bearbeiten von Zielgruppen mithilfe von Blöcken, die zur Darstellung verschiedener Aktionen verwendet werden.
 
-![Die Benutzeroberfläche für die Zielgruppenkomposition .](../images/ui/audience-composition/audience-composition.png)
+![Die Benutzeroberfläche der Zielgruppenkomposition.](../images/ui/audience-composition/audience-composition.png)
 
-Um die Details der Komposition, einschließlich Titel und Beschreibung, zu ändern, wählen Sie die ![Regler](../images/ui/audience-composition/sliders.png) Schaltfläche.
+Um die Details der Komposition, einschließlich Titel und Beschreibung, zu ändern, wählen Sie die Schaltfläche ![Schieberegler](../images/ui/audience-composition/sliders.png).
 
-Die **[!UICONTROL Kompositionseigenschaften]** Popover angezeigt. Sie können Details zu Ihrer Komposition einfügen, einschließlich Titel und Beschreibung hier.
+Das Popup-Fenster **[!UICONTROL Kompositionseigenschaften]** erscheint. Sie können hier Details zu Ihrer Komposition einfügen, einschließlich Titel und Beschreibung.
 
-![Das Popover Kompositionseigenschaften wird angezeigt.](../images/ui/audience-composition/composition-properties.png)
+![Das Popup-Fenster für die Kompositionseigenschaften erscheint.](../images/ui/audience-composition/composition-properties.png)
 
 >[!NOTE]
 >
->Wenn Sie **not** Geben Sie Ihrer Komposition einen Titel, sie hat einen Titel &quot;Komposition&quot;, gefolgt von dem Erstellungsdatum und der Erstellungszeit standardmäßig.
+>Wenn Sie **keinen** Titel für Ihre Komposition vergeben, trägt sie standardmäßig den Titel „Komposition“, gefolgt von Erstellungsdatum und -zeit.
 
-Nachdem Sie die Details Ihrer Komposition aktualisiert haben, wählen Sie **[!UICONTROL Speichern]** um diese Aktualisierungen zu bestätigen. Die Arbeitsfläche für die Zielgruppenzusammensetzung wird erneut angezeigt.
+Nachdem Sie die Details Ihrer Komposition aktualisiert haben, wählen Sie **[!UICONTROL Speichern]**, um diese Aktualisierungen zu bestätigen. Die Arbeitsfläche für die Zielgruppenkomposition wird erneut angezeigt.
 
-Die Arbeitsfläche für die Zielgruppenzusammensetzung besteht aus vier verschiedenen Baustypen: **[[!UICONTROL Zielgruppe]](#audience-block)**, **[[!UICONTROL Ausschließen]](#exclude-block)**, **[[!UICONTROL Rang]](#rank-block)**, und **[[!UICONTROL Aufspaltung]](#split-block)**.
+Die Arbeitsfläche für die Zielgruppenkomposition besteht aus vier verschiedenen Blocktypen: **[[!UICONTROL Zielgruppe]](#audience-block)**, **[[!UICONTROL Ausschluss]](#exclude-block)**, **[[!UICONTROL Rang]](#rank-block)** und **[[!UICONTROL Aufteilung]](#split-block)**.
 
 ## [!UICONTROL Zielgruppe] {#audience-block}
 
 Mit dem Block **[!UICONTROL Zielgruppe]** können Sie die Unterzielgruppen hinzufügen, aus denen Sie Ihre neue größere Zielgruppe erstellen möchten. Standardmäßig ist ein **[!UICONTROL Zielgruppen]**-Block oben auf der Arbeitsfläche für die Komposition enthalten.
 
-Wenn Sie die **[!UICONTROL Zielgruppe]** -Baustein, zeigt die rechte Leiste Steuerelemente für die Kennzeichnung der Zielgruppe, das Hinzufügen von Zielgruppen zum Baustein sowie das Erstellen benutzerdefinierter Regeln für den Zielgruppenblock an.
+Wenn Sie den Block **[!UICONTROL Zielgruppen]** auswählen, zeigt die rechte Leiste Steuerelemente für die Kennzeichnung der Zielgruppe, das Hinzufügen von Zielgruppen zum Block sowie das Erstellen benutzerdefinierter Regeln für den Zielgruppenblock an.
 
 >[!NOTE]
 >
->Sie können entweder Zielgruppen hinzufügen **oder** eine benutzerspezifische Regel erstellen. Diese beiden Funktionen **cannot** zusammen verwendet werden.
+>Sie können entweder Zielgruppen hinzufügen **oder** eine benutzerspezifische Regel erstellen. Diese beiden Funktionen können **nicht** zusammen verwendet werden.
 
-![Details zum Zielgruppen-Block werden angezeigt.](../images/ui/audience-composition/audience-block.png)
+![Details zum Zielgruppenblock werden angezeigt.](../images/ui/audience-composition/audience-block.png)
 
-### [!UICONTROL Audience hinzufügen] {#add-audience}
+### [!UICONTROL Zielgruppe hinzufügen] {#add-audience}
 
-So fügen Sie Zielgruppen zum Audience -Block hinzu. select **[!UICONTROL Zielgruppe hinzufügen]**.
+So fügen Sie Zielgruppen zum Zielgruppenblock hinzu. Wählen Sie **[!UICONTROL Zielgruppe hinzufügen]** aus.
 
-![Die Schaltfläche Audience hinzufügen ist hervorgehoben.](../images/ui/audience-composition/add-audience.png)
+![Die Schaltfläche „Zielgruppe hinzufügen“ ist hervorgehoben.](../images/ui/audience-composition/add-audience.png)
 
 Eine Liste von Zielgruppen wird angezeigt. Wählen Sie die Zielgruppe aus, die Sie einbeziehen möchten, und dann **[!UICONTROL Hinzufügen]**, um sie an Ihren Zielgruppen-Block anzuhängen.
 
@@ -68,15 +68,15 @@ Ihre ausgewählten Zielgruppen werden jetzt in der rechten Leiste angezeigt, wen
 
 ### [!UICONTROL Regel erstellen] {#build-rule}
 
-Um eine benutzerdefinierte Regel zum Audience-Block hinzuzufügen, wählen Sie **[!UICONTROL Regel erstellen]**.
+Um eine benutzerdefinierte Regel zum Zielgruppenblock hinzuzufügen, wählen Sie **[!UICONTROL Regel erstellen]**.
 
-![Die Schaltfläche Regel erstellen ist hervorgehoben.](../images/ui/audience-composition/build-rule.png)
+![Die Schaltfläche „Regel erstellen“ ist hervorgehoben.](../images/ui/audience-composition/build-rule.png)
 
-Segment Builder wird angezeigt. Sie können den Segment Builder verwenden, um eine benutzerdefinierte Regel für die Zielgruppe zu erstellen. Weitere Informationen zur Verwendung von Segment Builder finden Sie im Abschnitt [Segment Builder-Handbuch](./segment-builder.md).
+Der Segment Builder wird angezeigt. Sie können den Segment Builder verwenden, um eine benutzerdefinierte Regel für die Zielgruppe zu erstellen. Weitere Informationen zur Verwendung von Segment Builder finden Sie im [Segment Builder-Handbuch](./segment-builder.md).
 
-![Die Benutzeroberfläche von Segment Builder wird angezeigt.](../images/ui/audience-composition/segment-builder.png)
+![Die Segment Builder-Benutzeroberfläche wird angezeigt.](../images/ui/audience-composition/segment-builder.png)
 
-Nachdem Sie eine benutzerdefinierte Regel hinzugefügt haben, wählen Sie **[!UICONTROL Speichern]** , um die Regel Ihrer Zielgruppe hinzuzufügen.
+Nachdem Sie eine benutzerdefinierte Regel hinzugefügt haben, wählen Sie **[!UICONTROL Speichern]** aus, um die Regel zu Ihrer Zielgruppe hinzuzufügen.
 
 ![](../images/ui/audience-composition/custom-rule.png)
 
@@ -96,7 +96,7 @@ Der Block **[!UICONTROL Ausschließen]** wird hinzugefügt. Wenn dieser Block au
 
 Wenn Sie nach Zielgruppe ausschließen, können Sie durch Auswahl von **[!UICONTROL Zielgruppe hinzufügen]** auswählen, welche Zielgruppen ausgeschlossen werden sollen.
 
-![Die Schaltfläche „Zielgruppe hinzufügen“ ist ausgewählt, über die Sie auswählen können, welche Zielgruppe Sie ausschließen möchten.](../images/ui/audience-composition/add-excluded-audience.png)
+![Die Schaltfläche [!UICONTROL Zielgruppe hinzufügen] ist ausgewählt, über die Sie wählen können, welche Zielgruppe Sie ausschließen möchten.](../images/ui/audience-composition/add-excluded-audience.png)
 
 Eine Liste von Zielgruppen wird angezeigt. Wählen Sie **[!UICONTROL Hinzufügen]** aus, um die Zielgruppen, die ausgeschlossen werden sollen, Ihrem Ausschlussblock hinzuzufügen.
 
@@ -116,57 +116,57 @@ Eine Liste der Profilattribute wird angezeigt. Wählen Sie den Attributtyp aus, 
 
 >[!IMPORTANT]
 >
->Zu diesem Zeitpunkt können Anreicherungsattribute **only** in nachgelagerten Adobe Journey Optimizer-Szenarien verwendet werden.
+>Zu diesem Zeitpunkt können Anreicherungsattribute **nur** in nachgelagerten Adobe Journey Optimizer-Szenarien verwendet werden.
 
-Die **[!UICONTROL Anreichern]** Mit dem Blocktyp können Sie Ihre Zielgruppe mit zusätzlichen Attributen aus einem Datensatz anreichern. Sie können diese Attribute in Anwendungsfällen der Personalisierung verwenden.
+Mit dem Blocktyp **[!UICONTROL Anreichern]** können Sie Ihre Zielgruppe mit zusätzlichen Attributen aus einem Datensatz anreichern. Sie können diese Attribute in Anwendungsfällen der Personalisierung verwenden.
 
-So fügen Sie eine **[!UICONTROL Anreichern]** -Block, wählen Sie die **+** Symbol, gefolgt von **[!UICONTROL Anreichern]**.
+Um einen Block des Typs **[!UICONTROL Anreichern]** hinzuzufügen, wählen Sie das Symbol **+** und dann **[!UICONTROL Anreichern]** aus.
 
-![Die [!UICONTROL Anreichern] ausgewählt ist.](../images/ui/audience-composition/add-enrich-block.png)
+![Die Option [!UICONTROL Anreichern] ist ausgewählt.](../images/ui/audience-composition/add-enrich-block.png)
 
-Die **[!UICONTROL Anreichern]** hinzugefügt. Wenn dieser Block ausgewählt ist, werden Details zur Anreicherung in der rechten Leiste angezeigt. Dazu gehören der Titel des Blocks und der Anreicherungsdatensatz.
+Der Block **[!UICONTROL Anreichern]** wird hinzugefügt. Wenn dieser Block ausgewählt ist, werden Details zur Anreicherung in der rechten Leiste angezeigt. Dazu gehören der Titel des Blocks und der Anreicherungsdatensatz.
 
-Um den Datensatz zur Anreicherung der Audience auszuwählen, wählen Sie die ![filter](../images/ui/audience-composition/filter-attribute.png) Symbol.
+Um den Datensatz auszuwählen, mit dem die Zielgruppe angereichert werden soll, wählen Sie das Symbol ![Filter](../images/ui/audience-composition/filter-attribute.png) aus.
 
-![Die Filterschaltfläche ist hervorgehoben. Wenn Sie dies auswählen, gelangen Sie zum [!UICONTROL Datensatz auswählen] Popover.](../images/ui/audience-composition/enrich-select-dataset.png)
+![Die Schaltfläche „Filter“ ist hervorgehoben. Wenn Sie dies auswählen, gelangen Sie zum Popup-Fenster [!UICONTROL Datensatz auswählen].](../images/ui/audience-composition/enrich-select-dataset.png)
 
-Die **[!UICONTROL Datensatz auswählen]** Popover angezeigt. Wählen Sie den Datensatz aus, den Sie zur Anreicherung hinzufügen möchten, gefolgt von **[!UICONTROL Auswählen]** , um den Datensatz zur Anreicherung hinzuzufügen.
+Das Popup-Fenster **[!UICONTROL Datensatz auswählen]** erscheint. Wählen Sie den Datensatz aus, den Sie zwecks Anreicherung hinzufügen möchten, gefolgt von **[!UICONTROL Auswählen]**, um den Datensatz für die Anreicherung hinzuzufügen.
 
-![Der ausgewählte Datensatz wird ausgewählt.](../images/ui/audience-composition/enrich-dataset-selected.png)
+![Der gewählte Datensatz ist ausgewählt.](../images/ui/audience-composition/enrich-dataset-selected.png)
 
 >[!IMPORTANT]
 >
->Der ausgewählte Datensatz **must** die folgenden Kriterien erfüllen:
+>Der ausgewählte Datensatz **muss** die folgenden Kriterien erfüllen:
 >
->- Der Datensatz **must** von Datensatztyp sein.
->   - Der Datensatz **cannot** vom Ereignistyp sein, systemgeneriert oder für Profil markiert sein.
->- Der Datensatz **must** 1 GB oder kleiner sein.
+>- Der Datensatz **muss** vom Typ „Eintrag“ sein.
+>   - Der Datensatz **darf nicht** vom Typ „Ereignis“, nicht systemgeneriert und nicht für ein Profil markiert sein.
+>- Der Datensatz **muss** 1 GB oder kleiner sein.
 
-Die **[!UICONTROL Anreicherungskriterien]** wird nun in der rechten Leiste angezeigt. In diesem Abschnitt können Sie die **[!UICONTROL Quellenverbindungsschlüssel]** und **[!UICONTROL Join-Schlüssel für Anreicherungsdatensatz]**, mit dem Sie den Anreicherungsdatensatz mit der Zielgruppe verknüpfen können, die Sie erstellen möchten.
+Der Abschnitt **[!UICONTROL Anreicherungskriterien]** wird nun in der rechten Leiste angezeigt. In diesem Abschnitt können Sie den **[!UICONTROL Quell-Zusammenführungsschlüssel]** und den **[!UICONTROL Anreicherungsdatensatz-Zusammenführungsschlüssel]** auswählen, wodurch Sie den Anreicherungsdatensatz mit der Zielgruppe verknüpfen können, die Sie erstellen möchten.
 
-![Die [!UICONTROL Anreicherungskriterien] -Bereich markiert ist.](../images/ui/audience-composition/enrichment-criteria.png)
+![Der Bereich [!UICONTROL Anreicherungskriterien] ist hervorgehoben.](../images/ui/audience-composition/enrichment-criteria.png)
 
-So wählen Sie die **[!UICONTROL Quellenverbindungsschlüssel]**, wählen Sie die ![filter](../images/ui/audience-composition/filter-attribute.png) Symbol.
+Um den **[!UICONTROL Quell-Zusammenführungsschlüssel]** auszuwählen, wählen Sie das ![Filter](../images/ui/audience-composition/filter-attribute.png)-Symbol aus.
 
-![Das Filtersymbol für [!UICONTROL Quellenverbindungsschlüssel] hervorgehoben ist.](../images/ui/audience-composition/enrich-select-source-join-key.png)
+![Das Filter-Symbol für den [!UICONTROL Quell-Zusammenführungsschlüssel] ist hervorgehoben.](../images/ui/audience-composition/enrich-select-source-join-key.png)
 
-Die **[!UICONTROL Profilattribut auswählen]** Popover angezeigt. Wählen Sie das Profilattribut aus, das Sie als Quell-Join-Schlüssel verwenden möchten, gefolgt von **[!UICONTROL Auswählen]** um dieses Attribut als Quell-Join-Schlüssel auszuwählen.
+Das Popup-Fenster **[!UICONTROL Profilattribut auswählen]** erscheint. Wählen Sie das Profilattribut aus, das Sie als Quell-Zusammenführungsschlüssel verwenden möchten, gefolgt von **[!UICONTROL Auswählen]**, um dieses Attribut als Quell-Zusammenführungsschlüssel auszuwählen.
 
-![Das Attribut, das Sie als Quell-Join-Schlüssel verwenden möchten, wird hervorgehoben.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
+![Das Attribut, das Sie als Quell-Zusammenführungsschlüssel verwenden möchten, ist hervorgehoben.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
 
-So wählen Sie die **[!UICONTROL Join-Schlüssel für Anreicherungsdatensatz]**, wählen Sie die ![filter](../images/ui/audience-composition/filter-attribute.png) Symbol.
+Um den **[!UICONTROL Anreicherungsdatensatz-Zusammenführungsschlüssel]** auszuwählen, wählen Sie das Symbol ![Filter](../images/ui/audience-composition/filter-attribute.png).
 
-![Das Filtersymbol für [!UICONTROL Join-Schlüssel für Anreicherungsdatensatz] hervorgehoben ist.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
+![Das Filtersymbol für den [!UICONTROL Anreicherungsdatensatz-Zusammenführungsschlüssel] ist hervorgehoben.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
 
-Die **[!UICONTROL Anreicherungsattribute]** Popover angezeigt. Wählen Sie das Attribut aus, das Sie als Join-Schlüssel für den Anreicherungsdatensatz verwenden möchten, gefolgt von **[!UICONTROL Auswählen]** , um dieses Attribut als Join-Schlüssel für Ihren Anreicherungsdatensatz auszuwählen.
+Das Popup-Fenster **[!UICONTROL Anreicherungsattribute]** erscheint. Wählen Sie das Attribut aus, das Sie als Anreicherungsdatensatz-Zusammenführungsschlüssel verwenden möchten, gefolgt von **[!UICONTROL Auswählen]**, um dieses Attribut als Zusammenführungsschlüssel für den Anreicherungsdatensatz auszuwählen.
 
-![Das Attribut, das Sie als Join-Schlüssel für den Anreicherungsdatensatz verwenden möchten, wird hervorgehoben.](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
+![Das Attribut, das Sie als Anreicherungsdatensatz-Zusammenführungsschlüssel verwenden möchten, ist hervorgehoben.](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
 
-Nachdem Sie nun beide Join-Schlüssel hinzugefügt haben, wird die **[!UICONTROL Anreicherungsattribute]** angezeigt. Jetzt können Sie das Attribut hinzufügen, mit dem Sie Ihre Zielgruppe erweitern möchten. Um diese Attribute hinzuzufügen, wählen Sie **[!UICONTROL Attribut hinzufügen]**.
+Nachdem Sie nun Ihre beiden Zusammenführungsschlüssel hinzugefügt haben, erscheint der Abschnitt **[!UICONTROL Anreicherungsattribute]**. Jetzt können Sie das Attribut hinzufügen, mit dem Sie Ihre Zielgruppe erweitern möchten. Um diese Attribute hinzuzufügen, wählen Sie **[!UICONTROL Attribut hinzufügen]**.
 
-![Die [!UICONTROL Attribut hinzufügen] -Schaltfläche markiert ist.](../images/ui/audience-composition/enrich-select-add-attribute.png)
+![Die Schaltfläche [!UICONTROL Attribut hinzufügen] ist hervorgehoben.](../images/ui/audience-composition/enrich-select-add-attribute.png)
 
-Die **[!UICONTROL Anreicherungsattribute]** Popover angezeigt. Sie können die Attribute aus dem Datensatz auswählen, um Ihre Zielgruppe mit **[!UICONTROL Auswählen]** , um die Attribute Ihrer Audience hinzuzufügen.
+Das Popup-Fenster **[!UICONTROL Anreicherungsattribute]** erscheint. Sie können die Attribute aus dem Datensatz auswählen, mit denen Sie Ihre Zielgruppe erweitern möchten, gefolgt von **[!UICONTROL Auswählen]**, um die Attribute zu Ihrer Zielgruppe hinzuzufügen.
 
 ![Die Anreicherungsattribute, die Sie hinzufügen möchten, werden hervorgehoben.](../images/ui/audience-composition/enrich-add-enrichment-attributes.png)
 
@@ -192,7 +192,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ## [!UICONTROL Rang] {#rank-block}
 
-Die **[!UICONTROL Rang]** Mit dem Blocktyp können Sie Profile nach einem bestimmten Attribut sortieren und sortieren und diese bewerteten Profile in Ihre Komposition aufnehmen.
+Der Blocktyp **[!UICONTROL Rang]** ermöglicht es Ihnen, Profile anhand eines bestimmten Attributs zu bewerten und zu sortieren und diese bewerteten Profile in Ihre Komposition aufzunehmen.
 
 Um einen Block **[!UICONTROL Rang]** hinzuzufügen, wählen Sie das Symbol **+** und dann **[!UICONTROL Rang]** aus.
 
@@ -206,7 +206,7 @@ Um festzulegen, nach welchem Attribut die Zielgruppen geordnet werden sollen, w�
 
 ![Das Filtersymbol ist hervorgehoben und zeigt an, welche Optionen für den Zugriff auf den Bildschirm zur Profilattributauswahl ausgewählt werden sollen.](../images/ui/audience-composition/select-rank-attribute.png)
 
-Eine Liste der Profilattribute wird angezeigt. In diesem Popup können Sie den Attributtyp auswählen, nach dem Sie Ihre Zielgruppe ordnen möchten. Wählen Sie **[!UICONTROL Auswählen]** aus, um ihn Ihrem Block „Rang“ hinzuzufügen. Beachten Sie, dass das ausgewählte Attribut **only** sind Zahlen.
+Eine Liste der Profilattribute wird angezeigt. In diesem Popup können Sie den Attributtyp auswählen, nach dem Sie Ihre Zielgruppe ordnen möchten. Wählen Sie **[!UICONTROL Auswählen]** aus, um ihn Ihrem Block „Rang“ hinzuzufügen. Bitte beachten Sie, dass die ausgewählten Attribute **nur** Zahlen sein können.
 
 ![Eine Liste mit Attributen wird angezeigt.](../images/ui/audience-composition/select-attribute-rank.png)
 
@@ -224,7 +224,7 @@ Um einen Block **[!UICONTROL Aufspaltung]** hinzuzufügen, wählen Sie das Symbo
 
 ![Die Option „Aufspaltung“ ist ausgewählt.](../images/ui/audience-composition/add-split-block.png)
 
-Bei der Aufspaltung der Audience können Sie sie entweder nach Prozentsatz aufteilen oder nach Attribut aufteilen.
+Bei der Aufspaltung der Zielgruppe können Sie sie entweder nach Prozentsatz aufspalten oder nach Attribut aufspalten.
 
 ### Aufspaltung nach Prozentsatz {#split-percentage}
 
@@ -264,4 +264,4 @@ Wenn bei der Erstellung der Zielgruppe Fehler auftreten, wird ein Warnhinweis an
 
 ## Nächste Schritte
 
-Zielgruppenkomposition bietet einen umfassenden Workflow, mit dem Sie Zielgruppen aus den verschiedenen Blocktypen erstellen können. Weitere Informationen zu anderen Teilen der Segmentierungs-Service-Benutzeroberfläche finden Sie im [Segmentierungs-Service-Benutzerhandbuch](./overview.md).
+Die Zielgruppenkomposition bietet einen umfassenden Workflow, mit dem Sie Zielgruppen von verschiedenen Blocktypen erstellen können. Weitere Informationen zu anderen Teilen der Segmentierungs-Service-Benutzeroberfläche finden Sie im [Segmentierungs-Service-Benutzerhandbuch](./overview.md).
