@@ -1,12 +1,12 @@
 ---
-keywords: contentsquare-Erweiterung; contentsquare-Ziel; contentsquare
+keywords: Contentsquare-Erweiterung;Contentsquare-Ziel;contentsquare
 title: Contentsquare-Erweiterung
 description: Die Contentsquare-Erweiterung ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: bf836a15-b87c-4a4b-a3fc-92d3cf9bc90e
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '479'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 81%
 
 ## Übersicht {#overview}
 
-Sehen Sie sich die Verhaltensweisen von Seiten an, siehe WARUM Kunden abbrechen und Wie Sie diese verbessern können. Ordnen Sie den Umsatz UX- und Inhaltselementen für jede Analytics-Zielgruppe und jeden Target-Test zu. Installieren Sie die [!DNL Contentsquare] Tags, benutzerdefinierte Variablen und Ereignisse einrichten. Erfassen Sie Daten für Ihre UX-Analyse mit wenigen Klicks.
+Sehen Sie sich die Verhaltensweisen von Seiten an, WARUM Kundinnen oder Kunden die Seite verlassen und WIE Sie dies verbessern können. Ordnen Sie den Umsatz den UX- und Inhaltselementen für jede Analytics-Zielgruppe und jeden Target-Test zu. Installieren Sie das [!DNL Contentsquare]-Tag, richten Sie benutzerdefinierte Variablen und Ereignisse ein. Erfassen Sie Daten für Ihre UX-Analyse mit wenigen Klicks.
 
-[!DNL Contentsquare] ist eine Analyseerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100364.html).
+[!DNL Contentsquare] ist eine Analytics-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100364.html).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 
@@ -31,7 +31,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Contentsquare] Erweiterung:
+So installieren Sie die [!DNL Contentsquare]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
@@ -43,7 +43,7 @@ Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchte
 
 Der Workflow führt Sie durch die Schritte zum Abschließen der Installation.
 
-Informationen zu den Konfigurationsoptionen für Erweiterungen finden Sie unter [Seite &quot;Contentsquare-Erweiterung&quot;](https://exchange.adobe.com/experiencecloud.details.100364.html) auf Adobe Exchange.
+Informationen zu den Konfigurationsoptionen der Erweiterung finden Sie auf der [Seite zur Contentsquare-Erweiterung](https://exchange.adobe.com/experiencecloud.details.100364.html) auf Adobe Exchange.
 
 Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Abschnitt zum Thema [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in der Tag-Dokumentation.
 
