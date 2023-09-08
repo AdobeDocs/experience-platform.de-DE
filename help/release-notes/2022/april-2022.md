@@ -3,9 +3,9 @@ title: Adobe Experience Platform – Versionshinweise April 2022
 description: Versionshinweise April 2022 für Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
 source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2904'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 Platform bietet mehrere Dashboards, mit denen Sie wichtige Informationen über die Daten Ihrer Organisation sehen können, die bei täglichen Schnappschüssen erfasst werden.
 
-Dashboards bieten vorkonfigurierte Berichtsoptionen für die Daten Ihres Unternehmens und sind direkt in den Marketing-Workflow in Platform integriert. Diese Dashboards sind ohne zusätzliche IT-Unterstützung und ohne den Zeit- und Arbeitsaufwand verfügbar, der sonst für den Export und die Verarbeitung von Daten mit zusätzlicher Data-Warehousing-Konzeption und Implementierung erforderlich wäre.
+Dashboards bieten vordefinierte Berichtsoptionen zu den Daten Ihres Unternehmens und sind direkt in den Marketing-Workflow von Platform integriert. Diese Dashboards sind ohne zusätzliche IT-Unterstützung und ohne den Zeit- und Arbeitsaufwand verfügbar, der sonst für den Export und die Verarbeitung von Daten mit zusätzlicher Data-Warehousing-Konzeption und Implementierung erforderlich wäre.
 
 Die folgenden Widgets sind über die Widget-Bibliothek in den jeweiligen Dashboards verfügbar. Weitere Informationen finden Sie in der Dokumentation zum [Hinzufügen von Widgets über die Widget-Bibliothek](../../dashboards/customize/widget-library.md).
 
@@ -135,7 +135,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 | Globales Schema | [[!UICONTROL Datenhygiene-Anfrage]](https://github.com/adobe/xdm/blob/master/schemas/hygiene/aep-hygiene-ops-record.schema.json) | Erfasst die Details einer Datenbereinigungsanfrage zum Löschen oder Ändern von Datensätzen in einem bestimmten Datensatz oder einer bestimmten Sandbox. |
 | Deskriptor | [[!UICONTROL Zeitreihen-Granularitätsdeskriptor]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/time-series/descriptorTimeSeriesGranularity.schema.json) | Gibt die Granularität von Zeitreihen- und Zusammenfassungsdaten an. Bei Anwendung auf ein Schema ist das Schemafeld `timestamp` der erste Zeitstempel in einem Zeitraum dieser Granularität. |
 | Klasse | [[!UICONTROL Zusammengefasste XDM-Metriken]](https://github.com/adobe/xdm/blob/master/components/classes/summary_metrics.schema.json) | Bietet vorab zusammengefasste Metriken mit Gruppierungsdimensionen, z. B. die Ergebnisse von SQL SELECT mit GROUP BY. |
-| Feldergruppe | [[!UICONTROL Zuordnung der Ergebnisse der Einverständnisrichtlinien-Evaluierung]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResults.schema.json) | Erfasst das Ergebnis der Einverständnisrichtlinien-Evaluierung für eine Person. |
+| Feldergruppe | [[!UICONTROL Zuordnung der Ergebnisse der Einverständnisrichtlinien-Auswertung]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResults.schema.json) | Erfasst das Ergebnis der Einverständnisrichtlinien-Auswertung für eine Person. |
 | Feldergruppe | [[!UICONTROL Site-Suche]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-site-search.schema.json) | Erfasst alle Informationen zur Site-Suche wie Suchanfragen, Filterung und Sortierung. |
 | Feldergruppe | [[!UICONTROL Zusammenführen von Leads]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/merge-leads.schema.json) | Erfasst die Details eines Ereignisses, bei dem zwei oder mehr Leads zusammengeführt werden. |
 | Feldergruppe | [[!UICONTROL E-Mail gesendet]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/emailsent.schema.json) | Erfasst die Details eines Ereignisses, bei dem eine E-Mail an einen Empfänger gesendet wird. |
@@ -173,7 +173,7 @@ Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-S
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-KI/ML-Services ermöglichen es Marketing-Analysten und -Praktikern, die Leistungsfähigkeit von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen zu nutzen. So können Marketing-Analysten mithilfe von Konfigurationen auf Unternehmensebene spezifische Prognosen für die Anforderungen der Firma erstellen, ohne dass hierfür Kenntnisse aus der Datenwissenschaft erforderlich sind.
+KI/ML-Services ermöglichen es Marketing-Analysten und -Praktikern, die Leistungsfähigkeit von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen zu nutzen. So können Marketing-Analysefachleute mithilfe von Konfigurationen auf Unternehmensebene spezifische Prognosen für die Anforderungen der Firma erstellen, ohne dass hierfür Kenntnisse aus der Datenwissenschaft erforderlich sind.
 
 ### Attributions-KI
 
@@ -196,7 +196,7 @@ Die in Real-time Customer Data Platform verfügbare Kunden-KI dient dazu, in gro
 | Funktion | Beschreibung |
 | ------- | ----------- |
 | Unterstützung für mehrere Datensätze | Die Funktion für mehrere Datensätze unterstützt jetzt alle Experience Event-Datensätze sowie die Auswahl von Identity Map als Identität. Kunden können Identity Map und alle zugehörigen IDs auswählen, sofern es einen gemeinsamen Identity-Namespace für alle Datensätze gibt. Kunden-KI unterstützt die folgenden Schemata: Adobe Analytics, Erlebnisereignis, Verbrauchererlebnisereignis und das Adobe Audience Manager-Schema. Weitere Informationen zur Unterstützung von mehreren Datensätzen in Kunden-KI finden Sie im [Benutzerhandbuch für Kunden-KI](../../intelligent-services/customer-ai/user-guide/configure.md). |
-| Neue Modellevaluierungsmetriken in Kunden-KI | Neue Gewinndiagramme in Kunden-KI ermöglichen es Marketing-Experten, die Gruppengröße für das Targeting anhand ihres Budgets und ihrer ROI-Ziele zu bestimmen. In neuen Steigerungsdiagrammen wird die Qualität des Modells gemessen, was eine bessere Sichtbarkeit der Steigerung ermöglicht, die verglichen mit zufälligem Targeting auftreten würde. Weitere Informationen finden Sie im Dokument [Einblicke gewinnen mit Kunden-KI](../../intelligent-services/customer-ai/user-guide/discover-insights.md). |
+| Neue Modellauswertungsmetriken in Kunden-KI | Neue Gewinndiagramme in Kunden-KI ermöglichen es Marketing-Experten, die Gruppengröße für das Targeting anhand ihres Budgets und ihrer ROI-Ziele zu bestimmen. In neuen Steigerungsdiagrammen wird die Qualität des Modells gemessen, was eine bessere Sichtbarkeit der Steigerung ermöglicht, die verglichen mit zufälligem Targeting auftreten würde. Weitere Informationen finden Sie im Dokument [Einblicke gewinnen mit Kunden-KI](../../intelligent-services/customer-ai/user-guide/discover-insights.md). |
 
 Weitere Informationen zu [!DNL Intelligent Services] finden Sie in der [[!DNL Intelligent Services] Übersicht](../../intelligent-services/home.md).
 
