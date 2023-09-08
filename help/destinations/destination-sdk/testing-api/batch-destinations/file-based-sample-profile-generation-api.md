@@ -3,9 +3,9 @@ description: Auf dieser Seite wird erläutert, wie Sie mit dem API-Endpunkt /sam
 title: Generieren von Beispielprofilen basierend auf einem Quellschema
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
 source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '651'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -60,11 +60,11 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-pro
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit der angegebenen Anzahl von Beispielprofilen mit Zielgruppenmitgliedschaft, Identitäten und Profilattributen zurück, die dem Quell-XDM-Schema entsprechen.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit der angegebenen Anzahl von Beispielprofilen zurückgegeben, mit Zielgruppenmitgliedschaft, Identitäten und Profilattributen, die dem Quell-XDM-Schema entsprechen.
 
 >[!NOTE]
 >
-> Die Antwort gibt nur Zielgruppenzugehörigkeit, Identitäten und Profilattribute zurück, die in der Zielinstanz verwendet werden. Selbst wenn Ihr Quellschema andere Felder enthält, werden diese ignoriert.
+> Die Antwort gibt nur Zielgruppenmitgliedschaften, Identitäten und Profilattribute zurück, die in der Zielinstanz verwendet werden. Selbst wenn Ihr Quellschema andere Felder enthält, werden diese ignoriert.
 
 ```json
 [
@@ -105,9 +105,9 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit der angegebenen Anzahl vo
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `segmentMembership` | Ein map -Objekt, das die Zielgruppenmitgliedschaften des Kontakts beschreibt. Weitere Informationen finden Sie unter `segmentMembership`, lesen [Details zur Zielgruppenmitgliedschaft](../../../../xdm/field-groups/profile/segmentation.md). |
+| `segmentMembership` | Ein Zuordnungsobjekt, das die Zielgruppenmitgliedschaften der Person beschreibt. Weitere Informationen zu `segmentMembership` finden Sie unter [Details zur Zielgruppenmitgliedschaft](../../../../xdm/field-groups/profile/segmentation.md). |
 | `lastQualificationTime` | Ein Zeitstempel, der angibt, wann sich dieses Profil zuletzt für das Segment qualifiziert hat. |
-| `status` | Ein Zeichenfolgenfeld, das anzeigt, ob die Zielgruppenzugehörigkeit im Rahmen der aktuellen Anfrage realisiert wurde. Folgende Werte werden akzeptiert: <ul><li>`realized`: Das Profil ist Teil des Segments.</li><li>`exited`: Das Profil beendet die Zielgruppe im Rahmen der aktuellen Anfrage.</li></ul> |
+| `status` | Ein Zeichenfolgenfeld, das angibt, ob die Zielgruppenmitgliedschaft im Rahmen der aktuellen Anfrage realisiert wurde. Folgende Werte werden akzeptiert: <ul><li>`realized`: Das Profil ist Teil des Segments.</li><li>`exited`: Das Profil verlässt die Zielgruppe im Rahmen der aktuellen Anfrage.</li></ul> |
 | `identityMap` | Ein Feld vom Typ „Zuordnung“, das die verschiedenen Identitätswerte einer Person zusammen mit den zugehörigen Namespaces beschreibt. Weitere Informationen zu `identityMap` finden Sie unter [Grundlage der Schemakomposition](../../../../xdm/schema/composition.md#identityMap). |
 
 {style="table-layout:auto"}
