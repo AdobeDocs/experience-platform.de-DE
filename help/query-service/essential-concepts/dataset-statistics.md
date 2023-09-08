@@ -10,7 +10,7 @@ ht-degree: 100%
 
 # Berechnung der Datensatzstatistiken
 
-Sie können nun Statistiken auf Spaltenebene für [!DNL Azure Data Lake Storage](ADLS)-Datensätze mit dem SQL-Befehl `COMPUTE STATISTICS` berechnen. Die SQL-Befehle, die Datensatzstatistiken berechnen, sind eine Erweiterung des Befehls `ANALYZE TABLE`. Vollständige Informationen zum Befehl `ANALYZE TABLE` finden Sie in der [SQL-Referenzdokumentation](../sql/syntax.md#analyze-table).
+Sie können nun Statistiken auf Spaltenebene für [!DNL Azure Data Lake Storage] (ADLS)-Datensätze mit dem SQL-Befehl `COMPUTE STATISTICS` berechnen. Die SQL-Befehle, die Datensatzstatistiken berechnen, sind eine Erweiterung des Befehls `ANALYZE TABLE`. Vollständige Informationen zum Befehl `ANALYZE TABLE` finden Sie in der [SQL-Referenzdokumentation](../sql/syntax.md#analyze-table).
 
 >[!NOTE]
 >
