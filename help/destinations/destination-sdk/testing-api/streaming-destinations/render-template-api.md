@@ -3,9 +3,9 @@ description: Erfahren Sie, wie Sie mit der Zieltest-API die Ausgabe basierend au
 title: Validieren der exportierten Profilstruktur
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '789'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -186,7 +186,7 @@ Bei einer fehlerhaften Antwort wird der HTTP-Status 400 zusammen mit Beschreibun
 **Anfrage**
 
 
-Die folgende Anfrage rendert mehrere exportierte Profile, die dem von Ihrem Ziel erwarteten Format entsprechen. In diesem Beispiel entspricht die Ziel-ID einer Zielkonfiguration mit konfigurierbarer Aggregation. Im Text der Anfrage sind zwei Profile enthalten, von denen jede drei Zielgruppenqualifikationen und fünf Identitäten aufweist. Sie können Profile generieren, die bei dem Aufruf gesendet werden, indem Sie die [API zur Erzeugung von Musterprofilen](sample-profile-generation-api.md) verwenden.
+Die folgende Anfrage rendert mehrere exportierte Profile, die dem von Ihrem Ziel erwarteten Format entsprechen. In diesem Beispiel entspricht die Ziel-ID einer Zielkonfiguration mit konfigurierbarer Aggregation. Im Text der Anfrage sind zwei Profile enthalten, von denen jedes drei Zielgruppenqualifikationen und fünf Identitäten aufweist. Sie können Profile generieren, die bei dem Aufruf gesendet werden, indem Sie die [API zur Erzeugung von Musterprofilen](sample-profile-generation-api.md) verwenden.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \
