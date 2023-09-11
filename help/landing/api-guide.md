@@ -2,11 +2,11 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Adobe Experience Platform; API-Handbuch; Plattform-API-Handbuch; Einführung in die Plattform; Entwicklerhandbuch
 solution: Experience Platform
 title: Erste Schritte mit Adobe Experience Platform-APIs
-description: Adobe Experience Platform bietet API-Dienste, die eng miteinander verbunden sind. Dieses Handbuch enthält Informationen zu den verfügbaren Diensten, erforderlichen Kopfzeilen für CRUD-Vorgänge, Fehlermeldungen, Postman-Sammlungen und Beispiel-API-Aufrufen.
+description: Adobe Experience Platform bietet API-Dienste an, die eng miteinander verbunden sind. Dieses Handbuch enthält Informationen zu den verfügbaren Diensten, erforderlichen Kopfzeilen für CRUD-Vorgänge, Fehlermeldungen, Postman-Sammlungen und Beispiel-API-Aufrufen.
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: c728d63c22593ca56999dd0bb6679dea7de0e00a
 workflow-type: tm+mt
-source-wordcount: '1379'
+source-wordcount: '1412'
 ht-degree: 30%
 
 ---
@@ -41,7 +41,7 @@ Alle Anfragen mit einer Payload im Anfragetext (wie POST-, PUT- und PATCH-Aufruf
 
 Adobe Experience Platform-APIs setzen verschiedene zugrunde liegende Technologien und Syntaxen ein, die für eine effektive Verwaltung von Platform-Ressourcen wichtig sind.
 
-Weitere Informationen zu den zugrunde liegenden API-Technologien, die von Platform verwendet werden, einschließlich Beispiel-JSON-Schemaobjekten, finden Sie unter [Grundlagen der Experience Platform-API](api-fundamentals.md) Handbuch.
+Weitere Informationen zu den zugrunde liegenden API-Technologien, die von Platform verwendet werden, einschließlich Beispiel-JSON-Schemaobjekten, finden Sie unter [Experience Platform-API-Grundlagen](api-fundamentals.md) Handbuch.
 
 ## Postman-Sammlungen für Experience Platform-APIs
 
@@ -122,12 +122,13 @@ Weitere Informationen zu bestimmten Endpunkten in Platform-APIs, einschließlich
 | [[!DNL Access Control] API-Handbuch](.././access-control/api/getting-started.md) | Die [!DNL Access Control] API-Endpunkt kann aktuelle Richtlinien abrufen, die für einen Benutzer für bestimmte Ressourcen in einer angegebenen Sandbox gelten. Alle anderen Zugriffssteuerungsfunktionen werden über die [Adobe Admin Console](https://adminconsole.adobe.com/). |
 | [Handbuch zur Batch-Aufnahme-API](.././ingestion/batch-ingestion/api-overview.md) | Die Adobe Experience Platform [!DNL Data Ingestion] Mit der API können Sie Daten als Batch-Dateien in Platform erfassen. Daten, die erfasst werden, können Profildaten aus einer reduzierten Datei in einem CRM-System (z. B. eine Parquet-Datei) oder Daten sein, die einem bekannten Schema in der Schema Registry (XDM) entsprechen. |
 | [[!DNL Catalog Service] API-Handbuch](.././catalog/api/getting-started.md) | Die [!DNL Catalog Service] Mit der API können Entwickler Datensatzmetadaten in Adobe Experience Platform verwalten. Dazu gehören Datenspeicherorte, Verarbeitungsphasen, während der Verarbeitung aufgetretene Fehler und Datenberichte. |
-| [[!DNL Data Access] API-Handbuch](.././data-access/api.md) | Die [!DNL Data Access] Mit der API können Entwickler Informationen zu erfassten Datensätzen in Experience Platform abrufen. Dazu gehören der Zugriff auf und das Herunterladen von Datensatzdateien, das Abrufen von Kopfzeileninformationen, das Auflisten fehlgeschlagener und erfolgreicher Batches sowie das Herunterladen von CSV-/Parquet-Vorschaudateien. |
+| [[!DNL Data Access] API-Handbuch](.././data-access/api.md) | Die [!DNL Data Access] Mit der API können Entwickler Informationen zu erfassten Datensätzen innerhalb von Experience Platform abrufen. Dazu gehören der Zugriff auf und das Herunterladen von Datensatzdateien, das Abrufen von Kopfzeileninformationen, das Auflisten fehlgeschlagener und erfolgreicher Batches sowie das Herunterladen von CSV-/Parquet-Vorschaudateien. |
 | [[!DNL Dataset Service] API-Handbuch](.././data-governance/labels/dataset-api.md) | Mit der Datensatz-Service-API können Sie Nutzungsbezeichnungen für Datensätze anwenden und bearbeiten. Sie gehört zu den Datenkatalogfunktionen von Adobe Experience Platform, ist jedoch von der Katalog-Service-API getrennt, die Datensatz-Metadaten verwaltet. |
+| [[!DNL Edge Network Server] API-Handbuch](../server-api/overview.md) | Die [!DNL Edge Network Server API] kann für eine Vielzahl von Anwendungsfällen zur Datenerfassung, Personalisierung, Werbung und Marketing verwendet werden. Die [!DNL Server API] kann auf Servern verwendet werden, [!DNL IoT] Geräte, Set-Top-Boxen und eine Vielzahl anderer Geräte. |
 | [[!DNL Identity Service] API-Handbuch](.././identity-service/api/getting-started.md) | Die [!DNL Identity Service] Mit der API können Entwickler die geräteübergreifende, kanalübergreifende und nahe Echtzeit-Kundenidentifizierung mithilfe von Identitätsdiagrammen in Adobe Experience Platform verwalten. |
 | [[!DNL Observability Insights] API-Handbuch](.././observability/api/overview.md) | [!DNL Observability Insights] ist eine RESTful-API, mit der Entwickler wichtige Beobachtbarkeitsmetriken in Adobe Experience Platform verfügbar machen können. Diese Metriken liefern Einblicke in Statistiken zur Platform-Nutzung, Systemdiagnosen für Platform-Dienste, historische Trends und Leistungsindikatoren für verschiedene Platform-Funktionen. |
 | [[!DNL Policy Service] API-Handbuch](.././data-governance/api/overview.md) <br> (Data Governance) | Die [!DNL Policy Service] Mit der API können Sie Datennutzungsbezeichnungen und -richtlinien erstellen und verwalten, um zu bestimmen, welche Marketing-Aktionen für Daten mit bestimmten Datennutzungsbezeichnungen durchgeführt werden können. Informationen zum Anwenden von Bezeichnungen auf Datensätze und Felder finden Sie im Abschnitt [[!DNL Dataset Service] API](.././data-governance/labels/dataset-api.md) Handbuch |
-| [[!DNL Privacy Service] API-Handbuch](.././privacy-service/api/getting-started.md) | Die [!DNL Privacy Service] Mit der API können Entwickler Kundenanfragen erstellen und verwalten, um in allen Experience Cloud-Applikationen auf ihre personenbezogenen Daten zuzugreifen oder diese zu löschen. Dies geschieht in Übereinstimmung mit den gesetzlichen Datenschutzbestimmungen. |
+| [[!DNL Privacy Service] API-Handbuch](.././privacy-service/api/getting-started.md) | Die [!DNL Privacy Service] Mit API können Entwickler Kundenanfragen für den Zugriff auf oder die Löschung ihrer personenbezogenen Daten in allen Experience Cloud-Applikationen gemäß den gesetzlichen Datenschutzbestimmungen erstellen und verwalten. |
 | [[!DNL Query Service] API-Handbuch](.././query-service/api/getting-started.md) | Die [!DNL Query Service] Mit der API können Entwickler ihre Adobe Experience Platform-Daten mithilfe von Standard-SQL abfragen. |
 | [[!DNL Real-Time Customer Profile] API-Handbuch](.././profile/api/overview.md) | Die Echtzeit-Kundenprofil-API ermöglicht es Entwicklern, Profildaten zu untersuchen und damit zu arbeiten, einschließlich Anzeigen von Profilen, Erstellen und Aktualisieren von Zusammenführungsrichtlinien, Exportieren oder Sampling von Profildaten und Löschen von Profildaten, die nicht mehr benötigt werden oder fehlerhaft hinzugefügt wurden. |
 | [Handbuch zur Sandbox-API](.././sandboxes/api/getting-started.md) | Mit der Sandbox-API können Entwickler isolierte virtuelle Sandbox-Umgebungen in Adobe Experience Platform programmgesteuert verwalten. |

@@ -3,10 +3,10 @@ keywords: E-Mail; E-Mail; E-Mail; E-Mail-Ziele; Adobe Campaign; Kampagne
 title: Adobe Campaign-Verbindung
 description: Adobe Campaign umfasst verschiedene Lösungen, mit denen Sie Kampagnen über alle Ihre Online- und Offline-Kanäle hinweg personalisieren und bereitstellen können.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '941'
-ht-degree: 42%
+source-wordcount: '920'
+ht-degree: 45%
 
 ---
 
@@ -20,15 +20,12 @@ Um Zielgruppendaten an Adobe Campaign zu senden, müssen Sie zunächst [Ziel ver
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
-In diesem Abschnitt werden alle Zielgruppen beschrieben, die Sie an dieses Ziel exportieren können.
+In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel exportieren können.
 
-Dieses Ziel unterstützt die Aktivierung aller durch die Experience Platform generierten Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md).
-
-*Zusätzlich*, unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
-
-| Zielgruppentyp | Beschreibung |
----------|----------|
-| Benutzerdefinierte Uploads | Zielgruppen [importiert](../../../segmentation/ui/overview.md#import-audience) in die Experience Platform aus CSV-Dateien. |
+| Audience Origin | Unterstützt | Beschreibung |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
+| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
 
 {style="table-layout:auto"}
 
@@ -45,7 +42,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 ## IP-Adressen-Zulassungsliste {#allow-list}
 
-Beim Einrichten von E-Mail-Marketing-Zielen mit SFTP-Speicher empfiehlt Adobe, bestimmte IP-Bereiche zu Ihrer Zulassungsliste hinzuzufügen.
+Beim Einrichten von E-Mail-Marketing-Zielen mit SFTP-Speicher empfiehlt Adobe, dass Sie bestimmte IP-Bereiche zu Ihrer Zulassungsliste hinzufügen.
 
 Siehe Abschnitt [IP-Adressen-Zulassungsliste für SFTP-Ziele](../cloud-storage/ip-address-allow-list.md) , wenn Sie Ihrer Zulassungsliste Adobe-IPs hinzufügen müssen.
 

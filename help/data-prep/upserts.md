@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Datenvorbereitung; Datenvorbereitung; Streaming; Upset; Streaming-Upset
-title: Teilweise Zeilenaktualisierungen mithilfe der Datenvorbereitung an das Echtzeit-Kundenprofil senden
+keywords: Experience Platform;home;popular topics;data prep;Data Prep;streaming;upsert;Streaming upsert
+title: Teilweise Zeilen-Aktualisierungen mithilfe der Datenvorbereitung an das Echtzeit-Kundenprofil senden
 description: Erfahren Sie, wie Sie mithilfe der Datenvorbereitung partielle Zeilenaktualisierungen an das Echtzeit-Kundenprofil senden.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 15aa27e19f287a39242860b91eedae87aace3d27
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '1175'
+source-wordcount: '1176'
 ht-degree: 12%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 12%
 
 Das Streamen von Upserts in [!DNL Data Prep] ermöglicht es Ihnen, partielle Zeilenaktualisierungen an [!DNL Real-Time Customer Profile]-Daten zu senden und gleichzeitig neue Identitätsverknüpfungen mit einer einzigen API-Anfrage zu erstellen und herzustellen.
 
-Durch Streaming-Uploads können Sie das Format Ihrer Daten beibehalten und diese Daten in [!DNL Real-Time Customer Profile] PATCH-Anfragen während der Aufnahme. Basierend auf den von Ihnen bereitgestellten Eingaben, [!DNL Data Prep] ermöglicht es Ihnen, eine einzige API-Payload zu senden und die Daten in beide zu übersetzen [!DNL Real-Time Customer Profile] PATCH und [!DNL Identity Service] ERSTELLEN SIE -Anfragen.
+Durch Streaming-Uploads können Sie das Format Ihrer Daten beibehalten und diese Daten in [!DNL Real-Time Customer Profile] PATCH-Anfragen während der Aufnahme. Basierend auf den von Ihnen bereitgestellten Eingaben [!DNL Data Prep] ermöglicht Ihnen das Senden einer einzelnen API-Payload und das Übersetzen der Daten in beide [!DNL Real-Time Customer Profile] PATCH und [!DNL Identity Service] ERSTELLEN SIE -Anfragen.
 
 Dieses Dokument enthält Informationen zum Streamen von Uploads in [!DNL Data Prep].
 
@@ -37,11 +37,11 @@ Diese Übersicht setzt ein Verständnis der folgenden Komponenten von Adobe Expe
 
 Streaming-Aktualisierungen in [!DNL Data Prep] funktioniert wie folgt:
 
-* Sie müssen zunächst einen Datensatz für [!DNL Profile] Verbrauch. Siehe Handbuch unter [Aktivieren eines Datensatzes für [!DNL Profile]](../catalog/datasets/enable-for-profile.md) für weitere Informationen.
+* Sie müssen zunächst einen Datensatz für [!DNL Profile] Verbrauch. Siehe Handbuch unter [Datensatz für [!DNL Profile]](../catalog/datasets/enable-for-profile.md) für weitere Informationen.
 * Wenn neue Identitäten verknüpft werden müssen, müssen Sie auch einen zusätzlichen Datensatz erstellen **mit demselben Schema** als [!DNL Profile] Datensatz.
 * Nachdem Ihre Datensätze vorbereitet wurden, müssen Sie einen Datenfluss erstellen, um Ihre eingehende Anfrage der [!DNL Profile] Datensatz;
 * Als Nächstes müssen Sie die eingehende Anfrage aktualisieren, um die erforderlichen Kopfzeilen einzuschließen. Diese Header definieren:
-   * Der Datenvorgang, der mit [!DNL Profile]: `create`, `merge`und `delete`.
+   * Der Datenvorgang, der mit [!DNL Profile]: `create`, `merge`, und `delete`.
    * Der optionale Identitätsvorgang, der mit [!DNL Identity Service]: `create`.
 
 ### Identitätsdatensatz konfigurieren
@@ -54,7 +54,7 @@ Wenn neue Identitäten verknüpft werden müssen, müssen Sie einen zusätzliche
 
 #### Erforderliche Felder in den Schemas, die mit dem Identitätsdatensatz verknüpft sind {#identity-dataset-required-fileds}
 
-Wenn Ihr Schema erforderliche Felder enthält, muss die Validierung des Datensatzes unterdrückt werden, damit [!DNL Identity Service] um nur die Identitäten zu empfangen. Sie können die Validierung unterdrücken, indem Sie die `disabled` -Wert `acp_validationContext` Parameter. Siehe Beispiel unten:
+Wenn Ihr Schema erforderliche Felder enthält, muss die Validierung des Datensatzes unterdrückt werden, damit [!DNL Identity Service] um nur die Identitäten zu empfangen. Sie können die Validierung unterdrücken, indem Sie die `disabled` -Wert `acp_validationContext` -Parameter. Siehe Beispiel unten:
 
 ```shell
 curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257bef7a75461948ebcaaa' \
@@ -106,7 +106,7 @@ Im Folgenden finden Sie ein Beispiel einer eingehenden Payload-Struktur, die neu
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `flowId` | Eine eindeutige ID zur Identifizierung eines Datenflusses. Diese Datenfluss-ID sollte mit der Quellverbindung übereinstimmen, die mit [!DNL Amazon Kinesis], [!DNL Azure Event Hubs]oder [!DNL HTTP API]. Dieser Datenfluss sollte auch eine [!DNL Profile]-aktivierter Datensatz als Zieldatensatz. **Hinweis**: Die ID der [!DNL Profile]-aktivierter Zieldatensatz wird auch als `datasetId` Parameter. |
+| `flowId` | Eine eindeutige ID zur Identifizierung eines Datenflusses. Diese Datenfluss-ID sollte mit der Quellverbindung übereinstimmen, die mit [!DNL Amazon Kinesis], [!DNL Azure Event Hubs]oder [!DNL HTTP API]. Dieser Datenfluss sollte auch eine [!DNL Profile]-aktivierter Datensatz als Zieldatensatz. **Hinweis**: Die ID der [!DNL Profile]-aktivierter Zieldatensatz wird auch als `datasetId` -Parameter. |
 | `imsOrgId` | Die Kennung, die Ihrer Organisation entspricht. |
 | `datasetId` | Die ID der [!DNL Profile]-aktivierter Zieldatensatz Ihres Datenflusses. **Hinweis**: Diese Kennung entspricht der des [!DNL Profile]-aktivierte Ziel-Datensatz-ID in Ihrem Datenfluss. |
 | `operations` | Dieser Parameter beschreibt die Aktionen, die [!DNL Data Prep] wird basierend auf der eingehenden Anfrage ausgeführt. |
@@ -122,13 +122,13 @@ Die folgenden Vorgänge werden von [!DNL Real-Time Customer Profile]:
 | --- | --- | 
 | `create` | Der Standardvorgang. Dadurch wird eine XDM-Entitätserstellungsmethode für [!DNL Real-Time Customer Profile]. |
 | `merge` | Dadurch wird eine Aktualisierungsmethode für XDM-Entitäten für [!DNL Real-Time Customer Profile]. |
-| `delete` | Dadurch wird eine XDM-Entitätslöschmethode für [!DNL Real-Time Customer Profile] und entfernt die Daten dauerhaft aus der [!DNL Profile Store]. |
+| `delete` | Dadurch wird eine Löschmethode zum Löschen von XDM-Entitäten für [!DNL Real-Time Customer Profile] und entfernt die Daten dauerhaft aus der [!DNL Profile Store]. |
 
 Die folgenden Vorgänge werden von [!DNL Identity Service]:
 
 | Funktionsweise | Beschreibungen |
 | --- | --- |
-| `create` | Der einzige zulässige Vorgang für diesen Parameter. Wenn `create` wird als Wert für `operations.identity`, dann [!DNL Data Prep] generiert eine XDM-Entitätserstellungsanforderung für [!DNL Identity Service]. Wenn die Identität bereits vorhanden ist, wird die Identität ignoriert. **Hinweis:** Wenn `operations.identity` auf `create`, dann `identityDatasetId` muss ebenfalls angegeben werden. Die XDM-Entität erstellt eine Nachricht, die intern von [!DNL Data Prep] wird für diese Datensatz-ID generiert. |
+| `create` | Der einzige zulässige Vorgang für diesen Parameter. Wenn `create` wird als Wert für `operations.identity`, dann [!DNL Data Prep] generiert eine XDM-Entitätserstellungsanforderung für [!DNL Identity Service]. Wenn die Identität bereits vorhanden ist, wird die Identität ignoriert. **Hinweis:** Wenn `operations.identity` auf `create`, dann die `identityDatasetId` muss ebenfalls angegeben werden. Die XDM-Entität erstellt eine Nachricht, die intern von [!DNL Data Prep] wird für diese Datensatz-ID generiert. |
 
 ### Nutzlast ohne Identitätskonfiguration
 
@@ -257,7 +257,7 @@ Im Folgenden finden Sie eine Liste bekannter Einschränkungen, die beim Streamin
 
 * Die Streaming-Upsermethode sollte nur verwendet werden, wenn Teilzeilenaktualisierungen an [!DNL Real-Time Customer Profile]. Teilzeilenaktualisierungen sind **not** von Data Lake verbraucht.
 * Die Streaming-Upsert-Methode unterstützt nicht das Aktualisieren, Ersetzen und Entfernen von Identitäten. Neue Identitäten werden erstellt, wenn sie nicht vorhanden sind. Daher `identity` -Vorgang muss immer auf &quot;Erstellen&quot;eingestellt sein. Wenn bereits eine Identität vorhanden ist, ist der Vorgang ein no-op-Vorgang.
-* Die Streaming-Upsermethode unterstützt derzeit nicht [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=de) und [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
+* Die Streaming-Upsermethode unterstützt derzeit nicht [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=de) und [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
 ## Nächste Schritte
 

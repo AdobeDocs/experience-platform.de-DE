@@ -2,10 +2,10 @@
 title: Vom Kunden verwaltete Schlüssel in Adobe Experience Platform
 description: Erfahren Sie, wie Sie eigene Verschlüsselungsschlüssel für in Adobe Experience Platform gespeicherte Daten einrichten.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 2564c0cc817362536f1a8291e1c733d9efbf5a78
 workflow-type: tm+mt
-source-wordcount: '1773'
-ht-degree: 78%
+source-wordcount: '1855'
+ht-degree: 75%
 
 ---
 
@@ -20,6 +20,10 @@ In Adobe Experience Platform gespeicherte Daten werden im Ruhezustand mithilfe v
 In diesem Dokument wird der Prozess zum Aktivieren der Funktion für kundenverwaltete Schlüssel (CMK) in Platform beschrieben.
 
 ## Voraussetzungen
+
+Für den Zugriff auf die CMK-APIs müssen Sie die [!UICONTROL Verwalten des kundenverwalteten Schlüssels] Berechtigung und Zugriff auf eine Produktions-Sandbox auf eine neue oder vorhandene Rolle, die mit der API-Berechtigung verknüpft ist. Wenn Sie diese API-Berechtigung nur für den CMK-Zugriff bereitstellen möchten, wird empfohlen, eine neue CMK-Administratorrolle mit den oben genannten erforderlichen Berechtigungen zu erstellen.
+
+Weiterführende Informationen zum Zuweisen von Rollen und Berechtigungen in Experience Platform finden Sie im Abschnitt [Berechtigungsdokumentation konfigurieren](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=de).
 
 Um CMK zu aktivieren, muss die [!DNL Azure] Key Vault muss mit den folgenden Einstellungen konfiguriert werden:
 

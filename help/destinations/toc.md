@@ -4,10 +4,10 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: 0eb17d4d7ad9db3737a14f383bdafe40d59eb12c
+source-git-commit: 333f98a74e69f50ae356231733924d1c6793ddf1
 workflow-type: tm+mt
-source-wordcount: '1167'
-ht-degree: 95%
+source-wordcount: '1170'
+ht-degree: 99%
 
 ---
 
@@ -35,11 +35,11 @@ ht-degree: 95%
 * UI-Handbücher {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
    * [Erstellen einer neuen Zielverbindung](./ui/connect-destination.md)
-   * Aktivieren von Zielgruppendaten für Ziele {#activate}
+   * Aktivieren von Zielgruppendaten für Ziele{#activate}
       * [Aktivierungsübersicht](./ui/activation-overview.md)
       * [Aktivieren von Zielgruppen für Streaming-Zielgruppenexport-Ziele](./ui/activate-segment-streaming-destinations.md)
-      * [Aktivieren von Zielgruppen für Streaming-Profil-Export-Ziele](./ui/activate-streaming-profile-destinations.md)
-      * [Aktivieren von Zielgruppen für Batch-Profil-Export-Ziele](./ui/activate-batch-profile-destinations.md)
+      * [Aktivieren von Zielgruppen für Exportziele von Streaming-Profilen](./ui/activate-streaming-profile-destinations.md)
+      * [Aktivieren von Zielgruppen für Batch-Profil-Exportziele](./ui/activate-batch-profile-destinations.md)
       * [Aktivieren von Zielgruppen für Edge-Personalisierungsziele](./ui/activate-edge-personalization-destinations.md)
       * [Aktivieren von potenziellen Zielgruppen für Ziele](./ui/activate-prospect-audiences.md)
       * [(Beta) Exportieren von Dateien nach Bedarf in Batch-Ziele mithilfe der Experience Platform-Benutzeroberfläche](./ui/export-file-now.md)
@@ -55,13 +55,13 @@ ht-degree: 95%
    * [Abonnieren von kontextbezogenen Zielwarnhinweisen](ui/alerts.md)
 * Zielkatalog {#catalog}
    * [Zielkatalog – Übersicht](./catalog/overview.md)
-   * Adobe-Ziele {#adobe}
+   * Adobe-Ziele{#adobe}
       * [Adobe-Ziele – Übersicht](./catalog/adobe/overview.md)
       * [(Beta) Experience Cloud-Zielgruppen](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Marketo Engage-Verbindung](./catalog/adobe/marketo-engage.md)
       * [Marketo Measure Ultimate-Verbindung](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Experience Platform-Zielgruppenfreigabe](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de)
-   * Werbeziele {#advertising}
+      * [Zielgruppenfreigabe in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de)
+   * Werbeziele{#advertising}
       * [Werbeziele – Übersicht](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud-Verbindung](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Adobe Advertising Cloud-Erweiterung](./catalog/advertising/adobe-advertising-cloud.md)
@@ -82,7 +82,8 @@ ht-degree: 95%
       * [Google Display &amp; Video 360-Verbindung](./catalog/advertising/google-dv360.md)
       * [Google gtag-Erweiterung](./catalog/advertising/gtag-advertising.md)
       * [LinkedIn Insight Tag-Erweiterung](./catalog/advertising/linkedin.md)
-      * [LiveRamp - Onboarding-Verbindung](./catalog/advertising/liveramp-onboarding.md)
+      * [LiveRamp – Onboarding-Verbindung](./catalog/advertising/liveramp-onboarding.md)
+      * [LiveRamp - Verteilungsverbindung](./catalog/advertising/liveramp-distribution.md)
       * [Microsoft Bing-Verbindung](./catalog/advertising/bing.md)
       * [Pinterest Conversion Tracking-Erweiterung](./catalog/advertising/pinterest-extension.md)
       * [Pinterest Customer List-Verbindung](./catalog/advertising/pinterest.md)
@@ -171,7 +172,7 @@ ht-degree: 95%
       * [Marketo Web-Personalisierungserweiterung](./catalog/personalization/marketo-web-personalization.md)
       * [Pega Customer Decision Hub-Verbindung](./catalog/personalization/pega.md)
       * [Pega-Profilverbindung](./catalog/personalization/pega-profile.md)
-   * Social-Media-Ziele {#social}
+   * Social-Media-Ziele{#social}
       * [Social-Media-Ziele – Übersicht](./catalog/social/overview.md)
       * [Adobe Livefyre-Erweiterung](./catalog/social/adobe-livefyre.md)
       * [Facebook-Verbindung](./catalog/social/facebook.md)

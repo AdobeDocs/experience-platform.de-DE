@@ -1,10 +1,10 @@
 ---
 description: Erfahren Sie, wie Sie über den Endpunkt „/destination-servers“ Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren, die mit Adobe Experience Platform Destination SDK erstellt wurden.
 title: Konfiguration der Dateiformatierung
-source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
+source-git-commit: 511e02f92b7016a7f07dd3808b39594da9438d15
 workflow-type: tm+mt
-source-wordcount: '999'
-ht-degree: 95%
+source-wordcount: '1004'
+ht-degree: 96%
 
 ---
 
@@ -178,7 +178,7 @@ Nachstehend finden Sie eine vollständige Referenz aller verfügbaren Dateiforma
 | `templatingStrategy` | Erforderlich | Für jede Dateiformatierungsoption, die Sie konfigurieren, müssen Sie den Parameter `templatingStrategy` hinzufügen, der zwei Werte haben kann: <br><ul><li>`NONE`: Verwenden Sie diesen Wert, wenn Sie nicht zulassen möchten, dass Benutzerinnen und Benutzer zwischen verschiedenen Werten für eine Konfiguration auswählen können. Siehe [diese Konfiguration](#file-configuration-templating-none) für ein Beispiel, bei dem die Dateiformatierungsoptionen fest sind.</li><li>`PEBBLE_V1`: Verwenden Sie diesen Wert, wenn Sie Benutzerinnen und Benutzern die Auswahl zwischen verschiedenen Werten für eine Konfiguration ermöglichen möchten. In diesem Fall müssen Sie auch ein entsprechendes Kundendatenfeld in der Konfiguration des Endpunkts `/destination` festlegen, damit die verschiedenen Optionen für die Benutzerinnen und Benutzer in der Benutzeroberfläche angezeigt werden. In [dieser Konfiguration](#file-configuration-templating-pebble) sehen Sie ein Beispiel, wo Benutzerinnen und Benutzer für die Optionen zur Dateiformatierung zwischen verschiedenen Werten wählen können.</li></ul> | – | – | – |
 | `compression.value` | Optional | Komprimierungs-Codec zum Speichern von Daten in einer Datei. Unterstützte Werte: `none`, `bzip2`, `gzip`, `lz4` und `snappy`. | `none` | – | – |
 | `fileType.value` | Optional | Spezifiziert das Ausgabedateiformat. Unterstützte Werte: `csv`, `parquet` und `json`. | `csv` | – | – |
-| `csvOptions.quote.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt ein einzelnes Zeichen fest, das zum Maskieren von angegebenen Werten verwendet wird, wobei das Trennzeichen Teil des Werts sein kann. | `null` | – | – |
+| `csvOptions.quote.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt ein einzelnes Zeichen fest, das zum Maskieren von angegebenen Werten verwendet wird, wobei das Trennzeichen Teil des Werts sein kann. | `null` | Beispiel für einen Standardwert: `quote.value: "u0000"` —> `male,NULJohn,LastNameNUL` | Benutzerdefiniertes Beispiel: `quote.value: "\""` —> `male,"John,LastName"` |
 | `csvOptions.quoteAll.value` | Optional | *Nur für`"fileType.value": "csv"`*. Gibt an, ob alle Werte immer in Anführungszeichen gesetzt werden sollen. Mit der Standardeinstellung werden nur Werte mit Escape-Zeichen versehen, die ein Anführungszeichen haben. | `false` | `quoteAll`:`false` --> `male,John,"TestLastName"` | `quoteAll`:`true` -->`"male","John","TestLastName"` |
 | `csvOptions.delimiter.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt für jedes Feld und jeden Wert ein Trennzeichen fest. Dieses Trennzeichen kann aus einem oder mehreren Zeichen bestehen. | `,` | `delimiter`:`,` --> `comma-separated values"` | `delimiter`:`\t` --> `tab-separated values` |
 | `csvOptions.escape.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt ein einzelnes Zeichen fest, das zum Maskieren von Anführungszeichen verwendet wird, die innerhalb eines bereits mit Anführungszeichen versehenen Werts liegen. | `\` | `"escape"`:`"\\"` --> `male,John,"Test,\"LastName5"` | `"escape"`:`"'"` --> `male,John,"Test,'''"LastName5"` |
@@ -191,7 +191,7 @@ Nachstehend finden Sie eine vollständige Referenz aller verfügbaren Dateiforma
 | `csvOptions.timestampFormat.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt die Zeichenfolge für ein Zeitstempelformat fest. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` | – | – |
 | `csvOptions.charToEscapeQuoteEscaping.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt ein einzelnes Zeichen fest, das zum Maskieren des Escape-Zeichens für das Anführungszeichen verwendet wird. | `\` wenn Escape- und Anführungszeichen unterschiedlich sind. `\0` wenn Escape- und Anführungszeichen identisch sind. | – | – |
 | `csvOptions.emptyValue.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt die Zeichenfolgendarstellung eines leeren Werts fest. | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
-| `maxFileRowCount` | Optional | Gibt die maximale Anzahl von Zeilen pro exportierter Datei zwischen 1.000.000 und 10.000.000 Zeilen an. | 5.000.000 |
+| `maxFileRowCount` | Optional | Gibt die maximale Anzahl von Zeilen pro exportierter Datei an, zwischen 1.000.000 und 10.000.000 Zeilen. | 5.000.000 |
 
 {style="table-layout:auto"}
 

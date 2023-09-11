@@ -2,10 +2,10 @@
 title: Aktivieren von potenziellen Zielgruppen für Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie potenzielle Zielgruppen für Ziele aktivieren
-source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
+source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 23%
+source-wordcount: '620'
+ht-degree: 28%
 
 ---
 
@@ -20,7 +20,7 @@ In diesem Artikel wird der Workflow erläutert, der zum Exportieren erforderlich
 
 ## Unterstützte Ziele {#supported-destinations}
 
-Navigieren Sie zu **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Katalog]** aus. Verwenden Sie die **[!UICONTROL Datentypen]** filtern und auswählen **[!UICONTROL Perspektiven]** um die Ziele anzuzeigen, die die Aktivierung von potenziellen Zielgruppen unterstützen. Derzeit ist der Export von Interessensgruppen nur für die [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog) Ziel.
+Navigieren Sie zu **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Katalog]** aus. Verwenden Sie die **[!UICONTROL Datentypen]** filtern und auswählen **[!UICONTROL Perspektiven]** um die Ziele anzuzeigen, die die Aktivierung von potenziellen Zielgruppen unterstützen. Derzeit ist der Export von potenziellen Zielgruppen nur für Cloud-Speicher-Ziele verfügbar.
 
 ![Ziele, die Datensatzexporte unterstützen](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
@@ -86,5 +86,5 @@ Note that we will need to add links to other destination types here as more dest
 Erkunden Sie weitere Anwendungsfälle, die durch die Unterstützung von Partnerdaten in Real-Time CDP ermöglicht werden:
 
 * [Ergänzen Sie Erstanbieterprofile mit Attributen von vertrauenswürdigen Datenpartnern, um Ihre Datengrundlage zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* Verwenden Sie die Datenunterstützung von Drittanbietern in Real-Time CDP, um [Erweitern Sie Ihre Profilbasis mit potenziellen Profilen von Datenpartnern und interagieren Sie mit ihnen, um neue Kunden zu gewinnen oder zu erreichen.](/help/rtcdp/partner-data/prospecting.md).
+* Verwenden Sie die Unterstützung von Drittanbieterdaten in Real-Time CDP, damit Sie [Ihre Profilbasis mit potenziellen Profilen von Datenpartnern erweitern und mit ihnen interagieren können, um neue Kundinnen und Kunden zu gewinnen oder zu erreichen](/help/rtcdp/partner-data/prospecting.md).
 * [Nutzen Sie die von Partnern unterstützte Erkennung für die Personalisierung von On-site-Erlebnissen](/help/rtcdp/partner-data/onsite-personalization.md) während des Besuchs, ohne dass sich der Benutzer authentifiziert oder über einen früheren Verlauf mit Ihrer Marke verfügt.

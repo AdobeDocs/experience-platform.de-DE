@@ -5,10 +5,10 @@ breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Tags
 solution: Data Collection
-source-git-commit: 1ca080f6dd62c49c1f1672ec36ce446af591b6b6
+source-git-commit: c2baf3d14e57df87303aeadeed90203dcd233242
 workflow-type: tm+mt
-source-wordcount: '1027'
-ht-degree: 98%
+source-wordcount: '1034'
+ht-degree: 99%
 
 ---
 
@@ -98,7 +98,7 @@ ht-degree: 98%
          * [Übersicht](./extensions/client/platform-demo/overview.md)
       * Adobe Experience Platform Web SDK {#web-sdk}
          * [Übersicht](./extensions/client/web-sdk/overview.md)
-         * [Web SDK-Tag-Erweiterung konfigurieren](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
+         * [Konfigurieren der Web SDK-Tag-Erweiterung](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
          * [Ereignistypen](./extensions/client/web-sdk/event-types.md)
          * [Aktionstypen](./extensions/client/web-sdk/action-types.md)
          * [Datenelementtypen](./extensions/client/web-sdk/data-element-types.md)
@@ -246,6 +246,7 @@ ht-degree: 98%
          * [Übersicht](./extensions/server/splunk/overview.md)
       * [!DNL Twitter] {#twitter}
          * [Übersicht](./extensions/server/twitter/overview.md)
+      * [[!DNL Tiktok] Web Events API](https://exchange.adobe.com/apps/ec/109834)
       * [!DNL Zendesk] Ereignis-API {#zendesk}
          * [Übersicht](./extensions/server/zendesk/overview.md)
 * Entwickeln von Erweiterungen {#extension-dev}

@@ -1,12 +1,12 @@
 ---
 keywords: Luftschiff-Tags; Luftschiff-Ziel
 title: Airship Tags-Verbindung
-description: Nahtlose Weitergabe von Zielgruppendaten von Adobe an Airship als Zielgruppen-Tags für Targeting innerhalb von Airship.
+description: Nahtlose Weitergabe von Adobe-Zielgruppendaten an Airship als Zielgruppen-Tags für Targeting innerhalb von Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '993'
-ht-degree: 31%
+source-wordcount: '984'
+ht-degree: 39%
 
 ---
 
@@ -23,7 +23,7 @@ Weitere Informationen zu [!DNL Airship], siehe [Dokumente für die Luftfahrt](ht
 
 >[!TIP]
 >
->Diese Ziel-Connector- und Dokumentationsseite wird von der [!DNL Airship] Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an [support.airship.com](https://support.airship.com/).
+>Dieser Ziel-Connector und die Dokumentationsseite werden vom [!DNL Airship]-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an [support.airship.com](https://support.airship.com/).
 
 ## Voraussetzungen
 
@@ -38,13 +38,12 @@ Bevor Sie Ihre Adobe Experience Platform-Zielgruppen an senden können [!DNL Air
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
-Dieses Ziel unterstützt die Aktivierung aller durch die Experience Platform generierten Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md).
+In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel exportieren können.
 
-*Zusätzlich*, unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
-
-| Externer Zielgruppentyp | Beschreibung |
----------|----------|
-| Benutzerdefinierte Uploads | Zielgruppen [importiert](../../../segmentation/ui/overview.md#import-audience) in die Experience Platform aus CSV-Dateien. |
+| Audience Origin | Unterstützt | Beschreibung |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
+| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
 
 {style="table-layout:auto"}
 
@@ -55,19 +54,19 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
 | Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den Kennungen, die im Ziel für Airship Tags verwendet werden. |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform basierend auf der Zielgruppenbewertung aktualisiert wird, sendet der Connector das Update an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Tag-Gruppen
 
-Das Konzept der Zielgruppen in Adobe Experience Platform ähnelt dem von [Tags](https://docs.airship.com/guides/audience/tags/) im Luftverkehr mit geringfügigen Abweichungen bei der Durchführung. Diese Integration ordnet den Status eines Benutzers zu [Mitgliedschaft in einem Experience Platform-Segment](../../../xdm/field-groups/profile/segmentation.md) das Vorhandensein oder Nichtvorhandensein einer [!DNL Airship] -Tag. Beispiel: In einer Platform-Audience, in der die Variable `xdm:status` Änderungen an `realized`, wird das Tag zum [!DNL Airship] -Kanal oder benannter Benutzer, dem dieses Profil zugeordnet ist. Wenn die Variable `xdm:status` Änderungen an `exited`, wird das Tag entfernt.
+Das Konzept der Zielgruppen in Adobe Experience Platform ähnelt dem [Tags](https://docs.airship.com/guides/audience/tags/) im Luftverkehr mit geringfügigen Abweichungen bei der Durchführung. Diese Integration ordnet den Status eines Benutzers zu [Mitgliedschaft in einem Experience Platform-Segment](../../../xdm/field-groups/profile/segmentation.md) das Vorhandensein oder Nichtvorhandensein einer [!DNL Airship] -Tag. Beispiel: In einer Platform-Audience, in der die Variable `xdm:status` Änderungen an `realized`, wird das Tag zum [!DNL Airship] -Kanal oder benannter Benutzer, dem dieses Profil zugeordnet ist. Wenn die Variable `xdm:status` Änderungen an `exited`, wird das Tag entfernt.
 
 Um diese Integration zu aktivieren, erstellen Sie eine *Tag-Gruppe* in [!DNL Airship] benannt `adobe-segments`.
 
 >[!IMPORTANT]
 >
->Beim Erstellen einer neuen Tag-Gruppe **Nicht überprüfen** das Optionsfeld &quot;[!DNL Allow these tags to be set only from your server]&quot;. Andernfalls schlägt die Integration von Adobe-Tags fehl.
+>Beim Erstellen einer neuen Tag-Gruppe **Nicht überprüfen** das Optionsfeld &quot;[!DNL Allow these tags to be set only from your server]&quot;. Andernfalls schlägt die Adobe-Tags-Integration fehl.
 
 Siehe [Tag-Gruppen verwalten](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups) für Anweisungen zum Erstellen der Tag-Gruppe.
 
@@ -77,7 +76,7 @@ Navigieren Sie zu **[!UICONTROL Einstellungen]** &quot; **[!UICONTROL APIs und I
 
 Klicks **[!UICONTROL Token erstellen]**.
 
-Geben Sie einen benutzerfreundlichen Namen für Ihr Token ein, z. B. &quot;Ziel für Adobe-Tags&quot;und wählen Sie &quot;Zugriff auf alle&quot;für die Rolle.
+Geben Sie einen benutzerfreundlichen Namen für Ihr Token ein, z. B. &quot;Adobe-Tags-Ziel&quot;und wählen Sie &quot;Zugriff auf alle&quot;für die Rolle.
 
 Klicks **[!UICONTROL Token erstellen]** und speichern Sie die Angaben als vertraulich.
 
@@ -129,7 +128,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 > 
 >Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Siehe [Aktivieren von Zielgruppendaten für Streaming-Zielgruppenexport-Ziele](../../ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
+Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](../../ui/activate-segment-streaming-destinations.md).
 
 ## Zuordnungsüberlegungen {#mapping-considerations}
 

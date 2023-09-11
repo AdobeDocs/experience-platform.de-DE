@@ -1,39 +1,44 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; API; XDM; XDM; XDM-System; Experience-Datenmodell; Datenmodell; ui; Workspace; Klasse; Klassen;
+keywords: Experience Platform; home; beliebte Themen; API; XDM; XDM; XDM-System; Erlebnisdatenmodell; Datenmodell; ui; workspace; class; Klassen;
 solution: Experience Platform
 title: Erstellen und Bearbeiten von Klassen in der Benutzeroberfläche
-description: Erfahren Sie, wie Sie Klassen in der Benutzeroberfläche von Experience Platform erstellen und bearbeiten.
+description: Erfahren Sie, wie Sie Klassen in der Experience Platform-Benutzeroberfläche erstellen und bearbeiten.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 3a9b97b25980d88e0fff3d71e43407b641e6454d
+source-git-commit: 51ef116ad125b0d699bf4808e3d26d3b00b743e2
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '971'
 ht-degree: 5%
 
 ---
 
-# Erstellen und Bearbeiten von Klassen in der Benutzeroberfläche
+# Erstellen und Bearbeiten von Klassen in der Benutzeroberfläche {#ui-create-and-edit}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_class_filter"
+>title="Standardfilter oder benutzerdefinierte Klassenfilter"
+>abstract="Die Liste der verfügbaren Klassen wird je nach ihrer Erstellung vorab gefiltert. Wählen Sie das Optionsfeld aus, um zwischen den Optionen Standard und Benutzerdefiniert zu wählen. Die Standardoption zeigt von Adobe erstellte Entitäten an und umfasst sowohl XDM Individual Profile- als auch XDM Experience Event-Klassen. Die Option Benutzerdefiniert zeigt Entitäten an, die innerhalb Ihres Unternehmens erstellt wurden. Weitere Informationen zum Erstellen und Bearbeiten von Klassen finden Sie in der Dokumentation ."
 
 In Adobe Experience Platform definiert die Klasse eines Schemas die Verhaltensaspekte der Daten, die das Schema enthalten wird (Datensatz oder Zeitreihen). Darüber hinaus beschreiben Klassen die kleinste Anzahl gemeinsamer Eigenschaften, die alle Schemas, die auf dieser Klasse basieren, beinhalten müssen, und bieten eine Möglichkeit zum Zusammenführen mehrerer kompatibler Datensätze.
 
 Adobe bietet mehrere standardmäßige (&quot;Core&quot;) Experience-Datenmodell (XDM)-Klassen, darunter [!DNL XDM Individual Profile] und [!DNL XDM ExperienceEvent]. Zusätzlich zu diesen Core-Klassen können Sie auch eigene benutzerdefinierte Klassen erstellen, um spezifischere Anwendungsfälle für Ihr Unternehmen zu beschreiben.
 
-In diesem Dokument erhalten Sie einen Überblick darüber, wie Sie benutzerdefinierte Klassen in der Experience Platform-Benutzeroberfläche erstellen, bearbeiten und verwalten.
+Dieses Dokument bietet einen Überblick darüber, wie benutzerdefinierte Klassen in der Experience Platform-Benutzeroberfläche erstellt, bearbeitet und verwaltet werden.
 
 ## Voraussetzungen
 
-Dieses Handbuch setzt ein Verständnis des XDM-Systems voraus. Siehe Abschnitt [XDM-Übersicht](../../home.md) für eine Einführung in die Rolle von XDM im Experience Platform-Ökosystem und die [Grundlagen der Schemakomposition](../../schema/composition.md) , um zu erfahren, wie Klassen zu XDM-Schemas beitragen.
+Dieses Handbuch setzt ein Verständnis des XDM-Systems voraus. Siehe Abschnitt [XDM-Übersicht](../../home.md) für eine Einführung in die Rolle von XDM im Experience Platform-Ökosystem und [Grundlagen der Schemakomposition](../../schema/composition.md) , um zu erfahren, wie Klassen zu XDM-Schemas beitragen.
 
 Für dieses Handbuch ist zwar nicht erforderlich, es wird jedoch empfohlen, auch das Tutorial zu [Erstellen eines Schemas in der Benutzeroberfläche](../../tutorials/create-schema-ui.md) sich mit den verschiedenen Fähigkeiten der [!DNL Schema Editor].
 
 ## Erstellen einer neuen Klasse {#create}
 
-Im **[!UICONTROL Schemas]** Arbeitsbereich, wählen Sie **[!UICONTROL Schema erstellen]**, wählen Sie **[!UICONTROL Durchsuchen]** aus dem Dropdown-Menü aus.
+Im **[!UICONTROL Schemas]** Arbeitsbereich auswählen **[!UICONTROL Schema erstellen]**, wählen Sie **[!UICONTROL Durchsuchen]** aus dem Dropdown-Menü aus.
 
 ![](../../images/ui/resources/classes/browse-classes.png)
 
-Es wird ein Dialogfeld angezeigt, in dem Sie aus einer Liste verfügbarer Klassen auswählen können. Wählen Sie oben im Dialogfeld die Option **[!UICONTROL Neue Klasse erstellen]**. Anschließend können Sie Ihrer neuen Klasse einen Anzeigenamen (einen kurzen, beschreibenden, eindeutigen und benutzerfreundlichen Namen für die Klasse), eine Beschreibung und ein Verhalten für die Daten geben, die das Schema definieren wird (**[!UICONTROL Datensatz]** oder **[!UICONTROL Zeitreihen]**).
+Es wird ein Dialogfeld angezeigt, in dem Sie aus einer Liste verfügbarer Klassen auswählen können. Wählen Sie oben im Dialogfeld **[!UICONTROL Neue Klasse erstellen]**. Anschließend können Sie Ihrer neuen Klasse einen Anzeigenamen (einen kurzen, beschreibenden, eindeutigen und benutzerfreundlichen Namen für die Klasse), eine Beschreibung und ein Verhalten für die Daten geben, die das Schema definieren wird (**[!UICONTROL Datensatz]** oder **[!UICONTROL Zeitreihen]**).
 
-Wenn Sie fertig sind, wählen Sie **[!UICONTROL Klasse zuweisen]**.
+Wählen Sie zum Abschluss **[!UICONTROL Klasse zuweisen]**.
 
 ![](../../images/ui/resources/classes/class-details.png)
 
@@ -51,7 +56,7 @@ Sie können jetzt beginnen [Hinzufügen von Feldern zur Klasse](#add-fields), da
 
 >[!NOTE]
 >
->Nur benutzerdefinierte Klassen, die von Ihrem Unternehmen definiert wurden, können vollständig bearbeitet und angepasst werden. Für von Adobe definierte Hauptklassen können nur die Anzeigenamen für ihre Felder im Kontext einzelner Schemas bearbeitet werden. Siehe Abschnitt zu [Bearbeiten von Anzeigenamen für Schemafelder](./schemas.md#display-names) für Details.
+>Nur benutzerdefinierte Klassen, die von Ihrem Unternehmen definiert wurden, können vollständig bearbeitet und angepasst werden. Für von Adobe definierte Kernklassen können nur die Anzeigenamen für ihre Felder im Kontext einzelner Schemas bearbeitet werden. Siehe Abschnitt zu [Bearbeiten von Anzeigenamen für Schemafelder](./schemas.md#display-names) für Details.
 >
 >Sobald eine benutzerdefinierte Klasse gespeichert und bei der Datenerfassung verwendet wurde, können danach nur noch additive Änderungen daran vorgenommen werden. Siehe [Regeln der Schemaentwicklung](../../schema/composition.md#evolution) für weitere Informationen.
 
@@ -75,7 +80,7 @@ Sobald Sie über ein Schema verfügen, das eine benutzerdefinierte Klasse verwen
 
 >[!IMPORTANT]
 >
->Beachten Sie, dass alle Felder, die Sie zu einer Klasse hinzufügen, in allen Schemas verwendet werden, die diese Klasse verwenden. Daher sollten Sie sorgfältig überlegen, welche Felder in allen Anwendungsfällen des Schemas nützlich sein werden. Wenn Sie erwägen, ein Feld hinzuzufügen, das möglicherweise nur in einigen Schemas unter dieser Klasse verwendet wird, sollten Sie erwägen, es diesen Schemas hinzuzufügen, indem Sie [Erstellen einer Feldergruppe](./field-groups.md#create) anstatt.
+>Beachten Sie, dass alle Felder, die Sie zu einer Klasse hinzufügen, in allen Schemas verwendet werden, die diese Klasse verwenden. Daher sollten Sie sorgfältig überlegen, welche Felder in allen Anwendungsfällen des Schemas nützlich sein werden. Wenn Sie erwägen, ein Feld hinzuzufügen, das möglicherweise nur in einigen Schemas unter dieser Klasse verwendet wird, sollten Sie erwägen, es diesen Schemas durch [Erstellen einer Feldergruppe](./field-groups.md#create) anstatt.
 
 Ein **[!UICONTROL Unbenanntes Feld]** Platzhalter wird in der Arbeitsfläche angezeigt und die rechte Leiste aktualisiert, um Steuerelemente zum Konfigurieren der Feldeigenschaften anzuzeigen. under **[!UICONTROL Zuweisen zu]** auswählen **[!UICONTROL Klasse]**.
 
@@ -83,7 +88,7 @@ Ein **[!UICONTROL Unbenanntes Feld]** Platzhalter wird in der Arbeitsfläche ang
 
 ![](../../images/ui/resources/classes/assign-to-class.png)
 
-Siehe Handbuch unter [Definieren von Feldern in der Benutzeroberfläche](../fields/overview.md#define) für spezifische Schritte zum Konfigurieren und Hinzufügen des Felds zur Klasse. Fügen Sie der Klasse weiterhin beliebig viele Felder hinzu. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Speichern]** , um sowohl das Schema als auch die Klasse zu speichern.
+Siehe Handbuch unter [Definieren von Feldern in der Benutzeroberfläche](../fields/overview.md#define) für spezifische Schritte zum Konfigurieren und Hinzufügen des Felds zur Klasse. Fügen Sie der Klasse weiterhin beliebig viele Felder hinzu. Wählen Sie zum Abschluss **[!UICONTROL Speichern]** , um sowohl das Schema als auch die Klasse zu speichern.
 
 ![](../../images/ui/resources/classes/save.png)
 

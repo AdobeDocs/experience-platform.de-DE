@@ -3,10 +3,10 @@ keywords: Google ads;google ads;google adwords;Google AdWords;Google Adwords
 title: Google Ads-Verbindung
 description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der Unternehmen ermöglicht, Pay-per-Click-Werbung für textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Anzeigen zu nutzen.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
-workflow-type: ht
-source-wordcount: '995'
-ht-degree: 100%
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+workflow-type: tm+mt
+source-wordcount: '974'
+ht-degree: 97%
 
 ---
 
@@ -45,15 +45,12 @@ Beachten Sie folgende Details, die speziell für [!DNL Google Ads]-Ziele gelten:
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
-In diesem Abschnitt werden alle Zielgruppen beschrieben, die Sie an dieses Ziel exportieren können.
+In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel exportieren können.
 
-Dieses Ziel unterstützt die Aktivierung aller durch die Experience Platform generierten Zielgruppen über den [Segmentierungsdienst](../../../segmentation/home.md).
-
-*Zusätzlich* unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
-
-| Zielgruppentyp | Beschreibung |
----------|----------|
-| Benutzerdefinierte Uploads | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
+| Audience Origin | Unterstützt | Beschreibung |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
+| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
 
 {style="table-layout:auto"}
 

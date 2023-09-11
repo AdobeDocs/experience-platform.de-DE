@@ -5,10 +5,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform Web SDK
 breadcrumb-title: Web SDK-Handbuch
 user-guide-description: Interagieren Sie mit Experience Cloud-Services über das Edge-Netzwerk.
 feature: Web SDK
-source-git-commit: cc864e091f5e3f338f025238572158f555c3ede9
-workflow-type: ht
-source-wordcount: '169'
-ht-degree: 100%
+source-git-commit: 95d7b16efb638c37d8db3f56b0f3fbf6aa9d15df
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 96%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 100%
 * Datenerfassung {#data-collection}
    * [Automatisch erfasste Informationen](data-collection/automatic-information.md)
    * [Verfolgen von Links](data-collection/track-links.md)
-   * [Sammeln von Handels- und Produktdaten](data-collection/collect-commerce-data.md)
+   * [Erfassen von Commerce-, Produkt- und Bestelldaten](data-collection/collect-commerce-data.md)
    * Adobe Analytics {#adobe-analytics}
       * [Verwenden von Adobe Analytics mit dem Platform Web SDK](data-collection/adobe-analytics/analytics-overview.md)
       * [Zuordnen von Analytics-Variablen](data-collection/adobe-analytics/manually-mapping-variables.md)

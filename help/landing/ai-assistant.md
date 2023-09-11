@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie mit dem AI-Assistenten zu Experience Platform
 badge: Alpha
 hide: true
 hidefromtoc: true
-source-git-commit: e84f5aff6885535b58874a4fe02db2944e1d9b7f
+source-git-commit: 55d2518cdded50bcc8d6f7cc36f29581c5e64dab
 workflow-type: tm+mt
-source-wordcount: '2629'
+source-wordcount: '2369'
 ht-degree: 1%
 
 ---
@@ -154,112 +154,55 @@ Sie können den AI Assistant auch Fragen zur Datennutzung in den folgenden Domä
 
 * Attribute
 * Datensätze
-* Ziele
-* Schemas
+* Ziele (Fragen zu Konten und einige Fragen zum Datenfluss können derzeit nicht beantwortet werden.)
+* Schemas (Fragen zu Feldergruppen können derzeit nicht beantwortet werden.)
 * Segmente
-* Quellen
+* Quellen (Fragen zu Konten können derzeit nicht beantwortet werden.)
 
-Bei Nutzungsdatenabfragen spiegeln Antworten möglicherweise nicht den aktuellen Status der Benutzeroberfläche wider. Die Daten, die diese Fragen unterstützen, werden alle 12 bis 24 Stunden aktualisiert. Möglicherweise müssen Sie Ihre Fragen wie folgt formatieren: &quot;Wann war das Segment mit dem Titel {TITLE} created?&quot; statt &quot;Wann war die {TITLE} Segment erstellt?&quot;
+Bei Nutzungsdatenabfragen spiegeln Antworten möglicherweise nicht den aktuellen Status der Benutzeroberfläche wider. Die Daten, die diese Fragen unterstützen, werden alle 24 Stunden aktualisiert. Beispielsweise werden Änderungen, die Benutzer tagsüber in Real-Time CDP vornehmen, mit den Datenspeichern nachts synchronisiert und stehen dann morgens für Benutzerfragen zur Verfügung. Möglicherweise müssen Sie Ihre Fragen wie folgt formatieren: &quot;Wann war das Segment mit dem Titel {TITLE} created?&quot; statt &quot;Wann war die {TITLE} Segment erstellt?&quot;
 
 Sie müssen sich bei einer Sandbox anmelden, um sich über bestimmte Daten zu Objekten wie Schemas, Datensätzen, Attributen, Zielen und Segmenten zu informieren.
 
-+++Auswählen für eine Liste unterstützter Datennutzungsfragen
+### Unterstützte Datennutzungsfragen
+
++++Auswählen, um eine Liste der unterstützten Datennutzungsfragen anzuzeigen
 
 Im Folgenden finden Sie eine Liste der derzeit unterstützten Datennutzungsfragen, gruppiert nach Domain.
 
->[!BEGINTABS]
-
->[!TAB Segmente]
-
-* Gibt es doppelte Segmente?
-* Zeigen Sie mir alle Streaming-Segmente.
-* Ist Segment benannt {SEGMENT_ID} im Batch OR Stream ausgewertet?
-* Welche Segmente sind Duplikate?
+* Geben Sie die für dieses Segment verwendeten Attribute an?
 * Wie viele Segmente gibt es insgesamt?
-* Gibt es Segmente mit denselben Namen, aber unterschiedlichen IDs?
-* Wie werden Auswertungsmethoden (Batch, Edge, Streaming) segmentübergreifend verteilt?
 * Zeigen Sie mir eine Liste der Segmente an, die zuletzt im letzten Monat geändert wurden.
 * Welche Segmente wurden in der letzten Woche geändert?
-* Gibt es Segmente, die in den letzten sechs Monaten nicht geändert wurden?
-* Auflisten von Segmenten, die im letzten Jahr erstellt wurden.
-* Zeigen Sie mir Segmente an, die zuletzt vor heute geändert wurden.
-* Gibt es Muster oder Trends bei den Daten zur Segmenterstellung im vergangenen Jahr?
-* Können Sie Segmente identifizieren, die seit ihrer Erstellung nicht geändert wurden?
-* Gibt es Segmente, die seit ihrer Erstellung nicht geändert wurden?
-* Wie sieht der Trend bei der Segmenterstellung im Zeitverlauf aus?
-* Wie ist die Verteilung der Erstellungsdaten von Segmenten?
-* Wie werden die Daten für die Segmentänderung verteilt?
-* Welche Segmente haben die meisten Benutzerprofile?
-* Welche Segmente haben die geringsten Benutzerprofile?
-* Auflisten aller Batch-Segmente.
-* Listet alle Kantensegmente auf.
-* Welche Segmente werden aktiviert?
-* Welche Segmente werden an Facebook weitergeleitet?
-* Ist das Segment &quot;APAC-Kunden&quot;Batch oder Streaming?
-* Wie viele Profile hat das Segment Aktive Arbeit?
-* Haben einige meiner Segmente 0 Profile?
-* Welche Datensätze wirken sich auf das Treuesegment der Bronze aus?
-* Welche Segmentdefinitionen verwenden XDM-Felder, die &quot;Geschlecht&quot;enthalten?
-* Welche ausgefüllten XDM-Felder treten in Streaming-Segmenten auf?
-* Wie viele XDM-Felder gibt es für alle Segmentdefinitionen?
-* Welche Segmente hat der Datensatz &quot;Professional Users&quot;Auswirkungen?
-* Welche Segmente werden an die HTTP-API weitergeleitet?
-* Welche der aktivierten Segmente sind für die meisten Zieltypen aktiviert?
+* Wie hoch ist die Profilanzahl? {SEGMENT_NAME} Segment?
+* Listet alle doppelten Segmente auf.
+* Anzeigen von Segmenten, die in den letzten 7 Tagen erstellt oder aktualisiert wurden
+* Wie verteilt sich die Anzahl der Profile auf Segmente?
+* Wie viele Felder werden in der Segmentierung verwendet?
 * Wie hoch ist die Gesamtanzahl der aktivierten Segmente?
-* Wie viele Segmente sind aktiviert?
+* Welche Segmente werden aktiviert?
 * Wie viele doppelte Segmente werden aktiviert?
+* Auflisten von Segmenten, die im letzten Jahr erstellt wurden.
+* Segmente anzeigen, die zuletzt geändert wurden, bevor {DATE}.
+* Wie viele eindeutige Segmentnamen mit der Variablen {SCHEMA_NAME} schema?
+* Welche Schemas werden am häufigsten über Segmente hinweg verwendet?
+* Wie viele Schemata habe ich?
+* Welche Datensätze werden verwendet? {SCHEMA_NAME} schema?
+* Liste aller in der letzten Woche geänderten Schemata.
+* Wie viele Schemas sind Profil aktiviert?
+* Auflisten aller Erlebnisereignis-Klassenschemas?
+* Welche Datensätze werden in die {SCHEMA_NAME} schema?
+* Wie viele Datensätze wurden mit demselben Schema erfasst?
+* Wie viele Datensätze habe ich?
+* Welche Datensätze werden in den einzelnen Segmenten verwendet?
+* Welche Segmente verwenden {ATTRIBUTE_NAME} Attribut?
+* Welche Schemas haben {ATTRIBUTE_NAME} Attribut in ihnen?
+* Wie viele XDM-Schemaattribute werden in keinem Segment verwendet?
+* In welchem Datensatz(en) ist/sind {ATTRIBUTE_NAME} XDM-Felder ausgefüllt?
+* Welche Datensätze enthalten Daten für {ATTRIBUTE_NAME} Attribut?
 * Wie viele Segmente werden für jedes Ziel aktiviert?
-* Welche Segmente werden für 0, 1 oder mehrere Ziele aktiviert? Anzeigen der Distribution.
 * Welche Segmente sind für die meisten Ziele aktiviert?
-* Welche doppelten Segmente werden aktiviert?
-* Welche Segmente sind für Adobe Target aktiviert?
-* Wie oft wird jede Zusammenführungsrichtlinie für alle Segmente verwendet?
-
->[!TAB Schemata]
-
-* Wie viele XDM-Schemas sind definiert?
-* Was sind die zuletzt erstellten Schemata?
-* Wie viele Schemas für jede XDM-Klasse?
-* Welches Schema verwendet der Datensatz &quot;Segmentaufnahme&quot;?
-* Welche Schemas werden von keinem Datensatz verwendet?
-
->[!TAB Ziele]
-
-* Wie viele Ziele gibt es?
-* Was sind die zuletzt erstellten Ziele?
-* Welche Ziele sind mit den einzelnen Segmenten verbunden?
-
->[!TAB Quellen]
-
-* Wie viele Quellen wurden erstellt?
-* Was sind die zuletzt erstellten Quellen?
-* Wie viele Quellen sind verfügbar, aufgeschlüsselt nach Kategorie?
-* Kann ich eine Quellverbindung von S3 erstellen?
-* Welche Quellen haben zum Datensatz &quot;Mutual365&quot;beigetragen?
-
->[!TAB Datensätze]
-
-* Wie viele Datensätze gibt es?
-* Was sind die zuletzt erstellten Datensätze?
-* Welche Datensätze sind für ein einheitliches Profil aktiviert?
-* Gibt es einen TTL-Satz für den Datensatz &quot;Segmentaufnahme&quot;?
-* Was ist die TTL für den Datensatz &quot;Professional Users&quot;?
-* Welche Datensätze verwenden das Schema Professional Users?
-
->[!TAB Attribute]
-
-* Welche XDM-Felder werden am häufigsten in allen DataSets ausgefüllt?
-* Welche XDM-Felder und Attribute werden am häufigsten über Schemas hinweg verwendet?
-* Welche XDM-Felder und Attribute werden im Professional Users-Schema verwendet?
-* Die für dieses Segment verwendeten Attribute mit ID auflisten {SEGMENT_ID}.
-* Wie viele XDM-Felder werden in mehr als 2 Segmenten verwendet?
-* Welche Felder werden am häufigsten segmentübergreifend verwendet?
-* Gibt es Felder, die nur in einem Segment verwendet werden?
-* Welche Attribute werden für das Treuesegment &quot;Bronze&quot;verwendet?
-* Welche Attribute werden in keinem Segment verwendet?
-* Welche Attribute werden am häufigsten in Segmenten verwendet?
-
->[!ENDTABS]
+* Haben einige meiner Segmente 0 Profile?
+* Wie viele Datenflüsse habe ich?
 
 +++
 
@@ -343,3 +286,5 @@ Beispiele finden Sie in der folgenden Tabelle:
 | Was ist mein größtes Segment? | Was ist mein größtes Segment? Verwendung von Daten. | Teilen Sie dem KI-Assistenten explizit mit, dass die Antwort auf Daten basieren soll. |
 | Was ist mein größtes Segment? | Geben Sie mein größtes Segment an. | Es gibt Fälle, in denen eine &quot;Was...&quot;-Frage mit einer dokumentationsbasierten Frage verwechselt werden kann. Die Verwendung eines Befehls wie &quot;list&quot;ist ein stärkerer Indikator dafür, dass Sie eine Frage mit Daten im Kontext stellen. |
 | Wie viele Datensätze habe ich? | Zählen Sie meine Datensätze. | Die ursprüngliche Frage funktioniert für Segmente, funktioniert jedoch möglicherweise nicht mit Datensätzen. |
+
+

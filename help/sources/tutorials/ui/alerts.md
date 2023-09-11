@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform; Homepage; beliebte Themen Warnungen
+keywords: Experience Platform; Homepage; beliebte Themen; Warnhinweise
 description: Sie können Warnhinweise abonnieren, wenn Sie einen Datenfluss erstellen, um Warnhinweise zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten.
 title: In-Context-Warnhinweise in der Benutzeroberfläche abonnieren
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: 3f7f66c0d58d127299ad12027869ca0e9837f5cd
+source-git-commit: 9120377f5f2048579d7e2a4740cfcbc56d49d61a
 workflow-type: tm+mt
-source-wordcount: '868'
-ht-degree: 20%
+source-wordcount: '846'
+ht-degree: 22%
 
 ---
 
@@ -28,7 +28,7 @@ Dieses Dokument setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 * [Quellen](../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Mit Observability können Sie Platform-Aktivitäten mithilfe von statistischen Metriken und Ereignisbenachrichtigungen überwachen.](../../../observability/home.md)[!DNL Observability Insights]
-   * [Warnhinweise](../../../observability/alerts/overview.md): Wenn bestimmte Bedingungen in Ihren Platform-Vorgängen erreicht sind (z. B. ein potenzielles Problem, wenn das System einen Schwellenwert überschreitet), kann Platform allen Benutzern in Ihrer Organisation, die sich für diese Bedingungen angemeldet haben, Warnhinweise bereitstellen.
+   * [Warnhinweise](../../../observability/alerts/overview.md): Wenn bestimmte Bedingungen in Ihren Platform-Vorgängen erfüllt sind (z. B. ein potenzielles Problem, wenn das System einen Schwellenwert überschreitet), kann Platform allen Benutzern in Ihrer Organisation, die sich für sie angemeldet haben, Warnhinweise bereitstellen.
 
 ## Warnhinweise über die Benutzeroberfläche abonnieren {#subscribe-sources-alerts}
 
@@ -48,12 +48,15 @@ Sie können Warnhinweise für Ihre Datenflüsse während der [!UICONTROL Datenfl
 
 Die verfügbaren Warnhinweise für Datenflüsse zu Quellen sind:
 
+>[!NOTE]
+>
+>Streaming-Quellen werden derzeit nicht von Warnhinweisen unterstützt. Sie können nur Benachrichtigungen für Batch-Quellen abonnieren.
+
 | Warnhinweise | Beschreibung |
 | --- | --- |
-| Start des Datenflusses für Quellen | Dieser Warnhinweis sendet Ihnen eine Nachricht, wenn Ihr Quelldatensatz gestartet wurde. |
-| Quellen-Datenfluss erfolgreich ausgeführt | Dieser Warnhinweis sendet Ihnen eine Nachricht, wenn Daten aus Ihrer Quelle erfolgreich in Platform erfasst wurden. |
-| Fehler beim Ausführen des Datenflusses für Quellen | Dieser Warnhinweis sendet Ihnen eine Nachricht, wenn in Ihrem Datenfluss ein Fehler auftritt. |
-| ~~Datenfluss-unzureichende Aufnahme von Quellen~~ | ~~Dieser Warnhinweis sendet Ihnen eine Nachricht, wenn die Aufnahme um mehr als sieben Stunden verzögert ist und keine Daten an Platform erfasst werden.~~ <br>**Hinweis:** Sie erhalten keine Warnhinweise mehr, da dieser Warnhinweis nicht mehr unterstützt wird. |
+| Anfang der Ausführung eines Quellflusses | Dieser Warnhinweis sendet Ihnen eine Nachricht, wenn Ihr Quelldatensatz gestartet wurde. |
+| Erfolgreiche Ausführung des Quellflusses | Dieser Warnhinweis sendet Ihnen eine Nachricht, wenn Daten aus Ihrer Quelle erfolgreich in Platform erfasst wurden. |
+| Fehler beim Ausführen des Quellflusses | Dieser Warnhinweis sendet Ihnen eine Nachricht, wenn in Ihrem Datenfluss ein Fehler auftritt. |
 
 Wählen Sie die Warnhinweise aus, die Sie abonnieren möchten, und wählen Sie dann **[!UICONTROL Nächste]** , um Ihren Datenfluss zu überprüfen und abzuschließen.
 
@@ -87,7 +90,7 @@ Das Fenster &quot;Benachrichtigungen&quot;wird mit einer Liste von Statusaktuali
 
 Sie können den Mauszeiger auf eine Warnmeldung bewegen, um sie als gelesen zu kennzeichnen, oder Sie können das Uhrensymbol auswählen, um zukünftige Erinnerungen zum Status Ihres Datenflusses festzulegen.
 
-![ERINNERUNGEN](../../images/tutorials/alerts/remind-me.png)
+![ERINNERUNGSPERSONAL](../../images/tutorials/alerts/remind-me.png)
 
 Wählen Sie die Warnmeldung aus, um spezifische Informationen zu Ihrem Datenfluss anzuzeigen.
 

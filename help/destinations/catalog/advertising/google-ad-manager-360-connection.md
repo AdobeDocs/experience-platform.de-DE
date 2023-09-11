@@ -2,10 +2,10 @@
 title: (Beta)  [!DNL Google Ad Manager 360] -Verbindung
 description: Google Ad Manager 360 ist eine Adserving-Plattform von Google, die Publishern die Möglichkeit gibt, das Anzeigen von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1031'
-ht-degree: 75%
+source-wordcount: '1010'
+ht-degree: 78%
 
 ---
 
@@ -41,15 +41,12 @@ Beachten Sie folgende Details, die speziell für [!DNL Google Ad Manager 360]-Zi
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
-In diesem Abschnitt werden alle Zielgruppen beschrieben, die Sie an dieses Ziel exportieren können.
+In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel exportieren können.
 
-Dieses Ziel unterstützt die Aktivierung aller durch die Experience Platform generierten Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md).
-
-*Zusätzlich*, unterstützt dieses Ziel auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
-
-| Zielgruppentyp | Beschreibung |
----------|----------|
-| Benutzerdefinierte Uploads | Zielgruppen [importiert](../../../segmentation/ui/overview.md#import-audience) in die Experience Platform aus CSV-Dateien. |
+| Audience Origin | Unterstützt | Beschreibung |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
+| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
 
 {style="table-layout:auto"}
 
@@ -74,7 +71,7 @@ Die Zulassungsauflistung ist obligatorisch, bevor Sie Ihr erstes [!DNL Google Ad
 >
 >Die Ausnahme für diese Regel ist für bestehende [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=de) -Kunden. Wenn Sie bereits eine Verbindung zu diesem Google-Ziel in Audience Manager erstellt haben, ist es nicht erforderlich, den Zulassungsauflistungsprozess erneut zu durchlaufen. Sie können mit den nächsten Schritten fortfahren.
 
-1. Führen Sie die im Abschnitt [Dokumentation zu Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=de) , um Adobe als verknüpfte Data Management Platform (DMP) hinzuzufügen.
+1. Führen Sie die im Abschnitt [Dokumentation zu Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=de) um Adobe als verknüpfte Data Management Platform (DMP) hinzuzufügen.
 2. Im [!DNL Google Ad Manager] -Benutzeroberfläche, navigieren Sie zu **[!UICONTROL Admin]** > **[!UICONTROL Globale Einstellungen]** > **[!UICONTROL Netzwerkeinstellungen]** und aktivieren Sie die **[!UICONTROL API-Zugriff]** festlegen.
 
 
@@ -112,7 +109,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 * **[!UICONTROL Kontotyp]**: Wählen Sie je nach Ihrer [!DNL Google] Konto:
    * Verwenden von `AdX buyer` für [!DNL Google AdX]
    * Verwenden von `DFP by Google` für [!DNL DoubleClick] for Publishers
-* **[!UICONTROL Zielgruppen-ID an Zielgruppennamen anhängen]**: Wählen Sie diese Option aus, damit der Zielgruppenname in Google Ad Manager 360 die Zielgruppen-ID aus Experience Platform wie folgt enthält: `Audience Name (Audience ID)`.
+* **[!UICONTROL Zielgruppen-ID an Zielgruppennamen anhängen]**: Wählen Sie diese Option, damit der Zielgruppenname in Google Ad Manager 360 die Zielgruppen-ID von Experience Platform wie folgt enthält: `Audience Name (Audience ID)`.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -133,7 +130,7 @@ Im Schritt zur Identitätszuordnung sehen Sie die folgenden vorausgefüllten Zuo
 | Vorausgefüllte Zuordnung | Beschreibung |
 |---------|----------|
 | `ECID` -> `ppid` | Dies ist die einzige vorausgefüllte Zuordnung, die von Benutzenden bearbeitet werden kann. Sie können beliebige Attribute oder Identitäts-Namespaces aus Platform auswählen und sie `ppid` zuordnen. |
-| `metadata.segment.alias` -> `list_id` | Ordnet den Zielgruppennamen der Experience Platform den Zielgruppen-IDs in der Google-Plattform zu. |
+| `metadata.segment.alias` -> `list_id` | Ordnet Experience Platform-Zielgruppennamen Zielgruppen-IDs in der Google-Plattform zu. |
 | `iif(${segmentMembership.ups.seg_id.status}=="exited", "1","0")` -> `delete` | Teilt der Google-Plattform mit, wann disqualifizierte Benutzende aus Segmenten entfernt werden sollen. |
 
 Diese Zuordnungen sind erforderlich für [!DNL Google Ad Manager 360] und werden von Adobe Experience Platform automatisch für alle [!DNL Google Ad Manager 360]-Verbindungen erstellt.
@@ -146,9 +143,9 @@ Um festzustellen, ob die Daten erfolgreich exportiert wurden, überprüfen Sie I
 
 ## Fehlerbehebung {#troubleshooting}
 
-Falls bei der Verwendung dieses Ziels Fehler auftreten und Sie eine Verbindung zu Adobe oder Google herstellen müssen, halten Sie die folgenden IDs bereit.
+Sollten bei der Verwendung dieses Ziels Fehler auftreten und Sie sich an Adobe oder Google wenden müssen, halten Sie die folgenden IDs bereit.
 
-Dies sind die Google-Konto-IDs der Adobe:
+Dies sind Adobe-Google-Konto-IDs:
 
 * **[!UICONTROL Konto-ID]**: 87933855
 * **[!UICONTROL Kunden-ID]**: 89690775

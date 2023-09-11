@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise August 2023 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 5181d39e92fbf957f154c3b1dcf4f9af90cfeae9
+source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
 workflow-type: tm+mt
-source-wordcount: '1749'
-ht-degree: 42%
+source-wordcount: '1750'
+ht-degree: 46%
 
 ---
 
@@ -120,7 +120,7 @@ Weitere Informationen finden Sie im [Datenvorbereitung - Übersicht](../../data-
 
 **Neue oder aktualisierte Funktionen** {#destinations-new-updated-functionality}
 
-- Sie können jetzt [Zielgruppen aktivieren](../../destinations/ui/activate-prospect-audiences.md) in dateibasierte Ziele.
+- Sie können jetzt [Zielgruppen aktivieren](../../destinations/ui/activate-prospect-audiences.md) zu Cloud-Speicher-Zielen hinzugefügt.
 - Die allgemeine [Aktivierungsgarantie](../../destinations/guardrails.md#general-activation-guardrails) von maximal 100 Zielen pro Sandbox wurde aktualisiert, um _Hardbounce_.
 
 Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
@@ -133,7 +133,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
-| Klasse | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1758/files) | Verwenden Sie diese Klasse, um Interessenten-Profile einzubringen, die aus den wichtigsten Anwendungsfällen für die Kundenakquise von Datenanbietern stammen. Siehe Abschnitt [[!UICONTROL XDM Individual Prospect Profile]](../../xdm/classes/prospect.md) Dokumentation , um Beispiele anzuzeigen und mehr zu erfahren. |
+| Klasse | [[!UICONTROL XDM Individual Prospect Profile]](https://github.com/adobe/xdm/pull/1758/files) | Verwenden Sie diese Klasse, um Profile von Interessierten einzubringen, die aus den wichtigsten Anwendungsfällen für die Kundenakquise von Datenanbietern stammen. Siehe Abschnitt [[!UICONTROL XDM Individual Prospect Profile]](../../xdm/classes/prospect.md) Dokumentation , um Beispiele anzuzeigen und mehr zu erfahren. |
 
 {style="table-layout:auto"}
 
@@ -142,7 +142,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 | Typ der Komponente | Name | Beschreibung der Aktualisierung |
 | --- | --- | --- |
 | Erweiterung ([!UICONTROL Adobe Analytics ExperienceEvent Full Extension]) | [[!UICONTROL Kontextdaten]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL Kontextdaten] Zuordnungsobjekt hinzugefügt [!UICONTROL Adobe Analytics ExperienceEvent Full Extension] um Kontextdaten für Adobe Analytics bereitzustellen. |
-| Feldgruppe | Mehrfach | Mehrere Felder wurden hinzugefügt [[!UICONTROL Angereicherte Segmentdetails für Ereignisse]](https://github.com/adobe/xdm/pull/1760/files). |
+| Feldergruppe | Mehrfach | Mehrere Felder wurden hinzugefügt [[!UICONTROL Angereicherte Segmentdetails für Ereignisse]](https://github.com/adobe/xdm/pull/1760/files). |
 
 {style="table-layout:auto"}
 
@@ -162,7 +162,7 @@ Weitere Informationen finden Sie im [Identity Service - Übersicht](../../identi
 
 ## Segmentierungs-Service {#segmentation}
 
-[!DNL Segmentation Service] ermöglicht Ihnen das Segmentieren von Daten, die in gespeichert sind. [!DNL Experience Platform] , die sich auf Einzelanwender (z. B. Kunden, Interessenten, Benutzer oder Organisationen) in Zielgruppen bezieht. Sie können Zielgruppen über Segmentdefinitionen oder andere Quellen aus Ihren [!DNL Real-Time Customer Profile] Daten. Diese Zielgruppen werden zentral konfiguriert und verwaltet in [!DNL Platform]und für jede Adobe-Lösung leicht zugänglich sind.
+[!DNL Segmentation Service] ermöglicht es Ihnen, in [!DNL Experience Platform] gespeicherte Daten, die sich auf Einzelpersonen (wie Kundinnen und Kunden, Interessierte, Benutzerinnen und Benutzer oder Organisationen) beziehen, in Zielgruppen zu segmentieren. Sie können Zielgruppen über Segmentdefinitionen oder andere Quellen aus Ihren [!DNL Real-Time Customer Profile]-Daten erstellen. Diese Zielgruppen werden zentral auf [!DNL Platform] konfiguriert und verwaltet und stehen jeder Adobe-Lösung zur Verfügung.
 
 **Neue oder aktualisierte Funktionen**
 

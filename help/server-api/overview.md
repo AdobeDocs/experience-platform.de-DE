@@ -1,17 +1,18 @@
 ---
-title: Übersicht über die Edge Network Server-API
+title: Edge Network Server-API – Übersicht
 description: Erfahren Sie, was die Edge Network Server-API ist und wie Sie sie verwenden können.
 seo-description: Learn what the Edge Network Server API is and how you can use it.
 keywords: Datenerfassung; Datenerfassung; Adobe Experience Platform Edge Network; Server-API;
 exl-id: 46bd8798-d7f9-405b-9ca8-856ad4aa688c
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: ef77a14eb40db490682c4615d1cbafb90c7b42c2
 workflow-type: tm+mt
 source-wordcount: '271'
-ht-degree: 5%
+ht-degree: 9%
 
 ---
 
-# Übersicht über die Edge Network Server-API {#overview}
+
+# Edge Network Server-API – Übersicht {#overview}
 
 Das Adobe Experience Platform Edge Network bietet eine optimierte Möglichkeit für Kunden, mit beliebigen Adobe Experience Cloud- oder Adobe Experience Platform Edge-Diensten zu interagieren.
 

@@ -5,9 +5,9 @@ description: In diesem Tutorial erfahren Sie, wie Sie externe Zielgruppen mit Ad
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 hide: true
 hidefromtoc: true
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c83070d85177c72b2e4c4ae472b89c08c20ee743
 workflow-type: tm+mt
-source-wordcount: '1720'
+source-wordcount: '1722'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 5%
 >
 >Diese Dokumentation enthält Informationen aus einer früheren Version der Dokumentation zu Zielgruppen und ist daher veraltet.
 
-Adobe Experience Platform unterstützt die Möglichkeit, externe Zielgruppen zu importieren, die anschließend als Komponenten für eine neue Zielgruppe verwendet werden können. Dieses Dokument enthält ein Tutorial zum Einrichten der Experience Platform zum Importieren und Verwenden externer Zielgruppen.
+Adobe Experience Platform unterstützt die Möglichkeit, externe Zielgruppen zu importieren, die anschließend als Komponenten für eine neue Zielgruppe verwendet werden können. Dieses Dokument enthält ein Tutorial zum Einrichten von Experience Platform zum Importieren und Verwenden externer Zielgruppen.
 
 ## Erste Schritte
 
@@ -46,7 +46,7 @@ Segmentdefinitionen umfassen Informationen wie den Namen, die Beschreibung, den 
 
 Der erste Schritt zur Verwendung externer Zielgruppen besteht in der Erstellung eines Identitäts-Namespace. Identitäts-Namespaces ermöglichen es Platform, zu verknüpfen, woher eine Zielgruppe stammt.
 
-Um einen Identitäts-Namespace zu erstellen, befolgen Sie die Anweisungen im Abschnitt [Identitäts-Namespace-Handbuch](../../identity-service/namespaces.md#manage-namespaces). Fügen Sie beim Erstellen Ihres Identitäts-Namespace die Quelldetails zum Identitäts-Namespace hinzu und markieren Sie dessen [!UICONTROL Typ] as a **[!UICONTROL Personenidentifizierung]**.
+Befolgen Sie die Anweisungen im Abschnitt [Identitäts-Namespace-Handbuch](../../identity-service/namespaces.md#manage-namespaces). Fügen Sie beim Erstellen Ihres Identitäts-Namespace die Quelldetails zum Identitäts-Namespace hinzu und markieren Sie dessen [!UICONTROL Typ] as a **[!UICONTROL Personenidentifizierung]**.
 
 ![Die Kennung ohne Person wird im Modal Identitäts-Namespace erstellen hervorgehoben.](../images/tutorials/external-audiences/identity-namespace-info.png)
 
@@ -64,7 +64,7 @@ Da Sie eine Segmentdefinition erstellen, bei der es sich um eine vordefinierte K
 
 Nachdem Ihr Schema erstellt wurde, müssen Sie angeben, welches Feld die Segment-ID enthalten soll. Dieses Feld sollte als primäre Identität markiert und den zuvor von Ihnen erstellten Namespaces zugewiesen werden.
 
-![Die Kontrollkästchen, mit denen das ausgewählte Feld als primäre Identität markiert werden soll, werden im Schema Editor hervorgehoben.](../images/tutorials/external-audiences/mark-primary-identifier.png)
+![Die Kontrollkästchen zum Markieren des ausgewählten Felds als primäre Identität werden im Schema Editor hervorgehoben.](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
 Nachdem Sie die `_id` als primäre Identität festlegen, wählen Sie den Titel des Schemas aus, gefolgt von dem Umschalter mit der Bezeichnung **[!UICONTROL Profil]**. Auswählen **[!UICONTROL Aktivieren]** , um das Schema für [!DNL Real-Time Customer Profile].
 
@@ -76,7 +76,7 @@ Jetzt ist dieses Schema für Profil aktiviert, wobei die primäre Identifizierun
 
 Nach dem Konfigurieren des Schemas müssen Sie einen Datensatz für die Segmentmetadaten erstellen.
 
-Um einen Datensatz zu erstellen, befolgen Sie die Anweisungen im Abschnitt [Benutzerhandbuch zu Datensätzen](../../catalog/datasets/user-guide.md#create). Sie sollten die **[!UICONTROL Datensatz aus Schema erstellen]** -Option unter Verwendung des zuvor erstellten Schemas.
+Um einen Datensatz zu erstellen, befolgen Sie die Anweisungen im Abschnitt [Benutzerhandbuch zu Datensätzen](../../catalog/datasets/user-guide.md#create). Sie sollten folgende Schritte ausführen: **[!UICONTROL Datensatz aus Schema erstellen]** -Option unter Verwendung des zuvor erstellten Schemas.
 
 ![Das Schema, auf dem Ihr Datensatz basieren soll, ist hervorgehoben.](../images/tutorials/external-audiences/select-schema.png)
 
@@ -86,7 +86,7 @@ Nachdem Sie den Datensatz erstellt haben, folgen Sie den Anweisungen im Abschnit
 
 ## Einrichten und Importieren von Zielgruppendaten
 
-Wenn der Datensatz aktiviert ist, können Daten jetzt entweder über die Benutzeroberfläche oder über die Experience Platform-APIs an Platform gesendet werden. Sie können diese Daten entweder über eine Batch- oder Streaming-Verbindung erfassen.
+Wenn der Datensatz aktiviert ist, können Daten jetzt entweder über die Benutzeroberfläche oder mithilfe der Experience Platform-APIs an Platform gesendet werden. Sie können diese Daten entweder über eine Batch- oder Streaming-Verbindung erfassen.
 
 ### Daten mithilfe einer Batch-Verbindung erfassen
 
@@ -167,7 +167,7 @@ Zusätzlich zur Verwendung importierter Metadaten aus externen Zielgruppen und d
 
 ### Einrichten eines Zielschemas für die Mitgliedschaft in einem externen Segment
 
-Um mit der Erstellung eines Schemas zu beginnen, wählen Sie zunächst **[!UICONTROL Schemas]** in der linken Navigationsleiste, gefolgt von der **[!UICONTROL Schema erstellen]** in der oberen rechten Ecke des Arbeitsbereichs &quot;Schemas&quot;. Wählen Sie von hier aus **[!UICONTROL XDM Individual Profile]**.
+Um mit der Erstellung eines Schemas zu beginnen, wählen Sie zunächst **[!UICONTROL Schemas]** in der linken Navigationsleiste, gefolgt von der **[!UICONTROL Schema erstellen]** in der oberen rechten Ecke des Arbeitsbereichs &quot;Schemas&quot;. Wählen Sie von hier aus **[!UICONTROL Individuelles XDM-Profil]**.
 
 ![Der Bereich &quot;XDM Individual Profile&quot;wird hervorgehoben.](../images/tutorials/external-audiences/create-schema-profile.png)
 
@@ -183,17 +183,17 @@ Stellen Sie außerdem sicher, dass das Schema für **[!UICONTROL Profil]**. Dazu
 
 Nachdem Sie Ihr Schema erstellt haben, müssen Sie einen Datensatz erstellen.
 
-Um einen Datensatz zu erstellen, befolgen Sie die Anweisungen im Abschnitt [Benutzerhandbuch zu Datensätzen](../../catalog/datasets/user-guide.md#create). Sie sollten die **[!UICONTROL Datensatz aus Schema erstellen]** -Option unter Verwendung des zuvor erstellten Schemas.
+Um einen Datensatz zu erstellen, befolgen Sie die Anweisungen im Abschnitt [Benutzerhandbuch zu Datensätzen](../../catalog/datasets/user-guide.md#create). Sie sollten folgende Schritte ausführen: **[!UICONTROL Datensatz aus Schema erstellen]** -Option unter Verwendung des zuvor erstellten Schemas.
 
 ![Das Schema, das Sie zum Erstellen der Datenbank verwenden, wird hervorgehoben.](../images/tutorials/external-audiences/select-schema.png)
 
 Nachdem Sie den Datensatz erstellt haben, folgen Sie den Anweisungen im Abschnitt [Benutzerhandbuch zu Datensätzen](../../catalog/datasets/user-guide.md#enable-profile) , um diesen Datensatz für das Echtzeit-Kundenprofil zu aktivieren.
 
-![Der Umschalter zum Aktivieren des Schemas für Profil wird im Arbeitsablauf zum Erstellen von Datensätzen hervorgehoben.](../images/tutorials/external-audiences/dataset-profile.png)
+![Der Umschalter zum Aktivieren des Schemas für Profil wird im Workflow Datensätze erstellen hervorgehoben.](../images/tutorials/external-audiences/dataset-profile.png)
 
 ## Einrichten und Importieren externer Daten zur Zielgruppenmitgliedschaft
 
-Wenn der Datensatz aktiviert ist, können Daten jetzt entweder über die Benutzeroberfläche oder über die Experience Platform-APIs an Platform gesendet werden. Sie können diese Daten entweder über eine Batch- oder Streaming-Verbindung erfassen.
+Wenn der Datensatz aktiviert ist, können Daten jetzt entweder über die Benutzeroberfläche oder mithilfe der Experience Platform-APIs an Platform gesendet werden. Sie können diese Daten entweder über eine Batch- oder Streaming-Verbindung erfassen.
 
 ### Daten mithilfe einer Batch-Verbindung erfassen
 
@@ -265,4 +265,4 @@ Nachfolgend finden Sie ein Beispiel der Payload der externen Zielgruppenmitglied
 
 >[!NOTE]
 >
->Standardmäßig werden externe Zielgruppenmitgliedschaften nur 30 Tage lang aufbewahrt. Um sie länger als 30 Tage aufzubewahren, verwenden Sie bitte die `validUntil` beim Erfassen Ihrer Zielgruppendaten. Weitere Informationen zu diesem Feld finden Sie im Handbuch unter [Feldgruppen des Schemas Segmentzugehörigkeitsdetails](../../xdm/field-groups/profile/segmentation.md).
+>Standardmäßig werden externe Zielgruppenmitgliedschaften nach 30 Tagen gelöscht. Um zu verhindern, dass sie gelöscht und länger als 30 Tage aufbewahrt werden, verwenden Sie bitte die `validUntil` beim Erfassen Ihrer Zielgruppendaten. Weitere Informationen zu diesem Feld finden Sie im Handbuch unter [Feldgruppen des Schemas Segmentzugehörigkeitsdetails](../../xdm/field-groups/profile/segmentation.md).

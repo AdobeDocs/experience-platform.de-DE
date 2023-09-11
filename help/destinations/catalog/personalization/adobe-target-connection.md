@@ -3,10 +3,10 @@ keywords: Zielpersonalisierung;Ziel;Ziel von Experience Platform;Adobe Target-Zi
 title: Adobe Target-Verbindung
 description: Adobe Target ist ein Programm, das bei allen eingehenden Kundeninteraktionen über Websites, Mobile Apps usw. KI-gestützte Echtzeit-Personalisierung und Experimente ermöglicht.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 2005238d2e06ed91fd4b0835be38a4b7b8ecf3b4
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1186'
-ht-degree: 50%
+source-wordcount: '1224'
+ht-degree: 53%
 
 ---
 
@@ -14,10 +14,10 @@ ht-degree: 50%
 
 ## Ziel-Änderungsprotokoll {#changelog}
 
-| Veröffentlichungsmonat | Aktualisierungstyp | Beschreibung |
+| Veröffentlichungsmonat | Art der Aktualisierung | Beschreibung |
 |---|---|---|
-| Juni 2023 | Aktualisierung der Funktionen und Dokumentation | Ab Juni 2023 können Sie beim Konfigurieren einer neuen Adobe Target-Zielverbindung den Adobe Target-Arbeitsbereich auswählen, für den Sie Zielgruppen freigeben möchten. Weitere Informationen finden Sie im Abschnitt [Verbindungsparameter](#parameters). Weitere Informationen über Arbeitsbereiche finden Sie im Tutorial zum [Konfigurieren von Arbeitsbereichen](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=de) in Adobe Target. |
-| Mai 2023 | Aktualisierung der Funktionen und Dokumentation | Ab Mai 2023 wird die **[!UICONTROL Adobe Target]** Verbindungsunterstützung [attributbasierte Personalisierung](../../ui/activate-edge-personalization-destinations.md#map-attributes) und ist allgemein für alle Kunden verfügbar. |
+| Juni 2023 | Funktions- und Dokumentationsaktualisierung | Ab Juni 2023 können Sie beim Konfigurieren einer neuen Adobe Target-Zielverbindung den Adobe Target-Arbeitsbereich auswählen, für den Sie Zielgruppen freigeben möchten. Weitere Informationen finden Sie im Abschnitt [Verbindungsparameter](#parameters). Weitere Informationen über Arbeitsbereiche finden Sie im Tutorial zum [Konfigurieren von Arbeitsbereichen](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=de) in Adobe Target. |
+| Mai 2023 | Funktions- und Dokumentationsaktualisierung | Ab Mai 2023 wird die **[!UICONTROL Adobe Target]** Verbindungsunterstützung [attributbasierte Personalisierung](../../ui/activate-edge-personalization-destinations.md#map-attributes) und ist allgemein für alle Kunden verfügbar. |
 
 {style="table-layout:auto"}
 
@@ -27,7 +27,7 @@ Adobe Target ist ein Programm, das bei allen eingehenden Kundeninteraktionen üb
 
 Adobe Target ist eine Personalisierungsverbindung im Adobe Experience Platform-Zielkatalog.
 
-Eine kurze Übersicht über die Konfiguration der Adobe Target-Verbindung in Experience Platform finden Sie im folgenden Video.
+Eine kurze Übersicht über die Konfiguration der Adobe Target-Verbindung unter Experience Platform finden Sie im folgenden Video.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
@@ -52,6 +52,17 @@ Stellen Sie in Adobe Target sicher, dass Ihr Benutzer über Folgendes verfügt:
 
 Weitere Informationen zum Gewähren von Berechtigungen für [Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=en#section_8C425E43E5DD4111BBFC734A2B7ABC80) und [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=en#roles-permissions).
 
+## Unterstützte Zielgruppen {#supported-audiences}
+
+In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel exportieren können.
+
+| Audience Origin | Unterstützt | Beschreibung |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
+| Benutzerdefinierte Uploads | X | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
+
+{style="table-layout:auto"}
+
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
@@ -59,7 +70,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
 | Exporttyp | **[!DNL Profile request]** | Sie fordern alle Zielgruppen an, die im Adobe Target-Ziel für ein einzelnes Profil zugeordnet sind. |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform basierend auf der Zielgruppenbewertung aktualisiert wird, sendet der Connector das Update an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -96,9 +107,9 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 
   | Adobe Target-Implementierung (ohne Web SDK) | Web SDK-Implementierung |
   |---|---|
-  | <ul><li>Ein Datastream ist nicht erforderlich. Adobe Target kann über bereitgestellt werden [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=de), [serverseitig](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=en#server-side-implementation)oder [hybrid](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=en#hybrid-implementation) Implementierungsmethoden.</li><li>[Edge-Segmentierung](../../../segmentation/ui/edge-segmentation.md) wird nicht unterstützt.</li><li>[Personalisierung auf derselben Seite und auf der nächsten Seite](../../ui/activate-edge-personalization-destinations.md) werden nicht unterstützt.</li><li>Sie können Zielgruppen und Profilattribute nur für die Adobe Target-Verbindung freigeben. *Standard-Produktions-Sandbox*.</li><li>Verwenden Sie zum Konfigurieren der Personalisierung der nächsten Sitzung ohne Verwendung einer Datastraam-ID die [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>Ein Datenspeicher mit Adobe Target und Experience Platform, die als Dienste konfiguriert sind, ist erforderlich.</li><li>Die Edge-Segmentierung funktioniert wie erwartet.</li><li>[Personalisierung auf derselben Seite und auf der nächsten Seite](../../ui/activate-edge-personalization-destinations.md) werden unterstützt.</li><li>Die Freigabe von Zielgruppen und Profilattributen aus anderen Sandboxes wird unterstützt.</li></ul> |
+  | <ul><li>Ein Datastream ist nicht erforderlich. Adobe Target kann über bereitgestellt werden [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=de), [serverseitig](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=en#server-side-implementation)oder [hybrid](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=en#hybrid-implementation) Implementierungsmethoden.</li><li>[Edge-Segmentierung](../../../segmentation/ui/edge-segmentation.md) wird nicht unterstützt.</li><li>[Personalisierung auf derselben Seite und auf der nächsten Seite](../../ui/activate-edge-personalization-destinations.md) werden nicht unterstützt.</li><li>Sie können Zielgruppen und Profilattribute nur für die Adobe Target-Verbindung freigeben. *Standard-Produktions-Sandbox*.</li><li>Verwenden Sie zum Konfigurieren der Personalisierung der nächsten Sitzung ohne Verwendung einer Datastraam-ID die [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>Ein Datastream mit Adobe Target und Experience Platform ist als Dienste konfiguriert.</li><li>Die Edge-Segmentierung funktioniert wie erwartet.</li><li>[Personalisierung auf derselben Seite und auf der nächsten Seite](../../ui/activate-edge-personalization-destinations.md) werden unterstützt.</li><li>Die Freigabe von Zielgruppen und Profilattributen aus anderen Sandboxes wird unterstützt.</li></ul> |
 
-* **Arbeitsbereich**: Adobe Target auswählen [Arbeitsbereich](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=de) für die Zielgruppen freigegeben werden. Für jede Adobe Target-Verbindung kann ein Arbeitsbereich ausgewählt werden. Bei Aktivierung werden die Zielgruppen zum ausgewählten Arbeitsbereich weitergeleitet, während die entsprechenden [Datennutzungsbezeichnungen für Experience Platformen](../../../data-governance/labels/overview.md).
+* **Arbeitsbereich**: Wählen Sie die Adobe Target aus. [Arbeitsbereich](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=de) für die Zielgruppen freigegeben werden. Für jede Adobe Target-Verbindung kann ein Arbeitsbereich ausgewählt werden. Bei Aktivierung werden die Zielgruppen zum ausgewählten Arbeitsbereich weitergeleitet, während die entsprechenden [Experience Platform-Datennutzungsbezeichnungen](../../../data-governance/labels/overview.md).
 
 >[!NOTE]
 >

@@ -3,7 +3,7 @@ title: Mobile-zu-Web und Domain-übergreifender ID-Austausch
 description: Erfahren Sie, wie Sie Besucher-IDs von mobilen auf Web-Eigenschaften und domänenübergreifend beibehalten können.
 keywords: Identität; mobil; ID; Freigabe; Domäne; domänenübergreifend; SDK; Plattform;
 exl-id: b9bb236f-52cf-4615-96d8-1137d957de8c
-source-git-commit: 3b65143e33804b251f888dbe2a69d238b3f4cda3
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 2%
@@ -22,7 +22,7 @@ Das Adobe Experience Platform Web SDK unterstützt Funktionen zur Freigabe von B
 
 Ein Bekleidungsunternehmen möchte das Kundenerlebnis auf der Grundlage seiner Interessen personalisieren und die Personalisierung in einer Mobile App, die auch WebViews lädt, präzise halten. Durch die Verwendung der Funktion zur Freigabe von mobilen IDs können sie sicherstellen, dass Kunden die präzisesten Angebote unterbreitet werden. Dabei wird dieselbe Besucherkennung in der App und der mobile Webinhalt verwendet, indem die Variable [!DNL ECID] zur mobilen Web-URL.
 
-### Konsistente Personalisierung domänenübergreifend bereitstellen
+### Konsistente Personalisierung über Domänen hinweg
 
 Ein Einzelhändler mit mehreren Online-Stores möchte das Kundenerlebnis über seine Domänen hinweg personalisieren, basierend auf Kundeninteressen. Mithilfe der domänenübergreifenden ID-Freigabe-Funktion des Web SDK kann der Einzelhändler auf der Grundlage von Kundeninteressen präzise Angebote für alle ihre Domänen bereitstellen.
 
@@ -34,24 +34,24 @@ Ein Technologie-Händler möchte die Berichte zu Besucheraktivitäten verbessern
 
 Um die Freigabe mobiler und domänenübergreifender IDs zu verwenden, müssen Sie [!DNL Web SDK] Version 2.11.0 oder höher.
 
-Bei mobilen Implementierungen von Edge Network wird diese Funktion im Abschnitt [Identität für Edge Network](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network) -Erweiterung ab Version 1.1.0 (iOS und Android).
+Bei mobilen Implementierungen von Edge Network wird diese Funktion im Abschnitt [Identität für Edge Network](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) -Erweiterung ab Version 1.1.0 (iOS und Android).
 
 Diese Funktion ist auch mit [!DNL VisitorAPI.js] Version 1.7.0 oder höher.
 
 ## Freigabe mobiler oder Web-IDs {#mobile-to-web}
 
-Verwenden Sie die `getUrlVariables` API von [Identität für Edge Network](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network/api-reference#geturlvariables) Erweiterung, um die IDs als Abfrageparameter abzurufen und sie beim Öffnen an Ihre URL anzuhängen [!DNL webViews].
+Verwenden Sie die `getUrlVariables` API von [Identität für Edge Network](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables) Erweiterung, um die IDs als Abfrageparameter abzurufen und sie beim Öffnen an Ihre URL anzuhängen [!DNL webViews].
 
 Es ist keine zusätzliche Konfiguration erforderlich, damit das Web SDK `ECID` -Werte in der Abfragezeichenfolge.
 
 Der Abfragezeichenfolgenparameter umfasst:
 
 * `MCID`: Die Experience Cloud-ID (`ECID`)
-* `MCORGID`: Das Experience Cloud `orgID` muss mit dem `orgID` in der [!DNL Web SDK].
+* `MCORGID`: Die Experience Cloud `orgID` muss mit dem `orgID` in der [!DNL Web SDK].
 * `TS`: Ein Zeitstempelparameter, der nicht älter als fünf Minuten sein darf.
 
 
-Die Freigabe von Mobile-to-Web-IDs verwendet die `adobe_mc` Parameter. Wenn die `adobe_mc` -Parameter vorhanden und gültig ist, wird die `ECID` aus der Abfragezeichenfolge wird bei der ersten Anfrage an das Edge-Netzwerk automatisch zur Identitätszuordnung hinzugefügt. Alle nachfolgenden Edge Network-Interaktionen verwenden diese `ECID`.
+Die Freigabe von Mobile-to-Web-IDs verwendet die `adobe_mc` -Parameter. Wenn die Variable `adobe_mc` -Parameter vorhanden und gültig ist, wird die `ECID` aus der Abfragezeichenfolge wird bei der ersten Anfrage an das Edge-Netzwerk automatisch zur Identitätszuordnung hinzugefügt. Alle nachfolgenden Edge Network-Interaktionen verwenden diese `ECID`.
 
 Weitere Informationen zur Übergabe von Besucher-IDs von einer mobilen App an eine WebView finden Sie in der Dokumentation unter [Umgang mit WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html#implementation).
 
@@ -63,7 +63,7 @@ Der Befehl akzeptiert ein Objekt mit einer Eigenschaft, `url`und gibt ein Objekt
 
 Dieser Befehl wartet nicht auf eine Aktualisierung der Zustimmung. Wenn keine Zustimmung erteilt wurde, wird die URL unverändert zurückgegeben.
 
-Wenn eine `ECID` nicht angegeben wird, wird die `/acquire` Endpunkt wird aufgerufen, um eine `ECID`.
+Wenn eine `ECID` nicht angegeben wird, wird die `/acquire` -Endpunkt wird aufgerufen, um eine `ECID`.
 
 Im Folgenden finden Sie ein Beispiel dafür, wie ein Kunde die domänenübergreifende ID-Freigabe auf seiner Website implementieren kann.
 
@@ -94,15 +94,15 @@ Um die Freigabe mobiler, Web- und domänenübergreifender IDs über die Tag-Erwe
 
 Um Identitäten von der aktuellen Seite für andere Domänen freizugeben, gibt es eine neue Aktion im [!DNL Web SDK] [!DNL Tags] -Erweiterung. Diese Aktion ist für die Verwendung mit einer **[!UICONTROL Core - Click]** Ereignistyp und eine Wertvergleichsbedingung.
 
-Führen Sie die beschriebenen Schritte aus [here](../../tags/ui/managing-resources/rules.md) , um eine Regel mit der folgenden Konfiguration zu erstellen:
+Befolgen Sie die beschriebenen Schritte. [here](../../tags/ui/managing-resources/rules.md) , um eine Regel mit der folgenden Konfiguration zu erstellen:
 
 * [!UICONTROL Ereigniskonfiguration]:
    * **[!UICONTROL Erweiterung: Core]**
-   * **[!UICONTROL Ereignistyp: Klicken]**
+   * **[!UICONTROL Ereignistyp: Klicken Sie auf]**
    * Auswählen **[!UICONTROL Wenn der Benutzer auf > spezifische Elemente klickt]**
    * Geben Sie im Feld **[!UICONTROL Selektor]**: `a[href]`. Dieses Ereignis wird jedes Mal Trigger, wenn ein Anker-Tag auf der Seite mit einer `href` -Eigenschaft.
 
-      ![UI-Bild, das die Ereigniskonfiguration mit den oben beschriebenen Einstellungen anzeigt](assets/id-sharing-event-configuration.png)
+     ![Benutzeroberflächenbild mit der Ereigniskonfiguration mit den oben beschriebenen Einstellungen](assets/id-sharing-event-configuration.png)
 
 * [!UICONTROL Bedingungskonfiguration]
    * **[!UICONTROL Logiktyp]**: [!UICONTROL Normal]
@@ -112,14 +112,14 @@ Führen Sie die beschriebenen Schritte aus [here](../../tags/ui/managing-resourc
    * **[!UICONTROL Operator]**: [!UICONTROL Stimmt überein mit Regex]
    * **[!UICONTROL Rechter Operand]**: Geben Sie einen regulären Ausdruck ein, der mit den Domänen übereinstimmt, für die Sie Identitäten freigeben möchten. So können Sie beispielsweise Links mit Hostnamen abgleichen, die auf `adobe.com` oder `behance.com`verwenden Sie diesen regulären Ausdruck: `behance.com$|adobe.com$`. Die verknüpfte Seite muss die [!DNL Web SDK] oder [!DNL Visitor ID] installiert, um die Identität zu akzeptieren.
 
-      ![UI-Bild, das die Bedingungskonfiguration mit den oben beschriebenen Einstellungen anzeigt](assets/id-sharing-condition-configuration.png)
+     ![UI-Bild mit der Bedingungskonfiguration mit den oben beschriebenen Einstellungen](assets/id-sharing-condition-configuration.png)
 
 * [!UICONTROL Aktionskonfiguration]
    * **[!UICONTROL Erweiterung]**: [!UICONTROL Adobe Experience Platform Web SDK]
    * **[!UICONTROL Aktionstyp]**: [!UICONTROL Umleiten mit Identität]
    * **[!UICONTROL Instanz]**: Wählen Sie Ihre Instanz aus. In den meisten Fällen ist nur eine Instanz konfiguriert. Wenn mehrere Instanzen vorhanden sind, wählen Sie die Instanz mit der Identität aus, die Sie freigeben möchten.
 
-      ![UI-Bild, das die Aktionskonfiguration mit den oben beschriebenen Einstellungen anzeigt](assets/id-sharing-action-configuration.png)
+     ![UI-Bild mit der Aktionskonfiguration mit den oben beschriebenen Einstellungen](assets/id-sharing-action-configuration.png)
 
 Die **[!UICONTROL Umleiten mit Identität]** -Aktion verhindert, dass der Browser durch den Link navigiert. Anschließend wird die `appendIdentityToUrl` -Methode [!DNL Web SDK] -Instanz.
 

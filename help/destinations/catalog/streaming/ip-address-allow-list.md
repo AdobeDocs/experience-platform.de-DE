@@ -4,9 +4,9 @@ title: IP-Adressen-Zulassungsliste für Streaming-Ziele
 type: Documentation
 description: Auf dieser Seite finden Sie IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um Daten sicher von Experience Platform an Ihren HTTP REST API-Endpunkt, Amazon Kinesis oder Azure Event Hub-Instanz zu exportieren.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 4d71e246c8ce92cbdae4d248568cf32ab44ac82a
+source-git-commit: ca3c9ed87f2365cc1d9e4ef5e4a6145266a11bba
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '271'
 ht-degree: 9%
 
 ---
@@ -15,9 +15,8 @@ ht-degree: 9%
 
 >[!IMPORTANT]
 >
-> * Adobe empfiehlt, diese Seite mit einem Lesezeichen zu versehen und alle drei Monate erneut aufzurufen, um nach den neuesten IP-Adressen zu suchen. Adobe stellt keine Benachrichtigung über neue IP-Bereiche bereit.
+> * Adobe empfiehlt, diese Seite mit einem Lesezeichen zu versehen und alle drei Monate erneut zu besuchen, um nach den neuesten IP-Adressen zu suchen. Adobe stellt keine Benachrichtigung über neue IP-Bereiche bereit.
 > * Die hier dokumentierte Liste der IPs *nicht* gelten für alle Ziele, die Sie mithilfe von [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).
-
 
 ## Übersicht {#overview}
 
@@ -27,13 +26,13 @@ Die hier dokumentierten IP-Bereiche gelten für die folgenden Ziele:
 * [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
 * [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
 
-Ausgehender Traffic von der Experience Platform zu diesen Zielen durchläuft immer die auf dieser Seite aufgelisteten IPs.
+Ausgehender Traffic von Experience Platform zu diesen Zielen durchläuft immer die auf dieser Seite aufgelisteten IPs.
 
 Diese Seite enthält IP-Bereiche, die Sie zu Ihrer Zulassungsliste hinzufügen können, um Daten sicher von Experience Platform an Ihren HTTP-Endpunkt zu exportieren. [!DNL Amazon Kinesis]oder [!DNL Azure Event Hubs] -Instanz. Diese Funktion ist besonders nützlich, wenn sich Ihr HTTP-Endpunkt hinter einer Unternehmens-Firewall befindet oder wenn Ihre Unternehmens-Sicherheits- und Compliance-Standards eine Liste von IP-Bereichen erfordern, die auf die Zulassungsliste gesetzt werden müssen.
 
 Sie können Netzwerkzugriffssteuerungen über Ihre Netzwerk-Firewall definieren. Durch Angabe des entsprechenden IP-Bereichs können Sie Traffic für den Datenübertragungsdienst zulassen.
 
-Adobe empfiehlt, die folgenden IP-Bereiche zu einer Zulassungsliste hinzuzufügen, bevor Sie mit den oben genannten Zielen auf dieser Seite arbeiten. Wenn Sie Ihren regionsspezifischen IP-Bereich nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung dieser Streaming-Ziele zu Fehlern oder Leistungseinbußen führen.
+Adobe empfiehlt, dass Sie die folgenden IP-Bereiche zu einer Zulassungsliste hinzufügen, bevor Sie mit den oben genannten Zielen auf dieser Seite arbeiten. Wenn Sie Ihren regionsspezifischen IP-Bereich nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung dieser Streaming-Ziele zu Fehlern oder Leistungseinbußen führen.
 
 ## VA7: Kunden in den USA und Amerika {#us-americas}
 
@@ -57,6 +56,7 @@ Adobe empfiehlt, die folgenden IP-Bereiche zu einer Zulassungsliste hinzuzufüge
 `52.254.106.240/28`
 `52.254.107.0/28`
 `52.254.107.144/28`
+`20.22.83.112`
 
 ## NLD2: EMEA-Kunden {#emea}
 
@@ -109,3 +109,33 @@ Adobe empfiehlt, die folgenden IP-Bereiche zu einer Zulassungsliste hinzuzufüge
 `20.40.191.96/28`
 `20.43.104.32/28`
 `20.43.104.64/28`
+`20.53.206.128`
+`20.227.35.177`
+
+## CAN2: Kanada-Kunden {#can}
+
+`20.104.46.128/28`
+`20.104.46.160/28`
+`20.104.46.64/28`
+`20.104.46.80/28`
+`20.116.145.94`
+`20.116.147.168`
+`20.200.70.192/28`
+`20.200.70.208/28`
+`20.200.70.224/28`
+`20.200.70.240/28`
+`20.200.71.0/28`
+`20.200.71.112/28`
+`20.200.71.128/28`
+`20.200.71.144/28`
+`20.200.71.16/28`
+`20.200.71.160/28`
+`20.200.71.176/28`
+`20.200.71.32/28`
+`20.200.71.48/28`
+`20.200.71.64/28`
+`20.200.71.80/28`
+`20.200.71.96/28`
+`20.200.93.180`
+`20.200.94.116`
+`20.200.94.83`

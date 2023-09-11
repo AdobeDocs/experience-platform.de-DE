@@ -4,10 +4,10 @@ title: Standardmäßige Warnhinweisregeln
 description: In diesem Dokument werden die von Experience Platform bereitgestellten vordefinierten Warnhinweisregeln behandelt.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 6650894c145fd1f42731fd5ed8aeb6e38062aa61
+source-git-commit: 9120377f5f2048579d7e2a4740cfcbc56d49d61a
 workflow-type: tm+mt
-source-wordcount: '943'
-ht-degree: 78%
+source-wordcount: '961'
+ht-degree: 77%
 
 ---
 
@@ -20,6 +20,10 @@ Wenn Sie [Warnhinweisregeln in der Platform-Benutzeroberfläche anzeigen](./ui.m
 ## Datenaufnahme
 
 Die folgenden Warnhinweisregeln sind spezifisch für [Datenerfassung](../../ingestion/home.md) und [Quellen](../../sources/home.md):
+
+>[!NOTE]
+>
+>Streaming-Quellen werden derzeit nicht von Warnhinweisen unterstützt. Sie können nur Benachrichtigungen für Batch-Quellen abonnieren.
 
 | E/A-Ereignis-Abonnement | Warnhinweisregel | Beschreibung |
 | --- | --- | --- |
@@ -73,7 +77,7 @@ Die folgenden Warnhinweisregeln sind spezifisch für den [Segmentierungs-Service
 | --- | --- | --- |
 | Informationen zu Segmentauswertungsavorgängen | Start des Segmentvorgangs | Dieser Warnhinweis wird ausgelöst, wenn ein Vorgang zur Segmentauswertung mit der Verarbeitung von Daten beginnt. |
 | Informationen zu Segmentauswertungsavorgängen | Erfolgreicher Vorgang zur Segmentauswertung | Dieser Warnhinweis wird ausgelöst, wenn ein Vorgang zur Segmentauswertung erfolgreich abgeschlossen wurde. |
-| Verzögerungen, Fehler und Fehler bei Vorgängen zur Segmentauswertung | Verzögerung bei Segmentvorgängen | Dieser Warnhinweis wird ausgelöst, wenn ein Vorgang zur Segmentauswertung länger als 150 Minuten dauert. <br> Es wird einer der folgenden Status angezeigt: <br>- FIRING - Die Bedingung für einen Fehler oder eine Verzögerung wurde erfüllt (betrachten Sie sie als AKTIV). <br>- INAKTIV - Die Bedingung wurde nicht erfüllt oder nicht behoben (betrachten Sie sie als RESOLVED-Status). |
+| Verzögerungen, Fehler und Fehler bei Vorgängen zur Segmentauswertung | Verzögerung bei Segmentvorgängen | Dieser Warnhinweis wird ausgelöst, wenn ein Vorgang zur Segmentauswertung länger als 150 Minuten dauert. <br> Es wird einer der folgenden Status angezeigt: <br>- FIRING - Die Bedingung für einen Fehler oder eine Verzögerung wurde erfüllt (betrachten Sie sie als AKTIV). <br>- INAKTIV - Die Bedingung wurde nicht erfüllt oder nicht behoben (betrachten Sie sie als RESOLVED). |
 | Verzögerungen, Fehler und Fehler bei Vorgängen zur Segmentauswertung | Fehler beim Segmentvorgang | Dieser Warnhinweis wird ausgelöst, wenn ein Vorgang zur Segmentauswertung zu einem Fehler führt. |
 | Verzögerungen, Fehler und Fehler bei Vorgängen zur Segmentauswertung | Segmentdefinition deaktiviert | Dieser Warnhinweis wird ausgelöst, wenn eine Segmentdefinition aufgrund eines internen Fehlers deaktiviert ist. Dadurch wird automatisch ein Fehlerbericht für ein Adobe-Entwicklungsteam ausgelöst, um das Problem zu untersuchen. Dieser Warnhinweis dient nur zur Information und erfordert keine Aktion von Ihnen. |
 

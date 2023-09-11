@@ -3,9 +3,9 @@ title: Vergleich von at.js mit dem Experience Platform Web SDK
 description: Erfahren Sie, wie die at.js-Funktionen mit dem Experience Platform Web SDK verglichen werden.
 keywords: Target; adobe target; activity.id; experience.id; renderDecisions; DecisionScopes; Vorabausblenden von Snippet; VEC; Form-Based Experience Composer; xdm; Zielgruppen; Entscheidungen; Umfang; Schema; Systemdiagramm; Diagramm
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 5065d76ad8008988c843c88e33a25731fb5284d0
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '2286'
+source-wordcount: '2281'
 ht-degree: 8%
 
 ---
@@ -20,7 +20,7 @@ Dieser Artikel bietet einen Überblick über die Unterschiede zwischen den `at.j
 
 ### Installieren von at.js
 
-Wir erlauben unseren Kunden, die Bibliothek direkt über die Registerkarte Implementierung von Adobe Experience Cloud herunterzuladen. Die at.js-Bibliothek ist mit Einstellungen angepasst, die der Kunde wie folgt verwendet: clientCode, imsOrgId usw.
+Wir erlauben unseren Kunden, die Bibliothek direkt über die Registerkarte Implementierung von Adobe Experience Cloud herunterzuladen. Die at.js-Bibliothek wird mit Einstellungen wie clientCode, imsOrgId usw. angepasst, die der Kunde verwendet.
 
 ### Installieren des Web SDK
 
@@ -330,7 +330,7 @@ adobe.target.getOffers({
 
 ### Verwenden des Web SDK
 
-Sie können formularbasierte Composer-basierte Aktivitäten abrufen, indem Sie die `sendEvent` und Übergeben der Mbox-Namen unter dem `decisionScopes` -Option. Die `sendEvent` gibt einen Promise zurück, der mit einem Objekt aufgelöst wird, das die angeforderten Aktivitäten/Vorschläge enthält: So wird die `propositions` Array sieht wie folgt aus:
+Sie können formularbasierte Composer-basierte Aktivitäten mithilfe der `sendEvent` und Übergeben der Mbox-Namen unter dem `decisionScopes` -Option. Die `sendEvent` gibt einen Promise zurück, der mit einem Objekt aufgelöst wird, das die angeforderten Aktivitäten/Vorschläge enthält: So wird der `propositions` Array sieht wie folgt aus:
 
 ```javascript
 [
@@ -518,7 +518,7 @@ adobe.target.sendNotifications({
 
 ### Verwenden des Web SDK
 
-Sie können Ereignisse und Benutzeraktionen verfolgen, indem Sie die `sendEvent` -Befehl eingeben und die `_experience.decisioning.propositions` XDM-Feldgruppe und Festlegen der `eventType` auf einen von 2 Werten:
+Sie können Ereignisse und Benutzeraktionen verfolgen, indem Sie `sendEvent` -Befehl eingeben und die `_experience.decisioning.propositions` XDM-Feldgruppe und Festlegen der `eventType` auf einen von 2 Werten:
 
 * `decisioning.propositionDisplay`: Signalisiert das Rendering der Target-Aktivität.
 * `decisioning.propositionInteract`: Signalisiert eine Benutzerinteraktion mit der Aktivität, z. B. einen Mausklick.
@@ -782,7 +782,7 @@ Es gibt zwei Arten von A4T-Protokollierung, die mit at.js unterstützt werden:
 
 **Beispiel 1: Verwenden der globalen Target-Einstellung**
 
-Die clientseitige Protokollierung in Analytics kann durch Festlegen von `analyticsLogging: client_side` in den at.js-Einstellungen oder durch Überschreiben der `window.targetglobalSettings` -Objekt.
+Die clientseitige Protokollierung in Analytics kann durch Festlegen von `analyticsLogging: client_side` in den at.js-Einstellungen oder durch Überschreiben der Variablen `window.targetglobalSettings` -Objekt.
 Wenn diese Option eingerichtet ist, sieht das Format der zurückgegebenen Payload wie folgt aus:
 
 ```json
@@ -850,11 +850,11 @@ So sieht die Antwort-Payload aus:
 }
 ```
 
-Die Analytics-Payload (`tnta` Token) im Analytics-Treffer mit [Dateneinfüge-API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
+Die Analytics-Payload (`tnta` Token) sollte im Analytics-Treffer mit [Dateneinfüge-API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
 
 #### Serverseitige Protokollierung in Analytics
 
-Die serverseitige Protokollierung in Analytics kann durch Festlegen von `analyticsLogging: server_side` in den at.js-Einstellungen oder durch Überschreiben der `window.targetglobalSettings` -Objekt.
+Die serverseitige Protokollierung in Analytics kann durch Festlegen von `analyticsLogging: server_side` in den at.js-Einstellungen oder durch Überschreiben der Variablen `window.targetglobalSettings` -Objekt.
 Anschließend werden die Daten wie folgt übertragen:
 
 ![](assets/a4t-server-side-atjs.png)
@@ -1065,7 +1065,7 @@ alloy("sendEvent", {
 });
 ```
 
-## Wie verwende ich Drittanbieter-IDs?
+## Verwendung von Drittanbieter-IDs
 
 ### Verwenden von at.js
 
@@ -1104,7 +1104,7 @@ adobe.target.getOffers({
 Oder es gibt eine Möglichkeit, die `mbox3rdPartyId` entweder in `targetPageParams` oder `targetPageParamsAll`.
 Wenn Sie `targetPageParams`, wird sie in den Anfragen für `target-global-mbox` auch bekannt als `pag-lLoad`.
 Die Empfehlung soll mithilfe von `targetPageParamsAll` da sie in jeder Zielgruppenanfrage gesendet wird.
-Der Vorteil der Verwendung von `targetPageParamsAll` ist, dass Sie die `mbox3rdPartyId` einmalig auf der Seite angezeigt wird. Dadurch wird sichergestellt, dass alle Zielanforderungen das Recht haben `mbox3rdPartyId`.
+Der Vorteil der Verwendung von `targetPageParamsAll` Sie können die Variable `mbox3rdPartyId` einmalig auf der Seite angezeigt wird. Dadurch wird sichergestellt, dass alle Zielanforderungen das Recht haben `mbox3rdPartyId`.
 
 ```javascript
 window.targetPageParamsAll = function() {
@@ -1188,7 +1188,7 @@ Das bedeutet, dass jeder Target-Aufruf für diese spezifische Data Stream-Konfig
 
 ### Verwenden von at.js
 
-Diese Funktion ist nur in at.js 2.x verfügbar. at.js 2.x verfügt über eine neue Funktion mit dem Namen `getOffers`. `getOffers` -Kunden die Möglichkeit bieten, Inhalte für eine oder mehrere Mboxes vorab abzurufen. Siehe folgendes Beispiel:
+Diese Funktion ist nur in at.js 2.x verfügbar. at.js 2.x verfügt über eine neue Funktion namens `getOffers`. `getOffers` -Kunden die Möglichkeit bieten, Inhalte für eine oder mehrere Mboxes vorab abzurufen. Siehe folgendes Beispiel:
 
 ```javascript
 adobe.target.getOffers({
@@ -1233,7 +1233,7 @@ Hinweis: Alle diese Debugging-Funktionen sind mit erweiterten Funktionen in [Ado
 
 Bei Verwendung des Web SDK stehen Ihnen mehrere Debugging-Funktionen zur Verfügung:
 
-* Verwenden [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
+* Verwenden [Assurance](../../../assurance/home.md)
 * [Web SDK-Debugging aktiviert](../../../edge/fundamentals/debugging.md)
 * Verwendung [Web SDK-Überwachungshooks](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
 * Verwendung [Adobe Experience Platform Debugger](../../../debugger/home.md)
