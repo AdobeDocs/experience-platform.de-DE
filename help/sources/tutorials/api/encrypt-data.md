@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie verschlüsselte Dateien über Cloud-Speicher-
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: cd8844121fef79205d57fa979ca8630fc1b1ece4
 workflow-type: tm+mt
-source-wordcount: '1342'
-ht-degree: 75%
+source-wordcount: '1473'
+ht-degree: 89%
 
 ---
 
@@ -76,7 +76,7 @@ POST /data/foundation/connectors/encryption/keys
 
 **Anfrage**
 
-Die folgende Anfrage generiert mithilfe des PGP-Verschlüsselungsalgorithmus ein Verschlüsselungs-Schlüsselpaar.
+Die folgende Anfrage generiert mithilfe des PGP-Verschlüsselungsalgorithmus ein Verschlüsselungsschlüsselpaar.
 
 ```shell
 curl -X POST \
@@ -117,17 +117,17 @@ Bei erfolgreicher Antwort werden Ihr öffentlicher, mit Base64 verschlüsselter 
 | `publicKeyId` | Die öffentliche Schlüssel-ID wird verwendet, um einen Datenfluss zu erstellen und Ihre verschlüsselten Cloud-Speicherdaten in Experience Platform zu erfassen. |
 | `expiryTime` | Die Ablaufzeit definiert das Ablaufdatum Ihres Verschlüsselungsschlüsselpaars. Dieses Datum wird automatisch auf 180 Tage nach dem Datum der Schlüsselgenerierung gesetzt und im Unix-Zeitstempelformat angezeigt. |
 
-+++(Optional) Erstellen Sie ein Schlüsselpaar für die Signierüberprüfung für signierte Daten
++++(Optional) Erstellen eines Schlüsselpaars für die Signaturverifizierung von signierten Daten
 
-### Kundenverwaltetes Schlüsselpaar erstellen
+### Erstellen eines kundenverwalteten Schlüsselpaars
 
-Sie können optional ein Schlüsselpaar für die Signaturüberprüfung erstellen, um Ihre verschlüsselten Daten zu signieren und zu erfassen.
+Sie können optional ein Schlüsselpaar für die Signaturverifizierung erstellen, um Ihre verschlüsselten Daten zu signieren und aufzunehmen.
 
-In dieser Phase müssen Sie Ihre eigene Kombination aus privatem Schlüssel und öffentlichem Schlüssel generieren und dann Ihren privaten Schlüssel zum Signieren Ihrer verschlüsselten Daten verwenden. Als Nächstes müssen Sie Ihren öffentlichen Schlüssel in Base64 kodieren und ihn dann für Experience Platform freigeben, damit Platform Ihre Signatur überprüfen kann.
+In dieser Phase müssen Sie Ihre eigene Kombination aus privatem Schlüssel und öffentlichem Schlüssel generieren und dann den privaten Schlüssel zum Signieren Ihrer verschlüsselten Daten verwenden. Als Nächstes müssen Sie Ihren öffentlichen Schlüssel in Base64 codieren und ihn dann für Experience Platform freigeben, damit Platform Ihre Signatur überprüfen kann.
 
-### Öffentlichen Schlüssel für Experience Platform freigeben
+### Freigeben eines öffentlichen Schlüssels für Experience Platform
 
-Um Ihren öffentlichen Schlüssel freizugeben, stellen Sie eine POST-Anfrage an die `/customer-keys` -Endpunkt bei der Bereitstellung Ihres Verschlüsselungsalgorithmus und Ihres Base64-kodierten öffentlichen Schlüssels.
+Um Ihren öffentlichen Schlüssel freizugeben, stellen Sie eine POST-Anfrage an den `/customer-keys`-Endpunkt bei der Bereitstellung Ihres Verschlüsselungsalgorithmus und Ihres Base64-codierten öffentlichen Schlüssels.
 
 **API-Format**
 
@@ -154,7 +154,7 @@ curl -X POST \
 | Parameter | Beschreibung |
 | --- | --- |
 | `encryptionAlgorithm` | Der Typ des von Ihnen verwendeten Verschlüsselungsalgorithmus. Die unterstützten Verschlüsselungstypen sind `PGP` und `GPG`. |
-| `publicKey` | Der öffentliche Schlüssel, der Ihren kundenverwalteten Schlüsseln entspricht, die zum Signieren Ihrer verschlüsselten Datei verwendet werden. Dieser Schlüssel muss Base64-kodiert sein. |
+| `publicKey` | Der öffentliche Schlüssel, der Ihren kundenverwalteten Schlüsseln entspricht, die zum Signieren Ihrer verschlüsselten Daten verwendet werden. Dieser Schlüssel muss Base64-codiert sein. |
 
 **Antwort**
 
@@ -166,7 +166,7 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `publicKeyId` | Diese öffentliche Schlüssel-ID wird zurückgegeben, wenn Sie Ihren kundenverwalteten Schlüssel für Experience Platform freigeben. Sie können diese Kennung des öffentlichen Schlüssels als Kennung des Signierüberprüfungsschlüssels angeben, wenn Sie einen Datenfluss für signierte und verschlüsselte Daten erstellen. |
+| `publicKeyId` | Diese öffentliche Schlüssel-ID wird zurückgegeben, wenn Sie Ihren kundenverwalteten Schlüssel für Experience Platform freigeben. Sie können diese öffentliche Schlüssel-ID als Kennung des Signaturverfizierungsschlüssels angeben, wenn Sie einen Datenfluss für signierte und verschlüsselte Daten erstellen. |
 
 +++
 
@@ -212,7 +212,7 @@ POST /flows
 
 >[!BEGINTABS]
 
->[!TAB Erstellen eines Datenflusses für die verschlüsselte Datenerfassung]
+>[!TAB Erstellen eines Datenflusses für die Aufnahme verschlüsselter Daten]
 
 Die folgende Anfrage erstellt einen Datenfluss zum Aufnehmen verschlüsselter Daten für eine Cloud-Speicherquelle.
 
@@ -271,7 +271,7 @@ curl -X POST \
 | `scheduleParams.interval` | Das Intervall bezeichnet den Zeitraum zwischen zwei aufeinanderfolgenden Datenflussausführungen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Das Intervall ist nicht erforderlich, wenn die Häufigkeit auf `once` festgelegt ist, und sollte größer oder gleich `15` für andere Frequenzwerte sein. |
 
 
->[!TAB Erstellen eines Datenflusses zur Erfassung verschlüsselter und signierter Daten]
+>[!TAB Erstellen eines Datenflusses für die Aufnahme verschlüsselter und signierter Daten]
 
 ```shell
 curl -X POST \
@@ -318,7 +318,7 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `params.signVerificationKeyId` | Die ID des Signaturüberprüfungsschlüssels entspricht der Kennung des öffentlichen Schlüssels, die nach der Freigabe Ihres Base64-kodierten öffentlichen Schlüssels für Experience Platform abgerufen wurde. |
+| `params.signVerificationKeyId` | Die ID des Signaturverifizierungsschlüssels entspricht der ID des öffentlichen Schlüssels, die nach der Freigabe Ihres Base64-codierten öffentlichen Schlüssels für Experience Platform abgerufen wurde. |
 
 >[!ENDTABS]
 
@@ -332,6 +332,40 @@ Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenfluss
     "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
+
+
+>[!BEGINSHADEBOX]
+
+**Einschränkungen bei der wiederkehrenden Erfassung**
+
+Die verschlüsselte Datenerfassung unterstützt nicht die Erfassung wiederkehrender oder mehrstufiger Ordner in Quellen. Alle verschlüsselten Dateien müssen in einem einzigen Ordner enthalten sein. Platzhalter mit mehreren Ordnern in einem einzelnen Quellpfad werden ebenfalls nicht unterstützt.
+
+Im Folgenden finden Sie ein Beispiel für eine unterstützte Ordnerstruktur, bei der der Quellpfad `/ACME-customers/*.csv.gpg`.
+
+In diesem Szenario werden die fett gedruckten Dateien in Experience Platform aufgenommen.
+
+* ACME-Kunden
+   * **File1.csv.gpg**
+   * File2.json.gpg
+   * **File3.csv.gpg**
+   * File4.json
+   * **File5.csv.gpg**
+
+Im Folgenden finden Sie ein Beispiel für eine nicht unterstützte Ordnerstruktur, bei der der Quellpfad `/ACME-customers/*`.
+
+In diesem Szenario schlägt die Flussausführung fehl und gibt eine Fehlermeldung zurück, die angibt, dass Daten nicht aus der Quelle kopiert werden können.
+
+* ACME-Kunden
+   * File1.csv.gpg
+   * File2.json.gpg
+   * Subfolder1
+      * File3.csv.gpg
+      * File4.json.gpg
+      * File5.csv.gpg
+* ACME-Loyalität
+   * File6.csv.gpg
+
+>[!ENDSHADEBOX]
 
 ## Nächste Schritte
 
