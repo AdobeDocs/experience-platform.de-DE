@@ -1,12 +1,12 @@
 ---
 keywords: Werbung; Bierwerbung;
 title: Microsoft Bing-Verbindung
-description: Mit dem Microsoft Bing-Verbindungsziel können Sie digitale Kampagnen für Retargeting und Zielgruppen-Targeting in Microsoft Display Advertising durchführen.
+description: Mit dem Microsoft Bing-Verbindungsziel können Sie im gesamten Microsoft Advertising Network gezielte digitale Kampagnen für Zielgruppen und Zielgruppen ausführen, einschließlich Display-Werbung, Suche und nativ.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: 093ddd1651e15bebf73d007fb05042fbcf02c675
 workflow-type: tm+mt
-source-wordcount: '650'
-ht-degree: 63%
+source-wordcount: '690'
+ht-degree: 60%
 
 ---
 
@@ -14,13 +14,15 @@ ht-degree: 63%
 
 ## Übersicht {#overview}
 
-Die [!DNL Microsoft Bing] Das Ziel hilft beim Senden von Profildaten an [!DNL Microsoft Display Advertising].
+Verwenden Sie die [!DNL Microsoft Bing] Ziel zum Senden von Profildaten an die gesamte [!DNL Microsoft Advertising Network], einschließlich [!DNL Display Advertising], [!DNL Search], und [!DNL Native].
+
+Die [!DNL Microsoft Bing] Ziel erstellt *[!DNL Custom Audiences]* in Microsoft. Diese sind sowohl im [!DNL Microsoft Search Network] und [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]), wie im Abschnitt [Microsoft-Werbedokumentation](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
 
 So senden Sie Profildaten an [!DNL Microsoft Bing], müssen Sie zunächst eine Verbindung zum Ziel herstellen.
 
 ## Anwendungsfälle {#use-cases}
 
-Als Marketer möchte ich in der Lage sein, aus [!DNL Microsoft Advertising IDs] , um Benutzer über Display-Werbung anzusprechen. [!DNL Microsoft Advertising] Kanäle.
+Als Marketer möchte ich in der Lage sein, aus [!DNL Microsoft Advertising IDs] , um Benutzer über Display- oder Suchwerbung gezielt anzusprechen [!DNL Microsoft Advertising] Kanäle.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -74,7 +76,7 @@ Beim Konfigurieren des Ziels müssen Sie die folgenden Informationen angeben:
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor.
 
-### Verbindungsparameter {#parameters}
+### Ausfüllen der Zieldetails {#parameters}
 
 Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
