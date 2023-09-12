@@ -3,10 +3,10 @@ title: Erstellen eines Quell-Connectors für Google PubSub in der Benutzeroberfl
 description: Erfahren Sie, wie Sie einen Google PubSub-Quell-Connector in der Platform-Benutzeroberfläche erstellen.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
 workflow-type: tm+mt
-source-wordcount: '1028'
-ht-degree: 43%
+source-wordcount: '1043'
+ht-degree: 41%
 
 ---
 
@@ -34,8 +34,8 @@ Um eine Verbindung von [!DNL PubSub] mit Platform herzustellen, müssen Sie eine
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
 | Projekt-ID | Die zur Authentifizierung von [!DNL PubSub] erforderliche Projekt-ID. |
-| Anmeldeinformationen | Die für die Authentifizierung von [!DNL PubSub] erforderliche Kennung der Anmeldeinformationen oder des privaten Schlüssels. |
-| Themenname | Der Name Ihres [!DNL PubSub] Abonnement. In [!DNL PubSub], können Sie über Abonnements Nachrichten empfangen, indem Sie sich für das Thema anmelden, in dem Nachrichten veröffentlicht wurden. **Hinweis**: Ein [!DNL PubSub] Abonnements können nur für einen Datenfluss verwendet werden. Um mehrere Datenflüsse erstellen zu können, müssen Sie über mehrere Abonnements verfügen. |
+| Anmeldeinformationen | Die zum Authentifizieren erforderliche Berechtigung [!DNL PubSub]. Sie müssen sicherstellen, dass Sie die vollständige JSON-Datei platzieren, nachdem Sie die Leerzeichen aus Ihren Anmeldedaten entfernt haben. |
+| Themenname | Der Name Ihres [!DNL PubSub] Abonnement. In [!DNL PubSub], können Sie über Abonnements Nachrichten empfangen, indem Sie sich für das Thema anmelden, in dem Nachrichten veröffentlicht wurden. **Hinweis**: Eine einzelne [!DNL PubSub] Abonnements können nur für einen Datenfluss verwendet werden. Um mehrere Datenflüsse erstellen zu können, müssen Sie über mehrere Abonnements verfügen. |
 | Abonnementname | Der Name Ihres [!DNL PubSub] Abonnement. In [!DNL PubSub], können Sie über Abonnements Nachrichten empfangen, indem Sie sich für das Thema anmelden, in dem Nachrichten veröffentlicht wurden. |
 
 Weitere Informationen zu diesen Werten finden Sie im folgenden Dokument [PubSub-Authentifizierung](https://cloud.google.com/pubsub/docs/authentication). Wenn Sie die auf dem Service-Account basierende Authentifizierung verwenden, lesen Sie das folgende [PubSub-Handbuch](https://cloud.google.com/docs/authentication/production#create_service_account), in dem die Schritte zum Generieren Ihrer Anmeldeinformationen beschrieben werden.
@@ -54,7 +54,7 @@ Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirms
 
 Wählen Sie unter der Kategorie [!UICONTROL Cloud-Speicherplatz] die Option **[!UICONTROL Google PubSub]** und dann die Option **[!UICONTROL Daten hinzufügen]** aus.
 
-![Der Quellkatalog in der Experience Platform-Benutzeroberfläche.](../../../../images/tutorials/create/google-pubsub/catalog.png)
+![Der Quellkatalog auf der Experience Platform-Benutzeroberfläche.](../../../../images/tutorials/create/google-pubsub/catalog.png)
 
 Die Seite **[!UICONTROL Verbinden mit Google PubSub]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
@@ -98,7 +98,7 @@ So erstellen Sie ein Konto mit eingeschränktem Zugriff auf eine bestimmte [!DNL
 
 ## Daten auswählen
 
-Eine erfolgreiche Authentifizierung bringt Sie zu [!UICONTROL Daten auswählen] Schritt, in dem Sie durch Ihre [!DNL PubSub] die Datenhierarchie und wählen Sie die Daten aus, die Sie zur Experience Platform hinzufügen möchten.
+Eine erfolgreiche Authentifizierung bringt Sie zu [!UICONTROL Daten auswählen] Schritt, in dem Sie durch Ihre [!DNL PubSub] die Datenhierarchie und wählen Sie die Daten aus, die Sie zum Experience Platform bringen möchten.
 
 >[!BEGINTABS]
 
@@ -106,7 +106,7 @@ Eine erfolgreiche Authentifizierung bringt Sie zu [!UICONTROL Daten auswählen] 
 
 Wenn Sie sich beim projektbasierten Zugriff authentifiziert haben, wird die [!UICONTROL Daten auswählen] -Oberfläche zeigt alle Abonnements in Ihrem Projekt an, denen ein Thema angehängt ist.
 
-![Der Schritt &quot;Daten auswählen&quot;des Ursprungs-Workflows mit projektbasierter Authentifizierung.](../../../../images/tutorials/create/google-pubsub/root-folders.png)
+![Der Schritt Datenauswahl des Ursprungs-Workflows mit projektbasierter Authentifizierung.](../../../../images/tutorials/create/google-pubsub/root-folders.png)
 
 >[!TAB Themen- und Abonnement-basierte Authentifizierung]
 
@@ -116,7 +116,7 @@ Wenn Sie sich mit einem Thema und Abonnementzugriff authentifiziert haben, wird 
 * Wenn Sie nur den Abonnementnamen angeben, zeigt die Benutzeroberfläche alle Themen-Abonnementpaare an, die dem angegebenen Abonnementnamen entsprechen.
 * Wenn sowohl Themen- als auch Abonnementnamen angegeben sind, zeigt die Benutzeroberfläche das Thema-Abonnement-Paar an, das beiden bereitgestellten Werten entspricht.
 
-![Der Schritt &quot;Daten auswählen&quot;des Ursprungs-Workflows mit Thema- und Abonnement-basierter Authentifizierung.](../../../../images/tutorials/create/google-pubsub/scoped-folders.png)
+![Der Schritt &quot;Daten auswählen&quot;des Ursprungs-Workflows mit Themen- und Abonnement-basierter Authentifizierung.](../../../../images/tutorials/create/google-pubsub/scoped-folders.png)
 
 >[!ENDTABS]
 

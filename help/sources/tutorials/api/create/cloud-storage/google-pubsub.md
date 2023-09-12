@@ -3,10 +3,10 @@ title: Erstellen einer Google PubSub-Quellverbindung mit der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit einem Google PubSub-Konto verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
 workflow-type: tm+mt
-source-wordcount: '979'
-ht-degree: 67%
+source-wordcount: '996'
+ht-degree: 65%
 
 ---
 
@@ -34,9 +34,9 @@ Um [!DNL Flow Service] mit [!DNL PubSub] zu verbinden, müssen Sie Werte für di
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
 | `projectId` | Die zur Authentifizierung von [!DNL PubSub] erforderliche Projekt-ID. |
-| `credentials` | Die zur Authentifizierung von [!DNL PubSub] erforderlichen Anmeldeinformationen bzw. der Schlüssel. |
+| `credentials` | Die zum Authentifizieren erforderliche Berechtigung [!DNL PubSub]. Sie müssen sicherstellen, dass Sie die vollständige JSON-Datei platzieren, nachdem Sie die Leerzeichen aus Ihren Anmeldedaten entfernt haben. |
 | `topicName` | Der Name der Ressource, die einen Feed von Nachrichten darstellt. Sie müssen einen Themennamen angeben, wenn Sie Zugriff auf einen bestimmten Datenstrom in Ihrer [!DNL PubSub] -Quelle. Das Format des Themennamens lautet: `projects/{PROJECT_ID}/topics/{TOPIC_ID}`. |
-| `subscriptionName` | Der Name Ihres [!DNL PubSub] Abonnement. In [!DNL PubSub], können Sie über Abonnements Nachrichten empfangen, indem Sie sich für das Thema anmelden, in dem Nachrichten veröffentlicht wurden. **Hinweis**: Ein [!DNL PubSub] Abonnements können nur für einen Datenfluss verwendet werden. Um mehrere Datenflüsse erstellen zu können, müssen Sie über mehrere Abonnements verfügen. Das Format des Abonnementnamens lautet: `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
+| `subscriptionName` | Der Name Ihres [!DNL PubSub] Abonnement. In [!DNL PubSub], können Sie über Abonnements Nachrichten empfangen, indem Sie sich für das Thema anmelden, in dem Nachrichten veröffentlicht wurden. **Hinweis**: Eine einzelne [!DNL PubSub] Abonnements können nur für einen Datenfluss verwendet werden. Um mehrere Datenflüsse erstellen zu können, müssen Sie über mehrere Abonnements verfügen. Das Format des Abonnementnamens lautet: `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen im Zusammenhang mit der Erstellung der Basis- und Quell-Target-Verbindungen. Die Spezifikations-ID der [!DNL PubSub]-Verbindung lautet: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 Weitere Informationen zu diesen Werten finden Sie in diesem Dokument zur [[!DNL PubSub] Authentifizierung](https://cloud.google.com/pubsub/docs/authentication). Informationen zur Verwendung der auf Service-Konten basierenden Authentifizierung finden Sie in diesem [[!DNL PubSub] Handbuch zum Erstellen von Service-Konten](https://cloud.google.com/docs/authentication/production#create_service_account) in den Schritten zum Erstellen von Anmeldedaten.
@@ -135,8 +135,8 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `auth.params.credentials` | Die zur Authentifizierung von [!DNL PubSub] erforderlichen Anmeldeinformationen bzw. der Schlüssel. |
-| `auth.params.topicName` | Das Projekt-ID- und Themen-ID-Paar für die [!DNL PubSub] -Quelle, auf die Sie Zugriff gewähren möchten. |
-| `auth.params.subscriptionName` | Das Projekt-ID- und Abonnement-ID-Paar für die [!DNL PubSub] -Quelle, auf die Sie Zugriff gewähren möchten. |
+| `auth.params.topicName` | Projekt-ID und Themen-ID-Paar für die [!DNL PubSub] -Quelle, auf die Sie Zugriff gewähren möchten. |
+| `auth.params.subscriptionName` | Projekt-ID und Abonnement-ID-Paar für die [!DNL PubSub] -Quelle, auf die Sie Zugriff gewähren möchten. |
 | `connectionSpec.id` | Die [!DNL PubSub]-Verbindungsspezifikations-ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 >[!ENDTABS]
