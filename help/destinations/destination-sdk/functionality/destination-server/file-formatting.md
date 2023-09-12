@@ -1,10 +1,10 @@
 ---
 description: Erfahren Sie, wie Sie über den Endpunkt „/destination-servers“ Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren, die mit Adobe Experience Platform Destination SDK erstellt wurden.
 title: Konfiguration der Dateiformatierung
-source-git-commit: 511e02f92b7016a7f07dd3808b39594da9438d15
+source-git-commit: 4f4ffc7fc6a895e529193431aba77d6f3dcafb6f
 workflow-type: tm+mt
-source-wordcount: '1004'
-ht-degree: 96%
+source-wordcount: '1093'
+ht-degree: 88%
 
 ---
 
@@ -119,7 +119,11 @@ Im folgenden Konfigurationsbeispiel sind alle CSV-Optionen vordefiniert. Die in 
                 "value": ""
             }
         },
-        "maxFileRowCount":5000000
+        "maxFileRowCount":5000000,
+        "includeFileManifest": {
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{{ customerData.includeFileManifest }}"
+      }
     }
 ```
 
@@ -160,7 +164,11 @@ Im folgenden Konfigurationsbeispiel ist keine der CSV-Optionen vordefiniert. Der
             "value":"{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'emptyValue' %}{{customerData.csvOptions.emptyValue}}{% else %}{% endif %}"
          }
       },
-      "maxFileRowCount":5000000
+      "maxFileRowCount":5000000,
+      "includeFileManifest": {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{ customerData.includeFileManifest }}"
+      }
    }
 }
 ```
@@ -192,6 +200,7 @@ Nachstehend finden Sie eine vollständige Referenz aller verfügbaren Dateiforma
 | `csvOptions.charToEscapeQuoteEscaping.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt ein einzelnes Zeichen fest, das zum Maskieren des Escape-Zeichens für das Anführungszeichen verwendet wird. | `\` wenn Escape- und Anführungszeichen unterschiedlich sind. `\0` wenn Escape- und Anführungszeichen identisch sind. | – | – |
 | `csvOptions.emptyValue.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt die Zeichenfolgendarstellung eines leeren Werts fest. | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
 | `maxFileRowCount` | Optional | Gibt die maximale Anzahl von Zeilen pro exportierter Datei an, zwischen 1.000.000 und 10.000.000 Zeilen. | 5.000.000 |
+| `includeFileManifest` | Optional | Aktiviert die Unterstützung für das Exportieren eines Dateimanifests zusammen mit den Dateiexporten. Die JSON-Manifestdatei enthält Informationen zum Exportspeicherort, zur Exportgröße und mehr. Das Manifest wird im Format `manifest-<<destinationId>>-<<dataflowRunId>>.json`. | Anzeigen von [Beispielmanifestdatei](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Die Manifestdatei enthält die folgenden Felder: <ul><li>`flowRunId`: Die [dataflow run](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) die die exportierte Datei generiert hat.</li><li>`scheduledTime`: Die Uhrzeit in UTC, zu der die Datei exportiert wurde. </li><li>`exportResults.sinkPath`: Der Pfad in Ihrem Speicherort, unter dem die exportierte Datei abgelegt wird. </li><li>`exportResults.name`: Der Name der exportierten Datei.</li><li>`size`: Die Größe der exportierten Datei in Byte.</li></ul> |
 
 {style="table-layout:auto"}
 
