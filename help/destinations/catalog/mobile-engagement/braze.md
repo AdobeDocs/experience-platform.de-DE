@@ -3,10 +3,10 @@ keywords: mobil; braze; messaging;
 title: Braze-Verbindung
 description: Braze ist eine umfassende Kundeninteraktionsplattform, die relevante und unvergessliche Erlebnisse zwischen Kunden und den Marken, die sie lieben, ermöglicht.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: e2317201ae4810734714cea6c5d172ea6a542f5b
 workflow-type: tm+mt
-source-wordcount: '1031'
-ht-degree: 37%
+source-wordcount: '1096'
+ht-degree: 35%
 
 ---
 
@@ -163,6 +163,14 @@ Die korrekte Zuordnung würde wie folgt aussehen:
 ## Exportierte Daten {#exported-data}
 
 Um sich zu vergewissern, dass die Daten erfolgreich in das [!DNL Braze]-Ziel exportiert wurden, überprüfen Sie Ihr [!DNL Braze]-Konto. [!DNL Adobe Experience Platform] Zielgruppen werden nach [!DNL Braze] unter `AdobeExperiencePlatformSegments` -Attribut.
+
+## Fehlerbehebung {#troubleshooting}
+
+**Ich habe beim Aktivieren meiner Zielgruppen für dieses Ziel einen Timeout-Fehler erhalten. Was soll ich tun?**
+
+Gelegentlich kann die Aktivierung der Zielgruppe für dieses Ziel zu einem Timeout-Fehler führen. Dieser Fehler wird nicht analysiert, was auf ein Aktivierungsproblem hinweist.
+
+Wenn Sie einen Timeout-Fehler erhalten, überprüfen Sie die Zielgruppengröße in der Zielplattform. Wenn die Zielgruppengröße korrekt ist, funktioniert die Integration erwartungsgemäß.
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
