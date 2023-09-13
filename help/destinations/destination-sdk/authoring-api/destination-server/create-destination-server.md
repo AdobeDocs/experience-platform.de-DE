@@ -1,8 +1,8 @@
 ---
 description: Auf dieser Seite wird der API-Aufruf zum Erstellen eines Ziel-Servers über Adobe Experience Platform Destination SDK erläutert.
 title: Erstellen einer Ziel-Server-Konfiguration
-source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
-workflow-type: ht
+source-git-commit: 03ec0e919304c9d46ef88d606eed9e12d1824856
+workflow-type: tm+mt
 source-wordcount: '1696'
 ht-degree: 100%
 
@@ -244,7 +244,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "name":"File-based SFTP destination server",
    "destinationServerType":"FILE_BASED_SFTP",
-   "fileBasedSftpDestination":{
+   "fileBasedSFTPDestination":{
       "rootDirectory":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.rootDirectory}}"
@@ -319,10 +319,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |---|---|---|
 | `name` | Zeichenfolge | Der Name Ihrer Zielverbindung. |
 | `destinationServerType` | Zeichenfolge | Legen Sie diesen Wert entsprechend Ihrer Zielplattform fest. Wählen Sie für [!DNL SFTP]-Ziele `FILE_BASED_SFTP`. |
-| `fileBasedSftpDestination.rootDirectory.templatingStrategy` | Zeichenfolge | *Erforderlich.* Verwenden Sie `PEBBLE_V1`. |
-| `fileBasedSftpDestination.rootDirectory.value` | Zeichenfolge | Das Stammverzeichnis des Zielspeichers. |
-| `fileBasedSftpDestination.hostName.templatingStrategy` | Zeichenfolge | *Erforderlich.* Verwenden Sie `PEBBLE_V1`. |
-| `fileBasedSftpDestination.hostName.value` | Zeichenfolge | Der Host-Name des Zielspeichers. |
+| `fileBasedSFTPDestination.rootDirectory.templatingStrategy` | Zeichenfolge | *Erforderlich.* Verwenden Sie `PEBBLE_V1`. |
+| `fileBasedSFTPDestination.rootDirectory.value` | Zeichenfolge | Das Stammverzeichnis des Zielspeichers. |
+| `fileBasedSFTPDestination.hostName.templatingStrategy` | Zeichenfolge | *Erforderlich.* Verwenden Sie `PEBBLE_V1`. |
+| `fileBasedSFTPDestination.hostName.value` | Zeichenfolge | Der Host-Name des Zielspeichers. |
 | `port` | Ganzzahl | Der SFTP-Datei-Server-Port. |
 | `encryptionMode` | Zeichenfolge | Gibt an, ob eine Dateiverschlüsselung verwendet werden soll. Unterstützte Werte: <ul><li>PGP</li><li>Keine</li></ul> |
 | `fileConfigurations` | K. A. | Siehe [Dateiformatierungskonfiguration](../../functionality/destination-server/file-formatting.md) für detaillierte Informationen zur Konfiguration dieser Einstellungen. |
