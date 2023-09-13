@@ -1,22 +1,18 @@
 ---
 keywords: Profilattribute aktivieren;Ziele aktivieren;Daten aktivieren;E-Mail-Marketing-Ziele aktivieren;Cloud-Speicher-Ziele aktivieren
-title: Aktivieren von Zielgruppen für Batch-Profil-Export-Ziele
+title: Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppen aktivieren können, indem Sie sie an profilbasierte Batch-Ziele senden.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: d7264d94a03f0ba19da90559b156ecaace0d8f95
+source-git-commit: 823f781e59fe7f5f15620a2b99f9c0c1e7144666
 workflow-type: tm+mt
-source-wordcount: '3673'
-ht-degree: 64%
+source-wordcount: '3633'
+ht-degree: 65%
 
 ---
 
 
-# Aktivieren von Zielgruppen für Batch-Profil-Export-Ziele
-
->[!IMPORTANT]
-> 
-> Die auf der Seite beschriebene Funktion steht Kunden noch nicht allgemein zur Verfügung. Diese Seite ist derzeit für Adobe-interne Teams gedacht, um vorab über die kommende Funktion zu erfahren. Bitte geben Sie nicht außerhalb von Adobe frei, bis diese Anmerkung entfernt wurde.
+# Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 
 >[!IMPORTANT]
 > 
@@ -55,9 +51,9 @@ Um die Zielgruppen auszuwählen, die Sie für das Ziel aktivieren möchten, akti
 
 Je nach Herkunft können Sie aus mehreren Zielgruppentypen auswählen:
 
-* **[!UICONTROL Segmentierungsdienst]**: Zielgruppen, die in der Experience Platform vom Segmentierungsdienst generiert wurden. Siehe [Segmentierungsdokumentation](../../segmentation/ui/overview.md) für weitere Details.
+* **[!UICONTROL Segmentierungsdienst]**: Vom Segmentation-Dienst innerhalb von Experience Platform generierte Zielgruppen. Siehe [Segmentierungsdokumentation](../../segmentation/ui/overview.md) für weitere Details.
 * **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Platform hochgeladen wurden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Audience importieren](../../segmentation/ui/overview.md#import-audience).
-* Andere Zielgruppentypen, die aus anderen Adobe-Lösungen stammen, z. B. [!DNL Audience Manager].
+* Andere Zielgruppentypen, die von anderen Adobe-Lösungen stammen, z. B. [!DNL Audience Manager].
 
 ![Bild, das die Auswahl einer oder mehrerer Zielgruppen zur Aktivierung vorstellt](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
@@ -397,7 +393,7 @@ Adobe empfiehlt das Auswählen eines Identitäts-Namespace, z. B. einer [!DNL CR
 >Wenn Datennutzungsbeschriftungen auf bestimmte Felder innerhalb eines Datensatzes angewendet wurden (und nicht auf den gesamten Datensatz), erfolgt die Durchsetzung dieser Beschriftungen auf Feldebene bei der Aktivierung unter folgenden Bedingungen:
 >
 >* Die Felder werden in der Zielgruppendefinition verwendet.
->* Die Felder werden als projizierte Attribute für das Ziel der Zielgruppe konfiguriert.
+>* Die Felder werden als voraussichtliche Attribute für das Ziel der Zielgruppe konfiguriert.
 >
 > Wenn beispielsweise das Feld `person.name.firstName` über bestimmte Datennutzungsbeschriftungen verfügt, die im Konflikt mit der Marketing-Aktion des Ziels stehen, wird Ihnen im Überprüfungsschritt eine Verletzung der Datennutzungsrichtlinien angezeigt. Weitere Informationen finden Sie unter [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
@@ -431,7 +427,7 @@ Wenn Sie zu Ihren exportierten Dateien während der Beta-Phase Identitäts-Names
 > 
 >Alle Cloud-Speicher-Ziele im Katalog können eine verbesserte anzeigen [[!UICONTROL Zuordnung] Schritt](#mapping) , der die **[!UICONTROL Attribute auswählen]** in diesem Abschnitt beschrieben.
 >
->Diese **[!UICONTROL Attribute auswählen]** wird weiterhin für die E-Mail-Marketing-Ziele des Adobe Campaign-, Oracle Responsys-, Oracle Eloqua- und Salesforce-Marketing Cloud angezeigt.
+>Diese **[!UICONTROL Attribute auswählen]** wird weiterhin für die E-Mail-Marketing-Ziele des Adobe Campaign-, Oracle Responsys-, Oracle Eloqua- und Salesforce-Marketings Cloud angezeigt.
 
 Bei profilbasierten Zielen müssen Sie die Profilattribute auswählen, die Sie an das Ziel senden möchten.
 
