@@ -2,9 +2,9 @@
 title: Identity Namespace - Überblick
 description: Identity-Namespaces sind Komponenten des Identity Service, die als Indikatoren für den Kontext dienen, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert "name@email.com"als E-Mail-Adresse oder "443522"als numerische CRM-ID.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: ac53678ca9ef51cb638590138a16a3506c6a1fc0
 workflow-type: tm+mt
-source-wordcount: '1765'
+source-wordcount: '1764'
 ht-degree: 31%
 
 ---
@@ -48,7 +48,7 @@ Die folgenden Identitätstypen sind in [!DNL Platform]:
 | Geräte-ID | Geräte-IDs identifizieren Hardwaregeräte wie IDFA (iPhone und iPad), GAID (Android) und RIDA (Roku) und können von mehreren Personen in Haushalten gemeinsam genutzt werden. |
 | E-Mail Adresse | E-Mail-Adressen sind oft mit einer einzelnen Person verknüpft und können daher zur kanalübergreifenden Identifizierung dieser Person verwendet werden. Identitäten dieser Art beinhalten personenbezogene Daten (PII). Dies deutet darauf hin, dass [!DNL Identity Service] um den Wert sensibel zu behandeln. |
 | Nichtpersonenkennung | Nicht-Personen-IDs werden zum Speichern von Kennungen verwendet, die Namespaces erfordern, aber nicht mit einem Personen-Cluster verbunden sind. Beispielsweise eine Produkt-SKU, Daten, die sich auf Produkte, Organisationen oder Geschäfte beziehen. |
-| Partner-ID [!BADGE Beta]{type=Informative} | <ul><li>Partner-IDs sind Kennungen, die von Datenpartnern zur Darstellung von Personen verwendet werden. Partner-IDs sind häufig pseudonym, sodass die wahre Identität einer Person nicht erkennbar ist und probabilistisch sein kann. In Real-time Customer Data Platform werden Partner-IDs primär für die erweiterte Zielgruppenaktivierung und Datenanreicherung und nicht zum Erstellen von Identitätsdiagrammverknüpfungen verwendet.</li><li>Identitätsdiagramme werden nicht bei der Erfassung einer Identität generiert, die einen Identitäts-Namespace enthält, der als Partner-ID-Typ angegeben wurde.</li><li>Wenn Partnerdaten nicht mit dem Identitätstyp Partner-ID erfasst werden, können für Identity Service Systemdiagrammbeschränkungen sowie unerwünschte Profilzusammenführungen auftreten.</li><ul> |
+| Partner-ID | <ul><li>Partner-IDs sind Kennungen, die von Datenpartnern zur Darstellung von Personen verwendet werden. Partner-IDs sind häufig pseudonym, sodass die wahre Identität einer Person nicht erkennbar ist und probabilistisch sein kann. In Real-time Customer Data Platform werden Partner-IDs primär für die erweiterte Zielgruppenaktivierung und Datenanreicherung und nicht zum Erstellen von Identitätsdiagrammverknüpfungen verwendet.</li><li>Identitätsdiagramme werden nicht bei der Erfassung einer Identität generiert, die einen Identitäts-Namespace enthält, der als Partner-ID-Typ angegeben wurde.</li><li>Wenn Partnerdaten nicht mit dem Identitätstyp Partner-ID erfasst werden, können für Identity Service Systemdiagrammbeschränkungen sowie unerwünschte Profilzusammenführungen auftreten.</li><ul> |
 | Telefonnummer | Telefonnummern sind häufig mit einer einzelnen Person verknüpft und können daher zur kanalübergreifenden Identifizierung dieser Person verwendet werden. Identitäten dieser Art umfassen PII. Dies deutet auf [!DNL Identity Service] um den Wert sensibel zu behandeln. |
 
 {style="table-layout:auto"}
@@ -61,7 +61,7 @@ Folgende Standard-Namespaces stehen allen Organisationen in Platform zur Verfüg
 
 | Anzeigename | Beschreibung |
 | ------------ | ----------- |
-| AdCloud | Ein Namespace, der die Adobe AdCloud darstellt. |
+| AdCloud | Ein Namespace, der Adobe AdCloud darstellt. |
 | Adobe Analytics (Legacy-ID) | Ein Namespace, der Adobe Analytics darstellt. Siehe folgendes Dokument unter [Adobe Analytics-Namespaces](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=en#namespaces) für weitere Informationen. |
 | Apple IDFA (ID für Advertiser) | Ein Namespace, der die Apple ID für Advertiser darstellt. Weiteführende Informationen finden Sie im folgenden Dokument zu [Interessensbasierten Anzeigen](https://support.apple.com/de-de/HT202074). |
 | Apple Push Notification Service | Ein Namespace, der Identitäten darstellt, die mit dem Apple Push Notification Service erfasst wurden. Siehe folgendes Dokument unter [Apple Push Notification Service](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) für weitere Informationen. |
