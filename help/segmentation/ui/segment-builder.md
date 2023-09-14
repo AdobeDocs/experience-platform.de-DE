@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 description: Segment Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
-workflow-type: ht
-source-wordcount: '3338'
-ht-degree: 100%
+source-git-commit: f3bad477156db8f8cf79582c7a6cc2562e983b63
+workflow-type: tm+mt
+source-wordcount: '3354'
+ht-degree: 99%
 
 ---
 
@@ -98,6 +98,10 @@ Nachdem die Report Suites zugeordnet wurden, können Sie diese neu zugeordneten 
 | Mehrere Report Suites | In generischen Variablen sind keine Deskriptoren für benutzerfreundliche Namen enthalten. <br><br>**Beispiel:** eVar2 | <ul><li>Jedes Feld mit mehreren Deskriptoren wird als generisch angezeigt. Das bedeutet, dass in der Benutzeroberfläche keine benutzerfreundlichen Namen angezeigt werden.</li><li>Abfragen können Daten aus allen Datensätzen mit der eVar verwenden. Dies kann zu gemischten oder falschen Ergebnissen führen.</li></ul> | Abfragen verwenden korrekt kombinierte Ergebnisse aus mehreren Datensätzen. |
 
 ### Zielgruppen
+
+>[!NOTE]
+>
+>Für Zielgruppen, die in Platform erstellt werden, nur Zielgruppen mit der **same** Die Zusammenführungsrichtlinie wird angezeigt.
 
 Auf der Registerkarte **[!UICONTROL Zielgruppen]** werden alle Zielgruppen, die aus externen Quellen (wie z. B. Adobe Audience Manager) importiert wurden, sowie alle in [!DNL Experience Platform] erstellten Zielgruppen aufgelistet.
 
