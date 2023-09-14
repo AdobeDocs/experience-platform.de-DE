@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffskontrolle;attri
 title: Attributbasierte Zugriffssteuerung – Übersicht
 description: Dieses Dokument enthält Informationen zur attributbasierten Zugriffssteuerung in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 36e38824963139414f2803ef4127706d1e521d1a
 workflow-type: tm+mt
-source-wordcount: '1825'
-ht-degree: 95%
+source-wordcount: '1847'
+ht-degree: 94%
 
 ---
 
@@ -18,9 +18,13 @@ Mit der attributbasierten Zugriffssteuerung können Sie Schemafelder des Experie
 
 >[!IMPORTANT]
 >
->Die attributbasierte Zugriffskontrolle sollte nicht mit den Data Governance-Funktionen von Experience Platform verwechselt werden, mit denen Sie mithilfe von Bezeichnungen und Richtlinien steuern können, wie Daten in Platform verwendet werden, anstatt welche Benutzer in Ihrem Unternehmen Zugriff darauf haben. Siehe [Data Governance - Übersicht](../../data-governance/home.md) für weitere Informationen.
+>Die attributbasierte Zugriffssteuerung ist nicht zu verwechseln mit Data Governance-Funktionen von Experience Platform. Mit diesen Funktionen können Sie mithilfe von Bezeichnungen und Richtlinien steuern, wie Daten in Platform verwendet werden, anstatt zu steuern, auf welche Benutzer in Ihrem Unternehmen Zugriff besteht. Siehe [Data Governance - Übersicht](../../data-governance/home.md) für weitere Informationen.
 
 Mit der attributbasierten Zugriffssteuerung können Admins Ihrer Organisation den Zugriff von Benutzenden auf sensible persönliche Daten (SPD), persönlich identifizierbare Informationen (PII) und andere benutzerdefinierte Datentypen in allen Workflows und Ressourcen von Platform steuern. Admins können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
+
+Im folgenden Video wird beschrieben, wie Sie die attributbasierte Zugriffskontrolle verstehen und Rollen, Ressourcen und Richtlinien konfigurieren.
+
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
 
 ## Attributbasierte Zugriffssteuerung – Terminologie
 
