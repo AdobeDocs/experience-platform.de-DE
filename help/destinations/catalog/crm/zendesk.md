@@ -2,10 +2,10 @@
 title: Zendesk-Verbindung
 description: Mit dem Zendesk-Ziel können Sie Ihre Kontodaten exportieren und innerhalb von Zendesk für Ihre geschäftlichen Anforderungen aktivieren.
 last-substantial-update: 2023-03-14T00:00:00Z
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
-source-wordcount: '1470'
-ht-degree: 44%
+source-wordcount: '1506'
+ht-degree: 48%
 
 ---
 
@@ -39,7 +39,7 @@ Beachten Sie die folgenden Elemente, bevor Sie sich bei der [!DNL Zendesk] Ziel:
 
 | Anmeldedaten | Beschreibung | Beispiel |
 | --- | --- | --- |
-| `Bearer token` | Das Zugriffstoken, das Sie in Ihrer [!DNL Zendesk] -Konto. <br> Befolgen Sie die Dokumentation zum [generieren Sie eine [!DNL Zendesk] Zugriffstoken](https://developer.zendesk.com/documentation/sales-crm/first-call/#1-generate-an-access-token) , wenn Sie keinen haben. | `a0b1c2d3e4...v20w21x22y23z` |
+| `Bearer token` | Das Zugriffstoken, das Sie in Ihrer [!DNL Zendesk] -Konto. <br> Befolgen Sie die Dokumentation zum [generieren [!DNL Zendesk] Zugriffstoken](https://developer.zendesk.com/documentation/sales-crm/first-call/#1-generate-an-access-token) , wenn Sie keinen haben. | `a0b1c2d3e4...v20w21x22y23z` |
 
 ## Leitplanken {#guardrails}
 
@@ -51,7 +51,7 @@ Die [Preis- und Preisgrenzen](https://developer.zendesk.com/api-reference/sales-
 
 | Ziel-Identität | Beispiel | Beschreibung | Obligatorisch |
 |---|---|---|---|
-| `email` | `test@test.com` | E-Mail-Adresse des Kontakts. | Ja |
+| `email` | `test@test.com` | Email-Adresse des Kontakts. | Ja |
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
@@ -60,7 +60,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
 | Exporttyp | **[!UICONTROL Profilbasiert]** | <ul><li>Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern *(z. B.: E-Mail-Adresse, Telefonnummer, Nachname)*, entsprechend Ihrer Feldzuordnung.</li><li> Jeder Segmentstatus in [!DNL Zendesk] wird mit dem entsprechenden Zielgruppenstatus von Platform aktualisiert, basierend auf dem **[!UICONTROL Zuordnungs-ID]** Wert, der während der [Zielgruppenplanung](#schedule-segment-export-example) Schritt.</li></ul> |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | <ul><li>Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform basierend auf der Zielgruppenbewertung aktualisiert wird, sendet der Connector das Update an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | <ul><li>Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -77,7 +77,7 @@ Suchen Sie in **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** nach [!DNL Zende
 ### Beim Ziel authentifizieren {#authenticate}
 
 Füllen Sie die erforderlichen Felder aus. Eine Anleitung dazu finden Sie im Abschnitt [ [!DNL Zendesk] Sammeln von -Anmeldeinformationen](#gather-credentials).
-* **[!UICONTROL Trägertoken]**: Das Zugriffstoken, das Sie in Ihrem [!DNL Zendesk] -Konto.
+* **[!UICONTROL Trägertoken]**: Das Zugriffstoken, das Sie in Ihrer [!DNL Zendesk] -Konto.
 
 Um sich beim Ziel zu authentifizieren, wählen Sie **[!UICONTROL Mit Ziel verbinden]**.
 ![Screenshot der Platform-Benutzeroberfläche, auf dem die Authentifizierung gezeigt wird.](../../assets/catalog/crm/zendesk/authenticate-destination.png)
@@ -101,10 +101,11 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
->
->Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+> 
+>* Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>* Export *identities*, benötigen Sie die **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
-Lesen [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppenexport-Ziele](/help/destinations/ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
+Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 ### Zuordnungsüberlegungen und Beispiel {#mapping-considerations-example}
 
@@ -117,7 +118,7 @@ In der Variablen **[!UICONTROL Quellfeld]** keine solchen Einschränkungen befol
 Um Ihre XDM-Felder den [!DNL Zendesk]-Zielfeldern korrekt zuzuordnen, führen Sie die folgenden Schritte aus:
 
 1. Wählen Sie Im Schritt **[!UICONTROL Zuordnung]** die Option **[!UICONTROL Neue Zuordnung hinzufügen]** aus. Auf dem Bildschirm wird eine neue Zuordnungszeile angezeigt.
-1. Im **[!UICONTROL Quellfeld auswählen]** Fenster, wählen Sie die **[!UICONTROL Attribute auswählen]** und wählen Sie das XDM-Attribut aus oder wählen Sie die **[!UICONTROL Identitäts-Namespace auswählen]** und wählen Sie eine Identität aus.
+1. Im **[!UICONTROL Quellfeld auswählen]** Fenster, wählen Sie die **[!UICONTROL Attribute auswählen]** und wählen Sie das XDM-Attribut oder die **[!UICONTROL Identitäts-Namespace auswählen]** und wählen Sie eine Identität.
 1. Im **[!UICONTROL Zielgruppenfeld auswählen]** Fenster, wählen Sie die **[!UICONTROL Identitäts-Namespace auswählen]** und wählen Sie eine Zielidentität aus oder wählen Sie die **[!UICONTROL Attribute auswählen]** und wählen Sie eines der unterstützten Schemaattribute aus.
    * Wiederholen Sie diese Schritte, um die folgenden obligatorischen Zuordnungen hinzuzufügen. Sie können auch alle anderen Attribute hinzufügen, die Sie zwischen Ihrem XDM-Profilschema und Ihrem [!DNL Zendesk] instance: |Quellfeld|Zielfeld| Erforderlich| |—|—|—| |`xdm: person.name.lastName`|`xdm: last_name`| Ja | |`IdentityMap: Email`|`Identity: email`| Ja | |`xdm: person.name.firstName`|`xdm: first_name`| |
 
@@ -150,7 +151,7 @@ Gehen Sie wie folgt vor, um zu überprüfen, ob Sie das Ziel korrekt eingerichte
 1. Überwachen Sie die Zielgruppenzusammenfassung und stellen Sie sicher, dass die Anzahl der Profile der Anzahl innerhalb des Segments entspricht.
    ![Beispiel-Screenshot der Platform-Benutzeroberfläche mit Segment.](../../assets/catalog/crm/zendesk/segment.png)
 
-1. Melden Sie sich bei der [!DNL Zendesk] Website und navigieren Sie dann zur **[!UICONTROL Kontakte]** -Seite, um zu überprüfen, ob die Profile aus der Audience hinzugefügt wurden. Diese Liste kann so konfiguriert werden, dass Spalten für die zusätzlichen Felder angezeigt werden, die mit der Audience erstellt wurden**[!UICONTROL Zuordnungs-ID]** und Zielgruppenstatus.
+1. Melden Sie sich bei [!DNL Zendesk] Website und navigieren Sie dann zur **[!UICONTROL Kontakte]** -Seite, um zu überprüfen, ob die Profile aus der Audience hinzugefügt wurden. Diese Liste kann so konfiguriert werden, dass Spalten für die zusätzlichen Felder angezeigt werden, die mit der Audience erstellt wurden**[!UICONTROL Zuordnungs-ID]** und Zielgruppenstatus.
    ![Screenshot der Zendesk-Benutzeroberfläche mit der Seite Kontakte mit den zusätzlichen Feldern, die mit dem Zielgruppennamen erstellt wurden.](../../assets/catalog/crm/zendesk/contacts.png)
 
 1. Alternativ können Sie einen Drilldown in eine einzelne **[!UICONTROL Person]** und überprüfen Sie die **[!UICONTROL Zusätzliche Felder]** -Bereich, der den Zielgruppennamen und den Zielgruppenstatus anzeigt.
@@ -168,13 +169,13 @@ Weitere nützliche Informationen aus der [!DNL Zendesk]Dokumentation finden Sie 
 
 ### Änderungsprotokoll
 
-In diesem Abschnitt werden die Funktionen und wesentlichen Aktualisierungen der Dokumentation an diesem Ziel-Connector erfasst.
+In diesem Abschnitt werden aktualisierte Funktionen und wesentliche Dokumentationsänderungen für diesen Ziel-Connector erfasst.
 
-+++ Anzeigen von changelog
++++ Änderungsprotokoll anzeigen
 
-| Veröffentlichungsmonat | Aktualisierungstyp | Beschreibung |
+| Veröffentlichungsmonat | Art der Aktualisierung | Beschreibung |
 |---|---|---|
-| April 2023 | Aktualisierung der Dokumentation | <ul><li>Wir haben die [Anwendungsfälle](#use-cases) -Abschnitt mit einem klareren Beispiel dafür, wann Kunden von der Verwendung dieses Ziels profitieren würden.</li> <li>Wir haben die [Mapping](#mapping-considerations-example) , um die richtigen erforderlichen Zuordnungen widerzuspiegeln. Die `Attribute: last_name` und `Identity: email` Zielgruppen-Mappings sind für dieses Ziel obligatorisch. Wenn diese Zuordnungen fehlen, werden alle anderen Zuordnungen ignoriert und nicht an gesendet [!DNL Zendesk].</li> <li>Wir haben die [Mapping](#mapping-considerations-example) mit klaren Beispielen für obligatorische und optionale Zuordnungen.</li></ul> |
+| April 2023 | Aktualisierung der Dokumentation | <ul><li>Wir haben die [Anwendungsfälle](#use-cases) mit einem klareren Beispiel dafür, wann Kunden von der Verwendung dieses Ziels profitieren würden.</li> <li>Wir haben die [Mapping](#mapping-considerations-example) , um die richtigen erforderlichen Zuordnungen widerzuspiegeln. Die `Attribute: last_name` und `Identity: email` Zielgruppen-Mappings sind für dieses Ziel obligatorisch. Wenn diese Zuordnungen fehlen, werden alle anderen Zuordnungen ignoriert und nicht an gesendet [!DNL Zendesk].</li> <li>Wir haben die [Mapping](#mapping-considerations-example) mit klaren Beispielen für obligatorische und optionale Zuordnungen.</li></ul> |
 | März 2023 | Erstmalige Veröffentlichung | Erste Zielversion und Veröffentlichung der Dokumentation. |
 
 {style="table-layout:auto"}

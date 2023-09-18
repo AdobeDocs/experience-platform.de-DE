@@ -1,12 +1,11 @@
 ---
-keywords: Ziele;Adobe Experience Platform;Plattform;Übersicht Ziele;Aktivieren von Daten;Aktivieren;
 title: Ziele – Übersicht
 description: Ziele sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Ziele in Adobe Experience Platform nutzen, um bekannte und unbekannte Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
-workflow-type: ht
-source-wordcount: '925'
-ht-degree: 100%
+source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+workflow-type: tm+mt
+source-wordcount: '956'
+ht-degree: 96%
 
 ---
 
@@ -64,6 +63,7 @@ In der folgenden Tabelle sind die Berechtigungen und Berechtigungskombinationen 
 | **[!UICONTROL Verwalten von Zielen]** | Um eine Verbindung zu Zielen herzustellen, benötigen Sie die [Zugriffssteuerungsberechtigung](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**. |
 | **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** | Zum Aktivieren von Zielgruppen für Ziele und Aktivieren des [Zuordnungsschritts](ui/activate-batch-profile-destinations.md#mapping) des Workflows sind die **[!UICONTROL Zugriffssteuerungsberechtigungen]** **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und [Segmente anzeigen](/help/access-control/home.md#permissions) erforderlich. |
 | **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Segmente ohne Zuordnung aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** | Zum Aktivieren von Segmenten für Ziele und Ausblenden des [Zuordnungsschritts](ui/activate-batch-profile-destinations.md#mapping) des Workflows sind die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Segmente ohne Zuordnung aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** erforderlich. |
+| **[!UICONTROL Anzeigen von Identitätsdiagrammen]** | Export *identities* zu Zielen hinzufügen, benötigen Sie die **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 

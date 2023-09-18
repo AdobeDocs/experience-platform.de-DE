@@ -3,10 +3,10 @@ title: (Beta) Verbindung zwischen Trade Desk und CRM
 description: Aktivieren Sie Profile in Ihrem Trade Desk-Konto für Zielgruppen-Targeting und -Unterdrückung basierend auf CRM-Daten.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
-source-wordcount: '1081'
-ht-degree: 19%
+source-wordcount: '1150'
+ht-degree: 22%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 19%
 >* Wenn Sie Daten in der EU beziehen, verwenden Sie bitte das **[!DNL The Trade Desk - CRM (EU)]**-Ziel.
 >* Wenn Sie Daten in der APAC- oder NAMER-Region beziehen, verwenden Sie das **[!DNL The Trade Desk - CRM (NAMER & APAC)]**-Ziel.
 >
->Beide Ziele in Experience Platform befinden sich derzeit in der Betaphase. Diese Ziel-Connector- und Dokumentationsseite wird von der *[!DNL Trade Desk]* Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte an Ihre [!DNL Trade Desk] -Support-Mitarbeiter, können sich die Dokumentation und Funktionalität ändern.
+>Beide Ziele in Experience Platform befinden sich derzeit in der Beta-Phase. Dieser Ziel-Connector und die Dokumentationsseite werden vom *[!DNL Trade Desk]*-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte an Ihre [!DNL Trade Desk] -Support-Mitarbeiter, können sich die Dokumentation und Funktionalität ändern.
 
 ## Übersicht {#overview}
 
@@ -74,7 +74,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
 | Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (E-Mail oder Hash-E-Mail), die im Trade Desk-Ziel verwendet werden. |
-| Exporthäufigkeit | **[!UICONTROL Täglicher Batch]** | Wenn ein Profil in einer Experience Platform auf der Grundlage einer Zielgruppenbewertung aktualisiert wird, wird das Profil (die Identitäten) einmal täglich nachgelagert zur Zielplattform aktualisiert. Mehr dazu [Stapelexporte](/help/destinations/destination-types.md#file-based). |
+| Exporthäufigkeit | **[!UICONTROL Täglicher Batch]** | Wenn ein Profil auf der Grundlage einer Zielgruppenbewertung im Experience Platform aktualisiert wird, wird das Profil (die Identitäten) einmal täglich nachgelagert zur Zielplattform aktualisiert. Mehr dazu [Stapelexporte](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -95,9 +95,14 @@ Bevor Sie Zielgruppendaten an ein Ziel senden oder aktivieren können, müssen S
 
 ![Screenshot der Platform-Benutzeroberfläche, in dem gezeigt wird, wie Zieldetails ausgefüllt werden.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
-Beim Herstellen einer Verbindung zum Ziel ist das Festlegen einer Data Governance-Richtlinie vollständig optional. Lesen Sie die Experience Platform [Data Governance - Übersicht](/help/data-governance/policies/overview.md) für weitere Details.
+Beim Herstellen einer Verbindung zum Ziel ist das Festlegen einer Data Governance-Richtlinie vollständig optional. Lesen Sie die Experience Platform . [Data Governance - Übersicht](/help/data-governance/policies/overview.md) für weitere Details.
 
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
+
+>[!IMPORTANT]
+> 
+>* Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>* Export *identities*, benötigen Sie die **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Lesen [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für ein Ziel.
 
@@ -133,12 +138,12 @@ Zielgruppenfelder auswählen:
 
 ## Datenexport überprüfen {#validate}
 
-Überprüfen, ob die Daten ordnungsgemäß aus der Experience Platform in exportiert wurden [!DNL The Trade Desk]finden Sie die Zielgruppen in der Kachel Adobe 1PD-Daten in [!DNL The Trade Desk] Data Management Platform (DMP). Im Folgenden finden Sie die Schritte zum Auffinden der entsprechenden ID im [!DNL Trade Desk] Benutzeroberfläche:
+Überprüfen, ob die Daten von Experience Platform und nach ordnungsgemäß exportiert wurden [!DNL The Trade Desk], finden Sie die Zielgruppen unter der Adobe 1PD-Datenkachel in [!DNL The Trade Desk] Data Management Platform (DMP). Im Folgenden finden Sie die Schritte zum Auffinden der entsprechenden ID im [!DNL Trade Desk] Benutzeroberfläche:
 
 1. Klicken Sie zunächst auf die **[!UICONTROL Daten]** Registerkarte und Überprüfung **[!UICONTROL Erstanbieter]**.
 2. Scrollen Sie nach unten, unter **[!UICONTROL Importierte Daten]**, finden Sie **[!UICONTROL Adobe 1PD-Kachel]**.
 3. Klicken Sie auf die Schaltfläche **[!UICONTROL Adobe 1PD]Die Kachel ** enthält alle Zielgruppen, die für die [!DNL Trade Desk] Ziel für Ihren Advertiser. Sie können auch die Suchfunktion verwenden.
-4. Die Segment-ID-Nummer aus der Experience Platform wird als Segmentname in der [!DNL Trade Desk] Benutzeroberfläche.
+4. Die Segment-ID-Nummer von Experience Platform wird als Segmentname in der [!DNL Trade Desk] Benutzeroberfläche.
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

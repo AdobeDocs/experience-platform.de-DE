@@ -4,10 +4,10 @@ title: LINE-Verbindung
 description: Mit dem LINE-Ziel können Sie Profile zu Ihrer Platform-Audience hinzufügen und personalisierte Erlebnisse für verbundene Benutzer bereitstellen.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
 workflow-type: tm+mt
-source-wordcount: '1178'
-ht-degree: 41%
+source-wordcount: '1214'
+ht-degree: 46%
 
 ---
 
@@ -17,13 +17,13 @@ ht-degree: 41%
 
 [[!DNL LINE]](https://line.me/en/) ist eine beliebte Kommunikationsplattform, die Menschen, Dienstleistungen und Informationen verbindet und sich von einer Chat-App zu einem Zentrum für Unterhaltung, soziale Aktivitäten und tägliche Aktivitäten entwickelt hat.
 
-Diese [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt die [[!DNL LINE] Messaging-API](https://developers.line.biz/en/reference/messaging-api/). Sie können Profile aus Ihren Experience Platform-Zielgruppen als Verbindungen in [!DNL LINE] für Ihre Geschäftsanforderungen.
+Diese [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt die [[!DNL LINE] Messaging-API](https://developers.line.biz/en/reference/messaging-api/). Sie können Profile aus Ihren Experience Platform-Audiences als Verbindungen in [!DNL LINE] für Ihre Geschäftsanforderungen.
 
 [!DNL LINE] verwendet Trägertoken als Authentifizierungsmechanismus für die Kommunikation mit dem [!DNL LINE] Messaging-API. Anweisungen zur Authentifizierung bei Ihrem [!DNL LINE] -Instanz befindet sich weiter unten in [An Ziel authentifizieren](#authenticate) Abschnitt.
 
 ## Anwendungsfälle {#use-cases}
 
-Marketingexperten können Benutzer in einem mobilen Interaktionsziel mit integrierten Zielgruppen ansprechen [!DNL Adobe Experience Platform]. Darüber hinaus können Sie ihnen personalisierte Erlebnisse bereitstellen, die auf Attributen ihrer [!DNL Adobe Experience Platform] Profile, sobald Audiences und Profile in [!DNL Adobe Experience Platform].
+Marketingexperten können Benutzer in einem Mobile-Interaktionsziel mit integrierten Zielgruppen ansprechen [!DNL Adobe Experience Platform]. Darüber hinaus können Sie ihnen personalisierte Erlebnisse bereitstellen, die auf Attributen ihrer [!DNL Adobe Experience Platform] Profile, sobald Audiences und Profile in [!DNL Adobe Experience Platform].
 
 ## Voraussetzungen {#prerequisites}
 
@@ -38,7 +38,7 @@ Sie müssen sich registrieren und eine [!DNL LINE] , wenn Sie noch keinen haben.
 1. Navigieren Sie zum [!DNL LINE] [Kontoanmeldung](https://account.line.biz/login?redirectUri=https%3A%2F%2Fmanager.line.biz%2F) page
 2. Auswählen **[!UICONTROL Konto erstellen]**.
 
-#### Sammeln Sie die [!DNL LINE channel access token (long-lived)] von [!DNL LINE] Entwicklerkonsole {#gather-credentials}
+#### Sammeln Sie die [!DNL LINE channel access token (long-lived)] aus dem [!DNL LINE] Entwicklerkonsole {#gather-credentials}
 
 So lassen Sie Platform den Zugriff zu [!DNL LINE] -Ressourcen, benötigen Sie die *[!DNL Channel access token (long-lived)]* aus dem gewünschten [!DNL LINE] *Messaging-API* -Kanal.
 
@@ -67,8 +67,8 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder andere), die im [!DNL LINE] Ziel. |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform basierend auf der Zielgruppenbewertung aktualisiert wird, sendet der Connector das Update an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder sonstiges), die im [!DNL LINE]-Ziel verwendet werden. |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -88,7 +88,7 @@ Um sich beim Ziel zu authentifizieren, wählen Sie **[!UICONTROL Mit Ziel verbin
 ![Screenshot der Platform-Benutzeroberfläche, auf dem die Authentifizierung gezeigt wird.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
 
 Füllen Sie die erforderlichen Felder aus.
-* **[!UICONTROL Trägertoken]**: Ihre [!DNL LINE Channel access token (long-lived)] von [!DNL LINE] Entwicklerkonsole. Siehe Abschnitt [Anmeldedaten erfassen](#gather-credentials) Abschnitt.
+* **[!UICONTROL Trägertoken]**: Ihr [!DNL LINE Channel access token (long-lived)] aus dem [!DNL LINE] Entwicklerkonsole. Siehe Abschnitt [Anmeldedaten erfassen](#gather-credentials) Abschnitt.
 
 Wenn die angegebenen Details gültig sind, zeigt die Benutzeroberfläche den Status **[!UICONTROL Verbunden]** mit einem grünen Häkchen an. Sie können dann mit dem nächsten Schritt fortfahren.
 
@@ -110,10 +110,11 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
->
->Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+> 
+>* Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>* Export *identities*, benötigen Sie die **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
-Lesen [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppenexport-Ziele](/help/destinations/ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
+Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 ### Zuordnen von Attributen und Identitäten {#map}
 
@@ -129,19 +130,19 @@ Wenn Ihre Zielidentität *ID für Advertiser (IFAs)* benötigen Sie Folgendes:
 
 ## Überprüfen des Datenexports {#exported-data}
 
-Nach erfolgreichem Datenexport aus Experience Platform wird die [!DNL LINE] Das Ziel erstellt eine neue Zielgruppe in [!DNL LINE] unter Verwendung des ausgewählten Zielgruppennamen.
+Nach erfolgreichem Datenexport aus Experience Platform [!DNL LINE] Das Ziel erstellt eine neue Zielgruppe in [!DNL LINE] unter Verwendung des ausgewählten Zielgruppennamen.
 
 Gehen Sie wie folgt vor, um zu überprüfen, ob Sie das Ziel korrekt eingerichtet haben:
 
 1. In [!DNL LINE], melden Sie sich bei der [Manager Console](https://manager.line.biz/).
 
-1. Navigieren Sie als Nächstes zu **[!UICONTROL Datenkontrollen]** > **[!UICONTROL Zielgruppen]** und überprüfen Sie den Namen der ausgewählten Zielgruppe im **[!UICONTROL Zielgruppenname]** Spalte.
+1. Navigieren Sie dann zu **[!UICONTROL Datenkontrollen]** > **[!UICONTROL Zielgruppen]** und überprüfen Sie den Namen der ausgewählten Zielgruppe im **[!UICONTROL Zielgruppenname]** Spalte.
 
 1. Das aktualisierte Volumen würde mit der Anzahl im Segment übereinstimmen.
 
-1. Die *Typ* -Spalte **[!UICONTROL UserID]** , wenn die von Ihnen exportierten Identitäten vom Typ *UserID*. Auf ähnliche Weise wird die *Typ* -Spalte **[!UICONTROL Mobile Anzeigen-ID]** , wenn die von Ihnen exportierten Identitäten vom Typ *IDFA*.
+1. Die *Typ* -Spalte wird **[!UICONTROL UserID]** , wenn die von Ihnen exportierten Identitäten vom Typ *UserID*. Auf die gleiche Weise wird die *Typ* -Spalte wird **[!UICONTROL Mobile Anzeigen-ID]** , wenn die von Ihnen exportierten Identitäten vom Typ *IDFA*.
 
-Beispiel-Setup in [!DNL LINE] ist unten dargestellt:
+Ein Beispiel für die Einrichtung in [!DNL LINE] ist unten dargestellt:
 ![Screenshot der LINE-Benutzeroberfläche mit dem Volumen der Audience.](../../assets/catalog/mobile-engagement/line/audience-volume.png)
 
 ## Datennutzung und -Governance {#data-usage-governance}

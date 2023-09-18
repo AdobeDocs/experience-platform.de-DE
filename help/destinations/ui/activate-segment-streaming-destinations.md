@@ -4,10 +4,10 @@ title: Aktivieren von Zielgruppendaten für Streaming-Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppen aktivieren, indem Sie sie Streaming-Zielen zuordnen.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
+source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
 workflow-type: tm+mt
-source-wordcount: '1029'
-ht-degree: 25%
+source-wordcount: '1065'
+ht-degree: 24%
 
 ---
 
@@ -16,8 +16,9 @@ ht-degree: 25%
 
 >[!IMPORTANT]
 > 
-> * So aktivieren Sie Zielgruppen und aktivieren die [Zuordnungsschritt](#mapping) des Workflows benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
-> * So aktivieren Sie Zielgruppen, ohne die [Zuordnungsschritt](#mapping) des Workflows benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Segment ohne Zuordnung aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
+> * So aktivieren Sie Zielgruppen und aktivieren die [Zuordnungsschritt](#mapping) des Workflows benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
+> * So aktivieren Sie Zielgruppen, ohne die [Zuordnungsschritt](#mapping) des Workflows benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Segment ohne Zuordnung aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
+>* Export *identities*, benötigen Sie die **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 > 
 > Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
@@ -51,9 +52,9 @@ Um die Zielgruppen auszuwählen, die Sie für das Ziel aktivieren möchten, akti
 
 Je nach Herkunft können Sie aus mehreren Zielgruppentypen auswählen:
 
-* **[!UICONTROL Segmentierungsdienst]**: Zielgruppen, die in der Experience Platform vom Segmentierungsdienst generiert wurden. Siehe [Segmentierungsdokumentation](../../segmentation/ui/overview.md) für weitere Details.
+* **[!UICONTROL Segmentierungsdienst]**: Vom Segmentation-Dienst innerhalb von Experience Platform generierte Zielgruppen. Siehe [Segmentierungsdokumentation](../../segmentation/ui/overview.md) für weitere Details.
 * **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Platform hochgeladen wurden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Audience importieren](../../segmentation/ui/overview.md#import-audience).
-* Andere Zielgruppentypen, die aus anderen Adobe-Lösungen stammen, z. B. [!DNL Audience Manager].
+* Andere Zielgruppentypen, die von anderen Adobe-Lösungen stammen, z. B. [!DNL Audience Manager].
 
 ![Auswählen von Zielgruppen](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
 
@@ -61,11 +62,11 @@ Je nach Herkunft können Sie aus mehreren Zielgruppentypen auswählen:
 
 >[!IMPORTANT]
 >
->Dieser Schritt gilt nur für einige Zielgruppen-Streaming-Ziele. Wenn Ihr Ziel keine **[!UICONTROL Zuordnung]** Schritt, überspringen Sie zu [Zielgruppenplanung](#scheduling).
+>Dieser Schritt gilt nur für einige Zielgruppen-Streaming-Ziele. Wenn Ihr Ziel keine **[!UICONTROL Zuordnung]** Schritt, zum [Zielgruppenplanung](#scheduling).
 
 Bei einigen Zielgruppen-Streaming-Zielen müssen Sie Quellattribute oder Identitäts-Namespaces auswählen, um sie als Zielidentitäten im Ziel zuzuordnen.
 
-1. Im **[!UICONTROL Zuordnung]** Seite, wählen Sie **[!UICONTROL Neues Mapping hinzufügen]**.
+1. Im **[!UICONTROL Zuordnung]** Seite, auswählen **[!UICONTROL Neues Mapping hinzufügen]**.
 
    ![Neue Zuordnung hinzufügen](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
 
@@ -105,7 +106,7 @@ Wenn Sie ungehashte Quellattribute Zielattributen zuordnen, von denen das Ziel e
 >title="Enddatum"
 >abstract="Dem Zielgruppenzeitplan kann kein Enddatum hinzugefügt werden."
 
-Standardmäßig wird die **[!UICONTROL Zielgruppenplanung]** zeigt nur die neu ausgewählten Zielgruppen an, die Sie im aktuellen Aktivierungsablauf ausgewählt haben.
+Standardmäßig wird die Variable **[!UICONTROL Zielgruppenplanung]** zeigt nur die neu ausgewählten Zielgruppen an, die Sie im aktuellen Aktivierungsablauf ausgewählt haben.
 
 Um alle für Ihr Ziel aktivierten Zielgruppen anzuzeigen, verwenden Sie die Filteroption und deaktivieren Sie die **[!UICONTROL Nur neue Zielgruppen anzeigen]** Filter.
 
@@ -115,7 +116,7 @@ Um alle für Ihr Ziel aktivierten Zielgruppen anzuzeigen, verwenden Sie die Filt
 
    ![Zielgruppenplanung](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
 
-   * Bei einigen Zielen müssen Sie die **[!UICONTROL Ursprung der Zielgruppe]** für jede Zielgruppe mithilfe des Dropdown-Menüs unter den Kalender-Selektoren. Wenn Ihr Ziel diesen Selektor nicht enthält, überspringen Sie diesen Schritt.
+   * Bei einigen Zielen müssen Sie die **[!UICONTROL Ursprung der Zielgruppe]** für jede Zielgruppe mithilfe des Dropdown-Menüs unter den Kalenderselektoren. Wenn Ihr Ziel diesen Selektor nicht enthält, überspringen Sie diesen Schritt.
 
      ![Zuordnungs-ID](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
@@ -127,7 +128,7 @@ Um alle für Ihr Ziel aktivierten Zielgruppen anzuzeigen, verwenden Sie die Filt
 
      ![App-ID](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
 
-1. Auswählen **[!UICONTROL Nächste]** , um [!UICONTROL Überprüfen] Seite.
+1. Auswählen **[!UICONTROL Nächste]** , um zu [!UICONTROL Überprüfen] Seite.
 
 ## Überprüfung {#review}
 

@@ -1,11 +1,11 @@
 ---
 title: Verbindung Snap Inc
-description: Erfahren Sie, wie Sie eine Verbindung zur Snapchat Ads-Plattform herstellen und Ihre Zielgruppen aus Experience Platform exportieren.
+description: Erfahren Sie, wie Sie eine Verbindung zur Snapchat Ads-Plattform herstellen und Ihre Audiences vom Experience Platform exportieren können.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
-source-wordcount: '994'
-ht-degree: 25%
+source-wordcount: '1030'
+ht-degree: 28%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 25%
 
 ## Anwendungsfälle {#use-cases}
 
-Mit diesem Ziel können Marketing-Experten in Experience Platform erstellte Benutzerzielgruppen in Momentaufnahmen-Anzeigen importieren und für das Targeting ihrer Anzeigen verwenden.
+Mit diesem Ziel können Marketingexperten in Experience Platform erstellte Benutzerzielgruppen in Momentaufnahmen-Anzeigen importieren und für das Targeting ihrer Anzeigen verwenden.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -66,7 +66,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
 | Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder andere), die im *YOURDESTINATION* Ziel. |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform basierend auf der Zielgruppenbewertung aktualisiert wird, sendet der Connector das Update an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -114,9 +114,10 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>* Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>* Export *identities*, benötigen Sie die **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
-Lesen [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppenexport-Ziele](/help/destinations/ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
+Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 ## Überprüfen des Datenexports {#exported-data}
 
@@ -127,7 +128,7 @@ Nach der Aktivierung von Zielgruppen für die *Snap Inc* Ziel, können Sie die Z
 
 ![Zielgruppen](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Beachten Sie bitte, dass eine Adobe-Audience, die zum ersten Mal für Snap Inc aktiviert wird, zunächst als leere Audience betrachtet wird. Dies liegt daran, dass Adobe Experience Platform keine Mitgliedsdaten an Snap Inc exportiert, bis die Audience ausgewertet wird. Weiterführende Informationen zur Auswertung von Zielgruppen in Experience Platform finden Sie im Abschnitt [Übersicht über den Segmentierungsdienst](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
+Beachten Sie bitte, dass eine Adobe-Audience, die zum ersten Mal für Snap Inc aktiviert wird, zunächst als leere Audience betrachtet wird. Dies liegt daran, dass Adobe Experience Platform keine Mitgliedsdaten an Snap Inc exportiert, bis die Audience ausgewertet wird. Weiterführende Informationen zur Auswertung von Audiences in Experience Platform finden Sie im Abschnitt [Übersicht über den Segmentierungsdienst](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

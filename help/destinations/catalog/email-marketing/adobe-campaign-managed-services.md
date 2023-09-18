@@ -2,10 +2,10 @@
 title: Adobe Campaign Managed Cloud Services-Verbindung
 description: Adobe Campaign Managed Cloud Services bietet eine Plattform für die Gestaltung kanalübergreifender Kundenerlebnisse und eine Umgebung für die visuelle Orchestrierung von Kampagnen, das Management von Interaktionen in Echtzeit und die kanalübergreifende Ausführung.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: c4ead035202828a09c8c170e0a380fa49d186473
+source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
 workflow-type: tm+mt
-source-wordcount: '1548'
-ht-degree: 40%
+source-wordcount: '1584'
+ht-degree: 42%
 
 ---
 
@@ -96,8 +96,8 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Instanz auswählen]**: Ihre **[!DNL Campaign]** Marketing-Instanz.
-* **[!UICONTROL Zielgruppen-Mapping]**: Wählen Sie das Zielgruppen-Mapping aus, das Sie in **[!DNL Adobe Campaign]** Sendungen. [Weitere Informationen](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
+* **[!UICONTROL Instanz auswählen]**: Ihr **[!DNL Campaign]** Marketing-Instanz.
+* **[!UICONTROL Zielgruppen-Mapping]**: Wählen Sie das Zielgruppen-Mapping aus, das Sie in verwenden **[!DNL Adobe Campaign]** zum Versand. [Weitere Informationen](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
 * **[!UICONTROL Synchronisierungstyp auswählen]**:
 
    * **[!UICONTROL Zielgruppensynchronisierung]**: Verwenden Sie diese Option, um Adobe Experience Platform-Zielgruppen an Adobe Campaign zu senden.
@@ -119,17 +119,18 @@ Weitere Informationen zu Marketing-Aktionen finden Sie auf der Seite [Datennutzu
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>* Um Daten zu aktivieren, benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>* Export *identities*, benötigen Sie die **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Lesen [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=de) für Anweisungen zum Aktivieren von Zielgruppendaten für dieses Ziel.
 
 ### Zuordnen von Attributen und Identitäten {#map}
 
-Wählen Sie XDM-Felder aus, die mit den Profilen exportiert werden sollen, und ordnen Sie sie den entsprechenden Adobe Campaign-Feldern zu.[Erfahren Sie mehr über die Auswahl von Identitäts- und Attributen für E-Mail-Marketing-Ziele.](overview.md)
+Wählen Sie XDM-Felder aus, die mit den Profilen exportiert werden sollen, und ordnen Sie sie den entsprechenden Adobe Campaign-Feldern zu.[Weitere Informationen zur Auswahl von Identitäts- und Attributen für E-Mail-Marketing-Ziele](overview.md)
 
 1. Quellfelder auswählen:
 
-   * Wählen Sie eine **identifier** (Beispiel: das E-Mail-Feld) als Quellidentität, die ein Profil in Adobe Experience Platform und Adobe Campaign eindeutig identifiziert.
+   * Wählen Sie eine **identifier** (z. B. das E-Mail-Feld) als Quellidentität, die ein Profil in Adobe Experience Platform und Adobe Campaign eindeutig identifiziert.
 
    * Alle anderen auswählen **XDM-Quellprofilattribute** die nach Adobe Campaign exportiert werden müssen.
 
@@ -141,7 +142,7 @@ Wählen Sie XDM-Felder aus, die mit den Profilen exportiert werden sollen, und o
 
 1. Identifizieren Sie erforderliche Attribute und Deduplizierungsschlüssel. Beachten Sie, dass Werte in Attributen, die als &quot;Obligatorisch&quot;oder &quot;Deduplizierungsschlüssel&quot;markiert sind, nicht null sein können.
 
-   * [Obligatorische Attribute](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) stellen sicher, dass alle Profildatensätze die ausgewählten Attribute enthalten. Beispiel: alle exportierten Profile eine E-Mail-Adresse enthalten. Es wird empfohlen, sowohl das Identitätsfeld als auch das als Deduplizierungsschlüssel verwendete Feld als obligatorisch festzulegen.
+   * [Obligatorische Attribute](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) stellen sicher, dass alle Profildatensätze die ausgewählten Attribute enthalten. Beispiel: Alle exportierten Profile enthalten eine E-Mail-Adresse. Es wird empfohlen, sowohl das Identitätsfeld als auch das als Deduplizierungsschlüssel verwendete Feld als obligatorisch festzulegen.
    * [Deduplizierungsschlüssel](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) ist ein Primärschlüssel, der die Identität bestimmt, anhand derer Benutzer ihre Profile deduplizieren möchten.
 
      >[!IMPORTANT]

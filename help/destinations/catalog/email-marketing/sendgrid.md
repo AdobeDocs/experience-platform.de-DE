@@ -3,10 +3,10 @@ keywords: E-Mail; E-Mail; E-Mail; E-Mail-Ziele; sendgrid; sendgrid; sendgrid-Zie
 title: SendGrid-Verbindung
 description: Mit dem SendGrid-Ziel können Sie Ihre Erstanbieterdaten exportieren und in SendGrid für Ihre geschäftlichen Anforderungen aktivieren.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
 workflow-type: tm+mt
-source-wordcount: '1541'
-ht-degree: 24%
+source-wordcount: '1577'
+ht-degree: 27%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 24%
 
 ## Übersicht {#overview}
 
-[SendGrid](https://www.sendgrid.com) ist eine beliebte Kundenkommunikationsplattform für Transaktions- und Marketing-E-Mails.
+[SendGrid](https://www.sendgrid.com) ist eine beliebte Kundenkommunikationsplattform für Transaktions- und Marketingnachrichten.
 
 Diese [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt die [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts), mit dem Sie Ihre Erstanbieter-E-Mail-Profile exportieren und in einer neuen SendGrid-Zielgruppe für Ihre geschäftlichen Anforderungen aktivieren können.
 
@@ -34,13 +34,13 @@ Die folgenden Elemente sind erforderlich, bevor Sie mit der Konfiguration des Zi
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-Bevor Sie Daten für das SendGrid-Ziel aktivieren, müssen Sie über eine [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=de), [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=de)und [Segmente](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=de) erstellt in [!DNL Experience Platform]. Weitere Informationen finden Sie unter [limits](#limits) weiter unten auf dieser Seite.
+Bevor Sie Daten für das SendGrid-Ziel aktivieren, müssen Sie über eine [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=de), a [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=de), und [Segmente](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=de) erstellt in [!DNL Experience Platform]. Siehe auch Abschnitt [limits](#limits) weiter unten auf dieser Seite.
 
 >[!IMPORTANT]
 >
 >* Für die SendGrid-API, die zum Erstellen der Mailing-Liste aus E-Mail-Profilen verwendet wird, müssen innerhalb jedes Profils eindeutige E-Mail-Adressen angegeben werden. Dies ist unabhängig davon, ob es als Wert für *email* oder *alternative email*. Da die SendGrid-Verbindung Zuordnungen für E-Mail- und alternative E-Mail-Werte unterstützt, müssen Sie sicherstellen, dass alle verwendeten E-Mail-Adressen innerhalb jedes Profils der *Datensatz*. Andernfalls tritt beim Senden der E-Mail-Profile an SendGrid ein Fehler auf, und dieses E-Mail-Profil ist im Datenexport nicht vorhanden.
 >
->* Derzeit gibt es keine Funktion zum Entfernen von Profilen aus SendGrid, wenn sie aus Zielgruppen in Experience Platform entfernt werden.
+>* Derzeit gibt es keine Funktion zum Entfernen von Profilen aus SendGrid, wenn sie in Experience Platform aus Zielgruppen entfernt werden.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -59,13 +59,13 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
 | Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B. E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm „Auswählen der Profilattribute“ im [Zielaktivierungs-Workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) festgelegt. |
-| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform basierend auf der Zielgruppenbewertung aktualisiert wird, sendet der Connector das Update an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Anwendungsfälle {#use-cases}
 
-Hier finden Sie Beispielanwendungsfälle, die Ihnen helfen, besser zu verstehen, wie und wann Sie das SendGrid-Ziel verwenden sollten [!DNL Experience Platform] -Kunden können dies mithilfe dieses Ziels lösen.
+Hier finden Sie Beispielanwendungsfälle, die Ihnen helfen, besser zu verstehen, wie und wann Sie das SendGrid-Ziel verwenden sollten. [!DNL Experience Platform] -Kunden können mit diesem Ziel eine Lösung finden.
 
 ### Erstellen einer Marketingliste für mehrere Marketingaktivitäten
 
@@ -101,7 +101,7 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 Beim [Einrichten](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=de) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
 * **[!UICONTROL Name]**: Der Name, mit dem Sie dieses Ziel in der Zukunft erkennen werden.
-* **[!UICONTROL Beschreibung]**: Eine optionale Beschreibung, die Ihnen dabei hilft, dieses Ziel in der Zukunft zu identifizieren.
+* **[!UICONTROL Beschreibung]**: Eine optionale Beschreibung, die Ihnen bei der Identifizierung dieses Ziels in der Zukunft hilft.
 
 ![](../../assets/catalog/email-marketing/sendgrid/06.jpg)
 
@@ -115,9 +115,10 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>* Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>* Export *identities*, benötigen Sie die **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
-Lesen [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppenexport-Ziele](/help/destinations/ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
+Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 Weitere Informationen zu diesem Ziel finden Sie in den folgenden Bildern.
 
@@ -134,7 +135,7 @@ Weitere Informationen zu diesem Ziel finden Sie in den folgenden Bildern.
    ![](../../assets/catalog/email-marketing/sendgrid/17.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/18.jpg)
 
-1. Nachdem Sie die Zuordnungen abgeschlossen haben, wählen Sie **[!UICONTROL Nächste]** , um zum Überprüfungsbildschirm zu gelangen.
+1. Wählen Sie nach Abschluss der Zuordnungen **[!UICONTROL Nächste]** , um zum Überprüfungsbildschirm zu gelangen.
    ![](../../assets/catalog/email-marketing/sendgrid/22.png)
 
 1. Auswählen **[!UICONTROL Beenden]** , um das Setup abzuschließen.
@@ -146,7 +147,7 @@ Die umfassende Liste der unterstützten Attributzuordnungen, die für die [Marke
 |---|---|---|---|---|
 | xdm:<br/> homeAddress.street1 | xdm:<br/> address_line_1 | Zeichenfolge | Die erste Zeile der Adresse. | Max. Länge:<br/> 100 Zeichen |
 | xdm:<br/> homeAddress.street2 | xdm:<br/> address_line_2 | Zeichenfolge | Eine optionale zweite Zeile für die Adresse. | Max. Länge:<br/> 100 Zeichen |
-| xdm:<br/> _extconndev.alternate_emails | xdm:<br/> alternate_emails | Zeichenfolgen-Array | Zusätzliche E-Mails, die mit dem Kontakt verknüpft sind. | <ul><li>Max.: 5 Posten</li><li>Min.: 0 Elemente</li></ul> |
+| xdm:<br/> _extconndev.alternate_emails | xdm:<br/> alternate_emails | Zeichenfolgen-Array | Zusätzliche E-Mails, die mit dem Kontakt verknüpft sind. | <ul><li>Maximal 5 Elemente</li><li>Min.: 0 Elemente</li></ul> |
 | xdm:<br/> homeAddress.city | xdm:<br/> city | Zeichenfolge | Die Stadt des Kontakts. | Max. Länge:<br/> 60 Zeichen |
 | xdm:<br/> homeAddress.country | xdm:<br/> country | Zeichenfolge | Das Land des Kontakts. Kann ein vollständiger Name oder eine Abkürzung sein. | Max. Länge:<br/> 50 Zeichen |
 | identityMap:<br/> Email | Identität:<br/> external_id | Zeichenfolge | Die primäre E-Mail des Kontakts. Dies muss eine gültige E-Mail sein. | Max. Länge:<br/> 254 Zeichen |

@@ -4,10 +4,10 @@ title: Aktivierungsübersicht
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppen für verschiedene Zieltypen aktivieren.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: 771801b52b7df7029e1c6e7496dcfb563463d06e
+source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
 workflow-type: tm+mt
-source-wordcount: '325'
-ht-degree: 26%
+source-wordcount: '361'
+ht-degree: 30%
 
 ---
 
@@ -15,7 +15,8 @@ ht-degree: 26%
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>* Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>* Export *identities*, benötigen Sie die **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Adobe Experience Platform unterstützt eine breite Palette von Zielen. Der Workflow für die Zielgruppenaktivierung variiert je nach dem Typ der von ihnen unterstützten Zielgruppendaten und der Häufigkeit des Datenexports.
 
@@ -27,7 +28,7 @@ Nach [Ziel konfigurieren](connect-destination.md)können Sie Zielgruppen auf ver
 
 Detaillierte Informationen zum Aktivieren von Zielgruppen für Ihr Ziel im Zielkatalog finden Sie in den folgenden Handbüchern:
 
-* [Aktivieren von Zielgruppendaten für Streaming-Zielgruppenexport-Ziele](activate-segment-streaming-destinations.md)
+* [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](activate-segment-streaming-destinations.md)
 * [Aktivieren von Zielgruppendaten für Exportziele von Streaming-Profilen](activate-streaming-profile-destinations.md)
 * [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](activate-batch-profile-destinations.md)
 
@@ -45,7 +46,7 @@ Führen Sie die folgenden Schritte aus, um Daten für Ihre Ziele über die **[!U
 
 1. Führen Sie je nach ausgewähltem Ziel die in den folgenden Artikeln beschriebenen Schritte aus, beginnend mit dem **[!UICONTROL Segmente auswählen]** Schritt, um den Aktivierungs-Workflow abzuschließen:
 
-   * [Aktivieren von Zielgruppendaten für Streaming-Zielgruppenexport-Ziele](activate-segment-streaming-destinations.md)
+   * [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](activate-segment-streaming-destinations.md)
    * [Aktivieren von Zielgruppendaten für Exportziele von Streaming-Profilen](activate-streaming-profile-destinations.md)
    * [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](activate-batch-profile-destinations.md)
 
@@ -55,6 +56,6 @@ Auf der Seite mit den Zielgruppendetails können Sie Zielgruppen für Ziele akti
 
 Führen Sie je nach ausgewähltem Ziel die in den folgenden Artikeln beschriebenen Schritte aus, um den Aktivierungs-Workflow abzuschließen:
 
-* [Aktivieren von Zielgruppendaten für Streaming-Zielgruppenexport-Ziele](activate-segment-streaming-destinations.md)
+* [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](activate-segment-streaming-destinations.md)
 * [Aktivieren von Zielgruppendaten für Exportziele von Streaming-Profilen](activate-streaming-profile-destinations.md)
 * [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](activate-batch-profile-destinations.md)
