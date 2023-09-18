@@ -1,21 +1,19 @@
 ---
 title: API-Endpunkt für berechnete Attribute
 description: Erfahren Sie, wie Sie berechnete Attribute mithilfe der Echtzeit-Kundenprofil-API erstellen, anzeigen, aktualisieren und löschen.
-badge: „Beta“
-source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
+source-git-commit: e1c7d097f7ab39d05674c3dad620bea29f08092b
 workflow-type: tm+mt
-source-wordcount: '1565'
-ht-degree: 13%
+source-wordcount: '1654'
+ht-degree: 12%
 
 ---
+
 
 # API-Endpunkt für berechnete Attribute
 
 >[!IMPORTANT]
 >
->Die Funktion für berechnete Attribute befindet sich derzeit in der Betaphase. Dokumentation und Funktionalitäten können sich ändern.
->
->Darüber hinaus ist der Zugriff auf die API eingeschränkt. Wenden Sie sich an den Support der Adobe, um zu erfahren, wie Sie auf die API für berechnete Attribute zugreifen können.
+>Der Zugriff auf die API ist eingeschränkt. Informationen zum Zugriff auf die API für berechnete Attribute erhalten Sie beim Adobe-Support.
 
 Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignisebene in Attribute auf Profilebene aggregiert werden. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können. Dieses Handbuch enthält Beispiel-API-Aufrufe zum Ausführen grundlegender CRUD-Vorgänge mithilfe des `/attributes` -Endpunkt.
 
@@ -25,7 +23,7 @@ Um mehr über berechnete Attribute zu erfahren, lesen Sie zunächst die [Übersi
 
 Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [Echtzeit-Kundenprofil-API](https://www.adobe.com/go/profile-apis-en).
 
-Bevor Sie fortfahren, lesen Sie bitte die [Handbuch zu den ersten Schritten mit der Profil-API](../api/getting-started.md) für Links zur empfohlenen Dokumentation, eine Anleitung zum Lesen der in diesem Dokument angezeigten Beispiel-API-Aufrufe und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs erforderlich sind.
+Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte mit der Profil-API](../api/getting-started.md) für Links zur empfohlenen Dokumentation, eine Anleitung zum Lesen der in diesem Dokument angezeigten Beispiel-API-Aufrufe und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs erforderlich sind.
 
 Lesen Sie außerdem die Dokumentation für den folgenden Dienst:
 
@@ -51,8 +49,8 @@ Beim Abrufen einer Liste berechneter Attribute können die folgenden Abfragepara
 | --------------- | ----------- | ------- |
 | `limit` | Ein Parameter, der die maximale Anzahl von Elementen angibt, die als Teil der Antwort zurückgegeben werden. Der Mindestwert dieses Parameters ist 1 und der Höchstwert 40. Wenn dieser Parameter nicht enthalten ist, werden standardmäßig 20 Elemente zurückgegeben. | `limit=20` |
 | `offset` | Ein Parameter, der die Anzahl der Elemente angibt, die vor der Rückgabe der Elemente übersprungen werden sollen. | `offset=5` |
-| `sortBy` | Ein Parameter, der die Reihenfolge angibt, in der die zurückgegebenen Elemente sortiert werden. Verfügbare Optionen umfassen `name`, `status`, `updateEpoch`und `createEpoch`. Sie können auch auswählen, ob eine Sortierung in aufsteigender oder absteigender Reihenfolge erfolgen soll, indem Sie eine `-` vor der Sortieroption. Standardmäßig werden die Elemente nach `updateEpoch` in absteigender Reihenfolge. | `sortBy=name` |
-| `status` | Ein Parameter, mit dem Sie nach dem Status des berechneten Attributs filtern können. Verfügbare Optionen umfassen `draft`, `new`, `processing`, `processed`, `failed`, `disabled`und `initializing`. Bei dieser Option wird nicht zwischen Groß- und Kleinschreibung unterschieden. | `status=draft` |
+| `sortBy` | Ein Parameter, der die Reihenfolge angibt, in der die zurückgegebenen Elemente sortiert werden. Verfügbare Optionen umfassen `name`, `status`, `updateEpoch`, und `createEpoch`. Sie können auch auswählen, ob eine Sortierung in aufsteigender oder absteigender Reihenfolge erfolgen soll, indem Sie eine `-` vor der Sortieroption. Standardmäßig werden die Elemente nach `updateEpoch` in absteigender Reihenfolge. | `sortBy=name` |
+| `property` | Ein Parameter, mit dem Sie nach verschiedenen berechneten Attributfeldern filtern können. Zu den unterstützten Eigenschaften gehören `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch`, und `status`. Die unterstützten Vorgänge hängen von der aufgeführten Eigenschaft ab. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (!=enthält())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
 
 **Anfrage**
 
@@ -107,19 +105,24 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste der letzten 3
                 "default": true
             },
             "path": "{TENANT_ID}/ComputedAttributes",
+            "keepCurrent": false,
             "expression": {
                 "type": "PQL",
                 "format": "pql/text",
                 "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)",
-                "meta": " "
             },
             "mergeFunction": {
-                "value": "-"
+                "value": "SUM"
             },
             "status": "DRAFT",
             "schema": {
                 "name": "_xdm.context.profile"
             },
+            "duration": {
+                "count": 7,
+                "unit": "DAYS"
+            },
+            "lastEvaluationTs": "",
             "createEpoch": 1671223530322,
             "updateEpoch": 1673043640946,
             "createdBy": "{USER_ID}"
@@ -138,19 +141,24 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste der letzten 3
                 "default": true
             },
             "path": "{TENANT_ID}/ComputedAttributes",
+            "keepCurrent": true,
             "expression": {
                 "type": "PQL",
                 "format": "pql/text",
-                "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)",
-                "meta": " "
+                "value": "xEvent[eventType.equals(\"commerce.backofficeOrderPlaced\", false)].topN(timestamp, 1).map({\"timestamp\": timestamp, \"value\": producedBy}).head()"
             },
             "mergeFunction": {
-                "value": "-"
+                "value": "MOST_RECENT"
             },
             "status": "DRAFT",
             "schema": {
                 "name": "_xdm.context.profile"
             },
+            "duration": {
+                "count": 7,
+                "unit": "DAYS"
+            },
+            "lastEvaluationTs": "",
             "createEpoch": 1671223586455,
             "updateEpoch": 1671223586455,
             "createdBy": "{USER_ID}"
@@ -173,15 +181,19 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste der letzten 3
                 "type": "PQL",
                 "format": "pql/text",
                 "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)",
-                "meta": " "
             },
             "mergeFunction": {
-                "value": "-"
+                "value": "SUM"
             },
-            "status": "DRAFT",
+            "status": "PROCESSED",
             "schema": {
                 "name": "_xdm.context.profile"
             },
+            "duration": {
+                "count": 7,
+                "unit": "DAYS"
+            },
+            "lastEvaluationTs": "2023-08-27T00:14:55.028",
             "createEpoch": 1671220358902,
             "updateEpoch": 1671220358902,
             "createdBy": "{USER_ID}"
@@ -247,15 +259,15 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
 | -------- | ----------- |
 | `name` | Name des berechneten Attributfelds als Zeichenfolge. Der Name des berechneten Attributs darf nur aus alphanumerischen Zeichen ohne Leerzeichen oder Unterstriche bestehen. Dieser Wert **must** unter allen berechneten Attributen eindeutig sein. Als Best Practice sollte dieser Name eine camelCase-Version der `displayName`. |
 | `description` | Eine Beschreibung des berechneten Attributs. Dies ist besonders nützlich, wenn mehrere berechnete Attribute definiert wurden, da es anderen in Ihrer Organisation dabei hilft, das richtige berechnete Attribut zu bestimmen, das verwendet werden soll. |
-| `displayName` | Der Anzeigename für das berechnete Attribut. Dieser Name wird angezeigt, wenn Sie Ihre berechneten Attribute in der Adobe Experience Platform-Benutzeroberfläche auflisten. |
+| `displayName` | Der Anzeigename für das berechnete Attribut. Dies ist der Name, der angezeigt wird, wenn Sie Ihre berechneten Attribute in der Adobe Experience Platform-Benutzeroberfläche auflisten. |
 | `expression` | Ein Objekt, das den Abfrageausdruck des berechneten Attributs darstellt, das Sie erstellen möchten. |
 | `expression.type` | Der Typ des Ausdrucks. Derzeit wird nur PQL unterstützt. |
 | `expression.format` | Das Format des Ausdrucks. Derzeit wird nur `pql/text` unterstützt. |
 | `expression.value` | Der -Wert des Ausdrucks. |
-| `keepCurrent` | Ein boolescher Wert, der bestimmt, ob der Wert des berechneten Attributs auf dem neuesten Stand gehalten wird. Derzeit sollte dieser Wert auf `false`. |
+| `keepCurrent` | Ein boolescher Wert, der bestimmt, ob der Wert des berechneten Attributs mithilfe einer schnellen Aktualisierung auf dem neuesten Stand gehalten wird. Derzeit sollte dieser Wert auf `false`. |
 | `duration` | Ein Objekt, das den Lookback-Zeitraum für das berechnete Attribut darstellt. Der Lookback-Zeitraum gibt an, wie weit zurück zum Berechnen des berechneten Attributs geguckt werden kann. |
 | `duration.count` | Ein number -Wert, der die Dauer des Lookback-Zeitraums darstellt. Die möglichen Werte hängen vom Wert der `duration.unit` -Feld. <ul><li>`HOURS`: 1-24</li><li>`DAYS`: 1-7</li><li>`WEEKS`: 1-4</li><li>`MONTHS`: 1-6</li></ul> |
-| `duration.unit` | Eine Zeichenfolge, die die Zeiteinheit darstellt, die für den Lookback-Zeitraum verwendet wird. Mögliche Werte sind: `HOURS`, `DAYS`, `WEEKS`und `MONTHS`. |
+| `duration.unit` | Eine Zeichenfolge, die die Zeiteinheit darstellt, die für den Lookback-Zeitraum verwendet wird. Mögliche Werte sind: `HOURS`, `DAYS`, `WEEKS`, und `MONTHS`. |
 | `status` | Der Status des berechneten Attributs. Mögliche Werte sind `DRAFT` und `NEW`. |
 
 +++
@@ -294,6 +306,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrem ne
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1680070188696,
     "updateEpoch": 1680070188696,
     "createdBy": "{USER_ID}"
@@ -368,6 +381,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Information
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1680070188696,
     "updateEpoch": 1680070188696,
     "createdBy": "{USER_ID}"
@@ -378,13 +392,18 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Information
 | -------- | ----------- |
 | `id` | Eine eindeutige, schreibgeschützte, systemgenerierte ID, die bei anderen API-Vorgängen zum Verweisen auf das berechnete Attribut genutzt werden kann. |
 | `type` | Eine Zeichenfolge, die anzeigt, dass das zurückgegebene Objekt ein berechnetes Attribut ist. |
+| `name` | Der Name des berechneten Attributs. |
+| `displayName` | Der Anzeigename für das berechnete Attribut. Dies ist der Name, der angezeigt wird, wenn Sie Ihre berechneten Attribute in der Adobe Experience Platform-Benutzeroberfläche auflisten. |
+| `description` | Eine Beschreibung des berechneten Attributs. Dies ist besonders nützlich, wenn mehrere berechnete Attribute definiert wurden, da es anderen in Ihrer Organisation dabei hilft, das richtige berechnete Attribut zu bestimmen, das verwendet werden soll. |
 | `imsOrgId` | Die ID der Organisation, zu der das berechnete Attribut gehört. |
 | `sandbox` | Das Sandbox-Objekt enthält Details zur Sandbox, in der das berechnete Attribut konfiguriert wurde. Diese Daten werden aus der in der Anfrage gesendeten Sandbox-Kopfzeile extrahiert. Weiterführende Informationen dazu finden Sie in der [Sandbox-Übersicht](../../sandboxes/home.md). |
-| `path` | Die `path` zum berechneten Attribut. |
+| `path` | Die `path` zum berechneten Attribut hinzu. |
+| `keepCurrent` | Ein boolescher Wert, der bestimmt, ob der Wert des berechneten Attributs mithilfe einer schnellen Aktualisierung auf dem neuesten Stand gehalten wird. |
 | `expression` | Ein Objekt, das den Ausdruck des berechneten Attributs enthält. |
-| `mergeFunction` | Ein Objekt, das die Zusammenführungsfunktion für das berechnete Attribut enthält. Dieser Wert basiert auf dem entsprechenden Aggregationsparameter innerhalb des Ausdrucks des berechneten Attributs. |
+| `mergeFunction` | Ein Objekt, das die Zusammenführungsfunktion für das berechnete Attribut enthält. Dieser Wert basiert auf dem entsprechenden Aggregationsparameter innerhalb des Ausdrucks des berechneten Attributs. Mögliche Werte sind `SUM`, `MIN`, `MAX`, und `MOST_RECENT`. |
 | `status` | Der Status des berechneten Attributs. Dies kann einer der folgenden Werte sein: `DRAFT`, `NEW`, `INITIALIZING`, `PROCESSING`, `PROCESSED`, `FAILED`oder `DISABLED`. |
 | `schema` | Ein Objekt, das Informationen zum Schema enthält, in dem der Ausdruck ausgewertet wird. Derzeit wird nur `_xdm.context.profile` unterstützt. |
+| `lastEvaluationTs` | Ein Zeitstempel, der angibt, wann das berechnete Attribut zuletzt ausgewertet wurde. |
 | `createEpoch` | Der Zeitpunkt, zu dem das berechnete Attribut erstellt wurde, in Sekunden. |
 | `updateEpoch` | Der Zeitpunkt, zu dem das berechnete Attribut zuletzt aktualisiert wurde (in Sekunden). |
 | `createdBy` | Die ID des Benutzers, der das berechnete Attribut erstellt hat. |
@@ -411,7 +430,7 @@ DELETE /attributes/{ATTRIBUTE_ID}
 
 **Anfrage**
 
-+++ Beispielanfrage zum Löschen eines berechneten Attributs.
++++ Eine Beispielanfrage zum Löschen eines berechneten Attributs.
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b17-bbe6-2dbc08c1a631 \
@@ -457,6 +476,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 mit Details zum gelöschten b
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1681365690928,
     "updateEpoch": 1681365690928,
     "createdBy": "{USER_ID}"
@@ -474,7 +494,7 @@ Sie können ein bestimmtes berechnetes Attribut aktualisieren, indem Sie eine PA
 >Beim Aktualisieren eines berechneten Attributs können nur die folgenden Felder aktualisiert werden:
 >
 >- Wenn der aktuelle Status `NEW`, kann der Status nur in `DISABLED`.
->- Wenn der aktuelle Status `DRAFT`können Sie die Werte der folgenden Felder ändern: `name`, `description`, `keepCurrent`, `expression`und `duration`. Sie können den Status auch von `DRAFT` nach `NEW`. Alle Änderungen an systemgenerierten Feldern, z. B. `mergeFunction` oder `path` gibt einen Fehler zurück.
+>- Wenn der aktuelle Status `DRAFT`können Sie die Werte der folgenden Felder ändern: `name`, `description`, `keepCurrent`, `expression`, und `duration`. Sie können den Status auch von `DRAFT` nach `NEW`. Alle Änderungen an systemgenerierten Feldern, z. B. `mergeFunction` oder `path` gibt einen Fehler zurück.
 >- Wenn der aktuelle Status `PROCESSING` oder `PROCESSED`, kann der Status nur in `DISABLED`.
 
 **API-Format**
@@ -548,6 +568,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrem ne
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1680071726825,
     "updateEpoch": 1680074429192,
     "createdBy": "{USER_ID}"
@@ -558,4 +579,4 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrem ne
 
 ## Nächste Schritte
 
-Nachdem Sie sich mit den Grundlagen berechneter Attribute vertraut gemacht haben, können Sie nun mit der Definition berechneter Attribute für Ihre Organisation beginnen. Informationen zur Verwendung berechneter Attribute in der Experience Platform-Benutzeroberfläche finden Sie im Abschnitt [UI-Handbuch für berechnete Attribute](./ui.md).
+Nachdem Sie sich mit den Grundlagen berechneter Attribute vertraut gemacht haben, können Sie nun mit der Definition berechneter Attribute für Ihre Organisation beginnen. Informationen zur Verwendung berechneter Attribute in der Experience Platform-Benutzeroberfläche finden Sie in der [UI-Handbuch für berechnete Attribute](./ui.md).

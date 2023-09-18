@@ -1,20 +1,15 @@
 ---
-title: Handbuch zur Benutzeroberfläche für berechnete Attribute
+title: Handbuch zur Benutzeroberfläche "Berechnete Attribute"
 description: Erfahren Sie, wie Sie berechnete Attribute mithilfe der Adobe Experience Platform-Benutzeroberfläche erstellen, anzeigen und aktualisieren.
-badge: „Beta“
-source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
+source-git-commit: 7ed473750b673eefd84b8d727043ad6ea35c3a8e
 workflow-type: tm+mt
-source-wordcount: '1236'
-ht-degree: 5%
+source-wordcount: '1439'
+ht-degree: 4%
 
 ---
 
 
 # Handbuch zur Benutzeroberfläche für berechnete Attribute
-
->[!IMPORTANT]
->
->Berechnete Attribute befinden sich derzeit in **Beta** und **not** für alle Benutzer verfügbar.
 
 In Adobe Experience Platform sind berechnete Attribute Funktionen zum Aggregieren von Daten auf Ereignisebene in Profilattributen. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können.
 
@@ -29,7 +24,7 @@ Dieses UI-Handbuch setzt ein Verständnis der verschiedenen [!DNL Experience Pla
 
 ## Berechnete Attribute anzeigen {#view}
 
-Wählen Sie in der Benutzeroberfläche &quot;Experience Platform&quot;die Option **[!UICONTROL Profile]** im linken Navigationsbereich, gefolgt von **[!UICONTROL Berechnete Attribute]** um eine Liste der für Ihr Unternehmen verfügbaren berechneten Attribute anzuzeigen. Dazu gehören Informationen zum Namen, zur Beschreibung, zum letzten Auswertungsdatum und zum letzten Auswertungsstatus des berechneten Attributs.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Profile]** im linken Navigationsbereich, gefolgt von **[!UICONTROL Berechnete Attribute]** um eine Liste der für Ihr Unternehmen verfügbaren berechneten Attribute anzuzeigen. Dazu gehören Informationen zum Namen, zur Beschreibung, zum letzten Auswertungsdatum und zum letzten Auswertungsstatus des berechneten Attributs.
 
 ![Die [!UICONTROL Profil] und [!UICONTROL Berechnete Attribute] -Registerkarten hervorgehoben sind, die Benutzern zeigen, wie sie auf die Seite zum Durchsuchen berechneter Attribute zugreifen können.](./images/ui/browse.png)
 
@@ -44,7 +39,17 @@ Um auszuwählen, welche Felder angezeigt werden sollen, können Sie ![Symbol Spa
 | [!UICONTROL Letzter Bewertungsstatus] | Der Status, der angibt, ob das berechnete Attribut im letzten Bewertungslauf erfolgreich berechnet wurde oder nicht. Mögliche Werte sind **[!UICONTROL Erfolg]** oder **[!UICONTROL Fehlgeschlagen]**. |
 | [!UICONTROL Häufigkeit der Aktualisierung] | Ein Hinweis darauf, wie häufig das berechnete Attribut aktualisiert werden soll. Mögliche Werte sind stündlich, täglich, wöchentlich oder monatlich. |
 | [!UICONTROL Schnelle Aktualisierung] | Ein Wert, der anzeigt, ob für dieses Compute-Attribut eine schnelle Aktualisierung aktiviert ist. Wenn die schnelle Aktualisierung aktiviert ist, kann das berechnete Attribut täglich aktualisiert werden, nicht wöchentlich, zweimal wöchentlich oder monatlich. Dieser Wert gilt nur für berechnete Attribute mit einem Lookback-Zeitraum, der größer als die wöchentliche Basis ist. |
-| [!UICONTROL Lebenszyklus-Status] | Der aktuelle Status des berechneten Attributs. Es gibt drei mögliche Status: <ul><li>**[!UICONTROL Entwurf]:** Das berechnete Attribut **not** im Schema bereits ein Feld erstellt wurde. In diesem Status kann das berechnete Attribut bearbeitet werden. </li><li>**[!UICONTROL Veröffentlicht]:** Das berechnete Attribut verfügt über ein Feld, das für das Schema erstellt wurde und zur Verwendung bereit ist. In diesem Status wird das berechnete Attribut **cannot** bearbeitet werden.</li><li>**[!UICONTROL Inaktiv]:** Das berechnete Attribut ist deaktiviert. Weitere Informationen zum inaktiven Status finden Sie in der [FAQ-Seite](./faq.md#inactive-status). </li> |
+| [!UICONTROL Lebenszyklusstatus] | Der aktuelle Status des berechneten Attributs. Es gibt drei mögliche Status: <ul><li>**[!UICONTROL Entwurf]:** Das berechnete Attribut **not** haben noch ein Feld für das Schema erstellt. In diesem Status kann das berechnete Attribut bearbeitet werden. </li><li>**[!UICONTROL Veröffentlicht]:** Das berechnete Attribut verfügt über ein Feld, das für das Schema erstellt wurde und zur Verwendung bereit ist. In diesem Status wird das berechnete Attribut **cannot** bearbeitet werden.</li><li>**[!UICONTROL Inaaktiv]:** Das berechnete Attribut ist deaktiviert. Weitere Informationen zum inaktiven Status finden Sie in der [FAQ-Seite](./faq.md#inactive-status). </li> |
+| [!UICONTROL Erstellt] | Ein Zeitstempel, der das Datum und die Uhrzeit der Erstellung des berechneten Attributs anzeigt. |
+| [!UICONTROL Zuletzt geändert] | Ein Zeitstempel, der das Datum und die Uhrzeit der letzten Änderung des berechneten Attributs anzeigt. |
+
+Sie können auch die angezeigten berechneten Attribute basierend auf dem Lebenszyklusstatus filtern. Wählen Sie die ![trichtern](./images/ui/filter-icon.png) Symbol.
+
+![Das Filtersymbol wird hervorgehoben.](./images/ui/select-filter.png)
+
+Sie können jetzt die berechneten Attribute nach Status filtern ([!UICONTROL Entwurf], [!UICONTROL Veröffentlicht], und [!UICONTROL Inaaktiv]).
+
+![Die Optionen, nach denen Sie die berechneten Attribute filtern können, sind hervorgehoben. Zu diesen Optionen gehören [!UICONTROL Entwurf], [!UICONTROL Veröffentlicht], und [!UICONTROL Inaaktiv].](./images/ui/view-filters.png)
 
 Darüber hinaus können Sie ein berechnetes Attribut auswählen, um genauere Informationen dazu anzuzeigen. Weitere Informationen zur Detailseite für berechnete Attribute finden Sie im Abschnitt [Detailabschnitt eines berechneten Attributs anzeigen](#view-details).
 
@@ -59,7 +64,7 @@ Die **[!UICONTROL Berechnetes Attribut erstellen]** angezeigt. Auf dieser Seite 
 | Feld | Beschreibung |
 | ----- | ----------- |
 | [!UICONTROL Anzeigename] | Der Name, durch den das berechnete Attribut bekannt sein wird. Dieser Anzeigename sollte für jedes berechnete Attribut eindeutig sein. Als Best Practice sollte dieser Anzeigename Kennungen zum berechneten Attribut enthalten. Beispielsweise &quot;Summe der Käufe für Schuhe in den letzten sieben Tagen&quot;. |
-| [!UICONTROL Feldname] | Ein Name, der verwendet wird, um in anderen nachgelagerten Diensten auf das berechnete Attribut zu verweisen. Dieser Name wird automatisch aus dem Anzeigenamen abgeleitet und in camelCase geschrieben. |
+| [!UICONTROL Feldname] | Ein Name, mit dem auf das berechnete Attribut in anderen nachgelagerten Diensten verwiesen wird. Dieser Name wird automatisch aus dem Anzeigenamen abgeleitet und in camelCase geschrieben. |
 | [!UICONTROL Beschreibung] | Eine Beschreibung des berechneten Attributs, das Sie erstellen möchten. |
 
 ![Die [!UICONTROL Basisinformationen] Abschnitt [!UICONTROL Berechnetes Attribut erstellen] -Seite markiert ist.](./images/ui/basic-information.png)
@@ -78,7 +83,7 @@ Nachdem Sie das Attribut ausgewählt haben, das in der Definition des berechnete
 
 ### Aggregationsfunktion anwenden
 
-Jetzt können Sie eine Funktion aus der bedingten Ausgabe auf das Feld anwenden. Wählen Sie zunächst den Aggregations-Funktionstyp aus. Verfügbare Optionen umfassen [!UICONTROL Summe], [!UICONTROL Min], [!UICONTROL Max], [!UICONTROL Count]und [!UICONTROL Zuletzt verwendet]. Weitere Informationen zu diesen Funktionen finden Sie im [Funktionsteil](./overview.md#functions) der Übersicht über berechnete Attribute.
+Jetzt können Sie eine Funktion aus der bedingten Ausgabe auf das Feld anwenden. Wählen Sie zunächst den Aggregations-Funktionstyp aus. Verfügbare Optionen umfassen [!UICONTROL Summe], [!UICONTROL Min], [!UICONTROL Max], [!UICONTROL Count], und [!UICONTROL Zuletzt verwendet]. Weitere Informationen zu diesen Funktionen finden Sie im [Funktionsteil](./overview.md#functions) der Übersicht über berechnete Attribute.
 
 ![Die berechneten Attributfunktionen werden angezeigt.](./images/ui/select-function.png)
 
@@ -91,6 +96,21 @@ Nach Auswahl einer Funktion können Sie das zu aggregierende Feld auswählen. Di
 Nach Anwendung der Aggregationsfunktion müssen Sie den Lookback-Zeitraum des berechneten Attributs definieren. Dieser Lookback-Zeitraum gibt die Zeitdauer an, für die Sie Ereignisse aggregieren möchten. Diese Lookback-Dauer kann in Stunden, Tagen, Wochen oder Monaten angegeben werden.
 
 ![Die Lookback-Dauer ist hervorgehoben.](./images/ui/select-lookback-duration.png)
+
+### Schnelle Aktualisierung {#fast-refresh}
+
+>[!CONTEXTUALHELP]
+>id="platform_profile_computedAttributes_fastRefresh"
+>title="Schnelle Aktualisierung"
+>abstract="Mit der schnellen Aktualisierung können Sie Ihre Attribute auf dem neuesten Stand halten. Durch Aktivierung dieser Option können Sie Ihre berechneten Attribute täglich aktualisieren, auch über längere Lookback-Zeiträume, sodass Sie schnell auf Benutzeraktivitäten reagieren können. Dieser Wert gilt nur für berechnete Attribute mit einem Lookback-Zeitraum, der größer als die wöchentliche Basis ist."
+
+Bei Anwendung der Aggregationsfunktion können Sie eine schnelle Aktualisierung aktivieren, wenn der Lookback-Zeitraum größer als eine Woche ist.
+
+![Die [!UICONTROL Schnelles Aktualisieren] markiert ist.](./images/ui/enable-fast-refresh.png)
+
+Mit der schnellen Aktualisierung können Sie Ihre Attribute auf dem neuesten Stand halten. Durch Aktivierung dieser Option können Sie Ihre berechneten Attribute täglich aktualisieren, auch über längere Lookback-Zeiträume, sodass Sie schnell auf Benutzeraktivitäten reagieren können.
+
+Weitere Informationen zur schnellen Aktualisierung finden Sie im [Bereich für schnelle Aktualisierung](./overview.md#fast-refresh) der Übersicht über berechnete Attribute.
 
 Nach Abschluss dieser Schritte können Sie dieses berechnete Attribut nun entweder als Entwurf speichern oder es sofort veröffentlichen.
 
