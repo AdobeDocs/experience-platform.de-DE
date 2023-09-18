@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Überwachung; Überwachung; Datenflüsse; Überwachung der Erfassung; Datenerfassung; Datenerfassung; Anzeigen von Datensätzen; Anzeigen von Stapeln;
+keywords: Experience Platform; Startseite; beliebte Themen; Überwachung; Überwachung; Datenflüsse; Überwachen der Aufnahme; Datenerfassung; Datenerfassung; Anzeigen von Datensätzen; Anzeigen von Stapeln;
 solution: Experience Platform
 title: Überwachen der Datenerfassung
 description: Dieses Benutzerhandbuch enthält eine Anleitung zum Überwachen Ihrer Daten in der Benutzeroberfläche von Adobe Experience Platform. Für dieses Handbuch benötigen Sie eine Adobe ID und Zugriff auf Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 9399a242b855e151e5822035bc952efa89fe4bf0
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 37%
+source-wordcount: '657'
+ht-degree: 36%
 
 ---
 
@@ -24,7 +24,7 @@ Dieses Benutzerhandbuch enthält Schritte zum Überwachen Ihrer Daten in der Ben
 >title="Aufnahmegeschwindigkeit"
 >abstract="Die Anzahl der erfolgreich verarbeiteten Ereignisse pro Sekunde."
 >text="Learn more in the documentation"
->additional-url="http://www.adobe.com/go/monitor-dataflows-en" text="Überwachen von Datenflüssen für Quellen in der Benutzeroberfläche"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html" text="Überwachen von Datenflüssen für Quellen in der Benutzeroberfläche"
 
 >[!TIP]
 >
