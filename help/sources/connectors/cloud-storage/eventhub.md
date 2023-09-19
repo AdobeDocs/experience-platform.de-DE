@@ -3,7 +3,7 @@ title: Azure Event Hubs Source Connector - Überblick
 description: Erfahren Sie, wie Sie Azure Event Hubs über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 7240f96cb30e79add500a1957d93062eecd79ee2
+source-git-commit: 087100b23f95cef527a507fb11440467feb78c9e
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 19%
@@ -26,13 +26,13 @@ Der Skalierungsfaktor Ihres [!DNL Event Hubs] -Instanz muss erhöht werden, wenn
 
 ### Aufnehmen von Daten mit höherem Volumen
 
-Derzeit ist das maximale Datenvolumen, das Sie aus Ihrem [!DNL Event Hubs] -Konto in Platform 2000 Datensätze pro Sekunde. Wenden Sie sich an Ihren Ansprechpartner bei der Adobe, um Daten mit höherem Datenvolumen zu skalieren und zu erfassen.
+Derzeit ist das maximale Datenvolumen, das Sie aus Ihrem [!DNL Event Hubs] -Konto in Platform 2000 Datensätze pro Sekunde. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Daten mit höherem Datenvolumen zu skalieren und aufzunehmen.
 
 ### Erhöhen Sie den Parallelismus bei [!DNL Event Hubs] und Plattform
 
 Parallelismus bezieht sich auf die gleichzeitige Ausführung der gleichen Aufgaben an mehreren Verarbeitungseinheiten, um die Geschwindigkeit und Leistung zu erhöhen. Sie können die Parallelität auf der [!DNL Event Hubs] , indem Sie die Partition vergrößern oder mehr Verarbeitungseinheiten für Ihre [!DNL Event Hubs] -Konto. Siehe dies [[!DNL Event Hubs] Dokument zur Skalierung](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) für weitere Informationen.
 
-Um die Geschwindigkeit der Aufnahme auf Platform-Seite zu erhöhen, muss Platform die Anzahl der Aufgaben im Quell-Connector erhöhen, die von Ihrer [!DNL Event Hubs] Partitionen. Sobald Sie die Parallelität auf der [!DNL Event Hubs] wenden Sie sich bitte an Ihren Adobe-Support-Mitarbeiter, um Plattformaufgaben basierend auf Ihrer neuen Partition zu skalieren. Derzeit ist dieser Prozess nicht automatisiert.
+Um die Geschwindigkeit der Aufnahme auf Platform-Seite zu erhöhen, muss Platform die Anzahl der Aufgaben im Quell-Connector erhöhen, die von Ihrer [!DNL Event Hubs] Partitionen. Sobald Sie die Parallelität auf der [!DNL Event Hubs] wenden Sie sich bitte an Ihren Adobe-Kundenbetreuer, um Platform-Aufgaben basierend auf Ihrer neuen Partition zu skalieren. Derzeit ist dieser Prozess nicht automatisiert.
 
 ## Verwenden Sie ein virtuelles Netzwerk, um eine Verbindung herzustellen [!DNL Event Hubs] Platform
 
@@ -107,7 +107,7 @@ Die nachstehende Liste zeigt verschiedene Regionen von Platform-Subnetzen:
     "virtualNetworkRules": [
       {
         "subnet": {
-          "id": "/subscriptions/1618ef18-9edc-48bf-88dd-61cc979629b5/resourceGroups/ethos_12_prod_aus5_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_aus5_network_10_21_116_0_22/subnets/ethos_12_prod_aus5_network_10_21_116_0_22"
+          "id": "/subscriptions/1618ef18-9edc-48bf-88dd-61cc979629b5/resourceGroups/ethos_12_prod_aus5_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_aus5-vnet/subnets/ethos_12_prod_aus5_network_10_21_116_0_22"
         },
         "ignoreMissingVnetServiceEndpoint": true
       },
