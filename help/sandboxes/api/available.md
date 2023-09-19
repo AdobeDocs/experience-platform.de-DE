@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Liste verfügbarer Sandboxes; Listen-Sandboxes
+keywords: Experience Platform;home;popular topics;list available sandboxes;list sandboxes
 solution: Experience Platform
 title: Verfügbarer Sandbox-API-Endpunkt
 description: Sie können die für den aktuellen Benutzer verfügbaren Sandboxes auflisten, indem Sie eine GET-Anfrage an den verfügbaren Sandbox-Endpunkt senden.
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 130f3a9b65befc1cc8cf400b8ca8ca4d6e7f71e4
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 41%
@@ -27,13 +27,13 @@ GET /{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Siehe [Anhang](./appendix.md#query) für eine Liste der verfügbaren Parameter. |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Siehe [Anlagendokument](./appendix.md#query) für eine Liste der verfügbaren Parameter. |
 
 **Anfrage**
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/sandbox-management/?&limit=3&offset=1 \
+  https://platform.adobe.io/data/foundation/sandbox-management/?limit=3&offset=1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}'
@@ -41,7 +41,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Sandboxes zurück, die für den aktuellen Benutzer verfügbar sind, einschließlich Details wie `name`, `title`, `state`und `type`.
+Eine erfolgreiche Antwort gibt eine Liste von Sandboxes zurück, die für den aktuellen Benutzer verfügbar sind, einschließlich Details wie `name`, `title`, `state`, und `type`.
 
 ```json
 {
