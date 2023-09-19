@@ -1,12 +1,12 @@
 ---
 keywords: Ereignisweiterleitungs-Erweiterung;Ausblenden;Ausblenden der Ereignisweiterleitungs-Erweiterung
 title: Braze Event Forwarding-Erweiterung
-description: Diese Ereignisweiterleitungs-Erweiterung von Adobe Experience Platform sendet Adobe Experience Edge Network-Ereignisse an Braze.
+description: Diese Ereignisweiterleitungs-Erweiterung von Adobe Experience Platform sendet Edge Network-Ereignisse an Braze.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1861'
 ht-degree: 6%
 
 ---
@@ -47,7 +47,7 @@ Die Erweiterung verwendet zwei von [!DNL Braze]Die APIs und ihre Beschränkungen
 
 >[!NOTE]
 >
-> Weitere Informationen finden Sie im Handbuch [[!DNL Braze] API-Beschränkungen](https://www.braze.com/docs/api/api_limits/) weitere Einzelheiten zu den von ihnen auferlegten Beschränkungen.
+> Weitere Informationen finden Sie im Handbuch unter [[!DNL Braze] API-Beschränkungen](https://www.braze.com/docs/api/api_limits/) weitere Einzelheiten zu den von ihnen auferlegten Beschränkungen.
 
 ### Abrechenbare Datenpunkte
 
@@ -70,7 +70,7 @@ Erstellen Sie eine neue [Ereignisweiterleitungsgeheimnis](../../../ui/event-forw
 
 So installieren Sie die Erweiterung: [Erstellen einer Ereignisweiterleitungs-Eigenschaft](../../../ui/event-forwarding/overview.md#properties) oder wählen Sie eine vorhandene Eigenschaft aus, die Sie stattdessen bearbeiten möchten.
 
-Wählen Sie **[!UICONTROL Erweiterungen]** in der linken Navigation aus. Im **[!UICONTROL Katalog]** Registerkarte, wählen Sie **[!UICONTROL Installieren]** auf der Karte für die [!DNL Braze] -Erweiterung.
+Wählen Sie **[!UICONTROL Erweiterungen]** in der linken Navigation aus. Im **[!UICONTROL Katalog]** Registerkarte auswählen **[!UICONTROL Installieren]** auf der Karte für die [!DNL Braze] -Erweiterung.
 
 ![[!DNL Braze]Installieren der Erweiterung.](../../../images/extensions/server/braze/install-extension.png)
 
@@ -93,15 +93,15 @@ Erstellen Sie nach der Installation der Erweiterung eine neue Ereignisweiterleit
 
 | Eingabe | Beschreibung |
 | --- | --- |
-| [!UICONTROL Externe Benutzer-ID] | Lange, zufällige und gut verteilte UUID oder GUID. Wenn Sie eine andere Methode wählen, mit der Sie Ihre Benutzer-IDs benennen können, müssen diese auch lang, zufällig und gut verteilt sein. Weitere Informationen [vorgeschlagene Benutzer-ID-Benennungskonvention](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention). |
+| [!UICONTROL Externe Benutzer-ID] | Lang, zufällig und gut verteilt UUID oder GUID. Wenn Sie eine andere Methode wählen, mit der Sie Ihre Benutzer-IDs benennen können, müssen diese auch lang, zufällig und gut verteilt sein. Weitere Informationen [vorgeschlagene Benutzer-ID-Benennungskonvention](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention). |
 | [!UICONTROL Benutzer-ID speichern] | Anzeigen der Benutzer-ID. |
-| [!UICONTROL Benutzeralias] | Ein Alias dient als alternative eindeutige Benutzerkennung. Verwenden Sie Aliase, um Benutzer anhand anderer Dimensionen als Ihrer Benutzer-ID zu identifizieren. <br><br> Das user alias -Objekt besteht aus zwei Teilen: ein alias_name für die Kennung selbst und ein alias_label, der den Aliastyp angibt. Benutzer können über mehrere Alias mit unterschiedlichen Bezeichnungen verfügen, jedoch nur einen Alias-Namen pro alias_label. |
+| [!UICONTROL Benutzeralias] | Ein Alias dient als alternative eindeutige Benutzerkennung. Verwenden Sie Aliase, um Benutzer anhand anderer Dimensionen als Ihrer Benutzer-ID zu identifizieren. <br><br> Das user alias -Objekt besteht aus zwei Teilen: einem alias_name für die Kennung selbst und einem alias_label, das den Aliastyp angibt. Benutzer können über mehrere Alias mit unterschiedlichen Bezeichnungen verfügen, jedoch nur einen Alias-Namen pro alias_label. |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
-> Um das Ereignis an einen Benutzer zu binden, müssen Sie entweder [!UICONTROL Externe Benutzer-ID] oder das [!UICONTROL Benutzerkennung für Blitzen] oder [!UICONTROL Benutzeralias] Abschnitt.
+> Um das Ereignis an einen Benutzer zu binden, müssen Sie entweder [!UICONTROL Externe Benutzer-ID] -Feld oder dem [!UICONTROL Benutzerkennung für Blitzen] oder [!UICONTROL Benutzeralias] Abschnitt.
 
 **[!UICONTROL Ereignisdaten]**
 
@@ -110,7 +110,7 @@ Erstellen Sie nach der Installation der Erweiterung eine neue Ereignisweiterleit
 | [!UICONTROL Ereignisname &#x200B;] | Name des Ereignisses. | Ja |
 | [!UICONTROL Ereigniszeit] | Datum/Uhrzeit als Zeichenfolge in ISO 8601 oder in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` Format. | Ja |
 | [!UICONTROL App-Kennung] | App-ID oder <strong>app_id</strong> ist ein Parameter, der die Aktivität mit einer bestimmten App in Ihrer App-Gruppe verknüpft. Sie gibt an, mit welcher App innerhalb der App-Gruppe Sie interagieren. Weitere Informationen zum [API-Kennungstypen](https://www.braze.com/docs/api/identifier_types/). | |
-| [!UICONTROL Ereigniseigenschaften &#x200B;] | Ein JSON-Objekt, das benutzerdefinierte Eigenschaften des Ereignisses enthält. |  |
+| [!UICONTROL Ereigniseigenschaften &#x200B;] | Ein JSON-Objekt mit benutzerdefinierten Eigenschaften des Ereignisses. |  |
 
 {style="table-layout:auto"}
 
@@ -128,9 +128,9 @@ Benutzerattribute können ein JSON-Objekt sein, das Felder enthält, die ein Att
 | [!UICONTROL Nachname] | |
 | [!UICONTROL Telefon] | |
 | [!UICONTROL E-Mail] | |
-| [!UICONTROL Geschlecht] | Eine der folgenden Zeichenfolgen: &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (sonstiges), &quot;N&quot; (nicht zutreffend), &quot;P&quot; (es vorziehen, nicht zu sagen). |
+| [!UICONTROL Geschlecht] | Eine der folgenden Zeichenfolgen: &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (sonstiges), &quot;N&quot; (nicht zutreffend), &quot;P&quot; (es empfiehlt sich, nicht zu sagen). |
 | [!UICONTROL Stadt] | |
-| [!UICONTROL Country] | Land als Zeichenfolge in [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) Format. |
+| [!UICONTROL Land] | Land als Zeichenfolge in [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) Format. |
 | [!UICONTROL Sprache] | Sprache als Zeichenfolge in [ISO-639-1](https://de.wikipedia.org/wiki/Liste_der_ISO-639-1-Codes) Format. |
 | [!UICONTROL Geburtsdatum] | Zeichenfolge im Format &quot;JJJ-MM-TT&quot;(z. B. 1980-12-21). |
 | [!UICONTROL Zeitzone] | Zeitzonenname aus [IANA-Zeitzonen-Datenbank](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (z. B. &quot;America/New_York&quot;oder &quot;Eastern Time (US &amp; Canada)&quot;). |
@@ -149,15 +149,15 @@ Erstellen Sie nach der Installation der Erweiterung eine neue Ereignisweiterleit
 
 | Eingabe | Beschreibung |
 | --- | --- |
-| [!UICONTROL Externe Benutzer-ID] | Lange, zufällige und gut verteilte UUID oder GUID. Wenn Sie eine andere Methode wählen, mit der Sie Ihre Benutzer-IDs benennen können, müssen diese auch lang, zufällig und gut verteilt sein. Weitere Informationen [vorgeschlagene Benutzer-ID-Benennungskonvention](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention). |
+| [!UICONTROL Externe Benutzer-ID] | Lang, zufällig und gut verteilt UUID oder GUID. Wenn Sie eine andere Methode wählen, mit der Sie Ihre Benutzer-IDs benennen können, müssen diese auch lang, zufällig und gut verteilt sein. Weitere Informationen [vorgeschlagene Benutzer-ID-Benennungskonvention](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention). |
 | [!UICONTROL Benutzer-ID speichern] | Anzeigen der Benutzer-ID. |
-| [!UICONTROL Benutzeralias] | Ein Alias dient als alternative eindeutige Benutzerkennung. Verwenden Sie Aliase, um Benutzer anhand anderer Dimensionen als Ihrer Benutzer-ID zu identifizieren. <br><br> Das user alias -Objekt besteht aus zwei Teilen: ein alias_name für die Kennung selbst und ein alias_label, der den Aliastyp angibt. Benutzer können über mehrere Alias mit unterschiedlichen Bezeichnungen verfügen, jedoch nur einen Alias-Namen pro alias_label. |
+| [!UICONTROL Benutzeralias] | Ein Alias dient als alternative eindeutige Benutzerkennung. Verwenden Sie Aliase, um Benutzer anhand anderer Dimensionen als Ihrer Benutzer-ID zu identifizieren. <br><br> Das user alias -Objekt besteht aus zwei Teilen: einem alias_name für die Kennung selbst und einem alias_label, das den Aliastyp angibt. Benutzer können über mehrere Alias mit unterschiedlichen Bezeichnungen verfügen, jedoch nur einen Alias-Namen pro alias_label. |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
-> Um das Ereignis mit einem Benutzer zu verknüpfen, müssen Sie entweder [!UICONTROL Externe Benutzer-ID] -Feld, die [!UICONTROL Benutzerkennung für Blitzen] oder das [!UICONTROL Benutzeralias] Abschnitt.
+> Um das Ereignis mit einem Benutzer zu verknüpfen, müssen Sie entweder [!UICONTROL Externe Benutzer-ID] -Feld, [!UICONTROL Benutzerkennung für Blitzen] -Feld oder dem [!UICONTROL Benutzeralias] Abschnitt.
 
 **[!UICONTROL Kaufdaten]**
 
@@ -169,7 +169,7 @@ Erstellen Sie nach der Installation der Erweiterung eine neue Ereignisweiterleit
 | [!UICONTROL Preis &#x200B;] | Preis. | Ja |
 | [!UICONTROL Menge &#x200B;] | Wenn kein Wert angegeben wird, ist der Standardwert 1. Der Höchstwert muss unter 100 liegen. | |
 | [!UICONTROL App-Kennung] | App-ID oder <strong>app_id</strong> ist ein Parameter, der die Aktivität mit einer bestimmten App in Ihrer App-Gruppe verknüpft. Sie gibt an, mit welcher App innerhalb der App-Gruppe Sie interagieren. Weitere Informationen zum [API-Kennungstypen](https://www.braze.com/docs/api/identifier_types/). | |
-| [!UICONTROL &#x200B;] | Ein JSON-Objekt, das benutzerdefinierte Eigenschaften des Kaufs enthält. |  |
+| [!UICONTROL &#x200B;] | Ein JSON-Objekt mit benutzerdefinierten Eigenschaften des Kaufs. |  |
 
 {style="table-layout:auto"}
 
@@ -187,9 +187,9 @@ Benutzerattribute können ein JSON-Objekt sein, das Felder enthält, die ein Att
 | [!UICONTROL Nachname] | |
 | [!UICONTROL Telefon] | |
 | [!UICONTROL E-Mail] | |
-| [!UICONTROL Geschlecht] | Eine der folgenden Zeichenfolgen: &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (sonstiges), &quot;N&quot; (nicht zutreffend), &quot;P&quot; (es vorziehen, nicht zu sagen). |
+| [!UICONTROL Geschlecht] | Eine der folgenden Zeichenfolgen: &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (sonstiges), &quot;N&quot; (nicht zutreffend), &quot;P&quot; (es empfiehlt sich, nicht zu sagen). |
 | [!UICONTROL Stadt] | |
-| [!UICONTROL Country] | Land als Zeichenfolge in [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) Format. |
+| [!UICONTROL Land] | Land als Zeichenfolge in [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) Format. |
 | [!UICONTROL Sprache] | Sprache als Zeichenfolge in [ISO-639-1](https://de.wikipedia.org/wiki/Liste_der_ISO-639-1-Codes) Format. |
 | [!UICONTROL Geburtsdatum] | Zeichenfolge im Format &quot;JJJ-MM-TT&quot;(z. B. 1980-12-21). |
 | [!UICONTROL Zeitzone] | Zeitzonenname aus [IANA-Zeitzonen-Datenbank](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (z. B. &quot;America/New_York&quot;oder &quot;Eastern Time (US &amp; Canada)&quot;). |

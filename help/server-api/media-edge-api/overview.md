@@ -2,10 +2,10 @@
 solution: Experience Platform
 title: Media Edge-APIs
 description: Media Edge-APIs – Übersicht
-source-git-commit: ff4bc64843e3d05277f56ab67b60400fb9e65c4f
-workflow-type: ht
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+workflow-type: tm+mt
 source-wordcount: '393'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -27,7 +27,7 @@ Sowohl [Mediensammlungs-APIs](https://experienceleague.adobe.com/docs/media-anal
 
 * Dies ist die einfachste Möglichkeit, um XDM-Schemata in Ihren Datenfluss zu integrieren.
 
-* Aufrufe werden von einem Media Player direkt an das [Experience Edge Platform-Netzwerk](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=de) umgeleitet.
+* Aufrufe werden von einem Medienplayer direkt an die [Experience Platform Edge Network](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=de).
 
 * Medienereignisse werden effizient mit einem Minimum an Server-übergreifenden Aufrufen nachverfolgt.
 

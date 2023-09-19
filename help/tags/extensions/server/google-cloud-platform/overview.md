@@ -1,10 +1,10 @@
 ---
 title: Google Cloud Platform-Erweiterung zur Ereignisweiterleitung
-description: Diese Ereignisweiterleitungs-Erweiterung von Adobe Experience Platform sendet Adobe Experience Edge Network-Ereignisse an Google Cloud Platform.
+description: Diese Ereignisweiterleitungs-Erweiterung von Adobe Experience Platform sendet Edge Network-Ereignisse an Google Cloud Platform.
 last-substantial-update: 2023-06-21T00:00:00Z
-source-git-commit: 7e26ebe6d40796174ca48367f826c7c6f1512abf
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '568'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ Die [!DNL Google Cloud Platform] [Ereignisweiterleitung](../../../ui/event-forwa
 
 ## Voraussetzungen
 
-Um diese Erweiterung verwenden zu können, müssen Sie über eine [!DNL Google Cloud Platform] -Konto [!DNL Cloud Pub/Sub] Thema. Wenn Sie kein bereits vorhandenes Thema haben, finden Sie weitere Informationen unter [[!DNL Google Cloud Platform]](https://cloud.google.com/pubsub/docs/create-topic) Dokumentation zum Erstellen und Verwalten von Themen.
+Um diese Erweiterung verwenden zu können, müssen Sie über eine [!DNL Google Cloud Platform] -Konto mit [!DNL Cloud Pub/Sub] Thema. Wenn Sie kein bereits vorhandenes Thema haben, finden Sie weitere Informationen unter [[!DNL Google Cloud Platform]](https://cloud.google.com/pubsub/docs/create-topic) Dokumentation zum Erstellen und Verwalten von Themen.
 
 ### Erstellen eines Geheimnisses und eines Datenelements
 
@@ -29,7 +29,7 @@ Als Nächstes [Datenelement erstellen](../../../ui/managing-resources/data-eleme
 
 So installieren Sie die Erweiterung: [Erstellen einer Ereignisweiterleitungs-Eigenschaft](../../../ui/event-forwarding/overview.md#properties) oder wählen Sie eine vorhandene Eigenschaft aus, die Sie stattdessen bearbeiten möchten.
 
-Wählen Sie **[!UICONTROL Erweiterungen]** in der linken Navigation aus. Im **[!UICONTROL Katalog]** Registerkarte, wählen Sie **[!UICONTROL Installieren]** auf der Karte für die [!DNL Google Cloud Platform] -Erweiterung.
+Wählen Sie **[!UICONTROL Erweiterungen]** in der linken Navigation aus. Im **[!UICONTROL Katalog]** Registerkarte auswählen **[!UICONTROL Installieren]** auf der Karte für die [!DNL Google Cloud Platform] -Erweiterung.
 
 ![Der Katalog [!DNL Google Cloud Platform] Erweiterungsmarkierungsinstallation.](../../../images/extensions/server/google-cloud-platform/install-extension.png)
 
@@ -45,7 +45,7 @@ Nachdem die Erweiterung installiert wurde, erstellen Sie eine neue Ereignisweite
 
 | Eingabe | Beschreibung |
 | --- | --- |
-| [!UICONTROL Thema] | Das Thema, an das die Ereignisse von der Ereignisweiterleitung empfangen werden. Der Wert muss das Format aufweisen `projects/{projectName}/topics/{topicName}`. |
+| [!UICONTROL Thema] | Das Thema, das die Ereignisse von der Ereignisweiterleitung erhält. Der Wert muss das Format aufweisen `projects/{projectName}/topics/{topicName}`. |
 | [!UICONTROL Daten] | Dieses Feld enthält die Daten, die an die [!DNL Cloud Pub/Sub] Thema im JSON-Format.<br><br>Unter dem **[!UICONTROL Roh]** können Sie das JSON-Objekt direkt in das bereitgestellte Textfeld einfügen oder das Datenelementsymbol (![Datensatzsymbol](../../../images/extensions/server/aws/data-element-icon.png)), um aus einer Liste vorhandener Datenelemente zur Darstellung der Daten auszuwählen.<br><br>Sie können auch die **[!UICONTROL JSON-Schlüssel-Wert-Paare-Editor]** Option zum manuellen Hinzufügen jedes Schlüssel-Wert-Paares über einen UI-Editor. Jeder Wert kann durch eine Roheingabe dargestellt werden oder stattdessen kann ein Datenelement ausgewählt werden. |
 | [!UICONTROL Attribute] | Dieses Feld enthält das JSON-Objekt mit zusätzlichen Attributen, die zusammen mit der Nachricht gesendet werden.<br><br>Unter dem **[!UICONTROL Roh]** können Sie das JSON-Objekt direkt in das bereitgestellte Textfeld einfügen oder das Datenelementsymbol (![Datensatzsymbol](../../../images/extensions/server/aws/data-element-icon.png)), um aus einer Liste vorhandener Datenelemente zur Darstellung der Daten auszuwählen.<br><br>Sie können auch die **[!UICONTROL JSON-Schlüssel-Wert-Paare-Editor]** Option zum manuellen Hinzufügen jedes Schlüssel-Wert-Paares über einen UI-Editor. Jeder Wert kann durch eine Roheingabe dargestellt werden oder stattdessen kann ein Datenelement ausgewählt werden. |
 

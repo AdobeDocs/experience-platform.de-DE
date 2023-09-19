@@ -2,10 +2,10 @@
 solution: Experience Platform
 title: Erste Schritte mit Media Edge-APIs
 description: Handbuch zur Fehlerbehebung bei Media Edge-APIs
-source-git-commit: ff4bc64843e3d05277f56ab67b60400fb9e65c4f
-workflow-type: ht
-source-wordcount: '669'
-ht-degree: 100%
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+workflow-type: tm+mt
+source-wordcount: '664'
+ht-degree: 96%
 
 ---
 
@@ -22,7 +22,7 @@ Um die Fehlerbehebung bei fehlgeschlagenen Antworten zu unterstützen, wird den 
 ## Validieren von Sitzungsstarts
 
 Die meisten Probleme bei Sitzungsstart-Anfragen führen zu einer 207-Mehrfachstatus-Antwort.
-Die Payload ähnelt nicht schwerwiegenden Fehlern der Experience Edge Network-Server-API. Alle
+Die Payload ähnelt dem [Server-API](../error-handling.md)ist ein nicht tödlicher Fehler. Alle
 Media Analytics-Fehler weisen den folgenden Typ auf:  `https://ns.adobe.com/aep/errors/va-edge-0XXX-XXX`. Die in der Antwort angezeigten Zahlen entsprechen dem Fehlerstatus.
 
 Das folgende Beispiel zeigt einen Antworttext für eine Sitzungsstart-Anfrage, bei der ein Pflichtfeld fehlt und zudem ein ungültiges Feld enthalten ist.
@@ -65,7 +65,7 @@ Im obigen Beispiel sind beide Probleme durch `name` und `reason` unter `details`
 
 ## Validieren von Ereignissen
 
-Die meisten ungültigen Ereignisanfragen führen zu einer Antwort vom Typ „400 Ungültige Anfrage“. In diesen Fällen ähnelt die Payload schwerwiegenden Fehlern der Experience Edge Network-Server-API.
+Die meisten ungültigen Ereignisanfragen führen zu einer Antwort vom Typ „400 Ungültige Anfrage“. In diesen Fällen ähnelt die Payload den schwerwiegenden Fehlern der Server-API.
 
 Bei Ereignisanfragen umfasst der Media Edge-API-Service zusätzliche Prüfungen, die nicht im XDM-Modell selbst erfasst werden. Dazu gehört auch die Prüfung, ob der Pfad `eventType` der Anfrage-Payload `eventType` entspricht.
 

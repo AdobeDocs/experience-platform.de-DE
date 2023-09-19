@@ -2,9 +2,9 @@
 title: Erstanbieter-Geräte-IDs im Platform Web SDK
 description: Erfahren Sie, wie Sie Erstanbieter-Geräte-IDs (FPIDs) für das Adobe Experience Platform Web SDK konfigurieren.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1773'
+source-wordcount: '1774'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ FPIDs verfolgen Besucher mithilfe von Erstanbieter-Cookies. Erstanbieter-Cookies
 >
 >Die [Adobe-Managed Certificate Program](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) wird auch bei der Erstanbieter-Datenerfassung unterstützt.
 
-Sobald ein FPID-Cookie gesetzt ist, kann der zugehörige Wert abgerufen und an Adobe gesendet werden, wenn Ereignisdaten erfasst werden. Erfasste FPIDs werden als Samen zur Generierung von ECIDs verwendet, die in Adobe Experience Cloud-Anwendungen weiterhin die primäre IDs sind.
+Sobald ein FPID-Cookie gesetzt ist, kann der zugehörige Wert abgerufen und an Adobe gesendet werden, während Ereignisdaten erfasst werden. Erfasste FPIDs werden als Samen zur Generierung von ECIDs verwendet, die in Adobe Experience Cloud-Anwendungen weiterhin die primäre IDs sind.
 
 Um eine FPID für einen Website-Besucher an das Platform Edge Network zu senden, müssen Sie die FPID in die `identityMap` für diesen Besucher. Siehe Abschnitt weiter unten in diesem Dokument unter [Verwenden von FPIDs in `identityMap`](#identityMap) für weitere Informationen.
 
@@ -48,7 +48,7 @@ Die Erstellung einer UUID führt fast immer zu einer eindeutigen, zufälligen ID
 Beim Festlegen eines Cookies mithilfe eines Servers, dessen Eigentümer Sie sind, können verschiedene Methoden eingesetzt werden, um zu verhindern, dass das Cookie aufgrund von Browserrichtlinien eingeschränkt wird:
 
 * Generieren von Cookies mithilfe von serverseitigen Skriptsprachen
-* Setzen Sie Cookies als Reaktion auf eine API-Anfrage an eine Subdomain oder einen anderen Endpunkt auf der Site.
+* Setzen von Cookies als Reaktion auf eine API-Anfrage an eine Subdomain oder einen anderen Endpunkt auf der Site
 * Generieren von Cookies mithilfe eines CMS
 * Generieren von Cookies mithilfe eines CDN
 
@@ -80,7 +80,7 @@ Es gibt eine Vielzahl von Cookie-Flags, die sich auf die Behandlung von Cookies 
 
 ### `HTTPOnly` {#http-only}
 
-Cookies, die mithilfe des `HTTPOnly` -Markierung kann nicht mit clientseitigen Skripten aufgerufen werden. Das bedeutet, dass wenn Sie `HTTPOnly` Flag beim Festlegen der FPID müssen Sie eine serverseitige Skriptsprache verwenden, um den Cookie-Wert zur Aufnahme in die `identityMap`.
+Cookies, die mithilfe der Variablen `HTTPOnly` kann nicht mit clientseitigen Skripten aufgerufen werden. Das bedeutet, dass Sie `HTTPOnly` Flag beim Festlegen der FPID müssen Sie eine serverseitige Skriptsprache verwenden, um den Cookie-Wert zur Aufnahme in die `identityMap`.
 
 Wenn Sie sich dafür entscheiden, das Platform Edge Network den Wert des FPID-Cookies lesen zu lassen, legen Sie die `HTTPOnly` -Markierung stellt sicher, dass der Wert von keinem clientseitigen Skript aufgerufen werden kann, hat jedoch keine negativen Auswirkungen auf die Fähigkeit des Platform Edge Network, das Cookie zu lesen.
 
@@ -155,7 +155,7 @@ Wenn die FPID in einem Cookie enthalten ist, das vom Edge Network gelesen wird, 
 }
 ```
 
-Folgendes `identityMap` zu einer Fehlerantwort des Edge-Netzwerks führen, da das `primary` Indikator für die FPID. Mindestens eine der IDs in `identityMap` muss als `primary`.
+Die folgenden `identityMap` zu einer Fehlerantwort des Edge-Netzwerks führen, da das `primary` Indikator für die FPID. Mindestens eine der IDs in `identityMap` muss als `primary`.
 
 ```json
 {
@@ -176,7 +176,7 @@ Folgendes `identityMap` zu einer Fehlerantwort des Edge-Netzwerks führen, da da
 }
 ```
 
-Die von Experience Edge zurückgegebene Fehlerantwort ähnelt in diesem Fall der folgenden:
+Die vom Edge Network zurückgegebene Fehlerantwort würde in diesem Fall der folgenden ähneln:
 
 ```json
 {
@@ -198,7 +198,7 @@ Wenn sowohl eine ECID als auch eine FPID vorhanden sind, wird die ECID bei der I
 
 Identitäten werden in der folgenden Reihenfolge priorisiert:
 
-1. In der `identityMap`
+1. Die in der `identityMap`
 1. In einem Cookie gespeicherte ECID
 1. Die in der `identityMap`
 1. In einem Cookie gespeicherte FPID
@@ -207,13 +207,13 @@ Identitäten werden in der folgenden Reihenfolge priorisiert:
 
 Wenn Sie zur Verwendung von FPIDs aus einer früheren Implementierung migrieren, ist es möglicherweise schwierig, sich vorzustellen, wie die Transition auf einer niedrigen Ebene aussehen könnte.
 
-Zur Veranschaulichung dieses Vorgangs sollten Sie sich ein Szenario ansehen, an dem ein Kunde beteiligt ist, der Ihre Site bereits besucht hat, und welche Auswirkungen eine FPID-Migration auf die Identifizierung dieses Kunden in Adobe-Lösungen haben würde.
+Um diesen Vorgang zu veranschaulichen, sollten Sie sich ein Szenario ansehen, an dem ein Kunde beteiligt ist, der Ihre Site bereits besucht hat, und welche Auswirkungen eine FPID-Migration auf die Identifizierung dieses Kunden in Adobe-Lösungen haben würde.
 
 ![Abbildung, die zeigt, wie die ID-Werte eines Kunden zwischen Besuchen nach der Migration zu FPIDs aktualisiert werden](../assets/identity/tracking/visits.png)
 
 | Besuch | Beschreibung |
 | --- | --- |
-| Erster Besuch | Angenommen, Sie haben noch nicht mit dem Setzen des FPID-Cookies begonnen. Die im [AMCV-Cookie](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) ist die Kennung, die zur Identifizierung des Besuchers verwendet wird. |
+| Erster Besuch | Angenommen, Sie haben noch nicht mit dem Setzen des FPID-Cookies begonnen. Die ECID im [AMCV-Cookie](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) ist die Kennung, die zur Identifizierung des Besuchers verwendet wird. |
 | Zweiter Besuch | Der Rollout der Erstanbieter-Geräte-ID-Lösung wurde gestartet. Die vorhandene ECID ist weiterhin vorhanden und weiterhin die primäre Kennung für die Besucheridentifizierung. |
 | Dritter Besuch | Zwischen dem zweiten und dritten Besuch hat ausreichend Zeit verstrichen, dass die ECID aufgrund einer Browserrichtlinie gelöscht wurde. Da die FPID jedoch mithilfe eines DNS-A-Eintrags festgelegt wurde, bleibt die FPID bestehen. Die FPID wird jetzt als primäre ID betrachtet und zum Testen der ECID verwendet, die auf das Endbenutzergerät geschrieben wird. Der Benutzer wird nun als neuer Besucher in den Adobe Experience Platform- und Experience Cloud-Lösungen betrachtet. |
 | Vierter Besuch | Zwischen dem dritten und vierten Besuch hat ausreichend Zeit verstrichen, dass die ECID aufgrund der Browserrichtlinie gelöscht wurde. Wie beim vorherigen Besuch bleibt die FPID aufgrund der Art und Weise, wie sie festgelegt wurde. Diesmal wird dieselbe ECID wie beim vorherigen Besuch generiert. Der Benutzer wird in den Experience Platform- und Experience Cloud-Lösungen als derselbe Benutzer wie beim vorherigen Besuch gesehen. |

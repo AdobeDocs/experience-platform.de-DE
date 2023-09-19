@@ -1,19 +1,19 @@
 ---
 keywords: Ereignisweiterleitungs-Erweiterung;Mixpanel;Ereignisweiterleitungserweiterung "mixpanel"
 title: Ereignisweiterleitungserweiterung für die Mixpanel Track Events API
-description: Diese Ereignisweiterleitungs-Erweiterung von Adobe Experience Platform sendet Adobe Experience Edge Network-Ereignisse an Mixpanel.
+description: Diese Ereignisweiterleitungs-Erweiterung von Adobe Experience Platform sendet Edge Network-Ereignisse an Mixpanel.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '946'
 ht-degree: 2%
 
 ---
 
 # [!DNL Mixpanel Track Events] API-Ereignisweiterleitungs-Erweiterung
 
-[[!DNL Mixpanel]](https://www.mixpanel.com) ist ein Produktanalysetool, mit dem Sie Daten darüber erfassen können, wie Benutzer mit einem digitalen Produkt interagieren. Sie können Produktdaten mit einfachen, interaktiven Berichten analysieren, mit denen Sie die Daten mit wenigen Klicks abfragen und visualisieren können. [!DNL Mixpanel] wurde entwickelt, um Teams effizienter zu machen, indem es allen ermöglicht, Benutzerdaten in Echtzeit zu analysieren, um Trends zu identifizieren, das Benutzerverhalten zu verstehen und Entscheidungen über Ihr Produkt zu treffen.
+[[!DNL Mixpanel]](https://www.mixpanel.com) ist ein Produktanalysetool, mit dem Sie Daten darüber erfassen können, wie Benutzer mit einem digitalen Produkt interagieren. Sie können Produktdaten mit einfachen, interaktiven Berichten analysieren, mit denen Sie die Daten mit nur wenigen Klicks abfragen und visualisieren können. [!DNL Mixpanel] wurde entwickelt, um Teams effizienter zu machen, indem es allen ermöglicht, Benutzerdaten in Echtzeit zu analysieren, um Trends zu identifizieren, das Benutzerverhalten zu verstehen und Entscheidungen über Ihr Produkt zu treffen.
 
 [!DNL Mixpanel] verwendet ein ereignisbasiertes, benutzerzentriertes Modell, das jede Interaktion mit einem einzelnen Benutzer verbindet. Die [!DNL Mixpanel] Das Datenmodell basiert auf den Konzepten von Benutzern, Ereignissen und Eigenschaften.
 
@@ -43,7 +43,7 @@ Stellen Sie sicher, dass [[!DNL Identity Merge]](https://help.mixpanel.com/hc/en
 
 ### Identitäts-Cluster verstehen in [!DNL Mixpanel]
 
-In [!DNL Mixpanel], enthält ein Identitäts-Cluster eine Sammlung von `distinct_id` Werte, die eine Verbindung zu einem einzelnen Benutzer herstellen. [!DNL Mixpanel] verarbeitet den Cluster von Identitäten für jeden Benutzer, wobei ein einzelnes kanonisches `distinct_id` aus jedem Cluster, der für die Berichterstellung verwendet werden soll. Sie können auch Ihre eigene Kennung einfügen (eine lokale `distinct_id`) für anonyme Ereignisse, die vor einem Benutzeridentifikationsereignis auftreten.
+In [!DNL Mixpanel], enthält ein Identitäts-Cluster eine Sammlung von `distinct_id` Werte, die eine Verbindung zu einem einzelnen Benutzer herstellen. [!DNL Mixpanel] behandelt den Cluster von Identitäten für jeden Benutzer und löst so einen einzelnen kanonischen `distinct_id` aus jedem Cluster, der für die Berichterstellung verwendet werden soll. Sie können auch Ihre eigene Kennung einfügen (eine lokale `distinct_id`) für anonyme Ereignisse, die vor einem Benutzeridentifikationsereignis auftreten.
 
 [!DNL Mixpanel] löst Identitäts-Cluster mit zwei Methoden auf:
 
@@ -58,7 +58,7 @@ In [!DNL Mixpanel], enthält ein Identitäts-Cluster eine Sammlung von `distinct
 
 ### Erforderliche Konfigurationsdetails sammeln {#configuration-details}
 
-So verbinden Sie Experience Platform mit [!DNL Mixpanel] Sie müssen über die folgenden Eingaben verfügen:
+Um Experience Platform zu verbinden, [!DNL Mixpanel] Sie müssen über die folgenden Eingaben verfügen:
 
 | Schlüsseltyp | Beschreibung | Beispiel |
 | --- | --- | --- |
@@ -68,13 +68,13 @@ So verbinden Sie Experience Platform mit [!DNL Mixpanel] Sie müssen über die f
 
 So installieren Sie die Erweiterung: [Erstellen einer Ereignisweiterleitungs-Eigenschaft](../../../ui/event-forwarding/overview.md#properties) oder wählen Sie eine vorhandene Eigenschaft aus, die Sie stattdessen bearbeiten möchten.
 
-Wählen Sie **[!UICONTROL Erweiterungen]** in der linken Navigation aus. Im **[!UICONTROL Katalog]** Registerkarte, wählen Sie **[!UICONTROL Installieren]** auf der Karte für die [!DNL Mixpanel] -Erweiterung.
+Wählen Sie **[!UICONTROL Erweiterungen]** in der linken Navigation aus. Im **[!UICONTROL Katalog]** Registerkarte auswählen **[!UICONTROL Installieren]** auf der Karte für die [!DNL Mixpanel] -Erweiterung.
 
 ![Installieren der [!DNL Mixpanel] -Erweiterung.](../../../images/extensions/server/mixpanel/install-extension.png)
 
 ## Erstellen Sie eine [!DNL Send Event] Regel
 
-Beginnen Sie mit der Erstellung einer neuen Regel in Ihrer Ereignisweiterleitungseigenschaft. under **[!UICONTROL Aktionen]**, fügen Sie eine neue Aktion hinzu und legen Sie die Erweiterung auf **[!UICONTROL Mixpanel]**. Legen Sie als Nächstes den Aktionstyp auf **[!UICONTROL Ereignis verfolgen]** Senden von Adobe Experience Edge Network-Ereignissen an [!DNL Mixpanel].
+Beginnen Sie mit der Erstellung einer neuen Regel in Ihrer Ereignisweiterleitungseigenschaft. under **[!UICONTROL Aktionen]**, fügen Sie eine neue Aktion hinzu und legen Sie die Erweiterung auf **[!UICONTROL Mixpanel]**. Legen Sie als Nächstes den Aktionstyp auf **[!UICONTROL Ereignis verfolgen]** zum Senden von Edge Network-Ereignissen an [!DNL Mixpanel].
 
 | Eingabe | Beschreibung | Erforderlich |
 | --- | --- | --- |
@@ -83,7 +83,7 @@ Beginnen Sie mit der Erstellung einer neuen Regel in Ihrer Ereignisweiterleitung
 | [!UICONTROL Ereigniszeit] | Die Ereigniszeit. | |
 | [!UICONTROL Mixpanel-Unique ID] | Die eindeutige Kennung des Benutzers, der das Ereignis ausgeführt hat. | |
 | [!UICONTROL ID einfügen] | Eine eindeutige Kennung für das Ereignis, die zur Deduplizierung verwendet wird. | |
-| [!UICONTROL Ereigniseigenschaften] | Ein JSON-Objekt, das benutzerdefinierte Eigenschaften des Ereignisses enthält. Wählen Sie aus der Bereitstellung von rohen JSON-Dateien oder der Verwendung eines vereinfachten Satzes von Schlüsselwerteingaben. | |
+| [!UICONTROL Ereigniseigenschaften] | Ein JSON-Objekt mit benutzerdefinierten Eigenschaften des Ereignisses. Wählen Sie aus der Bereitstellung von rohen JSON-Dateien oder der Verwendung eines vereinfachten Satzes von Schlüsselwerteingaben. | |
 
 >[!NOTE]
 >
@@ -91,11 +91,11 @@ Beginnen Sie mit der Erstellung einer neuen Regel in Ihrer Ereignisweiterleitung
 
 ![Fügen Sie eine Aktionskonfiguration für Ereignisweiterleitungsregeln hinzu.](../../../images/extensions/server/mixpanel/track-event-action.png)
 
-Einmal [!UICONTROL Ereignis verfolgen] -Aktion zur Regel hinzugefügt wurde, können Sie die Bedingungen der Regel so konfigurieren, dass sie nur für bestimmte Ereignisse ausgelöst wird. Alternativ können Sie den Abschnitt &quot;Bedingungen&quot;leer lassen, damit die Regel für alle Ereignisse ausgelöst wird.
+Einmal die [!UICONTROL Ereignis verfolgen] -Aktion zur Regel hinzugefügt wurde, können Sie die Bedingungen der Regel so konfigurieren, dass sie nur für bestimmte Ereignisse ausgelöst wird. Alternativ können Sie den Abschnitt &quot;Bedingungen&quot;leer lassen, damit die Regel für alle Ereignisse ausgelöst wird.
 
 >[!IMPORTANT]
 >
->Wenn Ihre Website die [!DNL Mixpanel] SDK: Sie können mit dem nächsten Schritt von [Validieren Ihrer Daten in [!DNL Mixpanel]](#validate). Wenn Sie die [!DNL Mixpanel] SDK: Sie müssen [eine separate Identitäts-Tracking-Regel erstellen](#create-an-identity-tracking-rule) sicherstellen, dass geeignete Ereignisse und `distinct_id` Werte werden an [!DNL Mixpanel] wenn ein Ereignis zur Identifizierung eines Benutzers eintritt.
+>Wenn Ihre Website die [!DNL Mixpanel] SDK: Sie können mit dem nächsten Schritt von [Validieren Ihrer Daten in [!DNL Mixpanel]](#validate). Wenn Sie die Variable [!DNL Mixpanel] SDK: Sie müssen [eine separate Identitäts-Tracking-Regel erstellen](#create-an-identity-tracking-rule) sicherstellen, dass geeignete Ereignisse und `distinct_id` Werte werden an [!DNL Mixpanel] wenn ein Ereignis zur Identifizierung eines Benutzers eintritt.
 
 ## Validieren von Daten in [!DNL Mixpanel] {#validate}
 

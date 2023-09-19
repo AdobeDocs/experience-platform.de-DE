@@ -3,16 +3,16 @@ title: IAB TCF 2.0-Unterstützung im Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie IAB TCF 2.0-Zustimmungsvoreinstellungen mithilfe des Adobe Experience Platform Web SDK unterstützen.
 keywords: consent; setConsent; Profildatenschutzfeldgruppe; Experience Event Privacy Field-Gruppe; Datenschutzfeldgruppe; IAB TCF 2.0; Real-Time CDP;
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '862'
 ht-degree: 0%
 
 ---
 
 # IAB TCF 2.0-Unterstützung im Adobe Experience Platform Web SDK
 
-Das Adobe Experience Platform Web SDK unterstützt das Interactive Advertising Bureau Transparency &amp; Consent Framework, Version 2.0 (IAB TCF 2.0). In diesem Handbuch werden die Anforderungen für die Unterstützung von IAB TCF 2.0 über das Adobe Experience Platform Web SDK erläutert, das mit Adobe Real-time Customer Data Platform, Audience Manager, Experience Events, Adobe Analytics und Experience Edge integriert wird.
+Das Adobe Experience Platform Web SDK unterstützt das Interactive Advertising Bureau Transparency &amp; Consent Framework, Version 2.0 (IAB TCF 2.0). In diesem Handbuch werden die Anforderungen für die Unterstützung von IAB TCF 2.0 über das Adobe Experience Platform Web SDK erläutert, das mit Adobe Real-time Customer Data Platform, Audience Manager, Experience Events, Adobe Analytics und Edge Network integriert wird.
 
 Darüber hinaus stehen die folgenden Handbücher zur Verfügung, mit denen Sie lernen können, wie IAB TCF 2.0 mit und ohne Tags integriert wird.
 
@@ -23,9 +23,9 @@ Darüber hinaus stehen die folgenden Handbücher zur Verfügung, mit denen Sie l
 
 Um das Web SDK mit IAB TCF 2.0 zu implementieren, benötigen Sie ein Verständnis des Experience-Datenmodells (XDM) und der Experience-Ereignisse. Bevor Sie beginnen, lesen Sie bitte das folgende Dokument:
 
-- [Übersicht über das Experience-Datenmodell (XDM)-System](../../../xdm/home.md): Standardisierung und Interoperabilität sind Schlüsselkonzepte von Adobe Experience Platform. [!DNL Experience Data Model (XDM)]ist eine von Adobe unterstützte Maßnahme, um Kundenerlebnisdaten zu standardisieren und Schemas für das Customer Experience Management zu definieren.
+- [Übersicht über das Experience-Datenmodell (XDM)-System](../../../xdm/home.md): Standardisierung und Interoperabilität sind Schlüsselkonzepte von Adobe Experience Platform. [!DNL Experience Data Model (XDM)], unterstützt von Adobe, ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemas für das Customer Experience Management zu definieren.
 
-## Integration von Experience Platformen
+## Experience Platform-Integration
 
 Um Einwilligungsdaten mit dem SDK an Adobe Experience Platform zu senden, ist Folgendes erforderlich:
 
@@ -65,20 +65,20 @@ In den folgenden Abschnitten werden die wichtigsten Integrationspunkte zwischen 
 
 Die Standardzustimmung wird verwendet, wenn für einen Kunden noch keine Zustimmungsvoreinstellung gespeichert ist. Das bedeutet, dass die standardmäßigen Zustimmungsoptionen das Verhalten des Adobe Experience Platform Web SDK steuern und sich je nach Region des Kunden ändern können.
 
-Wenn Sie beispielsweise einen Kunden haben, der nicht in den Zuständigkeitsbereich der Datenschutz-Grundverordnung (DSGVO) fällt, kann die Standardzustimmung auf `in`, aber innerhalb der Gerichtsbarkeit der DSGVO kann die standardmäßige Zustimmung auf `pending`. Ihre Consent Management Platform (CMP) erkennt möglicherweise die Region des Kunden und stellt die Kennzeichnung bereit `gdprApplies` auf IAB TCF 2.0. Mit diesem Flag können Sie die Standardzustimmung festlegen.
+Wenn Sie beispielsweise einen Kunden haben, der nicht in den Zuständigkeitsbereich der Datenschutz-Grundverordnung (DSGVO) fällt, kann die Standardzustimmung auf `in`, aber innerhalb der Gerichtsbarkeit der DSGVO kann die standardmäßige Zustimmung auf `pending`. Ihre Consent Management Platform (CMP) erkennt möglicherweise die Region des Kunden und stellt die Kennzeichnung bereit `gdprApplies` nach IAB TCF 2.0. Mit diesem Flag können Sie die Standardzustimmung festlegen.
 
 Weitere Informationen zur Standardzustimmung finden Sie im Abschnitt [Standardzustimmungsabschnitt](../../fundamentals/configuring-the-sdk.md#default-consent) in der SDK-Konfigurationsdokumentation.
 
 ### Festlegen der Zustimmung bei Änderungen
 
-Das Adobe Experience Platform Web SDK verfügt über eine `setConsent` -Befehl, der die Zustimmungsvoreinstellungen Ihres Kunden an alle Adobe-Dienste übermittelt, die IAB TCF 2.0 verwenden. Wenn Sie mit Real-Time CDP integrieren, aktualisiert dies das Profil Ihres Kunden. Wenn Sie mit Audience Manager integrieren, werden dadurch die Kundeninformationen aktualisiert. Durch diesen Aufruf wird auch ein Cookie mit der Zustimmungsvoreinstellung &quot;alles oder nichts&quot;gesetzt, das steuert, ob zukünftige Erlebnisereignisse gesendet werden dürfen. Diese Aktion soll immer dann aufgerufen werden, wenn sich die Zustimmung ändert. Beim Laden künftiger Seiten wird das Experience Edge-Zustimmungscookie gelesen, um zu bestimmen, ob Erlebnisereignisse gesendet werden können und ob ein Identitäts-Cookie gesetzt werden kann.
+Das Adobe Experience Platform Web SDK verfügt über eine `setConsent` -Befehl, der die Zustimmungsvoreinstellungen Ihres Kunden an alle Adobe-Dienste übermittelt, die IAB TCF 2.0 verwenden. Wenn Sie mit Real-Time CDP integrieren, wird dadurch das Kundenprofil aktualisiert. Wenn Sie mit Audience Manager integrieren, werden dadurch die Kundeninformationen aktualisiert. Durch diesen Aufruf wird auch ein Cookie mit der Zustimmungsvoreinstellung &quot;alles oder nichts&quot;gesetzt, das steuert, ob zukünftige Erlebnisereignisse gesendet werden dürfen. Diese Aktion soll immer dann aufgerufen werden, wenn sich die Zustimmung ändert. Beim Laden künftiger Seiten wird das Cookie für die Zustimmung des Edge-Netzwerks gelesen, um zu bestimmen, ob Erlebnisereignisse gesendet werden können und ob ein Identitäts-Cookie gesetzt werden kann.
 
-Ähnlich wie bei der IAB TCF 2.0-Integration von Audience Manager erteilt Experience Edge eine Zustimmung, wenn ein Kunde seine ausdrückliche Zustimmung zu folgenden Zwecken erteilt hat:
+Ähnlich wie bei der IAB TCF 2.0-Integration von Audience Manager erteilt das Edge Network eine Zustimmung, wenn ein Kunde seine ausdrückliche Zustimmung zu folgenden Zwecken erteilt hat:
 
 - **Zweck 1:** Informationen auf einem Gerät speichern und/oder aufrufen
 - **Zweck 10:** Produkte entwickeln und verbessern
-- **Zweckbestimmung 1:** Gewährleistung von Sicherheit, Vermeidung von Betrug und Fehlerbehebung. (Gemäß den IAB-TCF-Vorschriften ist dies immer einverstanden.)
-- **Berechtigung des Anbieters von Adoben:** Zustimmung zur Adobe (Hersteller 565)
+- **Zweckbestimmung 1:** Sicherheit, Vermeidung von Betrug und Fehlerbehebung. (Gemäß den IAB-TCF-Vorschriften wird dies immer zugestimmt.)
+- **Adobe Vendor-Berechtigung:** Zustimmung für Adobe (Hersteller 565)
 
 Weitere Informationen über `setConsent` -Befehl, lesen Sie die Dokumentation unter [Unterstützende Zustimmung](../../consent/supporting-consent.md).
 

@@ -2,7 +2,7 @@
 title: Interaktive Datenerfassung
 description: Erfahren Sie, wie die Adobe Experience Platform Edge Network Server-API die interaktive Datenerfassung durchführt.
 exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 19%
@@ -13,7 +13,7 @@ ht-degree: 19%
 
 ## Übersicht {#overview}
 
-Endpunkte zur interaktiven Datenerfassung erhalten ein einzelnes Ereignis und werden verwendet, wenn der Client erwartet, dass eine Antwort vom Adobe Experience Platform Edge Network-Server zurückgegeben wird. Diese Endpunkte können bei der Datenerfassung auch Inhalte von anderen Experience Edge-Diensten zurückgeben.
+Endpunkte zur interaktiven Datenerfassung erhalten ein einzelnes Ereignis und werden verwendet, wenn der Client erwartet, dass eine Antwort vom Adobe Experience Platform Edge Network-Server zurückgegeben wird. Diese Endpunkte können bei der Datenerfassung auch Inhalte von anderen Edge Network-Diensten zurückgeben.
 
 Die Serverantwort umfasst eine oder mehrere `Handle` -Objekte, wie unten dargestellt.
 
@@ -62,7 +62,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 | Parameter | Typ | Erforderlich | Beschreibung |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | Ja. | Datastream-ID. |
+| `dataStreamId` | `String` | Ja. | Datenspeicher-ID. |
 | `requestId` | `String` | Nein | Geben Sie eine Client-Zufallskennung für die Korrelation interner Server-Anforderungen an. Wenn keine angegeben ist, generiert das Edge-Netzwerk eine und gibt sie in der Antwort zurück. |
 
 ### Antwort {#response}

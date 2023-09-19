@@ -2,9 +2,9 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: ba75669eeaef9fc023e7c33265ec1e5dbada9534
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1757'
+source-wordcount: '1758'
 ht-degree: 96%
 
 ---
@@ -26,15 +26,15 @@ In diesem Dokument werden die Versionshinweise für die Adobe Experience Platfor
 
 * Die Validierung gespeicherter Einstellungen zur Außerkraftsetzung von Datensätzen wurde verbessert.
 
-## Version 2.20.0 - 31. Juli 2023
+## Version 2.20.0 – 31. Juli 2023
 
 **Neue Funktionen**
 
-* Hinzugefügte Unterstützung für [Überschreibungen der Datastream-ID pro Befehl](../../../../datastreams/overrides.md).
+* Unterstützung für [Überschreibungen der Datenstrom-ID pro Befehl](../../../../datastreams/overrides.md) hinzugefügt.
 
 **Fehlerbehebungen und Verbesserungen**
 
-* Veraltet `edgeConfigId` zugunsten von `datastreamId` in der SDK-Konfiguration.
+* Statt `edgeConfigId` wird jetzt `datastreamId` in der SDK-Konfiguration unterstützt.
 * Die Benutzeroberfläche wird durch mehrere Verbesserungen des Benutzererlebnisses für die Datastream-Konfiguration außer Kraft gesetzt.
 
 ## Version 2.19.0 – 21. Juni 2023
@@ -145,7 +145,7 @@ Enthält Version 2.8.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
 Enthält Version 2.7.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
-* Weitere Informationen aus Experience Edge sind im Ereignis „Versandereignis abgeschlossen“ verfügbar, einschließlich `inferences` und `destinations`. Das Format dieser Eigenschaften kann sich ändern, da diese Funktionen derzeit als Teil einer Beta-Version eingeführt werden. Weitere Informationen finden Sie unter [Tracking von Ereignissen](../../../../edge/fundamentals/tracking-events.md).
+* Weitere Informationen aus dem Edge-Netzwerk sind im Ereignis &quot;Send Event Complete&quot;verfügbar, einschließlich `inferences` und `destinations`. Das Format dieser Eigenschaften kann sich ändern, da diese Funktionen derzeit als Teil einer Beta-Version eingeführt werden. Weitere Informationen finden Sie unter [Tracking von Ereignissen](../../../../edge/fundamentals/tracking-events.md).
 
 ## Version 2.7.3 – 7. September 2021
 

@@ -2,12 +2,12 @@
 keywords: Experience Platform;Entwicklerhandbuch;Datenwissenschafts-Arbeitsbereich;beliebte Themen;maschinelles Lernen in Echtzeit;
 solution: Experience Platform
 title: Übersicht zu maschinellem Lernen in Echtzeit
-description: Maschinelles Lernen in Echtzeit kann die Relevanz der Inhalte Ihrer digitalen Erlebnisse für Ihre Endbenutzenden erheblich steigern. Dies wird durch die Nutzung von Ableitungen in Echtzeit und kontinuierlichem Lernen im Experience Edge ermöglicht.
+description: Maschinelles Lernen in Echtzeit kann die Relevanz der Inhalte Ihrer digitalen Erlebnisse für Ihre Endbenutzenden erheblich steigern. Dies wird durch die Nutzung von Echtzeit-Erkenntnissen und kontinuierlichem Lernen im Experience Platform Edge Network ermöglicht.
 exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 100%
+source-wordcount: '552'
+ht-degree: 93%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 100%
 >
 >Das maschinelle Lernen in Echtzeit steht noch nicht allen Benutzenden zur Verfügung. Diese Funktion befindet sich in der Alpha-Phase und wird noch getestet. Dieses Dokument kann sich ändern.
 
-Maschinelles Lernen in Echtzeit kann die Relevanz der Inhalte Ihrer digitalen Erlebnisse für Ihre Endbenutzenden erheblich steigern. Dies wird durch die Nutzung von Ableitungen in Echtzeit und kontinuierlichem Lernen im [!DNL Experience Edge] ermöglicht.
+Maschinelles Lernen in Echtzeit kann die Relevanz der Inhalte Ihrer digitalen Erlebnisse für Ihre Endbenutzenden erheblich steigern. Dies wird durch die Nutzung von Ableitungen in Echtzeit und kontinuierlichem Lernen im [!DNL Experience Platform Edge Network] ermöglicht.
 
 Eine Kombination aus nahtloser Berechnung im Hub und [!DNL Edge] reduziert die Latenz erheblich, die traditionell mit der Bereitstellung hyperpersonalisierter Erlebnisse verbunden ist, die sowohl relevant als auch responsiv sind. Daher bietet maschinelles Lernen in Echtzeit Ableitungen mit unglaublich geringer Latenz für synchrone Entscheidungsfindungen. Beispiele sind das Rendern von personalisiertem Web-Seiteninhalt oder das Erscheinen eines Angebots oder Rabatts, um die Abwanderung zu reduzieren und Konversionen in einem Webstore zu erhöhen.
 
@@ -43,7 +43,7 @@ Erstellen Sie ein Modell für maschinelles Lernen in Echtzeit, indem Sie es von 
 
 ### Bereitstellung
 
-Stellen Sie Ihr Modell für [!DNL Experience Edge] bereit, um einen Service für maschinelles Lernen in Echtzeit in der [!UICONTROL Service-Galerie] mithilfe des Prognose-API-Endpunkts zu erstellen.
+Stellen Sie Ihr Modell im [!DNL Edge Network] , um einen Dienst für maschinelles Lernen in Echtzeit im [!UICONTROL Service Gallery] mithilfe des API-Endpunkts Prognose .
 
 ### Folgerung   
 
@@ -66,10 +66,9 @@ Das maschinelle Lernen in Echtzeit befindet sich derzeit in der Alpha-Phase. Die
 > - Für tiefes Lernen müssen Ihre Daten so gesendet werden, dass beim Aufruf von `df.values` ein Array zurückgegeben wird, das von Ihrem DL-Modell akzeptiert wird. Dies liegt daran, dass der ONNX-Modell-Bewertungsknoten `df.values` nutzt und die Ausgabe zur Bewertung gegenüber dem Modell sendet.
 
 
-
 ### Funktionen:
 
-|  | Alpha (Mai) |
+| | Alpha (Mai) |
 | --- | --- |
 | **Funktionen** | - Verwendung der RTML-Notebook-Vorlage zum Erstellen, Testen und Bereitstellen eines benutzerdefinierten maschinellen Lernmodells <br> - Unterstützung für den Import vortrainierter Modelle für maschinelles Lernen <br> - SDK für maschinelles Lernen in Echtzeit <br> - Startersatz von Erstellungsknoten <br> - Wird im Adobe Experience Platform Hub bereitgestellt. |
 | **Verfügbarkeit** | Nordamerika |

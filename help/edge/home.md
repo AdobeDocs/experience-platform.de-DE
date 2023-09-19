@@ -1,14 +1,13 @@
 ---
 title: Übersicht über das Adobe Experience Platform Web Software Development Kit (SDK)
 description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Web SDK Platform-Funktionen in Ihre Website integrieren können.
-keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;Web SDK;SDK;Web SDK;Launch;Launch
-exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 52dbde052322a00fc33cd9f9c86ab7f92671f36a
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 40%
+source-wordcount: '776'
+ht-degree: 33%
 
 ---
+
 
 # Adobe Experience Platform Web SDK – Überblick {#overview}
 
@@ -17,17 +16,15 @@ Adobe Experience Platform Web Software Development Kit (SDK) ist eine Client-sei
 * Manuelle Implementierung mithilfe von `alloy.js`. Dieses Benutzerhandbuch enthält eine Dokumentation zu dieser Implementierungsmethode.
 * Die [Web SDK-Tag-Erweiterung](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Siehe [Tutorial zur Implementierung von Adobe Experience Cloud mit Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=de) für weitere Informationen.
 
-## Adobe Experience Edge
+## Experience Platform Edge Network
 
-Das Adobe Experience Platform Web SDK ist Teil der Sammlung, aus der Adobe Experience Edge besteht. Adobe Experience Edge umfasst die folgenden Technologien:
+Das Experience Platform Web SDK ist Teil einer Sammlung von Tools, aus denen das Adobe Experience Platform Edge Network besteht. Das Edge-Netzwerk besteht aus den folgenden Komponenten:
 
-* **[Adobe Experience Platform Web SDK](#overview):** JavaScript-SDK und Tag-Erweiterung zur drastischen Vereinfachung der Bereitstellung von Adobe-Technologien.
-* **[Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/):** Eine Erweiterung des mobilen SDK v5, damit Kunden die neue Bereitstellungsmethode verwenden können.
-* **[Adobe Experience Platform Edge Network](../server-api/overview.md):** Ein globales verteiltes Netzwerk von Servern, das eine neue Methode zur Bereitstellung ermöglicht [!DNL Adobe] products
+* **[Experience Platform Web SDK](#overview):** JavaScript-SDK und Tag-Erweiterung zur drastischen Vereinfachung der Bereitstellung von Adobe-Technologien.
+* **[Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/):** Eine Erweiterung des mobilen SDK v5, damit Kunden die neue Bereitstellungsmethode verwenden können.
+* **[Experience Platform Edge Network Server-API](../server-api/overview.md):** Eine API, die für eine Vielzahl von Anwendungsfällen für Datenerfassung, Personalisierung, Werbung und Marketing verwendet werden kann. Die Server-API kann auf Servern, IoT-Geräten, Set-Top-Boxen und verschiedenen anderen Geräten verwendet werden.
 
-Adobe Experience Edge ist ein Framework für die Erfassung von Daten mit geringer Latenz, für Pluggable Computing und für die schnelle Aktivierung von Daten über alle adressierbaren Kanäle hinweg.
-
-[!DNL Adobe Experience Edge] bietet ein einziges konsolidiertes SDK für jeden Kanal (JavaScript, Mobil, Server-seitig), das Daten an eine gemeinsame Adobe-Domain sendet (`adobedc.net`) und eine einzige Payload für die Daten- und Erlebnisbereitstellung empfängt.
+Das Edge-Netzwerk ist ein Framework für die Erfassung von Daten mit geringer Latenz, Pluggable Computing und die schnelle Aktivierung von Daten über alle adressierbaren Kanäle hinweg. Es bietet ein einziges konsolidiertes SDK für jeden Kanal (JavaScript, Mobil, Server-seitig), der Daten an eine gemeinsame Adobe-Domäne (`adobedc.net`) und erhält eine einzige Payload zurück für die Daten- und Erlebnisbereitstellung.
 
 Auf der Server-Seite erleichtern ein einheitliches Edge-Gateway und ein gemeinsames Plattform-Service-Framework die Bereitstellung neuer Funktionen in dieser Echtzeit-Computerumgebung. Diese Architektur:
 

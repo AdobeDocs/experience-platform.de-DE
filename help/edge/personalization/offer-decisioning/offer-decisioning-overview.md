@@ -1,12 +1,12 @@
 ---
 title: Verwenden von Offer decisioning mit dem Platform Web SDK
 description: Das Adobe Experience Platform Web SDK kann personalisierte Angebote bereitstellen und rendern, die unter Offer decisioning verwaltet werden. Sie können Ihre Angebote und andere verwandte Objekte mithilfe der Offer decisioning-Benutzeroberfläche oder -API erstellen.
-keywords: offer decisioning; Entscheidungsfindung; Web SDK; Platform Web SDK; personalisierte Angebote; Angebote bereitstellen; Bereitstellung von Angeboten; Personalisierung von Angeboten;
+keywords: offer decisioning; Entscheidungsfindung; Web SDK; Platform Web SDK; personalisierte Angebote; Angebote bereitstellen; Angebotsversand; Angebotspersonalisierung;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '863'
-ht-degree: 21%
+ht-degree: 19%
 
 ---
 
@@ -21,12 +21,12 @@ Adobe Experience Platform [!DNL Web SDK] kann personalisierte Angebote bereitste
 ## Voraussetzungen
 
 * Die Organisation ist für die Edge-Entscheidung aktiviert.
-* Angebote, erstellte Aktivitäten
+* Erstellte Angebote, Aktivitäten
 * Datenspeicher wird veröffentlicht
 
 ## Terminologie
 
-Bei der Arbeit mit Offer decisioning ist es wichtig, die folgende Terminologie zu verstehen. Weitere Informationen und zusätzliche Begriffe finden Sie im [offer decisioning-Glossar](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
+Bei der Arbeit mit Offer decisioning ist es wichtig, die folgende Terminologie zu verstehen. Weitere Informationen und zusätzliche Begriffe finden Sie im [Offer decisioning-Glossar](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
 
 * **Container:** Ein Container ist ein Isolationsmechanismus, der unterschiedliche Anliegen voneinander trennt. Die Container-ID ist das erste Pfadelement für alle Repository-APIs. Alle Entscheidungsobjekte befinden sich in einem Container.
 
@@ -55,7 +55,7 @@ Bei der Arbeit mit Offer decisioning ist es wichtig, die folgende Terminologie z
 
 * **Datenspeicher:** Weitere Informationen finden Sie im [datastreams](../../../datastreams/overview.md) Dokumentation.
 
-* **Identität**: Weitere Informationen finden Sie in dieser Dokumentation . [Platform Web SDK verwendet Identity Service](../../identity/overview.md).
+* **Identität**: Weitere Informationen finden Sie in dieser Dokumentation , in der beschrieben wird, wie [Platform Web SDK verwendet Identity Service](../../identity/overview.md).
 
 ## Aktivieren von Offer decisioning
 
@@ -201,7 +201,7 @@ Führen Sie die folgenden Schritte aus, um Offer decisioning zu aktivieren:
 | `language` | Eine Reihe von Sprachen, die mit dem Inhalt des vorgeschlagenen Angebots verknüpft sind. | `"language": [ "en-US" ]` |
 | `content` | Inhalt, der mit dem vorgeschlagenen Angebot in Form einer Zeichenfolge verknüpft ist. | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
 | `deliveryUrl` | Bildinhalt, der mit dem vorgeschlagenen Angebot verknüpft ist, im Format einer URL. | `"deliveryURL": "https://image.jpeg"` |
-| `characteristics` | Eigenschaften, die mit dem vorgeschlagenen Angebot im Format eines JSON-Objekts verknüpft sind. | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
+| `characteristics` | Mit dem vorgeschlagenen Angebot verknüpfte Eigenschaften im Format eines JSON-Objekts. | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
 
 ### Mehrere `decisionScopes` values
 
@@ -328,8 +328,8 @@ Führen Sie die folgenden Schritte aus, um Offer decisioning zu aktivieren:
 | `language` | Eine Reihe von Sprachen, die mit dem Inhalt des vorgeschlagenen Angebots verknüpft sind. | `"language": [ "en-US" ]` |
 | `content` | Inhalt, der mit dem vorgeschlagenen Angebot in Form einer Zeichenfolge verknüpft ist. | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
 | `deliveryUrl` | Bildinhalt, der mit dem vorgeschlagenen Angebot verknüpft ist, im Format einer URL. | `"deliveryURL": "https://image.jpeg"` |
-| `characteristics` | Eigenschaften, die mit dem vorgeschlagenen Angebot im Format eines JSON-Objekts verknüpft sind. | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
+| `characteristics` | Mit dem vorgeschlagenen Angebot verknüpfte Eigenschaften im Format eines JSON-Objekts. | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
 
 ## Einschränkungen
 
-Einige Angebotseinschränkungen werden derzeit nicht mit den mobilen Experience Edge-Workflows unterstützt, beispielsweise die Begrenzung. Der Wert des Feldes „Begrenzung“ gibt an, wie oft ein Angebot allen Benutzern angezeigt werden kann. Weitere Informationen finden Sie in der [Dokumentation zu Angebotseignungsregeln und Einschränkungen](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
+Einige Angebotsbegrenzungen werden derzeit nicht von den mobilen Edge-Netzwerk-Workflows unterstützt, z. B. Capping. Der Wert des Feldes „Begrenzung“ gibt an, wie oft ein Angebot allen Benutzern angezeigt werden kann. Weitere Informationen finden Sie in der [Dokumentation zu Angebotseignungsregeln und Einschränkungen](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).

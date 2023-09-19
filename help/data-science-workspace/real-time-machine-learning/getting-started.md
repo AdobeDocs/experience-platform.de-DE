@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erste Schritte beim maschinellem Lernen in Echtzeit
 description: Im folgenden Dokument werden die Schritte beschrieben, die zum Erstellen eines Modells für maschinelles Lernen in Echtzeit in Adobe Experience Platform erforderlich sind.
 exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '437'
 ht-degree: 100%
 
 ---
@@ -25,7 +25,7 @@ Die Handbücher für maschinelles Lernen in Echtzeit erfordern ein grundlegendes
 
 - **DSL:** Domain-spezifische Sprache (Domain Specific Language).
 - **Edge:** Der Service zur Bewertung für maschinelles Lernen in Echtzeit kann auf Edge-Clustern ausgeführt werden, die näher zu Ihren Aktivierungen und Anwendungen sind.
-- **Hub:** Auf der aktuellen Alpha-Version wird der Service zur Bewertung für maschinelles Lernen in Echtzeit auf dem Adobe Experience Platform Hub ausgeführt. Das Experience Edge Network befindet sich in der Entwicklung.
+- **Hub:** Auf der aktuellen Alpha-Version wird der Service zur Bewertung für maschinelles Lernen in Echtzeit auf dem Adobe Platform Hub ausgeführt. Das Experience Edge Network befindet sich in der Entwicklung.
 - **Knoten:** Ein Knoten ist die Grundeinheit, aus der Diagramme gebildet werden. Jeder Knoten führt eine bestimmte Aufgabe aus und kann mithilfe von Verknüpfungen mit anderen Knoten verkettet werden, um ein Diagramm zu bilden, das für eine ML-Pipeline steht. Die von einem Knoten ausgeführte Aufgabe stellt einen Vorgang an Eingabedaten dar, beispielsweise eine Umwandlung von Daten oder Schemata oder eine Schlussfolgerung durch maschinelles Lernen. Der Knoten gibt den transformierten oder abgeleiteten Wert an den oder die nächsten Knoten aus.
 
 ## Datensätze in Adobe Experience Platform

@@ -3,7 +3,7 @@ title: Vergleich von at.js mit dem Experience Platform Web SDK
 description: Erfahren Sie, wie die at.js-Funktionen mit dem Experience Platform Web SDK verglichen werden.
 keywords: Target; adobe target; activity.id; experience.id; renderDecisions; DecisionScopes; Vorabausblenden von Snippet; VEC; Form-Based Experience Composer; xdm; Zielgruppen; Entscheidungen; Umfang; Schema; Systemdiagramm; Diagramm
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '2281'
 ht-degree: 8%
@@ -918,7 +918,7 @@ Die serverseitige Protokollierung in Analytics ist aktiviert, wenn Analytics fü
 
 ![](assets/analytics-enabled-datastream-config.png)
 
-Wenn die serverseitige Analytics-Protokollierung aktiviert ist, muss die A4T-Payload für Analytics freigegeben werden, damit die Analytics-Berichterstellung zeigt, dass korrekte Impressionen und Konversionen auf Experience Edge-Ebene freigegeben werden, sodass der Kunde keine zusätzliche Verarbeitung durchführen muss.
+Wenn die serverseitige Analytics-Protokollierung aktiviert ist, muss die A4T-Payload für Analytics freigegeben werden, damit die Analytics-Berichterstellung zeigt, dass korrekte Impressionen und Konversionen auf Edge Network-Ebene freigegeben werden, sodass der Kunde keine zusätzliche Verarbeitung durchführen muss.
 
 So fließen Daten in unsere Systeme, wenn die serverseitige Analytics-Protokollierung aktiviert ist:
 

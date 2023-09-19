@@ -3,9 +3,9 @@ title: Verwenden von Adobe Analytics mit dem Platform Web SDK
 description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Web SDK Daten an Adobe Analytics senden.
 keywords: Adobe Analytics;Analytics;zugeordnete Daten;zugeordnete Vars;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: 836fa7814a6966903639e871bfaea0563847f363
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '307'
 ht-degree: 39%
 
 ---
@@ -74,4 +74,4 @@ Hier ein Beispiel für eine Verarbeitungsregel, die diese Daten verwenden würde
 
 >[!NOTE]
 >
->Mit der Experience Edge-Sammlung werden alle Ereignisse an Analytics sowie an alle anderen Dienste gesendet, die Sie für Ihren Datastream konfiguriert haben. Wenn Sie beispielsweise sowohl Analytics als auch Target als Dienste konfiguriert haben und separate Aufrufe für die Personalisierung und für Analytics tätigen, werden beide Ereignisse an Analytics und Target gesendet. Diese Ereignisse werden in Analytics-Berichten aufgezeichnet und können sich auf Metriken wie die Absprungrate auswirken.
+>Mit der Edge Network-Sammlung werden alle Ereignisse an Analytics sowie an alle anderen Dienste gesendet, die Sie für Ihren Datastream konfiguriert haben. Wenn Sie beispielsweise sowohl Analytics als auch Target als Dienste konfiguriert haben und separate Aufrufe für die Personalisierung und für Analytics tätigen, werden beide Ereignisse an Analytics und Target gesendet. Diese Ereignisse werden in Analytics-Berichten aufgezeichnet und können sich auf Metriken wie die Absprungrate auswirken.

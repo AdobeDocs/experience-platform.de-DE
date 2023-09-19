@@ -1,18 +1,18 @@
 ---
 keywords: Ereignisweiterleitungs-Erweiterung;twitter;twitter-Ereignisweiterleitungs-Erweiterung
 title: Twitter-Ereignisweiterleitungs-Erweiterung
-description: Mit dieser Ereignisweiterleitungs-Erweiterung von Adobe Experience Platform können Sie Ereignisse für Ihre Geschäftsanforderungen in Twitter erfassen.
+description: Mit dieser Ereignisweiterleitungs-Erweiterung von Adobe Experience Platform können Sie für Ihre Geschäftsanforderungen Ereignisse in Twitter aufnehmen.
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1141'
 ht-degree: 7%
 
 ---
 
 # [!DNL Twitter]-Erweiterung zur Ereignisweiterleitung
 
-[[!DNL Twitter]](https://twitter.com/i/flow/login) ist ein Online-Dienst für soziale Medien und soziale Netzwerke, bei dem Benutzer Nachrichten mit einer Länge von 280 Zeichen posten und mit ihnen interagieren, die als Tweets bezeichnet werden. Benutzer können mit Twitter über einen Browser, eine mobile Frontend-Software oder programmgesteuert über die [APIs](https://developer.twitter.com/en/docs/twitter-api)
+[[!DNL Twitter]](https://twitter.com/i/flow/login) ist ein Online-Dienst für soziale Medien und soziale Netzwerke, bei dem Benutzer Nachrichten mit einer Länge von 280 Zeichen posten und mit ihnen interagieren, die als Tweets bezeichnet werden. Benutzer können über einen Browser, eine mobile Frontend-Software oder programmgesteuert mit Twitter interagieren [APIs](https://developer.twitter.com/en/docs/twitter-api)
 
 Die [!DNL Twitter] Web Conversions API [Ereignisweiterleitung](../../../ui/event-forwarding/overview.md) -Erweiterung ermöglicht es Ihnen, die im Adobe Experience Platform Edge Network erfassten Daten zu nutzen und an [!DNL Twitter]. In diesem Dokument werden die Anwendungsfälle der Erweiterung, ihre Installation und die Integration ihrer Funktionen in die Ereignisweiterleitung behandelt. [Regeln](../../../ui/managing-resources/rules.md).
 
@@ -40,7 +40,7 @@ Die [!DNL Twitter] Die Web Conversions-API hat eine Ratenbegrenzung von 60.000 A
 
 ### Erforderliche Konfigurationsdetails sammeln {#configuration-details}
 
-Um die Experience Platform mit [!DNL Twitter], sind folgende Eingaben erforderlich:
+Um die Experience Platform an [!DNL Twitter], sind folgende Eingaben erforderlich:
 
 | Schlüsseltyp | Beschreibung |
 | --- | --- |
@@ -54,7 +54,7 @@ Um die Experience Platform mit [!DNL Twitter], sind folgende Eingaben erforderli
 
 So installieren Sie die Erweiterung: [Erstellen einer Ereignisweiterleitungs-Eigenschaft](../../../ui/event-forwarding/overview.md#properties) oder wählen Sie eine vorhandene Eigenschaft aus, die Sie stattdessen bearbeiten möchten.
 
-Wählen Sie **[!UICONTROL Erweiterungen]** in der linken Navigation aus. Im **[!UICONTROL Katalog]** Registerkarte, wählen Sie **[!UICONTROL Installieren]** auf der Karte für die [!DNL Twitter] -Erweiterung.
+Wählen Sie **[!UICONTROL Erweiterungen]** in der linken Navigation aus. Im **[!UICONTROL Katalog]** Registerkarte auswählen **[!UICONTROL Installieren]** auf der Karte für die [!DNL Twitter] -Erweiterung.
 
 ![Katalog, der die [!DNL Twitter] Erweiterungsmarkierungsinstallation.](../../../images/extensions/server/twitter/install.png)
 
@@ -78,7 +78,7 @@ Klicken Sie abschließend auf **[!UICONTROL Speichern]**.
 
 Sobald alle Ihre Datenelemente eingerichtet sind, können Sie mit der Erstellung von Ereignisweiterleitungsregeln beginnen, die bestimmen, wann und wie Ihre Ereignisse an gesendet werden [!DNL Twitter].
 
-Erstellen Sie eine neue [Regel](../../../ui/managing-resources/rules.md) in Ihrer Ereignisweiterleitungseigenschaft. under **[!UICONTROL Aktionen]**, fügen Sie eine neue Aktion hinzu und legen Sie die Erweiterung auf **[!UICONTROL Twitter]**. So senden Sie Adobe Experience Edge Network-Ereignisse an [!DNL Twitter], legen Sie die **[!UICONTROL Aktionstyp]** nach **[!UICONTROL Web-Konversion senden].**
+Erstellen Sie eine neue [Regel](../../../ui/managing-resources/rules.md) in Ihrer Ereignisweiterleitungseigenschaft. under **[!UICONTROL Aktionen]**, fügen Sie eine neue Aktion hinzu und legen Sie die Erweiterung auf **[!UICONTROL Twitter]**. So senden Sie Edge Network-Ereignisse an [!DNL Twitter], legen Sie die **[!UICONTROL Aktionstyp]** nach **[!UICONTROL Web-Konversion senden].**
 
 Nach der Auswahl scheinen zusätzliche Steuerelemente das Ereignis weiter zu konfigurieren. Sie müssen die [!DNL Twitter] Ereigniseigenschaften zu den zuvor erstellten Datenelementen hinzufügen. Weitere Informationen finden Sie im Abschnitt [[!DNL Twitter] Web Conversions API](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions).
 
@@ -96,7 +96,7 @@ Nach der Auswahl scheinen zusätzliche Steuerelemente das Ereignis weiter zu kon
 
 | Feldname | Beschreibung | Beispiel | Erforderlich |
 | --- | --- | --- | --- |
-| [!UICONTROL Konvertierungszeit] | Datum/Uhrzeit als Zeichenfolge in ISO 8601 oder in yyy-MM-dd&#39;T&#39;HH:mm:Format &quot;ss:SSSZ&quot;. | 2022-02-18T01:14:00.603 Z | Ja |
+| [!UICONTROL Konvertierungszeit] | Datum/Uhrzeit als Zeichenfolge in ISO 8601 oder in yyy-MM-dd&#39;T&#39;HH:mm:Format ss:SSSZ . | 2022-02-18T01:14:00.603 Z | Ja |
 | [!UICONTROL Ereignis-ID] | Die base-36-ID eines bestimmten Ereignisses. Diese ID sollte mit einem vorkonfigurierten Ereignis übereinstimmen, das in Ihrer [!DNL Twitter] Anzeigenkonto. Dies wird als ID für das entsprechende Ereignis im Ereignismanager bezeichnet. | o87ne oder tw-o8z6j-o87ne (tw-pixel_id-event-id) | Ja |
 | [!UICONTROL Anzahl der Elemente] | Die Anzahl der Artikel, die im Ereignis gekauft werden. Hierbei muss es sich um eine positive Zahl größer als 0 handeln. | 4 | Nein |
 | [!UICONTROL Währung] | Die Währung der Artikel, die im Ereignis gekauft werden. Dies wird in ISO-4217 ausgedrückt und falls nicht angegeben, ist der Standardwert USD. | USD | Nein |
@@ -117,6 +117,6 @@ Wenn die Ereigniskollektion und [!DNL Experience Platform] -Integration erfolgre
 In diesem Handbuch wurde beschrieben, wie Konversionsereignisse an gesendet werden [!DNL Twitter] über die Ereignisweiterleitung. Weitere Informationen zu diesen Technologien finden Sie in der offiziellen Dokumentation:
 
 * [[!DNL Twitter] APIs](https://developer.twitter.com/en/docs/twitter-api)
-* [[!DNL Twitter] Web-Konversions-API](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions)
+* [[!DNL Twitter] Web Conversion API](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions)
 * [[!DNL Twitter] Benutzerzugriffs-Token](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens)
 * [Pixel-ID und Konversions-Tracking](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html)

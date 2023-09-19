@@ -3,10 +3,10 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 49624d51d6868fa951fe70b29715142b3cbad55b
-workflow-type: ht
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+workflow-type: tm+mt
 source-wordcount: '1589'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -118,7 +118,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 * Die Ansichtsänderungsereignisse für Einzelseitenanwendungen wurden optimiert. Die Anzeigebenachrichtigung ist jetzt beim Rendern personalisierter Erlebnisse im Ansichtsänderungsereignis enthalten.
 * Die Konsolenwarnung wurde entfernt, wenn `eventType` nicht vorhanden ist.
 * Es wurde ein Problem behoben, bei dem die `propositions`-Eigenschaft nur von einem `sendEvent`-Befehl zurückgegeben wurde, wenn Erlebnisse aus dem Cache angefordert oder abgerufen wurden. Die `propositions`-Eigenschaft wird jetzt immer als Array definiert.
-* Es wurde ein Problem behoben, bei dem ausgeblendete Container nicht angezeigt wurden, wenn ein Fehler von Adobe Experience Edge zurückgegeben wurde.
+* Es wurde ein Problem behoben, bei dem ausgeblendete Container nicht angezeigt wurden, wenn ein Fehler vom Edge Network zurückgegeben wurde.
 * Es wurde ein Problem behoben, bei dem die Interaktionsereignisse in Adobe Target nicht gezählt wurden. Dieses Problem wurde behoben, indem der Ansichtsname unter web.webPageDetails.viewName zu XDM hinzugefügt wurde.
 * Es wurden fehlerhafte Dokumentationslinks in Konsolenmeldungen behoben.
 
@@ -130,7 +130,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 ## Version 2.7.0 – 26. Oktober 2021
 
-* Zusätzliche Informationen aus Experience Edge werden im Rückgabewert von `sendEvent` verfügbar gemacht, einschließlich `inferences` und `destinations`. Das Format dieser Eigenschaften kann sich ändern, da diese Funktionen derzeit als Teil einer Beta-Version eingeführt werden. Weitere Informationen finden Sie unter [Tracking von Ereignissen](fundamentals/tracking-events.md).
+* Stellen Sie zusätzliche Informationen aus dem Edge-Netzwerk im Rückgabewert von bereit. `sendEvent`, einschließlich `inferences` und `destinations`. Das Format dieser Eigenschaften kann sich ändern, da diese Funktionen derzeit als Teil einer Beta-Version eingeführt werden. Weitere Informationen finden Sie unter [Tracking von Ereignissen](fundamentals/tracking-events.md).
 
 ## Version 2.6.4 – 7. September 2021
 

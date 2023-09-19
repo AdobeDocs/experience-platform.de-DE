@@ -2,9 +2,9 @@
 title: Übersicht über die API-Erweiterung für Meta Conversions
 description: Erfahren Sie mehr über die Meta Conversions API-Erweiterung für die Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: f5a9e8cb5cdbff485bc7d50e9567b0236ae5872e
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '2368'
+source-wordcount: '2370'
 ht-degree: 1%
 
 ---
@@ -17,13 +17,13 @@ Verwenden der [!DNL Meta Conversions API] -Erweiterung verwenden, können Sie di
 
 ## Voraussetzungen
 
-Es wird dringend empfohlen, [!DNL Meta Pixel] und [!DNL Conversions API] , um dieselben Ereignisse vom Client- bzw. vom Server-seitigen freizugeben und zu senden, da dies dazu beitragen kann, Ereignisse wiederherzustellen, die nicht von abgerufen wurden [!DNL Meta Pixel]. Vor der Installation [!DNL Conversions API] -Erweiterung, siehe Handbuch im [[!DNL Meta Pixel] Erweiterung](../../client/meta/overview.md) für Schritte zur Integration in Ihre clientseitigen Tag-Implementierungen.
+Es wird dringend empfohlen [!DNL Meta Pixel] und [!DNL Conversions API] , um dieselben Ereignisse vom Client- bzw. vom Server-seitigen freizugeben und zu senden, da dies dazu beitragen kann, Ereignisse wiederherzustellen, die nicht von abgerufen wurden. [!DNL Meta Pixel]. Vor der Installation [!DNL Conversions API] -Erweiterung, siehe Handbuch im [[!DNL Meta Pixel] Erweiterung](../../client/meta/overview.md) für Schritte zur Integration in Ihre clientseitigen Tag-Implementierungen.
 
 >[!NOTE]
 >
 >Der Abschnitt zu [Ereignisdeduplizierung](#deduplication) weiter unten in diesem Dokument die Schritte beschrieben, um sicherzustellen, dass dasselbe Ereignis nicht zweimal verwendet wird, da es sowohl vom Browser als auch vom Server empfangen werden kann.
 
-Um die [!DNL Conversions API] -Erweiterung, müssen Sie Zugriff auf die Ereignisweiterleitung haben und über eine gültige [!DNL Meta] Konto mit Zugriff auf [!DNL Ad Manager] und [!DNL Event Manager]. Insbesondere müssen Sie die Kennung eines vorhandenen [[!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755?id=1205376682832142) (oder [eine neue [!DNL Pixel]](https://www.facebook.com/business/help/952192354843755) ), damit die Erweiterung für Ihr Konto konfiguriert werden kann.
+Um die [!DNL Conversions API] -Erweiterung, müssen Sie Zugriff auf die Ereignisweiterleitung haben und über eine gültige [!DNL Meta] Konto mit Zugriff auf [!DNL Ad Manager] und [!DNL Event Manager]. Insbesondere müssen Sie die Kennung eines vorhandenen [[!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755?id=1205376682832142) (oder [Erstellen Sie eine neue [!DNL Pixel]](https://www.facebook.com/business/help/952192354843755) ), damit die Erweiterung für Ihr Konto konfiguriert werden kann.
 
 >[!INFO]
 >
@@ -33,7 +33,7 @@ Um die [!DNL Conversions API] -Erweiterung, müssen Sie Zugriff auf die Ereignis
 
 So installieren Sie die [!DNL Meta Conversions API] Erweiterung, navigieren Sie zur Datenerfassungs-Benutzeroberfläche oder Experience Platform-Benutzeroberfläche und wählen Sie **[!UICONTROL Ereignisweiterleitung]** über die linke Navigation. Wählen Sie hier eine Eigenschaft aus, der die Erweiterung hinzugefügt werden soll, oder erstellen Sie stattdessen eine neue Eigenschaft.
 
-Nachdem Sie die gewünschte Eigenschaft ausgewählt oder erstellt haben, wählen Sie **[!UICONTROL Erweiterungen]** Wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Katalog]** Registerkarte. Suchen Sie nach [!UICONTROL Meta Conversions-API] Karte, und wählen Sie **[!UICONTROL Installieren]**.
+Nachdem Sie die gewünschte Eigenschaft ausgewählt oder erstellt haben, wählen Sie **[!UICONTROL Erweiterungen]** im linken Navigationsbereich und wählen Sie dann die **[!UICONTROL Katalog]** Registerkarte. Suchen Sie nach [!UICONTROL Meta Conversions-API] Karte, und wählen Sie **[!UICONTROL Installieren]**.
 
 ![Die [!UICONTROL Installieren] für die [!UICONTROL Meta Conversions-API] -Erweiterung in der Datenerfassungs-Benutzeroberfläche.](../../../images/extensions/server/meta/install.png)
 
@@ -45,7 +45,7 @@ Klicken Sie abschließend auf **[!UICONTROL Speichern]**
 
 ![Die [!DNL Pixel] ID, die in der Erweiterungskonfigurationsansicht als Datenelement bereitgestellt wird.](../../../images/extensions/server/meta/configure.png)
 
-Die Erweiterung ist installiert und Sie können jetzt ihre Funktionen in Ihren Ereignisweiterleitungsregeln verwenden.
+Die -Erweiterung ist installiert und Sie können jetzt ihre Funktionen in Ihren Ereignisweiterleitungsregeln verwenden.
 
 ## Konfigurieren einer Ereignisweiterleitungsregel {#rule}
 
@@ -63,14 +63,14 @@ Es werden Steuerelemente angezeigt, mit denen Sie die Ereignisdaten konfiguriere
 
 | Konfigurationsabschnitt | Beschreibung |
 | --- | --- |
-| [!UICONTROL Server-Ereignisparameter] | Allgemeine Informationen zum Ereignis, einschließlich der Zeit, zu der es aufgetreten ist, und der Quellaktion, die es ausgelöst hat. Siehe Abschnitt [!DNL Meta] Entwicklerdokumentation für weitere Informationen zu [Standard-Ereignisparameter](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event) von [!DNL Conversions API].<br><br>Wenn Sie beide [!DNL Meta Pixel] und [!DNL Conversions API] Um Ereignisse zu senden, stellen Sie sicher, dass Sie sowohl eine **[!UICONTROL Ereignisname]** (`event_name`) und **[!UICONTROL Ereignis-ID]** (`event_id`) bei jedem Ereignis verwenden, da diese Werte für [Ereignisdeduplizierung](#deduplication).<br><br>Sie haben auch die Möglichkeit, **[!UICONTROL Eingeschränkte Datenverwendung aktivieren]** um die Einhaltung von Kunden-Opt-outs zu unterstützen. Siehe [!DNL Conversions API] Dokumentation zu [Datenverarbeitungsoptionen](https://developers.facebook.com/docs/marketing-apis/data-processing-options/) für Details zu dieser Funktion. |
+| [!UICONTROL Server-Ereignisparameter] | Allgemeine Informationen zum Ereignis, einschließlich der Zeit, zu der es aufgetreten ist, und der Quellaktion, die es ausgelöst hat. Siehe Abschnitt [!DNL Meta] Entwicklerdokumentation für weitere Informationen zu [Standard-Ereignisparameter](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event) von [!DNL Conversions API].<br><br>Wenn Sie beide [!DNL Meta Pixel] und [!DNL Conversions API] Um Ereignisse zu senden, stellen Sie sicher, dass Sie sowohl eine als auch eine **[!UICONTROL Ereignisname]** (`event_name`) und **[!UICONTROL Ereignis-ID]** (`event_id`) bei jedem Ereignis verwenden, da diese Werte für [Ereignisdeduplizierung](#deduplication).<br><br>Sie können auch **[!UICONTROL Eingeschränkte Datenverwendung aktivieren]** um die Einhaltung von Kunden-Opt-outs zu unterstützen. Siehe [!DNL Conversions API] Dokumentation zu [Datenverarbeitungsoptionen](https://developers.facebook.com/docs/marketing-apis/data-processing-options/) für Details zu dieser Funktion. |
 | [!UICONTROL Parameter für Kundeninformationen] | Benutzeridentitätsdaten, mit denen das Ereignis einem Kunden zugeordnet wird. Einige dieser Werte müssen gehasht werden, bevor sie an die API gesendet werden können.<br><br>Um eine gute gemeinsame API-Verbindung und eine hohe Ereignisübereinstimmungsqualität (EMQ) sicherzustellen, wird empfohlen, alle [akzeptierte Kundeninformationsparameter](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/customer-information-parameters) neben Serverereignissen. Diese Parameter sollten ebenfalls [priorisiert anhand ihrer Bedeutung und Auswirkung auf EMQ](https://www.facebook.com/business/help/765081237991954?id=818859032317965). |
 | [!UICONTROL Benutzerdefinierte Daten] | Zusätzliche Daten, die zur Optimierung der Anzeigenbereitstellung verwendet werden und in Form eines JSON-Objekts bereitgestellt werden. Siehe Abschnitt [[!DNL Conversions API] Dokumentation](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/custom-data) für weitere Informationen zu den zulässigen Eigenschaften für dieses Objekt.<br><br>Wenn Sie ein Kaufereignis senden, müssen Sie in diesem Abschnitt die erforderlichen Attribute angeben `currency` und `value`. |
 | [!UICONTROL Testereignis] | Diese Option wird verwendet, um zu überprüfen, ob Ihre Konfiguration dazu führt, dass Serverereignisse von empfangen werden [!DNL Meta] wie erwartet. Um diese Funktion zu verwenden, wählen Sie die **[!UICONTROL Als Testereignis senden]** und geben Sie dann in der unten stehenden Eingabe einen Test-Ereigniscode Ihrer Wahl ein. Nachdem die Ereignisweiterleitungsregel bereitgestellt wurde, sollten bei der korrekten Konfiguration der Erweiterung und Aktion Aktivitäten angezeigt werden, die im **[!DNL Test Events]** Ansicht in [!DNL Meta Events Manager]. |
 
 {style="table-layout:auto"}
 
-Wenn Sie fertig sind, wählen Sie **[!UICONTROL Änderungen beibehalten]** , um die Aktion zur Regelkonfiguration hinzuzufügen.
+Wählen Sie zum Abschluss **[!UICONTROL Änderungen beibehalten]** , um die Aktion zur Regelkonfiguration hinzuzufügen.
 
 ![[!UICONTROL Änderungen beibehalten] für die Aktionskonfiguration ausgewählt werden.](../../../images/extensions/server/meta/keep-changes.png)
 
@@ -80,9 +80,9 @@ Wenn Sie mit der Regel zufrieden sind, wählen Sie **[!UICONTROL In Bibliothek s
 
 Wie in [Abschnitt mit Voraussetzungen](#prerequisites), wird empfohlen, beide [!DNL Meta Pixel] Tag-Erweiterung und [!DNL Conversions API] Ereignisweiterleitungs-Erweiterung, um dieselben Ereignisse vom Client und Server in einer redundanten Einrichtung zu senden. Dies kann dazu beitragen, Ereignisse wiederherzustellen, die nicht von der einen oder anderen Erweiterung erfasst wurden.
 
-Wenn Sie verschiedene Ereignistypen vom Client und Server senden, ohne dass sich die beiden überschneiden, ist keine Deduplizierung erforderlich. Wenn jedoch ein einzelnes Ereignis von beiden [!DNL Meta Pixel] und [!DNL Conversions API]müssen Sie sicherstellen, dass diese redundanten Ereignisse dedupliziert werden, damit Ihre Berichterstellung nicht beeinträchtigt wird.
+Wenn Sie verschiedene Ereignistypen vom Client und Server senden, ohne dass sich die beiden überschneiden, ist keine Deduplizierung erforderlich. Wenn jedoch ein einzelnes Ereignis von beiden gemeinsam genutzt wird [!DNL Meta Pixel] und [!DNL Conversions API]müssen Sie sicherstellen, dass diese redundanten Ereignisse dedupliziert werden, damit Ihre Berichterstellung nicht beeinträchtigt wird.
 
-Stellen Sie beim Senden freigegebener Ereignisse sicher, dass Sie eine Ereignis-ID und einen Namen in jedes Ereignis einschließen, das Sie vom Client und vom Server senden. Wenn mehrere Ereignisse mit derselben ID und demselben Namen empfangen werden, [!DNL Meta] verwendet automatisch mehrere Strategien, um sie zu deduplizieren und die relevantesten Daten beizubehalten. Siehe [!DNL Meta] Dokumentation zu [Deduplizierung für [!DNL Meta Pixel] und [!DNL Conversions API] events](https://www.facebook.com/business/help/823677331451951?id=1205376682832142) für Details zu diesem Prozess.
+Stellen Sie beim Senden von freigegebenen Ereignissen sicher, dass Sie eine Ereignis-ID und einen Namen mit jedem Ereignis einbeziehen, das Sie vom Client und vom Server senden. Wenn mehrere Ereignisse mit derselben ID und demselben Namen empfangen werden, [!DNL Meta] verwendet automatisch mehrere Strategien, um sie zu deduplizieren und die relevantesten Daten beizubehalten. Siehe [!DNL Meta] Dokumentation zu [Deduplizierung für [!DNL Meta Pixel] und [!DNL Conversions API] events](https://www.facebook.com/business/help/823677331451951?id=1205376682832142) für Details zu diesem Prozess.
 
 ## Schnellstart-Workflow: Metadaten-Konversions-API-Erweiterung (Beta) {#quick-start}
 
@@ -91,10 +91,9 @@ Stellen Sie beim Senden freigegebener Ereignisse sicher, dass Sie eine Ereignis-
 >* Die Schnellstartfunktion steht Kunden zur Verfügung, die das Real-Time CDP Prime- und Ultimate-Package erworben haben. Bitte wenden Sie sich an den Adobe-Support-Mitarbeiter, um weitere Informationen zu erhalten.
 >* Diese Funktion ist für neue Netto-Implementierungen vorgesehen und unterstützt derzeit nicht die automatische Installation von Erweiterungen und Konfigurationen für vorhandene Tags und Ereignisweiterleitungseigenschaften.
 
+Mit der Schnellstartfunktion können Sie mit der Meta-Konversions-API und den Meta-Pixel-Erweiterungen einfach und effizient einrichten. Dieses Tool automatisiert mehrere Schritte, die in Adobe-Tags und Ereignisweiterleitung ausgeführt werden, wodurch die Einrichtungszeit erheblich verkürzt wird.
 
-Mit der Schnellstartfunktion können Sie mit der Meta-Konversions-API und den Meta-Pixel-Erweiterungen einfach und effizient einrichten. Dieses Tool automatisiert mehrere Schritte, die in Adobe-Tags und in der Ereignisweiterleitung ausgeführt werden, wodurch die Einrichtungszeit erheblich verkürzt wird.
-
-Diese Funktion installiert und konfiguriert automatisch sowohl die Meta Conversions-API als auch die Meta-Pixel-Erweiterungen für neu automatisch generierte Tags und die Ereignisweiterleitungs-Eigenschaft mit den erforderlichen Regeln und Datenelementen. Außerdem werden das Experience Platform Web SDK und Datastream automatisch installiert und konfiguriert. Schließlich veröffentlicht die Schnellstartfunktion die Bibliothek automatisch in der angegebenen URL in einer Entwicklungsumgebung, was die clientseitige Datenerfassung und die serverseitige Ereignisweiterleitung über die Ereignisweiterleitung und Experience Edge in Echtzeit ermöglicht.
+Diese Funktion installiert und konfiguriert automatisch sowohl die Meta Conversions-API als auch die Meta-Pixel-Erweiterungen für neu automatisch generierte Tags und die Ereignisweiterleitungs-Eigenschaft mit den erforderlichen Regeln und Datenelementen. Außerdem werden das Experience Platform Web SDK und Datastream automatisch installiert und konfiguriert. Schließlich veröffentlicht die Schnellstartfunktion die Bibliothek automatisch in der angegebenen URL in einer Entwicklungsumgebung, was die clientseitige Datenerfassung und die serverseitige Ereignisweiterleitung über die Ereignisweiterleitung und das Experience Platform Edge Network in Echtzeit ermöglicht.
 
 Das folgende Video bietet eine Einführung in die Schnellstarterfunktion.
 
@@ -104,7 +103,7 @@ Das folgende Video bietet eine Einführung in die Schnellstarterfunktion.
 
 >[!NOTE]
 >
->Diese Funktion soll Ihnen bei den ersten Schritten mit der Implementierung der Ereignisweiterleitung helfen. Es wird keine End-to-End-Implementierung liefern, die voll funktionsfähig ist und alle Anwendungsfälle berücksichtigt.
+>Diese Funktion soll Ihnen bei den ersten Schritten mit der Implementierung der Ereignisweiterleitung helfen. Es wird keine End-to-End-Implementierung liefern, die voll funktionsfähig ist und allen Anwendungsfällen gerecht wird.
 
 Bei diesem Setup werden sowohl die Meta Conversions-API als auch die Meta Pixel-Erweiterungen automatisch installiert. Diese Hybridimplementierung wird von Meta empfohlen, um serverseitige Ereigniskonversionen zu erfassen und weiterzuleiten.
 Die schnelle Setup-Funktion soll Kunden bei den ersten Schritten mit der Implementierung der Ereignisweiterleitung unterstützen und soll keine vollständige Implementierung liefern, die alle Anwendungsfälle berücksichtigt.
@@ -117,7 +116,7 @@ Geben Sie Ihre **[!UICONTROL Domäne]**, wählen Sie **[!UICONTROL Nächste]**. 
 
 ![Begrüßungsbildschirm, der den Domänennamen anfordert](../../../images/extensions/server/meta/welcome.png)
 
-Im **[!UICONTROL Ersteinrichtung]** Dialogfeld eingeben **[!UICONTROL Meta-Pixel-ID]**, **[!UICONTROL Zugriffstoken für Metadaten-Konversions-API]** und **[!UICONTROL Datenschichtpfad]**, wählen Sie **[!UICONTROL Nächste]**.
+Im **[!UICONTROL Ersteinrichtung]** Dialogfeld eingeben **[!UICONTROL Meta-Pixel-ID]**, **[!UICONTROL Zugriffstoken für Metadaten-Konversions-API]**, und **[!UICONTROL Datenschichtpfad]**, wählen Sie **[!UICONTROL Nächste]**.
 
 ![Dialogfeld für die Ersteinrichtung](../../../images/extensions/server/meta/initial-setup.png)
 
@@ -129,7 +128,7 @@ Aus dem **[!UICONTROL Code zu Ihrer Site hinzufügen]** Kopieren Sie den Code, d
 
 ![Code zum Dialogfeld Ihrer Site hinzufügen](../../../images/extensions/server/meta/add-code-on-your-site.png)
 
-Die [!UICONTROL Überprüfungsergebnisse] zeigt die Implementierungsergebnisse der Meta-Erweiterung an. Klicken Sie auf **[!UICONTROL Weiter]**. Sie können auch zusätzliche Überprüfungsergebnisse anzeigen, indem Sie die **[!UICONTROL Sicherheit]** Link.
+Die [!UICONTROL Überprüfungsergebnisse] zeigt die Implementierungsergebnisse der Meta-Erweiterung an. Klicken Sie auf **[!UICONTROL Weiter]**. Sie können auch zusätzliche Überprüfungsergebnisse anzeigen, indem Sie die **[!UICONTROL Assurance]** -Link.
 
 ![Dialogfeld mit Testergebnissen mit Implementierungsergebnissen](../../../images/extensions/server/meta/test-results.png)
 
@@ -153,9 +152,9 @@ Wählen Sie die Regel aus, die dem Meta-Ereignis entspricht, das Sie bearbeiten 
 
 Um ein Ereignis hinzuzufügen, wählen Sie **[!UICONTROL Hinzufügen]** unter [!UICONTROL Veranstaltungen] -Überschrift.
 
-![Seite mit Tag-Eigenschaften, auf der keine Ereignisse angezeigt werden](../../../images/extensions/server/meta/edit-rule.png)
+![Seite &quot;Tag-Eigenschaften&quot;ohne Ereignisse](../../../images/extensions/server/meta/edit-rule.png)
 
-Wählen Sie die [!UICONTROL Ereignistyp]. In diesem Beispiel haben wir die Variable [!UICONTROL Klicken] -Ereignis und konfigurieren Sie es für den Trigger, wenn die **.add-to-cart-button** ausgewählt ist. Wählen Sie **[!UICONTROL Änderungen beibehalten]** aus.
+Wählen Sie die [!UICONTROL Ereignistyp]. In diesem Beispiel haben wir die Variable [!UICONTROL Klicks] -Ereignis und konfigurieren Sie es für den Trigger, wenn die **.add-to-cart-button** ausgewählt ist. Wählen Sie **[!UICONTROL Änderungen beibehalten]** aus.
 
 ![Bildschirm zur Ereigniskonfiguration mit Klick-Ereignis](../../../images/extensions/server/meta/event-configuration.png)
 
@@ -163,9 +162,9 @@ Das neue Ereignis wurde gespeichert. Auswählen **[!UICONTROL Arbeitsbibliothek 
 
 ![Auswählen einer Dropdown-Liste für die Arbeitsbibliothek](../../../images/extensions/server/meta/working-library.png)
 
-Wählen Sie als Nächstes das Dropdown-Menü neben **[!UICONTROL In Bibliothek speichern]** und wählen Sie **[!UICONTROL In Bibliothek speichern und erstellen]**. Dadurch wird die Änderung in der Bibliothek veröffentlicht.
+Wählen Sie als Nächstes das Dropdown-Menü neben **[!UICONTROL In Bibliothek speichern]** und wählen **[!UICONTROL In Bibliothek speichern und erstellen]**. Dadurch wird die Änderung in der Bibliothek veröffentlicht.
 
-![Wählen Sie In Bibliothek speichern und erstellen aus.](../../../images/extensions/server/meta/save-and-build.png)
+![In Bibliothek speichern und erstellen auswählen](../../../images/extensions/server/meta/save-and-build.png)
 
 Wiederholen Sie diese Schritte für jedes andere Meta-Konversionsereignis, das Sie konfigurieren möchten.
 
@@ -181,19 +180,19 @@ Während der Konfiguration wurden Sie gefragt, wo sich Ihre Datenschicht befinde
 
 Dies ist wichtig, da jede `MetaConversion_*` verwendet diese Datenstruktur, um die relevanten Datenteile an die [!DNL Meta Pixel] und [!DNL Meta Conversions API]. Weitere Informationen finden Sie in der Dokumentation unter [Standardereignisse](https://developers.facebook.com/docs/meta-pixel/reference#standard-events) Weitere Informationen dazu, welche Daten für verschiedene Meta-Ereignisse erforderlich sind.
 
-Wenn Sie beispielsweise die `MetaConversion_Subscribe` Regel verwenden, müssen Sie `window.dataLayer.meta.currency`, `window.dataLayer.meta.predicted_ltv`und `window.dataLayer.meta.value` entsprechend den Objekteigenschaften, die in der Dokumentation unter [Standardereignisse](https://developers.facebook.com/docs/meta-pixel/reference#standard-events).
+Wenn Sie beispielsweise die `MetaConversion_Subscribe` -Regel verwenden, müssen Sie `window.dataLayer.meta.currency`, `window.dataLayer.meta.predicted_ltv`, und `window.dataLayer.meta.value` entsprechend den Objekteigenschaften, die in der Dokumentation unter [Standardereignisse](https://developers.facebook.com/docs/meta-pixel/reference#standard-events).
 
 Im Folgenden finden Sie ein Beispiel dafür, was auf einer Website ausgeführt werden muss, um die Datenschicht zu aktualisieren, bevor die Regel ausgeführt wird.
 
 ![Daten-Layer-Metadaten aktualisieren](../../../images/extensions/server/meta/update-data-layer-meta.png)
 
-Standardmäßig wird die `<datalayerpath>.conversionData.eventId` wird zufällig von der Aktion &quot;Neue Ereignis-ID generieren&quot;für eine der `MetaConversion_* rules`.
+Standardmäßig wird die Variable `<datalayerpath>.conversionData.eventId` wird zufällig von der Aktion &quot;Neue Ereignis-ID generieren&quot;für eine der `MetaConversion_* rules`.
 
 Um eine lokale Referenz dazu zu erhalten, wie die Datenschicht aussehen soll, können Sie den Editor für benutzerdefinierten Code im `MetaConversion_DataLayer` -Datenelement in Ihrer Eigenschaft.
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie serverseitige Ereignisdaten an senden [!DNL Meta] mithilfe der [!DNL Meta Conversions API] -Erweiterung. Von hier aus wird empfohlen, Ihre Integration durch die Verbindung von mehr [!DNL Pixels] und teilen Sie ggf. weitere Ereignisse. Eine der folgenden Maßnahmen kann dazu beitragen, Ihre Anzeigenleistung weiter zu verbessern:
+In diesem Handbuch wurde beschrieben, wie Sie serverseitige Ereignisdaten an senden [!DNL Meta] mithilfe der [!DNL Meta Conversions API] -Erweiterung. Von hier aus wird empfohlen, Ihre Integration durch eine stärkere Verbindung zu erweitern [!DNL Pixels] und teilen Sie ggf. weitere Ereignisse. Eine der folgenden Maßnahmen kann dazu beitragen, Ihre Anzeigenleistung weiter zu verbessern:
 
 * Andere verbinden [!DNL Pixels] , die noch nicht mit einer [!DNL Conversions API] Integration.
 * Wenn Sie bestimmte Ereignisse ausschließlich über senden [!DNL Meta Pixel] Client-seitig senden Sie dieselben Ereignisse an die [!DNL Conversions API] auch vom Server aus.
