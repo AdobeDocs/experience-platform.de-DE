@@ -1,14 +1,13 @@
 ---
-keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;Leitplanken;Richtlinien;Limit;Entität;primäre Entität;Dimensionsentität;
 title: Standardmäßige Limits für Echtzeit-Kundenprofildaten
 solution: Experience Platform
 product: experience platform
 type: Documentation
 description: Adobe Experience Platform verwendet ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet. Dieses Dokument liefert standardmäßige Verwendungs- und Quotenbegrenzungen zur Hilfe bei der Modellierung Ihrer Profildaten, sodass eine optimale Systemleistung gewährleistet ist.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: 5dad03dd33855b225bb67391dbc51e5b31bf4d5e
 workflow-type: tm+mt
-source-wordcount: '1980'
+source-wordcount: '1965'
 ht-degree: 78%
 
 ---
@@ -25,12 +24,12 @@ Dieses Dokument liefert standardmäßige Verwendungs- und Quotenbegrenzungen zur
 
 ## Erste Schritte
 
-Die folgenden Experience Platform-Services sind mit der Modellierung von Echtzeit-Kundenprofildaten beteiligt:
+Die folgenden Experience Platform-Services sind an der Modellierung von Echtzeit-Kundenprofildaten beteiligt:
 
 * [[!DNL Real-Time Customer Profile]](home.md): Erstellen einheitlicher Verbraucherprofile anhand von Daten aus mehreren Quellen.
 * [Identitäten](../identity-service/home.md): Überbrücken von Identitäten aus unterschiedlichen Datenquellen, während sie in Platform aufgenommen werden.
 * [Schemata](../xdm/home.md): Experience-Datenmodell-Schemata (XDM) sind das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert.
-* [Zielgruppen](../segmentation/home.md): Die Segmentierungsmaschine in Platform wird verwendet, um Zielgruppen aus Ihren Kundenprofilen basierend auf dem Kundenverhalten und den Kundenattributen zu erstellen.
+* [Zielgruppen](../segmentation/home.md): Die Segmentierungsmaschine innerhalb von Platform wird verwendet, um Zielgruppen aus Ihren Kundenprofilen basierend auf dem Kundenverhalten und den Kundenattributen zu erstellen.
 
 ## Arten von Beschränkungen
 
@@ -108,11 +107,11 @@ Die folgenden Leitplanken beziehen sich auf die Datengröße und bieten empfohle
 
 ## Leitplanken für die Segmentierung
 
-Die in diesem Abschnitt beschriebenen Limits beziehen sich auf die Anzahl und Art der Zielgruppen, die eine Organisation in Experience Platform erstellen kann, sowie auf die Zuordnung und Aktivierung von Zielgruppen zu Zielen.
+Die in diesem Abschnitt beschriebenen Limits beziehen sich auf die Anzahl und Art der Zielgruppen, die eine Organisation innerhalb von Experience Platform erstellen kann, sowie auf die Zuordnung und Aktivierung von Zielgruppen zu Zielen.
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
-| Zielgruppen pro Sandbox | 4.000 | Soft | Eine Organisation kann insgesamt über 4.000 Zielgruppen verfügen, sofern in jeder Sandbox weniger als 4.000 Zielgruppen enthalten sind. Der Versuch, zusätzliche Zielgruppen zu erstellen, kann die Systemleistung beeinträchtigen. |
+| Zielgruppen pro Sandbox | 4.000 | Soft | Eine Organisation kann insgesamt über 4.000 Zielgruppen verfügen, sofern in jeder Sandbox weniger als 4.000 Zielgruppen enthalten sind. Der Versuch, zusätzliche Zielgruppen zu erstellen, kann sich auf die Systemleistung auswirken. |
 | Edge-Zielgruppen pro Sandbox | 150 | Soft | Eine Organisation kann insgesamt über mehr als 150 Edge-Zielgruppen verfügen, sofern in jeder einzelnen Sandbox weniger als 150 Edge-Zielgruppen enthalten sind. Der Versuch, zusätzliche Edge-Zielgruppen zu erstellen, kann sich auf die Systemleistung auswirken. |
 | Streaming-Zielgruppen pro Sandbox | 500 | Soft | Eine Organisation kann insgesamt über mehr als 500 Streaming-Zielgruppen verfügen, sofern in jeder einzelnen Sandbox weniger als 500 Streaming-Zielgruppen enthalten sind. Der Versuch, zusätzliche Streaming-Zielgruppen zu erstellen, kann die Systemleistung beeinträchtigen. |
 | Batch-Zielgruppen pro Sandbox | 4.000 | Soft | Eine Organisation kann insgesamt über mehr als 4.000 Batch-Zielgruppen verfügen, sofern in jeder einzelnen Sandbox weniger als 4.000 Batch-Zielgruppen enthalten sind. Der Versuch, zusätzliche Batch-Zielgruppen zu erstellen, kann sich auf die Systemleistung auswirken. |
@@ -147,7 +146,7 @@ Dimensionsentitäten stellen Suchdaten bereit, die Segmentdefinitionen mit mehre
 
 ### Profilfragmente
 
-In diesem Dokument gibt es mehrere Leitplanken, die sich auf „Profilfragmente“ beziehen. In der Experience Platform werden mehrere Profilfragmente zusammengeführt, um das Echtzeit-Kundenprofil zu bilden. Jedes Fragment stellt eine eindeutige primäre Identität und den entsprechenden Datensatz oder vollständigen Satz von Ereignisdaten für diese ID in einem bestimmten Datensatz dar. Weitere Informationen zu Profilfragmenten finden Sie in der [Profilübersicht](home.md#profile-fragments-vs-merged-profiles).
+In diesem Dokument gibt es mehrere Leitplanken, die sich auf „Profilfragmente“ beziehen. Unter Experience Platform werden mehrere Profilfragmente zusammengeführt, um das Echtzeit-Kundenprofil zu bilden. Jedes Fragment stellt eine eindeutige primäre Identität und den entsprechenden Datensatz oder vollständigen Satz von Ereignisdaten für diese ID in einem bestimmten Datensatz dar. Weitere Informationen zu Profilfragmenten finden Sie in der [Profilübersicht](home.md#profile-fragments-vs-merged-profiles).
 
 ### Zusammenführungsrichtlinien {#merge-policies}
 

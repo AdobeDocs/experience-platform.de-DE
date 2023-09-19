@@ -2,10 +2,8 @@
 title: Potenzielle Zielgruppen
 description: Erfahren Sie, wie Sie mithilfe von potenziellen Zielgruppen unbekannte Kundinnen und Kunden mithilfe von Drittanbieterinformationen ansprechen können.
 type: Documentation
-hide: true
-hidefromtoc: true
-source-git-commit: fff6279472607bd6e1ace21a3003ef839208d7a4
-workflow-type: ht
+source-git-commit: cb70eca22633ee08b260903e38f4538a21f3a56c
+workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 100%
 
