@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Handbuch zum Echtzeit-Kundenprofil
 user-guide-description: Führen Sie Kundendaten zusammen, um eine einheitliche, kanalübergreifende Ansicht von Kundeninteraktionen zu erstellen.
 feature: Profiles
-source-git-commit: 776958abf5d5e71452ff7f315ea5579b4f4aac1c
+source-git-commit: c630eb0e13c7d4c1b8f649816402fae0d4a79326
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 98%
+source-wordcount: '142'
+ht-degree: 97%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 98%
    * [Handbuch für die [!DNL Profile]-Benutzeroberfläche](ui/user-guide.md)
    * [[!DNL Profile]-Detailanpassung](ui/profile-customization.md)
    * [Interessentenprofile](ui/prospect-profile.md)
-* (Beta) Berechnete Attribute {#computed-attributes}
+* Berechnete Attribute {#computed-attributes}
    * [Übersicht](computed-attributes/overview.md)
    * [API für berechnete Attribute Handbuch](computed-attributes/api.md)
    * [Handbuch zur Benutzeroberfläche für berechnete Attribute](computed-attributes/ui.md)

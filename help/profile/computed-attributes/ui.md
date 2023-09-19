@@ -1,15 +1,19 @@
 ---
 title: Handbuch zur Benutzeroberfläche "Berechnete Attribute"
 description: Erfahren Sie, wie Sie berechnete Attribute mithilfe der Adobe Experience Platform-Benutzeroberfläche erstellen, anzeigen und aktualisieren.
-source-git-commit: 7ed473750b673eefd84b8d727043ad6ea35c3a8e
+source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: '1485'
 ht-degree: 4%
 
 ---
 
 
 # Handbuch zur Benutzeroberfläche für berechnete Attribute
+
+>[!NOTE]
+>
+>Um Zugriff auf berechnete Attribute zu erhalten, benötigen Sie die entsprechenden Berechtigungen (**Berechnete Attribute anzeigen** und **Berechnete Attribute verwalten**). Weitere Informationen zu den erforderlichen Berechtigungen finden Sie im Abschnitt [Zugriffssteuerungsdokumentation](../../access-control/home.md). Informationen zum Anwenden dieser Berechtigungen finden Sie in der [Berechtigungshandbuch verwalten](../../access-control/ui/permissions.md).
 
 In Adobe Experience Platform sind berechnete Attribute Funktionen zum Aggregieren von Daten auf Ereignisebene in Profilattributen. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können.
 

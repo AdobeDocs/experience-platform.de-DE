@@ -1,9 +1,9 @@
 ---
 title: Häufig gestellte Fragen zu berechneten Attributen
 description: Hier finden Sie Antworten auf häufig gestellte Fragen zur Verwendung berechneter Attribute.
-source-git-commit: fb5d3088b9fb330153bf64125df2f739eee80518
+source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '870'
 ht-degree: 2%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 2%
 # Häufig gestellte Fragen
 
 In Adobe Experience Platform sind berechnete Attribute Funktionen zum Aggregieren von Daten auf Ereignisebene in Profilattributen. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können. Im Folgenden finden Sie eine Liste häufig gestellter Fragen zu berechneten Attributen.
+
+## Wie erhalte ich Zugriff auf berechnete Attribute?
+
+Um Zugriff auf berechnete Attribute zu erhalten, benötigen Sie die entsprechenden Berechtigungen (**Berechnete Attribute anzeigen** und **Berechnete Attribute verwalten**). Weitere Informationen zu den erforderlichen Berechtigungen finden Sie im Abschnitt [Zugriffssteuerungsdokumentation](../../access-control/home.md). Informationen zum Anwenden dieser Berechtigungen finden Sie in der [Berechtigungshandbuch verwalten](../../access-control/ui/permissions.md).
 
 ## Welche Datensätze tragen zu berechneten Attributberechnungen bei?
 
@@ -76,10 +80,6 @@ Wie jedes andere Profilattribut sind berechnete Attribute verfügbar und können
 ## Wie werden Datennutzungsbezeichnungen auf berechnete Attribute angewendet?
 
 Berechnete Attribute leiten automatisch Datennutzungsbezeichnungen aus den Quellfeldern und Datensätzen ab, die zur Definition der berechneten Attribute verwendet wurden. Dadurch wird sichergestellt, dass Ihre Verhaltensdaten angemessen verwendet werden.
-
-## Wie erhalte ich Zugriff auf berechnete Attribute?
-
-Um Zugriff auf berechnete Attribute zu erhalten, benötigen Sie die entsprechenden Berechtigungen. Weitere Informationen zu den erforderlichen Berechtigungen finden Sie im Abschnitt [Zugriffssteuerungsdokumentation](../../access-control/home.md).
 
 ## Wie verwende ich berechnete Attribute mit Adobe Journey Optimizer?
 
