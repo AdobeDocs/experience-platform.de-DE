@@ -4,10 +4,10 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: 333f98a74e69f50ae356231733924d1c6793ddf1
+source-git-commit: 9c07664873f649645db57a9a025277f515333b1e
 workflow-type: tm+mt
-source-wordcount: '1170'
-ht-degree: 99%
+source-wordcount: '1159'
+ht-degree: 98%
 
 ---
 
@@ -22,15 +22,14 @@ ht-degree: 99%
    * [Profilexportverhalten für verschiedene Zieltypen](./how-destinations-work/profile-export-behavior.md)
    * [Umgang mit Identitäten im Aktivierungs-Workflow für Ziele](./how-destinations-work/identity-handling.md)
 * API-Tutorials {#api}
-   * [API-Migrationshandbuch für Cloud-Speicher-Ziele](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md)
+   * [Aktivieren von Daten für dateibasierte Ziele mithilfe der Flow Service-API](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [Verbinden Sie sich mit Streaming-Zielen und aktivieren Sie Daten über die Flow Service-API](./api/streaming-destinations.md)
-   * [Verbinden Sie sich mit Batch-Cloud-Speicher und E-Mail-Marketing-Zielen und aktivieren Sie Daten mit der Flow Service-API](./api/connect-activate-batch-destinations.md)
+   * [Verbindung zu dateibasierten E-Mail-Marketing-Zielen herstellen und Daten mithilfe der Flow Service-API aktivieren](./api/connect-activate-batch-destinations.md)
    * [(Beta) Aktivieren von Zielgruppen für Batch-Ziele über die Ad-hoc-Aktivierungs-API](./api/ad-hoc-activation-api.md)
    * [Bearbeiten des Ziels](./api/edit-destination.md)
    * [Aktualisieren von Ziel-Datenflüssen](./api/update-destination-dataflows.md)
    * [Löschen von Zielkonten](./api/delete-destination-account.md)
    * [Zieldatenflüsse löschen](./api/delete-destination-dataflow.md)
-   * [(Beta) Aktivieren von Daten für dateibasierte Ziele mithilfe der Flow Service-API](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [(Beta) Exportieren von Datensätzen](/help/destinations/api/export-datasets.md)
 * UI-Handbücher {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
