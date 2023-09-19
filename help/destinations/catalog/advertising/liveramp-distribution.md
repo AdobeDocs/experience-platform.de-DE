@@ -3,9 +3,9 @@ title: LiveRamp - Verteilungsverbindung
 description: Erfahren Sie, wie Sie mit dem LiveRamp - Distribution-Connector Zielgruppen aktivieren können, die zuvor in LiveRamp integriert wurden, und zwar für andere Werbeziele.
 hide: true
 hidefromtoc: true
-source-git-commit: c04c7ff4f1ab45d944f4ab516d7842df536fae40
+source-git-commit: 324f662dcc9718df6c81c47874c6b30235a74601
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1469'
 ht-degree: 60%
 
 ---
@@ -140,7 +140,9 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 >id="platform_destinations_liveramp_distribution_agreement"
 >title="Vereinbarung über Zielbedingungen für Advertiser-Daten"
 >abstract="Geben Sie `I AGREE` ein, um die Kenntnisnahme und das Einverständnis mit den Datenbedingungen für den Disney-Advertiser zu bestätigen."
->additional-url="https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/" text="Vereinbarung lesen"
+
+<!-- 
+>additional-url="https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/" text="Read the agreement" -->
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_client"
