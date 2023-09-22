@@ -2,17 +2,15 @@
 title: Prospect Profiles
 description: Erfahren Sie, wie Sie mithilfe von Interessenten-Profilen Informationen über unbekannte Kunden mit Drittanbieterinformationen erfassen und verwenden können.
 type: Documentation
-hide: true
-hidefromtoc: true
-source-git-commit: 6553643789549aec449ceb4f821ea663a0bfcef3
+source-git-commit: 1973fbe858fc0a266936faf6060e467c108fedf6
 workflow-type: tm+mt
 source-wordcount: '399'
-ht-degree: 7%
+ht-degree: 10%
 
 ---
 
 
-# Profile in der Zukunft
+# Interessentenprofile
 
 Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Ihre Kundinnen und Kunden, unabhängig davon, wo und wann sie mit Ihrer Marke interagieren.
 
@@ -58,9 +56,9 @@ Die [!UICONTROL JSON anzeigen] angezeigt. Die Attribute des potenziellen Profils
 
 ## Vorgeschlagene Anwendungsfälle {#use-cases}
 
-Informationen dazu, wie Sie die Prospektprofilfunktionalität in Experience Platform mit anderen Platform-Funktionen verwenden können, finden Sie in der folgenden Anwendungsfalldokumentation:
+Informationen dazu, wie Sie die Prospektprofilfunktionalität in Experience Platform in Kombination mit anderen Platform-Funktionen verwenden können, finden Sie in der folgenden Anwendungsfalldokumentation:
 
-- [Engagieren und Akquirieren neuer Kunden über die Prospektionsfunktion](../../rtcdp/partner-data/prospecting.md)
+- [Engagieren und Akquirieren neuer Kundinnen und Kunden über die Interessentenfunktion](../../rtcdp/partner-data/prospecting.md)
 
 ## Nächste Schritte
 
