@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Streaming-Erfassung - Überblick
 description: Streaming-Erfassung für Adobe Experience Platform bietet Benutzern eine Methode, Daten von Client- und Server-seitigen Geräten in Echtzeit an Experience Platform zu senden.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 008537dffff4cc428de9070964446f4e7ebf039f
+source-git-commit: 5adcdf3108fbbaee9e81dc737ae67b563e4dbf1d
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 18%
@@ -39,7 +39,7 @@ Weitere Informationen zum Aktivieren eines Datensatzes für [!DNL Profile] und [
 
 | Ziel | Erwartete Latenz |
 | --------- | ---------------- |
-| Echtzeit-Kundenprofil | &lt; 1 Minute |
+| Echtzeit-Kundenprofil | &lt; 15 Minuten |
 | Data Lake | &lt; 60 Minuten |
 
 ## Anleitung für Anfragen pro Sekunden (RPS) bei der Streaming-Erfassung
