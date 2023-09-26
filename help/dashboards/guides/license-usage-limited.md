@@ -5,14 +5,19 @@ description: Adobe Experience Platform bietet ein Dashboard, über das Sie wicht
 type: Documentation
 hide: true
 hidefromtoc: true
-source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
+source-git-commit: 6a69ecebe67a156d67a324581e5b96699b96d2e6
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1553'
 ht-degree: 7%
 
 ---
 
 # Dashboard zur Lizenznutzung (begrenzte Version) {#license-usage-dashboard-limited-release}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage"
+>title="Lizenznutzungs-Dashboard"
+>abstract="Das Dashboard zur Lizenznutzung bietet Einblicke in die von Ihnen erworbenen Adobe Experience Platform-Produkte. In der Dashboard-Übersicht werden die primären Metriken für Ihre Produkte angezeigt, einschließlich Ihrer Nutzung für jede der primären Metriken sowie Ihres vertraglich vereinbarten Lizenzbetrags. Im Arbeitsbereich &quot;Details&quot;wird eine Aufschlüsselung Ihrer Metriken für jedes Produkt innerhalb bestimmter Sandboxes angezeigt."
 
 >[!IMPORTANT]
 >
@@ -72,7 +77,7 @@ Alle verfügbaren Metriken werden auf der Seite [!UICONTROL Zusammenfassung] Reg
 
 Im Tab Zusammenfassung enthält die Tabelle die [!UICONTROL Metrik] Spalte. Diese für Menschen lesbaren Beschreibungen zeigen alle Metriken an, die für diesen Sandbox-Typ verwendet werden.
 
-### Sandbox auswählen {#select-sandbox}
+### Wählen Sie eine Sandbox aus {#select-sandbox}
 
 Um die Ansicht zwischen Produktions- und Entwicklungs-Sandbox-Typen zu ändern, wählen Sie entweder [!UICONTROL Produktions-Sandboxes] oder [!UICONTROL Entwicklungs-Sandboxes]. Der ausgewählte Sandbox-Typ wird durch das Optionsfeld neben dem Sandbox-Namen angezeigt.
 
