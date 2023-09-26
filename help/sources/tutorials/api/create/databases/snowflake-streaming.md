@@ -1,16 +1,16 @@
 ---
 title: Snowflake-Streaming-Konto mit Adobe Experience Platform verbinden
-description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Adobe Experience Platform mit Snowflake Streaming verbinden.
+description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Snowflake-Streaming verbinden.
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: f2c392704e0404aaff2ad569e388241c06fba902
 workflow-type: tm+mt
-source-wordcount: '830'
-ht-degree: 31%
+source-wordcount: '867'
+ht-degree: 29%
 
 ---
 
-# Stream [!DNL Snowflake] Daten, die mithilfe der [!DNL Flow Service] API
+# Stream [!DNL Snowflake] Daten an die Experience Platform mithilfe der [!DNL Flow Service] API
 
 >[!IMPORTANT]
 >
@@ -88,9 +88,9 @@ curl -X POST \
 | `auth.params.database` | Der Name Ihres [!DNL Snowflake] Datenbank, aus der Daten abgerufen werden. |
 | `auth.params.warehouse` | Der Name Ihres [!DNL Snowflake] Warehouse. Die [!DNL Snowflake] Warehouse verwaltet den Prozess der Ausführung der Abfrage für die Anwendung. Jedes Warehouse ist unabhängig voneinander und muss einzeln aufgerufen werden, wenn Daten an Platform übermittelt werden. |
 | `auth.params.username` | Der Benutzername für Ihre [!DNL Snowflake] Streaming-Konto. |
-| `auth.params.schema` | (Optional) Das Datenbankschema, das mit Ihrer [!DNL Snowflake] Streaming-Konto. |
+| `auth.params.schema` | (Optional) Das Datenbankschema, das Ihrer [!DNL Snowflake] Streaming-Konto. |
 | `auth.params.password` | Das Kennwort für Ihre [!DNL Snowflake] Streaming-Konto. |
-| `auth.params.role` | (Optional) Die Rolle des Benutzers für diese [!DNL Snowflake] Verbindung. Wenn dieser Wert nicht angegeben wird, wird standardmäßig `public`. |
+| `auth.params.role` | (Optional) Die Rolle des Benutzers für diese [!DNL Snowflake] Verbindung herzustellen. Wenn dieser Wert nicht angegeben wird, wird standardmäßig `public`. |
 | `connectionSpec.id` | Die [!DNL Snowflake]-Verbindungsspezifikations-ID: `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
 
 **Antwort**
@@ -185,7 +185,8 @@ curl -X POST \
       "params": {
           "tableName": "ACME",
           "timestampColumn": "dOb",
-          "backfill": "true"
+          "backfill": "true",
+          "timezoneValue": "PST"
       }
   }'
 ```
@@ -197,10 +198,11 @@ curl -X POST \
 | `params.tableName` | Der Name der Tabelle in [!DNL Snowflake] -Datenbank, die Sie in Platform importieren möchten. |
 | `params.timestampColumn` | Der Name der Zeitstempelspalte, die zum Abrufen inkrementeller Werte verwendet wird. |
 | `params.backfill` | Eine boolesche Kennzeichnung, die bestimmt, ob Daten vom Anfang (0 Epochenzeit) oder von dem Zeitpunkt an abgerufen werden, zu dem die Quelle initiiert wird. Weitere Informationen zu diesem Wert finden Sie im Abschnitt [[!DNL Snowflake] Streaming-Quellübersicht](../../../../connectors/databases/snowflake-streaming.md). |
+| `params.timezoneValue` | Der Zeitzonenwert gibt an, welche Zeitzone zur aktuellen Zeit abgerufen werden soll, wenn die [!DNL Snowflake] Datenbank. Dieser Parameter sollte angegeben werden, wenn die Spalte mit dem Zeitstempel in der Konfiguration auf `TIMESTAMP_NTZ`. Wenn nicht angegeben, `timezoneValue` ist standardmäßig UTC. |
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden Ihre Quell-Verbindungs-ID und das zugehörige eTag zurückgegeben. Die Kennung der Quellverbindung wird in einem späteren Schritt zum Erstellen eines Datenflusses verwendet.
+Bei einer erfolgreichen Antwort werden Ihre Kennung der Quellverbindung und das zugehörige eTag zurückgegeben. Die Kennung der Quellverbindung wird in einem späteren Schritt zum Erstellen eines Datenflusses verwendet.
 
 ```json
 {

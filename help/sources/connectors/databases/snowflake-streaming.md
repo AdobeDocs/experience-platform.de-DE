@@ -1,12 +1,12 @@
 ---
 title: Snowflake Streaming Source Connector - Übersicht
-description: Erfahren Sie, wie Sie eine Quellverbindung und einen Datenfluss erstellen, um Streaming-Daten aus Ihrer Snowflake-Instanz in Adobe Experience Platform zu erfassen.
+description: Erfahren Sie, wie Sie eine Quellverbindung und einen Datenfluss erstellen, um Streaming-Daten von Ihrer Snowflake-Instanz in Adobe Experience Platform aufzunehmen
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 054175bd3f3aaab73c8cca249eaf1a9cdbc8deab
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '710'
 ht-degree: 12%
 
 ---
@@ -63,22 +63,23 @@ Sie müssen Berechtigungen für eine Rolle konfigurieren, auch wenn die standard
 >
 >Die automatische Wiederaufnahme und das automatische Aussetzen müssen in der Konfiguration der erweiterten Einstellungen Ihres Warehouse aktiviert sein.
 
-Weiterführende Informationen zur Rollen- und Berechtigungsverwaltung finden Sie im Abschnitt [[!DNL Snowflake] API-Referenz](<https://docs.snowflake.com/en/sql-reference/sql/grant-privilege>).
+Weiterführende Informationen zur Verwaltung von Rollen und Berechtigungen finden Sie im Abschnitt [[!DNL Snowflake] API-Referenz](<https://docs.snowflake.com/en/sql-reference/sql/grant-privilege>).
 
 ## Einschränkungen und häufig gestellte Fragen {#limitations-and-frequently-asked-questions}
 
 * Der Datendurchsatz für die [!DNL Snowflake] -Quelle enthält 2000 Datensätze pro Sekunde.
 * Die Preise variieren je nach der aktiven Lagerzeit und der Lagergröße. Für [!DNL Snowflake] Quell-Integration, die kleinste Größe, x-kleine Warehouse ist ausreichend. Es wird empfohlen, das automatische Aussetzen zu aktivieren, damit das Warehouse selbst ausgesetzt werden kann, wenn es nicht in Verwendung ist.
-* Die [!DNL Snowflake] -Quelle fragt die Datenbank alle 10 Sekunden nach neuen Daten ab.
+* Die [!DNL Snowflake] -Quelle fragt die Datenbank alle zehn Sekunden nach neuen Daten ab.
 * Konfigurationsoptionen:
    * Sie können eine `backfill` boolesches Flag für Ihre [!DNL Snowflake] Quelle beim Erstellen einer Quellverbindung.
       * Wenn die Aufstockung auf &quot;true&quot;festgelegt ist, wird der Wert für timestamp.initial auf 0 gesetzt. Das bedeutet, dass Daten mit einer Zeitstempelspalte abgerufen werden, die größer als 0 Epochenzeit ist.
       * Wenn die Aufstockung auf &quot;false&quot;festgelegt ist, wird der Wert für timestamp.initial auf -1 gesetzt. Das bedeutet, dass Daten mit einer Zeitstempelspalte abgerufen werden, die größer ist als die aktuelle Zeit (der Zeitpunkt, zu dem die Quelle beginnt zu erfassen).
-   * Die Spalte mit dem Zeitstempel sollte wie folgt formatiert sein: `TIMESTAMP_LTZ` oder `TIMESTAMP_NTZ`. Wenn die Spalte mit dem Zeitstempel auf `TIMESTAMP_NTZ`, dann sollten die Typen in UTC-Zeit in der Datenbank gespeichert werden.
+   * Die Spalte mit dem Zeitstempel sollte wie folgt formatiert sein: `TIMESTAMP_LTZ` oder `TIMESTAMP_NTZ`. Wenn die Spalte mit dem Zeitstempel auf `TIMESTAMP_NTZ`, sollte die entsprechende Zeitzone, in der die Werte gespeichert werden, über die `timezoneValue` -Parameter. Wenn nicht angegeben, wird für den Wert standardmäßig UTC verwendet.
+      * `TIMESTAMP_TZ` kann nicht in einer Zeitstempelspalte oder einer Zuordnung verwendet werden.
 
 ## Nächste Schritte
 
 Im folgenden Tutorial erfahren Sie, wie Sie Ihre [!DNL Snowflake] Streaming-Quelle an Experience Platform mithilfe der API:
 
-* [Streamen von Daten aus einem [!DNL Snowflake] Datenbank zur Experience Platform mithilfe der Flow Service-API](../../tutorials/api/create/databases/snowflake-streaming.md)
+* [Streamen von Daten aus einem [!DNL Snowflake] Datenbank zum Experience Platform mithilfe der Flow Service-API](../../tutorials/api/create/databases/snowflake-streaming.md)
 
