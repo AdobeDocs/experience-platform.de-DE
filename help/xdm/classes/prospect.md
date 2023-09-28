@@ -1,7 +1,7 @@
 ---
 title: XDM Individual Prospect Profile Class
 description: Dieses Dokument bietet einen Überblick über die Klasse "XDM Individual Prospect Profile"im Experience-Datenmodell (XDM).
-source-git-commit: 437bd602462330a96f356b83d7afe922b5315d9f
+source-git-commit: 7562da0f07a2109a2030653927d8d2639685e442
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 14%
@@ -22,7 +22,7 @@ Im Experience-Datenmodell (XDM) wird die [!UICONTROL XDM Individual Prospect Pro
 | `_id` | [!UICONTROL String] | Eine eindeutige, systemgenerierte Zeichenfolgenkennung für den Datensatz. Dieses Feld wird verwendet, um die Eindeutigkeit eines einzelnen Datensatzes zu verfolgen, Datenduplizierung zu verhindern und diesen Datensatz in nachgelagerten Diensten nachzuschlagen.<br><br>Da dieses Feld systemgeneriert wird, liefert es während der Datenerfassung keinen expliziten Wert. Sie können jedoch bei Bedarf Ihre eigenen eindeutigen ID-Werte angeben. |
 | `createdByBatchID` | [!UICONTROL String] | Die ID des erfassten Batches, der zur Erstellung des Datensatzes geführt hat. |
 | `modifiedByBatchID` | [!UICONTROL String] | Die ID des letzten erfassten Batches, der zur Aktualisierung des Datensatzes geführt hat. |
-| `partnerID` | [!UICONTROL String] | Normalerweise eine eindeutige pseudonyme Kennung, die einen einzelnen Interessenten identifiziert. Siehe die Dokumentation unter [Identitätstypen](../../identity-service/namespaces.md#identity-types) , um mehr über die Partner-ID und die anderen Identitätstypen zu erfahren, die in Adobe Experience Platform verfügbar sind. |
+| `partnerID` | [!UICONTROL String] | Normalerweise eine eindeutige pseudonyme Kennung, die einen einzelnen Interessenten identifiziert. Siehe die Dokumentation unter [Identitätstypen](../../identity-service/namespaces.md#identity-type) , um mehr über die Partner-ID und die anderen Identitätstypen zu erfahren, die in Adobe Experience Platform verfügbar sind. |
 | `repositoryCreatedBy` | [!UICONTROL String] | Die ID des Benutzers, der den Datensatz erstellt hat. |
 | `repositoryLastModifiedBy` | [!UICONTROL String] | Die ID des Benutzers, der den Datensatz zuletzt geändert hat. Wenn der Datensatz erstellt wird, wird die `modifiedByUser` -Wert festgelegt ist, wird als `createdByUser` -Wert. |
 

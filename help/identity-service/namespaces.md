@@ -1,45 +1,59 @@
 ---
 title: Identity Namespace - Überblick
-description: Identity-Namespaces sind Komponenten des Identity Service, die als Indikatoren für den Kontext dienen, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert "name@email.com"als E-Mail-Adresse oder "443522"als numerische CRM-ID.
+description: Erfahren Sie mehr über Identitäts-Namespaces im Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: ac53678ca9ef51cb638590138a16a3506c6a1fc0
+source-git-commit: 36a42a7c3722828776495359762289d0028b6ddc
 workflow-type: tm+mt
-source-wordcount: '1764'
-ht-degree: 31%
+source-wordcount: '1699'
+ht-degree: 24%
 
 ---
 
 # Übersicht über Identitäts-Namespaces
 
-Identitäts-Namespaces sind eine Komponente des [[!DNL Identity Service]](./home.md), die als Indikatoren für den Kontext dient, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert von „name<span>@email.com“ als E-Mail-Adresse oder „443522“ als numerische CRM-ID.
+Im folgenden Dokument erfahren Sie mehr über die Möglichkeiten von Identitäts-Namespaces im Adobe Experience Platform Identity Service.
 
 ## Erste Schritte
 
-Das Verwenden von Identitäts-Namespaces setzt ein Verständnis der verschiedenen beteiligten Adobe Experience Platform-Dienste voraus. Bevor Sie Namespaces nutzen, lesen Sie bitte die Dokumentation für folgende Dienste:
+Identitäts-Namespaces erfordern ein Verständnis verschiedener Adobe Experience Platform-Dienste. Bevor Sie Namespaces nutzen, lesen Sie bitte die Dokumentation für folgende Dienste:
 
-- [[!DNL Real-Time Customer Profile]](../profile/home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
-- [[!DNL Identity Service]](./home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kundinnen und Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
-- [[!DNL Privacy Service]](../privacy-service/home.md): Identitäts-Namespaces werden in Compliance-Anfragen für gesetzliche Datenschutzbestimmungen wie die Datenschutz-Grundverordnung (DSGVO) verwendet. Jede Datenschutzanfrage wird in Bezug auf einen Namespace gestellt, um zu ermitteln, welche Verbraucherdaten betroffen sein sollen.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [[!DNL Identity Service]](./home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kundinnen und Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
+* [[!DNL Privacy Service]](../privacy-service/home.md): Identitäts-Namespaces werden in Compliance-Anfragen für gesetzliche Datenschutzbestimmungen wie die Datenschutz-Grundverordnung (DSGVO) verwendet. Jede Datenschutzanfrage wird in Bezug auf einen Namespace gestellt, um zu ermitteln, welche Verbraucherdaten betroffen sein sollen.
 
 ## Identitäts-Namespaces verstehen
 
-Eine vollqualifizierte Identität umfasst einen ID-Wert und einen Namespace. Beim Abgleich von Datensatzdaten über Profilfragmente hinweg, wie zum Beispiel wenn [!DNL Real-Time Customer Profile] Führt Profildaten zusammen, sowohl der Identitätswert als auch der Namespace müssen übereinstimmen.
+Eine voll qualifizierte Identität umfasst zwei Komponenten: eine **Identitätswert** und **Identitäts-Namespace**. Wenn beispielsweise der Wert einer Identität `scott@acme.com`eingeben, stellt ein Namespace einen Kontext für diesen Wert bereit, indem er ihn als E-Mail-Adresse unterscheidet. Auf ähnliche Weise kann ein Namespace `555-123-456` als Telefonnummer und `3126ABC` als CRM-ID. Grundsätzlich gilt: **Ein Namespace stellt Kontext für eine bestimmte Identität bereit**. Beim Abgleich von Datensatzdaten über Profilfragmente hinweg, wie zum Beispiel wenn [!DNL Real-Time Customer Profile] Führt Profildaten zusammen, sowohl der Identitätswert als auch der Namespace müssen übereinstimmen.
 
-Zwei Profilfragmente können beispielsweise unterschiedliche primäre IDs enthalten, für den Namespace &quot;E-Mail&quot;jedoch denselben Wert verwenden. [!DNL Platform] kann sehen, dass diese Fragmente tatsächlich dieselbe Person sind und die Daten im Identitätsdiagramm für die Person zusammenführen.
+Zwei Profilfragmente können beispielsweise unterschiedliche primäre IDs enthalten, für den Namespace &quot;E-Mail&quot;jedoch denselben Wert verwenden. Daher kann Experience Platform sehen, dass diese Fragmente eigentlich dieselbe Person sind und die Daten im Identitätsdiagramm für die Person zusammenführen.
 
 ![](images/identity-service-stitching.png)
 
-### Identitätstypen {#identity-types}
+### Komponenten eines Namespace
+
+Ein Namespace besteht aus den folgenden Komponenten:
+
+* **Anzeigename**: Der benutzerfreundliche Name für einen bestimmten Namespace.
+* **Identitätssymbol**: Ein Code, der intern von Identity Service zur Darstellung eines Namespace verwendet wird.
+* **Identitätstyp**: Die Classification eines bestimmten Namespace.
+* **Beschreibung**: (Optional) Alle zusätzlichen Informationen, die Sie zu einem bestimmten Namespace bereitstellen können.
+
+### Identitätstyp {#identity-type}
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
 >title="Angeben des Identitätstyps"
->abstract="Der Identitätstyp bestimmt, ob Daten im Identitätsdiagramm gespeichert werden oder nicht. Nicht-Personen-IDs werden nicht gespeichert. Alle anderen Identitätstypen werden gespeichert."
+>abstract="Der Identitätstyp bestimmt, ob Daten im Identitätsdiagramm gespeichert werden oder nicht. Identitätsdiagramme werden nicht für die folgenden Identitätstypen generiert: Identifikatoren ohne Person und Partner-ID."
 >text="Learn more in documentation"
 
-Daten können anhand verschiedener Identitätstypen identifiziert werden. Der Identitätstyp wird zum Zeitpunkt der Erstellung des Identitäts-Namespace angegeben und steuert, ob die Daten im Identitätsdiagramm persistiert werden oder nicht. Außerdem gibt es spezielle Anweisungen zum Umgang mit diesen Daten. Alle Identitätstypen außer **Personenidentifizierung** Gehen Sie genauso vor wie beim Zuordnen eines Namespace und des zugehörigen ID-Werts zu einem Identitätsdiagramm-Cluster. Daten werden bei Verwendung von **Personenidentifizierung**.
+Ein Element eines Identitäts-Namespace ist die **Identitätstyp**. Der Identitätstyp bestimmt:
 
-Die folgenden Identitätstypen sind in [!DNL Platform]:
+* Ob ein Identitätsdiagramm generiert wird:
+   * Identitätsdiagramme werden nicht für die folgenden Identitätstypen generiert: Identifikatoren ohne Person und Partner-ID.
+   * Identitätsdiagramme werden für alle anderen Identitätstypen generiert.
+* Welche Identitäten werden aus dem Identitätsdiagramm entfernt, wenn Systembeschränkungen erreicht werden. Weitere Informationen finden Sie im Abschnitt [Limits für Identitätsdaten](guardrails.md).
+
+Die folgenden Identitätstypen sind innerhalb von Experience Platform verfügbar:
 
 | Identitätstyp | Beschreibung |
 | --- | --- |
@@ -88,43 +102,33 @@ Folgende Standard-Namespaces stehen allen Organisationen in Platform zur Verfüg
 
 Um Identitäts-Namespaces in der Benutzeroberfläche anzuzeigen, wählen Sie **[!UICONTROL Identitäten]** in der linken Navigation und wählen Sie dann **[!UICONTROL Durchsuchen]**.
 
-![Browsen](./images/browse.png)
+Es wird ein Verzeichnis der Namespaces in Ihrer Organisation angezeigt, in dem Informationen zu ihren Namen, Identitätssymbolen, zuletzt aktualisierten Daten, entsprechenden Identitätstypen und Beschreibungen angezeigt werden.
 
-Auf der Hautoberfläche der Seite wird eine Liste von Identitäts-Namespaces angezeigt, die Informationen zu ihren Namen, Identitätssymbolen, dem letzten aktualisierten Datum und dazu enthalten, ob es sich um einen Standard- oder einen benutzerdefinierten Namespace handelt. Die rechte Leiste enthält Informationen zu [!UICONTROL Stärke des Identity Graph].
+![Ein Verzeichnis von benutzerdefinierten Identitäts-Namespaces in Ihrem Unternehmen.](./images/namespace/browse.png)
 
-![identities](./images/identities.png)
-
-Platform bietet auch Namespaces für Integrationszwecke. Diese Namespaces sind standardmäßig ausgeblendet, da sie zur Verbindung mit anderen Systemen verwendet werden und nicht zum Zuordnen von Identitäten verwendet werden. Um Integrations-Namespaces anzuzeigen, wählen Sie **[!UICONTROL Integrationsidentitäten anzeigen]**.
-
-![view-integration-identities](./images/view-integration-identities.png)
-
-Wählen Sie einen Identitäts-Namespace aus der Liste aus, um Informationen zu einem bestimmten Namespace anzuzeigen. Bei Auswahl eines Identitäts-Namespace wird die Anzeige in der rechten Leiste aktualisiert, um Metadaten zum ausgewählten Identitäts-Namespace anzuzeigen, einschließlich der Anzahl der aufgenommenen Identitäten und der Anzahl fehlgeschlagener und übersprungener Datensätze.
-
-![select-namespace](./images/select-namespace.png)
-
-## Verwalten benutzerdefinierter Namespaces {#manage-namespaces}
+## Benutzerdefinierte Namespaces erstellen {#create-namespaces}
 
 Je nach den Daten und Anwendungsfällen in Ihrer Organisation benötigen Sie möglicherweise benutzerdefinierte Namespaces. Benutzerdefinierte Namespaces können mit der [[!DNL Identity Service]](./api/create-custom-namespace.md) API oder über die Benutzeroberfläche.
 
-Um mithilfe der Benutzeroberfläche einen benutzerdefinierten Namespace zu erstellen, navigieren Sie zum **[!UICONTROL Identitäten]** Arbeitsbereich auswählen **[!UICONTROL Durchsuchen]** und wählen Sie **[!UICONTROL Identitäts-Namespace erstellen]**.
+Um einen benutzerdefinierten Namespace zu erstellen, wählen Sie **[!UICONTROL Identitäts-Namespace erstellen]**.
 
-![select-create](./images/select-create.png)
+![Die Schaltfläche Identitäts-Namespace erstellen im Identitäts-Arbeitsbereich.](./images/namespace/create-identity-namespace.png)
 
-Die **[!UICONTROL Identitäts-Namespace erstellen]** angezeigt. Bereitstellen einer eindeutigen **[!UICONTROL Anzeigename]** und **[!UICONTROL Identitätssymbol]** und wählen Sie dann den Identitätstyp aus, den Sie erstellen möchten. Sie können auch eine optionale Beschreibung hinzufügen, um weitere Informationen zum Namespace hinzuzufügen. Alle Identitätstypen außer **Personenidentifizierung** folgt dem gleichen Verhalten wie beim Stitching. Wenn Sie **Personenidentifizierung** als Identitätstyp bei der Erstellung eines Namespace festgelegt ist, erfolgt keine Zuordnung. Spezifische Informationen zu den einzelnen Identitätstypen finden Sie in der Tabelle unter [Identitätstypen](#identity-types).
+Die [!UICONTROL Identitäts-Namespace erstellen] angezeigt. Zunächst müssen Sie einen Anzeigenamen und ein Identitätssymbol für den benutzerdefinierten Namespace angeben, den Sie erstellen möchten. Sie können optional auch eine Beschreibung angeben, um dem benutzerdefinierten Namespace, den Sie erstellen, mehr Kontext hinzuzufügen.
 
-Klicken Sie abschließend auf **[!UICONTROL Erstellen]**.
+![Ein Popup-Fenster, in das Sie Informationen zu Ihrem benutzerdefinierten Identitäts-Namespace eingeben können.](./images/namespace/name-and-symbol.png)
+
+Wählen Sie anschließend den Identitätstyp aus, den Sie dem benutzerdefinierten Namespace zuweisen möchten. Klicken Sie abschließend auf **[!UICONTROL Erstellen]**.
+
+![Eine Auswahl von Identitätstypen, aus denen Sie auswählen und die Sie Ihrem benutzerdefinierten Identitäts-Namespace zuweisen können.](./images/namespace/select-identity-type.png)
 
 >[!IMPORTANT]
 >
->Die von Ihnen definierten Namespaces sind für Ihre Organisation privat und erfordern ein eindeutiges Identitätssymbol, damit sie erfolgreich erstellt werden können.
-
-![create-identity-namespace](./images/create-identity-namespace.png)
-
-Ähnlich wie bei Standard-Namespaces können Sie einen benutzerdefinierten Namespace aus dem **[!UICONTROL Durchsuchen]** um die Details anzuzeigen. Mit einem benutzerdefinierten Namespace können Sie jedoch auch dessen Anzeigenamen und Beschreibung im Detailbereich bearbeiten.
-
->[!NOTE]
+>* Die von Ihnen definierten Namespaces sind für Ihre Organisation privat und erfordern ein eindeutiges Identitätssymbol, damit sie erfolgreich erstellt werden können.
 >
->Nachdem ein Namespace erstellt wurde, kann er nicht mehr gelöscht werden und sein Identitätssymbol und Typ können nicht mehr geändert werden.
+>* Nachdem ein Namespace erstellt wurde, kann er nicht mehr gelöscht werden und sein Identitätssymbol und Typ können nicht mehr geändert werden.
+>
+>* Doppelte Namespaces werden nicht unterstützt. Sie können beim Erstellen eines neuen Namespace keinen vorhandenen Anzeigenamen und kein Identitätssymbol verwenden.
 
 ## Namespaces in Identitätsdaten
 
