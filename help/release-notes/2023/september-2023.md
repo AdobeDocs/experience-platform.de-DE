@@ -1,13 +1,102 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise September 2023 zu Adobe Experience Platform.
-source-git-commit: 0a379072326f24a221cfd82cc4af3ea75f45fb0a
+source-git-commit: 1bfd5e05642e0ac8f80af5502878eaee0b33c704
 workflow-type: tm+mt
-source-wordcount: '21'
-ht-degree: 100%
+source-wordcount: '907'
+ht-degree: 33%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
 
 **Veröffentlichungsdatum: 28. September 2023**
+
+Neue Funktionen in Adobe Experience Platform:
+
+- [Berechnete Attribute](#computed-attributes)
+
+Aktualisierungen vorhandener Funktionen in Experience Platform:
+
+- [Warnhinweise](#alerts)
+- [Datenerfassung](#data-collection)
+- [Identity Service](#identity-service)
+- [Segmentierungs-Service](#segmentation)
+- [Quellen](#sources)
+
+## Berechnete Attribute {#computed-attributes}
+
+Berechnete Attribute ermöglichen eine einfache Zusammenfassung von Ereignisdaten in Profilattributen über eine intuitive Benutzeroberfläche für eine verbesserte verhaltensbasierte Segmentierung, Personalisierung und Aktivierung. Mit dieser Funktion können Sie berechnete Attribute selbstständig erstellen, verwalten und in Segmentierung, Real-Time CDP-Zielen oder Adobe Journey Optimizer verwenden. Darüber hinaus vereinfachen berechnete Attribute die Segmentierung und Journey-Workflows, damit Sie relevante Erlebnisse nahtlos bereitstellen können. Weitere Informationen zu berechneten Attributen finden Sie in der [Übersicht über berechnete Attribute](../../profile/computed-attributes/overview.md).
+
+## Warnhinweise {#alerts}
+
+Mit Experience Platform können Sie ereignisbasierte Warnhinweise zu Adobe Experience Platform-Aktivitäten abonnieren. Sie können unterschiedliche Warnhinweisregeln über die Registerkarte [!UICONTROL Warnhinweise] in der Platform-Benutzeroberfläche abonnieren. Zusätzlich können Sie auswählen, ob Warnhinweise in der Benutzeroberfläche oder über E-Mail-Benachrichtigungen angezeigt werden sollen.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Tab Verlauf der Warnhinweise | Die Warnhinweise [!UICONTROL Geschichte] enthält nun alle Ereignisse, einschließlich Verzögerungen, Starts, Erfolgen und Fehlern. Lesen Sie die [Dokumentation zur Warn-Benutzeroberfläche](../../observability/alerts/ui.md) für weitere Informationen zum Tab Verlauf. |
+
+{style="table-layout:auto"}
+
+Weitere Informationen zu Warnungen finden Sie im Abschnitt [[!DNL Observability Insights] Übersicht](../../observability/home.md).
+
+## Datenerfassung {#data-collection}
+
+Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kundenerlebnisdaten erfassen und an das Adobe Experience Platform Edge Network senden können, wo sie angereichert und transformiert und an Adobe- oder Drittanbieter-Ziele weitergegeben werden können.
+
+**Neue oder aktualisierte Funktionen**
+
+| Typ | Funktion | Beschreibung |
+| --- | --- | --- |
+| Datenströme | Unterstützung der Gerätesuche | Beim Konfigurieren eines Datastreams können Sie jetzt die Ebene der zu erfassenden Gerätesuchinformationen auswählen. Informationen zur Gerätesuche umfassen Daten zum Gerät, zur Hardware, zum Betriebssystem und zum Browser, die für die Interaktion mit Ihrer Seite verwendet werden. <br>  Informationen zur Gerätesuche können nicht zusammen mit Benutzeragent und Client-Hinweisen erfasst werden. Wenn Sie auswählen, Geräteinformationen zu erfassen, wird die Erfassung von Benutzeragenten- und Client-Hinweisen deaktiviert und umgekehrt. Alle Gerätesucherinformationen werden im `xdm:device` Feldergruppe. Weitere Informationen finden Sie in der Dokumentation unter [Konfigurieren von Datenspeichern](../../datastreams/configure.md#geolocation-device-lookup). |
+| Erweiterungen | [!DNL TikTok] Web Events API-Erweiterung | Die [[!DNL TikTok] Web Events API](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) -Erweiterung ermöglicht es Ihnen, die im Adobe Experience Platform Edge Network erfassten Daten zu nutzen und an [!DNL TikTok] in Form von serverseitigen Ereignissen, bei denen die [!DNL TikTok] Web Events-API. |
+
+{style="table-layout:auto"}
+
+Weitere Informationen zur Datenerfassung finden Sie im Abschnitt [Datenerfassung - Übersicht](../../tags/home.md).
+
+## Identity Service {#identity-service}
+
+Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihre Kundinnen und Kunden und deren Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle und persönliche digitale Erlebnisse sorgen.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Verbesserungen der Benutzeroberfläche von Identity Service | Verwenden Sie das verbesserte Tool zur Erstellung benutzerdefinierter Namespaces in der Experience Platform-Benutzeroberfläche, um Ihre benutzerdefinierten Namespaces und die zugehörigen Identitätstypen besser zu verwalten. Die erweiterte Identity Service-Benutzeroberfläche bietet Ihnen Folgendes: <ul><li>Kontextuelles Erlebnis: Visuelle Hinweise, Klarheit und Kontext zu dem, was ein Identitäts-Namespace ist und zu Identitätstypen gehören.</li><li>Genauigkeit: Besserer Umgang mit Fehlern, ohne doppelte Identitätsnamen.</li><li>Entdeckung: Zugriff auf die Dokumentation über ein in das Produkt integriertes Dialogfeld.</li></ul> Weitere Informationen finden Sie im Handbuch unter [Erstellen benutzerdefinierter Namespaces](../../identity-service/namespaces.md#create-namespaces). |
+| Änderungen an den Identitätsdiagrammbeschränkungen | Die Grenze für Identitätsdiagramme wurde von 150 Identitäten zu 50 Identitäten geändert. Wenn eine neue Identität in ein vollständiges Diagramm aufgenommen wird, wird die älteste Identität, die auf dem Erfassungszeitstempel und Identitätstyp basiert, gelöscht. Cookie-Identitätstypen werden zum Löschen priorisiert. Wenden Sie sich an Ihr Adobe Account-Team, um eine Änderung des Identitätstyps anzufordern, wenn Ihre Produktions-Sandbox Folgendes enthält: <ul><li>einen benutzerdefinierten Namespace, bei dem die Personen-IDs (z. B. CRM-IDs) als Cookie-/Geräte-Identitätstyp konfiguriert sind.</li><li>einen benutzerdefinierten Namespace, bei dem Cookie-/Geräte-IDs als geräteübergreifender Identitätstyp konfiguriert sind.</li></ul> Adobe Engineering verarbeitet diese Anfragen manuell. Weitere Informationen finden Sie im Abschnitt [Limits für Identity Service-Daten](../../identity-service/guardrails.md). |
+
+{style="table-layout:auto"}
+
+Weitere Informationen zu Identity Service finden Sie im Abschnitt [Identity Service - Übersicht](../../identity-service/home.md).
+
+## Segmentierungs-Service {#segmentation}
+
+[!DNL Segmentation Service] ermöglicht es Ihnen, in [!DNL Experience Platform] gespeicherte Daten, die sich auf Einzelpersonen (wie Kundinnen und Kunden, Interessierte, Benutzerinnen und Benutzer oder Organisationen) beziehen, in Zielgruppen zu segmentieren. Sie können Zielgruppen über Segmentdefinitionen oder andere Quellen aus Ihren [!DNL Real-Time Customer Profile]-Daten erstellen. Diese Zielgruppen werden zentral auf [!DNL Platform] konfiguriert und verwaltet und stehen jeder Adobe-Lösung zur Verfügung.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Anpassbare Spalten | Sie können jetzt das Layout von Audience Portal mit neu skalierbaren Spalten anpassen. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Handbuch zur Segmentierungsbenutzeroberfläche](../../segmentation/ui/overview.md#customize). |
+| Aufschlüsselung der Aktualisierungsfrequenz | Sie können jetzt eine Aufschlüsselung der Aktualisierungshäufigkeit der Zielgruppen in Ihrer Organisation anzeigen. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Handbuch zur Segmentierungsbenutzeroberfläche](../../segmentation/ui/overview.md#browse). |
+
+Weitere Informationen zu Quellen finden Sie unter [Quellen - Übersicht](../../sources/home.md).
+
+Weitere Informationen zum Segmentierungsdienst finden Sie in der [Übersicht über den Segmentierungsdienst](../../segmentation/home.md).
+
+## Quellen {#sources}
+
+Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Neue Parameter für `offset` Paginierung in Self-Serve-Quellen (Batch-SDK) | Sie können jetzt eine `endConditionName` und `endConditionValue` für Ihre Quelle verwenden `offset` Paginierung. Mit diesen Parametern können Sie die Bedingung angeben, die die Paginierungsschleife in der nächsten HTTP-Anforderung beendet. Weitere Informationen finden Sie im Abschnitt [Paginierungshandbuch für Self-Serve-Quellen (Batch SDK)](../../sources/sources-sdk/config/sourcespec.md#pagination). |
+
+{style="table-layout:auto"}
+
+Weitere Informationen zu Quellen finden Sie unter [Quellen - Übersicht](../../sources/home.md).
