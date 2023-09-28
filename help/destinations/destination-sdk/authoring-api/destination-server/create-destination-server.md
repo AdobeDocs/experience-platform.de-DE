@@ -1,10 +1,10 @@
 ---
 description: Auf dieser Seite wird der API-Aufruf zum Erstellen eines Ziel-Servers über Adobe Experience Platform Destination SDK erläutert.
 title: Erstellen einer Ziel-Server-Konfiguration
-source-git-commit: 03ec0e919304c9d46ef88d606eed9e12d1824856
+source-git-commit: cadffd60093eef9fb2dcf4562b1fd7611e61da94
 workflow-type: tm+mt
-source-wordcount: '1696'
-ht-degree: 100%
+source-wordcount: '2039'
+ht-degree: 89%
 
 ---
 
@@ -844,6 +844,103 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrer neu erst
 
 +++
 
+
+>[!ENDTABS]
+
+
+### Dynamische Dropdown-Zielserver erstellen {#dynamic-dropdown-servers}
+
+Verwendung [dynamische Dropdown-Listen](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) , um Dropdown-Kundendatenfelder dynamisch abzurufen und auszufüllen, basierend auf Ihrer eigenen API. Beispielsweise können Sie eine Liste vorhandener Benutzerkonten abrufen, die Sie für eine Zielverbindung verwenden möchten.
+
+Sie müssen einen Zielserver für dynamische Dropdown-Listen konfigurieren, bevor Sie das Feld für dynamische Dropdown-Kundendaten konfigurieren können.
+
+Auf der Registerkarte unten finden Sie ein Beispiel für einen Zielserver, der verwendet wird, um die Werte, die in einem Dropdown-Selektor angezeigt werden sollen, dynamisch über eine API abzurufen.
+
+Die nachstehende Beispiel-Payload enthält alle Parameter, die für einen dynamischen Schema-Server erforderlich sind.
+
+>[!BEGINTABS]
+
+>[!TAB Dynamischer Dropdown-Server]
+
+**Erstellen eines dynamischen Dropdown-Servers**
+
+Sie müssen einen dynamischen Dropdown-Server erstellen, der dem unten gezeigten ähnelt, wenn Sie ein Ziel konfigurieren, das die Werte für ein Dropdown-Feld für Kundendaten von Ihrem eigenen API-Endpunkt abruft.
+
++++Anfrage
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"Server for dynamic dropdown",
+   "destinationServerType":"URL_BASED",
+   "urlBasedDestination":{
+      "url":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"https://api.moviestar.com/data/{{customerData.users}}/items"
+      }
+   },
+   "httpTemplate":{
+      "httpMethod":"GET",
+      "headers":[
+         {
+            "header":"Authorization",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"My Bearer Token"
+            }
+         },
+         {
+            "header":"x-integration",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"{{customerData.integrationId}}"
+            }
+         },
+         {
+            "header":"Accept",
+            "value":{
+               "templatingStrategy":"NONE",
+               "value":"application/json"
+            }
+         }
+      ]
+   },
+   "responseFields":[
+      {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{% set list = [] %} {% for record in response.body %} {% set list = list|merge([{'name' : record.name, 'value' : record.id }]) %} {% endfor %}{{ {'list': list} | toJson | raw }}",
+         "name":"list"
+      }
+   ]
+}
+```
+
+| Parameter | Typ | Beschreibung |
+| -------- | ----------- | ----------- |
+| `name` | Zeichenfolge | *Erforderlich.* Stellt einen Anzeigenamen Ihres dynamischen Dropdown-Servers dar, der nur für Adobe sichtbar ist. |
+| `destinationServerType` | Zeichenfolge | *Erforderlich.* Legen Sie `URL_BASED` für dynamische Dropdown-Server. |
+| `urlBasedDestination.url.templatingStrategy` | Zeichenfolge | *Erforderlich.* <ul><li>Verwenden Sie `PEBBLE_V1`, wenn Adobe die URL im nachstehenden Feld `value` umwandeln muss. Verwenden Sie diese Option, wenn Sie folgenden Endpunkt haben: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Verwenden Sie `NONE`, wenn von Adobe keine Umwandlung erforderlich ist, z. B. wenn Sie folgenden Endpunkt haben: `https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.value` | Zeichenfolge | *Erforderlich.* Füllen Sie die Adresse des API-Endpunkts aus, mit dem sich Experience Platform verbinden und die Dropdown-Werte abrufen soll. |
+| `httpTemplate.httpMethod` | Zeichenfolge | *Erforderlich.* Die Methode, die Adobe bei Aufrufen an Ihren Server verwendet. Verwenden Sie für dynamische Dropdown-Server `GET`. |
+| `httpTemplate.headers` | Objekt | *Optional.l* Schließen Sie alle Header ein, die zum Herstellen einer Verbindung mit dem dynamischen Dropdown-Server erforderlich sind. |
+| `responseFields.templatingStrategy` | Zeichenfolge | *Erforderlich.* Verwenden Sie `PEBBLE_V1`. |
+| `responseFields.value` | Zeichenfolge | *Erforderlich.* Diese Zeichenfolge ist die Umwandlungsvorlage mit Zeichenfolgenzeichen, die die von Ihrer API erhaltene Antwort in die Werte umwandelt, die in der Platform-Benutzeroberfläche angezeigt werden. <br> <ul><li> Informationen zum Schreiben der Vorlage finden Sie im Abschnitt [Verwenden von Vorlagen](../../functionality/destination-server/message-format.md#using-templating). </li><li> Weitere Informationen zu Escape-Zeichen finden Sie unter [RFC JSON-Standard, Abschnitt 7](https://tools.ietf.org/html/rfc8259#section-7). |
+
+{style="table-layout:auto"}
+
++++
+
++++Antwort
+
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrer neu erstellten Ziel-Server-Konfiguration zurück.
+
++++
 
 >[!ENDTABS]
 

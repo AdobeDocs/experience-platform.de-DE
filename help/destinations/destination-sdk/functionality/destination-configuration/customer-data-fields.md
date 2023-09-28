@@ -1,10 +1,10 @@
 ---
 description: Erfahren Sie, wie Sie Eingabefelder in der Experience Platform-Benutzeroberfläche erstellen, mit denen Ihre Benutzerinnen und Benutzer verschiedene Informationen angeben können, die für die Verbindung und den Export von Daten zu Ihrem Ziel relevant sind.
 title: Benutzerdefinierte Datenfelder
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
-workflow-type: ht
-source-wordcount: '1436'
-ht-degree: 100%
+source-git-commit: cadffd60093eef9fb2dcf4562b1fd7611e61da94
+workflow-type: tm+mt
+source-wordcount: '1580'
+ht-degree: 91%
 
 ---
 
@@ -252,6 +252,93 @@ Verwenden Sie dazu das `namedEnum`-Objekt wie unten gezeigt und konfigurieren Si
 ```
 
 ![Bildschirmaufzeichnung mit einem Beispiel für Dropdown-Selektoren, die mit der oben gezeigten Konfiguration erstellt wurden.](../../assets/functionality/destination-configuration/customer-data-fields-dropdown.gif)
+
+## Erstellen dynamischer Dropdown-Selektoren für Kundendatenfelder {#dynamic-dropdown-selectors}
+
+In Situationen, in denen Sie eine API dynamisch aufrufen und die Antwort verwenden möchten, um die Optionen in einem Dropdown-Menü dynamisch auszufüllen, können Sie einen dynamischen Dropdown-Selektor verwenden.
+
+Die dynamischen Dropdown-Selektoren sehen genauso aus wie die [reguläre Dropdown-Selektoren](#dropdown-selectors) in der Benutzeroberfläche. Der einzige Unterschied besteht darin, dass die Werte dynamisch von einer API abgerufen werden.
+
+Um einen dynamischen Dropdown-Selektor zu erstellen, müssen Sie zwei Komponenten konfigurieren:
+
+**Schritt 1.** [Erstellen eines Zielservers](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) mit `responseFields` -Vorlage für den dynamischen API-Aufruf, wie unten dargestellt.
+
+```json
+{
+   "name":"Server for dynamic dropdown",
+   "destinationServerType":"URL_BASED",
+   "urlBasedDestination":{
+      "url":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":" <--YOUR-API-ENDPOINT-PATH--> "
+      }
+   },
+   "httpTemplate":{
+      "httpMethod":"GET",
+      "headers":[
+         {
+            "header":"Authorization",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"My Bearer Token"
+            }
+         },
+         {
+            "header":"x-integration",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"{{customerData.integrationId}}"
+            }
+         },
+         {
+            "header":"Accept",
+            "value":{
+               "templatingStrategy":"NONE",
+               "value":"application/json"
+            }
+         }
+      ]
+   },
+   "responseFields":[
+      {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{% set list = [] %} {% for record in response.body %} {% set list = list|merge([{'name' : record.name, 'value' : record.id }]) %} {% endfor %}{{ {'list': list} | toJson | raw }}",
+         "name":"list"
+      }
+   ]
+}
+```
+
+**Schritt 2.** Verwenden Sie die `dynamicEnum` -Objekt, wie unten dargestellt. Im folgenden Beispiel wird die Variable `User` -Dropdown-Liste wird mit dem dynamischen Server abgerufen.
+
+
+```json {line-numbers="true" highlight="13-21"}
+"customerDataFields": [
+  {
+    "name": "integrationId",
+    "title": "Integration ID",
+    "type": "string",
+    "isRequired": true
+  },
+  {
+    "name": "userId",
+    "title": "User",
+    "type": "string",
+    "isRequired": true,
+    "dynamicEnum": {
+      "queryParams": [
+        "integrationId"
+      ],
+      "destinationServerId": "<~dynamic-field-server-id~>",
+      "authenticationRule": "CUSTOMER_AUTHENTICATION",
+      "value": "$.list",
+      "responseFormat": "NAME_VALUE"
+    }
+  }
+]
+```
+
+Legen Sie die `destinationServerId` -Parameter an die ID des Zielservers an, den Sie in Schritt 1 erstellt haben. Sie können die Ziel-Server-ID in der Antwort der [Zielserverkonfiguration abrufen](../../authoring-api/destination-server/retrieve-destination-server.md) API-Aufruf.
 
 ## Erstellen von bedingten Kundendatenfeldern {#conditional-options}
 
