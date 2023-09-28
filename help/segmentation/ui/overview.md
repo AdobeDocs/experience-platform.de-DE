@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Segmentierungs-Service
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche Zielgruppen und Segmentdefinitionen erstellen und verwalten.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 378b51b13547af994bd258a42d1068118d099eb4
-workflow-type: ht
-source-wordcount: '3610'
-ht-degree: 100%
+source-git-commit: 7eaf3383bb8dde0d5918eefba1ee69caddea0c0b
+workflow-type: tm+mt
+source-wordcount: '3781'
+ht-degree: 94%
 
 ---
 
@@ -62,37 +62,9 @@ Weitere Informationen finden Sie im [Handbuch zum Zielgruppen-Dashboard](../../d
 >title="Alle Zielgruppen zum Zeitplan hinzufügen"
 >abstract="Aktivieren Sie diese Option, um alle Zielgruppen einzubeziehen, die mit der Batch-Segmentierung in der täglich geplanten Aktualisierung ausgewertet wurden. Deaktivieren Sie sie, um alle Zielgruppen aus der geplanten Aktualisierung zu entfernen."
 
-Wählen Sie die Registerkarte **[!UICONTROL Durchsuchen]**, um eine Liste aller Zielgruppen für Ihre Organisation anzuzeigen.
+Wählen Sie die Registerkarte **[!UICONTROL Durchsuchen]**, um eine Liste aller Zielgruppen für Ihre Organisation anzuzeigen. Diese Ansicht listet Informationen zu den Zielgruppen auf, einschließlich Profilanzahl, Ursprung, Erstellungsdatum, Datum der letzten Änderung, Tags und Aufschlüsselung.
 
 ![Der Bildschirm zum Durchsuchen wird angezeigt. Eine Liste aller Zielgruppen, die zur Organisation gehören, wird angezeigt.](../images/ui/overview/audience-browse.png)
-
-Diese Ansicht listet Informationen zu den Zielgruppen auf, einschließlich Profilanzahl, Ursprung, Erstellungsdatum, Datum der letzten Änderung, Tags und Aufschlüsselung.
-
-Sie können dieser Anzeige zusätzliche Felder hinzufügen, indem Sie das ![Filterattribut-Symbol](../images/ui/overview/filter-attribute.png) auswählen. Diese zusätzlichen Felder umfassen: Lebenszyklusstatus, Aktualisierungshäufigkeit, Zuletzt aktualisiert von, Beschreibung, Erstellt von und Zugriffsbeschriftungen.
-
-| Feld | Beschreibung |
-| ----- | ----------- |
-| [!UICONTROL Name] | Der Name der Zielgruppe. |
-| [!UICONTROL Anzahl der Profile] | Die Gesamtzahl der Profile, die für die Zielgruppe qualifiziert sind. |
-| [!UICONTROL Herkunft] | Die Herkunft der Zielgruppe. Hier wird angegeben, woher die Zielgruppe stammt. Mögliche Werte sind: Segmentierungsdienst, Benutzerdefinierter Upload, Zielgruppenzusammensetzung und Audience Manager. |
-| [!UICONTROL Erstellt] | Datum und Uhrzeit der Erstellung der Zielgruppe in UTC. |
-| [!UICONTROL Zuletzt aktualisiert] | Datum und Uhrzeit der letzten Aktualisierung der Zielgruppe in UTC. |
-| [!UICONTROL Tags] | Die benutzerdefinierten Tags, die zur Zielgruppe gehören. Weitere Informationen zu diesen Tags finden Sie im [Abschnitt zu Tags](#tags). |
-| [!UICONTROL Aufschlüsselung] | Die Aufschlüsselung des Profilstatus für die Zielgruppe. Eine detailliertere Beschreibung dieser Aufschlüsselung des Profilstatus finden Sie unten. |
-| [!UICONTROL Lebenszyklus-Status] | Der Status der Zielgruppe. Mögliche Werte für dieses Feld sind `Draft`, `Published` und `Archived`. |
-| [!UICONTROL Aktualisierungshäufigkeit] | Ein Wert, der angibt, wie oft die Daten der Zielgruppe aktualisiert werden. Mögliche Werte für dieses Feld sind `On Demand` (Batch), `Scheduled` (Streaming) und `Continuous` (Edge). |
-| [!UICONTROL Zuletzt aktualisiert von] | Der Name der Person, die die Zielgruppe zuletzt aktualisiert hat. |
-| [!UICONTROL Beschreibung] | Die Beschreibung der Zielgruppe. |
-| [!UICONTROL Erstellt von] | Der Name der Person, die die Zielgruppe erstellt hat. |
-| [!UICONTROL Zugriffsbeschriftungen] | Die Zugriffsbeschriftungen für die Zielgruppe. Mit Zugriffsbeschriftungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Diese Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Weitere Informationen zu Zugriffsbeschriftungen finden Sie in der Dokumentation unter [Verwalten von Beschriftungen](../../access-control/abac/ui/labels.md). |
-
-Wenn die Aufschlüsselung ausgewählt ist, wird ein Balkendiagramm angezeigt, das den prozentualen Anteil der Profile in jedem der folgenden berechneten Profilstatus anzeigt: [!UICONTROL Realisiert], [!UICONTROL Bestehend] und [!UICONTROL Verlassen]. Außerdem ist die auf der Registerkarte [!UICONTROL Durchsuchen] angezeigte Aufschlüsselung die genaueste Aufschlüsselung des Status der Segmentdefinition. Wenn diese Zahl von den Angaben auf der Registerkarte [!UICONTROL Übersicht] abweicht, sollten Sie als korrekte Informationsquelle die Zahlen auf der Registerkarte [!UICONTROL Durchsuchen] verwenden, da die Zahlen auf der Registerkarte [!UICONTROL Übersicht] nur einmal pro Tag aktualisiert werden.
-
-| Status | Beschreibung |
-| ------ | ----------- |
-| [!UICONTROL Realisiert] | Die Anzahl der Profile, die sich in den letzten 24 Stunden seit Ausführung des letzten Batch-Segmentauftrags für das Segment **qualifiziert** haben. |
-| [!UICONTROL Bestehend] | Die Anzahl der Profile, die in den letzten 24 Stunden seit Ausführung des letzten Batch-Segmentauftrags im Segment **verblieben** sind. |
-| [!UICONTROL Verlassen] | Die Anzahl der Profile, die das Segment in den letzten 24 Stunden seit Ausführung des letzten Batch-Segmentauftrags **verlassen** haben. |
 
 Neben jeder Zielgruppe befindet sich ein Symbol mit Auslassungspunkten. Wenn Sie diese auswählen, wird eine Liste der verfügbaren Schnellaktionen für die Zielgruppe angezeigt. Diese Aktionsliste unterscheidet sich je nach Ursprung der Zielgruppe.
 
@@ -110,8 +82,13 @@ Neben jeder Zielgruppe befindet sich ein Symbol mit Auslassungspunkten. Wenn Sie
 | Anwenden von Zugriffsbeschriftungen  | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Ermöglicht die Verwaltung der Zugriffsbeschriftungen, die zur Zielgruppe gehören. Weitere Informationen zu Zugriffsbeschriftungen finden Sie in der Dokumentation zum [Verwalten von Beschriftungen](../../access-control/abac/ui/labels.md). |
 | Archivieren | Benutzerdefinierter Upload | Archiviert die ausgewählte Zielgruppe. |
 | Löschen | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Löscht die ausgewählte Zielgruppe. |
+| Zu Paket hinzufügen | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Hiermit können Sie die Zielgruppe zwischen Sandboxes verschieben. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Sandbox-Werkzeugleitfaden](../../sandboxes/ui/sandbox-tooling.md). |
 
-Oben auf der Seite befinden sich Optionen zum Hinzufügen aller Zielgruppen zu einem Zeitplan, zum Importieren einer Zielgruppe und zum Erstellen einer neuen Zielgruppe.
+>[!NOTE]
+>
+> Eine Zielgruppe, die in einer Zielaktivierung verwendet wird, können Sie **nicht** löschen.
+
+Oben auf der Seite finden Sie Optionen zum Hinzufügen aller Zielgruppen zu einem Zeitplan, zum Importieren einer Zielgruppe, zum Erstellen einer neuen Zielgruppe und zum Anzeigen einer Aufschlüsselung der Aktualisierungshäufigkeit.
 
 Durch Umschalten auf **[!UICONTROL Alle Zielgruppen planen]** wird die geplante Segmentierung aktiviert. Weitere Informationen zur geplanten Segmentierung finden Sie im [Abschnitt „Geplante Segmentierung“ in diesem Benutzerhandbuch](#scheduled-segmentation).
 
@@ -121,9 +98,45 @@ Durch Auswahl von **[!UICONTROL Zielgruppe erstellen]** können Sie eine Zielgru
 
 ![Die obere Navigationsleiste auf der Seite zum Durchsuchen von Zielgruppen ist hervorgehoben. Diese Leiste enthält eine Schaltfläche zum Erstellen einer Zielgruppe und eine Schaltfläche zum Importieren einer Zielgruppe.](../images/ui/overview/browse-audiences-top.png)
 
->[!NOTE]
->
-> Eine Zielgruppe, die in einer Zielaktivierung verwendet wird, können Sie **nicht** löschen.
+Sie können **[!UICONTROL Zusammenfassung der Aktualisierungshäufigkeit]** um ein Kreisdiagramm mit der Aktualisierungshäufigkeit anzuzeigen.
+
+![Die Schaltfläche Update frequency summary ist hervorgehoben.](../images/ui/overview/browse-audience-update-frequency-summary.png)
+
+Das Tortendiagramm wird mit einer Aufschlüsselung der Zielgruppen nach Aktualisierungshäufigkeit angezeigt. Das Diagramm zeigt die Gesamtzahl der Zielgruppen in der Mitte an. Wenn Sie den Mauszeiger über die verschiedenen Teile der Audience bewegen, wird die Anzahl der Zielgruppen angezeigt, die zu den verschiedenen Aktualisierungshäufigkeit gehören.
+
+![Das Diagramm zum Aktualisierungshäufigkeit wird angezeigt.](../images/ui/overview/update-frequency-chart.png)
+
+### Anpassen {#customize}
+
+Sie können zusätzliche Felder zum [!UICONTROL Durchsuchen] Seite durch Auswahl ![Filterattribut-Symbol](../images/ui/overview/filter-attribute.png). Diese zusätzlichen Felder umfassen: Lebenszyklusstatus, Aktualisierungshäufigkeit, Zuletzt aktualisiert von, Beschreibung, Erstellt von und Zugriffsbeschriftungen.
+
+| Feld | Beschreibung |
+| ----- | ----------- |
+| [!UICONTROL Name] | Der Name der Zielgruppe. |
+| [!UICONTROL Anzahl der Profile] | Die Gesamtzahl der Profile, die für die Zielgruppe qualifiziert sind. |
+| [!UICONTROL Herkunft] | Die Herkunft der Zielgruppe. Hier wird angegeben, woher die Zielgruppe stammt. Mögliche Werte sind: Segmentierungsdienst, Benutzerdefinierter Upload, Zielgruppenzusammensetzung und Audience Manager. |
+| [!UICONTROL Lebenszyklus-Status] | Der Status der Zielgruppe. Mögliche Werte für dieses Feld sind `Draft`, `Published` und `Archived`. |
+| [!UICONTROL Aktualisierungshäufigkeit] | Ein Wert, der angibt, wie oft die Daten der Zielgruppe aktualisiert werden. Mögliche Werte für dieses Feld sind [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge], und [!UICONTROL Nicht geplant]. |
+| [!UICONTROL Zuletzt aktualisiert von] | Der Name der Person, die die Zielgruppe zuletzt aktualisiert hat. |
+| [!UICONTROL Erstellt] | Datum und Uhrzeit der Erstellung der Zielgruppe in UTC. |
+| [!UICONTROL Zuletzt aktualisiert] | Datum und Uhrzeit der letzten Aktualisierung der Zielgruppe in UTC. |
+| [!UICONTROL Tags] | Die benutzerdefinierten Tags, die zur Zielgruppe gehören. Weitere Informationen zu diesen Tags finden Sie im [Abschnitt zu Tags](#tags). |
+| [!UICONTROL Beschreibung] | Die Beschreibung der Zielgruppe. |
+| [!UICONTROL Erstellt von] | Der Name der Person, die die Zielgruppe erstellt hat. |
+| [!UICONTROL Zugriffsbeschriftungen] | Die Zugriffsbeschriftungen für die Zielgruppe. Mit Zugriffsbeschriftungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Diese Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Weitere Informationen zu Zugriffsbeschriftungen finden Sie in der Dokumentation unter [Verwalten von Beschriftungen](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Aufschlüsselung] | Die Aufschlüsselung des Profilstatus für die Zielgruppe. Eine detailliertere Beschreibung dieser Aufschlüsselung des Profilstatus finden Sie unten. |
+
+Wenn die Aufschlüsselung ausgewählt ist, wird ein Balkendiagramm angezeigt, das den prozentualen Anteil der Profile in jedem der folgenden berechneten Profilstatus anzeigt: [!UICONTROL Realisiert], [!UICONTROL Bestehend] und [!UICONTROL Verlassen]. Außerdem ist die auf der Registerkarte [!UICONTROL Durchsuchen] angezeigte Aufschlüsselung die genaueste Aufschlüsselung des Status der Segmentdefinition. Wenn diese Zahl von den Angaben auf der Registerkarte [!UICONTROL Übersicht] abweicht, sollten Sie als korrekte Informationsquelle die Zahlen auf der Registerkarte [!UICONTROL Durchsuchen] verwenden, da die Zahlen auf der Registerkarte [!UICONTROL Übersicht] nur einmal pro Tag aktualisiert werden.
+
+| Status | Beschreibung |
+| ------ | ----------- |
+| [!UICONTROL Realisiert] | Die Anzahl der Profile, die sich in den letzten 24 Stunden seit Ausführung des letzten Batch-Segmentauftrags für das Segment **qualifiziert** haben. |
+| [!UICONTROL Bestehend] | Die Anzahl der Profile, die in den letzten 24 Stunden seit Ausführung des letzten Batch-Segmentauftrags im Segment **verblieben** sind. |
+| [!UICONTROL Verlassen] | Die Anzahl der Profile, die das Segment in den letzten 24 Stunden seit Ausführung des letzten Batch-Segmentauftrags **verlassen** haben. |
+
+Nachdem Sie die anzuzeigenden Felder ausgewählt haben, können Sie auch die Breite der angezeigten Spalten anpassen. Sie können dies entweder durch Ziehen des Bereichs zwischen den Spalten oder durch Auswahl der ![Pfeilsymbol](../images/ui/overview/arrow-icon.png) der Spalte, deren Größe Sie ändern möchten, gefolgt von **[!UICONTROL Größe der Spalte ändern]**.
+
+![Die Schaltfläche Spaltengröße ändern ist hervorgehoben.](../images/ui/overview/browse-audience-resize-column.png)
 
 ### Filterung, Ordner und Tagging {#manage-audiences}
 
