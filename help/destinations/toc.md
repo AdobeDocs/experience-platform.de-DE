@@ -4,9 +4,9 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: a81daa2a929505a934910892a4ad9c73e603ed9b
+source-git-commit: 6725e28238c7be76613c7455fadce078b17aa71b
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1168'
 ht-degree: 97%
 
 ---
@@ -125,6 +125,7 @@ ht-degree: 97%
       * [SFTP-Verbindung](./catalog/cloud-storage/sftp.md)
       * [IP-Adressen-Zulassungsliste für SFTP-Ziele](./catalog/cloud-storage/ip-address-allow-list.md)
    * CRM-Ziele (Customer Relationship Management) {#crm}
+      * [Verbindung zum Hubraum](./catalog/crm/hubspot.md)
       * [Salesforce-CRM-Verbindung](./catalog/crm/salesforce.md)
       * [Verbindung mit Microsoft Dynamics 365](./catalog/crm/microsoft-dynamics-365.md)
       * [Outreach-Verbindung](catalog/crm/outreach.md)
