@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Abfrage-Editors
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: e30942aec6c66aeed8375d6221b454725f5a958d
+source-git-commit: 88498a1382202bed057b8dc52d09359ba02748ea
 workflow-type: tm+mt
-source-wordcount: '1901'
-ht-degree: 68%
+source-wordcount: '2288'
+ht-degree: 56%
 
 ---
 
@@ -17,13 +17,23 @@ ht-degree: 68%
 
 Weitere Informationen zu den Konzepten und Funktionen von [!DNL Query Service] finden Sie in der [Query Service – Übersicht](../home.md). Weitere Informationen zum Navigieren in der Benutzeroberfläche von Query Service von [!DNL Platform] finden Sie in der [Übersicht über die Query Service-Benutzeroberfläche](./overview.md).
 
+>[!NOTE]
+>
+>Bestimmte Query Service-Funktionen werden in der älteren Version des Abfrage-Editors nicht bereitgestellt. Die in diesem Dokument verwendeten Screenshots werden mit der verbesserten Version des Abfrage-Editors erstellt, sofern nicht anders angegeben. Siehe Abschnitt im Abschnitt [verbesserter Abfrage-Editor](#enhanced-editor-toggle) für weitere Details.
+
 ## Erste Schritte {#getting-started}
 
 [!DNL Query Editor] bietet flexible Ausführung von Abfragen durch Verbinden mit [!DNL Query Service], und Abfragen werden nur ausgeführt, während diese Verbindung aktiv ist.
 
+## Zugreifen auf [!DNL Query Editor] {#accessing-query-editor}
+
+Wählen Sie in der Benutzeroberfläche von [!DNL Experience Platform] im linken Navigationsmenü **[!UICONTROL Abfragen]** aus, um den [!DNL Query Service]-Arbeitsbereich zu öffnen. Um als Nächstes Abfragen zu schreiben, wählen Sie **[!UICONTROL Abfrage erstellen]** oben rechts auf dem Bildschirm. Dieser Link ist auf allen Seiten des [!DNL Query Service]-Arbeitsbereichs verfügbar.
+
+![Die Registerkarte „Übersicht“ für den Abfragearbeitsbereich mit hervorgehobener Option „Abfrage erstellen“.](../images/ui/query-editor/create-query.png)
+
 ### Herstellen einer Verbindung mit [!DNL Query Service] {#connecting-to-query-service}
 
-[!DNL Query Editor] benötigt beim Öffnen einige Sekunden, um zu initialisieren und eine Verbindung mit [!DNL Query Service] herzustellen. Die Konsole gibt an, ob eine Verbindung besteht (siehe unten). Wenn Sie versuchen, eine Abfrage auszuführen, bevor der Editor eine Verbindung hergestellt hat, wird die Ausführung verzögert, bis die Verbindung hergestellt ist.
+Der Abfrage-Editor benötigt beim Öffnen einige Sekunden, um Query Service zu initialisieren und eine Verbindung herzustellen. Die Konsole gibt an, ob eine Verbindung besteht (siehe unten). Wenn Sie versuchen, eine Abfrage auszuführen, bevor der Editor eine Verbindung hergestellt hat, wird die Ausführung verzögert, bis die Verbindung hergestellt ist.
 
 ![Die Konsolenausgabe des Abfrage-Editors bei der ersten Verbindung.](../images/ui/query-editor/connect.png)
 
@@ -31,17 +41,13 @@ Weitere Informationen zu den Konzepten und Funktionen von [!DNL Query Service] f
 
 Von ausgeführten Abfragen [!DNL Query Editor] interaktiv ausführen, was bedeutet, dass die Abfrage abgebrochen wird, wenn Sie den Browser schließen oder wegnavigieren. Dasselbe gilt für Abfragen, die zum Generieren von Datensätzen aus Abfrageausgaben durchgeführt werden.
 
+Mit der erweiterten Bearbeitung des Abfrage-Editors können Sie mehr als eine Abfrage im Abfrage-Editor schreiben und alle Abfragen sequenziell ausführen. Siehe Abschnitt zu [Ausführen mehrerer sequenzieller Abfragen](#execute-multiple-sequential-queries) für weitere Informationen.
+
 ## Abfragenerstellung mit [!DNL Query Editor] {#query-authoring}
 
 Mit [!DNL Query Editor] können Sie Abfragen für Kundenerlebnisdaten schreiben, ausführen und speichern. Alle in [!DNL Query Editor] ausgeführten oder gespeicherten Abfragen stehen allen Benutzenden in Ihrem Unternehmen mit Zugriff auf [!DNL Query Service] zur Verfügung.
 
-### Zugreifen auf [!DNL Query Editor] {#accessing-query-editor}
-
-Wählen Sie in der Benutzeroberfläche von [!DNL Experience Platform] im linken Navigationsmenü **[!UICONTROL Abfragen]** aus, um den [!DNL Query Service]-Arbeitsbereich zu öffnen. Um als Nächstes Abfragen zu schreiben, wählen Sie **[!UICONTROL Abfrage erstellen]** oben rechts auf dem Bildschirm. Dieser Link ist auf allen Seiten des [!DNL Query Service]-Arbeitsbereichs verfügbar.
-
-![Die Registerkarte „Übersicht“ für den Abfragearbeitsbereich mit hervorgehobener Option „Abfrage erstellen“.](../images/ui/query-editor/create-query.png)
-
-### Erweiterter Abfrage-Editor-Umschalter {#enhanced-editor-toggle}
+## Erweiterter Umschalter des Abfrage-Editors {#enhanced-editor-toggle}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_enhancedEditorToggle"
@@ -62,7 +68,30 @@ Um dunkle oder helle Themen zu aktivieren, wählen Sie das Einstellungssymbol (!
 
 ![Die Optionen Abfrage-Editor mit dem Einstellungssymbol und Dropdown-Menü Dunkles Design aktivieren wurden hervorgehoben.](../images/ui/query-editor/query-editor-settings.png)
 
-### Schreiben von Abfragen {#writing-queries}
+### Mehrere sequenzielle Abfragen ausführen {#execute-multiple-sequential-queries}
+
+Mit der erweiterten Bearbeitung des Abfrage-Editors können Sie mehr als eine Abfrage im Abfrage-Editor schreiben und alle Abfragen sequenziell ausführen.
+
+Die Ausführung mehrerer Abfragen in einer Sequenz generiert jeweils einen Protokolleintrag. In der Konsole &quot;Abfrage-Editor&quot;werden jedoch nur die Ergebnisse der ersten Abfrage angezeigt. Überprüfen Sie das Abfrageprotokoll, ob Sie eine Fehlerbehebung durchführen oder die ausgeführten Abfragen bestätigen müssen. Siehe [Dokumentation zu Abfrageprotokollen](./query-logs.md) für weitere Informationen.
+
+>[!NOTE]
+> 
+>Wenn nach der ersten Abfrage im Abfrage-Editor eine CTAS-Abfrage ausgeführt wird, wird weiterhin eine Tabelle erstellt, jedoch keine Ausgabe in der Abfrage-Editor-Konsole.
+
+### Ausgewählte Abfrage ausführen {#execute-selected-query}
+
+Wenn Sie mehrere Abfragen geschrieben haben, aber nur eine Abfrage ausführen müssen, können Sie Ihre ausgewählte Abfrage markieren und die
+[!UICONTROL Ausgewählte Abfrage ausführen] Symbol. Dieses Symbol ist standardmäßig deaktiviert, es sei denn, Sie wählen eine Abfrage im Editor aus.
+
+![Der Abfrage-Editor mit dem [!UICONTROL Ausgewählte Abfrage ausführen] hervorgehoben.](../images/ui/query-editor/run-selected-query.png)
+
+### Ergebnisanzahl {#result-count}
+
+Der Abfrage-Editor verfügt über eine Ausgabe von maximal 50.000 Zeilen. In der Konsole &quot;Abfrage-Editor&quot;werden jedoch nur 50 Zeilen gleichzeitig angezeigt. Um die Anzahl der in der Konsole angezeigten Zeilen zu ändern, wählen Sie die **[!UICONTROL Ergebnisanzahl]** und wählen Sie entweder 50, 100, 150, 300 und 500 Werte aus.
+
+![Der Abfrage-Editor mit der Dropdown-Liste Ergebnisanzahl wurde hervorgehoben.](../images/ui/query-editor/result-count.png)
+
+## Schreiben von Abfragen {#writing-queries}
 
 Der [!UICONTROL Abfrage-Editor] ist so organisiert, dass das Schreiben von Abfragen so einfach wie möglich ist. Der folgende Screenshot zeigt, wie der Editor in der Benutzeroberfläche angezeigt wird, wobei das SQL-Eingabefeld und **Abspielen** hervorgehoben sind.
 
@@ -70,7 +99,7 @@ Der [!UICONTROL Abfrage-Editor] ist so organisiert, dass das Schreiben von Abfra
 
 Um Ihre Entwicklungszeit zu minimieren, sollten Sie Ihre Abfragen mit Begrenzungen für die zurückgegebenen Zeilen entwickeln. Beispiel: `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. Nachdem Sie überprüft haben, ob Ihre Abfrage die erwartete Ausgabe erzeugt, entfernen Sie die Begrenzungen und führen Sie die Abfrage mit `CREATE TABLE tablename AS SELECT` aus, um einen Datensatz mit der Ausgabe zu generieren.
 
-### Schreib-Tools in [!DNL Query Editor] {#writing-tools}
+## Schreib-Tools in [!DNL Query Editor] {#writing-tools}
 
 - **Automatische Syntaxhervorhebung**: Erleichtert das Lesen und Organisieren von SQL.
 
@@ -83,6 +112,18 @@ Um Ihre Entwicklungszeit zu minimieren, sollten Sie Ihre Abfragen mit Begrenzung
 - **Tabelle und Felder automatisch vervollständigen:** Beginnen Sie mit der Eingabe des Tabellennamens für den `SELECT`-Vorgang, navigieren Sie mit den Pfeiltasten zur gewünschten Tabelle und drücken Sie die **Eingabetaste**. Sobald eine Tabelle ausgewählt ist, erkennt die automatische Vervollständigung die Felder in dieser Tabelle.
 
 ![Die Eingabe im Abfrage-Editor mit einem Dropdown-Menü mit Tabellennamenvorschlägen.](../images/ui/query-editor/tables-auto.png)
+
+### Text formatieren {#format-text}
+
+Die [!UICONTROL Text formatieren] -Funktion ermöglicht eine bessere Lesbarkeit Ihrer Abfrage durch das Hinzufügen standardisierter Syntaxstile. Auswählen **[!UICONTROL Text formatieren]** , um den gesamten Text im Abfrage-Editor zu standardisieren.
+
+![Der Abfrage-Editor mit [!UICONTROL Text formatieren] und die SQL-Anweisungen hervorgehoben.](../images/ui/query-editor/format-text.png)
+
+### SQL kopieren {#copy-sql}
+
+Wählen Sie das Kopiersymbol aus, um SQL aus dem Abfrage-Editor in die Zwischenablage zu kopieren. Diese Kopierfunktion ist sowohl für Abfragevorlagen als auch für neu erstellte Abfragen im Abfrage-Editor verfügbar.
+
+![Der Arbeitsbereich Abfragen mit einer Beispielabfragevorlage mit hervorgehobenem Kopiersymbol.](../images/ui/query-editor/copy-sql.png)
 
 ### Umschalter für die Konfiguration der Benutzeroberfläche für die automatische Vervollständigung {#auto-complete}
 
@@ -180,7 +221,7 @@ Nach Abschluss einer Abfrage werden die Ergebnisse auf der Registerkarte **[!UIC
 
 ## Tutorial-Video zum Ausführen von Abfragen mit [!DNL Query Service] {#query-tutorial-video}
 
-Im folgenden Video erfahren Sie, wie Sie Abfragen in der Adobe Experience Platform-Benutzeroberfläche und in einem PSQL-Client ausführen. Das Video zeigt außerdem die Verwendung einzelner Eigenschaften in einem XDM-Objekt, von Adoben definierte Funktionen und die Verwendung von CREATE TABLE AS SELECT (CTAS)-Abfragen.
+Im folgenden Video erfahren Sie, wie Sie Abfragen in der Adobe Experience Platform-Benutzeroberfläche und in einem PSQL-Client ausführen. Das Video zeigt außerdem die Verwendung einzelner Eigenschaften in einem XDM-Objekt, Adobe-definierte Funktionen und die Verwendung von CREATE TABLE AS SELECT (CTAS)-Abfragen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
