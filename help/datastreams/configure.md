@@ -2,10 +2,10 @@
 title: Konfigurieren eines Datenstroms
 description: Erfahren Sie, wie Sie Ihre Client-seitige Web SDK-Integration mit anderen Adobe-Produkten und Drittanbieterzielen verbinden.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: 705b1645eb8ca69169350c57cd28d3a1061f4928
 workflow-type: tm+mt
-source-wordcount: '2276'
-ht-degree: 100%
+source-wordcount: '2629'
+ht-degree: 86%
 
 ---
 
@@ -38,9 +38,42 @@ Wenn Sie diesen Datenstrom zur Verwendung in Experience Platform konfigurieren u
 
 ![Basiskonfiguration für einen Datenstrom](assets/configure/configure.png)
 
-Wählen Sie **[!UICONTROL Erweiterte Optionen]** aus, um zusätzliche Steuerelemente zum Konfigurieren des Datenstroms anzuzeigen.
+### Geolocation und Netzwerksuche konfigurieren {#geolocation-network-lookup}
 
-![Erweiterte Konfigurationsoptionen](assets/configure/advanced-options.png) {#advanced-options}
+Mit den Einstellungen für Geolocation und Netzwerksuche können Sie die Granularität der geografischen Daten und Daten auf Netzwerkebene definieren, die Sie erfassen möchten.
+
+Erweitern Sie die **[!UICONTROL Geolocation und Netzwerksuche]** um die unten beschriebenen Einstellungen zu konfigurieren.
+
+![Screenshot der Platform-Benutzeroberfläche mit dem Konfigurationsbildschirm des Datastreams mit hervorgehobenen Geolocation- und Netzwerksucheinstellungen.](assets/configure/geolookup.png)
+
+| Einstellung | Beschreibung |
+| --- | --- |
+| [!UICONTROL Geo-Suche] | Aktiviert die Geolokalisierungssuche für die ausgewählten Optionen, basierend auf der IP-Adresse der Besucherin bzw. des Besuchers. Für die Geolokalisierungssuche müssen Sie die Feldergruppe [`placeContext`](../edge/data-collection/automatic-information.md#place-context) in Ihrer Web SDK-Konfiguration aufnehmen. <br> Verfügbare Optionen: <ul><li>Land</li><li>Postleitzahl</li><li>Bundesland/Provinz</li><li>DMA</li><li>Stadt</li><li>Breitengrad </li><li>Längengrad</li></ul>Die Auswahl von **[!UICONTROL Stadt]**, **[!UICONTROL Breitengrad]** oder **[!UICONTROL Längengrad]** liefert Koordinaten mit bis zu zwei Dezimalstellen, unabhängig davon, welche anderen Optionen ausgewählt wurden. Dies gilt als Granularität auf Stadtebene. <br> <br>Wenn Sie keine Option auswählen, werden alle Geolokalisierungssuchen deaktiviert. Geolokalisierung erfolgt vor [!UICONTROL IP-Verschleierung] und wird von der Einstellung [!UICONTROL IP-Verschleierung] nicht beeinflusst. |
+| [!UICONTROL Netzwerksuche] | Aktiviert die Netzwerksuche für die ausgewählten Optionen basierend auf der IP-Adresse der Besucherin bzw. des Besuchers. Für die Netzwerksuche müssen Sie die Feldergruppe [`Environment`](../edge/data-collection/automatic-information.md#environment) in Ihre Web SDK-Konfiguration aufnehmen. <br> Verfügbare Optionen: <ul><li>Netzbetreiber</li><li>Domain</li><li>ISP</li></ul>Verwenden Sie diese Optionen, um anderen Diensten weitere Informationen über das spezifische Netzwerk bereitzustellen, in dem die Anfragen ihren Ursprung haben. |
+
+### Konfigurieren der Gerätesuche {#geolocation-device-lookup}
+
+Die **[!UICONTROL Gerätesuche]** -Einstellungen können Sie die Granularitätsstufe der gerätespezifischen Informationen auswählen, die Sie erfassen möchten.
+
+Erweitern Sie die **[!UICONTROL Gerätesuche]** um die unten beschriebenen Einstellungen zu konfigurieren.
+
+![Screenshot der Platform-Benutzeroberfläche, der den Konfigurationsbildschirm des Datastreams mit hervorgehobenen Gerätesucheinstellungen anzeigt.](assets/configure/device-lookup.png)
+
+>[!IMPORTANT]
+>
+>Die in der folgenden Tabelle beschriebenen Einstellungen schließen sich gegenseitig aus. Sie können nicht sowohl Benutzeragenten- als auch Geräte-Lookup-Daten gleichzeitig auswählen.
+
+| Einstellung | Beschreibung |
+| --- | --- |
+| **[!UICONTROL Überschriften von Benutzeragenten und Client-Hinweisen beibehalten]** | Wählen Sie diese Option, um nur die in der Benutzeragenten-Zeichenfolge gespeicherten Informationen zu erfassen. Dies ist die Standardeinstellung. |
+| **[!UICONTROL Verwenden Sie die Gerätesuche, um die folgenden Informationen zu erfassen]** | Wählen Sie diese Option aus, wenn Sie eine oder mehrere der folgenden gerätespezifischen Informationen erfassen möchten: <ul><li>**[!UICONTROL Gerät]** Information:<ul><li>Gerätehersteller</li><li>Gerätemodell</li><li>Marketing-Name</li></ul></li><li>**[!UICONTROL Hardware]** Information: <ul><li>Gerätetyp</li><li>Anzeigehöhe</li><li>Anzeigebreite</li><li>Farbtiefe anzeigen</li></ul></li><li>**[!UICONTROL Browser]** Information: <ul><li>Browser-Anbieter</li><li>Browsername</li><li>Browserversion</li></ul></li><li>**[!UICONTROL Betriebssystem]** Information: <ul><li>Betriebssystemanbieter</li><li>Betriebssystemname</li><li>Betriebssystemversion</li></ul></li></ul> <br>  Informationen zur Gerätesuche können nicht zusammen mit Benutzeragent und Client-Hinweisen erfasst werden. Wenn Sie auswählen, Geräteinformationen zu erfassen, wird die Erfassung von Benutzeragenten- und Client-Hinweisen deaktiviert und umgekehrt. Alle Gerätesucherinformationen werden im `xdm:device` Feldergruppe. |
+| **[!UICONTROL Erfassen Sie keine Geräteinformationen.]** | Wählen Sie diese Option aus, wenn Sie keine Nachschlageinformationen erfassen möchten. Es werden keine Geräte-, Hardware-, Browser- oder Betriebssysteminformationen erfasst, einschließlich keine Kopfzeilen von Benutzeragenten oder Clienthinweisen. |
+
+### Erweiterte Optionen konfigurieren {#@advanced-options}
+
+Auswählen **[!UICONTROL Erweiterte Optionen]** , um zusätzliche Steuerelemente zum Konfigurieren des Datastreams anzuzeigen, z. B. IP-Verschleierung, Erstanbieter-ID-Cookies und mehr.
+
+![Erweiterte Konfigurationsoptionen](assets/configure/advanced-settings.png)
 
 >[!IMPORTANT]
 >
@@ -50,14 +83,13 @@ Wählen Sie **[!UICONTROL Erweiterte Optionen]** aus, um zusätzliche Steuerelem
 
 | Einstellung | Beschreibung |
 | --- | --- |
-| [!UICONTROL Geo-Suche] | Aktiviert die Geolokalisierungssuche für die ausgewählten Optionen, basierend auf der IP-Adresse der Besucherin bzw. des Besuchers. Für die Geolokalisierungssuche müssen Sie die Feldergruppe [`placeContext`](../edge/data-collection/automatic-information.md#place-context) in Ihrer Web SDK-Konfiguration aufnehmen. <br> Verfügbare Optionen: <ul><li>Land</li><li>Postleitzahl</li><li>Bundesland/Provinz</li><li>DMA</li><li>Stadt</li><li>Breitengrad </li><li>Längengrad</li></ul>Die Auswahl von **[!UICONTROL Stadt]**, **[!UICONTROL Breitengrad]** oder **[!UICONTROL Längengrad]** liefert Koordinaten mit bis zu zwei Dezimalstellen, unabhängig davon, welche anderen Optionen ausgewählt wurden. Dies gilt als Granularität auf Stadtebene. <br> <br>Wenn Sie keine Option auswählen, werden alle Geolokalisierungssuchen deaktiviert. Geolokalisierung erfolgt vor [!UICONTROL IP-Verschleierung] und wird von der Einstellung [!UICONTROL IP-Verschleierung] nicht beeinflusst. |
-| [!UICONTROL Netzwerksuche] | Aktiviert die Netzwerksuche für die ausgewählten Optionen basierend auf der IP-Adresse der Besucherin bzw. des Besuchers. Für die Netzwerksuche müssen Sie die Feldergruppe [`Environment`](../edge/data-collection/automatic-information.md#environment) in Ihre Web SDK-Konfiguration aufnehmen. <br> Verfügbare Optionen: <ul><li>Netzbetreiber</li><li>Domain</li><li>ISP</li></ul>Verwenden Sie diese Optionen, um anderen Diensten weitere Informationen über das spezifische Netzwerk bereitzustellen, in dem die Anfragen ihren Ursprung haben. |
 | [!UICONTROL IP-Verschleierung] | Gibt den Typ der IP-Verschleierung an, die auf dem Datenstrom angewendet werden soll. Die IP-Verschleierungseinstellung wirkt sich auf jede Verarbeitung aus, die auf der Kunden-IP basiert. Dies umfasst alle Experience Cloud-Dienste, die Daten aus Ihrem Datenstrom empfangen. <p>Verfügbare Optionen:</p> <ul><li>**[!UICONTROL Keine]**: Deaktiviert die IP-Verschleierung. Die vollständige Benutzer-IP-Adresse wird über den Datenstrom gesendet.</li><li>**[!UICONTROL Teilweise]**: Bei IPv4-Adressen wird das letzte Oktett der Benutzer-IP-Adresse verschleiert. Bei IPv6-Adressen werden die letzten 80 Bits der Adresse verschleiert. <p>Beispiele:</p> <ul><li>IPv4: `1.2.3.4` -> `1.2.3.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `2001:0db8:1345:0000:0000:0000:0000:0000`</li></ul></li><li>**[!UICONTROL Vollständig]**: Verschleiert die gesamte IP-Adresse. <p>Beispiele:</p> <ul><li>IPv4: `1.2.3.4` -> `0.0.0.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `0:0:0:0:0:0:0:0`</li></ul></li></ul> Auswirkungen der IP-Verschleierung auf andere Adobe-Produkte: <ul><li>**Adobe Target**: Die Einstellung [!UICONTROL IP-Verschleierung] auf Datenstromebene hat Vorrang vor allen IP-Verschleierungseinstellungen in Adobe Target. Wenn beispielsweise die Option [!UICONTROL IP-Verschleierung] auf Datenstromebene auf **[!UICONTROL Vollständig]** und die IP-Verschleierungsoption von Adobe Target auf **[!UICONTROL Verschleierung des letzten Oktetts]** eingestellt ist, erhält Adobe Target eine vollständig verschleierte IP. Weitere Informationen finden Sie in der Adobe Target-Dokumentation zu [IP-Verschleierung](https://developer.adobe.com/target/before-implement/privacy/privacy/) und [Geolokalisierung](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=de).</li><li>**Audience Manager**: Die Einstellung für die IP-Verschleierung auf Datenstromebene hat Vorrang vor allen IP-Verschleierungseinstellungen in Audience Manager und wird auf alle IP-Adressen angewendet. Jede von Audience Manager durchgeführte Geolokalisierungssuche ist von der Option [!UICONTROL IP-Verschleierung] auf Datenstromebene betroffen. Eine Geolokalisierungssuche in Audience Manager, die auf einer vollständig verschleierten IP basiert, führt zu einer unbekannten Region, und alle Segmente, die auf den resultierenden Geolokalisierungsdaten basieren, werden nicht realisiert. Weitere Informationen finden Sie in der Audience Manager-Dokumentation unter [IP-Verschleierung](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/ip-obfuscation.html?lang=de).</li><li>**Adobe Analytics**: Adobe Analytics erhält derzeit die teilweise verschleierten IP-Adressen, wenn eine andere IP-Verschleierungsoption als „KEINE“ ausgewählt ist. Damit Analytics vollständig verschleierte IP-Adressen empfangen kann, müssen Sie die IP-Verschleierung separat in Adobe Analytics konfigurieren. Dieses Verhalten wird in zukünftigen Versionen aktualisiert. In der Adobe Analytics-[Dokumentation](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/general-acct-settings-admin.html?lang=de) finden Sie weitere Einzelheiten zur Aktivierung der IP-Verschleierung in Analytics.</li></ul> |
 | [!UICONTROL First-Party-ID-Cookie] | Wenn diese Einstellung aktiviert ist, weist sie das Edge-Netzwerk an, bei der Suche nach einer [First-Party-Geräte-ID](../edge/identity/first-party-device-ids.md) ein bestimmtes Cookie zu verwenden, anstatt nach diesem Wert in der Identity Map zu suchen.<br><br>Wenn Sie diese Einstellung aktivieren, müssen Sie den Namen des Cookies angeben, in dem die ID gespeichert ist. |
 | [!UICONTROL Synchronisierung der Third-Party-ID] | ID-Synchronisationen können in Container zusammengefasst werden, damit verschiedene ID-Synchronisationen zu unterschiedlichen Zeiten ausgeführt werden können. Wenn diese Einstellung aktiviert ist, können Sie festlegen, welcher Container mit ID-Synchronisationen für diesen Datenstrom ausgeführt werden soll. |
 | [!UICONTROL Container-ID der Drittanbieter-ID-Synchronisierung] | Die numerische ID des Containers, der für die ID-Synchronisierung von Drittanbietern verwendet werden soll. |
 | [!UICONTROL Überschreibungen der Container-ID] | In diesem Abschnitt können Sie zusätzliche IDs für ID-Synchronisierungs-Container von Drittanbietern definieren, die Sie verwenden können, um die standardmäßige zu überschreiben. |
 | [!UICONTROL Zugriffstyp] | Legt den Authentifizierungstyp fest, den das Edge Network für den Datenstrom akzeptiert. <ul><li>**[!UICONTROL Gemischte Authentifizierung]**: Wenn diese Option aktiviert ist, akzeptiert das Edge Network sowohl authentifizierte als auch nicht authentifizierte Anfragen. Wählen Sie diese Option, wenn Sie das Web SDK oder das [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) zusammen mit der [Server-API](../server-api/overview.md) verwenden möchten. </li><li>**[!UICONTROL Nur authentifiziert]**: Wenn diese Option aktiviert ist, akzeptiert das Edge Network nur authentifizierte Anfragen. Wählen Sie diese Option aus, wenn Sie beabsichtigen, nur die Server-API zu verwenden und verhindern möchten, dass nicht authentifizierte Anfragen vom Edge Network verarbeitet werden.</li></ul> |
+| [!UICONTROL Media Analytics] | Wählen Sie diese Option, um die Verarbeitung von Streaming-Tracking-Daten für die Edge-Netzwerkintegration über Experience Platform-SDKs oder Media Edge-API zu aktivieren. Informationen zu Media Analytics finden Sie im Abschnitt [Dokumentation](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=de). |
 
 Wenn hier Ihren Datenstrom für Experience Platform konfigurieren, folgen Sie dem Tutorial zu [Datenvorbereitung für die Datenerfassung](./data-prep.md), um Ihre Daten einem Platform-Ereignisschema zuzuordnen, bevor Sie mit dieser Anleitung fortfahren. Wählen Sie andernfalls **[!UICONTROL Speichern]** und fahren Sie mit dem nächsten Abschnitt fort.
 
