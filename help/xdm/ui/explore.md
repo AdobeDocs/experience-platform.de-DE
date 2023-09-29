@@ -1,38 +1,38 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; UI; XDM; XDM; XDM-System; Experience-Datenmodell; Experience-Datenmodell; Experience-Datenmodell; Datenmodell; Datenmodell; erkunden; Klasse; Feldergruppe; Datentyp; Schema
+keywords: Experience Platform; home; beliebte Themen; ui; UI; XDM; XDM; XDM-System; Experience-Datenmodell; Experience-Datenmodell; Experience-Datenmodell; Datenmodell; Datenmodell; erkunden; Klasse; Feldergruppe; Datentyp; Schema
 solution: Experience Platform
 title: Schema-Ressourcen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie vorhandene Schemas, Klassen, Schemafeldgruppen und Datentypen in der Experience Platform-Benutzeroberfläche untersuchen.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: f08aa017b7f971a54197b95023e9331832ecb7f1
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '993'
 ht-degree: 0%
 
 ---
 
 # Schema-Ressourcen in der Benutzeroberfläche
 
-In Adobe Experience Platform werden alle Schemaressourcen des Experience-Datenmodells (XDM) im [!DNL Schema Library], einschließlich der Standardressourcen, die von der Adobe bereitgestellt werden, und der benutzerdefinierten Ressourcen, die von Ihrem Unternehmen definiert werden. In der Experience Platform-Benutzeroberfläche können Sie die Struktur und die Felder eines vorhandenen Schemas, einer vorhandenen Klasse, einer vorhandenen Feldergruppe oder eines vorhandenen Datentyps im [!DNL Schema Library]. Dies ist besonders nützlich bei der Planung und Vorbereitung der Datenerfassung, da die Benutzeroberfläche Informationen zu den erwarteten Datentypen und Anwendungsfällen der einzelnen Felder bereitstellt, die von diesen XDM-Ressourcen bereitgestellt werden.
+In Adobe Experience Platform werden alle Schemaressourcen des Experience-Datenmodells (XDM) im [!DNL Schema Library], einschließlich der von Adobe bereitgestellten Standardressourcen und der von Ihrem Unternehmen definierten benutzerdefinierten Ressourcen. Auf der Experience Platform-Benutzeroberfläche können Sie die Struktur und die Felder eines vorhandenen Schemas, einer vorhandenen Klasse, einer vorhandenen Feldergruppe oder eines vorhandenen Datentyps im [!DNL Schema Library]. Dies ist besonders nützlich bei der Planung und Vorbereitung der Datenerfassung, da die Benutzeroberfläche Informationen zu den erwarteten Datentypen und Anwendungsfällen der einzelnen Felder bereitstellt, die von diesen XDM-Ressourcen bereitgestellt werden.
 
-In diesem Tutorial werden die Schritte zum Erkunden vorhandener Schemas, Klassen, Feldgruppen und Datentypen in der Experience Platform-Benutzeroberfläche beschrieben.
+In diesem Tutorial werden die Schritte zum Erkunden vorhandener Schemas, Klassen, Feldergruppen und Datentypen in der Experience Platform-Benutzeroberfläche beschrieben.
 
 ## Nach einer Schemaressource suchen {#lookup}
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Schemas]** in der linken Navigation. Die [!UICONTROL Schemas] Workspace bietet eine **[!UICONTROL Durchsuchen]** Registerkarte, um alle Schemas in Ihrer Organisation zu untersuchen, sowie zusätzliche spezielle Registerkarten zum Erkunden **[!UICONTROL Klassen]**, **[!UICONTROL Feldergruppen]** und **[!UICONTROL Datentypen]** bzw.
+Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Schemas]** in der linken Navigation. Die [!UICONTROL Schemas] Workspace bietet eine **[!UICONTROL Durchsuchen]** Registerkarte, um alle Schemas in Ihrer Organisation zu untersuchen, sowie zusätzliche spezielle Registerkarten zum Erkunden **[!UICONTROL Klassen]**, **[!UICONTROL Feldergruppen]**, und **[!UICONTROL Datentypen]** bzw.
 
 ![](../images/ui/explore/tabs.png)
 
 Das Filtersymbol (![Filtersymbol Bild](../images/ui/explore/icon.png)) zeigt Steuerelemente in der linken Leiste an, um die aufgelisteten Ergebnisse einzuschränken. Die angezeigten Steuerelemente variieren je nach Ressourcentyp.
 
-Um beispielsweise die Liste so zu filtern, dass nur die von Adobe bereitgestellten Standarddatentypen angezeigt werden, wählen Sie **[!UICONTROL Datentyp]** und **[!UICONTROL Adobe]** unter **[!UICONTROL Typ]** und **[!UICONTROL Inhaber]** angegeben.
+Um beispielsweise die Liste so zu filtern, dass nur die von Adobe bereitgestellten Standarddatentypen angezeigt werden, wählen Sie **[!UICONTROL Datentyp]** und **[!UICONTROL Adobe]** unter **[!UICONTROL Typ]** und **[!UICONTROL Inhaber]** -Abschnitte.
 
-Die **[!UICONTROL Im Profil enthalten]** Mit Umschalten können Sie Ergebnisse filtern, sodass nur Ressourcen angezeigt werden, die in Schemas verwendet werden, die für die Verwendung in [Echtzeit-Kundenprofil](../../profile/home.md).
+Die **[!UICONTROL Im Profil enthalten]** Mit Umschalten können Sie Ergebnisse filtern, sodass nur Ressourcen angezeigt werden, die in Schemas verwendet werden, die für die Verwendung in [Echtzeit-Kundenprofil](../../profile/home.md). Die **[!UICONTROL Anzeigen von Ad-hoc-Schemata]** filtert die Liste der Schemas, die mit Feldern erstellt wurden, die nur für die Verwendung durch einen einzigen Datensatz benannt wurden, um einen Umschalter.
 
-![](../images/ui/explore/filter.png)
+![Die [!UICONTROL Schemas] Arbeitsbereich [!UICONTROL Durchsuchen] Registerkarte mit hervorgehobenem Filterbereich.](../images/ui/explore/filter.png)
 
-Beim Auflisten von Ressourcen auf der **[!UICONTROL Klassen]**, **[!UICONTROL Feldergruppen]** oder **[!UICONTROL Datentypen]** Registerkarten, können Sie **[!UICONTROL Adobe]** nur Standardressourcen anzeigen oder **[!UICONTROL Kunde]** , um nur die von Ihrer Organisation erstellten Ressourcen anzuzeigen.
+Beim Auflisten von Ressourcen auf der **[!UICONTROL Klassen]**, **[!UICONTROL Feldergruppen]** oder **[!UICONTROL Datentypen]** Registerkarten, können Sie **[!UICONTROL Adobe]** , um nur Standardressourcen anzuzeigen oder **[!UICONTROL Kunde]** , um nur die von Ihrer Organisation erstellten Ressourcen anzuzeigen.
 
 ![](../images/ui/explore/filter-data-type.png)
 
@@ -56,7 +56,7 @@ Alle Objekttypen, die Untereigenschaften enthalten, werden standardmäßig ausge
 
 ### Systemgenerierte Felder {#system-fields}
 
-Bei einigen Feldnamen wird ein Unterstrich vorangestellt, z. B. `_repo` und `_id`. Diese stellen Platzhalter für Felder dar, die das System automatisch generiert und zuweist, wenn Daten erfasst werden.
+Bei einigen Feldnamen wird ein Unterstrich vorangestellt, beispielsweise `_repo` und `_id`. Diese stellen Platzhalter für Felder dar, die das System automatisch generiert und zuweist, wenn Daten erfasst werden.
 
 Daher sollten die meisten dieser Felder bei der Aufnahme in Platform aus der Datenstruktur ausgeschlossen werden. Die wichtigste Ausnahme für diese Regel ist die [`_{TENANT_ID}` field](../api/getting-started.md#know-your-tenant_id), unter dem alle unter Ihrem Unternehmen erstellten XDM-Felder im Namespace angegeben werden müssen.
 
@@ -66,7 +66,7 @@ Für jedes auf der Arbeitsfläche angezeigte Feld wird der zugehörige Datentyp 
 
 ![](../images/ui/explore/data-types.png)
 
-Jeder Datentyp, der mit eckigen Klammern (`[]`) stellt ein Array dieses bestimmten Datentyps dar. Beispielsweise kann ein Datentyp **[!UICONTROL Zeichenfolge]\[]** gibt an, dass das Feld ein Array von Zeichenfolgenwerten erwartet. Ein Datentyp von **[!UICONTROL Zahlungselement]\[]** gibt ein Array von Objekten an, die dem [!UICONTROL Zahlungselement] Datentyp.
+Jeder Datentyp, der mit eckigen Klammern (`[]`) stellt ein Array dieses bestimmten Datentyps dar. Ein Datentyp **[!UICONTROL Zeichenfolge]\[]** gibt an, dass das Feld ein Array von Zeichenfolgenwerten erwartet. Ein Datentyp von **[!UICONTROL Zahlungselement]\[]** gibt ein Array von Objekten an, die dem [!UICONTROL Zahlungselement] Datentyp.
 
 Wenn ein Array-Feld auf einem Objekttyp basiert, können Sie das zugehörige Symbol auf der Arbeitsfläche auswählen, um die erwarteten Attribute für jedes Array-Element anzuzeigen.
 

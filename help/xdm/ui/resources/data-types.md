@@ -5,10 +5,10 @@ title: Erstellen und Bearbeiten von Datentypen über die Benutzeroberfläche
 type: Tutorial
 description: Erfahren Sie, wie Sie Datentypen in der Experience Platform-Benutzeroberfläche erstellen und bearbeiten.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 51ef116ad125b0d699bf4808e3d26d3b00b743e2
+source-git-commit: 4214339c4a661c6bca2cd571919ae205dcb47da1
 workflow-type: tm+mt
-source-wordcount: '1218'
-ht-degree: 0%
+source-wordcount: '1354'
+ht-degree: 6%
 
 ---
 
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_datatype_filter"
->title="Standardfilter für benutzerdefinierte Datentypen"
->abstract="Die Liste der verfügbaren Datentypen wird je nach ihrer Erstellung vorab gefiltert. Wählen Sie das Optionsfeld aus, um zwischen den Optionen Standard und Benutzerdefiniert zu wählen. Die Option Standard zeigt die von Adobe erstellten Entitäten an und die Option Benutzerdefiniert zeigt die in Ihrem Unternehmen erstellten Entitäten an. Weitere Informationen zum Erstellen und Bearbeiten von Datentypen finden Sie in der Dokumentation ."
+>title="Standard- oder benutzerdefinierte Datentypfilter"
+>abstract="Die Liste der verfügbaren Datentypen wird je nach ihrer Erstellung vorab gefiltert. Wählen Sie das Optionsfeld aus, um zwischen den Optionen „Standard“ und „Benutzerdefiniert“ zu wählen. Die Option „Standard“ zeigt die von Adobe erstellten Entitäten an und die Option „Benutzerdefiniert“ zeigt die in Ihrem Unternehmen erstellten Entitäten an. Weitere Informationen zum Erstellen und Bearbeiten von Datentypen finden Sie in der Dokumentation."
 
 Im Experience-Datenmodell (XDM) sind Datentypen wiederverwendbare Felder, die mehrere Unterfelder enthalten. Auch wenn sie Schemafeldgruppen insofern ähneln, als sie die konsistente Verwendung einer Mehrfeld-Struktur ermöglichen, sind Datentypen flexibler, da sie an einer beliebigen Stelle in die Schemastruktur aufgenommen werden können, während Feldgruppen nur auf der Stammebene hinzugefügt werden können.
 
@@ -33,20 +33,21 @@ Für dieses Handbuch ist zwar nicht erforderlich, es wird jedoch empfohlen, auch
 
 ## Öffnen Sie die [!DNL Schema Editor] für einen Datentyp {#data-type}
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Schemas]** im linken Navigationsbereich, um die [!UICONTROL Schemas] Arbeitsbereich und wählen Sie dann die **[!UICONTROL Datentypen]** Registerkarte. Es wird eine Liste der verfügbaren Datentypen angezeigt, einschließlich der von Adobe definierten und der von Ihrem Unternehmen erstellten Datentypen.
+Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Schemas]** im linken Navigationsbereich, um die [!UICONTROL Schemas] Arbeitsbereich und wählen Sie dann die **[!UICONTROL Datentypen]** Registerkarte. Eine Liste der verfügbaren Datentypen wird angezeigt. Die Liste der Datentypen wird automatisch nach ihrer Erstellung gefiltert. Die Standardeinstellung zeigt die durch Adobe definierten Datentypen an. Sie können die Liste auch filtern, um die von Ihrer Organisation erstellten anzuzeigen.
 
-![](../../images/ui/resources/data-types/data-types-tab.png)
+![Die [!UICONTROL Schemas] Arbeitsbereich mit [!UICONTROL Schemas] in der linken Navigation und [!UICONTROL Datentypen] hervorgehoben.](../../images/ui/resources/data-types/data-types-tab.png)
 
-Von hier aus haben Sie zwei Möglichkeiten:
+Von hier aus haben Sie die folgenden Optionen:
 
 - [Neuen Datentyp erstellen](#create)
+- [Datentypen filtern](#filter)
 - [Wählen Sie einen vorhandenen Datentyp aus, um ihn zu bearbeiten](#edit)
 
 ### Neuen Datentyp erstellen {#create}
 
 Aus dem **[!UICONTROL Datentypen]** Registerkarte auswählen **[!UICONTROL Erstellen eines Datentyps]**.
 
-![](../../images/ui/resources/data-types/create.png)
+![Die [!UICONTROL Schemas] Arbeitsbereich [!UICONTROL Datentypen] Registerkarte mit [!UICONTROL Erstellen eines Datentyps] hervorgehoben.](../../images/ui/resources/data-types/create.png)
 
 Die [!DNL Schema Editor] angezeigt, was die aktuelle Struktur des neuen Datentyps auf der Arbeitsfläche anzeigt. Auf der rechten Seite des Editors können Sie einen Anzeigenamen und eine optionale Beschreibung für den Datentyp angeben. Stellen Sie sicher, dass Sie einen eindeutigen und präzisen Namen für Ihren Datentyp angeben, da dieser beim Hinzufügen zu einem Schema identifiziert wird.
 
@@ -56,17 +57,25 @@ In diesem Tutorial wird ein Datentyp erstellt, der eine Restauranteigenschaft be
 
 Von hier aus können Sie zum [nächster Abschnitt](#add-fields) , um dem neuen Datentyp Felder hinzuzufügen.
 
+### Datentypen filtern {#filter}
+
+Die Liste der verfügbaren Datentypen wird je nach ihrer Erstellung vorab gefiltert. Wählen Sie das Optionsfeld aus, um zwischen dem [!UICONTROL Standard] und [!UICONTROL Benutzerdefiniert] Optionen. Die [!UICONTROL Standard] -Option zeigt die von Adobe erstellten Entitäten an und [!UICONTROL Benutzerdefiniert] -Option zeigt Entitäten an, die innerhalb Ihres Unternehmens erstellt wurden.
+
+![Die [!UICONTROL Datentypen] des [!UICONTROL Schemas] Arbeitsbereich mit [!UICONTROL Standard] und [!UICONTROL Benutzerdefiniert] hervorgehoben.](../../images/ui/resources/data-types/standard-and-custom-data-types.png)
+
 ### Vorhandenen Datentyp bearbeiten {#edit}
 
 >[!NOTE]
 >
 >Sobald ein vorhandener Datentyp in einem Schema verwendet wird, das für die Verwendung im Echtzeit-Kundenprofil aktiviert wurde, können anschließend nur zerstörungsfreie Änderungen an diesem Datentyp vorgenommen werden. Siehe [Regeln der Schemaentwicklung](../../schema/composition.md#evolution) für weitere Informationen.
 
-Es können nur benutzerdefinierte Datentypen bearbeitet werden, die von Ihrem Unternehmen definiert wurden. Um die angezeigte Liste einzuschränken, wählen Sie das Filtersymbol (![Filtersymbol](../../images/ui/resources/data-types/filter.png)), um Steuerelemente für die Filterung basierend auf [!UICONTROL Inhaber]. Auswählen **[!UICONTROL Kunde]** , um nur benutzerdefinierte Datentypen anzuzeigen, die Ihrem Unternehmen gehören.
+Es können nur benutzerdefinierte Datentypen bearbeitet werden, die von Ihrem Unternehmen definiert wurden. Auswählen **[!UICONTROL Benutzerdefiniert]** , um nur benutzerdefinierte Datentypen anzuzeigen, die Ihrem Unternehmen gehören.
 
-Wählen Sie in der Liste den zu bearbeitenden Datentyp aus, um die rechte Leiste mit Details zum Datentyp zu öffnen. Wählen Sie den Namen des Datentyps in der rechten Leiste aus, um seine Struktur in der [!DNL Schema Editor].
+Wählen Sie in der Liste den zu bearbeitenden Datentyp aus, um die rechte Leiste mit Details zum Datentyp zu öffnen. Im Detailbereich können Sie auch eine Beispieldatei herunterladen, die JSON-Struktur kopieren oder den Datentyp zu einem Paket hinzufügen.
 
-![](../../images/ui/resources/data-types/edit.png)
+Wählen Sie den Namen des Datentyps in der rechten Leiste aus, um seine Struktur in der [!DNL Schema Editor].
+
+![Die [!UICONTROL Datentypen] des [!UICONTROL Schemas] Arbeitsbereich mit Datentyp, [!UICONTROL Benutzerdefiniert] und dem Datentyp [!UICONTROL Name] hervorgehoben.](../../images/ui/resources/data-types/edit.png)
 
 ## Felder zum Datentyp hinzufügen {#add-fields}
 

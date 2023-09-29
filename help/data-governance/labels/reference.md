@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Glossar der Datennutzungskennzeichnungen
 description: In diesem Dokument werden alle derzeit von Adobe Experience Platform unterstützten Datennutzungskennzeichnungen beschrieben.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 538c5e2c7ff3c684edf6db12087fdf0a58e40199
+source-git-commit: c55ad6c592be95b01cf7fe0b39635b478bc98be6
 workflow-type: tm+mt
-source-wordcount: '2185'
-ht-degree: 94%
+source-wordcount: '2250'
+ht-degree: 96%
 
 ---
 
@@ -66,13 +66,15 @@ Bei Daten, die Sie als sensibel betrachten, kann es sich um verschiedene Arten v
 
 ## Kennzeichnungen für Partner-Ökosysteme {#partner}
 
-Mit Partner Ecosystem-Beschriftungen werden Daten kategorisiert, die aus externen Quellen für Ihr Unternehmen stammen.
+Mit Partner-Ökosystem-Kennzeichnungen werden Daten kategorisiert, die aus externen Quellen in Bezug auf Ihr Unternehmen stammen.
 
-Diese Bezeichnung wird verwendet, um die Verwendung von potenziellen Daten zu steuern.
+Diese Kennzeichnung wird verwendet, um die Verwendung von Interessentendaten zu steuern.
 
 | Kennzeichnung | Definition |
 | --- | --- |
-| **Drittanbieter** | Drittanbieterdaten sind Daten, die Ihnen von einem Drittanbieter bereitgestellt werden. Ein Drittanbieter für Daten ist eine Einheit, die mit Ihrem Unternehmen eine Vereinbarung geschlossen hat, die Ihnen den Zugriff auf, die Verwendung, die Anzeige und die Übermittlung der Daten von Drittanbietern in Verbindung mit Platform gestattet. |
+| **Drittanbieter** | Drittanbieterdaten sind Daten, die Ihnen von einem Drittanbieter bereitgestellt werden. Ein Drittanbieter für Daten ist eine Entität, die mit Ihrem Unternehmen eine Vereinbarung geschlossen hat, die Ihnen den Zugriff auf, die Verwendung, die Anzeige und die Übermittlung der Daten von Drittanbietern in Verbindung mit Platform gestattet. |
+| **Anreicherung durch Dritte** | Daten, die von einer Drittorganisation erfasst werden, die nicht direkt mit der betroffenen Person in Verbindung steht. Die Beschriftung sollte auf Drittanbieterdaten angewendet werden, die zur Anreicherung von Erstanbieterprofilen verwendet werden. |
+| **Drittanbietervermittlung** | Daten, die von einer Drittorganisation erfasst werden, die nicht direkt mit der betroffenen Person in Verbindung steht. Die Beschriftung sollte auf Daten von Drittanbietern angewendet werden, die für den oberen Bereich der Trichterprospektion für neue Kunden verwendet werden. |
 
 ## Anhang
 
@@ -144,11 +146,11 @@ Einige Verträge beinhalten ein explizites Verbot der Datennutzung für datenwis
 
 #### C10 {#c10}
 
-Einige Data-Governance-Richtlinien beschränken die Verwendung von Daten aus zusammengefügten Identitäten für die Personalisierung. Die Bezeichnung C10 wird automatisch auf Zielgruppen angewendet, wenn deren Zusammenführungsrichtlinien die Option &quot;Privates Diagramm&quot;verwenden.
+Einige Data-Governance-Richtlinien beschränken die Verwendung von Daten aus zusammengefügten Identitäten für die Personalisierung. Die Kennzeichnung C10 wird automatisch auf Zielgruppen angewendet, wenn deren Zusammenführungsrichtlinien die Option „Privates Diagramm“ verwenden.
 
 #### C11 {#c11}
 
-Adobe Experience Platform-Segmentübereinstimmung ermöglicht es Ihnen, Platform-generierte Zielgruppen mit Datenschutz- und Zustimmungsvoreinstellungen abzustimmen, was eine erweiterte Profilerstellung und nachgelagerte Einblicke erleichtert. Die Bezeichnung „C11“ bezeichnet Daten, die nicht in [!DNL Segment Match]-Prozessen verwendet werden sollten. Nachdem Sie ermittelt haben, welche Datensätze und/oder Felder Sie aus Segment Match ausschließen möchten, und die C11-Bezeichnung entsprechend hinzugefügt haben, wird die Bezeichnung automatisch vom Segment Match-Arbeitsablauf erzwungen.
+Adobe Experience Platform Segment Match ermöglicht es Ihnen, Platform-generierte Zielgruppen mit Datenschutz- und Zustimmungsvoreinstellungen abzugleichen und so eine erweiterte Profilierung und nachgelagerte Einblicke zu ermöglichen. Die Bezeichnung „C11“ bezeichnet Daten, die nicht in [!DNL Segment Match]-Prozessen verwendet werden sollten. Nachdem Sie ermittelt haben, welche Datensätze und/oder Felder Sie aus Segment Match ausschließen möchten, und die C11-Bezeichnung entsprechend hinzugefügt haben, wird die Bezeichnung automatisch vom Segment Match-Arbeitsablauf erzwungen.
 
 #### C12 {#c12}
 

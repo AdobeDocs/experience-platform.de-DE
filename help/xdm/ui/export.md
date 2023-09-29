@@ -4,9 +4,9 @@ title: Exportieren von XDM-Schemas in die Benutzeroberfläche
 description: Erfahren Sie, wie Sie ein vorhandenes Schema in eine andere Sandbox oder Organisation in der Benutzeroberfläche von Adobe Experience Platform exportieren.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
+source-git-commit: d25042e80ca5f655a50deac6a65ce9168225d6e6
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
@@ -27,13 +27,15 @@ Die Platform-Benutzeroberfläche ermöglicht den Export von XDM-Ressourcen. Sie 
 
 ## Exportnutzlast generieren {#generate-export-payload}
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Schemas]** in der linken Navigation. Innerhalb der [!UICONTROL Schemas] Arbeitsbereich wählen Sie die Zeile für das Schema aus, das Sie exportieren möchten, um Schemadetails in der rechten Seitenleiste anzuzeigen.
+Export-Payloads können in der Platform-Benutzeroberfläche über das Detailbedienfeld im [!UICONTROL Durchsuchen] oder direkt von der Arbeitsfläche des Schemas im Schema-Editor aus.
+
+Um eine Export-Payload zu generieren, wählen Sie **[!UICONTROL Schemas]** in der linken Navigation. Innerhalb der [!UICONTROL Schemas] Arbeitsbereich wählen Sie die Zeile für das Schema aus, das Sie exportieren möchten, um Schemadetails in der rechten Seitenleiste anzuzeigen.
 
 >[!TIP]
 >
 >Siehe Handbuch unter [Erkunden von XDM-Ressourcen](./explore.md) für Details zum Auffinden der gesuchten XDM-Ressource.
 
-Wählen Sie als Nächstes die **[!UICONTROL JSON kopieren]** Symbol (![Kopiersymbol](../images/ui/export/icon.png)) aus den verfügbaren Optionen.
+Wählen Sie als Nächstes die **[!UICONTROL JSON kopieren]** Symbol (![Symbol &quot;Kopieren&quot;](../images/ui/export/icon.png)) aus den verfügbaren Optionen.
 
 ![Der Arbeitsbereich &quot;Schemas&quot;mit einer Schemazeile und [!UICONTROL Kopieren in JSON] hervorgehoben.](../images/ui/export/copy-json.png)
 
@@ -201,7 +203,15 @@ Dadurch wird eine JSON-Payload in die Zwischenablage kopiert, die basierend auf 
 ]
 ```
 
-Die Payload hat die Form eines Arrays, wobei jedes Array-Element ein Objekt ist, das eine benutzerdefinierte XDM-Ressource darstellt, die exportiert werden soll. Im obigen Beispiel wird der[!DNL Loyalty details]&quot; benutzerdefinierte Feldergruppe und &quot;[!DNL Loyalty Members]&quot; Schema enthalten sind. Kernressourcen, die vom Schema verwendet werden, sind nicht im Export enthalten, da diese Ressourcen in allen Sandboxes und Organisationen verfügbar sind.
+Die Payload kann auch kopiert werden, indem Sie [!UICONTROL Mehr] oben rechts im Schema Editor. Ein Dropdown-Menü bietet zwei Optionen: [!UICONTROL JSON-Struktur kopieren] und [!UICONTROL Schema löschen].
+
+>[!NOTE]
+>
+>Ein Schema kann nicht gelöscht werden, wenn es für Profil aktiviert ist oder über zugeordnete Datensätze verfügt.
+
+![Der Schema-Editor mit [!UICONTROL Mehr] und [!UICONTROL Kopieren in JSON] hervorgehoben.](../images/ui/export/schema-editor-copy-json.png)
+
+Die Payload hat die Form eines Arrays, wobei jedes Array-Element ein Objekt ist, das eine zu exportierende benutzerdefinierte XDM-Ressource darstellt. Im obigen Beispiel wird der[!DNL Loyalty details]&quot; benutzerdefinierte Feldergruppe und &quot;[!DNL Loyalty Members]&quot; Schema enthalten sind. Kernressourcen, die vom Schema verwendet werden, sind nicht im Export enthalten, da diese Ressourcen in allen Sandboxes und Organisationen verfügbar sind.
 
 Beachten Sie, dass die Mandanten-ID jeder Instanz Ihres Unternehmens als `<XDM_TENANTID_PLACEHOLDER>` in der Payload. Diese Platzhalter werden automatisch durch den entsprechenden Mandanten-ID-Wert ersetzt, je nachdem, wo Sie das Schema im nächsten Schritt importieren.
 
