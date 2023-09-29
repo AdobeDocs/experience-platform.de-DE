@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Query Service; Query Service; SQL-Syntax; SQL; ctas; CTAS; Erstellen einer Tabelle als ausgewählt
+keywords: Experience Platform; home; beliebte Themen; Query Service; Query Service; SQL-Syntax; SQL; ctas; CTAS; Erstellen einer Tabelle als ausgewählt
 solution: Experience Platform
 title: SQL-Syntax in Query Service
 description: Dieses Dokument zeigt die von Adobe Experience Platform Query Service unterstützte SQL-Syntax.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: f729c54e490afb954bb627d150e499c98d51a53d
+source-git-commit: 18b8f683726f612a5979ab724067cc9f1bfecbde
 workflow-type: tm+mt
-source-wordcount: '3923'
-ht-degree: 9%
+source-wordcount: '4006'
+ht-degree: 10%
 
 ---
 
@@ -262,7 +262,7 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 ## DATENBANK ERSTELLEN
 
-Die `CREATE DATABASE` -Befehl erstellt eine ADLS-Datenbank.
+Die `CREATE DATABASE` erstellt eine Azure Data Lake Storage-Datenbank (ADLS).
 
 ```sql
 CREATE DATABASE [IF NOT EXISTS] db_name
@@ -296,7 +296,7 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 
 ## CREATE VIEW
 
-Die folgende Syntax definiert eine `CREATE VIEW` Abfrage:
+Die folgende Syntax definiert eine `CREATE VIEW` -Abfrage für einen Datensatz. Dieser Datensatz kann ein ADLS- oder beschleunigter Store-Datensatz sein.
 
 ```sql
 CREATE VIEW view_name AS select_query
@@ -313,6 +313,46 @@ CREATE VIEW view_name AS select_query
 CREATE VIEW V1 AS SELECT color, type FROM Inventory
 
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
+```
+
+Die folgende Syntax definiert eine `CREATE VIEW` Abfrage, die eine Ansicht im Kontext einer Datenbank und eines Schemas erstellt.
+
+**Beispiel**
+
+```sql
+CREATE VIEW db_name.schema_name.view_name AS select_query
+CREATE OR REPLACE VIEW db_name.schema_name.view_name AS select_query
+```
+
+| Parameter | Beschreibung |
+| ------ | ------ |
+| `db_name` | Der Name der Datenbank. |
+| `schema_name` | Der Name des Schemas. |
+| `view_name` | Der Name der zu erstellenden Ansicht. |
+| `select_query` | A `SELECT` -Anweisung. Die Syntax der `SELECT` -Abfrage finden Sie im Abschnitt [Abschnitt &quot;Abfragen auswählen&quot;](#select-queries). |
+
+**Beispiel**
+
+```sql
+CREATE VIEW <dbV1 AS SELECT color, type FROM Inventory;
+
+CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory;
+```
+
+## ANZEIGEN VON ANSICHTEN
+
+Die folgende Abfrage zeigt die Liste der Ansichten.
+
+```sql
+SHOW VIEWS;
+```
+
+```console
+ Db Name  | Schema Name | Name  | Id       |  Dataset Dependencies | Views Dependencies | TYPE
+----------------------------------------------------------------------------------------------
+ qsaccel  | profile_agg | view1 | view_id1 | dwh_dataset1          |                    | DWH
+          |             | view2 | view_id2 | adls_dataset          | adls_views         | ADLS
+(2 rows)
 ```
 
 ## DROP VIEW
@@ -622,7 +662,7 @@ Die Konsolenausgabe wird wie unten dargestellt angezeigt.
 (1 row)
 ```
 
-Sie können die berechneten Statistiken dann direkt abfragen, indem Sie auf die `Statistics ID`. Die folgende Beispielanweisung ermöglicht es Ihnen, die Ausgabe vollständig anzuzeigen, wenn sie mit der `Statistics ID` oder den Aliasnamen. Weitere Informationen zu dieser Funktion finden Sie unter [Alias-Namensdokumentation](../essential-concepts/dataset-statistics.md#alias-name).
+Sie können dann die berechneten Statistiken direkt abfragen, indem Sie die `Statistics ID` referenzieren. Mit der folgenden Beispielanweisung können Sie die vollständige Ausgabe anzeigen, wenn Sie `Statistics ID` oder den Aliasnamen verwenden. Weitere Informationen zu dieser Funktion finden Sie unter [Alias-Namensdokumentation](../essential-concepts/dataset-statistics.md#alias-name).
 
 ```sql
 -- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
