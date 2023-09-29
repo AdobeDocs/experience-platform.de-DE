@@ -2,8 +2,8 @@
 title: Adobe Experience Platform – Versionshinweise, Oktober 2022
 description: Versionshinweise von Oktober 2022 für Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: e1deeadb98240f885e9dc95ecbc58ae48049a190
-workflow-type: ht
+source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
+workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 100%
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 Alle in Adobe Experience Platform gespeicherten Daten werden im Ruhezustand mithilfe von Schlüsseln auf Systemebene verschlüsselt. Wenn Sie ein Programm verwenden, das auf Platform aufbaut, können Sie jetzt stattdessen eigene Verschlüsselungsschlüssel verwenden, was Ihnen mehr Kontrolle über Ihre Datensicherheit gibt.
 
-Details zur Funktion finden Sie in der Übersicht [Kundenverwaltete Schlüssel](../../landing/governance-privacy-security/customer-managed-keys.md).
+Details zur Funktion finden Sie in der Übersicht [Kundenverwaltete Schlüssel](../../landing/governance-privacy-security/customer-managed-keys/overview.md).
 
 ## Datenerfassung {#data-collection}
 

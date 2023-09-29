@@ -3,7 +3,7 @@ keywords: Insights;Attributions-KI;Attributions-KI-Insights;AAI-Abfrage-Service;
 title: Kundenseitig verwaltete Schlüssel
 description: Erfahren Sie, wie Sie kundenseitig verwaltete Schlüssel für die Attributions-KI einrichten.
 exl-id: c00bf1a0-cc4c-4a34-83f1-d93829576866
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 100%
@@ -12,7 +12,7 @@ ht-degree: 100%
 
 # Kundenseitig verwaltete Schlüssel
 
-Attributions-KI bietet Benutzenden von [Healthcare Shield](https://www.adobe.com/trust/compliance/hipaa-ready.html) und Privacy &amp; Security Shield die Option, Azure Customer Managed Keys (CMK) auf Attributions-KI-Daten anzuwenden. Der Einrichtungsprozess entspricht dem [Adobe Experience Platform CMK-Setup](../../../landing/governance-privacy-security/customer-managed-keys.md), und Sie können die dafür beschriebenen Schritte ausführen.
+Attributions-KI bietet Benutzenden von [Healthcare Shield](https://www.adobe.com/trust/compliance/hipaa-ready.html) und Privacy &amp; Security Shield die Option, Azure Customer Managed Keys (CMK) auf Attributions-KI-Daten anzuwenden. Der Einrichtungsprozess entspricht dem [Adobe Experience Platform CMK-Setup](../../../landing/governance-privacy-security/customer-managed-keys/overview.md), und Sie können die dafür beschriebenen Schritte ausführen.
 
 Führen Sie die in der Dokumentation zu [kundenseitig verwalteten Schlüsseln in Adobe Experience Platform](../../../landing/governance-privacy-security/encryption.md) beschriebenen Schritte aus, um den Einrichtungsprozess durchzuführen.
 

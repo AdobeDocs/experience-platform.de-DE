@@ -2,7 +2,7 @@
 title: Data Governance in Query Service
 description: Dieser Überblick behandelt die wichtigsten Elemente der Data Governance in Experience Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: c3ce6548e18078e604ecd5db276eb162935f6181
+source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
 workflow-type: tm+mt
 source-wordcount: '3132'
 ht-degree: 3%
@@ -25,11 +25,11 @@ Die folgenden Kategorien sind bei der Verwendung von Query Service für die Einh
 1. Datenschutz   
 1. Datenhygiene
 
-In diesem Dokument werden die verschiedenen Governance-Bereiche untersucht und aufgezeigt, wie die Einhaltung von Datenanforderungen bei der Verwendung von Query Service erleichtert werden kann. Siehe [Governance, Datenschutz und Sicherheitsübersicht](../../landing/governance-privacy-security/overview.md) für umfassendere Informationen darüber, wie Sie mit Experience Platform Kundendaten verwalten und Compliance sicherstellen können.
+In diesem Dokument werden die verschiedenen Governance-Bereiche untersucht und aufgezeigt, wie die Einhaltung von Datenanforderungen bei der Verwendung von Query Service erleichtert werden kann. Siehe [Governance, Datenschutz und Sicherheitsübersicht](../../landing/governance-privacy-security/overview.md) für umfassendere Informationen darüber, wie Sie mit Experience Platform Kundendaten verwalten und die Einhaltung von Vorschriften sicherstellen können.
 
 ## Sicherheit {#security}
 
-Die Datensicherheit ist der Prozess des Schutzes von Daten vor unbefugtem Zugriff und der Sicherstellung eines sicheren Zugriffs während des gesamten Lebenszyklus. Der sichere Zugriff wird in der Experience Platform durch die Anwendung von Rollen und Berechtigungen durch Funktionen wie rollenbasierte Zugriffssteuerung und attributbasierte Zugriffssteuerung aufrechterhalten. Berechtigungen, SSL und Datenverschlüsselung werden ebenfalls verwendet, um den Datenschutz in der gesamten Plattform sicherzustellen.
+Die Datensicherheit ist der Prozess des Schutzes von Daten vor unbefugtem Zugriff und der Sicherstellung eines sicheren Zugriffs während des gesamten Lebenszyklus. Der sichere Zugriff auf Experience Platform wird durch die Anwendung von Rollen und Berechtigungen durch Funktionen wie rollenbasierte Zugriffskontrolle und attributbasierte Zugriffskontrolle gewährleistet. Berechtigungen, SSL und Datenverschlüsselung werden ebenfalls verwendet, um den Datenschutz in der gesamten Plattform sicherzustellen.
 
 Die Sicherheit in Bezug auf Query Service ist in folgende Kategorien unterteilt:
 
@@ -137,7 +137,7 @@ Verschlüsselung ist die Verwendung eines algorithmischen Prozesses, um Daten in
 
 Die Datenkonformität von Query Service stellt sicher, dass Daten immer verschlüsselt werden. Daten-in-Transit sind immer HTTPS-konform und Daten im Ruhezustand werden in einem Azure Data Lake-Speicher mit Schlüsseln auf Systemebene verschlüsselt. Siehe die Dokumentation unter [Verschlüsseln von Daten in Adobe Experience Platform](../../landing/governance-privacy-security/encryption.md) für weitere Informationen. Weitere Informationen dazu, wie ruhende Daten in Azure Data Lake Storage verschlüsselt werden, finden Sie in der [offizielle Azure-Dokumentation](https://docs.microsoft.com/de-de/azure/data-lake-store/data-lake-store-encryption).
 
-Daten-in-Transit sind immer HTTPS-konform und auf ähnliche Weise, wenn sich die Daten im Data Lake befinden, erfolgt die Verschlüsselung mit dem Customer Management Key (CMK), der bereits von Data Lake Management unterstützt wird. Die derzeit unterstützte Version ist TLS1.2. Siehe [Dokumentation zu kundenverwalteten Schlüsseln (CMK)](../../landing/governance-privacy-security/customer-managed-keys.md) , um zu erfahren, wie Sie eigene Verschlüsselungsschlüssel für in Adobe Experience Platform gespeicherte Daten einrichten.
+Daten-in-Transit sind immer HTTPS-konform und auf ähnliche Weise, wenn sich die Daten im Data Lake befinden, erfolgt die Verschlüsselung mit dem Customer Management Key (CMK), der bereits von Data Lake Management unterstützt wird. Die derzeit unterstützte Version ist TLS1.2. Siehe [Dokumentation zu kundenverwalteten Schlüsseln (CMK)](../../landing/governance-privacy-security/customer-managed-keys/overview.md) , um zu erfahren, wie Sie eigene Verschlüsselungsschlüssel für in Adobe Experience Platform gespeicherte Daten einrichten.
 
 
 ## Audit {#audit}
@@ -178,7 +178,7 @@ Siehe [Übersicht über Auditprotokolle](../../landing/governance-privacy-securi
 
 ## Datennutzung {#data-usage}
 
-Das Data Governance-Framework in Platform bietet eine einheitliche Methode zur verantwortungsvollen Verwendung von Daten für alle Adobe-Lösungen, -Dienste und -Plattformen. Es koordiniert den systemischen Ansatz zur Erfassung, Kommunikation und Verwendung von Metadaten in der gesamten Adobe Experience Cloud. Dies wiederum hilft den Datenverantwortlichen bei der Beschriftung von Daten entsprechend den erforderlichen Marketing-Aktionen und den Einschränkungen, die diesen Daten aus diesen beabsichtigten Marketing-Aktionen auferlegt werden. Siehe Übersicht unter [Datennutzungsbezeichnungen](../../data-governance/labels/overview.md) Weitere Informationen dazu, wie Sie mit Data Governance Datennutzungsbezeichnungen auf Datensätze und Felder anwenden können.
+Das Data Governance-Framework in Platform bietet eine einheitliche Methode zur verantwortungsvollen Nutzung von Daten über alle Adobe-Lösungen, Dienste und Plattformen hinweg. Es koordiniert den systemischen Ansatz zur Erfassung, Kommunikation und Verwendung von Metadaten in der gesamten Adobe Experience Cloud. Dies wiederum hilft den Datenverantwortlichen bei der Beschriftung von Daten entsprechend den erforderlichen Marketing-Aktionen und den Einschränkungen, die diesen Daten aus diesen beabsichtigten Marketing-Aktionen auferlegt werden. Siehe Übersicht unter [Datennutzungsbezeichnungen](../../data-governance/labels/overview.md) Weitere Informationen dazu, wie Sie mit Data Governance Datennutzungsbezeichnungen auf Datensätze und Felder anwenden können.
 
 Es ist Best Practice, in jeder Phase der Journey auf die Datenkonformität hinzuarbeiten. Zu diesem Zweck sollten abgeleitete Datensätze, die Ad-hoc-Schemas verwenden, als Teil des Data Governance-Frameworks angemessen gekennzeichnet werden. Es gibt zwei Arten von abgeleiteten Datensätzen, die von Query Service gebildet werden: Datensätze, die ein Standardschema verwenden, und Datensätze, die ein Ad-hoc-Schema verwenden.
 
@@ -186,7 +186,7 @@ Es ist Best Practice, in jeder Phase der Journey auf die Datenkonformität hinzu
 >
 >Datensätze, die mit Query Service erstellt werden, werden als &quot;abgeleitete Datensätze&quot;bezeichnet.
 
-Da Ad-hoc-Schemata von einem einzelnen Benutzer für einen bestimmten Zweck erstellt werden, sind die XDM-Schemafelder für diesen bestimmten Datensatz benannt und nicht für die Verwendung in verschiedenen Datensätzen vorgesehen. Daher sind Ad-hoc-Schemata nicht standardmäßig in der Experience Platform-Benutzeroberfläche sichtbar. Obwohl es keinen Unterschied bei der Anwendung von Datennutzungsbezeichnungen zwischen Standard- und Ad-hoc-Schemata gibt, müssen von Query Service zum Zweck der Beschriftung erstellte Ad-hoc-Schemata zunächst in der Platform-Benutzeroberfläche sichtbar gemacht werden. Siehe Handbuch unter [Ermitteln von Ad-hoc-Schemata in der Platform-Benutzeroberfläche](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) für weitere Details.
+Da Ad-hoc-Schemata von einem einzelnen Benutzer für einen bestimmten Zweck erstellt werden, sind die XDM-Schemafelder für diesen bestimmten Datensatz benannt und nicht für die Verwendung in verschiedenen Datensätzen vorgesehen. Daher sind Ad-hoc-Schemata in der Experience Platform-Benutzeroberfläche standardmäßig nicht sichtbar. Obwohl es keinen Unterschied bei der Anwendung von Datennutzungsbezeichnungen zwischen Standard- und Ad-hoc-Schemata gibt, müssen von Query Service zum Zweck der Beschriftung erstellte Ad-hoc-Schemata zunächst in der Platform-Benutzeroberfläche sichtbar gemacht werden. Siehe Handbuch unter [Ermitteln von Ad-hoc-Schemata in der Platform-Benutzeroberfläche](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) für weitere Details.
 
 Nachdem Sie auf das Schema zugegriffen haben, können Sie [Beschriftungen auf einzelne Felder anwenden](../../xdm/tutorials/labels.md). Sobald ein Schema beschriftet wurde, übernehmen alle von diesem Schema abgeleiteten Datensätze diese Beschriftungen. Von hier aus können Sie Datennutzungsrichtlinien einrichten, die die Aktivierung bestimmter Bezeichnungen auf bestimmte Ziele beschränken können. Weitere Informationen finden Sie in der Übersicht unter [Datennutzungsrichtlinien](../../data-governance/policies/overview.md).
 

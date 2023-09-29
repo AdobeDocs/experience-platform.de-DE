@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Überblick über Adobe Experience Platform
 breadcrumb-title: Übersicht zu Experience Platform
 user-guide-description: Erfahren Sie, wie Sie Ihren Kunden mithilfe von Experience Platform in Echtzeit personalisierte Erlebnisse liefern können.
-source-git-commit: 65abbb4dde5b83f597a3a5bfd96ce7c081c88275
+source-git-commit: 73f10455233be9cc3f9f15a0fe5f0398ed987be9
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '281'
+ht-degree: 92%
 
 ---
 
@@ -66,7 +66,11 @@ ht-degree: 0%
          * [Ereignisse](./governance-privacy-security/audit-logs/api/events.md)
          * [Exportieren](./governance-privacy-security/audit-logs/api/export.md)
    * [Datenverschlüsselung](./governance-privacy-security/encryption.md)
-   * [Kundenverwaltete Schlüssel](./governance-privacy-security/customer-managed-keys.md)
+   * Kundenverwaltete Schlüssel {#customer-managed-keys}
+      * [Kundenverwaltete Schlüssel](./governance-privacy-security/customer-managed-keys/overview.md)
+      * [Konfigurieren eines Azure Key Vault](./governance-privacy-security/customer-managed-keys/azure-key-vault-config.md)
+      * [Einrichten von CMK mithilfe der API](./governance-privacy-security/customer-managed-keys/api-set-up.md)
+      * [Einrichten von CMK über die Benutzeroberfläche](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
 * Lizenznutzung und Leitlinien {#license}
    * [Best Practices für die Verwaltung von Daten im Rahmen von Lizenzberechtigungen](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Dashboard zur Lizenzverwendung](./license-usage-and-guardrails/license-usage-dashboard.md)
