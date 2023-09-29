@@ -3,10 +3,10 @@ keywords: Ziele;Ziel;Zieltypen
 title: Zieltypen und Kategorien
 description: Erfahren Sie mehr über die verschiedenen Zieltypen und -kategorien in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: d0a9ac77346bea585691feee958e8d3b27f3f746
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 72%
+source-wordcount: '717'
+ht-degree: 71%
 
 ---
 
@@ -24,7 +24,7 @@ Schließlich lassen sich Verbindungen auch zwischen öffentlichen Zielen untersc
 
 ## Verbindungen {#connections}
 
-**[!UICONTROL Profilexport]**, **[!UICONTROL Export von Streaming-Zielgruppen]** und **[!DNL Edge Personalization]** Ziele in Adobe Experience Platform erfassen Ereignisdaten, kombinieren sie mit anderen Datenquellen, um die [Echtzeit-Kundenprofil](../profile/home.md), wenden Sie die Segmentierung an und exportieren Sie Zielgruppen und qualifizierte Profile in Ziele.
+**[!UICONTROL Profilexport]**, **[!UICONTROL Export von Streaming-Zielgruppen]**, und **[!DNL Edge Personalization]** Ziele in Adobe Experience Platform erfassen Ereignisdaten, kombinieren sie mit anderen Datenquellen, um die [Echtzeit-Kundenprofil](../profile/home.md), wenden Sie die Segmentierung an und exportieren Sie Zielgruppen und qualifizierte Profile in Ziele.
 
 ## Profilexportziele {#profile-export}
 
@@ -55,7 +55,7 @@ Dateibasierte Ziele empfangen `.csv`-Dateien, die Profile und/oder Attribute ent
 
 ## Zielgruppenexport-Ziele streamen {#streaming-destinations}
 
-Zielgruppenexport-Ziele erhalten Zielgruppendaten der Experience Platform. Diese Ziele verwenden Zielgruppen-IDs oder Benutzer-IDs. Werbung und Social-Media-Ziele wie [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) oder [Facebook](catalog/social/facebook.md) sind Beispiele für solche Ziele.
+Zielgruppenexport-Ziele erhalten Experience Platform-Zielgruppendaten. Diese Ziele verwenden Zielgruppen-IDs oder Benutzer-IDs. Werbung und Social-Media-Ziele wie [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) oder [Facebook](catalog/social/facebook.md) sind Beispiele für solche Ziele.
 
 ## Edge-Personalisierungsziele {#edge-personalization-destinations}
 
@@ -69,7 +69,7 @@ Im folgenden Video werden Sie durch die Besonderheiten der beiden Zieltypen gef�
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
-## (Beta) Ziele für Datensatzexporte {#dataset-export-destinations}
+## Datensatzexport-Ziele {#dataset-export-destinations}
 
 Einige Cloud-Speicherziele im Zielkatalog unterstützen Datensatzexporte. Verwenden Sie diese Ziele, um Rohdatensätze an Cloud-Speicherorte zu exportieren.
 

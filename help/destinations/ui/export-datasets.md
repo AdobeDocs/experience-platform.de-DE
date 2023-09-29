@@ -1,26 +1,65 @@
 ---
-title: (Beta) Exportieren von Datensätzen an Cloud-Speicher-Ziele
+title: Exportieren von Datensätzen an Cloud-Speicher-Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Datensätze aus Adobe Experience Platform in Ihren bevorzugten Cloud-Speicher exportieren.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: 85bc1f0af608a7b5510bd0b958122e9db10ee27a
 workflow-type: tm+mt
-source-wordcount: '1421'
-ht-degree: 82%
+source-wordcount: '1754'
+ht-degree: 59%
 
 ---
 
-# (Beta) Exportieren von Datensätzen an Cloud-Speicher-Ziele
+# Exportieren von Datensätzen an Cloud-Speicher-Ziele
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->* Die Funktion zum Export von Datensätzen befindet sich derzeit in der Beta-Phase und steht nicht allen Nutzern zur Verfügung. Dokumentation und Funktionalitäten können sich ändern.
->* Diese Beta-Funktion unterstützt den Export von Daten der ersten Generation, wie er in der [Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) der Real-time Customer Data Platform definiert ist.
->* Diese Funktion steht Kunden zur Verfügung, die das Prime- oder das Ultimate-Paket von Real-Time CDP erworben haben. Wenden Sie sich für weitere Informationen an Ihren Kundenbetreuer.
+>* Diese Funktion steht Kunden zur Verfügung, die das Real-Time CDP Prime- oder Ultimate-Package, Adobe Journey Optimizer oder Customer Journey Analytics erworben haben. Wenden Sie sich für weitere Informationen an Ihren Adobe-Support-Mitarbeiter.
 
 In diesem Artikel wird der Workflow erläutert, der zum Exportieren erforderlich ist [Datensätze](/help/catalog/datasets/overview.md) von Adobe Experience Platform zu Ihrem bevorzugten Cloud-Speicher, z. B. [!DNL Amazon S3], SFTP-Speicherorten oder [!DNL Google Cloud Storage] durch Verwendung der Experience Platform-Benutzeroberfläche.
 
 Sie können auch die Experience Platform-APIs verwenden, um Datensätze zu exportieren. Lesen Sie die [API-Tutorial zum Exportieren von Datensätzen](/help/destinations/api/export-datasets.md) für weitere Informationen.
+
+## Für den Export verfügbare Datensätze {#datasets-to-export}
+
+Die Datensätze, die Sie exportieren können, variieren je nach Experience Platform-App (Real-Time CDP, Adobe Journey Optimizer), Ebene (Prime oder Ultimate) und den von Ihnen gekauften Add-ons (z. B. Data Distiller).
+
+Machen Sie sich mit der Tabelle vertraut, welche Datensatztypen Sie je nach Anwendung, Produktstufe und gekauften Add-ons exportieren können:
+
+<table>
+<thead>
+  <tr>
+    <th>Anwendung/Add-on</th>
+    <th>Ebene</th>
+    <th>Für den Export verfügbare Datensätze</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="2">Real-Time CDP</td>
+    <td>Prime</td>
+    <td>Profil- und Erlebnisereignis-Datensätze, die in der Experience Platform-Benutzeroberfläche erstellt wurden, nachdem Daten über Quellen, Web SDK, Mobile SDK, Analytics Data Connector und Audience Manager erfasst oder erfasst wurden.</td>
+  </tr>
+  <tr>
+    <td>Ultimate</td>
+    <td><ul><li>Profil- und Erlebnisereignis-Datensätze, die in der Experience Platform-Benutzeroberfläche erstellt wurden, nachdem Daten über Quellen, Web SDK, Mobile SDK, Analytics Data Connector und Audience Manager erfasst oder erfasst wurden.</li><li> Systemgenerierte Datensätze wie die <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=en#profile-attribute-datasets">Profil-Snapshot-Datensatz</a>.</li></td>
+  </tr>
+  <tr>
+    <td rowspan="2">Adobe Journey Optimizer</td>
+    <td>Prime</td>
+    <td>Siehe Abschnitt <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=de"> Adobe Journey Optimizer</a> Dokumentation. (Aktualisierung des Deep-Links zur AJO-Tabelle oder -Abschnitt für unterstützte Datensätze)</td>
+  </tr>
+  <tr>
+    <td>Ultimate</td>
+    <td>Siehe Abschnitt <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=de"> Adobe Journey Optimizer</a> Dokumentation. (Aktualisierung des Deep-Links zur AJO-Tabelle oder -Abschnitt für unterstützte Datensätze)</td>
+  </tr>
+  <tr>
+    <td>Data Distiller</td>
+    <td>Data Distiller (Add-on)</td>
+    <td>Abgeleitete Datensätze, die über Query Service erstellt wurden.</td>
+  </tr>
+</tbody>
+</table>
 
 ## Unterstützte Ziele {#supported-destinations}
 
@@ -40,9 +79,9 @@ Derzeit können Sie Datensätze zu den im Screenshot hervorgehobenen und unten a
 Einige dateibasierte Ziele im Experience Platform-Katalog unterstützen sowohl die Aktivierung der Zielgruppe als auch den Export von Datensätzen.
 
 * Ziehen Sie die Aktivierung von Zielgruppen in Erwägung, wenn Ihre Daten in Profile strukturiert sein sollen, die nach Zielgruppeninteressen oder Qualifikationen gruppiert sind.
-* Alternativ können Sie Datensatzexporte in Betracht ziehen, wenn Sie Rohdatensätze exportieren möchten, die nicht nach Zielgruppeninteressen oder Qualifikationen gruppiert oder strukturiert sind. Sie können diese Daten für Berichte, Datenwissenschaft-Workflows, Compliance-Anforderungen und viele andere Anwendungsfälle verwenden.
+* Alternativ können Sie Datensatzexporte in Betracht ziehen, wenn Sie Rohdatensätze exportieren möchten, die nicht nach Zielgruppeninteressen oder Qualifikationen gruppiert oder strukturiert sind. Sie können diese Daten für Berichte, Datenwissenschaft-Workflows und viele andere Anwendungsfälle verwenden. Als Administrator, Data Engineer oder Analyst können Sie beispielsweise Daten von Experience Platform exportieren, um sie mit Ihrem Data Warehouse zu synchronisieren, in BI-Analyse-Tools oder externen Cloud ML-Tools verwenden oder in Ihrem System speichern, um langfristige Speicheranforderungen zu erfüllen.
 
-Dieses Dokument enthält alle Informationen, die zum Exportieren von Datensätzen erforderlich sind. Wenn Sie Zielgruppen für Cloud-Speicher- oder E-Mail-Marketing-Ziele aktivieren möchten, lesen Sie [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](/help/destinations/ui/activate-batch-profile-destinations.md).
+Dieses Dokument enthält alle Informationen, die zum Exportieren von Datensätzen erforderlich sind. Wenn Sie *Zielgruppen* zu Cloud-Speicher- oder E-Mail-Marketing-Zielen lesen [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ## Voraussetzungen {#prerequisites}
 
@@ -50,7 +89,7 @@ Um Datensätze in Cloud-Speicher-Ziele zu exportieren, müssen Sie erfolgreich [
 
 ### Erforderliche Berechtigungen {#permissions}
 
-Zum Exportieren von Datensätzen benötigen Sie die **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Verwalten und Aktivieren von Datensatzzielen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+Zum Exportieren von Datensätzen benötigen Sie die **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Anzeigen von Datensätzen]**, und **[!UICONTROL Verwalten und Aktivieren von Datensatzzielen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um sicherzustellen, dass Sie über die erforderlichen Berechtigungen zum Exportieren von Datensätzen verfügen und dass das Ziel den Export von Datensätzen unterstützt, durchsuchen Sie den Zielkatalog. Wenn ein Ziel über die Steuerung **[!UICONTROL Aktivieren]** oder **[!UICONTROL Datensätze exportieren]** verfügt, dann haben Sie die entsprechenden Berechtigungen.
 
@@ -106,7 +145,7 @@ Die Option **[!UICONTROL Inkrementelle Dateien exportieren]** ist automatisch au
 
 2. Verwenden Sie den **[!UICONTROL Zeitselektor]** zur Auswahl der Tageszeit im Format [!DNL UTC], zu der der Export erfolgen soll.
 
-3. Verwenden Sie den **[!UICONTROL Datumsselektor]**, um das Intervall auszuwählen, in dem der Export stattfinden soll. Beachten Sie, dass es in der Betaversion der Funktion nicht möglich ist, ein Enddatum für die Exporte festzulegen. Weitere Informationen finden Sie im Abschnitt [Bekannte Einschränkungen](#known-limitations).
+3. Verwenden Sie den **[!UICONTROL Datumsselektor]**, um das Intervall auszuwählen, in dem der Export stattfinden soll. Beachten Sie, dass Sie derzeit kein Enddatum für die Exporte festlegen können. Weitere Informationen finden Sie im Abschnitt [Bekannte Einschränkungen](#known-limitations).
 
 4. Klicken Sie auf **[!UICONTROL Weiter]**, um den Zeitplan zu speichern, und fahren Sie mit dem Schritt **[!UICONTROL Überprüfen]** fort.
 
@@ -169,12 +208,23 @@ Gehen Sie wie folgt vor, um einen Datensatz aus einem vorhandenen Datenfluss zu 
 
    ![Dialogfeld mit der Option „Löschen des Datensatzes aus dem Datenfluss bestätigen“.](../assets/ui/export-datasets/remove-dataset-confirm.png)
 
+
+## Berechtigungen für den Datensatzexport {#licensing-entitlement}
+
+In den Produktbeschreibungsdokumenten erfahren Sie, wie viele Daten Sie pro Experience Platform-Anwendung exportieren können. Sie können beispielsweise die Real-Time CDP-Produktbeschreibung anzeigen [here](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+
+Beachten Sie, dass die Berechtigungen für Datenexporte für verschiedene Anwendungen nicht additiv sind. Wenn Sie beispielsweise Real-Time CDP Ultimate und Adobe Journey Optimizer Ultimate erwerben, ist die Profilexportberechtigung gemäß den Produktbeschreibungen die größere der beiden Berechtigungen. Ihre Volumenberechtigungen werden berechnet, indem Sie die Gesamtzahl der lizenzierten Profile mit 500 KB für Real-Time CDP Prime oder 700 KB für Real-Time CDP Ultimate multiplizieren, um festzustellen, zu welchem Datenvolumen Sie berechtigt sind.
+
+Wenn Sie hingegen Add-ons wie Data Distiller erwerben, stellt die Datenexport-Beschränkung, zu der Sie berechtigt sind, die Summe der Produktebene und des Add-ons dar.
+
+Sie können Ihre Profilexporte anhand Ihrer vertraglichen Beschränkungen im Lizenzierungs-Dashboard anzeigen und verfolgen.
+
 ## Bekannte Einschränkungen {#known-limitations}
 
-Beachten Sie die folgenden Einschränkungen für die Betaversion von Datensatzexporten:
+Beachten Sie die folgenden Einschränkungen für die allgemeine Verfügbarkeit von Datensatzexporten:
 
-* Es gibt derzeit eine einzige Berechtigung (**[!UICONTROL Datensatzziele verwalten und aktivieren]**), welche die Berechtigungen zum Verwalten und Aktivieren von Datensatzzielen beinhaltet. Diese Steuerelemente werden in Zukunft in detailliertere Berechtigungen aufgeteilt. Im Abschnitt [Erforderliche Berechtigungen](#permissions) finden Sie eine vollständige Liste der Berechtigungen, die Sie zum Exportieren von Datensätzen benötigen.
 * Derzeit können Sie nur inkrementelle Dateien exportieren, und für Ihre Datensatzexporte kann kein Enddatum ausgewählt werden.
 * Die Namen von exportierten Dateien können derzeit nicht angepasst werden.
+* Über API erstellte Datensätze können derzeit nicht exportiert werden.
 * Die Benutzeroberfläche hindert Sie derzeit nicht daran, einen Datensatz zu löschen, während er an ein Ziel exportiert wird. Löschen Sie keine Datensätze, während sie an Ziele exportiert werden. [Entfernen Sie den Datensatz](#remove-dataset) aus einem Ziel-Datenfluss, bevor Sie ihn löschen.
 * Überwachungsmetriken für Datensatzexporte werden derzeit mit Zahlen für Profilexporte gemischt, sodass sie nicht die tatsächlichen Exportzahlen widerspiegeln.
