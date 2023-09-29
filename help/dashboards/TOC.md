@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Dashboards-Hilfe
 breadcrumb-title: Anleitung zu Dashboards
 user-guide-description: Erfahren Sie, wie Sie Daten in Experience Platform über anpassbare Dashboards visualisieren können.
 feature: Dashboards
-source-git-commit: c1ad20def39ef58253e8486ca4dcfcce2501510b
+source-git-commit: ea9cfa38ae861fd5003bea55b17a473aaf2979d5
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 78%
+source-wordcount: '85'
+ht-degree: 94%
 
 ---
 
@@ -21,11 +21,10 @@ ht-degree: 78%
 * [Herunterladen von Dashboards als PDF](download.md)
 * Verfügbare Dashboards {#guides}
    * [Profile](guides/profiles.md)
-   * [Account-Profile](guides/account-profiles.md)
+   * [Kontoprofile](guides/account-profiles.md)
    * [Zielgruppen](guides/audiences.md)
    * [Ziele](guides/destinations.md)
    * [Lizenznutzung](guides/license-usage.md)
-   * [Lizenzverwendung (begrenzte Version)](guides/license-usage-limited.md)
 * Anpassen von Dashboards {#customize}
    * [Anpassung – Übersicht](customize/overview.md)
    * [Ändern von Dashboards](customize/modify.md)
@@ -38,5 +37,5 @@ ht-degree: 78%
 * Anwendungsintegrationen {#integrations}
    * [Power BI](integrations/power-bi.md)
 * [Abfrage-Dashboard-Datensätze](query.md)
-* [Real-time Customer Data Platform Insights-Datenmodell](cdp-insights-data-model.md)
+* [Insights-Datenmodell von Real-Time Customer Data Platform](cdp-insights-data-model.md)
 * [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
