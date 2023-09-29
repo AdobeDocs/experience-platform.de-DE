@@ -1,9 +1,9 @@
 ---
 title: On-Demand-Aufnahme für Datenflüsse zu Quellen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Experience Platform-Benutzeroberfläche Datenflüsse bei Bedarf für Ihre Quellverbindungen erstellen.
-source-git-commit: ce1e6c08d1e53346c11f9746cea524689f402031
+source-git-commit: cea12160656ba0724789db03e62213022bacd645
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '499'
 ht-degree: 11%
 
 ---
@@ -44,9 +44,9 @@ Konfigurieren Sie den Zeitplan Ihrer On-Demand-Erfassung. Wählen Sie die **[!UI
 
 | Planungskonfiguration | Beschreibung |
 | --- | --- |
-| [!UICONTROL Startzeit der Aufnahme] | Die geplante Startzeit in UTC des Zeitpunkts, zu dem der On-Demand-Datenfluss beginnt. |
-| [!UICONTROL Startzeit des Datumsbereichs] | Das Anfangsdatum und die Startzeit, von der Daten abgerufen werden. |
-| [!UICONTROL Endzeit des Datumsbereichs] | Das Enddatum und die Endzeit, von denen Daten abgerufen werden, bis. |
+| [!UICONTROL Startzeit der Aufnahme] | Die geplante Zeit, zu der der On-Demand-Fluss beginnt. |
+| [!UICONTROL Startzeit des Datumsbereichs] | Das früheste Datum und die früheste Uhrzeit, aus der Daten abgerufen werden. |
+| [!UICONTROL Endzeit des Datumsbereichs] | Datum und Uhrzeit des Abrufs der Daten. |
 
 Auswählen **[!UICONTROL Zeitplan]** und lassen Sie einige Augenblicke für Ihren On-Demand-Datenfluss zu Trigger zu.
 

@@ -1,20 +1,16 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Flow Service;
-title: (Beta) Erstellen eines Flusslaufs für die On-Demand-Aufnahme mithilfe der Flow Service-API
-description: In diesem Tutorial werden die Schritte zum Erstellen eines Flusslaufs für die On-Demand-Erfassung mithilfe der Flow Service-API beschrieben.
+title: Erstellen eines Flusslaufs für die On-Demand-Erfassung mithilfe der Flow Service-API
+description: Erfahren Sie, wie Sie mithilfe der Flow Service-API einen Flusslauf für die On-Demand-Erfassung erstellen.
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 795b1af6421c713f580829588f954856e0a88277
+source-git-commit: cea12160656ba0724789db03e62213022bacd645
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '801'
 ht-degree: 14%
 
 ---
 
-# (Beta) Erstellen Sie einen Flusslauf für die On-Demand-Erfassung mithilfe der [!DNL Flow Service] API
-
->[!IMPORTANT]
->
->Die On-Demand-Erfassung befindet sich derzeit in der Beta-Phase und Ihr Unternehmen hat möglicherweise noch keinen Zugriff darauf. Die in dieser Dokumentation beschriebene Funktionalität kann sich ändern.
+# Erstellen Sie einen Workflow für die On-Demand-Erfassung mit dem [!DNL Flow Service] API
 
 Flussläufe stellen eine Instanz der Flussausführung dar. Wenn beispielsweise ein Fluss planmäßig um 9:00 Uhr, 10:00 Uhr und 11:00 Uhr ausgeführt wird, haben Sie drei Instanzen eines Flusslaufs. Flussläufe sind spezifisch für Ihre jeweilige Organisation.
 
@@ -43,7 +39,7 @@ Um einen Fluss für eine tabellenbasierte Quelle zu erstellen, stellen Sie eine 
 
 >[!TIP]
 >
->Tabellenbasierte Quellen umfassen die folgenden Quellkategorien: Werbung, Analysen, Einverständnis und Präferenzen, CRMs, Kundenerfolg, Datenbank, Marketing-Automatisierung, Zahlungen und Protokolle.
+>Zu den tabellenbasierten Quellen gehören die folgenden Quellkategorien: Werbung, Analysen, Zustimmung und Voreinstellungen, CRMs, Kundenerfolg, Datenbank, Marketing-Automatisierung, Zahlungen und Protokolle.
 
 **API-Format**
 
@@ -83,9 +79,9 @@ curl -X POST \
 | Parameter | Beschreibung |
 | --- | --- |
 | `flowId` | Die ID des Flusses, mit dem der Fluss erstellt wird. |
-| `params.startTime` | Eine Ganzzahl, die die Startzeit der Ausführung definiert. Der Wert wird in Unix Epochenzeit dargestellt. |
-| `params.windowStartTime` | Eine Ganzzahl, die die Startzeit des Fensters definiert, während dem Daten abgerufen werden sollen. Der Wert wird in Unix-Zeit dargestellt. |
-| `params.windowEndTime` | Eine Ganzzahl, die die Endzeit des Fensters definiert, während dem Daten abgerufen werden sollen. Der Wert wird in Unix-Zeit dargestellt. |
+| `params.startTime` | Die geplante Zeit, zu der der On-Demand-Fluss beginnt. Dieser Wert wird in Unix-Zeit dargestellt. |
+| `params.windowStartTime` | Das früheste Datum und die früheste Uhrzeit, aus der Daten abgerufen werden. Dieser Wert wird in Unix-Zeit dargestellt. |
+| `params.windowEndTime` | Datum und Uhrzeit des Abrufs der Daten. Dieser Wert wird in Unix-Zeit dargestellt. |
 | `params.deltaColumn` | Die Delta-Spalte ist erforderlich, um die Daten zu partitionieren und neu aufgenommene Daten von historischen Daten zu trennen. **Hinweis**: Die `deltaColumn` wird nur bei der Erstellung des ersten Durchlaufs benötigt. |
 | `params.deltaColumn.name` | Der Name der Delta-Spalte. |
 
@@ -165,9 +161,9 @@ curl -X POST \
 | Parameter | Beschreibung |
 | --- | --- |
 | `flowId` | Die ID des Flusses, mit dem der Fluss erstellt wird. |
-| `params.startTime` | Eine Ganzzahl, die die Startzeit der Ausführung definiert. Der Wert wird in Unix Epochenzeit dargestellt. |
-| `params.windowStartTime` | Eine Ganzzahl, die die Startzeit des Fensters definiert, während dem Daten abgerufen werden sollen. Der Wert wird in Unix-Zeit dargestellt. |
-| `params.windowEndTime` | Eine Ganzzahl, die die Endzeit des Fensters definiert, während dem Daten abgerufen werden sollen. Der Wert wird in Unix-Zeit dargestellt. |
+| `params.startTime` | Die geplante Zeit, zu der der On-Demand-Fluss beginnt. Dieser Wert wird in Unix-Zeit dargestellt. |
+| `params.windowStartTime` | Das früheste Datum und die früheste Uhrzeit, aus der Daten abgerufen werden. Dieser Wert wird in Unix-Zeit dargestellt. |
+| `params.windowEndTime` | Datum und Uhrzeit des Abrufs der Daten. Dieser Wert wird in Unix-Zeit dargestellt. |
 
 **Antwort**
 
@@ -192,4 +188,4 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Flusslaufs zurück
 
 ## Überwachen der Durchsatzabläufe
 
-Nach der Erstellung des Flusslaufs können Sie die erfassten Daten überwachen, um Informationen über die Durchlaufvorgänge, den Abschlussstatus und Fehler anzuzeigen. Informationen zum Überwachen Ihrer Flussläufe mithilfe der API finden Sie im Tutorial zu [Überwachen von Datenflüssen in der API ](./monitor.md). Informationen zum Überwachen Ihrer Flussläufe mithilfe der Platform-Benutzeroberfläche finden Sie im Handbuch unter [Überwachen von Datenflüssen zu Quellen mithilfe des Monitoring-Dashboards](../../../dataflows/ui/monitor-sources.md).
+Nach der Erstellung des Flusslaufs können Sie die erfassten Daten überwachen, um Informationen über die Durchlaufvorgänge, den Abschlussstatus und Fehler anzuzeigen. Informationen zum Überwachen Ihrer Flussläufe mithilfe der API finden Sie im Tutorial zu [Überwachen von Datenflüssen in der API](./monitor.md). Informationen zum Überwachen Ihrer Flussläufe mithilfe der Platform-Benutzeroberfläche finden Sie im Handbuch unter [Datenflüsse von Quellen mithilfe des Monitoring-Dashboards überwachen](../../../dataflows/ui/monitor-sources.md).
