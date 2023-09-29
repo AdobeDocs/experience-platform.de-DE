@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise September 2023 zu Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c57845ab2bd9ce16fb34b6babfa90a393b101409
+source-git-commit: b20e5e52b9d7568f4e20b94064819d0bebe4c236
 workflow-type: tm+mt
-source-wordcount: '1308'
-ht-degree: 28%
+source-wordcount: '2149'
+ht-degree: 31%
 
 ---
 
@@ -20,9 +20,14 @@ Neue Funktionen in Adobe Experience Platform:
 Aktualisierungen vorhandener Funktionen in Experience Platform:
 
 - [Warnhinweise](#alerts)
+- [Dashboards](#dashboards)
 - [Datenerfassung](#data-collection)
+- [Data Governance](#data-governance)
+- [Datenhygiene](#hygiene)
 - [Ziele](#destinations)
+- [Experience-Datenmodell (XDM)](#xdm)
 - [Identity Service](#identity-service)
+- [Abfrage-Service](#query-service)
 - [Segmentierungs-Service](#segmentation)
 - [Quellen](#sources)
 
@@ -44,6 +49,18 @@ Mit Experience Platform können Sie ereignisbasierte Warnhinweise zu Adobe Exper
 
 Weitere Informationen zu Warnungen finden Sie im Abschnitt [[!DNL Observability Insights] Übersicht](../../observability/home.md).
 
+## Dashboards {#dashboards}
+
+Adobe Experience Platform bietet mehrere [!DNL dashboards], in denen basierend auf täglichen Schnappschüssen wichtige Informationen zu den Unternehmensdaten dargestellt werden.
+
+| Funktion | Beschreibung |
+| --- | --- |
+| [Verbesserung des Lizenzverwendungs-Dashboards](../../dashboards/guides/license-usage.md) | Verwalten Sie die Kontrolle über Ihre Lizenzvereinbarungen mit verbesserten Berichten und wichtigen Metrikvisualisierungen bezüglich der Lizenznutzung in Ihrem Unternehmen. Diese Verbesserungen bieten eine hohe Granularität gegenüber den Metriken zur Lizenznutzung für alle Experience Platform-Produkte, die Sie erworben haben. |
+
+{style="table-layout:auto"}
+
+Weitere Informationen zum Dashboard zur Lizenznutzung finden Sie im Abschnitt [Übersicht über das Lizenz-Nutzungs-Dashboard](../../dashboards/guides/destinations.md).
+
 ## Datenerfassung {#data-collection}
 
 Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kundenerlebnisdaten erfassen und an das Adobe Experience Platform Edge Network senden können, wo sie angereichert und transformiert und an Adobe- oder Drittanbieter-Ziele weitergegeben werden können.
@@ -58,6 +75,35 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 {style="table-layout:auto"}
 
 Weitere Informationen zur Datenerfassung finden Sie im Abschnitt [Datenerfassung - Übersicht](../../tags/home.md).
+
+## Data Governance {#data-governance}
+
+Adobe Experience Platform Data Governance besteht aus einer Reihe von Strategien und Technologien zur Verwaltung von Kundendaten sowie zur Gewährleistung der Einhaltung von Vorschriften, Beschränkungen und Datennutzungsrichtlinien. Die Funktion spielt in Experience Platform auf verschiedenen Ebenen eine wichtige Rolle, wie z. B. bei Katalogisierung, Bestimmung der Datenherkunft, Datennutzungsbezeichnung, Datenzugriffsrichtlinien und Zugriffskontrolle für Daten bei Marketing-Aktionen.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Neue Partner Ecosystem-Beschriftungen für Drittanbieterdaten | Es stehen neue Datennutzungsbezeichnungen für die Anreicherung und Prospektion durch Drittanbieter zur Verfügung. Siehe [Dokumentation zu Partner Ecosystem-Beschriftungen](../../data-governance/labels/reference.md#partner) für weitere Informationen. |
+
+{style="table-layout:auto"}
+
+Weitere Informationen zu Data Governance finden Sie im Abschnitt [Data Governance – Übersicht](../../data-governance/home.md).
+
+## Datenhygiene {#hygiene}
+
+Experience Platform bietet eine Reihe von Funktionen zur Datenhygiene, mit denen Sie Ihre gespeicherten Daten durch programmatische Löschungen der Datensätze von Privatkund*innen verwalten können. Verwenden Sie entweder [!UICONTROL Lebenszyklus der Daten] Workspace in der Benutzeroberfläche oder durch Aufrufe der Data Hygiene API können Sie Ihre Datenspeicher effektiv verwalten. Verwenden Sie diese Funktionen, um sicherzustellen, dass Informationen erwartungsgemäß verwendet, aktualisiert werden, wenn falsche Datenanforderungen behoben werden müssen, und gelöscht wird, wenn organisatorische Richtlinien dies für erforderlich halten.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} | Verwalten Sie Ihren Datenlebenszyklus in allen Datenspeichern, um Kundenverpflichtungen und Lizenzvereinbarungen mit erweiterten Funktionen für die Datenlebenszyklusverwaltung in Adobe Experience Platform zu erfüllen: automatisierter Datensatzablauf und Löschung von Datensätzen.<br>Mit automatisiertem Datensatzablauf können Sie komplette Datensätze löschen und ein Datum und eine Uhrzeit für das Löschen des Datensatzes festlegen.<br>Das Löschen von Datensätzen ermöglicht es Ihnen, einzelne Verbraucherprofile durch Zielgruppenbestimmung ihrer primären Identitäten zu löschen. Sie können die primären Identitäten einzeln über die Benutzeroberfläche oder per CSV/JSON-Datei-Upload bereitstellen. Siehe [Dokumentation zum Löschen von Datensätzen](../../hygiene/ui/record-delete.md) für weitere Informationen |
+| Datensatzgültigkeiten | Minimieren Sie Ihre Daten und behalten Sie die Kontrolle über Ihre Lizenzvereinbarungen mit automatisiertem Datensatzablauf. Reduzieren Sie das Datenvolumen, indem Sie ganze Datensätze löschen und ein Datum und eine Uhrzeit für das Löschen des Datensatzes festlegen. Siehe [Dokumentation zu Datensatzabläufen](../../hygiene/ui/dataset-expiration.md) für weitere Informationen. |
+
+{style="table-layout:auto"}
+
+Weiterführende Informationen zu den Datenhygiene-Funktionen von Platform finden Sie in der [Übersicht zur Datenhygiene](../../hygiene/home.md).
 
 ## Ziele {#destinations}
 
@@ -98,6 +144,23 @@ Add these to release notes as they go out
 
 Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
+## Experience-Datenmodell (XDM) {#xdm}
+
+XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definitionen (Schemas) für Daten bereitstellt, die in Adobe Experience Platform importiert werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Schnellaktionen im Schema Editor hinzugefügt | Der Arbeitsfläche des Schema-Editors wurden neue Schnellaktionen hinzugefügt. Sie können jetzt die JSON-Struktur kopieren oder das Schema direkt aus dem Editor löschen.<br>![Die Schnellaktionen im Schema-Editor.](../2023/assets/schema-editor-copy-json.png "Der Schemaeditor mit hervorgehobenen Optionen &quot;Mehr&quot;und &quot;In JSON kopieren&quot;."){width="100" zoomable="yes"} |
+| Filtern von XDM-Ressourcen nach benutzerdefinierten oder standardmäßigen Erstellern | Die Listen der verfügbaren Schemas, Feldergruppen, Datentypen und Klassen werden nun nach ihrer Erstellungsmethode vorab gefiltert. Auf diese Weise können Sie Ressourcen danach filtern, ob sie von Adobe erstellt oder benutzerdefiniert wurden.<br>![Die Standardfilter und benutzerdefinierten Filter im Arbeitsbereich &quot;Schemas&quot;.](../2023/assets/standard-and-custom-classes.png "Der Arbeitsbereich &quot;Schemas&quot;mit hervorgehobenen Standard- und benutzerdefinierten Filtern."){width="100" zoomable="yes"} <br> Siehe [Dokumentation zum Erstellen und Bearbeiten von Ressourcen](../../xdm/ui/resources/classes.md#filter.md) für weitere Informationen. |
+
+**Aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Aktualisierter Workflow für die Schemaerstellung | Es wurde ein neuer Workflow zur Schemaerstellung implementiert, um den Prozess zu optimieren. <br> ![Die neue Benutzeroberfläche für die Schemaerstellung.](../2023/assets/schema-class-options.png "Die neue Auswahl für Schemadetails wurde hervorgehoben."){width="100" zoomable="yes"} <br> Siehe [Dokumentation zur Schemaerstellung](../../xdm/ui/resources/schemas.md#create) für weitere Informationen. |
+
 ## Identity Service {#identity-service}
 
 Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihre Kundinnen und Kunden und deren Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle und persönliche digitale Erlebnisse sorgen.
@@ -112,6 +175,21 @@ Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren 
 {style="table-layout:auto"}
 
 Weitere Informationen zu Identity Service finden Sie im Abschnitt [Identity Service - Übersicht](../../identity-service/home.md).
+
+## Query Service {#query-service}
+
+Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von Daten in Adobe Experience Platform [!DNL Data Lake]. Sie können beliebige Datensätze aus dem [!DNL Data Lake] verbinden und die Abfrageergebnisse als neuen Datensatz für die Verwendung in Berichten, im Datenwissenschafts-Arbeitsbereich oder für die Aufnahme in das Echtzeit-Kundenprofil verwenden.
+
+**Aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Aktualisierungen der Benutzeroberfläche für die Protokollfilterung | Die verbesserte Filterung von Abfrageprotokollen verbessert die Sichtbarkeit für benutzergenerierte Protokolle zur Überwachung, Verwaltung und Fehlerbehebung. Sie können die Liste der Abfrageprotokolle anhand verschiedener Einstellungen filtern. <br> ![Die Filtereinstellungen des Abfrageprotokolls.](../2023/assets/log-filter-settings.png "Neue Abfrageprotokollfilter werden hervorgehoben."){width="100" zoomable="yes"}  <br> Siehe [Dokumentation zu Abfrageprotokollen](../../query-service/ui/query-logs.md#filter-logs) für weitere Informationen. |
+| Mehrere UI-Aktualisierungen des Abfrage-Editors | Sie können jetzt mehrere sequenzielle Abfragen im Abfrage-Editor ausführen oder mehr als eine Abfrage schreiben und alle Abfragen sequenziell ausführen. Um Ihre Abfrageausführung flexibler zu gestalten, können Sie Ihre ausgewählte Abfrage markieren und diese Abfrage unabhängig von den anderen auswählen. Siehe [Anleitung zur Benutzeroberfläche des Abfrage-Editors](../../query-service/ui/user-guide.md#execute-multiple-sequential-queries) für weitere Informationen. |
+
+{style="table-layout:auto"}
+
+Weitere Informationen über Abfrage-Services finden Sie unter [Abfrage-Service – Übersicht](../../query-service/home.md).
 
 ## Segmentierungs-Service {#segmentation}
 
