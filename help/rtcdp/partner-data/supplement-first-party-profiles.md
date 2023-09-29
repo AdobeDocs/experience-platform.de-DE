@@ -1,10 +1,10 @@
 ---
 title: Ergänzen von Erstanbieterprofilen mit von Partnern bereitgestellten Attributen
 description: Erfahren Sie, wie Sie Erstanbieterprofile mit Attributen vertrauenswürdiger Datenpartner ergänzen, um Ihre Datengrundlage zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.
-source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '1091'
-ht-degree: 94%
+source-wordcount: '1110'
+ht-degree: 93%
 
 ---
 
@@ -30,6 +30,12 @@ Wenn Sie Ihre eigenen Erstanbieterprofile mit Attributen von Datenpartnern ergä
 >[!WARNING]
 >
 >Die zusätzlichen von den Partnern bereitgestellten Attribute, die in Real-Time CDP aufgenommen werden, wirken sich auf Ihren *durchschnittlichen Profilumfang* aus. Weitere Informationen zum Profilumfang finden Sie in der [Real-time Customer Data Platform-Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html).
+
+## Videoeinführung {#video-walkthrough}
+
+Sehen Sie sich das Video-Tutorial unten an, um sich einen Überblick darüber zu verschaffen, wie Erstanbieter-Zielgruppen mit von Partnern bereitgestellten Attributen ergänzt werden:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
 
 ## Erreichen des Anwendungsfalls: Allgemeine Übersicht {#achieve-the-use-case-high-level}
 

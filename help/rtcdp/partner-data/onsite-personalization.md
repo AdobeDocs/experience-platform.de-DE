@@ -1,10 +1,10 @@
 ---
 title: Verwenden der partnergestützten Besuchererkennung zur Personalisierung von Onsite-Erlebnissen
 description: Erfahren Sie, wie Sie mit der partnergestützten Besuchererkennung personalisierte Onsite-Erlebnisse für Ihre Besucherinnen und Besucher bereitstellen können.
-source-git-commit: 9d7e8ef99a42e804896f5c9befcf98bb1c010606
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '2530'
-ht-degree: 98%
+source-wordcount: '2548'
+ht-degree: 97%
 
 ---
 
@@ -49,6 +49,12 @@ Um dieses Anwendungsbeispiel erfolgreich zu implementieren, müssen Sie mehrere 
    * [Edge-Segmentierung](/help/segmentation/ui/edge-segmentation.md)
    * [Edge-Personalisierungsziele](/help/destinations/destination-types.md#edge-personalization-destinations)
    * [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) (oder eine von Ihnen ausgewählte Personalisierungsplattform. In diesem Anwendungsbeispiel wird Adobe Target als Personalisierungs-Engine hervorgehoben)
+
+## Videoeinführung {#video-walkthrough}
+
+Sehen Sie sich das Video-Tutorial unten an, um eine exemplarische Vorgehensweise zum Personalisieren von Onsite-Erlebnissen für unbekannte Besucher zu erhalten:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
 
 ## Erreichen des Anwendungsfalls: Allgemeine Übersicht {#achieve-the-use-case-high-level}
 

@@ -1,10 +1,10 @@
 ---
 title: Engagieren und Akquirieren neuer Kundinnen und Kunden durch Anwendungsfälle für die Kundengewinnung
 description: Erfahren Sie, wie Sie neue Kundinnen und Kunden durch Anwendungsfälle für die Prospektion, ermöglicht durch die Unterstützung von Partnerdaten in Real-Time CDP, ansprechen und gewinnen können.
-source-git-commit: 5352b461be3684ac4fe1703c916b9ec59bd14af1
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '1935'
-ht-degree: 96%
+source-wordcount: '1953'
+ht-degree: 95%
 
 ---
 
@@ -40,6 +40,12 @@ Bevor Sie Real-Time CDP erweitern, um neue Kundinnen und Kunden anzusprechen und
 4. Als **Kundin bzw. Kunde** erstellen Sie fokussierte Zielgruppen aus der Liste der Interessentenprofile.
 5. Als **Kundin bzw. Kunde** aktivieren Sie potenzielle Zielgruppen für Ziele, die die in Ihrer Interessentenliste verfügbaren Identitäten akzeptieren.
 6. Arbeiten Sie bei Bedarf mit dem **Datenpartner** bei der Last-Mile-Aktivierung von Zielgruppen bei gewünschten zahlungspflichtigen Medienzielen zusammen.
+
+## Videoeinführung {#video-walkthrough}
+
+Sehen Sie sich das Video-Tutorial unten an, um eine exemplarische Vorgehensweise zum Erreichen und Ansprechen potenzieller Zielgruppen zu erhalten:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)
 
 ## Erreichen des Anwendungsfalls: Schrittweise Anweisungen {#step-by-step-instructions}
 
