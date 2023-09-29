@@ -3,7 +3,7 @@ keywords: Ziele; Fragen; häufig gestellte Fragen; FAQ; Ziele FAQ
 title: Häufig gestellte Fragen
 description: Antworten auf die am häufigsten gestellten Fragen zu Adobe Experience Platform-Zielen
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 75b9cc3e2c9a18ec8c08c9c3ca774accae31eb7e
+source-git-commit: b41335ba5fd6dca422b0c19517bc32b320f1e733
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 5%
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 ## Übersicht {#overview}
 
-Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Adobe Experience Platform-Zielen. Für Fragen und Fehlerbehebung im Zusammenhang mit anderen [!DNL Platform] Dienste, einschließlich der in allen [!DNL Platform] APIs, siehe [Handbuch zur Fehlerbehebung bei Experience Platformen](../landing/troubleshooting.md).
+Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Adobe Experience Platform-Zielen. Für Fragen und Fehlerbehebung im Zusammenhang mit anderen [!DNL Platform] Dienste, einschließlich der in allen [!DNL Platform] APIs, siehe [Handbuch zur Fehlerbehebung bei Experience Platform](../landing/troubleshooting.md).
 
 ## Allgemeine Fragen zu Zielen {#general}
 
@@ -48,7 +48,32 @@ Sie aktivieren die aktualisierte Zielgruppe erneut für dasselbe Ziel, da jedoch
 Um sicherzustellen, dass alle Profile an Ihr Ziel gesendet werden, müssen Sie mit der neuen Konfiguration eine neue Zielgruppe erstellen und diese dann für Ihr Ziel aktivieren.
 
 +++
+<!--
+## [!DNL Experience Cloud Audiences] {#eca-faq}
 
+### What are the differences between the Experience Cloud Audiences and Adobe Target destinations?
+
++++Answer
+
+See the table below for a feature comparison between the Experience Cloud Audiences and Adobe Target destinations.
+
+||Experience Cloud Audiences|Adobe Target|
+|---|---|---|
+| **Supported Experience Cloud apps** | Supports audience activation to Audience Manager, Adobe Target, Adobe Analytics, Advertising Cloud, Marketo, Adobe Campaign | Supports audience activation only to Adobe Target |
+| **Supports audience activation** | ✓ | ✓ |
+| **Supports attribute activation** | X | ✓ |
+| **Latency** | Profiles begin activating in 6 hours. Full population is visible in 48 hours​. |Depends on implementation​ type. <ul><li>Web SDK enables same-page/next-page​ personalization.</li><li>AT.js enables next-session personalization.</li></ul> |
+| **DULE support** | ✓ | ✓ |
+| **Marketing actions support** | ✓ | ✓ |
+| **Supported IDs** | [!DNL ECID], [!DNL GAID], [!DNL IDFA], [!DNL email_lc_sha256] | Any ID type |
+| **Sandbox support** | One sandbox | Multiple sandboxes |
+| **Consent support** | X | Yes. Requires Privacy & Security Shield. |
+| **Edge segmentation support** | Supports activation of edge audiences. Does not support edge segmentation. | Supports edge segmentation and activation of edge audiences. |
+| **Supported audiences** | All types of audiences  | Edge merge policy required for activation.|
+
++++
+
+-->
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
@@ -58,6 +83,7 @@ Um sicherzustellen, dass alle Profile an Ihr Ziel gesendet werden, müssen Sie m
 
 * Ihre [!DNL Facebook] Das Benutzerkonto muss über die **[!DNL Manage campaigns]** -Berechtigung für das Anzeigenkonto aktiviert wurde, das Sie verwenden möchten.
 * Die **Adobe Experience Cloud** Geschäftskonto muss als Werbepartner in Ihrem [!DNL Facebook Ad Account]. Verwenden Sie `business ID=206617933627973`. Siehe [Partner zu Ihrem Business Manager hinzufügen](https://www.facebook.com/business/help/1717412048538897) in der Dokumentation zu Facebook .
+
   >[!IMPORTANT]
   >
   > Beim Konfigurieren der Berechtigungen für Adobe Experience Cloud müssen Sie die Berechtigung **Kampagnen verwalten** aktivieren. Dies ist für die [!DNL Adobe Experience Platform]-Integration erforderlich.
@@ -174,7 +200,7 @@ Für [Personalisierung auf derselben Seite und auf der nächsten Seite](ui/activ
 
 Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more information on activation guardrails, see the [default guardrails for activation](guardrails.md#edge-destinations-activation). -->
 
-### Wie lange dauert es, bis diese Zielgruppe für Anwendungsfälle der Kantensegmentierung verfügbar ist, nachdem ich in Experience Platform eine Zielgruppe erstellt habe?
+### Wie lange dauert es, bis diese Zielgruppe für Anwendungsfälle der Kantensegmentierung verfügbar ist, nachdem ich eine Zielgruppe in Experience Platform erstellt habe?
 
 +++ Zielgruppendefinitionen mit Antworten werden in die [Edge Network](../edge/home.md) in bis zu einer Stunde. Wenn jedoch innerhalb dieser ersten Stunde eine Zielgruppe aktiviert wird, können einige Besucher verpasst werden, die sich für die Zielgruppe qualifiziert hätten.
 +++
@@ -186,7 +212,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 
 ### Kann ich ein Ziel ohne Datastream erstellen und dann zu einem späteren Zeitpunkt demselben Ziel einen Datastream hinzufügen?
 
-+++Antwort Dies wird derzeit nicht über die Benutzeroberfläche &quot;Ziele&quot;unterstützt. Wenn Sie in diesem Fall Hilfe benötigen, wenden Sie sich bitte an Ihren Kundenbetreuer bei der Adobe.
++++Antwort Dies wird derzeit nicht über die Benutzeroberfläche &quot;Ziele&quot;unterstützt. Wenn Sie in diesem Fall Hilfe benötigen, wenden Sie sich bitte an Ihren Adobe-Support-Mitarbeiter.
 +++
 
 ### Was passiert, wenn ich ein Adobe Target-Ziel lösche?
@@ -220,7 +246,7 @@ Für Anwendungsfälle, in denen die Verwaltung von Zustimmungsrichtlinien skalie
 
 Dieser Dienst umfasst kundenverwaltete Schlüssel und erhöhte Schwellenwerte zur Verwaltung des Lebenszyklus von Kundendaten.
 
-Die [!DNL Adobe Target] und [!DNL Custom Personalization] -Ziele in die [Beschriftungen für die Datennutzung der Experience Platform](../data-governance/labels/overview.md) und [Dienst zur Durchsetzung von Einwilligungsrichtlinien](../data-governance/enforcement/overview.md). Diese Funktionen stehen allen Kunden zur Verfügung.
+Die [!DNL Adobe Target] und [!DNL Custom Personalization] -Ziele in die [Experience Platform von Datennutzungsbezeichnungen](../data-governance/labels/overview.md) und [Dienst zur Durchsetzung von Einwilligungsrichtlinien](../data-governance/enforcement/overview.md). Diese Funktionen stehen allen Kunden zur Verfügung.
 
 
 
