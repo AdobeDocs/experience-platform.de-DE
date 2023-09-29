@@ -4,10 +4,10 @@ title: Erstellen einer neuen Zielverbindung
 type: Tutorial
 description: Erfahren Sie, wie Sie in Adobe Experience Platform eine Verbindung mit einem Ziel herstellen, Warnhinweise aktivieren und Marketing-Aktionen für Ihr verbundenes Ziel einrichten.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
 workflow-type: tm+mt
-source-wordcount: '1107'
-ht-degree: 79%
+source-wordcount: '1141'
+ht-degree: 77%
 
 ---
 
@@ -40,11 +40,11 @@ Bevor Sie Zielgruppendaten an ein Ziel senden können, müssen Sie eine Verbindu
 
    ![Screenshot der Experience Platform-Benutzeroberfläche, auf der die Zielkatalogseite mit dem hervorgehobenen Steuerelement „Einrichten“ dargestellt ist.](../assets/ui/connect-destinations/set-up.png)
 
-   ![Screenshot der Experience Platform-Benutzeroberfläche, auf der die Zielkatalogseite mit hervorgehobenem Steuerelement Zielgruppen aktivieren angezeigt wird.](../assets/ui/connect-destinations/activate-segments.png)
+   ![Screenshot der Experience Platform-Benutzeroberfläche, auf der die Zielkatalogseite angezeigt wird, wobei das Steuerelement Zielgruppen aktivieren hervorgehoben ist.](../assets/ui/connect-destinations/activate-segments.png)
 
 3. Wenn Sie **[!UICONTROL Einrichten]** ausgewählt haben, springen Sie zum nächsten Schritt, um die [Authentifizierung](#authenticate) beim Ziel durchzuführen.
 
-   Wenn Sie **[!UICONTROL Aktivieren]**, **[!UICONTROL Aktivieren von Zielgruppen]** oder **[!UICONTROL Exportieren von Datensätzen]** können Sie jetzt eine Liste der vorhandenen Zielverbindungen anzeigen.
+   Wenn Sie **[!UICONTROL Aktivieren]**, **[!UICONTROL Aktivieren von Zielgruppen]** oder **[!UICONTROL Exportieren von Datensätzen]**, können Sie jetzt eine Liste der vorhandenen Zielverbindungen sehen.
 
    Wählen Sie **[!UICONTROL Neues Ziel konfigurieren]** aus, um eine neue Verbindung mit dem Ziel herzustellen.
 
@@ -78,15 +78,19 @@ Für **[!DNL The Trade Desk]erforderliche und optionale Eingabeparameter**
 
 ![Bild, das die erforderlichen und optionalen Eingabeparameter beim Herstellen einer Verbindung mit einem Trade Desk-Ziel zeigt.](../assets/ui/connect-destinations/connect-destination-trade-desk-example.png)
 
-### (Beta) Einrichten von Dateiformatierungsoptionen für exportierte Dateien {#file-formatting-and-compression-options}
+### Einrichten von Dateiformatierungsoptionen für exportierte Dateien {#file-formatting-and-compression-options}
 
 Für dateibasierte Ziele können Sie verschiedene Einstellungen für die Formatierung und Komprimierung der exportierten Dateien konfigurieren. Weitere Informationen zu allen verfügbaren Formatierungs- und Komprimierungsoptionen finden Sie im [Tutorial zum Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ![Bild, das die Auswahl des Dateityps und verschiedene Optionen für CSV-Dateien zeigt.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### Einrichten der Zielverbindung für die Aktivierung einer Zielgruppe oder für den Export von Datensätzen {#segment-activation-or-dataset-exports}
+### Einrichten der Zielverbindung für die Aktivierung der Zielgruppe, Aktivierung von Interessenten oder Datensatzexporte {#segment-activation-or-dataset-exports}
 
-Einige dateibasierte Ziele unterstützen die Aktivierung von Zielgruppen sowie den Export von Datensätzen. Für diese Ziele können Sie auswählen, ob eine Verbindung erstellt werden soll, über die Sie Zielgruppen aktivieren oder Datensätze exportieren können.
+Einige dateibasierte Ziele unterstützen die Aktivierung von Zielgruppen für bekannte Kunden oder potenzielle Kunden sowie den Export von Datensätzen. Für diese Ziele können Sie auswählen, ob eine Verbindung erstellt werden soll, über die Sie [Zielgruppen aktivieren](/help/destinations/ui/activate-batch-profile-destinations.md), [Perspektiven](/help/destinations/ui/activate-prospect-audiences.md)oder [Datensätze exportieren](/help/destinations/ui/export-datasets.md).
+
+>[!WARNING]
+>
+>Beachten Sie beim Exportieren von Datensätzen, dass Exporte in JSON-Dateien nur in einem komprimierten Modus unterstützt werden. Ausfuhren nach [!DNL Parquet] -Dateien werden in einem komprimierten und unkomprimierten Modus unterstützt.
 
 ![Bild, das das Auswahlsteuerelement für Datentypen anzeigt und Benutzern die Auswahl zwischen Zielgruppenaktivierung und Datensatzexporten ermöglicht.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
 

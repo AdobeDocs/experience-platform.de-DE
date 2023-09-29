@@ -4,10 +4,10 @@ title: Exportieren von Datensätzen mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie mit der Flow Service-API Datensätze für ausgewählte Ziele exportieren können.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 28e07c464eb05ba7c20b132d430fccac15d8806e
+source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
 workflow-type: tm+mt
-source-wordcount: '3526'
-ht-degree: 18%
+source-wordcount: '3550'
+ht-degree: 17%
 
 ---
 
@@ -55,7 +55,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen m�
 
 ### Erforderliche Berechtigungen {#permissions}
 
-Zum Exportieren von Datensätzen benötigen Sie die [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Datensatzziele verwalten und aktivieren]** Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+Zum Exportieren von Datensätzen benötigen Sie die **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Anzeigen von Datensätzen]**, und **[!UICONTROL Verwalten und Aktivieren von Datensatzzielen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um sicherzustellen, dass Sie über die erforderlichen Berechtigungen zum Exportieren von Datensätzen verfügen und dass das Ziel den Export von Datensätzen unterstützt, durchsuchen Sie den Zielkatalog. Wenn ein Ziel über die Steuerung **[!UICONTROL Aktivieren]** oder **[!UICONTROL Datensätze exportieren]** verfügt, dann haben Sie die entsprechenden Berechtigungen.
 
@@ -1149,6 +1149,10 @@ Notieren Sie die Verbindungs-ID aus der Antwort. Diese ID ist im nächsten Schri
 ![Abbildung von Schritt 4 im Workflow &quot;Datensätze exportieren&quot;](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
 
 Als Nächstes müssen Sie eine Zielverbindung erstellen, in der die Exportparameter für Ihre Datensätze gespeichert werden. Zu den Exportparametern gehören Speicherort, Dateiformat, Komprimierung und andere Details. Siehe Abschnitt `targetSpec` Eigenschaften, die in der Verbindungsspezifikation des Ziels bereitgestellt werden, um die unterstützten Eigenschaften für jeden Zieltyp zu verstehen. Verweisen Sie auf die folgenden Registerkarten für die `targetSpec` Eigenschaften aller unterstützten Ziele.
+
+>[!WARNING]
+>
+>Exporte in JSON-Dateien werden nur im komprimierten Modus unterstützt. Ausfuhren nach [!DNL Parquet] -Dateien werden in einem komprimierten und unkomprimierten Modus unterstützt.
 
 >[!BEGINTABS]
 

@@ -1,11 +1,11 @@
 ---
-title: (Beta) Verwenden Sie berechnete Felder, um Arrays in reduzierten Dateien zu exportieren.
+title: (Beta) Verwenden Sie berechnete Felder, um Arrays in flachen Schemadateien zu exportieren
 type: Tutorial
-description: Erfahren Sie, wie Sie Arrays und berechnete Felder aus Real-Time CDP in profilbasierte Batch-Ziele exportieren.
+description: Erfahren Sie, wie Sie berechnete Felder verwenden können, um Arrays in flachen Schemadateien aus Real-Time CDP in Cloud-Speicher-Ziele zu exportieren.
 badge: „Beta“
-source-git-commit: 79924b9a7d5114c94a004f99fb194102845b2127
+source-git-commit: 77fd0ace252bae66478f73a1dc4b7d4a3ccb867d
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1207'
 ht-degree: 2%
 
 ---
@@ -17,15 +17,8 @@ ht-degree: 2%
 >id="platform_destinations_export_arrays_flat_files"
 >title="(Beta) Unterstützung von Export-Arrays"
 >abstract="Exportieren Sie einfache Arrays von int-, string- oder booleschen Werten von Experience Platform in Ihr gewünschtes Cloud-Speicher-Ziel. Es gelten einige Einschränkungen. In der Dokumentation finden Sie ausführliche Beispiele und unterstützte Funktionen."
-
-<!--
-
-additional links for contextualhelp:
-
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Examples"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Known limitations"
-
--->
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Beispiele"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Bekannte Einschränkungen"
 
 >[!AVAILABILITY]
 >
