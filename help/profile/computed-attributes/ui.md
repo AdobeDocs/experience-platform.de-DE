@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie berechnete Attribute mithilfe der Adobe Exper
 source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
 workflow-type: tm+mt
 source-wordcount: '1485'
-ht-degree: 4%
+ht-degree: 12%
 
 ---
 
@@ -42,7 +42,7 @@ Um auszuwählen, welche Felder angezeigt werden sollen, können Sie ![Symbol Spa
 | [!UICONTROL Zuletzt ausgewertet] | Dieser Zeitstempel stellt den letzten erfolgreichen Evaluierungsablauf dar. Nur Ereignisse, die aufgetreten sind **before** dieser Zeitstempel wird bei der letzten erfolgreichen Bewertung berücksichtigt. |
 | [!UICONTROL Letzter Bewertungsstatus] | Der Status, der angibt, ob das berechnete Attribut im letzten Bewertungslauf erfolgreich berechnet wurde oder nicht. Mögliche Werte sind **[!UICONTROL Erfolg]** oder **[!UICONTROL Fehlgeschlagen]**. |
 | [!UICONTROL Häufigkeit der Aktualisierung] | Ein Hinweis darauf, wie häufig das berechnete Attribut aktualisiert werden soll. Mögliche Werte sind stündlich, täglich, wöchentlich oder monatlich. |
-| [!UICONTROL Schnelle Aktualisierung] | Ein Wert, der anzeigt, ob für dieses Compute-Attribut eine schnelle Aktualisierung aktiviert ist. Wenn die schnelle Aktualisierung aktiviert ist, kann das berechnete Attribut täglich aktualisiert werden, nicht wöchentlich, zweimal wöchentlich oder monatlich. Dieser Wert gilt nur für berechnete Attribute mit einem Lookback-Zeitraum, der größer als die wöchentliche Basis ist. |
+| [!UICONTROL Schnelle Aktualisierung] | Ein Wert, der anzeigt, ob für dieses Compute-Attribut eine schnelle Aktualisierung aktiviert ist. Wenn die schnelle Aktualisierung aktiviert ist, kann das berechnete Attribut täglich aktualisiert werden, nicht wöchentlich, zweimal wöchentlich oder monatlich. Dieser Wert gilt nur für berechnete Attribute mit einem Lookback-Zeitraum von mehr als einer Woche. |
 | [!UICONTROL Lebenszyklusstatus] | Der aktuelle Status des berechneten Attributs. Es gibt drei mögliche Status: <ul><li>**[!UICONTROL Entwurf]:** Das berechnete Attribut **not** haben noch ein Feld für das Schema erstellt. In diesem Status kann das berechnete Attribut bearbeitet werden. </li><li>**[!UICONTROL Veröffentlicht]:** Das berechnete Attribut verfügt über ein Feld, das für das Schema erstellt wurde und zur Verwendung bereit ist. In diesem Status wird das berechnete Attribut **cannot** bearbeitet werden.</li><li>**[!UICONTROL Inaaktiv]:** Das berechnete Attribut ist deaktiviert. Weitere Informationen zum inaktiven Status finden Sie in der [FAQ-Seite](./faq.md#inactive-status). </li> |
 | [!UICONTROL Erstellt] | Ein Zeitstempel, der das Datum und die Uhrzeit der Erstellung des berechneten Attributs anzeigt. |
 | [!UICONTROL Zuletzt geändert] | Ein Zeitstempel, der das Datum und die Uhrzeit der letzten Änderung des berechneten Attributs anzeigt. |
@@ -106,13 +106,13 @@ Nach Anwendung der Aggregationsfunktion müssen Sie den Lookback-Zeitraum des be
 >[!CONTEXTUALHELP]
 >id="platform_profile_computedAttributes_fastRefresh"
 >title="Schnelle Aktualisierung"
->abstract="Mit der schnellen Aktualisierung können Sie Ihre Attribute auf dem neuesten Stand halten. Durch Aktivierung dieser Option können Sie Ihre berechneten Attribute täglich aktualisieren, auch über längere Lookback-Zeiträume, sodass Sie schnell auf Benutzeraktivitäten reagieren können. Dieser Wert gilt nur für berechnete Attribute mit einem Lookback-Zeitraum, der größer als die wöchentliche Basis ist."
+>abstract="Mit der schnellen Aktualisierung können Sie Ihre Attribute auf dem neuesten Stand halten. Wenn Sie diese Option aktivieren, können Sie Ihre berechneten Attribute täglich aktualisieren, auch über längere Lookback-Zeiträume, sodass Sie schnell auf Benutzeraktivitäten reagieren können. Dieser Wert gilt nur für berechnete Attribute mit einem Lookback-Zeitraum von mehr als einer Woche."
 
 Bei Anwendung der Aggregationsfunktion können Sie eine schnelle Aktualisierung aktivieren, wenn der Lookback-Zeitraum größer als eine Woche ist.
 
 ![Die [!UICONTROL Schnelles Aktualisieren] markiert ist.](./images/ui/enable-fast-refresh.png)
 
-Mit der schnellen Aktualisierung können Sie Ihre Attribute auf dem neuesten Stand halten. Durch Aktivierung dieser Option können Sie Ihre berechneten Attribute täglich aktualisieren, auch über längere Lookback-Zeiträume, sodass Sie schnell auf Benutzeraktivitäten reagieren können.
+Mit der schnellen Aktualisierung können Sie Ihre Attribute auf dem neuesten Stand halten. Wenn Sie diese Option aktivieren, können Sie Ihre berechneten Attribute täglich aktualisieren, auch über längere Lookback-Zeiträume, sodass Sie schnell auf Benutzeraktivitäten reagieren können.
 
 Weitere Informationen zur schnellen Aktualisierung finden Sie im [Bereich für schnelle Aktualisierung](./overview.md#fast-refresh) der Übersicht über berechnete Attribute.
 

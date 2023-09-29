@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Homepage; beliebte Themen Warnhinweise; Ziele
+keywords: Experience Platform; Startseite; beliebte Themen; Warnhinweise; Ziele
 description: Sie können Warnhinweise abonnieren, wenn Sie einen Datenfluss erstellen, um Warnhinweise zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten.
 title: Abonnieren von kontextbezogenen Zielwarnhinweisen
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
@@ -22,9 +22,9 @@ In diesem Dokument erfahren Sie, wie Sie Warnhinweise für Ihren Ziel-Datenfluss
 
 Dieses Dokument setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Ziele](../home.md): Vordefinierte Integrationen mit Zielplattformen, die die nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+* [Ziele](../home.md): Vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 * [Mit Observability können Sie Platform-Aktivitäten mithilfe von statistischen Metriken und Ereignisbenachrichtigungen überwachen.](../../observability/home.md)[!DNL Observability Insights]
-   * [Warnhinweise](../../observability/alerts/overview.md): Wenn bestimmte Bedingungen in Ihren Platform-Vorgängen erreicht sind (z. B. ein potenzielles Problem, wenn das System einen Schwellenwert überschreitet), kann Platform allen Benutzern in Ihrer Organisation, die sich für diese Bedingungen angemeldet haben, Warnhinweise bereitstellen.
+   * [Warnhinweise](../../observability/alerts/overview.md): Wenn bestimmte Bedingungen in Ihren Platform-Vorgängen erfüllt sind (z. B. ein potenzielles Problem, wenn das System einen Schwellenwert überschreitet), kann Platform allen Benutzern in Ihrer Organisation, die sich für sie angemeldet haben, Warnhinweise bereitstellen.
 
 ## Warnhinweise über die Benutzeroberfläche abonnieren {#subscribe-destination-alerts}
 
@@ -38,7 +38,7 @@ Dieses Dokument setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 >
 >Sie müssen sofortige Benachrichtigungen von E-Mails für Ihr Platform-Konto aktivieren, um E-Mail-basierte Warnhinweise für Ihre Datenflüsse zu erhalten.
 
-Sie können Warnhinweise für Ihre Datenflüsse während der [!UICONTROL Neues Ziel konfigurieren] Schritt [Zielverbindung](connect-destination.md) Arbeitsablauf.
+Sie können Warnhinweise für Ihre Datenflüsse während der [!UICONTROL Neues Ziel konfigurieren] Schritt des [Zielverbindung](connect-destination.md) Arbeitsablauf.
 
 ![UI-Bild mit dem Abschnitt mit den Zielwarnungen .](../assets/ui/alerts/destination-alerts.png)
 
@@ -65,7 +65,7 @@ Sobald Ihr Ziel-Datenfluss ausgeführt wird, können Sie Warnhinweise über die 
 
 Warnhinweise werden in der Benutzeroberfläche durch ein Benachrichtigungssymbol in der oberen Kopfzeile der Platform-Benutzeroberfläche dargestellt. Wählen Sie das Benachrichtigungssymbol aus, um Warnhinweise zu Ihren Datenflüssen anzuzeigen.
 
-![Benutzeroberflächenbild mit dem Benachrichtigungssymbol in Experience Platform](../assets/ui/alerts/notification.png)
+![UI-Bild mit dem Benachrichtigungssymbol auf dem Experience Platform](../assets/ui/alerts/notification.png)
 
 Das Fenster &quot;Benachrichtigungen&quot;wird mit einer Liste von Statusaktualisierungen für den von Ihnen erstellten Datenfluss angezeigt.
 

@@ -30,7 +30,7 @@ Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste 
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Sie können auch die Suchleiste verwenden, um die angezeigten Quellen einzugrenzen.
 
-Unter dem **[!UICONTROL Adobe Apps]** category, select **[!UICONTROL Adobe Campaign Managed Cloud Services]** und wählen Sie **[!UICONTROL Daten hinzufügen]**.
+Unter dem **[!UICONTROL Adobe-Anwendungen]** category, select **[!UICONTROL Adobe Campaign Managed Cloud Services]** und wählen Sie **[!UICONTROL Daten hinzufügen]**.
 
 ![Der Quellkatalog, der die Adobe Campaign Managed Cloud Services-Karte anzeigt.](../../../../images/tutorials/create/campaign/catalog.png)
 
@@ -54,7 +54,7 @@ Unter dem **[!UICONTROL Adobe Apps]** category, select **[!UICONTROL Adobe Campa
 >abstract="Der Name der in der Adobe Campaign-Datenbank definierten Entität."
 >text="Learn more in documentation"
 
-Die [!UICONTROL Daten auswählen] -Schritt angezeigt wird und Ihnen eine Oberfläche zur Konfiguration Ihrer [!UICONTROL Adobe Campaign-Instanz], [!UICONTROL Zielgruppen-Mapping]und [!UICONTROL Schemaname].
+Die [!UICONTROL Daten auswählen] -Schritt angezeigt wird und Ihnen eine Oberfläche zur Konfiguration Ihrer [!UICONTROL Adobe Campaign-Instanz], [!UICONTROL Zielgruppen-Mapping], und [!UICONTROL Schemaname].
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
@@ -96,7 +96,7 @@ Wenn Sie mit dem Eingeben der Details für Ihren Datenfluss fertig sind, klicken
 
 Es erfolgt der Schritt der [!UICONTROL Zuordnung], in dem Ihnen eine Schnittstelle zum Zuordnen der Quellfelder aus Ihrem Quellschema zu den entsprechenden XDM-Zielfeldern im Zielschema bereitgestellt wird.
 
-Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Umfassende Schritte zur Verwendung der Mapper-Oberfläche und der berechneten Felder finden Sie im Abschnitt [Handbuch zur Datenvorbereitung-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
+Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Umfassende Schritte zur Verwendung der Mapper-Oberfläche und der berechneten Felder finden Sie im Abschnitt [Handbuch zur Datenvorbereitung-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
 
 >[!IMPORTANT]
 >
@@ -115,9 +115,9 @@ Der Schritt **[!UICONTROL Überprüfung]** wird angezeigt, sodass Sie Ihren neue
 
 Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Beenden]** und gewähren Sie etwas Zeit für die Erstellung des Datenflusses.
 
-![Eine Überprüfungsseite, auf der die Verbindungs- und Datensatzinformationen angezeigt werden.](../../../../images/tutorials/create/campaign/review.png)
+![Eine Überprüfungsseite, auf der die Verbindung und Datensatzinformationen angezeigt werden.](../../../../images/tutorials/create/campaign/review.png)
 
-### Überwachen der Datensatzaktivität
+### Datensatzaktivität überwachen
 
 Nachdem Ihr Datenfluss erstellt wurde, können Sie die erfassten Daten überwachen, um Informationen zu erfassten Raten sowie erfolgreichen und fehlgeschlagenen Batches zu erhalten.
 

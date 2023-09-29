@@ -10,7 +10,7 @@ exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
 source-wordcount: '1904'
-ht-degree: 97%
+ht-degree: 99%
 
 ---
 
@@ -90,7 +90,7 @@ Die folgenden Status-Codes können bei jeder [!DNL Experience Platform]-API auft
 |--- | --- | ---|
 | 400 | Ungültige Anfrage | Die Anfrage wurde falsch erstellt, es fehlen wichtige Informationen und/oder die Syntax ist falsch. |
 | 401 | Authentifizierung fehlgeschlagen | Die Anfrage hat eine Authentifizierungsprüfung nicht bestanden. Ihr Zugriffstoken fehlt oder ist ungültig. Weiterführende Informationen finden Sie im Abschnitt [OAuth-Token-Fehler](#oauth-token-is-missing). |
-| 403 | Verboten | Die Ressource wurde zwar gefunden, Sie verfügen jedoch über nicht die richtigen Berechtigungen zur Anzeige. <br> Eine mögliche Ursache für diesen Fehler ist, dass Sie möglicherweise nicht über die erforderliche [Zugriffssteuerungsberechtigungen](/help/access-control/home.md) , um auf die Ressource zuzugreifen oder sie zu bearbeiten. Lesen der Anleitung [Abrufen der erforderlichen attributbasierten Zugriffssteuerungsberechtigungen](/help/landing/api-authentication.md#get-abac-permissions) , um Platform-APIs zu verwenden. </p> |
+| 403 | Verboten | Die Ressource wurde zwar gefunden, Sie verfügen jedoch nicht über die richtigen Berechtigungen zur Anzeige. <br> Eine Ursache für diesen Fehler ist wahrscheinlich, dass Sie nicht über die erforderliche [Zugriffssteuerungsberechtigungen](/help/access-control/home.md) verfügen, um auf die Ressource zuzugreifen oder sie zu bearbeiten. Lesen Sie, wie Sie [die erforderlichen attributbasierten Zugriffssteuerungsberechtigungen erhalten](/help/landing/api-authentication.md#get-abac-permissions), um Platform-APIs zu verwenden. </p> |
 | 404 | Nicht gefunden | Die angeforderte Ressource konnte auf dem Server nicht gefunden werden. Die Ressource wurde möglicherweise gelöscht oder der angefragte Pfad wurde falsch eingegeben. |
 | 500 | Interner Server-Fehler | Dies ist ein Server-seitiger Fehler. Wenn Sie viele simultane Aufrufe ausführen, erreichen Sie möglicherweise das API-Limit und müssen Ihre Ergebnisse filtern. (Weitere Informationen zum [Filtern von Daten](../catalog/api/filter-data.md) finden Sie im Entwicklerhandbuch für die [!DNL Catalog Service]-API.) Warten Sie kurz, bevor Sie Ihre Anfrage erneut testen, und wenden Sie sich an Ihren Administrator, wenn das Problem fortbesteht. |
 

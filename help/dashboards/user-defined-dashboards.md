@@ -25,7 +25,7 @@ Um ein benutzerdefiniertes Dashboard zu erstellen, navigieren Sie zunächst zum 
 
 ![Das Dashboard-Inventar mit Dashboards im linken Navigationsbereich und &quot;Dashboard erstellen&quot;hervorgehoben.](./images/user-defined-dashboards/create-dashboard.png)
 
-Bevor Sie ein benutzerdefiniertes Dashboard hinzufügen, ist der Dashboards-Bestand leer und zeigt die Meldung &quot;Keine Dashboards gefunden&quot;an. angezeigt. Nach der Erstellung werden alle benutzerdefinierten Dashboards im Dashboard-Inventar aufgelistet.
+Bevor Sie ein benutzerdefiniertes Dashboard hinzufügen, ist der Dashboards-Bestand leer und zeigt &quot;Keine Dashboards gefunden&quot;an. angezeigt. Nach der Erstellung werden alle benutzerdefinierten Dashboards im Dashboard-Inventar aufgelistet.
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ Das neu erstellte leere Dashboard wird mit Ihrem Namen in der oberen linken Ecke
 >title="Maximale Anzahl an Widgets"
 >abstract="Benutzerdefinierte Dashboards unterstützen bis zu zehn Widgets. Nachdem Sie zehn Widgets zu Ihrem Dashboard hinzugefügt haben, wird die Option [!UICONTROL Neues Widget hinzufügen] deaktiviert und ausgegraut."
 
-Wählen Sie in der neuen Dashboard-Ansicht **[!UICONTROL Neues Widget hinzufügen]** , um den Erstellungsprozess für Widgets zu starten.
+Wählen Sie in der neuen Dashboard-Ansicht **[!UICONTROL Neues Widget hinzufügen]** , um den Erstellungsprozess für das Widget zu starten.
 
 >[!IMPORTANT]
 >
@@ -54,7 +54,7 @@ Wählen Sie in der neuen Dashboard-Ansicht **[!UICONTROL Neues Widget hinzufüge
 
 ### Widget Composer
 
-Der Arbeitsbereich des Widget Composers wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL Daten auswählen]** , um das Datenmodell auszuwählen, aus dem Sie Ihren Widgets Attribute hinzufügen möchten.
+Der Arbeitsbereich des Widget Composers wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL Daten auswählen]** , um das Datenmodell auszuwählen, aus dem Attribute zu Ihren Widgets hinzugefügt werden sollen.
 
 ![Der Arbeitsbereich des Widget Composers.](./images/user-defined-dashboards/widget-composer.png)
 
@@ -73,7 +73,7 @@ Die Vorschauliste enthält Details zu den im Datenmodell enthaltenen Tabellen. D
 | Spaltenfeld | Beschreibung |
 |---|---|
 | [!UICONTROL Titel] | Der Name der Tabelle. |
-| [!UICONTROL Tabellentyp] | Der Typ der Tabelle. Mögliche Typen sind: `fact`, `dimension`und `none`. |
+| [!UICONTROL Tabellentyp] | Der Typ der Tabelle. Mögliche Typen sind: `fact`, `dimension`, und `none`. |
 | [!UICONTROL Datensätze] | Die Anzahl der der ausgewählten Tabelle zugeordneten Datensätze. |
 | [!UICONTROL Suchen] | Die Anzahl der Tabellen, die mit der ausgewählten Tabelle verbunden sind. |
 | [!UICONTROL Attribute] | Die Anzahl der Attribute für die ausgewählte Tabelle. |
@@ -84,9 +84,9 @@ Auswählen **[!UICONTROL Nächste]** zur Bestätigung Ihrer Wahl des Datenmodell
 
 Die [!UICONTROL Vorschau] Bereich enthält Registerkarten für [!UICONTROL Beispieldatensätze] und [!UICONTROL Attribute]. Die [!UICONTROL Beispieldatensätze] bietet eine Teilmenge der Datensätze aus der ausgewählten Tabelle in einer tabellarischen Ansicht. Die [!UICONTROL Attribute] tab stellt den Attributnamen, den Datentyp und die Quelltabelle für jedes Attribut bereit, das mit der ausgewählten Tabelle verknüpft ist.
 
-Wählen Sie eine Tabelle aus der Liste in der linken Leiste aus, um Daten für Ihr Widget bereitzustellen, und wählen Sie **[!UICONTROL Auswählen]** , um zum Widget Composer zurückzukehren.
+Wählen Sie eine Tabelle aus der Liste in der linken Leiste aus, um Daten für Ihr Widget bereitzustellen, und wählen Sie **[!UICONTROL Auswählen]** zum Widget Composer zurück.
 
-![Das Dialogfeld &quot;Daten auswählen&quot;mit hervorgehobener Auswahl.](./images/user-defined-dashboards/select-a-table.png)
+![Das Dialogfeld Daten auswählen mit hervorgehobener Auswahl.](./images/user-defined-dashboards/select-a-table.png)
 
 Der Widget Composer enthält jetzt Daten aus Ihrer ausgewählten Tabelle.
 
@@ -106,11 +106,11 @@ Wählen Sie das Symbol zum Hinzufügen aus (![Ein Symbol zum Hinzufügen.](./ima
 
 Um den Diagrammtyp oder Diagrammtyp Ihres Widgets zu ändern, wählen Sie die [!UICONTROL Marken] und wählen Sie aus den verfügbaren Optionen aus. Zu den Optionen gehören Balken, Punkte, Zecken, Linien oder Bereiche. Nach der Auswahl wird eine Vorschau-Visualisierung der aktuellen Einstellungen Ihres Widgets generiert.
 
-![Der Widget-Composer mit hervorgehobenem Dropdown-Menü &quot;Marks&quot;.](./images/user-defined-dashboards/marks-dropdown.png)
+![Der Widget-Composer mit hervorgehobenem Dropdown-Menü Marks .](./images/user-defined-dashboards/marks-dropdown.png)
 
 Durch Hinzufügen eines Attributs als Filter können Sie auswählen, welche Werte aus dem Widget ein- oder ausgeschlossen werden sollen. Nachdem Sie einen Filter aus der Attributliste hinzugefügt haben, wird die [!UICONTROL Filter] angezeigt, in dem Sie Werte mithilfe ihres Kontrollkästchens auswählen oder deren Auswahl aufheben können.
 
-![Das Dialogfeld &quot;Filter&quot;, um Werte aus Ihrem Widget zu filtern.](./images/user-defined-dashboards/filter-dialog.png)
+![Das Dialogfeld Filter zum Filtern von Werten aus Ihrem Widget.](./images/user-defined-dashboards/filter-dialog.png)
 
 #### Filtern von historischen Daten {#filter-historical-data}
 
@@ -128,7 +128,7 @@ Alternativ können Sie einen benutzerdefinierten Zeitraum erstellen, nach dem Ih
 
 ### Widget-Eigenschaften
 
-Wählen Sie das Eigenschaftensymbol (![Das Symbol &quot;Eigenschaften&quot;.](./images/user-defined-dashboards/properties-icon.png)) in der rechten Leiste, um den Eigenschaftenbereich zu öffnen. Im [!UICONTROL Eigenschaften] -Bedienfeld ein, geben Sie einen Namen für das Widget im [!UICONTROL Widget title] Textfeld.
+Wählen Sie das Eigenschaftensymbol (![Das Symbol Eigenschaften .](./images/user-defined-dashboards/properties-icon.png)) in der rechten Leiste, um den Eigenschaftenbereich zu öffnen. Im [!UICONTROL Eigenschaften] -Bedienfeld einen Namen für das Widget im [!UICONTROL Widget-Titel] Textfeld.
 
 ![Das Eigenschaftenbedienfeld mit dem Eigenschaftensymbol und dem Feld Widget-Titel hervorgehoben.](./images/user-defined-dashboards/properties-panel.png)
 
@@ -142,7 +142,7 @@ Durch das Speichern im Widget Composer wird das Widget lokal in Ihrem Dashboard 
 
 >[!TIP]
 >
->Wählen Sie das Eigenschaftensymbol (![Das Symbol &quot;Eigenschaften&quot;.](./images/user-defined-dashboards/properties-icon.png)) neben dem Dashboard-Namen, um Details zur Erstellung anzuzeigen. Sie können den Namen Ihres Dashboards im angezeigten Dialogfeld ändern.
+>Wählen Sie das Eigenschaftensymbol (![Das Symbol Eigenschaften .](./images/user-defined-dashboards/properties-icon.png)) neben dem Dashboard-Namen, um Details zur Erstellung anzuzeigen. Sie können den Namen Ihres Dashboards im angezeigten Dialogfeld ändern.
 
 Widgets können in diesem Arbeitsbereich neu angeordnet und in der Größe angepasst werden. Auswählen **[!UICONTROL Speichern]** um Ihren Dashboard-Namen und Ihr konfiguriertes Layout beizubehalten.
 
@@ -170,8 +170,8 @@ Ein dupliziertes Widget wird in Ihrem benutzerdefinierten Dashboard angezeigt. W
 
 Durch Lesen dieses Dokuments können Sie besser verstehen, wie Sie ein benutzerdefiniertes Dashboard erstellen und benutzerdefinierte Widgets für dieses Dashboard erstellen, bearbeiten und aktualisieren.
 
-So ermitteln Sie die verfügbaren vorkonfigurierten Metriken und Visualisierungen für die [profiles](./guides/profiles.md#standard-widgets), [Segmente](./guides/audiences.md#standard-widgets)und [Ziele](./guides/destinations.md#standard-widgets) -Dashboards finden Sie in der entsprechenden Dokumentation eine Liste der Standard-Widgets.
+So ermitteln Sie die verfügbaren vorkonfigurierten Metriken und Visualisierungen für die [profiles](./guides/profiles.md#standard-widgets), [Segmente](./guides/audiences.md#standard-widgets), und [Ziele](./guides/destinations.md#standard-widgets) -Dashboards finden Sie in der entsprechenden Dokumentation eine Liste der Standard-Widgets.
 
-Sehen Sie sich das folgende Video an, um Ihr Verständnis von benutzerdefinierten Dashboards in Experience Platform zu verbessern:
+Sehen Sie sich das folgende Video an, um Ihr Verständnis für benutzerdefinierte Dashboards im Experience Platform zu verbessern:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)

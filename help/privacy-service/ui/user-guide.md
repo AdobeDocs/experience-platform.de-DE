@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Export;Export
+keywords: Experience Platform;home;popular topics;export;export
 solution: Experience Platform
 title: Verwalten von Datenschutzaufträgen in der Privacy Service-Benutzeroberfläche
-description: Erfahren Sie, wie Sie mit der Privacy Service-Benutzeroberfläche Datenschutzanfragen in verschiedenen Experience Cloud-Anwendungen koordinieren und überwachen können.
+description: Erfahren Sie, wie Sie mit der Privacy Service-Benutzeroberfläche Datenschutzanfragen in verschiedenen Experience Cloud-Applikationen koordinieren und überwachen können.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: e5a1b57bc81b27d0e61c3c1ecc10156c10dd3f6e
 workflow-type: tm+mt
@@ -41,7 +41,7 @@ Das Dashboard für die [!DNL Privacy Service] Die Benutzeroberfläche bietet zwe
 | [!UICONTROL CPA] | Die Menüauswahlmöglichkeiten für die [!DNL Colorado Privacy Act] |
 | [!UICONTROL CCPA] | Die Menüauswahlmöglichkeiten für die [!DNL California Consumer Privacy Act] |
 | [!UICONTROL CTDPA] | Die Menüauswahlmöglichkeiten für die [!DNL Connecticut Data Privacy Act] |
-| [!UICONTROL DSGVO] | Die Europäische Union [!DNL General Data Protection Regulation] |
+| [!UICONTROL DSGVO] | Die [!DNL General Data Protection Regulation] |
 | [!UICONTROL PDPA_THA] | Thailands [!DNL Personal Data Protection Act] |
 | [!UICONTROL LGPD_BRA] | Brasiliens [!DNL Lei Geral de Proteção de Dados] |
 | [!UICONTROL NZPA_NZL] | Neuseeland [!DNL Privacy Act] |
@@ -54,9 +54,9 @@ Das Dashboard für die [!DNL Privacy Service] Die Benutzeroberfläche bietet zwe
 
 >[!NOTE]
 >
->Siehe Übersicht unter [unterstützte Datenschutzbestimmungen](../regulations/overview.md) für weitere Informationen über den rechtlichen Kontext der einzelnen Verordnungen.
+>Siehe Übersicht unter [Unterstützte Datenschutzbestimmungen](../regulations/overview.md) für weitere Informationen über den rechtlichen Kontext der einzelnen Verordnungen.
 
-Aufträge für jeden Regulierungstyp werden separat verfolgt. Um zwischen Regeltypen zu wechseln, wählen Sie die **[!UICONTROL Regelungstyp]** und wählen Sie die gewünschte Regel aus der Liste aus.
+Aufträge für jeden Regulierungstyp werden separat nachverfolgt. Um zwischen Regeltypen zu wechseln, wählen Sie die **[!UICONTROL Regelungstyp]** und wählen Sie die gewünschte Regel aus der Liste aus.
 
 ![Die Privacy Service-Konsole mit dem Dropdown-Menü &quot;Regulierungstyp&quot;.](../images/user-guide/regulation.png)
 
@@ -110,7 +110,7 @@ Um die vollständigen Auftragsdaten als CSV-Datei herunterzuladen, wählen Sie *
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_instructions"
->title="Anleitung"
+>title="Anweisungen"
 >abstract="<ul><li>Wählen Sie <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html?lang=de#logging-in-from-experience-platform">Anfragen</a> in der linken Navigation aus, um die Datenschutz-URL zu öffnen, und wählen Sie dann <b>Anfrage erstellen</b> aus.</li><li>Von hier aus können Sie entweder den Anfrage-Builder verwenden oder eine JSON-Datei mit betroffenen Personen hochladen.</li><li>Wenn Sie den Anfrage-Builder verwenden, wählen Sie den Auftragstyp (Zugriff und/oder Löschen) aus und wählen Sie dann den Typ der von Ihnen bereitgestellten Identität (E-Mail, ECID oder AAID) aus oder geben Sie einen benutzerdefinierten Identity-Namespace ein. Geben Sie die entsprechenden Identitätswerte für die Kundinnen bzw. Kunden ein und klicken Sie auf <b>Erstellen</b>, wenn Sie fertig sind.</li><li>Wählen Sie beim Hochladen einer JSON-Datei den Pfeil neben „Anfrage erstellen“ aus. Wählen Sie aus der Liste der Optionen <b>JSON hochladen</b> aus und laden Sie Ihre Datei hoch. Wenn Sie keine JSON-Datei zum Hochladen haben, wählen Sie <b>Adobe-GDPR-Request.json herunterladen</b> aus, um eine Vorlage herunterzuladen, die Sie ausfüllen können. Laden Sie die JSON-Datei hoch und klicken Sie auf <b>Erstellen</b>, wenn Sie fertig sind.</li><li>Weitere Informationen zu dieser Funktion finden Sie im <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/user-guide.html?lang=de">Benutzerhandbuch zum Privacy Service</a> auf Experience League.</li></ul>"
 
 >[!NOTE]
@@ -162,7 +162,7 @@ Das Dialogfeld wird ausgeblendet und der neue Auftrag (oder die neuen Aufträge)
 
 Beim Erstellen komplexerer Anforderungen, z. B. Anforderungen, die mehrere ID-Typen für jedes verarbeitete Datensubjekt verwenden, können Sie eine Anforderung erstellen, indem Sie eine JSON-Datei hochladen.
 
-Wählen Sie den Pfeil neben **[!UICONTROL Anforderung erstellen]**, unter dem Widget Statusbericht auf der rechten Seite des Bildschirms. Wählen Sie in der angezeigten Liste der Optionen die Option **[!UICONTROL JSON hochladen]**.
+Wählen Sie den Pfeil neben **[!UICONTROL Anforderung erstellen]**, unter dem Widget Statusbericht auf der rechten Seite des Bildschirms. Wählen Sie in der angezeigten Optionsliste die Option **[!UICONTROL JSON hochladen]**.
 
 ![Erstellungsoptionen von Anforderungen](../images/user-guide/create-options.png)
 
@@ -184,4 +184,4 @@ Klicken Sie abschließend auf **[!UICONTROL Erstellen]**. Das Dialogfeld wird au
 
 Durch Lesen dieses Dokuments haben Sie gelernt, wie Sie die [!DNL Privacy Service] Benutzeroberfläche zum Erstellen eines Datenschutzauftrags, zum Anzeigen der Details eines Auftrags, zum Überwachen des Verarbeitungsstatus und zum Herunterladen der Ergebnisse nach Abschluss.
 
-Anweisungen zum programmgesteuerten Ausführen dieser Vorgänge mit dem [!DNL Privacy Service] API, siehe [API-Handbuch](../api/overview.md).
+Anweisungen zum programmgesteuerten Ausführen dieser Vorgänge mit dem [!DNL Privacy Service] API, siehe Abschnitt [API-Handbuch](../api/overview.md).

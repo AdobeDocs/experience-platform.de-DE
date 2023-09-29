@@ -7,7 +7,7 @@ user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unte
 source-git-commit: 7a977f92a81dd27c99ebe8bdf7be1a7d0425ad2a
 workflow-type: tm+mt
 source-wordcount: '250'
-ht-degree: 88%
+ht-degree: 96%
 
 ---
 
@@ -68,8 +68,8 @@ ht-degree: 88%
    * Intelligente Anwendungsfälle für die erneute Interaktion {#intelligent-re-engagement}
       * [Intelligentes erneutes Ansprechen Ihrer Kunden](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
    * Anwendungsfälle für Partnerdaten {#partner-data}
-      * [Engage und Akquisition neuer Kunden durch Prospektivunterstützung](/help/rtcdp/partner-data/prospecting.md)
-      * [Hinzufügen von Erstanbieterprofilen mit von Partnern bereitgestellten Attributen](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-      * [Verwenden der von Partnern unterstützten Besuchererkennung zur Personalisierung von Onsite-Erlebnissen](/help/rtcdp/partner-data/onsite-personalization.md)
+      * [Interagieren mit und Akquirieren von neuen Kundinnen und Kunden durch Prospektierungsunterstützung](/help/rtcdp/partner-data/prospecting.md)
+      * [Ergänzen von Erstanbieterprofilen mit von Partnern bereitgestellten Attributen](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+      * [Verwenden der partnergestützten Besuchererkennung zur Personalisierung von Onsite-Erlebnissen](/help/rtcdp/partner-data/onsite-personalization.md)
 * [Experience Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
 * [Glossar zu Experience Platform](https://docs.adobe.com/content/help/de-DE/experience-platform/landing/glossary.html)

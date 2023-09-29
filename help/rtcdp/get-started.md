@@ -75,7 +75,7 @@ Ein nicht identifizierter Besucher navigiert auf der Luma-Site beispielsweise zu
 
 ![Bild](assets/luma-sweatshirts.png)
 
-Wenn der Kunde navigiert, um mehr über diese Produkte zu erfahren, werden diese Produktansichten in Adobe Analytics erfasst und an gesendet [!DNL Experience Platform].
+Wenn der Kunde zu weiteren Informationen über diese Produkte navigiert, werden diese Produktansichten in Adobe Analytics erfasst und an gesendet [!DNL Experience Platform].
 
 <!--![image](assets/luma-shirt-detail.png)-->
 
@@ -145,7 +145,7 @@ Verwendung [!DNL Real-Time Customer Data Platform] , um neue Datenquellen in Pla
 
 ![Bild](assets/luma-source-cat.png)
 
-Um beispielsweise die CRM-Daten von Luma zu erfassen, filtern Sie den Katalog nach *CRM*. Daraufhin werden alle vordefinierten Connectoren aufgelistet, die *CRM* enthalten. Hinzufügen [!DNL Microsoft Dynamics CRM] data:
+Um beispielsweise die CRM-Daten von Luma zu erfassen, filtern Sie den Katalog nach *CRM*. Daraufhin werden alle vordefinierten Connectoren aufgelistet, die *CRM* enthalten. Hinzufügen von [!DNL Microsoft Dynamics CRM] data:
 
 1. Lassen Sie die Verbindung zu.
 
@@ -157,7 +157,7 @@ Um beispielsweise die CRM-Daten von Luma zu erfassen, filtern Sie den Katalog na
 
    Wählen Sie beispielsweise **[!UICONTROL Kontakte]**. Eine Vorschau der Kontaktdaten wird automatisch geladen, damit Sie überprüfen können, ob alles wie erwartet aussieht.
 
-   Die Adobe Experience Platform nimmt einen Großteil der manuellen Arbeit aus diesem Prozess heraus, indem sie Standardfelder automatisch dem [!DNL Experience Data Model] (XDM)-Profilschema.
+   Adobe Experience Platform entlastet diesen Prozess durch die automatische Zuordnung von Standardfeldern zu den [!DNL Experience Data Model] (XDM)-Profilschema.
 
 1. Überprüfen Sie die Feldzuweisungen.
 
@@ -244,8 +244,7 @@ Hier sehen Sie alle Ziele, an die Luma dieses Ziel senden kann, sowohl Adobe- al
 In diesem Szenario möchte Luma die Zielgruppe mit Personalisierung über folgende Ziele hinweg erneut ansprechen:
 
 * Google, für Anzeige
-
-   <!--* Facebook -->
+  <!--* Facebook -->
 * Adobe Campaign, für E-Mail
 
 <!-- ![image](assets/luma-sched-dest.png) -->

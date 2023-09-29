@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Segmente überwachen; Datenflüsse überwachen; Datenflüsse; Segmentierung
+keywords: Experience Platform; home; beliebte Themen; Segmente überwachen; Datenflüsse überwachen; Datenflüsse; Segmentierung
 description: Mit der Segmentierung können Sie aus Ihren Echtzeit-Kundenprofildaten Segmente und Zielgruppen erstellen. In diesem Tutorial erfahren Sie, wie Sie Datenflüsse während der Segmentierung mithilfe der Experience Platform-Benutzeroberfläche überwachen können.
 title: Überwachen von Datenflüssen für Segmente in der Benutzeroberfläche
 type: Tutorial
@@ -15,14 +15,14 @@ ht-degree: 8%
 
 Mit dem Segmentation Service können Sie Segmente und Zielgruppen aus Ihren Echtzeit-Kundenprofildaten in Adobe Experience Platform erstellen. Platform bietet Datenflüsse zur transparenten Verfolgung dieses Datenflusses von Quellen zu Zielen.
 
-Das Monitoring-Dashboard bietet eine visuelle Darstellung der Datenaktivität innerhalb eines Segments, einschließlich des Status der Segmentierung Ihrer Daten. In diesem Tutorial erfahren Sie, wie Sie mit dem Monitoring-Dashboard die Segmentierung Ihrer Daten mithilfe der Experience Platform-Benutzeroberfläche überwachen können. So können Sie den Status von Segmentaktivierungs-, Auswertungs- und Exportvorgängen verfolgen.
+Das Monitoring-Dashboard bietet eine visuelle Darstellung der Datenaktivität innerhalb eines Segments, einschließlich des Status der Segmentierung Ihrer Daten. In diesem Tutorial erfahren Sie, wie Sie mithilfe des Monitoring-Dashboards die Segmentierung Ihrer Daten mithilfe der Experience Platform-Benutzeroberfläche überwachen können. So können Sie den Status von Segmentaktivierungs-, Auswertungs- und Exportvorgängen verfolgen.
 
 ## Erste Schritte {#getting-started}
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 - [Datenflüsse](../home.md): Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in [!DNL Identity] und [!DNL Profile] sowie in [!DNL Destinations].
-   - [Datenfluss-Abläufe](../../sources/notifications.md): Datenfluss-Ausführungen sind die wiederkehrenden geplanten Aufträge, die auf der Frequenzkonfiguration ausgewählter Datenflüsse basieren.
+   - [Datenfluss-Abläufe](../../sources/notifications.md): Datenflüsse sind die wiederkehrenden geplanten Aufträge, die auf der Frequenzkonfiguration ausgewählter Datenflüsse basieren.
 - [Segmentierung](../../segmentation/home.md): Mit der Segmentierung können Sie aus Ihren Echtzeit-Kundenprofildaten Segmente und Zielgruppen erstellen.
    - [Aktivierungsaufträge](../../destinations/ui/activation-overview.md): Ein Aktivierungsauftrag wird verwendet, um Ihr Segment für ein bestimmtes Ziel zu aktivieren.
    - [Evaluierungsaufträge](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment): Ein Auswertungsauftrag ist ein asynchroner Prozess, der ausgeführt wird und ein Zielgruppensegment erstellt, das auf dem angegebenen Segment basiert.
@@ -56,10 +56,10 @@ Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
 | ------ | ----------- |
 | **[!UICONTROL Segmentname]** | Der Name des Segments. |
 | **[!UICONTROL Letzter Bewertungszeitstempel]** | Datum und Uhrzeit der letzten Ausführung des Auswertungsauftrags des Segments. |
-| **[!UICONTROL Letzter Bewertungsstatus]** | Der Status des letzten Auswertungsauftrags des Segments. Mögliche Werte sind **[!UICONTROL Erfolg]**, **[!UICONTROL Keine Ausführungen]** und **[!UICONTROL Fehlgeschlagen]**. |
+| **[!UICONTROL Letzter Bewertungsstatus]** | Der Status des letzten Auswertungsauftrags des Segments. Mögliche Werte sind **[!UICONTROL Erfolg]**, **[!UICONTROL Keine Ausführungen]**, und **[!UICONTROL Fehlgeschlagen]**. |
 | **[!UICONTROL Letzte Testprofile]** | Die Anzahl der Profile, die im letzten Auswertungsauftrag des Segments ausgewertet wurden. |
-| **[!UICONTROL Letzter Aktivierungszeitstempel]** | Datum und Uhrzeit, zu der der letzte Aktivierungsauftrag des Segments ausgeführt wurde. |
-| **[!UICONTROL Letzter Aktivierungsstatus]** | Der Status des letzten Aktivierungsauftrags des Segments. Mögliche Werte sind **[!UICONTROL Erfolg]**, **[!UICONTROL Keine Ausführungen]** und **[!UICONTROL Fehlgeschlagen]**. |
+| **[!UICONTROL Datum der letzten Aktivierung]** | Datum und Uhrzeit der letzten Ausführung des Segmentaktivierungsauftrags. |
+| **[!UICONTROL Letzter Aktivierungsstatus]** | Der Status des letzten Aktivierungsauftrags des Segments. Mögliche Werte sind **[!UICONTROL Erfolg]**, **[!UICONTROL Keine Ausführungen]**, und **[!UICONTROL Fehlgeschlagen]**. |
 | **[!UICONTROL Letzte Aktivierungsidentitäten]** | Die Anzahl der Identitäten, die im letzten Aktivierungsauftrag des Segments aktiviert wurden. |
 | **[!UICONTROL Letztes Aktivierungsziel]** | Der Name des Ziels, für das der letzte Aktivierungsauftrag des Segments aktiviert wurde. |
 
@@ -83,7 +83,7 @@ Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
 | **[!UICONTROL Typ]** | Gibt den Typ des Segmentauftrags an. Die beiden unterstützten Auftragstypen sind **Aktivierung** und **Evaluierung** Aufträge. |
 | **[!UICONTROL Auftrag abgeschlossen]** | Datum und Uhrzeit des Abschlusses des Segmentauftrags. |
 | **[!UICONTROL Verarbeitungszeit]** | Die Zeit, die der Abschluss des Segmentauftrags dauerte. |
-| **[!UICONTROL Auftragsstatus]** | Der Status des Segmentauftrags. Zu den unterstützten Werten gehören **[!UICONTROL Erfolg]**, **[!UICONTROL In Bearbeitung]** und **[!UICONTROL Fehlgeschlagen]**. |
+| **[!UICONTROL Auftragsstatus]** | Der Status des Segmentauftrags. Zu den unterstützten Werten gehören **[!UICONTROL Erfolg]**, **[!UICONTROL In Bearbeitung]**, und **[!UICONTROL Fehlgeschlagen]**. |
 | **[!UICONTROL Anzahl der Profile]** | Die Anzahl der Profile, die der Segmentauftrag auswertet. Jeder Benutzer sollte über ein eindeutiges Profil verfügen. |
 | **[!UICONTROL Identitätsanzahl]** | Die Anzahl der Identitäten, die der Segmentauftrag aktiviert. Jedes Profil kann mehrere Identitäten aufweisen. Beispielsweise könnte ein Profil eine E-Mail-, Telefonnummer- und Treuenummer als Identitäten haben. |
 | **[!UICONTROL Zielname]** | Der Name des Ziels, für das der Segmentauftrag aktiviert wird. |
@@ -106,7 +106,7 @@ Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
 | **[!UICONTROL Datengröße]** | Die Größe des zu aktivierenden Datenflusses. |
 | **[!UICONTROL Dateien insgesamt]** | Die Gesamtzahl der im Datenfluss aktivierten Dateien. |
 | **[!UICONTROL Status]** | Der aktuelle Status des Aktivierungsauftrags. |
-| **[!UICONTROL Start des Datenflusses]** | Datum und Uhrzeit des Starts des Aktivierungsauftrags. |
+| **[!UICONTROL Start des Datenflusses]** | Datum und Uhrzeit des Beginns des Aktivierungsauftrags. |
 | **[!UICONTROL Dataflow-Ausführungsende]** | Datum und Uhrzeit des Endes des Aktivierungsauftrags. |
 | **[!UICONTROL Dataflow-run-ID]** | Die ID des aktuellen Aktivierungsauftrags. |
 | **[!UICONTROL Kennung der IMS-Organisation]** | Die ID der Organisation, zu der der Aktivierungsauftrag gehört. |
@@ -136,7 +136,7 @@ Für den Segmentabschnitt stehen die folgenden Metriken zur Verfügung:
 
 ### Details zum Testauftrag {#evaluation-job-details}
 
-Auf der Seite mit den Ausführungsdetails für Bewertungsaufträge werden Informationen zu den Metriken und Segmenten der Ausführung angezeigt, die mit dem Segmentauftrag zusammenhängen. Ein Auswertungsauftrag ist ein asynchroner Prozess, der ein Zielgruppensegment basierend auf dem angegebenen Segment erstellt. Weitere Informationen zu Auswertungsaufträgen finden Sie im Tutorial zu [Segmentbewertung](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment).
+Auf der Seite mit den Ausführungsdetails für Bewertungsaufträge werden Informationen zu den Metriken und Segmenten der Ausführung angezeigt, die mit dem Segmentauftrag zusammenhängen. Ein Auswertungsauftrag ist ein asynchroner Prozess, der ein Zielgruppensegment basierend auf dem angegebenen Segment erstellt. Weitere Informationen zu Auswertungsaufträgen finden Sie im Tutorial zu [Segmentauswertung](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment).
 
 ![Das Dashboard des Auswertungsauftrags. Informationen zum Segmentbewertungsauftrag werden angezeigt.](../assets/ui/monitor-segments/evaluation-job-details.png)
 
@@ -168,14 +168,14 @@ Für den Segmentabschnitt stehen die folgenden Metriken zur Verfügung:
 | **[!UICONTROL Name]** | Der Name des Segments, das ausgewertet wird. |
 | **[!UICONTROL Anzahl der Profile]** | Die Anzahl der Profile, die ausgewertet werden. |
 
-## Dashboard für Segmentaufträge überwachen {#monitoring-segment-jobs-dashboard}
+## Überwachen des Dashboards für Segmentaufträge {#monitoring-segment-jobs-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"
 >title="Segmentvorgänge"
 >abstract="Die Segmentvorgangs-Ansicht enthält Informationen zu Evaluierungs- und Exportvorgängen für Ihre Segmente."
 
-So greifen Sie auf die **[!UICONTROL Segmentaufträge]** Dashboard, auswählen **[!UICONTROL Überwachung]** (![Überwachungssymbol](../assets/ui/monitor-destinations/monitoring-icon.png)) in der linken Navigation. Einmal im [!UICONTROL Überwachung] Seite, wählen Sie **[!UICONTROL Segmentaufträge]**. Die [!UICONTROL Überwachung] Dashboard enthält Metriken und Informationen zu den Segmentbewertungs- und Exportvorgängen.
+So greifen Sie auf die **[!UICONTROL Segmentaufträge]** Dashboard, auswählen **[!UICONTROL Überwachung]** (![Überwachungssymbol](../assets/ui/monitor-destinations/monitoring-icon.png)) in der linken Navigation. Einmal im [!UICONTROL Überwachung] Seite, auswählen **[!UICONTROL Segmentaufträge]**. Die [!UICONTROL Überwachung] Dashboard enthält Metriken und Informationen zu den Segmentbewertungs- und Exportvorgängen.
 
 >[!NOTE]
 >
@@ -190,7 +190,7 @@ Die folgenden Metriken sind für Segmentaufträge verfügbar:
 | Metrik | Beschreibung |
 ---------|----------|
 | **[!UICONTROL Segmentauftrag]** | Gibt den Namen des Segmentauftrags an. |
-| **[!UICONTROL Typ]** | Gibt den Typ des Segmentauftrags - Export oder Auswertung an. Beachten Sie, dass der Segmentauftrag in beiden Fällen ausgewertet oder exportiert wird. **all** Segmente, die zu einer Organisation gehören. Weiterführende Informationen zu Exportaufträgen finden Sie im Handbuch im [Endpunkt der Exportaufträge](../../segmentation/api/export-jobs.md). Weitere Informationen zu Auswertungsaufträgen finden Sie im Tutorial zu [Segmentbewertung](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment). |
+| **[!UICONTROL Typ]** | Gibt den Typ des Segmentauftrags - Export oder Auswertung an. Beachten Sie, dass der Segmentauftrag in beiden Fällen ausgewertet oder exportiert wird. **all** Segmente, die zu einer Organisation gehören. Weiterführende Informationen zu Exportaufträgen finden Sie im Handbuch im [Endpunkt der Exportaufträge](../../segmentation/api/export-jobs.md). Weitere Informationen zu Auswertungsaufträgen finden Sie im Tutorial zu [Segmentauswertung](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment). |
 | **[!UICONTROL Auftragsstart]** | Datum und Uhrzeit des Starts des Segmentauftrags. |
 | **[!UICONTROL Auftragsende]** | Datum und Uhrzeit des Abschlusses des Segmentauftrags. |
-| **[!UICONTROL Status]** | Der Status des abgeschlossenen Auftrags. Mögliche Status für den Segmentauftrag sind &quot;Erfolg&quot;oder &quot;Fehlgeschlagen&quot;. |
+| **[!UICONTROL Status]** | Der Status des abgeschlossenen Auftrags. Mögliche Status für den Segmentauftrag umfassen Erfolg oder Fehlgeschlagen. |

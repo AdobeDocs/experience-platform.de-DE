@@ -7,7 +7,7 @@ feature: Segments
 source-git-commit: a44b1a1f6028e54ca23149249697dea9407bf60a
 workflow-type: tm+mt
 source-wordcount: '180'
-ht-degree: 96%
+ht-degree: 98%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 96%
    - [Zielgruppenkomposition](ui/audience-composition.md)
    - [Segment Builder](ui/segment-builder.md)
    - [Look-alike-Zielgruppen](ui/lookalike-audiences.md)
-   - [Interessensgruppen](ui/prospect-audience.md)
+   - [Potenzielle Zielgruppen](ui/prospect-audience.md)
    - [Edge-Segmentierung](ui/edge-segmentation.md)
    - [Streaming-Segmentierung](ui/streaming-segmentation.md)
    - [Streaming-Segmentierung  (Video)](video/streaming-segmentation-overview.md)

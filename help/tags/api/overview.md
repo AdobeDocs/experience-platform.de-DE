@@ -19,7 +19,7 @@ Um alle verfügbaren Endpunkte und CRUD-Vorgänge anzuzeigen, konsultieren Sie d
 
 ## Firmen
 
-Ein Unternehmen stellt die Organisation eines Tags-Benutzers dar, normalerweise eine Firma. Diese Unternehmen gleichen 1:1 mit Organisations-IDs ab. API-Benutzer haben nur Einblick in die Unternehmen, auf die sie Zugriff haben.
+Ein Unternehmen stellt die Organisation eines Tags-Benutzers dar, normalerweise eine Firma. Diese Unternehmen stimmen 1:1 mit Organisations-IDs überein. API-Benutzer haben nur Einblick in die Unternehmen, auf die sie Zugriff haben.
 
 Informationen zum Anzeigen verfügbarer Unternehmen in der API finden Sie im [Handbuch zum companies-Endpunkt](./endpoints/companies.md).
 

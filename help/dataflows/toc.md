@@ -21,7 +21,7 @@ ht-degree: 69%
    - [Überwachen von Datenflüssen in Quellen](./ui/monitor-sources.md)
    - [Überwachen von Datenflüssen in Identitäten](./ui/monitor-identities.md)
    - [Überwachen von Datenflüssen in Profilen](./ui/monitor-profiles.md)
-   - [Überwachen von Datenflüssen in Segmenten](./ui/monitor-segments.md)
+   - [Datenflüsse in Segmenten überwachen](./ui/monitor-segments.md)
    - [Überwachen von Datenflüssen in Zielen](./ui/monitor-destinations.md)
    - B2B-Überwachung {#b2b}
       - [Überwachen von Profilanreicherungsaufträgen](./ui/b2b/monitor-profile-enrichment.md)

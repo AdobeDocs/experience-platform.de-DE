@@ -7,7 +7,7 @@ exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
 source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
 workflow-type: tm+mt
 source-wordcount: '843'
-ht-degree: 83%
+ht-degree: 94%
 
 ---
 
@@ -37,13 +37,13 @@ Die Adobe Experience Platform-Datenaufnahme steht für die verschiedenen Methode
 
 Weitere Informationen finden Sie in der [Übersicht zur Datenaufnahme](../../ingestion/home.md).
 
-## Auf Datensätze aus Schemas angewendete Beschriftungen
+## Auf Datensätze aus Schemata angewendete Beschriftungen
 
 Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten, um sicherzustellen, dass die für die Verwendung von Daten geltenden Vorschriften, Einschränkungen und Richtlinien eingehalten werden. Mit dem Data Governance-Framework können Sie Nutzungskennzeichnungen anwenden, um Daten entsprechend den für diese Daten geltenden Nutzungsrichtlinien zu kategorisieren. Beschriftungen können auf einzelne Schemata, Felder innerhalb dieser Schemas und ganze einzelne Datensätze angewendet werden. Wenn Beschriftungen direkt auf ein Schema angewendet werden, werden diese Beschriftungen auf alle vorhandenen und zukünftigen Datensätze übertragen, die auf diesem Schema basieren.
 
 >[!IMPORTANT]
 >
->Beschriftungen können nicht mehr auf Felder auf Datensatzebene angewendet werden. Dieser Workflow wird nicht mehr für die Anwendung von Bezeichnungen auf Schemaebene unterstützt. Alle Bezeichnungen, die zuvor auf Datensatzobjektebene angewendet wurden, werden bis zum 31. Mai 2024 weiterhin über die Platform-Benutzeroberfläche unterstützt. Um sicherzustellen, dass Ihre Bezeichnungen über alle Schemas hinweg konsistent sind, müssen alle Bezeichnungen, die zuvor auf Datensatzebene an Felder angehängt wurden, von Ihnen im Laufe des kommenden Jahres auf Schemaebene migriert werden. Siehe Abschnitt zu [Migration zuvor angewendeter Bezeichnungen](../../data-governance/e2e.md#migrate-labels) für Anweisungen dazu.
+>Kennzeichnungen können auf Datensatzebene nicht mehr auf Felder angewendet werden. Dieser Workflow wurde zugunsten von Kennzeichnungen auf Schemaebene aufgegeben. Alle Kennzeichnungen, die zuvor auf Datensatzobjektebene angewendet wurden, werden bis zum 31. Mai 2024 weiterhin über die Platform-Benutzeroberfläche unterstützt. Damit Ihre Kennzeichnungen schemaübergreifend konsistent sind, müssen alle Kennzeichnungen, die zuvor auf Felder auf Datensatzebene angewendet wurden, von Ihnen im Laufe des kommenden Jahres auf Schemaebene migriert werden. Anweisungen hierzu finden Sie im Abschnitt zum [Migrieren zuvor angewendeter Kennzeichnungen](../../data-governance/e2e.md#migrate-labels).
 
 Weitere Informationen zu dem Service finden Sie in der [Übersicht zu Data Governance](../../data-governance/home.md). Schrittweise Anweisungen zum Arbeiten mit Nutzungskennzeichnungen in [!DNL Platform] finden Sie in den folgenden Handbüchern:
 

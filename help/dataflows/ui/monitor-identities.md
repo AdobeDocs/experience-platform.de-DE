@@ -1,6 +1,6 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Identitäten überwachen; Datenflüsse überwachen; Datenflüsse; Identitäten;
-description: Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihre Kunden und deren Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle und persönliche digitale Erlebnisse sorgen. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Experience Platform-Benutzeroberfläche Datenflüsse mit Identitäten überwachen können.
+keywords: Experience Platform; home; beliebte Themen; Identitäten überwachen; Datenflüsse überwachen; Datenflüsse; Datenflüsse; Identitäten;
+description: Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihre Kundinnen und Kunden und deren Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle und persönliche digitale Erlebnisse sorgen. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Experience Platform-Benutzeroberfläche Datenflüsse mit Identitäten überwachen können.
 title: Überwachen von Datenflüssen auf Identitäten in der Benutzeroberfläche
 type: Tutorial
 exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
@@ -13,14 +13,14 @@ ht-degree: 20%
 
 # Überwachen von Datenflüssen auf Identitäten in der Benutzeroberfläche
 
-Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihre Kunden und deren Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle und persönliche digitale Erlebnisse sorgen.
+Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihre Kundinnen und Kunden und deren Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle und persönliche digitale Erlebnisse sorgen.
 
-Das Monitoring-Dashboard bietet eine visuelle Darstellung der Datenaktivität innerhalb von Identitäten, einschließlich des Status der Identitäten Ihrer Daten. In diesem Tutorial erfahren Sie, wie Sie mithilfe des Monitoring-Dashboards mithilfe der Experience Platform-Benutzeroberfläche die Identitäten Ihrer Daten überwachen können. So können Sie den Status der Identitätsverarbeitung verfolgen.
+Das Monitoring-Dashboard bietet eine visuelle Darstellung der Datenaktivität innerhalb von Identitäten, einschließlich des Status der Identitäten Ihrer Daten. In diesem Tutorial erfahren Sie, wie Sie mithilfe des Monitoring-Dashboards die Identitäten Ihrer Daten mithilfe der Experience Platform-Benutzeroberfläche überwachen können, sodass Sie den Status der Identitätsverarbeitung verfolgen können.
 
 ## Erste Schritte {#getting-started}
 
 - [Datenflüsse](../home.md): Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in [!DNL Identity] und [!DNL Profile] sowie in [!DNL Destinations].
-   - [Datenfluss-Abläufe](../../sources/notifications.md): Datenfluss-Ausführungen sind die wiederkehrenden geplanten Aufträge, die auf der Frequenzkonfiguration ausgewählter Datenflüsse basieren.
+   - [Datenfluss-Abläufe](../../sources/notifications.md): Datenflüsse sind die wiederkehrenden geplanten Aufträge, die auf der Frequenzkonfiguration ausgewählter Datenflüsse basieren.
 - [Identity Service](../../identity-service/home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kundinnen und Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
 
@@ -47,7 +47,7 @@ Das Dashboard selbst enthält Metriken zur Identitätsverarbeitung. Standardmä�
 
 ![Das Dashboard Identitäten . Informationen über die Anzahl der pro Quelle empfangenen Datensätze werden angezeigt.](../assets/ui/monitor-identities/sources.png)
 
-Die [!UICONTROL Identitätsverarbeitung] Seite enthält Informationen zu Datensätzen, die in [!DNL Identity Service], einschließlich der Anzahl hinzugefügter Identitäten, erstellter Diagramme und aktualisierter Diagramme.
+Die [!UICONTROL Identitätsverarbeitung] Seite enthält Informationen zu Datensätzen, die in [!DNL Identity Service], einschließlich der Anzahl der hinzugefügten Identitäten, erstellten Diagrammen und aktualisierten Diagrammen.
 
 Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
 
@@ -68,7 +68,7 @@ Sie können das Filtersymbol auswählen ![Filtersymbol](../assets/ui/monitor-ide
 
 Alternativ können Sie **[!UICONTROL Datenflüsse]** auf den Umschalter klicken, um Details zur Identitätsverarbeitung für die Datenflüsse Ihrer Organisation in den letzten 24 Stunden anzuzeigen.
 
-![Das Dashboard Identitäten . Es werden Informationen zur Anzahl der Identitäten angezeigt, die pro Datenfluss empfangen wurden.](../assets/ui/monitor-identities/dataflows.png)
+![Das Dashboard Identitäten . Informationen zur Anzahl der Identitäten, die pro Datenfluss empfangen werden, werden angezeigt.](../assets/ui/monitor-identities/dataflows.png)
 
 Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
 

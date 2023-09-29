@@ -41,13 +41,13 @@ Wählen Sie das Trichtersymbol (![Bild des Trichtersymbols](../images/ui/browse/
 
 Je nach angezeigtem Arbeitsauftrag sind unterschiedliche Filteroptionen verfügbar.
 
-### Filter für Löschvorgänge von Datensätzen
+### Filter für Datenlöschungen
 
 Die folgenden Filter gelten für Löschanfragen zum Aufzeichnen von Löschanfragen:
 
 | Filter | Beschreibung |
 | --- | --- |
-| [!UICONTROL Status] | Filtern Sie nach dem aktuellen Status des Arbeitsauftrags:<ul><li>**[!UICONTROL Abgeschlossen]**: Der Vorgang ist abgeschlossen.</li><li>**[!UICONTROL Fehlgeschlagen]**: Beim Vorgang ist ein Fehler aufgetreten und er konnte nicht abgeschlossen werden.</li><li>**[!UICONTROL Wird ausgeführt]**: Die Anfrage wurde gestartet und wird derzeit verarbeitet.</li></ul> |
+| [!UICONTROL Status] | Filtern Sie nach dem aktuellen Status des Arbeitsauftrags:<ul><li>**[!UICONTROL Abgeschlossen]**: Der Vorgang ist abgeschlossen.</li><li>**[!UICONTROL Fehlgeschlagen]**: Beim Vorgang ist ein Fehler aufgetreten und er konnte nicht abgeschlossen werden.</li><li>**[!UICONTROL Verarbeitung läuft]**: Die Anfrage wurde gestartet und wird derzeit verarbeitet.</li></ul> |
 | [!UICONTROL Erstellt am] | Filtern Sie nach dem Zeitpunkt, zu dem der Arbeitsauftrag erstellt wurde. |
 | [!UICONTROL Aktualisierungsdatum] | Filtern Sie nach dem Zeitpunkt, zu dem der Arbeitsauftrag zuletzt aktualisiert wurde. Erstellungen werden als Aktualisierungen gezählt. |
 

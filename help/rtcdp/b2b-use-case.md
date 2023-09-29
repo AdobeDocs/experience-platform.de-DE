@@ -42,7 +42,7 @@ Im letzten Monat hat `p2@townsend.com` die neue Produktseite besucht und dieser 
 
 ## Das Problem
 
-Line 1 hat soeben ein neues Softwareprodukt veröffentlicht und möchte es an Bodeas bestehenden erstklassigen Kundenstamm verkaufen. Bodea startet eine Marketing-Kampagne, die genau auf diese Zielgruppe ausgerichtet ist.
+Line 1 hat soeben ein neues Softwareprodukt veröffentlicht und möchte es an Bodeas bestehenden erstklassigen Kundenstamm weiterverkaufen. Bodea startet eine Marketing-Kampagne, die genau auf diese Zielgruppe ausgerichtet ist.
 
 Da die relevanten Townsend-Informationen in Marketo 1 als Account 1 und in Marketo 2 als Account 2 gespeichert sind, kann das Marketing-Team von Bodea die Informationen in den beiden Silos nicht effizient nutzen.
 
@@ -56,7 +56,7 @@ Da die Ausgaben von Townsend auf verschiedene Vertriebssysteme aufgeteilt sind u
 
 Mit Real-Time CDP B2B Edition kann das Marketing-Team von Bodea:
 
-- Kombinieren Sie die Daten aus allen unterschiedlichen Quellen (mehrere Marketo- und CRM-Instanzen und das Übergeordnete Data Management) in Real-Time CDP B2B Edition.
+- Kombinieren Sie die Daten aus allen unterschiedlichen Quellen (mehrere Marketo- und CRM-Instanzen und das Master-Datenmanagement) in Real-Time CDP B2B Edition.
 
 Mit Real-time Customer Data Platform B2B Edition kann Bodea den Marketo Engage-Quell-Connector nutzen, um B2B-Daten aus Marketo 1 und Marketo 2 in Experience Platform zu bringen und diese Daten mithilfe von an Platform angeschlossenen Programmen aktuell zu halten. Weitere Informationen finden Sie in der Dokumentation zum [Marketo-Quell-Connector](../sources/connectors/adobe-applications/marketo/marketo.md).
 

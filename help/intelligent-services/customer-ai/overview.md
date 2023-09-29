@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Übersicht; Kundenunterstützung; beliebte Themen; Überblick über Kundenai
+keywords: Experience Platform; Übersicht; Kundenhilfe; beliebte Themen; Überblick über Kundenai
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Customer AI – Übersicht

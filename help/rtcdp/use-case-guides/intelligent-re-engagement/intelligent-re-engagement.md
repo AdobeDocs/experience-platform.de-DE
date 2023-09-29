@@ -1,14 +1,14 @@
 ---
 title: Intelligente Erneute Interaktion
-description: Stellen Sie während der wichtigsten Konversionsmomente überzeugende und vernetzte Erlebnisse bereit, um unregelmäßige Kunden intelligent erneut anzusprechen.
+description: Stellen Sie während der wichtigsten Konversionsmomente überzeugende und vernetzte Erlebnisse bereit, um unregelmäßige Kundinnen und Kunden auf intelligente Weise erneut anzusprechen.
 source-git-commit: 79ba0e350d64f43558af9bc3c2ecd4ac13d11499
 workflow-type: tm+mt
 source-wordcount: '3424'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
-# Intelligentes erneutes Ansprechen Ihrer Kunden zur Rückkehr
+# Intelligentes erneutes Ansprechen, um Kundinnen und Kunden zur Rückkehr zu bewegen
 
 Kontaktieren Sie Kunden, die eine Konversion abgebrochen haben, bevor Sie sie auf intelligente und verantwortungsvolle Weise abschließen. Engagieren Sie Kunden durch Erlebnisse anstelle von Erinnerungen, um die Konversion zu verbessern und das Wachstum des Kundenlebenszeitwerts zu fördern.
 
@@ -26,7 +26,7 @@ Sie erstellen Schemas, Datensätze und Zielgruppen, während Sie anhand von Beis
 
 ## Voraussetzungen und Planung {#prerequisites-and-planning}
 
-Wenn Sie die Schritte zur Implementierung des Anwendungsfalls ausführen, nutzen Sie die folgenden Real-Time CDP-Funktionen und Benutzeroberflächenelemente (aufgelistet in der Reihenfolge, in der Sie sie verwenden werden). Vergewissern Sie sich, dass Sie über die erforderlichen attributbasierten Zugriffssteuerungsberechtigungen für alle diese Bereiche verfügen, oder bitten Sie Ihren Systemadministrator, Ihnen die erforderlichen Berechtigungen zu erteilen.
+Wenn Sie die Schritte zur Implementierung des Anwendungsfalls ausführen, werden Sie die folgenden Real-Time CDP-Funktionen und Benutzeroberflächenelemente nutzen (aufgelistet in der Reihenfolge, in der Sie sie verwenden werden). Vergewissern Sie sich, dass Sie die notwendigen Attribut-basierten Zugriffsrechte für alle diese Bereiche haben, oder bitten Sie Ihre Systemadmins, Ihnen die notwendigen Rechte zu erteilen.
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - Integriert Daten aus verschiedenen Datenquellen, um die Kampagne zu unterstützen. Diese Daten werden dann verwendet, um die Kampagnenzielgruppen zu erstellen und personalisierte Datenelemente zu unterteilen, die in der E-Mail und in den Kacheln der Web-Promo verwendet werden (z. B. Name oder kontobezogene Informationen). Die CDP wird auch verwendet, um Zielgruppen über E-Mail und Web zu aktivieren (über [!DNL Adobe Target]).
    * [Schemata](/help/xdm/home.md)
@@ -85,9 +85,9 @@ Die Journey zur Bestellbestätigung konzentriert sich auf Produktkäufe, die üb
 
 Um die einzelnen Schritte in den obigen Übersichten auf hoher Ebene abzuschließen, lesen Sie die folgenden Abschnitte durch, die Links zu weiteren Informationen und detaillierteren Anweisungen enthalten.
 
-### Benutzeroberflächenfunktionen und -elemente, die Sie verwenden {#ui-functionality-and-elements}
+### Funktionen und Elemente der Benutzeroberfläche, die Sie verwenden werden {#ui-functionality-and-elements}
 
-Wenn Sie die Schritte zur Implementierung des Anwendungsfalls ausführen, verwenden Sie die am Anfang dieses Dokuments aufgelisteten Real-Time CDP-Funktionen und Benutzeroberflächenelemente. Vergewissern Sie sich, dass Sie über die erforderlichen attributbasierten Zugriffssteuerungsberechtigungen für alle diese Bereiche verfügen, oder bitten Sie Ihren Systemadministrator, Ihnen die erforderlichen Berechtigungen zu erteilen.
+Wenn Sie die Schritte zur Implementierung des Anwendungsfalls ausführen, verwenden Sie die am Anfang dieses Dokuments aufgelisteten Real-Time CDP-Funktionen und Benutzeroberflächenelemente. Vergewissern Sie sich, dass Sie die notwendigen Attribut-basierten Zugriffsrechte für alle diese Bereiche haben, oder bitten Sie Ihre Systemadmins, Ihnen die notwendigen Rechte zu erteilen.
 
 ### Erstellen eines Schemaentwurfs und Angeben von Feldergruppen {#schema-design}
 
@@ -349,7 +349,7 @@ Weitere Informationen zum Erstellen einer [Datensatz](/help/catalog/datasets/ove
 
 >[!NOTE]
 >
->Ähnlich wie beim Schritt zum Erstellen eines Schemas müssen Sie die Aufnahme des Datensatzes in das Echtzeit-Kundenprofil aktivieren. Weitere Informationen zum Aktivieren des Datensatzes für die Verwendung im Echtzeit-Kundenprofil finden Sie in der [Tutorial zum Erstellen von Schemas.](/help/xdm/tutorials/create-schema-ui.md#profile).
+>Ähnlich wie beim Schritt zum Erstellen eines Schemas müssen Sie die Aufnahme des Datensatzes in das Echtzeit-Kundenprofil aktivieren. Weitere Informationen zum Aktivieren des Datensatzes für die Verwendung im Echtzeit-Kundenprofil finden Sie im [Tutorial zum Erstellen von Schemata.](/help/xdm/tutorials/create-schema-ui.md#profile).
 
 ### Datenschutz, Einverständnis und Data Governance {#privacy-consent}
 

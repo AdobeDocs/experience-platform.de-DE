@@ -38,7 +38,7 @@ Dieses Tutorial setzt ein grundlegendes Verständnis von [!DNL XDM System] und d
 
 * [XDM-System in Experience Platform](../home.md): Eine Übersicht über XDM und dessen Implementierung in [!DNL Experience Platform].
 * [Grundlagen der Schemakomposition](../schema/composition.md): Eine Einführung in die Bausteine von XDM-Schemas.
-* [Erstellen Sie ein Schema mit dem [!DNL Schema Editor]](create-schema-ui.md): Ein Tutorial, in dem die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Benutzeroberfläche erläutert werden.
+* [Erstellen Sie ein Schema mit dem [!DNL Schema Editor]](create-schema-ui.md): Ein Tutorial, das die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Benutzeroberfläche behandelt.
 
 ## Quell- und Referenzschema definieren
 
@@ -55,13 +55,13 @@ Schemabeziehungen werden durch ein dediziertes Feld in einer **Quellschema** , d
 
 Um eine Beziehung herzustellen, muss das Referenzschema über eine definierte primäre Identität verfügen. Beachten Sie beim Festlegen einer primären Identität für eine B2B-Entität, dass sich die Zeichenfolgen-basierten Entitäts-IDs überschneiden können, wenn Sie sie über verschiedene Systeme oder Standorte hinweg erfassen. Dies könnte zu Datenkonflikten in Platform führen.
 
-Um dies zu berücksichtigen, enthalten alle standardmäßigen B2B-Klassen &quot;key&quot;-Felder, die dem [[!UICONTROL B2B-Quelle] Datentyp](../data-types/b2b-source.md). Dieser Datentyp stellt Felder für eine Zeichenfolgenkennung für die B2B-Entität zusammen mit anderen Kontextinformationen zur Quelle der Kennung bereit. Eines dieser Felder, `sourceKey`verkettet die Werte der anderen Felder im Datentyp, um eine vollständig eindeutige Kennung für die Entität zu erhalten. Dieses Feld sollte immer als primäre Identität für B2B-Entitätsschemas verwendet werden.
+Dazu enthalten alle standardmäßigen B2B-Klassen &quot;key&quot;-Felder, die dem [[!UICONTROL B2B-Quelle] Datentyp](../data-types/b2b-source.md). Dieser Datentyp stellt Felder für eine Zeichenfolgenkennung für die B2B-Entität zusammen mit anderen Kontextinformationen zur Quelle der Kennung bereit. Eines dieser Felder, `sourceKey`verkettet die Werte der anderen Felder im Datentyp, um eine vollständig eindeutige Kennung für die Entität zu erhalten. Dieses Feld sollte immer als primäre Identität für B2B-Entitätsschemas verwendet werden.
 
 ![sourceKey-Feld](../images/tutorials/relationship-b2b/sourcekey.png)
 
 >[!NOTE]
 >
->Wann [Festlegen eines XDM-Felds als Identität](../ui/fields/identity.md)müssen Sie einen Identitäts-Namespace bereitstellen, unter dem die Identität definiert wird. Dies kann ein von Adobe bereitgestellter Standard-Namespace oder ein von Ihrem Unternehmen definierter benutzerdefinierter Namespace sein. In der Praxis ist der Namespace lediglich eine kontextbezogene Zeichenfolge und kann auf einen beliebigen Wert festgelegt werden, vorausgesetzt, er ist für Ihre Organisation für die Kategorisierung des Identitätstyps sinnvoll. Siehe Übersicht unter [Identitäts-Namespaces](../../identity-service/namespaces.md) für weitere Informationen.
+>Wann [Festlegen eines XDM-Felds als Identität](../ui/fields/identity.md)müssen Sie einen Identitäts-Namespace bereitstellen, unter dem die Identität definiert wird. Dabei kann es sich um einen Standard-Namespace handeln, der von Adobe bereitgestellt wird, oder um einen benutzerdefinierten Namespace, der von Ihrem Unternehmen definiert wird. In der Praxis ist der Namespace lediglich eine kontextbezogene Zeichenfolge und kann auf einen beliebigen Wert festgelegt werden, vorausgesetzt, er ist für Ihre Organisation für die Kategorisierung des Identitätstyps sinnvoll. Siehe Übersicht unter [Identitäts-Namespaces](../../identity-service/namespaces.md) für weitere Informationen.
 
 Zu Referenzzwecken wird in den folgenden Abschnitten die Struktur der einzelnen Schemas beschrieben, die in dieser Anleitung verwendet werden, bevor eine Beziehung definiert wird. Beachten Sie, wo die primären Identitäten in der Schemastruktur und in den von ihnen verwendeten benutzerdefinierten Namespaces definiert wurden.
 
@@ -75,9 +75,9 @@ Siehe unter **[!UICONTROL Schemaeigenschaften]** wurde dieses Schema zur Verwend
 
 ### [!DNL Accounts] schema
 
-Das Referenzschema &quot;[!DNL Accounts]&quot; basiert auf der Variablen [!UICONTROL XDM-Konto] -Klasse. Die Stammebene `accountKey` -Feld enthält die `sourceKey` , die als primäre Identität unter einem benutzerdefinierten Namespace mit dem Namen [!DNL B2B Account]. Dieses Schema wurde auch für die Verwendung in Profil aktiviert.
+Das Referenzschema &quot;[!DNL Accounts]&quot; basiert auf der Variablen [!UICONTROL XDM-Konto] -Klasse. Die Stammebene `accountKey` -Feld enthält die `sourceKey` , die als primäre Identität unter einem benutzerdefinierten Namespace namens [!DNL B2B Account]. Dieses Schema wurde auch für die Verwendung in Profil aktiviert.
 
-![Kontoschema](../images/tutorials/relationship-b2b/accounts.png)
+![Konten-Schema](../images/tutorials/relationship-b2b/accounts.png)
 
 ## Beziehungsfeld für das Quellschema definieren {#relationship-field}
 
@@ -109,7 +109,7 @@ under **[!UICONTROL Referenzschema]** verwenden, suchen Sie in der Suchleiste na
 
 ![Referenzschema](../images/tutorials/relationship-b2b/reference-schema.png)
 
-under **[!UICONTROL Beziehungsname aus aktuellem Schema]** und **[!UICONTROL Beziehungsname aus Referenzschema]**, geben Anzeigenamen für die Beziehung im Kontext der Quell- bzw. Referenzschemas an. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Speichern]** , um die Änderungen anzuwenden und das Schema zu speichern.
+under **[!UICONTROL Beziehungsname aus aktuellem Schema]** und **[!UICONTROL Beziehungsname aus Referenzschema]**, geben Anzeigenamen für die Beziehung im Kontext der Quell- bzw. Referenzschemas an. Wählen Sie zum Abschluss **[!UICONTROL Speichern]** , um die Änderungen anzuwenden und das Schema zu speichern.
 
 ![Beziehungsname](../images/tutorials/relationship-b2b/relationship-name.png)
 

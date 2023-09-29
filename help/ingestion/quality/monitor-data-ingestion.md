@@ -7,7 +7,7 @@ exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 source-git-commit: 9399a242b855e151e5822035bc952efa89fe4bf0
 workflow-type: tm+mt
 source-wordcount: '657'
-ht-degree: 36%
+ht-degree: 37%
 
 ---
 
@@ -24,7 +24,7 @@ Dieses Benutzerhandbuch enthält Schritte zum Überwachen Ihrer Daten in der Ben
 >title="Aufnahmegeschwindigkeit"
 >abstract="Die Anzahl der erfolgreich verarbeiteten Ereignisse pro Sekunde."
 >text="Learn more in the documentation"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html" text="Überwachen von Datenflüssen für Quellen in der Benutzeroberfläche"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html?lang=de" text="Überwachen von Datenflüssen für Quellen in der Benutzeroberfläche"
 
 >[!TIP]
 >

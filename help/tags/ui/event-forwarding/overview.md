@@ -53,7 +53,7 @@ Während Tags Ereignisdaten mithilfe der Platform Web- und Mobile-SDKs direkt au
 
 ### Properties {#properties}
 
-Die Ereignisweiterleitung verwaltet ihren eigenen Speicher mit Eigenschaften, die von Tags getrennt sind. Diese können Sie in der Benutzeroberfläche für die Experience Platform oder in der Benutzeroberfläche für die Datenerfassung anzeigen, indem Sie **[!UICONTROL Ereignisweiterleitung]** in der linken Navigation.
+Die Ereignisweiterleitung pflegt einen eigenen Speicher mit Eigenschaften, die von Tags getrennt sind. Diese können Sie in der Benutzeroberfläche von Experience Platform oder in der Benutzeroberfläche für die Datenerfassung anzeigen, indem Sie **[!UICONTROL Ereignisweiterleitung]** in der linken Navigation.
 
 ![Properties der Ereignisweiterleitung in der Datenerfassungs-Benutzeroberfläche](../../images/ui/event-forwarding/overview/properties.png)
 

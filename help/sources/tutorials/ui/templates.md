@@ -53,11 +53,11 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 >abstract="Wählen Sie den entsprechenden Geschäftstyp für Ihren Anwendungsfall aus. Ihr Zugriff variiert je nach Ihrem Real-time Customer Data Platform-Abonnementkonto."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=de" text="Real-Time CDP – Übersicht"
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** über die linke Navigationsleiste auf [!UICONTROL Quellen] Arbeitsbereich und sehen Sie sich einen in Experience Platform verfügbaren Quellkatalog an.
+Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** über die linke Navigationsleiste auf [!UICONTROL Quellen] Arbeitsbereich und sehen Sie sich einen Quellkatalog an, der unter Experience Platform verfügbar ist.
 
 Verwenden Sie die *[!UICONTROL Kategorien]* Menü zum Filtern von Quellen nach Kategorie. Geben Sie alternativ einen Quellnamen in die Suchleiste ein, um eine bestimmte Quelle aus dem Katalog zu finden.
 
-Navigieren Sie zu [!UICONTROL Adobe Apps] -Kategorie, die angezeigt werden soll [!DNL Marketo Engage] Quellkarte und wählen Sie dann [!UICONTROL Daten hinzufügen] um zu beginnen.
+Navigieren Sie zu [!UICONTROL Adobe-Anwendungen] -Kategorie, um die [!DNL Marketo Engage] Quellkarte und wählen Sie dann [!UICONTROL Daten hinzufügen] um zu beginnen.
 
 ![Katalog des Quellarbeitsbereichs mit hervorgehobener Marketo Engage-Quelle.](../../images/tutorials/templates/catalog.png)
 
@@ -195,7 +195,7 @@ Verwenden Sie die Planungsschnittstelle, um einen Aufnahmezeitplan für Ihre Dat
 
 ![Die Planungsschnittstelle für Dynamics- und Salesforce-Vorlagen.](../../images/tutorials/templates/schedule.png)
 
-Alternativ können Sie die Aufnahmefrequenz auf **Minute**, **Stunde**, **Tag** oder **Woche**. Wenn Sie Ihren Datenfluss für mehrere Erfassungsvorgänge planen, müssen Sie ein Intervall festlegen, um einen Zeitrahmen zwischen jeder Aufnahme festzulegen. Eine Erfassungsfrequenz, die beispielsweise auf **Stunde** und ein Intervall, das auf **15** bedeutet, dass Ihr Datenfluss Daten alle **15 Stunden**.
+Alternativ können Sie die Aufnahmefrequenz auf **Minute**, **Stunde**, **Tag** oder **Woche**. Wenn Sie Ihren Datenfluss für mehrere Erfassungsvorgänge planen, müssen Sie ein Intervall festlegen, um einen Zeitrahmen zwischen jeder Aufnahme festzulegen. Eine Erfassungsfrequenz, die beispielsweise auf **Stunde** und ein Intervall festgelegt auf **15** bedeutet, dass Ihr Datenfluss Daten alle **15 Stunden**.
 
 Während dieses Schritts können Sie auch **Aufstockung** und definieren eine Spalte für die inkrementelle Datenaufnahme. Die Aufstockung wird verwendet, um historische Daten zu erfassen, während die Spalte, die Sie für die inkrementelle Erfassung definieren, es ermöglicht, neue Daten von vorhandenen Daten zu unterscheiden.
 

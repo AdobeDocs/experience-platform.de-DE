@@ -1,6 +1,6 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Konten überwachen; Datenflüsse überwachen; Datenflüsse
-description: Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, extern bezogene Daten auf geplanter Basis zu erfassen. In diesem Tutorial werden Schritte zum Überwachen von Streaming-Datenflüssen aus dem Arbeitsbereich "Quellen"beschrieben.
+keywords: Experience Platform; home; beliebte Themen; Konten überwachen; Datenflüsse überwachen; Datenflüsse
+description: Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, extern bezogene Daten planmäßig zu erfassen. In diesem Tutorial werden Schritte zum Überwachen von Streaming-Datenflüssen aus dem Arbeitsbereich "Quellen"beschrieben.
 title: Überwachen von Datenflüssen für Streaming-Quellen in der Benutzeroberfläche
 exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
 source-git-commit: 647f2780798dcf55a68e156af3318924c352a442
@@ -19,7 +19,7 @@ In diesem Tutorial werden die Schritte zum Überwachen von Datenflüssen für St
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [Datenflüsse](../../../dataflows/home.md): Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in [!DNL Identity] und [!DNL Profile] sowie in [!DNL Destinations].
-   * [Datenfluss-Abläufe](../../notifications.md): Datenfluss-Ausführungen sind die wiederkehrenden geplanten Aufträge, die auf der Frequenzkonfiguration ausgewählter Datenflüsse basieren.
+   * [Datenfluss-Abläufe](../../notifications.md): Datenflüsse sind die wiederkehrenden geplanten Aufträge, die auf der Frequenzkonfiguration ausgewählter Datenflüsse basieren.
 * [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
@@ -43,7 +43,7 @@ Die folgende Tabelle enthält weitere Informationen zu den Ausführungsstatus vo
 | ------ | ----------- |
 | Abgeschlossen | Die `Completed` Der Status gibt an, dass alle Datensätze für den entsprechenden Datenfluss innerhalb des Zeitraums von einer Stunde verarbeitet wurden. A `Completed` -Status kann in Datenflug-Ausführungen weiterhin Fehler enthalten. |
 | Erfolgreich | Die `Success` Der Status gibt an, dass alle Datensätze für den entsprechenden Datenfluss innerhalb des Zeitraums von einer Stunde verarbeitet wurden und dass im Verlauf des Datenflusses keine Fehler aufgetreten sind. |
-| In Bearbeitung | Die `Processing` Status gibt an, dass ein Datenfluss noch nicht aktiv ist. Dieser Status tritt oft unmittelbar nach der Erstellung eines neuen Datenflusses auf. |
+| Verarbeitung läuft | Die `Processing` Status gibt an, dass ein Datenfluss noch nicht aktiv ist. Dieser Status tritt oft unmittelbar nach der Erstellung eines neuen Datenflusses auf. |
 | Fehler | Die `Error` Status gibt an, dass der Aktivierungsprozess eines Datenflusses unterbrochen wurde. |
 | Keine Ausführungen | Die `No runs` Der Status gibt an, dass der Datenfluss erstellt wurde, aber keine Datenfluss-Ausführungen gestartet wurden. |
 
@@ -93,10 +93,10 @@ Jeder einzelne Datenfluss zeigt die folgenden Details an:
 * **[!UICONTROL Verarbeitungszeit]**: Die Zeitdauer, die die Verarbeitung des Datenflusses dauerte.
 * **[!UICONTROL Erhaltene Datensätze]**: Die Gesamtzahl der Datensätze, die im Datenfluss von einem Quell-Connector empfangen wurden.
 * **[!UICONTROL Aufgenommene Datensätze]**: Die Gesamtzahl der erfassten Datensätze in [!DNL Data Lake].
-* **[!UICONTROL Datensätze mit Warnungen]**: Die Gesamtzahl der Datensätze mit Warnungen, die erfasst wurden. Alle Mapper-Transformationsfehler werden als Warnungen gemeldet und Zeilen, die teilweise erfasst werden, werden als `success` mit einer Warnung. **Hinweis**: Die Aufnahme von Datensätzen mit Warnungen wird nur für Streaming-Quellen unterstützt.
-* **[!UICONTROL Datensätze fehlgeschlagen]**: Die Anzahl der Datensätze, die nicht erfasst wurden [!DNL Data Lake] aufgrund von Fehlern in den Daten.
+* **[!UICONTROL Datensätze mit Warnungen]**: Die Gesamtanzahl der Datensätze mit erfassten Warnungen. Alle Mapper-Transformationsfehler werden als Warnungen gemeldet und Zeilen, die teilweise erfasst werden, werden als `success` mit einer Warnung. **Hinweis**: Die Aufnahme von Datensätzen mit Warnungen wird nur für Streaming-Quellen unterstützt.
+* **[!UICONTROL Datensätze fehlgeschlagen]**: Die Anzahl der Datensätze, die nicht in erfasst wurden [!DNL Data Lake] aufgrund von Fehlern in den Daten.
 * **[!UICONTROL Aufnahmerate]**: Die Erfolgsrate der Datensätze, die in [!DNL Data Lake]. Diese Metrik ist anwendbar, wenn [!UICONTROL Teilaufnahme] aktiviert ist.
-* **[!UICONTROL Status]**: Stellt den Status dar, in dem sich der Datenfluss befindet: entweder [!UICONTROL Abgeschlossen] oder [!UICONTROL Verarbeitung]. [!UICONTROL Abgeschlossen] bedeutet, dass alle Datensätze für den entsprechenden Datenfluss innerhalb des Zeitraums von einer Stunde verarbeitet wurden. [!UICONTROL Verarbeitung] bedeutet, dass die Ausführung des Datenflusses noch nicht abgeschlossen ist.
+* **[!UICONTROL Status]**: Stellt den Status dar, in dem sich der Datenfluss befindet: Entweder [!UICONTROL Abgeschlossen] oder [!UICONTROL Verarbeitung]. [!UICONTROL Abgeschlossen] bedeutet, dass alle Datensätze für den entsprechenden Datenfluss innerhalb des Zeitraums von einer Stunde verarbeitet wurden. [!UICONTROL Verarbeitung] bedeutet, dass die Ausführung des Datenflusses noch nicht abgeschlossen ist.
 
 Die [!UICONTROL Übersicht über Datenfluss] -Seite enthält zusätzliche Informationen zu Ihrem Datenfluss, z. B. die zugehörige Datenfluss-Ausführungskennung, den Zieldatensatz und die Organisations-ID.
 
@@ -112,7 +112,7 @@ Standardmäßig werden alle Mapper-Transformationsfehler als Warnungen betrachte
 
 * Syntaxfehler
 * Verweise auf nicht vorhandene Attribute
-* Eine Nichtübereinstimmung von XDM-Datentypen
+* Eine Abweichung von XDM-Datentypen
 
 Um die Fehlerdiagnose anzuzeigen, wählen Sie **[!UICONTROL Vorschau der Fehlerdiagnose]**.
 

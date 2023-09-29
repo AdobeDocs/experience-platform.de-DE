@@ -143,7 +143,7 @@ Die [!UICONTROL Aktualisiert] Das angezeigte Datum zeigt an, wann die Zielgruppe
 
 Wenn Sie den Namen einer Audience aus der im Widget angezeigten Liste auswählen, gelangen Sie zu den Details der Audience. Sie können auch **[!UICONTROL Alle anzeigen]** , um zur [!UICONTROL Zielgruppen] [!UICONTROL Durchsuchen] und wählen Sie dann den Namen einer Audience aus, um deren Details anzuzeigen.
 
-Weiterführende Informationen zum Arbeiten mit Zielgruppen in Experience Platform finden Sie im Abschnitt [Übersicht über den Segmentierungsdienst](../../segmentation/home.md).
+Weitere Informationen zum Arbeiten mit Zielgruppen in Experience Platform finden Sie im Abschnitt [Übersicht über den Segmentierungsdienst](../../segmentation/home.md).
 
 ![Die Registerkarte Übersicht im Dashboard Ziele mit dem Widget Zuletzt aktivierte Zielgruppen wurde hervorgehoben.](../images/destinations/recently-activated-audiences.png)
 

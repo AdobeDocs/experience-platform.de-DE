@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; API; XDM; XDM; XDM-System; Experience-Datenmodell; Datenmodell; ui; Workspace; Identität; Feld;
+keywords: Experience Platform; home; beliebte Themen; API; XDM; XDM; XDM-System; Experience-Datenmodell; Datenmodell; ui; Workspace; Identität; Feld;
 solution: Experience Platform
 title: Identitätsfelder in der Benutzeroberfläche definieren
-description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Experience Platform ein Identitätsfeld definieren.
+description: Erfahren Sie, wie Sie in der Experience Platform-Benutzeroberfläche ein Identitätsfeld definieren.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
@@ -40,7 +40,7 @@ Zusätzliche Steuerelemente werden angezeigt, nachdem Sie das Kontrollkästchen 
 >
 >Für ein einzelnes Schema können viele Identitätsfelder definiert sein, es kann jedoch nur eine primäre Identität geben. Alle Identitätsfelder (primär oder anderweitig) tragen zum Identitätsdiagramm für einen einzelnen Kunden bei, aber das Echtzeit-Kundenprofil verwendet beim Zusammenführen von Datenfragmenten nur die primäre Identität als &quot;Source of Truth&quot;. Wenn Sie ein Schema zur Verwendung im Profil aktivieren möchten, muss das Schema über eine primäre Identität verfügen.
 
-under **[!UICONTROL Identitäts-Namespace]** verwenden, wählen Sie im Dropdown-Menü den entsprechenden Namespace für das Identitätsfeld aus. Von Adobe bereitgestellte Standard-Namespaces sowie alle benutzerdefinierten Namespaces, die von Ihrem Unternehmen definiert wurden, werden aufgelistet.
+under **[!UICONTROL Identitäts-Namespace]** verwenden, wählen Sie im Dropdown-Menü den entsprechenden Namespace für das Identitätsfeld aus. Von Adobe bereitgestellte Standard-Namespaces sowie alle von Ihrem Unternehmen definierten benutzerdefinierten Namespaces werden aufgelistet.
 
 Wählen Sie zum Abschluss **[!UICONTROL Anwenden]** , um die Änderung auf das Schema anzuwenden.
 

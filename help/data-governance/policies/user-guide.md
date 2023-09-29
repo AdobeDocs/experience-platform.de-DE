@@ -5,7 +5,7 @@ title: Verwalten von Datennutzungsrichtlinien in der Benutzeroberfläche
 description: Adobe Experience Platform Data Governance bietet eine Benutzeroberfläche, über die Sie Datennutzungsrichtlinien erstellen und verwalten können. Dieses Dokument bietet einen Überblick über die Aktionen, die Sie im Arbeitsbereich „Richtlinien“ der Experience Platform-Benutzeroberfläche durchführen können.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: ed9ab1f2a4b4466841b3bedef48a6e0a07ec3d10
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1788'
 ht-degree: 100%
 
@@ -169,7 +169,7 @@ Die Einversändnisrichtlinie wird jetzt erstellt, wobei ihr Status standardmäß
 
 #### Überprüfen der Richtliniendurchsetzung
 
-Nachdem Sie eine Einverständnisrichtlinie erstellt und aktiviert haben, können Sie sich in einer Vorschau ansehen, wie sie sich auf die Zielgruppen auswirkt, wenn Segmente für Ziele aktiviert werden. Weitere Informationen finden Sie im Abschnitt zur [Bewertung der Einverständnisrichtlinie](../enforcement/auto-enforcement.md#consent-policy-evaluation).
+Nachdem Sie eine Einverständnisrichtlinie erstellt und aktiviert haben, können Sie sich in einer Vorschau ansehen, wie sie sich auf die Zielgruppen auswirkt, wenn Segmente für Ziele aktiviert werden. Weitere Informationen finden Sie im Abschnitt zur [Auswertung der Einverständnisrichtlinie](../enforcement/auto-enforcement.md#consent-policy-evaluation).
 
 ## Aktivieren oder Deaktivieren einer Richtlinie {#enable}
 

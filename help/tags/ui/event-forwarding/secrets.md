@@ -121,9 +121,9 @@ Wenn Sie fertig sind, wählen Sie die Option **[!UICONTROL Geheime Daten erstell
 
 ### [!UICONTROL OAuth 2 JWT] {#oauth2jwt}
 
-Um ein OAuth 2 JWT-Geheimnis zu erstellen, wählen Sie **[!UICONTROL OAuth 2 JWT]** von **[!UICONTROL Typ]** Dropdown-Liste.
+Um ein OAuth 2 JWT-Geheimnis zu erstellen, wählen Sie **[!UICONTROL OAuth 2 JWT]** aus dem **[!UICONTROL Typ]** Dropdown.
 
-![Die [!UICONTROL Geheimnis erstellen] Registerkarte mit dem OAuth 2 JWT-Geheimnis hervorgehoben im [!UICONTROL Typ] Dropdown-Liste.](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
+![Die [!UICONTROL Geheimnis erstellen] Registerkarte mit dem OAuth 2 JWT-Geheimnis hervorgehoben im [!UICONTROL Typ] Dropdown.](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
 
 >[!NOTE]
 >
@@ -141,7 +141,7 @@ Schließlich können Sie den Wert **[!UICONTROL Versatz aktualisieren]** für di
 
 ![Die [!UICONTROL Geheimnis erstellen] Registerkarte, die die [!UICONTROL Versatz aktualisieren] -Feld.](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
 
-Wenn beispielsweise der Aktualisierungs-Offset auf den Standardwert von `1800` (30 Minuten) und das Zugriffstoken verfügt über eine `expires_in` Wert von `3600` (eine Stunde), aktualisiert das System das Geheimnis automatisch in einer Stunde.
+Wenn beispielsweise der Aktualisierungsoffset auf den Standardwert `1800` (30 Minuten) und das Zugriffstoken verfügt über eine `expires_in` Wert von `3600` (eine Stunde), aktualisiert das System das Geheimnis automatisch in einer Stunde.
 
 >[!IMPORTANT]
 >

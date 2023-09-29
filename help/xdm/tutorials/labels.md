@@ -30,7 +30,7 @@ In diesem Tutorial werden die Schritte zum Hinzufügen von Bezeichnungen zu eine
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
-   * [Schema Editor](../ui/overview.md): Erfahren Sie, wie Sie in der Platform-Benutzeroberfläche Schemas und andere Ressourcen erstellen und verwalten.
+   * [Schema Editor](../ui/overview.md): Erfahren Sie, wie Sie Schemas und andere Ressourcen in der Platform-Benutzeroberfläche erstellen und verwalten.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Bietet die Infrastruktur zum Durchsetzen von Datennutzungsbeschränkungen für Platform-Vorgänge mithilfe von Richtlinien, die definieren, welche Marketing-Aktionen für gekennzeichnete Daten ausgeführt werden können (oder nicht).
 
 ## Schema oder Feld auswählen, dem Beschriftungen hinzugefügt werden sollen {#select-schema-field}
@@ -46,7 +46,7 @@ Um die Beschriftungen für ein einzelnes Feld zu bearbeiten, können Sie das Fel
 
 ![Wählen Sie ein Feld aus der Arbeitsfläche des Schema-Editors aus](../images/tutorials/labels/manage-access.png)
 
-Sie können auch die **[!UICONTROL Bezeichnungen]** , wählen Sie das gewünschte Feld aus der Liste aus und klicken Sie auf **[!UICONTROL Anwenden von Zugriffs- und Data Governance-Beschriftungen]** in der rechten Leiste.
+Sie können auch die **[!UICONTROL Bezeichnungen]** , wählen Sie das gewünschte Feld aus der Liste aus und wählen Sie **[!UICONTROL Anwenden von Zugriffs- und Data Governance-Beschriftungen]** in der rechten Leiste.
 
 ![Wählen Sie ein Feld aus dem [!UICONTROL Bezeichnungen] tab](../images/tutorials/labels/select-field-on-labels-tab.png)
 
@@ -56,7 +56,7 @@ Um die Beschriftungen für das gesamte Schema zu bearbeiten, wählen Sie im **[!
 
 >[!NOTE]
 >
->Wenn Sie zum ersten Mal versuchen, die Beschriftungen für ein Schema oder ein Feld zu bearbeiten, wird eine Haftungsausschlussmeldung angezeigt, die erklärt, wie sich die Beschriftungsnutzung je nach Richtlinien Ihres Unternehmens auf nachgelagerte Vorgänge auswirkt. Auswählen **[!UICONTROL Fortfahren]** , um mit der Bearbeitung fortzufahren.
+>Wenn Sie zum ersten Mal versuchen, die Beschriftungen für ein Schema oder ein Feld zu bearbeiten, wird eine Haftungsausschlussmeldung angezeigt, die erklärt, wie sich die Beschriftungsnutzung je nach Richtlinien Ihres Unternehmens auf nachgelagerte Vorgänge auswirkt. Auswählen **[!UICONTROL Fortfahren]** , um die Bearbeitung fortzusetzen.
 >
 >![Haftungsausschluss für Beschriftung](../images/tutorials/labels/disclaimer.png)
 

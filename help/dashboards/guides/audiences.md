@@ -7,13 +7,13 @@ exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 source-git-commit: cd57ca50537d928025a5164b6a7d0ead490162ba
 workflow-type: tm+mt
 source-wordcount: '3053'
-ht-degree: 38%
+ht-degree: 39%
 
 ---
 
-# [!UICONTROL Zielgruppen] Dashboard {#audiences-dashboard}
+# [!UICONTROL Zielgruppen]-Dashboard {#audiences-dashboard}
 
-Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zu Ihren Zielgruppen anzeigen können, die in einer täglichen Momentaufnahme erfasst werden. In diesem Handbuch wird beschrieben, wie Sie auf die [!UICONTROL Zielgruppen] Dashboard in der Benutzeroberfläche und bietet weitere Informationen zu den im Dashboard angezeigten Visualisierungen.
+Die Adobe Experience Platform-Benutzeroberfläche (UI) verfügt über ein Dashboard, über das Sie wichtige Informationen zu Ihren Zielgruppen anzeigen können. Diese Informationen werden in Form einer täglichen Momentaufnahme erfasst. In diesem Handbuch wird beschrieben, wie Sie auf die [!UICONTROL Zielgruppen] Dashboard in der Benutzeroberfläche und bietet weitere Informationen zu den im Dashboard angezeigten Visualisierungen.
 
 Einen Überblick über alle Funktionen des Segmentierungs-Services von Adobe Experience Platform in der Platform-Benutzeroberfläche erhalten Sie im [Handbuch zur Benutzeroberfläche des Segmentierungs-Services](../../segmentation/ui/overview.md).
 
@@ -33,7 +33,7 @@ So navigieren Sie zum [!UICONTROL Zielgruppen] Dashboard in der Platform-Benutze
 
 >[!NOTE]
 >
->Wenn Ihr Unternehmen neu bei Platform ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt wurden, wird die [!UICONTROL Zielgruppen] Das Dashboard ist nicht sichtbar. Stattdessen werden auf der Registerkarte [!UICONTROL Übersicht] Links und Dokumentation angezeigt, die Ihnen bei den ersten Schritten im Zusammenhang mit der Segmentierung helfen können.
+>Wenn Ihre Organisation erst seit kurzem Platform nutzt und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt hat, ist das Dashboard [!UICONTROL Zielgruppen] nicht sichtbar. Stattdessen werden auf der Registerkarte [!UICONTROL Übersicht] Links und Dokumentation angezeigt, die Ihnen bei den ersten Schritten im Zusammenhang mit der Segmentierung helfen können.
 
 ![Die [!UICONTROL Zielgruppen] Dashboard [!UICONTROL Übersicht] Registerkarte mit [!UICONTROL Zielgruppen] und [!UICONTROL Übersicht] hervorgehoben.](../images/audiences/dashboard-overview.png)
 

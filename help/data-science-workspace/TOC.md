@@ -53,7 +53,7 @@ ht-degree: 100%
    * [Packen von Quelldateien in ein Rezept](models-recipes/package-source-files-recipe.md)
    * [Gepacktes Rezept importieren (Benutzeroberfläche)](models-recipes/import-packaged-recipe-ui.md)
    * [Importieren eines gepackten Rezepts (API)](models-recipes/import-packaged-recipe-api.md)
-   * [Erstellen und Bewerten eines Modells (Benutzeroberfläche)](models-recipes/train-evaluate-model-ui.md)
+   * [Erstellen und Auswerten eines Modells (Benutzeroberfläche)](models-recipes/train-evaluate-model-ui.md)
    * [Trainieren und Auswerten eines Modells (API)](models-recipes/train-evaluate-model-api.md)
    * [Bewerten eines Modells (Benutzeroberfläche)](models-recipes/score-model-ui.md)
    * [Bewerten eines Modells (API)](models-recipes/score-model-api.md)

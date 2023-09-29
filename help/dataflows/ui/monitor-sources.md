@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Konten überwachen; Datenflüsse überwachen; Datenflüsse; Quellen
+keywords: Experience Platform; home; beliebte Themen; Konten überwachen; Datenflüsse überwachen; Datenflüsse; Quellen
 description: In diesem Tutorial werden Schritte zur Überwachung Ihres Datenflusses beschrieben, wobei sowohl eine aggregierte Überwachungsansicht als auch eine dienstübergreifende Überwachung verwendet werden.
 solution: Experience Platform
 title: Überwachen von Datenflüssen für Quellen in der Benutzeroberfläche
@@ -29,7 +29,7 @@ In diesem Tutorial werden Schritte zur Überwachung Ihres Datenflusses beschrieb
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [Datenflüsse](../home.md): Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in [!DNL Identity] und [!DNL Profile] sowie in [!DNL Destinations].
-   * [Datenfluss-Abläufe](../../sources/notifications.md): Datenfluss-Ausführungen sind die wiederkehrenden geplanten Aufträge, die auf der Frequenzkonfiguration ausgewählter Datenflüsse basieren.
+   * [Datenfluss-Abläufe](../../sources/notifications.md): Datenflüsse sind die wiederkehrenden geplanten Aufträge, die auf der Frequenzkonfiguration ausgewählter Datenflüsse basieren.
 * [Quellen](../../sources/home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Identity Service](../../identity-service/home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kundinnen und Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
 * [Echtzeit-Kundenprofil](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
@@ -51,7 +51,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 Im [Platform-Benutzeroberfläche](https://platform.adobe.com)auswählen **[!UICONTROL Überwachung]** über die linke Navigationsleiste auf [!UICONTROL Überwachung] Dashboard. Die [!UICONTROL Überwachung] Das Dashboard enthält Metriken und Informationen zu allen Datenflüssen von Quellen, einschließlich Einblicken in den Zustand des Daten-Traffics von einer Quelle zu [!DNL Identity Service]und [!DNL Profile].
 
-Im Mittelpunkt des Dashboards steht die [!UICONTROL Quellaufnahme] -Bereich, der Metriken und Diagramme enthält, die Daten zu erfassten Datensätzen und fehlgeschlagenen Datensätzen anzeigen.
+In der Mitte des Dashboards befindet sich der [!UICONTROL Quellaufnahme] -Bereich, der Metriken und Diagramme enthält, die Daten zu erfassten Datensätzen und fehlgeschlagenen Datensätzen anzeigen.
 
 ![monitoring-dashboard](../assets/ui/monitor-sources/monitoring-dashboard.png)
 
@@ -69,9 +69,9 @@ Die Diagramme sind standardmäßig aktiviert und Sie können sie deaktivieren, u
 
 | Quellaufnahme | Beschreibung |
 | ---------------- | ----------- |
-| [!UICONTROL Aufgenommene Einträge ] | Die Gesamtzahl der erfassten Datensätze. |
+| [!UICONTROL Aufgenommene Einträge] | Die Gesamtzahl der erfassten Datensätze. |
 | [!UICONTROL Fehlgeschlagene Einträge] | Die Gesamtzahl der Datensätze, die aufgrund von Fehlern in den Daten nicht erfasst wurden. |
-| [!UICONTROL Gesamtzahl fehlgeschlagener Datenflüsse] | Die Gesamtzahl der Datenflüsse mit einer `failed` Status. |
+| [!UICONTROL Gesamtzahl fehlgeschlagener Datenflüsse] | Die Gesamtzahl der Datenflüsse mit einer `failed` -Status. |
 
 In der Liste der Quellerfassung werden alle Quellen angezeigt, die mindestens ein vorhandenes Konto enthalten. Die Liste enthält außerdem Informationen zur Erfassungsrate jeder Quelle, zur Anzahl fehlgeschlagener Datensätze und zur Gesamtzahl fehlgeschlagener Datenflüsse basierend auf dem von Ihnen angewendeten Zeitraum.
 
@@ -81,7 +81,7 @@ Um die Sortierung durch die Liste der Quellen vorzunehmen, wählen Sie **[!UICON
 
 ![sort-by-category](../assets/ui/monitor-sources/sort-by-category.png)
 
-Um alle vorhandenen Datenflüsse aus allen Quellen anzuzeigen, wählen Sie **[!UICONTROL Datenflüsse]**.
+Um alle vorhandenen Datenflüsse über alle Quellen hinweg anzuzeigen, wählen Sie **[!UICONTROL Datenflüsse]**.
 
 ![view-all-dataflows](../assets/ui/monitor-sources/view-all-dataflows.png)
 
@@ -93,7 +93,7 @@ Eine Liste der Datenflüsse wird angezeigt. Um die Liste einzuschränken und sic
 
 ![show-failures-only](../assets/ui/monitor-sources/show-failures-only.png)
 
-Suchen Sie den zu überwachenden Datenfluss und wählen Sie dann das Filtersymbol aus. ![filter](../assets/ui/monitor-sources/filter.png) um weitere Informationen zum Ausführungsstatus anzuzeigen.
+Suchen Sie den zu überwachenden Datenfluss und wählen Sie dann das Filtersymbol aus ![filter](../assets/ui/monitor-sources/filter.png) um weitere Informationen zum Ausführungsstatus anzuzeigen.
 
 ![dataflow](../assets/ui/monitor-sources/dataflow.png)
 
@@ -119,13 +119,13 @@ Um den Fehler detaillierter darzustellen, wählen Sie **[!UICONTROL Vorschau der
 
 ![files](../assets/ui/monitor-sources/files.png)
 
-Die [!UICONTROL Fehlerdiagnose - Vorschau] wird ein Fenster mit einer Vorschau von bis zu 100 Fehlern im Datenfluss angezeigt. Sie können **[!UICONTROL Download]** um einen curl -Befehl abzurufen, mit dem Sie dann die Fehlerdiagnose herunterladen können.
+Die [!UICONTROL Fehlerdiagnose - Vorschau] wird ein Fenster mit einer Vorschau von bis zu 100 Fehlern im Datenfluss angezeigt. Sie können **[!UICONTROL Herunterladen]** um einen curl -Befehl abzurufen, mit dem Sie dann die Fehlerdiagnose herunterladen können.
 
 Wenn Sie fertig sind, wählen Sie **[!UICONTROL Schließen]** aus
 
 ![Fehlerdiagnose](../assets/ui/monitor-sources/error-diagnostics.png)
 
-Sie können das Breadcrumb-System oben in der Kopfzeile verwenden, um zurück zum [!UICONTROL Überwachung] Dashboard. Auswählen **[!UICONTROL Start ausführen: 14.02.2021, 21.47 Uhr]** , um zur vorherigen Seite zurückzukehren, und wählen Sie dann **[!UICONTROL Datenfluss: Demo zur Erfassung von Loyalitätsdaten - Fehlgeschlagen]** , um zur Dataflows-Seite zurückzukehren.
+Sie können das Breadcrumb-System oben in der Kopfzeile verwenden, um zurück zum [!UICONTROL Überwachung] Dashboard. Auswählen **[!UICONTROL Start ausführen: 14.02.2021, 21.47 Uhr]** , um zur vorherigen Seite zurückzukehren, und wählen Sie dann **[!UICONTROL Datenfluss: Demo zur Erfassung von Treuedaten - Fehlgeschlagen]** , um zur Dataflows-Seite zurückzukehren.
 
 ![Breadcrumbs](../assets/ui/monitor-sources/breadcrumbs.png)
 

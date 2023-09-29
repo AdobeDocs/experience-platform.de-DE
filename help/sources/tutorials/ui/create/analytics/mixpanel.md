@@ -85,9 +85,9 @@ Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei der 
 
 ### Validierung {#validation}
 
-In den folgenden Schritten wird beschrieben, wie Sie überprüfen können, ob Sie Ihre [!DNL Mixpanel] und [!DNL Mixpanel] -Ereignisse in Platform erfasst werden.
+In den folgenden Schritten wird beschrieben, wie Sie überprüfen können, ob Sie Ihre [!DNL Mixpanel] und dass [!DNL Mixpanel] -Ereignisse in Platform erfasst werden.
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Datensätze]** über die linke Navigationsleiste, um auf die [!UICONTROL Datensätze] Arbeitsbereich. Die [!UICONTROL Datensatzaktivität] zeigt die Details der Ausführungen an.
+Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Datensätze]** über die linke Navigationsleiste auf [!UICONTROL Datensätze] Arbeitsbereich. Die [!UICONTROL Datensatzaktivität] zeigt die Details der Ausführungen an.
 
 ![dataset-activity](../../../../images/tutorials/create/mixpanel-export-events/dataset-activity.png)
 
@@ -95,7 +95,7 @@ Wählen Sie anschließend die Datenfluss-Start-ID des Datenflusses aus, den Sie 
 
 ![dataflow-monitoring](../../../../images/tutorials/create/mixpanel-export-events/dataflow-monitoring.png)
 
-Wählen Sie abschließend **[!UICONTROL Vorschau des Datensatzes anzeigen]** , um die erfassten Daten anzuzeigen.
+Wählen Sie abschließend **[!UICONTROL Datensatz-Vorschau]** , um die erfassten Daten anzuzeigen.
 
 ![preview-dataset](../../../../images/tutorials/create/mixpanel-export-events/preview-dataset.png)
 

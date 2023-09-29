@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie Erstanbieterprofile mit Attributen vertrauens
 source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
 source-wordcount: '1091'
-ht-degree: 92%
+ht-degree: 94%
 
 ---
 
@@ -118,6 +118,6 @@ Beachten Sie die folgenden Einschränkungen, wenn Sie sich den auf dieser Seite 
 
 Erkunden Sie weitere Anwendungsfälle, die durch die Unterstützung von Partnerdaten in Real-Time CDP ermöglicht werden:
 
-* Verwenden Sie die Datenunterstützung von Drittanbietern in Real-Time CDP, um [Erweitern Sie Ihre Profilbasis mit potenziellen Profilen von Datenpartnern und interagieren Sie mit ihnen, um neue Kunden zu gewinnen oder zu erreichen.](/help/rtcdp/partner-data/prospecting.md).
+* Verwenden Sie die Unterstützung von Drittanbieterdaten in Real-Time CDP, damit Sie [Ihre Profilbasis mit potenziellen Profilen von Datenpartnern erweitern und mit ihnen interagieren können, um neue Kundinnen und Kunden zu gewinnen oder zu erreichen](/help/rtcdp/partner-data/prospecting.md).
 * [Nutzen Sie die von Partnern unterstützte Erkennung für die Personalisierung von On-site-Erlebnissen](/help/rtcdp/partner-data/onsite-personalization.md) während des Besuchs, ohne dass sich der Benutzer authentifiziert oder über einen früheren Verlauf mit Ihrer Marke verfügt.
 * [Erweiterte Aktivierung von Interessenten- und Interessenten-Zielgruppen](/help/destinations/ui/activate-prospect-audiences.md) , um Ziele auszuwählen.

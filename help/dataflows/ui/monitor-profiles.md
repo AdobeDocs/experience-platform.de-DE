@@ -1,6 +1,6 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Monitorprofile; Überwachen von Datenflüssen; Datenflüsse; Profil; Echtzeit-Kundenprofil;
-description: Mit dem Echtzeit-Kundenprofil können Sie eine ganzheitliche Sicht auf jeden einzelnen Kunden anzeigen, indem Sie Daten aus mehreren Kanälen, einschließlich Online, Offline, CRM und Drittanbieter, kombinieren. In diesem Tutorial erfahren Sie, wie Sie Datenflüsse mit Profilen über die Experience Platform-Benutzeroberfläche überwachen können.
+keywords: Experience Platform; home; beliebte Themen; Monitorprofile; Überwachen von Datenflüssen; Datenflüsse; profile; Echtzeit-Kundenprofil
+description: Mit dem Echtzeit-Kundenprofil können Sie eine ganzheitliche Sicht auf jeden einzelnen Kunden anzeigen, indem Sie Daten aus mehreren Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieter-Kanälen, kombinieren. In diesem Tutorial erfahren Sie, wie Sie Datenflüsse mit Profilen über die Experience Platform-Benutzeroberfläche überwachen können.
 title: Überwachen von Datenflüssen für Profile in der Benutzeroberfläche
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
@@ -13,7 +13,7 @@ ht-degree: 17%
 
 # Überwachen von Datenflüssen auf Profile in der Benutzeroberfläche
 
-Mit dem Echtzeit-Kundenprofil können Sie eine ganzheitliche Sicht auf jeden einzelnen Kunden anzeigen, indem Sie Daten aus mehreren Kanälen, einschließlich Online, Offline, CRM und Drittanbieter, kombinieren. Mit dem Profil können Sie Ihre Kundendaten in einer zentralen Ansicht zusammenführen, die eine aussagekräftige Darstellung jeder Kundeninteraktion mit Zeitstempel bietet.
+Mit dem Echtzeit-Kundenprofil können Sie eine ganzheitliche Sicht auf jeden einzelnen Kunden anzeigen, indem Sie Daten aus mehreren Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieter-Kanälen, kombinieren. Mit dem Profil können Sie Ihre Kundendaten in einer zentralen Ansicht zusammenführen, die eine aussagekräftige Darstellung jeder Kundeninteraktion mit Zeitstempel bietet.
 
 Das Monitoring-Dashboard bietet eine visuelle Darstellung der Datenaktivität innerhalb des Profils, einschließlich des Status Ihrer Datenprofile. In diesem Tutorial erfahren Sie, wie Sie mithilfe des Monitoring-Dashboards die Profile Ihrer Daten mithilfe der Experience Platform-Benutzeroberfläche überwachen können. So können Sie den Status der Profilverarbeitung verfolgen.
 
@@ -22,7 +22,7 @@ Das Monitoring-Dashboard bietet eine visuelle Darstellung der Datenaktivität in
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 - [Datenflüsse](../home.md): Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in [!DNL Identity] und [!DNL Profile] sowie in [!DNL Destinations].
-   - [Datenfluss-Abläufe](../../sources/notifications.md): Datenfluss-Ausführungen sind die wiederkehrenden geplanten Aufträge, die auf der Frequenzkonfiguration ausgewählter Datenflüsse basieren.
+   - [Datenfluss-Abläufe](../../sources/notifications.md): Datenflüsse sind die wiederkehrenden geplanten Aufträge, die auf der Frequenzkonfiguration ausgewählter Datenflüsse basieren.
 - [Echtzeit-Kundenprofil](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
 

@@ -68,16 +68,16 @@ In der folgenden Tabelle sind die Aktionen aufgeführt, für die Ressourcen in A
 
 Wenn diese Funktion für Ihr Unternehmen aktiviert ist, werden bei Aktivitäten automatisch Auditprotokolle aufgezeichnet. Sie müssen die Datenerfassung in Audit-Protokollen nicht manuell aktivieren.
 
-Um Prüfprotokolle anzeigen und exportieren zu können, benötigen Sie die **[!UICONTROL Protokoll zu Benutzeraktivitäten anzeigen]** Zugriffskontrollberechtigung erteilt (zu finden unter [!UICONTROL Data Governance] Kategorie). Informationen zum Verwalten individueller Berechtigungen für Platform-Funktionen finden Sie im Abschnitt [Zugriffssteuerungsdokumentation](../../../access-control/home.md).
+Um Prüfprotokolle anzeigen und exportieren zu können, benötigen Sie die **[!UICONTROL Protokoll zur Benutzeraktivität anzeigen]** Zugriffskontrollberechtigung erteilt (zu finden unter [!UICONTROL Data Governance] Kategorie). Informationen zum Verwalten individueller Berechtigungen für Platform-Funktionen finden Sie im Abschnitt [Zugriffssteuerungsdokumentation](../../../access-control/home.md).
 
 ## Verwalten von Prüfprotokollen in der Benutzeroberfläche {#managing-audit-logs-in-the-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_instructions"
->title="Anleitung"
+>title="Anweisungen"
 >abstract="<ul><li>Wählen Sie <b>Audits</b> in der linken Navigation aus. Der Arbeitsbereich „Audits“ zeigt eine Liste der aufgezeichneten Protokolle an, die standardmäßig absteigend nach ihrer Aktualität sortiert sind.</li>   <li> HINWEIS: Audit-Protokolle werden 365 Tage lang aufbewahrt und danach aus dem System gelöscht. Daher können Sie nur für einen Zeitraum von maximal 365 Tagen zurückgehen. Wenn Sie auf Daten zurückgreifen müssen, die älter als 365 Tage sind, sollten Sie Protokolle regelmäßig exportieren, um Ihre internen Richtlinienanforderungen zu erfüllen. </li><li>Wählen Sie ein Ereignis aus der Liste aus, um seine Details in der rechten Leiste anzuzeigen. </li><li>Wählen Sie das Trichtersymbol aus, um eine Liste von Filterfeldern anzuzeigen, mit denen die Ergebnisse eingegrenzt werden können. Unabhängig von den ausgewählten Filtern werden nur die letzten 1.000 Datensätze angezeigt. </li><li>Um die aktuelle Liste der Audit-Prüfprotokolle zu exportieren, wählen Sie **Protokoll herunterladen** aus.</li><li>Weitere Hilfe zu dieser Funktion finden Sie im Abschnitt <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=de">Übersicht über Audit-Protokolle</a> auf Experience League.</li></ul>"
 
-Sie können Prüfprotokolle für verschiedene Funktionen der Experience Platform im **[!UICONTROL Prüfungen]** Arbeitsbereich in der Platform-Benutzeroberfläche. Der Arbeitsbereich „“ zeigt eine Liste der aufgezeichneten Protokolle an, die standardmäßig absteigend nach ihrer Aktualität sortiert sind.
+Sie können Prüfprotokolle für verschiedene Experience Platform-Funktionen in der **[!UICONTROL Prüfungen]** Arbeitsbereich in der Platform-Benutzeroberfläche. Der Arbeitsbereich „“ zeigt eine Liste der aufgezeichneten Protokolle an, die standardmäßig absteigend nach ihrer Aktualität sortiert sind.
 
 ![Das Dashboard Audits , das im linken Menü Audits hervorhebt.](../../images/audit-logs/audits.png)
 
@@ -104,7 +104,7 @@ Die Benutzeroberfläche verfügt für Protokolle über folgende Filter:
 | --- | --- |
 | [!UICONTROL Kategorie] | Verwenden Sie das Dropdown-Menü, um die angezeigten Ergebnisse nach [category](#category). |
 | [!UICONTROL Aktion] | Nach Aktion filtern. Die für jeden Dienst verfügbaren Aktionen finden Sie in der obigen Ressourcentabelle. |
-| [!UICONTROL Benutzer] | Geben Sie die vollständige Benutzer-ID ein (z. B. `johndoe@acme.com`), um nach Benutzer zu filtern. |
+| [!UICONTROL Benutzer] | Geben Sie die vollständige Benutzer-ID ein (beispielsweise `johndoe@acme.com`), um nach Benutzer zu filtern. |
 | [!UICONTROL Status] | Filtern Sie nach, ob die Aktion zulässig (abgeschlossen) oder verweigert wurde, weil [Zugriffskontrolle](../../../access-control/home.md) Berechtigungen. |
 | [!UICONTROL Datum] | Wählen Sie ein Startdatum und/oder ein Enddatum aus, um einen Datumsbereich zu definieren, nach dem die Ergebnisse gefiltert werden sollen. Daten können mit einem Lookback-Zeitraum von 90 Tagen exportiert werden (z. B. 2021-12-15-2022-03-15). Dies kann je nach Ereignistyp unterschiedlich sein. |
 
@@ -130,9 +130,9 @@ Um die aktuelle Liste der Audit-Prüfprotokolle zu exportieren, wählen Sie **[!
 
 ![Das Dashboard &quot;Prüfungen&quot;mit dem [!UICONTROL Protokoll herunterladen] hervorgehoben.](../../images/audit-logs/download.png)
 
-Wählen Sie im angezeigten Dialogfeld Ihr bevorzugtes Format aus (entweder **[!UICONTROL CSV]** oder **[!UICONTROL JSON]**), wählen Sie **[!UICONTROL Download]**. Der Browser lädt die generierte Datei herunter und speichert sie auf Ihrem Computer.
+Wählen Sie im angezeigten Dialogfeld Ihr bevorzugtes Format aus (entweder **[!UICONTROL CSV]** oder **[!UICONTROL JSON]**), und wählen Sie **[!UICONTROL Herunterladen]**. Der Browser lädt die generierte Datei herunter und speichert sie auf Ihrem Computer.
 
-![Das Dialogfeld zur Dateiformatauswahl mit [!UICONTROL Download] hervorgehoben.](../../images/audit-logs/select-download-format.png)
+![Das Dialogfeld zur Dateiformatauswahl mit [!UICONTROL Herunterladen] hervorgehoben.](../../images/audit-logs/select-download-format.png)
 
 ## Verwalten von Auditprotokollen in der API
 
@@ -140,7 +140,7 @@ Alle Aktionen, die Sie in der Benutzeroberfläche ausführen können, können au
 
 ## Verwalten von Auditprotokollen für Adobe Admin Console
 
-Informationen zum Verwalten von Auditprotokollen für Aktivitäten in Adobe Admin Console finden Sie in den folgenden Abschnitten. [Dokument](https://helpx.adobe.com/enterprise/using/audit-logs.html).
+Informationen zum Verwalten von Auditprotokollen für Aktivitäten in Adobe Admin Console finden Sie in den folgenden Abschnitten [Dokument](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
 ## Nächste Schritte und zusätzliche Ressourcen
 

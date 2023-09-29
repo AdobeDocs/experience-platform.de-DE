@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Datenflüsse aktualisieren;Zeitplan bearbeiten
+keywords: Experience Platform; home; beliebte Themen; Datenflüsse aktualisieren; Zeitplan bearbeiten
 description: In diesem Tutorial werden die Schritte zum Aktualisieren eines Datenflusszeitplans beschrieben, einschließlich der Erfassungsfrequenz und der Intervallrate, die mithilfe des Arbeitsbereichs "Quellen"vorgenommen werden.
 solution: Experience Platform
 title: Aktualisieren eines Datenflusses für die Quellverbindung in der Benutzeroberfläche
@@ -92,7 +92,7 @@ Die [!UICONTROL Planung] angezeigt, sodass Sie den Aufnahmezeitplan Ihres Datenf
 
 Sie können auch den Aufnahmezeitplan Ihres Datenflusses aktualisieren, indem Sie die Option Inline-Update verwenden, die auf der Datenflussseite bereitgestellt wird.
 
-Wählen Sie auf der Seite &quot;Datenflüsse&quot;die Auslassungspunkte (`...`) neben dem Namen des Datenflusses und wählen Sie dann **[!UICONTROL Zeitplan bearbeiten]** aus dem Dropdown-Menü, das angezeigt wird.
+Wählen Sie auf der Seite &quot;Datenflüsse&quot;die Auslassungspunkte (`...`) neben dem Namen des Datenflusses und wählen Sie dann **[!UICONTROL Zeitplan bearbeiten]** aus dem angezeigten Dropdown-Menü.
 
 ![edit-schedule](../../images/tutorials/update-dataflows/edit-schedule.png)
 

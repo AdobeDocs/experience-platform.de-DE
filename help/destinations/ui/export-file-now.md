@@ -28,7 +28,7 @@ ht-degree: 22%
 >title="Datei jetzt exportieren"
 >abstract="Wählen Sie diese Option, um zusätzlich zu eventuell zuvor geplanten Exporten einen vollständigen Dateiexport vorzunehmen. Der Dateiexport wird sofort ausgelöst, und es werden die neuesten Ergebnisse der Segmentierungsläufe von Experience Platform abgerufen."
 
-In diesem Artikel wird erläutert, wie Sie die Experience Platform-Benutzeroberfläche verwenden können, um Dateien bei Bedarf an Batch-Zielen wie [Cloud-Speicher](/help/destinations/catalog/cloud-storage/overview.md) und [E-Mail-Marketing](/help/destinations/catalog/email-marketing/overview.md) Ziele.
+In diesem Artikel wird erläutert, wie Sie mit der Experience Platform-Benutzeroberfläche Dateien bei Bedarf an Batch-Zielen exportieren können, z. B. [Cloud-Speicher](/help/destinations/catalog/cloud-storage/overview.md) und [E-Mail-Marketing](/help/destinations/catalog/email-marketing/overview.md) Ziele.
 
 Die **[!UICONTROL Datei jetzt exportieren]** Mit dieser Kontrolle können Sie eine vollständige Datei exportieren, ohne den aktuellen Exportplan einer zuvor geplanten Audience zu unterbrechen. Dieser Export erfolgt zusätzlich zu den zuvor geplanten Exporten und ändert nicht die Exportfrequenz der Audience. Der Dateiexport wird sofort ausgelöst, und es werden die neuesten Ergebnisse der Segmentierungsläufe von Experience Platform abgerufen.
 
@@ -54,7 +54,7 @@ Um Dateien On-Demand an Batch-Ziele zu exportieren, müssen Sie erfolgreich [mit
    >
    >Die Auswahl mehrerer Zielgruppen für den Massenexport von Dateien bei Bedarf wird in der Benutzeroberfläche derzeit nicht unterstützt. Verwenden Sie die [Ad-hoc-Aktivierungs-API](/help/destinations/api/ad-hoc-activation-api.md) zu diesem Zweck.
 
-   ![Bild, das die Schaltfläche Datei jetzt exportieren markiert.](../assets/ui/activate-on-demand/activate-segment-on-demand.png)
+   ![Bild, das die Schaltfläche Datei jetzt exportieren markiert](../assets/ui/activate-on-demand/activate-segment-on-demand.png)
 
 4. Auswählen **[!UICONTROL Ja]** , um den Dateiexport zu bestätigen und zu Trigger zu führen.
 
@@ -70,7 +70,7 @@ Um Dateien On-Demand an Batch-Ziele zu exportieren, müssen Sie erfolgreich [mit
 
 Beachten Sie bei der Verwendung der **[!UICONTROL Datei jetzt exportieren]** Kontrolle:
 
-* **[!UICONTROL Datei jetzt exportieren]** funktioniert nur für Zielgruppen, deren Zeitplan im Batch-Aktivierungsdataflow sich mit dem aktuellen Datum überschneidet. Dies umfasst Zielgruppen mit Zeitplänen, die kein Enddatum haben (Exportfrequenz von **[!UICONTROL Einmal]**) oder wenn das Enddatum noch nicht überschritten wurde.
+* **[!UICONTROL Datei jetzt exportieren]** funktioniert nur für Zielgruppen, deren Zeitplan im Batch-Aktivierungsdatenfluss mit dem aktuellen Datum überschneidet. Dies umfasst Zielgruppen mit Zeitplänen, die kein Enddatum haben (Exportfrequenz von **[!UICONTROL Einmal]**) oder wenn das Enddatum noch nicht überschritten wurde.
 * Warten Sie beim Hinzufügen einer Zielgruppe zu einem vorhandenen Datenfluss mindestens 15 Minuten, bis Sie die Variable **[!UICONTROL Datei jetzt exportieren]** Kontrolle.
 * Wenn Sie die Zusammenführungsrichtlinie einer Zielgruppe ändern oder eine Zielgruppe erstellen, die eine neue Zusammenführungsrichtlinie verwendet, warten Sie 24 Stunden, bis Sie die **[!UICONTROL Datei jetzt exportieren]** Kontrolle.
 
@@ -85,5 +85,5 @@ Bei Verwendung von **[!UICONTROL Datei jetzt exportieren]** -Kontrolle verwenden
 
 ## Verwandte Informationen {#related-information}
 
-* [Aktivieren von Zielgruppen für Batch-Ziele On-Demand mithilfe der Experience Platform-APIs](/help/destinations/api/ad-hoc-activation-api.md)
+* [Aktivieren von Zielgruppen für Batch-Ziele bei Bedarf mithilfe der Experience Platform-APIs](/help/destinations/api/ad-hoc-activation-api.md)
 * [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md)
