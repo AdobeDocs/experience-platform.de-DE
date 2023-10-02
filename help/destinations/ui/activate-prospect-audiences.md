@@ -2,13 +2,13 @@
 title: Aktivieren von potenziellen Zielgruppen für Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie potenzielle Zielgruppen für Ziele aktivieren
-source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
+exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
+source-git-commit: fdb9d7b168d6323fddaab1ac7abc44d3a390afea
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 28%
 
 ---
-
 
 # Interessenten-Zielgruppen aktivieren
 
@@ -22,7 +22,7 @@ In diesem Artikel wird der Workflow erläutert, der zum Exportieren erforderlich
 
 Navigieren Sie zu **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Katalog]** aus. Verwenden Sie die **[!UICONTROL Datentypen]** filtern und auswählen **[!UICONTROL Perspektiven]** um die Ziele anzuzeigen, die die Aktivierung von potenziellen Zielgruppen unterstützen. Derzeit ist der Export von potenziellen Zielgruppen nur für Cloud-Speicher-Ziele verfügbar.
 
-![Ziele, die Datensatzexporte unterstützen](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+![Ziele, die potenzielle Zielgruppen unterstützen.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
 ## Voraussetzungen {#prerequisites}
 

@@ -1,10 +1,11 @@
 ---
 title: Engagieren und Akquirieren neuer Kundinnen und Kunden durch Anwendungsfälle für die Kundengewinnung
 description: Erfahren Sie, wie Sie neue Kundinnen und Kunden durch Anwendungsfälle für die Prospektion, ermöglicht durch die Unterstützung von Partnerdaten in Real-Time CDP, ansprechen und gewinnen können.
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
+source-git-commit: da7a53c1e4accdacfa55e4022c1b499f70aab8fa
 workflow-type: tm+mt
-source-wordcount: '1953'
-ht-degree: 95%
+source-wordcount: '1960'
+ht-degree: 93%
 
 ---
 
@@ -207,7 +208,11 @@ Mehr dazu [Interessenten-Zielgruppen](/help/segmentation/ui/prospect-audience.md
 
 ### Aktivieren von Interessentenprofilen für Ziele {#activate-to-destinations}
 
-Nutzen Sie die Interessentenzielgruppen, indem Sie sie zu Zielen exportieren. Derzeit unterstützen nur bestimmte Ziele wie [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) oder [!BADGE Alpha]{type=Informative}[LiveRamp](/help/destinations/catalog/advertising/liveramp-onboarding.md) die Aktivierung von Interessentenprofilen.
+Nutzen Sie die Interessentenzielgruppen, indem Sie sie zu Zielen exportieren. Derzeit unterstützen nur bestimmte Cloud-Speicher-Ziele die Aktivierung von potenziellen Profilen.
+
+![Ziele, die potenzielle Zielgruppen unterstützen.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+
+[Mehr dazu](/help/destinations/ui/activate-prospect-audiences.md) über die Aktivierung von Perspektiven für Cloud-Speicher-Ziele.
 
 ## Andere durch Partnerdatenunterstützung ermöglichte Anwendungsfälle {#other-use-cases}
 
