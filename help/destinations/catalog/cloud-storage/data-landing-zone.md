@@ -3,9 +3,9 @@ title: Ziel der Data Landing Zone
 description: Erfahren Sie, wie Sie eine Verbindung zur Data Landing Zone herstellen, um Zielgruppen zu aktivieren und Datensätze zu exportieren.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: a1b3e59e0d5b1312b7bc22885ee679775c2a4d78
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1481'
 ht-degree: 53%
 
 ---
@@ -234,7 +234,7 @@ Im Schritt **[!UICONTROL Planung]** können Sie für Ihr [!DNL Data Landing Zone
 
 Im Schritt **[!UICONTROL Zuordnung]** können Sie festlegen, welche Attribute und Identitätsfelder für Ihre Profile exportiert werden sollen. Sie können auch festlegen, dass die Kopfzeilen in der exportierten Datei in einen beliebigen Anzeigenamen geändert werden. Weitere Informationen finden Sie im [Zuordnungsschritt](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) im Tutorial zur Benutzeroberfläche der Aktivierung von Batch-Zielen.
 
-## (Beta) Exportieren von Datensätzen {#export-datasets}
+## Datensätze exportieren {#export-datasets}
 
 Dieses Ziel unterstützt Datensatzexporte. Vollständige Informationen zum Einrichten von Datensatzexporten finden Sie in den Tutorials:
 

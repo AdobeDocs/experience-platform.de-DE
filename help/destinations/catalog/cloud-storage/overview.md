@@ -3,9 +3,9 @@ keywords: Cloud-Speicherziel;Cloud-Speicher
 title: Übersicht über die Cloud-Speicher-Ziele
 description: Adobe Experience Platform kann Ihre Zielgruppen als Datendateien an Ihre Amazon S3-, AWS Kinesis-, Azure Event Hubs- oder SFTP-Cloud-Speicherorte senden.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 5d318d8fa4207ece26a8b0a291d81907af029aed
+source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '384'
 ht-degree: 49%
 
 ---
@@ -67,7 +67,7 @@ Ordnerpfad an Ihrem Speicherort: `acme/campaigns/2021/Luxury Audience/25768be6-e
 
 Cloud-Speicher-Ziele unterstützen die folgenden Exporttypen:
 * **Profilbasierter Export**. Das bedeutet, dass Sie Details zu den Einzelpersonen in der Zielgruppe exportieren. Diese Details sind für die Personalisierung erforderlich und können Attribute, Ereignisse, Zielgruppenmitgliedschaften und mehr umfassen.
-* [!BADGE Beta]{type=Informative}**Datensatzexport**. Mit dieser Funktion können Sie ganze Datensätze in Cloud-Speicher-Ziele exportieren. [Mehr dazu](/help/destinations/ui/export-datasets.md) über die Funktionalität.
+* **Datensatzexport**. Mit dieser Funktion können Sie ganze Datensätze in Cloud-Speicher-Ziele exportieren. [Mehr dazu](/help/destinations/ui/export-datasets.md) über die Funktionalität.
 
 ## Nächste Schritte {#next-steps}
 

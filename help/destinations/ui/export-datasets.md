@@ -3,9 +3,9 @@ title: Exportieren von Datensätzen an Cloud-Speicher-Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Datensätze aus Adobe Experience Platform in Ihren bevorzugten Cloud-Speicher exportieren.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 85bc1f0af608a7b5510bd0b958122e9db10ee27a
+source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
 workflow-type: tm+mt
-source-wordcount: '1754'
+source-wordcount: '1750'
 ht-degree: 59%
 
 ---
@@ -42,7 +42,7 @@ Machen Sie sich mit der Tabelle vertraut, welche Datensatztypen Sie je nach Anwe
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>Profil- und Erlebnisereignis-Datensätze, die in der Experience Platform-Benutzeroberfläche erstellt wurden, nachdem Daten über Quellen, Web SDK, Mobile SDK, Analytics Data Connector und Audience Manager erfasst oder erfasst wurden.</li><li> Systemgenerierte Datensätze wie die <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=en#profile-attribute-datasets">Profil-Snapshot-Datensatz</a>.</li></td>
+    <td><ul><li>Profil- und Erlebnisereignis-Datensätze, die in der Experience Platform-Benutzeroberfläche erstellt wurden, nachdem Daten über Quellen, Web SDK, Mobile SDK, Analytics Data Connector und Audience Manager erfasst oder erfasst wurden.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=en#profile-attribute-datasets">Systemgenerierter Profil-Snapshot-Datensatz</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
