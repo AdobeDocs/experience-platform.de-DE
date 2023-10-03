@@ -3,9 +3,9 @@ title: Exportieren von Datensätzen an Cloud-Speicher-Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Datensätze aus Adobe Experience Platform in Ihren bevorzugten Cloud-Speicher exportieren.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
+source-git-commit: 08463e9f14b0952fe5db177ae8b4546cc3c6cac5
 workflow-type: tm+mt
-source-wordcount: '1750'
+source-wordcount: '1724'
 ht-degree: 59%
 
 ---
@@ -47,11 +47,11 @@ Machen Sie sich mit der Tabelle vertraut, welche Datensatztypen Sie je nach Anwe
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>Siehe Abschnitt <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=de"> Adobe Journey Optimizer</a> Dokumentation. (Aktualisierung des Deep-Links zur AJO-Tabelle oder -Abschnitt für unterstützte Datensätze)</td>
+    <td>Siehe Abschnitt <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> Dokumentation.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Siehe Abschnitt <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=de"> Adobe Journey Optimizer</a> Dokumentation. (Aktualisierung des Deep-Links zur AJO-Tabelle oder -Abschnitt für unterstützte Datensätze)</td>
+    <td>Siehe Abschnitt <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> Dokumentation.</td>
   </tr>
   <tr>
     <td>Data Distiller</td>
