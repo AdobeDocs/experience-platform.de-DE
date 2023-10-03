@@ -3,7 +3,7 @@ keywords: DoubleClick Bid Manager;DoubleClick Bid Manager;DoubleClick;Display & 
 title: Google Display & Video 360-Verbindung
 description: Display & Video 360, früher als DoubleClick Bid Manager bekannt, ist ein Tool zum Ausführen von digitalen Kampagnen für Retargeting und Zielgruppen-Targeting für Inventarquellen für Display, Video und Mobile.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '1022'
 ht-degree: 85%
@@ -21,7 +21,7 @@ ht-degree: 85%
 Beachten Sie folgende Details, die speziell für [!DNL Google Display & Video 360]-Ziele gelten:
 
 * Aktivierte Zielgruppen werden in der Google-Plattform programmgesteuert erstellt.
-* Die Aktivierung von Zielgruppen-Backfilets für die [!DNL Google Display & Video 360] Das Ziel soll 24-48 Stunden nach der ersten Zuordnung einer Zielgruppe zu einer Zielverbindung auftreten. Diese Aktualisierung ist eine Reaktion auf die Google-Richtlinie, 24 Stunden auf die Aufnahme von Daten zu warten, und soll die Übereinstimmungsraten zwischen der Echtzeit-Kundendatenplattform und [!DNL Google Display & Video 360]. Beachten Sie, dass es sich hierbei um eine Backend-Konfiguration handelt, die nur für dieses Ziel gilt und nicht mit kundenkonfigurierbaren Planungsoptionen in der Benutzeroberfläche in Zusammenhang steht.
+* Die Aktivierung von Zielgruppen-Backfilets für die [!DNL Google Display & Video 360] Das Ziel soll 24-48 Stunden nach der ersten Zuordnung einer Zielgruppe zu einer Zielverbindung auftreten. Diese Aktualisierung ist eine Reaktion auf die Google-Richtlinie, 24 Stunden auf die Aufnahme von Daten zu warten, und soll die Übereinstimmungsraten zwischen Real-Time CDP und [!DNL Google Display & Video 360]. Beachten Sie, dass es sich hierbei um eine Backend-Konfiguration handelt, die nur für dieses Ziel gilt und nicht mit kundenkonfigurierbaren Planungsoptionen in der Benutzeroberfläche in Zusammenhang steht.
 
 >[!IMPORTANT]
 >

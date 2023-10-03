@@ -2,7 +2,7 @@
 title: Adobe Commerce Destination Connector
 description: Erfahren Sie, wie Adobe Commerce- und Real-Time CDP-Händler das Einkaufserlebnis personalisieren können, indem sie hochrelevante Site-Inhalte und -Promotions bereitstellen, die auf in Real-Time CDP erstellte und verwaltete Kundenzielgruppen zugeschnitten sind.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '720'
 ht-degree: 59%
@@ -71,11 +71,11 @@ Lesen [Profile und Zielgruppen für Profilanfrageziele aktivieren](../../ui/acti
 
 ## Nächste Schritte in [!DNL Adobe Commerce]
 
-Nachdem Sie die [!DNL Commerce] Ziel in Experience Platform, müssen Sie die [!DNL Audience Activation] Erweiterung in [!DNL Commerce] und konfigurieren Sie die [!DNL Commerce Admin] , um die von Ihnen erstellten Real-Time CDP-Zielgruppen zu importieren. Weitere Informationen finden Sie in der [[!DNL Commerce] Dokumentation](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html).
+Nachdem Sie die [!DNL Commerce] Ziel innerhalb von Experience Platform, müssen Sie die [!DNL Audience Activation] Erweiterung in [!DNL Commerce] und konfigurieren Sie die [!DNL Commerce Admin] , um die von Ihnen erstellten Real-Time CDP-Zielgruppen zu importieren. Weitere Informationen finden Sie in der [[!DNL Commerce] Dokumentation](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html).
 
 ## Validieren von Audience Activation in Commerce {#exported-data}
 
-Nachdem Sie Real-Time CDP-Zielgruppen für Ihre [!DNL Adobe Commerce] -Konto verwenden, werden diese Zielgruppen angezeigt, wenn Sie zum _Admin_ Seitenleiste, dann navigieren Sie zu **[!UICONTROL Kunden]** > **[!UICONTROL Zielgruppe der Echtzeit-Kundendatenplattform]**.
+Nachdem Sie Real-Time CDP-Zielgruppen für Ihre [!DNL Adobe Commerce] -Konto verwenden, werden diese Zielgruppen angezeigt, wenn Sie zum _Admin_ Seitenleiste, dann zu **[!UICONTROL Kunden]** > **[!UICONTROL Real-Time CDP Audience]**.
 
 ![Dashboard für Real-Time CDP-Zielgruppen](../../assets/catalog/personalization/adobe-commerce/audience-library.png)
 

@@ -1,10 +1,11 @@
 ---
 title: Ergänzen von Erstanbieterprofilen mit von Partnern bereitgestellten Attributen
 description: Erfahren Sie, wie Sie Erstanbieterprofile mit Attributen vertrauenswürdiger Datenpartner ergänzen, um Ihre Datengrundlage zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '1110'
-ht-degree: 93%
+ht-degree: 90%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 93%
 
 >[!AVAILABILITY]
 >
->* Diese Funktion steht Kunden zur Verfügung, die Real-Time CDP (App Service), Adobe Experience Platform Activation, Echtzeit-Kundendatenplattform, Real-Time CDP Prime und Real-Time CDP Ultimate lizenziert haben. Weitere Informationen zu diesen Paketen finden Sie in den [Produktbeschreibungen](https://helpx.adobe.com/de/legal/product-descriptions.html) und erhalten Sie von Ihrem Adobe-Support-Team.
+>* Diese Funktion steht Kunden zur Verfügung, die Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate lizenziert haben. Weitere Informationen zu diesen Paketen finden Sie in den [Produktbeschreibungen](https://helpx.adobe.com/de/legal/product-descriptions.html) und erhalten Sie von Ihrem Adobe-Support-Team.
 
 Ergänzen Sie Erstanbieterprofile mit Attributen von vertrauenswürdigen Datenpartnern, um Ihre Datengrundlage zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.
 
@@ -24,7 +25,7 @@ Wenn Sie Ihre eigenen Erstanbieterprofile mit Attributen von Datenpartnern ergä
 
 * Denken Sie über den Speicherort nach, an dem die Zielgruppenliste aus Real-Time CDP exportiert und für den Datenanbieter freigegeben wird. Dieser Speicherort muss Dateiexporte unterstützen.
 * Welche Kennungen erwartet der Datenanbieter, damit Bezug auf zusätzliche Attribute genommen werden kann?
-* Wie wird die Datei mit von Partnern bereitgestellten Attributen wieder in Real-Time CDP aufgenommen? Beispielsweise können die Dateien über Cloud-Speicher-Quell-Connectoren wie [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) oder [SFTP](/help/sources/connectors/cloud-storage/sftp.md) aufgenommen werden.
+* Wie wird die Datei mit den von Partnern bereitgestellten Attributen wieder in Real-Time CDP aufgenommen? Beispielsweise können die Dateien über Cloud-Speicher-Quell-Connectoren wie [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) oder [SFTP](/help/sources/connectors/cloud-storage/sftp.md) aufgenommen werden.
 * Wie häufig werden von Partnern bereitgestellte Attribute voraussichtlich wieder nach Real-Time CDP zurückgeholt und aktualisiert?
 
 >[!WARNING]
@@ -94,7 +95,7 @@ Commenting out links for now
 
 ### Exportieren von anzureichernden Zielgruppen bei verschlüsselten oder gehashten personenbezogenen Daten (PII) {#export-audiences}
 
-Exportieren Sie die Zielgruppen, die vom Partner angereichert werden sollen. Verwenden Sie die von Real-Time CDP bereitgestellten Cloud-Speicher-Ziele, z. B. Amazon S3 oder SFTP. Weitere Informationen zum Abschließen dieses Schrittes finden Sie auf den folgenden Dokumentationsseiten:
+Exportieren Sie die Zielgruppen, die vom Partner angereichert werden sollen. Verwenden Sie die von Real-Time CDP bereitgestellten Cloud-Speicher-Ziele, z. B. Amazon S3 oder SFTP. Weitere Informationen zum Abschließen dieses Schrittes finden Sie auf den folgenden Dokumentationsseiten:
 
 * Dokumentationsseite für [Amazon S3-Ziele](/help/destinations/catalog/cloud-storage/amazon-s3.md)
 * Dokumentationsseite für [SFTP-Ziele](/help/destinations/catalog/cloud-storage/sftp.md)

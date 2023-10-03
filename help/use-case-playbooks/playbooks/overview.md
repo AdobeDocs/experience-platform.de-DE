@@ -3,13 +3,13 @@ solution: Experience Platform
 title: Playbooks für Anwendungsfälle – Übersicht
 description: Erfahren Sie, wie Sie in Experience Platform mit der Funktion „Playbooks für Anwendungsfälle – Übersicht“ erste Schritte mit verschiedenen Marketing-Anwendungsfällen ausführen können
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 896ca002b34e79bd464467011875a54acd5c187c
-workflow-type: ht
-source-wordcount: '400'
-ht-degree: 100%
+exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
+source-wordcount: '401'
+ht-degree: 88%
 
 ---
-
 
 # (Beta) Playbooks für Anwendungsfälle – Übersicht
 
@@ -27,7 +27,7 @@ Inhalt dieses Dokumentationshandbuchs:
 
 >[!AVAILABILITY]
 >
->Diese Funktion befinden sich derzeit in der Betaphase und steht nicht allen Benutzenden zur Verfügung. Dokumentation und Funktionalität können sich ändern.
+>Diese Funktion befinden sich derzeit in der Betaphase und steht nicht allen Benutzenden zur Verfügung. Dokumentation und Funktionalitäten können sich ändern.
 
 ## Übersicht {#overview}
 
@@ -41,11 +41,11 @@ Wenn Sie ein Real-Time CDP-Playbook auswählen, möchten Sie vielleicht Zielgrup
 
 Wenn Sie ein Adobe Journey Optimizer-Playbook auswählen, möchten Sie vielleicht eine Customer Journey innerhalb Ihres Produkts erstellen und relevante Messaging-Inhalte an Ihre Kundinnen und Kunden senden.
 
-Erstellen Sie eine Playbook-Instanz, um bestimmte Assets wie Schemata, Segmente oder Journey zu generieren, die auf Ihren Anwendungsfall zugeschnitten sind und in Experience Platform wiederverwendet werden können. Diese Objekte sollen Ihnen dabei helfen, alle Ressourcen zu verstehen, die zur Implementierung Ihres spezifischen Anwendungsfalls erforderlich sind. Sie enthalten keine Daten und werden in Entwicklungs-Sandboxes erstellt. Nutzen Sie diese Assets oder bearbeiten Sie sie, bevor Sie sie verwenden und für Ihr Team in Real-Time CDP oder in Journey Optimizer freigeben.
+Erstellen Sie eine Playbook-Instanz, um bestimmte Assets wie Schemata, Segmente oder Journey zu generieren, die auf Ihren Anwendungsfall zugeschnitten sind und in Experience Platform wiederverwendet werden können. Diese Objekte sollen Ihnen dabei helfen, alle Ressourcen zu verstehen, die zur Implementierung Ihres spezifischen Anwendungsfalls erforderlich sind. Sie enthalten keine Daten und werden in Entwicklungs-Sandboxes erstellt. Beginnen Sie mit der Verwendung dieser Assets oder nehmen Sie Änderungen vor, bevor Sie sie verwenden und sie für Ihr Team in Real-Time CDP oder Journey Optimizer freigeben.
 
 ## Verfügbarkeit
 
-Einige [!UICONTROL Playbooks für Anwendungsfälle] sind auf Real-Time CDP-Anwendungsfälle zugeschnitten, während andere am besten für Journey Optimizer-Kundinnen und -Kunden geeignet sind. Durchsuchen Sie den Katalog, um die Playbooks zu finden, die am besten zu Ihrem Produkt und Anwendungsfall passen.
+Einige [!UICONTROL Anwendungsbeispiele für Playbooks] sind auf Real-Time CDP-Anwendungsfälle zugeschnitten, während andere am besten für Kunden geeignet sind, die Journey Optimizer verwenden. Durchsuchen Sie den Katalog, um die Playbooks zu finden, die am besten zu Ihrem Produkt und Anwendungsfall passen.
 
 ## Handbücher zur Benutzeroberfläche
 

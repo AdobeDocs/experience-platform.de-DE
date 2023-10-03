@@ -2,7 +2,7 @@
 title: Engagieren und Akquirieren neuer Kundinnen und Kunden durch Anwendungsfälle für die Kundengewinnung
 description: Erfahren Sie, wie Sie neue Kundinnen und Kunden durch Anwendungsfälle für die Prospektion, ermöglicht durch die Unterstützung von Partnerdaten in Real-Time CDP, ansprechen und gewinnen können.
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: da7a53c1e4accdacfa55e4022c1b499f70aab8fa
+source-git-commit: ec6375a025833027fda01c412124321132aefd65
 workflow-type: tm+mt
 source-wordcount: '1960'
 ht-degree: 93%
@@ -13,7 +13,7 @@ ht-degree: 93%
 
 >[!AVAILABILITY]
 >
->* Diese Funktion steht Kunden zur Verfügung, die Real-Time CDP (App Service), Adobe Experience Platform Activation, Echtzeit-Kundendatenplattform, Real-Time CDP Prime und Real-Time CDP Ultimate lizenziert haben. Weitere Informationen zu diesen Paketen finden Sie in den [Produktbeschreibungen](https://helpx.adobe.com/de/legal/product-descriptions.html) und erhalten Sie von Ihrem Adobe-Support-Team.
+>* Diese Funktion steht Kunden zur Verfügung, die Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate lizenziert haben. Weitere Informationen zu diesen Paketen finden Sie in den [Produktbeschreibungen](https://helpx.adobe.com/de/legal/product-descriptions.html) und erhalten Sie von Ihrem Adobe-Support-Team.
 
 Nutzen Sie die Unterstützung von Drittanbieterdaten in Real-Time CDP, um Ihre Profilbasis mit potenziellen Profilen von Datenpartnern zu erweitern und mit ihnen zu interagieren, um neue Kundinnen und Kunden anzusprechen und zu gewinnen.
 

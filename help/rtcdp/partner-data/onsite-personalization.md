@@ -1,7 +1,8 @@
 ---
 title: Verwenden der partnergestützten Besuchererkennung zur Personalisierung von Onsite-Erlebnissen
 description: Erfahren Sie, wie Sie mit der partnergestützten Besuchererkennung personalisierte Onsite-Erlebnisse für Ihre Besucherinnen und Besucher bereitstellen können.
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '2548'
 ht-degree: 97%
@@ -12,7 +13,7 @@ ht-degree: 97%
 
 >[!AVAILABILITY]
 >
->Diese Funktion steht Kunden zur Verfügung, die Real-Time CDP (App Service), Adobe Experience Platform Activation, Echtzeit-Kundendatenplattform, Real-Time CDP Prime und Real-Time CDP Ultimate lizenziert haben. Weitere Informationen zu diesen Paketen finden Sie in den [Produktbeschreibungen](https://helpx.adobe.com/de/legal/product-descriptions.html) und erhalten Sie von Ihrem Adobe-Support-Team.
+>Diese Funktion steht Kunden zur Verfügung, die Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate lizenziert haben. Weitere Informationen zu diesen Paketen finden Sie in den [Produktbeschreibungen](https://helpx.adobe.com/de/legal/product-descriptions.html) und erhalten Sie von Ihrem Adobe-Support-Team.
 
 Erfahren Sie, wie Sie die partnergestützte Erkennung nutzen können, um den Besucherinnen und Besuchern Ihrer Website personalisierte Erlebnisse zu bieten. Verwenden Sie dieses Tutorial, um die Implementierungssequenz verschiedener Elemente in Experience Platform und anderen Experience Cloud-Lösungen zu verstehen, um authentifizierten und nicht authentifizierten Besucherinnen und Besuchern ein personalisiertes Erlebnis anzuzeigen.
 

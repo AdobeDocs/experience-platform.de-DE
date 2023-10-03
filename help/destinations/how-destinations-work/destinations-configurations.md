@@ -2,10 +2,10 @@
 title: Konfigurierbare und allgemeine Exporteinstellungen in Zielen
 description: Erfahren Sie, welche Exporteinstellungen in Zielen auf Zielebene konfigurierbar sind und welche fest eingestellt sind und nicht bearbeitet werden können.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
-workflow-type: ht
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
 source-wordcount: '845'
-ht-degree: 100%
+ht-degree: 93%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 100%
 
 Hinsichtlich des Exportverhaltens für Experience Platform-Ziele müssen Sie drei separate Ebenen berücksichtigen, auf denen Konfigurationen funktionieren.
 
-* Auf der ersten Ebene sind bestimmte Einstellungen im Zusammenhang mit dem Verhalten beim Profilexport und den Konfigurationseinstellungen allen Zielen, die zu einem Zieltyp gehören, gemein. Diese Einstellungen beziehen sich darauf, was einen Zielexport auslöst und was in einem Export enthalten ist und von Personen, die Ziele entwickeln oder Real-Time CDP benutzen, nicht bearbeitet werden kann.
+* Auf der ersten Ebene sind bestimmte Einstellungen im Zusammenhang mit dem Verhalten beim Profilexport und den Konfigurationseinstellungen allen Zielen, die zu einem Zieltyp gehören, gemein. Diese Einstellungen beziehen sich darauf, welche Trigger ein Zielexport ist und was in einem Export enthalten ist und von Zielentwicklern oder Real-Time CDP-Benutzern nicht bearbeitet werden kann.
 * Auf zweiter Ebene können bestimmte Einstellungen vom Zielentwickler-Team beim Authoring von Zielen mit Destination SDK auf Zielebene angepasst werden.
-* Auf dritter Ebene gibt es Konfigurationseinstellungen, die von Real-Time CDP-Benutzenden in den Aktivierungs-Workflows festgelegt werden können.
+* Auf dritter Ebene gibt es Konfigurationseinstellungen, die Real-Time CDP-Benutzer in den Aktivierungs-Workflows festlegen können.
 
 ![Abbildung der Wechselwirkung zwischen allgemeinen und konfigurierbaren Exporteinstellungen für Ziele](/help/destinations/assets/how-destinations-work/profile-export-behavior-diagram.png)
 
@@ -25,7 +25,7 @@ Auf dieser Seite werden alle gängigen und konfigurierbaren Exporteinstellungen 
 
 Das Verhalten beim Zielexport ist bei allen Zielen, die zu einem Zieltyp gehören, in Bezug darauf, *was einen Zielexport auslöst* und *was in den Zielexporten enthalten ist*, einheitlich. Zielexporte werden durch Benachrichtigungen ausgelöst, die der Ziel-Service vom [Upstream-Echtzeit-Kundenprofil-Service](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=de#adobe-experience-platform-%26-applications-detailed-architecture-diagram) erhält.
 
-Was in den Zielexporten enthalten ist, variiert geringfügig zwischen den Zieltypen. Erfahren Sie mehr über [allgemeine Exportverhaltensmuster nach Zieltyp](/help/destinations/how-destinations-work/profile-export-behavior.md). Diese Einstellungen können nicht von Personen bearbeitet werden, die Ziele entwickeln oder Real-Time CDP benutzen.
+Was in den Zielexporten enthalten ist, variiert geringfügig zwischen den Zieltypen. Erfahren Sie mehr über [allgemeine Exportverhaltensmuster nach Zieltyp](/help/destinations/how-destinations-work/profile-export-behavior.md). Diese Einstellungen können nicht von Zielentwicklern oder Real-Time CDP-Benutzern bearbeitet werden.
 
 ## Durch Zielentwicklerinnen und -entwickler anpassbare Exporteinstellungen {#customizable-settings-by-destination-developers}
 

@@ -3,7 +3,7 @@ keywords: Ziele;Ziel;Zieltypen
 title: Zieltypen und Kategorien
 description: Erfahren Sie mehr über die verschiedenen Zieltypen und -kategorien in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: d0a9ac77346bea585691feee958e8d3b27f3f746
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 71%
@@ -18,7 +18,7 @@ Lesen Sie diese Seite, um die verschiedenen Typen und Kategorien von Adobe Exper
 
 In Adobe Experience Platform unterscheiden wir zwischen verschiedenen Zieltypen - Verbindungen, Datensatzexporten und Erweiterungen. Es gibt verschiedene Arten von Verbindungszielen, mit denen Sie Daten an API-basierte Ziele exportieren können.
 
-Schließlich lassen sich Verbindungen auch zwischen öffentlichen Zielen unterscheiden, die für alle Organisationen im Zielkatalog verfügbar sind, und privaten Zielen, die Kunden mit Echtzeit-Kundendatenplattform Ultimate erstellen können, um ihre spezifischen Exportanwendungsfälle zu erfüllen.
+Schließlich können Verbindungen auch zwischen öffentlichen Zielen, die für alle im Zielkatalog enthaltenen Organisationen verfügbar sind, und privaten Zielen, die von Real-Time CDP Ultimate-Kunden erstellt werden können, um ihre spezifischen Anwendungsfälle für den Export zu erfüllen, unterschieden werden.
 
 ![Abbildung mit den Zieltypen.](./assets/destination-types/types-of-destinations-no-highlight.png)
 

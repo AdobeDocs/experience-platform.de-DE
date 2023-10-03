@@ -3,13 +3,13 @@ solution: Experience Platform
 title: Finden des richtigen Playbooks
 description: Erfahren Sie, wie Sie das richtige Playbook für Ihren Anwendungsfall finden.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
-workflow-type: ht
-source-wordcount: '740'
-ht-degree: 100%
+exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
+source-wordcount: '741'
+ht-degree: 96%
 
 ---
-
 
 # (Beta) Finden des richtigen Playbooks
 
@@ -23,7 +23,7 @@ Um ein Playbook zu verwenden, navigieren Sie zu **[!UICONTROL Playbooks für Anw
 
 Verwenden Sie das Suchfenster und die Filter auf der Seite, um das richtige Playbook für Ihren Anwendungsfall zu finden.
 
-Sie können beispielsweise Playbooks filtern, die Sie basierend auf der gewünschten Phase im Marketing-Trichter (Konversion, Interaktion oder Bindung) verwenden können. Sie können die angezeigten Playbooks auch nach Ihrer Branche oder Ihren Produktberechtigungen – Adobe Journey Optimizer oder Real-Time CDP – filtern.
+Sie können beispielsweise Playbooks filtern, die Sie basierend auf der gewünschten Phase im Marketing-Trichter (Konversion, Interaktion oder Bindung) verwenden können. Sie können die angezeigten Playbooks auch nach der Branche filtern, in der Sie sich befinden, oder nach der Produktberechtigungen, auf die Sie Zugriff haben - Adobe Journey Optimizer oder Real-Time CDP.
 
 ![Filtern von Playbooks nach Marketing-Trichter, Branche oder Produkt](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
 
