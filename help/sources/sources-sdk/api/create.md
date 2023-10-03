@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen einer neuen Verbindungsspezifikation mithilfe der Flow Service-API
 description: Im folgenden Dokument erfahren Sie, wie Sie eine Verbindungsspezifikation mithilfe der Flow Service-API erstellen und eine neue Quelle über Self-Serve-Quellen integrieren.
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f47b7f725475fc7f7fac6dd406975b46f257e390
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 48%
@@ -23,7 +23,7 @@ Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.
 
 ## Sammeln von Artefakten
 
-Um eine neue Batch-Quelle mithilfe von Self-Serve-Quellen zu erstellen, müssen Sie zunächst eine Koordination mit Adobe durchführen, ein privates Git-Repository anfordern und die Adobe in den Details zu Titel, Beschreibung, Kategorie und Symbol für Ihre Quelle abstimmen.
+Um eine neue Batch-Quelle mithilfe von Self-Serve-Quellen zu erstellen, müssen Sie zunächst eine Koordination mit Adobe durchführen, ein privates Git-Repository anfordern und die Details zu Titel, Beschreibung, Kategorie und Symbol für Ihre Quelle an Adobe ausrichten.
 
 Nach der Bereitstellung müssen Sie Ihr privates Git-Repository wie folgt strukturieren:
 
@@ -39,11 +39,11 @@ Nach der Bereitstellung müssen Sie Ihr privates Git-Repository wie folgt strukt
 | Artefakte (Dateinamen) | Beschreibung | Beispiel |
 | --- | --- | --- |
 | {your_source} | Der Name Ihrer Quelle. Dieser Ordner sollte alle Artefakte enthalten, die mit Ihrer Quelle in Ihrem privaten Git-Repository zusammenhängen. | `mailchimp-members` |
-| {your_source}-category.txt | Die Kategorie, zu der die Quelle gehört, formatiert als Textdatei. Die Liste der verfügbaren Quellkategorien, die von Self-Serve-Quellen (Batch SDK) unterstützt werden, umfasst: <ul><li>Werbung</li><li>Analysen</li><li>Einverständnis und Voreinstellungen</li><li>CRM</li><li>Customer Success</li><li>Datenbank</li><li>e-Commerce</li><li>Marketing-Automatisierung</li><li>Zahlungen</li><li>Protokolle</li></ul> **Hinweis**: Wenn Sie der Meinung sind, dass Ihre Quelle nicht zu einer der oben genannten Kategorien passt, wenden Sie sich an Ihren Kundenbetreuer, um darüber zu diskutieren. | `mailchimp-members-category.txt` Geben Sie innerhalb der Datei die Kategorie Ihrer Quelle an, z. B.: `marketingAutomation`. |
-| {your_source}-description.txt | Eine kurze Beschreibung Ihrer Quelle. | [!DNL Mailchimp Members] ist eine Marketing-Automatisierungsquelle, die Sie verwenden können, um [!DNL Mailchimp Members] Daten in die Experience Platform. |
+| {your_source}-category.txt | Die Kategorie, zu der die Quelle gehört, formatiert als Textdatei. Die Liste der verfügbaren Quellkategorien, die von Self-Serve-Quellen (Batch SDK) unterstützt werden, umfasst: <ul><li>Werbung</li><li>Analysen</li><li>Einverständnis und Voreinstellungen</li><li>CRM</li><li>Customer Success</li><li>Datenbank</li><li>e-Commerce</li><li>Marketing-Automatisierung</li><li>Zahlungen</li><li>Protokolle</li></ul> **Hinweis**: Wenn Sie glauben, dass Ihre Quelle nicht in eine der oben genannten Kategorien passt, wenden Sie sich bitte an Ihren Adobe-Support-Mitarbeiter, um zu besprechen. | `mailchimp-members-category.txt` Geben Sie innerhalb der Datei die Kategorie Ihrer Quelle an, z. B.: `marketingAutomation`. |
+| {your_source}-description.txt | Eine kurze Beschreibung Ihrer Quelle. | [!DNL Mailchimp Members] ist eine Marketing-Automatisierungsquelle, die Sie verwenden können, um [!DNL Mailchimp Members] Daten an Experience Platform. |
 | {your_source}-icon.svg | Das Bild, das für die Darstellung Ihrer Quelle im Experience Platform-Quellkatalog verwendet werden soll. Dieses Symbol muss eine SVG-Datei sein. |
-| {your_source}-label.txt | Der Quellname, wie er im Quellkatalog der Experience Platform angezeigt werden soll. | Mailchimp-Mitglieder |
-| {your_source}-connectionSpec.json | Eine JSON-Datei, die die Verbindungsspezifikation Ihrer Quelle enthält. Diese Datei ist zunächst nicht erforderlich, da Sie Ihre Verbindungsspezifikation nach Abschluss dieses Handbuchs füllen werden. | `mailchimp-members-connectionSpec.json` |
+| {your_source}-label.txt | Der Quellname, wie er im Experience Platform-Quellkatalog angezeigt werden soll. | Mailchimp-Mitglieder |
+| {your_source}-connectionSpec.json | Eine JSON-Datei mit der Verbindungsspezifikation Ihrer Quelle. Diese Datei ist zunächst nicht erforderlich, da Sie Ihre Verbindungsspezifikation nach Abschluss dieses Handbuchs füllen werden. | `mailchimp-members-connectionSpec.json` |
 
 {style="table-layout:auto"}
 
@@ -578,7 +578,9 @@ curl -X POST \
                   "type": "OFFSET",
                   "limitName": "count",
                   "limitValue": "100",
-                  "offSetName": "offset"
+                  "offSetName": "offset",
+                  "endConditionName": "$.hasMore",
+                  "endConditionValue": "Const:false"
               },
               "scheduleParams": {
                   "scheduleStartParamName": "since_last_changed",
@@ -767,7 +769,9 @@ Bei einer erfolgreichen Antwort wird die neu erstellte Verbindungsspezifikation 
                 "type": "OFFSET",
                 "limitName": "count",
                 "limitValue": "100",
-                "offSetName": "offset"
+                "offSetName": "offset",
+                "endConditionName": "$.hasMore",
+                "endConditionValue": "Const:false"
             },
             "scheduleParams": {
                 "scheduleStartParamName": "since_last_changed",

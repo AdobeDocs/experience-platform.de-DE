@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Que
 title: Quellspezifikationen für Self-Serve-Quellen konfigurieren (Batch-SDK)
 description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung von Self-Serve-Quellen (Batch SDK) vorbereiten müssen.
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 1fdce7c798d8aff49ab4953298ad7aa8dddb16bd
 workflow-type: tm+mt
-source-wordcount: '1846'
-ht-degree: 45%
+source-wordcount: '2078'
+ht-degree: 47%
 
 ---
 
@@ -381,7 +381,53 @@ Im Folgenden finden Sie eine abgeschlossene Quellspezifikation mit [!DNL MailChi
 
 Im Folgenden finden Sie Beispiele für andere Paginierungstypen, die von Self-Serve-Quellen (Batch SDK) unterstützt werden:
 
-#### `CONTINUATION_TOKEN`
+>[!BEGINTABS]
+
+>[!TAB Versatz]
+
+Dieser Paginierungstyp ermöglicht es, die Ergebnisse zu analysieren, indem Sie einen Index, von dem aus das resultierende Array gestartet werden soll, und eine Begrenzung dafür angeben, wie viele Ergebnisse zurückgegeben werden. Beispiel:
+
+```json
+"paginationParams": {
+        "type": "OFFSET",
+        "limitName": "limit",
+        "limitValue": "4",
+        "offSetName": "offset",
+        "endConditionName": "$.hasMore",
+        "endConditionValue": "Const:false"
+}
+```
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `type` | Die Art der Paginierung, die zum Zurückgeben von Daten verwendet wird. |
+| `limitName` | Name des Limits, mit dem die API die Anzahl der Datensätze angeben kann, die auf einer Seite abgerufen werden sollen. |
+| `limitValue` | Anzahl der Datensätze, die auf einer Seite abgerufen werden sollen. |
+| `offSetName` | Name des Offset-Attributs. Ist erforderlich, wenn der Paginierungstyp auf `offset` festgesetzt ist. |
+| `endConditionName` | Ein benutzerdefinierter Wert, der die Bedingung anzeigt, die die Paginierungsschleife in der nächsten HTTP-Anforderung beendet. Sie müssen den Attributnamen angeben, unter dem die Endbedingung platziert werden soll. |
+| `endConditionValue` | Der Attributwert, auf den Sie die Endbedingung stellen möchten. |
+
+>[!TAB Pointer]
+
+Dieser Paginierungstyp ermöglicht es, mit einer `pointer`-Variablen auf ein bestimmtes Element zu verweisen, das mit einer Anfrage gesendet werden muss. Die Seitennummerierung des Zeigertyps erfordert den Pfad in der Payload, der auf die nächste Seite verweist. Beispiel:
+
+```json
+{
+ "type": "POINTER",
+ "limitName": "limit",
+ "limitValue": 1,
+ "pointerPath": "paging.next"
+}
+```
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `type` | Die Art der Paginierung, die zum Zurückgeben von Daten verwendet wird. |
+| `limitName` | Name des Limits, mit dem die API die Anzahl der Datensätze angeben kann, die auf einer Seite abgerufen werden sollen. |
+| `limitValue` | Anzahl der Datensätze, die auf einer Seite abgerufen werden sollen. |
+| `pointerPath` | Der Zeiger-Attributname. Dies erfordert den JSON-Pfad zum Feldnamen, der auf die nächste Seite verweist. |
+
+>[!TAB Fortführungstoken]
 
 Ein Fortsetzung-Token-Typ der Paginierung gibt ein Zeichenfolgen-Token zurück, das das Vorhandensein weiterer Elemente angibt, die aufgrund einer vorab festgelegten maximalen Anzahl von Elementen, die in einer einzelnen Antwort zurückgegeben werden können, nicht zurückgegeben werden konnten.
 
@@ -432,7 +478,7 @@ Im Folgenden finden Sie ein Beispiel für eine Antwort, die mit dem Paginierungs
 }
 ```
 
-#### `PAGE`
+>[!TAB Seite]
 
 Die `PAGE` Mit dem Seitentyp können Sie durch die Rückkehrdaten nach der Anzahl der Seiten, die bei null beginnen, navigieren. Bei Verwendung von `PAGE` Paginierung eingeben, müssen Sie die Anzahl der Datensätze angeben, die auf einer einzelnen Seite angegeben werden.
 
@@ -461,7 +507,7 @@ Die `PAGE` Mit dem Seitentyp können Sie durch die Rückkehrdaten nach der Anzah
 {style="table-layout:auto"}
 
 
-#### `NONE`
+>[!TAB Keine]
 
 Die `NONE` Der Paginierungstyp kann für Quellen verwendet werden, die keinen der verfügbaren Paginierungstypen unterstützen. Quellen, die die Paginierung verwenden `NONE` geben Sie einfach alle abrufbaren Datensätze zurück, wenn eine GET angefordert wird.
 
@@ -470,6 +516,8 @@ Die `NONE` Der Paginierungstyp kann für Quellen verwendet werden, die keinen de
   "type": "NONE"
 }
 ```
+
+>[!ENDTABS]
 
 ### Erweiterte Planung für Self-Serve-Quellen (Batch-SDK)
 
