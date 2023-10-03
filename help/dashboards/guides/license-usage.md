@@ -3,7 +3,8 @@ keywords: Experience Platform; Benutzeroberfläche; UI; Anpassung; Dashboard zur
 title: Lizenznutzungs-Dashboard Handbuch
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen anzeigen können.
 type: Documentation
-source-git-commit: 5b3ec9aca773cf4a1ba0d4c7e432949769b942c1
+exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
+source-git-commit: e9c4068419b36da6ffaec67f0d1c39fe87c2bc4c
 workflow-type: tm+mt
 source-wordcount: '1987'
 ht-degree: 6%
@@ -19,7 +20,7 @@ ht-degree: 6%
 
 Sie können wichtige Informationen zur Lizenznutzung Ihres Unternehmens über die Adobe Experience Platform anzeigen [!UICONTROL Lizenzverwendung] Dashboard. Die hier angezeigten Informationen werden während einer täglichen Momentaufnahme Ihrer Platform-Instanz erfasst.
 
-Lizenzverwendungsberichte bieten eine hohe Granularität im Vergleich zu Ihren Lizenzverwendungsmetriken. Das Dashboard bietet Nutzungsmetriken für jedes gekaufte Produkt, die konsolidierte Verwendung von Metriken in allen Produktions- oder Entwicklungs-Sandboxes und die Nutzungsmetrik aus einer bestimmten Sandbox. Die folgenden Experience Platform-Anwendungen können mit Nutzungsmetriken verfolgt werden: Echtzeit-Kundendatenprofil, Adobe Journey Optimizer und Customer Journey Analytics.
+Lizenzverwendungsberichte bieten eine hohe Granularität im Vergleich zu Ihren Lizenzverwendungsmetriken. Das Dashboard bietet Nutzungsmetriken für jedes gekaufte Produkt, die konsolidierte Verwendung von Metriken in allen Produktions- oder Entwicklungs-Sandboxes und die Nutzungsmetrik aus einer bestimmten Sandbox. Die folgenden Experience Platform-Anwendungen können mit Nutzungsmetriken verfolgt werden: Real-time Customer Data Platform, Adobe Journey Optimizer und Customer Journey Analytics.
 
 In diesem Handbuch wird beschrieben, wie Sie auf das Dashboard zur Lizenzverwendung in der Benutzeroberfläche zugreifen und mit ihm arbeiten können. Außerdem erhalten Sie weitere Informationen zu den im Dashboard angezeigten Visualisierungen.
 
@@ -59,7 +60,7 @@ In diesem Dashboard werden alle lizenzierten Adobe Experience Platform-Produkte,
 
 >[!NOTE]
 >
->Hinzufügungen zum [!UICONTROL Lizenzbetrag] als Ergebnis von Add-ons werden über dem [!UICONTROL Lizenzbetrag] für die Basisprodukte wie Echtzeit-Kundendatenprofil, Adobe Journey Optimizer und Customer Journey Analytics. Die Verwendung dieses lizenzierten Betrags (nach den Add-ons) wird durch die Basisprodukte verfolgt. Wenn Sie beispielsweise eine Packung mit fünf Sandboxes kaufen, wird die Menge von fünf weiteren Sandboxes der Menge des Basisprodukts hinzugefügt. In diesem Fall zeigt das Add-on eine [!UICONTROL Lizenzbetrag] und die Verwendung für dieses Add-on &quot;leer&quot;ist, da die Verwendung durch das Basisprodukt verfolgt wird.
+>Hinzufügungen zum [!UICONTROL Lizenzbetrag] als Ergebnis von Add-ons werden über dem [!UICONTROL Lizenzbetrag] für Basisprodukte wie Real-time Customer Data Platform, Adobe Journey Optimizer und Customer Journey Analytics. Die Verwendung dieses lizenzierten Betrags (nach den Add-ons) wird durch die Basisprodukte verfolgt. Wenn Sie beispielsweise eine Packung mit fünf Sandboxes kaufen, wird die Menge von fünf weiteren Sandboxes der Menge des Basisprodukts hinzugefügt. In diesem Fall zeigt das Add-on eine [!UICONTROL Lizenzbetrag] und die Verwendung für dieses Add-on &quot;leer&quot;ist, da die Verwendung durch das Basisprodukt verfolgt wird.
 
 Die Tabelle zeigt die primäre Metrik für jedes Produkt an, da jedes Produkt zahlreiche Metriken verfolgen kann.
 

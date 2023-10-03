@@ -2,7 +2,7 @@
 title: Nahtloser SQL-Fluss für abgeleitete Attribute
 description: Query Service SQL wurde erweitert, um eine nahtlose Unterstützung für abgeleitete Attribute bereitzustellen. Erfahren Sie, wie Sie mit dieser SQL-Erweiterung ein abgeleitetes Attribut erstellen, das für das Profil aktiviert ist, und wie Sie das Attribut für das Echtzeit-Kundenprofil und den Segmentierungsdienst verwenden.
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
-source-git-commit: 6202b1a5956da83691eeb5422d3ebe7f3fb7d974
+source-git-commit: e9c4068419b36da6ffaec67f0d1c39fe87c2bc4c
 workflow-type: tm+mt
 source-wordcount: '1238'
 ht-degree: 2%
@@ -25,7 +25,7 @@ In der Regel würde das Generieren und Veröffentlichen eines Attributs für das
 * Erstellen Sie mit Ihrem Schema einen neuen Datensatz und aktivieren Sie ihn bei Bedarf für das Profil.
 * Markieren Sie optional einen Datensatz als profilaktiviert.
 
-Nachdem Sie die oben genannten Schritte ausgeführt haben, können Sie den Datensatz ausfüllen. Wenn Sie den Datensatz für Profil aktiviert haben, können Sie auch Segmente erstellen, die auf das neue Attribut verweisen, und mit der Erstellung von Einblicken beginnen.
+Nach Abschluss der oben genannten Schritte können Sie den Datensatz ausfüllen. Wenn Sie den Datensatz für Profil aktiviert haben, können Sie auch Segmente erstellen, die auf das neue Attribut verweisen, und mit der Erstellung von Einblicken beginnen.
 
 Mit Query Service können Sie alle oben aufgeführten Aktionen mithilfe von SQL-Abfragen durchführen. Dies umfasst bei Bedarf Änderungen an Ihren Datensätzen und Feldergruppen.
 
@@ -35,13 +35,13 @@ Mit Query Service können Sie alle oben aufgeführten Aktionen mithilfe von SQL-
 >
 >Bei der unten bereitgestellten SQL-Abfrage wird von der Verwendung eines bereits vorhandenen Namespace ausgegangen.
 
-Verwenden Sie eine &quot;Tabelle als Auswahl erstellen&quot;(CTAS)-Abfrage, um einen Datensatz zu erstellen, Datentypen zuzuweisen, eine primäre Identität festzulegen, ein Schema zu erstellen und ihn als profilaktiviert zu markieren. Die folgende SQL-Beispielanweisung erstellt Attribute und stellt sie für das Echtzeit-Kundendatenprofil (Real-Time CDP) zur Verfügung. Ihre SQL-Abfrage entspricht dem Format, das im folgenden Beispiel gezeigt wird:
+Verwenden Sie eine &quot;Tabelle als Auswahl erstellen&quot;(CTAS)-Abfrage, um einen Datensatz zu erstellen, Datentypen zuzuweisen, eine primäre Identität festzulegen, ein Schema zu erstellen und ihn als profilaktiviert zu markieren. Die folgende SQL-Beispielanweisung erstellt Attribute und stellt sie für Real-time Customer Data Platform (Real-Time CDP) zur Verfügung. Ihre SQL-Abfrage entspricht dem Format, das im folgenden Beispiel gezeigt wird:
 
 ```sql
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];
 ```
 
-Folgende Datentypen werden unterstützt: boolean, date, datetime, text, float, bigint, integer, map, array und structure/row.
+Folgende Datentypen werden unterstützt: boolean, date, datetime, text, float, bigint, integer, map, array sowie structure/row.
 
 Der unten stehende SQl-Codeblock bietet Beispiele zum Definieren von Struktur-/Zeilen-, Zuordnungs- und Array-Datentypen. Zeile eins zeigt die Zeilensyntax. Zeile 2 zeigt die Syntax der Zuordnung und Zeile 3 die Syntax des Arrays.
 
@@ -53,7 +53,7 @@ ARRAY <data_type>
 
 Alternativ können Datensätze auch über die Platform-Benutzeroberfläche für das Profil aktiviert werden. Weitere Informationen zum Markieren eines Datensatzes als für ein Profil aktiviert finden Sie in der [Datensatz für die Dokumentation zum Echtzeit-Kundenprofil aktivieren](../../../catalog/datasets/user-guide.md#enable-profile).
 
-In der folgenden Beispielabfrage wird die `decile_table` Datensatz wird mit `id` als primäre Identitätsspalte und hat den Namespace `IDFA`. Es enthält auch ein Feld namens `decile1Month` des Zuordnungs-Datentyps. Die erstellte Tabelle (`decile_table`) für das Profil aktiviert ist.
+In der folgenden Beispielabfrage wird die Variable `decile_table` Datensatz wird mit `id` als primäre Identitätsspalte und hat den Namespace `IDFA`. Es enthält auch ein Feld namens `decile1Month` des Zuordnungs-Datentyps. Die erstellte Tabelle (`decile_table`) für das Profil aktiviert ist.
 
 ```sql
 CREATE TABLE decile_table (id text PRIMARY KEY NAMESPACE 'IDFA', 
@@ -107,7 +107,7 @@ Beispiel:
 ALTER TABLE test1_dataset ADD CONSTRAINT PRIMARY KEY(id2) NAMESPACE 'IDFA';
 ```
 
-Im bereitgestellten Beispiel `id2` ist eine vorhandene Spalte in `test1_dataset`.
+In dem bereitgestellten Beispiel `id2` ist eine vorhandene Spalte in `test1_dataset`.
 
 ### Datensatz für Profil deaktivieren {#disable-dataset-for-profile}
 
@@ -123,7 +123,7 @@ Beispiel:
 ALTER TABLE decile_table DROP label 'PROFILE';
 ```
 
-Diese SQL-Anweisung bietet eine effiziente alternative Methode zur Verwendung eines API-Aufrufs. Weitere Informationen finden Sie in der Dokumentation zu [Datensatz zur Verwendung mit Real-Time CDP mithilfe der Datensatz-API deaktivieren](../../../catalog/datasets/enable-upsert.md#disable-the-dataset-for-profile).
+Diese SQL-Anweisung bietet eine effiziente alternative Methode zur Verwendung eines API-Aufrufs. Weitere Informationen finden Sie in der Dokumentation zu [Datensatz für die Verwendung mit Real-Time CDP mithilfe der Datensatz-API deaktivieren](../../../catalog/datasets/enable-upsert.md#disable-the-dataset-for-profile).
 
 ### Zulassen der Aktualisierung und des Einfügens von Funktionen für Ihren Datensatz {#enable-upsert-functionality-for-dataset}
 
@@ -199,7 +199,7 @@ CREATE FIELDGROUP field_group_for_test123 (decile1Month map<text, integer>, deci
 
 Bei erfolgreicher Ausführung dieser Anweisung wird die erstellte Feldergruppen-ID zurückgegeben. Beispiel `c731a1eafdfdecae1683c6dca197c66ed2c2b49ecd3a9525`.
 
-Weitere Informationen finden Sie in der Dokumentation [eine neue Feldergruppe im Schema Editor erstellen](../../../xdm/ui/resources/field-groups.md#create) oder mithilfe der [Schema Registry-API](../../../xdm/api/field-groups.md#create) für weitere Informationen über alternative Methoden.
+Weitere Informationen finden Sie in der Dokumentation [eine neue Feldergruppe im Schema Editor erstellen](../../../xdm/ui/resources/field-groups.md#create) oder unter Verwendung der [Schema Registry-API](../../../xdm/api/field-groups.md#create) für weitere Informationen über alternative Methoden.
 
 ### Eine Feldergruppe ablegen
 
