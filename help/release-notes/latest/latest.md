@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise September 2023 zu Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b20e5e52b9d7568f4e20b94064819d0bebe4c236
+source-git-commit: 35d72969946dd79c356212ce53ee75b8c84f036c
 workflow-type: tm+mt
-source-wordcount: '2149'
-ht-degree: 31%
+source-wordcount: '2284'
+ht-degree: 32%
 
 ---
 
@@ -160,6 +160,27 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 | Funktion | Beschreibung |
 | --- | --- |
 | Aktualisierter Workflow für die Schemaerstellung | Es wurde ein neuer Workflow zur Schemaerstellung implementiert, um den Prozess zu optimieren. <br> ![Die neue Benutzeroberfläche für die Schemaerstellung.](../2023/assets/schema-class-options.png "Die neue Auswahl für Schemadetails wurde hervorgehoben."){width="100" zoomable="yes"} <br> Siehe [Dokumentation zur Schemaerstellung](../../xdm/ui/resources/schemas.md#create) für weitere Informationen. |
+
+**Neue XDM-Komponenten**
+
+| Typ der Komponente | Name | Beschreibung |
+| --- | --- | --- |
+| Datentyp | [[!UICONTROL Rückgabe]](https://github.com/adobe/xdm/pull/1773/files) | RMA (Return Merchandise Authorization) ausgestellt. |
+| Datentyp | [[!UICONTROL Rückgabeelement]](https://github.com/adobe/xdm/pull/1773/files) | Die Informationen des zurückgegebenen Elements innerhalb der RMA (Return Merchandise Authorization). |
+
+{style="table-layout:auto"}
+
+**Aktualisierte XDM-Komponenten**
+
+| Typ der Komponente | Name | Beschreibung der Aktualisierung |
+| --- | --- | --- |
+| Erweiterung | [!UICONTROL AJO Entity Fields] | Die [[!UICONTROL Markierung für mehrere Varianten]](https://github.com/adobe/xdm/pull/1774/files) wurde hinzugefügt [!UICONTROL AJO-Entitätsfelder] um festzustellen, ob es sich bei der Variante um eine Variante mit mehreren Varianten handelt oder nicht. |
+| Datentyp | [!UICONTROL Produktlistenelement] | [[!UICONTROL Rückgabeelement]](https://github.com/adobe/xdm/pull/1773/files) wurde hinzugefügt, um die Informationen zur Autorisierung von rückkehrenden Merchandisen einzuschließen. |
+| Datentyp | Bestellung | [[!UICONTROL Rückkehrinformationen]](https://github.com/adobe/xdm/pull/1773/files) wurde hinzugefügt, um die ausgestellte RMA (Return Merchandise Authorization) einzuschließen. |
+
+{style="table-layout:auto"}
+
+Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md)
 
 ## Identity Service {#identity-service}
 
