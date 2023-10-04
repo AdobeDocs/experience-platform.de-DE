@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy Service- und Experience Cloud-Anwendungen
 description: Dieses Dokument enthält eine Referenz zum Konfigurieren verschiedener Experience Cloud-Anwendungen für datenschutzbezogene Vorgänge.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: ed3089a86d6ef25f23e4d69eee7da800d7242545
+source-git-commit: b0b49badd46601571be59afba84fad874ca1b368
 workflow-type: tm+mt
-source-wordcount: '926'
-ht-degree: 16%
+source-wordcount: '927'
+ht-degree: 17%
 
 ---
 
@@ -38,7 +38,7 @@ Im Folgenden finden Sie eine Liste von [!DNL Experience Cloud] Anwendungen, die 
 | Adobe Campaign Standard | ✓ | ✓ | Die gespeicherten Daten der betroffenen Person werden aus dem System gelöscht. | <ul><li>[Dokumentation aufrufen/löschen](https://docs.campaign.adobe.com/doc/standard/getting_started/de/ACS_GDPR.html)</li><li>[Opt-out-Dokumentation](../segmentation/consents.md)</li></ul> |
 | Adobe Kundenattribute (CRS) | ✓ | K. A. | Die Attribute der betroffenen Person werden aus dem System gelöscht. | <ul><li>[Dokumentation zur DSGVO aufrufen/löschen](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/gdpr.html?lang=de)</li><li>[Dokumentation für CCPA aufrufen/löschen](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/ccpa.html?lang=de)</li><li>Kundenattribute können keine Daten übertragen. Daher sind Opt-out-Anfragen für den Verkauf nicht möglich.</li></ul> |
 | Adobe Experience Platform | ✓ | ✓ | Wenn Experience Platform von Privacy Service eine Löschanfrage erhält, sendet Platform eine Bestätigung an Privacy Service, dass die Anfrage empfangen wurde und die betroffenen Daten zum Löschen markiert wurden. Die Datensätze werden dann aus dem Data Lake oder Profilspeicher entfernt, sobald der Datenschutzauftrag abgeschlossen ist. Bevor der Auftrag abgeschlossen ist, werden die Daten weich gelöscht und stehen daher keinem Platform-Dienst zur Verfügung. | <ul><li>[Zugriff/Löschung der Dokumentation für den Data Lake](../catalog/privacy.md)</li><li>[Dokumentation für Identity Service aufrufen/löschen](../identity-service/privacy.md)</li><li>[Dokumentation für Echtzeit-Kundenprofil aufrufen/löschen](../profile/privacy.md)</li><li>[!DNL Experience Platform] honoriert [Opt-out-Anfragen für Zielgruppensegmente](../segmentation/consents.md).</li></ul> |
-| Adobe Primetime-Authentifizierung | ✓ | K. A. | Die gespeicherten Daten der betroffenen Person werden aus dem System gelöscht. | <ul><li>[Dokumentation aufrufen/löschen](https://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] verfügt nicht über die Möglichkeit, Daten zu übertragen. Daher sind Opt-out-Anfragen für den Verkauf nicht möglich.</li></ul> |
+| Adobe Pass-Authentifizierung | ✓ | K. A. | Die gespeicherten Daten der betroffenen Person werden aus dem System gelöscht. | <ul><li>[Dokumentation aufrufen/löschen](https://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>Der Pass verfügt nicht über die Fähigkeit, Daten zu übertragen. Daher sind Opt-out-Kaufanfragen nicht möglich.</li></ul> |
 | Adobe Target | ✓ | K. A. | Alle Daten, die mit der ID der betroffenen Person verknüpft sind, werden aus ihrem Besucherprofil gelöscht. Aggregierte oder anonymisierte Daten, die die Person nicht identifizieren oder anderweitig nicht verwandt sind (z. B. Inhaltsdaten), gelten nicht für Löschanfragen. | <ul><li>[Dokumentation aufrufen/löschen](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=de)</li><li>[!DNL Target] verfügt nicht über die Möglichkeit, Daten zu übertragen. Daher sind Opt-out-Anfragen für den Verkauf nicht möglich.</li></ul> |
 | Marketo Engage | ✓ | K. A. | Die gespeicherten Daten der betroffenen Person werden aus dem System gelöscht. | <ul><li>[Dokumentation aufrufen/löschen](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/privacy-requests.html)</li><li>[!DNL Marketo] verfügt nicht über die Möglichkeit, Daten zu übertragen. Daher sind Opt-out-Anfragen für den Verkauf nicht möglich.</li></ul> |
 
