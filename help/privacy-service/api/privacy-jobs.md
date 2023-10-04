@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Privacy Jobs API Endpoint
 description: Erfahren Sie, wie Sie mit der Privacy Service-API Datenschutzaufträge für Experience Cloud-Apps verwalten.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
+source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
 workflow-type: tm+mt
 source-wordcount: '1547'
 ht-degree: 63%
@@ -13,7 +13,7 @@ ht-degree: 63%
 
 # Endpunkt &quot;Datenschutzaufträge&quot;
 
-In diesem Dokument wird beschrieben, wie Sie mit Datenschutzaufträgen mit API-Aufrufen arbeiten. Insbesondere wird die Verwendung der `/job` -Endpunkt im [!DNL Privacy Service] API. Lesen Sie vor dem Lesen dieses Handbuchs die Informationen unter [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Informationen zum Lesen von Beispiel-API-Aufrufen.
+In diesem Dokument wird beschrieben, wie Sie mit Datenschutzaufträgen mit API-Aufrufen arbeiten. Insbesondere wird die Verwendung der `/job` -Endpunkt im [!DNL Privacy Service] API. Lesen Sie vor dem Lesen dieses Handbuchs das [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Informationen zum Lesen von Beispiel-API-Aufrufen.
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{REGULATION}` | Der Regelungstyp für die Abfrage. Zu den zulässigen Werten gehören: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li><li>`cpa`</li><li>`ctdpa`</li></ul><br>Siehe Übersicht unter [unterstützte Verordnungen](../regulations/overview.md) für weitere Informationen zu den Datenschutzbestimmungen, die die obigen Werte darstellen. |
+| `{REGULATION}` | Der Regelungstyp für die Abfrage. Zu den zulässigen Werten gehören: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`pdpd_vnm`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Siehe Übersicht unter [unterstützte Verordnungen](../regulations/overview.md) für weitere Informationen zu den Datenschutzbestimmungen, die die obigen Werte darstellen. |
 | `{PAGE}` | Die Seite der anzuzeigenden Daten mit 0-basierter Nummerierung. Die Standardeinstellung lautet `0`. |
 | `{SIZE}` | Die Anzahl der Ergebnisse, die auf jeder Seite angezeigt werden sollen. Der Standardwert ist `1` und der Maximalwert ist `100`. Wenn Sie den Maximalwert überschreiten, gibt die API einen 400-Code-Fehler zurück. |
 
@@ -159,7 +159,7 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `companyContexts` **(Erforderlich)** | Ein Array mit Authentifizierungsinformationen für Ihr Unternehmen. Jeder aufgelistete Identifikator enthält die folgenden Attribute: <ul><li>`namespace`: Den Namensraum eines Identifikators.</li><li>`value`: Den Wert des Identifikators.</li></ul>Es ist **erforderlich** dass einer der Kennungen `imsOrgId` als `namespace`mit `value` enthält die eindeutige ID für Ihre Organisation. <br/><br/>Zusätzliche IDs können produktspezifische Firmenqualifizierer sein (z. B. `Campaign`), die eine Integration mit einer Adobe-Anwendung Ihrer Organisation identifizieren. Mögliche Werte sind Kontonamen, Client-Codes, Mandanten-IDs oder andere Anwendungs-Identifikatoren. |
+| `companyContexts` **(Erforderlich)** | Ein Array mit Authentifizierungsinformationen für Ihr Unternehmen. Jeder aufgelistete Identifikator enthält die folgenden Attribute: <ul><li>`namespace`: Den Namensraum eines Identifikators.</li><li>`value`: Den Wert des Identifikators.</li></ul>Es ist **erforderlich** die einer der Kennungen verwendet `imsOrgId` als `namespace`mit `value` enthält die eindeutige ID für Ihre Organisation. <br/><br/>Zusätzliche IDs können produktspezifische Firmenqualifizierer sein (z. B. `Campaign`), die eine Integration mit einer Adobe-Anwendung Ihrer Organisation identifizieren. Mögliche Werte sind Kontonamen, Client-Codes, Mandanten-IDs oder andere Anwendungs-Identifikatoren. |
 | `users` **(Erforderlich)** | Ein Array mit einer Sammlung von mindestens einem Benutzer, auf den Sie zugreifen, oder den Sie löschen möchten. In einer einzigen Anfrage können maximal 1000 Benutzer-IDs bereitgestellt werden. Jedes Benutzerobjekt enthält die folgenden Informationen: <ul><li>`key`: Ein Identifikator für einen Benutzer, der verwendet wird, um die separaten Auftrags-Identifikatoren in den Antwortdaten zu qualifizieren. Es gilt als Best Practice, eine eindeutige, leicht identifizierbare Zeichenfolge für diesen Wert zu wählen, damit später einfach darauf verwiesen oder nachgeschlagen werden kann.</li><li>`action`: Ein Array, das die gewünschten Aktionen zur Übernahme der Benutzerdaten auflistet. Je nach den Aktionen, die Sie ausführen möchten, muss dieses Array `access`, `delete` oder beide enthalten.</li><li>`userIDs`: Eine Sammlung von Identitäten für den Benutzer. Die Anzahl der Identitäten, die ein einzelner Benutzer haben kann, ist auf neun begrenzt. Jede Identität besteht aus einem `namespace`, einem `value` und einem Namensraum-Qualifikator (`type`). Weitere Informationen zu diesen erforderlichen Eigenschaften finden Sie im [Anhang](appendix.md).</li></ul> Eine ausführlichere Erläuterung zu `users` und `userIDs` finden Sie im [Handbuch zur Fehlerbehebung](../troubleshooting-guide.md#user-ids). |
 | `include` **(Erforderlich)** | Eine Reihe von Adobe-Produkten, die in Ihre Verarbeitung einbezogen werden sollen. Wenn dieser Wert fehlt oder auf andere Weise leer ist, wird die Anfrage zurückgewiesen. Schließen Sie nur Produkte ein, mit denen Ihr Unternehmen eine Integration hat. Weitere Informationen finden Sie im Abschnitt zu den [anerkannten Produktwerten](appendix.md) im Anhang. |
 | `expandIDs` | Eine optionale Eigenschaft, die bei Festlegung auf `true`stellt eine Optimierung für die Verarbeitung der IDs in den Anwendungen dar (derzeit nur unterstützt von [!DNL Analytics]). Wenn dieses Wert weggelassen wird, wird standardmäßig `false` verwendet. |
@@ -240,7 +240,7 @@ GET /jobs/{JOB_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{JOB_ID}` | Die ID des Auftrags, den Sie nachschlagen möchten. Diese ID wird unter zurückgegeben. `jobId` in erfolgreichen API-Antworten für [Erstellen eines Auftrags](#create-job) und [Auflisten aller Aufträge](#list). |
+| `{JOB_ID}` | Die ID des Auftrags, den Sie nachschlagen möchten. Diese ID wird zurückgegeben unter `jobId` in erfolgreichen API-Antworten für [Erstellen eines Auftrags](#create-job) und [Auflisten aller Aufträge](#list). |
 
 {style="table-layout:auto"}
 
@@ -334,8 +334,8 @@ Eine erfolgreiche Antwort gibt die Details des angegebenen Auftrags zurück.
 | --- | --- |
 | `productStatusResponse` | Jedes Objekt innerhalb der `productResponses` -Array enthält Informationen zum aktuellen Status des Auftrags in Bezug auf einen bestimmten [!DNL Experience Cloud] Anwendung. |
 | `productStatusResponse.status` | Die aktuelle Statuskategorie des Auftrags. Eine Liste der [Verfügbare Statuskategorien](#status-categories) und ihre entsprechende Bedeutung. |
-| `productStatusResponse.message` | Der spezifische Status des Auftrags, der der Statuskategorie entspricht. |
-| `productStatusResponse.responseMsgCode` | Ein Standardcode für Produktreaktionsnachrichten, die von [!DNL Privacy Service]. Die Details der Nachricht finden Sie unter `responseMsgDetail`. |
+| `productStatusResponse.message` | Der spezifische Status des Auftrags entsprechend der Statuskategorie. |
+| `productStatusResponse.responseMsgCode` | Ein Standardcode für Produktreaktionsmeldungen, die von [!DNL Privacy Service]. Die Details der Nachricht finden Sie unter `responseMsgDetail`. |
 | `productStatusResponse.responseMsgDetail` | Eine detailliertere Erläuterung des Auftragsstatus. Nachrichten für ähnliche Status können von Produkt zu Produkt unterschiedlich sein. |
 | `productStatusResponse.results` | Für bestimmte Status können einige Produkte einen `results` -Objekt, das zusätzliche Informationen bereitstellt, die nicht von `responseMsgDetail`. |
 | `downloadURL` | Ist der Auftragsstatus `complete`, stellt dieses Attribut eine URL zum Herunterladen der Auftragsergebnisse als ZIP-Datei bereit. Diese Datei kann bis zu 60 Tagen nach Abschluss des Auftrags heruntergeladen werden. |

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform-Glossar
 description: Ein Glossar wichtiger Experience Platform-Terminologie.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
+source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
 workflow-type: tm+mt
-source-wordcount: '7929'
+source-wordcount: '7979'
 ht-degree: 5%
 
 ---
@@ -538,6 +538,8 @@ ht-degree: 5%
 **Token**: Ein Token ist ein Typ von Authentifizierungssicherheit mit zwei Faktoren, mit dem die Verwendung von Computerdiensten mit [!DNL Query Service].
 
 ## U
+
+**UCPA**: Die [[!DNL Utah Consumer Privacy Act]](https://le.utah.gov/~2022/bills/static/SB0227.html) gibt einem Verbraucher das Recht zu erfahren, welche personenbezogenen Daten ein Unternehmen erfasst, wie das Unternehmen seine personenbezogenen Daten verwendet und ob das Unternehmen seine personenbezogenen Daten verkauft. Verbraucher können von Unternehmen verlangen, ihre personenbezogenen Daten zu löschen oder nicht mehr zu verkaufen.
 
 **Vereinigungsschema**: Ein Vereinigungsschema ist eine Konsolidierung von Schemas, die dieselbe Klasse teilen und für die [!DNL Real-Time Customer Profile]. Für eine Organisation können mehrere Vereinigungsschemas vorhanden sein, es kann jedoch pro Klasse nur ein Vereinigungsschema geben.
 

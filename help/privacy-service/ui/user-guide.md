@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verwalten von Datenschutzaufträgen in der Privacy Service-Benutzeroberfläche
 description: Erfahren Sie, wie Sie mit der Privacy Service-Benutzeroberfläche Datenschutzanfragen in verschiedenen Experience Cloud-Applikationen koordinieren und überwachen können.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: e5a1b57bc81b27d0e61c3c1ecc10156c10dd3f6e
+source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1475'
 ht-degree: 23%
 
 ---
@@ -38,17 +38,18 @@ Das Dashboard für die [!DNL Privacy Service] Die Benutzeroberfläche bietet zwe
 
 | UI-Bezeichnung | Verordnung |
 | --- | --- |
+| [!UICONTROL APA_AUS] | Die Menüauswahlmöglichkeiten für die [!DNL Australia Privacy Act (Privacy Act)] |
 | [!UICONTROL CPA] | Die Menüauswahlmöglichkeiten für die [!DNL Colorado Privacy Act] |
 | [!UICONTROL CCPA] | Die Menüauswahlmöglichkeiten für die [!DNL California Consumer Privacy Act] |
+| [!UICONTROL CPRA_USA] | Die Menüauswahlmöglichkeiten für die [!DNL California Consumer Privacy Rights Act (CPRA)] |
 | [!UICONTROL CTDPA] | Die Menüauswahlmöglichkeiten für die [!DNL Connecticut Data Privacy Act] |
 | [!UICONTROL DSGVO] | Die [!DNL General Data Protection Regulation] |
-| [!UICONTROL PDPA_THA] | Thailands [!DNL Personal Data Protection Act] |
+| [!UICONTROL HIPAA_AUS] | Die Menüauswahlmöglichkeiten für die [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL LGPD_BRA] | Brasiliens [!DNL Lei Geral de Proteção de Dados] |
 | [!UICONTROL NZPA_NZL] | Neuseeland [!DNL Privacy Act] |
+| [!UICONTROL PDPA_THA] | Thailands [!DNL Personal Data Protection Act] |
+| [!UICONTROL UCPA] | Die Menüauswahlmöglichkeiten für die [!DNL Utah Consumer Privacy Act] |
 | [!UICONTROL VCDPA_USA] | Die Menüauswahlmöglichkeiten für die [!DNL Virginia Consumer Data Protection Act] |
-| [!UICONTROL CPRA_USA] | Die Menüauswahlmöglichkeiten für die [!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL APA_AUS] | Die Menüauswahlmöglichkeiten für die [!DNL Australia Privacy Act (Privacy Act)] |
-| [!UICONTROL HIPAA_AUS] | Die Menüauswahlmöglichkeiten für die [!DNL Health Insurance Portability and Accountability Act] |
 
 {style="table-layout:auto"}
 
