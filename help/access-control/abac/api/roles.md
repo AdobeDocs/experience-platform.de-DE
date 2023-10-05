@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; API; Attributbasierte Zugriffssteuerung; attributbasierte Zugriffssteuerung
+keywords: Experience Platform;home;popular topics;api;Attribute-Based Access Control;attribute-based access control
 solution: Experience Platform
 title: Rollen-API-Endpunkt
 description: Mit dem Endpunkt /roles in der API für die attributbasierte Zugriffssteuerung können Sie Rollen in Adobe Experience Platform programmgesteuert verwalten.
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: 4b48fa5e9a1e9933cd33bf45b73ff6b0d831f06f
 workflow-type: tm+mt
-source-wordcount: '1606'
-ht-degree: 27%
+source-wordcount: '1666'
+ht-degree: 28%
 
 ---
 
@@ -179,7 +179,7 @@ Bei einer erfolgreichen Antwort werden Details zur abgefragten Rollen-ID zurück
 
 ## Suchen von Benutzern nach Rollen-ID
 
-Sie können auch Objekte abrufen, indem Sie eine GET-Anfrage an die `/roles` -Endpunkt beim Bereitstellen einer {ROLE_ID}.
+Sie können auch Objekte abrufen, indem Sie eine GET-Anfrage an die `/roles` Endpunkt beim Bereitstellen von {ROLE_ID}.
 
 **API-Format**
 
@@ -366,7 +366,7 @@ curl -X PATCH \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort wird die aktualisierte Rolle zurückgegeben, einschließlich neuer Werte für die Eigenschaften, die Sie aktualisieren möchten.
+Eine erfolgreiche Antwort gibt die aktualisierte Rolle zurück, einschließlich neuer Werte für die Eigenschaften, die Sie aktualisieren möchten.
 
 ```json
 {
@@ -498,20 +498,18 @@ PATCH /roles/{ROLE_ID}
 Die folgende Anfrage aktualisiert die Betreffs, die mit `{ROLE_ID}`.
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/access-control/administration/roles/{ROLE_ID} \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
-  -d'{
-    "operations": [
-      {
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '[
+    {
         "op": "add",
-        "path": "/subjects",
-        "value": "New subjects"
-      }
-    ]
-  }'
+        "path": "/user",
+        "value": "{USER ID}"
+    }
+]' 
 ```
 
 | Funktionsweise | Beschreibung |
@@ -522,37 +520,7 @@ curl -X PATCH \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die aktualisierten Themen zurück, die mit der abgefragten Rollen-ID verknüpft sind.
-
-```json
-{
-  "subjects": [
-    {
-      "subjectId": "string",
-      "subjectType": "user"
-    }
-  ],
-  "_page": {
-    "limit": 0,
-    "count": 0
-  },
-  "_links": {
-    "next": {
-      "href": "string",
-      "templated": true
-    },
-    "page": {
-      "href": "string",
-      "templated": true
-    }
-  }
-}
-```
-
-| Eigenschaft | Beschreibung |
-| --- | --- |
-| `subjectId` | Die ID eines Betreffs. |
-| `subjectType` | Der Typ eines Betreffs. |
+Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück.
 
 ## Rollen löschen {#delete}
 
@@ -585,3 +553,34 @@ curl -X DELETE \
 Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück.
 
 Sie können den Löschvorgang bestätigen, indem Sie eine Nachschlageanfrage (GET) für die Rolle ausführen. Sie erhalten den HTTP-Status 404 (Nicht gefunden), da die Rolle aus der Verwaltung entfernt wurde.
+
+## API-Berechtigung hinzufügen {#apicredential}
+
+Um eine API-Berechtigung hinzuzufügen, stellen Sie eine PATCH-Anfrage an `/roles` -Endpunkt und geben die Rollen-ID der Betreffs an.
+
+**API-Format**
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '[
+    {
+        "op": "add",
+        "path": "/api-integration",
+        "value": "{TECHNICAL ACCOUNT ID}"
+    }
+]'   
+```
+
+| Funktionsweise | Beschreibung |
+| --- | --- |
+| `op` | Der Vorgangsaufruf, mit dem die zum Aktualisieren der Rolle erforderliche Aktion definiert wird. Die Operationen umfassen `add`, `replace` und `remove`. |
+| `path` | Der Pfad des hinzuzufügenden Parameters. |
+| `value` | Der Wert, mit dem Sie Ihren Parameter hinzufügen möchten. |
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück.
