@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen und Bearbeiten von Schemata in der Benutzeroberfläche
 description: Erfahren Sie mehr über die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Experience Platform-Benutzeroberfläche.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 943d1360e80caef58d09b8502507a3ad72edda03
+source-git-commit: 5e57df3fbc22baa1c7abbb02a003ad8663aad040
 workflow-type: tm+mt
-source-wordcount: '3571'
+source-wordcount: '3670'
 ht-degree: 3%
 
 ---
@@ -45,11 +45,9 @@ Geben Sie einen benutzerfreundlichen [!UICONTROL Anzeigename des Schemas] im Tex
 
 ![Die [!UICONTROL Name und Überprüfung] Abschnitt [!UICONTROL Schema erstellen] Workflow mit dem [!UICONTROL Anzeigename des Schemas], [!UICONTROL Beschreibung], und [!UICONTROL Beenden] hervorgehoben.](../../images/ui/resources/schemas/name-and-review.png)
 
-Die [!UICONTROL Schema] [!UICONTROL Durchsuchen] angezeigt. Ihr kürzlich erstelltes Schema kann jetzt im [!DNL Schema Editor] und in der Liste der verfügbaren Schemas angezeigt.
+Die [!UICONTROL Schema] [!UICONTROL Durchsuchen] angezeigt. Ihr kürzlich erstelltes Schema ist jetzt in der Schema Library aufgeführt und kann im [!DNL Schema Editor].
 
-![Der Schema-Editor, der Ihr kürzlich erstelltes Schema anzeigt.](../../images/ui/resources/schemas/schema-details.png)
-
-Sie können jetzt mit der Erstellung der Schemastruktur beginnen, indem Sie [Schemafeldgruppen hinzufügen](#add-field-groups) im [!DNL Schema Editor].
+![Auf der Registerkarte Durchsuchen des Arbeitsbereichs &quot;Schemas&quot;wird das kürzlich erstellte Schema angezeigt.](../../images/ui/resources/schemas/example-schema.png)
 
 ## Vorhandenes Schema bearbeiten {#edit}
 
@@ -66,6 +64,14 @@ Um ein vorhandenes Schema zu bearbeiten, wählen Sie die **[!UICONTROL Durchsuch
 >Sie können die Such- und Filterfunktionen des Arbeitsbereichs verwenden, um das Schema leichter zu finden. Siehe Handbuch unter [Erkunden von XDM-Ressourcen](../explore.md) für weitere Informationen.
 
 Sobald Sie ein Schema auswählen, wird die [!DNL Schema Editor] angezeigt, wobei die Struktur des Schemas auf der Arbeitsfläche angezeigt wird. Sie können jetzt [Feldergruppen hinzufügen](#add-field-groups) zum Schema (oder [Hinzufügen einzelner Felder](#add-individual-fields) aus diesen Gruppen), [Anzeigenamen von Feldern bearbeiten](#display-names)oder [Bearbeiten vorhandener benutzerdefinierter Feldergruppen](./field-groups.md#edit) , wenn das Schema eine verwendet.
+
+## Mehr Aktionen {#more}
+
+Im Schema Editor können Sie auch Schnellaktionen durchführen, um die JSON-Struktur des Schemas zu kopieren oder das Schema zu löschen, wenn es nicht für das Echtzeit-Kundenprofil aktiviert wurde oder über verknüpfte Datensätze verfügt. Auswählen [!UICONTROL Mehr] oben in der Ansicht ein Dropdown-Menü mit Schnellaktionen anzeigen.
+
+Mit der Funktion JSON-Struktur kopieren können Sie sehen, wie eine Beispiel-Payload aussehen würde, während Sie das Schema und Ihre Daten-Pipelines noch erstellen. Dies ist besonders hilfreich in Situationen, in denen komplexe Objektzuordnungsstrukturen im Schema vorhanden sind, z. B. bei einer Identitätszuordnung.
+
+![Der Schema-Editor mit hervorgehobener Schaltfläche Mehr und angezeigten Dropdown-Optionen.](../../images/tutorials/create-schema/more-actions.png)
 
 ## Umschalter für Anzeigename {#display-name-toggle}
 

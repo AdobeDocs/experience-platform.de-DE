@@ -5,7 +5,7 @@ title: Erstellen eines Schemas mit dem Schema-Editor.
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Erstellen eines Schemas mit dem Schema Editor in Experience Platform beschrieben.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 28d9a53371beea37b5c61b3bc4b111816f6e63e0
+source-git-commit: bf3099afadd6c8807060a6796cb6f37471478b44
 workflow-type: tm+mt
 source-wordcount: '4619'
 ht-degree: 82%
@@ -345,7 +345,7 @@ Wählen Sie **[!UICONTROL Profil]** aus. Daraufhin wird ein Pop-up angezeigt, in
 
 Wählen Sie **[!UICONTROL Aktivieren]** aus, um Ihre Wahl zu bestätigen. Sie können den Umschalter **[!UICONTROL Profil]** erneut auswählen, um ggf. das Schema zu deaktivieren. Aber sobald das Schema bei aktiviertem [!DNL Profile] gespeichert wurde, kann es nicht mehr deaktiviert werden.
 
-## Mehr Aktionen
+## Mehr Aktionen {#more}
 
 Im Schema Editor können Sie auch Schnellaktionen durchführen, um die JSON-Struktur des Schemas zu kopieren oder das Schema zu löschen, wenn es nicht für das Echtzeit-Kundenprofil aktiviert wurde oder über verknüpfte Datensätze verfügt. Auswählen [!UICONTROL Mehr] oben in der Ansicht ein Dropdown-Menü mit Schnellaktionen anzeigen.
 
