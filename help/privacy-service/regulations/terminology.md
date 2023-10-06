@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Terminologie der Datenschutzbestimmungen
 description: Dieses Dokument enthält Definitionen für Schlüsselbegriffe im Zusammenhang mit Datenschutzbestimmungen, die von Adobe Experience Cloud unterstützt werden.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
+source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '1796'
 ht-degree: 2%
@@ -108,6 +108,10 @@ Dieses Dokument enthält Definitionen für Schlüsselbegriffe im Zusammenhang mi
 ## P
 
 **PDPA**: Die [!DNL Personal Data Protection Act] von Thailand (PDPA) eingeführt wurde, um die thailändischen Dateneigner vor der illegalen Erhebung, Verwendung oder Weitergabe ihrer personenbezogenen Daten zu schützen. Inspiriert durch die DSGVO der Europäischen Union gewährt die Verordnung den thailändischen Bürgern das Recht, Zugang zu ihren gespeicherten personenbezogenen Daten oder deren Löschung zu beantragen.
+
+<!-- Not yet released:
+**PDPD**: The [!DNL Personal Data Protection Decree] of Vietnam (PDPD) ...  
+-->
 
 **Personenbezogene Daten**: Alle Informationen, die eine natürliche Person (das &quot;Datensubjekt&quot;) betreffen und die zur direkten oder indirekten Identifikation dieser Person verwendet werden können.
 
