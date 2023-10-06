@@ -2,7 +2,7 @@
 title: Automatisierte Datensatzabläufe
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform die Gültigkeit eines Datensatzes planen.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 49%
@@ -26,7 +26,7 @@ In diesem Dokument wird beschrieben, wie Sie die Ablaufzeit von Datensätzen in 
 
 >[!NOTE]
 >
->Der Datensatzablauf löscht derzeit keine Daten aus dem Adobe Experience Platform Edge Network. Es besteht jedoch keine Möglichkeit, dass Daten innerhalb des Edge-Netzwerks verbleiben, nachdem der Datensatz auf abläuft. Dies liegt daran, dass die 14-tägige Service-Lizenzvereinbarung für den Ablauf von Datensätzen mit dem 14-tägigen Zeitraum zusammenfällt, in dem Daten innerhalb des Edge-Netzwerks existieren, bevor sie verworfen werden.
+>Der Datensatzablauf löscht derzeit keine Daten aus dem Adobe Experience Platform Edge Network. Es besteht jedoch keine Möglichkeit, dass Daten innerhalb des Edge-Netzwerks verbleiben, nachdem der Datensatz auf abläuft. Dies liegt daran, dass sich die 15-Tage-Service-Lizenzvereinbarung für den Ablauf von Datensätzen mit dem 14-Tage-Zeitraum überschneidet, in dem Daten im Edge-Netzwerk vorhanden sind, bevor sie verworfen werden.
 
 ## Planen einer Datensatzgültigkeit {#schedule-dataset-expiration}
 
