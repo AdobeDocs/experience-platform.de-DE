@@ -1,36 +1,36 @@
 ---
-title: Handbuch zur Verwendung der Datenhygiene-Benutzeroberfläche
-description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche Datenhygiene-Aufgaben verwalten können.
+title: Anleitung zur Data Lifecycle-Benutzeroberfläche
+description: Erfahren Sie, wie Sie Datenlebenszyklusaufgaben in der Benutzeroberfläche von Adobe Experience Platform verwalten.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '213'
-ht-degree: 87%
+source-wordcount: '225'
+ht-degree: 16%
 
 ---
 
-# Handbuch zur Verwendung der Datenhygiene-Benutzeroberfläche {#hygiene-ui-guide}
+# Handbuch zur Benutzeroberfläche für die Lebenszyklusbenutzeroberfläche {#lifecycle-ui-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
->title="Status von Datenhygiene-Anfragen"
->abstract="Dieses Widget zeigt die Gesamtzahl der erstellten, fehlgeschlagenen und abgeschlossenen Datensatz-Löschvorgänge im Rahmen der Datenhygiene. Weitere Informationen zu Ihren Datenhygieneprozessen finden Sie unter **Datenhygiene** in der linken Navigation."
+>title="Status von Lebenszyklusanfragen"
+>abstract="Dieses Widget zeigt die Gesamtzahl der erstellten, fehlgeschlagenen und abgeschlossenen Datenlebenszyklusdatensatzlöschaufträge. Weitere Informationen zu Ihren Datenlebenszyklusprozessen finden Sie unter **Lebenszyklus der Daten** in der linken Navigation."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
->title="Aktuelle Arbeitsaufträge zur Datenhygiene"
->abstract="Dieses Widget zeigt die fünf zuletzt erstellten oder aktualisierten Arbeitsaufträge zur Datenhygiene, je nach der oben rechts gewählten Option. Weitere Informationen zu Ihren Datenhygieneprozessen finden Sie unter **Datenhygiene** in der linken Navigation."
+>title="Letzte Arbeitsaufträge für den Datenlebenszyklus"
+>abstract="Dieses Widget zeigt die fünf zuletzt erstellten oder aktualisierten Arbeitsaufträge für den Datenlebenszyklus an, abhängig von der ausgewählten Option oben rechts. Weitere Informationen zu Ihren Datenlebenszyklusprozessen finden Sie unter **Lebenszyklus der Daten** in der linken Navigation."
 
-Die **[!UICONTROL Datenhygiene]** Mit Workspace in der Adobe Experience Platform-Benutzeroberfläche können Sie verschiedene Datenhygieneaufgaben erstellen und überwachen, einschließlich Löschen von Datensätzen und Planen der Ablaufdaten von Datensätzen.
+Die **[!UICONTROL Lebenszyklus der Daten]** Mit Workspace in der Adobe Experience Platform-Benutzeroberfläche können Sie verschiedene Data Lifecycle Management-Aufgaben erstellen und überwachen, einschließlich Löschen von Datensätzen und Planen der Ablaufzeit von Datensätzen.
 
-In diesem Handbuch wird beschrieben, wie Sie Datenhygiene-Aufgaben in der Platform-Benutzeroberfläche verwalten. Informationen zur Durchführung dieser Aufgaben mithilfe von API-Aufrufen finden Sie im [Data Hygiene API-Handbuch](../api/overview.md).
+In diesem Handbuch wird beschrieben, wie Sie Datenlebenszyklusaufgaben in der Platform-Benutzeroberfläche verwalten. Informationen zur Durchführung dieser Aufgaben mithilfe von API-Aufrufen finden Sie im [Data Hygiene API-Handbuch](../api/overview.md).
 
-Um auf den Arbeitsbereich zuzugreifen, wählen Sie in der linken Navigationsleiste **[!UICONTROL Datenhygiene]** aus.
+Um auf den Arbeitsbereich zuzugreifen, wählen Sie **Lebenszyklus der Daten** in der linken Navigation.
 
-![Bild, das den Arbeitsbereich [!UICONTROL Datenhygiene] in der Platform-Benutzeroberfläche zeigt](../images/ui/overview/home.png)
+![Die [!UICONTROL Lebenszyklus der Daten] Arbeitsbereich in der Platform-Benutzeroberfläche mit [!UICONTROL Lebenszyklus der Daten] im linken Navigationsbereich hervorgehoben.](../images/ui/overview/home.png)
 
-Hier können Sie bestehende Arbeitsaufträge einsehen und neue Datenhygienevorgänge konfigurieren. Weitere Informationen finden Sie in den folgenden Abschnitten dieses Handbuchs:
+Von hier aus können Sie bestehende Arbeitsaufträge durchsuchen und neue Datenlebenszyklusvorgänge konfigurieren. Weitere Informationen finden Sie in den folgenden Abschnitten dieses Handbuchs:
 
 * [Durchsuchen vorhandener Arbeitsaufträge](./browse.md)
 * [Erstellen einer Anfrage zur Datensatzgültigkeit](./dataset-expiration.md)
-<!-- * [Create a record delete request](./record-delete.md) -->
+* [Datensatzlöschanfrage erstellen](./record-delete.md)

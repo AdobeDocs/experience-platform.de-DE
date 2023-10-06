@@ -1,35 +1,31 @@
 ---
-title: Durchsuchen von Datenhygiene-Arbeitsaufträgen
-description: Erfahren Sie, wie Sie bestehende Datenhygiene-Arbeitsaufträge in der Benutzeroberfläche von Adobe Experience Platform anzeigen und verwalten können.
+title: Durchsuchen von Arbeitsaufträgen für den Datenlebenszyklus
+description: Erfahren Sie, wie Sie bestehende Arbeitsaufträge für den Datenlebenszyklus in der Benutzeroberfläche von Adobe Experience Platform anzeigen und verwalten.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 92%
+source-wordcount: '841'
+ht-degree: 67%
 
 ---
 
-# Durchsuchen von Datenhygiene-Arbeitsaufträgen {#browse-work-orders}
+# Durchsuchen von Arbeitsaufträgen für den Datenlebenszyklus {#browse-work-orders}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"
 >title="IDs für Arbeitsaufträge"
->abstract="Wenn eine Datenhygiene-Anfrage an das System gesendet wird, wird ein Arbeitsauftrag erstellt, um die angeforderte Aufgabe auszuführen. Anders ausgedrückt, ist ein Arbeitsauftrag ein spezifischer Datenhygiene-Prozess, der seinen aktuellen Status und andere zugehörige Details enthält. Bei der Erstellung eines Arbeitsauftrags wird diesem automatisch eine eigene eindeutige ID zugewiesen."
->text="See the data hygiene UI guide to learn more."
+>abstract="Wenn eine Datenlebenszyklusanforderung an das System gesendet wird, wird eine Arbeitsreihenfolge erstellt, um die angeforderte Aufgabe auszuführen. Mit anderen Worten, eine Arbeitsreihenfolge stellt einen bestimmten Datenlebenszyklusprozess dar, der den aktuellen Status und andere zugehörige Details enthält. Bei der Erstellung eines Arbeitsauftrags wird diesem automatisch eine eigene eindeutige ID zugewiesen."
+>text="See the data lifecycle UI guide to learn more."
 
->[!IMPORTANT]
->
->Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben haben.
-
-Wenn eine Datenhygiene-Anfrage an das System gesendet wird, wird ein Arbeitsauftrag erstellt, um die angeforderte Aufgabe auszuführen. Ein Arbeitsauftrag stellt einen spezifischen Datenhygiene-Prozess dar, z. B. das geplante Ablaufen eines Datensatzes, wobei sein aktueller Status und andere zugehörige Details enthalten sind.
+Wenn eine Datenlebenszyklusanforderung an das System gesendet wird, wird eine Arbeitsreihenfolge erstellt, um die angeforderte Aufgabe auszuführen. Eine Arbeitsreihenfolge stellt einen bestimmten Datenlebenszyklusprozess dar, z. B. einen geplanten Datensatzablauf, der den aktuellen Status und andere zugehörige Details enthält.
 
 In diesem Handbuch wird beschrieben, wie Sie bestehende Arbeitsaufträge in der Adobe Experience Platform-Benutzeroberfläche anzeigen und verwalten können.
 
 ## Auflisten und Filtern vorhandener Arbeitsaufträge
 
-Wenn Sie zum ersten Mal auf den Arbeitsbereich **[!UICONTROL Datenhygiene]** in der Benutzeroberfläche zugreifen, wird eine Liste der vorhandenen Arbeitsaufträge mit allgemeinen Details angezeigt.
+Beim ersten Zugriff auf **[!UICONTROL Lebenszyklus der Daten]** Arbeitsbereich in der Benutzeroberfläche werden eine Liste der bestehenden Arbeitsaufträge mit ihren grundlegenden Details angezeigt.
 
-![Bild, das den Arbeitsbereich [!UICONTROL Datenhygiene] in der Platform-Benutzeroberfläche zeigt](../images/ui/browse/work-order-list.png)
+![Bild, das die [!UICONTROL Lebenszyklus der Daten] Arbeitsbereich in der Platform-Benutzeroberfläche](../images/ui/browse/work-order-list.png)
 
 In der Liste werden nur Arbeitsaufträge für jeweils eine Kategorie angezeigt. Auswählen **[!UICONTROL Verbraucher]** eine Liste mit Löschaufgaben für Datensätze anzuzeigen, und **[!UICONTROL Datensatz]** , um eine Liste der geplanten Datensatzabläufe anzuzeigen.
 
@@ -69,17 +65,17 @@ Die folgenden Filter gelten für Anfragen zur Gültigkeit von Datensätzen:
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"
 >title="Status nach Service"
->abstract="Anfragen zur Datenhygiene werden von mehreren Services von Experience Platform unabhängig voneinander bearbeitet. In diesem Abschnitt wird der aktuelle Verarbeitungsstatus der Anfrage für jeden einzelnen Service beschrieben. Weitere Informationen finden Sie im Handbuch zur Datenhygiene-Benutzeroberfläche."
+>abstract="Datenlebenszyklusanfragen werden unabhängig von mehreren Experience Platform-Services verarbeitet. In diesem Abschnitt wird der aktuelle Verarbeitungsstatus der Anfrage für jeden einzelnen Service beschrieben. Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche für den Datenlebenszyklus."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Anzahl der Identitäten"
->abstract="Die Anzahl der Identitäten, deren Datensätze im Rahmen dieses Arbeitsauftrags aktualisiert werden sollen. Die in der Zählung enthaltenen Identitäten müssen nicht unbedingt in den betroffenen Datensätzen vorhanden sein. Weitere Informationen finden Sie im Handbuch zur Datenhygiene-Benutzeroberfläche."
+>abstract="Die Anzahl der Identitäten, deren Datensätze im Rahmen dieses Arbeitsauftrags aktualisiert werden sollen. Die in der Zählung enthaltenen Identitäten müssen nicht unbedingt in den betroffenen Datensätzen vorhanden sein. Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche für den Datenlebenszyklus."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="Antwort auf den Löschvorgang eines Datensatzes"
->abstract="Wenn der Löschvorgang eines Datensatzes eine Antwort vom System erhält, werden diese Meldungen unter dem Abschnitt **[!UICONTROL Ergebnis]** angezeigt. Wenn während der Bearbeitung eines Arbeitsauftrags ein Problem auftritt, werden alle relevanten Fehlermeldungen in diesem Abschnitt angezeigt, um Ihnen bei der Fehlersuche zu helfen. Weitere Informationen finden Sie im Handbuch zur Datenhygiene-Benutzeroberfläche."
+>abstract="Wenn der Löschvorgang eines Datensatzes eine Antwort vom System erhält, werden diese Meldungen unter dem Abschnitt **[!UICONTROL Ergebnis]** angezeigt. Wenn während der Bearbeitung eines Arbeitsauftrags ein Problem auftritt, werden alle relevanten Fehlermeldungen in diesem Abschnitt angezeigt, um Ihnen bei der Fehlersuche zu helfen. Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche für den Datenlebenszyklus."
 
 Wählen Sie die ID eines aufgelisteten Arbeitsauftrags aus, um dessen Details anzuzeigen.
 
@@ -101,7 +97,7 @@ Die Detailseite für eine Datensatz-Gültigkeit enthält Informationen zu Standa
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie vorhandene Datenhygiene-Arbeitsaufträge in der Platform-Benutzeroberfläche anzeigen und verwalten können. Informationen zum Erstellen eigener Arbeitsaufträge finden Sie in der folgenden Dokumentation:
+In diesem Handbuch wurde beschrieben, wie Sie bestehende Arbeitsaufträge für den Datenlebenszyklus in der Platform-Benutzeroberfläche anzeigen und verwalten. Informationen zum Erstellen eigener Arbeitsaufträge finden Sie in der folgenden Dokumentation:
 
 * [Verwalten von Datensatzgültigkeiten](./dataset-expiration.md)
-<!-- * [Manage record deletes](./record-delete.md) -->
+* [Löschen von Datensätzen verwalten](./record-delete.md)

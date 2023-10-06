@@ -2,18 +2,14 @@
 title: Data Hygiene API-Handbuch
 description: Erfahren Sie, wie Sie die gespeicherten personenbezogenen Daten Ihrer Kunden in Adobe Experience Platform programmatisch korrigieren oder löschen können.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: da8b5d9fffdf8a176a4d70be5df5b3021cf0df7b
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 86%
+source-wordcount: '445'
+ht-degree: 69%
 
 ---
 
 # Data Hygiene API-Handbuch
-
->[!IMPORTANT]
->
->Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben haben.
 
 Mit der Datenhygiene-API können Sie die in Adobe Experience Platform gespeicherten personenbezogenen Daten Ihrer Kundinnen und Kunden programmgesteuert korrigieren oder löschen sowie Ablaufdaten für Datensätze planen. In diesem Handbuch werden die erforderlichen Schritte zur Verwendung der API beschrieben und Links zu Endpunkt-Dokumentationen bereitgestellt.
 
@@ -47,17 +43,17 @@ Eine Datensatzgültigkeit ist eine zeitverzögerte Aktion zum Löschen eines Dat
 
 >[!IMPORTANT]
 >
->Löschanfragen von Datensätzen stehen nur für Unternehmen zur Verfügung, die **Adobe Gesundheitsschild**.
+>Löschanfragen von Datensätzen stehen nur für Unternehmen zur Verfügung, die **Adobe Healthcare Shield**.
 >
 >
 >Löschvorgänge von Datensätzen dienen zur Datenbereinigung, zum Entfernen anonymer Daten oder zur Datenminimierung. Sie dürfen **nicht** für Anfragen zu den Rechten der betroffenen Personen (Compliance) verwendet werden, da sie sich auf Datenschutzbestimmungen wie die Datenschutz-Grundverordnung (DSGVO) beziehen. Verwenden Sie stattdessen [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) für alle Compliance-Anwendungsfälle.
 
-Mit der Data Hygiene API können Sie alle mit einer Identität verknüpften Datensätze aus einem oder allen Datensätzen löschen. Sämtliche Datenhygiene-Aufgaben, die Identitäten löschen, werden durch ein so genanntes Konstrukt dargestellt. Siehe [Endpunktleitfaden für Arbeitsaufträge](./workorder.md) für Details zum Arbeiten mit Datensatzlöschungen in der API.
+Mit der Data Hygiene API können Sie alle mit einer Identität verknüpften Datensätze aus einem oder allen Datensätzen löschen. Alle Datenlebenszyklusaufgaben, die Identitäten löschen, werden durch ein Konstrukt dargestellt, das als Arbeitsreihenfolge bezeichnet wird. Siehe [Endpunktleitfaden für Arbeitsaufträge](./workorder.md) für Details zum Arbeiten mit Datensatzlöschungen in der API.
 
 ## Kontingent
 
-Ihre Organisation ist auf ein vorab festgelegtes monatliches Vorgangskontingent für jede Art von Datenhygieneoperation beschränkt, das je nach Lizenzierung variieren kann. Details zur Anzeige des aktuellen Kontingent-Status Ihrer Datenhygieneprozesse finden Sie im [Handbuch für Kontingentendpunkte](./quota.md).
+Ihr Unternehmen ist auf ein vorab festgelegtes monatliches Auftragsquoten für jeden Datenlebenszyklusvorgang beschränkt, das je nach Lizenzierung variieren kann. Siehe [Quotenendpunkt-Handbuch](./quota.md) für Details zur Anzeige des aktuellen Quotenstatus Ihrer Datenlebenszyklusprozesse.
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie Datenhygiene-Anfragen mithilfe von API-Aufrufen verwalten. Informationen zum Ausführen dieser Aktionen in der Platform-Benutzeroberfläche finden Sie im [Handbuch für die Datenhygiene-Benutzeroberfläche](../ui/overview.md).
+In diesem Handbuch wurde beschrieben, wie Sie Datenlebenszyklusanfragen mithilfe von API-Aufrufen verwalten. Informationen zum Ausführen dieser Aktionen in der Platform-Benutzeroberfläche finden Sie in der [Handbuch zur Benutzeroberfläche für die Datenlebenszyklusbenutzeroberfläche](../ui/overview.md).

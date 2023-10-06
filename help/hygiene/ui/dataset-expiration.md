@@ -1,15 +1,15 @@
 ---
-title: Verwalten von Datensatzgültigkeiten
+title: Automatisierte Datensatzabläufe
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform die Gültigkeit eines Datensatzes planen.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 7931c8fe4a1ca5d255a80e7e6b0deb976d53c3de
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '819'
-ht-degree: 52%
+source-wordcount: '828'
+ht-degree: 49%
 
 ---
 
-# Verwalten von Datensatzgültigkeiten {#dataset-expiration}
+# Automatisierte Datensatzabläufe {#dataset-expiration}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
@@ -22,7 +22,7 @@ Die [[!UICONTROL Lebenszyklus der Daten] Arbeitsbereich](./overview.md) In der A
 >
 >Wenn ein Datensatz ausläuft, müssen alle Datenflüsse, die Daten in diesen Datensatz einspeisen, manuell geändert werden, damit Ihre nachgeschalteten Workflows nicht beeinträchtigt werden.
 
-In diesem Dokument wird beschrieben, wie Sie Datensatzgültigkeiten in der Platform-Benutzeroberfläche planen und verwalten.
+In diesem Dokument wird beschrieben, wie Sie die Ablaufzeit von Datensätzen in der Platform-Benutzeroberfläche planen und automatisieren.
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ Um eine Anforderung zu erstellen, wählen Sie **[!UICONTROL Anforderung erstelle
 
 >[!IMPORTANT]
 >
-Möglicherweise haben Sie bis zu 20 gleichzeitig geplante Datensatzabläufe. Das bedeutet, dass Sie planen können, 20 Datensätze gleichzeitig zu löschen. Es gibt keine Einschränkungen dafür, für welche Zeit oder Jahr diese Ablauffristen festgelegt werden. Wenn Sie beispielsweise 20 geplante Datensatzabläufe haben und ein Datensatz morgen gelöscht werden soll, können Sie keine weiteren Abläufe festlegen, bis dieser Datensatz gelöscht wurde.
+Real-Time CDP-, Adobe Journey Optimizer- und Customer Journey Analytics-Benutzer haben 20 ausstehende geplante Aufträge zur Ablaufzeit von Datensätzen. Gesundheitsschild- und Datenschutz- und Sicherheitsschild-Benutzer haben 50 ausstehende geplante Arbeitsaufträge zum Ablauf von Datensätzen. Das bedeutet, dass Sie planen können, 20 oder 50 Datensätze gleichzeitig zu löschen.<br>Wenn Sie beispielsweise 20 geplante Datensatzabläufe haben und ein Datensatz morgen gelöscht werden soll, können Sie keine weiteren Abläufe festlegen, bis dieser Datensatz gelöscht wurde.
 
 ![Die [!UICONTROL Lebenszyklus der Daten] Arbeitsbereich mit [!UICONTROL Anforderung erstellen] hervorgehoben.](../images/ui/ttl/create-request-button.png)
 

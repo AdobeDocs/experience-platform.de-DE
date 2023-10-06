@@ -1,23 +1,19 @@
 ---
 title: Quoten-API-Endpunkt
-description: Mit dem /quota-Endpunkt in der Data Hygiene API können Sie die Datenhygiene in Bezug auf die in Ihrem Unternehmen gültigen monatlichen Quotenbegrenzungen für jeden Vorgangstyp überwachen.
+description: Mit dem Endpunkt /quota in der Data Hygiene API können Sie die Nutzung des erweiterten Data Lifecycle Managements anhand der monatlichen Quotenbegrenzungen Ihres Unternehmens für jeden Auftragstyp überwachen.
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
-source-git-commit: 1c6a5df6473e572cae88a5980fe0db9dfcf9944e
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '347'
-ht-degree: 89%
+source-wordcount: '327'
+ht-degree: 58%
 
 ---
 
 # Quoten-Endpunkt
 
->[!IMPORTANT]
->
->Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben haben.
+Die `/quota` -Endpunkt in der Data Hygiene API ermöglicht es Ihnen, die Nutzung des erweiterten Data Lifecycle Managements anhand der Quotenbegrenzungen Ihres Unternehmens für jeden Auftragstyp zu überwachen.
 
-Der `/quota`-Endpunkt in der Data Hygiene API ermöglicht es Ihnen, die Nutzung Ihrer Datenhygiene-Nutzung in Bezug auf die Quotenbegrenzungen Ihres Unternehmens für jeden Vorgangstyp zu überwachen.
-
-Die Kontingente werden für jeden Datenhygiene-Vorgangstyp wie folgt umgesetzt:
+Für jeden Auftragstyp des Datenlebenszyklus werden Quoten wie folgt erzwungen:
 
 * Löschungen und Aktualisierungen von Datensätzen sind auf eine bestimmte Anzahl von Anforderungen pro Monat beschränkt.
 * Datensatzabläufe haben ein pauschales Limit für die Anzahl der gleichzeitig aktiven Vorgänge, und zwar unabhängig davon, wann die Abläufe ausgeführt werden.
@@ -58,7 +54,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die Details Ihrer Datenhygiene-Kontingente zurückgegeben.
+Eine erfolgreiche Antwort gibt die Details Ihrer Datenlebenszyklusquoten zurück.
 
 ```json
 {
@@ -81,6 +77,6 @@ Bei einer erfolgreichen Antwort werden die Details Ihrer Datenhygiene-Kontingent
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `quotas` | Listet die Kontingentinformationen für jeden Datenhygiene-Vorgangstyp auf. Jedes Kontingentobjekt enthält die folgenden Eigenschaften:<ul><li>`name`: Datenhygiene-Vorgangstyp:<ul><li>`expirationDatasetQuota`: Datensatzgültigkeiten</li><li>`deleteIdentityWorkOrderDatasetQuota`: Löschen von Datensätzen</li></ul></li><li>`description`: Eine Beschreibung des Datenhygiene-Vorgangstyps.</li><li>`consumed`: Die Anzahl der Vorgänge dieses Typs, die im aktuellen Monatszeitraum ausgeführt wird.</li><li>`quota`: Die Kontingentbegrenzung für diesen Vorgangstyp. Bei Datensatzlöschungen und -aktualisierungen stellt dies die Anzahl der Aufträge dar, die für jeden monatlichen Zeitraum ausgeführt werden können. Bei Datensatzabläufen stellt dies die Anzahl der Vorgänge dar, die gleichzeitig aktiv sein können.</li></ul> |
+| `quotas` | Listet die Quoteninformationen für jeden Auftragstyp des Datenlebenszyklus auf. Jedes Kontingentobjekt enthält die folgenden Eigenschaften:<ul><li>`name`: Der Auftragstyp des Datenlebenszyklus:<ul><li>`expirationDatasetQuota`: Datensatzgültigkeiten</li><li>`deleteIdentityWorkOrderDatasetQuota`: Löschen von Datensätzen</li></ul></li><li>`description`: Eine Beschreibung des Auftragstyps für den Datenlebenszyklus.</li><li>`consumed`: Die Anzahl der Vorgänge dieses Typs, die im aktuellen Monatszeitraum ausgeführt wird.</li><li>`quota`: Die Kontingentbegrenzung für diesen Vorgangstyp. Bei Datensatzlöschungen und -aktualisierungen stellt dies die Anzahl der Aufträge dar, die für jeden monatlichen Zeitraum ausgeführt werden können. Bei Datensatzabläufen stellt dies die Anzahl der Vorgänge dar, die gleichzeitig aktiv sein können.</li></ul> |
 
 {style="table-layout:auto"}
