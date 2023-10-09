@@ -1,13 +1,13 @@
 ---
 title: LiveRamp - Verteilungsverbindung
 description: Erfahren Sie, wie Sie mit dem LiveRamp - Distribution-Connector Zielgruppen koordinieren und aktivieren können, die zuvor in LiveRamp integriert wurden, und zwar für nachgelagerte Werbeziele.
-source-git-commit: b97694dcf0d7fd600c6aada9600364e99ffe0902
+exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '2716'
-ht-degree: 32%
+ht-degree: 46%
 
 ---
-
 
 # [!DNL LiveRamp - Distribution]-Verbindung
 
@@ -110,13 +110,13 @@ In den folgenden Abschnitten finden Sie ausführliche Anleitungen zum Konfigurie
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_4cinsights_profile_id"
 >title="4C-Markenprofil-ID"
->abstract="Geben Sie die numerische ID ein, die Ihrem 4C-Markenprofil zugeordnet ist. Wenn Sie nicht über diese ID verfügen, wenden Sie sich an Ihren 4C-Kundendienstmitarbeiter."
+>abstract="Geben Sie die numerische ID ein, die Ihrem 4C-Markenprofil zugeordnet ist. Wenn Sie diese ID nicht haben, wenden Sie sich an den 4C-Kundendienst."
 
 Füllen Sie die unten stehenden Felder aus, um Details für das Ziel zu konfigurieren.
 
 ![Platform-UI-Bild, das die Kundendatenfelder für das 4C Insights-Ziel anzeigt.](../../assets/catalog/advertising/liveramp-distribution/LR_4C_DestSpecific.png)
 
-* **[!UICONTROL 4C-Markenprofil-ID]**: Geben Sie die numerische ID ein, die Ihrem 4C-Markenprofil zugeordnet ist. Wenn Sie nicht über diese ID verfügen, wenden Sie sich an Ihren 4C-Kundendienstmitarbeiter.
+* **[!UICONTROL 4C-Markenprofil-ID]**: Geben Sie die numerische ID ein, die Ihrem 4C-Markenprofil zugeordnet ist. Wenn Sie diese ID nicht haben, wenden Sie sich an den 4C-Kundendienst.
 
 ### [!DNL Acast] {#acast}
 
@@ -136,7 +136,7 @@ Füllen Sie die unten stehenden Felder aus, um Details für das Ziel zu konfigur
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_ampersand_company_name"
 >title="Ihr Firmenname"
->abstract="Ihr Firmenname, wie er dem Zielpartner angezeigt werden soll. Verwenden Sie keine Leerzeichen oder Sonderzeichen."
+>abstract="Ihr Firmenname, wie er der Zielpartnerin bzw. dem Zielpartner angezeigt werden soll. Verwenden Sie keine Leerzeichen oder Sonderzeichen."
 
 Füllen Sie die unten stehenden Felder aus, um Details für das Ziel zu konfigurieren.
 
@@ -175,7 +175,7 @@ Füllen Sie die unten stehenden Felder aus, um Details für das Ziel zu konfigur
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_agreement"
 >title="Vereinbarung über Zielbedingungen für Advertiser-Daten"
->abstract="Geben Sie ein `I AGREE` zur Bestätigung der Bestätigung und Zustimmung zu den Disney Advertiser-Datenbedingungen."
+>abstract="Geben Sie `I AGREE` ein, um die Kenntnisnahme und das Einverständnis mit den Datenbedingungen für den Disney-Advertiser zu bestätigen."
 
 <!-- >additional-url="<https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/>" text="Read the agreement" -->
 
@@ -201,7 +201,7 @@ Füllen Sie die unten stehenden Felder aus, um Details für das Ziel zu konfigur
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_iheartmedia_client"
->title="Clientname"
+>title="Client-Name"
 >abstract="Ihr Advertiser-Kontoname, wie er dem Zielpartner angezeigt werden soll. Verwenden Sie Ihren Unternehmensnamen. Verwenden Sie keine Leerzeichen oder Sonderzeichen."
 
 Füllen Sie die unten stehenden Felder aus, um Details für das Ziel zu konfigurieren.
@@ -215,7 +215,7 @@ Füllen Sie die unten stehenden Felder aus, um Details für das Ziel zu konfigur
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_index_advertiseraccountname"
 >title="Kontoname"
->abstract="Ihr Index Exchange-Client-Kontoname. Verwenden Sie keine Leerzeichen oder Sonderzeichen."
+>abstract="Ihr Client-Kontoname bei Index Exchange. Verwenden Sie keine Leerzeichen oder Sonderzeichen."
 
 Füllen Sie die unten stehenden Felder aus, um Details für das Ziel zu konfigurieren.
 
@@ -228,7 +228,7 @@ Füllen Sie die unten stehenden Felder aus, um Details für das Ziel zu konfigur
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitectv_client"
 >title="Client"
->abstract="Ihr Kundenname, wie er dem Zielpartner angezeigt werden soll. Verwenden Sie Ihren Unternehmensnamen. Verwenden Sie keine Leerzeichen oder Sonderzeichen."
+>abstract="Ihr Advertiser-Kontoname, wie er der Zielpartnerin bzw. dem Zielpartner angezeigt werden soll. Verwenden Sie Ihren Unternehmensnamen. Verwenden Sie keine Leerzeichen oder Sonderzeichen."
 
 Füllen Sie die unten stehenden Felder aus, um Details für das Ziel zu konfigurieren.
 
@@ -241,18 +241,18 @@ Füllen Sie die unten stehenden Felder aus, um Details für das Ziel zu konfigur
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitedv+_partnerid"
 >title="Partner-ID"
->abstract="Die Rubicon Project Partner-ID, die dem Herausgeber zugeordnet ist, dem das Segment/die Daten gehören. Wenden Sie sich an Ihren Rubicon Project-Kundenbetreuer, wenn Sie sich nicht sicher sind, welchen Wert Sie verwenden sollten."
+>abstract="Die Partner-ID bei Rubicon Project, die dem Vermarkter zugeordnet ist, dem das Segment/die Daten gehören. Wenden Sie sich an Ihren Rubicon Project-Support-Kontakt, wenn Sie sich nicht sicher sind, welchen Wert Sie verwenden sollten."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitedv+_seatid"
->title="Sitzungs-ID"
->abstract="Magnite DV+-Sitzungs-ID von Ihrem Magnite-Kundenbetreuer bereitgestellt"
+>title="Lizenz-ID"
+>abstract="Magnite DV+-Lizenz-ID, die Ihnen von der Magnite-Kundenbetreuung bereitgestellt wurde"
 
 Füllen Sie die unten stehenden Felder aus, um Details für das Ziel zu konfigurieren.
 
 ![Platform-UI-Bild, das die Kundendatenfelder für das Magnite DV+-Ziel anzeigt.](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteDV_DestSpecific.png)
 
-* **[!UICONTROL Partner-ID]**: Die Rubicon Project Partner-ID, die dem Herausgeber zugeordnet ist, dem das Segment/die Daten gehören. Wenden Sie sich an Ihren Rubicon Project-Kundenbetreuer, wenn Sie sich nicht sicher sind, welchen Wert Sie verwenden sollten.
+* **[!UICONTROL Partner-ID]**: Die Rubicon Project Partner-ID, die dem Herausgeber zugeordnet ist, dem das Segment/die Daten gehören. Wenden Sie sich an Ihren Rubicon Project-Support-Kontakt, wenn Sie sich nicht sicher sind, welchen Wert Sie verwenden sollten.
 * **[!UICONTROL Sitzungs-ID]**: Magnite DV+-Sitzungs-ID, die von Ihrem Magnite-Kundenbetreuer bereitgestellt wird
 
 ### [!DNL Nexxen (formerly known as [!DNL Amobee])] {#nexxen}
@@ -260,29 +260,29 @@ Füllen Sie die unten stehenden Felder aus, um Details für das Ziel zu konfigur
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_ratetype"
 >title="Ratentyp"
->abstract="Der Ratentyp stellt die Art und Weise dar, wie die Datennutzung in Rechnung gestellt werden soll. Alle 0,00 USD Preise sollten pauschal sein. Vergewissern Sie sich bei Ihrem Nexxen-Kundenbetreuer, wenn Sie nicht sicher sind, welcher Ratentyp verwendet werden soll."
+>abstract="Der Ratentyp stellt die Art und Weise dar, wie die Datennutzung in Rechnung gestellt werden soll. Alle Raten von 0,00 $ sollten eine Pauschalgebühr sein. Vergewissern Sie sich bei der Nexxen-Kundenbetreuung, wenn Sie sich nicht sicher sind, welcher Ratentyp verwendet werden sollte."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_marketid"
 >title="Markt-ID"
->abstract="Geben Sie die numerische Markt-ID ein, in der der Nexxen-Datenvertrag erstellt werden soll. Geben Sie -1 ein, wenn Sie die &quot;AlwaysOn&quot;-Syndizierung auf allen Märkten der Nexxen-Plattform durchführen."
+>abstract="Geben Sie die numerische ID des Marktes ein, wo der Nexxen-Datenvertrag erstellt werden soll. Geben Sie „-1“ ein, wenn Sie die „AlwaysOn“-Syndizierung auf allen Märkten der Nexxen-Plattform durchführen."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_advertiserid"
 >title="Advertiser-ID"
->abstract="Wenn Sie Daten an einen einzigen Advertiser in der Nexxen-Plattform senden, geben Sie die numerische Amobee Advertiser-ID ein. Wenn Sie die Daten für alle Advertiser auf einem Markt verfügbar machen möchten oder wenn diese Segmente &quot;AlwaysOn&quot;sind, geben Sie -1 ein."
+>abstract="Wenn Sie Daten an einen einzigen Advertiser in der Nexxen-Plattform senden, geben Sie die numerische Amobee-Advertiser-ID ein. Wenn Sie die Daten für alle Advertiser auf einem Markt verfügbar machen möchten oder wenn diese Segmente „AlwaysOn“ sind, geben Sie „-1“ ein."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_contactemail"
 >title="Kontakt-E-Mail"
->abstract="Geben Sie die E-Mail-Adresse ein, die Nexxen zum Senden von Datenvertragsdetails verwenden sollte. Wahrscheinlich ist dies Ihre eigene E-Mail-Adresse, aber es kann sich auch um einen E-Mail-Alias handeln. Trennen Sie bei mehreren Empfängern durch Kommas (`email1@domain.com`,`email2@domain.com`usw.)."
+>abstract="Geben Sie die E-Mail-Adresse ein, die Nexxen zum Senden von Datenvertragsdetails verwenden sollte. Wahrscheinlich ist dies Ihre eigene E-Mail-Adresse, aber es kann sich auch um einen E-Mail-Alias handeln. Trennen Sie bei mehreren Empfängerinnen bzw. Empfängern durch Kommas (`email1@domain.com`,`email2@domain.com` usw.)."
 
 Füllen Sie die unten stehenden Felder aus, um Details für das Ziel zu konfigurieren.
 
 ![Platform-UI-Bild, das die Kundendatenfelder für das Nexxen-Ziel anzeigt.](../../assets/catalog/advertising/liveramp-distribution/LR_Nexxen_DestSpecific.png)
 
-* **[!UICONTROL Ratentyp]**: Der Ratentyp stellt die Art und Weise dar, wie die Datennutzung berechnet werden soll. Alle 0,00 USD Preise sollten pauschal sein. Vergewissern Sie sich bei Ihrem Nexxen-Kundenbetreuer, wenn Sie nicht sicher sind, welcher Ratentyp verwendet werden soll.
-* **[!UICONTROL Markt-ID]**: Geben Sie die numerische Markt-ID ein, unter der der Nexxen-Datenvertrag erstellt werden soll. Geben Sie -1 ein, wenn Sie die &quot;AlwaysOn&quot;-Syndizierung auf allen Märkten der Nexxen-Plattform durchführen.
+* **[!UICONTROL Ratentyp]**: Der Ratentyp stellt die Art und Weise dar, wie die Datennutzung berechnet werden soll. Alle Raten von 0,00 $ sollten eine Pauschalgebühr sein. Vergewissern Sie sich bei der Nexxen-Kundenbetreuung, wenn Sie sich nicht sicher sind, welcher Ratentyp verwendet werden sollte.
+* **[!UICONTROL Markt-ID]**: Geben Sie die numerische Markt-ID ein, unter der der Nexxen-Datenvertrag erstellt werden soll. Geben Sie „-1“ ein, wenn Sie die „AlwaysOn“-Syndizierung auf allen Märkten der Nexxen-Plattform durchführen.
 * **[!UICONTROL Advertiser-ID]**: Wenn Sie Daten an einen einzigen Advertiser in der Nexxen-Plattform senden, geben Sie die numerische Nexxen Advertiser-ID ein. Wenn Sie die Daten für alle Advertiser auf einem Markt verfügbar machen möchten oder wenn diese Segmente &quot;AlwaysOn&quot;sind, geben Sie -1 ein.
 * **[!UICONTROL Kontakt-E-Mail]**: Geben Sie die E-Mail-Adresse ein, die Nexen zum Senden von Datenvertragsdetails verwenden soll. Wahrscheinlich ist dies Ihre eigene E-Mail-Adresse, aber es kann sich auch um einen E-Mail-Alias handeln. Trennen Sie bei mehreren Empfängern durch Kommas ( `email1@domain.com`, `email2@domain.com`).
 
@@ -291,13 +291,13 @@ Füllen Sie die unten stehenden Felder aus, um Details für das Ziel zu konfigur
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_fox_client"
 >title="Client"
->abstract="Der Name Ihres Unternehmens-/Vertriebskontos, wie er dem Partner angezeigt werden soll. Wenden Sie sich an Ihren Kundenbetreuer, wenn Sie nicht sicher sind, welchen Namen Sie verwenden möchten. Verwenden Sie keine Leerzeichen oder Sonderzeichen."
+>abstract="Der Name Ihres Unternehmens-/Vertriebskontos, wie er der Partnerin bzw. dem Partner angezeigt werden soll. Wenden Sie sich an Ihre Partner-Kundenbetreuung, wenn Sie nicht sicher sind, welchen Namen Sie verwenden möchten. Verwenden Sie keine Leerzeichen oder Sonderzeichen."
 
 Füllen Sie die unten stehenden Felder aus, um Details für das Ziel zu konfigurieren.
 
 ![Platform-UI-Bild, das die Kundendatenfelder für das One Fox-Ziel anzeigt.](../../assets/catalog/advertising/liveramp-distribution/LR_Fox_DestSpecific.png)
 
-* **[!UICONTROL Client]**: Der Name Ihres Unternehmens-/Vertriebskontos, wie er dem Partner angezeigt werden soll. Verwenden Sie Ihren Unternehmensnamen standardmäßig. Wenden Sie sich an Ihren Kundenbetreuer, wenn Sie nicht sicher sind, welchen Namen Sie verwenden möchten. Verwenden Sie keine Leerzeichen oder Sonderzeichen.
+* **[!UICONTROL Client]**: Der Name Ihres Unternehmens-/Vertriebskontos, wie er dem Partner angezeigt werden soll. Verwenden Sie Ihren Unternehmensnamen standardmäßig. Wenden Sie sich an Ihre Partner-Kundenbetreuung, wenn Sie nicht sicher sind, welchen Namen Sie verwenden möchten. Verwenden Sie keine Leerzeichen oder Sonderzeichen.
 
 ### [!DNL Pandora] {#pandora}
 

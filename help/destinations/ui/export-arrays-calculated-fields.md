@@ -7,7 +7,7 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
 workflow-type: tm+mt
 source-wordcount: '1479'
-ht-degree: 2%
+ht-degree: 6%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
 >title="(Beta) Unterstützung von Export-Arrays"
->abstract="Verwenden Sie die **Berechnetes Feld hinzufügen** -Steuerelement zum Exportieren einfacher Arrays von int-, string- oder booleschen Werten von Experience Platform in Ihr gewünschtes Cloud-Speicher-Ziel. Es gelten einige Einschränkungen. In der Dokumentation finden Sie ausführliche Beispiele und unterstützte Funktionen."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Beispiele"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Bekannte Einschränkungen"
+>abstract="Verwenden Sie das Steuerelement **Berechnetes Feld hinzufügen**, um einfache Arrays aus Ganzzahlen, Zeichenfolgen oder booleschen Werten von Experience Platform in Ihr gewünschtes Cloud-Speicherziel zu exportieren. Es gelten einige Einschränkungen. In der Dokumentation finden Sie ausführliche Beispiele und unterstützte Funktionen."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=de#examples" text="Beispiele"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations?lang=de" text="Bekannte Einschränkungen"
 
 >[!AVAILABILITY]
 >

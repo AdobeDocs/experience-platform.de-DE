@@ -5,7 +5,7 @@ exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 source-git-commit: 3e4f79620d1f1b08684223214980ecbfdfa10a38
 workflow-type: tm+mt
 source-wordcount: '1699'
-ht-degree: 24%
+ht-degree: 26%
 
 ---
 
@@ -43,13 +43,13 @@ Ein Namespace besteht aus den folgenden Komponenten:
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
 >title="Angeben des Identitätstyps"
->abstract="Der Identitätstyp bestimmt, ob Daten im Identitätsdiagramm gespeichert werden oder nicht. Identitätsdiagramme werden nicht für die folgenden Identitätstypen generiert: Identifikatoren ohne Person und Partner-ID."
+>abstract="Der Identitätstyp bestimmt, ob Daten im Identitätsdiagramm gespeichert werden oder nicht. Identitätsdiagramme werden nicht für die folgenden Identitätstypen generiert: Nicht-Personen-IDs und Partner-ID."
 >text="Learn more in documentation"
 
 Ein Element eines Identitäts-Namespace ist die **Identitätstyp**. Der Identitätstyp bestimmt:
 
 * Ob ein Identitätsdiagramm generiert wird:
-   * Identitätsdiagramme werden nicht für die folgenden Identitätstypen generiert: Identifikatoren ohne Person und Partner-ID.
+   * Identitätsdiagramme werden nicht für die folgenden Identitätstypen generiert: Nicht-Personen-IDs und Partner-ID.
    * Identitätsdiagramme werden für alle anderen Identitätstypen generiert.
 * Welche Identitäten werden aus dem Identitätsdiagramm entfernt, wenn Systembeschränkungen erreicht werden. Weitere Informationen finden Sie im Abschnitt [Limits für Identitätsdaten](guardrails.md).
 

@@ -15,7 +15,7 @@ ht-degree: 8%
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_filter"
->title="Standardfilter für benutzerdefinierte Feldergruppen"
+>title="Filter für Gruppen von Standardfeldern oder benutzerdefinierten Feldern"
 >abstract="Die Liste der verfügbaren Feldergruppen wird je nach ihrer Erstellung vorab gefiltert. Wählen Sie das Optionsfeld aus, um zwischen den Optionen „Standard“ und „Benutzerdefiniert“ zu wählen. Die Option „Standard“ zeigt die von Adobe erstellten Entitäten an und die Option „Benutzerdefiniert“ zeigt die in Ihrem Unternehmen erstellten Entitäten an. Weitere Informationen zum Erstellen und Bearbeiten von Feldergruppen finden Sie in der Dokumentation."
 
 Im Experience-Datenmodell (XDM) sind Schemafeldgruppen wiederverwendbare Komponenten, die ein oder mehrere Felder definieren, die bestimmte Funktionen wie persönliche Details, Hotelpräferenzen oder Adressen implementieren. Feldergruppen sind als Teil eines Schemas vorgesehen, das eine kompatible Klasse implementiert.
