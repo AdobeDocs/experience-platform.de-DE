@@ -4,10 +4,10 @@ user-guide-title: Hilfe zur erweiterten Lebenszyklusverwaltung
 breadcrumb-title: Handbuch zur erweiterten Lebenszyklusverwaltung
 user-guide-description: Löschen Sie einzelne Datensätze und planen Sie die Ablauffristen von Datensätzen in Experience Platform für die Datenbereinigung, das Entfernen anonymer Daten und die Datenminimierung.
 feature: Data Hygiene
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 35f598d3a03b459e2bbed58a006c7d020aba7dac
 workflow-type: tm+mt
-source-wordcount: '64'
-ht-degree: 48%
+source-wordcount: '65'
+ht-degree: 44%
 
 ---
 
@@ -24,5 +24,5 @@ ht-degree: 48%
    * [Übersicht](./api/overview.md)
    * [Datensatzgültigkeiten](./api/dataset-expiration.md)
    * [Löschen von Datensätzen](./api/jobs.md)
-   * [Löschen von Datensätzen](./api/workorder.md)
+   * [(Beta) Löschen von Datensätzen](./api/workorder.md)
    * [Kontingent](./api/quota.md)
