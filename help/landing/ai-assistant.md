@@ -1,37 +1,38 @@
 ---
-title: KI-Assistent für Adobe Experience Platform
-description: Erfahren Sie, wie Sie mit dem AI-Assistenten zu Experience Platform und Real-time Customer Data Platform-Konzepten navigieren und diese verstehen können, sowie Informationen zur Verwendung Ihrer Objekte.
+title: Assistent für Adobe Experience Platform
+description: Erfahren Sie, wie Sie mit Assistant zu Experience Platform- und Real-time Customer Data Platform-Konzepten navigieren und diese verstehen können, sowie Verwendungsinformationen zu Ihren Objekten.
 badge: Alpha
 hide: true
 hidefromtoc: true
-source-git-commit: 704d47b0e37825508705402ab2401636f46ef23f
+exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
+source-git-commit: a2b5375cd78a5d154c2ba7205491d877606ff988
 workflow-type: tm+mt
-source-wordcount: '2369'
+source-wordcount: '2524'
 ht-degree: 1%
 
 ---
 
-# KI-Assistent für Adobe Experience Platform
+# Assistent für Adobe Experience Platform
 
 >[!NOTE]
 >
->Der AI-Assistent für Adobe Experience Platform befindet sich derzeit in Alpha. Die Funktion und die Dokumentation können sich ändern.
+>Der Assistent für Adobe Experience Platform befindet sich derzeit in Alpha. Die Funktion und die Dokumentation können sich ändern.
 
-Der KI-Assistent für Adobe Experience Platform ist eine UI-Funktion, mit der Sie in Experience Platform und Real-time Customer Data Platform navigieren und deren Konzepte sowie Nutzungsinformationen zu Ihren Objekten verstehen können.
+Der Assistent für Adobe Experience Platform ist eine UI-Funktion, mit der Sie in Experience Platform und Real-time Customer Data Platform navigieren und deren Konzepte sowie Nutzungsinformationen zu Ihren Objekten verstehen können.
 
-Sie können den KI-Assistenten nach Informationen wie den folgenden abfragen:
+Sie können den Assistenten nach folgenden Informationen abfragen:
 
 * Anleitung zur Durchführung von Aufgaben in Bezug auf Daten und Zielgruppen.
 * Status und Metriken der vorhandenen Datenobjekte in Ihrer Organisation.
 * Verwenden Sie Fallbeispiele und Nuancen, um Ihre Datenobjekte, einschließlich Attributen, Datensätzen, Zielen, Schemas, Segmenten und Quellen, besser zu verstehen.
 
-In diesem Dokument erfahren Sie, wie Sie mit dem KI-Assistenten Fragen stellen und Antworten zu Experience Platform- und Real-Time CDP-Konzepten erhalten können.
+In diesem Dokument erfahren Sie, wie Sie mit Assistant Fragen stellen und Antworten zu Experience Platform- und Real-Time CDP-Konzepten erhalten können.
 
 >[!BEGINSHADEBOX]
 
-**Wie wirkt die KI-Assistenzkraft?**
+**Wie wirkt die Assistenzkraft?**
 
-Der KI-Assistent beantwortet Ihre eingereichten Fragen, indem er eine Datenbank abfragt und dann Daten aus der Datenbank in eine für Menschen lesbare Antwort übersetzt.
+Der Assistent antwortet auf Ihre gestellten Fragen, indem er eine Datenbank abfragt und dann Daten aus der Datenbank in eine für Menschen lesbare Antwort übersetzt.
 
 Diese interne Darstellung der zugrunde liegenden Daten wird auch als Wissensdiagramm bezeichnet - ein umfassendes Netz von Konzepten, Daten und Metadaten für eine gegebene Antwort.
 
@@ -41,7 +42,7 @@ Das Wissensdiagramm besteht aus Unterdiagrammen, die bei jeder Übermittlung von
 * Kundenverwendungsdaten aus verschiedenen Meta Stores.
 * Experience League.
 
-Vor der Abfrage des AI-Assistenten müssen zwei Frageklassen beachtet werden:
+Es gibt zwei Arten von Fragen, die Sie vor der Abfrage des Assistenten beachten sollten:
 
 * **Konzeptfragen**: Bei Konzeptfragen geht es um Adobe-Konzepte, die sich auf Daten oder Zielgruppen beziehen. Zu den Beispielen für Konzeptfragen gehören:
    * Was ist der Unterschied zwischen Batch- und Streaming-Segmentierung?
@@ -54,161 +55,176 @@ Vor der Abfrage des AI-Assistenten müssen zwei Frageklassen beachtet werden:
 
 >[!ENDSHADEBOX]
 
-## Zugriff auf den KI-Assistenten für Experience Platform in der Benutzeroberfläche
+## Access Assistant for Experience Platform in the UI
 
-Sie können über die Kopfzeilennavigation in der Experience Platform-Benutzeroberfläche auf den AI-Assistenten zugreifen.
+Sie können über die Kopfzeilennavigation in der Experience Platform-Benutzeroberfläche auf den Assistenten zugreifen.
 
-Wählen Sie die **[!UICONTROL Symbol &quot;KI-Assistent&quot;]** aus der Kopfzeile, um das Bedienfeld &quot;KI-Assistent&quot;zu starten.
+Wählen Sie die **[!UICONTROL Symbol &quot;Assistent&quot;]** aus der Kopfzeile zum Fenster &quot;Assistent starten&quot;.
 
-![Die Startseite der Experience Platform-Benutzeroberfläche mit dem ausgewählten Symbol für den AI-Assistenten.](./images/ai-assistant/ai-assistant.png)
+![Die Startseite der Experience Platform-Benutzeroberfläche mit ausgewähltem Assistenzsymbol.](./images/ai-assistant/ai-assistant.png)
 
-Hier können Sie Ihre Frage in das Textfeld eingeben und den KI-Assistenten nach Konzepten zu Daten oder Zielgruppen abfragen. Sie können auch Fragen zu Ihren Datenobjekten stellen, um besser zu verstehen, wie Sie sie für Ihren jeweiligen Anwendungsfall verwenden können.
+++ + Unterhaltungsmodus verwenden
 
-### Anwendungsbeispiel: Verwenden des AI-Assistenten, um den Erstellungsprozess für Schemas zu beschleunigen
+Verwendung [!DNL Immersive mode] Wählen Sie das Fokussymbol in der Kopfzeilennavigation des Assistenten aus.
+
+![select-immersive](./images/ai-assistant/select-immersive.png)
+
+Eine dedizierte Popup-Benutzeroberfläche für Assistenten wird in der Mitte Ihres Bildschirms angezeigt.
+
+![immersive-mode](./images/ai-assistant/immersive-mode.png)
+
++++
+
+Von hier aus können Sie Ihre Frage in das Textfeld eingeben und den Abfrageassistenten für Konzepte zu Daten oder Audiences abfragen. Sie können auch Fragen zu Ihren Datenobjekten stellen, um besser zu verstehen, wie Sie sie für Ihren jeweiligen Anwendungsfall verwenden können.
+
+### Anwendungsbeispiel: Verwenden Sie den Assistenten, um die Erstellung Ihres Schemas zu beschleunigen
 
 >[!NOTE]
 >
->Der folgende Beispielworkflow verwendet den Erstellungsprozess des ExperienceEvent-Schemas, um zu veranschaulichen, wie Sie den AI-Assistenten bei Verwendung der Experience Platform-Benutzeroberfläche verwenden können.
+>Der folgende Beispielworkflow verwendet den Erstellungsprozess des ExperienceEvent-Schemas, um zu veranschaulichen, wie Sie Assistant bei der Verwendung der Experience Platform-Benutzeroberfläche verwenden können.
 
-Betrachten Sie einen Anwendungsfall, in dem Sie eine **Gerätehandel im Ereignisschema**. Während der Erstellung des ExperienceEvent-Schemas treffen Sie auf die `eventType` -Feld. An dieser Stelle können Sie Ihren Workflow verlassen und in der Dokumentation unter [Grundlagen der Schemakomposition](../xdm/schema/composition.md)oder Sie können den KI-Assistenten verwenden, um sofort Antworten auf Ihre Fragen abzurufen.
+Betrachten Sie einen Anwendungsfall, in dem Sie eine **Gerätehandel im Ereignisschema**. Während der Erstellung des ExperienceEvent-Schemas treffen Sie auf die `eventType` -Feld. An dieser Stelle können Sie Ihren Workflow verlassen und in der Dokumentation unter [Grundlagen der Schemakomposition](../xdm/schema/composition.md)oder Sie können Assistant verwenden, um sofort Antworten für Ihre Fragen abzurufen.
 
-Geben Sie zunächst Ihre Frage in das bereitgestellte Textfeld ein. Im folgenden Beispiel wird der KI-Assistent mit der Frage konfrontiert: &quot;**Was ist das Feld eventType in einem Erlebnisereignis-Schema?**&quot;
+Geben Sie zunächst Ihre Frage in das bereitgestellte Textfeld ein. Im folgenden Beispiel wird Assistenzkraft die Frage gestellt: &quot;**Was ist das Feld eventType in einem ExperienceEvent-Schema?**&quot;
 
-![Der KI-Assistent für das Experience Platform mit der folgenden Frage, der zur Abfrage vorbereitet wurde: &quot;Was ist das Feld eventType in einem ExperienceEvent-Schema?](./images/ai-assistant/question.png)
+![Der Assistent zum Experience Platform mit der folgenden Frage, der zur Abfrage vorbereitet wurde: &quot;Was ist das Feld eventType in einem ExperienceEvent-Schema?](./images/ai-assistant/question.png)
 
-Der KI-Assistent fragt dann seine Wissensdatenbank ab und berechnet eine Antwort. Nach einigen Augenblicken gibt der KI-Assistent eine Antwort und entsprechende Vorschläge zurück, die Sie als Aufforderung zur Weiterverfolgung verwenden können.
+Der Assistent fragt dann seine Wissensdatenbank ab und berechnet eine Antwort. Nach einigen Augenblicken gibt der Assistent eine Antwort und entsprechende Vorschläge zurück, die Sie als Aufforderung zur Weiterverfolgung verwenden können.
 
-![Der KI-Assistent für Experience Platform mit einer Antwort auf die vorherige Abfrage.](./images/ai-assistant/answer.png)
+Eine gegebene Antwort bietet Hyperlinks zu allen referenzierten Entitäten. Wählen Sie im folgenden Beispiel Folgendes aus: **[!UICONTROL Schemas]** um eine Liste der referenzierten Schemas anzuzeigen, oder **[!UICONTROL Segmente]** , um eine Liste der referenzierten Segmente anzuzeigen.
 
-Sie können mehr über ein bestimmtes Thema erfahren, indem Sie eine Frage stellen. Im nächsten Beispiel wird der KI-Assistent gefragt, wie der eventType in der Segmentierung verwendet werden kann.
+![Assistent zum Experience Platform mit einer Antwort auf die vorherige Abfrage.](./images/ai-assistant/answer.png)
 
-![Eine Folgenachricht und eine Antwort wurden im KI-Assistenten für Experience Platform angezeigt.](./images/ai-assistant/follow-up-answer.png)
+Assistenzkraft bietet Ihnen eine Möglichkeit, Ihre Antwort zu überprüfen, indem Sie die Quelle der Antwort anzeigen. Links zur Dokumentation werden für Konzeptfragen bereitgestellt, während Datennutzungsfragen mit einer SQL-Abfrage überprüft werden können, die zeigt, wie die Antwort berechnet wurde.
 
-Sie können auch Fragen zu Ihrer Datennutzung an den KI-Assistenten stellen. Wenn Sie sich nach der Datennutzung erkundigen, müssen Sie sich in einer aktiven Sandbox befinden, damit der KI-Assistent Ihre Abfrage beantworten kann.
+![Optionen, die vom Assistenten nach der Rückgabe einer Antwort bereitgestellt werden.](./images/ai-assistant/options-post-answer.png)
+
+#### Verwandte Vorschläge
+
+Sie können auch das Thema Ihrer Abfrage vertiefen, indem Sie einen der entsprechenden Vorschläge auswählen, die Assistant bereitstellt.
+
+![Verwandte Vorschläge.](./images/ai-assistant/related-suggestions.png)
+
+#### Folgenachfrage
+
+Sie können mehr über ein bestimmtes Thema erfahren, indem Sie eine Frage stellen. Im nächsten Beispiel wird der Assistent gefragt, wie der eventType in der Segmentierung verwendet werden kann.
+
+![Eine Frage und Antwort, die auf der Assistenzkraft für Experience Platform angezeigt werden.](./images/ai-assistant/follow-up-answer.png)
+
+#### Frage zur Datennutzung
+
+Sie können auch Fragen an den Assistenten bezüglich Ihrer Datennutzung stellen. Bei der Abfrage zur Datennutzung müssen Sie sich in einer aktiven Sandbox befinden, damit der Assistent Ihre Abfrage beantworten kann.
 
 ![Eine Frage zur Datennutzung, die fragt, wie viele Segmente ein Benutzer hat.](./images/ai-assistant/data-usage-question.png)
 
-Mit jeder Antwort bietet Ihnen der KI-Assistent eine Möglichkeit, Ihre Antwort zu validieren, indem er dessen Quelle anzeigt. Links zur Dokumentation werden für Konzeptfragen bereitgestellt, während Datennutzungsfragen mit einer SQL-Abfrage überprüft werden können, die zeigt, wie die Antwort berechnet wurde.
+## Anwendungsbereich
 
->[!BEGINSHADEBOX]
+Der Assistent kann Fragen zu Real-Time CDP- und Experience Platform-Konzepten sowie zur spezifischen Datennutzung für Ihr Benutzerkonto beantworten. Der Assistent kann auch Kontext basierend auf der Benutzeroberflächen-Seite abrufen, in der Sie sich befinden. Sie kann Folgendes identifizieren:
 
-**Ihr Feedback wird angefordert**
+* Das Benutzerkonto, das Sie verwenden.
+* Die Organisation, der Sie angehören.
+* Die Seite, die Sie auf Ihrem Bildschirm anzeigen.
+* Die Ressource (einschließlich Typ und ID), die Sie auf Ihrem Bildschirm anzeigen.
+* Da Sie sich in einem bestimmten Experience Platform- oder Real-Time CDP-Workflow befinden, kann der Assistent Ihre Absicht verkünden.
 
-In dieser Alpha-Phase werden Sie eingeladen, Feedback zu den Antworten zu geben, die Sie vom KI-Assistenten erhalten. Alle Antworten und eingereichten Feedback werden geprüft, um das KI-Assistenzerlebnis weiter zu verbessern.
+### Dokumentation
 
-Um Feedback zu geben, wählen Sie entweder Daumen nach oben oder Daumen nach dem Erhalt einer Antwort vom AI-Assistenten aus und geben Sie dann Ihr Feedback in das bereitgestellte Textfeld ein. Wählen Sie als Nächstes **[!UICONTROL Feedback senden]** zu senden.
-
->[!ENDSHADEBOX]
-
->[!BEGINTABS]
-
->[!TAB Quelle ansehen]
-
-Auswählen **[!UICONTROL Quelle anzeigen]** für eine Liste von Links zur Dokumentation, auf die der AI-Assistent verweist, um seine Antwort zu berechnen.
-
-![Die Links zur im KI-Assistenten angezeigten Quelle.](./images/ai-assistant/show-sources.png)
-
->[!TAB Wirbel nach oben]
-
-Wählen Sie das Daumen-nach-oben-Symbol aus, um Feedback dazu zu geben, was mit Ihrem Erlebnis mit dem KI-Assistenten gut gelaufen ist.
-
-![Das positive Feedback-Fenster.](./images/ai-assistant/positive-feedback.png)
-
->[!TAB Daumen nach unten]
-
-Wählen Sie das Daumendown-Symbol aus, um Feedback dazu zu geben, was basierend auf Ihrem Erlebnis mit dem KI-Assistenten verbessert werden könnte. Während dieses Schritts können Sie auch spezifische Kommentare zu Ihrem Erlebnis angeben. Das in den Kommentaren enthaltene Feedback wird täglich überprüft.
-
-![Das negative Feedback-Fenster.](./images/ai-assistant/negative-feedback.png)
-
->[!TAB Markierung]
-
-Wählen Sie das Flag-Symbol aus, um weitere Berichte zu Ihrem Erlebnis mit dem KI-Assistenten bereitzustellen.
-
-![Das Fenster mit den Berichtsergebnissen.](./images/ai-assistant/report-results.png)
-
->[!ENDTABS]
-
-### Erste Schritte
-
-Sie können auch die vom AI-Assistenten bereitgestellten voreingestellten Eingabeaufforderungen für die ersten Schritte verwenden.
-
-![Die angegebenen Eingabeaufforderungen finden Sie im Bedienfeld &quot;KI-Assistent&quot;.](./images/ai-assistant/ideas.png)
-
-## Weitere Informationen
-
-Weitere Informationen zum KI-Assistenten für Experience Platform finden Sie in diesem Abschnitt .
-
-### Anwendungsbereich
-
-Der KI-Assistent kann Abfragen basierend auf der Dokumentation und Ihrer Datennutzung beantworten.
-
-#### Dokumentation
-
-Sie können Dokumentationsfragen basierend auf Real-time Customer Data Platform und Zielgruppen stellen. Derzeit umfasst der Dokumentationsindex Adobe Experience Platform (Real-Time CDP und Audiences). Der Index wird regelmäßig aktualisiert.
+Derzeit umfasst der Dokumentationsindex Adobe Experience Platform (Real-Time CDP und Audiences). Der Index wird regelmäßig aktualisiert.
 
 Das Modell zum Abrufen der Dokumentation wird auf Experience Platform (Real-Time CDP und Zielgruppen) trainiert. Fragen, die nicht in Adobe Experience Platform enthalten sind, wie z. B. Fragen zu anderen Adobe-Produkten wie Adobe Target und der Creative Cloud Suite, können nicht beantwortet werden.
 
-#### Datennutzung
+### Datennutzung
 
-Sie können den AI Assistant auch Fragen zur Datennutzung in den folgenden Domänen stellen:
+Sie können Assistenzfragen auch zur Datennutzung in den folgenden Domänen stellen:
 
 * Attribute
 * Datensätze
-* Ziele (Fragen zu Konten und einige Fragen zum Datenfluss können derzeit nicht beantwortet werden.)
-* Schemas (Fragen zu Feldergruppen können derzeit nicht beantwortet werden.)
+* Ziele _(Fragen zu Konten und einige Fragen zum Datenfluss können derzeit nicht beantwortet werden.)_
+* Schemas _(Fragen zu Feldergruppen können derzeit nicht beantwortet werden.)_
 * Segmente
-* Quellen (Fragen zu Konten können derzeit nicht beantwortet werden.)
+* Quellen _(Fragen zu den Rechnungsabschlüssen können derzeit nicht beantwortet werden.)_
 
 Bei Nutzungsdatenabfragen spiegeln Antworten möglicherweise nicht den aktuellen Status der Benutzeroberfläche wider. Die Daten, die diese Fragen unterstützen, werden alle 24 Stunden aktualisiert. Beispielsweise werden Änderungen, die Benutzer tagsüber in Real-Time CDP vornehmen, mit den Datenspeichern nachts synchronisiert und stehen dann morgens für Benutzerfragen zur Verfügung. Möglicherweise müssen Sie Ihre Fragen wie folgt formatieren: &quot;Wann war das Segment mit dem Titel {TITLE} created?&quot; statt &quot;Wann war die {TITLE} Segment erstellt?&quot;
 
 Sie müssen sich bei einer Sandbox anmelden, um sich über bestimmte Daten zu Objekten wie Schemas, Datensätzen, Attributen, Zielen und Segmenten zu informieren.
 
-### Unterstützte Datennutzungsfragen
+### Beispielhafte Fragen zur Datennutzung
 
-+++Auswählen, um eine Liste der unterstützten Datennutzungsfragen anzuzeigen
++++Auswählen, um eine Liste mit Beispieldatenverwendungsfragen anzuzeigen
 
-Im Folgenden finden Sie eine Liste der derzeit unterstützten Datennutzungsfragen, gruppiert nach Domain.
-
-* Geben Sie die für dieses Segment verwendeten Attribute an?
-* Wie viele Segmente gibt es insgesamt?
-* Zeigen Sie mir eine Liste der Segmente an, die zuletzt im letzten Monat geändert wurden.
-* Welche Segmente wurden in der letzten Woche geändert?
-* Wie hoch ist die Profilanzahl? {SEGMENT_NAME} Segment?
-* Listet alle doppelten Segmente auf.
-* Anzeigen von Segmenten, die in den letzten 7 Tagen erstellt oder aktualisiert wurden
-* Wie verteilt sich die Anzahl der Profile auf Segmente?
-* Wie viele Felder werden in der Segmentierung verwendet?
-* Wie hoch ist die Gesamtanzahl der aktivierten Segmente?
-* Welche Segmente werden aktiviert?
-* Wie viele doppelte Segmente werden aktiviert?
-* Auflisten von Segmenten, die im letzten Jahr erstellt wurden.
-* Segmente anzeigen, die zuletzt geändert wurden, bevor {DATE}.
-* Wie viele eindeutige Segmentnamen mit der Variablen {SCHEMA_NAME} schema?
-* Welche Schemas werden am häufigsten über Segmente hinweg verwendet?
-* Wie viele Schemata habe ich?
-* Welche Datensätze werden verwendet? {SCHEMA_NAME} schema?
-* Liste aller in der letzten Woche geänderten Schemata.
-* Wie viele Schemas sind Profil aktiviert?
-* Auflisten aller Erlebnisereignis-Klassenschemas?
-* Welche Datensätze werden in die {SCHEMA_NAME} schema?
-* Wie viele Datensätze wurden mit demselben Schema erfasst?
-* Wie viele Datensätze habe ich?
-* Welche Datensätze werden in den einzelnen Segmenten verwendet?
-* Welche Segmente verwenden {ATTRIBUTE_NAME} Attribut?
-* Welche Schemas haben {ATTRIBUTE_NAME} Attribut in ihnen?
-* Wie viele XDM-Schemaattribute werden in keinem Segment verwendet?
-* In welchem Datensatz(en) ist/sind {ATTRIBUTE_NAME} XDM-Felder ausgefüllt?
-* Welche Datensätze enthalten Daten für {ATTRIBUTE_NAME} Attribut?
-* Wie viele Segmente werden für jedes Ziel aktiviert?
-* Welche Segmente sind für die meisten Ziele aktiviert?
-* Haben einige meiner Segmente 0 Profile?
-* Wie viele Datenflüsse habe ich?
+| Fragetyp | Beschreibung | Beispiele |
+| --- | --- | --- | 
+| Datenherkunft | Verwendung eines oder mehrerer Objekte über andere Experience Platform-Objekte hinweg verfolgen | <ul><li>Welche Datensätze werden verwendet? {SCHEMA_NAME} schema?</li><li>Wie viele Datensätze wurden mit demselben Schema erfasst?</li><li>Welche Datensätze wurden in aktivierten Segmenten verwendet?</li><li>Listen Sie die Schemas auf, deren Attribute in aktivierten Segmenten verwendet werden.</li><li>Anzeigen der Segmente, für die aktiviert ist {DESTINATION_ACCOUNT_NAME} und haben mehr als 1000 Profile.</li><li>Zeigen Sie mir die Attribute, die in den aktivierten Segmenten verwendet werden, die nach Januar 2023 geändert wurden.</li><li>Listen Sie die Schemas auf, die sich auf aktivierte Segmente beziehen und im letzten 1 Jahr erstellt wurden.</li></ul> |
+| Verteilung und Aggregationen | Zusammenfassende Fragen zur Verwendung von Experience Platform-Objekten | <ul><li>Wie viel Prozent der aktivierten Segmente sind?</li><li>Wie viele Felder werden in der Segmentierung verwendet?</li><li>Welche Segmente sind für die meisten Ziele aktiviert?</li><li>Listen Sie doppelte Segmente auf.</li><li>Anzeigen der aktivierten Segmente für {DESTINATION_ACCOUNT_NAME} und ordnen Sie sie nach Profilgröße an.</li><li>Wie hoch ist der Prozentsatz der Segmente, die nicht aktiviert wurden, aber mehr als 100 Profile aufweisen. Zeigen Sie mir ihre Namen.</li><li>Geben Sie mir die fünf wichtigsten Attribute an, die in aktivierten Segmenten basierend auf ihrem Vorkommen verwendet werden.</li></ul> |
+| Objektsuche | Rufen Sie ein Experience Platform-Objekt oder dessen Eigenschaften ab oder greifen Sie darauf zu. | <ul><li>Welche Datensätze sind mit keinem Schema verknüpft?</li><li>Auflisten der Attribute, die für {SEGMENT_NAME}?</li><li>Geben Sie mir die Liste der Schemas an, für die Profil aktiviert, aber seit ihrer Erstellung nicht geändert wurde.</li><li>Welche Segmente wurden in der letzten Woche geändert?</li><li>Geben Sie mir die Segmente an, die über dieselben Segmentdefinitionen und deren Erstellungsdatum verfügen.</li><li>Welche Datensätze sind profilaktiviert und enthalten auch, wie viele Segmente aus jedem Datensatz erstellt wurden.</li><li>Anzeigen der Segmentdefinition und des Änderungsdatums von {SEGMENT_NAME}.</li></ul> |
 
 +++
 
-### Konversationserfahrung
+## Überprüfen der Antwort
 
-Bei der Abfrage des KI-Assistenten müssen Sie verschiedene Aspekte bezüglich der Unterhaltserfahrung berücksichtigen.
+Sie können die Antwort, die der Assistent zurückgibt, auf verschiedene Weise überprüfen.
+
+### Zitate zur Dokumentation
+
+Bei jeder Antwort erhalten Sie von Assistant Zitate, auf die Sie zur Überprüfung oder zu weiteren Informationen verweisen können.
+
+Auswählen **[!UICONTROL Quelle anzeigen]** für eine Liste von Links zur Dokumentation, auf die der Assistent verweist, um seine Antwort zu berechnen.
+
+![Die Links zur im Assistenten angezeigten Quelle.](./images/ai-assistant/sources.png)
+
+Für Antworten, die Informationen zur Datennutzung enthalten, stellt Assistant Links zu den betreffenden Entitäten bereit. Darüber hinaus erläutert Ihnen Assistant, wie die Antwort berechnet wurde.
+
+![Erläuterung](./images/ai-assistant/explanation.png)
+
+## Feedback geben
+
+>[!BEGINSHADEBOX]
+
+**Ihr Feedback wird angefordert**
+
+Im Verlauf dieses Alphas werden Sie eingeladen, Feedback zu den Antworten zu geben, die Sie von der Assistenzkraft erhalten. Alle Antworten und eingereichten Feedback werden geprüft, um das Assistenzerlebnis weiter zu verbessern.
+
+Um Feedback zu geben, wählen Sie entweder Daumen nach oben oder Daumen nach dem Erhalt einer Antwort vom Assistenten aus und geben Sie dann Ihr Feedback in das bereitgestellte Textfeld ein. Wählen Sie als Nächstes **[!UICONTROL Feedback senden]** zu senden.
+
+>[!ENDSHADEBOX]
+
++++Feedback geben
+
+>[!BEGINTABS]
+
+>[!TAB Wirbel nach oben]
+
+Wählen Sie das Daumen-nach-oben-Symbol aus, um Feedback dazu zu geben, was mit Ihrem Erlebnis mit der Assistenzkraft gut gelaufen ist.
+
+![Das positive Feedback-Fenster.](./images/ai-assistant/thumbs-up.png)
+
+>[!TAB Daumen nach unten]
+
+Wählen Sie das Daumen-nach-unten-Symbol aus, um Feedback dazu zu geben, was basierend auf Ihrer Erfahrung mit der Assistenzkraft verbessert werden könnte. Während dieses Schritts können Sie auch spezifische Kommentare zu Ihrem Erlebnis angeben. Das in den Kommentaren enthaltene Feedback wird täglich überprüft.
+
+![Das negative Feedback-Fenster.](./images/ai-assistant/thumbs-down.png)
+
+>[!TAB Markierung]
+
+Wählen Sie das Flag-Symbol aus, um weitere Berichte über Ihr Erlebnis mit dem Assistenten anzuzeigen.
+
+![Das Fenster mit den Berichtsergebnissen.](./images/ai-assistant/report-results.png)
+
+>[!ENDTABS]
+
++++
+
+## Weitere Informationen
+
+Weitere Informationen zum Assistenten für Experience Platform finden Sie in diesem Abschnitt .
+
+### Einschränkungen
+
+Im folgenden Abschnitt werden die Einschränkungen und Einschränkungen erläutert, die bei der Verwendung des Assistenten beachtet werden müssen.
+
+#### Konversationserfahrung
+
+Sie müssen bei der Abfrage des Assistenten mehrere Nuancen bezüglich der Unterhaltserfahrung berücksichtigen.
 
 >[!NOTE]
 >
@@ -218,34 +234,34 @@ Bei der Abfrage des KI-Assistenten müssen Sie verschiedene Aspekte bezüglich d
 
 >[!TAB Kontext kann nicht aus vorheriger Diskussion abgeleitet werden]
 
-Der KI-Assistent kann frühere Diskussionen derzeit nicht als Kontext für eine bestimmte Frage betrachten. Beispiele finden Sie in der folgenden Tabelle:
+Die Assistenzkraft kann frühere Diskussionen derzeit nicht als Kontext für eine bestimmte Frage betrachten. Beispiele finden Sie in der folgenden Tabelle:
 
 | Zweideutige Frage | Frage löschen | Hinweis |
 | --- | --- | --- |
-| <ul><li>Erste Frage: Was ist ein Segment?</li><li>Folgenachfrage: &quot;Gibt es unterschiedliche Typen von ihnen?&quot;</li></ul> | <ul><li>Erste Frage: Was ist ein Segment?</li><li>Folgenachfrage: &quot;Gibt es unterschiedliche Typen von **Segmente**?&quot;</li></ul> | Der KI-Assistent kann nicht erkennen, was &quot;sie&quot;bedeutet. |
-| <ul><li>Erste Frage: Was ist ein Segment?</li><li>Folgenachfrage: &quot;Können Sie mehr erarbeiten?&quot;</li></ul> | <ul><li>Erste Frage: Was ist ein Segment?</li><li>Folgenachfrage: &quot;Erläutern Sie, was ein Segment im Detail ist&quot;</li></ul> | Der KI-Assistent kann keine Dokumentation intelligent referenzieren, die auf &quot;Mehr&quot;basiert. |
-| <ul><li>Erste Frage: Was ist ein Segment?</li><li>Folgt der Frage: &quot;Können Sie mir ein Beispiel für ein Beispiel geben?&quot;</li></ul> | <ul><li>Erste Frage: Was ist ein Segment?</li><li>Folgenachfrage: &quot;Können Sie mir ein Beispiel für ein Segment geben?&quot;</li></ul> | Der KI-Assistent kann nicht erkennen, wofür Sie ein Beispiel wünschen. |
-| <ul><li>Erste Frage: Was ist ein Batch-Segment?</li><li>Folgenachfrage: &quot;Wie lässt sich ein Streaming-Segment vergleichen?&quot;</li></ul> | <ul><li>Erste Frage: Was ist ein Batch-Segment?</li><li>Folgenachfrage: &quot;Können Sie ein Streaming-Segment mit einem Batch-Segment vergleichen?&quot;</li></ul> | Der AI-Assistent kann nicht erkennen, worauf &quot;er&quot;sich bezieht, und kann daher das Streaming-Segment nicht vergleichen. |
-| <ul><li>Erste Frage: &quot;Wie viele Segmente habe ich?&quot;</li><li>Folgenachfrage: &quot;Wie viele von ihnen verwenden Facebook als Ziel?&quot;</li></ul> | <ul><li>Erste Frage: &quot;Wie viele Segmente habe ich?&quot;</li><li>Folgenachfrage: &quot;Wie viele Segmente verwende ich Facebook als Ziel?&quot;</li></ul> | Der KI-Assistent kann nicht erkennen, worauf &quot;sie&quot;Bezug nimmt. |
+| <ul><li>Erste Frage: Was ist ein Segment?</li><li>Folgenachfrage: &quot;Gibt es unterschiedliche Typen von ihnen?&quot;</li></ul> | <ul><li>Erste Frage: Was ist ein Segment?</li><li>Folgenachfrage: &quot;Gibt es unterschiedliche Typen von **Segmente**?&quot;</li></ul> | Die Assistenzkraft kann nicht erkennen, was &quot;sie&quot;bedeutet. |
+| <ul><li>Erste Frage: Was ist ein Segment?</li><li>Folgenachfrage: &quot;Können Sie mehr erarbeiten?&quot;</li></ul> | <ul><li>Erste Frage: Was ist ein Segment?</li><li>Folgenachfrage: &quot;Erläutern Sie, was ein Segment im Detail ist&quot;</li></ul> | Der Assistent kann keine Dokumentation intelligent referenzieren, die auf &quot;Mehr&quot;basiert. |
+| <ul><li>Erste Frage: Was ist ein Segment?</li><li>Folgt der Frage: &quot;Können Sie mir ein Beispiel für ein Beispiel geben?&quot;</li></ul> | <ul><li>Erste Frage: Was ist ein Segment?</li><li>Folgenachfrage: &quot;Können Sie mir ein Beispiel für ein Segment geben?&quot;</li></ul> | Die Assistenzkraft kann nicht erkennen, wovon Sie ein Beispiel wünschen. |
+| <ul><li>Erste Frage: Was ist ein Batch-Segment?</li><li>Folgenachfrage: &quot;Wie lässt sich ein Streaming-Segment vergleichen?&quot;</li></ul> | <ul><li>Erste Frage: Was ist ein Batch-Segment?</li><li>Folgenachfrage: &quot;Können Sie ein Streaming-Segment mit einem Batch-Segment vergleichen?&quot;</li></ul> | Der Assistent kann nicht erkennen, worauf &quot;es&quot;sich bezieht, und kann daher das Streaming-Segment nicht vergleichen. |
+| <ul><li>Erste Frage: &quot;Wie viele Segmente habe ich?&quot;</li><li>Folgenachfrage: &quot;Wie viele von ihnen verwenden Facebook als Ziel?&quot;</li></ul> | <ul><li>Erste Frage: &quot;Wie viele Segmente habe ich?&quot;</li><li>Folgenachfrage: &quot;Wie viele Segmente verwende ich Facebook als Ziel?&quot;</li></ul> | Die Assistenzkraft kann nicht erkennen, worauf &quot;sie&quot;sich bezieht. |
 
 {style="table-layout:auto"}
 
 >[!TAB Kontext kann nicht von einer Seite abgeleitet werden]
 
-Wenn Sie den KI-Assistenten nach einem bestimmten Element der Experience Platform-UI-Seite fragen, auf der Sie sich befinden, müssen Sie das spezifische Element in Ihrer Frage klar definieren.
+Wenn Sie den Assistenten nach einem bestimmten Element der Experience Platform-UI-Seite fragen, auf der Sie sich befinden, müssen Sie das spezifische Element in Ihrer Frage klar definieren.
 
 | Zweideutige Frage | Frage löschen | Hinweis |
 | --- | --- | --- |
-| &quot;Was macht das?&quot; | &quot;Was bewirkt {PAGE_NAME} do? | Der KI-Assistent kann nicht erkennen, worauf sich &quot;dies&quot;bezieht. Sie müssen das spezifische Seitenelement angeben, über das Sie abfragen. |
-| &quot;Warum wird es nicht retten?&quot; | &quot;Warum kann ich keine neue Sandbox mit dem Namen {NAME}?&quot; | Der KI-Assistent kann nicht erkennen, worauf &quot;er&quot;sich bezieht, und kann nicht erkennen, dass Sie Probleme mit einer Entität haben. |
+| &quot;Was macht das?&quot; | &quot;Was bewirkt {PAGE_NAME} do? | Die Assistenzkraft kann nicht erkennen, worauf &quot;dies&quot;Bezug nimmt. Sie müssen das spezifische Seitenelement angeben, über das Sie abfragen. |
+| &quot;Warum wird es nicht retten?&quot; | &quot;Warum kann ich keine neue Sandbox mit dem Namen {NAME}?&quot; | Der Assistent kann nicht erkennen, worauf er sich bezieht, und kann nicht erkennen, dass Sie Probleme mit einer Entität haben. |
 
 {style="table-layout:auto"}
 
-Darüber hinaus kann der KI-Assistent nur Fragen zu Fehlermeldungen beantworten, da der Fehler im Experience League dokumentiert ist.
+Darüber hinaus kann der Assistent nur Fragen zu Fehlermeldungen beantworten, da der Fehler im Experience League dokumentiert ist.
 
 >[!TAB Ambiguität]
 
-Sie müssen Ihre Fragen klar formulieren und innerhalb eines Produkts, einer Anwendung oder einer Domäne eingrenzen, da der KI-Assistent derzeit keine Zweifel daran aufkommen lässt.
+Sie müssen Ihre Fragen klar formulieren und sie in einem Produkt, einer Anwendung oder einer Domäne eingrenzen, da der Assistent derzeit keine Zweifel an den Fragen haben kann.
 
 | Zweideutige Frage | Frage löschen | Hinweis |
 | --- | --- | --- |
@@ -256,25 +272,27 @@ Sie müssen Ihre Fragen klar formulieren und innerhalb eines Produkts, einer Anw
 
 >[!ENDTABS]
 
-### Geringfügiger kleiner Vortrag
+#### Geringfügiger kleiner Vortrag
 
-Sie können mit dem KI-Assistenten kleine Gespräche führen, aber diese Kapazität ist derzeit begrenzt.
+Sie können mit der Assistenzkraft kleine Gespräche führen, aber diese Kapazität ist derzeit begrenzt.
 
-### Funktionsfragen
+#### Funktionsfragen
 
-Der KI-Assistent vermittelt möglicherweise einen ungenauen Eindruck davon, was er tun kann. Es kann die folgenden Arten von Fragen falsch beantworten:
+Die Assistenzkraft kann einen ungenauen Eindruck davon vermitteln, was sie tun kann. Es kann die folgenden Arten von Fragen falsch beantworten:
 
 | Beispielfrage | Hinweis |
 | --- | --- |
-| &quot;Können Sie Fragen beantworten zu {ENTITY}?&quot; | Solange der KI-Assistent in der Lage ist, eine einzelne Seite zu finden, die auf eine bestimmte Entität verweist, antwortet er mit &quot;Ja&quot;. |
-| &quot;Weißt du das? **x** Sprache?&quot; | Der KI-Assistent unterstützt derzeit nur Englisch, kann aber &quot;Ja&quot;beantworten, da das zugrunde liegende Modell es unterstützen kann. |
-| &quot;Können Sie...?&quot; | Der KI-Assistent kann ja antworten, auch wenn dies nicht möglich ist. |
+| &quot;Können Sie Fragen beantworten zu {ENTITY}?&quot; | Solange der Assistent in der Lage ist, eine einzelne Seite zu finden, die auf eine bestimmte Entität verweist, antwortet er mit &quot;Ja&quot;. |
+| &quot;Weißt du das? **x** Sprache?&quot; | Die Assistenzkraft unterstützt derzeit nur Englisch, kann aber &quot;Ja&quot;beantworten, da das zugrunde liegende Modell es unterstützen kann. |
+| &quot;Können Sie...?&quot; | Die Assistenzkraft kann ja antworten, auch wenn dies nicht möglich ist. |
 
 ### Tipps
 
+Im folgenden Abschnitt finden Sie einige Tipps und Problemumgehungen, die bei der Verwendung von Assistenzkräften beachtet werden müssen.
+
 #### Fragen können mit der falschen Informationsquelle beantwortet werden
 
-Es gibt Fälle, in denen Ihre Frage zu Ihren Nutzungsdaten zu einer Antwort führen kann, die auf der Dokumentation basiert. Der Grund dafür ist, dass der KI-Assistent Ihre Frage fälschlicherweise an die falsche Informationsquelle weiterleiten kann. Sie können dies verhindern, indem Sie:
+Es gibt Fälle, in denen Ihre Frage zu Ihren Nutzungsdaten zu einer Antwort führen kann, die auf der Dokumentation basiert. Der Grund dafür ist, dass der Assistent Ihre Frage fälschlicherweise an die falsche Informationsquelle weiterleiten kann. Sie können dies verhindern, indem Sie:
 
 * Umkehren Ihrer Frage zur Verwendung SQL-ähnlicher Sprachen
 * Explizites Aufrufen der zu verwendenden Informationsquelle.
@@ -283,6 +301,6 @@ Beispiele finden Sie in der folgenden Tabelle:
 
 | Ungültige Frage | Gute Frage | Anmerkungen |
 | --- | --- | --- |
-| Was ist mein größtes Segment? | Was ist mein größtes Segment? Verwendung von Daten. | Teilen Sie dem KI-Assistenten explizit mit, dass die Antwort auf Daten basieren soll. |
+| Was ist mein größtes Segment? | Was ist mein größtes Segment? Verwendung von Daten. | Teilen Sie dem Assistenten ausdrücklich mit, dass die Antwort auf Daten basieren soll. |
 | Was ist mein größtes Segment? | Geben Sie mein größtes Segment an. | Es gibt Fälle, in denen eine &quot;Was...&quot;-Frage mit einer dokumentationsbasierten Frage verwechselt werden kann. Die Verwendung eines Befehls wie &quot;list&quot;ist ein stärkerer Indikator dafür, dass Sie eine Frage mit Daten im Kontext stellen. |
 | Wie viele Datensätze habe ich? | Zählen Sie meine Datensätze. | Die ursprüngliche Frage funktioniert für Segmente, funktioniert jedoch möglicherweise nicht mit Datensätzen. |

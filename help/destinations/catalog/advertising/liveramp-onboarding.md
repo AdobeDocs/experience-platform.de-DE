@@ -3,7 +3,7 @@ title: LiveRamp – Onboarding-Verbindung
 description: Erfahren Sie, wie Sie mit dem LiveRamp-Connector Zielgruppen von Adobe Real-time Customer Data Platform in LiveRamp Connect integrieren können.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: 9122159b3facf7952e6072d0b9e6f8d8d7d7c99c
 workflow-type: tm+mt
 source-wordcount: '1793'
 ht-degree: 98%
@@ -195,7 +195,7 @@ Platform exportiert zwei CSV-Dateien nach [!DNL LiveRamp - Onboarding]:
 
 Exportierte CSV-Dateien enthalten Profile mit den ausgewählten Attributen und dem entsprechenden Zielgruppenstatus in separaten Spalten, mit dem Attributnamen und `audience_namespace:audience_ID`-Paaren als Spaltenüberschriften, wie im folgenden Beispiel gezeigt:
 
-`ATTRIBUTE_NAME, AUDIENCE_NAMESPACE_1:AUDIENCE_ID_1, AUDIENCE_NAMESPACE_2:AUDIENCE_ID_2,..., AUDIENCE_NAMESPACE_X:AUDIENCE_ID_X`
+`ATTRIBUTE_NAME, AUDIENCE_NAMESPACE_1_AUDIENCE_ID_1, AUDIENCE_NAMESPACE_2_AUDIENCE_ID_2,..., AUDIENCE_NAMESPACE_X_AUDIENCE_ID_X`
 
 Die in den exportierten Dateien enthaltenen Profile können mit einem der folgenden Zielgruppenqualifikationsstatus übereinstimmen:
 
