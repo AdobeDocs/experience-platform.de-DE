@@ -2,10 +2,10 @@
 title: Konfigurieren eines Datenstroms
 description: Erfahren Sie, wie Sie Ihre Client-seitige Web SDK-Integration mit anderen Adobe-Produkten und Drittanbieterzielen verbinden.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 1233d9dcfefa71685e457815cb5b9d7a768b7d6e
+source-git-commit: db75771d09caef00db58073333909f730a303975
 workflow-type: tm+mt
-source-wordcount: '2681'
-ht-degree: 82%
+source-wordcount: '2777'
+ht-degree: 75%
 
 ---
 
@@ -48,12 +48,18 @@ Erweitern Sie die **[!UICONTROL Geolocation und Netzwerksuche]** um die unten be
 
 | Einstellung | Beschreibung |
 | --- | --- |
-| [!UICONTROL Geo-Suche] | Aktiviert die Geolokalisierungssuche für die ausgewählten Optionen, basierend auf der IP-Adresse der Besucherin bzw. des Besuchers. Für die Geolokalisierungssuche müssen Sie die Feldergruppe [`placeContext`](../edge/data-collection/automatic-information.md#place-context) in Ihrer Web SDK-Konfiguration aufnehmen. <br> Verfügbare Optionen: <ul><li>Land</li><li>Postleitzahl</li><li>Bundesland/Provinz</li><li>DMA</li><li>Stadt</li><li>Breitengrad </li><li>Längengrad</li></ul>Die Auswahl von **[!UICONTROL Stadt]**, **[!UICONTROL Breitengrad]** oder **[!UICONTROL Längengrad]** liefert Koordinaten mit bis zu zwei Dezimalstellen, unabhängig davon, welche anderen Optionen ausgewählt wurden. Dies gilt als Granularität auf Stadtebene. <br> <br>Wenn Sie keine Option auswählen, werden alle Geolokalisierungssuchen deaktiviert. Geolokalisierung erfolgt vor [!UICONTROL IP-Verschleierung] und wird von der Einstellung [!UICONTROL IP-Verschleierung] nicht beeinflusst. |
-| [!UICONTROL Netzwerksuche] | Aktiviert die Netzwerksuche für die ausgewählten Optionen basierend auf der IP-Adresse der Besucherin bzw. des Besuchers. Für die Netzwerksuche müssen Sie die Feldergruppe [`Environment`](../edge/data-collection/automatic-information.md#environment) in Ihre Web SDK-Konfiguration aufnehmen. <br> Verfügbare Optionen: <ul><li>Netzbetreiber</li><li>Domain</li><li>ISP</li></ul>Verwenden Sie diese Optionen, um anderen Diensten weitere Informationen über das spezifische Netzwerk bereitzustellen, in dem die Anfragen ihren Ursprung haben. |
+| [!UICONTROL Geo-Suche] | Aktiviert die Geolocation-Suche für die ausgewählten Optionen basierend auf der IP-Adresse des Besuchers. Zu den verfügbaren Optionen gehören: <ul><li>**Land**: Füllt `xdm.placeContext.geo.countryCode`</li><li>**Postleitzahl**: Füllt `xdm.placeContext.geo.postalCode`</li><li>**Bundesland/Provinz**: Füllt `xdm.placeContext.geo.stateProvince`</li><li>**DMA**: Füllt `xdm.placeContext.geo.dmaID`</li><li>**Ort**: Füllt `xdm.placeContext.geo.city`</li><li>**Breiten**: Füllt `xdm.placeContext.geo._schema.latitude`</li><li>**Länge**: Füllt `xdm.placeContext.geo._schema.longitude`</li></ul>Die Auswahl von **[!UICONTROL Stadt]**, **[!UICONTROL Breitengrad]** oder **[!UICONTROL Längengrad]** liefert Koordinaten mit bis zu zwei Dezimalstellen, unabhängig davon, welche anderen Optionen ausgewählt wurden. Dies gilt als Granularität auf Stadtebene.<br> <br>Wenn Sie keine Option auswählen, werden die Geolocation-Suchen deaktiviert. Geolocation erfolgt vor [!UICONTROL IP-Verschleierung], was bedeutet, dass sie von der [!UICONTROL IP-Verschleierung] -Einstellung. |
+| [!UICONTROL Netzwerksuche] | Aktiviert die Netzwerksuche für die ausgewählten Optionen basierend auf der IP-Adresse des Besuchers. Zu den verfügbaren Optionen gehören: <ul><li>**Netzbetreiber**: Füllt `xdm.environment.carrier`</li><li>**Domäne**: Füllt `xdm.environment.domain`</li><li>**ISP**: Füllt `xdm.environment.ISP`</li></ul> |
+
+Wenn Sie eines der oben genannten Felder für die Datenerfassung aktivieren, stellen Sie sicher, dass Sie die Variable [`context`](../edge/data-collection/automatic-information.md) Array-Eigenschaft bei [Konfigurieren des Web SDK](../edge/fundamentals/configuring-the-sdk.md).
+
+Geolocation-Suchfelder verwenden die `context` Array-Zeichenfolge `"placeContext"`, während Suchfelder im Netzwerk die `context` Array-Zeichenfolge `"environment"`.
+
+Stellen Sie außerdem sicher, dass jedes gewünschte XDM-Feld in Ihrem Schema vorhanden ist. Ist dies nicht der Fall, können Sie die von Adobe bereitgestellte `Environment Details` Feldergruppe in Ihr Schema ein.
 
 ### Konfigurieren der Gerätesuche {#geolocation-device-lookup}
 
-Die **[!UICONTROL Gerätesuche]** -Einstellungen können Sie die Granularitätsstufe der gerätespezifischen Informationen auswählen, die Sie erfassen möchten.
+Die **[!UICONTROL Gerätesuche]** -Einstellungen können Sie gerätespezifische Informationen auswählen, die Sie erfassen möchten.
 
 Erweitern Sie die **[!UICONTROL Gerätesuche]** um die unten beschriebenen Einstellungen zu konfigurieren.
 
@@ -65,9 +71,15 @@ Erweitern Sie die **[!UICONTROL Gerätesuche]** um die unten beschriebenen Einst
 
 | Einstellung | Beschreibung |
 | --- | --- |
-| **[!UICONTROL Überschriften von Benutzeragenten und Client-Hinweisen beibehalten]** | Wählen Sie diese Option, um nur die in der Benutzeragenten-Zeichenfolge gespeicherten Informationen zu erfassen. Dies ist die Standardeinstellung. |
-| **[!UICONTROL Verwenden Sie die Gerätesuche, um die folgenden Informationen zu erfassen]** | Wählen Sie diese Option aus, wenn Sie eine oder mehrere der folgenden gerätespezifischen Informationen erfassen möchten: <ul><li>**[!UICONTROL Gerät]** Information:<ul><li>Gerätehersteller</li><li>Gerätemodell</li><li>Marketing-Name</li></ul></li><li>**[!UICONTROL Hardware]** Information: <ul><li>Gerätetyp</li><li>Anzeigehöhe</li><li>Anzeigebreite</li><li>Farbtiefe anzeigen</li></ul></li><li>**[!UICONTROL Browser]** Information: <ul><li>Browser-Anbieter</li><li>Browsername</li><li>Browserversion</li></ul></li><li>**[!UICONTROL Betriebssystem]** Information: <ul><li>Betriebssystemanbieter</li><li>Betriebssystemname</li><li>Betriebssystemversion</li></ul></li></ul> <br>  Informationen zur Gerätesuche können nicht zusammen mit Benutzeragent und Client-Hinweisen erfasst werden. Wenn Sie auswählen, Geräteinformationen zu erfassen, wird die Erfassung von Benutzeragenten- und Client-Hinweisen deaktiviert und umgekehrt. Alle Gerätesucherinformationen werden im `xdm:device` Feldergruppe. |
-| **[!UICONTROL Erfassen Sie keine Geräteinformationen.]** | Wählen Sie diese Option aus, wenn Sie keine Nachschlageinformationen erfassen möchten. Es werden keine Geräte-, Hardware-, Browser- oder Betriebssysteminformationen erfasst, einschließlich keine Kopfzeilen von Benutzeragenten oder Clienthinweisen. |
+| **[!UICONTROL Überschriften von Benutzeragenten und Client-Hinweisen beibehalten]** | Wählen Sie diese Option, um nur die in der Benutzeragenten-Zeichenfolge gespeicherten Informationen zu erfassen. Diese Einstellung ist standardmäßig ausgewählt. Populationen `xdm.environment.browserDetails.userAgent` |
+| **[!UICONTROL Verwenden Sie die Gerätesuche, um die folgenden Informationen zu erfassen]** | Wählen Sie diese Option aus, wenn Sie eine oder mehrere der folgenden gerätespezifischen Informationen erfassen möchten: <ul><li>**[!UICONTROL Gerät]** Information:<ul><li>**Gerätehersteller**: Füllt `xdm.device.manufacturer`</li><li>**Gerätemodell**: Füllt `xdm.device.modelNumber`</li><li>**Marketing-Name**: Füllt `xdm.device.model`</li></ul></li><li>**[!UICONTROL Hardware]** Information: <ul><li>**Hardwaretyp**: Füllt `xdm.device.type`</li><li>**Anzeigehöhe**: Füllt `xdm.device.screenHeight`</li><li>**Anzeigebreite**: Füllt `xdm.device.screenWidth`</li><li>**Farbtiefe anzeigen**: Füllt `xdm.device.colorDepth`</li></ul></li><li>**[!UICONTROL Browser]** Information: <ul><li>**Browser-Anbieter**: Füllt `xdm.environment.browserDetails.vendor`</li><li>**Browsername**: Füllt `xdm.environment.browserDetails.name`</li><li>**Browserversion**: Füllt `xdm.environment.browserDetails.version`</li></ul></li><li>**[!UICONTROL Betriebssystem]** Information: <ul><li>**Betriebssystemanbieter**: Füllt `xdm.environment.operatingSystemVendor`</li><li>**Betriebssystemname**: Füllt `xdm.environment.operatingSystem`</li><li>**Betriebssystemversion**: Füllt `xdm.environment.operatingSystemVersion`</li></ul></li></ul>Informationen zur Gerätesuche können nicht zusammen mit Benutzeragent und Client-Hinweisen erfasst werden. Wenn Sie auswählen, Geräteinformationen zu erfassen, wird die Erfassung von Benutzeragent- und Client-Hinweisen deaktiviert und umgekehrt. |
+| **[!UICONTROL Erfassen Sie keine Geräteinformationen.]** | Wählen Sie diese Option aus, wenn Sie keine Gerätesucherinformationen erfassen möchten. Es werden keine Daten zu Gerät, Hardware, Browser, Betriebssystem, Benutzeragent oder Client-Hinweis erfasst. |
+
+Wenn Sie eines der oben genannten Felder für die Datenerfassung aktivieren, stellen Sie sicher, dass Sie die Variable [`context`](../edge/data-collection/automatic-information.md) Array-Eigenschaft bei [Konfigurieren des Web SDK](../edge/fundamentals/configuring-the-sdk.md).
+
+Geräte- und Hardwareinformationen verwenden die `context` Array-Zeichenfolge `"device"`, während Browser- und Betriebssysteminformationen die `context` Array-Zeichenfolge `"environment"`.
+
+Stellen Sie außerdem sicher, dass jedes gewünschte XDM-Feld in Ihrem Schema vorhanden ist. Ist dies nicht der Fall, können Sie die von Adobe bereitgestellte `Environment Details` Feldergruppe in Ihr Schema ein.
 
 ### Erweiterte Optionen konfigurieren {#@advanced-options}
 
