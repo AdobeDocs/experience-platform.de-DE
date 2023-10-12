@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Abfragedienst; Query Service; geplante Abfragen; geplante Abfrage;
+keywords: Experience Platform; home; beliebte Themen; Query Service; Query Service; geplante Abfragen; geplante Abfrage;
 solution: Experience Platform
 title: Zeitplan-Endpunkt
 description: In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie für geplante Abfragen mit der Query Service-API ausführen können.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
 workflow-type: tm+mt
-source-wordcount: '1132'
-ht-degree: 35%
+source-wordcount: '1212'
+ht-degree: 31%
 
 ---
 
@@ -40,8 +40,8 @@ Im Folgenden finden Sie eine Liste der verfügbaren Abfrageparameter für die Au
 | --------- | ----------- |
 | `orderby` | Gibt das Feld an, nach dem Ergebnisse sortiert werden sollen. Die unterstützten Felder sind `created` und `updated`. `orderby=created` zum Beispiel sortiert Ergebnisse in aufsteigender Reihenfolge. Durch Hinzufügen eines `-`-Zeichens vor „created“ (`orderby=-created`) werden Elemente nach der Erstellung in absteigender Reihenfolge sortiert. |
 | `limit` | Gibt die maximale Seitengröße an, um die Anzahl der Ergebnisse zu steuern, die auf einer Seite enthalten sind. (*Standardwert: 20*) |
-| `start` | Versetzt die Antwortliste mit einer nullbasierten Nummerierung. Beispielsweise gibt `start=2` eine Liste zurück, die bei der dritten aufgelisteten Abfrage beginnt. (*Standardwert: 0*) |
-| `property` | Filtern Sie Ergebnisse nach Feldern. Die Filter **müssen** mit HTML-Escape-Zeichen versehen sein. Kommas dienen dazu, mehrere Filter zu kombinieren. Unterstützte Felder sind `created`, `templateId` und `userId`. Die Liste der unterstützten Operatoren finden Sie unter `>` (größer als), `<` (kleiner als) und `==` (gleich). Beispiel: `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` gibt alle geplanten Abfragen zurück, bei denen die Benutzer-ID wie angegeben ist. |
+| `start` | Geben Sie einen Zeitstempel im ISO-Format an, um die Ergebnisse anzuordnen. Wenn kein Startdatum angegeben ist, gibt der API-Aufruf zuerst die älteste erstellte geplante Abfrage zurück und listet dann weiterhin die neuesten Ergebnisse auf.<br> ISO-Zeitstempel ermöglichen unterschiedliche Granularitätsstufen in Datum und Uhrzeit. Die grundlegenden ISO-Zeitstempel haben das Format: `2020-09-07` um das Datum 7. September 2020 auszudrücken. Ein komplexeres Beispiel würde wie folgt geschrieben: `2022-11-05T08:15:30-05:00` und entspricht dem 5. November 2022, 8.:15:30 Uhr, US Eastern Standard Time. Eine Zeitzone kann mit einem UTC-Versatz angegeben werden und wird durch das Suffix &quot;Z&quot;(`2020-01-01T01:01:01Z`). Wenn keine Zeitzone angegeben wird, wird standardmäßig null verwendet. |
+| `property` | Filtern Sie Ergebnisse nach Feldern. Die Filter **müssen** mit HTML-Escape-Zeichen versehen sein. Kommas dienen dazu, mehrere Filter zu kombinieren. Unterstützte Felder sind `created`, `templateId` und `userId`. Die Liste der unterstützten Operatoren finden Sie unter `>` (größer als) `<` (kleiner als) und `==` (gleich). Beispiel: `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` gibt alle geplanten Abfragen zurück, bei denen die Benutzer-ID wie angegeben ist. |
 
 **Anfrage**
 
@@ -160,7 +160,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.dbName` | Der Name der Datenbank, für die Sie eine geplante Abfrage erstellen. |
 | `query.sql` | Die SQL-Abfrage, die Sie erstellen möchten. |
 | `query.name` | Der Name der geplanten Abfrage. |
-| `schedule.schedule` | Der Cron-Zeitplan für die Abfrage. Weitere Informationen zu Cron-Zeitplänen finden Sie in der Dokumentation zum [Format von Cron-Ausdrücken](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). In diesem Beispiel bedeutet &quot;30 * * * *&quot;, dass die Abfrage stündlich mit der 30-Minuten-Markierung ausgeführt wird.<br><br>Alternativ können Sie die folgenden Kurzausdrücke verwenden:<ul><li>`@once`: Die Abfrage wird nur einmal ausgeführt.</li><li>`@hourly`: Die Abfrage wird stündlich zu Beginn der Stunde ausgeführt. Dies entspricht dem Cron-Ausdruck `0 * * * *`.</li><li>`@daily`: Die Abfrage wird einmal täglich um Mitternacht ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 * * *`.</li><li>`@weekly`: Die Abfrage läuft einmal pro Woche, am Sonntag um Mitternacht. Dies entspricht dem Cron-Ausdruck `0 0 * * 0`.</li><li>`@monthly`: Die Abfrage wird einmal im Monat am ersten Tag des Monats um Mitternacht ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 1 * *`.</li><li>`@yearly`: Die Abfrage wird einmal jährlich am 1. Januar um Mitternacht ausgeführt. Dies entspricht dem Cron-Ausdruck `1 0 0 1 1 *`. |
+| `schedule.schedule` | Der Cron-Zeitplan für die Abfrage. Weitere Informationen zu Cron-Zeitplänen finden Sie in der Dokumentation zum [Format von Cron-Ausdrücken](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). In diesem Beispiel bedeutet &quot;30 * * * *&quot;, dass die Abfrage stündlich mit der 30-Minuten-Markierung ausgeführt wird.<br><br>Alternativ können Sie die folgenden Kurzausdrücke verwenden:<ul><li>`@once`: Die Abfrage wird nur einmal ausgeführt.</li><li>`@hourly`: Die Abfrage wird stündlich zu Beginn der Stunde ausgeführt. Dies entspricht dem Cron-Ausdruck `0 * * * *`.</li><li>`@daily`: Die Abfrage wird einmal täglich um Mitternacht ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 * * *`.</li><li>`@weekly`: Die Abfrage wird einmal pro Woche, am Sonntag, um Mitternacht ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 * * 0`.</li><li>`@monthly`: Die Abfrage wird einmal im Monat am ersten Tag des Monats um Mitternacht ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 1 * *`.</li><li>`@yearly`: Die Abfrage wird einmal im Jahr, am 1. Januar, um Mitternacht ausgeführt. Dies entspricht dem Cron-Ausdruck `1 0 0 1 1 *`. |
 | `schedule.startDate` | Das Startdatum für Ihre geplante Abfrage, geschrieben als UTC-Zeitstempel. |
 
 **Antwort**
@@ -309,9 +309,9 @@ Sie können die Details für eine bestimmte geplante Abfrage aktualisieren, inde
 
 Für die PATCH-Anfrage werden zwei Pfade unterstützt: `/state` und `/schedule/schedule`.
 
-### Aktualisierung des geplanten Abfragestatus
+### Geplanten Abfragestatus aktualisieren
 
-Sie können den Status der ausgewählten geplanten Abfrage aktualisieren, indem Sie die Variable `path` Eigenschaft auf `/state` und `value` Eigenschaft als `enable` oder `disable`.
+Sie können den Status der ausgewählten geplanten Abfrage aktualisieren, indem Sie die `path` Eigenschaft auf `/state` und `value` Eigenschaft als `enable` oder `disable`.
 
 **API-Format**
 
@@ -364,7 +364,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit der folgende
 
 ### Geplanten Abfragezeitplan aktualisieren
 
-Sie können den Cron-Zeitplan der geplanten Abfrage aktualisieren, indem Sie die Variable `path` Eigenschaft auf `/schedule/schedule` im Anfrageinhalt. Weitere Informationen zu Cron-Zeitplänen finden Sie in der Dokumentation zum [Format von Cron-Ausdrücken](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
+Sie können den Cron-Zeitplan der geplanten Abfrage aktualisieren, indem Sie die `path` Eigenschaft auf `/schedule/schedule` im Anfrageinhalt. Weitere Informationen zu Cron-Zeitplänen finden Sie in der Dokumentation zum [Format von Cron-Ausdrücken](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
 
 **API-Format**
 
@@ -420,7 +420,7 @@ Sie können eine bestimmte geplante Abfrage löschen, indem Sie eine DELETE-Anfr
 
 >[!NOTE]
 >
->Zeitplan **must** vor dem Löschen deaktiviert werden.
+>Der Zeitplan **must** vor dem Löschen deaktiviert werden.
 
 **API-Format**
 
@@ -430,7 +430,7 @@ DELETE /schedules/{SCHEDULE_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Die `id` -Wert der geplanten Abfrage, die Sie DELETE möchten. |
+| `{SCHEDULE_ID}` | Die `id` -Wert der geplanten Abfrage angeben, die Sie DELETE haben möchten. |
 
 **Anfrage**
 

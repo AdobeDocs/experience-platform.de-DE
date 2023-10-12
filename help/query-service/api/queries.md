@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Query Service; API-Handbuch; Abfragen; Abfrage; Query Service
+keywords: Experience Platform; home; beliebte Themen; Query Service; API-Handbuch; Abfragen; Abfrage; Query Service
 solution: Experience Platform
 title: Query API Endpoint
 description: In den folgenden Abschnitten werden die Aufrufe erläutert, die Sie mithilfe des /queries -Endpunkts in der Query Service-API ausführen können.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
 workflow-type: tm+mt
-source-wordcount: '864'
-ht-degree: 26%
+source-wordcount: '943'
+ht-degree: 21%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 26%
 
 In den folgenden Abschnitten werden die Aufrufe erläutert, die Sie mithilfe der `/queries` -Endpunkt im [!DNL Query Service] API. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
-### Abrufen einer Abfrageliste
+### Abruf einer Abfrageliste
 
 Sie können eine Liste aller Abfragen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an die `/queries` -Endpunkt.
 
@@ -38,11 +38,11 @@ Im Folgenden finden Sie eine Liste der verfügbaren Abfrageparameter zur Auflist
 | --------- | ----------- |
 | `orderby` | Gibt das Feld an, nach dem Ergebnisse sortiert werden sollen. Die unterstützten Felder sind `created` und `updated`. `orderby=created` zum Beispiel sortiert Ergebnisse in aufsteigender Reihenfolge. Durch Hinzufügen eines `-`-Zeichens vor „created“ (`orderby=-created`) werden Elemente nach der Erstellung in absteigender Reihenfolge sortiert. |
 | `limit` | Gibt die maximale Seitengröße an, um die Anzahl der Ergebnisse zu steuern, die auf einer Seite enthalten sind. (*Standardwert: 20*) |
-| `start` | Versetzt die Antwortliste mit einer nullbasierten Nummerierung. Beispielsweise gibt `start=2` eine Liste zurück, die bei der dritten aufgelisteten Abfrage beginnt. (*Standardwert: 0*) |
-| `property` | Filtern Sie Ergebnisse nach Feldern. Die Filter **müssen** mit HTML-Escape-Zeichen versehen sein. Kommas dienen dazu, mehrere Filter zu kombinieren. Die unterstützten Felder sind `created`, `updated`, `state`und `id`. Die Liste der unterstützten Operatoren finden Sie unter `>` (größer als), `<` (kleiner als), `>=` (größer oder gleich), `<=` (kleiner oder gleich), `==` (gleich), `!=` (nicht gleich) und `~` (enthält). Beispiel: `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` gibt alle Abfragen mit der angegebenen ID zurück. |
+| `start` | Geben Sie einen Zeitstempel im ISO-Format an, um die Ergebnisse anzuordnen. Wenn kein Startdatum angegeben ist, gibt der API-Aufruf zuerst die älteste erstellte Abfrage zurück und listet dann weiterhin die neuesten Ergebnisse auf.<br> ISO-Zeitstempel ermöglichen unterschiedliche Granularitätsstufen in Datum und Uhrzeit. Die grundlegenden ISO-Zeitstempel haben das Format: `2020-09-07` um das Datum 7. September 2020 auszudrücken. Ein komplexeres Beispiel würde wie folgt geschrieben: `2022-11-05T08:15:30-05:00` und entspricht dem 5. November 2022, 8.:15:30 Uhr, US Eastern Standard Time. Eine Zeitzone kann mit einem UTC-Versatz angegeben werden und wird durch das Suffix &quot;Z&quot;(`2020-01-01T01:01:01Z`). Wenn keine Zeitzone angegeben wird, wird standardmäßig null verwendet. |
+| `property` | Filtern Sie Ergebnisse nach Feldern. Die Filter **müssen** mit HTML-Escape-Zeichen versehen sein. Kommas dienen dazu, mehrere Filter zu kombinieren. Die unterstützten Felder sind `created`, `updated`, `state`, und `id`. Die Liste der unterstützten Operatoren finden Sie unter `>` (größer als) `<` (kleiner als) `>=` (größer oder gleich), `<=` (kleiner oder gleich), `==` (gleich), `!=` (nicht gleich) und `~` (enthält). Beispiel: `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` gibt alle Abfragen mit der angegebenen ID zurück. |
 | `excludeSoftDeleted` | Gibt an, ob eine Abfrage einbezogen werden soll, bei der eine weiche Löschung vorgenommen wurde. Beispiel: `excludeSoftDeleted=false` will **include** Soft gelöschte Abfragen. (*Boolesch, Standardwert: true*) |
 | `excludeHidden` | Gibt an, ob benutzergesteuerte Abfragen angezeigt werden sollen. Wenn dieser Wert auf &quot;false&quot;gesetzt ist, wird **include** benutzergesteuerte Abfragen, z. B. CURSOR-Definitionen, FETCH- oder Metadaten-Abfragen. (*Boolesch, Standardwert: true*) |
-| `isPrevLink` | Die `isPrevLink` -Abfrageparameter wird für die Paginierung verwendet. Die Ergebnisse des API-Aufrufs werden anhand ihrer `created` Zeitstempel und `orderby` -Eigenschaft. Beim Navigieren auf den Ergebnisseiten `isPrevLink` auf &quot;true&quot;gesetzt ist, wenn das Paging rückwärts erfolgt. Die Reihenfolge der Abfrage wird umgekehrt. Siehe &quot;Weiter&quot;- und &quot;Prev&quot;-Links als Beispiele. |
+| `isPrevLink` | Die `isPrevLink` -Abfrageparameter wird für die Paginierung verwendet. Die Ergebnisse des API-Aufrufs werden anhand ihrer `created` und `orderby` -Eigenschaft. Beim Navigieren auf den Ergebnisseiten `isPrevLink` auf &quot;true&quot;gesetzt ist, wenn das Paging rückwärts erfolgt. Die Reihenfolge der Abfrage wird umgekehrt. Siehe &quot;Weiter&quot;- und &quot;Prev&quot;-Links als Beispiele. |
 
 **Anfrage**
 
@@ -295,7 +295,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Information
 >
 >Sie können den Wert von `_links.cancel` nach [Ihre erstellte Abfrage abbrechen](#cancel-a-query).
 
-### Abfragen abbrechen oder löschen
+### Abbrechen oder Soft Löschen einer Abfrage
 
 Sie können eine bestimmte Abfrage abbrechen oder eine Soft-Löschung anfordern, indem Sie eine PATCH-Anfrage an die `/queries` -Endpunkt und Bereitstellung der `id` -Wert im Anfragepfad.
 

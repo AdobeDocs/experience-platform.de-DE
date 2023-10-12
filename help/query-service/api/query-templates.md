@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Abfragedienst; Abfragevorlagen; API-Handbuch; Vorlagen; Query Service
+keywords: Experience Platform;home;popular topics;query service;query templates;api guide;templates;Query service
 solution: Experience Platform
 title: API-Endpunkt für Abfragevorlagen
 description: In diesem Handbuch werden die verschiedenen API-Aufrufe für Abfragevorlagen beschrieben, die Sie mit der Query Service-API ausführen können.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 58%
+source-wordcount: '969'
+ht-degree: 51%
 
 ---
 
@@ -42,7 +42,7 @@ Im Folgenden finden Sie eine Liste der verfügbaren Abfrageparameter zum Auflist
 | --------- | ----------- |
 | `orderby` | Gibt das Feld an, nach dem Ergebnisse sortiert werden sollen. Die unterstützten Felder sind `created` und `updated`. `orderby=created` zum Beispiel sortiert Ergebnisse in aufsteigender Reihenfolge. Durch Hinzufügen eines `-`-Zeichens vor „created“ (`orderby=-created`) werden Elemente nach der Erstellung in absteigender Reihenfolge sortiert. |
 | `limit` | Gibt die maximale Seitengröße an, um die Anzahl der Ergebnisse zu steuern, die auf einer Seite enthalten sind. (*Standardwert: 20*) |
-| `start` | Versetzt die Antwortliste mit einer nullbasierten Nummerierung. Beispielsweise gibt `start=2` eine Liste zurück, die bei der dritten aufgelisteten Abfrage beginnt. (*Standardwert: 0*) |
+| `start` | Geben Sie einen Zeitstempel im ISO-Format an, um die Ergebnisse anzuordnen. Wenn kein Startdatum angegeben ist, gibt der API-Aufruf zuerst die ältesten erstellten Vorlagen zurück und listet dann weiterhin die neuesten Ergebnisse auf.<br> ISO-Zeitstempel ermöglichen unterschiedliche Granularitätsstufen in Datum und Uhrzeit. Die grundlegenden ISO-Zeitstempel haben das Format: `2020-09-07` um das Datum 7. September 2020 auszudrücken. Ein komplexeres Beispiel würde wie folgt geschrieben: `2022-11-05T08:15:30-05:00` und entspricht dem 5. November 2022, 8.:15:30 Uhr, US Eastern Standard Time. Eine Zeitzone kann mit einem UTC-Versatz angegeben werden und wird durch das Suffix &quot;Z&quot;(`2020-01-01T01:01:01Z`). Wenn keine Zeitzone angegeben wird, wird standardmäßig null verwendet. |
 | `property` | Filtern Sie Ergebnisse nach Feldern. Die Filter **müssen** mit HTML-Escape-Zeichen versehen sein. Kommas dienen dazu, mehrere Filter zu kombinieren. Die unterstützten Felder sind `name` und `userId`. Der einzige unterstützte Operator ist `==` (gleich). Beispielsweise gibt `name==my_template` alle Abfragevorlagen mit dem Namen `my_template` zurück. |
 
 **Anfrage**
