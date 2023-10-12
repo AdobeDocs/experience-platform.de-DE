@@ -2,7 +2,7 @@
 title: Verbindungsverbindung
 description: Moengage ist eine Kundeninteraktionsplattform, die kundenorientierte Interaktionen zwischen Verbrauchern und Marken in Echtzeit ermöglicht.
 last-substantial-update: 2023-10-11T00:00:00Z
-source-git-commit: 3d5a3ce18e7f1c0e06246faf8ec4403871e1a1a9
+source-git-commit: 6a80089f404057b5c98764b5e0166b9afaf1a7e4
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 41%
@@ -20,7 +20,7 @@ Mit Adobe ist die Integration sehr einfach und intuitiv. Nehmen Sie einfach ein 
 
 >[!IMPORTANT]
 >
->Diese Ziel-Connector- und Dokumentationsseite wird von der *Motivation* Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an *`[amc-support@amazon.com](https://help.moengage.com/hc/en-us)`.*
+>Diese Ziel-Connector- und Dokumentationsseite wird von der *Motivation* Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an *`https://help.moengage.com/hc/en-us`.*
 
 ## Anwendungsfälle {#use-cases}
 
