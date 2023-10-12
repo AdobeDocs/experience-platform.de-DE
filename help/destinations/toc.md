@@ -4,10 +4,10 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: 77fd0ace252bae66478f73a1dc4b7d4a3ccb867d
+source-git-commit: c1f5c27a689e91b472d4e3c8e69e1637c12c37e4
 workflow-type: tm+mt
-source-wordcount: '1168'
-ht-degree: 97%
+source-wordcount: '1170'
+ht-degree: 96%
 
 ---
 
@@ -158,6 +158,7 @@ ht-degree: 97%
       * [Airship Tags-Verbindung](./catalog/mobile-engagement/airship-tags.md)
       * [Braze-Verbindung](./catalog/mobile-engagement/braze.md)
       * [Line-Verbindung](./catalog/mobile-engagement/line.md)
+      * [Verbindungsverbindung](./catalog/mobile-engagement/moengage.md)
    * Personalisierungsziele {#personalization}
       * [Personalisierungsziele – Übersicht](./catalog/personalization/overview.md)
       * [Adobe Commerce-Verbindung](./catalog/personalization/adobe-commerce.md)

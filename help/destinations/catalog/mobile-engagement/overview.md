@@ -1,12 +1,12 @@
 ---
-keywords: Mobile Messaging; Ziele für mobile Nachrichten; Braze; Luftschiff
+keywords: Mobile Messaging; Mobilnachrichten-Ziele; Braze; Airship
 title: Ziele für mobile Interaktion – Übersicht
 description: Erfahren Sie mehr über die verschiedenen von Adobe Experience Platform unterstützten Ziele für die mobile Interaktion.
 exl-id: bb5852c0-a47a-42c7-9fae-ec7d80dc3bcf
-source-git-commit: 10c04bdee8536194baea00d3466c758f848c46c5
+source-git-commit: 7a29a8f5ae1bec457d2e8bade1e9ce94b698c88f
 workflow-type: tm+mt
-source-wordcount: '48'
-ht-degree: 37%
+source-wordcount: '50'
+ht-degree: 36%
 
 ---
 
@@ -20,3 +20,4 @@ ht-degree: 37%
 * [Airship Tags-Verbindung](airship-tags.md)
 * [Braze-Verbindung](braze.md)
 * [Line-Verbindung](line.md)
+* [Verbindungsverbindung](moengage.md)
