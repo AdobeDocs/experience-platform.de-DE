@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Segmentierungs-Service
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche Zielgruppen und Segmentdefinitionen erstellen und verwalten.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 7eaf3383bb8dde0d5918eefba1ee69caddea0c0b
+source-git-commit: 695a5c9b39def899c6b1f9cb169508ae0299686c
 workflow-type: tm+mt
-source-wordcount: '3781'
-ht-degree: 94%
+source-wordcount: '3822'
+ht-degree: 92%
 
 ---
 
@@ -92,7 +92,7 @@ Oben auf der Seite finden Sie Optionen zum Hinzufügen aller Zielgruppen zu eine
 
 Durch Umschalten auf **[!UICONTROL Alle Zielgruppen planen]** wird die geplante Segmentierung aktiviert. Weitere Informationen zur geplanten Segmentierung finden Sie im [Abschnitt „Geplante Segmentierung“ in diesem Benutzerhandbuch](#scheduled-segmentation).
 
-Wenn Sie **[!UICONTROL Zielgruppe importieren]** wählen, können Sie eine extern erstellte Zielgruppe importieren. Weiterführende Informationen zum Zielgruppenimport finden Sie im Abschnitt zum [Importieren einer Zielgruppe](#import-audience) im Benutzerhandbuch.
+Auswählen **[!UICONTROL Audience importieren]** ermöglicht Ihnen den Import einer extern generierten Audience. Weiterführende Informationen zum Zielgruppenimport finden Sie im Abschnitt [Importieren einer Zielgruppe im Benutzerhandbuch](#import-audience).
 
 Durch Auswahl von **[!UICONTROL Zielgruppe erstellen]** können Sie eine Zielgruppe erstellen. Um mehr über das Erstellen von Zielgruppen zu erfahren, lesen Sie den Abschnitt [Erstellen einer Zielgruppe](#create-audience) im Benutzerhandbuch.
 
@@ -350,6 +350,10 @@ Die Seite **[!UICONTROL Überprüfen]** wird angezeigt. Sie können die Details 
 ![Die Seite [!UICONTROL Überprüfen] wird angezeigt und gibt Details zu Ihren neu importierten, extern generierten Zielgruppen an.](../images/ui/overview/import-audience-review-details.png)
 
 Nachdem Sie bestätigt haben, dass die Details korrekt sind, wählen Sie **[!UICONTROL Beenden]** aus, um Ihre extern generierte Zielgruppe in Adobe Experience Platform zu importieren.
+
+>[!IMPORTANT]
+>
+>Wenn Ihre extern generierte Zielgruppe sensible und/oder gesundheitsbezogene Informationen enthält, **must** wenden Sie die erforderlichen Datennutzungsbezeichnungen an, bevor Sie sie für ein beliebiges Ziel aktivieren. Weitere Informationen zum Anwenden von Datennutzungsbezeichnungen finden Sie in der Dokumentation unter [Verwalten von Bezeichnungen](../../access-control/abac/ui/labels.md).
 
 ## Geplante Segmentierung {#scheduled-segmentation}
 
