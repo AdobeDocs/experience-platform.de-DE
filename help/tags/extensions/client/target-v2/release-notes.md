@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Target v2-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Target v2“ in Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: 4b87141e94681d9a9f51d4d9b2f2276ca065d6ce
+source-git-commit: 63839b8918d42bae91df9bac919c546c81be6363
 workflow-type: tm+mt
-source-wordcount: '691'
-ht-degree: 83%
+source-wordcount: '729'
+ht-degree: 79%
 
 ---
 
@@ -14,6 +14,12 @@ ht-degree: 83%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+
+## v0.20.0 (9. Oktober 2023)
+
+- Aktualisierung auf Unterstützung von at.js 2.11.0.
+- Unterstützung für das Festlegen von benutzerdefinierten Adobe Experience Platform sandboxId und sandboxName in targetGlobalSettings hinzugefügt, die bei getOffer/getOffers -Aufrufen an die Bereitstellungs-API übergeben werden.
+- Shadow DOM-Korrektur für Verkettung :eq() im Selektor.
 
 ## v0.19.3 (18. September 2023)
 
