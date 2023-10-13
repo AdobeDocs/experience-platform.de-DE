@@ -3,9 +3,9 @@ keywords: Experience Platform; Identität; Identitätsdienst; Fehlerbehebung; Li
 title: Limits für Identity Service
 description: Dieses Dokument enthält Informationen zu Verwendung und Quotenbegrenzungen für Identity Service-Daten, die Sie bei der Optimierung Ihrer Verwendung des Identitätsdiagramms unterstützen.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: b78d1d00a42df8a703a4dd15959cf15b058e0b7a
+source-git-commit: 30e927ec78a953aae8ac90829ec8b3b0475c5db4
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1074'
 ht-degree: 61%
 
 ---
@@ -101,7 +101,7 @@ Wenden Sie sich an Ihr Adobe-Account-Team, um eine Änderung des Identitätstyps
 
 Sobald diese Funktion verfügbar ist, werden Diagramme, die die Grenze von 50 Identitäten überschreiten, auf bis zu 50 Identitäten reduziert. Bei Real-Time CDP B2C Edition konnte dies zu einem minimalen Anstieg der Anzahl der Profile führen, die sich für eine Zielgruppe qualifizieren, da diese Profile zuvor in Segmentierung und Aktivierung ignoriert wurden.
 
-#### Echtzeit-Kundenprofil: Pseudonyme Profileinrichtung
+#### Echtzeit-Kundenprofil: Auswirkung auf adressierbare Zielgruppen
 
 Das Löschen erfolgt nur für Daten im Identity Service, nicht aber für Echtzeit-Kundenprofile.
 

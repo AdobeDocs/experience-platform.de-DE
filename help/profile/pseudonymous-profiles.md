@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Ablauf von Daten pseudonymer Profile
 description: Dieses Dokument enthält allgemeine Anleitungen zum Konfigurieren des Ablaufs von Daten pseudonymer Profile in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
-workflow-type: ht
-source-wordcount: '923'
-ht-degree: 100%
+source-git-commit: b6a79952d616a6f8e6ea4b2341c24d74c482c4b8
+workflow-type: tm+mt
+source-wordcount: '987'
+ht-degree: 93%
 
 ---
 
@@ -80,3 +80,8 @@ Für einen typischen Anwendungsfall können Sie den Ablauf von Erlebnisereignisd
 - Dies ist **kein** einmaliger Bereinigungsvorgang. Ablauf von Daten pseudonymer Profile wird täglich einmal ausgeführt und es werden dabei Profile gelöscht, die mit der Eingabe der Kundin bzw. des Kunden übereinstimmen.
 - **Alle** Profile, die als pseudonyme Profile definiert sind, sind von Ablauf von Daten pseudonymer Profile betroffen. Es kommt dabei **nicht** darauf an, ob das Profil nur ein Erlebnisereignis ist oder nur Profilattribute enthält.
 - Diese Bereinigung findet **nur** im Profil statt. Identity Service kann die gelöschten Identitäten innerhalb des Diagramms nach der Bereinigung weiterhin anzeigen, wenn das Profil zwei oder mehr pseudonyme Identitäten aufweist (z. B. `AAID` und `ECID`). Diese Diskrepanz wird in naher Zukunft angegangen.
+
+### Wie interagiert der Datenablauf bei Pseudonymen Profilen mit Limits für Identity Service-Daten?
+
+- Der Identitätsdienst [&quot;First-in, First-out&quot;-Löschsystem](../identity-service/guardrails.md) konnte ECIDs aus dem Identitätsdiagramm löschen, die im Identity Service gespeichert sind.
+- Wenn dieses Löschungsverhalten dazu führt, dass ein ausschließlich ECID-basiertes Profil im Echtzeit-Kundenprofil (Profilspeicher) gespeichert wird, löscht der Ablauf der Profildaten für Pseudonyme Profile dieses Profil aus dem Profilspeicher.

@@ -2,10 +2,10 @@
 title: Best Practices für die Verwaltung von Daten im Rahmen von Lizenzberechtigungen
 description: Erfahren Sie mehr über Best Practices und Werkzeuge, die Sie zur besseren Verwaltung Ihrer Lizenzberechtigungen mit Adobe Experience Platform einsetzen können.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 5f21d988d7947e64378dc6f35993f2a465ad1df6
 workflow-type: tm+mt
-source-wordcount: '2202'
-ht-degree: 77%
+source-wordcount: '2287'
+ht-degree: 73%
 
 ---
 
@@ -94,6 +94,12 @@ Es gibt eine Reihe von Tools, die Ihnen helfen, Ihre Lizenznutzungsberechtigunge
 * [Aufnahmefilter](#ingestion-filters)
 * [Profilspeicher](#profile-service)
 
+### Identity Service und adressierbare Zielgruppe {#identity-service}
+
+Identitätsdiagramme werden nicht mit Ihrer gesamten adressierbaren Zielgruppenberechtigungen angerechnet, da adressierbare Zielgruppen auf Ihre Gesamtzahl an Kundenprofilen verweisen.
+
+Beschränkungen für Identitätsdiagramme können sich jedoch auf Ihre adressierbare Zielgruppe auswirken, da Identitäten geteilt werden. Wenn beispielsweise die älteste ECID aus dem Diagramm entfernt wird, existiert die ECID weiterhin im Echtzeit-Kundenprofil als pseudonymes Profil. Sie können [Pseudonyme Profildatenabläufe](../../profile/pseudonymous-profiles.md) um dieses Verhalten zu umgehen. Weitere Informationen finden Sie im Abschnitt [Limits für Identity Service-Daten](../../identity-service/guardrails.md).
+
 ### Aufnahmefilter {#ingestion-filters}
 
 Aufnahmefilter ermöglichen Ihnen, nur die für Ihre Anwendungsfälle erforderlichen Daten aufzunehmen und alle nicht erforderlichen Ereignisse herauszufiltern.
@@ -104,7 +110,7 @@ Aufnahmefilter ermöglichen Ihnen, nur die für Ihre Anwendungsfälle erforderli
 | Adobe Analytics Data Prep | Sie können beim Erstellen einer Analytics-Quellverbindung mit [!DNL Data Prep]-Funktionen Daten herausfiltern, die für Ihre Anwendungsfälle nicht erforderlich sind. Mit [!DNL Data Prep] können Sie festlegen, welche Attribute/Spalten für das jeweilige Profil veröffentlicht werden sollen. Sie können auch bedingte Anweisungen erstellen, um Platform darüber zu informieren, ob Daten für das Profil oder nur für den [!DNL data lake] veröffentlicht werden sollen. Weitere Informationen finden Sie in der Anleitung zum [Erstellen einer Analytics-Quellverbindung](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
 | Unterstützung für das Aktivieren/Deaktivieren von Datensätzen für ein Profil | Um Daten in das Echtzeit-Kundenprofil zu erfassen, müssen Sie einen Datensatz für die Verwendung im Profilspeicher aktivieren. Dadurch wird ein höherer Anteil Ihrer [!DNL Addressable Audience]- und [!DNL Profile Richness]-Berechtigungen verbraucht. Sobald ein Datensatz für Anwendungsfälle von Kundenprofilen nicht mehr erforderlich ist, können Sie die Integration dieses Datensatzes in das Profil deaktivieren, um sicherzustellen, dass Ihre Daten weiterhin lizenzkonform sind. Weitere Informationen dazu finden Sie in der Anleitung zum [Aktivieren und Deaktivieren von Datensätzen für ein Profil](../../catalog/datasets/enable-for-profile.md). |
 | Ausschließen von Web SDK- und Mobile SDK-Daten | Es gibt zwei Arten von Daten, die vom Web- und Mobile-SDK erfasst werden: automatisch erfasste Daten und explizit von Ihrem Entwickler erfasste Daten. Um die Einhaltung Ihrer Lizenz zu gewährleisten, können Sie die automatische Datenerfassung in der SDK-Konfiguration über die Kontexteinstellung deaktivieren. Benutzerdefinierte Daten können auch von Ihrem Entwickler entfernt oder nicht eingerichtet werden. Weitere Informationen finden Sie in der Anleitung zu den [Grundlagen der SDK-Konfiguration](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=de#fundamentals). |
-| Datenausschluss bei Server-seitiger Weiterleitung | Wenn Sie Daten mithilfe der Server-seitigen Weiterleitung an Platform senden, können Sie festlegen, welche Daten beim Versand ausgeschlossen werden, indem Sie entweder in einer Regel das Mapping entfernen und es für alle Ereignisse ausschließen oder Bedingungen zur Regel hinzufügen, sodass Daten nur für bestimmte Ereignisse ausgelöst werden. Weitere Informationen finden Sie in der Dokumentation unter [Ereignisse und Bedingungen](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html?lang=de#events-and-conditions-(if)). |
+| Datenausschluss bei Server-seitiger Weiterleitung | Wenn Sie Daten mithilfe der Server-seitigen Weiterleitung an Platform senden, können Sie festlegen, welche Daten beim Versand ausgeschlossen werden, indem Sie entweder in einer Regel das Mapping entfernen und es für alle Ereignisse ausschließen oder Bedingungen zur Regel hinzufügen, sodass Daten nur für bestimmte Ereignisse ausgelöst werden. Siehe die Dokumentation unter [Ereignisse und Bedingungen](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if) für weitere Informationen. |
 | Filtern von Daten auf Quellebene | Sie können logische Operatoren und Vergleichsoperatoren verwenden, um Daten auf Zeilenebene aus Ihren Quellen zu filtern, bevor Sie eine Verbindung herstellen und Daten auf Experience Platform erfassen. Weitere Informationen finden Sie im Handbuch unter [Filtern von Daten auf Zeilenebene für eine Quelle mithilfe der [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}

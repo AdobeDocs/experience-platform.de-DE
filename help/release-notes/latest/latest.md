@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise September 2023 zu Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 35d72969946dd79c356212ce53ee75b8c84f036c
+source-git-commit: 30e927ec78a953aae8ac90829ec8b3b0475c5db4
 workflow-type: tm+mt
-source-wordcount: '2284'
+source-wordcount: '2293'
 ht-degree: 32%
 
 ---
@@ -191,7 +191,7 @@ Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren 
 | Funktion | Beschreibung |
 | --- | --- |
 | Verbesserungen der Benutzeroberfläche von Identity Service | Verwenden Sie das verbesserte Tool zur Erstellung benutzerdefinierter Namespaces in der Experience Platform-Benutzeroberfläche, um Ihre benutzerdefinierten Namespaces und die zugehörigen Identitätstypen besser zu verwalten. Die erweiterte Identity Service-Benutzeroberfläche bietet Ihnen Folgendes: <ul><li>Kontextuelles Erlebnis: Visuelle Hinweise, Klarheit und Kontext zu dem, was ein Identitäts-Namespace ist und zu Identitätstypen gehören.</li><li>Genauigkeit: Besserer Umgang mit Fehlern, ohne doppelte Identitätsnamen.</li><li>Entdeckung: Zugriff auf die Dokumentation über ein in das Produkt integriertes Dialogfeld.</li></ul> Weitere Informationen finden Sie im Handbuch unter [Erstellen benutzerdefinierter Namespaces](../../identity-service/namespaces.md#create-namespaces). |
-| Änderungen an den Identitätsdiagrammbeschränkungen | Die Grenze für Identitätsdiagramme wurde von 150 Identitäten zu 50 Identitäten geändert. Wenn eine neue Identität in ein vollständiges Diagramm aufgenommen wird, wird die älteste Identität, die auf dem Erfassungszeitstempel und Identitätstyp basiert, gelöscht. Cookie-Identitätstypen werden zum Löschen priorisiert. Wenden Sie sich an Ihr Adobe Account-Team, um eine Änderung des Identitätstyps anzufordern, wenn Ihre Produktions-Sandbox Folgendes enthält: <ul><li>einen benutzerdefinierten Namespace, bei dem die Personen-IDs (z. B. CRM-IDs) als Cookie-/Geräte-Identitätstyp konfiguriert sind.</li><li>einen benutzerdefinierten Namespace, bei dem Cookie-/Geräte-IDs als geräteübergreifender Identitätstyp konfiguriert sind.</li></ul> Adobe Engineering verarbeitet diese Anfragen manuell. Weitere Informationen finden Sie im Abschnitt [Limits für Identity Service-Daten](../../identity-service/guardrails.md). |
+| Änderungen an den Identitätsdiagrammbeschränkungen | Die Grenze für Identitätsdiagramme wurde von 150 Identitäten zu 50 Identitäten geändert. Wenn eine neue Identität in ein vollständiges Diagramm aufgenommen wird, wird die älteste Identität, die auf dem Erfassungszeitstempel und Identitätstyp basiert, gelöscht. Cookie-Identitätstypen werden zum Löschen priorisiert. Wenden Sie sich an Ihr Adobe Account-Team, um eine Änderung des Identitätstyps anzufordern, wenn Ihre Produktions-Sandbox Folgendes enthält: <ul><li>einen benutzerdefinierten Namespace, bei dem die Personen-IDs (z. B. CRM-IDs) als Cookie-/Geräte-Identitätstyp konfiguriert sind.</li><li>einen benutzerdefinierten Namespace, bei dem Cookie-/Geräte-IDs als geräteübergreifender Identitätstyp konfiguriert sind.</li></ul> Adobe Engineering verarbeitet diese Anfragen manuell. Weitere Informationen finden Sie im Abschnitt [Limits für Identity Service-Daten](../../identity-service/guardrails.md) und Handbuch [Best Practices für die Zuweisung von Datenverwaltungslizenzen](../../landing/license-usage-and-guardrails/data-management-best-practices.md). |
 
 {style="table-layout:auto"}
 
