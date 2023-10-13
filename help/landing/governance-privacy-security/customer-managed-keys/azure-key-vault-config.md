@@ -1,10 +1,11 @@
 ---
 title: Konfigurieren eines Azure Key Vault
 description: Erfahren Sie, wie Sie mit Azure ein neues Unternehmenskonto erstellen oder ein vorhandenes Unternehmenskonto verwenden und das Key Vault erstellen.
-source-git-commit: a0df05cde19e97d4abdad7abd19eafea8efe1096
+exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
+source-git-commit: 4ec87482c5a38404217ecd910b6a27ee2d0e00eb
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 40%
+source-wordcount: '565'
+ht-degree: 36%
 
 ---
 
@@ -41,6 +42,12 @@ Fahren Sie von hier aus mit dem Workflow zur Erstellung von Key Vault fort und k
 Sobald Sie bei der **[!DNL Review + create]** Schritt, können Sie die Details des Key Vault während der Validierung überprüfen. Nachdem die Validierung erfolgreich abgeschlossen wurde, klicken Sie auf **[!DNL Create]**, um den Prozess abzuschließen.
 
 ![Die Microsoft Azure Key-Werte Überprüfen und erstellen Seite mit hervorgehobenem Erstellen.](../../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
+
+## Zugriff konfigurieren {#configure-access}
+
+Aktivieren Sie als Nächstes die rollenbasierte Azure-Zugriffskontrolle für Ihren Key Vault. Auswählen **[!DNL Access configuration]** im [!DNL Settings] im linken Navigationsbereich und wählen Sie **[!DNL Azure role-based access control]** , um die Einstellung zu aktivieren. Dieser Schritt ist unbedingt erforderlich, da die CMK-App später mit einer Azure-Rolle verknüpft werden muss. Das Zuweisen einer Rolle wird in beiden [API](./api-set-up.md#assign-to-role) und [Benutzeroberfläche](./ui-set-up.md#assign-to-role) Workflows.
+
+![Die [!DNL Microsoft Azure] Dashboard mit [!DNL Access configuration] und [!DNL Azure role-based access control] hervorgehoben.](../../images/governance-privacy-security/customer-managed-keys/access-configuration.png)
 
 ## Konfigurieren von Netzwerkoptionen {#configure-network-options}
 
