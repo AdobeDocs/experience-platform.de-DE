@@ -2,18 +2,14 @@
 title: Datentyp der externen Quell-System-Prüfattribute
 description: Dieses Dokument bietet einen Überblick über den Datentyp "External Source System Audit Attributes Experience Data Model (XDM)".
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: a7e6ebfe09566e6e027b13efc95dda97ff8f0315
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 13%
+source-wordcount: '192'
+ht-degree: 14%
 
 ---
 
 # [!UICONTROL Audit-Attribute des externen Quellsystems] Datentyp
-
->[!NOTE]
->
->Dieser Datentyp ist nur für Unternehmen verfügbar, die Zugriff auf die B2B-Edition von Adobe Real-time Customer Data Platform haben.
 
 [!UICONTROL Audit-Attribute des externen Quellsystems] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Prüfdetails zu einem externen Quellsystem erfasst.
 
@@ -21,9 +17,9 @@ ht-degree: 13%
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `externalKey` | [[!UICONTROL B2B-Quelle]](./b2b-source.md) | Eine zusammengesetzte Kennung für die Quelle, die für die Prüfung verwendet wird. |
+| `externalKey` | [[!UICONTROL B2B-Quelle]](./b2b-source.md) | Eine zusammengesetzte Kennung für die für die Prüfung verwendete Quelle. |
 | `createdBy` | Zeichenfolge | Der Name des Benutzers, der diesen Datensatz erstellt hat. |
-| `createdDate` | DateTime | Das Datum, an dem dieser Datensatz erstellt wurde. |
+| `createdDate` | DateTime | Das Datum der Erstellung dieses Datensatzes. |
 | `externalID` | Zeichenfolge | Externe eindeutige Kennung für die Quelle. Dieser Wert hilft bei der Identifizierung und Deduplizierung bei Bedarf. |
 | `lastActivityDate` | DateTime | Das letzte Aktivitätsdatum für das Quellsystem. |
 | `lastReferencedDate` | DateTime | Das letzte referenzierte Datum für das Quellsystem. |

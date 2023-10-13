@@ -2,9 +2,9 @@
 title: Übersicht über die API-Erweiterung für Meta Conversions
 description: Erfahren Sie mehr über die Meta Conversions API-Erweiterung für die Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: d55398f328f3f85ce6b32a2553e7a93df3584f02
 workflow-type: tm+mt
-source-wordcount: '2370'
+source-wordcount: '2624'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ So installieren Sie die [!DNL Meta Conversions API] Erweiterung, navigieren Sie 
 
 Nachdem Sie die gewünschte Eigenschaft ausgewählt oder erstellt haben, wählen Sie **[!UICONTROL Erweiterungen]** im linken Navigationsbereich und wählen Sie dann die **[!UICONTROL Katalog]** Registerkarte. Suchen Sie nach [!UICONTROL Meta Conversions-API] Karte, und wählen Sie **[!UICONTROL Installieren]**.
 
-![Die [!UICONTROL Installieren] für die [!UICONTROL Meta Conversions-API] -Erweiterung in der Datenerfassungs-Benutzeroberfläche.](../../../images/extensions/server/meta/install.png)
+![Die [!UICONTROL Installieren] Option, die für die [!UICONTROL Meta Conversions-API] -Erweiterung in der Datenerfassungs-Benutzeroberfläche.](../../../images/extensions/server/meta/install.png)
 
 In der angezeigten Konfigurationsansicht müssen Sie die Variable [!DNL Pixel] ID, die Sie zuvor kopiert haben, um die Erweiterung mit Ihrem Konto zu verknüpfen. Sie können die ID direkt in die Eingabe einfügen oder stattdessen ein Datenelement verwenden.
 
@@ -46,6 +46,30 @@ Klicken Sie abschließend auf **[!UICONTROL Speichern]**
 ![Die [!DNL Pixel] ID, die in der Erweiterungskonfigurationsansicht als Datenelement bereitgestellt wird.](../../../images/extensions/server/meta/configure.png)
 
 Die -Erweiterung ist installiert und Sie können jetzt ihre Funktionen in Ihren Ereignisweiterleitungsregeln verwenden.
+
+## Integration mit der Meta Business Extension (MBE) {#mbe}
+
+Dank der Integration mit Meta Business Extensions (MBE) können Sie sich schnell bei Ihrem Meta Business Account authentifizieren. Dadurch wird Ihre [!UICONTROL Pixel-ID] und die Meta Conversions-API [!UICONTROL Zugriffstoken], wodurch die Installation und Konfiguration der Meta Conversions-API vereinfacht werden.
+
+Bei der Installation der [!UICONTROL Meta Conversions-API] -Erweiterung.
+
+![Die [!UICONTROL API-Erweiterung für Meta Conversions] Hervorhebung der Installationsseite [!UICONTROL Mit Meta verbinden].](../../../images/extensions/server/meta/mbe-extension-install.png)
+
+Eine Dialogaufforderung zur Authentifizierung in MBE wird auch in der Schnellstart-Workflow-Benutzeroberfläche bei der Ereignisweiterleitung angezeigt.
+
+![Die Schnellstart-Workflow-Benutzeroberfläche - Hervorhebung [!UICONTROL Mit Meta verbinden].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
+
+## Integration mit der Ereignisqualitätsübereinstimmung (EMQ) {#emq}
+
+Durch die Integration mit der Ereignisqualitäts-Match-Bewertung (EMQ) können Sie die Effektivität Ihrer Implementierung einfach anzeigen, indem Sie EMQ-Bewertungen anzeigen. Diese Integration minimiert das Wechseln des Kontexts und hilft Ihnen, den Erfolg Ihrer Meta Conversions API-Implementierungen zu verbessern. Diese Ereignisbewertungen werden im [!UICONTROL Meta Conversions API-Erweiterung] Konfigurationsbildschirm.
+
+![Die [!UICONTROL API-Erweiterung für Meta Conversions] Hervorhebung der Konfigurationsseite [!UICONTROL EMQ-Bewertung anzeigen].](../../../images/extensions/server/meta/emq-score.png)
+
+## Integration mit LiveRamp (Alpha) {#alpha}
+
+Die Integration mit LiveRamp fügt der Konfiguration der Meta Conversions API-Regel neue Felder hinzu, wodurch Kunden die Integration mit der LiveRamp Conversions-API erleichtern. Durch diese Integration entfällt die Notwendigkeit, personenbezogene Daten direkt für Ihren Partner oder Meta freizugeben. Aufgrund des robusten Identitätsdiagramms von LiveRamp ist die Einbeziehung von [!UICONTROL Partner-ID (Alpha)] kann die Integrationsqualität verbessern, indem die Übereinstimmungsrate für Benutzer erhöht wird.
+
+![Die Meta-Forwarding [!UICONTROL Regel] Hervorhebung der Konfigurationsseite [!UICONTROL Partnername (Alpha)] und [!UICONTROL Partner-ID (Alpha)].](../../../images/extensions/server/meta/live-ramp.png)
 
 ## Konfigurieren einer Ereignisweiterleitungsregel {#rule}
 
