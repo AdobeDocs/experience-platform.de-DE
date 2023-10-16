@@ -3,9 +3,9 @@ keywords: E-Mail;E-Mail;E-Mail-Ziele;Salesforce;API Salesforce Marketing Cloud-Z
 title: (API) Salesforce Marketing Cloud-Verbindung
 description: Mit dem Salesforce-Marketing Cloud (ehemals ExactTarget)-Ziel können Sie Ihre Kontodaten exportieren und im Salesforce-Marketing Cloud für Ihre Geschäftsanforderungen aktivieren.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: b778b7b8c79176d0962a9c757d83a749acd147b6
 workflow-type: tm+mt
-source-wordcount: '2960'
+source-wordcount: '3079'
 ht-degree: 23%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 23%
 
 >[!IMPORTANT]
 >
->Beachten Sie den Unterschied zwischen dieser Verbindung und der anderen [[!DNL Salesforce Marketing Cloud] connection](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) , die im Abschnitt E-Mail-Marketing-Katalog vorhanden ist. Mit der anderen Salesforce-Marketing Cloud-Verbindung können Sie Dateien an einen bestimmten Speicherort exportieren, während es sich hierbei um eine API-basierte Streaming-Verbindung handelt.
+> Beachten Sie den Unterschied zwischen dieser Verbindung und der anderen [[!DNL Salesforce Marketing Cloud] connection](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) , die im Abschnitt E-Mail-Marketing-Katalog vorhanden ist. Mit der anderen Salesforce-Marketing Cloud-Verbindung können Sie Dateien an einen bestimmten Speicherort exportieren, während es sich hierbei um eine API-basierte Streaming-Verbindung handelt.
 
 Im Vergleich zu [!DNL Salesforce Marketing Cloud Account Engagement] die stärker auf **B2B** Marketing, [!DNL (API) Salesforce Marketing Cloud] Das Ziel ist ideal für **B2C** Anwendungsfälle mit kürzeren Transaktionsentscheidungen-Zyklen. Sie können größere Datensätze, die das Verhalten Ihrer Zielgruppe repräsentieren, zusammenfassen, um Marketing-Kampagnen anzupassen und zu verbessern, indem Sie Kontakte priorisieren und segmentieren, insbesondere aus Datensätzen außerhalb von [!DNL Salesforce]. *Beachten Sie, dass Experience Platform auch eine Verbindung für die [[!DNL Salesforce Marketing Cloud Account Engagement]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md).*
 
@@ -56,46 +56,46 @@ Beim Aktivieren von Zielgruppen für die [!DNL (API) Salesforce Marketing Cloud]
 
 [!DNL Salesforce] benötigt diesen Wert, um Zielgruppen aus Experience Platform richtig zu lesen und zu interpretieren und ihren Zielgruppenstatus in [!DNL Salesforce Marketing Cloud]. Weitere Informationen finden Sie in der Experience Platform-Dokumentation für [Feldergruppe Zielgruppenzugehörigkeitsdetails](/help/xdm/field-groups/profile/segmentation.md) wenn Sie Anleitungen zum Zielgruppenstatus benötigen.
 
-Für jede Zielgruppe, die Sie von Platform zu aktivieren [!DNL Salesforce Marketing Cloud], müssen Sie ein Attribut des Typs `Text` Innerhalb [!DNL Salesforce]. Verwenden Sie die [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder] , um Attribute zu erstellen. Die Attributfeldnamen werden für die [!DNL (API) Salesforce Marketing Cloud] Zielfeld während der **[!UICONTROL Zuordnung]** Schritt. Je nach Ihren Geschäftsanforderungen können Sie das Feldzeichen mit maximal 4000 Zeichen definieren. Siehe [!DNL Salesforce Marketing Cloud] [Datenerweiterungstypen](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&amp;type=5) Dokumentationsseite für weitere Informationen zu Attributtypen.
+Für jede Zielgruppe, die Sie von Platform zu aktivieren [!DNL Salesforce], müssen Sie über ein Attribut vom Typ `Text` verknüpft mit [!DNL Email Demographics] Datenerweiterung in [!DNL Salesforce Marketing Cloud]. Verwenden Sie die [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder] , um Attribute zu erstellen. Siehe Abschnitt [!DNL Salesforce Marketing Cloud] Dokumentation zu [Attribute erstellen](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) , wenn Sie Anleitungen zum Erstellen von Attributen benötigen.
 
-Siehe Abschnitt [!DNL Salesforce Marketing Cloud] Dokumentation zu [Attribute erstellen](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) , wenn Sie Anleitungen zum Erstellen von Attributen benötigen.
+Die Attributfeldnamen werden für die [!DNL (API) Salesforce Marketing Cloud] Zielfeld während der **[!UICONTROL Zuordnung]** Schritt. Je nach Ihren Geschäftsanforderungen können Sie das Feldzeichen mit maximal 4000 Zeichen definieren. Siehe [!DNL Salesforce Marketing Cloud] [Datenerweiterungstypen](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&amp;type=5) Dokumentationsseite für weitere Informationen zu Attributtypen.
 
 Ein Beispiel für den Data-Designer-Bildschirm in [!DNL Salesforce Marketing Cloud], zu dem Sie das Attribut hinzufügen werden, sehen Sie wie folgt:
 ![Data Designer der Salesforce Marketing Cloud-Benutzeroberfläche.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-data-designer.png)
 
-Eine Ansicht der [!DNL Salesforce Marketing Cloud] [!DNL Email Demographics] attribute-set ist unten dargestellt:
-![Salesforce Marketing Cloud UI E-Mail-demografische Attribut-Set.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-email-demograhics-fields.png)
+Ansicht einer [!DNL Salesforce Marketing Cloud] [!DNL Email Data] Attributgruppe mit Attributen, die dem Zielgruppenstatus innerhalb der [!DNL Email Demographics] Die Datenerweiterung ist unten dargestellt:
+![Salesforce Marketing Cloud UI E-Mail-Attributgruppe.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-email-demographics-fields.png)
 
-Die [!DNL (API) Salesforce Marketing Cloud] Das Ziel verwendet [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) dynamisch die Attribute und ihre Attribute-Sets abrufen, die in [!DNL Salesforce Marketing Cloud].
+Die [!DNL (API) Salesforce Marketing Cloud] Das Ziel verwendet [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) dynamisch die Datenerweiterungen und die verknüpften Attribute abrufen, die in [!DNL Salesforce Marketing Cloud].
 
 Diese werden im **[!UICONTROL Zielfeld]** Auswahlfenster bei der Einrichtung [Mapping](#mapping-considerations-example) im Workflow zu [Aktivieren von Zielgruppen für das Ziel](#activate).
 
 >[!IMPORTANT]
 >
->Within [!DNL Salesforce Marketing Cloud], müssen Sie Attribute mit einer **[!UICONTROL FELDNAME]** genau mit dem Wert übereinstimmt, der in **[!UICONTROL Zuordnungs-ID]** für jedes aktivierte Platform-Segment. Der folgende Screenshot zeigt beispielsweise ein Attribut mit dem Namen `salesforce_mc_segment_1`. Fügen Sie beim Aktivieren einer Zielgruppe für dieses Ziel hinzu `salesforce_mc_segment_1` as **[!UICONTROL Zuordnungs-ID]** , um Zielgruppen aus der Experience Platform in dieses Attribut zu füllen.
+> Within [!DNL Salesforce Marketing Cloud], müssen Sie Attribute mit einer **[!UICONTROL FELDNAME]** genau mit dem Wert übereinstimmt, der in **[!UICONTROL Zuordnungs-ID]** für jedes aktivierte Platform-Segment. Der folgende Screenshot zeigt beispielsweise ein Attribut mit dem Namen `salesforce_mc_segment_1`. Fügen Sie beim Aktivieren einer Zielgruppe für dieses Ziel hinzu `salesforce_mc_segment_1` as **[!UICONTROL Zuordnungs-ID]** , um Zielgruppen aus der Experience Platform in dieses Attribut zu füllen.
 
 Ein Beispiel für die Attributerstellung in [!DNL Salesforce Marketing Cloud], wie unten gezeigt:
 ![Screenshot der Salesforce-Marketing Cloud-Benutzeroberfläche mit einem Attribut.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
 
 >[!TIP]
 >
->* Fügen Sie beim Erstellen des Attributs keine Leerzeichen in den Feldnamen ein. Verwenden Sie stattdessen den Unterstrich. `(_)` als Trennzeichen.
->* So unterscheiden Sie zwischen Attributen, die für Platform-Zielgruppen verwendet werden, und anderen Attributen in [!DNL Salesforce Marketing Cloud]können Sie ein erkennbares Präfix oder Suffix für die Attribute einfügen, die für Adobe-Segmente verwendet werden. Beispiel: anstelle von `test_segment`, verwenden `Adobe_test_segment` oder `test_segment_Adobe`.
->* Wenn Sie bereits andere Attribute in erstellt haben [!DNL Salesforce Marketing Cloud]können Sie denselben Namen wie das Platform-Segment verwenden, um die Zielgruppe in [!DNL Salesforce Marketing Cloud].
+> * Fügen Sie beim Erstellen des Attributs keine Leerzeichen in den Feldnamen ein. Verwenden Sie stattdessen den Unterstrich. `(_)` als Trennzeichen.
+> * So unterscheiden Sie zwischen Attributen, die für Platform-Zielgruppen verwendet werden, und anderen Attributen in [!DNL Salesforce Marketing Cloud]können Sie ein erkennbares Präfix oder Suffix für die Attribute einfügen, die für Adobe-Segmente verwendet werden. Beispiel: anstelle von `test_segment`, verwenden `Adobe_test_segment` oder `test_segment_Adobe`.
+> * Wenn Sie bereits andere Attribute in erstellt haben [!DNL Salesforce Marketing Cloud]können Sie denselben Namen wie das Platform-Segment verwenden, um die Zielgruppe in [!DNL Salesforce Marketing Cloud].
 
 #### Weisen Sie Benutzerrollen und Berechtigungen innerhalb von zu [!DNL Salesforce Marketing Cloud] {#prerequisites-roles-permissions}
 
-As [!DNL Salesforce Marketing Cloud] unterstützt benutzerdefinierte Rollen je nach Anwendungsfall. Ihrem Benutzer sollten die entsprechenden Rollen zugewiesen werden, um Ihre Attribute in Ihren [!DNL Salesforce Marketing Cloud] -Attributsätzen. Nachfolgend finden Sie ein Beispiel für Benutzerrollen:
+As [!DNL Salesforce Marketing Cloud] unterstützt benutzerdefinierte Rollen je nach Anwendungsfall. Ihrem Benutzer sollten die entsprechenden Rollen zugewiesen werden, um Ihre Attribute in [!DNL Salesforce Marketing Cloud]. Nachfolgend finden Sie ein Beispiel für Benutzerrollen:
 ![Salesforce Marketing Cloud-Benutzeroberfläche für einen ausgewählten Benutzer, der die zugewiesenen Rollen anzeigt.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-edit-roles.png)
 
-Welche Rollen Ihre [!DNL Salesforce Marketing Cloud] Benutzer zugewiesen wurde, müssen Sie außerdem Berechtigungen für die [!DNL Salesforce Marketing Cloud] -Attributsätzen, die die zu aktualisierenden Felder enthalten.
+Welche Rollen Ihre [!DNL Salesforce Marketing Cloud] Benutzer zugewiesen wurde, müssen Sie außerdem Berechtigungen für die [!DNL Salesforce Marketing Cloud] Datenerweiterung , die mit den zu aktualisierenden Feldern verknüpft ist.
 
-Da dieses Ziel Zugriff auf die `[!DNL attribute-set]`, müssen Sie sie zulassen. Beispiel für die `Email` [!DNL attribute-set] müssen Sie wie unten gezeigt zulassen:
+Da dieses Ziel Zugriff auf die `[!DNL data extension]`, müssen Sie sie zulassen. Beispiel für die `Email` [!DNL data extension] müssen Sie wie unten gezeigt zulassen:
 
-![Salesforce Marketing Cloud-Benutzeroberfläche mit E-Mail-Attribut-Set mit zulässigen Berechtigungen.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-permisions-list.png)
+![Salesforce Marketing Cloud-Benutzeroberfläche, die die E-Mail-Datenerweiterung mit den zulässigen Berechtigungen anzeigt.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-permisions-list.png)
 
 Um die Zugriffsebene zu beschränken, können Sie auch einzelne Zugriffe durch Verwendung granularer Berechtigungen überschreiben.
-![Salesforce Marketing Cloud-Benutzeroberfläche, die das E-Mail-Attribut mit granularen Berechtigungen anzeigt.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/sales-email-attribute-set-permission.png)
+![Salesforce Marketing Cloud-Benutzeroberfläche mit detaillierten Berechtigungen zur E-Mail-Datenerweiterung](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/sales-email-attribute-set-permission.png)
 
 Siehe Abschnitt [[!DNL Marketing Cloud Roles]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_marketing_cloud_roles.htm&amp;type=5) und [[!DNL Marketing Cloud Roles and Permissions]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_roles.htm&amp;type=5) Seiten für ausführliche Anleitungen.
 
@@ -132,6 +132,17 @@ Beachten Sie die folgenden Elemente, bevor Sie sich bei der [!DNL (API) Salesfor
 |---|---|---|
 | contactKey | [!DNL Salesforce Marketing Cloud] Kontaktschlüssel. Siehe Abschnitt [!DNL Salesforce Marketing Cloud] [Dokumentation](https://help.salesforce.com/s/articleView?id=sf.mc_cab_contact_builder_best_practices.htm&amp;type=5) wenn Sie zusätzliche Anleitungen benötigen. | Obligatorisch |
 
+## Unterstützte Zielgruppen {#supported-audiences}
+
+In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel exportieren können.
+
+| Audience Origin | Unterstützt | Beschreibung |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
+| Benutzerdefinierte Uploads | X | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
+
+{style="table-layout:auto"}
+
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
@@ -147,7 +158,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die [Zugriffsberechtigung](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**. Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+> Um eine Verbindung zum Ziel herzustellen, benötigen Sie die [Zugriffsberechtigung](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**. Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -185,8 +196,8 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
->* Export *identities*, benötigen Sie die **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+> * Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+> * Export *identities*, benötigen Sie die **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
@@ -198,22 +209,22 @@ So ordnen Sie Ihre XDM-Felder korrekt der [!DNL (API) Salesforce Marketing Cloud
 
 >[!IMPORTANT]
 >
->* Auch wenn Ihre Attributnamen gemäß Ihrer [!DNL Salesforce Marketing Cloud] -Konto, die Zuordnungen für beide `contactKey` und `personalEmail.address` sind zwingend erforderlich.
+> * Auch wenn Ihre Attributnamen gemäß Ihrer [!DNL Salesforce Marketing Cloud] -Konto, die Zuordnungen für beide `contactKey` und `personalEmail.address` sind zwingend erforderlich.
 >
->* Die Integration mit der [!DNL Salesforce Marketing Cloud] Die API unterliegt einer Paginierungsgrenze dafür, wie viele Attribute Experience Platform aus Salesforce abrufen kann. Dies bedeutet, dass die Variable **[!UICONTROL Zuordnung]** Schritt, kann das Zielfeldschema aus Ihrem Salesforce-Konto maximal 2000 Attribute anzeigen.
+> * Die Integration mit der [!DNL Salesforce Marketing Cloud] Die API unterliegt einer Paginierungsgrenze dafür, wie viele Attribute Experience Platform aus Salesforce abrufen kann. Dies bedeutet, dass die Variable **[!UICONTROL Zuordnung]** Schritt, kann das Zielfeldschema aus Ihrem Salesforce-Konto maximal 2000 Attribute anzeigen.
 
 1. Wählen Sie Im Schritt **[!UICONTROL Zuordnung]** die Option **[!UICONTROL Neue Zuordnung hinzufügen]** aus. Auf dem Bildschirm wird eine neue Zuordnungszeile angezeigt.
    ![Beispiel-Screenshot der Platform-Benutzeroberfläche für „Neue Zuordnung hinzufügen“.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 1. Im **[!UICONTROL Quellfeld auswählen]** Fenster, wählen Sie die **[!UICONTROL Attribute auswählen]** und wählen Sie das XDM-Attribut oder die **[!UICONTROL Identitäts-Namespace auswählen]** und wählen Sie eine Identität.
-1. Im **[!UICONTROL Zielgruppenfeld auswählen]** Fenster, wählen Sie die **[!UICONTROL Identitäts-Namespace auswählen]** und wählen Sie eine Identität oder **[!UICONTROL Attribute auswählen]** und wählen Sie ein Attribut aus den nach Bedarf angezeigten Attributsätzen aus. Die [!DNL (API) Salesforce Marketing Cloud] Das Ziel verwendet [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) dynamisch die Attribute und ihre in [!DNL Salesforce Marketing Cloud]. Diese werden im **[!UICONTROL Zielfeld]** Popup bei der Einrichtung der [Mapping](#mapping-considerations-example) im [Zielgruppen-Workflow aktivieren](#activate).
+1. Im **[!UICONTROL Zielgruppenfeld auswählen]** Fenster, wählen Sie die **[!UICONTROL Identitäts-Namespace auswählen]** und wählen Sie eine Identität oder **[!UICONTROL Attribute auswählen]** und wählen Sie ein Attribut aus den Datenerweiterungen aus, die nach Bedarf angezeigt werden. Die [!DNL (API) Salesforce Marketing Cloud] Das Ziel verwendet [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) dynamisch die Datenerweiterungen und die verknüpften Attribute abrufen, die in [!DNL Salesforce Marketing Cloud]. Diese werden im **[!UICONTROL Zielfeld]** Popup bei der Einrichtung der [Mapping](#mapping-considerations-example) im [Zielgruppen-Workflow aktivieren](#activate).
 
    * Wiederholen Sie diese Schritte, um die folgenden Zuordnungen zwischen Ihrem XDM-Profilschema und [!DNL (API) Salesforce Marketing Cloud]:
 
      | Quellfeld | Zielfeld | Obligatorisch |
      |---|---|---|
      | `IdentityMap: contactKey` | `Identity: salesforceContactKey` | `Mandatory` |
-     | `xdm: person.name.firstName` | `Attribute: First Name` aus Ihrem gewünschten Attributsatz. | – |
-     | `xdm: personalEmail.address` | `Attribute: Email Address` aus Ihrem gewünschten Attributsatz. | – |
+     | `xdm: personalEmail.address` | `Attribute: Email Address` aus dem [!DNL Salesforce Marketing Cloud] [!DNL Email Addresses] Datenerweiterung. | `Mandatory`, wenn neue Kontakte hinzugefügt werden. |
+     | `xdm: person.name.firstName` | `Attribute: First Name` aus dem gewünschten [!DNL Salesforce Marketing Cloud] Datenerweiterung. | – |
 
    * Nachfolgend finden Sie ein Beispiel für die Verwendung dieser Zuordnungen:
      ![Beispiel-Screenshot der Platform-Benutzeroberfläche mit Ziel-Zuordnungen.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/mappings.png)
@@ -238,7 +249,7 @@ Wie gezeigt, [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Zuordnungs-ID
 
 Wiederholen Sie diesen Abschnitt für jedes aktivierte Platform-Segment.
 
-Je nach Anwendungsfall können alle aktivierten Zielgruppen demselben [!DNL Salesforce Marketing Cloud] **[!UICONTROL FELDNAME]** oder anderen **[!UICONTROL FELDNAME]** in [!DNL (API) Salesforce Marketing Cloud]. Ein typisches Beispiel, das auf dem oben gezeigten Bild basiert, könnte sein.
+Ein typisches Beispiel, das auf dem oben gezeigten Bild basiert, könnte sein.
 | [!DNL (API) Salesforce Marketing Cloud] Segmentname | [!DNL Salesforce Marketing Cloud] **[!UICONTROL FELDNAME]** | [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Zuordnungs-ID]** | | — | — | — | | salesforce mc audience 1 | `salesforce_mc_segment_1` | `salesforce_mc_segment_1` | | salesforce mc audience 2 | `salesforce_mc_segment_2` | `salesforce_mc_segment_2` |
 
 ## Überprüfen des Datenexports {#exported-data}
@@ -282,7 +293,7 @@ Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Date
 ## Zusätzliche Ressourcen {#additional-resources}
 
 * [!DNL Salesforce Marketing Cloud] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html)
-* [!DNL Salesforce Marketing Cloud] [Dokumentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) Erläuterung der Aktualisierung von Kontakten mit den in den angegebenen Attributgruppen angegebenen Informationen.
+* [!DNL Salesforce Marketing Cloud] [Dokumentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) Erläuterung der Aktualisierung von Kontakten mit den angegebenen Informationen.
 
 ### Änderungsprotokoll {#changelog}
 
@@ -292,6 +303,7 @@ In diesem Abschnitt werden aktualisierte Funktionen und wesentliche Dokumentatio
 
 | Veröffentlichungsmonat | Art der Aktualisierung | Beschreibung |
 |---|---|---|
+| Oktober 2023 | Aktualisierung der Dokumentation | <ul><li>Wir haben die [Voraussetzungen im Salesforce-Marketing Cloud (API)](#prerequisites-destination) und im Allgemeinen unnötige Verweise auf Attributgruppen im gesamten Dokument entfernt.</li> <li>Die Dokumentation wurde aktualisiert, um anzugeben, dass Attribute für den Zielgruppenstatus in [!DNL Salesforce Marketing Cloud] innerhalb der [!DNL Email Demographics] nur Datenerweiterung.</li> <li>Die Zuordnungstabelle im [Zuordnungsüberlegungen und Beispiel](#mapping-considerations-example) -Abschnitt, die Zuordnung für `Email Address` -Attribut innerhalb der `Email Addresses` -Datenerweiterung als obligatorisch markiert ist. Diese Anforderung wurde im als WICHTIG markierten Callout erwähnt, aber in der Tabelle weggelassen.</li></ul> |
 | April 2023 | Aktualisierung der Dokumentation | <ul><li>Wir haben eine Anweisung und einen Verweis-Link im [Voraussetzungen im Salesforce-Marketing Cloud (API)](#prerequisites-destination) -Abschnitt, um dies zu erfahren [!DNL Salesforce Marketing Cloud Engagement] ist ein obligatorisches Abonnement zur Verwendung dieses Ziels. Im vorherigen Abschnitt wurde fälschlicherweise darauf hingewiesen, dass Benutzer ein Abonnement für das Marketing Cloud benötigen **Konto** Interaktion.</li> <li>Wir haben einen Abschnitt unter [Voraussetzungen](#prerequisites) für [Rollen und Berechtigungen](#prerequisites-roles-permissions) der [!DNL Salesforce] -Benutzer verwenden, damit dieses Ziel funktioniert. (PLATIR-26299)</li></ul> |
 | Februar 2023 | Aktualisierung der Dokumentation | Wir haben die [Voraussetzungen im Salesforce-Marketing Cloud (API)](#prerequisites-destination) -Abschnitt, um einen Verweis-Link einzuschließen, der Folgendes aufruft: [!DNL Salesforce Marketing Cloud Engagement] ist ein obligatorisches Abonnement zur Verwendung dieses Ziels. |
 | Februar 2023 | Funktionsaktualisierung | Es wurde ein Problem behoben, bei dem eine falsche Konfiguration im Ziel dazu führte, dass eine fehlerhafte JSON an Salesforce gesendet wurde. Dies führte dazu, dass bei einigen Benutzern bei der Aktivierung eine hohe Anzahl von Identitäten fehlschlug. (PLATIR-26299) |
