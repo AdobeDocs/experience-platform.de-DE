@@ -5,7 +5,7 @@ exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
 source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
 source-wordcount: '225'
-ht-degree: 16%
+ht-degree: 51%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 16%
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
->title="Status von Lebenszyklusanfragen"
->abstract="Dieses Widget zeigt die Gesamtzahl der erstellten, fehlgeschlagenen und abgeschlossenen Datenlebenszyklusdatensatzlöschaufträge. Weitere Informationen zu Ihren Datenlebenszyklusprozessen finden Sie unter **Lebenszyklus der Daten** in der linken Navigation."
+>title="Status von Datenlebenszyklus-Anfragen"
+>abstract="Dieses Widget zeigt die Gesamtzahl der erstellten, fehlgeschlagenen und abgeschlossenen Löschvorgänge für Datenlebenszyklus-Einträge. Weitere Informationen zu Ihren Datenlebenszyklus-Prozessen finden Sie unter **Datenlebenszyklus** in der linken Navigation."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
->title="Letzte Arbeitsaufträge für den Datenlebenszyklus"
->abstract="Dieses Widget zeigt die fünf zuletzt erstellten oder aktualisierten Arbeitsaufträge für den Datenlebenszyklus an, abhängig von der ausgewählten Option oben rechts. Weitere Informationen zu Ihren Datenlebenszyklusprozessen finden Sie unter **Lebenszyklus der Daten** in der linken Navigation."
+>title="Aktuelle Arbeitsaufträge zum Datenlebenszyklus"
+>abstract="Dieses Widget zeigt die fünf zuletzt erstellten oder aktualisierten Arbeitsaufträge zum Datenlebenszyklus, je nach der oben rechts gewählten Option. Weitere Informationen zu Ihren Datenlebenszyklus-Prozessen finden Sie unter **Datenlebenszyklus** in der linken Navigation."
 
 Die **[!UICONTROL Lebenszyklus der Daten]** Mit Workspace in der Adobe Experience Platform-Benutzeroberfläche können Sie verschiedene Data Lifecycle Management-Aufgaben erstellen und überwachen, einschließlich Löschen von Datensätzen und Planen der Ablaufzeit von Datensätzen.
 

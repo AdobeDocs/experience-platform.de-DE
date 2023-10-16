@@ -5,7 +5,7 @@ exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
 source-wordcount: '841'
-ht-degree: 67%
+ht-degree: 79%
 
 ---
 
@@ -14,10 +14,10 @@ ht-degree: 67%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"
 >title="IDs für Arbeitsaufträge"
->abstract="Wenn eine Datenlebenszyklusanforderung an das System gesendet wird, wird eine Arbeitsreihenfolge erstellt, um die angeforderte Aufgabe auszuführen. Mit anderen Worten, eine Arbeitsreihenfolge stellt einen bestimmten Datenlebenszyklusprozess dar, der den aktuellen Status und andere zugehörige Details enthält. Bei der Erstellung eines Arbeitsauftrags wird diesem automatisch eine eigene eindeutige ID zugewiesen."
+>abstract="Wenn eine Datenlebenszyklus-Anfrage an das System gesendet wird, wird ein Arbeitsauftrag erstellt, um die angeforderte Aufgabe auszuführen. Anders ausgedrückt, ist ein Arbeitsauftrag ein spezifischer Datenlebenszyklus-Prozess, der seinen aktuellen Status und andere zugehörige Details enthält. Bei der Erstellung eines Arbeitsauftrags wird diesem automatisch eine eigene eindeutige ID zugewiesen."
 >text="See the data lifecycle UI guide to learn more."
 
-Wenn eine Datenlebenszyklusanforderung an das System gesendet wird, wird eine Arbeitsreihenfolge erstellt, um die angeforderte Aufgabe auszuführen. Eine Arbeitsreihenfolge stellt einen bestimmten Datenlebenszyklusprozess dar, z. B. einen geplanten Datensatzablauf, der den aktuellen Status und andere zugehörige Details enthält.
+Wenn eine Datenlebenszyklus-Anfrage an das System gesendet wird, wird ein Arbeitsauftrag erstellt, um die angeforderte Aufgabe auszuführen. Eine Arbeitsreihenfolge stellt einen bestimmten Datenlebenszyklusprozess dar, z. B. einen geplanten Datensatzablauf, der den aktuellen Status und andere zugehörige Details enthält.
 
 In diesem Handbuch wird beschrieben, wie Sie bestehende Arbeitsaufträge in der Adobe Experience Platform-Benutzeroberfläche anzeigen und verwalten können.
 
@@ -65,17 +65,17 @@ Die folgenden Filter gelten für Anfragen zur Gültigkeit von Datensätzen:
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"
 >title="Status nach Service"
->abstract="Datenlebenszyklusanfragen werden unabhängig von mehreren Experience Platform-Services verarbeitet. In diesem Abschnitt wird der aktuelle Verarbeitungsstatus der Anfrage für jeden einzelnen Service beschrieben. Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche für den Datenlebenszyklus."
+>abstract="Anfragen zum Datenlebenszyklus werden von mehreren Experience Platform-Diensten unabhängig voneinander bearbeitet. In diesem Abschnitt wird der aktuelle Verarbeitungsstatus der Anfrage für jeden einzelnen Service beschrieben. Weitere Informationen finden Sie im Handbuch zur Datenlebenszyklus-Benutzeroberfläche."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Anzahl der Identitäten"
->abstract="Die Anzahl der Identitäten, deren Datensätze im Rahmen dieses Arbeitsauftrags aktualisiert werden sollen. Die in der Zählung enthaltenen Identitäten müssen nicht unbedingt in den betroffenen Datensätzen vorhanden sein. Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche für den Datenlebenszyklus."
+>abstract="Die Anzahl der Identitäten, deren Datensätze im Rahmen dieses Arbeitsauftrags aktualisiert werden sollen. Die in der Zählung enthaltenen Identitäten müssen nicht unbedingt in den betroffenen Datensätzen vorhanden sein. Weitere Informationen finden Sie im Handbuch zur Datenlebenszyklus-Benutzeroberfläche."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="Antwort auf den Löschvorgang eines Datensatzes"
->abstract="Wenn der Löschvorgang eines Datensatzes eine Antwort vom System erhält, werden diese Meldungen unter dem Abschnitt **[!UICONTROL Ergebnis]** angezeigt. Wenn während der Bearbeitung eines Arbeitsauftrags ein Problem auftritt, werden alle relevanten Fehlermeldungen in diesem Abschnitt angezeigt, um Ihnen bei der Fehlersuche zu helfen. Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche für den Datenlebenszyklus."
+>abstract="Wenn der Löschvorgang eines Datensatzes eine Antwort vom System erhält, werden diese Meldungen unter dem Abschnitt **[!UICONTROL Ergebnis]** angezeigt. Wenn während der Bearbeitung eines Arbeitsauftrags ein Problem auftritt, werden alle relevanten Fehlermeldungen in diesem Abschnitt angezeigt, um Ihnen bei der Fehlersuche zu helfen. Weitere Informationen finden Sie im Handbuch zur Datenlebenszyklus-Benutzeroberfläche."
 
 Wählen Sie die ID eines aufgelisteten Arbeitsauftrags aus, um dessen Details anzuzeigen.
 
