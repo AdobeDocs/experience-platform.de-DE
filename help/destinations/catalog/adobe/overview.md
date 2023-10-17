@@ -1,12 +1,12 @@
 ---
-keywords: Ziele; Experience Cloud-Lösungen; Zielgruppe; Zielbestimmung; Adcloud; Werbe-Cloud; Audience Manager; Adobe Target-Ziel; Zielgruppe; Audience Manager-Ziel;
+keywords: Ziele; Experience Cloud-Lösungen; Target; Target; Ad Cloud; Advertising Cloud; Zielgruppen-Manager; Adobe Target; Ziel; Zielgruppen-Manager-Ziel;
 title: Adobe-Ziele – Übersicht
 description: Verwalten Sie Ihr Kundenerlebnis, indem Sie Ihre Daten in Platform mit anderen Adobe Experience Cloud-Lösungen für Anzeigen-Targeting, Personalisierung, Marketing-Automatisierung und mehr verbinden.
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 461545b7d06a4c54fb4037cf1eb2ba44dd6ee7b9
 workflow-type: tm+mt
-source-wordcount: '234'
-ht-degree: 32%
+source-wordcount: '231'
+ht-degree: 33%
 
 ---
 
@@ -35,7 +35,6 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 
 * [Adobe Advertising Cloud-Erweiterung](../advertising/adobe-advertising-cloud.md)
 * [Adobe Analytics-Erweiterung](../analytics/adobe-analytics.md)
-* [Adobe Livefyre-Erweiterung](../social/adobe-livefyre.md)
 * [Adobe Media Analytics für Audio und Video-Erweiterung](../analytics/adobe-video-analytics.md)
 * [Adobe Target-Erweiterung](../personalization/adobe-target.md)
 * [Adobe Target v2-Erweiterung](../personalization/adobe-target-v2.md)
@@ -45,7 +44,7 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 * [Marketo Munchkin-Erweiterung](../email/marketo-munchkin.md)
 * [Marketo Web-Personalisierungserweiterung](../personalization/marketo-web-personalization.md)
 
-## Freigabe von Experience Platform-Zielgruppen
+## Zielgruppenfreigabe in Experience Platform
 
 Verwenden Sie die Experience Platform-Zielgruppenfreigabe, um Ihre Experience Platform-Zielgruppen für zusätzliche Adobe-Ziele freizugeben. Weitere Informationen finden Sie auf der folgenden Seite (wird im Audience Manager-Dokumentationsportal geöffnet):
 
