@@ -1,13 +1,13 @@
 ---
 title: Sandboxes-Tooling
 description: Exportieren und importieren Sie nahtlos Sandbox-Konfigurationen zwischen Sandboxes.
-source-git-commit: 900cb35f6cb758f145904666c709c60dc760eff2
+exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
+source-git-commit: 0aaba1d1ae47908ea92e402b284438accb4b4731
 workflow-type: tm+mt
-source-wordcount: '1619'
+source-wordcount: '1821'
 ht-degree: 9%
 
 ---
-
 
 # [!BADGE Beta] Sandbox-Tools
 
@@ -21,21 +21,23 @@ ht-degree: 9%
 
 Verbessern der Konfigurationsgenauigkeit über Sandboxes hinweg und nahtloser Export und Import von Sandbox-Konfigurationen zwischen Sandboxes mit der Sandbox-Tool-Funktion. Verwenden Sie Sandbox-Tools, um die Wertschöpfungszeit für den Implementierungsprozess zu reduzieren und erfolgreiche Konfigurationen über Sandboxes hinweg zu verschieben.
 
-Sie können die Sandbox-Tool-Funktion verwenden, um verschiedene Objekte auszuwählen und sie in ein Paket zu exportieren. Ein Paket kann aus einem einzelnen Objekt, mehreren Objekten oder einer gesamten Sandbox bestehen. Alle Objekte, die in einem Paket enthalten sind, müssen aus derselben Sandbox stammen.
+Sie können die Sandbox-Tool-Funktion verwenden, um verschiedene Objekte auszuwählen und sie in ein Paket zu exportieren. Ein Paket kann aus einem oder mehreren Objekten bestehen. <!--or an entire sandbox.-->Alle Objekte, die in einem Paket enthalten sind, müssen aus derselben Sandbox stammen.
 
 ## Für Sandbox-Tools unterstützte Objekte {#supported-objects}
 
-In der folgenden Tabelle sind Objekte aufgeführt, die derzeit für die Sandbox-Werkzeuge unterstützt werden:
+Die Sandbox-Tool-Funktion bietet Ihnen die Möglichkeit, [!DNL Adobe Real-Time Customer Data Platform] und [!DNL Adobe Journey Optimizer] Objekte in ein Paket.
 
-| Plattform | Objekt |
-| --- | --- |
-| [!DNL Adobe Journey Optimizer] | Journeys |
-| Kundendatenplattform | Quellen |
-| Kundendatenplattform | Segmente |
-| Kundendatenplattform | Identitäten |
-| Kundendatenplattform | Richtlinien |
-| Kundendatenplattform | Schemata |
-| Kundendatenplattform | Datensätze |
+### Real-time Customer Data Platform-Objekte {#real-time-cdp-objects}
+
+In der folgenden Tabelle sind die [!DNL Adobe Real-Time Customer Data Platform] Objekte, die derzeit für Sandbox-Tools unterstützt werden:
+
+| Plattform | Objekt | Details |
+| --- | --- | --- |
+| Kundendatenplattform | Quellen | Die Anmeldeinformationen des Quellkontos werden aus Sicherheitsgründen nicht in der Ziel-Sandbox repliziert und müssen daher manuell aktualisiert werden. Der Quelldataflow wird standardmäßig in den Entwurfsstatus kopiert. |
+| Kundendatenplattform | Zielgruppen | Nur die **[!UICONTROL Kundenzielgruppe]** type **[!UICONTROL Segmentierungsdienst]** wird unterstützt. Vorhandene Beschriftungen für die Zustimmung und Governance werden im selben Importauftrag kopiert. |
+| Kundendatenplattform | Identitäten | Das System dedupliziert beim Erstellen in der Ziel-Sandbox automatisch Adobe-Standard-Identitäts-Namespaces. Zielgruppen können nur kopiert werden, wenn alle Attribute in Zielgruppenregeln im Vereinigungsschema aktiviert sind. Die erforderlichen Schemata müssen zunächst verschoben und für ein einheitliches Profil aktiviert werden. |
+| Kundendatenplattform | Schemata | Vorhandene Beschriftungen für die Zustimmung und Governance werden im selben Importauftrag kopiert. Der einheitliche Profilstatus des Schemas wird unverändert aus der Quell-Sandbox kopiert. Wenn das Schema in der Quell-Sandbox für ein einheitliches Profil aktiviert ist, werden alle Attribute in das Vereinigungsschema verschoben. Die Edge-Groß-/Kleinschreibung für Schemabeziehungen ist nicht im Paket enthalten. |
+| Kundendatenplattform | Datensätze | Datensätze werden kopiert, wobei die Einstellung für das einheitliche Profil standardmäßig deaktiviert ist. |
 
 Die folgenden Objekte werden importiert, befinden sich jedoch im Status Entwurf oder deaktiviert :
 
@@ -43,16 +45,31 @@ Die folgenden Objekte werden importiert, befinden sich jedoch im Status Entwurf 
 | --- | --- | --- |
 | Importstatus | Datenfluss der Quelle | Entwurf |
 | Importstatus | Journey | Entwurf |
-| Unified Profile | Schema | Deaktiviert |
-| Unified Profile | Datensatz | Deaktiviert |
-| Richtlinien | Einverständnisrichtlinien | Deaktiviert |
+| Unified Profile | Datensatz | Einheitliches Profil deaktiviert |
 | Richtlinien | Data Governance-Richtlinien | Deaktiviert |
 
-Die im Folgenden aufgeführten Edge-Fälle sind nicht im Paket enthalten:
+### Adobe Journey Optimizer-Objekte {#abobe-journey-optimizer-objects}
 
-* Schemabeziehungen
+In der folgenden Tabelle sind die [!DNL Adobe Journey Optimizer] -Objekte, die derzeit für Sandbox-Tools und -Einschränkungen unterstützt werden:
+
+| Plattform | Objekt | Details |
+| --- | --- | --- |
+| [!DNL Adobe Journey Optimizer] | Zielgruppe | Eine Audience kann als abhängiges Objekt des Journey-Objekts kopiert werden. Sie können eine neue Zielgruppe erstellen oder eine vorhandene in der Ziel-Sandbox wiederverwenden. |
+| [!DNL Adobe Journey Optimizer] | Schema | Die im Journey verwendeten Schemata können als abhängige Objekte kopiert werden. Sie können ein neues Schema erstellen oder ein vorhandenes Schema in der Ziel-Sandbox wiederverwenden. |
+| [!DNL Adobe Journey Optimizer] | Nachricht | Die im Journey verwendeten Nachrichten können als abhängige Objekte kopiert werden. Die in den Journey-Feldern verwendeten Kanalaktionsaktivitäten, die zur Personalisierung in der Nachricht verwendet werden, werden nicht auf Vollständigkeit überprüft. Inhaltsbausteine werden nicht kopiert. |
+| [!DNL Adobe Journey Optimizer] | Journey – Details der Arbeitsfläche | Die Darstellung der Journey auf der Arbeitsfläche umfasst die Objekte in der Journey, wie z. B. Bedingungen, Aktionen, Ereignisse, Leseregistanzen usw., die kopiert werden. Die Sprungaktivität ist von der Kopie ausgeschlossen. |
+| [!DNL Adobe Journey Optimizer] | Ereignis | Die auf der Journey verwendeten Ereignisse und Ereignisdetails werden kopiert. Es wird immer eine neue Version in der Ziel-Sandbox erstellt. |
+| [!DNL Adobe Journey Optimizer] | Aktion | Die in der Journey verwendeten Aktionen und Aktionsdetails werden kopiert. Es wird immer eine neue Version in der Ziel-Sandbox erstellt. |
+
+Oberflächen (z. B. Vorgaben) werden nicht kopiert. Das System wählt basierend auf dem Nachrichtentyp und dem Oberflächennamen automatisch die nächstmögliche Übereinstimmung in der Ziel-Sandbox aus. Wenn keine Oberflächen in der Ziel-Sandbox gefunden werden, schlägt die Oberflächenkopie fehl, was dazu führt, dass die Nachrichtenkopie fehlschlägt, da für eine Nachricht eine Oberfläche zur Einrichtung verfügbar sein muss. In diesem Fall muss mindestens eine Fläche für den rechten Kanal der Nachricht erstellt werden, damit die Kopie funktioniert.
+
+Benutzerdefinierte Identitätstypen werden beim Exportieren einer Journey nicht als abhängige Objekte unterstützt.
 
 ## Objekte in ein Package exportieren {#export-objects}
+
+>[!NOTE]
+>
+>Alle Exportaktionen werden in den Prüfprotokollen aufgezeichnet.
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_exit_package"
@@ -120,6 +137,10 @@ Sie kehren zum **[!UICONTROL Pakete]** im [!UICONTROL Sandboxes] Umgebung, in de
 
 ## Importieren eines Pakets in eine Ziel-Sandbox {#import-package-to-target-sandbox}
 
+>[!NOTE]
+>
+>Alle Importaktionen werden in den Prüfprotokollen aufgezeichnet.
+
 Um das Paket in eine Ziel-Sandbox zu importieren, navigieren Sie zu den Sandboxes . **[!UICONTROL Durchsuchen]** und wählen Sie das Pluszeichen (+) neben dem Sandbox-Namen aus.
 
 ![Die Sandboxes **[!UICONTROL Durchsuchen]** -Tab, der die Auswahl des Importpakets markiert.](../images/ui/sandbox-tooling/browse-sandboxes.png)
@@ -148,41 +169,47 @@ Sie kehren zum [!UICONTROL Paketobjekt und Abhängigkeiten] Seite. Wählen Sie v
 
 ![Die [!UICONTROL Paketobjekt und Abhängigkeiten] Seite zeigt eine Liste der im Paket enthaltenen Assets, die hervorgehoben werden [!UICONTROL Beenden].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
 
-## Exportieren und Importieren einer gesamten Sandbox
-
-### Gesamte Sandbox exportieren {#export-entire-sandbox}
-
-Um eine gesamte Sandbox zu exportieren, navigieren Sie zum [!UICONTROL Sandboxes] **[!UICONTROL Pakete]** Registerkarte und wählen Sie **[!UICONTROL Package erstellen]**.
-
-![Die [!UICONTROL Sandboxes] **[!UICONTROL Pakete]** Tabulatorhervorhebung [!UICONTROL Package erstellen].](../images/ui/sandbox-tooling/create-sandbox-package.png)
-
-Auswählen **[!UICONTROL Gesamte Sandbox]** für den Pakettyp im [!UICONTROL Package erstellen] angezeigt. Stellen Sie eine [!UICONTROL Paketname] und wählen Sie die **[!UICONTROL Sandbox]** aus dem Dropdown-Menü aus. Wählen Sie abschließend **[!UICONTROL Erstellen]** um Ihre Einträge zu bestätigen.
-
-![Die [!UICONTROL Package erstellen] Dialogfeld mit ausgefüllten Feldern und Markierung [!UICONTROL Erstellen].](../images/ui/sandbox-tooling/create-package-dialog.png)
-
-Das Paket wurde erfolgreich erstellt, wählen Sie **[!UICONTROL Veröffentlichen]** um das Paket zu veröffentlichen.
-
-![Liste der Sandbox-Pakete, die das neue veröffentlichte Paket hervorheben.](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
-
-Sie kehren zum **[!UICONTROL Pakete]** im [!UICONTROL Sandboxes] Umgebung, in der das neue veröffentlichte Paket angezeigt wird.
-
-### Importieren des gesamten Sandbox-Pakets {#import-entire-sandbox-package}
-
-Um das Paket in eine Ziel-Sandbox zu importieren, navigieren Sie zum [!UICONTROL Sandboxes] **[!UICONTROL Durchsuchen]** und wählen Sie das Pluszeichen (+) neben dem Sandbox-Namen aus.
-
-![Die Sandboxes **[!UICONTROL Durchsuchen]** -Tab, der die Auswahl des Importpakets markiert.](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
-
-Wählen Sie über das Dropdown-Menü die vollständige Sandbox mithilfe der **[!UICONTROL Paketname]** Dropdown. Hinzufügen eines optionalen **[!UICONTROL Auftragsname]**, der für die künftige Überwachung verwendet wird, wählen Sie **[!UICONTROL Nächste]**.
-
-![Auf der Seite mit den Importdetails wird die [!UICONTROL Paketname] Dropdown-Auswahl](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
+<!--
+## Export and import an entire sandbox 
 
 >[!NOTE]
 >
->Beim Import einer gesamten Sandbox werden alle Objekte aus dem Package als neu erstellt. Die Objekte werden nicht im [!UICONTROL Paketobjekt und Abhängigkeiten] Seite, da es mehrere sein kann. Es wird eine Inline-Meldung angezeigt, die Hinweise zu nicht unterstützten Objekttypen enthält.
+>All export and import actions are recorded in the audit logs.
 
-Sie werden zum [!UICONTROL Paketobjekt und Abhängigkeiten] -Seite, auf der Sie die Anzahl der Objekte und Abhängigkeiten sehen können, die importiert und ausgeschlossen werden. Wählen Sie von hier aus **[!UICONTROL Import]** , um den Package-Import abzuschließen.
+### Export an entire sandbox {#export-entire-sandbox}
 
-![Die [!UICONTROL Paketobjekt und Abhängigkeiten] Seite zeigt die Inline-Meldung der nicht unterstützten Objekttypen an, Hervorhebung [!UICONTROL Import].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
+To export an entire sandbox, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab and select **[!UICONTROL Create package]**.
+
+![The [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab highlighting [!UICONTROL Create package].](../images/ui/sandbox-tooling/create-sandbox-package.png)
+
+Select **[!UICONTROL Entire sandbox]** for the Type of package in the [!UICONTROL Create package] dialog. Provide a [!UICONTROL Package name] for your package and select the **[!UICONTROL Sandbox]** from the dropdown. Finally, select **[!UICONTROL Create]** to confirm your entries.
+
+![The [!UICONTROL Create package] dialog showing completed fields and highlighting [!UICONTROL Create].](../images/ui/sandbox-tooling/create-package-dialog.png)
+
+The package is created successfully, select **[!UICONTROL Publish]** to publish the package.
+
+![List of sandbox packages highlighting the new published package.](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
+
+You are returned to the **[!UICONTROL Packages]** tab in the [!UICONTROL Sandboxes] environment, where you can see the new published package.
+
+### Import the entire sandbox package {#import-entire-sandbox-package}
+
+To import the package into a target sandbox, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Browse]** tab and select the plus (+) option beside the sandbox name.
+
+![The sandboxes **[!UICONTROL Browse]** tab highlighting the import package selection.](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
+
+Using the dropdown menu, select the full sandbox using the **[!UICONTROL Package name]** dropdown. Add an optional **[!UICONTROL Job name]**, which will be used for future monitoring, then select **[!UICONTROL Next]**.
+
+![The import details page showing the [!UICONTROL Package name] dropdown selection](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
+
+>[!NOTE]
+>
+>All objects are created as new from the package when importing an entire sandbox. The objects are not listed in the [!UICONTROL Package object and dependencies] page, as there can be multiples. An inline message is displayed, advising of object types that are not supported.
+
+You are taken to the [!UICONTROL Package object and dependencies] page where you can see the number of objects and dependencies that are imported and excluded objects. From here, select **[!UICONTROL Import]** to complete the package import.
+
+ ![The [!UICONTROL Package object and dependencies] page shows the inline message of object types not supported, highlighting [!UICONTROL Import].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
+-->
 
 ## Importvorgänge überwachen und Importobjektdetails anzeigen
 
