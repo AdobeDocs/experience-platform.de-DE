@@ -1,13 +1,13 @@
 ---
 title: Übersicht über berechnete Attribute
 description: Berechnete Attribute sind Funktionen zum Aggregieren von Daten auf Ereignisebene in Profilattributen. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können.
-source-git-commit: 7ed473750b673eefd84b8d727043ad6ea35c3a8e
+exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
+source-git-commit: 03f1dfab768e98ef4959d605cc3ead25bb5eb238
 workflow-type: tm+mt
-source-wordcount: '1059'
-ht-degree: 10%
+source-wordcount: '1140'
+ht-degree: 12%
 
 ---
-
 
 # Übersicht über berechnete Attribute
 
@@ -56,7 +56,7 @@ Mit berechneten Attributen können Sie Ereignis-Aggregate auf Self-Service-Weise
 
 ### Lookback-Zeiträume
 
-Berechnete Attribute werden in Stapeln berechnet, sodass Aggregate frisch bleiben und die neuesten Ereignisse verwendet werden. Um diese nahezu Echtzeit-Szenarien zu unterstützen, variiert die Aktualisierungshäufigkeit je nach dem Ereignis-Lookback-Zeitraum.
+Berechnete Attribute werden in Stapeln berechnet, sodass Aggregate frisch bleiben und die neuesten Ereignisse verwendet werden. Um diese Szenarien mit minimaler Verzögerung zu unterstützen, variiert die Aktualisierungshäufigkeit je nach dem Ereignis-Lookback-Zeitraum.
 
 Der Lookback-Zeitraum bezieht sich auf die Zeit, die beim Aggregieren von Erlebnisereignissen für das berechnete Attribut geprüft wird. Dieser Zeitraum kann in Stunden, Tagen, Wochen oder Monaten definiert werden.
 
@@ -73,11 +73,13 @@ Wenn Ihr berechnetes Attribut beispielsweise über einen Lookback-Zeitraum der l
 
 >[!NOTE]
 >
->Sowohl Wochen als auch Monate gelten als **Kalenderwochen** und **Kalendermonate** bei Verwendung in Ereignis-Lookbacks. Die Kalenderwoche beginnt am **Sonntag** und endet auf **Samstag** der Woche.
+>Sowohl Wochen als auch Monate gelten als **Kalenderwochen** und **Kalendermonate** bei Verwendung in Ereignis-Lookbacks. Die Kalenderwoche beginnt am **Sonntag** und endet auf **Samstag** der Woche. Der Kalendermonat beginnt am **first** des Monats und endet am **Letzter Tag** des Monats.
+
+Der Lookback-Zeitraum für berechnete Attribute ist ein **rollierend** Lookback-Zeitraum. Wenn beispielsweise am 15. Oktober um 12 Uhr UTC eine erste Bewertung durchgeführt wird, würde der Lookback-Zeitraum von zwei Wochen alle Ereignisse vom 1. Oktober bis 15. Oktober abrufen, am 22. Oktober in einer Woche aktualisiert und dann alle Ereignisse vom 8. Oktober bis 22. Oktober abrufen.
 
 **Schnelle Aktualisierung** {#fast-refresh}
 
-Mit der schnellen Aktualisierung können Sie Ihre Attribute auf dem neuesten Stand halten. Durch Aktivierung dieser Option können Sie Ihre berechneten Attribute täglich aktualisieren, auch über längere Lookback-Zeiträume, sodass Sie schnell auf Benutzeraktivitäten reagieren können.
+Mit der schnellen Aktualisierung können Sie Ihre Attribute auf dem neuesten Stand halten. Wenn Sie diese Option aktivieren, können Sie Ihre berechneten Attribute täglich aktualisieren, auch über längere Lookback-Zeiträume, sodass Sie schnell auf Benutzeraktivitäten reagieren können.
 
 >[!NOTE]
 >

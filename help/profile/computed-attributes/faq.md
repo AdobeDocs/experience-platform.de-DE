@@ -1,13 +1,13 @@
 ---
 title: Häufig gestellte Fragen zu berechneten Attributen
 description: Hier finden Sie Antworten auf häufig gestellte Fragen zur Verwendung berechneter Attribute.
-source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
+exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
+source-git-commit: 48c728c183d6ad28cd291543a79902b16a247a5a
 workflow-type: tm+mt
-source-wordcount: '870'
-ht-degree: 2%
+source-wordcount: '1092'
+ht-degree: 1%
 
 ---
-
 
 # Häufig gestellte Fragen
 
@@ -25,9 +25,9 @@ Bei berechneten Attributen werden für das Echtzeit-Kundenprofil aktivierte Erle
 
 Alle XDM-Felder in Ihrem Experience Event Vereinigungsschema können zum Erstellen berechneter Attribute verwendet werden.
 
-## Was bedeutet die &quot;letzte Auswertungszeit&quot;?
+## Was bedeuten &quot;letzte Bewertung&quot;und &quot;letzte Auswertung&quot;?
 
-Die letzte Auswertungszeit bedeutet, dass die Ereignisse **before** zu diesem Zeitstempel wurden bei der letzten erfolgreichen Aktualisierung des berechneten Attributs berücksichtigt.
+Die letzte Bewertung bezieht sich auf den Zeitstempel, bis zu dem Ereignisse in der letzten erfolgreichen Ausführung berücksichtigt werden. Der letzte Bewertungsstatus bezieht sich darauf, ob der letzte Bewertungslauf erfolgreich war oder nicht.
 
 ## Kann ich die Aktualisierungshäufigkeit wählen? Wie wird das entschieden?
 
@@ -65,9 +65,25 @@ Berechnete Attribute fördern die Profilanreicherung, indem Sie Ihre Ereignisatt
 
 ## Wie oft werden berechnete Attribute ausgewertet? Bezieht sich dies auf den Zeitplan für die Zielgruppenbewertung?
 
-Berechnete Attribute werden unabhängig vom Segmentierungsplan in Stapeln ausgewertet. Das bedeutet, dass das berechnete Attribut unabhängig vom Segmentierungstyp (Batch-Segmentierung oder Streaming-Segmentierung) nach seinem eigenen Zeitplan (stündlich, täglich, wöchentlich oder monatlich) bewertet wird.
+Berechnete Attribute werden in einer **Batch** Häufigkeit, die **unabhängig** an den Zeitplan Ihrer Zielgruppen-, Ziel- und Journey-Evaluierung. Das bedeutet, dass das berechnete Attribut unabhängig vom Segmentierungstyp (Batch-Segmentierung oder Streaming-Segmentierung) nach seinem eigenen Zeitplan (stündlich, täglich, wöchentlich oder monatlich) bewertet wird.
 
-Wenn die Zielgruppe ausgewertet wird, wird die **latest** Wert des verfügbaren berechneten Attributs.
+Die erste Auswertung Ihres berechneten Attributs erfolgt innerhalb von 24 Stunden nach **Erstellung**. Die nachfolgenden Batch-Auswertungen erfolgen stündlich, täglich, wöchentlich oder monatlich, abhängig vom definierten Lookback-Zeitraum.
+
+Wenn beispielsweise am 9. Oktober um 12:00 Uhr UTC eine erste Bewertung erfolgt, werden die folgenden Bewertungen zu folgenden Zeiten durchgeführt:
+
+- Nächste tägliche Aktualisierung: 12 Uhr UTC am 10. Oktober
+- Nächste wöchentliche Aktualisierung: 12 Uhr UTC am 15. Oktober
+- Nächste monatliche Aktualisierung: 12 Uhr UTC am 1. November
+
+>[!IMPORTANT]
+>
+>Dies ist nur der Fall, wenn die schnelle Aktualisierung **not** aktiviert. Informationen dazu, wie sich der Lookback-Zeitraum ändert, wenn eine schnelle Aktualisierung aktiviert ist, finden Sie im Abschnitt [Bereich für schnelle Aktualisierung](./overview.md#fast-refresh).
+
+Beide **weekly** und **monatlich** Aktualisierungen finden zu Beginn der **Kalenderwoche** (Sonntag der neuen Woche) oder Anfang der **Kalendermonat** (der erste des neuen Monats) im Gegensatz zu genau einer Woche oder einem Monat nach dem ersten Bewertungsdatum.
+
+>[!NOTE]
+>
+>Der berechnete Attributwert lautet **not** unmittelbar nach jedem Testlauf im Profil aktualisiert. Um sicherzustellen, dass der aktualisierte Wert in Ihren Profilen enthalten ist, sollten Sie einen Puffer von einigen Stunden zwischen der Auswertungszeit und der Nutzung berechneter Attribute berücksichtigen. Der Aktualisierungszeitplan für berechnete Attribute lautet **systembestimmt** und **cannot** geändert werden. Weitere Informationen erhalten Sie bei der Adobe-Kundenunterstützung.
 
 ## Wie interagieren berechnete Attribute mit Zielgruppen, die mithilfe der Streaming-Segmentierung ausgewertet werden?
 

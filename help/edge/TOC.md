@@ -5,10 +5,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform Web SDK
 breadcrumb-title: Web SDK-Handbuch
 user-guide-description: Interagieren Sie mit Experience Cloud-Services über das Edge-Netzwerk.
 feature: Web SDK
-source-git-commit: d856630d4c14387ad4d77a915585fe05803878fb
+source-git-commit: f96c0a3b75239681f53ffec6184af64394e37a84
 workflow-type: tm+mt
-source-wordcount: '171'
-ht-degree: 94%
+source-wordcount: '174'
+ht-degree: 93%
 
 ---
 
@@ -51,13 +51,14 @@ ht-degree: 94%
       * [Verwenden der mBox-Drittanbieter-ID](personalization/adobe-target/using-mbox-3rdpartyid.md)
       * [Vergleich der at.js-Bibliothek mit dem Web SDK](personalization/adobe-target/web-sdk-atjs-comparison.md)
       * Analytics for Target (A4T)-Protokollierung {#a4t}
-         * [Überblick](personalization/adobe-target/analytics-logging/overview.md)
-         * [Client-seitig Protokollierung](personalization/adobe-target/analytics-logging/client-side.md)
+         * [Übersicht](personalization/adobe-target/analytics-logging/overview.md)
+         * [Clientseitige Protokollierung](personalization/adobe-target/analytics-logging/client-side.md)
          * [Server-seitige Protokollierung](personalization/adobe-target/analytics-logging/server-side.md)
    * Offer Decisioning {#offer-decisioning}
       * [Übersicht](personalization/offer-decisioning/offer-decisioning-overview.md)
    * Adobe Journey Optimizer {#ajo}
       * [Übersicht](personalization/ajo/overview.md)
+      * [Implementierung von Einzelseitenanwendungen](personalization/ajo/web-spa-implementation.md)
 * Einverständnis {#consent}
    * [Unterstützen von Zustimmung](consent/supporting-consent.md)
    * IAB-Transparenz und -Einverständnis – Framework 2.0 {#iab-tcf}
