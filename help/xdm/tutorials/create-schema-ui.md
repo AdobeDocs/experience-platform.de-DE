@@ -5,9 +5,9 @@ title: Erstellen eines Schemas mit dem Schema-Editor.
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Erstellen eines Schemas mit dem Schema Editor in Experience Platform beschrieben.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: bf3099afadd6c8807060a6796cb6f37471478b44
+source-git-commit: ff49189d6f3331db5b7853be36afe0bb6176916f
 workflow-type: tm+mt
-source-wordcount: '4619'
+source-wordcount: '4632'
 ht-degree: 82%
 
 ---
@@ -201,7 +201,7 @@ Für jedes Feld sind die folgenden Informationen erforderlich:
 * **[!UICONTROL Typ]:** Der Datentyp des Felds. Dazu gehören grundlegende Skalartypen und alle Datentypen, die in der [!DNL Schema Registry] definiert sind. Beispiele: [!UICONTROL Zeichenfolge], [!UICONTROL Ganzzahl], [!UICONTROL Boolescher Wert], [!UICONTROL Person], [!UICONTROL Adresse], [!UICONTROL Telefonnummer] usw.
 * **[!UICONTROL Beschreibung]:** Eine optionale Beschreibung des Felds mit maximal 200 Zeichen sollte enthalten sein.
 
-Das erste Feld für das `loyaltyTier`-Objekt ist eine Zeichenfolge mit der Bezeichnung `id`, die die ID der aktuellen Stufe des Mitglieds des Treueprogramms darstellt. Die Stufen-ID ist für jedes Mitglied des Treueprogramms eindeutig, da dieses Unternehmen für jede Kundin und jeden Kunden basierend auf verschiedenen Faktoren unterschiedliche Punkteschwellenwerte für die Treuestufe festlegt. Wenn Sie den Typ des neuen Felds auf „[!UICONTROL Zeichenfolge]“ festgelegt haben, werden im Fenster **[!UICONTROL Feldeigenschaften]** verschiedene Optionen zum Anwenden von Einschränkungen angezeigt, darunter „Standardwert“, „Format“ und „Maximale Länge“.
+Das erste Feld für das `loyaltyTier`-Objekt ist eine Zeichenfolge mit der Bezeichnung `id`, die die ID der aktuellen Stufe des Mitglieds des Treueprogramms darstellt. Die Stufen-ID ist für jedes Mitglied des Treueprogramms eindeutig, da dieses Unternehmen für jede Kundin und jeden Kunden basierend auf verschiedenen Faktoren unterschiedliche Punkteschwellenwerte für die Treuestufe festlegt. Wenn Sie den Typ des neuen Felds auf „[!UICONTROL Zeichenfolge]“ festgelegt haben, werden im Fenster **[!UICONTROL Feldeigenschaften]** verschiedene Optionen zum Anwenden von Einschränkungen angezeigt, darunter „Standardwert“, „Format“ und „Maximale Länge“. Siehe die Dokumentation unter [Best Practices für Datenvalidierungsfelder](../schema/best-practices.md#data-validation-fields) , um mehr zu erfahren.
 
 ![Der Schema Editor mit den Feldeigenschaftswerten für das neue ID-Feld hervorgehoben.](../images/tutorials/create-schema/string-constraints.png)
 

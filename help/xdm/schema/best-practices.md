@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Best Practices für die Datenmodellierung
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemata und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemata, die in Adobe Experience Platform verwendet werden können.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
-workflow-type: ht
-source-wordcount: '2709'
-ht-degree: 100%
+source-git-commit: 4e87471dcfc99ff70a0d91245821e7f974973b49
+workflow-type: tm+mt
+source-wordcount: '3044'
+ht-degree: 88%
 
 ---
 
@@ -228,6 +228,16 @@ Bei Adobe Analytics ist ECID die standardmäßige primäre Identität. Wenn ein 
 >[!IMPORTANT]
 >
 >Bei Verwendung von Feldergruppen für Adobe-Anwendungen sollten keine anderen Felder als primäre Identität markiert werden. Wenn es zusätzliche als Identitäten zu markierende Eigenschaften gibt, müssen diese Felder stattdessen als sekundäre Identitäten zugewiesen werden.
+
+## Datenvalidierungsfelder {#data-validation-fields}
+
+Um zu verhindern, dass unnötige Daten in Platform aufgenommen werden, sollten Sie beim Erstellen Ihrer Schemas die Kriterien für die Validierung auf Feldebene definieren. Um Einschränkungen für ein bestimmtes Feld festzulegen, wählen Sie das Feld im Schema-Editor aus, um die [!UICONTROL Feldeigenschaften] Seitenleiste. Siehe die Dokumentation unter [Typspezifische Feldeigenschaften](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/overview.html?lang=en#type-specific-properties) für genaue Beschreibungen der verfügbaren Felder.
+
+![Der Schema Editor mit den Einschränkungsfeldern, die im [!UICONTROL Feldeigenschaften] Seitenleiste.](../images/best-practices/data-validation-fields.png)
+
+>[!TIP]
+>
+>Im Folgenden finden Sie eine Sammlung von Vorschlägen zur Datenmodellierung bei der Erstellung eines Schemas:<br><ul><li>**Primäre Identitäten berücksichtigen**: Bei Adobe-Produkten wie Web SDK, Mobile SDK, Adobe Analytics und Adobe Journey Optimizer wird die `identityMap` -Feld dient oft als primäre Identität. Vermeiden Sie die Benennung zusätzlicher Felder als primäre Identitäten für dieses Schema.</li><li>**Vermeiden von `_id` als Identität**: Vermeiden Sie die Verwendung der `_id` -Feld in Experience Event-Schemas als Identität. Sie ist für die Eindeutigkeit von Datensätzen und nicht zur Verwendung als Identität gedacht.</li><li>**Festlegen von Längenbeschränkungen**: Es empfiehlt sich, Mindest- und Höchstlängen für Felder festzulegen, die als Identitäten gekennzeichnet sind. Diese Einschränkungen tragen zur Gewährleistung von Konsistenz und Datenqualität bei.</li><li>**Anwenden von Mustern für konsistente Werte**: Wenn Ihre Identitätswerte einem bestimmten Muster entsprechen, sollten Sie die [!UICONTROL Muster] -Einstellung, um diese Einschränkung zu erzwingen. Diese Einstellung kann Regeln wie nur Ziffern, Groß- oder Kleinbuchstaben oder bestimmte Zeichenkombinationen enthalten. Verwenden Sie reguläre Ausdrücke, um Muster in Ihren Zeichenfolgen abzugleichen.</li><li>**Beschränken von eVars im Analytics-Schema**: In der Regel sollte für ein Analytics-Schema nur ein eVar als Identität benannt sein. Wenn Sie mehr als eine eVar als Identität verwenden möchten, sollten Sie überprüfen, ob die Datenstruktur optimiert werden kann.</li><li>**Eindeutigkeit eines ausgewählten Felds gewährleisten**: Ihr ausgewähltes Feld sollte im Vergleich zur primären Identität im Schema eindeutig sein. Ist dies nicht der Fall, markieren Sie es nicht als Identität. Wenn beispielsweise mehrere Kunden dieselbe E-Mail-Adresse angeben können, ist dieser Namespace keine geeignete Identität. Dieses Prinzip gilt auch für andere Identitäts-Namespaces wie Telefonnummern.</li></ul>
 
 ## Nächste Schritte
 
