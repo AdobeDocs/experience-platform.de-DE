@@ -3,7 +3,7 @@ title: Identity Service und Echtzeit-Kundenprofil
 description: Informationen zur Beziehung zwischen Identity Service und Echtzeit-Kundenprofil
 hide: true
 hidefromtoc: true
-source-git-commit: 03228eef47100096e98666966c4e5065eb7f478a
+source-git-commit: 026f0dee203dd9d7f23d3343025665313692efbe
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 1%
@@ -14,14 +14,14 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Auf dieser Seite wird davon ausgegangen, dass die Zusammenführungsrichtlinie das Identitätsdiagramm verwendet. Weitere Informationen zu Zusammenführungsrichtlinien im Echtzeit-Kundenprofil finden Sie in der Dokumentation unter [Zusammenführungsrichtlinien und Identitätszusammenfügung].
+>Auf dieser Seite wird davon ausgegangen, dass die Zusammenführungsrichtlinie das Identitätsdiagramm verwendet. Weitere Informationen zu Zusammenführungsrichtlinien im Echtzeit-Kundenprofil finden Sie in der Dokumentation unter [Zusammenführungsrichtlinien und Identitätszusammenfügung](../../profile/merge-policies/overview.md#identity-stitching).
 
 Sie können Identity Service und Echtzeit-Kundenprofil zwar gemeinsam verwenden, aber die beiden Funktionen von Adobe Experience Platform sind von Natur aus nicht identisch.
 
 * Sie können Identity Service verwenden, um das Identitätsdiagramm zu generieren und zu verwalten, das die unterschiedlichen Identitäten eines einzelnen Kunden zusammenführt.
 * Sie können Echtzeit-Kundenprofil verwenden, um verschiedene Profilfragmente zusammenzuführen und ein zusammengeführtes Profil zu erstellen. Dieser Prozess erfordert die Verwendung des Identitätsdiagramms.
 
-In diesem Dokument werden die Ähnlichkeiten, Unterschiede und Beziehungen zwischen Identity Service und Echtzeit-Kundenprofil beschrieben.
+In diesem Dokument werden die Ähnlichkeiten, Unterschiede und die Beziehung zwischen Identity Service und Echtzeit-Kundenprofil beschrieben.
 
 ## Identity Service und Echtzeit-Kundenprofil
 
