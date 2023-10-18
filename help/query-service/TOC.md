@@ -4,10 +4,10 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
 breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
-source-git-commit: a74ec87c27d3db3bcd8d0a5075a593535e3c4de1
+source-git-commit: 6c3c5e3a87773f9f58a5d61bd4bef19f4cdc2e96
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 99%
+source-wordcount: '311'
+ht-degree: 90%
 
 ---
 
@@ -29,6 +29,13 @@ ht-degree: 99%
       - [Übersicht](data-distiller/derived-attributes/overview.md)
       - [Nahtloser SQL-Fluss](data-distiller/derived-attributes/seamless-sql-flow.md)
       - [Erstellen von dezilbasierten abgeleiteten Attributen](data-distiller/derived-attributes/decile-based-derived-attributes.md)
+   - AI-/ML-Funktions-Pipelines {#ml-feature-pipelines}
+      - [AI-/ML-Funktions-Pipelines](data-distiller/ml-feature-pipelines/overview.md)
+      - [Herstellen einer Verbindung zu Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
+      - [Explorative Datenanalyse](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
+      - [Technische Funktionen für ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
+      - [Daten in ML-Umgebungen exportieren](data-distiller/ml-feature-pipelines/export-data.md)
+      - [End-to-End-Workflow für die Anreicherung der AI-/ML-Datenpipeline](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - Anwendungsfälle {#use-cases}
    - [Abgebrochenes Durchsuchen](use-cases/abandoned-browse.md)
    - [Attributionsanalyse](use-cases/attribution-analysis.md)
