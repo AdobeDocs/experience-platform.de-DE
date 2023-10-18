@@ -4,10 +4,10 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
 breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
-source-git-commit: 6c3c5e3a87773f9f58a5d61bd4bef19f4cdc2e96
+source-git-commit: f9c3e20bdfbf4aa1b206b9efe770e9950fcd62d6
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 90%
+source-wordcount: '308'
+ht-degree: 91%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 90%
       - [Nahtloser SQL-Fluss](data-distiller/derived-attributes/seamless-sql-flow.md)
       - [Erstellen von dezilbasierten abgeleiteten Attributen](data-distiller/derived-attributes/decile-based-derived-attributes.md)
    - AI-/ML-Funktions-Pipelines {#ml-feature-pipelines}
-      - [AI-/ML-Funktions-Pipelines](data-distiller/ml-feature-pipelines/overview.md)
+      - [Übersicht](data-distiller/ml-feature-pipelines/overview.md)
       - [Herstellen einer Verbindung zu Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
       - [Explorative Datenanalyse](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
       - [Technische Funktionen für ML](data-distiller/ml-feature-pipelines/feature-engineering.md)

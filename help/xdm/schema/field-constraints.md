@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; Feldergruppe; Feldergruppe; Feldergruppen; Feldergruppen; Feldergruppen; Datentyp; Datentypen; Datentypen; Datentyp; Datentyp; Schemadesign; Schemadesign; Schemadesign; Zuordnung; Datentyp; Datentyp; Datentyp; Datentyp; Datentyp; Schemata; Schemas; Schemadesign; Map; Map
+keywords: Experience Platform; home; beliebte Themen; Schema; Schema; Feldergruppe; Feldergruppe; Feldergruppen; Feldergruppen; Feldergruppen; Datentyp; Datentypen; Datentypen; Datentyp; Schemadesign; Schemadesign; Datentyp; Datentyp; Datentyp; Datentyp; Schemas; Schema-Design; Map; Map; Map
 solution: Experience Platform
 title: Einschränkungen für XDM-Feldtypen
 description: Eine Referenz für Feldtypbegrenzungen im Experience-Datenmodell (XDM), einschließlich der anderen Serialisierungsformate, denen sie zugeordnet werden können, und wie Sie Ihre eigenen Feldtypen in der API definieren können.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 88caea133bd2bf994587bda5b31cddd22f2c90cb
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 12%
@@ -19,7 +19,7 @@ In Experience-Datenmodell (XDM)-Schemas beschränkt der Typ eines Felds, welche 
 
 Bevor Sie dieses Handbuch verwenden, lesen Sie bitte die [Grundlagen der Schemakomposition](./composition.md) für eine Einführung in XDM-Schemas, Klassen und Schemafeldgruppen.
 
-Wenn Sie Ihre eigenen Feldtypen in der API definieren möchten, wird dringend empfohlen, mit der [Entwicklerhandbuch zur Schema Registry](../api/getting-started.md) , um zu erfahren, wie Sie Feldergruppen und Datentypen erstellen, in die Ihre benutzerdefinierten Felder eingefügt werden. Wenn Sie zur Erstellung Ihrer Schemas die Experience Platform-Benutzeroberfläche verwenden, finden Sie im Handbuch unter [Definieren von Feldern in der Benutzeroberfläche](../ui/fields/overview.md) um zu erfahren, wie Sie Einschränkungen für Felder implementieren, die Sie in benutzerdefinierten Feldergruppen und Datentypen definieren.
+Wenn Sie Ihre eigenen Feldtypen in der API definieren möchten, wird dringend empfohlen, mit der [Entwicklerhandbuch zur Schema Registry](../api/getting-started.md) , um zu erfahren, wie Sie Feldergruppen und Datentypen erstellen, in die Ihre benutzerdefinierten Felder eingefügt werden. Wenn Sie die Experience Platform-Benutzeroberfläche zum Erstellen Ihrer Schemas verwenden, lesen Sie das Handbuch unter [Definieren von Feldern in der Benutzeroberfläche](../ui/fields/overview.md) um zu erfahren, wie Sie Einschränkungen für Felder implementieren, die Sie in benutzerdefinierten Feldergruppen und Datentypen definieren.
 
 ## Basisstruktur und Beispiele {#basic-types}
 
@@ -49,7 +49,7 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td><code>"Platinum"</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL Double]</td>
+      <td>[!UICONTROL Number]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {"type": "number"}</pre>
@@ -60,7 +60,7 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL Long]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 9007199254740991, "Minimum": -9007199254740991 }</pre>
+{ "type": "integer", "maximum": 9007199254740991, "minimum": -9007199254740991 }</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
@@ -68,7 +68,7 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL Integer]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 2147483648, "Minimum": -2147483648 }</pre>
+{ "type": "integer", "maximum": 2147483648, "minimum": -2147483648 }</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
@@ -76,7 +76,7 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL Short]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 32768, "Minimum": -32768 }</pre>
+{ "type": "integer", "maximum": 32768, "minimum": -32768 }</pre>
       </td>
       <td><code>15781</code></td>
     </tr>
@@ -84,7 +84,7 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL Byte]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 128, "Minimum": -128 }</pre>
+{ "type": "integer", "maximum": 128, "minimum": -128 }</pre>
       </td>
       <td><code>90</code></td>
     </tr>
@@ -136,7 +136,7 @@ In den folgenden Abschnitten wird beschrieben, wie die einzelnen XDM-Typen ander
 | XDM-Typ | Parquet | Spark SQL | Java |
 | --- | --- | --- | --- |
 | [!UICONTROL String] | Typ: `BYTE_ARRAY`<br>Anmerkung: `UTF8` | `StringType` | `java.lang.String` |
-| [!UICONTROL Double] | Typ: `DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL Zahl] | Typ: `DOUBLE` | `LongType` | `java.lang.Double` |
 | [!UICONTROL Lang] | Typ: `INT64` | `LongType` | `java.lang.Long` |
 | [!UICONTROL Ganzzahl] | Typ: `INT32`<br>Anmerkung: `INT_32` | `IntegerType` | `java.lang.Integer` |
 | [!UICONTROL Kurz] | Typ: `INT32`<br>Anmerkung: `INT_16` | `ShortType` | `java.lang.Short` |
@@ -153,7 +153,7 @@ In den folgenden Abschnitten wird beschrieben, wie die einzelnen XDM-Typen ander
 | XDM-Typ | Scala | .NET | CosmosDB |
 | --- | --- | --- | --- |
 | [!UICONTROL String] | `String` | `System.String` | `String` |
-| [!UICONTROL Double] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL Zahl] | `Double` | `System.Double` | `Number` |
 | [!UICONTROL Lang] | `Long` | `System.Int64` | `Number` |
 | [!UICONTROL Ganzzahl] | `Int` | `System.Int32` | `Number` |
 | [!UICONTROL Kurz] | `Short` | `System.Int16` | `Number` |
@@ -170,7 +170,7 @@ In den folgenden Abschnitten wird beschrieben, wie die einzelnen XDM-Typen ander
 | XDM-Typ | MongoDB | Aerospike | Protobuf 2 |
 | --- | --- | --- | --- |
 | [!UICONTROL String] | `string` | `String` | `string` |
-| [!UICONTROL Double] | `double` | `Double` | `double` |
+| [!UICONTROL Zahl] | `double` | `Double` | `double` |
 | [!UICONTROL Lang] | `long` | `Integer` | `int64` |
 | [!UICONTROL Ganzzahl] | `int` | `Integer` | `int32` |
 | [!UICONTROL Kurz] | `int` | `Integer` | `int32` |

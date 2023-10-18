@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Best Practices für die Datenmodellierung
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemata und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemata, die in Adobe Experience Platform verwendet werden können.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 4e87471dcfc99ff70a0d91245821e7f974973b49
+source-git-commit: f9c3e20bdfbf4aa1b206b9efe770e9950fcd62d6
 workflow-type: tm+mt
 source-wordcount: '3044'
 ht-degree: 88%
@@ -231,7 +231,7 @@ Bei Adobe Analytics ist ECID die standardmäßige primäre Identität. Wenn ein 
 
 ## Datenvalidierungsfelder {#data-validation-fields}
 
-Um zu verhindern, dass unnötige Daten in Platform aufgenommen werden, sollten Sie beim Erstellen Ihrer Schemas die Kriterien für die Validierung auf Feldebene definieren. Um Einschränkungen für ein bestimmtes Feld festzulegen, wählen Sie das Feld im Schema-Editor aus, um die [!UICONTROL Feldeigenschaften] Seitenleiste. Siehe die Dokumentation unter [Typspezifische Feldeigenschaften](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/overview.html?lang=en#type-specific-properties) für genaue Beschreibungen der verfügbaren Felder.
+Um zu verhindern, dass fehlerhafte Daten in Platform aufgenommen werden, sollten Sie beim Erstellen Ihrer Schemas die Kriterien für die Validierung auf Feldebene definieren. Um Einschränkungen für ein bestimmtes Feld festzulegen, wählen Sie das Feld im Schema-Editor aus, um die [!UICONTROL Feldeigenschaften] Seitenleiste. Siehe die Dokumentation unter [Typspezifische Feldeigenschaften](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/overview.html?lang=en#type-specific-properties) für genaue Beschreibungen der verfügbaren Felder.
 
 ![Der Schema Editor mit den Einschränkungsfeldern, die im [!UICONTROL Feldeigenschaften] Seitenleiste.](../images/best-practices/data-validation-fields.png)
 
