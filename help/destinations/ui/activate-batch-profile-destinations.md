@@ -4,10 +4,10 @@ title: Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppen aktivieren können, indem Sie sie an profilbasierte Batch-Ziele senden.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a81daa2a929505a934910892a4ad9c73e603ed9b
+source-git-commit: a854960b11cb3e56046dc9541f76c62a7e3f2f10
 workflow-type: tm+mt
-source-wordcount: '3710'
-ht-degree: 64%
+source-wordcount: '3720'
+ht-degree: 63%
 
 ---
 
@@ -413,8 +413,10 @@ Aufgrund einer bekannten Einschränkung können Sie das Fenster **[!UICONTROL Fe
 ![Bildschirmaufzeichnung, die die Problemumgehung für die Zielgruppenzugehörigkeit im Zuordnungsschritt des Aktivierungs-Workflows anzeigt.](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
 
 Dateiexporte variieren auf folgende Weise, je nachdem, ob `segmentMembership.status` ausgewählt ist:
-* Wenn das Feld `segmentMembership.status` ausgewählt ist, enthalten exportierte Dateien in der ersten vollständigen Momentaufnahme die **[!UICONTROL aktiven]** Mitglieder und in nachfolgenden inkrementellen Exporten die **[!UICONTROL aktiven]** und die **[!UICONTROL abgelaufenen]** Mitglieder.
+* Wenn die Variable `segmentMembership.status` ausgewählt ist, enthalten exportierte Dateien **[!UICONTROL Aktiv]** Mitglieder im ersten vollständigen Schnappschuss und neu **[!UICONTROL Aktiv]** und **[!UICONTROL Abgelaufen]** Mitglieder in nachfolgenden inkrementellen Exporten.
 * Wenn die Variable `segmentMembership.status` nicht ausgewählt ist, umfassen exportierte Dateien sowohl in der ersten vollständigen Momentaufnahme als auch in nachfolgenden inkrementellen Exporten nur die **[!UICONTROL aktiven]** Mitglieder.
+
+Mehr dazu [Profil-Exportverhalten für dateibasierte Ziele](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
 
 #### Identitäts-Namespaces derzeit nicht für Exporte auswählbar
 
