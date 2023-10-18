@@ -3,14 +3,19 @@ title: Identity Service-Verknüpfungslogik
 description: Erfahren Sie, wie Identity Service-Links Identitäten verteilen, um eine umfassende Ansicht eines Kunden zu erstellen.
 hide: true
 hidefromtoc: true
-source-git-commit: 03228eef47100096e98666966c4e5065eb7f478a
+badge: Alpha
+source-git-commit: 03e4cd440f8627ad837a31e1c017d0b824cafb04
 workflow-type: tm+mt
-source-wordcount: '774'
-ht-degree: 4%
+source-wordcount: '791'
+ht-degree: 5%
 
 ---
 
 # Verknüpfungslogik für Identity Service
+
+>[!IMPORTANT]
+>
+>Verknüpfungsregeln für Identitätsdiagramme befinden sich derzeit im Alpha. Die Funktion und die Dokumentation können sich ändern.
 
 Eine Verknüpfung zwischen zwei Identitäten wird hergestellt, wenn der Identitäts-Namespace und die Identitätswerte übereinstimmen.
 

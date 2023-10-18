@@ -3,17 +3,21 @@ title: Beispielszenarios für die Konfiguration von Identitätseinstellungen
 description: Erfahren Sie mehr über Beispielszenarien zum Konfigurieren von Identitätseinstellungen.
 hide: true
 hidefromtoc: true
-source-git-commit: bde6c96bf72bb948c149bf5dc8d35591f2586887
+badge: Alpha
+source-git-commit: 03e4cd440f8627ad837a31e1c017d0b824cafb04
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 1%
+source-wordcount: '433'
+ht-degree: 3%
 
 ---
 
 # Beispielszenarien für die Konfiguration von Regeln für die Zuordnung von Identitätsdiagrammen
 
-In diesem Dokument werden Beispielszenarien beschrieben, die Sie bei der Konfiguration von Regeln für die Verknüpfung von Identitätsdiagrammen in Betracht ziehen können.
+>[!IMPORTANT]
+>
+>Verknüpfungsregeln für Identitätsdiagramme befinden sich derzeit im Alpha. Die Funktion und die Dokumentation können sich ändern.
 
+In diesem Dokument werden Beispielszenarien beschrieben, die Sie bei der Konfiguration von Regeln für die Verknüpfung von Identitätsdiagrammen in Betracht ziehen können.
 
 ## Freigegebenes Gerät
 
