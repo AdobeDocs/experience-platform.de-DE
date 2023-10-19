@@ -2,10 +2,10 @@
 title: Verwenden der partnergestützten Besuchererkennung zur Personalisierung von Onsite-Erlebnissen
 description: Erfahren Sie, wie Sie mit der partnergestützten Besuchererkennung personalisierte Onsite-Erlebnisse für Ihre Besucherinnen und Besucher bereitstellen können.
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: de8aeb553066405424711e75480204f6136b52ff
 workflow-type: tm+mt
-source-wordcount: '2548'
-ht-degree: 97%
+source-wordcount: '2580'
+ht-degree: 95%
 
 ---
 
@@ -248,9 +248,13 @@ Geben Sie `interact` in das Suchfeld ein, aktualisieren Sie die Seite, und Sie s
 
 Jetzt können Sie Zielgruppen für die Personalisierung erstellen und aktivieren.
 
-#### Einrichten der Edge-Segmentierung
+#### Erstellen der Zielgruppe und Einrichten der Kantensegmentierung
 
-Richten Sie die [Edge-Segmentierung](/help/segmentation/ui/edge-segmentation.md) ein, sodass die Zielgruppenzugehörigkeit Ihrer Besucherinnen und Besucher beim Besuch Ihrer Web-Eigenschaft in Echtzeit ausgewertet wird.
+Navigieren Sie in der Platform-Benutzeroberfläche zu **[!UICONTROL Kunde]** > **[!UICONTROL Zielgruppen]** und erstellen Sie eine Zielgruppe, um Ihre Website-Besucher zu erfassen.
+
+![Hier erfahren Sie, wie Sie zu Zielgruppen navigieren.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
+
+Sie müssen Ihre Zielgruppe mit [Kantensegmentierung](/help/segmentation/ui/edge-segmentation.md) sodass die Zielgruppenzugehörigkeit Ihrer Besucher in Echtzeit beim Besuch Ihrer Webeigenschaft ausgewertet wird.
 
 Stellen Sie sicher, dass auch eine [„Active-On-Edge“-Zusammenführungsrichtlinie](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) für die Edge-Zielgruppen eingerichtet ist.
 
