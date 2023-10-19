@@ -2,9 +2,9 @@
 title: Datensätze löschen
 description: Erfahren Sie, wie Sie Datensätze in der Benutzeroberfläche von Adobe Experience Platform löschen.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1564'
 ht-degree: 34%
 
 ---
@@ -42,13 +42,13 @@ Der Workflow für die Anforderungserstellung wird angezeigt. Standardmäßig wir
 
 >[!IMPORTANT]
 > 
->Im Rahmen laufender Änderungen zur Verbesserung der Effizienz und zur Senkung der Kosten für Datensatzvorgänge können Organisationen, die in das Delta-Format verschoben wurden, Daten aus dem Identity Service, dem Echtzeit-Kundenprofil und dem Data Lake löschen. Dieser Benutzertyp wird als Delta-migriert bezeichnet. Benutzer von Organisationen, die Delta-migriert wurden, können entweder Datensätze aus einem einzigen Datensatz oder aus allen Datensätzen löschen. Benutzer von Organisationen, die nicht Delta-migriert wurden, können keine Datensätze aus einem einzigen Datensatz oder aus allen Datensätzen löschen, wie in der Abbildung unten dargestellt. Bitte fahren Sie in diesem Fall mit dem [Identitäten bereitstellen](#provide-identities) Abschnitt des Handbuchs.
+>Im Rahmen laufender Änderungen zur Verbesserung der Effizienz und zur Senkung der Kosten für Datensatzvorgänge können Organisationen, die in das Delta-Format verschoben wurden, Daten aus dem Identity Service, dem Echtzeit-Kundenprofil und dem Data Lake löschen. Dieser Benutzertyp wird als Delta-migriert bezeichnet. Benutzer von Organisationen, die Delta-migriert wurden, können entweder Datensätze aus einem einzigen Datensatz oder aus allen Datensätzen löschen. Benutzer von Organisationen, die nicht Delta-migriert wurden, können keine Datensätze aus einem einzigen Datensatz oder aus allen Datensätzen löschen, wie in der Abbildung unten dargestellt. Fahren Sie in diesem Fall mit dem [Identitäten bereitstellen](#provide-identities) Abschnitt des Handbuchs.
 
 ![Der Workflow für die Anfrageerstellung mit dem [!UICONTROL Datensatz löschen] ausgewählt und hervorgehoben.](../images/ui/record-delete/delete-record.png)
 
 ## Auswählen von Datensätzen {#select-dataset}
 
-Im nächsten Schritt wird bestimmt, ob Sie Datensätze aus einem einzigen Datensatz oder aus allen Datensätzen löschen möchten. Wenn diese Option Ihnen nicht zur Verfügung steht, fahren Sie mit dem [Identitäten bereitstellen](#provide-identities) Abschnitt des Handbuchs.
+Im nächsten Schritt wird bestimmt, ob Sie Datensätze aus einem einzigen Datensatz oder aus allen Datensätzen löschen möchten. Wenn diese Option nicht verfügbar ist, fahren Sie mit dem [Identitäten bereitstellen](#provide-identities) Abschnitt des Handbuchs.
 
 Unter dem **[!UICONTROL Datensatzdetails]** verwenden, wählen Sie mit der Optionsschaltfläche zwischen einem bestimmten Datensatz und allen Datensätzen aus. Wenn Sie **[!UICONTROL Datensatz auswählen]** Wählen Sie dann das Datenbanksymbol (![Datenbanksymbol](../images/ui/record-delete/database-icon.png)), um ein Dialogfeld zu öffnen, das eine Liste der verfügbaren Datensätze bereitstellt. Wählen Sie den gewünschten Datensatz aus der Liste aus, gefolgt von **[!UICONTROL Fertig]**.
 
@@ -139,7 +139,7 @@ Nachdem Sie unter **[!UICONTROL Anfrageeinstellungen]** die Identitäten zur Anf
 
 >[!IMPORTANT]
 > 
->Es gibt unterschiedliche Beschränkungen für die Gesamtzahl der eindeutigen Identitätsdatensätze, die jeden Monat gesendet werden können. Diese Beschränkungen basieren auf Ihrem Lizenzvertrag. Organisationen, die alle Editionen von Adobe Real-time Customer Data Platform und Adobe Journey Optimizer erworben haben, können jeden Monat bis zu 100.000 Identitätsdatensätze löschen. Organisationen, die gekauft haben **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** kann jeden Monat bis zu 600.000 Identitätsdatensätze löschen.<br>Mit einer einzelnen Anfrage zum Löschen von Datensätzen über die Benutzeroberfläche können Sie 10.000 IDs gleichzeitig senden. Die [API-Methode zum Löschen von Datensätzen](https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/workorder.html?lang=en#create) ermöglicht die gleichzeitige Übermittlung von 100.000 IDs.
+>Es gibt unterschiedliche Beschränkungen für die Gesamtzahl der eindeutigen Identitätsdatensätze, die jeden Monat gesendet werden können. Diese Beschränkungen basieren auf Ihrem Lizenzvertrag. Organisationen, die alle Editionen von Adobe Real-time Customer Data Platform und Adobe Journey Optimizer erworben haben, können jeden Monat bis zu 100.000 Identitätsdatensätze löschen. Organisationen, die gekauft haben **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** kann jeden Monat bis zu 600.000 Identitätsdatensätze löschen.<br>Mit einer einzelnen Anfrage zum Löschen von Datensätzen über die Benutzeroberfläche können Sie 10.000 IDs gleichzeitig senden. Die [API-Methode zum Löschen von Datensätzen](../api/workorder.md#create) ermöglicht die gleichzeitige Übermittlung von 100.000 IDs.<br>Es empfiehlt sich, bis zu Ihrer ID-Grenze so viele IDs pro Anfrage wie möglich zu senden. Wenn Sie eine große Anzahl von IDs löschen möchten, sollte vermieden werden, ein geringes Volumen oder eine einzelne ID pro Datensatz-Löschanfrage zu senden.
 
 ![Die Anfrageeinstellung [!UICONTROL Name] und [!UICONTROL Beschreibung] Felder mit [!UICONTROL Einsenden] hervorgehoben.](../images/ui/record-delete/submit.png)
 
