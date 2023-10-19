@@ -4,14 +4,34 @@ description: Die neuesten Versionshinweise für Adobe Experience Platform Debugg
 keywords: Debugger;Experience Platform Debugger-Erweiterung;Chrome;Erweiterung;Versionshinweise
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 70abe974aa7f94ea172d7ab90aacaf765b88de0e
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 100%
+source-wordcount: '526'
+ht-degree: 82%
 
 ---
 
 # Versionshinweise zu Adobe Experience Platform Debugger
+
+## Version 1.5.0 - 19. Oktober 2023
+
+### Neue Funktionen
+
+* Zeigt Links zu Eigenschaften, Umgebungen und Regeln in der Zusammenfassung und den Protokollen von Tags an.
+
+### Fehlerbehebungen und Verbesserungen
+
+* Es wurde ein Problem behoben, bei dem keine Tags-Zusammenfassungsdaten gesendet wurden.
+* Es wurde ein Problem behoben, durch das bei Zuverlässigkeitssitzungen ein CORS-Fehler ausgegeben wurde.
+* Es wurde ein Problem behoben, das die Anzeige von Target Trace verhinderte.
+* Die Schaltfläche &quot;Feedback senden&quot;wurde korrigiert.
+* Fehlerkorrektur - Die &quot;Datastream-ID&quot;in der Web SDK-Zusammenfassung für Version ≥ 2.18.0 fehlt nun.
+* Es wurde ein Problem behoben, bei dem Edge-Protokolle nicht durchsuchbar waren.
+* Es wurde ein Hinweis zu zusätzlichen Profilen für bestimmte Kontotypen hinzugefügt.
+
+## Version 1.4.1 - 1. November 2022
+
+* Die Leistung auf Seiten mit vielen Adobe Experience Platform Assurance-Ereignissen wurde verbessert.
 
 ## Version 1.4.0 – 3. Oktober 2022
 
