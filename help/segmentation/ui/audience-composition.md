@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Zielgruppen-Benutzeroberfläche
 description: Die Zielgruppen-Komposition in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Zielgruppen für Ihre Organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
-workflow-type: ht
-source-wordcount: '1767'
-ht-degree: 100%
+source-git-commit: 820ba6c9cedcb85db7ff9bc199a67e56ee628c93
+workflow-type: tm+mt
+source-wordcount: '1780'
+ht-degree: 99%
 
 ---
 
@@ -51,6 +51,10 @@ Wenn Sie den Block **[!UICONTROL Zielgruppen]** auswählen, zeigt die rechte Lei
 So fügen Sie Zielgruppen zum Zielgruppenblock hinzu. Wählen Sie **[!UICONTROL Zielgruppe hinzufügen]** aus.
 
 ![Die Schaltfläche „Zielgruppe hinzufügen“ ist hervorgehoben.](../images/ui/audience-composition/add-audience.png)
+
+>[!IMPORTANT]
+>
+>Bitte beachten Sie, dass **only** Zielgruppen, die mithilfe der standardmäßigen Zusammenführungsrichtlinie definiert wurden, werden angezeigt.
 
 Eine Liste von Zielgruppen wird angezeigt. Wählen Sie die Zielgruppe aus, die Sie einbeziehen möchten, und dann **[!UICONTROL Hinzufügen]**, um sie an Ihren Zielgruppen-Block anzuhängen.
 
