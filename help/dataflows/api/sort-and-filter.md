@@ -2,10 +2,10 @@
 title: Sortieren und Filtern von Antworten in der Flow Service-API
 description: In diesem Tutorial wird die Syntax für das Sortieren und Filtern mithilfe von Abfrageparametern in der Flow Service-API behandelt, einschließlich einiger erweiterter Anwendungsfälle.
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
-source-git-commit: ef8db14b1eb7ea555135ac621a6c155ef920e89a
+source-git-commit: c7ff379b260edeef03f8b47f932ce9040eef3be2
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 4%
+source-wordcount: '863'
+ht-degree: 3%
 
 ---
 
@@ -84,7 +84,7 @@ GET /flows?property=sourceConnectionIds[]==9874984,6980696
 GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.id==5722a16f-5e1f-4732-91b6-3b03943f759a
 ```
 
-**Quellverbindungen mit einer Spalte mit einer bestimmten `name` Wert:**
+**Quellverbindungen zurückgeben, die eine Spalte mit einer bestimmten `name` Wert:**
 
 ```http
 GET /sourceConnections?property=params.columns[].name==firstName
@@ -194,6 +194,58 @@ Je nachdem, welche Flow Service-Entität Sie abrufen, können für die Filterung
 | `state` | `/runs?property=state==inProgress` |
 
 {style="table-layout:auto"}
+
+## Anwendungsfälle {#use-cases}
+
+In diesem Abschnitt finden Sie einige spezifische Beispiele dafür, wie Sie mit Filtern und Sortieren Informationen zu bestimmten Connectoren zurückgeben oder Probleme beheben können. Wenn Sie weitere Anwendungsfälle zum Adobe hinzufügen möchten, verwenden Sie bitte die **[!UICONTROL Detaillierte Feedback-Optionen]** auf der Seite, um eine Anfrage zu senden.
+
+**Filtern, um nur Verbindungen zu einem bestimmten Ziel zurückzugeben**
+
+Sie können Filter verwenden, um nur Verbindungen zu bestimmten Zielen zurückzugeben. Abfragen der `connectionSpecs` Endpunkt wie unten:
+
+```http
+GET /connectionSpecs
+```
+
+Suchen Sie dann nach Ihrer gewünschten `connectionSpec` durch Kontrolle der `name` -Parameter. Suchen Sie beispielsweise nach Amazon Ads, Pega oder SFTP usw. im `name` -Parameter. Die entsprechende `id` ist die `connectionSpec` , nach dem Sie im nächsten API-Aufruf suchen können.
+
+Filtern Sie beispielsweise Ihre Ziele so, dass nur vorhandene Verbindungen zu Amazon S3-Verbindungen zurückgegeben werden:
+
+```http
+GET /connections?property=connectionSpec.id==4890fc95-5a1f-4983-94bb-e060c08e3f81
+```
+
+**Filtern, um nur Datenflüsse an Ziele zurückzugeben**
+
+Bei der Abfrage des `/flows` -Endpunkt verwenden, können Sie einen Filter verwenden, um nicht alle Datenflüsse für Quellen und Ziele zurückzugeben, sondern nur Datenflüsse an Ziele. Verwenden Sie dazu `isDestinationFlow` als Abfrageparameter wie folgt:
+
+```http
+GET /flows?property=inheritedAttributes.properties.isDestinationFlow==true
+```
+
+**Filter zum Zurückgeben von Datenflüssen an eine bestimmte Quelle oder ein bestimmtes Ziel**
+
+Sie können Datenflüsse filtern, um Datenflüsse nur an ein bestimmtes Ziel oder aus einer bestimmten Quelle zurückzugeben. Filtern Sie beispielsweise Ihre Ziele so, dass nur vorhandene Verbindungen zu Amazon S3-Verbindungen zurückgegeben werden:
+
+```http
+GET /flows?property=inheritedAttributes.targetConnections[].connectionSpec.id==4890fc95-5a1f-4983-94bb-e060c08e3f81
+```
+
+**Filtern, um alle Ausführungen eines Datenflusses für einen bestimmten Zeitraum abzurufen**
+
+Sie können Datenfluss-Ausführungen eines Datenflusses filtern, um nur Ausführungen in einem bestimmten Zeitintervall zu betrachten, wie unten dargestellt:
+
+```
+GET /runs?property=flowId==<flow-id>&property=metrics.durationSummary.startedAtUTC>1593134665781&property=metrics.durationSummary.startedAtUTC<1653134665781
+```
+
+**Filtern, um nur fehlgeschlagene Datenflüsse zurückzugeben**
+
+Zu Debugging-Zwecken können Sie alle fehlgeschlagenen Datenfluss-Ausführungen für einen bestimmten Quell- oder Ziel-Datenfluss filtern und anzeigen, wie unten dargestellt:
+
+```http
+GET /runs?property=flowId==<flow-id>&property=metrics.statusSummary.status==Failed
+```
 
 ## Nächste Schritte
 
