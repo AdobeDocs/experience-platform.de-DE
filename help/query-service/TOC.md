@@ -4,9 +4,9 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
 breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
-source-git-commit: f9c3e20bdfbf4aa1b206b9efe770e9950fcd62d6
+source-git-commit: 113e74b3a4783a11bc88dc2d16134b68638604e5
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '311'
 ht-degree: 91%
 
 ---
@@ -108,5 +108,6 @@ ht-degree: 91%
    - [Metadatenbefehle](sql/metadata.md)
    - [Vorbereitete Anweisungen](sql/prepared-statements.md)
 - [Häufig gestellte Fragen](troubleshooting-guide.md)
+- [Zulassungsliste von IP-Adressen](ip-address-allowlist.md)
 - [API-Referenz](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Platform – Versionshinweise](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=de)
