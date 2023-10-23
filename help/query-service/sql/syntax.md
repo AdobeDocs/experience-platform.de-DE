@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-Syntax in Query Service
 description: Dieses Dokument zeigt die von Adobe Experience Platform Query Service unterstützte SQL-Syntax.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 18b8f683726f612a5979ab724067cc9f1bfecbde
+source-git-commit: 67fce2a88b4e75cfb033c6aef40afbca824c9354
 workflow-type: tm+mt
-source-wordcount: '4006'
+source-wordcount: '4134'
 ht-degree: 10%
 
 ---
@@ -375,7 +375,7 @@ DROP VIEW v1
 DROP VIEW IF EXISTS v1
 ```
 
-## Anonymer Block
+## Anonymer Block {#anonymous-block}
 
 Ein anonymer Block besteht aus zwei Abschnitten: ausführbare Dateien und Abschnitte zur Bearbeitung von Ausnahmen. In einem anonymen Baustein ist der Abschnitt &quot;Ausführbare Datei&quot;obligatorisch. Der Abschnitt zur Ausnahmebehandlung ist jedoch optional.
 
@@ -410,6 +410,109 @@ EXCEPTION
     DROP TABLE IF EXISTS tracking_email_id_incrementally;
     SELECT 'ERROR';
 $$END;
+```
+
+### Bedingte Anweisungen in einem anonymen Block {#conditional-anonymous-block-statements}
+
+Die Kontrollstruktur IF-THEN-ELSE ermöglicht die bedingte Ausführung einer Liste von Anweisungen, wenn eine Bedingung als TRUE ausgewertet wird. Diese Kontrollstruktur ist nur innerhalb eines anonymen Blocks verfügbar. Wenn diese Struktur als eigenständiger Befehl verwendet wird, tritt ein Syntaxfehler auf (&quot;Ungültiger Befehl außerhalb des anonymen Blocks&quot;).
+
+Der folgende Codeausschnitt zeigt das richtige Format für bedingte Anweisungen des Typs IF-THEN-ELSE in einem anonymen Block.
+
+```javascript
+IF booleanExpression THEN
+   List of statements;
+ELSEIF booleanExpression THEN 
+   List of statements;
+ELSEIF booleanExpression THEN 
+   List of statements;
+ELSE
+   List of statements;
+END IF
+```
+
+**Beispiel**
+
+Das folgende Beispiel wird ausgeführt `SELECT 200;`.
+
+```sql
+$$BEGIN
+    SET @V = SELECT 2;
+    SELECT @V;
+    IF @V = 1 THEN
+       SELECT 100;
+    ELSEIF @V = 2 THEN
+       SELECT 200;
+    ELSEIF @V = 3 THEN
+       SELECT 300;
+    ELSE    
+       SELECT 'DEFAULT';
+    END IF;   
+
+ END$$;
+```
+
+Diese Struktur kann in Kombination mit `raise_error();` , um eine benutzerdefinierte Fehlermeldung zurückzugeben. Der unten dargestellte Codeblock beendet den anonymen Baustein mit &quot;Benutzerdefinierte Fehlermeldung&quot;.
+
+**Beispiel**
+
+```sql
+$$BEGIN
+    SET @V = SELECT 5;
+    SELECT @V;
+    IF @V = 1 THEN
+       SELECT 100;
+    ELSEIF @V = 2 THEN
+       SELECT 200;
+    ELSEIF @V = 3 THEN
+       SELECT 300;
+    ELSE    
+       SELECT raise_error('custom error message');
+    END IF;   
+
+ END$$;
+```
+
+#### Verschachtelte IF-Anweisungen
+
+Verschachtelte IF-Anweisungen werden in anonymen Bausteinen unterstützt.
+
+**Beispiel**
+
+```sql
+$$BEGIN
+    SET @V = SELECT 1;
+    IF @V = 1 THEN
+       SELECT 100;
+       IF @V > 0 THEN
+         SELECT 1000;
+       END IF;   
+    END IF;   
+
+ END$$; 
+```
+
+#### Ausnahmeblöcke
+
+Ausnahmeblöcke werden in anonymen Blöcken unterstützt.
+
+**Beispiel**
+
+```sql
+$$BEGIN
+    SET @V = SELECT 2;
+    IF @V = 1 THEN
+       SELECT 100;
+    ELSEIF @V = 2 THEN
+       SELECT raise_error(concat('custom-error for v= ', '@V' ));
+
+    ELSEIF @V = 3 THEN
+       SELECT 300;
+    ELSE    
+       SELECT 'DEFAULT';
+    END IF;  
+EXCEPTION WHEN OTHER THEN 
+  SELECT 'THERE WAS AN ERROR';    
+ END$$;
 ```
 
 ### Automatisch in JSON {#auto-to-json}
