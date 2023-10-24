@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;
 solution: Experience Platform
-title: Verbinden der Dateneinstiegszone mit Adobe Experience Platform mithilfe der Flow Service-API
+title: Data Landing Zone über die Flow Service-API mit Adobe Experience Platform verbinden
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Flow Service-API Adobe Experience Platform mit Data Landing Zone verbinden.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 0089aa0d6b765645840e6954c3957282c2ad972b
 workflow-type: tm+mt
-source-wordcount: '1248'
-ht-degree: 19%
+source-wordcount: '1304'
+ht-degree: 18%
 
 ---
 
@@ -103,14 +103,15 @@ curl -X GET \
 
 **Antwort**
 
-Die folgende Antwort gibt die Anmeldeinformationen für Ihre Landingzone zurück, einschließlich Ihrer aktuellen `SASToken` und `SASUri`sowie `storageAccountName` , der Ihrem Landingzone-Container entspricht.
+Die folgende Antwort gibt die Anmeldeinformationen für Ihre Daten-Landingzone zurück, einschließlich Ihrer aktuellen `SASToken`, `SASUri`, `storageAccountName`und das Ablaufdatum.
 
 ```json
 {
     "containerName": "dlz-user-container",
     "SASToken": "sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
     "storageAccountName": "dlblobstore99hh25i3dflek",
-    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D"
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
+    "expiryDate": "2024-01-06"
 }
 ```
 
@@ -119,6 +120,7 @@ Die folgende Antwort gibt die Anmeldeinformationen für Ihre Landingzone zurück
 | `containerName` | Der Name Ihrer Landingzone. |
 | `SASToken` | Das Token für die gemeinsame Zugriffssignatur für Ihre Landingzone. Diese Zeichenfolge enthält alle Informationen, die zum Autorisieren einer Anfrage erforderlich sind. |
 | `SASUri` | Der URI der Freigegebenen Zugriffssignatur für Ihre Landingzone. Diese Zeichenfolge ist eine Kombination aus dem URI für die Landingzone, für die Sie authentifiziert werden, und dem zugehörigen SAS-Token. |
+| `expiryDate` | Das Datum, an dem Ihr SAS-Token abläuft. Sie müssen Ihr Token vor dem Ablaufdatum aktualisieren, um es in Ihrer Anwendung weiterhin zum Hochladen von Daten in die Data Landing Zone verwenden zu können. Wenn Sie Ihr Token nicht vor dem angegebenen Ablaufdatum manuell aktualisieren, wird es automatisch aktualisiert und ein neues Token bereitgestellt, wenn der GET-Anmeldedaten-Aufruf ausgeführt wird. |
 
 
 ## Aktualisieren [!DNL Data Landing Zone] Anmeldeinformationen
@@ -159,11 +161,12 @@ Die folgende Antwort gibt aktualisierte Werte für Ihre `SASToken` und `SASUri`.
     "containerName": "dlz-user-container",
     "SASToken": "sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
     "storageAccountName": "dlblobstore99hh25i3dflek",
-    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D"
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
+    "expiryDate": "2024-01-06"
 }
 ```
 
-## Dateistruktur und Inhalt der Landingzone
+## Dateistruktur und Inhalt der Landingzone durchsuchen
 
 Sie können die Dateistruktur und den Inhalt Ihrer Landingzone durchsuchen, indem Sie eine GET-Anfrage an die `connectionSpecs` Endpunkt der [!DNL Flow Service] API.
 
@@ -314,7 +317,7 @@ Eine erfolgreiche Antwort gibt die Struktur der abgefragten Datei zurück, einsc
 
 ### Verwendung `determineProperties` zur automatischen Erkennung der Dateieigenschaftsinformationen eines [!DNL Data Landing Zone]
 
-Sie können die `determineProperties` Parameter zur automatischen Erkennung von Eigenschafteninformationen des Dateiinhalts Ihrer [!DNL Data Landing Zone] wenn Sie einen GET-Aufruf durchführen, um den Inhalt und die Struktur Ihrer Quelle zu untersuchen.
+Sie können die `determineProperties` Parameter zur automatischen Erkennung von Eigenschafteninformationen des Dateiinhalts Ihrer [!DNL Data Landing Zone] wenn Sie einen GET-Aufruf durchführen, um Inhalt und Struktur Ihrer Quelle zu untersuchen.
 
 #### `determineProperties` Anwendungsfälle
 
@@ -325,7 +328,7 @@ In der folgenden Tabelle werden verschiedene Szenarien beschrieben, auf die Sie 
 | True | K. A. | Wenn `determineProperties` wird als Abfrageparameter bereitgestellt, wird die Erkennung der Dateieigenschaften durchgeführt und die Antwort gibt eine neue `properties` -Schlüssel, der Informationen zum Dateityp, zum Komprimierungstyp und zum Spaltentrennzeichen enthält. |
 | K. A. | True | Wenn die Werte für Dateityp, Komprimierungstyp und Spaltentrennzeichen manuell als Teil von `queryParams`, werden sie zum Generieren des Schemas verwendet und dieselben Eigenschaften werden als Teil der Antwort zurückgegeben. |
 | True | True | Wenn beide Optionen gleichzeitig ausgeführt werden, wird ein Fehler zurückgegeben. |
-| K. A. | K. A. | Wenn keine der beiden Optionen angegeben wird, wird ein Fehler zurückgegeben, da es keine Möglichkeit gibt, Eigenschaften für die Antwort abzurufen. |
+| K. A. | K. A. | Wenn keine der beiden Optionen angegeben wird, wird ein Fehler zurückgegeben, da es nicht möglich ist, Eigenschaften für die Antwort abzurufen. |
 
 **API-Format**
 
@@ -350,7 +353,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Struktur der abgefragten Datei einschließlich Dateinamen und Datentypen sowie eine `properties` Schlüssel, enthält Informationen zu `fileType`, `compressionType`und `columnDelimiter`.
+Eine erfolgreiche Antwort gibt die Struktur der abgefragten Datei einschließlich Dateinamen und Datentypen sowie eine `properties` Schlüssel, enthält Informationen zu `fileType`, `compressionType`, und `columnDelimiter`.
 
 +++Hier klicken
 
@@ -445,7 +448,7 @@ Eine erfolgreiche Antwort gibt die Struktur der abgefragten Datei einschließlic
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `properties.fileType` | Der entsprechende Dateityp der abgefragten Datei. Folgende Dateitypen werden unterstützt: `delimited`, `json`und `parquet`. |
+| `properties.fileType` | Der entsprechende Dateityp der abgefragten Datei. Folgende Dateitypen werden unterstützt: `delimited`, `json`, und `parquet`. |
 | `properties.compressionType` | Der entsprechende Komprimierungstyp, der für die abgefragte Datei verwendet wird. Folgende Komprimierungstypen werden unterstützt: <ul><li>`bzip2`</li><li>`gzip`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
 | `properties.columnDelimiter` | Das entsprechende Spaltentrennzeichen, das für die abgefragte Datei verwendet wird. Jeder einzelne Zeichenwert ist als Spaltentrennzeichen zulässig. Der Standardwert ist ein Komma `(,)`. |
 
