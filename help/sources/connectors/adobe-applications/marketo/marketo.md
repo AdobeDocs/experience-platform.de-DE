@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Marketo Engage; Marketo Interaction; Marketo
+keywords: Experience Platform; home; beliebte Themen; Marketo Engage; marketo engage; marketo
 solution: Experience Platform
 title: Marketo Engage-Connector
-description: Dieses Dokument bietet einen Überblick über den Marketo Engage-Quell-Connector, einschließlich Informationen zur Authentifizierung, Zuordnung und Datenlatenz.
+description: Dieses Dokument bietet einen Überblick über den Quell-Connector von Marketo Engage, einschließlich Informationen zur Authentifizierung, Zuordnung und Datenlatenz.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: f0a3486fc7df7b08a11ec7bfb041841bc2c1c9a3
+source-git-commit: 50b97ebb8496636a0fccd64d57d7829b1342f87c
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 16%
+source-wordcount: '678'
+ht-degree: 15%
 
 ---
 
@@ -70,8 +70,12 @@ In der folgenden Tabelle wird die erwartete Latenz für die [!DNL Marketo Engage
 
 | Ziel | Erwartete Latenz |
 | ----------- | ---------------- |
-| [!DNL Real-Time Customer Profile] | &lt; 1 Minute |
+| [!DNL Real-Time Customer Profile] | &lt; 10 Minuten |
 | Data Lake | &lt; 60 Minuten |
+
+>[!NOTE]
+>
+>Die obigen Latenzzahlen stellen Erwartungen in einem Konfidenzniveau von 95 % dar. Die tatsächlichen Latenzen werden variieren und können in seltenen Fällen um 50 % über diese Zahlen hinausgehen.
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
