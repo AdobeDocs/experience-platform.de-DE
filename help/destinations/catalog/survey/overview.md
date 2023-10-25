@@ -3,9 +3,9 @@ keywords: Umfrageziele;Umfrage;vorhersehen;intime;Web-Umfragen abfangen;Qualitä
 title: Umfrageziele – Übersicht
 description: Umfrageplattformen erkennen Umfrageereignisse, erfassen Kundenfeedback in Echtzeit über Datenelemente und teilen Daten mit Adobe Experience Platform.
 exl-id: 0358a73b-9f4a-4362-a7ed-e49ece6e5f02
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 57d3e136902201f9ba9bd2f427ebe0f876900671
 workflow-type: tm+mt
-source-wordcount: '95'
+source-wordcount: '100'
 ht-degree: 34%
 
 ---
@@ -19,6 +19,12 @@ Umfrageplattformen erkennen Umfrageereignisse, erfassen Kundenfeedback in Echtze
 ## Unterstützte Umfrageziele {#supported-destinations}
 
 Derzeit unterstützt Platform die unten aufgeführten Umfrageziele. Informationen zum Herstellen einer Verbindung mit diesen Zielen finden Sie unter den einzelnen Links:
+
+**Ziel-Connectoren**
+
+* [Qualtrics Automation](./qualtrics-automations.md)
+
+**Erweiterungen**
 
 * [Foresee-Erweiterung](./foresee.md)
 * [InMoment-Erweiterung](./inmoment.md)

@@ -4,9 +4,9 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: c171d333569a6006d3399ede07d55ce233c166fa
+source-git-commit: 57d3e136902201f9ba9bd2f427ebe0f876900671
 workflow-type: tm+mt
-source-wordcount: '1182'
+source-wordcount: '1185'
 ht-degree: 95%
 
 ---
@@ -186,6 +186,7 @@ ht-degree: 95%
       * [IP-Adressen-Zulassungsliste für Streaming-Ziele](./catalog/streaming/ip-address-allow-list.md)
    * Umfrageziele {#survey}
       * [Umfrageziele – Übersicht](./catalog/survey/overview.md)
+      * [Qualtrics Automation destination](./catalog/survey/qualtrics-automations.md)
       * [Foresee-Erweiterungsziel](./catalog/survey/foresee.md)
       * [InMoment-Erweiterung](./catalog/survey/inmoment.md)
       * [Qualtrics Website Feedback-Erweiterung](./catalog/survey/qualtrics.md)
