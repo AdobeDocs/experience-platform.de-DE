@@ -2,18 +2,14 @@
 title: Sandboxes-Tooling
 description: Exportieren und importieren Sie nahtlos Sandbox-Konfigurationen zwischen Sandboxes.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 1fd523b827a591fdc04ba64a558bc178f242a450
+source-git-commit: 58fcf3cbff242f65969193fd2e3d6eea0e6539aa
 workflow-type: tm+mt
-source-wordcount: '1834'
-ht-degree: 8%
+source-wordcount: '1820'
+ht-degree: 9%
 
 ---
 
-# [!BADGE Beta] Sandbox-Tools
-
->[!IMPORTANT]
->
->Die **Sandbox-Tools** Die unten beschriebene Funktion steht nur zur Auswahl von Beta-Kunden zur Verfügung.
+# Sandbox-Tools
 
 >[!NOTE]
 >
