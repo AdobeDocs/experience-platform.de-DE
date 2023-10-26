@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise von Oktober 2023 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4ab89ef7cabc9d808fd9dab24b6dbe3fe23e53f3
+source-git-commit: ac7597a2e63559f3af91d559dd77f7778c9f27bb
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 45%
+source-wordcount: '766'
+ht-degree: 43%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 45%
 Aktualisierungen vorhandener Funktionen in Experience Platform:
 
 - [Datenerfassung](#data-collection)
+- [Ziele](#destinations)
 - [Sandboxes](#sandboxes)
 - [Segmentierungs-Service](#segmentation)
 - [Quellen](#sources)
@@ -31,6 +32,31 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | Erweiterung | [!DNL Meta] Verbesserung der Konversions-API | Die [Meta Conversions-API](/help/tags/extensions/server/meta/overview.md) -Erweiterung: <ul><li>Integration mit [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): Erstellt eine nahtlose Anmeldung, indem Sie Ihre pixelID und das Zugriffstoken für die Conversions-API-Integration mit Adobe freigeben können.</li><li>Integration mit [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): Ermöglicht die Bereitstellung von Werbung für Personen, die mit höherer Wahrscheinlichkeit eine gewünschte Aktion durchführen und die Aktion mit den gelieferten Anzeigen verknüpfen.</li><li>Integration mit [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): Ermöglicht die Weitergabe der RampID von LiveRamp im Feld CIP, sodass personenbezogene Daten nicht direkt an Partner oder Meta weitergegeben werden müssen. </li></ul> |
 
 Weitere Informationen zur Datenerfassung finden Sie in der [Übersicht der Datenerfassungen](../../tags/home.md).
+
+## Ziele {#destinations}
+
+[!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+
+**Neue oder aktualisierte Ziele** {#new-updated-destinations}
+
+| Ziel | Neu oder aktualisiert | Beschreibung |
+| ----------- |----------------|----------- |
+| [[!DNL MoEngage]](/help/destinations/catalog/mobile-engagement/moengage.md) | Neu | Verwenden Sie das Ziel &quot;Interagieren&quot;, um Ihre Adobe-Daten (Benutzerattribute, Segmente und Ereignisse) in Echtzeit mit MoEngage zu verbinden und zuzuordnen. Kunden können dann auf diese Daten reagieren und personalisierte, zielgerichtete Erlebnisse bereitstellen. |
+| [[!DNL Qualtrics Automations]](/help/destinations/catalog/survey/qualtrics-automations.md) | Neu | Verwenden Sie die Aggregation mehrerer Quellen operativer Daten in Adobe Experience Platform als Eingabe für die Qualtrics Experience ID, um Ihre Kunden besser zu verstehen und zielgerichtete Kontakte zu ermöglichen, um die Lücke im Hinblick auf das Verständnis von Intent-, Emotions- und Erlebnistreibern zu schließen. |
+
+{style="table-layout:auto"}
+
+**Neue oder aktualisierte Funktionen** {#destinations-new-updated-functionality}
+
+| Funktionalität | Beschreibung |
+| ----------- | ----------- |
+| Unterstützung für Hashing-Funktionen in berechneten Feldern | Zusätzlich zu den spezifischen Funktionen für [Exportieren von Arrays](../../destinations/ui/export-arrays-calculated-fields.md) Für Elemente aus einem Array können Sie jetzt zusätzliche [Hashing-Funktionen](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) , um Attribute in den exportierten Dateien zu hash. Folgende Hashing-Funktionen werden unterstützt: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+
+{style="table-layout:auto"}
+
+**Korrekturen und Verbesserungen** {#destinations-fixes-and-enhancements}
+
+Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
 ## Sandboxes {#sandboxes}
 
