@@ -2,10 +2,10 @@
 title: Erstellen einer Azure Blob-Basisverbindung mit der Flow Service-API
 description: Erfahren Sie, wie Sie mit der Flow Service-API eine Verbindung zwischen Adobe Experience Platform und Azure Blob herstellen.
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
-source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
+source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
 workflow-type: tm+mt
-source-wordcount: '711'
-ht-degree: 39%
+source-wordcount: '782'
+ht-degree: 43%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 39%
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
-Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL Azure Blob] (nachstehend &quot;genannt)[!DNL Blob]&quot;) mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+In diesem Tutorial werden Schritte zum Erstellen einer Basisverbindung für [!DNL Azure Blob] (nachstehend &quot;genannt)[!DNL Blob]&quot;) mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
@@ -28,19 +28,35 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 Zur [!DNL Flow Service] , um eine Verbindung mit Ihrer [!DNL Blob] Speicher, müssen Sie Werte für die folgende Verbindungseigenschaft angeben:
 
+>[!BEGINTABS]
+
+>[!TAB Authentifizierung von Verbindungszeichenfolgen]
+
 | Anmeldedaten | Beschreibung |
-| ---------- | ----------- |
-| `connectionString` | Eine Zeichenfolge, die die für die Authentifizierung erforderlichen Autorisierungsinformationen enthält [!DNL Blob] in die Experience Platform. Die [!DNL Blob] Verbindungszeichenfolgenmuster ist: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. Weitere Informationen zu Verbindungszeichenfolgen finden Sie in diesem [!DNL Blob] Dokument auf [Konfigurieren von Verbindungszeichenfolgen](https://docs.microsoft.com/de-de/azure/storage/common/storage-configure-connection-string). |
+| --- | --- |
+| `connectionString` | Eine Zeichenfolge, die die für die Authentifizierung erforderlichen Autorisierungsinformationen enthält [!DNL Blob] auf Experience Platform. Die [!DNL Blob] Verbindungszeichenfolgenmuster ist: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. Weitere Informationen zu Verbindungszeichenfolgen finden Sie in diesem [!DNL Blob] Dokument auf [Konfigurieren von Verbindungszeichenfolgen](https://docs.microsoft.com/de-de/azure/storage/common/storage-configure-connection-string). |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Blob] ist: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
+
+>[!TAB SAS-URI-Authentifizierung]
+
+| Anmeldedaten | Beschreibung |
+| --- | --- |
 | `sasUri` | Der URI für die gemeinsame Zugriffssignatur, den Sie als alternativen Authentifizierungstyp verwenden können, um Ihre [!DNL Blob] -Konto. Die [!DNL Blob] Das SAS-URI-Muster lautet: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` Weitere Informationen finden Sie in diesem [!DNL Blob] Dokument auf [URIs für freigegebene Zugriffssignatur](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication). |
 | `container` | Der Name des Containers, für den Sie Zugriff festlegen möchten. Beim Erstellen eines neuen Kontos mit dem [!DNL Blob] -Quelle können Sie einen Containernamen bereitstellen, um den Benutzerzugriff auf den Unterordner Ihrer Wahl anzugeben. |
 | `folderPath` | Der Pfad zu dem Ordner, auf den Sie Zugriff gewähren möchten. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Blob] ist: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
+
+>[!ENDTABS]
 
 ### Verwenden von Platform-APIs
 
 Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Erstellen einer Basisverbindung
+
+>[!TIP]
+>
+>Nach der Erstellung können Sie den Authentifizierungstyp eines [!DNL Blob] Basisverbindung. Um den Authentifizierungstyp zu ändern, müssen Sie eine neue Basisverbindung erstellen.
 
 Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
@@ -63,6 +79,8 @@ POST /connections
 >[!TAB Verbindungszeichenfolge]
 
 Die folgende Anfrage erstellt eine Basisverbindung für [!DNL Blob] Verwenden der auf einer Verbindungszeichenfolge basierenden Authentifizierung:
+
++++Anfrage
 
 ```shell
 curl -X POST \
@@ -95,11 +113,26 @@ curl -X POST \
 | `auth.params.connectionString` | Die Verbindungszeichenfolge, die für den Zugriff auf Daten in Ihrem Blob-Speicher erforderlich ist. Das Muster der Blob-Verbindungszeichenfolge lautet: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
 | `connectionSpec.id` | Die Blob Storage-Verbindungsspezifikations-ID lautet: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
++++
+
++++Antwort
+
+Bei einer erfolgreichen Antwort werden Details zu der neu erstellten Basisverbindung zurückgegeben, einschließlich ihrer eindeutigen Kennung (`id`). Diese ID ist im nächsten Schritt erforderlich, um eine Quellverbindung zu erstellen.
+
+```json
+{
+    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
+    "etag": "\"1700c57b-0000-0200-0000-5e3b3f440000\""
+}
+```
+
++++
+
 >[!TAB SAS-URI-Authentifizierung]
 
-So erstellen Sie eine [!DNL Blob] Blob-Verbindung mithilfe des URI für die gemeinsame Zugriffssignatur erstellen, eine POST-Anfrage an die [!DNL Flow Service] API bei der Bereitstellung von Werten für Ihre [!DNL Blob] `sasUri`.
+So erstellen Sie eine [!DNL Blob] Verbindung mithilfe des URI für die freigegebene Zugriffssignatur erstellen, eine POST-Anfrage an die [!DNL Flow Service] API bei der Bereitstellung von Werten für Ihre [!DNL Blob] `sasUri`.
 
-Die folgende Anfrage erstellt eine Basisverbindung für [!DNL Blob] Verwendung des URI für die Signatur des freigegebenen Zugriffs:
++++Anfrage
 
 ```shell
 curl -X POST \
@@ -132,9 +165,9 @@ curl -X POST \
 | `auth.params.connectionString` | Der SAS-URI, der für den Zugriff auf Daten in Ihrer [!DNL Blob] Speicher. Die [!DNL Blob] Das SAS-URI-Muster lautet: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>`. |
 | `connectionSpec.id` | Die [!DNL Blob] Speicherverbindungsspezifikations-ID lautet: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
->[!ENDTABS]
++++
 
-**Antwort**
++++Antwort
 
 Bei einer erfolgreichen Antwort werden Details zu der neu erstellten Basisverbindung zurückgegeben, einschließlich ihrer eindeutigen Kennung (`id`). Diese ID ist im nächsten Schritt erforderlich, um eine Quellverbindung zu erstellen.
 
@@ -144,6 +177,10 @@ Bei einer erfolgreichen Antwort werden Details zu der neu erstellten Basisverbin
     "etag": "\"1700c57b-0000-0200-0000-5e3b3f440000\""
 }
 ```
+
++++
+
+>[!ENDTABS]
 
 ## Nächste Schritte
 

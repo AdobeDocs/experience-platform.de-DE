@@ -3,10 +3,10 @@ title: Erstellen einer Google PubSub-Quellverbindung mit der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit einem Google PubSub-Konto verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
+source-git-commit: a826bda356a7205f3d4c0e0836881530dbaaf54e
 workflow-type: tm+mt
-source-wordcount: '996'
-ht-degree: 65%
+source-wordcount: '1153'
+ht-degree: 59%
 
 ---
 
@@ -31,13 +31,26 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 Um [!DNL Flow Service] mit [!DNL PubSub] zu verbinden, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
+>[!BEGINTABS]
+
+>[!TAB Projektbasierte Authentifizierung]
+
 | Anmeldedaten | Beschreibung |
-| ---------- | ----------- |
+| --- | --- |
 | `projectId` | Die zur Authentifizierung von [!DNL PubSub] erforderliche Projekt-ID. |
+| `credentials` | Die zum Authentifizieren erforderliche Berechtigung [!DNL PubSub]. Sie müssen sicherstellen, dass Sie die vollständige JSON-Datei platzieren, nachdem Sie die Leerzeichen aus Ihren Anmeldedaten entfernt haben. |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen im Zusammenhang mit der Erstellung der Basis- und Quell-Target-Verbindungen. Die Spezifikations-ID der [!DNL PubSub]-Verbindung lautet: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+
+>[!TAB Themen- und Abonnement-basierte Authentifizierung]
+
+| Anmeldedaten | Beschreibung |
+| --- | --- |
 | `credentials` | Die zum Authentifizieren erforderliche Berechtigung [!DNL PubSub]. Sie müssen sicherstellen, dass Sie die vollständige JSON-Datei platzieren, nachdem Sie die Leerzeichen aus Ihren Anmeldedaten entfernt haben. |
 | `topicName` | Der Name der Ressource, die einen Feed von Nachrichten darstellt. Sie müssen einen Themennamen angeben, wenn Sie Zugriff auf einen bestimmten Datenstrom in Ihrer [!DNL PubSub] -Quelle. Das Format des Themennamens lautet: `projects/{PROJECT_ID}/topics/{TOPIC_ID}`. |
 | `subscriptionName` | Der Name Ihres [!DNL PubSub] Abonnement. In [!DNL PubSub], können Sie über Abonnements Nachrichten empfangen, indem Sie sich für das Thema anmelden, in dem Nachrichten veröffentlicht wurden. **Hinweis**: Eine einzelne [!DNL PubSub] Abonnements können nur für einen Datenfluss verwendet werden. Um mehrere Datenflüsse erstellen zu können, müssen Sie über mehrere Abonnements verfügen. Das Format des Abonnementnamens lautet: `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen im Zusammenhang mit der Erstellung der Basis- und Quell-Target-Verbindungen. Die Spezifikations-ID der [!DNL PubSub]-Verbindung lautet: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+
+>[!ENDTABS]
 
 Weitere Informationen zu diesen Werten finden Sie in diesem Dokument zur [[!DNL PubSub] Authentifizierung](https://cloud.google.com/pubsub/docs/authentication). Informationen zur Verwendung der auf Service-Konten basierenden Authentifizierung finden Sie in diesem [[!DNL PubSub] Handbuch zum Erstellen von Service-Konten](https://cloud.google.com/docs/authentication/production#create_service_account) in den Schritten zum Erstellen von Anmeldedaten.
 
@@ -50,6 +63,10 @@ Weitere Informationen zu diesen Werten finden Sie in diesem Dokument zur [[!DNL 
 Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Erstellen einer Basisverbindung
+
+>[!TIP]
+>
+>Nach der Erstellung können Sie den Authentifizierungstyp eines [!DNL Google PubSub] Basisverbindung. Um den Authentifizierungstyp zu ändern, müssen Sie eine neue Basisverbindung erstellen.
 
 Der erste Schritt beim Erstellen einer Quellverbindung besteht darin, Ihre [!DNL PubSub]-Quelle zu authentifizieren und eine Basisverbindungs-ID zu generieren. Mittels einer Basisverbindungs-ID können Sie Dateien aus Ihrer Quelle durchsuchen, zwischen Dateien innerhalb der Quelle navigieren und bestimmte Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu Datentypen und Formaten.
 
@@ -67,11 +84,13 @@ Die [!DNL PubSub] -Quelle können Sie den Zugriffstyp angeben, den Sie während 
 POST /connections
 ```
 
-**Anfrage**
-
 >[!BEGINTABS]
 
 >[!TAB Projektbasierte Authentifizierung]
+
+Um eine Basisverbindung mit projektbasierter Authentifizierung zu erstellen, stellen Sie eine POST-Anfrage an die `/connections` -Endpunkt und geben Sie Ihre `projectId` und `credentials` im Anfrageinhalt.
+
++++Anfrage
 
 ```shell
 curl -X POST \
@@ -104,7 +123,26 @@ curl -X POST \
 | `auth.params.credentials` | Die zur Authentifizierung von [!DNL PubSub] erforderlichen Anmeldeinformationen bzw. der Schlüssel. |
 | `connectionSpec.id` | Die [!DNL PubSub]-Verbindungsspezifikations-ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
+++++
+
++++Antwort
+
+Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, einschließlich ihrer eindeutigen Kennung (`id`). Diese Basisverbindungs-ID wird im nächsten Schritt benötigt, um eine Quellverbindung zu erstellen.
+
+```json
+{
+    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
+    "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
+}
+```
+
+++++
+
 >[!TAB Themen- und Abonnement-basierte Authentifizierung]
+
+Wenn Sie eine Basisverbindung mit der themenbezogenen und Abonnement-basierten Authentifizierung erstellen möchten, stellen Sie eine POST-Anfrage an die `/connections` -Endpunkt und geben Sie Ihre `credentials`, `topicName`, und `subscriptionName` im Anfrageinhalt.
+
++++Anfrage
 
 ```shell
 curl -X POST \
@@ -139,9 +177,9 @@ curl -X POST \
 | `auth.params.subscriptionName` | Projekt-ID und Abonnement-ID-Paar für die [!DNL PubSub] -Quelle, auf die Sie Zugriff gewähren möchten. |
 | `connectionSpec.id` | Die [!DNL PubSub]-Verbindungsspezifikations-ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
->[!ENDTABS]
++++
 
-**Antwort**
++++Antwort
 
 Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, einschließlich ihrer eindeutigen Kennung (`id`). Diese Basisverbindungs-ID wird im nächsten Schritt benötigt, um eine Quellverbindung zu erstellen.
 
@@ -151,6 +189,11 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, ei
     "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
 }
 ```
+
+++++
+
+>[!ENDTABS]
+
 
 ## Erstellen einer Quellverbindung {#source}
 

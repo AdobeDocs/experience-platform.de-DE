@@ -2,16 +2,16 @@
 title: Erstellen einer SFTP-Quellverbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine SFTP-Quellverbindung erstellen.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
+source-git-commit: e92471b386b857fc21947d352f1c1b88431c68bc
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '820'
 ht-degree: 23%
 
 ---
 
 # Erstellen Sie eine [!DNL SFTP] Quellverbindung in der Benutzeroberfläche
 
-In diesem Tutorial werden Schritte zum Erstellen eines [!DNL SFTP] Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche.
+In diesem Tutorial werden die Schritte zum Erstellen eines [!DNL SFTP] Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche.
 
 ## Erste Schritte
 
@@ -53,7 +53,7 @@ Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirms
 
 Unter dem [!UICONTROL Cloud-Speicher] category, select **[!UICONTROL SFTP]** und wählen Sie **[!UICONTROL Daten hinzufügen]**.
 
-![Der Experience Platform Sources-Katalog mit der ausgewählten SFTP-Quelle.](../../../../images/tutorials/create/sftp/catalog.png)
+![Der Experience Platform-Quellkatalog mit der ausgewählten SFTP-Quelle.](../../../../images/tutorials/create/sftp/catalog.png)
 
 Die **[!UICONTROL Verbindung zu SFTP herstellen]** angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
@@ -65,9 +65,11 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das FTP- oder SFTP-Konto aus,
 
 ### Neues Konto
 
->[!IMPORTANT]
+>[!TIP]
 >
->SFTP unterstützt einen OpenSSH-Schlüssel vom Typ RSA oder DSA. Stellen Sie sicher, dass der Inhalt Ihrer Schlüsseldatei mit `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` und endet mit `"-----END [RSA/DSA] PRIVATE KEY-----"`. Wenn es sich bei der privaten Schlüsseldatei um eine PPK-Datei handelt, verwenden Sie das PuTTY-Tool, um von PPK in das OpenSSH-Format zu konvertieren.
+>* Nach der Erstellung können Sie den Authentifizierungstyp eines [!DNL SFTP] Basisverbindung. Um den Authentifizierungstyp zu ändern, müssen Sie eine neue Basisverbindung erstellen.
+>
+>* SFTP unterstützt einen OpenSSH-Schlüssel vom Typ RSA oder DSA. Stellen Sie sicher, dass der Inhalt Ihrer Schlüsseldatei mit `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` und endet mit `"-----END [RSA/DSA] PRIVATE KEY-----"`. Wenn es sich bei der privaten Schlüsseldatei um eine PPK-Datei handelt, verwenden Sie das PuTTY-Tool, um von PPK in das OpenSSH-Format zu konvertieren.
 
 Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen und eine optionale Beschreibung für Ihre neue [!DNL SFTP] -Konto.
 
@@ -79,13 +81,13 @@ Die [!DNL SFTP] -Quelle unterstützt sowohl einfache Authentifizierung als auch 
 
 >[!TAB Einfache Authentifizierung]
 
-Um die einfache Authentifizierung zu verwenden, wählen Sie **[!UICONTROL Passwort]** und geben Sie dann die Werte für Host und Anschluss an, mit denen eine Verbindung hergestellt werden soll, zusammen mit Ihrem Benutzernamen und Kennwort an. Während dieses Schritts können Sie auch den Pfad zum Unterordner angeben, auf den Sie Zugriff gewähren möchten. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Verbindung mit Quelle herstellen]**.
+Um die einfache Authentifizierung zu verwenden, wählen Sie **[!UICONTROL Passwort]** und geben Sie dann die Werte für Host und Anschluss an, mit denen eine Verbindung hergestellt werden soll, zusammen mit Ihrem Benutzernamen und Kennwort an. Während dieses Schritts können Sie auch den Pfad zum Unterordner angeben, auf den Sie Zugriff gewähren möchten. Wählen Sie zum Abschluss **[!UICONTROL Verbindung mit Quelle herstellen]**.
 
 ![Der Bildschirm für das neue Konto für die SFTP-Quelle mit einfacher Authentifizierung](../../../../images/tutorials/create/sftp/password.png)
 
 >[!TAB Authentifizierung mit öffentlichen SSH-Schlüsseln]
 
-Um die öffentlichen SSH-Schlüsselanmeldeinformationen zu verwenden, wählen Sie **[!UICONTROL Öffentlichen SSH-Schlüssel]**  und geben Sie dann Ihre Host- und Port-Werte sowie Ihren privaten Schlüsselinhalt und Ihre Passphrase-Kombination an. Während dieses Schritts können Sie auch den Pfad zum Unterordner angeben, auf den Sie Zugriff gewähren möchten. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Verbindung mit Quelle herstellen]**.
+Um die öffentlichen SSH-Schlüsselanmeldeinformationen zu verwenden, wählen Sie **[!UICONTROL Öffentlichen SSH-Schlüssel]**  und geben Sie dann Ihre Host- und Port-Werte sowie Ihren privaten Schlüsselinhalt und Ihre Passphrase-Kombination an. Während dieses Schritts können Sie auch den Pfad zum Unterordner angeben, auf den Sie Zugriff gewähren möchten. Wählen Sie zum Abschluss **[!UICONTROL Verbindung mit Quelle herstellen]**.
 
 ![Der neue Kontobildschirm für die SFTP-Quelle mit dem öffentlichen SSH-Schlüssel.](../../../../images/tutorials/create/sftp/ssh.png)
 

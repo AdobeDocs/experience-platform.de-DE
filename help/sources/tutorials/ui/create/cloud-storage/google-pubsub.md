@@ -3,10 +3,10 @@ title: Erstellen eines Quell-Connectors für Google PubSub in der Benutzeroberfl
 description: Erfahren Sie, wie Sie einen Google PubSub-Quell-Connector in der Platform-Benutzeroberfläche erstellen.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
+source-git-commit: 563ad16304894cab1ee1ead06f63a5b3f65c4ec2
 workflow-type: tm+mt
-source-wordcount: '1043'
-ht-degree: 41%
+source-wordcount: '1099'
+ht-degree: 39%
 
 ---
 
@@ -31,12 +31,24 @@ Wenn Sie bereits über eine gültige [!DNL PubSub]-Verbindung verfügen, können
 
 Um eine Verbindung von [!DNL PubSub] mit Platform herzustellen, müssen Sie einen gültigen Wert für die folgenden Anmeldeinformationen angeben:
 
+>[!BEGINTABS]
+
+>[!TAB Projektbasierte Authentifizierung]
+
 | Anmeldedaten | Beschreibung |
-| ---------- | ----------- |
+| --- | --- |
 | Projekt-ID | Die zur Authentifizierung von [!DNL PubSub] erforderliche Projekt-ID. |
+| Anmeldeinformationen | Die zum Authentifizieren erforderliche Berechtigung [!DNL PubSub]. Sie müssen sicherstellen, dass Sie die vollständige JSON-Datei platzieren, nachdem Sie die Leerzeichen aus Ihren Anmeldedaten entfernt haben. |
+
+>[!TAB Themen- und Abonnement-basierte Authentifizierung]
+
+| Anmeldedaten | Beschreibung |
+| --- | --- |
 | Anmeldeinformationen | Die zum Authentifizieren erforderliche Berechtigung [!DNL PubSub]. Sie müssen sicherstellen, dass Sie die vollständige JSON-Datei platzieren, nachdem Sie die Leerzeichen aus Ihren Anmeldedaten entfernt haben. |
 | Themenname | Der Name Ihres [!DNL PubSub] Abonnement. In [!DNL PubSub], können Sie über Abonnements Nachrichten empfangen, indem Sie sich für das Thema anmelden, in dem Nachrichten veröffentlicht wurden. **Hinweis**: Eine einzelne [!DNL PubSub] Abonnements können nur für einen Datenfluss verwendet werden. Um mehrere Datenflüsse erstellen zu können, müssen Sie über mehrere Abonnements verfügen. |
 | Abonnementname | Der Name Ihres [!DNL PubSub] Abonnement. In [!DNL PubSub], können Sie über Abonnements Nachrichten empfangen, indem Sie sich für das Thema anmelden, in dem Nachrichten veröffentlicht wurden. |
+
+>[!ENDTABS]
 
 Weitere Informationen zu diesen Werten finden Sie im folgenden Dokument [PubSub-Authentifizierung](https://cloud.google.com/pubsub/docs/authentication). Wenn Sie die auf dem Service-Account basierende Authentifizierung verwenden, lesen Sie das folgende [PubSub-Handbuch](https://cloud.google.com/docs/authentication/production#create_service_account), in dem die Schritte zum Generieren Ihrer Anmeldeinformationen beschrieben werden.
 
@@ -68,7 +80,8 @@ Um ein vorhandenes Konto zu verwenden, wählen Sie das [!DNL PubSub]-Konto, mit 
 
 >[!TIP]
 >
->Beim Erstellen eines Kontos mit eingeschränktem Zugriff müssen Sie mindestens einen Namen für Ihr Thema oder Ihren Abonnementnamen angeben. Die Authentifizierung schlägt fehl, wenn beide Werte fehlen.
+>* Beim Erstellen eines Kontos mit eingeschränktem Zugriff müssen Sie mindestens einen Namen für Ihr Thema oder Ihren Abonnementnamen angeben. Die Authentifizierung schlägt fehl, wenn beide Werte fehlen.
+>* Nach der Erstellung können Sie den Authentifizierungstyp eines [!DNL Google PubSub] Basisverbindung. Um den Authentifizierungstyp zu ändern, müssen Sie eine neue Basisverbindung erstellen.
 
 Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen und eine optionale Beschreibung für Ihre neue [!DNL PubSub] -Konto.
 
