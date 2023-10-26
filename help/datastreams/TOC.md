@@ -5,10 +5,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Datenströmen
 breadcrumb-title: Handbuch zu Datenströmen
 user-guide-description: Erfahren Sie, wie Sie Datenströme in Adobe Experience Platform erstellen.
 feature: Datastreams
-source-git-commit: 57867a7c78ae7f8100ead278cf901fed63780caa
+source-git-commit: 6423b6a85873c9c767264ca0e29fbebb62a14b34
 workflow-type: tm+mt
-source-wordcount: '45'
-ht-degree: 100%
+source-wordcount: '50'
+ht-degree: 90%
 
 ---
 
@@ -17,6 +17,7 @@ ht-degree: 100%
 
 * [Übersicht über Datenströme](overview.md)
 * [Konfigurieren eines Datenstroms](configure.md)
+* [Konfigurieren der Bot-Erkennung für Datenspeicher](bot-detection.md)
 * [Konfigurieren von Überschreibungen für Datenströme](overrides.md)
 * [Datenvorbereitung für die Datenerfassung](data-prep.md)
 * Datenanreicherung {#data-enrichment}

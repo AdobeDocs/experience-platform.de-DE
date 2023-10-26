@@ -1,16 +1,16 @@
 ---
-title: Konfigurieren eines Datenstroms
+title: Erstellen und Konfigurieren von Datenspeichern
 description: Erfahren Sie, wie Sie Ihre Client-seitige Web SDK-Integration mit anderen Adobe-Produkten und Drittanbieterzielen verbinden.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: db75771d09caef00db58073333909f730a303975
+source-git-commit: d7a0299c5fe3729620e74602ac99459093cc2e28
 workflow-type: tm+mt
-source-wordcount: '2777'
+source-wordcount: '2779'
 ht-degree: 75%
 
 ---
 
 
-# Konfigurieren eines Datenstroms
+# Erstellen und Konfigurieren von Datenspeichern
 
 Dieses Dokument beschreibt die Schritte zum Konfigurieren eines [Datenstroms](./overview.md) in der Benutzeroberfläche.
 
