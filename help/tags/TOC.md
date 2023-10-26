@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Tags
 solution: Data Collection
-source-git-commit: c2baf3d14e57df87303aeadeed90203dcd233242
+source-git-commit: f63d171354e15a23c29c1e579ce816750dea3c97
 workflow-type: tm+mt
-source-wordcount: '1034'
+source-wordcount: '1033'
 ht-degree: 99%
 
 ---
@@ -228,11 +228,13 @@ ht-degree: 99%
          * [Übersicht](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * Google Cloud Platform {#google-cloud-platform}
          * [Übersicht](./extensions/server/google-cloud-platform/overview.md)
+      * [!DNL LinkedIn Conversions API] {#linkedin}
+         * [Übersicht](./extensions/server/linkedin/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
          * [Übersicht](./extensions/server/mailchimp/overview.md)
       * [!DNL Meta Conversions API] {#meta}
          * [Übersicht](./extensions/server/meta/overview.md)
-      * [!UICONTROL Microsoft Azure] {#azure}
+      * [!DNL Microsoft Azure] {#azure}
          * [Übersicht](./extensions/server/azure/overview.md)
       * [!DNL Mixpanel] {#mixpanel}
          * [Übersicht](./extensions/server/mixpanel/overview.md)

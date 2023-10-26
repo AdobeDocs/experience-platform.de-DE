@@ -2,10 +2,10 @@
 title: Konfigurieren von Geheimnissen bei der Ereignisweiterleitung
 description: Erfahren Sie, wie Sie Geheimnisse in der Benutzeroberfläche konfigurieren, um sich bei Endpunkten zu authentifizieren, die in den Eigenschaften der Ereignisweiterleitung verwendet werden.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: a863d65c3e6e330254a58aa822383c0847b0e5f5
+source-git-commit: 592acdd45b1db5da95430b4e707cd9a2c18c1645
 workflow-type: tm+mt
-source-wordcount: '2182'
-ht-degree: 85%
+source-wordcount: '2458'
+ht-degree: 76%
 
 ---
 
@@ -19,6 +19,7 @@ Die folgenden geheimen Typen werden derzeit unterstützt:
 | --- | --- |
 | [!UICONTROL Google OAuth 2] | Enthält mehrere Attribute, um die [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749)-Authentifizierungsspezifikation zur Verwendung in der [Google Ads-API](https://developers.google.com/google-ads/api/docs/oauth/overview) und [Pub/Sub-API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview) zu unterstützen. Das System fordert von Ihnen die erforderlichen Informationen an. Anschließend übernimmt es die Verlängerung dieser Token für Sie in einem bestimmten Intervall. |
 | [!UICONTROL HTTP] | Enthält zwei Zeichenfolgen-Attribute für einen Benutzernamen und ein Kennwort. |
+| [!UICONTROL [!DNL LinkedIn] OAuth 2] | Das System fordert von Ihnen die erforderlichen Informationen an. Anschließend übernimmt es die Verlängerung dieser Token für Sie in einem bestimmten Intervall. |
 | [!UICONTROL OAuth 2] | Enthält mehrere Attribute zur Unterstützung des [Grant-Typs der Client-Anmeldeinformationen](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) für die Authentifizierungsspezifikation [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749). Das System fordert von Ihnen die erforderlichen Informationen an. Anschließend übernimmt es die Verlängerung dieser Token für Sie in einem bestimmten Intervall. |
 | [!UICONTROL OAuth 2 JWT] | Enthält mehrere Attribute zur Unterstützung des JSON Web Token (JWT)-Profils für [OAuth 2.0 Authorization](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) Finanzhilfen. Das System fordert von Ihnen die erforderlichen Informationen an. Anschließend übernimmt es die Verlängerung dieser Token für Sie in einem bestimmten Intervall. |
 | [!UICONTROL Token] | Eine einzelne Zeichenfolge, die den Wert eines Authentifizierungs-Tokens darstellt, der von beiden Systemen verstanden wird. |
@@ -76,6 +77,7 @@ Von hier aus unterscheiden sich die Schritte zum Erstellen der geheimen Daten je
 * [[!UICONTROL OAuth 2]](#oauth2)
 * [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
+* [[!UICONTROL [!DNL LinkedIn] OAuth 2]](#linkedin-oauth2)
 
 ### [!UICONTROL Token] {#token}
 
@@ -175,6 +177,38 @@ Es wird ein Dialogfeld angezeigt, in dem Sie die Anmeldeinformationen für Ihr G
 >Falls für Ihre Organisation eine Richtlinie zur erneuten Authentifizierung für Google Cloud-Anwendungen festgelegt ist, werden die erstellten Geheimnisse nicht erfolgreich aktualisiert, wenn die Authentifizierung abgelaufen ist (je nach Richtlinienkonfiguration zwischen 1 und 24 Stunden).
 >
 >Um dieses Problem zu beheben, melden Sie sich bei der Google Admin Console an und navigieren Sie zur **[!DNL App access control]**-Seite, damit Sie die Ereignisweiterleitungs-App (Adobe Real-Time CDP-Ereignisweiterleitung) als [!DNL Trusted] markieren können. Weitere Informationen finden Sie in der Google-Dokumentation unter [Festlegen von Sitzungslängen für Google Cloud-Services](https://support.google.com/a/answer/9368756).
+
+### [!UICONTROL [!DNL LinkedIn] OAuth 2] {#linkedin-oauth2}
+
+So erstellen Sie eine [!DNL LinkedIn] OAuth 2-Geheimnis, wählen Sie **[!UICONTROL [!DNL LinkedIn]OAuth 2]** aus dem **[!UICONTROL Typ]** Dropdown. Wählen Sie als Nächstes **[!UICONTROL Geheimnis erstellen]**.
+
+![Die [!UICONTROL Geheimnis erstellen] mit dem [!UICONTROL Typ] Feld markiert.](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
+
+Ein Popup erscheint, das Sie darüber informiert, dass das Geheimnis manuell über autorisiert werden muss [!DNL LinkedIn]. Auswählen **[!UICONTROL Geheimnis erstellen und autorisieren mit[!DNL LinkedIn]]** , um fortzufahren.
+
+![[!DNL LinkedIn] Popover-Markierung für Autorisierung [!UICONTROL Geheimnis erstellen und autorisieren mit [!DNL LinkedIn]].](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+
+Es wird ein Dialogfeld angezeigt, in dem Sie zur Eingabe Ihrer [!DNL LinkedIn] Anmeldedaten. Befolgen Sie die Anweisungen, um der Ereignisweiterleitung Zugriff auf Ihre Daten zu gewähren.
+
+Sobald der Autorisierungsprozess abgeschlossen ist, kehren Sie zum **[!UICONTROL Geheimnisse]** -Tab, wo Sie Ihr neu erstelltes Geheimnis sehen können. Hier können Sie den Status des Geheimnisses und das Ablaufdatum sehen.
+
+![Die [!UICONTROL Geheimnis] -Tab, der das neu erstellte Geheimnis hervorhebt.](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
+
+#### Erneutes Autorisieren eines [!UICONTROL [!DNL LinkedIn] OAuth 2] secret
+
+>WICHTIG
+>
+>Sie müssen die Autorisierung mithilfe Ihrer [!DNL LinkedIn] alle 365 Tage. Wenn Sie die Autorisierung nicht rechtzeitig vornehmen, wird Ihr Geheimnis nicht aktualisiert und die Variable [!DNL LinkedIn] Konvertierungsanfragen schlagen fehl.
+
+Drei Monate vor dem Geheimnis, für das eine erneute Autorisierung erforderlich ist, wird ein Popup angezeigt, wenn Sie auf einer Seite der Eigenschaft navigieren. Auswählen **[!UICONTROL Klicken Sie hier, um zu Ihren Geheimnissen zu gelangen.]**.
+
+![Die [!UICONTROL Eigenschaftenübersicht] -Tab, der das geheime Popup zur erneuten Autorisierung hervorhebt.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization-popup.png)
+
+Sie werden zum [!UICONTROL Geheimnisse] Registerkarte. Die auf dieser Seite aufgelisteten Geheimnisse werden gefiltert, um nur die Geheimnisse anzuzeigen, die erneut autorisiert werden müssen. Auswählen **[!UICONTROL Authentifizierungspflicht]** für das Geheimnis, das Sie neu autorisieren müssen.
+
+![Die [!UICONTROL Geheimnis] Tabulatorhervorhebung [!UICONTROL Authentifizierungspflicht]für die [!DNL LinkedIn] geheim.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
+
+Es wird ein Dialogfeld angezeigt, in dem Sie zur Eingabe Ihrer [!DNL LinkedIn] Anmeldedaten. Befolgen Sie die Anweisungen, um Ihr Geheimnis erneut zu autorisieren.
 
 ## Geheime Daten bearbeiten
 
