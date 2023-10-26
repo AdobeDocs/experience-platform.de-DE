@@ -1,11 +1,11 @@
 ---
-title: Bot-Erkennung konfigurieren
-description: Erfahren Sie, wie Sie die Bot-Erkennung für Datastreams konfigurieren.
+title: Konfigurieren der Bot-Erkennung für Datenspeicher
+description: Erfahren Sie, wie Sie die Bot-Erkennung für Datastreams konfigurieren, um menschlichen und nichtmenschlichen Traffic zu unterscheiden.
 hide: true
 hidefromtoc: true
-source-git-commit: 8445d530ca1241d86775ffa7fc49f49cb5a03b72
+source-git-commit: 07b3ff85c1092614a60495e73575907df36d4158
 workflow-type: tm+mt
-source-wordcount: '1353'
+source-wordcount: '1361'
 ht-degree: 0%
 
 ---
