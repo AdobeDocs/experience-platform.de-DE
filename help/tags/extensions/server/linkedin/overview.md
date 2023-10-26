@@ -2,7 +2,7 @@
 title: LinkedIn Conversions API Event Forwarding-Erweiterung
 description: Mit dieser Adobe Experience Platform-Ereignisweiterleitungserweiterung können Sie die Leistung Ihrer LinkedIn-Marketingkampagne messen.
 last-substantial-update: 2023-10-25T00:00:00Z
-source-git-commit: ca65f010cda5d37c40fd57075a26e365c76bdc0b
+source-git-commit: e1ed18aa79abae70974df1845c211a00390ecca4
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 4%
@@ -19,7 +19,7 @@ Sie müssen eine Konversionsregel in Ihrer [!DNL LinkedIn] Kampagnenanzeigenkont
 
 ### Erstellen eines Geheimnisses und eines Datenelements
 
-Erstellen Sie eine neue `LinkedIn` [Ereignisweiterleitungsgeheimnis](../../../ui/event-forwarding/secrets.md) und geben Sie ihm einen eindeutigen Namen, der das authentifizierende Mitglied angibt. Dies wird verwendet, um die Verbindung zu Ihrem Konto zu authentifizieren, während der Wert sicher bleibt.
+Erstellen Sie eine neue [!DNL LinkedIn] [Ereignisweiterleitungsgeheimnis](../../../ui/event-forwarding/secrets.md) und geben Sie ihm einen eindeutigen Namen, der das authentifizierende Mitglied angibt. Dies wird verwendet, um die Verbindung zu Ihrem Konto zu authentifizieren, während der Wert sicher bleibt.
 
 Als Nächstes [Datenelement erstellen](../../../ui/managing-resources/data-elements.md#create-a-data-element) mithilfe der [!UICONTROL Core] Erweiterung und [!UICONTROL Geheimnis] Datenelementtyp zum Referenzieren der `LinkedIn` geheim, das Sie gerade erstellt haben.
 
