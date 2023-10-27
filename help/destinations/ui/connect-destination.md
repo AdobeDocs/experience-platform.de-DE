@@ -4,9 +4,9 @@ title: Erstellen einer neuen Zielverbindung
 type: Tutorial
 description: Erfahren Sie, wie Sie in Adobe Experience Platform eine Verbindung mit einem Ziel herstellen, Warnhinweise aktivieren und Marketing-Aktionen für Ihr verbundenes Ziel einrichten.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
+source-git-commit: 28abc492dc3b2b89c3e79a0531b8d206af1e0590
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1146'
 ht-degree: 77%
 
 ---
@@ -84,9 +84,9 @@ Für dateibasierte Ziele können Sie verschiedene Einstellungen für die Formati
 
 ![Bild, das die Auswahl des Dateityps und verschiedene Optionen für CSV-Dateien zeigt.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### Einrichten der Zielverbindung für die Aktivierung der Zielgruppe, Aktivierung von Interessenten oder Datensatzexporte {#segment-activation-or-dataset-exports}
+### Einrichten der Zielverbindung für die Aktivierung der Zielgruppe, Kontoaktivierung, Aktivierung von Interessenten oder Datensatzexporte {#segment-activation-or-dataset-exports}
 
-Einige dateibasierte Ziele unterstützen die Aktivierung von Zielgruppen für bekannte Kunden oder potenzielle Kunden sowie den Export von Datensätzen. Für diese Ziele können Sie auswählen, ob eine Verbindung erstellt werden soll, über die Sie [Zielgruppen aktivieren](/help/destinations/ui/activate-batch-profile-destinations.md), [Perspektiven](/help/destinations/ui/activate-prospect-audiences.md)oder [Datensätze exportieren](/help/destinations/ui/export-datasets.md).
+Einige dateibasierte Ziele unterstützen die Aktivierung von Zielgruppen für bekannte Kunden, Kontokunden oder Interessenten sowie den Export von Datensätzen. Für diese Ziele können Sie auswählen, ob eine Verbindung erstellt werden soll, über die Sie [Zielgruppen aktivieren](/help/destinations/ui/activate-batch-profile-destinations.md), [Konten](/help/destinations/ui/activate-account-audiences.md), [Perspektiven](/help/destinations/ui/activate-prospect-audiences.md)oder [Datensätze exportieren](/help/destinations/ui/export-datasets.md).
 
 >[!WARNING]
 >

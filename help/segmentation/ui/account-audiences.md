@@ -2,10 +2,10 @@
 title: Kontozielgruppen
 description: Erfahren Sie, wie Sie Zielgruppen für Konten erstellen und verwenden, um Kontoprofile in nachgelagerten Zielen auszuwählen.
 badgeLimitedAvailability: label="Eingeschränkte Verfügbarkeit" type="Caution"
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html"
-source-git-commit: ecc60ec2e7bf2ea02bd721eac1b101b0dc412ba0
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+source-git-commit: 77ba3bd55c2f2ac217612880b83b731919aa14af
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '603'
 ht-degree: 5%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 5%
 
 # Kontozielgruppen
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->Beachten Sie, dass Kontozielgruppen nur im [B2B Edition von Real-time Customer Data Platform](../../rtcdp/b2b-overview.md). Darüber hinaus befindet sich die Funktion für die Zielgruppe von Konten derzeit in **begrenzte Verfügbarkeit**.
+>Kontozielgruppen sind nur im [B2B Edition von Real-time Customer Data Platform](../../rtcdp/b2b-overview.md). Darüber hinaus befindet sich die Funktion für die Zielgruppe von Konten derzeit in **begrenzte Verfügbarkeit**. Wenden Sie sich an die Adobe-Kundenunterstützung oder Ihren Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion anzufordern.
 
 Mit der Kontosegmentierung können Sie mit Adobe Experience Platform die gesamte Einfachheit und Komplexität der Marketing-Segmentierungserfahrung von benutzerbezogenen Zielgruppen zu kontobasierten Zielgruppen bringen.
 
@@ -69,7 +69,7 @@ Wählen Sie die zu aktivierende Audience aus, gefolgt von **[!UICONTROL Auf Ziel
 
 ![Die [!UICONTROL Auf Ziel aktivieren] im Schnellaktionsmenü der ausgewählten Audience hervorgehoben.](../images/ui/account-audiences/activate.png)
 
-Die [!UICONTROL Ziel aktivieren] angezeigt. Weiterführende Informationen zum Aktivierungsprozess, einschließlich Details zu Feld-Mappings, finden Sie im Abschnitt [Aktivierungsübersicht](../../destinations/ui/activation-overview.md).
+Die [!UICONTROL Ziel aktivieren] angezeigt. Weitere Informationen zum Aktivierungsprozess, einschließlich unterstützter Ziele und Details zu Feldzuordnungen, finden Sie im Abschnitt [Kontozielgruppen aktivieren](/help/destinations/ui/activate-account-audiences.md) Tutorial.
 
 ## Nächste Schritte {#next-steps}
 
