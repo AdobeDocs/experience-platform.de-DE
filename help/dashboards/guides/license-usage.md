@@ -4,10 +4,10 @@ title: Lizenznutzungs-Dashboard Handbuch
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen anzeigen können.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: e9c4068419b36da6ffaec67f0d1c39fe87c2bc4c
+source-git-commit: fc0cb582d74f5ab52410991f65aa14ba05df3f97
 workflow-type: tm+mt
-source-wordcount: '1987'
-ht-degree: 9%
+source-wordcount: '2027'
+ht-degree: 8%
 
 ---
 
@@ -119,27 +119,29 @@ Sie können auch **[!UICONTROL Benutzerdefiniertes Datum]** , um den angezeigten
 
 ![Im Dashboard Übersicht zur Lizenznutzung werden die benutzerdefinierten Datumsbereichsoptionen hervorgehoben.](../images/license-usage/custom-date-range.png)
 
-## Verfügbare Metriken
+## Verfügbare Metriken {#available-metrics}
 
 Das Dashboard zur Lizenznutzung enthält Berichte zu verschiedenen eindeutigen Metriken, die für mehrere Produkte in der Organisation gelten. Die verfügbaren Metriken sind:
 
 | Metrik | Beschreibung |
 |---|---|
-| [!UICONTROL Datenexporte] | Die Gesamtgröße der Datensätze, die in einem Jahr (direkt oder indirekt) in eine Nicht-Adobe-Lösung exportiert werden können. |
-| [!UICONTROL Anzahl der AMM-Modelle] | Zählung des maschinellen Lernmodells (integrierter Adobe Mix Modeler), mit dem ein bestimmtes, auf Ihren Investitionen basierendes Ergebnis gemessen und/oder vorhergesagt werden kann. |
-| [!UICONTROL Data Lake-Speicherung] | Die Menge, die für den Analysedatenspeicher in Adobe Experience Platform verwendet wird. |
-| [!UICONTROL Berechnete Attribute] | Die Gesamtanzahl der aggregierten Profilverhaltensdaten. Aggregierte Profilverhaltensdaten basieren auf Erlebnisereignissen, die in ein Profilattribut konvertiert werden und in ein Personenprofil oder ein Geschäftsprofil aufgenommen werden können. |
-| [!UICONTROL Look-alike-Zielgruppen] | Zählung der Zielgruppen, die durch Modellierung einer bestehenden Verbraucherzielgruppe generiert werden, um Personenprofile zu identifizieren, die der vorhandenen Verbraucherzielgruppe ähnlich sind. |
+| [!UICONTROL Audience Activation-Größe] | Die Gesamtgröße der Profile, die in einem Jahr für ein dateibasiertes Ziel aktiviert wurden. Hinweis: Dies umfasst keine Profile, die über Streaming-Ziele gesendet werden. |
 | [!UICONTROL Addressable Audience] | Die Summe der Berechtigungen Ihrer geschäftlichen Zielgruppe und der Berechtigung für die Verbraucher-Zielgruppe. Eine Audience vom Verbraucher wird definiert als die Anzahl der Personenprofile, die in der Bestellung als &quot;Zielgruppe des Verbrauchers&quot;identifiziert werden. Eine Business-Audience ist definiert als die Anzahl der Geschäftspersonenprofile, die in der Bestellung als &quot;Business Audience&quot;identifiziert werden. |
-| [!UICONTROL Anzahl der Sandboxes] | Zählung der logischen Trennungen innerhalb Ihrer Instanz eines Adobe On-Demand-Dienstes, der auf Adobe Experience Platform-Isolationsdaten und -Vorgänge zugreift. |
-| [!UICONTROL Durchschnittliche Profiltiefe] | Die Summe aller im Hub-Profil-Service gespeicherten Produktionsdaten zu einem beliebigen Zeitpunkt, dividiert durch die fünffache Anzahl autorisierter Geschäftspersonenprofile. [!UICONTROL Durchschnittliche Profiltiefe] ist eine freigegebene Funktion. |
-| [!UICONTROL Anzahl der Pakete für Streaming-Segmentierung] | Die Pakete aktualisieren die Segmentzugehörigkeit für ein Personenprofil, wenn neue Daten über einen Streaming-Fluss in den Segmentierungsdienst gelangen. Die Segmentzugehörigkeit wird auf der Grundlage der aktuellen Personenprofilattribute und des Werts des aktuellen Ereignisses ausgewertet, ohne das historische Verhalten zu berücksichtigen. Streaming-Segmentierung ist eine gemeinsame Funktion. |
-| [!UICONTROL Verbraucherzielgruppe] | Die Anzahl der Personenprofile, die in der Bestellung als &quot;Zielgruppe für Verbraucher&quot;identifiziert wurden. |
-| [!UICONTROL Verfügbare CJA-Zeilen] | Die täglichen durchschnittlichen Datenzeilen, die in Customer Journey Analytics zur Analyse verfügbar sind. |
-| [!UICONTROL Profil - Richtigkeit Anzahl der Pakete] | Eine Steigerung der zulässigen durchschnittlichen Profilreichweite pro Profil um 25 KB pro Profil für jedes zusätzliche Profil-Rich-ness-Paket. |
 | [!UICONTROL Adhoc Query Service-Benutzer-Packs] | Ein Add-on zur Erhöhung der Berechtigung für gleichzeitige Query Service-Benutzer um fünf zusätzliche gleichzeitige Query Service-Benutzer und eine zusätzliche gleichzeitige Ausführung von Ad-hoc-Abfragen pro Pack. Es können mehrere zusätzliche Ad Hoc Query User Packs lizenziert sein. |
+| [!UICONTROL Durchschnittliche Profiltiefe] | Die Summe aller im Hub-Profil-Service gespeicherten Produktionsdaten zu einem beliebigen Zeitpunkt, dividiert durch die fünffache Anzahl autorisierter Geschäftspersonenprofile. [!UICONTROL Durchschnittliche Profiltiefe] ist eine freigegebene Funktion. |
+| [!UICONTROL Verfügbare CJA-Zeilen] | Die täglichen durchschnittlichen Datenzeilen, die in Customer Journey Analytics zur Analyse verfügbar sind. |
+| [!UICONTROL Berechnete Attribute] | Die Gesamtanzahl der aggregierten Profilverhaltensdaten. Aggregierte Profilverhaltensdaten basieren auf Erlebnisereignissen, die in ein Profilattribut konvertiert werden und in ein Personenprofil oder ein Geschäftsprofil aufgenommen werden können. |
+| [!UICONTROL Verbraucherzielgruppe] | Die Anzahl der Personenprofile, die in der Bestellung als &quot;Zielgruppe für Verbraucher&quot;identifiziert wurden. |
+| [!UICONTROL Datenexportgröße] | Die Menge der Daten, die durch Datensatzaktivierungen in einem Jahr gesendet werden. |
+| [!UICONTROL Datenexporte] | Die Gesamtgröße der Datensätze, die in einem Jahr (direkt oder indirekt) in eine Nicht-Adobe-Lösung exportiert werden können. |
+| [!UICONTROL Data Lake Storage] | Die Menge, die für den Analysedatenspeicher in Adobe Experience Platform verwendet wird. |
 | [!UICONTROL Interagierbare Zielgruppe] | Diese Metrik bezieht sich auf die Zielgruppe von interagierbaren Profilen. Ein interagierbares Profil ist ein Datensatz mit Informationen, die eine Person repräsentieren und im Profil-Dienst dargestellt werden. Diese Datensätze sind Profile, mit denen Sie in den letzten 12 Monaten mithilfe der Authoring-, Entscheidungs-, Versand-, Experimentierungs- oder Orchestrierungsfunktionen von Journey Optimizer interagiert haben. |
+| [!UICONTROL Look-alike-Zielgruppen] | Zählung der Zielgruppen, die durch Modellierung einer bestehenden Verbraucherzielgruppe generiert werden, um Personenprofile zu identifizieren, die der vorhandenen Verbraucherzielgruppe ähnlich sind. |
+| [!UICONTROL Anzahl der AMM-Modelle] | Zählung des maschinellen Lernmodells (integrierter Adobe Mix Modeler), mit dem ein bestimmtes, auf Ihren Investitionen basierendes Ergebnis gemessen und/oder vorhergesagt werden kann. |
+| [!UICONTROL Anzahl der Sandboxes] | Zählung der logischen Trennungen innerhalb Ihrer Instanz eines Adobe On-Demand-Dienstes, der auf Adobe Experience Platform-Isolationsdaten und -Vorgänge zugreift. |
+| [!UICONTROL Profil - Richtigkeit Anzahl der Pakete] | Eine Steigerung der zulässigen durchschnittlichen Profilreichweite pro Profil um 25 KB pro Profil für jedes zusätzliche Profil-Rich-ness-Paket. |
 | [!UICONTROL Berechnungszeiten für Query Service] | Eine Maßeinheit für die Zeit, die die Query Service-Engines zum Lesen, Verarbeiten und Zurückschreiben von Daten in den Data Lake benötigen, wenn eine Batch-Abfrage ausgeführt wird. |
+| [!UICONTROL Anzahl der Pakete für Streaming-Segmentierung] | Die Pakete aktualisieren die Segmentzugehörigkeit für ein Personenprofil, wenn neue Daten über einen Streaming-Fluss in den Segmentierungsdienst gelangen. Die Segmentzugehörigkeit wird auf der Grundlage der aktuellen Personenprofilattribute und des Werts des aktuellen Ereignisses ausgewertet, ohne das historische Verhalten zu berücksichtigen. Streaming-Segmentierung ist eine gemeinsame Funktion. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 
