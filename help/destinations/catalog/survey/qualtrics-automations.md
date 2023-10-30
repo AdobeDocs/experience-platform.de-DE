@@ -3,13 +3,13 @@ keywords: Streaming, Qualtrics-Ziel
 title: Qualtrics Automation
 description: Synchronisieren Sie Erlebnisse und operative Kundendaten, um die Personalisierung skaliert zu entsperren. Verwenden Sie die Aggregation mehrerer Quellen operativer Daten in Adobe Experience Platform als Input für Qualtrics Experience iD, um Ihre Kunden besser zu verstehen und zielgerichtete Kontakte zu ermöglichen, um die Lücke im Hinblick auf das Verständnis von Intent-, Emotions- und Erlebnistreibern zu schließen.
 last-substantial-update: 2023-10-25T00:00:00Z
-source-git-commit: 57d3e136902201f9ba9bd2f427ebe0f876900671
+exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1149'
 ht-degree: 32%
 
 ---
-
 
 # Qualtrics Automation
 

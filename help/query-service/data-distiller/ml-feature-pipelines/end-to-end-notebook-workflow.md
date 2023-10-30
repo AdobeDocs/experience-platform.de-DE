@@ -3,7 +3,8 @@ title: End-to-End-Workflow für die Anreicherung von AI-/ML-Data Pipeline
 description: Verwenden Sie Cloud-basierte Notebook-Umgebungen für maschinelles Lernen, um eine Schulung zu erstellen und ein Tendenzmodell zu bewerten, das Abonnementkonversionen aus Adobe Experience Platform-Daten vorhersagt.
 hide: true
 hidefromtoc: true
-source-git-commit: 12926f36514d289449cf0d141b5828df3fac37c2
+exl-id: 2853e7c7-cab8-4e1b-b73f-622c937fbbaf
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 0%

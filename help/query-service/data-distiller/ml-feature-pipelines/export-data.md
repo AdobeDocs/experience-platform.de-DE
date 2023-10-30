@@ -1,7 +1,8 @@
 ---
 title: Exportieren von Daten in externe ML-Umgebungen
 description: Erfahren Sie, wie Sie einen vorbereiteten Trainings-Datensatz, der mit Data Distiller erstellt wurde, an einem Cloud-Speicherort freigeben können, den Ihre ML-Umgebung für Schulungen und Auswertungen Ihres Modells lesen kann.
-source-git-commit: a23100e8fbca93f14490e639f05991f06c113b93
+exl-id: 75022acf-fafd-41d6-8dfa-ff3fd4c4fa7e
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 7%

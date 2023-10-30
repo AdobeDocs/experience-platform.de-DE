@@ -2,13 +2,13 @@
 title: Verbindungsverbindung
 description: Moengage ist eine Kundeninteraktionsplattform, die kundenorientierte Interaktionen zwischen Verbrauchern und Marken in Echtzeit ermöglicht.
 last-substantial-update: 2023-10-11T00:00:00Z
-source-git-commit: 6a80089f404057b5c98764b5e0166b9afaf1a7e4
+exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 41%
 
 ---
-
 
 # [!DNL Moengage]-Verbindung
 
@@ -150,4 +150,3 @@ So überprüfen Sie, ob die Daten erfolgreich in die [!DNL Moengage] Ziel, navig
 ## Datennutzung und -Governance {#data-usage-governance}
 
 Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Ausführliche Informationen darüber, wie [!DNL Adobe Experience Platform] Data Governance erzwingt, finden Sie unter [Data Governance - Übersicht](/help/data-governance/home.md).
-

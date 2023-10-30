@@ -3,13 +3,13 @@ title: Konfigurieren der Bot-Erkennung für Datenspeicher
 description: Erfahren Sie, wie Sie die Bot-Erkennung für Datastreams konfigurieren, um menschlichen und nichtmenschlichen Traffic zu unterscheiden.
 hide: true
 hidefromtoc: true
-source-git-commit: 07b3ff85c1092614a60495e73575907df36d4158
+exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1361'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurieren der Bot-Erkennung für Datenspeicher
 
@@ -176,4 +176,3 @@ Die in der folgenden Abbildung dargestellte Regel identifiziert eine Bot-Origin-
 Die Anfrage stammt von einer der beiden IP-Adressen, der `referer` -Kopfzeile beginnt mit `www.adobe.com`und die `sec-ch-ua-mobile` -Kopfzeile identifiziert die Anforderung als von einem Desktop-Browser stammt.
 
 ![Bild der Bot-Erkennungsregel basierend auf mehreren Bedingungen.](assets/bot-detection/bot-detection-multiple.png)
-
