@@ -2,10 +2,10 @@
 title: Vom Kunden verwaltete Schlüssel in Adobe Experience Platform
 description: Erfahren Sie, wie Sie eigene Verschlüsselungsschlüssel für in Adobe Experience Platform gespeicherte Daten einrichten.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: a81c3f220203d65ef810a92896edcfc489a0327a
+source-git-commit: 930c786db51063c55f731dc90f2ee66e98624555
 workflow-type: tm+mt
-source-wordcount: '739'
-ht-degree: 37%
+source-wordcount: '763'
+ht-degree: 36%
 
 ---
 
@@ -18,6 +18,10 @@ In Adobe Experience Platform gespeicherte Daten werden im Ruhezustand mithilfe v
 >Daten in Adobe Experience Platform Data Lake und Profil Store werden mit CMK verschlüsselt. Diese werden als Ihre primären Datenspeicher betrachtet.
 
 Dieses Dokument bietet einen allgemeinen Überblick über den Prozess zur Aktivierung der Funktion für kundenverwaltete Schlüssel (CMK) in Platform und die erforderlichen Informationen zum Ausführen dieser Schritte.
+
+>[!NOTE]
+>
+>Für Customer Journey Analytics-Kunden folgen Sie bitte den Anweisungen im Abschnitt [Customer Journey Analytics-Dokumentation](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=en).
 
 ## Voraussetzungen
 
