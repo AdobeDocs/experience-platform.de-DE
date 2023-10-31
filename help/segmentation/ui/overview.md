@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Segmentierungs-Service
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche Zielgruppen und Segmentdefinitionen erstellen und verwalten.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 695a5c9b39def899c6b1f9cb169508ae0299686c
+source-git-commit: 692cdd3d8b30c3e5187a556e4f9ec80d675cb443
 workflow-type: tm+mt
-source-wordcount: '3822'
-ht-degree: 92%
+source-wordcount: '3910'
+ht-degree: 90%
 
 ---
 
@@ -72,17 +72,17 @@ Neben jeder Zielgruppe befindet sich ein Symbol mit Auslassungspunkten. Wenn Sie
 
 | Aktion | Ursprünge | Beschreibung |
 | ------ | ------- | ----------- |
-| Bearbeiten | Segmentierungs-Service | Ermöglicht Ihnen das Öffnen von Segment Builder zum Bearbeiten Ihrer Zielgruppe. Weitere Informationen zur Verwendung von Segment Builder finden Sie im [Handbuch zur Benutzeroberfläche von Segment Builder](./segment-builder.md). |
-| Offene Komposition | Zielgruppenkomposition | Ermöglicht Ihnen das Öffnen der Zielgruppenkomposition, um Ihre Zielgruppe anzuzeigen. Weitere Informationen zur Komposition von Zielgruppen finden Sie im [Handbuch zur Benutzeroberfläche der Zielgruppenkomposition](./audience-composition.md). |
-| Für Ziel aktivieren | Segmentierungs-Service | Ermöglicht die Aktivierung der Zielgruppe für ein Ziel. Ausführlichere Informationen zur Aktivierung einer Zielgruppe für ein Ziel finden Sie in der [Übersicht zur Aktivierung](../../destinations/ui/activation-overview.md). |
-| Für Partner freigeben | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Ermöglicht die Freigabe Ihrer Zielgruppe für andere Platform-Benutzerinnen und -Benutzer. Weitere Informationen zu dieser Funktion finden Sie in der [Übersicht zu Segmentübereinstimmungen](./segment-match/overview.md). |
-| Verwalten von Tags | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Ermöglicht die Verwaltung der benutzerdefinierten Tags, die zur Zielgruppe gehören. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt zum [Filtern und Tagging](#manage-audiences). |
-| In Ordner verschieben | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Hiermit können Sie verwalten, zu welchem Ordner die Zielgruppe gehört. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt zum [Filtern und Tagging](#manage-audiences). |
-| Kopieren | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Dupliziert die ausgewählte Zielgruppe. |
-| Anwenden von Zugriffsbeschriftungen  | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Ermöglicht die Verwaltung der Zugriffsbeschriftungen, die zur Zielgruppe gehören. Weitere Informationen zu Zugriffsbeschriftungen finden Sie in der Dokumentation zum [Verwalten von Beschriftungen](../../access-control/abac/ui/labels.md). |
-| Archivieren | Benutzerdefinierter Upload | Archiviert die ausgewählte Zielgruppe. |
-| Löschen | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Löscht die ausgewählte Zielgruppe. |
-| Zu Paket hinzufügen | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Hiermit können Sie die Zielgruppe zwischen Sandboxes verschieben. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Sandbox-Werkzeugleitfaden](../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL Vorlage] | Segmentierungs-Service | Ermöglicht Ihnen das Öffnen von Segment Builder zum Bearbeiten Ihrer Zielgruppe. Weitere Informationen zur Verwendung von Segment Builder finden Sie im [Handbuch zur Benutzeroberfläche von Segment Builder](./segment-builder.md). |
+| [!UICONTROL Offene Komposition] | Zielgruppenkomposition | Ermöglicht Ihnen das Öffnen der Zielgruppenkomposition, um Ihre Zielgruppe anzuzeigen. Weitere Informationen zur Komposition von Zielgruppen finden Sie im [Handbuch zur Benutzeroberfläche der Zielgruppenkomposition](./audience-composition.md). |
+| [!UICONTROL Für Ziel aktivieren] | Segmentierungs-Service | Ermöglicht die Aktivierung der Zielgruppe für ein Ziel. Ausführlichere Informationen zur Aktivierung einer Zielgruppe für ein Ziel finden Sie in der [Übersicht zur Aktivierung](../../destinations/ui/activation-overview.md). |
+| [!UICONTROL Für Partner freigeben] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Ermöglicht die Freigabe Ihrer Zielgruppe für andere Platform-Benutzerinnen und -Benutzer. Weitere Informationen zu dieser Funktion finden Sie in der [Übersicht zu Segmentübereinstimmungen](./segment-match/overview.md). |
+| [!UICONTROL Verwalten von Tags] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Ermöglicht die Verwaltung der benutzerdefinierten Tags, die zur Zielgruppe gehören. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt zum [Filtern und Tagging](#manage-audiences). |
+| [!UICONTROL In Ordner verschieben] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Hiermit können Sie verwalten, zu welchem Ordner die Zielgruppe gehört. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt zum [Filtern und Tagging](#manage-audiences). |
+| [!UICONTROL Kopieren] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Dupliziert die ausgewählte Zielgruppe. |
+| [!UICONTROL Anwenden von Zugriffsbeschriftungen ] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Ermöglicht die Verwaltung der Zugriffsbeschriftungen, die zur Zielgruppe gehören. Weitere Informationen zu Zugriffsbeschriftungen finden Sie in der Dokumentation zum [Verwalten von Beschriftungen](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Archivieren] | Benutzerdefinierter Upload | Archiviert die ausgewählte Zielgruppe. |
+| [!UICONTROL Löschen] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Löscht die ausgewählte Zielgruppe. |
+| [!UICONTROL Zu Paket hinzufügen] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Hiermit können Sie die Zielgruppe zwischen Sandboxes verschieben. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Sandbox-Werkzeugleitfaden](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!NOTE]
 >
@@ -339,6 +339,8 @@ Nach Auswahl der zu importierenden CSV-Datei wird eine Liste mit Beispieldaten f
 
 Die Seite **[!UICONTROL Zielgruppendetails]** erscheint. Sie können Informationen über Ihre Zielgruppe hinzufügen, einschließlich Name, Beschreibung, primäre Identität und Identity-Namespace-Wert.
 
+Beim Import der extern generierten Zielgruppe müssen Sie eine der Spalten auswählen, die das primäre Identitätsfeld sein soll, und den Namespace-Wert angeben. Bitte beachten Sie, dass alle verbleibenden Felder berücksichtigt werden **Payload-Attribute**. Diese Attribute werden berücksichtigt **nicht haltbar**, da sie nur zum Zwecke der Personalisierung mit dieser Zielgruppe verknüpft werden und **not** mit dem Profil verbunden.
+
 ![Die Seite [!UICONTROL Zielgruppendetails] wird angezeigt.](../images/ui/overview/import-audience-audience-details.png)
 
 Nachdem Sie die Zielgruppendetails ausgefüllt haben, wählen Sie **[!UICONTROL Weiter]** aus.
@@ -353,7 +355,9 @@ Nachdem Sie bestätigt haben, dass die Details korrekt sind, wählen Sie **[!UIC
 
 >[!IMPORTANT]
 >
->Wenn Ihre extern generierte Zielgruppe sensible und/oder gesundheitsbezogene Informationen enthält, **must** wenden Sie die erforderlichen Datennutzungsbezeichnungen an, bevor Sie sie für ein beliebiges Ziel aktivieren. Weitere Informationen zum Anwenden von Datennutzungsbezeichnungen finden Sie in der Dokumentation unter [Verwalten von Bezeichnungen](../../access-control/abac/ui/labels.md).
+>Standardmäßig haben extern erstellte Zielgruppen einen Datenablauf von 30 Tagen. Die Datengültigkeit wird zurückgesetzt, wenn die Audience aktualisiert oder geändert wird.
+>
+>Wenn Ihre extern generierte Zielgruppe sensible und/oder gesundheitsbezogene Informationen enthält, müssen Sie außerdem **must** wenden Sie die erforderlichen Datennutzungsbezeichnungen an, bevor Sie sie für ein beliebiges Ziel aktivieren. Weitere Informationen zum Anwenden von Datennutzungsbezeichnungen finden Sie in der Dokumentation unter [Verwalten von Bezeichnungen](../../access-control/abac/ui/labels.md).
 
 ## Geplante Segmentierung {#scheduled-segmentation}
 

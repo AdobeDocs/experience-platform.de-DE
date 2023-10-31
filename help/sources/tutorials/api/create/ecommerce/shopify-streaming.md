@@ -2,8 +2,8 @@
 title: Erstellen einer Streaming-Quell-Verbindung und eines Datenflusses für Daten mit der Flow Service-API für Shopify Data
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API eine Streaming-Quellverbindung und einen Datenfluss für Shopify-Daten erstellen.
 badge: Beta
-exl-id: d44414a1-48fb-41e2-8cec-23cad867ba7d
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+exl-id: 74660e27-49c0-415f-bd85-15f9d853daee
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 52%
@@ -306,7 +306,7 @@ Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenfluss
 
 ### Abrufen der Streaming-Endpunkt-URL
 
-Mit dem erstellten Datenfluss können Sie jetzt Ihre Streaming-Endpunkt-URL abrufen. Sie verwenden diese Endpunkt-URL, um Ihre Quelle für einen Webhook zu registrieren, sodass Ihre Quelle mit Experience Platform kommunizieren kann.
+Mit dem erstellten Datenfluss können Sie jetzt Ihre Streaming-Endpunkt-URL abrufen. Sie werden diese Endpunkt-URL verwenden, um Ihre Quelle für einen Webhook zu abonnieren, sodass Ihre Quelle mit Experience Platform kommunizieren kann.
 
 Um Ihre Streaming-Endpunkt-URL abzurufen, stellen Sie eine GET-Anfrage an die `/flows` -Endpunkt und geben Sie die Kennung Ihres Datenflusses an.
 
@@ -663,7 +663,7 @@ Aktualisieren Sie die Details Ihres Datenflusses, z. B. seinen Namen und seine B
 
 ### Konto aktualisieren
 
-Aktualisieren Sie den Namen, die Beschreibung und die Anmeldeinformationen Ihres Quellkontos, indem Sie eine PATCH-Anfrage an die [!DNL Flow Service] API bei der Bereitstellung Ihrer Basis-Verbindungs-ID als Abfrageparameter. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` im `If-Match` -Kopfzeile. Die vollständigen API-Beispiele finden Sie im Handbuch unter [Quellkonto mithilfe der API aktualisieren](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+Aktualisieren Sie den Namen, die Beschreibung und die Anmeldeinformationen Ihres Quellkontos, indem Sie eine PATCH-Anfrage an die [!DNL Flow Service] API bei der Bereitstellung Ihrer Basis-Verbindungs-ID als Abfrageparameter. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` im `If-Match` -Kopfzeile. Die vollständigen API-Beispiele finden Sie im Handbuch unter [Aktualisieren Ihres Quellkontos mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
 
 ### Löschen des Datenflusses
 

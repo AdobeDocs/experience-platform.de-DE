@@ -3,7 +3,8 @@ solution: Experience Platform
 title: Bearbeiten von Zielverbindungen mit der Flow Service-API
 type: Tutorial
 description: Erfahren Sie, wie Sie verschiedene Komponenten einer Zielverbindung mit der Flow Service-API bearbeiten.
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1580'
 ht-degree: 33%
@@ -45,7 +46,7 @@ Um Platform-APIs aufrufen zu können, müssen Sie zunächst das [Authentifizieru
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Alle Ressourcen in der Experience Platform, einschließlich derjenigen, die [!DNL Flow Service], werden auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an Platform-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Experience Platform-Ressourcen, einschließlich derjenigen, die zu [!DNL Flow Service], werden auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an Platform-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -446,7 +447,7 @@ Bei einer erfolgreichen Antwort werden Ihre Basisverbindungs-ID und ein aktualis
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen für die Fehlermeldung bei der Experience Platform-API. Siehe [API-Statuscodes](/help/landing/troubleshooting.md#api-status-codes) und [Fehler in der Anfragekopfzeile](/help/landing/troubleshooting.md#request-header-errors) Weitere Informationen zur Interpretation von Fehlerantworten finden Sie im Handbuch zur Fehlerbehebung bei Platform .
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Experience Platform API-Fehlermeldungsprinzipien. Siehe Abschnitt [API-Statuscodes](/help/landing/troubleshooting.md#api-status-codes) und [Fehler in der Anfragekopfzeile](/help/landing/troubleshooting.md#request-header-errors) Weitere Informationen zur Interpretation von Fehlerantworten finden Sie im Handbuch zur Fehlerbehebung bei Platform .
 
 ## Nächste Schritte {#next-steps}
 

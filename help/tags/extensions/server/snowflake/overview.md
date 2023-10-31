@@ -1,8 +1,9 @@
 ---
-title: Übersicht über Snowflake
-description: Erfahren Sie mehr über das Snowflake für die Ereignisweiterleitung in Adobe Experience Platform.
+title: Snowflake-Übersicht
+description: Erfahren Sie mehr über Snowflake für die Ereignisweiterleitung in Adobe Experience Platform.
 last-substantial-update: 2023-06-21T00:00:00Z
-source-git-commit: fe28840fab46fadb82f1a37f972084057a00af44
+exl-id: abddf0c4-3d4c-4f66-a6e0-c10b54ea3430
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 2%
@@ -21,7 +22,7 @@ ht-degree: 2%
 
 Ein Snowflake-Konto kann auf einer der folgenden Cloud-Plattformen gehostet werden:
 
-- [Amazon Web Services ([!DNL AWS])](https://aws.amazon.com/) - [!DNL AWS] ist eine Cloud-Computing-Plattform, die eine breite Palette von Dienstleistungen anbietet, wie z. B. dezentrales Computing, Datenbankspeicherung, Inhaltsbereitstellung und SaaS-Integrationsdienste (Software-as-a-Service) für Customer Relationship Management (CRM) und Enterprise Resource Planning (ERP).
+- [AMAZON WEB SERVICES ([!DNL AWS])](https://aws.amazon.com/) - [!DNL AWS] ist eine Cloud-Computing-Plattform, die eine breite Palette von Dienstleistungen anbietet, wie z. B. dezentrales Computing, Datenbankspeicherung, Inhaltsbereitstellung und SaaS-Integrationsdienste (Software-as-a-Service) für Customer Relationship Management (CRM) und Enterprise Resource Planning (ERP).
 
 Siehe Abschnitt [[!DNL AWS] Übersicht](../aws/overview.md) für weitere Informationen zur Installation der Erweiterung und Konfiguration der Ereignisweiterleitungsregeln.
 
@@ -33,12 +34,12 @@ Siehe Abschnitt [[!DNL Azure] Übersicht](../azure/overview.md) für weitere Inf
 
 Siehe Abschnitt [[!DNL Google Cloud Platform] Übersicht](../google-cloud-platform/overview.md) für weitere Informationen zur Installation der Erweiterung und Konfiguration der Ereignisweiterleitungsregeln.
 
-Unser Muttersprachler [[!DNL AWS]](../aws/overview.md), [[!DNL Azure]](../azure/overview.md)und [[!DNL Google Cloud Platform]](../google-cloud-platform/overview.md) Mit Ereignisweiterleitungs-Erweiterungen können Kunden ihre Ereignisdaten serverseitig in Echtzeit erfassen, anreichern und an ihre Cloud-Services weiterleiten, die von [!DNL Snowflake]. Siehe unten:
+Unsere Muttersprache [[!DNL AWS]](../aws/overview.md), [[!DNL Azure]](../azure/overview.md), und [[!DNL Google Cloud Platform]](../google-cloud-platform/overview.md) Mit Ereignisweiterleitungs-Erweiterungen können Kunden ihre Ereignisdaten serverseitig in Echtzeit erfassen, anreichern und an ihre Cloud-Services weiterleiten, die von [!DNL Snowflake]. Siehe unten:
 
 ![Die [!DNL Snowflake] Berichtsdiagramm, das die Verbindung zwischen [!DNL AWS] und [!DNL Azure].](../../../images/extensions/server/snowflake/snowflake-workflow.png)
 
 ## Nächste Schritte
 
-Dieses Handbuch bietet einen Überblick über [!DNL Snowflake] und die Verwendung [!DNL AWS] und [!DNL Azure] Ereignisweiterleitungs-Erweiterungen.
+Dieses Handbuch bietet einen Überblick über [!DNL Snowflake] und die Verwendung [!DNL AWS] und [!DNL Azure] Ereignisweiterleitungserweiterungen.
 
 Weitere Informationen über [!DNL AWS] und [!DNL Azure] Ereignisweiterleitungsfunktionen in Experience Platform, siehe [[!DNL AWS] Erweiterungsübersicht](../aws/overview.md) und [[!DNL Azure] Erweiterungsübersicht](../azure/overview.md).

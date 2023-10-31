@@ -2,10 +2,11 @@
 title: Erstellen einer Quellverbindung aus SAP Commerce über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung zu SAP Commerce erstellen.
 badge: Beta
-source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
+exl-id: 6484e51c-77cd-4dbd-9c68-0a4e3372da33
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1010'
-ht-degree: 33%
+ht-degree: 34%
 
 ---
 
@@ -30,7 +31,7 @@ Wenn Sie bereits über ein gültiges [!DNL SAP Commerce]-Konto verfügen, könne
 
 ### Sammeln erforderlicher Anmeldeinformationen {#gather-credentials}
 
-Um eine Verbindung herzustellen [!DNL SAP Commerce] zur Experience Platform hinzufügen, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+Um eine Verbindung herzustellen [!DNL SAP Commerce] zum Experience Platform müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
@@ -43,7 +44,7 @@ Weitere Informationen finden Sie im Abschnitt [[!DNL SAP Commerce] Dokumentation
 
 ### Erstellen eines Platform-Schemas {#create-platform-schema}
 
-Vor der Erstellung [!DNL SAP Commerce] -Quellverbindung erstellen, müssen Sie außerdem sicherstellen, dass Sie zunächst ein Quellschema für Ihre Experience Platform erstellen. Siehe Tutorial zu [Erstellen eines Platform-Schemas](../../../../../xdm/schema/composition.md) für umfassende Schritte zum Erstellen eines Schemas.
+Vor der Erstellung [!DNL SAP Commerce] -Quellverbindung erstellen, müssen Sie außerdem sicherstellen, dass Sie zunächst ein Experience Platform-Schema erstellen, das für Ihre Quelle verwendet werden soll. Siehe Tutorial zu [Erstellen eines Platform-Schemas](../../../../../xdm/schema/composition.md) für umfassende Schritte zum Erstellen eines Schemas.
 
 Erweitern Sie den folgenden Abschnitt, um ein Beispielschema anzuzeigen.
 
@@ -249,4 +250,3 @@ Im Folgenden finden Sie ein Beispiel für Zuordnungskonfigurationen für [!DNL S
 ![Der Zuordnungsschritt des Ursprungs-Workflows.](../../../../images/tutorials/create/ecommerce/sap-commerce/mapping-contacts.png)
 
 >[!ENDTABS]
-

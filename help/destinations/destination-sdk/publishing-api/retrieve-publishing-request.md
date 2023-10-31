@@ -1,13 +1,13 @@
 ---
 description: Auf dieser Seite wird der API-Aufruf veranschaulicht, mit dem Details zu einer Zielveröffentlichungsanfrage über Adobe Experience Platform Destination SDK abgerufen werden.
 title: Abrufen einer Zielveröffentlichungsanfrage
-source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
-workflow-type: ht
+exl-id: fceef12d-a52c-4259-a91e-7af88b132800
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
 source-wordcount: '834'
 ht-degree: 100%
 
 ---
-
 
 # Abrufen einer Zielveröffentlichungsanfrage
 

@@ -2,7 +2,7 @@
 title: Erstellen einer SFTP-Basisverbindung mit der Flow Service-API
 description: Erfahren Sie, wie Sie mit der Flow Service-API eine Verbindung zwischen Adobe Experience Platform und einem SFTP-Server (Secure File Transfer Protocol) herstellen.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: a826bda356a7205f3d4c0e0836881530dbaaf54e
+source-git-commit: f6d1cc811378f2f37968bf0a42b428249e52efd8
 workflow-type: tm+mt
 source-wordcount: '938'
 ht-degree: 28%
@@ -52,7 +52,7 @@ Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste
 
 >[!TIP]
 >
->Nach der Erstellung können Sie den Authentifizierungstyp eines [!DNL Dynamics] Basisverbindung. Um den Authentifizierungstyp zu ändern, müssen Sie eine neue Basisverbindung erstellen.
+>Nach der Erstellung können Sie den Authentifizierungstyp eines [!DNL SFTP] Basisverbindung. Um den Authentifizierungstyp zu ändern, müssen Sie eine neue Basisverbindung erstellen.
 
 Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 

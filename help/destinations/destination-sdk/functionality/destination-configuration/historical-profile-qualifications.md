@@ -1,13 +1,13 @@
 ---
 description: Erfahren Sie mehr über die historischen Profilqualifikationen, die von mit Destination SDK erstellten Zielen unterstützt werden.
 title: Historische Profilqualifikationen
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
-workflow-type: ht
+exl-id: 8880cff9-865b-4d45-a24d-a78e77419670
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 100%
 
 ---
-
 
 # Historische Profilqualifikationen
 

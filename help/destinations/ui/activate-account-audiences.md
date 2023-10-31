@@ -5,10 +5,10 @@ description: Erfahren Sie, wie Sie Kontozielgruppen für Ziele aktivieren.
 badgeLimitedAvailability: label="Eingeschränkte Verfügbarkeit" type="Caution"
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: bf4a34a0fbf59571eaea3ccbc619f9fe17d5c218
+source-git-commit: 0a572c5fe612b8e0cc866b4e2287ea53a4022b1a
 workflow-type: tm+mt
-source-wordcount: '788'
-ht-degree: 11%
+source-wordcount: '834'
+ht-degree: 10%
 
 ---
 
@@ -90,11 +90,11 @@ Beim Aktivieren von Kontozielgruppen für die **[!UICONTROL (Unternehmen) Linked
 | Quellfeld | Zielfeld |
 |---------|----------|
 | `accountName` | `companyName` |
-| `accountKey.sourceKey` | `primaryId` (Wählen Sie dieses Feld im **[!UICONTROL Identitäts-Namespace auswählen]** view) |
+| `accountKey.sourceKey` | `primaryId` (Wählen Sie dieses Feld im **[!UICONTROL Identitäts-Namespace auswählen]** Ansicht bei Auswahl der **[!UICONTROL Zielfeld]**). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Kontozielgruppen für Ziele zu aktivieren.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Kontozielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"} |
 
 ### Data Governance-Durchsetzung {#data-governance-enforcement}
 
-[Beurteilung der Einwilligungsrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) wird derzeit nicht unterstützt, wenn Zielgruppen für Konten für Ziele aktiviert werden. Im Überprüfungsschritt des Aktivierungs-Workflows sehen Sie ein ausgegrautes Steuerelement für **[!UICONTROL Gültige Zustimmungsrichtlinien anzeigen]**.
+Die Zustimmung wird auf der Personen- oder Profilebene für *Kunden- und Interessensgruppen*. Daher  [Bewertung der Einwilligungsrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) wird derzeit nicht unterstützt, wenn Zielgruppen für Konten für Ziele aktiviert werden. Im Überprüfungsschritt des Aktivierungs-Workflows sehen Sie ein ausgegrautes Steuerelement für **[!UICONTROL Gültige Zustimmungsrichtlinien anzeigen]**.
 
 ![Überprüfen Sie den Schritt des Workflows Zielgruppen für das Konto aktivieren , wobei die Kontrolle der Einwilligungsdurchsetzung ausgegraut ist.](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
 

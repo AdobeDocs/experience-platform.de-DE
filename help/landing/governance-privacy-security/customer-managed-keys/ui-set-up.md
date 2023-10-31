@@ -1,7 +1,8 @@
 ---
 title: Einrichten und Konfigurieren von kundenverwalteten Schlüsseln über die Platform-Benutzeroberfläche
 description: Erfahren Sie, wie Sie Ihre CMK-App mit Ihrem Azure-Mandanten einrichten und Ihre Verschlüsselungsschlüssel-ID an Adobe Experience Platform senden.
-source-git-commit: a0df05cde19e97d4abdad7abd19eafea8efe1096
+exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 22%

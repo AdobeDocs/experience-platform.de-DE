@@ -1,9 +1,10 @@
 ---
 title: Übersicht über die RainFocus-Quelle
-description: Erfahren Sie, wie Sie Ereignismanagement- und Analysedaten aus Ihrem RainFocus-Konto in die Experience Platform übertragen können.
+description: Erfahren Sie, wie Sie Ereignismanagement- und Analysedaten aus Ihrem RainFocus-Konto auf Experience Platform übertragen können.
 last-substantial-update: 2023-06-21T00:00:00Z
 badge: Beta
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+exl-id: 88e333e3-2b93-4d66-8412-efadea58ac46
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '998'
 ht-degree: 8%
@@ -26,7 +27,7 @@ Verwenden Sie die [!DNL RainFocus] in Adobe Experience Platform und Real-time Cu
 
 ## Voraussetzungen
 
-Sie müssen die folgenden Voraussetzungen erfüllen, bevor Sie die [!DNL RainFocus] Integration in Experience Platform:
+Sie müssen die folgenden Voraussetzungen erfüllen, bevor Sie die [!DNL RainFocus] Integration auf Experience Platform:
 
 [Erstellen eines Adobe Service-Kontos (JWT) im Adobe Developer Portal](https://developer.adobe.com/developer-console/docs/guides/authentication/ServiceAccountIntegration/)
 
@@ -36,7 +37,7 @@ Sie müssen die folgenden Voraussetzungen erfüllen, bevor Sie die [!DNL RainFoc
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
-Um eine Verbindung herzustellen [!DNL RainFocus] zur Experience Platform hinzufügen, müssen Sie Werte für die folgenden Verbindungseigenschaften in [!DNL RainFocus]:
+Um eine Verbindung herzustellen [!DNL RainFocus] zum Experience Platform angeben, müssen Sie Werte für die folgenden Verbindungseigenschaften in [!DNL RainFocus]:
 
 | Anmeldedaten | Beschreibung | Beispiel |
 | --- | --- | --- |
@@ -125,7 +126,7 @@ Wählen Sie die [!DNL Integration Profile] die Sie gerade erstellt haben, um ein
 
 ![Eine Liste vordefinierter Push-Typen im Dashboard RainFocus .](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-setup.png)
 
-Um eine Kopie der JSON-Beispielnutzlast abzurufen, wählen Sie **[!DNL Sample JSON Payload]**. Markieren und kopieren Sie als Nächstes die JSON-Beispielnutzlast und **Speichern Sie sie in einer neuen Datei mit der Erweiterung .json .**. Dies wird später in der Experience Platform für [Zuordnungskonfigurationen](../../tutorials/ui/create/analytics/rainfocus.md#mapping).
+Um eine Kopie der JSON-Beispielnutzlast abzurufen, wählen Sie **[!DNL Sample JSON Payload]**. Markieren und kopieren Sie als Nächstes die JSON-Beispielnutzlast und **Speichern Sie sie in einer neuen Datei mit der Erweiterung .json .**. Dies wird später auf dem Experience Platform für [Zuordnungskonfigurationen](../../tutorials/ui/create/analytics/rainfocus.md#mapping).
 
 ![Eine JSON-Beispielnutzlast im Dashboard &quot;RainFocus&quot;.](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-json.png)
 
@@ -135,4 +136,4 @@ Um eine Kopie der JSON-Beispielnutzlast abzurufen, wählen Sie **[!DNL Sample JS
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie die erforderlichen Voraussetzungen für das Streamen von Daten aus Ihrem [!DNL RainFocus] -Konto in die Experience Platform. Sie können jetzt mit dem Handbuch zu [Verbindung [!DNL RainFocus] zur Experience Platform über die Benutzeroberfläche](../../tutorials/ui/create/analytics/rainfocus.md).
+Durch Lesen dieses Dokuments haben Sie die erforderlichen Voraussetzungen für das Streamen von Daten aus Ihrem [!DNL RainFocus] -Konto auf Experience Platform. Sie können jetzt mit dem Handbuch zu [Verbindung [!DNL RainFocus] zum Experience Platform über die Benutzeroberfläche](../../tutorials/ui/create/analytics/rainfocus.md).

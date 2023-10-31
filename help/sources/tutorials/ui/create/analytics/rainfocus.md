@@ -1,15 +1,16 @@
 ---
-title: RainFocus-Konto über die Benutzeroberfläche mit der Experience Platform verbinden
+title: Verbinden Ihres RainFocus-Kontos mit Experience Platform über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie Ihr RainFocus-Konto über die Benutzeroberfläche mit Experience Platform verbinden.
 badge: Beta
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+exl-id: a349e37e-9f2c-47ff-8360-ccbe578dce27
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 29%
 
 ---
 
-# Verbinden Sie [!DNL RainFocus] Konto für die Experience Platform über die Benutzeroberfläche
+# Verbinden Sie [!DNL RainFocus] Konto für Experience Platform über die Benutzeroberfläche
 
 >[!NOTE]
 >
@@ -32,7 +33,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 
 ### Voraussetzungen
 
-Bevor Sie Ihre [!DNL RainFocus] -Konto in Experience Platform verwenden, müssen Sie zunächst die folgenden erforderlichen Aufgaben ausführen:
+Bevor Sie Ihre [!DNL RainFocus] -Konto zu Experience Platform hinzufügen, müssen Sie zunächst die folgenden erforderlichen Aufgaben ausführen:
 
 * [Sammeln erforderlicher Anmeldeinformationen](../../../../connectors/analytics/rainfocus.md#gather-required-credentials)
 * [Erstellen eines XDM-Schemas und Definieren des Identitätsfelds](../../../../connectors/analytics/rainfocus.md#create-an-xdm-schema-and-define-the-identity-field)
@@ -48,11 +49,11 @@ Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirms
 
 Unter dem *[!UICONTROL Analytics]* category, select **[!UICONTROL RainFocus-Erlebnis]** und wählen Sie **[!UICONTROL Daten hinzufügen]**.
 
-![Der Quellkatalog zur Benutzeroberfläche der Experience Platform mit der ausgewählten Quelle RainFocus .](/help/sources/images/tutorials/create/rainfocus/rainfocus_sources-rf.png)
+![Der Quellkatalog zur Experience Platform-Benutzeroberfläche mit ausgewählter RainFocus-Quelle.](/help/sources/images/tutorials/create/rainfocus/rainfocus_sources-rf.png)
 
 ## Daten auswählen
 
-Der Schritt Daten auswählen wird angezeigt und bietet eine Oberfläche zur Auswahl der Daten, die Sie zur Experience Platform mitbringen.
+Der Schritt Daten auswählen wird angezeigt und bietet eine Oberfläche zur Auswahl der Daten, die Sie zum Experience Platform mitbringen.
 
 * Der linke Teil der Benutzeroberfläche ist ein Browser, mit dem Sie die verfügbaren Datenströme in Ihrem Konto anzeigen können.
 * Im rechten Bereich der Benutzeroberfläche können Sie eine Vorschau von bis zu 100 Zeilen mit Daten aus einer JSON-Datei anzeigen.

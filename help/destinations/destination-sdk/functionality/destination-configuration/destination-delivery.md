@@ -1,13 +1,13 @@
 ---
 description: Erfahren Sie, wie Sie die Zielbereitstellungseinstellungen für Ziele konfigurieren, die mit Destination SDK erstellt wurden, um anzugeben, wohin die exportierten Daten gehen und welche Authentifizierungsregel an dem Ort verwendet wird, an dem die Daten landen.
 title: Zielbereitstellung
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
-workflow-type: ht
+exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 100%
 
 ---
-
 
 # Zielbereitstellung
 

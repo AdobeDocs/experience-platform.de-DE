@@ -1,10 +1,11 @@
 ---
 title: Datenfluss-Entwurf in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie Ihre Datenflüsse bei Verwendung des Arbeitsbereichs "Quellen"als Entwurf speichern und später veröffentlichen können.
-source-git-commit: 5fc433f603c6e83c621df0f4a1d0aa27e18cd582
+exl-id: ee00798e-152a-4618-acb3-db40f2f55fae
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '591'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -26,7 +27,7 @@ Sie können den Erstellungsfortschritt des Datenflusses jederzeit anhalten, nach
 
 Wenn Sie beispielsweise den Fortschritt während des Datenflug-Detailschritts speichern möchten, wählen Sie **[!UICONTROL Als Entwurf speichern]**.
 
-![Der Schritt &quot;Datenfluss-Detail&quot;des Ursprungs-Workflows mit ausgewählter Option &quot;Als Entwurf speichern&quot;.](../../images/tutorials/draft/save-as-draft.png)
+![Der Schritt &quot;Datenfluss-Detail&quot;des Ursprungs-Workflows mit ausgewähltem Speicherungsentwurf.](../../images/tutorials/draft/save-as-draft.png)
 
 Nachdem Sie Ihren Entwurf gespeichert haben, gelangen Sie zur Seite Ihres Kontos, auf der Sie eine Liste Ihrer vorhandenen Datenflüsse einschließlich Ihrer Entwürfe sehen können.
 
@@ -36,7 +37,7 @@ Nachdem Sie Ihren Entwurf gespeichert haben, gelangen Sie zur Seite Ihres Kontos
 >
 >Entworfene Datenflüsse werden nicht aktiviert und haben ihren Status auf `draft`.
 
-Um mit dem Entwurf fortzufahren, wählen Sie die Auslassungszeichen (`...`) neben dem Namen Ihres Datenflusses und wählen Sie **[!UICONTROL Aktualisieren des Datenflusses]**.
+Um mit dem Entwurf fortzufahren, wählen Sie die Auslassungszeichen (`...`) neben dem Namen Ihres Datenflusses und wählen Sie dann **[!UICONTROL Aktualisieren des Datenflusses]**.
 
 >[!NOTE]
 >
@@ -50,7 +51,7 @@ Sie können auch über den Datenflusskatalog auf Ihre Datenflussentwürfe zugrei
 
 ![Eine Liste der Datenflüsse für eine bestimmte Organisation.](../../images/tutorials/draft/catalog-access.png)
 
-## Veröffentlichen des Entwurfs eines Datenflusses
+## Veröffentlichen des Datenflussentwurfs
 
 Sie kehren zum [!UICONTROL Daten hinzufügen] Schritt des Ursprungs-Workflows, in dem Sie das Format Ihrer Daten erneut bestätigen und mit dem Datenfluss fortfahren können.
 
@@ -70,7 +71,7 @@ Nachdem Sie die Neukonfiguration des Mappings abgeschlossen haben, wählen Sie *
 
 ![Der Zuordnungsschritt des Ursprungs-Workflows.](../../images/tutorials/draft/mapping.png)
 
-Verwenden Sie die [!UICONTROL Planung] Schritt , um einen Aufnahmezeitplan für Ihren Datenfluss festzulegen. Sie können die Aufnahmefrequenz auf `once`, `minute`, `hour`, `day`oder `week`. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Nächste]** um fortzufahren.
+Verwenden Sie die [!UICONTROL Planung] Schritt , um einen Aufnahmezeitplan für Ihren Datenfluss festzulegen. Sie können die Aufnahmefrequenz auf `once`, `minute`, `hour`, `day`oder `week`. Wählen Sie zum Abschluss **[!UICONTROL Nächste]** um fortzufahren.
 
 ![Der Planungsschritt des Ursprungs-Workflows.](../../images/tutorials/draft/scheduling.png)
 

@@ -1,7 +1,8 @@
 ---
 title: Einverständnisanalyse und -verfolgung
 description: Erfahren Sie, wie Sie ein Dashboard für die Einwilligungsanalyse erstellen, um zu verfolgen, wie sich die Einwilligung der Benutzer im Laufe der Zeit entwickelt hat.
-source-git-commit: 4c45492157f0fe1a82187faf73439d6206cb0dc9
+exl-id: 34accae5-8b4f-4281-8333-187a91db8199
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1921'
 ht-degree: 1%
@@ -31,7 +32,7 @@ Um ein Zustimmungs-Dashboard zu erstellen, müssen Sie zunächst eine Audience a
 
 ![Die [!UICONTROL Zielgruppen] Dashboard mit [!UICONTROL Kunde], [!UICONTROL Zielgruppen], und [!UICONTROL Segment erstellen] hervorgehoben.](../images/insights-use-cases/consent-analysis/create-audience.png)
 
-Segment Builder wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL Individuelles XDM-Profil]** aus den verfügbaren Optionen. Weitere Informationen zu finden Sie in der Dokumentation . [Arbeitsfläche des Regel-Builders](../../segmentation/ui/segment-builder.md#rule-builder-canvas).
+Der Segment Builder wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL Individuelles XDM-Profil]** aus den verfügbaren Optionen. Weitere Informationen zu finden Sie in der Dokumentation . [Arbeitsfläche des Regel-Builders](../../segmentation/ui/segment-builder.md#rule-builder-canvas).
 
 ![Der Segment Builder mit der [!UICONTROL Individuelles XDM-Profil] -Attributordner hervorgehoben.](../images/insights-use-cases/consent-analysis/xdm-individual-profile.png)
 

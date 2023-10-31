@@ -1,23 +1,23 @@
 ---
 description: Erfahren Sie, wie Sie die Zielgruppen-Metadateneinstellungen für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Konfiguration von Zielgruppen-Metadaten
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+exl-id: ae71df4f-b753-4084-835f-03559b4986cb
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '405'
-ht-degree: 65%
+ht-degree: 91%
 
 ---
 
-
 # Konfiguration von Zielgruppen-Metadaten
 
-Beim Exportieren von Daten aus der Experience Platform in Ihr Ziel benötigen Sie möglicherweise bestimmte Zielgruppen-Metadaten, wie Zielgruppennamen oder Zielgruppen-IDs, die für die Experience Platform und Ihr Ziel freigegeben werden.
+Beim Exportieren von Daten aus Experience Platform in Ihr Ziel benötigen Sie möglicherweise bestimmte Zielgruppen-Metadaten, wie Zielgruppennamen oder Zielgruppen-IDs, die für Experience Platform und Ihr Ziel freigegeben werden.
 
 Destination SDK bietet Tools, mit denen Sie Zielgruppen in Ihrer Zielplattform programmgesteuert erstellen, aktualisieren oder löschen können.
 
 Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm im [Konfigurationsoptionen](../configuration-options.md) Dokumentation oder lesen Sie das Handbuch zu [Verwenden von Destination SDK zum Konfigurieren eines Streaming-Ziels](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
-Sie können die Vorlage für Zielgruppen-Metadaten über den Endpunkt `/authoring/audience-templates` konfigurieren. Nachdem Sie die Konfiguration der Zielgruppen-Metadaten erstellt haben, können Sie den Endpunkt `/authoring/destinations` zum Konfigurieren des Abschnitts `audienceMetadataConfig` verwenden. In diesem Abschnitt erfahren Sie, welche Zielgruppen-Metadaten Ihrer Zielgruppenvorlage zugeordnet werden sollen.
+Sie können die Vorlage für Zielgruppen-Metadaten über den Endpunkt `/authoring/audience-templates` konfigurieren. Nachdem Sie die Konfiguration der Zielgruppen-Metadaten erstellt haben, können Sie den Endpunkt `/authoring/destinations` zum Konfigurieren des Abschnitts `audienceMetadataConfig` verwenden. Dieser Abschnitt teilt Ihrem Ziel mit, welche Zielgruppenmetadaten Ihrer Zielgruppenvorlage zugeordnet werden sollen.
 
 Detaillierte Beispiele für API-Aufrufe, in denen Sie die auf dieser Seite angezeigten Komponenten konfigurieren können, finden Sie auf den folgenden API-Referenzseiten.
 
@@ -41,7 +41,7 @@ Die nachstehende Tabelle beschreibt ausführlich, welche Integrationstypen die a
 
 ## Unterstützte Parameter {#supported-parameters}
 
-Bei der Erstellung Ihrer Audience-Metadatenkonfiguration können Sie die in der folgenden Tabelle beschriebenen Parameter verwenden, um die Einstellungen für die Zielgruppen-Zuordnung zu konfigurieren.
+Beim Erstellen der Konfiguration für Ihre Zielgruppenmetadaten können Sie die in der folgenden Tabelle beschriebenen Parameter verwenden, um die Einstellungen für die Zielgruppenzuordnung zu konfigurieren.
 
 ```json
   "audienceMetadataConfig":{
@@ -54,8 +54,8 @@ Bei der Erstellung Ihrer Audience-Metadatenkonfiguration können Sie die in der 
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
-| `mapExperiencePlatformSegmentName` | Boolesch | Gibt an, ob die Variable [[!UICONTROL Zuordnungs-ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) im Zielaktivierungs-Workflow sollte der Zielgruppenname der Experience Platform sein. |
-| `mapExperiencePlatformSegmentId` | Boolesch | Gibt an, ob die Variable [[!UICONTROL Zuordnungs-ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) -Wert im Zielaktivierungs-Workflow sollte die Zielgruppen-ID der Experience Platform sein. |
+| `mapExperiencePlatformSegmentName` | Boolesch | Gibt an, ob der Wert der [[!UICONTROL Zuordnungs-ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) im Zielaktivierungs-Workflow der Zielgruppenname aus Experience Platform sein soll. |
+| `mapExperiencePlatformSegmentId` | Boolesch | Gibt an, ob der Wert der [[!UICONTROL Zuordnungs-ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) im Zielaktivierungs-Workflow die Zielgruppen-ID aus Experience Platform sein soll. |
 | `mapUserInput` | Boolesch | Aktiviert oder deaktiviert die Benutzereingabe für den Wert der [[!UICONTROL Zuordnungs-ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) im Zielaktivierungs-Workflow. Wenn er auf `true`, gesetzt ist, kann `audienceTemplateId` nicht vorhanden sein. |
 | `audienceTemplateId` | Boolesch | Die `instanceId` der [Zielgruppen-Metadatenvorlage](../../metadata-api/create-audience-template.md), die für Ihr Ziel verwendet wird. |
 

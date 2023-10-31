@@ -2,13 +2,13 @@
 solution: Experience Platform
 title: Erste Schritte mit Media Edge-APIs
 description: Erste Schritte mit Media Edge-APIs
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+exl-id: 76022dea-408b-4d8e-abd4-1a6de81beceb
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '958'
 ht-degree: 100%
 
 ---
-
 
 # Erste Schritte mit Media Edge-APIs
 
@@ -292,5 +292,3 @@ Die folgende Tabelle zeigt die möglichen Antwort-Codes, die sich aus Media Edge
 
 * [Media Edge-Handbuch zur Fehlerbehebung](troubleshooting.md)
 * [Media Edge-APIs – Übersicht](overview.md)
-
-

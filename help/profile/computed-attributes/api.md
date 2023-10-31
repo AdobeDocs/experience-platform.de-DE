@@ -1,13 +1,13 @@
 ---
 title: API-Endpunkt für berechnete Attribute
 description: Erfahren Sie, wie Sie berechnete Attribute mithilfe der Echtzeit-Kundenprofil-API erstellen, anzeigen, aktualisieren und löschen.
-source-git-commit: e1c7d097f7ab39d05674c3dad620bea29f08092b
+exl-id: f217891c-574d-4a64-9d04-afc436cf16a9
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1654'
 ht-degree: 12%
 
 ---
-
 
 # API-Endpunkt für berechnete Attribute
 

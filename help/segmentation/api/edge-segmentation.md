@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Edge-Segmentierung mithilfe der API
 description: Dieses Dokument enthält Beispiele für die Verwendung der Edge-Segmentierung mit der Segmentierungs-Service-API von Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 9f586b336f5cc232ac9b04a74846b7cfc2b46a71
 workflow-type: tm+mt
-source-wordcount: '1169'
-ht-degree: 92%
+source-wordcount: '1179'
+ht-degree: 90%
 
 ---
 
@@ -38,7 +38,7 @@ Lesen Sie für erfolgreiche Aufrufe an API-Endpunkte in Experience Platform das 
 
 ## Abfragetypen für Edge-Segmentierungen {#query-types}
 
-Damit ein Segment mithilfe der Edge-Segmentierung bewertet werden kann, muss die Abfrage den folgenden Richtlinien entsprechen:
+Damit ein Segment mithilfe der Edge-Segmentierung ausgewertet werden kann, muss die Abfrage den folgenden Richtlinien entsprechen:
 
 | Abfragetyp | Details | Beispiel | PQL-Beispiel |
 | ---------- | ------- | ------- | ----------- |
@@ -47,7 +47,7 @@ Damit ein Segment mithilfe der Edge-Segmentierung bewertet werden kann, muss die
 | Einzelereignis, das auf ein Profil verweist | Jede Segmentdefinition, die ohne Zeitbeschränkung auf ein oder mehrere Profilattribute und ein einzelnes eingehendes Ereignis verweist. | Personen, die in den USA leben und die Homepage besucht haben. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
 | Negiertes einzelnes Ereignis mit einem Profilattribut | Jede Segmentdefinition, die auf ein negiertes eingehendes Ereignis und ein oder mehrere Profilattribute verweist. | Personen, die in den USA leben und die Homepage **nicht** besucht haben. | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")]))` |
 | Einzelnes Ereignis innerhalb eines Zeitfensters | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis innerhalb eines bestimmten Zeitraums verweist. | Personen, die die Homepage in den letzten 24 Stunden besucht haben. | `chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
-| Einzelnes Ereignis mit einem Profilattribut innerhalb eines Zeitfensters | Jede Segmentdefinition, die innerhalb eines bestimmten Zeitraums auf ein oder mehrere Profilattribute und ein einzelnes eingehendes Ereignis verweist. | Personen, die in den USA leben und die die Homepage in den letzten 24 Stunden besucht haben. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
+| Einzelnes Ereignis mit einem Profilattribut innerhalb eines relativen Zeitfensters von weniger als 24 Stunden | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis mit einem oder mehreren Profilattributen verweist und innerhalb eines relativen Zeitfensters von weniger als 24 Stunden erfolgt. | Personen, die in den USA leben und die die Homepage in den letzten 24 Stunden besucht haben. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
 | Negiertes einzelnes Ereignis mit einem Profilattribut innerhalb eines Zeitfensters | Jede Segmentdefinition, die innerhalb eines Zeitraums auf ein oder mehrere Profilattribute und ein negiertes einzelnes eingehendes Ereignis verweist. | Personen, die in den USA leben und die Homepage in den letzten 24 Stunden **nicht** besucht haben. | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)]))` |
 | Häufigkeitsereignis innerhalb eines Zeitfensters von 24 Stunden | Jede Segmentdefinition, die auf ein Ereignis verweist, das innerhalb eines Zeitfensters von 24 Stunden eine bestimmte Anzahl von Malen stattfindet. | Personen, die die Homepage in den letzten 24 Stunden **mindestens** fünf Mal besucht haben. | `chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
 | Häufigkeitsereignis mit einem Profilattribut innerhalb eines Zeitfensters von 24 Stunden | Jede Segmentdefinition, die auf ein oder mehrere Profilattribute und ein Ereignis verweist, die innerhalb eines Zeitfensters von 24 Stunden eine bestimmte Anzahl von Malen stattfinden. | Personen aus den USA, die die Homepage in den letzten 24 Stunden **mindestens** fünf Mal besucht haben. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |

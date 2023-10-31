@@ -31,7 +31,7 @@ Navigieren Sie zu **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** und wä
 
 ### Erforderliche Berechtigungen {#permissions}
 
-Um potenzielle Zielgruppen zu aktivieren, benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+Um potenzielle Zielgruppen zu aktivieren, benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Um sicherzustellen, dass Sie über die erforderlichen Berechtigungen zum Aktivieren potenzieller Zielgruppen verfügen, durchsuchen Sie den Zielkatalog. Wenn ein Ziel **[!UICONTROL Aktivieren]** und Sie über die entsprechenden Berechtigungen verfügen.
 

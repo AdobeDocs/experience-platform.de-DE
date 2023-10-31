@@ -1,13 +1,13 @@
 ---
 description: Erfahren Sie, wie Sie einen API-Aufruf strukturieren, um eine Zielkonfiguration über Adobe Experience Platform Destination SDK zu erstellen.
 title: Erstellen einer Zielkonfiguration
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
-workflow-type: ht
+exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 100%
 
 ---
-
 
 # Erstellen einer Zielkonfiguration
 

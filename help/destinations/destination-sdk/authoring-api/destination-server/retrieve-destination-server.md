@@ -1,13 +1,13 @@
 ---
 description: Auf dieser Seite wird der API-Aufruf zum Abrufen einer Ziel-Server-Konfiguration über Adobe Experience Platform Destination SDK veranschaulicht.
 title: Abrufen einer Ziel-Server-Konfiguration
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
-workflow-type: ht
+exl-id: 1b375343-e793-4c91-856f-af66fe71822e
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 100%
 
 ---
-
 
 # Abrufen einer Ziel-Server-Konfiguration
 

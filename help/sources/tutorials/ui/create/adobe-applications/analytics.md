@@ -2,10 +2,10 @@
 title: Erstellen einer Adobe Analytics-Quellverbindung über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie eine Quellverbindung für Adobe Analytics über die Benutzeroberfläche erstellen, um Kundendaten in Adobe Experience Platform zu importieren.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 358daa9511f647749a8198893b712d00a5cfbc5d
 workflow-type: tm+mt
-source-wordcount: '2298'
-ht-degree: 59%
+source-wordcount: '2481'
+ht-degree: 46%
 
 ---
 
@@ -264,33 +264,53 @@ Der Schritt [!UICONTROL Überprüfen] wird angezeigt, in dem Sie Ihren neuen Ana
 
 ![überprüfen](../../../../images/tutorials/create/analytics/review.png)
 
-### Überwachen Ihres Datenflusses
+## Überwachen Ihres Datenflusses {#monitor-your-dataflow}
 
-Nachdem Ihr Datenfluss erstellt wurde, können Sie die Daten überwachen, die über ihn aufgenommen werden. Wählen Sie auf dem Bildschirm [!UICONTROL Katalog] die Option **[!UICONTROL Datenflüsse]**, um eine Liste der eingerichteten Datenflüsse anzuzeigen, die mit Ihrem Analytics-Konto verbunden sind.
+Nachdem der Datenfluss abgeschlossen ist, wählen Sie **[!UICONTROL Datenflüsse]** im Quellkatalog, um die Aktivität und den Status Ihrer Daten zu überwachen.
 
-![select-dataflows](../../../../images/tutorials/create/analytics/select-dataflows.png)
+![Der Quellkatalog mit der ausgewählten Registerkarte &quot;Datenflüsse&quot;.](../../../../images/tutorials/create/analytics/select-dataflows.png)
 
-Der Bildschirm **Datenflüsse** wird angezeigt. Auf dieser Seite finden Sie ein Paar von Datensatzflüssen, einschließlich Informationen zu ihrem Namen, Quelldaten, Erstellungszeit und Status.
+Eine Liste der vorhandenen Analytics-Datenflüsse in Ihrer Organisation wird angezeigt. Wählen Sie von hier aus einen Zieldatensatz aus, um die entsprechende Erfassungsaktivität anzuzeigen.
 
-Der Connector instanziiert zwei Datensatzflüsse. Ein Fluss stellt Aufstockungsdaten dar, der andere ist für Live-Daten. Aufstockungsdaten werden nicht für Profile konfiguriert, sondern für analytische und datenwissenschaftliche Anwendungsfälle an den Data Lake gesendet.
+![Eine Liste der vorhandenen Adobe Analytics-Datenflüsse in Ihrem Unternehmen.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-Weitere Informationen zur Aufstockung, zu Live-Daten und ihren jeweiligen Latenzen finden Sie unter [Analytics-Daten-Connector – Übersicht](../../../../connectors/adobe-applications/analytics.md).
+Die [!UICONTROL Datensatzaktivität] -Seite enthält Informationen zum Fortschritt der Daten, die von Analytics an Experience Platform gesendet werden. Die Benutzeroberfläche zeigt Metriken wie die Anzahl der aufgenommenen Datensätze, die Anzahl der aufgenommenen Batches und die Anzahl der fehlgeschlagenen Batches an.
 
-Wählen Sie in der Liste den gewünschten Datensatzfluss aus.
+Die Quelle instanziiert zwei Datensatzflüsse. Ein Fluss stellt Aufstockungsdaten dar, der andere ist für Live-Daten. Aufstockungsdaten sind nicht für die Aufnahme in das Echtzeit-Kundenprofil konfiguriert, werden jedoch für analytische und datenwissenschaftliche Anwendungsfälle an den Data Lake gesendet.
 
-![select-target-dataset](../../../../images/tutorials/create/analytics/select-target-dataset.png)
+Weitere Informationen zur Aufstockung, zu Live-Daten und ihren jeweiligen Latenzen finden Sie in der [Übersicht über die Analytics-Quelle](../../../../connectors/adobe-applications/analytics.md).
 
-Die Seite **[!UICONTROL Datensatzaktivität]** wird angezeigt. Auf dieser Seite wird die Rate der verwendeten Nachrichten in Form eines Diagramms angezeigt. Wählen Sie **[!UICONTROL Data Governance]** in der oberen Kopfzeile, um auf die Beschriftungsfelder zuzugreifen.
+![Die Seite mit der Datensatzaktivität für einen bestimmten Zieldatensatz für Adobe Analytics-Daten.](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-![dataset-activity](../../../../images/tutorials/create/analytics/dataset-activity.png)
++++Anzeigen einzelner Batches über die veraltete Überwachungsschnittstelle
 
-Sie können die geerbten Bezeichnungen eines Datensatzflusses auf dem Bildschirm [!UICONTROL Data Governance] einsehen. Weitere Informationen zum Kennzeichnen von Daten aus Analytics finden Sie im [Handbuch zu Datennutzungsbezeichnungen](../../../../../data-governance/labels/user-guide.md).
+Auf der Seite mit der Datensatzaktivität wird keine Liste einzelner Batches angezeigt. Um eine Liste einzelner Batches anzuzeigen, wählen Sie ein Diagramm in der Oberfläche für die Datensatzaktivität aus.
 
-![data-gov](../../../../images/tutorials/create/analytics/data-gov.png)
+![Die Seite mit der Datensatzaktivität mit einem ausgewählten Diagramm.](../../../../images/tutorials/create/analytics/select-chart.png)
 
-Um einen Datenfluss zu löschen, gehen Sie auf die Seite [!UICONTROL Datenflüsse], wählen Sie die Auslassungspunkte (`...`) neben dem Namen des Datenflusses und klicken Sie auf [!UICONTROL Löschen].
+Sie gelangen zum Monitoring-Dashboard. Wählen Sie als Nächstes **[!UICONTROL NUR FEHLER ERFASSEN: JA]** , um den Filter zu löschen und eine Liste der einzelnen Batches anzuzeigen.
 
-![löschen](../../../../images/tutorials/create/analytics/delete.png)
+![Das Monitoring-Dashboard mit ausgewähltem Fehlerfilter.](../../../../images/tutorials/create/analytics/clear-filter.png)
+
+Die Benutzeroberfläche aktualisiert eine Liste einzelner Batches, einschließlich Informationen zu den jeweiligen Metriken.
+
+![Die alte Überwachungsseite für Batch-Daten.](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
+
+| Metriken | Beschreibung |
+| --- | --- |
+| Batch-ID | Die Kennung eines bestimmten Batches. Dieser Wert wird intern generiert. |
+| Datensatzname | Der Name eines bestimmten Datensatzes, der für Analytics-Daten verwendet wird. |
+| Quelle | Die Quelle der aufgenommenen Daten. |
+| Aktualisiert | Das Datum der letzten Durchlaufdurchlauf-Iteration. |
+| Datensätze in Datensätzen | Die Gesamtzahl der Datensätze im Datensatz. **Hinweis**: Dieser Parameter zeigt gelegentlich den Status von `in-progress`. Dieser Status zeigt an, dass der Aufnahmevorgang für Datensätze noch nicht abgeschlossen ist. |
+| Neue Profilfragmente | Die Gesamtanzahl der neuen Profilfragmente, die erfasst wurden. |
+| Vorhandene Profilfragmente | Die Gesamtanzahl vorhandener Profilfragmente. |
+| Zugewiesene Identitätsdatensätze | Die Gesamtzahl der Identitätsdatensätze, die nach der Erfassung zusammengeführt wurden. |
+| Datensätze in Profil | Die Gesamtzahl der Datensätze, die in das Echtzeit-Kundenprofil aufgenommen wurden. |
+
+{style="table-layout:auto"}
+
++++
 
 ## Nächste Schritte und zusätzliche Ressourcen
 

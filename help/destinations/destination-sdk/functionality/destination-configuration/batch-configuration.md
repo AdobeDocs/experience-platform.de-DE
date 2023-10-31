@@ -1,13 +1,13 @@
 ---
 description: Erfahren Sie, wie Sie die Dateiexporteinstellungen für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Batch-Konfiguration
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1072'
-ht-degree: 87%
+ht-degree: 96%
 
 ---
-
 
 # Batch-Konfiguration {#batch-configuration}
 
@@ -15,7 +15,7 @@ Verwenden Sie die Batch-Konfigurationsoptionen in Destination SDK, um Benutzerin
 
 Wenn Sie dateibasierte Ziele über Destination SDK erstellen, können Sie Standarddateinamen konfigurieren und Zeitpläne exportieren. Alternativ können Sie Benutzerinnen und Benutzern über die Platform-Benutzeroberfläche die Option zum Konfigurieren dieser Einstellungen geben. Sie können beispielsweise Verhaltensweisen wie die folgenden konfigurieren:
 
-* Einschließen spezifischer Informationen in den Dateinamen, wie Zielgruppen-IDs, Ziel-IDs oder benutzerdefinierte Informationen.
+* Einschließen spezifischer Informationen in den Dateinamen, z. B. Zielgruppen-IDs, Ziel-IDs oder benutzerdefinierte Informationen.
 * Benutzerinnen und Benutzer können die Dateibenennung über die Platform-Benutzeroberfläche anpassen.
 * Konfigurieren von Dateiexporten für bestimmte Zeitintervalle.
 * Definieren, welche Anpassungsoptionen für die Dateibenennung und den Export von Zeitplänen für Benutzerinnen und Benutzer in der Platform-Benutzeroberfläche angezeigt werden.
@@ -46,7 +46,7 @@ Die nachstehende Tabelle beschreibt ausführlich, welche Integrationstypen die a
 
 ## Unterstützte Parameter {#supported-parameters}
 
-Die Werte, die Sie hier einrichten, werden im [Zielgruppenexport planen](../../../ui/activate-batch-profile-destinations.md#scheduling) Schritt des dateibasierten Zielaktivierungs-Workflows.
+Die Werte, die Sie hier festlegen, werden im Schritt [Zielgruppenexport planen](../../../ui/activate-batch-profile-destinations.md#scheduling) des dateibasierten Zielaktivierungs-Workflows angezeigt.
 
 ```json
 "batchConfig":{
@@ -95,7 +95,7 @@ Die Werte, die Sie hier einrichten, werden im [Zielgruppenexport planen](../../.
 | `allowedScheduleFrequency` | Liste | Definiert die für Kundinnen und Kunden verfügbare Dateiexportfrequenz. Unterstützte Werte:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> |
 | `defaultFrequency` | Enum | Definiert die standardmäßige Dateiexportfrequenz. Unterstützte Werte:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> Der Standardwert ist `DAILY`. |
 | `defaultStartTime` | Zeichenfolge | Definiert die standardmäßige Startzeit für den Dateiexport. Verwendet das 24-Stunden-Dateiformat. Der Standardwert ist „00:00“. |
-| `filenameConfig.allowedFilenameAppendOptions` | Zeichenfolge | *Erforderlich*. Liste der verfügbaren Dateinamenmakros, aus denen Benutzerinnen und Benutzer auswählen können. Dadurch wird bestimmt, welche Elemente an die exportierten Dateinamen angehängt werden (Zielgruppen-ID, Organisationsname, Datum und Uhrzeit des Exports usw.). Wenn Sie `defaultFilename`festlegen, sollten Sie darauf achten, dass Makros nicht dupliziert werden. <br><br>Unterstützte Werte: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Unabhängig von der Reihenfolge, in der Sie die Makros definieren, zeigt die Experience Platform-Benutzeroberfläche sie immer in der hier dargestellten Reihenfolge an. <br><br> Wenn `defaultFilename` leer ist, muss die Liste `allowedFilenameAppendOptions` mindestens ein Makro enthalten. |
+| `filenameConfig.allowedFilenameAppendOptions` | Zeichenfolge | *Erforderlich*. Liste der verfügbaren Dateinamenmakros, aus denen Benutzerinnen und Benutzer auswählen können. Dadurch wird bestimmt, welche Elemente an exportierte Dateinamen angehängt werden (Zielgruppen-ID, Organisationsname, Datum und Uhrzeit des Exports usw.). Wenn Sie `defaultFilename`festlegen, sollten Sie darauf achten, dass Makros nicht dupliziert werden. <br><br>Unterstützte Werte: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Unabhängig von der Reihenfolge, in der Sie die Makros definieren, zeigt die Experience Platform-Benutzeroberfläche sie immer in der hier dargestellten Reihenfolge an. <br><br> Wenn `defaultFilename` leer ist, muss die Liste `allowedFilenameAppendOptions` mindestens ein Makro enthalten. |
 | `filenameConfig.defaultFilenameAppendOptions` | Zeichenfolge | *Erforderlich*. Vorausgewählte Standardmakros für Dateinamen, die von Benutzerinnen und Benutzern deaktiviert werden können.<br><br> Die Makros in dieser Liste sind eine Teilmenge der in `allowedFilenameAppendOptions` definierten. |
 | `filenameConfig.defaultFilename` | Zeichenfolge | *Optional*. Definiert die standardmäßigen Dateinamenmakros für die exportierten Dateien. Diese können von Benutzerinnen und Benutzern nicht überschrieben werden. <br><br>Jedes von `allowedFilenameAppendOptions` definierte Makro wird nach den `defaultFilename`-Makros angehängt. <br><br>Wenn `defaultFilename` leer ist, müssen Sie mindestens ein Makro in `allowedFilenameAppendOptions` definieren. |
 | `segmentGroupingEnabled` | Boolesch | Definiert anhand der [Zusammenführungsrichtlinie](../../../../profile/merge-policies/overview.md) für Zielgruppen, ob die aktivierten Zielgruppen in einer oder mehreren Dateien exportiert werden sollen. Unterstützte Werte: <ul><li>`true`: Exportiert eine Datei pro Zusammenführungsrichtlinie.</li><li>`false`: Exportiert eine Datei pro Zielgruppe, unabhängig von der Zusammenführungsrichtlinie. Dies ist das Standardverhalten. Sie können dasselbe Ergebnis erzielen, indem Sie diesen Parameter vollständig ausschließen.</li></ul> |
@@ -113,7 +113,7 @@ Verwenden Sie Makros zur Dateinamenkonfiguration, um zu definieren, was die Name
 | Makro | UI-Bezeichnung | Beschreibung | Beispiel |
 |---|---|---|---|
 | `DESTINATION` | [!UICONTROL Ziel] | Zielname in der Benutzeroberfläche. | Amazon S3 |
-| `SEGMENT_ID` | [!UICONTROL Segment-ID] | Eindeutige, Platform-generierte Zielgruppen-ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
+| `SEGMENT_ID` | [!UICONTROL Segment-ID] | Eindeutige, von Platform generierte Zielgruppen-ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
 | `SEGMENT_NAME` | [!UICONTROL Segmentname] | Benutzerdefinierter Zielgruppenname | VIP |
 | `DESTINATION_INSTANCE_ID` | [!UICONTROL Ziel-ID] | Eindeutige, von Platform generierte ID der Zielinstanz | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
 | `DESTINATION_INSTANCE_NAME` | [!UICONTROL Zielname] | Benutzerdefinierter Name der Zielinstanz. | Mein Werbeziel 2022 |
@@ -122,8 +122,8 @@ Verwenden Sie Makros zur Dateinamenkonfiguration, um zu definieren, was die Name
 | `DATETIME` / `TIMESTAMP` | [!UICONTROL Datum und Uhrzeit] | `DATETIME` und `TIMESTAMP` definieren beide den Zeitpunkt der Erstellung der Datei, jedoch in verschiedenen Formaten. <br><br><ul><li>`DATETIME` verwendet das folgende Format: JJJJMMTT_HHMMSS.</li><li>`TIMESTAMP` verwendet das 10-stellige Unix-Format. </li></ul> `DATETIME` und `TIMESTAMP` schließen sich gegenseitig aus und können nicht gleichzeitig verwendet werden. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
 | `CUSTOM_TEXT` | [!UICONTROL Benutzerdefinierter Text] | Benutzerdefinierter Text, der in den Dateinamen eingefügt werden soll. Kann nicht in `defaultFilename` verwendet werden. | Mein_Benutzerdefinierter_Text |
 | `TIMESTAMP` | [!UICONTROL Datum und Uhrzeit] | 10-stelliger Zeitstempel der Zeit, zu der die Datei generiert wurde, im Unix-Format. | 1652131584 |
-| `MERGE_POLICY_ID` | [!UICONTROL Zusammenführungsrichtlinien-ID] | Die ID der [Zusammenführungsrichtlinie](../../../../profile/merge-policies/overview.md), die zum Generieren der exportierten Zielgruppe verwendet wird. Verwenden Sie dieses Makro, wenn Sie exportierte Zielgruppen basierend auf einer Zusammenführungsrichtlinie in Dateien gruppieren. Verwenden Sie dieses Makro zusammen mit `segmentGroupingEnabled:true`. | e8591fdb-2873-4b12-b63e-15275b1c1439 |
-| `MERGE_POLICY_NAME` | [!UICONTROL Name der Zusammenführungsrichtlinie] | Der Name der [Zusammenführungsrichtlinie](../../../../profile/merge-policies/overview.md), die zum Generieren der exportierten Zielgruppe verwendet wird. Verwenden Sie dieses Makro, wenn Sie exportierte Zielgruppen basierend auf einer Zusammenführungsrichtlinie in Dateien gruppieren. Verwenden Sie dieses Makro zusammen mit `segmentGroupingEnabled:true`. | Meine benutzerdefinierte Zusammenführungsrichtlinie |
+| `MERGE_POLICY_ID` | [!UICONTROL Zusammenführungsrichtlinien-ID] | Die ID der [Zusammenführungsrichtlinie](../../../../profile/merge-policies/overview.md), die zum Generieren der exportierten Zielgruppe verwendet wird. Verwenden Sie dieses Makro, wenn Sie exportierte Zielgruppen anhand der Zusammenführungsrichtlinie in Dateien gruppieren. Verwenden Sie dieses Makro zusammen mit `segmentGroupingEnabled:true`. | e8591fdb-2873-4b12-b63e-15275b1c1439 |
+| `MERGE_POLICY_NAME` | [!UICONTROL Name der Zusammenführungsrichtlinie] | Der Name der [Zusammenführungsrichtlinie](../../../../profile/merge-policies/overview.md), die zum Generieren der exportierten Zielgruppe verwendet wird. Verwenden Sie dieses Makro, wenn Sie exportierte Zielgruppen anhand der Zusammenführungsrichtlinie in Dateien gruppieren. Verwenden Sie dieses Makro zusammen mit `segmentGroupingEnabled:true`. | Meine benutzerdefinierte Zusammenführungsrichtlinie |
 
 {style="table-layout:auto"}
 

@@ -3,13 +3,13 @@ solution: Experience Platform
 title: Beheben von Playbook-Problemen
 description: Erfahren Sie mehr über häufige Probleme mit Playbooks und deren Behebung
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: f548219668abb6e34d1dd8742191964bf6436bca
-workflow-type: ht
-source-wordcount: '121'
+exl-id: 2604ce26-bcf9-46e1-bc10-30252a113159
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
+source-wordcount: '122'
 ht-degree: 100%
 
 ---
-
 
 # (Beta) Fehlerbehebung und bekannte Einschränkungen
 
@@ -22,7 +22,3 @@ Für die Betaversion der Funktion [!UICONTROL Playbooks für Anwendungsfälle] b
 ## Bekannte Einschränkungen {#known-limitations}
 
 Wenn Sie eine neue Instanz eines Playbooks erstellen, werden neue Assets generiert. Bei generierten Schemata gilt jedoch: Wenn ein Schema in einer Instanz eines Playbooks generiert wird und Sie es bearbeiten, wird bei Aktivierung einer anderen Instanz des Playbooks *kein* anderes Schema generiert. Stattdessen verwenden Sie weiterhin das Schema, das Sie in der neuen Instanz bearbeitet haben.
-
-
-
-

@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche für Edge-Segmentierung
 description: Erfahren Sie, wie Sie die Edge-Segmentierung nutzen können, um Segmentdefinitionen in Platform direkt auszuwerten und so Anwendungsfälle für die Personalisierung auf derselben und der nächsten Seite zu ermöglichen.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
-workflow-type: ht
-source-wordcount: '932'
-ht-degree: 100%
+source-git-commit: 9f586b336f5cc232ac9b04a74846b7cfc2b46a71
+workflow-type: tm+mt
+source-wordcount: '942'
+ht-degree: 95%
 
 ---
 
@@ -41,7 +41,7 @@ Eine Abfrage kann mithilfe der Edge-Segmentierung ausgewertet werden, wenn sie e
 | Einzelereignis, das auf ein Profil verweist | Jede Segmentdefinition, die ohne Zeitbeschränkung auf ein oder mehrere Profilattribute und ein einzelnes eingehendes Ereignis verweist. | Personen, die in den USA leben und die Homepage besucht haben. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")])` |
 | Negiertes einzelnes Ereignis mit einem Profilattribut | Jede Segmentdefinition, die auf ein negiertes eingehendes Ereignis und ein oder mehrere Profilattribute verweist. | Personen, die in den USA leben und die Homepage **nicht** besucht haben. | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")]))` |
 | Einzelnes Ereignis innerhalb eines Zeitfensters | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis innerhalb eines bestimmten Zeitraums verweist. | Personen, die die Homepage in den letzten 24 Stunden besucht haben. | `chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 8 days before now)])` |
-| Einzelnes Ereignis mit einem Profilattribut innerhalb eines Zeitfensters | Jede Segmentdefinition, die innerhalb eines bestimmten Zeitraums auf ein oder mehrere Profilattribute und ein einzelnes eingehendes Ereignis verweist. | Personen, die in den USA leben und die die Homepage in den letzten 24 Stunden besucht haben. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 8 days before now)])` |
+| Einzelnes Ereignis mit einem Profilattribut innerhalb eines relativen Zeitfensters von weniger als 24 Stunden | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis mit einem oder mehreren Profilattributen verweist und innerhalb eines relativen Zeitfensters von weniger als 24 Stunden erfolgt. | Personen, die in den USA leben und die die Homepage in den letzten 24 Stunden besucht haben. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 8 days before now)])` |
 | Negiertes einzelnes Ereignis mit einem Profilattribut innerhalb eines Zeitfensters | Jede Segmentdefinition, die innerhalb eines Zeitraums auf ein oder mehrere Profilattribute und ein negiertes einzelnes eingehendes Ereignis verweist. | Personen, die in den USA leben und die Homepage in den letzten 24 Stunden **nicht** besucht haben. | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 8 days before now)]))` |
 | Häufigkeitsereignis innerhalb eines Zeitfensters von 24 Stunden | Jede Segmentdefinition, die auf ein Ereignis verweist, das innerhalb eines Zeitfensters von 24 Stunden eine bestimmte Anzahl von Malen stattfindet. | Personen, die die Homepage in den letzten 24 Stunden **mindestens** fünf Mal besucht haben. | `chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
 | Häufigkeitsereignis mit einem Profilattribut innerhalb eines Zeitfensters von 24 Stunden | Jede Segmentdefinition, die auf ein oder mehrere Profilattribute und ein Ereignis verweist, die innerhalb eines Zeitfensters von 24 Stunden eine bestimmte Anzahl von Malen stattfinden. | Personen aus den USA, die die Homepage in den letzten 24 Stunden **mindestens** fünf Mal besucht haben. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |

@@ -4,7 +4,8 @@ description: Erfahren Sie, wie Sie eine Quellverbindung und einen Datenfluss ers
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: 054175bd3f3aaab73c8cca249eaf1a9cdbc8deab
+exl-id: ed937689-e844-487e-85fb-e3536c851fe5
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '710'
 ht-degree: 12%
@@ -82,4 +83,3 @@ Weiterführende Informationen zur Verwaltung von Rollen und Berechtigungen finde
 Im folgenden Tutorial erfahren Sie, wie Sie Ihre [!DNL Snowflake] Streaming-Quelle an Experience Platform mithilfe der API:
 
 * [Streamen von Daten aus einem [!DNL Snowflake] Datenbank zum Experience Platform mithilfe der Flow Service-API](../../tutorials/api/create/databases/snowflake-streaming.md)
-

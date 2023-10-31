@@ -448,7 +448,7 @@ Eine Quelle, die den Weiterleitungstoken-Typ der Paginierung unterstützt, kann 
 | `type` | Die Art der Paginierung, die zum Zurückgeben von Daten verwendet wird. |
 | `continuationTokenPath` | Der Wert, der an die Abfrageparameter angehängt werden muss, um zur nächsten Seite der zurückgegebenen Ergebnisse zu wechseln. |
 | `parameterType` | Die `parameterType` -Eigenschaft definiert, wo die `parameterName` hinzugefügt werden. Die `QUERYPARAM` -Typ ermöglicht es Ihnen, Ihre Abfrage mit der `parameterName`. Die `HEADERPARAM` ermöglicht es Ihnen, Ihre `parameterName` zu Ihrer Kopfzeilenanforderung hinzufügen. |
-| `parameterName` | Der Name des Parameters, der zum Integrieren des Fortsetzung-Tokens verwendet wird. Das Format lautet wie folgt: `{PARAMETER_NAME}={CONTINUATION_TOKEN}`. |
+| `parameterName` | Der Name des Parameters, der zum Integrieren des Fortsetzung-Tokens verwendet wird. Die hat das folgende Format: `{PARAMETER_NAME}={CONTINUATION_TOKEN}`. |
 | `delayRequestMillis` | Die `delayRequestMillis` -Eigenschaft in Paginierung ermöglicht es Ihnen, die Rate der Anforderungen zu steuern, die an Ihre Quelle gesendet werden. Einige Quellen können die Anzahl der Anfragen begrenzen, die Sie pro Minute stellen können. Beispiel: [!DNL Zendesk] ist auf 100 Anfragen pro Minute beschränkt und definiert  `delayRequestMillis` nach `850` ermöglicht es Ihnen, die Quelle so zu konfigurieren, dass sie Anrufe mit nur etwa 80 Anfragen pro Minute sendet, deutlich unter dem Schwellenwert von 100 Anfragen pro Minute. |
 
 Im Folgenden finden Sie ein Beispiel für eine Antwort, die mit dem Paginierungstyp Fortsetzung-Token zurückgegeben wird:

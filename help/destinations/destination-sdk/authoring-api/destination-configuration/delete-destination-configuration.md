@@ -1,13 +1,13 @@
 ---
 description: Auf dieser Seite wird der API-Aufruf zum Löschen einer vorhandenen Zielkonfiguration über Adobe Experience Platform Destination SDK erläutert.
 title: Löschen einer Zielkonfiguration
-source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
-workflow-type: ht
+exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 100%
 
 ---
-
 
 # Löschen einer Zielkonfiguration
 
@@ -69,4 +69,3 @@ Weitere Informationen dazu, was Sie mit diesem Endpunkt tun können, finden Sie 
 * [Erstellen einer Zielkonfiguration](create-destination-configuration.md)
 * [Abrufen einer Zielkonfiguration](retrieve-destination-configuration.md)
 * [Aktualisieren einer Zielkonfiguration](update-destination-configuration.md)
-

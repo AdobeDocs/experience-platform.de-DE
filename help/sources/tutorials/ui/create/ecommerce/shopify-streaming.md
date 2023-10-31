@@ -2,8 +2,8 @@
 title: Erstellen einer Streaming-Verbindung mit Shopify und eines Datenflusses in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Benutzeroberfläche von Platform eine Verbindung mit der Shopify Streaming-Quelle und einen Datenfluss erstellen.
 badge: Beta
-exl-id: 3368ecf6-0c61-49ce-bc9c-29ee50b3f037
-source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
+exl-id: d53f4ab5-8bdc-4647-83d5-ee898abda0f2
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 35%
@@ -35,7 +35,7 @@ Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirms
 
 Unter dem **eCommerce** category, select [!DNL Shopify Streaming]und wählen Sie **[!UICONTROL Daten hinzufügen]**.
 
-![Der Experience Platform Sources-Katalog](../../../../images/tutorials/create/shopify-streaming/catalog.png)
+![Der Experience Platform-Quellen-Katalog](../../../../images/tutorials/create/shopify-streaming/catalog.png)
 
 ## Daten auswählen
 
@@ -44,7 +44,7 @@ Die **[!UICONTROL Daten auswählen]** angezeigt, um eine Oberfläche zur Auswahl
 * Der linke Teil der Benutzeroberfläche ist ein Browser, mit dem Sie die verfügbaren Datenströme in Ihrem Konto anzeigen können.
 * Im rechten Bereich der Benutzeroberfläche können Sie eine Vorschau von bis zu 100 Zeilen mit Daten aus einer JSON-Datei anzeigen.
 
-Auswählen **[!UICONTROL Dateien hochladen]** , um eine JSON-Datei von Ihrem lokalen System hochzuladen. Alternativ können Sie die JSON-Datei, die Sie hochladen möchten, per Drag-and-Drop in die [!UICONTROL Dateien per Drag &amp; Drop verschieben] Bereich.
+Auswählen **[!UICONTROL Dateien hochladen]** , um eine JSON-Datei von Ihrem lokalen System hochzuladen. Alternativ können Sie die hochzuladende JSON-Datei per Drag-and-Drop in die [!UICONTROL Dateien per Drag &amp; Drop verschieben] Bedienfeld.
 
 ![Der Schritt Daten hinzufügen des Ursprungs-Workflows.](../../../../images/tutorials/create/shopify-streaming/select-data.png)
 
@@ -87,7 +87,7 @@ Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Be
 
 Mit dem erstellten Streaming-Datenfluss können Sie jetzt Ihre Streaming-Endpunkt-URL abrufen. Dieser Endpunkt wird zum Abonnieren Ihres Webhooks verwendet, sodass Ihre Streaming-Quelle mit Experience Platform kommunizieren kann.
 
-Um Ihren Streaming-Endpunkt abzurufen, navigieren Sie zum [!UICONTROL Datenfluss-Aktivität] Seite des soeben erstellten Datenflusses und kopieren Sie den Endpunkt vom unteren Rand des [!UICONTROL Eigenschaften] Bereich.
+Um Ihren Streaming-Endpunkt abzurufen, navigieren Sie zum [!UICONTROL Datenfluss-Aktivität] Seite des soeben erstellten Datenflusses und kopieren Sie den Endpunkt vom unteren Rand des [!UICONTROL Eigenschaften] Bedienfeld.
 
 ![Der Streaming-Endpunkt in der Datenfluss-Aktivität.](../../../../images/tutorials/create/shopify-streaming/endpoint.png)
 

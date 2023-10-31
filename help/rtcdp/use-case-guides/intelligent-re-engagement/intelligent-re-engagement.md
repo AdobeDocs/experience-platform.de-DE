@@ -1,7 +1,8 @@
 ---
 title: Intelligente Erneute Interaktion
 description: Stellen Sie während der wichtigsten Konversionsmomente überzeugende und vernetzte Erlebnisse bereit, um unregelmäßige Kundinnen und Kunden auf intelligente Weise erneut anzusprechen.
-source-git-commit: 79ba0e350d64f43558af9bc3c2ecd4ac13d11499
+exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '3424'
 ht-degree: 8%
@@ -93,7 +94,7 @@ Wenn Sie die Schritte zur Implementierung des Anwendungsfalls ausführen, verwen
 
 Ressourcen des Experience-Datenmodells (XDM) werden im [!UICONTROL Schemas] Arbeitsbereich in [!DNL Adobe Experience Platform]. Sie können die wichtigsten Ressourcen, die von bereitgestellt werden, anzeigen und untersuchen. [!DNL Adobe] (zum Beispiel: [!UICONTROL Feldergruppen]) und erstellen Sie benutzerdefinierte Ressourcen und Schemata für Ihre Organisation.
 
-Weitere Informationen zur Erstellung von [Schemas](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=de), lesen Sie die [Tutorial zum Erstellen von Schemas.](/help/xdm/tutorials/create-schema-ui.md)
+Weitere Informationen zur Erstellung von [Schemas](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html), lesen Sie die [Tutorial zum Erstellen von Schemas.](/help/xdm/tutorials/create-schema-ui.md)
 
 Es gibt vier Schemaentwürfe, die für den Anwendungsfall der erneuten Interaktion verwendet werden. Für jedes Schema müssen spezifische Felder und einige dringend empfohlene Felder eingerichtet werden.
 

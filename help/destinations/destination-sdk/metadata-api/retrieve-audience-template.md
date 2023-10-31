@@ -1,13 +1,13 @@
 ---
 description: Auf dieser Seite wird der API-Aufruf zum Abrufen einer Zielgruppenvorlage über Adobe Experience Platform Destination SDK veranschaulicht.
 title: Abrufen einer Zielgruppenvorlage
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
-workflow-type: ht
+exl-id: 44f2d571-49c5-4112-b3ee-bc839f2b0874
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 100%
 
 ---
-
 
 # Abrufen einer Zielgruppenvorlage
 

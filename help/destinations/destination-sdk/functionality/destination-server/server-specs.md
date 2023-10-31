@@ -1,13 +1,13 @@
 ---
 description: Erfahren Sie, wie Sie die Ziel-Server-Spezifikationen im Adobe Experience Platform Destination SDK über den Endpunkt „/authoring/destination-servers“ konfigurieren.
 title: Server-Spezifikationen für Ziele, die mit Destination SDK erstellt wurden
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
-workflow-type: ht
+exl-id: 62202edb-a954-42ff-9772-863cea37a889
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
 source-wordcount: '2750'
 ht-degree: 100%
 
 ---
-
 
 # Server-Spezifikationen für Ziele, die mit Destination SDK erstellt wurden
 

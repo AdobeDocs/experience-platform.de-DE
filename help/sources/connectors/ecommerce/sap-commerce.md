@@ -3,7 +3,8 @@ title: SAP Commerce Source - Überblick
 description: Erfahren Sie, wie Sie SAP Commerce mithilfe von APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 last-substantial-update: 2023-07-26T00:00:00Z
 badge: Beta
-source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
+exl-id: d2ddfec3-a421-48a7-b765-86ce9162f26f
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 17%
@@ -31,11 +32,11 @@ Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste möglicherweise 
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie Ihre [!DNL SAP Commerce] -Daten an Experience Platform übermitteln, müssen Sie zunächst Folgendes sicherstellen:
+Bevor Sie Ihre [!DNL SAP Commerce] -Daten an Experience Platform übermitteln, müssen Sie zunächst sicherstellen, dass Sie über Folgendes verfügen:
 
 * A [!DNL SAP Subscription Billing] -Konto. Wenn Sie noch kein gültiges Abrechnungskonto haben, wenden Sie sich an Ihren [!DNL SAP] Kundenbetreuer. Siehe Abschnitt [[!DNL SAP] Plattformkonfiguration](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf) für weitere Details.
 
-* [!DNL SAP] Service-Schlüssel. Die [!DNL SAP] Der Service-Schlüssel ermöglicht Ihnen den Zugriff auf die [!DNL SAP Subscription Billing] API durch Experience Platform. [!DNL SAP Commerce] erfordert Folgendes:
+* [!DNL SAP] Service-Schlüssel. Die [!DNL SAP] Der Service-Schlüssel ermöglicht Ihnen den Zugriff auf die [!DNL SAP Subscription Billing] API über Experience Platform. [!DNL SAP Commerce] erfordert Folgendes:
    * Client-ID
    * Client-Geheimnis
    * URL. Das URL-Muster sieht wie folgt aus: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. Dieser Wert wird später zum Abrufen von Werten für `region` und `tokenEndpoint` wenn Sie [Basisverbindung erstellen](../../tutorials/api/create/ecommerce/sap-commerce.md#base-connection) Verwendung der API oder wenn Sie [Verbinden Sie [!DNL SAP Commerce] account](../../tutorials/ui/create/ecommerce/sap-commerce.md#connect-account) über die Platform-Benutzeroberfläche.
@@ -73,5 +74,5 @@ Bevor Sie Ihre [!DNL SAP Commerce] -Daten an Experience Platform übermitteln, m
 Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL SAP Commerce] mit Platform mithilfe von APIs oder der Benutzeroberfläche:
 
 * [Erstellen Sie eine Quellverbindung und einen Datenfluss, um [!DNL SAP Commerce] Daten an Platform mithilfe von APIs](../../tutorials/api/create/ecommerce/sap-commerce.md).
-* [Verbinden Sie [!DNL SAP Commerce] Konto für die Experience Platform über die Benutzeroberfläche](../../tutorials/ui/create/ecommerce/sap-commerce.md).
+* [Verbinden Sie [!DNL SAP Commerce] Konto für Experience Platform über die Benutzeroberfläche](../../tutorials/ui/create/ecommerce/sap-commerce.md).
 * [Erstellen eines Datenflusses für eine Quelle mithilfe der Benutzeroberfläche](../../tutorials/ui/dataflow/ecommerce.md)

@@ -1,13 +1,13 @@
 ---
 description: Erfahren Sie, wie Sie die an Ihren Endpunkt gesendeten HTTP-Anfragen formatieren. Verwenden Sie den Endpunkt /authoring/destination-servers, um die Vorlagenspezifikationen des Ziel-Servers im Adobe Experience Platform Destination SDK zu konfigurieren.
 title: Vorlagenspezifikationen für Ziele, die mit Destination SDK erstellt wurden
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '523'
-ht-degree: 90%
+ht-degree: 93%
 
 ---
-
 
 # Vorlagenspezifikationen für Ziele, die mit Destination SDK erstellt wurden
 
@@ -46,7 +46,7 @@ Adobe verwendet eine Vorlagensprache, die [Jinja](https://jinja.palletsprojects.
 Weitere Informationen zur Transformation finden Sie unter den folgenden Links:
 
 * [Nachrichtenformat](message-format.md)
-* [Verwenden einer Vorlagensprache für die Transformationen von Identität, Attributen und Zielgruppen-Mitgliedschaft](message-format.md#using-templating)
+* [Verwenden einer Vorlagensprache für die Transformationen von Identitäten, Attributen und Zielgruppenzugehörigkeit](message-format.md#using-templating)
 
 >[!TIP]
 >

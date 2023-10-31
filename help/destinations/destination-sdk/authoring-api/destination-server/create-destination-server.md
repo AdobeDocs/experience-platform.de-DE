@@ -1,13 +1,13 @@
 ---
 description: Auf dieser Seite wird der API-Aufruf zum Erstellen eines Ziel-Servers über Adobe Experience Platform Destination SDK erläutert.
 title: Erstellen einer Ziel-Server-Konfiguration
-source-git-commit: cadffd60093eef9fb2dcf4562b1fd7611e61da94
+exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '2039'
 ht-degree: 89%
 
 ---
-
 
 # Erstellen einer Ziel-Server-Konfiguration
 

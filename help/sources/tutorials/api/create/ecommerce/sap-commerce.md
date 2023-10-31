@@ -1,8 +1,9 @@
 ---
 title: Erstellen einer Quellverbindung und eines Datenflusses für SAP Commerce mithilfe der Flow Service-API
-description: Erfahren Sie, wie Sie eine Quellverbindung und einen Datenfluss erstellen, um SAP Commerce-Daten mithilfe der Flow Service-API in die Experience Platform zu bringen.
+description: Erfahren Sie, wie Sie eine Quellverbindung und einen Datenfluss erstellen, um SAP Commerce-Daten mithilfe der Flow Service-API an die Experience Platform zu übertragen.
 badge: Beta
-source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
+exl-id: 580731b9-0c04-4f83-a475-c1890ac5b7cd
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '2358'
 ht-degree: 55%
@@ -28,7 +29,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
-Um eine Verbindung herzustellen [!DNL SAP Commerce] zur Experience Platform hinzufügen, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+Um eine Verbindung herzustellen [!DNL SAP Commerce] zum Experience Platform müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
@@ -41,7 +42,7 @@ Weitere Informationen zu diesen Anmeldedaten finden Sie im Abschnitt [[!DNL SAP 
 
 ## Verbinden [!DNL SAP Commerce] zur Plattform mithilfe der [!DNL Flow Service] API
 
-Im Folgenden werden die Schritte beschrieben, die Sie zur Authentifizierung Ihrer [!DNL SAP Commerce] -Quelle, erstellen Sie eine Quellverbindung und erstellen Sie einen Datenfluss, um Ihre Konto- und Kontaktdaten in die Experience Platform zu übertragen.
+Im Folgenden werden die Schritte beschrieben, die Sie zur Authentifizierung Ihrer [!DNL SAP Commerce] -Quelle, erstellen Sie eine Quellverbindung und erstellen Sie einen Datenfluss, um Ihre Konto- und Kontaktdaten an Experience Platform zu übertragen.
 
 ### Erstellen einer Basisverbindung {#base-connection}
 

@@ -3,8 +3,8 @@ title: Streaming-Quelle kaufen
 description: Erfahren Sie, wie Sie eine Quellverbindung und einen Datenfluss erstellen, um Streaming-Daten aus Ihrer Shopify-Instanz in Adobe Experience Platform zu erfassen.
 badge: Beta
 last-substantial-update: 2023-04-26T00:00:00Z
-exl-id: 4c83c08d-c744-4167-9e3b-ed9a995943f4
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+exl-id: ae991913-68b5-4bbb-b8a5-e566d67a4c1a
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 3%
@@ -27,9 +27,9 @@ Sie müssen über gültige [!DNL Shopify] Partnerkonto, um eine Verbindung zum [
 
 ### Anwendung erstellen
 
-Mit gültigen [!DNL Shopify] Partnerkonto verwenden, können Sie jetzt mit dem Partner-Dashboard fortfahren und Ihre App erstellen. Umfassende Schritte zum Erstellen Ihrer App in [!DNL Shopify], lesen Sie die [[!DNL Shopify] Handbuch zu den ersten Schritten](https://www.shopify.com/partners/blog/17056443-how-to-generate-a-shopify-api-token).
+Mit gültigen [!DNL Shopify] Partnerkonto verwenden, können Sie jetzt mit dem Partner-Dashboard fortfahren und Ihre App erstellen. Umfassende Schritte zum Erstellen Ihrer App in [!DNL Shopify], lesen Sie die [[!DNL Shopify] Erste Schritte](https://www.shopify.com/partners/blog/17056443-how-to-generate-a-shopify-api-token).
 
-Rufen Sie nach der Erstellung Ihrer App Ihre **Client-ID** und **Client-Geheimnis** von **Client-Anmeldeinformationen** des [!DNL Shopify] Partner-Dashboard. Die Client-ID und das Client-Geheimnis werden in den nächsten Schritten verwendet, um Ihren Autorisierungscode und Ihr Zugriffstoken abzurufen.
+Rufen Sie nach der Erstellung Ihrer App Ihre **Client-ID** und **Client-Geheimnis** aus dem **Client-Anmeldeinformationen** des [!DNL Shopify] Partner-Dashboard. Die Client-ID und das Client-Geheimnis werden in den nächsten Schritten verwendet, um Ihren Autorisierungscode und Ihr Zugriffstoken abzurufen.
 
 ### Abrufen des Autorisierungscodes
 
@@ -104,7 +104,7 @@ Bei einer erfolgreichen Antwort werden Ihr Zugriffstoken und die Berechtigungsbe
 
 ## Webhook für Streaming erstellen [!DNL Shopify] data {#webhook}
 
-Webhooks ermöglichen es Anwendungen, mit Ihrer [!DNL Shopify] Daten oder eine Aktion ausführen, nachdem ein bestimmtes Ereignis in einem Shop auftritt. Streaming [!DNL Shopify] -Daten in die Experience Platform übertragen, können Webhooks verwendet werden, um den HTTP-Endpunkt und die Themen für die Anmeldung zu definieren.
+Webhooks ermöglichen es Anwendungen, mit Ihrer [!DNL Shopify] Daten oder eine Aktion ausführen, nachdem ein bestimmtes Ereignis in einem Shop auftritt. Streaming [!DNL Shopify] -Daten an Experience Platform übergeben, können Webhooks verwendet werden, um den HTTP-Endpunkt und die Themen für die Anmeldung zu definieren.
 
 **Anfrage**
 
@@ -157,11 +157,11 @@ Im Folgenden finden Sie eine Liste bekannter Einschränkungen, auf die Sie bei d
 
 * Es ist nicht garantiert, dass Sie die Reihenfolge der verschiedenen Themen für dieselbe Ressource festlegen können. Beispielsweise ist es möglich, dass ein `products/update` Webhook wird vor einem `products/create` Webhook.
 * Sie können Ihren Webhook so einrichten, dass Webhook-Ereignisse mindestens einmal an einen Endpunkt gesendet werden. Das bedeutet, dass ein Endpunkt dasselbe Ereignis mehrmals empfangen kann. Sie können nach doppelten Webhook-Ereignissen suchen, indem Sie die `X-Shopify-Webhook-Id` -Kopfzeile zu vorherigen Ereignissen.
-* [!DNL Shopify] behandelt HTTP 2xx-Statusantworten als erfolgreiche Benachrichtigungen. Alle anderen Status-Code-Antworten werden als Fehler betrachtet. [!DNL Shopify] bietet einen Wiederholungsmechanismus für fehlgeschlagene Webhook-Benachrichtigungen. Wenn **keine Antwort nach fünf Sekunden Wartezeit**, [!DNL Shopify] wiederholt die Verbindung **19-mal** im Laufe der nächsten **48 Stunden**. Wenn bis zum Ende des Wiederholungszeitraums immer noch keine Antworten vorhanden sind, dann [!DNL Shopify] löscht den Webhook.
+* [!DNL Shopify] behandelt HTTP 2xx-Statusantworten als erfolgreiche Benachrichtigungen. Alle anderen Status-Code-Antworten werden als fehlgeschlagen betrachtet. [!DNL Shopify] bietet einen Wiederholungsmechanismus für fehlgeschlagene Webhook-Benachrichtigungen. Wenn **keine Antwort nach fünf Sekunden Wartezeit**, [!DNL Shopify] wiederholt die Verbindung **19-mal** im Laufe der nächsten **48 Stunden**. Wenn bis zum Ende des Wiederholungszeitraums immer noch keine Antworten vorhanden sind, dann [!DNL Shopify] löscht den Webhook.
 
 ## Nächste Schritte
 
-In den folgenden Tutorials erfahren Sie, wie Sie Ihre [!DNL Shopify Streaming] -Quelle zur Experience Platform mithilfe der API und der Benutzeroberfläche:
+In den folgenden Tutorials erfahren Sie, wie Sie Ihre [!DNL Shopify Streaming] -Quelle zum Experience Platform mithilfe der API und der Benutzeroberfläche:
 
 * [Erstellen einer Shopify Streaming-Quellverbindung und eines Datenflusses mithilfe der Flow Service-API](../../tutorials/api/create/ecommerce/shopify-streaming.md)
 * [Erstellen einer Shopify Streaming-Quellverbindung und eines Datenflusses in der Benutzeroberfläche](../../tutorials/ui/create/ecommerce/shopify-streaming.md)

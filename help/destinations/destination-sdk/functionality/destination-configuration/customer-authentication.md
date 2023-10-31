@@ -1,13 +1,13 @@
 ---
 description: Erfahren Sie, wie Sie einen Authentifizierungsmechanismus für Ihr Ziel einrichten und erhalten Sie einen Einblick darüber, was in der Benutzeroberfläche je nach gewählter Authentifizierungsmethode zu sehen sein wird.
 title: Konfiguration der Kundenauthentifizierung
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
-workflow-type: ht
+exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 100%
 
 ---
-
 
 # Konfiguration der Kundenauthentifizierung
 

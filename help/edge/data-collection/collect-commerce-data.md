@@ -1,13 +1,13 @@
 ---
 title: Erfassen von Commerce-, Produkt- und Bestellinformationen mit dem Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Web SDK Daten zu Produkten oder einem Warenkorb hinzufügen.
-source-git-commit: cb47f70fe75eb0dfe26fb3c3557658cf6cff5a17
+exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1109'
 ht-degree: 27%
 
 ---
-
 
 # Erfassen von Commerce-, Produkt- und Bestellinformationen
 
@@ -151,7 +151,7 @@ Die Produktliste gibt an, welche Produkte mit der entsprechenden Aktion in Verbi
 
 Erweitern Sie die folgenden Abschnitte, um Beispiele für Web SDK-Befehle mithilfe der `productListItems` -Objekt.
 
-+++`productListItems` Beispiel
++++`productListItems` example
 
 Ein Web-SDK `sendEvent` Aufrufeinstellung `productViews` für mehrere Produkte in `productListItems` array:
 
@@ -213,7 +213,7 @@ alloy("sendEvent",{
 
 +++
 
-+++`checkouts` Beispiel
++++`checkouts` example
 
 Ein Web-SDK `sendEvent` Aufrufeinstellung `checkouts` -Ereignis für mehrere Produkte im `productListItems` array:
 

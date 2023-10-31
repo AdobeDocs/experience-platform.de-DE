@@ -1,13 +1,13 @@
 ---
 description: Erfahren Sie, wie Sie Eingabefelder in der Experience Platform-Benutzeroberfläche erstellen, mit denen Ihre Benutzerinnen und Benutzer verschiedene Informationen angeben können, die für die Verbindung und den Export von Daten zu Ihrem Ziel relevant sind.
 title: Benutzerdefinierte Datenfelder
-source-git-commit: cadffd60093eef9fb2dcf4562b1fd7611e61da94
+exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1580'
 ht-degree: 91%
 
 ---
-
 
 # Konfigurieren von Benutzereingaben über Kundendatenfelder
 
