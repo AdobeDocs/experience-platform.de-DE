@@ -2,7 +2,7 @@
 title: Aktivieren von Zielgruppen für kuratierte Ziele basierend auf LiveRamp-IDs
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der LiveRamp-Ramp-ID Zielgruppen aus Adobe Experience Platform für verbundene TV- und Audioziele und andere Integrationen aktivieren können.
-source-git-commit: adc7e66fa17484ccb9527650f197acc29ef4d0f1
+source-git-commit: 25cda72508860b57bfa9ad0a729d0329d0f6bd1f
 workflow-type: tm+mt
 source-wordcount: '646'
 ht-degree: 4%
@@ -48,7 +48,7 @@ In diesem Artikel wird der Workflow erläutert, der zum Aktivieren von Zielgrupp
 
 Sie aktivieren Zielgruppen für verbundene TV- und Audioziele, indem Sie einen zweistufigen Prozess durchführen und die [LiveRamp - Onboarding](../catalog/advertising/liveramp-onboarding.md) und [LiveRamp - Distribution](../catalog/advertising/liveramp-distribution.md) Ziele, wie in der Abbildung unten dargestellt.
 
-![Abbildung des Workflows zum Aktivieren von Zielgruppen von Real-Time CDP zu kuratierten Zielen über LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/workflow-diagram.png)
+![Abbildung des Workflows zum Aktivieren von Zielgruppen von Real-Time CDP zu kuratierten Zielen über LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/workflow-diagram.png){width="1920" zoomable="yes"}
 
 Exportieren Sie zunächst Ihre Zielgruppen aus Real-Time CDP in die [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) Ziel, als CSV-Dateien.
 
