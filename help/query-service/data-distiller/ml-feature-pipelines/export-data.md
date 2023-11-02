@@ -2,16 +2,16 @@
 title: Exportieren von Daten in externe ML-Umgebungen
 description: Erfahren Sie, wie Sie einen vorbereiteten Trainings-Datensatz, der mit Data Distiller erstellt wurde, an einem Cloud-Speicherort freigeben können, den Ihre ML-Umgebung für Schulungen und Auswertungen Ihres Modells lesen kann.
 exl-id: 75022acf-fafd-41d6-8dfa-ff3fd4c4fa7e
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 7%
+source-wordcount: '537'
+ht-degree: 5%
 
 ---
 
 # Daten in externe ML-Umgebungen exportieren
 
-In diesem Dokument wird gezeigt, wie Sie einen vorbereiteten Trainings-Datensatz, der mit Data Distiller erstellt wurde, an einem Cloud-Speicher freigeben können, den Ihre ML-Umgebung zum Trainieren und Scoring Ihres Modells lesen kann. Das Beispiel hier exportiert den Trainings-Datensatz in die [Data Landing Zone (DLZ)](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/create/cloud-storage/data-landing-zone.html?lang=de). Sie können das Speicherziel nach Bedarf ändern, um mit Ihrer Umgebung für maschinelles Lernen zu arbeiten.
+In diesem Dokument wird gezeigt, wie Sie einen vorbereiteten Trainings-Datensatz, der mit Data Distiller erstellt wurde, an einem Cloud-Speicher freigeben können, den Ihre ML-Umgebung zum Trainieren und Scoring Ihres Modells lesen kann. Das Beispiel hier exportiert den Trainings-Datensatz in die [Data Landing Zone (DLZ)](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). Sie können das Speicherziel nach Bedarf ändern, um mit Ihrer Umgebung für maschinelles Lernen zu arbeiten.
 
 Die [Flussdienst für Ziele](https://developer.adobe.com/experience-platform-apis/references/destinations/) wird verwendet, um die Funktions-Pipeline abzuschließen, indem ein Datensatz mit berechneten Funktionen an einen geeigneten Cloud-Speicher-Speicherort gelandet wird.
 

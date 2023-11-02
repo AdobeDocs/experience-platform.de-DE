@@ -2,9 +2,9 @@
 title: Endpunkt für beschleunigte Abfragen
 description: Erfahren Sie, wie Sie statuslos auf den abfragebeschleunigten Speicher zugreifen können, um schnell Ergebnisse basierend auf aggregierten Daten zurückzugeben. Dieses Dokument enthält eine beispielhafte HTTP-Anfrage und -Antwort für den Endpunkt für beschleunigte Abfragen des Abfrage-Service.
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: aa209dce9268a15a91db6e3afa7b6066683d76ea
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '559'
 ht-degree: 97%
 
 ---
@@ -17,7 +17,7 @@ Bevor Sie mit diesem Handbuch fortfahren, stellen Sie sicher, dass Sie das [Hand
 
 ## Erste Schritte
 
-Die Data Distiller SKU ist erforderlich, um den abfragebeschleunigten Speicher zu verwenden. Siehe [Verpackung](../packages.md) und [Limits](../guardrails.md#query-accelerated-store) Dokumentation, die sich auf die Data Distiller SKU bezieht. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich bitte an den Adobe-Support, um weitere Informationen zu erhalten.
+Die Data Distiller SKU ist erforderlich, um den abfragebeschleunigten Speicher zu verwenden. Lesen Sie hierzu die [Verpackung](../packages.md) und [Limits](../guardrails.md#query-accelerated-store) Dokumentation, die sich auf die Data Distiller SKU bezieht. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich bitte an den Adobe-Support, um weitere Informationen zu erhalten.
 
 <!-- Document is hidden temporarily
 Please see the [packaging](../packages.md), [guardrails](../guardrails.md#query-accelerated-store), and [licensing](../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. 
@@ -212,6 +212,6 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit dem von der Abfrage
 | `resultsMeta` | Dieses Objekt enthält die Metadaten für jede Spalte, die in den Ergebnissen zurückgegeben wird, damit Benutzende den Namen und den Typ jeder Spalte kennen. |
 | `resultsMeta._adhoc` | Ein Ad-hoc-Schema des Experience-Datenmodells (XDM) mit Feldern, die für die Verwendung durch nur einen einzigen Datensatz mit einem Namespace versehen wurden. |
 | `resultsMeta._adhoc.type` | Der Datentyp des Ad-hoc-Schemas. |
-| `resultsMeta._adhoc.meta:xdmType` | Dies ist ein systemgenerierter Wert für den XDM-Feldtyp. Weitere Informationen zu den verfügbaren Typen finden Sie in der Dokumentation zu den [verfügbaren XDM-Typen](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html?lang=de). |
+| `resultsMeta._adhoc.meta:xdmType` | Dies ist ein systemgenerierter Wert für den XDM-Feldtyp. Weitere Informationen zu den verfügbaren Typen finden Sie in der Dokumentation zu den [verfügbaren XDM-Typen](../../xdm/tutorials/custom-fields-api.md). |
 | `resultsMeta._adhoc.properties` | Dies sind die Spaltennamen des abgefragten Datensatzes. |
 | `resultsMeta._adhoc.results` | Dies sind die Zeilennamen des abgefragten Datensatzes. Sie spiegeln jede der zurückgegebenen Spalten wider. |

@@ -2,23 +2,23 @@
 title: Rückgabe und Verwendung von Merchandising-Variablen aus Analysedaten
 description: Erfahren Sie, wie Sie XDM-Felder und Beispielabfragen bereitstellen, um auf die Merchandising-Variablen in Ihren Analytics-Datensätzen zuzugreifen.
 exl-id: 1e2ae095-4152-446f-8b66-dae5512d690e
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '1112'
-ht-degree: 15%
+source-wordcount: '1103'
+ht-degree: 14%
 
 ---
 
 # Zurückgeben und Verwenden von Merchandising-Variablen aus Analysedaten 
 
-Verwenden Sie Query Service , um die Daten zu verwalten, die von Adobe Analytics als Datensätze in Adobe Experience Platform erfasst werden. Die folgenden Abschnitte enthalten Beispielabfragen, mit denen Sie auf die Merchandising-Variablen in Ihren Analytics-Datensätzen zugreifen können. Weitere Informationen finden Sie in der Dokumentation zu [Erfassen und Zuordnen von Adobe Analytics-Daten](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/mapping/analytics.html?lang=de) über die Analytics-Quelle
+Verwenden Sie Query Service , um die Daten zu verwalten, die von Adobe Analytics als Datensätze in Adobe Experience Platform erfasst werden. Die folgenden Abschnitte enthalten Beispielabfragen, mit denen Sie auf die Merchandising-Variablen in Ihren Analytics-Datensätzen zugreifen können. Weitere Informationen finden Sie in der Dokumentation zu [Erfassen und Zuordnen von Adobe Analytics-Daten](../../sources/connectors/adobe-applications/mapping/analytics.md) über die Analytics-Quelle
 
 ## Merchandising-Variablen {#merchandising-variables}
 
 Merchandisingvariablen können einer oder zwei Syntaxen folgen:
 
 * **Produktsyntax**: Verbindet den eVar mit einem Produkt. 
-* **Syntax der Konversionsvariablen**: Verbindet die eVar nur dann mit einem Produkt, wenn ein Binding-Ereignis auftritt. Sie können die Ereignisse auswählen, die als Binding-Ereignisse dienen.
+* **Syntax der Konversionsvariablen**: Verbindet den eVar nur dann mit einem Produkt, wenn ein Binding-Ereignis auftritt. Sie können die Ereignisse auswählen, die als Binding-Ereignisse dienen.
 
 ## Produktsyntax {#product-syntax}
 
@@ -26,7 +26,7 @@ In Adobe Analytics können benutzerdefinierte Daten auf Produktebene über spezi
 
 Diese Variablen werden als Merchandising-Variablen mit Produktsyntax bezeichnet. Dies ermöglicht die Erfassung von Informationen, z. B. einen pro Produkt ausgegebenen &quot;Rabattbetrag&quot;oder Informationen über die &quot;Position des Produkts auf der Seite&quot;in den Suchergebnissen des Kunden.
 
-Weitere Informationen zur Verwendung der Produktsyntax finden Sie in der Adobe Analytics-Dokumentation unter [Implementierung von eVars mit Produktsyntax](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-product-syntax).
+Weitere Informationen zur Verwendung der Produktsyntax finden Sie in der Adobe Analytics-Dokumentation unter [Implementieren von eVars mit Produktsyntax](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-product-syntax).
 
 In den folgenden Abschnitten werden die XDM-Felder beschrieben, die für den Zugriff auf die Merchandising-Variablen in Ihren [!DNL Analytics] Datensatz:
 
@@ -48,7 +48,7 @@ productListItems[#]._experience.analytics.event1to100.event#.value
 * `#`: Der Index des Arrays, auf das Sie zugreifen.
 * `event#`: Die spezifische benutzerspezifische Ereignisvariable, auf die Sie zugreifen.
 
-## Anwendungsfälle der Produktsyntax {#product-use-cases}
+## Anwendungsfälle für die Produktsyntax {#product-use-cases}
 
 Die folgenden Anwendungsbeispiele konzentrieren sich auf die Rückgabe eines Merchandising-eVar aus dem `productListItems` -Array mit SQL.
 
@@ -98,8 +98,7 @@ LIMIT 20
 >
 > Wenn Sie versuchen, ein Feld abzurufen, das im aktuellen Datensatz nicht vorhanden ist, tritt der Fehler &quot;No such struct field&quot;auf. Werten Sie den in der Fehlermeldung zurückgegebenen Grund aus, um ein verfügbares Feld zu identifizieren, aktualisieren Sie dann Ihre Abfrage und führen Sie sie erneut aus.
 >
->
-```console
+>```console
 >ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered. Reason: [No such struct field evar1 in eVar10, eVar13, eVar62, eVar88, eVar2;]
 >```
 
@@ -117,7 +116,7 @@ Das folgende Produktergebnis zeigt beispielsweise, wie die erforderlichen Daten 
 4. Der Benutzer führt eine weitere interne Suche nach &quot;Sommerhemd&quot;durch, wodurch die Konversionssyntax für Merchandising eVar6 auf &quot;Interne Suche:Sommerhemd&quot;gesetzt wird.
 5. Der Benutzer wählt &quot;Sportliches T-Shirt&quot;aus und landet auf der Produktdetailseite.\
    a. Mit dem Öffnen der Seite wird ein `Product View`-Ereignis für das „Sportliche T-Shirt“ für $19,99 ausgelöst.\
-   b. Als `Product View` -Ereignis das Binding-Ereignis ist, ist das Produkt &quot;Sportliches T-Shirt&quot;jetzt an den eVar 6-Wert von &quot;Interne Suche:Sommerhemd&quot;gebunden. Das frühere Produkt &quot;Waffelmütze&quot;ist weiterhin an den Wert &quot;Interne Suche:Waffelmütze&quot;in eVar 6 gebunden.
+   b. Als `Product View` -Ereignis das Binding-Ereignis ist, ist das Produkt &quot;Sportliches T-Shirt&quot;jetzt an den eVar 6-Wert von &quot;Interne Suche:Sommerhemd&quot;gebunden. Das frühere Produkt &quot;Waffelmütze&quot;ist weiterhin an den Wert von eVar 6 &quot;Interne Suche:Waffelmütze&quot;gebunden.
 6. Der Benutzer fügt das Produkt zum Warenkorb hinzu und löst das `Cart Add`-Ereignis aus.
 7. Der Benutzer checkt mit beiden Produkten aus.
 
@@ -152,7 +151,7 @@ productListItems[#].sku
 
 Die folgenden Anwendungsfälle spiegeln Szenarien wider, die die Syntax der Konversionsvariablen erfordern.
 
-### Binden Sie den Wert an das spezifische Produkt- und Ereignispaar.
+### Binden Sie den Wert an das spezifische Produkt- und Ereignispaar
 
 Die nachstehende Abfrage bindet den Wert an das spezifische Produkt- und Ereignispaar. In diesem Beispiel ist der Wert an das Produktansichtsereignis gebunden.
 
@@ -221,4 +220,4 @@ LIMIT 100
 
 Durch Lesen dieses Dokuments sollten Sie besser verstehen, wie Sie eine Merchandising-eVar mithilfe der Produktsyntax zurückgeben und einen Wert mit der Konversionsvariablensyntax an ein bestimmtes Produkt binden können.
 
-Wenn Sie dies noch nicht getan haben, sollten Sie die [Dokumentation zu Analytics-Einblicken für Web- und mobile Interaktionen](./analytics-insights.md) als Nächstes. Sie bietet gängige Anwendungsfälle und zeigt, wie Sie mit Query Service umsetzbare Einblicke aus Web- und mobilen Adobe Analytics-Daten erstellen können.
+Wenn Sie dies noch nicht getan haben, sollten Sie die [Dokumentation zu Analytics-Einblicken für Web- und mobile Interaktionen](./analytics-insights.md) als Nächstes. Sie bietet gängige Anwendungsfälle und zeigt, wie Sie mit Query Service praktische Einblicke aus Web- und mobilen Adobe Analytics-Daten erstellen können.

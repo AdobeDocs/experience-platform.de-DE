@@ -4,9 +4,9 @@ title: Handbuch zum Profile-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: cd57ca50537d928025a5164b6a7d0ead490162ba
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '4331'
+source-wordcount: '4313'
 ht-degree: 54%
 
 ---
@@ -213,7 +213,7 @@ Weitere Informationen finden Sie im [Abschnitt über Zusammenführungsrichtlinie
 >
 >Das Widget [!UICONTROL Profilanzahl] kann aus mehreren Gründen eine andere Zahl anzeigen als die Registerkarte [!UICONTROL Durchsuchen] im Abschnitt [!UICONTROL Profile] der Benutzeroberfläche. Der häufigste Grund für diesen Unterschied besteht darin, dass die [!UICONTROL Durchsuchen] -Registerkarte gibt die Gesamtzahl der zusammengeführten Profile basierend auf der standardmäßigen Zusammenführungsrichtlinie Ihres Unternehmens an, während die Variable [!UICONTROL Profilanzahl] -Widget verweist auf die Gesamtzahl der zusammengeführten Profile basierend auf der Zusammenführungsrichtlinie, die Sie im Dashboard angezeigt haben.
 >
->Ein weiterer häufiger Grund besteht darin, dass der Dashboard-Schnappschuss und der Beispielvorgang für die Registerkarte [!UICONTROL Durchsuchen] zu unterschiedlichen Zeiten ausgeführt wird. Sie können sehen, wann das Widget [!UICONTROL Profilanzahl] zuletzt aktualisiert wurde, indem Sie den Zeitstempel im Widget überprüfen. Weitere Informationen dazu, wie der Beispielauftrag im [!UICONTROL Durchsuchen] Registerkarte, siehe [Abschnitt zur Profilanzahl im Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=de#profile-count).
+>Ein weiterer häufiger Grund besteht darin, dass der Dashboard-Schnappschuss und der Beispielvorgang für die Registerkarte [!UICONTROL Durchsuchen] zu unterschiedlichen Zeiten ausgeführt wird. Sie können sehen, wann das Widget [!UICONTROL Profilanzahl] zuletzt aktualisiert wurde, indem Sie den Zeitstempel im Widget überprüfen. Weitere Informationen dazu, wie der Beispielauftrag im [!UICONTROL Durchsuchen] Registerkarte, siehe [Abschnitt zur Profilanzahl im Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils](../../profile/ui/user-guide.md#profile-count).
 
 ![Das Dashboard Experience Platform-Profile mit dem Widget Profilanzahl wird hervorgehoben.](../images/profiles/profile-count.png)
 
@@ -428,7 +428,7 @@ Um umfassende Informationen zu einer Zielgruppe anzuzeigen, wählen Sie einen Zi
 
 ![Das Widget Größe von Zielgruppen mit einem Zielgruppennamen und dem Text Alle Zielgruppen anzeigen hervorgehoben.](../images/profiles/audiences-size-view-all-audiences.png)
 
-Weitere Informationen zu finden Sie in der Dokumentation . [[!UICONTROL Zielgruppen] [!UICONTROL  Durchsuchen] tab](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=de#browse).
+Weitere Informationen zu finden Sie in der Dokumentation . [[!UICONTROL Zielgruppen] [!UICONTROL  Durchsuchen] tab](../../segmentation/ui/overview.md#browse).
 
 ### [!UICONTROL Zielgruppenüberschneidung nach Zusammenführungsrichtlinie] {#audience-overlap-by-merge-policy}
 

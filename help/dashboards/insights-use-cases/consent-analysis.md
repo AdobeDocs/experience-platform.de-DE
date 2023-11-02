@@ -2,9 +2,9 @@
 title: Einverständnisanalyse und -verfolgung
 description: Erfahren Sie, wie Sie ein Dashboard für die Einwilligungsanalyse erstellen, um zu verfolgen, wie sich die Einwilligung der Benutzer im Laufe der Zeit entwickelt hat.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '1921'
+source-wordcount: '1912'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ Die [!UICONTROL Abonnements] angezeigt. Wählen Sie aus den verfügbaren Optione
 
 >[!NOTE]
 >
->Die Anzahl der Zielgruppen, die Sie erstellen sollten, ist weich begrenzt. Weitere Informationen finden Sie im [Dokumentation zu SegmentierungsLimits](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=en#segmentation-guardrails).
+>Die Anzahl der Zielgruppen, die Sie erstellen sollten, ist weich begrenzt. Weitere Informationen finden Sie im [Dokumentation zu SegmentierungsLimits](../../profile/guardrails.md#segmentation-guardrails).
 
 ![Die [!UICONTROL Auswahlwert] -Attribut mit dem [!UICONTROL Ja (Opt-in)] im Segment Builder hervorgehoben wurde. Der Name und die Beschreibung der Audience werden ebenfalls hervorgehoben.](../images/insights-use-cases/consent-analysis/choice-value.png)
 

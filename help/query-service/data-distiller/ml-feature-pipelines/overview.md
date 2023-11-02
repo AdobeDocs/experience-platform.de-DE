@@ -2,7 +2,7 @@
 title: AI-/ML-Funktions-Pipelines
 description: Erfahren Sie, wie Sie mit Data Distiller Ihre Pipelines für maschinelles Lernen mit Funktionen anreichern können, die aus Adobe Experience Platform-Daten abgeleitet wurden. Transformieren Sie Rohdaten in Funktionen und stellen Sie die Funktionsdaten bereit, um ein Modell zu trainieren oder zu bewerten, das Ihre Marketing-Anwendungsfälle unterstützt.
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 3%
@@ -100,13 +100,13 @@ Is this the correct doc to link to about creating an Oauth2 API credential?:
 ../../../destinations/destination-sdk/functionality/destination-configuration/oauth2-authentication.md
  -->
 
-<!-- See [Authenticate and access Experience Platform APIs](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html) detailed instructions instructions on creating an API credential. -->
+<!-- See [Authenticate and access Experience Platform APIs](../../../landing/api-authentication.md) detailed instructions instructions on creating an API credential. -->
 
 <!-- ### Step 2: Get the necessary attribute-based access control permissions for your credential {#get-permissions}
 
 An API credential will not be able to access Platform APIs without explicit permissions granted by your organization's Adobe System Admin for specific Platform services and data. A System Admin can [assign the API credential to a role](../../../landing/api-authentication.md#assign-api-to-a-role) and manage permissions for role in the [!UICONTROL Permissions] UI in Platform. 
 
-You will need to provide your system admin with the name and technical account email of your API credential. System admins can refer to the documentation to find information about how to [manage API credentials for a role](https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/permissions.html?lang=en#manage-api-credentials-for-role) and [grant the required permissions to access Platform resources](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#get-abac-permissions).
+You will need to provide your system admin with the name and technical account email of your API credential. System admins can refer to the documentation to find information about how to [manage API credentials for a role](../../../access-control/abac/ui/permissions.md#manage-api-credentials-for-role) and [grant the required permissions to access Platform resources](../../../landing/api-authentication.md#get-abac-permissions).
 
 The minimum permissions required to execute these notebooks include:
 

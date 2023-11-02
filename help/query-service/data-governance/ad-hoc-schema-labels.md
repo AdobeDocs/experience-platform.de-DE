@@ -2,10 +2,10 @@
 title: Unterstützung der attributbasierten Zugriffssteuerung für Ad-hoc-Schemas
 description: Eine Anleitung zum Einschränken des Zugriffs auf Datenfelder in Ad-hoc-Schemata, die über Adobe Experience Platform Query Service generiert wurden.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: 91f318596bf268aa93e8b2df9c13774aab76d13a
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '1040'
-ht-degree: 9%
+source-wordcount: '1013'
+ht-degree: 7%
 
 ---
 
@@ -25,24 +25,24 @@ Dieses Dokument bietet eine Anleitung zum Verwalten des Zugriffs auf vertraulich
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Experience-Datenmodell (XDM)-System](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=de): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
-   * [[!DNL Schema Editor]](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/overview.html?lang=de): Erfahren Sie, wie Sie in der Platform-Benutzeroberfläche Schemas und andere Ressourcen erstellen und verwalten.
-* [[!DNL Data Governance]](../../data-governance/home.md): Erfahren Sie mehr [!DNL Data Governance] ermöglicht Ihnen, Kundendaten zu verwalten und die Einhaltung von Vorschriften, Einschränkungen und Richtlinien für die Datennutzung sicherzustellen.
+* [Experience-Datenmodell (XDM)-System](../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
+   * [[!DNL Schema Editor]](../../xdm/ui/overview.md): Erfahren Sie, wie Sie Schemas und andere Ressourcen in der Platform-Benutzeroberfläche erstellen und verwalten.
+* [[!DNL Data Governance]](../../data-governance/home.md): Erfahren Sie, wie Sie [!DNL Data Governance] ermöglicht Ihnen, Kundendaten zu verwalten und die Einhaltung von Vorschriften, Einschränkungen und Richtlinien für die Datennutzung sicherzustellen.
 * [Attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md): Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Platform, mit der Administratoren den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen steuern können. Attribute können einem Objekt Metadaten hinzugefügt werden, z. B. eine Bezeichnung, die einem Ad-hoc- oder regulären Schemafeld hinzugefügt wird. Administrierende definieren Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten.
 
 ## Erstellen eines Ad-hoc-Schemas
 
 Nachdem Ihre Abfrage ausgeführt und Ergebnisse generiert wurden, wird automatisch ein Ad-hoc-Schema generiert und zum Schema-Inventar hinzugefügt.
 
-Um eine Datenbeschriftung hinzuzufügen, navigieren Sie zu [!UICONTROL Schemas] Registerkarte zum Durchsuchen von Dashboards durch Auswahl [!UICONTROL Schemas] in der linken Leiste der Platform-Benutzeroberfläche. Das Schema-Inventar wird angezeigt.
+Navigieren Sie zum Hinzufügen einer Datenbeschriftung zu [!UICONTROL Schemas] Registerkarte zum Durchsuchen von Dashboards durch Auswahl [!UICONTROL Schemas] in der linken Leiste der Platform-Benutzeroberfläche. Das Schema-Inventar wird angezeigt.
 
 >[!NOTE]
 >
 >Ad-hoc-Schemata werden nicht standardmäßig im Schema-Inventar angezeigt.
 
-## Entdecken Sie Ad-hoc-Schemas im Schema-Inventar der Platform-Benutzeroberfläche {#discover-ad-hoc-schemas}
+## Entdecken Sie Ad-hoc-Schemas im Schema-Inventar der Platform-Benutzeroberfläche. {#discover-ad-hoc-schemas}
 
-Um die Anzeige von Ad-hoc-Schemata in der Platform-Benutzeroberfläche zu aktivieren, wählen Sie das Filtersymbol (![Ein Filtersymbol.](../images/data-governance/filter.png)) links neben dem Suchfeld und wählen Sie dann ** aus.[!UICONTROL Anzeigen von Ad-hoc-Schemata] in der linken Leiste, die angezeigt wird.
+Um die Anzeige von Ad-hoc-Schemata in der Platform-Benutzeroberfläche zu aktivieren, wählen Sie das Filtersymbol (![Ein Filtersymbol.](../images/data-governance/filter.png)) links neben dem Suchfeld und wählen Sie dann ** aus.[!UICONTROL Anzeigen von Ad-hoc-Schemata] in der linken Leiste angezeigt.
 
 ![Die Filter-Optionen des Schema-Dashboards werden in der linken Leiste mit aktiviertem Umschalter &quot;Ad-hoc-Schema anzeigen&quot;angezeigt.](../images/data-governance/adhoc-schema-toggle.png)
 
@@ -54,7 +54,7 @@ Wählen Sie den Namen des kürzlich erstellten Ad-hoc-Schemas aus der verfügbar
 
 Um Datenbezeichnungen für Ihr Ad-hoc-Schema zu bearbeiten, wählen Sie die [!UICONTROL Bezeichnungen] Registerkarte. Im Arbeitsbereich &quot;Beschriftungen&quot;können Sie Beschriftungen auf Ihre Ad-hoc-Schemafelder anwenden, erstellen und bearbeiten und Zugriffsberechtigungen über die Benutzeroberfläche steuern. Alle Felder im Ad-hoc-Schema werden hier dargestellt.
 
-## Bezeichnungen für Schema oder Feld bearbeiten
+## Bearbeiten von Bezeichnungen für das Schema oder Feld
 
 Um die Beschriftungen für das gesamte Schema zu bearbeiten, wählen Sie das Stiftsymbol (![Ein Bleistiftsymbol.](../images/data-governance/edit-icon.png)) neben dem Namen des Schemas unter dem [!UICONTROL Bezeichnungen] Registerkarte.
 
@@ -66,11 +66,11 @@ Um eine Beschriftung auf ein vorhandenes Feld anzuwenden, wählen Sie ein oder m
 
 ## Popover &quot;Bezeichnungen bearbeiten&quot;
 
-Die [!UICONTROL Bearbeiten von Bezeichnungen] Popup angezeigt. In dieser Ansicht können Sie vorhandene Governance-Beschriftungen über die Benutzeroberfläche erstellen oder bearbeiten.
+Die [!UICONTROL Bearbeiten von Bezeichnungen] Popover angezeigt. In dieser Ansicht können Sie vorhandene Governance-Beschriftungen über die Benutzeroberfläche erstellen oder bearbeiten.
 
 ![Das Popup Bezeichnungen bearbeiten .](../images/data-governance/edit-labels-popover.png)
 
-Anleitungen dazu finden Sie in der Dokumentation . [Erstellen oder Bearbeiten von Beschriftungen für das ausgewählte Schema oder Feld](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/labels.html#edit-the-labels-for-the-schema-or-field).
+Anleitungen zum [Erstellen oder Bearbeiten von Beschriftungen für das ausgewählte Schema oder Feld](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field).
 
 >[!NOTE]
 >
@@ -94,4 +94,4 @@ Wenn eine Identität oder primäre Identität für ein Ad-hoc-Schema festgelegt 
 Nachdem Sie dieses Dokument gelesen haben, können Sie besser verstehen, wie Sie Ad-hoc-Schemas, die über CTAS-Abfragen von Query Service erstellt wurden, Datennutzungsbezeichnungen hinzufügen. Wenn Sie dies noch nicht getan haben, sind die folgenden Dokumente nützlich, um Ihr Verständnis von Data Governance in Query Service zu verbessern:
 
 * [Ad-hoc-Schemaidentitäten](./ad-hoc-schema-identities.md)
-* [Data Governance](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=de)
+* [Data Governance](../../data-governance/home.md)
