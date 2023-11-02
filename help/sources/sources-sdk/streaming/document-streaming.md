@@ -4,9 +4,9 @@ description: Der letzte Schritt, bevor Ihre neue Quelle in Adobe Experience Plat
 hide: true
 hidefromtoc: true
 exl-id: 65ca7a4d-3e02-4f54-bf07-ea2c92b8dbf1
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '404'
 ht-degree: 2%
 
 ---
@@ -15,12 +15,12 @@ ht-degree: 2%
 
 Der letzte Schritt, bevor Ihre neue Quelle in Adobe Experience Platform live gesetzt werden kann, besteht darin, Ihre neue Quelle zu dokumentieren.
 
-Dieses Handbuch enthält:
+Dieses Dokumentationshandbuch enthält:
 
 * Ein Tutorial, dem Sie folgen können, um eine Dokumentationsseite für Ihre neue Quelle zu erstellen.
 * eine Dokumentationsvorlage, die Sie für Ihre neue Quelle ausfüllen können;
-* [Anweisungen zur Verwendung von Markdown zum Schreiben technischer Dokumentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en);
-* [Anleitung zum Verständnis von Adobe Markdown-Geschmack](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#custom-markdown-extensions).
+* [Anweisungen zur Verwendung von Markdown zum Schreiben technischer Dokumentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
+* [Anleitung zum Verständnis von Adobe Markdown-Geschmack](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions).
 
 ## Voraussetzungen
 
@@ -32,11 +32,11 @@ Die folgenden Elemente sind erforderlich, bevor Sie mit der Dokumentation Ihrer 
 
 ## Allgemeine Anweisungen zum Erstellen der Dokumentation für Ihre Quelle in Platform
 
-Um eine Dokumentation für Ihre Quelle zu erstellen, müssen Sie auf hoher Ebene eine Abspaltung des Platform-Dokumentations-Repositorys erstellen und die bereitgestellte Dokumentationsvorlage in einer neuen Verzweigung bearbeiten. Verwenden Sie die von der Adobe bereitgestellte Vorlage, um eine neue Quellseite zu erstellen und eine Pull-Anforderung (PA) zu öffnen, sobald Sie bereit sind. Anweisungen dazu finden Sie weiter unten in den Schritten zum Erstellen Ihrer neuen Quellseite.
+Um eine Dokumentation für Ihre Quelle zu erstellen, müssen Sie auf hoher Ebene eine Abspaltung des Platform-Dokumentations-Repositorys erstellen und die bereitgestellte Dokumentationsvorlage in einer neuen Verzweigung bearbeiten. Verwenden Sie die vom Adobe bereitgestellte Vorlage, um eine neue Quellseite zu erstellen und eine Pull-Anforderung (PA) zu öffnen, sobald Sie bereit sind. Anweisungen dazu finden Sie weiter unten in den Schritten zum Erstellen Ihrer neuen Quellseite.
 
 ## Dokumentationsvorlage
 
-Sie können eine [API-Dokumentationsvorlage](streaming-template-api.md) oder [Benutzeroberflächendokumentationsvorlage](streaming-template-ui.md) , um die Erstellung der Dokumentation für Ihre Quelle zu unterstützen. Weiter unten finden Sie Anweisungen zum Bearbeiten der Vorlage und Öffnen einer Pull-Anforderung. Die eingereichte Dokumentation für Ihre neue Adobe wird vom Dokumentationsteam geprüft und veröffentlicht.
+Sie können eine [API-Dokumentationsvorlage](streaming-template-api.md) oder [Benutzeroberflächendokumentationsvorlage](streaming-template-ui.md) , um die Erstellung der Dokumentation für Ihre Quelle zu unterstützen. Weiter unten finden Sie Anweisungen zum Bearbeiten der Vorlage und Öffnen einer Pull-Anforderung. Die eingesendete Dokumentation für Ihre neue Quelle wird vom Adobe-Dokumentationsteam geprüft und veröffentlicht.
 
 Sie können auch die folgenden Dokumentationsvorlagen herunterladen:
 

@@ -3,10 +3,10 @@ title: Identitätsdaten im Platform Web SDK
 description: Erfahren Sie, wie Sie Adobe Experience Cloud IDs (ECIDs) mit dem Adobe Experience Platform Web SDK abrufen und verwalten.
 keywords: Identität; Erstanbieter-Identität; Identity-Dienst; Drittanbieter-Identität; ID-Migration; Besucher-ID; Drittanbieter-Identität; thirdPartyCookiesEnabled; idMigrationEnabled; getIdentity; Syncing Identities; syncIdentity; sendEvent; identityMap; primary; ecid; Identity-Namespace; Namespace-ID; authenticationState; hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 709996a837e722a79d695bf8573552f8f373850e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1418'
-ht-degree: 2%
+source-wordcount: '1414'
+ht-degree: 3%
 
 ---
 
@@ -37,13 +37,13 @@ Die Datenerfassung von Drittanbietern beinhaltet das direkte Senden von Daten an
 
 In den letzten Jahren haben die Webbrowser bei der Behandlung von Cookies von Drittanbietern immer restriktiver werden. Einige Browser blockieren standardmäßig Drittanbieter-Cookies. Wenn Sie zur Identifizierung von Site-Besuchern Drittanbieter-Cookies verwenden, ist die Lebensdauer dieser Cookies fast immer kürzer, als dies sonst durch Erstanbieter-Cookies möglich wäre. In einigen Fällen läuft ein Drittanbieter-Cookie innerhalb von sieben Tagen ab.
 
-Wenn die Datenerfassung von Drittanbietern verwendet wird, beschränken einige Anzeigensperren den Traffic außerdem vollständig auf die Datenerfassungs-Endpunkte der Adobe.
+Wenn die Datenerfassung von Drittanbietern verwendet wird, beschränken einige Anzeigensperren den Traffic außerdem vollständig auf Adobe-Datenerfassungs-Endpunkte.
 
 ### Erstanbieter-Datenerfassung {#first-party}
 
 Die Datenerfassung von Erstanbietern umfasst das Setzen von Cookies über einen CNAME in Ihrer eigenen Domäne, der auf Folgendes verweist: `adobedc.net`.
 
-Während Browser Cookies, die von CNAME-Endpunkten gesetzt werden, seit langem ähnlich wie von Site-eigenen Endpunkten behandeln, haben kürzlich von Browsern implementierte Änderungen eine Unterscheidung in der Handhabung von CNAME-Cookies geschaffen. Es gibt zwar keine Browser, die standardmäßig Erstanbieter-CNAME-Cookies blockieren, aber einige Browser beschränken die Lebensdauer von Cookies, die mit einem CNAME gesetzt werden, auf nur sieben Tage.
+Während Browser Cookies, die von CNAME-Endpunkten gesetzt werden, seit langem ähnlich wie von Site-eigenen Endpunkten behandeln, haben kürzlich von Browsern implementierte Änderungen eine Unterscheidung in der Handhabung von CNAME-Cookies geschaffen. Es gibt zwar keine Browser, die standardmäßig Erstanbieter-CNAME-Cookies blockieren, aber einige Browser beschränken die Lebensdauer von Cookies, die mit einem CNAME gesetzt werden, auf sieben Tage.
 
 ### Auswirkungen von Cookie-Lebenszyklen auf Adobe Experience Cloud-Anwendungen {#lifespans}
 
@@ -59,7 +59,7 @@ Um die oben beschriebenen Auswirkungen von Cookie-Lebenszyklen zu berücksichtig
 
 ## Abrufen der ECID und der Region für den aktuellen Benutzer
 
-Um die eindeutige ECID für den aktuellen Besucher abzurufen, verwenden Sie die `getIdentity` Befehl. Für erstmalige Besucher, die noch keine ECID haben, generiert dieser Befehl eine neue ECID. `getIdentity` gibt auch die Regions-ID für den Besucher zurück.
+Verwenden Sie zum Abrufen der eindeutigen ECID für den aktuellen Besucher die `getIdentity` Befehl. Für erstmalige Besucher, die noch keine ECID haben, generiert dieser Befehl eine neue ECID. `getIdentity` gibt auch die Regions-ID für den Besucher zurück.
 
 >[!NOTE]
 >
@@ -82,7 +82,7 @@ alloy("getIdentity")
 
 Verwenden eines XDM [`identityMap` field](../../xdm/schema/composition.md#identityMap)können Sie ein Gerät/einen Benutzer anhand mehrerer Identitäten identifizieren, seinen Authentifizierungsstatus festlegen und entscheiden, welche Kennung als die primäre ID gilt. Wenn keine Kennung als `primary`, ist standardmäßig die `ECID`.
 
-`identityMap` -Felder werden mithilfe der `sentEvent` Befehl.
+`identityMap` -Felder werden mit der Variablen `sentEvent` Befehl.
 
 ```javascript
 alloy("sendEvent", {
@@ -102,14 +102,14 @@ alloy("sendEvent", {
 
 >[!NOTE]
 >
->Adobe empfiehlt das Senden von Namespaces, die eine Person repräsentieren, z. B. `CRMID`als primäre Identität.
+>Adobe empfiehlt das Senden von Namespaces, die eine Person repräsentieren, z. B. `CRMID`, als primäre Identität.
 
 
 Jede Eigenschaft in `identityMap` stellt Identitäten dar, die zu einem bestimmten [Identitäts-Namespace](../../identity-service/namespaces.md). Der Eigenschaftsname sollte das Identitäts-Namespace-Symbol sein, das Sie in der Adobe Experience Platform-Benutzeroberfläche unter[!UICONTROL Identitäten]&quot;. Der Eigenschaftswert sollte ein Array von Identitäten sein, die sich auf diesen Identitäts-Namespace beziehen.
 
 >[!IMPORTANT]
 >
->Die Namespace-ID, die in der `identityMap` zwischen Groß- und Kleinschreibung unterschieden wird. Stellen Sie sicher, dass Sie die richtige Namespace-ID verwenden, um eine unvollständige Datenerfassung zu vermeiden.
+>Die Namespace-ID, die im `identityMap` zwischen Groß- und Kleinschreibung unterscheiden. Stellen Sie sicher, dass Sie die richtige Namespace-ID verwenden, um eine unvollständige Datenerfassung zu vermeiden.
 
 Jedes Identitätsobjekt im Identitäten-Array enthält die folgenden Eigenschaften:
 
@@ -119,7 +119,7 @@ Jedes Identitätsobjekt im Identitäten-Array enthält die folgenden Eigenschaft
 | `authenticationState` | Zeichenfolge | **(Erforderlich)** Der Authentifizierungsstatus der ID. Zu den möglichen Werten gehören `ambiguous`, `authenticated` und `loggedOut`. |
 | `primary` | Boolesch | Bestimmt, ob diese Identität als primäres Fragment im Profil verwendet werden soll. Standardmäßig wird die ECID als primäre Kennung für den Benutzer festgelegt. Wenn dieses Wert weggelassen wird, wird standardmäßig `false` verwendet. |
 
-Verwenden der `identityMap` -Feld zur Identifizierung von Geräten oder Benutzern führt zum gleichen Ergebnis wie bei Verwendung der [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=en) -Methode [!DNL ID Service API]. Siehe [Dokumentation zur ID-Dienst-API](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=en) für weitere Details.
+Verwenden der `identityMap` -Feld zur Identifizierung von Geräten oder Benutzern führt zum gleichen Ergebnis wie bei Verwendung der [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=de) -Methode aus [!DNL ID Service API]. Siehe [Dokumentation zur ID-Dienst-API](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) für weitere Details.
 
 ## Migration von der Besucher-API zur ECID
 

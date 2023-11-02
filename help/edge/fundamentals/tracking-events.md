@@ -3,10 +3,10 @@ title: Verfolgen von Ereignissen mit dem Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie Adobe Experience Platform Web SDK-Ereignisse verfolgen.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;Send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1194'
-ht-degree: 31%
+source-wordcount: '1192'
+ht-degree: 32%
 
 ---
 
@@ -103,7 +103,7 @@ alloy("sendEvent", {
 
 ### Einstellen von `eventType` {#event-types}
 
-In XDM ExperienceEvent-Schemata gibt es eine optionale `eventType` -Feld. Dies enthält den primären Ereignistyp für den Datensatz. Die Festlegung eines Ereignistyps kann Ihnen dabei helfen, zwischen den verschiedenen Ereignissen zu unterscheiden, die Sie senden werden. XDM bietet verschiedene vordefinierte Ereignistypen, die Sie verwenden können oder Sie immer eigene benutzerdefinierte Ereignistypen für Ihre Anwendungsfälle erstellen. Eine finden Sie in der XDM-Dokumentation . [Liste aller vordefinierten Ereignistypen](../../xdm/classes/experienceevent.md#eventType).
+In XDM ExperienceEvent-Schemata gibt es eine optionale `eventType` -Feld. Dies enthält den primären Ereignistyp für den Datensatz. Durch das Festlegen eines Ereignistyps können Sie zwischen den verschiedenen Ereignissen unterscheiden, die Sie senden. XDM bietet verschiedene vordefinierte Ereignistypen, die Sie verwenden können oder Sie immer eigene benutzerdefinierte Ereignistypen für Ihre Anwendungsfälle erstellen. Eine finden Sie in der XDM-Dokumentation . [Liste aller vordefinierten Ereignistypen](../../xdm/classes/experienceevent.md#eventType).
 
 Diese Ereignistypen werden in einer Dropdown-Liste angezeigt, wenn Sie die Tag-Erweiterung verwenden oder sie immer ohne Tags übergeben können. Sie können als Teil der `xdm` -Option.
 
@@ -140,7 +140,7 @@ alloy("sendEvent", {
 
 >[!IMPORTANT]
 >
->Die `datasetId` von der `sendEvent` nicht mehr unterstützt. Um eine Datensatz-ID zu überschreiben, verwenden Sie [Konfigurationsüberschreibungen](../../datastreams/overrides.md) anstatt.
+>Die `datasetId` -Option unterstützt von `sendEvent` nicht mehr unterstützt. Verwenden Sie zum Überschreiben einer Datensatz-ID [Konfigurationsüberschreibungen](../../datastreams/overrides.md) anstatt.
 
 In einigen Anwendungsfällen möchten Sie möglicherweise ein Ereignis an einen anderen Datensatz als den in der Konfigurationsoberfläche konfigurierten senden. Dazu müssen Sie die `datasetId` -Option auf `sendEvent` command:
 
@@ -218,7 +218,7 @@ Die `sendEvent` gibt einen Promise zurück, der mit einer `result` -Objekt. Die 
 
 **Entscheidungen**: Diese Eigenschaft wird nicht mehr unterstützt. Verwenden Sie stattdessen `propositions`.
 
-**Ziele**: Segmente aus Adobe Experience Platform, die für externe Personalisierungsplattformen, Content-Management-Systeme, Anzeigen-Server und andere Anwendungen freigegeben werden können, die auf Kunden-Websites ausgeführt werden. [Erfahren Sie mehr über Ziele.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html?lang=en)
+**Ziele**: Segmente aus Adobe Experience Platform, die für externe Personalisierungsplattformen, Content-Management-Systeme, Anzeigen-Server und andere Anwendungen freigegeben werden können, die auf Kunden-Websites ausgeführt werden. [Erfahren Sie mehr über Ziele.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html)
 
 >[!WARNING]
 >

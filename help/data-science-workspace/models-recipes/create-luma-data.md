@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform; Luma-Web-Daten; Data Science Workspace; beliebte Themen; Rezepte; Demodaten; Demowebdaten; Luma-Daten
+keywords: Experience Platform; Luma-Webdaten; Data Science Workspace; beliebte Themen; Rezepte; Demodaten; Demowebdaten; Luma-Daten
 solution: Experience Platform
 title: Erstellen von Luma-Webschemata und -Datensätzen
 type: Tutorial
 description: In diesem Tutorial erhalten Sie die Voraussetzungen und Assets, die für das Luma-Demo-Tendenzmodell erforderlich sind.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 2%
+source-wordcount: '463'
+ht-degree: 3%
 
 ---
 
@@ -26,11 +26,11 @@ In diesem Tutorial erhalten Sie die Voraussetzungen und Assets, die für alle an
 - Luma-Webdatensatz
 - Trainings-Datensatz für Tendenzmodelle
 - Scoring-Datensatz für Tendenzmodelle
-- Datensatz mit Tendenzmodellauswertungsergebnissen
+- Datensatz mit Tendenzmodellauswertungen
 
-## Herunterladen der Assets {#assets}
+## Laden Sie die Assets herunter. {#assets}
 
-Das folgende Tutorial verwendet ein benutzerdefiniertes Luma-Kaufneigungsmodell. Vor dem Verfahren [Herunterladen der erforderlichen Assets](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip?lang=en) ZIP-Ordner. Dieser Ordner enthält:
+Das folgende Tutorial verwendet ein benutzerdefiniertes Luma-Kaufneigungsmodell. Vor dem Verfahren [Herunterladen der erforderlichen Assets](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip) ZIP-Ordner. Dieser Ordner enthält:
 
 - Das Modell-Notebook mit Kaufneigung
 - Ein Notebook, mit dem Daten in einen Trainings- und Scoring-Datensatz (eine Untergruppe der Luma-Webdaten) aufgenommen werden
@@ -39,7 +39,7 @@ Das folgende Tutorial verwendet ein benutzerdefiniertes Luma-Kaufneigungsmodell.
 
 >[!NOTE]
 >
-> Sie können Ihr eigenes Schema und Ihre Daten für jedes der Tutorials verwenden. Das in den Assets bereitgestellte Demo-Modell funktioniert jedoch nur, wenn es über die richtige Konfigurationsdatei und Anforderungsdatei verfügt. Dieses Demo-Tendenzmodell wurde für die Verwendung mit Luma-Webdaten entwickelt.
+> Sie können Ihr eigenes Schema und Ihre Daten für beliebige Tutorials verwenden. Das in den Assets bereitgestellte Demo-Modell funktioniert jedoch nur, wenn es über die richtige Konfigurationsdatei und Anforderungsdatei verfügt. Dieses Demo-Tendenzmodell wurde für die Verwendung mit Luma-Webdaten entwickelt.
 
 ### Erstellen des Luma-Webdatenschemas und Erfassen der Daten
 

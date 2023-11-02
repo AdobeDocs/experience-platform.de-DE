@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verwenden Sie einen Texteditor in Ihrer lokalen Umgebung, um eine Seite mit der Quellendokumentation zu erstellen.
 description: In diesem Dokument erfahren Sie, wie Sie mit Ihrer lokalen Umgebung die Dokumentation für Ihre Quelle erstellen und eine Pull-Anforderung (PA) senden können.
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '640'
 ht-degree: 8%
 
 ---
@@ -17,7 +17,7 @@ In diesem Dokument erfahren Sie, wie Sie mit Ihrer lokalen Umgebung die Dokument
 
 >[!TIP]
 >
->Die folgenden Dokumente aus dem Beitragsleitfaden der Adobe können zur weiteren Unterstützung Ihres Dokumentationsprozesses verwendet werden: <ul><li>[Git- und Markdown-Bearbeitungswerkzeuge installieren](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en)</li><li>[Lokales Git-Repository für Dokumentation einrichten](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en)</li><li>[GitHub-Beitragsarbeitsablauf für umfangreiche Änderungen](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=en)</li></ul>
+>Die folgenden Dokumente aus dem Adobe Contributing Guide können zur weiteren Unterstützung Ihres Dokumentationsprozesses verwendet werden: <ul><li>[Git- und Markdown-Bearbeitungswerkzeuge installieren](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Lokales Git-Repository für Dokumentation einrichten](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[GitHub-Beitragsarbeitsablauf für umfangreiche Änderungen](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## Voraussetzungen
 
@@ -37,15 +37,15 @@ Um das Repository auf Ihrem lokalen Computer zu klonen, wählen Sie **Code**. W�
 
 >[!TIP]
 >
->Weitere Informationen finden Sie im Tutorial zu [Lokales Einrichten des Git-Repositorys zur Dokumentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#create-a-local-clone-of-the-repository).
+>Weitere Informationen finden Sie im Tutorial zu [Lokales Einrichten des Git-Repositorys zur Dokumentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository).
 
 ![open-git-desktop](../assets/open-git-desktop.png)
 
-Lassen Sie als Nächstes einige Augenblicke zu, bis GitHub Desktop die `experience-platform.en` Repository.
+Anschließend lassen Sie GitHub Desktop einige Momente zu, um die `experience-platform.en` Repository.
 
 ![Klonen](../assets/cloning.png)
 
-Sobald der Klonprozess abgeschlossen ist, wechseln Sie zu GitHub Desktop , um eine neue Verzweigung zu erstellen. Auswählen **Übergeordnet** aus der oberen Navigation und wählen Sie dann **Neuer Zweig**
+Sobald der Klonprozess abgeschlossen ist, wechseln Sie zu GitHub Desktop , um eine neue Verzweigung zu erstellen. Auswählen **Master** aus der oberen Navigation und wählen Sie dann **Neuer Zweig**
 
 ![new-branch](../assets/new-branch.png)
 
@@ -59,13 +59,13 @@ Wählen Sie als Nächstes **Veröffentlichungsverzweigung**.
 
 ## Erstellen Sie die Dokumentationsseite für Ihre Quelle.
 
-Nachdem das Repository auf Ihrem lokalen Computer geklont und eine neue Verzweigung erstellt wurde, können Sie jetzt mit der Erstellung der Dokumentationsseite für Ihre neue Quelle über die [Texteditor Ihrer Wahl](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en#understand-markdown-editors).
+Nachdem das Repository auf Ihrem lokalen Computer geklont und eine neue Verzweigung erstellt wurde, können Sie jetzt mit der Erstellung der Dokumentationsseite für Ihre neue Quelle über die [Texteditor Ihrer Wahl](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors).
 
-Adobe empfiehlt die Verwendung von [Visual Studio-Code](https://code.visualstudio.com/) und dass Sie die Adobe Markdown Authoring-Erweiterung installieren. Um die Erweiterung zu installieren, starten Sie Visual Studio Code und wählen Sie dann die **Erweiterungen** im linken Navigationsbereich.
+Adobe empfiehlt die Verwendung von [Visual Studio-Code](https://code.visualstudio.com/) und die Adobe Markdown Authoring-Erweiterung installieren. Um die Erweiterung zu installieren, starten Sie Visual Studio Code und wählen Sie dann die **Erweiterungen** im linken Navigationsbereich.
 
 ![-Erweiterung ](../assets/extension.png)
 
-Geben Sie als Nächstes ein `Adobe Markdown Authoring` in die Suchleiste ein und wählen Sie dann **Installieren** von der angezeigten Seite aus.
+Geben Sie als Nächstes `Adobe Markdown Authoring` in die Suchleiste ein und wählen Sie **Installieren** von der angezeigten Seite aus.
 
 ![install](../assets/install.png)
 
@@ -89,7 +89,7 @@ Um eine Pull-Anforderung zu erstellen, wählen Sie **Pull-Anfrage erstellen**.
 
 ![create-pr-vs](../assets/create-pr-vs.png)
 
-Stellen Sie sicher, dass die Basis- und Vergleichsverzweigungen korrekt sind. Fügen Sie einen Hinweis zur PR hinzu, beschreiben Sie Ihr Update und wählen Sie dann **Pull-Anforderung erstellen**. Dadurch wird ein PR-Vorgang zum Zusammenführen der Arbeitsverzweigung Ihrer Arbeit mit der Übergeordneten Verzweigung des Adobe-Repositorys geöffnet.
+Stellen Sie sicher, dass die Basis- und Vergleichsverzweigungen korrekt sind. Fügen Sie einen Hinweis zur PR hinzu, beschreiben Sie Ihr Update und wählen Sie dann **Pull-Anforderung erstellen**. Dadurch wird ein PR-Vorgang zum Zusammenführen der Arbeitsverzweigung Ihrer Arbeit mit der Masterverzweigung des Adobe-Repositorys geöffnet.
 
 >[!TIP]
 >

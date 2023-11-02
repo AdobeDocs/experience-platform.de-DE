@@ -2,9 +2,9 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1758'
+source-wordcount: '1756'
 ht-degree: 96%
 
 ---
@@ -192,7 +192,7 @@ Enthält Version 2.5.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
 Enthält Version 2.4.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
-* Ein Kontrollkästchen für [Dokument-Uploads](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=de#using-the-sendbeacon-api) wurde der Benutzeroberfläche für die Aktion „Ereignis senden“ hinzugefügt.
+* Ein Kontrollkästchen für [Dokument-Uploads](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#using-the-sendbeacon-api) wurde der Benutzeroberfläche für die Aktion „Ereignis senden“ hinzugefügt.
 * Es wurde Unterstützung für eine `out`-Option beim [Konfigurieren des Standardeinverständnisses](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=de#default-consent) hinzugefügt, wodurch alle Ereignisse ignoriert werden, bis das Einverständnis eingeht (die vorhandene `pending`-Option stellt Ereignisse in die Warteschlange und sendet sie, sobald das Einverständnis eingeht).
 * Dem Feld für das Standardeinverständnis wurde eine QuickInfo hinzugefügt.
 * Es wurde Unterstützung für [Adobe Consent 2.0 Standard](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?lang=de#communicating-consent-preferences-via-the-adobe-standard) hinzugefügt.

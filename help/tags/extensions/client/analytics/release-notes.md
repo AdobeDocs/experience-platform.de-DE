@@ -2,9 +2,9 @@
 title: Versionshinweise für die Adobe Analytics-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Analytics“ in Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 80c46748d809fe0b0367cf779f41d7851e8e62db
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1394'
+source-wordcount: '1392'
 ht-degree: 89%
 
 ---
@@ -30,7 +30,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 * Zusätzliche Fehlerbehebung für Browser mit defekter hochentropischer Auflösung [Benutzeragenten-Clienthinweise](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html?lang=de) APIs.
 * Geändert [POST](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) Zu verwendender Content-Type-Header `x-www-form-urlencoded` Standardmäßig.
 
-## 23. September 2022
+## 23. September 2022
 
 **Adobe Analytics-Erweiterung 1.9.1**
 
@@ -193,7 +193,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Funktionen**:
 
-* Aktualisierung der Adobe Analytics-Erweiterung auf [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de#version-2.14.0), die unter anderem ein bekanntes clearVars-Problem behebt
+* Aktualisierung der Adobe Analytics-Erweiterung auf [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.14.0), die unter anderem ein bekanntes clearVars-Problem behebt
 * Hinzufügung eines Exchange-Links zur Erweiterung. Der Exchange-Listeneintrag kann über die Option „Erweiterungsinfo“ im Dropdown-Menü aufgerufen werden.
 
 **Fehlerkorrekturen**:

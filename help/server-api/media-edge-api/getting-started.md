@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Erste Schritte mit Media Edge-APIs
 description: Erste Schritte mit Media Edge-APIs
 exl-id: 76022dea-408b-4d8e-abd4-1a6de81beceb
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '958'
-ht-degree: 100%
+source-wordcount: '946'
+ht-degree: 95%
 
 ---
 
@@ -42,12 +42,12 @@ In diesem Handbuch wird gezeigt, wie die folgenden Ereignisse nach dem Sitzungss
 
 ## Implementieren der API {#implement-api}
 
-Abgesehen von geringfügigen Unterschieden im Modell und den Pfaden, die aufgerufen werden, wird die Media Edge-API so wie die [Mediensammlungs-API](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=de) implementiert. Die Implementierungsdetails der Mediensammlung gelten auch für die Media Edge-API, wie in der folgenden Dokumentation beschrieben:
+Abgesehen von geringfügigen Unterschieden im Modell und den Pfaden, die aufgerufen werden, wird die Media Edge-API so wie die [Mediensammlungs-API](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html) implementiert. Die Implementierungsdetails der Mediensammlung gelten auch für die Media Edge-API, wie in der folgenden Dokumentation beschrieben:
 
-* [Einstellen des HTTP-Anfragetyps in Ihrem Player](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=de)
-* [Senden von Ping-Ereignissen](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=de)
-* [Timeout-Bedingungen](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-timeout.html?lang=de)
-* [Steuern der Ereignisreihenfolge](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-ctrl-order.html?lang=de)
+* [Einstellen des HTTP-Anfragetyps in Ihrem Player](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html)
+* [Senden von Ping-Ereignissen](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html)
+* [Timeout-Bedingungen](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-timeout.html)
+* [Steuern der Ereignisreihenfolge](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-ctrl-order.html)
 
 ## Autorisierung {#authorization}
 

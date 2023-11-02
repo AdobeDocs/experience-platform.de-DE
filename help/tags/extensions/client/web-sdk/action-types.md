@@ -3,10 +3,10 @@ title: Aktionstypen in der Adobe Experience Platform Web SDK-Erweiterung
 description: Erfahren Sie mehr über die verschiedenen Aktionstypen, die von der Adobe Experience Platform Web SDK-Tag-Erweiterung bereitgestellt werden.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 528b13aa20da62c32456e02cb2293fdded156421
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '761'
-ht-degree: 4%
+source-wordcount: '757'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +23,7 @@ Sendet ein Ereignis an Adobe [!DNL Experience Platform] damit Adobe Experience P
 
 Es gibt einige weitere Felder im Aktionstyp Ereignis senden , die je nach Implementierung ebenfalls nützlich sein können. Bitte beachten Sie, dass alle diese Felder optional sind.
 
-- **Typ:** In diesem Feld können Sie einen Ereignistyp angeben, der in Ihrem XDM-Schema aufgezeichnet wird. Siehe [Dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=de#using-the-sendbeacon-api) für weitere Informationen zu den standardmäßigen Ereignistypen.
+- **Typ:** In diesem Feld können Sie einen Ereignistyp angeben, der in Ihrem XDM-Schema aufgezeichnet wird. Siehe [Dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#using-the-sendbeacon-api) für weitere Informationen zu den standardmäßigen Ereignistypen.
 - **Daten:** Daten, die nicht mit einem XDM-Schema übereinstimmen, können mit diesem Feld gesendet werden. Dieses Feld ist nützlich, wenn Sie versuchen, ein Adobe Target-Profil zu aktualisieren oder Target Recommendations-Attribute zu senden. Beispiele: Sehen Sie sich unsere [Dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=de).<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
 - **Datensatz-ID:** Wenn Sie Daten an einen Datensatz senden müssen, der nicht in Ihrem Datensatz angegeben wurde, können Sie diese Datensatz-ID hier angeben.
 - **Dokument wird entladen:** Wenn Sie sicherstellen möchten, dass die Ereignisse den Server erreichen, auch wenn der Benutzer von der Seite weg navigiert, überprüfen Sie die **[!UICONTROL Dokument wird entladen]** aktivieren. Dadurch können Ereignisse den Server erreichen, Antworten werden jedoch ignoriert.

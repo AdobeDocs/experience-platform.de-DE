@@ -3,9 +3,9 @@ title: Vergleich von at.js mit dem Experience Platform Web SDK
 description: Erfahren Sie, wie die at.js-Funktionen mit dem Experience Platform Web SDK verglichen werden.
 keywords: Target; adobe target; activity.id; experience.id; renderDecisions; DecisionScopes; Vorabausblenden von Snippet; VEC; Form-Based Experience Composer; xdm; Zielgruppen; Entscheidungen; Umfang; Schema; Systemdiagramm; Diagramm
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2281'
+source-wordcount: '2257'
 ht-degree: 8%
 
 ---
@@ -75,7 +75,7 @@ window.adobe.target.init(window, document, {
 });
 ```
 
-[Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=en)
+[Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
 
 
 ### Web SDK konfigurieren
@@ -240,7 +240,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=en)
+[Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
 
 ### Verwenden des Web SDK
 
@@ -325,7 +325,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=en)
+[Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
 
 
 ### Verwenden des Web SDK
@@ -462,7 +462,7 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-Weitere Informationen zum `applyOffers` -Befehl aus dem [dedizierte Dokumentation](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=en).
+Weitere Informationen zum `applyOffers` -Befehl aus dem [dedizierte Dokumentation](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html).
 
 
 ### Verwenden des Web SDK
@@ -514,7 +514,7 @@ adobe.target.sendNotifications({
 });
 ```
 
-[Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html?lang=en)
+[Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html)
 
 ### Verwenden des Web SDK
 
@@ -645,7 +645,7 @@ Verwenden Sie die `adobe.target.triggerView` -Funktion. Diese Funktion kann imme
 adobe.target.triggerView("homeView")
 ```
 
-[Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html?lang=en)
+[Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html)
 
 
 ### Verwenden des Web SDK
@@ -685,7 +685,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 }); 
 ```
 
-[Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=en)
+[Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
 
 ### Verwenden des Web SDK
@@ -694,7 +694,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 >
 >Stellen Sie sicher, dass Sie die Platform Web SDK-Version 2.6.0 oder höher verwenden.
 
-Die Antwort-Token werden als Teil der `propositions` die im Ergebnis der `sendEvent` Befehl. Jeder Vorschlag enthält ein Array von `items`, und jedes Element enthält eine `meta` -Objekt mit Antwort-Token gefüllt, wenn sie in der Target-Administrator-Benutzeroberfläche aktiviert sind. [Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=en)
+Die Antwort-Token werden als Teil der `propositions` die im Ergebnis der `sendEvent` Befehl. Jeder Vorschlag enthält ein Array von `items`, und jedes Element enthält eine `meta` -Objekt mit Antwort-Token gefüllt, wenn sie in der Target-Administrator-Benutzeroberfläche aktiviert sind. [Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
 **Beispiel**
 
@@ -859,7 +859,7 @@ Anschließend werden die Daten wie folgt übertragen:
 
 ![](assets/a4t-server-side-atjs.png)
 
-[Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=en)
+[Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
 
 ### Verwenden des Web SDK
 
@@ -942,7 +942,7 @@ window.targetGlobalSettings = {
 };
 ```
 
-[Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=en)
+[Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
 
 ### Verwenden des Web SDK
 
@@ -1042,7 +1042,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html?lang=en)
+[Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html)
 
 
 ### Verwenden des Web SDK
@@ -1122,7 +1122,7 @@ window.targetPageParams = function() {
 };
 ```
 
-[Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html?lang=en)
+[Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html)
 
 ### Verwenden des Web SDK
 

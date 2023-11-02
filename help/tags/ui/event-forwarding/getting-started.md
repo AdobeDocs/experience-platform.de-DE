@@ -3,10 +3,10 @@ title: Erste Schritte mit der Ereignisweiterleitung
 description: In diesem Schritt-für-Schritt-Tutorial erfahren Sie, wie Sie mit der Ereignisweiterleitung in Adobe Experience Platform beginnen.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: efe88b582b4539a14f32c6e2c80a8b35cde1626e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 86%
+source-wordcount: '873'
+ht-degree: 85%
 
 ---
 
@@ -20,7 +20,7 @@ Um die Ereignisweiterleitung in Adobe Experience Platform zu verwenden, müssen 
 
 * [Adobe Experience Platform Web SDK](../../extensions/client/web-sdk/overview.md)
 * [Adobe Experience Platform Mobile SDK](https://sdkdocs.com)
-* [Server-zu-Server-API](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=de)
+* [Server-zu-Server-API](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html)
 
 >[!NOTE]
 >Das Platform Web SDK und das Platform Mobile SDK erfordern keine Bereitstellung über Tags in Adobe Experience Platform. Es wird jedoch empfohlen, Tags zur Bereitstellung dieser SDKs zu verwenden.
@@ -29,7 +29,7 @@ Nachdem Sie Daten an das Edge-Netzwerk gesendet haben, können Sie die Adobe-Lö
 
 ## Voraussetzungen
 
-* Adobe Real-Time CDP Connections, Prime oder Ultimate (zu Preisen bei Ihrem Adobe-Kundenbetreuungsteam kontaktieren)
+* Adobe Real-Time CDP Connections, Prime oder Ultimate (Informationen zu Preisen erhalten Sie von Ihrem Adobe-Account-Team)
 * Ereignisweiterleitung in Adobe Experience Platform
 * Adobe Experience Platform Web oder Mobile SDK, konfiguriert zum Senden von Daten an Edge Network
 * Zuordnen von Daten zum Experience-Datenmodell (XDM) (diese Zuordnung kann über Tags erfolgen)
@@ -54,7 +54,7 @@ Weitere Informationen zu Schemata finden Sie unter [Experience-Datenmodell (XDM)
 
 ## Erstellen einer Ereignisweiterleitungseigenschaft
 
-Im **[!UICONTROL Tags]** Workspace erstellen Sie eine Eigenschaft vom Typ **[!UICONTROL Edge]**.
+Im **[!UICONTROL Tags]** Arbeitsbereich erstellen Sie eine Eigenschaft vom Typ **[!UICONTROL Edge]**.
 
 1. Wählen Sie **[!UICONTROL Neue Eigenschaft]** aus.
 

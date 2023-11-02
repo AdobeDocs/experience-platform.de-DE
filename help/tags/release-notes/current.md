@@ -2,10 +2,10 @@
 title: Versionshinweise für Tags und Ereignisweiterleitung
 description: Die neuesten Versionshinweise für Tags und Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 100%
+source-wordcount: '835'
+ht-degree: 97%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Die Versionshinweise für Tags und Ereignisweiterleitung werden künftig nicht mehr auf dieser Seite bereitgestellt. Die neuesten ausführlichen Informationen zu Tags und zur Ereignisweiterleitung finden Sie in den aktuellen [Versionshinweisen zu Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=de#data-collection).
+>Die Versionshinweise für Tags und Ereignisweiterleitung werden künftig nicht mehr auf dieser Seite bereitgestellt. Die neuesten ausführlichen Informationen zu Tags und zur Ereignisweiterleitung finden Sie in den aktuellen [Versionshinweisen zu Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html#data-collection).
 
 ## 26. April 2023
 
-* **OAuth JWT-Geheimnis**: Das [OAuth JWT-Geheimnis](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=de) ermöglicht Kundinnen und Kunden die Verwendung von Adobe- und Google-Service-Token zur Unterstützung von Server-zu-Server-Interaktionen bei der Ereignisweiterleitung.
+* **OAuth JWT-Geheimnis**: Das [OAuth JWT-Geheimnis](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html) ermöglicht Kundinnen und Kunden die Verwendung von Adobe- und Google-Service-Token zur Unterstützung von Server-zu-Server-Interaktionen bei der Ereignisweiterleitung.
 
 Die folgende neue Erweiterung wurde veröffentlicht:
 
@@ -28,7 +28,7 @@ Die folgende neue Erweiterung wurde veröffentlicht:
 **Schnellstart-Workflows (Beta)**
 
 Greifen Sie über die Startseite der Datenerfassung unter „Erste Schritte“ auf neue Schnellstart-Workflows zu! Die folgenden Workflows stehen Kundinnen und Kunden jetzt als öffentliche Beta-Version zur Verfügung.
-* **[Meta Conversions-API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=de#quick-start)**: Kundinnen und Kunden mit Ereignisweiterleitung können Ereignisdaten schnell erfassen und Server-seitig an Meta weiterleiten, um Anzeigenkonversionen in nur wenigen einfachen Schritten zu ermöglichen.
+* **[Meta Conversions-API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start)**: Kundinnen und Kunden mit Ereignisweiterleitung können Ereignisdaten schnell erfassen und Server-seitig an Meta weiterleiten, um Anzeigenkonversionen in nur wenigen einfachen Schritten zu ermöglichen.
 * **[Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)**: Kundinnen und Kunden können das Mobile SDK schnell implementieren und einfache Ereignisse auf Mobilgeräten in nur wenigen einfachen Schritten validieren.
 
 Es wurden neue Erweiterungen veröffentlicht:

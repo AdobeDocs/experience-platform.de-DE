@@ -2,10 +2,10 @@
 title: Vom Kunden verwaltete Schlüssel in Adobe Experience Platform
 description: Erfahren Sie, wie Sie eigene Verschlüsselungsschlüssel für in Adobe Experience Platform gespeicherte Daten einrichten.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: 930c786db51063c55f731dc90f2ee66e98624555
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '763'
-ht-degree: 36%
+source-wordcount: '761'
+ht-degree: 37%
 
 ---
 
@@ -21,7 +21,7 @@ Dieses Dokument bietet einen allgemeinen Überblick über den Prozess zur Aktivi
 
 >[!NOTE]
 >
->Für Customer Journey Analytics-Kunden folgen Sie bitte den Anweisungen im Abschnitt [Customer Journey Analytics-Dokumentation](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=en).
+>Für Customer Journey Analytics-Kunden folgen Sie bitte den Anweisungen im Abschnitt [Customer Journey Analytics-Dokumentation](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=de).
 
 ## Voraussetzungen
 

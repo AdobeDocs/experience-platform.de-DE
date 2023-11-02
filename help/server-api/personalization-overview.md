@@ -1,19 +1,19 @@
 ---
-title: Personalisierungsübersicht
+title: Personalisierung – Übersicht
 description: Erfahren Sie, wie Sie mit der Adobe Experience Platform Edge Network Server-API personalisierte Inhalte aus Adobe-Personalisierungslösungen abrufen können.
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 10%
+source-wordcount: '739'
+ht-degree: 11%
 
 ---
 
-# Personalisierungsübersicht
+# Personalisierung – Übersicht
 
-Mit dem [!DNL Server API], können Sie personalisierte Adoben aus Personalisierungslösungen abrufen, darunter [Adobe Target](https://business.adobe.com/de/products/target/adobe-target.html) und [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=en).
+Mit dem [!DNL Server API], können Sie personalisierte Inhalte aus Adobe-Personalisierungslösungen abrufen, darunter [Adobe Target](https://business.adobe.com/de/products/target/adobe-target.html) und [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=de).
 
-Darüber hinaus wird die [!DNL Server API] ermöglicht Personalisierungsfunktionen für die gleiche Seite und die nächste Seite über Adobe Experience Platform-Personalisierungsziele, z. B. [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) und [Benutzerdefinierte Personalisierungsverbindung](../destinations/catalog/personalization/custom-personalization.md). Informationen zum Konfigurieren der Experience Platform für die Personalisierung der gleichen Seite und der nächsten Seite finden Sie unter [dediziertes Handbuch](../destinations/ui/activate-edge-personalization-destinations.md).
+Darüber hinaus wird die [!DNL Server API] ermöglicht Personalisierungsfunktionen für die gleiche Seite und die nächste Seite über Adobe Experience Platform-Personalisierungsziele, z. B. [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) und [Benutzerdefinierte Personalisierungsverbindung](../destinations/catalog/personalization/custom-personalization.md). Informationen zum Konfigurieren von Experience Platform für die Personalisierung von derselben Seite und nächsten Seiten finden Sie unter [dediziertes Handbuch](../destinations/ui/activate-edge-personalization-destinations.md).
 
 Bei Verwendung der Server-API müssen Sie die Antwort der Personalisierungsmaschine in die Logik integrieren, die zum Rendern von Inhalten auf Ihrer Site verwendet wird. Im Gegensatz zu [Web SDK](../edge/home.md), die [!DNL Server API] verfügt nicht über einen Mechanismus zur automatischen Anwendung von Inhalten, die von [!DNL Adobe Target] und [!DNL Offer Decisioning].
 
@@ -24,7 +24,7 @@ Bevor Sie mit Adobe-Personalisierungslösungen arbeiten, sollten Sie sich mit de
 * **Angebot**: Ein Angebot ist eine Marketing-Botschaft, der ggf. Regeln zugeordnet sind, die angeben, wer sich zum Anzeigen des Angebots eignet.
 * **Entscheidung**: Eine Entscheidung (zuvor als Angebotsaktivität bezeichnet) informiert über die Auswahl eines Angebots.
 * **Schema**: Das Schema einer Entscheidung informiert über den zurückgegebenen Angebotstyp.
-* **Anwendungsbereich**: Der Anwendungsbereich der Entscheidung.
+* **Anwendungsbereich**: Der Umfang der Entscheidung.
    * In Adobe Target ist dies die [!DNL mbox]. Die [!DNL global mbox] ist die `__view__` Umfang
    * Für [!DNL Offer Decisioning], dies sind die Base64-kodierten Zeichenfolgen von JSON, die die Aktivitäts- und Platzierungs-IDs enthalten, die der offer decisioning-Dienst verwenden soll, um Angebote vorzuschlagen.
 
@@ -113,9 +113,9 @@ Die personalisierten Inhalte, die aus Personalisierungslösungen abgerufen werde
 
 | Attribut | Typ | Beschreibung |
 | --- | --- | --- |
-| `payload.id` | Zeichenfolge | Die Entscheidungs-ID. |
+| `payload.id` | Zeichenfolge | Die Entscheidungskennung. |
 | `payload.scope` | Zeichenfolge | Der Entscheidungsbereich, der zu den vorgeschlagenen Angeboten führte. |
-| `payload.scopeDetails.decisionProvider` | Zeichenfolge | Legen Sie fest auf `TGT` bei Verwendung von Adobe Target. |
+| `payload.scopeDetails.decisionProvider` | Zeichenfolge | Legen Sie `TGT` bei Verwendung von Adobe Target. |
 | `payload.scopeDetails.activity.id` | Zeichenfolge | Die eindeutige Kennung der Angebotsaktivität. |
 | `payload.scopeDetails.experience.id` | Zeichenfolge | Die eindeutige ID der Angebotsplatzierung. |
 | `items[].id` | Zeichenfolge | Die eindeutige ID der Angebotsplatzierung. |
@@ -127,7 +127,7 @@ Die personalisierten Inhalte, die aus Personalisierungslösungen abgerufen werde
 | `items[].data.selector` | Zeichenfolge | HTML-Selektor zur Identifizierung des Ziel-DOM-Elements für ein DOM-Aktionsangebot. |
 | `items[].data.prehidingSelector` | Zeichenfolge | HTML-Selektor zur Identifizierung des DOM-Elements, das beim Verarbeiten eines DOM-Aktionangebots ausgeblendet werden soll. |
 | `items[].data.deliveryUrl` | Zeichenfolge | Bildinhalt, der mit dem vorgeschlagenen Angebot verknüpft ist, im Format einer URL. |
-| `items[].data.characteristics` | Zeichenfolge | Eigenschaften, die mit dem vorgeschlagenen Angebot im Format eines JSON-Objekts verknüpft sind. |
+| `items[].data.characteristics` | Zeichenfolge | Mit dem vorgeschlagenen Angebot verknüpfte Eigenschaften im Format eines JSON-Objekts. |
 
 ## Beispiel-API-Aufruf {#sample-call}
 
@@ -185,7 +185,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 | Parameter | Typ | Erforderlich | Beschreibung |
 | --- | --- | --- | --- |
-| `configId` | Zeichenfolge | Ja | Die Datastream-ID. |
+| `configId` | Zeichenfolge | Ja | Die Datenspeicher-ID. |
 | `requestId` | Zeichenfolge | Nein | Geben Sie eine externe Anfrage-Tracking-ID an. Wenn keines angegeben ist, generiert das Edge-Netzwerk eines für Sie und gibt es im Antworttext/in den Kopfzeilen zurück. |
 
 ### Antwort {#response}
@@ -310,7 +310,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 | Parameter | Typ | Erforderlich | Beschreibung |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | Ja | Die ID des vom Datenerfassungs-Endpunkt verwendeten Datastreams. |
-| `requestId` | `String` | Nein | Tracking-ID externer Anfragen. Wenn keines angegeben ist, generiert das Edge-Netzwerk eines für Sie und gibt es im Antworttext/in den Kopfzeilen zurück. |
+| `requestId` | `String` | Nein | Ablaufverfolgungs-ID externer Anfragen. Wenn keines angegeben ist, generiert das Edge-Netzwerk eines für Sie und gibt es im Antworttext/in den Kopfzeilen zurück. |
 | `silent` | `Boolean` | Nein | Optionaler boolescher Parameter, der angibt, ob das Edge-Netzwerk eine `204 No Content` Antwort mit einer leeren Payload. Kritische Fehler werden mithilfe des entsprechenden HTTP-Status-Codes und der Payload gemeldet. |
 
 ### Antwort {#notifications-response}

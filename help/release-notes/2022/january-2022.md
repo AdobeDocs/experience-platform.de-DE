@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise Januar 2022
 description: Versionshinweise Januar 2022 für Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1342'
-ht-degree: 98%
+source-wordcount: '1340'
+ht-degree: 97%
 
 ---
 
@@ -72,7 +72,7 @@ Weitere Informationen zu [!DNL Data Prep] finden Sie in der [[!DNL Data Prep] Ü
 | Personalisierung der gleichen Seite und der nächsten Seite | Die [Personalisierungsfunktion für die gleiche Seite und die nächste Seite](../../destinations/ui/activate-edge-personalization-destinations.md) bietet eine freigegebene, zielgruppenorientierte Ansicht von Benutzern für Anwendungen im Edge Network, um Konsistenz zwischen Marketing- und Kundenkanälen zu gewährleisten. Diese Personalisierung ist über die [Adobe Target-Verbindung](../../destinations/catalog/personalization/adobe-target-connection.md) und [benutzerdefinierte Personalisierungsverbindung](../../destinations/catalog/personalization/custom-personalization.md) möglich. Informationen zum Konfigurieren Ihrer Kampagnen mit Personalisierung der gleichen Seite oder der nächsten Seite finden Sie im [spezifischen Tutorial](../../destinations/ui/activate-edge-personalization-destinations.md). |
 | Batch-Zielüberwachung und Metriken auf Segmentebene | Die Zielüberwachungsfunktionalität für Ihre Aktivierungsdatenströme wurde nun von Streaming-Zielen auf Batch-Ziele und Segmentmetriken erweitert. Weitere Informationen finden Sie unter [Dashboard für die Überwachung von Zielen](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard), [Dashboard für die Überwachung von Segmentvorgängen](/help/dataflows/ui/monitor-destinations.md#monitoring-segment-jobs-dashboard) und [Ansicht auf Segmentebene](/help/dataflows/ui/monitor-destinations.md#segment-level-view). |
 | Planen der Bearbeitung vorhandener Batch-Aktivierungsdatenflüsse in der Benutzeroberfläche | Mit dieser Version wird erstmals die Möglichkeit geboten, den Zeitplan Ihrer bestehenden Aktivierungsdatenflüsse für Batch-Ziele zu bearbeiten. Weitere Informationen finden Sie unter [Aktivieren von Profildaten für Batch-Profilziele](/help/destinations/ui/activate-batch-profile-destinations.md). |
-| Marketo-Zielverbesserungen | Experience Platform-Kunden, die Marketo Engage nutzen, können ihre Marketo-Datenbank optimieren, indem sie neue Personendatensätze von Experience Platform über den [Marketo-Ziel-Connector](/help/destinations/catalog/adobe/marketo-engage.md) per Push in Marketo Engage übertragen. <br> Beim Senden von Zielgruppensegmenten von Experience Platform zu Marketo Engage können Personen innerhalb des Segments, die noch nicht in Ihrer Marketo Engage-Datenbank vorhanden sind, automatisch hinzugefügt werden. Weitere Informationen finden Sie unter [Adobe Experience Platform-Segment in eine statische Marketo-Liste verschieben](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=de) (Schritt 9 des Tutorials zeigt, wie Sie neue Personendatensätze in Marketo verschieben können). |
+| Marketo-Zielverbesserungen | Experience Platform-Kunden, die Marketo Engage nutzen, können ihre Marketo-Datenbank optimieren, indem sie neue Personendatensätze von Experience Platform über den [Marketo-Ziel-Connector](/help/destinations/catalog/adobe/marketo-engage.md) per Push in Marketo Engage übertragen. <br> Beim Senden von Zielgruppensegmenten von Experience Platform zu Marketo Engage können Personen innerhalb des Segments, die noch nicht in Ihrer Marketo Engage-Datenbank vorhanden sind, automatisch hinzugefügt werden. Weitere Informationen finden Sie unter [Adobe Experience Platform-Segment in eine statische Marketo-Liste verschieben](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html) (Schritt 9 des Tutorials zeigt, wie Sie neue Personendatensätze in Marketo verschieben können). |
 
 **Neue Ziele**
 

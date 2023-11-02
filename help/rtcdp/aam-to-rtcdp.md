@@ -2,10 +2,10 @@
 title: Wechsel von Audience Manager zu Real-Time CDP
 description: Machen Sie sich damit vertraut, was vor der Migration von Audience Manager nach Real-Time CDP alles zu beachten ist.
 exl-id: 83ab9a5d-9abc-4072-b449-e2a9ecd48639
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 90%
+source-wordcount: '528'
+ht-degree: 84%
 
 ---
 
@@ -17,7 +17,7 @@ Wenn sich Ihr Unternehmen entschließt, Adobe Real-Time CDP zu verwenden, sollte
 
 ## 1. Berücksichtigen der Datenarchitektur in Audience Manager
 
-Wenn Sie über den Wechsel von Audience Manager zu Real-Time CDP nachdenken, ist nun ein kritischer Zeitpunkt gekommen, um Ihre [Audience Manager-Segmente](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html?lang=de) zu analysieren und zu bestimmen, welche [Kennzeichen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html?lang=de), [Eigenschaften](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html?lang=de) und [Regeln](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html?lang=de#segment-builder-section) diese Segmente ausmachen.
+Wenn Sie über den Wechsel von Audience Manager zu Real-Time CDP nachdenken, ist nun ein kritischer Zeitpunkt gekommen, um Ihre [Audience Manager-Segmente](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html) zu analysieren und zu bestimmen, welche [Kennzeichen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html), [Eigenschaften](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html) und [Regeln](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html#segment-builder-section) diese Segmente ausmachen.
 
 Stellen Sie außerdem Überlegungen über die aktuell in Audience Manager verwendeten Datenquellen an.
 

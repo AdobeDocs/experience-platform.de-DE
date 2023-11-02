@@ -3,9 +3,9 @@ title: Zendesk Source Connector - Überblick
 description: Erfahren Sie, wie Sie Zendesk über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
-source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '365'
 ht-degree: 44%
 
 ---
@@ -16,13 +16,13 @@ Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quelle
 
 Experience Platform ermöglicht die Aufnahme von Daten aus Drittanbieter-Anwendungen für das Customer Success Management. Zu den Support-Anbietern für den Kundenerfolg zählen: [!DNL Zendesk].
 
-Diese Adobe Experience Platform [sources](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=de) nutzt die [Zendesk Search API > Suchergebnisse exportieren](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) , der Benutzerinformationen zur weiteren Verarbeitung in Experience Platform von Zendesk zurückgibt.
+Diese Adobe Experience Platform [sources](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=de) nutzt die [Zendesk Search API > Suchergebnisse exportieren](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) , das Benutzerinformationen zur weiteren Verarbeitung an Experience Platform von Zendesk zurückgibt.
 
 ## IP-Adressen-Zulassungsliste
 
 Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
 
-## Authentifizieren Sie Ihre [!DNL Zendesk] account
+## Authentifizieren Ihrer [!DNL Zendesk] account
 
 [!DNL Zendesk] verwendet Trägertoken als Authentifizierungsmechanismus für die Kommunikation mit dem [!DNL Zendesk] API.
 

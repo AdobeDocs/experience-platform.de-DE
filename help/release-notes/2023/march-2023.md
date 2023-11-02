@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise März 2023
 description: Versionshinweise März 2023 für Adobe Experience Platform.
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2206'
+source-wordcount: '2204'
 ht-degree: 85%
 
 ---
@@ -47,7 +47,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Neuer Schnellstart-Workflow für die Meta Conversions-API (Beta) | Greifen Sie über die Startseite der Datenerfassung unter „Erste Schritte“ auf neue Schnellstart-Workflows zu! Der [Schnellstart-Workflow für die Meta Conversions-API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=de#quick-start) ermöglicht es, Ereignisdaten schnell zu erfassen und in wenigen einfachen Schritten Server-seitig an Meta für Anzeigenkonversionen weiterzuleiten. |
+| Neuer Schnellstart-Workflow für die Meta Conversions-API (Beta) | Greifen Sie über die Startseite der Datenerfassung unter „Erste Schritte“ auf neue Schnellstart-Workflows zu! Der [Schnellstart-Workflow für die Meta Conversions-API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start) ermöglicht es, Ereignisdaten schnell zu erfassen und in wenigen einfachen Schritten Server-seitig an Meta für Anzeigenkonversionen weiterzuleiten. |
 | Neuer Schnellstart-Workflow für das Mobile SDK (Beta) | Greifen Sie über die Startseite der Datenerfassung unter „Erste Schritte“ auf neue Schnellstart-Workflows zu! Der [Schnellstart-Workflow für das Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) ermöglicht die schnelle Implementierung des Mobile SDK und die Validierung einfacher Ereignisse auf Mobilgeräten in nur wenigen einfachen Schritten. |
 | [!DNL Braze]-Erweiterung zur Ereignisweiterleitung | Mit der Ereignisweiterleitungserweiterung [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=de) können die im Adobe Experience Platform Edge Network erfassten Daten genutzt und in Form von Server-seitigen Ereignissen mithilfe der [!DNL Braze]-APIs für die Benutzernachverfolgung an [!DNL Braze] gesendet werden. |
 | [!DNL Epsilon]-Erweiterung zur Ereignisweiterleitung | Die [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html?lang=de) Mit der -Erweiterung können Sie die Ereignisweiterleitung nutzen, um Ereignisinformationen im Adobe Experience Platform Edge Network zu erfassen und an zu senden. [!DNL Epsilon] mithilfe der [!DNL Epsilon] Ereignis-API. |

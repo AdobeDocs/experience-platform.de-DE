@@ -1,8 +1,7 @@
 ---
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
-workflow-type: ht
-translation-type: ht
-source-wordcount: '296'
+source-git-commit: e300e57df998836a8c388511b446e90499185705
+workflow-type: tm+mt
+source-wordcount: '294'
 ht-degree: 100%
 
 ---
@@ -36,7 +35,7 @@ Sie müssen nur einmal eine Adobe-Lizenzvereinbarung für Mitarbeiter einreichen
 
 ## Codeüberprüfungen
 
-Alle Übermittlungen sollten in Form von Pull-Anforderungen eingehen und müssen von den Projektverantwortlichen geprüft werden. In der [GitHub-Dokumentation zu Pull-Anforderungen](https://help.github.com/de/github/collaborating-with-issues-and-pull-requests/about-pull-requests)
+Alle Übermittlungen sollten in Form von Pull-Anforderungen eingehen und müssen von den Projektverantwortlichen geprüft werden. In der [GitHub-Dokumentation zu Pull-Anforderungen](https://help.github.com/de/articles/about-pull-requests/)
 finden Sie weitere Informationen zum Senden von Pull-Anforderungen.
 
 <!--

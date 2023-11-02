@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Streaming-Daten
 hide: true
 hidefromtoc: true
 exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1704'
+source-wordcount: '1700'
 ht-degree: 42%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 42%
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
-Um eine Verbindung herzustellen *YOURSOURCE* zur Experience Platform hinzufügen, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+Um eine Verbindung herzustellen *YOURSOURCE* zum Experience Platform müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung | Beispiel |
 | --- | --- | --- |
@@ -114,13 +114,13 @@ Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema e
 
 Ein Ziel-XDM-Schema kann erstellt werden, indem eine POST-Anfrage an die [Schema-Registrierungs-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) durchgeführt wird.
 
-Ausführliche Schritte zum Erstellen eines XDM-Zielschemas finden Sie im Tutorial zum [Erstellen eines Schemas mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
+Ausführliche Schritte zum Erstellen eines XDM-Zielschemas finden Sie im Tutorial zum [Erstellen eines Schemas mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create).
 
 ### Erstellen eines Zieldatensatzes {#target-dataset}
 
 Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) durchgeführt wird, wodurch die ID des Zielschemas in der Payload angegeben wird.
 
-Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tutorial zu [Erstellen eines Datensatzes mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tutorial zu [Erstellen eines Datensatzes mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 
 ### Erstellen einer Zielverbindung {#target-connection}
 
@@ -327,7 +327,7 @@ Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenfluss
 
 ### Abrufen der Streaming-Endpunkt-URL
 
-Mit dem erstellten Datenfluss können Sie jetzt Ihre Streaming-Endpunkt-URL abrufen. Sie verwenden diese Endpunkt-URL, um Ihre Quelle für einen Webhook zu registrieren, sodass Ihre Quelle mit Experience Platform kommunizieren kann.
+Mit dem erstellten Datenfluss können Sie jetzt Ihre Streaming-Endpunkt-URL abrufen. Sie werden diese Endpunkt-URL verwenden, um Ihre Quelle für einen Webhook zu abonnieren, sodass Ihre Quelle mit Experience Platform kommunizieren kann.
 
 Um Ihre Streaming-Endpunkt-URL abzurufen, stellen Sie eine GET-Anfrage an die `/flows` -Endpunkt und geben Sie die Kennung Ihres Datenflusses an.
 

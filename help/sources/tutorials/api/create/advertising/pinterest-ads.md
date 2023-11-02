@@ -5,9 +5,9 @@ badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 293a3ec9-38ea-4b71-a923-1f4e28a41236
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2333'
+source-wordcount: '2329'
 ht-degree: 60%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 60%
 >
 >Die [!DNL Pinterest Ads]-Quelle befindet sich in der Beta-Phase. Lesen Sie die [Quellen - Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
 
-Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer [!DNL Pinterest Ads] Quellverbindung und Datenfluss zum Mitbringen [[!DNL Pinterest Ads]](https://ads.pinterest.com/) Daten an Adobe Experience Platform mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer [!DNL Pinterest Ads] Quellverbindung und Datenfluss, der mitgebracht werden soll [[!DNL Pinterest Ads]](https://ads.pinterest.com/) Daten an Adobe Experience Platform mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte {#getting-started}
 
@@ -31,17 +31,17 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 ### Voraussetzungen {#prerequisites}
 
-Um eine Verbindung herzustellen [!DNL Pinterest Ads] zur Experience Platform hinzufügen, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+Um eine Verbindung herzustellen [!DNL Pinterest Ads] zum Experience Platform müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 * Die [!DNL Pinterest] `accessToken`.
 * Die [!DNL Pinterest] `adAccountId`.
-* Eines von [!DNL Pinterest] `campaign`, `adGroup` oder `ad` Die Kennung ist nach Bedarf.
+* Eins von [!DNL Pinterest] `campaign`, `adGroup` oder `ad` Die Kennung ist nach Bedarf vorhanden.
 
 Weitere Informationen zu diesen Verbindungseigenschaften finden Sie im Abschnitt [[!DNL Pinterest Ads] Übersicht](../../../../connectors/advertising/pinterest-ads.md#prerequisites).
 
 ## Verbinden [!DNL Pinterest Ads] zur Plattform mithilfe der [!DNL Flow Service] API {#connect-platform-to-flow-api}
 
-Im Folgenden werden die Schritte beschrieben, die zum Herstellen einer Verbindung unternommen werden müssen [!DNL Pinterest Ads] in die Experience Platform.
+Im Folgenden werden die Schritte beschrieben, die zur Verbindung durchgeführt werden müssen [!DNL Pinterest Ads] auf Experience Platform.
 
 ### Erstellen einer Basisverbindung {#base-connection}
 
@@ -88,7 +88,7 @@ curl -X POST \
 | `description` | Ein optionaler Wert, den Sie angeben können, um weitere Informationen zu Ihrer Basisverbindung bereitzustellen. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID Ihrer Quelle. Diese ID kann abgerufen werden, nachdem Ihre Quelle registriert und über die [!DNL Flow Service]-API genehmigt wurde. |
 | `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für Platform authentifizieren. |
-| `auth.params.accessToken` | Enthält die [!DNL Pinterest] Zugriffs-Token-Wert, der für die Authentifizierung Ihrer Quelle erforderlich ist. |
+| `auth.params.accessToken` | Enthält die [!DNL Pinterest] Zugriffstoken-Wert, der für die Authentifizierung Ihrer Quelle erforderlich ist. |
 
 **Antwort**
 
@@ -145,7 +145,7 @@ curl -X GET \
 
 >[!TAB Anzeigengruppen]
 
-Für [!DNL Pinterest Ads]bei Verwendung der Analytics-API für Anzeigengruppen der Wert für `{SOURCE_PARAMS}` wird übergeben als `{"ad_account_id":"123456789000","object_ids":"000123456789,100123456789","object_type":"ad_groups"}`. Bei der Kodierung in base64 entspricht es `eyJhZF9hY2NvdW50X2lkIjoiMTIzNDU2Nzg5MDAwIiwib2JqZWN0X2lkcyI6IjAwMDEyMzQ1Njc4OSwxMDAxMjM0NTY3ODkiLCJvYmplY3RfdHlwZSI6ImFkX2dyb3VwcyJ9` wie unten dargestellt.
+Für [!DNL Pinterest Ads]bei der Nutzung der Analytics-API für Anzeigengruppen der Wert für `{SOURCE_PARAMS}` wird übergeben als `{"ad_account_id":"123456789000","object_ids":"000123456789,100123456789","object_type":"ad_groups"}`. Bei der Kodierung in base64 entspricht es `eyJhZF9hY2NvdW50X2lkIjoiMTIzNDU2Nzg5MDAwIiwib2JqZWN0X2lkcyI6IjAwMDEyMzQ1Njc4OSwxMDAxMjM0NTY3ODkiLCJvYmplY3RfdHlwZSI6ImFkX2dyb3VwcyJ9` wie unten dargestellt.
 
 ```shell
 curl -X GET \
@@ -592,13 +592,13 @@ Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema e
 
 Ein Ziel-XDM-Schema kann erstellt werden, indem eine POST-Anfrage an die [Schema-Registrierungs-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) durchgeführt wird.
 
-Ausführliche Schritte zum Erstellen eines XDM-Zielschemas finden Sie im Tutorial zum [Erstellen eines Schemas mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
+Ausführliche Schritte zum Erstellen eines XDM-Zielschemas finden Sie im Tutorial zum [Erstellen eines Schemas mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create).
 
 ### Erstellen eines Zieldatensatzes {#target-dataset}
 
 Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) durchgeführt wird, wodurch die ID des Zielschemas in der Payload angegeben wird.
 
-Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tutorial zu [Erstellen eines Datensatzes mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tutorial zu [Erstellen eines Datensatzes mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 
 ### Erstellen einer Zielverbindung {#target-connection}
 
@@ -875,7 +875,7 @@ Aktualisieren Sie die Details Ihres Datenflusses, z. B. seinen Namen und seine B
 
 ### Konto aktualisieren {#update-account}
 
-Aktualisieren Sie den Namen, die Beschreibung und die Anmeldeinformationen Ihres Quellkontos, indem Sie eine PATCH-Anfrage an die [!DNL Flow Service] API bei der Bereitstellung Ihrer Basis-Verbindungs-ID als Abfrageparameter. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` im `If-Match` -Kopfzeile. Die vollständigen API-Beispiele finden Sie im Handbuch unter [Quellkonto mithilfe der API aktualisieren](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+Aktualisieren Sie den Namen, die Beschreibung und die Anmeldeinformationen Ihres Quellkontos, indem Sie eine PATCH-Anfrage an die [!DNL Flow Service] API bei der Bereitstellung Ihrer Basis-Verbindungs-ID als Abfrageparameter. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` im `If-Match` -Kopfzeile. Die vollständigen API-Beispiele finden Sie im Handbuch unter [Aktualisieren Ihres Quellkontos mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
 
 ### Löschen des Datenflusses {#delete-dataflow}
 

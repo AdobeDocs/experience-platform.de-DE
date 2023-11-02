@@ -5,9 +5,9 @@ feature: Customer AI
 title: Data Governance in Kunden-KI
 description: Adobe Experience Platform bietet verschiedene Services und Tools, mit denen Sie Ihre erfassten Erlebnisdaten gemäß Ihren Geschäftspraktiken, Ihren rechtlichen Verpflichtungen und Ihrem Entwicklungsprozess sicher steuern können.
 exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
-source-git-commit: 0fcdb358882fba7f7923e5d6fc1a947699276e18
-workflow-type: ht
-source-wordcount: '302'
+source-git-commit: e300e57df998836a8c388511b446e90499185705
+workflow-type: tm+mt
+source-wordcount: '300'
 ht-degree: 100%
 
 ---

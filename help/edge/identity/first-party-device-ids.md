@@ -1,17 +1,17 @@
 ---
-title: Erstanbieter-Geräte-IDs im Platform Web SDK
+title: FPIDs im Platform Web SDK
 description: Erfahren Sie, wie Sie Erstanbieter-Geräte-IDs (FPIDs) für das Adobe Experience Platform Web SDK konfigurieren.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1774'
-ht-degree: 1%
+source-wordcount: '1772'
+ht-degree: 2%
 
 ---
 
-# Erstanbieter-Geräte-IDs im Platform Web SDK
+# FPIDs im Platform Web SDK
 
-Das Adobe Experience Platform Web SDK weist [Adobe Experience Cloud IDs (ECIDs)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=en) Website-Besuchern durch die Verwendung von Cookies, um das Benutzerverhalten zu verfolgen. Um Browserbeschränkungen für Cookie-Lebenszyklen zu berücksichtigen, können Sie stattdessen Ihre eigenen Geräte-IDs festlegen und verwalten. Diese werden als First-Party-Geräte-IDs (FPIDs) bezeichnet. 
+Das Adobe Experience Platform Web SDK weist [Adobe Experience Cloud IDs (ECIDs)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=de) Website-Besuchern durch die Verwendung von Cookies, um das Benutzerverhalten zu verfolgen. Um Browserbeschränkungen für Cookie-Lebenszyklen zu berücksichtigen, können Sie stattdessen Ihre eigenen Geräte-IDs festlegen und verwalten. Diese werden als First-Party-Geräte-IDs (FPIDs) bezeichnet. 
 
 >[!NOTE]
 >

@@ -3,9 +3,9 @@ title: TikTok-Verbindung
 description: Erstellen Sie auf TikTok benutzerdefinierte Zielgruppen mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. Diese Zielgruppen können von Personen sein, die Ihre Website besucht oder mit Ihrem Inhalt interagiert haben. Durch die Echtzeit-Integration von Adobe mit TikTok Ads Manager können Sie die gewünschte Zielgruppe schnell und sicher von Adobe Experience Platform an TikTok übertragen.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1040'
 ht-degree: 44%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 44%
 
 ## Übersicht {#overview}
 
-Erstellen Sie auf TikTok benutzerdefinierte Zielgruppen mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. Diese Zielgruppen können von Personen sein, die Ihre Website besucht oder mit Ihrem Inhalt interagiert haben. Durch die Echtzeit-Integration von Adobe mit TikTok Ads Manager können Sie die gewünschte Zielgruppe schnell und sicher von Adobe Experience Platform an TikTok übertragen. Besuch [TikTok Business-Hilfesystem](https://ads.tiktok.com/help/article/audiences?lang=en) für weitere Informationen.
+Erstellen Sie auf TikTok benutzerdefinierte Zielgruppen mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. Diese Zielgruppen können von Personen sein, die Ihre Website besucht oder mit Ihrem Inhalt interagiert haben. Durch die Echtzeit-Integration von Adobe mit TikTok Ads Manager können Sie die gewünschte Zielgruppe schnell und sicher von Adobe Experience Platform an TikTok übertragen. Besuch [TikTok Business-Hilfesystem](https://ads.tiktok.com/help/article/audiences) für weitere Informationen.
 
 >[!IMPORTANT]
 >
@@ -30,7 +30,7 @@ Eine Marke für Sportbekleidung möchte bestehende Kunden über ihre Social-Medi
 
 ## Voraussetzungen {#prerequisites}
 
-Sie müssen [!DNL Admin] oder [!DNL Operator] Zugriff auf das TikTok Ads Manager-Konto, an das Sie Zielgruppen senden möchten. Weitere Informationen finden Sie unter [TikTok Help Center](https://ads.tiktok.com/help/article/add-users-tiktok-business-center?lang=en).
+Sie müssen [!DNL Admin] oder [!DNL Operator] Zugriff auf das TikTok Ads Manager-Konto, an das Sie Zielgruppen senden möchten. Weitere Informationen finden Sie unter [TikTok Help Center](https://ads.tiktok.com/help/article/add-users-tiktok-business-center).
 
 Bevor Sie Daten an Ihr TikTok Ads Manager-Konto senden, müssen Sie Adobe Experience Platform die Berechtigung erteilen, auf Ihr Anzeigenkonto zuzugreifen für `Audience Management`. Diese Berechtigung kann bereitgestellt werden durch [Eingabe Ihrer Anzeigen-Manager-ID](#authenticate) in der Experience Platform-Benutzeroberfläche und Erteilung der Berechtigung, nachdem Sie zu Ihrem TikTok Ads Manager-Konto weitergeleitet wurden.
 
@@ -123,4 +123,4 @@ Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Date
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-Weitere Informationen finden Sie unter [TikTok-Hilfeseite](https://ads.tiktok.com/help/article/audiences?lang=en) für weitere Informationen.
+Weitere Informationen finden Sie unter [TikTok-Hilfeseite](https://ads.tiktok.com/help/article/audiences) für weitere Informationen.

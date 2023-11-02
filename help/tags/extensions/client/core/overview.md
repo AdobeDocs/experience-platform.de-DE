@@ -2,7 +2,7 @@
 title: Core-Erweiterung – Übersicht
 description: Machen Sie sich mit der Haupt-Tag-Erweiterung in Adobe Experience Platform vertraut.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '5482'
 ht-degree: 96%
@@ -191,15 +191,15 @@ Wenn Sie diese Option auswählen, werden folgende Parameter verfügbar:
 
 * `property=value`
 
-   Geben Sie den Wert für die Eigenschaft an
+  Geben Sie den Wert für die Eigenschaft an
 
 * Regex
 
-   Aktivieren Sie diese Option, wenn `property=value` ein regulärer Ausdruck ist.
+  Aktivieren Sie diese Option, wenn `property=value` ein regulärer Ausdruck ist.
 
 * Add
 
-   Fügen Sie ein weiteres `property=value`-Paar hinzu.
+  Fügen Sie ein weiteres `property=value`-Paar hinzu.
 
 #### Advanced options (Bubbling)
 
@@ -636,7 +636,7 @@ Diese Aktion löst alle Regeln aus, die ein bestimmtes [Direktaufrufereignis](#d
 
 ![Screenshot einer Trigger-Direktaufruf-Aktion in der Datenerfassungs-Benutzeroberfläche](../../../images/extensions/client/core/direct-call-action.png)
 
-Die Aktion wird direkt mit der [`track`-Methode](../../../ui/client-side/satellite-object.md?lang=en#track) im `satellite`-Objekt verknüpft, auf das Client-seitiger Code zugreifen kann.
+Die Aktion wird direkt mit der [`track`-Methode](../../../ui/client-side/satellite-object.md#track) im `satellite`-Objekt verknüpft, auf das Client-seitiger Code zugreifen kann.
 
 ## Datenelementtypen der Haupterweiterung
 

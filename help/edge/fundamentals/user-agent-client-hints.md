@@ -3,10 +3,10 @@ title: Benutzeragenten-Clienthinweise
 description: Erfahren Sie, wie Benutzeragenten-Clienthinweise im Web SDK funktionieren. Clienthinweise ermöglichen es Website-Inhabern, auf einen Großteil der Informationen zuzugreifen, die in der Benutzeragenten-Zeichenfolge verfügbar sind, wobei die Privatsphäre jedoch gewahrt bleibt.
 keywords: Benutzeragent; Clienthinweise; Zeichenfolge; user-agent-Zeichenfolge; niedrige Entropie; hohe Entropie
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: d856630d4c14387ad4d77a915585fe05803878fb
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1200'
-ht-degree: 9%
+source-wordcount: '1192'
+ht-degree: 7%
 
 ---
 
@@ -120,7 +120,7 @@ Die [Betriebssystem](https://experienceleague.adobe.com/docs/analytics/component
 
 ### Audience Manager-Eigenschaften, die auf Client-Hinweisen mit hoher Entropie basieren {#aam}
 
-[!DNL Google] hat die [!DNL Chrome] Browserfunktionalität, um die über die `User-Agent` -Kopfzeile. Daher verwenden Audience Manager, die [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=de) keine zuverlässigen Informationen mehr für Eigenschaften erhalten, die auf [Schlüssel auf Plattformebene](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=de).
+[!DNL Google] hat die [!DNL Chrome] Browserfunktionalität, um die über die `User-Agent` -Kopfzeile. Daher verwenden Audience Manager, die [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=de) keine zuverlässigen Informationen mehr für Eigenschaften erhalten, die auf [Schlüssel auf Plattformebene](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html).
 
 Audience Manager, die Schlüssel auf Plattformebene für das Targeting verwenden, müssen zu [Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=de) anstelle von [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=de)und aktivieren Sie [Hohe Entropy-Client-Hinweise](#enabling-high-entropy-client-hints) , um weiterhin zuverlässige Eigenschaftsdaten zu erhalten.
 

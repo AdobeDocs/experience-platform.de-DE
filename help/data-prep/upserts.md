@@ -3,9 +3,9 @@ keywords: Experience Platform;home;popular topics;data prep;Data Prep;streaming;
 title: Teilweise Zeilen-Aktualisierungen mithilfe der Datenvorbereitung an das Echtzeit-Kundenprofil senden
 description: Erfahren Sie, wie Sie mithilfe der Datenvorbereitung partielle Zeilenaktualisierungen an das Echtzeit-Kundenprofil senden.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1176'
+source-wordcount: '1174'
 ht-degree: 12%
 
 ---

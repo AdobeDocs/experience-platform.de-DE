@@ -3,10 +3,10 @@ title: Hybride Personalisierung mit Web SDK und Edge Network Server API
 description: In diesem Artikel wird gezeigt, wie Sie das Web SDK in Verbindung mit der Server-API verwenden können, um hybride Personalisierung in Ihren Web-Eigenschaften bereitzustellen.
 keywords: Personalisierung;hybride;Server-API;Server-seitig;Hybridimplementierung;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '830'
-ht-degree: 100%
+source-wordcount: '828'
+ht-degree: 99%
 
 ---
 
@@ -39,7 +39,7 @@ Im folgenden Flussdiagramm wird die Reihenfolge der Schritte beschrieben, die zu
 1. Die Server-API gibt die Personalisierungsinhalte an Ihren Anwendungs-Server zurück.
 1. Der Anwendungs-Server gibt eine HTML-Antwort an den Client-Browser zurück, die die [Identitäts- und Cluster-Cookies](#cookies) enthält.
 1. Auf der Client-Seite wird der Befehl [!DNL Web SDK] `applyResponse` aufgerufen, wobei die Kopfzeilen und der Hauptteil der Antwort der [!UICONTROL Server-API] aus dem vorherigen Schritt übergeben werden.
-1. Das [!DNL Web SDK] rendert das Laden der Angebotsseiten von [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=de) automatisch, da das `renderDecisions`-Flag auf `true` gesetzt ist.
+1. Das [!DNL Web SDK] rendert das Laden der Angebotsseiten von [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) automatisch, da das `renderDecisions`-Flag auf `true` gesetzt ist.
 1. Formularbasierte [!DNL JSON]-Angebote werden manuell über die Methode `applyPersonalization` angewendet, um die [!DNL DOM] basierend auf dem Personalisierungsangebot zu aktualisieren.
 1. Bei formularbasierten Aktivitäten müssen Anzeigeereignisse manuell gesendet werden, um anzugeben, wann das Angebot angezeigt wurde. Dies geschieht über den Befehl `sendEvent`.
 

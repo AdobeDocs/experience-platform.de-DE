@@ -1,12 +1,12 @@
 ---
 keywords: livefyre;livefyre-Erweiterung
 title: Adobe Livefyre-Erweiterung
-description: Die Adobe Livefyre-Erweiterung ist ein Social-Media-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
+description: Die Adobe Livefyre-Erweiterung ist ein soziales Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 64%
+source-wordcount: '450'
+ht-degree: 63%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 64%
 
 Mit Adobe Livefyre können Sie einen konstanten Fluss von anwendergenerierten Inhalten auf Ihrer Website erkunden, organisieren und veröffentlichen, um für authentische und hochpersonalisierte Erlebnisse zu sorgen.
 
-Adobe Livefyre ist eine soziale Erweiterung in Adobe Experience Platform. Weitere Informationen zur Adobe Livefyre finden Sie im [Livefyre-Implementierungshandbuch](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html?lang=de).
+Adobe Livefyre ist eine soziale Erweiterung in Adobe Experience Platform. Weitere Informationen über die Adobe Livefyre finden Sie im [Livefyre-Implementierungshandbuch](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tags-Erweiterungen in Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 
@@ -54,6 +54,6 @@ Sie können Erweiterungen in der Datenerfassungs-Benutzeroberfläche konfigurier
 
 >[!TIP]
 >
->Wenn die Erweiterung bereits in einer Ihrer Eigenschaften installiert ist, wird die Benutzeroberfläche weiterhin angezeigt **[!UICONTROL Installieren]** für die Erweiterung. Starten Sie den Installations-Workflow, wie unter [Installieren einer Erweiterung](#install-extension) beschrieben, um Ihre Erweiterung zu konfigurieren oder zu löschen.
+>Wenn die Erweiterung bereits in einer Ihrer Eigenschaften installiert ist, wird die Benutzeroberfläche weiterhin angezeigt **[!UICONTROL Installieren]** für die -Erweiterung. Starten Sie den Installations-Workflow, wie unter [Installieren einer Erweiterung](#install-extension) beschrieben, um Ihre Erweiterung zu konfigurieren oder zu löschen.
 
 Informationen zum Aktualisieren Ihrer Erweiterung finden Sie in der Anleitung zum [Erweiterungs-Upgrade-Prozess](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) in der Tags-Dokumentation.

@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2181'
+source-wordcount: '2179'
 ht-degree: 26%
 
 ---
@@ -34,7 +34,7 @@ Aktualisierungen vorhandener Funktionen:
 
 ## Adobe Experience Platform Data Lake-Migration {#migration}
 
-Während Adobe den Data Lake von Gen1 zu Gen2 migriert, können Benutzer zwar vom Data Lake aus lesen, aber alle Funktionen, die in den Data Lake schreiben, sind betroffen. Adobe wird sich an Systemadministratoren wenden, um die Auswirkungen der Migration ausführlich zu erörtern und die Migrationsdaten und -zeiten für bestimmte Einrichtungen zu bestätigen.
+Während Adobe den Data Lake von Gen1 zu Gen2 migriert, können Benutzer zwar vom Data Lake aus lesen, aber alle Funktionen, die in den Data Lake schreiben, sind betroffen. Adobe wird sich an die Systemadministratoren wenden, um die Auswirkungen der Migration ausführlich zu erörtern und die Migrationsdaten und -zeiten für bestimmte Organisationen zu bestätigen.
 
 Weitere Informationen finden Sie im [Data Lake-Migrationshandbuch](../../landing/adls2-gen2-migration.md).
 
@@ -129,7 +129,7 @@ Weiterführende Informationen finden Sie in der [Übersicht zu Zielen](../../des
 
 ## Intelligent Services {#intelligent-services}
 
-Mit Intelligent Services können Marketing-Analysten und -Experten die Vorteile von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen nutzen. So können Marketing-Analysten mithilfe von Konfigurationen auf Unternehmensebene spezifische Prognosen für die Anforderungen der Firma erstellen, ohne dass hierfür Kenntnisse aus der Datenwissenschaft erforderlich sind.
+Mit Intelligent Services können Marketing-Analysten und -Experten die Vorteile von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen nutzen. So können Marketing-Analysefachleute mithilfe von Konfigurationen auf Unternehmensebene spezifische Prognosen für die Anforderungen der Firma erstellen, ohne dass hierfür Kenntnisse aus der Datenwissenschaft erforderlich sind.
 
 **Wichtigste Funktionen**
 

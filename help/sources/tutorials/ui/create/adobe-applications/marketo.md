@@ -1,10 +1,10 @@
 ---
 title: Erstellen einer Marketo Engage-Quellverbindung und eines Datenflusses in der Benutzeroberfläche
-description: In diesem Tutorial erfahren Sie, wie Sie eine Marketo Engage-Quellverbindung und einen Datenfluss in der Benutzeroberfläche erstellen, um B2B-Daten in Adobe Experience Platform zu importieren.
+description: In diesem Tutorial erfahren Sie, wie Sie in der Benutzeroberfläche eine Marketo Engage-Quellverbindung und einen Datenfluss erstellen, um B2B-Daten in Adobe Experience Platform zu importieren.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: b271d28677543f773fe1ba471fc08574e7c5542b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1693'
+source-wordcount: '1691'
 ht-degree: 76%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 76%
 
 >[!IMPORTANT]
 >
->Vor der Erstellung [!DNL Marketo Engage] Quellverbindung und einen Datenfluss müssen Sie zunächst sicherstellen, dass Sie [Ihrer Organisations-ID der Adobe zugeordnet](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=en) in [!DNL Marketo]. Außerdem müssen Sie sicherstellen, dass Sie [automatisch Ihre [!DNL Marketo] B2B-Namespaces und -Schemata](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) vor der Erstellung einer Quellverbindung und eines Datenflusses.
+>Vor der Erstellung [!DNL Marketo Engage] Quellverbindung und einen Datenfluss müssen Sie zunächst sicherstellen, dass Sie [Ihrer Adobe-Organisations-ID zugeordnet](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html) in [!DNL Marketo]. Außerdem müssen Sie sicherstellen, dass Sie [automatisch Ihre [!DNL Marketo] B2B-Namespaces und -Schemata](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) vor der Erstellung einer Quellverbindung und eines Datenflusses.
 
 In diesem Tutorial erfahren Sie, wie Sie einen [!DNL Marketo Engage]-Quell-Connector (im Folgenden als „[!DNL Marketo]“ abgekürzt) in der Benutzeroberfläche erstellen, um B2B-Daten in Adobe Experience Platform einzubringen.
 
@@ -194,9 +194,9 @@ Die folgenden Fehlermeldungen werden in der Benutzeroberfläche angezeigt, wenn 
 
 #### [!DNL Munchkin ID] ist nicht der entsprechenden Organisation zugeordnet
 
-Die Authentifizierung wird verweigert, wenn Ihre [!DNL Munchkin ID] nicht der Platform-Organisation zugeordnet ist, die Sie verwenden. Konfigurieren Sie die Zuordnung zwischen Ihrem [!DNL Munchkin ID] und Ihrer Organisation, die [[!DNL Marketo] Benutzeroberfläche](https://app-sjint.marketo.com/#MM0A1).
+Die Authentifizierung wird verweigert, wenn Ihre [!DNL Munchkin ID] nicht der Platform-Organisation zugeordnet ist, die Sie verwenden. Konfigurieren Sie die Zuordnung zwischen [!DNL Munchkin ID] und Ihrer Organisation, die [[!DNL Marketo] Benutzeroberfläche](https://app-sjint.marketo.com/#MM0A1).
 
-![Eine Fehlermeldung, die anzeigt, dass die Marketo-Instanz nicht korrekt der Adobe-Organisation zugeordnet ist.](../../../../images/tutorials/create/marketo/munchkin-not-mapped.png)
+![Eine Fehlermeldung, die anzeigt, dass die Marketo-Instanz der Adobe-Organisation nicht korrekt zugeordnet ist.](../../../../images/tutorials/create/marketo/munchkin-not-mapped.png)
 
 #### Primäre Identität fehlt
 

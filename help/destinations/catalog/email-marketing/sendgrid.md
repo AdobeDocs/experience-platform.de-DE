@@ -3,10 +3,10 @@ keywords: E-Mail; E-Mail; E-Mail; E-Mail-Ziele; sendgrid; sendgrid; sendgrid-Zie
 title: SendGrid-Verbindung
 description: Mit dem SendGrid-Ziel können Sie Ihre Erstanbieterdaten exportieren und in SendGrid für Ihre geschäftlichen Anforderungen aktivieren.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1577'
-ht-degree: 27%
+source-wordcount: '1571'
+ht-degree: 26%
 
 ---
 
@@ -34,7 +34,7 @@ Die folgenden Elemente sind erforderlich, bevor Sie mit der Konfiguration des Zi
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-Bevor Sie Daten für das SendGrid-Ziel aktivieren, müssen Sie über eine [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=de), a [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=de), und [Segmente](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=de) erstellt in [!DNL Experience Platform]. Siehe auch Abschnitt [limits](#limits) weiter unten auf dieser Seite.
+Bevor Sie Daten für das SendGrid-Ziel aktivieren, müssen Sie über eine [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=de), a [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=de), und [Segmente](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) erstellt in [!DNL Experience Platform]. Siehe auch Abschnitt [limits](#limits) weiter unten auf dieser Seite.
 
 >[!IMPORTANT]
 >

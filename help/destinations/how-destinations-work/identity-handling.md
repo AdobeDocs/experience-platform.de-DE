@@ -2,10 +2,10 @@
 title: Umgang mit Identitäten im Aktivierungs-Workflow für Ziele
 description: Erfahren Sie, wie der Identitätsexport im Aktivierungs-Workflow je nach Zieltyp verarbeitet wird.
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
-workflow-type: ht
-source-wordcount: '1186'
-ht-degree: 100%
+source-git-commit: e300e57df998836a8c388511b446e90499185705
+workflow-type: tm+mt
+source-wordcount: '1180'
+ht-degree: 98%
 
 ---
 
@@ -88,7 +88,7 @@ Beim Konfigurieren eines Datenstroms, wie in der oben verlinkten Dokumentation b
 
 >[!NOTE]
 >
->Die meisten dieser Werbeziele werden in Audience Manager unterstützt (diese Zieltypen werden in Audience Manager als gerätebasierte Ziele bezeichnet. Hier finden Sie eine [Liste aller unterstützten gerätebasierten Ziele in Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html?lang=de)). Nur wenige sind in Experience Platform aufgeführt. Informationen zur Datenfreigabe zwischen Experience Platform und Audience Manager finden Sie im Abschnitt zum [Aktivieren der Datenfreigabe von Experience Platform an Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de#enable-aep-to-aam-data). Derzeit ist keine Unterstützung für weitere Drittanbieter-Cookie-Ziele geplant.
+>Die meisten dieser Werbeziele werden in Audience Manager unterstützt (diese Zieltypen werden in Audience Manager als gerätebasierte Ziele bezeichnet. Hier finden Sie eine [Liste aller unterstützten gerätebasierten Ziele in Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html)). Nur wenige sind in Experience Platform aufgeführt. Informationen zur Datenfreigabe zwischen Experience Platform und Audience Manager finden Sie im Abschnitt zum [Aktivieren der Datenfreigabe von Experience Platform an Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#enable-aep-to-aam-data). Derzeit ist keine Unterstützung für weitere Drittanbieter-Cookie-Ziele geplant.
 
 ## Unternehmensziele {#enterprise-destinations}
 

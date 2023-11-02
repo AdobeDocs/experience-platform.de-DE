@@ -1,9 +1,8 @@
 ---
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
-workflow-type: ht
-translation-type: ht
-source-wordcount: '508'
-ht-degree: 100%
+source-git-commit: e300e57df998836a8c388511b446e90499185705
+workflow-type: tm+mt
+source-wordcount: '504'
+ht-degree: 98%
 
 ---
 # Bereitstellen von Inhalten
@@ -38,7 +37,7 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### Umfassende Änderungen oder neue Artikel von Adobe-Mitarbeitern
 
-Wenn Sie technischer Redakteur, Programmmanager oder Entwickler des Produktteams für eine Adobe Experience Cloud-Lösung sind und es Ihr Auftrag ist, technische Artikel zu erstellen oder zu diesen beizutragen, sollten Sie das private Repository unter `https://git.corp.adobe.com/AdobeDocs` verwenden. Weitere Informationen dazu finden Sie im [Handbuch zur internen Zusammenarbeit](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en).
+Wenn Sie technischer Redakteur, Programmmanager oder Entwickler des Produktteams für eine Adobe Experience Cloud-Lösung sind und es Ihr Auftrag ist, technische Artikel zu erstellen oder zu diesen beizutragen, sollten Sie das private Repository unter `https://git.corp.adobe.com/AdobeDocs` verwenden. Weitere Informationen dazu finden Sie im [Handbuch zur internen Zusammenarbeit](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html).
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
@@ -65,5 +64,5 @@ Alle Artikel in diesem Repository verwenden GitHub Flavored Markdown. Wenn Sie m
 
 Im öffentlichen Repository werden automatisierte Bezeichnungen Pull-Anforderungen zugewiesen, damit wir den Arbeitsablauf für Pull-Anforderungen verwalten und Ihnen mitteilen können, was mit Ihrer Pull-Anforderung passiert:
 
-* **Änderung an Autor gesendet**: Der Autor wurde über die ausstehende Pull-Anforderung informiert.
-* **Bereit zum Zusammenführen**: Bereit zur Überprüfung durch unser Pull-Anforderung-Überprüfungsteam.
+* **Change sent to author**: Der Autor wurde über die ausstehende Pull-Anforderung informiert.
+* **ready-to-merge**: Bereit zur Überprüfung durch unser Pull-Anforderung-Überprüfungsteam.

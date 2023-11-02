@@ -2,10 +2,10 @@
 title: Adobe Analytics Source Connector für Report Suite-Daten
 description: Dieses Dokument bietet Ihnen einen Überblick über Analytics und beschreibt die Anwendungsfälle für Analytics-Daten.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 59f7b7cd2e7c52b64ee7fdb8e33b3a0116697696
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 18%
+source-wordcount: '1159'
+ht-degree: 17%
 
 ---
 
@@ -74,7 +74,7 @@ Die folgende Tabelle enthält weitere Informationen zu Identitätsfeldern in Ihr
 | Identitätsfeld | Beschreibung |
 | --- | --- |
 | AAID | Die AAID ist die primäre Gerätekennung in Adobe Analytics und ist garantiert für jedes Ereignis vorhanden, das über die [!DNL Analytics] -Quelle. Die AAID wird manchmal auch als *Legacy-Analytics-ID* oder als `s_vi` Cookie-ID. Trotzdem wird eine AAID erstellt, auch wenn die Variable `s_vi` -Cookie nicht vorhanden ist. Die AAID wird durch die `post_visid_high` und `post_visid_low` Spalten in [[!DNL Analytics] Datenfeeds](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html?lang=de). Bei jedem Ereignis enthält das Feld &quot;AAID&quot;eine einzelne Identität, die einer der verschiedenen Typen sein kann, die im Abschnitt [Reihenfolge der Vorgänge [!DNL Analytics] IDs](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html). **Hinweis**: Innerhalb einer gesamten Report Suite kann eine AAID eine Mischung aus Ereignistypen enthalten. |
-| ECID | Die ECID (Experience Cloud ID) ist ein separates Identifizierungsfeld für Geräte, das in Adobe Analytics ausgefüllt wird, wenn [!DNL Analytics] wird mit dem Experience Cloud Identity-Dienst implementiert. Die ECID wird manchmal auch als MCID (Marketing Cloud-ID) bezeichnet. Wenn eine ECID für ein Ereignis vorhanden ist, kann die AAID auf der ECID basieren, je nachdem, ob die Analytics-Variable [Übergangsphase](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html) konfiguriert ist. Die ECID wird durch die `mcvisid` in Analytics-Daten-Feeds. Weitere Informationen zur ECID finden Sie im Abschnitt [ECID-Übersicht](../../../identity-service/ecid.md). Weitere Informationen zur Funktionsweise von ECID finden Sie unter [!DNL Analytics], siehe das Dokument unter [Analytics- und Experience Cloud-ID-Anforderungen](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/legacy-analytics.html?lang=de). |
+| ECID | Die ECID (Experience Cloud ID) ist ein separates Identifizierungsfeld für Geräte, das in Adobe Analytics ausgefüllt wird, wenn [!DNL Analytics] wird mit dem Experience Cloud Identity-Dienst implementiert. Die ECID wird manchmal auch als MCID (Marketing Cloud-ID) bezeichnet. Wenn eine ECID für ein Ereignis vorhanden ist, kann die AAID auf der ECID basieren, je nachdem, ob die Analytics-Variable [Übergangsphase](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html) konfiguriert ist. Die ECID wird durch die `mcvisid` in Analytics-Daten-Feeds. Weitere Informationen zur ECID finden Sie im Abschnitt [ECID-Übersicht](../../../identity-service/ecid.md). Weitere Informationen zur Funktionsweise von ECID finden Sie unter [!DNL Analytics], siehe das Dokument unter [Analytics- und Experience Cloud-ID-Anforderungen](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/legacy-analytics.html). |
 | AACUSTOMID | Die AACUSTOMID ist ein separates Identifikationsfeld, das in Adobe Analytics basierend auf der Verwendung der Variablen `s.VisitorID` in der [!DNL Analytics] Implementierung. Die AACUSTOMID wird durch die Variable `cust_visid` Spalte in [[!DNL Analytics] Datenfeeds](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html?lang=de). Wenn die AACUSTOMID vorhanden ist, basiert die AACUSTOMID auf der AACUSTOMID, da die AACUSTOMID alle anderen Kennungen, wie durch die [Reihenfolge der Vorgänge [!DNL Analytics] IDs](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html). |
 
 ### Wie die [!DNL Analytics] Identitäten zur Quellenbehandlung

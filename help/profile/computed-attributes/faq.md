@@ -2,9 +2,9 @@
 title: Häufig gestellte Fragen zu berechneten Attributen
 description: Hier finden Sie Antworten auf häufig gestellte Fragen zur Verwendung berechneter Attribute.
 exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
-source-git-commit: 48c728c183d6ad28cd291543a79902b16a247a5a
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1090'
 ht-degree: 1%
 
 ---
@@ -99,4 +99,4 @@ Berechnete Attribute leiten automatisch Datennutzungsbezeichnungen aus den Quell
 
 ## Wie verwende ich berechnete Attribute mit Adobe Journey Optimizer?
 
-Um berechnete Attribute in Journey zu verwenden, müssen Sie die `SystemComputedAttributes` Feldergruppe zur Experience Platform-Datenquelle. Weitere Informationen zum Konfigurieren der Experience Platform-Datenquelle finden Sie im Abschnitt [Adobe Experience Platform-Datenquellenhandbuch](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html?lang=en).
+Um berechnete Attribute in Journey zu verwenden, müssen Sie die `SystemComputedAttributes` Feldergruppe zur Experience Platform-Datenquelle. Weitere Informationen zum Konfigurieren der Experience Platform-Datenquelle finden Sie im Abschnitt [Adobe Experience Platform-Datenquellenhandbuch](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html).

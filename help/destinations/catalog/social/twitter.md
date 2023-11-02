@@ -2,10 +2,10 @@
 title: Twitter Benutzerdefinierte Zielgruppen-Verbindung
 description: Sprechen Sie Ihre bestehenden Follower und Kunden auf Twitter an und erstellen Sie relevante Remarketing-Kampagnen, indem Sie Ihre in Adobe Experience Platform erstellten Zielgruppen aktivieren
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '876'
-ht-degree: 57%
+source-wordcount: '874'
+ht-degree: 56%
 
 ---
 
@@ -24,7 +24,7 @@ Vor der Konfiguration [!DNL Twitter Custom Audiences] überprüfen Sie unbedingt
 
 ## Unterstützte Identitäten {#supported-identities}
 
-[!DNL Twitter Custom Audiences] unterstützt die Aktualisierung von Identitäten, die in der folgenden Tabelle beschrieben werden. Erhalten Sie weitere Informationen zu [Identitäten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=de#getting-started).
+[!DNL Twitter Custom Audiences] unterstützt die Aktualisierung von Identitäten, die in der folgenden Tabelle beschrieben werden. Erhalten Sie weitere Informationen zu [Identitäten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|

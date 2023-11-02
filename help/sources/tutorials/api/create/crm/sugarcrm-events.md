@@ -2,9 +2,9 @@
 title: Erstellen Sie eine Quellverbindung und einen Datenfluss für SugarCRM-Ereignisse mithilfe der Flow Service-API.
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Adobe Experience Platform mit SugarCRM-Ereignissen verbinden.
 exl-id: 12d08010-569c-4111-ba95-697c6ce6f637
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2009'
+source-wordcount: '2005'
 ht-degree: 60%
 
 ---
@@ -38,7 +38,7 @@ Um eine Verbindung zwischen [!DNL SugarCRM Events] und Platform herzustellen, m�
 
 ## Verbinden [!DNL SugarCRM Events] zur Plattform mithilfe der [!DNL Flow Service] API
 
-Im Folgenden werden die Schritte beschrieben, die Sie zur Authentifizierung Ihrer [!DNL SugarCRM] -Quelle, erstellen Sie eine Quellverbindung und erstellen Sie einen Datenfluss, um Ihre Ereignisdaten zur Experience Platform zu bringen.
+Im Folgenden werden die Schritte beschrieben, die Sie zur Authentifizierung Ihrer [!DNL SugarCRM] -Quelle, erstellen Sie eine Quellverbindung und erstellen Sie einen Datenfluss, um Ihre Ereignisdaten zum Experience Platform zu bringen.
 
 ### Erstellen einer Basisverbindung {#base-connection}
 
@@ -356,13 +356,13 @@ Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema e
 
 Ein Ziel-XDM-Schema kann erstellt werden, indem eine POST-Anfrage an die [Schema-Registrierungs-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) durchgeführt wird.
 
-Ausführliche Schritte zum Erstellen eines XDM-Zielschemas finden Sie im Tutorial zum [Erstellen eines Schemas mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
+Ausführliche Schritte zum Erstellen eines XDM-Zielschemas finden Sie im Tutorial zum [Erstellen eines Schemas mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create).
 
 ### Erstellen eines Zieldatensatzes {#target-dataset}
 
 Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) durchgeführt wird, wodurch die ID des Zielschemas in der Payload angegeben wird.
 
-Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tutorial zu [Erstellen eines Datensatzes mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tutorial zu [Erstellen eines Datensatzes mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 
 ### Erstellen einer Zielverbindung {#target-connection}
 
@@ -654,7 +654,7 @@ Aktualisieren Sie die Details Ihres Datenflusses, z. B. seinen Namen und seine B
 
 ### Konto aktualisieren
 
-Aktualisieren Sie den Namen, die Beschreibung und die Anmeldeinformationen Ihres Quellkontos, indem Sie eine PATCH-Anfrage an die [!DNL Flow Service] API bei der Bereitstellung Ihrer Basis-Verbindungs-ID als Abfrageparameter. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` im `If-Match` -Kopfzeile. Die vollständigen API-Beispiele finden Sie im Handbuch unter [Quellkonto mithilfe der API aktualisieren](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+Aktualisieren Sie den Namen, die Beschreibung und die Anmeldeinformationen Ihres Quellkontos, indem Sie eine PATCH-Anfrage an die [!DNL Flow Service] API bei der Bereitstellung Ihrer Basis-Verbindungs-ID als Abfrageparameter. Bei einer PATCH-Anfrage müssen Sie die eindeutige `etag` im `If-Match` -Kopfzeile. Die vollständigen API-Beispiele finden Sie im Handbuch unter [Aktualisieren Ihres Quellkontos mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
 
 ### Löschen des Datenflusses
 

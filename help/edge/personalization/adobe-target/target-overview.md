@@ -3,9 +3,9 @@ title: Verwenden von Adobe Target mit dem Platform Web SDK
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK mit Adobe Target rendern
 keywords: Target; adobe target; activity.id; experience.id; renderDecisions; DecisionScopes; Vorabausblenden von Snippet; VEC; Form-Based Experience Composer; xdm; Zielgruppen; Entscheidungen; Umfang; Schema; Systemdiagramm; Diagramm
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1318'
+source-wordcount: '1316'
 ht-degree: 7%
 
 ---
@@ -34,7 +34,7 @@ Die folgenden Funktionen wurden getestet und werden derzeit in [!DNL Target]:
 
 ## [!DNL Platform Web SDK] Systemdiagramm
 
-Das folgende Diagramm hilft Ihnen, den Workflow von [!DNL Target] und [!DNL Platform Web SDK] Edge-Entscheidungsfindung.
+Das folgende Diagramm hilft Ihnen, den Workflow von [!DNL Target] und [!DNL Platform Web SDK] Edge-Entscheidung.
 
 ![Abbildung der Adobe Target-Edge-Entscheidung mit dem Platform Web SDK](./assets/target-platform-web-sdk.png)
 
@@ -58,7 +58,7 @@ Aktivieren [!DNL Target]führen Sie folgende Schritte aus:
 Anschließend können Sie optional auch die folgenden Optionen hinzufügen:
 
 * **`decisionScopes`**: Rufen Sie bestimmte Aktivitäten ab (nützlich für Aktivitäten, die mit dem formularbasierten Composer erstellt wurden), indem Sie diese Option zu Ihren Ereignissen hinzufügen.
-* **[Vorabausblenden eines Snippets](../manage-flicker.md)**: Blenden Sie nur bestimmte Teile der Seite aus.
+* **[Vorabausblenden eines Snippets](../manage-flicker.md)**: Blendet nur bestimmte Teile der Seite aus.
 
 ## Verwenden von Adobe Target VEC
 
@@ -72,7 +72,7 @@ Siehe [Rendern von Personalisierungsinhalten](../rendering-personalization-conte
 
 ## Zielgruppen in XDM
 
-Beim Definieren von Zielgruppen für Ihre [!DNL Target] Aktivitäten, die über die [!DNL Platform Web SDK], [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=de) müssen definiert und verwendet werden. Nachdem Sie XDM-Schemas, Klassen und Schemafeldgruppen definiert haben, können Sie eine [!DNL Target] Zielgruppenregel, die durch XDM-Daten für das Targeting definiert wird. Within [!DNL Target], werden XDM-Daten in der [!UICONTROL Audience Builder] als benutzerdefinierten Parameter. Das XDM wird mit Punktnotation serialisiert (z. B. `web.webPageDetails.name`).
+Beim Definieren von Zielgruppen für Ihre [!DNL Target] Aktivitäten, die über die [!DNL Platform Web SDK], [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) müssen definiert und verwendet werden. Nachdem Sie XDM-Schemas, Klassen und Schemafeldgruppen definiert haben, können Sie eine [!DNL Target] Zielgruppenregel, die durch XDM-Daten für das Targeting definiert wird. Within [!DNL Target], werden XDM-Daten in der [!UICONTROL Audience Builder] als benutzerdefinierten Parameter. Das XDM wird mit Punktnotation serialisiert (z. B. `web.webPageDetails.name`).
 
 Wenn Sie [!DNL Target] Aktivitäten mit vordefinierten Zielgruppen, die benutzerdefinierte Parameter oder ein Benutzerprofil verwenden, werden nicht korrekt über das SDK bereitgestellt. Statt benutzerdefinierte Parameter oder das Benutzerprofil zu verwenden, müssen Sie stattdessen XDM verwenden. Es werden jedoch native Zielgruppen-Targeting-Felder über die [!DNL Platform Web SDK] die kein XDM erfordern. Diese Felder sind im Abschnitt [!DNL Target] Benutzeroberfläche, die kein XDM erfordert:
 
@@ -85,11 +85,11 @@ Wenn Sie [!DNL Target] Aktivitäten mit vordefinierten Zielgruppen, die benutzer
 * Traffic-Quellen
 * Zeitrahmen
 
-Weitere Informationen finden Sie unter [Kategorien für Zielgruppen](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=en) im *Adobe Target-Handbuch*.
+Weitere Informationen finden Sie unter [Kategorien für Zielgruppen](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html) im *Adobe Target-Handbuch*.
 
 ### Antwort-Token
 
-Antwort-Token werden hauptsächlich zum Senden von Metadaten an Dritte wie Google, Facebook usw. verwendet. Antwort-Token werden im `meta` Feld in `propositions` -> `items`. Hier finden Sie ein Beispiel:
+Antwort-Token werden hauptsächlich zum Senden von Metadaten an Dritte wie Google, Facebook usw. verwendet. Antwort-Token werden im `meta` -Feld in `propositions` -> `items`. Im Folgenden finden Sie ein Beispiel:
 
 ```json
 {
@@ -113,7 +113,7 @@ Antwort-Token werden hauptsächlich zum Senden von Metadaten an Dritte wie Googl
 ```
 
 Um die Antwort-Token zu erfassen, müssen Sie sich für `alloy.sendEvent` Versprechen, durchlaufen `propositions`
-und extrahieren Sie die Details aus `items` -> `meta`. Alle `proposition` hat eine `renderAttempted` boolesches Feld, das angibt, ob das `proposition` gerendert wurde oder nicht. Siehe Beispiel unten:
+und extrahieren Sie Details aus `items` -> `meta`. Alle `proposition` hat eine `renderAttempted` boolesches Feld, das angibt, ob das `proposition` gerendert wurde oder nicht. Siehe Beispiel unten:
 
 ```js
 alloy("sendEvent",

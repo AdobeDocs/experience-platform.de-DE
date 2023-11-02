@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über den Quell-Connector für Kundenattribute
 description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche Kundenattribute mit Adobe Experience Platform verbinden.
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 19%
+source-wordcount: '405'
+ht-degree: 23%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 19%
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-[[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html?lang=en) in Experience Cloud ermöglicht Ihnen das Hochladen Ihrer erfassten Unternehmensdaten aus einer CRM-Datenbank (Customer Relationship Management). Sie können die Daten in eine Datenquelle für Kundenattribute in Experience Cloud hochladen und dann die Daten in Adobe Analytics und Adobe Target verwenden.
+[[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html?lang=de) in Experience Cloud ermöglicht Ihnen das Hochladen Ihrer erfassten Unternehmensdaten aus einer CRM-Datenbank (Customer Relationship Management). Sie können die Daten in eine Datenquelle für Kundenattribute in Experience Cloud hochladen und dann die Daten in Adobe Analytics und Adobe Target verwenden.
 
 Experience Platform unterstützt die Aufnahme [!DNL Customer Attributes] Profildaten in Adobe Experience Platform.
 
@@ -31,7 +31,7 @@ Bei Verwendung von [!DNL Customer Attributes] -Quelle [!DNL Customer Attributes]
 
 Für [!DNL Customer Attributes] Daten, die mit anderen verknüpft werden [!DNL Profile] -Datensätze, ihre Daten und Identitäten müssen mit einer Experience Cloud-ID abgeglichen werden können.
 
-Sie können `CORE` Namespace durch Festlegen der Experience Cloud-ID für den Besucher mithilfe von [Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en), [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)oder die [Experience Cloud ID-Dienst-API](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=de).
+Sie können `CORE` Namespace durch Festlegen der Experience Cloud-ID für den Besucher mithilfe von [Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=de), [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)oder die [Experience Cloud ID-Dienst-API](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=de).
 
 Die [!DNL Customer Attributes] -Datei füllt keine anderen Identitätsbeziehungen weiter. Beispiel: Wenn ein [!DNL Customer Attributes] Quelldatensatz enthält einen **Email** und **Treueprogramm-ID** eingeben, müssen diese Felder im Schema als Identitätsfelder gekennzeichnet werden, damit sie in [!DNL Identity Service].
 

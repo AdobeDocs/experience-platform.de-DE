@@ -2,10 +2,10 @@
 title: Testen einer Adobe Target-Implementierung mit Adobe Experience Platform Debugger
 description: Erfahren Sie, wie Sie mit Adobe Experience Platform Debugger eine Website testen und debuggen können, die für Adobe Target aktiviert ist.
 exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
-source-git-commit: c3b5b63767a934be16a479d04853e1250b3bf775
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1211'
-ht-degree: 100%
+source-wordcount: '1209'
+ht-degree: 98%
 
 ---
 
@@ -69,7 +69,7 @@ Die folgenden Werte werden erfasst:
 | [!DNL clientCode] | Die Kennung für das Konto Ihrer Organisation, die von Target erkannt wurde. |
 | [!DNL requestType] | Die für die Anfrage verwendete API. Bei Verwendung von at.js 1.x lautet der Wert `/json`. Bei Verwendung von at.js 2.x lautet der Wert `delivery`. |
 | [!DNL Audience Manager Blob] | Stellt Informationen zu verschlüsselten Audience Manager-Metadaten bereit, die als „Blob“ bezeichnet werden. |
-| [!DNL Audience Location Hint] | Die Regions-ID für die Datenerfassung. Dies ist eine numerische ID für den geografischen Standort eines bestimmten ID-Service-Rechenzentrums. Weitere Informationen finden Sie in der Audience Manager-Dokumentation unter [DCS-Regions-IDs, Standorte und Hostnamen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=de) sowie im Handbuch zum Experience Cloud Identity Service unter [`getLocationHint`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/getlocationhint.html?lang=de#reference-a761030ff06c4439946bb56febf42d4c). |
+| [!DNL Audience Location Hint] | Die Regions-ID für die Datenerfassung. Dies ist eine numerische ID für den geografischen Standort eines bestimmten ID-Service-Rechenzentrums. Weitere Informationen finden Sie in der Audience Manager-Dokumentation unter [DCS-Regions-IDs, Standorte und Hostnamen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=de) sowie im Handbuch zum Experience Cloud Identity Service unter [`getLocationHint`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/getlocationhint.html#reference-a761030ff06c4439946bb56febf42d4c). |
 | [!DNL Browser Height] | Die Browser-Höhe in Pixel. |
 | [!DNL Browser Time Offset] | Die mit der Zeitzone des Browsers verknüpfte Zeitverschiebung. |
 | [!DNL Browser Width] | Die Browser-Breite in Pixel. |

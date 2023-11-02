@@ -3,9 +3,9 @@ keywords: Experience Platform;home;popular topics;Adobe Campaign Managed Cloud S
 title: Adobe Campaign Managed Cloud Services
 description: Erfahren Sie, wie Sie Campaign Managed Cloud Service über die Benutzeroberfläche mit Platform verbinden.
 exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
-source-git-commit: 39a503b14c731aeed279bbbfa8c814c2ec26ed92
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '757'
+source-wordcount: '753'
 ht-degree: 9%
 
 ---
@@ -30,7 +30,7 @@ Bevor Sie eine Quellverbindung erstellen können, um Ihre Campaign v8 auf Experi
 
 >[!IMPORTANT]
 >
->Sie benötigen Zugriff auf die Adobe Campaign v8 Client Console, um Ihre Protokolldaten in Campaign anzeigen zu können. Besuchen Sie die [Dokumentation zu Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=en) für Informationen zum Herunterladen und Installieren der Clientkonsole.
+>Sie benötigen Zugriff auf die Adobe Campaign v8 Client Console, um Ihre Protokolldaten in Campaign anzeigen zu können. Besuchen Sie die [Dokumentation zu Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html) für Informationen zum Herunterladen und Installieren der Clientkonsole.
 
 Melden Sie sich über die Client-Konsole bei Ihrer Campaign v8-Instanz an. Unter dem [!DNL Explorer] Registerkarte auswählen [!DNL Administration] und wählen Sie [!DNL Configuration]. Wählen Sie als Nächstes [!DNL Data schemas] und wenden Sie dann die `broadLog` nach Namen oder Titel filtern. Wählen Sie in der angezeigten Liste das Quellschema der Versandlogs der Empfänger mit dem Namen aus. `broadLogRcp`.
 

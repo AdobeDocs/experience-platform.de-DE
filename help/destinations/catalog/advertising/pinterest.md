@@ -2,10 +2,10 @@
 title: Pinterest Customer List-Verbindung
 description: Erstellen Sie Zielgruppen aus Ihren Kundenlisten, Personen, die Ihre Site besucht haben, oder Personen, die bereits mit Ihren Inhalten in Pinterest interagiert haben.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 52%
+source-wordcount: '727'
+ht-degree: 51%
 
 ---
 
@@ -26,7 +26,7 @@ Erstellen Sie Zielgruppen aus Ihren Kundenlisten, Personen, die Ihre Site besuch
 
 ## Unterstützte Identitäten {#supported-identities}
 
-Die [!DNL Pinterest Customer List] Das Ziel unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=de#getting-started).
+Die [!DNL Pinterest Customer List] Das Ziel unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 Im [Zuordnungsschritt](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) Ordnen Sie die gewünschten Identitäten des Zielaktivierungs-Workflows dem Zielfeld zu. *pinterest_audience*. Identitäten werden bei der Datenerfassung in Pinterest identifiziert und aufgelöst.
 

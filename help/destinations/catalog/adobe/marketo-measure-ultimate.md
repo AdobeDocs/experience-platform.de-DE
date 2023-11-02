@@ -3,18 +3,18 @@ title: Marketo Measure Ultimate-Ziel
 description: Erfahren Sie, wie Sie Daten mit dem Marketo Measure Ultimate-Ziel verbinden und aktivieren.
 last-substantial-update: 2023-03-07T00:00:00Z
 exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '652'
 ht-degree: 37%
 
 ---
 
-# Marketo Measure Ultimate Ziel {#mmu-destination}
+# Marketo Measure Ultimate-Ziel {#mmu-destination}
 
 ## Übersicht {#overview}
 
-Marketo Measure (ehemals Bizible) bietet Marketing-Experten Einblicke, welche Marketing-Maßnahmen am effektivsten sind, um Umsätze zu steigern und den ROI für ihr Unternehmen zu maximieren. Marketo Measure ist eine Marketing-Attributionslösung, die die Kanalleistung automatisch verfolgt und in Berichten aufzeigt, welche Kanäle die Kundeninteraktion am meisten fördern und Ihnen die Möglichkeit gibt, Ihre Marketing-Ausgaben entsprechend zu optimieren.
+Marketo Measure (ehemals Bizible) bietet Marketing-Experten Einblicke, welche Marketing-Maßnahmen am effektivsten sind, um Umsätze zu steigern und den ROI für ihr Unternehmen zu maximieren. Marketo Measure ist eine Marketing-Attributionslösung, die die Kanalleistung automatisch verfolgt und in Berichten aufzeigt. So erhalten Sie Einblicke in die Kanäle, die die Kundeninteraktion am meisten fördern, und können Ihre Marketingausgaben entsprechend optimieren.
 
 Das Ziel ermöglicht den B2B-Datenfluss (Business-to-Business) von Adobe Experience Platform nach Marketo Measure. Die Karte steht nur Marketo Measure Ultimate-Kunden zur Verfügung.
 
@@ -24,13 +24,13 @@ Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie das Marketo Measure-Zi
 
 * erfüllt die komplexen Anforderungen an Daten und Leistungsberichte großer Unternehmen.
 * Ermöglicht die Berichterstellung für die B2B-Attribution mit mehreren CRM- und Marketing-Automatisierungssystemen.
-* Erleichtert die Einbindung von Offline-Touchpoint-Daten von Drittanbietern.
+* Erleichtert die Einbindung von Offline-Kontaktpunktdaten von Drittanbietern.
 
 ## Voraussetzungen {#prerequisites}
 
 Beachten Sie die folgenden Voraussetzungen für das Marketo Measure-Ziel:
 
-* Experience Platform-Sandbox-Zuordnung sollte vom Administrator auf der Seite mit den Marketo Measure-Einstellungen abgeschlossen werden. Ohne die Sandbox-Zuordnung können Sie den Workflow zum Herstellen einer Verbindung zum Ziel zum Speichern und Aktivieren von Daten nicht abschließen.
+* Experience Platform Sandbox-Zuordnung sollte vom Administrator auf der Seite mit den Marketo Measure-Einstellungen abgeschlossen werden. Ohne die Sandbox-Zuordnung können Sie den Workflow zum Herstellen einer Verbindung zum Ziel zum Speichern und Aktivieren von Daten nicht abschließen.
 * Nur Datensätze von B2B-XDM-Klassen können exportiert werden (siehe z. B. die Klassen &quot;XDM Business Account&quot;und &quot;XDM Business Opportunity&quot;). Sie können nicht mehrere Datensätze derselben B2B-XDM-Klasse für eine bestimmte Datenquelle einbringen.
 * Jeder Datensatz kann nur in einem Datenfluss zum Marketo Measure-Ziel enthalten sein.
 
@@ -72,13 +72,13 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Verwalten und Aktivieren von Datensatzzielen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Verwalten und Aktivieren von Datensatzzielen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
-Lesen Sie die [(Beta) Exportieren von Datensätzen](/help/destinations/ui/export-datasets.md) Tutorial für ausführliche Anweisungen zum Exportieren von Datensätzen in dieses Ziel.
+Lesen Sie die [(Beta) Datensätze exportieren](/help/destinations/ui/export-datasets.md) Tutorial für ausführliche Anweisungen zum Exportieren von Datensätzen in dieses Ziel.
 
 ## Überprüfen des Datenexports {#exported-data}
 
-Um einen erfolgreichen Datensatz-Export zu überprüfen, können Sie überprüfen, ob Ihr Datensatz ihn erfolgreich an Ihre [Snowflake Data Warehouse](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=en).
+Um einen erfolgreichen Datensatz-Export zu überprüfen, können Sie überprüfen, ob Ihr Datensatz ihn erfolgreich an Ihre [Snowflake Data Warehouse](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html).
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

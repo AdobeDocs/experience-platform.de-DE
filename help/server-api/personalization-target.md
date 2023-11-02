@@ -2,10 +2,10 @@
 title: Personalisierung über Adobe Target
 description: Erfahren Sie, wie Sie mit der Server-API personalisierte Erlebnisse bereitstellen und rendern können, die in Adobe Target erstellt wurden.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '620'
-ht-degree: 3%
+source-wordcount: '616'
+ht-degree: 4%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 3%
 
 ## Übersicht {#overview}
 
-Die Edge Network Server-API kann mithilfe des [Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en).
+Die Edge Network Server-API kann mithilfe des [Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=de).
 
 >[!IMPORTANT]
 >
->Personalisierungserlebnisse, die durch das [Target Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=de) von der Server-API nicht vollständig unterstützt. Die Server-API kann **abrufen** Aktivitäten, die von VEC erstellt wurden, die Server-API jedoch nicht **render** Aktivitäten, die von VEC erstellt wurden. Wenn Sie von VEC erstellte Aktivitäten rendern möchten, implementieren Sie [Hybridpersonalisierung](../edge/personalization/hybrid-personalization.md) unter Verwendung des Web SDK und der Edge Network Server-API.
+>Personalisierungserlebnisse, die durch das [Target Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) von der Server-API nicht vollständig unterstützt werden. Die Server-API kann **abrufen** Aktivitäten, die von VEC erstellt wurden, die Server-API jedoch nicht **render** Aktivitäten, die von VEC erstellt wurden. Wenn Sie von VEC erstellte Aktivitäten rendern möchten, implementieren Sie [Hybridpersonalisierung](../edge/personalization/hybrid-personalization.md) unter Verwendung des Web SDK und der Edge Network Server-API.
 
 ## Konfigurieren Ihres Datenspeichers {#configure-your-datastream}
 
@@ -25,7 +25,7 @@ Bevor Sie die Server-API in Verbindung mit Adobe Target verwenden können, müss
 
 Siehe [Handbuch zum Hinzufügen von Diensten zu einem Datastream](../datastreams/overview.md#adobe-target-settings), um detaillierte Informationen zur Aktivierung von Adobe Target zu erhalten.
 
-Beim Konfigurieren Ihres Datastreams können Sie (optional) Werte für [!DNL Property Token], [!DNL Target Environment ID]und [!DNL Target Third Party ID Namespace].
+Beim Konfigurieren Ihres Datastreams können Sie (optional) Werte für [!DNL Property Token], [!DNL Target Environment ID], und [!DNL Target Third Party ID Namespace].
 
 ![UI-Bild, das den Konfigurationsbildschirm des Datastream-Dienstes mit ausgewähltem Adobe Target anzeigt](assets/target-datastream.png)
 
@@ -273,7 +273,7 @@ Das Edge-Netzwerk gibt eine Antwort zurück, die der unten stehenden ähnelt.
 
 Wenn der Besucher auf der Grundlage der an Adobe Target gesendeten Daten zu einer Personalisierungsaktivität berechtigt ist, finden Sie den entsprechenden Aktivitätsinhalt unter der `handle` -Objekt, wobei der Typ `personalization:decisions`.
 
-Andere Inhalte werden manchmal unter `handle` sowie Andere Inhaltstypen sind für die Target-Personalisierung nicht relevant. Wenn der Besucher für mehrere Aktivitäten qualifiziert ist, ist jede Aktivität eine separate `personalization` -Objekt im -Array.
+Andere Inhalte werden manchmal unter `handle` sowie. Andere Inhaltstypen sind für die Target-Personalisierung nicht relevant. Wenn der Besucher für mehrere Aktivitäten qualifiziert ist, ist jede Aktivität eine separate `personalization` -Objekt im -Array.
 
 In der folgenden Tabelle werden die Schlüsselelemente dieses Teils der Antwort erläutert.
 
