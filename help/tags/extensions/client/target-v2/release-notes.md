@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Target v2-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Target v2“ in Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: f235d210682feba7617b720e514361c2862512f9
+source-git-commit: a51bc1fb536347840eef113a8649b64fbf573287
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 77%
+source-wordcount: '776'
+ht-degree: 74%
 
 ---
 
@@ -17,18 +17,18 @@ ht-degree: 77%
 
 ## v0.20.1 (3. November 2023)
 
-- Aktualisierung auf Unterstützung von at.js 2.11.2.
+- Auf Unterstützung aktualisiert `at.js` 2.11.2.
 - Es wurde ein Fehler behoben, der zu Inkonsistenzen in den Antwort-Token führte, die für benutzerspezifische Ereignisse gesendet wurden.
 
 ## v0.20.0 (9. Oktober 2023)
 
-- Aktualisierung auf Unterstützung von at.js 2.11.0.
+- Auf Unterstützung aktualisiert `at.js` 2.11.0.
 - Unterstützung für das Festlegen von benutzerdefinierten Adobe Experience Platform sandboxId und sandboxName in targetGlobalSettings hinzugefügt, die bei getOffer/getOffers -Aufrufen an die Bereitstellungs-API übergeben werden.
 - Shadow DOM-Korrektur für Verkettung :eq() im Selektor.
 
 ## v0.19.3 (18. September 2023)
 
-- Aktualisierung auf Unterstützung von at.js v2.10.3.
+- Es wurde eine Aktualisierung vorgenommen, sodass `at.js` v2.10.3 unterstützt wird.
 - Es wurde ein Problem behoben, durch das fälschlicherweise das benutzerspezifische Ereignis at-content-rendering-succeeded ausgelöst wurde, wenn keine Angebote gerendert wurden. Das richtige Ereignis, at-content-rendering-no-offer, wird jetzt ausgelöst.
 - eventToken und responseTokens wurden zum Fehlerobjekt für das benutzerdefinierte Ereignis at-content-rendering-failed hinzugefügt.
 
@@ -66,6 +66,12 @@ ht-degree: 77%
 ## v0.16.0 (28. Oktober 2021)
 
 - Es wurde eine Aktualisierung vorgenommen, sodass `at.js` v2.7.0 unterstützt wird und jetzt zum Download von Adobe Target verfügbar ist.
+
+## v0.15.2 (16. August 2021)
+
+- Auf Unterstützung aktualisiert `at.js` 2.6.1.
+- Initialisieren Sie die On-Device-Entscheidungsfindung beim Start unabhängig vom Seitenladeereignis.
+- Die On-Device-Entscheidungsfindung kann jetzt beim ersten Besuch verwendet werden, nachdem das Artefakt heruntergeladen wurde.
 
 ## v0.15.1 (20. Juli 2021)
 
