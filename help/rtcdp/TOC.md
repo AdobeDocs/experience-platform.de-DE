@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Handbuch zu Real-time Customer Data Platform
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppensegmente aus diesen Profilen zu erstellen und diese Segmente für Drittanbieterziele bereitzustellen.
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: 5c556d6a846c8ec97bf3aa8b6a6a6d2a64a33be5
 workflow-type: tm+mt
-source-wordcount: '250'
-ht-degree: 94%
+source-wordcount: '254'
+ht-degree: 89%
 
 ---
 
@@ -67,9 +67,10 @@ ht-degree: 94%
 * Anwendungsfälle {#use-cases}
    * Intelligente Anwendungsfälle für die erneute Interaktion {#intelligent-re-engagement}
       * [Intelligentes erneutes Ansprechen Ihrer Kunden](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
-   * Anwendungsfälle für Partnerdaten {#partner-data}
-      * [Interagieren mit und Akquirieren von neuen Kundinnen und Kunden durch Prospektierungsunterstützung](/help/rtcdp/partner-data/prospecting.md)
+   * Kundenakquise {#customer-acquisition}
+      * [Engage und Akquisition neuer Kunden ohne Abhängigkeit von Drittanbieter-Cookies](/help/rtcdp/partner-data/prospecting.md)
+      * [Personalisieren von Onsite-Erlebnissen für unbekannte Besuchende durch partnergestützte Besuchererkennung](/help/rtcdp/partner-data/onsite-personalization.md)
+   * Profilanreicherung {#profile-enrichment}
       * [Ergänzen von Erstanbieterprofilen mit von Partnern bereitgestellten Attributen](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-      * [Verwenden der partnergestützten Besuchererkennung zur Personalisierung von Onsite-Erlebnissen](/help/rtcdp/partner-data/onsite-personalization.md)
 * [Experience Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
 * [Glossar zu Experience Platform](https://docs.adobe.com/content/help/de-DE/experience-platform/landing/glossary.html)

@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise von Oktober 2023 für Adobe Experience Platform.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: f2d0848952902d94b441566da677ef174518192e
 workflow-type: tm+mt
-source-wordcount: '954'
-ht-degree: 40%
+source-wordcount: '1068'
+ht-degree: 38%
 
 ---
 
@@ -44,9 +44,11 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 | Typ | Funktion | Beschreibung |
 | --- | --- | --- |
-| Erweiterung | [!DNL Meta] Verbesserung der Konversions-API | Die [Meta Conversions-API](/help/tags/extensions/server/meta/overview.md) -Erweiterung: <ul><li>Integration mit [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): Erstellt eine nahtlose Anmeldung, indem Sie Ihre pixelID und das Zugriffstoken für die Conversions-API-Integration mit Adobe freigeben können.</li><li>Integration mit [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): Ermöglicht die Bereitstellung von Werbung für Personen, die mit höherer Wahrscheinlichkeit eine gewünschte Aktion durchführen und die Aktion mit den gelieferten Anzeigen verknüpfen.</li><li>Integration mit [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): Ermöglicht die Weitergabe der RampID von LiveRamp im Feld CIP, sodass personenbezogene Daten nicht direkt an Partner oder Meta weitergegeben werden müssen. </li></ul> |
-| Erweiterung | [!DNL LinkedIn] Konversions-API | Die [[!DNL LinkedIn] Konversions-API](../../tags/extensions/server/linkedin/overview.md) -Erweiterung ermöglicht es Ihnen, die Effektivität Ihrer LinkedIn-Marketingkampagnen zu bewerten, indem Sie Experience Platform-Ereignisdaten an LinkedIn weiterleiten. |
+| Erweiterungen | [!DNL Meta] Verbesserung der Konversions-API | Die [Meta Conversions-API](/help/tags/extensions/server/meta/overview.md) -Erweiterung: <ul><li>Integration mit [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): Erstellt eine nahtlose Anmeldung, indem Sie Ihre pixelID und das Zugriffstoken für die Conversions-API-Integration mit Adobe freigeben können.</li><li>Integration mit [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): Ermöglicht die Bereitstellung von Werbung für Personen, die mit höherer Wahrscheinlichkeit eine gewünschte Aktion durchführen und die Aktion mit den gelieferten Anzeigen verknüpfen.</li><li>Integration mit [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): Ermöglicht die Weitergabe der RampID von LiveRamp im Feld CIP, sodass personenbezogene Daten nicht direkt an Partner oder Meta weitergegeben werden müssen. </li></ul> |
+| Erweiterungen | [!DNL LinkedIn] Konversions-API | Die [[!DNL LinkedIn] Konversions-API](../../tags/extensions/server/linkedin/overview.md) -Erweiterung ermöglicht es Ihnen, die Effektivität Ihrer LinkedIn-Marketingkampagnen zu bewerten, indem Sie Experience Platform-Ereignisdaten an LinkedIn weiterleiten. |
 | Geheimnis | [!DNL LinkedIn] OAuth 2 Secret | Die [[!DNL LinkedIn] OAuth 2 Secret](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) ermöglicht Ihnen das Senden von Server-Server-Interaktionen an [!DNL LinkedIn] in der Ereignisweiterleitung. |
+| Ereignisweiterleitung | Aktualisierung auf Tags und Ereignisweiterleitung | Zum Beibehalten [Tags](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=de) und [Ereignisweiterleitung](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) -Leistung in Platform beibehalten werden nur die neuesten erfolgreichen und nicht erfolgreichen Entwicklungs- und Staging-Builds. Alle nicht mehr verwendeten Builds werden entfernt. Darüber hinaus wurden Drosselung und Ratenbegrenzung implementiert, um sicherzustellen, dass die API-Leistung bei einigen umfangreichen API-Verwendungen nicht durch andere beeinträchtigt wird. |
+| Erweiterungen | Elemente, Regeln und Erweiterungen | [Elemente, Regeln und Erweiterungen](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html?lang=de) werden nun in der Bibliotheksausgabe sortiert, um eine größere Konsistenz zwischen mehreren Builds und Bereitstellungen derselben Bibliothek sicherzustellen. |
 
 Weitere Informationen zur Datenerfassung finden Sie in der [Übersicht der Datenerfassungen](../../tags/home.md).
 

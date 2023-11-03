@@ -1,15 +1,15 @@
 ---
-title: Verwenden der partnergestützten Besuchererkennung zur Personalisierung von Onsite-Erlebnissen
+title: Personalisieren von Onsite-Erlebnissen für unbekannte Besuchende durch partnergestützte Besuchererkennung
 description: Erfahren Sie, wie Sie mit der partnergestützten Besuchererkennung personalisierte Onsite-Erlebnisse für Ihre Besucherinnen und Besucher bereitstellen können.
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: de8aeb553066405424711e75480204f6136b52ff
+source-git-commit: 77eb2492259cc813db2d6c514d123fa2ad698f67
 workflow-type: tm+mt
-source-wordcount: '2580'
-ht-degree: 95%
+source-wordcount: '2696'
+ht-degree: 91%
 
 ---
 
-# Verwenden der partnergestützten Besuchererkennung zur Personalisierung von Onsite-Erlebnissen
+# Personalisieren von Onsite-Erlebnissen für unbekannte Besuchende durch partnergestützte Besuchererkennung
 
 >[!AVAILABILITY]
 >
@@ -17,7 +17,15 @@ ht-degree: 95%
 
 Erfahren Sie, wie Sie die partnergestützte Erkennung nutzen können, um den Besucherinnen und Besuchern Ihrer Website personalisierte Erlebnisse zu bieten. Verwenden Sie dieses Tutorial, um die Implementierungssequenz verschiedener Elemente in Experience Platform und anderen Experience Cloud-Lösungen zu verstehen, um authentifizierten und nicht authentifizierten Besucherinnen und Besuchern ein personalisiertes Erlebnis anzuzeigen.
 
-![Eine Infografik, die beschreibt, wie Sie mit von Partnern bereitgestellten Attributen personalisierte Erlebnisse für Ihre Besucherinnen und Besucher bereitstellen können.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-steps.png)
+![Eine Infografik, die beschreibt, wie Sie mit von Partnern bereitgestellten Attributen personalisierte Erlebnisse für Ihre Besucherinnen und Besucher bereitstellen können.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-overview.png)
+
+## Warum sollten Sie diesen Anwendungsfall beachten? {#why-this-use-case}
+
+Die Fragmentierung digitaler Erlebnisse, während Verbraucher mit Marken interagieren, ist sehr real und wird immer schwieriger zu lösen. Die besten Kundeninteraktionsstrategien für kohärente Erlebnisse, zielgerichtete Empfehlungen und maßgeschneiderte Interaktionen werden durch die Benutzererkennung eingeschränkt.
+
+Hier kann die von Partnern unterstützte Echtzeit-Erkennung einen entscheidenden Unterschied machen. Mit Adobe können Identitätspartner unsere ausgereiften clientseitigen Datenerfassungs- und marktführenden Erlebnisoptimierungsangebote einbinden, um die Abkürzung für die Bereitstellung von Erlebnissen ab dem ersten Besuch effektiv zu erhöhen, ohne dass zuvor ein Verlauf oder eine Authentifizierung erfolgt ist.
+
+Dies ist besonders nützlich für Vertikale mit niedrigen Authentifizierungsraten, wie z. B. für Consumer Packaged Goods, Online-Einzelhandel und mehr.
 
 ## Branchenbeispiel {#industry-example}
 

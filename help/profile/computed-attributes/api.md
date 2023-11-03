@@ -2,7 +2,7 @@
 title: API-Endpunkt für berechnete Attribute
 description: Erfahren Sie, wie Sie berechnete Attribute mithilfe der Echtzeit-Kundenprofil-API erstellen, anzeigen, aktualisieren und löschen.
 exl-id: f217891c-574d-4a64-9d04-afc436cf16a9
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 94c94b8a3757aca1a04ff4ffc3c62e84602805cc
 workflow-type: tm+mt
 source-wordcount: '1654'
 ht-degree: 12%
@@ -50,7 +50,7 @@ Beim Abrufen einer Liste berechneter Attribute können die folgenden Abfragepara
 | `limit` | Ein Parameter, der die maximale Anzahl von Elementen angibt, die als Teil der Antwort zurückgegeben werden. Der Mindestwert dieses Parameters ist 1 und der Höchstwert 40. Wenn dieser Parameter nicht enthalten ist, werden standardmäßig 20 Elemente zurückgegeben. | `limit=20` |
 | `offset` | Ein Parameter, der die Anzahl der Elemente angibt, die vor der Rückgabe der Elemente übersprungen werden sollen. | `offset=5` |
 | `sortBy` | Ein Parameter, der die Reihenfolge angibt, in der die zurückgegebenen Elemente sortiert werden. Verfügbare Optionen umfassen `name`, `status`, `updateEpoch`, und `createEpoch`. Sie können auch auswählen, ob eine Sortierung in aufsteigender oder absteigender Reihenfolge erfolgen soll, indem Sie eine `-` vor der Sortieroption. Standardmäßig werden die Elemente nach `updateEpoch` in absteigender Reihenfolge. | `sortBy=name` |
-| `property` | Ein Parameter, mit dem Sie nach verschiedenen berechneten Attributfeldern filtern können. Zu den unterstützten Eigenschaften gehören `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch`, und `status`. Die unterstützten Vorgänge hängen von der aufgeführten Eigenschaft ab. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (!=enthält())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
+| `property` | Ein Parameter, mit dem Sie nach verschiedenen berechneten Attributfeldern filtern können. Zu den unterstützten Eigenschaften gehören `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch`, und `status`. Die unterstützten Vorgänge hängen von der aufgeführten Eigenschaft ab. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
 
 **Anfrage**
 

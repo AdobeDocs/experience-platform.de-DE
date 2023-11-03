@@ -2,10 +2,10 @@
 title: Handbuch zur Benutzeroberfläche "Berechnete Attribute"
 description: Erfahren Sie, wie Sie berechnete Attribute mithilfe der Adobe Experience Platform-Benutzeroberfläche erstellen, anzeigen und aktualisieren.
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: cf01c18c8ea710492c8a2c8542c8a4580d5f0dcf
 workflow-type: tm+mt
-source-wordcount: '1485'
-ht-degree: 12%
+source-wordcount: '1567'
+ht-degree: 11%
 
 ---
 
@@ -147,6 +147,12 @@ Bei der Auswahl eines Entwurfs für ein berechnetes Attribut muss die **[!UICONT
 ![Die [!UICONTROL Berechnete Attribute bearbeiten] angezeigt.](./images/ui/edit.png)
 
 ## Berechnete Attribute verwenden {#usage}
+
+>[!IMPORTANT]
+>
+>Wenn Sie ein berechnetes Attribut mit dem **Zuletzt verwendet** in einer Segmentdefinition verwenden, können Sie **must** include **both** den Wert und den Zeitstempelwert im berechneten Attributobjekt.
+>
+>Wenn Sie z. B. eine Segmentdefinition erstellen, die nach &quot;Alle Profile mit einer gültigen E-Mail-Adresse&quot;sucht, bei der das Feld für die E-Mail-Adresse durch ein berechnetes Attribut mit der neuesten Funktion ausgefüllt wird, haben Sie folgende Möglichkeiten: **must** den Wert beider E-Mail-Adressen einschließen **und** Der Zeitstempel der E-Mail-Adresse ist vorhanden.
 
 Nachdem Sie ein berechnetes Attribut erstellt haben, können Sie **veröffentlicht** berechnete Attribute in anderen nachgelagerten Diensten. Da berechnete Attribute Profilattributfelder sind, die in Ihrem Profilvereinigungsschema erstellt wurden, können Sie berechnete Attributwerte für ein Echtzeit-Kundenprofil nachschlagen, sie in einer Zielgruppe verwenden, sie für ein Ziel aktivieren oder sie zur Personalisierung in Journey in Adobe Journey Optimizer verwenden.
 

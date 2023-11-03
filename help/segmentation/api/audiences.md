@@ -2,10 +2,10 @@
 title: Zielgruppen-API-Endpunkt
 description: Verwenden Sie den Zielgruppen-Endpunkt in der Adobe Experience Platform Segmentation Service-API, um Zielgruppen für Ihr Unternehmen programmgesteuert zu erstellen, zu verwalten und zu aktualisieren.
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 9277ad00f72b44d7e75e444f034c38f000e7909f
 workflow-type: tm+mt
-source-wordcount: '2124'
-ht-degree: 8%
+source-wordcount: '1879'
+ht-degree: 9%
 
 ---
 
@@ -190,7 +190,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Zielgrupp
 | `originName` | Beide | Ein Feld, das auf den Namen der Herkunft der Zielgruppe verweist. Für plattformgenerierte Zielgruppen wird dieser Wert `REAL_TIME_CUSTOMER_PROFILE`. Für in Audience Orchestration generierte Zielgruppen lautet dieser Wert `AUDIENCE_ORCHESTRATION`. Für in Adobe Audience Manager generierte Zielgruppen wird dieser Wert `AUDIENCE_MANAGER`. Für andere extern generierte Zielgruppen wird dieser Wert `CUSTOM_UPLOAD`. |
 | `createdBy` | Beide | Die ID des Benutzers, der die Zielgruppe erstellt hat. |
 | `labels` | Beide | Datennutzung auf Objektebene und attributbasierte Zugriffssteuerungsbeschriftungen, die für die Zielgruppe relevant sind. |
-| `namespace` | Beide | Der Namespace, zu dem die Zielgruppe gehört. Mögliche Werte sind `AAM`, `AAMSegments`, `AAMTraits`und `AEPSegments`. |
+| `namespace` | Beide | Der Namespace, zu dem die Zielgruppe gehört. Mögliche Werte sind `AAM`, `AAMSegments`, `AAMTraits`, und `AEPSegments`. |
 | `linkedAudienceRef` | Beide | Ein Objekt, das IDs für andere Zielgruppen-bezogene Systeme enthält. |
 
 +++
@@ -288,8 +288,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | `namespace` | Der Namespace für die Zielgruppe. |
 | `description` | Eine Beschreibung der Zielgruppe. |
 | `type` | Ein Feld, das anzeigt, ob die Zielgruppe Platform-generiert oder eine extern generierte Zielgruppe ist. Mögliche Werte sind `SegmentDefinition` und `ExternalSegment`. A `SegmentDefinition` bezieht sich auf eine Zielgruppe, die in Platform generiert wurde, während eine `ExternalSegment` bezieht sich auf eine Zielgruppe, die nicht in Platform generiert wurde. |
-| `originName` | Der Name der Audience-Herkunft. Für extern generierte Zielgruppen lautet der Standardwert `CUSTOM_UPLOAD`. Andere unterstützte Werte sind `REAL_TIME_CUSTOMER_PROFILE`, `CUSTOM_UPLOAD`, `AUDIENCE_ORCHESTRATION`und `AUDIENCE_MATCH`. |
-| `lifecycleState` | Ein optionales Feld, das den Anfangsstatus der Zielgruppe bestimmt, die Sie erstellen möchten. Zu den unterstützten Werten gehören `draft`, `published`und `inactive`. |
+| `originName` | Der Name der Audience-Herkunft. Für extern generierte Zielgruppen lautet der Standardwert `CUSTOM_UPLOAD`. Andere unterstützte Werte sind `REAL_TIME_CUSTOMER_PROFILE`, `CUSTOM_UPLOAD`, `AUDIENCE_ORCHESTRATION`, und `AUDIENCE_MATCH`. |
+| `lifecycleState` | Ein optionales Feld, das den Anfangsstatus der Zielgruppe bestimmt, die Sie erstellen möchten. Zu den unterstützten Werten gehören `draft`, `published`, und `inactive`. |
 | `datasetId` | Die ID des Datensatzes, in dem die Daten, die die Zielgruppe enthalten, gefunden werden können. |
 | `labels` | Datennutzung auf Objektebene und attributbasierte Zugriffssteuerungsbeschriftungen, die für die Zielgruppe relevant sind. |
 | `audienceMeta` | Metadaten, die zur extern generierten Zielgruppe gehören. |
@@ -933,145 +933,6 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 207 mit Informationen zu Ihren an
 
 +++
 
-## Mehrere Zielgruppen aktualisieren {#bulk-patch}
-
-Sie können das Profil aktualisieren und die Anzahl mehrerer Zielgruppen aufzeichnen, indem Sie eine POST-Anfrage an die `/audiences/bulk-patch-metric` -Endpunkt und geben die IDs der Zielgruppen an, die Sie aktualisieren möchten.
-
-**API-Format**
-
-```http
-POST /audiences/bulk-patch-metric
-```
-
-**Anfrage**
-
-+++ Eine Beispielanfrage zum Aktualisieren mehrerer Zielgruppen.
-
-```shell
-curl -X POST https://platform.adobe.io/data/core/ups/audiences/bulk-patch-metric
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d ' {
-    "jobId": "12345",
-    "jobType": "AO",
-    "resources": [
-        {
-            "audienceId": "QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-            "namespace": "AAMTraits",
-            "operations": [
-                {
-                    "op": "add",
-                    "path": "/metrics/data",
-                    "value": {
-                        "totalProfiles": 11037
-                    }
-                },
-            ]
-        },
-        {
-            "audienceId": "QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-            "namespace": "AAMTraits",
-            "operations": [
-                {
-                    "op": "add",
-                    "path": "/metrics/data",
-                    "value": {
-                        "totalProfiles": 523
-                    }
-                }
-            ]
-        }
-    ]
-    }
-```
-
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>jobId</code></td>
-<td>Die ID des Auftrags, der die Aktualisierung ausführt.</td>
-</tr>
-<tr>
-<td><code>jobType</code></td>
-<td>Der Auftragstyp, der die Aktualisierung ausführt. Dieser Wert kann entweder <code>export</code> oder <code>AO</code>.</td>
-</tr>
-<tr>
-<td><code>audienceId</code></td>
-<td>Die ID der Zielgruppen, die Sie aktualisieren möchten. Bitte beachten Sie, dass dies der <code>audienceId</code> Wert und <strong>not</strong> die <code>id</code> Wert der Zielgruppen.</td>
-</tr>
-<tr>
-<td><code>namespace</code></td>
-<td>Der Namespace für die Zielgruppe, die Sie aktualisieren möchten.</td>
-</tr>
-<tr>
-<td><code>operations</code></td>
-<td>Ein Objekt, das die zur Aktualisierung der Audience verwendeten Informationen enthält.</td>
-</tr>
-<tr>
-<td><code>operations.op</code></td>
-<td>Der für den Patch verwendete Vorgang. Beim Aktualisieren mehrerer Zielgruppen lautet dieser Wert <strong>always</strong> <code>add</code>.</td>
-</tr>
-<tr>
-<td><code>operations.path</code></td>
-<td>Der Pfad des zu aktualisierenden Felds. Derzeit werden nur zwei Pfade unterstützt: <code>/metrics/data</code> beim Aktualisieren der <strong>profile</strong> zählen und <code>/recordMetrics/data</code> beim Aktualisieren der <strong>record</strong> count.</td>
-</tr>
-<tr>
-<td><code>operations.value</code></td>
-<td>
-Der -Wert des zu aktualisierenden Felds. Wenn Sie die Profilanzahl aktualisieren, sieht dieser Wert wie folgt aus: 
-<pre>
-{ "totalProfiles": 123456 }
-</pre>
-Wenn Sie die Datensatzanzahl aktualisieren, sieht dieser Wert wie folgt aus: 
-<pre>
-{ "recordCount": 123456 }
-</pre>
-</td>
-</tr>
-</tbody>
-</table>
-
-+++
-
-**Antwort**
-
-Eine erfolgreiche Antwort gibt den HTTP-Status 207 mit Details zu den aktualisierten Zielgruppen zurück.
-
-+++ Eine Beispielantwort zum Aktualisieren mehrerer Zielgruppen.
-
-```json
-{
-   "resources":[
-      {
-         "audienceId":"QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-
-         "namespace": "AAMTraits",
-         "status":200
-      },
-      {
-         "audienceId":"QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1vcmlnaW4tdGVzdDE_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-
-         "namespace": "AAMTraits",
-         "status":200
-      }
-   ]
-}
-```
-
-| Parameter | Beschreibung |
-| --------- | ----------- |
-| `status` | Der Status der aktualisierten Zielgruppe. Wenn der zurückgegebene Status 200 ist, wurde die Zielgruppe erfolgreich aktualisiert. Wenn die Audience nicht aktualisiert werden konnte, wird ein Fehler zurückgegeben, der erklärt, warum die Audience nicht aktualisiert wurde. |
-
-+++
 
 ## Nächste Schritte
 

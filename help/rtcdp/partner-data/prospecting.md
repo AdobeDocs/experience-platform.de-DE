@@ -1,15 +1,15 @@
 ---
-title: Engagieren und Akquirieren neuer Kundinnen und Kunden durch Anwendungsfälle für die Kundengewinnung
-description: Erfahren Sie, wie Sie neue Kundinnen und Kunden durch Anwendungsfälle für die Prospektion, ermöglicht durch die Unterstützung von Partnerdaten in Real-Time CDP, ansprechen und gewinnen können.
+title: Engage und Akquisition neuer Kunden ohne Abhängigkeit von Drittanbieter-Cookies
+description: Erfahren Sie, wie Sie neue Kunden erreichen und gewinnen können, indem Sie Nutzungsszenarios prüfen, ohne auf Drittanbieter-Cookies angewiesen zu sein.
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: ec6375a025833027fda01c412124321132aefd65
+source-git-commit: 645295958ea6f94a9f9da13517b0fa1d02010b52
 workflow-type: tm+mt
-source-wordcount: '1960'
-ht-degree: 93%
+source-wordcount: '2077'
+ht-degree: 85%
 
 ---
 
-# Engagieren und Akquirieren neuer Kundinnen und Kunden durch Anwendungsfälle für die Kundengewinnung
+# Engage und Akquisition neuer Kunden ohne Abhängigkeit von Drittanbieter-Cookies
 
 >[!AVAILABILITY]
 >
@@ -19,9 +19,17 @@ Nutzen Sie die Unterstützung von Drittanbieterdaten in Real-Time CDP, um Ihre P
 
 ![Anwendungsfall „Kundenprospektion“ – visuelle allgemeine Übersicht.](/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-overview.png)
 
+## Warum sollten Sie diesen Anwendungsfall beachten? {#why-this-use-case}
+
+Gleichzeitig stehen Marken vor gewaltigen Herausforderungen, wenn es darum geht, Nutzungsszenarien für die Kundenakquise auf höchstem Niveau verantwortungsbewusst auszuführen, ohne von Drittanbieter-Cookies, begrenzten Budgets und einer höheren Nachfrage nach Transparenz und Rendite aus Werbeausgaben abhängig zu sein.
+
+Adobe Real-time Customer Data Platform kann Marken dabei helfen, ihre Data Management Platform (DMP)-unterstützten Anwendungsfälle sicher auf Cookie-lose Alternativen umzustellen. Dies geschieht auf eine Weise, die die vollständige Komplexität und Leistungsfähigkeit der Self-Service-Segmentierung, Zielgruppenkuratierung und -Aktivierung in ein einziges System vorantreibt. All dies ohne Kompromisse bei Adobe unschwören Fokus auf eine verantwortungsvolle Nutzung von Daten über ein patentiertes Data Governance- und Zustimmungsframework.
+
+Führen Sie beispielsweise die in diesem Anwendungsbeispiel beschriebenen Schritte aus, wenn Sie eine Kampagne durchführen müssen, um potenzielle Kunden oder bekannte Kunden zu gewinnen.
+
 ## Voraussetzungen und Planung {#prerequisites-and-planning}
 
-Wenn Sie erwägen, mithilfe der Unterstützung von Partnerdaten in Real-Time CDP neue Kundinnen und Kunden anzusprechen und zu gewinnen, sollten Sie die folgenden Voraussetzungen in Ihrem Planungsprozess berücksichtigen:
+Wenn Sie erwägen, sich an neue Kunden zu wenden und diese zu gewinnen, sollten Sie die folgenden Voraussetzungen in Ihrem Planungsprozess beachten:
 
 * Wie häufig werden von Partnern bereitgestellte Profile voraussichtlich wieder in Real-Time CDP aufgenommen und aktualisiert?
 * Welche Identitäten benötigen Ihre nachgelagerten Ziele?
@@ -219,5 +227,5 @@ Nutzen Sie die Interessentenzielgruppen, indem Sie sie zu Zielen exportieren. De
 Erkunden Sie weitere Anwendungsfälle, die durch die Unterstützung von Partnerdaten in Real-Time CDP ermöglicht werden:
 
 * [Ergänzen Sie Erstanbieterprofile mit Attributen von vertrauenswürdigen Datenpartnern, um Ihre Datengrundlage zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* [Nutzen Sie die von Partnern unterstützte Erkennung für die Personalisierung von On-site-Erlebnissen](/help/rtcdp/partner-data/onsite-personalization.md) während des Besuchs, ohne dass sich der Benutzer authentifiziert oder über einen früheren Verlauf mit Ihrer Marke verfügt.
+* [Personalisieren von Onsite-Erlebnissen für unbekannte Besucher mithilfe der von Partnern unterstützten Besuchererkennung](/help/rtcdp/partner-data/onsite-personalization.md) während des Besuchs, ohne dass sich der Benutzer authentifiziert oder über einen früheren Verlauf mit Ihrer Marke verfügt.
 * [Erweiterte Aktivierung von Interessenten- und Interessenten-Zielgruppen](/help/destinations/ui/activate-prospect-audiences.md) , um Ziele auszuwählen.
